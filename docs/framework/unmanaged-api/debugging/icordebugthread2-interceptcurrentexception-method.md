@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 536d2357-1b97-49e0-a10c-c860aed74e6e
 topic_type:
 - apiref
-ms.openlocfilehash: c25a03ef5bbba18da31787c911f83a1348badd4b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d87f07e6cadf8c9b5a4d8bb3063333c26e2c4ff1
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791457"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379037"
 ---
 # <a name="icordebugthread2interceptcurrentexception-method"></a>ICorDebugThread2::InterceptCurrentException 方法
 允許偵錯工具攔截這個執行緒上目前的例外狀況。  
@@ -38,13 +38,13 @@ HRESULT InterceptCurrentException (
  在表示使用中堆疊框架之 ICorDebugFrame 的指標。  
   
 ## <a name="remarks"></a>備註  
- 可以在例外狀況回呼（[ICorDebugManagedCallback：： exception](icordebugmanagedcallback-exception-method.md)或[ICorDebugManagedCallback2：： Exception](icordebugmanagedcallback2-exception-method.md)）與[ICorDebugController：： Continue](icordebugcontroller-continue-method.md)的相關呼叫之間呼叫 `InterceptCurrentException` 方法。  
+ `InterceptCurrentException`可以在例外狀況回呼（[ICorDebugManagedCallback：： Exception](icordebugmanagedcallback-exception-method.md)或[ICorDebugManagedCallback2：： exception](icordebugmanagedcallback2-exception-method.md)）與[ICorDebugController：： Continue](icordebugcontroller-continue-method.md)的相關呼叫之間呼叫方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

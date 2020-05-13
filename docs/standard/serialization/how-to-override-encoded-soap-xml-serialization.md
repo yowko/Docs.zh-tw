@@ -1,16 +1,17 @@
 ---
 title: HOW TO：覆寫已編碼的 SOAP XML 序列化
+description: 瞭解如何將物件的 XML 序列化覆寫為 SOAP 訊息，這與覆寫標準 XML 序列化的程式類似。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 1bc9b228e61ccb0852ae489d44c5b692c54b642d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76e8009b83182d8517ff403f4f1e67bf0e7846b8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922586"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375838"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>HOW TO：覆寫已編碼的 SOAP XML 序列化
 
@@ -278,7 +279,7 @@ public class Run
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - [控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)

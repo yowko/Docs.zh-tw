@@ -1,5 +1,6 @@
 ---
 title: 'How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents'
+description: 瞭解如何使用 XML 架構定義工具來產生 XML 架構，以描述類別或產生 XML 架構所定義的類別。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 2bbdced0f984b653a58afba9685683e8c0891271
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 21ce4ad846e21a328ba199f6253bd259be9d932b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389791"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379528"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。
 
 XML 架構定義工具（Xsd.exe）通常可以在下列路徑中找到： \
-_C：\\Program Files （x86）\\Microsoft sdk\\Windows\\{version}\\bin\\NETFX {version} 工具\\_
+_C： \\ Program Files （x86） \\ Microsoft sdk \\ Windows \\ {version} \\ Bin \\ NETFX {version} 工具\\_
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>產生符合特定結構描述的類別  
   
@@ -30,7 +31,7 @@ _C：\\Program Files （x86）\\Microsoft sdk\\Windows\\{version}\\bin\\NETFX {v
     xsd mySchema.xsd  
     ```  
   
-     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說，XML 架構命名空間必須是 "http://www.w3.org/2001/XMLSchema"，如下列範例所示。  
+     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說，XML 架構命名空間必須是 ""， http://www.w3.org/2001/XMLSchema 如下列範例所示。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -55,7 +56,7 @@ _C：\\Program Files （x86）\\Microsoft sdk\\Windows\\{version}\\bin\\NETFX {v
   
      將寫入結構描述，以 "schema0.xsd" 名稱開始。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Data.DataSet>
 - [XML 結構描述定義工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)

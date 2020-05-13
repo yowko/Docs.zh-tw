@@ -1,5 +1,6 @@
 ---
 title: 序列化-.NET
+description: 本文提供 .NET 序列化技術的相關資訊，包括二進位序列化、XML 和 SOAP 序列化，以及 JSON 序列化。
 ms.date: 09/02/2019
 helpviewer_keywords:
 - JSON serialization
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: e6db24326c79ab6509b253c45c27f87a2aacd73c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b3d76c14dc9180a5f19781122d1a42bcae603e76
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053352"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377246"
 ---
 # <a name="serialization-in-net"></a>.NET 的序列化
 
@@ -28,7 +29,7 @@ ms.locfileid: "71053352"
   
 - [JSON 序列化](system-text-json-overview.md)只會序列化公用屬性，而且不會保留型別精確度。 JSON 是一種開放式標準，是在網路上共用資料的理想選擇。
 
-## <a name="reference"></a>參考
+## <a name="reference"></a>參考資料
 
 <xref:System.Runtime.Serialization>  
 包含類別，可以用來序列化和還原序列化物件。

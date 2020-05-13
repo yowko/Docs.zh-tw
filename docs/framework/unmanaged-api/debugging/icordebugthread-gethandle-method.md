@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16aafa439fc81c3606f98ca2ba860316ec46e0db
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133458"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379743"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle 方法
 取得此 ICorDebugThread 之使用中部分的目前控制碼。  
@@ -43,10 +43,10 @@ HRESULT GetHandle (
  這個控制碼是由偵錯工具 API 所擁有。 偵錯工具在使用它之前，應該先複製它。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

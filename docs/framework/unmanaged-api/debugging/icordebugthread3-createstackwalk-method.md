@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-ms.openlocfilehash: 64f6bc9abb8105cdfa942c2aaca71994e8a91765
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f2850e6c9cbb2250a08ab4a0e34c69e377d3a23d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791408"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375843"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>ICorDebugThread3::CreateStackWalk 方法
 為您要回溯其堆疊的執行緒建立[ICorDebugStackWalk](icordebugstackwalk-interface.md)物件。  
@@ -40,8 +40,8 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功建立 `ICorDebugStackWalk` 物件。|  
-|E_FAIL|未建立 `ICorDebugStackWalk` 物件。|  
+|S_OK|`ICorDebugStackWalk`已成功建立物件。|  
+|E_FAIL|`ICorDebugStackWalk`未建立物件。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
@@ -49,13 +49,13 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
  如果 `CreateStackWalk` 方法成功，則傳回的 `ICorDebugStackWalk` 物件內容會設定為執行緒的目前內容。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

@@ -1,16 +1,17 @@
 ---
 title: 組件位置
+description: .NET 元件的位置會決定 CLR 如何找出它，以及是否可以與其他元件共用。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-ms.openlocfilehash: 0b84aba749625f0f86027cd9d09a5e9a2229a3f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ab3804b14b586e1430d654f4da32a310bcb6cc9
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73733134"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379902"
 ---
 # <a name="assembly-location"></a>組件位置
 組件的位置可判斷 Common Language Runtime 是否可以在參考時找到它，也可以判斷是否可以與其他組件共用組件。 您可以在下列位置中部署組件：
@@ -27,8 +28,8 @@ ms.locfileid: "73733134"
 
      HTTP 伺服器上部署的組件必須具有強式名稱；您指向應用程式組態檔的程式碼基底區段中的組件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [建立組件](create.md)
 - [全域組件快取](../../framework/app-domains/gac.md)
-- [運行時如何定位程式集](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [執行時間如何找出元件](../../framework/deployment/how-the-runtime-locates-assemblies.md)

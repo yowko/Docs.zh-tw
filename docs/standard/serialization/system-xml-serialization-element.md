@@ -1,17 +1,18 @@
 ---
 title: <system.xml.serialization> 項目
+description: 本文描述 <system.string> 元素，這是用來控制 XML 序列化的最上層元素。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: 02027a238bc9a2f82963ea841584d2bb3c6446c6
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 1e66220004d561f937d03c506e6f30db4ccc635b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410539"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380120"
 ---
 # <a name="systemxmlserialization-element"></a>\<> 元素的 system.object 序列化
 
@@ -66,11 +67,11 @@ ms.locfileid: "67410539"
 </system.xml.serialization>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [設定檔架構](../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<dateTimeSerialization> 元素](../../../docs/standard/serialization/datetimeserialization-element.md)
 - [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<新增 schemaImporterExtensions>的\<> 元素](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<新增 schemaImporterExtensions>的> 元素 \<](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

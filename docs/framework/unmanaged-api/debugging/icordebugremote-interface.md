@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: 0cc79c0a93fa4f05b8c793a8b7fb0b9b3f031b1a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ef11aa48f679592126f736c2877c697f02cb5e62
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791960"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379237"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote 介面
 提供啟動或附加 Managed 偵錯工具至遠端目標處理序的功能。  
@@ -67,7 +67,7 @@ interface ICorDebugRemote : IUnknown
  目前，只有針對在遠端 Macintosh 電腦上執行的 Silverlight 應用程式目標進行偵測時，才支援這種功能。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

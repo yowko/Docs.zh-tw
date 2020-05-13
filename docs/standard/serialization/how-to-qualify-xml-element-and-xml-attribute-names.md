@@ -1,5 +1,6 @@
 ---
 title: 如何限定 XML 元素和 XML 屬性名稱
+description: 本文說明如何在 XML 檔中限定 XML 元素和 XML 屬性的名稱。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6c29e03d9ce28e5b0abc68a5d7e8d82f4485ac93
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159867"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378405"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>如何限定 XML 元素和 XML 屬性名稱
 
-<xref:System.Xml.Serialization.XmlSerializerNamespaces>類別實例所包含的 XML 命名空間必須符合[在 XML 中稱為命名空間](https://www.w3.org/TR/REC-xml-names/)的全球資訊網協會（W3C）規格。
+類別實例所包含的 XML 命名空間 <xref:System.Xml.Serialization.XmlSerializerNamespaces> 必須符合[在 XML 中稱為命名空間](https://www.w3.org/TR/REC-xml-names/)的全球資訊網協會（W3C）規格。
 
 XML 命名空間提供限定 XML 文件中 XML 項目和 XML 屬性名稱的方法。 限定名稱 (Qualified Name) 是由前置詞和本機名稱所組成，並以半形冒號 (:) 隔開。 前置詞的作用只是個替代符號 (Placeholder)，它會對應到指定命名空間的 URI。 通用管理的 URI 命名空間和本機名稱的組合會產生保證是通用唯一的名稱。
 
@@ -162,7 +163,7 @@ public class Price
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 結構描述定義工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)

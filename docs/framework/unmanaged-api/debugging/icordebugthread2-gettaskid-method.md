@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-ms.openlocfilehash: d5f2838007504e56ad44614a6778083be046629f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 841af546cc3586529fe290c69e686438f634b90d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140080"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377790"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID 方法
 取得在這個執行緒上執行之工作的識別碼。  
@@ -38,13 +38,13 @@ HRESULT GetTaskID (
  脫銷在這個 ICorDebugThread2 物件所代表的執行緒上執行之工作的識別碼指標。  
   
 ## <a name="remarks"></a>備註  
- 工作只有線上程與連接相關聯時，才可以線上程上執行。 如果執行緒與連接沒有關聯，`GetTaskID` 會在 `pTaskId` 中傳回零。  
+ 工作只有線上程與連接相關聯時，才可以線上程上執行。 `GetTaskID``pTaskId`如果執行緒與連接沒有關聯，則會在中傳回零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: 基本序列化
+description: 本文說明如何使用 SerializableAttribute 讓類別可序列化，並包含序列化和還原序列化的範例。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binary serialization, basic serialization
@@ -7,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248026"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378420"
 ---
 # <a name="basic-serialization"></a>基本序列化
 
@@ -92,7 +93,7 @@ public class MyStuff : MyObject
   
  使用 [Serializable](xref:System.SerializableAttribute) 屬性十分方便，但有上述限制。 如需何時應將類別標示為序列化的資訊，請參閱[序列化方針](serialization-guidelines.md)。 類別在編譯後即無法在其中新增序列化。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [二進位序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

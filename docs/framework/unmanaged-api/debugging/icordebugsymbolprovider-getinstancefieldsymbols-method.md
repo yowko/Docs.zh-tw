@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetInstanceFieldSymbols 方法
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
-ms.openlocfilehash: 9c55ce4d36681e173047cfb51515a74899c5a9fe
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9ecc61ed6cac73a519f33e00cbfbfecc20ac2ebe
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791640"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379636"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider::GetInstanceFieldSymbols 方法
 取得對應 TypeSpec 簽章的執行個體欄位符號。  
@@ -46,13 +46,13 @@ HRESULT GetInstanceFieldSymbols(
 > 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

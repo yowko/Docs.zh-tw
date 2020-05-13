@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-ms.openlocfilehash: 5cb95fb7cf70dbf7616e9bc59ebf44de090de883
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 624469ca1ae4c96b4143f8768b4c5ff9c2601a2f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133438"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378876"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject 方法
 取得 common language runtime （CLR）執行緒的介面指標。  
@@ -38,14 +38,14 @@ HRESULT GetObject (
  脫銷表示 CLR 執行緒之 ICorDebugValue 介面物件的位址指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Thread>

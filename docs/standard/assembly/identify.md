@@ -1,28 +1,29 @@
 ---
-title: 如何：確定檔是否為程式集
+title: 如何：判斷檔案是否為元件
+description: 本文說明如何以手動和程式設計方式判斷檔案是否為 .NET 元件。
 ms.date: 08/19/2019
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb1bcfa50ec380f10ab67cc47331f91dc3e4b32d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159503"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380138"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a>如何：確定檔是否為程式集
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a>如何：判斷檔案是否為元件
 
-檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。 有關程式集和中繼資料的詳細資訊，請參閱[組件資訊清單](manifest.md)。  
+檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。 如需元件和中繼資料的詳細資訊，請參閱[組件資訊清單](manifest.md)。  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>如何以手動方式判斷檔案是否為組件  
   
 1. 啟動 [Ildasm.exe (IL 反組譯工具)](../../framework/tools/ildasm-exe-il-disassembler.md)。  
   
-2. 載入要測試的檔。  
+2. 載入您要測試的檔案。  
   
-3. 如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 有關詳細資訊，請參閱主題["如何：查看程式集內容](view-contents.md)"。  
+3. 如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱 how [to： View assembly 內容](view-contents.md)主題。  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以程式設計方式判斷檔案是否為組件  
   
@@ -91,9 +92,9 @@ End Module
 
 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法會載入測試檔案，然後在讀取資訊之後釋放它。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Reflection.AssemblyName>
-- [C# 程式設計指南](../../csharp/programming-guide/index.md)
-- [程式設計概念（視覺基礎）](../../visual-basic/programming-guide/concepts/index.md)
+- [C# 程式設計手冊](../../csharp/programming-guide/index.md)
+- [程式設計概念（Visual Basic）](../../visual-basic/programming-guide/concepts/index.md)
 - [.NET 中的組件](index.md)

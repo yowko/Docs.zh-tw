@@ -1,26 +1,27 @@
 ---
-title: 如何：創建未簽名的好友程式集
+title: 如何：建立未簽署的 friend 元件
+description: 本文說明如何將 friend 元件與不帶正負號的元件搭配使用。 其中包含 .NET 安全性的相關資訊。
 ms.date: 08/19/2019
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f8fec064507553b8208083578165965de2303a33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d3e13669c36048759fedeb3df1bfb59fd476317
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352441"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378975"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies"></a>如何：創建未簽名的好友程式集
+# <a name="how-to-create-unsigned-friend-assemblies"></a>如何：建立未簽署的 friend 元件
 
 此範例示範如何搭配未簽署的組件使用 friend 組件。
 
-## <a name="create-an-assembly-and-a-friend-assembly"></a>創建程式集和友元程式集
+## <a name="create-an-assembly-and-a-friend-assembly"></a>建立元件和 friend 元件
 
 1. 開啟命令提示字元。
 
-2. 創建名為*friend_unsigned_A*的 C# 或 Visual Basic 檔，其中包含以下代碼。 代碼使用 該<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>屬性將*friend_unsigned_B*聲明為友用程式集。
+2. 建立名為*friend_unsigned_A*的 c # 或 Visual Basic 檔案，其中包含下列程式碼。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性，將*friend_unsigned_B*宣告為 friend 元件。
 
    ```csharp
    // friend_unsigned_A.cs
@@ -73,7 +74,7 @@ ms.locfileid: "74352441"
    End Class
    ```
 
-3. 使用以下命令編譯和簽名*friend_unsigned_A：*
+3. 使用下列命令來編譯和簽署*friend_unsigned_A* ：
 
    ```csharp
    csc /target:library friend_unsigned_A.cs
@@ -83,7 +84,7 @@ ms.locfileid: "74352441"
    vbc -target:library friend_unsigned_A.vb
    ```
 
-4. 創建名為*friend_unsigned_B*的 C# 或 Visual Basic 檔，其中包含以下代碼。 由於*friend_unsigned_A*指定*friend_unsigned_B*為友用程式集，*因此friend_unsigned_B*中的代碼可以訪問`internal`（C#）`Friend`或 （可視基本）類型和*成員*，friend_unsigned_A 。
+4. 建立名為*friend_unsigned_B*的 c # 或 Visual Basic 檔案，其中包含下列程式碼。 由於*friend_unsigned_A*會將*friend_unsigned_B*指定為 friend 元件，因此*friend_unsigned_B*中的程式碼可以 `internal` 從 friend_unsigned_A 存取（c #）或 `Friend` （ * *Visual Basic）類型和成員。
 
    ```csharp
    // friend_unsigned_B.cs
@@ -125,7 +126,7 @@ ms.locfileid: "74352441"
    End Module
    ```
 
-5. 使用以下命令編譯*friend_unsigned_B。*
+5. 使用下列命令來編譯*friend_unsigned_B* 。
 
    ```csharp
    csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs
@@ -135,21 +136,21 @@ ms.locfileid: "74352441"
    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb
    ```
 
-   編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用`-out`編譯器選項顯式指定輸出程式集 *（.exe*或 *.dll）* 的名稱。 有關詳細資訊，請參閱[-out （C# 編譯器選項）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或[-out （可視基本）](../../visual-basic/reference/command-line-compiler/out.md).
+   編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用編譯器選項，明確指定輸出元件（*.exe*或 *.dll*）的名稱 `-out` 。 如需詳細資訊，請參閱[-out （c # 編譯器選項）](../../csharp/language-reference/compiler-options/out-compiler-option.md)或[-out （Visual Basic）](../../visual-basic/reference/command-line-compiler/out.md)。
 
-6. 運行*friend_unsigned_B.exe*檔。
+6. 執行*friend_unsigned_B .exe*檔案。
 
-   程式輸出兩個字串：**類 1.Test**和**類 2.Test**。
+   程式會輸出兩個字串： **Class1. test**和**Class2**。
 
 ## <a name="net-security"></a>.NET 安全性
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要<xref:System.Security.Permissions.StrongNameIdentityPermission>區別是可以請求安全許可權來運行代碼的特定部分，<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>而屬性控制 或`internal``Friend`（Visual Basic） 類型和成員的可見度。
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異在於 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性許可權來執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則控制 `internal` 或 `Friend` （Visual Basic）類型和成員的可見度。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的組件](index.md)
-- [好友程式集](friend.md)
-- [如何：創建簽名的好友程式集](create-signed-friend.md)
-- [C# 程式設計指南](../../csharp/programming-guide/index.md)
-- [程式設計概念（視覺基礎）](../../visual-basic/programming-guide/concepts/index.md)
+- [Friend 組件](friend.md)
+- [如何：建立已簽署的 friend 元件](create-signed-friend.md)
+- [C# 程式設計手冊](../../csharp/programming-guide/index.md)
+- [程式設計概念（Visual Basic）](../../visual-basic/programming-guide/concepts/index.md)

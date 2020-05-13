@@ -1,5 +1,6 @@
 ---
 title: 組件版本控制
+description: 瞭解 .NET 元件的版本控制。 使用 CLR 之元件的所有版本控制都是在元件層級完成。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - informational versions
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdffbcc0bbafed62228cba35e8f85fbec7f7fbab
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140187"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380076"
 ---
 # <a name="assembly-versioning"></a>組件版本控制
 
@@ -30,13 +31,13 @@ Runtime 會執行以下幾個步驟來解析組件繫結要求：
   
 3. 從原始組件參考和組態檔中指定的任何重新導向判斷正確的組件，並且判斷應該繫結至呼叫之組件的版本。  
   
-4. 檢查全域組件快取、設定檔中指定的代碼庫，然後使用[運行時如何定位程式集](../../framework/deployment/how-the-runtime-locates-assemblies.md)中解釋的探測規則檢查應用程式的目錄和子目錄。  
+4. 檢查全域組件快取（在設定檔中指定的 codebase），然後使用[執行時間如何](../../framework/deployment/how-the-runtime-locates-assemblies.md)找出元件中說明的探查規則，檢查應用程式的目錄和子目錄。  
   
 下圖所示即為這些步驟：  
   
 ![顯示組件繫結要求解析中步驟的圖表。](./media/versioning/resolve-assembly-binding-request.gif)
   
-有關配置應用程式的詳細資訊，請參閱[配置應用程式](../../framework/configure-apps/index.md)。 有關繫結原則的詳細資訊，請參閱[運行時如何定位程式集](../../framework/deployment/how-the-runtime-locates-assemblies.md)。  
+如需設定應用程式的詳細資訊，請參閱[設定應用](../../framework/configure-apps/index.md)程式。 如需系結原則的詳細資訊，請參閱[執行時間如何找出元件](../../framework/deployment/how-the-runtime-locates-assemblies.md)。  
   
 ## <a name="version-information"></a>版本資訊  
 
@@ -60,7 +61,7 @@ Runtime 會執行以下幾個步驟來解析組件繫結要求：
   
 Runtime 會針對版本的用途區別一般和強式名稱的組件。 版本檢查只會發生於強式名稱的組件。  
   
-有關指定版本繫結原則的資訊，請參閱[配置應用](../../framework/configure-apps/index.md)。 有關運行時如何使用版本資訊查找特定程式集的資訊，請參閱[運行時如何定位程式集](../../framework/deployment/how-the-runtime-locates-assemblies.md)。  
+如需指定版本系結原則的相關資訊，請參閱[設定應用程式](../../framework/configure-apps/index.md)。 如需執行時間如何使用版本資訊來尋找特定元件的詳細資訊，請參閱[執行時間如何](../../framework/deployment/how-the-runtime-locates-assemblies.md)找出元件。  
   
 ### <a name="assembly-informational-version"></a>組件資訊版本  
 
@@ -69,11 +70,11 @@ Runtime 會針對版本的用途區別一般和強式名稱的組件。 版本�
 > [!NOTE]
 > 儘管您可以指定任何文字，如果字串不屬於組件版本號碼所使用的格式，或是屬於這種格式卻包含萬用字元，在編譯時就會出現警告訊息。 這項警告是無害的。  
   
-資訊版本是使用自訂屬性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 有關資訊版本屬性的詳細資訊，請參閱[設置程式集屬性](set-attributes.md)。  
+資訊版本是使用自訂屬性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 如需資訊版本屬性的詳細資訊，請參閱[設定元件屬性](set-attributes.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [運行時如何定位程式集](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [執行時間如何找出元件](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [設定應用程式](../../framework/configure-apps/index.md)
 - [設定組件屬性](set-attributes.md)
 - [.NET 中的組件](index.md)

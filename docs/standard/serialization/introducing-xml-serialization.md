@@ -1,5 +1,6 @@
 ---
 title: XML 序列化的詳細資料
+description: 序列化會將物件轉換成可以傳輸的表單。 本文提供 XML 序列化和 XmlSerializer 類別的總覽。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: d644e80cbf5ac17fca4df039d915c847a1936217
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 373a98bea6661d4a1dcfa0300dcc7c0df1ad751a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588447"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380151"
 ---
 # <a name="xml-serialization"></a>XML 序列化
 
@@ -175,7 +176,7 @@ public string MyToken;
 
 - <xref:System.Xml.Serialization.XmlRootAttribute>
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.Runtime.Serialization.DataContractSerializer>

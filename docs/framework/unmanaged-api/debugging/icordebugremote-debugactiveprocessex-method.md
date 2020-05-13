@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b95e9f3a0d584511a2bcf156ed2c50a98f96d071
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791966"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379067"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx 方法
 在偵錯工具下的遠端電腦上啟動進程。  
@@ -44,7 +44,7 @@ HRESULT DebugActiveProcessEx (
  在要附加偵錯工具之進程的識別碼。  
   
  `win32Attach`  
- [in] `true` 如果偵錯工具的行為應該是進程的 Win32 偵錯工具，並分派非受控回呼，則為，否則，`false`。  
+ [in] `true`如果偵錯工具的行為應該是進程的 Win32 偵錯工具，並分派非受控回呼，則為，否則為 `false` 。  
   
  `ppProcess`  
  脫銷"ICorDebugProcess" 物件位址的指標，表示已附加偵錯工具的進程。  
@@ -60,7 +60,7 @@ HRESULT DebugActiveProcessEx (
  Silverlight 中不支援混合模式的調試。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

@@ -1,16 +1,17 @@
 ---
 title: 增強的強式命名
+description: .NET Framework 中元件的傳統強式名稱簽章有限制。 瞭解增強型強式命名。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-ms.openlocfilehash: 1d582513b10de88e4e5b9b9ef8c338599d6980f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 720eda86ef0555127da422b2f44a414e8bbfb1b7
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141167"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378959"
 ---
 # <a name="enhanced-strong-naming"></a>增強的強式命名
 強式名稱簽章是 .NET Framework 中的身分識別機制，用來識別組件。 它是公開金鑰數位簽章，通常用來驗證從建立者 (簽署者) 傳遞給收件者 (驗證者) 的資料完整性。 此簽章用來當作組件的唯一身分識別，並可確保對組件的參考不會模稜兩可。 組件在建置程序的一部分簽署，然後在載入時加以驗證。  
@@ -24,7 +25,7 @@ ms.locfileid: "73141167"
   
 - 強式名稱簽署只支援 SHA-1 演算法。 最近已發現 SHA-1 不足以應付安全雜湊應用程式。 因此，必須使用更強的演算法 (SHA-256 或以上)。 很可能 SHA-1 會失去其與 FIPS 相容的地位，如此對於選擇只使用與 FIPS 相容的軟體和演算法的人會造成問題。  
   
-## <a name="advantages-of-enhanced-strong-names"></a>增強強式名稱的優勢  
+## <a name="advantages-of-enhanced-strong-names"></a>增強型強式名稱的優點  
  增強強式名稱的主要優點是與預先存在的強式名稱相容，以及能夠宣告一個身分識別相當於另一個身分識別：  
   
 - 有預先存在的已簽署組件的開發人員，可以將他們的身分識別移轉至 SHA-2 演算法，同時維持與參考舊身分識別的組件相容性。  
@@ -36,8 +37,8 @@ ms.locfileid: "73141167"
   
  <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性讓組件中繼資料能使用預先存在的公開金鑰處理組件身分識別，如此能讓舊組件參考繼續運作。  <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性使用副署來確保新簽章金鑰的擁有者也是舊身分識別金鑰的擁有者。  
   
-### <a name="sign-with-sha-2-without-key-migration"></a>使用 SHA-2 簽名，無需金鑰遷移  
- 運行命令提示中的以下命令以對程式集進行簽名，而無需遷移強式名稱簽名：  
+### <a name="sign-with-sha-2-without-key-migration"></a>使用 SHA-1 進行簽署，而不需要金鑰遷移  
+ 從命令提示字元執行下列命令來簽署元件，而不需遷移強式名稱簽章：  
   
 1. (如有必要) 產生新的身分識別金鑰。  
   
@@ -63,8 +64,8 @@ ms.locfileid: "73141167"
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
-### <a name="sign-with-sha-2-with-key-migration"></a>使用 SHA-2 簽名，進行金鑰遷移  
- 從命令提示符運行以下命令，以使用遷移的強式名稱簽名對程式集進行簽名。  
+### <a name="sign-with-sha-2-with-key-migration"></a>以 SHA-2 簽署，並使用金鑰遷移  
+ 從命令提示字元執行下列命令，以使用已遷移的強式名稱簽章來簽署元件。  
   
 1. (如有必要) 產生身分識別與簽章金鑰組。  
   
@@ -131,6 +132,6 @@ ms.locfileid: "73141167"
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [建立和使用強式名稱的組件](create-use-strong-named.md)

@@ -1,5 +1,6 @@
 ---
 title: 使用屬性控制 XML 序列化
+description: 屬性可用來控制物件的 XML 序列化或從相同的類別集建立其他的 XML 資料流。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4fc7667a2123a106b995a1ea3a31da4551ca650e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248039"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375955"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用屬性控制 XML 序列化
 
@@ -315,7 +316,7 @@ public class Group {
 
 也有可能不需將公用屬性或欄位序列化的狀況。 例如，欄位或屬性可用來包含中繼資料。 在這樣的情況下，套用 <xref:System.Xml.Serialization.XmlIgnoreAttribute> 至欄位或屬性，且將略過 <xref:System.Xml.Serialization.XmlSerializer>。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
 - [控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)

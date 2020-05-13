@@ -1,13 +1,14 @@
 ---
 title: 序列化概念
+description: 您可以使用序列化來捕捉物件的狀態，以便建立複本，或從一個應用程式域中的值將物件傳送至另一個。
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 1a7fa7c3e5561fc9e48cf627a703abc747a72ba0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 0592dee188f1c1e5a429438c594d045f8ba268c6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159828"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378730"
 ---
 # <a name="serialization-concepts"></a>序列化概念
 為何會想要使用序列化？ 最重要的兩大原因是，在儲存媒體中保持物件的狀態以便在稍後階段重建完全相同的複本，以及利用值在應用程式定義域之間傳送物件。 例如，使用序列化來儲存 ASP.NET 的工作階段狀態，並且複製物件至 Windows Forms 的剪貼簿。 它也供遠端使用，利用值在應用程式定義域之間傳遞物件。

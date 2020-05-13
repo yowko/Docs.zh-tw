@@ -1,5 +1,6 @@
 ---
 title: HOW TO：序列化物件
+description: 本文說明如何序列化物件。 選取用來儲存 XML 資料流程的傳輸格式，做為資料流程或檔案。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: 3e24d890d47747c51086214530073fc551321079
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 63446df3fa2c931c839eda91c648cee961715f93
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159880"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377548"
 ---
 # <a name="how-to-serialize-an-object"></a>HOW TO：序列化物件
 若要序列化物件，首先建立要序列化的物件，並設定其公用屬性與欄位。 若要執行這項作業，您必須判斷 XML 資料流儲存 (無論是資料流或檔案) 的傳輸格式。 例如，若 XML 資料流必須以永久形式儲存，請建立 <xref:System.IO.FileStream> 物件。  
@@ -50,7 +51,7 @@ ms.locfileid: "78159880"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

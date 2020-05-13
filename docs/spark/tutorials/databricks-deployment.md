@@ -1,21 +1,21 @@
 ---
 title: 將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks
 description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks。
-ms.date: 01/23/2020
+ms.date: 05/11/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3b00823034cbcb271cb7e169df40122f1144462a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 228ddd59023dbd9d63ff392764fb36441a6af23a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895721"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379850"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Databricks
 
 本教學課程將教您如何透過 Azure Databricks （以 Apache Spark 為基礎的分析平臺），將您的應用程式部署到雲端，其中包含單鍵設定、簡化的工作流程，以及啟用共同作業的互動式工作區。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 
 > [!div class="checklist"]
 >
@@ -44,7 +44,7 @@ ms.locfileid: "82895721"
 
    ![在 Azure 入口網站中建立 Azure Databricks 資源](./media/databricks-deployment/create-databricks-resource.png)
 
-2. 在 [Azure Databricks 服務]**** 底下，提供值以建立 Databricks 工作區。
+2. 在 [Azure Databricks 服務]  底下，提供值以建立 Databricks 工作區。
 
     |屬性  |描述  |
     |---------|---------|
@@ -79,15 +79,15 @@ ms.locfileid: "82895721"
    pip3 install databricks-cli
    ```
 
-3. 安裝 Databricks CLI 之後，請開啟新的命令提示字元，然後執行命令`databricks`。 如果您收到「 **databricks」無法辨識為內部或外部命令錯誤**，請確定您已開啟新的命令提示字元。
+3. 安裝 Databricks CLI 之後，請開啟新的命令提示字元，然後執行命令 `databricks` 。 如果您收到「 **databricks」無法辨識為內部或外部命令錯誤**，請確定您已開啟新的命令提示字元。
 
 ## <a name="set-up-azure-databricks"></a>設定 Azure Databricks
 
 既然您已安裝 Databricks CLI，您必須設定驗證詳細資料。
 
-1. 執行 Databricks CLI 命令`databricks configure --token`。
+1. 執行 Databricks CLI 命令 `databricks configure --token` 。
 
-2. 執行 [設定] 命令之後，系統會提示您輸入主機。 您的主機 URL 使用下列格式： **HTTPs://< \location>. azuredatabricks.net**。 例如，如果您在 Azure Databricks 服務建立期間選取了 [ **eastus2** ]，則**https://eastus2.azuredatabricks.net**主機會是。
+2. 執行 [設定] 命令之後，系統會提示您輸入主機。 您的主機 URL 使用下列格式： **HTTPs://< \location>. azuredatabricks.net**。 例如，如果您在 Azure Databricks 服務建立期間選取了 [ **eastus2** ]，則主機會是 **https://eastus2.azuredatabricks.net** 。
 
 3. 進入主機之後，系統會提示您輸入權杖。 在 [Azure 入口網站中，選取 [**啟動工作區**] 以啟動您的 Azure Databricks 工作區。
 
@@ -115,7 +115,7 @@ ms.locfileid: "82895721"
 
    在您的本機電腦上建立名為**db-init.sh**的新檔案，並貼上位於 GitHub 的[db-init.sh 內容](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh)。
 
-   在您剛才建立的檔案中，將`DOTNET_SPARK_RELEASE`變數設定`https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`為。 保留*db-init.sh*檔案的其餘部分。
+   在您剛才建立的檔案中，將 `DOTNET_SPARK_RELEASE` 變數設定為 `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz` 。 保留*db-init.sh*檔案的其餘部分。
 
 > [!Note]
 > 如果您使用的是 Windows，請確認您的*install-worker.sh*和*db-init.sh*腳本中的行尾結束符號為 Unix 樣式（LF）。 您可以透過 [記事本 + +] 和 [Atom] 之類的文字編輯器來變更行尾結束符號。
@@ -188,7 +188,7 @@ ms.locfileid: "82895721"
 
 1. 流覽至您的作業，然後選取 [**編輯**] 來設定作業的叢集。
 
-2. 將您的叢集設定為**Spark 2.4.1**。 然後，選取 [ **Advanced Options** > **Init Scripts**]。 將 [初始化腳本路徑`dbfs:/spark-dotnet/db-init.sh`] 設定為。
+2. 將您的叢集設定為**Spark 2.4.1**。 然後，選取 [ **Advanced Options**  >  **Init Scripts**]。 將 [初始化腳本路徑] 設定為 `dbfs:/spark-dotnet/db-init.sh` 。
 
    ![在 Azure Databricks 中設定 spark 叢集](./media/databricks-deployment/cluster-config.png)
 

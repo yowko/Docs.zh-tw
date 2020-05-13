@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c154d4ad561e0bd9d82adaca77d2e30f11a5237
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178505"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379657"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString 方法
-獲取此 ICorDebugStringValue 引用的字串。  
+取得此 ICorDebugStringValue 所參考的字串。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,16 +41,16 @@ HRESULT GetString (
  [in] `szString` 陣列的大小。  
   
  `pcchString`  
- [出]指向陣列中返回的字元數的`szString`指標。  
+ 脫銷陣列中傳回的字元數指標 `szString` 。  
   
  `szString`  
- [出]存儲檢索的字串的陣列。  
+ 脫銷儲存已抓取字串的陣列。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

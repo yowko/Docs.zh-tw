@@ -1,5 +1,6 @@
 ---
 title: 控制編碼 SOAP 序列化的屬性
+description: 本文列出在 system.string 命名空間中找到的一組特殊屬性，以符合 SOAP 規格。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SOAP, XML serialization
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 2961d9abc6c32e78b5a61e8f2bbea5cfcf6677bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e99856c3ac70b122c0def23e36bbc3059c5891c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794936"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378465"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>控制編碼 SOAP 序列化的屬性
 
@@ -32,7 +33,7 @@ ms.locfileid: "61794936"
 |<xref:System.Xml.Serialization.SoapIncludeAttribute>|公用衍生類別宣告以及 Web 服務描述語言 (WSDL) 文件的公用方法。|當產生結構描述時應包含型別 (在序列化時辨認)。|
 |<xref:System.Xml.Serialization.SoapTypeAttribute>|公用類別宣告|類別應序列化成 XML 型別。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
 - [如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

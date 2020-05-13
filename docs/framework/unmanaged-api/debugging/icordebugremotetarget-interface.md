@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: bab6b7f683b5563cf362366dfb007f83caeee12d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4883c208468db0096bed3ff8cf4a8ed50a5d7cc6
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791928"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379235"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget 介面
 提供可讓開發人員對通用語言執行平台 (CLR) 環境中的 Silverlight 應用程式進行偵錯的方法。  
@@ -49,7 +49,7 @@ interface ICorDebugRemoteTarget  : IUnknown
  Windows 95、Windows 98、Windows ME 或非 x86 的平台 (例如 IA-64 和 AMD64) 不支援混合模式 (也就是 Managed 和機器碼) 偵錯。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cordebug.h .idl  
   

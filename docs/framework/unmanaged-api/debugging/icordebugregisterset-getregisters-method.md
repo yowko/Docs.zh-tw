@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 32e899622b9c649a08e3bca1b6645f70dcbcbb19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40de06d47654337542d2c80dc325f8201335312a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178537"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379146"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters 方法
-獲取位元遮罩指定的每個寄存器的值（當前正在執行代碼的電腦）。  
+取得位元遮罩所指定之每個暫存器（目前執行程式碼的電腦）的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,29 +38,29 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>參數  
  `mask`  
- [在]指定要檢索哪些寄存器值的位元遮罩。 每個位對應于寄存器。 如果位設置為 1，則檢索寄存器的值;如果位設置為 1，則檢索寄存器的值。否則，不會檢索寄存器的值。  
+ 在位元遮罩，指定要抓取的暫存器值。 每個位都會對應到一個暫存器。 如果位設為1，則會抓取暫存器的值;否則，就不會抓取暫存器的值。  
   
  `regCount`  
- [在]要檢索的寄存器值數。  
+ 在要抓取的暫存器值數目。  
   
  `regBuffer`  
- [出]物件陣列`CORDB_REGISTER`，每個物件都接收寄存器的值。  
+ 脫銷物件的陣列 `CORDB_REGISTER` ，其中每一個都會接收暫存器的值。  
   
 ## <a name="remarks"></a>備註  
- 陣列的大小應等於位元遮罩中設置為 1 的位數。 參數`regCount`指定將接收寄存器值的緩衝區中的元素數。 如果`regCount`該值對於遮罩指示的寄存器數太小，則較高的編號寄存器將從集中截斷。 如果`regCount`該值太大，則未使用`regBuffer`的元素將取消修改。  
+ 陣列的大小應該等於位元遮罩中設定為一個的位數。 `regCount`參數會指定要接收暫存器值之緩衝區中的元素數目。 如果此 `regCount` 值對遮罩所指示的暫存器數目而言太小，則會從集合中截斷較高編號的暫存器。 如果 `regCount` 值太大，則 `regBuffer` 不會修改未使用的元素。  
   
- 如果位元遮罩指定不可用的寄存器，`GetRegisters`則返回該寄存器的不確定值。  
+ 如果位元遮罩指定無法使用的暫存器，則會傳回該暫存器的 `GetRegisters` 不定值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugRegisterSet 介面](icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2 介面](icordebugregisterset2-interface.md)

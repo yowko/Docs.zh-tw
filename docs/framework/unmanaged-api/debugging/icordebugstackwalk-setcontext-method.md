@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 23ad8882ad97e5ceaeb690dfae08a6be55b85f64
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 896e797acc76e8d8034bd964e488317a62eed97b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791850"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378781"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext 方法
 將[ICorDebugStackWalk](icordebugstackwalk-interface.md)物件的目前內容設定為執行緒的有效內容。  
@@ -38,18 +38,18 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  在[CorDebugSetCoNtextFlag](cordebugsetcontextflag-enumeration.md)旗標，指出內容是否來自堆疊上的現用框架，或回溯堆疊所取得的內容。  
   
  `contextSize`  
- 在`CONTEXT` 緩衝區的配置大小。  
+ 在緩衝區的配置大小 `CONTEXT` 。  
   
  `context`  
- 在`CONTEXT` 緩衝區。  
+ 在`CONTEXT`緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功設定 `ICorDebugStackWalk` 物件的內容。|  
-|E_FAIL|未設定 `ICorDebugStackWalk` 物件的內容。|  
+|S_OK|`ICorDebugStackWalk`已成功設定物件的內容。|  
+|E_FAIL|`ICorDebugStackWalk`未設定物件的內容。|  
 |E_INVALIDARG|內容為 null。|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|內容緩衝區太小。|  
   
@@ -63,13 +63,13 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
  您可以藉由立即呼叫[ICorDebugStackWalk：： GetCoNtext](icordebugstackwalk-getcontext-method.md)方法，來抓取此內容的完全位複本。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

@@ -1,16 +1,17 @@
 ---
 title: 序列化程序中的步驟
+description: 序列化程式會在對格式器呼叫序列化方法時開始。 本文說明事件的順序。
 ms.date: 08/07/2017
 helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: f30dd550437e6bc1030c79865bf2edd2c0efbfa9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 1f749b9102182e78bc3fda436cf386a9f5759d5a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741046"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379106"
 ---
 # <a name="steps-in-the-serialization-process"></a>序列化程序中的步驟
 在[格式子](xref:System.Runtime.Serialization.Formatter)上呼叫 <xref:System.Runtime.Serialization.Formatter.Serialize%2A> 方法時，物件序列化會遵循下列規則順序繼續進行：
@@ -25,7 +26,7 @@ ms.locfileid: "75741046"
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [二進位序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

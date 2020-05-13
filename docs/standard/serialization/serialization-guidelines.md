@@ -1,5 +1,6 @@
 ---
 title: 序列化方針
+description: 本檔提供設計要序列化的 API 時應考慮的指導方針，以及 .NET 所提供的三種主要序列化技術的摘要。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159789"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378381"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  
@@ -22,7 +23,7 @@ ms.locfileid: "78159789"
   
  .NET 提供已針對多個序列化案例最佳化的三個主要序列化技術。 下表列出這些技術以及與這些技術相關的主要 .NET 類型。  
   
-|技術|相關類別|注意|  
+|技術|相關類別|附註|  
 |----------------|----------------------|-----------|  
 |資料合約序列化|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|一般持續性<br /><br /> Web 服務<br /><br /> JSON|  
 |XML 序列化|<xref:System.Xml.Serialization.XmlSerializer>|XML 格式 <br />(具有完全控制)|  
@@ -69,7 +70,7 @@ ms.locfileid: "78159789"
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性是最常用的回呼屬性。 系列中的其他屬性為<xref:System.Runtime.Serialization.OnDeserializingAttribute>、 <xref:System.Runtime.Serialization.OnSerializingAttribute>和。 <xref:System.Runtime.Serialization.OnSerializedAttribute> 這些屬性可用來分別標記在還原序列化之前、序列化之前以及最後在序列化之後所執行的回呼。  
+     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性是最常用的回呼屬性。 系列中的其他屬性為 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 、 <xref:System.Runtime.Serialization.OnSerializingAttribute> 和 <xref:System.Runtime.Serialization.OnSerializedAttribute> 。 這些屬性可用來分別標記在還原序列化之前、序列化之前以及最後在序列化之後所執行的回呼。  
   
 4. 當您還原序列化複雜物件圖形時，請考慮使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 來指示應該使用的具象型別。  
   
@@ -103,7 +104,7 @@ ms.locfileid: "78159789"
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. 如果您希望對序列化 XML 的形狀有更大的控制權，而不是套用 XML 序列化屬性來使用提供的控制權，請考慮實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面。 介面的兩個方法（ <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>和<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>）可讓您完全控制已序列化的 XML 資料流程。 您也可以藉由套用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性來控制為此型別產生的 XML 結構描述。  
+2. 如果您希望對序列化 XML 的形狀有更大的控制權，而不是套用 XML 序列化屬性來使用提供的控制權，請考慮實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面。 介面的兩個方法（ <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> ）可讓您完全控制已序列化的 XML 資料流程。 您也可以藉由套用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性來控制為此型別產生的 XML 結構描述。  
   
 #### <a name="supporting-runtime-serialization"></a>支援執行階段序列化  
  「執行階段序列化」** 是 .NET 遠端處理所使用的技術。 如果您認為您的型別將會使用 .NET 遠端處理來傳輸，則需要確定型別有支援執行階段序列化。  
@@ -137,7 +138,7 @@ ms.locfileid: "78159789"
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)

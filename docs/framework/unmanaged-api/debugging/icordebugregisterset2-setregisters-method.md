@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe0ac7e7-c9e1-4ec1-9f4e-1c56d63d73ac
 topic_type:
 - apiref
-ms.openlocfilehash: 2dce97db3d209c51270a51ae92e9dce0b6861998
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ebbd8dc2b715541850ed3b3bc530c0dd28993e1d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791993"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378120"
 ---
 # <a name="icordebugregisterset2setregisters-method"></a>ICorDebugRegisterSet2::SetRegisters 方法
-`SetRegisters` 不會在 .NET Framework 版本2.0 中執行。 請勿呼叫此方法。  
+`SetRegisters`不會在 .NET Framework 版本2.0 中執行。 請不要呼叫此方法。  
   
 > [!NOTE]
 > 使用較高層級的作業，例如[ICorDebugILFrame：： SetIP](icordebugilframe-setip-method.md)或[ICorDebugNativeFrame：： setip](icordebugnativeframe-setip-method.md)。  
@@ -40,13 +40,13 @@ HRESULT SetRegisters (
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

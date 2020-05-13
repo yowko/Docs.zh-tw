@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-ms.openlocfilehash: 9953d0f3e1a4d4cd935918f0e5721e474453ca7d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 743b0c8016ca5c0401046166a770d857215429a3
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791901"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379211"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext 方法
 傳回[ICorDebugStackWalk](icordebugstackwalk-interface.md)物件中目前框架的內容。  
@@ -63,13 +63,13 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  因為回溯只會還原暫存器的子集，例如非暫時性暫存器，所以內容可能不會完全符合呼叫時的註冊狀態。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

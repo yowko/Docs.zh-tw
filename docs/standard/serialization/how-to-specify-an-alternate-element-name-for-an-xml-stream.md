@@ -1,5 +1,6 @@
 ---
 title: HOW TO：指定 XML 資料流的替代元素名稱
+description: 瞭解如何使用替代元素名稱建立 XML 資料流程，例如，針對需要相同資訊但稍微不同的 XML Web Service。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 2dc1110b858f639624e05382a67ddccf3ea1b047
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: d9851226b602226e00648d8742bf0a49c902c33b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588471"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377399"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>HOW TO：指定 XML 資料流的替代元素名稱
   
@@ -91,7 +92,7 @@ public void SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>

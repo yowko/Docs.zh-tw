@@ -1,20 +1,21 @@
 ---
 title: XML Schema Definition Tool (Xsd.exe)
+description: XML 序列化程式產生器會針對指定元件中的類型建立 XML 序列化元件，以改善 XmlSerializer 的啟動效能。
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 6ec99e77db4215184547ea2bbbe0d1ff8ad3c286
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 9b2be0b0b267973bd25ffd021dec18a7b9bcadec
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389765"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380059"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
 XML 結構描述定義工具 (Xsd.exe) 可以從 XDR、XML 和 XSD 檔案或從執行階段組件的類別中，產生 XML 結構描述或 Common Language Runtime 類別。
 
 XML 架構定義工具（Xsd.exe）通常可以在下列路徑中找到： \
-_C：\\Program Files （x86）\\Microsoft sdk\\Windows\\{version}\\bin\\NETFX {version} 工具\\_
+_C： \\ Program Files （x86） \\ Microsoft sdk \\ Windows \\ {version} \\ Bin \\ NETFX {version} 工具\\_
 
 ## <a name="syntax"></a>語法
 
@@ -31,7 +32,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> 若要讓 .NET Framework 工具正常運作，您必須正確`Path`地`Include`設定、 `Lib`和環境變數。 執行位於 \<SDK>\v2.0\Bin 目錄中的 SDKVars.bat，即可設定這些環境變數。 SDKVars.bat 必須在每一個命令提示字元中執行。
+> 若要讓 .NET Framework 工具正常運作，您必須 `Path` `Include` 正確地設定、和 `Lib` 環境變數。 執行位於 \<SDK>\v2.0\Bin 目錄中的 SDKVars.bat，即可設定這些環境變數。 SDKVars.bat 必須在每一個命令提示字元中執行。
 
 ## <a name="argument"></a>引數
 
@@ -43,39 +44,39 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 
 |選項|說明|
 |------------|-----------------|
-|**/h\[elp\]**|顯示工具的命令語法和選項。|
-|**/o\[utputdir\]：**_directory_|指定輸出檔的目錄。 這個引數只可以使用一次。 預設值是目前的目錄。|
+|**/h \[ elp\]**|顯示工具的命令語法和選項。|
+|**/o \[ utputdir \] ：**_directory_|指定輸出檔的目錄。 這個引數只可以使用一次。 預設值是目前的目錄。|
 |**/?**|顯示工具的命令語法和選項。|
-|**/p\[arameters\]：**_file .xml_|從指定的 .xml 檔案，讀取各種作業模式的選項。 簡短形式為 `/p:`。 如需詳細資訊，請參閱[備註](#remarks)一節。|
+|**/p \[ arameters \] ：**_file .xml_|從指定的 .xml 檔案，讀取各種作業模式的選項。 簡短形式為 `/p:`。 如需詳細資訊，請參閱[備註](#remarks)一節。|
 
 ## <a name="xsd-file-options"></a>XSD 檔案選項
  您只能為 .xsd 檔指定下列其中一個選項：
 
 |選項|說明|
 |------------|-----------------|
-|**/c\[lasses\]**|產生對應到指定的結構描述的類別。 若要將 XML 資料讀入物件，請使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。|
-|**/d\[ataset\]**|產生衍生自 <xref:System.Data.DataSet> 的類別，對應到指定的結構描述。 若要將 XML 資料讀入衍生類別，請使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|
+|**/c \[ lasses\]**|產生對應到指定的結構描述的類別。 若要將 XML 資料讀入物件，請使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。|
+|**/d \[ ataset\]**|產生衍生自 <xref:System.Data.DataSet> 的類別，對應到指定的結構描述。 若要將 XML 資料讀入衍生類別，請使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|
 
  您也可以為 .xsd 檔指定下列任何選項：
 
 |選項|說明|
 |------------|-----------------|
-|**/e\[lement\]：**_元素_|指定所要產生程式碼的結構描述中的項目。 根據預設，會輸入所有項目。 您可以多次指定這個引數。|
+|**/e \[ lement \] ：**_元素_|指定所要產生程式碼的結構描述中的項目。 根據預設，會輸入所有項目。 您可以多次指定這個引數。|
 |**/enableDataBinding**|在所有產生的型別上實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以啟用資料繫結 (Data Binding)。 簡短形式為 `/edb`。|
-|**/enableLinqDataSet**|（簡短形式： `/eld`.）指定所產生的資料集可以使用 LINQ to DataSet 來查詢。 如果也指定了 /dataset 選項，就會使用這個選項。 如需詳細資訊，請參閱 [LINQ to DataSet 概觀](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查詢具類型資料集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 如需使用 LINQ 的一般資訊，請參閱[語言整合式查詢（linq）-c #](../../csharp/programming-guide/concepts/linq/index.md)或[語言整合查詢（linq）-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。|
-|**/f\[ields\]**|產生欄位，而不是產生屬性。 根據預設，會產生屬性。|
-|**/l\[anguage\]：**_language_|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您也可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的類別指定完整名稱。|
-|**/n\[amespace\]：**_命名空間_|指定產生的型別的執行階段命名空間。 預設命名空間是 `Schemas`。|
+|**/enableLinqDataSet**|（簡短形式： `/eld` .）指定所產生的資料集可以使用 LINQ to DataSet 來查詢。 如果也指定了 /dataset 選項，就會使用這個選項。 如需詳細資訊，請參閱 [LINQ to DataSet 概觀](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查詢具類型資料集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 如需使用 LINQ 的一般資訊，請參閱[語言整合式查詢（linq）-c #](../../csharp/programming-guide/concepts/linq/index.md)或[語言整合查詢（linq）-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。|
+|**/f \[ ields\]**|產生欄位，而不是產生屬性。 根據預設，會產生屬性。|
+|**/l \[ anguage \] ：**_language_|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您也可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的類別指定完整名稱。|
+|**/n \[ amespace \] ：**_命名空間_|指定產生的型別的執行階段命名空間。 預設命名空間是 `Schemas`。|
 |**/nologo**|隱藏產品啟始畫面。|
 |**/order**|在所有物件成員上產生明確順序識別項。|
-|** \[/o\]內容：**_directoryName_|指定要在其中放置檔案的輸出目錄。 預設值是目前的目錄。|
-|**/u\[ri\]：**_uri_|指定所要產生程式碼的結構描述中項目的 URI。 這個 URI 如果存在，會套用到所有以 `/element` 選項指定的項目。|
+|**/o \[ \] 內容：**_directoryName_|指定要在其中放置檔案的輸出目錄。 預設值是目前的目錄。|
+|**/u \[ ri \] ：**_uri_|指定所要產生程式碼的結構描述中項目的 URI。 這個 URI 如果存在，會套用到所有以 `/element` 選項指定的項目。|
 
 ## <a name="dll-and-exe-file-options"></a>DLL 和 EXE 檔案選項
 
 |選項|說明|
 |------------|-----------------|
-|**/t\[\]**_類型名稱： typename_|指定所要建立結構描述的型別名稱。 您可以指定多個型別引數。 如果 *typename* 沒有指定命名空間，Xsd.exe 會以指定的類型比對組件中的所有類型。 如果 *typename* 指定命名空間，只有該類型會被比對。 如果 *typename* 結尾為星號字元 (\*)，則工具會比對 \* 之前以這個字串為開頭的所有類型。 如果省略 `/type` 選項，Xsd.exe 會產生組件中所有型別的結構描述。|
+|/t_類型名稱_ ** \[ \] ：** typename|指定所要建立結構描述的型別名稱。 您可以指定多個型別引數。 如果 *typename* 沒有指定命名空間，Xsd.exe 會以指定的類型比對組件中的所有類型。 如果 *typename* 指定命名空間，只有該類型會被比對。 如果 *typename* 結尾為星號字元 (\*)，則工具會比對 \* 之前以這個字串為開頭的所有類型。 如果省略 `/type` 選項，Xsd.exe 會產生組件中所有型別的結構描述。|
 
 ## <a name="remarks"></a>備註
 
@@ -87,9 +88,9 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |XML 轉換成 XSD|從 XML 檔案中產生 XML 結構描述。|
 |XSD 轉換成 DataSet|從 XSD 結構描述檔中產生 Common Language Runtime <xref:System.Data.DataSet> 類別。 產生的類別為一般 XML 資料提供了豐富的物件模型。|
 |XSD 轉換成類別|從 XSD 結構描述檔中產生執行階段類別。 產生的類別可以配合 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 使用，以讀取和寫入遵循結構描述的 XML 程式碼。|
-|類別轉換成 XSD| 從型別或執行階段組件檔中的型別中產生 XML 結構描述。 產生的架構會定義所<xref:System.Xml.Serialization.XmlSerializer>使用的 XML 格式。|
+|類別轉換成 XSD| 從型別或執行階段組件檔中的型別中產生 XML 結構描述。 產生的架構會定義所使用的 XML 格式 <xref:System.Xml.Serialization.XmlSerializer> 。|
 
- Xsd.exe 只允許您操作遵循 XML 結構描述定義 (XSD) 語言的 XML 結構描述，而這個 XSD 語言是由全球資訊網協會 (W3C) 所提出的。 如需 XML 架構定義建議程式或 XML 標準的詳細資訊，請<https://w3.org>參閱。
+ Xsd.exe 只允許您操作遵循 XML 結構描述定義 (XSD) 語言的 XML 結構描述，而這個 XSD 語言是由全球資訊網協會 (W3C) 所提出的。 如需 XML 架構定義建議程式或 XML 標準的詳細資訊，請參閱 <https://w3.org> 。
 
 ## <a name="setting-options-with-an-xml-file"></a>設定 XML 檔案的選項
 
@@ -104,7 +105,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 </xsd>
 ```
 
-如果上述 XML 包含在名為 Generateschemas.xml 的檔案中，則請在命令提示`/parameters`字元中輸入下列命令，然後按**enter**鍵，以使用參數：
+如果上述 XML 包含在名為 Generateschemas.xml 的檔案中，則請 `/parameters` 在命令提示字元中輸入下列命令，然後按**enter**鍵，以使用參數：
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -162,7 +163,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |namespace|指定產生之程式碼的命名空間。 命名空間必須符合 CLR 標準 (例如，沒有空白或反斜線字元)。|
 |選項|下列其中一個值：`none`、`properties` (產生屬性而非公用欄位)、`order` 或 `enableDataBinding` (請參閱先前＜XSD 檔案選項＞一節中的 `/order` 和 `/enableDataBinding` 參數)。|
 
- 您也可以使用 `DataSet` 項目，控制產生 `<generateDataSet>` 程式碼的方法。 下列 XML 會指定產生的程式碼使用`DataSet`結構（例如<xref:System.Data.DataTable>類別）來建立所指定專案的 Visual Basic 程式碼。 所產生的 DataSet 結構將會支援 LINQ 查詢。
+ 您也可以使用 `DataSet` 項目，控制產生 `<generateDataSet>` 程式碼的方法。 下列 XML 會指定產生的程式碼使用 `DataSet` 結構（例如 <xref:System.Data.DataTable> 類別）來建立所指定專案的 Visual Basic 程式碼。 所產生的 DataSet 結構將會支援 LINQ 查詢。
 
  ```xml
  <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>
@@ -179,7 +180,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
  下表顯示可以和 `<generateDataSet>` 項目搭配使用的屬性。
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |enableLinqDataSet|指定產生的 DataSet 可使用 LINQ to DataSet 查詢。 預設值為 false。|
 |語言|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別指定完整名稱。|
@@ -197,7 +198,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 下表顯示也可以和 `<xsd>` 項目搭配使用的屬性。
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |output|將放置產生的結構描述或程式碼檔的目錄名稱。|
 |nologo|隱藏產品啟始畫面。 設為 `true` 或 `false`。|
@@ -228,7 +229,7 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>

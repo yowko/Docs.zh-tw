@@ -1,5 +1,6 @@
 ---
 title: 資訊清單
+description: .NET 組件資訊清單會指定其版本需求、安全性識別和元件的範圍，以及解析參考的資訊。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f4d09f559ac66e1f3bc38af0781f7e01e7461d5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73107144"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380175"
 ---
 # <a name="assembly-manifest"></a>資訊清單
-每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 組件資訊清單可以存儲在具有 Microsoft 中間語言 （MSIL） 代碼的 PE 檔 *（.exe*或 *.dll）* 中，也可以存儲在僅包含組件資訊清單資訊的獨立 PE 檔中。  
+每個組件 (不論是靜態或是動態) 都含有描述組件中項目彼此如何關聯的資料集合。 組件資訊清單就包含這個組件的中繼資料。 組件資訊清單含有指定組件的版本需求和安全性識別所需的所有中繼資料，以及定義組件範圍和解析資源與類別參考所需的所有中繼資料。 組件資訊清單可以儲存在 PE 檔（ *.exe*或 *.dll*）中，並以 MICROSOFT 中繼語言（MSIL）程式碼或只包含組件資訊清單資訊的獨立 PE 檔案。  
   
  下圖所示為儲存資訊清單的不同方式。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "73107144"
 - 轉譯組件的自我描述  
   
 ## <a name="assembly-manifest-contents"></a>組件資訊清單內容  
- 下表所示為組件資訊清單中包含的資訊。 前四個專案：程式集名稱、版本號、區域性和強式名稱資訊構成程式集的標識。  
+ 下表所示為組件資訊清單中包含的資訊。 前四個專案：元件名稱、版本號碼、文化特性和強式名稱資訊組成元件的身分識別。  
   
 |資訊|描述|  
 |-----------------|-----------------|  
@@ -49,11 +50,11 @@ ms.locfileid: "73107144"
 |型別參考資訊|Runtime 用來將型別參考對應到含有其宣告和實作之檔案的資訊。 這是使用於從組件匯出之型別。|  
 |所參考組件的資訊|組件以靜態方式參考之其他組件的清單。 每一參考包括相依組件的名稱、組件中繼資料 (版本、文化特性、作業系統等)，以及公開金鑰 (如果組件具有強式名稱)。|  
   
- 您可以在程式碼中使用組件屬性在組件資訊清單中加入或變更某些資訊。 您可以變更版本資訊和資訊屬性，包括商標、著作權、產品、公司和資訊版本。 有關程式集屬性的完整清單，請參閱[設置程式集屬性](set-attributes.md)。  
+ 您可以在程式碼中使用組件屬性在組件資訊清單中加入或變更某些資訊。 您可以變更版本資訊和資訊屬性，包括商標、著作權、產品、公司和資訊版本。 如需元件屬性的完整清單，請參閱[設定元件屬性](set-attributes.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [組件內容](contents.md)
 - [組件版本控制](versioning.md)
 - [建立附屬組件](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-- [強命名程式集](strong-named.md)
+- [強式名稱組件](strong-named.md)

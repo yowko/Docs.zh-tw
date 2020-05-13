@@ -1,17 +1,18 @@
 ---
 title: <xmlSerializer> 項目
+description: <xmlSerializer>元素會指定是否要進行其他的 XmlSerializer 檢查。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <xmlSerializer> element
 - XML serialization, configuration
 - xmlSerializer element
 ms.assetid: d129d10c-3eb7-45d9-8098-5fa853825e47
-ms.openlocfilehash: b83ecda30bba8af1f3175eb6ad08593b07a80e6c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 68037959893ec307a896ea86d21e40a9d7aa824c
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249535"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380026"
 ---
 # <a name="xmlserializer-element"></a>\<xmlSerializer> 元素
 指定是否已完成 <xref:System.Xml.Serialization.XmlSerializer> 進度的其他檢查。  
@@ -30,7 +31,7 @@ ms.locfileid: "80249535"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**checkDeserializeAdvances**|指定是否已檢查 <xref:System.Xml.Serialization.XmlSerializer>的進度。 設定屬性為 "true" 或 "false"。 預設為 "true"。|  
 |**useLegacySerializationGeneration**|指定 <xref:System.Xml.Serialization.XmlSerializer> 是否使用舊版序列化產生作業，此作業會將 C# 程式碼寫入至檔案並編譯成組件，藉此產成組件。 預設值為 **false**。|  
@@ -60,7 +61,7 @@ ms.locfileid: "80249535"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [\<> 元素的 system.object 序列化](../../../docs/standard/serialization/system-xml-serialization-element.md)

@@ -1,16 +1,17 @@
 ---
 title: HOW TO：控制衍生類別的序列化
+description: 您可以從現有的類別衍生類別，並指示 XmlSerializer 實例如何序列化新的類別，以自訂 XML 資料流程。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: af19981fd7cfeda3e8e985fa991fd7fdf2476b42
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: b9a8bd52b7dfe7a9bf43061d8f44747b3a847c68
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159919"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379131"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>HOW TO：控制衍生類別的序列化
 使用 **XmlElementAttribute** 屬性變更 XML 項目的名稱並非自訂物件序列化的唯一方法。 您可從現有類別衍生以自訂化 XML 資料流並指示 <xref:System.Xml.Serialization.XmlSerializer> 執行個體如何序列化新類別。  

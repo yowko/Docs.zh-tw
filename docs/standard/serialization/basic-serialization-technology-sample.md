@@ -1,13 +1,14 @@
 ---
 title: 基本序列化技術範例
+description: 這個範例會示範如何將記憶體中的物件圖形序列化成資料流程的 CLR 能力。 這個範例可以使用 SoapFormatter 或 BinaryFormatter。
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: e5dcc9ec7cf6f996c97262b14020552286c530da
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: fcbf790c3b3d48a0aeb27fd1ef6f75dcd7609ae0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353147"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378434"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技術範例
 
@@ -72,7 +73,7 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 - 執行階段序列化
 
-  - <xref:System.Runtime.Serialization.IFormatter>用來參考<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>或<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>物件。
+  - <xref:System.Runtime.Serialization.IFormatter>用來參考 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 或 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 物件。
 
   - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>用來將連結清單序列化為二進位格式的資料流程。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。
 
@@ -86,7 +87,7 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
   - <xref:System.IO.FileStream> 用來將連結串列序列化及還原序列化。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO>
 - <xref:System.IO.File>

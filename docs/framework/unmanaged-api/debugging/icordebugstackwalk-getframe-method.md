@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 89576e2b3d5fb4df0cccfdd28c80a5cb67331597
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f80125a67e634dda05b9427b5f46db8f21b29f8
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791891"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379205"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame 方法
 取得[ICorDebugStackWalk](icordebugstackwalk-interface.md)物件中的目前框架。  
@@ -49,16 +49,16 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugStackWalk` 只會傳回實際的堆疊框架。 請使用[ICorDebugThread3：： GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md)方法來傳回內部框架。 （內部畫面是由執行時間推送至堆疊的資料結構，用來儲存暫存資料）。  
+ `ICorDebugStackWalk`只傳回實際的堆疊框架。 請使用[ICorDebugThread3：： GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md)方法來傳回內部框架。 （內部畫面是由執行時間推送至堆疊的資料結構，用來儲存暫存資料）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

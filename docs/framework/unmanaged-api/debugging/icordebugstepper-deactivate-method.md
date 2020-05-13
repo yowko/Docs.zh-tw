@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 855f4199-b62d-40ce-998e-1eb4a1772142
 topic_type:
 - apiref
-ms.openlocfilehash: 1d75897e00c36bd5c484e837ee68e54443168e77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 760f69baf311cf320e9c358ba1c45c942934f1a5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131759"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379401"
 ---
 # <a name="icordebugstepperdeactivate-method"></a>ICorDebugStepper::Deactivate 方法
 導致此 ICorDebugStepper 取消它所收到的最後一個步驟命令。  
@@ -35,10 +35,10 @@ HRESULT Deactivate ();
  在最近收到的步驟命令取消之後，可能會發出新的逐步執行命令。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

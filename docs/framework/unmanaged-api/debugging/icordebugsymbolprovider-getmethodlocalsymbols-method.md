@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetMethodLocalSymbols 方法
 ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
-ms.openlocfilehash: 41fc8e94ec8a5c8794674bebb32494bb3806e69d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7e9aa01a3fa1c90b0ab4f85970c4eb294b9a4904
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791610"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379617"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider::GetMethodLocalSymbols 方法
 提供方法的相對虛擬位址 (RVA)，取得該方法的本機符號。  
@@ -42,13 +42,13 @@ HRESULT GetMethodLocalSymbols(
 > 這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 
