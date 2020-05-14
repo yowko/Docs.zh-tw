@@ -401,6 +401,8 @@
       href: versions/selection.md
 - name: 執行階段識別碼 (RID) 目錄
   href: rid-catalog.md
+- name: 資源資訊清單名稱
+  href: resources/manifest-file-names.md
 - name: 相依性管理與載入
   items:
     - name: 相依性管理

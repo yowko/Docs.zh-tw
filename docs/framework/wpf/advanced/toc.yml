@@ -463,16 +463,15 @@
           href: localization-attributes-and-comments.md
         - name: WPF 中的雙向功能概觀
           href: bidirectional-features-in-wpf-overview.md
-        - name: HOW TO 主題
-          href: globalization-and-localization-how-to-topics.md
+        - name: 做法
           items:
             - name: 將應用程式當地語系化
               href: how-to-localize-an-application.md
-            - name: 使用自動配置建立按鈕
+            - name: 使用自動版面配置建立按鈕
               href: how-to-use-automatic-layout-to-create-a-button.md
             - name: 針對自動版面配置使用格線
               href: how-to-use-a-grid-for-automatic-layout.md
-            - name: 使用 ResourceDictionary 管理可當地語系化的字串資源
+            - name: 使用 ResourceDictionary 管理字串資源
               href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
             - name: 在可當地語系化的應用程式中使用資源
               href: how-to-use-resources-in-localizable-applications.md
