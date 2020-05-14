@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 467ba53f90081f0c3499fb22acab96b5e380a3f4
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137105"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395835"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress 方法
 取得此 "ICorDebugValue" 物件的位址，此為正在進行調試的進程。  
@@ -35,18 +35,18 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>參數  
  `pAddress`  
- 脫銷`CORDB_ADDRESS` 物件的指標，指定此值物件的位址。  
+ 脫銷`CORDB_ADDRESS`物件的指標，指定此值物件的位址。  
   
 ## <a name="remarks"></a>備註  
- 如果無法使用此值，則會傳回0（零）。 如果值至少部分在暫存器中，或儲存在垃圾收集行程控制碼（`GCHandle`）中，就會發生這種情況。  
+ 如果無法使用此值，則會傳回0（零）。 如果值至少部分在暫存器中，或儲存在垃圾收集行程控制碼（）中，就會發生這種情況 `GCHandle` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

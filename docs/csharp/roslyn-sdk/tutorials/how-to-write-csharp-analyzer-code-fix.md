@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895443"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396288"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -16,7 +16,7 @@ ms.locfileid: "82895443"
 
 在本教學課程中，您將探索如何使用 Roslyn API 建立**分析器**和隨附的**程式碼修正**。 分析器是執行原始程式碼分析並向使用者報告問題的方式之一。 分析器也可以選擇性地提供程式碼修正，以顯示對使用者的原始程式碼所做的修改。 本教學課程所建立的分析器會尋找可使用 `const` 修飾詞來宣告、但並未這麼做的區域變數宣告。 隨附的程式碼修正會修改這些宣告，而新增 `const` 修飾詞。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -235,7 +235,7 @@ var newLocal = trimmedLocal
 
 [!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
-此程式碼需要新的命名空間。 將下列 `using` 陳述式新增至檔案最上方：
+此程式碼需要新的命名空間。 將下列指示詞新增 `using` 至檔案頂端：
 
 ```csharp
 using Microsoft.CodeAnalysis.Formatting;
@@ -497,7 +497,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 
 [!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
-您必須新增一個 `using` 陳述式才能使用 <xref:Microsoft.CodeAnalysis.Simplification.Simplifier> 類型：
+您必須加入一個指示詞 `using` 以使用 <xref:Microsoft.CodeAnalysis.Simplification.Simplifier> 類型：
 
 ```csharp
 using Microsoft.CodeAnalysis.Simplification;

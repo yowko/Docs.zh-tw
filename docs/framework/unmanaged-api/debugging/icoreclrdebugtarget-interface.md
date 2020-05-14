@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-ms.openlocfilehash: 190671b4f690f8c2cad43cf446a1196985ec5a42
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c44a12ef377d29e0b33b8be86aa1d8f0aa9d26bd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790744"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397148"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget 介面
 提供方法來控制參考計數、列舉進程，以及釋放與附加至遠端 Macintosh Silverlight 目標的偵錯工具相關聯的記憶體。  
@@ -59,7 +59,7 @@ class ICoreClrDebugTarget {
  目前，只有針對在遠端 Macintosh 電腦上執行的 Silverlight 應用程式目標進行偵測時，才支援這種功能。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CoreClrRemoteDebuggingInterfaces。h  
   

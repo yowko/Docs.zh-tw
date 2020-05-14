@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodInstance::GetILAddressMap 方法
+title: IXCLRDataMethodInstance：： GetILAddressMap 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodInstance::GetILAddressMap Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7c4dcf59ce159434d5012120043f5bb548d49731
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744692"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396809"
 ---
-# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap 方法
+# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance：： GetILAddressMap 方法
 
-取得地址對應資訊的 IL。
+取得用來定址對應資訊的 IL。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,26 +41,26 @@ HRESULT GetILAddressMap(
 ## <a name="parameters"></a>參數
 
 `mapLen`\
-[in]提供的對應陣列的長度。
+在所提供對應陣列的長度。
 
 `mapNeeded`\
-[out]此方法需要的對應項目數目。
+脫銷方法需要的對應專案數目。
 
 `maps`\
-[out，size_is(mapLen)]儲存對應項目的陣列。
+[out，size_is （mapLen）]用於儲存對應專案的陣列。
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分`IXCLRDataMethodInstance`介面，並對應至的虛擬方法表 14 的位置。
+提供的方法是介面的一部分 `IXCLRDataMethodInstance` ，而且會對應至虛擬方法資料表的15個插槽。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** None  
-**LIBRARY:** None  
-**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**標頭：** 無  
+連結**庫：** 無  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯](index.md)
 - [IXCLRDataMethodInstance 介面](ixclrdatamethodinstance-interface.md)

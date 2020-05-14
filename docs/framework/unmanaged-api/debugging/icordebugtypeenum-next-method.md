@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-ms.openlocfilehash: fc205e347fc39fd486d9b8a3fb256a5d29a980a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 83adea3d659eea6d4af9ae364aad18df67e69c03
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110057"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396626"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next 方法
-從目前位置開始，取得列舉中 `celt` 所指定的 "ICorDebugType" 實例數目。  
+`celt`從目前位置開始，取得列舉中所指定的 "ICorDebugType" 實例數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,21 +38,21 @@ HRESULT Next (
   
 ## <a name="parameters"></a>參數  
  `celt`  
- 在要抓取 `ICorDebugType` 實例的數目。  
+ 在要抓取的 `ICorDebugType` 實例數目。  
   
  `values`  
- 脫銷指標陣列，其中每一個都會指向 `ICorDebugType` 物件。  
+ 脫銷指標陣列，其中每一個都會指向一個 `ICorDebugType` 物件。  
   
  `pceltFetched`  
- 脫銷實際傳回的 `ICorDebugType` 實例數目的指標。 如果 `celt` 是一個，這個值可能會是 null。  
+ 脫銷實際傳回之實例數目的指標 `ICorDebugType` 。 如果是一個，這個值可能會是 null `celt` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

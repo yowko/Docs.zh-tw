@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87c4fcb2-7703-4a2e-afb6-42973381b960
 topic_type:
 - apiref
-ms.openlocfilehash: c4a24d879ebd9e8813ea0ac4597818569f4ae6fa
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1bd2f537cfa6a27c24ba91ea7caa29dc9e71a74e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790720"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396315"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish 介面
 作為一般介面，用來發行進程的相關資訊，以及這些進程中應用程式域的相關資訊。  
@@ -32,13 +32,13 @@ ms.locfileid: "76790720"
 |[GetProcess 方法](icorpublish-getprocess-method.md)|取得[ICorPublishProcess](icorpublishprocess-interface.md)實例，表示具有指定之識別碼的進程。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorPub .idl，CorPub。h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

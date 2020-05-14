@@ -1,26 +1,27 @@
 ---
-title: 使用 .NET 核心 CLI 開發庫
-description: 瞭解如何使用 .NET 核心 CLI 創建 .NET 核心庫。 您將建立支援多個架構的程式庫。
+title: 使用 .NET Core CLI 開發程式庫
+description: 瞭解如何使用 .NET Core CLI 建立 .NET Core 程式庫。 您將建立支援多個架構的程式庫。
 author: cartermp
+ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7aadaf7bf7819d52a57c3a137beff46d924d8cb0
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503503"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396206"
 ---
-# <a name="develop-libraries-with-the-net-core-cli"></a>使用 .NET 核心 CLI 開發庫
+# <a name="develop-libraries-with-the-net-core-cli"></a>使用 .NET Core CLI 開發程式庫
 
-本文介紹如何使用 .NET 核心 CLI 為 .NET 編寫庫。 CLI 提供可在所有支援的作業系統上運作的有效率且低階體驗。 您仍然可以使用 Visual Studio 來建置程式庫，而且，如果那是您偏好的體驗，[請參閱 Visual Studio 指南](library-with-visual-studio.md)。
+本文說明如何使用 .NET Core CLI 撰寫適用于 .NET 的程式庫。 CLI 提供可在所有支援的作業系統上運作的有效率且低階體驗。 您仍然可以使用 Visual Studio 來建置程式庫，而且，如果那是您偏好的體驗，[請參閱 Visual Studio 指南](library-with-visual-studio.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 您需要在電腦上安裝 [.NET Core SDK 和 CLI](https://dotnet.microsoft.com/download)。
 
 針對這份文件中處理 .NET Framework 版本的一節，您需要在 Windows 電腦上安裝 [.NET Framework](https://dotnet.microsoft.com)。
 
-此外，如果您希望支援較舊的 .NET 框架目標，則需要從[.NET 下載存檔頁](https://dotnet.microsoft.com/download/archives)安裝目標包或開發人員包。 請參閱這張表格︰
+此外，如果您想要支援較舊的 .NET Framework 目標，則需要從[.net 下載封存頁面](https://dotnet.microsoft.com/download/archives)安裝目標套件或開發人員套件。 請參閱這張表格︰
 
 | .NET Framework 版本 | 要下載的項目                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -34,19 +35,19 @@ ms.locfileid: "77503503"
 
 ## <a name="how-to-target-the-net-standard"></a>如何將目標設為 .NET Standard
 
-如果您不熟悉 .NET 標準，請參閱[.NET 標準](../../standard/net-standard.md)以瞭解更多資訊。
+如果您不熟悉 .NET Standard，請參閱[.NET Standard](../../standard/net-standard.md)以深入瞭解。
 
-在該文章中，有一個表將 .NET 標準版本映射到各種實現：
+在該文章中，有一個表格會將 .NET Standard 版本對應至各種不同的執行方式：
 
 [!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 以下是這個資料表在建立程式庫時的意義︰
 
-您選擇的 .NET 標準版本將是訪問最新 API 和定位更多 .NET 實現和 .NET 標準版本的能力之間的權衡。 通過選擇`netstandardX.X`版本號（其中`X.X`版本號）並將其添加到專案檔案（`.csproj`或`.fsproj`）的版本，可以控制目標平臺和版本的範圍。
+您挑選的 .NET Standard 版本將會在存取最新的 Api 與將更多 .NET 部署和 .NET Standard 版本的能力之間進行取捨。 您可以藉由挑選版本的 `netstandardX.X` （其中 `X.X` 是版本號碼），並將它新增至您的專案檔（ `.csproj` 或），來控制目標設為平臺和版本的範圍 `.fsproj` 。
 
-根據您的需求，在定位 .NET 標準時，您有三個主要選項。
+根據您的需求，您有三個主要選項會以 .NET Standard 為目標。
 
-1. 您可以使用範本提供的 .NET 標準的預設版本 ，`netstandard1.4`它允許您訪問 .NET 標準上的大多數 API，同時仍與 UWP、.NET 框架 4.6.1 和 .NET 標準 2.0 相容。
+1. 您可以使用範本所提供的預設 .NET Standard 版本， `netstandard1.4` 這可讓您存取 .NET Standard 上大部分的 api，同時仍然與 UWP、.NET Framework 4.6.1 和 .NET Standard 2.0 相容。
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -56,20 +57,20 @@ ms.locfileid: "77503503"
     </Project>
     ```
 
-2. 您可以通過修改專案檔案`TargetFramework`節點中的值來使用較低版本或更高版本的 .NET 標準。
+2. 您可以在專案檔的節點中修改值，以使用較低或較高版本的 .NET Standard `TargetFramework` 。
 
-    .NET Standard 版本具備回溯相容。 這表示 `netstandard1.0` 程式庫是在 `netstandard1.1` 平台和更高版本上執行。 但是，沒有正向相容性。 下部 .NET 標準平臺不能引用較高的平臺。 這表示 `netstandard1.0` 程式庫無法參考目標設為 `netstandard1.1` 或更高版本的程式庫。 針對您的需求，選取正確混合使用 API 與平台支援的標準版本。 現在建議使用 `netstandard1.4`。
+    .NET Standard 版本具備回溯相容。 這表示 `netstandard1.0` 程式庫是在 `netstandard1.1` 平台和更高版本上執行。 不過，沒有向前相容性。 較低的 .NET Standard 平臺無法參考更高版本。 這表示 `netstandard1.0` 程式庫無法參考目標設為 `netstandard1.1` 或更高版本的程式庫。 針對您的需求，選取正確混合使用 API 與平台支援的標準版本。 現在建議使用 `netstandard1.4`。
 
-3. 如果要以 .NET 框架版本 4.0 或以下為目標，或者希望使用 .NET 框架中可用的 API，但不希望在 .NET`System.Drawing`標準（例如），請閱讀以下各節並瞭解如何多目標。
+3. 如果您想要以 .NET Framework 版本4.0 或以下為目標，或您想要使用 .NET Framework 中提供的 API，但不是在 .NET Standard 中（例如 `System.Drawing` ），請閱讀下列各節，並瞭解如何使用多目標。
 
-## <a name="how-to-target-net-framework"></a>如何定位 .NET 框架
+## <a name="how-to-target-net-framework"></a>如何以 .NET Framework 為目標
 
 > [!NOTE]
-> 這些說明假定您的電腦上安裝了 .NET 框架。 請參閱安裝相依性的[必要條件](#prerequisites)。
+> 這些指示假設您已在電腦上安裝 .NET Framework。 請參閱安裝相依性的[必要條件](#prerequisites)。
 
-請記住，此處使用的一些 .NET 框架版本不再受支援。 如需不支援的版本，請參閱 [.NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq/en-us) (.NET Framework 支援週期原則 FAQ)。
+請記住，已不再支援此處使用的部分 .NET Framework 版本。 如需不支援的版本，請參閱 [.NET Framework Support Lifecycle Policy FAQ](https://support.microsoft.com/gp/framework_faq/en-us) (.NET Framework 支援週期原則 FAQ)。
 
-如果要達到開發人員和專案的最大數量，請使用 .NET 框架 4.0 作為基準目標。 要定位 .NET 框架，首先使用與您希望支援 .NET 框架版本對應的正確目標框架 Moniker （TFM）。
+如果您想要達到開發人員和專案的數目上限，請使用 .NET Framework 4.0 作為基準目標。 若要以 .NET Framework 為目標，請先使用對應至您想要支援之 .NET Framework 版本的正確目標 Framework 標記（TFM）。
 
 | .NET Framework 版本 | TFM      |
 | ---------------------- | -------- |
@@ -86,7 +87,7 @@ ms.locfileid: "77503503"
 | .NET Framework 4.7     | `net47`  |
 | .NET Framework 4.8     | `net48`  |
 
-您接著將這個 TFM 插入專案檔的 `TargetFramework` 區段。 例如，下面介紹如何編寫以 .NET 框架 4.0 為目標的庫：
+您接著將這個 TFM 插入專案檔的 `TargetFramework` 區段。 例如，以下說明如何撰寫以 .NET Framework 4.0 為目標的程式庫：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -96,9 +97,9 @@ ms.locfileid: "77503503"
 </Project>
 ```
 
-就這麼簡單！ 儘管此僅為 .NET 框架 4 編譯，但您可以在較新版本的 .NET Framework 上使用庫。
+這樣就大功告成了！ 雖然這只會針對 .NET Framework 4 進行編譯，但是您可以在較新版本的 .NET Framework 上使用程式庫。
 
-## <a name="how-to-multitarget"></a>如何多目標
+## <a name="how-to-multitarget"></a>如何使用多目標
 
 > [!NOTE]
 > 下列指示假設您已在電腦上安裝 .NET Framework。 請參閱[必要條件](#prerequisites)小節，了解您需要安裝的相依性以及其下載位置。
@@ -216,7 +217,7 @@ netstandard1.4/
 重要的是一定要可以跨平台進行測試。 您可以使用現成的 [xUnit](https://xunit.github.io/) 或 MSTest。 兩者都完全適用於在 .NET Core 上對程式庫進行單元測試。 如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。 下列範例假設測試及來源目錄位於相同的最上層目錄中。
 
 > [!NOTE]
-> 這使用一些[.NET 核心 CLI](../tools/index.md)命令。 如需詳細資訊，請參閱 [dotnet new](../tools/dotnet-new.md) 及 [dotnet sln](../tools/dotnet-sln.md)。
+> 這會使用一些[.NET Core CLI](../tools/index.md)命令。 如需詳細資訊，請參閱 [dotnet new](../tools/dotnet-new.md) 及 [dotnet sln](../tools/dotnet-sln.md)。
 
 1. 設定方案。 您可以使用下列命令：
 
@@ -257,7 +258,7 @@ netstandard1.4/
 
 1. 執行 `dotnet test` 命令，確認已執行 xUnit。 如果您選擇使用 MSTest，則應該會改為執行 MSTest 主控台執行器。
 
-就這麼簡單！ 現在，您可以使用命令列工具跨所有平臺測試庫。 若要在設定好所有項目之後立即繼續測試，測試程式庫就會非常簡單︰
+這樣就大功告成了！ 您現在可以使用命令列工具，在所有平臺上測試您的程式庫。 若要在設定好所有項目之後立即繼續測試，測試程式庫就會非常簡單︰
 
 1. 對程式庫進行變更。
 1. 在測試目錄中，從命令列中使用 `dotnet test` 命令來執行測試。
@@ -268,7 +269,7 @@ netstandard1.4/
 
 較大程式庫的常見需求是將功能放在不同的專案中。
 
-假設您要構建一個可以在慣用 C# 和 F# 中使用的庫。 這意味著庫的消費者會以 C# 或 F# 自然的方式使用它。 例如，在 C# 中，您可能會如下使用程式庫︰
+假設您想要建立可在慣用 c # 和 F # 中使用的程式庫。 這表示您的程式庫取用者以 c # 或 F # 的自然方式取用它。 例如，在 C# 中，您可能會如下使用程式庫︰
 
 ```csharp
 using AwesomeLibrary.CSharp;
@@ -294,9 +295,9 @@ let doWork data = async {
 
 這類使用案例表示針對 C# 和 F#，正在存取的 API 必須具有不同的結構。  完成這項作業的常見方法將程式庫的所有邏輯都納入核心專案，而且 C# 和 F# 專案定義呼叫該核心專案的 API 層。  區段的其餘部分將使用下列名稱︰
 
-* **真棒庫.Core** - 包含庫所有邏輯的核心專案
-* **真棒庫.CSharp** - 一個公共 API 的專案，旨在用於 C 中使用#
-* **真棒庫.FSharp** - 一個公共 API 的專案，用於在 F 中使用#
+* **Awesomelibrary.fsharp** -包含程式庫所有邏輯的核心專案
+* **Awesomelibrary.fsharp. CSharp** -具有公用 api 的專案，適用于 C 中的耗用量#
+* **Awesomelibrary.fsharp. fsharp.core** -具有公用 api 的專案，適用于 F 中的耗用量#
 
 您可以在終端機中執行下列命令，以產生與本指南相同的結構︰
 
@@ -314,7 +315,7 @@ dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
 dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
-這將添加上述三個專案以及一個將它們連結在一起的解決方案檔。 創建解決方案檔和連結專案將允許您從頂層還原和生成專案。
+這會新增上述三個專案，以及將它們連結在一起的方案檔。 建立方案檔和連結專案可讓您從最上層還原和建立專案。
 
 ### <a name="project-to-project-referencing"></a>專案對專案參考
 

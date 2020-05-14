@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a73654-bc47-48b6-b2b1-a4456b10140c
 topic_type:
 - apiref
-ms.openlocfilehash: 5924a3914c7fe04413b4a6744bce263b56165d78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc4e1a236f429894fe7ec304b9ccfd3bf717c188
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140226"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397005"
 ---
 # <a name="icordebugvaluebreakpointgetvalue-method"></a>ICorDebugValueBreakpoint::GetValue 方法
 取得代表設定中斷點之物件值的 "ICorDebugValue" 物件的介面指標。  
@@ -35,15 +35,15 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>參數  
  `ppValue`  
- 脫銷`ICorDebugValue` 物件之位址的指標。  
+ 脫銷物件位址的指標 `ICorDebugValue` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

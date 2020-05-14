@@ -1,13 +1,13 @@
 ---
 title: 物件導向程式設計 (C#)
-ms.date: 02/08/2020
+ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200089"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396679"
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計（c #）
 
@@ -58,7 +58,7 @@ public class SampleClass
 }
 ```
 
-屬性具有`get`和`set`存取子，可對設定或傳回值的方式提供更多的控制。
+屬性具有 `get` 和 `set` 存取子，可對設定或傳回值的方式提供更多的控制。
 
 C # 可讓您建立私用欄位來儲存屬性值，或使用自動執行的屬性，在幕後自動建立此欄位，並提供屬性程式的基本邏輯。
 
@@ -89,10 +89,9 @@ class SampleClass
 
 大部分屬性都具有方法或程序，可以設定及取得屬性值。 但是您可以建立唯讀或唯寫屬性來限制不得修改或讀取。 在 C# 中，則可以省略 `get` 或 `set` 屬性方法。 不過，自動執行的屬性不能是寫入。 唯讀自動執行的屬性可以在包含類別的函式中設定。
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [get](../../language-reference/keywords/get.md)
-
 - [set](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>方法
@@ -104,7 +103,7 @@ class SampleClass
 ```csharp
 class SampleClass
 {
-    public int sampleMethod(string sampleParam)
+    public int SampleMethod(string sampleParam)
     {
         // Insert code here
     }
@@ -116,13 +115,13 @@ class SampleClass
 若要多載方法：
 
 ```csharp
-public int sampleMethod(string sampleParam) {}
-public int sampleMethod(int sampleParam) {}
+public int SampleMethod(string sampleParam) { }
+public int SampleMethod(int sampleParam) { }
 ```
 
 在多數情況下，您是在類別定義中宣告方法。 不過， C# 也支援「擴充方法」**，允許您在現有類別的實際定義之外將方法新增至類別。
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [方法](../classes-and-structs/methods.md)
 - [擴充方法](../classes-and-structs/extension-methods.md)
@@ -156,9 +155,7 @@ public class SampleClass
 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或引發) 事件的類別稱為「發行者」**，而接收 (或處理) 事件的類別則稱為「訂閱者」**。 如需事件的詳細資訊以及如何引發和處理事件，請參閱[處理和引發事件](../../../standard/events/index.md)。
 
 - 若要宣告類別中的事件，請使用 [event](../../language-reference/keywords/event.md) 關鍵字。
-
 - 要引發事件，請叫用事件委派。
-
 - 若要訂閱事件，請使用 `+=` 運算子；若要取消訂閱事件，則使用 `-=` 運算子。
 
 #### <a name="nested-classes"></a>嵌套類別
@@ -187,14 +184,14 @@ Container.Nested nestedInstance = new Container.Nested()
 
 下列為可用的存取修飾詞：
 
-|C# 修飾詞|定義|
-|------------------|----------------|
-|[公立](../../language-reference/keywords/public.md)|類型或成員可由相同組件或參考該組件的另一個組件中的任何其他程式碼存取。|
-|[private](../../language-reference/keywords/private.md)|類型或成員只能由相同類別中的程式碼存取。|
-|[protected](../../language-reference/keywords/protected.md)|類型或成員只能由相同類別中，或是衍生類別中的程式碼存取。|
-|[internal](../../language-reference/keywords/internal.md)|類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。|
-|[private protected](../../language-reference/keywords/private-protected.md)|只有在基底類別組件中，於相同類別或衍生類別內的程式碼才能存取類型或成員。|
+| C# 修飾詞 | 定義 |
+|--|--|
+| [public](../../language-reference/keywords/public.md) | 類型或成員可由相同組件或參考該組件的另一個組件中的任何其他程式碼存取。 |
+| [private](../../language-reference/keywords/private.md) | 類型或成員只能由相同類別中的程式碼存取。 |
+| [protected](../../language-reference/keywords/protected.md) | 類型或成員只能由相同類別中，或是衍生類別中的程式碼存取。 |
+| [internal](../../language-reference/keywords/internal.md) | 類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。 |
+| [protected internal](../../language-reference/keywords/protected-internal.md) | 類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。 |
+| [private protected](../../language-reference/keywords/private-protected.md) | 只有在基底類別組件中，於相同類別或衍生類別內的程式碼才能存取類型或成員。 |
 
 如需詳細資訊，請參閱[存取修飾詞](../classes-and-structs/access-modifiers.md)。
 
@@ -212,18 +209,21 @@ SampleClass sampleObject = new SampleClass();
 // Set a property value.
 sampleObject.sampleProperty = "Sample String";
 // Call a method.
-sampleObject.sampleMethod();
+sampleObject.SampleMethod();
 ```
 
 若要在類別執行個體化期間將值指派給屬性，請使用物件初始設定式：
 
 ```csharp
 // Set a property value.
-SampleClass sampleObject = new SampleClass
-    { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new SampleClass
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [new 運算子](../../language-reference/operators/new-operator.md)
 - [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
@@ -259,8 +259,11 @@ C# 中的靜態類別只有靜態成員，且無法具現化。 靜態成員也�
 
 ```csharp
 // sampleObject is an instance of a simple anonymous type.
-var sampleObject =
-    new { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 如需詳細資訊，請參閱[匿名型別](../classes-and-structs/anonymous-types.md)。
@@ -275,7 +278,7 @@ var sampleObject =
 若要繼承基底類別：
 
 ```csharp
-class DerivedClass:BaseClass {}
+class DerivedClass:BaseClass { }
 ```
 
 所有類別預設都可以被繼承。 不過，您可以指定類別是否不得當做基底類別，或是建立只能當做基底類別的類別。
@@ -292,10 +295,9 @@ public sealed class A { }
 public abstract class B { }
 ```
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [sealed](../../language-reference/keywords/sealed.md)
-
 - [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>覆寫成員
@@ -304,12 +306,12 @@ public abstract class B { }
 
 下列修飾詞是用來控制如何覆寫屬性及方法：
 
-|C# 修飾詞|定義|
-|------------------|----------------|
-|[virtual](../../language-reference/keywords/virtual.md)|允許在衍生類別中覆寫類別成員。|
-|[override](../../language-reference/keywords/override.md)|覆寫在基底類別中定義的虛擬 (可覆寫) 成員。|
-|[abstract](../../language-reference/keywords/abstract.md)|要求在衍生類別中覆寫類別成員。|
-|[new 修飾詞](../../language-reference/keywords/new-modifier.md)|隱藏繼承自基底類別的成員。|
+| C# 修飾詞 | 定義 |
+|--|--|
+| [virtual](../../language-reference/keywords/virtual.md) | 允許在衍生類別中覆寫類別成員。 |
+| [override](../../language-reference/keywords/override.md) | 覆寫在基底類別中定義的虛擬 (可覆寫) 成員。 |
+| [abstract](../../language-reference/keywords/abstract.md) | 要求在衍生類別中覆寫類別成員。 |
+| [new 修飾詞](../../language-reference/keywords/new-modifier.md) | 隱藏繼承自基底類別的成員。 |
 
 ## <a name="interfaces"></a>介面
 
@@ -320,7 +322,7 @@ public abstract class B { }
 ```csharp
 interface ISampleInterface
 {
-    void doSomething();
+    void DoSomething();
 }
 ```
 
@@ -329,7 +331,7 @@ interface ISampleInterface
 ```csharp
 class SampleClass : ISampleInterface
 {
-    void ISampleInterface.doSomething()
+    void ISampleInterface.DoSomething()
     {
         // Method implementation.
     }
@@ -354,15 +356,14 @@ public class SampleGeneric<T>
 若要建立泛型類別的執行個體：
 
 ```csharp
-SampleGeneric<string> sampleObject = new SampleGeneric<string>();
+var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
-- [泛型](../../../standard/generics/index.md)
-
-- [泛型](../generics/index.md)
+- [.NET 的泛型](../../../standard/generics/index.md)
+- [泛型 - C# 程式設計手冊](../generics/index.md)
 
 ## <a name="delegates"></a>委派
 
@@ -383,10 +384,11 @@ public delegate void SampleDelegate(string str);
 class SampleClass
 {
     // Method that matches the SampleDelegate signature.
-    public static void sampleMethod(string message)
+    public static void SampleMethod(string message)
     {
         // Add code here.
     }
+
     // Method that instantiates the delegate.
     void SampleDelegate()
     {

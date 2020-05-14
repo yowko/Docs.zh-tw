@@ -4,12 +4,12 @@ description: 了解 C# 索引子，以及其如何實作索引的屬性，而索
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79145680"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394690"
 ---
 # <a name="indexers"></a>索引子
 
@@ -313,7 +313,7 @@ public class HistoricalWeatherData
 
 此範例會建立對應兩個不同引數之天氣資料的索引子︰城市 (以 `string` 表示) 和日期 (以 `DateTime` 表示)。 內部儲存體使用兩個 `Dictionary` 類別來代表二維字典。 此公用 API 不再代表基礎儲存體。 相反地，索引子的語言功能可讓您建立公用介面來代表您的抽象概念，不過基礎儲存體必須使用不同的核心集合類型。
 
-有些開發人員對此程式碼的其中兩部分可能不熟悉。 這兩個 `using` 陳述式：
+有些開發人員對此程式碼的其中兩部分可能不熟悉。 這兩個指示詞 `using` ：
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
@@ -323,10 +323,10 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 會為建構的泛型型別建立「別名」**。 這些陳述式可讓程式碼稍後使用更具描述性的 `DateMeasurements` 和 `CityDateMeasurements` 名稱，而不是 `Dictionary<DateTime, Measurements>` 和 `Dictionary<string, Dictionary<DateTime, Measurements> >` 的泛型建構。
 此建構確實需要在 `=` 符號右側使用完整的類型名稱。
 
-第二個方法是移除用來對集合進行索引之任何 `DateTime` 物件的時間部分。 .NET 不包括僅日期類型。
+第二個方法是移除用來對集合進行索引之任何 `DateTime` 物件的時間部分。 .NET 不包含僅限日期的類型。
 開發人員使用 `DateTime` 類型，但使用 `Date` 屬性來確保該日期的任何 `DateTime` 物件都相等。
 
 ## <a name="summing-up"></a>總結
 
 每當您的類別中有屬性類元素，且該屬性不代表單一值，而代表數值集合 (其中每個項目是由一組引數所識別) 時，就應該建立索引子。 這些引數可唯一識別應參考集合中的哪個項目。
-索引子擴展[屬性](properties.md)的概念，其中成員被視為類外部的資料項目，但類似于內部的方法。 索引子允許引數在代表一組項目的屬性中尋找單一項目。
+索引子會擴充[屬性](properties.md)的概念，其中成員的處理方式就像是類別外部的資料項目，但是就像內部的方法一樣。 索引子允許引數在代表一組項目的屬性中尋找單一項目。

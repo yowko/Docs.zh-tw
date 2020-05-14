@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c312ae6d-c8dc-48d6-9f1e-ead515c88fdf
 topic_type:
 - apiref
-ms.openlocfilehash: 74b3c7bed54f3735efbd5d2c56962d427518f71a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d5962de8cc2762f6ecf4864c5255da0fe83918e4
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790939"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396524"
 ---
 # <a name="icordebugvariablehomeenum-interface"></a>ICorDebugVariableHomeEnum 介面
 提供函式中區域變數和引數的列舉值。  
@@ -28,21 +28,21 @@ ms.locfileid: "76790939"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](icordebugvariablehomeenum-next-method.md)|取得指定的[ICorDebugVariableHome](icordebugvariablehome-interface.md)實例數目，其中包含函式中區域變數和引數的相關資訊。|  
+|[下一個方法](icordebugvariablehomeenum-next-method.md)|取得指定的[ICorDebugVariableHome](icordebugvariablehome-interface.md)實例數目，其中包含函式中區域變數和引數的相關資訊。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugVariableHomeEnum` 介面會執行 ICorDebugEnum 介面。  
+ 介面會實 `ICorDebugVariableHomeEnum` ICorDebugEnum 介面。  
   
- `ICorDebugVariableHomeEnum` 實例會藉由呼叫[ICorDebugCode4：： EnumerateVariableHomes](icordebugcode4-enumeratevariablehomes-method.md)方法來填入[ICorDebugVariableHome](icordebugvariablehome-interface.md)實例。 集合中的每個[ICorDebugVariableHome](icordebugvariablehome-interface.md)實例都代表函式中的區域變數或引數。 您可以藉由呼叫[ICorDebugVariableHomeEnum：： Next](icordebugvariablehomeenum-next-method.md)方法來列舉集合中的[ICorDebugVariableHome](icordebugvariablehome-interface.md)物件。  
+ `ICorDebugVariableHomeEnum`實例會藉由呼叫[ICorDebugCode4：： EnumerateVariableHomes](icordebugcode4-enumeratevariablehomes-method.md)方法來填入[ICorDebugVariableHome](icordebugvariablehome-interface.md)實例。 集合中的每個[ICorDebugVariableHome](icordebugvariablehome-interface.md)實例都代表函式中的區域變數或引數。 您可以藉由呼叫[ICorDebugVariableHomeEnum：： Next](icordebugvariablehomeenum-next-method.md)方法來列舉集合中的[ICorDebugVariableHome](icordebugvariablehome-interface.md)物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

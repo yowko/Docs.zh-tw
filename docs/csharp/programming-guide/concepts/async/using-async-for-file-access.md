@@ -2,12 +2,12 @@
 title: 使用非同步方式存取檔案 (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595542"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396953"
 ---
 # <a name="using-async-for-file-access-c"></a>使用非同步方式存取檔案 (C#)
 您可以使用非同步功能來存取檔案。 使用非同步功能，您就可以呼叫非同步方法，而不需要使用回呼或將您的程式碼分散到多種方法或 Lambda 運算式上。 若要讓同步程式碼變成非同步，只要呼叫非同步方法 (而不是同步方法)，然後將幾個關鍵字新增至程式碼即可。  
@@ -27,7 +27,7 @@ ms.locfileid: "69595542"
 ## <a name="running-the-examples"></a>執行範例  
  為了執行本主題中的範例，您可以建立 **WPF 應用程式**或 **Windows Forms 應用程式**，然後新增一個**按鈕**。 在按鈕的 `Click` 事件中，新增呼叫至每個範例中的第一個方法。  
   
- 在下列範例中，加入下列 `using` 陳述式。  
+ 在下列範例中，請加入下列指示詞 `using` 。  
   
 ```csharp  
 using System;  
@@ -174,8 +174,8 @@ public async Task ProcessWriteMultAsync()
   
  使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法時，您可以指定 <xref:System.Threading.CancellationToken>，這可用來在中途取消作業。 如需詳細資訊，請參閱[微調非同步應用程式 (C#)](./fine-tuning-your-async-application.md) 和 [Managed 執行緒中的取消作業](../../../../standard/threading/cancellation-in-managed-threads.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
 - [非同步方法的傳回型別 (C#)](./async-return-types.md)
-- [同步程式中的控制流 （C#）](./control-flow-in-async-programs.md)
+- [非同步程式中的控制流程（c #）](./control-flow-in-async-programs.md)

@@ -1,13 +1,13 @@
 ---
 title: Docker 應用程式的開發環境
 description: 了解可支援 Docker 開發生命週期的最重要開發工具選項。
-ms.date: 02/15/2019
-ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: b1df16db88fa85f794407c989f5428030c4cddf7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71214299"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394892"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 應用程式的開發環境
 
@@ -26,7 +26,7 @@ ms.locfileid: "71214299"
 
 ### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>具備 Docker 工具的 Visual Studio (Windows 開發電腦)
 
-我們建議您使用已啟用內建 Docker 工具的 Visual Studio 2017 (或更新版本)。 使用 Visual Studio，您可以直接在所選 Docker 環境中開發、執行及驗證應用程式。 請按 F5 鍵直接在 Docker 主機中對您的應用程式 (單一容器或多個容器) 進行偵錯，或按 Ctrl+F5 來編輯及重新整理您的應用程式，而不需要重建容器。 這是 Windows 開發人員用以建立 Linux 或 Windows 之 Docker 容器的最簡單且最強大選擇。
+建議您使用 Visual Studio 2019 搭配已啟用的內建 Docker 工具。 使用 Visual Studio，您可以直接在所選 Docker 環境中開發、執行及驗證應用程式。 請按 F5 鍵直接在 Docker 主機中對您的應用程式 (單一容器或多個容器) 進行偵錯，或按 Ctrl+F5 來編輯及重新整理您的應用程式，而不需要重建容器。 這是 Windows 開發人員用以建立 Linux 或 Windows 之 Docker 容器的最簡單且最強大選擇。
 
 ### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio for Mac (Mac 開發電腦)
 
@@ -46,5 +46,5 @@ ms.locfileid: "71214299"
 基本上，您可以使用 Linux 或 Windows 中 Docker 所援的任何現代語言。
 
 >[!div class="step-by-step"]
->[上一個](deploy-azure-kubernetes-service.md)
->[下一個](docker-apps-inner-loop-workflow.md)
+>[上一個](deploy-azure-kubernetes-service.md) 
+>[下一步](docker-apps-inner-loop-workflow.md)

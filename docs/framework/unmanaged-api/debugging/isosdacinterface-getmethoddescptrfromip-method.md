@@ -1,5 +1,5 @@
 ---
-title: ISOSDacInterface::GetMethodDescPtrFromIP 方法
+title: ISOSDacInterface：： GetMethodDescPtrFromIP 方法
 ms.date: 02/01/2019
 api.name:
 - ISOSDacInterface::GetMethodDescPtrFromIP Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cd256250021436e611142de11c3625a21aeec814
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c8d91c11205e06857b4a6e7edfedcd087270d00
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764750"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396933"
 ---
-# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface::GetMethodDescPtrFromIP 方法
+# <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface：： GetMethodDescPtrFromIP 方法
 
-擷取 MethodDesc 對應包含指定的原生指令位址之方法的指標。
+抓取 MethodDesc 的指標，其對應的方法包含指定的原生指令位址。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,23 +40,23 @@ HRESULT GetMethodDescPtrFromIP(
 ## <a name="parameters"></a>參數
 
 `ip`\
-[in]在執行階段方法內的位址。
+在在執行時間的方法內的位址。
 
 `ppMD`\
-[out]位址`MethodDesc`特定的方法。
+脫銷特定方法的位址 `MethodDesc` 。
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分[`ISOSDacInterface`介面](isosdacinterface-interface.md)，而對應的虛擬方法表 21 的位置。
+提供的方法是[ `ISOSDacInterface` 介面](isosdacinterface-interface.md)的一部分，而且會對應至虛擬方法資料表的22日位置。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
 **標頭：** 無  
-**LIBRARY:** 無  
-**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+連結**庫：** 無  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯](index.md)
 - [ISOSDacInterface 介面](isosdacinterface-interface.md)

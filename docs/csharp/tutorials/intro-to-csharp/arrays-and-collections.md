@@ -3,18 +3,18 @@ title: 使用集合 - C# 教學課程簡介
 description: 在此教學課程中探索 List 集合來了解 C#。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635656"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396899"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>了解如何使用一般清單類型管理資料收集
 
 此入門教學課程提供 C# 語言的簡介，以及 <xref:System.Collections.Generic.List%601> 類別的基礎知識。
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 教程[Hello World 在 10 分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)提供了在 Windows、Linux 或 macOS 上設置本地開發環境的說明。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 Windows、Linux 或 macOS 上設定本機開發環境的指示。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
 
 ## <a name="a-basic-list-example"></a>基本的清單範例
 
@@ -44,7 +44,7 @@ namespace list_tutorial
 
 以您的名稱取代 `<name>`。 儲存 *Program.cs*。 在主控台視窗中輸入 `dotnet run` 來嘗試它。
 
-您剛才已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。 您會使用從先前教學課程中學習到的概念，在清單中執行迴圈。
+您已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。 您會使用從先前教學課程中學習到的概念，在清單中執行迴圈。
 
 顯示名稱的程式碼會運用[字串內插補點](../../language-reference/tokens/interpolated.md)功能。  當您在 `string` 的前方放置 `$` 時，您可以在字串宣告中內嵌 C# 程式碼。 實際的字串會以它所產生的值取代 C# 程式碼。 在此範例中，它會以每個 (轉換成大寫字母的) 名稱取代 `{name.ToUpper()}`，因為您呼叫了 <xref:System.String.ToUpper%2A> 方法。
 
@@ -76,7 +76,7 @@ Console.WriteLine($"My name is {names[0]}");
 Console.WriteLine($"I've added {names[2]} and {names[3]} to the list");
 ```
 
-您無法存取位於清單結尾之外的索引。 請記住，索引是從 0 開始，因此最大的有效索引數目為清單項目數目減去 1。 您可以使用 <xref:System.Collections.Generic.List%601.Count%2A> 屬性檢查清單的長度。 在 Main 方法的結尾，加入下列程式碼：
+您無法存取清單結尾以外的索引。 請記住，索引是從 0 開始，因此最大的有效索引數目為清單項目數目減去 1。 您可以使用 <xref:System.Collections.Generic.List%601.Count%2A> 屬性檢查清單的長度。 在 Main 方法的結尾，加入下列程式碼：
 
 ```csharp
 Console.WriteLine($"The list has {names.Count} people in it");
@@ -86,7 +86,7 @@ Console.WriteLine($"The list has {names.Count} people in it");
 
 ## <a name="search-and-sort-lists"></a>針對清單進行搜尋和排序
 
-我們的範例所使用的清單相對較小，但是您的應用程式可能經常會建立具有更多元素的清單，數量甚至會達數千個之多。 若要在這些較大的集合中尋找元素，您需要在清單中搜尋不同的項目。 <xref:System.Collections.Generic.List%601.IndexOf%2A> 方法會搜尋項目，並傳回該項目的索引。 將下列程式碼新增到 `Main` 方法的底部：
+我們的範例所使用的清單相對較小，但是您的應用程式可能經常會建立具有更多元素的清單，數量甚至會達數千個之多。 若要在這些較大的集合中尋找元素，您需要在清單中搜尋不同的項目。 <xref:System.Collections.Generic.List%601.IndexOf%2A> 方法會搜尋項目，並傳回該項目的索引。 如果專案不在清單中，則會傳回 `IndexOf` `-1` 。 將下列程式碼新增到 `Main` 方法的底部：
 
 ```csharp
 var index = names.IndexOf("Felipe");
@@ -111,7 +111,7 @@ else
 }
 ```
 
-也可以對您清單中的項目進行排序。 <xref:System.Collections.Generic.List%601.Sort%2A> 方法會依項目的一般順序方式，對清單中的所有項目進行排序 (針對字串會依字母順序排列)。 將下列程式碼新增到 `Main` 方法的底部：
+也可以對您清單中的項目進行排序。 <xref:System.Collections.Generic.List%601.Sort%2A>方法會依其正常順序排序清單中的所有專案（字串的字母順序）。 將下列程式碼新增到 `Main` 方法的底部：
 
 ```csharp
 names.Sort();
@@ -224,10 +224,10 @@ foreach (var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>完成挑戰
 
-通過[查看 GitHub 上已完成的範例代碼,](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)可以查看範例解決方案。
+您可以查看[GitHub 上已完成的範例程式碼](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)，即可看到範例解決方案。
 
 在迴圈每次反覆運算時，您都必須取清單中的最後兩個整數，將它們加總，並將該值新增至清單。 迴圈會持續重複，直到將 20 個項目新增至清單為止。
 
 恭喜，您已完成清單的教學課程。 您可以在自己的開發環境中，繼續完成[類別簡介](introduction-to-classes.md)教學課程中的內容。
 
-您可以瞭解有關使用[.NET](../../../standard/index.yml)指南`List`文章中有關[集合的類型的更多內容](../../../standard/collections/index.md)。 您也能學習到許多其他的集合類型。
+您可以在有關 `List` [集合](../../../standard/collections/index.md)的[.net 指南](../../../standard/index.yml)文章中，深入瞭解如何使用類型。 您也能學習到許多其他的集合類型。

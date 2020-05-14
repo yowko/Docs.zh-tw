@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::Request 方法
+title: IXCLRDataModule：： Request 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7d04e5630bd196ef534f72a0c3924019315f3774
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 44ee4fc7fc2368b65f6f2fffe6ac239beddc6293
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632219"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395273"
 ---
-# <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request 方法
+# <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule：： Request 方法
 
-填入指定模組的資料緩衝區的要求。
+要求填入模組資料所提供的緩衝區。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,30 +41,30 @@ HRESULT Request([in] ULONG32 reqCode,
 ## <a name="parameters"></a>參數
 
 `reqCode`\
-[in]要求傳送的型別。
+在要傳送的要求類型。
 
 `inBufferSize`\
-[in] 要傳入的輸入緩衝區的大小。
+[in] 要傳入之輸入緩衝區的大小。
 
 `inBuffer`\
-[in、 size_is(inBufferSize)]若要在要求中傳送未經處理資料的緩衝區指標。
+[in，size_is （inBufferSize）]要在要求中傳送之原始資料的緩衝區指標。
 
 `outBufferSize`\
-[in]輸出緩衝區的大小。
+在輸出緩衝區的大小。
 
 `outBuffer`\
-[out，size_is(outBufferSize)]用來儲存要求回應的緩衝區指標。
+[out，size_is （outBufferSize）]用來儲存要求回應的緩衝區指標。
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分`IXCLRDataModule`介面，並對應至 36th 虛擬方法表的位置。
+提供的方法是介面的一部分 `IXCLRDataModule` ，而且會對應至虛擬方法資料表的37th 位置。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
-**標頭：** 無**程式庫：** 無 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**標頭：** 無**媒體櫃：** 無 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [偵錯](index.md)
 - [IXCLRDataModule 介面](ixclrdatamodule-interface.md)

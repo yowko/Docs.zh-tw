@@ -2,12 +2,12 @@
 title: 雲端原生應用程式的 IdentityServer
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728586"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394873"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>雲端原生應用程式的 IdentityServer
 
@@ -25,8 +25,9 @@ IdentityServer 是一種開放原始碼驗證服務器，可執行 ASP.NET Core 
 - 存取後端 Web Api 的其他應用程式（不含作用中的使用者或使用者介面）。
 - 任何應用程式都可能需要使用自己的身分識別來與其他 Web Api 互動，或委派給使用者的身分識別。
 
-![的應用程式類型和案例](./media/application-types.png)
-**圖 8-1**。 應用程式類型和案例。
+![應用程式類型和案例](./media/application-types.png)
+
+**圖 8-1**： 應用程式類型和案例。
 
 在上述每個案例中，所公開的功能必須受到保護，以避免未經授權的使用。 至少，這通常需要驗證對資源提出要求的使用者或主體。 這項驗證可能會使用其中一個常見的通訊協定，例如 SAML2p、WS-送出或 OpenID Connect。 與 Api 通訊通常會使用 OAuth2 通訊協定和其對安全性權杖的支援。 將這些重要的跨領域安全性考慮和其執行詳細資料，從應用程式本身來確保一致性並改善了安全性與維護性。 將這些考慮外包給專用的產品（例如 IdentityServer），可協助每個應用程式自行解決這些問題。
 
@@ -47,7 +48,7 @@ IdentityServer4 是開放原始碼且可免費使用。 您可以使用 NuGet �
 
 ## <a name="configuration"></a>組態
 
-IdentityServer 支援不同種類的通訊協定和社交驗證提供者，可設定為每個自訂安裝的一部分。 這通常是在 `ConfigureServices` 方法的 ASP.NET Core 應用程式的 `Startup` 類別中完成。 設定牽涉到指定支援的通訊協定，以及將使用的伺服器和端點的路徑。 圖8-2 顯示從 IdentityServer4 快速入門 UI 專案取得的範例設定：
+IdentityServer 支援不同種類的通訊協定和社交驗證提供者，可設定為每個自訂安裝的一部分。 這通常會在方法中的 ASP.NET Core 應用程式類別中完成 `Startup` `ConfigureServices` 。 設定牽涉到指定支援的通訊協定，以及將使用的伺服器和端點的路徑。 圖8-2 顯示從 IdentityServer4 快速入門 UI 專案取得的範例設定：
 
 ```csharp
 public class Startup
@@ -90,13 +91,13 @@ public class Startup
 }
 ```
 
-**圖 8-2**： 正在設定 IdentityServer。
+**圖 8-2**。 正在設定 IdentityServer。
 
-IdentityServer 也會裝載公用示範網站，可用來測試各種通訊協定和設定。 它位於[https://demo.identityserver.io/](https://demo.identityserver.io/) ，並包含如何根據提供給它的 `client_id` 來設定其行為的資訊。
+IdentityServer 也會裝載公用示範網站，可用來測試各種通訊協定和設定。 它位於 [https://demo.identityserver.io/](https://demo.identityserver.io/) ，並包含如何根據提供的來設定其行為的資訊 `client_id` 。
 
 ## <a name="javascript-clients"></a>JavaScript 用戶端
 
-許多雲端原生應用程式會利用前端的伺服器端 Api 和豐富型用戶端單頁應用程式（Spa）。 IdentityServer 透過可新增至 Spa 的 NPM 提供[JavaScript 用戶端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)（`oidc-client.js`），讓他們能夠使用 IdentityServer 進行登入、登出，以及 web api 的權杖型驗證。
+許多雲端原生應用程式會利用前端的伺服器端 Api 和豐富型用戶端單頁應用程式（Spa）。 IdentityServer 透過 NPM 提供的[JavaScript 用戶端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)（ `oidc-client.js` ）可新增至 spa，讓他們能夠使用 IdentityServer 進行登入、登出，以及 web api 的權杖型驗證。
 
 ## <a name="references"></a>參考
 
@@ -105,5 +106,5 @@ IdentityServer 也會裝載公用示範網站，可用來測試各種通訊協�
 - [JavaScript OIDC 用戶端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
->[上一頁](azure-active-directory.md)
->[下一頁](security.md)
+>[上一個](azure-active-directory.md) 
+>[下一步](security.md)

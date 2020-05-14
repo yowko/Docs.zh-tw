@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87277e1a-1595-4729-9e25-d1c3ac18ce5f
 topic_type:
 - apiref
-ms.openlocfilehash: 28e41106ffcaf1ed2ed87166e641bb5e5f447e47
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fb198782bb91a8301507fd6cadcffb0378230f0e
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791021"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396576"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome：： GetLiveRange 方法
 取得此變數所在的原生範圍。  
@@ -42,13 +42,13 @@ HRESULT GetLiveRange(
  脫銷緊接在變數上次存留位置之後的邏輯位移。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

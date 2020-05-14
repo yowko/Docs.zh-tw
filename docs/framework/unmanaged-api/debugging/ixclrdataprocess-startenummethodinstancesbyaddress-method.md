@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::StartEnumMethodInstancesByAddress 方法
+title: IXCLRDataProcess：： StartEnumMethodInstancesByAddress 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::StartEnumMethodInstancesByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d7c395e68ad5d8042f9850f25757a5aa445e5c40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e28fa73300e147ac07a2d325fbf517480bb73797
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752681"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394940"
 ---
-# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress 方法
+# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess：： StartEnumMethodInstancesByAddress 方法
 
-提供列舉的方法執行個體的控制代碼`AppDomain`指定位址開頭。
+提供一個控制碼，用來列舉 `AppDomain` 從指定位址開始的方法實例。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,26 +41,26 @@ HRESULT StartEnumMethodInstancesByAddress(
 ## <a name="parameters"></a>參數
 
 `address`\
-[in]第一個方法執行個體的位址。
+在第一個方法實例的位址。
 
 `appDomain`\
-[in]方法執行個體的 AppDomain。
+在方法實例的 AppDomain。
 
 `handle`\
-[out]列舉的方法執行個體控制代碼。
+脫銷列舉方法實例的控制碼。
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分`IXCLRDataProcess`介面，並對應至的虛擬方法表 27 的位置。
+提供的方法是介面的一部分 `IXCLRDataProcess` ，而且會對應至虛擬方法資料表的28個位置。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** None  
-**LIBRARY:** 無  
-**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**標頭：** 無  
+連結**庫：** 無  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CLRDataSourceType 列舉](clrdatasourcetype-enumeration.md)
 - [偵錯](index.md)

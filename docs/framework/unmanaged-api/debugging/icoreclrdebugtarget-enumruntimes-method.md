@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: 4b55ac1d895bfecbe74be447bd06f4aa22b9d04f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fc8269d4cc22ab53569edaa48c27b4a01970dcc7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790786"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83397179"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 方法
 列舉遠端電腦上所執行之指定處理序中的 Common Language Runtime (CLR)。  
@@ -39,7 +39,7 @@ HRESULT EnumRuntimes (
   
 ## <a name="parameters"></a>參數  
  `dwInternalProcessID`  
- [in] 要列舉執行階段之處理序的內部處理序 ID。 這會從對應的[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)`m_dwInternalID`。  
+ [in] 要列舉執行階段之處理序的內部處理序 ID。 這會 `m_dwInternalID` 來自對應的[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)。  
   
  `pcRuntimes`  
  [out] `ppRuntimes` 中傳回的執行階段數目。 這個值可以是 0 (零)。  
@@ -64,7 +64,7 @@ HRESULT EnumRuntimes (
  若要釋放這個方法所配置的記憶體，請呼叫[ICoreClrDebugTarget：： FreeMemory](icoreclrdebugtarget-freememory-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CoreClrRemoteDebuggingInterfaces。h  
   

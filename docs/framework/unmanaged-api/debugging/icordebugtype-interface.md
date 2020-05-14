@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 8210e67f4bdd615ff65d9bd3474043fc45fd8883
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5e88652ff75223e30e6abc454f1e1af91494c7b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791252"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396695"
 ---
 # <a name="icordebugtype-interface"></a>ICorDebugType 介面
 代表基本或複雜的類型（也就是使用者定義的）。 如果是泛型類型，則 `ICorDebugType` 表示具現化的泛型類型。  
@@ -28,30 +28,30 @@ ms.locfileid: "76791252"
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumerateTypeParameters 方法](icordebugtype-enumeratetypeparameters-method.md)|取得參考此 `ICorDebugType`所參考類別之泛型 <xref:System.Type> 參數的 ICorDebugTypeEnum 介面指標。|  
-|[GetBase 方法](icordebugtype-getbase-method.md)|取得參考此 `ICorDebugType`所參考類別之基類的 `ICorDebugType` 介面指標（如果有的話）。|  
-|[GetClass 方法](icordebugtype-getclass-method.md)|取得參考此 `ICorDebugType`之具類型的函式之 ICorDebugClass 的介面指標。|  
-|[GetFirstTypeParameter 方法](icordebugtype-getfirsttypeparameter-method.md)|取得 `ICorDebugType` 的介面指標，參考此 `ICorDebugType`所參考之類別的函式的第一個泛型 <xref:System.Type> 參數。|  
+|[EnumerateTypeParameters 方法](icordebugtype-enumeratetypeparameters-method.md)|取得參考 <xref:System.Type> 此所參考類別之泛型參數的 ICorDebugTypeEnum 介面指標 `ICorDebugType` 。|  
+|[GetBase 方法](icordebugtype-getbase-method.md)|取得的介面指標 `ICorDebugType` ，它會參考這個所參考之類別的基類 `ICorDebugType` （如果有的話）。|  
+|[GetClass 方法](icordebugtype-getclass-method.md)|取得參考這個之具型別（this）之 ICorDebugClass 的介面指標 `ICorDebugType` 。|  
+|[GetFirstTypeParameter 方法](icordebugtype-getfirsttypeparameter-method.md)|取得的介面指標，其 `ICorDebugType` 參考這個所參考之類別的函式的第一個泛型 <xref:System.Type> 參數 `ICorDebugType` 。|  
 |[GetRank 方法](icordebugtype-getrank-method.md)|取得陣列類型中的維度數目。|  
 |[GetStaticFieldValue 方法](icordebugtype-getstaticfieldvalue-method.md)|取得 ICorDebugValue 的介面指標，其中包含指定之堆疊框架中指定欄位標記所參考的靜態欄位值。|  
-|[GetType 方法](icordebugtype-gettype-method.md)|取得 CorElementType 值，描述此 `ICorDebugType`所參考之 common language runtime <xref:System.Type> 的原生類型。|  
+|[GetType 方法](icordebugtype-gettype-method.md)|取得 CorElementType 值，描述這個所參考之通用語言執行時間的原生類型 <xref:System.Type> `ICorDebugType` 。|  
   
 ## <a name="remarks"></a>備註  
- 如果類型是泛型，`ICorDebugClass` 代表未具現化的類型。 `ICorDebugType` 介面代表具現化的泛型型別。 例如，Hashtable\<K，V > 會以 `ICorDebugClass`表示，而雜湊表\<Int32，String > 會以 `ICorDebugType`表示。  
+ 如果類型是泛型， `ICorDebugClass` 則表示未具現化的類型。 `ICorDebugType`介面表示具現化的泛型型別。 例如，Hashtable \< K，V> 會由表示 `ICorDebugClass` ，而雜湊表 \< Int32，則字串> 會以表示 `ICorDebugType` 。  
   
- 非泛型型別是由 `ICorDebugClass` 和 `ICorDebugType`表示。 第二個介面是在 .NET Framework 版本2.0 中引進，以處理類型具現化。  
+ 非泛型型別是以 `ICorDebugClass` 和表示 `ICorDebugType` 。 第二個介面是在 .NET Framework 版本2.0 中引進，以處理類型具現化。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 
