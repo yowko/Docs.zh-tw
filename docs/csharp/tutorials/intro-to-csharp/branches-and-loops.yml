@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: 清單集合
-  ms.openlocfilehash: a7c855e362e606f82a8b576fbb8db1d632b0f0eb
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: e7679c511cf67eed55687c5815bcf7faf4e1e624
+  ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82860983"
+  ms.lasthandoff: 05/14/2020
+  ms.locfileid: "83396852"
 items:
 - durationInMinutes: 1
   content: >
@@ -61,13 +61,13 @@ items:
     > 該練習將有助於您了解 C# 程式碼的結構。
 
 
-    此第一個範例示範 `if` 和布林型別的功能。 「布林」** 是一個變數，可能具有兩種值的其中之一：`true` 或 `false`。 C# 為布林變數定義了一個特殊型別：`bool`。 `if` 陳述式會檢查 `bool` 的值。 當值為 `true` 時，就會執行 `if` 之後的陳述式。 否則，就會略過。
+    此第一個範例示範 `if` 和布林型別的功能。 「布林」** 是一個變數，可能具有兩種值的其中之一：`true` 或 `false`。 C# 為布林變數定義了一個特殊型別：`bool`。 `if` 陳述式會檢查 `bool` 的值。 當值為 `true` 時，就會執行 `if` 之後的陳述式。 否則會略過。
 
 
-    這個流程可以檢查條件，並根據條件來執行陳述式，因此非常實用。 讓我們來探索更多內容。
+    這項檢查條件和根據這些條件執行語句的程式功能強大。 讓我們來探索更多內容。
 - title: 搭配使用 if 和 else
   durationInMinutes: 10
-  content: "\n若要在 True 和 False 分支中執行不同的程式碼，則必須建立可在條件為 False 時執行的 `else` 分支。 試試看：\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n只有當測試的條件為 `false` 時，才會執行 `else` 關鍵字之後的陳述式。 將 `if` 和 `else` 結合布林值條件，就可提供您需要的所有功能。\n\n> [!IMPORTANT]\n> `if` 和 `else` 陳述式之下的縮排是為了方便人類閱讀。\n> C# 語言不會將縮排或空白字元視為有意義的內容。\n> `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 此教學課程中的所有範例都遵循常見的實務，根據陳述式的控制流程縮排程式碼行。\n\n因為縮排沒有意義，當您要依條件執行的區塊中有超過一個陳述式時，就需要使用 `{` 和 `}` 來表示。 C# 程式設計人員通常會在所有的 `if` 和 `else` 子句上使用這些大括號。 下列範例與您剛剛所建立的內容相同。 試試看。\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> 本教學課程的其餘部分，程式碼範例都會遵循常見的做法，在程式碼中包含大括號。\n\n您可以測試更複雜的條件：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n適用於*相等*的 `==` 符號測試。 使用 `==` 可區分指派中相等的測試，您在 `a = 5` 中看過該指派。\n\n`&&` 代表「且」。 這表示兩個條件都必須為 True，才會執行 True 分支中的陳述式。  這些範例也示範在每個條件式分支中可以有多個陳述式，前提是必須將陳述式放在 `{` 和 `}` 之中。\n\n您也可以使用 `||` 來代表「或」：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n修改 `a`、`b` 和 `c` 的值，並在 `&&` 和 `||` 之間切換以進行探索。 您將更加了解 `&&` 和 `||` 運算子的工作原理。\n"
+  content: "\n若要在 True 和 False 分支中執行不同的程式碼，則必須建立可在條件為 False 時執行的 `else` 分支。 試試看：\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n只有當測試的條件為 `false` 時，才會執行 `else` 關鍵字之後的陳述式。 將 `if` 和 `else` 結合布林值條件，就可提供您需要的所有功能。\n\n> [!IMPORTANT]\n> `if` 和 `else` 陳述式之下的縮排是為了方便人類閱讀。\n> C# 語言不會將縮排或空白字元視為有意義的內容。\n> `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 此教學課程中的所有範例都遵循常見的實務，根據陳述式的控制流程縮排程式碼行。\n\n因為縮排沒有意義，所以您需要使用 `{` 和 `}` 來表示當您想要有一個以上的語句是有條件地執行之區塊的一部分時。 C# 程式設計人員通常會在所有的 `if` 和 `else` 子句上使用這些大括號。 下列範例與您所建立的相同。 試試看。\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> 本教學課程的其餘部分，程式碼範例都會遵循常見的做法，在程式碼中包含大括號。\n\n您可以測試更複雜的條件：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n適用於*相等*的 `==` 符號測試。 使用 `==` 可區分指派中相等的測試，您在 `a = 5` 中看過該指派。\n\n`&&` 代表「且」。 這表示兩個條件都必須為 True，才會執行 True 分支中的陳述式。  這些範例也示範在每個條件式分支中可以有多個陳述式，前提是必須將陳述式放在 `{` 和 `}` 之中。\n\n您也可以使用 `||` 來代表「或」：\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n修改 `a`、`b` 和 `c` 的值，並在 `&&` 和 `||` 之間切換以進行探索。 您將更加了解 `&&` 和 `||` 運算子的工作原理。\n"
 - title: 使用迴圈重複執行作業
   durationInMinutes: 6
   content: >
@@ -99,7 +99,7 @@ items:
     > 請確定 `while` 迴圈條件在您執行程式碼時會切換至 False。 否則，您建立的**無限迴圈**程式永遠不會結束。 我們不會示範這個部分，因為執行程式碼的引擎將會逾時，而您不會看到程式有任何輸出。
 
 
-    `while` 迴圈會先測試條件，然後才執行 `while` 之後的程式碼。 `do` ... `while` 迴圈會先執行程式碼，然後才檢查條件。 它看起來像這樣：
+    `while` 迴圈會先測試條件，然後才執行 `while` 之後的程式碼。 `do` ... `while` 迴圈會先執行程式碼，然後才檢查條件。 它的外觀如下：
 
 
     ```csharp
@@ -140,13 +140,13 @@ items:
     這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。 `for` 陳述式有三個部分來控制其運作方式。
 
 
-    第一個部分是**for 初始化運算式**： `int counter = 0;`宣告`counter`是迴圈變數，並將它的初始值設為`0`。
+    第一個部分是**for 初始化運算式**：宣告 `int counter = 0;` `counter` 是迴圈變數，並將它的初始值設為 `0` 。
 
 
-    中間部分是**for 條件**： `counter < 10`宣告此`for`迴圈只要 counter 的值小於10，就會繼續執行。
+    中間部分是**for 條件**：宣告 `counter < 10` 此 `for` 迴圈只要 counter 的值小於10，就會繼續執行。
 
 
-    最後一個部分是**for iterator**： `counter++`指定在`for`語句後面執行區塊之後，如何修改迴圈變數。 在這裡，它指定 `counter` 應該在每次執行區塊之後遞增 1。
+    最後一個部分是**for iterator**： `counter++` 指定在語句後面執行區塊之後，如何修改迴圈變數 `for` 。 在這裡，它指定 `counter` 應該在每次執行區塊之後遞增 1。
 
 
     您可以自行實驗這些部分。 請嘗試下列各項：
@@ -158,9 +158,12 @@ items:
 
 
     當您完成後，我們會繼續使用您學到的內容來撰寫一些程式碼。
+
+
+    本教學課程未涵蓋的另一個迴圈語句： `foreach` 語句。 `foreach`語句會針對專案序列中的每個專案重複其語句。 它最常用於*集合*，因此在下一個教學課程中有涵蓋。
 - title: 建立的嵌套迴圈
   durationInMinutes: 10
-  content: "或`while` `for`迴圈`do`可以嵌套在另一個迴圈內，以使用外部迴圈中每個專案與內部迴圈中的每個專案的組合來建立矩陣。 讓我們來建立一組英數位元，以代表資料列和資料行。\n\n一個`for`迴圈可以產生資料列：\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\n另一個迴圈可以產生資料行：\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\n您可以將一個迴圈放在另一個，以形成配對：\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\n您可以看到外部迴圈會針對內部迴圈的每個完整執行遞增一次。 反轉資料列和資料行的嵌套，並查看您自己的變更。\n"
+  content: "`while`、 `do` 或 `for` 迴圈可以嵌套在另一個迴圈內，以使用外部迴圈中每個專案的組合與內部迴圈中的每個專案來建立矩陣。 讓我們來建立一組英數位元，以代表資料列和資料行。\n\n一個 `for` 迴圈可以產生資料列：\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\n另一個迴圈可以產生資料行：\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\n您可以將一個迴圈放在另一個，以形成配對：\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\n您可以看到外部迴圈會針對內部迴圈的每個完整執行遞增一次。 反轉資料列和資料行的嵌套，並查看您自己的變更。\n"
 - title: 結合分支和迴圈
   durationInMinutes: 12
   content: >
@@ -202,13 +205,13 @@ items:
     您已經完成＜分支和迴圈＞互動式教學課程。 您可以選取下方的**清單集合**連結來啟動下一個互動式教學課程，或者您可以流覽[.net 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)來下載 .NET Core SDK、在您的電腦上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
 
 
-    您可以在下列主題中深入了解這些概念：
+    您可以在下列文章中深入瞭解這些概念：
 
 
     - [If 和 else 陳述式](../../language-reference/keywords/if-else.md)
 
-    - [While 陳述式](../../language-reference/keywords/while.md)
+    - [While 語句](../../language-reference/keywords/while.md)
 
     - [Do 陳述式](../../language-reference/keywords/do.md)
 
-    - [For 陳述式](../../language-reference/keywords/for.md)
+    - [For 語句](../../language-reference/keywords/for.md)

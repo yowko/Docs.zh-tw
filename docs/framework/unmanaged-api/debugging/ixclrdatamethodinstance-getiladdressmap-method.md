@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodInstance::GetILAddressMap 方法
+title: IXCLRDataMethodInstance：： GetILAddressMap 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodInstance::GetILAddressMap Method
@@ -15,20 +15,20 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7c4dcf59ce159434d5012120043f5bb548d49731
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744692"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396809"
 ---
-# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a><span data-ttu-id="61f78-102">IXCLRDataMethodInstance::GetILAddressMap 方法</span><span class="sxs-lookup"><span data-stu-id="61f78-102">IXCLRDataMethodInstance::GetILAddressMap Method</span></span>
+# <a name="ixclrdatamethodinstancegetiladdressmap-method"></a><span data-ttu-id="28fbb-102">IXCLRDataMethodInstance：： GetILAddressMap 方法</span><span class="sxs-lookup"><span data-stu-id="28fbb-102">IXCLRDataMethodInstance::GetILAddressMap Method</span></span>
 
-<span data-ttu-id="61f78-103">取得地址對應資訊的 IL。</span><span class="sxs-lookup"><span data-stu-id="61f78-103">Gets the IL to address mapping information.</span></span>
+<span data-ttu-id="28fbb-103">取得用來定址對應資訊的 IL。</span><span class="sxs-lookup"><span data-stu-id="28fbb-103">Gets the IL to address mapping information.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="61f78-104">語法</span><span class="sxs-lookup"><span data-stu-id="61f78-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="28fbb-104">語法</span><span class="sxs-lookup"><span data-stu-id="28fbb-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetILAddressMap(
@@ -38,29 +38,29 @@ HRESULT GetILAddressMap(
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="61f78-105">參數</span><span class="sxs-lookup"><span data-stu-id="61f78-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="28fbb-105">參數</span><span class="sxs-lookup"><span data-stu-id="28fbb-105">Parameters</span></span>
 
 `mapLen`\
-<span data-ttu-id="61f78-106">[in]提供的對應陣列的長度。</span><span class="sxs-lookup"><span data-stu-id="61f78-106">[in] The length of the provided maps array.</span></span>
+<span data-ttu-id="28fbb-106">在所提供對應陣列的長度。</span><span class="sxs-lookup"><span data-stu-id="28fbb-106">[in] The length of the provided maps array.</span></span>
 
 `mapNeeded`\
-<span data-ttu-id="61f78-107">[out]此方法需要的對應項目數目。</span><span class="sxs-lookup"><span data-stu-id="61f78-107">[out] The number of map entries that the method needs.</span></span>
+<span data-ttu-id="28fbb-107">脫銷方法需要的對應專案數目。</span><span class="sxs-lookup"><span data-stu-id="28fbb-107">[out] The number of map entries that the method needs.</span></span>
 
 `maps`\
-<span data-ttu-id="61f78-108">[out，size_is(mapLen)]儲存對應項目的陣列。</span><span class="sxs-lookup"><span data-stu-id="61f78-108">[out, size_is(mapLen)] The array for storing the map entries.</span></span>
+<span data-ttu-id="28fbb-108">[out，size_is （mapLen）]用於儲存對應專案的陣列。</span><span class="sxs-lookup"><span data-stu-id="28fbb-108">[out, size_is(mapLen)] The array for storing the map entries.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="61f78-109">備註</span><span class="sxs-lookup"><span data-stu-id="61f78-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="28fbb-109">備註</span><span class="sxs-lookup"><span data-stu-id="28fbb-109">Remarks</span></span>
 
-<span data-ttu-id="61f78-110">提供的方法是一部分`IXCLRDataMethodInstance`介面，並對應至的虛擬方法表 14 的位置。</span><span class="sxs-lookup"><span data-stu-id="61f78-110">The provided method is part of the `IXCLRDataMethodInstance` interface and corresponds to the 14th slot of the virtual method table.</span></span>
+<span data-ttu-id="28fbb-110">提供的方法是介面的一部分 `IXCLRDataMethodInstance` ，而且會對應至虛擬方法資料表的15個插槽。</span><span class="sxs-lookup"><span data-stu-id="28fbb-110">The provided method is part of the `IXCLRDataMethodInstance` interface and corresponds to the 15th slot of the virtual method table.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="61f78-111">需求</span><span class="sxs-lookup"><span data-stu-id="61f78-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="28fbb-111">需求</span><span class="sxs-lookup"><span data-stu-id="28fbb-111">Requirements</span></span>
 
-<span data-ttu-id="61f78-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="61f78-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="61f78-113">**標頭：** None</span><span class="sxs-lookup"><span data-stu-id="61f78-113">**Header:** None</span></span>  
-<span data-ttu-id="61f78-114">**LIBRARY:** None</span><span class="sxs-lookup"><span data-stu-id="61f78-114">**Library:** None</span></span>  
-<span data-ttu-id="61f78-115">**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="61f78-115">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="28fbb-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="28fbb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="28fbb-113">**標頭：** 無</span><span class="sxs-lookup"><span data-stu-id="28fbb-113">**Header:** None</span></span>  
+<span data-ttu-id="28fbb-114">連結**庫：** 無</span><span class="sxs-lookup"><span data-stu-id="28fbb-114">**Library:** None</span></span>  
+<span data-ttu-id="28fbb-115">**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="28fbb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="61f78-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="61f78-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="28fbb-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="28fbb-116">See also</span></span>
 
-- [<span data-ttu-id="61f78-117">偵錯</span><span class="sxs-lookup"><span data-stu-id="61f78-117">Debugging</span></span>](index.md)
-- [<span data-ttu-id="61f78-118">IXCLRDataMethodInstance 介面</span><span class="sxs-lookup"><span data-stu-id="61f78-118">IXCLRDataMethodInstance Interface</span></span>](ixclrdatamethodinstance-interface.md)
+- [<span data-ttu-id="28fbb-117">偵錯</span><span class="sxs-lookup"><span data-stu-id="28fbb-117">Debugging</span></span>](index.md)
+- [<span data-ttu-id="28fbb-118">IXCLRDataMethodInstance 介面</span><span class="sxs-lookup"><span data-stu-id="28fbb-118">IXCLRDataMethodInstance Interface</span></span>](ixclrdatamethodinstance-interface.md)
