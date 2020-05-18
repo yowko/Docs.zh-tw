@@ -86,9 +86,11 @@
       items:
         - name: 適用於雲端原生應用程式的 Azure 安全性
           href: azure-security.md
-    - name: 雲端原生 DevOps
+    - name: DevOps
       href: devops.md
       items:
+        - name: 功能旗標
+          href: feature-flags.md
         - name: 基礎結構即程式碼
           href: infrastructure-as-code.md
         - name: 雲端原生應用程式套件組合
