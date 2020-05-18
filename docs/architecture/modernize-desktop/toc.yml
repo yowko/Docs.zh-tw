@@ -1,0 +1,15 @@
+- name: 使用 .NET Core 3.1 在 Windows 10 上將傳統型應用程式現代化
+  href: index.md
+  items:
+    - name: 使用現代化傳統型應用程式的理由
+      href: why-modern-applications.md
+    - name: .NET Core for Desktop 有哪些新功能？
+      href: whats-new-dotnet-core.md
+    - name: 移轉現代化傳統型應用程式
+      href: migrate-modern-applications.md
+    - name: Windows 10 移轉
+      href: windows-migration.md
+    - name: 移轉至 .NET Core 3.1 的範例
+      href: example-migration-core.md
+    - name: 部署現代化傳統型應用程式
+      href: deploy-modern-applications.md
