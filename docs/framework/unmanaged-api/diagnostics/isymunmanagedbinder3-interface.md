@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-ms.openlocfilehash: e4a415b21e3980e7603319d7acbb3831462fac9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5a26de2a8f5439b7c81560927c991d449e57b76c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449292"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441587"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 介面
-擴充符號系結器介面。 在執行 `ISymUnmanagedBinder` 介面的物件上呼叫 `QueryInterface`，以取得此介面。  
+擴充符號系結器介面。 `QueryInterface`在執行介面的物件上呼叫，以取得此介面 `ISymUnmanagedBinder` 。  
   
 > [!IMPORTANT]
 > 從不受信任的來源開啟程式資料庫（PDB）檔案會有安全性風險。  
@@ -31,13 +31,13 @@ ms.locfileid: "74449292"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReaderFromCallback 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|可讓使用者透過回呼來執行或提供 `IID_IDiaReadExeAtRVACallback` 或 `IID_IDiaReadExeAtOffsetCallback`，以從記憶體取得偵錯工具目錄資訊|  
+|[GetReaderFromCallback 方法](isymunmanagedbinder3-getreaderfromcallback-method.md)|可讓使用者透過回呼來執行或提供， `IID_IDiaReadExeAtRVACallback` 或 `IID_IDiaReadExeAtOffsetCallback` 從記憶體取得 Debug 目錄資訊|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedBinder 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [ISymUnmanagedBinder2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
+- [診斷符號存放區介面](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedBinder 介面](isymunmanagedbinder-interface.md)
+- [ISymUnmanagedBinder2 介面](isymunmanagedbinder2-interface.md)

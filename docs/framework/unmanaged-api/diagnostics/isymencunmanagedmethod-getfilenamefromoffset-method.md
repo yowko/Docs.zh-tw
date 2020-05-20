@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: 74002ce9c76eebaa3ea5860b09cd3e7c9a884f8d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 857410187edf1c712865626a3327dd4c92cc211f
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448662"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441925"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset 方法
 取得與位移相關聯之行的檔案名。  
@@ -38,13 +38,13 @@ HRESULT GetFileNameFromOffset(
   
 ## <a name="parameters"></a>參數  
  `dwOffset`  
- 在包含位移的 `ULONG32`。  
+ 在`ULONG32`包含位移的。  
   
  `cchName`  
- 在指出 `szName` 緩衝區大小的 `ULONG32`。  
+ 在`ULONG32`，表示緩衝區的大小 `szName` 。  
   
  `pcchName`  
- 脫銷`ULONG32` 的指標，接收包含檔案名所需的緩衝區大小（以字元為單位）。  
+ 脫銷的指標， `ULONG32` 接收包含檔案名所需的緩衝區大小（以字元為單位）。  
   
  `szName`  
  脫銷包含檔案名的緩衝區。  
@@ -55,6 +55,6 @@ HRESULT GetFileNameFromOffset(
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymENCUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod 介面](isymencunmanagedmethod-interface.md)

@@ -1,13 +1,14 @@
 ---
 title: 文件核准程序
+description: 這個範例會示範檔核准程式案例中的許多 Windows Workflow Foundation 和 Windows Communication Foundation 功能。
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: cee43aff991f9482de7b3172174eb0e786ec1fe6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 18b4f978e9234daf22395f0d2f6f0889d0edf966
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710839"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421406"
 ---
 # <a name="document-approval-process"></a>文件核准程序
 
@@ -26,7 +27,7 @@ ms.locfileid: "74710839"
 
 下圖將示範檔核准程式工作流程：
 
-![文件核准工作流程](./media/document-approval-process/document-approval-process.jpg)
+![文件核准程序工作流程](./media/document-approval-process/document-approval-process.jpg)
 
 從用戶端的觀點來看，核准程序的運作方式如下：
 
@@ -90,7 +91,7 @@ ms.locfileid: "74710839"
 
 2. 若要建置此方案，請按 CTRL+SHIFT+B。
 
-3. 若要執行方案，請啟動核准管理員應用程式，方法是以滑鼠右鍵按一下 **方案總管**中的 ApprovalManager 專案，然後按一下右鍵功能表中的  **Debug**->**開始**新實例。
+3. 若要執行方案，請啟動核准管理員應用程式，方法是以滑鼠右鍵按一下**方案總管**中的 ApprovalManager 專案，然後按一下右鍵功能表中的 [ **Debug** -> **開始**新實例]。
 
     等候管理員輸出，通知已準備就緒。
 

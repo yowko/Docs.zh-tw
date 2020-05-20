@@ -12,12 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 20e2e3f177b12221832786f4fab86635098d1989
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0586b9e184a0958b978837601db002e035881cbc
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790496"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421029"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind 列舉
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -33,26 +33,26 @@ typedef enum ILCodeKind {
 } ILCodeKind;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員名稱|描述|  
+|成員名稱|說明|  
 |-----------------|-----------------|  
 |`ILCODE_ORIGINAL_IL`|偵錯工具無權存取 ReJIT 檢測的資訊。|  
 |`ILCODE_REJIT_IL`|偵錯工具有權存取 ReJIT 檢測的資訊。|  
   
 ## <a name="remarks"></a>備註  
- `ILCodeKind` 列舉的成員可以傳遞至[EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md)和[GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md)方法，以判斷偵錯工具是否可以存取在 profiler ReJIT 檢測中加入的變數，以及[GetCodeEx](icordebugilframe4-getcodeex-method.md)方法來判斷偵錯工具是否可以存取已檢測的 IL。  
+ 列舉的成員 `ILCodeKind` 可以傳遞至[EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md)和[GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md)方法，以判斷偵錯工具是否可以存取在 profiler ReJIT 檢測中加入的變數，以及[GetCodeEx](icordebugilframe4-getcodeex-method.md)方法來判斷偵錯工具是否可以存取已檢測的 IL。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯列舉](debugging-enumerations.md)
 - [ICorDebugILFrame4 介面](icordebugilframe4-interface.md)

@@ -1,18 +1,19 @@
 ---
 title: Pick 活動
+description: 在 Workflow Foundation 中，Pick 活動會簡化一組事件觸發程式的模型，後面接著其對應的處理常式。
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 672de5fd3df5e8dde6c54118503bf2a11353b116
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb59dc20919ed2d30a48f920ad154d4b0d99c41f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182899"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421458"
 ---
 # <a name="pick-activity"></a>Pick 活動
-<xref:System.Activities.Statements.Pick> 活動會簡化一組後續有對應處理常式之事件觸發程序的模型。  <xref:System.Activities.Statements.Pick> 活動包含<xref:System.Activities.Statements.PickBranch> 活動的集合，其中每個 <xref:System.Activities.Statements.PickBranch> 是 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 活動和 <xref:System.Activities.Statements.PickBranch.Action%2A> 活動間的配對。  在執行時間，會平行執行所有分支的觸發程序。  當一個觸發程序完成時，就會執行對應的動作，然後取消所有其他的觸發程序。  活動的行為[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]類似于 .NET 框架 3.5<xref:System.Workflow.Activities.ListenActivity>活動。 <xref:System.Activities.Statements.Pick>  
+<xref:System.Activities.Statements.Pick> 活動會簡化一組後續有對應處理常式之事件觸發程序的模型。  <xref:System.Activities.Statements.Pick> 活動包含<xref:System.Activities.Statements.PickBranch> 活動的集合，其中每個 <xref:System.Activities.Statements.PickBranch> 是 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 活動和 <xref:System.Activities.Statements.PickBranch.Action%2A> 活動間的配對。  在執行時間，會平行執行所有分支的觸發程序。  當一個觸發程序完成時，就會執行對應的動作，然後取消所有其他的觸發程序。  活動的行為 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> 類似于 .NET Framework 3.5 <xref:System.Workflow.Activities.ListenActivity> 活動。  
   
- 以下螢幕擷取畫面是出自[使用 Pick 活動](./samples/using-the-pick-activity.md) SDK 範例，示範兩個分支的 Pick 活動。  分支有稱為 [讀取輸入]**** 的觸發程序，而這是從命令列讀取輸入的自訂活動。 第二個分支有 <xref:System.Activities.Statements.Delay> 活動觸發程序。 如果**讀取輸入**活動在<xref:System.Activities.Statements.Delay>活動完成之前接收資料，<xref:System.Activities.Statements.Delay>則延遲將被取消，並且問候語將寫入主控台。  否則，如果在分配的時間內 [讀取輸入]**** 活動沒有收到資料，就會取消它，並且將逾時訊息寫入主控台。  這是用來將逾時加入至任何動作的常見形式。  
+ 以下螢幕擷取畫面是出自[使用 Pick 活動](./samples/using-the-pick-activity.md) SDK 範例，示範兩個分支的 Pick 活動。  分支有稱為 [讀取輸入]**** 的觸發程序，而這是從命令列讀取輸入的自訂活動。 第二個分支有 <xref:System.Activities.Statements.Delay> 活動觸發程序。 如果 [**讀取輸入**] 活動在活動完成前收到資料，則會 <xref:System.Activities.Statements.Delay> <xref:System.Activities.Statements.Delay> 取消延遲，並將問候語寫入主控台。  否則，如果在分配的時間內 [讀取輸入]**** 活動沒有收到資料，就會取消它，並且將逾時訊息寫入主控台。  這是用來將逾時加入至任何動作的常見形式。  
   
  ![Pick 活動](./media/pick-activity/pick-activity-two-branches.jpg)  
   

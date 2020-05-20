@@ -1,17 +1,18 @@
 ---
-title: '{2&gt;工作流程追蹤&lt;2}'
+title: 工作流程追蹤與追查
+description: Windows 工作流程追蹤是一項 .NET Framework 4.6.1 功能，可提供追蹤基礎結構來追蹤工作流程實例的執行。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 9f887babec5c070eed2fb3c7e4d8d35cdfb3f488
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: f88ff68a361bf3882d75bc2d5fb21903fd283a4d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837476"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421289"
 ---
-# <a name="workflow-tracking-and-tracing"></a>{2&gt;工作流程追蹤&lt;2}
+# <a name="workflow-tracking-and-tracing"></a>工作流程追蹤與追查
 Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 功能。 它提供追蹤基礎架構，可追蹤工作流程執行個體的執行。 WF 追蹤基礎結構會透明化地檢測工作流程，在執行期間發出記錄以反映重要事件。 根據預設，任何 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程都可使用這個功能。 不需要對 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 工作流程做任何變更，即可進行追蹤。 只需決定您想接收多少追蹤資料即可。 當工作流程執行個體開始或完成時，會發出處理的追蹤記錄。 追蹤也可以擷取與工作流程變數相關聯的商務相關資料。 例如，如果工作流程代表訂單處理系統，則訂單識別碼可與 <xref:System.Activities.Tracking.TrackingRecord> 物件一併擷取。 一般而言，啟用 WF 追蹤有助於對從執行工作流程而存取的資料進行診斷或業務分析。  
   
  這些追蹤元件相當於 WinFX 中的追蹤服務。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中已改善效能，且已為 WF 追蹤功能簡化程式設計的模型。 追蹤執行階段會檢測工作流程執行個體，以發出與工作流程生命週期相關的事件、工作流程活動和自訂事件。  
@@ -35,7 +36,7 @@ Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INC
   
  ![顯示工作流程追蹤基礎結構的螢幕擷取畫面。](./media/workflow-tracking-and-tracing/workflow-tracking-infrastructure.gif "WV")  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [追蹤記錄](tracking-records.md)  
  描述工作流程執行階段發出的追蹤記錄。  
   
@@ -51,6 +52,6 @@ Windows 工作流程追蹤是專為提供工作流程可見性而設計的 [!INC
  [工作流程追蹤](workflow-tracing.md)  
  描述兩種啟用工作流程偵錯追蹤的方式。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [SQL 追蹤](./samples/sql-tracking.md)

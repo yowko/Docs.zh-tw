@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 401dfbea0da309db24f3052f462daa66e8bbef4a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449263"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441616"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature 方法
 取得常數的簽章。  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>參數  
  `cSig`  
- 在`pcSig` 參數所指向的緩衝區長度。  
+ 在參數所指向之緩衝區的長度 `pcSig` 。  
   
  `pcSig`  
- 脫銷`ULONG32` 的指標，接收包含簽章所需的緩衝區大小（以字元為單位）。  
+ 脫銷的指標， `ULONG32` 接收包含簽章所需的緩衝區大小（以字元為單位）。  
   
  `sig`  
  脫銷儲存簽章的緩衝區。  
@@ -51,8 +51,8 @@ HRESULT GetSignature(
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedConstant 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-interface.md)
-- [GetName 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)
-- [GetValue 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)
+- [ISymUnmanagedConstant 介面](isymunmanagedconstant-interface.md)
+- [GetName 方法](isymunmanagedconstant-getname-method.md)
+- [GetValue 方法](isymunmanagedconstant-getvalue-method.md)

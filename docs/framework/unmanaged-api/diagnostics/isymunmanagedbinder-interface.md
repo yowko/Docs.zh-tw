@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-ms.openlocfilehash: f23df98abc5355f0b25d7253b5f2ae808b3446a1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f4f925282d65cd9cbc8eb1c8825f358602de68ed
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449367"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441691"
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder 介面
 表示非受控程式碼的符號系結器。  
@@ -31,14 +31,14 @@ ms.locfileid: "74449367"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReaderForFile 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|提供中繼資料介面和檔案名，會傳回正確的[ISymUnmanagedReader](isymunmanagedreader-interface.md)結構，以讀取與模組相關聯的偵錯工具符號。|  
-|[GetReaderFromStream 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|假設中繼資料介面和包含符號存放區的資料流程，會傳回正確的[ISymUnmanagedReader](isymunmanagedreader-interface.md)結構，以便從指定的符號存放區讀取偵錯工具符號。|  
+|[GetReaderForFile 方法](isymunmanagedbinder-getreaderforfile-method.md)|提供中繼資料介面和檔案名，會傳回正確的[ISymUnmanagedReader](isymunmanagedreader-interface.md)結構，以讀取與模組相關聯的偵錯工具符號。|  
+|[GetReaderFromStream 方法](isymunmanagedbinder-getreaderfromstream-method.md)|假設中繼資料介面和包含符號存放區的資料流程，會傳回正確的[ISymUnmanagedReader](isymunmanagedreader-interface.md)結構，以便從指定的符號存放區讀取偵錯工具符號。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedBinder2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
-- [ISymUnmanagedBinder3 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [診斷符號存放區介面](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedBinder2 介面](isymunmanagedbinder2-interface.md)
+- [ISymUnmanagedBinder3 介面](isymunmanagedbinder3-interface.md)

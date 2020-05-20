@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: ca5afa8c0cf0198dbc8ab65824605f18c22dcdbb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 58d81fd150684f254333c17374d06f7dd5b95823
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449253"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441410"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant 介面
 提供非受控常數的存取權。  
@@ -28,13 +28,13 @@ ms.locfileid: "74449253"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getname-method.md)|取得常數的名稱。|  
-|[GetSignature 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getsignature-method.md)|取得常數的簽章。|  
-|[GetValue 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedconstant-getvalue-method.md)|取得常數的值。|  
+|[GetName 方法](isymunmanagedconstant-getname-method.md)|取得常數的名稱。|  
+|[GetSignature 方法](isymunmanagedconstant-getsignature-method.md)|取得常數的簽章。|  
+|[GetValue 方法](isymunmanagedconstant-getvalue-method.md)|取得常數的值。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [診斷符號存放區介面](diagnostics-symbol-store-interfaces.md)

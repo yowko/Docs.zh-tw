@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc1a823a-3ff3-4a33-b641-96edc93d2b17
 topic_type:
 - apiref
-ms.openlocfilehash: 057b901337ded7b5336ef673624d8d6c827c8932
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d096101189d52401c407a4108c9c81e201d3f30d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448664"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441938"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethodCount 方法
 取得此方法在中具有行的檔數目。  
@@ -34,7 +34,7 @@ HRESULT GetDocumentsForMethodCount(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- 脫銷`ULONG32` 的指標，接收包含檔所需的緩衝區大小。  
+ 脫銷的指標 `ULONG32` ，接收包含檔所需的緩衝區大小。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -44,4 +44,4 @@ HRESULT GetDocumentsForMethodCount(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymENCUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+- [ISymENCUnmanagedMethod 介面](isymencunmanagedmethod-interface.md)

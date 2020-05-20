@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 47a7bb42ea2441ffef2fd27f26a20beceb871173
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321139"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441015"
 ---
 # <a name="specifying-an-endpoint-address"></a>指定端點位址
 
@@ -20,19 +20,19 @@ ms.locfileid: "72321139"
 
 ## <a name="definition-of-an-endpoint-address"></a>端點位址的定義
 
-在 WCF 中，<xref:System.ServiceModel.EndpointAddress> 會依照 WS-ADDRESSING 標準中的定義，將端點參考（EPR）模型。
+在 WCF 中，會依照 <xref:System.ServiceModel.EndpointAddress> ws-addressing 標準中的定義，將端點參考（EPR）模型在一起。
 
-大部分傳輸的位址 URI 具有四個部分。 例如，此 URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 具有下列四個部分：
+大部分傳輸的位址 URI 具有四個部分。 例如，此 URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` 有下列四個部分：
 
 - 配置：http:
 
-- 電腦： `www.fabrikam.com`
+- 機器碼`www.fabrikam.com`
 
 - (選擇性) 連接埠：322
 
 - 路徑：/mathservice.svc/secureEndpoint
 
-EPR 模型的一部分，就是每個端點參考都包含可新增額外識別資訊的某些參考參數。 在 WCF 中，這些參考參數會模型化為 <xref:System.ServiceModel.Channels.AddressHeader> 類別的實例。
+EPR 模型的一部分，就是每個端點參考都包含可新增額外識別資訊的某些參考參數。 在 WCF 中，這些參考參數會模型化為類別的實例 <xref:System.ServiceModel.Channels.AddressHeader> 。
 
 您可以強制使用程式碼，或是透過組態以宣告的形式來指定服務的端點位址。 在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。 一般來說，透過組態來定義服務端點會比透過程式碼來得實際一些。 將繫結和位址資訊留在程式碼外面可讓它們直接進行變更，而不需要重新編譯或重新部署應用程式。 如果在程式碼或組態中沒有指定端點，則執行階段會針對服務所實作的每個合約，在每個基底位址上加入一個預設端點。
 
@@ -42,15 +42,15 @@ EPR 模型的一部分，就是每個端點參考都包含可新增額外識別�
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>在組態中定義端點位址
 
-若要在設定檔中定義端點，請使用[\<endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md)元素。
+若要在設定檔中定義端點，請使用[ \< 端點>](../configure-apps/file-schema/wcf/endpoint-element.md)元素。
 
-[!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]
+[!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 方法時（也就是當裝載應用程式嘗試啟動服務時），系統會尋找具有指定 "UE" 之 name 屬性的[\<service >](../configure-apps/file-schema/wcf/service.md)元素。範例. HelloService」。 如果找到[\<service >](../configure-apps/file-schema/wcf/service.md)元素，系統就會載入指定的類別，並使用設定檔中提供的端點定義來建立端點。 這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。 使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。
+<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>呼叫方法時（也就是當裝載應用程式嘗試啟動服務時），系統會尋找具有指定 "UE" 之 name 屬性的[ \< 服務>](../configure-apps/file-schema/wcf/service.md)元素。範例. HelloService」。 如果找到[ \< 服務>](../configure-apps/file-schema/wcf/service.md)元素，系統就會載入指定的類別，並使用設定檔中提供的端點定義來建立端點。 這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。 使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。
 
-選擇性標頭會在[\<headers >](../configure-apps/file-schema/wcf/headers-element.md)中宣告。 以下是在設定檔中用來為服務指定端點的元素範例，這些專案可區別兩個標頭：來自 `http://tempuri1.org/` 的「金級」用戶端，以及來自 `http://tempuri2.org/` 的「標準」用戶端。 呼叫此服務的用戶端必須在其設定檔中擁有適當的[\<headers >](../configure-apps/file-schema/wcf/headers-element.md) 。
+選擇性標頭會在>的[ \< 標頭](../configure-apps/file-schema/wcf/headers-element.md)中宣告。 以下是在設定檔中用來為服務指定端點的元素範例，這些專案可區別兩個標頭：來自的「金級」用戶端 `http://tempuri1.org/` 和來自的「標準」用戶端 `http://tempuri2.org/` 。 呼叫此服務的用戶端必須在其設定檔中>適當的[ \< 標頭](../configure-apps/file-schema/wcf/headers-element.md)。
 
-[!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]
+[!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 
 如先前所示，您也可以在個別訊息上設定標頭，而不是在某個端點的所有訊息上設定標頭。 如下列範例所示，您可以使用 <xref:System.ServiceModel.OperationContextScope> 在用戶端應用程式上建立新的內容，將自訂標頭新增至傳出的訊息，以完成這項工作。
 
@@ -86,9 +86,9 @@ EPR 模型的一部分，就是每個端點參考都包含可新增額外識別�
 
 如果沒有明確提供端點，在呼叫 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 之前，仍可藉由在 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 來加入預設端點。 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](simplified-configuration.md)和 [WCF 服務的簡化組態](./samples/simplified-configuration-for-wcf-services.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.EndpointAddress>
 - [服務身分識別和驗證](./feature-details/service-identity-and-authentication.md)
-- [建立端點概觀](endpoint-creation-overview.md)
+- [端點建立概觀](endpoint-creation-overview.md)
 - [裝載](./feature-details/hosting.md)

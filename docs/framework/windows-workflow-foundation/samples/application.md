@@ -1,16 +1,17 @@
 ---
-title: 應用程式
+title: Application
+description: 本文是針對 Windows Workflow Foundation 中的工作流程應用程式提供詳細程式的範例。
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
-ms.openlocfilehash: 5ee4f6513b8a400dcaef6e7e8caf168876db4dbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 90c43c44781c3dca9fb91f68b44ccd40e9777242
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967865"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421393"
 ---
-# <a name="application"></a>應用程式
-本節包含相關的工作流程應用程式在 Windows Workflow Foundation (WF) 範例。  
+# <a name="application"></a>Application
+本節包含 Windows Workflow Foundation （WF）中的工作流程應用程式相關範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [文件核准程序](document-approval-process.md)  

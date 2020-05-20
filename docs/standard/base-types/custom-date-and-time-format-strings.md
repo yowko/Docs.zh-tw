@@ -14,25 +14,25 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 32b3c9de708d22ba4150c5f01ef79d74d5824e27
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: ae2711aac8bd864e623efe18e698c8de75a3ac32
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242994"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83440989"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
 日期和時間格式字串會定義對 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值執行格式化作業後所產生的文字表示。 另外還會定義剖析作業所需日期和時間值的表示，以便成功地將字串轉換成日期和時間。 自訂格式字串是由一個或多個自訂日期和時間格式規範所組成。 任何不是[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字串都會被解譯為自訂日期和時間格式字串。
 
 > [!TIP]
-> 您可以下載**格式化公用程式**，這個 .NET Core Windows Forms 應用程式可讓您將格式字串套用至數值或日期和時間值，並顯示結果字串。 提供 [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) 的原始程式碼。
+> 您可以下載**格式化公用程式**，這個 .NET Core Windows Forms 應用程式可讓您將格式字串套用至數值或日期和時間值，並顯示結果字串。 提供 [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) 的原始程式碼。
 
 自訂日期和時間格式字串可以與 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用。
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
-<a name="table"></a>在格式設定操作中,自訂日期和時間格式字串既可與日期和時間實例`ToString`的方法一起使用,也可以與支援複合格式的方法一起使用。 以下範例說明這兩種用法。
+<a name="table"></a>在格式化作業中，自訂日期和時間格式字串可以搭配 `ToString` 日期和時間實例的方法或是支援複合格式的方法使用。 以下範例說明這兩種用法。
 
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#17](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandformatting1.cs#17)]
 [!code-vb[Formatting.DateAndTime.Custom#17](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandformatting1.vb#17)]
@@ -44,36 +44,36 @@ ms.locfileid: "81242994"
 
 下表說明自訂日期和時間格式規範，並顯示每個格式規範所產生的結果字串。 根據預設，結果字串會反映 en-US 文化特性的格式設定慣例。 如果特定格式規範會產生當地語系化的結果字串，則範例也會註明結果字串適用的文化特性。 如需使用自訂日期和時間格式字串的詳細資訊，請參閱[注意](#notes)一節。
 
-| 格式規範 | 描述 | 範例 |
+| 格式規範 | 說明 | 範例 |
 | ---------------------- | ----------------- | -------------- |
 |"d"|月份天數，從 1 到 31。<br /><br /> 詳細資訊：["d" 自訂格式規範](#dSpecifier)。|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|月份天數，從 01 到 31。<br /><br /> 詳細資訊：["dd" 自訂格式規範](#ddSpecifier)。|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"ddd"|星期幾的縮寫名稱。<br /><br /> 詳細資訊：["ddd" 自訂格式規範](#dddSpecifier)。|2009-06-15T13:45:30 -> Mon (en-US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lun. (fr-FR)|
 |"dddd"|星期幾的完整名稱。<br /><br /> 詳細資訊：["dddd" 自訂格式規範](#ddddSpecifier)。|2009-06-15T13:45:30 -> Monday (en-US)<br /><br /> 2009-06-15T13:45:30 -> понедельник (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lundi (fr-FR)|
 |"f"|日期和時間值中的十分之一秒。<br /><br /> 詳細資訊：["f" 自訂格式規範](#fSpecifier)。|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.05 -> 0|
-|"ff"|日期和時間值中的百分之一秒。<br /><br /> 更多資訊[:ff"自訂格式規格器](#ffSpecifier)。|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> 00|
+|"ff"|日期和時間值中的百分之一秒。<br /><br /> 詳細資訊： ["ff" 自訂格式規範](#ffSpecifier)。|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> 00|
 |"fff"|日期和時間值中的千分之一秒。<br /><br /> 詳細資訊：["fff" 自訂格式規範](#fffSpecifier)。|6/15/2009 13:45:30.617 -> 617<br /><br /> 6/15/2009 13:45:30.0005 -> 000|
-|"ffff"|日期和時間值中的萬分之一秒。<br /><br /> 更多資訊[:ffff 自我設定格式規格器](#ffffSpecifier)。|2009-06-15T13:45:30.6175000 -> 6175<br /><br /> 2009-06-15T13:45:30.0000500  -> 0000|
+|"ffff"|日期和時間值中的萬分之一秒。<br /><br /> 詳細資訊： ["ffff" 自訂格式規範](#ffffSpecifier)。|2009-06-15T13:45:30.6175000 -> 6175<br /><br /> 2009-06-15T13:45:30.0000500  -> 0000|
 |"fffff"|日期和時間值中的十萬分之一秒。<br /><br /> 詳細資訊：["fffff" 自訂格式規範](#fffffSpecifier)。|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 6/15/2009 13:45:30.000005 -> 00000|
-|"ffffff"|日期和時間值中的百萬分之一秒。<br /><br /> 更多資訊[:ffffff"自訂格式規格器](#ffffffSpecifier)。|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> 000000|
-|"fffffff"|日期和時間值中的千萬分之一秒。<br /><br /> 更多資訊[:fffffff"自訂格式規格器](#fffffffSpecifier)。|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 0001150|
-|"F"|如果不是零，則為日期和時間值中的十分之一秒。<br /><br /> 更多資訊[:F"自訂格式規格器](#F_Specifier)。|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.0500000 -> (沒有輸出)|
+|"ffffff"|日期和時間值中的百萬分之一秒。<br /><br /> 詳細資訊： ["ffffff" 自訂格式規範](#ffffffSpecifier)。|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> 000000|
+|"fffffff"|日期和時間值中的千萬分之一秒。<br /><br /> 詳細資訊： ["fffffff" 自訂格式規範](#fffffffSpecifier)。|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 0001150|
+|"F"|如果不是零，則為日期和時間值中的十分之一秒。<br /><br /> 詳細資訊： ["F" 自訂格式規範](#F_Specifier)。|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.0500000 -> (沒有輸出)|
 |"FF"|如果不是零，則為日期和時間值中的百分之一秒。<br /><br /> 詳細資訊：["FF" 自訂格式規範](#FF_Specifier)。|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> (沒有輸出)|
-|"FFF"|如果不是零，則為日期和時間值中的千分之一秒。<br /><br /> 更多資訊[:FFF" 自訂格式規格器](#FFF_Specifier)。|2009-06-15T13:45:30.6170000 -> 617<br /><br /> 2009-06-15T13:45:30.0005000 -> (沒有輸出)|
+|"FFF"|如果不是零，則為日期和時間值中的千分之一秒。<br /><br /> 詳細資訊： ["FFF" 自訂格式規範](#FFF_Specifier)。|2009-06-15T13:45:30.6170000 -> 617<br /><br /> 2009-06-15T13:45:30.0005000 -> (沒有輸出)|
 |"FFFF"|如果不是零，則為日期和時間值中的萬分之一秒。<br /><br /> 詳細資訊：["FFFF" 自訂格式規範](#FFFF_Specifier)。|2009-06-15T13:45:30.5275000 -> 5275<br /><br /> 2009-06-15T13:45:30.0000500 -> (沒有輸出)|
-|"FFFFF"|如果不是零，則為日期和時間值中的十萬分之一秒。<br /><br /> 更多資訊[:FFFFF" 自訂格式規格器](#FFFFF_Specifier)。|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (沒有輸出)|
+|"FFFFF"|如果不是零，則為日期和時間值中的十萬分之一秒。<br /><br /> 詳細資訊： ["FFFFF" 自訂格式規範](#FFFFF_Specifier)。|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (沒有輸出)|
 |"FFFFFF"|如果不是零，則為日期和時間值中的百萬分之一秒。<br /><br /> 詳細資訊：["FFFFFF" 自訂格式規範](#FFFFFF_Specifier)。|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> (沒有輸出)|
 |"FFFFFFF"|如果不是零，則為日期和時間值中的千萬分之一秒。<br /><br /> 詳細資訊：["FFFFFFF" 自訂格式規範](#FFFFFFF_Specifier)。|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 000115|
 |"g"、"gg"|週期或紀元。<br /><br /> 詳細資訊：["g" 或 "gg" 自訂格式規範](#gSpecifier)。|2009-06-15T13:45:30.6170000 -> A.D.|
-|"h"|採用 12 小時制的小時，從 1 到 12。<br /><br /> 更多資訊[:h" 自訂格式規格器](#hSpecifier)。|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 1|
-|"hh"|採用 12 小時制的小時，從 01 到 12。<br /><br /> 更多資訊[:hh 自我設定格式規格器](#hhSpecifier)。|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 01|
+|"h"|採用 12 小時制的小時，從 1 到 12。<br /><br /> 詳細資訊： ["h" 自訂格式規範](#hSpecifier)。|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 1|
+|"hh"|採用 12 小時制的小時，從 01 到 12。<br /><br /> 詳細資訊： ["hh" 自訂格式規範](#hhSpecifier)。|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 01|
 |"H"|採用 24 小時制的小時，從 0 到 23。<br /><br /> 詳細資訊：["H" 自訂格式規範](#H_Specifier)。|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 13|
 |"HH"|採用 24 小時制的小時，從 00 到 23。<br /><br /> 詳細資訊：["HH" 自訂格式規範](#HH_Specifier)。|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 13|
 |"K"|時區資訊。<br /><br /> 詳細資訊：["K" 自訂格式規範](#KSpecifier)。|搭配 <xref:System.DateTime> 值：<br /><br /> 2009-06-15T13:45:30, Kind Unspecified -><br /><br /> 2009-06-15T13:45:30, Kind Utc -> Z<br /><br /> 2009-06-15T13:45:30, Kind Local -> -07:00 (依據本機電腦設定)<br /><br /> 搭配 <xref:System.DateTimeOffset> 值：<br /><br /> 2009-06-15T01:45:30-07:00 --> -07:00<br /><br /> 2009-06-15T08:45:30+00:00 --> +00:00|
-|"m"|分鐘，從 0 到 59。<br /><br /> 更多資訊[:m 自我訂格式規格器](#mSpecifier)。|2009-06-15T01:09:30 -> 9<br /><br /> 2009-06-15T13:29:30 -> 29|
+|"m"|分鐘，從 0 到 59。<br /><br /> 詳細資訊： ["m" 自訂格式規範](#mSpecifier)。|2009-06-15T01:09:30 -> 9<br /><br /> 2009-06-15T13:29:30 -> 29|
 |"mm"|分鐘，從 00 到 59。<br /><br /> 詳細資訊：["mm" 自訂格式規範](#mmSpecifier)。|2009-06-15T01:09:30 -> 09<br /><br /> 2009-06-15T01:45:30 -> 45|
 |"M"|月份，從 1 到 12。<br /><br /> 詳細資訊：["M" 自訂格式規範](#M_Specifier)。|2009-06-15T13:45:30 -> 6|
-|"MM"|月份，從 01 到 12。<br /><br /> 更多資訊[─MM"自訂格式規格器](#MM_Specifier)。|2009-06-15T13:45:30 -> 06|
+|"MM"|月份，從 01 到 12。<br /><br /> 詳細資訊： ["MM" 自訂格式規範](#MM_Specifier)。|2009-06-15T13:45:30 -> 06|
 |"MMM"|月份的縮寫名稱。<br /><br /> 詳細資訊：["MMM" 自訂格式規範](#MMM_Specifier)。|2009-06-15T13:45:30 -> Jun (en-US)<br /><br /> 2009-06-15T13:45:30 -> juin (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> Jun (zu-ZA)|
 |"MMMM"|月份的完整名稱。<br /><br /> 詳細資訊：["MMMM" 自訂格式規範](#MMMM_Specifier)。|2009-06-15T13:45:30 -> June (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> uJuni (zu-ZA)|
 |"s"|秒數，從 0 到 59。<br /><br /> 詳細資訊：["s" 自訂格式規範](#sSpecifier)。|2009-06-15T13:45:09 -> 9|
@@ -89,15 +89,15 @@ ms.locfileid: "81242994"
 |"zz"|與 UTC 相差的時數，單一位數值會加上前置零。<br /><br /> 詳細資訊：["zz" 自訂格式規範](#zzSpecifier)。|2009-06-15T13:45:30-07:00 -> -07|
 |"zzz"|與 UTC 相差的時數和分鐘數。<br /><br /> 詳細資訊：["zzz" 自訂格式規範](#zzzSpecifier)。|2009-06-15T13:45:30-07:00 -> -07:00|
 |":"|時間分隔符號。<br /><br /> 詳細資訊：[":" 自訂格式規範](#timeSeparator)。|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|
-|"/"|日期分隔符號。<br /><br /> 更多資訊[:/自訂格式規格器](#dateSeparator)。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
-|字*串*"<br /><br /> '*字串*'|常值字串分隔符號。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
+|"/"|日期分隔符號。<br /><br /> 詳細資訊： ["/" 自訂格式規範](#dateSeparator)。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
+|"*string*"<br /><br /> '*字串*'|常值字串分隔符號。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|將下列字元定義為自訂格式規範。<br /><br /> 詳細資訊：[使用單一自訂格式規範](#UsingSingleSpecifiers)。|2009-06-15T13:45:30 (%h) -> 1|
 |&#92;|逸出字元。<br /><br /> 詳細資訊︰[字元常值](#Literals)和[使用逸出字元](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|
 |任意字元|字元會原封不動地複製到結果字串。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
 下列各節提供每個自訂日期和時間格式規範的其他資訊。 除非特別註明，否則每個規範都會產生相同的字串表示，無論是與 <xref:System.DateTime> 值或 <xref:System.DateTimeOffset> 值搭配使用。
 
-## <a name="the-d-custom-format-specifier"></a><a name="dSpecifier"></a>"d"自訂格式指定器
+## <a name="the-d-custom-format-specifier"></a><a name="dSpecifier"></a>"D" 自訂格式規範
 
 "d" 自訂格式規範以 1 到 31 的數字來表示月份天數。 單一位數的天數會格式化為沒有前置零的數字。
 
@@ -110,7 +110,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-dd-custom-format-specifier"></a><a name="ddSpecifier"></a>"dd"自訂格式指定器
+## <a name="the-dd-custom-format-specifier"></a><a name="ddSpecifier"></a>"Dd" 自訂格式規範
 
 "dd" 自訂格式字串以 01 到 31 的數字來表示月份天數。 單一位數的天數會格式化為有前置零的數字。
 
@@ -121,7 +121,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-ddd-custom-format-specifier"></a><a name="dddSpecifier"></a>"ddd"自訂格式指定器
+## <a name="the-ddd-custom-format-specifier"></a><a name="dddSpecifier"></a>"Ddd" 自訂格式規範
 
 "ddd" 自訂格式規範表示星期幾的縮寫名稱。 星期幾的當地語系化縮寫名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> 屬性。
 
@@ -132,7 +132,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-dddd-custom-format-specifier"></a><a name="ddddSpecifier"></a>"ddd"自訂格式指定器
+## <a name="the-dddd-custom-format-specifier"></a><a name="ddddSpecifier"></a>"Dddd" 自訂格式規範
 
 "dddd" 自訂格式規範 (加上任意個額外的 "d" 規範) 表示星期幾的完整名稱。 星期幾的當地語系化名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> 屬性。
 
@@ -143,7 +143,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-f-custom-format-specifier"></a><a name="fSpecifier"></a>「f」自訂格式指定器
+## <a name="the-f-custom-format-specifier"></a><a name="fSpecifier"></a>"F" 自訂格式規範
 
 "f" 自訂格式規範表示秒數的一位有效小數位數，也就是說，它表示日期和時間值中的十分之一秒。
 
@@ -158,7 +158,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-ff-custom-format-specifier"></a><a name="ffSpecifier"></a>"ff"自訂格式指定器
+## <a name="the-ff-custom-format-specifier"></a><a name="ffSpecifier"></a>"Ff" 自訂格式規範
 
 "ff" 自訂格式規範表示秒數的兩位有效小數位數，也就是說，它表示日期和時間值中的百分之一秒。
 
@@ -169,7 +169,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-fff-custom-format-specifier"></a><a name="fffSpecifier"></a>"fff"自訂格式指定器
+## <a name="the-fff-custom-format-specifier"></a><a name="fffSpecifier"></a>"Fff" 自訂格式規範
 
 "fff" 自訂格式規範表示秒數的三位有效小數位數，也就是說，它表示日期和時間值中的千分之一秒。
 
@@ -180,7 +180,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-ffff-custom-format-specifier"></a><a name="ffffSpecifier"></a>"ffff"自訂格式指定器
+## <a name="the-ffff-custom-format-specifier"></a><a name="ffffSpecifier"></a>"Ffff" 自訂格式規範
 
 "ffff" 自訂格式規範表示秒數的四位有效小數位數，也就是說，它表示日期和時間值中的萬分之一秒。
 
@@ -188,7 +188,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-fffff-custom-format-specifier"></a><a name="fffffSpecifier"></a>"fffff"自訂格式指定器
+## <a name="the-fffff-custom-format-specifier"></a><a name="fffffSpecifier"></a>"Fffff" 自訂格式規範
 
 "fffff" 自訂格式規範表示秒數的五位有效小數位數，也就是說，它表示日期和時間值中的十萬分之一秒。
 
@@ -196,7 +196,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-ffffff-custom-format-specifier"></a><a name="ffffffSpecifier"></a>"ffffff"自訂格式指定器
+## <a name="the-ffffff-custom-format-specifier"></a><a name="ffffffSpecifier"></a>"Ffffff" 自訂格式規範
 
 "ffffff" 自訂格式規範表示秒數的六位有效小數位數，也就是說，它表示日期和時間值中的百萬分之一秒。
 
@@ -204,7 +204,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-fffffff-custom-format-specifier"></a><a name="fffffffSpecifier"></a>"fffffff"自訂格式指定器
+## <a name="the-fffffff-custom-format-specifier"></a><a name="fffffffSpecifier"></a>"Fffffff" 自訂格式規範
 
 "fffffff" 自訂格式規範表示秒數的七位有效小數位數，也就是說，它表示日期和時間值中的千萬分之一秒。
 
@@ -212,7 +212,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-f-custom-format-specifier"></a><a name="F_Specifier"></a>「F」自訂格式指定器
+## <a name="the-f-custom-format-specifier"></a><a name="F_Specifier"></a>"F" 自訂格式規範
 
 "F" 自訂格式規範表示秒數的一位有效小數位數，也就是說，它表示日期和時間值中的十分之一秒。 如果數字為零，則不會顯示任何內容。
 
@@ -227,7 +227,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-ff-custom-format-specifier"></a><a name="FF_Specifier"></a>"FF"自訂格式指定器
+## <a name="the-ff-custom-format-specifier"></a><a name="FF_Specifier"></a>"FF" 自訂格式規範
 
 "FF" 自訂格式規範表示秒數的兩位有效小數位數，也就是說，它表示日期和時間值中的百分之一秒。 不過，結尾的零或兩個零的數字都不會顯示。
 
@@ -238,7 +238,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-fff-custom-format-specifier"></a><a name="FFF_Specifier"></a>"FFF"自訂格式指定器
+## <a name="the-fff-custom-format-specifier"></a><a name="FFF_Specifier"></a>"FFF" 自訂格式規範
 
 "FFF" 自訂格式規範表示秒數的三位有效小數位數，也就是說，它表示日期和時間值中的千分之一秒。 不過，結尾的零或三個零的數字都不會顯示。
 
@@ -249,7 +249,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-ffff-custom-format-specifier"></a><a name="FFFF_Specifier"></a>"FFFF"自訂格式指定器
+## <a name="the-ffff-custom-format-specifier"></a><a name="FFFF_Specifier"></a>"FFFF" 自訂格式規範
 
 "FFFF" 自訂格式規範表示秒數的四位有效小數位數，也就是說，它表示日期和時間值中的萬分之一秒。 不過，結尾的零或四個零的數字都不會顯示。
 
@@ -257,7 +257,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-fffff-custom-format-specifier"></a><a name="FFFFF_Specifier"></a>"FFFFF"自訂格式指定器
+## <a name="the-fffff-custom-format-specifier"></a><a name="FFFFF_Specifier"></a>"FFFFF" 自訂格式規範
 
 "FFFFF" 自訂格式規範表示秒數的五位有效小數位數，也就是說，它表示日期和時間值中的十萬分之一秒。 不過，結尾的零或五個零的數字都不會顯示。
 
@@ -265,7 +265,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-ffffff-custom-format-specifier"></a><a name="FFFFFF_Specifier"></a>"FFFFFF"自訂格式指定器
+## <a name="the-ffffff-custom-format-specifier"></a><a name="FFFFFF_Specifier"></a>"FFFFFF" 自訂格式規範
 
 "FFFFFF" 自訂格式規範表示秒數的六位有效小數位數，也就是說，它表示日期和時間值中的百萬分之一秒。 不過，結尾的零或六個零的數字都不會顯示。
 
@@ -273,7 +273,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-fffffff-custom-format-specifier"></a><a name="FFFFFFF_Specifier"></a>"FFFFFFF"自訂格式指定器
+## <a name="the-fffffff-custom-format-specifier"></a><a name="FFFFFFF_Specifier"></a>"FFFFFFF" 自訂格式規範
 
 "FFFFFFF" 自訂格式規範表示秒數的七位有效小數位數，也就是說，它表示日期和時間值中的千萬分之一秒。 不過，結尾的零或七個零的數字都不會顯示。
 
@@ -281,7 +281,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-g-or-gg-custom-format-specifier"></a><a name="gSpecifier"></a>"g"或"gg"自訂格式指定器
+## <a name="the-g-or-gg-custom-format-specifier"></a><a name="gSpecifier"></a>"G" 或 "gg" 自訂格式規範
 
 "g" 或 "gg" 自訂格式規範 (加上任意個額外的 "g" 規範) 表示時期或時代，例如 A.D。 如果要格式化的日期沒有關聯的時期或時代字串，則格式化作業會忽略這個規範。
 
@@ -294,7 +294,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-h-custom-format-specifier"></a><a name="hSpecifier"></a>"h"自訂格式指定器
+## <a name="the-h-custom-format-specifier"></a><a name="hSpecifier"></a>"H" 自訂格式規範
 
 "h" 自訂格式規範以 1 到 12 的數字來表示小時，也就是以 12 小時制來表示小時，從午夜或中午開始計算整點時數。 午夜後的特定小時與下午的相同小時會難以區分。 小時是不進位的，而且單一位數的小時會格式化為沒有前置零的數字。 例如，假設時間為上午或下午 5:43，則此自訂格式規範會顯示 "5"。
 
@@ -307,7 +307,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-hh-custom-format-specifier"></a><a name="hhSpecifier"></a>"hh"自訂格式指定器
+## <a name="the-hh-custom-format-specifier"></a><a name="hhSpecifier"></a>"Hh" 自訂格式規範
 
 "hh" 自訂格式規範 (加上任意個額外的 "h" 規範) 以 01 到 12 的數字來表示小時，也就是以 12 小時制來表示小時，從午夜或中午開始計算整點時數。 午夜後的特定小時與下午的相同小時會難以區分。 小時是不進位的，而且單一位數的小時會格式化為有前置零的數字。 例如，假設時間為上午或下午 5:43，則此格式規範會顯示 "05"。
 
@@ -318,7 +318,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-h-custom-format-specifier"></a><a name="H_Specifier"></a>"H"自訂格式指定器
+## <a name="the-h-custom-format-specifier"></a><a name="H_Specifier"></a>"H" 自訂格式規範
 
 "H" 自訂格式規範以 0 到 23 的數字來表示小時，也就是採用以零為起始的 24 小時制來表示小時，從午夜開始計算時數。 單一位數的小時會格式化為沒有前置零的數字。
 
@@ -331,7 +331,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-hh-custom-format-specifier"></a><a name="HH_Specifier"></a>"HH"自訂格式指定器
+## <a name="the-hh-custom-format-specifier"></a><a name="HH_Specifier"></a>"HH" 自訂格式規範
 
 "HH" 自訂格式規範 (加上任意個額外的 "H" 規範) 以 00 到 23 的數字來表示小時，也就是採用以零為起始的 24 小時制來表示小時，從午夜開始計算時數。 單一位數的小時會格式化為具有前置零的數字。
 
@@ -342,7 +342,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-k-custom-format-specifier"></a><a name="KSpecifier"></a>「K」自訂格式指定器
+## <a name="the-k-custom-format-specifier"></a><a name="KSpecifier"></a>"K" 自訂格式規範
 
 "K" 自訂格式規範表示日期和時間值的時區資訊。 與 <xref:System.DateTime> 值搭配使用這個格式規範時，結果字串會由 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性的值定義：
 
@@ -363,7 +363,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-m-custom-format-specifier"></a><a name="mSpecifier"></a>"m"自訂格式指定器
+## <a name="the-m-custom-format-specifier"></a><a name="mSpecifier"></a>"M" 自訂格式規範
 
 "m" 自訂格式規範以 0 到 59 的數字來表示分鐘。 分鐘表示自上個整點以來已經過的完整分鐘數。 單一位數的分鐘會格式化為沒有前置零的數字。
 
@@ -376,7 +376,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-mm-custom-format-specifier"></a><a name="mmSpecifier"></a>"mm"自訂格式指定器
+## <a name="the-mm-custom-format-specifier"></a><a name="mmSpecifier"></a>"Mm" 自訂格式規範
 
 "mm" 自訂格式規範 (加上任意個額外的 "m" 規範) 以 00 到 59 的數字來表示分鐘。 分鐘表示自上個整點以來已經過的完整分鐘數。 單一位數的分鐘會格式化為具有前置零的數字。
 
@@ -387,7 +387,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-m-custom-format-specifier"></a><a name="M_Specifier"></a>「M」自訂格式指定器
+## <a name="the-m-custom-format-specifier"></a><a name="M_Specifier"></a>"M" 自訂格式規範
 
 "M" 自訂格式規範以 1 到 12 的數字來表示月份 (如果是有 13 個月的行事曆則從 1 到 13)。 單一位數的月份會格式化為沒有前置零的數字。
 
@@ -400,7 +400,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-mm-custom-format-specifier"></a><a name="MM_Specifier"></a>"MM"自訂格式指定器
+## <a name="the-mm-custom-format-specifier"></a><a name="MM_Specifier"></a>"MM" 自訂格式規範
 
 "MM" 自訂格式規範以 01 到 12 的數字來表示月份 (如果是有 13 個月的行事曆則從 1 到 13)。 單一位數的月份會格式化為有前置零的數字。
 
@@ -411,7 +411,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-mmm-custom-format-specifier"></a><a name="MMM_Specifier"></a>「MMM」自訂格式指定器
+## <a name="the-mmm-custom-format-specifier"></a><a name="MMM_Specifier"></a>"MMM" 自訂格式規範
 
 "MMM" 自訂格式規範表示月份的縮寫名稱。 月份的當地語系化縮寫名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> 屬性。
 
@@ -422,7 +422,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-mmmm-custom-format-specifier"></a><a name="MMMM_Specifier"></a>"MMMM"自訂格式規格
+## <a name="the-mmmm-custom-format-specifier"></a><a name="MMMM_Specifier"></a>"MMMM" 自訂格式規範
 
 "MMMM" 自訂格式規範表示月份的完整名稱。 月份的當地語系化名稱是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> 屬性。
 
@@ -433,7 +433,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-s-custom-format-specifier"></a><a name="sSpecifier"></a>'s'自訂格式指定器
+## <a name="the-s-custom-format-specifier"></a><a name="sSpecifier"></a>"S" 自訂格式規範
 
 "s" 自訂格式規範以 0 到 59 的數字來表示秒數。 結果表示自上個分鐘以來已經過的完整秒數。 單一位數的秒數會格式化為沒有前置零的數字。
 
@@ -446,7 +446,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-ss-custom-format-specifier"></a><a name="ssSpecifier"></a>"ss"自訂格式指定器
+## <a name="the-ss-custom-format-specifier"></a><a name="ssSpecifier"></a>"Ss" 自訂格式規範
 
 "ss" 自訂格式規範 (加上任意個額外的 "s" 規範) 以 00 到 59 的數字來表示秒數。 結果表示自上個分鐘以來已經過的完整秒數。 單一位數的秒數會格式化為具有前置零的數字。
 
@@ -457,7 +457,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-t-custom-format-specifier"></a><a name="tSpecifier"></a>"t"自訂格式指定器
+## <a name="the-t-custom-format-specifier"></a><a name="tSpecifier"></a>"T" 自訂格式規範
 
 "t" 自訂格式規範表示 AM/PM 指示項的第一個字元。 適當的當地語系化指示項是擷取自目前或特定文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> 屬性。 AM 指示項用於從 0:00:00 (午夜) 到 11:59:59.999 為止的所有時間。 PM 指示項用於從 12:00:00 (中午) 到 23:59:59.999 為止的所有時間。
 
@@ -470,7 +470,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-tt-custom-format-specifier"></a><a name="ttSpecifier"></a>"tt"自訂格式指定器
+## <a name="the-tt-custom-format-specifier"></a><a name="ttSpecifier"></a>"Tt" 自訂格式規範
 
 "tt" 自訂格式規範 (加上任意個額外的 "t" 規範) 表示整個 AM/PM 指示項。 適當的當地語系化指示項是擷取自目前或特定文化特性的 <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> 屬性。 AM 指示項用於從 0:00:00 (午夜) 到 11:59:59.999 為止的所有時間。 PM 指示項用於從 12:00:00 (中午) 到 23:59:59.999 為止的所有時間。
 
@@ -483,7 +483,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-y-custom-format-specifier"></a><a name="ySpecifier"></a>"y"自訂格式指定器
+## <a name="the-y-custom-format-specifier"></a><a name="ySpecifier"></a>"Y" 自訂格式規範
 
 "y" 自訂格式規範以一位或兩位數來表示年份。 如果年份超過兩個位數，結果中只會出現兩個低位數字。 如果兩位數年份的第一個數字以零開始 (例如 2008)，則會格式化為沒有前置零的數字。
 
@@ -496,7 +496,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-yy-custom-format-specifier"></a><a name="yySpecifier"></a>「yy」自訂格式指定器
+## <a name="the-yy-custom-format-specifier"></a><a name="yySpecifier"></a>"Yy" 自訂格式規範
 
 "yy" 自訂格式規範以兩位數來表示年份。 如果年份超過兩個位數，結果中只會出現兩個低位數字。 如果兩位數年份少於兩個有效位數，則會以前置零填補此數字來產生兩位數。
 
@@ -512,7 +512,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-yyy-custom-format-specifier"></a><a name="yyySpecifier"></a>"yyy"自訂格式指定器
+## <a name="the-yyy-custom-format-specifier"></a><a name="yyySpecifier"></a>"Yyy" 自訂格式規範
 
 "yyy" 自訂格式規範以最少三位數來表示年份。 如果年份超過三個有效位數，它們會包含在結果字串中。 如果年份少於三個位數，則會以前置零填補此數字來產生三位數。
 
@@ -526,7 +526,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-yyyy-custom-format-specifier"></a><a name="yyyySpecifier"></a>"yyyy"自訂格式指定器
+## <a name="the-yyyy-custom-format-specifier"></a><a name="yyyySpecifier"></a>"Yyyy" 自訂格式規範
 
 "yyyy" 自訂格式規範以最少四位數來表示年份。 如果年份超過四個有效位數，它們會包含在結果字串中。 如果年份少於四個位數，則會以前置零填補此數字，以產生四個位數。
 
@@ -540,7 +540,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-yyyyy-custom-format-specifier"></a><a name="yyyyySpecifier"></a>"yyyyy"自訂格式指定器
+## <a name="the-yyyyy-custom-format-specifier"></a><a name="yyyyySpecifier"></a>"Yyyyy" 自訂格式規範
 
 "yyyyy" 自訂格式規範 (加上任意個額外的 "y" 規範) 以最少五位數來表示年份。 如果年份超過五個有效位數，它們會包含在結果字串中。 如果年份少於五位數，則會以前置零填補此數字來產生五位數。
 
@@ -553,7 +553,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-z-custom-format-specifier"></a><a name="zSpecifier"></a>"z"自訂格式指定器
+## <a name="the-z-custom-format-specifier"></a><a name="zSpecifier"></a>"Z" 自訂格式規範
 
 搭配 <xref:System.DateTime> 值使用時，"z" 自訂格式規範表示本地作業系統時區與國際標準時間 (UTC) 之間的時差 (帶正負號)，以小時為單位。 它不會反映執行個體的 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性值。 因此，不建議將 "z" 格式規範搭配 <xref:System.DateTime> 值使用。
 
@@ -570,7 +570,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-zz-custom-format-specifier"></a><a name="zzSpecifier"></a>"zz"自訂格式指定器
+## <a name="the-zz-custom-format-specifier"></a><a name="zzSpecifier"></a>"Zz" 自訂格式規範
 
 搭配 <xref:System.DateTime> 值使用時，"zz" 自訂格式規範表示本地作業系統時區與 UTC 之間的時差 (帶正負號)，以小時為單位。 它不會反映執行個體的 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性值。 因此，不建議將 "zz" 格式規範搭配 <xref:System.DateTime> 值使用。
 
@@ -585,7 +585,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the-zzz-custom-format-specifier"></a><a name="zzzSpecifier"></a>「zzz」自訂格式指定器
+## <a name="the-zzz-custom-format-specifier"></a><a name="zzzSpecifier"></a>"Zzz" 自訂格式規範
 
 搭配 <xref:System.DateTime> 值使用時，"zzz" 自訂格式規範表示本地作業系統時區與 UTC 之間的時差 (帶正負號)，以小時和分鐘為單位。 它不會反映執行個體的 <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性值。 因此，不建議將 "zzz" 格式規範搭配 <xref:System.DateTime> 值使用。
 
@@ -600,7 +600,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a>":"自訂格式指定器
+## <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a>"：" 自訂格式規範
 ":" 自訂格式規範表示時間分隔符號，用於區別時、分、秒。 適當的當地語系化時間分隔符號是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 屬性。
 
 > [!NOTE]
@@ -610,7 +610,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="the--custom-format-specifier"></a><a name="dateSeparator"></a>「/」 自訂格式指定器
+## <a name="the--custom-format-specifier"></a><a name="dateSeparator"></a>"/" 自訂格式規範
 
 "/" 自訂格式規範表示日期分隔符號，用於區別年、月、日。 適當的當地語系化日期分隔符號是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> 屬性。
 
@@ -621,7 +621,7 @@ ms.locfileid: "81242994"
 
 [回到表格](#table)
 
-## <a name="character-literals"></a><a name="Literals"></a>字元文字
+## <a name="character-literals"></a><a name="Literals"></a>字元常值
 
 自訂日期和時間格式字串中的下列字元是保留字元，一律會解譯為格式字元；若是 "、'、/ 和 \\，則解譯為特殊字元。
 
@@ -641,7 +641,7 @@ ms.locfileid: "81242994"
 
 您可以使用兩種方式來指定將字元解譯為常值字元，而不是保留字元，以便包含在結果字串中，或在輸入字串中成功剖析：
 
-- 將每個保留字元逸出。 有關詳細資訊,請參閱[使用轉義字元](#escape)。
+- 將每個保留字元逸出。 如需詳細資訊，請參閱[使用 Escape 字元](#escape)。
 
 下列範例包含常值字元 "pst" (太平洋標準時間)，以表示格式字串中的當地時區。 由於 "s" 與 "t" 是自訂格式字串，因此必須逸出這兩個字元才能解譯為字元常值。
 
@@ -655,7 +655,7 @@ ms.locfileid: "81242994"
 
 ## <a name="notes"></a>注意
 
-### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a>使用單一自訂格式指定器
+### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a>使用單一自訂格式規範
 
 自訂日期和時間格式字串是由兩個或多個字元所組成。 日期和時間格式化方法會將任何單一字元字串解譯為標準日期和時間格式字串。 如果這些方法無法將該字元辨認為有效的格式規範，則會擲回 <xref:System.FormatException>。 例如，僅由規範 "h" 所組成的格式字串會解譯為標準日期和時間字串。 不過，在這種特殊情形下會擲回例外狀況，因為並沒有 "h" 標準日期和時間格式規範。
 
@@ -666,7 +666,7 @@ ms.locfileid: "81242994"
 [!code-csharp-interactive[Formatting.DateAndTime.Custom#16](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
 [!code-vb[Formatting.DateAndTime.Custom#16](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
-### <a name="using-the-escape-character"></a><a name="escape"></a>使用轉義字元
+### <a name="using-the-escape-character"></a><a name="escape"></a>使用 Escape 字元
 
 格式字串中的 "d"、"f"、"F"、"g"、"h"、"H"、"K"、"m"、"M"、"s"、"t"、"y"、"z"、":" 或 "/" 字元會解譯為自訂格式規範，而不是常值字元。 若要避免將字元解譯為格式規範，您可以在前面加上反斜線 (\\)，這是逸出字元。 逸出字元表示接下來的字元是字元常值，應該原封不動地放入結果字串中。
 
@@ -697,6 +697,6 @@ ms.locfileid: "81242994"
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
-- [標準日期與時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
-- [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))
+- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
+- [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 52e1fc20fbe1d8709c21cacde926cf8bebb49425
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449197"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441093"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum 方法
 取得總和檢查碼。  
@@ -36,7 +36,7 @@ HRESULT GetCheckSum(
   
 ## <a name="parameters"></a>參數  
  `cData`  
- 在`data` 參數所提供的緩衝區長度  
+ 在參數所提供的緩衝區長度 `data`  
   
  `pcData`  
  脫銷總和檢查碼的大小和長度（以位元組為單位）。  
@@ -49,4 +49,4 @@ HRESULT GetCheckSum(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument 介面](isymunmanageddocument-interface.md)

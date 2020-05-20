@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 5961cce4601a89b34708b7090207edfed63b5b08
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 1e2456da9fd1b9bd26d0317c0d04c6d1b61cf16d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242981"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83440911"
 ---
 # <a name="custom-numeric-format-strings"></a>自訂數值格式字串
 
@@ -30,21 +30,21 @@ ms.locfileid: "81242981"
 所有數字類型的 `ToString` 方法的一些多載可支援自訂數值格式字串。 例如，您可以提供數值格式字串給 <xref:System.Int32.ToString%28System.String%29> 類型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 和 <xref:System.Int32> 方法。 .NET 的[複合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支援自訂數值格式字串，此功能會由 <xref:System.Console> 與 <xref:System.IO.StreamWriter> 類別的一些 `Write` 和 `WriteLine` 方法，以及 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法所使用。 [字串內插補點](../../csharp/language-reference/tokens/interpolated.md)功能也支援自訂數值格式字串。
 
 > [!TIP]
-> 您可以下載**格式化公用程式**，這個 .NET Core Windows Forms 應用程式可讓您將格式字串套用至數值或日期和時間值，並顯示結果字串。 提供 [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) 的原始程式碼。
+> 您可以下載**格式化公用程式**，這個 .NET Core Windows Forms 應用程式可讓您將格式字串套用至數值或日期和時間值，並顯示結果字串。 提供 [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) 的原始程式碼。
 
 <a name="table"></a> 下表說明自訂數值格式規範，並顯示每個格式範例所產生的範例輸出。 如需使用自訂數值格式字串的詳細資訊，請參閱 [注意](#NotesCustomFormatting) 一節，如需其用法的完整解說，請參閱 [範例](#example) 一節。
 
-|格式規範|名稱|描述|範例|
+|格式規範|Name|說明|範例|
 |----------------------|----------|-----------------|--------------|
 |"0"|零值預留位置|以對應的數字 (如果有的話) 取代零，否則結果字串中會出現零。<br /><br /> 詳細資訊： ["0" 自訂規範](#Specifier0)。|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
 |"#"|數字預留位置|將 "#" 符號取代為對應的數字 (如果有的話)，否則結果字串中不會出現任何數字。<br /><br /> 請注意，如果輸入字串中對應的數字是不重要的 0，結果字串中就不會顯示任何數字。 例如，0003 ("####") -> 3。<br /><br /> 詳細資訊： ["#" 自訂規範](#SpecifierD)。|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
-|"."|小數點|決定結果字串中小數點的位置。<br /><br /> 更多資訊[:""。自訂規格器](#SpecifierPt)。|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
-|","|群組分隔符號和數值範圍|同時做為群組分隔符號和數值縮放規範。 如果做為群組分隔符號，則會在每個群組之間插入當地語系化群組分隔符號字元。 做為數值縮放規範時，每指定一個逗號就會將數字除以 1000。<br /><br /> 更多資訊:"[自訂規格器](#SpecifierTh)。|群組分隔符號規範：<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> 縮放規範：<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
-|"%"|百分比預留位置|將數字乘以 100，並在結果字串中插入當地語系化的百分比符號。<br /><br /> 更多資訊[:"%"自訂規格器](#SpecifierPct)。|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|
-|"‰"|千分之一符號預留位置|將數字乘以 1000，並在結果字串中插入當地語系化的千分比符號。<br /><br /> 更多資訊[:"*"自訂規格器](#SpecifierPerMille)。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
+|"."|小數點|決定結果字串中小數點的位置。<br /><br /> 詳細資訊： ["."自訂規範](#SpecifierPt)。|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
+|","|群組分隔符號和數值範圍|同時做為群組分隔符號和數值縮放規範。 如果做為群組分隔符號，則會在每個群組之間插入當地語系化群組分隔符號字元。 做為數值縮放規範時，每指定一個逗號就會將數字除以 1000。<br /><br /> 詳細資訊： ["，" 自訂規範](#SpecifierTh)。|群組分隔符號規範：<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> 縮放規範：<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
+|"%"|百分比預留位置|將數字乘以 100，並在結果字串中插入當地語系化的百分比符號。<br /><br /> 詳細資訊： ["%" 自訂規範](#SpecifierPct)。|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|
+|"‰"|千分之一符號預留位置|將數字乘以 1000，並在結果字串中插入當地語系化的千分比符號。<br /><br /> 詳細資訊： ["‰" 自訂規範](#SpecifierPerMille)。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|指數標記法|如果後面至少接著一個 0 (零)，則使用指數標記法來格式化結果。 大小寫 "E" 或 "e" 表示結果字串中指數符號的大小寫。 接在 "E" 或 "e" 字元後面的零個數決定指數中的最少位數。 加號 (+) 表示指數前面一律加上正負號字元。 減號 (-) 表示只在負指數前面才加上正負號字元。<br /><br /> 詳細資訊： ["E" 和 "e" 自訂規範](#SpecifierExponent)。|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
 |"\\"|逸出字元|將下一個字元解譯為常值，而不是自訂格式規範。<br /><br /> 詳細資訊：["\\" 逸出字元](#SpecifierEscape)。|987654 ("\\###00\\#") -> #987654#|
-|'*字串*'<br /><br /> 字*串*"|常值字串分隔符號|表示應該將所括住的字元原封不動地複製到結果字串。<br/><br/>詳細資訊︰[字元常值](#character-literals)。|68 ("# 'degrees'") -> 68 degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|
+|'*字串*'<br /><br /> "*string*"|常值字串分隔符號|表示應該將所括住的字元原封不動地複製到結果字串。<br/><br/>詳細資訊︰[字元常值](#character-literals)。|68 ("# 'degrees'") -> 68 degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|
 |;|區段分隔符號|以個別格式字串來定義正數、負數和零值的區段。<br /><br /> 詳細資訊： [";" 區段分隔符號](#SectionSeparator)。|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
 |其他|所有其他字元|字元會原封不動地複製到結果字串。<br/><br/>詳細資訊︰[字元常值](#character-literals)。|68 ("# °") -> 68 °|
 
@@ -205,7 +205,7 @@ ms.locfileid: "81242981"
 
 冒號 (;) 是條件式格式規範，這個規範會根據數字的值是正數、負數還是零，將不同的格式套用至數字。 若要產生這個行為，自訂格式字串可以包含多達三個以分號分隔的區段， 下表將說明這些區段。
 
-|區段數|描述|
+|區段數|說明|
 |------------------------|-----------------|
 |一個區段|此格式字串適用於所有的值。|
 |兩個區段|第一個區段適用於正數值及零值，第二個區段適用於負數值。<br /><br /> 如果要格式化的數字為負數，但依照第二個區段的格式四捨五入之後成為零，則產生的零會依照第一個區段來格式化。|
@@ -289,7 +289,7 @@ ms.locfileid: "81242981"
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
-- [標準格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [作法：以前置字元零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
-- [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))
+- [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
+- [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))

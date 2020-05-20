@@ -1,5 +1,6 @@
 ---
 title: 二進位序列化
+description: 本文說明二進位序列化和 .NET Core 支援的類型。 請留意二進位序列化的危險，以及它的替代專案。
 ms.date: 01/02/2018
 helpviewer_keywords:
 - binary serialization
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 9df9b73a1a1347b952d76b76c9058578f5e9f401
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ed76437b743da842d6ba07d29fe7985f824abf0
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400635"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421276"
 ---
 # <a name="binary-serialization"></a>二進位序列化
 
@@ -28,7 +29,7 @@ ms.locfileid: "79400635"
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-二進位序列化允許修改物件內的私用成員，因此變更它的狀態。 因此，建議您在公用 API 介面上<xref:System.Text.Json?displayProperty=fullName>操作的其他序列化架構（例如）。
+二進位序列化允許修改物件內的私用成員，因此變更它的狀態。 因此， <xref:System.Text.Json?displayProperty=fullName> 建議您在公用 API 介面上操作的其他序列化架構（例如）。
 
 ## <a name="net-core"></a>.NET Core
 
@@ -112,7 +113,7 @@ ms.locfileid: "79400635"
 > | <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.DataException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.DataSet?displayProperty=nameWithType> | |
-> | <xref:System.Data.DataTable?displayProperty=nameWithType> | 如果您將`RemotingFormat`設定`SerializationFormat.Binary`為，它只能與 .net Core 2.1 和更新版本交換。 |
+> | <xref:System.Data.DataTable?displayProperty=nameWithType> | 如果您將設定 `RemotingFormat` 為 `SerializationFormat.Binary` ，它只能與 .net Core 2.1 和更新版本交換。 |
 > | <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.EvaluateException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |

@@ -1,13 +1,14 @@
 ---
 title: Windows Workflow 概觀
+description: 本文說明 Workflow Foundation 工作流程，這是描述真實世界程式的模型。
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: ada5ec75d130c9c518c5129db6c12b61c3acbf45
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ec1a00b37abe2cb842735fb98e1c113a97943758
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802527"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421471"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 概觀
 工作流程是一組稱為「*活動*」的 elemental 單位，這些單元會儲存為模型，以描述真實世界的處理常式。 工作流程能夠描述執行的順序，以及短期工作和長期工作之間的相依關係。 這個工作會從頭到尾經過整個模型，而活動可能會由人員或系統功能執行。  
@@ -23,9 +24,9 @@ ms.locfileid: "74802527"
   
  這裡每個類別都會包含核心活動執行階段，此執行階段是以負責活動執行的 <xref:System.Activities.ActivityInstance> 來表示。 在並行執行的應用程式網域內可能有幾個 <xref:System.Activities.ActivityInstance> 物件。  
   
- 前三個主機互動物件是從稱為工作流程程式的活動樹狀結構中所建立。 使用這些類型或包裝 <xref:System.Activities.ActivityInstance>的自訂主機，可以在任何 Windows 進程內執行工作流程，包括主控台應用程式、表單架構應用程式、Windows 服務、ASP.NET 網站和 Windows Communication Foundation （WCF）服務。  
+ 前三個主機互動物件是從稱為工作流程程式的活動樹狀結構中所建立。 使用這些類型或包裝的自訂主機 <xref:System.Activities.ActivityInstance> ，可以在任何 Windows 進程內執行工作流程，包括主控台應用程式、表單架構應用程式、Windows 服務、ASP.NET 網站和 Windows Communication Foundation （WCF）服務。  
   
- ![主機進程中的工作流程元件](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
+ ![主機處理序中的工作流程元件](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 主機處理序中的工作流程元件  
   
 ## <a name="interaction-between-workflow-components"></a>工作流程元件之間的互動  
@@ -41,6 +42,6 @@ ms.locfileid: "74802527"
   
 - 衍生自 <xref:System.Activities.CodeActivity>抽象類別的自訂活動。 <xref:System.Activities.CodeActivity> 可存取使用 <xref:System.Activities.CodeActivityContext> 而可用來做為 <xref:System.Activities.CodeActivity.Execute%2A> 方法之參數的執行階段功能 (例如追蹤與屬性)。 如需這些執行時間功能的詳細資訊，請參閱[工作流程追蹤和追蹤](workflow-tracking-and-tracing.md)和[工作流程執行屬性](workflow-execution-properties.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [BizTalk Server 2006 或 WF？為您的專案選擇正確的工作流程工具](https://docs.microsoft.com/previous-versions/dotnet/articles/cc303238(v=msdn.10))

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-ms.openlocfilehash: f54bb99df60d7b3fb7bb98de75fbae210597e45c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: acbc37d0f49af21c60ff6989932c5d341673512b
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790617"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421172"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum 介面
 做為列舉值的抽象基底介面，這些列舉值是用來發行進程和應用程式域的相關資訊。  
@@ -34,22 +34,22 @@ ms.locfileid: "76790617"
 |[Skip 方法](icorpublishenum-skip-method.md)|在列舉中，將資料指標向後移動指定的專案數。|  
   
 ## <a name="remarks"></a>備註  
- 下列枚舉器衍生自 `ICorPublishEnum`：  
+ 下列枚舉器衍生自 `ICorPublishEnum` ：  
   
 - [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)  
   
 - [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorPub .idl，CorPub。h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CorpubPublish Coclass](corpubpublish-coclass.md)
 - [偵錯介面](debugging-interfaces.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 14e0eb812c84a0042150345d039451adf178caf1
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b302100eb6cbfa83896cd358762c496ea01f7509
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396916"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420977"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>ISOSDacInterface：： GetModuleData 方法
 
@@ -51,12 +51,12 @@ HRESULT GetModuleData(
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
 **標頭：** 無  
 連結**庫：** 無  
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯](index.md)
 - [ISOSDacInterface 介面](isosdacinterface-interface.md)
