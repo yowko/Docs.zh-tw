@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 3002f051-7aaa-4669-9314-cbc65b3a1772
 topic_type:
 - apiref
-ms.openlocfilehash: 5389082f60a97d4da97bfce1c121a9e983b9ae79
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 631da8936873b57040f1c60e8db6867ea2eed2c8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126846"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617044"
 ---
-# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="2282a-102">ICatalogServices::Autodone 方法</span><span class="sxs-lookup"><span data-stu-id="2282a-102">ICatalogServices::Autodone Method</span></span>
-<span data-ttu-id="2282a-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="2282a-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesautodone-method"></a><span data-ttu-id="1fb41-102">ICatalogServices::Autodone 方法</span><span class="sxs-lookup"><span data-stu-id="1fb41-102">ICatalogServices::Autodone Method</span></span>
+<span data-ttu-id="1fb41-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="1fb41-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2282a-104">語法</span><span class="sxs-lookup"><span data-stu-id="2282a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1fb41-104">語法</span><span class="sxs-lookup"><span data-stu-id="1fb41-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2282a-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="2282a-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1fb41-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1fb41-105">See also</span></span>
 
-- [<span data-ttu-id="2282a-106">裝載介面</span><span class="sxs-lookup"><span data-stu-id="2282a-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="1fb41-106">裝載介面</span><span class="sxs-lookup"><span data-stu-id="1fb41-106">Hosting Interfaces</span></span>](hosting-interfaces.md)
