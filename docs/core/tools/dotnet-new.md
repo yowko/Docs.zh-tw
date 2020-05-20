@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。
 ms.date: 04/10/2020
-ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506853"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442237"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -21,7 +21,7 @@ ms.locfileid: "82506853"
 
 ```dotnetcli
 dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
-    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [-lang|--language {"C#"|"F#"|VB}] [-n|--name <OUTPUT_NAME>]
     [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
     [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 
@@ -30,9 +30,9 @@ dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
 dotnet new -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
-`dotnet new`命令會根據範本建立 .net Core 專案或其他成品。
+`dotnet new`命令會根據範本建立 .Net Core 專案或其他成品。
 
 命令會呼叫[範本引擎](https://github.com/dotnet/templating)，以根據指定的範本和選項在磁碟上建立成品。
 
@@ -46,16 +46,16 @@ dotnet new -h|--help
 
   要在叫用命令時具現化的範本。 每個範本可能會有您可以傳遞的特定選項。 如需詳細資訊，請參閱[範本選項](#template-options)。
 
-  您可以執行`dotnet new --list`或`dotnet new -l`來查看所有已安裝的範本清單。 如果`TEMPLATE`值不完全符合所傳回資料表之 [樣板 **] 或 [** **簡短名稱**] 資料行中的文字，則會在這兩個數據行上執行子字串相符。
+  您可以執行 `dotnet new --list` 或 `dotnet new -l` 來查看所有已安裝的範本清單。 如果 `TEMPLATE` 值不完全符合所傳回資料表之 [樣板**Templates** ] 或 [**簡短名稱**] 資料行中的文字，則會在這兩個數據行上執行子字串相符。
 
-  從 .NET Core 3.0 SDK 開始，當您在下列情況下叫用`dotnet new`命令時，CLI 會在 NuGet.org 中搜尋範本：
+  從 .NET Core 3.0 SDK 開始，當您 `dotnet new` 在下列情況下叫用命令時，CLI 會在 NuGet.org 中搜尋範本：
 
-  - 如果 CLI 在叫用時找不到相符`dotnet new`的範本，甚至不是部分。
+  - 如果 CLI 在叫用時找不到相符的範本 `dotnet new` ，甚至不是部分。
   - 如果有較新版本的範本可用，則為。 在此情況下，會建立專案或成品，但 CLI 會警告您有關範本的更新版本。
 
   下表顯示隨 .NET Core SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。 按一下 [簡短名稱] 連結，以查看特定的範本選項。
 
-| 範本                                    | 簡短名稱                      | Language     | Tags                                  | 引導 |
+| 範本                                    | 簡短名稱                      | Language     | 標籤                                  | 引導 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | 主控台應用程式                          | [控制](#console)             | [C#], F#, VB | 通用/主控台                        | 1.0        |
 | 類別庫                                | [classlib](#classlib)           | [C#], F#, VB | 通用/程式庫                        | 1.0        |
@@ -104,11 +104,11 @@ dotnet new -h|--help
 
 - **`-h|--help`**
 
-  印出命令的說明。 您可以針對`dotnet new`命令本身或任何範本叫用它。 例如： `dotnet new mvc --help` 。
+  印出命令的說明。 您可以針對 `dotnet new` 命令本身或任何範本叫用它。 例如： `dotnet new mvc --help` 。
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
-  從或`PATH` `NUGET_ID`提供的安裝範本套件。 若您想要安裝預先發行版本的範本套件，就必須以 `<package-name>::<package-version>` 的格式指定版本。 根據預設， `dotnet new`會\*傳遞代表最新穩定封裝版本的版本。 請參閱[範例](#examples)一節中的範例。
+  從或提供的安裝範本 `PATH` 套件 `NUGET_ID` 。 若您想要安裝預先發行版本的範本套件，就必須以 `<package-name>::<package-version>` 的格式指定版本。 根據預設，會 `dotnet new` 傳遞 \* 代表最新穩定封裝版本的版本。 請參閱[範例](#examples)一節中的範例。
   
   當您執行此命令時，如果已安裝某個版本的範本，此範本將會更新為指定的版本，或如果未指定任何版本，則為最新的穩定版本。
 
@@ -139,16 +139,16 @@ dotnet new -h|--help
 
 - **`--type <TYPE>`**
 
-  根據可用的類型篩選範本。 預先定義的`project`值`item`為、 `other`和。
+  根據可用的類型篩選範本。 預先定義的值為 `project` 、 `item` 和 `other` 。
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
-  在或`PATH` `NUGET_ID`提供的上卸載範本套件。 未指定`<PATH|NUGET_ID>`值時，會顯示所有目前已安裝的範本套件及其關聯的範本。 指定`NUGET_ID`時，請勿包含版本號碼。
+  在或提供的上卸載範本套件 `PATH` `NUGET_ID` 。 `<PATH|NUGET_ID>`未指定值時，會顯示所有目前已安裝的範本套件及其關聯的範本。 指定時 `NUGET_ID` ，請勿包含版本號碼。
 
   如果您未指定此選項的參數，此命令會列出已安裝的範本和其相關詳細資料。
 
   > [!NOTE]
-  > 若要使用 `PATH` 將範本解除安裝，您需要使路徑成為完整路徑。 例如， *C：/Users/\<USER>/documents/templates/garciasoftware.consoletemplate.csharp*可正常執行，但包含資料夾中的 *./garciasoftware.consoletemplate.csharp*則不會。
+  > 若要使用 `PATH` 將範本解除安裝，您需要使路徑成為完整路徑。 例如， *C：/Users/ \< USER>/documents/templates/garciasoftware.consoletemplate.csharp*可正常執行，但包含資料夾中的 *./garciasoftware.consoletemplate.csharp*則不會。
   > 請勿在您的範本路徑上包含最後終止的目錄斜線。
 
 - **`--update-apply`**
@@ -178,7 +178,7 @@ dotnet new -h|--help
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  在建立`LangVersion`的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。 不支援 F#。 自 .NET Core 2.2 SDK 起提供。
+  `LangVersion`在建立的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。 不支援 F#。 自 .NET Core 2.2 SDK 起提供。
 
   如需預設 c # 版本的清單，請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
 
@@ -196,7 +196,7 @@ dotnet new -h|--help
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  在建立`LangVersion`的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。 不支援 F#。 自 .NET Core 2.2 SDK 起提供。
+  `LangVersion`在建立的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。 不支援 F#。 自 .NET Core 2.2 SDK 起提供。
 
   如需預設 c # 版本的清單，請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
 
@@ -214,7 +214,7 @@ dotnet new -h|--help
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  在建立`LangVersion`的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
+  `LangVersion`在建立的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
 
   如需預設 c # 版本的清單，請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
 
@@ -228,7 +228,7 @@ dotnet new -h|--help
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  在建立`LangVersion`的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
+  `LangVersion`在建立的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
 
   如需預設 c # 版本的清單，請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
 
@@ -381,7 +381,7 @@ dotnet new -h|--help
 
 - **`--no-https`**
 
-  關閉 HTTPS。 只有當、 `Individual`、 `IndividualB2C` `SingleOrg`或`MultiOrg`不是用於時，才會套用`--auth`此選項。
+  關閉 HTTPS。 只有當 `Individual` 、 `IndividualB2C` 、 `SingleOrg` 或不是用於時 `MultiOrg` ， `--auth` 才會套用此選項。
 
 - **`-uld|--use-local-db`**
 
@@ -532,7 +532,7 @@ dotnet new -h|--help
 
 - **`--no-https`**
 
-  關閉 HTTPS。 只有在驗證為時，才`None`會套用此選項。
+  關閉 HTTPS。 只有在驗證為時，才會套用此選項 `None` 。
 
 - **`-uld|--use-local-db`**
 
@@ -629,7 +629,7 @@ dotnet new -h|--help
 
 - **`-r|--org-read-access`**
 
-  允許此應用程式讀取目錄的許可權。 僅適用于`SingleOrg`驗證。
+  允許此應用程式讀取目錄的許可權。 僅適用于 `SingleOrg` 驗證。
 
 - **`--exclude-launch-settings`**
 
@@ -637,11 +637,11 @@ dotnet new -h|--help
 
 - **`--no-https`**
 
-  關閉 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 並未新增至 `Startup.Configure`。 只有當或`SingleOrg`未用於`IndividualB2C`驗證時，此選項才適用。
+  關閉 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 並未新增至 `Startup.Configure`。 只有當 `IndividualB2C` 或未用於驗證時，此選項才適用 `SingleOrg` 。
 
 - **`-uld|--use-local-db`**
 
-  指定應該使用 LocalDB，而不是 SQLite。 僅適用于`IndividualB2C`驗證。
+  指定應該使用 LocalDB，而不是 SQLite。 僅適用于 `IndividualB2C` 驗證。
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -680,7 +680,7 @@ dotnet new -h|--help
 - 在目前的目錄中建立 F# 主控台應用程式專案：
 
   ```dotnetcli
-  dotnet new console -lang F#
+  dotnet new console -lang "F#"
   ```
 
 - 在指定的目錄中建立 .NET Standard 類別庫專案：
@@ -737,7 +737,7 @@ dotnet new -h|--help
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [dotnet new 的自訂範本](custom-templates.md)
 - [建立適用於 dotnet new 的自訂範本](../tutorials/cli-templates-create-item-template.md)

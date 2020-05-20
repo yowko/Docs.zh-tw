@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-ms.openlocfilehash: af50c82974b779b901135795f37e3bd4c8b8c156
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c7afe074afb9b38d6fefa1192799120dbb50b403
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440978"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442055"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 介面
 宣告接收器通知的方法。  
@@ -28,16 +28,16 @@ ms.locfileid: "74440978"
   
 |方法|描述|  
 |------------|-----------------|  
-|[OnSyncCallEnter 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|在輸入呼叫時叫用。|  
-|[OnSyncCallExit 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|會在結束呼叫時叫用。|  
-|[OnSyncCallOut 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|當呼叫完成時，就會叫用。|  
-|[OnSyncCallReturn 方法](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|當呼叫傳回時，就會叫用。|  
+|[OnSyncCallEnter 方法](inotifysink2-onsynccallenter-method.md)|在輸入呼叫時叫用。|  
+|[OnSyncCallExit 方法](inotifysink2-onsynccallexit-method.md)|會在結束呼叫時叫用。|  
+|[OnSyncCallOut 方法](inotifysink2-onsynccallout-method.md)|當呼叫完成時，就會叫用。|  
+|[OnSyncCallReturn 方法](inotifysink2-onsynccallreturn-method.md)|當呼叫傳回時，就會叫用。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** ProtocolNotify2 .idl  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [INotifyConnection2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [INotifySource2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [INotifyConnection2 介面](inotifyconnection2-interface.md)
+- [INotifySource2 介面](inotifysource2-interface.md)
+- [診斷符號存放區介面](diagnostics-symbol-store-interfaces.md)

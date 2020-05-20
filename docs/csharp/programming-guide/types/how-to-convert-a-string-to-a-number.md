@@ -1,5 +1,5 @@
 ---
-title: 如何將字串轉換為數字 - C# 程式設計指南
+title: '如何將字串轉換成數位-c # 程式設計手冊'
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 54a4562a5cc493fc287bdf2f6bcf9723557f2a05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157035"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442198"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何將字串轉換為數字（C# 程式設計指南）
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何將字串轉換成數位（c # 程式設計手冊）
 
-可以通過調用 在各種數數值型別（、、、`int``long``double`等`Parse`）`TryParse`上找到 的 或 方法，或者通過在<xref:System.Convert?displayProperty=nameWithType>類中使用方法將[字串](../../language-reference/builtin-types/reference-types.md)轉換為數字。  
+您可以藉由[string](../../language-reference/builtin-types/reference-types.md)呼叫在 `Parse` `TryParse` 各種數數值型別（、、等）上找到的或方法 `int` `long` `double` ，或使用類別中的方法， <xref:System.Convert?displayProperty=nameWithType> 將字串轉換成數位。  
   
- `TryParse`如果您有字串，則調用方法（例如[`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)）或`Parse`方法（例如， [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)） 稍微更有效和簡單。  使用 <xref:System.Convert> 方法比實作 <xref:System.IConvertible> 的一般物件更有用。  
+ 如果您有一個字串，呼叫 `TryParse` 方法（例如， [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A) ）或 `Parse` 方法（例如）會稍微提高效率和直接 [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A) 。  使用 <xref:System.Convert> 方法比實作 <xref:System.IConvertible> 的一般物件更有用。  
   
- 您可以在預期字串包含的數值類型上使用 `Parse` 或 `TryParse` 方法，例如 <xref:System.Int32?displayProperty=nameWithType> 類型。  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 方法會在內部使用 <xref:System.Int32.Parse%2A>。  該方法`Parse`返回轉換後的數位;`TryParse`該方法返回指示<xref:System.Boolean>轉換是否成功的值，並在[`out`參數](../../language-reference/keywords/out.md)中返回轉換的數位。 如果字串不是有效格式，則`Parse`引發異常，而`TryParse`返回`false`。 呼叫 `Parse` 方法時，您必須一律使用例外狀況處理在剖析作業失敗時捕捉 <xref:System.FormatException>。  
+ 您可以在預期字串包含的數值類型上使用 `Parse` 或 `TryParse` 方法，例如 <xref:System.Int32?displayProperty=nameWithType> 類型。  <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> 方法會在內部使用 <xref:System.Int32.Parse%2A>。  `Parse`方法會傳回已轉換的數位; 此 `TryParse` 方法會傳回 <xref:System.Boolean> 值，指出轉換是否成功，並在[ `out` 參數](../../language-reference/keywords/out.md)中傳回已轉換的數位。 如果字串的格式無效，則會擲回 `Parse` 例外狀況，而會 `TryParse` 傳回 `false` 。 呼叫 `Parse` 方法時，您必須一律使用例外狀況處理在剖析作業失敗時捕捉 <xref:System.FormatException>。  
   
 ## <a name="calling-the-parse-and-tryparse-methods"></a>呼叫 Parse 與 TryParse 方法
 
@@ -50,7 +50,7 @@ ms.locfileid: "79157035"
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- 下面的示例調用<xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType>方法將輸入字串轉換為[int](../../language-reference/builtin-types/integral-numeric-types.md)。該示例捕獲此方法可以引發的兩個最常見的異常，<xref:System.FormatException>和<xref:System.OverflowException>。 若產生的數字可在不超過 <xref:System.Int32.MaxValue?displayProperty=nameWithType> 的情況下遞增，範例會增加 1 到結果並顯示輸出。  
+ 下列範例會呼叫 <xref:System.Convert.ToInt32%28System.String%29?displayProperty=nameWithType> 方法，將輸入字串轉換為[int](../../language-reference/builtin-types/integral-numeric-types.md)。此範例會攔截可由這個方法擲回的兩個最常見的例外狀況： <xref:System.FormatException> 和 <xref:System.OverflowException> 。 若產生的數字可在不超過 <xref:System.Int32.MaxValue?displayProperty=nameWithType> 的情況下遞增，範例會增加 1 到結果並顯示輸出。  
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
@@ -58,4 +58,4 @@ ms.locfileid: "79157035"
 
 - [型別](./index.md)
 - [如何判斷字串是否表示數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
-- [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
+- [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))

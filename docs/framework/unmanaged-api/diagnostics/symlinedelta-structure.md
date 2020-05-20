@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9634e995-d46d-4397-ab66-cc5781d11e4e
 topic_type:
 - apiref
-ms.openlocfilehash: a1e83e4b8cb6603029f3b42b1a3b9ba4810c9039
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fb3b89d25b4c2e23c3980b167db4279246c4d27b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438007"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609296"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA 結構
 提供相關資訊給符號處理常式，而這些方法是因編輯結果而移動。  
@@ -34,9 +34,9 @@ typedef struct _SYMLINEDELTA
     } SYMLINEDELTA;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`mdMethod`|方法的元資料標記。|  
 |`delta`|方法已移動的行數。|  
@@ -44,6 +44,6 @@ typedef struct _SYMLINEDELTA
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [診斷符號存放區結構](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+- [診斷符號存放區結構](diagnostics-symbol-store-structures.md)

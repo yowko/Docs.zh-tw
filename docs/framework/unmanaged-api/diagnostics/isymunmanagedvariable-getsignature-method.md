@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a3ec0af33f3f1201ce2f6b62291dfc67696fecab
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446041"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610440"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>ISymUnmanagedVariable::GetSignature 方法
 取得此變數的簽章。  
@@ -37,10 +37,10 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>參數  
  `cSig`  
- 在`sig` 參數所指向的緩衝區長度。  
+ 在參數所指向之緩衝區的長度 `sig` 。  
   
  `pcSig`  
- 脫銷`ULONG32` 的指標，接收包含簽章所需的緩衝區大小（以字元為單位）。  
+ 脫銷的指標， `ULONG32` 接收包含簽章所需的緩衝區大小（以字元為單位）。  
   
  `sig`  
  脫銷儲存簽章的緩衝區。  
@@ -53,4 +53,4 @@ HRESULT GetSignature(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedVariable 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [ISymUnmanagedVariable 介面](isymunmanagedvariable-interface.md)

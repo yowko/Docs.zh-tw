@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e88a844a7f79f14c717a5966b345588b3b3b9f81
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178322"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609413"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 方法
-打開方法並在圖像中提供其實際截面偏移。  
+開啟方法，並在影像中提供其實數區段位移。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +36,21 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>參數  
  `method`  
- [在]要打開的方法的中繼資料權杖。  
+ 在要開啟之方法的元資料標記。  
   
  `isect`  
- [在]圖像中的截面偏移。  
+ 在影像中的區段位移。  
   
  `offset`  
- [在]圖像中的偏移量。  
+ 在影像中的位移。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，S_OK;否則，E_FAIL或其他錯誤代碼。  
+ 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="requirements"></a>需求  
- **標題：** 科西姆.伊德爾，科西姆.h  
+ **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter3 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [OpenMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [ISymUnmanagedWriter3 介面](isymunmanagedwriter3-interface.md)
+- [OpenMethod 方法](isymunmanagedwriter-openmethod-method.md)

@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: 2ed6a387-ba45-483e-9a1e-b0c69f67998b
 topic_type:
 - apiref
-ms.openlocfilehash: 3374097c8d343fed6badf046742ca556d2a92f3e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 886ba693183a6b99eb03635e95a9661d105de40e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446224"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610856"
 ---
 # <a name="isymunmanagedscope2-interface"></a>ISymUnmanagedScope2 介面
-表示方法內的詞法範圍。 這個介面會使用可取得範圍內所定義常數相關資訊的方法來擴充[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)介面。  
+表示方法內的詞法範圍。 這個介面會使用可取得範圍內所定義常數相關資訊的方法來擴充[ISymUnmanagedScope](isymunmanagedscope-interface.md)介面。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetConstantCount 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstantcount-method.md)|取得在此範圍內定義的常數計數。|  
-|[GetConstants 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-getconstants-method.md)|取得在此範圍內定義的本機常數。|  
+|[GetConstantCount 方法](isymunmanagedscope2-getconstantcount-method.md)|取得在此範圍內定義的常數計數。|  
+|[GetConstants 方法](isymunmanagedscope2-getconstants-method.md)|取得在此範圍內定義的本機常數。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedScope 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [診斷符號存放區介面](diagnostics-symbol-store-interfaces.md)
+- [ISymUnmanagedScope 介面](isymunmanagedscope-interface.md)

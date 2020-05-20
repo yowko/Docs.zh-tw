@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6bbc75-94d1-4354-9722-0d455b4428fb
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1ee82f24e1908af1998e424006415af3134456
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 071ad6c24804eecb0f2260d54c854f22ff997bc1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446280"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83611012"
 ---
 # <a name="isymunmanagedscopegetstartoffset-method"></a>ISymUnmanagedScope::GetStartOffset 方法
 取得此範圍的開始位移。  
@@ -34,7 +34,7 @@ HRESULT GetStartOffset(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- 脫銷包含起始位移之 `ULONG32` 的指標。  
+ 脫銷的指標 `ULONG32` ，其中包含起始位移。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -44,5 +44,5 @@ HRESULT GetStartOffset(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedScope 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
-- [GetEndOffset 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getendoffset-method.md)
+- [ISymUnmanagedScope 介面](isymunmanagedscope-interface.md)
+- [GetEndOffset 方法](isymunmanagedscope-getendoffset-method.md)

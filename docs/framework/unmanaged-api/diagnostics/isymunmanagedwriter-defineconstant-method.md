@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e986986-2223-4d5f-b040-85d716146924
 topic_type:
 - apiref
-ms.openlocfilehash: c8d0145b9dffe1c0ff6ed3281c90f3bcec082ab8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 200e68abb3f176c267045bf2a5e7e35d18400519
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428069"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610089"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant 方法
 定義常數值的名稱。  
@@ -37,7 +37,7 @@ HRESULT DefineConstant(
   
 ## <a name="parameters"></a>參數  
  `name`  
- 在定義常數名稱之 `WCHAR` 的指標。  
+ 在`WCHAR`定義常數名稱之的指標。  
   
  `value`  
  在常數的值。  
@@ -54,7 +54,7 @@ HRESULT DefineConstant(
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineConstant2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineconstant2-method.md)
+- [ISymUnmanagedWriter 介面](isymunmanagedwriter-interface.md)
+- [DefineConstant2 方法](isymunmanagedwriter2-defineconstant2-method.md)

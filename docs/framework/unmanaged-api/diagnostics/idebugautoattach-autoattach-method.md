@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-ms.openlocfilehash: 766aeb31436101babeab31b615a1c633578bfcc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: aae03b0dc76639c50f4615d41eef73990226b5f7
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445518"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442120"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 方法
 執行伺服器叫用的偵錯工具自動附加。  
@@ -40,13 +40,13 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>參數  
  `guidPort`  
- 在一律設定為 `GUID_NULL`。  
+ 在一律設定為 `GUID_NULL` 。  
   
  `dwPid`  
- 在處理序識別碼，通常會使用 `GetCurrentProcessId` 函式來抓取。  
+ 在處理序識別碼，通常會使用函式來抓取 `GetCurrentProcessId` 。  
   
  `dwProgramType`  
- 在程式類型： `AUTOATTACH_PROGRAM_WIN32`、`AUTOATTACH_PROGRAM_COMPLUS`或 `AUTOATTACH_PROGRAM_UNKNOWN`。  
+ 在程式類型： `AUTOATTACH_PROGRAM_WIN32` 、 `AUTOATTACH_PROGRAM_COMPLUS` 或 `AUTOATTACH_PROGRAM_UNKNOWN` 。  
   
  `dwProgramId`  
  在程式識別碼。  
@@ -62,4 +62,4 @@ HRESULT AutoAttach
   
 ## <a name="see-also"></a>另請參閱
 
-- [IDebugAutoAttach 介面](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+- [IDebugAutoAttach 介面](idebugautoattach-interface.md)

@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: 30817373-0a21-49c1-a0c4-8e8daeecb8db
 topic_type:
 - apiref
-ms.openlocfilehash: d7371361b074454e8aa359c49b964193c12f3034
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 308c501e17446719067d2dc0580d698c1770bf53
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446143"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83610661"
 ---
 # <a name="isymunmanagedsymbolsearchinfo-interface"></a>ISymUnmanagedSymbolSearchInfo 介面
-提供取得搜尋路徑相關資訊的方法。 藉由在[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)介面的物件上呼叫 `QueryInterface` 來取得此介面。  
+提供取得搜尋路徑相關資訊的方法。 `QueryInterface`在執行[ISymUnmanagedReader](isymunmanagedreader-interface.md)介面的物件上呼叫，以取得此介面。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetHRESULT 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-gethresult-method.md)|取得 HRESULT。|  
-|[GetSearchPath 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpath-method.md)|取得搜尋路徑。|  
-|[GetSearchPathLength 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|取得搜尋路徑長度。|  
+|[GetHRESULT 方法](isymunmanagedsymbolsearchinfo-gethresult-method.md)|取得 HRESULT。|  
+|[GetSearchPath 方法](isymunmanagedsymbolsearchinfo-getsearchpath-method.md)|取得搜尋路徑。|  
+|[GetSearchPathLength 方法](isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|取得搜尋路徑長度。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [診斷符號存放區介面](diagnostics-symbol-store-interfaces.md)

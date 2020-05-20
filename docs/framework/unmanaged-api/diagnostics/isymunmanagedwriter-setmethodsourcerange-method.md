@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-ms.openlocfilehash: 85e65f6a3ec13c2acc31b8f87dbe4b4476ffc2a5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4ba3f31ae6d6b67d7beaa2f709bf6174b721136d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427873"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609517"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange 方法
-指定原始檔中方法的 true 開頭和結尾。 您可以使用這個方法來指定方法的範圍，而不受存在於方法內的序列點。  
+指定原始程式檔內方法的實際開頭和結尾。 您可以使用這個方法來指定方法的範圍，而不受存在於方法內的序列點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,6 +62,6 @@ HRESULT SetMethodSourceRange(
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 介面](isymunmanagedwriter-interface.md)
