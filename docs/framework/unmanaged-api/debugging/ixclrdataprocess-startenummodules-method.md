@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::StartEnumModules 方法
+title: IXCLRDataProcess：： StartEnumModules 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::StartEnumModules Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 79c4e0ed99a068d7d806d5c25580dc477aac6475
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d55b07ea3fada73237919bf677163a9096d5ad04
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752623"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420717"
 ---
-# <a name="ixclrdataprocessstartenummodules-method"></a>IXCLRDataProcess::StartEnumModules 方法
+# <a name="ixclrdataprocessstartenummodules-method"></a>IXCLRDataProcess：： StartEnumModules 方法
 
-提供列舉的處理程序的模組控制代碼。
+提供列舉進程模組的控制碼。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,18 +39,18 @@ HRESULT StartEnumModules(
 ## <a name="parameters"></a>參數
 
 `handle`\
-[out]列舉模組控制代碼。
+脫銷列舉模組的控制碼。
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分`IXCLRDataProcess`介面，並對應至第 24 虛擬方法表的位置。
+提供的方法是介面的一部分 `IXCLRDataProcess` ，而且會對應至虛擬方法資料表的24日位置。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
 **標頭：** 無  
-**LIBRARY:** 無  
-**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+連結**庫：** 無  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
 

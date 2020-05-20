@@ -1,13 +1,14 @@
 ---
 title: 基本 Windows Workflow 概念
+description: 本文說明在 .NET Framework 4.6.1 中，某些開發人員可能不熟悉的工作流程開發中的一些概念。
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07498241280191fb62a35a559a3391f7148c05b9
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650940"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419885"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>基本 Windows Workflow 概念
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的工作流程開發運用了一些開發人員可能未曾使用過的概念。 本主題描述其中的部分概念及其實作方式。  
@@ -52,7 +53,7 @@ ms.locfileid: "64650940"
  藉由使用適當的 <xref:System.Activities.ActivityContext> 衍生類別 (例如 <xref:System.Activities.NativeActivityContext> 或 <xref:System.Activities.CodeActivityContext>)，活動可以存取工作流程執行階段環境。 並且會利用這種方式解析引數與變數、排程子活動，以及用於許多其他用途。  
   
 ## <a name="services"></a>服務  
- 工作流程利用傳訊活動，提供自然的方式來實作及存取鬆散耦合服務。 傳訊活動以 WCF 為基礎，並會用來將資料傳入及傳出工作流程的主要機制。 您可以一起撰寫傳訊活動，針對您所需的任何傳訊交換型式建立模型。 如需詳細資訊，請參閱 <<c0> [ 訊息活動](../wcf/feature-details/messaging-activities.md)。 工作流程服務是使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別裝載的。 如需詳細資訊，請參閱 <<c0> [ 裝載工作流程服務概觀](../wcf/feature-details/hosting-workflow-services-overview.md)。 如需工作流程服務的詳細資訊，請參閱[工作流程服務](../wcf/feature-details/workflow-services.md)  
+ 工作流程利用傳訊活動，提供自然的方式來實作及存取鬆散耦合服務。 訊息活動建置於 WCF 上，而且是用來將資料傳入和傳出工作流程的主要機制。 您可以一起撰寫傳訊活動，針對您所需的任何傳訊交換型式建立模型。 如需詳細資訊，請參閱[訊息活動](../wcf/feature-details/messaging-activities.md)。 工作流程服務是使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別裝載的。 如需詳細資訊，請參閱[裝載工作流程服務總覽](../wcf/feature-details/hosting-workflow-services-overview.md)。 如需工作流程服務的詳細資訊，請參閱[工作流程服務](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>持續性工作流程、卸載工作流程，以及長期執行工作流程  
  Windows 工作流程透過提供下列功能，簡化長期執行反應式程式的製作：  

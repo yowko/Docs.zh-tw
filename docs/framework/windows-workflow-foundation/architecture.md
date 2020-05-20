@@ -1,13 +1,14 @@
 ---
 title: Windows 工作流程架構
+description: Windows Workflow Foundation 會將工作單位封裝為活動，其會在具有流量控制、例外狀況處理和其他功能的環境中執行。
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: e2effc0f53153057b8a9034e4dc80cb19bbe7685
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 22ebeb7d95342ad6843e0721da8b213ed4a4d9b6
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834869"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420132"
 ---
 # <a name="windows-workflow-architecture"></a>Windows 工作流程架構
 Windows Workflow Foundation （WF）會引發開發互動式長時間執行之應用程式的抽象層級。 工作的單元會封裝為活動。 活動會在環境中執行，該環境會為流程控制、例外狀況處理、錯誤傳播、狀態資料保存、從記憶體載入及卸載處理中的工作流程、追蹤，以及異動流程提供機能。  
@@ -43,10 +44,10 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
 ## <a name="activity-life-cycle"></a>活動開發週期  
  活動的執行個體會在 <xref:System.Activities.ActivityInstanceState.Executing> 狀態中啟動。 除非發生例外狀況，否則活動的執行個體會維持在這個狀態中，直到所有子活動皆執行完畢，而且其他所有暫止中的工作 (例如 <xref:System.Activities.Bookmark> 物件) 皆已完成，此時，該執行個體就會轉換成 <xref:System.Activities.ActivityInstanceState.Closed> 狀態。 活動執行個體的父系可以要求子系取消，如果子系可以取消，則會在 <xref:System.Activities.ActivityInstanceState.Canceled> 狀態下完成。 如果在執行期間擲回例外狀況，執行階段會將活動設為 <xref:System.Activities.ActivityInstanceState.Faulted> 狀態，並將例外狀況向上傳播至活動的父鏈結。 以下是活動的三個完成狀態：
   
-- **已**活動已完成其工作並結束。  
+- **已關閉：** 活動已完成其工作並結束。  
   
-- **#A1**活動已正常放棄其工作並結束。 進入此狀態時，不會明確地復原工作。  
+- **已取消：** 活動已正常放棄其工作並結束。 進入此狀態時，不會明確地復原工作。  
   
-- **有**活動發生錯誤，並已結束，但未完成其工作。  
+- 錯誤 **：** 活動發生錯誤，並已結束，但未完成其工作。  
   
  當活動被保存或卸載時，會繼續處於 <xref:System.Activities.ActivityInstanceState.Executing> 狀態。

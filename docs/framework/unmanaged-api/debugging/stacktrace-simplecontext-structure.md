@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-ms.openlocfilehash: c81a5787eb06971e3d52aff5d1c1154a72564daf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 45ae947cda5b4ddadfb10f5b2bdc78a95f031703
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790340"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420680"
 ---
 # <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext 結構
 提供可用來代替完整 `CONTEXT` 結構的簡單內容。  
@@ -36,25 +36,25 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`StackOffset`|堆疊指標，或 x86 平臺上的輸入堆疊指標（ESP）。|  
 |`FrameOffset`|框架位移，或 x86 平臺上的 EBP 暫存器。|  
 |`InstructionOffset`|指令指標，或 x86 平臺上的 enter 指令指標（EIP）。|  
   
 ## <a name="remarks"></a>備註  
- 因為堆疊追蹤函數通常只需要傳回位址、框架位移和堆疊位址，所以您可以選擇性地使用 `SimpleContext` 結構，而不是大型的 `CONTEXT` 結構。  
+ 因為堆疊追蹤函數通常只需要傳回位址、框架位移和堆疊位址，所以您可以選擇性地使用結構， `SimpleContext` 而不是大型 `CONTEXT` 結構。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** SOS_Stacktrace。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯結構](debugging-structures.md)
 - [偵錯](index.md)

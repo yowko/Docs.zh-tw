@@ -1,5 +1,6 @@
 ---
 title: 套用 Interop 屬性
+description: 本文摘要說明 System.runtime.interopservices.outattribute 命名空間的 COM Interop 屬性，包括設計階段和轉換工具屬性。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - design-time attributes
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: ca104c512641774217de5e270dc50b7393fc5725
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159243"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420535"
 ---
 # <a name="applying-interop-attributes"></a>套用 Interop 屬性
 <xref:System.Runtime.InteropServices> 命名空間提供了三種類別的 Interop 專屬屬性：一種是您在設計階段套用的屬性、一種是 COM Interop 工具和 API 在轉換過程中套用的屬性，還有一種是您或 COM Interop 套用的屬性。  
@@ -28,7 +29,7 @@ ms.locfileid: "78159243"
 ## <a name="design-time-attributes"></a>設計階段屬性  
  您可以使用設計階段屬性來調整 COM Interop 工具和 API 所執行的轉換處理結果。 下表描述您可以套用到 Managed 原始程式碼的屬性。 COM Interop 工具偶爾也會套用下表所述的屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|指定類型是否應使用 Automation 封送處理器或自訂的 Proxy 和 Stub 來進行封送處理。|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|控制對類別所產生之介面的類型。|  
@@ -56,7 +57,7 @@ ms.locfileid: "78159243"
 ## <a name="conversion-tool-attributes"></a>轉換工具屬性  
  下表描述 COM Interop 工具在轉換處理期間套用的屬性。 您不會在設計階段套用這些屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|表示參數或欄位類型的 COM 別名。 可用於屬性參數、欄位或傳回值。|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|表示類別或介面的相關資訊在從型別程式庫匯入組件時遺失。|  

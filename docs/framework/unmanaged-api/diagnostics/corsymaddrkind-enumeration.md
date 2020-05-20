@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-ms.openlocfilehash: 12f31d0bf224e38418818122dad3586ec687b2ad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5991b0abaedabe2337cd754c7bd19f96c5e9b685
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448573"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420613"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 列舉
 表示記憶體位址的類型。  
@@ -42,9 +42,9 @@ typedef enum CorSymAddrKind
 } CorSymAddrKind;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`ADDR_IL_OFFSET`|表示 Microsoft 中繼語言（MSIL）本機變數或參數索引。|  
 |`ADDR_NATIVE_RVA`|表示模組中的相對虛擬位址。|  
@@ -62,4 +62,4 @@ typedef enum CorSymAddrKind
   
 ## <a name="see-also"></a>另請參閱
 
-- [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [診斷符號存放區列舉](diagnostics-symbol-store-enumerations.md)

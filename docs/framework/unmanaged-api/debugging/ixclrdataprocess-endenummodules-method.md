@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::EndEnumModules 方法
+title: IXCLRDataProcess：： EndEnumModules 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EndEnumModules Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: de30384b4c12c4fcac3eafe580484685f8a43fa4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a7a23e53f5c2bc7d643046830cf335fec780f11
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775423"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420832"
 ---
-# <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess::EndEnumModules 方法
+# <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess：： EndEnumModules 方法
 
-釋出內部模組列舉期間使用的迭代器所使用的資源。
+釋放模組列舉期間所使用之內部反覆運算器所使用的資源。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,16 +39,16 @@ HRESULT EndEnumModules(
 ## <a name="parameters"></a>參數
 
 `handle`\
-[out]列舉模組控制代碼。
+脫銷列舉模組的控制碼。
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分`IXCLRDataProcess`介面，並對應至的虛擬方法表 26 的位置。
+提供的方法是介面的一部分 `IXCLRDataProcess` ，而且會對應至虛擬方法資料表的26個位置。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
-**標頭：** 無**程式庫：** 無 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
+**標頭：** 無**媒體櫃：** 無 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 

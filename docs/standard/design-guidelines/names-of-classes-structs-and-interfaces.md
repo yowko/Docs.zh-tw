@@ -1,5 +1,6 @@
 ---
 title: 類別、結構和介面的名稱
+description: 使用這些指導方針來命名類別、結構和介面，作為設計延伸和互動 .NET 程式庫的指引的一部分。
 ms.date: 10/22/2008
 helpviewer_keywords:
 - type names, guidelines
@@ -12,42 +13,42 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-ms.openlocfilehash: 2c528348c0e84037a80df9797c56f03b51c73adc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7eee414c5bf5c69f63543ef240e50a4d2d948a3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400593"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419079"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>類別、結構和介面的名稱
-以下命名準則適用于常規類型命名。
+後面的命名指導方針適用于一般類型命名。
 
- ✔️使用 PascalCasing 命名類和帶有名詞或名詞短語的結構。
+ ✔️使用 PascalCasing 來命名具有名詞或名詞片語的類別和結構。
 
- 這將類型名稱與用動詞短語命名的方法區分開來。
+ 這會區分方法中的型別名稱，其以動詞片語命名。
 
- ✔️使用形容詞短語，或偶爾使用名詞或名詞短語進行命名介面。
+ ✔️使用形容詞片語，或偶爾使用名詞或名詞片語來命名介面。
 
- 名詞和名詞短語應很少使用，它們可能表示類型應為抽象類別，而不是介面。
+ 名詞和名詞片語應該很少使用，而且可能表示該類型應該是抽象類別，而不是介面。
 
- ❌不要給類名首碼（例如，"C"）。
+ ❌不要為類別名稱提供前置詞（例如 "C"）。
 
- ✔️考慮用基類的名稱結束派生類的名稱。
+ ✔️考慮使用基類的名稱來結束衍生類別的名稱。
 
- 這是非常可讀的，並清楚地解釋了這種關係。 代碼中這方面的一些示例是： `ArgumentOutOfRangeException`，這是一種`Exception`，和`SerializableAttribute`，是 一`Attribute`種 。 但是，在適用本準則時，必須運用合理的判斷;例如，`Button`類是一種`Control`事件，儘管`Control`未出現在其名稱中。
+ 這是非常容易閱讀的，並且清楚地說明關聯性。 在程式碼中的一些範例是： `ArgumentOutOfRangeException` ，這是一種 `Exception` 、和 `SerializableAttribute` ，這是一種類型 `Attribute` 。 不過，請務必在套用此指導方針時使用合理的判斷。例如， `Button` 類別是一種 `Control` 事件，但 `Control` 不會出現在其名稱中。
 
- ✔️ DO 首碼介面名稱與字母 I，以指示類型是介面。
+ ✔️在介面名稱前面加上字母 I，表示該類型為介面。
 
- 例如，（`IComponent`描述性名詞）、（`ICustomAttributeProvider`名詞短語）和`IPersistable`（形容詞）是適當的介面名稱。 與其他類型名稱一樣，請避免縮寫。
+ 例如， `IComponent` （描述性名詞）、 `ICustomAttributeProvider` （名詞片語）和 `IPersistable` （形容詞）是適當的介面名稱。 如同其他類型名稱，請避免使用縮寫。
 
- ✔️，在定義類介面對時，確保名稱僅與介面名稱上的"I"首碼不同，其中類是介面的標準實現。
+ 當您定義類別–介面組（其中類別是介面的標準執行）時，✔️確實會確保介面名稱上的 "I" 前置詞只有名稱不同。
 
 ## <a name="names-of-generic-type-parameters"></a>泛型型別參數的名稱
- 泛型已添加到 .NET 框架 2.0 中。 該功能引入了一種稱為*類型參數*的識別碼。
+ 泛型已加入至 .NET Framework 2.0。 此功能引進了一種稱為「*型別參數*」的新識別碼。
 
- ✔️ DO 名稱泛型型別參數（帶有描述性名稱）除非單字母名稱完全不言自明，並且描述性名稱不會增加值。
+ 除非單一字母名稱完全一目了然，而且描述性名稱不會加上值，否則✔️ DO 名稱具有描述性名稱的泛型型別參數。
 
- ✔️考慮使用`T`具有單字母類型參數的類型作為類型參數名稱。
+ ✔️請考慮使用 `T` 做為具有一個單字母類型參數之類型的類型參數名稱。
 
 ```csharp
 public int IComparer<T> { ... }
@@ -55,7 +56,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }
 ```
 
- ✔️ DO 首碼描述性`T`類型參數名稱。
+ ✔️使用在描述性類型參數名稱前面加上 `T` 。
 
 ```csharp
 public interface ISessionChannel<TSession> where TSession : ISession {
@@ -63,43 +64,43 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 }
 ```
 
- ✔️考慮指示在參數名稱中對類型參數放置的約束。
+ ✔️，請考慮在參數名稱中指出在類型參數上放置的條件約束。
 
- 例如，約束到`ISession`的參數可能稱為`TSession`。
+ 例如，受條件約束的參數 `ISession` 可能會被呼叫 `TSession` 。
 
-## <a name="names-of-common-types"></a>常見類型的名稱
- ✔️命名派生自某些 .NET 框架類型或實現某些 .NET 框架類型時，請遵循下表中描述的準則。
+## <a name="names-of-common-types"></a>一般類型的名稱
+ ✔️請遵循下表中所述的指導方針來命名衍生自的型別，或執行特定的 .NET Framework 類型。
 
-|基底類型|派生/實現類型指南|
+|基底類型|衍生/執行類型指導方針|
 |---------------|------------------------------------------|
-|`System.Attribute`|✔️DO將尾碼"屬性"添加到自訂屬性類的名稱中。|
-|`System.Delegate`|✔️DO將尾碼"事件處理常式"添加到事件中使用的委託名稱中。<br /><br /> ✔️將尾碼"回檔"添加到用作事件處理常式的委託名稱以外的委託名稱中。<br /><br /> ❌不要將尾碼"委託"添加到委託。|
-|`System.EventArgs`|✔️添加尾碼"事件阿格"。|
-|`System.Enum`|❌不要從此類派生;因此，請勿從此類派生。改用語言支援的關鍵字;例如，在 C# 中，`enum`使用 關鍵字。<br /><br /> ❌請勿添加尾碼"枚舉"或"標記"。|
-|`System.Exception`|✔️添加尾碼"異常"。|
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️添加尾碼"字典"。 請注意，`IDictionary`這是特定類型的集合，但此準則優先于以下更常規的集合準則。|
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️添加尾碼"集合"。|
-|`System.IO.Stream`|✔️添加尾碼"流"。|
-|`CodeAccessPermission IPermission`|✔️添加尾碼"許可權"。|
+|`System.Attribute`|✔️請將尾碼 "Attribute" 新增至自訂屬性類別的名稱。|
+|`System.Delegate`|✔️請將後置詞 "EventHandler" 新增至事件中所使用的委派名稱。<br /><br /> ✔️請將後置詞「回呼」新增至委派的名稱，而非當做事件處理常式使用。<br /><br /> ❌請勿將後置詞「委派」新增至委派。|
+|`System.EventArgs`|✔️新增尾碼 "EventArgs"。|
+|`System.Enum`|❌請勿從這個類別衍生;請改用您的語言支援的關鍵字;例如，在 c # 中，使用 `enum` 關鍵字。<br /><br /> ❌請勿新增尾碼 "Enum" 或 "旗標"。|
+|`System.Exception`|✔️新增尾碼 "Exception"。|
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️新增尾碼「字典」。 請注意， `IDictionary` 是特定類型的集合，但這項指導方針優先于後面的較一般集合指導方針。|
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️新增尾碼「集合」。|
+|`System.IO.Stream`|✔️新增尾碼「串流」。|
+|`CodeAccessPermission IPermission`|✔️新增尾碼「許可權」。|
 
-## <a name="naming-enumerations"></a>命名枚舉
- 枚舉類型（也稱為枚舉）的名稱通常應遵循標準類型命名規則（PascalCasing 等）。 但是，還有其他特別適用于枚舉的準則。
+## <a name="naming-enumerations"></a>命名列舉
+ 列舉類型的名稱（也稱為列舉）通常應該遵循標準類型命名規則（PascalCasing 等等）。 不過，還有其他適用于列舉的指導方針。
 
- ✔️DO使用單一類型名稱進行枚舉，除非其值為位欄位。
+ ✔️請將單數類型名稱用於列舉，除非其值為位欄位。
 
- ✔️DO使用複數類型名稱進行枚舉，其中位欄位為值，也稱為標誌枚舉。
+ ✔️確實將複數型別名稱用於具有位欄位做為值（也稱為 flags 列舉）的列舉。
 
- ❌請勿在枚舉類型名稱中使用"枚舉"尾碼。
+ ❌請不要在列舉型別名稱中使用 "Enum" 尾碼。
 
- ❌請勿在枚舉類型名稱中使用"標記"或"標記"尾碼。
+ ❌請不要在列舉型別名稱中使用「旗標」或「旗標」尾碼。
 
- ❌請勿在枚舉值名稱上使用首碼（例如，ADO 枚舉的"ad"，富文本枚舉的"rtf"等）。
+ ❌請不要在列舉值名稱上使用前置詞（例如，"ad" 代表 ADO enum，"rtf" 用於豐富文字列舉等等）。
 
- *部分© 2005， 2009 微軟公司.保留擁有權利。*
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。**
 
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
+- [架構設計方針](../../../docs/standard/design-guidelines/index.md)
 - [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

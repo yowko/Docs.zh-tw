@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-ms.openlocfilehash: 1677798abdb8994d34c82a71e97a2c858209c18e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 62ea982f30a6a73648d9bf36722c0b5a49a68896
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790381"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420743"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum 列舉
 指出當 Managed 執行緒記錄事件時，寫入至事件記錄檔之描述性訊息的嚴重性層級。  
@@ -44,9 +44,9 @@ typedef enum LoggingLevelEnum {
 } LoggingLevelEnum;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`LTraceLevel0`|訊息是追蹤層級0。|  
 |`LTraceLevel1`|訊息是追蹤層級1。|  
@@ -63,18 +63,18 @@ typedef enum LoggingLevelEnum {
 |`LPanicLevel`|訊息是一個驚慌層級。|  
   
 ## <a name="remarks"></a>備註  
- Common language runtime （CLR）會呼叫[ICorDebugManagedCallback：： LogMessage](icordebugmanagedcallback-logmessage-method.md)方法，以通知偵錯工具 managed 執行緒已記錄事件。 CLR 會傳遞 `LoggingLevelEnum` 列舉的值，指出 managed 執行緒寫入事件記錄檔之訊息的嚴重性層級。  
+ Common language runtime （CLR）會呼叫[ICorDebugManagedCallback：： LogMessage](icordebugmanagedcallback-logmessage-method.md)方法，以通知偵錯工具 managed 執行緒已記錄事件。 CLR 會傳遞列舉的值， `LoggingLevelEnum` 指出 managed 執行緒寫入事件記錄檔之訊息的嚴重性層級。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.EventLog>
 - [偵錯列舉](debugging-enumerations.md)

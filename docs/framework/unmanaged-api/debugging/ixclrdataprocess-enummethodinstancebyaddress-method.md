@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: f3800a5980304394dd648111fe23a3bb0890c575
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 142099ae5cf9637cc28e8c82aabcd831cc8f0f52
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395114"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420795"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess：： EnumMethodInstanceByAddress 方法
 
@@ -51,10 +51,10 @@ HRESULT EnumMethodInstanceByAddress(
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 **標頭：** 無**媒體櫃：** 無 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CLRDataSourceType 列舉](clrdatasourcetype-enumeration.md)
 - [偵錯](index.md)

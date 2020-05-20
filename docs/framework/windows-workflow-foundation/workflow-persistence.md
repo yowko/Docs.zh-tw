@@ -1,15 +1,16 @@
 ---
 title: 工作流程持續性
+description: .NET Framework 4.6.1 包含 SqlWorkflowInstanceStore 類別，可將工作流程資料和中繼資料保存在 SQL Server 資料庫中。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: c49e287c6132103d4bb85a8ae892a76f9b582274
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1178bd3800fce95be96e601a17bfeff2c05cfceb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837528"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419300"
 ---
 # <a name="workflow-persistence"></a>工作流程持續性
 工作流程持續性是永久擷取工作流程執行個體的狀態，與處理序或電腦資訊無關。 這麼做是為了在發生系統故障時提供已知的工作流程執行個體復原點，或者藉由卸載非正在進行工作的工作流程執行個體來保留記憶體，或者將工作流程執行個體的狀態從某個節點移到伺服器陣列中的另一個節點。  
@@ -18,7 +19,7 @@ ms.locfileid: "74837528"
   
  若要啟用工作流程的持續性，您必須將實例存放區與**WorkflowApplication**或**WorkflowServiceHost**建立關聯，如[如何：啟用工作流程和工作流程服務的持續](how-to-enable-persistence-for-workflows-and-workflow-services.md)性中所述。 **WorkflowApplication**和**WorkflowServiceHost**會使用與其相關聯的實例存放區，以便將工作流程實例保存至持續性存放區，並根據儲存在持續性存放區中的工作流程實例資料，將工作流程實例載入記憶體中。  
   
- [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 隨附于**SqlWorkflowInstanceStore**類別，可讓您將有關工作流程實例的資料和中繼資料保存到 SQL Server 2005 或 SQL Server 2008 資料庫。 如需詳細資訊，請參閱[SQL 工作流程實例存放區](sql-workflow-instance-store.md)。  
+ [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]隨附于**SqlWorkflowInstanceStore**類別，可讓您將有關工作流程實例的資料和中繼資料保存到 SQL Server 2005 或 SQL Server 2008 資料庫。 如需詳細資訊，請參閱[SQL 工作流程實例存放區](sql-workflow-instance-store.md)。  
   
  若要儲存及載入應用程式特定資料與工作流程執行個體相關資訊，您可以建立擴充 <xref:System.Activities.Persistence.PersistenceParticipant> 類別的持續性參與者。 持續性參與者會參與保存程序，將自訂可序列化資料儲存至持續性存放區中，以便將執行個體存放區中的資料載入記憶體中，以及在持續性異動下執行任何其他邏輯。 如需詳細資訊，請參閱[持續性參與者](persistence-participants.md)。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "74837528"
   
 - 當使用舊版 Windows Workflow Foundation 開發的工作流程執行個體在互通的執行期間遇到保存點時。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 - [SQL 工作流程執行個體存放區](sql-workflow-instance-store.md)  
   

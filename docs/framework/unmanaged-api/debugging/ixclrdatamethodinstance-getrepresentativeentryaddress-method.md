@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: d9f9e16d243c0f3b45ac24776caea5bb9c32dcc1
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: d546cda5c68732e75550a3de286089f7df261c91
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395743"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420899"
 ---
 # <a name="ixclrdatamethodinstancegetrepresentativeentryaddress-method"></a>IXCLRDataMethodInstance：： GetRepresentativeEntryAddress 方法
 
@@ -47,12 +47,12 @@ HRESULT GetRepresentativeEntryAddress(
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
 **標頭：** 無  
 連結**庫：** 無  
 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯](index.md)
 - [IXCLRDataMethodInstance 介面](ixclrdatamethodinstance-interface.md)

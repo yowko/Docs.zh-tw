@@ -1,5 +1,6 @@
 ---
 title: 執行階段可呼叫包裝函式
+description: CLR 會透過執行時間可呼叫包裝函式公開 COM 物件，以管理 .NET 用戶端和 COM 物件之間的呼叫。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, COM wrappers
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 6868c79791d960dd1ae55ab09d4ac3b40ce52655
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156006"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420483"
 ---
 # <a name="runtime-callable-wrapper"></a>執行階段可呼叫包裝函式
 Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) 的 Proxy 來公開 COM 物件。 雖然 RCW 對 .NET 用戶端似乎是個普通物件，但其主要功能是在 .NET 用戶端與 COM 物件之間封送處理呼叫。  

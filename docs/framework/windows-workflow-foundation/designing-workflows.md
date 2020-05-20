@@ -1,20 +1,21 @@
 ---
 title: 設計工作流程
+description: 瞭解流程式控制制範例，例如流程圖、程式和狀態機器、工作流程開發，以及使用命令式程式碼撰寫工作流程。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], designing workflows
 ms.assetid: 41f727b5-b142-4c1b-b046-492b96135ae6
-ms.openlocfilehash: c774161fb5adbc5fc8e44b22d994d15fa0d2e489
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 07ccd1de6648438ad65f88bada3e055e1e2a4134
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141912"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419924"
 ---
 # <a name="designing-workflows"></a>設計工作流程
 本節主題描述工作流程開發中使用的流程控制開發架構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [流程圖工作流程](flowchart-workflows.md)  
  示範如何使用熟悉的流程圖開發架構建立工作流程。  
   

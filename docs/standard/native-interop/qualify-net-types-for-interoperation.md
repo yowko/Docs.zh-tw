@@ -1,5 +1,6 @@
 ---
 title: 限定 COM 互通的 .NET 型別
+description: 本文提供的指導方針可協助您將 .NET 元件中的類型公開至 COM 應用程式，以進行 COM Interop。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: f0b9bc03225ae3d2365a21fd3b78d09c08d4fc1a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b122befffbcad39258393462c75ac20431d9136
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091573"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420496"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>限定 COM 互通的 .NET 型別
 如果您想要向 COM 應用程式公開組件中的類型，請考慮設計階段的 COM Interop 需求。 當您遵守下列方針時，Managed 類型 (類別、介面、結構和列舉) 會與 COM 類型緊密整合：  

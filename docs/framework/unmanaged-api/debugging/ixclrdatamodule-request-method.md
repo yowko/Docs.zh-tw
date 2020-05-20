@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 44ee4fc7fc2368b65f6f2fffe6ac239beddc6293
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3c18fc5c947cbb89fc4e9aed60d3cedcbe22d749
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395273"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420808"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule：： Request 方法
 
@@ -61,10 +61,10 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 **標頭：** 無**媒體櫃：** 無 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯](index.md)
 - [IXCLRDataModule 介面](ixclrdatamodule-interface.md)

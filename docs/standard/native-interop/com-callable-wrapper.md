@@ -1,5 +1,6 @@
 ---
 title: COM 可呼叫包裝函式
+description: 當 COM 用戶端呼叫 .NET 物件時，CLR 會為它建立 managed 物件和 COM 可呼叫包裝函式。 COM 用戶端會呼叫物件的包裝函式。
 ms.date: 10/23/2018
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c42ea0b5ba4cb01304ceae4ba2d2fc91b629a9b3
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400376"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420522"
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 
@@ -60,7 +61,7 @@ CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端
 
 |介面|描述|
 |---------------|-----------------|
-|（\_*Classname*）類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|
+|（ \_ *Classname*）類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|
 |**IConnectionPoint**和**IConnectionPointContainer**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|
 |**IDispatchEx** (僅限 .NET Framework)|如果類別實作 **IExpando**，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|
 |**IEnumVARIANT**|集合類型類別的介面，如果類別實作 **IEnumerable**，它會列舉集合中的物件。|

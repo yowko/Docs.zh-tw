@@ -3,12 +3,12 @@ title: 重大變更-.NET Framework 至 .NET Core
 titleSuffix: ''
 description: 列出從 .NET Framework 到 .NET Core 的重大變更。
 ms.date: 05/05/2020
-ms.openlocfilehash: 613c4e41e12be57d5631b347055140a4418e7207
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f830d4571f21752900b35a7462bf0881673d6d2e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206452"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420444"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>從 .NET Framework 遷移至 .NET Core 的突破性變更
 
@@ -23,6 +23,7 @@ ms.locfileid: "83206452"
 - [FileSystemInfo 擲回的 System.unauthorizedaccessexception](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 - [不支援處理損毀的進程狀態例外狀況](#handling-corrupted-state-exceptions-is-not-supported)
 - [UriBuilder 屬性不再前面加上前置字元](#uribuilder-properties-no-longer-prepend-leading-characters)
+- [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -41,6 +42,10 @@ ms.locfileid: "83206452"
 ***
 
 [!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
+
+***
+
+[!INCLUDE [startinfo-throws-exception](../../../includes/core-changes/corefx/1.0/startinfo-throws-exception.md)]
 
 ***
 
@@ -158,7 +163,7 @@ ms.locfileid: "83206452"
 
 ***
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 .NET Core 上一律會擲回例外狀況的 Api](unsupported-apis.md)
 - [.NET Core 上無法使用的 .NET Framework 技術](../porting/net-framework-tech-unavailable.md)

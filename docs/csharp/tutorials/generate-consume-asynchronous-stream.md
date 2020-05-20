@@ -4,18 +4,18 @@ description: 這個 advanced 教學課程會示範如何產生和使用非同步
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200102"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420366"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教學課程：使用 c # 8.0 和 .NET Core 3.0 產生和使用非同步資料流程
 
 C # 8.0 引進**非同步資料流程**，它會建立資料流程的資料流程來源模型。 資料流程通常會以非同步方式抓取或產生元素。 非同步資料流程依賴 .NET Standard 2.1 中引進的新介面。 這些介面在 .NET Core 3.0 和更新版本中受到支援。 它們會為非同步串流資料來源提供自然的程式設計模型。
 
-您將在本教學課程中了解如何：
+在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
 >
@@ -24,7 +24,7 @@ C # 8.0 引進**非同步資料流程**，它會建立資料流程的資料流�
 > - 支援非同步資料流程的取消和捕捉內容。
 > - 識別何時應該使用新的介面與資料來源，而非先前的同步資料來源。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 您必須設定電腦以執行 .NET Core，包括 c # 8.0 編譯器。 從[Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用 c # 8 編譯器。
 
@@ -42,7 +42,7 @@ C # 8.0 引進**非同步資料流程**，它會建立資料流程的資料流�
 
 ## <a name="run-the-starter-application"></a>執行入門應用程式
 
-您可以從[csharp/教學課程/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start)資料夾中的[dotnet/](https://github.com/dotnet/docs)檔存放庫，取得本教學課程中使用之入門應用程式的程式碼。
+您可以從[csharp/教學課程/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start)資料夾中的[dotnet/](https://github.com/dotnet/docs)檔存放庫，取得本教學課程中使用之入門應用程式的程式碼。
 
 入門應用程式是主控台應用程式，它使用 [GitHub GraphQL](https://developer.github.com/v4/) 介面來擷取 [dotnet/docs](https://github.com/dotnet/docs) 存放庫中最近撰寫的議題。 從查看入門應用程式 `Main` 方法的下列程式碼開始：
 
@@ -64,7 +64,7 @@ C # 8.0 引進**非同步資料流程**，它會建立資料流程的資料流�
 
 擷取並還原一頁的結果之後，`runPagedQueryAsync` 會回報進度並檢查取消。 若已要求取消，`runPagedQueryAsync` 會擲回 <xref:System.OperationCanceledException>。
 
-此程式碼中有許多元素可以改進。 最重要的是，`runPagedQueryAsync` 必須為傳回的所有議題配置儲存體。 此案例會在第 250 個議題停止，因為擷取所有未決議題將需要多得多的記憶體來儲存所以已擷取的議題。 支援進度報告和取消的通訊協定會使演算法更難理解其第一次閱讀。 涉及更多類型和 Api。 您必須透過<xref:System.Threading.CancellationTokenSource>和其相關聯<xref:System.Threading.CancellationToken>的來追蹤通訊，以瞭解要求取消的位置及授與的位置。
+此程式碼中有許多元素可以改進。 最重要的是，`runPagedQueryAsync` 必須為傳回的所有議題配置儲存體。 此案例會在第 250 個議題停止，因為擷取所有未決議題將需要多得多的記憶體來儲存所以已擷取的議題。 支援進度報告和取消的通訊協定會使演算法更難理解其第一次閱讀。 涉及更多類型和 Api。 您必須透過 <xref:System.Threading.CancellationTokenSource> 和其相關聯的來追蹤通訊， <xref:System.Threading.CancellationToken> 以瞭解要求取消的位置及授與的位置。
 
 ## <a name="async-streams-provide-a-better-way"></a>非同步資料流提供更好的方式
 
@@ -112,7 +112,7 @@ C # 8.0 引進**非同步資料流程**，它會建立資料流程的資料流�
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateAsyncStream" :::
 
-新介面<xref:System.Collections.Generic.IAsyncEnumerator%601>衍生自<xref:System.IAsyncDisposable>。 這表示當迴圈完成時，先前的迴圈會以非同步方式處置資料流程。 您可以想像一下迴圈看起來像下列程式碼：
+新介面 <xref:System.Collections.Generic.IAsyncEnumerator%601> 衍生自 <xref:System.IAsyncDisposable> 。 這表示當迴圈完成時，先前的迴圈會以非同步方式處置資料流程。 您可以想像一下迴圈看起來像下列程式碼：
 
 ```csharp
 int num = 0;
@@ -132,23 +132,23 @@ try
 }
 ```
 
-根據預設，資料流程元素會在已捕捉的內容中處理。 如果您想要停用內容的捕捉，請使用<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>擴充方法。 如需同步處理內容及取得目前內容的詳細資訊，請參閱有關[使用以工作為基礎的非同步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
+根據預設，資料流程元素會在已捕捉的內容中處理。 如果您想要停用內容的捕捉，請使用 <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 擴充方法。 如需同步處理內容及取得目前內容的詳細資訊，請參閱有關[使用以工作為基礎的非同步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
 
-非同步資料流程支援使用與其他`async`方法相同的通訊協定取消。 您會修改非同步反覆運算器方法的簽章，如下所示，以支援取消：
+非同步資料流程支援使用與其他方法相同的通訊協定取消 `async` 。 您會修改非同步反覆運算器方法的簽章，如下所示，以支援取消：
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateWithCancellation" :::
 
-<xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType>屬性會使編譯器產生的<xref:System.Collections.Generic.IAsyncEnumerator%601>程式碼，讓非同步反覆運算器的主體能夠`GetAsyncEnumerator`看見該 token 做為該引數。 在`runQueryAsync`中，您可以檢查權杖的狀態，並在要求時取消進一步的工作。
+<xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType>屬性會使編譯器產生的 <xref:System.Collections.Generic.IAsyncEnumerator%601> 程式碼，讓 `GetAsyncEnumerator` 非同步反覆運算器的主體能夠看見該 token 做為該引數。 在中 `runQueryAsync` ，您可以檢查權杖的狀態，並在要求時取消進一步的工作。
 
-您可以使用另一個擴充<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A>方法，將解除標記傳遞給非同步資料流程。 您將修改列舉問題的迴圈，如下所示：
+您可以使用另一個擴充方法， <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A> 將解除標記傳遞給非同步資料流程。 您將修改列舉問題的迴圈，如下所示：
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-您可以從[csharp/教學課程/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished)資料夾中的[dotnet/](https://github.com/dotnet/docs)檔存放庫取得已完成之教學課程的程式碼。
+您可以從[csharp/教學課程/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished)資料夾中的[dotnet/](https://github.com/dotnet/docs)檔存放庫取得已完成之教學課程的程式碼。
 
 ## <a name="run-the-finished-application"></a>執行已完成的應用程式
 
-再次執行應用程式。 將其行為與入門應用程式的行為進行比較。 當第一個結果頁面可用時會儘快列舉。 您會發現要求並擷取每個新頁面時會暫停一些時間，燃後快速列舉下一個頁面的結果。 不需要 `try` / `catch` 區塊就能處理取消：呼叫者可以停止列舉集合。 系統會明確回報進度，因為非同步資料流會在下載每個頁面時產生結果。 傳回之每個問題的狀態會順暢地包含`await foreach`在迴圈中。 您不需要回呼物件來追蹤進度。
+再次執行應用程式。 將其行為與入門應用程式的行為進行比較。 當第一個結果頁面可用時會儘快列舉。 您會發現要求並擷取每個新頁面時會暫停一些時間，燃後快速列舉下一個頁面的結果。 不需要 `try` / `catch` 區塊就能處理取消：呼叫者可以停止列舉集合。 系統會明確回報進度，因為非同步資料流會在下載每個頁面時產生結果。 傳回之每個問題的狀態會順暢地包含在 `await foreach` 迴圈中。 您不需要回呼物件來追蹤進度。
 
 您可以透過檢查程式碼看到記憶體使用狀況的改進。 您再也不需要在列舉結果之前配置集合以儲存所有結果。 呼叫者可以決定如何取用結果，以及是否需要儲存體集合。
 

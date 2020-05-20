@@ -1,19 +1,20 @@
 ---
-title: 開始使用 Tutorial2
+title: 消費者入門 Tutorial2
+description: 本文會開始一系列的教學課程，介紹如何 Windows Workflow Foundation 應用程式進行程式設計。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WF [WF], getting started
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
-ms.openlocfilehash: 540765c09dceef583798ceaf1abf9f191f444697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 148ba77231067bf5f8ff1d8b444b83d951ce8761
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773525"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419846"
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
-本節包含的逐步解說主題集，為您介紹 Windows Workflow Foundation (WF) 應用程式的程式設計。 您可以遵循這些主題的程序進行，建置一個數字猜測遊戲應用程式。 教學課程中的第一個主題會引導您透過步驟來建立工作流程所需的自訂活動。 在第二個主題中，這些活動會隨著內建工作流程活動組裝至流程圖工作流程。 在第三個主題中，會設定主應用程式執行工作流程，並在最後一個主題中介紹持續性。 這個程序中的每一個步驟都與之前的步驟息息相關，因此建議您最好依照順序完成。  
+本節包含一組逐步解說主題，介紹如何 Windows Workflow Foundation （WF）應用程式進行程式設計。 您可以遵循這些主題的程序進行，建置一個數字猜測遊戲應用程式。 教學課程中的第一個主題會引導您透過步驟來建立工作流程所需的自訂活動。 在第二個主題中，這些活動會隨著內建工作流程活動組裝至流程圖工作流程。 在第三個主題中，會設定主應用程式執行工作流程，並在最後一個主題中介紹持續性。 這個程序中的每一個步驟都與之前的步驟息息相關，因此建議您最好依照順序完成。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：建立活動](how-to-create-an-activity.md)  
@@ -31,7 +32,7 @@ ms.locfileid: "61773525"
  [如何：建立自訂追蹤參與者](how-to-create-a-custom-tracking-participant.md)  
  說明如何建立自訂的追蹤參與者和追蹤設定檔。  
   
- [如何：裝載工作流程-並存的多個的版本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
+ [如何：並存裝載工作流程的多個版本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
  描述如何使用 `WorkflowIdentity` 裝載工作流程並存的多個版本。  
   
  [如何：更新執行中工作流程執行個體的定義](how-to-update-the-definition-of-a-running-workflow-instance.md)  

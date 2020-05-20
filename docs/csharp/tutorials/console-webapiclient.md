@@ -3,12 +3,12 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: c7b7e9803b0c05f4956f5c007bca8aa4b200cfca
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208016"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420379"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -27,7 +27,7 @@ ms.locfileid: "83208016"
 
 如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 您將必須設定電腦以執行 .NET Core。 您可以在[.Net Core 下載](https://dotnet.microsoft.com/download)頁面上找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
 您將必須安裝慣用的程式碼編輯器。 下列說明使用[Visual Studio Code](https://code.visualstudio.com/)，這是一個開放原始碼的跨平臺編輯器。 不過，您可以使用您熟悉的任何工具。
@@ -171,6 +171,7 @@ var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await
 您使用的是新的命名空間，因此您也必須將它新增至檔案頂端：
 
 ```csharp
+using System.Collections.Generic;
 using System.Text.Json;
 ```
 

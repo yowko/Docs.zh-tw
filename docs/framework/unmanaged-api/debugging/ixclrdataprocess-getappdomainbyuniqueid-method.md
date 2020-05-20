@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::GetAppDomainByUniqueId 方法
+title: IXCLRDataProcess：： GetAppDomainByUniqueId 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::GetAppDomainByUniqueId Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8b468d40ef8eb523ba8881627fae15cf9b7c7b80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb02ffed09cbcc31e653bfd3165050c247908c5d
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775254"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420776"
 ---
-# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess::GetAppDomainByUniqueId 方法
+# <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess：： GetAppDomainByUniqueId 方法
 
-取得`AppDomain`根據其唯一的識別項的處理序中。
+根據程式的 `AppDomain` 唯一識別碼，在進程中取得。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,19 +40,19 @@ HRESULT GetAppDomainByUniqueID(
 ## <a name="parameters"></a>參數
 
 `id`\
-[in]AppDomain 的唯一識別碼
+在AppDomain 的唯一識別碼
 
 `appDomain`\
-[out]AppDomain
+脫銷AppDomain
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分`IXCLRDataProcess`介面，並對應至 20 虛擬方法表的位置。 `IXCLRDataAppDomain*`傳回會用於與其他 Api 的互動。
+提供的方法是介面的一部分 `IXCLRDataProcess` ，而且會對應至虛擬方法資料表的第20個位置。 `IXCLRDataAppDomain*`傳回的是用來與其他 api 互動。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
-**標頭：** 無**程式庫：** 無 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
+**標頭：** 無**媒體櫃：** 無 **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 

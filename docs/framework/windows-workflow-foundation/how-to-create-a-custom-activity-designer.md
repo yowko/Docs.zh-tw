@@ -1,13 +1,14 @@
 ---
 title: HOW TO：建立自訂活動設計工具
+description: 本文說明如何建立具有放置區域的 Workflow Foundation 自訂活動設計工具，其中可以放置任意活動。
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 3c326508744f2aa2b34f5ee574cc9ec1e2863cf6
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 015efd1e482e2b531d28b9caec411c76116c9653
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306350"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419781"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>HOW TO：建立自訂活動設計工具
 
@@ -15,7 +16,7 @@ ms.locfileid: "71306350"
 
 自訂活動設計工具通常繼承自 <xref:System.Activities.Presentation.ActivityDesigner>，它是任何沒有特定設計工具之活動的預設基底活動設計工具型別。 這個型別提供與屬性方格互動及設定管理色彩和圖示等基本層面等的設計階段經驗。
 
-<xref:System.Activities.Presentation.ActivityDesigner> 會使用兩項 Helper 控制項 (<xref:System.Activities.Presentation.WorkflowItemPresenter> 和 <xref:System.Activities.Presentation.WorkflowItemsPresenter>) 來簡化自訂活動設計工具的開發。 這些 Helper 能夠處理拖放子項目、刪除、選取及加入子項目之類的常見功能。 允許內的單一子 UI 專案（提供「卸載區」）， <xref:System.Activities.Presentation.WorkflowItemsPresenter>而可提供支援多個 UI 元素，包括排序、移動、刪除和加入子專案等其他功能。 <xref:System.Activities.Presentation.WorkflowItemPresenter>
+<xref:System.Activities.Presentation.ActivityDesigner> 會使用兩項 Helper 控制項 (<xref:System.Activities.Presentation.WorkflowItemPresenter> 和 <xref:System.Activities.Presentation.WorkflowItemsPresenter>) 來簡化自訂活動設計工具的開發。 這些 Helper 能夠處理拖放子項目、刪除、選取及加入子項目之類的常見功能。 <xref:System.Activities.Presentation.WorkflowItemPresenter>允許內的單一子 UI 專案（提供「卸載區」），而 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 可提供支援多個 UI 元素，包括排序、移動、刪除和加入子專案等其他功能。
 
 在自訂活動設計工具的執行中，需要反白顯示的另一個重要部分，就是使用 WPF 資料系結，將視覺編輯系結至儲存在設計工具中所編輯之記憶體的實例。 這項操作可透過模型項目樹狀完成，該樹狀也負責進行變更通知，以及追蹤如狀態變更這類事件。
 
@@ -31,25 +32,25 @@ ms.locfileid: "71306350"
 
 2. **在 [檔案**] 功能表上，指向 [**新增**]，然後選取 [**專案**]。
 
-     [ **新增專案** ] 對話方塊隨即開啟。
+     此時會開啟 [新增專案]**** 對話方塊。
 
 3. 在 [**已安裝的範本**] 窗格中，從您慣用的語言類別中選取 [ **Windows** ]。
 
 4. 在 [**範本**] 窗格中，選取 [ **WPF 應用程式**]。
 
-5. 在 [**名稱**] 方塊中`UsingWorkflowItemPresenter`，輸入。
+5. 在 [**名稱**] 方塊中，輸入 `UsingWorkflowItemPresenter` 。
 
 6. 在 [**位置**] 方塊中，輸入您要儲存專案的目錄，或按一下 **[流覽]** 以流覽至它。
 
 7. 在 [**方案**] 方塊中，接受預設值。
 
-8. 按一下 [確定]。
+8. 按一下 [確定]  。
 
 9. 以滑鼠右鍵按一下**方案總管**中的*mainwindows.xaml* ，在 [ **Microsoft Visual Studio** ] 對話方塊中選取 [**刪除**]，然後確認 **[確定]** 。
 
 10. 以滑鼠右鍵按一下**方案總管**中的 UsingWorkflowItemPresenter 專案，然後依序選取 [**加入**] 和 [**新增專案**]。 以顯示 [**新增專案**] 對話方塊，然後從左側的 [**已安裝的範本**] 區段中選取 [ **WPF** ] 分類。
 
-11. 選取**視窗（WPF）** 範本，將它`RehostingWFDesigner`命名為，然後按一下 [**新增**]。
+11. 選取**視窗（WPF）** 範本，將它命名為 `RehostingWFDesigner` ，然後按一下 [**新增**]。
 
 12. 開啟*rehostingwfdesigner.xaml* ，並將下列程式碼貼入其中，以定義應用程式的 UI：
 
@@ -156,7 +157,7 @@ ms.locfileid: "71306350"
 
 14. 以滑鼠右鍵按一下方案總管中的 [參考] 目錄，然後選取 [**新增參考 ...** ]。 以顯示 [**加入參考**] 對話方塊。
 
-15. 按一下 [ **.net** ] 索引標籤，找出名為 [System.string **. Presentation**] 的元件，選取它並按一下 **[確定]** 。
+15. 按一下 [ **.net** ] 索引標籤，找出名為 [System.string **. Presentation**] 的元件，選取它並按一下 **[確定]**。
 
 16. 使用相同的程序將參考加入至下列組件：
 
@@ -170,7 +171,7 @@ ms.locfileid: "71306350"
 
 18. 以滑鼠右鍵按一下**方案總管**中的 UsingWorkflowItemPresenter 專案，然後依序選取 [**加入**] 和 [**新增專案**]。 若要顯示 [**新增專案**] 對話方塊，並選取左側的 [**已安裝的範本**] 區段中的 [**工作流程**] 類別。
 
-19. 選取 [**活動設計**工具] 範本， `SimpleNativeDesigner`將它命名為，然後按一下 [**新增**]。
+19. 選取 [**活動設計**工具] 範本，將它命名為 `SimpleNativeDesigner` ，然後按一下 [**新增**]。
 
 20. 開啟*SimpleNativeDesigner* ，並將下列程式碼貼入其中。 請注意，這個程式碼會使用 <xref:System.Activities.Presentation.ActivityDesigner> 做為根項目，並且示範如何使用繫結將 <xref:System.Activities.Presentation.WorkflowItemPresenter> 整合至設計工具中，以便在複合活動設計工具中顯示子型別。
 
@@ -213,9 +214,9 @@ ms.locfileid: "71306350"
 
 21. 以滑鼠右鍵按一下**方案總管**中的 UsingWorkflowItemPresenter 專案，然後依序選取 [**加入**] 和 [**新增專案**]。 若要顯示 [**新增專案**] 對話方塊，並選取左側的 [**已安裝的範本**] 區段中的 [**工作流程**] 類別。
 
-22. 選取 [ **Code] 活動**範本，將`SimpleNativeActivity`它命名為，然後按一下 [**新增**]。
+22. 選取 [ **Code] 活動**範本，將它命名為 `SimpleNativeActivity` ，然後按一下 [**新增**]。
 
-23. 在*SimpleNativeActivity.cs*檔案中輸入下列程式碼，以執行類別：`SimpleNativeActivity`
+23. 在 `SimpleNativeActivity` *SimpleNativeActivity.cs*檔案中輸入下列程式碼，以執行類別：
 
     ```csharp
     using System.Activities;
@@ -250,7 +251,7 @@ ms.locfileid: "71306350"
 
 ### <a name="to-create-a-custom-activity-designer-using-workflowitemspresenter"></a>若要使用 WorkflowItemsPresenter 建立自訂活動設計工具
 
-1. 第二個自訂活動設計工具的程式是第一個只有一些修改，第一個則是為第二個應用程式`UsingWorkflowItemsPresenter`命名。 此外，這個應用程式不會定義新的自訂活動。
+1. 第二個自訂活動設計工具的程式是第一個只有一些修改，第一個則是為第二個應用程式命名 `UsingWorkflowItemsPresenter` 。 此外，這個應用程式不會定義新的自訂活動。
 
 2. 主要差異包含在*CustomParallelDesigner*和*RehostingWFDesigner.xaml.cs*檔案中。 以下是*CustomParallelDesigner*檔案中定義 UI 的程式碼：
 
