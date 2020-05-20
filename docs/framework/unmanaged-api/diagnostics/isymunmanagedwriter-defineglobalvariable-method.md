@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 94d1aa5bba87e8ca11b58bdf89a697e1ccf500b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428031"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615198"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable 方法
 定義單一全域變數。  
@@ -41,13 +41,13 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>參數  
  `name`  
- 在定義全域變數名稱之 `WCHAR` 的指標。  
+ 在的指標 `WCHAR` ，定義全域變數名稱。  
   
  `attributes`  
  在全域變數屬性。  
   
  `cSig`  
- 在`ULONG32`，指出 `signature` 緩衝區的大小（以字元為單位）。  
+ 在， `ULONG32` 指出緩衝區的大小（以字元為單位） `signature` 。  
   
  `signature`  
  在全域變數簽章。  
@@ -70,8 +70,8 @@ HRESULT DefineGlobalVariable(
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [DefineLocalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
-- [DefineGlobalVariable2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+- [ISymUnmanagedWriter 介面](isymunmanagedwriter-interface.md)
+- [DefineLocalVariable 方法](isymunmanagedwriter-definelocalvariable-method.md)
+- [DefineGlobalVariable2 方法](isymunmanagedwriter2-defineglobalvariable2-method.md)

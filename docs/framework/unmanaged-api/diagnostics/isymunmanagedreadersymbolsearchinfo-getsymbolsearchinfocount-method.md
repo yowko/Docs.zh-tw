@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4068b6ec-525f-4446-8818-0296178cbd19
 topic_type:
 - apiref
-ms.openlocfilehash: a193c4e9e87616217efc90286032944d05d766c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a81a5afeec8f97864e1772347c6575b9d09cb176
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446393"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614886"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount 方法
 取得符號搜尋資訊的計數。  
@@ -34,7 +34,7 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="parameters"></a>參數  
  `pcSearchInfo`  
- ] [out] `ULONG32` 的指標，接收包含搜尋資訊所需的緩衝區大小。  
+ ] [out] 指標，其 `ULONG32` 接收包含搜尋資訊所需的緩衝區大小。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -44,4 +44,4 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedReaderSymbolSearchInfo 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+- [ISymUnmanagedReaderSymbolSearchInfo 介面](isymunmanagedreadersymbolsearchinfo-interface.md)

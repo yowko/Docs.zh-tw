@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-ms.openlocfilehash: 889fd4ec3332cbe80a035e13a5145421dc0ed5a9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a44f81deb2d57b49f1fd0650fa52c06383210352
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448889"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614431"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount 方法
 取得這個方法內的序列點計數。  
@@ -34,7 +34,7 @@ HRESULT GetSequencePointCount(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- 脫銷`ULONG32` 的指標，接收包含序列點所需的緩衝區大小。  
+ 脫銷的指標 `ULONG32` ，接收包含序列點所需的緩衝區大小。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -44,4 +44,4 @@ HRESULT GetSequencePointCount(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 介面](isymunmanagedmethod-interface.md)

@@ -2,17 +2,15 @@
 title: 服務網格通訊基礎結構
 description: 瞭解服務網格技術如何簡化雲端原生微服務通訊
 author: robvet
-ms.date: 03/03/2020
-ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199939"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613679"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>服務網格通訊基礎結構
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在本章中，我們探討了微服務通訊的挑戰。 我們說過，開發小組必須區分後端服務彼此通訊的方式。 在理想的情況下，服務間的通訊越少越好。 不過，不一定可以避免這種情況，因為後端服務通常會依賴另一個來完成作業。
 
@@ -36,7 +34,7 @@ ms.locfileid: "82199939"
 
 在第6章中，我們深入探討服務網格技術，包括對其架構和可用開放原始碼的整合進行討論。
 
-## <a name="summary"></a>[摘要]
+## <a name="summary"></a>摘要
 
 在本章中，我們討論了雲端原生通訊模式。 我們一開始先檢查前端用戶端如何與後端微服務通訊。 在過程中，我們討論了 API 閘道平臺和即時通訊。 接著，我們探討了微服務如何與其他後端服務通訊。 我們探討了同步 HTTP 通訊，以及跨服務的非同步訊息。 我們涵蓋了 gRPC，這是雲端原生世界中即將推出的技術。 最後，我們引進了一項新的、快速發展的技術，其服務網格可簡化微服務通訊。
 
@@ -73,5 +71,5 @@ ms.locfileid: "82199939"
 - [使用 .NET 建立 gRPC 服務影片](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[上一頁](grpc.md)
->[下一頁](distributed-data.md)
+>[上一個](grpc.md) 
+>[下一步](distributed-data.md)

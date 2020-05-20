@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d746e0a-d158-4983-88da-db0a0856bc0b
 topic_type:
 - apiref
-ms.openlocfilehash: cb0af78092822875204f45ec3dca1484e5b5fc90
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e4348cc59924b65b6c6bb53a9c2a98f1a1161b50
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427464"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614730"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace 方法
 指定在目前開啟的詞法範圍內使用指定的完整命名空間名稱。 命名空間將會用於繼承自目前開啟範圍的所有範圍內。 關閉目前的範圍也會停止使用命名空間。  
@@ -44,4 +44,4 @@ HRESULT UsingNamespace(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 介面](isymunmanagedwriter-interface.md)

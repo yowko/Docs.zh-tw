@@ -2,17 +2,15 @@
 title: 分散式資料
 description: 對比整合型和雲端原生應用程式中的資料儲存。
 author: robvet
-ms.date: 04/24/2020
-ms.openlocfilehash: 8a9f1478f1a46b2367df9372d4adaa3b4c711782
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82204693"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614132"
 ---
 # <a name="distributed-data"></a>分散式資料
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 如我們在本書中所見，雲端原生方法會改變您設計、部署和管理應用程式的方式。 它也會變更您管理和儲存資料的方式。
 
@@ -151,5 +149,5 @@ Saga 模式通常會單純為一系列相關的事件，或協調成一組相關
 就像所有模式和技術一樣，在必要時進行策略性的實行。 雖然事件來源可以提供更高的效能和擴充性，但代價是複雜性和學習曲線。
 
 >[!div class="step-by-step"]
->[上一頁](service-mesh-communication-infrastructure.md)
->[下一頁](relational-vs-nosql-data.md)
+>[上一個](service-mesh-communication-infrastructure.md) 
+>[下一步](relational-vs-nosql-data.md)

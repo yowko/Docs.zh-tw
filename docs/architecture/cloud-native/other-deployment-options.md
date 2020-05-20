@@ -1,17 +1,15 @@
 ---
 title: 其他容器部署選項
 description: 使用 Azure 的其他容器部署選項
-ms.date: 04/13/2020
-ms.openlocfilehash: 3cae771b3877215a7fc91afd4f406fdfc9ff2771
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: acb022e3d4fd4862c592fa571894e1b8ce17f465
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199998"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613755"
 ---
 # <a name="other-container-deployment-options"></a>其他容器部署選項
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 除了 Azure Kubernetes Service （AKS）之外，您也可以將容器部署到容器和 Azure 容器實例的 Azure App Service。
 
@@ -64,5 +62,5 @@ Azure 容器實例提供最快的方式，在 Azure 中執行簡單的容器工�
 - [從 ACR 部署容器實例](https://docs.microsoft.com/azure/container-instances/container-instances-using-azure-container-registry#deploy-with-azure-portal)
 
 >[!div class="step-by-step"]
->[上一頁](scale-containers-serverless.md)
->[下一頁](communication-patterns.md)
+>[上一個](scale-containers-serverless.md) 
+>[下一步](communication-patterns.md)

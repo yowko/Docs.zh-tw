@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0ebd793-3764-4df0-8f12-0e95f60b9eae
 topic_type:
 - apiref
-ms.openlocfilehash: 6e9ab623d5fe9fcfda2305df078e988a561afdc5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1553e616f60b4f05c06b6457d47454dfb4bc2eb7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427970"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614769"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize 方法
 設定此寫入器將與之關聯的中繼資料發射器介面，並設定要寫入偵錯工具符號的輸出檔名稱。  
@@ -45,10 +45,10 @@ HRESULT Initialize(
  在要在其中寫入調試符號的檔案名。 如果檔案名稱是指定給不使用檔案名稱的寫入器，則這個參數會被忽略。  
   
  `pIStream`  
- 在如果指定，符號寫入器會將符號發出至指定的 <xref:System.Runtime.InteropServices.ComTypes.IStream>，而不是 `filename` 參數中指定的檔案。 `pIStream` 是選擇性參數。  
+ 在如果指定，符號寫入器會將符號發出至指定的， <xref:System.Runtime.InteropServices.ComTypes.IStream> 而不是參數中指定的檔案 `filename` 。 `pIStream` 是選用參數。  
   
  `fFullBuild`  
- [in] `true` 如果這是完整重建，則為，如果這是累加式編譯，`false`。  
+ [in] `true`如果這是完整重建，則為，`false`如果這是累加式編譯，則為。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -58,5 +58,5 @@ HRESULT Initialize(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [Initialize2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize2-method.md)
+- [ISymUnmanagedWriter 介面](isymunmanagedwriter-interface.md)
+- [Initialize2 方法](isymunmanagedwriter-initialize2-method.md)

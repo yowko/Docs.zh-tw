@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-ms.openlocfilehash: 02b270677131d0960db67b0ac8db38cba2b5e2df
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fdcfb0c4f9c21eb516f4196d0c8f682669468219
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428050"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615224"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument 方法
 定義來源文件。 系統會提供已知語言、廠商和檔案類型的 Guid。  
@@ -38,7 +38,7 @@ HRESULT DefineDocument(
   
 ## <a name="parameters"></a>參數  
  `url`  
- 在`WCHAR` 的指標，定義可識別檔的統一資源定位器（URL）。  
+ 在的指標 `WCHAR` ，定義可識別檔的統一資源定位器（URL）。  
   
  `language`  
  在定義檔語言之 GUID 的指標。  
@@ -50,7 +50,7 @@ HRESULT DefineDocument(
  在定義檔案類型之 GUID 的指標。  
   
  `pRetVal`  
- 脫銷傳回之[ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)介面的指標。  
+ 脫銷傳回之[ISymUnmanagedWriter](isymunmanagedwriter-interface.md)介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -60,4 +60,4 @@ HRESULT DefineDocument(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 介面](isymunmanagedwriter-interface.md)

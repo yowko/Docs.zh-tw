@@ -1,95 +1,93 @@
 ---
-title: 雲本機的候選應用
-description: 瞭解哪些類型的應用程式受益於雲原生方法
+title: 適用于雲端原生的候選應用程式
+description: 瞭解哪些類型的應用程式可從雲端原生方法獲益
 author: robvet
-ms.date: 03/31/2020
-ms.openlocfilehash: 8e58f5bd3aa0a4503ea73ab454e42e863eb0bb5d
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 05/14/2020
+ms.openlocfilehash: b907a17b2351bc4ffe49fd6eb6f5963b209d00db
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805621"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614236"
 ---
-# <a name="candidate-apps-for-cloud-native"></a>雲本機的候選應用
+# <a name="candidate-apps-for-cloud-native"></a>適用于雲端原生的候選應用程式
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+查看您的組合中的應用程式。 有多少人符合雲端原生架構的資格？ 全部？ 也許有些嗎？
 
-查看產品群組中的應用程式。 其中有多少人有資格獲得雲原生架構? 全部？ 也許有些?
+套用成本/權益分析，很有可能不會支援雲端原生所需的等於沉重 price 標記。 雲端原生的成本遠遠超過應用程式的商業價值。
 
-應用成本/收益分析,大多數人很可能不支援雲原生所需的高昂價格標籤。 雲原生成本將遠遠超過應用程式的業務價值。
+何種類型的應用程式可能是雲端原生的候選項目？
 
-哪種應用程式可能是雲本機的候選類型?
+- 需要不斷演進商務功能/功能的策略性企業系統
 
-- 需要不斷發展業務能力/功能的大型戰略企業系統
+- 需要高發行速度的應用程式，具有高度信賴度
 
-- 需要高釋放速度的應用程式 - 高度置信度
+- 一種系統，其中個別功能必須在不完整重新部署整個系統的情況*下*發行
 
-- 具有單一功能且無需完全重新部署整個系統*即可發布的系統*
+- 由小組開發的應用程式，具有不同技術堆疊的專業知識
 
-- 由具有不同技術堆疊專業知識的團隊開發的應用程式
+- 具有必須獨立調整之元件的應用程式
 
-- 具有必須獨立擴充的元件的應用程式
+那就是舊版系統。 雖然我們想要建立新的應用程式，但我們通常會負責現代化對企業而言非常重要的舊版工作負載。 一段時間後，繼承應用程式可能會分解成微服務、容器化，最後是「replatformed」到雲端原生架構中。
 
-然後是遺留系統。 雖然我們都希望構建新的應用程式,但我們通常負責實現對業務至關重要的遺留工作負載的現代化。 隨著時間的推移,舊應用程式可以分解為微服務,容器化,並最終"重新平臺"到雲本機體系結構。
+### <a name="modernizing-legacy-apps"></a>現代化繼承應用程式
 
-### <a name="modernizing-legacy-apps"></a>現代化傳統應用
+免費的 Microsoft 電子書[現代化現有的 .net 應用程式與 Azure 雲端和 Windows 容器](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)，提供將內部部署工作負載遷移至雲端的指引。 圖1-10 顯示現代化繼承應用程式不會有單一大小適用的策略。
 
-免費的 Microsoft 電子書[使用 Azure 雲和 Windows 容器對現有 .NET 應用程式進行現代化改造](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook),為將本地工作負載遷移到雲提供了指南。 圖 1-10 顯示了沒有一種單一、一刀切的策略來實現舊應用程式的現代化。
+![遷移舊版工作負載的策略](./media/strategies-for-migrating-legacy-workloads.png)
 
-![遷移舊工作負載的策略](./media/strategies-for-migrating-legacy-workloads.png)
+**圖 1-10**。 遷移舊版工作負載的策略
 
-**圖 1-10**. 遷移舊工作負載的策略
+非關鍵的整合型應用程式，主要受益于快速隨即轉移（[雲端基礎結構就緒](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)）的遷移。 在這裡，內部部署工作負載會重新裝載至雲端式 VM，而不會變更。 此方法使用[IaaS （基礎結構即服務）模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包含數個工具，例如[Azure Migrate](https://azure.microsoft.com/services/azure-migrate/)、 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)和[Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)，讓這類移動變得更容易。 雖然此策略可以節省一些成本，但這類應用程式通常無法解除鎖定並運用雲端運算的優點。
 
-非關鍵應用主要受益於快速提升和移動 ([雲端基礎架構就緒](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)) 遷移。 在這裡,本地工作負載將重新託管到基於雲的 VM,無需更改。 此方法使用[IaaS(基礎設施即服務)模型](https://azure.microsoft.com/overview/what-is-iaas/)。 Azure 包括多個工具,如[Azure 遷移](https://azure.microsoft.com/services/azure-migrate/)[、Azure 網站恢復](https://azure.microsoft.com/services/site-recovery/)和[Azure 資料庫遷移服務](https://azure.microsoft.com/campaigns/database-migration/),以便更輕鬆地移動。 雖然這種策略可以節省一些成本,但此類應用程式通常不是為解鎖和利用雲端運算的優勢而構建的。
+對企業而言至關重要的整合型應用程式，往往受益于增強的隨即轉移（*雲端優化*）遷移。 此方法包含可啟用重要雲端服務的部署優化，而不需變更應用程式的核心架構。 例如，您可能會[容器化](https://docs.microsoft.com/virtualization/windowscontainers/about/)應用程式，並將它部署到容器協調器（例如[Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/)），這本書稍後會討論到。 一旦進入雲端，應用程式可能會耗用其他雲端服務，例如資料庫、訊息佇列、監視和分散式快取。
 
-對業務至關重要的單一應用通常受益於增強的提升和移位(*雲優化*) 遷移。 此方法包括啟用關鍵雲服務的部署優化, 而無需更改應用程式的核心體系結構。 例如,您可以將應用程式[容器化](https://docs.microsoft.com/virtualization/windowscontainers/about/),並將其部署到容器協調器,如本書後面討論的[Azure Kubernetes 服務](https://azure.microsoft.com/services/kubernetes-service/)。 進入雲后,應用程式可能會使用其他雲服務,如資料庫、消息佇列、監視和分散式緩存。
+最後，執行策略性企業功能的整合型應用程式，對於*雲端原生*方法（本書的主旨）可能會有最大的好處。 這種方法提供了靈活性和速度。 但是，它的代價是遷移、重新架構和重寫程式碼。
 
-最後,執行戰略企業功能的單一應用可能最好受益於*雲原生*方法,這是本書的主題。 此方法提供敏捷性和速度。 但是,它的代價是重新平臺、重新構建和重寫代碼。
+如果您和您的小組相信雲端原生方法是適當的，它對您以合理化組織的決策。 雲端原生方法所能解決的商務問題到底是什麼？ 它如何與商務需求一致？
 
-如果您和您的團隊認為雲原生方法是適當的,則您應該與組織一起使決策合理化。 雲原生方法將解決的業務問題究竟是什麼? 它如何與業務需求保持一致?
+- 功能的快速發行增加了信心嗎？
 
-- 快速發佈功能,增強信心?
+- 更細緻的擴充性-更有效率地使用資源？
 
-- 細粒度可擴充性 - 更有效地使用資源?
+- 改良的系統復原功能？
 
-- 提高系統彈性?
+- 已改善系統效能？
 
-- 提高系統性能?
+- 有更多的作業可見度嗎？
 
-- 對操作的更多可見性?
+- Blend 開發平臺和資料存放區，以取得最適合工作的工具嗎？
 
-- 混合開發平臺和數據存儲,以找到最適合作業的工具?
+- 未來證明應用程式的投資？
 
-- 面向未來的應用投資?
-
-正確的遷移策略取決於組織優先順序和您所針對的系統。 對許多人來說,雲優化單片應用程式或向 N-Tier 應用添加粗粒度服務可能更具成本效益。 在這些情況下,您仍然可以充分利用雲 PaaS 功能,如 Azure 應用服務提供的功能。
+適當的遷移策略取決於組織優先順序和您的目標系統。 對許多人而言，將整合型應用程式優化，或將粗略服務新增至多層式應用程式，可能會更符合成本效益。 在這些情況下，您仍然可以充分利用雲端 PaaS 功能，例如 Azure App Service 所提供的功能。
 
 ## <a name="summary"></a>摘要
 
-在本章中,我們介紹了雲原生計算。 我們提供了一個定義以及驅動雲本機應用程式的關鍵功能。 我們研究了可能證明這種投資和努力合理的應用程序類型。
+在本章中，我們引進了雲端原生運算。 我們提供了一種定義，以及驅動雲端原生應用程式的主要功能。 我們探討了可能會證明這項投資和投入時間的應用程式類型。
 
-在介紹之後,我們現在將深入探討雲原生。
+隨著背後的介紹，我們現在深入探討雲端原生的詳細探討。
 
 ### <a name="references"></a>參考
 
-- [雲原生計算基金會](https://www.cncf.io/)
+- [雲端原生運算基礎](https://www.cncf.io/)
 
-- [.NET 微服務:容器化 .NET 應用程式的體系結構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+- [.NET 微服務：容器化 .NET 應用程式的架構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [使用 Azure 雲和 Windows 容器對現有 .NET 應用程式進行現代化](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
+- [使用 Azure 雲端及 Windows 容器將現有 .NET 應用程式現代化](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
-- [科妮莉亞·大衛斯的雲原生模式](https://www.manning.com/books/cloud-native-patterns)
+- [雲端原生模式，依 Cornelia Davis](https://www.manning.com/books/cloud-native-patterns)
 
-- [超越十二因素應用](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
+- [超越12因素應用程式](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
 
-- [什麼是基礎架構作為代碼](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
+- [什麼是基礎結構即程式碼](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
 
-- [優步工程的微觀部署:自信地每天部署](https://eng.uber.com/micro-deploy/)
+- [Uber 工程的微部署：自信地每天部署](https://eng.uber.com/micro-deploy/)
 
 - [Netflix 如何部署程式碼](https://www.infoq.com/news/2013/06/netflix/)
 
-- [用於擴展微信微服務的過載控制](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
+- [調整 WeChat 微服務的多載控制](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
 
 >[!div class="step-by-step"]
->[前一個](definition.md)
->[下一個](introduce-eshoponcontainers-reference-app.md)
+>[上一個](definition.md) 
+>[下一步](introduce-eshoponcontainers-reference-app.md)

@@ -1,17 +1,15 @@
 ---
 title: 適用于雲端原生應用程式的 Azure 安全性
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |適用于雲端原生應用程式的 Azure 安全性
-ms.date: 06/30/2019
-ms.openlocfilehash: 27ef6c8313f1573ca686e8489a84f64a56116fa4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394747"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614249"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>適用于雲端原生應用程式的 Azure 安全性
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 與傳統應用程式相比，雲端原生應用程式可以更輕鬆且更容易受到保護。 就缺點而言，您必須保護更小的應用程式，並將更多的能源用於建立安全性基礎結構。 在大部分服務部署中，程式設計語言和樣式的本質上，也表示您需要特別注意來自許多不同提供者的安全性佈告欄。
 

@@ -2,17 +2,15 @@
 title: 關聯式與NoSQL 資料
 description: 瞭解雲端原生應用程式中的關聯式和 NoSQL 資料
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/17/2020
+ms.openlocfilehash: cc47faa4fcd4468de9ddc468e488297db4289ff5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507360"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613781"
 ---
 # <a name="relational-vs-nosql-data"></a>關聯式與NoSQL 資料
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 關聯式和 NoSQL 是在雲端原生應用程式中，通常會實作為兩種類型的資料庫系統。 它們會以不同的方式建立、以不同的方式儲存資料，並以不同方式存取。 在本節中，我們將探討這兩者。 在本章稍後，我們將探討名為*NewSQL*的新興資料庫技術。
 
@@ -28,7 +26,7 @@ NoSQL 資料庫包含數種不同的模型，可用於存取和管理資料，�
 
 **圖 5-9**： NoSQL 資料庫的資料模型
 
-| 型號 | 特性 |
+| 模型 | 特性 |
 | :-------- | :-------- |
 | 檔存放區 | 資料和中繼資料會以階層方式儲存在資料庫內以 JSON 為基礎的檔中。 |
 | 金鑰值存放區 | 最簡單的 NoSQL 資料庫，資料會以索引鍵/值組的集合表示。 |
@@ -83,7 +81,6 @@ NoSQL 資料庫通常會支援高可用性和分割區容錯。 它們會水準�
 | 資料抓取很簡單，而且通常是一般的 | 您可以使用複雜的查詢和報表|
 | 您的資料需要寬地理分佈 | 您的使用者更集中 |
 | 您的應用程式將會部署至商用硬體，例如使用公用雲端 | 您的應用程式將會部署到大型的高階硬體 |
-|||
 
 在接下來的章節中，我們將探索 Azure 雲端中可用來儲存和管理雲端原生資料的選項。
 
@@ -134,7 +131,7 @@ NoSQL 資料庫通常會支援高可用性和分割區容錯。 它們會水準�
 
 ### <a name="azure-database-for-mysql"></a>適用於 MySQL 的 Azure 資料庫
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL) 是一種開放原始碼關係資料庫，也是要件，適用于以[燈泡軟體堆疊](https://en.wikipedia.org/wiki/LAMP_(software_bundle))為基礎的應用程式。 針對*讀取繁重*的工作負載廣泛選擇，許多大型組織都使用它，包括 Facebook、Twitter 和 YouTube。 此社區版本免費提供，而 enterprise edition 則需要購買授權。 產品原本是在1995中建立的，由 Sun Microsystems 在2008中購買。 Oracle 在2010中取得了 Sun 和 MySQL。
+[MySQL](https://en.wikipedia.org/wiki/MySQL)  是一種開放原始碼關係資料庫，而且是針對以[燈泡軟體堆疊](https://en.wikipedia.org/wiki/LAMP_(software_bundle))為基礎的應用程式所要件的。 針對*讀取繁重*的工作負載廣泛選擇，許多大型組織都使用它，包括 Facebook、Twitter 和 YouTube。 此社區版本免費提供，而 enterprise edition 則需要購買授權。 產品原本是在1995中建立的，由 Sun Microsystems 在2008中購買。 Oracle 在2010中取得了 Sun 和 MySQL。
 
 [適用於 MySQL 的 Azure 資料庫](https://azure.microsoft.com/services/mysql/)是以開放原始碼 MySQL 伺服器引擎為基礎的受控關係資料庫服務。 它會使用 MySQL 社區 edition。 Azure MySQL 伺服器是服務的管理點。 它與用於內部部署的 MySQL 伺服器引擎相同。 引擎可以為每個伺服器建立單一資料庫，或為每個共用資源的伺服器建立多個資料庫。 您可以使用相同的開放原始碼工具繼續管理資料，而不需要學習新技能或管理虛擬機器。
 
@@ -150,7 +147,7 @@ NoSQL 資料庫通常會支援高可用性和分割區容錯。 它們會水準�
 
 [于 postgresql](https://www.postgresql.org/)是開放原始碼關係資料庫，有超過30年的有效開發。 PostgresSQL 具有可靠性和資料完整性的強式信譽。 它的功能豐富、SQL 相容，而且比 MySQL 更具效能，特別是針對複雜查詢和大量寫入的工作負載。 許多大型企業（包括 Apple、Red Hat 和 Fujitsu）都有使用於 postgresql 的建立產品。
 
-[適用於 PostgreSQL 的 Azure 資料庫](https://azure.microsoft.com/services/postgresql/)是完全受控的關係資料庫服務，以開放原始碼 Postgres 資料庫引擎為基礎。 此服務支援許多開發平臺，包括 c + +、JAVA、Python、Node\#、C 和 PHP。 您可以使用[命令列介面](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1)工具或 Azure 資料移轉服務，將于 postgresql 資料庫移轉至其中。
+[適用於 PostgreSQL 的 Azure 資料庫](https://azure.microsoft.com/services/postgresql/)是完全受控的關係資料庫服務，以開放原始碼 Postgres 資料庫引擎為基礎。 此服務支援許多開發平臺，包括 c + +、JAVA、Python、Node、C \# 和 PHP。 您可以使用[命令列介面](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1)工具或 Azure 資料移轉服務，將于 postgresql 資料庫移轉至其中。
 
 適用於 PostgreSQL 的 Azure 資料庫提供兩個部署選項：
 
@@ -190,21 +187,30 @@ Cosmos DB 支援全域層級的[主動/主動](https://kemptechnologies.com/whit
 
 ### <a name="multi-model-support"></a>多模型支援
 
-將整合型應用程式遷移至雲端原生架構時，開發小組有時必須遷移開放原始碼的 NoSQL 資料存放區。 Cosmos DB 可以協助您使用其*多模型*資料平臺，在這些 NoSQL 資料存放區中保留您的投資。 圖5-13 顯示支援的 NoSQL[相容性 api](https://www.wikiwand.com/en/Cosmos_DB)。
+將整合型應用程式遷移至雲端原生架構時，開發小組有時必須遷移開放原始碼的 NoSQL 資料存放區。 Cosmos DB 可以協助您使用其*多模型*資料平臺，在這些 NoSQL 資料存放區中保留您的投資。 下表顯示支援的 NoSQL[相容性 api](https://www.wikiwand.com/en/Cosmos_DB)。
 
-![Cosmos DB 提供者](./media/cosmos-db-providers.png)
-
-**圖 5-13**： Cosmos DB 提供者
+| 提供者 | 說明  |
+| :-------- | :-------- |
+| SQL API | 支援 JSON 檔和以 SQL 為基礎之查詢的專屬 API |
+| Mongo DB API | 支援 Mongo DB Api 和 JSON 檔|
+| Gremlin API | 支援 Gremlin API 搭配以圖表為基礎的節點和邊緣資料標記法 |
+| Cassandra API | 支援 Casandra API 來進行寬資料行的資料標記法 |  
+| 資料表 API  | 支援具有 premium 增強功能的 Azure 表格儲存體 |  
+| etcd API | 啟用 Cosmos DB 做為 Azure Kubernetes Service 叢集的備份存放區 |
 
 開發小組可以將現有的 Mongo、Gremlin 或 Cassandra 資料庫移轉到 Cosmos DB，但對資料或程式碼的變更最少。 針對新的應用程式，開發小組可以選擇開放原始碼選項或內建的 SQL API 模型。
 
 > 就內部而言，Cosmos 會以基本資料類型組成的簡單結構格式來儲存資料。 資料庫引擎會針對每個要求，將基本資料轉譯成您所選取的模型標記法。
 
-在上圖5-13 中，請記下 [[資料表 API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) ] 選項。 此 API 是 Azure 表格儲存體的演進。 兩者都共用相同的基礎資料表模型，但 Cosmos DB 資料表 API 新增了 Azure 儲存體 API 中未提供的 premium 增強功能。 這些功能的對比圖5-4。
+在上表中，請注意 [[資料表 API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) ] 選項。 此 API 是 Azure 表格儲存體的演進。 兩者都共用相同的基礎資料表模型，但 Cosmos DB 資料表 API 新增了 Azure 儲存體 API 中未提供的 premium 增強功能。 下表會對比功能。
 
-![Azure 資料表 API](media/azure-table-api.png)
-
-**圖 5-14**： Azure 資料表 API 提供者
+|  | Azure 表格儲存體  | Azure Cosmos DB  |
+| :-------- | :-------- |:-------- |
+| Latency | 快速 | 全球任何位置的讀取和寫入的一位數毫秒延遲 |
+| Throughput | 每個資料表的20000作業限制 | 每個資料表10000000個作業 |
+| 全域散發 | 具有選擇性單一次要讀取區域的單一區域 | 具有自動容錯移轉的所有區域的通行分佈 |
+| 編製索引 | 僅適用于資料分割和資料列索引鍵屬性 | 自動編制所有屬性的索引 |
+| 定價 | 以儲存體為基礎 | 根據輸送量 |
 
 使用 Azure 資料表儲存體的微服務可以輕鬆地遷移至 Cosmos DB 資料表 API。 不需要變更程式碼。
 
@@ -214,17 +220,21 @@ Cosmos DB 支援全域層級的[主動/主動](https://kemptechnologies.com/whit
 
 大部分的分散式資料庫可讓開發人員在兩種一致性模型之間做選擇：強式一致性和最終一致性。 *強式一致性*是資料可程式性的黃金標準。 它保證查詢一律會傳回最新的資料，即使系統必須產生延遲，等待更新在所有資料庫複本之間複寫。 設定為*最終一致性*的資料庫會立即傳回資料，即使該資料不是最新的複本也一樣。 第二個選項可提供更高的可用性、更高的規模，並提升效能。
 
-Azure Cosmos DB 提供五個定義完善的[一致性模型](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)，如圖5-15 所示。
+Azure Cosmos DB 提供五個定義完善的[一致性模型](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)，如圖5-13 所示。
 
 ![Cosmos DB 一致性圖表](./media/cosmos-consistency-level-graph.png)
 
-**圖 5-15**： Cosmos DB 一致性層級
+**圖 5-13**： Cosmos DB 一致性層級
 
- 這些選項可讓您針對一致性、可用性和資料的效能，做出精確的選擇和細微的取捨。 圖5-16 說明每個層級。
+ 這些選項可讓您針對一致性、可用性和資料的效能，做出精確的選擇和細微的取捨。 下表顯示這些層級。
 
-![Cosmos DB 一致性層級](./media/cosmos-db-consistency-levels.png)
-
-**圖 5-16**： Cosmos DB 一致性層級描述
+| 一致性層級 | 說明  |
+| :-------- | :-------- |
+| 最終 | 不保證讀取的順序。 複本最終會進行匯總。 |
+| 常數前置詞 | 讀取仍然是最終的，但資料會以寫入的順序傳回。 |
+| 課程 | 保證您可以讀取目前會話期間寫入的任何資料。 這是預設的一致性層級。 |
+| 限定過期 | 依您指定的間隔讀取追蹤寫入。 |  
+| 強式  | 保證讀取會傳回專案的最新認可版本。 用戶端永遠不會看到未認可或部分讀取。 |  
 
 在[Cosmos DB 一致性層級入門一](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)文中，Microsoft 程式經理 Jeremy Likness 提供五種模型的絕佳說明。
 
@@ -236,11 +246,11 @@ Azure Cosmos DB 會採用自動[分割](https://docs.microsoft.com/azure/cosmos-
 
 容器存留在 Cosmos DB 資料庫中，代表不受架構限制的專案群組。 專案是您加入至容器的資料。 它們是以檔、資料列、節點或邊緣表示。 所有新增至容器的專案都會自動編制索引。
 
-若要分割容器，專案會分成不同的子集，稱為「邏輯分割區」。 系統會根據與容器中每個專案相關聯的分割區索引鍵的值來填入邏輯分割區。 圖5-18 顯示兩個容器，其中每一個都具有以資料分割索引鍵值為基礎的邏輯分割區。
+若要分割容器，專案會分成不同的子集，稱為「邏輯分割區」。 系統會根據與容器中每個專案相關聯的分割區索引鍵的值來填入邏輯分割區。 圖5-14 顯示兩個容器，其中每一個都具有以資料分割索引鍵值為基礎的邏輯分割區。
 
 ![Cosmos DB 資料分割機制](./media/cosmos-db-partitioning.png)
 
-**圖 5-18**： Cosmos DB 資料分割機制
+**圖 5-14**： Cosmos DB 資料分割機制
 
 請注意，在上圖中，每個專案都包含「city」或「機場」的分割區索引鍵。 索引鍵會決定專案的邏輯分割區。 具有城市代碼的專案會指派給左邊的容器，以及具有機場代碼的專案到右邊的容器。 將資料分割索引鍵值與識別碼值結合，會建立專案的索引，以唯一識別專案。
 
@@ -248,16 +258,16 @@ Azure Cosmos DB 會採用自動[分割](https://docs.microsoft.com/azure/cosmos-
 
 ## <a name="newsql-databases"></a>NewSQL 資料庫
 
-*NewSQL* 是一種新興的資料庫技術，結合了 NoSQL 的分散式擴充性與關係資料庫的 ACID 保證。 對於必須跨分散式環境處理大量資料的商務系統而言，NewSQL 資料庫是很重要的，其具有完整的交易式支援和 ACID 合規性。 雖然 NoSQL 資料庫可提供大規模的擴充性，但不保證資料的一致性。 不一致資料的間歇性問題可能會對開發小組造成負擔。 開發人員必須在其微服務程式代碼中建立保護措施，以管理不一致的資料所造成的問題。
+*NewSQL*  是一種新興的資料庫技術，結合了 NoSQL 的分散式擴充性與關係資料庫的 ACID 保證。 對於必須跨分散式環境處理大量資料的商務系統而言，NewSQL 資料庫是很重要的，其具有完整的交易式支援和 ACID 合規性。 雖然 NoSQL 資料庫可提供大規模的擴充性，但不保證資料的一致性。 不一致資料的間歇性問題可能會對開發小組造成負擔。 開發人員必須在其微服務程式代碼中建立保護措施，以管理不一致的資料所造成的問題。
 
 雲端原生運算基礎（由 CNCF）具備數個 NewSQL 資料庫專案。
 
-| 專案 | 特性 |
+| 隨附此逐步解說的專案 | 特性 |
 | :-------- | :-------- |
-| Cockroach DB |符合 ACID 規範的關係資料庫，可進行全域調整。 將新節點新增至叢集，CockroachDB 會負責平衡實例和地理位置之間的資料。 它會建立、管理和散發複本，以確保可靠性。 它是開放原始碼且可免費使用。  |
+| Cockroach DB |符合 ACID 規範、可全域調整的關係資料庫。 將新節點新增至叢集，CockroachDB 會負責平衡實例和地理位置之間的資料。 它會建立、管理和散發複本，以確保可靠性。 它是開放原始碼且可免費使用。  |
 | TiDB | 支援混合式交易和分析處理（HTAP）工作負載的開放原始碼資料庫。 它與 MySQL 相容，而且具備水準擴充性、強式一致性和高可用性。  TiDB 的作用就像 MySQL 伺服器。 您可以繼續使用現有的 MySQL 用戶端程式庫，而不需要對應用程式進行大量的程式碼變更。 |
 | YugabyteDB | 一種開放原始碼、高效能、分散式 SQL database。 它支援低查詢延遲、對失敗的恢復能力，以及全域資料散發。 YugabyteDB 與 PostgressSQL 相容，並會處理相應放大的 RDBMS 和網際網路級別 OLTP 工作負載。 產品也支援 NoSQL，而且與 Cassandra 相容。 |
-|Vitess | Vitess 是一種資料庫解決方案，可用於部署、調整和管理 MySQL 實例的大型叢集。 它可以在公用或私用雲端架構中執行。 它結合並擴充許多重要的 MySQL 功能和功能，包括垂直和水準分區化支援。 Vitess 是由 YouTube 所產生，自2011起就已提供所有 YouTube 資料庫流量。 |
+|Vitess | Vitess 是用來部署、調整及管理大型 MySQL 實例叢集的資料庫解決方案。 它可以在公用或私用雲端架構中執行。 Vitess 結合並擴充許多重要的 MySQL 功能和功能，包括垂直和水準分區化支援。 Vitess 是由 YouTube 所產生，自2011起就已提供所有 YouTube 資料庫流量。 |
 
 上圖中的開放原始碼專案可從雲端原生計算基礎取得。 其中三個供應專案都是完整的資料庫產品，其中包括 .NET Core 支援。 另一個（Vitess）是一種資料庫叢集系統，它會水準調整大型的 MySQL 實例叢集。
 
@@ -284,5 +294,5 @@ Kubernetes 會使用*服務結構*，讓用戶端從單一 DNS 專案處理一�
 此服務會提供建議，引導您完成執行小型或大型遷移所需的變更。
 
 >[!div class="step-by-step"]
->[上一頁](distributed-data.md)
->[下一頁](azure-caching.md)
+>[上一個](distributed-data.md) 
+>[下一步](azure-caching.md)

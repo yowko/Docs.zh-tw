@@ -2,12 +2,12 @@
 title: Visual Studio 中的偵錯運算式樹狀架構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 6fd9580df64929f553eca29a72f06c5fce2ca878
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 4c522f2c24cff037ff33d400c8bdfa7500fd4c32
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796078"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614368"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio 中的偵錯運算式樹狀架構 (C#)
 當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀架構的快速概觀，您可以使用 `DebugView` 屬性，其代表[使用特殊語法](debugview-syntax.md)的運算式樹狀架構。 (請注意，`DebugView` 僅適用於偵錯模式。)  
@@ -24,9 +24,9 @@ ms.locfileid: "82796078"
 
   ![可讀取的運算式視覺化檢視的螢幕擷取畫面。](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
 
-- [運算式樹狀架構視覺化檢視](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([MIT 授權](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE))，提供運算式樹狀架構的圖形檢視、其屬性和相關物件：
+- [運算式樹狀架構視覺化檢視](https://github.com/zspitz/ExpressionTreeVisualizer/blob/master/README.md)（[MIT 授權](https://github.com/zspitz/ExpressionTreeVisualizer/blob/master/LICENSE)）提供運算式樹狀結構和其個別節點的樹狀檢視：
 
-  ![運算式樹狀架構視覺化檢視的螢幕擷取畫面。](media/debugging-expression-trees-in-visual-studio/expression-to-string-visualizer.png)
+  ![運算式樹狀架構視覺化檢視的螢幕擷取畫面。](media/debugging-expression-trees-in-visual-studio/expression-tree-visualizer.png)
 
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>開啟運算式樹狀架構的視覺化檢視  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82796078"
 
 2. 按一下要使用的視覺化檢視。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [運算式樹狀架構 (C#)](./index.md)
 - [Visual Studio 偵錯](/visualstudio/debugger/debugger-feature-tour)

@@ -1,17 +1,15 @@
 ---
 title: 使用彈性堆疊記錄
 description: 使用彈性堆疊、Logstash 和 Kibana 進行記錄
-ms.date: 02/05/2020
-ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448904"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613846"
 ---
 # <a name="logging-with-elastic-stack"></a>使用彈性堆疊記錄
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 有許多良好的集中式記錄工具，其成本會因免費的開放原始碼工具而有所不同，以提供更昂貴的選項。 在許多情況下，免費的工具會比付費供應專案更好或更好。 其中一項工具是三個開放原始碼元件的組合：彈性搜尋、Logstash 和 Kibana。
 
@@ -30,8 +28,8 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 這會在叢集上安裝 Elasticsearch，並將所有叢集記錄檔傳送至該叢集。
 
-![Kibana 儀表板範例，其中顯示內嵌自 Kubernetes 的記錄查詢結果，](./media/kibana-dashboard.png)
-**圖 7-6**。 Kibana 儀表板的範例，其中顯示針對內嵌自 Kubernetes 的記錄進行查詢的結果
+![Kibana 儀表板的範例，其中顯示針對從 Kubernetes ](./media/kibana-dashboard.png)
+ **圖 7-6**內嵌的記錄進行查詢的結果。 Kibana 儀表板的範例，其中顯示針對內嵌自 Kubernetes 的記錄進行查詢的結果
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>彈性堆疊有哪些優點？
 
@@ -81,7 +79,7 @@ Logstash 收集到記錄檔之後，就需要在某個位置放置它們。 雖�
 
 已製作成包含參數或已透過 Logstash 處理將參數從它們分割的記錄訊息，可以直接查詢，因為 Elasticsearch 會保留此資訊。
 
-如圖7-9 所示，搜尋 `jill@example.com`流覽過前10頁的查詢。
+如圖7-9 所示，搜尋流覽過前10頁的查詢 `jill@example.com` 。
 
 ```
 "query": {
@@ -118,5 +116,5 @@ Logstash 收集到記錄檔之後，就需要在某個位置放置它們。 雖�
 - [在 Azure 上安裝彈性堆疊](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
->[上一頁](observability-patterns.md)
->[下一頁](monitoring-azure-kubernetes.md)
+>[上一個](observability-patterns.md) 
+>[下一步](monitoring-azure-kubernetes.md)

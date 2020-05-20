@@ -1,17 +1,15 @@
 ---
 title: 雲端原生應用程式套件組合
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |雲端原生應用程式套件組合
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395495"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614340"
 ---
 # <a name="cloud-native-application-bundles"></a>雲端原生應用程式套件組合
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 雲端原生應用程式的主要內容是，它們會利用雲端的功能來加速開發工作。 這種設計通常表示完整的應用程式會使用不同種類的技術。 應用程式可能會隨附在 Docker 容器中，有些服務可能會使用 Azure Functions，而其他部分則可直接在使用硬體 GPU 加速在大型金屬伺服器上配置的虛擬機器上執行。 沒有兩個雲端原生應用程式相同，因此很難以提供傳送它們的單一機制。
 

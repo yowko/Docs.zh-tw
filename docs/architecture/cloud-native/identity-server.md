@@ -1,17 +1,15 @@
 ---
 title: 雲端原生應用程式的 IdentityServer
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |IdentityServer
-ms.date: 06/30/2019
-ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394873"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614028"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>雲端原生應用程式的 IdentityServer
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 IdentityServer 是一種開放原始碼驗證服務器，可執行 ASP.NET Core 的 OpenID Connect （OIDC）和 OAuth 2.0 標準。 其設計目的是要提供一種常見的方式來驗證所有應用程式的要求，不論它們是 web、原生、行動或 API 端點。 IdentityServer 可以用來為多個應用程式和應用程式類型執行單一登入（SSO）。 它可用來透過登入表單和類似的使用者介面來驗證實際的使用者，以及通常牽涉到不需要任何使用者介面之權杖發行、驗證和更新的服務型驗證。 IdentityServer 是設計成可自訂的解決方案。 每個實例通常會自訂，以符合個別組織及/或一組應用程式的需求。
 

@@ -1,17 +1,15 @@
 ---
 title: 可檢視性模式
 description: 雲端原生應用程式的可檢視性模式
-ms.date: 02/05/2020
-ms.openlocfilehash: a821235835b4553760b19887d500a29ca75e133e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448505"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613807"
 ---
 # <a name="observability-patterns"></a>可檢視性模式
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 就像是為了協助應用程式中的程式碼配置而開發的模式一樣，應用程式的模式也是以可靠的方式運作。 維護應用程式有三個有用的模式：**記錄**、**監視**和**警示**。
 
@@ -21,19 +19,19 @@ ms.locfileid: "77448505"
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>使用雲端原生應用程式進行記錄時的挑戰
 
-在傳統的應用程式中，記錄檔通常會儲存在本機電腦上。 事實上，在 Unix 之類的作業系統上，有一個資料夾結構定義為保存任何記錄檔，通常是在 `/var/log`之下。
+在傳統的應用程式中，記錄檔通常會儲存在本機電腦上。 事實上，在 Unix 之類的作業系統上，有一個資料夾結構定義為保存任何記錄檔，通常是在底下 `/var/log` 。
 
-![記錄到整合型應用程式中的檔案。](./media/single-monolith-logging.png)
+![在整合型應用程式中記錄到檔案。 ](./media/single-monolith-logging.png)
 **圖 7-1**。 在整合型應用程式中記錄到檔案。
 
 在單一電腦上記錄到一般檔案的實用性，在雲端環境中大幅降低。 產生記錄檔的應用程式可能無法存取本機磁片，或本機磁片可能是高度暫時性的，因為容器會在實體機器上隨機移動。 即使是跨多個節點的整合型應用程式，簡單地相應增加，也可能會使找出適當的檔案型記錄檔變得很困難。
 
-![記錄到調整的整合型整合式應用程式中的檔案。](./media/multiple-node-monolith-logging.png)
+![在調整的整合型整合式應用程式中記錄到檔案。 ](./media/multiple-node-monolith-logging.png)
 **圖 7-2**。 在調整的整合型整合式應用程式中記錄到檔案。
 
 使用微服務架構開發的雲端原生應用程式也會對以檔案為基礎的記錄器造成一些挑戰。 使用者要求現在可能會跨越在不同電腦上執行的多個服務，而且可能包含無伺服器功能，完全不需要本機檔案系統的存取權。 將來自使用者或會話的記錄與這些服務和電腦之間的相互關聯是非常困難的。
 
-![記錄到微服務應用程式中的本機檔案。](./media/local-log-file-per-service.png)
+![記錄到微服務應用程式中的本機檔案。 ](./media/local-log-file-per-service.png)
 **圖 7-3**。 記錄到微服務應用程式中的本機檔案。
 
 最後，某些雲端原生應用程式中的使用者數目很高。 假設每個使用者登入應用程式時，都會產生一百行的記錄訊息。 在隔離中，這是可管理的，但超過100000的使用者和記錄量會變得夠大，而需要特定工具才能支援有效使用記錄。
@@ -46,7 +44,7 @@ ms.locfileid: "77448505"
 * 偵錯
 * 資訊
 * 警告
-* 錯誤
+* Error
 * 嚴重
 
 這些不同的記錄層級會在記錄中提供細微性。 當應用程式在生產環境中正常運作時，可能會將它設定為只記錄重要的訊息。 當應用程式行為不佳時，可以增加記錄層級，以收集更詳細的記錄。 這會平衡效能，使其易於進行調試。
@@ -57,7 +55,7 @@ ms.locfileid: "77448505"
 
 在建立橫跨許多服務的記錄時，遵循一些標準做法也會很有説明。 比方說，在冗長的互動開始時產生相互[關聯識別碼](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/)，然後在與該互動相關的每個訊息中進行記錄，可讓您更輕鬆地搜尋所有相關的訊息。 其中一個只需要尋找單一訊息，並將相互關聯識別碼解壓縮，以尋找所有相關訊息。 另一個範例是確保每個服務（其所使用的語言或記錄程式庫）的記錄格式都相同。 這種標準化可以讓讀取記錄檔更容易。 圖7-4 示範微服務架構如何運用集中式記錄做為其工作流程的一部分。
 
-來自各種來源的 ![記錄會內嵌到集中式記錄存放區。](./media/centralized-logging.png)
+![來自各種來源的記錄會內嵌到集中式記錄存放區。 ](./media/centralized-logging.png)
 **圖 7-4**。 來自各種來源的記錄會內嵌到集中式記錄存放區。
 
 ## <a name="challenges-with-detecting-and-responding-to-potential-app-health-issues"></a>偵測及回應潛在應用程式健康情況問題的挑戰
@@ -101,5 +99,5 @@ ms.locfileid: "77448505"
 警示中最具損毀的模式之一就是引發太多警示，供人們進行調查。 服務擁有者很快就會降低了戒心先前已調查併發現良性的錯誤。 然後，當真正的錯誤發生時，就會在數百個誤報的雜訊中遺失。 [完成 Wolf 的男孩](https://en.wikipedia.org/wiki/The_Boy_Who_Cried_Wolf)parable 經常會被告知孩子，以警告他們這項風險。 請務必確定引發的警示是真正的問題。
 
 >[!div class="step-by-step"]
->[上一頁](monitoring-health.md)
->[下一頁](logging-with-elastic-stack.md)
+>[上一個](monitoring-health.md) 
+>[下一步](logging-with-elastic-stack.md)

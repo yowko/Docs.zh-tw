@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-ms.openlocfilehash: b6cf7293f1d65db1f60301f49ce655c74df3daca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20bfb3e48f411524bd4d9798f17dd935595a12bb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448325"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615016"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables 方法
 傳回所有全域變數。  
@@ -37,10 +37,10 @@ HRESULT GetGlobalVariables(
   
 ## <a name="parameters"></a>參數  
  `cVars`  
- 在`pcVars`所指向之緩衝區的長度。  
+ 在所指向之緩衝區的長度 `pcVars` 。  
   
  `pcVars`  
- 脫銷`ULONG32` 的指標，接收包含變數所需的緩衝區大小。  
+ 脫銷的指標 `ULONG32` ，接收包含變數所需的緩衝區大小。  
   
  `pVars`  
  脫銷包含變數的緩衝區。  
@@ -51,6 +51,6 @@ HRESULT GetGlobalVariables(
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 介面](isymunmanagedreader-interface.md)

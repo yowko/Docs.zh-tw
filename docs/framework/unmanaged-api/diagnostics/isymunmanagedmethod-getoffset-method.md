@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-ms.openlocfilehash: f7993ebc15f95df97a9b45523717f318d8c435ce
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 358f3d3d7c231a2baa9d2c467935ba3a5867e36b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448942"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614470"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset 方法
 傳回這個方法內對應于檔內指定位置的位移。  
@@ -46,7 +46,7 @@ HRESULT GetOffset(
  在要求位移的檔資料行。  
   
  `pRetVal`  
- 脫銷接收位移之 `ULONG32` 的指標。  
+ 脫銷接收位移之的指標 `ULONG32` 。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -56,4 +56,4 @@ HRESULT GetOffset(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 介面](isymunmanagedmethod-interface.md)

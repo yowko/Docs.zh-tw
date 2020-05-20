@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: f2299ac807c845dab482306cc4c710560bb7f1e7
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607858"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614353"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -24,7 +24,7 @@ ms.locfileid: "81607858"
 - 自封式部署
 - 有協力廠商相依性的自封式部署
 
-有關使用 Visual Studio 開發 .NET 核心應用程式的資訊,請參閱[.NET 核心依賴項和要求](../install/dependencies.md?pivots=os-windows)。
+如需使用 Visual Studio 開發 .NET Core 應用程式的相關資訊，請參閱[.Net core 相依性和需求](../install/dependencies.md?pivots=os-windows)。
 
 ## <a name="framework-dependent-deployment"></a>與 Framework 相依的部署
 
@@ -32,18 +32,18 @@ ms.locfileid: "81607858"
 
 1. 建立專案。
 
-   選擇 **「檔案** > **新專案** > **」。** 在 [新增專案]**** 對話方塊中，展開 [已安裝]**** 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]****，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)]**** 範本。 在 [名稱]**** 文字方塊中輸入專案名稱，例如 "FDD"。 選擇「**確定」** 按鈕。
+   選取 **[** 檔案] [  >  **新增**  >  **專案**]。 在 [新增專案]**** 對話方塊中，展開 [已安裝]**** 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]****，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)]**** 範本。 在 [名稱]**** 文字方塊中輸入專案名稱，例如 "FDD"。 選取 [**確定]** 按鈕。
 
 1. 新增應用程式的原始程式碼。
 
-   開啟編輯器中的*Program.cs*或*程式.vb*檔,並將自動生成的代碼替換為以下代碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
+   在編輯器中開啟*Program.cs*或*Program .vb*檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+   [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
+   [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. 建立應用程式的偵錯組建。
 
-   選擇**產生** > **解決方案**。 還可以通過選擇**調試** > **啟動調試**來編譯和運行應用程式的調試生成。
+   選取 [**組建**] [  >  **組建方案**]。 您也可以藉由選取 [**調試**程式] [開始] [偵測]，來編譯和執行應用程式的 debug 組建  >  ** **。
 
 1. 部署您的應用程式。
 
@@ -69,13 +69,13 @@ ms.locfileid: "81607858"
 
 部署具有一或多個協力廠商相依性的 Framework 相依部署時，需要任何相依性都可供專案使用。 在組建您的應用程式之前，需要執行下列其他步驟：
 
-1. 使用 [NuGet 套件管理員]****，將 NuGet 套件的參考新增至您的專案；如果您的系統上還沒有該套件，請安裝它。 要開啟套件管理員,請選擇**工具** > **NuGet 套件管理員** > **管理 NuGet 套件以進行解決方案**。
+1. 使用 [NuGet 套件管理員]****，將 NuGet 套件的參考新增至您的專案；如果您的系統上還沒有該套件，請安裝它。 若要開啟 [套件管理員]，請選取 [**工具**] [  >  **nuget 套件管理員**] [  >  **管理方案的 nuget 套件**]。
 
-1. 確認您的第三方依賴項(例如,)`Newtonsoft.Json`安裝在您的系統上,如果沒有,則安裝它們。 [已安裝]**** 索引標籤會列出您系統上已安裝的 NuGet 套件。 如果 `Newtonsoft.Json` 未列於該處，請選取 [瀏覽]**** 索引標籤，然後在 [搜尋] 方塊中輸入 "Newtonsoft.Json"。 選取 `Newtonsoft.Json`，並先在右窗格中選取您的專案，然後選取 [安裝]****。
+1. 確認您的協力廠商相依性（例如 `Newtonsoft.Json` ）已安裝在您的系統上，如果不存在，請安裝它們。 [已安裝]**** 索引標籤會列出您系統上已安裝的 NuGet 套件。 如果 `Newtonsoft.Json` 未列於該處，請選取 [瀏覽]**** 索引標籤，然後在 [搜尋] 方塊中輸入 "Newtonsoft.Json"。 選取 `Newtonsoft.Json`，並先在右窗格中選取您的專案，然後選取 [安裝]****。
 
 1. 如果 `Newtonsoft.Json` 已安裝在您的系統上，請在 [管理方案的封裝]**** 索引標籤的右窗格中選取您的專案，以將它新增至您的專案。
 
-具有第三方依賴項的框架相關部署僅與其第三方依賴項一樣可移植。 例如，如果協力廠商程式庫只支援 macOS，則應用程式就無法攜至 Windows 系統。 如果協力廠商相依性本身依賴於原生程式碼，就會發生這種情況。 其中一個絶佳範例是 [Kestrel 伺服器](/aspnet/core/fundamentals/servers/kestrel)，它需要對 [libuv](https://github.com/libuv/libuv) 的原生相依性。 當具有這類協力廠商相依性的應用程式建立了 FDD 時，已發行輸出就會包含原生相依性支援的每個[執行階段識別碼 (RID)](../rid-catalog.md) 資料夾 (存在於其 NuGet 套件中)。
+具有協力廠商相依性的 framework 相依部署，只會作為其協力廠商相關性的可攜性。 例如，如果協力廠商程式庫只支援 macOS，則應用程式就無法攜至 Windows 系統。 如果協力廠商相依性本身依賴於原生程式碼，就會發生這種情況。 其中一個絶佳範例是 [Kestrel 伺服器](/aspnet/core/fundamentals/servers/kestrel)，它需要對 [libuv](https://github.com/libuv/libuv) 的原生相依性。 當具有這類協力廠商相依性的應用程式建立了 FDD 時，已發行輸出就會包含原生相依性支援的每個[執行階段識別碼 (RID)](../rid-catalog.md) 資料夾 (存在於其 NuGet 套件中)。
 
 ## <a name="self-contained-deployment-without-third-party-dependencies"></a><a name="simpleSelf"></a> 沒有協力廠商相依性的自封式部署
 
@@ -83,14 +83,14 @@ ms.locfileid: "81607858"
 
 1. 建立專案。
 
-   選擇 **「檔案** > **新專案** > **」。** 在 [新增專案]**** 對話方塊中，展開 [已安裝]**** 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]****，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)]**** 範本。 在 [名稱]**** 文字方塊中輸入專案名稱 (例如 "SCD")，然後選取 [確定]**** 按鈕。
+   選取 **[** 檔案] [  >  **新增**  >  **專案**]。 在 [新增專案]**** 對話方塊中，展開 [已安裝]**** 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]****，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)]**** 範本。 在 [名稱]**** 文字方塊中輸入專案名稱 (例如 "SCD")，然後選取 [確定]**** 按鈕。
 
 1. 新增應用程式的原始程式碼。
 
-   開啟編輯器中的*Program.cs*或*程式.vb*檔,並將自動生成的代碼替換為以下代碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
+   在您的編輯器中開啟*Program.cs*或*程式 .vb*檔案，並以下列程式碼取代自動產生的程式碼。 它會提示使用者輸入文字，並顯示使用者輸入的個別文字。 它會使用規則運算式 `\w+` 分隔輸入文字中的字詞。
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+   [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
+   [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. 決定您是否想使用全球不區分模式。
 
@@ -98,11 +98,11 @@ ms.locfileid: "81607858"
 
    在您的專案 (而非解決方案) 點擊右鍵，進入 [方案總管]****，然後選取 [Edit SCD.csproj] \(編輯 SCD.csproj\)**** 或 [Edit SCD.vbproj] \(編輯 SCD.vbproj\)**** 啟用非變異模式。 接著，將反白處新增至檔案中：
 
-   [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
 
 1. 建立應用程式的偵錯組建。
 
-   選擇**產生** > **解決方案**。 還可以通過選擇**調試** > **啟動調試**來編譯和運行應用程式的調試生成。 透過此偵錯步驟，您可以識別應用程式在主機平台上執行時的問題。 您仍然必須在每個目標平台上進行測試。
+   選取 [**組建**] [  >  **組建方案**]。 您也可以藉由選取 [**調試**程式] [開始] [偵測]，來編譯和執行應用程式的 debug 組建  >  ** **。 透過此偵錯步驟，您可以識別應用程式在主機平台上執行時的問題。 您仍然必須在每個目標平台上進行測試。
 
    如果您啟用了不因全球化而異的模式，請務必測試您的應用程式是否適合缺少不區分文化特性的資料。
 
@@ -120,7 +120,7 @@ ms.locfileid: "81607858"
 
    1. 以滑鼠右鍵按一下 [方案總管]**** 中的專案 (而非解決方案)，然後選取 [編輯 SCD.csproj]****。
 
-   1. 在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 您還需要添加分號來分隔 RID。 如需執行階段識別碼清單，請參閱 [.NET Core RID 類別目錄](../rid-catalog.md)。
+   1. 在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 您也需要新增分號來分隔 Rid。 如需執行階段識別碼清單，請參閱 [.NET Core RID 類別目錄](../rid-catalog.md)。
 
    例如，下列範例指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
@@ -130,7 +130,7 @@ ms.locfileid: "81607858"
    </PropertyGroup>
    ```
 
-   該`<RuntimeIdentifiers>`元素可以`<PropertyGroup>`進入*csproj*檔中的任何內容。 本節稍後會提供完整的 *csproj* 檔案範例。
+   `<RuntimeIdentifiers>`元素可以移至您的 `<PropertyGroup>` *.csproj*檔案中的任何一個。 本節稍後會提供完整的 *csproj* 檔案範例。
 
 1. 發行您的應用程式。
 
@@ -144,13 +144,13 @@ ms.locfileid: "81607858"
 
       1. 在 [發行]**** 索引標籤中，選取 [發行]****。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
 
-      1. [發行]**** 索引標籤現在會顯示單一設定檔 **FolderProfile**。 設定檔的設定設定顯示在選項卡的 **「摘要」** 部分。**目標執行時**識別已發布的執行時,**目標位置**識別自包含部署的檔案寫入的位置。
+      1. [發行]**** 索引標籤現在會顯示單一設定檔 **FolderProfile**。 設定檔的設定會顯示在索引標籤的 [**摘要**] 區段中。**目標運行**時間會識別已發行的執行時間，而 [**目標位置**] 則會識別要將獨立部署的檔案寫入哪個位置。
 
       1. Visual Studio 預設會將所有發行的檔案寫入到單一目錄。 為了方便起見，最好是建立每個目標執行階段的個別設定檔，並將已發行的檔案放在特定平台目錄中。 這牽涉到建立每個目標平台的個別發行設定檔。 因此，現在請執行下列作業來重建每個平台的應用程式：
 
          1. 選取 [建立新設定檔]**** 中的 [發行]**** 對話方塊。
 
-         1. 在 [挑選發行目標]**** 對話方塊中，將 [選擇資料夾]**** 位置變更為 *bin\Release\PublishOutput\win10 x64*。 選取 [確定]  。
+         1. 在 [挑選發行目標]**** 對話方塊中，將 [選擇資料夾]**** 位置變更為 *bin\Release\PublishOutput\win10 x64*。 選取 [確定]。
 
          1. 選取設定檔清單中的新設定檔 (**FolderProfile1**)，並確定 [目標執行階段]**** 是 `win10-x64`。 如果不是，請選取 [設定]****。 在 [設定檔設定]**** 對話方塊中，將 [目標執行階段]**** 變更為 `win10-x64`，然後選取 [儲存]****。 否則，請選取 [取消]****。
 
@@ -158,7 +158,7 @@ ms.locfileid: "81607858"
 
          1. 請再次遵循上述步驟，以建立適用於 `osx.10.11-x64` 平台的設定檔。 [目標位置]**** 是 *bin\Release\PublishOutput\osx.10.11-x64*，而 [目標執行階段]**** 是 `osx.10.11-x64`。 Visual Studio 指派給此設定檔的名稱是 **FolderProfile2**。
 
-      每個目標位置都包含啟動應用所需的完整檔案集(包括應用檔和所有 .NET Core 檔案)。
+      每個目標位置都包含啟動應用程式所需的一組完整檔案（您的應用程式檔和所有 .NET Core 檔案）。
 
 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
 
@@ -192,9 +192,9 @@ ms.locfileid: "81607858"
 
 1. 選取 Visual Studio 發行您應用程式的位置。
 
-   如果只發佈到單個平臺,則可以接受 **「選擇資料夾**文本」框中的預設值;這將應用程式與框架相關的部署發佈到*\<專案目錄>\bin_Release_netcoreapp2.1\發佈*目錄。
+   如果您只是要發行到單一平臺，可以接受 [**選擇資料夾**] 文字方塊中的預設值;這會將應用程式的架構相依部署發佈至* \< 專案目錄> \bin\release\netcoreapp2.1\publish*目錄。
 
-   如果您要發行到多個平台，請附加識別目標平台的字串。 例如,如果將字串"linux"追加到檔案路徑中,Visual Studio 會將應用程式與框架相關的部署發佈到*\<專案目錄>\bin_Release_netcoreapp2.1_publish_linux*目錄。
+   如果您要發行到多個平台，請附加識別目標平台的字串。 例如，如果您將字串 "linux" 附加至檔案路徑，Visual Studio 會將應用程式的架構相依部署發行至* \< 專案目錄> \bin\release\netcoreapp2.1\publish\linux*目錄。
 
 1. 若要建立設定檔，請選取下拉式清單圖示旁的 [發行]**** 按鈕，然後選取 [建立設定檔]****。 然後選取 [建立設定檔]**** 按鈕來建立設定檔。
 
@@ -210,19 +210,19 @@ ms.locfileid: "81607858"
 
 1. 為您的設定檔命名。
 
-   1. 選擇 **「操作** > **」 重新命名設定檔**「 以命名您的設定檔」。
+   1. 選取 [**動作**] [  >  **重新命名設定檔**] 以命名您的設定檔。
 
    2. 為您的設定檔指派可識別目標平台的名稱，然後選取 *[儲存]**。
 
 重複這些步驟來定義其他應用程式目標平台。
 
-您已完成設定您的設定檔，並已準備好發行應用程式。 作法：
+您已完成設定您的設定檔，並已準備好發行應用程式。 若要這樣做：
 
    1. 如果 [發行]**** 視窗目前未開啟，請以滑鼠右鍵按一下 [方案總管]**** 中的專案 (而非解決方案)，然後選取 [發行]****。
 
    2. 選取您想要發行的設定檔，然後選取 [發行]****。 為即將發行的每個設定檔執行此動作。
 
-   每個目標位置(在我們的範例中,bin_release_netcoreapp2.1]發佈\\*配置檔名稱*包含啟動應用所需的完整檔集(包括應用檔和所有 .NET Core 檔)。
+   每個目標位置（在我們的範例中，bin\release\netcoreapp2.1\publish \\ *設定檔名稱*都包含啟動應用程式所需的一組完整檔案（您的應用程式檔和所有 .net Core 檔案）。
 
 隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
 
@@ -266,13 +266,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 部署具有一或多個協力廠商相依性的自封式部署，涉及新增相依性。 在組建您的應用程式之前，需要執行下列其他步驟：
 
-1. 使用 [NuGet 套件管理員]****，將 NuGet 套件的參考新增至您的專案；如果您的系統上還沒有該套件，請安裝它。 要開啟套件管理員,請選擇**工具** > **NuGet 套件管理員** > **管理 NuGet 套件以進行解決方案**。
+1. 使用 [NuGet 套件管理員]****，將 NuGet 套件的參考新增至您的專案；如果您的系統上還沒有該套件，請安裝它。 若要開啟 [套件管理員]，請選取 [**工具**] [  >  **nuget 套件管理員**] [  >  **管理方案的 nuget 套件**]。
 
-1. 確認您的第三方依賴項(例如,)`Newtonsoft.Json`安裝在您的系統上,如果沒有,則安裝它們。 [已安裝]**** 索引標籤會列出您系統上已安裝的 NuGet 套件。 如果 `Newtonsoft.Json` 未列於該處，請選取 [瀏覽]**** 索引標籤，然後在 [搜尋] 方塊中輸入 "Newtonsoft.Json"。 選取 `Newtonsoft.Json`，並先在右窗格中選取您的專案，然後選取 [安裝]****。
+1. 確認您的協力廠商相依性（例如 `Newtonsoft.Json` ）已安裝在您的系統上，如果不存在，請安裝它們。 [已安裝]**** 索引標籤會列出您系統上已安裝的 NuGet 套件。 如果 `Newtonsoft.Json` 未列於該處，請選取 [瀏覽]**** 索引標籤，然後在 [搜尋] 方塊中輸入 "Newtonsoft.Json"。 選取 `Newtonsoft.Json`，並先在右窗格中選取您的專案，然後選取 [安裝]****。
 
 1. 如果 `Newtonsoft.Json` 已安裝在您的系統上，請在 [管理方案的封裝]**** 索引標籤的右窗格中選取您的專案，以將它新增至您的專案。
 
-以下是此項目的完整*csproj*檔:
+以下是此專案的完整 *.csproj*檔案：
 
 # <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 和更早版本](#tab/vs156)
 
@@ -307,7 +307,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 當您部署應用程式時，應用程式中任何協力廠商相依性也包含在應用程式檔案中。 應用程式執行所在的系統上不需要協力廠商程式庫。
 
-您只能將具有第三方庫的自包含部署部署到該庫支援的平臺。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性不會存在於目標平台上，除非先前已在該處安裝這些相依性。
+您只能將具有協力廠商程式庫的獨立部署部署至該程式庫所支援的平臺。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性不會存在於目標平台上，除非先前已在該處安裝這些相依性。
 
 ## <a name="see-also"></a>另請參閱
 

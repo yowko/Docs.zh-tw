@@ -1,17 +1,15 @@
 ---
 title: 將 eShopOnContainers 部署至 Azure
 description: 使用 Azure Kubernetes Service、Helm 和 DevSpaces 部署 eShopOnContainers 應用程式。
-ms.date: 04/20/2020
-ms.openlocfilehash: a3eacedac946cb25cf3cced305d7921e29f0d204
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 93a2848f095d7593e1e169f4a6c6c1818a76217d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895588"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614093"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>將 eShopOnContainers 部署至 Azure
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 EShopOnContainers 應用程式可以部署至各種不同的 Azure 平臺。 建議的方法是將應用程式部署至 Azure Kubernetes Services （AKS）。 Helm 是一種 Kubernetes 的部署工具，可用來降低部署複雜度。 開發人員可以選擇性地執行 Azure Dev Spaces Kubernetes，以簡化其開發流程。
 
@@ -57,10 +55,10 @@ spec:
 
 您會在/k8s/helm 資料夾中找到 eShopOnContainers helm 圖表。 圖2-6 顯示如何將應用程式的不同元件組織成 helm 用來定義和管理部署的資料夾結構。
 
-![eShopOnContainers 架構](./media/eshoponcontainers-helm-folder.png)
-**圖 2-6**。 EShopOnContainers helm 資料夾。
+![eShopOnContainers 架構 ](./media/eshoponcontainers-helm-folder.png)
+ **圖 2-6**。 EShopOnContainers helm 資料夾。
 
-每個個別元件都是使用`helm install`命令來安裝。 eShop 包含「部署所有」腳本，它會迴圈執行並使用其各自的 helm 圖表來安裝元件。 結果是可重複的程式，在原始檔控制中使用應用程式進行版本設定，而小組中的任何人都可以使用單行指令碼命令，部署到 AKS 叢集。
+每個個別元件都是使用 `helm install` 命令來安裝。 eShop 包含「部署所有」腳本，它會迴圈執行並使用其各自的 helm 圖表來安裝元件。 結果是可重複的程式，在原始檔控制中使用應用程式進行版本設定，而小組中的任何人都可以使用單行指令碼命令，部署到 AKS 叢集。
 
 > 請注意，Helm 的第3版已正式移除 Tiller 伺服器元件的需求。 如需這項增強功能的詳細資訊，請參閱[這裡](https://medium.com/better-programming/why-is-tiller-missing-in-helm-3-2347c446714)。
 
@@ -72,13 +70,13 @@ spec:
 
 在圖2-7 中，您可以看到開發人員 Susie 已將更新版的自行車微服務部署到其開發人員空間。 然後她就能夠使用自訂 URL （以她的空間名稱（susie.s.dev.myapp.eus.azds.io）開頭）來測試她的變更。
 
-![eShopOnContainers 架構](./media/azure-devspaces-one.png)
-**圖 2-7**。 開發人員 Susie 會部署自己的自行車微服務版本，並加以測試。
+![eShopOnContainers 架構 ](./media/azure-devspaces-one.png)
+ **圖 2-7**。 開發人員 Susie 會部署自己的自行車微服務版本，並加以測試。
 
 同時，開發人員 John 會自訂保留微服務，並需要測試其變更。 他會將自己的變更部署到自己的開發人員空間，而不會與 Susie 的變更相衝突，如圖2-8 所示。 John 接著會使用自己的 URL （前面加上他的空間名稱（john.s.dev.myapp.eus.azds.io））來測試他的變更。
 
-![eShopOnContainers 架構](./media/azure-devspaces-two.png)
-**圖 2-8**。 開發人員 John 會部署自己的保留微服務版本，並測試它，而不會與其他開發人員衝突。
+![eShopOnContainers 架構 ](./media/azure-devspaces-two.png)
+ **圖 2-8**。 開發人員 John 會部署自己的保留微服務版本，並測試它，而不會與其他開發人員衝突。
 
 使用 Azure Dev Spaces，小組可以直接處理 AKS，同時獨立變更、部署和測試其變更。 這種方法可減少個別專用託管環境的需求，因為每位開發人員實際上都有自己的 AKS 環境。 開發人員可以使用其 CLI 來處理 Azure Dev Spaces，或啟動其應用程式直接從 Visual Studio Azure Dev Spaces。 [深入瞭解 Azure Dev Spaces 的運作方式和設定。](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
 
@@ -87,5 +85,5 @@ spec:
 EShopOnContainers 範例包含追蹤線上行銷活動的支援。 Azure 函式可用來追蹤指定之行銷活動識別碼的行銷活動詳細資料。 單一 Azure 函式比較簡單且足夠，而不是建立完整的微服務。 Azure Functions 具有簡單的組建和部署模型，特別是當設定為在 Kubernetes 中執行時。 部署函式的功能是使用 Azure Resource Manager （ARM）範本和 Azure CLI。 此活動服務不是面向客戶，而且會叫用單一作業，使其成為 Azure Functions 的絕佳候選項目。 函數需要最少的設定，包括資料庫連接字串資料和影像基底 URI 設定。 您會在 Azure 入口網站中設定 Azure Functions。
 
 >[!div class="step-by-step"]
->[上一頁](map-eshoponcontainers-azure-services.md)
->[下一頁](centralized-configuration.md)
+>[上一個](map-eshoponcontainers-azure-services.md) 
+>[下一步](centralized-configuration.md)

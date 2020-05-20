@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8e3dd32-6a44-4371-9a74-f417b11998c8
 topic_type:
 - apiref
-ms.openlocfilehash: bc1b65de026a674a3dff183050a5a205fd7052c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c695aa80ea3bf90a29ce7c5d11eda7fae5fe7b2d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428003"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614808"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 方法
 定義目前方法中的單一參數。 參數類型取自方法簽章中的參數位置（sequence）。  
@@ -70,4 +70,4 @@ HRESULT DefineParameter(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 介面](isymunmanagedwriter-interface.md)

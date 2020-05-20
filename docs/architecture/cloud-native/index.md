@@ -2,19 +2,19 @@
 title: 架構適用于 Azure 的雲端原生 .NET 應用程式
 description: 建立雲端原生應用程式的指南，利用 Azure 的容器、微服務和無伺服器功能。
 author: ardalis
-ms.date: 04/23/2020
-ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/13/2020
+ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507386"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613991"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>架構適用于 Azure 的雲端原生 .NET 應用程式
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ![封面影像](./media/cover.png)
+
+**版本 v1。0**
 
 發行者
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Microsoft &copy; Corporation 的著作權2019
+&copy;Microsoft Corporation 的著作權2020
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
@@ -58,11 +58,13 @@ Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 >
 > Microsoft 資深雲端提倡者**Cecil Phillip**
 
-深入瞭解 eShopOnContainers
-
 編輯者：
 
 > **Maira Wenzel**，Microsoft 的計畫經理，.net 團隊
+
+## <a name="version"></a>版本
+
+本指南的撰寫旨在涵蓋 **.Net core 3.1**版本，以及許多與 .net core 3.1 版本的相同「wave」技術（也就是 Azure 和其他協力廠商技術） coinciding 的其他相關更新。
 
 ## <a name="who-should-use-this-guide"></a>誰應該使用本指南
 
@@ -83,6 +85,10 @@ Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 - DevOps
 
 本指南以 PDF 形式和線上版本提供。 請隨意將本檔或其線上版本的連結轉寄給您的小組，以協助確保這些主題的一般瞭解。 大部分的主題都是以一致的方式瞭解基礎原則和模式，以及與這些主題相關的決策所牽涉到的取捨。 本檔的目標是要為小組及其領導者提供針對其應用程式架構、開發和裝載做出明智決策所需的資訊。
+
+## <a name="send-your-feedback"></a>傳送您的意見反應
+
+這本書與相關範例不斷演進，所以您的意見反應歡迎！ 如果您有關于如何改進這本書的意見，請使用[GitHub 問題](https://github.com/dotnet/docs/issues)上任何網頁底部的 [意見反應] 區段。
 
 >[!div class="step-by-step"]
 >[下一步](introduction.md)

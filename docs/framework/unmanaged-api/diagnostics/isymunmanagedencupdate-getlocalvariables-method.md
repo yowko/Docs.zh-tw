@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-ms.openlocfilehash: b5fc8b6807a4c8eb700ab3fa181a216e48a732ff
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5e5bf097a4b1e366fff807595b22c4696a91cf43
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449040"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614548"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables 方法
 取得本機變數。  
@@ -41,13 +41,13 @@ HRESULT GetLocalVariables(
  在方法的元資料標記。  
   
  `cLocals`  
- 在指出 `rgLocals` 參數大小的 `ULONG`。  
+ 在`ULONG`，表示參數的大小 `rgLocals` 。  
   
  `rgLocals`  
  脫銷[ISymUnmanagedVariable](isymunmanagedvariable-interface.md)實例的傳回陣列。  
   
  `pceltFetched`  
- 脫銷`ULONG` 的指標，接收包含區域變數所需的 `rgLocals` 緩衝區大小。  
+ 脫銷的指標 `ULONG` ，接收 `rgLocals` 包含區域變數所需的緩衝區大小。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -57,4 +57,4 @@ HRESULT GetLocalVariables(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate 介面](isymunmanagedencupdate-interface.md)

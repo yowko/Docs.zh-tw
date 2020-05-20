@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448884"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615140"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints 方法
 取得這個方法內的所有序列點。  
@@ -41,10 +41,10 @@ HRESULT GetSequencePoints(
   
 ## <a name="parameters"></a>參數  
  `cPoints`  
- 在`ULONG32`，會接收 `offsets`、`documents`、`lines`、`columns`、`endLines`和 `endColumns` 陣列的大小。  
+ 在，其 `ULONG32` 接收、、、、 `offsets` `documents` `lines` `columns` `endLines` 和 `endColumns` 陣列的大小。  
   
  `pcPoints`  
- 脫銷`ULONG32` 的指標，接收包含序列點所需的緩衝區長度。  
+ 脫銷的指標 `ULONG32` ，接收包含序列點所需的緩衝區長度。  
   
  `offsets`  
  在要在其中儲存序列點的方法開頭之 Microsoft 中繼語言（MSIL）位移的陣列。  
@@ -72,4 +72,4 @@ HRESULT GetSequencePoints(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 介面](isymunmanagedmethod-interface.md)

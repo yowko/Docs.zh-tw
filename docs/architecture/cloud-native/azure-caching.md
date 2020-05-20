@@ -2,25 +2,23 @@
 title: 在雲端原生應用程式中快取
 description: 瞭解雲端原生應用程式中的快取策略。
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 2da61a01fc53233d1934df813fcba3b91a495c43
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 05/17/2020
+ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794965"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614288"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>在雲端原生應用程式中快取
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
-快取的優點很清楚。 這項技術的運作方式是將經常存取的資料從後端資料存放區暫時複製到靠近應用程式的*快速儲存體*。 快取通常會實作為 。
+快取的優點很清楚。 這項技術的運作方式是將經常存取的資料從後端資料存放區暫時複製到靠近應用程式的*快速儲存體*。 快取通常會實作為 .。。
 
 - 資料會維持相對靜態。
 - 資料存取速度很慢，特別是與快取的速度相比。
 - 資料受限於高層級的爭用。
 
-## <a name="why"></a>為什麼？
+## <a name="why"></a>原因為何？
 
 如 Microsoft 快取[指引](https://docs.microsoft.com/azure/architecture/best-practices/caching)中所述，快取可以提升個別微服務和整個系統的效能、擴充性和可用性。 它可減少對資料存放區處理大量並行要求的延遲和競爭。 隨著資料量和使用者數目的增加，快取的優點就愈大。
 
@@ -32,15 +30,15 @@ ms.locfileid: "76794965"
 
 ## <a name="caching-architecture"></a>快取架構
 
-雲端原生應用程式通常會執行分散式快取架構。 快取是以雲端為基礎的[支援服務](./definition.md#backing-services)來裝載，並與微服務分開。 圖5-20 顯示架構。
+雲端原生應用程式通常會執行分散式快取架構。 快取是以雲端為基礎的[支援服務](./definition.md#backing-services)來裝載，並與微服務分開。 圖5-15 顯示架構。
 
 ![在雲端原生應用程式中快取](media/caching-in-a-cloud-native-app.png)
 
-**圖 5-19**：雲端原生應用程式中的快取
+**圖 5-15**：雲端原生應用程式中的快取
 
 在上圖中，請注意快取是獨立的，並由微服務共用。 在此案例中， [API 閘道](./front-end-communication.md)會叫用快取。 如第4章所述，閘道可作為所有傳入要求的前端。 分散式快取會盡可能傳回快取的資料，以增加系統回應能力。 此外，將快取與服務分開，可讓快取獨立相應增加或相應放大，以滿足更多的流量需求。
 
-此圖顯示常見的快取模式，稱為另行快取[模式](https://docs.microsoft.com/azure/architecture/patterns/cache-aside)。 針對連入要求，您必須先查詢快取（步驟 \#1）來取得回應。 如果找到，則會立即傳回資料。 如果資料不存在於快取中（稱為快取[遺漏](https://www.techopedia.com/definition/6308/cache-miss)），則會從下游服務中的本機資料庫抓取（步驟 \#2）。 然後會將它寫入快取以供未來的要求（步驟 \#3），並傳回給呼叫者。 請小心定期收回快取的資料，讓系統維持及時且一致的狀態。
+上圖顯示常見的快取模式，稱為另行快取[模式](https://docs.microsoft.com/azure/architecture/patterns/cache-aside)。 針對連入要求，您必須先查詢快取（步驟 \# 1）以取得回應。 如果找到，則會立即傳回資料。 如果資料不存在於快取中（稱為快取[遺漏](https://www.techopedia.com/definition/6308/cache-miss)），則會從下游服務中的本機資料庫抓取（步驟 \# 2）。 然後會將它寫入快取以供未來的要求（步驟 \# 3），並傳回給呼叫者。 請小心定期收回快取的資料，讓系統維持及時且一致的狀態。
 
 當共用快取增加時，將其資料分割到多個節點上可能會有好處。 這麼做可協助將爭用降到最低，並改善擴充性。 許多快取服務都支援動態新增和移除節點，以及跨分割區重新平衡資料的功能。 這種方法通常牽涉到叢集。 叢集會將同盟節點的集合公開為順暢的單一快取。 不過，在內部，資料會在節點間散佈，並遵循預先定義的散發策略來平均平衡負載。
 
@@ -62,5 +60,5 @@ Azure Cache for Redis 不只是簡單的快取伺服器。 它可以支援數種
 Azure Redis 快取適用于多個預先定義的設定和定價層。  進階層提供許多企業層級[的功能，](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-premium-tier-intro)例如叢集、資料持續性、異地複寫和虛擬網路隔離。
 
 >[!div class="step-by-step"]
->[上一頁](relational-vs-nosql-data.md)
->[下一頁](elastic-search-in-azure.md)
+>[上一個](relational-vs-nosql-data.md) 
+>[下一步](elastic-search-in-azure.md)

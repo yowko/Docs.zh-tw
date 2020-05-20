@@ -1,17 +1,15 @@
 ---
 title: 集中式設定
 description: 使用 Azure 應用程式組態和 AzureKey 保存庫集中設定雲端原生應用程式的設定。
-ms.date: 04/19/2020
-ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895660"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614223"
 ---
 # <a name="centralized-configuration"></a>集中式設定
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 與在單一實例內執行所有專案的整合型應用程式不同，雲端原生應用程式是由分散在虛擬機器、容器和地理區域的獨立服務所組成。 管理數十個相互依存服務的設定，可能是一項挑戰。 不同位置間的重複設定複本會發生錯誤，而且很容易管理。 集中式設定是分散式雲端原生應用程式的關鍵需求。
 
@@ -68,5 +66,5 @@ EShopOnContainers 應用程式包含每個微服務的本機應用程式佈建�
 - [Azure 開發人員空間](https://docs.microsoft.com/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
->[上一頁](deploy-eshoponcontainers-azure.md)
->[下一頁](scale-applications.md)
+>[上一個](deploy-eshoponcontainers-azure.md) 
+>[下一步](scale-applications.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35588317-6184-485c-ab41-4b15fc1765d9
 topic_type:
 - apiref
-ms.openlocfilehash: 393984241412f543b6ac082484cf5e23edb2d9f4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f363bed8e7002bf898755b434c919f8722dea3fb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448977"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614496"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 方法
 允許編譯器省略未從程式資料庫（PDB）資料流程修改的函式，但前提是行資訊符合需求。 您可以使用舊的 PDB 行資訊，以及函式中所有行的一個差異來判斷正確的行資訊。  
@@ -39,10 +39,10 @@ HRESULT UpdateSymbolStore2(
  在包含行資訊之[IStream](/windows/desktop/api/objidl/nn-objidl-istream)的指標。  
   
  `pDeltaLines`  
- 在[SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)結構的指標，其中包含已變更的行。  
+ 在[SYMLINEDELTA](symlinedelta-structure.md)結構的指標，其中包含已變更的行。  
   
  `cDeltaLines`  
- 在`ULONG`，表示已變更的行數。  
+ 在`ULONG`，代表已變更的行數。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -52,4 +52,4 @@ HRESULT UpdateSymbolStore2(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [ISymUnmanagedENCUpdate 介面](isymunmanagedencupdate-interface.md)

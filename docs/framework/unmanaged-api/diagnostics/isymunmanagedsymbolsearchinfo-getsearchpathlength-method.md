@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 274e73cf-8333-47ba-ac12-70214e2b0112
 topic_type:
 - apiref
-ms.openlocfilehash: 319ba58b5d012cbc0f9ddac0b83e5f3ae2ae062a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0be7297fbb71302035e71fbbf2c8b5e2a7faa2da
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446176"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615289"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a>ISymUnmanagedSymbolSearchInfo::GetSearchPathLength 方法
 取得搜尋路徑長度。  
@@ -34,7 +34,7 @@ HRESULT GetSearchPathLength(
   
 ## <a name="parameters"></a>參數  
  `pcchPath`  
- 脫銷`ULONG32` 的指標，接收包含搜尋路徑長度所需的緩衝區大小（以字元為單位）。  
+ 脫銷的指標， `ULONG32` 接收包含搜尋路徑長度所需的緩衝區大小（以字元為單位）。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -42,6 +42,6 @@ HRESULT GetSearchPathLength(
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedSymbolSearchInfo 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)
+- [ISymUnmanagedSymbolSearchInfo 介面](isymunmanagedsymbolsearchinfo-interface.md)

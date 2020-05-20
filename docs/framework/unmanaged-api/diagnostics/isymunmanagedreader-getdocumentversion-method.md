@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a51f1f64-e084-44c5-830c-2222da5a6bbf
 topic_type:
 - apiref
-ms.openlocfilehash: 3bc578be680951a1d41c92fb2169c860882b2e31
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2cc541b2a78f16d5ca6b19405794faa825a9d72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448303"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615029"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion 方法
-取得指定檔的指定版本。 檔版本從1開始，而且每次使用[UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)方法更新檔時，都會遞增。 如果 `pbCurrent` 參數是 `true`，這就是檔的最新版本。  
+取得指定檔的指定版本。 檔版本從1開始，而且每次使用[UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md)方法更新檔時，都會遞增。 如果 `pbCurrent` 參數為 `true` ，則這是檔的最新版本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ HRESULT GetDocumentVersion (
  脫銷接收指定檔之版本之變數的指標。  
   
  `pbCurrent`  
- 脫銷如果這是檔的最新版本，則為接收 `true` 之變數的指標，如果不是最新版本，則為 `false`。  
+ 脫銷`true`如果這是檔的最新版本，或 `false` 如果不是最新版本，則為所接收之變數的指標。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -50,6 +50,6 @@ HRESULT GetDocumentVersion (
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 介面](isymunmanagedreader-interface.md)

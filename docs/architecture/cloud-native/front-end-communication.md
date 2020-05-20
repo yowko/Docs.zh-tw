@@ -2,17 +2,15 @@
 title: 前端用戶端通訊
 description: 瞭解前端用戶端如何與雲端原生系統通訊
 author: robvet
-ms.date: 09/08/2019
-ms.openlocfilehash: 89f13ea1c9ecbe92e959ae63a4c21bf7775f8943
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 97421e9b90b19c720b1ab0ff8dd1e5f029cba5e4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895579"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614054"
 ---
 # <a name="front-end-client-communication"></a>前端用戶端通訊
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在雲端原生系統中，前端用戶端（行動裝置、web 和桌面應用程式）需要通道，才能與獨立的後端微服務互動。  
 
@@ -163,5 +161,5 @@ Azure SignalR Service 的另一個優點是執行無伺服器雲端原生服務�
 Azure SignalR Service 與其他 Azure 服務（例如 Azure SQL Database、服務匯流排或 Redis 快取）緊密整合，為您的雲端原生應用程式開啟許多可能性。
 
 >[!div class="step-by-step"]
->[上一頁](communication-patterns.md)
->[下一頁](service-to-service-communication.md)
+>[上一個](communication-patterns.md) 
+>[下一步](service-to-service-communication.md)

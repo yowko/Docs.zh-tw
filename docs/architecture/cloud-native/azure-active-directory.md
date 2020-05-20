@@ -2,16 +2,14 @@
 title: Azure Active Directory
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |Azure Active Directory
 ms.date: 06/30/2019
-ms.openlocfilehash: 207043507a9052c47683383a98cef6417a1a2740
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 03f5ea8e84bc3c4a2a88a63d4b109aabf0c64f36
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183690"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614275"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Microsoft Azure Active Directory （Azure AD）提供身分識別和存取管理服務。 客戶使用它來設定及維護使用者的身分、要儲存哪些資訊、誰可以存取該資訊、誰可以進行管理，以及哪些應用程式可以存取它。 AAD 可以針對設定為使用它的應用程式驗證使用者，提供單一登入（SSO）體驗。 它可以單獨使用，或與內部部署環境中執行的 Windows AD 整合。
 
@@ -21,8 +19,8 @@ Azure AD 支援公司品牌的登入畫面、多工廠驗證和雲端式應用�
 
 ## <a name="references"></a>參考
 
-- [Microsoft 身分識別平臺](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft 身分識別平台](https://docs.microsoft.com/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
->[上一頁](authentication-authorization.md)
->[下一頁](identity-server.md)
+>[上一個](authentication-authorization.md) 
+>[下一步](identity-server.md)

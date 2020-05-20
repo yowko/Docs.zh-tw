@@ -1,24 +1,22 @@
 ---
 title: 將 eShopOnContainers 對應至 Azure 服務
 description: 將 eShopOnContainers 對應至 Azure 服務，例如 Azure Kubernetes Service、API 閘道和 Azure 服務匯流排。
-ms.date: 04/20/2020
-ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 271707404f7fb51aec59c6f682ddaefd0bac82cc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895506"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613833"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>將 eShopOnContainers 對應至 Azure 服務
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 雖然並非必要，但 Azure 非常適合支援 eShopOnContainers，因為專案已建立為雲端原生應用程式。 應用程式是以 .NET Core 為基礎，因此它可以在 Linux 或 Windows 容器上執行，視 Docker 主機而定。 應用程式是由多個自發微服務所組成，每個都有自己的資料。 不同的微服務展示不同的方法，範圍從簡單的 CRUD 作業到更複雜的 DDD 和 CQRS 模式。 微服務透過 HTTP 與用戶端通訊，透過以訊息為基礎的通訊彼此。 應用程式也支援多個用戶端平臺，因為它採用 HTTP 作為標準通訊協定，並包含在 Android、iOS 和 Windows 平臺上執行的 ASP.NET Core 和 Xamarin 行動應用程式。
 
 應用程式的架構如圖2-5 所示。 左側是用戶端應用程式，分成行動、傳統 Web 和 Web 單頁應用程式（SPA）等。 右側是組成系統的伺服器端元件，每一個都可以裝載于 Docker 容器和 Kubernetes 叢集。 傳統的 web 應用程式由以黃色顯示的 ASP.NET Core MVC 應用程式提供技術支援。 此應用程式和行動和 web SPA 應用程式會透過一或多個 API 閘道與個別微服務通訊。 API 閘道會遵循「前端的後端」（BFF）模式，這表示每個閘道都是設計來支援指定的前端用戶端。 個別的微服務會列在 API 閘道的右邊，同時包含商務邏輯和某種類型的持續性存放區。 不同的服務會利用 SQL Server 資料庫、Redis 快取實例和 MongoDB/CosmosDB 存放區。 最右側的是系統的事件匯流排，用於微服務之間的通訊。
 
-![eShopOnContainers 架構](./media/eshoponcontainers-architecture.png)
-**圖 2-5**。 EShopOnContainers 架構。
+![eShopOnContainers 架構 ](./media/eshoponcontainers-architecture.png)
+ **圖 2-5**。 EShopOnContainers 架構。
 
 此架構的伺服器端元件可輕鬆地對應至 Azure 服務。
 
@@ -65,5 +63,5 @@ EShopOnContainers 應用程式會將使用者目前的購物籃儲存在要求�
 一旦部署到生產環境後，eShopOnContainers 應用程式就能夠利用數個可用的 Azure 服務來改善其復原能力。 應用程式會發佈健康情況檢查，其可與 Application Insights 整合，以根據應用程式的可用性提供報告和警示。 Azure 資源也會提供診斷記錄，以用來識別及更正錯誤和效能問題。 資源記錄會提供應用程式使用不同 Azure 資源的時機和方式的詳細資訊。 您將在[第6章](resiliency.md)深入瞭解雲端原生復原功能。
 
 >[!div class="step-by-step"]
->[上一頁](introduce-eshoponcontainers-reference-app.md)
->[下一頁](deploy-eshoponcontainers-azure.md)
+>[上一個](introduce-eshoponcontainers-reference-app.md) 
+>[下一步](deploy-eshoponcontainers-azure.md)

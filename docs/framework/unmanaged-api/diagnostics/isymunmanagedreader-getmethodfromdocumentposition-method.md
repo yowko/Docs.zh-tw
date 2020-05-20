@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-ms.openlocfilehash: 5afd48b36355835647ab8d06691f2bd2058b00cb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8015056b110fe8a5b5122b1bc81143980b780047
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426742"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614977"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition 方法
 傳回方法，其中包含檔中指定位置的中斷點。  
@@ -46,7 +46,7 @@ HRESULT GetMethodFromDocumentPosition (
  在指定檔的資料行。  
   
  `pRetVal`  
- 脫銷[ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)物件位址的指標，表示包含中斷點的方法。  
+ 脫銷[ISymUnmanagedMethod 介面](isymunmanagedmethod-interface.md)物件位址的指標，表示包含中斷點的方法。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -54,6 +54,6 @@ HRESULT GetMethodFromDocumentPosition (
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 介面](isymunmanagedreader-interface.md)

@@ -1,17 +1,15 @@
 ---
 title: 安全性
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |安全級
-ms.date: 06/30/2019
-ms.openlocfilehash: 848255de70038798417a558543d0b1ea8cff1e37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9afbc2c960fdd16721e1d3aa7fd01d5c0c1fe2f9
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184768"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613664"
 ---
 # <a name="security"></a>安全性
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 這不是一天的時間，那就是新聞不會包含某個公司遭到駭客入侵或失去客戶資料的部分。 即使是國家/地區也不會將安全性視為事後所建立的問題。 多年來，公司已經處理客戶資料的安全性，事實上，他們的整個網路都是「不錯」的東西。 Windows 伺服器不會被修補，古版本的 PHP 持續執行，而 MongoDB 資料庫則保持在世界各地開放。
 
@@ -24,5 +22,5 @@ ms.locfileid: "71184768"
 簡言之，安全性是一項很重要的業務。
 
 >[!div class="step-by-step"]
->[上一頁](identity-server.md)
->[下一頁](azure-security.md)
+>[上一個](identity-server.md) 
+>[下一步](azure-security.md)

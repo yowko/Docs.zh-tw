@@ -2,12 +2,12 @@
 title: 在 CQRS 微服務中實作讀取/查詢
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 查詢端使用 Dapper 在 eShopOnContainers 訂購微服務上的實作。
 ms.date: 10/08/2018
-ms.openlocfilehash: 4b789bb3fb465c17c5c4445a1d3dc9dffa47a152
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 71db95e6fc17475693183be9c6854884cd331ce1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396266"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614405"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服務中實作讀取/查詢
 
@@ -19,11 +19,11 @@ ms.locfileid: "83396266"
 
 **圖 7-3**. CQRS 微服務中最簡單的查詢方法
 
-對於簡化 CQRS 方法中的查詢端，最簡單的方法可以藉由使用例如 Dapper 等微型 ORM，傳回動態 ViewModel 查詢資料庫來實作。 查詢定義會查詢資料庫，並傳回每個查詢立即建立的動態 ViewModel。 因為查詢都具有等冪性，所以無論您執行查詢多少次，它們都不會變更資料。 因此，您不必受限於交易端使用的任何 DDD 模式，例如彙總及其他模式，這就是查詢與交易區域分開的原因。 您只要向資料庫查詢 UI 需要的資料，並傳回不需要在任何位置以靜態方式定義的動態 ViewModel (ViewModel 沒有類別)，SQL 陳述式本身除外。
+在簡化的 CQRS 方法中，查詢的最簡單方法，可以藉由使用類似 Dapper 的微 ORM 查詢資料庫來執行，傳回動態 Viewmodel。 查詢定義會查詢資料庫，並傳回每個查詢立即建立的動態 ViewModel。 因為查詢都具有等冪性，所以無論您執行查詢多少次，它們都不會變更資料。 因此，您不必受限於交易端使用的任何 DDD 模式，例如彙總及其他模式，這就是查詢與交易區域分開的原因。 您可以查詢資料庫中是否有 UI 所需的資料，並傳回不需要在任何位置以靜態方式定義的動態 ViewModel （不含 Viewmodel 的類別），除非 SQL 語句本身。
 
-因為這是簡單的方法，所以查詢端需要的程式碼 (例如使用 [Dapper](https://github.com/StackExchange/Dapper) 等微 ORM 的程式碼) 可在[相同的 Web API 專案](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)中實作。 如圖 7-4 所示。 查詢是在 eShopOnContainers 解決方案內的 **Ordering.API** 微服務專案中所定義。
+由於這種方法很簡單，因此查詢端所需的程式碼（例如，使用類似[Dapper](https://github.com/StackExchange/Dapper)的微 ORM 的程式碼）可以在[相同的 Web API 專案中](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)執行。 如圖 7-4 所示。 查詢是在 eShopOnContainers 解決方案內的 **Ordering.API** 微服務專案中所定義。
 
-![排序 API 專案的 [查詢] 資料夾的螢幕擷取畫面。](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
+![排序. API 專案的 [查詢] 資料夾的螢幕擷取畫面。](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **圖 7-4**。 eShopOnContainers 訂購微服務中的查詢
 
@@ -31,13 +31,13 @@ ms.locfileid: "83396266"
 
 因為執行查詢是為取得用戶端應用程式所需要的資料，所以可以根據查詢傳回的資料，專為用戶端建立傳回型別。 這些模型或資料傳輸物件 (DTO)，稱為 ViewModel。
 
-傳回的資料 (ViewModel) 可以是多個實體或資料庫多資料表的聯結資料結果，甚至可以是跨多個在交易區域網域模型中定義的彙總結果。 在此情況下，因為您要建立獨立於網域模型外的查詢，所以完全略過彙總界限和限制式，而且您可以隨意查詢可能需要的任何資料表和資料行。 此方法為開發人員建立或更新查詢提供了極大的彈性和生產力。
+傳回的資料 (ViewModel) 可以是多個實體或資料庫多資料表的聯結資料結果，甚至可以是跨多個在交易區域網域模型中定義的彙總結果。 在此情況下，因為您要建立與領域模型無關的查詢，所以會忽略匯總界限和條件約束，而且您可以隨意查詢任何可能需要的資料表和資料行。 此方法為開發人員建立或更新查詢提供了極大的彈性和生產力。
 
 ViewModel 可以是在類別中定義的靜態類型。 或者，您可以根據執行的查詢以動態方式建立它們 (如同在訂購微服務中實作的一樣)，這對開發人員而言非常方便好用。
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>將 Dapper 用作微 ORM 以執行查詢
 
-您可以使用任何微 ORM、Entity Framework Core 或甚至純 ADO.NET 進行查詢。 在範例應用程式中，eShopOnContainers 的訂購微服務選取 Dapper 為熱門的微 ORM 範例。 它在執行一般 SQL 查詢時有絕佳的效能，因為它是非常輕簡的架構。 您可以使用 Dapper 撰寫能存取並聯結多份資料表的 SQL 查詢。
+您可以使用任何微 ORM、Entity Framework Core 或甚至純 ADO.NET 進行查詢。 在範例應用程式中，eShopOnContainers 的訂購微服務選取 Dapper 為熱門的微 ORM 範例。 它可以執行具有絕佳效能的純 SQL 查詢，因為它是輕結構的架構。 您可以使用 Dapper 撰寫能存取並聯結多份資料表的 SQL 查詢。
 
 Dapper 是開放原始碼專案 (原創者為 Sam Saffron)，屬於 [Stack Overflow](https://stackoverflow.com/) (堆疊溢位) 的建置組塊。 若要使用 Dapper，您只需要透過 [Dapper NuGet 套件](https://www.nuget.org/packages/Dapper)安裝它即可，如下圖所示：
 
@@ -45,13 +45,13 @@ Dapper 是開放原始碼專案 (原創者為 Sam Saffron)，屬於 [Stack Overf
 
 您也需要加入指示詞 `using` ，讓您的程式碼可以存取 Dapper 擴充方法。
 
-當您在程式碼中使用 Dapper 時，您可直接使用 <xref:System.Data.SqlClient> 命名空間提供的 <xref:System.Data.SqlClient.SqlConnection> 類別。 透過 QueryAsync 方法和其他擴充 <xref:System.Data.SqlClient.SqlConnection> 類別的擴充方法，您可以直接且有效率的只執行查詢。
+當您在程式碼中使用 Dapper 時，您可直接使用 <xref:System.Data.SqlClient> 命名空間提供的 <xref:System.Data.SqlClient.SqlConnection> 類別。 透過 QueryAsync 方法和其他擴充類別的擴充方法 <xref:System.Data.SqlClient.SqlConnection> ，您可以用簡單且高效能的方式來執行查詢。
 
 ## <a name="dynamic-versus-static-viewmodels"></a>動態 ViewModel 與靜態 ViewModel
 
 從伺服器端將 ViewModel 傳回用戶端應用程式時，您可以將這些 ViewModel 視為不同於您實體模型內部網域實體的 DTO (資料傳輸物件)，因為 ViewModel 是依用戶端應用程式需要的方式保留資料。 因此，在許多情況下，您可以彙總來自多個網域實體的資料，並根據用戶端應用程式需要該資料的方式精確撰寫 ViewModel。
 
-您可以明確定義這些 ViewModel 或 DTO (為資料持有者類別)，如稍後之程式碼片段中示範的 `OrderSummary` 類別；或者可以只根據您查詢傳回的屬性，僅傳回動態 ViewModel 或動態 DTO 作為動態類型。
+您可以明確地定義這些 Viewmodel 或 Dto （如資料預留位置類別），如 `OrderSummary` 稍後代碼段中所示的類別。 或者，您也可以根據查詢所傳回的屬性，將動態 Viewmodel 或動態 Dto 傳回為動態型別。
 
 ### <a name="viewmodel-as-dynamic-type"></a>ViewModel 作為動態類型
 
@@ -87,7 +87,7 @@ public class OrderQueries : IOrderQueries
 
 重點是，透過使用動態類型，傳回的資料集合會以動態方式組合成 ViewModel。
 
-優點：**** 這種方法可在您每次更新查詢的 SQL 句子時，減少修改靜態 ViewModel 類別的需求，讓這種設計方法在撰寫程式碼更為靈活，簡單快速地因應未來的變更。
+**優點：** 當您更新查詢的 SQL 句子時，這種方法可減少修改靜態 ViewModel 類別的需求，讓這種設計方法在撰寫程式碼、簡單且快速地隨著未來變更而演變時變得靈活。
 
 **缺點：** 長期來看，動態類型對清晰度和服務與用戶端應用程式的相容性可能造成負面影響。 此外，如果使用動態類型，像 Swashbuckle 這類的中介軟體無法提供傳回型別的同級文件。
 
@@ -99,7 +99,7 @@ public class OrderQueries : IOrderQueries
 
 **缺點：** 如前所述，更新程式碼時，它會採用更多步驟來更新 DTO 類別。
 
-經驗提示：** 在 eShopOnContainers 訂購微服務實作的查詢中，我們就開始使用動態 ViewModel 進行開發，因為它在早期開發階段非常簡單靈活。 但是，一旦開發穩定之後，我們選擇重構 Api，並針對 Viewmodel 使用靜態或預先定義的 Dto，因為微服務的取用者更清楚知道用來作為「合約」的明確 DTO 類型。
+以*我們的經驗為基礎的秘訣*：在 eShopOnContainers 中的訂購微服務上執行的查詢中，我們開始使用動態 viewmodel 進行開發，因為它在早期開發階段是直接且敏捷的。 但是，一旦開發穩定之後，我們選擇重構 Api，並針對 Viewmodel 使用靜態或預先定義的 Dto，因為微服務的取用者更清楚知道用來作為「合約」的明確 DTO 類型。
 
 在下例中，您會看到查詢如何使用明確的 ViewModel DTO 類別：OrderSummary 類別，傳回資料。
 
@@ -134,7 +134,7 @@ public class OrderQueries : IOrderQueries
 
 #### <a name="describe-response-types-of-web-apis"></a>描述 Web API 的回應類型
 
-取用 Web API 和微服務的開發人員最關心的是傳回的內容，尤其是回應類型和錯誤碼 (如果不是標準的話)。 這些是以 XML 註解和資料註釋進行處理。
+使用 web Api 和微服務的開發人員最關心的是傳回的內容，特別是回應類型和錯誤碼（如果不是標準的話）。 回應類型會在 XML 批註和資料批註中處理。
 
 Swagger UI 中沒有正確的文件，取用者就不清楚應該傳回哪些類型或可以傳回哪些 HTTP 代碼。 已藉由新增 <xref:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute?displayProperty=nameWithType> 來修正該問題，因此 Swashbuckle 可以產生 API 傳回模型和值的更多相關資訊，如下列程式碼所示：
 
@@ -181,7 +181,7 @@ public class OrderSummary
 
 **圖 7-5**. 顯示 Web API 回應類型和可能 HTTP 狀態碼的 Swagger UI
 
-您在上圖中可以看到一些範例值，它們是以 ViewModel 類型為基礎，加上可以傳回的可能 HTTP 狀態碼。
+影像會根據 ViewModel 類型，以及可傳回的可能 HTTP 狀態碼來顯示一些範例值。
 
 ## <a name="additional-resources"></a>其他資源
 

@@ -1,17 +1,15 @@
 ---
-title: 相同比較
+title: 身分識別
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |2x2
-ms.date: 09/23/2019
-ms.openlocfilehash: 4cc7c04bf323d2589777df466321f6801f511b6f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.date: 05/13/2020
+ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183046"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614015"
 ---
-# <a name="identity"></a>相同比較
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="identity"></a>身分識別
 
 大部分的軟體應用程式必須對呼叫它們的使用者或進程有一些瞭解。 與應用程式互動的使用者或進程稱為「安全性主體」，而驗證和授權這些主體的流程稱為「身分識別管理」，或簡稱「身分*識別*」。 簡單的應用程式可能會在應用程式內包含所有的身分識別管理，但這種方法並不適合許多應用程式和許多類型的安全性主體。 Windows 支援使用 Active Directory 來提供集中式驗證和授權。
 
@@ -29,8 +27,8 @@ ms.locfileid: "71183046"
 
 ## <a name="references"></a>參考
 
-- [Microsoft 身分識別平臺](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft 身分識別平台](https://docs.microsoft.com/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
->[上一頁](azure-monitor.md)
->[下一頁](authentication-authorization.md)
+>[上一個](azure-monitor.md) 
+>[下一步](authentication-authorization.md)

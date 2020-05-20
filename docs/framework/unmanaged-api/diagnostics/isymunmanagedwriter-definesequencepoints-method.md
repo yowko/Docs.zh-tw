@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-ms.openlocfilehash: 63ba108bc234e566450bb019afc63acb4e75ad1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8889c412f414f38d1d18d33ec297e82fd052280d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427991"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614795"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
 在目前的方法內定義一組序列點。 每個起始行和起始欄都會定義方法內的語句開頭。 每個結尾行和結束資料行都會定義方法內的語句結尾。 陣列應該以遞增的位移順序排序。 一定會從方法的開頭來測量位移（以位元組為單位）。  
@@ -43,7 +43,7 @@ HRESULT DefineSequencePoints(
  在要定義序列點的檔物件。  
   
  `spCount`  
- 在`ULONG32`，指出每個 `offsets`、`lines`、`columns`、`endLines`和 `endColumns` 緩衝區的大小。  
+ 在， `ULONG32` 表示每個 `offsets` 、 `lines` 、 `columns` 、 `endLines` 和 `endColumns` 緩衝區的大小。  
   
  `offsets`  
  在從方法開頭測量之序列點的位移。  
@@ -55,10 +55,10 @@ HRESULT DefineSequencePoints(
  在序列點的起始欄號。  
   
  `endLines`  
- 在序列點的結束行號。 這個參數是選擇性的。  
+ 在序列點的結束行號。 此為選擇性參數。  
   
  `endColumns`  
- 在序列點的結束欄號。 這個參數是選擇性的。  
+ 在序列點的結束欄號。 此為選擇性參數。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -68,4 +68,4 @@ HRESULT DefineSequencePoints(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 介面](isymunmanagedwriter-interface.md)

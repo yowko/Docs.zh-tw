@@ -1,13 +1,13 @@
 ---
 title: 調整容器和無伺服器應用程式的規模
 description: 使用 Azure Kubernetes Service 調整雲端原生應用程式，以滿足使用者需求。
-ms.date: 04/13/2020
-ms.openlocfilehash: b4580e6994611ad394bbaa2d5bb07f64c2798569
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: a5e1e8df785fd08901d9be41c0a06db35e09296b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199920"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613716"
 ---
 # <a name="scaling-containers-and-serverless-applications"></a>調整容器和無伺服器應用程式的規模
 
@@ -44,5 +44,5 @@ Azure Functions 視需要自動相應放大。 系統會根據觸發事件的數
 雖然預設取用方案為大部分應用程式提供經濟實惠且可調整的解決方案，但 premium 選項可讓開發人員彈性自訂 Azure Functions 需求。 升級至 premium 方案可讓您控制實例大小、預先準備就緒的實例（以避免冷啟動延遲）和專用 Vm。
 
 >[!div class="step-by-step"]
->[上一頁](deploy-containers-azure.md)
->[下一頁](other-deployment-options.md)
+>[上一個](deploy-containers-azure.md) 
+>[下一步](other-deployment-options.md)

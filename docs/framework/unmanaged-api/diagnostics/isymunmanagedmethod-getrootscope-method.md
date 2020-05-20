@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d58caac-2e75-4dfa-9249-32d8a624b247
 topic_type:
 - apiref
-ms.openlocfilehash: c956f5d68c992f1b08988e59038e8667b391f734
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 650a64e72b410cddfbee7dce676ddbb5a3b8b3d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448923"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614444"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>ISymUnmanagedMethod::GetRootScope 方法
 取得這個方法內的根詞法範圍。 這個範圍會封入整個方法。  
@@ -34,7 +34,7 @@ HRESULT GetRootScope(
   
 ## <a name="parameters"></a>參數  
  `pRetVal`  
- 脫銷設定為所傳回[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)介面的指標。  
+ 脫銷設定為所傳回[ISymUnmanagedScope](isymunmanagedscope-interface.md)介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -44,4 +44,4 @@ HRESULT GetRootScope(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 介面](isymunmanagedmethod-interface.md)

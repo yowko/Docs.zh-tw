@@ -1,17 +1,15 @@
 ---
 title: DevOps
 description: 雲端原生應用程式的 DevOps 考慮
-ms.date: 05/12/2020
-ms.openlocfilehash: 498ce64c3a387433862142826059b4f7e513ec7b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395793"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614109"
 ---
 # <a name="devops"></a>DevOps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 軟體顧問的最愛口號是回答「It 相依」的問題。 這不是因為軟體顧問喜歡不接受某一個位置。 這是因為軟體中的任何問題都沒有真正的解答。 絕對不會有任何權利和錯誤，而是相反之間的平衡。
 

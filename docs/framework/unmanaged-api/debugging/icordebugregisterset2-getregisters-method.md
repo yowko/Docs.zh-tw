@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: b7a356d80d63fae65191bbf4fc0a23d7e02004c9
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 71b9d59621efb547713cb4a6c9df7a7142f4a677
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378223"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615185"
 ---
-# <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters 方法
+# <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2：： GetRegisters 方法
+
 取得給定位元遮罩所指定之每個暫存器的值（適用于目前執行程式碼的平臺）。  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +37,8 @@ HRESULT GetRegisters (
 );  
 ```  
   
-## <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數
+
  `maskCount`  
  在陣列的大小（以位元組為單位） `mask` 。  
   
@@ -49,16 +51,18 @@ HRESULT GetRegisters (
  `regBuffer`  
  脫銷物件的陣列 `CORDB_REGISTER` ，其中每一個都會接收暫存器的值。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>備註
+
  `GetRegisters`方法會從遮罩所指定的暫存器中傳回值的陣列。 陣列不包含未設定其 mask 位的暫存器值。 因此，陣列的大小 `regBuffer` 必須等於遮罩中的1。 如果的值 `regCount` 太小，用於遮罩所指示的暫存器數目，則較高編號的暫存器值將會從集合中截斷。 如果 `regCount` 太大，則不會修改未使用的 `regBuffer` 元素。  
   
  如果遮罩會指出無法使用的暫存器，則會傳回該暫存器的不定值。  
   
- 若平臺具有64以上的暫存器，則此為 `ICorDebugRegisterSet2::GetRegisters` 必要方法。 例如，IA64 具有128一般用途暫存器和128浮點暫存器，因此您在位元遮罩中需要超過64位。  
+ 在具有超過64暫存器的平臺中，此 `ICorDebugRegisterSet2::GetRegisters` 方法是必要的。 例如，IA64 具有128一般用途暫存器和128浮點暫存器，因此您在位元遮罩中需要超過64個位。  
   
- 如果您沒有超過64暫存器（如 x86 之類的平臺）， `GetRegisters` 方法實際上只會將位元組陣列中的位元組轉譯 `mask` 成 `ULONG64` ，然後呼叫[ICorDebugRegisterSet：： GetRegisters](icordebugregisterset-getregisters-method.md)方法，它會採用 `ULONG64` 遮罩。  
+ 如果您沒有超過64暫存器（如 x86 之類的平臺）， `GetRegisters` 方法只會將位元組陣列中的位元組轉譯 `mask` 成 `ULONG64` ，然後呼叫[ICorDebugRegisterSet：： GetRegisters](icordebugregisterset-getregisters-method.md)方法，它會採用 `ULONG64` 遮罩。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>需求
+
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
@@ -67,7 +71,7 @@ HRESULT GetRegisters (
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugRegisterSet2 介面](icordebugregisterset2-interface.md)
 - [ICorDebugRegisterSet 介面](icordebugregisterset-interface.md)

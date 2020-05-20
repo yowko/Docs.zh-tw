@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4d205586921b377147eeab80754e1a0d9e52b0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39b0c065a324f2b3939467901739f995bc9abbad
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427837"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614756"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute 方法
 根據名稱定義自訂屬性。 這些屬性會保留在符號存放區中，不同于中繼資料自訂屬性。  
@@ -40,10 +40,10 @@ HRESULT SetSymAttribute(
  在要定義屬性的元資料標記。  
   
  `name`  
- 在包含屬性名稱之 `WCHAR` 的指標。  
+ 在的指標 `WCHAR` ，其中包含屬性名稱。  
   
  `cData`  
- 在表示 `data` 陣列大小的 `ULONG32`。  
+ 在`ULONG32`，指出陣列的大小 `data` 。  
   
  `data`  
  在屬性值。  
@@ -56,4 +56,4 @@ HRESULT SetSymAttribute(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter 介面](isymunmanagedwriter-interface.md)

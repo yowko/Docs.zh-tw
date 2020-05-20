@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: 1f1bd9c33f24847eae4ff7d26c5b996cd34afb72
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cd5d1f2d59d3e55ba454f23d2e5dd4b1316c0df4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448934"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615172"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges 方法
 指定檔中的位置時，會傳回開始和結束位移組的陣列，其對應于此方法內的位置所涵蓋的 Microsoft 中繼語言（MSIL）範圍。 陣列是整數的陣列，其格式為 [開始]、[結束]、[開始]、[結束]。 範圍配對的數目是陣列的長度除以2。  
@@ -52,7 +52,7 @@ HRESULT GetRanges(
  [in] `ranges` 陣列的大小。  
   
  `pcRanges`  
- 脫銷`ULONG32` 的指標，接收包含範圍所需的緩衝區大小。  
+ 脫銷的指標 `ULONG32` ，接收包含範圍所需的緩衝區大小。  
   
  `ranges`  
  脫銷接收範圍之緩衝區的指標。  
@@ -65,4 +65,4 @@ HRESULT GetRanges(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 介面](isymunmanagedmethod-interface.md)

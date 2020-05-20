@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 657bf91d-005a-4ea4-9298-04d1291c0bc3
 topic_type:
 - apiref
-ms.openlocfilehash: 43f32ac85bebc12d0a9253205aae3f1de0dc9e5b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84b2f1226c84713483499c7ff777838058cb0f95
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433970"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615107"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName 方法
 取得這個命名空間的名稱。  
@@ -37,10 +37,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>參數  
  `cchName`  
- 在指出 `szName` 緩衝區大小的 `ULONG32`。  
+ 在`ULONG32`，表示緩衝區的大小 `szName` 。  
   
  `pcchName`  
- 脫銷`ULONG32` 的指標，接收包含命名空間名稱所需的緩衝區大小（以字元為單位），包括 null 終止。  
+ 脫銷的指標， `ULONG32` 接收包含命名空間名稱所需的緩衝區大小（以字元為單位），包括 null 終止。  
   
  `szName`  
  脫銷包含命名空間名稱之緩衝區的指標。  
@@ -53,4 +53,4 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace 介面](isymunmanagednamespace-interface.md)

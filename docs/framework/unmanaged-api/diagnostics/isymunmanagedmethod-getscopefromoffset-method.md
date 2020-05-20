@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d14cf210-81f8-46e1-8b19-6ddec0ba8b11
 topic_type:
 - apiref
-ms.openlocfilehash: 36b1b2394907f242c0e8c5e277c0d1c5b3b02e1b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4eefd019280f501a6ce194e5ce84388e32cc66e1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448910"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615133"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>ISymUnmanagedMethod::GetScopeFromOffset 方法
 取得在這個方法中，包含指定之位移的最封入詞法範圍。 這可以用來啟動本機變數搜尋。  
@@ -35,10 +35,10 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="parameters"></a>參數  
  `offset`  
- 在包含位移的 `ULONG`。  
+ 在`ULONG`包含位移的。  
   
  `pRetVal`  
- 脫銷設定為所傳回[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)介面的指標。  
+ 脫銷設定為所傳回[ISymUnmanagedScope](isymunmanagedscope-interface.md)介面的指標。  
   
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
@@ -48,4 +48,4 @@ HRESULT GetScopeFromOffset(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [ISymUnmanagedMethod 介面](isymunmanagedmethod-interface.md)

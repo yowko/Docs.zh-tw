@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-ms.openlocfilehash: da2906187c02bbc7a35c937663e3fc7db1ebda13
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48c50ac6be6d525676d85578e5a55a27104c180a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433893"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615094"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces 方法
 取得這個命名空間的子系。  
@@ -37,10 +37,10 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>參數  
  `cNameSpaces`  
- 在表示 `namespaces` 陣列大小的 `ULONG32`。  
+ 在`ULONG32`，指出陣列的大小 `namespaces` 。  
   
  `pcNameSpaces`  
- 脫銷`ULONG32` 的指標，接收包含命名空間所需的緩衝區大小（以字元為單位）。  
+ 脫銷的指標， `ULONG32` 接收包含命名空間所需的緩衝區大小（以字元為單位）。  
   
  `namespaces`  
  脫銷包含命名空間之緩衝區的指標。  
@@ -53,4 +53,4 @@ HRESULT GetNamespaces(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [ISymUnmanagedNamespace 介面](isymunmanagednamespace-interface.md)

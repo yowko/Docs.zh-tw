@@ -1,17 +1,15 @@
 ---
 title: 利用無伺服器函式
 description: 利用雲端原生應用程式中的無伺服器和 Azure Functions
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199738"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613859"
 ---
 # <a name="leveraging-serverless-functions"></a>利用無伺服器函式
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在管理實體機器以利用雲端功能的範圍中，無伺服器存在於極致端。 您的程式碼是唯一的責任，而您只需支付程式碼的執行時間。 Azure Functions 提供在雲端原生應用程式中建立無伺服器功能的方式。
 
@@ -54,8 +52,8 @@ ms.locfileid: "82199738"
 
 圖3-10 顯示冷啟動模式。 請注意，應用程式冷時所需的額外步驟。
 
-![冷與暖開機](./media/cold-start-warm-start.png)
-**圖 3-10**。 冷啟動和暖開機。
+![冷與暖開機 ](./media/cold-start-warm-start.png)
+ **圖 3-10**。 冷啟動和暖開機。
 
 若要避免冷啟動，您可以從取用[方案切換至專用方案](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)。 您也可以使用 premium 方案升級來設定一個或多個[預先準備就緒的實例](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)。 在這些情況下，當您需要加入另一個實例時，它已經啟動並準備好了。 這些選項可協助降低與無伺服器運算相關聯的冷啟動問題。
 
@@ -64,5 +62,5 @@ ms.locfileid: "82199738"
 最後，利用 Azure Functions 的應用程式工作會增加複雜度。 最好先使用模組化、鬆散結合的設計來架構您的應用程式。 然後，找出無伺服器可提供的優點，以證明額外的複雜性。
 
 >[!div class="step-by-step"]
->[上一頁](leverage-containers-orchestrators.md)
->[下一頁](combine-containers-serverless-approaches.md)
+>[上一個](leverage-containers-orchestrators.md) 
+>[下一步](combine-containers-serverless-approaches.md)

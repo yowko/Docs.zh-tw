@@ -2,17 +2,15 @@
 title: 雲端原生通訊模式
 description: 瞭解雲端原生應用程式中的重要服務通訊考慮
 author: robvet
-ms.date: 08/31/2019
-ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895622"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614210"
 ---
 # <a name="cloud-native-communication-patterns"></a>雲端原生通訊模式
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在建立雲端原生系統時，通訊會成為重要的設計決策。 前端用戶端應用程式如何與後端微服務通訊？ 後端微服務如何彼此通訊？ 在雲端原生應用程式中執行通訊時，需要考慮哪些原則、模式和最佳作法？
 
@@ -49,5 +47,5 @@ ms.locfileid: "82895622"
 在本章中，我們會先解決前端應用程式與後端微服務之間的通訊。 然後，我們將探討後端微服務彼此通訊。 我們將探討 up 和 gRPC 通訊技術。 最後，我們將使用服務網格技術來探討新的創新通訊模式。 我們也將瞭解 Azure 雲端如何提供不同種類的支援*服務*，以支援雲端原生通訊。
 
 >[!div class="step-by-step"]
->[上一頁](other-deployment-options.md)
->[下一頁](front-end-communication.md)
+>[上一個](other-deployment-options.md) 
+>[下一步](front-end-communication.md)

@@ -1,17 +1,16 @@
 ---
 title: 功能旗標
 description: 利用 Azure App Config 在雲端原生應用程式中執行功能旗標
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398306"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614067"
 ---
 # <a name="feature-flags"></a>功能旗標
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 在第1章中，我們 affirmed 雲端原生與速度和靈活性有關。 使用者預期快速回應能力、創新功能和零停機時間。 `Feature flags`是現代化的部署技術，可協助提升雲端原生應用程式的靈活性。 它們可讓您將新功能部署到生產環境，但限制其可用性。 使用交換器的筆勢，您可以為特定使用者啟用新功能，而不需要重新開機應用程式或部署新的程式碼。 它們會將新功能的發行與程式碼部署分開。
 
