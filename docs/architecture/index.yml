@@ -1,55 +1,61 @@
 ### YamlMime:Landing
-title: .NET 應用程式體系結構文檔
-summary: 瞭解如何構建生產就緒的 .NET 應用或將現有應用遷移到雲。
+title: .NET 應用程式架構檔
+summary: 瞭解如何建立生產環境就緒的 .NET 應用程式，或將現有的應用程式遷移至雲端。
 metadata:
-  title: .NET 應用程式體系結構文檔
-  description: 瞭解用於構建、構建和遷移 .NET 應用的建議做法。
+  title: .NET 應用程式架構檔
+  description: 瞭解架構、建立和遷移 .NET 應用程式的建議做法。
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: 6e3573416191603e1e166979f955eaae6b74022c
-  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.openlocfilehash: ff3b842d33ea3fd5d9cbed5b39b2757933c1a616
+  ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/24/2020
-  ms.locfileid: "80228591"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83613638"
 landingContent:
 - title: 開發 ASP.NET Core 應用程式
   linkLists:
   - linkListType: concept
     links:
-    - text: 使用ASP.NET核心和 Azure 構建現代 Web 應用
+    - text: 使用 ASP.NET Core 和 Azure 架構現代化 web 應用程式
       url: modern-web-apps-azure/index.md
-    - text: 布拉佐爾ASP.NET Web 表單開發人員（預覽）
+    - text: 適用于 ASP.NET Web Forms 開發人員的 Blazor （預覽）
       url: blazor-for-web-forms-developers/index.md
     - text: 適用於 WCF 開發人員的 ASP.NET Core gRPC
       url: grpc-for-wcf-developers/index.md
-- title: 為 Azure 開發雲原生 .NET 應用
+- title: 開發適用于 Azure 的雲端原生 .NET 應用程式
   linkLists:
   - linkListType: concept
     links:
-    - text: 為 Azure 構建雲原生 .NET 應用（預覽）
+    - text: 建構適用於 Azure 的雲端原生 .NET 應用程式
       url: cloud-native/index.md
     - text: 無伺服器應用程式：架構、模式和 Azure 實作
       url: serverless/index.md
-    - text: .NET 微服務：容器化 .NET 應用程式的體系結構
+    - text: .NET 微服務：容器化之 .NET 應用程式的架構
       url: microservices/index.md
   - linkListType: learn
     links:
-    - text: 您好世界微服務教程
+    - text: Hello World 微服務教學課程
       url: https://dotnet.microsoft.com/learn/aspnet/microservice-tutorial/intro
-- title: 將 .NET 應用遷移到 Azure
+- title: 將 .NET 應用程式遷移至 Azure
   linkLists:
   - linkListType: concept
     links:
-    - text: 使用 Azure 雲和 Windows 容器對現有 .NET 應用進行現代化
+    - text: 使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化
       url: modernize-with-azure-containers/index.md
-    - text: 將 .NET 應用遷移到 Azure
+    - text: 將您的 .NET 應用程式遷移至 Azure
       url: https://dotnet.microsoft.com/apps/cloud/migrate-to-azure
-- title: 瞭解 .NET 的 DevOps
+- title: 瞭解適用于 .NET 的 DevOps
   linkLists:
   - linkListType: concept
     links:
     - text: 採用 Microsoft 平台與工具容器化之 Docker 應用程式的生命週期
       url: containerized-lifecycle/index.md
-    - text: 使用 Azure ASP.NET核心開發人員
+    - text: 使用 Azure ASP.NET Core DevOps
       url: /aspnet/core/azure/devops/
+- title: 桌面應用程式現代化
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 使用 .NET Core 3.1 在 Windows 10 上將傳統型應用程式現代化
+      url: modernize-desktop/index.md
