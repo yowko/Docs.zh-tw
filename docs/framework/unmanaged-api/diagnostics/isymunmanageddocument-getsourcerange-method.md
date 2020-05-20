@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-ms.openlocfilehash: 64ecbb56ab32ac8381a4864acd5fd40741786d30
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 841379702e24428a8092cfd1d2cbd3c5b4e17ba4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449144"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615601"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 方法
 將內嵌來源的指定範圍傳回到給定的緩衝區。 緩衝區必須夠大，才能容納來源。  
@@ -64,6 +64,6 @@ HRESULT GetSourceRange(
 ## <a name="return-value"></a>傳回值  
  如果方法成功，則 S_OK。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument 介面](isymunmanageddocument-interface.md)

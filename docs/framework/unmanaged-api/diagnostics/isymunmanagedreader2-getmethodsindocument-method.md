@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7ae84d6-81e8-4cb7-a1f9-d48b6cde5d79
 topic_type:
 - apiref
-ms.openlocfilehash: 70c1d87ae32fb70f8d9f6e32b527394022459526
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 68a0f9ec8793d465a6fa3b1cb6936eddd7be4c8f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446439"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615406"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument 方法
 取得提供的檔中具有行資訊的每一個方法。  
@@ -41,10 +41,10 @@ HRESULT GetMethodsInDocument(
  在檔的指標。  
   
  `cMethod`  
- 在表示 `pRetVal` 陣列大小的 `ULONG32`。  
+ 在`ULONG32`，指出陣列的大小 `pRetVal` 。  
   
  `pcMethod`  
- 脫銷`ULONG32` 的指標，接收包含方法所需的緩衝區大小。  
+ 脫銷的指標 `ULONG32` ，接收包含方法所需的緩衝區大小。  
   
  `pRetVal`  
  脫銷接收方法之緩衝區的指標。  
@@ -57,4 +57,4 @@ HRESULT GetMethodsInDocument(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedReader2 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+- [ISymUnmanagedReader2 介面](isymunmanagedreader2-interface.md)

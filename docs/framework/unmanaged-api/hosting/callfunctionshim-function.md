@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37118465-ddf3-41f0-bf27-335b72777e63
 topic_type:
 - apiref
-ms.openlocfilehash: d39e15a2ba71ba0c0147482259f5618dcb5d298b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8945d40a3761ec51a73a8ae90ddc1d84ccab651
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192100"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616862"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 函式
 呼叫在指定的程式庫中具有指定名稱和參數的函式。  
@@ -59,14 +59,14 @@ HRESULT CallFunctionShim (
  在保留供日後使用。 在此參數中傳遞零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** Mscoree.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [已被取代的 CLR 裝載函式](deprecated-clr-hosting-functions.md)

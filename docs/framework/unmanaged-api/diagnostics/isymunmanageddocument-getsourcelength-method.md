@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e087dbbb-f4fb-4fbe-8292-e4f1a14d0df2
 topic_type:
 - apiref
-ms.openlocfilehash: 0551e8b4f381f76e7bbac06ca7b5f6aea5bbb61f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e84639c1d63e6935b9b363f01c12bf0fbd3390e3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449145"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615614"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength 方法
 取得內嵌來源的長度 (以位元組為單位)。  
@@ -41,4 +41,4 @@ HRESULT GetSourceLength(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument 介面](isymunmanageddocument-interface.md)

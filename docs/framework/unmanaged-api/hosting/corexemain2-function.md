@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-ms.openlocfilehash: cc5324683daa9a02a6a89b2a3fb57ee9fd5dbe72
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8202fe4ec3ae6ef96440f203c5aea6db84744a72
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136954"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616576"
 ---
 # <a name="_corexemain2-function"></a>_CorExeMain2 函式
 執行指定的記憶體對應程式碼中的進入點。 此函式是由作業系統載入器所呼叫。  
@@ -41,7 +41,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  在記憶體對應程式碼的指標。  
   
  `cUnmappedPE`  
- 在`pUnmappedPE` 可以保存的元素數目。  
+ 在可以保留的元素數目 `pUnmappedPE` 。  
   
  `pImageNameIn`  
  在可執行映射名稱的指標。  
@@ -53,14 +53,14 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  在命令列參數（如果有的話）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [中繼資料全域靜態函式](../metadata/metadata-global-static-functions.md)

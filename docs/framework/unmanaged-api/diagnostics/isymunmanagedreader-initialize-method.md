@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429745"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615471"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize 方法
 使用與此讀取器相關聯的中繼資料匯入介面，以及模組的檔案名，初始化符號讀取器。  
@@ -46,7 +46,7 @@ HRESULT Initialize (
  在模組的檔案名。 您可以改用 `pIStream` 參數。  
   
  `searchPath`  
- 在要搜尋的路徑。 這個參數是選擇性的。  
+ 在要搜尋的路徑。 此為選擇性參數。  
   
  `pIStream`  
  在檔案資料流程，用來做為 filename 參數的替代項。  
@@ -55,11 +55,11 @@ HRESULT Initialize (
  如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
   
 ## <a name="remarks"></a>備註  
- 您只需要指定其中一個 `filename` 或 `pIStream` 參數，而不是兩者。 `searchPath` 是選擇性參數。  
+ 您只需要指定其中一個 `filename` 或 `pIStream` 參數，而不是兩者。 `searchPath` 是選用參數。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 介面](isymunmanagedreader-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a11bfa4-cbb0-4082-82b5-f9fba66c93f5
 topic_type:
 - apiref
-ms.openlocfilehash: fa9608423456caeb6020e883a14f2c41583ac4d9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04cb45cd021532b6cb3d74a195cbd62e1ab8d31d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126604"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615848"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 方法
 取得主機可以用來設定 common language runtime （CLR）之任何管理員類型的實例介面指標。  
@@ -36,30 +36,30 @@ HRESULT GetCLRManager (
   
 ## <a name="parameters"></a>參數  
  `riid`  
- 在要傳回之管理員類型的 `IID`。 支援下列 `IID` 值。  
+ 在`IID`要傳回之管理員類型的。 支援下列 `IID` 值。  
   
-- IID_ICLRDebugManager：指定 `ppObject` 的類型會是[ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)。  
+- IID_ICLRDebugManager：指定 `ppObject` 將屬於[ICLRDebugManager](iclrdebugmanager-interface.md)類型。  
   
-- IID_ICLRErrorReportingManager：指定 `ppObject` 的類型會是[ICLRErrorReportingManager](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)。  
+- IID_ICLRErrorReportingManager：指定 `ppObject` 將屬於[ICLRErrorReportingManager](iclrerrorreportingmanager-interface.md)類型。  
   
-- IID_ICLRGCManager：指定 `ppObject` 的類型會是[ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)。  
+- IID_ICLRGCManager：指定 `ppObject` 將屬於[ICLRGCManager](iclrgcmanager-interface.md)類型。  
   
-- IID_ICLRHostProtectionManager：指定 `ppObject` 的類型會是[ICLRHostProtectionManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)。  
+- IID_ICLRHostProtectionManager：指定 `ppObject` 將屬於[ICLRHostProtectionManager](iclrhostprotectionmanager-interface.md)類型。  
   
-- IID_ICLROnEventManager：指定 `ppObject` 的類型會是[ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)。  
+- IID_ICLROnEventManager：指定 `ppObject` 將屬於[ICLROnEventManager](iclroneventmanager-interface.md)類型。  
   
-- IID_ICLRPolicyManager：指定 `ppObject` 的類型會是[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)。  
+- IID_ICLRPolicyManager：指定 `ppObject` 將屬於[ICLRPolicyManager](iclrpolicymanager-interface.md)類型。  
   
-- IID_ICLRTaskManager：指定 `ppObject` 的類型會是[ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)。  
+- IID_ICLRTaskManager：指定 `ppObject` 將屬於[ICLRTaskManager](iclrtaskmanager-interface.md)類型。  
   
  `ppObject`  
  脫銷要求之管理員的介面指標，如果要求的管理員類型無效，則為 null。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|S_OK|已成功傳回方法。|  
+|S_OK|此方法已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -68,15 +68,15 @@ HRESULT GetCLRManager (
 |E_NOINTERFACE|不支援介面類別型。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [IHostControl 介面](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [ICLRControl 介面](iclrcontrol-interface.md)
+- [IHostControl 介面](ihostcontrol-interface.md)

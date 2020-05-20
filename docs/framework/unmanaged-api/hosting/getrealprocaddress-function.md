@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: 4c914e00987053b1c1e9e00bf8e54632175e1de8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6bbf8366054c58543444a4b710a687198f365e6e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178166"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617187"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 函式
-獲取從最新安裝的通用語言運行時 （CLR） 匯出的指定函數的位址。  
+取得從通用語言執行時間（CLR）最新安裝的版本匯出之指定函式的位址。  
   
- 此功能已在 .NET 框架 4 中棄用。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,29 +37,29 @@ HRESULT GetRealProcAddress (
   
 ## <a name="parameters"></a>參數  
  `pwszProcName`  
- [在]函數的名稱。  
+ 在函式的名稱。  
   
  `ppv`  
- [出]接收指向函數位址的指標的位置。  
+ 脫銷接收函式位址指標的位置。  
   
 ## <a name="return-value"></a>傳回值  
- 此方法返回 WinError.h 中定義的標準元件物件模型 （COM） 錯誤代碼，以及 CorError.h 中定義的以下值。  
+ 這個方法會傳回標準元件物件模型（COM）錯誤碼（如 Winerror.h 中所定義），以及 Corerror.h 中所定義的下列值。  
   
-|傳回碼|描述|  
+|傳回碼|說明|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`ppv` 無效。|  
-|CLR_E_SHIM_RUNTIMEEXPORT|函數不會從運行時匯出。|  
+|CLR_E_SHIM_RUNTIMEEXPORT|函數不會從執行時間匯出。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **庫：** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [已被取代的 CLR 裝載函式](deprecated-clr-hosting-functions.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-ms.openlocfilehash: b3674c4058dba2f6185418b55b35eefb14c312f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6ffab3b2f81680404f870cfd63ae5125173a346c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431235"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615510"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName 方法
 提供符號存放區的磁片檔案名。  
@@ -37,10 +37,10 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="parameters"></a>參數  
  `cchName`  
- 在`szName` 緩衝區的大小。  
+ 在緩衝區的大小 `szName` 。  
   
  `pcchName`  
- 脫銷此變數的指標，會接收 `szName`中傳回之名稱的長度，包括 null 終止。  
+ 脫銷變數的指標，其接收傳回的名稱長度 `szName` ，包括 null 終止。  
   
  `szName`  
  脫銷接收符號存放區檔案名之變數的指標。  
@@ -53,4 +53,4 @@ HRESULT GetSymbolStoreFileName (
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [ISymUnmanagedReader 介面](isymunmanagedreader-interface.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: bc956827ad59fc655137e4147e6d98b6d097d470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 435d23d4a56d6ea98e3d368f0a5aa37c73e31d96
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138194"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616160"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType 列舉
-包含值，表示由[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)或[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)介面代表的工作類型。  
+包含值，表示由[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)或[IHostTask](ihosttask-interface.md)介面代表的工作類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,9 +42,9 @@ typedef enum ETaskType {
 } ETaskType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|介面代表應用程式域卸載工作。|  
 |`TT_DEBUGGERHELPER`|介面代表偵錯工具 helper 工作。|  
@@ -59,14 +59,14 @@ typedef enum ETaskType {
 |`TT_USER`|介面代表使用者工作。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** Mscoree.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [裝載列舉](hosting-enumerations.md)

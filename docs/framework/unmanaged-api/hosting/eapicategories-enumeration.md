@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-ms.openlocfilehash: 0fd9409a5157e1013365c94f01631f130a76f54b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d31b0190ef9a697fb27c849db080bec6c57618ae
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131206"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616381"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 列舉
 描述主機可以封鎖在部分信任程式碼中執行的功能類別。  
@@ -42,11 +42,11 @@ typedef enum {
 } EHostProtectionCategories;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
-|`eAll`|指定封鎖其他 `EApiCategories` 欄位所涵蓋的所有 managed 類別和成員，使其無法在部分信任的程式碼中執行。|  
+|`eAll`|指定封鎖其他欄位涵蓋的所有 managed 類別和成員，使 `EApiCategories` 其無法在部分信任的程式碼中執行。|  
 |`eExternalProcessMgmt`|指定允許建立、操作和終結外部進程的 managed 類別和成員，無法在部分信任的程式碼中執行。|  
 |`eExternalThreading`|指定允許建立、操作和終結外部執行緒的 managed 類別和成員，無法在部分信任的程式碼中執行。|  
 |`eMayLeakOnAbort`|指定封鎖在部分信任程式碼中執行的 managed 類型和成員可能會在中止時遺漏記憶體。|  
@@ -59,20 +59,20 @@ typedef enum {
 |`eUI`|指定允許或要求人為互動的 managed 類別和成員，無法在部分信任的程式碼中執行。|  
   
 ## <a name="remarks"></a>備註  
- [ICLRHostProtectionManager：： SetProtectedCategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md)方法會接受 `EApiCategories`類型的參數。  
+ [ICLRHostProtectionManager：： SetProtectedCategories](iclrhostprotectionmanager-setprotectedcategories-method.md)方法接受型別為的參數 `EApiCategories` 。  
   
- `EApiCategories` 列舉和 `SetProtectedCategories` 方法與 managed <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> 類別直接相關。 Managed 類別會與 <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> 列舉搭配使用，其值會直接對應至 `EApiCategories` 值，以標示 managed 類型和成員，其會公開與 `EApiCategories`所描述之分類對應的功能。  
+ `EApiCategories`列舉和方法與 `SetProtectedCategories` managed 類別直接相關 <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> 。 Managed 類別會搭配 <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> 列舉使用，其值會直接對應至 `EApiCategories` 值，以標示會公開功能的 managed 類型和成員，而這些對應于所描述的分類 `EApiCategories` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** Mscoree.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRHostProtectionManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
-- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRHostProtectionManager 介面](iclrhostprotectionmanager-interface.md)
+- [裝載列舉](hosting-enumerations.md)

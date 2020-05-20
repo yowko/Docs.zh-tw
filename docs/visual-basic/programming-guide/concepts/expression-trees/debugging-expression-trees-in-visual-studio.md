@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中對運算式樹狀架構進行偵錯
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 2c4b1fec389a8ee168b890339ce11af596581cbc
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 287f3096a1af8b9fa42d252c5240d7caefa6bac8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378808"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616890"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>在 Visual Studio 中偵測運算式樹狀架構（Visual Basic）
 當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀架構的快速概觀，您可以使用 `DebugView` 屬性，其代表[使用特殊語法](debugview-syntax.md)的運算式樹狀架構。 (請注意，`DebugView` 僅適用於偵錯模式。)  
@@ -24,9 +24,9 @@ ms.locfileid: "83378808"
 
   ![可讀取的運算式視覺化檢視的螢幕擷取畫面。](media/debugging-expression-trees-in-visual-studio/readable-expressions-visualizer.png)
 
-- [運算式樹狀架構視覺化檢視](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees)（[MIT 授權](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)）提供了運算式樹狀架構、其屬性和相關物件的圖形化視圖;和可以使用 Visual Basic 程式碼來轉譯運算式樹狀架構：
+- [運算式樹狀架構視覺化檢視](https://github.com/zspitz/ExpressionTreeVisualizer/blob/master/README.md)（[MIT 授權](https://github.com/zspitz/ExpressionTreeVisualizer/blob/master/LICENSE)）提供運算式樹狀結構和其個別節點的樹狀檢視;和可以使用 Visual Basic 語法來轉譯運算式樹狀架構：
 
-  ![ExpressionToString 視覺化檢視的螢幕擷取畫面。](media/debugging-expression-trees-in-visual-studio/expression-to-string-visualizer-vb.png)
+  ![運算式樹狀架構視覺化檢視的螢幕擷取畫面。](media/debugging-expression-trees-in-visual-studio/expression-tree-visualizer-vb.png)
 
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>開啟運算式樹狀架構的視覺化檢視  
   
@@ -38,7 +38,7 @@ ms.locfileid: "83378808"
 
 2. 按一下要使用的視覺化檢視。  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [運算式樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [Visual Studio 偵錯](/visualstudio/debugger/debugger-feature-tour)

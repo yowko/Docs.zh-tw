@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3002f051-7aaa-4669-9314-cbc65b3a1772
 topic_type:
 - apiref
-ms.openlocfilehash: 5389082f60a97d4da97bfce1c121a9e983b9ae79
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 631da8936873b57040f1c60e8db6867ea2eed2c8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126846"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617044"
 ---
 # <a name="icatalogservicesautodone-method"></a>ICatalogServices::Autodone 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -31,6 +31,6 @@ ms.locfileid: "73126846"
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [裝載介面](hosting-interfaces.md)

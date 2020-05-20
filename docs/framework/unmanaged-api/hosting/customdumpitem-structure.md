@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: 154beef9398029f31dcb4d081019b9f292238af4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c77a332593ba470d2e29b87cba182a770d5db7e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176470"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616433"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem 結構
-描述要在錯誤報表中添加到自訂轉儲的項。  
+描述要在錯誤報表中新增至自訂傾印的專案。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +37,23 @@ struct {
   
 ## <a name="members"></a>成員  
   
-|member|描述|  
+|成員|說明|  
 |------------|-----------------|  
-|`itemKind`|[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)值，指示要添加的項類型。|  
-|`pReserved`|目前無法使用。 添加到聯合的任何項必須不大於指標大小。 如果需要`struct`， 必須單獨分配並指向它。|  
+|`itemKind`|[ECustomDumpItemKind](ecustomdumpitemkind-enumeration.md)值，表示要新增的專案類型。|  
+|`pReserved`|目前無法使用。 加入至聯集的任何專案都不能大於指標大小。 如果 `struct` 需要，您必須分別加以配置並指向它。|  
   
 ## <a name="remarks"></a>備註  
- [ICLR錯誤報表管理器：開始自訂轉儲](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)採用類型的`CustomDumpItem`參數。  
+ [ICLRErrorReportingManager：： BeginCustomDump](iclrerrorreportingmanager-begincustomdump-method.md)接受類型為的參數 `CustomDumpItem` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** MSCorEE.idl  
+ **標頭：** Mscoree.dll .idl  
   
- **庫：** 作為資源包含在 MSCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [裝載結構](hosting-structures.md)

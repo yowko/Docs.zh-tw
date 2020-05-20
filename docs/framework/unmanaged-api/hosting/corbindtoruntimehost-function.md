@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: 6566adc442034763e0209869404b60b5afa63866
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: afb25ad9e1760f390aa8dfb3e1de39ea60f185c2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176483"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616615"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 函式
-使主機能夠將指定版本的通用語言運行時 （CLR） 載入到進程中。  
+讓主機將指定版本的 common language runtime （CLR）載入進程中。  
   
- 此功能已在 .NET 框架 4 中棄用。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,54 +43,54 @@ HRESULT CorBindToRuntimeHost (
   
 ## <a name="parameters"></a>參數  
  `pwszVersion`  
- [在]描述要載入的 CLR 版本的字串。  
+ 在描述您要載入之 CLR 版本的字串。  
   
- .NET 框架中的版本號由四個部分組成，由句點分隔：*主要.minor.build.revision*. 傳遞的`pwszVersion`字串必須以字元"v"開頭，後跟版本號的前三個部分（例如，"v1.0.1529"）。  
+ .NET Framework 中的版本號碼包含四個以句點分隔的部分： [主要]. [*次要. 組建. 修訂*]。 傳遞為的字串 `pwszVersion` 必須以字元 "v" 開頭，後面接著版本號碼的前三個部分（例如 "v 1.0.1529"）。  
   
- CLR 的某些版本都安裝了策略語句，該語句指定與 CLR 的早期版本的相容性。 預設情況下，啟動希姆`pwszVersion`根據策略語句進行評估，並載入與所請求版本相容的最新版本的運行時。 主機可以通過傳遞`startupFlags`參數的STARTUP_LOADER_SAFEMODE值來強制 him 跳過策略評估並載入指定`pwszVersion`的確切版本。  
+ 某些 CLR 版本會與原則語句一起安裝，以指定與舊版 CLR 的相容性。 根據預設，啟動填充碼 `pwszVersion` 會針對原則語句評估，並載入與所要求版本相容的最新執行階段版本。 主機可以強制填充碼略過原則評估，並藉 `pwszVersion` 由傳遞參數的 STARTUP_LOADER_SAFEMODE 值，載入中所指定的確切版本 `startupFlags` 。  
   
- 如果`pwszVersion`是`null,`，該方法不會載入 CLR 的任何版本。 相反，它將返回CLR_E_SHIM_RUNTIMELOAD，這表明它無法載入運行時。  
+ 如果 `pwszVersion` 是， `null,` 則方法不會載入任何版本的 CLR。 相反地，它會傳回 CLR_E_SHIM_RUNTIMELOAD，這表示它無法載入執行時間。  
   
  `pwszBuildFlavor`  
- [在]指定是載入 CLR 的伺服器還是工作站構建的字串。 有效值為 `svr` 和 `wks`。 伺服器生成經過優化，以利用多個處理器進行垃圾回收，工作站生成針對在單處理器電腦上運行的用戶端應用程式進行了優化。  
+ 在字串，指定是否要載入伺服器或 CLR 的工作站組建。 有效值為 `svr` 和 `wks`。 伺服器組建已優化，可利用多個處理器進行垃圾收集，而且工作站組建已針對在單處理器機器上執行的用戶端應用程式優化。  
   
- 如果`pwszBuildFlavor`設置為 null，則載入工作站生成。 在單處理器電腦上運行時，工作站生成始終載入，即使`pwszBuildFlavor`設置為`svr`。 但是，如果`pwszBuildFlavor`設置為`svr`並指定了併發垃圾回收（請參閱`startupFlags`參數的說明），則載入伺服器生成。  
+ 如果 `pwszBuildFlavor` 設定為 null，則會載入工作站組建。 在單處理器機器上執行時，一律會載入工作站組建，即使 `pwszBuildFlavor` 設定為也一樣 `svr` 。 不過，如果 `pwszBuildFlavor` 設定為 `svr` ，且指定了並行垃圾收集（請參閱參數的描述 `startupFlags` ），則會載入伺服器組建。  
   
 > [!NOTE]
-> 在 64 位系統上運行 WOW64 x86 模擬器的應用程式不支援併發垃圾回收，這些系統實現了英特爾 Itanium 架構（以前稱為 IA-64）。 有關在 64 位 Windows 系統上使用 WOW64 的詳細資訊，請參閱[運行 32 位應用程式](/windows/desktop/WinProg64/running-32-bit-applications)。  
+> 在執行 Intel Itanium 架構（先前稱為 IA-64）的64位系統上執行 WOW64 x86 模擬器的應用程式不支援並行垃圾收集。 如需在64位 Windows 系統上使用 WOW64 的詳細資訊，請參閱執行[32 位應用程式](/windows/desktop/WinProg64/running-32-bit-applications)。  
   
  `pwszHostConfigFile`  
- [在]指定要載入的 CLR 版本的主機設定檔的名稱。 如果檔案名不包含完全限定的路徑，則假定該檔與進行調用的可執行檔位於同一目錄中。  
+ 在主機設定檔的名稱，指定要載入的 CLR 版本。 如果檔案名不包含完整路徑，則會假設檔案與進行呼叫的可執行檔位於相同的目錄中。  
   
  `pReserved`  
- [在]保留以供將來擴展。  
+ 在保留以供未來擴充性之用。  
   
  `startupFlags`  
- [在]控制併發垃圾回收、域中立代碼和`pwszVersion`參數行為的標誌集。 如果未設置標誌，則預設值為單個域。 有關受支援值的清單，請參閱[STARTUP_FLAGS枚舉](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)。  
+ 在一組旗標，可控制並行垃圾收集、網域中性程式碼，以及參數的行為 `pwszVersion` 。 如果未設定旗標，則預設值為單一網域。 如需支援值的清單，請參閱[STARTUP_FLAGS 列舉](startup-flags-enumeration.md)。  
   
  `rclsid`  
- [在]`CLSID`實現[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)介面的共類。 支援的值CLSID_CorRuntimeHost或CLSID_CLRRuntimeHost。  
+ 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- [在]您`IID`請求的介面的。 支援的值IID_ICorRuntimeHost或IID_ICLRRuntimeHost。  
+ 在`IID`您所要求之介面的。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
- [出]指向載入的執行階段版本的介面指標。  
+ 脫銷載入的執行階段版本的介面指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** MSCorEE.idl  
+ **標頭：** Mscoree.dll .idl  
   
- **庫：** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [CorBindToCurrentRuntime 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
-- [CorBindToRuntime 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeByCfg 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
-- [CorBindToRuntimeEx 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [CorBindToCurrentRuntime 函式](corbindtocurrentruntime-function.md)
+- [CorBindToRuntime 函式](corbindtoruntime-function.md)
+- [CorBindToRuntimeByCfg 函式](corbindtoruntimebycfg-function.md)
+- [CorBindToRuntimeEx 函式](corbindtoruntimeex-function.md)
+- [ICorRuntimeHost 介面](icorruntimehost-interface.md)
+- [已被取代的 CLR 裝載函式](deprecated-clr-hosting-functions.md)

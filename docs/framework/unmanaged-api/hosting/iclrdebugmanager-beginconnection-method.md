@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdd98146-ff4d-4150-a264-a4c1a32d31f3
 topic_type:
 - apiref
-ms.openlocfilehash: 2ac2b0dde97b883313e1bca17c5e99855484e4aa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fc25e250938d7549c7a9693bee937d4756268b93
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126566"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615809"
 ---
 # <a name="iclrdebugmanagerbeginconnection-method"></a>ICLRDebugManager::BeginConnection 方法
 在主機與偵錯工具之間建立新的連接，以將工作清單與識別碼和易記名稱產生關聯。  
@@ -43,36 +43,36 @@ HRESULT BeginConnection (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `BeginConnection`。|  
+|S_OK|`BeginConnection`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
 |HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
 |E_FAIL|發生不明的嚴重失敗。 在方法傳回 E_FAIL 之後，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_INVALIDARG|`dwConnectionId` 為零，或已經使用此 `dwConnectionId` 值呼叫 `BeginConnection`，或 `szConnectionName` 為 null。|  
+|E_INVALIDARG|`dwConnectionId`為零，或 `BeginConnection` 已經使用此值呼叫 `dwConnectionId` ，或為 `szConnectionName` null。|  
 |E_OUTOFMEMORY|無法配置足夠的記憶體來保存與此連接相關聯的工作清單。|  
   
 ## <a name="remarks"></a>備註  
- [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)提供三種方法： `BeginConnection`、 [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)和[EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)，以便將工作清單與識別碼和易記名稱產生關聯。  
+ [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)提供三種方法： `BeginConnection` 、 [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)和[EndConnection](iclrdebugmanager-endconnection-method.md)，用於關聯工作清單與識別碼和易記名稱。  
   
 > [!IMPORTANT]
-> 這三種方法都必須以特定順序針對每一組工作進行呼叫。 首先會呼叫 `BeginConnection` 以建立新的連接。 下一步會呼叫 `SetConnectionTasks`，以提供與該連接相關聯的工作集合。 最後會呼叫 `EndConnection`，以移除工作清單與識別碼和易記名稱之間的關聯。不過，可以嵌套不同連接的呼叫。  
+> 這三種方法都必須以特定順序針對每一組工作進行呼叫。 `BeginConnection`會先呼叫以建立新的連接。 `SetConnectionTasks`接下來會呼叫，以提供與該連接相關聯的工作集合。 `EndConnection`最後會呼叫，以移除工作清單與識別碼和易記名稱之間的關聯。不過，可以嵌套不同連接的呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLRDebugManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
-- [EndConnection 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)
-- [SetConnectionTasks 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)
-- [IHostControl 介面](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [ICLRControl 介面](iclrcontrol-interface.md)
+- [ICLRDebugManager 介面](iclrdebugmanager-interface.md)
+- [EndConnection 方法](iclrdebugmanager-endconnection-method.md)
+- [SetConnectionTasks 方法](iclrdebugmanager-setconnectiontasks-method.md)
+- [IHostControl 介面](ihostcontrol-interface.md)

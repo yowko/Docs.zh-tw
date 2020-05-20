@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-ms.openlocfilehash: 62fcdb60b83c88738ebe2e39455b8eae60fb705e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a73c0731c79dea3a0c411fe27a864ec9ac4e20b2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126774"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616017"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived 方法
 取得最後一次完整、封鎖垃圾收集以及目前應用程式域所參考的位元組數目。  
@@ -47,28 +47,28 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |COR_E_APPDOMAINUNLOADED|應用程式域已卸載或不存在。|  
   
 ## <a name="remarks"></a>備註  
- 只有在完整的封鎖垃圾收集之後，才會更新統計資料。也就是包含所有層代的集合，而且會在收集時停止應用程式。 例如，<xref:System.GC.Collect?displayProperty=nameWithType> 方法多載會執行完整的封鎖集合。 並行垃圾收集會在背景進行，而且不會封鎖應用程式。  
+ 只有在完整的封鎖垃圾收集之後，才會更新統計資料。也就是包含所有層代的集合，而且會在收集時停止應用程式。 例如，方法多載會 <xref:System.GC.Collect?displayProperty=nameWithType> 執行完整的封鎖集合。 並行垃圾收集會在背景進行，而且不會封鎖應用程式。  
   
- `GetCurrentSurvived` 方法是 managed <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 屬性的不受管理對等。  
+ `GetCurrentSurvived`方法是 managed 屬性的不受管理對等 <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRAppDomainResourceMonitor 介面](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [應用程式定義域資源監視](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
-- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRAppDomainResourceMonitor 介面](iclrappdomainresourcemonitor-interface.md)
+- [應用程式域資源監視](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
+- [裝載介面](hosting-interfaces.md)
+- [裝載](index.md)

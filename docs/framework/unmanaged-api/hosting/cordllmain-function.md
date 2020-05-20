@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b2322f708afed08172f87e843c225aa9c60d9d3
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136970"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616602"
 ---
 # <a name="_cordllmain-function"></a>\_CorDllMain 函式
 
@@ -40,33 +40,33 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
  在已載入模組的實例控制碼。  
   
  `dwReason`  
- 在指出呼叫 DLL 進入點函式的原因。 這個參數可以是下列其中一個值： DLL\_PROCESS_ATTACH、DLL\_執行緒\_附加、DLL\_執行緒\_附加，或 DLL\_進程\_卸離。 如需這些值的說明，請參閱 Platform SDK 中的 `DllMain` 檔。  
+ 在指出呼叫 DLL 進入點函式的原因。 這個參數可以是下列其中一個值： DLL \_ PROCESS_ATTACH、dll \_ 執行緒 \_ 附加、dll \_ 執行緒 \_ 附加或 dll 進程卸 \_ \_ 離。 如需這些值的說明，請參閱 `DllMain` PLATFORM SDK 中的檔。  
   
  `lpReserved`  
  在未使用.  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回成功的 `true`，並在發生錯誤時 `false`。  
+ 這個方法 `true` 會針對成功傳回，而且 `false` 如果發生錯誤，則會傳回。  
   
 ## <a name="remarks"></a>備註  
- DLL 元件的作業系統載入器會呼叫這個函式。 對於可執行檔元件，載入器會改為呼叫[\_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函數。  
+ DLL 元件的作業系統載入器會呼叫這個函式。 對於可執行檔元件，載入器會改為呼叫[ \_ CorExeMain](corexemain-function.md)函式。  
   
  無論 DLL 檔案中指定的進入點為何，作業系統載入器都會呼叫這個方法。  
   
-`_CorDllMain` 函式是由作業系統載入器直接呼叫。
+函式 `_CorDllMain` 是由作業系統載入器直接呼叫。
   
- 如需詳細資訊，請參閱[\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主題中的「備註」一節。  
+ 如需詳細資訊，請參閱[ \_ CorValidateImage](corvalidateimage-function.md)主題中的「備註」一節。  
   
 ## <a name="requirements"></a>需求  
 
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [中繼資料全域靜態函式](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [中繼資料全域靜態函式](../metadata/metadata-global-static-functions.md)

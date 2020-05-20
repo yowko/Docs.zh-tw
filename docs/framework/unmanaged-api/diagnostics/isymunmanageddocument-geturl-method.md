@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-ms.openlocfilehash: 134a89d62a0fc455a9579de1e577103f1fe6abcf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3685707f1983ffec413e9cea2df5034ac53f643a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449130"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615588"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 方法
 傳回此檔的統一資源定位器（URL）。  
@@ -36,7 +36,7 @@ HRESULT GetURL(
   
 ## <a name="parameters"></a>參數  
  `cchUrl`  
- 在`szURL` 緩衝區的大小（以字元為單位）。  
+ 在緩衝區的大小（以字元為單位） `szURL` 。  
   
  `pcchUrl`  
  脫銷接收 URL 大小之變數的指標，包括 null 終止。  
@@ -49,4 +49,4 @@ HRESULT GetURL(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [ISymUnmanagedDocument 介面](isymunmanageddocument-interface.md)

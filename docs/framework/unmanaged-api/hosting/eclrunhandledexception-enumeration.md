@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: 302db0d029b3811d151473323a7a60bd16a00ec1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63b07dda2293d3e05bd3c8fcdc45f20a498ea54c
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131241"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616303"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException 列舉
 描述可用來管理使用者程式碼中未處理之例外狀況的選項。  
@@ -33,9 +33,9 @@ typedef enum {
 } EClrUnhandledException;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`eRuntimeDeterminedPolicy`|指定發生預設行為。 進程已損毀。|  
 |`eHostDeterminedPolicy`|指定 common language runtime （CLR）會忽略未處理的例外狀況，並讓主機判斷任何進一步的動作。|  
@@ -44,19 +44,19 @@ typedef enum {
  若要指定 CLR 的行為與舊版相同，請使用 `eHostDeterminedPolicy` 成員。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** Mscoree.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [EClrFailure 列舉](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [EClrOperation 列舉](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [ICLRPolicyManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [SetUnhandledExceptionPolicy 方法](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)
-- [IHostPolicyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
-- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [EClrFailure 列舉](eclrfailure-enumeration.md)
+- [EClrOperation 列舉](eclroperation-enumeration.md)
+- [ICLRPolicyManager 介面](iclrpolicymanager-interface.md)
+- [SetUnhandledExceptionPolicy 方法](iclrpolicymanager-setunhandledexceptionpolicy-method.md)
+- [IHostPolicyManager 介面](ihostpolicymanager-interface.md)
+- [裝載列舉](hosting-enumerations.md)

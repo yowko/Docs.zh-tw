@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-ms.openlocfilehash: 4d9de489bdeb0ab506f56ff08f4afb4cf6d0ab4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7037065be138c369b847e7f86de7b46fc5ae601a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178280"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616875"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters 結構
-存儲事件的類型名稱以及與事件關聯的當前異常的參數。  
+儲存事件的型別名稱，以及與事件相關聯的目前例外狀況的參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,19 +36,19 @@ typedef struct _BucketParameters {
   
 ## <a name="members"></a>成員  
   
-|member|描述|  
+|成員|說明|  
 |------------|-----------------|  
-|`fInited`|`true`，如果此結構的其餘部分有效;如果此結構的其餘部分有效，則為否則， `false`.|  
+|`fInited`|`true`，如果此結構的其餘部分有效，則為，否則為 `false` 。|  
 |`pszEventTypeName`|事件種類的名稱。|  
-|`pszParams`|字串陣列，每個字串都指定與事件關聯的當前異常的參數。|  
+|`pszParams`|字串陣列，其中每一個都指定與事件相關聯之目前例外狀況的參數。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** MSCorEE.idl  
+ **標頭：** Mscoree.dll .idl  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [裝載結構](hosting-structures.md)

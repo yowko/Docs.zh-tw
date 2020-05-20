@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 4fbc6e7ea531f65a6b1cd0ec93f4847ab8e4fe83
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9326484c6a9f96d245e3c61a0ac3e3465a8a6dcd
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178237"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616641"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 函式
-通過使用從 XML 檔讀取的版本資訊將通用語言運行時 （CLR） 載入到進程中。  
+使用從 XML 檔案讀取的版本資訊，將 common language runtime （CLR）載入進程中。  
   
- 此功能已在 .NET 框架 4 中棄用。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,40 +41,40 @@ HRESULT CorBindToRuntimeByCfg (
   
 ## <a name="parameters"></a>參數  
  `pCfgStream`  
- [在]指向讀取 XML`IStream`檔的物件的指標。  
+ 在讀取 XML 檔案之 `IStream` 物件的指標。  
   
  `reserved`  
- [在]保留以供將來使用。 使用 0（零）作為值。  
+ 在保留供日後使用。 使用0（零）作為值。  
   
  `startupFlags`  
- [在]指定 CLR 的啟動行為的[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)枚舉的值。  
+ 在[STARTUP_FLAGS](startup-flags-enumeration.md)列舉的值，指定 CLR 的啟動行為。  
   
  `rclsid`  
- [在]`CLSID`實現[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)介面的共類。 支援的值CLSID_CorRuntimeHost或CLSID_CLRRuntimeHost。  
+ 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- [在]或`IID``ICorRuntimeHost`介面 的`ICLRRuntimeHost`。 支援的值IID_ICorRuntimeHost或IID_ICLRRuntimeHost。  
+ 在`IID` `ICorRuntimeHost` 或 `ICLRRuntimeHost` 介面的。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
- [出]指向返回介面位址的指標。  
+ 脫銷傳回之介面位址的指標。  
   
 ## <a name="remarks"></a>備註  
- XML 檔的格式以標準應用程式佈建檔建模。 有關 XML 檔的詳細資訊，請參閱[設定檔架構](../../../../docs/framework/configure-apps/file-schema/index.md)。  
+ XML 檔案的格式會在標準應用程式佈建檔案之後進行模型化。 如需 XML 檔案的詳細資訊，請參閱[設定檔案架構](../../configure-apps/file-schema/index.md)。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **庫：** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [CorBindToCurrentRuntime 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
-- [CorBindToRuntime 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeEx 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [CorBindToRuntimeHost 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
-- [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [CorBindToCurrentRuntime 函式](corbindtocurrentruntime-function.md)
+- [CorBindToRuntime 函式](corbindtoruntime-function.md)
+- [CorBindToRuntimeEx 函式](corbindtoruntimeex-function.md)
+- [CorBindToRuntimeHost 函式](corbindtoruntimehost-function.md)
+- [ICorRuntimeHost 介面](icorruntimehost-interface.md)
+- [已被取代的 CLR 裝載函式](deprecated-clr-hosting-functions.md)
