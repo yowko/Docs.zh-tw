@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5ac38005410ae6ed9c2f4160e926987791ad604
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178403"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421211"
 ---
-# <a name="icorpublishappdomainenumnext-method"></a><span data-ttu-id="6f41b-102">ICorPublishAppDomainEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="6f41b-102">ICorPublishAppDomainEnum::Next Method</span></span>
-<span data-ttu-id="6f41b-103">從當前位置開始獲取進程中當前存在的指定數量的應用程式域。</span><span class="sxs-lookup"><span data-stu-id="6f41b-103">Gets the specified number of application domains that currently exist in the process, starting at the current position.</span></span>  
+# <a name="icorpublishappdomainenumnext-method"></a><span data-ttu-id="af5ef-102">ICorPublishAppDomainEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="af5ef-102">ICorPublishAppDomainEnum::Next Method</span></span>
+<span data-ttu-id="af5ef-103">從目前的位置開始，取得目前存在於進程中的指定應用程式域數目。</span><span class="sxs-lookup"><span data-stu-id="af5ef-103">Gets the specified number of application domains that currently exist in the process, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f41b-104">語法</span><span class="sxs-lookup"><span data-stu-id="6f41b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af5ef-104">語法</span><span class="sxs-lookup"><span data-stu-id="af5ef-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
@@ -36,25 +36,25 @@ HRESULT Next (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6f41b-105">參數</span><span class="sxs-lookup"><span data-stu-id="6f41b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="af5ef-105">參數</span><span class="sxs-lookup"><span data-stu-id="af5ef-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="6f41b-106">[在]要檢索的元素數。</span><span class="sxs-lookup"><span data-stu-id="6f41b-106">[in] The number of elements to be retrieved.</span></span>  
+ <span data-ttu-id="af5ef-106">在要抓取的元素數目。</span><span class="sxs-lookup"><span data-stu-id="af5ef-106">[in] The number of elements to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="6f41b-107">[出]指向檢索到[的 ICorPublishAppDomain](icorpublishappdomain-interface.md)物件的陣列的指標，每個物件都表示一個應用程式域。</span><span class="sxs-lookup"><span data-stu-id="6f41b-107">[out] A pointer to the array of retrieved [ICorPublishAppDomain](icorpublishappdomain-interface.md) objects, each of which represents an application domain.</span></span>  
+ <span data-ttu-id="af5ef-107">脫銷已抓取[ICorPublishAppDomain](icorpublishappdomain-interface.md)物件之陣列的指標，每個物件都代表一個應用程式域。</span><span class="sxs-lookup"><span data-stu-id="af5ef-107">[out] A pointer to the array of retrieved [ICorPublishAppDomain](icorpublishappdomain-interface.md) objects, each of which represents an application domain.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="6f41b-108">[出]指向實際返回的應用程式域數的指標。</span><span class="sxs-lookup"><span data-stu-id="6f41b-108">[out] Pointer to the number of application domains actually returned.</span></span> <span data-ttu-id="6f41b-109">此值可以是 null（如果是`celt`1）。</span><span class="sxs-lookup"><span data-stu-id="6f41b-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="af5ef-108">脫銷實際傳回的應用程式域數的指標。</span><span class="sxs-lookup"><span data-stu-id="af5ef-108">[out] Pointer to the number of application domains actually returned.</span></span> <span data-ttu-id="af5ef-109">如果是一個，這個值可能會是 null `celt` 。</span><span class="sxs-lookup"><span data-stu-id="af5ef-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f41b-110">需求</span><span class="sxs-lookup"><span data-stu-id="6f41b-110">Requirements</span></span>  
- <span data-ttu-id="6f41b-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6f41b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="af5ef-110">需求</span><span class="sxs-lookup"><span data-stu-id="af5ef-110">Requirements</span></span>  
+ <span data-ttu-id="af5ef-111">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="af5ef-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f41b-112">**標題：** 科爾普布.idl， 科爾普布.h</span><span class="sxs-lookup"><span data-stu-id="6f41b-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="af5ef-112">**標頭：** CorPub .idl，CorPub。h</span><span class="sxs-lookup"><span data-stu-id="af5ef-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="6f41b-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6f41b-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="af5ef-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af5ef-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6f41b-114">**.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f41b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="af5ef-114">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af5ef-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f41b-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6f41b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="af5ef-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="af5ef-115">See also</span></span>
 
-- [<span data-ttu-id="6f41b-116">ICorPublishAppDomainEnum 介面</span><span class="sxs-lookup"><span data-stu-id="6f41b-116">ICorPublishAppDomainEnum Interface</span></span>](icorpublishappdomainenum-interface.md)
+- [<span data-ttu-id="af5ef-116">ICorPublishAppDomainEnum 介面</span><span class="sxs-lookup"><span data-stu-id="af5ef-116">ICorPublishAppDomainEnum Interface</span></span>](icorpublishappdomainenum-interface.md)
