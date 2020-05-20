@@ -1,34 +1,34 @@
 ---
-ms.openlocfilehash: f131933f3cf7890939854c46f115e8deb8da1cc2
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888162"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702277"
 ---
-### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo 與文字元素的手舉器現在符合 UAX29 標準
+### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>System.globalization.stringinfo> 和 TextElementEnumerator 現在符合 UAX29 標準
 
-在此更改之前,<xref:System.Globalization.StringInfo?displayProperty=fullName><xref:System.Globalization.TextElementEnumerator?displayProperty=fullName>並沒有 正確處理所有石墨星系團。 一些石墨烯被分割成其組成成分,而不是放在一起。 現在,<xref:System.Globalization.StringInfo>並<xref:System.Globalization.TextElementEnumerator>根據最新版本的 Unicode 標準處理石墨組。
+在此變更之前， <xref:System.Globalization.StringInfo?displayProperty=fullName> 和 <xref:System.Globalization.TextElementEnumerator?displayProperty=fullName> 未正確處理所有語素簇叢集。 有些 graphemes 已分割成其組成元件，而不是保持在一起。 現在， <xref:System.Globalization.StringInfo> 和會 <xref:System.Globalization.TextElementEnumerator> 根據 Unicode 標準的最新版本來處理語素簇叢集。
 
-此外,<xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName>該方法在 Visual Basic 中反轉字串中的字元,現在也遵循圖目組中的 Unicode 標準。
+此外，方法會 <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName> 反轉 Visual Basic 字串中的字元，現在也會遵循語素簇叢集的 Unicode 標準。
 
 #### <a name="change-description"></a>變更描述
 
-[圖目或](https://www.unicode.org/glossary/#grapheme)[擴展圖目組](https://www.unicode.org/glossary/#extended_grapheme_cluster)是單個使用者感知的字元,可能由多個 Unicode 代碼點組成。 例如,包含泰語字元「kam」:::no-loc text="กำ":::( ) 的字串由以下兩個字元組成:
+[語素簇](https://www.unicode.org/glossary/#grapheme)或[extended 語素簇](https://www.unicode.org/glossary/#extended_grapheme_cluster)叢集是單一使用者察覺的字元，可能由多個 Unicode 程式碼點組成。 例如，包含泰文字元 "kam" （）的字串 :::no-loc text="กำ"::: 包含下列兩個字元：
 
-- :::no-loc text="ก":::(= "\u0e01")泰語人物 KO KAI
-- :::no-loc text=" ำ":::(= "\u0e33")泰國字元 SARA AM
+- :::no-loc text="ก":::（= ' \u0e01 '）泰文字元 KO KAI
+- :::no-loc text=" ำ":::（= ' \u0e33 '）泰文字元 SARA AM
 
-將使用者顯示時,作業系統會兩個字符合並,以形成單個顯示字元(或石墨)"kam'或:::no-loc text="กำ":::。 表情符號還可以由多個字元組成,這些字元組合起來以類似方式顯示。
+向使用者顯示時，作業系統會結合兩個字元來形成單一顯示字元（或語素簇） "kam" 或 :::no-loc text="กำ"::: 。 表情也可以包含多個合併成以類似方式顯示的字元。
 
 > [!TIP]
-> .NET 文件有時在引用石墨時使用術語"文本元素"。
+> .NET 檔在參考語素簇時，有時會使用「文字元素」一詞。
 
-<xref:System.Globalization.StringInfo>和<xref:System.Globalization.TextElementEnumerator>類檢查字串並返回有關它們包含的圖目關係的資訊。 在 .NET 框架 (所有版本)和 .NET Core 3.x 及更早版本中,這兩個類使用自訂邏輯來處理某些組合類,但並不完全符合[Unicode 標準](https://www.unicode.org/reports/tr29/tr29-35.html#Grapheme_Cluster_Boundaries)。 例如,<xref:System.Globalization.StringInfo><xref:System.Globalization.TextElementEnumerator>和 類錯誤地將單個泰語字元"kam"拆分回其組成元件,而不是將它們保留在一起。 這些類還錯誤地將表情符號字元「🤷🏽♀️」拆分為四個群集(人聳肩、膚色修飾器、性別修飾符和不可見的組合器),而不是將它們作為單個圖形學聚類保留在一起。
+<xref:System.Globalization.StringInfo>和 <xref:System.Globalization.TextElementEnumerator> 類別會檢查字串，並傳回其所包含之 graphemes 的相關資訊。 在 .NET Framework （所有版本）和 .NET Core 3.x 和更早版本中，這兩個類別會使用自訂邏輯來處理一些結合類別，但不完全符合[Unicode 標準](https://www.unicode.org/reports/tr29/tr29-35.html#Grapheme_Cluster_Boundaries)。 例如， <xref:System.Globalization.StringInfo> 和 <xref:System.Globalization.TextElementEnumerator> 類別不正確地將單一泰文字元 "kam" 分割回其組成的元件，而不是將它們保持在一起。 這些類別也會不正確地將表情字元「🤷🏽♀️」分割成四個叢集（person shrugging、膚色音調修飾詞、性別修飾詞和不可見的結合器），而不是將它們一起保持為單一語素簇叢集。
 
-從 .NET<xref:System.Globalization.StringInfo><xref:System.Globalization.TextElementEnumerator>5 開始 ,和 類別實現 Unicode 標準定義的 Unicode 標準,由[Unicode\#標準附件 29,第 35,第 3 秒 。](https://www.unicode.org/reports/tr29/tr29-35.html) 特別是,它們現在返回所有組合類的[擴展石墨姆群集](https://www.unicode.org/glossary/#extended_grapheme_cluster)。
+從 .NET 5 開始， <xref:System.Globalization.StringInfo> 和類別會依照 <xref:System.Globalization.TextElementEnumerator> [unicode 標準附錄 \# 29、rev 35、sec. 3](https://www.unicode.org/reports/tr29/tr29-35.html)所定義的方式來執行 unicode 標準。 特別是，他們現在會針對所有結合類別傳回[擴充的語素簇](https://www.unicode.org/glossary/#extended_grapheme_cluster)叢集。
 
-請考慮以下 C# 程式碼:
+請考慮下列 c # 程式碼：
 
 ```cs
 using System.Globalization;
@@ -55,7 +55,7 @@ static void PrintGraphemes(string str)
 }
 ```
 
-在 .NET 框架和 .NET Core 3.x 和早期版本中,圖形圖姆被拆分,控制台輸出如下所示:
+在 .NET Framework 和 .NET Core 3.x 和更早版本中，graphemes 會進行分割，而主控台輸出如下所示：
 
 ```txt
 Printing graphemes of "กำ"...
@@ -71,7 +71,7 @@ Grapheme 4: "♀️"
 (4 grapheme(s) total.)
 ```
 
-在 .NET 5 和更高版本中,圖目數保持在一起,控制台輸出如下所示:
+在 .NET 5 和更新版本中，graphemes 會保持在一起，而主控台輸出如下所示：
 
 ```txt
 Printing graphemes of "กำ"...
@@ -83,29 +83,31 @@ Grapheme 1: "🤷🏽‍♀️"
 (1 grapheme(s) total.)
 ```
 
-此外,從 .NET<xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName>5 開始 ,該方法在 Visual Basic 中反轉字串中的字元,現在也遵循圖目組中的 Unicode 標準。
+此外，從 .NET 5 開始，在 Visual Basic 中將字串中的 <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName> 字元反轉的方法，現在也會遵循語素簇叢集的 Unicode 標準。
 
-這些更改是 .NET 中更廣泛的 Unicode 和 UTF-8 改進集的一部分,包括擴展的圖目組枚舉 API,以補充使用<xref:System.Text.Rune?displayProperty=fullName>.NET Core 3.0 中的類型引入的 Unicode scalar 值枚舉 API。
+這些變更是 .NET 中更廣泛 Unicode 和 UTF-8 改良功能的一部分，包括擴充的語素簇叢集列舉 API，以補充 <xref:System.Text.Rune?displayProperty=fullName> .Net Core 3.0 中的類型所引進的 unicode 純量值列舉 api。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
-.NET 5.0 預覽 1
+.NET 5.0 Preview 1
 
-### <a name="recommended-action"></a>建議的動作
+#### <a name="recommended-action"></a>建議的動作
 
-您不需要採取任何動作。 在各種與全球化相關的方案中,您的應用將自動以更符合標準的方式運行。
+您不需要採取任何動作。 在各種全球化的相關案例中，您的應用程式將會以更符合標準的方式自動行為。
 
-### <a name="category"></a>類別
+#### <a name="category"></a>類別
 
 全球化
 
-### <a name="affected-apis"></a>受影響的 API
+#### <a name="affected-apis"></a>受影響的 API
 
 - <xref:System.Globalization.StringInfo?displayProperty=fullName>
 - <xref:System.Globalization.TextElementEnumerator?displayProperty=fullName>
 - <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName>
 
 <!--
+
+#### Affected APIs
 
 - `T:System.Globalization.StringInfo`
 - `T:System.Globalization.TextElementEnumerator`

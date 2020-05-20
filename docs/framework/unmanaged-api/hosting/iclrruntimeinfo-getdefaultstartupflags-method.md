@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35c2173e-3b0b-4b2a-950d-e0a01c6df052
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce822533b0699f3467dc08044aa4dab59285a77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8513787f48ae89632816face386bbcda20555dac
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120306"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703880"
 ---
 # <a name="iclrruntimeinfogetdefaultstartupflags-method"></a>ICLRRuntimeInfo::GetDefaultStartupFlags 方法
 取得將用來啟動執行時間的啟動旗標和主機設定檔。  
@@ -42,29 +42,29 @@ HRESULT GetDefaultStartupFlags(
  脫銷目前主機設定檔的目錄路徑指標。  
   
  `pcchHostConfigFile`  
- [in、out]輸入時，`pwzHostConfigFile`的大小，以避免緩衝區溢位。 如果 `pwzHostConfigFile` 為 null，此方法會傳回預先配置所需的 `pwzHostConfigFile` 大小。  
+ [in、out]在輸入時，為的大小 `pwzHostConfigFile` ，以避免緩衝區溢位。 如果 `pwzHostConfigFile` 為 null，則方法會針對預先配置傳回所需的大小 `pwzHostConfigFile` 。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及指出方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
   
 ## <a name="remarks"></a>備註  
- 這個方法會傳回預設旗標值（`STARTUP_CONCURRENT_GC` 和 `NULL`），或先前呼叫[ICLRRuntimeInfo：： SetDefaultStartupFlags 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md)所提供的值，或者，如果系結至這個執行時間，則為任何 `CorBind*` 方法所設定的值。  
+ 這個方法會傳回預設旗標值（ `STARTUP_CONCURRENT_GC` 和 `NULL` ），或是先前呼叫[ICLRRuntimeInfo：： SetDefaultStartupFlags 方法](iclrruntimeinfo-setdefaultstartupflags-method.md)所提供的值，或者，如果系結至此執行時間，則為任何方法所設定的值 `CorBind*` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo 介面](iclrruntimeinfo-interface.md)
+- [裝載介面](hosting-interfaces.md)
+- [裝載](index.md)

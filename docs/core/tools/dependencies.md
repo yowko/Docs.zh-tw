@@ -1,17 +1,17 @@
 ---
-title: 管理 .NET Core 中的相依性
-description: 說明如何管理 .NET Core 應用程式的專案相依性。
+title: ''
+description: ''
 no-loc:
 - dotnet add package
 - dotnet remove package
 - dotnet list package
-ms.date: 02/25/2020
-ms.openlocfilehash: b77acc7d4f03a45784f753d3daaa9810f110a6ac
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.date: ''
+ms.openlocfilehash: 667b2d4d68edd82a4d18c370e45ea18f4d4b379a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205946"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702847"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>管理 .NET Core 應用程式中的相依性
 
@@ -76,7 +76,7 @@ dotnet add package Microsoft.EntityFrameworkCore
 dotnet remove package Microsoft.EntityFrameworkCore
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [專案檔中的套件參考](../project-sdk/msbuild-props.md#reference-properties-and-items)
-* [dotnet list package命令](dotnet-remove-package.md)
+* [dotnet list package命令](dotnet-list-package.md)

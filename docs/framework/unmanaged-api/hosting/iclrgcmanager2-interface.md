@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
 topic_type:
 - apiref
-ms.openlocfilehash: 72ffd7b47795ee8e46f8fbff07559133843793e6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f3ecc0d497eaee937647df47ba0956335a2fe41
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141153"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703953"
 ---
 # <a name="iclrgcmanager2-interface"></a>ICLRGCManager2 介面
 提供可讓主機與 common language runtime 的垃圾收集系統互動的方法。  
@@ -28,27 +28,27 @@ ms.locfileid: "73141153"
   
 |方法|描述|  
 |------------|-----------------|  
-|[SetGCStartupLimitsEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)|設定垃圾收集區段的大小，以及垃圾收集系統層代0的大小上限。 啟用層代0和區段大小大於 `DWORD`。|  
+|[SetGCStartupLimitsEx 方法](iclrgcmanager2-setgcstartuplimitsex-method.md)|設定垃圾收集區段的大小，以及垃圾收集系統層代0的大小上限。 啟用層代0和區段大小大於 `DWORD` 。|  
   
 ## <a name="remarks"></a>備註  
- 此介面繼承自[ICLRGCManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)。  
+ 此介面繼承自[ICLRGCManager 介面](iclrgcmanager-interface.md)。  
   
- Common language runtime （CLR）會使用 managed <xref:System.GC> 類型來執行其垃圾收集機制。 如需垃圾收集系統的詳細資訊，請參閱[垃圾收集](../../../standard/garbage-collection/index.md)。  
+ Common language runtime （CLR）會使用 managed 類型來執行其垃圾收集機制 <xref:System.GC> 。 如需垃圾收集系統的詳細資訊，請參閱[垃圾收集](../../../standard/garbage-collection/index.md)。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [自動管理記憶體](../../../standard/automatic-memory-management.md)
-- [COR_GC_STATS 結構](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [.NET Framework 4 和 4.5 中新增的 CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [自動記憶體管理](../../../standard/automatic-memory-management.md)
+- [COR_GC_STATS 結構](cor-gc-stats-structure.md)
+- [ICLRControl 介面](iclrcontrol-interface.md)
+- [.NET Framework 4 和 4.5 中新增的 CLR 裝載介面](clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [裝載介面](hosting-interfaces.md)
+- [裝載](index.md)

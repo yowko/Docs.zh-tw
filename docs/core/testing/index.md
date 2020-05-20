@@ -3,19 +3,20 @@ title: .NET Core 與 .NET Standard 中的單元測試
 description: 此文章提供 .NET Core 與 .NET Standard 專案單元測試的簡短概觀。
 author: ardalis
 ms.author: wiwagn
-ms.date: 08/30/2017
-ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/18/2020
+zone_pivot_groups: unit-testing-framework-set-one
+ms.openlocfilehash: e15f80b173389cdff86c6e62013e9c0f21171dd6
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78157397"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703099"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 與 .NET Standard 中的單元測試
 
 .NET Core 使單元測試的建立便得更加輕鬆。 本文會介紹單元測試，並示範它們和其他種類測試之間的差異。 接近頁面底部的連結資源，會向您示範如何將測試專案新增到解決方案。 在您設定好測試專案後，就能使用命令列或 Visual Studio 來執行單元測試。
 
-如果要測試**ASP.NET核心**專案，請參閱[ASP.NET 酷中的集成測試](/aspnet/core/test/integration-tests#test-app-prerequisites)。
+如果您要測試**ASP.NET Core**專案，請參閱[ASP.NET Core 中的整合測試](/aspnet/core/test/integration-tests#test-app-prerequisites)。
 
 .NET Core 2.0 及較新版本均支援 [.NET Standard 2.0](../../standard/net-standard.md)，而我們會使用其程式庫來示範單元測試。
 
@@ -42,23 +43,35 @@ ms.locfileid: "78157397"
 - [F#](../../fsharp/index.yml)
 - [Visual Basic](../../visual-basic/index.yml)
 
-您也可以選擇使用：
+您也可以選擇數個單元測試架構：
 
-- [xUnit](https://xunit.github.io)
+- [xUnit](https://xunit.net/)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 
 您可以從以下逐步解說學到更多：
 
-- 使用 [*xUnit* 與 *C#* 搭配 .NET Core CLI](unit-testing-with-dotnet-test.md) 來建立單元測試。
-- 使用 [*NUnit* 及 *C#* 搭配 .NET Core CLI](unit-testing-with-nunit.md) 建立單元測試。
+:::zone pivot="mstest"
+
 - 使用 [*MSTest* 與 *C#* 搭配 .NET Core CLI](unit-testing-with-mstest.md) 來建立單元測試。
-- 使用 [*xUnit* 與 *F#* 搭配 .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md) 來建立單元測試。
-- 使用 [*NUnit* 及 *#* 搭配 .NET Core CLI](unit-testing-fsharp-with-nunit.md) 建立單元測試。
 - 使用 [*MSTest* 與 *F#* 搭配 .NET Core CLI](unit-testing-fsharp-with-mstest.md) 來建立單元測試。
-- 使用 [*xUnit* 與 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md) 來建立單元測試。
-- 使用 [*Unit* 及 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-nunit.md) 來建立單元測試。
 - 使用 [*MSTest* 與 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-mstest.md) 來建立單元測試。
+
+:::zone-end
+:::zone pivot="xunit"
+
+- 使用 [*xUnit* 與 *C#* 搭配 .NET Core CLI](unit-testing-with-dotnet-test.md) 來建立單元測試。
+- 使用 [*xUnit* 與 *F#* 搭配 .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md) 來建立單元測試。
+- 使用 [*xUnit* 與 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md) 來建立單元測試。
+
+:::zone-end
+:::zone pivot="nunit"
+
+- 使用 [*NUnit* 及 *C#* 搭配 .NET Core CLI](unit-testing-with-nunit.md) 建立單元測試。
+- 使用 [*NUnit* 及 *#* 搭配 .NET Core CLI](unit-testing-fsharp-with-nunit.md) 建立單元測試。
+- 使用 [*Unit* 及 *Visual Basic* 搭配 .NET Core CLI](unit-testing-visual-basic-with-nunit.md) 來建立單元測試。
+
+:::zone-end
 
 您可以從以下文章學到更多：
 

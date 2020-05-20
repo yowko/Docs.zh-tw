@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-ms.openlocfilehash: 23f868bba2dc058d99f1c5c09e9b311b1ff3634a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6813f72f9d27aeff90f797a6ca9370b22e03e6f0
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140898"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703701"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
-提供回呼函式，保證會在第一次載入 common language runtime （CLR）版本，但尚未啟動時呼叫。 這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函數。  
+提供回呼函式，保證會在第一次載入 common language runtime （CLR）版本，但尚未啟動時呼叫。 這個方法會取代[LockClrVersion](lockclrversion-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ HRESULT RequestRuntimeLoadedNotification (
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`pCallbackFunction` 為 null。|  
@@ -76,27 +76,27 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- 如果主機打算載入或造成另一個執行時間以可重新進入的方式載入，則在回呼函式中提供的 `pfnCallbackThreadSet` 和 `pfnCallbackThreadUnset` 參數必須以下列方式使用：  
+ 如果主機打算載入或造成另一個執行時間以可重新進入的方式載入，則 `pfnCallbackThreadSet` `pfnCallbackThreadUnset` 必須以下列方式使用回呼函式中提供的和參數：  
   
-- `pfnCallbackThreadSet` 必須由執行緒呼叫，這可能會在嘗試進行這類負載之前造成執行時間載入。  
+- `pfnCallbackThreadSet`必須由執行緒呼叫，可能會在嘗試進行這類負載之前造成執行時間載入。  
   
-- 當執行緒不再造成這類執行時間載入（以及從初始回呼傳回之前）時，就必須呼叫 `pfnCallbackThreadUnset`。  
+- `pfnCallbackThreadUnset`當執行緒不會再造成這類執行時間載入（以及從初始回呼傳回之前）時，必須呼叫。  
   
-- `pfnCallbackThreadSet` 和 `pfnCallbackThreadUnset` 都是不可重新進入的。  
+- `pfnCallbackThreadSet`和 `pfnCallbackThreadUnset` 都是不可重新進入的。  
   
 > [!NOTE]
-> 主應用程式不能在 `pCallbackFunction` 參數的範圍之外呼叫 `pfnCallbackThreadSet` 和 `pfnCallbackThreadUnset`。  
+> 主應用程式不能 `pfnCallbackThreadSet` 在 `pfnCallbackThreadUnset` 參數的範圍之外呼叫和 `pCallbackFunction` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRMetaHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRMetaHost 介面](iclrmetahost-interface.md)
+- [裝載](index.md)
