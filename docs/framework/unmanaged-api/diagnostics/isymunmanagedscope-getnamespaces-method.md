@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-ms.openlocfilehash: b765294826a5da4010cdd2db79b50667a6f1cdb4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f11a69671864ba4627c2bb8c86e0c9beb27eeb1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446298"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83611116"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces 方法
 取得在此範圍內使用的命名空間。  
@@ -41,7 +41,7 @@ HRESULT GetNamespaces(
  [in] `namespaces` 陣列的大小。  
   
  `pcNameSpaces`  
- 脫銷`ULONG32` 的指標，接收包含命名空間所需的緩衝區大小。  
+ 脫銷的指標 `ULONG32` ，接收包含命名空間所需的緩衝區大小。  
   
  `namespaces`  
  脫銷接收命名空間的陣列。  
@@ -54,4 +54,4 @@ HRESULT GetNamespaces(
   
 ## <a name="see-also"></a>另請參閱
 
-- [ISymUnmanagedScope 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [ISymUnmanagedScope 介面](isymunmanagedscope-interface.md)
