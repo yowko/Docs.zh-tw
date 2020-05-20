@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: 21e92d8f2fb80c4c41d516ef281bf4fc8a75f4e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d41e048b67d4bc7159f6dd5266457651f1658290
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176639"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420587"
 ---
-# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="28bb3-102">CorSymVarFlag 列舉</span><span class="sxs-lookup"><span data-stu-id="28bb3-102">CorSymVarFlag Enumeration</span></span>
-<span data-ttu-id="28bb3-103">指示變數是否為編譯器生成。</span><span class="sxs-lookup"><span data-stu-id="28bb3-103">Indicates whether a variable is compiler-generated.</span></span>  
+# <a name="corsymvarflag-enumeration"></a><span data-ttu-id="0df5e-102">CorSymVarFlag 列舉</span><span class="sxs-lookup"><span data-stu-id="0df5e-102">CorSymVarFlag Enumeration</span></span>
+<span data-ttu-id="0df5e-103">指出變數是否由編譯器產生。</span><span class="sxs-lookup"><span data-stu-id="0df5e-103">Indicates whether a variable is compiler-generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="28bb3-104">語法</span><span class="sxs-lookup"><span data-stu-id="28bb3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0df5e-104">語法</span><span class="sxs-lookup"><span data-stu-id="0df5e-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSymVarFlag
@@ -33,15 +33,15 @@ typedef enum CorSymVarFlag
 } CorSymVarFlag;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="28bb3-105">成員</span><span class="sxs-lookup"><span data-stu-id="28bb3-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0df5e-105">成員</span><span class="sxs-lookup"><span data-stu-id="0df5e-105">Members</span></span>  
   
-|<span data-ttu-id="28bb3-106">member</span><span class="sxs-lookup"><span data-stu-id="28bb3-106">Member</span></span>|<span data-ttu-id="28bb3-107">描述</span><span class="sxs-lookup"><span data-stu-id="28bb3-107">Description</span></span>|  
+|<span data-ttu-id="0df5e-106">成員</span><span class="sxs-lookup"><span data-stu-id="0df5e-106">Member</span></span>|<span data-ttu-id="0df5e-107">說明</span><span class="sxs-lookup"><span data-stu-id="0df5e-107">Description</span></span>|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|<span data-ttu-id="28bb3-108">指示給定變數是編譯器生成的。</span><span class="sxs-lookup"><span data-stu-id="28bb3-108">Indicates that the given variable is compiler-generated.</span></span>|  
+|`VAR_IS_COMP_GEN`|<span data-ttu-id="0df5e-108">表示指定的變數是編譯器產生的。</span><span class="sxs-lookup"><span data-stu-id="0df5e-108">Indicates that the given variable is compiler-generated.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="28bb3-109">需求</span><span class="sxs-lookup"><span data-stu-id="28bb3-109">Requirements</span></span>  
- <span data-ttu-id="28bb3-110">**標題：** 科西姆.伊德爾，科西姆.h</span><span class="sxs-lookup"><span data-stu-id="28bb3-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0df5e-109">需求</span><span class="sxs-lookup"><span data-stu-id="0df5e-109">Requirements</span></span>  
+ <span data-ttu-id="0df5e-110">**標頭：** CorSym .idl，CorSym。h</span><span class="sxs-lookup"><span data-stu-id="0df5e-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="28bb3-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="28bb3-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0df5e-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0df5e-111">See also</span></span>
 
-- [<span data-ttu-id="28bb3-112">診斷符號存放區列舉</span><span class="sxs-lookup"><span data-stu-id="28bb3-112">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="0df5e-112">診斷符號存放區列舉</span><span class="sxs-lookup"><span data-stu-id="0df5e-112">Diagnostics Symbol Store Enumerations</span></span>](diagnostics-symbol-store-enumerations.md)
