@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: b90991affe158286f535f3cc17232efd0b730fec
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: d23c6cc9f8ee9c912ce5c9509d157692d1a18f90
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275347"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721761"
 ---
-### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>信封Cm預設為 AES-256 加密
+### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms 預設為 AES-256 加密
 
-使用的`EnvelopedCms`預設對稱加密演演演算法從三重DES 更改為 AES-256。
+使用的預設對稱式加密演算法 `EnvelopedCms` 已從 TripleDES 變更為 AES-256。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET 核心預覽<xref:System.Security.Cryptography.Pkcs.EnvelopedCms>7 和早期版本中,當用於加密數據而不通過構造函數重載指定對稱加密演演演算法時,數據使用 TripleDES/3DES/3DEA/DES3-EDE 演算法進行加密。
+在 .NET Core Preview 7 和舊版中，當 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 用來加密資料而不透過函式多載指定對稱式加密演算法時，會使用 TripleDES/3des/3DEA/DES3-EDE 演算法來加密資料。
 
-從 .NET Core 3.0 預覽 8(通過系統版本[4.6.0.Security.Crypto.Cryptoic.Pkcs](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/) NuGet 包)開始,默認演演演算法已更改為 AES-256,用於演演演演算法現代化並提高預設選項的安全性。 如果郵件收件者證書具有(非 EC)Diffie-Hellman 公鑰,則由於基礎平臺中的限制<xref:System.Security.Cryptography.CryptographicException>,加密 操作可能會失敗。
+從 .NET Core 3.0 Preview 8 開始（透過[4.6.0 的版本](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/)），預設演算法已變更為 AES-256 以進行演算法現代化，並改善預設選項的安全性。 如果訊息收件者憑證具有（非 EC） Diffie-hellman 公開金鑰，加密作業可能會因基礎平臺的限制而失敗 <xref:System.Security.Cryptography.CryptographicException> 。
 
-在以下範例代碼中,如果在 .NET Core 3.0 預覽版 7 或更早版本上運行,則數據使用 TripleDES 進行加密。 如果在 .NET Core 3.0 預覽版 3.0 或更高版本上運行,則使用 AES-256 加密。
+在下列範例程式碼中，如果在 .NET Core 3.0 Preview 7 或更早版本上執行，則會使用 TripleDES 來加密資料。 如果在 .NET Core 3.0 Preview 8 或更新版本上執行，則會使用 AES-256 進行加密。
 
 ```csharp
 EnvelopedCms cms = new EnvelopedCms(content);
@@ -24,13 +24,13 @@ cms.Encrypt(recipient);
 return cms.Encode();
 ```
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
-3.0 預覽 8
+3.0 Preview 8
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果受到更改的負面影響,可以通過顯式指定包含<xref:System.Security.Cryptography.Pkcs.EnvelopedCms><xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier>類型 參數的構造函數中的加密演算法標識符來還原 TripleDES 加密,例如:
+如果您對變更有負面影響，您可以藉由在包含型別參數的函式中明確指定加密演算法識別碼來還原 TripleDES 加密 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> ，例如：
 
 ```csharp
 Oid tripleDesOid = new Oid("1.2.840.113549.3.7", null);
@@ -53,7 +53,7 @@ return cms.Encode()l
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.EnvelopedCms.#ctor`
 - `M:System.Security.Cryptography.Pkcs.EnvelopedCms.#ctor(System.Security.Cryptography.Pkcs.ContentInfo)`

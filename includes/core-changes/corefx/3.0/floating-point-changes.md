@@ -1,32 +1,32 @@
 ---
-ms.openlocfilehash: 22dbb1e982f83687a9e0eb288ed72c78c676db77
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 719f336e1b38597674d6ee8f0c5429dd965054b1
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021682"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721063"
 ---
-### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>變更浮點格式與分析行為
+### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>浮點格式設定和剖析行為已變更
 
-浮點解析和格式設定行為(按<xref:System.Double>和<xref:System.Single>類型)現在符合 IEEE。
+浮點剖析和格式化行為（依 <xref:System.Double> 和 <xref:System.Single> 類型）現在是與 IEEE 相容。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 2.2<xref:System.Double.ToString%2A?displayProperty=nameWithType><xref:System.Single.ToString%2A?displayProperty=nameWithType>和早期<xref:System.Double.Parse%2A?displayProperty=nameWithType>版本<xref:System.Double.TryParse%2A?displayProperty=nameWithType>中<xref:System.Single.Parse%2A?displayProperty=nameWithType>,使用<xref:System.Single.TryParse%2A?displayProperty=nameWithType>和進行 格式化 ,以及使用 、和進行解析,不符合 IEEE。 因此,無法保證值將隨行任何支援的標準或自定義格式字串。 對於某些輸入,嘗試分析格式化的值可能會失敗,而對於其他輸入,解析的值不等於原始值。
+在 .net Core 2.2 和更早版本中，使用和進行的格式設定 <xref:System.Double.ToString%2A?displayProperty=nameWithType> <xref:System.Single.ToString%2A?displayProperty=nameWithType> 和以 <xref:System.Double.Parse%2A?displayProperty=nameWithType> 、 <xref:System.Double.TryParse%2A?displayProperty=nameWithType> 、 <xref:System.Single.Parse%2A?displayProperty=nameWithType> 和進行剖析並 <xref:System.Single.TryParse%2A?displayProperty=nameWithType> 不符合 IEEE 規範。 因此，無法保證值會與任何支援的標準或自訂格式字串往返。 對於某些輸入，剖析格式化值的嘗試可能會失敗，而針對其他專案，則剖析的值不等於原始值。
 
-從 .NET Core 3.0 開始,解析和格式化操作符合 IEEE 754 標準。 這可確保 .NET 中的浮點類型的行為與 IEEE 相容語言(如 C#)的行為匹配。 有關詳細資訊,請參閱[.NET Core 3.0 部落格文章中的浮點解析和格式改進](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)。
+從 .NET Core 3.0 開始，剖析和格式化作業與 IEEE 754 相容。 這可確保 .NET 中浮點類型的行為符合與 IEEE 相容的語言（例如 c #）的行為。 如需詳細資訊，請參閱[.Net Core 3.0 中的浮點剖析和格式改進](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)文章。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="recommended-action"></a>建議的動作
 
-[.NET Core 3.0 博客文章中的浮點解析和格式改進](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)的"對現有代碼的潛在影響"部分建議,如果觀察到行為更改與 .NET Core 2.2 應用程式相比,則更改代碼。 如果某些結果以前不正確,則可能無法使用解決方法。
+[.Net core 3.0 中的浮點剖析和格式化改善](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)的「對現有程式碼的潛在影響」一節會建議您對程式碼所做的變更，如果您在與 .net Core 2.2 應用程式相比，觀察到行為的變更，這牽涉到使用不同的標準或自訂格式字串來強制執行所需的行為。 某些結果若先前不正確，可能不會有因應措施。
 
 #### <a name="category"></a>類別
 
-核心 .NET 函式庫
+Core .NET 程式庫
 
 #### <a name="affected-apis"></a>受影響的 API
 
@@ -39,7 +39,7 @@ ms.locfileid: "82021682"
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Double.ToString`
 - `Overload:System.Single.ToString`

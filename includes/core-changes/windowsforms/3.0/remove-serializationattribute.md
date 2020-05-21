@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b35e99b1516c3236d07153cf0b69dae55a4bff7d
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74643953"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721780"
 ---
-### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>從某些 Windows 表單類型中刪除的可序列化屬性
+### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>已從某些 Windows Forms 類型中移除 SerializableAttribute
 
-<xref:System.SerializableAttribute>已從某些沒有已知二進位序列化方案的 Windows 表單類中刪除。
+已 <xref:System.SerializableAttribute> 從某些沒有已知二進位序列化案例的 Windows Forms 類別中移除。
 
 #### <a name="change-description"></a>變更描述
 
-以下類型使用<xref:System.SerializableAttribute>in .NET 框架進行修飾，但在 .NET Core 中刪除了該屬性：
+下列型別會使用中的來裝飾 <xref:System.SerializableAttribute> .NET Framework 中的，但已移除 .Net Core 中的屬性：
 
 - `System.InvariantComparer`
 - <xref:System.ComponentModel.Design.ExceptionCollection?displayProperty=nameWithType>
@@ -26,17 +26,17 @@ ms.locfileid: "74643953"
 - `System.Windows.Forms.NativeMethods.MSOCRINFOSTRUCT`
 - `System.Windows.Forms.NativeMethods.MSG`
 
-從歷史上看，這種序列化機制一直有著嚴重的維護和安全問題。 保持`SerializableAttribute`類型意味著必須測試這些類型的版本到版本序列化更改和潛在的框架到框架序列化更改。 這使得發展這些類型變得更加困難，而且維護成本可能很高。 這些類型沒有已知的二進位序列化方案，這最大限度地減少了刪除屬性的影響。
+在過去，這個序列化機制已經有嚴重的維護和安全性考慮。 維護 `SerializableAttribute` 類型表示這些類型必須經過測試，才能進行版本對版本的序列化變更，以及可能的架構對架構序列化變更。 這會讓您更難演變這些類型，而且維護成本可能會很高。 這些類型沒有已知的二進位序列化案例，可將移除屬性的影響降至最低。
 
-有關詳細資訊，請參閱[二進位序列化](~/docs/standard/serialization/binary-serialization.md)。
+如需詳細資訊，請參閱[二進位序列化](~/docs/standard/serialization/binary-serialization.md)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
-3.0 預覽 9
+3.0 Preview 9
 
 #### <a name="recommended-action"></a>建議的動作
 
-更新可能依賴于標記為可序列化的任何代碼。
+更新可能相依于標記為 serializable 之這些類型的任何程式碼。
 
 #### <a name="category"></a>類別
 
@@ -44,11 +44,11 @@ Windows Forms
 
 #### <a name="affected-apis"></a>受影響的 API
 
-- None
+- 無
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

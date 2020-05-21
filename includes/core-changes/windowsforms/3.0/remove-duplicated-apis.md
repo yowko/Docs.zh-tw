@@ -1,21 +1,21 @@
 ---
-ms.openlocfilehash: 0be59258df10aa13920551f011d68bc8efe20b93
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 3dfacadb5127319d4ce27f367803637cfb1ed00f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888104"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721080"
 ---
-### <a name="duplicated-apis-removed-from-windows-forms"></a>從 Windows 表單中移除的重複 API
+### <a name="duplicated-apis-removed-from-windows-forms"></a>已從 Windows Forms 移除重複的 Api
 
-在 .NET Core<xref:System.Windows.Forms?displayProperty=fullName>3.0 預覽 4 中啟動的命名空間中意外複製了許多 API,已在 .NET Core 3.0 RC1 中刪除。
+從 .NET core 3.0 Preview 4 開始，命名空間中不小心重複的一些 Api 已 <xref:System.Windows.Forms?displayProperty=fullName> 從 .Net core 3.0 RC1 中移除。
 
 #### <a name="change-description"></a>變更描述
 
-.NET Core 3.0 預覽 4<xref:System.Windows.Forms?displayProperty=fullName><xref:System.ComponentModel.Design?displayProperty=fullName>無意中複製了 命名空間中已經存在的命名空間中的許多類型。 從 .NET Core 3.0 RC1 開始,這些重複的類型不再可用。 下表列的原始型態與重複型態:
+.NET Core 3.0 Preview 4 不小心複製了命名空間中已經存在的一些類型 <xref:System.Windows.Forms?displayProperty=fullName> <xref:System.ComponentModel.Design?displayProperty=fullName> 。 從 .NET Core 3.0 RC1 開始，這些重複的類型已無法再使用。 下表顯示原始類型和其重複類型的清單：
 
 > [!div class="mx-tdCol2BreakAll"]
-> |原始類型|重複類型|
+> |原始類型|重複的類型|
 > |---|---|
 > |<xref:System.ComponentModel.Design.DesignerActionListsChangedEventArgs?displayProperty=fullName>|`System.Windows.Forms.DesignerActionListsChangedEventArgs`|
 > |<xref:System.ComponentModel.Design.DesignerActionListsChangedEventHandler?displayProperty=fullName>|`System.Windows.Forms.DesignerActionListsChangedEventHandler`|
@@ -23,13 +23,13 @@ ms.locfileid: "80888104"
 > |<xref:System.ComponentModel.Design.DesignerActionUIService?displayProperty=fullName>|`System.Windows.Forms.DesignerActionUIService`|
 > |<xref:System.ComponentModel.Design.DesignerCommandSet?displayProperty=fullName>|`System.Windows.Forms.DesignerCommandSet`|
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0 RC1
 
 #### <a name="recommended-action"></a>建議的動作
 
-更新代碼以引用原始類型,如表**的"原始類型**"列所示。
+更新程式碼以參考原始類型，如資料表的**原始類型**資料行所示。
 
 #### <a name="category"></a>類別
 
@@ -41,7 +41,7 @@ Windows Forms
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis.
 

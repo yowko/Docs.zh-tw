@@ -1,33 +1,33 @@
 ---
-ms.openlocfilehash: b5b724afefcce69df706f2bea0b1612db653af03
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 3d94023fc508a56304587121c6cf1444c87b0d52
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275526"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721015"
 ---
-### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>RSAOpenSsl 金鑰產生的最低大小已增加
+### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>RSAOpenSsl 金鑰產生的大小下限已增加
 
-在 Linux 上生成新 RSA 金鑰的最小大小從 384 位元增加到 512 位元。
+在 Linux 上產生新 RSA 金鑰的最小大小已從 384-位增加至512位。
 
 #### <a name="change-description"></a>變更描述
 
-從 .NET Core`LegalKeySizes`3.0 開始,屬性在 RSA 實<xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>例上<xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>報告的<xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A>最小法律 密鑰 大小從 、和 Linux 上從 384 增加到 512。
+從 .NET Core 3.0 開始，Linux 上、和的 RSA 實例上的屬性所報告的最低合法金鑰大小， `LegalKeySizes` <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A> <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A> 從384增加到512。
 
-因此,在 .NET Core 2.2 和早期版本中,`RSA.Create(384)`方法調用( 如成功)將成功。 在 .NET Core 3.0`RSA.Create(384)`和更高版本中 ,方法調用將引發一個異常,指示大小太小。
+因此，在 .NET Core 2.2 和更早版本中，方法呼叫（例如）會 `RSA.Create(384)` 成功。 在 .NET Core 3.0 和更新版本中，方法呼叫會擲回例外狀況， `RSA.Create(384)` 指出大小太小。
 
-之所以做出此更改,是因為在 Linux 上執行加密操作的 OpenSSL 在版本 1.0.2 和 1.1.0 之間提高了最小值。 .NET Core 3.0 更喜歡 OpenSSL 1.1.x 到 1.0.x,並且提出了最低報告版本以反映這種新的更高依賴項限制。
+此變更的原因是，OpenSSL 會在 Linux 上執行密碼編譯作業，並在版本1.0.2 和1.1.0 之間產生最小值。 .NET Core 3.0 傾向于將 OpenSSL 1.1. x 新增至 1.0. x，並產生最小的回報版本，以反映這項較高的相依性限制。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果調用任何受影響的 API,請確保任何生成的密鑰的大小不小於提供程式的最小值。
+如果您呼叫任何受影響的 Api，請確定任何產生的金鑰大小不小於提供者的最小值。
 
 > [!NOTE]
-> 384 位 RSA 已被視為不安全(如 512 位 RSA)。 現代建議,如[NIST 特別出版物 800-57 第 1 部分修訂版 4,](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf)建議將 2048 位作為新生成的密鑰的最小大小。
+> 384位 RSA 已經被視為不安全（如同512位 RSA）。 新式建議（例如[NIST 特殊發行集800-57 第1部分修訂 4](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r4.pdf)）會建議2048位做為新產生之金鑰的最小大小。
 
 #### <a name="category"></a>類別
 
@@ -41,7 +41,7 @@ ms.locfileid: "81275526"
 - <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A>
 
 <!--
-### Affected APIs
+#### Affected APIs
 
 - `P:System.Security.Cryptography.AsymmetricAlgorithm.LegalKeySizes`
 - `Overload:System.Security.Cryptography.RSA.Create`

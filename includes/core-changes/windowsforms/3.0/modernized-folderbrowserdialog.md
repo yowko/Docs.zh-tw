@@ -1,34 +1,34 @@
 ---
-ms.openlocfilehash: 645df8080abd21e4db95903a301a36b79a698858
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 11c04441dcec260f0bfb90f6ed2b919b1545b382
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888103"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83720903"
 ---
-### <a name="modernization-of-the-folderbrowserdialog"></a>資料夾瀏覽器對話的現代化
+### <a name="modernization-of-the-folderbrowserdialog"></a>FolderBrowserDialog 的現代化
 
-在<xref:System.Windows.Forms.FolderBrowserDialog>.NET Core 的 Windows 表單應用程式中,該控制項已更改。
+<xref:System.Windows.Forms.FolderBrowserDialog>控制項已在適用于 .Net Core 的 Windows Forms 應用程式中變更。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET 框架中,Windows<xref:System.Windows.Forms.FolderBrowserDialog>表單對控制項使用以下對話框:
+在 .NET Framework 中，Windows forms 會針對控制項使用下列對話方塊 <xref:System.Windows.Forms.FolderBrowserDialog> ：
 
-![.NET 框架中的資料夾瀏覽器對話控制](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
+![.NET Framework 中的 FolderBrowserDialogControl](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
 
-在 .NET Core 3.0 中,Windows 窗體使用者引入了 Windows Vista 中引入的基於 COM 的較新的控制件:
+在 .NET Core 3.0 中，Windows Forms 使用者會在 Windows Vista 中引進較新的以 COM 為基礎的控制項：
 
-![.NET 內核中的資料夾瀏覽器對話控制](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
+![.NET Core 中的 FolderBrowserDialogControl](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="recommended-action"></a>建議的動作
 
-對話框將自動升級。
+對話方塊將會自動升級。
 
-如果要保留原始對話框,請先<xref:System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled?displayProperty=nameWithType>將屬性設定為`false`, 然後顯示對話框,如下代碼片段所示:
+如果您想要保留原始的對話方塊，請在 <xref:System.Windows.Forms.FolderBrowserDialog.AutoUpgradeEnabled?displayProperty=nameWithType> 顯示對話方塊之前將屬性設定為， `false` 如下列程式碼片段所示：
 
 ```csharp
 var dialog = new FolderBrowserDialog();
@@ -46,7 +46,7 @@ Windows Forms
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Windows.Forms.FolderBrowserDialog`
 

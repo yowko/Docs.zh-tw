@@ -1,40 +1,40 @@
 ---
-ms.openlocfilehash: 9583d868ee01117d7bd6e465e7d89a734489d1a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b861dbaa02c97a03c015fdf4e63d25c40c90ea0a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449208"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721255"
 ---
-### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>簽名Cms的布林參數.計算簽名得到尊重
+### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>遵守 SignedCms 的布林值參數。 ComputeSignature
 
-在 .NET Core 中`silent`，<xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>該方法的布林參數得到尊重。 如果此參數設置為`true`，則不顯示 PIN 提示。
+在 .NET Core 中， `silent` 會遵守方法的布林值參數 <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> 。 如果此參數設定為，則不會顯示 PIN 提示 `true` 。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET 框架`silent`中，將<xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>忽略該方法的參數，並且如果提供程式需要，則始終顯示 PIN 提示。 在 .NET Core`silent`中，該參數受到尊重，如果`true`設置為 ，則永遠不會顯示 PIN 提示符，即使提供程式需要 PIN 提示符也是如此。
+在 .NET Framework 中， `silent` <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> 會忽略方法的參數，而且在提供者需要時，一律會顯示 PIN 提示。 在 .NET Core 中， `silent` 會遵守參數，如果設定為，則永遠不會 `true` 顯示 PIN 提示（即使提供者需要）。
 
-對 CMS/PKCS 的支援#7消息在 2.1 版中引入到 .NET Core 中。
+2.1 版的 .NET Core 中引進了 CMS/PKCS #7 訊息的支援。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 2.1
 
 #### <a name="recommended-action"></a>建議的動作
 
-為確保在需要時出現 PIN 提示，桌面應用程式應調用<xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>並將布林參數設置為`false`。 無論靜默上下文是否在那裡被禁用，生成的行為與 .NET 框架上的行為相同。
+為確保在需要時顯示 PIN 提示，桌面應用程式應該呼叫， <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> 並將布林參數設定為 `false` 。 產生的行為等同于 .NET Framework，不論是否在該處停用無訊息內容。
 
-### <a name="category"></a>類別
+#### <a name="category"></a>類別
 
-Cryptography
+密碼編譯
 
-### <a name="affected-apis"></a>受影響的 API
+#### <a name="affected-apis"></a>受影響的 API
 
 - <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)`
 

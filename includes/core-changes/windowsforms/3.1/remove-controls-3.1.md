@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 10811a90887624a731c58d557e1dd196ae2c9207
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06a700a6fcd9c434e5ea8a10031371d13a4d1a4b
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76508563"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721366"
 ---
-### <a name="removed-controls"></a>已刪除控制項
+### <a name="removed-controls"></a>移除的控制項
 
-從 .NET Core 3.1 開始，某些 Windows 表單控制項不再可用。
+從 .NET Core 3.1 開始，部分 Windows Forms 控制項已無法再使用。
 
 #### <a name="change-description"></a>變更描述
 
-從 .NET Core 3.1 開始，各種 Windows 表單控制項不再可用。 .NET 框架 2.0 中引入了具有更好設計和支援的替換控制項。 棄用的控制項以前從設計器工具箱中刪除，但仍可用。
+從 .NET Core 3.1 開始，已不再提供各種 Windows Forms 控制項。 在 .NET Framework 2.0 中引進了更佳設計和支援的取代控制項。 已淘汰的控制項先前已從設計工具工具箱中移除，但仍可供使用。
 
-以下類型不再可用：
+下列類型已無法再使用：
 
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection>
@@ -45,21 +45,21 @@ ms.locfileid: "76508563"
 - <xref:System.Windows.Forms.DataGrid.HitTestType>
 - <xref:System.Windows.Forms.Design.IMenuEditorService>
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.1
 
 #### <a name="recommended-action"></a>建議的動作
 
-每個已移除的控制項都有建議的替換控制項。 請參閱下表：
+每個移除的控制項都有建議的取代控制項。 請參閱下表：
 
-| 已刪除控制 （API） | 推薦更換 | 已刪除的關聯 API |
+| 已移除控制項（API） | 建議取代 | 已移除的相關聯 Api |
 |-|-|-|
-| DataGrid | DataGridView | 資料網格塞爾、資料網格顯示、資料網格表收集、資料網格列集合、資料網格表樣式、資料網格列樣式、資料網格線上樣式、資料網格父行標籤、資料網格父行標籤樣式、資料網格寶列、資料網格文字方塊、網格列樣式集合、網格表樣式集合、點擊測試類型 |
-| ToolBar | ToolStrip | 工具列外觀 |
-| 工具列按鈕 | 工具條按鈕 | 工具列點擊事件，工具列點擊事件處理常式，工具列按鈕樣式，工具列文本對齊|
+| DataGrid | DataGridView | DataGridCell、DataGridRow、DataGridTableCollection、DataGridColumnCollection、DataGridTableStyle、System.windows.forms.datagridcolumnstyle>、DataGridLineStyle、DataGridParentRowsLabel、DataGridParentRowsLabelStyle、DataGridBoolColumn、DataGridTextBox、System.windows.forms.gridcolumnstylescollection>、system.windows.forms.gridtablestylescollection>、HitTestType |
+| ToolBar | ToolStrip | System.windows.forms.toolbar.appearance |
+| ToolBarButton | ToolStripButton | System.windows.forms.toolbarbuttonclickeventargs>、ToolBarButtonClickEventHandler、ToolBarButtonStyle、ToolBarTextAlign|
 | ContextMenu | ContextMenuStrip | |
-| 功能表 | 工具條下，工具條下功能表 | 功能表項目目集合 |
+| 功能表 | ToolStripDropDown、ToolStripDropDownMenu | MenuItemCollection |
 | MainMenu | MenuStrip | |
 | MenuItem | ToolStripMenuItem | |
 
@@ -100,7 +100,7 @@ Windows Forms
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.Windows.Forms.Menu`
 - `T:System.Windows.Forms.Menu.MenuItemCollection`

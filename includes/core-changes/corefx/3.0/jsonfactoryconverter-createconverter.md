@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 3bce796191e0ebe6dbe4650457abe5a20c383f02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43da6233b70927e7320874772976b9e93a0bd69f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147558"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721533"
 ---
-### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>JsonFactory轉換器.創建轉換器簽名已更改
+### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>JsonFactoryConverter. CreateConverter 簽章已變更
 
-為方便類的<xref:System.Text.Json.Serialization.JsonConverterFactory>組成，<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A>該方法已公開，並給出了第二個類型<xref:System.Text.Json.JsonSerializerOptions>參數。
+為了簡化類別的撰寫 <xref:System.Text.Json.Serialization.JsonConverterFactory> ，已將 <xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter%2A> 方法設為公用，並提供類型的第二個引數 <xref:System.Text.Json.JsonSerializerOptions> 。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET `CreateConverter` Core 版本 3.0 預覽版 8 之前，該方法的簽名是：
+`CreateConverter`版本 3.0 Preview 8 之前 .Net Core 中方法的簽章為：
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -24,7 +24,7 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-在 .NET 核心 3.0 預覽版 8 和更高版本中，它是：
+在 .NET Core 3.0 Preview 8 和更新版本中，它是：
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -36,15 +36,15 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-在這種變化之前，很難組成密封的工廠轉換器，因為沒有簡單的方法來<xref:System.Text.Json.Serialization.JsonConverter%601>得到它。 使工廠方法公開，也傳遞電流<xref:System.Text.Json.JsonSerializerOptions>允許更靈活的組合。
+在此變更之前，很難撰寫密封的 factory 轉換器，因為沒有簡單的方法可以 <xref:System.Text.Json.Serialization.JsonConverter%601> 從它取得。 將 factory 方法設為公用，同時傳遞目前的 <xref:System.Text.Json.JsonSerializerOptions> 允許更具彈性的組合。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
-3.0 預覽 8
+3.0 Preview 8
 
 #### <a name="recommended-action"></a>建議的動作
 
-派生類需要更新和重新編譯。
+衍生類別需要更新並重新編譯。
 
 #### <a name="affected-apis"></a>受影響的 API
 
@@ -52,7 +52,7 @@ namespace System.Text.Json.Serialization
 
 <!-- For tool use only
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)`
 

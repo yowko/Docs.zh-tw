@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 2afe5ae80c2d7feca89737b767a6335950d04416
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: d90996ae1b87cdea815daf979bece094d8602f70
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021598"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721611"
 ---
-### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>JsonEncodedText.編碼方法具有額外的JAVAScriptEncoder參數
+### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a>JsonEncodedText 方法有額外的 JavaScriptEncoder 引數
 
-從 .NET Core 3.0 預覽<xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>8 開始<xref:System.Text.Encodings.Web.JavaScriptEncoder>,這些方法包含一個可選參數。
+從 .NET Core 3.0 Preview 8 開始， <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> 方法包含選擇性的 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 引數。
 
 #### <a name="change-description"></a>變更描述
 
-.NET Core 3.0 包括一種新類型,外部參照:系統.Text.Json.JsonEncodedText.Encode%2A?顯示屬性_名稱與類型>。 從 .NET Core 3.0<xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>預覽 8 開始,所有方法重<xref:System.Text.Encodings.Web.JavaScriptEncoder>載的簽名已更改為 包含可選參數。 進行此更改是為了允許其他編碼器或自定義編碼器。
+.NET Core 3.0 包含新的類型 x： JsonEncodedText。編碼% 2A？ displayProperty = Namewithtype>>。 從 .NET Core 3.0 Preview 8 開始，所有方法多載的簽章 <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> 已變更為包含選擇性 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 參數。 已進行這種變更，以允許不同或自訂的編碼器。
 
-.NET Core `Encode` 3.0 預覽 7 中方法的簽名是:
+`Encode`.Net Core 3.0 Preview 7 中的方法簽章為：
 
 ```csharp
 namespace System.Text.Json
@@ -28,7 +28,7 @@ namespace System.Text.Json
 }
 ```
 
-在 .NET `Encode` Core 3.0 預覽版 8 和更高版本中的相同方法的簽名是:
+`Encode`.Net Core 3.0 Preview 8 和更新版本中相同方法的簽章為：
 
 ```csharp
 namespace System.Text.Json
@@ -42,17 +42,17 @@ namespace System.Text.Json
 }
 ```
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
-.NET 核心 3.0 預覽 8
+.NET Core 3.0 Preview 8
 
 #### <a name="recommended-action"></a>建議的動作
 
-這隻是二進位中斷更改;針對 .NET Core 3.0 預覽版或更高版本重新編譯將修復任何運行時問題。
+這只是二進位的重大變更;針對 .NET Core 3.0 Preview 8 或更新版本進行重新編譯將會修正任何執行時間問題。
 
 #### <a name="category"></a>類別
 
-核心 .NET 函式庫
+Core .NET 程式庫
 
 #### <a name="affected-apis"></a>受影響的 API
 
@@ -62,7 +62,7 @@ namespace System.Text.Json
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan{System.Byte},System.Text.Encodings.Web.JavaScriptEncoder)`
 - `M:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan{System.Char},System.Text.Encodings.Web.JavaScriptEncoder)`
