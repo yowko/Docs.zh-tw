@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c6ff45fc-905d-4c6e-b00c-97c6c7c55d99
 topic_type:
 - apiref
-ms.openlocfilehash: 8f2d74531233f2ba423c39126ddc43e499cbb5d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6dbb3360132186c38c007fb5fa12a3724ca145aa
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176366"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762093"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW 方法
 產生以 Unicode 字串指定之檔案內容的雜湊。  
@@ -39,36 +39,36 @@ HRESULT GetHashFromFileW (
   
 ## <a name="parameters"></a>參數  
  `wszFilePath`  
- [在]要雜湊的檔的 Unicode 名稱。  
+ 在要雜湊之檔案的 Unicode 名稱。  
   
  `piHashAlg`  
- [進出]生成雜湊時使用的演算法。 有效的演算法是由 Win32 加密 API 定義的演算法。 如果`piHashAlg`設置為 0，則使用預設演算法CALG_SHA-1。  
+ [in、out]產生雜湊時要使用的演算法。 有效的演算法是由 Win32 CryptoAPI 所定義。 如果 `piHashAlg` 設定為0，則會使用 CALG_SHA-1 的預設演算法。  
   
  `pbHash`  
- [出]包含生成的雜湊的位元組陣列。  
+ 脫銷包含所產生之雜湊的位元組陣列。  
   
  `cchHash`  
- [在]指向 的緩衝區的最大大小`pbHash`。  
+ 在所指向之緩衝區的大小上限 `pbHash` 。  
   
  `pchHash`  
- [出]的大小（以位元組為單位）的大小`pbHash`。  
+ 脫銷的大小（以位元組為單位） `pbHash` 。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK`如果方法成功完成;如果方法成功完成;否則，指示失敗的 HRESULT 值（請參閱清單[的常用 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+ `S_OK`如果方法已成功完成，則為，否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
- 此方法與[ICLRStrongName：：getHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)方法相同，只不過檔案名規範是 Unicode 而不是 ANSI。  
+ 這個方法與[ICLRStrongName：： GetHashFromFile](iclrstrongname-gethashfromfile-method.md)方法相同，不同之處在于檔案名規格是 Unicode 而不是 ANSI。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **庫：** 作為資源包含在 MSCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [GetHashFromFile 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromFile 方法](iclrstrongname-gethashfromfile-method.md)
+- [ICLRStrongName 介面](iclrstrongname-interface.md)

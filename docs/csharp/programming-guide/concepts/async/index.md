@@ -2,12 +2,12 @@
 title: C# 中的非同步程式設計
 description: 使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀
 ms.date: 03/18/2019
-ms.openlocfilehash: 4cbbff0f2c48f0ec2f8befa234ea5023465a1c5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4bf00d5c77138dfa2d527a262a6cd54a72a688f5
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169905"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761846"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>使用 async 和 await 進行非同步程式設計
 
@@ -30,7 +30,7 @@ ms.locfileid: "79169905"
 
 現在，考慮將這些相同指示撰寫成 C# 陳述式：
 
-[!code-csharp[SynchronousBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-starter/Program.cs#Main)]
+[!code-csharp[SynchronousBreakfast](./snippets/index/AsyncBreakfast-starter/Program.cs#Main)]
 
 電腦解譯這些指示的方式與人類不同。 電腦會封鎖每個陳述式，直到工作完成為止，再繼續下一個陳述式。 這會導致早餐無法令人滿意。 後續工作必須等到先前工作完成才會開始。 這會花更長的時間來準備早餐，且在上菜前，有些菜可能會變涼。
 
@@ -46,7 +46,7 @@ ms.locfileid: "79169905"
 
 我們將從更新此程式碼開始，讓執行緒在工作執行時不會遭到封鎖。 `await` 關鍵字提供一個非封鎖方式來開始工作，然後在工作完成時繼續執行。 準備早餐程式碼的一個簡單非同步版本看起來像下列程式碼片段：
 
-[!code-csharp[SimpleAsyncBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V2/Program.cs#Main)]
+[!code-csharp[SimpleAsyncBreakfast](./snippets/index/AsyncBreakfast-V2/Program.cs#Main)]
 
 此程式碼不會在煎蛋或煎培根時封鎖其他工作。 但此程式碼也不會開始任何其他工作。 您仍會將吐司放入烤麵包機，並在彈出前直盯著它瞧。 但至少，您會回應任何需要您注意的人。 在點了多份早餐的餐廳中，廚師可能會在第一份早餐還在準備時，就開始準備另一份早餐。
 
@@ -116,11 +116,11 @@ Console.WriteLine("Breakfast is ready!");
 
 上述程式碼顯示您可以使用 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件來保存執行中的工作。 您會 `await` 每個工作，再使用其結果。 下一個步驟是建立表示其他工作組合的方法。 在供應早餐之前，您想要等候表示烤土司後再塗上奶油和果醬的工作。 您可以使用下列程式碼來表示該工作：
 
-[!code-csharp[ComposeToastTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
+[!code-csharp[ComposeToastTask](./snippets/index/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
 
 上述方法的簽章中有 `async` 修飾詞。 這會通知編譯器，此方法包含 `await` 陳述式，其中包含非同步作業。 此方法表示烤土司後再塗上奶油和果醬的工作。 此方法會傳回 <xref:System.Threading.Tasks.Task%601>，表示這三項作業的組合。 程式碼的 Main 區塊現在會變成：
 
-[!code-csharp[StartConcurrentTasks](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#Main)]
+[!code-csharp[StartConcurrentTasks](./snippets/index/AsyncBreakfast-V3/Program.cs#Main)]
 
 上述變更說明使用非同步程式碼的重要技術。 您可以透過分隔作業，將多個工作組合成傳回一個工作的新方法。 您可以選擇何時等候該工作。 您可以同時開始其他工作。
 
@@ -138,10 +138,10 @@ Console.WriteLine("Breakfast is ready!");
 
 另一個選項是使用 <xref:System.Threading.Tasks.Task.WhenAny%2A>，它會傳回其任何引數完成時所完成的 `Task<Task>`。 您可以等候傳回的工作，並知道它已完成。 下列程式碼範例示範如何使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 等候第一個工作完成，再處理其結果。 處理完成工作的結果之後，您會從傳遞至 `WhenAny` 的工作清單中移除該完成工作。
 
-[!code-csharp[AwaitAnyTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
+[!code-csharp[AwaitAnyTask](./snippets/index/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
 
 完成上述所有變更之後，`Main` 的最終版本看起來像下列程式碼：
 
-[!code-csharp[Final](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#Main)]
+[!code-csharp[Final](./snippets/index/AsyncBreakfast-final/Program.cs#Main)]
 
 此最終程式碼為非同步。 它會更精確地反映人員準備早餐的方式。 將上述程式碼與本文中的第一個程式碼範例做比較。 閱讀程式碼仍會清楚了解核心動作。 閱讀此程式碼的方式，如同閱讀本文開頭準備早餐的指示。 `async` 和 `await` 之語言功能為所有遵循下列書面指示的人員提供轉譯：盡可能開始多個工作且不要防止等候工作完成。

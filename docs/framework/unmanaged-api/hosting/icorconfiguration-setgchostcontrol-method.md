@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bca6bd79-e288-475a-aa46-6bf81541d966
 topic_type:
 - apiref
-ms.openlocfilehash: 5a32fb0480e76f47495590a29c329f54722e2dee
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e648b36a2b276d9335eefaf71b57ad76f9fe0def
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127784"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762379"
 ---
 # <a name="icorconfigurationsetgchostcontrol-method"></a>ICorConfiguration::SetGCHostControl 方法
 設定要由垃圾收集行程用來要求主控制項變更虛擬記憶體限制的回呼介面。  
@@ -35,17 +35,17 @@ HRESULT SetGCHostControl (
   
 ## <a name="parameters"></a>參數  
  `pGCHostControl`  
- 在[IGCHostControl](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)物件的指標，可讓垃圾收集行程要求主控制項變更虛擬記憶體的限制。  
+ 在[IGCHostControl](igchostcontrol-interface.md)物件的指標，可讓垃圾收集行程要求主控制項變更虛擬記憶體的限制。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICorConfiguration 介面](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+- [ICorConfiguration 介面](icorconfiguration-interface.md)

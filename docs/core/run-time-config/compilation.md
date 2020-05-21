@@ -3,12 +3,12 @@ title: 編譯 config 設定
 description: 瞭解執行時間設定，其可設定 JIT 編譯程式適用于 .NET Core 應用程式的方式。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 4db20ee6d36fe3d3d66f473644b70c02d4e02cb3
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506840"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762002"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>編譯的執行時間設定選項
 
@@ -98,7 +98,7 @@ ms.locfileid: "82506840"
 - 設定 JIT 編譯程式是否針對包含迴圈的方法使用快速 JIT。
 - 啟用快速 JIT for 迴圈可能會改善啟動效能。 不過，長時間執行的迴圈可能會停滯在較不優化的程式碼中。
 - 如果已停用[快速 JIT](#quick-jit) ，此設定就不會有任何作用。
-- 預設：停用`false`（）。
+- 如果您省略此設定，則不會針對包含迴圈的方法使用快速 JIT。 這相當於將值設定為 `false` 。
 
 | | 設定名稱 | 值 |
 | - | - | - |
@@ -136,7 +136,7 @@ ms.locfileid: "82506840"
 
 - 設定 .NET Core 執行時間是否針對具有可用 ReadyToRun 資料的影像使用預先編譯的程式碼。 停用這個選項會強制執行時間執行 JIT 編譯架構程式碼。
 - 如需詳細資訊，請參閱[ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)。
-- 預設值： Enabled`1`（）。
+- 如果您省略此設定，.NET 會使用 ReadyToRun 資料（如果有的話）。 這相當於將值設定為 `1` 。
 
 | | 設定名稱 | 值 |
 | - | - | - |

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd2afb38-675b-4c3c-a9f3-8ab3b133eb02
 topic_type:
 - apiref
-ms.openlocfilehash: f2249d10159b1ff0be7ead0783efb8a2742d26b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 38042876cf4397418d2e6e6ed2bfbeb2df2d62d8
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139615"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762288"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain 方法
-取得類型 <xref:System.AppDomain?displayProperty=nameWithType> 的介面指標，表示在目前線程上載入的網域。  
+取得類型的介面指標 <xref:System.AppDomain?displayProperty=nameWithType> ，表示在目前線程上載入的網域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,28 +35,28 @@ HRESULT CurrentDomain (
   
 ## <a name="parameters"></a>參數  
  `pAppDomain`  
- 脫銷類型 <xref:System.AppDomain?displayProperty=nameWithType> 的指標，表示執行緒目前的應用程式域。 這個指標的型別 `IUnknown`，因此呼叫端通常應該呼叫 `QueryInterface` 來取得型別 <xref:System._AppDomain>的指標。  
+ 脫銷類型的指標 <xref:System.AppDomain?displayProperty=nameWithType> ，表示執行緒目前的應用程式域。 這個指標具有類型 `IUnknown` ，因此呼叫端通常會呼叫 `QueryInterface` 來取得類型的指標 <xref:System._AppDomain> 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|作業成功。|  
 |S_FALSE|作業無法完成。|  
-|E_FAIL|發生未知的嚴重失敗。 如果方法傳回 E_FAIL，則 common language runtime （CLR）在進程中就不再可用。 對任何裝載 Api 的後續呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|E_FAIL|發生未知的嚴重失敗。 如果方法傳回 E_FAIL，則 common language runtime （CLR）就無法在進程中使用。 後續對任何裝載 Api 的呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET Framework 版本：** 1.0、1.1  
+ **.NET Framework 版本：** 1.0、1。1  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [ICorRuntimeHost 介面](icorruntimehost-interface.md)

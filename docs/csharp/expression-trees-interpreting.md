@@ -4,12 +4,12 @@ description: 了解如何撰寫程式碼來查看運算式樹狀架構的結構�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146004"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761859"
 ---
 # <a name="interpreting-expressions"></a>解譯運算式
 
@@ -51,7 +51,7 @@ The value of the constant value is 24
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> 我不會使用 `var` 宣告此運算式樹狀架構，因為指派的右邊具隱含類型，所以無法執行此作業。 若要更深入了解，請閱讀[這篇文章](implicitly-typed-lambda-expressions.md)。
+> 我不會使用 `var` 宣告此運算式樹狀架構，因為指派的右邊具隱含類型，所以無法執行此作業。
 
 根節點是 `LambdaExpression`。 若要取得 `=>` 運算子右邊的相關程式碼，您必須找到 `LambdaExpression` 的其中一個子系。 我們將對本節中的所有運算式執行此作業。 父節點無法協助我們找到 `LambdaExpression` 的傳回型別。
 

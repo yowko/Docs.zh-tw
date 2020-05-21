@@ -2,12 +2,12 @@
 title: 執行時間設定選項
 description: 瞭解如何使用執行時間設定設定來設定 .NET Core 應用程式。
 ms.date: 01/21/2020
-ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506776"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761950"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core 執行時間設定
 
@@ -20,7 +20,7 @@ ms.locfileid: "82506776"
 > [!NOTE]
 > 本檔是進行中的工作。 如果您發現此處顯示的資訊不完整或不正確，請[開啟問題](https://github.com/dotnet/docs/issues)讓我們知道，或[提交提取要求](https://github.com/dotnet/docs/pulls)以解決問題。 如需提交 dotnet/檔存放庫之提取要求的相關資訊，請參閱[參與者指南](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)。
 
-.NET Core 提供下列機制來設定執行時間應用程式行為：
+.NET Core 提供下列機制來設定執行時間的應用程式行為：
 
 - [.Runtimeconfig.json json](#runtimeconfigjson)檔案
 
@@ -28,7 +28,10 @@ ms.locfileid: "82506776"
 
 - [環境變數](#environment-variables)
 
-某些設定值也可以藉由呼叫<xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>方法，以程式設計方式進行設定。
+> [!TIP]
+> 使用環境變數設定執行時間選項，會將此設定套用至所有 .NET Core 應用程式。 在 *.runtimeconfig.json*或專案檔中設定執行時間選項，只會將設定套用至該應用程式。
+
+某些設定值也可以藉由呼叫方法，以程式設計方式進行設定 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 。
 
 檔的這一節中的文章是依類別目錄進行組織，例如，「[調試](debugging-profiling.md)程式」和「[垃圾收集](garbage-collector.md)」。 適用時，會顯示 *.runtimeconfig.json*的設定選項、MSBuild 屬性、環境變數，以及用於 .NET Framework 專案之交互參考的*app.config*檔案。
 
@@ -50,7 +53,7 @@ ms.locfileid: "82506776"
 
 ### <a name="example-appnameruntimeconfigjson-file"></a>範例 [appname]. .runtimeconfig.json. json 檔案
 
-如果您要將選項放在輸出 JSON 檔案中，請將它們嵌套`runtimeOptions`在屬性底下。
+如果您要將選項放在輸出 JSON 檔案中，請將它們嵌套在 `runtimeOptions` 屬性底下。
 
 ```json
 {
@@ -71,7 +74,7 @@ ms.locfileid: "82506776"
 
 ### <a name="example-runtimeconfigtemplatejson-file"></a>範例 .runtimeconfig.json. template json 檔案
 
-如果您要將選項放在範本 JSON 檔案中，請省略`runtimeOptions`屬性。
+如果您要將選項放在範本 JSON 檔案中，請省略 `runtimeOptions` 屬性。
 
 ```json
 {
@@ -106,13 +109,13 @@ ms.locfileid: "82506776"
 </Project>
 ```
 
-設定執行時間行為的 MSBuild 屬性會在每個區域的個別文章中注明，例如[垃圾收集](garbage-collector.md)。
+設定執行時間行為的 MSBuild 屬性會在每個區域的個別文章中注明，例如[垃圾收集](garbage-collector.md)。 它們也會列在 SDK 樣式專案之 MSBuild 屬性參考的 [[執行時間](../project-sdk/msbuild-props.md#run-time-configuration-properties)設定] 區段中。
 
 ## <a name="environment-variables"></a>環境變數
 
-環境變數可以用來提供一些執行時間設定資訊。 指定為環境變數的設定旋鈕通常會**COMPlus_** 前置詞。
+環境變數可以用來提供一些執行時間設定資訊。 使用環境變數設定執行時間選項，會將此設定套用至所有 .NET Core 應用程式。 指定為環境變數的設定旋鈕通常會**COMPlus_** 前置詞。
 
-您可以從 Windows [控制台]、命令列或以程式設計方式，在 Windows 和 Unix 系統<xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType>上呼叫方法來定義環境變數。
+您可以從 Windows [控制台]、命令列或以程式設計方式，在 <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> windows 和 Unix 系統上呼叫方法來定義環境變數。
 
 下列範例示範如何在命令列設定環境變數：
 

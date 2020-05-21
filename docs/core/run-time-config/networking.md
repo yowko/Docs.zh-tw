@@ -1,45 +1,45 @@
 ---
 title: 網路設定設定
-description: 瞭解為 .NET Core 應用配置網路的運行時設置。
+description: 瞭解設定 .NET Core 應用程式網路功能的執行時間設定。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 8d02087ad7260cc78c096090bf3b06a716d34678
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6b5e03b127f95911b712b66c0be8a4f5a2929fc2
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989099"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761937"
 ---
-# <a name="run-time-configuration-options-for-networking"></a>網路執行時設定選項
+# <a name="run-time-configuration-options-for-networking"></a>網路功能的執行時間設定選項
 
-## <a name="http2-protocol"></a>HTTP/2 協定
+## <a name="http2-protocol"></a>HTTP/2 通訊協定
 
-- 配置是否啟用了對 HTTP/2 協定的支援。
+- 設定是否啟用 HTTP/2 通訊協定的支援。
 
-- 預設值:`false`已關閉 ( 。
+- 如果您省略此設定，則會停用 HTTP/2 通訊協定的支援。 這相當於將值設定為 `false` 。
 
-- 在 .NET 核心 3.0 中介紹。
+- 在 .NET Core 3.0 中引進。
 
 | | 設定名稱 | 值 |
 | - | - | - |
-| **執行時設定.json** | `System.Net.Http.SocketsHttpHandler.Http2Support` | `false`- 停用<br/>`true`- 已開啟 |
-| **環境變數** | `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` | `0`- 停用<br/>`1`- 已開啟 |
+| **.runtimeconfig.json json** | `System.Net.Http.SocketsHttpHandler.Http2Support` | `false`-已停用<br/>`true`-已啟用 |
+| **環境變數** | `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` | `0`-已停用<br/>`1`-已啟用 |
 
-## <a name="usesocketshttphandler"></a>使用 SocketTTHttpHandler
+## <a name="usesocketshttphandler"></a>UseSocketsHttpHandler
 
-- <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType>配置使用<xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType>還是較舊的 HTTP 協定<xref:System.Net.Http.WinHttpHandler>堆疊(`CurlHandler`在 Windows 和 ,在 Linux 上在[libcurl](https://curl.haxx.se/libcurl/)之上實現的內部類別)。
+- 設定是否 <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType> 使用 <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType> 或較舊的 HTTP 通訊協定堆疊（ <xref:System.Net.Http.WinHttpHandler> 在 Windows 上，以及在 `CurlHandler` Linux 上以[libcurl](https://curl.haxx.se/libcurl/)為基礎執行的內部類別）。
 
   > [!NOTE]
-  > 您可能使用的是進階網路 API,而不是直接實例<xref:System.Net.Http.HttpClientHandler>化類別 。 此設定還影響進階網路 API(包括<xref:System.Net.Http.HttpClient>和[HTTPClientFactory)](https://docs.microsoft.com/previous-versions/aspnet/hh995280(v%3dvs.118))使用哪些 HTTP 協定堆疊。
+  > 您可能使用高階網路 Api，而不是直接具現化 <xref:System.Net.Http.HttpClientHandler> 類別。 這項設定也會影響高階網路 Api （包括和 HttpClientFactory）所使用的 HTTP 通訊協定堆疊 <xref:System.Net.Http.HttpClient> 。 [HttpClientFactory](https://docs.microsoft.com/previous-versions/aspnet/hh995280(v%3dvs.118))
 
-- 預設值:<xref:System.Net.Http.SocketsHttpHandler>`true`使用 ( 。
+- 如果您省略此設定，會 <xref:System.Net.Http.HttpClientHandler> 使用 <xref:System.Net.Http.SocketsHttpHandler> 。 這相當於將值設定為 `true` 。
 
-- 您可以通過調<xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>用 方法以程式設計方式設定此設定。
+- 您可以藉由呼叫方法，以程式設計方式設定這項設定 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 。
 
 | | 設定名稱 | 值 |
 | - | - | - |
-| **執行時設定.json** | `System.Net.Http.UseSocketsHttpHandler` | `true`- 使用<xref:System.Net.Http.SocketsHttpHandler><br/>`false`- 允許在<xref:System.Net.Http.WinHttpHandler>Windows 上使用, 或在 Linux 上使用[libcurl](https://curl.haxx.se/libcurl/) |
-| **環境變數** | `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` | `1`- 使用<xref:System.Net.Http.SocketsHttpHandler><br/>`0`- 允許在<xref:System.Net.Http.WinHttpHandler>Windows 上使用, 或在 Linux 上使用[libcurl](https://curl.haxx.se/libcurl/) |
+| **.runtimeconfig.json json** | `System.Net.Http.UseSocketsHttpHandler` | `true`-允許使用<xref:System.Net.Http.SocketsHttpHandler><br/>`false`-可讓您在 <xref:System.Net.Http.WinHttpHandler> Windows 或 Linux 上的[libcurl](https://curl.haxx.se/libcurl/)上使用 |
+| **環境變數** | `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` | `1`-允許使用<xref:System.Net.Http.SocketsHttpHandler><br/>`0`-可讓您在 <xref:System.Net.Http.WinHttpHandler> Windows 或 Linux 上的[libcurl](https://curl.haxx.se/libcurl/)上使用 |
 
 > [!NOTE]
-> 從 .NET`System.Net.Http.UseSocketsHttpHandler`5 中開始,該設置不再可用。
+> 從 .NET 5 開始， `System.Net.Http.UseSocketsHttpHandler` 設定就無法再使用。

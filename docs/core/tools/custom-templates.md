@@ -2,21 +2,24 @@
 title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: thraka
-ms.date: 06/14/2019
-ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/20/2020
+ms.openlocfilehash: 19855c99b240b66dfa819e70d4a1bee5c8ed14ed
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73420873"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761911"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
-[.NET Core SDK](https://dotnet.microsoft.com/download) \(英文\) 具有許多已經安裝並可供您使用的範本。 該[`dotnet new`命令](dotnet-new.md)不僅是使用範本的方式，也是如何安裝和卸載範本的方法。 從 .NET Core 2.0 開始，您可以建立任何專案類型的自訂範本，例如應用程式、服務、工具或類別庫。 您甚至可以建立會輸出一或多個獨立檔案的範本，例如組態檔。
+[.NET Core SDK](https://dotnet.microsoft.com/download) \(英文\) 具有許多已經安裝並可供您使用的範本。 [ `dotnet new` 命令](dotnet-new.md)不僅是使用範本的方式，也會說明如何安裝和卸載範本。 從 .NET Core 2.0 開始，您可以建立任何專案類型的自訂範本，例如應用程式、服務、工具或類別庫。 您甚至可以建立會輸出一或多個獨立檔案的範本，例如組態檔。
 
-您可以通過直接引用 NuGet *.nupkg*檔，或通過指定包含該範本的檔案系統目錄，在任何 NuGet 源上安裝 NuGet 包中的自訂範本。 範本引擎提供可讓您取代值、包含與排除檔案，以及在範本被使用時執行自訂處理作業的功能。
+您可以直接參考*nupkg*檔案，或指定包含範本的檔案系統目錄，從任何 nuget 摘要的 nuget 套件安裝自訂範本。 範本引擎提供可讓您取代值、包含與排除檔案，以及在範本被使用時執行自訂處理作業的功能。
 
-範本引擎是開放原始碼，而線上程式碼存放庫位於 GitHub 的 [dotnet/templating](https://github.com/dotnet/templating/)。 如需範本範例，請瀏覽 [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) 存放庫。 GitHub 的 [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (dotnet new 的可用範本) 中，有包括協力廠商範本在內的更多範本。 如需建立與使用自訂範本的詳細資訊，請參閱[如何建立您自己的 dotnet new 範本](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)以及 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)。
+範本引擎是開放原始碼，而線上程式碼存放庫位於 GitHub 的 [dotnet/templating](https://github.com/dotnet/templating/)。 GitHub 的 [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (dotnet new 的可用範本) 中，有包括協力廠商範本在內的更多範本。 如需建立與使用自訂範本的詳細資訊，請參閱[如何建立您自己的 dotnet new 範本](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)以及 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)。
+
+> [!NOTE]
+> 範本範例可在[dotnet/dotnet 範本-範例](https://github.com/dotnet/dotnet-template-samples)GitHub 存放庫中取得。 不過，雖然這些範例是瞭解範本如何工作的絕佳資源，但存放庫已封存且不再保留。 這些範例可能已過期，因此無法再運作。
 
 若要遵循逐步解說並建立範本，請參閱[建立 dotnet new 的自訂範本](../tutorials/cli-templates-create-item-template.md)教學課程。
 
@@ -33,7 +36,7 @@ dotnet new --list
 範本是由下列部分組成：
 
 - 來源檔案和資料夾。
-- 設定檔 （*範本.json*）。
+- 設定檔（*範本. json*）。
 
 ### <a name="source-files-and-folders"></a>來源檔案和資料夾
 
@@ -52,7 +55,7 @@ dotnet new --list
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| member            | 類型          | 描述 |
+| 成員            | 類型          | Description |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |

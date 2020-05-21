@@ -1,74 +1,77 @@
 ---
-title: 調試分析配置設置
-description: 瞭解配置 .NET Core 應用的調試和分析的運行時設置。
+title: 分析設定檔設定
+description: 瞭解設定 .NET Core 應用程式之偵測和分析的執行時間設定。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: c57cfa7233f48def890ded3c9d589b7f268147df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5efd0f776da4b7ce6ff7f3bdfda24feec6e00f79
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74802796"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761989"
 ---
-# <a name="run-time-configuration-options-for-debugging-and-profiling"></a>用於調試和分析的運行時配置選項
+# <a name="run-time-configuration-options-for-debugging-and-profiling"></a>用於進行偵錯工具和分析的執行時間設定選項
 
 ## <a name="enable-diagnostics"></a>啟用診斷
 
-- 配置調試器、探測器和事件管道診斷是啟用還是禁用。
-- 預設值： 已`1`啟用 （ 。
+- 設定是否啟用或停用偵錯工具、分析工具和 EventPipe 診斷。
+- 如果您省略此設定，就會啟用診斷。 這相當於將值設定為 `1` 。
 
 | | 設定名稱 | 值 |
 | - | - | - |
-| **運行時配置.json** | N/A | N/A |
-| **環境變數** | `COMPlus_EnableDiagnostics` | `1`- 已啟用<br/>`0`- 禁用 |
+| **.runtimeconfig.json json** | N/A | N/A |
+| **環境變數** | `COMPlus_EnableDiagnostics` | `1`-已啟用<br/>`0`-已停用 |
 
 ## <a name="enable-profiling"></a>啟用分析
 
-- 配置是否為當前正在運行的進程啟用了分析。
-- 預設值： 已`0`禁用 （ 。
+- 設定是否針對目前正在執行的進程啟用分析。
+- 如果您省略此設定，就會停用分析。 這相當於將值設定為 `0` 。
 
 | | 設定名稱 | 值 |
 | - | - | - |
-| **運行時配置.json** | N/A | N/A |
-| **環境變數** | `CORECLR_ENABLE_PROFILING` | `0`- 禁用<br/>`1`- 已啟用 |
+| **.runtimeconfig.json json** | N/A | N/A |
+| **環境變數** | `CORECLR_ENABLE_PROFILING` | `0`-已停用<br/>`1`-已啟用 |
 
-## <a name="profiler-guid"></a>探測器 GUID
+## <a name="profiler-guid"></a>Profiler GUID
 
-- 指定要載入到當前正在運行的進程中的探測器的 GUID。
-
-| | 設定名稱 | 值 |
-| - | - | - |
-| **運行時配置.json** | N/A | N/A |
-| **環境變數** | `CORECLR_PROFILER` | *字串吉德* |
-
-## <a name="profiler-location"></a>探測器位置
-
-- 指定探測器 DLL 的路徑以載入到當前正在運行的進程（或 32 位或 64 位進程）。
-- 如果設置了多個變數，則位級特定變數優先。 它們指定要載入的探測器的位數。
-- 有關詳細資訊，請參閱[查找探測器庫](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/profiling/Profiler%20Loading.md)。
+- 指定要載入目前正在執行之進程中的分析工具 GUID。
 
 | | 設定名稱 | 值 |
 | - | - | - |
-| **環境變數** | `CORECLR_PROFILER_PATH` | *字串路徑* |
-| **環境變數** | `CORECLR_PROFILER_PATH_32` | *字串路徑* |
-| **環境變數** | `CORECLR_PROFILER_PATH_64` | *字串路徑* |
+| **.runtimeconfig.json json** | N/A | N/A |
+| **環境變數** | `CORECLR_PROFILER` | *字串-guid* |
 
-## <a name="write-perf-map"></a>寫入 perf 地圖
+## <a name="profiler-location"></a>Profiler 位置
 
-- 啟用或禁用在 Linux 系統上寫入 */tmp/perf-$pid.map。*
-- 預設值： 已`0`禁用 （ 。
-
-| | 設定名稱 | 值 |
-| - | - | - |
-| **運行時配置.json** | N/A | N/A |
-| **環境變數** | `COMPlus_PerfMapEnabled` | `0`- 禁用<br/>`1`- 已啟用 |
-
-## <a name="perf-log-markers"></a>Perf 日誌標記
-
-- 設置為`COMPlus_PerfMapEnabled`時`1`，啟用或禁用指定信號，以在 perf 日誌中作為標記接受和忽略。
-- 預設值： 已`0`禁用 （ 。
+- 指定要載入目前正在執行之進程（或32位或64位進程）的 profiler DLL 路徑。
+- 如果設定了一個以上的變數，則會優先使用位特定變數。 它們會指定要載入的 profiler 位。
+- 如需詳細資訊，請參閱[尋找 profiler 程式庫](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/profiling/Profiler%20Loading.md)。
 
 | | 設定名稱 | 值 |
 | - | - | - |
-| **運行時配置.json** | N/A | N/A |
-| **環境變數** | `COMPlus_PerfMapIgnoreSignal` | `0`- 禁用<br/>`1`- 已啟用 |
+| **環境變數** | `CORECLR_PROFILER_PATH` | *字串-路徑* |
+| **環境變數** | `CORECLR_PROFILER_PATH_32` | *字串-路徑* |
+| **環境變數** | `CORECLR_PROFILER_PATH_64` | *字串-路徑* |
+
+## <a name="write-perf-map"></a>撰寫 perf map
+
+- 在 Linux 系統上啟用或停用寫入 */tmp/perf-$pid。*
+- 如果您省略此設定，則會停用寫入效能對應。 這相當於將值設定為 `0` 。
+
+| | 設定名稱 | 值 |
+| - | - | - |
+| **.runtimeconfig.json json** | N/A | N/A |
+| **環境變數** | `COMPlus_PerfMapEnabled` | `0`-已停用<br/>`1`-已啟用 |
+
+## <a name="perf-log-markers"></a>效能記錄檔標記
+
+- 啟用或停用指定的信號，以作為效能記錄檔中的標記接受並予以忽略。
+- 如果您省略此設定，則不會忽略指定的信號。 這相當於將值設定為 `0` 。
+
+| | 設定名稱 | 值 |
+| - | - | - |
+| **.runtimeconfig.json json** | N/A | N/A |
+| **環境變數** | `COMPlus_PerfMapIgnoreSignal` | `0`-已停用<br/>`1`-已啟用 |
+
+> [!NOTE]
+> 如果[COMPlus_PerfMapEnabled](#write-perf-map)省略或設為 `0` （也就是已停用），則會忽略此設定。

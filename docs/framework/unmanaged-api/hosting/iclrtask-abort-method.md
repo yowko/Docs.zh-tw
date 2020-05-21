@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3594b5f-2e41-4e36-9096-3586276a138c
 topic_type:
 - apiref
-ms.openlocfilehash: 026d4c14abed030b80e8e1b3f8363fbd59ac05e4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 76f216b12bccc950a34e2b23404ac305de519f4a
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124911"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762467"
 ---
 # <a name="iclrtaskabort-method"></a>ICLRTask::Abort 方法
-要求 common language runtime （CLR）中止目前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)實例所代表的工作。  
+要求 common language runtime （CLR）中止目前[ICLRTask](iclrtask-interface.md)實例所代表的工作。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,9 +33,9 @@ HRESULT Abort ();
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `Abort`。|  
+|S_OK|`Abort`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -43,20 +43,20 @@ HRESULT Abort ();
 |E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- 當主機呼叫 `Abort`時，CLR 會引發 <xref:System.Threading.ThreadAbortException>。 它會在例外狀況資訊初始化之後立即傳回，而不會等候使用者程式碼（例如完成項或例外狀況處理機制）執行。 因此，`Abort` 的呼叫會快速傳回。  
+ <xref:System.Threading.ThreadAbortException>當主機呼叫時，CLR 會引發 `Abort` 。 它會在例外狀況資訊初始化之後立即傳回，而不會等候使用者程式碼（例如完成項或例外狀況處理機制）執行。 因此，的呼叫會 `Abort` 快速傳回。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [ICLRTask 介面](iclrtask-interface.md)
+- [ICLRTaskManager 介面](iclrtaskmanager-interface.md)
+- [IHostTask 介面](ihosttask-interface.md)
+- [IHostTaskManager 介面](ihosttaskmanager-interface.md)

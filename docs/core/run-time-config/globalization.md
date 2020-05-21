@@ -3,19 +3,19 @@ title: 全球化 config 設定
 description: 瞭解設定 .NET Core 應用程式全球化層面的執行時間設定，例如，它如何剖析日文日期。
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 2561e66e6d18cb4036b0719f7e34ea66540fe095
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 56228e9a6cb6dbab6a22bdc00d11212e1019776b
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703123"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761963"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>全球化的執行時間設定選項
 
 ## <a name="invariant-mode"></a>不變模式
 
 - 判斷 .NET Core 應用程式是否以全球化不變模式執行，而不需要存取特定文化特性的資料和行為。
-- 預設值：執行具有文化特性資料存取權的應用程式（ `false` ）。
+- 如果您省略此設定，應用程式會執行並具有文化特性資料的存取權。 這相當於將值設定為 `false` 。
 - 如需詳細資訊，請參閱[.Net Core 全球化不變模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)。
 
 | | 設定名稱 | 值 |
@@ -53,7 +53,7 @@ ms.locfileid: "83703123"
 ## <a name="era-year-ranges"></a>紀元年份範圍
 
 - 判斷支援多個紀元之行事曆的範圍檢查是否會放寬，或是否會擲回紀元日期範圍溢位的日期 <xref:System.ArgumentOutOfRangeException> 。
-- 預設值：範圍檢查是寬鬆的（ `false` ）。
+- 如果您省略此設定，則會放寬範圍檢查。 這相當於將值設定為 `false` 。
 - 如需詳細資訊，請參閱行事[曆、紀元和日期範圍：寬鬆範圍檢查](../../standard/datetime/working-with-calendars.md#calendars-eras-and-date-ranges-relaxed-range-checks)。
 
 | | 設定名稱 | 值 |
@@ -64,7 +64,7 @@ ms.locfileid: "83703123"
 ## <a name="japanese-date-parsing"></a>日文日期剖析
 
 - 判斷在年份中包含 "1" 或 "Gannen" 的字串是否已成功剖析，或是否只支援 "1"。
-- 預設值：剖析包含 "1" 或 "Gannen" 做為年份（）的字串 `false` 。
+- 如果您省略此設定，則會成功剖析包含 "1" 或 "Gannen" 的字串做為年份。 這相當於將值設定為 `false` 。
 - 如需詳細資訊，請參閱[代表具有多個紀元之行事曆中的日期](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras)。
 
 | | 設定名稱 | 值 |
@@ -75,7 +75,7 @@ ms.locfileid: "83703123"
 ## <a name="japanese-year-format"></a>日文年份格式
 
 - 決定日本日曆紀元的第一年是否格式化為 "Gannen" 或數位。
-- 預設值：將第一年格式化為 "Gannen" （ `false` ）。
+- 如果您省略此設定，第一年的格式會是 "Gannen"。 這相當於將值設定為 `false` 。
 - 如需詳細資訊，請參閱[代表具有多個紀元之行事曆中的日期](../../standard/datetime/working-with-calendars.md#represent-dates-in-calendars-with-multiple-eras)。
 
 | | 設定名稱 | 值 |
