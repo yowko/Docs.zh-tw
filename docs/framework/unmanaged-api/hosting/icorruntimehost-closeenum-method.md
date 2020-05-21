@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f7ce7e8c-0a3e-4587-a180-063e2b85940e
 topic_type:
 - apiref
-ms.openlocfilehash: e2eddfab68e5c9e2ebffe2c96c9348f3cd799c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5a86df3ac1f50ca624490ad80a6fed903433436
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127756"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762366"
 ---
-# <a name="icorruntimehostcloseenum-method"></a><span data-ttu-id="06d8b-102">ICorRuntimeHost::CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="06d8b-102">ICorRuntimeHost::CloseEnum Method</span></span>
-<span data-ttu-id="06d8b-103">將網域列舉值重設回定義域清單的開頭。</span><span class="sxs-lookup"><span data-stu-id="06d8b-103">Resets a domain enumerator back to the beginning of the domain list.</span></span>  
+# <a name="icorruntimehostcloseenum-method"></a><span data-ttu-id="b06eb-102">ICorRuntimeHost::CloseEnum 方法</span><span class="sxs-lookup"><span data-stu-id="b06eb-102">ICorRuntimeHost::CloseEnum Method</span></span>
+<span data-ttu-id="b06eb-103">將網域列舉值重設回定義域清單的開頭。</span><span class="sxs-lookup"><span data-stu-id="b06eb-103">Resets a domain enumerator back to the beginning of the domain list.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06d8b-104">語法</span><span class="sxs-lookup"><span data-stu-id="06d8b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b06eb-104">語法</span><span class="sxs-lookup"><span data-stu-id="b06eb-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CloseEnum (  
@@ -33,29 +33,29 @@ HRESULT CloseEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="06d8b-105">參數</span><span class="sxs-lookup"><span data-stu-id="06d8b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b06eb-105">參數</span><span class="sxs-lookup"><span data-stu-id="b06eb-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="06d8b-106">在要重設的列舉值。</span><span class="sxs-lookup"><span data-stu-id="06d8b-106">[in] The enumerator to reset.</span></span>  
+ <span data-ttu-id="b06eb-106">在要重設的列舉值。</span><span class="sxs-lookup"><span data-stu-id="b06eb-106">[in] The enumerator to reset.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="06d8b-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="06d8b-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b06eb-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="b06eb-107">Return Value</span></span>  
   
-|<span data-ttu-id="06d8b-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="06d8b-108">HRESULT</span></span>|<span data-ttu-id="06d8b-109">描述</span><span class="sxs-lookup"><span data-stu-id="06d8b-109">Description</span></span>|  
+|<span data-ttu-id="b06eb-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b06eb-108">HRESULT</span></span>|<span data-ttu-id="b06eb-109">Description</span><span class="sxs-lookup"><span data-stu-id="b06eb-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="06d8b-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="06d8b-110">S_OK</span></span>|<span data-ttu-id="06d8b-111">作業成功。</span><span class="sxs-lookup"><span data-stu-id="06d8b-111">The operation was successful.</span></span>|  
-|<span data-ttu-id="06d8b-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="06d8b-112">S_FALSE</span></span>|<span data-ttu-id="06d8b-113">作業無法完成。</span><span class="sxs-lookup"><span data-stu-id="06d8b-113">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="06d8b-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="06d8b-114">E_FAIL</span></span>|<span data-ttu-id="06d8b-115">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="06d8b-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="06d8b-116">如果方法傳回 E_FAIL，則 common language runtime （CLR）在進程中就不再可用。</span><span class="sxs-lookup"><span data-stu-id="06d8b-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="06d8b-117">對任何裝載 Api 的後續呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="06d8b-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="06d8b-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="06d8b-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="06d8b-119">CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="06d8b-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b06eb-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="b06eb-110">S_OK</span></span>|<span data-ttu-id="b06eb-111">作業成功。</span><span class="sxs-lookup"><span data-stu-id="b06eb-111">The operation was successful.</span></span>|  
+|<span data-ttu-id="b06eb-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="b06eb-112">S_FALSE</span></span>|<span data-ttu-id="b06eb-113">作業無法完成。</span><span class="sxs-lookup"><span data-stu-id="b06eb-113">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="b06eb-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b06eb-114">E_FAIL</span></span>|<span data-ttu-id="b06eb-115">發生未知的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="b06eb-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="b06eb-116">如果方法傳回 E_FAIL，則 common language runtime （CLR）就無法在進程中使用。</span><span class="sxs-lookup"><span data-stu-id="b06eb-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="b06eb-117">後續對任何裝載 Api 的呼叫都會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="b06eb-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b06eb-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b06eb-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b06eb-119">CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="b06eb-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="06d8b-120">需求</span><span class="sxs-lookup"><span data-stu-id="06d8b-120">Requirements</span></span>  
- <span data-ttu-id="06d8b-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="06d8b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b06eb-120">規格需求</span><span class="sxs-lookup"><span data-stu-id="b06eb-120">Requirements</span></span>  
+ <span data-ttu-id="b06eb-121">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b06eb-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06d8b-122">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="06d8b-122">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b06eb-122">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="b06eb-122">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="06d8b-123">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="06d8b-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b06eb-123">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b06eb-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="06d8b-124">**.NET Framework 版本：** 1.0、1.1</span><span class="sxs-lookup"><span data-stu-id="06d8b-124">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="b06eb-124">**.NET Framework 版本：** 1.0、1。1</span><span class="sxs-lookup"><span data-stu-id="b06eb-124">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06d8b-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="06d8b-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b06eb-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b06eb-125">See also</span></span>
 
-- [<span data-ttu-id="06d8b-126">CorBindToRuntimeEx 函式</span><span class="sxs-lookup"><span data-stu-id="06d8b-126">CorBindToRuntimeEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [<span data-ttu-id="06d8b-127">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="06d8b-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="b06eb-126">CorBindToRuntimeEx 函式</span><span class="sxs-lookup"><span data-stu-id="b06eb-126">CorBindToRuntimeEx Function</span></span>](corbindtoruntimeex-function.md)
+- [<span data-ttu-id="b06eb-127">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="b06eb-127">ICorRuntimeHost Interface</span></span>](icorruntimehost-interface.md)
