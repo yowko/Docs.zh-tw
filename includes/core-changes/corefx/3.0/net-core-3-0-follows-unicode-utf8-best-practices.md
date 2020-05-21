@@ -1,44 +1,44 @@
 ---
-ms.openlocfilehash: becae23cd810623bbb33c693b707c2d4735aeece
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 298cb441bf9fe7daddb30c85f9d7366dc972628c
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158463"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721689"
 ---
-### <a name="replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines"></a><span data-ttu-id="b12c7-101">取代格式不正確的 UTF-8 位元組序列遵循 Unicode 方針</span><span class="sxs-lookup"><span data-stu-id="b12c7-101">Replacing ill-formed UTF-8 byte sequences follows Unicode guidelines</span></span>
+### <a name="replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines"></a><span data-ttu-id="21abc-101">取代格式不正確的 UTF-8 位元組序列遵循 Unicode 方針</span><span class="sxs-lookup"><span data-stu-id="21abc-101">Replacing ill-formed UTF-8 byte sequences follows Unicode guidelines</span></span>
 
-<span data-ttu-id="b12c7-102">當<xref:System.Text.UTF8Encoding>類別在位元組對字元轉碼作業期間遇到格式不正確的 utf-8 位元組序列時，它會以輸出字串中的 ' ' （U + FFFD 取代字元）字元取代該序列。</span><span class="sxs-lookup"><span data-stu-id="b12c7-102">When the <xref:System.Text.UTF8Encoding> class encounters an ill-formed UTF-8 byte sequence during a byte-to-character transcoding operation, it replaces that sequence with a '�' (U+FFFD REPLACEMENT CHARACTER) character in the output string.</span></span> <span data-ttu-id="b12c7-103">.NET Core 3.0 與舊版 .NET Core 和 .NET Framework 的不同之處，是遵循在轉碼作業期間執行此取代的 Unicode 最佳作法。</span><span class="sxs-lookup"><span data-stu-id="b12c7-103">.NET Core 3.0 differs from previous versions of .NET Core and the .NET Framework by following the Unicode best practice for performing this replacement during the transcoding operation.</span></span>
+<span data-ttu-id="21abc-102">當 <xref:System.Text.UTF8Encoding> 類別在位元組對字元轉碼作業期間遇到格式不正確的 utf-8 位元組序列時，它會以輸出字串中的 ' ' （U + FFFD 取代字元）字元取代該序列。</span><span class="sxs-lookup"><span data-stu-id="21abc-102">When the <xref:System.Text.UTF8Encoding> class encounters an ill-formed UTF-8 byte sequence during a byte-to-character transcoding operation, it replaces that sequence with a '�' (U+FFFD REPLACEMENT CHARACTER) character in the output string.</span></span> <span data-ttu-id="21abc-103">.NET Core 3.0 與舊版 .NET Core 和 .NET Framework 的不同之處，是遵循在轉碼作業期間執行此取代的 Unicode 最佳作法。</span><span class="sxs-lookup"><span data-stu-id="21abc-103">.NET Core 3.0 differs from previous versions of .NET Core and the .NET Framework by following the Unicode best practice for performing this replacement during the transcoding operation.</span></span>
 
-<span data-ttu-id="b12c7-104">這是改善整個 .NET 的 UTF-8 處理工作的一部分，包括新<xref:System.Text.Unicode.Utf8?displayProperty=nameWithType>的和<xref:System.Text.Rune?displayProperty=nameWithType>類型。</span><span class="sxs-lookup"><span data-stu-id="b12c7-104">This is part of a larger effort to improve UTF-8 handling throughout .NET, including by the new <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> and <xref:System.Text.Rune?displayProperty=nameWithType> types.</span></span> <span data-ttu-id="b12c7-105"><xref:System.Text.UTF8Encoding>類型已獲得改善的錯誤處理機制，因此它會產生與新引進之類型一致的輸出。</span><span class="sxs-lookup"><span data-stu-id="b12c7-105">The <xref:System.Text.UTF8Encoding> type was given improved error handling mechanics so that it produces output consistent with the newly introduced types.</span></span>
+<span data-ttu-id="21abc-104">這是改善整個 .NET 的 UTF-8 處理工作的一部分，包括新的 <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> 和 <xref:System.Text.Rune?displayProperty=nameWithType> 類型。</span><span class="sxs-lookup"><span data-stu-id="21abc-104">This is part of a larger effort to improve UTF-8 handling throughout .NET, including by the new <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> and <xref:System.Text.Rune?displayProperty=nameWithType> types.</span></span> <span data-ttu-id="21abc-105"><xref:System.Text.UTF8Encoding>類型已獲得改善的錯誤處理機制，因此它會產生與新引進之類型一致的輸出。</span><span class="sxs-lookup"><span data-stu-id="21abc-105">The <xref:System.Text.UTF8Encoding> type was given improved error handling mechanics so that it produces output consistent with the newly introduced types.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="b12c7-106">變更描述</span><span class="sxs-lookup"><span data-stu-id="b12c7-106">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="21abc-106">變更描述</span><span class="sxs-lookup"><span data-stu-id="21abc-106">Change description</span></span>
 
-<span data-ttu-id="b12c7-107">從 .NET Core 3.0 開始，在將位元組轉換成字元時<xref:System.Text.UTF8Encoding> ，類別會根據 Unicode 最佳做法執行字元替換。</span><span class="sxs-lookup"><span data-stu-id="b12c7-107">Starting with .NET Core 3.0, when transcoding bytes to characters, the <xref:System.Text.UTF8Encoding> class performs character substitution based on Unicode best practices.</span></span> <span data-ttu-id="b12c7-108">使用的替代機制會在標題為_U + FFFD 替換為_[最大部分] 的標題中[，以12.0、秒3.9 （PDF）](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf)的形式加以描述。</span><span class="sxs-lookup"><span data-stu-id="b12c7-108">The substitution mechanism used is described by [The Unicode Standard, Version 12.0, Sec. 3.9 (PDF)](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf) in the heading titled _U+FFFD Substitution of Maximal Subparts_.</span></span>
+<span data-ttu-id="21abc-107">從 .NET Core 3.0 開始，在將位元組轉換成字元時， <xref:System.Text.UTF8Encoding> 類別會根據 Unicode 最佳做法執行字元替換。</span><span class="sxs-lookup"><span data-stu-id="21abc-107">Starting with .NET Core 3.0, when transcoding bytes to characters, the <xref:System.Text.UTF8Encoding> class performs character substitution based on Unicode best practices.</span></span> <span data-ttu-id="21abc-108">使用的替代機制會在標題為_U + FFFD 替換為_[最大部分] 的標題中[，以12.0、秒3.9 （PDF）](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf)的形式加以描述。</span><span class="sxs-lookup"><span data-stu-id="21abc-108">The substitution mechanism used is described by [The Unicode Standard, Version 12.0, Sec. 3.9 (PDF)](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf) in the heading titled _U+FFFD Substitution of Maximal Subparts_.</span></span>
 
-<span data-ttu-id="b12c7-109">只有當輸入位元組序列包含格式不正確的 UTF-8 資料時，_才_會套用此行為。</span><span class="sxs-lookup"><span data-stu-id="b12c7-109">This behavior _only_ applies when the input byte sequence contains ill-formed UTF-8 data.</span></span> <span data-ttu-id="b12c7-110">此外，如果實例<xref:System.Text.UTF8Encoding>是使用`throwOnInvalidBytes: true`所建立，則`UTF8Encoding`實例會繼續在不正確輸入中擲回，而不是執行 U + FFFD 取代。</span><span class="sxs-lookup"><span data-stu-id="b12c7-110">Additionally, if the <xref:System.Text.UTF8Encoding> instance has been constructed with `throwOnInvalidBytes: true`, the `UTF8Encoding` instance will continue to throw on invalid input rather than perform U+FFFD replacement.</span></span> <span data-ttu-id="b12c7-111">如需有關此函數`UTF8Encoding`的詳細資訊<xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>，請參閱。</span><span class="sxs-lookup"><span data-stu-id="b12c7-111">For more information about the `UTF8Encoding` constructor, see <xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>.</span></span>
+<span data-ttu-id="21abc-109">只有當輸入位元組序列包含格式不正確的 UTF-8 資料時，_才_會套用此行為。</span><span class="sxs-lookup"><span data-stu-id="21abc-109">This behavior _only_ applies when the input byte sequence contains ill-formed UTF-8 data.</span></span> <span data-ttu-id="21abc-110">此外，如果實例是使用所建立 <xref:System.Text.UTF8Encoding> `throwOnInvalidBytes: true` ，則 `UTF8Encoding` 實例會繼續在不正確輸入中擲回，而不是執行 U + FFFD 取代。</span><span class="sxs-lookup"><span data-stu-id="21abc-110">Additionally, if the <xref:System.Text.UTF8Encoding> instance has been constructed with `throwOnInvalidBytes: true`, the `UTF8Encoding` instance will continue to throw on invalid input rather than perform U+FFFD replacement.</span></span> <span data-ttu-id="21abc-111">如需有關此函數的詳細資訊 `UTF8Encoding` ，請參閱 <xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)> 。</span><span class="sxs-lookup"><span data-stu-id="21abc-111">For more information about the `UTF8Encoding` constructor, see <xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>.</span></span>
 
-<span data-ttu-id="b12c7-112">下表說明此變更與無效3位元組輸入的影響：</span><span class="sxs-lookup"><span data-stu-id="b12c7-112">The following table illustrates the impact of this change with an invalid 3-byte input:</span></span>
+<span data-ttu-id="21abc-112">下表說明此變更與無效3位元組輸入的影響：</span><span class="sxs-lookup"><span data-stu-id="21abc-112">The following table illustrates the impact of this change with an invalid 3-byte input:</span></span>
 
-| <span data-ttu-id="b12c7-113">3位元組輸入格式錯誤</span><span class="sxs-lookup"><span data-stu-id="b12c7-113">Ill-formed 3-byte input</span></span> | <span data-ttu-id="b12c7-114">.NET Core 3.0 之前的輸出</span><span class="sxs-lookup"><span data-stu-id="b12c7-114">Output before .NET Core 3.0</span></span>          | <span data-ttu-id="b12c7-115">從 .NET Core 3.0 開始的輸出</span><span class="sxs-lookup"><span data-stu-id="b12c7-115">Output starting with .NET Core 3.0</span></span>        |
+| <span data-ttu-id="21abc-113">3位元組輸入格式錯誤</span><span class="sxs-lookup"><span data-stu-id="21abc-113">Ill-formed 3-byte input</span></span> | <span data-ttu-id="21abc-114">.NET Core 3.0 之前的輸出</span><span class="sxs-lookup"><span data-stu-id="21abc-114">Output before .NET Core 3.0</span></span>          | <span data-ttu-id="21abc-115">從 .NET Core 3.0 開始的輸出</span><span class="sxs-lookup"><span data-stu-id="21abc-115">Output starting with .NET Core 3.0</span></span>        |
 |-------------------------|--------------------------------------|-------------------------------------------|
-| `[ ED A0 90 ]`          | <span data-ttu-id="b12c7-116">`[ FFFD FFFD ]`（2個字元輸出）</span><span class="sxs-lookup"><span data-stu-id="b12c7-116">`[ FFFD FFFD ]` (2-character output)</span></span> | <span data-ttu-id="b12c7-117">`[ FFFD FFFD FFFD ]`（3個字元輸出）</span><span class="sxs-lookup"><span data-stu-id="b12c7-117">`[ FFFD FFFD FFFD ]` (3-character output)</span></span> |
+| `[ ED A0 90 ]`          | <span data-ttu-id="21abc-116">`[ FFFD FFFD ]`（2個字元輸出）</span><span class="sxs-lookup"><span data-stu-id="21abc-116">`[ FFFD FFFD ]` (2-character output)</span></span> | <span data-ttu-id="21abc-117">`[ FFFD FFFD FFFD ]`（3個字元輸出）</span><span class="sxs-lookup"><span data-stu-id="21abc-117">`[ FFFD FFFD FFFD ]` (3-character output)</span></span> |
 
-<span data-ttu-id="b12c7-118">根據先前連結之 Unicode 標準 PDF 的_資料表 3-9_ ，3個字元的輸出是慣用的輸出。</span><span class="sxs-lookup"><span data-stu-id="b12c7-118">The 3-char output is the preferred output, according to _Table 3-9_ of the previously linked Unicode Standard PDF.</span></span>
+<span data-ttu-id="21abc-118">根據先前連結之 Unicode 標準 PDF 的_資料表 3-9_ ，3個字元的輸出是慣用的輸出。</span><span class="sxs-lookup"><span data-stu-id="21abc-118">The 3-char output is the preferred output, according to _Table 3-9_ of the previously linked Unicode Standard PDF.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="b12c7-119">引進的版本</span><span class="sxs-lookup"><span data-stu-id="b12c7-119">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="21abc-119">引進的版本</span><span class="sxs-lookup"><span data-stu-id="21abc-119">Version introduced</span></span>
 
-<span data-ttu-id="b12c7-120">3.0</span><span class="sxs-lookup"><span data-stu-id="b12c7-120">3.0</span></span>
+<span data-ttu-id="21abc-120">3.0</span><span class="sxs-lookup"><span data-stu-id="21abc-120">3.0</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="b12c7-121">建議的動作</span><span class="sxs-lookup"><span data-stu-id="b12c7-121">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="21abc-121">建議的動作</span><span class="sxs-lookup"><span data-stu-id="21abc-121">Recommended action</span></span>
 
-<span data-ttu-id="b12c7-122">開發人員不需要採取任何動作。</span><span class="sxs-lookup"><span data-stu-id="b12c7-122">No action is required on the part of the developer.</span></span>
+<span data-ttu-id="21abc-122">開發人員不需要採取任何動作。</span><span class="sxs-lookup"><span data-stu-id="21abc-122">No action is required on the part of the developer.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="b12c7-123">類別</span><span class="sxs-lookup"><span data-stu-id="b12c7-123">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="21abc-123">類別</span><span class="sxs-lookup"><span data-stu-id="21abc-123">Category</span></span>
 
-<span data-ttu-id="b12c7-124">Core .NET 程式庫</span><span class="sxs-lookup"><span data-stu-id="b12c7-124">Core .NET libraries</span></span>
+<span data-ttu-id="21abc-124">Core .NET 程式庫</span><span class="sxs-lookup"><span data-stu-id="21abc-124">Core .NET libraries</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="b12c7-125">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="b12c7-125">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="21abc-125">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="21abc-125">Affected APIs</span></span>
 
 - <xref:System.Text.UTF8Encoding.GetCharCount%2A?displayProperty=nameWithType>
 - <xref:System.Text.UTF8Encoding.GetChars%2A?displayProperty=nameWithType>
@@ -46,7 +46,7 @@ ms.locfileid: "82158463"
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Text.UTF8Encoding.GetCharCount`
 - `Overload:System.Text.UTF8Encoding.GetChars`
