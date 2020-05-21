@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cdb1284-947a-4ed4-94c1-c5ff5cdfce56
 topic_type:
 - apiref
-ms.openlocfilehash: e58ac181c4e472c469076b880ff71e0c6afa30fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8c9eab719f6a4f233490e544f67cf779ea10b20
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178045"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83763029"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>ICLRStrongName::StrongNameSignatureGeneration 方法
 產生指定組件的強式名稱簽章。  
@@ -40,49 +40,49 @@ HRESULT StrongNameSignatureGeneration (
   
 ## <a name="parameters"></a>參數  
  `wszFilePath`  
- [在]包含將為其生成強式名稱簽名的組件資訊清單的檔的路徑。  
+ 在檔案的路徑，該檔案包含將產生強式名稱簽章之元件的資訊清單。  
   
  `wszKeyContainer`  
- [在]包含公開金鑰/私密金鑰對的金鑰容器的名稱。  
+ 在包含公開/私密金鑰組的金鑰容器名稱。  
   
- 如果`pbKeyBlob`為 null，`wszKeyContainer`則必須在加密服務提供者 （CSP） 中指定有效的容器。 在這種情況下，存儲在容器中的金鑰組用於對檔進行簽名。  
+ 如果 `pbKeyBlob` 為 null， `wszKeyContainer` 必須在密碼編譯服務提供者（CSP）內指定有效的容器。 在此情況下，會使用儲存在容器中的金鑰組來簽署檔案。  
   
- 如果`pbKeyBlob`不是空，則假定金鑰組包含在金鑰二進位大型物件 （BLOB） 中。  
+ 如果不 `pbKeyBlob` 是 null，則會假設金鑰組包含在金鑰二進位大型物件（BLOB）中。  
   
- 金鑰必須是 1024 位裡維斯-沙米爾-阿德爾曼 （RSA） 簽名金鑰。 目前不支援其他類型的金鑰。  
+ 金鑰必須是 1024-bit Rivest-Shamir-Adleman （RSA）簽署金鑰。 目前不支援其他類型的金鑰。  
   
  `pbKeyBlob`  
- [在]指向公開金鑰/私密金鑰對的指標。 此對採用 Win32`CryptExportKey`函數創建的格式。 如果`pbKeyBlob`為 null，則假定 指定的`wszKeyContainer`鍵容器包含金鑰組。  
+ 在公開/私密金鑰組的指標。 這組會使用 Win32 函式所建立的格式 `CryptExportKey` 。 如果 `pbKeyBlob` 為 null，則會假設指定的金鑰容器 `wszKeyContainer` 包含金鑰組。  
   
  `cbKeyBlob`  
- [在]的大小（以位元組為單位）的大小`pbKeyBlob`。  
+ 在的大小（以位元組為單位） `pbKeyBlob` 。  
   
  `ppbSignatureBlob`  
- [出]指向公共語言運行時返回簽名的位置的指標。 如果`ppbSignatureBlob`為 null，運行時將簽名存儲在 指定的`wszFilePath`檔中。  
+ 脫銷通用語言執行時間傳回簽章之位置的指標。 如果 `ppbSignatureBlob` 為 null，則執行時間會將簽章儲存在所指定的檔案中 `wszFilePath` 。  
   
- 如果`ppbSignatureBlob`為 null，則通用語言運行時會分配用於返回簽名的空間。 調用方必須使用[ICLRStrongNameName：：StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法釋放此空間。  
+ 如果不 `ppbSignatureBlob` 是 null，通用語言執行時間會配置用來傳回簽章的空間。 呼叫端必須使用[ICLRStrongName：： StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)方法來釋放此空間。  
   
  `pcbSignatureBlob`  
- [出]返回的簽名的大小（以位元組為單位）。  
+ 脫銷所傳回簽章的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK`如果方法成功完成;如果方法成功完成;否則，指示失敗的 HRESULT 值（請參閱清單[的常用 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+ `S_OK`如果方法已成功完成，則為，否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
- 指定 null`wszFilePath`以計算簽名的大小而不創建簽名。  
+ 針對指定 null `wszFilePath` 以計算簽章的大小，而不建立簽章。  
   
- 簽名可以直接存儲在檔中，也可以返回到調用方。  
+ 簽章可以直接儲存在檔案中，或傳回給呼叫端。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **庫：** 作為資源包含在 MSCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [StrongNameSignatureGenerationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameSignatureGenerationEx 方法](iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [ICLRStrongName 介面](iclrstrongname-interface.md)
