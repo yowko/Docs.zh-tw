@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-ms.openlocfilehash: 632b8d43ed459d489825dc796d39864e2ed15ec3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 86bc320c28a5fbf122d234a4a1f15b674628c0b5
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139420"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803403"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount 方法
 使用微調計數來建立重要區段物件，以進行同步處理。  
@@ -39,13 +39,13 @@ HRESULT CreateCrstWithSpinCount (
  在指定重要區段物件的微調計數。  
   
  `ppCrst`  
- 脫銷[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)實例位址的指標，如果無法建立重要區段，則為 null。  
+ 脫銷[IHostCrst](ihostcrst-interface.md)實例位址的指標，如果無法建立重要區段，則為 null。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `CreateCrstWithSpinCount`。|  
+|S_OK|`CreateCrstWithSpinCount`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -54,19 +54,19 @@ HRESULT CreateCrstWithSpinCount (
 |E_OUTOFMEMORY|沒有足夠的記憶體可用來建立要求的重要區段。|  
   
 ## <a name="remarks"></a>備註  
- 微調計數只會在多處理器系統上使用。 [微調計數] 會指定呼叫執行緒在與無法使用的重要區段相關聯的信號上執行等候作業之前，必須旋轉的次數。 如果關鍵區段在微調作業期間變得免費，呼叫的執行緒會避免等候作業。 `CreateCrstWithSpinCount` 鏡像 Win32 `InitializeCriticalSectionAndSpinCount` 函數。  
+ 微調計數只會在多處理器系統上使用。 [微調計數] 會指定呼叫執行緒在與無法使用的重要區段相關聯的信號上執行等候作業之前，必須旋轉的次數。 如果關鍵區段在微調作業期間變得免費，呼叫的執行緒會避免等候作業。 `CreateCrstWithSpinCount`鏡像 Win32 `InitializeCriticalSectionAndSpinCount` 函數。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostSemaphore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager 介面](iclrsyncmanager-interface.md)
+- [IHostSemaphore 介面](ihostsemaphore-interface.md)
+- [IHostSyncManager 介面](ihostsyncmanager-interface.md)

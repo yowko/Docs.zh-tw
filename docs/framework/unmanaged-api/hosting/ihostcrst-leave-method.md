@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfc51d9e-b36d-4dba-9ea1-4f63fa0601ae
 topic_type:
 - apiref
-ms.openlocfilehash: 050af068579d84b984ed83377d0c201e281bd154
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 08af77c3a158b97cd698dbaeebdc7cdf1b9acfc3
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130539"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804898"
 ---
 # <a name="ihostcrstleave-method"></a>IHostCrst::Leave 方法
-保留[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)目前實例所代表的重要區段。  
+保留[IHostCrst](ihostcrst-interface.md)目前實例所代表的重要區段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ HRESULT Leave ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `Leave`。|  
+|S_OK|`Leave`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -43,19 +43,19 @@ HRESULT Leave ();
 |E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `Leave` 允許 CLR 直接與主機的執行緒進行通訊，而不是使用對應的 Win32 `LeaveCriticalSection` 函數。 取得由目前 `IHostCrst` 實例所表示之重要區段擁有權的執行緒，必須在每次進入關鍵區段時呼叫 `Leave` 一次。  
+ `Leave`允許 CLR 直接與主機的執行緒執行通訊，而不是使用對應的 Win32 函式 `LeaveCriticalSection` 。 取得目前實例所代表之重要區段擁有權的執行緒， `IHostCrst` 必須在 `Leave` 每次進入重要區段時呼叫一次。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostCrst 介面](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager 介面](iclrsyncmanager-interface.md)
+- [IHostCrst 介面](ihostcrst-interface.md)
+- [IHostSyncManager 介面](ihostsyncmanager-interface.md)

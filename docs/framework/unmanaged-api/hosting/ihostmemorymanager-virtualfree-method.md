@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-ms.openlocfilehash: b53c0bb38922ae8de048c131807eb32f97423d6c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d37b7d803509ebfa861b7502d419f868bd12e11
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128583"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804380"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree 方法
-作為對應 Win32 函式的邏輯包裝函式。 的 Win32 執行 `VirtualFree` 在呼叫進程的虛擬位址空間內，釋放、解除或釋放和解除頁面的區域。  
+作為對應 Win32 函式的邏輯包裝函式。 在 `VirtualFree` 呼叫進程的虛擬位址空間內，版本、解除或釋放和解除頁面區域的 Win32 執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ HRESULT VirtualFree (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `VirtualFree`。|  
+|S_OK|`VirtualFree`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -58,20 +58,20 @@ HRESULT VirtualFree (
 |HOST_E_INVALIDOPERATION|嘗試釋放未透過主機所配置的記憶體。|  
   
 ## <a name="remarks"></a>備註  
- `VirtualFree` 透過先前對[IHostMemoryManager：： VirtualAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md)函數的呼叫，釋放與 `lpAddress` 參數相關聯的虛擬記憶體頁面。 嘗試釋放未透過主機配置的記憶體時，應該會傳回 HOST_E_INVALIDOPERATION。  
+ `VirtualFree``lpAddress`透過先前對[IHostMemoryManager：： VirtualAlloc](ihostmemorymanager-virtualalloc-method.md)函數的呼叫，釋出與參數相關聯的虛擬記憶體頁面。 嘗試釋放未透過主機配置的記憶體，應該會傳回 HOST_E_INVALIDOPERATION。  
   
- 此語義與 `VirtualFree`的 Win32 執行方式相同。 如需詳細資訊，請參閱 Windows 平臺檔。  
+ 此語義與的 Win32 執行方式相同 `VirtualFree` 。 如需詳細資訊，請參閱 Windows 平臺檔。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [IHostMemoryManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [IHostMalloc 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [IHostMemoryManager 介面](ihostmemorymanager-interface.md)
+- [IHostMalloc 介面](ihostmalloc-interface.md)

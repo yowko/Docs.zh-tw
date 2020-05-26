@@ -2,12 +2,12 @@
 title: dotnet-install 指令碼
 description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet-安裝腳本。
 ms.date: 04/30/2020
-ms.openlocfilehash: 6728708ac5154f558954b46a22a434b05a548e84
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205921"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802716"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -31,7 +31,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
 dotnet-install.ps1 -Help
 ```
 
-Linux/macOs：
+Linux/macOS：
 
 ```bash
 dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
@@ -100,7 +100,7 @@ dotnet-install.sh --help
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  指定安裝路徑。 如果目錄不存在，則會建立它。 預設值是 *%LocalAppData%\Microsoft\dotnet*。 二進位檔會直接放在此目錄中。
+  指定安裝路徑。 如果目錄不存在，則會建立它。 預設值是在 Windows 上 *%LocalAppData%\Microsoft\dotnet* ，而在 Linux/macOS 上則是 */usr/share/dotnet* 。 二進位檔會直接放在此目錄中。
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
@@ -229,7 +229,7 @@ dotnet-install.sh --help
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 版本](https://github.com/dotnet/core/releases)
 - [.NET Core 執行階段和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

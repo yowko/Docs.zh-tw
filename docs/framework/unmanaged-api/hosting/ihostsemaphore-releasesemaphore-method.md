@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a343d197-979a-4ac6-ab8c-cb8a05f3120e
 topic_type:
 - apiref
-ms.openlocfilehash: 33a92365e7765befe669439eabefac607232ff15
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa67aabbe8a7a47a9b3036f508e2f8bb6082c3e0
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139472"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803549"
 ---
 # <a name="ihostsemaphorereleasesemaphore-method"></a>IHostSemaphore::ReleaseSemaphore 方法
-依指定的數量增加目前[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)實例的計數。  
+依指定的數量增加目前[IHostSemaphore](ihostsemaphore-interface.md)實例的計數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ HRESULT ReleaseSemaphore (
   
 ## <a name="parameters"></a>參數  
  `lReleaseCount`  
- 在要增加目前 `IHostSemaphore` 實例計數的數量。 此數量必須大於零。  
+ 在要增加目前實例計數的數量 `IHostSemaphore` 。 此數量必須大於零。  
   
  `lpPreviousCount`  
  脫銷先前計數的指標，如果呼叫端不需要先前的計數，則為 null。  
@@ -45,7 +45,7 @@ HRESULT ReleaseSemaphore (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `ReleaseSemaphore`。|  
+|S_OK|`ReleaseSemaphore`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -53,21 +53,21 @@ HRESULT ReleaseSemaphore (
 |E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- CLR 通常會呼叫 `ReleaseSemaphore`，以通知主機其已使用資源完成，並為 `lReleaseCount` 參數傳遞1的值。  
+ CLR 通常會呼叫， `ReleaseSemaphore` 以通知主機其已使用資源完成，並為參數傳遞1的值 `lReleaseCount` 。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostAutoEvent 介面](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [IHostManualEvent 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
-- [IHostSemaphore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [ICLRSyncManager 介面](iclrsyncmanager-interface.md)
+- [IHostAutoEvent 介面](ihostautoevent-interface.md)
+- [IHostManualEvent 介面](ihostmanualevent-interface.md)
+- [IHostSemaphore 介面](ihostsemaphore-interface.md)
+- [IHostSyncManager 介面](ihostsyncmanager-interface.md)

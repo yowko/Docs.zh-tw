@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 6c842abc1423e7ee0d98b71392e02410c6cf9172
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d3cfce474023907eda0bc40b692e4bbb65ffb96
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602732"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802836"
 ---
 # <a name="-main-c-compiler-options"></a>-main (C# 編譯器選項)
 如果有多個類別包含 **Main** 方法，這個選項會指定含有程式進入點的類別。  
@@ -44,6 +44,17 @@ ms.locfileid: "69602732"
   
      若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>。  
   
+### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>手動編輯 .csproj 檔案以設定這個編譯器選項
+  
+您可以藉由編輯 .csproj 檔案，並在區段內加入元素，來設定此選項 `StartupObject` `PropertyGroup` 。 例如：
+
+```
+  <PropertyGroup>
+    ...
+    <StartupObject>MyApplication.Core.Program</StartupObject>
+  </PropertyGroup>
+```
+
 ## <a name="example"></a>範例  
  編譯 `t2.cs` 和 `t3.cs`，將 **Main** 方法的位置指定在 `Test2` 中：  
   
@@ -53,5 +64,5 @@ csc t2.cs t3.cs -main:Test2
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
