@@ -2,16 +2,16 @@
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
 ms.date: 02/14/2020
-ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 5375df61dbf8e9b4db8772b0e2767e9bca0bb254
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102836"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840906"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -23,33 +23,33 @@ ms.locfileid: "82102836"
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--runtime <RUNTIME_IDENTIFIER>] [-v|--verbosity <LEVEL>]
-    [--version-suffix <VERSION_SUFFIX>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [-v|--verbosity <LEVEL>] [--version-suffix <VERSION_SUFFIX>]
 
 dotnet build -h|--help
 ```
 
 ## <a name="description"></a>描述
 
-`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔包括專案代碼的中間語言 (IL) 檔案與 *.dll*副檔名。  根據項目類型和設定,可能會包括其他檔,例如:
+`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔會將專案的程式碼包含在副檔名為 *.dll*的中繼語言（IL）檔案中。  視專案類型和設定而定，可能會包含其他檔案，例如：
 
-- 如果項目類型是目標 .NET Core 3.0 或更高版本的可執行檔,則可用於運行應用程式的可執行檔。
-- 用於使用 *.pdb*擴展名進行除錯的符號檔。
-- *.deps.json*檔,其中列出了應用程式或庫的依賴項。
-- *.運行時config.json*檔,該檔指定應用程式的共用運行時及其版本。
-- 項目所依賴的其他庫(通過專案引用或 NuGet 包引用)。
+- 如果專案類型是以 .NET Core 3.0 或更新版本為目標的可執行檔，則可以用來執行應用程式。
+- 用來以 *.pdb*副檔名進行偵錯工具的符號檔。
+- *.Deps.json json*檔案，其中會列出應用程式或程式庫的相依性。
+- *.Runtimeconfig.json json*檔案，指定應用程式的共用執行時間及其版本。
+- 專案相依的其他程式庫（透過專案參考或 NuGet 套件參考）。
 
-對於面向早於 .NET Core 3.0 版本的可執行專案,NuGet 的庫依賴項通常不會複製到輸出資料夾。  它們在運行時從 NuGet 全域包資料夾中解析。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 要建立可部署的應用程式的版本,需要發佈它(例如,使用[dotnet發佈](dotnet-publish.md)命令)。 有關詳細資訊,請參閱[.NET 核心應用程式部署](../deploying/index.md)。
+針對以 .NET Core 3.0 之前版本為目標的可執行檔專案，NuGet 的程式庫相依性通常不會複製到輸出檔案夾。  它們會在執行時間從 [NuGet 全域套件] 資料夾加以解析。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 若要建立可部署的應用程式版本，您必須將它發佈（例如，使用[dotnet publish](dotnet-publish.md)命令）。 如需詳細資訊，請參閱[.Net Core 應用程式部署](../deploying/index.md)。
 
-對於針對 .NET Core 3.0 及更高版本的可執行專案,庫依賴項將複製到輸出資料夾。 這意味著,如果沒有任何其他特定於發佈的邏輯(如 Web 專案),則生成輸出應該是可部署的。
+針對以 .NET Core 3.0 和更新版本為目標的可執行專案，會將程式庫相依性複製到輸出檔案夾。 這表示，如果沒有任何其他發佈特定邏輯（例如 Web 專案），則組建輸出應該是可部署的。
 
-### <a name="implicit-restore"></a>隱式還原
+### <a name="implicit-restore"></a>隱含還原
 
-建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 執行時[`dotnet restore`](dotnet-restore.md)將創建該檔。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。
+建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 當執行時，會建立檔案 [`dotnet restore`](dotnet-restore.md) 。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-### <a name="executable-or-library-output"></a>執行或函式庫輸出
+### <a name="executable-or-library-output"></a>可執行檔或程式庫輸出
 
 專案是否為可執行檔可透過專案檔中的 `<OutputType>` 屬性來判斷。 下列範例顯示會產生可執行程式碼的專案：
 
@@ -59,7 +59,7 @@ dotnet build -h|--help
 </PropertyGroup>
 ```
 
-要產生函式庫,`<OutputType>`省略屬性或將其值`Library`變更為 。 庫的 IL DLL 不包含入口點,無法執行。
+若要產生程式庫，請省略 `<OutputType>` 屬性或將其值變更為 `Library` 。 程式庫的 IL DLL 不包含進入點，因此無法執行。
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -67,7 +67,7 @@ dotnet build -h|--help
 
 除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `-p`，以及用於定義記錄器的 `-l`。 如需這些選項的詳細資訊，請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 或者，您也可以使用 [dotnet msbuild](dotnet-msbuild.md) 命令。
 
-執行`dotnet build`等效於`dotnet msbuild -restore`運行 ;但是,輸出的默認詳細程度是不同的。
+執行 `dotnet build` 相當於執行， `dotnet msbuild -restore` 不過，輸出的預設詳細資訊會不同。
 
 ## <a name="arguments"></a>引數
 
@@ -75,11 +75,11 @@ dotnet build -h|--help
 
 要建置的專案或方案檔。 若未指定專案或解決方案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 *proj* 或 *sln* 的檔案，並使用該檔案。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 大多數項目的預設值為,`Debug`但您可以覆蓋專案中的生成配置設置。
+  定義組建組態。 大部分專案的預設值為 `Debug` ，但您可以覆寫專案中的組建設定。
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -115,11 +115,15 @@ dotnet build -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  在其中放置已建置的二進位檔的目錄。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。  對於具有多個目標框架的專案(通過`TargetFrameworks`屬性),還需要在指定此選項`--framework`時 定義。
+  在其中放置已建置的二進位檔的目錄。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。  針對具有多個目標 framework 的專案（透過 `TargetFrameworks` 屬性），您也需要在 `--framework` 指定此選項時定義。
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
   指定目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
+
+- **`-s|--source <SOURCE>`**
+
+  要在還原作業期間使用的 NuGet 套件來源 URI。
 
 - **`-v|--verbosity <LEVEL>`**
 

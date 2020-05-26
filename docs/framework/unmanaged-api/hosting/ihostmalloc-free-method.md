@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-ms.openlocfilehash: f7ae4e4cbb757edea242c57720baeb70ced5c428
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1dd5ed4c556a5a4d4425a9c0730cebf22ff1785b
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192060"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804613"
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free 方法
-釋放使用配置函[式所配置](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)的記憶體。  
+釋放使用配置函[式所配置](ihostmalloc-alloc-method.md)的記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ HRESULT Free (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `Free`。|  
+|S_OK|`Free`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -50,18 +50,18 @@ HRESULT Free (
 |HOST_E_INVALIDOPERATION|嘗試釋放未透過主機所配置的記憶體。|  
   
 ## <a name="remarks"></a>備註  
- 如果 `pMem` 參數指的是未使用呼叫 `Alloc`所配置的記憶體區域，則主機應該會傳回 HOST_E_INVALIDOPERATION。  
+ 如果 `pMem` 參數參考到未使用呼叫所配置的記憶體區域 `Alloc` ，則主機應該會傳回 HOST_E_INVALIDOPERATION。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [IHostMemoryManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [IHostMalloc 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [IHostMemoryManager 介面](ihostmemorymanager-interface.md)
+- [IHostMalloc 介面](ihostmalloc-interface.md)

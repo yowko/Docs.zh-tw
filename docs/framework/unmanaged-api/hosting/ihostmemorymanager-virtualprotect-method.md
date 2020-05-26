@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13be0299-df0d-4951-aabf-0676a30b385f
 topic_type:
 - apiref
-ms.openlocfilehash: d39ad45e143026f40ffcf1339e923837f9e812c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 473a52b55f793abc76883b0a5cd5b2a04756d9f7
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195852"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804361"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect 方法
-作為對應 Win32 函式的邏輯包裝函式。 的 Win32 執行 `VirtualProtect` 會在呼叫進程的虛擬位址空間中，變更已認可頁面區域的保護。  
+作為對應 Win32 函式的邏輯包裝函式。 的 Win32 執行會在 `VirtualProtect` 呼叫進程的虛擬位址空間中，變更已認可頁面區域的保護。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +53,7 @@ HRESULT VirtualProtect (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `VirtualProtect`。|  
+|S_OK|`VirtualProtect`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -61,17 +61,17 @@ HRESULT VirtualProtect (
 |E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- 這個 `VirtualProtect` 的執行會傳回 HRESULT 值，而 Win32 執行則會傳回非零值以表示成功，而零值則表示失敗。 如需詳細資訊，請參閱 Windows 平臺檔。  
+ 的這個執行會傳回 `VirtualProtect` HRESULT 值，而 Win32 執行會傳回非零值來表示成功，而零值則表示失敗。 如需詳細資訊，請參閱 Windows 平臺檔。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [IHostMemoryManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [IHostMemoryManager 介面](ihostmemorymanager-interface.md)

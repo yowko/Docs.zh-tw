@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 747ee407-ee8c-484d-9583-25089236d2d1
 topic_type:
 - apiref
-ms.openlocfilehash: e560d08d3e10db1b5978d1bd7be53dfed9ca3268
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 841827017262b731fd5e6f6bd0b5862fecaf2744
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132976"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83841720"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>IHostTaskManager::SetLocale 方法
 通知主機 common language runtime （CLR）已變更目前正在執行之工作的地區設定或文化特性。  
@@ -41,7 +41,7 @@ HRESULT SetLocale (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `SetLocale`。|  
+|S_OK|`SetLocale`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -50,21 +50,21 @@ HRESULT SetLocale (
 |E_NOTIMPL|主機不允許受管理的使用者程式碼修改地區設定。|  
   
 ## <a name="remarks"></a>備註  
- 當 managed 程式碼變更 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 屬性的值時，執行時間會呼叫 `SetLocale`。 這個方法可讓主機執行任何可能對地區設定同步處理的機制。 如果主機不允許從 managed 程式碼變更地區設定，或未執行同步處理地區設定的機制，則應該從這個方法傳回 E_NOTIMPL。  
+ `SetLocale`當 managed 程式碼變更屬性的值時，執行時間 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 會呼叫。 這個方法可讓主機執行任何可能對地區設定同步處理的機制。 如果主機不允許從 managed 程式碼變更地區設定，或未執行同步處理地區設定的機制，則應該從這個方法傳回 E_NOTIMPL。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [SetUILocale 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)
+- [ICLRTask 介面](iclrtask-interface.md)
+- [ICLRTaskManager 介面](iclrtaskmanager-interface.md)
+- [IHostTask 介面](ihosttask-interface.md)
+- [IHostTaskManager 介面](ihosttaskmanager-interface.md)
+- [SetUILocale 方法](ihosttaskmanager-setuilocale-method.md)

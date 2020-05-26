@@ -2,16 +2,16 @@
 title: dotnet add package 命令
 description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
 ms.date: 02/14/2020
-ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102849"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840893"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -53,7 +53,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
-### <a name="implicit-restore"></a>隱式還原
+### <a name="implicit-restore"></a>隱含還原
 
 [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
@@ -67,11 +67,11 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
   要新增的套件參考。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  僅當定位特定[框架](../../standard/frameworks.md)時,才添加包引用。
+  只有在以特定[架構](../../standard/frameworks.md)為目標時，才會新增套件參考。
 
 - **`-h|--help`**
 
@@ -91,7 +91,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`-s|--source <SOURCE>`**
 
-  要在還原作業期間使用的 NuGet 套件來源。
+  要在還原作業期間使用的 NuGet 套件來源 URI。
 
 - **`-v|--version <VERSION>`**
 

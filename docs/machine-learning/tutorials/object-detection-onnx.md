@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b9fa8ef74dd4f8070884f6cee4eb2af3082af5e5
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 2bf44ec1657307161c13f88f7d1628b2c930fd05
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394910"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805517"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：在 ML.NET 中使用 ONNX 偵測物件
 
@@ -64,7 +64,7 @@ ms.locfileid: "83394910"
 
 ### <a name="understand-the-model"></a>了解模型
 
-物件偵測是一項影像處理工作。 因此，大多數定型並用來解決此問題的深度學習模型都是 CNN。 本教學課程中使用的模型是微小的 YOLOv2 模型、更精簡的 YOLOv2 模型版本，如 Redmon 和 Fadhari 所述：「 [YOLO9000：更快、更快速、更強](https://arxiv.org/pdf/1612.08242.pdf)」。 Tiny YOLOv2 是使用 Pascal VOC 資料集所定型，由 15 個層組成，可預測 20 種不同的物件類別。 因為 Tiny YOLOv2 是一種原始 YOLOv2 模型的壓縮版本，所以它在速度和正確性間進行了取捨。 組成模型的不同層可使用如 Netron 等工具進行視覺化。 檢查模型之後，您可以觀察到所有組成神經網路層之間的連線對應，其中每個層將包含層名稱及個別輸入/輸出的維度。 用來描述模型輸入和輸出的資料結構則稱為 Tensor。 您可以把 Tensor 想成是將資料儲存在 N 個維度中的容器。 以 Tiny YOLOv2 為例，輸入層的名稱為 `image`，且它會預期維度為 `3 x 416 x 416` 的 Tensor。 輸出層的名稱則為 `grid`，它會產生維度為 `125 x 13 x 13` 的輸出 Tensor。
+物件偵測是一項影像處理工作。 因此，大多數定型並用來解決此問題的深度學習模型都是 CNN。 本教學課程中使用的模型是微小的 YOLOv2 模型、更精簡的 YOLOv2 模型版本，如 Redmon 和 Farhadi 所述：「 [YOLO9000：更快、更快速、更強](https://arxiv.org/pdf/1612.08242.pdf)」。 Tiny YOLOv2 是使用 Pascal VOC 資料集所定型，由 15 個層組成，可預測 20 種不同的物件類別。 因為 Tiny YOLOv2 是一種原始 YOLOv2 模型的壓縮版本，所以它在速度和正確性間進行了取捨。 組成模型的不同層可使用如 Netron 等工具進行視覺化。 檢查模型之後，您可以觀察到所有組成神經網路層之間的連線對應，其中每個層將包含層名稱及個別輸入/輸出的維度。 用來描述模型輸入和輸出的資料結構則稱為 Tensor。 您可以把 Tensor 想成是將資料儲存在 N 個維度中的容器。 以 Tiny YOLOv2 為例，輸入層的名稱為 `image`，且它會預期維度為 `3 x 416 x 416` 的 Tensor。 輸出層的名稱則為 `grid`，它會產生維度為 `125 x 13 x 13` 的輸出 Tensor。
 
 ![將輸入層分割成隱藏層，然後輸出層](./media/object-detection-onnx/netron-model-map-layers.png)
 

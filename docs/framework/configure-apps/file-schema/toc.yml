@@ -9,9 +9,9 @@
       href: linkedconfiguration-element.md
     - name: <configSections> 項目
       href: configsections-element-for-configuration.md
-    - name: <clear> 的 <configSections> 項目
+    - name: <configSections> 的 <clear> 項目
       href: clear-element-for-configsections.md
-    - name: <remove> 的 <configSections> 項目
+    - name: <configSections> 的 <remove> 項目
       href: remove-element-for-configsections.md
     - name: <sectionGroup> 項目
       href: sectiongroup-element-for-configsections.md
@@ -25,7 +25,7 @@
       href: clear-element-for-custom-2.md
     - name: NameValueSectionHandler 和 DictionarySectionHandler 的 <remove> 項目
       href: remove-element-for-custom-2.md
-    - name: <section> 元素
+    - name: <section> 項目
       href: section-element.md
     - name: 應用程式設定結構描述
       href: appsettings/index.md
