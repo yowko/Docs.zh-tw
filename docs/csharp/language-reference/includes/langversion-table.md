@@ -1,0 +1,24 @@
+---
+ms.openlocfilehash: 9e78914d8afe5bb55b8a535f3f93ab1cae353a94
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802956"
+---
+| <span data-ttu-id="6bd3b-101">值</span><span class="sxs-lookup"><span data-stu-id="6bd3b-101">Value</span></span>                     | <span data-ttu-id="6bd3b-102">意義</span><span class="sxs-lookup"><span data-stu-id="6bd3b-102">Meaning</span></span>                                                                                                 |
+|---------------------------|---------------------------------------------------------------------------------------------------------|
+| `preview`                 | <span data-ttu-id="6bd3b-103">編譯器會接受最新預覽版本的所有有效語言語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-103">The compiler accepts all valid language syntax from the latest preview version.</span></span>                         |
+| `latest`                  | <span data-ttu-id="6bd3b-104">編譯器會接受編譯器最新已發行版本 (包括次要版本) 的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-104">The compiler accepts syntax from the latest released version of the compiler (including minor version).</span></span> |
+| <span data-ttu-id="6bd3b-105">`latestMajor` (`default`)</span><span class="sxs-lookup"><span data-stu-id="6bd3b-105">`latestMajor` (`default`)</span></span> | <span data-ttu-id="6bd3b-106">編譯器會接受編譯器最新已發行主要版本的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-106">The compiler accepts syntax from the latest released major version of the compiler.</span></span>                     |
+| `8.0`                     | <span data-ttu-id="6bd3b-107">編譯器只會接受 C# 8.0 或更低版本中所含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-107">The compiler accepts only syntax that is included in C# 8.0 or lower.</span></span>                                   |
+| `7.3`                     | <span data-ttu-id="6bd3b-108">編譯器只會接受 C# 7.3 或更低版本中所含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-108">The compiler accepts only syntax that is included in C# 7.3 or lower.</span></span>                                   |
+| `7.2`                     | <span data-ttu-id="6bd3b-109">編譯器只會接受 C# 7.2 或更低版本中所含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-109">The compiler accepts only syntax that is included in C# 7.2 or lower.</span></span>                                   |
+| `7.1`                     | <span data-ttu-id="6bd3b-110">編譯器只會接受 C# 7.1 或更低版本中所含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-110">The compiler accepts only syntax that is included in C# 7.1 or lower.</span></span>                                   |
+| `7`                       | <span data-ttu-id="6bd3b-111">編譯器只會接受 C# 7.0 或更低版本中所含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-111">The compiler accepts only syntax that is included in C# 7.0 or lower.</span></span>                                   |
+| `6`                       | <span data-ttu-id="6bd3b-112">編譯器只會接受 C# 6.0 或更低版本中所含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-112">The compiler accepts only syntax that is included in C# 6.0 or lower.</span></span>                                   |
+| `5`                       | <span data-ttu-id="6bd3b-113">編譯器只會接受 C# 5.0 或更低版本中所含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-113">The compiler accepts only syntax that is included in C# 5.0 or lower.</span></span>                                   |
+| `4`                       | <span data-ttu-id="6bd3b-114">編譯器只會接受 C# 4.0 或更低版本中所含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-114">The compiler accepts only syntax that is included in C# 4.0 or lower.</span></span>                                   |
+| `3`                       | <span data-ttu-id="6bd3b-115">編譯器只會接受 C# 3.0 或更低版本中所含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-115">The compiler accepts only syntax that is included in C# 3.0 or lower.</span></span>                                   |
+| <span data-ttu-id="6bd3b-116">`ISO-2` (或 `2`)</span><span class="sxs-lookup"><span data-stu-id="6bd3b-116">`ISO-2` (or `2`)</span></span>          | <span data-ttu-id="6bd3b-117">編譯器只會接受 ISO/IEC 23270:2006 c # （2.0）中包含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-117">The compiler accepts only syntax that is included in ISO/IEC 23270:2006 C# (2.0).</span></span>                       |
+| <span data-ttu-id="6bd3b-118">`ISO-1` (或 `1`)</span><span class="sxs-lookup"><span data-stu-id="6bd3b-118">`ISO-1` (or `1`)</span></span>          | <span data-ttu-id="6bd3b-119">編譯器只會接受 ISO/IEC 23270:2003 c # （1.0/1.2）中所包含的語法。</span><span class="sxs-lookup"><span data-stu-id="6bd3b-119">The compiler accepts only syntax that is included in ISO/IEC 23270:2003 C# (1.0/1.2).</span></span>                   |

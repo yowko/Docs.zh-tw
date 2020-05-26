@@ -740,18 +740,6 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: 將標準查詢運算子鏈結在一起
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: 教學課程：將查詢鏈結在一起
-                              items:
-                                - name: LINQ to XML 中的延後執行和延遲評估
-                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-                                - name: 延後執行範例
-                                  href: programming-guide/concepts/linq/deferred-execution-example.md
-                                - name: 鏈結查詢範例
-                                  href: programming-guide/concepts/linq/chaining-queries-example.md
-                                - name: 中繼具體化
-                                  href: programming-guide/concepts/linq/intermediate-materialization.md
-                                - name: 將標準查詢運算子鏈結在一起
-                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
                             - name: 教學課程：管理 WordprocessingML 文件中的內容
                               items:
                                 - name: WordprocessingML 文件的組織結構
