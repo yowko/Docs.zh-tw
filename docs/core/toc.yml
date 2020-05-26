@@ -365,32 +365,40 @@
     - name: 移植 C++/CLI 專案
       href: porting/cpp-cli.md
 - name: 單元測試
-  href: testing/index.md
+  displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
   items:
     - name: 總覽
       href: testing/index.md
     - name: 單元測試最佳做法
       href: testing/unit-testing-best-practices.md
-    - name: '使用 xUnit 測試 C# 單元'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: '使用 NUnit 測試 C# 單元'
-      href: testing/unit-testing-with-nunit.md
-    - name: '使用 MSTest 測試 C# 單元'
-      href: testing/unit-testing-with-mstest.md
-    - name: '使用 xUnit 測試 F# 單元'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: '使用 NUnit 測試 F# 單元'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: '使用 MSTest 測試 F# 單元'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: 使用 xUnit 測試 VB 單元
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: 使用 NUnit 測試 VB 單元
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: 使用 MSTest 測試 VB 單元
-      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: xUnit
+      items:
+        - name: 'C# 單元測試'
+          href: testing/unit-testing-with-dotnet-test.md
+        - name: 'F# 單元測試'
+          href: testing/unit-testing-fsharp-with-dotnet-test.md
+        - name: VB 單元測試
+          href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: NUnit
+      items:
+        - name: 'C# 單元測試'
+          href: testing/unit-testing-with-nunit.md
+        - name: 'F# 單元測試'
+          href: testing/unit-testing-fsharp-with-nunit.md
+        - name: VB 單元測試
+          href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: MSTest
+      items:
+        - name: 'C# 單元測試'
+          href: testing/unit-testing-with-mstest.md
+        - name: 'F# 單元測試'
+          href: testing/unit-testing-fsharp-with-mstest.md
+        - name: VB 單元測試
+          href: testing/unit-testing-visual-basic-with-mstest.md
     - name: 執行選擇性單元測試
       href: testing/selective-unit-tests.md
+    - name: 排序單元測試
+      href: testing/order-unit-tests.md
     - name: 單元測試發佈的輸出
       href: testing/unit-testing-published-output.md
     - name: Visual Studio 的即時單元測試 .NET Core 專案
