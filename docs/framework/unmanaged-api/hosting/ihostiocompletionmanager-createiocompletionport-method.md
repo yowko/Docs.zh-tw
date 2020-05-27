@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 907a2b43-68db-44a7-acac-89e792e7bb3c
 topic_type:
 - apiref
-ms.openlocfilehash: c3fa8aeebe529564c0ecc4a970f586fffc97ee05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2b679a9ea427d53d67474a196b5b3ae2c698ea5e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133871"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804783"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort 方法
 要求主機建立新的 i/o 完成埠。  
@@ -41,7 +41,7 @@ HRESULT CreateIoCompletionPort (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `CreateIoCompletionPort`。|  
+|S_OK|`CreateIoCompletionPort`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
 |HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
@@ -50,18 +50,18 @@ HRESULT CreateIoCompletionPort (
 |E_OUTOFMEMORY|沒有足夠的記憶體可用來配置要求的資源。|  
   
 ## <a name="remarks"></a>備註  
- CLR 會呼叫 `CreateIoCompletionPort` 方法，要求主機建立新的 i/o 完成埠。 它會透過呼叫[IHostIoCompletionManager：： Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法，將 i/o 作業系結至這個埠。 主機會藉由呼叫[ICLRIoCompletionManager：： OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)，將狀態報表回 CLR。  
+ CLR `CreateIoCompletionPort` 會呼叫方法，以要求主機建立新的 i/o 完成埠。 它會透過呼叫[IHostIoCompletionManager：： Bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)方法，將 i/o 作業系結至這個埠。 主機會藉由呼叫[ICLRIoCompletionManager：： OnComplete](iclriocompletionmanager-oncomplete-method.md)，將狀態報表回 CLR。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRIoCompletionManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [IHostIoCompletionManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+- [ICLRIoCompletionManager 介面](iclriocompletionmanager-interface.md)
+- [IHostIoCompletionManager 介面](ihostiocompletionmanager-interface.md)

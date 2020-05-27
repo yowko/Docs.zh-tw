@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 02/27/2020
-ms.openlocfilehash: cc8f374468ba95baccf058ac0b0a0175672cdf01
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 29f81b09a01e689d3f6d86c16b1f134c9fe6b6a0
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158303"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840932"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -32,7 +32,7 @@ dotnet restore -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet restore` 命令會使用 NuGet 來還原相依性以及專案檔中指定的專案特定工具。  在大部分情況下，您不需要明確地使用`dotnet restore`命令，因為當您執行下列命令時，會隱含地執行 NuGet 還原：
+`dotnet restore` 命令會使用 NuGet 來還原相依性以及專案檔中指定的專案特定工具。  在大部分情況下，您不需要明確地使用 `dotnet restore` 命令，因為當您執行下列命令時，會隱含地執行 NuGet 還原：
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -42,16 +42,16 @@ dotnet restore -h|--help
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-有時候，使用這些命令來執行隱含的 NuGet 還原可能不太方便。 例如，某些自動化系統，像是建置系統，必須明確呼叫 `dotnet restore` 以控制還原發生的時間，進而控制網路使用量。 若要防止隱含的 NuGet 還原，您可以使用`--no-restore`旗標搭配任何這些命令來停用隱含還原。
+有時候，使用這些命令來執行隱含的 NuGet 還原可能不太方便。 例如，某些自動化系統，像是建置系統，必須明確呼叫 `dotnet restore` 以控制還原發生的時間，進而控制網路使用量。 若要防止隱含的 NuGet 還原，您可以使用 `--no-restore` 旗標搭配任何這些命令來停用隱含還原。
 
 ### <a name="specify-feeds"></a>指定摘要
 
 若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *nuget.config* 組態檔提供。 安裝 .NET Core SDK 時，會提供預設的設定檔案。 若要指定其他摘要，請執行下列其中一項動作：
 
 - 在專案目錄中建立您自己的*nuget .config*檔案。 如需詳細資訊，請參閱本文稍後的[一般 nuget](/nuget/consume-packages/configuring-nuget-behavior)設定和[nuget .config 差異](#nugetconfig-differences)。
-- 使用`dotnet nuget`之類的命令[`dotnet nuget add source`](dotnet-nuget-add-source.md)。
+- 使用 `dotnet nuget` 之類的命令 [`dotnet nuget add source`](dotnet-nuget-add-source.md) 。
 
-您可以使用`-s`選項覆寫*nuget .config 摘要。*
+您可以使用選項覆寫*nuget .config*摘要。 `-s`
 
 如需如何使用已驗證摘要的相關資訊，請參閱[從已驗證](/nuget/consume-packages/consuming-packages-authenticated-feeds)的摘要取用套件。
 
@@ -87,7 +87,7 @@ dotnet restore -h|--help
 
   要還原之專案檔的選用路徑。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`--configfile <FILE>`**
 
@@ -143,7 +143,7 @@ dotnet restore -h|--help
 
 - **`-s|--source <SOURCE>`**
 
-  指定要在還原作業期間使用的 NuGet 套件來源。 此設定會覆寫*nuget.exe*檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
+  指定要在還原作業期間使用的 NuGet 套件來源 URI。 此設定會覆寫*nuget.exe*檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
 
 - **`--use-lockfile`**
 
@@ -161,7 +161,7 @@ dotnet restore -h|--help
   dotnet restore
   ```
 
-- 還原在指定路徑中找到`app1`之專案的相依性和工具：
+- 還原在 `app1` 指定路徑中找到之專案的相依性和工具：
 
   ```dotnetcli
   dotnet restore ~/projects/app1/app1.csproj

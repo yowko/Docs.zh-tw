@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 794c6f8e-ed58-416b-b756-e864f2c958f7
 topic_type:
 - apiref
-ms.openlocfilehash: be488ebe663169cabc5b569335dfc784fdf30556
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ff088731514b2da0d8b1fa51ef48d8b71d16528
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73102686"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842227"
 ---
 # <a name="iobjecthandleunwrap-method"></a>IObjectHandle::Unwrap 方法
 從間接取值解除封送處理傳值物件。  
@@ -37,11 +37,11 @@ HRESULT Unwrap (
  `ppv`  
  脫銷要解除包裝之物件的指標。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

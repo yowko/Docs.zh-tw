@@ -3,12 +3,12 @@ title: 架構適用于 Azure 的雲端原生 .NET 應用程式
 description: 建立雲端原生應用程式的指南，利用 Azure 的容器、微服務和無伺服器功能。
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 196671468e56147f714078d1671f44af21bcf327
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613991"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840880"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>架構適用于 Azure 的雲端原生 .NET 應用程式
 
@@ -34,7 +34,7 @@ Redmond, Washington 98052-6399
 
 此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
-Microsoft 與列於 https://www.microsoft.com「商標」網頁的商標是 Microsoft 集團的商標。
+Microsoft 和列于「商標」網頁的商標 [https://www.microsoft.com](https://www.microsoft.com) 是 microsoft 公司集團的商標。
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
