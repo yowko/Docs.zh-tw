@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-ms.openlocfilehash: 646952d5cd55b74081a0ba6171a6eee6b0138512
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 70fb637cd1edf81be140b0e3306e3b0a483653a6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443958"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007984"
 ---
-# <a name="cor_field_offset-structure"></a><span data-ttu-id="b9aea-102">COR_FIELD_OFFSET 結構</span><span class="sxs-lookup"><span data-stu-id="b9aea-102">COR_FIELD_OFFSET Structure</span></span>
-<span data-ttu-id="b9aea-103">儲存指定欄位的位移 (在類別中)。</span><span class="sxs-lookup"><span data-stu-id="b9aea-103">Stores the offset, within a class, of the specified field.</span></span>  
+# <a name="cor_field_offset-structure"></a><span data-ttu-id="9d53c-102">COR_FIELD_OFFSET 結構</span><span class="sxs-lookup"><span data-stu-id="9d53c-102">COR_FIELD_OFFSET Structure</span></span>
+<span data-ttu-id="9d53c-103">儲存指定欄位的位移 (在類別中)。</span><span class="sxs-lookup"><span data-stu-id="9d53c-103">Stores the offset, within a class, of the specified field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b9aea-104">語法</span><span class="sxs-lookup"><span data-stu-id="b9aea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d53c-104">語法</span><span class="sxs-lookup"><span data-stu-id="9d53c-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct COR_FIELD_OFFSET {  
@@ -33,25 +33,25 @@ typedef struct COR_FIELD_OFFSET {
 } COR_FIELD_OFFSET;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b9aea-105">Members</span><span class="sxs-lookup"><span data-stu-id="b9aea-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9d53c-105">成員</span><span class="sxs-lookup"><span data-stu-id="9d53c-105">Members</span></span>  
   
-|<span data-ttu-id="b9aea-106">成員</span><span class="sxs-lookup"><span data-stu-id="b9aea-106">Member</span></span>|<span data-ttu-id="b9aea-107">描述</span><span class="sxs-lookup"><span data-stu-id="b9aea-107">Description</span></span>|  
+|<span data-ttu-id="9d53c-106">成員</span><span class="sxs-lookup"><span data-stu-id="9d53c-106">Member</span></span>|<span data-ttu-id="9d53c-107">描述</span><span class="sxs-lookup"><span data-stu-id="9d53c-107">Description</span></span>|  
 |------------|-----------------|  
-|`ridOfField`|<span data-ttu-id="b9aea-108">表示欄位的 `mdFieldDef` 元資料標記。</span><span class="sxs-lookup"><span data-stu-id="b9aea-108">An `mdFieldDef` metadata token that represents the field.</span></span>|  
-|`ulOffset`|<span data-ttu-id="b9aea-109">欄位在其類別中的位移。</span><span class="sxs-lookup"><span data-stu-id="b9aea-109">The field's offset within its class.</span></span>|  
+|`ridOfField`|<span data-ttu-id="9d53c-108">`mdFieldDef`代表欄位的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="9d53c-108">An `mdFieldDef` metadata token that represents the field.</span></span>|  
+|`ulOffset`|<span data-ttu-id="9d53c-109">欄位在其類別中的位移。</span><span class="sxs-lookup"><span data-stu-id="9d53c-109">The field's offset within its class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b9aea-110">備註</span><span class="sxs-lookup"><span data-stu-id="b9aea-110">Remarks</span></span>  
- <span data-ttu-id="b9aea-111">[IMetaDataImport：： GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)和[IMetaDataEmit：： SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md)方法接受 `COR_FIELD_OFFSET`類型的參數。</span><span class="sxs-lookup"><span data-stu-id="b9aea-111">[IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9d53c-110">備註</span><span class="sxs-lookup"><span data-stu-id="9d53c-110">Remarks</span></span>  
+ <span data-ttu-id="9d53c-111">[IMetaDataImport：： GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)和[IMetaDataEmit：： SetClassLayout](imetadataemit-setclasslayout-method.md)方法接受型別為的參數 `COR_FIELD_OFFSET` 。</span><span class="sxs-lookup"><span data-stu-id="9d53c-111">[IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b9aea-112">需求</span><span class="sxs-lookup"><span data-stu-id="b9aea-112">Requirements</span></span>  
- <span data-ttu-id="b9aea-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b9aea-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d53c-112">需求</span><span class="sxs-lookup"><span data-stu-id="9d53c-112">Requirements</span></span>  
+ <span data-ttu-id="9d53c-113">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9d53c-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b9aea-114">**標頭：** Corhdr.h .h，Corprof.idl .idl</span><span class="sxs-lookup"><span data-stu-id="b9aea-114">**Header:** CorHdr.h, CorProf.idl</span></span>  
+ <span data-ttu-id="9d53c-114">**標頭：** Corhdr.h .h，Corprof.idl .idl</span><span class="sxs-lookup"><span data-stu-id="9d53c-114">**Header:** CorHdr.h, CorProf.idl</span></span>  
   
- <span data-ttu-id="b9aea-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b9aea-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9d53c-115">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d53c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b9aea-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="b9aea-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d53c-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9d53c-116">See also</span></span>
 
-- [<span data-ttu-id="b9aea-117">中繼資料結構</span><span class="sxs-lookup"><span data-stu-id="b9aea-117">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [<span data-ttu-id="b9aea-118">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="b9aea-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="b9aea-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="b9aea-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="9d53c-117">中繼資料結構</span><span class="sxs-lookup"><span data-stu-id="9d53c-117">Metadata Structures</span></span>](metadata-structures.md)
+- [<span data-ttu-id="9d53c-118">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="9d53c-118">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="9d53c-119">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="9d53c-119">IMetaDataImport Interface</span></span>](imetadataimport-interface.md)
