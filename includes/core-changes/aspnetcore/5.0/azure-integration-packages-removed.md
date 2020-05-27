@@ -6,53 +6,53 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/26/2020
 ms.locfileid: "80291657"
 ---
-### <a name="azure-microsoft-prefixed-azure-integration-packages-removed"></a>Azure：已刪除 Microsoft 預固定的 Azure 集成包
+### <a name="azure-microsoft-prefixed-azure-integration-packages-removed"></a>Azure：已移除 Microsoft 前面的 Azure 整合套件
 
-提供ASP.NET`Microsoft.*`核心和 Azure SDK 之間集成的以下包不包括在 ASP.NET 酷 5.0 中：
+`Microsoft.*`ASP.NET Core 5.0 中不包含下列提供 ASP.NET Core 與 Azure sdk 之間整合的套件：
 
-* [微軟.擴展.配置.AzureKeyVault，](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.AzureKeyVault/)它集成了[Azure 金鑰保存庫](/azure/key-vault/)到[配置系統](/aspnet/core/fundamentals/configuration/)。
-* [微軟.AspNetCore.Data保護.AzureKeyVault，](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureKeyVault/)將Azure金鑰保存庫集成到[ASP.NET核心資料保護系統中](/aspnet/core/security/data-protection/introduction)。
-* [微軟.AspNetCore.Data保護.Azure存儲](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureStorage/)，將Azure [Blob存儲](/azure/storage/blobs/)集成到ASP.NET核心資料保護系統中。
+* [AzureKeyVault](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.AzureKeyVault/)，它會將[Azure Key Vault](/azure/key-vault/)整合至設定[系統](/aspnet/core/fundamentals/configuration/)。
+* [AspNetCore. DataProtection. AzureKeyVault](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureKeyVault/)，可將 Azure Key Vault 整合到 ASP.NET Core 的[資料保護系統](/aspnet/core/security/data-protection/introduction)。
+* [AspNetCore. DataProtection. AzureStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureStorage/)，可將[Azure Blob 儲存體](/azure/storage/blobs/)整合到 ASP.NET Core 的資料保護系統。
 
-有關此問題的討論，請參閱[dotnet/aspnetcore_19570](https://github.com/dotnet/aspnetcore/issues/19570)。
+如需此問題的討論，請參閱[dotnet/aspnetcore # 19570](https://github.com/dotnet/aspnetcore/issues/19570)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
-5.0 預覽 1
+5.0 Preview 1
 
 #### <a name="old-behavior"></a>舊的行為
 
-這些`Microsoft.*`包將 Azure 服務與配置和資料保護 API 集成在一起。
+`Microsoft.*`套件整合了 Azure 服務與設定和資料保護 api。
 
 #### <a name="new-behavior"></a>新的行為
 
-新`Azure.*`包將 Azure 服務與配置和資料保護 API 集成。
+新 `Azure.*` 的套件會整合 Azure 服務與設定和資料保護 api。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-進行更改是因為`Microsoft.*`包是：
+已進行變更，因為 `Microsoft.*` 封裝是：
 
-* 使用過時的 Azure SDK 版本。 無法進行簡單的更新，因為 Azure SDK 的新版本包含重大更改。
-* 綁定到 .NET 核心發佈計畫。 將包的擁有權轉移到 Azure SDK 團隊可在 Azure SDK 更新時進行包更新。
+* 使用過時版本的 Azure SDK。 不可能進行簡單的更新，因為新版本的 Azure SDK 包含重大變更。
+* 系結至 .NET Core 發行排程。 將套件的擁有權轉移給 Azure SDK 小組會在更新 Azure SDK 時啟用套件更新。
 
 #### <a name="recommended-action"></a>建議的動作
 
-在ASP.NET Core 2.1 或更高版本的專案中`Microsoft.*`，用新`Azure.*`包替換舊包。
+在 ASP.NET Core 2.1 或更新版本的專案中，以新的套件取代舊的 `Microsoft.*` `Azure.*` 。
 
-| 老 | 新增 |
+| 多久 | 新增 |
 |--|--|
-| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [Azure.AspNetCore.資料保護.金鑰](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Keys) |
-| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [Azure.AspNetCore.資料保護.Blob](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Blobs) |
-| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure.擴展.配置.機密](https://www.nuget.org/packages/Azure.Extensions.Configuration.Secrets) |
+| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [AspNetCore. DataProtection. 金鑰](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Keys) |
+| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [AspNetCore. DataProtection Blob](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Blobs) |
+| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure 副檔名。秘密](https://www.nuget.org/packages/Azure.Extensions.Configuration.Secrets) |
 
-新包使用 Azure SDK 的新版本，其中包括重大更改。 一般使用模式保持不變。 某些重載和選項可能不同，以適應基礎 Azure SDK API 中的更改。
+新的套件會使用新版本的 Azure SDK，其中包含重大變更。 一般使用模式不會變更。 有些多載和選項可能會不同，以適應基礎 Azure SDK Api 中的變更。
 
-舊包將：
+舊的套件將會：
 
-* 在 .NET Core 2.1 和 3.1 的存留期內，由 ASP.NET 核心團隊提供支援。
-* 不包括在 .NET 5 中。
+* 在 .NET Core 2.1 和3.1 的存留期間，由 ASP.NET Core 小組支援。
+* 不包含在 .NET 5 中。
 
-將專案升級到 .NET 5 時，請`Azure.*`過渡到包以維護支援。
+將您的專案升級至 .NET 5 時，請轉換至 `Azure.*` 套件以維持支援。
 
 #### <a name="category"></a>類別
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bede0ec-5fdf-42a2-b5b7-bee64056acb6
 topic_type:
 - apiref
-ms.openlocfilehash: b1586184c91619994ba0dfc9d5dcc277c10f99cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b6936081ca3dbadb4f802a6856fafb53f6cef3fa
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436456"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008959"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 列舉
 包含值，這些值表示類型中繼資料。  
@@ -73,7 +73,7 @@ typedef enum CorTypeAttr {
 } CorTypeAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -103,7 +103,7 @@ typedef enum CorTypeAttr {
 |`tdAnsiClass`|指定此類型會將 LPTSTR 解讀為 ANSI。|  
 |`tdUnicodeClass`|指定此類型會將 LPTSTR 解讀為 Unicode。|  
 |`tdAutoClass`|指定此型別會自動解讀 LPTSTR。|  
-|`tdCustomFormatClass`|指定類型具有非標準編碼，如 `CustomFormatMask`所指定。|  
+|`tdCustomFormatClass`|指定類型具有非標準編碼，如所指定 `CustomFormatMask` 。|  
 |`tdCustomFormatMask`|使用此遮罩來取得原生 interop 的非標準編碼資訊。 未指定這兩個位值的意義。|  
 |`tdBeforeFieldInit`|指定在第一次嘗試存取靜態欄位之前，必須先初始化型別。|  
 |`tdForwarder`|指定匯出類型和類型轉寄站。|  
@@ -112,12 +112,12 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|指定類型具有相關聯的安全性。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

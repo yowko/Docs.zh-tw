@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9e4e497-d5fb-464b-991c-3bdd824664fd
 topic_type:
 - apiref
-ms.openlocfilehash: 19ee3097dfe80ba9dcbdaf316db0fd165b50abc6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 84791eba7c95d3278bd4650bd7d660e98fcb79d8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436422"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008910"
 ---
 # <a name="cvstruct-structure"></a>CVStruct 結構
 包含在安裝模組或複合映像時，所使用的資訊。  
@@ -35,24 +35,24 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
-|重大|主要版本組建編號。|  
-|微幅|次要版本組建編號。|  
-|訂閱|子組建編號。|  
-|組建|組建編號。|  
+|主要|主要版本組建編號。|  
+|Minor|次要版本組建編號。|  
+|Sub|子組建編號。|  
+|Build|組建編號。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料結構](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [中繼資料結構](metadata-structures.md)

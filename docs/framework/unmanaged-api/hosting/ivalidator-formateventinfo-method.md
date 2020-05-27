@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-ms.openlocfilehash: 9b3a6bab8672f3ef3fca5f89c60b03a43477cce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0c60631b5e034bc46d74412440d35d526359d043
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123304"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008569"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo 方法
 取得對應于指定驗證錯誤的錯誤訊息。  
@@ -42,7 +42,7 @@ HRESULT FormatEventInfo(
  在已傳遞至驗證錯誤處理常式的 HRESULT 值。  
   
  `Context`  
- 在`VEContext` 實例，其中包含有關驗證錯誤的內容資訊。  
+ 在`VEContext`實例，其中包含有關驗證錯誤的內容資訊。  
   
  `msg`  
  [in、out]包含傳回之錯誤訊息的字串。  
@@ -54,10 +54,10 @@ HRESULT FormatEventInfo(
  在安全陣列，其中包含描述錯誤的其他參數。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** IValidator .idl，IValidator。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

@@ -73,7 +73,7 @@ StormEvents
 
 Azure 監視器會自動利用機器學習服務來瞭解已部署應用程式的一般指令引數。 這可讓它偵測在其一般參數之外運作的服務。 例如，網站上的一般工作日流量可能是每分鐘10000個要求。 然後，在指定的一周，突然要求數達到每分鐘非常不尋常的20000要求。 [智慧型偵測](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics)會注意到此偏差與標準，並觸發警示。 同時，趨勢分析的智慧足以避免在預期流量負載時引發誤報。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - [Azure 監視器](https://docs.microsoft.com/azure/azure-monitor/overview)
 

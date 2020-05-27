@@ -6,33 +6,33 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/26/2020
 ms.locfileid: "80291655"
 ---
-### <a name="signalr-usesignalr-and-useconnections-methods-removed"></a>信號R：使用信號R和使用連接方法被刪除
+### <a name="signalr-usesignalr-and-useconnections-methods-removed"></a>SignalR：已移除 UseSignalR 和 UseConnections 方法
 
-在ASP.NET核心3.0中，SignalR 採用了端點路由。 作為更改的一部分，<xref:Microsoft.AspNetCore.Builder.SignalRAppBuilderExtensions.UseSignalR%2A>和<xref:Microsoft.AspNetCore.Builder.ConnectionsAppBuilderExtensions.UseConnections%2A>以及一些相關方法被標記為過時。 在ASP.NET Core 5.0 中，刪除了這些過時的方法。 有關方法的完整清單，請參閱受影響的[API。](#affected-apis)
+在 ASP.NET Core 3.0 中，SignalR 採用端點路由。 在這項變更中， <xref:Microsoft.AspNetCore.Builder.SignalRAppBuilderExtensions.UseSignalR%2A> 、 <xref:Microsoft.AspNetCore.Builder.ConnectionsAppBuilderExtensions.UseConnections%2A> 和一些相關的方法已標示為過時。 在 ASP.NET Core 5.0 中，已移除那些已淘汰的方法。 如需完整的方法清單，請參閱[受影響的 api](#affected-apis)。
 
-有關此問題的討論，請參閱[dotnet/aspnetcore_20082](https://github.com/dotnet/aspnetcore/issues/20082)。
+如需此問題的討論，請參閱[dotnet/aspnetcore # 20082](https://github.com/dotnet/aspnetcore/issues/20082)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
-5.0 預覽 3
+5.0 Preview 3
 
 #### <a name="old-behavior"></a>舊的行為
 
-信號R 集線器和連接處理常式可以使用 或`UseSignalR``UseConnections`方法在中介軟體管道中註冊。
+您可以使用或方法，在中介軟體管線中註冊 SignalR 中樞和連接處理常式 `UseSignalR` `UseConnections` 。
 
 #### <a name="new-behavior"></a>新的行為
 
-信號R 集線器和連接處理常式應在<xref:Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints%2A>中使用<xref:Microsoft.AspNetCore.SignalR.HubRouteBuilder.MapHub%2A>和<xref:Microsoft.AspNetCore.Http.Connections.ConnectionsRouteBuilder.MapConnectionHandler%2A>上的<xref:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder>擴充方法在 中註冊。
+SignalR 中樞和連接處理常式應該在中 <xref:Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints%2A> 使用 <xref:Microsoft.AspNetCore.SignalR.HubRouteBuilder.MapHub%2A> 和 <xref:Microsoft.AspNetCore.Http.Connections.ConnectionsRouteBuilder.MapConnectionHandler%2A> 擴充方法在內註冊 <xref:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder> 。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-舊方法具有自訂路由邏輯，該邏輯不與 ASP.NET Core 中的其他路由元件進行交互。 在ASP.NET Core 3.0 中引入了一個新的通用路由系統，稱為端點路由。 端點路由使 SignalR 能夠與其他路由元件進行交互。 切換到此模型可使使用者實現端點路由的全部優勢。 因此，舊方法已被刪除。
+舊方法的自訂路由邏輯不會與 ASP.NET Core 中的其他路由元件互動。 在 ASP.NET Core 3.0 中引進了新的一般用途路由系統（稱為端點路由）。 端點路由已啟用 SignalR 與其他路由元件互動。 切換到此模型可讓使用者實現端點路由的完整優點。 因此，舊方法已經移除。
 
 #### <a name="recommended-action"></a>建議的動作
 
-刪除調用`UseSignalR`或`UseConnections`從專案`Startup.Configure`方法調用的代碼。 將其替換為 對`MapHub`的`MapConnectionHandler`調用 正文中的 調用 或`UseEndpoints`， 分別替換為 。 例如：
+移除 `UseSignalR` `UseConnections` 從專案的方法呼叫或的程式碼 `Startup.Configure` 。 在 `MapHub` `MapConnectionHandler` 呼叫的主體內，分別以或的呼叫取代它 `UseEndpoints` 。 例如：
 
-**舊代碼：**
+**舊版程式碼：**
 
 ```csharp
 app.UseSignalR(routes =>
@@ -50,7 +50,7 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-通常，`MapHub`您的以前和`MapConnectionHandler`呼叫可以直接從正文`UseSignalR`轉移到`UseConnections``UseEndpoints`，無需更改。
+一般來說，您先前的 `MapHub` 和 `MapConnectionHandler` 呼叫可以直接從的主體傳送 `UseSignalR` 到，而且 `UseConnections` `UseEndpoints` 不需要進行任何變更。
 
 #### <a name="category"></a>類別
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc064b00e32bb6b1d8c2d0c20f571b35919eae23
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175755"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009336"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef 方法
-為通用語言運行時類型創建類型定義，並獲取該類型定義的中繼資料權杖。  
+建立 common language runtime 類型的類型定義，並取得該類型定義的元資料標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,37 +39,37 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>參數  
  `szTypeDef`  
- [在]Unicode 中類型的名稱。  
+ 在Unicode 中的類型名稱。  
   
  `dwTypeDefFlags`  
- [在]`TypeDef`屬性。 這是值的`CoreTypeAttr`位元遮罩。  
+ [in] `TypeDef`特性. 這是值的位元遮罩 `CoreTypeAttr` 。  
   
  `tkExtends`  
- [在]基類的權杖。 它必須是 或`mdTypeDef``mdTypeRef`標記。  
+ 在基類的 token。 它必須是 `mdTypeDef` 或 `mdTypeRef` 權杖。  
   
  `rtkImplements`  
- [在]指定此類或介面實現的介面的權杖陣列。  
+ 在Token 的陣列，指定此類別或介面所要執行的介面。  
   
  `ptd`  
- [出]分配的`mdTypeDef`權杖。  
+ 脫銷`mdTypeDef`指派的 token。  
   
 ## <a name="remarks"></a>備註  
- 中`dwTypeDefFlags`的標誌指定正在創建的類型是公共類型系統參考型別（類或介面）還是公共類型系統數值型別。  
+ 中的旗標 `dwTypeDefFlags` 會指定所建立的型別是通用型別系統參考型別（類別或介面）還是一般型別系統實值型別。  
   
- 根據提供的參數，此方法作為副作用，還可以為此類型繼承或實現的每個介面創建`mdInterfaceImpl`記錄。 但是，此方法不會返回任何這些`mdInterfaceImpl`權杖。 如果用戶端希望以後添加或修改`mdInterfaceImpl`權杖，則必須使用介面`IMetaDataImport`枚舉它們。 如果要使用介面的`[default]`COM 語義，則應將預設介面作為`rtkImplements`中的第一個元素提供 。類上的自訂屬性集將指示類具有預設介面（始終假定該介面是為類聲明的第一個`mdInterfaceImpl`權杖）。  
+ 視提供的參數而定，這個方法也可能會 `mdInterfaceImpl` 為這個類型所繼承或執行的每個介面建立一筆記錄。 不過，這個方法不會傳回任何這些 `mdInterfaceImpl` 標記。 如果用戶端想要在稍後新增或修改 `mdInterfaceImpl` 權杖，它必須使用 `IMetaDataImport` 介面來加以列舉。 如果您想要使用介面的 COM 語義 `[default]` ，您應該提供預設介面做為中的第一個元素 `rtkImplements` ; 在類別上設定的自訂屬性會指出該類別具有預設介面（一律假設為類別的第一個 `mdInterfaceImpl` token）。  
   
- `rtkImplements`陣列的每個元素都包含 或`mdTypeDef``mdTypeRef`權杖。 陣列中的最後一個元素必須為`mdTokenNil`。  
+ 陣列的每個元素都 `rtkImplements` 包含 `mdTypeDef` 或 `mdTypeRef` token。 陣列中的最後一個元素必須是 `mdTokenNil` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

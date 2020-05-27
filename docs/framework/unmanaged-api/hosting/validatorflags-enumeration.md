@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3f5c266-3fcc-4ad1-aaf5-4cdbe26304ad
 topic_type:
 - apiref
-ms.openlocfilehash: 61aafb8dc99bb908fc603945ff6ea74054f812c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d5eb225241f597baf7a0a5584f4aaf8bf8411ea2
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141428"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009466"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags 列舉
-包含值，指出應該在呼叫[ICLRValidator：： Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)方法時執行的驗證類型。  
+包含值，指出應該在呼叫[ICLRValidator：： Validate](iclrvalidator-validate-method.md)方法時執行的驗證類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ enum ValidatorFlags {
 };  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -47,15 +47,15 @@ enum ValidatorFlags {
 |`VALIDATOR_SHOW_SOURCE_LINES`|指定驗證錯誤訊息應包含引發驗證錯誤的源程式碼。 此域值在 .NET Framework 版本2.0 中無效。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** IValidator .idl，IValidator。h  
   
  連結**庫：** Mscoree.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ICLRErrorReportingManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
-- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [ICLRErrorReportingManager 介面](iclrerrorreportingmanager-interface.md)
+- [裝載列舉](hosting-enumerations.md)

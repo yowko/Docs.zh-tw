@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175781"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009370"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
-使用指定的`get`和方法`set`訪問器為指定類型創建屬性定義，並獲取該屬性定義的權杖。  
+使用指定的和方法存取子，為指定的類型建立屬性定義 `get` `set` ，並取得該屬性定義的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [在]正在定義屬性的類或介面的權杖。  
+ 在要在其上定義屬性之類別或介面的 token。  
   
  `szProperty`  
- [在]屬性的名稱。  
+ 在屬性的名稱。  
   
  `dwPropFlags`  
- [在]屬性標誌。  
+ 在屬性旗標。  
   
  `pvSig`  
- [在]屬性簽名。  
+ 在屬性簽章。  
   
  `cbSig`  
- [在]中的`pvSig`位元組計數。  
+ 在中的位元組計數 `pvSig` 。  
   
  `dwCPlusTypeFlag`  
- [在]屬性的預設值的類型。  
+ 在屬性的預設值類型。  
   
  `pValue`  
- [在]屬性的預設值。  
+ 在屬性的預設值。  
   
  `cchValue`  
- [在]中的（Unicode） 字元的`pValue`計數。  
+ 在中的（Unicode）字元計數 `pValue` 。  
   
  `mdSetter`  
- [在]設置屬性值的方法。  
+ 在設定屬性值的方法。  
   
  `mdGetter`  
- [在]獲取屬性值的方法。  
+ 在取得屬性值的方法。  
   
  `rmdOtherMethods[]`  
- [在]與 屬性關聯的其他方法的陣列。 使用 終止陣列`mdTokenNil`。  
+ 在與屬性相關聯之其他方法的陣列。 使用終止陣列 `mdTokenNil` 。  
   
  `pmdProp`  
- [出]分配的`mdProperty`權杖。  
+ 脫銷`mdProperty`指派的 token。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

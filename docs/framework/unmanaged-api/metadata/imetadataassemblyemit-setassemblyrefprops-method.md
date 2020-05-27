@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70a32bf3-9051-4f96-ae87-11356d06a073
 topic_type:
 - apiref
-ms.openlocfilehash: 6ad6bbb8a4c69f575bbeba3a297c46e049a97325
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb381a872cbeb787da0c6920f2cdeef434fb33ea
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176041"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008088"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps 方法
 修改指定的 `AssemblyRef` 中繼資料結構。  
@@ -42,41 +42,41 @@ HRESULT SetAssemblyRefProps (
   
 ## <a name="parameters"></a>參數  
  `ar`  
- [在]指定要修改的`AssemblyRef`元資料結構的中繼資料權杖。  
+ 在元資料標記，指定 `AssemblyRef` 要修改的元資料結構。  
   
  `pbPublicKeyOrToken`  
- [在]引用程式集的發行者的公共金鑰。  
+ 在所參考元件之發行者的公開金鑰。  
   
  `cbPublicKeyOrToken`  
- [在]的大小（以位元組為單位）。 `pbPublicKeyOrToken`  
+ 在的大小（以位元組為單位） `pbPublicKeyOrToken` 。  
   
  `szName`  
- [在]程式集的人類可讀文本名稱。  
+ 在元件的人類看得懂的文字名稱。  
   
  `pMetaData`  
- [在]指向 ASSEMBLYMETADATA 實例的指標，其中包含程式集的版本、平臺和地區設定資訊。  
+ 在ASSEMBLYMETADATA 實例的指標，其中包含元件的版本、平臺和地區設定資訊。  
   
  `pbHashValue`  
- [在]指向與程式集關聯的雜湊資料的指標。  
+ 在與元件相關聯之雜湊資料的指標。  
   
  `cbHashValue`  
- [在]的大小（以位元組為單位）。 `pbHashValue`  
+ 在的大小（以位元組為單位） `pbHashValue` 。  
   
  `dwAssemblyRefFlags`  
- [在]指定引用程式集屬性的[程式集 RefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)值的位組合。  
+ 在[AssemblyRefFlags](assemblyrefflags-enumeration.md)值的位元組合，這個組合會指定參考元件的屬性。  
   
 ## <a name="remarks"></a>備註  
- 要創建`AssemblyRef`元資料結構，請使用[IMetaDataAssemblyEmit：:DefineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)方法。  
+ 若要建立 `AssemblyRef` 元資料結構，請使用[IMetaDataAssemblyEmit：:D efineassemblyref](imetadataassemblyemit-defineassemblyref-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit 介面](imetadataassemblyemit-interface.md)

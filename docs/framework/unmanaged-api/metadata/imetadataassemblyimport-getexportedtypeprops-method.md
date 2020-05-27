@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 944941c2356cae93ecc85f1714b4b29aefcb50ad
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177764"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008400"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 方法
-使用指定的中繼資料簽名獲取匯出類型的屬性集。  
+取得具有指定的中繼資料簽章之已匯出類型的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,35 +41,35 @@ HRESULT GetExportedTypeProps (
   
 ## <a name="parameters"></a>參數  
  `mdct`  
- [在]表示`mdExportedType`匯出類型的中繼資料權杖。  
+ 在`mdExportedType`表示已匯出類型的元資料標記。  
   
  `szName`  
- [出]匯出類型的名稱。  
+ 脫銷匯出之類型的名稱。  
   
  `cchName`  
- [在]的大小（以寬字元表示`szName`）  
+ 在的大小（以寬字元為單位） `szName` 。  
   
  `pchName`  
- [出]實際返回的寬字元數`szName`  
+ 脫銷實際傳回的寬字元數`szName`  
   
  `ptkImplementation`  
- [出]包含`mdFile`或`mdAssemblyRef`允許訪問`mdExportedType`匯出類型的屬性的 中繼資料權杖。  
+ 脫銷`mdFile`、 `mdAssemblyRef` 或 `mdExportedType` 元資料標記，其中包含或允許存取已匯出類型的屬性。  
   
  `ptkTypeDef`  
- [出]指向表示檔中類型的`mdTypeDef`權杖的指標。  
+ 脫銷`mdTypeDef`標記的指標，表示檔案中的類型。  
   
  `pdwExportedTypeFlags`  
- [出]指向用於應用於匯出類型的中繼資料的標誌的指標。 標誌值可以是一個或多個[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)值。  
+ 脫銷旗標的指標，描述套用至已匯出類型的中繼資料。 Flags 值可以是一或多個[CorTypeAttr](cortypeattr-enumeration.md)值。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport 介面](imetadataassemblyimport-interface.md)

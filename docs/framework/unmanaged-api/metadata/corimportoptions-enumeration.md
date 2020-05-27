@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 44d1776e2902988353ef4fd58aca20e56203b9da
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3be8a004be752af8a8675a3499bdb6cbfd785840
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442852"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009193"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 列舉
 包含旗標值，這些值可控制在匯入目前範圍之外的組件期間所發生的行為。  
@@ -42,7 +42,7 @@ typedef enum CorImportOptions {
 } CorImportOptions;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -57,12 +57,12 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllExportedTypes`|表示應該列舉所有匯出的類型，包括已刪除的型別。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97dc3a56-adfa-431f-889e-06a35ac84d51
 topic_type:
 - apiref
-ms.openlocfilehash: 09a1605deda5b51be604c3b8f0c69fa5adcf9dc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f8c0c2cb8dea8ad2b9c0040654122ef5942aca0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175950"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008387"
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>IMetaDataConverter::GetMetaDataFromTypeLib 方法
-獲取指向[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)實例的介面指標，該實例表示指定`ITypeLib`實例表示的型別程式庫的中繼資料簽名。  
+取得[IMetaDataImport](imetadataimport-interface.md)實例的介面指標，表示指定的實例所代表之類型程式庫的中繼資料簽章 `ITypeLib` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +36,21 @@ HRESULT GetMetaDataFromTypeLib (
   
 ## <a name="parameters"></a>參數  
  `pITL`  
- [在]指向表示類型`ITypeLib`庫的物件的指標。  
+ 在`ITypeLib`代表類型程式庫之物件的指標。  
   
  `ppMDI`  
- [出]指向接收表示中繼資料簽名的`IMetaDataImport`實例位址的位置的指標。  
+ 脫銷接收表示中繼資料簽章的實例位址之位置的指標 `IMetaDataImport` 。  
   
 ## <a name="requirements"></a>需求  
- **平臺：** 請參閱[系統要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平臺：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)

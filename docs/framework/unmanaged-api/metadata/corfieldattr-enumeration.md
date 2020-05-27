@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dea69e18fc517eddddc5b99950a6f3b16ee3e426
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450310"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007399"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 列舉
 包含值，這些值描述與欄位有關的中繼資料。  
@@ -56,12 +56,12 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|指定協助工具資訊。|  
-|`fdPrivateScope`|指定無法參考欄位。|  
+|`fdPrivateScope`|指定無法參考此欄位。|  
 |`fdPrivate`|指定欄位只能由其父類型存取。|  
 |`fdFamANDAssem`|指定欄位可由其元件中的衍生類別存取。|  
 |`fdAssembly`|指定欄位可由其元件中的所有類型存取。|  
@@ -77,16 +77,16 @@ typedef enum CorFieldAttr {
 |`fdReservedMask`|保留供 common language runtime 內部使用。|  
 |`fdRTSpecialName`|指定 common language runtime 中繼資料內部 Api 應該檢查名稱的編碼方式。|  
 |`fdHasFieldMarshal`|指定欄位包含封送處理資訊。|  
-|`fdHasDefault`|指定欄位具有預設值。|  
+|`fdHasDefault`|指定此欄位含有預設值。|  
 |`fdHasFieldRVA`|指定欄位具有相對的虛擬位址。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

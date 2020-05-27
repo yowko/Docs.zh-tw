@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 388f227377ddf73fe1297e1c777bb1c0607c13d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81d6c972b53221ee53cbcf31639d65c30858b48b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177873"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008153"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType 方法
 為指定的已匯出類型，建立包含其中繼資料的 `ExportedType` 結構，並且傳回關聯的中繼資料語彙基元。  
@@ -39,40 +39,40 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- [在]要匯出的類型的名稱。 對於通用語言運行時的版本 1.1，匯出類型的名稱必須與 類型中`TypeDef`給出的名稱完全符合。  
+ 在要匯出之類型的名稱。 若為 common language runtime 的版本1.1，匯出類型的名稱必須完全符合中針對類型所指定的名稱 `TypeDef` 。  
   
  `tkImplementation`  
- [在]指定匯出類型的實現位置的權杖。 有效值及其相關含義包括：  
+ 在指定匯出類型的實作為位置的 token。 有效值和其相關意義如下：  
   
-- `mdFile`該類型在此程式集中的其他檔中實現。  
+- `mdFile`此類型會在此元件內的不同檔案中執行。  
   
-- `mdAssemblyRef`該類型在不同的程式集中實現。  
+- `mdAssemblyRef`類型是在不同的元件中執行。  
   
-- `mdExportedTYpe`類型嵌套在某種其他類型中。  
+- `mdExportedTYpe`類型會在其他類型內嵌套。  
   
-- `mdFileNil`類型與清單位於同一檔中，不是巢狀型別。  
+- `mdFileNil`型別與資訊清單位於相同的檔案中，而且不是嵌套型別。  
   
  `tkTypeDef`  
- [在]指定要匯出的類型的中繼資料的權杖。 此值在檔中實現該類型的`TypeDef`表中輸入，並且僅當該檔位於此程式集中時才相關。  
+ 在中繼資料的 token，指定要匯出的類型。 這個值會在執行類型之檔案的資料表中輸入 `TypeDef` ，而且只有在該檔案位於此元件中時，才會相關。  
   
  `dwExportedTypeFlags`  
- [在][CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)枚舉值的位組合，用於定義匯出類型的屬性設置。  
+ 在[CorTypeAttr](cortypeattr-enumeration.md)列舉值的位元組合，這個組合會定義匯出類型的屬性設定。  
   
  `pmdct`  
- [出]指向返回的中繼資料權杖的指標，指示匯出的類型。  
+ 脫銷傳回之元資料標記的指標，表示匯出的類型。  
   
 ## <a name="remarks"></a>備註  
- 必須`ExportedType`為此程式集公開的並且在包含清單的模組以外的模組中實現的每一種類型定義元資料結構。  
+ 您 `ExportedType` 必須針對這個元件所公開的每個類型定義元資料結構，並在包含資訊清單的模組以外的模組中執行。  
   
 ## <a name="requirements"></a>需求  
- **平臺：** 請參閱[系統要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平臺：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit 介面](imetadataassemblyemit-interface.md)

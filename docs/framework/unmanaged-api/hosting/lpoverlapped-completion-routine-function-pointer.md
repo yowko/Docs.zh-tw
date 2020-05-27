@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c0bdd9e59f5794dbb0d447dc2cc6cb682bfdf09f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090899"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008478"
 ---
 # <a name="lpoverlapped_completion_routine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 函式指標
 指向函式，當裝置的重迭（也就是非同步） i/o 完成時，會通知主機。  
@@ -49,17 +49,17 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
  在結構的指標，其中包含用來完成 i/o 要求的資訊。  
   
 ## <a name="remarks"></a>備註  
- `LPOVERLAPPED_COMPLETION_ROUTINE` 點的函式是回呼函式，必須由主控應用程式的寫入器來執行。 回呼函式可讓主機處理已完成的 i/o 要求。  
+ 點的函式 `LPOVERLAPPED_COMPLETION_ROUTINE` 是回呼函式，必須由主控應用程式的寫入器來執行。 回呼函式可讓主機處理已完成的 i/o 要求。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** Mscorwks.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [已被取代的 CLR 裝載函式](deprecated-clr-hosting-functions.md)

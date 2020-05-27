@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 93a194ea72ab894544927cf96304397b7211b5ac
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432768"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009154"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 列舉
 包含值，可用來在中繼資料產生期間影響行為。  
@@ -42,26 +42,26 @@ typedef enum CorSetENC {
 } CorSetENC;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
-|`MDSetENCOn`|已經過時：|  
-|`MDSetENCOff`|已經過時：|  
+|`MDSetENCOn`|已過時。|  
+|`MDSetENCOff`|已過時。|  
 |`MDUpdateENC`|表示中繼資料可以更新，而無法移動權杖。|  
 |`MDUpdateFull`|表示權杖可在更新期間移動。|  
 |`MDUpdateExtension`|指出更新只能包含新增專案。 無法移動權杖。|  
 |`MDUpdateIncremental`|表示編譯是累加的。|  
 |`MDUpdateDelta`|指出只應儲存已變更的中繼資料。|  
-|`MDUpdateMask`|包括 `MDUpdateENC`、`MDUpdateFull` 和 `MDUpdateIncremental`。|  
+|`MDUpdateMask`|包含 `MDUpdateENC` 、 `MDUpdateFull` 和 `MDUpdateIncremental` 。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

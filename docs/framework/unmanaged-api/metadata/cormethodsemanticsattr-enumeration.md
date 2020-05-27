@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-ms.openlocfilehash: bab215a8221696a0e43e228278085fcef52a40e9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1572c206f4a5a5fe0fd189ca84d0bcda2249c6d4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442819"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007646"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 列舉
 包含值，這些值描述方法與關聯的屬性或事件之間的關聯性。  
@@ -39,24 +39,24 @@ typedef enum CorMethodSemanticsAttr {
 } CorMethodSemanticsAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
-|`msSetter`|指定方法是屬性的 `set` 存取子。|  
-|`msGetter`|指定方法是屬性的 `get` 存取子。|  
+|`msSetter`|指定方法是 `set` 屬性的存取子。|  
+|`msGetter`|指定方法是 `get` 屬性的存取子。|  
 |`msOther`|指定方法與屬性或事件（而非此處定義的）具有關聯性。|  
 |`msAddOn`|指定方法加入事件的處理常式方法。|  
 |`msRemoveOn`|指定方法會移除事件的處理常式方法。|  
 |`msFire`|指定方法會引發事件。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18d54280-46af-479f-8d84-5ab64f8b23b9
 topic_type:
 - apiref
-ms.openlocfilehash: cf4d82bb795ee17f748955a44b422071c8009184
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8e06e67b0900b4a5b7cceead60e183ee9c728a7e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124829"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008699"
 ---
 # <a name="itypenamebuilderclear-method"></a>ITypeNameBuilder::Clear 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -32,14 +32,14 @@ HRESULT Clear ( );
 ```  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [裝載介面](hosting-interfaces.md)

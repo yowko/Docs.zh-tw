@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 216852f8f051440b2814619b843a1f25013e4042
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 09bcebfdcfea3d5728d404cdb6b5fb170a5432c3
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133769"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008491"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函式
 允許主機判斷在明確初始化 CLR 之前，將在進程中使用哪個版本的 common language runtime （CLR）。  
@@ -56,7 +56,7 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|一或多個引數為 null。|  
   
 ## <a name="remarks"></a>備註  
- 主機會在初始化 CLR 之前呼叫 `LockClrVersion`。 `LockClrVersion` 採用三個參數，這些都是[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)類型的回呼。 此類型的定義如下。  
+ 主機會在 `LockClrVersion` 初始化 CLR 之前呼叫。 `LockClrVersion`採用三個參數，這些都是[FLockClrVersionCallback](flockclrversioncallback-function-pointer.md)類型的回呼。 此類型的定義如下。  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -64,33 +64,33 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  初始化執行時間時，會發生下列步驟：  
   
-1. 主機會呼叫[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或其中一個其他執行時間初始化函數。 或者，主機也可以使用 COM 物件啟用來初始化執行時間。  
+1. 主機會呼叫[CorBindToRuntimeEx](corbindtoruntimeex-function.md)或其中一個其他執行時間初始化函數。 或者，主機也可以使用 COM 物件啟用來初始化執行時間。  
   
-2. 執行時間會呼叫 `hostCallback` 參數所指定的函數。  
+2. 執行時間會呼叫參數所指定的函式 `hostCallback` 。  
   
-3. `hostCallback` 所指定的函式會執行下列一連串的呼叫：  
+3. 所指定的函式 `hostCallback` 會進行下列一連串的呼叫：  
   
-    - `pBeginHostSetup` 參數所指定的函數。  
+    - 參數所指定的函式 `pBeginHostSetup` 。  
   
-    - `CorBindToRuntimeEx` （或另一個執行時間初始化函數）。  
+    - `CorBindToRuntimeEx`（或另一個執行時間初始化函數）。  
   
-    - [ICLRRuntimeHost：： SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。  
+    - [ICLRRuntimeHost：： SetHostControl](iclrruntimehost-sethostcontrol-method.md)。  
   
-    - [ICLRRuntimeHost：： Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。  
+    - [ICLRRuntimeHost：： Start](iclrruntimehost-start-method.md)。  
   
-    - `pEndHostSetup` 參數所指定的函數。  
+    - 參數所指定的函式 `pEndHostSetup` 。  
   
- 所有從 `pBeginHostSetup` 到 `pEndHostSetup` 的呼叫都必須在具有相同邏輯堆疊的單一執行緒或光纖上發生。 這個執行緒可以與呼叫 `hostCallback` 的執行緒不同。  
+ 所有從到的呼叫都 `pBeginHostSetup` `pEndHostSetup` 必須在具有相同邏輯堆疊的單一執行緒或光纖上發生。 這個執行緒可以與呼叫的執行緒不同 `hostCallback` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** Mscoree.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [已被取代的 CLR 裝載函式](deprecated-clr-hosting-functions.md)

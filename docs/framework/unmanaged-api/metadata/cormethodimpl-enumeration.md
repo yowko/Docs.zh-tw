@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450203"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007659"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 列舉
 包含值，這些值描述方法實作功能。  
@@ -52,7 +52,7 @@ typedef enum CorMethodImpl {
 } CorMethodImpl;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -71,15 +71,15 @@ typedef enum CorMethodImpl {
 |`miNoInlining`|指定方法無法內嵌。|  
 |`miAggressiveInlining`|指定方法應該盡可能內嵌。|  
 |`miNoOptimization`|指定不應該優化方法。|  
-|`miMaxMethodImplVal`|`CorMethodImpl`的有效值上限。|  
+|`miMaxMethodImplVal`|的最大有效值 `CorMethodImpl` 。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

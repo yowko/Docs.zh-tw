@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ee5dd611888ec52e360ef45fab4c01e9c5b2d6bb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092029"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009442"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 函式指標
-Points to a function that notifies the host that a wait handle (<xref:System.Threading.WaitHandle>) has either been signaled or timed out.  
+指向函式，該函式會通知主機等候控制碼（ <xref:System.Threading.WaitHandle> ）已發出信號或超時。  
   
- This function pointer has been deprecated in the .NET Framework 4.  
+ 這個函式指標在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,23 +37,23 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>參數  
  `lpParameter`  
- [in] A pointer to an object that contains information defined by the host.  
+ 在物件的指標，其中包含主機所定義的資訊。  
   
  `TimerOrWaitFired`  
- [in] `true` if the wait handle timed out, or `false` if it was signaled.  
+ [in] `true`如果等候控制碼超時，則為， `false` 如果已收到信號，則為。  
   
 ## <a name="remarks"></a>備註  
- The function to which `WAITORTIMERCALLBACK` points is a callback function and must be implemented by the writer of the hosting application.  
+ 點的函式 `WAITORTIMERCALLBACK` 是回呼函式，必須由主控應用程式的寫入器來執行。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **Header:** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **Library:** MSCorWks.dll  
+ 連結**庫：** Mscorwks.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [已被取代的 CLR 裝載函式](deprecated-clr-hosting-functions.md)

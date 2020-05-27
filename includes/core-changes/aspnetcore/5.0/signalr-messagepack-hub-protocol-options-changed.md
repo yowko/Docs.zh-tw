@@ -8,7 +8,7 @@ ms.locfileid: "82507068"
 ---
 ### <a name="signalr-messagepack-hub-protocol-options-type-changed"></a>SignalR： MessagePack 中樞通訊協定選項類型已變更
 
-ASP.NET Core SignalR MessagePack Hub 通訊協定選項類型已從`IList<MessagePack.IFormatterResolver>`變更為[MessagePack](https://www.nuget.org/packages/MessagePack)程式庫的`MessagePackSerializerOptions`類型。
+ASP.NET Core SignalR MessagePack Hub 通訊協定選項類型已從變更 `IList<MessagePack.IFormatterResolver>` 為[MessagePack](https://www.nuget.org/packages/MessagePack)程式庫的 `MessagePackSerializerOptions` 類型。
 
 如需這種變更的討論，請參閱[dotnet/aspnetcore # 20506](https://github.com/dotnet/aspnetcore/issues/20506)。
 
@@ -69,11 +69,11 @@ services.AddSignalR()
 
 #### <a name="reason-for-change"></a>變更的原因
 
-這項變更是移至 MessagePack v2. x 的一部分，已在[aspnet/公告 # 404](https://github.com/aspnet/Announcements/issues/404)中宣佈。 V2. x 程式庫已加入更容易使用的選項 API，並提供比`MessagePack.IFormatterResolver`以前公開的更多功能。
+這項變更是移至 MessagePack v2. x 的一部分，已在[aspnet/公告 # 404](https://github.com/aspnet/Announcements/issues/404)中宣佈。 V2. x 程式庫已加入更容易使用的選項 API，並提供比以前公開的更多功能 `MessagePack.IFormatterResolver` 。
 
 #### <a name="recommended-action"></a>建議的動作
 
-這種中斷性變更會影響在上設定<xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions>值的任何人。 如果您使用 ASP.NET Core SignalR MessagePack Hub 通訊協定並修改選項，請更新您的使用方式，以使用新的選項 API，如上所示。
+這種中斷性變更會影響在上設定值的任何人 <xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions> 。 如果您使用 ASP.NET Core SignalR MessagePack Hub 通訊協定並修改選項，請更新您的使用方式，以使用新的選項 API，如上所示。
 
 #### <a name="category"></a>類別
 

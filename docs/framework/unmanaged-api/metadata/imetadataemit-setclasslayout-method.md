@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: e855868d18fc6cffdd5d92cfa401606caf45b76c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a18583ce807ffa672811f3a0cd1e744233f6eb30
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177565"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008823"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout 方法
-完成由之前調用[DefineTypeDef 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)定義的類的欄位佈局。  
+完成先前呼叫[DefineTypeDef 方法](imetadataemit-definetypedef-method.md)所定義之類別的欄位版面配置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,36 +38,36 @@ HRESULT SetClassLayout (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [在]指定`mdTypeDef`要佈局的類的權杖。  
+ 在`mdTypeDef`Token，指定要配置的類別。  
   
  `dwPackSize`  
- [在]包裝尺寸：1、2、4、8 或 16 位元組。 包裝大小是相鄰欄位之間的位元組數。  
+ 在封裝大小：1、2、4、8或16個位元組。 封裝大小是相鄰欄位之間的位元組數目。  
   
  `rFieldOffsets`  
- [在][COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)結構陣列，每個結構指定類的欄位和類中的欄位偏移量。 使用 終止陣列`mdTokenNil`。  
+ 在[COR_FIELD_OFFSET](cor-field-offset-structure.md)結構的陣列，其中每一個都會指定類別的欄位，以及類別內的欄位位移。 使用終止陣列 `mdTokenNil` 。  
   
  `ulClassSize`  
- [在]類的大小（以位元組為單位）。  
+ 在類別的大小（以位元組為單位）。  
   
 ## <a name="remarks"></a>備註  
- 類最初通過調用[IMetaDataEmit：:DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)方法來定義，並為類的欄位指定三個佈局之一：自動、順序或顯式。 通常，您將使用自動佈局，讓運行時選擇佈局欄位的最佳方式。  
+ 此類別一開始是藉由呼叫[IMetaDataEmit：:D efinetypedef](imetadataemit-definetypedef-method.md)方法來定義，並為類別的欄位指定三個配置的其中一個：自動、連續或明確。 一般來說，您會使用自動版面配置，並讓執行時間選擇配置欄位的最佳方式。  
   
- 但是，您可能希望根據非託管代碼使用的相片順序佈局欄位。 在這種情況下，選擇順序或顯式佈局並調用`SetClassLayout`以完成欄位的佈局：  
+ 不過，您可能會想要根據非受控碼所使用的相片順序來配置欄位。 在此情況下，請選擇 [連續] 或 [明確配置]，然後按 [呼叫] `SetClassLayout` 來完成欄位的版面配置：  
   
-- 順序佈局：指定包裝大小。 欄位根據其自然大小或包裝大小對齊，以導致欄位偏移較小的為准。 設置`rFieldOffsets`和`ulClassSize`零。  
+- 連續版面配置：指定封裝大小。 欄位會根據其自然大小或封裝大小來對齊，以較小的方式產生欄位的位移。 將 `rFieldOffsets` 和設定 `ulClassSize` 為零。  
   
-- 顯式佈局：指定每個欄位的偏移量或指定類大小和包裝大小。  
+- 明確配置：指定每個欄位的位移，或指定類別大小和封裝大小。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: dd1d6f1da6e49837eebd9356500f403c199b011b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa4f1f57cb8fe1ca81bbad6438a88bb43c48e7bf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177857"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008075"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps 方法
 修改指定的 `ExportedType` 中繼資料結構。  
@@ -38,29 +38,29 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>參數  
  `ct`  
- [在]指定要修改的`ExportedType`元資料結構的中繼資料權杖。  
+ 在元資料標記，指定 `ExportedType` 要修改的元資料結構。  
   
  `tkImplementation`  
- [在]指定如何實現此類型的`File`權杖`AssemblyRef`的類型`ExportedType`。  
+ 在類型 `File` 為、或的 token， `AssemblyRef` `ExportedType` 指定如何實作為此型別。  
   
  `tkTypeDef`  
- [在]代碼`TypeDef`檔中引用的權杖。  
+ 在程式 `TypeDef` 代碼檔案中參考的 token。  
   
  `dwExportedTypeFlags`  
- [在]指定類型屬性的值的位組合。  
+ 在值的位元組合，這個組合會指定類型的屬性。  
   
 ## <a name="remarks"></a>備註  
- 要創建`ExportedType`元資料結構，請使用[IMetaDataAssemblyEmit：:Defineexportetype 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ 若要建立 `ExportedType` 元資料結構，請使用[IMetaDataAssemblyEmit：:D efineexportedtype](imetadataassemblyemit-defineexportedtype-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit 介面](imetadataassemblyemit-interface.md)

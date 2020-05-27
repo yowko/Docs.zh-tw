@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17c91200730431c4c6e230b8c1561ce7c4863868
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177893"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008179"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 方法
-創建包含`Assembly`指定組件中繼資料的結構並返回關聯的中繼資料權杖。  
+建立 `Assembly` 包含指定元件之中繼資料的結構，並傳回相關聯的元資料標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>參數  
  `pbPublicKey`  
- [在]標識程式集的發行者的公共金鑰，如果程式集未強命名，則為 Null。  
+ 在識別元件發行者的公開金鑰; 如果元件不是強式名稱，則為 Null。  
   
  `cbPublicKey`  
- [在]的大小（以位元組為單位）。 `pbPublicKey`  
+ 在的大小（以位元組為單位） `pbPublicKey` 。  
   
  `uHashAlgId`  
- [在]用於加密程式集中的檔的雜湊演算法的識別碼，或用於指定 SHA-1 演算法的 Null。  
+ 在要用來加密元件中之檔案的雜湊演算法識別碼，或為 Null 以指定 SHA-1 演算法。  
   
  `szName`  
- [在]程式集的人類可讀文本名稱。 此值不得超過 1024 個字元。  
+ 在元件的人類看得懂的文字名稱。 此值不得超過1024個字元。  
   
  `pMetaData`  
- [在]指向 ASSEMBLYMETADATA 實例的指標，其中包含程式集的版本、平臺和地區設定資訊。  
+ 在ASSEMBLYMETADATA 實例的指標，其中包含元件的版本、平臺和地區設定資訊。  
   
  `dwAssemblyFlags`  
- [在]描述程式集功能的[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值的組合。  
+ 在描述元件功能的[CorAssemblyFlags](corassemblyflags-enumeration.md)值組合。  
   
  `pmda`  
- [出]指向中繼資料權杖的指標。  
+ 脫銷元資料標記的指標。  
   
 ## <a name="remarks"></a>備註  
- 只能在清單`Assembly`中定義一個元資料結構。  
+ `Assembly`資訊清單中只能定義一個元資料結構。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit 介面](imetadataassemblyemit-interface.md)

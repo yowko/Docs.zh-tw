@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2985c419b25b8bf76df8fee0f0f37ba9ebee3df7
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176184"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007893"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 列舉
-指定將檢查重複項的中繼資料權杖。  
+指定將檢查是否有重複的元資料標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,43 +66,43 @@ typedef enum CorCheckDuplicatesFor {
   
 ## <a name="members"></a>成員  
   
-|member|描述|  
+|成員|描述|  
 |------------|-----------------|  
-|`MDDupAll`|檢查所有中繼資料權杖的重複項。|  
+|`MDDupAll`|檢查所有元資料標記的重複專案。|  
 |`MDDupENC`|未使用。|  
-|`MDNoDupChecks`|不要檢查中繼資料權杖的重複項。|  
-|`MDDupTypeDef`|檢查權杖的`mdTypeDef`重複項。|  
-|`MDDupInterfaceImpl`|檢查權杖的`mdInterfaceImpl`重複項。|  
-|`MDDupMethodDef`|檢查權杖的`mdMethodDef`重複項。|  
-|`MDDupTypeRef`|檢查權杖的`mdTypeRef`重複項。|  
-|`MDDupMemberRef`|檢查權杖的`mdMemberRef`重複項。|  
-|`MDDupCustomAttribute`|檢查權杖的`mdCustomAttribute`重複項。|  
-|`MDDupParamDef`|檢查權杖的`mdParamDef`重複項。|  
-|`MDDupPermission`|檢查權杖的`mdPermission`重複項。|  
-|`MDDupProperty`|檢查權杖的`mdProperty`重複項。|  
-|`MDDupEvent`|檢查權杖的`mdEvent`重複項。|  
-|`MDDupFieldDef`|檢查權杖的`mdFieldDef`重複項。|  
-|`MDDupSignature`|檢查權杖的`mdSignature`重複項。|  
-|`MDDupModuleRef`|檢查權杖的`mdModuleRef`重複項。|  
-|`MDDupTypeSpec`|檢查權杖的`mdTypeSpec`重複項。|  
-|`MDDupImplMap`|檢查權杖的`mdImplMap`重複項。|  
-|`MDDupAssemblyRef`|檢查權杖的`mdAssemblyRef`重複項。|  
-|`MDDupFile`|檢查權杖的`mdFile`重複項。|  
-|`MDDupExportedType`|檢查權杖的`mdExportedType`重複項。|  
-|`MDDupManifestResource`|檢查權杖的`mdManifestResource`重複項。|  
-|`MDDupGenericParam`|檢查權杖的`mdGenericParam`重複項。|  
-|`MDDupMethodSpec`|檢查權杖的`mdMethodSpec`重複項。|  
-|`MDDupGenericParamConstraint`|檢查權杖的`mdGenericParamConstraint`重複項。|  
-|`MDDupAssembly`|檢查權杖的`mdAssembly`重複項。|  
-|`MDDupDefault`|檢查`mdMemberRef`、、、`mdTypeRef``mdSignature``mdTypeSpec`和`mdMethodSpec`權杖的重複項。|  
+|`MDNoDupChecks`|請勿檢查元資料標記是否有重複的專案。|  
+|`MDDupTypeDef`|檢查是否有重複的 `mdTypeDef` 權杖。|  
+|`MDDupInterfaceImpl`|檢查是否有重複的 `mdInterfaceImpl` 權杖。|  
+|`MDDupMethodDef`|檢查是否有重複的 `mdMethodDef` 權杖。|  
+|`MDDupTypeRef`|檢查是否有重複的 `mdTypeRef` 權杖。|  
+|`MDDupMemberRef`|檢查是否有重複的 `mdMemberRef` 權杖。|  
+|`MDDupCustomAttribute`|檢查是否有重複的 `mdCustomAttribute` 權杖。|  
+|`MDDupParamDef`|檢查是否有重複的 `mdParamDef` 權杖。|  
+|`MDDupPermission`|檢查是否有重複的 `mdPermission` 權杖。|  
+|`MDDupProperty`|檢查是否有重複的 `mdProperty` 權杖。|  
+|`MDDupEvent`|檢查是否有重複的 `mdEvent` 權杖。|  
+|`MDDupFieldDef`|檢查是否有重複的 `mdFieldDef` 權杖。|  
+|`MDDupSignature`|檢查是否有重複的 `mdSignature` 權杖。|  
+|`MDDupModuleRef`|檢查是否有重複的 `mdModuleRef` 權杖。|  
+|`MDDupTypeSpec`|檢查是否有重複的 `mdTypeSpec` 權杖。|  
+|`MDDupImplMap`|檢查是否有重複的 `mdImplMap` 權杖。|  
+|`MDDupAssemblyRef`|檢查是否有重複的 `mdAssemblyRef` 權杖。|  
+|`MDDupFile`|檢查是否有重複的 `mdFile` 權杖。|  
+|`MDDupExportedType`|檢查是否有重複的 `mdExportedType` 權杖。|  
+|`MDDupManifestResource`|檢查是否有重複的 `mdManifestResource` 權杖。|  
+|`MDDupGenericParam`|檢查是否有重複的 `mdGenericParam` 權杖。|  
+|`MDDupMethodSpec`|檢查是否有重複的 `mdMethodSpec` 權杖。|  
+|`MDDupGenericParamConstraint`|檢查是否有重複的 `mdGenericParamConstraint` 權杖。|  
+|`MDDupAssembly`|檢查是否有重複的 `mdAssembly` 權杖。|  
+|`MDDupDefault`|檢查 `mdMemberRef` 、 `mdTypeRef` 、 `mdSignature` 、 `mdTypeSpec` 和 `mdMethodSpec` 權杖的重複專案。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫德  
+ **標頭：** Corhdr.h。h  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

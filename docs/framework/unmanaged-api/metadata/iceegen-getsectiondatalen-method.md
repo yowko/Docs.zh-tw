@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-ms.openlocfilehash: 277e2584049fae397cf91281a65d05b0b49d9454
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1855c73849c35bf709b0af261a88e6cd7a40abfb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448085"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008296"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen 方法
 取得指定區段的長度。  
@@ -44,17 +44,17 @@ HRESULT GetSectionDataLen (
  脫銷所指定區段的傳回長度。  
   
 ## <a name="remarks"></a>備註  
- 只有在您有其他方法未處理的特殊區段需求時，才呼叫 `GetSectionDataLen`。  
+ `GetSectionDataLen`只有當您有其他方法未處理的特殊區段需求時，才需要呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen 介面](iceegen-interface.md)

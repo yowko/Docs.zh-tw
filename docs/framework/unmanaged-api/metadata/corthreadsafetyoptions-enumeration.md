@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dae07d9b-df51-488c-b17e-52d6e48217bd
 topic_type:
 - apiref
-ms.openlocfilehash: 93dd8c56176890d04d792f3c336492e4f232825b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c0527a7bc3cde7344bf809dc8e6f5a3fac04852
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442463"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007503"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 列舉
 
@@ -35,7 +35,7 @@ typedef enum CorThreadSafetyOptions {
 } CorThreadSafetyOptions;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 |成員|描述|
 |------------|-----------------|
@@ -45,12 +45,12 @@ typedef enum CorThreadSafetyOptions {
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** Corhdr.h。h
 
-**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

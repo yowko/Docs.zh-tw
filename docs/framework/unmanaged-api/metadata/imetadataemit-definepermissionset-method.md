@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-ms.openlocfilehash: a0fd3fdb6dde9fd6b88ea6c64ed907c8a3e9e46d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a069e2f4ec5d4114e9504fa5a58c5066fdfd7249
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175794"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008036"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet 方法
-為具有指定中繼資料簽名的許可權集創建定義，並獲取該許可權集定義的權杖。  
+使用指定的中繼資料簽章建立許可權集合的定義，並取得該許可權集合定義的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +39,30 @@ HRESULT DefinePermissionSet (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [在]要修飾的物件。  
+ 在要裝飾的物件。  
   
  `dwAction`  
- [在]指定要使用的聲明性安全性類型的[CorDecl 安全](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)值。  
+ 在[CorDeclSecurity](cordeclsecurity-enumeration.md)值，指定要使用的宣告式安全性類型。  
   
  `pvPermission`  
- [在]許可權 BLOB。  
+ 在許可權 BLOB。  
   
  `cbPermission`  
- [在]的大小（以位元組為單位）的大小`pvPermission`。  
+ 在的大小（以位元組為單位） `pvPermission` 。  
   
  `ppm`  
- [出]返回的許可權權杖。  
+ 脫銷傳回的許可權 token。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

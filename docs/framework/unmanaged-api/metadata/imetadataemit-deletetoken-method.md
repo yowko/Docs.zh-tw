@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a4926d0a-261b-46b1-9994-82633661a64b
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8aed6522b1c7eb2d8916f71d8a66b367623765
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78f3ea0d84c932732a752f3af2dc952100fef831
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177600"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009271"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>IMetaDataEmit::DeleteToken 方法
-從當前中繼資料作用域中刪除指定的權杖。  
+從目前的中繼資料範圍中刪除指定的標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +35,18 @@ HRESULT DeleteToken (
   
 ## <a name="parameters"></a>參數  
  `tkObj`  
- [在]要刪除的權杖。  
+ 在要刪除的 token。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

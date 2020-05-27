@@ -1,19 +1,19 @@
 ---
 title: C# 中的非同步程式設計
 description: 使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀
-ms.date: 03/18/2019
-ms.openlocfilehash: 4bf00d5c77138dfa2d527a262a6cd54a72a688f5
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.date: 05/26/2020
+ms.openlocfilehash: 703392ca6ba4e6fb08dd8a88817babc167394788
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761846"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007958"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>使用 async 和 await 進行非同步程式設計
 
-非同步工作程式設計模型 (TAP) 在非同步程式碼上提供一個抽象層。 您可以和往常一樣，將程式碼撰寫成一連串的陳述式。 您可以將該程式碼讀成每個陳述式會先完成，再開始下一個陳述式。 編譯器會執行一些轉換，因為部分陳述式可能會開始工作，並傳回表示進行工作的 <xref:System.Threading.Tasks.Task>。
+[非同步程式設計模型（](task-asynchronous-programming-model.md)點按）工作會提供非同步程式碼的抽象概念。 您可以和往常一樣，將程式碼撰寫成一連串的陳述式。 您可以將該程式碼讀成每個陳述式會先完成，再開始下一個陳述式。 編譯器會執行一些轉換，因為部分陳述式可能會開始工作，並傳回表示進行工作的 <xref:System.Threading.Tasks.Task>。
 
-這是此語法的目標：讓程式碼讀起來就像是一連串的陳述式，但會根據外部資源配置和工作完成時間，以比較複雜的順序來執行。 這類似於人員為包含非同步工作之程序提供指示的方式。 在本文中，您將以準備早餐的指示為例，來了解 `async` 和 `await` 關鍵字如何讓您更輕鬆地理解包含一連串非同步指示的程式碼。 您撰寫了類似下列清單的指示，來說明如何準備早餐：
+這是此語法的目標：讓程式碼讀起來就像是一連串的陳述式，但會根據外部資源配置和工作完成時間，以比較複雜的順序來執行。 這類似於人員為包含非同步工作之程序提供指示的方式。 在本文中，您將使用一段指示來進行早餐，以瞭解 `async` 和 `await` 關鍵字如何讓程式碼更容易理解，包括一系列的非同步指令。 您撰寫了類似下列清單的指示，來說明如何準備早餐：
 
 1. 倒杯咖啡。
 1. 熱鍋，然後煎兩顆蛋。
@@ -30,7 +30,10 @@ ms.locfileid: "83761846"
 
 現在，考慮將這些相同指示撰寫成 C# 陳述式：
 
-[!code-csharp[SynchronousBreakfast](./snippets/index/AsyncBreakfast-starter/Program.cs#Main)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-starter/Program.cs" highlight="8-27":::
+
+> [!NOTE]
+> `Coffee`、 `Egg` 、 `Bacon` 、 `Toast` 和 `Juice` 類別是空的。 它們只是用來示範的標記類別，不包含任何屬性，也不提供其他用途。
 
 電腦解譯這些指示的方式與人類不同。 電腦會封鎖每個陳述式，直到工作完成為止，再繼續下一個陳述式。 這會導致早餐無法令人滿意。 後續工作必須等到先前工作完成才會開始。 這會花更長的時間來準備早餐，且在上菜前，有些菜可能會變涼。
 
@@ -46,7 +49,10 @@ ms.locfileid: "83761846"
 
 我們將從更新此程式碼開始，讓執行緒在工作執行時不會遭到封鎖。 `await` 關鍵字提供一個非封鎖方式來開始工作，然後在工作完成時繼續執行。 準備早餐程式碼的一個簡單非同步版本看起來像下列程式碼片段：
 
-[!code-csharp[SimpleAsyncBreakfast](./snippets/index/AsyncBreakfast-V2/Program.cs#Main)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+
+> [!TIP]
+> 、和的方法主體 `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` 全都已更新為 `Task<Egg>` 分別傳回、 `Task<Bacon>` 和 `Task<Toast>` 。 方法會從其原始版本重新命名，以包含 "Async" 尾碼。 其執行方式會顯示為本文稍後的[最終版本](#final-version)的一部分。
 
 此程式碼不會在煎蛋或煎培根時封鎖其他工作。 但此程式碼也不會開始任何其他工作。 您仍會將吐司放入烤麵包機，並在彈出前直盯著它瞧。 但至少，您會回應任何需要您注意的人。 在點了多份早餐的餐廳中，廚師可能會在第一份早餐還在準備時，就開始準備另一份早餐。
 
@@ -65,20 +71,23 @@ ms.locfileid: "83761846"
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggsTask = FryEggs(2);
+
+Task<Egg> eggsTask = FryEggsAsync(2);
 Egg eggs = await eggsTask;
 Console.WriteLine("eggs are ready");
-Task<Bacon> baconTask = FryBacon(3);
+
+Task<Bacon> baconTask = FryBaconAsync(3);
 Bacon bacon = await baconTask;
 Console.WriteLine("bacon is ready");
-Task<Toast> toastTask = ToastBread(2);
+
+Task<Toast> toastTask = ToastBreadAsync(2);
 Toast toast = await toastTask;
 ApplyButter(toast);
 ApplyJam(toast);
 Console.WriteLine("toast is ready");
+
 Juice oj = PourOJ();
 Console.WriteLine("oj is ready");
-
 Console.WriteLine("Breakfast is ready!");
 ```
 
@@ -87,9 +96,11 @@ Console.WriteLine("Breakfast is ready!");
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggsTask = FryEggs(2);
-Task<Bacon> baconTask = FryBacon(3);
-Task<Toast> toastTask = ToastBread(2);
+
+Task<Egg> eggsTask = FryEggsAsync(2);
+Task<Bacon> baconTask = FryBaconAsync(3);
+Task<Toast> toastTask = ToastBreadAsync(2);
+
 Toast toast = await toastTask;
 ApplyButter(toast);
 ApplyJam(toast);
@@ -116,11 +127,11 @@ Console.WriteLine("Breakfast is ready!");
 
 上述程式碼顯示您可以使用 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件來保存執行中的工作。 您會 `await` 每個工作，再使用其結果。 下一個步驟是建立表示其他工作組合的方法。 在供應早餐之前，您想要等候表示烤土司後再塗上奶油和果醬的工作。 您可以使用下列程式碼來表示該工作：
 
-[!code-csharp[ComposeToastTask](./snippets/index/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetComposeToastTask":::
 
 上述方法的簽章中有 `async` 修飾詞。 這會通知編譯器，此方法包含 `await` 陳述式，其中包含非同步作業。 此方法表示烤土司後再塗上奶油和果醬的工作。 此方法會傳回 <xref:System.Threading.Tasks.Task%601>，表示這三項作業的組合。 程式碼的 Main 區塊現在會變成：
 
-[!code-csharp[StartConcurrentTasks](./snippets/index/AsyncBreakfast-V3/Program.cs#Main)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetMain":::
 
 上述變更說明使用非同步程式碼的重要技術。 您可以透過分隔作業，將多個工作組合成傳回一個工作的新方法。 您可以選擇何時等候該工作。 您可以同時開始其他工作。
 
@@ -138,10 +149,33 @@ Console.WriteLine("Breakfast is ready!");
 
 另一個選項是使用 <xref:System.Threading.Tasks.Task.WhenAny%2A>，它會傳回其任何引數完成時所完成的 `Task<Task>`。 您可以等候傳回的工作，並知道它已完成。 下列程式碼範例示範如何使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 等候第一個工作完成，再處理其結果。 處理完成工作的結果之後，您會從傳遞至 `WhenAny` 的工作清單中移除該完成工作。
 
-[!code-csharp[AwaitAnyTask](./snippets/index/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
+```csharp
+var breakfastTasks = new List<Task> { eggsTask, baconTask, toastTask };
+while (breakfastTasks.Count > 0)
+{
+    Task finishedTask = await Task.WhenAny(breakfastTasks);
+    if (finishedTask == eggsTask)
+    {
+        Console.WriteLine("eggs are ready");
+    }
+    else if (finishedTask == baconTask)
+    {
+        Console.WriteLine("bacon is ready");
+    }
+    else if (finishedTask == toastTask)
+    {
+        Console.WriteLine("toast is ready");
+    }
+    breakfastTasks.Remove(finishedTask);
+}
+```
 
-完成上述所有變更之後，`Main` 的最終版本看起來像下列程式碼：
-
-[!code-csharp[Final](./snippets/index/AsyncBreakfast-final/Program.cs#Main)]
+在所有這些變更之後，最終的程式碼版本看起來像這樣：<a id="final-version"></a>
+:::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
 此最終程式碼為非同步。 它會更精確地反映人員準備早餐的方式。 將上述程式碼與本文中的第一個程式碼範例做比較。 閱讀程式碼仍會清楚了解核心動作。 閱讀此程式碼的方式，如同閱讀本文開頭準備早餐的指示。 `async` 和 `await` 之語言功能為所有遵循下列書面指示的人員提供轉譯：盡可能開始多個工作且不要防止等候工作完成。
+
+## <a name="next-steps"></a>後續步驟
+
+> [!div class="nextstepaction"]
+> [瞭解非同步程式設計模型工作](task-asynchronous-programming-model.md)

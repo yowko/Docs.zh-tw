@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: 7389e9233fd946cdb2c810bec01cfbfffc8b707d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da82950ea1a0da81c77d173be9ab45dcb3001bfe
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175599"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007828"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent 方法
-確定由之前對[IMetaDataEmit：:DefineOfRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)的調用定義的指定成員是指定類型的成員，由之前對[IMetaDataEmit：:DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)的調用定義。  
+建立指定的成員（如先前呼叫[IMetaDataEmit：:D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)所定義）是指定類型的成員，如先前的[IMetaDataEmit：:D efinetypedef](imetadataemit-definetypedef-method.md)呼叫所定義。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,21 +36,21 @@ HRESULT SetParent (
   
 ## <a name="parameters"></a>參數  
  `mr`  
- [在]用於`mdMemberRef`接收新父項的權杖。  
+ 在`mdMemberRef`要接收新父系的 token。  
   
  `tk`  
- [在]為新`mdToken`父父的 。  
+ 在`mdToken`新父系的。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

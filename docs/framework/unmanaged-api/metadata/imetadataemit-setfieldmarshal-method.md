@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-ms.openlocfilehash: 1037cd4210605192870d43d88979b89af6536380
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0066c6590a9e0cf278e036111c2739f7cfaf679
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175651"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84003902"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal 方法
-為指定權杖引用的欄位、方法返回或方法參數設置 PInvoke 封送資訊。  
+針對指定之標記所參考的欄位、方法傳回或方法參數，設定 PInvoke 封送處理資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [在]目標資料項目的權杖。 這是 或`mdFieldDef``mdParamDef`標記。  
+ 在目標資料項目的 token。 這可能是 `mdFieldDef` 或 `mdParamDef` 權杖。  
   
  `pvNativeType`  
- [在]非託管類型的簽名。  
+ 在非受控類型的簽章。  
   
  `cbNativeType`  
- [在]中的`pvNativeType`位元組計數。  
+ 在中的位元組計數 `pvNativeType` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

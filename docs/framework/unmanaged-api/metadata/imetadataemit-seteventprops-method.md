@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177533"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008751"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
-設置或更新由之前調用[IMetaDataEmit：:DefineEvent）](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)定義的事件的指定功能。  
+設定或更新先前呼叫[IMetaDataEmit：:D efineevent](imetadataemit-defineevent-method.md)所定義之事件的指定功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,36 +41,36 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>參數  
  `ev`  
- [在]事件權杖。  
+ 在事件 token。  
   
  `dwEventFlags`  
- [在]事件標誌。 這是值的`CorEventAttr`位元遮罩。  
+ 在事件旗標。 這是值的位元遮罩 `CorEventAttr` 。  
   
  `tkEventType`  
- [在]事件類的權杖。 這是 或`mdTypeDef``mdTypeRef`標記。  
+ 在事件類別的 token。 這可能是 `mdTypeDef` 或 `mdTypeRef` 權杖。  
   
  `mdAddOn`  
- [在]用於訂閱事件或 null 的方法。  
+ 在用來訂閱事件的方法，或 null。  
   
  `mdRemoveOn`  
- [在]用於取消訂閱事件或 null 的方法。  
+ 在用來取消訂閱事件的方法，或 null。  
   
  `mdFire`  
- [在]用於（由派生類）引發事件的方法。  
+ 在用來引發事件的方法（由衍生類別）。  
   
  `rmdOtherMethods[]`  
- [在]與事件關聯的其他方法的權杖陣列。 陣列的最後一個元素必須是`mdMethodDefNil`。  
+ 在與事件相關聯之其他方法的權杖陣列。 陣列的最後一個元素必須是 `mdMethodDefNil` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

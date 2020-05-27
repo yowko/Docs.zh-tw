@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-ms.openlocfilehash: c315e2ae2753b59b4e277764d27c3fb3388b515c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c8c2757e99b80204ad52e69a596d62c55c369965
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445426"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007412"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags 列舉
-包含值，描述在[IMetaDataAssemblyEmit：:D efinefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)的呼叫中所定義的檔案類型。  
+包含值，描述在[IMetaDataAssemblyEmit：:D efinefile](imetadataassemblyemit-definefile-method.md)的呼叫中所定義的檔案類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ typedef enum CorFileFlags {
 } CorFileFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -43,12 +43,12 @@ typedef enum CorFileFlags {
 |`ffContainsNoMetaData`|指出檔案（可能是資源檔）不包含中繼資料。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

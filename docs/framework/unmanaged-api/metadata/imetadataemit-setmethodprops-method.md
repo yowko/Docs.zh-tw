@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0c6ac12-22ea-43f5-b799-8cda0faf3336
 topic_type:
 - apiref
-ms.openlocfilehash: 9662a14b4ea97aed16968083489324d46c38dda2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57f6de1f7edf7c75a3f96cb2bf9fb98fdbd6f65e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177516"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007854"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>IMetaDataEmit::SetMethodProps 方法
-設置或更新由之前調用[IMetaDataEmit：:DefineMethod）](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)定義的方法的要素（存儲在指定的相對虛擬位址）  
+設定或更新先前呼叫 IMetaDataEmit 時所定義之方法的功能（儲存在指定的相對虛擬位址） [：:D efinemethod](imetadataemit-definemethod-method.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +38,27 @@ HRESULT SetMethodProps (
   
 ## <a name="parameters"></a>參數  
  `md`  
- [在]要更改的方法的權杖。  
+ 在要變更之方法的 token。  
   
  `dwMethodFlags`  
- [在]成員屬性。  
+ 在成員屬性。  
   
  `ulCodeRVA`  
- [在]代碼的位址。  
+ 在程式碼的位址。  
   
  `dwImplFlags`  
- [在]方法的實現標誌。  
+ 在方法的執行旗標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

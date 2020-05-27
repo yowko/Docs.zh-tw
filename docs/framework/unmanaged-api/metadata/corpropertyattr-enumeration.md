@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: 95a798d662b44cf2e088af84d3b1eec97da8e7fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b6651f30e0df3a5ffc29d310b9067e76761dcf01
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177949"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007529"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr 列舉
 包含值，這些值描述屬性的中繼資料。  
@@ -40,21 +40,21 @@ typedef enum CorPropertyAttr {
   
 ## <a name="members"></a>成員  
   
-|member|描述|  
+|成員|描述|  
 |------------|-----------------|  
-|`prSpecialName`|指定屬性是特殊的，並且其名稱描述如何。|  
-|`prReservedMask`|保留供公共語言運行時的內部使用。|  
-|`prRTSpecialName`|指定通用語言運行時中繼資料內部 API 應檢查屬性名稱的編碼。|  
+|`prSpecialName`|指定屬性是特殊的，而且其名稱描述了如何。|  
+|`prReservedMask`|保留供 common language runtime 內部使用。|  
+|`prRTSpecialName`|指定 common language runtime 中繼資料內部 Api 應檢查屬性名稱的編碼方式。|  
 |`prHasDefault`|指定屬性具有預設值。|  
 |`prUnused`|未使用的。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫德  
+ **標頭：** Corhdr.h。h  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

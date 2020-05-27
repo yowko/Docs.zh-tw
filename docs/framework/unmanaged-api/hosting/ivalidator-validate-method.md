@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae47eac713fbee30ea543538957b12460b8e1fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 688abd210cca193bf03c40f000b74ecb66eb8ede
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123276"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008543"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate 方法
 驗證指定的可移植執行檔（PE）或 Microsoft 中繼語言（MSIL）檔案。  
@@ -42,13 +42,13 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>參數  
  `veh`  
- 在處理驗證錯誤之 `IVEHandler` 實例的指標。  
+ 在`IVEHandler`處理驗證錯誤之實例的指標。  
   
  `pAppDomain`  
  在載入檔案之應用程式域的指標。  
   
  `ulFlags`  
- 在[ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)值的位元組合，表示應該執行的驗證。  
+ 在[ValidatorFlags](validatorflags-enumeration.md)值的位元組合，表示應該執行的驗證。  
   
  `ulMaxError`  
  在結束驗證之前允許的錯誤數目上限。  
@@ -66,10 +66,10 @@ HRESULT Validate (
  在要驗證之檔案的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** IValidator .idl，IValidator。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

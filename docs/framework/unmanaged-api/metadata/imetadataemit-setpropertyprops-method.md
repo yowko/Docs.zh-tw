@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5af877c26c20bf64a27618bf24a7bce5b410419
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177470"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007776"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps 方法
-設置存儲在中繼資料中的屬性的功能，該屬性由之前調用[DefineProperty 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)定義。  
+針對先前呼叫[DefineProperty 方法](imetadataemit-defineproperty-method.md)所定義的屬性，設定儲存在中繼資料中的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,39 +42,39 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>參數  
  `pr`  
- [在]要更改的屬性的權杖  
+ 在要變更之屬性的標記  
   
  `dwPropFlags`  
- [在]屬性標誌。  
+ 在屬性旗標。  
   
  `dwCPlusTypeFlag`  
- [在]屬性的預設值的類型。  
+ 在屬性的預設值類型。  
   
  `pValue`  
- [在]屬性的預設值。  
+ 在屬性的預設值。  
   
  `cchValue`  
- [在]中的（Unicode） 字元的`pValue`計數。  
+ 在中的（Unicode）字元計數 `pValue` 。  
   
  `mdSetter`  
- [在]設置屬性值的方法。  
+ 在設定屬性值的方法。  
   
  `mdGetter`  
- [在]獲取屬性值的方法。  
+ 在取得屬性值的方法。  
   
  `rmdOtherMethods[]`  
- [在]與 屬性關聯的其他方法的陣列。 使用權杖終止`mdTokenNil`此陣列。  
+ 在與屬性相關聯之其他方法的陣列。 使用權杖終止此陣列 `mdTokenNil` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

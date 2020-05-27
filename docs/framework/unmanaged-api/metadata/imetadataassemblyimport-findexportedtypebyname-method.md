@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac6de9a16fad6ba9d14f3960ddd28c42c111f254
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175989"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009388"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName 方法
-獲取指向匯出類型的指標，給定其名稱和封閉類型。  
+取得匯出類型的指標，並指定其名稱和封入類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,27 +37,27 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- [在]匯出類型的名稱。  
+ 在匯出之類型的名稱。  
   
  `mdtExportedType`  
- [在]匯出類型的封閉類的中繼資料權杖。 此值是`mdExportedTypeNil`請求的匯出類型不是巢狀型別。  
+ 在已匯出類型之封入類別的元資料標記。 `mdExportedTypeNil`如果要求的匯出型別不是嵌套型別，這個值就是。  
   
  `ptkExportedType`  
- [出]指向表示匯出類型的`mdExportedType`權杖的指標。  
+ 脫銷標記的指標 `mdExportedType` ，表示匯出的類型。  
   
 ## <a name="remarks"></a>備註  
- 該方法`FindExportedTypeByName`使用通用語言運行時採用的標準規則來解決引用。  
+ `FindExportedTypeByName`方法會使用 common language runtime 所採用的標準規則來解析參考。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [IMetaDataAssemblyImport 介面](imetadataassemblyimport-interface.md)
+- [執行階段如何找出組件](../../deployment/how-the-runtime-locates-assemblies.md)

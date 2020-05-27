@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: ad582fc2fd1bd1d2fc9d5a0d483fdb3a51309a10
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7318a7ea3eb1ddb047a799e58ebdfd9ce6cd76d1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436499"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007581"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 列舉
 包含在開啟資訊清單檔案時控制中繼資料行為的旗標值。  
@@ -46,7 +46,7 @@ typedef enum CorOpenFlags
 } CorOpenFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -54,23 +54,23 @@ typedef enum CorOpenFlags
 |`ofWrite`|指出應將檔案開啟為可供寫入。<br /><br /> 若您在開啟 .winmd 檔案時使用 `ofWrite` 旗標，也應該傳遞 `ofNoTransform` 旗標。|  
 |`ofReadWriteMask`|讀取及寫入的遮罩。|  
 |`ofCopyMemory`|指出應將檔案讀取至記憶體。 中繼資料應保留其自己的複本。|  
-|`ofCacheImage`|已經過時： 會忽略此旗標。|  
-|`ofManifestMetadata`|已經過時： 會忽略此旗標。|  
-|`ofReadOnly`|指出應該開啟檔案進行讀取，而且無法呼叫[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)的 `QueryInterface`。|  
+|`ofCacheImage`|已過時。 會忽略此旗標。|  
+|`ofManifestMetadata`|已過時。 會忽略此旗標。|  
+|`ofReadOnly`|指出應該開啟檔案進行讀取，而且 `QueryInterface` 無法對[IMetaDataEmit](imetadataemit-interface.md)呼叫。|  
 |`ofTakeOwnership`|表示已使用[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)的呼叫來配置記憶體，並將由中繼資料釋放。|  
-|`ofNoTypeLib`|已經過時： 會忽略此旗標。|  
+|`ofNoTypeLib`|已過時。 會忽略此旗標。|  
 |`ofNoTransform`|指出應停用 .winmd 檔案的自動轉換。 換言之，應停用 Windows 執行階段類型對 .NET Framework 類型的投影。 如需詳細資訊，請參閱[.net 和 Windows 執行階段背後的 Windows 執行階段和 CLR](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)。|  
-|`ofReserved1`|保留為內部使用。|  
-|`ofReserved2`|保留為內部使用。|  
-|`ofReserved`|保留為內部使用。|  
+|`ofReserved1`|保留供內部使用。|  
+|`ofReserved2`|保留供內部使用。|  
+|`ofReserved`|保留供內部使用。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

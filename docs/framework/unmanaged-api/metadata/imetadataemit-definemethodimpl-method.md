@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 64d76efa8c2f29fda559e5c84217b865540027ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ed5afbbf49b6680d00e78b6af3d45c6f0a7229d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175820"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004487"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl 方法
-為從介面繼承的方法的實現創建定義，並將權杖返回到該方法實現定義。  
+建立繼承自介面之方法的執行定義，並將權杖傳回給該方法執行定義。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT DefineMethodImpl (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [在]實現`mdTypedef`類的權杖。  
+ 在`mdTypedef`執行類別的 token。  
   
  `tkBody`  
- [在]代碼`mdMethodDef`正文`mdMemberRef`的 或 權杖。  
+ 在程式 `mdMethodDef` `mdMemberRef` 代碼主體的或 token。  
   
  `tkDecl`  
- [在]正在`mdMethodDef`實現的`mdMemberRef`介面方法的 或 權杖。  
+ 在`mdMethodDef` `mdMemberRef` 正在執行之介面方法的或 token。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

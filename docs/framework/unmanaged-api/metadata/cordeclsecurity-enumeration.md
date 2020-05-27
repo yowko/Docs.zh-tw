@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ffbc9a10ff48b3dfd59b95c0f6b9ecab80b6a49c
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443738"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007880"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 列舉
 指定可以使用宣告式安全性執行的安全性動作。  
@@ -54,13 +54,13 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
-|`dclActionMask`|保留。|  
-|`dclActionNil`|保留。|  
-|`dclRequest`|保留。|  
+|`dclActionMask`|已保留。|  
+|`dclActionNil`|已保留。|  
+|`dclRequest`|已保留。|  
 |`dclDemand`|呼叫堆疊中較高層的所有呼叫端，必須已獲得目前權限物件所指定的權限。|  
 |`dclAssert`|呼叫程式碼可以存取目前權限物件所識別的資源，即使堆疊中較高層的呼叫端未獲得存取資源的許可權也一樣。|  
 |`dclDeny`|存取目前權限物件所指定之資源的能力，會被拒絕呼叫端，即使已授與存取權。|  
@@ -70,23 +70,23 @@ typedef enum CorDeclSecurity {
 |`dclRequestMinimum`|呼叫端可以要求執行程式碼所需的最小許可權。 這個動作只能在組件的範圍內使用。|  
 |`dclRequestOptional`|呼叫端可以要求選擇性的其他許可權（不需要執行）。 這項要求會隱含拒絕未特別要求的所有其他權限。 這個動作只能在組件的範圍內使用。|  
 |`dclRequestRefuse`|系統將不會授與呼叫者對可能誤用之許可權的要求。 這個動作只能在組件的範圍內使用。|  
-|`dclPrejitGrant`|保留。|  
-|`dclPrejitDenied`|保留。|  
-|`dclNonCasDemand`|保留。|  
+|`dclPrejitGrant`|已保留。|  
+|`dclPrejitDenied`|已保留。|  
+|`dclNonCasDemand`|已保留。|  
 |`dclNonCasLinkDemand`|直接呼叫端必須已獲得指定權限。|  
-|`dclNonCasInheritance`|保留。|  
-|`dclLinkDemandChoice`|保留。|  
-|`dclInheritanceDemandChoice`|保留。|  
-|`dclDemandChoice`|保留。|  
-|`dclMaximumValue`|保留。|  
+|`dclNonCasInheritance`|已保留。|  
+|`dclLinkDemandChoice`|已保留。|  
+|`dclInheritanceDemandChoice`|已保留。|  
+|`dclDemandChoice`|已保留。|  
+|`dclMaximumValue`|已保留。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

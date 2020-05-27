@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-ms.openlocfilehash: 09a351db65c7ed310d3eb68c71a5207ed6040dd4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd97c479f12e7bdb015b39a802b398ca2b0bcd3f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177975"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007633"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType 列舉
 包含值，這些值描述原生 Unmanaged 類型。  
@@ -87,24 +87,24 @@ typedef enum CorNativeType {
   
 ## <a name="members"></a>成員  
   
-|member|描述|  
+|成員|描述|  
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|已過時。|  
 |`NATIVE_TYPE_VOID`|已過時。|  
-|`NATIVE_TYPE_BOOLEAN`|4 位元組布林值，其中 TRUE 為非零，FALSE 為零。|  
-|`NATIVE_TYPE_I1`|已簽名的 8 位整數值。|  
-|`NATIVE_TYPE_U1`|未簽名的 8 位整數值。|  
-|`NATIVE_TYPE_I2`|已簽名的 16 位整數值。|  
-|`NATIVE_TYPE_U2`|未簽名的 16 位整數值。|  
+|`NATIVE_TYPE_BOOLEAN`|4位元組的布林值，其中 TRUE 為非零，而 FALSE 為零。|  
+|`NATIVE_TYPE_I1`|帶正負號的8位整數值。|  
+|`NATIVE_TYPE_U1`|不帶正負號的8位整數值。|  
+|`NATIVE_TYPE_I2`|帶正負號的16位整數值。|  
+|`NATIVE_TYPE_U2`|不帶正負號的16位整數值。|  
 |`NATIVE_TYPE_I4`|帶正負號的 32 位元整數值。|  
 |`NATIVE_TYPE_U4`|32 位元不帶正負號的整數值。|  
-|`NATIVE_TYPE_I8`|已簽名的 64 位整數值。|  
-|`NATIVE_TYPE_U8`|未簽名的 64 位整數值。|  
-|`NATIVE_TYPE_R4`|4 位元組浮點數值。|  
-|`NATIVE_TYPE_R8`|8 位元組浮點數值。|  
+|`NATIVE_TYPE_I8`|帶正負號的64位整數值。|  
+|`NATIVE_TYPE_U8`|不帶正負號的64位整數值。|  
+|`NATIVE_TYPE_R4`|4位元組浮點數值。|  
+|`NATIVE_TYPE_R8`|8位元組浮點數值。|  
 |`NATIVE_TYPE_SYSCHAR`|已過時。|  
 |`NATIVE_TYPE_VARIANT`|已過時。|  
-|`NATIVE_TYPE_CURRENCY`|對應于託管<xref:System.Decimal>類型的數位 COM 類型。|  
+|`NATIVE_TYPE_CURRENCY`|對應至 managed 類型的數值 COM 類型 <xref:System.Decimal> 。|  
 |`NATIVE_TYPE_PTR`|已過時。|  
 |`NATIVE_TYPE_DECIMAL`|已過時。|  
 |`NATIVE_TYPE_DATE`|已過時。|  
@@ -112,39 +112,39 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_LPSTR`|LPSTR 字串值。|  
 |`NATIVE_TYPE_LPWSTR`|LPWSTR 字串值。|  
 |`NATIVE_TYPE_LPTSTR`|LPTSTR 字串值。|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|固定的系統定義的字串值。|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|固定的系統定義字串值。|  
 |`NATIVE_TYPE_OBJECTREF`|已過時。|  
 |`NATIVE_TYPE_IUNKNOWN`|COM Interop。|  
 |`NATIVE_TYPE_IDISPATCH`|COM Interop。|  
-|`NATIVE_TYPE_STRUCT`|本機結構值。|  
+|`NATIVE_TYPE_STRUCT`|原生結構值。|  
 |`NATIVE_TYPE_INTF`|COM Interop。|  
 |`NATIVE_TYPE_SAFEARRAY`|COM Interop。|  
-|`NATIVE_TYPE_FIXEDARRAY`|固定長度陣列值。|  
-|`NATIVE_TYPE_INT`|本機 16 位簽名整數值。|  
-|`NATIVE_TYPE_UINT`|本機 16 位不帶正負號的整數值。|  
-|`NATIVE_TYPE_NESTEDSTRUCT`|已過時。<br /><br /> 使用NATIVE_TYPE_STRUCT。|  
+|`NATIVE_TYPE_FIXEDARRAY`|固定長度的陣列值。|  
+|`NATIVE_TYPE_INT`|原生16位帶正負號的整數值。|  
+|`NATIVE_TYPE_UINT`|原生16位不帶正負號整數值。|  
+|`NATIVE_TYPE_NESTEDSTRUCT`|已過時。<br /><br /> 使用 NATIVE_TYPE_STRUCT。|  
 |`NATIVE_TYPE_BYVALSTR`|COM Interop。|  
 |`NATIVE_TYPE_ANSIBSTR`|COM Interop。|  
-|`NATIVE_TYPE_TBSTR`|COM Interop。<br /><br /> 根據平臺選擇 BSTR 或 ANSIBSTR。|  
-|`NATIVE_TYPE_VARIANTBOOL`|2 位元組布林值，其中 TRUE 為 -1，FALSE 為零。|  
+|`NATIVE_TYPE_TBSTR`|COM Interop。<br /><br /> 選取 [BSTR] 或 [ANSIBSTR] （視平臺而定）。|  
+|`NATIVE_TYPE_VARIANTBOOL`|2個位元組的布林值，其中 TRUE 為-1，而 FALSE 為零。|  
 |`NATIVE_TYPE_FUNC`|函式指標。|  
-|`NATIVE_TYPE_ASANY`|對任何本機類型的引用。|  
-|`NATIVE_TYPE_ARRAY`|對具有未指定類型成員的陣列的引用。|  
-|`NATIVE_TYPE_LPSTRUCT`|指向結構的 32 位整數指標。|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|自訂封送器本機類型。<br /><br /> 之後必須使用以下格式的字串："本機類型名稱/0自訂封送器類型名稱/0可選 Cookie/0"或"{本機類型 GUID}/0自訂封送器類型名稱/0 可選 Cookie/0"|  
-|`NATIVE_TYPE_ERROR`|COM Interop。<br /><br /> 使用ELEMENT_TYPE_I4此類型映射到VT_HRESULT。|  
-|`NATIVE_TYPE_IINSPECTABLE`|本機`IInspectable`類型。|  
-|`NATIVE_TYPE_HSTRING`|本機`HString`。|  
+|`NATIVE_TYPE_ASANY`|任何原生類型的參考。|  
+|`NATIVE_TYPE_ARRAY`|具有未指定類型成員之陣列的參考。|  
+|`NATIVE_TYPE_LPSTRUCT`|結構的32位整數指標。|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|自訂封送處理器原生類型。<br /><br /> 後面必須接下列格式的字串： "Native type name/0Custom 封送處理器類型 name/0Optional cookie/0" 或 "{Native type GUID}/0Custom 封送處理器類型名稱/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|COM Interop。<br /><br /> 在 ELEMENT_TYPE_I4，此類型會對應到 VT_HRESULT。|  
+|`NATIVE_TYPE_IINSPECTABLE`|原生 `IInspectable` 類型。|  
+|`NATIVE_TYPE_HSTRING`|原生 `HString` 。|  
 |`NATIVE_TYPE_MAX`|無效的值。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫德  
+ **標頭：** Corhdr.h。h  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.UnmanagedType>
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

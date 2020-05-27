@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-ms.openlocfilehash: 25b7f478ae0bd05b82fa960561fb8534efe2b4db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e24db7da7abbdb597b8ff64515e8053667af3ff
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175664"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008764"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue 方法
-設置或更新以前調用[IMetaDataEmit：:DefineCustom屬性](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)）定義的自訂屬性的值。  
+設定或更新先前呼叫[IMetaDataEmit：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md)所定義的自訂屬性值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT SetCustomAttributeValue (
   
 ## <a name="parameters"></a>參數  
  `pcv`  
- [在]目標自訂屬性的權杖。  
+ 在目標自訂屬性的標記。  
   
  `pCustomAttribute`  
- [在]指向包含自訂屬性的陣列的指標。  
+ 在包含自訂屬性之陣列的指標。  
   
  `cbCustomAttribute`  
- [在]自訂屬性的大小（以位元組為單位）。  
+ 在自訂屬性的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

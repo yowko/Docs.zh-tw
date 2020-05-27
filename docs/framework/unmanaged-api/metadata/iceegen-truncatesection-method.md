@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 387f5f01f2d2589c0b34e50b69398e1feb0e77e0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426123"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008241"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection 方法
 依指定的長度截斷指定的程式碼區段。  
@@ -44,17 +44,17 @@ HRESULT TruncateSection (
  在用來截斷區段的長度（以位元組為單位）。  
   
 ## <a name="remarks"></a>備註  
- 只有在您有其他方法未處理的特殊區段需求時，才呼叫 `TruncateSection`。  
+ `TruncateSection`只有當您有其他方法未處理的特殊區段需求時，才需要呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen 介面](iceegen-interface.md)

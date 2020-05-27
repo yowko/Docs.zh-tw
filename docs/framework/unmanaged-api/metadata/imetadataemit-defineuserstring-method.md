@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-ms.openlocfilehash: a71d8694ec8c5bd35ecd3e98ed32e05bc7b382fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: def77bb64e21b1421983cf263d488ecc1ddb9452
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177624"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009312"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString 方法
-獲取指定文本字串的中繼資料權杖。  
+取得指定之文字字串的元資料標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT DefineUserString (
   
 ## <a name="parameters"></a>參數  
  `szString`  
- [在]要存儲的使用者字串。  
+ 在要儲存的使用者字串。  
   
  `cchString`  
- [在]中的`szString`寬字元的計數。  
+ 在中的寬字元計數 `szString` 。  
   
  `pstk`  
- [出]分配的字串權杖。  
+ 脫銷指派的字串 token。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

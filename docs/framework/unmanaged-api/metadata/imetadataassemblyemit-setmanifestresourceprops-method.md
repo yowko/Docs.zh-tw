@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-ms.openlocfilehash: 9370b27fd385b0223b354365d64aa57048f4ec69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74111a175b0decbc1beef7c8df5ade59d31d845b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177834"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009141"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps 方法
 修改指定的 `ManifestResource` 中繼資料結構。  
@@ -38,29 +38,29 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>參數  
  `mr`  
- [在]指定要修改的`ManifestResource`元資料結構的權杖。  
+ 在權杖，指定 `ManifestResource` 要修改的元資料結構。  
   
  `tkImplementation`  
- [在]映射到資來源提供者的權杖`File`類型`AssemblyRef`或 。  
+ 在`File` `AssemblyRef` 對應至資源提供者之類型或的 token。  
   
  `dwOffset`  
- [在]檔中資源開頭的偏移量。  
+ 在檔案內資源開頭的位移。  
   
  `dwResourceFlags`  
- [在]指定資源屬性的標誌值的位組合。  
+ 在旗標值的位元組合，指定資源的屬性。  
   
 ## <a name="remarks"></a>備註  
- 要創建`ManifestResource`元資料結構，請使用[IMetaDataAssemblyEmit：:DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)方法。  
+ 若要建立 `ManifestResource` 元資料結構，請使用[IMetaDataAssemblyEmit：:D efinemanifestresource](imetadataassemblyemit-definemanifestresource-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit 介面](imetadataassemblyemit-interface.md)

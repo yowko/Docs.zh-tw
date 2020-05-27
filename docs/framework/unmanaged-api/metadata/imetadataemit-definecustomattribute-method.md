@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 9c4ed282e259aa46fc0cb0175214dc51d3d5fbee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17757df566ba8d141e7adec00dcc1f75959d0e00
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175885"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005621"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute 方法
-為具有指定中繼資料簽名的自訂屬性創建要附加到指定物件的定義，並獲取該自訂屬性定義的權杖。  
+使用指定的中繼資料簽章，建立自訂屬性的定義，以附加至指定的物件，並取得該自訂屬性定義的 token。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,30 +39,30 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>參數  
  `tkObj`  
- [在]擁有者項的權杖。  
+ 在擁有者專案的 token。  
   
  `tkType`  
- [在]標識自訂屬性的權杖。  
+ 在識別自訂屬性的標記。  
   
  `pCustomAttribute`  
- [在]指向自訂屬性的指標。  
+ 在自訂屬性的指標。  
   
  `cbCustomAttribute`  
- [在]中的`pCustomAttribute`位元組計數。  
+ 在中的位元組計數 `pCustomAttribute` 。  
   
  `pcv`  
- [出]分配的`mdCustomAttribute`權杖。  
+ 脫銷`mdCustomAttribute`指派的 token。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

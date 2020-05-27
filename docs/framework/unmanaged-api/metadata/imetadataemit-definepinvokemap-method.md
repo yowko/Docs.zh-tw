@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: e414bc5a7d537e8d153541f05b22dd91578e8739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 447ec44ed3efc4eec84d1e4acd6f2ec1a730bf74
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177745"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008023"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap 方法
-設置指定權杖引用的方法的 PInvoke 簽名的功能。  
+設定指定之標記所參考之方法的 PInvoke 簽章功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +38,27 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>參數  
  `tk`  
- [在]目標方法的權杖。  
+ 在目標方法的 token。  
   
  `dwMappingFlags`  
- [在]PInvoke 用於執行映射的標誌。  
+ 在PInvoke 用來執行對應的旗標。  
   
  `szImportName`  
- [在]非託管 DLL 中的目標匯出方法的名稱。  
+ 在非受控 DLL 中的目標匯出方法名稱。  
   
  `mrImportDLL`  
- [在]目標本機 DLL 的權杖。  
+ 在目標原生 DLL 的 token。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443828"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007898"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention 列舉
 包含值，這些值描述在 Managed 程式碼中進行的呼叫慣例類型。  
@@ -48,7 +48,7 @@ typedef enum CorCallingConvention
 } CorCallingConvention;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -62,17 +62,17 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|表示對採用可變數目參數的方法進行64位 PInvoke 呼叫。|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|描述不正確4位值。|  
 |`IMAGE_CEE_CS_CALLCONV_MASK`|表示呼叫慣例是由下面四個位所描述。|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|指出上位會描述 `this` 參數。|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|表示在簽章中明確描述 `this` 參數。|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|表示上位會描述 `this` 參數。|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|表示在簽章 `this` 中明確描述參數。|  
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|表示具有明確數目之類型引數的泛型方法簽章。 這會優先于一般參數計數。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)
