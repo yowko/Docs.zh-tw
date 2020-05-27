@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: a300c2679ef11a84edb2ab89c8dea96e445c9ee3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a05cbe985c2cfebb67756fdfb54398b36e87f441
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177988"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008505"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 函式
-將 HRESULT 值轉換為指定區域性的相應錯誤訊息。  
+針對指定的文化特性，將 HRESULT 值轉譯為適當的錯誤訊息。  
   
- 此功能已在 .NET 框架 4 中棄用。  
+ 此函式在 .NET Framework 4 中已被取代。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,45 +41,45 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>參數  
  `lcid`  
- [在]區域性識別碼。 通過 -1`lcid`用於使用預設區域性。  
+ 在文化特性識別碼。 傳遞-1 表示 `lcid` 要使用預設文化特性。  
   
  `iResourceID`  
- [在]A HRESULT。  
+ 在HRESULT。  
   
  `szBuffer`  
- [出]成功完成後包含錯誤訊息的緩衝區。  
+ 脫銷一個緩衝區，其中包含成功完成時的錯誤訊息。  
   
  `iMax`  
- [在]錯誤訊息緩衝區的大小。  
+ 在錯誤訊息緩衝區的大小。  
   
  `bQuiet`  
- [在]忽視。  
+ 在忽略.  
   
  `pcwchUsed`  
- [出]指向錯誤訊息長度的指標。  
+ 脫銷錯誤訊息長度的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 此方法返回 WinError.h 中定義的標準 COM 錯誤代碼，以及以下值。  
+ 這個方法會傳回標準 COM 錯誤碼（如 Winerror.h 中所定義），以及下列值。  
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_INVALIDARG|`szBuffer`為空或`iMax`為零 （0）。|  
+|E_INVALIDARG|`szBuffer`為 null，或 `iMax` 為零（0）。|  
   
 ## <a name="remarks"></a>備註  
- 如果方法未成功完成，`szBuffer`則包含一個空字串。  
+ 如果方法未順利完成，則會 `szBuffer` 包含空字串。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** MSCorEE.h  
+ **標頭：** Mscoree.dll. h  
   
- **庫：** MSCorEE.dll  
+ 連結**庫：** Mscoree.dll .dll  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
-- [LoadStringRC 函式](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
-- [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [LoadStringRC 函式](loadstringrc-function.md)
+- [已被取代的 CLR 裝載函式](deprecated-clr-hosting-functions.md)

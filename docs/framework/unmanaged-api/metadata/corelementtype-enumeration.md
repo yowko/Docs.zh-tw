@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 25fb3278e576ebe4a538379918e868b2e5f87911
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937953"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007867"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 列舉
 
-指定 common language runtime <xref:System.Type>、類型修飾詞，或元資料類型簽章中類型的相關資訊。
+指定通用語言執行時間 <xref:System.Type> 、類型修飾詞，或元資料類型簽章中類型的相關資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -75,7 +75,7 @@ typedef enum CorElementType {
 } CorElementType;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 |成員|描述|
 |------------|-----------------|
@@ -118,34 +118,34 @@ typedef enum CorElementType {
 
 ## <a name="remarks"></a>備註
 
-類型修飾詞會形成代表更複雜類型的基礎。 `CorElementType` 型別修飾詞值會套用至緊接在型別簽章中的值後面。 在 `CorElementType` 的類型修飾詞值之後的值可以是 `CorElementType` 的簡單類型值、元資料標記或其他值，如下表所指定。
+類型修飾詞會形成代表更複雜類型的基礎。 `CorElementType`型別修飾詞值會套用至緊接在型別簽章中的值後面。 在類型修飾詞值之後的值 `CorElementType` 可以是 `CorElementType` 簡單類型值、元資料標記或其他值，如下表中所指定。
 
 > [!NOTE]
 > 所有數位（*數位*、*引數計數*、*元資料標記*、順*位*、*計數*和系*結）都會*儲存為壓縮整數。 如需詳細資訊，請參閱 ECMA 網站上的[標準 ECMA-335-通用語言基礎結構（CLI）](http://www.ecma-international.org/publications/standards/Ecma-335.htm) 。
 
 |類型修飾詞|格式|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<`CorElementType` 值 >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<`CorElementType` 值 >|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<`mdTypeDef` 元資料標記 >|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<`mdTypeDef` 元資料標記 >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<號碼 >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<`CorElementType` 值 > \<排名 > \<count1 > \<bound1 > ... \<countN > \<boundN >|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<`mdTypeDef` 元資料標記 > \<引數計數 > \<arg1 > ... \<...Argn >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<函式的完整簽章，包括呼叫慣例 >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<`CorElementType` 值 >|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<號碼 >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<`mdTypeRef` 或 `mdTypeDef` 元資料標記 >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<`mdTypeRef` 或 `mdTypeDef` 元資料標記 >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR\<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF\<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS\<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR\<number>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN>\<boundN>|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> .。。\<argN>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR\<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY\<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR\<number>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT\<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** Corhdr.h。h
 
-**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)

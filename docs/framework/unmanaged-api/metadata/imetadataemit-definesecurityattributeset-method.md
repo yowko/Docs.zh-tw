@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: fadd1974cd4fa8a51a06700835f46df24e37d7fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c33ede841324820da16e33d35bbf5e8f8e75924f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175768"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009362"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet 方法
-創建一組安全許可權以附加到指定權杖引用的物件。  
+建立一組安全性許可權，以附加至指定之標記所參考的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,27 +38,27 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>參數  
  `tkObj`  
- [在]附加安全資訊的權杖。  
+ 在安全性資訊所附加的 token。  
   
  `rSecAttrs`  
- [在]結構陣列`COR_SECATTR`。  
+ 在結構的陣列 `COR_SECATTR` 。  
   
  `cSecAttrs`  
- [在]中`rSecAttrs`的元素數。  
+ 在中的元素數目 `rSecAttrs` 。  
   
  `pulErrorAttr`  
- [出]如果方法失敗，則指定導致問題的元素`rSecAttrs`中的索引。  
+ 脫銷如果方法失敗，會在導致問題的元素中指定索引 `rSecAttrs` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

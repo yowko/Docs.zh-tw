@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-ms.openlocfilehash: f09c6bb79d7bd28f4d8b74237b6f343a07b79062
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f399d33dbe05cb5768aa45533ef30d28409e18e2
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141479"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006463"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType 列舉
 包含值，指出堆疊溢位事件的根本原因。  
@@ -34,7 +34,7 @@ typedef enum {
 } StackOverflowType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -43,17 +43,17 @@ typedef enum {
 |`SO_Other`|堆疊溢位是由未受管理的程式碼所造成。|  
   
 ## <a name="remarks"></a>備註  
- 此資訊會透過呼叫[IActionOnCLREvent：： OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)方法傳遞至主機。  
+ 此資訊會透過呼叫[IActionOnCLREvent：： OnEvent](iactiononclrevent-onevent-method.md)方法傳遞至主機。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** Mscoree.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [裝載列舉](hosting-enumerations.md)

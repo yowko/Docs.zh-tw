@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: 759358822ed865c89f6f55084d1e7f6143506e93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7fe5cbe27c0771a71e4c03d14ab68ada7d0741a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175703"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004162"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge 方法
-將指定的導入作用域添加到要合併的範圍清單中。  
+將指定的匯入範圍加入要合併的範圍清單。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,27 +37,27 @@ HRESULT Merge (
   
 ## <a name="parameters"></a>參數  
  `pImport`  
- [在]指向[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)物件的指標，用於標識要合併的導入作用域。  
+ 在[IMetaDataImport](imetadataimport-interface.md)物件的指標，識別要合併的匯入範圍。  
   
  `pIMap`  
- [在]指向[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)物件的指標，用於指定權杖重新映射。  
+ 在指定標記重新對應之[IMapToken](imaptoken-interface.md)物件的指標。  
   
  `pHandler`  
- [在]指向指定錯誤的[IUnknown](/cpp/atl/iunknown)物件的指標。  
+ 在指定錯誤之[IUnknown](/cpp/atl/iunknown)物件的指標。  
   
 ## <a name="remarks"></a>備註  
- 調用[IMetaDataEmit：：合併結束](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)以觸發將中繼資料合併到單個作用域中。  
+ 呼叫[IMetaDataEmit：： MergeEnd](imetadataemit-mergeend-method.md)以觸發將中繼資料合併到單一範圍中。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MSCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit 介面](imetadataemit-interface.md)
+- [IMetaDataEmit2 介面](imetadataemit2-interface.md)

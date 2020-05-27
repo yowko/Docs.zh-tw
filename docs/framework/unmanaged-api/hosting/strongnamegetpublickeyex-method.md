@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 93afe1afd9ea9637d039a8b4a4e81267d49c08b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1904a98f254a988ce035847a4cdeede182aa07bf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176223"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006368"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx 方法
-從公開金鑰/私密金鑰對獲取公開金鑰，並指定雜湊演算法和簽名演算法。  
+從公開/私密金鑰組取得公開金鑰，並指定雜湊演算法和簽章演算法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,59 +41,59 @@ HRESULT StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>參數  
  `pwzKeyContainer`  
- [在]包含公開金鑰/私密金鑰對的金鑰容器的名稱。 如果`pbKeyBlob`為 null，`szKeyContainer`則必須在加密服務提供者 （CSP） 中指定有效的容器。 在這種情況下，`StrongNameGetPublicKeyEx`該方法從存儲在容器中的金鑰組中提取公開金鑰。  
+ 在包含公開/私密金鑰組的金鑰容器名稱。 如果 `pbKeyBlob` 為 null， `szKeyContainer` 必須在密碼編譯服務提供者（CSP）內指定有效的容器。 在此情況下， `StrongNameGetPublicKeyEx` 方法會從儲存在容器中的金鑰組中解壓縮公開金鑰。  
   
- 如果`pbKeyBlob`不是空，則假定金鑰組包含在金鑰二進位大型物件 （BLOB） 中。  
+ 如果不 `pbKeyBlob` 是 null，則會假設金鑰組包含在金鑰二進位大型物件（BLOB）中。  
   
- 金鑰必須是 1024 位裡維斯-沙米爾-阿德爾曼 （RSA） 簽名金鑰。 目前不支援其他類型的金鑰。  
+ 金鑰必須是 1024-bit Rivest-Shamir-Adleman （RSA）簽署金鑰。 目前不支援其他類型的金鑰。  
   
  `pbKeyBlob`  
- [在]指向公開金鑰/私密金鑰對的指標。 此對採用 Win32`CryptExportKey`函數創建的格式。 如果`pbKeyBlob`為 null，則假定 指定的`szKeyContainer`鍵容器包含金鑰組。  
+ 在公開/私密金鑰組的指標。 這組會使用 Win32 函式所建立的格式 `CryptExportKey` 。 如果 `pbKeyBlob` 為 null，則會假設指定的金鑰容器 `szKeyContainer` 包含金鑰組。  
   
  `cbKeyBlob`  
- [在]的大小（以位元組為單位）的大小`pbKeyBlob`。  
+ 在的大小（以位元組為單位） `pbKeyBlob` 。  
   
  `ppbPublicKeyBlob`  
- [出]返回的公開金鑰 BLOB。 參數`ppbPublicKeyBlob`由通用語言運行時分配並返回到調用方。 調用方必須使用[ICLRStrongNameName：：StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法釋放記憶體。  
+ 脫銷傳回的公開金鑰 BLOB。 `ppbPublicKeyBlob`參數是由 common language runtime 配置，並傳回給呼叫端。 呼叫端必須使用[ICLRStrongName：： StrongNameFreeBuffer](iclrstrongname-strongnamefreebuffer-method.md)方法來釋放記憶體。  
   
  `pcbPublicKeyBlob`  
- [出]返回的公開金鑰 BLOB 的大小。  
+ 脫銷傳回的公開金鑰 BLOB 的大小。  
   
  `uHashAlgId`  
- [在]程式集雜湊演算法。 有關已接受值的清單，請參閱備註部分。  
+ 在元件雜湊演算法。 如需接受值的清單，請參閱備註一節。  
   
  `uReserved`  
- [在]保留供將來使用;預設值為 null。  
+ 在保留供日後使用;預設值為 null。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK`如果方法成功完成;如果方法成功完成;否則，指示失敗的 HRESULT 值（請參閱清單[的常用 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+ `S_OK`如果方法已成功完成，則為，否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
- 公開金鑰包含在[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)結構中。  
+ 公開金鑰包含在[PublicKeyBlob](../strong-naming/publickeyblob-structure.md)結構中。  
   
 ## <a name="remarks"></a>備註  
- 下表顯示了`uHashAlgId`參數的接受值集。  
+ 下表顯示參數的可接受值集 `uHashAlgId` 。  
   
-|名稱|值|  
+|Name|值|  
 |----------|-----------|  
-|None|0|  
-|SHA-1|0 x8004|  
+|無|0|  
+|SHA-1|0x8004|  
 |SHA-256|0x800c|  
 |SHA-384|0x800d|  
 |SHA-512|0x800e|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** MetaHost.h  
+ **標頭：** MetaHost。h  
   
- **庫：** 作為資源包含在 MSCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [StrongNameTokenFromPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
-- [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
-- [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [StrongNameGetPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
+- [StrongNameTokenFromPublicKey 方法](iclrstrongname-strongnametokenfrompublickey-method.md)
+- [PublicKeyBlob 結構](../strong-naming/publickeyblob-structure.md)
+- [ICLRStrongName 介面](iclrstrongname-interface.md)
+- [StrongNameGetPublicKey 方法](iclrstrongname-strongnamegetpublickey-method.md)

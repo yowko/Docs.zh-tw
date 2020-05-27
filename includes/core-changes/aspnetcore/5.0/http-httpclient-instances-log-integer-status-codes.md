@@ -8,7 +8,7 @@ ms.locfileid: "82728277"
 ---
 ### <a name="http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes"></a>HTTP： IHttpClientFactory 記錄整數狀態碼所建立的 HttpClient 實例
 
-<xref:System.Net.Http.HttpClient>以整數而<xref:System.Net.Http.IHttpClientFactory>不是狀態碼名稱所建立的實例。
+<xref:System.Net.Http.HttpClient>以 <xref:System.Net.Http.IHttpClientFactory> 整數而不是狀態碼名稱所建立的實例。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -38,13 +38,13 @@ End processing HTTP request after 70.0862ms - 200
 
 使用整數值比文字更有彈性，因為它允許對值範圍進行查詢。
 
-已考慮加入另一個記錄值來捕捉整數狀態碼。 可惜的是，這樣做會導致其他 ASP.NET Core 的其他不一致。 HttpClient 記錄和 HTTP 伺服器/裝載記錄使用相同`StatusCode`的索引鍵名稱。
+已考慮加入另一個記錄值來捕捉整數狀態碼。 可惜的是，這樣做會導致其他 ASP.NET Core 的其他不一致。 HttpClient 記錄和 HTTP 伺服器/裝載記錄使用相同的索引 `StatusCode` 鍵名稱。
 
 #### <a name="recommended-action"></a>建議的動作
 
 最佳選項是更新記錄查詢，以使用狀態碼的整數值。 此選項可能會導致在多個 ASP.NET Core 版本中撰寫查詢時遇到一些困難。 不過，針對此用途使用整數，對於查詢記錄會有更大的彈性。
 
-如果您需要強制相容于舊的行為，並使用文字狀態碼，請將`IHttpClientFactory`記錄取代成您自己的：
+如果您需要強制相容于舊的行為，並使用文字狀態碼，請將 `IHttpClientFactory` 記錄取代成您自己的：
 
 1. 將下列類別的 .NET Core 3.1 版本複製到您的專案中：
 
@@ -55,7 +55,7 @@ End processing HTTP request after 70.0862ms - 200
 
 1. 將類別重新命名，以避免與[Microsoft Extensions. Http](https://www.nuget.org/packages/Microsoft.Extensions.Http) NuGet 封裝中的公用類型發生衝突。
 
-1. 在專案的`Startup.ConfigureServices`方法中，將`LoggingHttpMessageHandlerBuilderFilter`內建的實取代為您自己的。 例如：
+1. `LoggingHttpMessageHandlerBuilderFilter`在專案的方法中，將內建的實取代為您自己的 `Startup.ConfigureServices` 。 例如：
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)

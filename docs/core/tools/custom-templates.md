@@ -3,12 +3,12 @@ title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: thraka
 ms.date: 05/20/2020
-ms.openlocfilehash: 19855c99b240b66dfa819e70d4a1bee5c8ed14ed
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 56fcbfbc168143007f0772ce8a12347f7e25e50b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761911"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005308"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -55,7 +55,7 @@ dotnet new --list
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| 成員            | 類型          | Description |
+| 成員            | 類型          | 描述 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |
@@ -96,7 +96,7 @@ dotnet new --list
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>將範本封裝在 NuGet 套件中 (nupkg 檔案)
 
-自訂範本會搭配 [dotnet pack](dotnet-pack.md) 命令和 *.csproj* 檔案進行封裝。 或者，[NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) \(部分機器翻譯\) 可以搭配 [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) \(部分機器翻譯\) 命令和 *.nuspec* 檔案使用。 不過，NuGet 在 Windows 上需要 .NET Framework，在 Linux 和 MacOS 上則需要 [Mono](https://www.mono-project.com/) \(英文\)。
+自訂範本會搭配 [dotnet pack](dotnet-pack.md) 命令和 *.csproj* 檔案進行封裝。 或者，[NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) \(部分機器翻譯\) 可以搭配 [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) \(部分機器翻譯\) 命令和 *.nuspec* 檔案使用。 不過，NuGet 需要在 Windows 上的 .NET Framework，以及在 Linux 和 macOS 上的[Mono](https://www.mono-project.com/) 。
 
 *.csproj* 檔案與傳統的程式碼專案 *.csproj* 檔案具有些微的不同。 請注意下列設定︰
 

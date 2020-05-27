@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 1072026f92edbc646653c6dd74ec8e22d5b887e5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 941093b9a0856c2b716ba359c854473f3c9ea26a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105912"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006515"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 結構
 儲存發生的溢位類型，以及因溢位而擲回之例外狀況的資訊。  
@@ -33,25 +33,25 @@ typedef struct _StackOverflowInfo {
 } StackOverflowInfo;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
-|`soType`|指定溢位類型的[StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)列舉值。|  
-|`pExceptionInfo`|Win32 `EXCEPTION_POINTERS` 物件的指標，其中包含例外狀況記錄，其中含有與電腦無關的例外狀況描述，以及具有在例外狀況時的處理器內容之電腦相依描述的內容記錄。|  
+|`soType`|指定溢位類型的[StackOverflowType](stackoverflowtype-enumeration.md)列舉值。|  
+|`pExceptionInfo`|Win32 物件的指標 `EXCEPTION_POINTERS` ，其中包含例外狀況記錄，其中含有與電腦無關的例外狀況描述，以及具有在例外狀況時的處理器內容之電腦相依描述的內容記錄。|  
   
 ## <a name="remarks"></a>備註  
- `StackOverflowInfo` 物件會傳遞給 `Event_StackOverflow` 事件的[IActionOnCLREvent：： OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)方法。  
+ `StackOverflowInfo`物件會傳遞至事件的[IActionOnCLREvent：： OnEvent](iactiononclrevent-onevent-method.md)方法 `Event_StackOverflow` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll .idl  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [裝載結構](hosting-structures.md)

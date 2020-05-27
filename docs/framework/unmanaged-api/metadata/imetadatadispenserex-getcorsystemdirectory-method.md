@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-ms.openlocfilehash: fb673666543bea3df44005ee3b20d311524f51d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a76c17e663fdf6555ed878cca1b86b6a9395730e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175911"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008790"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory 方法
-獲取保存當前通用語言運行時 （CLR） 的目錄。 此方法僅支援進程外調試器使用。 如果從其他元件調用，它將返回E_NOTIMPL。  
+取得保存目前 common language runtime （CLR）的目錄。 這個方法僅支援跨進程偵錯工具使用。 如果從另一個元件呼叫，它會傳回 E_NOTIMPL。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +37,24 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>參數  
  `szBuffer`  
- [出]要接收目錄名稱的緩衝區。  
+ 脫銷要接收目錄名稱的緩衝區。  
   
  `cchBuffer`  
- [在]的大小（以位元組為單位）的大小`szBuffer`。  
+ 在的大小（以位元組為單位） `szBuffer` 。  
   
  `pchBuffer`  
- [出]在 中`szBuffer`實際返回的位元組數。  
+ 脫銷中實際傳回的位元組數目 `szBuffer` 。  
   
 ## <a name="requirements"></a>需求  
- **平臺：** 請參閱[系統要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平臺：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx 介面](imetadatadispenserex-interface.md)
+- [IMetaDataDispenser 介面](imetadatadispenser-interface.md)

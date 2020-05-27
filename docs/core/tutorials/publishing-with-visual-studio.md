@@ -1,20 +1,27 @@
 ---
-title: 使用視覺化工作室發佈您的 .NET 核心 Hello World 應用程式
+title: 使用 Visual Studio 發佈您的 .NET Core Hello World 應用程式
 description: 發行會建立一組執行您的 .NET Core 應用程式所需的檔案。
 author: BillWagner
 ms.author: wiwagn
-ms.date: 12/10/2019
+ms.date: 05/20/2020
+dev_langs:
+- csharp
+- vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156630"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005081"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>使用視覺化工作室發佈您的 .NET 核心 Hello World 應用程式
+# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>教學課程：使用 Visual Studio 發行 .NET Core 主控台應用程式
 
-在[創建一個Hello世界應用程式與.NET核心在視覺工作室](with-visual-studio.md)，你建立了一個Hello世界主控台應用程式。 在[調試你的Hello世界應用程式與視覺化工作室](debugging-with-visual-studio.md)，你測試它使用視覺化工作室調試器。 現在，您確定它會如預期般地運作，您可以發行，讓其他使用者也可以執行它。 發行會建立一組執行您的應用程式所需的檔案。 要部署檔，請將它們複製到目的電腦。
+本教學課程說明如何發佈主控台應用程式，讓其他使用者可以執行它。 發行會建立一組執行您的應用程式所需的檔案。 若要部署檔案，請將檔案複製到目的電腦。
+
+## <a name="prerequisites"></a>必要條件
+
+- 本教學課程適用于您在[Visual Studio 2019 的建立 .Net Core 主控台應用程式](with-visual-studio.md)中建立的主控台應用程式。
 
 ## <a name="publish-the-app"></a>發佈應用程式
 
@@ -22,54 +29,85 @@ ms.locfileid: "78156630"
 
    ![選取 [發行] 組建的 Visual Studio 工具列](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. 按右鍵**HelloWorld**專案（不是 HelloWorld 解決方案），然後從功能表中選擇 **"發佈**"。 （您還可以從主**生成**功能表中選擇 **"發佈 HelloWorld"。**
+1. 以滑鼠右鍵按一下**HelloWorld**專案（而非 HelloWorld 方案），然後從功能表中選取 [**發佈**]。
 
    ![Visual Studio [發行] 操作功能表](media/publishing-with-visual-studio/publish-context-menu.png)
 
-1. 在 **"選取發佈目標**"頁上，選擇 **"資料夾**"，然後選擇"**創建設定檔**"。
+1. 在**發行**頁面的 [**目標**] 索引標籤上，選取 [**資料夾**]，然後選取 **[下一步]**。
 
-   ![在視覺化工作室中選擇發佈目標](media/publishing-with-visual-studio/pick-publish-target.png)
+   ![在 Visual Studio 中挑選發行目標](media/publishing-with-visual-studio/pick-publish-target.png)
 
-1. 在 **"發佈"** 頁上，選擇 **"發佈**"。
+1. 在 [**發佈**] 頁面的 [**位置**] 索引標籤上，選取 **[完成]**。
+
+   ![Visual Studio 發行頁面位置] 索引標籤](media/publishing-with-visual-studio/publish-page-loc-tab.png)
+
+1. 在 **[發行] 視窗的**[**發行**] 索引標籤上，選取 [**發佈**]。
 
    ![Visual Studio [發行] 視窗](media/publishing-with-visual-studio/publish-page.png)
 
-## <a name="inspect-the-files"></a>檢查檔
+## <a name="inspect-the-files"></a>檢查檔案
 
-發佈過程創建一個與框架相關的部署，這是一種部署類型，其中已發佈的應用程式在 .NET Core 支援的任何平臺上運行，系統上安裝了 .NET Core。 使用者可以通過按兩下可執行檔或從命令提示符發出`dotnet HelloWorld.dll`命令來運行已發佈的應用。
+發佈程式會建立與 framework 相依的部署，這是一種部署類型，其中已發佈的應用程式會在已安裝 .NET Core 執行時間的電腦上執行。 使用者可以按兩下可執行檔，或從命令提示字元發出命令，以執行已發佈的應用程式 `dotnet HelloWorld.dll` 。
 
-在以下步驟中，您將查看發佈過程創建的檔。
+在下列步驟中，您將查看發行程式所建立的檔案。
 
-1. 開啟命令提示字元。
+1. 在**方案總管**中，選取 [**顯示所有**檔案]。
 
-   打開命令提示符的一種方法是在 Windows 工作列上的搜索框中輸入**命令提示**符（或簡稱**cmd）。** 選擇**命令提示**桌面應用，或按 **"如果**已在搜尋結果中選中"。"
+1. 在專案資料夾中，展開 [ *bin/Release/netcoreapp 3.1/publish*]。
 
-1. 導航到應用程式專案目錄的*bin_Release_netcoreapp3.1_發佈*子目錄中的已發佈應用程式。
+   :::image type="content" source="media/publishing-with-visual-studio/published-files-output.png" alt-text="顯示已發佈檔案的方案總管":::
 
-   ![主控台視窗顯示已發行的檔案](media/publishing-with-visual-studio/published-files-output.png)
-
-   如圖所示，已發佈的輸出包括以下檔：
+   如圖所示，已發行的輸出會包含下列檔案：
 
       * *HelloWorld.deps.json*
 
-         這是應用程式的運行時依賴項檔。 它定義了 .NET Core 元件和運行應用程式所需的庫（包括包含應用程式的動態連結程式庫）。 有關詳細資訊，請參閱[運行時設定檔](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
+         這是應用程式的執行時間相依性檔案。 它會定義執行應用程式所需的 .NET Core 元件和程式庫（包括包含您應用程式的動態連結程式庫）。 如需詳細資訊，請參閱[執行時間設定檔](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
 
       * *HelloWorld.dll*
 
-         這是應用程式[與框架相關的部署](../deploying/deploy-with-cli.md#framework-dependent-deployment)版本。 要執行此動態連結程式庫，`dotnet HelloWorld.dll`請輸入命令提示符。
+         這是與[framework 相依](../deploying/deploy-with-cli.md#framework-dependent-deployment)的應用程式部署版本。 若要執行此動態連結程式庫，請 `dotnet HelloWorld.dll` 在命令提示字元中輸入。
 
-      * *HelloWorld.exe*
+      * *HelloWorld .exe*
 
-         這是應用程式[與框架相關的可執行](../deploying/deploy-with-cli.md#framework-dependent-executable)版本。 要運行它，`HelloWorld.exe`請輸入命令提示符。
+         這是與[framework 相依的應用程式可執行檔](../deploying/deploy-with-cli.md#framework-dependent-executable)版本。 若要執行，請 `HelloWorld.exe` 在命令提示字元中輸入。
 
       * *HelloWorld.pdb* (對於部署為選用)
 
-         這是調試符號檔。 此檔案不需要隨您的應用程式部署，但當您需要對應用程式發行的版本進行偵錯，則應該儲存它。
+         這是 debug 符號檔案。 此檔案不需要隨您的應用程式部署，但當您需要對應用程式發行的版本進行偵錯，則應該儲存它。
 
       * *HelloWorld.runtimeconfig.json*
 
-         這是應用程式的運行時設定檔。 它會識別建置您應用程式以在其上執行的 .NET Core 版本。 您還可以向其添加配置選項。 有關詳細資訊，請參閱[.NET Core 運行時配置設置](../run-time-config/index.md#runtimeconfigjson)。
+         這是應用程式的執行時間設定檔。 它會識別建置您應用程式以在其上執行的 .NET Core 版本。 您也可以在其中新增設定選項。 如需詳細資訊，請參閱[.Net Core 執行時間設定](../run-time-config/index.md#runtimeconfigjson)。
+
+## <a name="run-the-published-app"></a>執行已發佈的應用程式
+
+1. 在**方案總管**中，以滑鼠右鍵按一下 [*發行*] 資料夾，然後選取 [**複製完整路徑**]。
+
+1. 開啟命令提示字元，並流覽至 [*發行*] 資料夾。 輸入 `cd` ，然後貼上完整路徑。 例如：
+
+   ```
+   cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
+   ```
+
+1. 使用可執行檔來執行應用程式：
+
+   1. 輸入 `HelloWorld.exe` ，然後按 enter 鍵。
+
+   1. 輸入名稱以回應提示，然後按任意鍵結束。
+
+1. 使用命令執行應用程式 `dotnet` ：
+
+   1. 輸入 `dotnet HelloWorld.dll` ，然後按 enter 鍵。
+
+   1. 輸入名稱以回應提示，然後按任意鍵結束。
 
 ## <a name="additional-resources"></a>其他資源
 
-- [.NET 核心應用程式部署](../deploying/index.md)
+- [.NET Core 應用程式部署](../deploying/index.md)
+
+## <a name="next-steps"></a>後續步驟
+
+在本教學課程中，您已發佈主控台應用程式。 在下一個教學課程中，您會建立類別庫。
+
+> [!div class="nextstepaction"]
+> [在 Visual Studio 中建立 .NET Standard 程式庫](library-with-visual-studio.md)

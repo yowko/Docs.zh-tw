@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: decd4f46-f3b2-466f-9501-e74f2b86b846
 topic_type:
 - apiref
-ms.openlocfilehash: 23d293a87112c62cb2127b435faeca258a7de226
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1307f555c9d8b6d28febcf25db89ae856c143d71
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444218"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009401"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags 列舉
 包含描述元件參考之功能的值。  
@@ -32,21 +32,21 @@ typedef enum {
 } AssemblyRefFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
 |`arfFullOriginator`|指定元件參考包含有關元件發行者的完整、未雜湊資訊。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [DefineAssemblyRef 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)
+- [中繼資料列舉](metadata-enumerations.md)
+- [IMetaDataAssemblyEmit 介面](imetadataassemblyemit-interface.md)
+- [DefineAssemblyRef 方法](imetadataassemblyemit-defineassemblyref-method.md)

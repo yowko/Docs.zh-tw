@@ -2,18 +2,18 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 02/27/2020
-ms.openlocfilehash: 29f81b09a01e689d3f6d86c16b1f134c9fe6b6a0
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 276fad896a6a8a647ed05a9de8c582d463d9ab8f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840932"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005309"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 **本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet restore` - 還原專案的相依性和工具。
 
@@ -25,7 +25,7 @@ dotnet restore [<ROOT>] [--configfile <FILE>] [--disable-parallel]
     [--interactive] [--lock-file-path <LOCK_FILE_PATH>] [--locked-mode]
     [--no-cache] [--no-dependencies] [--packages <PACKAGES_DIRECTORY>]
     [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
-    [--use-lockfile] [-v|--verbosity <LEVEL>]
+    [--use-lock-file] [-v|--verbosity <LEVEL>]
 
 dotnet restore -h|--help
 ```
@@ -145,7 +145,7 @@ dotnet restore -h|--help
 
   指定要在還原作業期間使用的 NuGet 套件來源 URI。 此設定會覆寫*nuget.exe*檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
 
-- **`--use-lockfile`**
+- **`--use-lock-file`**
 
   讓專案鎖定檔案能夠產生並搭配 restore 使用。
 

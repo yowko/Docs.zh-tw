@@ -2,18 +2,18 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: 22b27007d26c98cff40733ef8d449ce334f87848
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: b427954fe0026e6ac96d3bbce2b70b5c44e884e0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802685"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005371"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet test` - 用來執行單元測試的 .NET 測試驅動程式。
 
@@ -79,6 +79,10 @@ dotnet test -h|--help
 - **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   測試回合啟用資料收集器。 如需詳細資訊，請參閱[監視及分析測試回合](https://aka.ms/vstest-collect)。
+  
+  若要在 .NET Core 支援的任何平臺上收集程式碼涵蓋範圍，請安裝[Coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/README.md)並使用 `--collect:"XPlat Code Coverage"` 選項。
+
+  在 Windows 上，您可以使用選項來收集程式碼涵蓋範圍 `--collect "Code Coverage"` 。 此選項會產生一個 *.coverage*檔案，該檔案可以在 Visual Studio 2019 Enterprise 中開啟。 如需詳細資訊，請參閱[使用程式碼涵蓋範圍](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)和[自訂程式碼涵蓋範圍分析](/visualstudio/test/customizing-code-coverage-analysis)。
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
@@ -171,6 +175,18 @@ dotnet test -h|--help
   dotnet test --logger trx
   ```
 
+- 在目前目錄的專案中執行測試，並產生程式碼涵蓋範圍檔案（安裝[Coverlet](https://github.com/tonerdo/coverlet/blob/master/README.md)之後）：
+
+  ```dotnetcli
+  dotnet test --collect:"XPlat Code Coverage"
+  ```
+
+- 在目前目錄的專案中執行測試，並產生程式碼涵蓋範圍檔案（僅限 Windows）：
+
+  ```dotnetcli
+  dotnet test --collect "Code Coverage"
+  ```
+
 - 在目前目錄中執行專案中的測試，並使用主控台的詳細詳細資訊記錄：
 
   ```dotnetcli
@@ -193,8 +209,9 @@ dotnet test -h|--help
 
 | 測試架構 | 支援的屬性                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>名稱</li><li>ClassName</li><li>優先順序</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>優先順序</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特性</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>Name</li><li>TestCategory</li><li>優先順序</li></ul>                                   |
 
 `<operator>` 描述屬性和值之間的關聯性：
 
