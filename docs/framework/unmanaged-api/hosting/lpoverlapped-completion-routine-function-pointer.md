@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c0bdd9e59f5794dbb0d447dc2cc6cb682bfdf09f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090899"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008478"
 ---
-# <a name="lpoverlapped_completion_routine-function-pointer"></a><span data-ttu-id="d89e3-102">LPOVERLAPPED_COMPLETION_ROUTINE 函式指標</span><span class="sxs-lookup"><span data-stu-id="d89e3-102">LPOVERLAPPED_COMPLETION_ROUTINE Function Pointer</span></span>
-<span data-ttu-id="d89e3-103">指向函式，當裝置的重迭（也就是非同步） i/o 完成時，會通知主機。</span><span class="sxs-lookup"><span data-stu-id="d89e3-103">Points to a function that notifies the host when an overlapped (that is, asynchronous) I/O to a device has completed.</span></span>  
+# <a name="lpoverlapped_completion_routine-function-pointer"></a><span data-ttu-id="6f963-102">LPOVERLAPPED_COMPLETION_ROUTINE 函式指標</span><span class="sxs-lookup"><span data-stu-id="6f963-102">LPOVERLAPPED_COMPLETION_ROUTINE Function Pointer</span></span>
+<span data-ttu-id="6f963-103">指向函式，當裝置的重迭（也就是非同步） i/o 完成時，會通知主機。</span><span class="sxs-lookup"><span data-stu-id="6f963-103">Points to a function that notifies the host when an overlapped (that is, asynchronous) I/O to a device has completed.</span></span>  
   
- <span data-ttu-id="d89e3-104">這個函式指標在 .NET Framework 4 中已被取代。</span><span class="sxs-lookup"><span data-stu-id="d89e3-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
+ <span data-ttu-id="6f963-104">這個函式指標在 .NET Framework 4 中已被取代。</span><span class="sxs-lookup"><span data-stu-id="6f963-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d89e3-105">語法</span><span class="sxs-lookup"><span data-stu-id="d89e3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f963-105">語法</span><span class="sxs-lookup"><span data-stu-id="6f963-105">Syntax</span></span>  
   
 ```cpp  
 typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (  
@@ -36,30 +36,30 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d89e3-106">參數</span><span class="sxs-lookup"><span data-stu-id="d89e3-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6f963-106">參數</span><span class="sxs-lookup"><span data-stu-id="6f963-106">Parameters</span></span>  
  `dwErrorCode`  
- <span data-ttu-id="d89e3-107">在如果裝置已關閉，則為錯誤碼的值;否則，這個值會是零。</span><span class="sxs-lookup"><span data-stu-id="d89e3-107">[in] A value that is an error code if the device has been closed; otherwise, this value is zero.</span></span>  
+ <span data-ttu-id="6f963-107">在如果裝置已關閉，則為錯誤碼的值;否則，這個值會是零。</span><span class="sxs-lookup"><span data-stu-id="6f963-107">[in] A value that is an error code if the device has been closed; otherwise, this value is zero.</span></span>  
   
- <span data-ttu-id="d89e3-108">關閉裝置會導致裝置的所有擱置中 i/o 立即完成。</span><span class="sxs-lookup"><span data-stu-id="d89e3-108">Closing a device causes all pending I/O to the device to be completed immediately.</span></span>  
+ <span data-ttu-id="6f963-108">關閉裝置會導致裝置的所有擱置中 i/o 立即完成。</span><span class="sxs-lookup"><span data-stu-id="6f963-108">Closing a device causes all pending I/O to the device to be completed immediately.</span></span>  
   
  `dwNumberOfBytesTransfered`  
- <span data-ttu-id="d89e3-109">在I/o 作業所傳輸的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="d89e3-109">[in] The number of bytes transferred by the I/O operation.</span></span>  
+ <span data-ttu-id="6f963-109">在I/o 作業所傳輸的位元組數目。</span><span class="sxs-lookup"><span data-stu-id="6f963-109">[in] The number of bytes transferred by the I/O operation.</span></span>  
   
  `lpOverlapped`  
- <span data-ttu-id="d89e3-110">在結構的指標，其中包含用來完成 i/o 要求的資訊。</span><span class="sxs-lookup"><span data-stu-id="d89e3-110">[in] A pointer to a structure that contains information to be used to complete the I/O request.</span></span>  
+ <span data-ttu-id="6f963-110">在結構的指標，其中包含用來完成 i/o 要求的資訊。</span><span class="sxs-lookup"><span data-stu-id="6f963-110">[in] A pointer to a structure that contains information to be used to complete the I/O request.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d89e3-111">備註</span><span class="sxs-lookup"><span data-stu-id="d89e3-111">Remarks</span></span>  
- <span data-ttu-id="d89e3-112">`LPOVERLAPPED_COMPLETION_ROUTINE` 點的函式是回呼函式，必須由主控應用程式的寫入器來執行。</span><span class="sxs-lookup"><span data-stu-id="d89e3-112">The function to which `LPOVERLAPPED_COMPLETION_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="d89e3-113">回呼函式可讓主機處理已完成的 i/o 要求。</span><span class="sxs-lookup"><span data-stu-id="d89e3-113">The callback function allows the host to process the completed I/O request.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6f963-111">備註</span><span class="sxs-lookup"><span data-stu-id="6f963-111">Remarks</span></span>  
+ <span data-ttu-id="6f963-112">點的函式 `LPOVERLAPPED_COMPLETION_ROUTINE` 是回呼函式，必須由主控應用程式的寫入器來執行。</span><span class="sxs-lookup"><span data-stu-id="6f963-112">The function to which `LPOVERLAPPED_COMPLETION_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="6f963-113">回呼函式可讓主機處理已完成的 i/o 要求。</span><span class="sxs-lookup"><span data-stu-id="6f963-113">The callback function allows the host to process the completed I/O request.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d89e3-114">需求</span><span class="sxs-lookup"><span data-stu-id="d89e3-114">Requirements</span></span>  
- <span data-ttu-id="d89e3-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d89e3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f963-114">需求</span><span class="sxs-lookup"><span data-stu-id="6f963-114">Requirements</span></span>  
+ <span data-ttu-id="6f963-115">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6f963-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d89e3-116">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="d89e3-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="6f963-116">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="6f963-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d89e3-117">連結**庫：** Mscorwks.dll .dll</span><span class="sxs-lookup"><span data-stu-id="d89e3-117">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="6f963-117">連結**庫：** Mscorwks.dll .dll</span><span class="sxs-lookup"><span data-stu-id="6f963-117">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="d89e3-118">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d89e3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6f963-118">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f963-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d89e3-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="d89e3-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f963-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6f963-119">See also</span></span>
 
-- [<span data-ttu-id="d89e3-120">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="d89e3-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="6f963-120">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="6f963-120">Deprecated CLR Hosting Functions</span></span>](deprecated-clr-hosting-functions.md)

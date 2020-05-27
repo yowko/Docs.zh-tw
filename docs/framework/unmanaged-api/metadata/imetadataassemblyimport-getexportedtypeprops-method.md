@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 944941c2356cae93ecc85f1714b4b29aefcb50ad
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177764"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008400"
 ---
-# <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="6f630-102">IMetaDataAssemblyImport::GetExportedTypeProps 方法</span><span class="sxs-lookup"><span data-stu-id="6f630-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
-<span data-ttu-id="6f630-103">使用指定的中繼資料簽名獲取匯出類型的屬性集。</span><span class="sxs-lookup"><span data-stu-id="6f630-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="e0987-102">IMetaDataAssemblyImport::GetExportedTypeProps 方法</span><span class="sxs-lookup"><span data-stu-id="e0987-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
+<span data-ttu-id="e0987-103">取得具有指定的中繼資料簽章之已匯出類型的屬性集。</span><span class="sxs-lookup"><span data-stu-id="e0987-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f630-104">語法</span><span class="sxs-lookup"><span data-stu-id="6f630-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0987-104">語法</span><span class="sxs-lookup"><span data-stu-id="e0987-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetExportedTypeProps (  
@@ -39,37 +39,37 @@ HRESULT GetExportedTypeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6f630-105">參數</span><span class="sxs-lookup"><span data-stu-id="6f630-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e0987-105">參數</span><span class="sxs-lookup"><span data-stu-id="e0987-105">Parameters</span></span>  
  `mdct`  
- <span data-ttu-id="6f630-106">[在]表示`mdExportedType`匯出類型的中繼資料權杖。</span><span class="sxs-lookup"><span data-stu-id="6f630-106">[in] An `mdExportedType` metadata token that represents the exported type.</span></span>  
+ <span data-ttu-id="e0987-106">在`mdExportedType`表示已匯出類型的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="e0987-106">[in] An `mdExportedType` metadata token that represents the exported type.</span></span>  
   
  `szName`  
- <span data-ttu-id="6f630-107">[出]匯出類型的名稱。</span><span class="sxs-lookup"><span data-stu-id="6f630-107">[out] The name of the exported type.</span></span>  
+ <span data-ttu-id="e0987-107">脫銷匯出之類型的名稱。</span><span class="sxs-lookup"><span data-stu-id="e0987-107">[out] The name of the exported type.</span></span>  
   
  `cchName`  
- <span data-ttu-id="6f630-108">[在]的大小（以寬字元表示`szName`）</span><span class="sxs-lookup"><span data-stu-id="6f630-108">[in] The size, in wide characters, of `szName`.</span></span>  
+ <span data-ttu-id="e0987-108">在的大小（以寬字元為單位） `szName` 。</span><span class="sxs-lookup"><span data-stu-id="e0987-108">[in] The size, in wide characters, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="6f630-109">[出]實際返回的寬字元數`szName`</span><span class="sxs-lookup"><span data-stu-id="6f630-109">[out] The number of wide characters actually returned in `szName`</span></span>  
+ <span data-ttu-id="e0987-109">脫銷實際傳回的寬字元數`szName`</span><span class="sxs-lookup"><span data-stu-id="e0987-109">[out] The number of wide characters actually returned in `szName`</span></span>  
   
  `ptkImplementation`  
- <span data-ttu-id="6f630-110">[出]包含`mdFile`或`mdAssemblyRef`允許訪問`mdExportedType`匯出類型的屬性的 中繼資料權杖。</span><span class="sxs-lookup"><span data-stu-id="6f630-110">[out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.</span></span>  
+ <span data-ttu-id="e0987-110">脫銷`mdFile`、 `mdAssemblyRef` 或 `mdExportedType` 元資料標記，其中包含或允許存取已匯出類型的屬性。</span><span class="sxs-lookup"><span data-stu-id="e0987-110">[out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.</span></span>  
   
  `ptkTypeDef`  
- <span data-ttu-id="6f630-111">[出]指向表示檔中類型的`mdTypeDef`權杖的指標。</span><span class="sxs-lookup"><span data-stu-id="6f630-111">[out] A pointer to an `mdTypeDef` token that represents a type in the file.</span></span>  
+ <span data-ttu-id="e0987-111">脫銷`mdTypeDef`標記的指標，表示檔案中的類型。</span><span class="sxs-lookup"><span data-stu-id="e0987-111">[out] A pointer to an `mdTypeDef` token that represents a type in the file.</span></span>  
   
  `pdwExportedTypeFlags`  
- <span data-ttu-id="6f630-112">[出]指向用於應用於匯出類型的中繼資料的標誌的指標。</span><span class="sxs-lookup"><span data-stu-id="6f630-112">[out] A pointer to the flags that describe the metadata applied to the exported type.</span></span> <span data-ttu-id="6f630-113">標誌值可以是一個或多個[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)值。</span><span class="sxs-lookup"><span data-stu-id="6f630-113">The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.</span></span>  
+ <span data-ttu-id="e0987-112">脫銷旗標的指標，描述套用至已匯出類型的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e0987-112">[out] A pointer to the flags that describe the metadata applied to the exported type.</span></span> <span data-ttu-id="e0987-113">Flags 值可以是一或多個[CorTypeAttr](cortypeattr-enumeration.md)值。</span><span class="sxs-lookup"><span data-stu-id="e0987-113">The flags value can be one or more [CorTypeAttr](cortypeattr-enumeration.md) values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f630-114">需求</span><span class="sxs-lookup"><span data-stu-id="6f630-114">Requirements</span></span>  
- <span data-ttu-id="6f630-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6f630-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0987-114">需求</span><span class="sxs-lookup"><span data-stu-id="e0987-114">Requirements</span></span>  
+ <span data-ttu-id="e0987-115">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e0987-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6f630-116">**標題：** 科爾赫</span><span class="sxs-lookup"><span data-stu-id="6f630-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e0987-116">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="e0987-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6f630-117">**庫：** 用作 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="6f630-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e0987-117">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="e0987-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="6f630-118">**.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f630-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e0987-118">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0987-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f630-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6f630-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0987-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0987-119">See also</span></span>
 
-- [<span data-ttu-id="6f630-120">IMetaDataAssemblyImport 介面</span><span class="sxs-lookup"><span data-stu-id="6f630-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="e0987-120">IMetaDataAssemblyImport 介面</span><span class="sxs-lookup"><span data-stu-id="e0987-120">IMetaDataAssemblyImport Interface</span></span>](imetadataassemblyimport-interface.md)

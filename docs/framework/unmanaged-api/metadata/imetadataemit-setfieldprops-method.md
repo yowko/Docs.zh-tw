@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: b921118f7c43edef3c07cbb34cbbd9119d36ce51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 220556ec130c7bff7c413405820c4fee0582b051
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177557"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008010"
 ---
-# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="367e5-102">IMetaDataEmit::SetFieldProps 方法</span><span class="sxs-lookup"><span data-stu-id="367e5-102">IMetaDataEmit::SetFieldProps Method</span></span>
-<span data-ttu-id="367e5-103">設置或更新指定欄位權杖引用的欄位的預設值。</span><span class="sxs-lookup"><span data-stu-id="367e5-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
+# <a name="imetadataemitsetfieldprops-method"></a><span data-ttu-id="1d311-102">IMetaDataEmit::SetFieldProps 方法</span><span class="sxs-lookup"><span data-stu-id="1d311-102">IMetaDataEmit::SetFieldProps Method</span></span>
+<span data-ttu-id="1d311-103">設定或更新指定欄位標記所參考之欄位的預設值。</span><span class="sxs-lookup"><span data-stu-id="1d311-103">Sets or updates the default value for the field referenced by the specified field token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="367e5-104">語法</span><span class="sxs-lookup"><span data-stu-id="367e5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1d311-104">語法</span><span class="sxs-lookup"><span data-stu-id="1d311-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFieldProps (  
@@ -37,32 +37,32 @@ HRESULT SetFieldProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="367e5-105">參數</span><span class="sxs-lookup"><span data-stu-id="367e5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1d311-105">參數</span><span class="sxs-lookup"><span data-stu-id="1d311-105">Parameters</span></span>  
  `fd`  
- <span data-ttu-id="367e5-106">[在]目標欄位的權杖。</span><span class="sxs-lookup"><span data-stu-id="367e5-106">[in] The token for the target field.</span></span>  
+ <span data-ttu-id="1d311-106">在目標欄位的 token。</span><span class="sxs-lookup"><span data-stu-id="1d311-106">[in] The token for the target field.</span></span>  
   
  `dwFieldFlags`  
- <span data-ttu-id="367e5-107">[在]欄位屬性。</span><span class="sxs-lookup"><span data-stu-id="367e5-107">[in] Field attributes.</span></span> <span data-ttu-id="367e5-108">這是值的`CorFieldAttr`位元遮罩。</span><span class="sxs-lookup"><span data-stu-id="367e5-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
+ <span data-ttu-id="1d311-107">在欄位屬性。</span><span class="sxs-lookup"><span data-stu-id="1d311-107">[in] Field attributes.</span></span> <span data-ttu-id="1d311-108">這是值的位元遮罩 `CorFieldAttr` 。</span><span class="sxs-lookup"><span data-stu-id="1d311-108">This is a bitmask of `CorFieldAttr` values.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="367e5-109">[在]常`ELEMENT_TYPE_`*\** 量值的 。</span><span class="sxs-lookup"><span data-stu-id="367e5-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="367e5-110">這是一個`CorElementType`值。</span><span class="sxs-lookup"><span data-stu-id="367e5-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="367e5-111">如果未定義常量，則將此值設置為`ELEMENT_TYPE_END`。</span><span class="sxs-lookup"><span data-stu-id="367e5-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
+ <span data-ttu-id="1d311-109">在`ELEMENT_TYPE_` *\** 常數值的。</span><span class="sxs-lookup"><span data-stu-id="1d311-109">[in] The `ELEMENT_TYPE_`*\** for the constant value.</span></span> <span data-ttu-id="1d311-110">這是 `CorElementType` 值。</span><span class="sxs-lookup"><span data-stu-id="1d311-110">This is a `CorElementType` value.</span></span> <span data-ttu-id="1d311-111">如果沒有定義常數，請將此值設定為 `ELEMENT_TYPE_END` 。</span><span class="sxs-lookup"><span data-stu-id="1d311-111">If a constant is not being defined, set this value to `ELEMENT_TYPE_END`.</span></span>  
   
  `pValue`  
- <span data-ttu-id="367e5-112">[在]欄位的常量值。</span><span class="sxs-lookup"><span data-stu-id="367e5-112">[in] The constant value for the field.</span></span>  
+ <span data-ttu-id="1d311-112">在欄位的常數值。</span><span class="sxs-lookup"><span data-stu-id="1d311-112">[in] The constant value for the field.</span></span>  
   
  `cchValue`  
- <span data-ttu-id="367e5-113">[在]的大小（以 Unicode 字元表示`pValue`）</span><span class="sxs-lookup"><span data-stu-id="367e5-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
+ <span data-ttu-id="1d311-113">在的大小，以 Unicode 字元為單位 `pValue` 。</span><span class="sxs-lookup"><span data-stu-id="1d311-113">[in] The size, in Unicode characters, of `pValue`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="367e5-114">需求</span><span class="sxs-lookup"><span data-stu-id="367e5-114">Requirements</span></span>  
- <span data-ttu-id="367e5-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="367e5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1d311-114">需求</span><span class="sxs-lookup"><span data-stu-id="1d311-114">Requirements</span></span>  
+ <span data-ttu-id="1d311-115">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1d311-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="367e5-116">**標題：** 科爾赫</span><span class="sxs-lookup"><span data-stu-id="367e5-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1d311-116">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="1d311-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="367e5-117">**庫：** 用作 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="367e5-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1d311-117">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="1d311-117">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="367e5-118">**.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="367e5-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1d311-118">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d311-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="367e5-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="367e5-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1d311-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1d311-119">See also</span></span>
 
-- [<span data-ttu-id="367e5-120">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="367e5-120">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="367e5-121">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="367e5-121">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="1d311-120">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="1d311-120">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="1d311-121">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="1d311-121">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
