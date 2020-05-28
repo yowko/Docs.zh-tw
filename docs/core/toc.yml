@@ -98,11 +98,6 @@
         - name: 對程式庫進行單元測試
           href: tutorials/testing-library-with-visual-studio.md
           displayName: 'tutorials, visual studio, vs'
-        - name: 使用程式庫
-          href: tutorials/consuming-library-with-visual-studio.md
-          displayName: 'tutorials, visual studio, vs'
-        - name: 即時單元測試
-          href: /visualstudio/test/live-unit-testing-start
         - name: 安裝並使用套件
           href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
           displayName: 'tutorials, visual studio, vs'
