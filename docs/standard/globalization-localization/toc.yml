@@ -3,6 +3,8 @@
   items:
     - name: 全球化
       href: globalization.md
+    - name: 全球化與 ICU
+      href: globalization-icu.md
     - name: 當地語系化可行性檢閱
       href: localizability-review.md
     - name: 當地語系化
