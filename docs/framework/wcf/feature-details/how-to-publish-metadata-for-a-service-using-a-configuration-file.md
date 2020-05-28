@@ -2,20 +2,20 @@
 title: HOW TO：使用組態檔發行服務的中繼資料
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 7ea0a2aa386f747b89f56f21d75a97e4409140a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 179ccf97ce4f5e2aa3e132db7e77c93259d5e4ac
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184874"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144938"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a><span data-ttu-id="c0a0d-102">HOW TO：使用組態檔發行服務的中繼資料</span><span class="sxs-lookup"><span data-stu-id="c0a0d-102">How to: Publish Metadata for a Service Using a Configuration File</span></span>
-<span data-ttu-id="c0a0d-103">這是演示 Windows 通信基礎 （WCF） 服務的發佈中繼資料的兩個操作操作主題之一。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-103">This is one of two how-to topics that demonstrate publishing metadata for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="c0a0d-104">有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="c0a0d-105">本主題說明如何使用組態檔發行服務的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-105">This topic shows how to publish metadata for a service using a configuration file.</span></span>  
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a><span data-ttu-id="a98f6-102">HOW TO：使用組態檔發行服務的中繼資料</span><span class="sxs-lookup"><span data-stu-id="a98f6-102">How to: Publish Metadata for a Service Using a Configuration File</span></span>
+<span data-ttu-id="a98f6-103">這是示範發行 Windows Communication Foundation （WCF）服務之中繼資料的兩個 how to 主題之一。</span><span class="sxs-lookup"><span data-stu-id="a98f6-103">This is one of two how-to topics that demonstrate publishing metadata for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="a98f6-104">有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。</span><span class="sxs-lookup"><span data-stu-id="a98f6-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="a98f6-105">本主題說明如何使用組態檔發行服務的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="a98f6-105">This topic shows how to publish metadata for a service using a configuration file.</span></span>  
   
 > [!CAUTION]
-> <span data-ttu-id="c0a0d-106">本主題將示範以不安全的方法發行中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-106">This topic shows how to publish metadata in an unsecure manner.</span></span> <span data-ttu-id="c0a0d-107">任何用戶端都能從服務擷取中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-107">Any client can retrieve the metadata from the service.</span></span> <span data-ttu-id="c0a0d-108">如果需要服務以安全的方式發佈中繼資料，請參閱[自訂安全中繼資料終結點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-108">If you require your service to publish metadata in a secure manner, see [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span></span>  
+> <span data-ttu-id="a98f6-106">本主題將示範以不安全的方法發行中繼資料。</span><span class="sxs-lookup"><span data-stu-id="a98f6-106">This topic shows how to publish metadata in an unsecure manner.</span></span> <span data-ttu-id="a98f6-107">任何用戶端都能從服務擷取中繼資料。</span><span class="sxs-lookup"><span data-stu-id="a98f6-107">Any client can retrieve the metadata from the service.</span></span> <span data-ttu-id="a98f6-108">如果您需要服務以安全的方式發行中繼資料，請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。</span><span class="sxs-lookup"><span data-stu-id="a98f6-108">If you require your service to publish metadata in a secure manner, see [Custom Secure Metadata Endpoint](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).</span></span>  
   
- <span data-ttu-id="c0a0d-109">有關在代碼中發佈中繼資料的詳細資訊，請參閱[：使用代碼發佈服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-109">For more information about publishing metadata in code, see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span> <span data-ttu-id="c0a0d-110">發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-110">Publishing metadata allows clients to retrieve the metadata using a WS-Transfer GET request or an HTTP/GET request using the `?wsdl` query string.</span></span> <span data-ttu-id="c0a0d-111">為了確保代碼正常工作，請創建基本的 WCF 服務。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-111">To be sure that the code is working, create a basic WCF service.</span></span> <span data-ttu-id="c0a0d-112">為了方便使用，下列程式碼提供基本的自我裝載服務。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-112">For simplicity, a basic self-hosted service is provided in the following code.</span></span>  
+ <span data-ttu-id="a98f6-109">如需在程式碼中發行中繼資料的詳細資訊，請參閱[如何：使用程式碼發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。</span><span class="sxs-lookup"><span data-stu-id="a98f6-109">For more information about publishing metadata in code, see [How to: Publish Metadata for a Service Using Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).</span></span> <span data-ttu-id="a98f6-110">發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。</span><span class="sxs-lookup"><span data-stu-id="a98f6-110">Publishing metadata allows clients to retrieve the metadata using a WS-Transfer GET request or an HTTP/GET request using the `?wsdl` query string.</span></span> <span data-ttu-id="a98f6-111">若要確定程式碼是否正常運作，請建立基本的 WCF 服務。</span><span class="sxs-lookup"><span data-stu-id="a98f6-111">To be sure that the code is working, create a basic WCF service.</span></span> <span data-ttu-id="a98f6-112">為了方便使用，下列程式碼提供基本的自我裝載服務。</span><span class="sxs-lookup"><span data-stu-id="a98f6-112">For simplicity, a basic self-hosted service is provided in the following code.</span></span>  
   
 ```csharp  
 using System;  
@@ -71,7 +71,7 @@ namespace Metadata.Samples
 }  
 ```  
   
- <span data-ttu-id="c0a0d-113">此服務是透過組態檔設定的自我裝載服務。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-113">This service is a self-hosted service, which is configured using a configuration file.</span></span> <span data-ttu-id="c0a0d-114">下列組態檔將做為起點。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-114">The following configuration file serves as a starting point.</span></span>  
+ <span data-ttu-id="a98f6-113">此服務是透過組態檔設定的自我裝載服務。</span><span class="sxs-lookup"><span data-stu-id="a98f6-113">This service is a self-hosted service, which is configured using a configuration file.</span></span> <span data-ttu-id="a98f6-114">下列組態檔將做為起點。</span><span class="sxs-lookup"><span data-stu-id="a98f6-114">The following configuration file serves as a starting point.</span></span>  
   
 ```xml  
 <configuration>  
@@ -90,17 +90,17 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a><span data-ttu-id="c0a0d-115">若要使用應用程式組態檔來發行 WCF 服務的中繼資料</span><span class="sxs-lookup"><span data-stu-id="c0a0d-115">To publish metadata for a WCF service using an application configuration file</span></span>  
+### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a><span data-ttu-id="a98f6-115">若要使用應用程式組態檔來發行 WCF 服務的中繼資料</span><span class="sxs-lookup"><span data-stu-id="a98f6-115">To publish metadata for a WCF service using an application configuration file</span></span>  
   
-1. <span data-ttu-id="c0a0d-116">在 App.config 檔案中，於結尾的 `</services>` 項目之後，建立 `<behaviors>` 項目。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-116">Within the App.config file, after the closing `</services>` element, create a `<behaviors>` element.</span></span>  
+1. <span data-ttu-id="a98f6-116">在 App.config 檔案中，於結尾的 `</services>` 項目之後，建立 `<behaviors>` 項目。</span><span class="sxs-lookup"><span data-stu-id="a98f6-116">Within the App.config file, after the closing `</services>` element, create a `<behaviors>` element.</span></span>  
 
-2. <span data-ttu-id="c0a0d-117">在 `<behaviors>` 元素內新增 `<serviceBehaviors>` 元素。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-117">Within the `<behaviors>` element, add a `<serviceBehaviors>` element.</span></span>  
+2. <span data-ttu-id="a98f6-117">在 `<behaviors>` 元素內新增 `<serviceBehaviors>` 元素。</span><span class="sxs-lookup"><span data-stu-id="a98f6-117">Within the `<behaviors>` element, add a `<serviceBehaviors>` element.</span></span>  
 
-3. <span data-ttu-id="c0a0d-118">將 `<behavior>` 項目新增至 `<serviceBehaviors>` 項目，並指定 `name` 項目的  `<behavior>` 屬性值。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-118">Add a `<behavior>` element to the `<serviceBehaviors>` element and specify a value for the `name` attribute of the `<behavior>` element.</span></span>  
+3. <span data-ttu-id="a98f6-118">將 `<behavior>` 項目新增至 `<serviceBehaviors>` 項目，並指定 `name` 項目的  `<behavior>` 屬性值。</span><span class="sxs-lookup"><span data-stu-id="a98f6-118">Add a `<behavior>` element to the `<serviceBehaviors>` element and specify a value for the `name` attribute of the `<behavior>` element.</span></span>  
 
-4. <span data-ttu-id="c0a0d-119">將 `<serviceMetadata>` 項目加入至 `<behavior>` 項目。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-119">Add a `<serviceMetadata>` element to the `<behavior>` element.</span></span> <span data-ttu-id="c0a0d-120">將 `httpGetEnabled` 屬性設為 `true` 並將 `policyVersion` 屬性設為 Policy15。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-120">Set the `httpGetEnabled` attribute to `true` and the `policyVersion` attribute to Policy15.</span></span> <span data-ttu-id="c0a0d-121">`httpGetEnabled` 允許服務回應由 HTTP GET 要求所提出的中繼資料要求。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-121">`httpGetEnabled` allows the service to respond to metadata requests made by an HTTP GET request.</span></span> <span data-ttu-id="c0a0d-122">`policyVersion` 會在產生中繼資料時，要求服務符合 WS-Policy 1.5 規定。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-122">`policyVersion` tells the service to conform to WS-Policy 1.5 when generating metadata.</span></span>  
+4. <span data-ttu-id="a98f6-119">將 `<serviceMetadata>` 項目加入至 `<behavior>` 項目。</span><span class="sxs-lookup"><span data-stu-id="a98f6-119">Add a `<serviceMetadata>` element to the `<behavior>` element.</span></span> <span data-ttu-id="a98f6-120">將 `httpGetEnabled` 屬性設為 `true` 並將 `policyVersion` 屬性設為 Policy15。</span><span class="sxs-lookup"><span data-stu-id="a98f6-120">Set the `httpGetEnabled` attribute to `true` and the `policyVersion` attribute to Policy15.</span></span> <span data-ttu-id="a98f6-121">`httpGetEnabled` 允許服務回應由 HTTP GET 要求所提出的中繼資料要求。</span><span class="sxs-lookup"><span data-stu-id="a98f6-121">`httpGetEnabled` allows the service to respond to metadata requests made by an HTTP GET request.</span></span> <span data-ttu-id="a98f6-122">`policyVersion` 會在產生中繼資料時，要求服務符合 WS-Policy 1.5 規定。</span><span class="sxs-lookup"><span data-stu-id="a98f6-122">`policyVersion` tells the service to conform to WS-Policy 1.5 when generating metadata.</span></span>  
 
-5. <span data-ttu-id="c0a0d-123">將 `behaviorConfiguration` 屬性加入至 `<service>` 項目，並指定 `name` 項目的 `<behavior>` 屬性 (於步驟 1 中加入)，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-123">Add a `behaviorConfiguration` attribute to the `<service>` element and specify the `name` attribute of the `<behavior>` element added in step 1, as shown in the following code example.</span></span>  
+5. <span data-ttu-id="a98f6-123">將 `behaviorConfiguration` 屬性加入至 `<service>` 項目，並指定 `name` 項目的 `<behavior>` 屬性 (於步驟 1 中加入)，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="a98f6-123">Add a `behaviorConfiguration` attribute to the `<service>` element and specify the `name` attribute of the `<behavior>` element added in step 1, as shown in the following code example.</span></span>  
   
     ```xml  
     <services>  
@@ -119,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6. <span data-ttu-id="c0a0d-124">加入一個或多個 `<endpoint>` 項目，並將合約設為 `IMetadataExchange`，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-124">Add one or more `<endpoint>` elements with the contract set to `IMetadataExchange`, as shown in the following code example.</span></span>  
+6. <span data-ttu-id="a98f6-124">加入一個或多個 `<endpoint>` 項目，並將合約設為 `IMetadataExchange`，如下列程式碼範例所示。</span><span class="sxs-lookup"><span data-stu-id="a98f6-124">Add one or more `<endpoint>` elements with the contract set to `IMetadataExchange`, as shown in the following code example.</span></span>  
   
     ```xml  
     <services>  
@@ -138,31 +138,31 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7. <span data-ttu-id="c0a0d-125">針對上一個步驟中加入的中繼資料端點，將 `binding` 屬性設為下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="c0a0d-125">For the metadata endpoints added in the previous step, set the `binding` attribute to one of the following:</span></span>  
+7. <span data-ttu-id="a98f6-125">針對上一個步驟中加入的中繼資料端點，將 `binding` 屬性設為下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="a98f6-125">For the metadata endpoints added in the previous step, set the `binding` attribute to one of the following:</span></span>  
   
-    - <span data-ttu-id="c0a0d-126">`mexHttpBinding` (適用 HTTP 發行)。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-126">`mexHttpBinding` for HTTP publication.</span></span>  
+    - <span data-ttu-id="a98f6-126">`mexHttpBinding` (適用 HTTP 發行)。</span><span class="sxs-lookup"><span data-stu-id="a98f6-126">`mexHttpBinding` for HTTP publication.</span></span>  
   
-    - <span data-ttu-id="c0a0d-127">`mexHttpsBinding` (適用 HTTPS 發行)。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-127">`mexHttpsBinding` for HTTPS publication.</span></span>  
+    - <span data-ttu-id="a98f6-127">`mexHttpsBinding` (適用 HTTPS 發行)。</span><span class="sxs-lookup"><span data-stu-id="a98f6-127">`mexHttpsBinding` for HTTPS publication.</span></span>  
   
-    - <span data-ttu-id="c0a0d-128">`mexNamedPipeBinding` (適用具名管道發行)。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-128">`mexNamedPipeBinding` for named pipe publication.</span></span>  
+    - <span data-ttu-id="a98f6-128">`mexNamedPipeBinding` (適用具名管道發行)。</span><span class="sxs-lookup"><span data-stu-id="a98f6-128">`mexNamedPipeBinding` for named pipe publication.</span></span>  
   
-    - <span data-ttu-id="c0a0d-129">`mexTcpBinding` (適用 TCP 發行)。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-129">`mexTcpBinding` for TCP publication.</span></span>  
+    - <span data-ttu-id="a98f6-129">`mexTcpBinding` (適用 TCP 發行)。</span><span class="sxs-lookup"><span data-stu-id="a98f6-129">`mexTcpBinding` for TCP publication.</span></span>  
   
-8. <span data-ttu-id="c0a0d-130">針對上一個步驟中加入的中繼資料端點，將位址設為與下列項目相等：</span><span class="sxs-lookup"><span data-stu-id="c0a0d-130">For the metadata endpoints added in a previous step, set the address equal to:</span></span>  
+8. <span data-ttu-id="a98f6-130">針對上一個步驟中加入的中繼資料端點，將位址設為與下列項目相等：</span><span class="sxs-lookup"><span data-stu-id="a98f6-130">For the metadata endpoints added in a previous step, set the address equal to:</span></span>  
   
-    - <span data-ttu-id="c0a0d-131">如果基底位址與中繼資料繫結相同，則設定空字串以使用主應用程式的基底位址做為發行點。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-131">An empty string to use the host application's base address as the publication point if the base address is the same as the metadata binding.</span></span>  
+    - <span data-ttu-id="a98f6-131">如果基底位址與中繼資料繫結相同，則設定空字串以使用主應用程式的基底位址做為發行點。</span><span class="sxs-lookup"><span data-stu-id="a98f6-131">An empty string to use the host application's base address as the publication point if the base address is the same as the metadata binding.</span></span>  
   
-    - <span data-ttu-id="c0a0d-132">如果主應用程式具有基底位址，則設為相對位址。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-132">A relative address if the host application has a base address.</span></span>  
+    - <span data-ttu-id="a98f6-132">如果主應用程式具有基底位址，則設為相對位址。</span><span class="sxs-lookup"><span data-stu-id="a98f6-132">A relative address if the host application has a base address.</span></span>  
   
-    - <span data-ttu-id="c0a0d-133">絕對位址。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-133">An absolute address.</span></span>  
+    - <span data-ttu-id="a98f6-133">絕對位址。</span><span class="sxs-lookup"><span data-stu-id="a98f6-133">An absolute address.</span></span>  
   
-9. <span data-ttu-id="c0a0d-134">建置並執行主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-134">Build and run the console application.</span></span>  
+9. <span data-ttu-id="a98f6-134">建置並執行主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="a98f6-134">Build and run the console application.</span></span>  
   
-10. <span data-ttu-id="c0a0d-135">使用 Internet Explorer 流覽到服務的基本位址（http://localhost:8001/MetadataSample在此示例中），並驗證中繼資料發佈是否打開。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-135">Use Internet Explorer to browse to the base address of the service (http://localhost:8001/MetadataSample in this sample) and verify that the metadata publishing is turned on.</span></span> <span data-ttu-id="c0a0d-136">如果沒有的話，結果頁面上方應該會顯示：「為此服務發行的中繼資料目前停用」。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-136">If not, a message at the top of the resulting page displays: "Metadata publishing for this service is currently disabled."</span></span>  
+10. <span data-ttu-id="a98f6-135">使用 Internet Explorer 流覽至服務的基底位址（ `http://localhost:8001/MetadataSample` 在此範例中為），並確認已開啟中繼資料發佈。</span><span class="sxs-lookup"><span data-stu-id="a98f6-135">Use Internet Explorer to browse to the base address of the service (`http://localhost:8001/MetadataSample` in this sample) and verify that the metadata publishing is turned on.</span></span> <span data-ttu-id="a98f6-136">如果沒有的話，結果頁面上方應該會顯示：「為此服務發行的中繼資料目前停用」。</span><span class="sxs-lookup"><span data-stu-id="a98f6-136">If not, a message at the top of the resulting page displays: "Metadata publishing for this service is currently disabled."</span></span>  
   
-### <a name="to-use-default-endpoints"></a><span data-ttu-id="c0a0d-137">若要使用預設端點</span><span class="sxs-lookup"><span data-stu-id="c0a0d-137">To use default endpoints</span></span>  
+### <a name="to-use-default-endpoints"></a><span data-ttu-id="a98f6-137">若要使用預設端點</span><span class="sxs-lookup"><span data-stu-id="a98f6-137">To use default endpoints</span></span>  
   
-1. <span data-ttu-id="c0a0d-138">若要對使用預設端點的服務設定中繼資料，請在組態檔中指定 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> (如上一個範例所示)，但不要指定任何端點。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-138">To configure metadata on a service that uses default endpoints, specify the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in the configuration file as in the previous example, but do not specify any endpoints.</span></span> <span data-ttu-id="c0a0d-139">組態檔如下所示。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-139">The configuration file would then look like this.</span></span>  
+1. <span data-ttu-id="a98f6-138">若要對使用預設端點的服務設定中繼資料，請在組態檔中指定 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> (如上一個範例所示)，但不要指定任何端點。</span><span class="sxs-lookup"><span data-stu-id="a98f6-138">To configure metadata on a service that uses default endpoints, specify the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in the configuration file as in the previous example, but do not specify any endpoints.</span></span> <span data-ttu-id="a98f6-139">組態檔如下所示。</span><span class="sxs-lookup"><span data-stu-id="a98f6-139">The configuration file would then look like this.</span></span>  
   
     ```xml  
     <configuration>  
@@ -179,10 +179,10 @@ namespace Metadata.Samples
     </configuration>  
     ```  
   
-     <span data-ttu-id="c0a0d-140">因為服務有 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 且 `httpGetEnabled` 設為 `true`，服務已經啟用發行中繼資料，但是因為沒有明確加入端點，所以執行階段加入預設端點。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-140">Because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> with the `httpGetEnabled` set to `true`, the service has publishing metadata enabled, and because no endpoints were explicitly added, the runtime adds the default endpoints.</span></span> <span data-ttu-id="c0a0d-141">如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服務的簡化組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-141">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
+     <span data-ttu-id="a98f6-140">因為服務有 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 且 `httpGetEnabled` 設為 `true`，服務已經啟用發行中繼資料，但是因為沒有明確加入端點，所以執行階段加入預設端點。</span><span class="sxs-lookup"><span data-stu-id="a98f6-140">Because the service has a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> with the `httpGetEnabled` set to `true`, the service has publishing metadata enabled, and because no endpoints were explicitly added, the runtime adds the default endpoints.</span></span> <span data-ttu-id="a98f6-141">如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服務的簡化組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。</span><span class="sxs-lookup"><span data-stu-id="a98f6-141">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c0a0d-142">範例</span><span class="sxs-lookup"><span data-stu-id="c0a0d-142">Example</span></span>  
- <span data-ttu-id="c0a0d-143">以下代碼示例顯示了基本 WCF 服務的實現以及發佈服務中繼資料的設定檔。</span><span class="sxs-lookup"><span data-stu-id="c0a0d-143">The following code example shows the implementation of a basic WCF service and the configuration file that publishes metadata for the service.</span></span>  
+## <a name="example"></a><span data-ttu-id="a98f6-142">範例</span><span class="sxs-lookup"><span data-stu-id="a98f6-142">Example</span></span>  
+ <span data-ttu-id="a98f6-143">下列程式碼範例示範如何執行基本 WCF 服務，以及發行服務中繼資料的設定檔。</span><span class="sxs-lookup"><span data-stu-id="a98f6-143">The following code example shows the implementation of a basic WCF service and the configuration file that publishes metadata for the service.</span></span>  
   
 ```csharp  
 using System;  
@@ -253,11 +253,11 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c0a0d-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0a0d-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a98f6-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a98f6-144">See also</span></span>
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [<span data-ttu-id="c0a0d-145">如何：於受管理的應用程式中裝載 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="c0a0d-145">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [<span data-ttu-id="c0a0d-146">自我裝載</span><span class="sxs-lookup"><span data-stu-id="c0a0d-146">Self-Host</span></span>](../../../../docs/framework/wcf/samples/self-host.md)
-- [<span data-ttu-id="c0a0d-147">中繼資料架構概觀</span><span class="sxs-lookup"><span data-stu-id="c0a0d-147">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [<span data-ttu-id="c0a0d-148">使用中繼資料</span><span class="sxs-lookup"><span data-stu-id="c0a0d-148">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [<span data-ttu-id="c0a0d-149">HOW TO：使用程式碼發行服務的中繼資料</span><span class="sxs-lookup"><span data-stu-id="c0a0d-149">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [<span data-ttu-id="a98f6-145">如何：於受管理的應用程式中裝載 WCF 服務</span><span class="sxs-lookup"><span data-stu-id="a98f6-145">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [<span data-ttu-id="a98f6-146">自我裝載</span><span class="sxs-lookup"><span data-stu-id="a98f6-146">Self-Host</span></span>](../../../../docs/framework/wcf/samples/self-host.md)
+- [<span data-ttu-id="a98f6-147">中繼資料架構概觀</span><span class="sxs-lookup"><span data-stu-id="a98f6-147">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+- [<span data-ttu-id="a98f6-148">使用中繼資料</span><span class="sxs-lookup"><span data-stu-id="a98f6-148">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [<span data-ttu-id="a98f6-149">HOW TO：使用程式碼發行服務的中繼資料</span><span class="sxs-lookup"><span data-stu-id="a98f6-149">How to: Publish Metadata for a Service Using Code</span></span>](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
