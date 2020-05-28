@@ -2,12 +2,12 @@
 title: .NET Core for Desktop 有哪些新功能？
 description: 瞭解 .NET Core、.NET Core 和 .NET Framework 之間的差異，以及已新增的新功能。
 ms.date: 05/12/2020
-ms.openlocfilehash: 9ec4f3002dc9d9ea80fd2b6db8095930867a5c65
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b4fc0cb2841fe13b000223aefc5eaf63bd911994
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423261"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144260"
 ---
 # <a name="whats-new-with-net-core-for-desktop"></a>.NET Core for Desktop 有哪些新功能？
 
@@ -19,7 +19,7 @@ ms.locfileid: "83423261"
 
 如果您的目標只是其中一個平臺，您可以使用此模型。 不過，在許多情況下，您可能需要在相同的方案中有一個以上的目標平臺。 例如，您的應用程式可能會有桌面系統管理部分，也就是客戶面向的網站，它會共用在伺服器上執行的後端邏輯，甚至是行動用戶端。 在這種情況下，您需要統一的程式碼撰寫經驗，以橫跨所有此 .NET 縱向。
 
-在 Windows 8 發行時，可移植的類別庫（Pcl）的概念已出生。 一開始，.NET Framework 的設計是假設它一律會部署為單一單位[，因此不](http://en.wikipedia.org/wiki/Decomposition_(computer_science))會有任何顧慮。 為了面對各種中間程式碼共用的問題，駕駛力是關於如何重構架構。 合約的概念是提供一個妥善要素的 API 介面區。 合約只是您針對編譯的元件，並以適當的分解來設計，以負責處理它們之間的相依性。
+在 Windows 8 發行時，可移植的類別庫（Pcl）的概念已出生。 一開始，.NET Framework 的設計是假設它一律會部署為單一單位[，因此不](https://wikipedia.org/wiki/Decomposition_(computer_science))會有任何顧慮。 為了面對各種中間程式碼共用的問題，駕駛力是關於如何重構架構。 合約的概念是提供一個妥善要素的 API 介面區。 合約只是您針對編譯的元件，並以適當的分解來設計，以負責處理它們之間的相依性。
 
 這會導致在元件層級的各個領域之間的 API 差異，而不是我們之前所用的個別 API 層級。 這個層面啟用了可鎖定多個縱向（也稱為可移植類別庫）的類別庫體驗。
 

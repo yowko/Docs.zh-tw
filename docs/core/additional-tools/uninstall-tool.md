@@ -2,17 +2,17 @@
 title: 卸載工具
 description: 概述 .NET Core 卸載工具，這是一個引導式工具，可讓您控制 .NET Core Sdk 和執行時間的清理。
 author: sfoslund
-ms.date: 01/06/2020
-ms.openlocfilehash: 45cf0841391d02636770e98666e2897d2598fab4
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.date: 05/27/2020
+ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595711"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144509"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 解除安裝工具
 
-[.Net core 卸載工具](https://aka.ms/dotnet-core-uninstall-tool)（`dotnet-core-uninstall`）可讓您從系統中移除 .net Core sdk 和執行時間。 有一組選項可用來指定您要卸載的版本。
+[.Net Core 卸載工具](https://aka.ms/dotnet-core-uninstall-tool)（ `dotnet-core-uninstall` ）可讓您從系統中移除 .net Core sdk 和執行時間。 有一組選項可用來指定您要卸載的版本。
 
 此工具支援 Windows 和 macOS。 目前不支援 Linux。
 
@@ -23,7 +23,7 @@ ms.locfileid: "82595711"
 
 在 macOS 上，此工具只能卸載位於 */usr/local/share/dotnet*資料夾中的 sdk 和執行時間。
 
-基於這些限制，此工具可能無法卸載您電腦上的所有 .NET Core Sdk 和執行時間。 您可以使用`dotnet --info`命令來尋找已安裝的所有 .Net Core sdk 和執行時間，包括此工具無法移除的 sdk 和執行時間。 `dotnet-core-uninstall list`命令會顯示哪些 sdk 可以使用工具卸載。
+基於這些限制，此工具可能無法卸載您電腦上的所有 .NET Core Sdk 和執行時間。 您可以使用 `dotnet --info` 命令來尋找已安裝的所有 .Net Core sdk 和執行時間，包括此工具無法移除的 sdk 和執行時間。 `dotnet-core-uninstall list`命令會顯示哪些 sdk 可以使用工具卸載。
 
 ## <a name="install-the-tool"></a>安裝工具
 
@@ -43,10 +43,10 @@ ms.locfileid: "82595711"
 
 ### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a>步驟 1-顯示已安裝的 .NET Core Sdk 和執行時間
 
-此`dotnet-core-uninstall list`命令會列出已安裝的 .Net Core sdk 和可使用此工具移除的執行時間。 Visual Studio 可能需要一些 Sdk 和執行時間，而且會顯示不建議將它們卸載的原因。
+此 `dotnet-core-uninstall list` 命令會列出已安裝的 .Net Core sdk 和可使用此工具移除的執行時間。 Visual Studio 可能需要一些 Sdk 和執行時間，而且會顯示不建議將它們卸載的原因。
 
 > [!NOTE]
-> 在大部分情況下`dotnet-core-uninstall list` ，命令的輸出不會符合輸出中已安裝的版本清單。 `dotnet --info` 具體而言，此工具不會顯示 zip 檔案所安裝或受 Visual Studio 管理的版本（任何以 Visual Studio 2019 16.3 或更新版本安裝的版本）。 檢查版本是否由 Visual Studio 管理的其中一種方式是在中`Add or Remove Programs`加以查看，其中 Visual Studio 的受控版本會在其顯示名稱中標示為。
+> `dotnet-core-uninstall list`在大部分情況下，命令的輸出不會符合輸出中已安裝的版本清單 `dotnet --info` 。 具體而言，此工具不會顯示 zip 檔案所安裝或受 Visual Studio 管理的版本（任何以 Visual Studio 2019 16.3 或更新版本安裝的版本）。 檢查版本是否由 Visual Studio 管理的其中一種方式是在中加以查看 `Add or Remove Programs` ，其中 Visual Studio 的受控版本會在其顯示名稱中標示為。
 
 **dotnet-核心-卸載清單**
 
@@ -56,7 +56,7 @@ ms.locfileid: "82595711"
 dotnet-core-uninstall list [options]
 ```
 
-#### <a name="options"></a>選項。
+#### <a name="options"></a>選項
 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
@@ -66,7 +66,7 @@ dotnet-core-uninstall list [options]
 
 * **`--hosting-bundle`**
 
-  列出所有可使用此工具卸載的 .NET Core 執行時間和裝載套件組合。
+  列出所有可使用此工具卸載的 .NET Core 裝載套件組合。
 
 * **`--runtime`**
 
@@ -126,7 +126,7 @@ dotnet-core-uninstall list [options]
 
 ### <a name="step-2---do-a-dry-run"></a>步驟 2-進行試執行
 
-`dotnet-core-uninstall dry-run`和`dotnet-core-uninstall whatif`命令會顯示 .net Core sdk 和執行時間，將會根據所提供的選項而移除，而不需執行卸載。 這些命令是同義字。
+`dotnet-core-uninstall dry-run`和 `dotnet-core-uninstall whatif` 命令會顯示 .Net Core sdk 和執行時間，將會根據所提供的選項而移除，而不需執行卸載。 這些命令是同義字。
 
 **dotnet-核心-卸載試執行和 dotnet-核心-卸載 whatif**
 
@@ -146,10 +146,10 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   > [!TIP]
   > 回應檔案是將所有版本放在命令列上的替代方案。
-  > 它們是文字檔，通常\*副檔名為 .rsp，而每個版本都會列在個別的一行上。
-  > 若要指定`VERSION`引數的回應檔，請使用\@緊接在回應檔名稱後面的字元。
+  > 它們是文字檔，通常 \* 副檔名為 .rsp，而每個版本都會列在個別的一行上。
+  > 若要指定引數的回應檔 `VERSION` ，請使用 \@ 緊接在回應檔名稱後面的字元。
 
-#### <a name="options"></a>選項。
+#### <a name="options"></a>選項
 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
@@ -191,7 +191,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  移除符合指定`major.minor`版本的 .Net Core sdk 和執行時間。
+  移除符合指定版本的 .NET Core Sdk 和執行時間 `major.minor` 。
 
 * **`--runtime`**
 
@@ -207,19 +207,19 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--x64`**
 
-  必須搭配`--sdk`、和`--runtime` `--aspnet-runtime`使用，才能移除 x64 sdk 或執行時間。
+  必須搭配 `--sdk` 、和使用， `--runtime` `--aspnet-runtime` 才能移除 x64 sdk 或執行時間。
 
 * **`--x86`**
 
-  必須搭配`--sdk`、和`--runtime` `--aspnet-runtime`使用，才能移除 x86 sdk 或執行時間。
+  必須搭配 `--sdk` 、和使用， `--runtime` `--aspnet-runtime` 才能移除 x86 sdk 或執行時間。
 
 * **`--force`** 強制移除 Visual Studio 可能使用的版本。
 
 注意：
 
-1. 只需要`--sdk`、 `--runtime`、 `--aspnet-runtime`和`--hosting-bundle`其中一個。
-2. `--all`、 `--all-below`、 `--all-but`、 `--all-but-latest`、 `--all-lower-patches`、 `--all-previews` `--all-previews-but-latest`、、和`[<VERSION>...]`是獨佔的。 `--major-minor`
-3. 如果`--x64`未`--x86`指定或，則會移除 x64 和 x86。
+1. 只 `--sdk` `--runtime` 需要、、 `--aspnet-runtime` 和 `--hosting-bundle` 其中一個。
+2. `--all`、 `--all-below` 、 `--all-but` 、 `--all-but-latest` 、 `--all-lower-patches` 、、、 `--all-previews` `--all-previews-but-latest` `--major-minor` 和 `[<VERSION>...]` 是獨佔的。
+3. 如果 `--x64` `--x86` 未指定或，則會移除 x64 和 x86。
 
 ## <a name="macos"></a>[macOS](#tab/macos)
 
@@ -253,7 +253,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  移除符合指定`major.minor`版本的 .Net Core sdk 和執行時間。
+  移除符合指定版本的 .NET Core Sdk 和執行時間 `major.minor` 。
 
 * **`--runtime`**
 
@@ -271,15 +271,15 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 注意：
 
-1. 只有其中一個`--sdk`和`--runtime`是必要的。
-2. `--all`、 `--all-below`、 `--all-but`、 `--all-but-latest`、 `--all-lower-patches`、 `--all-previews` `--all-previews-but-latest`、、和`[<VERSION>...]`是獨佔的。 `--major-minor`
+1. 只有其中一個 `--sdk` 和 `--runtime` 是必要的。
+2. `--all`、 `--all-below` 、 `--all-but` 、 `--all-but-latest` 、 `--all-lower-patches` 、、、 `--all-previews` `--all-previews-but-latest` `--major-minor` 和 `[<VERSION>...]` 是獨佔的。
 
 ---
 
 #### <a name="examples"></a>範例
 
 > [!NOTE]
-> 根據預設，Visual Studio 或其他 Sdk 可能需要的 .NET Core Sdk 和執行時間不會包含在輸出`dotnet-core-uninstall dry-run`中。 在下列範例中，某些指定的 Sdk 和執行時間可能不會包含在輸出中，視電腦的狀態而定。 若要包含所有 Sdk 和執行時間，請將它們明確列出為`--force`引數或使用選項。
+> 根據預設，Visual Studio 或其他 Sdk 可能需要的 .NET Core Sdk 和執行時間不會包含在 `dotnet-core-uninstall dry-run` 輸出中。 在下列範例中，某些指定的 Sdk 和執行時間可能不會包含在輸出中，視電腦的狀態而定。 若要包含所有 Sdk 和執行時間，請將它們明確列出為引數或使用 `--force` 選項。
 
 * 試執行移除所有已被較高修補程式取代的 .NET Core 執行時間：
 
@@ -287,7 +287,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
   dotnet-core-uninstall dry-run --all-lower-patches --runtime
   ```
 
-* 在版本`2.2.301`下方移除所有 .Net Core sdk 的試執行：
+* 在版本下方移除所有 .NET Core Sdk 的試執行 `2.2.301` ：
 
   ```console
   dotnet-core-uninstall whatif --all-below 2.2.301 --sdk
@@ -297,18 +297,18 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 `dotnet-core-uninstall remove`卸載選項組合所指定的 .NET Core Sdk 和執行時間。 此工具無法用來卸載版本5.0 或更高版本的 Sdk 和執行時間。
 
-由於此工具具有破壞性的行為，因此**強烈**建議您在執行 [移除] 命令之前先進行試執行。 試執行會顯示當您使用`remove`命令時，將會移除哪些 .Net Core sdk 和執行時間。 請參閱[我應該移除版本嗎？](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)以瞭解哪些 sdk 和執行時間可以安全地移除。
+由於此工具具有破壞性的行為，因此**強烈**建議您在執行 [移除] 命令之前先進行試執行。 試執行會顯示當您使用命令時，將會移除哪些 .NET Core Sdk 和執行時間 `remove` 。 請參閱[我應該移除版本嗎？](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)以瞭解哪些 sdk 和執行時間可以安全地移除。
 
 > [!CAUTION]
 > 請記住下列注意事項：
 >
->- 這項工具可以卸載電腦上的檔案所需`global.json`的 .NET Core SDK 版本。 您可以從[下載 .Net core](https://dotnet.microsoft.com/download/dotnet-core)頁面重新安裝 .Net core sdk。
+>- 這項工具可以卸載電腦上的檔案所需的 .NET Core SDK 版本 `global.json` 。 您可以從[下載 .Net core](https://dotnet.microsoft.com/download/dotnet-core)頁面重新安裝 .Net core sdk。
 >- 這項工具可以卸載電腦上架構相依應用程式所需的 .NET Core 執行階段版本。 您可以從 [[下載 .Net core](https://dotnet.microsoft.com/download/dotnet-core) ] 頁面重新安裝 .net core 執行時間。
 >- 這項工具可以卸載 Visual Studio 依賴之 .NET Core SDK 和執行時間的版本。 如果您中斷 Visual Studio 安裝，請在 Visual Studio 安裝程式中執行 [修復]，以回到作用中狀態。
 
-根據預設，所有命令都會保留 Visual Studio 或其他 Sdk 可能需要的 .NET Core Sdk 和執行時間。 這些 Sdk 和執行時間可以藉由將它們明確地列為引數或使用`--force`選項來進行卸載。
+根據預設，所有命令都會保留 Visual Studio 或其他 Sdk 可能需要的 .NET Core Sdk 和執行時間。 這些 Sdk 和執行時間可以藉由將它們明確地列為引數或使用選項來進行卸載 `--force` 。
 
-此工具需要提高許可權，才能卸載 .NET Core Sdk 和執行時間。 在 Windows 上的系統管理員命令提示字元中，以及`sudo`在 macOS 上執行工具。 `dry-run`和`whatif`命令不需要提高許可權。
+此工具需要提高許可權，才能卸載 .NET Core Sdk 和執行時間。 在 Windows 上的系統管理員命令提示字元中，以及 `sudo` 在 macOS 上執行工具。 `dry-run`和 `whatif` 命令不需要提高許可權。
 
 **dotnet-核心-卸載移除**
 
@@ -326,10 +326,10 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   > [!TIP]
   > 回應檔案是將所有版本放在命令列上的替代方案。
-  > 它們是文字檔，通常\*副檔名為 .rsp，而每個版本都會列在個別的一行上。
-  > 若要指定`VERSION`引數的回應檔，請使用\@緊接在回應檔名稱後面的字元。
+  > 它們是文字檔，通常 \* 副檔名為 .rsp，而每個版本都會列在個別的一行上。
+  > 若要指定引數的回應檔 `VERSION` ，請使用 \@ 緊接在回應檔名稱後面的字元。
 
-#### <a name="options"></a>選項。
+#### <a name="options"></a>選項
 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
@@ -371,7 +371,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  移除符合指定`major.minor`版本的 .Net Core sdk 和執行時間。
+  移除符合指定版本的 .NET Core Sdk 和執行時間 `major.minor` 。
 
 * **`--runtime`**
 
@@ -387,11 +387,11 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--x64`**
 
-  必須搭配`--sdk`、和`--runtime` `--aspnet-runtime`使用，才能移除 x64 sdk 或執行時間。
+  必須搭配 `--sdk` 、和使用， `--runtime` `--aspnet-runtime` 才能移除 x64 sdk 或執行時間。
 
 * **`--x86`**
 
-  必須搭配`--sdk`、和`--runtime` `--aspnet-runtime`使用，才能移除 x86 sdk 或執行時間。
+  必須搭配 `--sdk` 、和使用， `--runtime` `--aspnet-runtime` 才能移除 x86 sdk 或執行時間。
 
 * **`-y, --yes`** 執行命令，而不需要有 [是] 或 [否] 確認。
 
@@ -399,9 +399,9 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 注意：
 
-1. 只需要`--sdk`、 `--runtime`、 `--aspnet-runtime`和`--hosting-bundle`其中一個。
-2. `--all`、 `--all-below`、 `--all-but`、 `--all-but-latest`、 `--all-lower-patches`、 `--all-previews` `--all-previews-but-latest`、、和`[<VERSION>...]`是獨佔的。 `--major-minor`
-3. 如果`--x64`未`--x86`指定或，則會移除 x64 和 x86。
+1. 只 `--sdk` `--runtime` 需要、、 `--aspnet-runtime` 和 `--hosting-bundle` 其中一個。
+2. `--all`、 `--all-below` 、 `--all-but` 、 `--all-but-latest` 、 `--all-lower-patches` 、、、 `--all-previews` `--all-previews-but-latest` `--major-minor` 和 `[<VERSION>...]` 是獨佔的。
+3. 如果 `--x64` `--x86` 未指定或，則會移除 x64 和 x86。
 
 ## <a name="macos"></a>[macOS](#tab/macos)
 
@@ -435,7 +435,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--major-minor <MAJOR_MINOR>`**
 
-  移除符合指定`major.minor`版本的 .Net Core sdk 和執行時間。
+  移除符合指定版本的 .NET Core Sdk 和執行時間 `major.minor` 。
 
 * **`--runtime`**
 
@@ -455,17 +455,17 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 注意：
 
-1. 只有其中一個`--sdk`和`--runtime`是必要的。
-2. `--all`、 `--all-below`、 `--all-but`、 `--all-but-latest`、 `--all-lower-patches`、 `--all-previews` `--all-previews-but-latest`、、和`[<VERSION>...]`是獨佔的。 `--major-minor`
+1. 只有其中一個 `--sdk` 和 `--runtime` 是必要的。
+2. `--all`、 `--all-below` 、 `--all-but` 、 `--all-but-latest` 、 `--all-lower-patches` 、、、 `--all-previews` `--all-previews-but-latest` `--major-minor` 和 `[<VERSION>...]` 是獨佔的。
 
 ---
 
 #### <a name="examples"></a>範例
 
 > [!NOTE]
-> 根據預設，Visual Studio 或其他 Sdk 可能需要的 .NET Core Sdk 和執行時間會保留下來。 在下列範例中，某些指定的 Sdk 和執行時間可能會保留，視電腦的狀態而定。 若要移除所有 Sdk 和執行時間，請將它們明確列出為`--force`引數或使用選項。
+> 根據預設，Visual Studio 或其他 Sdk 可能需要的 .NET Core Sdk 和執行時間會保留下來。 在下列範例中，某些指定的 Sdk 和執行時間可能會保留，視電腦的狀態而定。 若要移除所有 Sdk 和執行時間，請將它們明確列出為引數或使用 `--force` 選項。
 
-* 移除版本`3.0.0-preview6-27804-01`除外的所有 .net Core 執行時間，而不需要進行 Y/N 確認：
+* 移除版本除外的所有 .NET Core 執行時間， `3.0.0-preview6-27804-01` 而不需要進行 Y/N 確認：
 
   ```console
   dotnet-core-uninstall remove --all-but 3.0.0-preview6-27804-01 --runtime --yes
@@ -510,7 +510,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 ### <a name="step-4---delete-the-nuget-fallback-folder-optional"></a>步驟 4-刪除 NuGet fallback 資料夾（選擇性）
 
-在某些情況下，您不再需要， `NuGetFallbackFolder`而且可能想要將它刪除。 如需刪除此資料夾的詳細資訊，請參閱[移除 NuGetFallbackFolder](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder)。
+在某些情況下，您不再需要， `NuGetFallbackFolder` 而且可能想要將它刪除。 如需刪除此資料夾的詳細資訊，請參閱[移除 NuGetFallbackFolder](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder)。
 
 ## <a name="uninstall-the-tool"></a>卸載工具
 

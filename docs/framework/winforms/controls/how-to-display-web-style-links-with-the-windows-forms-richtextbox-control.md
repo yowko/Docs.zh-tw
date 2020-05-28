@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 78a07a250744018f121b03f2973b1661ed6bf764
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 06ed304e566bb437a2353dd330d7de5328f2a729
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745536"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144821"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows Form RichTextBox 控制項顯示 Web 樣式連結
 
@@ -23,18 +23,18 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以將網頁�
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>若要使用 RichTextBox 控制項連結至網頁
 
-1. 將 <xref:System.Windows.Forms.RichTextBox.Text%2A> 屬性設定為包含有效 URL 的字串（例如，"http://www.microsoft.com/"）。
+1. 將 <xref:System.Windows.Forms.RichTextBox.Text%2A> 屬性設定為包含有效 URL 的字串（例如，" https://www.microsoft.com/ "）。
 
-2. 請確定 <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 屬性設定為 [`true`] （預設值）。
+2. 請確定 <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> 屬性設定為 `true` （預設值）。
 
-3. 建立 <xref:System.Diagnostics.Process> 物件的新全域實例。
+3. 建立物件的新全域實例 <xref:System.Diagnostics.Process> 。
 
-4. 撰寫 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 事件的事件處理常式，以傳送所需的文字給瀏覽器。
+4. 撰寫事件的事件處理常式，以傳送所 <xref:System.Windows.Forms.RichTextBox.LinkClicked> 需的文字給瀏覽器。
 
-    在下列範例中，<xref:System.Windows.Forms.RichTextBox.LinkClicked> 事件會將 Internet Explorer 的實例開啟至 <xref:System.Windows.Forms.RichTextBox> 控制項的 <xref:System.Windows.Forms.RichTextBox.Text%2A> 屬性中所指定的 URL。 這個範例假設有一個表單具有 <xref:System.Windows.Forms.RichTextBox> 控制項。
+    在下列範例中， <xref:System.Windows.Forms.RichTextBox.LinkClicked> 事件會將 Internet Explorer 的實例開啟至控制項的屬性中所指定的 URL <xref:System.Windows.Forms.RichTextBox.Text%2A> <xref:System.Windows.Forms.RichTextBox> 。 這個範例假設有一個表單具有 <xref:System.Windows.Forms.RichTextBox> 控制項。
 
     > [!IMPORTANT]
-    > 在呼叫 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 方法時，如果您因為許可權不足而在部分信任內容中執行程式碼，就會遇到 <xref:System.Security.SecurityException> 例外狀況。 如需詳細資訊，請參閱 [Code Access Security Basics](../../misc/code-access-security-basics.md)。
+    > 在呼叫 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> 方法時， <xref:System.Security.SecurityException> 如果您因為許可權不足而在部分信任內容中執行程式碼，就會發生例外狀況。 如需詳細資訊，請參閱 [Code Access Security Basics](../../misc/code-access-security-basics.md)。
 
     ```vb
     Public p As New System.Diagnostics.Process
@@ -75,13 +75,13 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以將網頁�
        }
     ```
 
-    （視覺C++效果）您必須初始化進程 `p`，您可以在表單的函式中包含下列語句來執行此作業：
+    （Visual C++）您必須初始化處理 `p` 程式，方法是在表單的函式中包含下列語句：
 
     ```cpp
     p = gcnew System::Diagnostics::Process();
     ```
 
-    （視覺C#效果， C++視覺效果）將下列程式碼放在表單的函式中，以註冊事件處理常式。
+    （Visual c #、Visual C++）將下列程式碼放在表單的函式中，以註冊事件處理常式。
 
     ```csharp
     this.richTextBox1.LinkClicked += new
@@ -123,4 +123,4 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以將網頁�
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

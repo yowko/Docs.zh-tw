@@ -2,12 +2,12 @@
 title: 探索安全性範例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: c6ec9b7e13234b7dae03541eb09ccba98f4cc93a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728412"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144899"
 ---
 # <a name="discovery-security-sample"></a>探索安全性範例
 
@@ -38,7 +38,7 @@ ms.locfileid: "82728412"
 > [!NOTE]
 > `PrefixList` 會在 2008 探索版本通訊協定中加入。  
   
- 為計算簽章，此範例決定展開的簽章項目。 XML 簽章 (`SignedInfo`) 會使用 WS-Discovery 規格所要求的 `ds` 命名空間前置詞建立。 探索與定址命名空間中的本文和所有標頭都會在簽章中參考，因此無法進行竄改。 每個參考的專案都會使用專屬的標準化http://www.w3.org/2001/10/xml-exc-c14n# （）進行轉換，然後再計算 sha-1 摘要值（http://www.w3.org/2000/09/xmldsig#sha1 ）。 根據所有參考的元素及其摘要值，會使用 RSA 演算法（http://www.w3.org/2000/09/xmldsig#rsa-sha1 ）來計算簽章值。  
+ 為計算簽章，此範例決定展開的簽章項目。 XML 簽章 (`SignedInfo`) 會使用 WS-Discovery 規格所要求的 `ds` 命名空間前置詞建立。 探索與定址命名空間中的本文和所有標頭都會在簽章中參考，因此無法進行竄改。 每個參考的專案都會使用專屬的標準化（）進行轉換 <http://www.w3.org/2001/10/xml-exc-c14n#> ，然後再計算 sha-1 摘要值（ <http://www.w3.org/2000/09/xmldsig#sha1> ）。 根據所有參考的元素及其摘要值，會使用 RSA 演算法（）來計算簽章值 <http://www.w3.org/2000/09/xmldsig#rsa-sha1> 。  
   
  訊息會使用用戶端指定的憑證簽署。 建立繫結項目時，必須指定存放區位置、名稱和憑證主體名稱。 精簡簽章中的 `KeyId` 表示簽章權杖的金鑰識別碼，而且是簽署權杖的主體金鑰識別碼 (SKI)，或 (如果 SKI 不存在) 簽署權杖公開金鑰的 SHA-1 雜湊。  
   
@@ -72,6 +72,6 @@ ms.locfileid: "82728412"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf） [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

@@ -2,12 +2,12 @@
 title: 基類庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 09/20/2019
-ms.openlocfilehash: ca50123b842c256607d47010dbef9b216ece4661
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 45de0f0d418437cf1677c9a8c7cfc9b6c33a24ef
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420421"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144472"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -18,6 +18,7 @@ ms.locfileid: "83420421"
 | 重大變更 | 引進的版本 |
 | - | :-: |
 | [SSE 和 SSE2 CompareGreaterThan 方法會適當地處理 NaN 輸入](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
+| [如果實例已經存在，CreateCounterSetInstance 現在會擲回 InvalidOperationException](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
 | [報告版本的 Api 現在會報告產品，而不是檔案版本](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
 | [自訂 EncoderFallbackBuffer 實例無法遞迴切換](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
 | [浮點格式設定和剖析行為變更](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
@@ -43,6 +44,10 @@ ms.locfileid: "83420421"
 ## <a name="net-50"></a>.NET 5。0
 
 [!INCLUDE [sse-comparegreaterthan-intrinsics](../../../includes/core-changes/corefx/5.0/sse-comparegreaterthan-intrinsics.md)]
+
+***
+
+[!INCLUDE [createcountersetinstance-throws-invalidoperation](../../../includes/core-changes/corefx/5.0/createcountersetinstance-throws-invalidoperation.md)]
 
 ***
 

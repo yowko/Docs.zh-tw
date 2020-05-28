@@ -2,20 +2,20 @@
 title: UriTemplate 與 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: da34753867db17fd8ea1bd36bc705b3518d6d650
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2742217cb082f5c0354510a7e66818bafd6f1393
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976014"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144691"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
-Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 Windows Communication Foundation （WCF）新增兩個新類別，讓開發人員可以控制其 Uri。 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 形成 WCF 中以 URI 為基礎之分派引擎的基礎。 這些類別也可以單獨使用，讓開發人員能夠利用範本和 URI 對應機制，而不需要執行 WCF 服務。  
+Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 Windows Communication Foundation （WCF）新增兩個新類別，讓開發人員可以控制其 Uri。 <xref:System.UriTemplate>和會 <xref:System.UriTemplateTable> 形成 WCF 中以 URI 為基礎的分派引擎的基礎。 這些類別也可以單獨使用，讓開發人員能夠利用範本和 URI 對應機制，而不需要執行 WCF 服務。  
   
 ## <a name="templates"></a>範本  
  範本提供了一種用來描述相對 URI 集合的方式。 下表中的 URI 範本集將說明如何定義負責擷取各種氣象資訊型別的系統。  
   
-|資料|範本|  
+|資料|[範本]|  
 |----------|--------------|  
 |國內趨勢預測|weather/national|  
 |各州趨勢預測|weather/{state}|  
@@ -42,15 +42,15 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
   
  <xref:System.UriTemplate> 的設計即是可與符合 HTTP URI 文法的任何 URI 配置搭配使用。 以下是支援的 URI 配置範例：  
   
-- http://  
+- `http://`  
   
-- https://  
+- `https://`  
   
-- net.tcp://  
+- `net.tcp://`  
   
-- net.pipe://  
+- `net.pipe://`  
   
-- sb://  
+- `sb://`  
   
  如 file:// 及 urn:// 的配置並不符合 HTTP URI 文法，若搭配 URI 範本使用，會造成無法預期的結果。  
   
@@ -61,7 +61,7 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
   
  路徑包含 "/weather/{state}/{city}"，查詢包含 "?forecast={length}，而片段則包含 "#frag1"。  
   
- 路徑運算式中的前置與句尾斜線是選用的， 查詢與片段運算式可以全部省略掉。 路徑由一系列以 '/' 分隔的區段組成，每個區段都可以有常值、變數名稱（以 {大括弧} 寫入）或萬用字元（以 '\*' 撰寫）。 在先前的範本中，"\weather\ 片段是一個常值，而 "{state}" 與 "{city}" 則是變數。 變數會從其大括弧的內容中取出其名稱，之後可以用具體的值取代，以建立*封閉 URI*。 萬用字元是選擇性的，但只能出現在 URI 的結尾，它會以邏輯方式符合「其餘的路徑」。  
+ 路徑運算式中的前置與句尾斜線是選用的， 查詢與片段運算式可以全部省略掉。 路徑是由一系列以 '/' 分隔的區段所組成，而每個區段都可以有常值、變數名稱（以 {大括弧} 寫入）或萬用字元（以 ' \* ' 撰寫）。 在先前的範本中，"\weather\ 片段是一個常值，而 "{state}" 與 "{city}" 則是變數。 變數會從其大括弧的內容中取出其名稱，之後可以用具體的值取代，以建立*封閉 URI*。 萬用字元是選擇性的，但只能出現在 URI 的結尾，它會以邏輯方式符合「其餘的路徑」。  
   
  查詢運算式（如果有的話）會指定以 ' & ' 分隔的一系列未排序的名稱/值配對。 查詢運算式的項目可以是一組常值 (x=2) 或是一組變數 (x={var})。 只有查詢運算式的右側才可以放置變數運算式。 不允許 ({someName} = {someValue}。 不允許使用未成對的值 (?x)。 空白查詢運算式與只包含單一 '？ ' 的查詢運算式之間沒有任何差異（兩者皆表示「任何查詢」）。  
   
@@ -75,7 +75,7 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
   
 - "/shoe"  
   
-- 「/shoe/\*」  
+- "/shoe/ \* "  
   
 - "{shoe}/boat"  
   
@@ -83,17 +83,17 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
   
 - 「鞋/{船}」  
   
-- 「鞋/{船}/\*」  
+- 「 \* 鞋/{船}/」  
   
 - 「鞋/船？ x = 2」  
   
 - 「鞋/{船}？ x = {床}」  
   
-- "鞋/{船}？ x = {床} & y = 波段"  
+- "鞋/{船}？ x = {床} &y = 波段"  
   
 - "？ x = {鞋}"  
   
-- 「鞋？ x = 3 & y = {var}  
+- 「鞋？ x = 3&y = {var}  
   
  無效的範本字串範例包括：  
   
@@ -101,13 +101,13 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
   
 - "{鞋}/boat/？平臺 = {鞋}" –重複的變數名稱。  
   
-- "？ x = 2 & x = 3" –查詢字串內的名稱/值組必須是唯一的，即使它們是常值亦然。  
+- "？ x = 2&x = 3" –查詢字串內的名稱/值組必須是唯一的，即使它們是常值亦然。  
   
-- "？ x = 2 &" –查詢字串格式不正確。  
+- "？ x = 2&" –查詢字串格式不正確。  
   
-- "？ 2 & x = {鞋}" –查詢字串必須是名稱/值配對。  
+- "？ 2&x = {鞋}" –查詢字串必須是名稱/值配對。  
   
-- "？ y = 2 & & X = 3" –查詢字串必須是名稱值組，名稱不能以 ' & ' 開頭。  
+- "？ y = 2&&X = 3" –查詢字串必須是名稱值組，名稱不能以 ' & ' 開頭。  
   
 ### <a name="compound-path-segments"></a>複合路徑片段  
  複合路徑片段可以在單一 URI 路徑片段中包含多個變數以及與加入常值的變數。 以下範例列出有效的複合路徑片段：  
@@ -122,15 +122,15 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 W
   
  以下範例列出無效的路徑片段：  
   
-- /{}-變數必須命名為。  
+- / {} -變數必須命名為。  
   
 - /{shoe}{boat}：變數之間必須以常值分隔。  
   
 ### <a name="matching-and-compound-path-segments"></a>比對和複合路徑區段  
- 複合路徑區段可讓您定義一個 UriTemplate，該 UriTemplate 在單一路徑區段中有多個變數。 例如，在下列範本字串中： "Addresses/{state}。{city} "兩個變數（州和城市）定義在相同的區段中。 此範本會比對 URL （例如 `http://example.com/Washington.Redmond`），但它也會符合 `http://example.com/Washington.Redmond.Microsoft`之類的 URL。 在後者的情況下，狀態變數會包含 "華盛頓"，而 city 變數會包含 "Redmond. Microsoft"。 在此情況下，任何文字 (除了 ‘/’ 之外) 都會比對 {city} 變數。 如果您想要不符合「額外」文字的範本，請將該變數放在個別的範本區段中，例如：「位址/{州}/{city}」。  
+ 複合路徑區段可讓您定義一個 UriTemplate，該 UriTemplate 在單一路徑區段中有多個變數。 例如，在下列範本字串中： "Addresses/{state}。{city} "兩個變數（州和城市）定義在相同的區段中。 此範本會比對 URL （例如）， `http://example.com/Washington.Redmond` 但它也會符合之類的 url `http://example.com/Washington.Redmond.Microsoft` 。 在後者的情況下，狀態變數會包含 "華盛頓"，而 city 變數會包含 "Redmond. Microsoft"。 在此情況下，任何文字 (除了 ‘/’ 之外) 都會比對 {city} 變數。 如果您想要不符合「額外」文字的範本，請將該變數放在個別的範本區段中，例如：「位址/{州}/{city}」。  
   
 ### <a name="named-wildcard-segments"></a>命名的萬用字元片段  
- 已命名的萬用字元區段是任何路徑變數區段，其變數名稱開頭為萬用字元 '\*'。 下列範本字串包含了命名的萬用字元片段，名為 "shoe"。  
+ 已命名的萬用字元區段是任何路徑變數區段，其變數名稱開頭為萬用字元 ' \* '。 下列範本字串包含了命名的萬用字元片段，名為 "shoe"。  
   
 `"literal/{*shoe}"`  
   
@@ -188,7 +188,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
-> URI （例如 `http://localhost:8000///`）與上述程式碼中所列的範本不相符，但 `http://localhost:8000/` 之類的 URI。  
+> URI （例如）不 `http://localhost:8000///` 符合上述程式碼中所列的範本，不過 uri （例如） `http://localhost:8000/` 。  
   
  下列程式碼示範以範例建立 URI 比對時，會如何處理預設變數。  
   
@@ -226,7 +226,7 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - `UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");`
 
- 下列是預設值為 `null`的無效範本字串：  
+ 下列是具有預設值的無效範本字串 `null` ：  
   
 - `UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment`
   
@@ -238,11 +238,11 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 ### <a name="template-equivalence"></a>相等的範本  
  當所有範本的常值都相符，而且它們在相同的區段中有變數時，兩個範本會被視為*結構*相同。 例如，下列範本在結構上是相等的：  
   
-- /a/{var1}/b b/{var2}？ x = 1 & y = 2  
+- /a/{var1}/b b/{var2}？ x = 1&y = 2  
   
-- a/{x}/b% 20b/{var1}？ y = 2 & x = 1  
+- a/{x}/b% 20b/{var1}？ y = 2&x = 1  
   
-- a/{y}/B% 20B/{z}/？ y = 2 & x = 1  
+- a/{y}/B% 20B/{z}/？ y = 2&x = 1  
   
  請注意下列幾點事項：  
   
@@ -275,9 +275,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?x=3  
   
-- ？ x = 1 & y = {var}  
+- ？ x = 1&y = {var}  
   
-- ？ x = 2 & z = {var}  
+- ？ x = 2&z = {var}  
   
 - ?x=3  
   
@@ -289,13 +289,13 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?  
   
-- ？ m = get & c = rss  
+- ？ m = get&c = rss  
   
-- ？ m = put & c = rss  
+- ？ m = put&c = rss  
   
-- ？ m = get & c = atom  
+- ？ m = get&c = atom  
   
-- ？ m = put & c = atom  
+- ？ m = put&c = atom  
   
  下列查詢字串範本組本身語意都很模糊：  
   
@@ -309,22 +309,22 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?y=2  
   
- "x = 1 & y = 2" 符合兩個範本。 這是因為查詢字串所包含的查詢字串變數數量可能超出範本所符合的查詢字串變數數量。  
+ "x = 1&y = 2" 符合兩個範本。 這是因為查詢字串所包含的查詢字串變數數量可能超出範本所符合的查詢字串變數數量。  
   
 - ?x=1  
   
-- ？ x = 1 & y = {var}  
+- ？ x = 1&y = {var}  
   
- "x = 1 & y = 3" 符合這兩個範本。  
+ "x = 1&y = 3" 符合這兩個範本。  
   
-- ？ x = 3 & y = 4  
+- ？ x = 3&y = 4  
   
-- ？ x = 3 & z = 5  
+- ？ x = 3&z = 5  
   
 > [!NOTE]
 > 當字元 á 與 Á 出現在 URI 路徑或 <xref:System.UriTemplate> 路徑片段常值中時，兩者將被視為不同的字元 (但是字元 a 與 A 則被視為相同)。 當字元 á 與 Á 出現在 <xref:System.UriTemplate> {variableName} 或查詢字串中時，兩者將被視為相同的字元 (而且字元 a 與 A 亦將被視為相同)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

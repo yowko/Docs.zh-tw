@@ -2,12 +2,12 @@
 title: 在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 在 eShopOnContainers 訂購微服務中的實作。
 ms.date: 03/03/2020
-ms.openlocfilehash: eda0ee374b41a81811e92e2829b10dc8515e0ccd
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988488"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144275"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方式
 
@@ -15,7 +15,7 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 
 那些模式的精髓和重點在於查詢是等冪的：無論您對系統進行多少次查詢，系統的狀態都不會變更。 換句話說，查詢沒有副作用。
 
-因此,您可以使用與事務邏輯「寫入」域模型不同的「讀取」數據模型,即使排序微服務使用相同的資料庫也是如此。 因此，這是簡化過後的 CQRS 方法。
+因此，即使訂購微服務使用相同的資料庫，您還是可以使用與交易式邏輯「寫入」網域模型不同的「讀取」資料模型。 因此，這是簡化過後的 CQRS 方法。
 
 另一方面，觸發交易及資料更新的命令會變更系統的狀態。 使用命令時，您必須在處理複雜性及不斷變更的商務規則時多加小心。 這正是您希望套用 DDD 技術以獲得更良好模型化系統的場合。
 
@@ -23,9 +23,9 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 
 其中一個模式便是彙總模式，我們會在稍後的章節中檢查。 簡而言之，在彙總模式中，您會將許多領域物件視為其在領域內關聯性結果的單一單位。 您不一定會想要在查詢中利用這種模式，因為它可能會增加查詢邏輯的複雜度。 針對唯讀查詢，您無法藉由將多個物件視為單一彙總而取得好處。 您只會增加複雜度。
 
-如上一節圖 7-2 所示,本指南建議僅在微服務的事務/更新區域(即由命令觸發)中使用 DDD 模式。 查詢可遵循更簡單的方法，並且與命令分離，遵循 CQRS 方法。
+如前一節的圖7-2 所示，本指南建議您只在微服務的交易/更新區域中使用 DDD 模式（也就是透過命令觸發）。 查詢可遵循更簡單的方法，並且與命令分離，遵循 CQRS 方法。
 
-要實現「查詢端」,您可以從多種方法之間進行選擇,例如 EF Core、自動映射器投影、儲存過程、視圖、具體檢視或微型 ORM 等全面的 ORM。
+若要執行「查詢端」，您可以在許多方法之間做選擇，包括 EF Core、AutoMapper 投影、預存程式、視圖、具體化視圖或微 ORM 等完整的 ORM。
 
 本指南及 eShopOnContainers 中 (特別是訂購微服務)，我們選擇使用像是 [Dapper](https://github.com/StackExchange/dapper-dot-net) 的微型 ORM 來實作直接查詢。 多虧了輕型架構所帶來的極少負荷，這可讓您實作任何基於查詢的 SQL 陳述式，以取得最佳效能。
 
@@ -41,15 +41,15 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 
 ### <a name="additional-resources"></a>其他資源
 
-- **馬丁·福勒CQRS** \
+- **聖馬丁 Fowler。CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **格雷格·楊CQRS 文件** \
+- **Greg 年輕CQRS 檔** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **烏迪·達漢澄清的 CQRS** \
-  <http://udidahan.com/2009/12/09/clarified-cqrs/>
+- **Udi Dahan。澄清 CQRS** \
+  <https://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
->[前一個](apply-simplified-microservice-cqrs-ddd-patterns.md)
->[下一個](cqrs-microservice-reads.md)
+>[上一個](apply-simplified-microservice-cqrs-ddd-patterns.md) 
+>[下一步](cqrs-microservice-reads.md)

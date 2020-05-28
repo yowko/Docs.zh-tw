@@ -2,12 +2,12 @@
 title: 移轉至 .NET Core 3.1 的範例
 description: 顯示如何將以 .NET Framework 為目標的範例應用程式遷移至 .NET Core 3.1。
 ms.date: 05/12/2020
-ms.openlocfilehash: ef8a0c24ec81a21eb89411ed4c9a543d4d70d89f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5e8b1219cf4bd89ada5b71a60ef27eaabb94997c
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83423380"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144267"
 ---
 # <a name="example-of-migrating-to-net-core-31"></a>移轉至 .NET Core 3.1 的範例
 
@@ -43,7 +43,7 @@ ms.locfileid: "83423380"
 
 ![Castle Windsor 套件的 NuGet 相依性螢幕擷取畫面](./media/example-migration-core/nuget-dependencies.png)
 
-若要檢查套件相容性，您可以使用工具 <http://fuget.org> 來提供版本和相依性的更詳細資訊。
+若要檢查套件相容性，您可以使用工具 <https://fuget.org> 來提供版本和相依性的更詳細資訊。
 
 可能是因為專案參考了不支援 .NET Core 的舊版套件，但您可能會發現支援它的較新版本。 因此，將套件更新為較新版本通常是很好的建議。 不過，您應該考慮更新封裝版本可能會引進一些重大變更，強制您更新程式碼。
 
@@ -133,7 +133,7 @@ ms.locfileid: "83423380"
 
 錯誤的另一個原因是使用 `BeginInvoke` 和方法， `EndInvoke` 因為 .net Core 不支援它們。 它們在 .NET Core 上不受支援，因為它們相依于不存在於 .NET Core 上的遠端處理。 若要解決此問題，請嘗試使用 `await` 關鍵字（如果有的話）或 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法。
 
-您可以使用相容性分析器，讓您識別程式碼中的 Api 和程式碼模式，這可能會在執行時間使用 .NET Core 造成問題。 移至 <http://github.com/dotnet/platform-compat> 並在您的專案上使用 .NET API 分析器。
+您可以使用相容性分析器，讓您識別程式碼中的 Api 和程式碼模式，這可能會在執行時間使用 .NET Core 造成問題。 移至 <https://github.com/dotnet/platform-compat> 並在您的專案上使用 .NET API 分析器。
 
 ## <a name="migrating-a-windows-forms-application"></a>遷移 Windows Forms 應用程式
 

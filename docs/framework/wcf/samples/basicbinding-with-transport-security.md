@@ -2,12 +2,12 @@
 title: 具備傳輸安全性的 BasicBinding
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: 6c7426de0a2d2b0001442960819dd385f7b9ea9e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: adf245d29ca57d919957276dfc54d82a0f45373b
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716072"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144873"
 ---
 # <a name="basicbinding-with-transport-security"></a>具備傳輸安全性的 BasicBinding
 
@@ -56,7 +56,7 @@ ms.locfileid: "74716072"
 </system.serviceModel>
 ```
 
-因為此範例中使用的憑證是使用 Makecert 建立的測試憑證，所以當您嘗試在瀏覽器中存取 HTTPS：位址（例如 https://localhost/servicemodelsamples/service.svc ）時，就會出現安全性警示。 為了讓 Windows Communication Foundation （WCF）用戶端使用測試憑證，會將一些額外的程式碼新增至用戶端，以隱藏安全性警示。 使用實際憑證時，不需要這個程式碼及伴隨的類別。
+因為此範例中使用的憑證是使用 Makecert 建立的測試憑證，所以當您嘗試在瀏覽器中存取 HTTPS：位址時（例如），就會出現安全性警示 `https://localhost/servicemodelsamples/service.svc` 。 為了讓 Windows Communication Foundation （WCF）用戶端使用測試憑證，會將一些額外的程式碼新增至用戶端，以隱藏安全性警示。 使用實際憑證時，不需要這個程式碼及伴隨的類別。
 
 ```csharp
 // This code is required only for test certificates such as those

@@ -4,12 +4,12 @@ description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 8eebe9a8e530b244f4596adef1b5e6dd23e305bd
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507189"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144535"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
@@ -35,7 +35,7 @@ Microsoft Corporation 的著作權©2020
 
 此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
-Microsoft 與列於 https://www.microsoft.com「商標」網頁的商標是 Microsoft 集團的商標。
+Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Microsoft 集團的商標。
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
@@ -112,7 +112,7 @@ Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 
 請隨意將本指南轉寄給您的小組，協助確保對這些考量和機會有共同的了解。 讓所有人都使用一組共用術語和基礎原則，有助確保套用一致的架構模式和做法。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
 - **針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)

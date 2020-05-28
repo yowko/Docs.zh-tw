@@ -3,12 +3,12 @@ title: 分散式資料
 description: 對比整合型和雲端原生應用程式中的資料儲存。
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 2eff37dcc57ae39daac0ba10d10322be5eb4e321
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614132"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144392"
 ---
 # <a name="distributed-data"></a>分散式資料
 
@@ -120,7 +120,7 @@ Saga 模式通常會單純為一系列相關的事件，或協調成一組相關
 
 **圖 5-7**。 CQRS 執行
 
-在上圖中，會執行個別的命令和查詢模型。 每個資料寫入作業都會儲存到寫入存放區，然後傳播到讀取存放區。 請密切注意資料傳播程式如何在[最終一致性](http://www.cloudcomputingpatterns.org/eventual_consistency/)原則上運作。 讀取模型最後會與寫入模型進行同步處理，但進程中可能會有一些延遲。 我們將在下一節中討論最終一致性。
+在上圖中，會執行個別的命令和查詢模型。 每個資料寫入作業都會儲存到寫入存放區，然後傳播到讀取存放區。 請密切注意資料傳播程式如何在[最終一致性](https://www.cloudcomputingpatterns.org/eventual_consistency/)原則上運作。 讀取模型最後會與寫入模型進行同步處理，但進程中可能會有一些延遲。 我們將在下一節中討論最終一致性。
 
 這種區隔可讓讀取和寫入獨立進行調整。 讀取作業會使用針對查詢優化的架構，而寫入會使用針對更新優化的架構。 讀取查詢會針對不正規化的資料進行，而複雜的商務邏輯則可以套用至寫入模型。 同樣地，您可能會對寫入作業施加更緊密的安全性，而不是公開讀取。
 

@@ -2,12 +2,12 @@
 title: 一般方針
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 一般指引
 ms.date: 09/11/2018
-ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089642"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144561"
 ---
 # <a name="general-guidance"></a>一般方針
 
@@ -37,12 +37,12 @@ ms.locfileid: "73089642"
 
 ### <a name="additional-resources"></a>其他資源
 
-- **電子書：使用 Azure 和 Windows 容器對現有 .NET 框架應用程式進行現代化改造**  
-    https://aka.ms/liftandshiftwithcontainersebook
+- **電子書：使用 Azure 和 Windows 容器將現有的 .NET Framework 應用程式現代化**  
+    <https://aka.ms/liftandshiftwithcontainersebook>
 
 - **應用程式範例：使用 Windows 容器現代化舊版 ASP.NET Web 應用程式**  
-    https://aka.ms/eshopmodernizing
+    <https://aka.ms/eshopmodernizing>
 
 >[!div class="step-by-step"]
->[上一個](index.md)
->[下一個](net-core-container-scenarios.md)
+>[上一個](index.md) 
+>[下一步](net-core-container-scenarios.md)

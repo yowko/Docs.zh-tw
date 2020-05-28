@@ -3,12 +3,12 @@ title: 在 Windows 10 上安裝 .NET Framework
 description: 了解如何在 Windows 10 或 Windows Server 2016 上安裝 .NET Framework。
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1443ae8f8d4e61b0561f4827fafc9ecedd80fccc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965967"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144730"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>在 Windows 10 和 Windows Server 2016 以及更新版本上安裝 .NET Framework
 
@@ -38,7 +38,7 @@ ms.locfileid: "76965967"
 - Windows 10 年度更新版 (版本 1607)
 - Windows Server 2019
 - Windows Server，版本 1809
-- Windows Server，版本 1803
+- Windows Server 1803 版
 - Windows Server 2016
 
 以下項目不支援 .NET Framework 4.8：
@@ -81,3 +81,4 @@ ms.locfileid: "76965967"
 - [.NET 下載](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)
 - [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)
+- [判斷安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)

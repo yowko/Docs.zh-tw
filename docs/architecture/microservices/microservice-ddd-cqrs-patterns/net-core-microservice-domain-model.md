@@ -2,12 +2,12 @@
 title: 使用 .NET Core 實作微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 進入 DDD 導向領域模型的實作詳細資料。
 ms.date: 10/08/2018
-ms.openlocfilehash: 24f700b371d998cf99cbcf260a5278d797cb39d4
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 8aff06a2e37dc87e5ba4f556e9b808598ff3653a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988423"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144574"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型
 
@@ -17,15 +17,15 @@ ms.locfileid: "80988423"
 
 用於 eShopOnContainers 參考應用程式的資料夾組織展示了應用程式的 DDD 模型。 您可能會發現不同的資料夾組織可以更清楚的與您為應用程式選擇的設計進行通訊。 如同您在圖 7-10 中所看到的，在訂購領域模型中有兩個彙總，即訂單彙總和購買者彙總。 每一個彙總都是一組領域實體和值物件，雖然您也可以使用單一領域實體 (彙總根或根實體) 來組成彙總。
 
-:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="解決方案資源管理器中排序.域專案的屏幕截圖。":::
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="方案總管中的排序. 網域專案的螢幕擷取畫面。":::
 Ordering.Domain 專案的 [方案總管] 檢視，顯示包含 BuyerAggregate 及 OrderAggregate 資料夾的 AggregatesModel 資料夾，每一個包含它的實體類別、值物件檔案等等。
 :::image-end:::
 
 **圖 7-10**。 eShopOnContainers 訂購微服務的領域模型結構
 
-此外，領域模型層還包含了您領域模型之基礎結構需求的存放庫合約 (介面)。 換句話說，這些介面表達了基礎結構層必須實作的存放庫和方法。 存儲庫的實現必須放在域模型層之外、基礎結構層庫中,這樣域模型層就不會被API或基礎結構技術(如實體框架)的類"污染"。
+此外，領域模型層還包含了您領域模型之基礎結構需求的存放庫合約 (介面)。 換句話說，這些介面表達了基礎結構層必須實作的存放庫和方法。 將存放庫的執行放在「基礎結構」層程式庫中的領域模型層之外，因此「領域模型」層不會由基礎結構技術的 API 或類別「受污染」，例如 Entity Framework。
 
-您還可以看到一個[SeedWork](https://martinfowler.com/bliki/Seedwork.html)資料夾,其中包含自訂基類,您可以將其用作域實體和值物件的基,因此每個域的物件類中沒有冗餘代碼。
+您也可以看到[SeedWork](https://martinfowler.com/bliki/Seedwork.html)資料夾，其中包含可做為網域實體和值物件基底的自訂基類，因此您在每個網域的物件類別中都沒有多餘的程式碼。
 
 ## <a name="structure-aggregates-in-a-custom-net-standard-library"></a>自訂 .NET Standard 程式庫中的結構彙總
 
@@ -33,7 +33,7 @@ Ordering.Domain 專案的 [方案總管] 檢視，顯示包含 BuyerAggregate �
 
 「交易一致性」表示彙總保證會在商務動作結束時維持一致及最新狀態。 例如，來自 eShopOnContainers 訂購微服務領域模型的訂單彙總是由圖 7-11 中的內容所組成。
 
-:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="訂單聚合資料夾及其類的屏幕截圖。":::
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="OrderAggregate 資料夾及其類別的螢幕擷取畫面。":::
 OrderAggregate 資料夾的詳細檢視：Address.cs 是值物件、IOrderRepository 是存放庫介面、Order.cs 是彙總根、OrderItem.cs 是子系實體，且 OrderStatus.cs 是列舉類別。
 :::image-end:::
 
@@ -101,7 +101,7 @@ public class Order : Entity, IAggregateRoot
 
 標記介面有時候會被視為「反模式 (anti-pattern)」。然而，它同時也是一種標記類別的明瞭方式，尤其是在該介面可能會進一步發展的情況下。 屬性也可以是用於標記的另外一個選擇，但通常看見 IAggregate 介面旁邊的基底類別 (Entity)，會比將 Aggregate 屬性標記放在類別上方要來得更快。 這在任何案例中都只是一種喜好設定。
 
-具有聚合根意味著與聚合實體的一致性和業務規則相關的大多數代碼應作為 Order 聚合根類中的方法實現(例如,將 OrderItem 物件添加到聚合時添加 OrderItem)。 您不應獨立或直接建立或更新 OrderItems 物件。AggregateRoot 類別必須控制並使任何對其子實體所做出的更新作業保持一致。
+擁有匯總根表示與匯總實體的一致性和商務規則相關的大部分程式碼，都應該實作為 Order 匯總根類別中的方法（例如，將 OrderItem 物件加入至匯總時為 AddOrderItem）。 您不應獨立或直接建立或更新 OrderItems 物件。AggregateRoot 類別必須控制並使任何對其子實體所做出的更新作業保持一致。
 
 ## <a name="encapsulate-data-in-the-domain-entities"></a>封裝領域實體內的資料
 
@@ -132,7 +132,7 @@ myOrder.OrderItems.Add(myNewOrderItem);
 
 此外，實體中的集合 (例如訂購項目) 應為唯讀屬性 (即稍後解釋的 AsReadOnly 方法)。 您只能在彙總根類別方法或子實體方法中對其進行更新。
 
-正如您在 Order 聚合根的代碼中看到的,所有 setter 都應是私有的,或者至少是唯讀外部的,因此針對實體的資料或其子實體的任何操作都必須透過實體類中的方法執行。 這可透過受控及物件導向的方式維持一致性，而非實作交易指令碼。
+如您在 Order 匯總根的程式碼中所見，所有的 setter 都應該是私用或至少為唯讀的外部，以便對實體的資料或其子實體進行的任何作業都必須透過實體類別中的方法來執行。 這可透過受控及物件導向的方式維持一致性，而非實作交易指令碼。
 
 下列程式碼片段顯示了撰寫將 OrderItem 物件新增至 Order 彙總工作之程式碼的適當方式。
 
@@ -166,19 +166,19 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 藉由使用 EF Core 1.1 或更新版本中的功能來將資料行對應至欄位，您也可以不使用屬性。 相反的，您可以直接將資料表中的資料行對應至欄位。 常見的使用案例便是不需要從實體外部存取之內部狀態的私用欄位。
 
-例如，在上述的 OrderAggregate 程式碼範例中，有幾個私用欄位 (例如 `_paymentMethodId` 欄位) 針對 setter 或 getter 都不具有任何相關屬性。 該字段也可以在訂單的業務邏輯中計算,並從訂單的方法中使用,但它也需要保留在資料庫中。 因此，在 EF Core (v1.1 之後) 中，有一種方式可不使用相關屬性來將欄位對應至資料庫中的資料行。 這也會在本指南中的[基礎結構層](ddd-oriented-microservice.md#the-infrastructure-layer)一節解釋。
+例如，在上述的 OrderAggregate 程式碼範例中，有幾個私用欄位 (例如 `_paymentMethodId` 欄位) 針對 setter 或 getter 都不具有任何相關屬性。 該欄位也可以在訂單的商務邏輯內計算出來，並從訂單的方法中使用，但它也需要保存在資料庫中。 因此，在 EF Core (v1.1 之後) 中，有一種方式可不使用相關屬性來將欄位對應至資料庫中的資料行。 這也會在本指南中的[基礎結構層](ddd-oriented-microservice.md#the-infrastructure-layer)一節解釋。
 
 ### <a name="additional-resources"></a>其他資源
 
-- **沃恩·弗農使用 DDD 和實體框架對聚合建模。** 請注意，這*並非* Entity Framework Core。 \
+- **Vaughn Vernon。使用 DDD 和 Entity Framework 建立匯總模型。** 請注意，這*並非* Entity Framework Core。 \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **朱莉·萊曼資料點 - 網域驅動設計的編碼:資料聚焦開發人員的提示** \
+- **Julie Lerman。資料點-針對領域驅動設計撰寫程式碼：資料導向開發人員的秘訣** \
   <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
-- **烏迪·達漢如何建立完全封裝的網域模型** \
-  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
+- **Udi Dahan。如何建立完全封裝的網域模型** \
+  <https://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
-> [前一個](microservice-domain-model.md)
-> [下一個](seedwork-domain-model-base-classes-interfaces.md)
+> [上一個](microservice-domain-model.md) 
+> [下一步](seedwork-domain-model-base-classes-interfaces.md)

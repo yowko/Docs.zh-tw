@@ -2,12 +2,12 @@
 title: API 閘道模式與直接用戶端對微服務通訊
 description: 了解 API 閘道模式和直接用戶端對微服務通訊的差異與使用方式。
 ms.date: 01/07/2019
-ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2f3bd32396b45a6209550f5b7a07c88795ccc0
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401722"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144327"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -17,7 +17,7 @@ ms.locfileid: "79401722"
 
 可能的方法是使用直接用戶端對微服務通訊架構。 使用這種方法，用戶端應用程式可以直接對某些微服務提出要求，如圖 4-12 所示。
 
-![顯示用戶端到微服務通信體系結構的圖表。](./media/direct-client-to-microservice-communication.png)
+![顯示用戶端對微服務通訊架構的圖表。](./media/direct-client-to-microservice-communication.png)
 
 **圖 4-12**. 使用直接用戶端對微服務通訊架構
 
@@ -39,7 +39,7 @@ ms.locfileid: "79401722"
 
 實作安全性和跨領域考量 (例如每個微服務上的安全性和授權) 可能需要大量開發工作。 可能的方法是 Docker 主機或內部叢集內有這些服務，以限制從外部直接存取它們，並在集中位置 (例如 API 閘道) 實作這些跨領域考量。
 
-- *用戶端應用如何與使用非 Internet 友好協定的服務進行通信？*
+- *用戶端應用程式如何與使用非網際網路好用通訊協定的服務通訊？*
 
 用戶端應用程式通常不支援伺服器端上使用的通訊協定 (例如 AMQP 或二進位通訊協定)。 因此，必須透過 HTTP/HTTPS 這類通訊協定執行要求，而且之後會轉譯成其他通訊協定。 在此情況下，「攔截式」** 方法可能有幫助。
 
@@ -59,7 +59,7 @@ ms.locfileid: "79401722"
 
 - **安全性問題**：在沒有閘道的情況下，所有微服務都必須公開給「外部世界」，這樣的攻擊面會比您隱藏未直接由用戶端應用程式使用的內部微服務的情況來得更大。 攻擊面越小，您的應用程式就越安全。
 
-- **跨領域問題**：每個公開發布的微服務必須處理授權、SSL 等問題。在許多情況下，這些顧慮可以在單個層中處理，以便簡化內部微服務。
+- **跨領域考慮**：每個公開發行的微服務都必須處理授權、SSL 等考慮。在許多情況下，這些考慮可以在單一層處理，以便簡化內部微服務。
 
 ## <a name="what-is-the-api-gateway-pattern"></a>什麼是 API 閘道模式？
 
@@ -69,11 +69,11 @@ ms.locfileid: "79401722"
 
 圖 4-13 顯示自訂的 API 閘道如何搭配只有幾個微服務的簡化微服務型架構。
 
-![顯示作為自訂服務實現的 API 閘道的圖表。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
+![此圖顯示實作為自訂服務的 API 閘道。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/custom-service-api-gateway.png)
 
 **圖 4-13**. 使用實作為自訂服務的 API 閘道
 
-應用連接到單個終結點 API 閘道，該終結點配置為將請求轉發到各個微服務。 在此範例中，API 閘道會實作為以容器形式執行的自訂 ASP.NET Core WebHost 服務。
+應用程式會連線至單一端點（即 API 閘道），其設定為將要求轉送至個別微服務。 在此範例中，API 閘道會實作為以容器形式執行的自訂 ASP.NET Core WebHost 服務。
 
 請務必在該圖表中將它反白顯示，您會使用面向多個和不同用戶端應用程式的單一自訂 API 閘道服務。 這項事實的風險可能十分重大，因為 API 閘道服務將會根據用戶端應用程式的許多不同需求而成長和演變。 最後，它會因為這些不同需求而十分繁雜，而且可能十分類似整合型應用程式或整合型服務。 這就是為什麼我們極為建議將 API 閘道分割為多個服務或多個較小的 API 閘道 (例如，每個用戶端應用程式外形規格類型都有一個)。
 
@@ -87,7 +87,7 @@ ms.locfileid: "79401722"
 
 **圖 4-13.1**. 使用多個自訂 API 閘道
 
-圖 4-13.1 顯示了按用戶端類型分隔的 API 閘道;一個用於移動用戶端，一個用於 Web 用戶端。 使用 Web API 閘道連線至 MVC 微服務的傳統 Web 應用程式。 該示例描述了具有多個細細微性 API 閘道的簡化體系結構。 在此案例中，針對每個 API 閘道識別的界限只以「前端的後端」([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式為基礎，因此也只以每個用戶端應用程式所需的 API 為基礎。 但在更大型的應用程式中，您應該也進一步建立以商務界限為基礎的 API 閘道，作為第二設計樞紐。
+圖 4-13.1 顯示依用戶端類型隔離的 API 閘道;一個用於行動用戶端，另一個用於 web 用戶端。 使用 Web API 閘道連線至 MVC 微服務的傳統 Web 應用程式。 此範例使用多個更精細的 API 閘道來描述簡化的架構。 在此案例中，針對每個 API 閘道識別的界限只以「前端的後端」([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式為基礎，因此也只以每個用戶端應用程式所需的 API 為基礎。 但在更大型的應用程式中，您應該也進一步建立以商務界限為基礎的 API 閘道，作為第二設計樞紐。
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API 閘道模式中的主要功能
 
@@ -128,11 +128,11 @@ API 閘道可以提供多個功能。 視產品而定，它可以提供更豐富
 
 [Azure API 管理](https://azure.microsoft.com/services/api-management/) (如圖 4-14 所示) 不但可以解決您的 API 閘道需求，還能提供如從 API 收集見解等功能。 如果您使用 API 管理解決方案，則 API 閘道只是該完整 API 管理解決方案內的元件。
 
-![顯示如何使用 Azure API 管理作為 API 閘道的圖表。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
+![此圖顯示如何使用 Azure API 管理作為 API 閘道。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 **圖 4-14**. 將 Azure API 管理用於 API 閘道
 
-Azure API 管理既解決了 API 閘道和管理需求，如日誌記錄、安全性、計量等，也解決了管理需求。在這種情況下，當使用 Azure API 管理等產品時，您可能具有單個 API 閘道這一事實風險並不大，因為這些類型的 API 閘道是"更薄"的，這意味著您沒有實現可能演變為單一元件的自訂 C# 代碼。
+Azure API 管理可解決您的 API 閘道和管理需求，例如記錄、安全性、計量等等。在此情況下，使用 Azure API 管理之類的產品時，您可能會有單一 API 閘道不會有風險，因為這類 API 閘道是「精簡」的，這表示您不會執行可能演變為整合型元件的自訂 c # 程式碼。
 
 API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以篩選內部微服務的 API，以及在此單一階層中將授權套用至已發行的 API。
 
@@ -146,7 +146,7 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) 是輕量型 API 閘道，如需較簡單的方法建議加以採用。 Ocelot 是開放原始碼的 .NET Core 型 API 閘道，專門為需要系統統一進入點的微服務架構而設計。 它輕量、快速、可調整規模且提供路由和驗證等更多其他功能。
 
-選擇 Ocelot 用於[eShopOnContainers 參考應用程式](https://github.com/dotnet-architecture/eShopOnContainers)的主要原因是，Ocelot 是一個 .NET Core 羽量級 API 閘道，您可以在其中部署到部署微服務/容器（如 Docker 主機、Kubernetes 等）的同一應用程式部署環境中。由於它基於 .NET Core，它是跨平臺允許您在 Linux 或 Windows 上部署。
+為[eShopOnContainers 參考應用程式](https://github.com/dotnet-architecture/eShopOnContainers)選擇 Ocelot 的主要原因是，Ocelot 是一個 .net Core 輕量 API 閘道，您可以將其部署到部署微服務/容器的相同應用程式部署環境，例如 Docker 主機、Kubernetes 等。而且因為它是以 .NET Core 為基礎，所以它是跨平臺，可讓您在 Linux 或 Windows 上進行部署。
 
 上面的圖表顯示在容器中執行的自訂 API 閘道，正如同您也可以在容器和微服務型應用程式中執行 Ocelot。
 
@@ -170,27 +170,27 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 
 ## <a name="additional-resources"></a>其他資源
 
-- **克裡斯·理查森模式：前端的 API 閘道/後端** \
+- **Chris Richardson。模式：適用于前端的 API 閘道/後端** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **API 閘道模式** \
   <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
-- **聚合和組合模式** \
+- **匯總和撰寫模式** \
   <https://microservices.io/patterns/data/api-composition.html>
 
 - **Azure API 管理** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **烏迪·達漢面向服務的合成** \
-  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
+- **Udi Dahan。服務導向組合** \
+  <https://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **克萊門斯·瓦斯特斯GOTO 2016 年的消息和微服務（視頻）** \
+- **Clemens Vasters。訊息和微服務，位於 GOTO 2016 （影片）** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API 閘道簡介** (ASP.net Core API 閘道教學課程系列)\
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
->[上一個](identify-microservice-domain-model-boundaries.md)
->[下一個](communication-in-microservice-architecture.md)
+>[上一個](identify-microservice-domain-model-boundaries.md) 
+>[下一步](communication-in-microservice-architecture.md)

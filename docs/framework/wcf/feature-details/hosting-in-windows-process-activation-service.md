@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: aa782c46d6530bb30055c536dd10d78f9ab9f79f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963768"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84143559"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
 當工作者處理序包含裝載 Windows Communication Foundation (WCF) 服務的應用程式時，Windows 處理序啟用服務 (WAS) 會管理這些工作者處理序的啟用和存留期。 WAS 處理序模型會透過移除對 HTTP 的相依性，將 HTTP 伺服器的 IIS 6.0 處理序模型一般化。 這可讓 WCF 服務在支援以訊息為基礎之啟用的主控環境中，同時使用 HTTP 和非 HTTP 通訊協定（例如 Net.tcp），並提供在指定的電腦上裝載大量應用程式的功能。  
@@ -34,11 +34,11 @@ ms.locfileid: "75963768"
   
  下表針對 WAS 網站 (包含 HTTP 和非 HTTP 網站繫結) 說明幾個可能的定址案例。  
   
-|情節|站台繫結|應用程式路徑|基底應用程式 URI|  
+|案例|網站繫結|應用程式路徑|基底應用程式 URI|  
 |--------------|-------------------|----------------------|---------------------------|  
-|僅限 HTTP|HTTP： *：80：\*|/appTwo|http://localhost/appTwo/|  
-|HTTP 和非 HTTP 兩者|HTTP： *：80：\*<br /><br /> net.tcp：808：\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
-|僅限非 HTTP|net.pipe: *|/appThree|net.pipe://appThree/|  
+|僅限 HTTP|HTTP： *：80：\*|/appTwo|`http://localhost/appTwo/`|  
+|HTTP 和非 HTTP 兩者|HTTP： *：80：\*<br /><br /> net.tcp：808：\*|/appTwo|`http://localhost/appTwo/`<br />`net.tcp://localhost/appTwo/`|  
+|僅限非 HTTP|net.pipe: *|/appThree|`net.pipe://appThree/`|  
   
  您也可以針對應用程式中的服務與資源加以定址。 在應用程式中，應用程式資源會以相對於基底應用程式路徑的方式定址。 例如，假定電腦名稱 contoso.com 上的某個網站同時包含 HTTP 和 Net.TCP 通訊協定的網站繫結。 同時假定該網站包含一個位於 /Billing 的應用程式，以便在 GetOrders.svc 公開服務。 這時，如果 GetOrders.svc 服務公開了包含 SecureEndpoint 相對位址的端點，則服務端點會在下列兩個 URL 中公開：  
   
@@ -48,10 +48,10 @@ ms.locfileid: "75963768"
 ## <a name="the-was-runtime"></a>WAS 執行階段  
  為了定址與管理方便，應用程式會組織成網站。 在執行階段，應用程式也會組織成應用程式集區中的群組。 一個應用程式集區可包含來自許多不同網站的不同應用程式。 應用程式集區中的所有應用程式都共用一組執行階段特徵。 例如，它們會在相同版本的 Common Language Runtime (CLR) 中執行，而且共用相同的處理序身分識別。 每個應用程式集區都對應至一個背景工作處理序 (w3wp.exe) 的執行個體。 每個在共用應用程式集區內執行的 Managed 應用程式都會透過 CLR AppDomain 與其他應用程式隔離開來。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [WAS 啟用架構](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
+- [WAS 啟動架構](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [設定用於 WCF 的 WAS](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
 - [如何：安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [如何：在 WAS 中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [How to: Host a WCF Service in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
 - [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -3,12 +3,12 @@ title: 架構適用于 Azure 的雲端原生 .NET 應用程式
 description: 建立雲端原生應用程式的指南，利用 Azure 的容器、微服務和無伺服器功能。
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: 196671468e56147f714078d1671f44af21bcf327
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: b315f097b1584bd93f694c10f36ee7524d7e020a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840880"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144379"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>架構適用于 Azure 的雲端原生 .NET 應用程式
 
@@ -34,7 +34,7 @@ Redmond, Washington 98052-6399
 
 此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
-Microsoft 和列于「商標」網頁的商標 [https://www.microsoft.com](https://www.microsoft.com) 是 microsoft 公司集團的商標。
+Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Microsoft 集團的商標。
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
@@ -44,7 +44,7 @@ Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 
 作者：
 
-> **Vettor**，首席雲端系統架構師/IP 架構師- [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)，Microsoft
+> **Vettor**，首席雲端系統架構師/IP 架構師- [thinkingincloudnative.com](https://thinkingincloudnative.com/about/)，Microsoft
 >
 > **Steve "ardalis" Smith**，軟體架構師和訓練人員- [Ardalis.com](https://ardalis.com)
 

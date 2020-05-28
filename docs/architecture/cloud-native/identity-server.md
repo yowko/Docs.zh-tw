@@ -2,12 +2,12 @@
 title: 雲端原生應用程式的 IdentityServer
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614028"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144366"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>雲端原生應用程式的 IdentityServer
 
@@ -29,7 +29,7 @@ IdentityServer 是一種開放原始碼驗證服務器，可執行 ASP.NET Core 
 
 在上述每個案例中，所公開的功能必須受到保護，以避免未經授權的使用。 至少，這通常需要驗證對資源提出要求的使用者或主體。 這項驗證可能會使用其中一個常見的通訊協定，例如 SAML2p、WS-送出或 OpenID Connect。 與 Api 通訊通常會使用 OAuth2 通訊協定和其對安全性權杖的支援。 將這些重要的跨領域安全性考慮和其執行詳細資料，從應用程式本身來確保一致性並改善了安全性與維護性。 將這些考慮外包給專用的產品（例如 IdentityServer），可協助每個應用程式自行解決這些問題。
 
-IdentityServer 提供在 ASP.NET Core 應用程式中執行的中介軟體，並新增 OpenID Connect 和 OAuth2 的支援（請參閱[支援的規格](http://docs.identityserver.io/en/latest/intro/specs.html)）。 組織會使用 IdentityServer 中介軟體來建立自己的 ASP.NET Core 應用程式，以做為其所有權杖型安全性通訊協定的 STS。 IdentityServer 中介軟體會公開端點以支援標準功能，包括：
+IdentityServer 提供在 ASP.NET Core 應用程式中執行的中介軟體，並新增 OpenID Connect 和 OAuth2 的支援（請參閱[支援的規格](https://docs.identityserver.io/en/latest/intro/specs.html)）。 組織會使用 IdentityServer 中介軟體來建立自己的 ASP.NET Core 應用程式，以做為其所有權杖型安全性通訊協定的 STS。 IdentityServer 中介軟體會公開端點以支援標準功能，包括：
 
 - 授權（驗證終端使用者）
 - Token （以程式設計方式要求權杖）
@@ -95,13 +95,13 @@ IdentityServer 也會裝載公用示範網站，可用來測試各種通訊協�
 
 ## <a name="javascript-clients"></a>JavaScript 用戶端
 
-許多雲端原生應用程式會利用前端的伺服器端 Api 和豐富型用戶端單頁應用程式（Spa）。 IdentityServer 透過 NPM 提供的[JavaScript 用戶端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)（ `oidc-client.js` ）可新增至 spa，讓他們能夠使用 IdentityServer 進行登入、登出，以及 web api 的權杖型驗證。
+許多雲端原生應用程式會利用前端的伺服器端 Api 和豐富型用戶端單頁應用程式（Spa）。 IdentityServer 透過 NPM 提供的[JavaScript 用戶端](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)（ `oidc-client.js` ）可新增至 spa，讓他們能夠使用 IdentityServer 進行登入、登出，以及 web api 的權杖型驗證。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
-- [IdentityServer 檔](http://docs.identityserver.io/en/latest/)
+- [IdentityServer 檔](https://docs.identityserver.io/en/latest/)
 - [應用程式類型](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [JavaScript OIDC 用戶端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
+- [JavaScript OIDC 用戶端](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[上一個](azure-active-directory.md) 

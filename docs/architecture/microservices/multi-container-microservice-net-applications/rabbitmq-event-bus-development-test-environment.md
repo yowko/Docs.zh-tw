@@ -2,22 +2,22 @@
 title: 針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對開發或測試環境使用 RabbitMQ 實作整合事件的事件匯流排傳訊。
 ms.date: 10/02/2018
-ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988293"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144288"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 
 首先您應該知道，如果您根據容器中所執行的 RabbitMQ 來建立自訂事件匯流排 (如同 eShopOnContainers 應用程式的做法)，則只能用於開發和測試環境。 除非您將它當做準備好用於生產環境之服務匯流排的一部分來建置，否則不應該用於生產環境中。 簡單的自訂事件匯流排可能會遺失許多商業服務匯流排所具備並可供生產環境使用的重要功能。
 
-eShopOn 容器中的事件總線自定義實現之一基本上是使用 RabbitMQ API 的庫。 (還有一個基於 Azure 服務總線的實現。
+EShopOnContainers 中的其中一個事件匯流排自訂執行，基本上是使用 RabbitMQ API 的程式庫。 （有另一個以 Azure 服務匯流排為基礎的執行）。
 
 使用 RabbitMQ 實作事件匯流排可讓微服務訂閱事件、發行事件和接收事件，如圖 6-21 所示。
 
-![顯示郵件發送方和郵件接收方之間的兔MQ圖。](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
+![顯示訊息寄件者和訊息接收者之間 RabbitMQ 的圖表。](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **圖 6-12。** 事件匯流排的 RabbitMQ 實作
 
@@ -108,20 +108,20 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 Subscribe 方法接受 IIntegrationEventHandler 物件，就像是目前微服務及其相關 IntegrationEvent 物件中的回呼方法。 此程式碼接著會將該事件處理常式新增至事件處理常式清單，每個整合事件類型可根據每個用戶端微服務擁有這些事件處理常式。 如果用戶端程式碼尚未訂閱事件，程式碼會建立事件類型的通道，以便在從任何其他服務發行該事件時，可從 RabbitMQ 接收推送樣式的事件。
 
-如上所述,在 eShopOnContainers 中實現的事件總線僅具有教育目的,因為它僅處理主要方案,因此尚未準備好生產。
+如先前所述，在 eShopOnContainers 中實作用的事件匯流排只會處理主要案例，而不會準備好用於生產環境。
 
-對於生產方案,請檢查以下特定於 RabmQ 的其他資源以及[微服務之間基於事件的通訊](./integration-event-based-microservice-communications.md#additional-resources)。
+針對生產案例，請檢查下列其他資源（特定于 RabbitMQ）和[微服務區段之間的執行事件型通訊](./integration-event-based-microservice-communications.md#additional-resources)。
 
 ## <a name="additional-resources"></a>其他資源
 
-支援兔MQ的生產就緒解決方案。
+支援 RabbitMQ 的生產環境就緒解決方案。
 
-- **EasyNetQ** - 開源 .NET API 用戶端,用於兔子MQ |
-  <http://easynetq.com/>
+- **EasyNetQ** -開放原始碼 .net API Client for RabbitMQ \
+  <https://easynetq.com/>
 
-- **公共交通** \
+- **MassTransit** \
   <https://masstransit-project.com/>
   
 > [!div class="step-by-step"]
-> [前一個](integration-event-based-microservice-communications.md)
-> [下一個](subscribe-events.md)
+> [上一個](integration-event-based-microservice-communications.md) 
+> [下一步](subscribe-events.md)

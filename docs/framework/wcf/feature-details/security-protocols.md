@@ -4,35 +4,35 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 86e0c77b899ad590b9958fea3a050ad0e660bb43
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: d09dd6bcb8564f770df6b87751aee4cdb04cd12c
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463798"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144613"
 ---
 # <a name="security-protocols"></a>安全性通訊協定
-Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本節介紹以下 Web 服務安全協定的 Windows 通信基礎 (WCF) 詳細資訊(在<xref:System.ServiceModel.Channels.SecurityBindingElement>中實現)。  
+Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本節說明 <xref:System.ServiceModel.Channels.SecurityBindingElement> 下列 Web 服務安全性通訊協定的 Windows Communication Foundation （WCF）詳細資料（實作為）。  
   
 |規格/文件|連結|  
 |-|-|  
-|WSS：SOAP 訊息安全性 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
-|WSS：使用者名稱權杖設定檔 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS：X509 權杖設定檔 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
-|WSS：SAML 1.1 權杖設定檔 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS：SOAP 訊息安全性 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
-|WSS：使用者名稱權杖設定檔 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS：X.509 權杖設定檔 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
-|WSS：Kerberos 權杖設定檔 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
-|WSS：SAML 1.1 權杖設定檔 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
-|WS-Secure Conversation 1.3|http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf|  
-|WS-Trust 1.3|http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf|  
+|WSS：SOAP 訊息安全性 1.0|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|  
+|WSS：使用者名稱權杖設定檔 1.0|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|  
+|WSS：X509 權杖設定檔 1.0|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|  
+|WSS：SAML 1.1 權杖設定檔 1.0|<http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|  
+|WSS：SOAP 訊息安全性 1.1|<http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|  
+|WSS：使用者名稱權杖設定檔 1.1|<http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|  
+|WSS：X.509 權杖設定檔 1.1|<http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|  
+|WSS：Kerberos 權杖設定檔 1.1|<http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|  
+|WSS：SAML 1.1 權杖設定檔 1.1|<http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|  
+|WS-Secure Conversation 1.3|<http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf>|  
+|WS-Trust 1.3|<http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf>|  
 |應用程式注意事項：<br /><br /> 使用 WS-Trust 進行 TLS 信號交換|即將發行|  
 |應用程式注意事項：<br /><br /> 使用 WS-Trust 進行 SPNEGO|即將發行|  
 |應用程式注意事項：<br /><br /> Web 服務定址端點參考和識別|即將發行|  
-|WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
+|WS-SecurityPolicy 1.2 (2007/04)|<http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf>|  
   
- WCF 版本 1 提供了 17 種身份驗證模式,可用作 Web 服務安全配置的基礎。 每個模式都已針對一組通用的部署需求最佳化，例如：  
+ WCF （第1版）提供17種驗證模式，可用來做為 Web 服務安全性設定的基礎。 每個模式都已針對一組通用的部署需求最佳化，例如：  
   
 - 用來驗證用戶端和服務的認證。  
   
@@ -40,14 +40,14 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
 - 訊息交換模式。  
   
-|驗證模式|用戶端驗證|伺服器驗證|[模式]|  
+|驗證模式|用戶端驗證|伺服器驗證|模式|  
 |-------------------------|---------------------------|---------------------------|----------|  
 |UserNameOverTransport|使用者名稱/密碼|X509|傳輸|  
 |CertificateOverTransport|X509|X509|傳輸|  
 |KerberosOverTransport|Windows|X509|傳輸|  
 |IssuedTokenOverTransport|同盟|X509|傳輸|  
 |SspiNegotiatedOverTransport|交涉的 Windows Sspi|交涉的 Windows Sspi|傳輸|  
-|AnonymousForCertificate|None|X509|訊息|  
+|AnonymousForCertificate|無|X509|訊息|  
 |UserNameForCertificate|使用者名稱/密碼|X509|訊息|  
 |MutualCertificate|X509|X509|訊息|  
 |MutualCertificateDuplex|X509|X509|訊息|  
@@ -55,47 +55,47 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |Kerberos|Windows|Windows|訊息|  
 |IssuedToken|同盟|同盟|訊息|  
 |SspiNegotiated|交涉的 Windows Sspi|交涉的 Windows Sspi|訊息|  
-|AnonymousForSslNegotiated|None|X509、TLS-Nego|訊息|  
+|AnonymousForSslNegotiated|無|X509、TLS-Nego|訊息|  
 |UserNameForSslNegotiated|使用者名稱/密碼|X509、TLS-Nego|訊息|  
 |MutualSslNegotiated|X509|X509、TLS-Nego|訊息|  
 |IssuedTokenForSslNegotiated|同盟|X509、TLS-Nego|訊息|  
   
  使用這類驗證模式的端點可以使用 WS-SecurityPolicy (WS-SP) 來表示安全性需求。 本文件針對每個驗證模式描述安全性標頭和基礎結構訊息的結構，並提供原則和訊息的範例。  
   
- WCF 利用 WS-SecureConversation 提供安全會話支援,以保護應用程式之間的多消息交換。  如需實作的詳細資訊，請參閱下面的「安全工作階段」。  
+ WCF 會利用 SecureConversation 來提供安全的會話支援，以保護應用程式之間的多訊息交換。  如需實作的詳細資訊，請參閱下面的「安全工作階段」。  
   
- 除了身份驗證模式外,WCF 還提供用於控制適用於大多數基於消息安全的身份驗證模式的常見保護機制的設置,例如:簽名順序與加密操作、演演演算法套件、密鑰派生和簽名確認。  
+ 除了驗證模式之外，WCF 還提供設定來控制適用于大部分訊息安全性驗證模式的一般保護機制，例如簽章和加密作業順序、演算法套件、金鑰衍生和簽章確認。  
   
  下列是本文件中使用的前置詞和命名空間。  
   
 |前置詞|命名空間|  
 |------------|---------------|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
-|sp|http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702|  
-|a|http://www.w3.org/2005/08/addressing|  
+|s|`http://www.w3.org/2003/05/soap-envelope`|  
+|sp|`http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702`|  
+|a|`http://www.w3.org/2005/08/addressing`|  
 |wsse|TBD – OASIS WSS 1.0 URI|  
 |wsse11|TBD – OASIS WSS 1.1 URI|  
-|wsu|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd|  
+|wsu|`http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd`|  
 |ds|TBD – W3C XMLDSig URI|  
 |wst|TBD – WS-Trust 2005/02 URI|  
 |wssc|TBD – WS-SecureConversation 2005/02 URI|  
-|wsaw|http://www.w3.org/2006/05/addressing/wsdl|  
-|wsp|http://schemas.xmlsoap.org/ws/2004/09/policy|  
-|mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
+|wsaw|`http://www.w3.org/2006/05/addressing/wsdl`|  
+|wsp|`http://schemas.xmlsoap.org/ws/2004/09/policy`|  
+|mssp|`http://schemas.microsoft.com/ws/2005/07/securitypolicy`|  
   
-## <a name="1-token-profiles"></a>1. 權杖設定檔  
- Web 服務安全性規格會以安全性權杖來表示認證。 WCF 支援以下令牌型態:  
+## <a name="1-token-profiles"></a>1. Token 設定檔  
+ Web 服務安全性規格會以安全性權杖來表示認證。 WCF 支援下列 token 類型：  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
- WCF 遵循使用者名權杖10和使用者名權杖11配置檔,具有以下約束:  
+ WCF 會遵循 UsernameToken10 和 UsernameToken11 設定檔，並具有下列條件約束：  
   
  R1101 UsernameToken\Password 項目上的 PasswordType 屬性必須被省略，或者必須具有值 #PasswordText (預設)。  
   
- 使用擴充性，便可以實作 #PasswordDigest。 據觀察，#PasswordDigest 通常會被誤認是具備足夠安全性的密碼保護機制。 但是 #PasswordDigest 無法取代 UsernameToken 加密。 #PasswordDigest 的主要目標是防禦重新執行攻擊。 在 WCF 身份驗證模式下,使用消息簽名可緩解重播攻擊威脅。  
+ 使用擴充性，便可以實作 #PasswordDigest。 據觀察，#PasswordDigest 通常會被誤認是具備足夠安全性的密碼保護機制。 但是 #PasswordDigest 無法取代 UsernameToken 加密。 #PasswordDigest 的主要目標是防禦重新執行攻擊。 在 WCF 驗證模式中，會使用訊息簽章來降低重新執行攻擊威脅。  
   
- B1102 WCF 從不發出 Nonce 和創建使用者名令牌的子元素。  
+ B1102 WCF 永遠不會發出 Nonce 並建立 UsernameToken 的子項目。  
   
- 這些子元素是為了協助進行重新執行偵測。 WCF 改用消息簽名。  
+ 這些子元素是為了協助進行重新執行偵測。 WCF 會改為使用訊息簽章。  
   
  OASIS WSS SOAP 訊息安全性 UsernameToken 設定檔 1.1 (UsernameToken11) 從密碼功能引入金鑰衍生。  
   
@@ -104,7 +104,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
  基本原理：密碼通常被視為太弱，無法用於密碼編譯作業。  
   
 ### <a name="12-x509-token"></a>1.2 X509 權杖  
- WCF 支援 X509v3 憑證作為認證類型,並遵循 X509TokenProfile1.0 和 X509TokenProfile1.1 具有以下約束:  
+ WCF 支援 X509v3 憑證作為認證類型，並遵循 X509TokenProfile 1.0 和 X509TokenProfile 1.1，並具有下列條件約束：  
   
  R1201 當包含 X509v3 憑證時，BinarySecurityToken 項目上的 ValueType 屬性必須具有值 #X509v3。  
   
@@ -118,37 +118,37 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  R1204 如果 X509TokenProfile1.1 正在使用中，則 X509 安全性權杖的外部參考應使用 WS-Security 1.1 所引入的指紋。  
   
- WCF 支援 X509 發行人序列。 但是,X509問題處理串列存在互操作性問題:WCF 使用字串比較 X509 消息序列的兩個值。 因此,如果重新排序主題名稱的元件,並向 WCF 服務發送對證書的引用,則可能無法找到它。  
+ WCF 支援 X509IssuerSerial。 不過，X509IssuerSerial 有互通性問題： WCF 會使用字串來比較 X509IssuerSerial 的兩個值。 因此，如果一個重新排序主體名稱的元件，並將憑證的參考傳送至 WCF 服務，則可能找不到它。  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 權杖  
- WCF 支援 KerberosTokenProfile1.1,用於具有以下規範的 Windows 身份驗證:  
+ WCF 支援使用 KerberosTokenProfile 1.1 來進行 Windows 驗證，並具有下列條件約束：  
   
  R1301 依照 GSS_API 和 Kerberos 規格定義，Kerberos 權杖必須具有 GSS 包裝的 Kerberos v4 AP_REQ 值，而且必須具有值為 #GSS_Kerberosv5_AP_REQ 的 ValueType 屬性。  
   
- WCF 使用 GSS 包裝的 Kerberos AP-REQ,而不是裸露的 AP-REQ。 這是安全性的最佳做法。  
+ WCF 使用的是 GSS 包裝的 Kerberos AP 要求，而不是裸機需求。 這是安全性的最佳做法。  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 權杖  
- WCF 支援 SAML v1.1 權杖的 WSS SAML 權杖配置檔 1.0 和 1.1。 它也可以實作其他版本的 SAML 權杖格式。  
+ WCF 支援 SAML v1.1 權杖的 WSS SAML 權杖設定檔1.0 和1.1。 它也可以實作其他版本的 SAML 權杖格式。  
   
 ### <a name="15-security-context-token"></a>1.5 安全性內容權杖  
- WCF 支援 WS-安全對話中引入的安全上下文權杖 (SCT)。 SCT 是用來表示 SecureConversation 和二進位交涉通訊協定 TLS 和 SSPI 中所建立的安全性內容，說明如下。  
+ WCF 支援 SecureConversation 中引進的安全性內容權杖（SCT）。 SCT 是用來表示 SecureConversation 和二進位交涉通訊協定 TLS 和 SSPI 中所建立的安全性內容，說明如下。  
   
-## <a name="2-common-message-security-parameters"></a>2. 通用訊息安全參數  
+## <a name="2-common-message-security-parameters"></a>2. 一般訊息安全性參數  
   
 ### <a name="21-timestamp"></a>2.1 TimeStamp  
- 時間戳記存在是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性加以控制。 WCF 始終序列化 wsse:時間戳與 ws:創建和 ws:過期欄位。 使用簽章時，一定會簽署 wsse:TimeStamp。  
+ 時間戳記存在是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性加以控制。 WCF 一律會將 wsse： TimeStamp 與 wsse：已建立和 wsse： Expires 欄位進行序列化。 使用簽章時，一定會簽署 wsse:TimeStamp。  
   
 ### <a name="22-protection-order"></a>2.2 保護順序  
- WCF 支援消息保護命令"加密前簽名"和"簽名前加密"(安全策略 1.2)。 基於下列理由，建議使用「簽署後加密」：除非使用 WS-Security 1.1 SignatureConfirmation 機制，否則使用「加密後簽署」保護的訊息容易遭受簽章替換攻擊，而且加密內容上的簽章會造成稽核困難。  
+ WCF 支援訊息保護順序「加密後簽署」和「簽署前加密」（安全性原則1.2）。 基於下列理由，建議使用「簽署後加密」：除非使用 WS-Security 1.1 SignatureConfirmation 機制，否則使用「加密後簽署」保護的訊息容易遭受簽章替換攻擊，而且加密內容上的簽章會造成稽核困難。  
   
 ### <a name="23-signature-protection"></a>2.3 簽章保護  
  使用「加密後簽署」時，建議保護簽章，以防止暴力密碼破解攻擊猜測加密內容或簽署金鑰 (特別是在自訂權杖與弱式金鑰內容搭配使用時)。  
   
 ### <a name="24-algorithm-suite"></a>2.4 演算法組合  
- WCF 支援安全策略 1.2 中列出的所有演演演算法套件。  
+ WCF 支援安全性原則1.2 中列出的所有演算法套件。  
   
 ### <a name="25-key-derivation"></a>2.5 金鑰衍生  
- WCF 使用 WS-SecureConversation 中描述的「對稱密鑰的密鑰派生」。  
+ WCF 會使用「對稱金鑰的金鑰衍生」，如 SecureConversation 中所述。  
   
 ### <a name="26-signature-confirmation"></a>2.6 簽章確認  
  簽章確認可以防禦攔截式攻擊，以保護簽章組。  
@@ -163,13 +163,13 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |LaxTimestampFirst|與 Lax 相同，除了安全性標頭中的第一個項目必須是 wsse:Timestamp|  
 |LaxTimestampLast|與 Lax 相同，除了安全性標頭中的最後一個項目必須是 wsse:Timestamp|  
   
- WCF 支援所有四種安全標頭佈局模式。 下列驗證模式的安全性標頭結構和訊息範例都遵循 "Strict" 模式。  
+ WCF 支援安全性標頭配置的全部四種模式。 下列驗證模式的安全性標頭結構和訊息範例都遵循 "Strict" 模式。  
   
-## <a name="3-common-message-security-parameters"></a>3. 通用訊息安全參數  
+## <a name="3-common-message-security-parameters"></a>3. 一般訊息安全性參數  
  本章節提供每個驗證模式的範例原則，並提供範例來示範用戶端和服務交換訊息中的安全性標頭結構。  
   
-### <a name="31-transport-protection"></a>3.1 運輸保護  
- WCF 提供了五種身份驗證模式,使用安全傳輸來保護消息;使用者名超傳輸、證書過傳送、Kerberos Over 傳輸、已頒發令牌過傳遞和 Sspi 協商過路傳輸。  
+### <a name="31-transport-protection"></a>3.1 傳輸保護  
+ WCF 提供五種驗證模式，以使用安全傳輸來保護訊息;UserNameOverTransport、CertificateOverTransport、KerberosOverTransport、IssuedTokenOverTransport 和 SspiNegotiatedOverTransport。  
   
  這些驗證模式使用 SecurityPolicy 中所述的傳輸繫結加以建構。 對於 UserNameOverTransport 驗證模式，UsernameToken 是已簽署的支援權杖。 對於其他驗證模式，此權杖會顯示為已簽署 (Signed) 的簽署 (Endorsing) 權杖。 SecurityPolicy 的附錄 C.1.2 和 C.1.3 詳細描述了安全性標頭配置。 下列範例安全性標頭示範指定之驗證模式的 Strict 配置。  
   
@@ -345,7 +345,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
- 在這個模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 產生的 SCT 出現在 SOAP 層中做為簽署支援權杖，且一定會從啟動器傳送至收件者。 此外，服務也會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。 "SPNEGO"(協商)描述了 WCF 如何使用 SSPI 二進制協商協定與 WS-Trust。 本章節中的安全性標頭範例是在透過 SPNEGO 信號交換建立了 SCT 之後。  
+ 在這個模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 產生的 SCT 出現在 SOAP 層中做為簽署支援權杖，且一定會從啟動器傳送至收件者。 此外，服務也會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。 "SPNEGO" （協商）描述 WCF 如何搭配使用 SSPI 二進位協商通訊協定與 WS-TRUST。 本章節中的安全性標頭範例是在透過 SPNEGO 信號交換建立了 SCT 之後。  
   
  原則  
   
@@ -368,7 +368,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 使用 X.509 憑證進行服務身份驗證  
+### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 使用 x.509 憑證進行服務驗證  
  本章節描述下列驗證模式：MutualCertificate WSS1.0、Mutual CertificateDuplex、MutualCertificate WSS1.1、AnonymousForCertificate、UserNameForCertificate 和 IssuedTokenForCertificate。  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
@@ -470,7 +470,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 搭配使用 SymmetricBinding 與 X.509 服務驗證  
- "WSS10" 會為使用 X509 權杖的案例提供有限支援。 例如，對於只使用服務 X509 權杖的訊息，則無法提供簽章和加密保護。 "WSS11" 引入 EncryptedKey 做為對稱式權杖。 現在，服務 X.509 憑證的暫時加密金鑰可以做為要求和回應訊息保護。 下面第 3.4 節中介紹的身份驗證模式使用此模式。  
+ "WSS10" 會為使用 X509 權杖的案例提供有限支援。 例如，對於只使用服務 X509 權杖的訊息，則無法提供簽章和加密保護。 "WSS11" 引入 EncryptedKey 做為對稱式權杖。 現在，服務 X.509 憑證的暫時加密金鑰可以做為要求和回應訊息保護。 下列區段3.4 中所述的驗證模式使用此模式。  
   
  WS-SecurityPolicy 使用 SymmetricBinding 搭配服務 X509 權杖做為保護權杖，描述這個模式。  
   
@@ -701,7 +701,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9025b930-4f15-42fe-8e78-35d3a3480177-2"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### <a name="34-issuedtoken"></a>3.4 已發行權杖  
+#### <a name="34-issuedtoken"></a>3.4 IssuedToken  
  在這個驗證模式中，用戶端本身不會向服務驗證，但用戶端會出示 STS 所發出的權杖，並證明得知共用金鑰。 服務本身也不會向用戶端驗證，但 STS 會加密共用金鑰做為已發出權杖的一部分，只有服務才能解密金鑰。 使用的繫結為具有下列屬性的對稱式繫結：  
   
  保護權杖：發出的權杖，其內含模式設定為 .../IncludeToken/AlwaysToRecipient  
@@ -751,7 +751,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e004f51-63a3-4069-9b03-6a1a311a3181-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> </c:DerivedKeyToken> ... <c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 使用 Ssl 協商進行服務身份驗證  
+### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 使用 SslNegotiated 進行服務驗證  
  本章節描述一組驗證模式，這些驗證模式使用對稱式繫結，並將基於 WS-SecureConversation (WS-SC) 的安全性內容權杖做為保護權杖，權杖的金鑰值是藉由在 WS-Trust (WS-T) RST/RSTR 訊息上執行 TLS 通訊協定交涉而來。 TLSNEGO 中會詳細描述使用 WS-Trust 的 TLS 信號交換實作。 在這裡的訊息範例中，假設具有相關安全性內容的 SCT 已透過信號交換而建立。  
   
  使用的繫結為具有下列屬性的對稱式繫結：  
@@ -932,7 +932,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-ede0bd89-1f7e-4453-96ed-13e58c7ba8fe-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### <a name="36-sspinegotiated"></a>3.6 斯皮談判  
+### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
  在這個驗證模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 使用的繫結為具有下列屬性的對稱式繫結：  
   
  保護權杖：SpnegoContextToken，其內含模式設定為 .../IncludeToken/AlwaysToRecipient  
@@ -982,7 +982,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e0aabc81-6942-4fe6-81bc-9def184565ea-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### <a name="37-secureconversation"></a>3.7 安全對話  
+### <a name="37-secureconversation"></a>3.7 SecureConversation  
  使用的繫結為對稱式繫結，其中的保護權杖是依據 WS-SecureConversation (WS-SC) 的 SCT。 SCT 是根據巢狀繫結使用 WS-Trust (WS-Trust) 或 WS-SecureConversation (WS-SC) 交涉而來，而巢狀繫結本身則是使用交涉通訊協定的對稱式繫結。 如果可能，交涉通訊協定會使用 Kerberos 來執行用戶端和伺服器驗證。 如果無法使用 Kerberos，則會退而使用 NTLM。  
   
  原則  

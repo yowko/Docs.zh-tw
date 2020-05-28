@@ -4,12 +4,12 @@ titleSuffix: ''
 description: 深入瞭解 .NET Core 專案 Sdk。
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206052"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144235"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core 專案 Sdk
 
@@ -21,8 +21,8 @@ ms.locfileid: "83206052"
 
 | 識別碼 | 描述 | 存放庫|
 | - | - | - |
-| `Microsoft.NET.Sdk` | .NET Core SDK | https://github.com/dotnet/sdk |
-| `Microsoft.NET.Sdk.Web` | .NET Core [WEB SDK](/aspnet/core/razor-pages/web-sdk) | https://github.com/aspnet/websdk |
+| `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | .NET Core [WEB SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/aspnet/websdk> |
 | `Microsoft.NET.Sdk.Razor` | .NET Core [RAZOR SDK](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | .NET Core 背景工作角色服務 SDK |
 | `Microsoft.NET.Sdk.WindowsDesktop` | .NET Core WinForms 和 WPF SDK |
@@ -89,8 +89,8 @@ ms.locfileid: "83206052"
 
 | 元素           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
-| 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | 不適用                      |
-| 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | 不適用                      |
+| 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
+| 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
 | 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx |
 
 > [!NOTE]
@@ -174,7 +174,7 @@ ms.locfileid: "83206052"
 
 您可以設定如何使用自訂目標。 由於它是 MSBuild 目標，它可以相依于指定的目標，在另一個目標之後執行，或使用命令以手動方式叫用 `dotnet msbuild -t:<target-name>` 。 不過，為了提供更好的使用者體驗，您可以結合每個專案工具和自訂目標。 在此案例中，每個專案工具會接受所需的任何參數，並將它轉譯成 [`dotnet msbuild`](../tools/dotnet-msbuild.md) 執行目標的必要調用。 您可以在 [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) 專案中的 [MVP Summit 2016 Hackathon 範例](https://github.com/dotnet/MVPSummitHackathon2016)儲存機制，查看此類協同作用範例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安裝 .NET Core](../install/index.md)
 - [如何使用 MSBuild 專案 Sdk](/visualstudio/msbuild/how-to-use-project-sdk)

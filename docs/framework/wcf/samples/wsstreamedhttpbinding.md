@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 36b4db5270205aec55ad52db40500c8d434a1560
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 663b7921e4e8a66d9b905404bad00f613e2f04cc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714555"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144652"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 
@@ -53,7 +53,7 @@ ms.locfileid: "74714555"
 
 2. 新增組態支援
 
-    為了透過組態公開傳輸，此範例會實作兩個額外的類別：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 類別 `WSStreamedHttpBindingSection` 是公開 `WSStreamedHttpBinding` 至 WCF 設定系統的 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>。 大量實作會委派至衍生自 `WSStreamedHttpBindingConfigurationElement` 的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 類別 `WSStreamedHttpBindingConfigurationElement` 有對應至 `WSStreamedHttpBinding` 之屬性的屬性，以及將每個組態項目對應至繫結的功能。
+    為了透過組態公開傳輸，此範例會實作兩個額外的類別：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 類別 `WSStreamedHttpBindingSection` 是 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> ，它會公開 `WSStreamedHttpBinding` 至 WCF 設定系統。 大量實作會委派至衍生自 `WSStreamedHttpBindingConfigurationElement` 的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 類別 `WSStreamedHttpBindingConfigurationElement` 有對應至 `WSStreamedHttpBinding` 之屬性的屬性，以及將每個組態項目對應至繫結的功能。
 
     向組態系統註冊此處理常式的方式是，將下列區段新增至服務的組態檔中。
 
@@ -137,7 +137,7 @@ public class StreamedEchoService : IStreamedEchoService
 
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding 範例用戶端
 
-透過 `WSStreamedHttpBinding` 與服務互動時所使用的用戶端位於用戶端子目錄中。 因為此範例中使用的憑證是使用 Makecert 建立的測試憑證，所以當您嘗試在瀏覽器中存取 HTTPS 位址（例如 https://localhost/servicemodelsamples/service.svc ）時，就會顯示安全性警示。 為了讓 WCF 用戶端能夠使用測試憑證，已將一些額外的程式碼新增至用戶端，以隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。
+透過 `WSStreamedHttpBinding` 與服務互動時所使用的用戶端位於用戶端子目錄中。 因為此範例中使用的憑證是使用 Makecert 建立的測試憑證，所以當您嘗試存取瀏覽器中的 HTTPS 位址（例如）時，會顯示安全性警示 `https://localhost/servicemodelsamples/service.svc` 。 為了讓 WCF 用戶端能夠使用測試憑證，已將一些額外的程式碼新增至用戶端，以隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。
 
 ```csharp
 // WARNING: This code is only required for test certificates such as those created by makecert. It is
