@@ -3,12 +3,12 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420379"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004851"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -37,10 +37,10 @@ ms.locfileid: "83420379"
 第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在主控台視窗中輸入下列命令：
 
 ```dotnetcli
-dotnet new console --name WebApiClient
+dotnet new console --name WebAPIClient
 ```
 
-這會建立基本 "Hello World" 應用程式的起始檔案。 專案名稱為 "WebApiClient"。 因為這是新的專案，所以沒有任何相依性。 第一次執行時，會下載 .NET Core framework、安裝開發憑證，以及執行 NuGet 套件管理員，以還原遺失的相依性。
+這會建立基本 "Hello World" 應用程式的起始檔案。 專案名稱為 "WebAPIClient"。 因為這是新的專案，所以沒有任何相依性。 第一次執行時，會下載 .NET Core framework、安裝開發憑證，以及執行 NuGet 套件管理員，以還原遺失的相依性。
 
 在您開始建立修改前，請先在命令提示字元中鍵入 `dotnet run` ([請參閱附註](#dotnet-restore-note))，執行您的應用程式。 如果您的環境缺少相依性，`dotnet run` 會自動執行 `dotnet restore`。 如果您的應用程式需要重建，它也會執行 `dotnet build`。
 在初始安裝之後，當它對您的專案有意義時，您只需要執行 `dotnet restore` 或 `dotnet build`。

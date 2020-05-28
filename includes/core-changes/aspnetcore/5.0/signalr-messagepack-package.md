@@ -6,36 +6,36 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/27/2020
 ms.locfileid: "80345231"
 ---
-### <a name="signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package"></a>信號R：MessagePack集線器協定移動到消息包 2.x 包
+### <a name="signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package"></a>SignalR： MessagePack 中樞通訊協定已移至 MessagePack 2.x 套件
 
-ASP.NET核心信號R[消息包集線器協定](/aspnet/core/signalr/messagepackhubprotocol)使用[MessagePack NuGet 包](https://www.nuget.org/packages/MessagePack)進行消息包序列化。 ASP.NET Core 5.0 將包從 1.x 升級到最新的 2.x 包版本。
+ASP.NET Core SignalR [MessagePack Hub 通訊協定](/aspnet/core/signalr/messagepackhubprotocol)會使用[MessagePack NuGet 封裝](https://www.nuget.org/packages/MessagePack)來進行 MessagePack 序列化。 ASP.NET Core 5.0 會將套件從1.x 升級到最新的2.x 套件版本。
 
-有關此問題的討論，請參閱[dotnet/aspnetcore_18692](https://github.com/dotnet/aspnetcore/issues/18692)。
+如需此問題的討論，請參閱[dotnet/aspnetcore # 18692](https://github.com/dotnet/aspnetcore/issues/18692)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
-5.0 預覽 1
+5.0 Preview 1
 
 #### <a name="old-behavior"></a>舊的行為
 
-ASP.NET核心信號R使用 MessagePack 1.x 包對消息包進行序列化和反序列化。
+ASP.NET Core SignalR 使用 MessagePack 1.x 封裝來序列化和還原序列化 MessagePack 訊息。
 
 #### <a name="new-behavior"></a>新的行為
 
-ASP.NET核心信號R使用 MessagePack 2.x 包對消息包進行序列化和反序列化。
+ASP.NET Core SignalR 會使用 MessagePack 2.x 封裝來序列化和還原序列化 MessagePack 訊息。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-MessagePack 2.x 包中的最新改進增加了有用的功能。
+MessagePack 2.x 套件中的最新改進功能會新增有用的功能。
 
 #### <a name="recommended-action"></a>建議的動作
 
-此重大更改適用于：
+這種重大變更適用于下列情況：
 
-* 設置或配置 上<xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions>的值。
-* 直接使用 MessagePack API，並在同一專案中使用ASP.NET核心信號R 消息包集線器協定。 將載入較新版本，而不是以前的版本。
+* 設定或設定上的值 <xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions> 。
+* 直接使用 MessagePack Api，並在相同的專案中使用 ASP.NET Core SignalR MessagePack Hub 通訊協定。 將會載入較新的版本，而不是先前的版本。
 
-有關包作者的遷移指南，請參閱[從 MessagePack v1.x 遷移到 MessagePack v2.x](https://github.com/neuecc/MessagePack-CSharp/blob/master/doc/migration.md)。 消息序列化和反序列化的某些方面受到影響。 具體來說，[日期時間值的序列化方式存在行為變化](https://github.com/neuecc/MessagePack-CSharp/blob/master/doc/migration.md#behavioral-changes)。
+如需封裝作者的遷移指導方針，請參閱[從 MessagePack V1 遷移至 MessagePack v2. x](https://github.com/neuecc/MessagePack-CSharp/blob/master/doc/migration.md)。 訊息序列化和還原序列化的某些層面會受到影響。 具體而言，[日期時間值的序列化方式有行為變更](https://github.com/neuecc/MessagePack-CSharp/blob/master/doc/migration.md#behavioral-changes)。
 
 #### <a name="category"></a>類別
 

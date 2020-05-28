@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 44a84e0752eecc1c694f3b8cf6e568b72b7d0f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176210"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006024"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 列舉
-提供值以影響調用 ICeeGen 時發出的`reloc`指令類型[：：AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)。  
+提供值，以影響 `reloc` 呼叫[ICeeGen：： AddSectionReloc](iceegen-addsectionreloc-method.md)時所發出的指令類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,35 +50,35 @@ typedef enum  {
   
 ## <a name="members"></a>成員  
   
-|member|描述|  
+|成員|描述|  
 |------------|-----------------|  
-|`srRelocAbsolute`|僅生成與節相關的`reloc`，不會將任何內容發送到 .reloc 節。|  
-|`srRelocHighLow`|為指標`reloc`大小的位置生成 。 根據平臺的不同，這轉換為BASED_HIGHLOW或BASED_DIR64。|  
-|`srRelocHighAdj`|為`reloc`32 位數位的前 16 位生成 一個，其中底部 16 位包含在 .reloc 表中的下一個單詞中。|  
-|`srRelocMapToken`|生成權杖映射重新置放，不向 .reloc 部分發送任何內容。|  
-|`srRelocRelative`|指示該值是相對位址修復。|  
-|`srRelocFilePos`|僅生成與節相關的`reloc`，不會將任何內容發送到 .reloc 節。 這是`reloc`相對於節的檔位置，而不是節的虛擬位址。|  
-|`srRelocCodeRelative`|指定與代碼相關的位址修復。|  
-|`srRelocIA64Imm64`|在`reloc`ia64 指令中為 64`movl`位位址生成 。|  
-|`srRelocDir64`|為`reloc`64 位位址生成 。|  
-|`srRelocIA64PcRel25`|在`reloc`ia64`br.call`指令中為 25 位 PC 相關位址生成 。|  
-|`srRelocIA64PcRel64`|在`reloc`ia64`brl.call`指令中為 64 位 PC 相關位址生成 。|  
-|`srRelocAbsoluteTagged`|生成 30 位節相對`reloc`， 用於標記的指標值。|  
-|`srRelocSentinel`|一個哨點值，可説明確保此枚舉的任何添加都反映到內部`reloc`名稱陣列。|  
-|`srNoBaseReloc`|指定不發出基`reloc`。|  
-|`srRelocPtr`|指示記憶體的預修復內容是指標而不是節偏移量的值。|  
+|`srRelocAbsolute`|只產生區段相對，不傳送 `reloc` 任何內容到 reloc 區段。|  
+|`srRelocHighLow`|產生 `reloc` 指標大小位置的。 這會根據平臺轉換成 BASED_HIGHLOW 或 BASED_DIR64。|  
+|`srRelocHighAdj`|`reloc`為32位數位的前16位產生，其中的下16位會包含在 reloc 資料表的下一個單字中。|  
+|`srRelocMapToken`|會產生標記對應重新配置，而不傳送任何內容到 reloc 區段。|  
+|`srRelocRelative`|表示此值是相對位址修復。|  
+|`srRelocFilePos`|只產生區段相對，不傳送 `reloc` 任何內容到 reloc 區段。 這 `reloc` 是相對於區段的檔案位置，而不是區段的虛擬位址。|  
+|`srRelocCodeRelative`|指定程式碼相對位址修復。|  
+|`srRelocIA64Imm64`|`reloc`在 ia64 指示中產生64位位址的 `movl` 。|  
+|`srRelocDir64`|產生 `reloc` 64 位位址的。|  
+|`srRelocIA64PcRel25`|`reloc`在 ia64 指示中，為25位電腦的相對位址產生 `br.call` 。|  
+|`srRelocIA64PcRel64`|`reloc`在 ia64 指示中，產生64位電腦相對位址的 `brl.call` 。|  
+|`srRelocAbsoluteTagged`|產生與標記指標值相關的30位區段相對 `reloc` 。|  
+|`srRelocSentinel`|Sentinel 值，可協助確保此列舉的任何新增專案都會反映到內部 `reloc` 名稱陣列。|  
+|`srNoBaseReloc`|指定不發出基底 `reloc` 。|  
+|`srRelocPtr`|值，表示記憶體的修復前內容是指標，而不是區段位移。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
-- [AddSectionReloc 方法](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)
+- [中繼資料列舉](metadata-enumerations.md)
+- [ICeeGen 介面](iceegen-interface.md)
+- [AddSectionReloc 方法](iceegen-addsectionreloc-method.md)

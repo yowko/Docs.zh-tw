@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141463"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006411"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS 列舉
 包含值，表示 common language runtime （CLR）的啟動行為。 根據預設，垃圾收集是非並行的，而且只有基類庫會載入至網域中立區域。  
@@ -51,7 +51,7 @@ typedef enum {
 } STARTUP_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -68,19 +68,19 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|指定模擬預設不應流經非同步點。|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|指定當執行緒開始執行時，不應認可完整執行緒堆疊。|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|指定透過平台叫用達成的 managed 模擬和模擬會流經非同步點。 根據預設，只有受管理的模擬會流經非同步點。|  
-|`STARTUP_TRIM_GC_COMMIT`|指定當系統記憶體不足時，垃圾收集會使用較少的認可空間。 請參閱[共用 Web 裝載的優化](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)`gcTrimCommitOnLowMemory`。|  
-|`STARTUP_ETW`|指定針對 common language runtime 事件啟用 Windows 事件追蹤（ETW）。 從 Windows Vista 開始，一律會啟用事件追蹤，因此此旗標沒有任何作用。 請參閱[控制 .NET Framework 記錄](../../../../docs/framework/performance/controlling-logging.md)。|  
-|`STARTUP_ARM`|指定啟用應用程式域資源監視。 請參閱 <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> 屬性，並[\<appDomainResourceMonitoring > 元素](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
+|`STARTUP_TRIM_GC_COMMIT`|指定當系統記憶體不足時，垃圾收集會使用較少的認可空間。 請 `gcTrimCommitOnLowMemory` 參閱[共用 Web 裝載的優化](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md)。|  
+|`STARTUP_ETW`|指定針對 common language runtime 事件啟用 Windows 事件追蹤（ETW）。 從 Windows Vista 開始，一律會啟用事件追蹤，因此此旗標沒有任何作用。 請參閱[控制 .NET Framework 記錄](../../performance/controlling-logging.md)。|  
+|`STARTUP_ARM`|指定啟用應用程式域資源監視。 請參閱 <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> 屬性和[ \<appDomainResourceMonitoring> 元素](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  
   
  連結**庫：** Mscoree.dll .dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [裝載列舉](hosting-enumerations.md)

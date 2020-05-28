@@ -1,38 +1,38 @@
 ---
-title: 安裝額外的 ML.NET 依賴項目
-description: 瞭解如何安裝ML.NET包依賴於但未隨 NuGet 套件安裝的任何本機庫
+title: 安裝額外的 ML.NET 相依性
+description: 瞭解如何安裝 ML.NET 套件相依的任何原生程式庫，但不會隨 NuGet 套件一起安裝
 ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: c427439d0950bfea38f1d6d11af84216e0f1965f
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: c744b42b4b95681de7b0cbeaef338cc890708fd8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021853"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008426"
 ---
-# <a name="install-extra-mlnet-dependencies"></a>安裝額外的 ML.NET 依賴項目
+# <a name="install-extra-mlnet-dependencies"></a>安裝額外的 ML.NET 相依性
 
-在大多數情況下,在所有作業系統上安裝ML.NET就像引用相應的 NuGet 包一樣簡單。
+在大部分情況下，在所有作業系統上，安裝 ML.NET 就像參考適當的 NuGet 套件一樣簡單。
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.ML
 ```
 
-但是,在某些情況下,還有其他安裝要求,尤其是在需要本機組件時。 本文檔介紹這些案例的安裝要求。 這些部分按具有附加依賴項的特定`Microsoft.ML.*`NuGet 包細分。
+不過在某些情況下，有其他安裝需求，特別是在需要原生元件時。 本檔說明這些案例的安裝需求。 這些區段會依照具有額外相依性的特定 `Microsoft.ML.*` NuGet 套件來細分。
 
-## <a name="microsoftmltimeseries-microsoftmlautoml"></a>微軟.ML.時間系列,微軟.ML.自動ML
+## <a name="microsoftmltimeseries-microsoftmlautoml"></a>時間序列、Microsoft AutoML。
 
-這兩個包都依賴於`Microsoft.ML.MKL.Redist`。具有`libiomp`依賴 項。
+這兩個封裝相依于，相依 `Microsoft.ML.MKL.Redist` 于 `libiomp` 。
 
 ### <a name="windows"></a>Windows
 
-無需額外的安裝步驟。 將 NuGet 套件添加到專案時,將安裝庫。
+不需要額外的安裝步驟。 將 NuGet 套件新增至專案時，會安裝程式庫。
 
 ### <a name="linux"></a>Linux
 
-1. 安裝儲存函式庫的 GPG 金鑰
+1. 安裝存放庫的 GPG 金鑰
 
     ```bash
     sudo bash
@@ -48,7 +48,7 @@ dotnet add package Microsoft.ML
     exit
     ```
 
-2. 新增 MKL 的 APT 儲存函式庫
+2. 新增適用于 MKL 的 APT 存放庫
 
     ```bash
     sudo sh -c 'echo deb https://apt.repos.intel.com/mkl all main > /etc/apt/sources.list.d/intel-mkl.list'
@@ -72,7 +72,7 @@ dotnet add package Microsoft.ML
     sudo apt-get install intel-mkl-64bit-2020.0-088
     ```
 
-    確定位置`libiomp.so`
+    判斷位置`libiomp.so`
 
     ```bash
     find /opt -name "libiomp5.so"
@@ -84,7 +84,7 @@ dotnet add package Microsoft.ML
     /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin/libiomp5.so
     ```
 
-5. 將這裡加入為負載庫路徑:
+5. 將此位置新增至載入程式庫路徑：
 
     ```bash
     sudo ldconfig /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin
@@ -92,7 +92,7 @@ dotnet add package Microsoft.ML
 
 ### <a name="mac"></a>Mac
 
-1. 使用`Homebrew`
+1. 使用安裝程式庫`Homebrew`
 
     ```bash
     brew update && brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/f5b1ac99a7fba27c19cee0bc4f036775c889b359/Formula/libomp.rb && brew link libomp --force

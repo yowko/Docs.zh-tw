@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 74088d1cd018bb07406fc7d00ff83d783a98b663
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450236"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007672"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr 列舉
 包含描述方法功能的值。  
@@ -62,7 +62,7 @@ typedef enum CorMethodAttr {
 } CorMethodAttr;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員|描述|  
 |------------|-----------------|  
@@ -79,7 +79,7 @@ typedef enum CorMethodAttr {
 |`mdVirtual`|指定可覆寫方法。|  
 |`mdHideBySig`|指定方法會依名稱和簽章隱藏，而不只是依名稱。|  
 |`mdVtableLayoutMask`|指定虛擬資料表版面配置。|  
-|`mdReuseSlot`|指定要在虛擬資料表中重複使用用於這個方法的位置。 這是預設值。|  
+|`mdReuseSlot`|指定要在虛擬資料表中重複使用用於這個方法的位置。 此為預設值。|  
 |`mdNewSlot`|指定方法一律取得虛擬資料表中的新位置。|  
 |`mdCheckAccessOnOverride`|指定方法可以被可見的相同類型覆寫。|  
 |`mdAbstract`|指定不執行方法。|  
@@ -92,12 +92,12 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|指定方法呼叫另一個包含安全性程式碼的方法。|  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corhdr.h。h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [中繼資料列舉](metadata-enumerations.md)
