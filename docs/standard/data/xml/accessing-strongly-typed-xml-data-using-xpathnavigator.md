@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: afbfd516ef25eff94a9eed841f313892007c58a1
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78158047"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202345"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 存取強型別 XML 資料
-做為 XPath 2.0 資料模型的執行個體，<xref:System.Xml.XPath.XPathNavigator> 類別可以包含對應至 Common Language Runtime (CLR) 型別的強型別資料。 根據 XPath 2.0 資料模型，只有項目及屬性才可以包含強型別資料。 <xref:System.Xml.XPath.XPathNavigator> 類別提供可將 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件內的資料做為強型別資料進行存取的機制，以及將一種資料型別轉換為另一種型別的機制。  
+做為 XPath 2.0 資料模型的實例， <xref:System.Xml.XPath.XPathNavigator> 類別可以包含對應至 common language runtime （CLR）類型的強型別資料。 根據 XPath 2.0 資料模型，只有元素和屬性可以包含強型別資料。 <xref:System.Xml.XPath.XPathNavigator>類別提供的機制，可讓您存取 <xref:System.Xml.XPath.XPathDocument> 或物件內的資料做為強型別資料，以及 <xref:System.Xml.XmlDocument> 從一種資料類型轉換成另一種的機制。  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>XPathNavigator 公開的型別資訊  
  就技術而言，XML 1.0 資料沒有型別，除非它是透過 DTD、XML 結構描述定義語言 (XSD) 結構描述或其他機制予以處理。 某些類別的型別資訊，可以與 XML 項目或屬性相關聯。  

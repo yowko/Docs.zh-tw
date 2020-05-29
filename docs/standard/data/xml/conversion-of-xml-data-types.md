@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: b0cdab8861ca50b40ce2b422fcc1acf16e2f2273
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b6e6f2c4b28e9220727bf0fe1a958a7b69111571
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711086"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202166"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML 資料型別轉換
-大多數在 **XmlConvert** 類別中的方法都是用來轉換字串和強型別格式間的資料。 這些方法都和地區設定無關。 也就是說，它們在進行轉換時並不會考慮任何地區設定的設定。  
+在**XmlConvert**類別中找到的大部分方法都是用來轉換字串和強型別格式之間的資料。 這些方法都和地區設定無關。 也就是說，它們在進行轉換時並不會考慮任何地區設定的設定。  
   
 ## <a name="reading-string-as-types"></a>將字串讀成型別  
  下列範例會讀取一個字串，並將它轉換成 **DateTime** 型別。  

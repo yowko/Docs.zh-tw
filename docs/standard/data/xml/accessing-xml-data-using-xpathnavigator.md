@@ -3,12 +3,12 @@ title: 使用 XPathNavigator 存取 XML 資料
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: c8466e78458d344a872aac7cdebc155342b13e0f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8cba6e106623169f5575684162bf3be383563275
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711164"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202311"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 存取 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供了一組可以在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中巡覽節點、擷取 XML 資料及存取強型別 XML 資料的方法。  
@@ -24,7 +24,7 @@ ms.locfileid: "75711164"
  說明從 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中擷取 XML 資料的各種方法。  
   
  [使用 XPathNavigator 存取強型別 XML 資料](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)  
- 說明如何使用 <xref:System.Xml.XPath.XPathDocument> 類別，在 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathNavigator> 物件中存取強型別 XML 資料。  
+ 描述如何 <xref:System.Xml.XPath.XPathDocument> 使用類別來存取或物件中的強型別 XML 資料 <xref:System.Xml.XmlDocument> <xref:System.Xml.XPath.XPathNavigator> 。  
   
  [使用者定義函式和變數](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
  描述如何實作自訂 <xref:System.Xml.Xsl.XsltContext> 類別以及支援擴充函式和變數的 <xref:System.Xml.Xsl.IXsltContextFunction> 和 <xref:System.Xml.Xsl.IXsltContextVariable> 介面。  

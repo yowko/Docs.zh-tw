@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 3f58edf326ab9415d78d7065d74d8c1954fbbf37
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 740d8010908d658deb40591d4a9c3182c46ffc84
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76315859"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201713"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 簡介
 語言整合式查詢（LINQ）會將查詢功能加入至 Visual Basic，並在您處理所有類型的資料時提供簡單且功能強大的功能。 LINQ 並不會將查詢傳送至要處理的資料庫，或針對您要搜尋的每個資料類型使用不同的查詢語法，而是將查詢引進為 Visual Basic 語言的一部分。 它使用統一的語法，不論資料類型為何。  
@@ -38,9 +38,9 @@ ms.locfileid: "76315859"
   
  Visual Basic 包括下列的 LINQ 提供者。  
   
-|Provider|描述|  
+|提供者|描述|  
 |---|---|  
-|LINQ to Objects|LINQ to Objects 提供者讓您查詢記憶體內部的集合和陣列。 如果物件支援 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 介面，LINQ to Objects 提供者就會讓您查詢。<br /><br /> 您可以藉由匯入 <xref:System.Linq> 命名空間（預設會針對所有 Visual Basic 專案匯入）來啟用 LINQ to Objects 提供者。<br /><br /> 如需有關 LINQ to Objects 提供者的詳細資訊，請參閱[LINQ to Objects](../../concepts/linq/linq-to-objects.md)。|  
+|LINQ to Objects|LINQ to Objects 提供者讓您查詢記憶體內部的集合和陣列。 如果物件支援 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 介面，LINQ to Objects 提供者就會讓您查詢。<br /><br /> 您可以匯入 <xref:System.Linq> 命名空間（預設會針對所有 Visual Basic 專案匯入）來啟用 LINQ to Objects 提供者。<br /><br /> 如需有關 LINQ to Objects 提供者的詳細資訊，請參閱[LINQ to Objects](../../concepts/linq/linq-to-objects.md)。|  
 |LINQ to SQL|LINQ to SQL 提供者可讓您查詢及修改 SQL Server 資料庫中的資料。 這可讓您輕鬆對應應用程式的物件模型與資料庫的資料表和物件。<br /><br /> Visual Basic 藉由包含物件關聯式設計工具（O/R 設計工具），讓您更輕鬆地使用 LINQ to SQL。 這個設計工具是用於在對應至資料庫物件的應用程式中建立物件模型。 O/R 設計工具也提供將預存程式和函式對應至 <xref:System.Data.Linq.DataContext> 物件的功能，它會管理與資料庫的通訊，並儲存開放式平行存取檢查的狀態。<br /><br /> 如需有關 LINQ to SQL 提供者的詳細資訊，請參閱[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)。 如需物件關聯式設計工具的詳細資訊，請參閱[Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。|  
 |LINQ to XML|LINQ to XML 提供者可讓您查詢及修改 XML。 您可以修改記憶體內部的 XML，也可以從檔案載入 XML 並將 XML 儲存到檔案。<br /><br /> 此外，LINQ to XML 提供者會啟用 XML 常值和 XML 軸屬性，讓您可以直接在您的 Visual Basic 程式碼中撰寫 XML。 如需詳細資訊，請參閱[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)。|  
 |LINQ to DataSet|LINQ to DataSet 提供者可讓您查詢和更新 ADO.NET 資料集中的資料。 您可以將 LINQ 的強大功能加入使用資料集的應用程式，以簡化並擴充查詢、彙總及更新資料集資料的能力。<br /><br /> 如需詳細資訊，請參閱 [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)。|  
@@ -52,7 +52,7 @@ ms.locfileid: "76315859"
   
  [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
- 這個範例本身就是個有效的查詢；但是當您加入更多的查詢子句來精簡結果時，查詢就會變得更強大。 例如，您可以加入 `Where` 子句，根據一或多個值來篩選結果。 查詢運算式是單行程式碼，您只可以將其他查詢子句附加至查詢結尾。 您可以使用底線（\_）行接續字元，將查詢分解成多行文字，以改善可讀性。 下列程式碼範例顯示的查詢範例，包含 `Where` 子句。  
+ 這個範例本身就是個有效的查詢；但是當您加入更多的查詢子句來精簡結果時，查詢就會變得更強大。 例如，您可以加入 `Where` 子句，根據一或多個值來篩選結果。 查詢運算式是單行程式碼，您只可以將其他查詢子句附加至查詢結尾。 您可以使用底線（ \_ ）行接續字元，將查詢分解成多行文字，以改善可讀性。 下列程式碼範例顯示的查詢範例，包含 `Where` 子句。  
   
  [!code-vb[VbVbalrIntroToLINQ#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#3)]  
   
@@ -76,13 +76,13 @@ ms.locfileid: "76315859"
 
 ### <a name="from-clause"></a>From 子句
 
-必須有[`From` 子句](../../../../visual-basic/language-reference/queries/from-clause.md)或 `Aggregate` 子句，才能開始查詢。 `From` 子句會指定查詢的來源集合和反覆運算變數。 例如：
+必須有[ `From` 子句](../../../../visual-basic/language-reference/queries/from-clause.md)或 `Aggregate` 子句，才能開始查詢。 `From` 子句會指定查詢的來源集合和反覆運算變數。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>Select 子句
 
-選擇項。 [`Select` 子句](../../../../visual-basic/language-reference/queries/select-clause.md)會為查詢宣告一組反復專案變數。 例如：
+選擇性。 [ `Select` 子句](../../../../visual-basic/language-reference/queries/select-clause.md)會宣告一組查詢的反復專案變數。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
@@ -90,37 +90,37 @@ ms.locfileid: "76315859"
 
 ### <a name="where-clause"></a>Where 子句
 
-選擇項。 [`Where` 子句](../../../../visual-basic/language-reference/queries/where-clause.md)會指定查詢的篩選準則。 例如：
+選擇性。 [ `Where` 子句](../../../../visual-basic/language-reference/queries/where-clause.md)會指定查詢的篩選準則。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
 ### <a name="order-by-clause"></a>Order By 子句
 
-選擇項。 [`Order By` 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)會在查詢中指定資料行的排序次序。 例如：
+選擇性。 [ `Order By` 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)會指定查詢中資料行的排序次序。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join 子句
 
-選擇項。 [`Join` 子句](../../../../visual-basic/language-reference/queries/join-clause.md)會將兩個集合合併成單一集合。 例如：
+選擇性。 [ `Join` 子句](../../../../visual-basic/language-reference/queries/join-clause.md)會將兩個集合合併成單一集合。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>Group By 子句
 
-選擇項。 [`Group By` 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)會將查詢結果的元素群組在一起。 它可以用來將彙總函式套用至每個群組。 例如：
+選擇性。 [ `Group By` 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)會將查詢結果的元素群組在一起。 它可以用來將彙總函式套用至每個群組。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join 子句
 
-選擇項。 [`Group Join` 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)會將兩個集合合併成一個階層式集合。 例如：
+選擇性。 [ `Group Join` 子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)會將兩個集合合併成一個階層式集合。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>Aggregate 子句
 
-必須有[`Aggregate` 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)或 `From` 子句，才能開始查詢。 `Aggregate` 子句會將一或多個彙總函式套用至集合。 例如，您可以使用 `Aggregate` 子句來計算查詢所傳回之所有元素的總和，如下列範例所示。
+必須有[ `Aggregate` 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)或 `From` 子句，才能開始查詢。 `Aggregate` 子句會將一或多個彙總函式套用至集合。 例如，您可以使用 `Aggregate` 子句來計算查詢所傳回之所有元素的總和，如下列範例所示。
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
@@ -130,43 +130,43 @@ ms.locfileid: "76315859"
 
 ### <a name="let-clause"></a>Let 子句
 
-選擇項。 [`Let` 子句](../../../../visual-basic/language-reference/queries/let-clause.md)會計算值，並將它指派給查詢中的新變數。 例如：
+選擇性。 [ `Let` 子句](../../../../visual-basic/language-reference/queries/let-clause.md)會計算值，並將它指派給查詢中的新變數。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>Distinct 子句
 
-選擇項。 `Distinct` 子句會限制目前反覆運算變數的值，以排除查詢結果中重複的值。 例如：
+選擇性。 `Distinct`子句會限制目前反覆運算變數的值，以排除查詢結果中重複的值。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip 子句
 
-選擇項。 [`Skip` 子句](../../../../visual-basic/language-reference/queries/skip-clause.md)會略過集合中指定數目的元素，然後傳回其餘的專案。 例如：
+選擇性。 [ `Skip` 子句](../../../../visual-basic/language-reference/queries/skip-clause.md)會略過集合中指定數目的元素，然後傳回其餘的專案。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While 子句
 
-選擇項。 只要指定的條件為 `true`， [`Skip While` 子句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)就會略過集合中的專案，然後傳回其餘的元素。 例如：
+選擇性。 只要指定的條件為， [ `Skip While` 子句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)就會略過集合中的專案 `true` ，然後傳回其餘的元素。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take 子句
 
-選擇項。 [`Take` 子句](../../../../visual-basic/language-reference/queries/take-clause.md)會從集合開頭傳回指定數目的連續元素。 例如：
+選擇性。 [ `Take` 子句](../../../../visual-basic/language-reference/queries/take-clause.md)會從集合開頭傳回指定數目的連續元素。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While 子句
 
-選擇項。 只要指定的條件為 `true`， [`Take While` 子句](../../../../visual-basic/language-reference/queries/take-while-clause.md)就會包含集合中的元素，並略過其餘的專案。 例如：
+選擇性。 只要指定的條件為， [ `Take While` 子句](../../../../visual-basic/language-reference/queries/take-while-clause.md)就會包含集合中的元素 `true` ，並略過其餘的專案。 例如：
 
  [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
 ## <a name="use-additional-linq-query-features"></a>使用其他 LINQ 查詢功能  
   
-透過呼叫 LINQ 提供的可列舉和可查詢類型的成員，您可以使用其他的 LINQ 查詢功能。 透過呼叫查詢運算式結果上的特定查詢運算子，您可以使用這些額外的功能。 例如，下列範例會使用 <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> 方法，將兩個查詢的結果結合成一個查詢結果。 它使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 方法傳回泛型清單的查詢結果。
+透過呼叫 LINQ 提供的可列舉和可查詢類型的成員，您可以使用其他的 LINQ 查詢功能。 透過呼叫查詢運算式結果上的特定查詢運算子，您可以使用這些額外的功能。 例如，下列範例會使用方法， <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> 將兩個查詢的結果結合成一個查詢結果。 它使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 方法傳回泛型清單的查詢結果。
   
  [!code-vb[VbVbalrIntroToLINQ#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#22)]  
   
@@ -175,12 +175,12 @@ ms.locfileid: "76315859"
 ## <a name="connect-to-a-database-by-using-linq-to-sql"></a>使用 LINQ to SQL 連接到資料庫  
  在 Visual Basic 中，您可以使用 LINQ to SQL 檔案來識別您想要存取的 SQL Server 資料庫物件，例如資料表、視圖和預存程式。 LINQ to SQL 檔案的副檔名為 .dbml。  
   
- 當您有 SQL Server 資料庫的有效連接時，可以將**LINQ to SQL 類別**專案範本新增至您的專案。 這會顯示物件關聯式設計工具 (O/R 設計工具)。 O/R 設計工具可讓您將想要在程式碼中存取的專案從**伺服器總管**/**資料庫總管**拖曳至設計工具介面上。 LINQ to SQL 檔案將 <xref:System.Data.Linq.DataContext> 物件加入專案。 此物件包含您想要存取的資料表和檢視的屬性和集合，以及您想要呼叫的預存程序方法。 將變更儲存至 LINQ to SQL (.dbml) 檔案之後，參考 O/R 設計工具所定義的 <xref:System.Data.Linq.DataContext> 物件，您就可以存取程式碼中的這些物件。 專案的 <xref:System.Data.Linq.DataContext> 物件依據您的 LINQ to SQL 檔案名稱來命名。 例如，名為 Northwind.dbml 的 LINQ to SQL 檔案，會建立名為 `NorthwindDataContext` 的 <xref:System.Data.Linq.DataContext> 物件。  
+ 當您有 SQL Server 資料庫的有效連接時，可以將**LINQ to SQL 類別**專案範本新增至您的專案。 這會顯示物件關聯式設計工具 (O/R 設計工具)。 O/R 設計工具可讓您將想要在程式碼中存取的專案從**伺服器總管** / **資料庫總管**拖曳到設計工具介面上。 LINQ to SQL 檔案將 <xref:System.Data.Linq.DataContext> 物件加入專案。 此物件包含您想要存取的資料表和檢視的屬性和集合，以及您想要呼叫的預存程序方法。 將變更儲存至 LINQ to SQL (.dbml) 檔案之後，參考 O/R 設計工具所定義的 <xref:System.Data.Linq.DataContext> 物件，您就可以存取程式碼中的這些物件。 專案的 <xref:System.Data.Linq.DataContext> 物件依據您的 LINQ to SQL 檔案名稱來命名。 例如，名為 Northwind.dbml 的 LINQ to SQL 檔案，會建立名為 `NorthwindDataContext` 的 <xref:System.Data.Linq.DataContext> 物件。  
   
  如需有關逐步指示的範例，請參閱[如何：查詢資料庫](how-to-query-a-database-by-using-linq.md)和[如何：呼叫預存](how-to-call-a-stored-procedure-by-using-linq.md)程式。  
   
 ## <a name="visual-basic-features-that-support-linq"></a>支援 LINQ 的 Visual Basic 功能  
- Visual Basic 包含其他顯著的功能，可讓您使用 LINQ simple，並減少您必須撰寫來執行 LINQ 查詢的程式碼數量。 包含以下各項：  
+ Visual Basic 包含其他顯著的功能，可讓您使用 LINQ simple，並減少您必須撰寫來執行 LINQ 查詢的程式碼數量。 這些選項包括：  
   
 - **匿名型別**，可讓您根據查詢結果建立新的類型。  
   
@@ -245,11 +245,11 @@ ms.locfileid: "76315859"
 ## <a name="featured-book-chapters"></a>精選書籍章節  
  第[17 章：](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))程式設計中的 LINQ [Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ (Language-Integrated Query)](../../concepts/linq/index.md)
 - [Visual Basic 中的 LINQ to XML 概觀](../../language-features/xml/overview-of-linq-to-xml.md)
 - [LINQ to DataSet 概觀](../../../../framework/data/adonet/linq-to-dataset-overview.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)
-- [DataContext 方法 (O/R 設計工具)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [DataCoNtext 方法（O/R 設計工具）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

@@ -2,12 +2,12 @@
 title: 使用 DataContractJsonSerializer 的獨立 JSON 序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 259d5da544262b5cae08e1be9e8ea6e077d5b947
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144925"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202396"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>使用 DataContractJsonSerializer 的獨立 JSON 序列化
 
@@ -189,7 +189,7 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 
 #### <a name="preserving-type-information"></a>保留型別資訊
 
-如前所述，在 JSON 中支援多型有一些限制。 JavaScript 是弱型別語言，而型別身分識別通常不是問題。 然而，當使用 JSON 在強型別系統 (.NET) 和弱型別系統 (JavaScript) 之間進行通訊時，保留型別身分識別是很有用的。 例如，資料合約名稱為 "Square" 和 "Circle" 的型別衍生自資料合約名稱為 "Shape" 的型別。 如果 "Circle" 是從 .NET 傳送至 JavaScript，稍後再傳回至應該有 "Shape" 的 .NET 方法，讓 .NET 端知道所討論的物件原本是 "Circle" 會很有用，否則衍生型別的特定資訊 (例如，"Circle" 上的 "radius" 資料成員) 可能會遺失。
+如前所述，在 JSON 中支援多型有一些限制。 JavaScript 是弱型別語言，而型別身分識別通常不是問題。 不過，當使用 JSON 在強型別系統（.NET）和弱型別系統（JavaScript）之間進行通訊時，保留型別身分識別會很有用。 例如，資料合約名稱為 "Square" 和 "Circle" 的型別衍生自資料合約名稱為 "Shape" 的型別。 如果 "Circle" 是從 .NET 傳送至 JavaScript，稍後再傳回至應該有 "Shape" 的 .NET 方法，讓 .NET 端知道所討論的物件原本是 "Circle" 會很有用，否則衍生型別的特定資訊 (例如，"Circle" 上的 "radius" 資料成員) 可能會遺失。
 
 若要保留型別身分識別，在將複雜型別序列化至 JSON 時可以新增「型別提示」，還原序列化程式便可辨識提示並執行適當的動作。 「類型提示」是 JSON 索引鍵/值組，索引鍵名稱為 " \_ \_ type" （兩個底線後面接著 "type" 一字）。 值是格式 "DataContractName:DataContractNamespace" (第一個冒號之前是名稱) 的 JSON 字串。 使用之前的範例，"Circle" 可以進行序列化，如下所示。
 
@@ -229,7 +229,7 @@ ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 Jav
 
 型別提示可能會大幅增加訊息大小 (改善這種情況的方法之一是盡量使用較短的資料合約命名空間)。 因此，下列規則會管理是否發出型別提示：
 
-- 當使用 ASP.NET AJAX 時，即使沒有基底/衍生指派 (例如，即使 Circle 指派至 Circle)，只要可以，還是永遠會發出型別提示 (如果要完整啟用從弱型別 JSON 環境至強型別 .NET 環境的呼叫處理，而不會意外遺失資訊，這是必要的)。
+- 當使用 ASP.NET AJAX 時，即使沒有基底/衍生指派 (例如，即使 Circle 指派至 Circle)，只要可以，還是永遠會發出型別提示 （這是完全啟用從弱型別 JSON 環境呼叫到強型別 .NET 環境，而不會意外遺失資訊）的必要步驟。
 
 - 如果使用沒有 ASP.NET 整合的 AJAX 服務，只有在有基底/衍生指派時，才會發出型別提示 - 也就是說，在 Circle 指派至 Shape 或 <xref:System.Object> 但不是在指派至 Circle 時發出。 這會提供正確實作 JavaScript 用戶端所需的最少必要資訊，因而增進效能，但無法防止設計錯誤的用戶端中的型別資訊遺失。 如果您要避免在用戶端上處理這個問題，請避免在伺服器上使用基底/衍生指派。
 

@@ -3,12 +3,12 @@ title: 變數與引數
 description: 本文說明變數（代表資料的儲存區）和引數（代表 Workflow Foundation 中的活動流入/流出的資料）。
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5cce9931e9b0a37d5fafbfb84527ffd543a0a50f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421302"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201950"
 ---
 # <a name="variables-and-arguments"></a>變數與引數
 在 Windows Workflow Foundation （WF）中，變數代表資料的儲存和引數代表進出活動的資料流程。 活動有一組引數，且它們會構成活動的簽章。 此外，活動也包含變數的清單，開發人員可在設計工作流程時加入或移除其中的變數。 引數會使用傳回值的運算式來繫結。  
@@ -70,7 +70,7 @@ Variable<string> var = new Variable<string>
   
 3. 引數可以選擇是否要指定它們的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定評估引數順序之以零為起始的值。 根據預設，引數的預設評估順序未指定，而且等於 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 設定 <xref:System.Activities.Argument.EvaluationOrder%2A> 為大於或等於零的值，以指定這個引數的評估順序。 Windows Workflow Foundation 會依照指定的評估順序，以遞增順序來評估引數。 請注意，未指定評估順序的引數會在有指定評估順序的引數之前先進行評估。  
   
- 活動作者可使用強型別的機制來公開其引數。 藉由宣告型別 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 與 <xref:System.Activities.InOutArgument%601> 的屬性，即可完成此動作。 這可讓活動作者建立資料進出活動的相關特定合約。  
+ 活動作者可以使用強型別機制來公開其引數。 藉由宣告型別 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 與 <xref:System.Activities.InOutArgument%601> 的屬性，即可完成此動作。 這可讓活動作者建立資料進出活動的相關特定合約。  
   
 ### <a name="defining-the-arguments-on-an-activity"></a>定義活動的引數  
  藉由指定型別 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 與 <xref:System.Activities.InOutArgument%601> 的屬性，即可在活動上定義引數。 下列程式碼顯示如何定義帶入字串以顯示使用者，並傳回包含使用者回應字串之 `Prompt` 活動的引數。  

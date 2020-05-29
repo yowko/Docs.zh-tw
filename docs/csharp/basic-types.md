@@ -4,16 +4,16 @@ description: 了解所有 C# 程式中的核心類型 (數字、字串和物件)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 89b5cebdc887db808db8abb1fa9eda34e2bec9e5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205803"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202214"
 ---
 # <a name="types-variables-and-values"></a>類型、變數和值
 
-C# 是強型別語言。 每個變數和常數都有型別，如同每個會評估為值的運算式一般。 每種方法簽章都會指定每個輸入參數與其傳回值的型別。 .NET Framework Class Library 會定義一組內建數字型別以及較複雜型別，代表各種邏輯建構，例如檔案系統、網路連線、物件集合與陣列，以及日期。 一般 C# 程式會使用類別庫的型別和使用者定義的型別，模型化程式的問題領域特有概念。  
+C # 是強型別語言。 每個變數和常數都有型別，如同每個會評估為值的運算式一般。 每種方法簽章都會指定每個輸入參數與其傳回值的型別。 .NET Framework Class Library 會定義一組內建數字型別以及較複雜型別，代表各種邏輯建構，例如檔案系統、網路連線、物件集合與陣列，以及日期。 一般 C# 程式會使用類別庫的型別和使用者定義的型別，模型化程式的問題領域特有概念。  
   
 可儲存在型別中的資訊包括下列各項：  
   
@@ -66,7 +66,7 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-使用型別參數讓您能夠重複使用相同的類別來保存任何元素型別，而不需要將每個元素都轉換成 [object](language-reference/builtin-types/reference-types.md#the-object-type)。 泛型集合類別則稱為「強型別集合」**，因為編譯器知道集合元素的特定型別，如果您嘗試將整數加入至上一個範例中的 `strings` 物件，便會在編譯時期引發錯誤。 如需詳細資訊，請參閱[泛型](programming-guide/generics/index.md)。
+使用型別參數讓您能夠重複使用相同的類別來保存任何元素型別，而不需要將每個元素都轉換成 [object](language-reference/builtin-types/reference-types.md#the-object-type)。 泛型集合類別稱為強型別*集合*，因為編譯器會知道集合元素的特定型別，如果您嘗試在 `strings` 上一個範例中將整數加入至物件，則可能會在編譯時期引發錯誤。 如需詳細資訊，請參閱[泛型](programming-guide/generics/index.md)。
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>隱含類型、匿名型別和 Tuple 類型
 
@@ -84,7 +84,7 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
   
 - CTS 中的每個型別都會定義為「實值型別」** 或「參考型別」**。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用或關鍵字定義的類型 `struct` `enum` 是實數值型別。 如需實數值型別的詳細資訊，請參閱實[數值型別](language-reference/builtin-types/value-types.md)。 您使用 [class](language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 如需參考型別的詳細資訊，請參閱[類別](programming-guide/classes-and-structs/classes.md)。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [結構類型](language-reference/builtin-types/struct.md)
 - [列舉類型](language-reference/builtin-types/enum.md)

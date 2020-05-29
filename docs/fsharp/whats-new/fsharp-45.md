@@ -1,25 +1,25 @@
 ---
-title: F# 4.5 - F# 指南中的新增功能
-description: 獲取 F# 4.5 中提供的新功能的概述。
+title: 'F # 4.5 的新功能-F # 指南'
+description: '取得 F # 4.5 中可用的新功能總覽。'
 ms.date: 11/27/2019
-ms.openlocfilehash: 560e3dd941f79b76d3b864ba0f6560be154ebc1a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c978c66a4bf231398508cbc1cbb8839228ea8e9
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186128"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202357"
 ---
-# <a name="whats-new-in-f-45"></a>F# 4.5 中的新增功能
+# <a name="whats-new-in-f-45"></a>F # 4.5 的新功能
 
-F# 4.5 為 F# 語言添加了多項改進。 這些功能中有許多被添加到一起，使您能夠在 F# 中編寫高效的代碼，同時確保此代碼是安全的。 這樣做意味著在使用這些構造時向語言添加一些概念和大量編譯器分析。
+F # 4.5 加入了多項 F # 語言的增強功能。 其中許多功能都已新增在一起，可讓您以 F # 撰寫有效率的程式碼，同時確保此程式碼是安全的。 這麼做表示在使用這些結構時，將幾個概念新增至語言，以及大量編譯器分析。
 
 ## <a name="get-started"></a>開始使用
 
-F# 4.5 在所有 .NET 核心發行版本和視覺化工作室工具中均可用。 [開始使用 F#](../get-started/index.md)瞭解更多資訊。
+F # 4.5 適用于所有 .NET Core 發行版本和 Visual Studio 工具。 [開始使用 F #](../get-started/index.md)以深入瞭解。
 
-## <a name="span-and-byref-like-structs"></a>跨度和位元組式結構
+## <a name="span-and-byref-like-structs"></a>Span 和類似 byref 的結構
 
-.NET Core 中引入<xref:System.Span%601>的類型允許您以強型別的方式表示記憶體中的緩衝區，現在 F# 中允許使用 F# 4.5。 下面的示例演示如何使用具有不同緩衝區表示表示的 對 的<xref:System.Span%601>函數操作：
+<xref:System.Span%601>.Net Core 中引進的類型可讓您以強型別方式表示記憶體中的緩衝區，而 f # 中現在允許使用 f # 4.5。 下列範例會示範如何在 <xref:System.Span%601> 具有不同緩衝區標記法的上重複使用函數：
 
 ```fsharp
 let safeSum (bytes: Span<byte>) =
@@ -49,26 +49,26 @@ let stackSpan = Span<byte>(mem2, 100)
 safeSum(stackSpan) |> printfn "res = %d"
 ```
 
-這方面的一個重要方面是，Span 和其他類似[byref 的構造](../language-reference/structures.md#byreflike-structs)具有由編譯器執行的非常嚴格的靜態分析，這些分析以您可能會發現意外的方式限制它們的使用。 這是 F# 4.5 中引入的性能、表現力和安全性之間的基本權衡。
+其中一個重要的層面是，Span 和其他[byref 類似的結構](../language-reference/structures.md#byreflike-structs)都有非常嚴格的靜態分析，由編譯器執行，以限制其使用方式，因為您可能會發現非預期的情況。 這是在 F # 4.5 中引進的效能、表達和安全性之間的基本取捨。
 
-## <a name="revamped-byrefs"></a>已改造的參考
+## <a name="revamped-byrefs"></a>改頭換面 byref
 
-在 F# 4.5 之前，F# 中的[Byrefs](../language-reference/byrefs.md)對許多應用程式不安全且不健全。 在 F# 4.5 中解決了 byrefs 周圍的聲音問題，並且還應用了對跨度和 byref 類似結構的相同靜態分析。
+在 F # 4.5 之前，F # 中的[byref](../language-reference/byrefs.md)對許多應用程式而言是不安全的，而是無效:。 Byref 的 Soundness 問題已在 F # 4.5 中解決，同時也套用了對 span 和類似 byref 的結構所做的相同靜態分析。
 
-### <a name="inreft-and-outreft"></a>inref<'t't>和出<'t'>
+### <a name="inreft-and-outreft"></a>inref< 不> 和 outref< 不>
 
-為了表示唯讀、只寫和讀/寫託管指標的概念，F# 4.5 分別引入了`inref<'T>`表示唯讀`outref<'T>`指標和只寫指標的類型。 每個都有不同的語義。 例如，您不能寫入 ： `inref<'T>`
+為了表示唯讀、僅限寫入和讀取/寫入受控指標的概念，F # 4.5 引進了 `inref<'T>` ， `outref<'T>` 分別代表唯讀和僅限寫入指標的類型。 每個都有不同的語義。 例如，您無法寫入 `inref<'T>` ：
 
 ```fsharp
 let f (dt: inref<DateTime>) =
     dt <- DateTime.Now // ERROR - cannot write to an inref!
 ```
 
-預設情況下，型別推斷將推斷託管指標`inref<'T>`與 F# 代碼的不可變性質一致，除非某些內容已聲明為可變指標。 要使某些內容具有可寫性，您需要在將類型位址傳遞給操作`mutable`它的函數或成員之前聲明類型。 要瞭解更多資訊，請參閱[Byrefs](../language-reference/byrefs.md)。
+根據預設，型別推斷會將 managed 指標推斷為與 `inref<'T>` F # 程式碼的不可變性質相同，除非已經將某些專案宣告為可變動。 若要使其成為可寫入的專案，您必須在將 `mutable` 其位址傳遞給操作它的函式或成員之前，宣告類型。 若要深入瞭解，請參閱[byref](../language-reference/byrefs.md)。
 
-## <a name="readonly-structs"></a>唯讀結構
+## <a name="readonly-structs"></a>Readonly 結構
 
-從 F# 4.5 開始，您可以用<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>這樣的來對結構進行加號：
+從 F # 4.5 開始，您可以使用來標注結構， <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> 如下所示：
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -77,20 +77,20 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-這不允許您在結構中聲明可變成員，併發出中繼資料，允許 F# 和 C# 在從程式集使用時將其視為唯讀。 要瞭解更多資訊，請參閱[唯讀結構](../language-reference/structures.md#readonly-structs)。
+這不允許您在結構中宣告可變動的成員，並且會發出中繼資料，讓 F # 和 c # 從元件取用時，將它視為唯讀。 若要深入瞭解，請參閱[ReadOnly 結構](../language-reference/structures.md#readonly-structs)。
 
-## <a name="void-pointers"></a>虛空指標
+## <a name="void-pointers"></a>Void 指標
 
-類型`voidptr`將添加到 F# 4.5，以下函數也包括：
+`voidptr`類型會加入 F # 4.5，如下列函數所示：
 
-* `NativePtr.ofVoidPtr`將 void 指標轉換為本機 int 指標
-* `NativePtr.toVoidPtr`將本機 int 指標轉換為空指標
+* `NativePtr.ofVoidPtr`將 void 指標轉換成原生 int 指標
+* `NativePtr.toVoidPtr`若要將原生 int 指標轉換成 void 指標
 
-當與使用 void 指標的本機組件進行交互操作時，這非常有用。
+當與使用 void 指標的原生元件互通時，這會很有説明。
 
 ## <a name="the-match-keyword"></a>`match!` 關鍵字
 
-關鍵字`match!`在計算運算式內增強模式匹配：
+關鍵字會在 `match!` 計算運算式內時增強模式比對：
 
 ```fsharp
 // Code that returns an asynchronous option
@@ -111,11 +111,11 @@ let funcWithString (s: string) =
 }
 ```
 
-這允許您縮短通常涉及混合選項（或其他類型）的代碼與計算運算式（如非同步）。 要瞭解更多資訊，請參閱[匹配！](../language-reference/computation-expressions.md#match)
+這可讓您縮短程式碼，這通常牽涉到混合選項（或其他類型）與計算運算式（例如 async）。 若要深入瞭解，請參閱[match！](../language-reference/computation-expressions.md#match)。
 
-## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>在陣列、清單和序列運算式中放寬了向上轉換要求
+## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>陣列、清單和順序運算式中的寬鬆 upcasting 需求
 
-混合類型，其中一個類型可以從陣列、清單和序列運算式的另一個內部繼承，傳統上需要您將任何派生類型用`:>`或`upcast`將其父類型向上轉換。 這是現在放鬆，如下所示：
+混合型別，其中一個可能繼承自陣列、清單和序列運算式內的另一個類型，傳統上會要求您使用或，將任何衍生的型別向上轉換成其父系型別 `:>` `upcast` 。 這現在是寬鬆的，如下所示：
 
 ```fsharp
 let x0 : obj list  = [ "a" ] // ok pre-F# 4.5
@@ -125,9 +125,9 @@ let x2 : obj list  = [ yield "a" :> obj ] // ok pre-F# 4.5
 let x3 : obj list  = [ yield "a" ] // Now ok for F# 4.5, and can replace x2
 ```
 
-## <a name="indentation-relaxation-for-array-and-list-expressions"></a>陣列和清單運算式的縮進放鬆
+## <a name="indentation-relaxation-for-array-and-list-expressions"></a>陣列和清單運算式的縮排放寬
 
-在 F# 4.5 之前，當作為參數傳遞給方法調用時，需要過度縮進陣列和清單運算式。 不再需要這一點：
+在 F # 4.5 之前，當陣列和清單運算式當做引數傳遞給方法呼叫時，您需要過度將它縮排。 已不再需要此動作：
 
 ```fsharp
 module NoExcessiveIndenting =

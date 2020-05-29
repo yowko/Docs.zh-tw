@@ -2,19 +2,19 @@
 title: Entity SQL 概觀
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: 880b81f2b6d4c4b893d28c919490f88dfb2a42e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4fe852847d8b1b4bc0b80e3ba8e1f5b4aae9ff7
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150372"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202254"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL 概觀
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是一種類似于 SQL 的語言，使您能夠在實體框架中查詢概念模型。 概念模型將資料表示為實體和關係，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]並允許您以使用 SQL 的實體和關係所熟悉的格式查詢這些實體和關係。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是一種類似 SQL 的語言，可讓您查詢 Entity Framework 中的概念模型。 概念模型會將資料表示為實體和關聯性，並可 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 讓您以熟悉使用 SQL 之物件的格式來查詢這些實體和關聯性。  
 
- 實體框架與特定于存儲的資料提供程式合作，將泛型[!INCLUDE[esql](../../../../../../includes/esql-md.md)]轉換為特定于存儲的查詢。 EntityClient 提供者會提供一個方式來針對實體模型執行 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 命令，並傳回豐富的資料型別，包括純量結果、結果集和物件圖形。 當您建構 <xref:System.Data.EntityClient.EntityCommand> 物件時，您可以指定預存程序名稱或查詢的文字，其方式是將 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢字串指派給它的 <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> 屬性。 <xref:System.Data.EntityClient.EntityDataReader> 會公開針對 EDM 執行 <xref:System.Data.EntityClient.EntityCommand> 的結果。 若要執行可傳回 <xref:System.Data.EntityClient.EntityDataReader> 的命令，請呼叫 <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>。  
+ 此 Entity Framework 可與儲存體特定的資料提供者搭配使用，以將泛型轉譯 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 成特定儲存體的查詢。 EntityClient 提供者會提供一個方式來針對實體模型執行 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 命令，並傳回豐富的資料型別，包括純量結果、結果集和物件圖形。 當您建構 <xref:System.Data.EntityClient.EntityCommand> 物件時，您可以指定預存程序名稱或查詢的文字，其方式是將 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢字串指派給它的 <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> 屬性。 <xref:System.Data.EntityClient.EntityDataReader> 會公開針對 EDM 執行 <xref:System.Data.EntityClient.EntityCommand> 的結果。 若要執行可傳回 <xref:System.Data.EntityClient.EntityDataReader> 的命令，請呼叫 <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>。  
   
- 除了 EntityClient 提供程式之外，實體框架還允許您使用[!INCLUDE[esql](../../../../../../includes/esql-md.md)]執行針對概念模型的查詢，並將資料作為實體類型的實例的強型別 CLR 物件返回資料。 有關詳細資訊，請參閱[使用物件](../working-with-objects.md)。  
+ 除了 EntityClient 提供者之外，Entity Framework 還可讓您使用 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 針對概念模型執行查詢，並傳回資料做為實體類型實例的強型別 CLR 物件。 如需詳細資訊，請參閱[使用物件](../working-with-objects.md)。  
   
  本章節提供有關 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 的概念資訊。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "79150372"
   
  [命名空間](namespaces-entity-sql.md)  
   
- [識別碼](identifiers-entity-sql.md)  
+ [識別項](identifiers-entity-sql.md)  
   
  [參數](parameters-entity-sql.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "79150372"
   
  [查詢運算式](query-expressions-entity-sql.md)  
   
- [函式](functions-entity-sql.md)  
+ [函數](functions-entity-sql.md)  
   
  [運算子優先順序](operator-precedence-entity-sql.md)  
   

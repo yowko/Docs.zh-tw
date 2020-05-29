@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32ba8f5e60b3ed2efd813a8ae32e5f4009eb790d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635791"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202413"
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 
-下節將介紹 C# 3.0 中引進的新語言建構。 儘管這些新功能在一定程度上用於 LINQ 查詢，但它們並不限於 LINQ，並且可用於您發現它們有用的任何上下文中。
+下節將介紹 C# 3.0 中引進的新語言建構。 雖然這些新功能全都適用于 LINQ 查詢的程度，但它們並不限於 LINQ，而且可以在任何您覺得有用的內容中使用。
 
 ## <a name="query-expressions"></a>查詢運算式
 
-查詢運算式使用類似 SQL 或 XQuery 的宣告式語法來查詢 IEnumerable 集合。 在編譯時查詢語法轉換為方法調用到 LINQ 提供程式實現的標準查詢運算子擴充方法。 應用程式使用 `using` 指示詞來指定適當的命名空間，藉此控制範圍內的標準查詢運算子。 下列查詢運算式會擷取字串的陣列，然後根據字串的第一個字元分組字串，再排序這些群組。
+查詢運算式使用類似 SQL 或 XQuery 的宣告式語法來查詢 IEnumerable 集合。 在編譯時期，查詢語法會轉換成 LINQ 提供者的標準查詢運算子擴充方法的實作為方法呼叫。 應用程式使用 `using` 指示詞來指定適當的命名空間，藉此控制範圍內的標準查詢運算子。 下列查詢運算式會擷取字串的陣列，然後根據字串的第一個字元分組字串，再排序這些群組。
 
 ```csharp
 var query = from str in stringArray
@@ -40,7 +40,7 @@ var query = from str in stringArray
             select str;
 ```
 
-宣告為 `var` 的變數和明確指定類型的變數一樣具有強型別。 `var` 可用來建立匿名型別，但僅可用於區域變數。 陣列也可以使用隱含型別進行宣告。
+宣告為的變數，與 `var` 您明確指定類型的變數一樣強型別。 `var` 可用來建立匿名型別，但僅可用於區域變數。 陣列也可以使用隱含型別進行宣告。
 
 如需詳細資訊，請參閱[隱含型別區域變數](../../classes-and-structs/implicitly-typed-local-variables.md)。
 
@@ -66,7 +66,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-如需詳細資訊，請參閱
+如需詳細資訊，請參閱：
 
 - [物件和集合初始設定式](../../classes-and-structs/object-and-collection-initializers.md)
 
@@ -80,23 +80,23 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-有關詳細資訊，請參閱[匿名型別](../../classes-and-structs/anonymous-types.md)。
+如需詳細資訊，請參閱[匿名](../../classes-and-structs/anonymous-types.md)型別。
 
 ## <a name="extension-methods"></a>擴充方法
 
-擴充方法是一種可以與類型相關聯的靜態方法，因此可以像呼叫類型上的執行個體方法一樣呼叫它。 這項功能實際上可讓您「新增」方法至現有的類型，而不需要實際修改這些類型。 標準查詢運算子是一組擴充方法，為實現<xref:System.Collections.Generic.IEnumerable%601>的任何類型提供 LINQ 查詢功能。
+擴充方法是一種可以與類型相關聯的靜態方法，因此可以像呼叫類型上的執行個體方法一樣呼叫它。 這項功能實際上可讓您「新增」方法至現有的類型，而不需要實際修改這些類型。 標準查詢運算子是一組擴充方法，可為任何可執行檔型別提供 LINQ 查詢功能 <xref:System.Collections.Generic.IEnumerable%601> 。
 
 如需詳細資訊，請參閱[擴充方法](../../classes-and-structs/extension-methods.md)。
 
 ## <a name="lambda-expressions"></a>Lambda 運算式
 
-Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數與函式主體，而且可以在編譯期間轉換成委派或運算式樹狀架構。 在 LINQ 程式設計中，當您直接調用標準查詢運算子時，會遇到 lambda 運算式。
+Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數與函式主體，而且可以在編譯期間轉換成委派或運算式樹狀架構。 在 LINQ 程式設計中，當您對標準查詢運算子進行直接方法呼叫時，將會遇到 lambda 運算式。
 
-如需詳細資訊，請參閱
+如需詳細資訊，請參閱：
 
 - [匿名函式](../../statements-expressions-operators/anonymous-functions.md)
 
-- [蘭姆達運算式](../../statements-expressions-operators/lambda-expressions.md)
+- [Lambda 運算式](../../statements-expressions-operators/lambda-expressions.md)
 
 - [運算式樹狀架構 (C#)](../expression-trees/index.md)
 

@@ -3,12 +3,12 @@ title: 垃圾收集行程 config 設定
 description: 瞭解用來設定垃圾收集行程如何管理 .NET Core 應用程式記憶體的執行時間設定。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: d7e3d040cd634eeb020beff806c60f834cc02585
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761976"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202089"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用於垃圾收集的執行時間設定選項
 
@@ -78,7 +78,7 @@ ms.locfileid: "83761976"
 | - | - | - | - |
 | **.runtimeconfig.json json** | `System.GC.Concurrent` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
 | **MSBuild 屬性** | `ConcurrentGarbageCollection` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
-| **環境變數** | `COMPlus_gcConcurrent` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
+| **環境變數** | `COMPlus_gcConcurrent` | `1`-背景 GC<br/>`0`-非並行 GC | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-背景 GC<br/>`false`-非並行 GC |  |
 
 ### <a name="examples"></a>範例
@@ -205,7 +205,7 @@ ms.locfileid: "83761976"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | N/A | N/A | N/A |
+| **.runtimeconfig.json json** | 不適用 | 不適用 | 不適用 |
 | **環境變數** | `COMPlus_GCCpuGroup` | `0`-已停用<br/>`1`-已啟用 | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-已停用<br/>`true`-已啟用 |  |
 
@@ -343,7 +343,7 @@ ms.locfileid: "83761976"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | N/A | N/A | N/A |
+| **.runtimeconfig.json json** | 不適用 | 不適用 | 不適用 |
 | **環境變數** | `COMPlus_GCLargePages` | `0`-已停用<br/>`1`-已啟用 | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>大型物件
@@ -356,7 +356,7 @@ ms.locfileid: "83761976"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | N/A | N/A | N/A |
+| **.runtimeconfig.json json** | 不適用 | 不適用 | 不適用 |
 | **環境變數** | `COMPlus_gcAllowVeryLargeObjects` | `1`-已啟用<br/> `0`-已停用 | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [Gcallowverylargeobjects>](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1`-已啟用<br/> `0`-已停用 | .NET Framework 4.5 |
 
@@ -398,5 +398,5 @@ ms.locfileid: "83761976"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | N/A | N/A | N/A |
+| **.runtimeconfig.json json** | 不適用 | 不適用 | 不適用 |
 | **環境變數** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

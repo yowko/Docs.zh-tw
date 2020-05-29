@@ -3,12 +3,12 @@ title: gRPC
 description: 瞭解 gRPC、其在雲端原生應用程式中的角色，以及它與 HTTP RESTful 通訊有何不同。
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614041"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201325"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -41,7 +41,7 @@ gRPC 採用稱為[通訊協定緩衝區](https://developers.google.com/protocol-
 
 使用 proto 檔案（Protobuf 編譯器），會 `protoc` 為您的目標平臺產生用戶端和服務程式代碼。 程式碼包含下列元件：
 
-- 由用戶端和服務所共用的強型別物件，代表訊息的服務作業和資料元素。
+- 由用戶端和服務共用的強型別物件，代表訊息的服務作業和資料元素。
 - 具有遠端 gRPC 服務可繼承和擴充之必要網路配管的強型別基類。
 - 用戶端存根，其中包含叫用遠端 gRPC 服務所需的管道。
 
@@ -83,7 +83,7 @@ SDK 包含端點路由、內建 IoC 和記錄的工具。 開放原始碼 Kestre
 
 在撰寫本文時，gRPC 主要是與後端服務搭配使用。 大部分的新式瀏覽器無法提供支援前端 gRPC 用戶端所需的 HTTP/2 控制層級。 話雖如此，還有一個[早期的計畫](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/)，可以讓以 JavaScript 或 Blazor WebAssembly 技術建立的瀏覽器型應用程式進行 gRPC 通訊。 [適用于 .net 的 GRPC Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md)可讓 ASP.NET Core gRPC 應用程式支援瀏覽器應用程式中的 gRPC 功能：
 
-- 強型別的程式碼產生用戶端
+- 強型別、程式碼產生的用戶端
 - Compact Protobuf 訊息
 - 伺服器串流
 

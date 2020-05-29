@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 99fe377e8fff193c4f8bb566946b95c61c1b3693
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8ae4b4b9938f72f4f4fc011e180cd69440ec3dd9
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568886"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201763"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查詢資料服務 (WCF 資料服務)
 
-WCF Data Services 用戶端程式庫可讓您使用熟悉的 .NET Framework 程式設計模式（包括使用語言整合式查詢（LINQ））對資料服務執行查詢。 用戶端程式庫會將查詢轉譯為 HTTP GET 要求訊息，該查詢在用戶端上已定義為 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別的執行個體。 程式庫會接收回應訊息，並將它轉譯為用戶端資料服務類別的實例。 這些類別會由 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 追蹤。
+WCF Data Services 用戶端程式庫可讓您使用熟悉的 .NET Framework 程式設計模式（包括使用語言整合式查詢（LINQ））對資料服務執行查詢。 用戶端程式庫會將查詢轉譯為 HTTP GET 要求訊息，該查詢在用戶端上已定義為 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別的執行個體。 程式庫會接收回應訊息，並將它轉譯為用戶端資料服務類別的執行個體。 這些類別會由 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 追蹤。
 
 ## <a name="data-service-queries"></a>資料服務查詢
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> 泛型類別表示傳回零個或多個實體型別執行個體之集合的查詢。 資料服務查詢永遠屬於現有的資料服務內容。 此內容會維持撰寫及執行查詢所需的服務 URI 和中繼資料 (Metadata) 資訊。
 
-當您使用 [**加入服務參考**] 對話方塊將資料服務加入至以 .NET Framework 為基礎的用戶端應用程式時，會建立繼承自 <xref:System.Data.Services.Client.DataServiceContext> 類別的實體容器類別。 這個類別包含會傳回具型別之 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體的屬性。 每一個實體集都有一個屬性，並由資料服務公開。 這些屬性可以讓具型別 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體的建立作業更為容易。
+當您使用 [**加入服務參考**] 對話方塊將資料服務加入至以 .NET Framework 為基礎的用戶端應用程式時，會建立繼承自類別的實體容器類別 <xref:System.Data.Services.Client.DataServiceContext> 。 這個類別包含會傳回具型別之 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體的屬性。 每一個實體集都有一個屬性，並由資料服務公開。 這些屬性可以讓具型別 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體的建立作業更為容易。
 
 以下情況下會執行查詢：
 
@@ -45,11 +45,11 @@ WCF Data Services 用戶端程式庫可讓您使用熟悉的 .NET Framework 程�
 
 如需詳細資訊，請參閱[如何：執行資料服務查詢](how-to-execute-data-service-queries-wcf-data-services.md)。
 
-WCF Data Services 用戶端支援晚期繫結物件的查詢，例如當您在中C#使用*動態*類型時。 不過，基於效能因素，您應該一律針對資料服務撰寫強型別的查詢。 用戶端不支援 <xref:System.Tuple> 型別和動態物件。
+WCF Data Services 用戶端支援晚期繫結物件的查詢，例如當您在 c # 中使用*動態*類型時。 不過，基於效能的考慮，您應該一律針對資料服務撰寫強型別查詢。 用戶端不支援 <xref:System.Tuple> 型別和動態物件。
 
 ## <a name="linq-queries"></a>LINQ 查詢
 
-由於 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別會執行 LINQ 所定義的 <xref:System.Linq.IQueryable%601> 介面，因此 WCF Data Services 用戶端程式庫可以將實體集資料的 LINQ 查詢轉換為 URI，以代表針對資料服務資源評估的查詢運算式。 下列範例是 LINQ 查詢，其相當於以前的 <xref:System.Data.Services.Client.DataServiceQuery%601>，它會傳回運費成本超過 $30 的 `Orders`，並依運費成本排序結果：
+由於 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別 <xref:System.Linq.IQueryable%601> 會執行 LINQ 所定義的介面，因此 WCF Data Services 用戶端程式庫可以將實體集資料的 LINQ 查詢轉換為 URI，以代表針對資料服務資源評估的查詢運算式。 下列範例是 LINQ 查詢，其相當於以前的 <xref:System.Data.Services.Client.DataServiceQuery%601>，它會傳回運費成本超過 $30 的 `Orders`，並依運費成本排序結果：
 
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]
@@ -131,7 +131,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 您也可以分別呼叫 <xref:System.Int32> 或 <xref:System.Int64> 方法，藉此只取得集合中的實體總計數，以做為 <xref:System.Linq.Enumerable.Count%2A> 或做為 <xref:System.Linq.Enumerable.LongCount%2A> 值。 呼叫這些方法時，並未傳回 <xref:System.Data.Services.Client.QueryOperationResponse%601>；只會傳回計數值。 如需詳細資訊，請參閱[如何：判斷查詢傳回的實體數目](number-of-entities-returned-by-a-query-wcf.md)。
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
 - [查詢投影](query-projections-wcf-data-services.md)
 
@@ -141,16 +141,16 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 - [如何：執行資料服務查詢](how-to-execute-data-service-queries-wcf-data-services.md)
 
-- [如何：將查詢選項新增至資料服務查詢](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [如何：將查詢選項加入至資料服務查詢](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
 
 - [如何：判斷查詢傳回的實體數目](number-of-entities-returned-by-a-query-wcf.md)
 
-- [如何：指定資料服務要求的用戶端認證](specify-client-creds-for-a-data-service-request-wcf.md)
+- [HOW TO：指定資料服務要求的用戶端認證](specify-client-creds-for-a-data-service-request-wcf.md)
 
-- [如何：設定用戶端要求中的標頭](how-to-set-headers-in-the-client-request-wcf-data-services.md)
+- [HOW TO：設定用戶端要求中的標頭](how-to-set-headers-in-the-client-request-wcf-data-services.md)
 
 - [如何：投影查詢結果](how-to-project-query-results-wcf-data-services.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
+- [WCF 資料服務用戶端程式庫](wcf-data-services-client-library.md)

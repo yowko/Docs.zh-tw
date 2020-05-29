@@ -5,25 +5,25 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: a4121bb10de7bfe51c5fec6bc14a40ad4bdcdaf7
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e4c5bc03038a3df9df2b7629da762caee175b6e8
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900898"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202141"
 ---
 # <a name="wcf-data-services-overview"></a>WCF 資料服務概觀
-WCF Data Services 可以使用開放式資料通訊協定（OData）來建立及取用 Web 或內部網路的資料服務。 OData 可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) (英文) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題概述 OData 所定義的模式和作法，以及 WCF Data Services 所提供的功能，以在 .NET Framework 架構的應用程式中利用 OData。  
+WCF Data Services 可以使用開放式資料通訊協定（OData）來建立及取用 Web 或內部網路的資料服務。 OData 可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題概述 OData 所定義的模式和作法，以及 WCF Data Services 所提供的功能，以在 .NET Framework 架構的應用程式中利用 OData。  
   
 ## <a name="address-data-as-resources"></a>將資料定址為資源  
- OData 會將資料公開為可由 URI 定址的資源。 資源路徑會根據實體資料模型的實體-關聯性慣例來建構。 在此模型中，實體代表應用程式域中的營運單位，例如客戶、訂單、專案及產品。 如需詳細資訊，請參閱[實體資料模型](../adonet/entity-data-model.md)。  
+ OData 會將資料公開為可由 URI 定址的資源。 資源路徑會根據實體資料模型的實體-關聯性慣例來建構。 在此模型中，實體代表應用程式定義域中的資料運算單位，例如客戶、訂單、項目及產品。 如需詳細資訊，請參閱[實體資料模型](../adonet/entity-data-model.md)。  
   
- 在 OData 中，您可以將實體資源定址為包含實體類型實例的實體集。 例如，URI <https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders> 會傳回 `Northwind` 資料服務中，與客戶相關的所有訂單，其 `CustomerID` 值為 `ALFKI.`  
+ 在 OData 中，您可以將實體資源定址為包含實體類型實例的實體集。 例如，URI 會傳回 `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` `Northwind` 資料服務中，與客戶相關的所有訂單，其 `CustomerID` 值為`ALFKI.`  
   
- 查詢運算式可讓您針對資源執行傳統查詢運算，例如篩選、排序和分頁。 例如，URI <https://services.odata.org/Northwind/Northwind.svc/Customers( ' ALFKI '）/Orders？ $filter = 運費 gt 50 > 會篩選資源，只傳回運費成本超過 $50 的訂單。 如需詳細資訊，請參閱[存取資料服務資源](accessing-data-service-resources-wcf-data-services.md)。  
+ 查詢運算式可讓您針對資源執行傳統查詢運算，例如篩選、排序和分頁。 例如，URI `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` 會篩選資源，只傳回運費超過 $50 美元的訂單。 如需詳細資訊，請參閱[存取資料服務資源](accessing-data-service-resources-wcf-data-services.md)。  
   
 ## <a name="interoperable-data-access"></a>可互通的資料存取  
- OData 是以標準網際網路通訊協定為基礎，可讓資料服務與不使用 .NET Framework 的應用程式互通。 因為您可以使用標準 Uri 來處理資料，所以您的應用程式可以使用具像狀態傳輸（REST）的語義來存取和變更資料，特別是 GET、PUT、POST 和 DELETE 的標準 HTTP 動詞命令。 這樣能讓您從任何用戶端存取這些服務 (這些用戶端需可剖析及存取透過標準 HTTP 通訊協定傳輸的資料)。  
+ OData 是以標準網際網路通訊協定為基礎，可讓資料服務與不使用 .NET Framework 的應用程式互通。 由於您可以使用標準 URI 來定址資料，因此應用程式可以使用具像狀態傳輸 (REST) 的語意存取及變更資料，尤其是標準 HTTP 動詞命令，例如 GET、PUT、POST 和 DELETE。 這樣能讓您從任何用戶端存取這些服務 (這些用戶端需可剖析及存取透過標準 HTTP 通訊協定傳輸的資料)。  
   
 OData 會定義一組 Atom 發行通訊協定（AtomPub）的延伸模組。 它可支援採用多種資料格式的 HTTP 要求和回應，配合各種用戶端應用程式和平台。 OData 摘要可以代表 Atom、JavaScript 物件標記法（JSON）和純 XML 格式的資料。 雖然 Atom 是預設格式，但是摘要的格式會在 HTTP 要求的標頭中指定。 如需詳細資訊，請參閱[odata： Atom 格式](https://www.odata.org/documentation/odata-version-2-0/atom-format/)和[Odata： JSON 格式](https://www.odata.org/documentation/odata-version-2-0/json-format/)。  
   
@@ -34,7 +34,7 @@ OData 會定義一組 Atom 發行通訊協定（AtomPub）的延伸模組。 它
   
  WCF Data Services 與 ADO.NET Entity Framework 整合，可讓您建立公開關系型資料的資料服務。 您可以使用實體資料模型工具建立以實體形式包含可定址資源的資料模型，同時定義此模型和基礎資料庫中資料表的對應。 如需詳細資訊，請參閱[Entity Framework 提供者](entity-framework-provider-wcf-data-services.md)。  
   
- WCF Data Services 也可讓您建立資料服務，以公開會傳回 <xref:System.Linq.IQueryable%601> 介面之實架構的任何資料結構。 這可讓您建立公開 .NET Framework 型別資料的資料服務。 若您同時實作 <xref:System.Data.Services.IUpdatable> 介面，則亦支援建立、更新及刪除作業。 如需詳細資訊，請參閱[反映提供者](reflection-provider-wcf-data-services.md)。  
+ WCF Data Services 也可讓您建立資料服務，以公開會傳回介面之執行的任何資料結構 <xref:System.Linq.IQueryable%601> 。 這可讓您建立公開 .NET Framework 型別資料的資料服務。 若您同時實作 <xref:System.Data.Services.IUpdatable> 介面，則亦支援建立、更新及刪除作業。 如需詳細資訊，請參閱[反映提供者](reflection-provider-wcf-data-services.md)。  
   
  如需 WCF Data Services 如何與這些資料提供者整合的圖例，請參閱本主題稍後的架構圖。  
   
@@ -44,7 +44,7 @@ OData 會定義一組 Atom 發行通訊協定（AtomPub）的延伸模組。 它
  攔截器可讓您依照資料服務將自訂應用程式邏輯整合至要求或回應訊息的處理。 在指定的實體集上進行查詢、插入、更新或刪除動作時，系統就會呼叫攔截器。 然後，攔截器可能會更改資料、強制執行授權原則，甚至結束作業。 您必須針對資料服務所公開的特定實體集，明確地註冊攔截器方法。 如需詳細資訊，請參閱[攔截](interceptors-wcf-data-services.md)器。  
   
 ## <a name="client-libraries"></a>用戶端程式庫  
- OData 會定義一組用於與資料服務互動的統一模式。 這可讓您根據這些服務建立可重複使用的元件，例如用戶端程式庫，讓您更輕鬆地使用資料服務。  
+ OData 會定義一組用於與資料服務互動的統一模式。 此模式能讓您根據這些服務建立可重複使用的元件，例如可簡化資料服務取用程序的用戶端程式庫。  
   
  WCF Data Services 包括 .NET Framework 型和 Silverlight 型用戶端應用程式的用戶端程式庫。 這些用戶端程式庫可讓您利用 .NET Framework 物件與資料服務互動。 它們也支援以物件為基礎的查詢和 LINQ 查詢、載入相關物件、變更追蹤以及識別解析。 如需詳細資訊，請參閱[WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)。  
   
@@ -55,11 +55,11 @@ OData 會定義一組 Atom 發行通訊協定（AtomPub）的延伸模組。 它
   
  ![顯示 WCF Data Services 架構圖的螢幕擷取畫面。](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF Data Services 4.5](index.md)
-- [使用者入門](getting-started-with-wcf-data-services.md)
-- [定義 WCF Data Services](defining-wcf-data-services.md)
-- [存取資料服務資源（WCF Data Services）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
-- [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
+- [快速入門](getting-started-with-wcf-data-services.md)
+- [定義 WCF 資料服務](defining-wcf-data-services.md)
+- [存取資料服務資源 (WCF 資料服務)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
+- [WCF 資料服務用戶端程式庫](wcf-data-services-client-library.md)
 - [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) (具像狀態傳輸 (REST))

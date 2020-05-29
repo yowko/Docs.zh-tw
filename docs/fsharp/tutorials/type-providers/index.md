@@ -1,19 +1,19 @@
 ---
 title: 型別提供者
-description: 瞭解F#型別提供者如何提供類型、屬性和方法，以便在您的程式中使用。
+description: '瞭解 F # 型別提供者如何提供類型、屬性和方法，以便在您的程式中使用。'
 ms.date: 04/02/2018
-ms.openlocfilehash: 7fa0ff6b5f2b0bc978df2988f22b2042acc22320
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: eae64d2e318ee93f0b8d5b91f0c6da6c91743527
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552909"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202103"
 ---
 # <a name="type-providers"></a>型別提供者
 
-F# 型別提供者是一個元件，該元件會提供類型、屬性和方法讓您在程式中使用。 型別提供者會產生所謂的「**提供類型**」，這是F#由編譯器所產生，而且是以外部資料源為基礎。
+F# 型別提供者是一個元件，該元件會提供類型、屬性和方法讓您在程式中使用。 型別提供者會產生所謂的「**提供類型**」，這是由 F # 編譯器所產生，而且是以外部資料源為基礎。
 
-例如，適用于F# SQL 的類型提供者可以產生類型，代表關係資料庫中的資料表和資料行。 事實上，這就是[SQLProvider](https://fsprojects.github.io/SQLProvider/)型別提供者的功能。
+例如，適用于 SQL 的 F # 類型提供者可以產生類型，代表關係資料庫中的資料表和資料行。 事實上，這就是[SQLProvider](https://fsprojects.github.io/SQLProvider/)型別提供者的功能。
 
 提供的類型取決於型別提供者的輸入參數。 這類輸入可以是範例資料來源（例如 JSON 架構檔案）、直接指向外部服務的 URL，或是資料來源的連接字串。 型別提供者也可以確保類型的群組只視需要展開;也就是說，如果您的程式實際參考型別，它們就會展開。 這樣就能以強類型的方式視需要直接整合大型的資訊空間，例如線上資料市場。
 
@@ -30,14 +30,14 @@ F# 型別提供者是一個元件，該元件會提供類型、屬性和方法�
 下列廣泛使用的程式庫包含不同用途的類型提供者：
 
 - [Fsharp.core：資料](https://fsharp.github.io/FSharp.Data/)報括 JSON、XML、CSV 和 HTML 檔案格式和資源的類型提供者。
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/)透過物件對應和針對這些資料來源的 LINQ 查詢， F#提供關聯資料庫的強型別存取。
-- [SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)具有一組類型提供者，適用于編譯時期已核取的 t-sql F#。
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/)透過物件對應和 F # LINQ 查詢針對這些資料來源，提供關聯資料庫的強型別存取。
+- [Fsharp.core。 SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)具有一組類型提供者，可用於在 F # 中檢查 t-sql 的編譯階段。
 - [Azure 儲存體類型提供者](https://fsprojects.github.io/AzureStorageTypeProvider/)提供適用于 Azure Blob、資料表和佇列的類型，可讓您存取這些資源，而不需要在整個程式中將資源名稱指定為字串。
 - [GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html)包含**GraphQLProvider**，它會根據 URL 所指定的 GraphQL 伺服器提供類型。
 
 必要時，您可以[建立自己的自訂類型提供者](creating-a-type-provider.md)，或已由其他人建立的參考型別提供者。 例如，假設您的組織的資料服務提供大量且不斷增加的具名資料集，各資料集都有自己的穩定資料結構描述。 您可能選擇建立一個類型提供者，以強類型方式讀取結構描述並對程式設計人員呈現最新的可用資料集。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [教學課程：建立類型提供者](creating-a-type-provider.md)
-- [F# 語言參考](../../language-reference/index.md)
+- [F # 語言參考](../../language-reference/index.md)

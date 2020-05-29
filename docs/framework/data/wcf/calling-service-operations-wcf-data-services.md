@@ -5,56 +5,56 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 41aac38cec97ae1afdd3c3c051d04ff242e7729d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1ff707c90e884dc66ab10563dc41ea7789f5cda
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174351"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202013"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>呼叫服務作業 (WCF Data Services)
-開放資料協定 （OData） 定義資料服務的服務操作。 WCF 資料服務使您能夠將此類操作定義為數據服務上的方法。 就像其他資料服務資源，這些服務作業會使用 URI 來定址。 服務作業可以傳回實體類型集合、單一實體類型執行個體以及整數和字串等基本類型。 服務作業還可以傳回 `null` (在 Visual Basic 中為 `Nothing`)。 WCF 資料服務用戶端庫可用於訪問支援 HTTP GET 請求的服務操作。 這些服務作業類型是定義為已套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 有關詳細資訊，請參閱[服務操作](service-operations-wcf-data-services.md)。  
+開放式資料通訊協定（OData）會定義資料服務的服務作業。 WCF Data Services 可讓您將這類作業定義為數據服務上的方法。 就像其他資料服務資源，這些服務作業會使用 URI 來定址。 服務作業可以傳回實體類型集合、單一實體類型執行個體以及整數和字串等基本類型。 服務作業還可以傳回 `null` (在 Visual Basic 中為 `Nothing`)。 WCF Data Services 用戶端程式庫可以用來存取支援 HTTP GET 要求的服務作業。 這些服務作業類型是定義為已套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 如需詳細資訊，請參閱[服務作業](service-operations-wcf-data-services.md)。  
   
- 服務操作在實現 OData 的資料服務返回的中繼資料中公開。 在中繼資料中，服務作業會以 `FunctionImport` 元素來表示。 產生強型別 <xref:System.Data.Services.Client.DataServiceContext> 時，[加入服務參考] 和 DataSvcUtil.exe 工具會忽略此元素。 因此，您在內容上找不到可用來直接呼叫服務作業的方法。 但是，您仍可以使用 WCF 資料服務用戶端以以下兩種方式之一調用服務操作：  
+ 服務作業會在執行 OData 的資料服務所傳回的中繼資料中公開。 在中繼資料中，服務作業會以 `FunctionImport` 元素來表示。 產生強型別時 <xref:System.Data.Services.Client.DataServiceContext> ，加入服務參考和 DataSvcUtil 工具會忽略此元素。 因此，您在內容上找不到可用來直接呼叫服務作業的方法。 不過，您仍然可以使用 WCF Data Services 用戶端，以下列兩種方式的其中一種來呼叫服務作業：  
   
 - 提供服務作業的 URI 並搭配任何參數，以呼叫 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 上的 <xref:System.Data.Services.Client.DataServiceContext> 方法。 此方法用於呼叫任何 GET 服務作業。  
   
-- 在 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 上使用 <xref:System.Data.Services.Client.DataServiceContext> 方法，以建立 <xref:System.Data.Services.Client.DataServiceQuery%601> 物件。 呼叫 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 時，要將服務作業的名稱提供給 `entitySetName` 參數。 列舉時或呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法時，此方法會傳回呼叫服務作業的 <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> 物件。 此方法用於呼叫傳回集合的 GET 服務作業。 可以使用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法提供單一參數。 此方法傳回的 <xref:System.Data.Services.Client.DataServiceQuery%601> 物件就像任何查詢物件一樣，可以進一步加以撰寫。 有關詳細資訊，請參閱[查詢資料服務](querying-the-data-service-wcf-data-services.md)。  
+- 在 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 上使用 <xref:System.Data.Services.Client.DataServiceContext> 方法，以建立 <xref:System.Data.Services.Client.DataServiceQuery%601> 物件。 呼叫 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 時，要將服務作業的名稱提供給 `entitySetName` 參數。 列舉時或呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法時，此方法會傳回呼叫服務作業的 <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> 物件。 此方法用於呼叫傳回集合的 GET 服務作業。 可以使用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法提供單一參數。 此方法傳回的 <xref:System.Data.Services.Client.DataServiceQuery%601> 物件就像任何查詢物件一樣，可以進一步加以撰寫。 如需詳細資訊，請參閱[查詢資料服務](querying-the-data-service-wcf-data-services.md)。  
   
 ## <a name="considerations-for-calling-service-operations"></a>呼叫服務作業的考量  
- 使用 WCF 資料服務用戶端調用服務操作時，請考慮以下事項。  
+ 使用 WCF Data Services 用戶端來呼叫服務作業時，適用下列考慮。  
   
-- 非同步訪問<xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>資料服務時，必須在 上<xref:System.Data.Services.Client.DataServiceContext>或使用等效非同步方法或在<xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>上 使用<xref:System.Data.Services.Client.DataServiceQuery%601>方法。  
+- 以非同步方式存取資料服務時，您必須使用上的對等非同步 <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> 方法， <xref:System.Data.Services.Client.DataServiceContext> 或 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 上的方法 <xref:System.Data.Services.Client.DataServiceQuery%601> 。  
   
-- WCF 資料服務用戶端庫無法實現返回基元類型集合的服務操作的結果。  
+- WCF Data Services 用戶端程式庫無法從傳回基本型別集合的服務作業中具體化結果。  
   
-- WCF 資料服務用戶端庫不支援調用 POST 服務操作。 HTTP POST 呼叫的服務作業是使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 搭配 `Method="POST"` 參數所定義。 若要使用 HTTP POST 要求呼叫服務作業，您必須改用 <xref:System.Net.HttpWebRequest>。  
+- WCF Data Services 用戶端程式庫不支援呼叫 POST 服務作業。 HTTP POST 呼叫的服務作業是使用 <xref:System.ServiceModel.Web.WebInvokeAttribute> 搭配 `Method="POST"` 參數所定義。 若要使用 HTTP POST 要求呼叫服務作業，您必須改用 <xref:System.Net.HttpWebRequest>。  
   
 - 您不能使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 來呼叫傳回實體或基本類型單一結果或需要多個輸入參數的 GET 服務作業。 您必須改為呼叫 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法。  
   
-- 如果在工具產生的強型別 <xref:System.Data.Services.Client.DataServiceContext> 部分類別上建立擴充方法，這個方法使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法來呼叫服務作業。 這可讓您直接從內容中呼叫服務作業。 有關詳細資訊，請參閱博客文章"[服務操作"和 WCF 資料服務用戶端](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client)。  
+- 請考慮在由工具產生的強型別部分類別上建立擴充方法 <xref:System.Data.Services.Client.DataServiceContext> ，這會使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法來呼叫服務作業。 這可讓您直接從內容中呼叫服務作業。 如需詳細資訊，請參閱 blog 文章[服務作業和 WCF Data Services 用戶端](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client)。  
   
-- 當您用於<xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>調用服務操作時，用戶端庫通過執行保留字元的百分比編碼（如<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>ampersand（&）和字串中單引號轉義來自動轉義提供給 的字元。 但是，當您調用其中一個*Execute*方法來調用服務操作時，必須記住執行任何使用者提供的字串值的此轉義。 URI 中的單引號是以一對單引號的形式來逸出。  
+- 當您使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 來呼叫服務作業時，用戶端程式庫會藉 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 由執行保留字元的百分比編碼（例如，連字號（&）），並在字串中進行單引號的轉義，自動將提供的字元加上轉義。 不過，當您呼叫其中一個*Execute*方法來呼叫服務作業時，您必須記得對任何使用者提供的字串值執行這項轉義。 URI 中的單引號是以一對單引號的形式來逸出。  
   
 ## <a name="examples-of-calling-service-operations"></a>呼叫服務作業的範例  
- 本節包含以下示例，說明如何使用 WCF 資料服務用戶端庫調用服務操作：  
+ 本節包含下列範例，說明如何使用 WCF Data Services 用戶端程式庫來呼叫服務作業：  
   
-- [調用執行&lt; &gt; T 返回實體集合](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
+- [呼叫 Execute &lt; T &gt; 以傳回實體集合](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   
-- [使用&lt;CreateQuery&gt; T 返回實體集合](calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
+- [使用 CreateQuery &lt; T 傳回 &gt; 實體的集合](calling-service-operations-wcf-data-services.md#CreateQueryIQueryable)  
   
-- [調用執行&lt; &gt; T 返回單個實體](calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
+- [呼叫 Execute &lt; T &gt; 以傳回單一實體](calling-service-operations-wcf-data-services.md#ExecuteSingleEntity)  
   
-- [調用執行&lt; &gt; T 返回基元值的集合](calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
+- [呼叫 Execute &lt; T &gt; 以傳回基本值的集合](calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
   
-- [調用執行&lt; &gt; T 返回單個基元值](calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
+- [呼叫 Execute &lt; T &gt; 以傳回單一基本值](calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
 - [呼叫不傳回任何資料的服務作業](calling-service-operations-wcf-data-services.md#ExecuteVoid)  
   
 - [非同步呼叫服務作業](calling-service-operations-wcf-data-services.md#ExecuteAsync)  
   
 <a name="ExecuteIQueryable"></a>
-### <a name="calling-executet-to-return-a-collection-of-entities"></a>調用執行\<T> 以返回實體集合  
+### <a name="calling-executet-to-return-a-collection-of-entities"></a>呼叫 Execute \<T> 以傳回實體的集合  
  下列範例會呼叫名為 GetOrdersByCity 的服務作業，這項作業接受字串參數 `city` 並傳回 <xref:System.Linq.IQueryable%601>：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationiqueryable)]
@@ -63,7 +63,7 @@ ms.locfileid: "79174351"
  在此範例中，服務作業會傳回 `Order` 物件集合與相關的 `Order_Detail` 物件。  
   
 <a name="CreateQueryIQueryable"></a>
-### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>使用 createQuery\<T>返回實體集合  
+### <a name="using-createqueryt-to-return-a-collection-of-entities"></a>使用 CreateQuery 傳回 \<T> 實體的集合  
  下列範例會使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 傳回用來呼叫相同 GetOrdersByCity 服務作業的 <xref:System.Data.Services.Client.DataServiceQuery%601>：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationCreateQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationcreatequery)]
@@ -72,7 +72,7 @@ ms.locfileid: "79174351"
  在此範例中，<xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法用於將參數加入至查詢中，而 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> 方法則用於將相關的 Order_Details 物件包含在結果中。  
   
 <a name="ExecuteSingleEntity"></a>
-### <a name="calling-executet-to-return-a-single-entity"></a>調用執行\<T> 返回單個實體  
+### <a name="calling-executet-to-return-a-single-entity"></a>呼叫 Execute \<T> 以傳回單一實體  
  下列範例會呼叫名為 GetNewestOrder 的服務作業，這項作業只傳回單一 Order 實體：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleEntity](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationsingleentity)]
@@ -81,13 +81,13 @@ ms.locfileid: "79174351"
  此範例會使用 <xref:System.Linq.Enumerable.FirstOrDefault%2A> 方法，在執行時只要求單一 Order 實體。  
   
 <a name="ExecutePrimitiveCollection"></a>
-### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>調用執行\<T> 返回基元值的集合  
+### <a name="calling-executet-to-return-a-collection-of-primitive-values"></a>呼叫 Execute \<T> 以傳回基本值的集合  
  下列範例會呼叫傳回字串值集合的服務作業：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationEnumString](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationenumstring)]  
   
 <a name="ExecutePrimitiveValue"></a>
-### <a name="calling-executet-to-return-a-single-primitive-value"></a>調用執行\<T> 以返回單個基元值  
+### <a name="calling-executet-to-return-a-single-primitive-value"></a>呼叫 Execute \<T> 以傳回單一基本值  
  下列範例會呼叫傳回單一字串值的服務作業：  
   
  [!code-csharp[Astoria Northwind Client#CallServiceOperationSingleInt](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#callserviceoperationsingleint)]

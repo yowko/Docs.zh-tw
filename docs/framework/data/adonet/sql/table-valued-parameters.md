@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2917a8d9b42d831566855271a2f2110637db586f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174468"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202179"
 ---
 # <a name="table-valued-parameters"></a>資料表值參數
 資料表值參數提供從用戶端應用程式，將多個資料列的資料封送至 SQL Sever 的簡便方式，而不需多次來回存取或特殊的伺服器端邏輯才能處理資料。 您可以使用資料表值參數，以一個參數化命令在用戶端應用程式中封裝資料列的資料，並傳送至伺服器。 傳入的資料列會儲存於資料表變數中，之後可使用 Transact-SQL 進行運算。  
@@ -25,7 +25,7 @@ ms.locfileid: "79174468"
 |資源|描述|  
 |--------------|-----------------|  
 |[使用資料表值參數 (Database Engine)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|描述如何建立及使用資料表值參數。|  
-|[使用者定義的表類型](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|說明用來宣告資料表值參數的使用者定義資料表類型。|  
+|[使用者定義資料表類型](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|說明用來宣告資料表值參數的使用者定義資料表類型。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在舊版 SQL Server 中傳遞多個資料列  
  在 SQL Server 2008 中引進資料表值參數之前，將多個資料列傳遞至預存程序或參數化 SQL 命令的選項有所限制。 開發人員可以從下列選項中選擇將多個資料列傳遞至伺服器的方式：  
@@ -39,7 +39,7 @@ ms.locfileid: "79174468"
 - 使用 `bcp` 公用程式或 <xref:System.Data.SqlClient.SqlBulkCopy> 物件，將許多資料列載入至資料表。 雖然此技術非常有效率，但除非將資料載入暫存資料表或資料表變數中，否則不支援伺服器端處理。  
   
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數型別  
- 資料表值參數是以使用 Transact-SQL CREATE TYPE 陳述式所定義的強型別資料表結構為基礎。 您必須先在 SQL Server 中建立資料表類型並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 有關創建表類型的詳細資訊，請參閱[使用者定義的表類型](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))。  
+ 資料表值參數是以使用 Transact-sql CREATE TYPE 語句所定義的強型別資料表結構為基礎。 您必須先在 SQL Server 中建立資料表類型並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱[使用者定義資料表類型](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))。  
   
  下列陳述式會建立名為 CategoryTableType 的資料表類型，其中包含 CategoryID 與 CategoryName 資料行：  
   
@@ -128,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>將表值參數傳遞給預存程序  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>將資料表值參數傳遞至預存程式  
  此範例示範如何將資料表值參數資料傳遞至預存程序。 程式碼會透過使用 <xref:System.Data.DataTable.GetChanges%2A> 方法，將加入的資料列解壓縮至新的 <xref:System.Data.DataTable> 之中。 然後，程式碼會定義 <xref:System.Data.SqlClient.SqlCommand>，將 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 屬性設定為 <xref:System.Data.CommandType.StoredProcedure>。 <xref:System.Data.SqlClient.SqlParameter> 是使用 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 方法填入的，而且 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 會設定為 `Structured`。 然後使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 方法來執行 <xref:System.Data.SqlClient.SqlCommand>。  
   
 ```csharp  
@@ -277,5 +277,5 @@ insertCommand.ExecuteNonQuery()
 - [設定參數和參數資料類型](../configuring-parameters-and-parameter-data-types.md)
 - [命令和參數](../commands-and-parameters.md)
 - [DataAdapter 的參數](../dataadapter-parameters.md)
-- [ADO.NET中的 SQL 伺服器資料操作](sql-server-data-operations.md)
+- [SQL Server ADO.NET 中的資料作業](sql-server-data-operations.md)
 - [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

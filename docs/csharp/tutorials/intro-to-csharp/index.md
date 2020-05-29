@@ -3,17 +3,18 @@ title: C# 簡介 - 互動式教學課程
 description: 在您的瀏覽器中學習 C#，並開始使用您自己的開發環境
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: c9fc8dadac373445a5bb132b25ab25676c5230c7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 965fa9dba559b967d3d1ce8d661cd08235c59f70
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007698"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202439"
 ---
 # <a name="introduction-to-c"></a>C\# 簡介
 
 歡迎使用 C# 簡介教學課程。 這些課程是從您可以在瀏覽器中執行的互動式程式碼開始。 開始這些互動式課程之前，您可以從[c # 101 影片系列](https://aka.ms/dotnet3-csharp)瞭解 c # 的基本概念。
 
+<!--markdownlint-disable MD034 -->
 > [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 第一個課程會使用簡短的程式碼片段解釋 C# 概念。 您將能學習 C# 語法的基本概念，以及如何處理字串、數字和布林值等資料類型。 課程內容都是可互動的，因此您很快就能上手並開始撰寫和執行程式碼。 這些入門課程會假設您是首次接觸程式設計或 C# 語言。
@@ -27,7 +28,7 @@ ms.locfileid: "84007698"
 
 使用線上的瀏覽器體驗或[您自己的本機開發環境](local-environment.md)，即可使用 Hello World 課程後的所有簡介教學課程。 在每個教學課程結束時，您可以決定要在線上還是在自己的電腦上繼續進行下一個課程。 有些連結可幫助您設定環境，並在您的電腦上繼續進行下一個教學課程。
 
-## <a name="hello-world"></a>[Hello World](hello-world.yml)
+## <a name="hello-world"></a>[世界您好](hello-world.yml)
 
 在 [Hello World](hello-world.yml) 教學課程中，您將會建立最基本的 C# 程式。 您將會探索 `string` 類型，以及處理文字的方式。 您也可以在系結器上使用[Microsoft Learn](https://docs.microsoft.com/learn/paths/csharp-first-steps/)或[Jupyter](https://mybinder.org/v2/gh/dotnet/try-samples/master?filepath=hello-csharp%2Fhello-world.ipynb)上的路徑。
 

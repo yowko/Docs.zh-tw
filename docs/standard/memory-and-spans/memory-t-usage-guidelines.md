@@ -5,12 +5,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: b9405d746c141308c7d984dac9da0d65d1048d1e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: cb9075a12bb8d842cd8e937e74f8869c910fc0ab
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380020"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201933"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 與 Span\<T> 使用指導方針
 
@@ -65,7 +65,7 @@ class Program
 
 `WriteInt32ToBuffer` 方法在介於方法呼叫和方法傳回之間的時間內，針對該緩衝區會具有租用 (可取用該緩衝區)。 同樣地，在緩衝區執行期間，`DisplayBufferToConsole` 針對該緩衝區會具有租用，而該租用會在該方法回朔時釋放。 (沒有適用於租用管理的 API，「租用」本身是一種概念)。
 
-## <a name="memoryt-and-the-ownerconsumer-model"></a>Memory\<T> 和擁有者/取用者模型
+## <a name="memoryt-and-the-ownerconsumer-model"></a>記憶體 \<T> 和擁有者/消費者模型
 
 如同[擁有者、取用者及存留期管理](#owners-consumers-and-lifetime-management)一節所述，緩衝區一律會有一個擁有者。 .NET Core 支援兩種擁有權模型：
 
@@ -73,7 +73,7 @@ class Program
 
 - 支援擁有權傳輸的模型。 緩衝區的擁有權可以從其原始擁有者 (其建立者) 轉換到另一個元件，而該元件將會接手負責該緩衝區的存留期管理。 該擁有者接著可以再次將擁有權轉換到又另一個元件，依此類推。
 
-您會使用 <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType> 介面來明確管理緩衝區的擁有權。 <xref:System.Buffers.IMemoryOwner%601> 同時支援這兩種擁有權模型。 具有 <xref:System.Buffers.IMemoryOwner%601> 參考的元件會擁有緩衝區。 下列範例會使用 <xref:System.Buffers.IMemoryOwner%601?> 執行個體來反映 <xref:System.Memory%601> 緩衝區的擁有權。
+您會使用 <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType> 介面來明確管理緩衝區的擁有權。 <xref:System.Buffers.IMemoryOwner%601> 同時支援這兩種擁有權模型。 具有 <xref:System.Buffers.IMemoryOwner%601> 參考的元件會擁有緩衝區。 下列範例會使用 <xref:System.Buffers.IMemoryOwner%601?> 實例來反映緩衝區的擁有權 <xref:System.Memory%601> 。
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
@@ -87,9 +87,9 @@ class Program
 
 - `WriteInt32ToBuffer` 和 `DisplayBufferToConsole` 方法接受 <xref:System.Memory%601> 作為公用 API。 因此，它們是該緩衝區的取用者。 且它們之間一次只有一個會取用緩衝區。
 
-雖然 `WriteInt32ToBuffer` 方法的目的是要將值寫入緩衝區，但 `DisplayBufferToConsole` 方法則不會這麼做。 為了反映此情況，它可以接受 <xref:System.ReadOnlyMemory%601>類型的引數。 如需有關的詳細資訊 <xref:System.ReadOnlyMemory%601> ，請參閱[規則 #2： \< \< 如果緩衝區應該是唯讀的，請使用 ReadOnlySpan T> 或 ReadOnlyMemory t>](#rule-2)。
+雖然 `WriteInt32ToBuffer` 方法的目的是要將值寫入緩衝區，但 `DisplayBufferToConsole` 方法則不會這麼做。 為了反映此情況，它可以接受 <xref:System.ReadOnlyMemory%601>類型的引數。 如需有關的詳細資訊 <xref:System.ReadOnlyMemory%601> ，請參閱[規則 #2： \<T> \<T> 如果緩衝區應該是唯讀的，請使用 ReadOnlySpan 或 ReadOnlyMemory](#rule-2)。
 
-### <a name="ownerless-memoryt-instances"></a>「無擁有者」的 Memory\<T> 執行個體
+### <a name="ownerless-memoryt-instances"></a>"Ownerless" 記憶體 \<T> 實例
 
 您可以在不使用 <xref:System.Buffers.IMemoryOwner%601> 的情況下建立 <xref:System.Memory%601> 執行個體。 在此情況下，緩衝區的擁有權是隱含而非明確的，且僅支援單一擁有者模型。 您可以這麼做來達到此目的：
 
@@ -113,9 +113,9 @@ class Program
 
 下列為針對順利使用 <xref:System.Memory%601> 和其相關類型的建議。 適用于和的 <xref:System.Memory%601> 指引 <xref:System.Span%601> 也適用于 <xref:System.ReadOnlyMemory%601> 和 <xref:System.ReadOnlySpan%601> ，除非我們明確注意其他事項。
 
-**規則 #1：若是同步 API，請使用 Span \< t> 而不是記憶體 \< T> 作為參數（如果可能的話）。**
+**規則 #1：若是同步 API，請使用 Span \<T> 而不是記憶體 \<T> 作為參數（如果可能的話）。**
 
-<xref:System.Span%601> 比起 <xref:System.Memory%601> 更為靈活，且可以代表較廣泛類型的連續記憶體緩衝區。 <xref:System.Span%601> 也能夠提供比 <xref:System.Memory%601> 更為優異的效能。 最後，雖然 Span\<T> 並無法轉換為 Memory\<T>，您可以使用 <xref:System.Memory%601.Span?displayProperty=nameWithType> 屬性來將 <xref:System.Memory%601> 執行個體轉換為 <xref:System.Span%601>。 因此如果您的呼叫端具有 <xref:System.Memory%601> 執行個體，它們仍然可以搭配 <xref:System.Span%601> 參數來呼叫您的方法。
+<xref:System.Span%601> 比起 <xref:System.Memory%601> 更為靈活，且可以代表較廣泛類型的連續記憶體緩衝區。 <xref:System.Span%601> 也能夠提供比 <xref:System.Memory%601> 更為優異的效能。 最後，您可以使用 <xref:System.Memory%601.Span?displayProperty=nameWithType> 屬性將實例轉換成 <xref:System.Memory%601> ，雖然無法進行 <xref:System.Span%601> 跨 \<T> 記憶體 \<T> 轉換。 因此如果您的呼叫端具有 <xref:System.Memory%601> 執行個體，它們仍然可以搭配 <xref:System.Span%601> 參數來呼叫您的方法。
 
 使用 <xref:System.Span%601> 類型 (而非 <xref:System.Memory%601> 類型) 的參數也可以協助您寫入到正確的使用方法實作。 您將能自動取得編譯時間檢查，以確保您不會嘗試在方法租用以外的時間嘗試存取緩衝區 (將於稍後詳述)。
 
@@ -123,7 +123,7 @@ class Program
 
 <a name="rule-2" />
 
-**規則 #2： \< \< 如果緩衝區應該是唯讀的，請使用 ReadOnlySpan t> 或 ReadOnlyMemory t>。**
+**規則 #2： \<T> \<T> 如果緩衝區應該是唯讀的，請使用 ReadOnlySpan 或 ReadOnlyMemory。**
 
 在稍早的範例中，`DisplayBufferToConsole` 方法只會從緩衝區讀取，它並不會修改緩衝區的內容。 方法簽章應變更為下列項目。
 
@@ -139,7 +139,7 @@ void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 
 `DisplayBufferToConsole` 方法現在能與幾乎所有已知的緩衝區類型搭配運作：`T[]`、搭配 [stackalloc](../../csharp/language-reference/operators/stackalloc.md) 配置的儲存體等。 您甚至可以直接將 <xref:System.String> 傳遞給它！
 
-**規則 #3：如果您的方法接受記憶體 \< t> 並傳回 `void` ，在方法傳回之後，您就不能使用記憶體 \< t> 實例。**
+**規則 #3：如果您的方法接受記憶體 \<T> 並傳回 `void` ，在方法傳回之後，您就不能使用記憶體 \<T> 實例。**
 
 這與稍早提及的「租用」相關。 會傳回 void 的方法針對 <xref:System.Memory%601> 執行個體的租用，會在該方法進入時開始，並在方法離開時結束。 請參考下列範例，其會根據來自主控台的輸入，以迴圈方式呼叫 `Log`。
 
@@ -173,7 +173,7 @@ static void Log(ReadOnlyMemory<char> message)
 
    [!code-csharp[defensive-copy](~/samples/snippets/standard/buffers/memory-t/task-returning/task-returning.cs#1)]
 
-**規則 #4：如果您的方法接受記憶體 \< t> 並傳回工作，則在工作轉換為結束狀態之後，您就不能使用記憶體 \< t> 實例。**
+**規則 #4：如果您的方法接受記憶體 \<T> 並傳回工作，則在 \<T> 工作轉換為結束狀態之後，您就不能使用記憶體實例。**
 
 這基本上是規則 #3 的非同步變化。 先前範例的 `Log` 方法可以透過下列方式撰寫來符合此規則：
 
@@ -183,7 +183,7 @@ static void Log(ReadOnlyMemory<char> message)
 
 此指南適用於會傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask%601>，或任何類似類型的方法。
 
-**規則 #5：如果您的函式接受 \< 以記憶體 t> 做為參數，則會假設已建立結構化物件上的實例方法是記憶體 \< t> 實例的取用者。**
+**規則 #5：如果您的函式接受記憶體 \<T> 做為參數，則會假設已構造物件上的實例方法是記憶體實例的取用者 \<T> 。**
 
 請考慮下列範例：
 
@@ -206,7 +206,7 @@ void PrintAllOddValues(ReadOnlyMemory<int> input)
 
 在這裡，`OddValueExtractor` 建構函式會接受 `ReadOnlyMemory<int>` 作為建構函式參數，因此建構函式本身是 `ReadOnlyMemory<int>` 執行個體的取用者，且已傳回值上的所有執行個體方法也都會是原始 `ReadOnlyMemory<int>` 執行個體的取用者。 這代表 `TryReadNextOddValue` 會取用 `ReadOnlyMemory<int>` 執行個體，就算該執行個體不會直接被傳遞至 `TryReadNextOddValue` 方法也一樣。
 
-**規則 #6：如果您在類型上有可設定的記憶體 \< T> 類型屬性（或對等的實例方法），則會假設該物件上的實例方法是記憶體 \< T> 實例的取用者。**
+**規則 #6：如果您的類型上有可設定的記憶體 \<T> 類型屬性（或對等的實例方法），則會假設該物件上的實例方法是記憶體實例的取用者 \<T> 。**
 
 這基本上是規則 #5 的變化。 此規則之所以存在，是因為我們會假設屬性設定者或對等方法會擷取或保留其輸入，好讓相同物件上的執行個體方法能夠運用擷取的狀態。
 
@@ -226,7 +226,7 @@ class Person
 }
 ```
 
-**規則 #7：如果您有 Imemoryowner t> \< T> 參考，您必須在某個時間點處置它，或轉移其擁有權（但不能兩者）。**
+**規則 #7：如果您有 Imemoryowner t> \<T> 參考，您必須在某個時間點處置它，或轉移其擁有權（但不能兩者）。**
 
 由於 <xref:System.Memory%601> 執行個體可由受控或非受控記憶體支援，擁有者必須在 <xref:System.Memory%601> 執行個體上的作業完成時呼叫 <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType>。 或者，擁有者可以將 <xref:System.Buffers.IMemoryOwner%601> 執行個體的擁有權轉換給不同的元件，而在轉換之後，取得擁有權的元件便必須負責在適當的時機呼叫 <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> (將於稍後詳述)。
 
@@ -234,7 +234,7 @@ class Person
 
 此規則也適用於呼叫 Factory 方法 (例如 <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType>) 的程式碼。 呼叫者會成為傳回 <xref:System.Buffers.IMemoryOwner%601> 的擁有者，並須負責在完成時處置執行個體。
 
-**規則 #8：如果您的 \< API 介面中有 imemoryowner t> T> 參數，則會接受該實例的擁有權。**
+**規則 #8：如果您的 \<T> API 介面中有 imemoryowner t> 參數，即表示您接受該實例的擁有權。**
 
 接受此類型的執行個體，便代表您的元件意圖取得此執行個體的擁有權。 您的元件必須負責進行規則 #7 中所述的適當處置。
 
@@ -243,7 +243,7 @@ class Person
 > [!IMPORTANT]
 > 如果您的建構函式會接受 <xref:System.Buffers.IMemoryOwner%601> 作為參數，其類型應實作 <xref:System.IDisposable>，且您的 <xref:System.IDisposable.Dispose%2A> 方法應該要呼叫 <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType>。
 
-**規則 #9：如果您要包裝同步 p/invoke 方法，您的 API 應該接受 Span \< T> 作為參數。**
+**規則 #9：如果您要包裝同步 p/invoke 方法，您的 API 應該接受 Span \<T> 做為參數。**
 
 根據規則 #1，<xref:System.Span%601> 通常是應該用於同步 API 的正確類型。 您可以透過 <xref:System.Span%601> 關鍵字釘選實例 [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) ，如下列範例所示。
 
@@ -283,7 +283,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 }
 ```
 
-**規則 #10：如果您要包裝非同步 p/invoke 方法，您的 API 應該接受記憶體 \< T> 做為參數。**
+**規則 #10：如果您要包裝非同步 p/invoke 方法，您的 API 應該接受記憶體 \<T> 作為參數。**
 
 由於您無法 [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) 跨非同步作業使用關鍵字，因此您可以使用 <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> 方法來釘選 <xref:System.Memory%601> 實例，而不論實例所代表的連續記憶體種類為何。 下列範例示範如何使用此 API 來執行非同步 p/invoke 呼叫。
 

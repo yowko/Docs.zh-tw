@@ -4,12 +4,12 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 05/12/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 245df14b9174a3b2ff152f90e6c50cc8766a2de9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397055"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202234"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Databricks
 
@@ -24,7 +24,7 @@ ms.locfileid: "83397055"
 > - 建立 Spark 作業和 Spark 叢集。
 > - 在 Spark 叢集上執行您的應用程式。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請執行下列工作：
 
@@ -53,9 +53,9 @@ ms.locfileid: "83397055"
     |**資源群組**     | 指定您是要建立新的資源群組，還是使用現有資源群組。 資源群組是存放 Azure 方案相關資源的容器。 如需詳細資訊，請參閱 [Azure 資源群組概觀](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)。 |
     |**位置**     | 選取您的慣用區域。 如需可用區域的詳細資訊，請參閱[依區域提供的 Azure 服務](https://azure.microsoft.com/regions/services/)。        |
     |定價層      |  選擇 [標準]****、[進階]**** 或 [試用]****。 如需這些定價層的詳細資訊，請參閱 [Databricks 定價頁面](https://azure.microsoft.com/pricing/details/databricks/)。       |
-    |**虛擬網路**     |   否       |
+    |**虛擬網路**     |   No       |
 
-3. 選取 [建立]  。 工作區建立需要幾分鐘的時間。 在工作區建立期間，您可以在 [通知]**** 中檢視部署狀態。
+3. 選取 [建立]。 工作區建立需要幾分鐘的時間。 在工作區建立期間，您可以在 [通知]**** 中檢視部署狀態。
 
 ## <a name="install-azure-databricks-tools"></a>安裝 Azure Databricks 工具
 
@@ -87,7 +87,7 @@ ms.locfileid: "83397055"
 
 1. 執行 Databricks CLI 命令 `databricks configure --token` 。
 
-2. 執行 [設定] 命令之後，系統會提示您輸入主機。 您的主機 URL 使用下列格式： **HTTPs://< \location>. azuredatabricks.net**。 例如，如果您在 Azure Databricks 服務建立期間選取了 [ **eastus2** ]，則主機會是 **https://eastus2.azuredatabricks.net** 。
+2. 執行 [設定] 命令之後，系統會提示您輸入主機。 您的主機 URL 使用的格式為： `https://<Location>.azuredatabricks.net` 。 例如，如果您在 Azure Databricks 服務建立期間選取了 [ **eastus2** ]，則主機會是 `https://eastus2.azuredatabricks.net` 。
 
 3. 進入主機之後，系統會提示您輸入權杖。 在 [Azure 入口網站中，選取 [**啟動工作區**] 以啟動您的 Azure Databricks 工作區。
 

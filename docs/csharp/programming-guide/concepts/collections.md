@@ -2,12 +2,12 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: d2996648690fc03b5f1d6a90e0be96155c5a24ed
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645473"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201076"
 ---
 # <a name="collections-c"></a>集合 (C#)
 
@@ -24,7 +24,7 @@ ms.locfileid: "81645473"
 > [!NOTE]
 > 在本主題的範例中，請包括 `System.Collections.Generic` 和 `System.Linq` 命名空間的 [using](../../language-reference/keywords/using-directive.md) 指示詞。
 
- **在本主題中**
+ **本主題中的**
 
 - [使用簡單的集合](#BKMK_SimpleCollection)
 
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>使用 LINQ 存取集合
 
-LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 有關詳細資訊,請參閱在[C# 中使用 LINQ 入門](linq/index.md)。
+LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 如需詳細資訊，請參閱[使用 c # 中的 LINQ 消費者入門](linq/index.md)。
 
 下列範例會對泛型 `List` 執行 LINQ 查詢。 LINQ 查詢會傳回包含結果的不同集合。
 
@@ -600,10 +600,10 @@ private static IEnumerable<int> EvenSequence(
 
 - [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
 - [程式設計概念 (C#)](./index.md)
-- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Long](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [平行 LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [集合和資料結構](../../../standard/collections/index.md)
 - [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)
-- [集合中的比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [何時使用一般集合](../../../standard/collections/when-to-use-generic-collections.md)
+- [集合內的比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [使用泛型集合的時機](../../../standard/collections/when-to-use-generic-collections.md)

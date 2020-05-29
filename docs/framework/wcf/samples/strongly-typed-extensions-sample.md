@@ -1,18 +1,19 @@
 ---
-title: 強型別延伸範例
+title: 強型別延伸模組範例
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 3cfbcddfdc7700618d499dd41d3a8c3b629bf550
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65f14b2c8db7553cb2f14bc7a1fe6f7128f523b6
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183308"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201555"
 ---
-# <a name="strongly-typed-extensions-sample"></a>強型別延伸範例
+# <a name="strongly-typed-extensions-sample"></a>強型別延伸模組範例
+
 基於示範用途，此範例會使用 <xref:System.ServiceModel.Syndication.SyndicationFeed> 類別。 不過在此範例中所示範的模式，可以與所有支援延伸資料的新聞訂閱類別一起使用。  
   
- Syndication 物件模型 (<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem> 和相關類別) 會使用 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 屬性，藉此支援對延伸資料的鬆散型別存取。 此範例說明如何實作 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 的自訂衍生型別，以便使用某些特定應用程式延伸資料做為強型別屬性，藉此提供對延伸資料的強型別存取。  
+ Syndication 物件模型 (<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem> 和相關類別) 會使用 <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> 和 <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> 屬性，藉此支援對延伸資料的鬆散型別存取。 這個範例會示範如何藉由實作為的自訂衍生類別 <xref:System.ServiceModel.Syndication.SyndicationFeed> ，並 <xref:System.ServiceModel.Syndication.SyndicationItem> 將特定的應用程式特定延伸當做強型別屬性，來提供延伸模組資料的強型別存取。  
   
  例如，此範例說明如何實作在建議的 Atom Threading Extensions RFC 中定義的延伸項目。 這僅做為示範之用，不適合直接用於建議規格的完整實作中。  
   
@@ -40,10 +41,10 @@ ms.locfileid: "79183308"
 </entry>  
 ```  
   
- 該`<in-reply-to>`元素指定三個必需的屬性`ref` `type` （`href`和 ），同時還允許存在其他擴充屬性和擴展元素。  
+ `<in-reply-to>`元素會指定三個必要的屬性（ `ref` `type` 和）， `href` 同時也允許存在其他擴充屬性和延伸元素。  
   
 ## <a name="modeling-the-in-reply-to-element"></a>建立 In-Reply-To 項目的模型  
- 在本範例中，`<in-reply-to>` 項目會模型化為實作 <xref:System.Xml.Serialization.IXmlSerializable> 以便與 <xref:System.Runtime.Serialization.DataContractSerializer> 搭配使用的 CLR。 此外，它也會實作用於存取項目資料的方法和屬性，如下列範例程式碼所示。  
+ 在本範例中，`<in-reply-to>` 項目會模型化為實作 <xref:System.Xml.Serialization.IXmlSerializable> 以便與 <xref:System.Runtime.Serialization.DataContractSerializer> 搭配使用的 CLR。 它也會實行一些方法和屬性來存取專案的資料，如下列範例程式碼所示。  
   
 ```csharp  
 [XmlRoot(ElementName = "in-reply-to", Namespace = "http://contoso.org/syndication/thread/1.0")]  
@@ -211,7 +212,7 @@ public class ThreadedFeed : SyndicationFeed
 }  
 ```  
   
- 類別 `ThreadedItem` 繼承自 `SyndicationItem`，並且會使 `InReplyToElement` 成為強型別屬性。 這可提供方便、程式設計的方式來存取 `InReplyTo` 延伸資料。 它也會實作 `TryParseElement` 和 `WriteElementExtensions` 以便讀取和寫入其延伸資料，如下列程式碼所示。  
+ 類別 `ThreadedItem` 繼承自 `SyndicationItem` ，並做 `InReplyToElement` 為強型別屬性。 這可提供方便、程式設計的方式來存取 `InReplyTo` 延伸資料。 它也會實作 `TryParseElement` 和 `WriteElementExtensions` 以便讀取和寫入其延伸資料，如下列程式碼所示。  
   
 ```csharp
 public class ThreadedItem : SyndicationItem  
@@ -272,17 +273,17 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

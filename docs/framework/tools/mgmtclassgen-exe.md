@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 5e39670fbb40acb999a243ac86683219f3c89e4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6de28694a1fdcd22cc2baa8cff66387c601414c
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180371"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201855"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (管理強類型類別產生器)
 [管理強類型類別產生器] 工具可快速地為指定的 Windows Management Instrumentation (WMI) 類別產生早期繫結 Managed 類別。 產生的類別會將為存取 WMI 類別之執行個體所撰寫的程式碼加以簡化。  
@@ -53,7 +53,7 @@ WMIClass [options]
 |CIM 類型|所產生之類別中的資料類型|  
 |--------------|--------------------------------------|  
 |CIM_SINT8|**SByte**|  
-|CIM_UINT8|**位元組**|  
+|CIM_UINT8|**節**|  
 |CIM_SINT16|**Int16**|  
 |CIM_UINT16|**UInt16**|  
 |CIM_SINT32|**Int32**|  
@@ -61,14 +61,14 @@ WMIClass [options]
 |CIM_SINT64|**Int64**|  
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Single**|  
-|CIM_REAL64|**雙**|  
-|CIM_BOOLEAN|**布林**|  
+|CIM_REAL64|**Double**|  
+|CIM_BOOLEAN|**True**|  
 |CIM_String|**字串**|  
 |CIM_DATETIME|**DateTime** 或 **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
-|CIM_CHAR16|**字元**|  
+|CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**物件**|  
+|CIM_IUNKNOWN|**Object**|  
 |CIM_ARRAY|上述物件的陣列|  
   
  請注意下列在產生 WMI 類別時的行為：  
@@ -83,11 +83,11 @@ WMIClass [options]
   
 - WMI 使用單一 (Singleton) 這個詞彙來說明只能有一個執行個體的類別。 因此，單一 (Singleton) 類別的無參數建構函式會將類別初始化為該類別的唯一執行個體。  
   
-- WMI 類別可以擁有物件的屬性。 當產生此類型之 WMI 類別的強類型類別時，應考慮產生此內嵌物件屬性類型的強類型類別。 這能讓您以強類型的方式存取內嵌物件。 請注意，產生的程式碼可能無法偵測內嵌物件的類型。 在這個情況下，會在產生的程式碼中建立註解以告知您這個問題。 接著，您可以將所產生程式碼的屬性類型修改為其他所產生類別的屬性類型。  
+- WMI 類別可以擁有物件的屬性。 當您為這種類型的 WMI 類別產生強型別類別時，您應該考慮為内嵌物件屬性的類型產生強型別類別。 這可讓您以強型別的方式存取内嵌物件。 請注意，產生的程式碼可能無法偵測內嵌物件的類型。 在這個情況下，會在產生的程式碼中建立註解以告知您這個問題。 接著，您可以將所產生程式碼的屬性類型修改為其他所產生類別的屬性類型。  
   
 - WMI 中，CIM_DATETIME 資料類型的資料值可表示特定的日期和時間，或表示時間間隔。 如果資料值代表日期和時間，所產生類別中的資料類型就會是 **DateTime**。 如果資料值代表時間間隔，則所產生類別中的資料類型就會是 **TimeSpan**。  
   
- 您也可以使用 Visual Studio .NET 中的 Server Explorer Management Extension 來產生強類型類別。  
+ 您也可以使用 Visual Studio .NET 中的伺服器總管管理延伸模組來產生強型別類別。  
   
  如需 WMI 的詳細資訊，請參閱 Platform SDK 說明文件中的 **Windows Management Instrumentation** 主題。  
   

@@ -2,12 +2,12 @@
 title: 根據開發情況比較 ASP.NET Web 服務與 WCF
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: 607d0eaabde4e00c1a00b995356bb6d4e1a39234
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c5a2145a6d7b631a666df94eb0c1fc53cbc3c55f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855766"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202269"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>根據開發情況比較 ASP.NET Web 服務與 WCF
 
@@ -29,7 +29,7 @@ Windows Communication Foundation （WCF）具有 ASP.NET 相容性模式選項�
 
 WCF 應用程式開發通常也是以複雜類型的定義為開頭。 您可以使用 WCF 做為與 ASP.NET Web 服務相同的 .NET Framework 類型。
 
-WCF<xref:System.Runtime.Serialization.DataContractAttribute> 和<xref:System.Runtime.Serialization.DataMemberAttribute>可以加入至 .NET Framework 類型，以指出類型的實例要序列化為 XML，以及要序列化之類型的特定欄位或屬性，如下列範例程式碼所示。
+WCF <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 可以加入至 .NET Framework 類型，以指出類型的實例要序列化為 XML，以及要序列化之類型的特定欄位或屬性，如下列範例程式碼所示。
 
 ```csharp
 //Example One:
@@ -145,7 +145,7 @@ public class LineItem
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractAttribute> 表示要序列化型別的零或多個欄位或屬性，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 則表示會序列化特定的欄位或屬性。 <xref:System.Runtime.Serialization.DataContractAttribute> 可以套用於類別或結構。 <xref:System.Runtime.Serialization.DataMemberAttribute> 可以套用至欄位或屬性 (Property)，而套用此屬性 (Attribute) 的欄位和屬性 (Property) 可以是公用或私用。 套用至它們的類型<xref:System.Runtime.Serialization.DataContractAttribute>實例在 WCF 中稱為「資料合約」（data contract）。 這些資料合約會使用 <xref:System.Runtime.Serialization.DataContractSerializer> 來序列化為 XML。
+<xref:System.Runtime.Serialization.DataContractAttribute> 表示要序列化型別的零或多個欄位或屬性，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 則表示會序列化特定的欄位或屬性。 <xref:System.Runtime.Serialization.DataContractAttribute> 可以套用於類別或結構。 <xref:System.Runtime.Serialization.DataMemberAttribute> 可以套用至欄位或屬性 (Property)，而套用此屬性 (Attribute) 的欄位和屬性 (Property) 可以是公用或私用。 套用至它們的類型實例在 <xref:System.Runtime.Serialization.DataContractAttribute> WCF 中稱為「資料合約」（data contract）。 這些資料合約會使用 <xref:System.Runtime.Serialization.DataContractSerializer> 來序列化為 XML。
 
 下列為使用 <xref:System.Runtime.Serialization.DataContractSerializer> 和使用 <xref:System.Xml.Serialization.XmlSerializer> 之間的重要差異清單，以及 <xref:System.Xml.Serialization> 命名空間的各種屬性。
 
@@ -184,7 +184,7 @@ public class LineItem
 
   - 藉由讓資料合約實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面，便可讓 <xref:System.Runtime.Serialization.DataContractSerializer> 將定義於新版資料合約中的成員透過擁有舊版合約的應用程式傳遞。
 
-儘管存在以上這些差異，但根據預設，只要 XML 的命名空間已明確定義，<xref:System.Xml.Serialization.XmlSerializer> 序列化型別的目標 XML 與 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化型別的目標 XML 在語意上是完全相同的。 下列類別具有可與這兩個序列化程式一起使用的屬性，會依照<xref:System.Xml.Serialization.XmlSerializer>和<xref:System.Runtime.Serialization.DataContractAttribute>轉譯成以語義相同的 XML：
+儘管存在以上這些差異，但根據預設，只要 XML 的命名空間已明確定義，<xref:System.Xml.Serialization.XmlSerializer> 序列化型別的目標 XML 與 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化型別的目標 XML 在語意上是完全相同的。 下列類別具有可與這兩個序列化程式一起使用的屬性，會依照和轉譯成以語義相同的 XML <xref:System.Xml.Serialization.XmlSerializer> <xref:System.Runtime.Serialization.DataContractAttribute> ：
 
 ```csharp
 [Serializable]
@@ -201,10 +201,10 @@ public class LineItem
 }
 ```
 
-Windows 軟體發展工具組（SDK）包含稱為「 [System.servicemodel 中繼資料公用程式工具」（Svcutil .exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)的命令列工具。 如同搭配 ASP.NET Web 服務使用的 xsd.exe 工具，Svcutil 可以從 XML 架構產生 .NET 資料類型的定義。 如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可以發出採用 XML 結構描述定義格式的 XML，型別就是資料合約，否則這些型別會使用 <xref:System.Xml.Serialization.XmlSerializer> 來進行序列化。 Svcutil 也可以使用`dataContractOnly`參數，從資料合約產生 XML 架構。
+Windows 軟體發展工具組（SDK）包含稱為「 [System.servicemodel 中繼資料公用程式工具」（Svcutil .exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)的命令列工具。 如同搭配 ASP.NET Web 服務使用的 xsd.exe 工具，Svcutil 可以從 XML 架構產生 .NET 資料類型的定義。 如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可以發出採用 XML 結構描述定義格式的 XML，型別就是資料合約，否則這些型別會使用 <xref:System.Xml.Serialization.XmlSerializer> 來進行序列化。 Svcutil 也可以使用參數，從資料合約產生 XML 架構。 `dataContractOnly`
 
 > [!NOTE]
-> 雖然 ASP.NET Web 服務會使用<xref:System.Xml.Serialization.XmlSerializer>，而 wcf ASP.NET 相容性模式讓 wcf 服務模擬 ASP.NET Web 服務的行為，但 ASP.NET 相容性選項不會將一個限制為<xref:System.Xml.Serialization.XmlSerializer>使用。 使用者還是可以搭配 ASP.NET 相容性模式中的執行服務使用 <xref:System.Runtime.Serialization.DataContractSerializer>。
+> 雖然 ASP.NET Web 服務會使用 <xref:System.Xml.Serialization.XmlSerializer> ，而 wcf ASP.NET 相容性模式讓 wcf 服務模擬 ASP.NET Web 服務的行為，但 ASP.NET 相容性選項不會將一個限制為使用 <xref:System.Xml.Serialization.XmlSerializer> 。 使用者還是可以搭配 ASP.NET 相容性模式中的執行服務使用 <xref:System.Runtime.Serialization.DataContractSerializer>。
 
 ## <a name="service-development"></a>服務開發
 
@@ -257,7 +257,7 @@ public interface IEcho
 }
 ```
 
-會指定介面定義 WCF 服務合約，而則<xref:System.ServiceModel.OperationContractAttribute>表示介面的方法（如果有的話）會定義服務合約的作業。 <xref:System.ServiceModel.ServiceContractAttribute>
+<xref:System.ServiceModel.ServiceContractAttribute>會指定介面定義 WCF 服務合約，而則 <xref:System.ServiceModel.OperationContractAttribute> 表示介面的方法（如果有的話）會定義服務合約的作業。
 
 完成定義服務合約之後，這個服務合約就會在類別實作用來定義此服務合約之介面的程序下，實作於類別中：
 
@@ -293,7 +293,7 @@ public class Service : IEcho
 
 繫結會指定用來與應用程式通訊的一組通訊協定。 下表會列出表示常用選項的系統提供繫結。
 
-|名稱|用途|
+|名稱|目的|
 |----------|-------------|
 |BasicHttpBinding|與支援 WS-BasicProfile 1.1 和 Basic Security Profile 1.0 之 Web 服務和用戶端的互通性。|
 |WSHttpBinding|與支援 WS-* 通訊協定 (透過 HTTP) 之 Web 服務和用戶端的互通性。|
@@ -312,7 +312,7 @@ WCF 應用程式的自訂系結可輕鬆定義為 WCF 用來執行個別通訊�
 服務類型的內部行為可以透過使用一系列類別的屬性 (稱為行為) 來進行調整。 在下面範例中，<xref:System.ServiceModel.ServiceBehaviorAttribute> 類別是用來指定此服務類型要成為多執行緒。
 
 ```csharp
-[ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple]
+[ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple)]
 public class DerivativesCalculatorServiceType: IDerivativesCalculator
 ```
 
@@ -344,7 +344,7 @@ WCF 服務可以輕鬆地裝載在 IIS 5.1 或6.0 中，這是 IIS 7.0 和任何
 
 接著，該應用程式可以透過應用程式根目錄中服務檔的 URL 來存取。
 
-若要在 .net 應用程式中裝載 WCF 服務，請將服務類型編譯為應用程式所參考的類別庫元件，並將應用程式設計成使用<xref:System.ServiceModel.ServiceHost>類別來裝載服務。 下列是所需要的基礎程式設計範例：
+若要在 .NET 應用程式中裝載 WCF 服務，請將服務類型編譯為應用程式所參考的類別庫元件，並將應用程式設計成使用類別來裝載服務 <xref:System.ServiceModel.ServiceHost> 。 下列是所需要的基礎程式設計範例：
 
 ```csharp
 string httpBaseAddress = "http://www.contoso.com:8000/";
@@ -369,7 +369,7 @@ typeof(Service), //"Service" is the name of the service type baseAddresses))
 
 下列範例會示範如何在 <xref:System.ServiceModel.ServiceHost> 的建構中指定一個或多個傳輸通訊協定的位址。 這些位址指的是基底位址 (Base Address)。
 
-為 WCF 服務的任何端點提供的位址是相對於端點主機基底位址的位址。 主機的每個通訊傳輸通訊協定都可以擁有一個基底位址。 在上述組態檔的範例組態中，針對端點選取的 <xref:System.ServiceModel.BasicHttpBinding> 會以 HTTP 做為傳輸通訊協定，因此端點 `EchoService` 的位址會相對於主機的 HTTP 基底位址。 在上述範例中的主機，須的 HTTP 基底位址 `http://www.contoso.com:8000/`。 對於裝載於 IIS 或 WAS 的服務，其基底位址是服務之服務檔的 URL。
+為 WCF 服務的任何端點提供的位址是相對於端點主機基底位址的位址。 主機的每個通訊傳輸通訊協定都可以擁有一個基底位址。 在上述組態檔的範例組態中，針對端點選取的 <xref:System.ServiceModel.BasicHttpBinding> 會以 HTTP 做為傳輸通訊協定，因此端點 `EchoService` 的位址會相對於主機的 HTTP 基底位址。 在上述範例中的主機案例中，HTTP 基底位址是 `http://www.contoso.com:8000/` 。 對於裝載於 IIS 或 WAS 的服務，其基底位址是服務之服務檔的 URL。
 
 只有裝載于 IIS 或 WAS 中的服務，以及以 HTTP 做為傳輸通訊協定的設定，才可以使用 WCF ASP.NET 相容性模式選項。 若要開啟該選項，請遵循下列步驟。
 
@@ -473,7 +473,7 @@ public class Service: WebService, IEcho
 }
 ```
 
-WCF 會提供屬性、 <xref:System.ServiceModel.MessageContractAttribute> <xref:System.ServiceModel.MessageHeaderAttribute>、和<xref:System.ServiceModel.MessageBodyMemberAttribute> ，以描述服務所傳送和接收的 SOAP 訊息結構。
+WCF 會提供屬性、、 <xref:System.ServiceModel.MessageContractAttribute> <xref:System.ServiceModel.MessageHeaderAttribute> 和， <xref:System.ServiceModel.MessageBodyMemberAttribute> 以描述服務所傳送和接收的 SOAP 訊息結構。
 
 ```csharp
 [DataContract]
@@ -513,7 +513,7 @@ public interface IItemService
 }
 ```
 
-這個語法會產生訊息結構的明確表示，而訊息的結構會隱含在 ASP.NET Web 服務的程式碼中。 此外，在 ASP.NET 語法中，訊息標頭會表示為服務的屬性（例如上一個`ProtocolHeader`範例中的屬性），而在 WCF 語法中，則會更精確地表示為訊息的屬性。 此外，WCF 允許將訊息標頭新增至端點的設定。
+這個語法會產生訊息結構的明確表示，而訊息的結構會隱含在 ASP.NET Web 服務的程式碼中。 此外，在 ASP.NET 語法中，訊息標頭會表示為服務的屬性（例如 `ProtocolHeader` 上一個範例中的屬性），而在 WCF 語法中，則會更精確地表示為訊息的屬性。 此外，WCF 允許將訊息標頭新增至端點的設定。
 
 ```xml
 <service name="Service ">
@@ -632,7 +632,7 @@ public class Service : WebService, IEcho
 
 WCF 提供可延伸的物件來進行狀態管理。 可擴充物件是指實作 <xref:System.ServiceModel.IExtensibleObject%601> 的物件。 最重要的擴充物件為 <xref:System.ServiceModel.ServiceHostBase> 和 <xref:System.ServiceModel.InstanceContext>。 `ServiceHostBase` 可讓您維護相同主機上所有服務類型之所有執行個體可以存取的狀態，而 `InstanceContext` 則可讓您維護相同服務類型執行個體中執行之任何程式碼可以存取的狀態。
 
-在這裡，服務型`TradingSystem`別<xref:System.ServiceModel.ServiceBehaviorAttribute>具有，其指定來自相同 WCF 用戶端實例的所有呼叫都會路由傳送至相同的服務型別實例。
+在這裡，服務型別 `TradingSystem` 具有，其 <xref:System.ServiceModel.ServiceBehaviorAttribute> 指定來自相同 WCF 用戶端實例的所有呼叫都會路由傳送至相同的服務型別實例。
 
 ```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
@@ -671,7 +671,7 @@ void ITradingService.AddTrade(Trade trade)
 }
 ```
 
-雖然 ASP.NET 可控制類別中的<xref:System.Web.HttpContext>狀態資訊的實際儲存位置，但是 WCF （至少在其初始版本中）不會控制可延伸物件的儲存位置。 這構成了為 WCF 服務選取 ASP.NET 相容性模式的最佳原因。 如果可設定狀態管理是必要的工作，這時選擇 ASP.NET 相容性模式可讓您以與 ASP.NET 完全相同的方式來使用 <xref:System.Web.HttpContext> 類別的功能，而且也可以設定使用 <xref:System.Web.HttpContext> 類別管理之狀態資訊的儲存位置。
+雖然 ASP.NET 可控制類別中的狀態資訊的 <xref:System.Web.HttpContext> 實際儲存位置，但是 WCF （至少在其初始版本中）不會控制可延伸物件的儲存位置。 這構成了為 WCF 服務選取 ASP.NET 相容性模式的最佳原因。 如果可設定狀態管理是必要的工作，這時選擇 ASP.NET 相容性模式可讓您以與 ASP.NET 完全相同的方式來使用 <xref:System.Web.HttpContext> 類別的功能，而且也可以設定使用 <xref:System.Web.HttpContext> 類別管理之狀態資訊的儲存位置。
 
 ## <a name="security"></a>安全性
 
@@ -679,7 +679,7 @@ void ITradingService.AddTrade(Trade trade)
 
 ### <a name="security-authentication"></a>安全性：驗證
 
-IIS 提供的工具可控制應用程式的存取權，讓您選取匿名存取或各種不同的驗證模式：Windows 驗證、摘要式驗證、基本驗證和 .NET Passport 驗證。 Windows 驗證選項可用來控制 ASP.NET Web 服務的存取。 不過，當 WCF 應用程式裝載于 IIS 時，IIS 必須設定為允許匿名存取應用程式，如此一來，就可以由 WCF 本身來管理驗證，這在其他各種選項中都支援 Windows 驗證。 其他選項還包括使用者名稱權杖、X.509 憑證、SAML 權杖和 CardSpace 卡，但是您也可以定義自訂的驗證機制。
+IIS 會提供可以用來控制存取應用程式的機能，而您可以從其中選取匿名存取或各種的驗證模式：Windows 驗證、摘要式驗證、基本驗證和 .NET Passport 驗證。 Windows 驗證選項可用來控制 ASP.NET Web 服務的存取。 不過，當 WCF 應用程式裝載于 IIS 時，IIS 必須設定為允許匿名存取應用程式，如此一來，就可以由 WCF 本身來管理驗證，這在其他各種選項中都支援 Windows 驗證。 其他選項還包括使用者名稱權杖、X.509 憑證、SAML 權杖和 CardSpace 卡，但是您也可以定義自訂的驗證機制。
 
 ### <a name="security-impersonation"></a>安全性：模擬
 
@@ -704,7 +704,7 @@ WCF 設定系統會提供自己的身分識別元素，以指定要模擬的特�
 public void Receive(Message input)
 ```
 
-### <a name="security-authorization-using-access-control-lists"></a>安全性：使用存取控制清單的授權
+### <a name="security-authorization-using-access-control-lists"></a>安全性：使用存取控制清單進行驗證
 
 存取控制清單 (ACL) 可用來限制對 .asmx 檔案的存取。 不過，除了 ASP.NET 相容性模式以外，會忽略 WCF .svc 檔案上的 Acl。
 
@@ -714,7 +714,7 @@ IIS Windows 驗證選項可以搭配 ASP.NET 設定語言所提供的 authorizat
 
 角色提供者為類別，這些類別全部都會實作可查詢使用者所獲派角色的基本介面，而且每個角色提供者都知道如何從不同來源擷取該資訊。 ASP.NET 2.0 會提供可自 Microsoft SQL Server 資料庫中擷取角色指派的角色提供者，並提供另一個可自 Windows Server 2003 授權管理員擷取角色指派的角色提供者。
 
-角色提供者機制實際上可以單獨用於任何 .NET 應用程式中的 ASP.NET，包括 WCF 應用程式。 下列 WCF 應用程式的範例設定會示範如何使用 ASP.NET 角色提供者，方法是透過來<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>選取此選項。
+角色提供者機制實際上可以單獨用於任何 .NET 應用程式中的 ASP.NET，包括 WCF 應用程式。 下列 WCF 應用程式的範例設定會示範如何使用 ASP.NET 角色提供者，方法是透過來選取此選項 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 。
 
 ```xml
 <system.serviceModel>
@@ -735,11 +735,11 @@ IIS Windows 驗證選項可以搭配 ASP.NET 設定語言所提供的 authorizat
 </system.serviceModel>
 ```
 
-### <a name="security-claims-based-authorization"></a>安全性：宣告式授權
+### <a name="security-claims-based-authorization"></a>安全性：宣告架構的授權
 
 WCF 其中一項最重要的創新，就是以宣告為基礎來授權存取受保護資源的完整支援。 宣告是由類型、權限和值組成。以駕照為例， 駕照會建立一組關於持有人的宣告，而其中一個宣告是持有人的生日。 該宣告的類型為生日，而宣告的值為駕駛人的出生日期。 宣告賦予持有人的權限會指定持有人可以如何使用宣告值。 例如，在宣告為駕駛人生日、權限為持有的案例中：駕駛人持有該生日，但無法更改這個日期。 宣告架構的授權也包含以角色為基礎的驗證，因為角色就是一種宣告類型。
 
-宣告架構的授權方式會藉由將一組宣告與作業的存取需求進行比較，並根據該比較的結果授與或拒絕作業存取，來完成其作業。 在 WCF 中，您可以指定要用來執行宣告式授權的類別，方法是將值指派給`ServiceAuthorizationManager`的<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>屬性。
+宣告架構的授權方式會藉由將一組宣告與作業的存取需求進行比較，並根據該比較的結果授與或拒絕作業存取，來完成其作業。 在 WCF 中，您可以指定要用來執行宣告式授權的類別，方法是將值指派給的 `ServiceAuthorizationManager` 屬性 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 。
 
 ```xml
 <behaviors>
@@ -751,7 +751,7 @@ WCF 其中一項最重要的創新，就是以宣告為基礎來授權存取受�
 </behaviors>
 ```
 
-用來執行宣告架構授權的類別必須是衍生自 <xref:System.ServiceModel.ServiceAuthorizationManager>，而它只需要覆寫 `AccessCheck()` 方法。 每當叫用服務的作業時，WCF 會呼叫該方法，並<xref:System.ServiceModel.OperationContext>提供物件，在其`ServiceSecurityContext.AuthorizationContext`屬性中具有使用者的宣告。 WCF 會從使用者提供給驗證的任何安全性權杖，將使用者的宣告組合在一起，這會導致評估這些宣告是否足以執行有問題的作業。
+用來執行宣告架構授權的類別必須是衍生自 <xref:System.ServiceModel.ServiceAuthorizationManager>，而它只需要覆寫 `AccessCheck()` 方法。 每當叫用服務的作業時，WCF 會呼叫該方法，並提供 <xref:System.ServiceModel.OperationContext> 物件，在其屬性中具有使用者的宣告 `ServiceSecurityContext.AuthorizationContext` 。 WCF 會從使用者提供給驗證的任何安全性權杖，將使用者的宣告組合在一起，這會導致評估這些宣告是否足以執行有問題的作業。
 
 該 WCF 會自動將來自任何一種安全性權杖的宣告組合成非常重要的創新，因為它會讓以宣告為基礎的授權程式碼完全獨立于驗證機制。 相對地，使用 ACL 或 ASP.NET 中角色的授權方式，與 Windows 驗證有密切的關係。
 
@@ -765,4 +765,4 @@ ASP.NET 設定語言可讓您指定個別服務的文化特性。 除了 ASP.NET
 
 ## <a name="see-also"></a>另請參閱
 
-- [根據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [依據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
