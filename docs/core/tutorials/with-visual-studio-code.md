@@ -1,142 +1,124 @@
 ---
-title: C# 與 Visual Studio Code 使用者入門
-description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您的第一個 .NET Core 應用程式。
-author: kendrahavens
-ms.date: 04/23/2020
-ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+title: 使用 Visual Studio Code 建立具有 .NET Core 的主控台應用程式
+description: 瞭解如何使用 Visual Studio Code 和 .NET Core CLI 建立 .NET Core 主控台應用程式。
+ms.date: 05/22/2020
+ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506874"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201693"
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a><span data-ttu-id="42b2e-103">C# 與 Visual Studio Code 使用者入門</span><span class="sxs-lookup"><span data-stu-id="42b2e-103">Get started with C# and Visual Studio Code</span></span>
+# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a><span data-ttu-id="5714b-103">教學課程：使用 Visual Studio Code 建立具有 .NET Core 的主控台應用程式</span><span class="sxs-lookup"><span data-stu-id="5714b-103">Tutorial: Create a console application with .NET Core using Visual Studio Code</span></span>
 
-<span data-ttu-id="42b2e-104">.NET Core 提供快速且模組化的平台，可建立在 Windows、Linux 和 macOS 上執行的應用程式。</span><span class="sxs-lookup"><span data-stu-id="42b2e-104">.NET Core gives you a fast and modular platform for creating applications that run on Windows, Linux, and macOS.</span></span> <span data-ttu-id="42b2e-105">搭配使用 Visual Studio Code 與 C# 擴充功能，以取得具備 C# IntelliSense (智慧型程式碼完成) 與偵錯完整支援的強大編輯體驗。</span><span class="sxs-lookup"><span data-stu-id="42b2e-105">Use Visual Studio Code with the C# extension to get a powerful editing experience with full support for C# IntelliSense (smart code completion) and debugging.</span></span>
+<span data-ttu-id="5714b-104">本教學課程說明如何使用 Visual Studio Code 和 .NET Core CLI 來建立和執行 .NET Core 主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="5714b-104">This tutorial shows how to create and run a .NET Core console application by using Visual Studio Code and the .NET Core CLI.</span></span> <span data-ttu-id="5714b-105">專案工作（例如建立、編譯和執行專案）是使用 CLI 來完成，因此，您可以使用不同的程式碼編輯器來遵循此教學課程，並視需要在終端機中執行命令。</span><span class="sxs-lookup"><span data-stu-id="5714b-105">Project tasks, such as creating, compiling, and running a project are done by using the CLI, so you can follow this tutorial with a different code editor and run commands in a terminal if you prefer.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="42b2e-106">先決條件</span><span class="sxs-lookup"><span data-stu-id="42b2e-106">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="5714b-106">Prerequisites</span><span class="sxs-lookup"><span data-stu-id="5714b-106">Prerequisites</span></span>
 
-1. <span data-ttu-id="42b2e-107">安裝 [Visual Studio Code](https://code.visualstudio.com/)。</span><span class="sxs-lookup"><span data-stu-id="42b2e-107">Install [Visual Studio Code](https://code.visualstudio.com/).</span></span>
-2. <span data-ttu-id="42b2e-108">安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。</span><span class="sxs-lookup"><span data-stu-id="42b2e-108">Install the [.NET Core SDK](https://dotnet.microsoft.com/download).</span></span>
-3. <span data-ttu-id="42b2e-109">安裝適用於 Visual Studio Code 的 [C# 擴充功能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) \(英文\)。</span><span class="sxs-lookup"><span data-stu-id="42b2e-109">Install the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for Visual Studio Code.</span></span> <span data-ttu-id="42b2e-110">如需如何在 Visual Studio Code 上安裝擴充功能的詳細資訊，請參閱 [VS Code 擴充功能市集](https://code.visualstudio.com/docs/editor/extension-gallery) \(英文\)。</span><span class="sxs-lookup"><span data-stu-id="42b2e-110">For more information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+1. <span data-ttu-id="5714b-107">已安裝[c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能的[Visual Studio Code](https://code.visualstudio.com/) 。</span><span class="sxs-lookup"><span data-stu-id="5714b-107">[Visual Studio Code](https://code.visualstudio.com/) with the [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) installed.</span></span> <span data-ttu-id="5714b-108">如需有關如何在 Visual Studio Code 上安裝延伸模組的詳細資訊，請參閱[VS Code 延伸模組 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)。</span><span class="sxs-lookup"><span data-stu-id="5714b-108">For information about how to install extensions on Visual Studio Code, see [VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).</span></span>
+2. <span data-ttu-id="5714b-109">[.Net Core 3.1 SDK 或更新版本](https://dotnet.microsoft.com/download)</span><span class="sxs-lookup"><span data-stu-id="5714b-109">The [.NET Core 3.1 SDK or later](https://dotnet.microsoft.com/download)</span></span>
 
-## <a name="hello-world"></a><span data-ttu-id="42b2e-111">Hello World</span><span class="sxs-lookup"><span data-stu-id="42b2e-111">Hello World</span></span>
+## <a name="create-the-app"></a><span data-ttu-id="5714b-110">建立應用程式</span><span class="sxs-lookup"><span data-stu-id="5714b-110">Create the app</span></span>
 
-<span data-ttu-id="42b2e-112">開始使用 .NET Core 上的簡單 "Hello World" 程式：</span><span class="sxs-lookup"><span data-stu-id="42b2e-112">Get started with a simple "Hello World" program on .NET Core:</span></span>
+1. <span data-ttu-id="5714b-111">開啟 Visual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="5714b-111">Open Visual Studio Code.</span></span>
 
-1. <span data-ttu-id="42b2e-113">開啟專案：</span><span class="sxs-lookup"><span data-stu-id="42b2e-113">Open a project:</span></span>
+1. <span data-ttu-id="5714b-112">建立專案。</span><span class="sxs-lookup"><span data-stu-id="5714b-112">Create a project.</span></span>
 
-    - <span data-ttu-id="42b2e-114">開啟 Visual Studio Code。</span><span class="sxs-lookup"><span data-stu-id="42b2e-114">Open Visual Studio Code.</span></span>
-    - <span data-ttu-id="42b2e-115">從主**功能表選取 [** 檔案] [**開啟資料夾**]。 > </span><span class="sxs-lookup"><span data-stu-id="42b2e-115">Select **File** > **Open Folder** from the main menu.</span></span>
-    - <span data-ttu-id="42b2e-116">建立名為*HelloWorld*的資料夾，然後按一下 [**選取資料夾**]。</span><span class="sxs-lookup"><span data-stu-id="42b2e-116">Create a folder named *HelloWorld*, and click **Select Folder**.</span></span> <span data-ttu-id="42b2e-117">資料夾名稱預設會成為專案名稱和命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="42b2e-117">The folder name becomes the project name and the namespace name by default.</span></span> <span data-ttu-id="42b2e-118">您稍後會在本教學課程中新增程式碼，假設專案`HelloWorld`命名空間為。</span><span class="sxs-lookup"><span data-stu-id="42b2e-118">You'll add code later in the tutorial that assumes the project namespace is `HelloWorld`.</span></span>
+   1. <span data-ttu-id="5714b-113">**File**  >  從主功能表選取 [檔案] [**開啟資料夾**] / [**開啟 ...** ]，建立*HelloWorld*資料夾，然後按一下 [**選取資料夾**] [ / **開啟**]。</span><span class="sxs-lookup"><span data-stu-id="5714b-113">Select **File** > **Open Folder**/**Open...** from the main menu, create a *HelloWorld* folder, and click **Select Folder**/**Open**.</span></span>
 
-1. <span data-ttu-id="42b2e-119">初始化 C# 專案：</span><span class="sxs-lookup"><span data-stu-id="42b2e-119">Initialize a C# project:</span></span>
+      <span data-ttu-id="5714b-114">資料夾名稱預設會成為專案名稱和命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="5714b-114">The folder name becomes the project name and the namespace name by default.</span></span> <span data-ttu-id="5714b-115">您稍後會在本教學課程中新增程式碼，假設專案命名空間為 `HelloWorld` 。</span><span class="sxs-lookup"><span data-stu-id="5714b-115">You'll add code later in the tutorial that assumes the project namespace is `HelloWorld`.</span></span>
 
-    - <span data-ttu-id="42b2e-120">從主功能表選取 [**查看** > **終端**機]，從 Visual Studio Code 開啟終端機。</span><span class="sxs-lookup"><span data-stu-id="42b2e-120">Open the Terminal from Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
-    - <span data-ttu-id="42b2e-121">在終端機視窗中， `dotnet new console`輸入。</span><span class="sxs-lookup"><span data-stu-id="42b2e-121">In the terminal window, enter `dotnet new console`.</span></span>
+   1. <span data-ttu-id="5714b-116">從主功能表選取 [**查看**終端機]，以在 Visual Studio Code 中開啟**終端**機  >  **Terminal** 。</span><span class="sxs-lookup"><span data-stu-id="5714b-116">Open the **Terminal** in Visual Studio Code by selecting **View** > **Terminal** from the main menu.</span></span>
 
-      <span data-ttu-id="42b2e-122">此命令會在您的資料夾中建立*Program.cs*檔案，其中已撰寫簡單的 "Hello World" 程式，以及名為*HelloWorld*的 c # 專案檔。</span><span class="sxs-lookup"><span data-stu-id="42b2e-122">This command creates a *Program.cs* file in your folder with a simple "Hello World" program already written, along with a C# project file named *HelloWorld.csproj*.</span></span>
+      <span data-ttu-id="5714b-117">**終端**機會在*HelloWorld*資料夾中以命令提示字元開啟。</span><span class="sxs-lookup"><span data-stu-id="5714b-117">The **Terminal** opens with the command prompt in the *HelloWorld* folder.</span></span>
 
-      ![DotNet 新增命令](media/with-visual-studio-code/dotnet-new-command.png)
+   1. <span data-ttu-id="5714b-118">在**終端**機中，輸入下列命令：</span><span class="sxs-lookup"><span data-stu-id="5714b-118">In the **Terminal**, enter the following command:</span></span>
 
-1. <span data-ttu-id="42b2e-124">執行 "Hello World" 程式︰</span><span class="sxs-lookup"><span data-stu-id="42b2e-124">Run the "Hello World" program:</span></span>
+      ```dotnetcli
+      dotnet new console
+      ```
 
-    - <span data-ttu-id="42b2e-125">在終端機視窗中， `dotnet run`輸入。</span><span class="sxs-lookup"><span data-stu-id="42b2e-125">In the terminal window, enter `dotnet run`.</span></span>
+<span data-ttu-id="5714b-119">適用于 .NET Core 的主控台應用程式範本會定義一個類別， `Program` 其中包含單一方法，其 `Main` 採用 <xref:System.String> 陣列做為引數。</span><span class="sxs-lookup"><span data-stu-id="5714b-119">The Console Application template for .NET Core defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument.</span></span> <span data-ttu-id="5714b-120">*Program.cs*檔案包含下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="5714b-120">The *Program.cs* file has the following code:</span></span>
 
-      ![DotNet 執行命令](media/with-visual-studio-code/dotnet-run-command.png)
+```csharp
+using System;
 
-## <a name="debug"></a><span data-ttu-id="42b2e-127">偵錯</span><span class="sxs-lookup"><span data-stu-id="42b2e-127">Debug</span></span>
-
-1. <span data-ttu-id="42b2e-128">按一下 *Program.cs* 來開啟它。</span><span class="sxs-lookup"><span data-stu-id="42b2e-128">Open *Program.cs* by clicking on it.</span></span> <span data-ttu-id="42b2e-129">在 Visual Studio Code 中第一次開啟 C# 檔案時，會在編輯器中載入 [OmniSharp](https://www.omnisharp.net/)。</span><span class="sxs-lookup"><span data-stu-id="42b2e-129">The first time you open a C# file in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) loads in the editor.</span></span>
-
-    ![開啟 Program.cs 檔案](media/with-visual-studio-code/open-program-cs.png)
-
-1. <span data-ttu-id="42b2e-131">Visual Studio Code 會提示您新增遺失的資產，以建立及偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="42b2e-131">Visual Studio Code prompts you to add the missing assets to build and debug your app.</span></span> <span data-ttu-id="42b2e-132">選取 [是]  。</span><span class="sxs-lookup"><span data-stu-id="42b2e-132">Select **Yes**.</span></span>
-
-    ![遺失資產的提示](media/with-visual-studio-code/missing-assets.png)
-
-1. <span data-ttu-id="42b2e-134">若要開啟 [偵錯] 檢視，請按一下左側功能表上的 [偵錯] 圖示。</span><span class="sxs-lookup"><span data-stu-id="42b2e-134">To open the Debug view, click on the Debugging icon on the left side menu.</span></span>
-
-    ![在 Visual Studio Code 中開啟 [偵錯] 索引標籤](media/with-visual-studio-code/open-debug-tab.png)
-
-1. <span data-ttu-id="42b2e-136">尋找窗格頂端的綠色箭頭。</span><span class="sxs-lookup"><span data-stu-id="42b2e-136">Locate the green arrow at the top of the pane.</span></span> <span data-ttu-id="42b2e-137">請確定其旁邊的下拉式選已選取 [ **.Net Core 啟動] （主控台）** 。</span><span class="sxs-lookup"><span data-stu-id="42b2e-137">Make sure the drop-down next to it has **.NET Core Launch (console)** selected.</span></span>
-
-    ![在 Visual Studio Code 中選取 .NET Core](media/with-visual-studio-code/select-net-core.png)
-
-1. <span data-ttu-id="42b2e-139">按一下第 9 行旁邊的 [編輯器邊界]\*\*\*\* (編輯器中行號左側空白處)，將中斷點新增至您的專案，或將文字游標移至編輯器中的第 9 行，然後按 <kbd>F9</kbd> 鍵。</span><span class="sxs-lookup"><span data-stu-id="42b2e-139">Add a breakpoint to your project by clicking on the **editor margin**, which is the space on the left of the line numbers in the editor, next to line 9, or move the text cursor onto line 9 in the editor and  press <kbd>F9</kbd>.</span></span>
-
-    ![設定中斷點](media/with-visual-studio-code/set-breakpoint-vs-code.png)
-
-1. <span data-ttu-id="42b2e-141">若要開始進行調試，請按<kbd>F5</kbd>或選取綠色箭號。</span><span class="sxs-lookup"><span data-stu-id="42b2e-141">To start debugging, press <kbd>F5</kbd> or select the green arrow.</span></span> <span data-ttu-id="42b2e-142">當偵錯程式到達您在上一個步驟中設定的中斷點時，它會停止您程式的執行。</span><span class="sxs-lookup"><span data-stu-id="42b2e-142">The debugger stops execution of your program when it reaches the breakpoint you set in the previous step.</span></span>
-    - <span data-ttu-id="42b2e-143">在偵錯工具中，您可以在左上方窗格中，或使用 debug 主控台來查看您的本機變數。</span><span class="sxs-lookup"><span data-stu-id="42b2e-143">While debugging, you can view your local variables in the top-left pane or use the debug console.</span></span>
-
-1. <span data-ttu-id="42b2e-144">選取頂端的藍色箭頭以繼續偵錯，或選取頂端的紅色正方形以停止偵錯。</span><span class="sxs-lookup"><span data-stu-id="42b2e-144">Select the blue arrow at the top to continue debugging, or select the red square at the top to stop.</span></span>
-
-    ![在 Visual Studio Code 中執行和偵錯](media/with-visual-studio-code/run-debug-vs-code.png)
-
-> [!TIP]
-> <span data-ttu-id="42b2e-146">如需在 Visual Studio Code 中使用 OmniSharp 進行 .NET Core 偵錯的詳細資訊與疑難排解祕訣，請參閱 [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (設定 .NET Core 偵錯工具的指示)。</span><span class="sxs-lookup"><span data-stu-id="42b2e-146">For more information and troubleshooting tips on .NET Core debugging with OmniSharp in Visual Studio Code, see [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).</span></span>
-
-## <a name="add-a-class"></a><span data-ttu-id="42b2e-147">新增類別</span><span class="sxs-lookup"><span data-stu-id="42b2e-147">Add a class</span></span>
-
-1. <span data-ttu-id="42b2e-148">若要加入新的類別，請以滑鼠右鍵按一下*Program.cs*下方的 VSCode Explorer，然後選取 [**新增**檔案]。</span><span class="sxs-lookup"><span data-stu-id="42b2e-148">To add a new class, right-click in the VSCode Explorer below *Program.cs* and select **New File**.</span></span> <span data-ttu-id="42b2e-149">這會在您於 VSCode 中開啟的資料夾內新增檔案。</span><span class="sxs-lookup"><span data-stu-id="42b2e-149">This adds a new file to the folder you have open in VSCode.</span></span>
-1. <span data-ttu-id="42b2e-150">將檔案命名為*MyClass.cs*。</span><span class="sxs-lookup"><span data-stu-id="42b2e-150">Name your file *MyClass.cs*.</span></span> <span data-ttu-id="42b2e-151">您必須在結尾加上 `.cs` 副檔名來儲存它，系統才能將它辨識為 csharp 檔案。</span><span class="sxs-lookup"><span data-stu-id="42b2e-151">You must save it with a `.cs` extension at the end for it to be recognized as a csharp file.</span></span>
-1. <span data-ttu-id="42b2e-152">新增下列程式碼，以建立您的第一個類別。</span><span class="sxs-lookup"><span data-stu-id="42b2e-152">Add the following code to create your first class.</span></span>
-
-    ``` csharp
-    using System;
-
-    namespace HelloWorld
+namespace HelloWorld
+{
+    class Program
     {
-        public class MyClass
+        static void Main(string[] args)
         {
-            public string ReturnMessage()
-            {
-                return "Happy coding!";
-            }
+            Console.WriteLine("Hello World!");
         }
     }
-    ```
+}
+```
 
-1. <span data-ttu-id="42b2e-153">將 Program.cs 中的程式碼`Main`取代為下列程式碼， *Program.cs*以從您的方法呼叫新的類別：</span><span class="sxs-lookup"><span data-stu-id="42b2e-153">Call your new class from your `Main` method by replacing the code in *Program.cs* with the following code:</span></span>
+<span data-ttu-id="5714b-121">`Main` 是應用程式進入點，是執行階段在啟動應用程式時會自動呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="5714b-121">`Main` is the application entry point, the method that's called automatically by the runtime when it launches the application.</span></span> <span data-ttu-id="5714b-122">在應用程式啟動時所提供的所有命令列引數，都會在 *args* 陣列中提供。</span><span class="sxs-lookup"><span data-stu-id="5714b-122">Any command-line arguments supplied when the application is launched are available in the *args* array.</span></span>
 
-    ```csharp
-    using System;
+<span data-ttu-id="5714b-123">此範本會建立一個簡單的應用程式， <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 以呼叫方法來顯示 "Hello World！"</span><span class="sxs-lookup"><span data-stu-id="5714b-123">The template creates a simple application that calls the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method to display "Hello World!"</span></span> <span data-ttu-id="5714b-124">。</span><span class="sxs-lookup"><span data-stu-id="5714b-124">in the console window.</span></span>
 
-    namespace HelloWorld
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var c1 = new MyClass();
-                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
-            }
-        }
-    }
-    ```
+## <a name="run-the-app"></a><span data-ttu-id="5714b-125">執行應用程式</span><span class="sxs-lookup"><span data-stu-id="5714b-125">Run the app</span></span>
 
-1. <span data-ttu-id="42b2e-154">儲存您的變更。</span><span class="sxs-lookup"><span data-stu-id="42b2e-154">Save your changes.</span></span>
+<span data-ttu-id="5714b-126">在**終端**機中執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="5714b-126">Run the following command in the **Terminal**:</span></span>
 
-1. <span data-ttu-id="42b2e-155">再次執行程式。</span><span class="sxs-lookup"><span data-stu-id="42b2e-155">Run the program again.</span></span>
+```dotnetcli
+dotnet run
+```
 
-    ```dotnetcli
-    dotnet run
-    ```
+<span data-ttu-id="5714b-127">程式會顯示 "Hello World！"</span><span class="sxs-lookup"><span data-stu-id="5714b-127">The program displays "Hello World!"</span></span> <span data-ttu-id="5714b-128">和結束。</span><span class="sxs-lookup"><span data-stu-id="5714b-128">and ends.</span></span>
 
-    <span data-ttu-id="42b2e-156">新訊息隨即出現，並附上附加的字串。</span><span class="sxs-lookup"><span data-stu-id="42b2e-156">The new message appears with the appended string.</span></span>
+![DotNet 執行命令](media/with-visual-studio-code/dotnet-run-command.png)
 
-    ```console
-    Hello World! Happy coding!
-    ```
+## <a name="enhance-the-app"></a><span data-ttu-id="5714b-130">增強應用程式</span><span class="sxs-lookup"><span data-stu-id="5714b-130">Enhance the app</span></span>
 
-## <a name="faq"></a><span data-ttu-id="42b2e-157">常見問題集</span><span class="sxs-lookup"><span data-stu-id="42b2e-157">FAQ</span></span>
+<span data-ttu-id="5714b-131">增強應用程式，以提示使用者輸入其名稱，並連同日期和時間一起顯示。</span><span class="sxs-lookup"><span data-stu-id="5714b-131">Enhance the application to prompt the user for their name and display it along with the date and time.</span></span>
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a><span data-ttu-id="42b2e-158">我缺少在 Visual Studio Code 中建置及偵錯 C# 所需的資產。</span><span class="sxs-lookup"><span data-stu-id="42b2e-158">I'm missing required assets to build and debug C# in Visual Studio Code.</span></span> <span data-ttu-id="42b2e-159">我的偵錯工具顯示「沒有組態」。</span><span class="sxs-lookup"><span data-stu-id="42b2e-159">My debugger says "No Configuration."</span></span>
+1. <span data-ttu-id="5714b-132">按一下 *Program.cs* 來開啟它。</span><span class="sxs-lookup"><span data-stu-id="5714b-132">Open *Program.cs* by clicking on it.</span></span>
 
-<span data-ttu-id="42b2e-160">Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產。</span><span class="sxs-lookup"><span data-stu-id="42b2e-160">The Visual Studio Code C# extension can generate assets to build and debug for you.</span></span> <span data-ttu-id="42b2e-161">Visual Studio Code 會在您第一次開啟 C# 專案時，提示您產生這些資產。</span><span class="sxs-lookup"><span data-stu-id="42b2e-161">Visual Studio Code prompts you to generate these assets when you first open a C# project.</span></span> <span data-ttu-id="42b2e-162">如果您當時未產生資產，仍可以透過開啟 [命令選擇區] ([檢視] > [命令選擇區]\*\*\*\*)，然後鍵入 ">.NET: Generate Assets for Build and Debug" 來執行此命令。</span><span class="sxs-lookup"><span data-stu-id="42b2e-162">If you didn't generate assets then, you can still run this command by opening the Command Palette (**View > Command Palette**) and typing ">.NET: Generate Assets for Build and Debug".</span></span> <span data-ttu-id="42b2e-163">選取此程式會產生*vscode*、*啟動 json*和您需要的*json*設定檔案。</span><span class="sxs-lookup"><span data-stu-id="42b2e-163">Selecting this generates the *.vscode*, *launch.json*, and *tasks.json* configuration files that you need.</span></span>
+   <span data-ttu-id="5714b-133">在 Visual Studio Code 中第一次開啟 C# 檔案時，會在編輯器中載入 [OmniSharp](https://www.omnisharp.net/)。</span><span class="sxs-lookup"><span data-stu-id="5714b-133">The first time you open a C# file in Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) loads in the editor.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="42b2e-164">請參閱</span><span class="sxs-lookup"><span data-stu-id="42b2e-164">See also</span></span>
+   ![開啟 Program.cs 檔案](media/with-visual-studio-code/open-program-cs.png)
 
-- [<span data-ttu-id="42b2e-165">設定 Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="42b2e-165">Setting up Visual Studio Code</span></span>](https://code.visualstudio.com/docs/setup/setup-overview)
-- [<span data-ttu-id="42b2e-166">在 Visual Studio Code 中偵錯</span><span class="sxs-lookup"><span data-stu-id="42b2e-166">Debugging in Visual Studio Code</span></span>](https://code.visualstudio.com/Docs/editor/debugging)
+1. <span data-ttu-id="5714b-135">當 Visual Studio Code 提示您新增遺失的資產，以建立和偵錯工具時，請選取 **[是]** 。</span><span class="sxs-lookup"><span data-stu-id="5714b-135">Select **Yes** when Visual Studio Code prompts you to add the missing assets to build and debug your app.</span></span>
+
+   ![遺失資產的提示](media/with-visual-studio-code/missing-assets.png)
+
+1. <span data-ttu-id="5714b-137">以 `Main` 下列程式碼取代*Program.cs*中方法的內容，這目前只是呼叫的那一行 `Console.WriteLine` ：</span><span class="sxs-lookup"><span data-stu-id="5714b-137">Replace the contents of the `Main` method in *Program.cs*, which is currently just the line that calls `Console.WriteLine`, with the following code:</span></span>
+
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+
+   <span data-ttu-id="5714b-138">此程式碼會在主控台中顯示「What is your name?」，</span><span class="sxs-lookup"><span data-stu-id="5714b-138">This code displays "What is your name?"</span></span> <span data-ttu-id="5714b-139">在主控台視窗中，等候使用者輸入後面接著**Enter**鍵的字串。</span><span class="sxs-lookup"><span data-stu-id="5714b-139">in the console window and waits until the user enters a string followed by the **Enter** key.</span></span> <span data-ttu-id="5714b-140">它會將此字串儲存在名為的變數中 `name` 。</span><span class="sxs-lookup"><span data-stu-id="5714b-140">It stores this string in a variable named `name`.</span></span> <span data-ttu-id="5714b-141">此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。</span><span class="sxs-lookup"><span data-stu-id="5714b-141">It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `date`.</span></span> <span data-ttu-id="5714b-142">最後，它會在主控台視窗中顯示這些值。</span><span class="sxs-lookup"><span data-stu-id="5714b-142">Finally, it displays these values in the console window.</span></span>
+
+   <span data-ttu-id="5714b-143">`\n`代表換行字元。</span><span class="sxs-lookup"><span data-stu-id="5714b-143">The `\n` represents a newline character.</span></span>
+
+   <span data-ttu-id="5714b-144">字串前面的貨幣符號（ `$` ）可讓您在字串中的大括弧內放置運算式，例如變數名稱。</span><span class="sxs-lookup"><span data-stu-id="5714b-144">The dollar sign (`$`) in front of a string lets you put expressions such as variable names in curly braces in the string.</span></span> <span data-ttu-id="5714b-145">運算式值會插入字串中，以取代運算式。</span><span class="sxs-lookup"><span data-stu-id="5714b-145">The expression value is inserted into the string in place of the expression.</span></span> <span data-ttu-id="5714b-146">此語法稱為「插入[字串](../../csharp/language-reference/tokens/interpolated.md)」。</span><span class="sxs-lookup"><span data-stu-id="5714b-146">This syntax is referred to as [interpolated strings](../../csharp/language-reference/tokens/interpolated.md).</span></span>
+
+1. <span data-ttu-id="5714b-147">儲存您的變更。</span><span class="sxs-lookup"><span data-stu-id="5714b-147">Save your changes.</span></span>
+
+   > [!IMPORTANT]
+   > <span data-ttu-id="5714b-148">在 Visual Studio Code 中，您必須明確地儲存變更。</span><span class="sxs-lookup"><span data-stu-id="5714b-148">In Visual Studio Code, you have to explicitly save changes.</span></span> <span data-ttu-id="5714b-149">不同于 Visual Studio，當您建立並執行應用程式時，不會自動儲存檔案變更。</span><span class="sxs-lookup"><span data-stu-id="5714b-149">Unlike Visual Studio, file changes are not automatically saved when you build and run an app.</span></span>
+
+1. <span data-ttu-id="5714b-150">再次執行程式：</span><span class="sxs-lookup"><span data-stu-id="5714b-150">Run the program again:</span></span>
+
+   ```dotnetcli
+   dotnet run
+   ```
+
+1. <span data-ttu-id="5714b-151">輸入名稱並按**enter**鍵，以回應提示。</span><span class="sxs-lookup"><span data-stu-id="5714b-151">Respond to the prompt by entering a name and pressing the **Enter** key.</span></span>
+
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="已修改程式輸出的終端機視窗":::
+
+1. <span data-ttu-id="5714b-153">按任意鍵以結束程式。</span><span class="sxs-lookup"><span data-stu-id="5714b-153">Press any key to exit the program.</span></span>
+
+## <a name="additional-resources"></a><span data-ttu-id="5714b-154">其他資源</span><span class="sxs-lookup"><span data-stu-id="5714b-154">Additional resources</span></span>
+
+- [<span data-ttu-id="5714b-155">設定 Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5714b-155">Setting up Visual Studio Code</span></span>](https://code.visualstudio.com/docs/setup/setup-overview)
+
+## <a name="next-steps"></a><span data-ttu-id="5714b-156">後續步驟</span><span class="sxs-lookup"><span data-stu-id="5714b-156">Next steps</span></span>
+
+<span data-ttu-id="5714b-157">在本教學課程中，您已建立 .NET Core 應用程式。</span><span class="sxs-lookup"><span data-stu-id="5714b-157">In this tutorial, you created a .NET Core application.</span></span> <span data-ttu-id="5714b-158">在下一個教學課程中，您會對應用程式進行 debug。</span><span class="sxs-lookup"><span data-stu-id="5714b-158">In the next tutorial, you debug the app.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="5714b-159">使用 Visual Studio Code 來調試 .NET Core 主控台應用程式</span><span class="sxs-lookup"><span data-stu-id="5714b-159">Debug a .NET Core console application using Visual Studio Code</span></span>](debugging-with-visual-studio-code.md)
