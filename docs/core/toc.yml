@@ -109,6 +109,9 @@
         - name: 建立主控台應用程式
           href: tutorials/with-visual-studio-code.md
           displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: 對應用程式進行偵錯
+          href: tutorials/debugging-with-visual-studio-code.md
+          displayName: 'tutorials, visual studio code, vs code'
         - name: 建立主控台應用程式，並將其發佈
           href: tutorials/cli-create-console-app.md
           displayName: 'tutorials, cli'
