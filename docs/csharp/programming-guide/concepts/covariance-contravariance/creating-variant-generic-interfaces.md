@@ -2,19 +2,19 @@
 title: 建立 Variant 泛型介面 (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27760fd73c8c40fc108106b87b2102ab5e07263c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595317"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241379"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>建立 Variant 泛型介面 (C#)
 
 您可以在介面中將泛型型別參數宣告為 Covariant 或 Contravariant。 「共變數」** 允許介面方法具有比泛型型別參數衍生程度更大的傳回型別。 「反變數」** 允許介面具有比泛型參數所指定引數型別衍生程度更小的引數類型。 具有 Covariant 或 Contravariant 泛型型別參數的泛型介面稱為「變異」**。
 
 > [!NOTE]
-> .NET Framework 4 針對數個現有泛型介面推出了差異支援。 .NET Framework 中的 Variant 介面清單，請參閱[泛型介面中的變異數 (C#)](./variance-in-generic-interfaces.md)。
+> .NET Framework 4 針對數個現有泛型介面推出了差異支援。 如需 .NET 中的 variant 介面清單，請參閱[泛型介面中的變異數（c #）](./variance-in-generic-interfaces.md)。
 
 ## <a name="declaring-variant-generic-interfaces"></a>宣告 Variant 泛型介面
 

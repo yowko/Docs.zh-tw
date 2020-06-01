@@ -5,15 +5,16 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 4012027dc1a9bd2543d0a4195360e5f7e0586fe1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a00259dfd5634ad9b9c951c3cd76da97afe5077d
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705258"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241691"
 ---
-# <a name="using-exceptions-c-programming-guide"></a>使用例外狀況 (C# 程式設計手冊)
-在 C# 中，若程式在執行階段發生錯誤，會利用一種稱為例外狀況的機制，讓整個程式都得知此狀況。 例外狀況是由遇到錯誤的程式碼所擲回，並由可以更正此錯誤的程式碼所攔截。 例外狀況可由 .NET Framework Common Language Runtime (CLR) 或程式中的程式碼所擲回。 一旦擲回了例外狀況，便會在呼叫堆疊中將此訊息往上傳，直至找到例外狀況的 `catch` 陳述式為止。 未被攔截的例外狀況會由系統提供的泛型例外處理常式負責處理，這時會顯示對話方塊。  
+# <a name="use-exceptions-c-programming-guide"></a>使用例外狀況（c # 程式設計手冊）
+
+在 C# 中，若程式在執行階段發生錯誤，會利用一種稱為例外狀況的機制，讓整個程式都得知此狀況。 例外狀況是由遇到錯誤的程式碼所擲回，並由可以更正此錯誤的程式碼所攔截。 例外狀況可由 .NET 執行時間或程式中的程式碼擲回。 一旦擲回了例外狀況，便會在呼叫堆疊中將此訊息往上傳，直至找到例外狀況的 `catch` 陳述式為止。 未被攔截的例外狀況會由系統提供的泛型例外處理常式負責處理，這時會顯示對話方塊。  
   
  例外狀況會以衍生自 <xref:System.Exception> 的類別表示。 此類別會識別例外狀況的類型，並包含具有例外狀況詳細資料的屬性。 擲回例外狀況的作業包括建立例外狀況衍生類別的執行個體、選擇性地設定例外狀況的屬性，然後使用 `throw` 關鍵字擲回物件。 例如：  
   
@@ -45,5 +46,5 @@ ms.locfileid: "75705258"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [例外狀況和例外狀況處理](./index.md)

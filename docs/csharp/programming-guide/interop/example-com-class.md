@@ -5,12 +5,12 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 6af85d0314a44acbde0996cecbe6dad82cdcc8db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6051ff91d13a3cb3ca6229d813db34dd6a9f3af6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712074"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241847"
 ---
 # <a name="example-com-class-c-programming-guide"></a>範例 COM 類別 (C# 程式設計手冊)
 以下是公開為 COM 物件類別的範例。 在此程式碼放入 .cs 檔案並新增至專案之後，將**註冊 COM Interop** 屬性設定為 **True**。 如需詳細資訊，請參閱[如何：註冊 COM Interop 元件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))。
@@ -25,7 +25,7 @@ ms.locfileid: "75712074"
   
 - 必須在事件介面中宣告事件。  
   
- 未在這些介面中宣告的類別其他公用成員不會為 COM 所見，但會向其他 .NET Framework 物件顯示。  
+ 類別中未在這些介面中宣告的其他公用成員將不會顯示在 COM 中，但其他 .NET 物件將會看到它們。  
   
  若要向 COM 公開屬性和方法，您必須在類別介面上宣告它們，並以 `DispId` 屬性標記它們，然後在類別中實作它們。 成員在介面中的宣告順序是 COM vtable 使用的順序。  
   
@@ -38,6 +38,6 @@ ms.locfileid: "75712074"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [互 操作 性](./index.md)
+- [C # 程式設計指南](../index.md)
+- [互通性](./index.md)
 - [專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)

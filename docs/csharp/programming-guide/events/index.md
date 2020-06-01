@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 183f53a579bdd9f70deb16ca9157c377fa3aff3f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e15c3d124b4d1c30e2f9bb9f44b40e25b6a72346
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75712308"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240716"
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
-事件可讓 [類別](../../language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 發送（或*引發*）事件的類稱為*發行者*，接收（或*處理*）事件的類稱為*訂閱者*。  
+事件可讓 [類別](../../language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送（或*引發*）事件的類別稱為「*發行者*」，而接收（或*處理*）事件的類別稱為「*訂閱者*」。  
   
-在典型的 C# Windows Forms 或 Web 應用程式中，您可訂閱由控制項 (如按鈕和清單方塊) 引發的事件。 您可以使用 Visual C# 整合式開發環境 (IDE) 來瀏覽控制項發行的事件，並選擇您想要處理的事件。 IDE 提供一種簡單的方式來自動新增空的事件處理常式方法，及用來訂閱該事件的程式碼。 有關詳細資訊，請參閱[如何訂閱和取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)。
+在典型的 C# Windows Forms 或 Web 應用程式中，您可訂閱由控制項 (如按鈕和清單方塊) 引發的事件。 您可以使用 Visual C# 整合式開發環境 (IDE) 來瀏覽控制項發行的事件，並選擇您想要處理的事件。 IDE 提供一種簡單的方式來自動新增空的事件處理常式方法，及用來訂閱該事件的程式碼。 如需詳細資訊，請參閱[如何訂閱及取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)。
   
 ## <a name="events-overview"></a>事件概觀  
  事件有下列屬性：  
@@ -38,13 +38,13 @@ ms.locfileid: "75712308"
   
 - [如何訂閱及取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)
 
-- [如何發佈符合 .NET Framework 方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [如何發行符合 .NET 指導方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 
 - [如何在衍生類別中引發基底類別事件](./how-to-raise-base-class-events-in-derived-classes.md)
 
 - [如何實作介面事件](./how-to-implement-interface-events.md)
 
-- [如何實現自訂事件訪問器](./how-to-implement-custom-event-accessors.md)
+- [如何實作自訂事件存取子](./how-to-implement-custom-event-accessors.md)
 
 ## <a name="c-language-specification"></a>C# 語言規格  
 
@@ -58,6 +58,6 @@ ms.locfileid: "75712308"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.EventHandler>
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [委派](../delegates/index.md)
-- [在 Windows Forms 中建立事件處理常式](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [在 Windows Form 中建立事件處理常式](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)

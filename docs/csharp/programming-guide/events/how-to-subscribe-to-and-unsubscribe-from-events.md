@@ -1,19 +1,19 @@
 ---
-title: 如何訂閱與取消訂閱事件 - C# 編程指南
+title: '如何訂閱和取消訂閱事件-c # 程式設計手冊'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 0a9e2cc64da56c376445efce32e8da36ba9b6cdc
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d917ea097cf9253a65c1907efdca71a640df9497
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738226"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240664"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何訂閱及訂閱事件(C# 程式設計指南)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何訂閱和取消訂閱事件（c # 程式設計手冊）
 如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。 例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>使用 Visual Studio IDE 訂閱事件  
@@ -57,7 +57,7 @@ ms.locfileid: "81738226"
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     您還可以使用[lambda 表示式](../statements-expressions-operators/lambda-expressions.md)指定事件處理程式:
+     您也可以使用[lambda 運算式](../statements-expressions-operators/lambda-expressions.md)來指定事件處理常式：
   
     ```csharp
     public Form1()  
@@ -101,6 +101,6 @@ ms.locfileid: "81738226"
 
 - [事件](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [如何發佈符合 .NET Framework 方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [如何發行符合 .NET 指導方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [- 及 = 運算子](../../language-reference/operators/subtraction-operator.md)
-- [* 與 + 運算子](../../language-reference/operators/addition-operator.md)
+- [+ 和 + = 運算子](../../language-reference/operators/addition-operator.md)

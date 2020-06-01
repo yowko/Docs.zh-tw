@@ -2,24 +2,22 @@
 title: 將 SQL Server 資料庫移轉至 Azure
 description: 了解如何從內部部署 SQL Server 將 SQL Server 資料庫移轉到 Azure。
 ms.topic: how-to
-ms.date: 11/15/2017
-ms.openlocfilehash: dac35970f2d77e232c2ee1a5e3a1f6e7bfec2317
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.date: 05/27/2020
+ms.openlocfilehash: ed5d6ef9395dca14d8e0ecba82d3fc18cb3d629a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "82072092"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241444"
 ---
 # <a name="migrate-a-sql-server-database-to-azure"></a>將 SQL Server 資料庫移轉至 Azure
 
-本短文簡短概述將 SQL Server 資料庫移轉至 Azure 的兩種方法。
-
-Azure 有兩種主要方式可以移轉生產 SQL Server 資料庫：
+本文提供兩個選項的簡要概述，可將 SQL Server 資料庫移轉至 Azure。 Azure 有三個主要選項可用於遷移生產 SQL Server 資料庫。 本文著重于下列兩個選項：
 
 1. [Azure VM 上的 SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview)：安裝並裝載在 Azure 中執行的 Windows 虛擬機器上的 SQL Server 執行個體，也稱為基礎結構即服務 (IaaS)。
 2. [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)：完全受控的 SQL 資料庫 Azure 服務，也稱為平台即服務 (PaaS)。
 
-兩者皆具優缺點，您必須在移轉前進行評估。
+兩者皆具優缺點，您必須在移轉前進行評估。 第三個選項是[Azure SQL Database 受控實例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)。
 
 ## <a name="get-started"></a>開始使用
 
@@ -63,16 +61,16 @@ Azure 有兩種主要方式可以移轉生產 SQL Server 資料庫：
 | 遷移 | 資料庫所需變更最少。 | 如果您使用 Azure SQL 中無法使用的功能 (由[資料移轉小幫手](https://www.microsoft.com/download/details.aspx?id=53595)判定)，或如果您有其他相依性，如在本機安裝的可執行檔，則可能需要變更資料庫。|
 | 管理可用性、復原及升級 | 可用性和復原是以手動方式設定。 升級可以透過 [VM 擴展集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)自動化。 | 為您自動管理。 |
 | 基礎作業系統設定 | 手動設定。 | 為您自動管理。 |
-| 管理資料庫大小 | 針對每個 SQL Server 實例最多支援 64 TB 的儲存體。 | 在需要水準資料分割之前，支援 4 TB 的儲存空間。 |
+| 管理資料庫大小 | 針對每個 SQL Server 實例最多支援 256 TB 的儲存體。 | 在需要水準資料分割之前，支援 8 TB 的儲存空間。 |
 | 管理成本 | 您必須管理 SQL Server 授權成本、Windows Server 授權成本以及 VM 成本 (根據核心、RAM 和儲存體)。 | 您必須管理服務成本 (根據 [eDTU 或 DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu)、儲存體以及資料庫數目 (如果使用彈性集區))。 您也必須管理任何 SLA 的成本。 |
 
-若要深入了解兩者間的差異，請參閱[選擇雲端 SQL Server 選項：Azure SQL Database 或 Azure VM 上的 SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)。
+若要深入瞭解兩者之間的差異，請參閱[在 AZURE SQL 中選擇正確的部署選項](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)。
 
 ## <a name="faq"></a>常見問題集
 
 * **我仍然可以使用如 SQL Server Management Studio 和 SQL Server Reporting Services (SSRS) 等工具，搭配 Azure VM 中的 SQL Server 或 Azure SQL Database 嗎？**
 
-    可以！ 所有 Microsoft SQL 工具皆可搭配使用這兩項服務。 但 SSRS 並非 Azure SQL Database 的一部分，建議您在 Azure VM 中執行它，然後將其指向您的資料庫執行個體。
+    是。 所有 Microsoft SQL 工具皆可搭配使用這兩項服務。 但 SSRS 並非 Azure SQL Database 的一部分，建議您在 Azure VM 中執行它，然後將其指向您的資料庫執行個體。
 
 * **我想要用 PaaS，但我不確定資料庫是否相容。有工具可以協助嗎？**
 

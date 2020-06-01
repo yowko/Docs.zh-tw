@@ -2,19 +2,19 @@
 title: 運算式樹狀架構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: f425ab38bf7bb54814fe777b7cb02180d022a8af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c260e649e7bd285a6bd07b5a1cd7fc1a7f75b82a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169632"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241548"
 ---
 # <a name="expression-trees-c"></a>運算式樹狀架構 (C#)
 運算式樹狀架構代表類似樹狀目錄之資料結構中的程式碼，其中，每個節點都是一個運算式，例如，方法呼叫或二進位運算 (如 `x < y`)。  
   
- 您可以編譯和執行運算式樹狀架構所代表的程式碼。 這會啟用動態修改可執行程式碼、在各種資料庫中執行 LINQ 查詢，以及建立動態查詢。 有關 LINQ 中的運算式樹的詳細資訊，請參閱[如何使用運算式樹生成動態查詢 （C#）。](./how-to-use-expression-trees-to-build-dynamic-queries.md)
+ 您可以編譯和執行運算式樹狀架構所代表的程式碼。 這會啟用動態修改可執行程式碼、在各種資料庫中執行 LINQ 查詢，以及建立動態查詢。 如需 LINQ 中運算式樹狀架構的詳細資訊，請參閱[如何使用運算式樹狀架構建立動態查詢（c #）](./how-to-use-expression-trees-to-build-dynamic-queries.md)。
   
- 運算式樹狀架構也用於動態語言執行階段中，以提供動態語言與 .NET Framework 之間的互通性，並讓編譯器寫入器發出運算式樹狀架構，而不是 Microsoft Intermediate Language (MSIL)。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
+ 「運算式樹狀架構」也用於動態語言執行時間（DLR），以提供動態語言與 .NET 之間的互通性，以及讓編譯器寫入器發出運算式樹狀架構，而不是 Microsoft 中繼語言（MSIL）。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
   
  您可以根據匿名 Lambda 運算式讓 C# 或 Visual Basic 編譯器建立運算式樹狀架構，也可以使用 <xref:System.Linq.Expressions> 命名空間以手動建立運算式樹狀架構。  
   
@@ -118,7 +118,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>運算式樹狀架構的不變性  
- 運算式樹狀架構應該是不變的。 這表示，如果您要修改運算式樹狀架構，則必須複製現有運算式樹狀架構，並取代其中的節點，以建構新的運算式樹狀架構。 您可以使用運算式樹狀架構訪問項來周遊現有運算式樹狀架構。 有關詳細資訊，請參閱[如何修改運算式樹 （C#）。](./how-to-modify-expression-trees.md)
+ 運算式樹狀架構應該是不變的。 這表示，如果您要修改運算式樹狀架構，則必須複製現有運算式樹狀架構，並取代其中的節點，以建構新的運算式樹狀架構。 您可以使用運算式樹狀架構訪問項來周遊現有運算式樹狀架構。 如需詳細資訊，請參閱[如何修改運算式樹狀架構（c #）](./how-to-modify-expression-trees.md)。
   
 ## <a name="compiling-expression-trees"></a>編譯運算式樹狀架構  
  <xref:System.Linq.Expressions.Expression%601> 類型提供 <xref:System.Linq.Expressions.Expression%601.Compile%2A> 方法，以將運算式樹狀架構所代表的程式碼編譯為可執行委派。  
@@ -145,13 +145,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- 有關詳細資訊，請參閱[如何執行運算式樹 （C#）。](./how-to-execute-expression-trees.md)
+ 如需詳細資訊，請參閱[如何執行運算式樹狀架構（c #）](./how-to-execute-expression-trees.md)。
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.Expressions>
-- [如何執行運算式樹 （C#）](./how-to-execute-expression-trees.md)
-- [如何修改運算式樹 （C#）](./how-to-modify-expression-trees.md)
-- [蘭姆達運算式](../../statements-expressions-operators/lambda-expressions.md)
-- [動態語言運行時概述](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [如何執行運算式樹狀架構（c #）](./how-to-execute-expression-trees.md)
+- [如何修改運算式樹狀架構（c #）](./how-to-modify-expression-trees.md)
+- [Lambda 運算式](../../statements-expressions-operators/lambda-expressions.md)
+- [動態語言執行時間總覽](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [程式設計概念 (C#)](../index.md)

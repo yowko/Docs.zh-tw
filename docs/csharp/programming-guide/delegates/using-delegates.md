@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a81ee5ccdc2697ca435d40be27568b651977f96
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77448435"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241587"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委派 (C# 程式設計手冊)
 
@@ -23,7 +23,7 @@ ms.locfileid: "77448435"
 
 [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]
 
-委派類型衍生自 .NET Framework 中的 <xref:System.Delegate> 類別。 委派類型是[密封](../../language-reference/keywords/sealed.md)的，不能作為其他類型的衍生來源，且不可能從 <xref:System.Delegate> 衍生自訂類別。 因為執行個體化的委派是物件，所以它可以做為參數傳遞或指派給屬性。 這可讓方法以參數方式接受委派，並於稍後呼叫委派。 這稱為非同步回呼，是較長處理序完成時通知呼叫端的常用方法。 以這種方式使用委派時，使用委派的程式碼不需要了解如何實作所用的方法。 該功能類似於介面提供的封裝。
+委派類型衍生自 <xref:System.Delegate> .net 中的類別。 委派類型是[密封](../../language-reference/keywords/sealed.md)的，不能作為其他類型的衍生來源，且不可能從 <xref:System.Delegate> 衍生自訂類別。 因為執行個體化的委派是物件，所以它可以做為參數傳遞或指派給屬性。 這可讓方法以參數方式接受委派，並於稍後呼叫委派。 這稱為非同步回呼，是較長處理序完成時通知呼叫端的常用方法。 以這種方式使用委派時，使用委派的程式碼不需要了解如何實作所用的方法。 該功能類似於介面提供的封裝。
 
 回呼的另一種常見用法是定義自訂比較方法，並將該委派傳遞至排序方法。 它可讓呼叫端程式碼成為排序演算法的一部分。 下列的範例方法使用 `Del` 類型做為參數：
 
@@ -51,7 +51,7 @@ The number is: 3
 
 [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]
 
-此時，`allMethodsDelegate` 在其引動過程清單中包含三種方法：`Method1`、`Method2` 和 `DelegateMethod`。 原始的三個委派 `d1`、`d2` 和 `d3` 維持不變。 當叫用 `allMethodsDelegate` 時，會依序呼叫所有三個方法。 如果委派使用參考參數，則參考會依序傳入這三個方法中的每一個，而且任一方法所做的任何變更，下一個方法都看得到。 當任一方法擲回未在該方法內攔截到例外狀況時，該例外狀況會傳遞至委派的呼叫端，且不會呼叫引動過程清單中的任何後續方法。 如果委派具有傳回值和 (或) 輸出參數，則它會傳回所叫用之最後一個方法的傳回值與參數。 要從調用清單中刪除方法，請使用[減法或減法指派運算子](../../language-reference/operators/subtraction-operator.md)（`-`或`-=`）。 例如：
+此時，`allMethodsDelegate` 在其引動過程清單中包含三種方法：`Method1`、`Method2` 和 `DelegateMethod`。 原始的三個委派 `d1`、`d2` 和 `d3` 維持不變。 當叫用 `allMethodsDelegate` 時，會依序呼叫所有三個方法。 如果委派使用參考參數，則參考會依序傳入這三個方法中的每一個，而且任一方法所做的任何變更，下一個方法都看得到。 當任一方法擲回未在該方法內攔截到例外狀況時，該例外狀況會傳遞至委派的呼叫端，且不會呼叫引動過程清單中的任何後續方法。 如果委派具有傳回值和 (或) 輸出參數，則它會傳回所叫用之最後一個方法的傳回值與參數。 若要從調用清單中移除方法，請使用[減法或減法指派運算子](../../language-reference/operators/subtraction-operator.md)（ `-` 或 `-=` ）。 例如：
 
 [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]
 
@@ -69,7 +69,7 @@ The number is: 3
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [委派](./index.md)
 - [在委派中使用變異數](../concepts/covariance-contravariance/using-variance-in-delegates.md)
 - [委派中的變異數](../concepts/covariance-contravariance/variance-in-delegates.md)

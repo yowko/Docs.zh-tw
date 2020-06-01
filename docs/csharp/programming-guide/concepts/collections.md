@@ -2,12 +2,12 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201076"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241392"
 ---
 # <a name="collections-c"></a>集合 (C#)
 
@@ -182,7 +182,7 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>集合的種類
 
-.NET Framework 會提供很多常見的集合。 各個類型的集合都是針對特定用途來設計。
+許多常見的集合都是由 .NET 所提供。 各個類型的集合都是針對特定用途來設計。
 
 下列集合類別的群組將在本節介紹：
 
@@ -214,7 +214,7 @@ public class Galaxy
 
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent 類別
 
-在 .NET Framework 4 或更新版本中，<xref:System.Collections.Concurrent> 命名空間中的集合提供了有效率的安全執行緒作業，可從多個執行緒存取集合項目。
+在 .NET Framework 4 和更新版本中，命名空間中的集合 <xref:System.Collections.Concurrent> 提供有效率的安全線程作業，可從多個執行緒存取集合專案。
 
 每當有多個執行緒同時存取集合時，應該使用 <xref:System.Collections.Concurrent> 命名空間中的類別來代替 <xref:System.Collections.Generic?displayProperty=nameWithType> 和 <xref:System.Collections?displayProperty=nameWithType> 命名空間中的對應類型。 如需詳細資訊，請參閱[安全執行緒集合](../../../standard/collections/thread-safe/index.md)和 <xref:System.Collections.Concurrent>。
 
@@ -482,7 +482,7 @@ public class Car : IComparable<Car>
 
 您可以透過實作 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 介面來定義集合。
 
-雖然您可以定義自訂集合，但是使用包含在 .NET Framework 中的集合 (本主題稍早在[集合的種類](#BKMK_KindsOfCollections)中所述) 通常會比較好。
+雖然您可以定義自訂集合，但通常最好改用 .NET 中包含的集合，這會在本文稍早[的集合類型](#BKMK_KindsOfCollections)中說明。
 
 下列範例會定義名為 `AllColors` 的自訂集合類別。 這個類別實作 <xref:System.Collections.IEnumerable> 介面，該介面要求實作 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。
 

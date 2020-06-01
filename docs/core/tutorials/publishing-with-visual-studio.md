@@ -8,18 +8,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005081"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241486"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>教學課程：使用 Visual Studio 發行 .NET Core 主控台應用程式
 
 本教學課程說明如何發佈主控台應用程式，讓其他使用者可以執行它。 發行會建立一組執行您的應用程式所需的檔案。 若要部署檔案，請將檔案複製到目的電腦。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 本教學課程適用于您在[Visual Studio 2019 的建立 .Net Core 主控台應用程式](with-visual-studio.md)中建立的主控台應用程式。
 
@@ -59,25 +59,25 @@ ms.locfileid: "84005081"
 
    如圖所示，已發行的輸出會包含下列檔案：
 
-      * *HelloWorld.deps.json*
+   * *HelloWorld.deps.json*
 
-         這是應用程式的執行時間相依性檔案。 它會定義執行應用程式所需的 .NET Core 元件和程式庫（包括包含您應用程式的動態連結程式庫）。 如需詳細資訊，請參閱[執行時間設定檔](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
+      這是應用程式的執行時間相依性檔案。 它會定義執行應用程式所需的 .NET Core 元件和程式庫（包括包含您應用程式的動態連結程式庫）。 如需詳細資訊，請參閱[執行時間設定檔](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)。
 
-      * *HelloWorld.dll*
+   * *HelloWorld.dll*
 
-         這是與[framework 相依](../deploying/deploy-with-cli.md#framework-dependent-deployment)的應用程式部署版本。 若要執行此動態連結程式庫，請 `dotnet HelloWorld.dll` 在命令提示字元中輸入。
+      這是與[framework 相依](../deploying/deploy-with-cli.md#framework-dependent-deployment)的應用程式部署版本。 若要執行此動態連結程式庫，請 `dotnet HelloWorld.dll` 在命令提示字元中輸入。 這種執行應用程式的方法可在已安裝 .NET Core 執行時間的任何平臺上運作。
 
-      * *HelloWorld .exe*
+   * *HelloWorld .exe*
 
-         這是與[framework 相依的應用程式可執行檔](../deploying/deploy-with-cli.md#framework-dependent-executable)版本。 若要執行，請 `HelloWorld.exe` 在命令提示字元中輸入。
+      這是與[framework 相依的應用程式可執行檔](../deploying/deploy-with-cli.md#framework-dependent-executable)版本。 若要執行，請 `HelloWorld.exe` 在命令提示字元中輸入。 檔案是作業系統特定的檔案。
 
-      * *HelloWorld.pdb* (對於部署為選用)
+   * *HelloWorld.pdb* (對於部署為選用)
 
-         這是 debug 符號檔案。 此檔案不需要隨您的應用程式部署，但當您需要對應用程式發行的版本進行偵錯，則應該儲存它。
+      這是 debug 符號檔案。 此檔案不需要隨您的應用程式部署，但當您需要對應用程式發行的版本進行偵錯，則應該儲存它。
 
-      * *HelloWorld.runtimeconfig.json*
+   * *HelloWorld.runtimeconfig.json*
 
-         這是應用程式的執行時間設定檔。 它會識別建置您應用程式以在其上執行的 .NET Core 版本。 您也可以在其中新增設定選項。 如需詳細資訊，請參閱[.Net Core 執行時間設定](../run-time-config/index.md#runtimeconfigjson)。
+      這是應用程式的執行時間設定檔。 它會識別建置您應用程式以在其上執行的 .NET Core 版本。 您也可以在其中新增設定選項。 如需詳細資訊，請參閱[.Net Core 執行時間設定](../run-time-config/index.md#runtimeconfigjson)。
 
 ## <a name="run-the-published-app"></a>執行已發佈的應用程式
 
@@ -91,13 +91,13 @@ ms.locfileid: "84005081"
 
 1. 使用可執行檔來執行應用程式：
 
-   1. 輸入 `HelloWorld.exe` ，然後按 enter 鍵。
+   1. 輸入 `HelloWorld.exe` ，然後按<kbd>enter</kbd>鍵。
 
    1. 輸入名稱以回應提示，然後按任意鍵結束。
 
 1. 使用命令執行應用程式 `dotnet` ：
 
-   1. 輸入 `dotnet HelloWorld.dll` ，然後按 enter 鍵。
+   1. 輸入 `dotnet HelloWorld.dll` ，然後按<kbd>enter</kbd>鍵。
 
    1. 輸入名稱以回應提示，然後按任意鍵結束。
 

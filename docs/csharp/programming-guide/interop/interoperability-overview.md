@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700727"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241730"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -21,13 +21,13 @@ ms.locfileid: "75700727"
 ## <a name="platform-invoke"></a>平台叫用  
  *平台叫用*服務，可讓 Managed 程式碼呼叫 Unmanaged 函式在動態連結程式庫 (DLL) 中實作，例如 Microsoft Windows API 中。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
   
-有關詳細資訊，請參閱[使用非託管 DLL 函數](../../../framework/interop/consuming-unmanaged-dll-functions.md)以及如何[使用平台叫用來播放 WAV 檔](./how-to-use-platform-invoke-to-play-a-wave-file.md)。
+如需詳細資訊，請參閱使用[非受控 DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md)函式和[如何使用平台叫用來播放 WAV](./how-to-use-platform-invoke-to-play-a-wave-file.md)檔案。
   
 > [!NOTE]
 > [Common Language Runtime](../../../standard/clr.md) (CLR) 管理對系統資源的存取。 在 CLR 外部呼叫 Unmanaged 程式碼會略過此安全性機制，因而造成安全性風險。 例如，Unmanaged 程式碼可能會直接呼叫 Unmanaged 程式碼中的資源，並略過 CLR 安全性機制。 如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。  
   
 ## <a name="c-interop"></a>C++ Interop  
- 您可以使用 C++ Interop (也稱為 It Just Works (IJW)) 包裝原生 C++ 類別，以供使用 C# 或其他 .NET Framework 語言撰寫的程式碼取用。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 不同於其他 .NET Framework 語言，Visual C++ 能提供互通性支援，因此可將 Managed 和 Unmanaged 程式碼放置在相同的應用程式，甚至是相同的檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  
+ 您可以使用 c + + interop （也稱為 Works （IJW））包裝原生 c + + 類別，使其可供以 c # 或其他 .NET 語言撰寫的程式碼使用。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 不同于其他 .NET 語言，Visual C++ 具有互通性支援，可讓受控和非受控程式碼位於相同的應用程式中，甚至在同一個檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  
   
 ## <a name="exposing-com-components-to-c"></a>將 COM 元件公開給 C\#
  您可以從 C# 專案取用 COM 元件。 一般步驟如下所示：  
@@ -36,7 +36,7 @@ ms.locfileid: "75700727"
   
 2. 將 COM 元件或型別程式庫的參考新增至專案。  
   
-     當您新增參考時，Visual Studio 會使用接受型別程式庫作為輸入的 [Tlbimp.exe (型別程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)，以輸出 .NET Framework Interop 組件。 此組件 (也稱為執行階段可呼叫包裝函式 (RCW)) 包含 Managed 類別和介面，以包裝型別程式庫中的 COM 類別和介面。 Visual Studio 會將產生的組件參考新增至專案。  
+     當您新增參考時，Visual Studio 會使用[tlbimp.exe （類型程式庫匯入工具）](../../../framework/tools/tlbimp-exe-type-library-importer.md)，其採用型別程式庫做為輸入，以輸出 .net interop 元件。 此組件 (也稱為執行階段可呼叫包裝函式 (RCW)) 包含 Managed 類別和介面，以包裝型別程式庫中的 COM 類別和介面。 Visual Studio 會將產生的組件參考新增至專案。  
   
 3. 建立定義於 RCW 之類別的執行個體。 這會接著建立 COM 物件的執行個體。  
   
@@ -63,5 +63,5 @@ ms.locfileid: "75700727"
 - [COM 和.NET 之間的互通性簡介](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
 - [Visual Basic 中的 COM Interop 簡介](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
 - [在受控碼和非受控碼之間進行封送處理](../../../framework/interop/interop-marshaling.md)
-- [與非託管代碼交互操作](../../../framework/interop/index.md)
-- [C# 程式設計指南](../index.md)
+- [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)
+- [C # 程式設計指南](../index.md)

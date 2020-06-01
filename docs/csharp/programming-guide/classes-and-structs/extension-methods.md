@@ -6,18 +6,18 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: fc816123134995b753beda0a6f281133d6ddd691
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506814"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241405"
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是靜態方法，但它們的呼叫方式就如同擴充類型上的實例方法一樣。 對於以 c #、F # 和 Visual Basic 撰寫的用戶端程式代碼，呼叫擴充方法與在類型中定義的方法之間沒有明顯的差異。
 
-最常見的擴充方法是 LINQ 標準查詢運算子，可將查詢功能加入至現有<xref:System.Collections.IEnumerable?displayProperty=nameWithType>的<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>和類型。 若要使用標準查詢運算子，請先使用 `using System.Linq` 指示詞將它們帶入範圍內。 接著，任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型都會具有執行個體方法，如 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等。 如果在 <xref:System.Collections.Generic.IEnumerable%601> 類型 (如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>) 的執行個體後面輸入「點」，就可以在 IntelliSense 陳述式完成時看到這些額外的方法。
+最常見的擴充方法是 LINQ 標準查詢運算子，可將查詢功能加入至現有的 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 類型。 若要使用標準查詢運算子，請先使用 `using System.Linq` 指示詞將它們帶入範圍內。 接著，任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型都會具有執行個體方法，如 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等。 如果在 <xref:System.Collections.Generic.IEnumerable%601> 類型 (如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>) 的執行個體後面輸入「點」，就可以在 IntelliSense 陳述式完成時看到這些額外的方法。
 
 ### <a name="orderby-example"></a>OrderBy 範例
 
@@ -54,7 +54,7 @@ int i = s.WordCount();
 using System.Linq;
 ```
 
-（您可能也必須新增對 system.string 的參考）。您會注意到，標準查詢運算子現在會出現在 IntelliSense 中，做為大部分<xref:System.Collections.Generic.IEnumerable%601>類型可用的其他方法。
+（您可能也必須新增對 system.string 的參考）。您會注意到，標準查詢運算子現在會出現在 IntelliSense 中，做為大部分類型可用的其他方法 <xref:System.Collections.Generic.IEnumerable%601> 。
 
 ## <a name="binding-extension-methods-at-compile-time"></a>在編譯時期繫結擴充方法
 
@@ -74,7 +74,7 @@ using System.Linq;
 
 ### <a name="collection-functionality"></a>集合功能
 
-在過去，通常會建立「集合類別」，為指定的型別<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>實作為介面，並針對該型別的集合採取動作。 雖然建立這種類型的集合物件沒有任何問題，但使用上的延伸模組也可以達到相同的功能<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 延伸模組的優點是允許從任何集合（例如<xref:System.Array?displayProperty=nameWithType> <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>在該類型上執行的或）呼叫功能。 如需使用 Int32 陣列的範例，請參閱本文稍[早](#orderby-example)的。
+在過去，通常會建立「集合類別」，為指定的型別實作為 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 介面，並針對該型別的集合採取動作。 雖然建立這種類型的集合物件沒有任何問題，但使用上的延伸模組也可以達到相同的功能 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 。 延伸模組的優點是允許從任何集合（例如 <xref:System.Array?displayProperty=nameWithType> <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 在該類型上執行的或）呼叫功能。 如需使用 Int32 陣列的範例，請參閱本文稍[早](#orderby-example)的。
 
 ### <a name="layer-specific-functionality"></a>圖層特有的功能
 
@@ -97,9 +97,9 @@ static class DomainEntityExtensions
 
 ### <a name="extending-predefined-types"></a>擴充預先定義的類型
 
-我們不會在需要建立可重複使用的功能時建立新的物件，而是可以擴充現有的型別，例如 .NET Framework 或 CLR 型別。 例如，如果我們不使用擴充方法，我們可能會建立`Engine`或`Query`類別來執行在程式碼中多個位置呼叫的 SQL Server 上執行查詢的工作。 不過，我們可以改為<xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType>使用擴充方法來擴充類別，以從已連接到 SQL Server 的任何地方執行該查詢。 其他範例可能是<xref:System.String?displayProperty=nameWithType>在類別中加入一般功能、擴充<xref:System.IO.File?displayProperty=nameWithType>和<xref:System.IO.Stream?displayProperty=nameWithType>物件的資料處理功能，以及<xref:System.Exception?displayProperty=nameWithType>特定錯誤處理功能的物件。 這些類型的使用案例只受到您的想像和良好的限制。
+我們通常可以擴充現有的類型，例如 .NET 或 CLR 類型，而不是在需要建立可重複使用的功能時建立新的物件。 例如，如果我們不使用擴充方法，我們可能會建立 `Engine` 或 `Query` 類別來執行在程式碼中多個位置呼叫的 SQL Server 上執行查詢的工作。 不過，我們可以改為 <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> 使用擴充方法來擴充類別，以從已連接到 SQL Server 的任何地方執行該查詢。 其他範例可能是在類別中加入一般功能 <xref:System.String?displayProperty=nameWithType> 、擴充和物件的資料處理功能， <xref:System.IO.File?displayProperty=nameWithType> <xref:System.IO.Stream?displayProperty=nameWithType> 以及 <xref:System.Exception?displayProperty=nameWithType> 特定錯誤處理功能的物件。 這些類型的使用案例只受到您的想像和良好的限制。
 
-延伸預先定義的類型可能會`struct`很棘手，因為它們是以傳值方式傳遞至方法。 這表示結構的任何變更都會對結構的複本進行。 延伸方法結束後，就不會顯示這些變更。 從 c # 7.2 開始，您可以將`ref`修飾詞加入至擴充方法的第一個引數。 新增`ref`修飾詞表示第一個引數是以傳址方式傳遞。 這可讓您撰寫擴充方法，以變更所擴充之結構的狀態。
+延伸預先定義的類型可能會很棘手， `struct` 因為它們是以傳值方式傳遞至方法。 這表示結構的任何變更都會對結構的複本進行。 延伸方法結束後，就不會顯示這些變更。 從 c # 7.2 開始，您可以將 `ref` 修飾詞加入至擴充方法的第一個引數。 新增 `ref` 修飾詞表示第一個引數是以傳址方式傳遞。 這可讓您撰寫擴充方法，以變更所擴充之結構的狀態。
 
 ## <a name="general-guidelines"></a>一般準則
 
@@ -112,11 +112,11 @@ static class DomainEntityExtensions
 如果您要實作所指定類型的擴充方法，請記住下列幾點：
 
 - 如果擴充方法的簽章與類型中定義的方法相同，則絕不會呼叫擴充方法。
-- 擴充方法是帶入命名空間層級的範圍。 例如，如果您在名為`Extensions`的單一命名空間中有多個包含擴充方法的靜態類別，則指示詞會將它們`using Extensions;`全部納入範圍中。
+- 擴充方法是帶入命名空間層級的範圍。 例如，如果您在名為的單一命名空間中有多個包含擴充方法的靜態類別，則指示詞會將 `Extensions` 它們全部納入範圍中 `using Extensions;` 。
 
-針對實作的類別庫，您不應該使用擴充方法阻止組件的版本號碼遞增。 如果您要在擁有其原始程式碼的程式庫中加入重要功能，則應遵循組件版本控制的標準 .NET Framework 方針。 如需詳細資訊，請參閱[組件版本控制](../../../standard/assembly/versioning.md)。
+針對實作的類別庫，您不應該使用擴充方法阻止組件的版本號碼遞增。 如果您想要在您擁有原始程式碼的程式庫中新增重要功能，請遵循元件版本控制的 .NET 指導方針。 如需詳細資訊，請參閱[組件版本控制](../../../standard/assembly/versioning.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)
 - [平行程式設計範例 (包括許多範例擴充方法)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

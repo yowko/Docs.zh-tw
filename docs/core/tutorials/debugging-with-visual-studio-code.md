@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 來調試 .NET Core 主控台應用程式
 description: 瞭解如何使用 Visual Studio Code 來偵測 .NET Core 主控台應用程式。
 ms.date: 05/26/2020
-ms.openlocfilehash: eaeb97f54442006d2f0e29483a68dc3de89b5778
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202586"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241509"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 來對 .NET Core 主控台應用程式進行 Debug
 
@@ -29,7 +29,13 @@ ms.locfileid: "84202586"
 
 「中斷點」會在含有中斷點的行執行「之前」**，暫時中斷應用程式的執行。
 
-1. 在*Program.cs*中，按一下程式碼視窗的左邊界，在顯示名稱、日期和時間的行上設定*中斷點*。 左邊界位於行號的左邊。 設定中斷點的另一種方式是將游標放在程式程式碼中，然後按<kbd>F9</kbd>鍵。
+1. 開啟 Visual Studio Code。
+
+1. 在 Visual Studio Code 中，開啟您在[建立 .Net Core 主控台應用程式](with-visual-studio-code.md)中建立的*HelloWorld*專案資料夾。
+
+1. 開啟*Program.cs*檔案。
+
+1. 在程式碼視窗的左邊界中按一下，在顯示名稱、日期和時間的行上設定*中斷點*。 左邊界位於行號的左邊。 設定中斷點的另一種方式是將游標放在程式程式碼中，然後按<kbd>F9</kbd>鍵。
 
    如下圖所示，Visual Studio Code 會藉由在左邊界顯示一個紅點，來表示設定中斷點的行。
 
@@ -215,10 +221,7 @@ dotnet run --configuration Release
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已使用 Visual Studio Code 調試工具。 若要瞭解如何發佈應用程式的可部署版本，請參閱[發佈您的應用程式](cli-create-console-app.md#publish-your-app)。
-
-<!--In the next tutorial, you publish a deployable version of the app.
+在本教學課程中，您已使用 Visual Studio Code 調試工具。 在下一個教學課程中，您會發佈可部署的應用程式版本。
 
 > [!div class="nextstepaction"]
-> [Publish a .NET Core console application with Visual Studio Code](publishing-with-visual-studio-code.md)
--->
+> [使用 Visual Studio Code 發行 .NET Core 主控台應用程式](publishing-with-visual-studio-code.md)

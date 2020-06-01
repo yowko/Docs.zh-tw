@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24d48605e560038d70f1818611f339a94ecc2bba
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711853"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241964"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用 dynamic 類型 (C# 程式設計手冊)
 
@@ -59,13 +59,13 @@ C# 4 引進一種新型別 `dynamic`。 此類型是靜態類型，但 `dynamic`
 
 ## <a name="dynamic-language-runtime"></a>Dynamic Language Runtime
 
-Dynamic Language Runtime (DLR) 是 .NET Framework 4 中的新 API。 它提供的基礎結構支援 C# 中的 `dynamic` 類型，也支援實作 IronPython 和 IronRuby 之類的動態程式設計語言。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。
+動態語言執行時間（DLR）是在 .NET Framework 4 中引進的 API。 它提供的基礎結構支援 C# 中的 `dynamic` 類型，也支援實作 IronPython 和 IronRuby 之類的動態程式設計語言。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。
 
 ## <a name="com-interop"></a>COM Interop
 
 C# 4 包含幾項功能，可改善與 COM API (例如 Office Automation API) 相互操作的體驗。 這些改進包括使用 `dynamic` 類型，以及使用[具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)。
 
-許多 COM 方法允許針對引數類型和傳回型別進行變化，方法是將類型指定為 `object`。 這需要對值進行明確轉型，才能與 C# 中的強型別變數配合使用。 如果使用[-link （C# 編譯器選項）選項](../../language-reference/compiler-options/link-compiler-option.md)編譯，`dynamic`則引入該類型使您能夠將 COM 中簽名的`object`匹配項視為類型`dynamic`，從而避免大部分強制轉換。 例如，下列陳述式將比較使用 `dynamic` 類型和不使用 `dynamic` 類型存取 Microsoft Office Excel 試算表中儲存格的方式。
+許多 COM 方法允許針對引數類型和傳回型別進行變化，方法是將類型指定為 `object`。 這需要對值進行明確轉型，才能與 C# 中的強型別變數配合使用。 如果您使用[-link （c # 編譯器選項）](../../language-reference/compiler-options/link-compiler-option.md)選項進行編譯，則引入型別可 `dynamic` 讓您將 COM 簽章中的出現次數視為 `object` 型別 `dynamic` ，進而避免大部分的轉換。 例如，下列陳述式將比較使用 `dynamic` 類型和不使用 `dynamic` 類型存取 Microsoft Office Excel 試算表中儲存格的方式。
 
 [!code-csharp[csOfficeWalkthrough#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#12)]
 
@@ -76,6 +76,6 @@ C# 4 包含幾項功能，可改善與 COM API (例如 Office Automation API) �
 |Title|描述|
 |-----------|-----------------|
 |[動態](../../language-reference/builtin-types/reference-types.md)|說明如何使用 `dynamic` 關鍵字。|
-|[動態語言運行時概述](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|提供 DLR 概觀，DLR 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。|
-|[演練：創建和使用動態物件](walkthrough-creating-and-using-dynamic-objects.md)|針對建立自訂動態物件及建立存取 `IronPython` 程式庫的專案，提供逐步指示。|
+|[動態語言執行時間總覽](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|提供 DLR 概觀，DLR 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。|
+|[逐步解說：建立和使用動態物件](walkthrough-creating-and-using-dynamic-objects.md)|針對建立自訂動態物件及建立存取 `IronPython` 程式庫的專案，提供逐步指示。|
 |[如何使用 C# 功能存取 Office Interop 物件](../interop/how-to-access-office-onterop-objects.md)|示範如何建立使用具名和選擇性引數、`dynamic` 類型，以及其他可簡化 Office API 物件存取之增強功能的專案。|

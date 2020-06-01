@@ -1,15 +1,15 @@
 ---
-title: 如何將物件資料寫入 XML 檔 （C#）
+title: '如何將物件資料寫入 XML 檔案（c #）'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: f7ffb47a22d3cd94cd7cb6f702b64180a8790eb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f18ae194d2ed70f633665a29772622319ea9493
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167503"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241990"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-c"></a>如何將物件資料寫入 XML 檔 （C#）
+# <a name="how-to-write-object-data-to-an-xml-file-c"></a>如何將物件資料寫入 XML 檔案（c #）
 此範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 類別，將來自某個類別的物件寫入 XML 檔案。  
   
 ## <a name="example"></a>範例  
@@ -58,11 +58,11 @@ public class XMLWrite
   
 - 磁碟已滿 (<xref:System.IO.IOException>)。  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
+## <a name="net-security"></a>.NET 安全性  
  如果檔案不存在，此範例就會建立新的檔案。 如果應用程式需要建立檔案，該應用程式就需要資料夾的 `Create` 權限。 如果檔案已經存在，則應用程式只需要 `Write` 權限，這是較小的權限。 若有可能，更為安全的做法是在部署期間建立檔案，並且只授與單一檔案的 `Read` 權限，而不授與資料夾的 `Create` 權限。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.StreamWriter>
-- [如何從 XML 檔 （C#） 讀取物件資料](./how-to-read-object-data-from-an-xml-file.md)
+- [如何從 XML 檔案讀取物件資料（c #）](./how-to-read-object-data-from-an-xml-file.md)
 - [序列化 (C#)](./index.md)

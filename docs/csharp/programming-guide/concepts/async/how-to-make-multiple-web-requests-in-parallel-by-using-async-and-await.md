@@ -1,22 +1,22 @@
 ---
-title: 如何使用非同步和等待 （C#） 並行發出多個 Web 請求
+title: '如何使用 async 和 await，同時發出多個 web 要求（c #）'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 9f7420113d4af83d7d057b772af307bd8d4bcc00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169945"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241795"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何使用非同步和等待 （C#） 並行發出多個 Web 請求
-在非同步方法中，工作會在建立後啟動。 由於在此方法中，必須等到工作完成後才能繼續處理，因此會將 [await](../../../language-reference/operators/await.md) 運算子套用至工作。 通常，工作會在建立後等候完成，如下列範例所示。  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何使用 async 和 await，同時發出多個 web 要求（c #）
+在非同步方法中，工作會在建立時啟動。 [Await](../../../language-reference/operators/await.md)運算子會套用至方法中的工作點，在此情況下無法繼續處理，直到工作完成為止。 通常會在建立工作時立即等待，如下列範例所示。  
   
 ```csharp  
 var result = await someWebAccessMethodAsync(url);  
 ```  
   
- 不過，如果您的程式有其他要完成的工作不需要等候此工作完成，您可以將建立工作與等候工作分開進行。  
+ 不過，如果您的程式有其他工作要完成，而不是相依于工作完成，您可以區分建立工作，使其無法等候工作。  
   
 ```csharp  
 // The following line creates and starts the task.  
@@ -32,12 +32,12 @@ var result = await myTask;
   
  從工作啟動到等候完成的這段期間，您可以啟動其他工作。 其他工作會以隱含方式平行執行，但不會建立其他任何執行緒。  
   
- 下列程式會啟動三個非同步的網頁下載，然後依呼叫順序等候完成。 請注意，當您執行此程式時，這些工作不一定會依建立和等候順序完成。 這些工作會在建立後開始執行，而且其中一或多個工作可能會在此方法到達 await 運算式之前就已完成。  
+ 下列程式會啟動三個非同步 web 下載，然後依照呼叫的順序來等候它們。 請注意，當您執行程式時，工作不一定會依其建立和等候的順序完成。 它們會在建立時開始執行，而且一或多個工作可能會在方法到達 await 運算式之前完成。  
   
 > [!NOTE]
 > 若要完成此專案，您必須在電腦上安裝 Visual Studio 2012 或更高版本以及 .NET Framework 4.5 或更高版本。  
   
- 有關同時啟動多個任務的另一個示例，請參閱如何使用[Task.WhenAll （C#） 擴展非同步演練](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
+ 如需同時啟動多個工作的另一個範例，請參閱[如何使用 system.threading.tasks.task.whenall 擴充非同步逐步解說（c #）](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
   
  您可以從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)下載此範例的程式碼。  
   
@@ -136,7 +136,7 @@ var result = await myTask;
   
 5. 選擇 F5 鍵以執行程式，然後選擇 [開始]**** 按鈕。  
   
-     執行此程式幾次，確認這三個工作不一定會依相同順序完成，而且其完成順序不一定是建立和等候順序。  
+     執行程式數次，以確認三個工作不一定會以相同的順序完成，而且它們的完成順序不一定是建立和等候的順序。  
   
 ## <a name="example"></a>範例  
  下列程式碼包含完整的範例。  
@@ -228,4 +228,4 @@ namespace AsyncExample_MultipleTasks
 
 - [逐步解說：使用 async 和 await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
-- [如何使用 Task.WhenAll （C#） 擴展非同步演練](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何使用 System.threading.tasks.task.whenall 擴充非同步逐步解說（c #）](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

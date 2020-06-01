@@ -1,32 +1,32 @@
 ---
-title: '如何發行符合 .NET Framework 方針的事件-c # 程式設計手冊'
+title: '發行符合 .NET 指導方針的事件-c # 程式設計手冊'
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 137e52b80703491a4528a3eddc7fa12f9dce6f52
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: df2f643f867b93b74d04d8fbd673df545c28938e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144795"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240742"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何發行符合 .NET Framework 方針的事件（c # 程式設計手冊）
+# <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>如何發行符合 .NET 指導方針的事件（c # 程式設計手冊）
 
-下列程序示範如何將遵循標準 .NET Framework 模式的事件，新增至您的類別和結構。 .NET Framework 類別庫中的所有事件都是以 <xref:System.EventHandler> 委派為基礎，其定義如下：
+下列程式示範如何將遵循標準 .NET 模式的事件新增至您的類別和結構。 .NET Framework 類別庫中的所有事件都是以 <xref:System.EventHandler> 委派為基礎，其定義如下：
 
 ```csharp
 public delegate void EventHandler(object sender, EventArgs e);
 ```
 
 > [!NOTE]
-> .NET Framework 2.0 引進此委派的泛型版本 <xref:System.EventHandler%601>。 下列範例示範如何使用這兩種版本。
+> .NET Framework 2.0 引進此委派的泛型版本 <xref:System.EventHandler%601> 。 下列範例示範如何使用這兩種版本。
 
-雖然您所定義之類別中的事件能以任何有效的委派型別 (甚至是傳回值的委派) 為基礎，但通常建議您使用 <xref:System.EventHandler>，讓事件以 .NET Framework 模式為基礎，如下列範例所示。
+雖然您定義之類別中的事件可以根據任何有效的委派類型，甚至是傳回值的委派，但通常建議您使用來根據 .NET 模式來建立事件的基礎 <xref:System.EventHandler> ，如下列範例所示。
 
 名稱 `EventHandler` 可能會造成一些混淆，因為它實際上不會處理事件。 <xref:System.EventHandler>、和泛型 <xref:System.EventHandler%601> 是委派類型。 其簽章符合委派定義的方法或 lambda 運算式是*事件處理常式*，而且會在引發事件時叫用。
 
-### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>發行以 EventHandler 模式為基礎的事件
+## <a name="publish-events-based-on-the-eventhandler-pattern"></a>根據 EventHandler 模式發佈事件
 
 1. （如果您不需要隨事件傳送自訂資料，請略過此步驟並移至步驟3a）。針對您的「發行者」和「訂閱者」類別顯示的範圍，宣告自訂資料的類別。 然後新增必要的成員來保存自訂事件資料。 在此範例中，會傳回一個簡單的字串。
 

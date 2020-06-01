@@ -1,19 +1,19 @@
 ---
-title: 如何在註冊表中創建金鑰 - C# 程式設計指南
+title: '如何在登錄中建立金鑰-c # 程式設計指南'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e340083ffca118337dc9a53bdf20808cd1b15cb
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635440"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241626"
 ---
-# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>如何在註冊表中創建金鑰（C# 程式設計指南）
+# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>如何在登錄中建立機碼（c # 程式設計手冊）
 本範例會將 "Name" 和 "Isabella" 的值組新增至目前使用者之登錄的 "Names" 索引鍵下。  
   
 ## <a name="example"></a>範例  
@@ -48,7 +48,7 @@ key.Close();
   
 - 登錄機碼為唯讀。  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
+## <a name="net-security"></a>.NET 安全性  
  將資料寫入使用者資料夾 `Microsoft.Win32.Registry.CurrentUser` 比寫入本機電腦 `Microsoft.Win32.Registry.LocalMachine` 更安全。  
   
  當您建立登錄值時，您需要決定如果該值已經存在該怎麼辦。 另一個可能是惡意的處理序，可能已建立值並具有其存取權。 當您將資料放在登錄值中時，資料可供其他處理序使用。 為避免此問題，請使用 `Overload:Microsoft.Win32.RegistryKey.GetValue`。 方法。 如果沒有索引鍵，則傳回 Null。  
@@ -58,6 +58,6 @@ key.Close();
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [檔案系統和登錄 (C# 程式設計手冊)](./index.md)
 - [使用 C# 從登錄進行讀取、寫入和刪除](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

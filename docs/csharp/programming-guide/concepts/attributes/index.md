@@ -1,12 +1,12 @@
 ---
 title: 屬性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645479"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241574"
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 
@@ -41,7 +41,7 @@ ms.locfileid: "81645479"
 [!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> 依照慣例，所有的屬性名稱都會以 "Attribute" 這個字結尾，以便與 .NET 程式庫中的其他項目有所區別。 不過，您在程式碼中使用屬性時，不需要指定屬性的後置詞。 例如，`[DllImport]` 相當於 `[DllImportAttribute]`，但 `DllImportAttribute` 是屬性在 .NET Framework Class Library 中的實際名稱。
+> 依照慣例，所有的屬性名稱都會以 "Attribute" 這個字結尾，以便與 .NET 程式庫中的其他項目有所區別。 不過，您在程式碼中使用屬性時，不需要指定屬性的後置詞。 例如， `[DllImport]` 相當於 `[DllImportAttribute]` ，但 `DllImportAttribute` 是屬性在 .net 類別庫中的實際名稱。
 
 ### <a name="attribute-parameters"></a>屬性參數
 
@@ -57,7 +57,7 @@ ms.locfileid: "81645479"
 
 ### <a name="attribute-targets"></a>屬性目標
 
-屬性的「目標」** 是要套用屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 默認情況下,屬性應用於其後面的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
+屬性的「目標」** 是要套用屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 根據預設，屬性會套用至其後的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
 
 若要明確地識別屬性目標，請使用下列語法：
 
@@ -101,8 +101,8 @@ using System.Reflection;
 
 下列清單包含一些程式碼中常見的屬性用法：
 
-- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱 <xref:System.Web.Services.WebMethodAttribute>。
-- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
+- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱<xref:System.Web.Services.WebMethodAttribute>。
+- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 - 描述適用於類別、方法和介面的 COM 屬性。
 - 使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別呼叫 Unmanaged 程式碼。
 - 針對標題、版本、描述或商標等方面來描述您的組件。
@@ -119,13 +119,13 @@ using System.Reflection;
 
 - [建立自訂屬性 (C#)](creating-custom-attributes.md)  
 - [使用反映存取屬性 (C#)](accessing-attributes-by-using-reflection.md)  
-- [如何使用屬性 (C#) 建立 C/C++聯合](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [如何使用屬性建立 C/c + + 等位（c #）](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [常見屬性 (C#)](../../../language-reference/attributes/global.md)  
 - [呼叫端資訊 (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編程指南](../../index.md)
+- [C # 程式設計指南](../../index.md)
 - [反映 (C#)](../reflection.md)
 - [屬性](../../../../standard/attributes/index.md)
-- [使用 C 的屬性#](../../../tutorials/attributes.md)
+- [在 C 中使用屬性#](../../../tutorials/attributes.md)

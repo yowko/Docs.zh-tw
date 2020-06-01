@@ -2,12 +2,12 @@
 title: 委派中的差異 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: fd1b4824dc3d8f12347e01b804a6e39fe2e086c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d41c0d3d54df96031fc7989e0fdc78e9f358a40a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169710"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241340"
 ---
 # <a name="variance-in-delegates-c"></a>委派中的差異 (C#)
 .NET framework 3.5 推出差異支援，在 C# 中比對方法簽章和所有委派的委派型別。 這表示您可以指派給委派的不只是具有相符簽章的方法，也可以是會傳回更多衍生型別 (共變數) 的方法，或接受衍生型別 (反變數) 比委派型別指定少的參數的方法。 這包括泛型和非泛型委派。  
@@ -109,8 +109,9 @@ public static void Test()
 }  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework 中具有 Variant 型別參數的泛型委派  
- .NET Framework 4 推出差異支援，適用於數個現有泛型委派中的泛型型別參數：  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-net"></a>.NET 中具有 Variant 類型參數的泛型委派
+
+.NET Framework 4 推出差異支援，適用於數個現有泛型委派中的泛型型別參數：  
   
 - <xref:System> 命名空間中的 `Action` 委派，例如 <xref:System.Action%601> 和 <xref:System.Action%602>  
   
@@ -200,4 +201,4 @@ public static void Test()
 
 - [泛型](../../../../standard/generics/index.md)
 - [針對 Func 與 Action 泛型委派使用變異數 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
-- [如何組合委託（多播代表）](../../delegates/how-to-combine-delegates-multicast-delegates.md)
+- [如何合併委派（多播委派）](../../delegates/how-to-combine-delegates-multicast-delegates.md)

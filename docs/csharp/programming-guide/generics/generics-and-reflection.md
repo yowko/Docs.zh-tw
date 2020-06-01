@@ -5,17 +5,17 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 4893bf5ebe73988bb6535cc2a85591ff0dde6ebd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 672a0bebdc60eff00acf9b1bdbecc25052f7bc16
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712165"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241678"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>泛型和反映 (C# 程式設計手冊)
 由於 Common Language Runtime (CLR) 可在執行階段存取泛型型別資訊，因此您可以使用反映取得泛型型別的相關資訊，方法和取得非泛型型別的資訊相同。 如需詳細資訊，請參閱[執行階段中的泛型](./generics-in-the-run-time.md)。  
   
- 在 .NET Framework 2.0 中，<xref:System.Type> 類別已新增幾個新成員，以允許泛型型別的執行階段資訊。 如需使用這些方法和屬性的詳細資訊，請參閱這些類別的文件。 <xref:System.Reflection.Emit> 命名空間也包含支援泛型的新成員。 請參閱[如何：使用反映發出定義泛型型別](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
+ 在 .NET Framework 2.0 中，已將數個新成員加入至 <xref:System.Type> 類別，以啟用泛型型別的執行時間資訊。 如需使用這些方法和屬性的詳細資訊，請參閱這些類別的文件。 <xref:System.Reflection.Emit> 命名空間也包含支援泛型的新成員。 請參閱[如何：使用反映發出定義泛型型別](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)。  
   
  如需泛型反映中所使用之規範的恆成立條件清單，請參閱 <xref:System.Type.IsGenericType%2A> 屬性備註。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75712165"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [泛型](./index.md)
-- [反映和泛型型別](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [反映和泛用類型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [泛型](../../../standard/generics/index.md)

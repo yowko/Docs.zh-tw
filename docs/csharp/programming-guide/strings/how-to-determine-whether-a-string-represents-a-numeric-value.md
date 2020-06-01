@@ -1,19 +1,19 @@
 ---
-title: 如何確定字串是否表示數值 - C# 程式設計指南
+title: '如何判斷字串是否代表數值-c # 程式設計手冊'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 15a21a6298f8f0a57e0189554246202b220dd259
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 37437460ea4c6ca216f2844d63af3688ccc984c6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157061"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241717"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何確定字串是否表示數值（C# 程式設計指南）
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何判斷字串是否代表數值（c # 程式設計手冊）
 若要判斷字串是否為所指定數值類型的有效呈現，請使用靜態 `TryParse` 方法，而這個方法是由所有基本數字類型以及 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 此等類型所實作。 下列範例示範如何判斷 "108" 是否為有效 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  
   
 ```csharp  
@@ -35,13 +35,13 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## <a name="robust-programming"></a>穩固程式設計  
  基本數值類型也會實作 `Parse` 靜態方法，但如果字串不是有效數字，則會擲回例外狀況。 `TryParse` 通常更具效率，因為它在數字不正確時就會傳回 false。  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
+## <a name="net-security"></a>.NET 安全性  
  請一律使用 `TryParse` 或 `Parse` 方法來驗證文字方塊和下拉式方塊這類控制項的使用者輸入。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [如何將位元組陣列轉換成整數](../types/how-to-convert-a-byte-array-to-an-int.md)
-- [如何將字串轉換為數字](../types/how-to-convert-a-string-to-a-number.md)
-- [如何在十六進位字串和數數值型別之間進行轉換](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
-- [分析數位字串](../../../standard/base-types/parsing-numeric.md)
+- [如何將字串轉換為數值](../types/how-to-convert-a-string-to-a-number.md)
+- [如何在十六進位字串和數字類型間轉換](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+- [剖析數值字串](../../../standard/base-types/parsing-numeric.md)
 - [格式化類型](../../../standard/base-types/formatting-types.md)

@@ -2,12 +2,12 @@
 title: 物件導向程式設計 (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396679"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241886"
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計（c #）
 
@@ -146,9 +146,9 @@ public class SampleClass
 
 #### <a name="finalizers"></a>完成項
 
-完成項是用來終結類別的實例。 在 .NET Framework 中，記憶體回收行程會自動管理應用程式中 Managed 物件的記憶體配置及釋放。 不過，您可能仍需要使用完成項來清除應用程式建立的任何 Unmanaged 資源。 一個類別只能有一個完成項。
+完成項是用來終結類別的實例。 在 .NET 中，垃圾收集行程會自動管理應用程式中受管理物件的記憶體配置和釋放。 不過，您可能仍需要使用完成項來清除應用程式建立的任何 Unmanaged 資源。 一個類別只能有一個完成項。
 
-如需 .NET Framework 的完成項和記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。
+如需 .NET 中完成項和垃圾收集的詳細資訊，請參閱[垃圾收集](../../../standard/garbage-collection/index.md)。
 
 #### <a name="events"></a>事件
 
@@ -298,7 +298,7 @@ public abstract class B { }
 如需詳細資訊，請參閱
 
 - [sealed](../../language-reference/keywords/sealed.md)
-- [abstract](../../language-reference/keywords/abstract.md)
+- [概要](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>覆寫成員
 
@@ -309,8 +309,8 @@ public abstract class B { }
 | C# 修飾詞 | 定義 |
 |--|--|
 | [virtual](../../language-reference/keywords/virtual.md) | 允許在衍生類別中覆寫類別成員。 |
-| [override](../../language-reference/keywords/override.md) | 覆寫在基底類別中定義的虛擬 (可覆寫) 成員。 |
-| [abstract](../../language-reference/keywords/abstract.md) | 要求在衍生類別中覆寫類別成員。 |
+| [覆寫](../../language-reference/keywords/override.md) | 覆寫在基底類別中定義的虛擬 (可覆寫) 成員。 |
+| [概要](../../language-reference/keywords/abstract.md) | 要求在衍生類別中覆寫類別成員。 |
 | [new 修飾詞](../../language-reference/keywords/new-modifier.md) | 隱藏繼承自基底類別的成員。 |
 
 ## <a name="interfaces"></a>介面
@@ -342,7 +342,7 @@ class SampleClass : ISampleInterface
 
 ## <a name="generics"></a>泛型
 
-.NET Framework 中的類別、結構、介面和方法可以包括「型別參數」**，這些參數會定義可儲存或使用之物件的類型。 泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。
+.NET 中的類別、結構、介面和方法可以包含定義可儲存或使用之物件類型的*類型參數*。 泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。
 
 若要定義泛型類別：
 
@@ -400,6 +400,6 @@ class SampleClass
 
 如需詳細資訊，請[參閱委派](../../language-reference/builtin-types/reference-types.md)關鍵字上的程式設計指南[文章和語言](../delegates/index.md)參考文章。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)

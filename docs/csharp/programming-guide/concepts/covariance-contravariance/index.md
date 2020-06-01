@@ -2,12 +2,12 @@
 title: 共變數和反變數 (C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 80b4d703bb88d0bf1f7f48236c21b7698017e7f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 23633675059b9c295dda7ddf3d78754c0223f5f8
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79169866"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241366"
 ---
 # <a name="covariance-and-contravariance-c"></a>共變數和反變數 (C#)
 在 C# 中，共變數和反變數可讓您進行陣列類型、委派類型和泛型型別引數的隱含參考轉換。 共變數會保留指派相容性，而反變數則會將它反轉。  
@@ -68,7 +68,7 @@ static void Test()
 }  
 ```  
   
- 在 .NET Framework 4 或更新版本中，C# 支援泛型介面和委派中的共變數和反變數，並可讓您進行泛型型別參數的隱含轉換。 如需詳細資訊，請參閱[泛型介面中的變異數 (C#)](./variance-in-generic-interfaces.md) 和[委派中的變異數 (C#)](./variance-in-delegates.md)。  
+ 在 .NET Framework 4 和更新版本中，c # 支援泛型介面和委派中的共變數和反變數，並允許泛型型別參數的隱含轉換。 如需詳細資訊，請參閱[泛型介面中的變異數 (C#)](./variance-in-generic-interfaces.md) 和[委派中的變異數 (C#)](./variance-in-delegates.md)。  
   
  下列程式碼範例示範泛型介面的隱含參考轉換。  
   
@@ -79,7 +79,7 @@ IEnumerable<Object> objects = strings;
   
  如果泛型介面或委派的泛型參數宣告為共變數或反變數，此泛型介面或委派稱為 *variant*。 C# 可讓您建立自己的 Variant 介面和委派。 如需詳細資訊，請參閱[建立 Variant 泛型介面 (C#)](./creating-variant-generic-interfaces.md) 和[委派中的差異 (C#)](./variance-in-delegates.md)。  
   
-## <a name="related-topics"></a>相關主題  
+## <a name="related-topics"></a>[相關主題]  
   
 |Title|描述|  
 |-----------|-----------------|  

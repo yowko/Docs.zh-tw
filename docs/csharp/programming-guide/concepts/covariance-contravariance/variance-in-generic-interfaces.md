@@ -2,18 +2,18 @@
 title: 泛型介面中的差異 (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 2020ea54734724de775192a1a438413a73003d17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea5d3d35bc9ee438263707efd16829b6217a1968
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169658"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241327"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型介面中的差異 (C#)
 
 .NET Framework 4 針對數個現有泛型介面推出了差異支援。 差異支援可讓實作這些介面的類別以隱含方式轉換。
 
-從 .NET 框架 4 開始，以下介面是變體：
+從 .NET Framework 4 開始，下列介面是 variant：
 
 - <xref:System.Collections.Generic.IEnumerable%601> (T 是 Covariant)
 
@@ -42,7 +42,7 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-在舊版的 .NET Framework 中，此程式碼會造成 C# 和 Visual Basic (如果開啟 `Option Strict`) 中的編譯錯誤。 但現在您可以使用 `strings`，而不使用 `objects`，如上例所示，因為 <xref:System.Collections.Generic.IEnumerable%601> 介面是 Covariant。
+在舊版的 .NET Framework 中，此程式碼會造成 c # 中的編譯錯誤，如果 `Option Strict` 是 on，則會在 Visual Basic 中。 但現在您可以使用 `strings`，而不使用 `objects`，如上例所示，因為 <xref:System.Collections.Generic.IEnumerable%601> 介面是 Covariant。
 
 反變數允許方法具有比介面泛型參數所指定之衍生程度更小的引數型別。 為示範反變數，我們假設您已建立 `BaseComparer` 類別來比較 `BaseClass` 類別的執行個體。 `BaseComparer` 類別會實作 `IEqualityComparer<BaseClass>` 介面。 因為 <xref:System.Collections.Generic.IEqualityComparer%601> 介面現在是 Contravariant，所以您可以使用 `BaseComparer` 比較繼承了 `BaseClass` 類別的類別執行個體。 這顯示在下列程式碼範例中。
 

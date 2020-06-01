@@ -7,16 +7,16 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: b4326be8c9e299a96477096ec21864ec69037abe
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 71d97f7c1c0c3ece0cdce3de4318d8a9d65baed3
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738237"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241925"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空間 (C# 程式設計手冊)
 
-C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framework 類別會使用命名空間來組織其多種類別。 其次，宣告您自己的命名空間，有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。  
+C# 程式內大量使用命名空間的原因有兩個。 首先，.NET 類別會使用命名空間來組織其許多類別。 其次，宣告您自己的命名空間，有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。  
   
 ## <a name="accessing-namespaces"></a>存取命名空間
 
@@ -36,13 +36,13 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
 ## <a name="namespace-aliases"></a>命名空間別名
 
- 您還可以使用[`using`該指令](../../language-reference/keywords/using-directive.md)為命名空間創建別名。 使用[命名空間別名限定詞`::`](../../language-reference/operators/namespace-alias-qualifier.md)來存取別名命名空間的成員。 下列範例示範如何建立及使用命名空間別名：
+ 您也可以使用指示[ `using` 詞來建立](../../language-reference/keywords/using-directive.md)命名空間的別名。 使用[命名空間別名限定詞`::`](../../language-reference/operators/namespace-alias-qualifier.md)來存取別名命名空間的成員。 下列範例示範如何建立及使用命名空間別名：
   
 [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
 ## <a name="using-namespaces-to-control-scope"></a>使用命名空間來控制範圍
 
- `namespace` 關鍵字用來宣告範圍。 在專案內建立範圍的能力有助於組織程式碼，並可讓您建立全域唯一類型。 在下列範例中，標題為 `SampleClass` 的類別定義於兩個命名空間中，而其中一個命名空間巢狀於另一個命名空間內。 令牌 用於區分調用的方法。 [ `.`](../../language-reference/operators/member-access-operators.md#member-access-expression-)  
+ `namespace` 關鍵字用來宣告範圍。 在專案內建立範圍的能力有助於組織程式碼，並可讓您建立全域唯一類型。 在下列範例中，標題為 `SampleClass` 的類別定義於兩個命名空間中，而其中一個命名空間巢狀於另一個命名空間內。 [ `.` 權杖](../../language-reference/operators/member-access-operators.md#member-access-expression-)是用來區別呼叫的方法。  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -92,8 +92,8 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編程指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [命名空間](./index.md)
-- [成員存取式](../../language-reference/operators/member-access-operators.md#member-access-expression-)
+- [成員存取運算式](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [:: 運算子](../../language-reference/operators/namespace-alias-qualifier.md)
 - [extern alias](../../language-reference/keywords/extern-alias.md)

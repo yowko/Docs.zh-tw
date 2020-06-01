@@ -1,18 +1,18 @@
 ---
-title: 如何獲取有關檔、資料夾和磁碟機的資訊 - C# 程式設計指南
+title: '如何取得檔案、資料夾和磁片磁碟機的相關資訊-c # 程式設計手冊'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 6024b1be4ce826900c6f9b367323fb19ac55d2c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32aced17634a1406e2fce0af9c2a92f7a5eb9b40
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705206"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241613"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何獲取有關檔、資料夾和磁碟機的資訊（C# 程式設計指南）
-在 .NET Framework 中，您可以使用下列類別來存取檔案系統資訊：  
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何取得有關檔案、資料夾和磁片磁碟機的資訊（c # 程式設計手冊）
+在 .NET 中，您可以使用下列類別來存取檔案系統資訊：  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
@@ -55,5 +55,5 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [檔案系統和登錄 (C# 程式設計手冊)](./index.md)

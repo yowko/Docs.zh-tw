@@ -1,22 +1,22 @@
 ---
-title: 如何遍經目錄樹 - C# 程式設計指南
+title: '如何逐一查看目錄樹狀結構-c # 程式設計手冊'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24a6225527becb0b896017616e2661ab8247c74c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712256"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241600"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何遍經目錄樹（C# 程式設計指南）
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何逐一查看目錄樹狀結構（c # 程式設計手冊）
 「逐一查看樹狀目錄」一詞，代表存取指定根資料夾下每個巢狀子目錄中任意深度的每個檔案。 您不需要開啟每個檔案。 您可以只擷取的檔案名稱或子目錄當成 `string`，或者可以擷取格式為 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 物件的其他資訊。  
   
 > [!NOTE]
-> 在 Windows 中，「目錄」和「資料夾」等詞可交替使用。 大多數文件和使用者介面文字都使用「資料夾」一詞，但 .NET Framework 類別庫則是使用「目錄」一詞。  
+> 在 Windows 中，「目錄」和「資料夾」等詞可交替使用。 大部分的檔和使用者介面文字都會使用「資料夾」一詞，但是 .NET 類別庫會使用「目錄」一詞。  
   
  在最簡單的情況下，當您確定具有指定根資料夾下所有目錄的存取權限時，就可以使用 `System.IO.SearchOption.AllDirectories` 旗標。 此旗標會傳回符合指定模式的所有巢狀子目錄。 下列範例示範如何使用此旗標。  
   
@@ -33,7 +33,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  如果您必須對檔案和資料夾執行各式各樣的作業，您可以藉由將作業重構到個別函式中以模組化這些範例，這樣就可以使用單一委派來叫用這些函式。  
   
 > [!NOTE]
-> NTFS 檔案系統可以包含「連接點」**、「符號連結」** 和「永久連結」** 形式的「重新分析點」**。 .NET Framework 方法，如 <xref:System.IO.DirectoryInfo.GetFiles%2A> 和 <xref:System.IO.DirectoryInfo.GetDirectories%2A>，不會傳回重新分析點下的任何子目錄。 此行為可防止兩個重新分析點彼此參考時進入無限迴圈的風險。 一般而言，處理重新分析點要特別謹慎，以免不小心修改或刪除檔案。 如果您需要精確控制重新分析點，請使用平台叫用或機器碼，直接呼叫適當的 Win32 檔案系統方法。  
+> NTFS 檔案系統可以包含「連接點」**、「符號連結」** 和「永久連結」** 形式的「重新分析點」**。 .NET 方法（例如 <xref:System.IO.DirectoryInfo.GetFiles%2A> 和） <xref:System.IO.DirectoryInfo.GetDirectories%2A> 不會在重新分析點下傳回任何子目錄。 此行為可防止兩個重新分析點彼此參考時進入無限迴圈的風險。 一般而言，處理重新分析點要特別謹慎，以免不小心修改或刪除檔案。 如果您需要精確控制重新分析點，請使用平台叫用或機器碼，直接呼叫適當的 Win32 檔案系統方法。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用遞迴來查核樹狀目錄。 遞迴是很簡潔的方法，但在樹狀目錄很大且巢狀結構很深時，可能會造成堆疊溢位例外狀況。  
@@ -59,5 +59,5 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO>
-- [LINQ and File Directories (LINQ 和檔案目錄)](../concepts/linq/linq-and-file-directories.md)
+- [LINQ 和檔案目錄](../concepts/linq/linq-and-file-directories.md)
 - [檔案系統和登錄 (C# 程式設計手冊)](./index.md)

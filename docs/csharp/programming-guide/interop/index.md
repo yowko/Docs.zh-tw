@@ -7,17 +7,18 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: 3a70d2ae077552bab536e96367cab0fda1661310
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e53465066cf27a5f46c66ac73ee242370be23395
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75712048"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84242003"
 ---
 # <a name="interoperability-c-programming-guide"></a>互通性 (C# 程式設計手冊)
+
 互通性可讓您保留並充分利用目前在 Unmanaged 程式碼上的投資。 在 Common Language Runtime (CLR) 控制下執行的程式碼稱為「Managed 程式碼」**，而在 CLR 外部執行的程式碼稱為「Unmanaged 程式碼」**。 COM、COM+、C++ 元件、ActiveX 元件及 Microsoft Windows API 都是 Unmanaged 程式碼的範例。  
   
- .NET Framework 會透過平台叫用服務、<xref:System.Runtime.InteropServices> 命名空間、C++ 互通性及 COM 互通性 (COM Interop)，啟用與非受控程式碼的互通性。  
+.NET 透過平台叫用服務、 <xref:System.Runtime.InteropServices> 命名空間、c + + 互通性及 COM 互通性（COM Interop），啟用與非受控程式碼的互通性。  
   
 ## <a name="in-this-section"></a>本節內容  
  [互通性概觀](./interoperability-overview.md)  
@@ -45,6 +46,6 @@ ms.locfileid: "75712048"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
-- [C# 程式設計指南](../index.md)
-- [與非託管代碼交互操作](../../../framework/interop/index.md)
+- [C # 程式設計指南](../index.md)
+- [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)
 - [逐步解說：Office 程式設計](./walkthrough-office-programming.md)

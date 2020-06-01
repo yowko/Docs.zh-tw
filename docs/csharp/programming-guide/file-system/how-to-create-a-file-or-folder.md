@@ -1,5 +1,5 @@
 ---
-title: 如何創建檔或資料夾 - C# 程式設計指南
+title: '如何建立檔案或資料夾-c # 程式設計手冊'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: cdcc0a375aa1eca29c024d1e0c9008f337d0c772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5efe3b7dc600645488816d6f931df57fc236efc9
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167553"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241639"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何創建檔或資料夾（C# 程式設計指南）
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何建立檔案或資料夾（c # 程式設計手冊）
 您可以程式設計的方式在電腦上建立資料夾、建立子資料夾、在子資料夾中建立檔案，以及將資料寫入檔案。  
   
 ## <a name="example"></a>範例  
@@ -62,13 +62,13 @@ ms.locfileid: "79167553"
   
 - 資料夾名稱只是一個冒號 ":" (<xref:System.IO.PathTooLongException> 類別)。  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
+## <a name="net-security"></a>.NET 安全性  
  在部分信任的狀況下，可能會擲回 <xref:System.Security.SecurityException> 類別的執行個體。  
   
- 若您沒有權限可建立資料夾，則範例會擲回 <xref:System.UnauthorizedAccessException> 類別的執行個體。  
+ 如果您沒有建立資料夾的許可權，此範例會擲回類別的實例 <xref:System.UnauthorizedAccessException> 。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [檔案系統和登錄 (C# 程式設計手冊)](./index.md)

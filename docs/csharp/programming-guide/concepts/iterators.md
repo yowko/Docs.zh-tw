@@ -2,12 +2,12 @@
 title: 在 C# 中逐一查看集合
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626266"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240690"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 
@@ -324,11 +324,11 @@ public class Stack<T> : IEnumerable<T>
 
 出現的迭代器可以是方法或 `get` 存取子。 迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態完成項中。
 
-隱式轉換必須存在於`yield return`語句中的運算式類型到反覆運算器返回的類型`IEnumerable<T>`參數。
+從語句中的運算式類型 `yield return` 到反覆運算器所傳回之的型別引數，都必須有隱含轉換 `IEnumerable<T>` 。
 
 在 C# 中，迭代器方法不可有任何 `in`、`ref` 或 `out` 參數。
 
-在 C#`yield`中，它不是保留詞，只有在 在`return`或`break`關鍵字之前使用時才具有特殊含義。
+在 c # 中，不是 `yield` 保留字，只有在或關鍵字之前使用時才具有特殊意義 `return` `break` 。
 
 ## <a name="technical-implementation"></a>技術實作
 
@@ -350,7 +350,7 @@ public class Stack<T> : IEnumerable<T>
 
 - 在第一次反覆運算 `foreach` 迴圈之後修改清單序列。
 
-- 避免在第一次反覆運算 `foreach` 迴圈之前完整載入大型清單。 分頁擷取以分批載入資料表資料列即為一例。 另一個範例是 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，它會在 .NET Framework 中實作迭代器。
+- 避免在第一次反覆運算 `foreach` 迴圈之前完整載入大型清單。 分頁擷取以分批載入資料表資料列即為一例。 另一個範例是 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，它會在 .net 中執行反覆運算器。
 
 - 在迭代器中封裝建立清單。 在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。
 

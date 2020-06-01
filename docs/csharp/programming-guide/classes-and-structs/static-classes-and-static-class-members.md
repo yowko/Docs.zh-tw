@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 7add512b262afbabe996f752c083566a2c394dfd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5e355d66d9b022a037d53e1241e76282852888e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705427"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241457"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>靜態類別和靜態類別成員 (C# 程式設計手冊)
 
@@ -23,7 +23,7 @@ ms.locfileid: "75705427"
 UtilityClass.MethodA();  
 ```  
   
- 如果方法集只作業於輸入參數，並且不需要取得或設定任何內部執行個體欄位，則靜態類別可以用作其方便使用的容器。 例如，在 .NET Framework 類別庫中，靜態 <xref:System.Math?displayProperty=nameWithType> 類別包含可執行數學運算的方法，而不需要儲存或擷取特定 <xref:System.Math> 類別執行個體所獨有的資料。 亦即，您可以指定類別名稱和方法名稱來套用類別的成員，如下列範例所示。  
+ 如果方法集只作業於輸入參數，並且不需要取得或設定任何內部執行個體欄位，則靜態類別可以用作其方便使用的容器。 例如，在 .NET 類別庫中，靜態 <xref:System.Math?displayProperty=nameWithType> 類別包含執行數學運算的方法，不需要儲存或抓取特定類別實例特有的資料 <xref:System.Math> 。 亦即，您可以指定類別名稱和方法名稱來套用類別的成員，如下列範例所示。  
   
 ```csharp  
 double dub = -3.14;  
@@ -37,7 +37,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- 與所有類別型別的情況相同，載入可參考類別的程式時，.NET Framework Common Language Runtime (CLR) 會載入靜態類別的型別資訊。 程式無法指定確實載入類別的時間。 不過，一定會載入類別、初始化其欄位，並在第一次於程式中參考類別之前呼叫其靜態建構函式。 只會呼叫靜態建構函式一次，而且靜態類別在程式所在應用程式定義域的存留期間保留在記憶體中。  
+ 如同所有類別類型的情況，當載入參考類別的程式時，.NET 執行時間會載入靜態類別的型別資訊。 程式無法指定確實載入類別的時間。 不過，一定會載入類別、初始化其欄位，並在第一次於程式中參考類別之前呼叫其靜態建構函式。 只會呼叫靜態建構函式一次，而且靜態類別在程式所在應用程式定義域的存留期間保留在記憶體中。  
   
 > [!NOTE]
 > 若要建立只允許建立它本身之一個執行個體的非靜態類別，請參閱 [Implementing Singleton in C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29) (在 C# 中實作單一)。  
@@ -90,9 +90,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [靜態](../../language-reference/keywords/static.md)
-- [類](./classes.md)
+- [C # 程式設計指南](../index.md)
+- [static](../../language-reference/keywords/static.md)
+- [類別](./classes.md)
 - [class](../../language-reference/keywords/class.md)
 - [靜態建構函式](./static-constructors.md)
-- [實例建構函式](./instance-constructors.md)
+- [執行個體建構函式](./instance-constructors.md)
