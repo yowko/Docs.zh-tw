@@ -24,7 +24,7 @@
     - name: 基本
       href: basic.md
       items:
-        - name: 開始使用
+        - name: 快速入門
           href: getting-started-sample.md
         - name: AJAX
           href: ajax.md
@@ -138,7 +138,7 @@
                   href: ws-transport-with-message-credential.md
                 - name: WS 交易流程
                   href: ws-transaction-flow.md
-        - name: Client
+        - name: 用戶端
           href: client.md
           items:
             - name: 用戶端互通性
@@ -202,7 +202,7 @@
                   href: one-way.md
                 - name: 工作階段
                   href: session.md
-                - name: STREAM
+                - name: 資料流
                   href: stream.md
                 - name: XmlSerializer 錯誤
                   href: xmlserializer-faults.md
@@ -215,11 +215,11 @@
         - name: 探索
           href: discovery-samples.md
           items:
-            - name: 通知
+            - name: 公告
               href: announcements-sample.md
             - name: 基本
               href: basic-sample.md
-            - name: 組態
+            - name: 設定
               href: configuration-sample.md
             - name: 探索範圍
               href: discovery-with-scopes-sample.md
@@ -229,7 +229,7 @@
               href: workflow-discovery-sample.md
             - name: 探索路由器服務
               href: discovery-router-service.md
-        - name: 管理性
+        - name: 管理
           href: management.md
           items:
             - name: WCF 服務及 Windows 的事件追蹤
@@ -294,7 +294,7 @@
                   href: using-the-wcf-moniker-with-com-clients.md
                 - name: 含 WCF 服務的 ASMX 用戶端
                   href: asmx-client-with-a-wcf-service.md
-            - name: 行為
+            - name: 「行為」
               href: behaviors.md
               items:
                 - name: 並行
@@ -454,7 +454,7 @@
         - name: 新聞訂閱擴充性範例
           href: syndication-extensibility-samples.md
           items:
-            - name: 強型別延伸
+            - name: 強型別延伸模組
               href: strongly-typed-extensions-sample.md
             - name: 摘要格式器 (JSON)
               href: feed-formatter-json.md
@@ -485,7 +485,7 @@
           href: message-inspectors.md
         - name: WebContentTypeMapper
           href: webcontenttypemapper-sample.md
-    - name: 狀況
+    - name: 情節
       href: scenario.md
       items:
         - name: 資料繫結案例
