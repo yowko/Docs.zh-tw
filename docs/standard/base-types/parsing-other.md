@@ -13,43 +13,43 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3503e0e499c6010fcc3d8669fa5c1eaf2dbf570
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127578"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277540"
 ---
-# <a name="parsing-other-strings-in-net"></a><span data-ttu-id="1e83f-102">在 .NET 中剖析其他字串</span><span class="sxs-lookup"><span data-stu-id="1e83f-102">Parsing Other Strings in .NET</span></span>
-<span data-ttu-id="1e83f-103">除了數值和 <xref:System.DateTime> 字串，您也可以將表示 <xref:System.Char>、<xref:System.Boolean> 和 <xref:System.Enum> 類型的字串剖析為資料類型。</span><span class="sxs-lookup"><span data-stu-id="1e83f-103">In addition to numeric and <xref:System.DateTime> strings, you can also parse strings that represent the types <xref:System.Char>, <xref:System.Boolean>, and <xref:System.Enum> into data types.</span></span>  
+# <a name="parsing-other-strings-in-net"></a><span data-ttu-id="b4b5e-102">在 .NET 中剖析其他字串</span><span class="sxs-lookup"><span data-stu-id="b4b5e-102">Parsing Other Strings in .NET</span></span>
+<span data-ttu-id="b4b5e-103">除了數值和 <xref:System.DateTime> 字串，您也可以將表示 <xref:System.Char>、<xref:System.Boolean> 和 <xref:System.Enum> 類型的字串剖析為資料類型。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-103">In addition to numeric and <xref:System.DateTime> strings, you can also parse strings that represent the types <xref:System.Char>, <xref:System.Boolean>, and <xref:System.Enum> into data types.</span></span>  
   
-## <a name="char"></a><span data-ttu-id="1e83f-104">Char</span><span class="sxs-lookup"><span data-stu-id="1e83f-104">Char</span></span>  
- <span data-ttu-id="1e83f-105">與 **Char** 資料類型相關聯的靜態 parse 方法，可用於將包含單一字元的字串轉換成其 Unicode 值。</span><span class="sxs-lookup"><span data-stu-id="1e83f-105">The static parse method associated with the **Char** data type is useful for converting a string that contains a single character into its Unicode value.</span></span> <span data-ttu-id="1e83f-106">下列程式碼範例會將字串剖析成 Unicode 字元。</span><span class="sxs-lookup"><span data-stu-id="1e83f-106">The following code example parses a string into a Unicode character.</span></span>  
+## <a name="char"></a><span data-ttu-id="b4b5e-104">Char</span><span class="sxs-lookup"><span data-stu-id="b4b5e-104">Char</span></span>  
+ <span data-ttu-id="b4b5e-105">與 **Char** 資料類型相關聯的靜態 parse 方法，可用於將包含單一字元的字串轉換成其 Unicode 值。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-105">The static parse method associated with the **Char** data type is useful for converting a string that contains a single character into its Unicode value.</span></span> <span data-ttu-id="b4b5e-106">下列程式碼範例會將字串剖析成 Unicode 字元。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-106">The following code example parses a string into a Unicode character.</span></span>  
   
  [!code-cpp[Conceptual.String.Parse#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#2)]
  [!code-csharp[Conceptual.String.Parse#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#2)]
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
-## <a name="boolean"></a><span data-ttu-id="1e83f-107">Boolean</span><span class="sxs-lookup"><span data-stu-id="1e83f-107">Boolean</span></span>  
- <span data-ttu-id="1e83f-108">**Boolean** 資料類型包含的 **Parse** 方法，可用來將代表 Boolean 值的字串轉換成實際的 **Boolean** 類型。</span><span class="sxs-lookup"><span data-stu-id="1e83f-108">The **Boolean** data type contains a **Parse** method that you can use to convert a string that represents a Boolean value into an actual **Boolean** type.</span></span> <span data-ttu-id="1e83f-109">這個方法不區分大小寫，而且可以成功剖析包含 "True" 或 "False" 的字串。</span><span class="sxs-lookup"><span data-stu-id="1e83f-109">This method is not case-sensitive and can successfully parse a string containing "True" or "False."</span></span> <span data-ttu-id="1e83f-110">與 **Boolean** 類型相關聯的 **Parse** 方法也可剖析由空白字元所包圍的字串。</span><span class="sxs-lookup"><span data-stu-id="1e83f-110">The **Parse** method associated with the **Boolean** type can also parse strings that are surrounded by white spaces.</span></span> <span data-ttu-id="1e83f-111">如果傳遞任何其他字串，則會擲回 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="1e83f-111">If any other string is passed, a <xref:System.FormatException> is thrown.</span></span>  
+## <a name="boolean"></a><span data-ttu-id="b4b5e-107">Boolean</span><span class="sxs-lookup"><span data-stu-id="b4b5e-107">Boolean</span></span>  
+ <span data-ttu-id="b4b5e-108">**Boolean** 資料類型包含的 **Parse** 方法，可用來將代表 Boolean 值的字串轉換成實際的 **Boolean** 類型。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-108">The **Boolean** data type contains a **Parse** method that you can use to convert a string that represents a Boolean value into an actual **Boolean** type.</span></span> <span data-ttu-id="b4b5e-109">這個方法不區分大小寫，而且可以成功剖析包含 "True" 或 "False" 的字串。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-109">This method is not case-sensitive and can successfully parse a string containing "True" or "False."</span></span> <span data-ttu-id="b4b5e-110">與 **Boolean** 類型相關聯的 **Parse** 方法也可剖析由空白字元所包圍的字串。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-110">The **Parse** method associated with the **Boolean** type can also parse strings that are surrounded by white spaces.</span></span> <span data-ttu-id="b4b5e-111">如果傳遞任何其他字串，則會擲回 <xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-111">If any other string is passed, a <xref:System.FormatException> is thrown.</span></span>  
   
- <span data-ttu-id="1e83f-112">下列程式碼範例會使用 **Parse** 方法來將字串轉換為 Boolean 值。</span><span class="sxs-lookup"><span data-stu-id="1e83f-112">The following code example uses the **Parse** method to convert a string into a Boolean value.</span></span>  
+ <span data-ttu-id="b4b5e-112">下列程式碼範例會使用 **Parse** 方法來將字串轉換為 Boolean 值。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-112">The following code example uses the **Parse** method to convert a string into a Boolean value.</span></span>  
   
  [!code-cpp[Conceptual.String.Parse#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#3)]
  [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
  [!code-vb[Conceptual.String.Parse#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#3)]  
   
-## <a name="enumeration"></a><span data-ttu-id="1e83f-113">列舉型別</span><span class="sxs-lookup"><span data-stu-id="1e83f-113">Enumeration</span></span>  
- <span data-ttu-id="1e83f-114">您可以使用靜態的 **Parse** 方法初始化字串值的列舉類型。</span><span class="sxs-lookup"><span data-stu-id="1e83f-114">You can use the static **Parse** method to initialize an enumeration type to the value of a string.</span></span> <span data-ttu-id="1e83f-115">此方法接受您剖析的列舉類型、要剖析的字串，以及指出剖析是否區分大小寫的選擇性 Boolean 旗標。</span><span class="sxs-lookup"><span data-stu-id="1e83f-115">This method accepts the enumeration type you are parsing, the string to parse, and an optional Boolean flag indicating whether or not the parse is case-sensitive.</span></span> <span data-ttu-id="1e83f-116">您要剖析的字串可以包含數個以逗號分隔的值，前後可有一或多個空格 (也稱為空白字元)。</span><span class="sxs-lookup"><span data-stu-id="1e83f-116">The string you are parsing can contain several values separated by commas, which can be preceded or followed by one or more empty spaces (also called white spaces).</span></span> <span data-ttu-id="1e83f-117">當字串包含多個值時，傳回物件的值就是結合了位元 OR 運算的所有指定值的值。</span><span class="sxs-lookup"><span data-stu-id="1e83f-117">When the string contains multiple values, the value of the returned object is the value of all specified values combined with a bitwise OR operation.</span></span>  
+## <a name="enumeration"></a><span data-ttu-id="b4b5e-113">列舉型別</span><span class="sxs-lookup"><span data-stu-id="b4b5e-113">Enumeration</span></span>  
+ <span data-ttu-id="b4b5e-114">您可以使用靜態的 **Parse** 方法初始化字串值的列舉類型。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-114">You can use the static **Parse** method to initialize an enumeration type to the value of a string.</span></span> <span data-ttu-id="b4b5e-115">此方法接受您剖析的列舉類型、要剖析的字串，以及指出剖析是否區分大小寫的選擇性 Boolean 旗標。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-115">This method accepts the enumeration type you are parsing, the string to parse, and an optional Boolean flag indicating whether or not the parse is case-sensitive.</span></span> <span data-ttu-id="b4b5e-116">您要剖析的字串可以包含數個以逗號分隔的值，前後可有一或多個空格 (也稱為空白字元)。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-116">The string you are parsing can contain several values separated by commas, which can be preceded or followed by one or more empty spaces (also called white spaces).</span></span> <span data-ttu-id="b4b5e-117">當字串包含多個值時，傳回物件的值就是結合了位元 OR 運算的所有指定值的值。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-117">When the string contains multiple values, the value of the returned object is the value of all specified values combined with a bitwise OR operation.</span></span>  
   
- <span data-ttu-id="1e83f-118">下列範例會使用 **Parse** 方法來將字串表示轉換為列舉值。</span><span class="sxs-lookup"><span data-stu-id="1e83f-118">The following example uses the **Parse** method to convert a string representation into an enumeration value.</span></span> <span data-ttu-id="1e83f-119"><xref:System.DayOfWeek> 列舉會從字串初始化為 **Thursday**。</span><span class="sxs-lookup"><span data-stu-id="1e83f-119">The <xref:System.DayOfWeek> enumeration is initialized to **Thursday** from a string.</span></span>  
+ <span data-ttu-id="b4b5e-118">下列範例會使用 **Parse** 方法來將字串表示轉換為列舉值。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-118">The following example uses the **Parse** method to convert a string representation into an enumeration value.</span></span> <span data-ttu-id="b4b5e-119"><xref:System.DayOfWeek> 列舉會從字串初始化為 **Thursday**。</span><span class="sxs-lookup"><span data-stu-id="b4b5e-119">The <xref:System.DayOfWeek> enumeration is initialized to **Thursday** from a string.</span></span>  
   
  [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="1e83f-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e83f-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4b5e-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b4b5e-120">See also</span></span>
 
-- [<span data-ttu-id="1e83f-121">剖析字串</span><span class="sxs-lookup"><span data-stu-id="1e83f-121">Parsing Strings</span></span>](../../../docs/standard/base-types/parsing-strings.md)
-- [<span data-ttu-id="1e83f-122">格式化類型</span><span class="sxs-lookup"><span data-stu-id="1e83f-122">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)
-- [<span data-ttu-id="1e83f-123">.NET 中的類型轉換</span><span class="sxs-lookup"><span data-stu-id="1e83f-123">Type Conversion in the .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)
+- [<span data-ttu-id="b4b5e-121">剖析字串</span><span class="sxs-lookup"><span data-stu-id="b4b5e-121">Parsing Strings</span></span>](parsing-strings.md)
+- [<span data-ttu-id="b4b5e-122">格式化類型</span><span class="sxs-lookup"><span data-stu-id="b4b5e-122">Formatting Types</span></span>](formatting-types.md)
+- [<span data-ttu-id="b4b5e-123">.NET 中的類型轉換</span><span class="sxs-lookup"><span data-stu-id="b4b5e-123">Type Conversion in the .NET</span></span>](type-conversion.md)

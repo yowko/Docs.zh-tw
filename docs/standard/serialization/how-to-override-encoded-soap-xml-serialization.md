@@ -6,38 +6,38 @@ helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 76e8009b83182d8517ff403f4f1e67bf0e7846b8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 50688cb25294f14a9dd4596258eb95adf93cdb41
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375838"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277982"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a><span data-ttu-id="b0cb1-103">HOW TO：覆寫已編碼的 SOAP XML 序列化</span><span class="sxs-lookup"><span data-stu-id="b0cb1-103">How to: Override Encoded SOAP XML Serialization</span></span>
+# <a name="how-to-override-encoded-soap-xml-serialization"></a><span data-ttu-id="f8c37-103">HOW TO：覆寫已編碼的 SOAP XML 序列化</span><span class="sxs-lookup"><span data-stu-id="f8c37-103">How to: Override Encoded SOAP XML Serialization</span></span>
 
-<span data-ttu-id="b0cb1-104">將物件的 XML 序列化覆寫為 SOAP 訊息的程序，與覆寫標準 XML 序列化的程序類似。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-104">The process for overriding XML serialization of objects as SOAP messages is similar to the process for overriding standard XML serialization.</span></span> <span data-ttu-id="b0cb1-105">如需覆寫標準 XML 序列化的資訊，請參閱[如何：指定 XML 資料流的替代項目名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-105">For information about overriding standard XML serialization, see [How to: Specify an Alternate Element Name for an XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>
+<span data-ttu-id="f8c37-104">將物件的 XML 序列化覆寫為 SOAP 訊息的程序，與覆寫標準 XML 序列化的程序類似。</span><span class="sxs-lookup"><span data-stu-id="f8c37-104">The process for overriding XML serialization of objects as SOAP messages is similar to the process for overriding standard XML serialization.</span></span> <span data-ttu-id="f8c37-105">如需覆寫標準 XML 序列化的資訊，請參閱[如何：指定 XML 資料流的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。</span><span class="sxs-lookup"><span data-stu-id="f8c37-105">For information about overriding standard XML serialization, see [How to: Specify an Alternate Element Name for an XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).</span></span>
 
-## <a name="to-override-serialization-of-objects-as-soap-messages"></a><span data-ttu-id="b0cb1-106">將物件的序列化覆寫為 SOAP 訊息</span><span class="sxs-lookup"><span data-stu-id="b0cb1-106">To override serialization of objects as SOAP messages</span></span>
+## <a name="to-override-serialization-of-objects-as-soap-messages"></a><span data-ttu-id="f8c37-106">將物件的序列化覆寫為 SOAP 訊息</span><span class="sxs-lookup"><span data-stu-id="f8c37-106">To override serialization of objects as SOAP messages</span></span>
 
-1. <span data-ttu-id="b0cb1-107">建立 <xref:System.Xml.Serialization.SoapAttributeOverrides> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-107">Create an instance of the <xref:System.Xml.Serialization.SoapAttributeOverrides> class.</span></span>
+1. <span data-ttu-id="f8c37-107">建立 <xref:System.Xml.Serialization.SoapAttributeOverrides> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="f8c37-107">Create an instance of the <xref:System.Xml.Serialization.SoapAttributeOverrides> class.</span></span>
 
-2. <span data-ttu-id="b0cb1-108">為每個序列化的類別成員建立 `SoapAttributes`。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-108">Create a `SoapAttributes` for each class member that is being serialized.</span></span>
+2. <span data-ttu-id="f8c37-108">為每個序列化的類別成員建立 `SoapAttributes`。</span><span class="sxs-lookup"><span data-stu-id="f8c37-108">Create a `SoapAttributes` for each class member that is being serialized.</span></span>
 
-3. <span data-ttu-id="b0cb1-109">對序列化的成員適當地建立會影響 XML 序列化之一個或多個屬性的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-109">Create an instance of one or more of the attributes that affect XML serialization, as appropriate, to the member being serialized.</span></span> <span data-ttu-id="b0cb1-110">如需詳細資訊，請參閱＜控制編碼 SOAP 序列化的屬性＞。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-110">For more information, see "Attributes That Control Encoded SOAP Serialization".</span></span>
+3. <span data-ttu-id="f8c37-109">對序列化的成員適當地建立會影響 XML 序列化之一個或多個屬性的執行個體。</span><span class="sxs-lookup"><span data-stu-id="f8c37-109">Create an instance of one or more of the attributes that affect XML serialization, as appropriate, to the member being serialized.</span></span> <span data-ttu-id="f8c37-110">如需詳細資訊，請參閱＜控制編碼 SOAP 序列化的屬性＞。</span><span class="sxs-lookup"><span data-stu-id="f8c37-110">For more information, see "Attributes That Control Encoded SOAP Serialization".</span></span>
 
-4. <span data-ttu-id="b0cb1-111">將 `SoapAttributes` 的適當屬性 (property) 設定為在步驟 3 所建立的屬性 (attribute)。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-111">Set the appropriate property of `SoapAttributes` to the attribute created in step 3.</span></span>
+4. <span data-ttu-id="f8c37-111">將 `SoapAttributes` 的適當屬性 (property) 設定為在步驟 3 所建立的屬性 (attribute)。</span><span class="sxs-lookup"><span data-stu-id="f8c37-111">Set the appropriate property of `SoapAttributes` to the attribute created in step 3.</span></span>
 
-5. <span data-ttu-id="b0cb1-112">將 `SoapAttributes` 新增至 `SoapAttributeOverrides`。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-112">Add `SoapAttributes` to `SoapAttributeOverrides`.</span></span>
+5. <span data-ttu-id="f8c37-112">將 `SoapAttributes` 新增至 `SoapAttributeOverrides`。</span><span class="sxs-lookup"><span data-stu-id="f8c37-112">Add `SoapAttributes` to `SoapAttributeOverrides`.</span></span>
 
-6. <span data-ttu-id="b0cb1-113">使用 `XmlTypeMapping` 建立 `SoapAttributeOverrides`。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-113">Create an `XmlTypeMapping` using the `SoapAttributeOverrides`.</span></span> <span data-ttu-id="b0cb1-114">請使用 `SoapReflectionImporter.ImportTypeMapping` 方法。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-114">Use the `SoapReflectionImporter.ImportTypeMapping` method.</span></span>
+6. <span data-ttu-id="f8c37-113">使用 `XmlTypeMapping` 建立 `SoapAttributeOverrides`。</span><span class="sxs-lookup"><span data-stu-id="f8c37-113">Create an `XmlTypeMapping` using the `SoapAttributeOverrides`.</span></span> <span data-ttu-id="f8c37-114">請使用 `SoapReflectionImporter.ImportTypeMapping` 方法。</span><span class="sxs-lookup"><span data-stu-id="f8c37-114">Use the `SoapReflectionImporter.ImportTypeMapping` method.</span></span>
 
-7. <span data-ttu-id="b0cb1-115">使用 `XmlSerializer` 建立 `XmlTypeMapping`。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-115">Create an `XmlSerializer` using `XmlTypeMapping`.</span></span>
+7. <span data-ttu-id="f8c37-115">使用 `XmlSerializer` 建立 `XmlTypeMapping`。</span><span class="sxs-lookup"><span data-stu-id="f8c37-115">Create an `XmlSerializer` using `XmlTypeMapping`.</span></span>
 
-8. <span data-ttu-id="b0cb1-116">序列化或還原序列化物件。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-116">Serialize or deserialize the object.</span></span>
+8. <span data-ttu-id="f8c37-116">序列化或還原序列化物件。</span><span class="sxs-lookup"><span data-stu-id="f8c37-116">Serialize or deserialize the object.</span></span>
 
-## <a name="example"></a><span data-ttu-id="b0cb1-117">範例</span><span class="sxs-lookup"><span data-stu-id="b0cb1-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="f8c37-117">範例</span><span class="sxs-lookup"><span data-stu-id="f8c37-117">Example</span></span>
 
-<span data-ttu-id="b0cb1-118">下列程式碼範例以兩種方法序列化檔案：第一種是不覆寫 `XmlSerializer` 類別的行為，第二種則是覆寫此行為。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-118">The following code example serializes a file in two ways: first, without overriding the `XmlSerializer` class's behavior, and second, by overriding the behavior.</span></span> <span data-ttu-id="b0cb1-119">本範例包含具有數個成員的 `Group` 類別。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-119">The example contains a class named `Group` with several members.</span></span> <span data-ttu-id="b0cb1-120">已將不同屬性 (例如 `SoapElementAttribute`) 套用至類別成員。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-120">Various attributes, such as the `SoapElementAttribute`, have been applied to class members.</span></span> <span data-ttu-id="b0cb1-121">當類別以 `SerializeOriginal` 方法序列化後，屬性會控制 SOAP 訊息內容。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-121">When the class is serialized with the `SerializeOriginal` method, the attributes control the SOAP message content.</span></span> <span data-ttu-id="b0cb1-122">呼叫 `SerializeOverride` 方法時，會建立不同屬性 (Attribute) 並將 `XmlSerializer` 的屬性 (Property) 設定為那些屬性 (Attribute) 來覆寫 `SoapAttributes` 的行為 (如果適合的話)。</span><span class="sxs-lookup"><span data-stu-id="b0cb1-122">When the `SerializeOverride` method is called, the behavior of the `XmlSerializer` is overridden by creating various attributes and setting the properties of a `SoapAttributes` to those attributes (as appropriate).</span></span>
+<span data-ttu-id="f8c37-118">下列程式碼範例以兩種方法序列化檔案：第一種是不覆寫 `XmlSerializer` 類別的行為，第二種則是覆寫此行為。</span><span class="sxs-lookup"><span data-stu-id="f8c37-118">The following code example serializes a file in two ways: first, without overriding the `XmlSerializer` class's behavior, and second, by overriding the behavior.</span></span> <span data-ttu-id="f8c37-119">本範例包含具有數個成員的 `Group` 類別。</span><span class="sxs-lookup"><span data-stu-id="f8c37-119">The example contains a class named `Group` with several members.</span></span> <span data-ttu-id="f8c37-120">已將不同屬性 (例如 `SoapElementAttribute`) 套用至類別成員。</span><span class="sxs-lookup"><span data-stu-id="f8c37-120">Various attributes, such as the `SoapElementAttribute`, have been applied to class members.</span></span> <span data-ttu-id="f8c37-121">當類別以 `SerializeOriginal` 方法序列化後，屬性會控制 SOAP 訊息內容。</span><span class="sxs-lookup"><span data-stu-id="f8c37-121">When the class is serialized with the `SerializeOriginal` method, the attributes control the SOAP message content.</span></span> <span data-ttu-id="f8c37-122">呼叫 `SerializeOverride` 方法時，會建立不同屬性 (Attribute) 並將 `XmlSerializer` 的屬性 (Property) 設定為那些屬性 (Attribute) 來覆寫 `SoapAttributes` 的行為 (如果適合的話)。</span><span class="sxs-lookup"><span data-stu-id="f8c37-122">When the `SerializeOverride` method is called, the behavior of the `XmlSerializer` is overridden by creating various attributes and setting the properties of a `SoapAttributes` to those attributes (as appropriate).</span></span>
 
 ```csharp
 using System;
@@ -279,11 +279,11 @@ public class Run
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="b0cb1-123">請參閱</span><span class="sxs-lookup"><span data-stu-id="b0cb1-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8c37-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8c37-123">See also</span></span>
 
-- [<span data-ttu-id="b0cb1-124">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="b0cb1-124">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [<span data-ttu-id="b0cb1-125">控制編碼 SOAP 序列化的屬性</span><span class="sxs-lookup"><span data-stu-id="b0cb1-125">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [<span data-ttu-id="b0cb1-126">使用 XML Web Service 進行 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="b0cb1-126">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [<span data-ttu-id="b0cb1-127">HOW TO：序列化物件</span><span class="sxs-lookup"><span data-stu-id="b0cb1-127">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [<span data-ttu-id="b0cb1-128">如何：還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="b0cb1-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [<span data-ttu-id="b0cb1-129">如何：將物件序列化為 SOAP 編碼的 XML 資料流</span><span class="sxs-lookup"><span data-stu-id="b0cb1-129">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [<span data-ttu-id="f8c37-124">XML 和 SOAP 序列化</span><span class="sxs-lookup"><span data-stu-id="f8c37-124">XML and SOAP Serialization</span></span>](xml-and-soap-serialization.md)
+- [<span data-ttu-id="f8c37-125">控制編碼 SOAP 序列化的屬性</span><span class="sxs-lookup"><span data-stu-id="f8c37-125">Attributes That Control Encoded SOAP Serialization</span></span>](attributes-that-control-encoded-soap-serialization.md)
+- [<span data-ttu-id="f8c37-126">使用 XML Web Service 進行 XML 序列化</span><span class="sxs-lookup"><span data-stu-id="f8c37-126">XML Serialization with XML Web Services</span></span>](xml-serialization-with-xml-web-services.md)
+- [<span data-ttu-id="f8c37-127">HOW TO：序列化物件</span><span class="sxs-lookup"><span data-stu-id="f8c37-127">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
+- [<span data-ttu-id="f8c37-128">如何：還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="f8c37-128">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)
+- [<span data-ttu-id="f8c37-129">如何：將物件序列化為 SOAP 編碼的 XML 資料流</span><span class="sxs-lookup"><span data-stu-id="f8c37-129">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
