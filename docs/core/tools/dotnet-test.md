@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: b427954fe0026e6ac96d3bbce2b70b5c44e884e0
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1190ecb75e83c9930c60726e7cd83203b11928cb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005371"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283932"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -134,7 +134,7 @@ dotnet test -h|--help
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  用來執行測試的 `.runsettings` 檔案。 請注意， `TargetPlatform` 元素（x86 | x64）對沒有任何作用 `dotnet test` 。 若要執行以 x86 為目標的測試，請安裝 x86 版本的 .NET Core。 路徑上*dotnet*的位就是用來執行測試的。 如需詳細資訊，請參閱下列資源：
+  用來執行測試的 `.runsettings` 檔案。 `TargetPlatform`元素（x86 | x64）對沒有任何作用 `dotnet test` 。 若要執行以 x86 為目標的測試，請安裝 x86 版本的 .NET Core。 路徑上*dotnet*的位就是用來執行測試的。 如需詳細資訊，請參閱下列資源：
 
   - [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)。
   - [設定測試回合](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md) \(英文\)
@@ -151,7 +151,7 @@ dotnet test -h|--help
 
  在 `RunSettings` "--" 之後，內嵌會當做命令列上的最後一個引數傳遞（請注意--後面的空格）。 Inline `RunSettings` 會指定 `[name]=[value]` 成對的。 空格適用來分隔多個 `[name]=[value]` 組。
 
-  範例：`dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
+  範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
   如需詳細資訊，請參閱[透過命令列傳遞 .runsettings 引數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 

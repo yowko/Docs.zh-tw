@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 2d8b22063a184773928e5bc072f51a9f7d5d45ba
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: aeb39f32c97424646b85b26ed9c4ed0e350d196b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396981"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287606"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>清除 Unmanaged 資源
 
@@ -44,11 +44,11 @@ ms.locfileid: "83396981"
 
 [執行 dispose 方法](implementing-dispose.md)說明如何執行處置模式以釋放非受控資源。
 
-[使用執行 `IDisposable` 的物件](../../../docs/standard/garbage-collection/using-objects.md)描述類型的取用者如何確保其 <xref:System.IDisposable.Dispose%2A> 實作為呼叫。 我們建議使用 c # `using` （或 Visual Basic `Using` ）語句來執行此動作。
+[使用執行 `IDisposable` 的物件](using-objects.md)描述類型的取用者如何確保其 <xref:System.IDisposable.Dispose%2A> 實作為呼叫。 我們建議使用 c # `using` （或 Visual Basic `Using` ）語句來執行此動作。
 
 ## <a name="reference"></a>參考
 
-| 類型/成員 | 說明 |
+| 類型/成員 | 描述 |
 |--|--|
 | <xref:System.IDisposable?displayProperty=nameWithType> | 定義用於釋放 Unmanaged 資源的 <xref:System.IDisposable.Dispose%2A> 方法。 |
 | <xref:System.Object.Finalize%2A?displayProperty=nameWithType> | 提供的用途是在 <xref:System.IDisposable.Dispose%2A> 方法未釋放 Unmanaged 資源時，進行物件最終處理。 |

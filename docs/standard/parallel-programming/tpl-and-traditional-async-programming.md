@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: e71c609b500bc6771c405cfb6f4ac14923cc3939
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 7db031c655980dd800de77cbbd6a07a0ba94b33b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507542"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284880"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和傳統 .NET Framework 非同步程式設計
 .NET Framework 提供下列兩個標準模式執行 I/O 繫結程序和計算繫結程序的非同步作業：  
@@ -102,7 +102,7 @@ ms.locfileid: "82507542"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- 如需更完整的範例，其中包含其他例外狀況處理，並示範如何從用戶端程式碼呼叫方法，請參閱[如何：將 EAP 模式包裝在工作中](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)。  
+ 如需更完整的範例，其中包含其他例外狀況處理，並示範如何從用戶端程式碼呼叫方法，請參閱[如何：將 EAP 模式包裝在工作中](how-to-wrap-eap-patterns-in-a-task.md)。  
   
  請記住任何由 <xref:System.Threading.Tasks.TaskCompletionSource%601> 所建立的工作，都將由 TaskCompletionSource 啟動，因此使用者程式碼不應該在該工作上呼叫 Start 方法。  
   
@@ -115,8 +115,8 @@ ms.locfileid: "82507542"
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>使用 StreamExtensions 範例程式碼  
- [.NET Standard 平行延伸模組額外](/samples/dotnet/samples/parallel-programming-extensions-extras-cs/)的儲存機制中的`Task` *StreamExtensions.cs*檔案，包含數個使用物件進行非同步檔案和網路 i/o 的參考。
+ [.NET Standard 平行延伸模組額外](/samples/dotnet/samples/parallel-programming-extensions-extras-cs/)的儲存機制中的*StreamExtensions.cs*檔案，包含數個使用 `Task` 物件進行非同步檔案和網路 i/o 的參考。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [工作平行程式庫 (TPL)](task-parallel-library-tpl.md)

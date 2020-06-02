@@ -17,49 +17,49 @@ helpviewer_keywords:
 - time zone objects [.NET Framework], serializing
 - time zone objects [.NET Framework], saving
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
-ms.openlocfilehash: c3c62f9fdd48ea9d0cede58d8540fb421d0096d2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8da26988d2e141ac704f0d3756cd8a50602cb3fd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131621"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281046"
 ---
 # <a name="saving-and-restoring-time-zones"></a>儲存和還原時區
 
-<xref:System.TimeZoneInfo> 類別依賴登錄來取出預先定義的時區資料。 不過，登錄是動態結構。 此外，作業系統會使用登錄所包含的時區資訊，主要用來處理目前年份的時間調整和轉換。 這對於依賴正確時區資料的應用程式有兩個主要的含意：
+<xref:System.TimeZoneInfo>類別依賴登錄來取出預先定義的時區資料。 不過，登錄是動態結構。 此外，作業系統會使用登錄所包含的時區資訊，主要用來處理目前年份的時間調整和轉換。 這對於依賴正確時區資料的應用程式有兩個主要的含意：
 
 - 應用程式所需的時區可能未定義于登錄中，或可能已從登錄中重新命名或移除。
 
 - 在登錄中定義的時區可能缺少歷程記錄時區轉換所需之特定調整規則的相關資訊。
 
-<xref:System.TimeZoneInfo> 類別透過其對時區資料的序列化（儲存）和還原序列化（還原）支援來解決這些限制。
+<xref:System.TimeZoneInfo>類別透過支援序列化（儲存）和還原序列化（還原）時區資料，來解決這些限制。
 
 ## <a name="time-zone-serialization-and-deserialization"></a>時區序列化和還原序列化
 
 藉由序列化和還原序列化時區資料來儲存和還原時區，只需要兩個方法呼叫：
 
-- 您可以藉由呼叫該物件的 <xref:System.TimeZoneInfo.ToSerializedString%2A> 方法來序列化 <xref:System.TimeZoneInfo> 物件。 方法不接受任何參數，而且會傳回包含時區資訊的字串。
+- 您可以藉 <xref:System.TimeZoneInfo> 由呼叫該物件的方法來序列化物件 <xref:System.TimeZoneInfo.ToSerializedString%2A> 。 方法不接受任何參數，而且會傳回包含時區資訊的字串。
 
-- 您可以藉由將該字串傳遞給 `static` （`Shared` 在 Visual Basic） <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> 方法，從序列化字串還原序列化 <xref:System.TimeZoneInfo> 物件。
+- 您可以藉 <xref:System.TimeZoneInfo> 由將該字串傳遞至 `static` （ `Shared` 在 Visual Basic）方法中，將物件從序列化的字串還原序列化 <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> 。
 
 ## <a name="serialization-and-deserialization-scenarios"></a>序列化和還原序列化案例
 
-能夠將 <xref:System.TimeZoneInfo> 物件儲存（或序列化）至字串，並還原（或還原序列化）它以供稍後使用，同時增加了公用程式和 <xref:System.TimeZoneInfo> 類別的彈性。 本節將探討序列化和還原序列化最有用的一些情況。
+能夠將物件儲存（或序列化） <xref:System.TimeZoneInfo> 至字串，並還原（或還原序列化）它以供稍後使用，同時增加了公用程式和類別的彈性 <xref:System.TimeZoneInfo> 。 本節將探討序列化和還原序列化最有用的一些情況。
 
 ### <a name="serializing-and-deserializing-time-zone-data-in-an-application"></a>序列化和還原序列化應用程式中的時區資料
 
 您可以視需要從字串還原序列化的時區。 如果從登錄中抓取的時區無法正確轉換特定日期範圍內的日期和時間，應用程式可能會這麼做。 例如，Windows XP 登錄中的時區資料支援單一調整規則，而 Windows Vista 登錄中所定義的時間區域通常會提供兩個調整規則的相關資訊。 這表示歷程記錄時間轉換可能不正確。 時區資料的序列化和還原序列化可以處理這項限制。
 
-在下列範例中，所定義的自訂 <xref:System.TimeZoneInfo> 類別沒有調整規則，該類別代表從 1883 到 1917 年，日光節約時間推行之前的美國東部標準時間時區。 自訂時區會在具有全域範圍的變數中序列化。 時區轉換方法（`ConvertUtcTime`）會以國際標準時間（UTC）時間傳遞以進行轉換。 如果日期和時間發生在1917或更早的版本中，自訂的東部標準時區會從序列化字串還原，並取代從登錄中抓取的時區。
+在下列範例中，所定義的自訂 <xref:System.TimeZoneInfo> 類別沒有調整規則，該類別代表從 1883 到 1917 年，日光節約時間推行之前的美國東部標準時間時區。 自訂時區會在具有全域範圍的變數中序列化。 時區轉換方法 `ConvertUtcTime` 會傳遞國際標準時間（UTC）時間來進行轉換。 如果日期和時間發生在1917或更早的版本中，自訂的東部標準時區會從序列化字串還原，並取代從登錄中抓取的時區。
 
 [!code-csharp[System.TimeZone2.Serialization.1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/cs/Serialization.cs#1)]
 [!code-vb[System.TimeZone2.Serialization.1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/vb/Serialization.vb#1)]
 
 ### <a name="handling-time-zone-exceptions"></a>處理時區例外狀況
 
-由於登錄是動態結構，因此其內容會受到意外或刻意的修改。 這表示應該在登錄中定義且應用程式成功執行所需的時區不存在。 若不支援時區序列化和還原序列化，您就有很少的選擇，但會藉由結束應用程式來處理產生的 <xref:System.TimeZoneNotFoundException>。 不過，藉由使用時區序列化和還原序列化，您可以藉由從序列化字串還原所需的時區來處理非預期的 <xref:System.TimeZoneNotFoundException>，應用程式將會繼續執行。
+由於登錄是動態結構，因此其內容會受到意外或刻意的修改。 這表示應該在登錄中定義且應用程式成功執行所需的時區不存在。 不支援時區序列化和還原序列化，您只需要進行一些選擇，但要處理藉 <xref:System.TimeZoneNotFoundException> 由結束應用程式所產生的。 不過，藉由使用時區序列化和還原序列化，您可以藉 <xref:System.TimeZoneNotFoundException> 由從序列化字串還原所需的時區來處理非預期的，應用程式將會繼續執行。
 
-下列範例會建立並序列化自訂的中央標準時區。 然後，它會嘗試從登錄中取出中央標準時區。 如果抓取作業擲回 <xref:System.TimeZoneNotFoundException> 或 <xref:System.InvalidTimeZoneException>，則例外狀況處理常式會將時區還原序列化。
+下列範例會建立並序列化自訂的中央標準時區。 然後，它會嘗試從登錄中取出中央標準時區。 如果抓取作業擲回 <xref:System.TimeZoneNotFoundException> 或 <xref:System.InvalidTimeZoneException> ，則例外狀況處理常式會將時區還原序列化。
 
 [!code-csharp[System.TimeZone2.Serialization.2#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/cs/Serialization2.cs#1)]
 [!code-vb[System.TimeZone2.Serialization.2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/vb/Serialization2.vb#1)]
@@ -70,8 +70,8 @@ ms.locfileid: "73131621"
 
 以此方式儲存序列化的時區字串也會將時區建立常式與應用程式本身分開。 例如，時區建立常式可以執行並建立資料檔，其中包含應用程式可使用的歷程記錄時區資訊。 然後，您可以在應用程式中安裝資料檔案，並且可以開啟它，並在應用程式需要時，將它的一個或多個時區還原序列化。
 
-如需使用內嵌資源儲存序列化的時區資料的範例，請參閱[如何：將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[如何：從內嵌資源還原時區](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
+如需使用內嵌資源儲存序列化的時區資料的範例，請參閱[如何：將時區儲存到內嵌資源](save-time-zones-to-an-embedded-resource.md)和[如何：從內嵌資源還原時區](restore-time-zones-from-an-embedded-resource.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [日期、時間及時區](../../../docs/standard/datetime/index.md)
+- [日期、時間和時區](index.md)

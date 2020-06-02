@@ -1,16 +1,21 @@
 ---
-title: ''
-ms.date: ''
+title: 如何撰寫 JSON 序列化的自訂轉換器-.NET
+ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: 69c11df8217ac6dbdddd98c550f084075b901ea6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+- converters
+ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703603"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279759"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中撰寫 JSON 序列化（封送處理）的自訂轉換器
 
@@ -26,7 +31,7 @@ ms.locfileid: "83703603"
 * [將推斷的類型還原序列化為物件屬性](#deserialize-inferred-types-to-object-properties)。
 * [支援具有非字串索引鍵的字典](#support-dictionary-with-non-string-key)。
 * [支援](#support-polymorphic-deserialization)多型還原序列化。
-* [堆疊 \< 的支援來回行程T>](#support-round-trip-for-stackt)。
+* [支援堆疊 \<T> 的往返](#support-round-trip-for-stackt)。
 
 ## <a name="custom-converter-patterns"></a>自訂轉換器模式
 
@@ -44,7 +49,7 @@ ms.locfileid: "83703603"
 * `DateTime`
 * `Int32`
 
-基本模式會建立可處理一種類型的類別。 Factory 模式會建立一個類別，它會在執行時間決定需要哪一個特定型別，並以動態方式建立適當的轉換器。
+基本模式會建立可處理一種類型的類別。 Factory 模式會建立一個類別，它會在執行時間決定所需的特定型別，並以動態方式建立適當的轉換器。
 
 ## <a name="sample-basic-converter"></a>範例基本轉換器
 
@@ -54,7 +59,7 @@ ms.locfileid: "83703603"
 
 ## <a name="sample-factory-pattern-converter"></a>範例 factory 模式切換器
 
-下列程式碼顯示可搭配使用的自訂轉換器 `Dictionary<Enum,TValue>` 。 程式碼會遵循 factory 模式，因為第一個泛型型別參數是 `Enum` ，而第二個是開啟的。 `CanConvert`方法 `true` 只 `Dictionary` 會針對具有兩個泛型參數的進行傳回，其中第一個是 `Enum` 型別。 內部轉換器會取得現有的轉換器，以處理在執行時間所提供的任何類型 `TValue` 。
+下列程式碼顯示可搭配使用的自訂轉換器 `Dictionary<Enum,TValue>` 。 程式碼會遵循 factory 模式，因為第一個泛型型別參數是 `Enum` ，而第二個是開啟的。 `CanConvert`方法 `true` 只 `Dictionary` 會針對具有兩個泛型參數的進行傳回，其中第一個是 `Enum` 型別。 內部轉換器會取得現有的轉換器，以處理在執行時間提供的任何類型 `TValue` 。
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
@@ -175,7 +180,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 * [將推斷的類型還原序列化為物件屬性](#deserialize-inferred-types-to-object-properties)
 * [支援具有非字串索引鍵的字典](#support-dictionary-with-non-string-key)
 * [支援多型還原序列化](#support-polymorphic-deserialization)
-* [堆疊 \< 的支援來回行程T>](#support-round-trip-for-stackt)。
+* [支援堆疊 \<T> 的往返](#support-round-trip-for-stackt)。
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>將推斷的類型還原序列化為物件屬性
 
@@ -252,7 +257,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 內建功能提供有限範圍的多型[序列化](system-text-json-how-to.md#serialize-properties-of-derived-classes)，但完全不支援還原序列化。 還原序列化需要自訂的轉換器。
 
-例如，假設您有一個 `Person` 具有 `Employee` 和衍生類別的抽象基類 `Customer` 。 多型還原序列化表示在設計階段，您可以指定 `Person` 做為還原序列化目標，而且 `Customer` `Employee` JSON 中的和物件會在執行時間正確地還原序列化。 在還原序列化期間，您必須尋找識別 JSON 中所需類型的線索。 可用的線索種類會因每個案例而異。 例如，鑒別子屬性可能可供使用，或者您可能必須依賴特定屬性的存在與否。 目前的版本 `System.Text.Json` 並未提供屬性來指定如何處理多型還原序列化案例，因此需要自訂轉換器。
+例如，假設您有一個 `Person` 具有 `Employee` 和衍生類別的抽象基類 `Customer` 。 多型還原序列化表示在設計階段，您可以指定 `Person` 做為還原序列化目標，並在 `Customer` `Employee` 執行時間正確地還原序列化 JSON 中的和物件。 在還原序列化期間，您必須尋找識別 JSON 中所需類型的線索。 可用的線索種類會因每個案例而異。 例如，鑒別子屬性可能可供使用，或者您可能必須依賴特定屬性的存在與否。 目前的版本 `System.Text.Json` 並未提供屬性來指定如何處理多型還原序列化案例，因此需要自訂轉換器。
 
 下列程式碼顯示基類、兩個衍生類別和自訂的轉換器。 轉換器會使用鑒別子屬性來執行多型還原序列化。 類型鑒別子不在類別定義中，而是在序列化期間建立，並且會在還原序列化期間讀取。
 
@@ -283,7 +288,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 前述範例中的轉換器程式碼會以手動方式讀取和寫入每個屬性。 另一種方法是呼叫 `Deserialize` 或 `Serialize` 來執行一些工作。 如需範例，請參閱[這 StackOverflow 文章](https://stackoverflow.com/a/59744873/12509023)。
 
-### <a name="support-round-trip-for-stackt"></a>支援堆疊 T> 的往返 \<
+### <a name="support-round-trip-for-stackt"></a>堆疊的支援來回行程\<T>
 
 如果您將 JSON 字串還原序列化為 <xref:System.Collections.Generic.Stack%601> 物件，然後將該物件序列化，堆疊的內容會以反向順序排列。 這個行為適用于下列類型和介面，以及從它們衍生的使用者定義型別：
 
@@ -312,7 +317,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 * [在還原序列化時，將 null 轉換為0的 Int32 轉換子](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
 * [Int32 轉換器，可在還原序列化時同時允許字串和數位值](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [列舉轉換器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
-* [列出 \< T> 接受外部資料的轉換器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [列出 \<T> 接受外部資料的轉換器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
 * [Long [] 轉換器，適用于以逗號分隔的數位清單](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 如果您需要建立可修改現有內建轉換器行為的轉換器，您可以取得[現有轉換器的原始程式碼](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)，做為自訂的起點。

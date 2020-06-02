@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: f5312177b9f437d9b5474d38fca80db6fc45245b
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ff34b295ba443088115d470d8ade0c986ac1d856
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77123671"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288845"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
-您可以使用 .NET Framework 的[可移植類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)來執行模型視圖視圖模型（MVVM）模式，並跨多個平臺共用元件。
+您可以使用 .NET Framework 的[可移植類別庫](cross-platform-development-with-the-portable-class-library.md)來執行模型視圖視圖模型（MVVM）模式，並跨多個平臺共用元件。
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
@@ -50,14 +50,14 @@ ms.locfileid: "77123671"
 
 - <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> 類別
 
-- <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> 命名空間中的所有類別
+- 命名空間中的所有類別 <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>
 
 ## <a name="implementing-mvvm"></a>執行 MVVM
  若要執行 MVVM，您通常會在可移植的類別庫專案中建立模型和視圖模型，因為可移植的類別庫專案無法參考不可移植的專案。 模型和視圖模型可以位於相同的專案或個別專案中。 如果您使用不同的專案，請從視圖模型專案中，將參考加入至模型專案。
 
  在您編譯模型和視圖模型專案之後，您會參考應用程式中包含此視圖的元件。 如果此視圖只與視圖模型互動，您只需要參考包含視圖模型的元件。
 
-### <a name="model"></a>模型
+### <a name="model"></a>型號
  下列範例顯示可能位於可移植類別庫專案中的簡化模型類別。
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -74,7 +74,7 @@ ms.locfileid: "77123671"
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- <xref:System.Windows.Input.ICommand> 介面的執行通常與 MVVM 模式搭配使用。 下列範例會示範 <xref:System.Windows.Input.ICommand> 介面的實作。
+ 介面的執行 <xref:System.Windows.Input.ICommand> 通常與 MVVM 模式搭配使用。 下列範例會示範 <xref:System.Windows.Input.ICommand> 介面的實作。
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
@@ -91,4 +91,4 @@ ms.locfileid: "77123671"
   
 ## <a name="see-also"></a>另請參閱
 
-- [可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [可攜式類別庫](cross-platform-development-with-the-portable-class-library.md)

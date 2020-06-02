@@ -1,22 +1,22 @@
 ---
-title: 使用點網-svcutil.xml 序列化器
+title: 使用 dotnet-svcutil
 description: 了解如何使用 `dotnet-svcutil.xmlserializer` NuGet 套件預先產生 .NET Core 專案的序列化組件。
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14bb2e8a85ec35f08b0a83b9734a64d751074f1b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344893"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284321"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 
 `dotnet-svcutil.xmlserializer` NuGet 套件可預先產生 .NET Core 專案的序列化組件。 它會為用戶端應用程式中由 WCF 服務合約使用且可由 XmlSerializer 序列化的類型預先產生 C# 序列化程式碼。 這可改進當序列化或還原序列化那些類型的物件時的 XML 序列化啟動效能。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-* [.NET 核心 2.1 SDK](https://dotnet.microsoft.com/download)或更高版本
+* [.Net Core 2.1 SDK](https://dotnet.microsoft.com/download)或更新版本
 * 您慣用的程式碼編輯器
 
 您可以使用命令 `dotnet --info` 來檢查已安裝的 .NET Core SDK 和執行階段版本。
@@ -98,4 +98,4 @@ ms.locfileid: "75344893"
 
 6. 執行 `dotnet build` 建置應用程式。 如果所有項目都成功，則會在輸出資料夾中產生名為 *MyWCFClient.XmlSerializers.dll* 的組件。 如果此工具無法產生組件，您將在建置輸出中看到警告。
 
-7. 啟動 WCF 服務，例如在瀏覽器中執行 `http://localhost:2561/Service1.svc`。 然後啟動用戶端應用程式，它將在執行階段自動載入和使用預先產生的序列化程式。
+7. 啟動 WCF 服務，例如在瀏覽器中執行 `http://localhost:2561/Service1.svc`。 然後啟動用戶端應用程式，它會在執行時間自動載入和使用預先產生的序列化程式。

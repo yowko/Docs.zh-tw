@@ -1,46 +1,47 @@
 ---
 title: 程式碼範例
+description: 這些範例會示範 .NET Framework 程式設計人員如何使用 ADO.NET 資料提供者和 ADO.NET Entity Framework，從資料庫中取出資料。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 6e0c34e1db50030c78db295f26fcc25b431d3dde
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 54df0e253716c970cf23446434d96b104b8e9b03
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111799"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287164"
 ---
-# <a name="adonet-code-examples"></a>ADO.NET代碼示例
+# <a name="adonet-code-examples"></a>ADO.NET 程式碼範例
 
-此頁上的代碼清單演示如何使用以下ADO.NET技術從資料庫檢索資料：
+此頁面上的程式代碼清單示範如何使用下列 ADO.NET 技術，從資料庫中取出資料：
 
 - ADO.NET 資料提供者：
 
-  - [SqlClient](#sqlclient) `System.Data.SqlClient`（ ）
+  - [SqlClient](#sqlclient) （ `System.Data.SqlClient` ）
 
-  - [OleDb](#oledb) `System.Data.OleDb`（ ）
+  - [OleDb](#oledb) （ `System.Data.OleDb` ）
 
-  - [奧德布](#odbc)`System.Data.Odbc`（ ）
+  - [Odbc](#odbc) （ `System.Data.Odbc` ）
 
-  - [甲骨文客戶](#oracleclient)`System.Data.OracleClient`（ ）
+  - [OracleClient](#oracleclient) （ `System.Data.OracleClient` ）
 
 - ADO.NET Entity Framework：
 
-  - [林Q 到實體](#linq-to-entities)
+  - [LINQ to Entities](#linq-to-entities)
 
   - [具型別的 ObjectQuery](#typed-objectquery)
 
-  - [實體用戶端](#entityclient)`System.Data.EntityClient`（ ）
+  - [EntityClient](#entityclient) （ `System.Data.EntityClient` ）
 
 - [LINQ to SQL](#linq-to-sql)
 
-## <a name="adonet-data-provider-examples"></a>ADO.NET資料提供程式示例
-下列程式碼清單將示範如何使用 ADO.NET 資料提供者來擷取資料庫中的資料。 資料會傳入 `DataReader` 中。 有關詳細資訊，請參閱[使用資料讀取器檢索資料](retrieving-data-using-a-datareader.md)。
+## <a name="adonet-data-provider-examples"></a>ADO.NET 資料提供者範例
+下列程式碼清單將示範如何使用 ADO.NET 資料提供者來擷取資料庫中的資料。 資料會傳入 `DataReader` 中。 如需詳細資訊，請參閱[使用 DataReader 抓取資料](retrieving-data-using-a-datareader.md)。
 
 ### <a name="sqlclient"></a>SqlClient
-此示例中的代碼假定您可以連接到 Microsoft SQL Server`Northwind`上的示例資料庫。 這段程式碼會建立 <xref:System.Data.SqlClient.SqlCommand>，以便從 Products 資料表中選取資料列，並且加入 <xref:System.Data.SqlClient.SqlParameter>，以便將結果限制為 UnitPrice 大於指定之參數值 (在此案例中為 5) 的資料列。 在<xref:System.Data.SqlClient.SqlConnection>`using`塊內打開 ，這可確保在代碼退出時關閉和釋放資源。 然後，程式碼會使用 <xref:System.Data.SqlClient.SqlDataReader> 來執行此命令，並且在主控台視窗中顯示結果。
+此範例中的程式碼假設您可以連接到 `Northwind` Microsoft SQL Server 上的範例資料庫。 這段程式碼會建立 <xref:System.Data.SqlClient.SqlCommand>，以便從 Products 資料表中選取資料列，並且加入 <xref:System.Data.SqlClient.SqlParameter>，以便將結果限制為 UnitPrice 大於指定之參數值 (在此案例中為 5) 的資料列。 <xref:System.Data.SqlClient.SqlConnection>會在區塊內開啟 `using` ，以確保當程式碼結束時，會關閉及處置資源。 然後，程式碼會使用 <xref:System.Data.SqlClient.SqlDataReader> 來執行此命令，並且在主控台視窗中顯示結果。
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
@@ -52,7 +53,7 @@ ms.locfileid: "80111799"
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
 ### <a name="odbc"></a>ODBC
-這則範例中的程式碼會假設您可以連接至 Microsoft Access Northwind 範例資料庫。 這段程式碼會建立 <xref:System.Data.Odbc.OdbcCommand>，以便從 Products 資料表中選取資料列，並且加入 <xref:System.Data.Odbc.OdbcParameter>，以便將結果限制為 UnitPrice 大於指定之參數值 (在此案例中為 5) 的資料列。 在<xref:System.Data.Odbc.OdbcConnection>`using`塊內打開 ，這可確保在代碼退出時關閉和釋放資源。 然後，程式碼會使用 <xref:System.Data.Odbc.OdbcDataReader> 來執行此命令，並且在主控台視窗中顯示結果。
+這則範例中的程式碼會假設您可以連接至 Microsoft Access Northwind 範例資料庫。 這段程式碼會建立 <xref:System.Data.Odbc.OdbcCommand>，以便從 Products 資料表中選取資料列，並且加入 <xref:System.Data.Odbc.OdbcParameter>，以便將結果限制為 UnitPrice 大於指定之參數值 (在此案例中為 5) 的資料列。 <xref:System.Data.Odbc.OdbcConnection>會在區塊內開啟 `using` ，以確保當程式碼結束時，會關閉及處置資源。 然後，程式碼會使用 <xref:System.Data.Odbc.OdbcDataReader> 來執行此命令，並且在主控台視窗中顯示結果。
 
 [!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)]
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)]
@@ -63,11 +64,11 @@ ms.locfileid: "80111799"
  [!code-csharp[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
-## <a name="entity-framework-examples"></a>實體框架示例
-下列程式碼清單將示範如何透過查詢 Entity Data Model (EDM) 中的實體，擷取資料來源中的資料。 這些示例使用基於北風示例資料庫的模型。 有關實體框架的詳細資訊，請參閱[實體框架概述](./ef/overview.md)。
+## <a name="entity-framework-examples"></a>Entity Framework 範例
+下列程式碼清單將示範如何透過查詢 Entity Data Model (EDM) 中的實體，擷取資料來源中的資料。 這些範例會使用以 Northwind 範例資料庫為基礎的模型。 如需 Entity Framework 的詳細資訊，請參閱[Entity Framework 總覽](./ef/overview.md)。
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-這則範例中的程式碼會使用 LINQ 查詢來傳回資料當做 Categories 物件，而這些物件會投影成僅包含 CategoryID 和 CategoryName 屬性的匿名型別。 有關詳細資訊，請參閱[LINQ 到實體概述](./ef/language-reference/linq-to-entities.md)。
+這則範例中的程式碼會使用 LINQ 查詢來傳回資料當做 Categories 物件，而這些物件會投影成僅包含 CategoryID 和 CategoryName 屬性的匿名型別。 如需詳細資訊，請參閱[LINQ to Entities 總覽](./ef/language-reference/linq-to-entities.md)。
 
 ```csharp
 using System;
@@ -137,7 +138,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>具型別的 ObjectQuery
-這則範例中的程式碼會使用 <xref:System.Data.Objects.ObjectQuery%601> 來傳回資料當做 Categories 物件。 有關詳細資訊，請參閱[物件查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))。
+這則範例中的程式碼會使用 <xref:System.Data.Objects.ObjectQuery%601> 來傳回資料當做 Categories 物件。 如需詳細資訊，請參閱[物件查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))。
 
 ```csharp
 using System;
@@ -269,7 +270,7 @@ End Class
 ```
 
 ## <a name="linq-to-sql"></a>LINQ to SQL
-這則範例中的程式碼會使用 LINQ 查詢來傳回資料當做 Categories 物件，而這些物件會投影成僅包含 CategoryID 和 CategoryName 屬性的匿名型別。 這則範例是以 Northwind 資料內容為基礎。 有關詳細資訊，請參閱[入門](./sql/linq/getting-started.md)。
+這則範例中的程式碼會使用 LINQ 查詢來傳回資料當做 Categories 物件，而這些物件會投影成僅包含 CategoryID 和 CategoryName 屬性的匿名型別。 這則範例是以 Northwind 資料內容為基礎。 如需詳細資訊，請參閱[消費者入門](./sql/linq/getting-started.md)。
 
 ```csharp
 using System;

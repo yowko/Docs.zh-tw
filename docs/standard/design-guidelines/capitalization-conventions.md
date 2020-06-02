@@ -9,12 +9,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8af4a15e1e5b34c38b14c6b547cf44801bbf13e6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741766"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280396"
 ---
 # <a name="capitalization-conventions"></a>大小寫慣例
 本章中的指導方針會配置一個簡單的方法，以便在一致地套用時，讓型別、成員和參數的識別碼易於閱讀。
@@ -62,7 +62,7 @@ ms.locfileid: "76741766"
 ## <a name="capitalizing-compound-words-and-common-terms"></a>將複合字和共同詞彙大寫
  大部分的複合詞匯會視為大寫用途的單一單字。
 
- ❌ 不要將所謂的封閉表單複合單字中的每個單字全部大寫。
+ ❌請不要將所謂的封閉表單複合單字中的每個字大寫。
 
  這些是以單一單字撰寫的複合字組，例如端點。 基於大小寫方針的目的，請將封閉形式的複合字視為單一單字。 使用目前的字典來判斷複合字是否以已關閉的形式寫入。
 
@@ -97,13 +97,13 @@ ms.locfileid: "76741766"
 ## <a name="case-sensitivity"></a>區分大小寫
  可以在 CLR 上執行的語言並不需要支援區分大小寫，雖然有些也是如此。 即使您的語言支援它，其他可能存取您架構的語言也不會。 因此，可從外部存取的任何 Api 都不能單獨依賴大小寫來區別相同內容中的兩個名稱。
 
- ❌ 不會假設所有程式設計語言都區分大小寫。 但它們並不相等。 名稱不能單獨以大小寫不同。
+ ❌請勿假設所有程式設計語言都區分大小寫。 但它們並不相等。 名稱不能單獨以大小寫不同。
 
  *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
 
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。**
 
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
-- [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [架構設計方針](index.md)
+- [命名方針](naming-guidelines.md)

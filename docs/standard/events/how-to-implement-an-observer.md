@@ -9,15 +9,15 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 969b83bcd11159509a2cc1ed843836679ffd1705
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139315"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289716"
 ---
 # <a name="how-to-implement-an-observer"></a>如何：實作觀察器
-觀察者設計模式需要觀察者和提供者之間的分區，其中觀察者會註冊通知，而提供者會監視資料並將通知傳送到一個或多個觀察者。 本主題討論如何建立觀察者。 相關主題為[操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)，討論如何建立提供者。  
+觀察者設計模式需要觀察者和提供者之間的分區，其中觀察者會註冊通知，而提供者會監視資料並將通知傳送到一個或多個觀察者。 本主題討論如何建立觀察者。 相關主題為[操作說明：實作提供者](how-to-implement-a-provider.md)，討論如何建立提供者。  
   
 ### <a name="to-create-an-observer"></a>建立觀察者  
   
@@ -50,6 +50,6 @@ ms.locfileid: "73139315"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IObserver%601>
-- [觀察器設計模式](../../../docs/standard/events/observer-design-pattern.md)
-- [如何：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)
-- [觀察者設計模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [觀察器設計模式](observer-design-pattern.md)
+- [如何：執行提供者](how-to-implement-a-provider.md)
+- [觀察者設計模式最佳做法](observer-design-pattern-best-practices.md)

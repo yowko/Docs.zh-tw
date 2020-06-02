@@ -3,12 +3,12 @@ title: 建立新實體參考
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-ms.openlocfilehash: 8c81aae89bbe5979dffdc47a369349bd2b3f2df7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7c94d121d00c169f0d74bc9b12c8710fb6055250
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710982"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283347"
 ---
 # <a name="creating-new-entity-references"></a>建立新實體參考
 **CreateEntityReference** 方法建立新 **XmlEntityReference** 節點。 XML 文件物件模型 (DOM) 會查看所要參考的實體名稱是否已進行宣告。 如果是，**XmlEntityReference** 節點的子節點會從實體宣告節點複製。 如果沒有符合的實體宣告，會將空白文字節點當成實體參考節點的唯一子代附加上去。 因為 **XmlEntityReference** 節點的子節點是其他節點的複本，因此這些子節點是唯讀的而且無法修改。  
@@ -22,4 +22,4 @@ ms.locfileid: "75710982"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)
