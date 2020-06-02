@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937996"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282385"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>從 XslTransform 類別移轉
 
@@ -35,7 +35,7 @@ XSLT 架構已在 Visual Studio 2005 版本中重新設計。 <xref:System.Xml.X
 [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
 [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]
 
-如需詳細資訊，請參閱 [XSLT 安全性考量](../../../../docs/standard/data/xml/xslt-security-considerations.md)。
+如需詳細資訊，請參閱 [XSLT 安全性考量](xslt-security-considerations.md)。
 
 ## <a name="new-features"></a>新功能
 
@@ -97,7 +97,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 ### <a name="discretionary-behavior"></a>Discretionary 行為
 
-＜W3C XSL 轉換 (XSLT) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。 這些領域視為 Discretionary 行為。 在幾個領域中，<xref:System.Xml.Xsl.XslCompiledTransform> 的行為與 <xref:System.Xml.Xsl.XslTransform> 類別有一些差異。 如需詳細資訊，請參閱[可復原的 XSLT 錯誤](../../../../docs/standard/data/xml/recoverable-xslt-errors.md)。
+＜W3C XSL 轉換 (XSLT) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。 這些領域視為 Discretionary 行為。 在幾個領域中，<xref:System.Xml.Xsl.XslCompiledTransform> 的行為與 <xref:System.Xml.Xsl.XslTransform> 類別有一些差異。 如需詳細資訊，請參閱[可復原的 XSLT 錯誤](recoverable-xslt-errors.md)。
 
 ### <a name="extension-objects-and-script-functions"></a>擴充物件和指令碼函式
 
@@ -109,7 +109,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 在 <xref:System.Xml.Xsl.XslCompiledTransform> 中，繫結 (方法名稱查閱) 至指令碼函式會在編譯時期發生，當使用 XslTranform 的樣式表是以 <xref:System.Xml.Xsl.XslCompiledTransform> 載入時，可能會導致例外狀況。
 
-<xref:System.Xml.Xsl.XslCompiledTransform> 支援在 `msxsl:using` 項目內有 `msxsl:assembly` 和 `msxsl:script` 子項目。 `msxsl:using` 和 `msxsl:assembly` 項目是用來宣告要在指令碼區塊內使用的其他命名空間和組件。 如需詳細資訊，請參閱[使用 msxsl:script 的指令碼區塊](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)。
+<xref:System.Xml.Xsl.XslCompiledTransform> 支援在 `msxsl:using` 項目內有 `msxsl:assembly` 和 `msxsl:script` 子項目。 `msxsl:using` 和 `msxsl:assembly` 項目是用來宣告要在指令碼區塊內使用的其他命名空間和組件。 如需詳細資訊，請參閱[使用 msxsl:script 的指令碼區塊](script-blocks-using-msxsl-script.md)。
 
 <xref:System.Xml.Xsl.XslCompiledTransform> 禁止具有多個多載的擴充物件有相同的引數數目。
 
@@ -127,5 +127,5 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 ## <a name="see-also"></a>另請參閱
 
-- [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [XSLT 轉換](xslt-transformations.md)
+- [使用 XslCompiledTransform 類別](using-the-xslcompiledtransform-class.md)

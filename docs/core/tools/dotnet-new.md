@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。
 ms.date: 04/10/2020
-ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442237"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283971"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -30,7 +30,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
 dotnet new -h|--help
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet new`命令會根據範本建立 .Net Core 專案或其他成品。
 
@@ -55,7 +55,7 @@ dotnet new -h|--help
 
   下表顯示隨 .NET Core SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。 按一下 [簡短名稱] 連結，以查看特定的範本選項。
 
-| 範本                                    | 簡短名稱                      | Language     | 標籤                                  | 引導 |
+| 範本                                    | 簡短名稱                      | 語言     | Tags                                  | 引導 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | 主控台應用程式                          | [控制](#console)             | [C#], F#, VB | 通用/主控台                        | 1.0        |
 | 類別庫                                | [classlib](#classlib)           | [C#], F#, VB | 通用/程式庫                        | 1.0        |
@@ -75,6 +75,7 @@ dotnet new -h|--help
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor 伺服器應用程式                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
+| Blazor WebAssembly 應用程式                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                            | 3.1.300    |
 | 空的 ASP.NET Core                           | [網路](#web)                     | [C#]、F#     | Web/空白                             | 1.0        |
 | ASP.NET Core Web 應用程式 (模型檢視控制器) | [mvc](#web-options)             | [C#]、F#     | Web/MVC                               | 1.0        |
 | ASP.NET Core Web 應用程式                         | [webapp，razor](#web-options)   | [C#]         | Web/MVC/Razor 頁面                   | 2.2、2。0   |
@@ -148,7 +149,7 @@ dotnet new -h|--help
   如果您未指定此選項的參數，此命令會列出已安裝的範本和其相關詳細資料。
 
   > [!NOTE]
-  > 若要使用 `PATH` 將範本解除安裝，您需要使路徑成為完整路徑。 例如， *C：/Users/ \< USER>/documents/templates/garciasoftware.consoletemplate.csharp*可正常執行，但包含資料夾中的 *./garciasoftware.consoletemplate.csharp*則不會。
+  > 若要使用 `PATH` 將範本解除安裝，您需要使路徑成為完整路徑。 例如， *C：/Users/ \<USER> /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*可以使用，但包含資料夾中的 *./garciasoftware.consoletemplate.csharp*則不會。
   > 請勿在您的範本路徑上包含最後終止的目錄斜線。
 
 - **`--update-apply`**
@@ -192,7 +193,7 @@ dotnet new -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要設為目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp<version>` 建立 .NET Core 類別庫或 `netstandard<version>` 建立 .NET Standard 類別庫。 預設值是 `netstandard2.0`。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp<version>` 建立 .NET Core 類別庫或 `netstandard<version>` 建立 .NET Standard 類別庫。 預設值為 `netstandard2.0`。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -210,7 +211,7 @@ dotnet new -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要設為目標的[架構](../../standard/frameworks.md)。 預設值是 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 預設值為 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -242,7 +243,7 @@ dotnet new -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要設為目標的[架構](../../standard/frameworks.md)。 預設值是 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 預設值為 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
 
 - **`--exclude-launch-settings`**
 
@@ -306,7 +307,7 @@ dotnet new -h|--help
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  產生之程式碼的命名空間。 預設值是 `MyApp.Namespace`。
+  產生之程式碼的命名空間。 預設值為 `MyApp.Namespace`。
 
 - **`-np|--no-pagemodel`**
 
@@ -318,7 +319,7 @@ dotnet new -h|--help
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  產生之程式碼的命名空間。 預設值是 `MyApp.Namespace`。
+  產生之程式碼的命名空間。 預設值為 `MyApp.Namespace`。
 
 ***
 
@@ -337,7 +338,7 @@ dotnet new -h|--help
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
+  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值為 `https://login.microsoftonline.com/tfp/`。
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -353,23 +354,23 @@ dotnet new -h|--help
 
 - **`--aad-instance <INSTANCE>`**
 
-  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值為 `https://login.microsoftonline.com/`。
 
 - **`--client-id <ID>`**
 
-  此專案的用戶端識別碼。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
+  此專案的用戶端識別碼。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值為 `11111111-1111-1111-11111111111111111`。
 
 - **`--domain <DOMAIN>`**
 
-  目錄租使用者的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
+  目錄租使用者的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值為 `qualified.domain.name`。
 
 - **`--tenant-id <ID>`**
 
-  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值為 `22222222-2222-2222-2222-222222222222`。
 
 - **`--callback-path <PATH>`**
 
-  應用程式的重新導向 URI 基底路徑中的要求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `/signin-oidc`。
+  應用程式的重新導向 URI 基底路徑中的要求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值為 `/signin-oidc`。
 
 - **`-r|--org-read-access`**
 
@@ -436,7 +437,7 @@ dotnet new -h|--help
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
+  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值為 `https://login.microsoftonline.com/tfp/`。
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -452,23 +453,23 @@ dotnet new -h|--help
 
 - **`--aad-instance <INSTANCE>`**
 
-  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值為 `https://login.microsoftonline.com/`。
 
 - **`--client-id <ID>`**
 
-  此專案的用戶端識別碼。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
+  此專案的用戶端識別碼。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值為 `11111111-1111-1111-11111111111111111`。
 
 - **`--domain <DOMAIN>`**
 
-  目錄租使用者的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
+  目錄租使用者的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值為 `qualified.domain.name`。
 
 - **`--tenant-id <ID>`**
 
-  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值為 `22222222-2222-2222-2222-222222222222`。
 
 - **`--callback-path <PATH>`**
 
-  應用程式的重新導向 URI 基底路徑中的要求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `/signin-oidc`。
+  應用程式的重新導向 URI 基底路徑中的要求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值為 `/signin-oidc`。
 
 - **`-r|--org-read-access`**
 
@@ -605,7 +606,7 @@ dotnet new -h|--help
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
+  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值為 `https://login.microsoftonline.com/tfp/`。
 
 - **`-ssp|--susi-policy-id <ID>`**
 
@@ -613,19 +614,19 @@ dotnet new -h|--help
 
 - **`--aad-instance <INSTANCE>`**
 
-  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 驗證使用。 預設值為 `https://login.microsoftonline.com/`。
 
 - **`--client-id <ID>`**
 
-  此專案的用戶端識別碼。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
+  此專案的用戶端識別碼。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值為 `11111111-1111-1111-11111111111111111`。
 
 - **`--domain <DOMAIN>`**
 
-  目錄租使用者的網域。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值是 `qualified.domain.name`。
+  目錄租使用者的網域。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值為 `qualified.domain.name`。
 
 - **`--tenant-id <ID>`**
 
-  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值為 `22222222-2222-2222-2222-222222222222`。
 
 - **`-r|--org-read-access`**
 

@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: efa0925a96fcdd4356109632fa77199edde73c26
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794633"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284282"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程式產生器
 
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>在 MyApp 專案中新增 Microsoft.XmlSerializer.Generator 套件的參考
 
-使用[`dotnet add package`](../tools/dotnet-add-package.md)命令，在您的專案中加入參考。
+使用 [`dotnet add package`](../tools/dotnet-add-package.md) 命令，在您的專案中加入參考。
 
 輸入：
 
@@ -64,7 +64,7 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 
 在文字編輯器中，開啟 *MyApp.csproj*。
 
-執行[`dotnet add package`](../tools/dotnet-add-package.md)命令之後，會將下列幾行新增至您的*MyApp .csproj*專案檔：
+[`dotnet add package`](../tools/dotnet-add-package.md)執行命令之後，會將下列幾行新增至您的*MyApp .csproj*專案檔：
 
  ```xml
  <ItemGroup>
@@ -103,7 +103,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 
 ### <a name="build-and-run-the-application"></a>建置並執行應用程式
 
-在 *MyApp* 資料夾內，仍然透過 [`dotnet run`](../tools/dotnet-run.md) 執行應用程式，並在執行階段自動載入和使用預先產生的序列化程式。
+仍然在*MyApp*資料夾內，透過執行應用程式， [`dotnet run`](../tools/dotnet-run.md) 它會在執行時間自動載入和使用預先產生的序列化程式。
 
 在主控台視窗中，鍵入下列命令：
 
@@ -112,7 +112,7 @@ dotnet run
 ```
 
 > [!NOTE]
-> [`dotnet run`](../tools/dotnet-run.md)呼叫[`dotnet build`](../tools/dotnet-build.md)以確保組建目標已建立，然後呼叫`dotnet <assembly.dll>`以執行目標應用程式。
+> [`dotnet run`](../tools/dotnet-run.md)呼叫 [`dotnet build`](../tools/dotnet-build.md) 以確保組建目標已建立，然後呼叫 `dotnet <assembly.dll>` 以執行目標應用程式。
 
 > [!IMPORTANT]
 > 本教學課程中所示用於執行應用程式的命令和步驟，僅供開發階段使用。 準備好部署應用程式之後，請查看不同的 .NET Core 應用程式[部署策略](../deploying/index.md)和 [`dotnet publish`](../tools/dotnet-publish.md) 命令。

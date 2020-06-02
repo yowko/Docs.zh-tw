@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6952b4b341a76e15d9699a06cd64ae7b6b4f047
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159360"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285608"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用接續工作鏈結工作
 在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是很普遍的。 傳統上，會使用回呼方法完成接續。 在工作平行程式庫中，由 *「接續工作」*(continuation task) 提供相同的功能。 接續工作 (也只稱為接續) 是另一項稱為 *「前項」*(antecedent) 的工作所叫用的非同步工作，此時會完成前項。  
@@ -45,7 +45,7 @@ ms.locfileid: "78159360"
  您可建立當前項藉由呼叫 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法完成時執行的接續。 下列範例顯示其基本模式 (為求清楚明瞭，省略例外狀況處理)。 它會執行前項工作 `taskA`，這會傳回表示今天是星期幾之名稱的 <xref:System.DayOfWeek> 物件。 當前項完成時，接續工作 `continuation` 由其前項傳遞，並顯示包含結果的字串。
 
 > [!NOTE]
-> 此發行項中的 C# 範例使用 `Main` 方法上的 `async` 修飾詞。 C# 7.1 及更新版本有提供該功能。 編譯此示例代碼[`CS5001`](../../csharp/misc/cs5001.md)時會生成早期版本。 您必須將語言版本設定為 C# 7.1 或更新版本。 如需了解如何設定發行項中的語言版本，請參閱[設定語言版本](../../csharp/language-reference/configure-language-version.md)。
+> 此發行項中的 C# 範例使用 `Main` 方法上的 `async` 修飾詞。 C# 7.1 及更新版本有提供該功能。 [`CS5001`](../../csharp/misc/cs5001.md)編譯此範例程式碼時，會產生先前的版本。 您必須將語言版本設定為 C# 7.1 或更新版本。 如需了解如何設定發行項中的語言版本，請參閱[設定語言版本](../../csharp/language-reference/configure-language-version.md)。
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
@@ -75,7 +75,7 @@ ms.locfileid: "78159360"
  [!code-csharp[TPL_Continuations#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result1.cs#2)]
  [!code-vb[TPL_Continuations#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result1.vb#2)]  
   
- 如果您想執行接續，即使前項並未執行到順利完成，您也必須防範例外狀況。 其中一個方法是測試前項的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性，而且只嘗試存取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性 (若狀態不是 <xref:System.Threading.Tasks.TaskStatus.Faulted> 或 <xref:System.Threading.Tasks.TaskStatus.Canceled>)。 您也可以檢查前項的 <xref:System.Threading.Tasks.Task.Exception%2A> 屬性。 如需詳細資訊，請參閱[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。 下列範例會修改上一個範例來存取前項的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性 (僅在當其狀態為 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>之時)。  
+ 如果您想執行接續，即使前項並未執行到順利完成，您也必須防範例外狀況。 其中一個方法是測試前項的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性，而且只嘗試存取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性 (若狀態不是 <xref:System.Threading.Tasks.TaskStatus.Faulted> 或 <xref:System.Threading.Tasks.TaskStatus.Canceled>)。 您也可以檢查前項的 <xref:System.Threading.Tasks.Task.Exception%2A> 屬性。 如需詳細資訊，請參閱[例外狀況處理](exception-handling-task-parallel-library.md)。 下列範例會修改上一個範例來存取前項的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性 (僅在當其狀態為 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>之時)。  
   
  [!code-csharp[TPL_Continuations#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result2.cs#7)]
  [!code-vb[TPL_Continuations#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result2.vb#7)]  
@@ -114,12 +114,12 @@ ms.locfileid: "78159360"
  [!code-csharp[TPL_Continuations#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/detached1.cs#10)]
  [!code-vb[TPL_Continuations#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/detached1.vb#10)]  
   
- 前項工作的最終狀態取決於任何附加子工作的最終狀態。 中斷連結的子工作狀態不會影響父代。 如需詳細資訊，請參閱[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
+ 前項工作的最終狀態取決於任何附加子工作的最終狀態。 中斷連結的子工作狀態不會影響父代。 如需詳細資訊，請參閱[附加與中斷連結的子工作](attached-and-detached-child-tasks.md)。  
   
 ## <a name="associating-state-with-continuations"></a>關聯具有接續的狀態  
  您可以將任意的狀態與工作接續相關聯。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法提供多載的版本，每個都會擷取代表接續狀態的 <xref:System.Object> 值。 稍後您可以使用 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> 屬性來存取這個狀態物件。 如果您未提供值，則此狀態物件為 `null` 。  
   
- 當您為使用 TPL 而轉換現有之使用 [非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的程式碼時，接續狀態會很有用。 在 APM 中，您通常會在 **Begin**_Method_ 方法中提供物件狀態，並在稍後使用 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 屬性存取該狀態。 藉由使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，當您轉換使用 APM 的程式碼為使用 TPL 時，您可以保留此狀態。  
+ 當您為使用 TPL 而轉換現有之使用 [非同步程式設計模型 (APM)](../asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的程式碼時，接續狀態會很有用。 在 APM 中，您通常會在 **Begin**_Method_ 方法中提供物件狀態，並在稍後使用 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 屬性存取該狀態。 藉由使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，當您轉換使用 APM 的程式碼為使用 TPL 時，您可以保留此狀態。  
   
  當您使用 Visual Studio 偵錯工具中的 <xref:System.Threading.Tasks.Task> 物件時，接續狀態也相當有用。 例如，在 [平行工作] **** 視窗中，[工作] **** 資料行會顯示每項工作的狀態物件之字串表示。 如需 [平行工作]**** 視窗的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)。  
   
@@ -146,10 +146,10 @@ ms.locfileid: "78159360"
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     如需詳細資訊，請參閱[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。  
+     如需詳細資訊，請參閱[例外狀況處理](exception-handling-task-parallel-library.md)。  
   
-- 如果接續是使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的附加子工作，則其父代會將例外狀況傳播回到呼叫的執行緒，如同任何附加之子系的情況。 如需詳細資訊，請參閱[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
+- 如果接續是使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的附加子工作，則其父代會將例外狀況傳播回到呼叫的執行緒，如同任何附加之子系的情況。 如需詳細資訊，請參閱[附加與中斷連結的子工作](attached-and-detached-child-tasks.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [工作平行程式庫 (TPL)](task-parallel-library-tpl.md)

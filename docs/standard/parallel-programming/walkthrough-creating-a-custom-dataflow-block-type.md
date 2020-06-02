@@ -10,18 +10,18 @@ helpviewer_keywords:
 - TPL dataflow library, creating custom dataflow blocks
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-ms.openlocfilehash: cb953952bbed90edd2db799e92d44ec9f062babf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 37857e465bf4089dbeecc4cfd532d0702f795495
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139876"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284698"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>逐步解說：建立自訂資料流程區塊類型
 雖然 TPL 資料流程式庫提供數個啟用各種不同功能的資料流程區塊類型，但您也可以建立自訂的區塊類型。 本文件說明如何建立會實作自訂行為的資料流程區塊類型之兩種方式。  
   
-## <a name="prerequisites"></a>必要條件  
- 在您閱讀本文件之前，請閱讀[資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)。  
+## <a name="prerequisites"></a>Prerequisites  
+ 在您閱讀本文件之前，請閱讀[資料流程](dataflow-task-parallel-library.md)。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
@@ -52,4 +52,4 @@ ms.locfileid: "73139876"
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [資料流程](dataflow-task-parallel-library.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5dfe6429ac135202874f0524a252a7af900bd8d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73103823"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279008"
 ---
 # <a name="creating-new-strings-in-net"></a>在 .NET 中建立新字串
 .NET Framework 允許使用簡單指派來建立字串，且還可以多載類別建構函式，支援使用多個不同參數來建立字串。 .NET Framework 也在 <xref:System.String?displayProperty=nameWithType> 類別中提供數個方法，藉由合併數個字串、字串陣列或物件來建立新的字串物件。  
@@ -40,8 +40,8 @@ ms.locfileid: "73103823"
 |<xref:System.String.Insert%2A?displayProperty=nameWithType>|藉由將字串插入現有字串的指定索引中來建立新字串。|  
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|將字串中的指定字元複製到字元陣列中的指定位置。|  
   
-### <a name="format"></a>[格式]  
- 您可以使用 **String.Format** 方法，來建立格式化的字串和串連代表多個物件的字串。 這個方法會自動將任何傳遞的物件轉換為字串。 例如，如果您的應用程式必須向使用者顯示 **Int32** 值和 **DateTime** 值，您可以使用 **Format** 方法，輕鬆地建構代表這些值的字串。 如需搭配此方法使用之格式慣例的資訊，請參閱[複合格式](../../../docs/standard/base-types/composite-formatting.md)一節。  
+### <a name="format"></a>格式  
+ 您可以使用 **String.Format** 方法，來建立格式化的字串和串連代表多個物件的字串。 這個方法會自動將任何傳遞的物件轉換為字串。 例如，如果您的應用程式必須向使用者顯示 **Int32** 值和 **DateTime** 值，您可以使用 **Format** 方法，輕鬆地建構代表這些值的字串。 如需搭配此方法使用之格式慣例的資訊，請參閱[複合格式](composite-formatting.md)一節。  
   
  下列範例會使用 **Format** 方法來建立使用整數變數的字串。  
   
@@ -80,5 +80,5 @@ ms.locfileid: "73103823"
   
 ## <a name="see-also"></a>另請參閱
 
-- [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)
-- [複合格式](../../../docs/standard/base-types/composite-formatting.md)
+- [基底字元串作業](basic-string-operations.md)
+- [複合格式](composite-formatting.md)

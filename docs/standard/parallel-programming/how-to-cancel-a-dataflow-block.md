@@ -1,5 +1,5 @@
 ---
-title: 如何：取消資料流程區塊
+title: 作法：取消資料流程區塊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 530c231deeaba007975849ab6dc41f4da6a859ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140088"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285543"
 ---
-# <a name="how-to-cancel-a-dataflow-block"></a>如何：取消資料流程區塊
+# <a name="how-to-cancel-a-dataflow-block"></a>作法：取消資料流程區塊
 本文件示範如何在您的應用程式中啟用取消作業。 此範例會使用 Windows Forms 來顯示工作項目在資料流程管線中的作用位置，以及取消作業的效果。  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "73140088"
   
  由於 `incrementProgress` 和 `decrementProgress`資料流程區塊會在使用者介面上進行處理，因此這個動作一定要在使用者介面執行緒上發生。 為了要完成這項作業，在建構時這些物件會提供 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> 物件，而且其 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> 屬性會設定為 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>。 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法會建立 <xref:System.Threading.Tasks.TaskScheduler> 物件，該物件會在目前的同步處理內容上執行工作。 由於 `Form1` 建構函式是從使用者介面執行緒呼叫，因此 `incrementProgress` 和 `decrementProgress` 資料流程區塊的動作也會在使用者介面執行緒上執行。  
   
- 此範例在它建構管線成員時會設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性。 因為 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性會永久取消資料流程區塊執行，所以必須在使用者取消此作業，而後想要將更多工作項目新增至管線之後，重新建立整個管線。 如需示範取消資料流程區塊的替代方式，以便在取消作業後執行其他工作的範例，請參閱[逐步解說︰在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
+ 此範例在它建構管線成員時會設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性。 因為 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性會永久取消資料流程區塊執行，所以必須在使用者取消此作業，而後想要將更多工作項目新增至管線之後，重新建立整個管線。 如需示範取消資料流程區塊的替代方式，以便在取消作業後執行其他工作的範例，請參閱[逐步解說︰在 Windows Forms 應用程式中使用資料流程](walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>將資料流程管線連接至使用者介面  
  本節說明如何將資料流程管線連接至使用者介面。 建立管線以及將工作項目新增至管線都是由 [新增工作項目]**** 按鈕的事件處理常式所控制。 取消作業是由 [取消]**** 按鈕所起始。 當使用者按一下任一個按鈕時，會以非同步方式起始適當的動作。  
@@ -92,8 +92,8 @@ ms.locfileid: "73140088"
   
  下圖顯示執行的應用程式。  
   
- ![Windows Form 應用程式](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
+ ![Windows Form 應用程式](media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
 ## <a name="see-also"></a>另請參閱
 
-- [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [資料流程](dataflow-task-parallel-library.md)

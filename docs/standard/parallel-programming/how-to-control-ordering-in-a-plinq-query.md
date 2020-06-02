@@ -1,5 +1,5 @@
 ---
-title: 如何：控制 PLINQ 查詢中的順序
+title: 作法：控制 PLINQ 查詢中的順序
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-ms.openlocfilehash: 86011cff71fabed5e47e085f91b1759238638c9a
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 80e199d75471eba219f1f3da12d307b6cd1d90cf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588494"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285452"
 ---
-# <a name="how-to-control-ordering-in-a-plinq-query"></a>如何：控制 PLINQ 查詢中的順序
+# <a name="how-to-control-ordering-in-a-plinq-query"></a>作法：控制 PLINQ 查詢中的順序
 這些範例示範如何使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 擴充方法來控制 PLINQ 查詢中的順序。  
   
 > [!WARNING]
@@ -33,7 +33,7 @@ ms.locfileid: "80588494"
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- 若要執行此方法，請將它貼到 [PLINQ 資料範例](../../../docs/standard/parallel-programming/plinq-data-sample.md)專案中的 PLINQDataSample 類別，然後按 F5 鍵。  
+ 若要執行此方法，請將它貼到 [PLINQ 資料範例](plinq-data-sample.md)專案中的 PLINQDataSample 類別，然後按 F5 鍵。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何保留查詢第一個部分的順序，然後移除順序以增加 join 子句的效能，再重新套用順序至最終結果順序。  
@@ -41,9 +41,9 @@ ms.locfileid: "80588494"
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- 若要執行此方法，請將它貼到 [PLINQ 資料範例](../../../docs/standard/parallel-programming/plinq-data-sample.md)專案中的 PLINQDataSample 類別，然後按 F5 鍵。  
+ 若要執行此方法，請將它貼到 [PLINQ 資料範例](plinq-data-sample.md)專案中的 PLINQDataSample 類別，然後按 F5 鍵。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.ParallelEnumerable>
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [平行 LINQ (PLINQ)](introduction-to-plinq.md)

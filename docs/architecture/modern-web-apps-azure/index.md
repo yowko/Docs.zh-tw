@@ -3,13 +3,13 @@ title: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web 應用程式的端對端指引。
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/4/2019
-ms.openlocfilehash: 8eebe9a8e530b244f4596adef1b5e6dd23e305bd
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.date: 5/25/2020
+ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144535"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284451"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
@@ -86,6 +86,10 @@ Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 - 彈性容量；根據實際需求相應增加或減少。
 
 使用 ASP.NET Core 建置 Web 應用程式 (且其裝載於 Azure) 提供許多比傳統替代項目更具競爭性的優點。 ASP.NET Core 已針對現代化 Web 應用程式開發做法和雲端裝載案例最佳化。 在本指南中，您將學習如何架構 ASP.NET Core 應用程式，以善加利用這些功能。
+
+## <a name="version"></a>版本
+
+本指南已經過修訂，以涵蓋 **.Net core 3.1**版本，以及與 .net core 3.1 版 coinciding 的相同「wave」技術（也就是 Azure 和其他協力廠商技術）相關的許多其他更新。 這就是為什麼書籍版本也已更新至**3.1**版的原因。
 
 ## <a name="purpose"></a>目的
 

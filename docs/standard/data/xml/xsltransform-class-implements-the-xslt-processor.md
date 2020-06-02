@@ -6,17 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
-ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eec5d6588d907e2d12b588ab3bfe743d6d1eaff9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709604"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84281605"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform 類別實作 XSLT 處理器
 
 > [!NOTE]
-> 在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。
+> 在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](migrating-from-the-xsltransform-class.md)。
 
 <xref:System.Xml.Xsl.XslTransform> 類別是可實作 XSL 轉換 (XSLT) 1.0 版建議事項的 XSLT 處理器。 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法可尋找及讀取樣式表，而 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法則可轉換指定的來源文件。 任何實作 <xref:System.Xml.XPath.IXPathNavigable> 介面的存放區都可用來做為 <xref:System.Xml.Xsl.XslTransform> 的來源文件。 .NET Framework 目前實作 <xref:System.Xml.XmlDocument> 上的 <xref:System.Xml.XPath.IXPathNavigable> 介面、<xref:System.Xml.XmlDataDocument>，以及 <xref:System.Xml.XPath.XPathDocument>，因此這些項目都可以用來作為轉換的輸入來源文件。
 
@@ -76,9 +76,9 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
 
 若未提供 URI 或辨識項，則樣式表的辨識項集合將完全受信任。 請勿從未受信任的來源載入樣式表，或者將未受信任的擴充物件加入 <xref:System.Xml.Xsl.XsltArgumentList> 中。
 
-如需安全性層級、辨識項，以及辨識項將會如何影響指令碼的詳細資訊，請參閱[使用 \<msxsl:script> 的 XSLT 樣式表指令碼](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)。 如需安全性層級、辨識項，以及辨識項將會如何影響指令碼的詳細資訊，請參閱[樣式表參數和擴充物件的 XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)。
+如需安全性層級和辨識項的詳細資訊，以及它如何影響腳本，請參閱[使用 \<msxsl:script> 的 XSLT 樣式表單腳本](xslt-stylesheet-scripting-using-msxsl-script.md)。 如需安全性層級、辨識項，以及辨識項將會如何影響指令碼的詳細資訊，請參閱[樣式表參數和擴充物件的 XsltArgumentList](xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)。
 
-如需安全性層級、辨識項，以及辨識項將會如何影響 `document()` 函式的詳細資訊，請參閱[解析外部的 XSLT 樣式表和文件](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md) 。
+如需安全性層級、辨識項，以及辨識項將會如何影響 `document()` 函式的詳細資訊，請參閱[解析外部的 XSLT 樣式表和文件](resolving-external-xslt-style-sheets-and-documents.md) 。
 
 可提供樣式表數個輸入參數。 樣式表也可以呼叫擴充物件上的函式。 參數和擴充物件都可透過 <xref:System.Xml.Xsl.XsltArgumentList> 類別提供給樣式表。 如需 <xref:System.Xml.Xsl.XsltArgumentList> 的詳細資訊，請參閱<xref:System.Xml.Xsl.XsltArgumentList>。
 
@@ -238,9 +238,9 @@ print_root.xsl
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [轉換中的 XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [轉換中的 XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [XslTransform 的 XPathDocument 輸入](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [XslTransform 的 XmlDataDocument 輸入](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
-- [XslTransform 的 XmlDocument 輸入](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+- [使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)
+- [轉換中的 XPathNavigator](xpathnavigator-in-transformations.md)
+- [轉換中的 XPathNodeIterator](xpathnodeiterator-in-transformations.md)
+- [XslTransform 的 XPathDocument 輸入](xpathdocument-input-to-xsltransform.md)
+- [XslTransform 的 XmlDataDocument 輸入](xmldatadocument-input-to-xsltransform.md)
+- [XslTransform 的 XmlDocument 輸入](xmldocument-input-to-xsltransform.md)

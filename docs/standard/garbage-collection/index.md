@@ -1,5 +1,5 @@
 ---
-title: .NET 垃圾回收
+title: .NET 垃圾收集
 ms.date: 04/21/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: c087deb033a373dd8b3980feb7ec6901c7909569
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: ef7e078c6ef2f0b4081c49aa0db09316e79f0702
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102238"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286050"
 ---
 # <a name="garbage-collection"></a>記憶體回收
 
@@ -33,17 +33,17 @@ ms.locfileid: "82102238"
   
 |Title|描述|  
 |-----------|-----------------|  
-|[垃圾回收的基礎知識](../../../docs/standard/garbage-collection/fundamentals.md)|描述記憶體回收運作方式、如何在 Managed 堆積上配置物件，以及其他核心概念。|  
-|[工作站和伺服器記憶體回收](workstation-server-gc.md)|描述用戶端應用的工作站垃圾回收與伺服器應用的伺服器垃圾回收之間的差異。|
-|[後臺垃圾回收](background-gc.md)|描述後台垃圾回收,這是在第 2 代回收進行期間收集第 0 代和 1 個物件。|
-|[大型物件堆](large-object-heap.md)|描述大型物件堆 (LOH) 以及垃圾回收大型物件的方式。|
-|[記憶體回收和效能](../../../docs/standard/garbage-collection/performance.md)|描述可用來診斷記憶體回收和效能問題的效能檢查。|  
-|[引發的回收](../../../docs/standard/garbage-collection/induced.md)|描述如何進行記憶體回收。|  
-|[延遲模式](../../../docs/standard/garbage-collection/latency.md)|描述判斷記憶體回收干擾程度的模式。|  
-|[共用 Web 裝載的最佳化](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|描述如何最佳化伺服器上由數個小型網站所共用的記憶體回收。|  
-|[記憶體回收通知](../../../docs/standard/garbage-collection/notifications.md)|描述如何判斷何時接近完整的記憶體回收，以及何時已完成。|  
-|[應用程式定義域資源監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|描述如何監視應用程式定義域的 CPU 和記憶體使用量。|  
-|[弱式參考](../../../docs/standard/garbage-collection/weak-references.md)|描述下列功能：允許記憶體回收行程回收物件，同時仍然允許應用程式存取該物件。|  
+|[垃圾收集的基本概念](fundamentals.md)|描述記憶體回收運作方式、如何在 Managed 堆積上配置物件，以及其他核心概念。|  
+|[工作站和伺服器記憶體回收](workstation-server-gc.md)|說明用戶端應用程式的工作站垃圾收集與伺服器應用程式的伺服器垃圾收集之間的差異。|
+|[背景垃圾收集](background-gc.md)|描述背景垃圾收集，這是層代0和1物件的集合，而層代2回收正在進行中。|
+|[大型物件堆積](large-object-heap.md)|描述大型物件堆積（LOH），以及如何將大型物件進行垃圾收集。|
+|[記憶體回收和效能](performance.md)|描述可用來診斷記憶體回收和效能問題的效能檢查。|  
+|[引發的回收](induced.md)|描述如何進行記憶體回收。|  
+|[延遲模式](latency.md)|描述判斷記憶體回收干擾程度的模式。|  
+|[共用 Web 裝載的最佳化](optimization-for-shared-web-hosting.md)|描述如何最佳化伺服器上由數個小型網站所共用的記憶體回收。|  
+|[記憶體回收通知](notifications.md)|描述如何判斷何時接近完整的記憶體回收，以及何時已完成。|  
+|[應用程式定義域資源監視](app-domain-resource-monitoring.md)|描述如何監視應用程式定義域的 CPU 和記憶體使用量。|  
+|[弱式參考](weak-references.md)|描述下列功能：允許記憶體回收行程回收物件，同時仍然允許應用程式存取該物件。|  
   
 ## <a name="reference"></a>參考
 
@@ -58,4 +58,4 @@ ms.locfileid: "82102238"
   
 ## <a name="see-also"></a>另請參閱
 
-- [清除非受控資源](../../../docs/standard/garbage-collection/unmanaged.md)
+- [清除非受控資源](unmanaged.md)

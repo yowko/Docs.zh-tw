@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-ms.openlocfilehash: df76674e3003bbb77ef062e90b1dc3283f681d35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f70ce75b1d6a3d4d7e8a38d739005a261b07241
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138018"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279552"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>如何：透過輪詢接聽取消要求
 下列範例將示範一種方式：使用者程式碼可定期輪詢取消語彙基元，以查看呼叫執行緒是否已要求取消。 這個範例會使用 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類型，但相同的模式適用於 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 類型或 <xref:System.Threading.Thread?displayProperty=nameWithType> 類型直接建立的非同步作業。  
@@ -30,4 +30,4 @@ ms.locfileid: "73138018"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [Managed 執行緒中的取消作業](cancellation-in-managed-threads.md)

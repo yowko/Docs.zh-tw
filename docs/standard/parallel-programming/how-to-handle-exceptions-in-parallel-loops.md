@@ -1,5 +1,5 @@
 ---
-title: 如何：處理平行迴圈中的例外狀況
+title: 作法：處理平行迴圈中的例外狀況
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,15 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 5d108937e6ab2483cd1633d4b398c1e250f5c098
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87405425e85ed16d10b3e8b382c6e414fff10ddf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77453009"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278528"
 ---
-# <a name="how-to-handle-exceptions-in-parallel-loops"></a>如何：處理平行迴圈中的例外狀況
-<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 多載沒有任何特殊機制可用來處理可能擲回的例外狀況。 在這方面，它們類似于`for`常規和`foreach`迴圈（`For`和`For Each`視覺基礎）;未處理的異常會導致迴圈在當前運行的所有反覆運算完成後立即終止。
+# <a name="how-to-handle-exceptions-in-parallel-loops"></a>作法：處理平行迴圈中的例外狀況
+<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 多載沒有任何特殊機制可用來處理可能擲回的例外狀況。 在這方面，它們類似于一般 `for` 和 `foreach` 迴圈（ `For` 和 `For Each` Visual Basic）; 未處理的例外狀況會使迴圈在所有目前執行中的反復專案完成時立即終止。
   
  當您將自己的例外狀況處理邏輯加入平行迴圈時，請處理多個執行緒上可能同時擲回類似例外狀況的情況，以及某個執行緒上擲回的例外狀況導致在另一個執行緒上擲回另一個例外狀況的情況。 您可以來自此迴圈的所有例外狀況包裝在 <xref:System.AggregateException?displayProperty=nameWithType> 中，同時處理這兩種情況。 下列範例會示範一種可能的方式。  
   
@@ -31,5 +31,5 @@ ms.locfileid: "77453009"
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [資料平行處理](data-parallelism-task-parallel-library.md)
+- [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)
