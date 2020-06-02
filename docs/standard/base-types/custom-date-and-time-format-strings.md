@@ -14,16 +14,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: ae2711aac8bd864e623efe18e698c8de75a3ac32
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 9aea3e9b52613add1ebc4cf7d9c0087088008d6e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440989"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278995"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
-日期和時間格式字串會定義對 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值執行格式化作業後所產生的文字表示。 另外還會定義剖析作業所需日期和時間值的表示，以便成功地將字串轉換成日期和時間。 自訂格式字串是由一個或多個自訂日期和時間格式規範所組成。 任何不是[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字串都會被解譯為自訂日期和時間格式字串。
+日期和時間格式字串會定義對 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值執行格式化作業後所產生的文字表示。 另外還會定義剖析作業所需日期和時間值的表示，以便成功地將字串轉換成日期和時間。 自訂格式字串是由一個或多個自訂日期和時間格式規範所組成。 任何不是[標準日期和時間格式字串](standard-date-and-time-format-strings.md)的字串都會被解譯為自訂日期和時間格式字串。
 
 > [!TIP]
 > 您可以下載**格式化公用程式**，這個 .NET Core Windows Forms 應用程式可讓您將格式字串套用至數值或日期和時間值，並顯示結果字串。 提供 [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) 和 [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) 的原始程式碼。
@@ -44,7 +44,7 @@ ms.locfileid: "83440989"
 
 下表說明自訂日期和時間格式規範，並顯示每個格式規範所產生的結果字串。 根據預設，結果字串會反映 en-US 文化特性的格式設定慣例。 如果特定格式規範會產生當地語系化的結果字串，則範例也會註明結果字串適用的文化特性。 如需使用自訂日期和時間格式字串的詳細資訊，請參閱[注意](#notes)一節。
 
-| 格式規範 | 說明 | 範例 |
+| 格式規範 | 描述 | 範例 |
 | ---------------------- | ----------------- | -------------- |
 |"d"|月份天數，從 1 到 31。<br /><br /> 詳細資訊：["d" 自訂格式規範](#dSpecifier)。|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|月份天數，從 01 到 31。<br /><br /> 詳細資訊：["dd" 自訂格式規範](#ddSpecifier)。|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -653,7 +653,7 @@ ms.locfileid: "83440989"
 [!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
-## <a name="notes"></a>注意
+## <a name="notes"></a>備忘稿
 
 ### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a>使用單一自訂格式規範
 
@@ -696,7 +696,7 @@ ms.locfileid: "83440989"
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
-- [格式化類型](../../../docs/standard/base-types/formatting-types.md)
-- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [格式化類型](formatting-types.md)
+- [標準日期和時間格式字串](standard-date-and-time-format-strings.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
 - [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))

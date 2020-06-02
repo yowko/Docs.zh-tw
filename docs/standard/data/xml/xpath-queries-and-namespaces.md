@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: 91503ce0bffa1a9390432a51bff1ef10d80f563a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d3314a7ff4cf957dac4cd8ad0416aad434b19af2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709773"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283191"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 查詢及命名空間
 XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前置詞來限定項目及屬性名稱。 使用命名空間前置詞限定項目及屬性名稱，會將 XPath 查詢傳回的節點限制為那些只屬於特定命名空間的節點。  
@@ -81,9 +81,9 @@ XPathNodeIterator nodes = navigator.Select(query);
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [使用 XPathNavigator 選取 XML 資料](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [使用 XPathNavigator 評估 XPath 運算式](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [使用 XPathNavigator 比對節點](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [在 XPath 查詢中辨識的節點型別](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [編譯 XPath 運算式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [使用 XPath 資料模型處理 XML 資料](process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 選取 XML 資料](select-xml-data-using-xpathnavigator.md)
+- [使用 XPathNavigator 評估 XPath 運算式](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [使用 XPathNavigator 比對節點](matching-nodes-using-xpathnavigator.md)
+- [在 XPath 查詢中辨識的節點型別](node-types-recognized-with-xpath-queries.md)
+- [編譯 XPath 運算式](compiled-xpath-expressions.md)

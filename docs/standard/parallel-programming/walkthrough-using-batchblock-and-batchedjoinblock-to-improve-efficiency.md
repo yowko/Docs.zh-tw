@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e572c5a14958ccc069ae7649af8c8ed4eb967dc1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091352"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284581"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
 
@@ -22,9 +22,9 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-1. 開始此逐步解說之前，請先閱讀[資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)文件中的＜聯結區塊＞一節。
+1. 開始此逐步解說之前，請先閱讀[資料流程](dataflow-task-parallel-library.md)文件中的＜聯結區塊＞一節。
 
 2. 確定您電腦上有可用的 Northwind 資料庫複本 (Northwind.sdf)。 這個檔案通常位於資料夾：%Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\。
 
@@ -51,7 +51,7 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 
 ## <a name="creating-the-console-application"></a>建立主控台應用程式
 
-1. 在視覺化工作室中，創建視覺化 C# 或視覺化基本**主控台應用程式**專案。 在本文件中，專案命名為 `DataflowBatchDatabase`。
+1. 在 Visual Studio 中，建立 Visual c # 或 Visual Basic**主控台應用程式**專案。 在本文件中，專案命名為 `DataflowBatchDatabase`。
 
 2. 在您的專案中，加入 System.Data.SqlServerCe.dll 的參考，和 System.Threading.Tasks.Dataflow.dll 的參考。
 
@@ -131,4 +131,4 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 
 ## <a name="see-also"></a>另請參閱
 
-- [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [資料流程](dataflow-task-parallel-library.md)

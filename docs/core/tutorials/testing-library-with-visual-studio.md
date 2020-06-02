@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 79b680022484bb9222b66c3df76bdd5a06de8117
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 48ada77b8422030fd93aa29df1df50a3ae5104fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005007"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283503"
 ---
 # <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio"></a>教學課程：在 Visual Studio 中使用 .NET Core 測試 .NET Standard 程式庫
 
 本教學課程說明如何藉由將測試專案加入至方案，來自動化單元測試。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 本教學課程適用于您在[Visual Studio 中建立 .NET Standard 程式庫](library-with-visual-studio.md)中建立的解決方案。
 
@@ -109,8 +109,8 @@ ms.locfileid: "84005007"
 
 1. 在 [ *UnitTest1.cs* ] 或 [ *unittest1.cpp* ] 程式碼視窗中，將程式碼取代為下列程式碼：
 
-   [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
-   [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibraryTest/UnitTest1.cs":::
+   :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibraryTest/UnitTest1.vb":::
 
    方法中的大寫字元測試 `TestStartsWithUpper` 包含希臘文大寫字母 Alpha （u + 0391）和斯拉夫文大寫字母 EM （u + 041C）。 方法中的小寫字元測試 `TestDoesNotStartWithUpper` 包含希臘文小寫字母 Alpha （u + 03B1）和斯拉夫文小寫字母 Ghe （u + 0433）。
 
@@ -135,7 +135,7 @@ ms.locfileid: "84005007"
 
 ## <a name="handle-test-failures"></a>處理測試失敗
 
-您的測試回合未失敗，但將它稍微變更，使其中一個測試方法失敗：
+如果您執行的是測試導向開發（TDD），您必須先撰寫測試，而且第一次執行時才會失敗。 接著，您可以將程式碼新增至應用程式，讓測試成功。 在此情況下，您在撰寫應用程式驗證碼之後就已建立測試，因此您未看到測試失敗。 若要驗證測試在預期失敗時失敗，請在測試輸入中加入不正確值。
 
 1. 修改 `TestDoesNotStartWithUpper` 方法中的 `words` 陣列，以包含字串「錯誤」。 您不需要儲存檔案，因為當組建方案以執行測試時，Visual Studio 會自動儲存開啟的檔案。
 

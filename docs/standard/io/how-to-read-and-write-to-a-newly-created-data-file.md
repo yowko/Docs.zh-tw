@@ -1,5 +1,5 @@
 ---
-title: 如何：讀取和寫入新創建的資料檔案
+title: 如何：讀取和寫入新建立的資料檔案
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 3772aeeb25d1251a13fde2a0e51a913e5e39eabc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18f44af81a38a48da3115d2082ef45af39f06529
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155746"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291808"
 ---
-# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：讀取和寫入新創建的資料檔案
+# <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：讀取和寫入新建立的資料檔案
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType> 和 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 類別用於寫入和讀取資料，而不是字元字串。 下列範例顯示如何建立空的檔案資料流、將資料寫入其中，以及從中讀取資料。
 
 此範例會在目前的目錄中建立一個稱為 *Test.data* 的資料檔案、建立相關聯的 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader> 物件，而且會使用 <xref:System.IO.BinaryWriter> 物件，將 0 到 10 的整數寫入 *Test.data*，讓檔案指標留在檔案的結尾。 <xref:System.IO.BinaryReader> 物件接著會將檔案指標設定為原點， 並讀出指定的內容。  
@@ -39,10 +39,10 @@ ms.locfileid: "78155746"
 - <xref:System.IO.FileStream>  
 - <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
 - <xref:System.IO.SeekOrigin>  
-- [如何：枚舉目錄和檔](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [如何：打開並追加到日誌檔](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [如何：從檔讀取文本](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [如何：將文本寫入檔](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [如何：從字串中讀取字元](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [如何：將字元寫入字串](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
-- [檔案和資料流 I/O](../../../docs/standard/io/index.md)
+- [如何：列舉目錄和檔案](how-to-enumerate-directories-and-files.md)  
+- [如何：開啟並附加至記錄檔](how-to-open-and-append-to-a-log-file.md)  
+- [如何：從檔案讀取文字](how-to-read-text-from-a-file.md)  
+- [如何：將文字寫入檔案](how-to-write-text-to-a-file.md)  
+- [如何：從字串讀取字元](how-to-read-characters-from-a-string.md)  
+- [如何：將字元寫入字串](how-to-write-characters-to-a-string.md)  
+- [檔案和資料流 I/O](index.md)

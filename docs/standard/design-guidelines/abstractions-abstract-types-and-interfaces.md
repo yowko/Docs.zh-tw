@@ -8,15 +8,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6a4f511af72aad916d367153090504e2a8e11cb8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fd5b8fe10d0dcca5da3a2093f7be37f6d88b382a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741820"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84280610"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象 (抽象類型和介面)
-抽象概念是描述合約，但不提供合約完整執行的類型。 抽象概念通常會實作為抽象類別或介面，而且會隨附一組定義完善的參考檔，說明實作為合約的型別所需的語法。 .NET Framework 中一些最重要的抽象概念包括 <xref:System.IO.Stream>、<xref:System.Collections.Generic.IEnumerable%601>和 <xref:System.Object>。
+抽象概念是描述合約，但不提供合約完整執行的類型。 抽象概念通常會實作為抽象類別或介面，而且會隨附一組定義完善的參考檔，說明實作為合約的型別所需的語法。 .NET Framework 中一些最重要的抽象概念包括 <xref:System.IO.Stream> 、 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Object> 。
 
  您可以藉由實作為支援抽象概念的具象型別，並使用此具體型別搭配耗用（操作）抽象概念的架構 Api，來擴充架構。
 
@@ -26,7 +26,7 @@ ms.locfileid: "76741820"
 
  不過，抽象層提供非常強大的擴充性，其他擴充性機制通常不會符合。 它們是許多架構模式的核心，例如外掛程式、控制反轉（IoC）、管線等等。 它們對於架構的可測試性也非常重要。 良好的抽象概念可讓您針對單元測試的目的，將繁重的相依性 stub。 總而言之，抽象概念會負責各種現代化物件導向架構的豐富功能。
 
- 除非藉由開發數個具體的執行和使用抽象概念的 Api 來測試，否則 ❌ 不提供抽象概念。
+ ❌除非藉由開發數個具體的執行和使用抽象概念的 Api 進行測試，否則請不要提供抽象概念。
 
  在設計抽象概念時，✔️請在抽象類別和介面之間謹慎選擇。
 
@@ -34,9 +34,9 @@ ms.locfileid: "76741820"
 
  *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
 
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。**
 
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
-- [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [架構設計方針](index.md)
+- [擴充性設計](designing-for-extensibility.md)

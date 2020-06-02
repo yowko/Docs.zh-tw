@@ -9,16 +9,16 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: 842ca4ff17f9cbab3a1518d2dea37436c9b23f9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f69773ec19008ebafd28a68e4e2007b6f9bb979
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155928"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279811"
 ---
 # <a name="destroying-threads"></a>終結執行緒
 
-要終止執行緒的執行，通常使用[協作取消模型](cancellation-in-managed-threads.md)。 有時無法以協作方式停止執行緒，因為它運行的協力廠商代碼不是為協作取消而設計的。 .NET 框架中<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>的方法可用於強制終止託管執行緒。 調用 時<xref:System.Threading.Thread.Abort%2A>調用 ，通用語言運行時在目標<xref:System.Threading.ThreadAbortException>執行緒中引發 一個，目標執行緒可以捕獲該執行緒。 如需詳細資訊，請參閱 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 .NET Core 中不支援該方法<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 如果需要在 .NET Core 中強制終止協力廠商代碼的執行，請在單獨的進程中運行它並使用<xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>。
+若要終止執行緒的執行，您通常會使用[合作式取消模型](cancellation-in-managed-threads.md)。 有時候，無法以合作方式停止執行緒，因為它會執行協力廠商程式碼，而不是針對合作取消所設計。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.NET Framework 中的方法可以用來強制終止 managed 執行緒。 當您呼叫時 <xref:System.Threading.Thread.Abort%2A> ，Common Language Runtime 會在目標執行緒中擲回，目標執行緒 <xref:System.Threading.ThreadAbortException> 可以攔截。 如需詳細資訊，請參閱<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.Net Core 不支援方法。 如果您需要終止在 .NET Core 中強制執行協力廠商程式碼，請在個別進程中執行它，然後使用 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> 。
 
 > [!NOTE]
 > 如果執行緒在其 <xref:System.Threading.Thread.Abort%2A> 方法被呼叫時正在執行非受控碼，執行階段就會將它標示為 <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>。 當執行緒返回受控碼時，會擲回例外狀況。  
@@ -69,4 +69,4 @@ catch (ThreadAbortException ex)
 
 - <xref:System.Threading.ThreadAbortException>
 - <xref:System.Threading.Thread>
-- [使用執行緒和執行緒處理](../../../docs/standard/threading/using-threads-and-threading.md)
+- [使用執行緒和執行緒處理](using-threads-and-threading.md)

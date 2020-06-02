@@ -14,12 +14,12 @@ helpviewer_keywords:
 - asymmetric keys [.NET Framework]
 - cryptography [.NET Framework], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: 88d8dac83c3d5bf267ed90ffb313cd9e24b42dea
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 992ac30310d138e04b8408497c5e49166a356ab4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706184"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291535"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>產生加密和解密金鑰
 建立和管理金鑰是密碼編譯程序中很重要的一部分。 對稱演算法需要建立金鑰和初始化向量 (IV)。 務必不要對不該解密您資料的任何人透露金鑰。 IV 不需要加密，但是應該針對每個工作階段變更。 非對稱演算法需要建立公開金鑰和私密金鑰。 公開金鑰可以公開給任何人，但私密金鑰必須只有將解密以公開金鑰加密之資料的一方知道。 本節描述如何產生及管理對稱和非對稱演算法的金鑰。  
@@ -27,7 +27,7 @@ ms.locfileid: "75706184"
 ## <a name="symmetric-keys"></a>對稱金鑰  
  .NET Framework 所提供的對稱加密類別需要一個金鑰和新的初始化向量 (IV) 才能加密和解密資料。 每當您使用無參數的函式來建立其中一個 managed 對稱密碼編譯類別的新實例時，就會自動建立新的金鑰和 IV。 您允許解密資料的任何人都必須擁有相同的金鑰和 IV，並使用相同的演算法。 一般而言，應該為每個工作階段建立新的金鑰和 IV，且金鑰和 IV 都不應該儲存以用於稍後的工作階段。  
   
- 若要與遠端的一方溝通對稱金鑰和 IV，通常會使用非對稱加密來加密對稱金鑰。 在不安全的網路中傳送未加密的金鑰並不安全，因為任何人只要攔截金鑰和 IV，就可以解密您的資料。 如需使用加密交換資料的詳細資訊，請參閱 [建立密碼編譯配置](../../../docs/standard/security/creating-a-cryptographic-scheme.md)。  
+ 若要與遠端的一方溝通對稱金鑰和 IV，通常會使用非對稱加密來加密對稱金鑰。 在不安全的網路中傳送未加密的金鑰並不安全，因為任何人只要攔截金鑰和 IV，就可以解密您的資料。 如需使用加密交換資料的詳細資訊，請參閱 [建立密碼編譯配置](creating-a-cryptographic-scheme.md)。  
   
  下列範例顯示實作 TripleDES 演算法的 <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider> 類別的新執行個體建立。  
   
@@ -68,7 +68,7 @@ tdes.GenerateKey();
   
  這兩種方法都接受布林值，表示是否只傳回公用金鑰資訊，還是同時傳回公開金鑰和私密金鑰資訊。 **RSACryptoServiceProvider** 類別可以使用 **方法，初始化為** RSAParameters <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> 結構的值。  
   
- 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，您應該使用金鑰容器。 如需如何將私密金鑰儲存到金鑰容器的詳細資訊，請參閱 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
+ 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，您應該使用金鑰容器。 如需如何將私密金鑰儲存到金鑰容器的詳細資訊，請參閱 [How to: Store Asymmetric Keys in a Key Container](how-to-store-asymmetric-keys-in-a-key-container.md)。  
   
  下列程式碼範例會建立 **RSACryptoServiceProvider** 類別的新執行個體、建立公開/私密金鑰組，並將公開金鑰資訊儲存到 **RSAParameters** 結構。  
   
@@ -86,9 +86,9 @@ RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
 RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [加密資料](../../../docs/standard/security/encrypting-data.md)
-- [解密資料](../../../docs/standard/security/decrypting-data.md)
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
-- [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [加密資料](encrypting-data.md)
+- [解密資料](decrypting-data.md)
+- [密碼編譯服務](cryptographic-services.md)
+- [How to: Store Asymmetric Keys in a Key Container](how-to-store-asymmetric-keys-in-a-key-container.md)

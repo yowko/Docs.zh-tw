@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cancellation tokens, joining
 - LinkedTokenSource, how to
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
-ms.openlocfilehash: e35472040b6ee1263ebc4c4968fa1822045a2064
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f92d1d9e8fec91475886e8bd7bffbc97bb632a0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138015"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279391"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>如何：接聽多個取消要求
 此範例顯示如何同時接聽兩個取消權杖，讓您可以在其中一個權杖要求作業時將作業取消。  
@@ -34,4 +34,4 @@ ms.locfileid: "73138015"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+- [Managed 執行緒中的取消作業](cancellation-in-managed-threads.md)

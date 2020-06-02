@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interprocess communication [.NET Framework], pipes
 - I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: 693dd1eb0b0b9bb87973eead26a344ed67641e34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a634cb87a5f25b520e5fe6fd5b39eae861120a28
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706552"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278684"
 ---
 # <a name="pipe-operations-in-net"></a>.NET 中的管道作業
 管道會提供一種處理序間通訊的方法。 管道有兩種類型：  
@@ -24,7 +24,7 @@ ms.locfileid: "75706552"
   
      在 .NET 中，您可以使用 <xref:System.IO.Pipes.AnonymousPipeServerStream> 和 <xref:System.IO.Pipes.AnonymousPipeClientStream> 類別實作匿名管道。  
   
-     請參閱[操作說明：使用匿名管道進行本機處理序間通訊](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)。  
+     請參閱[操作說明：使用匿名管道進行本機處理序間通訊](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)。  
   
 - 具名管道。  
   
@@ -32,10 +32,10 @@ ms.locfileid: "75706552"
   
      在 .NET 中，您可以使用 <xref:System.IO.Pipes.NamedPipeServerStream> 和 <xref:System.IO.Pipes.NamedPipeClientStream> 類別實作匿名管道。  
   
-     請參閱[操作說明：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)。  
+     請參閱[操作說明：使用具名管道進行網路處理序間通訊](how-to-use-named-pipes-for-network-interprocess-communication.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [檔和流 I/O](../../../docs/standard/io/index.md)
-- [操作說明：使用匿名管道進行本機處理序間通訊](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
-- [如何：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [檔案和資料流程 i/o](index.md)
+- [作法：使用匿名管道進行本機處理序間通訊](how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [作法：使用具名管道進行網路處理序間通訊](how-to-use-named-pipes-for-network-interprocess-communication.md)

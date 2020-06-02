@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-ms.openlocfilehash: 163aa70df78eecf5ee9f3970919bc514ec72e119
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 44d3463f23269ceec6372b007ca8ba9684da8c02
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588614"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291704"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 資料範例
 此範例包含 .csv 格式的範例資料，以及將它轉換成記憶體中客戶、產品、訂單及訂單詳細資料集合的方法。 若要使用 PLINQ 進一步實驗，您可以將其他主題中的程式碼範例貼到本主題的程式碼中，並從 `Main` 方法叫用它。 您也可以搭配您自己的 PLINQ 查詢使用這項資料。  
@@ -862,4 +862,4 @@ END PRODUCTS
   
 ## <a name="see-also"></a>另請參閱
 
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [平行 LINQ (PLINQ)](introduction-to-plinq.md)

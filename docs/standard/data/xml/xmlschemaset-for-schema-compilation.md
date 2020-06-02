@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 55347de81c65b7390584415dd29044f4ca4ba02a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 44850755c41b212e88e0b90dd3b016f96a0af96d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709812"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290223"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用於結構描述編譯的 XmlSchemaSet
 說明 <xref:System.Xml.Schema.XmlSchemaSet>，它是一種可儲存及驗證 XML 結構描述定義語言 (XSD) 結構描述的快取。  
@@ -247,7 +247,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 ## <a name="validating-xml-documents"></a>驗證 XML 文件  
  您可根據 <xref:System.Xml.Schema.XmlSchemaSet> 中的結構描述來驗證 XML 文件。 驗證 XML 文件的方法是將結構描述加入至 <xref:System.Xml.XmlReaderSettings> 物件的 <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> 屬性，或將 <xref:System.Xml.Schema.XmlSchemaSet> 加入至 <xref:System.Xml.XmlReaderSettings> 物件的 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 屬性。 然後，<xref:System.Xml.XmlReaderSettings> 類別的 <xref:System.Xml.XmlReader.Create%2A> 方法會使用 <xref:System.Xml.XmlReader> 物件來建立 <xref:System.Xml.XmlReader> 物件並驗證 XML 文件。  
   
- 如需有關使用 <xref:System.Xml.Schema.XmlSchemaSet> 驗證 XML 文件的詳細資訊，請參閱 [使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)。  
+ 如需有關使用 <xref:System.Xml.Schema.XmlSchemaSet> 驗證 XML 文件的詳細資訊，請參閱 [使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)](xml-schema-xsd-validation-with-xmlschemaset.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -258,5 +258,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 - <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>
-- [XmlSchemaSet 作為結構描述快取](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+- [XmlSchemaSet 作為結構描述快取](xmlschemaset-for-schema-compilation.md)
+- [使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)](xml-schema-xsd-validation-with-xmlschemaset.md)

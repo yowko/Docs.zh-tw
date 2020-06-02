@@ -10,18 +10,18 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 30d746d739654ecad2b485b9d69cfe300caca2ff
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160257"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291184"
 ---
 # <a name="managed-threading-best-practices"></a>受控執行緒處理最佳做法
 在為多執行緒功能設計程式時需要非常小心。 您可以藉由將要求排入佇列以供執行緒集區的執行緒執行，來降低大部分工作的複雜性。 本主題要解決的是更困難的情況，例如協調多個執行緒的工作，或處理封鎖起來的執行緒。  
   
 > [!NOTE]
-> 從 .NET Framework 4 開始，工作平行程式庫和 PLINQ 會提供 API，來為多執行緒的程式設計工作降低一定的複雜度和風險。 如需詳細資訊，請參閱 [.NET 的平行程式設計](../../../docs/standard/parallel-programming/index.md)。  
+> 從 .NET Framework 4 開始，工作平行程式庫和 PLINQ 會提供 API，來為多執行緒的程式設計工作降低一定的複雜度和風險。 如需詳細資訊，請參閱 [.NET 的平行程式設計](../parallel-programming/index.md)。  
   
 ## <a name="deadlocks-and-race-conditions"></a>死結和競爭條件  
  多執行緒可透過輸送量和回應性來解決問題，但這麼做又會引發新的問題︰死結和競爭情形。  
@@ -64,7 +64,7 @@ else {
   
  在多執行緒應用程式中，已經載入並遞增值的執行緒可能會讓另一個將三個步驟全都執行完畢的執行緒來先佔；當第一個執行緒繼續執行並儲存其值時，它會不顧值已在過渡期間變更的事實而覆寫 `objCt`。  
   
- 您可以使用 <xref:System.Threading.Interlocked> 類別的方法 (例如 <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType> 方法)，輕鬆地避免這個特定的競爭情形。 若要了解其他可用來在多個執行緒之間同步處理資料的技術，請參閱[同步處理多執行緒的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)。  
+ 您可以使用 <xref:System.Threading.Interlocked> 類別的方法 (例如 <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType> 方法)，輕鬆地避免這個特定的競爭情形。 若要了解其他可用來在多個執行緒之間同步處理資料的技術，請參閱[同步處理多執行緒的資料](synchronizing-data-for-multithreading.md)。  
   
  當您同步處理多個執行緒的活動時，系統也會發生競爭情形。 每當您編寫一行程式碼時，您必須考慮如果某個執行緒在執行該行程式碼之前 (或在構成該行程式碼的個別電腦指令之前) 就讓其他執行緒先佔，而且另一個執行緒超過該執行緒時，系統可能會發生什麼狀況。  
   
@@ -79,7 +79,7 @@ else {
 
 系統上無論有多個處理器或只有一個處理器，都會影響多執行緒的架構。 如需詳細資訊，請參閱 [Number of Processors](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors) (處理器數目)。
 
-使用 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 屬性來判斷執行階段可用的處理器數目。
+使用 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 屬性，即可判斷在執行時間可用的處理器數目。
   
 ## <a name="general-recommendations"></a>一般建議  
  在使用多執行緒時，請考慮下列指導方針︰  
@@ -90,7 +90,7 @@ else {
   
 - 不要從主要程式控制背景工作執行緒的執行 (例如，使用事件)。 相反地，請設計您的程式，讓背景工作執行緒負責等候到可進行工作、執行工作，並在工作完成時通知程式的其他組件。 如果背景工作執行緒不會封鎖起來，請考慮使用執行緒集區的執行緒。 <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> 在背景工作執行緒封鎖的情況下很有用。  
   
-- 請勿使用型別來作為鎖定物件。 也就是避免像是 C# 中的 `lock(typeof(X))` 或 Visual Basic 中的 `SyncLock(GetType(X))` 的程式碼，或避免搭配 <xref:System.Type> 物件使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>。 針對指定的類型，每個應用程式定義域都會有 <xref:System.Type?displayProperty=nameWithType> 的一個執行個體。 如果您鎖定的型別是公用的，則不是您自有的程式碼也可鎖定該型別，而導致死結。 若要了解其他問題，請參閱[可靠性最佳作法](../../../docs/framework/performance/reliability-best-practices.md)。  
+- 請勿使用型別來作為鎖定物件。 也就是避免像是 C# 中的 `lock(typeof(X))` 或 Visual Basic 中的 `SyncLock(GetType(X))` 的程式碼，或避免搭配 <xref:System.Type> 物件使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>。 針對指定的類型，每個應用程式定義域都會有 <xref:System.Type?displayProperty=nameWithType> 的一個執行個體。 如果您鎖定的型別是公用的，則不是您自有的程式碼也可鎖定該型別，而導致死結。 若要了解其他問題，請參閱[可靠性最佳作法](../../framework/performance/reliability-best-practices.md)。  
   
 - 鎖定執行個體時請小心，例如 C# 中的 `lock(this)` 或 Visual Basic 中的 `SyncLock(Me)`。 如果您應用程式中屬於該型別之外的其他程式碼鎖定物件，系統可能會發生死結。  
   
@@ -174,5 +174,5 @@ else {
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行緒處理](../../../docs/standard/threading/index.md)
-- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)
+- [執行緒](index.md)
+- [執行緒和執行緒處理](threads-and-threading.md)

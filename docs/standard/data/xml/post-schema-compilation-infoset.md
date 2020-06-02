@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3bd0c6063fee1fa1a9f046a8be2ebfde07aea9ee
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710475"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291509"
 ---
 # <a name="post-schema-compilation-infoset"></a>後結構描述編譯資訊集
 [全球資訊網協會 (W3C) XML 結構描述建議事項](https://www.w3.org/XML/Schema) (英文) 中討論為了進行前置結構描述驗證和後置結構描述編譯所必須公開的資訊集 (infoset)。 XML 結構描述物件模型 (SOM) 會在呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法之前及之後，檢視此公開資訊集。  
@@ -40,4 +40,4 @@ ms.locfileid: "75710475"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)

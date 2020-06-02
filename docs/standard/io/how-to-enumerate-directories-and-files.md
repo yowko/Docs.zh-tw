@@ -1,5 +1,5 @@
 ---
-title: 如何：枚舉目錄和檔
+title: 如何：列舉目錄和檔案
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: 6a26d0ef529b81976c4d2caafed34bb5f08d8d46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bcb10426175c1f2cabeec6d8d4f8d2ed74e5e3b4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75707741"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291873"
 ---
-# <a name="how-to-enumerate-directories-and-files"></a>如何：枚舉目錄和檔
+# <a name="how-to-enumerate-directories-and-files"></a>如何：列舉目錄和檔案
 當您使用目錄和檔案的大型集合時，相較於陣列，可列舉的集合會提供更佳的效能。 若要列舉目錄和檔案，請使用能夠傳回可列舉目錄或檔案名稱、或是其 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 物件集合的方法。  
   
 如果您想要搜尋並只傳回目錄或檔案的名稱，請使用 <xref:System.IO.Directory> 類別的列舉方法。 如果您想要搜尋並傳回目錄或檔案的其他屬性，請使用 <xref:System.IO.DirectoryInfo> 和 <xref:System.IO.FileSystemInfo> 類別。  
@@ -37,7 +37,7 @@ ms.locfileid: "75707741"
 > [!NOTE]
 > 雖然您可以使用選擇性 <xref:System.IO.SearchOption> 列舉的 <xref:System.IO.SearchOption.AllDirectories> 選項立即列舉父目錄中子目錄的所有檔案，但 <xref:System.UnauthorizedAccessException> 錯誤可能會使列舉不完整。 您可以先列舉目錄再列舉檔案來攔截這些例外狀況。  
   
-## <a name="examples-use-the-directory-class"></a>示例：使用目錄類  
+## <a name="examples-use-the-directory-class"></a>範例：使用 Directory 類別  
   
 下列範例使用 <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> 方法，在所指定路徑中取得最上層目錄名稱的清單。  
 
@@ -49,7 +49,7 @@ ms.locfileid: "75707741"
 [!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
 [!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
   
-## <a name="examples-use-the-directoryinfo-class"></a>示例：使用目錄資訊類  
+## <a name="examples-use-the-directoryinfo-class"></a>範例：使用 DirectoryInfo 類別  
   
 下列範例使用 <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> 方法，列出其 <xref:System.IO.FileSystemInfo.CreationTimeUtc> 早於特定 <xref:System.DateTime> 值的最上層目錄集合。  
 
@@ -63,4 +63,4 @@ ms.locfileid: "75707741"
   
 ## <a name="see-also"></a>另請參閱
 
-- [檔案和資料流 I/O](../../../docs/standard/io/index.md)
+- [檔案和資料流 I/O](index.md)

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 78d9a6490c0479d9c21e01d0bcba41294d674a5c
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644374"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283438"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
 .NET Core 2.1 包含針對下列區域的增強與新功能：
 
 - [Tooling](#tooling)
-- [往捲動](#roll-forward)
+- [向前復原](#roll-forward)
 - [部署](#deployment)
 - [Windows 相容性套件](#windows-compatibility-pack)
 - [JIT 編譯改進功能](#jit-compiler-improvements)
@@ -53,7 +53,7 @@ ms.locfileid: "81644374"
 
    請注意到位於 `--verbose` 選項之前的 `--` 選項。 它能將直接傳遞給 `dotnet watch` 命令的選項，與傳遞給子 `dotnet` 處理序的引數分隔開來。 如果沒有它的話，`--verbose` 選項將會套用至 `dotnet watch` 命令，而非 `dotnet build` 命令。
   
-   有關詳細資訊,請參閱使用[dotnet 手錶 開發 ASP.NET 核心應用](/aspnet/core/tutorials/dotnet-watch)。
+   如需詳細資訊，請參閱[使用 dotnet Watch 開發 ASP.NET Core 應用程式](/aspnet/core/tutorials/dotnet-watch)。
 
 - `dotnet dev-certs` 能產生和管理在開發 ASP.NET Core 應用程式期間使用的憑證。
 
@@ -81,17 +81,17 @@ dotnet tool install -g dotnetsay
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md)以安裝工具。
 
-- [`dotnet tool update`](../tools/dotnet-tool-update.md)卸載並重新安裝工具,從而有效地更新它。
+- [`dotnet tool update`](../tools/dotnet-tool-update.md)卸載並重新安裝工具，以有效地更新它。
 
-- [`dotnet tool list`](../tools/dotnet-tool-list.md)列出目前安裝的工具。
+- [`dotnet tool list`](../tools/dotnet-tool-list.md)以列出目前安裝的工具。
 
-- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md)卸載目前安裝的工具。
+- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md)卸載目前已安裝的工具。
 
 ## <a name="roll-forward"></a>向前復原
 
 從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原為系統上安裝的最新次要版本**。
 
-從 .NET Core 2.0 開始，如果用來建置應用程式的 .NET Core 版本不存在於執行階段中，則應用程式會自動針對已安裝的最新 .NET Core *次要版本*執行。 換句話說，如果應用程式是使用 .NET Core 2.0 建置，而主機系統上不存在 .NET Core 2.0，但是有 .NET Core 2.1，則該應用程式會搭配 NET Core 2.1 執行。
+從 .NET Core 2.0 開始，如果用來建立應用程式的 .NET Core 版本不存在於執行時間，應用程式會自動針對最新安裝的 .NET Core*次要版本*執行。 換句話說，如果應用程式是使用 .NET Core 2.0 建置，而主機系統上不存在 .NET Core 2.0，但是有 .NET Core 2.1，則該應用程式會搭配 NET Core 2.1 執行。
 
 > [!IMPORTANT]
 > 此向前復原行為不適用於預覽版本。 根據預設，也不會套用至主要版本，但可透過以下設定進行變更。
@@ -112,7 +112,7 @@ dotnet tool install -g dotnetsay
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- 使用[.NET 核心 CLI](../tools/index.md)時,將具有所需值的以下選項加入`run`.NET Core 命令,如 :
+- 使用[.NET Core CLI](../tools/index.md)時，請將下列選項新增至 .net Core 命令所需的值，例如 `run` ：
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
@@ -124,11 +124,11 @@ dotnet tool install -g dotnetsay
 
 ### <a name="self-contained-application-servicing"></a>獨立的應用程式服務
 
-`dotnet publish` 現在會搭配服務執行階段版本發佈獨立應用程式。 當您搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈獨立應用程式時，應用程式就會包含該 SDK 已知的最新服務執行階段版本。 升級到最新 SDK 時,您將使用最新的 .NET Core 運行時版本進行發佈。 這適用於 .NET Core 1.0 執行階段和更新版本。
+`dotnet publish` 現在會搭配服務執行階段版本發佈獨立應用程式。 當您搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈獨立應用程式時，應用程式就會包含該 SDK 已知的最新服務執行階段版本。 當您升級至最新的 SDK 時，您會以最新的 .NET Core 執行階段版本發行。 這適用於 .NET Core 1.0 執行階段和更新版本。
 
-自包含發佈依賴於 NuGet.org 上的運行時版本。您不需要在電腦上有已維修的運行時。
+獨立發行版本依賴 NuGet.org 上的執行階段版本。您的電腦上不需要有服務執行時間。
 
-使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 使用此新行為,您不再需要設置此屬性為自包含應用程式選擇更高的運行時版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
+使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 有了這個新的行為，您就不需要再設定此屬性，為獨立式應用程式選取較高的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
 
 如需詳細資訊，請參閱[獨立式部署執行階段向前復原](../deploying/runtime-patch-selection.md)。
 ## <a name="windows-compatibility-pack"></a>Windows 相容性套件
@@ -211,7 +211,7 @@ dotnet tool install -g dotnetsay
 
 - 靜態 <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> 方法會以隨機值填滿 <xref:System.Span%601>。
 
-- 現在<xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>,Linux 和 macOS 上支援 。
+- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>Linux 和 macOS 現在支援。
 
 - 橢圓曲線 Diffie-Hellman (ECDH) 現在可用於 <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> 類別系列。 介面區與在 .NET Framework 中的介面區相同。
 
@@ -247,7 +247,7 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 ### <a name="breaking-changes"></a>重大變更
 
-有關重大更改的資訊,請參閱[從版本 2.0 移至 2.1 的中斷更改](../compatibility/2.0-2.1.md)。
+如需重大變更的詳細資訊，請參閱[從2.0 版遷移至2.1 的重大變更](../compatibility/2.0-2.1.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421263"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277956"
 ---
 # <a name="xml-serialization"></a>XML 序列化
 
@@ -33,7 +33,7 @@ ms.locfileid: "83421263"
 
  您物件中的資料是用程式語言來描述的，該程式語言會建構如類別、欄位、屬性、基本類型、陣列，甚至是以 **XmlElement** 或 **XmlAttribute** 物件為格式的內嵌 XML。 您可以選擇以屬性註解建立自己的類別，或使用 XML 結構描述定義工具來依據現有 XML 結構描述產生類別。
 
- 如果有 XML 結構描述，您可以執行 XML 結構描述定義工具來產生類別集，這些類別集是結構描述的強型別 (Strongly Typed)，而且以屬性註解。 當如此類別的執行個體序列化時，產生的 XML 符合 XML 結構描述。 隨著這種類別的提供，您可以根據操作簡易的物件模型進行程式設計，同時能確保產生的 XML 符合 XML 結構描述。 這是在 .NET Framework 使用其他類別的替代方法，就像是 **XmlReader** 和 **XmlWriter** 類別，用來剖析與撰寫 XML 資料流。 如需詳細資訊，請參閱 [XML 文件和資料](../../../docs/standard/data/xml/index.md)。 這些類別讓您能剖析所有 XML 資料流。 相反地，當預期 XML 資料流符合已知 XML 結構描述時，請使用 **XmlSerializer**。
+ 如果有 XML 結構描述，您可以執行 XML 結構描述定義工具來產生類別集，這些類別集是結構描述的強型別 (Strongly Typed)，而且以屬性註解。 當如此類別的執行個體序列化時，產生的 XML 符合 XML 結構描述。 隨著這種類別的提供，您可以根據操作簡易的物件模型進行程式設計，同時能確保產生的 XML 符合 XML 結構描述。 這是在 .NET Framework 使用其他類別的替代方法，就像是 **XmlReader** 和 **XmlWriter** 類別，用來剖析與撰寫 XML 資料流。 如需詳細資訊，請參閱 [XML 文件和資料](../data/xml/index.md)。 這些類別讓您能剖析所有 XML 資料流。 相反地，當預期 XML 資料流符合已知 XML 結構描述時，請使用 **XmlSerializer**。
 
  屬性會控制 **XmlSerializer** 類別產生的 XML 資料流，允許您設定 XML 資料流的 XML 命名空間、項目名稱、屬性名稱等等。 如需這些屬性的詳細資訊以及它們控制 XML 序列化的方式，請參閱[使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)。 如需控制產生的 XML 所用的那些屬性資料表，請參閱[控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)。
 

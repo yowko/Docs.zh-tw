@@ -1,5 +1,5 @@
 ---
-title: 如何：使用匿名管道進行本機處理序間通訊
+title: 作法：使用匿名管道進行本機處理序間通訊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9962471697888041e98e38dd5f7feaecc306894d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627990"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291782"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>如何：使用匿名管道進行本機處理序間通訊
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>作法：使用匿名管道進行本機處理序間通訊
 匿名管道會在本機電腦上提供處理序間通訊。 它們提供的功能比具名管道少，但其負荷也比較小。 您可以使用匿名管道，讓本機電腦上的處理序間通訊更容易。 您無法透過網路，使用匿名管道進行通訊。  
   
  若要實作匿名管道，請使用 <xref:System.IO.Pipes.AnonymousPipeServerStream> 和 <xref:System.IO.Pipes.AnonymousPipeClientStream> 類別。  
@@ -47,5 +47,5 @@ ms.locfileid: "77627990"
   
 ## <a name="see-also"></a>另請參閱
 
-- [管道](../../../docs/standard/io/pipe-operations.md)
-- [如何：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [管道](pipe-operations.md)
+- [作法：使用具名管道進行網路處理序間通訊](how-to-use-named-pipes-for-network-interprocess-communication.md)

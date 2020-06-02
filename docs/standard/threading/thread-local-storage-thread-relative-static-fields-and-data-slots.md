@@ -8,12 +8,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: adeeb6c95769d8e1ac120d4fb26d8aaedf7a1d4d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127514"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291080"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
 您可以使用受控執行緒區域儲存區 (TLS) 來儲存對執行緒和應用程式定義域而言是唯一的資料。 .NET Framework 提供兩種方式來使用受控 TLS：執行緒相關的靜態欄位和資料插槽。  
@@ -24,7 +24,7 @@ ms.locfileid: "73127514"
   
  在非受控 C++ 中，您可以使用 `TlsAlloc` 動態配置插槽，並使用 `__declspec(thread)` 來宣告變數應配置於執行緒相關儲存區中。 執行緒相關靜態欄位和資料插槽提供此行為的受控版本。  
   
- 在 .NET Framework 4 中，您可以使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 類別來建立第一次取用物件時進行延遲初始化的執行緒區域物件。 如需詳細資訊，請參閱[延遲初始化](../../../docs/framework/performance/lazy-initialization.md)。  
+ 在 .NET Framework 4 中，您可以使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 類別來建立第一次取用物件時進行延遲初始化的執行緒區域物件。 如需詳細資訊，請參閱[延遲初始化](../../framework/performance/lazy-initialization.md)。  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>受控 TLS 中資料的唯一性  
  無論您使用的是執行緒相關靜態欄位或資料插槽，受控 TLS 中的資料對執行緒和應用程式定義域的組合都是唯一的。  
@@ -61,4 +61,4 @@ ms.locfileid: "73127514"
 - <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>
 - <xref:System.ThreadStaticAttribute>
 - <xref:System.Runtime.Remoting.Messaging.CallContext>
-- [執行緒處理](../../../docs/standard/threading/index.md)
+- [執行緒](index.md)

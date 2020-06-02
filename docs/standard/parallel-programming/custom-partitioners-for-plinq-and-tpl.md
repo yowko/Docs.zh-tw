@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50553aab30d5a1bc5880ae0fe39c34508e57d0e5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141563"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276721"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 和 TPL 的自訂 Partitioner
 
@@ -23,7 +23,7 @@ ms.locfileid: "73141563"
 
 有許多可分割資料來源的方法。 在最有效率的方法中，多個執行緒會合作處理原始來源序列，而不會實際將來源分割成多個子序列。 針對陣列及其他已編製索引的來源 (例如已事先知道長度的 <xref:System.Collections.IList> 集合)，「定界分割」** 是最簡單的資料分割種類。 每個執行緒都會收到唯一的開始和結束索引，因此可處理自己的來源範圍，而不會覆寫任何其他執行緒或被任何其他執行緒覆寫。 定界分割唯一涉及的額外負荷就是一開始的範圍建立工作；之後則不需要任何額外的同步處理。 因此，只要平均分配工作負載，便能夠提供良好的效能。 定界分割有個缺點，就是如果一個執行緒提早完成，它並無法協助其他執行緒完成它們的工作。
 
-針對連結清單或其他長度不明的集合，您可以使用「區塊分割」**。 在區塊分割中，平行迴圈或查詢中的每個執行緒或工作都會取用一個區塊中的一些來源元素、處理它們，然後再返回來擷取額外的元素。 Partitioner 可確保散發所有元素且沒有任何重複項目。 區塊可以是任何大小。 例如，[如何：實作動態磁碟分割](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)所示範的 Partitioner 會建立只包含一個元素的區塊。 只要區塊不是太大，這類資料分割本質上可提供負載平衡，因為不是以預先決定的方式將元素指派給執行緒。 不過，每次執行緒需要取得另一個區塊時，Partitioner 的確會造成同步處理額外負荷。 在這些情況下所導致的同步處理量多寡與區塊的大小成反比。
+針對連結清單或其他長度不明的集合，您可以使用「區塊分割」**。 在區塊分割中，平行迴圈或查詢中的每個執行緒或工作都會取用一個區塊中的一些來源元素、處理它們，然後再返回來擷取額外的元素。 Partitioner 可確保散發所有元素且沒有任何重複項目。 區塊可以是任何大小。 例如，[如何：實作動態磁碟分割](how-to-implement-dynamic-partitions.md)所示範的 Partitioner 會建立只包含一個元素的區塊。 只要區塊不是太大，這類資料分割本質上可提供負載平衡，因為不是以預先決定的方式將元素指派給執行緒。 不過，每次執行緒需要取得另一個區塊時，Partitioner 的確會造成同步處理額外負荷。 在這些情況下所導致的同步處理量多寡與區塊的大小成反比。
 
 一般而言，只有在委派的執行時間為少到適中，且來源有大量元素，以及每個資料分割的總工作量大致相等時，定界分割才會比較快。 因此，通常區塊分割在大多數情況下會比較快。 當來源只有少量元素或委派的執行時間較長時，則區塊分割和定界分割的效能大致相等。
 
@@ -99,7 +99,7 @@ TPL Partitioner 也支援動態數量的資料分割。 這意謂著它們可以
 
 如果您想要在 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法中使用 Partitioner，您必須能夠傳回動態數量的資料分割。 這意謂著 Partitioner 可以在迴圈執行期間，隨時視需要為新資料分割提供列舉值。 基本上，每次迴圈新增平行工作時，都會為該工作要求新的資料分割。 如果您要求資料必須可排序，則請從 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> 衍生，如此才能為每個資料分割中的每個項目指派唯一索引。
 
-如需詳細資訊和範例，請參閱[如何：實作動態磁碟分割](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)。
+如需詳細資訊和範例，請參閱[如何：實作動態磁碟分割](how-to-implement-dynamic-partitions.md)。
 
 ### <a name="contract-for-partitioners"></a>Partitioner 的合約
 
@@ -127,6 +127,6 @@ TPL Partitioner 也支援動態數量的資料分割。 這意謂著它們可以
 
 ## <a name="see-also"></a>另請參閱
 
-- [並行程式設計](../../../docs/standard/parallel-programming/index.md)
-- [如何：實作動態磁碟分割](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
-- [如何：為靜態分割實作 Partitioner](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [平行程式設計](index.md)
+- [作法：實作動態分割](how-to-implement-dynamic-partitions.md)
+- [作法：為靜態分割實作 Partitioner](how-to-implement-a-partitioner-for-static-partitioning.md)

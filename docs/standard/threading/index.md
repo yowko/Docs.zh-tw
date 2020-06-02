@@ -6,30 +6,30 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: c5ca102dc98e50067d39d2f0c51a6ff75e342e9f
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: e4c19b664e8fc040fdc4a284b30f6104d676088d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588659"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279150"
 ---
 # <a name="managed-threading"></a>Managed 執行緒處理
 不論您開發的是搭載一或多個處理器的電腦，即使應用程式目前正在執行其他工作，您還是希望應用程式能以最快速度與使用者互動。 使用多執行緒的執行是一種讓應用程式能迅速回應使用者，同時能夠在使用者事件之間或甚至在使用者事件當中善用處理器的強大方法。 雖然本節將介紹執行緒處理的基本概念，但是重點會放在 Managed 執行緒處理概念和如何使用 Managed 執行緒處理。  
   
 > [!NOTE]
-> 從 .NET Framework 4 開始，多執行緒的程式設計已透過 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別、[平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的新並行集合類別，以及以工作 (而非執行緒) 概念為基礎的新程式設計模型，而做出大幅簡化。 有關詳細資訊,請參閱[並行編程](../../../docs/standard/parallel-programming/index.md)。  
+> 從 .NET Framework 4 開始，多執行緒的程式設計已透過 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別、[平行 LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的新並行集合類別，以及以工作 (而非執行緒) 概念為基礎的新程式設計模型，而做出大幅簡化。 如需詳細資訊，請參閱[平行程式設計](../parallel-programming/index.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [託管線程基礎知識](../../../docs/standard/threading/managed-threading-basics.md)  
+ [Managed 執行緒基本概念](managed-threading-basics.md)  
  提供 Managed 執行緒處理的概觀，並討論何時使用多個執行緒。  
   
- [使用執行緒和執行緒處理](../../../docs/standard/threading/using-threads-and-threading.md)  
+ [使用執行緒和執行緒處理](using-threads-and-threading.md)  
  說明如何建立、啟動、暫停、繼續和中止執行緒。  
   
- [託管線程最佳實務](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [受控執行緒最佳做法](managed-threading-best-practices.md)  
  討論同步處理的層級、如何避免死結和競爭條件，以及其他執行緒處理問題。  
   
- [執行緒物件與功能](../../../docs/standard/threading/threading-objects-and-features.md)  
+ [執行緒物件和功能](threading-objects-and-features.md)  
  描述可用來同步執行緒活動的 Managed 類別，以及在不同執行緒上存取的物件資料，並提供執行緒集區執行緒的概觀。  
   
 ## <a name="reference"></a>參考  
@@ -43,20 +43,20 @@ ms.locfileid: "80588659"
  包含建立和排程並行處理工作的類別。  
   
 ## <a name="related-sections"></a>相關章節  
- [應用程式域](../../../docs/framework/app-domains/application-domains.md)  
+ [應用程式定義域](../../framework/app-domains/application-domains.md)  
  提供應用程式定義域的概觀及通用語言基礎結構如何使用它們。  
   
- [非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [非同步檔案 i/o](../io/asynchronous-file-i-o.md)  
  描述非同步 I/O 的效能利益和基本作業。  
   
- [工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ [工作式非同步模式 (TAP)](../asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
  提供 .NET 中非同步程式設計建議模式的概觀。  
   
- [以非同步的方式呼叫同步方法](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) \(部分機器翻譯\)  
+ [以非同步的方式呼叫同步方法](../asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) \(部分機器翻譯\)  
  說明如何使用內建的委派功能在執行緒集區執行緒上呼叫方法。  
   
- [平行編程式](../../../docs/standard/parallel-programming/index.md)  
+ [平行程式設計](../parallel-programming/index.md)  
  描述平行程式設計程式庫，簡化應用程式中多個執行緒的用法。  
   
- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
+ [平行 LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)  
  描述以平行方式執行查詢的系統，以善用多個處理器。

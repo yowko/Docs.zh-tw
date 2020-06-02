@@ -6,16 +6,16 @@ helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 76e8009b83182d8517ff403f4f1e67bf0e7846b8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 50688cb25294f14a9dd4596258eb95adf93cdb41
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375838"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277982"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>HOW TO：覆寫已編碼的 SOAP XML 序列化
 
-將物件的 XML 序列化覆寫為 SOAP 訊息的程序，與覆寫標準 XML 序列化的程序類似。 如需覆寫標準 XML 序列化的資訊，請參閱[如何：指定 XML 資料流的替代項目名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
+將物件的 XML 序列化覆寫為 SOAP 訊息的程序，與覆寫標準 XML 序列化的程序類似。 如需覆寫標準 XML 序列化的資訊，請參閱[如何：指定 XML 資料流的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
 
 ## <a name="to-override-serialization-of-objects-as-soap-messages"></a>將物件的序列化覆寫為 SOAP 訊息
 
@@ -279,11 +279,11 @@ public class Run
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [使用 XML Web Service 進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [如何：將物件序列化為 SOAP 編碼的 XML 資料流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
+- [控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)
+- [使用 XML Web Service 進行 XML 序列化](xml-serialization-with-xml-web-services.md)
+- [HOW TO：序列化物件](how-to-serialize-an-object.md)
+- [如何：還原序列化物件](how-to-deserialize-an-object.md)
+- [如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

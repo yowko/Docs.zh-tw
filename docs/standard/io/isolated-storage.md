@@ -18,18 +18,18 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f98af970c8827623298fb43cd0653bdaafb20dd3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706578"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278878"
 ---
 # <a name="isolated-storage"></a>隔離儲存區
 <a name="top"></a> 對於傳統型應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。
 
 > [!IMPORTANT]
-> 獨立存儲不適用於 Windows 8.x 應用商店應用。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
+> Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 
 本主題包含下列幾節：
 
@@ -113,10 +113,10 @@ ms.locfileid: "75706578"
 
 |作業系統|檔案系統中的位置|
 |----------------------|-----------------------------|
-|Windows 2000、Windows XP、Windows Server 2003 (從 Windows NT 4.0 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Application Data<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Local Settings\Application Data|
-|Windows 2000 - 全新安裝 (以及從 Windows 98 和 Windows NT 3.51 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
-|Windows XP、Windows Server 2003 - 全新安裝 (以及從 Windows 2000 和 Windows 98 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
-|Windows 8， 視窗 7， Windows 伺服器 2008， Windows Vista|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Roaming<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Local|
+|Windows 2000、Windows XP、Windows Server 2003 (從 Windows NT 4.0 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMROOT>\Profiles \\<使用者 \> \Application 資料<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMROOT>\Profiles \\<使用者 \> \Local Settings\Application 資料|
+|Windows 2000 - 全新安裝 (以及從 Windows 98 和 Windows NT 3.51 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents 和設定 \\<使用者 \> \Application 資料<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents 和設定 \\<使用者 \> \Local Settings\Application 資料|
+|Windows XP、Windows Server 2003 - 全新安裝 (以及從 Windows 2000 和 Windows 98 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents 和設定 \\<使用者 \> \Application 資料<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents 和設定 \\<使用者 \> \Local Settings\Application 資料|
+|Windows 8、Windows 7、Windows Server 2008、Windows Vista|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Users \\<使用者 \> \AppData\Roaming<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Users \\<使用者 \> \AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
@@ -160,20 +160,20 @@ ms.locfileid: "75706578"
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>相關主題
+## <a name="related-topics"></a>[相關主題]
 
 |Title|描述|
 |-----------|-----------------|
-|[隔離的類型](../../../docs/standard/io/types-of-isolation.md)|描述各種類型的隔離。|
-|[操作說明：取得隔離儲存區的存放區](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|
-|[如何：列舉隔離儲存區的存放區](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 方法來計算使用者之所有隔離儲存區的大小。|
-|[操作說明：刪除隔離儲存區中的存放區](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 方法，以兩種不同的方式刪除隔離存放區。|
-|[如何：預期隔離儲存區發生空間不足的情況](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|示範如何測量隔離存放區內的剩餘空間。|
-|[操作說明：在隔離儲存區中建立檔案和目錄](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|提供一些在隔離存放區中建立檔案和目錄的範例。|
-|[操作說明：尋找隔離儲存區中的現有檔案和目錄](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|示範如何在隔離儲存區中讀取目錄結構和檔案。|
-|[如何：讀取和寫入離儲存區中的檔案](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|提供將字串寫入至隔離儲存區檔案並將它讀回的範例。|
-|[如何：刪除隔離儲存區中的檔案和目錄](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|示範如何刪除隔離儲存區的檔案和目錄。|
-|[檔和流 I/O](../../../docs/standard/io/index.md)|說明如何執行同步和非同步檔案及資料流存取。|
+|[隔離的類型](types-of-isolation.md)|描述各種類型的隔離。|
+|[作法：取得隔離儲存區的存放區](how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|
+|[作法：列舉隔離儲存區的存放區](how-to-enumerate-stores-for-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 方法來計算使用者之所有隔離儲存區的大小。|
+|[作法：刪除隔離儲存區中的存放區](how-to-delete-stores-in-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 方法，以兩種不同的方式刪除隔離存放區。|
+|[作法：預期隔離儲存區發生空間不足的情況](how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|示範如何測量隔離存放區內的剩餘空間。|
+|[作法：在隔離儲存區中建立檔案和目錄](how-to-create-files-and-directories-in-isolated-storage.md)|提供一些在隔離存放區中建立檔案和目錄的範例。|
+|[作法：尋找隔離儲存區中的現有檔案和目錄](how-to-find-existing-files-and-directories-in-isolated-storage.md)|示範如何在隔離儲存區中讀取目錄結構和檔案。|
+|[作法：讀取和寫入隔離儲存區中的檔案](how-to-read-and-write-to-files-in-isolated-storage.md)|提供將字串寫入至隔離儲存區檔案並將它讀回的範例。|
+|[作法：刪除隔離儲存區中的檔案和目錄](how-to-delete-files-and-directories-in-isolated-storage.md)|示範如何刪除隔離儲存區的檔案和目錄。|
+|[檔案和資料流程 i/o](index.md)|說明如何執行同步和非同步檔案及資料流存取。|
 
 <a name="reference"></a>
 

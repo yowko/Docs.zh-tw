@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用數位簽章簽署 XML 文件
+title: 如何：使用數位簽章簽署 XML 文件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 0df036b3336527f3cc0e48d9a7ec835ab9f1cf4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 81fa5e4c503f26dc13758090f845fd8387287084
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706041"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277176"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>HOW TO：使用數位簽章簽署 XML 文件
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>如何：使用數位簽章簽署 XML 文件
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別，以數位簽章簽署 XML 文件或 XML 文件的一部分。  XML 數位簽章 (XMLDSIG) 可讓您驗證在簽署資料後，資料未經過變更。  如需 XMLDSIG 標準的詳細資訊，請參閱全球資訊網協會（W3C）建議[XML 簽章語法和處理](https://www.w3.org/TR/xmldsig-core/)。  
   
- 此程式中的程式碼範例示範如何以數位方式簽署整個 XML 檔，並將簽章附加至 <`Signature`> 元素中的檔。  範例會建立 RSA 簽章金鑰、將金鑰加入安全的金鑰容器，然後使用金鑰來數位簽署 XML 文件。  金鑰便可以擷取來驗證 XML 數位簽章，或可以用來簽署另一份 XML 文件。  
+ 此程式中的程式碼範例示範如何以數位方式簽署整個 XML 檔，並將簽章附加至 <> 元素中的檔 `Signature` 。  範例會建立 RSA 簽章金鑰、將金鑰加入安全的金鑰容器，然後使用金鑰來數位簽署 XML 文件。  金鑰便可以擷取來驗證 XML 數位簽章，或可以用來簽署另一份 XML 文件。  
   
- 如需如何驗證使用此程式所建立之 XML 數位簽章的相關資訊，請參閱[如何：驗證 Xml 檔的數位簽章](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)。  
+ 如需如何驗證使用此程式所建立之 XML 數位簽章的相關資訊，請參閱[如何：驗證 Xml 檔的數位簽章](how-to-verify-the-digital-signatures-of-xml-documents.md)。  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>數位簽署 XML 文件  
   
@@ -75,7 +75,7 @@ ms.locfileid: "75706041"
      [!code-csharp[HowToSignXMLDocumentRSA#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#10)]
      [!code-vb[HowToSignXMLDocumentRSA#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#10)]  
   
-10. 抓取簽章的 XML 標記法（<`Signature`> 元素），並將它儲存至新的 <xref:System.Xml.XmlElement> 物件。  
+10. 抓取簽章的 XML 標記法（<`Signature`> 元素），並將其儲存至新的 <xref:System.Xml.XmlElement> 物件。  
   
      [!code-csharp[HowToSignXMLDocumentRSA#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#11)]
      [!code-vb[HowToSignXMLDocumentRSA#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#11)]  
@@ -112,11 +112,11 @@ ms.locfileid: "75706041"
 - 包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 絕對不要以純文字儲存或傳輸非對稱金鑰組的私密金鑰。  如需對稱和非對稱密碼編譯金鑰的詳細資訊，請參閱[產生加密和解密的金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)。  
+ 絕對不要以純文字儲存或傳輸非對稱金鑰組的私密金鑰。  如需對稱和非對稱密碼編譯金鑰的詳細資訊，請參閱[產生加密和解密的金鑰](generating-keys-for-encryption-and-decryption.md)。  
   
- 絕對不要直接將私密金鑰內嵌在您的原始程式碼。  使用[Ildasm （IL](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)解譯器）或在文字編輯器（如 [記事本]）中開啟元件，可以輕鬆地從元件中讀取內嵌索引鍵。  
+ 絕對不要直接將私密金鑰內嵌在您的原始程式碼。  使用[Ildasm （IL](../../framework/tools/ildasm-exe-il-disassembler.md)解譯器）或在文字編輯器（如 [記事本]）中開啟元件，可以輕鬆地從元件中讀取內嵌索引鍵。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Cryptography.Xml>
-- [操作說明：驗證 XML 文件的數位簽章](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- [操作說明：驗證 XML 文件的數位簽章](how-to-verify-the-digital-signatures-of-xml-documents.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: b6e6f2c4b28e9220727bf0fe1a958a7b69111571
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: d8b60428bc129958355ce5b285662847e9e712c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202166"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282411"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML 資料型別轉換
 在**XmlConvert**類別中找到的大部分方法都是用來轉換字串和強型別格式之間的資料。 這些方法都和地區設定無關。 也就是說，它們在進行轉換時並不會考慮任何地區設定的設定。  
@@ -66,5 +66,5 @@ writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));
   
 ## <a name="see-also"></a>另請參閱
 
-- [將字串轉換成 .NET Framework 資料型別](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
-- [將 .NET Framework 型別轉換成字串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [將字串轉換成 .NET Framework 資料型別](converting-strings-to-dotnet-data-types.md)
+- [將 .NET Framework 型別轉換成字串](converting-dotnet-types-to-strings.md)

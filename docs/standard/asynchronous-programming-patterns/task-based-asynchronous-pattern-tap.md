@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a08c8a72116ea509f559e412c5f270f3471bf1c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158164"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276435"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>以工作為基礎的非同步模式 (TAP)
 工作式非同步模式 (TAP) 是以 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空間中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 類型為基礎，這兩種類別用於表示任意非同步作業。 TAP 是進行新的開發工作時，建議使用的非同步設計模式。  
@@ -30,9 +30,9 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
   
  TAP 方法的參數應該與其同步對應項目的參數相符，並且應該以相同順序提供。  不過，`out` 和 `ref` 參數不受限於這項規則，因此應完全避免使用。 所有可能會透過 `out` 或 `ref` 參數傳回的資料，都應該改成做為 `TResult` 所傳回 <xref:System.Threading.Tasks.Task%601> 的一部分傳回，而且應使用 Tuple 或自訂資料結構來容納多個值。 即使 TAP 方法的同步對應項目沒有提供 <xref:System.Threading.CancellationToken> 參數，您也應該考慮新增一個。
 
- 專門用於建立、管理或組合工作的方法 (其中方法的非同步用意以方法名稱或方法所屬的類型名稱清楚表示) 不需要遵循這個命名模式，這類方法通常稱為「組合器」**。 組合器的範例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，並且將在[使用以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)文件的[使用內建工作式組合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)一節中加以討論。  
+ 專門用於建立、管理或組合工作的方法 (其中方法的非同步用意以方法名稱或方法所屬的類型名稱清楚表示) 不需要遵循這個命名模式，這類方法通常稱為「組合器」**。 組合器的範例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，並且將在[使用以工作為基礎的非同步模式](consuming-the-task-based-asynchronous-pattern.md)文件的[使用內建工作式組合器](consuming-the-task-based-asynchronous-pattern.md#combinators)一節中加以討論。  
   
- 如需說明 TAP 語法與舊有非同步程式設計模式 (例如非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)) 的語法之間差異的範例，請參閱[非同步程式設計模式](../../../docs/standard/asynchronous-programming-patterns/index.md)。  
+ 如需說明 TAP 語法與舊有非同步程式設計模式 (例如非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)) 的語法之間差異的範例，請參閱[非同步程式設計模式](index.md)。  
   
 ## <a name="initiating-an-asynchronous-operation"></a>啟始非同步作業  
  以 TAP 為基礎的非同步方法可以先同步處理少量供作，例如驗證引數和啟始非同步作業，再傳回產生的工作。 同步工作量應盡量維持最少，這樣非同步方法才可以快速傳回。 快速傳回的原因如下：  
@@ -92,7 +92,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
   
  如果 TAP 實作提供接受 `progress` 參數的多載，則必須允許 `null` 引數，而這種情況下就不會報告進度。 TAP 實作應對 <xref:System.Progress%601> 物件同步報告進度，如此可讓非同步方法快速提供進度，並且讓進度消費者判斷處理資訊的最佳方式和位置。 例如，進度執行個體可以選擇在擷取的同步處理內容上封送處理回呼並引發事件。  
   
-## <a name="iprogresst-implementations"></a>IProgress\<T> 實作  
+## <a name="iprogresst-implementations"></a>Iprogress<t> 的 \<T> 實施  
  .NET Framework 4.5 提供單一 <xref:System.IProgress%601> 實作：<xref:System.Progress%601>。 <xref:System.Progress%601> 類別的宣告方式如下：  
   
 ```csharp  
@@ -191,7 +191,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 |Title|描述|  
 |-----------|-----------------|  
-|[非同步程式設計模式](../../../docs/standard/asynchronous-programming-patterns/index.md)|介紹執行非同步作業的三種模式：工作式非同步模式 (TAP)、非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)。|  
-|[實作以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|描述三種實作工作式非同步模式 (TAP) 的方式：使用 Visual Studio 中的 C# 和 Visual Basic 編譯器、手動，或是透過編譯器和手動方法的組合。|  
-|[Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|描述如何使用工作和回呼達到等待的目的，而不會遭到封鎖。|  
-|[Interop 與其他非同步模式和類型](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|描述如何使用工作式非同步模式 (TAP) 實作非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)。|
+|[非同步程式設計模式](index.md)|介紹執行非同步作業的三種模式：工作式非同步模式 (TAP)、非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)。|  
+|[實作以工作為基礎的非同步模式](implementing-the-task-based-asynchronous-pattern.md)|描述三種實作工作式非同步模式 (TAP) 的方式：使用 Visual Studio 中的 C# 和 Visual Basic 編譯器、手動，或是透過編譯器和手動方法的組合。|  
+|[Consuming the Task-based Asynchronous Pattern](consuming-the-task-based-asynchronous-pattern.md)|描述如何使用工作和回呼達到等待的目的，而不會遭到封鎖。|  
+|[Interop 與其他非同步模式和類型](interop-with-other-asynchronous-patterns-and-types.md)|描述如何使用工作式非同步模式 (TAP) 實作非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)。|
