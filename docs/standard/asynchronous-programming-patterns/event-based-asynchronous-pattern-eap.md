@@ -7,19 +7,19 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 604e7a944579a284004817009b06c11b268d5daf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130935"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289430"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>事件架構非同步模式 (EAP)
 
 將非同步功能公開到用戶端程式碼的方式有許多種； 事件架構非同步模式會針對要呈現非同步行為之類別指示一個方法。  
   
 > [!NOTE]
-> 從 .NET Framework 4 開始，工作平行程式庫會為非同步處理和平行程式設計提供新的模型。 有關詳細資訊，請參閱[任務並行庫 （TPL）](../parallel-programming/task-parallel-library-tpl.md)和[基於任務的非同步模式 （TAP）。](task-based-asynchronous-pattern-tap.md)
+> 從 .NET Framework 4 開始，工作平行程式庫會為非同步處理和平行程式設計提供新的模型。 如需詳細資訊，請參閱工作[平行程式庫（TPL）](../parallel-programming/task-parallel-library-tpl.md)和以工作[為基礎的非同步模式（](task-based-asynchronous-pattern-tap.md)點一下）。
   
 ## <a name="in-this-section"></a>本節內容
 
@@ -60,11 +60,11 @@ ms.locfileid: "73130935"
  [工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
  描述非同步處理和平行作業的程式設計模型。  
   
- [執行緒處理](../../../docs/standard/threading/index.md)  
+ [執行緒](../threading/index.md)  
  說明 .NET 中的多執行緒處理功能。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [託管執行緒最佳實踐](../threading/managed-threading-best-practices.md)
+- [受控執行緒最佳做法](../threading/managed-threading-best-practices.md)
 - [事件](../events/index.md)
 - [非同步程式設計模式](index.md)

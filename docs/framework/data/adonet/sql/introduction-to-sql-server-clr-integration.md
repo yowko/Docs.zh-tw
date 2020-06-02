@@ -1,13 +1,14 @@
 ---
 title: SQL Server CLR 整合簡介
+description: CLR 與 SQL Server 的整合可支援預存程式、觸發程式、使用者定義函數、使用者定義型別，以及 managed 程式碼中的使用者定義匯總。
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 41dd89af4f45c673cf6b7283fc39aaf91fd9963c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: fa2ef68792d09cf94b3e0680a14bd79f9b593999
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452405"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286426"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 整合簡介
 做為 Microsoft .NET Framework 核心的 Common Language Runtime (CLR)，提供了所有 .NET Framework 程式碼的執行環境。 在 CLR 內執行的程式碼稱為 Managed 程式碼。 CLR 提供程式執行所需的各種功能及服務，包括 Just-In-Time (JIT) 編譯、配置及管理記憶體、強制使用型別安全、例外狀況處理、執行緒管理及安全性。  
@@ -18,7 +19,7 @@ ms.locfileid: "77452405"
   
  本節的目的是僅提供以 SQL Server CLR 整合進行程式設計快速入門所需的足夠資訊，並未包含廣泛資訊。 如需詳細資訊，請參閱您所使用之 SQL Server 版本的《SQL Server 線上叢書》版本。  
   
- **SQL Server 文件**  
+ **SQL Server 檔**  
   
 - [Common Language Runtime (CLR) 整合概觀](/sql/relational-databases/clr-integration/common-language-runtime-integration-overview)  
   
@@ -36,14 +37,14 @@ GO
   
  如需詳細資訊，請參閱您所使用之 SQL Server 版本的《SQL Server 線上叢書》版本。  
   
- **SQL Server 文件**  
+ **SQL Server 檔**  
   
 - [啟用 CLR 整合](/sql/relational-databases/clr-integration/clr-integration-enabling)  
   
 ## <a name="deploying-a-clr-assembly"></a>部署 CLR 組件  
  一旦 CLR 方法已經在測試伺服器上測試並驗證之後，您就可以使用部署指令碼，將它們散發至實際伺服器。 您可以手動產生部署指令碼，也可以使用 SQL Server Management Studio 來產生部署指令碼。 如需詳細資訊，請參閱您所使用之 SQL Server 版本的 SQL Server 檔版本。  
   
- **SQL Server 文件**  
+ **SQL Server 檔**  
   
 1. [部署 CLR 資料庫物件](/sql/relational-databases/clr-integration/deploying-clr-database-objects)  
   
@@ -52,7 +53,7 @@ GO
   
  如需詳細資訊，請參閱您所使用之 SQL Server 版本的《SQL Server 線上叢書》版本。  
   
- **SQL Server 文件**  
+ **SQL Server 檔**  
   
 - [CLR 整合安全性](/sql/relational-databases/clr-integration/security/clr-integration-security)  
   
@@ -61,11 +62,11 @@ GO
   
  如需詳細資訊，請參閱您所使用之 SQL Server 版本的《SQL Server 線上叢書》版本。  
   
- **SQL Server 文件**  
+ **SQL Server 檔**  
   
 - [偵錯 CLR 資料庫物件](/sql/relational-databases/clr-integration/debugging-clr-database-objects)  
   
 ## <a name="see-also"></a>另請參閱
 
 - [程式碼存取安全性和 ADO.NET](../code-access-security.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

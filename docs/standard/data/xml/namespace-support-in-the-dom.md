@@ -3,12 +3,12 @@ title: DOM 中支援的命名空間
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-ms.openlocfilehash: 7efe03f25fde0681ebd9e3c7c8ea81f6686a8ec1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6fefce961c2ff91530a9110f5563fd921a7838a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710605"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288793"
 ---
 # <a name="namespace-support-in-the-dom"></a>DOM 中支援的命名空間
 XML 文件物件模型 (DOM) 具有完全的命名空間感知。 只有命名空間感知 XML 文件受支援。 全球資訊網協會 (W3C) 指定實作層級 1 的 DOM 應用程式可不具備命名空間感知，而 DOM 層級 2 功能則具有命名空間感知。 然而，不論方法是來自層級 1 或層級 2 DOM 建議事項，XML DOM 中所有的功能都具有命名空間感知。  
@@ -25,4 +25,4 @@ XML 文件物件模型 (DOM) 具有完全的命名空間感知。 只有命名�
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

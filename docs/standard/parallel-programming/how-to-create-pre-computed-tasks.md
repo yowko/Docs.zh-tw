@@ -1,5 +1,5 @@
 ---
-title: 如何：建立經過預先計算的工作
+title: 作法：建立經過預先計算的工作
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
-ms.openlocfilehash: f5d2a70685fe0401d0219b99ada6936ac04691f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88f0782380d21858bc5dd0fc0fbf63bbf85403b8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123131"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289989"
 ---
-# <a name="how-to-create-pre-computed-tasks"></a>如何：建立經過預先計算的工作
+# <a name="how-to-create-pre-computed-tasks"></a>作法：建立經過預先計算的工作
 此文件將說明如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法擷取保留在快取中的非同步下載作業的結果。 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法會傳回已完成的 <xref:System.Threading.Tasks.Task%601> 物件，該物件中會保存提供的值做為其 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性。 當您執行會傳回 <xref:System.Threading.Tasks.Task%601> 物件的非同步作業，而且該 <xref:System.Threading.Tasks.Task%601> 物件的結果已計算時，這個方法很有用。  
   
 ## <a name="example"></a>範例  
@@ -28,4 +28,4 @@ ms.locfileid: "73123131"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以工作為基礎的非同步程式設計](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [以工作為基礎的非同步程式設計](task-based-asynchronous-programming.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 8e4530063f14211688e5ef2d2ec4ed7e4834cdf1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cb9dd3e8af570251b8bcd2e450e686ad69ab78c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212963"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287974"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>集合內的比較和排序
 
@@ -51,7 +51,7 @@ ms.locfileid: "83212963"
 
 若要提供明確比較，某些方法接受以 **IComparer** 實作做為參數。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 實作。
 
-系統目前的文化特性設定，會影響集合內的比較和排序。 依預設， **Collections** 類別中的比較和排序會區分文化特性。 若要略過文化特性設定，並因而取得一致的比較和排序結果，請使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 搭配接受 <xref:System.Globalization.CultureInfo>的成員多載。 如需詳細資訊，請參閱 [Performing Culture-Insensitive String Operations in Collections](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 與 [Performing Culture-Insensitive String Operations in Arrays](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)。
+系統目前的文化特性設定，會影響集合內的比較和排序。 依預設， **Collections** 類別中的比較和排序會區分文化特性。 若要略過文化特性設定，並因而取得一致的比較和排序結果，請使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A> 搭配接受 <xref:System.Globalization.CultureInfo>的成員多載。 如需詳細資訊，請參閱 [Performing Culture-Insensitive String Operations in Collections](../globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 與 [Performing Culture-Insensitive String Operations in Arrays](../globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)。
 
 <a name="BKMK_Equalityandsortexample"></a>
 ## <a name="equality-and-sort-example"></a>相等和排序範例

@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160205"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291964"
 ---
-# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用 \<msxsl:script> 加入 XSLT 樣式表指令碼
+# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用  加入 XSLT 樣式表指令碼\<msxsl:script>
 <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
   
 > [!NOTE]
-> 在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
+> 在 .NET Framework 2.0 中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](migrating-from-the-xsltransform-class.md)。  
   
  <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。 載入樣式表時，任何已定義的函式都會被包裝在類別定義內，而編譯成 Microsoft Intermediate Language (MSIL)，因此不會降低效能。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "78160205"
   
  其中 `msxsl` 是繫結至命名空間 `urn:schemas-microsoft-com:xslt` 的前置詞。  
   
- 屬性`language`不是強制性的，但若指定，其值必須為下列其中一項`C#`： `VB`、 `JScript`、 `JavaScript`、 `VisualBasic`、或`CSharp`。 如果沒有指定的話，語言預設為 JScript。 `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
+ `language`屬性不是強制性的，但若指定，其值必須為下列其中一項： `C#` 、 `VB` 、 `JScript` 、 `JavaScript` 、 `VisualBasic` 或 `CSharp` 。 如果沒有指定的話，語言預設為 JScript。 `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
   
  `implements-prefix` 屬性是必要的。 這個屬性用來宣告命名空間，並把它與指令碼區塊產生關聯。 這個屬性的值是表示命名空間的前置詞。 這個命名空間可以被定義在樣式表內的某處。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "78160205"
   
  函式可在 `msxsl:script` 項目內進行宣告。 下表顯示根據預設所支援的命名空間。 您可以使用所列之命名空間以外的類別。 不過這些類別必須是完整限定。  
   
-|預設的命名空間|說明|  
+|預設的命名空間|描述|  
 |------------------------|-----------------|  
 |System|系統類別。|  
 |System.Collection|集合類別。|  
@@ -231,4 +231,4 @@ public class Sample
   
 ## <a name="see-also"></a>另請參閱
 
-- [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [XslTransform 類別實作 XSLT 處理器](xsltransform-class-implements-the-xslt-processor.md)

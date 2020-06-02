@@ -1,13 +1,14 @@
 ---
 title: 非同步程式設計
+description: 深入瞭解 SQL Server 的 .NET Framework Data Provider 中的非同步程式設計，包括 .NET Framework 4.5 中引進的增強功能。
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 7bf492e45a9ebabdd36caa8e21605739bb410695
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937583"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287099"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -26,7 +27,7 @@ ms.locfileid: "75937583"
 .NET Framework 4.5 中的這項功能仍會保留在 SqlClient 中。
 
 > [!TIP]
-> 從 .NET Framework 4.5 開始，這些舊版方法不再需要在連接字串中 `Asynchronous Processing=true`。
+> 從 .NET Framework 4.5 開始，這些舊版方法不再需要 `Asynchronous Processing=true` 連接字串。
 
 ## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>.NET Framework 4.5 中新增的非同步程式設計功能
 
@@ -92,7 +93,7 @@ ms.locfileid: "75937583"
  已加入其他非同步成員，以支援[SqlClient 串流支援](sqlclient-streaming-support.md)。
 
 > [!TIP]
-> 新的非同步方法不需要在連接字串中 `Asynchronous Processing=true`。
+> 新的非同步方法不需要 `Asynchronous Processing=true` 在連接字串中。
 
 ### <a name="synchronous-to-asynchronous-connection-open"></a>開啟同步與非同步的連接
 
@@ -640,10 +641,10 @@ namespace SqlBulkCopyAsyncCodeSample {
 
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>非同步使用多個命令與 MARS
 
-此範例會開啟與**AdventureWorks**資料庫的單一連接。 使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。 當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。
+此範例會開啟 **AdventureWorks** 資料庫的單一連線。 使用 <xref:System.Data.SqlClient.SqlCommand> 物件，即會建立 <xref:System.Data.SqlClient.SqlDataReader>。 使用讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，並使用第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料作為第二個讀取器的 WHERE 子句輸入。
 
 > [!NOTE]
-> 下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。
+> 下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串會假設資料庫安裝在本機電腦且可供使用。 請依據環境需求修改連接字串。
 
 ```csharp
 using System;
@@ -711,12 +712,12 @@ class Class1 {
 
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>使用 MARS 非同步讀取及更新資料
 
-MARS 允許將連接用於讀取作業及資料操作語言 (DML) 作業 (具有多個暫止作業)。 使用此功能，應用程式即無需處理連接繁忙錯誤。 此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。 最後，因為多個作業可在單一連線上進行操作，所以可共用相同的交易內容，而無需使用 **sp_getbindtoken** 及 **sp_bindsession** 系統預存程序。
+MARS 允許將連線用於含有一個以上擱置中作業的讀取作業與資料操作語言 (DML) 作業。 此功能讓應用程式不需要處理連線忙碌的錯誤。 此外，MARS 也可以取代伺服器端資料指標的使用者，這通常會取用更多資源。 最後，因為多個作業可在單一連線上進行操作，所以可共用相同的交易內容，而無需使用 **sp_getbindtoken** 及 **sp_bindsession** 系統預存程序。
 
-下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。 第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 將會執行計算，以判斷新的 **OnOrderQty** 應該是什麼。 然後使用第三個命令物件，以新值來更新 **ProductVendor** 資料表。 這整個處理序會在單一交易中發生，並在結束時復原。
+下列主控台應用程式示範如何使用兩個具有三個 <xref:System.Data.SqlClient.SqlCommand> 物件的 <xref:System.Data.SqlClient.SqlDataReader> 物件，以及已啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取其信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商識別碼，來載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 以及該特定廠商的所有產品。 第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 將會執行計算，以判斷新的 **OnOrderQty** 應該是什麼。 然後使用第三個命令物件，以新值來更新 **ProductVendor** 資料表。 這整個程序都會在單一交易內進行，並在結束時復原。
 
 > [!NOTE]
-> 下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。
+> 下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串會假設資料庫安裝在本機電腦且可供使用。 請依據環境需求修改連接字串。
 
 ```csharp
 using System;
@@ -826,6 +827,6 @@ class Program {
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)

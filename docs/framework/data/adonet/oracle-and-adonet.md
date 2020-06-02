@@ -1,17 +1,18 @@
 ---
 title: Oracle 和 ADO.NET
+description: 瞭解 Oracle .NET Framework Data Provider 的功能和行為，其可讓您使用 Oracle 呼叫介面來存取 Oracle 資料庫。
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 5683f2b4ba57021ff6dda3a51baca016f886b605
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980076"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286685"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
@@ -37,7 +38,7 @@ using System.Data.OracleClient;
 csc /r:System.Data.OracleClient.dll  
 ```  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [系統需求](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  描述使用 Oracle 的 .NET Framework Data Provider 的需求，並說明使用時要注意的一些問題。  
   
@@ -72,13 +73,13 @@ csc /r:System.Data.OracleClient.dll
  [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)  
  說明如何使用 ADO.NET 中的資料。  
   
- [SQL Server 和 ADO.NET](./sql/index.md)  
+ [SQL Server and ADO.NET](./sql/index.md) (SQL Server 和 ADO.NET)  
  說明如何使用 SQL Server 特有的特性和功能。  
   
- [DbProviderFactories](dbproviderfactories.md)  
+ [DbProviderFactory](dbproviderfactories.md)  
  說明可讓您在 ADO.NET 中撰寫提供者獨立程式碼的泛用類別。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ADO.NET](index.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

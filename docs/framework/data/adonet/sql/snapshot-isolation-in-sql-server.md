@@ -1,22 +1,23 @@
 ---
 title: SQL Server 中的快照隔離
+description: 閱讀 SQL Server 中快照集隔離和資料列版本設定的總覽，並瞭解如何管理具有隔離等級的平行存取。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 8313ffc8eef70c1e5efc24b09a160edb7cec1595
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fa769448dd922925a5eccf4c85bd1840155df68
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174260"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286241"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔離
 快照集隔離可增強 OLTP 應用程式的並行存取。  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>瞭解快照集隔離及資料列版本控制  
- 啟用快照隔離後，必須維護每個事務的更新行版本。  在 SQL Server 2019 之前，這些版本存儲在**tempdb**中。 SQL Server 2019 引入了一項新功能，加速資料庫恢復 （ADR），它需要自己的一組行版本。  因此，從 SQL Server 2019 起，如果未啟用 ADR，則行版本將一如既往保存在**tempdb**中。  如果啟用了 ADR，則所有行版本（都與快照隔離和 ADR 相關）都保存在 ADR 的持久版本存儲 （PVS） 中，該版本位於使用者指定的檔組中的使用者資料庫中。 唯一的交易序號會識別每個交易，而且會針對每個資料列版本記錄這些唯一的編號。 交易適用於在交易序號之前具有序號的最新資料列版本。 交易會忽略在交易開始之後所建立的較新資料列版本。  
+ 一旦啟用快照集隔離，就必須維護每個交易的更新資料列版本。  在 SQL Server 2019 之前，這些版本會儲存在**tempdb**中。 SQL Server 2019 引進了一項新功能：加速資料庫復原（ADR），它需要自己的一組資料列版本。  因此，從 SQL Server 2019，如果未啟用 ADR，則資料列版本會一律保留在**tempdb**中。  如果已啟用 ADR，則與 snapshot 隔離和 ADR 相關的所有資料列版本都會保留在 ADR 的持續版本存放區（PV）中，該資料庫位於使用者指定的檔案群組中。 唯一的交易序號會識別每個交易，而且會針對每個資料列版本記錄這些唯一的編號。 交易適用於在交易序號之前具有序號的最新資料列版本。 交易會忽略在交易開始之後所建立的較新資料列版本。  
   
  「快照集」一詞反映了交易中的所有查詢都會根據交易開始時資料庫的狀態，看到資料庫的相同版本或快照集。 在快照集交易中的基礎資料列或資料頁面上沒有鎖定，這允許其他交易執行，而不會被之前未完成的交易封鎖。 修改資料的交易不會封鎖讀取資料的交易，而讀取資料的交易不會封鎖寫入資料的交易，因為它們通常會在 SQL Server 中預設的 READ COMMITTED 隔離等級之下。 此非封鎖性的行為也會大幅降低複雜交易發生死結的可能性。  
   
@@ -97,7 +98,7 @@ SqlTransaction sqlTran =
   
 - 其會開啟第二個連線並使用 SNAPSHOT 隔離等級初始化第二筆交易，以讀取 **TestSnapshot** 資料表中的資料。 因為已啟用快照集隔離，所以此交易可以讀取 sqlTransaction1 開始之前已存在的資料。  
   
-- 其會開啟第三個連線，並使用 READ COMMITTED 隔離等級來起始交易，以嘗試讀取資料表中的資料。 在這種情況下，代碼無法讀取資料，因為它無法讀取第一個事務中放在表上的鎖並超時。如果使用 REPEATABLE 讀取和 SERIALIZABLE 隔離等級，則也會出現相同的結果，因為這些隔離等級也無法讀取第一個事務中放置的鎖。  
+- 其會開啟第三個連線，並使用 READ COMMITTED 隔離等級來起始交易，以嘗試讀取資料表中的資料。 在此情況下，程式碼無法讀取資料，因為它無法讀取超過第一筆交易中所放在資料表上的鎖定，並且會超時。如果使用可重複的讀取和 SERIALIZABLE 隔離等級，就會發生相同的結果，因為這些隔離等級也無法讀取超出第一筆交易的鎖定。  
   
 - 其會開啟第四個連線，並使用 READ UNCOMMITTED 隔離等級來起始交易，這會在 sqlTransaction1 中執行未認可值的中途讀取。 如果未認可第一個交易，這個值可能永遠不會實際存在於資料庫中。  
   
@@ -143,6 +144,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 和 ADO.NET](index.md)
+- [SQL Server and ADO.NET](index.md) (SQL Server 和 ADO.NET)
 - [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)
 - [交易鎖定與資料列版本設定指南](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

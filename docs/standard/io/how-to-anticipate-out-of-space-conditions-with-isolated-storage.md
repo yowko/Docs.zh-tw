@@ -1,5 +1,5 @@
 ---
-title: 如何：預期隔離儲存區發生空間不足的情況
+title: 作法：預期隔離儲存區發生空間不足的情況
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-ms.openlocfilehash: 5666019e1a65880221261ef5ad704f82c37263b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdc2cee343e9d9be44230e84ff45d6fa54901f48
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708111"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288585"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>如何：預期隔離儲存區發生空間不足的情況
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>作法：預期隔離儲存區發生空間不足的情況
 
-使用隔離儲存區的程式碼受到[配額](../../../docs/standard/io/isolated-storage.md#quotas)的限制，此限制可針對隔離儲存區檔案和目錄所在的資料區間，指定其大小上限。 配額由安全性原則所定義且由系統管理員設定。 當您嘗試寫入資料時，如果超過允許的大小上限，則會擲回 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 例外狀況，且作業會失敗。 這有助於防止惡意的拒絕服務攻擊，此功能可能會因為資料存放區已滿而導致應用程式拒絕要求。
+使用隔離儲存區的程式碼受到[配額](isolated-storage.md#quotas)的限制，此限制可針對隔離儲存區檔案和目錄所在的資料區間，指定其大小上限。 配額由安全性原則所定義且由系統管理員設定。 當您嘗試寫入資料時，如果超過允許的大小上限，則會擲回 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 例外狀況，且作業會失敗。 這有助於防止惡意的拒絕服務攻擊，此功能可能會因為資料存放區已滿而導致應用程式拒絕要求。
 
 為協助您判斷指定的寫入嘗試是否可能因為這個原因而失敗，<xref:System.IO.IsolatedStorage.IsolatedStorage> 類別會提供三個唯讀屬性：<xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>、<xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> 和 <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>。 您可以使用這些屬性判斷寫入存放區是否會導致超過存放區允許的大小上限。 請記住，您可以並行存取隔離儲存區。因此，在計算剩餘的儲存區數量時，可能會在您嘗試寫入存放區時耗用儲存空間。 不過，您可以使用存放區的大小上限，以協助判斷是否即將到達可用儲存空間的上限。
 
@@ -48,5 +48,5 @@ ms.locfileid: "75708111"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [隔離存儲](../../../docs/standard/io/isolated-storage.md)
-- [操作說明：取得隔離儲存區的存放區](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- [隔離儲存區](isolated-storage.md)
+- [作法：取得隔離儲存區的存放區](how-to-obtain-stores-for-isolated-storage.md)

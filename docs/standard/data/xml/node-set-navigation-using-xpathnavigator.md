@@ -3,12 +3,12 @@ title: 使用 XPathNavigator 巡覽節點集
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-ms.openlocfilehash: 91115af03b635d7660721fac5ce8bd749953e4ff
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 132154afdfd3e5bd6769bfcce338e598136e7515
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710566"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288754"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>使用 XPathNavigator 巡覽節點集
 您可以使用 <xref:System.Xml.XPath.XPathDocument> 類別的節點集巡覽方法，巡覽 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathNavigator> 物件中的節點。 您可以巡覽所有節點或由 <xref:System.Xml.XPath.XPathNavigator> 類別的其中一個選取方法傳回的選定節點集。  
@@ -16,7 +16,7 @@ ms.locfileid: "75710566"
 ## <a name="element-node-set-navigation"></a>項目節點集巡覽  
  <xref:System.Xml.XPath.XPathNavigator> 類別提供可用於巡覽項目節點的數種方法。 下表顯示可用的巡覽方法及其移動方式的說明；但不包括可用於巡覽屬性及命名空間節點的方法。  
   
- 如需有關選取 <xref:System.Xml.XPath.XPathNavigator> 物件中之節點的詳細資訊，請參閱[使用 XPathNavigator 選取、評估與比對 XML 資料](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)。 如需有關巡覽屬性和命名空間節點的詳細資訊，請參閱[使用 XPathNavigator 巡覽屬性及命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)。  
+ 如需有關選取 <xref:System.Xml.XPath.XPathNavigator> 物件中之節點的詳細資訊，請參閱[使用 XPathNavigator 選取、評估與比對 XML 資料](selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)。 如需有關巡覽屬性和命名空間節點的詳細資訊，請參閱[使用 XPathNavigator 巡覽屬性及命名空間節點](attribute-and-namespace-node-navigation-using-xpathnavigator.md)。  
   
 |方法|描述|  
 |------------|-----------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "75710566"
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [使用 XPathNavigator 巡覽屬性及命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
-- [使用 XPathNavigator 擷取 XML 資料](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
-- [使用 XPathNavigator 存取強型別 XML 資料](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+- [使用 XPath 資料模型處理 XML 資料](process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 巡覽屬性及命名空間節點](attribute-and-namespace-node-navigation-using-xpathnavigator.md)
+- [使用 XPathNavigator 擷取 XML 資料](extract-xml-data-using-xpathnavigator.md)
+- [使用 XPathNavigator 存取強型別 XML 資料](accessing-strongly-typed-xml-data-using-xpathnavigator.md)

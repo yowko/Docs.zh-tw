@@ -11,18 +11,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 669b9c77ca0102ed94d8743cf37b18c0d0c528dc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159399"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288351"
 ---
 # <a name="encrypting-data"></a>加密資料
 對稱式加密和非對稱式加密是使用不同的程序執行。 對稱式加密在資料流上執行，因此適用於加密大量資料。 非對稱式加密在少數的位元組上執行，因此只適用於小量的資料。  
   
 ## <a name="symmetric-encryption"></a>對稱加密  
- Managed 對稱式密碼編譯類別可搭配特殊的資料流類別，稱為 <xref:System.Security.Cryptography.CryptoStream> ，它會加密讀入資料流的資料。 **CryptoStream** 類別初始化時具有 Managed 資料流類別初始化、實作 <xref:System.Security.Cryptography.ICryptoTransform> 介面 (從實作密碼編譯演算法的類別建立) 的類別，以及描述允許對 <xref:System.Security.Cryptography.CryptoStreamMode> CryptoStream **執行之存取類型的**列舉。 **CryptoStream** 類別可以使用衍生自 <xref:System.IO.Stream> 類別的任何類別初始化，包括 <xref:System.IO.FileStream>、 <xref:System.IO.MemoryStream>和 <xref:System.Net.Sockets.NetworkStream>。 使用這些類別，您可以在各種不同的資料流物件上執行對稱式加密。  
+ Managed 對稱式密碼編譯類別可搭配特殊的資料流類別，稱為 <xref:System.Security.Cryptography.CryptoStream> ，它會加密讀入資料流的資料。 **CryptoStream** 類別初始化時具有 Managed 資料流類別初始化、實作 <xref:System.Security.Cryptography.ICryptoTransform> 介面 (從實作密碼編譯演算法的類別建立) 的類別，以及描述允許對 <xref:System.Security.Cryptography.CryptoStreamMode> CryptoStream **執行之存取類型的**列舉。 **CryptoStream**類別可以使用衍生自類別的任何類別初始化 <xref:System.IO.Stream> ，包括 <xref:System.IO.FileStream> 、 <xref:System.IO.MemoryStream> 和 <xref:System.Net.Sockets.NetworkStream> 。 使用這些類別，您可以在各種不同的資料流物件上執行對稱式加密。  
   
  下列範例說明如何建立 <xref:System.Security.Cryptography.RijndaelManaged> 類別的新執行個體，它會實作 Rijndael 加密演算法，並使用它對 **CryptoStream** 類別執行加密。 在此範例中， **CryptoStream** 以稱為 `myStream` 的資料流物件初始化，它是任何類型的 Managed 資料流。 會傳遞金鑰和加密所用 IV 給來自 **RijndaelManaged** 類別的 **CreateEncryptor** 方法。 在此情況下，會使用從 `rmCrypto` 產生的預設金鑰和 IV。 最後，會傳遞 **CryptoStreamMode.Write** ，並指定對資料流的寫入權限。  
   
@@ -262,6 +262,6 @@ class Class1
   
 ## <a name="see-also"></a>另請參閱
 
-- [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [解密資料](../../../docs/standard/security/decrypting-data.md)
-- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)
+- [產生加密和解密金鑰](generating-keys-for-encryption-and-decryption.md)
+- [解密資料](decrypting-data.md)
+- [密碼編譯服務](cryptographic-services.md)

@@ -1,13 +1,14 @@
 ---
 title: SQL Server 中的授權和權限
+description: 瞭解如何明確授與許可權，讓 SQL Server 中的使用者可以使用 ADO.NET 來存取您建立的資料庫物件。
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: eb01e29b36da5e1793b9176301a968a42115d19c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782594"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286529"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server 中的授權和權限
 當您建立資料庫物件時，必須明確地授與權限，讓使用者能夠存取這些物件。 每個安全性實體物件都具有可利用權限陳述式來授與主體的權限。  
@@ -35,7 +36,7 @@ ms.locfileid: "70782594"
 |--------------------------|-----------------|  
 |GRANT|授與權限。|  
 |REVOKE|撤銷權限。 這是新物件的預設狀態。 從某個使用者或角色中撤銷的權限仍然可以繼承自被指派主體的其他群組或角色。|  
-|DENY|DENY 會撤銷權限，讓它無法被繼承。 DENY 的優先順序高於所有權限，但是 DENY 無法套用至物件擁有者或 `sysadmin` 的成員。 如果您針對 `public` 角色拒絕 (DENY) 某個物件的權限，就會一併拒絕所有使用者和角色，但物件擁有者和 `sysadmin` 成員除外。|  
+|拒絕|DENY 會撤銷權限，讓它無法被繼承。 DENY 的優先順序高於所有權限，但是 DENY 無法套用至物件擁有者或 `sysadmin` 的成員。 如果您針對 `public` 角色拒絕 (DENY) 某個物件的權限，就會一併拒絕所有使用者和角色，但物件擁有者和 `sysadmin` 成員除外。|  
   
 - GRANT 陳述式可以指派權限給某個群組或角色，而資料庫角色可以繼承這些權限。 不過，DENY 陳述式的優先順序高於所有其他權限陳述式。 因此，已經被拒絕某個權限的使用者無法從另一個角色繼承該權限。  
   
@@ -54,9 +55,9 @@ ms.locfileid: "70782594"
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
   
-|Resource|描述|  
+|資源|描述|  
 |--------------|-----------------|  
-|[Permissions](/sql/relational-databases/security/permissions-database-engine)|包含說明權限階層、目錄檢視以及固定伺服器與資料庫角色之權限的主題。|
+|[權限](/sql/relational-databases/security/permissions-database-engine)|包含說明權限階層、目錄檢視以及固定伺服器與資料庫角色之權限的主題。|
   
 ## <a name="see-also"></a>另請參閱
 
@@ -65,4 +66,4 @@ ms.locfileid: "70782594"
 - [在 SQL Server 中進行驗證](authentication-in-sql-server.md)
 - [SQL Server 中的伺服器和資料庫角色](server-and-database-roles-in-sql-server.md)
 - [SQL Server 中的擁有權和使用者結構描述分離](ownership-and-user-schema-separation-in-sql-server.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

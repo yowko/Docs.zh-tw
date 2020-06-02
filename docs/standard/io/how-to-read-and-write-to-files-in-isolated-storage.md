@@ -1,5 +1,5 @@
 ---
-title: 如何：讀取和寫入離儲存區中的檔案
+title: 作法：讀取和寫入隔離儲存區中的檔案
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0c95f418ff85654dceed296b7a891c025ab2e62
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706682"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291795"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>如何：讀取和寫入離儲存區中的檔案
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>作法：讀取和寫入隔離儲存區中的檔案
 若要在隔離存放區中的檔案內進行讀取或寫入，請使用具有資料流讀取器 (<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 物件) 或資料流寫入器 (<xref:System.IO.StreamReader> 物件) 的 <xref:System.IO.StreamWriter> 物件。  
   
 ## <a name="example"></a>範例  
@@ -40,5 +40,5 @@ ms.locfileid: "75706682"
 - <xref:System.IO.FileAccess?displayProperty=nameWithType>
 - <xref:System.IO.StreamReader?displayProperty=nameWithType>
 - <xref:System.IO.StreamWriter?displayProperty=nameWithType>
-- [檔和流 I/O](../../../docs/standard/io/index.md)
-- [隔離存儲](../../../docs/standard/io/isolated-storage.md)
+- [檔案和資料流程 i/o](index.md)
+- [隔離儲存區](isolated-storage.md)

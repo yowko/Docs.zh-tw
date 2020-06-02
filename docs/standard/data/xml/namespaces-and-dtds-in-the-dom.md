@@ -3,12 +3,12 @@ title: DOM 中的命名空間和 DTD
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-ms.openlocfilehash: 22762e3a7003d9b28a53c7b500829aaa41924c6d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 748be66c255aa018fb3e1ed541c6e5a92775408c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710592"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288780"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM 中的命名空間和 DTD
 文件類型定義 (DTD) 會使命名空間支援較為複雜。 例如，下列 XML 包含名稱中有冒號的預設屬性。  
@@ -33,4 +33,4 @@ ms.locfileid: "75710592"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

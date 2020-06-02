@@ -1,5 +1,5 @@
 ---
-title: 如何：使用平行工作周遊二進位樹狀
+title: 作法：使用平行工作周遊二進位樹狀目錄
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
-ms.openlocfilehash: b79337e6ee8057506ff87c696cecd6b038eeebfc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ac81a61691ec20daafc9e18978ba5814a150383
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141638"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288065"
 ---
-# <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>如何：使用平行工作周遊二進位樹狀
+# <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>作法：使用平行工作周遊二進位樹狀目錄
 下列範例示範可以使用平行工作來周遊樹狀資料結構的兩種方式。 建立樹狀的部分則留待練習。  
   
 ## <a name="example"></a>範例  
@@ -26,4 +26,4 @@ ms.locfileid: "73141638"
   
 ## <a name="see-also"></a>另請參閱
 
-- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [工作平行程式庫 (TPL)](task-parallel-library-tpl.md)

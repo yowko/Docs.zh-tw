@@ -12,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744175"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290184"
 ---
 # <a name="names-of-type-members"></a>類型成員名稱
 類型由成員組成：方法、屬性、事件、建構函式及欄位。 下列各節會描述為類型成員命名的方針。
@@ -40,7 +40,7 @@ public class String {
 
  ✔️使用名詞、名詞片語或形容詞來命名屬性。
 
- ❌ 沒有符合 "Get" 方法名稱的屬性，如下列範例所示：
+ ❌沒有符合 "Get" 方法名稱的屬性，如下列範例所示：
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -48,7 +48,7 @@ public class String {
 
  ✔️使用複數片語來命名集合屬性，以描述集合中的專案，而不是使用後面接著 "List" 或 "Collection" 的單數片語。
 
- ✔️使用肯定片語（`CanSeek`，而不是 `CantSeek`）來命名布林屬性。 （選擇性）您也可以使用 "Is"、"Can" 或 "has" 作為布林值屬性的前置詞，但只有其加入值的位置。
+ ✔️使用肯定片語（ `CanSeek` 而不是）來命名布林屬性 `CantSeek` 。 （選擇性）您也可以使用 "Is"、"Can" 或 "has" 作為布林值屬性的前置詞，但只有其加入值的位置。
 
  ✔️考慮為屬性提供與其類型相同的名稱。
 
@@ -72,34 +72,34 @@ public class Control {
 
  例如，在視窗關閉前發生的關閉事件會稱作 `Closing`，而在視窗關閉後發生的事件則稱作 `Closed`。
 
- ❌ 不要使用 "Before" 或 "After" 前置詞或 postfixes 來表示前置和後置事件。 使用如同敘述的現在與過去時態。
+ ❌請勿使用 "Before" 或 "After" 前置詞或 postfixes 來表示前置和後置事件。 使用如同敘述的現在與過去時態。
 
  ✔️使用 "EventHandler" 尾碼來命名事件處理常式（做為事件種類的委派），如下列範例所示：
 
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
 
- ✔️確實會使用名為 `sender` 的兩個參數，並在事件處理常式中 `e`。
+ ✔️確實會 `sender` `e` 在事件處理常式中使用名為和的兩個參數。
 
  傳送者參數代表引發事件的物件。 傳送者參數的類型通常為 `object`，即使可採用更明確的類型時也一樣。
 
  ✔️ DO 以 "EventArgs" 尾碼命名事件引數類別。
 
 ## <a name="names-of-fields"></a>欄位的名稱
- 欄位命名方針適用於靜態公開和保護的欄位。 方針並未涵蓋內部與私人的欄位，且[成員設計方針](../../../docs/standard/design-guidelines/member.md)並不允許公開或保護的執行個體欄位。
+ 欄位命名方針適用於靜態公開和保護的欄位。 方針並未涵蓋內部與私人的欄位，且[成員設計方針](member.md)並不允許公開或保護的執行個體欄位。
 
  ✔️請在功能變數名稱中使用 PascalCasing。
 
  ✔️使用名詞、名詞片語或形容詞來命名欄位。
 
- ❌ 不要使用功能變數名稱的前置詞。
+ ❌請不要使用功能變數名稱的前置詞。
 
  例如，不要使用 "g_" 或 "s_" 來表示靜態欄位。
 
  *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
 
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。**
 
 ## <a name="see-also"></a>另請參閱
 
-- [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
-- [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [架構設計方針](index.md)
+- [命名方針](naming-guidelines.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ca888074aa757a1bfba786a7bec5928b75b1da2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141609"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290405"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>規則運算式中的其他建構
 .NET 中的規則運算式包含三個其他語言建構。 其中一個可讓您在規則運算式模式的中間，啟用或停用特定比對選項。 其餘兩個可讓您在規則運算式中包含註解。  
@@ -25,9 +25,9 @@ ms.locfileid: "73141609"
   
 `(?imnsx-imnsx)`  
   
- 您在問號之後列出要啟用的選項，並在減號之後列出要停用的選項。 下表會說明每個選項。 如需每個選項的詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
+ 您在問號之後列出要啟用的選項，並在減號之後列出要停用的選項。 下表會說明每個選項。 如需每個選項的詳細資訊，請參閱[規則運算式選項](regular-expression-options.md)。  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |`i`|不區分大小寫的比對。|  
 |`m`|多行模式。|  
@@ -38,7 +38,7 @@ ms.locfileid: "73141609"
  `(?imnsx-imnsx)` 建構所定義之規則運算式選項中的任何變更，其效果會一直維持到封入群組的結尾。  
   
 > [!NOTE]
-> `(?imnsx-imnsx:`*子運算式*`)`分組構造為子運算式提供了相同的功能。 如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+> `(?imnsx-imnsx:`*子運算式* `)` 群組結構會為子運算式提供相同的功能。 如需詳細資訊，請參閱[群組建構](grouping-constructs-in-regular-expressions.md)。  
   
  下列範例會使用 `i`、`n` 及 `x` 選項來啟用不區分大小寫和明確擷取，並忽略規則運算式中間規則運算式模式中的空白字元。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73141609"
 |`\b`|比對字邊界。|  
   
 ## <a name="inline-comment"></a>內嵌註解  
- `(?#` *comment*注釋`)`構造允許您在正則運算式中包含內聯注釋。 規則運算式引擎不會在模式比對中使用註解的任一部分，不過，會將註解包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法所傳回的字串中。 註解會在第一個右括號結束。  
+ `(?#`*批註* `)` 結構可讓您在正則運算式中包含內嵌批註。 規則運算式引擎不會在模式比對中使用註解的任一部分，不過，會將註解包含在 <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> 方法所傳回的字串中。 註解會在第一個右括號結束。  
   
  下列範例會重複上一節範例中的第一個規則運算式模式。 它會將兩個內嵌註解加入規則運算式，以指出比較是否區分大小寫。 規則運算式模式 `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b` 定義如下。  
   
@@ -99,4 +99,4 @@ ms.locfileid: "73141609"
   
 ## <a name="see-also"></a>另請參閱
 
-- [正則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

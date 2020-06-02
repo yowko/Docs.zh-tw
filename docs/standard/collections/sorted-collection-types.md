@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: c948c70a06931f5f93a6f4235585cf7ac94e8533
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 2d9d3744859eea1a09923980b3b4c57eca6bba97
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728361"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287935"
 ---
 # <a name="sorted-collection-types"></a>排序集合類型
 
@@ -40,7 +40,7 @@ ms.locfileid: "82728361"
 | 插入和移除一般是 O(`n`)；不過，對於已處於排序次序的資料，插入是 O(log `n`)，因此每個項目都會新增至清單的結尾。 (這假設不需要調整大小)。 | 插入和移除是 O(log `n`)。 |
 | 使用的記憶體少於 <xref:System.Collections.Generic.SortedDictionary%602>。 | 使用的記憶體多於 <xref:System.Collections.SortedList> 非泛型類別和 <xref:System.Collections.Generic.SortedList%602> 泛型類別。 |
 
-針對必須可以從多個執行緒同時存取的已排序清單或字典，您可以將排序邏輯新增至衍生自 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的類別。 考慮不可變性時，下列對應的不可變類型會遵循類似<xref:System.Collections.Immutable.ImmutableSortedSet%601>的<xref:System.Collections.Immutable.ImmutableSortedDictionary%602>排序語義：和。
+針對必須可以從多個執行緒同時存取的已排序清單或字典，您可以將排序邏輯新增至衍生自 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的類別。 考慮不可變性時，下列對應的不可變類型會遵循類似的排序語義： <xref:System.Collections.Immutable.ImmutableSortedSet%601> 和 <xref:System.Collections.Immutable.ImmutableSortedDictionary%602> 。
 
 > [!NOTE]
 > 針對包含專屬索引鍵的值 (例如，包含員工識別碼的員工記錄)，您可以建立索引鍵集合，而索引鍵集合透過衍生自 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型類別而具有部分清單特性和部分字典特性。
@@ -52,4 +52,4 @@ ms.locfileid: "82728361"
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602>
-- [常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [常用的集合類型](commonly-used-collection-types.md)

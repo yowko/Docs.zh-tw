@@ -1,13 +1,14 @@
 ---
 title: SQL Server 安全性概觀
+description: 瞭解 SQL Server 的安全性架構，以瞭解哪些功能和功能會影響已知的威脅，以及預測未來的威脅。
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: adc1ce661d49c468de09552ea36a2cd58d6343f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c423a408e607c51c048ad08b91122a1fe06e31b2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780946"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286271"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server 安全性概觀
 具有重疊安全性層的深入防禦策略是抵禦安全性威脅的最佳方式。 SQL Server 提供了一種安全性架構，其設計目的是為了允許資料庫管理員和開發人員建立安全的資料庫應用程式並抵禦威脅。 每個 SQL Server 版本都會透過引進新的特性和功能來改善舊版 SQL Server。 不過，安全性無法一體適用。 每個應用程式的安全性需求都是唯一的。 開發人員必須瞭解哪些特性和功能的組合最適合用來抵禦已知威脅，以及預期未來可能會發生的威脅。  
@@ -16,13 +17,13 @@ ms.locfileid: "70780946"
   
 - 驗證是指登入 SQL Server 的程序，其中主體會透過提交伺服器評估的認證來要求存取。 驗證會建立正在進行驗證之使用者或處理序的識別。  
   
-- 授權是指決定主體可存取哪些安全性實體資源，以及允許針對這些資源進行哪些作業的程序。  
+- 授權是決定主體可存取哪些安全性實體資源，以及可對這些資源執行哪些作業的程序。  
   
  本節中的主題涵蓋了 SQL Server 安全性基本概念，並提供《SQL Server 線上叢書》相關版本中完整文件的連結。  
   
 ## <a name="in-this-section"></a>本節內容  
  [在 SQL Server 中進行驗證](authentication-in-sql-server.md)  
- 說明 SQL Server 中的登入和驗證，並提供其他資源的連結。  
+ 描述 SQL Server 中的登入和驗證，並提供其他資源的連結。  
   
  [SQL Server 中的伺服器和資料庫角色](server-and-database-roles-in-sql-server.md)  
  說明固定伺服器和資料庫角色、自訂資料庫角色和內建帳戶，並提供其他資源的連結。  
@@ -44,4 +45,4 @@ ms.locfileid: "70780946"
 - [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
 - [SQL Server 安全性](sql-server-security.md)
 - [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

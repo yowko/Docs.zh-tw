@@ -1,5 +1,5 @@
 ---
-title: <include> - C# 程式設計指南
+title: '<include> -C # 程式設計指南'
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 22d87559766c04e53141e843ee8768c8aab89a85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf41019c775fed25afe4bdb9453a8e52f44856b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156970"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287346"
 ---
-# <a name="include-c-programming-guide"></a>\<包括>（C# 程式設計指南）
+# <a name="include-c-programming-guide"></a>\<include>（C # 程式設計手冊）
 
 ## <a name="syntax"></a>語法
 
@@ -43,17 +43,17 @@ ms.locfileid: "79156970"
 
 ## <a name="remarks"></a>備註
 
-\<include> 標記可讓您參考另一個檔案中描述原始程式碼中類型和成員的註解。 這是將文件註解直接放在原始程式碼檔中的替代方案。 將文件放入個別檔案，即可將原始檔控制套用至與原始程式碼不同的文件。 一個人可以簽出原始程式碼檔，而且其他人可以簽出文件檔。
+`<include>`標記可讓您參考另一個檔案中描述原始程式碼中類型和成員的批註。 這是將文件註解直接放在原始程式碼檔中的替代方案。 將文件放入個別檔案，即可將原始檔控制套用至與原始程式碼不同的文件。 一個人可以簽出原始程式碼檔，而且其他人可以簽出文件檔。
 
-\<include> 標記使用 XML XPath 語法。 如需自訂 \<include> 用法的方式，請參閱 XPath 文件。
+`<include>`標記會使用 XML XPath 語法。 如需自訂使用方式的方法，請參閱 XPath 檔 `<include>` 。
 
 ## <a name="example"></a>範例
 
-這是多檔案範例。 下面是第一個檔，它使用\<包括>。
+這是多檔案範例。 以下是第一個使用的檔案 `<include>` 。
 
 [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]
 
-第二個檔*xml_include_tag.doc*包含以下文檔注釋。
+第二個檔案（ *xml_include_tag .doc*）包含下列檔批註。
 
 ```xml
 <MyDocs>
@@ -75,7 +75,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>程式輸出
 
-當您使用下列命令列編譯 Test 和 Test2 類別時，會產生下列輸出：`-doc:DocFileName.xml.`。在 Visual Studio 中，您可以在專案設計工具的 [建置] 窗格中指定 XML 文件註解選項。 當 C# 編譯器看到 \<include> 標記時，會搜尋 xml_include_tag.doc 中的文件註解，而不是目前的原始程式檔。 編譯器接著會產生 DocFileName.xml，這是 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具用來產生最終文件的檔案。  
+當您使用下列命令列編譯 Test 和 Test2 類別時，會產生下列輸出：`-doc:DocFileName.xml.`。在 Visual Studio 中，您可以在專案設計工具的 [建置] 窗格中指定 XML 文件註解選項。 當 c # 編譯器看到 `<include>` 標記時，它會搜尋*xml_include_tag .doc*中的檔批註，而不是目前的原始程式檔。 編譯器接著會產生*docfilename.xml*，而這是檔工具（例如[DocFX](https://dotnet.github.io/docfx/)和[sandcastle 這類](https://github.com/EWSoftware/SHFB)）所使用的檔案，以產生最終的檔。  
   
 ```xml
 <?xml version="1.0"?>
@@ -100,5 +100,5 @@ The summary for this other type.
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [文檔注釋的推薦標記](./recommended-tags-for-documentation-comments.md)
+- [C # 程式設計指南](../index.md)
+- [建議使用的檔註解標記](./recommended-tags-for-documentation-comments.md)

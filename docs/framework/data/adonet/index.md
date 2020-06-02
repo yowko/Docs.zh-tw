@@ -1,14 +1,15 @@
 ---
 title: ADO.NET
+description: 深入瞭解 ADO.NET，這是公開資料存取服務的類別，適用于 .NET Framework 程式設計人員建立分散式、資料共用應用程式。
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094393"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286724"
 ---
 # <a name="adonet"></a>ADO.NET
 
@@ -18,7 +19,7 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  [ADO.NET 的新功能](whats-new.md)  
  簡介 ADO.NET 的新功能。  
   
- [ADO.NET 概觀](ado-net-overview.md)  
+ [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)  
  提供 ADO.NET 的設計和元件的簡介。  
   
  [Entity Framework](/ef/ef6/index)  
@@ -37,7 +38,7 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  提供 LINQ to DataSet 的相關資訊，包括程式設計範例。  
   
  [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)  
- 描述如何連接至資料來源，以及如何使用 `Commands`、`DataReaders`和 `DataAdapters`來抓取和修改資料。  
+ 描述如何連接至資料來源，以及如何使用、和來抓取和修改 `Commands` 資料 `DataReaders` `DataAdapters` 。  
   
  [SQL Server and ADO.NET](./sql/index.md) (SQL Server 和 ADO.NET)  
  說明如何使用 SQL Server 特有的特性和功能。  
@@ -47,7 +48,7 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
   
 ## <a name="related-sections"></a>相關章節  
  [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- 提供使用C#之 LINQ 主題和範例的連結。  
+ 提供使用 c # 的 LINQ 主題和範例的連結。  
   
  [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
  提供使用 Visual Basic 的 LINQ 主題和範例的連結。  
@@ -58,10 +59,10 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  [.NET Framework 開發指南](../../development-guide.md)  
  提供 .NET Framework 中標準開發工作之相關資訊的連結。  
   
- [範例與教學課程](../../../samples-and-tutorials/index.md)  
+ [範例和教學課程](../../../samples-and-tutorials/index.md)  
  提供 .NET 範例和教學課程的清單。
   
 ## <a name="see-also"></a>另請參閱
 
 - [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

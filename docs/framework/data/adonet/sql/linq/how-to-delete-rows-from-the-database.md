@@ -1,20 +1,21 @@
 ---
-title: 作法：從資料庫刪除資料列
+title: 如何：從資料庫刪除資料列
+description: 瞭解如何從資料表相關的集合中移除 LINQ to SQL 物件，以刪除資料庫中的資料列。 LINQ to SQL 會將刪除轉換成 SQL DELETE 命令。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 421735567c527ac9a70cc5eefdbd7570599faac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d08621e834961e1db9312cac36bd2e69133142b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782012"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286387"
 ---
-# <a name="how-to-delete-rows-from-the-database"></a>作法：從資料庫刪除資料列
+# <a name="how-to-delete-rows-from-the-database"></a>如何：從資料庫刪除資料列
 
-您可以從資料表相關的集合中移除對應[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]的物件，藉以刪除資料庫中的資料列。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]將您的變更轉譯為適當`DELETE`的 SQL 命令。
+您可以從資料表相關的集合中移除對應的物件，藉以刪除資料庫中的資料列 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]將您的變更轉譯為適當的 SQL `DELETE` 命令。
 
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援或辨識串聯 (Cascade) 刪除作業。 如果您要刪除有條件約束之資料表中的資料列，必須完成下列其中一項工作：
 
@@ -57,4 +58,4 @@ ms.locfileid: "70782012"
 
 - [如何：管理變更衝突](how-to-manage-change-conflicts.md)
 - [如何：指派用來執行更新、插入和刪除的預存程序 (O/R 設計工具)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [變更和提交資料](making-and-submitting-data-changes.md)
+- [變更資料和提交](making-and-submitting-data-changes.md)

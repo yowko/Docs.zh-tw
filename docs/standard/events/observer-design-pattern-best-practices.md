@@ -6,18 +6,18 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4f8e568dcb6790dac1dc8fc5c969d6fa1367c4e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141533"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288455"
 ---
 # <a name="observer-design-pattern-best-practices"></a>觀察器設計模式最佳作法
 在 .NET Framework 中，觀察者設計模式會實作為一組介面。 <xref:System.IObservable%601?displayProperty=nameWithType> 介面代表資料提供者，它也負責提供 <xref:System.IDisposable> 實作，讓觀察者可以取消訂閱通知。 <xref:System.IObserver%601?displayProperty=nameWithType> 介面代表觀察者。 本主題說明使用這些介面實作觀察者設計模式時，開發人員應該遵循的最佳作法。  
   
 ## <a name="threading"></a>執行緒  
- 一般來說，提供者會藉由將特定觀察者加入由某些集合物件所代表的訂閱者清單，而實作 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法，且其會藉由從訂閱者清單中移除特定觀察者而實作 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法。 觀察者可隨時呼叫這些方法。 此外，因為提供者/觀察者合約未指定負責在 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 回呼方法之後取消訂閱的人員，所以提供者和觀察者可能會同時嘗試從清單中移除相同的成員。 因為這種可能性，<xref:System.IObservable%601.Subscribe%2A> 和 <xref:System.IDisposable.Dispose%2A> 方法都應該是安全執行緒。 通常，這需要使用[平行集合](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)或鎖定。 不是安全執行緒的實作，應該要明確地記載它們不是安全執行緒。  
+ 一般來說，提供者會藉由將特定觀察者加入由某些集合物件所代表的訂閱者清單，而實作 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法，且其會藉由從訂閱者清單中移除特定觀察者而實作 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法。 觀察者可隨時呼叫這些方法。 此外，因為提供者/觀察者合約未指定負責在 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 回呼方法之後取消訂閱的人員，所以提供者和觀察者可能會同時嘗試從清單中移除相同的成員。 因為這種可能性，<xref:System.IObservable%601.Subscribe%2A> 和 <xref:System.IDisposable.Dispose%2A> 方法都應該是安全執行緒。 通常，這需要使用[平行集合](../parallel-programming/data-structures-for-parallel-programming.md)或鎖定。 不是安全執行緒的實作，應該要明確地記載它們不是安全執行緒。  
   
  除了提供者/觀察者合約之外，還必須在某一層級指定所有其他保證。 當實作者強制要求其他需求時，應該清楚地宣布，以避免使用者對觀察者合約感到困惑。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "73141533"
   
 ## <a name="see-also"></a>另請參閱
 
-- [觀察器設計模式](../../../docs/standard/events/observer-design-pattern.md)
-- [操作說明：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [如何：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [觀察器設計模式](observer-design-pattern.md)
+- [如何：執行觀察者](how-to-implement-an-observer.md)
+- [如何：執行提供者](how-to-implement-a-provider.md)

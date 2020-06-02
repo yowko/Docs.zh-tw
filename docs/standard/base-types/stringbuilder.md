@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8116013cc20ead3be13763ce72999d2c608dbce
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121682"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289261"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>在 .NET 中使用 StringBuilder 類別
 <xref:System.String> 物件不可變。 每次您使用 <xref:System.String?displayProperty=nameWithType> 類別的其中一個方法時，就會在記憶體中建立新的字串物件，這需要為該新物件配置新的空間。 在您需要重複修改字串的情況下，與建立新 <xref:System.String> 物件相關聯的額外負荷可能成本高昂。 當您想要修改字串，而不建立新物件時，可以使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別。 例如，在迴圈中將許多字串串連在一起時，可以使用 <xref:System.Text.StringBuilder> 類別來提升效能。  
@@ -76,7 +76,7 @@ ms.locfileid: "73121682"
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
 ### <a name="appendformat"></a>AppendFormat  
- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法會將文字加入至 <xref:System.Text.StringBuilder> 物件的結尾。 它藉由呼叫要格式化之一或多個物件的 <xref:System.IFormattable> 實作，來支援複合格式功能 (如需詳細資訊，請參閱[複合格式](../../../docs/standard/base-types/composite-formatting.md))。 因此，它接受數值、日期和時間，以及列舉值的標準格式字串，數值及日期和時間的自訂格式字串，以及為自訂類型定義的格式字串。 （有關格式的資訊，請參閱[格式類型](../../../docs/standard/base-types/formatting-types.md)。可以使用此方法自訂變數的格式並將這些值追加到 。 <xref:System.Text.StringBuilder> 下列範例使用 <xref:System.Text.StringBuilder.AppendFormat%2A> 方法，將格式化為貨幣值的整數值放到 <xref:System.Text.StringBuilder> 物件的結尾。  
+ <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法會將文字加入至 <xref:System.Text.StringBuilder> 物件的結尾。 它藉由呼叫要格式化之一或多個物件的 <xref:System.IFormattable> 實作，來支援複合格式功能 (如需詳細資訊，請參閱[複合格式](composite-formatting.md))。 因此，它接受數值、日期和時間，以及列舉值的標準格式字串，數值及日期和時間的自訂格式字串，以及為自訂類型定義的格式字串。 （如需格式的詳細資訊，請參閱[格式化類型](formatting-types.md)。）您可以使用這個方法來自訂變數的格式，並將這些值附加至 <xref:System.Text.StringBuilder> 。 下列範例使用 <xref:System.Text.StringBuilder.AppendFormat%2A> 方法，將格式化為貨幣值的整數值放到 <xref:System.Text.StringBuilder> 物件的結尾。  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
@@ -112,5 +112,5 @@ ms.locfileid: "73121682"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
-- [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)
-- [格式化類型](../../../docs/standard/base-types/formatting-types.md)
+- [基底字元串作業](basic-string-operations.md)
+- [格式化類型](formatting-types.md)

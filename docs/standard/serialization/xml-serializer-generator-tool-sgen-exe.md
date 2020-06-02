@@ -3,12 +3,12 @@ title: XML 序列化程式產生器工具 (Sgen.exe)
 description: XML 序列化程式產生器會針對元件中的類型建立 XML 序列化元件，以改善 XmlSerializer 的啟動效能。
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 65e368cfd9294497608b061f15a4fe4755ed745c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380034"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288936"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML 序列化程式產生器工具 (Sgen.exe)
 
@@ -23,7 +23,7 @@ sgen [options]
 ```
   
 > [!TIP]
-> 若要讓 .NET Framework 工具正常運作，您必須 `Path` `Include` 正確地設定、和 `Lib` 環境變數。 執行位於 \<SDK>\v2.0\Bin 目錄中的 SDKVars.bat，即可設定這些環境變數。 SDKVars.bat 必須在每一個命令提示字元中執行。
+> 若要讓 .NET Framework 工具正常運作，您必須 `Path` `Include` 正確地設定、和 `Lib` 環境變數。 藉由執行 SDKVars （位於 \V2.0\Bin 目錄中）來設定這些環境變數 \<SDK> 。 SDKVars.bat 必須在每一個命令提示字元中執行。
   
 ## <a name="parameters"></a>參數  
   
@@ -33,7 +33,7 @@ sgen [options]
 |**/c \[ 譯器 \] ：**_選項_|指定要傳遞至 C# 編譯器的選項。 所有 csc.exe 選項都受到支援，可以傳遞至編譯器。 這個選項可以用來指定組件必須經過簽署，並指定金鑰檔。|  
 |**/d \[ 偵錯\]**|產生可以與偵錯工具搭配使用的影像。|  
 |**/f \[ orce\]**|強制覆寫現有的同名組件。 預設值為 **false**。|  
-|**/help 或 /?**|顯示工具的命令語法和選項。|  
+|**/help 或/？**|顯示工具的命令語法和選項。|  
 |**/k \[ 保留\]**|將產生的原始程式檔 (Source File) 和其他暫存檔案編譯成序列化組件之後，隱藏刪除這些檔案的動作。 這個選項可以用來判斷工具是否正在為特定的型別產生序列化程式碼。|  
 |**/n \[ ologo\]**|隱藏顯示 Microsoft 程式啟始資訊。|  
 |**/o \[ \] 內容：**_路徑_|指定要在其中儲存所產生之組件的目錄。 **注意：** 產生的組件名稱是由輸入組件的名稱加上 "xmlSerializers.dll" 所組成。|  
@@ -62,7 +62,7 @@ sgen Data.dll
   
  Data.XmlSerializers.dll 組件可以從程式碼參考，而該程式碼必須序列化及還原序列化 Data.dll 中的型別。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [工具](../../../docs/framework/tools/index.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](../../framework/tools/index.md)
+- [命令提示字元](../../framework/tools/developer-command-prompt-for-vs.md)

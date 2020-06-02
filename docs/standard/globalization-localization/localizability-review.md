@@ -16,12 +16,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef23cff2416792f13fda04dbe9beb34cbacfd7ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120855"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288273"
 ---
 # <a name="localizability-review"></a>當地語系化可行性檢閱
 
@@ -38,14 +38,14 @@ ms.locfileid: "73120855"
 <a name="global"></a>
 ## <a name="implement-globalization-recommendations"></a>實作全球化建議
 
-如果您設計和開發應用程式時已將當地語系化納入考量，而且已遵循[全球化](../../../docs/standard/globalization-localization/globalization.md)一文中所討論的建議，可當地語系化檢閱主要會是一項品質保證的作業。 否則，在此階段，您應該查看和實施[全球化](../../../docs/standard/globalization-localization/globalization.md)建議，並修復阻止當地語系化的原始程式碼中的錯誤。
+如果您設計和開發應用程式時已將當地語系化納入考量，而且已遵循[全球化](globalization.md)一文中所討論的建議，可當地語系化檢閱主要會是一項品質保證的作業。 否則，在這個階段，您應該檢查並實作為[全球化](globalization.md)的建議，並修正原始程式碼中防止當地語系化的錯誤。
 
 <a name="culture"></a>
 ## <a name="handle-culture-sensitive-features"></a>處理區分文化特性 (Culture) 的功能
 
 .NET 在一些文化特性 (Culture) 差異較大的區域並未提供程式設計方面的支援。 在大部分情況下，您必須撰寫自訂程式碼來處理下列領域：
 
-- 位址
+- 地址
 
 - 電話號碼
 
@@ -75,11 +75,11 @@ ms.locfileid: "73120855"
 
 - 傳回未預期結果的字串比較或相等比較。
 
-如果您已遵循全球化建議開發應用程式、正確地處理區分文化特性的功能，而且找到並解決了測試期間發生的當地語系化問題，就可以繼續進行下一個步驟：[當地語系化](../../../docs/standard/globalization-localization/localization.md)。
+如果您已遵循全球化建議開發應用程式、正確地處理區分文化特性的功能，而且找到並解決了測試期間發生的當地語系化問題，就可以繼續進行下一個步驟：[當地語系化](localization.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
-- [定位](../../../docs/standard/globalization-localization/localization.md)
-- [全球化](../../../docs/standard/globalization-localization/globalization.md)
-- [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
+- [全球化和當地語系化](index.md)
+- [當地語系化](localization.md)
+- [全球化](globalization.md)
+- [桌面應用程式中的資源](../../framework/resources/index.md)

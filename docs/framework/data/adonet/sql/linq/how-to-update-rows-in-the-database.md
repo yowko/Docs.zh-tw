@@ -1,20 +1,21 @@
 ---
-title: 作法：更新資料庫中的資料列
+title: 如何：更新資料庫中的資料列
+description: 瞭解如何藉由修改資料表相關集合中 LINQ to SQL 物件，來更新資料庫中的資料列。 LINQ to SQL 會將新增專案轉譯為 SQL UPDATE 命令。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: c2055e1dd988352b50a439531ab5533f34a4965e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f25efb91fb5a83fb1c7c109bd018c8210edaec8b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793128"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286335"
 ---
-# <a name="how-to-update-rows-in-the-database"></a>作法：更新資料庫中的資料列
+# <a name="how-to-update-rows-in-the-database"></a>如何：更新資料庫中的資料列
 
-您可以修改與[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>集合相關聯之物件的成員值，然後將變更提交至資料庫，藉以更新資料庫中的資料列。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]將您的變更轉譯成適當`UPDATE`的 SQL 命令。
+您可以修改與集合相關聯之物件的成員值 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> ，然後將變更提交至資料庫，藉以更新資料庫中的資料列。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]將您的變更轉譯成適當的 SQL `UPDATE` 命令。
 
 > [!NOTE]
 > 您可以覆寫 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 預設方法，以執行 `Insert`、`Update` 和 `Delete` 資料庫作業。 如需詳細資訊，請參閱[自訂插入、更新和刪除作業](customizing-insert-update-and-delete-operations.md)。
@@ -42,4 +43,4 @@ ms.locfileid: "70793128"
 
 - [如何：管理變更衝突](how-to-manage-change-conflicts.md)
 - [如何：指派用來執行更新、插入和刪除的預存程序 (O/R 設計工具)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [變更和提交資料](making-and-submitting-data-changes.md)
+- [變更資料和提交](making-and-submitting-data-changes.md)

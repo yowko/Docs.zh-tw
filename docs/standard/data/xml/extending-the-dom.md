@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-ms.openlocfilehash: 11c7e8c8d2ea3b49fe73ab4dde4e2ccc8bc917ff
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 4a1a7af0e841601542a30c7bd3f71395faa6cb57
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159672"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287788"
 ---
 # <a name="extending-the-dom"></a>擴充 DOM
 
@@ -244,7 +244,7 @@ DOM 的 .NET Framework 實作也包含一個事件系統，當 XML 文件中的�
 
 事件處理程序在衍生類別中的執行方式，與在原始 DOM 類別中的執行方式相同。
 
-如需有關節點事件處理的詳細資訊，請參閱[事件](../../../../docs/standard/events/index.md)和 <xref:System.Xml.XmlNodeChangedEventHandler>。
+如需有關節點事件處理的詳細資訊，請參閱[事件](../../events/index.md)和 <xref:System.Xml.XmlNodeChangedEventHandler>。
 
 ## <a name="default-attributes-and-the-createelement-method"></a>預設屬性和 CreateElement 方法
 

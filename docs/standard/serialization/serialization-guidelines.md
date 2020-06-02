@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378381"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287489"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  
@@ -23,7 +23,7 @@ ms.locfileid: "83378381"
   
  .NET 提供已針對多個序列化案例最佳化的三個主要序列化技術。 下表列出這些技術以及與這些技術相關的主要 .NET 類型。  
   
-|技術|相關類別|附註|  
+|技術|相關類別|備忘稿|  
 |----------------|----------------------|-----------|  
 |資料合約序列化|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|一般持續性<br /><br /> Web 服務<br /><br /> JSON|  
 |XML 序列化|<xref:System.Xml.Serialization.XmlSerializer>|XML 格式 <br />(具有完全控制)|  
@@ -79,7 +79,7 @@ ms.locfileid: "83378381"
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
-     如果已知類型清單無法以靜態方式得知 (編譯 **Person** 類別時)，**KnownTypeAttribute** 也可指向一個方法，此方法會在執行階段傳回已知類型清單。  
+     如果已知型別的清單無法以靜態方式得知（編譯**Person**類別時）， **KnownTypeAttribute**也可以指向方法，以在執行時間傳回已知型別的清單。  
   
 5. 當建立或變更可序列化的型別時，請務必考慮回溯相容性與向前相容性。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "83378381"
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
-     如需詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+     如需詳細資訊，請參閱[向前相容資料合約](../../framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 #### <a name="supporting-xml-serialization"></a>支援 XML 序列化  
  資料合約序列化是 .NET Framework 中的主要 (預設) 序列化技術，但是資料合約序列化不支援一些序列化情節。 例如，它無法讓您完全控制序列化程式所產生或使用之 XML 的形狀。 如果需要這樣的精確控制，必須使用「XML 序列化」**，而且您需要設計您的類型來支援這項序列化技術。  
@@ -138,12 +138,12 @@ ms.locfileid: "83378381"
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [資料合約序列化程式支援的型別](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [使用資料合約](../../framework/wcf/feature-details/using-data-contracts.md)
+- [資料合約序列化程式](../../framework/wcf/feature-details/data-contract-serializer.md)
+- [資料合約序列化程式支援的型別](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [二進位序列化](binary-serialization.md)
 - [.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
-- [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)
+- [安全性和序列化](../../framework/misc/security-and-serialization.md)

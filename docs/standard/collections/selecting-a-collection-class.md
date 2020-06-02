@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: d79f1ca0d264a5a17306bb66f285b6fbe6b4e7ca
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 62f4f768753637043ab91219cfb63c741a194b96
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728477"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287922"
 ---
 # <a name="selecting-a-collection-class"></a>選取集合類別
 
@@ -28,31 +28,31 @@ ms.locfileid: "82728477"
 
 - 您是否需要循序清單，其中的項目通常會在擷取其值之後捨棄？
 
-  - 如果是，並且需要先進先出 (FIFO) 行為，請考慮使用 <xref:System.Collections.Queue> 類別或 <xref:System.Collections.Generic.Queue%601> 泛型類別。 如果需要後進先出 (LIFO) 行為，請考慮使用 <xref:System.Collections.Stack> 類別或 <xref:System.Collections.Generic.Stack%601> 泛型類別。 若要從多個執行緒進行安全存取，請使用並行版本 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。 針對不可變性，請考慮不變<xref:System.Collections.Immutable.ImmutableQueue%601>的<xref:System.Collections.Immutable.ImmutableStack%601>版本和。
+  - 如果是，並且需要先進先出 (FIFO) 行為，請考慮使用 <xref:System.Collections.Queue> 類別或 <xref:System.Collections.Generic.Queue%601> 泛型類別。 如果需要後進先出 (LIFO) 行為，請考慮使用 <xref:System.Collections.Stack> 類別或 <xref:System.Collections.Generic.Stack%601> 泛型類別。 若要從多個執行緒進行安全存取，請使用並行版本 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。 針對不可變性，請考慮不變的版本 <xref:System.Collections.Immutable.ImmutableQueue%601> 和 <xref:System.Collections.Immutable.ImmutableStack%601> 。
 
   - 如果否，請考慮使用其他集合。
 
 - 您是否需要以特定順序 (例如 FIFO、LIFO 或隨機) 存取項目？
 
-  - <xref:System.Collections.Queue>類別<xref:System.Collections.Generic.Queue%601>以及、 <xref:System.Collections.Concurrent.ConcurrentQueue%601>和<xref:System.Collections.Immutable.ImmutableQueue%601>泛型類別全都提供 FIFO 存取。 如需詳細資訊，請參閱[使用安全執行緒集合的時機](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)。
+  - <xref:System.Collections.Queue>類別以及 <xref:System.Collections.Generic.Queue%601> 、和 <xref:System.Collections.Concurrent.ConcurrentQueue%601> <xref:System.Collections.Immutable.ImmutableQueue%601> 泛型類別全都提供 FIFO 存取。 如需詳細資訊，請參閱[使用安全執行緒集合的時機](thread-safe/when-to-use-a-thread-safe-collection.md)。
 
-  - <xref:System.Collections.Stack>類別<xref:System.Collections.Generic.Stack%601>以及、 <xref:System.Collections.Concurrent.ConcurrentStack%601>和<xref:System.Collections.Immutable.ImmutableStack%601>泛型類別全都提供 LIFO 存取。 如需詳細資訊，請參閱[使用安全執行緒集合的時機](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)。
+  - <xref:System.Collections.Stack>類別以及 <xref:System.Collections.Generic.Stack%601> 、和 <xref:System.Collections.Concurrent.ConcurrentStack%601> <xref:System.Collections.Immutable.ImmutableStack%601> 泛型類別全都提供 LIFO 存取。 如需詳細資訊，請參閱[使用安全執行緒集合的時機](thread-safe/when-to-use-a-thread-safe-collection.md)。
 
   - <xref:System.Collections.Generic.LinkedList%601> 泛型類別允許從頭到尾或從尾到頭進行循序存取。
 
 - 您是否需要依索引存取每個項目？
 
-  - <xref:System.Collections.ArrayList> 和 <xref:System.Collections.Specialized.StringCollection> 類別以及 <xref:System.Collections.Generic.List%601> 泛型類別，可依項目之以零為起始的索引來存取其項目。 針對不可變性，請考慮不可變的<xref:System.Collections.Immutable.ImmutableArray%601>泛型<xref:System.Collections.Immutable.ImmutableList%601>版本和。
+  - <xref:System.Collections.ArrayList> 和 <xref:System.Collections.Specialized.StringCollection> 類別以及 <xref:System.Collections.Generic.List%601> 泛型類別，可依項目之以零為起始的索引來存取其項目。 針對不可變性，請考慮不可變的泛型版本 <xref:System.Collections.Immutable.ImmutableArray%601> 和 <xref:System.Collections.Immutable.ImmutableList%601> 。
 
-  - <xref:System.Collections.Hashtable>、<xref:System.Collections.SortedList>、<xref:System.Collections.Specialized.ListDictionary> 和 <xref:System.Collections.Specialized.StringDictionary> 類別以及 <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedDictionary%602> 泛型類別，可依項目的索引鍵來存取其項目。 此外，有數個對應類型的不可變版本<xref:System.Collections.Immutable.ImmutableHashSet%601>： <xref:System.Collections.Immutable.ImmutableDictionary%602>、 <xref:System.Collections.Immutable.ImmutableSortedSet%601>、和<xref:System.Collections.Immutable.ImmutableSortedDictionary%602>。
+  - <xref:System.Collections.Hashtable>、<xref:System.Collections.SortedList>、<xref:System.Collections.Specialized.ListDictionary> 和 <xref:System.Collections.Specialized.StringDictionary> 類別以及 <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedDictionary%602> 泛型類別，可依項目的索引鍵來存取其項目。 此外，有數個對應類型的不可變版本： <xref:System.Collections.Immutable.ImmutableHashSet%601> 、 <xref:System.Collections.Immutable.ImmutableDictionary%602> 、 <xref:System.Collections.Immutable.ImmutableSortedSet%601> 和 <xref:System.Collections.Immutable.ImmutableSortedDictionary%602> 。
 
   - <xref:System.Collections.Specialized.NameObjectCollectionBase> 和 <xref:System.Collections.Specialized.NameValueCollection> 類別以及 <xref:System.Collections.ObjectModel.KeyedCollection%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別，可依項目之以零為起始的索引或索引鍵來存取其項目。
 
 - 每個項目會包含一個值、一個索引鍵和一個值的組合，還是一個索引鍵和多個值的組合？
 
-  - 一個值：根據 <xref:System.Collections.IList> 介面或 <xref:System.Collections.Generic.IList%601> 泛型介面來使用任何集合。 若為不可變的選項， <xref:System.Collections.Immutable.IImmutableList%601>請考慮泛型介面。
+  - 一個值：根據 <xref:System.Collections.IList> 介面或 <xref:System.Collections.Generic.IList%601> 泛型介面來使用任何集合。 若為不可變的選項，請考慮 <xref:System.Collections.Immutable.IImmutableList%601> 泛型介面。
 
-  - 一個索引鍵和一個值：根據 <xref:System.Collections.IDictionary> 介面或 <xref:System.Collections.Generic.IDictionary%602> 泛型介面來使用任何集合。 若為不可變的選項， <xref:System.Collections.Immutable.IImmutableSet%601>請<xref:System.Collections.Immutable.IImmutableDictionary%602>考慮使用或泛型介面。
+  - 一個索引鍵和一個值：根據 <xref:System.Collections.IDictionary> 介面或 <xref:System.Collections.Generic.IDictionary%602> 泛型介面來使用任何集合。 若為不可變的選項，請考慮使用 <xref:System.Collections.Immutable.IImmutableSet%601> 或 <xref:System.Collections.Immutable.IImmutableDictionary%602> 泛型介面。
 
   - 一個具有內嵌索引鍵的值：使用 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型類別。
 
@@ -68,23 +68,23 @@ ms.locfileid: "82728477"
 
 - 您是否需要快速搜尋和擷取資訊？
 
-  - 若為小型集合 (10 個項目或更少)，<xref:System.Collections.Specialized.ListDictionary> 的速度比 <xref:System.Collections.Hashtable> 更快。 <xref:System.Collections.Generic.Dictionary%602> 泛型類別提供比 <xref:System.Collections.Generic.SortedDictionary%602> 泛型類別更快的查閱速度。 多執行緒實作是 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>。 <xref:System.Collections.Concurrent.ConcurrentBag%601> 會針對未排序的資料提供快速的多執行緒插入。 如需多執行緒型別的詳細資訊，請參閱[使用安全執行緒集合的時機](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)。
+  - 若為小型集合 (10 個項目或更少)，<xref:System.Collections.Specialized.ListDictionary> 的速度比 <xref:System.Collections.Hashtable> 更快。 <xref:System.Collections.Generic.Dictionary%602> 泛型類別提供比 <xref:System.Collections.Generic.SortedDictionary%602> 泛型類別更快的查閱速度。 多執行緒實作是 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>。 <xref:System.Collections.Concurrent.ConcurrentBag%601> 會針對未排序的資料提供快速的多執行緒插入。 如需多執行緒型別的詳細資訊，請參閱[使用安全執行緒集合的時機](thread-safe/when-to-use-a-thread-safe-collection.md)。
 
 - 您是否需要只接受字串的集合？
 
   - <xref:System.Collections.Specialized.StringCollection> (以 <xref:System.Collections.IList> 為基礎) 和 <xref:System.Collections.Specialized.StringDictionary> (以 <xref:System.Collections.IDictionary> 為基礎) 位於 <xref:System.Collections.Specialized> 命名空間中。
 
-  - 此外，您可以使用 <xref:System.Collections.Generic> 命名空間中的任何泛型集合類別做為強類型字串集合，方法是指定其泛型類型引數的 <xref:System.String> 類別。 例如，您可以將變數的型別宣告為 [List\<String>](xref:System.Collections.Generic.List%601) 或 [Dictionary<String,String>](xref:System.Collections.Generic.Dictionary%602)。
+  - 此外，您可以使用 <xref:System.Collections.Generic> 命名空間中的任何泛型集合類別做為強類型字串集合，方法是指定其泛型類型引數的 <xref:System.String> 類別。 例如，您可以將變數宣告為類型[清單 \<String> ](xref:System.Collections.Generic.List%601)或[字典<字串，string>](xref:System.Collections.Generic.Dictionary%602)。
 
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects 和 PLINQ
 
 只要物件類型實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>，LINQ to Objects 就可讓開發人員使用 LINQ 查詢以存取記憶體內的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 `foreach` 迴圈更精簡、可讀性更高，並提供篩選、排序和群組功能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) 和 [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)。
 
-PLINQ 提供 LINQ to Objects 的平行實作，這項實作透過更有效率地使用多核心電腦，在許多情況下會提供更快的查詢執行速度。 如需詳細資訊，請參閱 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。
+PLINQ 提供 LINQ to Objects 的平行實作，這項實作透過更有效率地使用多核心電腦，在許多情況下會提供更快的查詢執行速度。 如需詳細資訊，請參閱 [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>
 - <xref:System.Collections.Generic>
-- [安全線程集合](../../../docs/standard/collections/thread-safe/index.md)
+- [安全線程集合](thread-safe/index.md)

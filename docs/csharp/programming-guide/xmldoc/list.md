@@ -1,5 +1,5 @@
 ---
-title: <list> - C# 程式設計指南
+title: '<list> -C # 程式設計指南'
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78eec992671dab1aa59717a007a8e3a2662f6e87
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789745"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287333"
 ---
-# <a name="list-c-programming-guide"></a>\<清單>（C# 程式設計指南）
+# <a name="list-c-programming-guide"></a>\<list>（C # 程式設計手冊）
 
 ## <a name="syntax"></a>語法
 
@@ -48,13 +48,13 @@ ms.locfileid: "76789745"
   
 ## <a name="remarks"></a>備註
 
-\<listheader> 區塊用來定義資料表或定義清單的標題資料列。 定義資料表時，您只需要提供標題中詞彙的項目。
+`<listheader>`區塊是用來定義資料表或定義清單的標題資料列。 定義資料表時，您只需要提供標題中詞彙的項目。
 
-清單中的每個項目都是使用 \<item> 區塊所指定。 建立定義清單時，您需要同時指定 `term` 和 `description`。 不過，針對資料表、項目符號清單或編號清單，您只需要提供 `description` 的項目。
+清單中的每個專案都是以 `<item>` 區塊來指定。 建立定義清單時，您需要同時指定 `term` 和 `description`。 不過，針對資料表、項目符號清單或編號清單，您只需要提供 `description` 的項目。
 
-清單或資料表可以有所需的多個 \<item> 區塊。
+清單或資料表可以視需要擁有多個 `<item>` 區塊。
 
-使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)編譯，以處理檔的文檔注釋。
+使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)進行編譯，以處理檔案的檔批註。
 
 ## <a name="example"></a>範例
 
@@ -62,5 +62,5 @@ ms.locfileid: "76789745"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 程式設計手冊](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

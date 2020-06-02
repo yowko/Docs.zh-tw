@@ -1,5 +1,5 @@
 ---
-title: 如何：取消連結資料流程區塊
+title: 作法：取消連結資料流程區塊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-ms.openlocfilehash: b49cfc9730ba154202baf15093a54ba3ce0e2a8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af978ca2ca237988dae8328656d70574dbc1f14
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139300"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288052"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>如何：取消連結資料流程區塊
+# <a name="how-to-unlink-dataflow-blocks"></a>作法：取消連結資料流程區塊
 本文件將說明如何解除目標資料流程區塊與其來源之間的連結。
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,4 +34,4 @@ ms.locfileid: "73139300"
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+- [資料流程](dataflow-task-parallel-library.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f4aac5afbb13cafa7bb0e9c1eb6bbd92ac41bf8c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160062"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289417"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>事件架構非同步模式概觀
 要同時執行許多工作，還能繼續回應使用者互動，這樣的應用程式通常都需要可以使用多執行緒的設計。 <xref:System.Threading> 命名空間提供建立高效能多執行緒應用程式的所有必要工具，但是要有效地使用這些工具，需要具備多執行緒軟體工程的豐富經驗。 對於較簡單的多執行緒應用程式，<xref:System.ComponentModel.BackgroundWorker> 元件提供了簡單明瞭的方案。 如果是較為複雜精細的非同步應用程式，請考慮實作遵守事件架構非同步模式的類別。  
@@ -34,7 +34,7 @@ ms.locfileid: "78160062"
   
 - 等候資源變成可供使用，而不需要停止 (「封鎖」) 應用程式。  
   
-- 使用熟悉的事件和委派模型，與暫止的非同步作業通訊。 如需使用事件處理常式和委派的詳細資訊，請參閱[事件](../../../docs/standard/events/index.md)。  
+- 使用熟悉的事件和委派模型，與暫止的非同步作業通訊。 如需使用事件處理常式和委派的詳細資訊，請參閱[事件](../events/index.md)。  
   
  支援事件架構非同步模式的類別，會有一或多個名為 _MethodName_**Async** 的方法。 這些方法可能鏡像在目前執行緒上執行相同作業的同步版本。 這個類別可能也具有 _MethodName_**Completed** 事件，且具有 _MethodName_**AsyncCancel** (或簡稱 **CancelAsync**) 方法。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "78160062"
  事件架構非同步模式需要能夠取消非同步作業，而 <xref:System.Windows.Forms.PictureBox> 控制項以它所具有的 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 方法支援這項需求。 呼叫 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 便會發出要求讓暫止的下載停止，而且在取消工作時，就會引發 <xref:System.Windows.Forms.PictureBox.LoadCompleted> 事件。  
   
 > [!CAUTION]
-> 產生 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求時剛好完成下載也是可能發生的，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能無法反映取消的要求。 這種情況稱為「競爭情形」**(Race Condition)，這是多執行緒程式設計中的常見問題。 如需多執行緒程式設計問題的詳細資訊，請參閱[受控執行緒處理的最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
+> 產生 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求時剛好完成下載也是可能發生的，因此 <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> 可能無法反映取消的要求。 這種情況稱為「競爭情形」**(Race Condition)，這是多執行緒程式設計中的常見問題。 如需多執行緒程式設計問題的詳細資訊，請參閱[受控執行緒處理的最佳做法](../threading/managed-threading-best-practices.md)。  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>事件架構非同步模式的特性  
  事件架構非同步模式可能會採用數種格式，需視特定類別所支援作業的複雜度而定。 最簡單的類別可以有單一的 _MethodName_**Async** 方法和對應的 _MethodName_**Completed** 事件。 比較複雜的類別則可以有數個 _MethodName_**Async** 方法，每一個方法都有對應的 _MethodName_**Completed** 事件，以及這些方法的同步版本。 這些類別可以選擇性地支援每個非同步方法的取消、進度報告和累加結果。  
@@ -136,9 +136,9 @@ public class AsyncExample
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [如何：使用支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [操作說明：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [操作說明：實作使用背景作業的表單](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [決定何時實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [如何：使用支援事件架構非同步模式的元件](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [操作說明：在背景執行作業](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [操作說明：實作使用背景作業的表單](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)
+- [實作事件架構非同步模式的最佳作法](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [決定何時實作事件架構非同步模式](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

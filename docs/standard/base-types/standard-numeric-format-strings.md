@@ -16,18 +16,18 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 93f93574e6a3c24fc03a2cbc6c7d0f11f4fe61f6
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 6b84fc752a7bb37ff64bf6cfa08879aed3f20010
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440872"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288312"
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
 
 標準數值格式字串會用來格式化一般數字類型。 標準數值格式字串會採用 `Axx` 格式，其中：
 
-- `A` 是稱為「格式規範」** 的單一字母字元。 任何包含一個以上字母字元 (包含泛空白字元 (White Space)) 的數值格式字串都會解譯為自訂數值格式字串。 如需詳細資訊，請參閱[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。
+- `A` 是稱為「格式規範」** 的單一字母字元。 任何包含一個以上字母字元 (包含泛空白字元 (White Space)) 的數值格式字串都會解譯為自訂數值格式字串。 如需詳細資訊，請參閱[自訂數值格式字串](custom-numeric-format-strings.md)。
 
 - `xx` 是稱為「精確度規範」** 的選用性整數。 精確度規範的範圍從 0 到 99，而且會影響結果內的位數。 請注意，精確度規範可控制數字字串表示法中的位數。 它不會捨入數字本身。 若要執行捨入運算，請使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。
 
@@ -36,13 +36,13 @@ ms.locfileid: "83440872"
   - **在 .NET Core 2.1 與更新版本上**，執行階段會選取具有偶數最不顯著位數 (亦即，使用 <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>) 的結果。
 
   > [!NOTE]
-  > 有效位數規範可判斷結果字串中的位數。 若要使用前置或尾端空格填補結果字串，請使用[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)功能，並在格式項目中定義「對齊元件」**。
+  > 有效位數規範可判斷結果字串中的位數。 若要使用前置或尾端空格填補結果字串，請使用[複合格式設定](composite-formatting.md)功能，並在格式項目中定義「對齊元件」**。
 
 標準數值格式字串受到下列各項支援：
 
 - 所有數值類型之 `ToString` 方法的一些多載。 例如，您可以將數值格式字串提供給 <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> 和 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法。
 
-- .NET 的[複合格式功能](../../../docs/standard/base-types/composite-formatting.md)，此功能會由 <xref:System.Console> 與 <xref:System.IO.StreamWriter> 類別的一些 `Write` 和 `WriteLine` 方法，以及 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法所使用。 複合格式功能可讓您將多個資料項目的字串表示法包含在單一字串中，以指定欄位寬度，以及對齊欄位中的數字。 如需詳細資訊，請參閱[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)。
+- .NET 的[複合格式功能](composite-formatting.md)，此功能會由 <xref:System.Console> 與 <xref:System.IO.StreamWriter> 類別的一些 `Write` 和 `WriteLine` 方法，以及 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法所使用。 複合格式功能可讓您將多個資料項目的字串表示法包含在單一字串中，以指定欄位寬度，以及對齊欄位中的數字。 如需詳細資訊，請參閱[複合格式設定](composite-formatting.md)。
 
 - C# 和 Visual Basic 中的[字串插值](../../csharp/language-reference/tokens/interpolated.md)，相較於複合格式字串，其可提供簡化的語法。
 
@@ -51,14 +51,14 @@ ms.locfileid: "83440872"
 
 <a name="table"></a>下表描述標準數值格式規範，並顯示每個格式範例所產生的範例輸出。 如需使用標準數值格式字串的詳細資訊，請參閱[備註](#NotesStandardFormatting)一節，如需其用法的完整解說，請參閱[範例](#example)一節。
 
-|格式規範|Name|說明|範例|
+|格式規範|Name|描述|範例|
 |----------------------|----------|-----------------|--------------|
 |"C" 或 "c"|貨幣|結果：貨幣值。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[貨幣 ("C") 格式規範](#CFormatString)。|123.456 （"C"，en-us）-> \\ $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 （"C3"，en-us）-> （ \\ $123.456）<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" 或 "d"|Decimal|結果：帶選擇性負號的整數位數。<br /><br /> 支援的類型：只有整數類型。<br /><br /> 精確度規範：最少位數。<br /><br /> 預設精確度規範：必要的最少位數。<br /><br /> 詳細資訊：[十進位 ("D") 格式規範](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |"E" 或 "e"|指數 (科學記號)|結果：指數標記法。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設精確度規範：6。<br /><br /> 詳細資訊：[指數 ("E") 格式規範](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
 |"F" 或 "f"|固定點|結果：帶選擇性負號的整數和小數位數。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[固定點 ("F") 格式規範](#FFormatString)。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
 |"G" 或 "g"|一般|結果：固定點和科學標記法兩者中更精簡的一個。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：有效位數。<br /><br /> 預設精確度規範：因數字類型而異。<br /><br /> 詳細資訊：[一般 ("G") 格式規範](#GFormatString)。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|
-|"N" 或 "n"|數字|結果：帶選擇性負號的整數和小數位數、群組分隔符號，以及小數分隔符號。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：想要的小數位數。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[數值 ("N") 格式規範](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
+|"N" 或 "n"|Number|結果：帶選擇性負號的整數和小數位數、群組分隔符號，以及小數分隔符號。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：想要的小數位數。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[數值 ("N") 格式規範](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|
 |"P" 或 "p"|百分比|結果：乘以 100 並加上百分比符號來顯示的數字。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 精確度規範：想要的小數位數。<br /><br /> 預設的有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[百分比 ("P") 格式規範](#PFormatString)。|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|
 |"R" 或 "r"|來回|結果：可以來回轉換為相同數字的字串。<br /><br /> 支援的類型：<xref:System.Single>、<xref:System.Double> 和 <xref:System.Numerics.BigInteger>。<br /><br /> 注意：建議僅用於 <xref:System.Numerics.BigInteger> 類型。 針對 <xref:System.Double> 類型，使用 "G17"；針對 <xref:System.Single> 類型，使用 "G9"。 <br> 精確度規範：忽略。<br /><br /> 詳細資訊：[來回 ("R") 格式規範](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|
 |"X" 或 "x"|十六進位|結果：十六進位字串。<br /><br /> 支援的類型：只有整數類型。<br /><br /> 精確度規範：結果字串中的位數。<br /><br /> 詳細資訊：[十六進位 ("X") 格式規範](#XFormatString)。|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|
@@ -78,7 +78,7 @@ ms.locfileid: "83440872"
   [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
   [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]
 
-- 您可以在搭配 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 等方法一起使用的格式項目中，提供它作為 `formatString` 引數。 如需詳細資訊，請參閱[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)。 下列範例會使用格式項目，在字串中插入貨幣值。
+- 您可以在搭配 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 等方法一起使用的格式項目中，提供它作為 `formatString` 引數。 如需詳細資訊，請參閱[複合格式設定](composite-formatting.md)。 下列範例會使用格式項目，在字串中插入貨幣值。
 
   [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
   [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -104,7 +104,7 @@ ms.locfileid: "83440872"
 
 結果字串會受到目前 <xref:System.Globalization.NumberFormatInfo> 物件的格式設定資訊所影響。 下表列出 <xref:System.Globalization.NumberFormatInfo> 屬性，這些屬性控制傳回之字串的格式設定。
 
-|NumberFormatInfo 屬性|說明|
+|NumberFormatInfo 屬性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|定義正值的貨幣符號位置。|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|定義負值的貨幣符號位置，並指定負號是以括號還是 <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> 屬性來表示。|
@@ -133,7 +133,7 @@ ms.locfileid: "83440872"
 
 結果字串會受到目前 <xref:System.Globalization.NumberFormatInfo> 物件的格式設定資訊所影響。 如下表所示，只有一個屬性會影響結果字串的格式設定。
 
-|NumberFormatInfo 屬性|說明|
+|NumberFormatInfo 屬性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定義表示數字為負數的字串。|
 
@@ -157,7 +157,7 @@ ms.locfileid: "83440872"
 
 結果字串會受到目前 <xref:System.Globalization.NumberFormatInfo> 物件的格式設定資訊所影響。 下表列出 <xref:System.Globalization.NumberFormatInfo> 屬性，這些屬性控制傳回之字串的格式設定。
 
-|NumberFormatInfo 屬性|說明|
+|NumberFormatInfo 屬性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定義表示數字在係數和指數部分都是負數的字串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定義將係數中的整數位數與小數位數分隔的字串。|
@@ -181,7 +181,7 @@ ms.locfileid: "83440872"
 
 結果字串會受到目前 <xref:System.Globalization.NumberFormatInfo> 物件的格式設定資訊所影響。 下表列出 <xref:System.Globalization.NumberFormatInfo> 物件的屬性，這些屬性控制結果字串的格式設定。
 
-|NumberFormatInfo 屬性|說明|
+|NumberFormatInfo 屬性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定義表示數字為負數的字串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定義分隔整數位數與小數位數的字串。|
@@ -228,7 +228,7 @@ ms.locfileid: "83440872"
 
 結果字串會受到目前 <xref:System.Globalization.NumberFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制結果字串之格式設定的 <xref:System.Globalization.NumberFormatInfo> 屬性。
 
-|NumberFormatInfo 屬性|說明|
+|NumberFormatInfo 屬性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定義表示數字為負數的字串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定義分隔整數位數與小數位數的字串。|
@@ -250,7 +250,7 @@ ms.locfileid: "83440872"
 
 結果字串會受到目前 <xref:System.Globalization.NumberFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制結果字串之格式設定的 <xref:System.Globalization.NumberFormatInfo> 屬性。
 
-|NumberFormatInfo 屬性|說明|
+|NumberFormatInfo 屬性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定義表示數字為負數的字串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|定義負值的格式，並指定負號是以括號還是 <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> 屬性來表示。|
@@ -275,7 +275,7 @@ ms.locfileid: "83440872"
 
 下表列出 <xref:System.Globalization.NumberFormatInfo> 屬性，這些屬性控制傳回之字串的格式設定。
 
-|NumberFormatInfo 屬性|說明|
+|NumberFormatInfo 屬性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|定義正值的百分比符號位置。|
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|定義負值的百分比符號位置和負號位置。|
@@ -307,7 +307,7 @@ ms.locfileid: "83440872"
 雖然您可以包含精確度規範，但該規範會被忽略。 使用來回規範時，這個規範優先於精確度規範。
 結果字串會受到目前 <xref:System.Globalization.NumberFormatInfo> 物件的格式設定資訊所影響。 下表列出可控制結果字串之格式設定的 <xref:System.Globalization.NumberFormatInfo> 屬性。
 
-|NumberFormatInfo 屬性|說明|
+|NumberFormatInfo 屬性|描述|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|定義表示數字為負數的字串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定義分隔整數位數與小數位數的字串。|
@@ -349,7 +349,7 @@ ms.locfileid: "83440872"
 
 <a name="NotesStandardFormatting"></a>
 
-## <a name="notes"></a>注意
+## <a name="notes"></a>備忘稿
 
 ### <a name="control-panel-settings"></a>控制台設定值
 
@@ -384,9 +384,9 @@ ms.locfileid: "83440872"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Globalization.NumberFormatInfo>
-- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [格式化類型](../../../docs/standard/base-types/formatting-types.md)
-- [作法：以前置字元零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [複合格式](../../../docs/standard/base-types/composite-formatting.md)
+- [自訂數值格式字串](custom-numeric-format-strings.md)
+- [格式化類型](formatting-types.md)
+- [作法：以前置字元零來填補數字](how-to-pad-a-number-with-leading-zeros.md)
+- [複合格式](composite-formatting.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
 - [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))

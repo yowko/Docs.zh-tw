@@ -1,5 +1,5 @@
 ---
-title: <para> - C# 程式設計指南
+title: '<para> -C # 程式設計指南'
 ms.date: 07/20/2015
 f1_keywords:
 - <para>
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: b2740370106ce5b2812acbea212354ebea1f0e34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1fe81b1752d066c6b2e1ffe27f0c43fc4068edf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793413"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287294"
 ---
-# <a name="para-c-programming-guide"></a>\<第>段（C# 程式設計指南）
+# <a name="para-c-programming-guide"></a>\<para>（C # 程式設計手冊）
 
 ## <a name="syntax"></a>語法
 
@@ -31,15 +31,15 @@ ms.locfileid: "76793413"
 
 ## <a name="remarks"></a>備註
 
-參數\<>標記用於標記內，如[\<摘要>、](./summary.md)[\<備註>](./remarks.md)或[\<返回>](./returns.md)，並允許您向文本添加結構。
+`<para>`標記用於標記內（例如 [\<summary>](./summary.md) 、 [\<remarks>](./remarks.md) 或 [\<returns>](./returns.md) ），並可讓您將結構新增至文字。
 
-使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)編譯，以處理檔的文檔注釋。
+使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)進行編譯，以處理檔案的檔批註。
 
 ## <a name="example"></a>範例
 
-有關使用\<第>段的示例，請參閱[\<摘要>。](./summary.md)
+如需使用的範例，請參閱 [\<summary>](./summary.md) `<para>` 。
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 程式設計手冊](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

@@ -14,17 +14,17 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420535"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291327"
 ---
 # <a name="applying-interop-attributes"></a>套用 Interop 屬性
 <xref:System.Runtime.InteropServices> 命名空間提供了三種類別的 Interop 專屬屬性：一種是您在設計階段套用的屬性、一種是 COM Interop 工具和 API 在轉換過程中套用的屬性，還有一種是您或 COM Interop 套用的屬性。  
   
- 如果您不熟悉將屬性套用至 Managed 程式碼的工作，請參閱[使用屬性擴充中繼資料](../../../docs/standard/attributes/index.md)。 就像其他自訂屬性一樣，您可以將 Interop 專屬屬性 (attribute) 套用至類型、方法、屬性 (property)、參數、欄位和其他成員。  
+ 如果您不熟悉將屬性套用至 Managed 程式碼的工作，請參閱[使用屬性擴充中繼資料](../attributes/index.md)。 就像其他自訂屬性一樣，您可以將 Interop 專屬屬性 (attribute) 套用至類型、方法、屬性 (property)、參數、欄位和其他成員。  
   
 ## <a name="design-time-attributes"></a>設計階段屬性  
  您可以使用設計階段屬性來調整 COM Interop 工具和 API 所執行的轉換處理結果。 下表描述您可以套用到 Managed 原始程式碼的屬性。 COM Interop 工具偶爾也會套用下表所述的屬性。  
@@ -70,7 +70,7 @@ ms.locfileid: "83420535"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices>
-- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [屬性](../../../docs/standard/attributes/index.md)
-- [限定交互操作的 .NET 類型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [封裝 COM 的 .NET Framework 組件](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [將 .NET Framework 元件公開給 COM](../../framework/interop/exposing-dotnet-components-to-com.md)
+- [屬性](../attributes/index.md)
+- [限定交互操作的 .NET 類型](qualify-net-types-for-interoperation.md)
+- [封裝 COM 的 .NET Framework 組件](../../framework/interop/packaging-an-assembly-for-com.md)

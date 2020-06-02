@@ -10,12 +10,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 14cd6fef80ff9ae3a9d78531785edab0da7cc6b9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5557da1531eb55c13d1c7540a50b044d1a7b8a1d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130907"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276331"
 ---
 # <a name="applying-attributes"></a>套用屬性
 使用下列流程將屬性套用至程式碼的元素。  
@@ -42,18 +42,18 @@ ms.locfileid: "73130907"
  [!code-vb[Conceptual.Attributes.Usage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#3)]  
   
 ## <a name="applying-attributes-at-the-assembly-level"></a>在組件層級套用屬性  
- 如果要在程式集級別應用屬性，請使用**程式集**（`Assembly`在 Visual Basic 中）關鍵字。 下列程式碼顯示在組件層級套用的 **AssemblyTitleAttribute**。  
+ 如果您想要在元件層級套用屬性，請使用**元件**（ `Assembly` 在 Visual Basic 中）關鍵字。 下列程式碼顯示在組件層級套用的 **AssemblyTitleAttribute**。  
   
  [!code-cpp[Conceptual.Attributes.Usage#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#2)]
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
  [!code-vb[Conceptual.Attributes.Usage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#2)]  
   
- 套用此屬性時，字串 `"My Assembly"` 會放在檔案的中繼資料部分中的組件資訊清單。 您可以使用 [MSIL 反組譯工具 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 或建立自訂程式擷取屬性，以檢視屬性。  
+ 套用此屬性時，字串 `"My Assembly"` 會放在檔案的中繼資料部分中的組件資訊清單。 您可以使用 [MSIL 反組譯工具 (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md) 或建立自訂程式擷取屬性，以檢視屬性。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [屬性](../../../docs/standard/attributes/index.md)
-- [擷取儲存於屬性中的資訊](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [屬性](index.md)
+- [擷取儲存於屬性中的資訊](retrieving-information-stored-in-attributes.md)
 - [概念](/cpp/windows/attributed-programming-concepts)
 - [屬性 (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
 - [屬性概觀 (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

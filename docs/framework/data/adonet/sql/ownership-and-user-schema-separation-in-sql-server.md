@@ -1,13 +1,14 @@
 ---
 title: SQL Server 中的擁有權和使用者結構描述分離
+description: 瞭解使用者架構分隔如何讓管理 SQL Server 資料庫物件許可權更有彈性。 架構會將物件分組到不同的命名空間。
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 97e742979785fedd922dc887295b63e2d93bd147
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894432"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286258"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的擁有權和使用者結構描述分離
 SQL Server 安全性的核心概念是物件的擁有者具有不可撤銷的物件管理權限。 您無法移除物件擁有者的權限，而使用者只要擁有資料庫中的物件，就無法將其從資料庫卸除。  
@@ -53,9 +54,9 @@ Server.Database.DatabaseSchema.DatabaseObject
 ## <a name="external-resources"></a>外部資源  
  如需有關物件擁有權和結構描述的詳細資訊，請參閱下列資源。  
   
-|Resource|描述|  
+|資源|描述|  
 |--------------|-----------------|  
-|[使用者架構分隔](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|說明由使用者結構描述分隔引入的變更。 包括新增行為、對擁有權的影響、目錄檢視和權限。|  
+|[使用者結構描述分隔](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|說明由使用者結構描述分隔引入的變更。 包括新增行為、對擁有權的影響、目錄檢視和權限。|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -64,4 +65,4 @@ Server.Database.DatabaseSchema.DatabaseObject
 - [在 SQL Server 中進行驗證](authentication-in-sql-server.md)
 - [SQL Server 中的伺服器和資料庫角色](server-and-database-roles-in-sql-server.md)
 - [SQL Server 中的授權和權限](authorization-and-permissions-in-sql-server.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

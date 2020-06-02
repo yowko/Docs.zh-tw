@@ -1,16 +1,17 @@
 ---
 title: .NET Framework 資料提供者
+description: 瞭解如何使用 .NET Framework Data Provider 來連接至資料庫、執行命令，以及在 ADO.NET 中取得結果。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2c986aab33f2c4dcefb5924ea61e8b9f6b3c50a3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2d4c513b7a4b0e111f2b7e7384c6ee4970d5665f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347804"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286995"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 資料提供者
 .NET Framework Data Provider 用來連接到資料庫、執行命令和抓取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 .NET Framework 資料提供者是輕量的，可在資料來源和程式碼之間建立最小的層級，而不會犧牲功能而提升效能。  
@@ -22,14 +23,14 @@ ms.locfileid: "75347804"
 |.NET Framework Data Provider for SQL Server|提供 Microsoft SQL Server 的資料存取。 使用 <xref:System.Data.SqlClient> 命名空間。|  
 |.NET Framework Data Provider for OLE DB|使用 OLE DB 公開的資料來源。 使用 <xref:System.Data.OleDb> 命名空間。|  
 |.NET Framework Data Provider for ODBC|使用 ODBC 公開的資料來源。 使用 <xref:System.Data.Odbc> 命名空間。|  
-|.NET Framework Data Provider for Oracle|針對 Oracle 資料來源。 .NET Framework Data Provider for Oracle 支援 Oracle 用戶端軟體版本8.1.7 和更新版本，並使用 <xref:System.Data.OracleClient> 的命名空間。|  
+|.NET Framework Data Provider for Oracle|針對 Oracle 資料來源。 Oracle 的 .NET Framework Data Provider 支援 Oracle 用戶端軟體版本8.1.7 和更新版本，並使用 <xref:System.Data.OracleClient> 命名空間。|  
 |EntityClient 提供者|為實體資料模型 (EDM) 應用程式提供資料存取。 使用 <xref:System.Data.EntityClient> 命名空間。|  
 |SQL Server Compact 4.0 的 .NET Framework Data Provider。|提供 Microsoft SQL Server Compact 4.0 的資料存取。 使用 [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 命名空間。|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework 資料提供者的核心物件  
  下表概述組成 .NET Framework Data Provider 的四個核心物件。  
   
-|物件|描述|  
+|Object|描述|  
 |------------|-----------------|  
 |`Connection`|建立連至特定資料來源的連接。 `Connection` 類別是所有 <xref:System.Data.Common.DbConnection> 物件的基底類別 (Base Class)。|  
 |`Command`|對資料來源執行命令。 公開 `Parameters` ，並可在 `Transaction` 的 `Connection`範圍中執行。 `Command` 類別是所有 <xref:System.Data.Common.DbCommand> 物件的基底類別 (Base Class)。|  
@@ -38,7 +39,7 @@ ms.locfileid: "75347804"
   
  除了本檔稍早的表格中所列的核心類別之外，.NET Framework Data Provider 也包含下表所列的類別。  
   
-|物件|描述|  
+|Object|描述|  
 |------------|-----------------|  
 |`Transaction`|可讓您將命令登記在資料來源的異動中。 `Transaction` 類別是所有 <xref:System.Data.Common.DbTransaction> 物件的基底類別 (Base Class)。 ADO.NET 也支援使用 <xref:System.Transactions> 命名空間中類別的交易。|  
 |`CommandBuilder`|Helper 物件，可自動產生 `DataAdapter` 的命令屬性，或從預存程序衍生參數資訊並填入 `Parameters` 物件的 `Command` 集合。 `CommandBuilder` 類別是所有 <xref:System.Data.Common.DbCommandBuilder> 物件的基底類別 (Base Class)。|  
@@ -59,7 +60,7 @@ ms.locfileid: "75347804"
   
  SQL Server 類別的 .NET Framework Data Provider 位於 <xref:System.Data.SqlClient> 命名空間中。  
   
- SQL Server 的 .NET Framework Data Provider 同時支援本機和分散式交易。 若為分散式交易，SQL Server 的 .NET Framework Data Provider 預設會自動在交易中登記，並從 Windows 元件服務或 <xref:System.Transactions>取得交易詳細資料。 如需詳細資訊，請參閱[交易和並行](transactions-and-concurrency.md)。  
+ SQL Server 的 .NET Framework Data Provider 同時支援本機和分散式交易。 若為分散式交易，SQL Server 的 .NET Framework Data Provider 預設會自動在交易中登記，並從 Windows 元件服務或取得交易詳細資料 <xref:System.Transactions> 。 如需詳細資訊，請參閱[交易和並行](transactions-and-concurrency.md)。  
   
  下列程式碼範例顯示如何將 `System.Data.SqlClient` 命名空間納入您的應用程式。  
   
@@ -76,7 +77,7 @@ using System.Data.SqlClient;
   
  下表顯示已使用 ADO.NET 測試的提供者。  
   
-|驅動器|Provider|  
+|驅動程式|提供者|  
 |------------|--------------|  
 |SQLOLEDB|適用于 SQL Server 的 Microsoft OLE DB 提供者|  
 |MSDAORA|Microsoft OLE DB Provider for Oracle|  
@@ -104,9 +105,9 @@ using System.Data.OleDb;
   
  下表顯示以 ADO.NET 測試的 ODBC 驅動程式。  
   
-|驅動器|  
+|驅動程式|  
 |------------|  
-|[SQL Server]|  
+|SQL Server|  
 |Oracle 的 Microsoft ODBC|  
 |Microsoft Access Driver (*.mdb)|  
   
@@ -126,11 +127,11 @@ using System.Data.Odbc;
 > ODBC 的 .NET Framework Data Provider 需要 MDAC 2.6 或更新版本，建議使用 MDAC 2.8 SP1。 您可以從[Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=5793)下載 MDAC 2.8 SP1。
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle  
- Oracle 的 .NET Framework Data Provider （OracleClient）可讓您透過 Oracle 用戶端連線軟體，對 Oracle 資料來源進行資料存取。 資料提供者支援 Oracle 用戶端軟體 8.1.7 (含) 以後版本。 資料提供者支援本機和分散式交易。 如需詳細資訊，請參閱[交易和並行](transactions-and-concurrency.md)。  
+ Oracle 的 .NET Framework Data Provider （OracleClient）可讓您透過 Oracle 用戶端連線軟體，對 Oracle 資料來源進行資料存取。 資料提供者支援 Oracle 用戶端軟體 8.1.7 (含) 以後版本。 資料提供者支援本機和分散式異動。 如需詳細資訊，請參閱[交易和並行](transactions-and-concurrency.md)。  
   
  Oracle 的 .NET Framework Data Provider 需要系統上的 Oracle 用戶端軟體（版本8.1.7 或更新版本），您才能連接到 Oracle 資料來源。  
   
- Oracle 類別的 .NET Framework Data Provider 位於 <xref:System.Data.OracleClient> 命名空間中，而且包含在 `System.Data.OracleClient.dll` 元件中。 如果編譯的應用程式有使用資料提供者，則必須參考 `System.Data.dll` 和 `System.Data.OracleClient.dll` 。  
+ Oracle 類別的 .NET Framework Data Provider 位於 <xref:System.Data.OracleClient> 命名空間中，而且包含在元件中 `System.Data.OracleClient.dll` 。 如果編譯的應用程式有使用資料提供者，則必須參考 `System.Data.dll` 和 `System.Data.OracleClient.dll` 。  
   
  下列程式碼範例顯示如何將 `System.Data.OracleClient` 命名空間納入您的應用程式。  
   
@@ -147,7 +148,7 @@ using System.Data.OracleClient;
 ## <a name="choosing-a-net-framework-data-provider"></a>選擇 .NET Framework 資料提供者  
  視您應用程式的設計和資料來源而定，您選擇的 .NET Framework Data Provider 可以改善應用程式的效能、功能及完整性。 下表討論每個 .NET Framework Data Provider 的優點和限制。  
   
-|Provider|注意事項|  
+|提供者|備忘稿|  
 |--------------|-----------|  
 |.NET Framework Data Provider for SQL Server|建議使用 Microsoft SQL Server 的中介層應用程式。<br /><br /> 建議使用 Microsoft 資料庫引擎（MSDE）或 SQL Server 的單一層應用程式。<br /><br /> 建議使用適用于 SQL Server （SQLOLEDB）的 OLE DB 提供者搭配 OLE DB 的 .NET Framework Data Provider。|  
 |.NET Framework Data Provider for OLE DB|針對 SQL Server，建議使用 SQL Server 的 .NET Framework Data Provider，而不是此提供者。<br /><br /> 建議使用 Microsoft Access 資料庫的單層應用程式採用。 不建議中介層應用程式採用 Access 資料庫。|  
@@ -157,7 +158,7 @@ using System.Data.OracleClient;
 ## <a name="entityclient-provider"></a>EntityClient 提供者  
  EntityClient 提供者是用於根據實體資料模型 (EDM) 存取資料。 與其他 .NET Framework 資料提供者不同的是，它不會直接與資料來源互動。 不過，它會使用 Entity SQL 與基礎資料提供者進行通訊。 如需詳細資訊，請參閱 [適用於 Entity Framework 的 EntityClient 提供者](./ef/entityclient-provider-for-the-entity-framework.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)
 - [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)

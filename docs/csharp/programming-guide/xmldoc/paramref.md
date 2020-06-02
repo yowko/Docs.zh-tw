@@ -1,5 +1,5 @@
 ---
-title: <paramref>- C# 程式設計指南
+title: '<paramref>-C # 程式設計指南'
 ms.date: 07/20/2015
 f1_keywords:
 - paramref
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: 12df257271369dc7f0a5c066b712a8d8e6c38761
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f3b521d24c8b4677a05b0b145cb36c31b2793f2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793408"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287307"
 ---
-# <a name="paramref-c-programming-guide"></a>\<paramref>（C# 程式設計指南）
+# <a name="paramref-c-programming-guide"></a>\<paramref>（C # 程式設計手冊）
 
 ## <a name="syntax"></a>語法
 
@@ -31,9 +31,9 @@ ms.locfileid: "76793408"
 
 ## <a name="remarks"></a>備註
 
-\<paramref> 標記提供一種方法來表示在程式碼註解中的字組，例如 \<summary> 或 \<remarks> 區塊中的字組指的是參數。 若要以某種不同方式 (例如，粗體或斜體字型) 格式化這個字組，您可以處理 XML 檔案。
+`<paramref>`標記可讓您指定程式碼批註中的單字，例如在 `<summary>` 或區塊中 `<remarks>` 參考參數。 若要以某種不同方式 (例如，粗體或斜體字型) 格式化這個字組，您可以處理 XML 檔案。
 
-使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)編譯，以處理檔的文檔注釋。
+使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)進行編譯，以處理檔案的檔批註。
 
 ## <a name="example"></a>範例
 
@@ -41,5 +41,5 @@ ms.locfileid: "76793408"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

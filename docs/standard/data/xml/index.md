@@ -3,12 +3,12 @@ title: XML 文件和資料
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a752d634141a56df1caa61eb5d375dd2a402832f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75710787"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287684"
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 
@@ -54,33 +54,33 @@ ms.locfileid: "75710787"
 
   為了要在每次需要 XSLT 處理時都提高效能，您可以使用 <xref:System.Xml.XPath.XPathDocument> 類別，它是最佳化的唯讀 XPath 查詢存放區，其設計目的是要與 <xref:System.Xml.Xsl.XslCompiledTransform> 類別有效率地一起運作。
 
-- **與 ADO.NET 整合。** XML 類別與 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 緊密整合在一起，可讓關聯式資料和 XML 結合在一起。 <xref:System.Data.DataSet> 類別是一項擷取自資料庫的記憶體中資料快取。 <xref:System.Data.DataSet> 類別可使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別來讀取及寫入 XML，將其內部的關聯式結構描述結構保存為 XML 結構描述 (XSD)，還可以推斷 XML 文件的結構描述結構。
+- **與 ADO.NET 整合。** XML 類別與 [ADO.NET](../../../framework/data/adonet/index.md) 緊密整合在一起，可讓關聯式資料和 XML 結合在一起。 <xref:System.Data.DataSet> 類別是一項擷取自資料庫的記憶體中資料快取。 <xref:System.Data.DataSet> 類別可使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別來讀取及寫入 XML，將其內部的關聯式結構描述結構保存為 XML 結構描述 (XSD)，還可以推斷 XML 文件的結構描述結構。
 
 ## <a name="in-this-section"></a>本節內容
 
-[XML 處理選項](../../../../docs/standard/data/xml/xml-processing-options.md) 討論用來處理 XML 資料的選項。
+[XML 處理選項](xml-processing-options.md) 討論用來處理 XML 資料的選項。
 
-[處理記憶體中的 XML 資料](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)討論用來處理記憶體中 XML 資料的三個模型： [LINQ to XML （c #）](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)和[LINQ to XML （Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、 <xref:System.Xml.XmlDocument>類別（根據 W3C 檔物件模型）和<xref:System.Xml.XPath.XPathDocument>類別（根據 XPath 資料模型）。
+[處理記憶體中的 XML 資料](processing-xml-data-in-memory.md)討論用來處理記憶體中 XML 資料的三個模型： [LINQ to XML （c #）](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)和[LINQ to XML （Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、 <xref:System.Xml.XmlDocument> 類別（根據 W3C 檔物件模型）和 <xref:System.Xml.XPath.XPathDocument> 類別（根據 XPath 資料模型）。
 
-[XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)\
+[XSLT 轉換](xslt-transformations.md)\
 說明如何使用 XSLT 處理器。
 
-[XML 架構物件模型（SOM）](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)\
+[XML 架構物件模型（SOM）](xml-schema-object-model-som.md)\
 說明藉由提供 <xref:System.Xml.Schema.XmlSchema> 類別來載入和編輯結構描述，用以建置及管理 XML 結構描述 (XSD) 的類別。
 
-[XML 與關聯式資料和 ADO.NET 的整合](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)\
+[XML 與關聯式資料和 ADO.NET 的整合](xml-integration-with-relational-data-and-adonet.md)\
 說明 .NET Framework 如何透過 <xref:System.Data.DataSet> 物件和 <xref:System.Xml.XmlDataDocument> 物件，啟用即時、同步方式來存取關聯式及階層式表示的資料。
 
-[管理 XML 檔中的命名空間](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)\
+[管理 XML 檔中的命名空間](managing-namespaces-in-an-xml-document.md)\
 說明 <xref:System.Xml.XmlNamespaceManager> 類別如何用來儲存及維護命名空間資訊。
 
-[在 system.string 類別中的類型支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)\
+[在 system.string 類別中的類型支援](type-support-in-the-system-xml-classes.md)\
 說明 XML 資料類型如何對應到 CLR 類型、如何轉換 XML 資料類型，以及 <xref:System.Xml> 類別中的其他類型支援功能。
 
 ## <a name="related-sections"></a>相關章節
 
-[ADO.NET](../../../../docs/framework/data/adonet/index.md)\
+[ADO.NET](../../../framework/data/adonet/index.md)\
 提供如何使用 ADO.NET 來存取資料的相關資訊。
 
-[安全級](../../../../docs/standard/security/index.md)\
+[安全級](../../security/index.md)\
 提供 .NET Framework 安全性系統的概觀。

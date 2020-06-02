@@ -1,5 +1,5 @@
 ---
-title: 如何：以前置字元零來填補數字
+title: 作法：以前置字元零來填補數字
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef18fb1bb7b1592a4e92866028868bf1cf793bbf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131981"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290457"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>如何：以前置字元零來填補數字
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>作法：以前置字元零來填補數字
 
-如果整數要加上前置零，您可以使用具有精確度規範的 "D" [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。 如果整數和浮點數都要加上前置零，您可以使用[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。 此文示範如何使用這兩種方法，以前置零填補數值。
+如果整數要加上前置零，您可以使用具有精確度規範的 "D" [標準數值格式字串](standard-numeric-format-strings.md)。 如果整數和浮點數都要加上前置零，您可以使用[自訂數值格式字串](custom-numeric-format-strings.md)。 此文示範如何使用這兩種方法，以前置零填補數值。
 
 ## <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>以前置零將整數填補至特定長度
 
@@ -32,7 +32,7 @@ ms.locfileid: "73131981"
 
     - 若要將整數顯示為十進位值，請呼叫其 `ToString(String)` 方法，然後傳遞字串 "X*n*" 以作為 format 參數的值，其中 *n* 代表字串的長度下限。
 
-您也可以在 [C#](../../csharp/language-reference/tokens/interpolated.md) 和 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 的插補字串中使用格式字串，也可以呼叫使用[複合格式](../../../docs/standard/base-types/composite-formatting.md)的方法 (例如 <xref:System.String.Format%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>)。
+您也可以在 [C#](../../csharp/language-reference/tokens/interpolated.md) 和 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 的插補字串中使用格式字串，也可以呼叫使用[複合格式](composite-formatting.md)的方法 (例如 <xref:System.String.Format%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>)。
 
 下列範例會使用前置零來將數個整數值格式化，讓格式化數值的總長度至少為 8 個字元。
 
@@ -102,6 +102,6 @@ ms.locfileid: "73131981"
 
 ## <a name="see-also"></a>另請參閱
 
-- [自訂數位格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [複合格式](../../../docs/standard/base-types/composite-formatting.md)
+- [自訂數值格式字串](custom-numeric-format-strings.md)
+- [標準數值格式字串](standard-numeric-format-strings.md)
+- [複合格式](composite-formatting.md)

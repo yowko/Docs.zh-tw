@@ -11,17 +11,17 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d0b24b8a6f1b914745d819b90b973752e32447c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131590"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279954"
 ---
 # <a name="how-to-raise-and-consume-events"></a>如何：引發和使用事件
 本主題中的範例將示範如何使用事件。 包括 <xref:System.EventHandler> 委派、<xref:System.EventHandler%601> 委派和自訂委派的範例，用以說明包含和不包含資料的事件。  
   
- 範例將使用[事件](../../../docs/standard/events/index.md)一文中所述的概念。  
+ 範例將使用[事件](index.md)一文中所述的概念。  
   
 ## <a name="example"></a>範例  
  第一個範例將示範如何引發和使用沒有資料的事件。 它包含名為 `Counter` 的類別，該類別中包含名為 `ThresholdReached` 的事件。 當計數器的值等於或超過臨界值時，就會引發此事件。 由於未提供任何事件資料，因此 <xref:System.EventHandler> 委派會與事件產生關聯。  
@@ -44,4 +44,4 @@ ms.locfileid: "73131590"
   
 ## <a name="see-also"></a>另請參閱
 
-- [事件](../../../docs/standard/events/index.md)
+- [事件](index.md)

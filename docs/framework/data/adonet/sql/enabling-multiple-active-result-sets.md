@@ -1,16 +1,17 @@
 ---
 title: 啟用 Multiple Active Result Set
+description: 瞭解如何在連接字串中啟用/停用 MARS，這會與 SQL Server 搭配使用，讓您可以在 ADO.NET 的單一連接上執行多個批次。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 72125be835298218e5445fe1915d6a17f5008bb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43bdfebce291c3c1d6c90104c5fef440b295934b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148721"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286477"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>啟用 Multiple Active Result Set
 Multiple Active Result Set (MARS) 是與 SQL Server 搭配使用的功能，允許在單一連線中執行多個批次作業。 在啟用 MARS 以與 SQL Server 搭配使用時，使用的每個命令物件都會在連線中新增工作階段。  
@@ -94,7 +95,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  訊息：交易內容正由另一個工作階段所使用。  
   
- 源： .NET SqlClient 資料提供程式  
+ 來源： .NET SqlClient Data Provider  
   
  預期：(Null)  
   

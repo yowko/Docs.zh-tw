@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7f606126237d4d045f55dde03c125455c8a8634
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156305"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84275954"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -63,7 +63,7 @@ ms.locfileid: "78156305"
   
 - 一般詞彙「泛型型別」** 包括建構的型別和泛型型別定義兩者。  
   
-- 泛型型別參數的「共變數」** 和「反變數」** 可讓您使用建構的泛型型別，其型別引數比目標建構的型別有更多衍生 (共變數) 或更少衍生 (反變數)。 共變數和反變數合稱為「變異數」**。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數 (C# 和 Visual Basic))。  
+- 泛型型別參數的「共變數」** 和「反變數」** 可讓您使用建構的泛型型別，其型別引數比目標建構的型別有更多衍生 (共變數) 或更少衍生 (反變數)。 共變數和反變數合稱為「變異數」**。 如需詳細資訊，請參閱 [Covariance and Contravariance](covariance-and-contravariance.md) (共變數和反變數 (C# 和 Visual Basic))。  
   
 - *「條件約束」* (Constraint)，是在泛型類型參數上的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將型別參數限制為具有特定基底類別的型別，或是具有無參數建構函式的型別，或為參考型別或實值型別。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
   
@@ -94,20 +94,20 @@ ms.locfileid: "78156305"
   
 - 泛型委派讓類型安全回呼不需要建立多個委派類別。 例如， <xref:System.Predicate%601> 泛型委派可讓您建立一種方法，為特定類型實作您自己的搜尋條件，以及讓您搭配 <xref:System.Array> 類型的方法 (例如 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>和 <xref:System.Array.FindAll%2A>) 使用方法。  
   
-- 泛型簡化了動態產生的程式碼。 當您搭配動態產生的程式碼使用泛型時，不需要產生類型。 這會增加您使用輕量動態方法而非產生整個組件的時機。 如需詳細資訊，請參閱[如何：定義與執行動態方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)及<xref:System.Reflection.Emit.DynamicMethod>。  
+- 泛型簡化了動態產生的程式碼。 當您搭配動態產生的程式碼使用泛型時，不需要產生類型。 這會增加您使用輕量動態方法而非產生整個組件的時機。 如需詳細資訊，請參閱[如何：定義與執行動態方法](../../framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)及<xref:System.Reflection.Emit.DynamicMethod>。  
   
  下列是泛型的一些限制：  
   
 - 泛型類型可以從大部分的基底類別衍生，例如 <xref:System.MarshalByRefObject> (且可使用條件約束要求泛型類型參數衍生自基底類別，例如 <xref:System.MarshalByRefObject>)。 但 .NET Framework 不支援內容繫結的泛型型別。 泛型類型可以衍生自 <xref:System.ContextBoundObject>，但嘗試建立該類型的執行個體會導致 <xref:System.TypeLoadException>。  
   
-- 列舉不能有泛型類型參數。 列舉只能偶爾做為泛型 (例如，因為它位於使用 Visual Basic、C# 或 C++ 所定義的泛型類型中)。 如需詳細資訊，請參閱 [Common Type System](../../../docs/standard/base-types/common-type-system.md)中的＜列舉＞。  
+- 列舉不能有泛型類型參數。 列舉只能偶爾做為泛型 (例如，因為它位於使用 Visual Basic、C# 或 C++ 所定義的泛型類型中)。 如需詳細資訊，請參閱 [Common Type System](../base-types/common-type-system.md)中的＜列舉＞。  
   
 - 輕量動態方法不可為泛型。  
   
 - 在 Visual Basic、C# 和 C++ 中，括在泛型類型中的巢狀類型無法具現化，除非已將指派給類型所有封入類型的類型參數。 另一個說法是，在反映中，已定義使用這些語言的巢狀類型，包括了其所有封入類型的類型參數。 這讓封入類型的類型參數，可用於巢狀類型的成員定義中。 如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A>中的「巢狀類型」。  
   
     > [!NOTE]
-    > 透過發出動態組件中的程式碼或使用 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 所定義的巢狀型別，不一定要包含其封入型別的型別參數；不過，如果它不包含這些，型別參數就不在巢狀類別的範圍中。  
+    > 透過發出動態組件中的程式碼或使用 [Ilasm.exe (IL Assembler)](../../framework/tools/ilasm-exe-il-assembler.md) 所定義的巢狀型別，不一定要包含其封入型別的型別參數；不過，如果它不包含這些，型別參數就不在巢狀類別的範圍中。  
   
      如需詳細資訊，請參閱 <xref:System.Type.MakeGenericType%2A>中的「巢狀類型」。  
 
@@ -129,20 +129,20 @@ ms.locfileid: "78156305"
 ## <a name="nested-types-and-generics"></a>巢狀類型和泛型  
  泛型類型中的巢狀類型，可取決於封入泛型類型的類型參數。 Common Language Runtime 會將巢狀類型視為泛型，即使它們沒有自己的泛型類型參數。 當您建立巢狀類型的執行個體時，必須為所有封入泛型類型指定類型引數。  
 
-## <a name="related-topics"></a>相關主題  
+## <a name="related-topics"></a>[相關主題]  
   
 |Title|描述|  
 |-----------|-----------------|  
-|[.NET 中的泛型集合](../../../docs/standard/generics/collections.md)|描述 .NET 中的泛型集合類別以及其他泛型類型。|  
-|[管理陣列和清單的泛型委派](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|描述轉換、搜尋述詞以及要在陣列或集合的元素上採取之動作的泛型委派。|  
-|[泛型介面](../../../docs/standard/generics/interfaces.md)|描述提供泛型類型系列中常見功能的泛型介面。|  
-|[共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)|描述泛型類型參數的共變數和反變數。|  
-|[常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)|提供 .NET 中集合類型的特性和使用方式案例的摘要資訊，包括泛型類型。|  
-|[何時使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|描述一般的規則，以判斷何時使用泛型集合類型。|  
-|[操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|說明如何產生包括泛型類型和方法的動態組件。|  
+|[.NET 中的泛型集合](collections.md)|描述 .NET 中的泛型集合類別以及其他泛型類型。|  
+|[用於運算元組和清單的泛型委派](delegates-for-manipulating-arrays-and-lists.md)|描述轉換、搜尋述詞以及要在陣列或集合的元素上採取之動作的泛型委派。|  
+|[泛型介面](interfaces.md)|描述提供泛型類型系列中常見功能的泛型介面。|  
+|[共變數和反變數](covariance-and-contravariance.md)|描述泛型類型參數的共變數和反變數。|  
+|[常用的集合類型](../collections/commonly-used-collection-types.md)|提供 .NET 中集合類型的特性和使用方式案例的摘要資訊，包括泛型類型。|  
+|[使用泛型集合的時機](../collections/when-to-use-generic-collections.md)|描述一般的規則，以判斷何時使用泛型集合類型。|  
+|[作法：使用反映發出定義泛型型別](../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|說明如何產生包括泛型類型和方法的動態組件。|  
 |[Generic Types in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|為 Visual Basic 使用者描述泛型功能，包括使用及定義泛型類型的「操作說明」主題。|  
 |[泛型簡介](../../csharp/programming-guide/generics/index.md)|為 C# 使用者提供定義和使用泛型類型的概觀。|  
-|[Visual C++ 中的泛型概觀](/cpp/windows/overview-of-generics-in-visual-cpp)|描述 C++ 使用者的泛型功能，包括泛型和範本之間的差異。|  
+|[Visual C++ 中的泛型總覽](/cpp/windows/overview-of-generics-in-visual-cpp)|描述 C++ 使用者的泛型功能，包括泛型和範本之間的差異。|  
 
 ## <a name="reference"></a>參考  
  <xref:System.Collections.Generic>  

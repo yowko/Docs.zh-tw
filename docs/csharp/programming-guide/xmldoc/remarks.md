@@ -1,5 +1,5 @@
 ---
-title: <remarks> - C# 程式設計指南
+title: '<remarks> -C # 程式設計指南'
 ms.date: 07/20/2015
 f1_keywords:
 - remarks
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: e37dac9cb9fed1df6ca027f09f2c95dbbc8ea66d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 739027786e02e559d86f990bf614e261b497c76f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793378"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287281"
 ---
-# <a name="remarks-c-programming-guide"></a>\<注釋>（C# 程式設計指南）
+# <a name="remarks-c-programming-guide"></a>\<remarks>（C # 程式設計手冊）
 
 ## <a name="syntax"></a>語法
 
@@ -31,9 +31,9 @@ ms.locfileid: "76793378"
 
 ## <a name="remarks"></a>備註
 
-注釋\<>標記用於添加有關類型的資訊，以[\<摘要>](./summary.md)指定的資訊。 這項資訊會顯示在 [物件瀏覽器] 視窗中。
+`<remarks>`標記是用來加入類型的相關資訊，並補充以指定的資訊 [\<summary>](./summary.md) 。 這項資訊會顯示在 [物件瀏覽器] 視窗中。
 
-使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)編譯，以處理檔的文檔注釋。
+使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)進行編譯，以處理檔案的檔批註。
 
 ## <a name="example"></a>範例
 
@@ -41,5 +41,5 @@ ms.locfileid: "76793378"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

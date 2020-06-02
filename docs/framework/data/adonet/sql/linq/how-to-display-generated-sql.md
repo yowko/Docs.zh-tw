@@ -1,24 +1,25 @@
 ---
-title: HOW TO：顯示產生的 SQL
+title: 如何：顯示產生的 SQL
+description: 瞭解如何使用 Log 屬性來查看針對查詢所產生的 SQL 程式碼，以協助您瞭解 LINQ to SQL 功能及進行偵錯工具。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 15fc6a50d232ea12b229b7b2790c0398bc1c370d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002976"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286374"
 ---
-# <a name="how-to-display-generated-sql"></a>HOW TO：顯示產生的 SQL
+# <a name="how-to-display-generated-sql"></a>如何：顯示產生的 SQL
 您可以檢視針對查詢所產生的 SQL 程式碼，並且使用 <xref:System.Data.Linq.DataContext.Log%2A> 屬性變更處理。 若要了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 功能以及對特定問題進行偵錯，這個方法很實用。  
   
 ## <a name="example"></a>範例  
  下列範例會使用 <xref:System.Data.Linq.DataContext.Log%2A> 屬性，在執行 SQL 程式碼之前，於主控台視窗中顯示該程式碼。  您可以使用這個屬性搭配查詢、插入、更新和刪除命令。  
   
- 主控台視窗中的程式列就是您執行下列 Visual Basic 或C#程式碼時所看到的內容。  
+ 主控台視窗中的程式列就是您執行之後的 Visual Basic 或 c # 程式碼時所看到的內容。  
   
 ```console  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -44,4 +45,4 @@ SEVES
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯支援](debugging-support.md)
+- [調試支援](debugging-support.md)

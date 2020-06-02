@@ -3,12 +3,12 @@ title: 推斷簡單型別的規則
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710228"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289066"
 ---
 # <a name="rules-for-inferring-simple-types"></a>推斷簡單型別的規則
 說明 <xref:System.Xml.Schema.XmlSchemaInference> 類別如何推斷屬性和項目的資料型別。  
@@ -22,7 +22,7 @@ ms.locfileid: "75710228"
   
  下列表格列出可能出現在結果結構描述中的推斷型別。  
   
-|簡單型別|說明|  
+|簡單型別|描述|  
 |-----------------|-----------------|  
 |boolean|True、False、0、1。|  
 |byte|介於 -128 與 127 之間的整數。|  
@@ -67,7 +67,7 @@ ms.locfileid: "75710228"
 
 下列結構描述定義的屬性會在結構描述推斷期間遭到忽略。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`xsi:type`|若發現項目指定了 `xsi:type`，則 `xsi:type` 將被忽略。|  
 |`xsi:nil`|若發現項目具有 `xsi:nil` 屬性，表示其推斷結構描述中的項目宣告具有 `nillable="true"` 值。 將 `xsi:nil` 屬性設為 `true` 的項目不能有子項目。|  
@@ -76,6 +76,6 @@ ms.locfileid: "75710228"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [推斷結構描述節點型別與結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+- [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)
+- [從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)
+- [推斷結構描述節點型別與結構的規則](rules-for-inferring-schema-node-types-and-structure.md)

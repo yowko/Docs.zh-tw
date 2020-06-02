@@ -1,13 +1,14 @@
 ---
 title: 參考完整性條件約束
+description: 瞭解實體資料模型中的參考完整性條件約束，以確保實體類型之間的有效關聯一律存在。
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: ad35df7bcca62ffdbc3842b0817b22c5482a3d4d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 65c811b2a12a64870107ff771d5acc64e86f2c1f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738380"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286620"
 ---
 # <a name="referential-integrity-constraint"></a>參考完整性條件約束
 實體資料模型（EDM）中的*參考完整性條件約束*類似關係資料庫中的參考完整性條件約束。 與資料庫資料表的資料行（或資料行）可以參考另一個資料表的主要索引鍵一樣，[實體類型](entity-type.md)的[屬性](property.md)（或屬性）可以參考另一個實體類型的[實體索引鍵](entity-key.md)。 參考的實體類型稱為條件約束的*主要端點*。 參考主要端點的實體類型稱為條件約束的*相依端點*。  
@@ -33,7 +34,7 @@ ms.locfileid: "73738380"
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [實體資料模型索引鍵概念](entity-data-model-key-concepts.md)
 - [實體資料模型](entity-data-model.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：解除包裝巢狀工作
+title: 作法：解除包裝巢狀工作
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-ms.openlocfilehash: c72654a2bc21035fe706d76018bb163d8ba01ee8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a69fa42da41ee4a071a6571042fd96fb5a009d2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106897"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288026"
 ---
-# <a name="how-to-unwrap-a-nested-task"></a>如何：解除包裝巢狀工作
+# <a name="how-to-unwrap-a-nested-task"></a>作法：解除包裝巢狀工作
 您可以從方法傳回工作，接著等待或繼續該工作，如下列範例所示：  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
@@ -44,4 +44,4 @@ ms.locfileid: "73106897"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
-- [以工作為基礎的非同步程式設計](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [以工作為基礎的非同步程式設計](task-based-asynchronous-programming.md)

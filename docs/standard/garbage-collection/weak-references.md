@@ -8,12 +8,12 @@ helpviewer_keywords:
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b7e7a62b92b2c685ff39baa75f4bc33602b5da2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141325"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287580"
 ---
 # <a name="weak-references"></a>弱式參考
 在應用程式碼可以存取使用中物件時，記憶體回收行程無法透過應用程式回收該物件。 應用程式即具有物件的強式參考。  
@@ -52,4 +52,4 @@ ms.locfileid: "73141325"
   
 ## <a name="see-also"></a>另請參閱
 
-- [記憶體回收](../../../docs/standard/garbage-collection/index.md)
+- [記憶體回收](index.md)

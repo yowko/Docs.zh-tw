@@ -7,18 +7,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f6c2829d45db147c81592c00710f04168b40679e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710774"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287697"
 ---
 # <a name="including-or-importing-xml-schemas"></a>併入或匯入 XML 結構描述
 XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />` 項目。 這些結構描述項目會參考其他 XML 結構描述，其可用於補充併入或匯入它們之結構描述的結構。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 及 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別會對應至結構描述物件模型 (SOM) API 中的這些項目。  
   
 ## <a name="including-or-importing-an-xml-schema"></a>併入或匯入 XML 結構描述  
- 下列程式碼範例會為[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中建立的客戶結構描述補充位址結構描述。 為客戶結構描述補充位址結構描述，可讓位址型別在客戶結構描述中使用。  
+ 下列程式碼範例會為[建置 XML 結構描述](building-xml-schemas.md)主題中建立的客戶結構描述補充位址結構描述。 為客戶結構描述補充位址結構描述，可讓位址型別在客戶結構描述中使用。  
   
  您可使用 `<xs:include />` 或 `<xs:import />` 項目加入位址結構描述，以按原樣使用位址結構描述的元件，或使用 `<xs:redefine />` 項目，修改其中任何元件以滿足客戶結構描述需要。 因為位址結構描述與客戶結構描述的 `targetNamespace` 不同，所以會使用 `<xs:import />` 項目及匯入語意。  
   
@@ -99,9 +99,9 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+- [XML 結構描述物件模型概觀](xml-schema-object-model-overview.md)
+- [讀取及寫入 XML 結構描述](reading-and-writing-xml-schemas.md)
+- [建置 XML 結構描述](building-xml-schemas.md)
+- [周遊 XML 結構描述](traversing-xml-schemas.md)
+- [編輯 XML 結構描述](editing-xml-schemas.md)
+- [用於結構描述編譯的 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)

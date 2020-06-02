@@ -1,6 +1,6 @@
 ---
 title: 安全性和產生作業中的程式碼
-description: 代表信任度較低的代碼生成代碼是一個安全問題，尤其是在調用方可以影響代碼生成時。
+description: 代表以較高信任度執行的較低信任程式碼產生程式碼是一項安全性考慮，特別是當呼叫者可能會影響程式碼產生時。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e5168aa9305c559cf5ea2fb197b2c23ce2a05b0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186791"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291028"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>安全性和產生作業中的程式碼
 某些程式庫的運作方式為產生程式碼，然後執行這個程式碼以進行呼叫端的特定作業。 這種方法的基本問題在於程式庫可能會代表較不受信任的程式碼來產生程式碼，然後以較高的信任層級來執行這個程式碼。 當呼叫端可能影響程式碼產生時，這個問題會更嚴重，因此您必須確保產生的程式碼只會是您認為安全的程式碼。  
@@ -27,4 +27,4 @@ ms.locfileid: "79186791"
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全程式碼撰寫方針](secure-coding-guidelines.md)

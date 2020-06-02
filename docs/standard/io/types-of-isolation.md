@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 0e8be9b1d12d40f8135d21abe9dd6cb0b63bb2d8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 7802e4bc27195d1c8ecaccbd64121fb24328a4d8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646399"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288533"
 ---
 # <a name="types-of-isolation"></a>隔離的類型
 對隔離儲存區的存取永遠限制於建立該隔離儲存區的使用者。 為實作這種類型的隔離，通用語言執行階段會使用作業系統可辨識的相同使用者身分識別概念，這是與開啟儲存區時，與程式碼執行所在處理序相關聯的身分識別。 此身分識別是一個經過驗證的使用者身分識別，但是模擬可能會造成目前使用者的身分識別動態變更。  
@@ -38,9 +38,9 @@ ms.locfileid: "81646399"
   
  隔離儲存區可以透過結合使用者、網域和組件身分識別的概念，以下列方式隔離資料，且每個方式都有自己的使用案例：  
   
-- [依使用者與程式集隔離](#UserAssembly)  
+- [依使用者和元件隔離](#UserAssembly)  
   
-- [依使用者、網域和程式集隔離](#UserDomainAssembly)  
+- [依使用者、網域和元件隔離](#UserDomainAssembly)  
   
  這些隔離中，任一個都可以與漫遊使用者設定檔結合。 如需詳細資訊，請參閱[隔離儲存區和漫遊](#Roaming)一節。  
   
@@ -48,10 +48,10 @@ ms.locfileid: "81646399"
   
  ![顯示依使用者和組件隔離的圖表。](./media/types-of-isolation/isolated-storage-types.gif)  
   
- 除漫遊存儲外,獨立存儲始終被計算機隱式隔離,因為它使用給定計算機的本地存儲設施。  
+ 除了漫遊存放區之外，電腦一律會隱含隔離儲存區，因為它會使用指定電腦的本機存放裝置。  
   
 > [!IMPORTANT]
-> 獨立存儲不適用於 Windows 8.x 應用商店應用。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。  
+> Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>依使用者和組件隔離  
@@ -106,4 +106,4 @@ ms.locfileid: "81646399"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
-- [隔離存儲](../../../docs/standard/io/isolated-storage.md)
+- [隔離儲存區](isolated-storage.md)

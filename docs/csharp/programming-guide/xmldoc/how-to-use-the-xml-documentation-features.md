@@ -1,16 +1,16 @@
 ---
-title: 如何使用XML文檔功能 - C# 程式設計指南
+title: '如何使用 XML 檔功能-c # 程式設計手冊'
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: e279b13d9216120e25f454faa14dc71ad24c74ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7c5a8a895271f067505496c0d13f98b66a393d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156996"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287359"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>如何使用 XML 文件功能
 
@@ -20,7 +20,7 @@ ms.locfileid: "79156996"
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-該示例生成包含以下內容的 *.xml*檔。
+此範例會產生包含下列內容的 *.xml*檔案。
 
 ```xml
 <?xml version="1.0"?>
@@ -108,33 +108,33 @@ ms.locfileid: "79156996"
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-若要編譯範例，請輸入下列命令列：
+若要編譯範例，請輸入下列命令：
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-此命令會建立 XML 檔案 *XMLsample.xml*，您可以在瀏覽器中或使用 TYPE 命令進行檢視。
+此命令會建立 XML 檔案*xmlsample.xml*，您可以在瀏覽器中或使用命令來查看該檔案。 `TYPE`
 
 ## <a name="robust-programming"></a>穩固程式設計
 
-XML 文件是以 /// 開頭。 當您建立新的專案時，精靈會為您在開頭放入幾行 ///。 這些註解在處理時有一些限制：
+XML 檔的開頭為 `///` 。 當您建立新的專案時，系統 `///` 會為您將一些入門行放在中。 這些註解在處理時有一些限制：
 
 - 文件必須是語式正確的 XML。 如果 XML 的語式不正確，則會產生警告，而且文件檔案會包含註解，指出發生錯誤。
 
-- 開發人員可以自由建立自己的標記集合。 有一[組推薦的標記](recommended-tags-for-documentation-comments.md)。 其中一些建議的標記具有特殊意義：
+- 開發人員可以自由建立自己的標記集合。 有一[組建議的標記](recommended-tags-for-documentation-comments.md)。 其中一些建議的標記具有特殊意義：
 
-  - \<param> 標記是用來描述參數。 如果使用，編譯器會驗證參數存在，而且所有參數在文件中都有描述。 如果驗證失敗，編譯器會發出警告。
+  - `<param>`標記是用來描述參數。 如果使用，編譯器會驗證參數存在，而且所有參數在文件中都有描述。 如果驗證失敗，編譯器會發出警告。
 
-  - `cref` 屬性可以附加至任何標記，以提供程式碼項目的參考。 編譯器會驗證此程式碼項目存在。 如果驗證失敗，編譯器會發出警告。 編譯器在尋找 `cref` 屬性中所述的類型時，會遵守任何 `using` 陳述式。
+  - `cref`屬性可以附加至任何標記，以參考程式碼元素。 編譯器會驗證此程式碼項目存在。 如果驗證失敗，編譯器會發出警告。 編譯器在尋找 `cref` 屬性中所述的類型時，會遵守任何 `using` 陳述式。
 
-  - Visual Studio 中的 IntelliSense 使用 \<summary> 標記來顯示類型或成員的其他資訊。
+  - `<summary>`Visual Studio 內的 IntelliSense 會使用此標記來顯示類型或成員的其他資訊。
 
     > [!NOTE]
-    > XML 檔案不會提供類型和成員的完整資訊 (例如，它不會包含任何類型資訊)。 若要取得類型或成員的完整資訊，文件檔案在使用時必須能夠反映實際類型或成員。
+    > XML 檔案不會提供類型和成員的完整資訊 (例如，它不會包含任何類型資訊)。 若要取得有關類型或成員的完整資訊，請搭配實際類型或成員的反映使用檔檔。
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [-文檔（C# 編譯器選項）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [C# 程式設計手冊](../index.md)
+- [-doc （c # 編譯器選項）](../../language-reference/compiler-options/doc-compiler-option.md)
 - [XML 文件註解](./index.md)
-- [DocFX 文檔處理器](https://dotnet.github.io/docfx/)
-- [沙堡文檔處理器](https://github.com/EWSoftware/SHFB)
+- [DocFX 檔處理器](https://dotnet.github.io/docfx/)
+- [Sandcastle 這類檔處理器](https://github.com/EWSoftware/SHFB)

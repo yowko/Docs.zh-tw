@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: 623466e0e960ea991ae92e5de432171b70bad1d2
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: a2c238cb66c5018cd1dd4085c6541ef3c9371beb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588625"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290638"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ 中的合併選項
 當查詢平行執行時，PLINQ 會分割來源序列，讓多個執行緒可以在不同的組件上同時工作，通常是在個別的執行緒上。 如果結果是在一個執行緒上使用，例如在 `foreach` (Visual Basic 中的 `For Each`) 迴圈中，則必須將每個執行緒中的結果合併回單一序列。 PLINQ 執行的合併類型，取決於存在查詢中的運算子。 比方說，對結果強制執行新順序的運算子，必須緩衝所有執行緒中的所有元素。 就使用執行緒的角度而言 (也是應用程式使用者的觀點)，完整緩衝的查詢在產生其第一個結果前可能會執行不算短的一段時間。 其他運算子預設會部分進行緩衝；會批次產生其結果。 有一個運算子 (<xref:System.Linq.ParallelEnumerable.ForAll%2A>) 預設不會進行緩衝。 它會立即產生所有執行緒中的所有元素。  
@@ -23,7 +23,7 @@ ms.locfileid: "80588625"
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- 如需完整範例，請參閱[如何：在 PLINQ 中指定合併選項](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)。  
+ 如需完整範例，請參閱[如何：在 PLINQ 中指定合併選項](how-to-specify-merge-options-in-plinq.md)。  
   
  如果特定查詢無法支援要求的選項，將會忽略此選項。 在多數情況下，您不需為 PLINQ 查詢指定合併選項。 不過在某些情況下，藉由測試及量測，您會發現查詢在非預設模式的執行效能最佳。 這個選項的常見用法是強制區塊合併運算子串流處理其結果，以提供更能有效回應的使用者介面。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "80588625"
   
 - `Not Buffered`  
   
-     <xref:System.Linq.ParallelMergeOptions.NotBuffered> 選項會讓每個處理過的元素一產生就從每個執行緒傳回。 此行為類似「串流處理」輸出。 如果 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子存在查詢中，`NotBuffered` 會保留來源元素的順序。 儘管在`NotBuffered`結果可用時就開始生成結果,但生成所有結果的總時間可能仍比使用其他合併選項之一長。  
+     <xref:System.Linq.ParallelMergeOptions.NotBuffered> 選項會讓每個處理過的元素一產生就從每個執行緒傳回。 此行為類似「串流處理」輸出。 如果 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子存在查詢中，`NotBuffered` 會保留來源元素的順序。 雖然 `NotBuffered` 會在開始時立即產生結果，但產生所有結果的總時間可能會比使用其中一個其他合併選項還長。  
   
 - `Auto Buffered`  
   
@@ -65,5 +65,5 @@ ms.locfileid: "80588625"
   
 ## <a name="see-also"></a>另請參閱
 
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [操作說明：在 PLINQ 中指定合併選項](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+- [平行 LINQ (PLINQ)](introduction-to-plinq.md)
+- [作法：在 PLINQ 中指定合併選項](how-to-specify-merge-options-in-plinq.md)

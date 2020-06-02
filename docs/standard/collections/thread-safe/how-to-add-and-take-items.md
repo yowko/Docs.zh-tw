@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-ms.openlocfilehash: 3f4270d2ec71421bad8974a3e5cd8f1d65db3b74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f895be4c20a0cccad23e27db3d488355a614cbfc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711294"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287883"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>如何：從 BlockingCollection 個別加入和擷取項目
-本範例示範如何利用封鎖方式和非封鎖方式，在 <xref:System.Collections.Concurrent.BlockingCollection%601> 中加入和移除項目。 如需 <xref:System.Collections.Concurrent.BlockingCollection%601> 的詳細資訊，請參閱 [BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。  
+本範例示範如何利用封鎖方式和非封鎖方式，在 <xref:System.Collections.Concurrent.BlockingCollection%601> 中加入和移除項目。 如需 <xref:System.Collections.Concurrent.BlockingCollection%601> 的詳細資訊，請參閱 [BlockingCollection 概觀](blockingcollection-overview.md)。  
   
- 有關如何枚舉 a<xref:System.Collections.Concurrent.BlockingCollection%601>直到為空且不再添加元素的示例，請參閱["如何：使用 ForEach 刪除阻止集合中的專案](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)"。
+ 如需如何列舉 <xref:System.Collections.Concurrent.BlockingCollection%601> ，直到它是空的，而且不會再加入任何專案的範例，請參閱[如何：使用 ForEach 移除 BlockingCollection 中的專案](how-to-use-foreach-to-remove.md)。
   
 ## <a name="example"></a>範例  
  第一個範例示範如何加入和擷取項目，以便在集合暫時空白 (擷取時)、達到最大容量 (加入時) 或超過指定的逾時期限時封鎖作業。 請注意，只有在已建立 BlockingCollection，並在建構函式中指定最大容量時，才會啟用最大容量封鎖。  
@@ -35,4 +35,4 @@ ms.locfileid: "75711294"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)
+- [BlockingCollection 概觀](blockingcollection-overview.md)

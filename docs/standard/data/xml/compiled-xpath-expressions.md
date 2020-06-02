@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e74b52e471699fc663504fa42d6c7e502859adda
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711099"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291522"
 ---
 # <a name="compiled-xpath-expressions"></a>編譯 XPath 運算式
 <xref:System.Xml.XPath.XPathExpression> 物件表示從 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 類別的靜態 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 方法傳回的編譯 XPath 查詢。  
@@ -35,7 +35,7 @@ ms.locfileid: "75711099"
   
  下表說明每個 W3C XPath 傳回型別、其 Microsoft .NET Framework 對等型別，以及與 <xref:System.Xml.XPath.XPathExpression> 物件搭配使用的方法 (根據其傳回型別)。  
   
-|W3C XPath 傳回型別|.NET Framework 對等型別|說明|方法|  
+|W3C XPath 傳回型別|.NET Framework 對等型別|描述|方法|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|依文件順序建立之不重複節點的未排序集合。|<xref:System.Xml.XPath.XPathNavigator.Select%2A> 或 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|`true` 或 `false` 值。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 或<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -115,16 +115,16 @@ Console.WriteLine(nodes.Current.Value);
   
  此外，在選取準則很簡單的情況下，使用 <xref:System.Xml.XPath.XPathNavigator> 類別提供之節點集巡覽方法的效能，可能會比 <xref:System.Xml.XPath.XPathNavigator> 類別提供之選取方法的效能高。 例如，如果需要選取目前節點的第一個子節點，則使用 <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> 方法會比使用 `child::*[1]` XPath 運算式及 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 方法更快速。  
   
- 如需 <xref:System.Xml.XPath.XPathNavigator> 類別之節點集巡覽方法的詳細資訊，請參閱[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)。  
+ 如需 <xref:System.Xml.XPath.XPathNavigator> 類別之節點集巡覽方法的詳細資訊，請參閱[使用 XPathNavigator 巡覽節點集](node-set-navigation-using-xpathnavigator.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [使用 XPathNavigator 選取 XML 資料](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [使用 XPathNavigator 評估 XPath 運算式](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [使用 XPathNavigator 比對節點](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [在 XPath 查詢中辨識的節點型別](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [XPath 查詢及命名空間](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+- [使用 XPath 資料模型處理 XML 資料](process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 選取 XML 資料](select-xml-data-using-xpathnavigator.md)
+- [使用 XPathNavigator 評估 XPath 運算式](evaluate-xpath-expressions-using-xpathnavigator.md)
+- [使用 XPathNavigator 比對節點](matching-nodes-using-xpathnavigator.md)
+- [在 XPath 查詢中辨識的節點型別](node-types-recognized-with-xpath-queries.md)
+- [XPath 查詢及命名空間](xpath-queries-and-namespaces.md)

@@ -3,12 +3,12 @@ title: 從讀取器載入資料
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-ms.openlocfilehash: 90a66e04bda4fb2ee4216e8aabd631afb2f28dd0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1c048b08380bebce3a627670d88ff6ae48084535
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710709"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289157"
 ---
 # <a name="load-data-from-a-reader"></a>從讀取器載入資料
 使用 <xref:System.Xml.XmlDocument.Load%2A> 方法及 <xref:System.Xml.XmlReader> 的參數載入 XML 文件所發生的行為，與從其他格式載入資料的行為相比會有所不同。 如果讀取器處於其初始狀態，則 <xref:System.Xml.XmlDocument.Load%2A> 會使用讀取器的整個內容，並利用讀取器中的所有資料建置 XML 文件物件模型 (DOM)。  
@@ -29,4 +29,4 @@ ms.locfileid: "75710709"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

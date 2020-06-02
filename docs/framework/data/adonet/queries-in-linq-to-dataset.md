@@ -1,23 +1,24 @@
 ---
 title: LINQ to DataSet 中的查詢
+description: 瞭解如何在 LINQ to DataSet 中撰寫查詢，方法是取得資料來源、建立查詢，以及執行查詢。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 092dbb5227e5f9e0ae2a62656a300d2367bcf16b
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 829e7dce4801508a8311f7bcbfeccbc36184cffc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634790"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286633"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet 中的查詢
 查詢是指從資料來源中擷取資料的運算式。 查詢通常會以特定的查詢語言來表示，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 因此，開發人員必須針對他們所查詢的每種資料來源或資料格式，學習新的查詢語言。 Language-Integrated Query (LINQ) 提供了一種較簡單且一致的模型，可處理各種資料來源和格式的資料。 在 LINQ 查詢中，您一定會使用程式設計物件。  
   
  LINQ 查詢作業由三個動作構成：取得資料來源、建立查詢和執行查詢。  
   
- 可以透過 LINQ 查詢執行 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面的資料來源。 在 <xref:System.Data.DataTable> 上呼叫 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> 會傳回一個物件，它會執行泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，做為 LINQ to DataSet 查詢的資料來源。  
+ 執行泛型介面的資料來源 <xref:System.Collections.Generic.IEnumerable%601> 可以透過 LINQ 查詢。 在上呼叫會傳回 <xref:System.Data.DataTableExtensions.AsEnumerable%2A> <xref:System.Data.DataTable> 物件，它會實 <xref:System.Collections.Generic.IEnumerable%601> 作為 LINQ to DataSet 查詢的資料來源。  
   
  在此查詢中，您可以精確地指定想要從資料來源中擷取的資訊。 此外，查詢也可以指定該項資訊傳回之前應該如何排序、分組和成形。 在 LINQ 中，查詢會儲存在變數內。 如果查詢設計成傳回值的序列 (Sequence)，查詢變數本身就必須是可列舉的型別。 這個查詢變數不會採取任何動作，也不會傳回任何資料。它只會儲存查詢資訊。 在您建立查詢之後，必須執行該查詢以便擷取任何資料。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "75634790"
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>以方法為基礎的查詢語法  
- 制訂 LINQ to DataSet 查詢的另一種方式是使用以方法為基礎的查詢。 以方法為基礎的查詢語法是對 LINQ 運算子方法進行直接方法呼叫的序列，傳遞 lambda 運算式做為參數。 如需詳細資訊，請參閱 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
+ 制訂 LINQ to DataSet 查詢的另一種方式是使用以方法為基礎的查詢。 以方法為基礎的查詢語法是對 LINQ 運算子方法之直接方法呼叫的序列，並傳遞 Lambda 運算式當做參數。 如需詳細資訊，請參閱[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
   
  這則範例會使用 <xref:System.Linq.Enumerable.Select%2A> 來傳回 `Product` 資料表中的所有資料列，並顯示產品名稱。  
   
@@ -52,16 +53,16 @@ ms.locfileid: "75634790"
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]
  [!code-vb[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#composing)]  
   
- 執行查詢之後，就無法再撰寫任何查詢，而且所有後續的查詢都將使用記憶體中的 LINQ 運算子。 當您逐一查看 `foreach` 或 `For Each` 語句中的查詢變數，或是呼叫導致立即執行的其中一個 LINQ 轉換運算子時，就會執行查詢。 這些運算子包括：<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A> 和 <xref:System.Linq.Enumerable.ToDictionary%2A>。  
+ 執行查詢之後，就無法再撰寫任何查詢，而且所有後續的查詢都將使用記憶體中的 LINQ 運算子。 當您逐一查看或語句中的查詢變數 `foreach` `For Each` ，或是呼叫導致立即執行的其中一個 LINQ 轉換運算子時，就會執行查詢。 這些運算子包括：<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A> 和 <xref:System.Linq.Enumerable.ToDictionary%2A>。  
   
  在下列範例中，第一個查詢會傳回所有產品，並依照標價排序。 <xref:System.Linq.Enumerable.ToArray%2A> 方法是用來強制立即執行查詢：  
   
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [程式設計手冊](programming-guide-linq-to-dataset.md)
-- [查詢資料集](querying-datasets-linq-to-dataset.md)
+- [程式設計指南](programming-guide-linq-to-dataset.md)
+- [查詢 DataSet](querying-datasets-linq-to-dataset.md)
 - [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/index.md)
 - [使用 Visual Basic 撰寫 LINQ 入門](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

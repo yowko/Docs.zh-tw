@@ -13,15 +13,15 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4290bf0d6ee9deec8129c5f4f6092eedb08345f0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084185"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276175"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>規則運算式範例：變更日期格式
-下面的代碼示例使用<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>方法將具有表單*mm*/*dd*/*yy*的日期替換為具有表單*dd*-*mm*-*yy*的日期。  
+下列程式碼範例會使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，將格式為*mm*dd yy 的日期取代為 / *dd* / *yy* *dd* - *mm* - *yy*格式的日期。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#1)]
@@ -57,4 +57,4 @@ ms.locfileid: "73084185"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET 規則運算式](regular-expressions.md)

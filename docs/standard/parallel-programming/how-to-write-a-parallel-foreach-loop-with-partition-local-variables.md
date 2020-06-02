@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-ms.openlocfilehash: cca48889670c3bd67366c879ccede94c89542c8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eff176f7c3ae5cae4c450047214d8e9e20a6e66d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139692"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290742"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>如何：撰寫含有分割區域變數的 Parallel.ForEach 迴圈
 
 下列範例說明如何撰寫使用分割區域變數的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法。 當 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈執行時，它會將其來源集合分成多個分割。 每個分割會有自己的分割區域變數複本。 分割區域變數與[執行緒區域變數](xref:System.Threading.ThreadLocal%601)類似，不同之處在於多個分割可以在單一執行緒上執行。
 
-這個範例中的程式碼和參數非常類似於對應的 <xref:System.Threading.Tasks.Parallel.For%2A> 方法。 如需詳細資訊，請參閱：[如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)。
+這個範例中的程式碼和參數非常類似於對應的 <xref:System.Threading.Tasks.Parallel.For%2A> 方法。 如需詳細資訊，請參閱：[如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)。
 
 若要在 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈中使用分割區域變數，您必須呼叫使用兩個型別參數的其中一個方法多載。 第一個型別參數 `TSource` 指定來源項目的類型，而第二個型別參數 `TLocal` 則指定分割區域變數的類型。
 
@@ -50,6 +50,6 @@ ms.locfileid: "73139692"
 
 ## <a name="see-also"></a>另請參閱
 
-- [資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-- [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [資料平行處理](data-parallelism-task-parallel-library.md)
+- [作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
+- [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)

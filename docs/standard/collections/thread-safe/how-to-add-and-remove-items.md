@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 6e5204c5a71232ef9d1a050891e7fe6d92c375f2
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 6c093e907e43f9f2b978624a986dfe5d8a49869f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796115"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287896"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>如何：在 ConcurrentDictionary 中加入和移除項目
 
@@ -29,7 +29,7 @@ ms.locfileid: "82796115"
 
 ## <a name="example"></a>範例
 
-下列範例使用兩個 <xref:System.Threading.Tasks.Task> 執行個體同時將一些項目新增至 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>，然後輸出所有內容以顯示已成功新增項目。 此範例也會示範如何使用<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>、 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>和<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>方法，從集合中加入、更新和抓取專案。
+下列範例使用兩個 <xref:System.Threading.Tasks.Task> 執行個體同時將一些項目新增至 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>，然後輸出所有內容以顯示已成功新增項目。 此範例也會示範如何使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> 、 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 和方法， <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 從集合中加入、更新和抓取專案。
 
 [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
 [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]
@@ -38,17 +38,17 @@ ms.locfileid: "82796115"
 
 此外，雖然 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的所有方法都是安全執行緒，但是並非所有方法都是不可部分完成，尤其是 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>。 傳遞給這些方法的使用者委派是在字典內部鎖定的外部進行叫用 (完成這項作業是要防止未知程式碼封鎖所有執行緒)。 因此，可能會發生下列序列事件：
 
-1. _threadA_呼叫<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>，找不到任何專案，並藉由叫用`valueFactory`委派來建立要新增的新專案。
+1. _threadA_呼叫 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> ，找不到任何專案，並藉由叫用委派來建立要新增的新專案 `valueFactory` 。
 
-1. _threadB_同時 threadB <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>呼叫時， `valueFactory`會叫用其委派，並在_threadA_之前到達內部鎖定，因此其新的索引鍵/值組會加入字典中。
+1. 同時_threadB_呼叫 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 時，會叫用其 `valueFactory` 委派，並在_threadA_之前到達內部鎖定，因此其新的索引鍵/值組會加入字典中。
 
 1. _threadA 的_使用者委派完成，而且執行緒到達鎖定，但是現在會看到該專案已經存在。
 
 1. _threadA_會執行 "Get"，並傳回_threadB_先前新增的資料。
 
-因此，不保證所傳回的資料<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>是執行緒所建立的相同資料。 `valueFactory` 呼叫 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> 時，可能會發生一系列類似的事件。
+因此，不保證所傳回的資料 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 是執行緒所建立的相同資料 `valueFactory` 。 呼叫 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> 時，可能會發生一系列類似的事件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [安全線程集合](../../../../docs/standard/collections/thread-safe/index.md)
+- [安全線程集合](index.md)

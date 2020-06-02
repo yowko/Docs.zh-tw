@@ -5,15 +5,15 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
-ms.openlocfilehash: 33c0b5a93a9c63e3e743a04e69bb7353ac69fa8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57a01726e897f4ddbf8df5ede53609c198012d80
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711281"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287870"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>如何：將界限和封鎖功能加入至集合
-這個範例示範如何實作類別中的 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> 介面，然後使用類別執行個體作為 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的內部儲存機制，以將界限和封鎖功能新增至自訂集合類別。 如需界限和封鎖的詳細資訊，請參閱 [BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。  
+這個範例示範如何實作類別中的 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> 介面，然後使用類別執行個體作為 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的內部儲存機制，以將界限和封鎖功能新增至自訂集合類別。 如需界限和封鎖的詳細資訊，請參閱 [BlockingCollection 概觀](blockingcollection-overview.md)。  
   
 ## <a name="example"></a>範例  
  自訂集合類別是優先順序層級呈現為 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> 物件陣列的基本優先順序佇列。 在每個佇列內不會執行額外的排序。  
@@ -28,4 +28,4 @@ ms.locfileid: "75711281"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行緒安全集合](../../../../docs/standard/collections/thread-safe/index.md)
+- [安全線程集合](index.md)

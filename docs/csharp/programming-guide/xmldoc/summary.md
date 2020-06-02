@@ -1,5 +1,5 @@
 ---
-title: <summary> - C# 程式設計指南
+title: '<summary> -C # 程式設計指南'
 ms.date: 07/20/2015
 f1_keywords:
 - <summary>
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 1ae3c17bef69a52b4d5852e09284929dc328bf8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a8c9d61e61eae7ba6bf7f0c1b9d2a8dc8a4171
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789665"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287203"
 ---
-# <a name="summary-c-programming-guide"></a>\<摘要>（C# 程式設計指南）
+# <a name="summary-c-programming-guide"></a>\<summary>（C # 程式設計手冊）
 
 ## <a name="syntax"></a>語法
 
@@ -31,11 +31,11 @@ ms.locfileid: "76789665"
 
 ## <a name="remarks"></a>備註
 
-\<summary> 標記應該用來描述類型或類型成員。 使用[\<備註>](./remarks.md)向類型說明添加補充資訊。 使用 [cref 屬性](./cref-attribute.md)，讓 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具為程式碼項目建立文件頁面的內部超連結。
+`<summary>`標記應該用來描述類型或類型成員。 使用將 [\<remarks>](./remarks.md) 補充資訊加入至類型描述。 使用 [cref 屬性](./cref-attribute.md)，讓 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具為程式碼項目建立文件頁面的內部超連結。
 
-\<summary> 標記的文字是 IntelliSense 中類型的唯一資訊來源，也會顯示在 [物件瀏覽器] 視窗中。
+標記的文字 `<summary>` 是 IntelliSense 中類型的唯一資訊來源，也會顯示在 [物件瀏覽器] 視窗中。
 
-使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)編譯，以處理檔的文檔注釋。 要基於編譯器生成的檔創建最終文檔，您可以創建自訂工具，或使用[DocFX](https://dotnet.github.io/docfx/)或[Sandcastle](https://github.com/EWSoftware/SHFB)等工具。
+使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)進行編譯，以處理檔案的檔批註。 若要根據編譯器產生的檔案建立最終檔集，您可以建立自訂工具，或使用[DocFX](https://dotnet.github.io/docfx/)或[sandcastle 這類](https://github.com/EWSoftware/SHFB)等工具。
 
 ## <a name="example"></a>範例
 
@@ -100,5 +100,5 @@ ms.locfileid: "76789665"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 程式設計手冊](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

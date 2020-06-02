@@ -1,5 +1,5 @@
 ---
-title: 如何：尋找隔離儲存區中的現有檔案和目錄
+title: 作法：尋找隔離儲存區中的現有檔案和目錄
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-ms.openlocfilehash: dfebcc9acf0b699f898c106921d15ce0294bc5d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec1d1fbdefdad3ec0dd2c07fbc1278e4d1d217c6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75707129"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291847"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>如何：尋找隔離儲存區中的現有檔案和目錄
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>作法：尋找隔離儲存區中的現有檔案和目錄
 
 若要搜尋隔離儲存區中的目錄，請使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> 方法。 此方法會採用表示搜尋模式的字串。 您可以在搜尋模式中使用單一字元 (?) 和多重字元 (\*) 萬用字元，但萬用字元必須出現在名稱的最後一個部分。 例如，`directory1/*ect*` 是有效的搜尋字串，但 `*ect*/directory2` 不是。  
   
@@ -42,4 +42,4 @@ ms.locfileid: "75707129"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [隔離存儲](../../../docs/standard/io/isolated-storage.md)
+- [隔離儲存區](isolated-storage.md)

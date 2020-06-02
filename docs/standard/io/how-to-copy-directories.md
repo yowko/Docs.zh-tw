@@ -12,17 +12,17 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f71f428037f33fdbc692ca2f02a4c767998d684e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159451"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288572"
 ---
 # <a name="how-to-copy-directories"></a>如何：複製目錄
 本主題示範如何使用 I/O 類別將某一個目錄的內容同步複製到另一個位置。
 
-如需非同步檔案複製的範例，請參閱[非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。
+如需非同步檔案複製的範例，請參閱[非同步檔案 I/O](asynchronous-file-i-o.md)。
 
 此範例會將 `DirectoryCopy` 方法的 `copySubDirs` 設定為 `true` 來複製子目錄。 `DirectoryCopy` 方法會以遞迴方式複製子目錄，方法是在每個子目錄上呼叫其本身，直到沒有其他要複製的子目錄為止。  
   
@@ -37,6 +37,6 @@ ms.locfileid: "78159451"
 - <xref:System.IO.FileInfo>
 - <xref:System.IO.DirectoryInfo>
 - <xref:System.IO.FileStream>
-- [檔案和資料流 I/O](../../../docs/standard/io/index.md)
-- [常見 I/O 任務](../../../docs/standard/io/common-i-o-tasks.md)
-- [非同步檔 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [檔案和資料流 I/O](index.md)
+- [一般 I/O 工作](common-i-o-tasks.md)
+- [非同步檔案 I/O](asynchronous-file-i-o.md)

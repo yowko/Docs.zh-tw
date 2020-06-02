@@ -1,5 +1,5 @@
 ---
-title: <exception>- C# 程式設計指南
+title: '<exception>-C # 程式設計指南'
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 14318ac0b0cdf781d0488eecaf934879017d91f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb193c586456497ee60aad941d56241ad7c6b63a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789796"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287376"
 ---
-# <a name="exception-c-programming-guide"></a>\<異常>（C# 程式設計指南）
+# <a name="exception-c-programming-guide"></a>\<exception>（C # 程式設計手冊）
 
 ## <a name="syntax"></a>語法
 
@@ -37,9 +37,9 @@ ms.locfileid: "76789796"
 
 ## <a name="remarks"></a>備註
 
-\<exception> 標記可讓您指定可以擲回的例外狀況。 這個標記可以套用至方法、屬性、事件和索引子的定義。
+`<exception>`標記可讓您指定可以擲回的例外狀況。 這個標記可以套用至方法、屬性、事件和索引子的定義。
 
-使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)編譯，以處理檔的文檔注釋。
+使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)進行編譯，以處理檔案的檔批註。
 
 如需例外狀況處理的詳細資訊，請參閱[例外狀況和例外狀況處理](../exceptions/index.md)。
 
@@ -49,5 +49,5 @@ ms.locfileid: "76789796"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 程式設計手冊](../index.md)
 - [建議使用的文件註解標籤](recommended-tags-for-documentation-comments.md)

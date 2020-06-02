@@ -1,5 +1,5 @@
 ---
-title: 如何：取消 Parallel.For 或 ForEach 迴圈
+title: 作法：取消 Parallel.For 或 ForEach 迴圈
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parallel foreach loop, how to cancel
 - parallel for loops, how to cancel
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
-ms.openlocfilehash: 67f1f91f235cc88deaa97d412f368819ae0a8cda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d29137127dd47844f8f08d3ac689cf2827d9efe2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134238"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288221"
 ---
-# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>如何：取消 Parallel.For 或 ForEach 迴圈
-<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法可透過使用取消權杖來支援取消作業。 如需取消的詳細資訊，請參閱[取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)。 在平行迴圈中，將 <xref:System.Threading.CancellationToken> 提供給 <xref:System.Threading.Tasks.ParallelOptions> 參數中的方法，然後將平行呼叫包含在 try catch 區塊中。  
+# <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>作法：取消 Parallel.For 或 ForEach 迴圈
+<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法可透過使用取消權杖來支援取消作業。 如需取消的詳細資訊，請參閱[取消](../threading/cancellation-in-managed-threads.md)。 在平行迴圈中，將 <xref:System.Threading.CancellationToken> 提供給 <xref:System.Threading.Tasks.ParallelOptions> 參數中的方法，然後將平行呼叫包含在 try catch 區塊中。  
   
 ## <a name="example"></a>範例  
  下列範例將示範如何取消呼叫 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>。 您可以套用相同的方法到 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 呼叫。  
@@ -29,5 +29,5 @@ ms.locfileid: "73134238"
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [資料平行處理](data-parallelism-task-parallel-library.md)
+- [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)

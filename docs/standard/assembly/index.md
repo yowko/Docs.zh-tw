@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379904"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290937"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的組件
 
@@ -86,7 +86,7 @@ ms.locfileid: "83379904"
 若要在應用程式中使用元件，您必須加入它的參考。 參考元件之後，所有可存取的類型、屬性、方法和其命名空間的其他成員，都可供您的應用程式使用，就像其程式碼屬於您的來源檔案。
 
 > [!NOTE]
-> 系統會自動參考 .NET 類別庫中的大多數組件。 如果未自動參考系統元件，則針對 .NET Core，您可以加入包含元件之 NuGet 套件的參考。 請使用 Visual Studio 中的 NuGet 套件管理員，或將元件的[ \< PackageReference>](../../core/tools/dependencies.md#the-packagereference-element)元素新增至 *.csproj*或 *. vbproj*專案。 在 .NET Framework 中，您可以使用 Visual Studio 中的 [**加入參考**] 對話方塊，或使用 `-reference` [c #](../../csharp/language-reference/compiler-options/reference-compiler-option.md)或[Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)編譯器的命令列選項，將參考加入至元件。
+> 系統會自動參考 .NET 類別庫中的大多數組件。 如果未自動參考系統元件，則針對 .NET Core，您可以加入包含元件之 NuGet 套件的參考。 請使用 Visual Studio 中的 NuGet 套件管理員，或將 [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) 元件的元素新增至 *.csproj*或 *. vbproj*專案。 在 .NET Framework 中，您可以使用 Visual Studio 中的 [**加入參考**] 對話方塊，或使用 `-reference` [c #](../../csharp/language-reference/compiler-options/reference-compiler-option.md)或[Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)編譯器的命令列選項，將參考加入至元件。
 
 在 c # 中，您可以在單一應用程式中使用相同元件的兩個版本。 如需詳細資訊，請參閱[外部別名](../../csharp/language-reference/keywords/extern-alias.md)。
 
@@ -102,14 +102,14 @@ ms.locfileid: "83379904"
 |[組件版本控制](versioning.md)|.NET Framework 版本控制原則的總覽。|
 |[組件放置](../../framework/app-domains/assembly-placement.md)|哪裡可以找到元件。|
 |[組件和並存執行](side-by-side-execution.md)|同時使用多個版本的執行時間或元件。|
-|[發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|如何建立動態元件。|
-|[執行時間如何找出元件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework 如何在執行時間解析元件參考。|
+|[發出動態方法和組件](../../framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|如何建立動態元件。|
+|[執行時間如何找出元件](../../framework/deployment/how-the-runtime-locates-assemblies.md)|.NET Framework 如何在執行時間解析元件參考。|
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 組件檔格式](file-format.md)
 - [Friend 組件](friend.md)

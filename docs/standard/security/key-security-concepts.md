@@ -11,24 +11,24 @@ helpviewer_keywords:
 - permissions [.NET Framework]
 - security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: b7bcb7e56ca14d129eadcaeac19452d4a443713d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ec811430056b7db575d6db229a3afe618850e49
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400656"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291236"
 ---
 # <a name="key-security-concepts"></a>重要的安全性概念
 Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除對行動程式碼安全性的相關疑慮，並提供支援，讓元件能夠判斷哪些使用者有權執行。  
   
 ## <a name="type-safety-and-security"></a>類型安全和安全性  
- 類型安全程式碼只會存取經授權存取的記憶體位置。 （對於本討論，型別安全特別提到記憶體型別安全，不應在更廣泛的方面與型別安全混淆。例如，型別安全代碼無法從其他物件的私有欄位讀取值。 它只會以妥善定義、可允許的方式來存取類型。  
+ 類型安全程式碼只會存取經授權存取的記憶體位置。 （在此討論中，型別安全特別指的是記憶體型別安全，不應與更廣泛的型別安全混淆）。例如，型別安全程式碼無法讀取來自另一個物件之私用欄位的值。 它只會以妥善定義、可允許的方式來存取類型。  
   
- 在 Just-In-Time (JIT) 編譯期間，選擇性的驗證程序會檢查中繼資料，以及要以 JIT 編譯成原生機器程式碼之方法的 Microsoft Intermediate Language (MSIL)，以驗證其類型安全。 如果程式碼具有略過驗證的權限，則會略過此程序。 如需有關驗證的詳細資訊，請參閱 [Managed 執行程序](../../../docs/standard/managed-execution-process.md)。  
+ 在 Just-In-Time (JIT) 編譯期間，選擇性的驗證程序會檢查中繼資料，以及要以 JIT 編譯成原生機器程式碼之方法的 Microsoft Intermediate Language (MSIL)，以驗證其類型安全。 如果程式碼具有略過驗證的權限，則會略過此程序。 如需有關驗證的詳細資訊，請參閱 [Managed 執行程序](../managed-execution-process.md)。  
   
  雖然沒有強制要驗證類型安全才能執行 Managed 程式碼，但是在組件隔離和強制執行安全性的作業中，類型安全扮演相當重要的角色。 當程式碼類型安全時，Common Language Runtime 可以將組件彼此完全隔離。 此隔離有助於確保組件無法對彼此產生不利的影響，而且也會增加應用程式的可靠性。 類型安全元件即使受信任的層級不同，還是可以在相同的處理序中安全地執行。 當程式碼不是類型安全時，可能會發生不必要的副作用。 例如，執行階段無法防止 Managed 程式碼呼叫機器碼 (Unmanaged) 及執行惡意的作業。 當程式碼為類型安全時，執行階段的安全性強制機制可確保它不會存取原生程式碼，除非它有這樣的權限。 所有不是類型安全的程式碼，都必須被授與具有通過之列舉成員 <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> 的 <xref:System.Security.Permissions.SecurityPermission>，才能執行。  
   
- 如需詳細資訊，請參閱 [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md)。  
+ 如需詳細資訊，請參閱 [Code Access Security Basics](../../framework/misc/code-access-security-basics.md)。  
   
 ## <a name="principal"></a>主體  
  主體代表使用者的身分識別與角色，並且會代表使用者採取行動。 在 .NET Framework 中，以角色為基礎的安全性可支援三種主體：  
@@ -39,7 +39,7 @@ Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除�
   
 - 自訂主體可以由應用程式以該特定應用程式所需的任何方式來定義。 其可擴充主體身分識別和角色的基本概念。  
   
- 如需詳細資訊，請參閱[主體和身分識別物件](../../../docs/standard/security/principal-and-identity-objects.md)。  
+ 如需詳細資訊，請參閱[主體和身分識別物件](principal-and-identity-objects.md)。  
   
 ## <a name="authentication"></a>驗證  
  驗證是探索並確認主體身分識別的程序，它會檢查使用者的認證，並針對某授權單位來驗證那些認證。 在驗證期間取得的資訊可直接供是由您的程式碼使用。 您也可以使用 .NET Framework 以角色為基礎的安全性來驗證目前使用者，以及判斷是否允許該主體存取您的程式碼。 請參閱 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 方法的多載，以取得如何針對特定角色來驗證主體的範例。 例如，您可以使用 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 多載來判斷目前使用者是否為系統管理員群組的成員。  

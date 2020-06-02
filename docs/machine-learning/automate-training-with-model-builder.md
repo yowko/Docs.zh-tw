@@ -1,14 +1,14 @@
 ---
 title: 什麼是模型建立器且其如何運作？
 description: 如何使用 ML.NET 模型建立器來自動定型機器學習服務模型
-ms.date: 03/25/2020
+ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 4afdbfd1682a30647b09d05d51a5c73c214fe2bd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616925"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289495"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什麼是模型建立器且其如何運作？
 
@@ -119,7 +119,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 ## <a name="train"></a>定型
 
-一旦選取案例、資料和標籤，模型建立器就會定型模型。
+一旦您選取您的案例、環境、資料和標籤之後，模型產生器就會訓練模型。
 
 ### <a name="what-is-training"></a>什麼是定型？
 
@@ -149,6 +149,8 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 - 資料行的類型
 - ML 工作
 - 用於定型之電腦的 CPU、磁片和記憶體效能
+
+通常建議您使用超過100個數據列做為小於的資料集，而不會產生任何結果，而且可能需要花很長的時間來定型。
 
 ## <a name="evaluate"></a>評估
 
@@ -193,7 +195,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 - 延長定型時間。 隨著時間的增加，自動化機器學習引擎會以更多的演算法和設定進行實驗。
 
-- 新增更多資料。 有時資料數量不足，無法定型高品質的機器學習模型。
+- 新增更多資料。 有時候資料量並不足以定型高品質的機器學習服務模型。這對於只有少數範例的資料集更是如此。
 
 - 平衡資料。 針對分類工作，請務必平衡所有類別的定型集。 例如，如果您有四個類別的 100 個定型範例，有 90 筆記錄使用前兩個類別 (tag1 和 tag2)，只有剩餘的 10 筆記錄使用其他兩個類別 (tag3 和 tag4)，則資料失衡可能會導致模型難以正確預測 tag3 或 tag4。
 

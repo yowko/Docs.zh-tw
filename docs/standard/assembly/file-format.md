@@ -5,16 +5,16 @@ author: richlander
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4aa961c3a6f2d4fa1580ff608aaf2a40d462fa0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711580"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288507"
 ---
 # <a name="net-assembly-file-format"></a>.NET 組件檔格式
 
-.NET 定義二進位檔案*格式程式集，* 用於完全描述和包含 .NET 程式。 組件用於程式本身以及任何相依的程式庫。 除了適當的 .NET 實作之外，.NET 程式也可以執行為一或多個沒有其他必要成品的組件。 本機依賴項（包括作業系統 API）是一個單獨的問題，不包含在 .NET 程式集格式中，儘管它們有時使用此格式（例如 WinRT）進行描述。
+.NET 會定義用來完整描述並包含 .NET 程式的二進位檔案格式（*元件*）。 組件用於程式本身以及任何相依的程式庫。 除了適當的 .NET 實作之外，.NET 程式也可以執行為一或多個沒有其他必要成品的組件。 原生相依性（包括作業系統 Api）是一項不同的考慮，而且不包含在 .NET 元件格式中，但有時會以這種格式（例如 WinRT）來描述。
 
 > 每個 CLI 元件都會攜帶該元件特定宣告、實作和參考的中繼資料。 因此，元件特定中繼資料是指元件中繼資料，而且產生的元件即為來自 ECMA 335 I.9.1 的自我描述元件和組件。
 
@@ -22,9 +22,9 @@ ms.locfileid: "75711580"
 
 格式為 CPU 並且無作業系統無關。 它已用作將目標設為許多晶片和 CPU 之 .NET 實作的一部分。 雖然格式本身具有 Windows 傳承，但是可在任何作業系統上實作。 為達 OS 互通性，大部分的值皆以位元組由小到大的格式儲存，這可說是最重大的選擇。 它沒有電腦指標大小 (例如，32 位元、64 位元) 的特定同質性。
 
-.NET 組件格式對於指定的程式或程式庫結構也具有相當的描述性。 它描述了程式集的內部元件，特別是定義的程式集引用和類型及其內部結構。 工具或 API 可以讀取和處理這項資訊以供顯示，或進行程式設計決策。
+.NET 組件格式對於指定的程式或程式庫結構也具有相當的描述性。 它描述元件的內部元件，特別是定義的元件參考和類型，以及其內部結構。 工具或 API 可以讀取和處理這項資訊以供顯示，或進行程式設計決策。
 
-## <a name="format"></a>[格式]
+## <a name="format"></a>格式
 
 .NET 二進位格式是根據 Windows [PE 檔案](https://en.wikipedia.org/wiki/Portable_Executable)格式。 事實上，.NET 類別庫是一致的 Windows PE，並且顯示在第一次看到 Windows 動態連結程式庫 (DLL) 或應用程式執行檔 (EXE) 時。 這是 Windows 上極為實用的特性，在此，它們可以偽裝為原生可執行二進位檔，並進行一些相同的處理 (例如，OS 載入、PE 工具)。
 
@@ -32,6 +32,6 @@ ms.locfileid: "75711580"
 
 來自 ECMA 335 II.25.1 的組件標頭 (執行階段檔案格式的結構)。
 
-## <a name="process-the-assemblies"></a>處理常式集
+## <a name="process-the-assemblies"></a>處理元件
 
-可能會撰寫工具或 API 來處理組件。 組件資訊可在執行階段進行程式設計決策、重新撰寫組件、在編輯器中提供 API IntelliSense，以及產生文件。 <xref:System.Reflection?displayProperty=nameWithType>、<xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> 和 [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用於此目的工具的不錯範例。
+可能會撰寫工具或 API 來處理組件。 元件資訊可讓您在執行時間進行程式設計決策、重新撰寫元件、在編輯器中提供 API IntelliSense，以及產生檔。 <xref:System.Reflection?displayProperty=nameWithType>、<xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> 和 [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用於此目的工具的不錯範例。

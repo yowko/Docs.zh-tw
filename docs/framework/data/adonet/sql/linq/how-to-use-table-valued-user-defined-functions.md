@@ -1,18 +1,19 @@
 ---
-title: HOW TO：使用資料表值使用者定義函式
+title: 如何：使用資料表值使用者定義函式
+description: 使用這些範例來瞭解如何建立資料表值函式，以傳回單一資料列集。 使用類似資料表的資料表值函數。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: c4b5290e4f1aa69c7f55951d526ccb303a5a95ec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 44866367393e321d7dd2db965e2fad8a2e6b63e9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003179"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286322"
 ---
-# <a name="how-to-use-table-valued-user-defined-functions"></a>HOW TO：使用資料表值使用者定義函式
+# <a name="how-to-use-table-valued-user-defined-functions"></a>如何：使用資料表值使用者定義函式
 資料表值函式會傳回單一資料列集 (Rowset)，而不像預存程序 (Stored Procedure) 會傳回多個結果圖案。 因為資料表值函式的傳回型別為 `Table`，所以在可使用資料表的 SQL 中，您可以在任意處使用資料表值函式。 您也可以如同處理資料表一樣來處理資料表值函式。  
   
 ## <a name="example"></a>範例  
@@ -49,4 +50,4 @@ AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用者定義函式](user-defined-functions.md)
+- [使用者定義函數](user-defined-functions.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7af59cf0fdbe8d5c7d7d586b4b86992ae1dc7601
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75938102"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290366"
 ---
 # <a name="thread-safe-collections"></a>安全執行緒集合
 .NET Framework 4 引進了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間，其中包含數個兼具安全執行緒與調整能力的集合類別。 多個執行緒可以安全且有效率地新增或移除這些集合中的項目，而不需要利用使用者程式碼進行額外同步處理。 當您撰寫新的程式碼時，只要多個執行緒將同時寫入集合，就使用並行集合類別。 如果您僅讀取共用集合，則可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中的類別。 除非您需要將目標設為 .NET Framework 1.1 或舊版本的執行階段，否則建議您不要使用 1.0 集合類別。  
@@ -23,7 +23,7 @@ ms.locfileid: "75938102"
  建議您使用 NET Framework 4 中的並行集合類別，因為這些類別不僅提供 .NET Framework 2.0 集合類別的型別安全，而且提供比 .NET Framework 1.0 集合更高的效率及更完整的執行緒安全性。  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>更細緻的鎖定和無鎖定機制  
- 有些並行集合類型會使用輕量型同步處理機制，例如 .NET Framework 4 中新增的 <xref:System.Threading.SpinLock>、<xref:System.Threading.SpinWait>、<xref:System.Threading.SemaphoreSlim> 和 <xref:System.Threading.CountdownEvent>。 這些同步處理型別通常會先使用短期間的*忙碌旋轉*，再讓執行緒進入真正的 Wait 狀態。 預期等候時間很短時，旋轉的費用遠低於等待，這包含昂貴的核心轉換。 針對使用旋轉的集合類別，這個效率表示多個執行緒可以使用極高的速率來新增和移除項目。 如需旋轉與封鎖比較的詳細資訊，請參閱 [SpinLock](../../../../docs/standard/threading/spinlock.md) 和 [SpinWait](../../../../docs/standard/threading/spinwait.md)。  
+ 有些並行集合類型會使用輕量型同步處理機制，例如 .NET Framework 4 中新增的 <xref:System.Threading.SpinLock>、<xref:System.Threading.SpinWait>、<xref:System.Threading.SemaphoreSlim> 和 <xref:System.Threading.CountdownEvent>。 這些同步處理型別通常會先使用短期間的*忙碌旋轉*，再讓執行緒進入真正的 Wait 狀態。 預期等候時間很短時，旋轉的費用遠低於等待，這包含昂貴的核心轉換。 針對使用旋轉的集合類別，這個效率表示多個執行緒可以使用極高的速率來新增和移除項目。 如需旋轉與封鎖比較的詳細資訊，請參閱 [SpinLock](../../threading/spinlock.md) 和 [SpinWait](../../threading/spinwait.md)。  
   
  <xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601> 類別完全不使用鎖定。 相反地，它們依賴 <xref:System.Threading.Interlocked> 作業來取得安全執行緒。  
   
@@ -32,26 +32,26 @@ ms.locfileid: "75938102"
   
  下表列出 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的集合類型。  
   
-|類型|描述|  
+|類型|Description|  
 |----------|-----------------|  
-|<xref:System.Collections.Concurrent.BlockingCollection%601>|提供任何可實作 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 之類型的界限和封鎖功能。 如需詳細資訊，請參閱 [BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。|  
+|<xref:System.Collections.Concurrent.BlockingCollection%601>|提供任何可實作 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 之類型的界限和封鎖功能。 如需詳細資訊，請參閱 [BlockingCollection 概觀](blockingcollection-overview.md)。|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|索引鍵/值組字典的安全執行緒實作。|  
 |<xref:System.Collections.Concurrent.ConcurrentQueue%601>|FIFO (先進先出) 佇列的安全執行緒實作。|  
 |<xref:System.Collections.Concurrent.ConcurrentStack%601>|LIFO (後進先出) 堆疊的安全執行緒實作。|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601>|未排序元素集合的安全執行緒實作。|  
 |<xref:System.Collections.Concurrent.IProducerConsumerCollection%601>|類型必須實作以在 `BlockingCollection` 中使用的介面。|  
   
-## <a name="related-topics"></a>相關主題  
+## <a name="related-topics"></a>[相關主題]  
   
 |Title|描述|  
 |-----------|-----------------|  
-|[BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|描述 <xref:System.Collections.Concurrent.BlockingCollection%601> 類型所提供的功能。|  
-|[如何：在 ConcurrentDictionary 中加入和移除項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|描述如何新增和移除 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 中的項目|  
-|[操作說明：從 BlockingCollection 個別新增和擷取項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|描述在未使用唯讀列舉值的情況下，如何新增和擷取封鎖回收中的項目。|  
-|[如何：將界限和封鎖功能新增至集合](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|描述如何使用任何集合類別作為 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 集合的基礎儲存機制。|  
-|[如何：使用 ForEach 來移除 BlockingCollection 中的項目](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|描述如何使用 `foreach` (在 Visual Basic 中為 `For Each`) 來移除封鎖集合中的所有項目。|  
-|[如何：在管線中使用封鎖集合的陣列](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|描述如何同時使用多個封鎖回收來實作管線。|  
-|[如何：使用 ConcurrentBag 建立物件集區](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|示範在您可以重複使用物件而非持續建立新物件的情況下，如何使用並行資料包改善效能。|  
+|[BlockingCollection 概觀](blockingcollection-overview.md)|描述 <xref:System.Collections.Concurrent.BlockingCollection%601> 類型所提供的功能。|  
+|[如何：在 ConcurrentDictionary 中加入和移除項目](how-to-add-and-remove-items.md)|描述如何新增和移除 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 中的項目|  
+|[操作說明：從 BlockingCollection 個別新增和擷取項目](how-to-add-and-take-items.md)|描述在未使用唯讀列舉值的情況下，如何新增和擷取封鎖回收中的項目。|  
+|[如何：將界限和封鎖功能新增至集合](how-to-add-bounding-and-blocking.md)|描述如何使用任何集合類別作為 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 集合的基礎儲存機制。|  
+|[如何：使用 ForEach 來移除 BlockingCollection 中的項目](how-to-use-foreach-to-remove.md)|描述如何使用 `foreach` (在 Visual Basic 中為 `For Each`) 來移除封鎖集合中的所有項目。|  
+|[如何：在管線中使用封鎖集合的陣列](how-to-use-arrays-of-blockingcollections.md)|描述如何同時使用多個封鎖回收來實作管線。|  
+|[如何：使用 ConcurrentBag 建立物件集區](how-to-create-an-object-pool.md)|示範在您可以重複使用物件而非持續建立新物件的情況下，如何使用並行資料包改善效能。|  
   
 ## <a name="reference"></a>參考  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

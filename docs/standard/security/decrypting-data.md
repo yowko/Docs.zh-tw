@@ -11,12 +11,12 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-ms.openlocfilehash: 37194380d9f08d328f836bcb8648772348958768
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 844561c0d207106a183243f5f2b3e0cea3e70422
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706236"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288364"
 ---
 # <a name="decrypting-data"></a>解密資料
 
@@ -174,9 +174,9 @@ class Class1
 
 一般而言，有一方 (A 方) 會同時產生公開和私密金鑰，並將金鑰儲存在記憶體或密碼編譯金鑰容器中。 A 方接著會將公開金鑰傳送給另一方 (B 方)。 使用公開金鑰時，合作物件 B 會加密資料，並將資料傳回給合作物件 A。在收到資料之後，合作物件 A 會使用對應的私密金鑰來解密它。 只有在 A 方使用的私密金鑰對應於 B 方用來加密資料的公開金鑰時，解密才會成功。
 
-如需如何在安全的密碼編譯金鑰容器儲存非對稱金鑰，以及稍後如何擷取非對稱金鑰的相關資訊，請參閱 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。
+如需如何在安全的密碼編譯金鑰容器儲存非對稱金鑰，以及稍後如何擷取非對稱金鑰的相關資訊，請參閱 [How to: Store Asymmetric Keys in a Key Container](how-to-store-asymmetric-keys-in-a-key-container.md)。
 
-下列範例說明代表對稱金鑰和 IV 的兩個位元組陣列的解密。 如需如何從 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件擷取非對稱式公開金鑰，且使用的格式可以輕鬆地傳送給第三方的相關資訊，請參閱 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)的 Managed 資料流的值。
+下列範例說明代表對稱金鑰和 IV 的兩個位元組陣列的解密。 如需如何從 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件擷取非對稱式公開金鑰，且使用的格式可以輕鬆地傳送給第三方的相關資訊，請參閱 [Encrypting Data](encrypting-data.md)的 Managed 資料流的值。
 
 ```vb
 'Create a new instance of the RSACryptoServiceProvider class.
@@ -202,8 +202,8 @@ symmetricKey = rsa.Decrypt(encryptedSymmetricKey, false);
 symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [加密資料](../../../docs/standard/security/encrypting-data.md)
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+- [產生加密和解密金鑰](generating-keys-for-encryption-and-decryption.md)
+- [加密資料](encrypting-data.md)
+- [密碼編譯服務](cryptographic-services.md)

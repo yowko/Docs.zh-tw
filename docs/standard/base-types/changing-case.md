@@ -14,16 +14,16 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 19795cbed27ca979af813b6060163e76fc5b3780
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e838d6df778802d7eaab3f12205698cc6ca5f72b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187220"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290587"
 ---
-# <a name="change-case-in-net"></a>.NET 中的更改大小寫
+# <a name="change-case-in-net"></a>.NET 中的變更案例
 
-如果編寫的應用程式接受來自使用者的輸入，則永遠不能確定它們將用於輸入資料的情況（上或下）。 通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。 下表描述三種變更大小寫的方法。 前兩種方法提供接受文化特性的多載。  
+如果您撰寫可接受使用者輸入的應用程式，您絕對不能確定他們會使用哪種大小寫來輸入資料。 通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。 下表描述三種變更大小寫的方法。 前兩種方法提供接受文化特性的多載。  
   
 |方法名稱|使用|  
 |-----------------|---------|  
@@ -35,13 +35,13 @@ ms.locfileid: "79187220"
 > 請注意，您不應該使用 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法來轉換字串，以便對字串進行比較或測試字串是否相等。 如需詳細資訊，請參閱[比較混合大小寫的字串](#Comparing)一節。  
   
 <a name="Comparing"></a>
-## <a name="compare-strings-of-mixed-case"></a>比較混合案例的字串  
+## <a name="compare-strings-of-mixed-case"></a>比較混合大小寫的字串  
 
  若要比較混合大小寫的字串以決定其順序，請使用 `comparisonType` 參數呼叫 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的其中一個多載，並為 `comparisonType` 引數提供 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>、<xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> 或 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的值。 若要使用目前文化特性以外的特定文化特性進行比較，請使用 `culture` 和 `options` 參數呼叫 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的多載，並提供 <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> 的值做為 `options` 引數。  
   
  若要比較混合大小寫的字串以決定字串是否相等，請使用 `comparisonType` 參數呼叫 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法的其中一個多載，並為 `comparisonType` 引數提供 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>、<xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> 或 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的值。  
   
- 如需詳細資訊，請參閱[使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)。  
+ 如需詳細資訊，請參閱[使用字串的最佳做法](best-practices-strings.md)。  
   
 ## <a name="toupper"></a>ToUpper  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 方法會將字串中的所有字元變更為大寫。 下列範例會將字串 "Hello World!" 從混合大小寫轉換成大寫。  
@@ -49,7 +49,7 @@ ms.locfileid: "79187220"
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。 若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 物件提供給 *culture* 參數。 如需示範如何使用 <xref:System.String.ToUpper%2A> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。 若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 物件提供給 *culture* 參數。 如需示範如何使用 <xref:System.String.ToUpper%2A> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../globalization-localization/performing-culture-insensitive-case-changes.md)。  
   
 ## <a name="tolower"></a>ToLower  
  <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法類似於前一個方法，但會改將字串中的所有字元轉換成小寫。 下列範例會將字串 "Hello World!" 轉換成小寫。  
@@ -57,7 +57,7 @@ ms.locfileid: "79187220"
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。 若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 物件提供給 *culture* 參數。 如需示範如何使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。 若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 物件提供給 *culture* 參數。 如需示範如何使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../globalization-localization/performing-culture-insensitive-case-changes.md)。  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 會將每個字的第一個字元轉換成大寫，並將其餘字元轉換成小寫。 不過，全部大寫的字會假設為縮略字，而且不會轉換。  
@@ -73,5 +73,5 @@ ms.locfileid: "79187220"
   
 ## <a name="see-also"></a>另請參閱
 
-- [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)
-- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [基底字元串作業](basic-string-operations.md)
+- [執行不區分文化特性的字串作業](../globalization-localization/performing-culture-insensitive-string-operations.md)

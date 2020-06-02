@@ -1,13 +1,14 @@
 ---
 title: 逐步解說：簡單的物件模型和查詢 (C#)
+description: 遵循此逐步解說來建立實體類別，以模型化範例資料庫中的資料表。 然後建立簡單的查詢，以列出特定位置的客戶。
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4637fabecc1726d8fec12857a667073912cfbed5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792138"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286297"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
 
@@ -19,17 +20,17 @@ ms.locfileid: "70792138"
 
 本逐步解說的內容是依據 Visual C# 開發設定所撰寫的。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 本逐步解說會使用專用資料夾 ("c:\linqtest5") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。
 
 - 這個逐步解說需要使用 Northwind 範例資料庫。 如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需指示，請參閱[下載範例資料庫](downloading-sample-databases.md)。 下載此資料庫之後，請將檔案複製到 c:\linqtest5 資料夾。
 
-## <a name="overview"></a>總覽
+## <a name="overview"></a>概觀
 
 此逐步解說包含六個主要工作：
 
-- 在 Visual Studio 中建立解決方案。[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]在 Visual Studio 中建立解決方案。
 
 - 將類別對應至資料庫資料表。
 
@@ -43,15 +44,15 @@ ms.locfileid: "70792138"
 
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案
 
-在第一項工作中，您會建立 Visual Studio 方案，其中包含組建和執行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案所需的參考。
+在第一項工作中，您會建立 Visual Studio 方案，其中包含組建和執行專案所需的參考 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 。
 
 ### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案
 
 1. 在 **[Visual Studio 檔案**] 功能表上，指向 [**新增**]，然後按一下 [**專案**]。
 
-2. 在 [**新增專案**] 對話方塊的 [**專案類型**] 窗格中，按一下 [  **C#視覺效果**]。
+2. 在 [**新增專案**] 對話方塊的 [**專案類型**] 窗格中，按一下 [ **Visual c #**]。
 
-3. 按一下 [範本] 窗格中的 [主控台應用程式]。
+3. 按一下 [範本]**** 窗格中的 [主控台應用程式]****。
 
 4. 在 [**名稱**] 方塊中，輸入**LinqConsoleApp**。
 
@@ -67,7 +68,7 @@ ms.locfileid: "70792138"
 
 1. 在**方案總管**中，以滑鼠右鍵按一下 [**參考**]，然後按一下 [**加入參考**]。
 
-2. 在 [**加入參考**] 對話方塊中，按一下 [ **.net**]，再按一下 [system.string] 元件，然後按一下 **[確定]** 。
+2. 在 [**加入參考**] 對話方塊中，按一下 [ **.net**]，再按一下 [system.string] 元件，然後按一下 **[確定]**。
 
      組件隨即加入至專案。
 
@@ -131,7 +132,7 @@ ms.locfileid: "70792138"
 
 在這個步驟中，您要實際執行這個查詢。 而在需要結果時，才會評估您在前面的步驟中建立的查詢運算式。 當您開始 `foreach` 反覆運算時，會對資料庫執行 SQL 命令，並且將物件具體化。
 
-### <a name="to-execute-the-query"></a>查詢查詢
+### <a name="to-execute-the-query"></a>若要執行查詢
 
 1. 在 `Main` 方法的尾端輸入或貼上下列程式碼 (在查詢描述之後)。
 
@@ -160,7 +161,7 @@ ms.locfileid: "70792138"
 
 ## <a name="next-steps"></a>後續步驟
 
-[逐步解說：跨關聯性查詢C#（](walkthrough-querying-across-relationships-csharp.md) ）主題會繼續本逐步解說結束的位置。 跨關聯性查詢逐步解說會[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]示範如何在資料表之間查詢，*類似于關係資料庫中的*聯結。
+[逐步解說：跨關聯性查詢（c #）](walkthrough-querying-across-relationships-csharp.md)主題會繼續本逐步解說結束的位置。 跨關聯性查詢逐步解說會示範如何在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 資料表之間查詢， *joins*類似于關係資料庫中的聯結。
 
 如果您想執行＜跨關聯性查詢＞逐步解說，請務必儲存您剛在本逐步解說完成的方案，這是必要的條件。
 

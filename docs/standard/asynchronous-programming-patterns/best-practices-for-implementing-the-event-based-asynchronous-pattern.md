@@ -12,17 +12,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 439b862612d7997c9277ffb2cf4f15b14bd0b106
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 66979415f2951acc78dc4eb7b2aafe3c84e85397
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156045"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289937"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式的最佳作法
 事件架構非同步模式提供有效率的方式，讓您運用熟悉的事件和委派語意，公開類別中的非同步行為。 若要實作事件架構非同步模式，您需要遵循一些特定的行為需求。 下列各節說明在實作遵循事件架構非同步模式的類別時，所應考量的需求和方針。  
   
- 如需概觀，請參閱[實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)。  
+ 如需概觀，請參閱[實作事件架構非同步模式](implementing-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="required-behavioral-guarantees"></a>需要的行為保證  
  如果您實作事件架構非同步模式，則必須提供一些保證，以確保類別的行為正確，並且類別的用戶端可依賴此行為。  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 如果您的類別支援多個並行引動過程，請讓開發人員定義 <em>MethodName</em>**Async** 多載 (此多載使用物件值狀態參數，或是稱為 `userSuppliedState` 的工作 ID)，以分別追蹤每個引動過程。 這個參數應該一律是 <em>MethodName</em>**Async** 方法簽章中的最後一個參數。  
   
-- 如果您的類別定義使用物件值狀態參數或工作 ID 的 <em>MethodName</em>**Async** 多載，請務必使用此工作 ID 來追蹤作業的存留期，並務必將此 ID 傳回完成處理常式。 有一些 Helper 類別能提供協助。 如需並行管理的詳細資訊，請參閱[操作說明：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)\(英文\)。  
+- 如果您的類別定義使用物件值狀態參數或工作 ID 的 <em>MethodName</em>**Async** 多載，請務必使用此工作 ID 來追蹤作業的存留期，並務必將此 ID 傳回完成處理常式。 有一些 Helper 類別能提供協助。 如需並行管理的詳細資訊，請參閱[操作說明：實作支援事件架構非同步模式的元件](component-that-supports-the-event-based-asynchronous-pattern.md)\(英文\)。  
   
 - 如果您的類別定義不含狀態參數的 <em>MethodName</em>**Async** 方法，而且不支援多個並行引動過程，請確定之前的 <em>MethodName</em>**Async** 引動過程完成之前，叫用 <em>MethodName</em>**Async** 的任何嘗試動作都會引發 <xref:System.InvalidOperationException>。  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 > 如果要明確違背應用程式模型的原則，不過依然要受益於使用事件架構非同步模式的其他優點，您可以規避這些規則。 例如，您可能需要將 Windows Form 中執行的類別設定為無限制執行緒的類別。 只要開發人員了解隱含的限制，您就可以建立無限制執行緒的類別。 主控台應用程式不會同步執行 <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼叫。 這可能會造成 `ProgressChanged` 事件不按順序引發。 如果您想要以序列化方式執行 <xref:System.ComponentModel.AsyncOperation.Post%2A> 呼叫，請實作及安裝 <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> 類別。  
   
- 如需使用 <xref:System.ComponentModel.AsyncOperation> 與 <xref:System.ComponentModel.AsyncOperationManager> 以啟用非同步作業的詳細資訊，請參閱[操作說明：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md) \(英文\)。  
+ 如需使用 <xref:System.ComponentModel.AsyncOperation> 與 <xref:System.ComponentModel.AsyncOperationManager> 以啟用非同步作業的詳細資訊，請參閱[操作說明：實作支援事件架構非同步模式的元件](component-that-supports-the-event-based-asynchronous-pattern.md) \(英文\)。  
   
 ## <a name="guidelines"></a>指導方針  
   
@@ -141,7 +141,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 如果您正在撰寫衍生自 <xref:System.ComponentModel.Component> 的類別，請勿實作及安裝您自己的 <xref:System.Threading.SynchronizationContext> 類別。 應用程式模型 (而不是元件) 會控制使用的 <xref:System.Threading.SynchronizationContext>。  
   
-- 當您使用任何類型的多執行緒時，您很有可能會暴露在非常嚴重且複雜的錯誤下。 在實作任何使用多執行緒的解決方案之前，請參閱 [Managed 執行緒最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
+- 當您使用任何類型的多執行緒時，您很有可能會暴露在非常嚴重且複雜的錯誤下。 在實作任何使用多執行緒的解決方案之前，請參閱 [Managed 執行緒最佳做法](../threading/managed-threading-best-practices.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -150,9 +150,9 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
-- [實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)
-- [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [決定何時實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
-- [實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [如何：使用支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [如何：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [實作事件架構非同步模式](implementing-the-event-based-asynchronous-pattern.md)
+- [事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)
+- [決定何時實作事件架構非同步模式](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [實作事件架構非同步模式的最佳作法](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [如何：使用支援事件架構非同步模式的元件](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [如何：實作支援事件架構非同步模式的元件](component-that-supports-the-event-based-asynchronous-pattern.md)

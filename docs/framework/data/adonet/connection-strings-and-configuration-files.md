@@ -1,16 +1,17 @@
 ---
 title: 連接字串和組態檔
+description: 瞭解如何將 ADO.NET 應用程式的連接字串儲存在應用程式佈建檔中，做為安全性與維護的最佳作法。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8862aa34c2d2677f5bc3e737c01cc61036c243e1
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 572c5be1bd639e8d4b38935f5be49782f0b0316e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345064"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287034"
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
 
@@ -65,7 +66,7 @@ ms.locfileid: "80345064"
  .NET Framework 2.0 在 <xref:System.Configuration> 命名空間 (Namespace) 中導入了新的類別，可簡化在執行階段從組態檔中擷取連接字串的作業。 您可以透過程式設計的方式，依名稱或提供者名稱擷取連接字串。  
   
 > [!NOTE]
-> **machine.config** 檔案也包含 **connectionStrings** 區段，後者則包含 Visual Studio 所使用的連接字串。 當從 Windows 應用程式中**的 app.config**檔按提供程式名稱檢索連接字串時，首先載入**電腦中的**連接字串，然後從**app.config**中載入條目。**在連接字串**元素後立即添加**清除**，從記憶體中的資料結構中刪除所有繼承的引用，以便僅考慮本地**app.config**檔中定義的連接字串。  
+> **machine.config** 檔案也包含 **connectionStrings** 區段，後者則包含 Visual Studio 所使用的連接字串。 從 Windows 應用程式中的**app.config**檔案依提供者名稱來抓取連接字串時， **machine.config**中的連接字串會先載入，然後再從**app.config**取得專案。緊接在**connectionStrings**元素後面加入**clear** ，會從記憶體中的資料結構移除所有繼承的參考，因此只會考慮在本機**app.config**檔案中定義的連接字串。  
   
 ### <a name="working-with-the-configuration-classes"></a>使用組態類別  
  從 .NET Framework 2.0 開始，在本機電腦上使用組態檔時，就會使用 <xref:System.Configuration.ConfigurationManager> 來取代已被取代的 <xref:System.Configuration.ConfigurationSettings>。 <xref:System.Web.Configuration.WebConfigurationManager> 則會用於搭配 ASP.NET 組態檔。 這是為了在 Web 伺服器上使用組態檔而設計，可透過程式設計的方式存取 **system.web** 之類的組態檔區段。  
@@ -82,7 +83,7 @@ ms.locfileid: "80345064"
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|連接字串。 對應至 **connectionString** 屬性。|  
   
 ### <a name="example-listing-all-connection-strings"></a>範例：列出所有連接字串  
- 此示例<xref:System.Configuration.ConnectionStringSettingsCollection>遍達 和 在主控台視窗中顯示<xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>，<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType>和 屬性。  
+ 這個範例會逐一查看， <xref:System.Configuration.ConnectionStringSettingsCollection> 並 <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> 在主控台視窗中顯示、和屬性。  
   
 > [!NOTE]
 > System.Configuration.dll 並未包含在所有專案類型中，您可能需要設定其參考，才能使用該組態類別。 特定應用程式組態檔的名稱和位置會根據應用程式類型及裝載處理序而不同。  
@@ -143,7 +144,7 @@ ms.locfileid: "80345064"
  這兩種提供者都提供高度加密的資料。 不過，如果您打算在多個伺服器 (例如 Web 伺服陣列) 上使用相同的加密組態檔，則只有使用 <xref:System.Configuration.RsaProtectedConfigurationProvider> 才能匯出用於加密資料的加密金鑰並將其匯入另一個伺服器。 如需詳細資訊，請參閱[匯入和匯出受保護的組態 RSA 金鑰容器](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))。  
   
 ### <a name="using-the-configuration-classes"></a>使用組態類別  
- <xref:System.Configuration> 命名空間 (Namespace) 提供類別 (Class)，以透過程式設計的方式使用組態設定。 <xref:System.Configuration.ConfigurationManager> 類別可用於存取電腦、應用程式及使用者組態檔。 如果要創建ASP.NET應用程式，則可以使用<xref:System.Web.Configuration.WebConfigurationManager>類，它提供了相同的功能，同時還允許您訪問ASP.NET應用程式（如**system.web>\<** 中找到的設置）所特有的設置。  
+ <xref:System.Configuration> 命名空間 (Namespace) 提供類別 (Class)，以透過程式設計的方式使用組態設定。 <xref:System.Configuration.ConfigurationManager> 類別可用於存取電腦、應用程式及使用者組態檔。 如果您要建立 ASP.NET 應用程式，您可以使用 <xref:System.Web.Configuration.WebConfigurationManager> 類別，它會提供相同的功能，同時也可讓您存取 ASP.NET 應用程式獨有的設定，例如在中找到的設定 **\<system.web>** 。  
   
 > [!NOTE]
 > <xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。 如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。 這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 (Implementation)。 如需詳細資訊，請參閱[密碼編譯服務](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))。  
@@ -168,7 +169,7 @@ ms.locfileid: "80345064"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- 有關保護ASP.NET應用程式的詳細資訊，請參閱[保護ASP.NET網站](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))。  
+ 如需保護 ASP.NET 應用程式的詳細資訊，請參閱[保護 ASP.NET 網站](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈
+title: 作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6ac1a64c3a71646946d1af894d1124b12e4769
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139719"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290755"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈
 此範例說明如何使用執行緒區域變數，儲存及擷取 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈所建立之每項工作的狀態。 使用執行緒區域資料，可讓您避免因同步處理大量的共用狀態存取而產生額外負荷。 您可以計算並儲存值，直到工作的所有反覆運算完成為止，而無須在每次反覆運算時寫入至共用資源。 接著，您可以將最終結果寫入至共用資源，或將其傳遞至其他方法。  
   
 ## <a name="example"></a>範例  
@@ -40,11 +40,11 @@ Function() new MyClass()
   
  第五個參數定義要在特定執行緒上所有的反覆項目完成後呼叫一次的方法。 輸入參數的類型會重新對應至 <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> 方法的型別引數，以及主體 Lambda 運算式所傳回的類型。 在此範例中，會透過呼叫 <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> 方法，以安全執行緒的方式將值加入至類別範圍的變數中。 使用執行緒區域變數，可讓我們避免在每次反覆運算迴圈時寫入至此類別變數。  
   
- 如需如何使用 Lambda 運算式的詳細資訊，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
+ 如需如何使用 Lambda 運算式的詳細資訊，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [並行程式設計](../../../docs/standard/parallel-programming/index.md)
-- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [資料平行處理](data-parallelism-task-parallel-library.md)
+- [平行程式設計](index.md)
+- [工作平行程式庫 (TPL)](task-parallel-library-tpl.md)
+- [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)

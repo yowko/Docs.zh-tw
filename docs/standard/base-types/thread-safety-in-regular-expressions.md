@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parsing text with regular expressions, threads
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-ms.openlocfilehash: db25028e10872cfca08d28518c795414d06c5d49
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbcaaf4942f8af1d6c1de52ff5bc11317318f319
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124792"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290885"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>規則運算式中的執行緒安全
 <xref:System.Text.RegularExpressions.Regex> 類別本身為不變 (唯讀) 的安全執行緒。 也就是說，您可以在任何執行緒上建立 **Regex** 物件，並在執行緒之間共用；您也可以從任何執行緒呼叫比對方法，而不會變更任何全域狀態。  
@@ -27,4 +27,4 @@ ms.locfileid: "73124792"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET 規則運算式](regular-expressions.md)

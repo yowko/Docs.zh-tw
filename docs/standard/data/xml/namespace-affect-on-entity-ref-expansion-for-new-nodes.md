@@ -3,12 +3,12 @@ title: 命名空間對包含項目和屬性的新節點之實體參考擴充的�
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
-ms.openlocfilehash: 4772e3f7365069c537c4ec3bc8571f2f710bc9fc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05ec622f09106978281cd3e6f0a82f13703c2097
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710618"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288806"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>命名空間對包含項目和屬性的新節點之實體參考擴充的影響
 因為實體宣告的內容幾乎可包含任何內容，所以內容所包含的項目可能包括 `<!ENTITY aname "<elem>test</elem>">`。  
@@ -20,4 +20,4 @@ ms.locfileid: "75710618"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

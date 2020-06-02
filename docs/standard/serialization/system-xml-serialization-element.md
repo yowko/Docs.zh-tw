@@ -1,24 +1,24 @@
 ---
 title: <system.xml.serialization> 項目
-description: 本文描述 <system.string> 元素，這是用來控制 XML 序列化的最上層元素。
+description: 本文描述 < system.string > 元素，這是用來控制 XML 序列化的最上層元素。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: 1e66220004d561f937d03c506e6f30db4ccc635b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380120"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289482"
 ---
-# <a name="systemxmlserialization-element"></a>\<> 元素的 system.object 序列化
+# <a name="systemxmlserialization-element"></a>\<system.xml.serialization> 項目
 
-用來控制 XML 序列化的最上層項目。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)。
+用來控制 XML 序列化的最上層項目。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../framework/configure-apps/file-schema/index.md)。
 
-\<configuration> \
+\<configuration>\
 \<system.xml.serialization>
 
 ## <a name="syntax"></a>語法
@@ -40,14 +40,14 @@ ms.locfileid: "83380120"
 
 |元素|描述|
 |-------------|-----------------|
-|[\<dateTimeSerialization> 元素](../../../docs/standard/serialization/datetimeserialization-element.md)|判斷 <xref:System.DateTime> 物件的序列化模式。|
-|[\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)|包含 <xref:System.Xml.Serialization.XmlSchemaImporter> 用來對應 XSD 型別至 .NET Framework 型別的型別。|
+|[\<dateTimeSerialization>元素](datetimeserialization-element.md)|判斷 <xref:System.DateTime> 物件的序列化模式。|
+|[\<schemaImporterExtensions>元素](schemaimporterextensions-element.md)|包含 <xref:System.Xml.Serialization.XmlSchemaImporter> 用來對應 XSD 型別至 .NET Framework 型別的型別。|
 
 ### <a name="parent-elements"></a>父項目
 
 |元素|描述|
 |-------------|-----------------|
-|[\<configuration> 元素](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。|
+|[\<configuration>元素](../../framework/configure-apps/file-schema/configuration-element.md)|Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。|
 
 ## <a name="example"></a>範例
 
@@ -67,11 +67,11 @@ ms.locfileid: "83380120"
 </system.xml.serialization>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [設定檔架構](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<dateTimeSerialization> 元素](../../../docs/standard/serialization/datetimeserialization-element.md)
-- [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<新增 schemaImporterExtensions>的> 元素 \<](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [設定檔架構](../../framework/configure-apps/file-schema/index.md)
+- [\<dateTimeSerialization>元素](datetimeserialization-element.md)
+- [\<schemaImporterExtensions>元素](schemaimporterextensions-element.md)
+- [\<add>的元素\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)

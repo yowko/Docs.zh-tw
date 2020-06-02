@@ -16,12 +16,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 4fc7667a2123a106b995a1ea3a31da4551ca650e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 79c5541b4c384e91fbec8c8f1b2130887e79a252
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375955"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289677"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>使用屬性控制 XML 序列化
 
@@ -30,7 +30,7 @@ ms.locfileid: "83375955"
 > [!NOTE]
 > 如果產生的 XML 必須符合標題為「[簡單物件存取通訊協定（SOAP） 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)」之全球資訊網協會（W3C）檔的第5節，請使用屬性中所列的屬性[來控制編碼的 SOAP 序列化](attributes-that-control-encoded-soap-serialization.md)。
 
-根據預設，XML 項目名稱是由類別或成員名稱決定。 在名為 `Book` 的簡單類別中，名為 `ISBN` 的欄位將會產生 XML 項目標記 \<ISBN>，如下列範例所示。
+根據預設，XML 項目名稱是由類別或成員名稱決定。 在名為的簡單類別中 `Book` ，名為的欄位 `ISBN` 將會產生 XML 元素標記 \<ISBN> ，如下列範例所示。
 
 ```vb
 Public Class Book
@@ -67,7 +67,7 @@ public class TaxRates {
 }
 ```
 
-如需屬性的詳細資訊，請參閱[屬性](../../../docs/standard/attributes/index.md)。 如需控制 XML 序列化的屬性清單，請參閱[可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)。
+如需屬性的詳細資訊，請參閱[屬性](../attributes/index.md)。 如需控制 XML 序列化的屬性清單，請參閱[可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)。
 
 ## <a name="controlling-array-serialization"></a>控制陣列序列化
 
@@ -316,7 +316,7 @@ public class Group {
 
 也有可能不需將公用屬性或欄位序列化的狀況。 例如，欄位或屬性可用來包含中繼資料。 在這樣的情況下，套用 <xref:System.Xml.Serialization.XmlIgnoreAttribute> 至欄位或屬性，且將略過 <xref:System.Xml.Serialization.XmlSerializer>。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
 - [控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)

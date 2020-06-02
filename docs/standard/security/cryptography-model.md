@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: c2d28abacd34736764b69be750a850a0f2e8db85
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095264"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288377"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 密碼編譯模型
 
@@ -49,7 +49,7 @@ Common Language Runtime 使用資料流為導向的設計來實作對稱演算�
 
 ## <a name="cryptographic-configuration"></a>密碼編譯組態
 
-密碼編譯組態可讓您將演算法的特定實作，解析為演算法名稱，允許擴充 .NET Framework 密碼編譯類別。 您可以加入自己的演算法硬體或軟體實作，並將實作對應到您選擇的演算法名稱。 如果在組態檔中未指定演算法，會使用預設設定。 如需密碼編譯設定的詳細資訊，請參閱設定[密碼編譯類別](../../../docs/framework/configure-apps/configure-cryptography-classes.md)。
+密碼編譯組態可讓您將演算法的特定實作，解析為演算法名稱，允許擴充 .NET Framework 密碼編譯類別。 您可以加入自己的演算法硬體或軟體實作，並將實作對應到您選擇的演算法名稱。 如果在組態檔中未指定演算法，會使用預設設定。 如需密碼編譯設定的詳細資訊，請參閱設定[密碼編譯類別](../../framework/configure-apps/configure-cryptography-classes.md)。
 
 ## <a name="choosing-an-algorithm"></a>選擇演算法
 
@@ -75,5 +75,5 @@ Common Language Runtime 使用資料流為導向的設計來實作對稱演算�
 
 ## <a name="see-also"></a>另請參閱
 
-- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](cryptographic-services.md)
 - [透過 Bruce Schneier，在 C 中套用了密碼編譯通訊協定、演算法和原始程式碼](https://www.schneier.com/books/applied_cryptography/)

@@ -1,16 +1,17 @@
 ---
-title: 資料集
+title: DataSets
+description: 瞭解資料集，這是一種記憶體常駐的資料表示，可提供一致的關聯式程式設計模型，而不論 ADO.NET 中的資料來源為何。
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 2fc5963937f7bf15dc192c6dc0a980d544a23194
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980297"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287125"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 資料集
-<xref:System.Data.DataSet> 物件是支援已中斷連線之分散式資料案例與 ADO.NET 的核心。 **DataSet**是記憶體常駐的資料表示，可提供一致的關聯式程式設計模型，不論資料來源為何。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 資料**集**代表一組完整的資料，包括相關資料表、條件約束和資料表之間的關聯性。 下圖顯示**資料集**物件模型。  
+<xref:System.Data.DataSet>物件是支援已中斷連線之分散式資料案例與 ADO.NET 的核心。 **DataSet**是記憶體常駐的資料表示，可提供一致的關聯式程式設計模型，不論資料來源為何。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 資料**集**代表一組完整的資料，包括相關資料表、條件約束和資料表之間的關聯性。 下圖顯示**資料集**物件模型。  
   
  ![ADO.Net 圖形](./media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet 物件模型  
@@ -20,17 +21,17 @@ DataSet 物件模型
  **DataSet**也可以將其內容保存並重載為 xml，並將其架構當做 xml 架構定義語言（XSD）架構。 如需詳細資訊，請參閱[在 DataSet 中使用 XML](./dataset-datatable-dataview/using-xml-in-a-dataset.md)。  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- ADO.NET**資料集**包含零個或多個以 <xref:System.Data.DataTable> 物件表示之資料表的集合。 <xref:System.Data.DataTableCollection> 包含**資料集**內的所有**DataTable**物件。  
+ ADO.NET**資料集**包含由物件所表示之零或多個資料表的集合 <xref:System.Data.DataTable> 。 <xref:System.Data.DataTableCollection>包含**DataSet**中的**所有 DataTable**物件。  
   
- **DataTable**定義于 <xref:System.Data> 命名空間中，並代表記憶體常駐資料的單一資料表。 它包含由 <xref:System.Data.DataColumnCollection> 所表示的資料行集合，以及由 <xref:System.Data.ConstraintCollection> 所表示的條件約束，它們共同定義資料表的結構描述。 **DataTable**也包含 <xref:System.Data.DataRowCollection>所代表的資料列集合，其中包含資料表中的資料。 連同其目前狀態一起，<xref:System.Data.DataRow> 還保留其目前及原始版本，以識別儲存在資料列中之值的變更。  
+ **DataTable**定義于 <xref:System.Data> 命名空間中，並代表記憶體常駐資料的單一資料表。 它包含由 <xref:System.Data.DataColumnCollection> 所表示的資料行集合，以及由 <xref:System.Data.ConstraintCollection> 所表示的條件約束，它們共同定義資料表的結構描述。 **DataTable**也包含由表示的資料列集合 <xref:System.Data.DataRowCollection> ，其中包含資料表中的資料。 連同其目前狀態一起，<xref:System.Data.DataRow> 還保留其目前及原始版本，以識別儲存在資料列中之值的變更。  
   
 ## <a name="the-dataview-class"></a>DataView 類別  
  <xref:System.Data.DataView> 允許您為儲存在 <xref:System.Data.DataTable> 內的資料建立不同的檢視，這是資料繫結應用程式中常用的功能。 您可以使用 <xref:System.Data.DataView>，以不同排序次序公開 (Expose) 資料表中的資料，而且可以按照資料列狀態或根據篩選條件運算式來篩選資料。 如需詳細資訊，請參閱[dataview](./dataset-datatable-dataview/dataviews.md)。  
   
 ## <a name="the-datarelationcollection"></a>DataRelationCollection  
- **資料集**包含其 <xref:System.Data.DataRelationCollection> 物件中的關聯性。 關聯性（由 <xref:System.Data.DataRelation> 物件表示）會將一個**datatable**中的資料列與另一個**datatable**中的資料列產生關聯。 關聯性類似於在關聯式資料庫中，主索引鍵資料行與外部索引鍵資料行之間存在的聯結路徑。 **DataRelation**會識別**資料集**的兩個數據表中相符的資料行。  
+ **資料集**包含其物件中的關聯性 <xref:System.Data.DataRelationCollection> 。 關聯性（由物件表示 <xref:System.Data.DataRelation> ）會將一個**datatable**中的資料列與另一個**datatable**中的資料列產生關聯。 關聯性類似於在關聯式資料庫中，主索引鍵資料行與外部索引鍵資料行之間存在的聯結路徑。 **DataRelation**會識別**資料集**的兩個數據表中相符的資料行。  
   
- 關聯性可讓您在**資料集中**從一個資料表流覽至另一個。 **DataRelation**的基本要素是關聯性的名稱、相關資料表的名稱，以及每個資料表中的相關資料行。 藉由將 <xref:System.Data.DataColumn> 物件的陣列指定為索引鍵資料行，可在每個資料表中建立多個資料行的關聯性。 當您將關聯性加入至 <xref:System.Data.DataRelationCollection>時，您可以選擇性地加入**UniqueKeyConstraint**和**ForeignKeyConstraint** ，以在對相關資料行值進行變更時，強制執行完整性條件約束。  
+ 關聯性可讓您在**資料集中**從一個資料表流覽至另一個。 **DataRelation**的基本要素是關聯性的名稱、相關資料表的名稱，以及每個資料表中的相關資料行。 藉由將 <xref:System.Data.DataColumn> 物件的陣列指定為索引鍵資料行，可在每個資料表中建立多個資料行的關聯性。 當您將關聯性加入至時 <xref:System.Data.DataRelationCollection> ，您可以選擇性地加入**UniqueKeyConstraint**和**ForeignKeyConstraint** ，以在對相關資料行值進行變更時，強制執行完整性條件約束。  
   
  如需詳細資訊，請參閱[新增 datarelation](./dataset-datatable-dataview/adding-datarelations.md)。  
   
@@ -45,8 +46,8 @@ DataSet 物件模型
   
  如需詳細資訊，請參閱 [LINQ to DataSet](linq-to-dataset.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)
 - [DataSet、DataTable 和 DataView](./dataset-datatable-dataview/index.md)
 - [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)

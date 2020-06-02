@@ -1,17 +1,21 @@
 ---
-title: ''
+title: '如何使用 c # 序列化和還原序列化 JSON-.NET'
 description: 本文說明如何使用 System.Text.Json 命名空間，在 .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms.date: ''
+ms.date: 05/13/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: f1a5da448b08f9b4f1cf3fa6cba67fb376b00a6f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702247"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289508"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化（封送處理和 unmarshal） JSON
 
@@ -380,46 +384,10 @@ JSON 屬性命名原則：
 以下是要序列化和 JSON 輸出的範例物件：
 
 |屬性 |值  |
-|---
-title：描述： ' 本文說明如何使用命名空間，在 System.Text.Json .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
--
-title：描述： ' 本文說明如何使用命名空間，在 System.Text.Json .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
------|---標題：描述： ' 本文說明如何使用 System.Text.Json 命名空間，在 .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
--
-title：描述： ' 本文說明如何使用命名空間，在 System.Text.Json .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
------| |日期 |8/1/2019 12:00:00 AM-07:00 | |TemperatureCelsius |25 | |摘要 |null |
+|---------|---------|
+| 日期    | 8/1/2019 12:00:00 AM-07:00|
+| TemperatureCelsius| 25 |
+| 摘要| null|
 
 ```json
 {
@@ -671,66 +639,14 @@ ms. date： no-loc：
 
 當您將稍早所示的 JSON 還原序列化為此範例類型時，額外的資料會變成屬性的索引鍵/值組 `ExtensionData` ：
 
-|屬性 |值  |注意  |
-|---
-title：描述： ' 本文說明如何使用命名空間，在 System.Text.Json .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
--
-title：描述： ' 本文說明如何使用命名空間，在 System.Text.Json .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
------|---標題：描述： ' 本文說明如何使用 System.Text.Json 命名空間，在 .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
--
-title：描述： ' 本文說明如何使用命名空間，在 System.Text.Json .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
------|---標題：描述： ' 本文說明如何使用 System.Text.Json 命名空間，在 .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
--
-title：描述： ' 本文說明如何使用命名空間，在 System.Text.Json .net 中從 JSON 序列化和還原序列化。 其中包含範例程式碼。
-ms. date： no-loc：
-- 'System.Text.Json'
-- ' Newtonsoft.Json ' helpviewer_keywords：
-- 
-- 
-- 
-- 
-
------| |日期 |8/1/2019 12:00:00 AM-07:00 | ||TemperatureCelsius |0 |區分大小寫不相符（ `temperatureCelsius` 在 JSON 中），因此不會設定屬性。 | |摘要 |熱門 | ||ExtensionData |temperatureCelsius： 25 |因為大小寫不相符，所以這個 JSON 屬性會是額外的，而且會成為字典中的索引鍵/值組。 |||DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。 || |SummaryWords:<br>非經常性存取<br>風大<br>潮濕 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。 |
+|屬性 |值  |備忘稿  |
+|---------|---------|---------|
+| 日期    | 8/1/2019 12:00:00 AM-07:00||
+| TemperatureCelsius| 0 | 區分大小寫不相符（ `temperatureCelsius` 在 JSON 中），因此不會設定屬性。 |
+| 摘要 | 經常性存取 ||
+| ExtensionData | temperatureCelsius：25 |因為大小寫不相符，所以這個 JSON 屬性會是額外的，而且會成為字典中的索引鍵/值組。|
+|| DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。|
+| |SummaryWords:<br>非經常性存取<br>風大<br>潮濕 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。|
 
 當目標物件序列化時，延伸模組資料索引鍵值組會變成 JSON 屬性，就像是傳入 JSON 中所示：
 

@@ -3,12 +3,12 @@ title: 推斷結構描述節點型別與結構的規則
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
-ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 381c5fbd3823514de98b38840b8259a417e48fb8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710241"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289079"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>推斷結構描述節點型別與結構的規則
 本主題說明結構描述推斷程序如何將 XML 文件中所發現的節點型別轉譯為 XML 結構描述定義語言 (XSD) 結構。  
@@ -35,12 +35,12 @@ ms.locfileid: "75710241"
 > [!NOTE]
 > 所有 `complexType` 宣告都會被推斷為匿名型別。 唯一會進行推斷的全域項目為根項目；其他項目都是區域項目。  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 ### <a name="simple-typed-element"></a>簡單型別項目  
  下表顯示對 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 輸入及產生的 XML 結構描述。 粗體的項目表示針對簡單型別項目所推斷的結構描述。  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 |XML|結構描述|  
 |---------|------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "75710241"
 ### <a name="empty-element"></a>空元素  
  下表顯示對 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 輸入及產生的 XML 結構描述。 粗體的項目表示針對空白項目所推斷的結構描述。  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 |XML|結構描述|  
 |---------|------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "75710241"
 ### <a name="empty-element-with-attributes"></a>具有屬性的空白項目  
  下表顯示對 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 輸入及產生的 XML 結構描述。 粗體的項目表示針對具有屬性的空白項目所推斷的結構描述。  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 |XML|結構描述|  
 |---------|------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "75710241"
 ### <a name="element-with-attributes-and-simple-content"></a>具有屬性與簡單內容的項目  
  下表顯示對 <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> 方法的 XML 輸入及產生的 XML 結構描述。 粗體的項目表示針對具有屬性與簡單內容的項目所推斷的結構描述。  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 |XML|結構描述|  
 |---------|------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "75710241"
 > [!NOTE]
 > 即使某個項目只有一個項目子系，仍會被視為序列。  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 |XML|結構描述|  
 |---------|------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "75710241"
 > [!NOTE]
 > 即使某個項目只有一個項目子系，仍會被視為序列。  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 |XML|結構描述|  
 |---------|------------|  
@@ -103,7 +103,7 @@ ms.locfileid: "75710241"
 > [!NOTE]
 > 在推斷的結構描述中，`maxOccurs` 項目的 `xs:choice` 屬性會設為 `"unbounded"`。  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 |XML|結構描述|  
 |---------|------------|  
@@ -115,7 +115,7 @@ ms.locfileid: "75710241"
 > [!NOTE]
 > 在推斷的結構描述中，`maxOccurs` 項目的 `xs:choice` 屬性會設為 `"unbounded"`。  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 |XML|結構描述|  
 |---------|------------|  
@@ -142,12 +142,12 @@ ms.locfileid: "75710241"
 |文件型別|忽略。|  
 |命名空間|忽略。|  
   
- 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
+ 如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [推斷 XML 結構描述](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [推斷簡單型別的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [XML 結構描述物件模型 (SOM)](xml-schema-object-model-som.md)
+- [推斷 XML 結構描述](inferring-an-xml-schema.md)
+- [從 XML 文件推斷結構描述](inferring-schemas-from-xml-documents.md)
+- [推斷簡單型別的規則](rules-for-inferring-simple-types.md)
