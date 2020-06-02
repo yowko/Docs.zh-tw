@@ -1,5 +1,5 @@
 ---
-title: 如何：取消工作及其子系
+title: 作法：取消工作及其子系
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: 4e0e783a4dfe3bf3a55795d7baef461369d7405a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ca6b5f10840d935aa45cb660da86685d1c90554b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134196"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290028"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>如何：取消工作及其子系
+# <a name="how-to-cancel-a-task-and-its-children"></a>作法：取消工作及其子系
 這些範例示範如何執行下列工作：  
   
 1. 建立和啟動可取消的工作。  
@@ -34,7 +34,7 @@ ms.locfileid: "73134196"
  [!code-csharp[TPL_Cancellation#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/cancel1.cs#04)]
  [!code-vb[TPL_Cancellation#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/cancel1.vb#04)]  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別已和基礎是 <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> 及 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 型別的取消模型完全整合。 如需詳細資訊，請參閱[受控執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)和[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)。  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別已和基礎是 <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> 及 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 型別的取消模型完全整合。 如需詳細資訊，請參閱[受控執行緒中的取消作業](../threading/cancellation-in-managed-threads.md)和[工作取消](task-cancellation.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -42,6 +42,6 @@ ms.locfileid: "73134196"
 - <xref:System.Threading.CancellationToken?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
-- [以工作為基礎的非同步程式設計](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
-- [附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
-- [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [以工作為基礎的非同步程式設計](task-based-asynchronous-programming.md)
+- [附加與中斷連結的子工作](attached-and-detached-child-tasks.md)
+- [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)

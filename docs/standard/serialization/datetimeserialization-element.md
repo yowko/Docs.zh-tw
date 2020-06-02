@@ -7,14 +7,14 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 652a88e25f59cd905e47ef71351e47e67f375286
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375818"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289638"
 ---
-# <a name="datetimeserialization-element"></a>\<dateTimeSerialization> 元素
+# <a name="datetimeserialization-element"></a>\<dateTimeSerialization> 項目
 判斷 <xref:System.DateTime> 物件的序列化模式。  
   
  \<configuration>  
@@ -51,12 +51,12 @@ ms.locfileid: "83375818"
   
  在版本2.0 和更新版本的 .NET Framework 中，將此屬性設定為 [**往返**]， <xref:System.DateTime> 會檢查物件以判斷它們是在當地、UTC 還是未指定的時區。 然後 <xref:System.DateTime> 物件會以保留此資訊的方式序列化。 這是預設行為，並建議所有新的應用程式不要與舊版 Framework 進行通訊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.DateTime>
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [設定檔架構](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<新增 schemaImporterExtensions>的> 元素 \<](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
-- [\<> 元素的 system.object 序列化](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [設定檔架構](../../framework/configure-apps/file-schema/index.md)
+- [\<schemaImporterExtensions>元素](schemaimporterextensions-element.md)
+- [\<add>的元素\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
+- [\<system.xml.serialization>元素](system-xml-serialization-element.md)

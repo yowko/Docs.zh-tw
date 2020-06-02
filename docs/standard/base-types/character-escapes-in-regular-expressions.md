@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c260c349f035de67257adbca06fb447ff993329
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711424"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277670"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>在規則運算式中執行字元逸出
 規則運算式中的反斜線 (\\) 表示下列其中之一：  
@@ -37,19 +37,19 @@ ms.locfileid: "75711424"
   
 |字元或序列|描述|  
 |---------------------------|-----------------|  
-|下列字元以外的所有字元：<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |不同於列在 [字元或序列]**** 資料行中的其他字元在規則運算式中沒有任何特殊的意義；它們符合其本身。<br /><br /> [字元或序列]**** 資料行中所包含的字元是規則運算式的特殊語言項目。 要在正則運算式中匹配它們，必須轉義它們或包含在[正字元組中](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，規則運算式 `\$\d+` 或 `[$]\d+` 符合「$1200」。|  
+|下列字元以外的所有字元：<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |不同於列在 [字元或序列]**** 資料行中的其他字元在規則運算式中沒有任何特殊的意義；它們符合其本身。<br /><br /> [字元或序列]**** 資料行中所包含的字元是規則運算式的特殊語言項目。 若要在正則運算式中進行比對，必須將它們轉義或包含在[正字元群組](character-classes-in-regular-expressions.md)中。 例如，規則運算式 `\$\d+` 或 `[$]\d+` 符合「$1200」。|  
 |`\a`|符合警鈴 (警示) 字元 `\u0007`。|  
-|`\b`|在`[`*character_group*`]`字元類中，匹配後空間 。 `\u0008`  （請參閱[字元類](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。在字元類之外，`\b`是匹配單詞邊界的錨點。 (請參閱[錨點](../../../docs/standard/base-types/anchors-in-regular-expressions.md)。)|  
+|`\b`|在 `[` *character_group* `]` 字元類別中，符合倒退鍵 `\u0008` 。  （請參閱[字元類別](character-classes-in-regular-expressions.md)。）在字元類別之外， `\b` 是符合字邊界的錨點。 (請參閱[錨點](anchors-in-regular-expressions.md)。)|  
 |`\t`|符合索引標籤， `\u0009`。|  
 |`\r`|符合歸位字元， `\u000D`。 請注意，`\r` 不等於新行字元 `\n`。|  
 |`\v`|符合垂直定位， `\u000B`。|  
 |`\f`|符合換頁字元， `\u000C`。|  
 |`\n`|符合新行字元， `\u000A`。|  
 |`\e`|符合逸出字元， `\u001B`。|  
-|`\` *nnn*|匹配 ASCII 字元，*其中 nnn*由表示八進位字元代碼的兩個或三位數位組成。 例如，`\040` 代表空格字元。 其若只有一個數字 (例如 `\2`)，或其對應至擷取群組的編號，會將此建構解譯為反向參考  (請參閱[反向參考建構](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。)|  
-|`\x`*nn*|符合 ASCII 字元，其中 *nn* 是兩位數的十六進位字元碼。|  
-|`\c`*X*|符合 ASCII 控制字元，其中 X 是控制字元的字母。 例如，`\cC` 是 CTRL + C。|  
-|`\u` *nnnn*|符合 UTF-16 字碼單位，其值為十六進位的 *nnnn*。 **注意：**.NET 不支援用來指定 Unicode 的 Perl 5 逸出字元。 Perl 5 字元轉義具有`\x{`*####*`…}`形式，*####*`…`其中是一系列十六進位數位。 請改用 `\u`*nnnn*。|  
+|`\` *nnn*|符合 ASCII 字元，其中*nnn*由代表八進位字元碼的兩個或三個數字所組成。 例如，`\040` 代表空格字元。 其若只有一個數字 (例如 `\2`)，或其對應至擷取群組的編號，會將此建構解譯為反向參考  (請參閱[反向參考建構](backreference-constructs-in-regular-expressions.md)。)|  
+|`\x` *nn*|符合 ASCII 字元，其中 *nn* 是兩位數的十六進位字元碼。|  
+|`\c` *X*|符合 ASCII 控制字元，其中 X 是控制字元的字母。 例如，`\cC` 是 CTRL + C。|  
+|`\u` *nnnn*|符合 UTF-16 字碼單位，其值為十六進位的 *nnnn*。 **注意：**.NET 不支援用來指定 Unicode 的 Perl 5 逸出字元。 Perl 5 字元 escape 的格式為 `\x{` *####* `…}` ，其中 *####* `…` 是一系列的十六進位數位。 請改用 `\u`*nnnn*。|  
 |`\`|當後面加上一個不被認為是逸出的字元時，符合該字元。 例如，`\*` 符合使用星號 (*)，而且與 `\x2A` 相同。|  
   
 ## <a name="an-example"></a>範例  
@@ -70,4 +70,4 @@ ms.locfileid: "75711424"
   
 ## <a name="see-also"></a>另請參閱
 
-- [正則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

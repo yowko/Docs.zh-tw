@@ -2,16 +2,16 @@
 title: 版本控制與 .NET 程式庫
 description: .NET 程式庫版本控制的最佳做法建議。
 ms.date: 12/10/2018
-ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab15d56e40abedd842b681496b9e5ee737c8b1cd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400397"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290119"
 ---
 # <a name="versioning"></a>版本控制
 
-軟體程式庫在 1.0 版中通常還不完整。 良好的程式庫會隨著時間演進、新增功能、修正錯誤 (Bug) 並改善效能。 您必須發行新版的 .NET 程式庫，為每個版本提供額外的價值，而不會中斷現有的使用者。
+軟體程式庫在 1.0 版中通常還不完整。 良好的程式庫會隨著時間演進、新增功能、修正 bug，以及改善效能。 您必須發行新版的 .NET 程式庫，為每個版本提供額外的價值，而不會中斷現有的使用者。
 
 ## <a name="breaking-changes"></a>重大變更
 
@@ -43,15 +43,15 @@ NuGet 套件識別碼與 NuGet 套件版本結合，可用來識別 NuGet 中的
 
 ### <a name="assembly-version"></a>組件版本
 
-組件版本是 CLR 在執行階段使用以選取要載入之組件版本的方式。 使用版本設定選取組件僅適用於具有強式名稱的組件。
+元件版本是 CLR 在執行時間用來選取要載入的元件版本。 使用版本設定選取組件僅適用於具有強式名稱的組件。
 
 ```xml
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
 ```
 
-Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。 例如，`Libary1, Version=1.0.0.0` 編譯時參考了 `Newtonsoft.Json, Version=11.0.0.0`。 .NET Framework 將只會載入該確切版本 `11.0.0.0`。 若要在執行階段載入不同的版本，必須將繫結重新導向新增至 .NET 應用程式的設定檔中。
+.NET Framework CLR 會要求完全相符，以載入強式名稱的元件。 例如，`Libary1, Version=1.0.0.0` 編譯時參考了 `Newtonsoft.Json, Version=11.0.0.0`。 .NET Framework 只會載入該確切的版本 `11.0.0.0` 。 若要在執行時間載入不同的版本，必須將系結重新導向新增至 .NET 應用程式的設定檔。
 
-強式命名與組件版本相結合，可啟用[嚴格的組件版本載入](../assembly/versioning.md)。 雖然強命名庫具有許多優點，但它通常會導致運行時異常，找不到程式集，[並且需要修復綁定重定向](../../framework/configure-apps/redirect-assembly-versions.md)`app.config`/`web.config`。 .NET Core 組件載入已經放寬，.NET Core CLR 將在更高版本的執行階段自動載入組件。
+強式命名與組件版本相結合，可啟用[嚴格的組件版本載入](../assembly/versioning.md)。 雖然強式命名程式庫有許多優點，但通常會導致找不到元件的執行時間例外狀況，而且需要修正或中的系結重新[導向](../../framework/configure-apps/redirect-assembly-versions.md) `app.config` `web.config` 。 在 .NET Core 中，元件載入更為寬鬆。 .NET Core runtime 會在執行時間自動載入具有較高版本的元件。
 
 ✔️ 考慮只在 AssemblyVersion 中包括主要版本。
 
@@ -67,13 +67,13 @@ Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。
 
 ### <a name="assembly-file-version"></a>組件檔版本
 
-組件檔版本用於顯示 Windows 中的檔案版本，對執行階段行為沒有影響。 是否設定此版本是選擇性的。 它會顯示在 Windows 檔案總管的 [檔案內容] 對話方塊中：
+元件檔版本是用來在 Windows 中顯示檔案版本，而且不會影響執行時間行為。 是否設定此版本是選擇性的。 它會顯示在 Windows 檔案總管的 [檔案內容] 對話方塊中：
 
 ```xml
 <FileVersion>11.0.2.21924</FileVersion>
 ```
 
-![視窗資源管理器](./media/versioning/win-properties.png "Windows 檔案總管")
+![Windows Explorer](./media/versioning/win-properties.png "Windows 檔案總管")
 
 ✔️ 考慮包括持續整合組建編號作為 AssemblyFileVersion 修訂。
 
@@ -99,5 +99,5 @@ Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。
 > 允許 SourceLink 自動產生包含 NuGet 與原始檔控制中繼資料的版本。
 
 >[!div class="step-by-step"]
->[上一個](publish-nuget-package.md)
->[下一個](breaking-changes.md)
+>[上一個](publish-nuget-package.md) 
+>[下一步](breaking-changes.md)

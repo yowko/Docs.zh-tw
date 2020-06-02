@@ -1,13 +1,14 @@
 ---
 title: 新功能
+description: 瞭解 .NET Framework 4.5 中 ADO.NET 的新功能，包括 SqlClient 資料提供者和 ADO.NET Entity Framework 的新功能。
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2ac8ebced700dc6c874ac22304773b3b9c19f8b3
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979763"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286167"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET 的新功能
 
@@ -27,9 +28,9 @@ ms.locfileid: "76979763"
 
 - SqlClient 現在支援 SQL Server 的高可用性、嚴重損壞修復功能、AlwaysOn。 如需詳細資訊，請參閱[高可用性和嚴重損壞修復的 SqlClient 支援](./sql/sqlclient-support-for-high-availability-disaster-recovery.md)。
 
-- 使用 SQL Server Authentication 時，密碼可以做為 <xref:System.Security.SecureString> 傳遞。 如需詳細資訊，請參閱 <xref:System.Data.SqlClient.SqlCredential>。
+- 使用 SQL Server 驗證時，可以將密碼當做來傳遞 <xref:System.Security.SecureString> 。 如需相關資訊，請參閱 <xref:System.Data.SqlClient.SqlCredential>。
 
-- 當 `TrustServerCertificate` 為 false 且 `Encrypt` 為 true 時，SQL Server SSL 憑證中的伺服器名稱（或 IP 位址）必須完全符合連接字串中指定的伺服器名稱（或 IP 位址）。 否則連接嘗試會失敗。 如需詳細資訊，請參閱 `Encrypt` 中有關 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 連線選項的說明。
+- 當 `TrustServerCertificate` 為 false，且 `Encrypt` 為 true 時，SQL Server SSL 憑證中的伺服器名稱（或 ip 位址）必須完全符合連接字串中指定的伺服器名稱（或 ip 位址）。 否則連接嘗試會失敗。 如需詳細資訊，請參閱 `Encrypt` 中有關 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 連線選項的說明。
 
   如果此變更導致現有的應用程式不再連線，您可以使用下列其中一種方法修復應用程式：
 
@@ -45,17 +46,17 @@ ms.locfileid: "76979763"
 
 - `Type System Version=SQL Server 2012;` 是傳遞至 `Type System Version` 連接屬性的新值。 `Type System Version=Latest;` 值現在已過時，並與 `Type System Version=SQL Server 2008;` 相等。 如需詳細資訊，請參閱<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。
 
-- SqlClient 提供額外的疏鬆資料行支援，這是在 SQL Server 2008 中新增的功能。 如果您的應用程式已存取使用疏鬆資料行的資料表中之資料，應會看到效能有所提升。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 資料行指出資料行是否為屬於資料行集的疏鬆資料行。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 指出資料行是否為稀疏資料行（如需詳細資訊，請參閱[SQL Server 架構集合](sql-server-schema-collections.md)）。 如需稀疏資料行的詳細資訊，請參閱[使用稀疏資料行](/sql/relational-databases/tables/use-sparse-columns)。
+- SqlClient 提供額外的疏鬆資料行支援，這是在 SQL Server 2008 中新增的功能。 如果您的應用程式已存取使用疏鬆資料行之資料表中的資料，效能應該會有所提高。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 資料行指出資料行是否為屬於資料行集的疏鬆資料行。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>指出資料行是否為稀疏資料行（如需詳細資訊，請參閱[SQL Server 架構集合](sql-server-schema-collections.md)）。 如需稀疏資料行的詳細資訊，請參閱[使用稀疏資料行](/sql/relational-databases/tables/use-sparse-columns)。
 
-- 包含空間資料類型的 Microsoft.SqlServer.Types.dll 組件已經從 10.0 版升級為 11.0 版。 參考此組件的應用程式可能會失敗。 如需詳細資訊，請參閱[資料庫引擎功能的重大變更](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110))。
+- 包含空間資料類型的 Microsoft.SqlServer.Types.dll 組件已從 10.0 版升級至 11.0 版。 參考此組件的應用程式可能會失敗。 如需詳細資訊，請參閱[資料庫引擎功能的重大變更](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110))。
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
 .NET Framework 4.5 會新增 Api，以在使用 Entity Framework 5.0 時啟用新的案例。 如需有關已新增至 Entity Framework 5.0 的改進功能和功能的詳細資訊，請參閱下列主題：[新功能](https://docs.microsoft.com/previous-versions/gg696190(v=vs.103))和[Entity Framework 版本和版本控制](/ef/ef6/what-is-new/past-releases)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ADO.NET](index.md)
-- [ADO.NET 概觀](ado-net-overview.md)
-- [SQL Server 和 ADO.NET](./sql/index.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)
+- [SQL Server and ADO.NET](./sql/index.md) (SQL Server 和 ADO.NET)
 - [5.0 WCF Data Services 的新功能](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))

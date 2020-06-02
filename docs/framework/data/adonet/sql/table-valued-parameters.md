@@ -1,16 +1,17 @@
 ---
 title: 資料表值參數
+description: 瞭解如何使用資料表值參數，將來自用戶端應用程式的多個資料列封送處理到 SQL Server。
 ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: b968c599cf061fbd03b7ba8fb19470f6ace11a55
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7b1f0a6c416f660f06cea099197ba136f84407f9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202179"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286193"
 ---
 # <a name="table-valued-parameters"></a>資料表值參數
 資料表值參數提供從用戶端應用程式，將多個資料列的資料封送至 SQL Sever 的簡便方式，而不需多次來回存取或特殊的伺服器端邏輯才能處理資料。 您可以使用資料表值參數，以一個參數化命令在用戶端應用程式中封裝資料列的資料，並傳送至伺服器。 傳入的資料列會儲存於資料表變數中，之後可使用 Transact-SQL 進行運算。  
@@ -34,7 +35,7 @@ ms.locfileid: "84202179"
   
 - 將多個資料值組合成分隔字串或 XML 文件，然後將那些文字值傳遞給程序或陳述式。 這需要程序或陳述式包含驗證資料結構及拆開值所需的邏輯。  
   
-- 針對會影響多個資料列的資料修改建立一系列的獨立 SQL 陳述式，例如透過呼叫 <xref:System.Data.SqlClient.SqlDataAdapter> 的 `Update` 方法所建立的陳述式。 變更可以以個別方式，或以批次處理成群組的方式提交給伺服器。 不過，即使是以包含多個陳述式的批次方式提交，每個陳述式都會在伺服器上個別執行。  
+- 針對會影響多個資料列的資料修改建立一系列的獨立 SQL 陳述式，例如透過呼叫 `Update` 的 <xref:System.Data.SqlClient.SqlDataAdapter> 方法所建立的陳述式。 變更能以個別方式，或以批次處理成群組的方式提交到伺服器。 不過，即使是以包含多個陳述式的批次方式提交，每個陳述式還是會在伺服器上個別執行。  
   
 - 使用 `bcp` 公用程式或 <xref:System.Data.SqlClient.SqlBulkCopy> 物件，將許多資料列載入至資料表。 雖然此技術非常有效率，但除非將資料載入暫存資料表或資料表變數中，否則不支援伺服器端處理。  
   
@@ -75,7 +76,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ```  
   
 ## <a name="limitations-of-table-valued-parameters"></a>資料表值參數的限制  
- 資料表值參數有幾項限制：  
+ 資料表值參數有幾個限制：  
   
 - 您無法將資料表值參數傳遞至 [CLR 使用者定義函式](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)。  
   
@@ -86,7 +87,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - 您無法使用 ALTER TABLE 陳述式來修改資料表值參數的設計。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>設定 SqlParameter 範例  
- <xref:System.Data.SqlClient> 支援從 <xref:System.Data.DataTable>、<xref:System.Data.Common.DbDataReader> 或 <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord>物件填入資料表值參數。 您必須使用 <xref:System.Data.SqlClient.SqlParameter> 的 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 屬性來指定資料表值參數的類型名稱。 `TypeName` 必須與先前在伺服器上所建立的相容型別名稱相符。 下列程式碼片段示範如何設定 <xref:System.Data.SqlClient.SqlParameter> 以插入資料。  
+ <xref:System.Data.SqlClient> 支援從 <xref:System.Data.DataTable>、<xref:System.Data.Common.DbDataReader> 或 <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord>物件填入資料表值參數。 您必須使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 屬性來指定資料表值參數的類型名稱。 `TypeName` 必須與先前在伺服器上所建立的相容型別名稱相符。 下列程式碼片段示範如何設定 <xref:System.Data.SqlClient.SqlParameter> 以插入資料。  
 
 在下列範例中，`addedCategories` 變數包含 <xref:System.Data.DataTable>。 若要查看變數的填入方式，請參閱下一節中的範例，[將資料表值參數傳遞至預存程序](#passing)。
 
@@ -129,7 +130,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>將資料表值參數傳遞至預存程式  
- 此範例示範如何將資料表值參數資料傳遞至預存程序。 程式碼會透過使用 <xref:System.Data.DataTable.GetChanges%2A> 方法，將加入的資料列解壓縮至新的 <xref:System.Data.DataTable> 之中。 然後，程式碼會定義 <xref:System.Data.SqlClient.SqlCommand>，將 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 屬性設定為 <xref:System.Data.CommandType.StoredProcedure>。 <xref:System.Data.SqlClient.SqlParameter> 是使用 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 方法填入的，而且 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 會設定為 `Structured`。 然後使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 方法來執行 <xref:System.Data.SqlClient.SqlCommand>。  
+ 此範例示範如何將資料表值參數資料傳遞至預存程序。 程式碼會透過使用 <xref:System.Data.DataTable> 方法，將加入的資料列解壓縮至新的 <xref:System.Data.DataTable.GetChanges%2A> 之中。 然後，程式碼會定義 <xref:System.Data.SqlClient.SqlCommand>，將 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 屬性設定為 <xref:System.Data.CommandType.StoredProcedure>。 <xref:System.Data.SqlClient.SqlParameter> 是使用 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 方法填入的，而且 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 會設定為 `Structured`。 然後使用 <xref:System.Data.SqlClient.SqlCommand> 方法來執行 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>。  
   
 ```csharp  
 // Assumes connection is an open SqlConnection object.  
@@ -171,7 +172,7 @@ End Using
 ```  
   
 ### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>將資料表值參數傳遞至參數化 SQL 陳述式  
- 下列範例示範如何使用 INSERT 陳述式搭配以資料表值參數作為資料來源的 SELECT 子查詢，將資料插入至 dbo.Category 資料表。 將資料表值參數傳遞至參數化 SQL 陳述式時，您必須使用 <xref:System.Data.SqlClient.SqlParameter> 的新 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 屬性來指定資料表值參數的類型名稱。 這個 `TypeName` 必須與先前在伺服器上所建立的相容型別名稱相符。 此範例中的程式碼會使用 `TypeName` 屬性來參考 dbo.CategoryTableType 中定義的型別結構。  
+ 下列範例示範如何使用 INSERT 陳述式搭配以資料表值參數作為資料來源的 SELECT 子查詢，將資料插入至 dbo.Category 資料表。 將資料表值參數傳遞至參數化 SQL 陳述式時，您必須使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的新 <xref:System.Data.SqlClient.SqlParameter> 屬性來指定資料表值參數的類型名稱。 這個 `TypeName` 必須與先前在伺服器上所建立的相容型別名稱相符。 此範例中的程式碼會使用 `TypeName` 屬性來參考 dbo.CategoryTableType 中定義的型別結構。  
   
 > [!NOTE]
 > 如果您在資料表值參數中提供識別資料行的值，就必須為該工作階段發出 SET IDENTITY_INSERT 陳述式。  
@@ -227,7 +228,7 @@ End Using
 ```  
   
 ## <a name="streaming-rows-with-a-datareader"></a>使用 DataReader 來資料流處理資料列  
- 您也可以使用衍生自 <xref:System.Data.Common.DbDataReader> 的任何物件，將資料列的資料流導引至資料表值參數。 下列程式碼片段示範如何使用 <xref:System.Data.OracleClient.OracleCommand> 與 <xref:System.Data.OracleClient.OracleDataReader>，從 Oracle 資料庫擷取資料。 然後，程式碼會設定 <xref:System.Data.SqlClient.SqlCommand>，以使用單一輸入參數來叫用預存程序。 <xref:System.Data.SqlClient.SqlParameter> 的 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 屬性會設定為 `Structured`。 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 會將 `OracleDataReader` 結果集以資料表值參數的方式傳遞至預存程序。  
+ 您也可以使用衍生自 <xref:System.Data.Common.DbDataReader> 的任何物件，將資料列的資料流導引至資料表值參數。 下列程式碼片段示範如何使用 <xref:System.Data.OracleClient.OracleCommand> 與 <xref:System.Data.OracleClient.OracleDataReader>，從 Oracle 資料庫擷取資料。 然後，程式碼會設定 <xref:System.Data.SqlClient.SqlCommand>，以使用單一輸入參數來叫用預存程序。 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 屬性會設定為 `Structured`。 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 會將 `OracleDataReader` 結果集以資料表值參數的方式傳遞至預存程序。  
   
 ```csharp  
 // Assumes connection is an open SqlConnection.  

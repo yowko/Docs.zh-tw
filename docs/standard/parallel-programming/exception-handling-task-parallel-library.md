@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 674abcfe4477e14295f131e766a48422779391de
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021506"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290041"
 ---
 # <a name="exception-handling-task-parallel-library"></a>例外狀況處理 (工作平行程式庫)
 
@@ -28,7 +28,7 @@ ms.locfileid: "82021506"
 
 只要攔截 <xref:System.AggregateException> 而且沒有觀察到任何內部的例外狀況，就可以避免未處理的例外狀況。 不過，建議您不要這麼做，因為它在非平行案例中類似於攔截基底 <xref:System.Exception> 類型。 攔截例外狀況卻不採取特定動作從它復原，可能會讓您的程式處於不確定狀態。
 
-如果您不想要呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法來等候工作完成，則也可以擷取來自工作 <xref:System.Threading.Tasks.Task.Exception%2A> 屬性的 <xref:System.AggregateException> 例外狀況，如下例所示。 有關詳細資訊,請參閱本主題[中的 Task.exception 屬性部分的觀察異常](#observing-exceptions-by-using-the-taskexception-property)。
+如果您不想要呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法來等候工作完成，則也可以擷取來自工作 <xref:System.Threading.Tasks.Task.Exception%2A> 屬性的 <xref:System.AggregateException> 例外狀況，如下例所示。 如需詳細資訊，請參閱本主題中的[使用 Exception 屬性來觀察例外](#observing-exceptions-by-using-the-taskexception-property)狀況一節。
 
 [!code-csharp[TPL_Exceptions#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling22.cs#29)]
 [!code-vb[TPL_Exceptions#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling22.vb#29)]
@@ -63,7 +63,7 @@ ms.locfileid: "82021506"
 
 ## <a name="exceptions-that-indicate-cooperative-cancellation"></a>指出合作式取消的例外狀況
 
-當工作中的使用者程式碼回應取消要求時，正確的程序會擲回 <xref:System.OperationCanceledException> 傳入已在其中通訊過要求的取消語彙基元。 在它嘗試傳播例外狀況之前，工作執行個體會比較例外狀況中的語彙基元和個體建立時傳來的語彙基元。 如果它們是相同的，工作會傳播包裝在 <xref:System.Threading.Tasks.TaskCanceledException> 中的 <xref:System.AggregateException>，而且在檢查內部例外狀況時可以看到它。 不過，如果呼叫執行緒並未等待工作，就不會傳播這個特定的例外狀況。 如需詳細資訊，請參閱 [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md)。
+當工作中的使用者程式碼回應取消要求時，正確的程序會擲回 <xref:System.OperationCanceledException> 傳入已在其中通訊過要求的取消語彙基元。 在它嘗試傳播例外狀況之前，工作執行個體會比較例外狀況中的語彙基元和個體建立時傳來的語彙基元。 如果它們是相同的，工作會傳播包裝在 <xref:System.Threading.Tasks.TaskCanceledException> 中的 <xref:System.AggregateException>，而且在檢查內部例外狀況時可以看到它。 不過，如果呼叫執行緒並未等待工作，就不會傳播這個特定的例外狀況。 如需詳細資訊，請參閱 [Task Cancellation](task-cancellation.md)。
 
 [!code-csharp[TPL_Exceptions#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#4)]
 [!code-vb[TPL_Exceptions#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/tpl_exceptions.vb#4)]
@@ -89,14 +89,14 @@ ms.locfileid: "82021506"
 [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
 [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]
 
-在有意義的應用程式中,延續委託可以記錄有關異常的詳細資訊,並可能生成新任務以從異常中恢復。 如果任務出現故障,以下表達式將引發異常:
+在有意義的應用程式中，接續委派可以記錄例外狀況的詳細資訊，而且可能會產生新的工作以從例外狀況中復原。 如果工作錯誤，下列運算式會擲回例外狀況：
 
 - `await task`
 - `task.Wait()`
 - `task.Result`
 - `task.GetAwaiter().GetResult()`
 
-使用[`try-catch`](../../csharp/language-reference/keywords/try-catch.md)語句來處理和觀察引發的異常。 或者,通過訪問屬性來<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>觀察異常。
+使用 [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) 語句來處理和觀察擲回的例外狀況。 或者，藉由存取屬性來觀察例外狀況 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 。
 
 ## <a name="unobservedtaskexception-event"></a>UnobservedTaskException 事件
 
@@ -104,4 +104,4 @@ ms.locfileid: "82021506"
 
 ## <a name="see-also"></a>另請參閱
 
-- [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [工作平行程式庫 (TPL)](task-parallel-library-tpl.md)

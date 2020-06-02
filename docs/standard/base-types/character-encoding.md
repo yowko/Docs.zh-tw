@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: c626e79e7bbcd71c90775df8ee8c4d6570c29125
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624939"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290574"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>如何在 .NET 中使用字元編碼類別
 
@@ -24,20 +24,20 @@ ms.locfileid: "82624939"
 
 ## <a name="encoders-and-decoders"></a>編碼器和解碼器
 
-.NET 提供編碼類別，可使用各種編碼系統來編碼和解碼文字。 例如， <xref:System.Text.UTF8Encoding>類別描述編碼的規則，以及從 utf-8 進行的解碼。 .NET 會針對<xref:System.Text.UnicodeEncoding> `string`實例使用 utf-16 編碼（以類別表示）。 編碼器和解碼器適用于其他編碼配置。
+.NET 提供編碼類別，可使用各種編碼系統來編碼和解碼文字。 例如， <xref:System.Text.UTF8Encoding> 類別描述編碼的規則，以及從 utf-8 進行的解碼。 .NET 會針對實例使用 UTF-16 編碼（以 <xref:System.Text.UnicodeEncoding> 類別表示） `string` 。 編碼器和解碼器適用于其他編碼配置。
 
-編碼和解碼也可包含驗證。 例如， <xref:System.Text.UnicodeEncoding>類別會檢查代理範圍`char`中的所有實例，以確定它們是在有效的代理配對中。 後援策略決定編碼器如何處理無效的字元，或解碼器如何處理無效的位元組。
+編碼和解碼也可包含驗證。 例如， <xref:System.Text.UnicodeEncoding> 類別 `char` 會檢查代理範圍中的所有實例，以確定它們是在有效的代理配對中。 後援策略決定編碼器如何處理無效的字元，或解碼器如何處理無效的位元組。
 
 > [!WARNING]
 > .NET 編碼類別提供儲存和轉換字元資料的方法。 這些類別不應用來儲存字串格式的二進位資料。 根據使用的編碼方式，使用編碼類別將二進位資料轉換成字串格式可能會導致未預期的行為，並且產生不正確或損毀的資料。 若要將二進位資料轉換成字串格式，請使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。
 
 .NET 中的所有字元編碼類別都會繼承自 <xref:System.Text.Encoding?displayProperty=nameWithType> 類別，這是定義所有字元編碼共通功能的抽象類別。 若要存取 .NET 中實作的個別編碼物件，請執行下列作業：
 
-- 使用 <xref:System.Text.Encoding> 類別的靜態屬性，這些屬性會傳回代表 .NET 中可用之標準字元編碼 (ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32) 的物件。 例如， <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.UnicodeEncoding> 物件。 每個物件會使用取代後援，來處理無法編碼的字串和無法解碼的位元組。 如需詳細資訊，請參閱[取代回退](../../../docs/standard/base-types/character-encoding.md#Replacement)。
+- 使用 <xref:System.Text.Encoding> 類別的靜態屬性，這些屬性會傳回代表 .NET 中可用之標準字元編碼 (ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32) 的物件。 例如， <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.UnicodeEncoding> 物件。 每個物件會使用取代後援，來處理無法編碼的字串和無法解碼的位元組。 如需詳細資訊，請參閱[取代回退](character-encoding.md#Replacement)。
 
-- 呼叫編碼的類別建構函式。 ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32 編碼的物件可以透過這種方式執行個體化。 每個物件預設會使用取代後援，來處理無法編碼的字串和無法解碼的位元組，不過您可以指定改為擲回例外狀況  如需詳細資訊，請參閱[取代回退](../../../docs/standard/base-types/character-encoding.md#Replacement)和[例外狀況回退](../../../docs/standard/base-types/character-encoding.md#Exception)。
+- 呼叫編碼的類別建構函式。 ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32 編碼的物件可以透過這種方式執行個體化。 每個物件預設會使用取代後援，來處理無法編碼的字串和無法解碼的位元組，不過您可以指定改為擲回例外狀況  如需詳細資訊，請參閱[取代回退](character-encoding.md#Replacement)和[例外狀況回退](character-encoding.md#Exception)。
 
-- 呼叫 <xref:System.Text.Encoding.%23ctor%28System.Int32%29> 建構函式，並將代表編碼的整數傳遞給該建構函式。 標準編碼物件使用取代後援，來處理無法編碼的字串和無法解碼的位元組，而字碼頁和雙位元組字元集 (DBCS) 編碼物件則是使用自動調整後援。 如需詳細資訊，請參閱[最佳調整](../../../docs/standard/base-types/character-encoding.md#BestFit)回溯。
+- 呼叫 <xref:System.Text.Encoding.%23ctor%28System.Int32%29> 建構函式，並將代表編碼的整數傳遞給該建構函式。 標準編碼物件使用取代後援，來處理無法編碼的字串和無法解碼的位元組，而字碼頁和雙位元組字元集 (DBCS) 編碼物件則是使用自動調整後援。 如需詳細資訊，請參閱[最佳調整](character-encoding.md#BestFit)回溯。
 
 - 呼叫 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，這個方法會傳回 .NET 中可用的任何標準、字碼頁或 DBCS 編碼。 多載可讓您同時為編碼器和解碼器指定後援物件。
 
@@ -127,7 +127,7 @@ ms.locfileid: "82624939"
 
 ### <a name="best-fit-fallback"></a>Best-Fit Fallback
 
-當字元在目標編碼中沒有完全相符的字元時，編碼器可以嘗試將該字元對應至類似的字元 (自動調整後援大部分是針對編碼問題，而不是針對解碼問題。 有很少的字碼頁包含無法成功對應到 Unicode 的字元）。自動調整回溯是<xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType>和<xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType>多載所抓取之字碼頁和雙位元組字元集編碼的預設值。
+當字元在目標編碼中沒有完全相符的字元時，編碼器可以嘗試將該字元對應至類似的字元 (自動調整後援大部分是針對編碼問題，而不是針對解碼問題。 有很少的字碼頁包含無法成功對應到 Unicode 的字元）。自動調整回溯是和多載所抓取之字碼頁和雙位元組字元集編碼的預設值 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> <xref:System.Text.Encoding.GetEncoding%28System.String%29?displayProperty=nameWithType> 。
 
 > [!NOTE]
 > 理論上，.NET 中提供的 Unicode 編碼類別 (<xref:System.Text.UTF8Encoding>、<xref:System.Text.UnicodeEncoding> 和 <xref:System.Text.UTF32Encoding>) 支援每個字元集中的每個字元，因此這些類別可以用來解決自動調整後援的問題。
@@ -145,7 +145,7 @@ ms.locfileid: "82624939"
 自動調整對應是 <xref:System.Text.Encoding> 物件的預設行為，可將 Unicode 資料編碼為字碼頁資料，有些舊版應用程式需要這個行為。 不過，基於安全性理由，大多數的新應用程式都應該避免自動調整行為。 例如，應用程式不應該透過自動調整編碼方式放入定義域名稱。
 
 > [!NOTE]
-> 您也可以實作編碼的自訂自動調整後援對應。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一節。
+> 您也可以實作編碼的自訂自動調整後援對應。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) 一節。
 
 如果自動調整後援是編碼物件的預設值，則當您藉由呼叫 <xref:System.Text.Encoding> 或 <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 多載擷取 <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> 物件時，可以選擇其他後援策略。 下一節包含的範例會取代無法使用星號 (*) 對應至字碼頁 1252 的每一個字元。
 
@@ -167,7 +167,7 @@ ms.locfileid: "82624939"
 [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]
 
 > [!NOTE]
-> 您也可以實作編碼的取代類別。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一節。
+> 您也可以實作編碼的取代類別。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) 一節。
 
 除了 QUESTION MARK (U+003F) 之外，還常使用 Unicode REPLACEMENT CHARACTER (U+FFFD) 做為取代字串，特別是當解碼無法成功轉譯成 Unicode 字元的位元組序列時。 不過，您可以自由選擇任何取代字串，而且該字串可以包含多個字元。
 
@@ -181,7 +181,7 @@ ms.locfileid: "82624939"
 [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]
 
 > [!NOTE]
-> 您也可以實作編碼作業的自訂例外狀況處理常式。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 一節。
+> 您也可以實作編碼作業的自訂例外狀況處理常式。 如需詳細資訊，請參閱 [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) 一節。
 
 <xref:System.Text.EncoderFallbackException> 和 <xref:System.Text.DecoderFallbackException> 物件提供下列造成例外狀況之條件的相關資訊：
 
@@ -268,4 +268,4 @@ ms.locfileid: "82624939"
 - <xref:System.Text.DecoderFallback>
 - <xref:System.Text.Encoding>
 - <xref:System.Text.EncoderFallback>
-- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
+- [全球化和當地語系化](../globalization-localization/index.md)

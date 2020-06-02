@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-ms.openlocfilehash: a295fee225d7eb5793b725db93e47fc73addf4ef
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b309c390ede3afc38122188337fa0dc3336e3ad5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794581"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292055"
 ---
 # <a name="editing-xml-schemas"></a>編輯 XML 結構描述
 
@@ -22,7 +22,7 @@ ms.locfileid: "82794581"
 
 ## <a name="editing-an-xml-schema"></a>編輯 XML 結構描述
 
-在此區段中會提供兩個程式碼範例，它們都會編輯在[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中建立的客戶結構描述。 第一個程式碼範例會將新 `PhoneNumber` 項目加入至 `Customer` 項目，第二個程式碼範例會將新 `Title` 屬性加入至 `FirstName` 項目。 第一個範例還會使用後結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合，做為當第二個程式碼範例使用前結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合時周遊客戶結構描述的方式。
+在此區段中會提供兩個程式碼範例，它們都會編輯在[建置 XML 結構描述](building-xml-schemas.md)主題中建立的客戶結構描述。 第一個程式碼範例會將新 `PhoneNumber` 項目加入至 `Customer` 項目，第二個程式碼範例會將新 `Title` 屬性加入至 `FirstName` 項目。 第一個範例還會使用後結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合，做為當第二個程式碼範例使用前結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合時周遊客戶結構描述的方式。
 
 ### <a name="phonenumber-element-example"></a>PhoneNumber 項目範例
 
@@ -48,7 +48,7 @@ ms.locfileid: "82794581"
 [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
 [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]
 
-下列是在[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中建立之已修改的客戶結構描述。
+下列是在[建置 XML 結構描述](building-xml-schemas.md)主題中建立之已修改的客戶結構描述。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -112,7 +112,7 @@ ms.locfileid: "82794581"
 [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
 [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]
 
-下列是在[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中建立之已修改的客戶結構描述。
+下列是在[建置 XML 結構描述](building-xml-schemas.md)主題中建立之已修改的客戶結構描述。
 
 ```xml
 <?xml version="1.0" encoding=" utf-8"?>
@@ -135,12 +135,12 @@ ms.locfileid: "82794581"
 </xs:schema>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [後結構描述編譯資訊集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [XML 結構描述物件模型概觀](xml-schema-object-model-overview.md)
+- [讀取及寫入 XML 結構描述](reading-and-writing-xml-schemas.md)
+- [建置 XML 結構描述](building-xml-schemas.md)
+- [周遊 XML 結構描述](traversing-xml-schemas.md)
+- [併入或匯入 XML 結構描述](including-or-importing-xml-schemas.md)
+- [用於結構描述編譯的 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [後結構描述編譯資訊集](post-schema-compilation-infoset.md)

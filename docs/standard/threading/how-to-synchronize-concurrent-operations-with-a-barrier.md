@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-ms.openlocfilehash: 33098878764c2f8a8c1f83a122028da40b984243
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e13dfb277807eb0a9f256f74c2845f5a4d2a047
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137967"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279293"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>如何：使用屏障同步處理並行作業
 下列範例示範如何使用 <xref:System.Threading.Barrier> 同步處理並行工作。  
@@ -28,4 +28,4 @@ ms.locfileid: "73137967"
   
 ## <a name="see-also"></a>另請參閱
 
-- [適用於平行程式設計的資料結構](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)
+- [平行程式設計的資料結構](../parallel-programming/data-structures-for-parallel-programming.md)

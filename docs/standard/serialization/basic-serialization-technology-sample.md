@@ -3,12 +3,12 @@ title: 基本序列化技術範例
 description: 這個範例會示範如何將記憶體中的物件圖形序列化成資料流程的 CLR 能力。 這個範例可以使用 SoapFormatter 或 BinaryFormatter。
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: fcbf790c3b3d48a0aeb27fd1ef6f75dcd7609ae0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3f2273e6afb3a72f9734444ffe92d30871fb762b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378434"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276565"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技術範例
 
@@ -87,7 +87,7 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
   - <xref:System.IO.FileStream> 用來將連結串列序列化及還原序列化。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO>
 - <xref:System.IO.File>
@@ -100,9 +100,9 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 - <xref:System.Runtime.Serialization.IFormatter>
 - <xref:System.SerializableAttribute>
 - <xref:System.Xml.Serialization>
-- [基本序列化](../../../docs/standard/serialization/basic-serialization.md)
-- [二進位序列化](../../../docs/standard/serialization/binary-serialization.md)
-- [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [序列化](../../../docs/standard/serialization/index.md)
-- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [基本序列化](basic-serialization.md)
+- [二進位序列化](binary-serialization.md)
+- [使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)
+- [XML 序列化簡介](introducing-xml-serialization.md)
+- [序列化](index.md)
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

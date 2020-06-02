@@ -11,26 +11,26 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158073"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276128"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>擷取儲存於屬性中的資訊
 擷取自訂屬性是一個簡單的程序。 首先，對想要擷取的屬性宣告執行個體。 然後，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法將新屬性初始化為所要擷取之屬性的值。 在將新屬性 (Attribute) 初始化之後，只要使用其屬性 (Poperty) 即可取得值。  
   
 > [!IMPORTANT]
-> 本文說明如何針對載入到執行內容的程式碼擷取屬性。 若要針對載入僅限反映的內容中的程式碼擷取屬性，您必須使用 <xref:System.Reflection.CustomAttributeData> 類別，如[如何：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)中所示。  
+> 本文說明如何針對載入到執行內容的程式碼擷取屬性。 若要針對載入僅限反映的內容中的程式碼擷取屬性，您必須使用 <xref:System.Reflection.CustomAttributeData> 類別，如[如何：將組件載入僅限反映的內容](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)中所示。  
   
  本節說明下列擷取屬性的方式：  
   
-- [檢索屬性的單個實例](#cpconretrievingsingleinstanceofattribute)  
+- [正在抓取屬性的單一實例](#cpconretrievingsingleinstanceofattribute)  
   
 - [擷取套用至相同範圍的多個屬性執行個體](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
-- [檢索應用於不同作用域的屬性的多個實例](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [抓取套用至不同範圍之屬性的多個實例](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>擷取單一屬性執行個體  
@@ -87,4 +87,4 @@ The attribute was not found.
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
-- [屬性](../../../docs/standard/attributes/index.md)
+- [屬性](index.md)

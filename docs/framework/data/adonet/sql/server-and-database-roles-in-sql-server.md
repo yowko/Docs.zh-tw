@@ -1,13 +1,14 @@
 ---
 title: SQL Server 中的伺服器和資料庫角色
+description: 瞭解固定伺服器和固定資料庫角色，其已指派一組固定的許可權。 SQL Server 使用以角色為基礎的安全性。
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9c3725b0404a5b3c754a53fa56f4a22497afee70
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791787"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286232"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的伺服器和資料庫角色
 所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。 固定伺服器角色和固定資料庫角色都指派有固定的權限組。  
@@ -25,7 +26,7 @@ ms.locfileid: "70791787"
   
  如需 SQL Server 預先定義角色的詳細資訊，請參閱下列資源。  
   
-|Resource|說明|  
+|資源|描述|  
 |--------------|-----------------|  
 |[伺服器層級角色](/sql/relational-databases/security/authentication-access/server-level-roles)|描述 SQL Server 中的固定伺服器角色和與其相關聯的許可權。|  
 |[資料庫層級角色](/sql/relational-databases/security/authentication-access/database-level-roles)|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
@@ -56,10 +57,10 @@ ms.locfileid: "70791787"
   
  如需有關 SQL Server 登入、使用者和角色的詳細資訊，請參閱下列資源。  
   
-|Resource|說明|  
+|資源|描述|  
 |--------------|-----------------|  
-|[具有資料庫引擎許可權的消費者入門](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
-|[原理](/sql/relational-databases/security/authentication-access/principals-database-engine)|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
+|[資料庫引擎權限使用者入門](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
+|[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -68,4 +69,4 @@ ms.locfileid: "70791787"
 - [在 SQL Server 中進行驗證](authentication-in-sql-server.md)
 - [SQL Server 中的擁有權和使用者結構描述分離](ownership-and-user-schema-separation-in-sql-server.md)
 - [SQL Server 中的授權和權限](authorization-and-permissions-in-sql-server.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

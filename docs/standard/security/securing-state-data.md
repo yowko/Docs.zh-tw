@@ -1,6 +1,6 @@
 ---
 title: 設定狀態資料的安全性
-description: 將狀態資料聲明為私有或內部變數，以限制對它的訪問。 這些資料仍可以通過反射、序列化和調試來訪問。
+description: 將狀態資料宣告為私用或內部變數，以限制其存取。 這類資料仍然可以透過反映、序列化和在調試中進行存取。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: f95bf409f7eef8c2636d3c180d2bbd95fbc689c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7fcb520fe6fa28cc098c4e1cbb56ce7da759c11
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186817"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291041"
 ---
 # <a name="securing-state-data"></a>設定狀態資料的安全性
 處理機密資料或執行任何種類安全性決策的應用程式需要保持該資料在自己的控制之下，而且不能允許其他潛在惡意程式碼直接存取資料。 保護記憶體中資料的最佳方式是將資料宣告為私用或內部 (具有限制為相同組件的範圍) 變數。 不過，即使此資料受限於存取權，您應該要注意︰  
@@ -29,4 +29,4 @@ ms.locfileid: "79186817"
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全程式碼撰寫方針](secure-coding-guidelines.md)

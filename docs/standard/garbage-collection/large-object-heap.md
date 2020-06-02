@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420574"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286024"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系統上的大型物件堆積
 
@@ -203,7 +203,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 ### <a name="a-debugger"></a>偵錯工具
 
-如果您只具有記憶體傾印，而且需要查看哪些物件實際在 LOH 上，您可以使用 .NET 所提供的 [SoS 偵錯工具延伸模組](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)。
+如果您只具有記憶體傾印，而且需要查看哪些物件實際在 LOH 上，您可以使用 .NET 所提供的 [SoS 偵錯工具延伸模組](../../framework/tools/sos-dll-sos-debugging-extension.md)。
 
 > [!NOTE]
 > 本節中提及的偵錯命令適用於 [Windows 偵錯工具](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)。

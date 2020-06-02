@@ -15,19 +15,19 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523941"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290509"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>作法：定義和使用自訂數值格式提供者
 .NET Framework 可讓您有效掌控數值的字串表示。 它支援以下自訂數值格式的功能：  
   
-- 標準數值格式字串，這些字串提供預先定義的格式集，可將數字轉換成其字串表示。 您可以使用它們搭配任何擁有 `format` 參數的數值格式化方法，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。  
+- 標準數值格式字串，這些字串提供預先定義的格式集，可將數字轉換成其字串表示。 您可以使用它們搭配任何擁有 `format` 參數的數值格式化方法，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[標準數值格式字串](standard-numeric-format-strings.md)。  
   
-- 自訂數值格式字串，這些字串提供能夠合併的符號集，可用來定義自訂數值格式規範。 它們也可以搭配任何擁有 `format` 參數的數值格式化方法使用，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。  
+- 自訂數值格式字串，這些字串提供能夠合併的符號集，可用來定義自訂數值格式規範。 它們也可以搭配任何擁有 `format` 參數的數值格式化方法使用，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[自訂數值格式字串](custom-numeric-format-strings.md)。  
   
 - 自訂的 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 物件，這類物件會定義用來顯示數值字串表示的符號和格式模式。 您可以使用它們搭配任何擁有 `provider` 參數的數值格式化方法，例如 <xref:System.Int32.ToString%2A>。 一般而言，會使用 `provider` 參數來指定文化特性特定的格式。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "80523941"
   
     1. (選擇性) 藉由檢查 `provider` 參數，來確認這個方法的合法目的為提供格式化服務。 針對實作 <xref:System.IFormatProvider> 與 <xref:System.ICustomFormatter> 的格式物件，這項檢查包含測試 `provider` 參數是否與目前的格式物件相等。  
   
-    2. 決定格式物件是否應支援自訂格式規範 (例如,"N"格式指定器可能指示美國電話號碼應以 NANP 格式輸出,而「I」可能指示 ITU-T 建議 E.123 格式的輸出。如果使用格式指定器,該方法應處理特定的格式指定器。 格式規範會隨 `format` 參數傳遞至方法。 如果沒有規範，則 `format` 參數值為 <xref:System.String.Empty?displayProperty=nameWithType>。  
+    2. 決定格式物件是否應支援自訂格式規範 （例如，"N" 格式規範可能表示美國電話號碼應以 NANP 格式輸出，而 "I" 可能表示以 ITU-T 建議 E. 123 格式的輸出）。如果使用格式規範，此方法應該會處理特定的格式規範。 格式規範會隨 `format` 參數傳遞至方法。 如果沒有規範，則 `format` 參數值為 <xref:System.String.Empty?displayProperty=nameWithType>。  
   
     3. 擷取作為 `arg` 參數傳遞至方法的數值。 執行任何必要的操作，將它轉換成其字串表示。  
   

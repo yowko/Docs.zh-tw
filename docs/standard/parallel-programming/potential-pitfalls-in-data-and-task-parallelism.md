@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: ff6ac9e8c41ee203ae72e1b28c088f462ddf6a54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00b4c89440223d229a06b0192032c9abcf931d58
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140027"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291691"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>資料和工作平行處理原則中可能出現的錯誤
 在許多情況下，相較於一般循序迴圈，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 更能提供顯著的效能改良。 不過，平行處理迴圈的工作所帶來的複雜性可能會造成問題，而在循序程式碼中，這些問題不是不常見，就是完全不會發生。 本主題列出一些您在撰寫平行迴圈時應該避免的作法。  
@@ -22,7 +22,7 @@ ms.locfileid: "73140027"
  在某些情況下，平行迴圈的執行速度可能比循序迴圈更慢。 基本的經驗法則是，反覆項目不多且使用者委派速度很快的平行迴圈不太可能加快多少速度。 不過，因為效能牽涉到許多因素，我們建議您一律要測量實際的結果。  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>避免寫入共用的記憶體位置  
- 循序程式碼經常會讀取或寫入靜態變數或類別欄位。 不過，每當有多個執行緒同時存取這類變數時，就很可能產生競爭情形。 即便您可以使用鎖定來同步處理變數的存取，同步處理的成本也會減損效能。 因此，我們建議您盡可能避免在平行迴圈中存取共用狀態，或至少做出限制。 執行這項操作的最佳方式是使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 的多載，其在迴圈執行時會使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 變數來儲存執行緒區域狀態。 如需詳細資訊，請參閱[如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：撰寫含有分割區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
+ 循序程式碼經常會讀取或寫入靜態變數或類別欄位。 不過，每當有多個執行緒同時存取這類變數時，就很可能產生競爭情形。 即便您可以使用鎖定來同步處理變數的存取，同步處理的成本也會減損效能。 因此，我們建議您盡可能避免在平行迴圈中存取共用狀態，或至少做出限制。 執行這項操作的最佳方式是使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 的多載，其在迴圈執行時會使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 變數來儲存執行緒區域狀態。 如需詳細資訊，請參閱[如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：撰寫含有分割區域變數的 Parallel.ForEach 迴圈](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
   
 ## <a name="avoid-over-parallelization"></a>避免過度平行處理  
  在使用平行迴圈時，您會因為分割來源集合和同步處理背景工作執行緒而產生額外成本。 電腦上的處理器數目則會進一步限制平行處理的好處。 多個計算繫結執行緒若只在一個處理器上執行，系統並不會獲得任何加速效果。 因此，您必須注意不要過度平行處理迴圈。  
@@ -53,7 +53,7 @@ ms.locfileid: "73140027"
  有些技術 (例如，適用於單一執行緒 Apartment (STA) 元件、Windows Forms 和 Windows Presentation Foundation (WPF) 的 COM 互通性) 會施加執行緒相似性限制，以要求程式碼在特定執行緒上執行。 例如，在 Windows Forms 和 WPF 中，只有用來建立控制項的執行緒能夠存取該控制項。 這表示 (舉例來說) 除非您設定執行緒排程器，讓它排定只利用 UI 執行緒執行工作，否則您無法從平行迴圈更新清單控制項。 如需詳細資訊，請參閱[指定同步處理內容](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context)。  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>在等候 Parallel.Invoke 所呼叫的委派時請小心  
- 在某些情況下，工作平行程式庫會內嵌工作，這表示它會在目前執行中之執行緒的工作上執行  （有關詳細資訊，請參閱[任務計畫程式](xref:System.Threading.Tasks.TaskScheduler)。在某些情況下，這種性能優化可能會導致鎖死。 例如，兩項工作可能會執行相同的委派程式碼，此程式碼會在事件發生時發出信號，然後等候另一項工作發出信號。 如果第二項工作在相同的執行緒中內嵌為第一項工作，而原本的第一項工作進入等候狀態，則第二項工作將永遠無法針對其事件發出信號。 若要避免這類情況，您可以對等候作業指定逾時設定，或使用明確的執行緒建構函式以協助確保兩項工作不會互相封鎖對方。  
+ 在某些情況下，工作平行程式庫會內嵌工作，這表示它會在目前執行中之執行緒的工作上執行  （如需詳細資訊，[請參閱工作](xref:System.Threading.Tasks.TaskScheduler)排程器）。在某些情況下，此效能優化可能會導致鎖死。 例如，兩項工作可能會執行相同的委派程式碼，此程式碼會在事件發生時發出信號，然後等候另一項工作發出信號。 如果第二項工作在相同的執行緒中內嵌為第一項工作，而原本的第一項工作進入等候狀態，則第二項工作將永遠無法針對其事件發出信號。 若要避免這類情況，您可以對等候作業指定逾時設定，或使用明確的執行緒建構函式以協助確保兩項工作不會互相封鎖對方。  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>不要認為 ForEach、For 和 ForAll 的反覆項目一定要以平行方式執行  
  請記住 <xref:System.Threading.Tasks.Parallel.For%2A>、<xref:System.Threading.Tasks.Parallel.ForEach%2A> 或 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 迴圈中個別的反覆項目可能會以平行方式執行，但不見得需要這麼做。 因此，您所撰寫的程式碼不應依靠系統是否有正確地平行執行反覆項目，也不應依靠系統是否有正確地以特定順序執行反覆項目。 例如，下列程式碼有可能會發生死結︰  
@@ -80,6 +80,6 @@ ms.locfileid: "73140027"
   
 ## <a name="see-also"></a>另請參閱
 
-- [並行程式設計](../../../docs/standard/parallel-programming/index.md)
-- [使用 PLINQ 時可能出現的錯誤](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
+- [平行程式設計](index.md)
+- [使用 PLINQ 時可能出現的錯誤](potential-pitfalls-with-plinq.md)
 - [平行程式設計模式：了解及套用平行模式與 .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

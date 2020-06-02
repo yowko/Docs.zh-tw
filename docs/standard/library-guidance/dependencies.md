@@ -2,12 +2,12 @@
 title: 相依性與 .NET 程式庫
 description: 在 .NET 程式庫中管理 NuGet 相依性的最佳做法建議。
 ms.date: 10/02/2018
-ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895712"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291366"
 ---
 # <a name="dependencies"></a>相依性
 
@@ -24,7 +24,7 @@ ms.locfileid: "82895712"
 雖然大部分的菱形相依性都很容易解決，但它們可能會在某些情況下造成問題：
 
 1. **衝突的 NuGet 套件參考**會防止系統在套件還原期間解析某個版本。
-2. **版本之間的中斷性變更**會在執行階段造成錯誤和例外狀況。
+2. **版本之間的重大變更**會在執行時間造成錯誤和例外狀況。
 3. **套件組件具有強式名稱**、組件版本已變更，且應用程式是在 .NET Framework 上執行。 需要進行組件繫結重新導向。
 
 您不可能得知其他人會將您的套件搭配哪些套件使用。 一個降低菱形相依性中斷您程式庫之機會的良好方式，便是將您所相依之套件的數目降到最低。
@@ -97,5 +97,5 @@ NuGet 在解析相依性時使用的規則很[複雜](/nuget/consume-packages/de
 > 將共用原始碼套件發佈至[本機摘要或 MyGet](./publish-nuget-package.md)，以在專案內部取用它們。
 
 >[!div class="step-by-step"]
->[上一頁](nuget.md)
->[下一頁](sourcelink.md)
+>[上一個](nuget.md) 
+>[下一步](sourcelink.md)

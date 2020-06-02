@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-ms.openlocfilehash: eac9a1be38ea81e8ccee1d05d9061ceeb597627f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5202be5e3055702954ad7a1565999ad2496eaea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106175"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291119"
 ---
 # <a name="spinlock"></a>SpinLock
 <xref:System.Threading.SpinLock> 結構是一個低階、互斥的同步處理基本類型，會在等候取得鎖定期間進行微調。 在多核心電腦上，預期等候時間很短且競爭最少時，<xref:System.Threading.SpinLock> 可以優於其他類型鎖定的方式執行。 不過，我們建議您只有在藉由分析 <xref:System.Threading.Monitor?displayProperty=nameWithType> 方法進行判斷時，或 <xref:System.Threading.Interlocked> 方法大幅減慢程式的效能，才使用 <xref:System.Threading.SpinLock>。  
@@ -19,10 +19,10 @@ ms.locfileid: "73106175"
   
  由於 SpinLock 是一個實值類型，因此，如果您想要讓兩個複本參考同一個鎖定，就必須明確地以傳址方式傳遞它。  
   
- 如需如何使用此類型的詳細資訊，請參閱 <xref:System.Threading.SpinLock?displayProperty=nameWithType>。 如需範例，請參閱[如何：使用 SpinLock 進行低階同步處理](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)。  
+ 如需如何使用此類型的詳細資訊，請參閱 <xref:System.Threading.SpinLock?displayProperty=nameWithType>。 如需範例，請參閱[如何：使用 SpinLock 進行低階同步處理](how-to-use-spinlock-for-low-level-synchronization.md)。  
   
- <xref:System.Threading.SpinLock>支援*執行緒*-*跟蹤*模式，您可以在開發階段使用該模式來説明跟蹤在特定時間持有鎖的執行緒。 執行緒追蹤模式非常適用於偵錯，但我們建議您在程式的發行版本中關閉此模式，因為它可能會降低效能。 如需詳細資訊，請參閱[如何：啟用 SpinLock 中的執行緒追蹤模式](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md)。  
+ <xref:System.Threading.SpinLock>支援*thread* - 您可以在開發階段使用的執行緒*追蹤*模式，以協助追蹤在特定時間持有鎖定的執行緒。 執行緒追蹤模式非常適用於偵錯，但我們建議您在程式的發行版本中關閉此模式，因為它可能會降低效能。 如需詳細資訊，請參閱[如何：啟用 SpinLock 中的執行緒追蹤模式](how-to-enable-thread-tracking-mode-in-spinlock.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)
+- [執行緒物件和功能](threading-objects-and-features.md)

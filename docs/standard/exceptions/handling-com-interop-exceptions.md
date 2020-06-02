@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exceptions, COM interop
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
-ms.openlocfilehash: 17cd739ac40b43bdd4a93b83a4ab9d0d92400e2d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c8eb374058ddbd2ba3d866079f0f40b292b69ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708928"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286102"
 ---
 # <a name="handling-com-interop-exceptions"></a>處理 COM Interop 例外狀況
 Managed 和 Unmanaged 程式碼可一起運作來處理例外狀況。 如果方法在 Managed 程式碼擲回例外狀況，則 Common Language Runtime 可以傳遞 HRESULT 給 COM 物件。 如果在 Unmanaged 程式碼中的方法藉由傳回失敗 HRESULT 而失敗，則執行階段會擲回 Managed 程式碼可以攔截的例外狀況。  
@@ -26,8 +26,8 @@ Managed 和 Unmanaged 程式碼可一起運作來處理例外狀況。 如果方
 ## <a name="working-with-ierrorinfo"></a>使用 IErrorInfo  
  當錯誤從 COM 傳遞至 Managed 程式碼時，執行階段會填入錯誤資訊至例外狀況物件。 支援 IErrorInfo 且傳回 HRESULT 的 COM 物件會提供這項資訊給 Managed 程式碼例外狀況。 例如，執行階段從 COM 錯誤對應描述至例外狀況的 <xref:System.Exception.Message%2A> 屬性。 如果 HRESULT 沒有提供其他錯誤資訊，則執行階段會填滿預設值到許多例外狀況的屬性。  
   
- 如果在 Unmanaged 程式碼中的方法失敗，則例外狀況可以傳遞至 Managed 程式碼區段。 本主題 [HRESULT 和例外狀況](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)包含一個表格，顯示 HRESULT 如何對應至執行階段例外狀況物件。  
+ 如果在 Unmanaged 程式碼中的方法失敗，則例外狀況可以傳遞至 Managed 程式碼區段。 本主題 [HRESULT 和例外狀況](../../framework/interop/how-to-map-hresults-and-exceptions.md)包含一個表格，顯示 HRESULT 如何對應至執行階段例外狀況物件。  
 
 ## <a name="see-also"></a>另請參閱
 
-- [異常](index.md)
+- [例外狀況](index.md)

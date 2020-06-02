@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5794cd1ec9b63a6e151b35c28e09e29f86dcfac6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131582"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291262"
 ---
 # <a name="observer-design-pattern"></a>觀察器設計模式
 
@@ -89,10 +89,10 @@ ms.locfileid: "73131582"
 [!code-csharp[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/program.cs#5)]
 [!code-vb[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/module1.vb#5)]
 
-## <a name="related-topics"></a>相關主題
+## <a name="related-topics"></a>[相關主題]
 
 |Title|描述|
 |-----------|-----------------|
-|[觀察者設計模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)|描述開發實作觀察者設計模式的應用程式時，所採用的最佳做法。|
-|[如何：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)|提供溫度監控應用程式的提供者逐步實作。|
-|[操作說明：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)|提供溫度監控應用程式的觀察者逐步實作。|
+|[觀察者設計模式最佳做法](observer-design-pattern-best-practices.md)|描述開發實作觀察者設計模式的應用程式時，所採用的最佳做法。|
+|[如何：執行提供者](how-to-implement-a-provider.md)|提供溫度監控應用程式的提供者逐步實作。|
+|[如何：執行觀察者](how-to-implement-an-observer.md)|提供溫度監控應用程式的觀察者逐步實作。|

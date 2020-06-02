@@ -10,16 +10,16 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73128997"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291158"
 ---
 # <a name="pausing-and-interrupting-threads"></a>暫停和中斷執行緒
 
-最常見之同步處理執行緒活動的方式為封鎖及釋放執行緒、鎖定物件或程式碼區域。 如需有關這些鎖定和封鎖機制的詳細資訊，請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
+最常見之同步處理執行緒活動的方式為封鎖及釋放執行緒、鎖定物件或程式碼區域。 如需有關這些鎖定和封鎖機制的詳細資訊，請參閱[同步處理原始物件概觀](overview-of-synchronization-primitives.md)。  
   
  您也可以讓執行緒自己進入睡眠。 當執行緒已封鎖或睡眠中，您可以使用 <xref:System.Threading.ThreadInterruptedException> 解除其等候狀態。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "73128997"
   
 - <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 會從任何可能的等候中喚醒執行緒，並造成 <xref:System.Threading.ThreadInterruptedException> 在目的執行緒中被擲回。  
   
-- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會從任何可能的等候中喚醒執行緒，並造成 <xref:System.Threading.ThreadAbortException> 在執行緒中被擲回。 如需詳細資訊，請參閱[終結執行緒](../../../docs/standard/threading/destroying-threads.md)。  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會從任何可能的等候中喚醒執行緒，並造成 <xref:System.Threading.ThreadAbortException> 在執行緒中被擲回。 如需詳細資訊，請參閱[終結執行緒](destroying-threads.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>
 - <xref:System.Threading.ThreadAbortException>
-- [執行緒處理](../../../docs/standard/threading/index.md)
-- [使用執行緒和執行緒處理](../../../docs/standard/threading/using-threads-and-threading.md)
-- [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [執行緒](index.md)
+- [使用執行緒和執行緒處理](using-threads-and-threading.md)
+- [同步處理基本專案的總覽](overview-of-synchronization-primitives.md)

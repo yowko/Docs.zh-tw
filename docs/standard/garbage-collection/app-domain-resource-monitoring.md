@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory use, monitoring
 - application domains, resource monitoring
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
-ms.openlocfilehash: 54e300bef1818fd08f27d7920eec68ee1f2c45bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12dfdd3ac6d75a3e2a33f93d8847c963ded912e8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141389"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286089"
 ---
 # <a name="application-domain-resource-monitoring"></a>應用程式定義域資源監視
 
@@ -29,9 +29,9 @@ ARM 非常輕量，足以在即時應用程式中使用。 您可以使用 Windo
 
 ARM 一經啟用之後，就會立即開始收集處理序中所有應用程式定義域上的資料。如果應用程式定義域的建立時間是在啟用 ARM 之前，就會在啟用 ARM 時開始累積資料，而不是在應用程式定義域建立時。ARM 在啟用後即無法停用。
 
-- 您可以通過將[\<appDomainResource監視>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)元素添加到設定檔，並將`enabled`屬性設置為`true`，在 CLR 啟動時啟用 ARM。 值為 `false` (預設值) 時，表示只有該 ARM 未在啟動時啟用；您可以稍後使用其中一個其他啟用機制來啟用它。
+- 您可以藉由將 [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) 元素新增至設定檔，並將屬性設定為，在 CLR 啟動時啟用 ARM `enabled` `true` 。 值為 `false` (預設值) 時，表示只有該 ARM 未在啟動時啟用；您可以稍後使用其中一個其他啟用機制來啟用它。
 
-- 主機可以藉由要求 [ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) 主控介面來啟用 ARM。 順利取得此介面之後，便會啟用 ARM。
+- 主機可以藉由要求 [ICLRAppDomainResourceMonitor](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) 主控介面來啟用 ARM。 順利取得此介面之後，便會啟用 ARM。
 
 - 受控碼可以藉由將靜態 (在 Visual Basic 中為 `Shared`) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> 屬性設定為 `true` 來啟用 ARM。 設定好此屬性之後，就會立即啟用 ARM。
 
@@ -45,23 +45,23 @@ ARM 會提供應用程式定義域所使用的處理器時間總計，以及三�
 
   - 受控 API：<xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> 屬性。
 
-  - 裝載 API：[ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) 方法。
+  - 裝載 API：[ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md) 方法。
 
-  - ETW 事件：`ThreadCreated``ThreadAppDomainEnter`及 `ThreadTerminated` 事件。 如需有關提供者和關鍵字的資訊，請參閱 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)中的＜AppDomain 資源監視事件＞。
+  - ETW 事件：`ThreadCreated``ThreadAppDomainEnter`及 `ThreadTerminated` 事件。 如需有關提供者和關鍵字的資訊，請參閱 [CLR ETW 事件](../../framework/performance/clr-etw-events.md)中的＜AppDomain 資源監視事件＞。
 
 - **應用程式定義域在其存留期內所做的受控配置總計 (單位為位元組)**：配置總計並不一定會反映應用程式定義域所使用的記憶體，因為所配置物件的存留期可能很短。 不過，如果應用程式配置並釋出大量物件，配置成本就可能相當高。
 
   - 受控 API：<xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> 屬性。
 
-  - 裝載 API：[ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) 方法。
+  - 裝載 API：[ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md) 方法。
 
   - ETW 事件：`AppDomainMemAllocated` 事件、`Allocated` 欄位。
 
-- **應用程式定義域所參考並在最近的完整、阻斷式收集中未被回收的受控記憶體 (單位為位元組)**：此數字只有在進行完整、阻斷式收集後才會精確。 （這與在後臺發生的並不會阻止應用程式的併發集合不同。例如，<xref:System.GC.Collect?displayProperty=nameWithType>方法重載會導致完全的阻塞集合。
+- **應用程式定義域所參考並在最近的完整、阻斷式收集中未被回收的受控記憶體 (單位為位元組)**：此數字只有在進行完整、阻斷式收集後才會精確。 （這與在背景中發生並不會封鎖應用程式的並行集合相反。）例如，方法多載 <xref:System.GC.Collect?displayProperty=nameWithType> 會導致完整的封鎖集合。
 
   - 受控 API：<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> 屬性。
 
-  - 裝載 API：[ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) 方法、`pAppDomainBytesSurvived` 參數。
+  - 裝載 API：[ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) 方法、`pAppDomainBytesSurvived` 參數。
 
   - ETW 事件：`AppDomainMemSurvived` 事件、`Survived` 欄位。
 
@@ -69,7 +69,7 @@ ARM 會提供應用程式定義域所使用的處理器時間總計，以及三�
 
   - 受控 API：<xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> 屬性。
 
-  - 裝載 API：[ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) 方法、`pTotalBytesSurvived` 參數。
+  - 裝載 API：[ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md) 方法、`pTotalBytesSurvived` 參數。
 
   - ETW 事件：`AppDomainMemSurvived` 事件、`ProcessSurvived` 欄位。
 
@@ -85,11 +85,11 @@ ARM 會提供應用程式定義域所使用的處理器時間總計，以及三�
 
 #### <a name="hosting-api"></a>裝載 API
 
-如果您使用非受控裝載 API，您的主機就必須將 [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md) 介面實作傳遞給 CLR。 CLR 會在繼續執行發生收集時被暫止的執行緒時，呼叫 [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法。 CLR 會將已完成的收集世代以方法參數的形式傳遞，讓主機能夠判斷該收集是完整收集還是部分收集。 您的 [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法實作可以查詢未被回收的記憶體，以確定計數是在更新後所立即擷取的計數。
+如果您使用非受控裝載 API，您的主機就必須將 [IHostGCManager](../../framework/unmanaged-api/hosting/ihostgcmanager-interface.md) 介面實作傳遞給 CLR。 CLR 會在繼續執行發生收集時被暫止的執行緒時，呼叫 [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法。 CLR 會將已完成的收集世代以方法參數的形式傳遞，讓主機能夠判斷該收集是完整收集還是部分收集。 您的 [IHostGCManager::SuspensionEnding](../../framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) 方法實作可以查詢未被回收的記憶體，以確定計數是在更新後所立即擷取的計數。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [ICLRAppDomainResourceMonitor 介面](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [\<應用程式域資源監視>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [ICLRAppDomainResourceMonitor 介面](../../framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [CLR ETW 事件](../../framework/performance/clr-etw-events.md)

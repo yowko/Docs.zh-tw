@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242682"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291912"
 ---
 # <a name="globalization"></a>全球化
 
@@ -38,7 +38,7 @@ ms.locfileid: "81242682"
 
 包括 Windows 作業系統在內的許多應用程式和作業系統，也可以使用字碼頁代表字元集。 字碼頁通常包含 0x00 到 0x7F 的標準 ASCII 值，並將其他字元對應到其餘從 0x80 到 0xFF 的值。 0x80 到 0xFF 值的解譯取決於特定字碼頁。 因此，您應該盡可能避免在全球化應用程式中使用字碼頁。
 
-下列範例說明在系統上的預設字碼頁與儲存資料的字碼頁不同的情況下，解譯字碼頁資料所可能造成的危險性。 (為了類比此方案,該範例顯示式指定不同的代碼頁。首先,該示例定義由希臘字母大寫字元組成的陣列。 它使用字碼頁 737 (也稱為 MS-DOS 希臘文) 將它們編碼成位元組陣列，並將其儲存至檔案。 如果擷取檔案，並使用字碼頁 737 將位元組陣列解碼，則會還原原始的字元。 然而，如果擷取檔案但使用字碼頁 1252 (也稱作 Windows-1252，代表拉丁字母的字元) 將位元組陣列解碼，則會遺失原始的字元。
+下列範例說明在系統上的預設字碼頁與儲存資料的字碼頁不同的情況下，解譯字碼頁資料所可能造成的危險性。 （若要模擬此案例，此範例會明確指定不同的字碼頁）。首先，此範例會定義一個陣列，其中包含希臘文字母的大寫字元。 它使用字碼頁 737 (也稱為 MS-DOS 希臘文) 將它們編碼成位元組陣列，並將其儲存至檔案。 如果擷取檔案，並使用字碼頁 737 將位元組陣列解碼，則會還原原始的字元。 然而，如果擷取檔案但使用字碼頁 1252 (也稱作 Windows-1252，代表拉丁字母的字元) 將位元組陣列解碼，則會遺失原始的字元。
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]
@@ -57,7 +57,7 @@ ms.locfileid: "81242682"
 
 如果您要建立當地語系化的應用程式，則使用資源檔具有特定的優點。 當您部署附屬組件中的資源時，通用語言執行平台會根據 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 屬性所定義的使用者目前 UI 文化特性，自動選取適當的文化特性資源。 只要提供適當的特定文化特性資源，並正確地將 <xref:System.Resources.ResourceManager> 物件具現化或使用強型別的資源類別，執行階段即會處理擷取適當資源的細項。
 
-如需有關建立資源檔的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。 如需有關建立及部署附屬組件的資訊，請參閱[建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)和[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。
+如需有關建立資源檔的詳細資訊，請參閱[建立資源檔](../../framework/resources/creating-resource-files-for-desktop-apps.md)。 如需有關建立及部署附屬組件的資訊，請參閱[建立附屬組件](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)和[封裝和部署資源](../../framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。
 
 ### <a name="search-and-compare-strings"></a>搜尋及比較字串
 
@@ -66,7 +66,7 @@ ms.locfileid: "81242682"
 > [!TIP]
 > 您可以搭配 <xref:System.Globalization.StringInfo> 類別使用文字項目，而無須使用字串中的個別字元。
 
-在字串搜尋和比較中，常見的錯誤是將字串視為字元的集合，且各個都由一個 <xref:System.Char> 物件表示。 事實上，單一字元可能由一個、兩個或多個 <xref:System.Char> 物件所形成。 若字母是由 Unicode 基本拉丁字元範圍 (U+0021 到 U+007E) 以外的字元所組成，則在此文化特性的字串中最常出現上述這類字元。 下列範例嘗試在字串中尋找拉丁大寫字母 A 帶抑音符號字元 (U+00C0) 的索引。 但是,此字元可以以兩種不同的方式表示:作為單個代碼單元 (U+00C0) 或複合字元(兩個代碼單元:U+0041 和 U+0300)。 在這種情況下,字元由兩<xref:System.Char>個物件 U_0041 和 U_0300 在字串實例中表示。 範例程式碼會呼叫 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 多載，以在字串執行個體中尋找此字元的位置，但這些多載會傳回不同的結果。 第一個方法呼叫具有 <xref:System.Char> 引數；它會執行序數比較，因此找不到相符項目。 第二個呼叫具有 <xref:System.String> 引數；它會執行區分文化特性的比較，因此會找到相符項目。
+在字串搜尋和比較中，常見的錯誤是將字串視為字元的集合，且各個都由一個 <xref:System.Char> 物件表示。 事實上，單一字元可能由一個、兩個或多個 <xref:System.Char> 物件所形成。 若字母是由 Unicode 基本拉丁字元範圍 (U+0021 到 U+007E) 以外的字元所組成，則在此文化特性的字串中最常出現上述這類字元。 下列範例嘗試在字串中尋找拉丁大寫字母 A 帶抑音符號字元 (U+00C0) 的索引。 不過，這個字元可以用兩種不同的方式來表示：單一程式碼單位（U + 00C0）或複合字元（兩個程式碼單位： U + 0041 和 U + 0300）。 在此情況下，字元會在字串實例中以兩個 <xref:System.Char> 物件（u + 0041 和 u + 0300）來表示。 範例程式碼會呼叫 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 多載，以在字串執行個體中尋找此字元的位置，但這些多載會傳回不同的結果。 第一個方法呼叫具有 <xref:System.Char> 引數；它會執行序數比較，因此找不到相符項目。 第二個呼叫具有 <xref:System.String> 引數；它會執行區分文化特性的比較，因此會找到相符項目。
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -143,7 +143,7 @@ ms.locfileid: "81242682"
 
 - <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>，其中包含格式字串
 
-- [複合格式化](../../../docs/standard/base-types/composite-formatting.md)功能，搭配日期使用時
+- [複合格式化](../base-types/composite-formatting.md)功能，搭配日期使用時
 
 下列範例顯示兩次 2012 年 10 月 11 日的日出和日落資料。 首先將目前文化特性設為克羅埃西亞文 (克羅埃西亞)，然後再設為英文 (英國)。 在每個案例中，日期和時間會以適用於該文化特性的格式顯示。
 
@@ -174,7 +174,7 @@ ms.locfileid: "81242682"
 
 日期和時間值可以有多個解譯，範圍從一般的時間 (「商店營業時間起始於 2013 年 1 月 2 日上午 9:00」) 到特定時間點 (「出生日期︰2013 年 1 月 2 日上午 6:32:00」)。 當時間值代表特定時間點，且您將其從序列化的值還原時，您應確定它代表相同的時間點，無論使用者的地理位置或時區皆然。
 
-下列範例說明此問題。 它會以三個[標準格式](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) (一般日期完整時間為 "G"、可排序日期/時間為 "s"，而來回日期/時間為 "o") 以及二進位格式，將單一本地日期和時間值當作字串儲存。
+下列範例說明此問題。 它會以三個[標準格式](../base-types/standard-date-and-time-format-strings.md) (一般日期完整時間為 "G"、可排序日期/時間為 "s"，而來回日期/時間為 "o") 以及二進位格式，將單一本地日期和時間值當作字串儲存。
 
 [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
 [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]
@@ -224,7 +224,7 @@ ms.locfileid: "81242682"
 3/31/2013 3:00:00 AM Local
 ```
 
-如需詳細資訊，請參閱[在各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。
+如需詳細資訊，請參閱[在各時區間轉換時間](../datetime/converting-between-time-zones.md)。
 
 ### <a name="perform-date-and-time-arithmetic"></a>執行日期和時間運算
 
@@ -248,7 +248,7 @@ ms.locfileid: "81242682"
 [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
 [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]
 
-如需詳細資訊，請參閱[使用日期和時間執行算術運算](../../../docs/standard/datetime/performing-arithmetic-operations.md)。
+如需詳細資訊，請參閱[使用日期和時間執行算術運算](../datetime/performing-arithmetic-operations.md)。
 
 ### <a name="use-culture-sensitive-names-for-date-elements"></a>為日期元素使用區分文化特性 (Culture) 的名稱
 
@@ -259,7 +259,7 @@ ms.locfileid: "81242682"
 
 不過，此程式碼一律會以英文傳回一周天數的名稱。 擷取月份名稱的程式碼通常更沒有彈性。 它通常會以特定語言的月份名稱假設 12 個月的行事曆。
 
-透過使用[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)或 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性，便可輕易擷取以使用者的文化特性反映一週天數或月份名稱的字串，如下列範例所示。 它將目前文化特性變更至法文 (法國)，並顯示 2013 年 7 月 1 日的一周天數名稱和月份名稱。
+透過使用[自訂日期和時間格式字串](../base-types/custom-date-and-time-format-strings.md)或 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性，便可輕易擷取以使用者的文化特性反映一週天數或月份名稱的字串，如下列範例所示。 它將目前文化特性變更至法文 (法國)，並顯示 2013 年 7 月 1 日的一周天數名稱和月份名稱。
 
 [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
 [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]
@@ -279,7 +279,7 @@ ms.locfileid: "81242682"
 
 - 任何數值類型的 `ToString(String)` 方法，包括作為引數的格式字串
 
-- [複合格式化](../../../docs/standard/base-types/composite-formatting.md)功能，搭配數值使用時
+- [複合格式化](../base-types/composite-formatting.md)功能，搭配數值使用時
 
 下列範例顯示法國巴黎的每月平均溫度。 它在顯示資料前將目前文化特性設為法文 (法國)，然後將其設為英文 (美國)。 在每個案例中，月份名稱和溫度會以適用於該文化特性的格式顯示。 請注意兩個文化特性在溫度值中使用不同的小數分隔符號。 也請注意，此範例使用 "MMMM" 自訂日期和時間格式字串來顯示完整月份名稱，並藉由判斷 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> 陣列中最長月份名稱的長度，為結果字串中的月份名稱配置適當的空間量。
 
@@ -336,9 +336,9 @@ ms.locfileid: "81242682"
 
 - .NET 支援取代文化特性 (Culture)。 這可讓您定義新的自訂文化特性，進而補充現有標準文化特性，或完全加以取代。
 
-- 在 Windows 系統上，使用者可透過使用 [控制台] 中的 [地區和語言]**** 應用程式，自訂文化特性 (Culture) 專屬的設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來判斷其是否反映這些使用者自訂。 通常,對於最終使用者應用,應尊重使用者首選項,以便以使用者期望的格式顯示數據。
+- 在 Windows 系統上，使用者可透過使用 [控制台] 中的 [地區和語言]**** 應用程式，自訂文化特性 (Culture) 專屬的設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來判斷其是否反映這些使用者自訂。 一般來說，對於使用者應用程式，您應該尊重使用者喜好設定，讓使用者以預期的格式呈現資料。
 
 ## <a name="see-also"></a>另請參閱
 
-- [全球化與當地語系化](../../../docs/standard/globalization-localization/index.md)
-- [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)
+- [全球化和當地語系化](index.md)
+- [使用字串的最佳作法](../base-types/best-practices-strings.md)

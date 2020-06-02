@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588640"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290651"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的順序保留
 在 PLINQ 中，目標是在達到最佳效能的同時維持正確性。 查詢應以最快的速度執行，但仍應產生正確的結果。 在某些情況下，需要保留來源序列的順序以保持正確性；不過，排序可能需要大量計算。 因此，根據預設，PLINQ 不會保留來源序列的順序。 在這方面，PLINQ 類似於 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但是有別於會保留順序的 LINQ to Objects。  
   
- 若要覆寫預設行為，您可以在來源序列上使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子開啟順序保留。 您之後可以使用 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 方法在查詢中關閉順序保留。 使用這兩種方法，查詢是依據啟發學習法來處理，而啟發學習法會判斷要以平行方式或循序執行查詢。 如需詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。  
+ 若要覆寫預設行為，您可以在來源序列上使用 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子開啟順序保留。 您之後可以使用 <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> 方法在查詢中關閉順序保留。 使用這兩種方法，查詢是依據啟發學習法來處理，而啟發學習法會判斷要以平行方式或循序執行查詢。 如需詳細資訊，請參閱[認識 PLINQ 中的加速](understanding-speedup-in-plinq.md)。  
   
  下列範例顯示未排序的平行查詢，其會篩選符合條件的所有元素，但不會嘗試以任何方式排序結果。  
   
@@ -122,5 +122,5 @@ ms.locfileid: "80588640"
   
 ## <a name="see-also"></a>另請參閱
 
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [平行編程式](../../../docs/standard/parallel-programming/index.md)
+- [平行 LINQ (PLINQ)](introduction-to-plinq.md)
+- [平行程式設計](index.md)

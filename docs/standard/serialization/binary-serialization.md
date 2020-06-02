@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 4ed76437b743da842d6ba07d29fe7985f824abf0
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421276"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289690"
 ---
 # <a name="binary-serialization"></a>二進位序列化
 
@@ -344,10 +344,10 @@ ms.locfileid: "83421276"
 - <xref:System.Runtime.Serialization>\
 包含類別，可以用來序列化和還原序列化物件。
 
-- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)\
 說明 Common Language Runtime 中所含的 XML 序列化機制。
 
-- [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)\
+- [安全性和序列化](../../framework/misc/security-and-serialization.md)\
 說明在撰寫執行序列化的程式碼時要遵循的安全程式碼撰寫方針。
 
 - [.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\

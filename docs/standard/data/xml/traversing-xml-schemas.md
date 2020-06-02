@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0951e83c3035de751801d194696eb64993260ef8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710111"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289833"
 ---
 # <a name="traversing-xml-schemas"></a>周遊 XML 結構描述
 
@@ -39,7 +39,7 @@ ms.locfileid: "75710111"
 >
 > <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> 屬性提供對不屬於結構描述命名空間之所有屬性的存取權。 結構描述處理器不會處理這些屬性。
 
-接下來的程式碼範例會示範如何周遊[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中建立的客戶結構描述。 該程式碼範例示範如何使用上述集合周遊結構描述，並將結構描述中的所有項目和屬性寫入主控台。
+接下來的程式碼範例會示範如何周遊[建置 XML 結構描述](building-xml-schemas.md)主題中建立的客戶結構描述。 該程式碼範例示範如何使用上述集合周遊結構描述，並將結構描述中的所有項目和屬性寫入主控台。
 
 該範例會按下列步驟周遊客戶結構描述。
 
@@ -65,14 +65,14 @@ ms.locfileid: "75710111"
 
 如果 <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A?displayProperty=nameWithType> 屬性是使用者定義的簡單型別或複雜型別，則其可以為 <xref:System.Xml.Schema.XmlSchemaSimpleType> 或<xref:System.Xml.Schema.XmlSchemaComplexType>。 如果其為 W3C XML 結構描述建議事項中定義的其中一個內建資料型別，則也可以為 <xref:System.Xml.Schema.XmlSchemaDatatype>。 在客戶結構描述中，<xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> 項目的 `Customer` 為 <xref:System.Xml.Schema.XmlSchemaComplexType>，`FirstName` 及 `LastName` 項目為 <xref:System.Xml.Schema.XmlSchemaSimpleType>。
 
-[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中的程式碼範例使用 <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> 集合，將屬性 `CustomerId` 加入至 `Customer` 項目。 這是前結構描述編譯屬性。 對應的後結構描述編譯資訊集屬性為 <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> 集合，其保留複雜型別的所有屬性，包括透過型別衍生繼承的那些屬性。
+[建置 XML 結構描述](building-xml-schemas.md)主題中的程式碼範例使用 <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> 集合，將屬性 `CustomerId` 加入至 `Customer` 項目。 這是前結構描述編譯屬性。 對應的後結構描述編譯資訊集屬性為 <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> 集合，其保留複雜型別的所有屬性，包括透過型別衍生繼承的那些屬性。
 
 ## <a name="see-also"></a>另請參閱
 
-- [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [後結構描述編譯資訊集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [XML 結構描述物件模型概觀](xml-schema-object-model-overview.md)
+- [讀取及寫入 XML 結構描述](reading-and-writing-xml-schemas.md)
+- [建置 XML 結構描述](building-xml-schemas.md)
+- [編輯 XML 結構描述](editing-xml-schemas.md)
+- [併入或匯入 XML 結構描述](including-or-importing-xml-schemas.md)
+- [用於結構描述編譯的 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [後結構描述編譯資訊集](post-schema-compilation-infoset.md)

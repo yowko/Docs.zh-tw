@@ -1,5 +1,5 @@
 ---
-title: 如何：防止子工作附加到其父代
+title: 作法：防止子工作附加到其父代
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - tasks, preventing attachments
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
-ms.openlocfilehash: 265b6d06f17a1dfbee3f009feff1ee1645e62a46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ff181344e6437179fa77f11872ae9a47745be93
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139253"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288156"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>如何：防止子工作附加到其父代
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>作法：防止子工作附加到其父代
 本文件將示範如何防止將子工作附加至父工作。 如果您呼叫的元件是由協力廠商所撰寫，而且也會使用工作，則防止子工作附加至其父代會很實用。 例如，如果使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件的協力廠商元件會長時間執行或擲回未處理的例外狀況，則可能造成程式碼發生問題。  
   
 ## <a name="example"></a>範例  
@@ -28,4 +28,4 @@ ms.locfileid: "73139253"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以工作為基礎的非同步程式設計](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [以工作為基礎的非同步程式設計](task-based-asynchronous-programming.md)

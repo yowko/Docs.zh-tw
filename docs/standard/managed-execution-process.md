@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cfe66f188c5abf245370f841d4b4d31e7b6db8b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160218"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290067"
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：  
@@ -40,7 +40,7 @@ ms.locfileid: "78160218"
 ## <a name="choosing-a-compiler"></a>選擇編譯器  
  若要享有 Common Language Runtime (CLR) 帶來的好處，就必須使用一個或多個以執行階段為目標的語言編譯器，例如 Visual Basic、C#、Visual C++、F#，或眾多協力廠商編譯器的其中一種，例如 Eiffel、Perl 或 COBOL 編譯器。  
   
- 因為是多種程式語言的執行環境，執行階段會支援各種資料類型和語言功能。 您使用的語言編譯器將決定有哪些執行階段功能可用，而您可使用那些功能來設計程式碼。 編譯器會建立程式碼必須使用的語法，而不是由執行階段建立。 如果您的元件必須完全可用於其他語言撰寫的元件，元件的匯出類型必須只公開包含在 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) 中的語言功能。 您可以使用 <xref:System.CLSCompliantAttribute> 屬性來確保您的程式碼符合 CLS 標準。 如需詳細資訊，請參閱[語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)。  
+ 因為是多種程式語言的執行環境，執行階段會支援各種資料類型和語言功能。 您使用的語言編譯器將決定有哪些執行階段功能可用，而您可使用那些功能來設計程式碼。 編譯器會建立程式碼必須使用的語法，而不是由執行階段建立。 如果您的元件必須完全可用於其他語言撰寫的元件，元件的匯出類型必須只公開包含在 [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md) (CLS) 中的語言功能。 您可以使用 <xref:System.CLSCompliantAttribute> 屬性來確保您的程式碼符合 CLS 標準。 如需詳細資訊，請參閱[語言獨立性以及與語言無關的元件](language-independence-and-language-independent-components.md)。  
   
  [回到頁首](#introduction)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "78160218"
   
 - .NET Framework Just-In-Time (JIT) 編譯器。  
   
-- .NET Framework [Ngen.exe (原生映像產生器)](../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
+- .NET Framework [Ngen.exe (原生映像產生器)](../framework/tools/ngen-exe-native-image-generator.md)。  
   
 ### <a name="compilation-by-the-jit-compiler"></a>使用 JIT 編譯器編譯  
  當載入和執行組件內容時，JIT 編譯會視需要於應用程式執行階段將 MSIL 轉換成機器碼。 由於 Common Language Runtime 會為每個支援的 CPU 架構提供 JIT 編譯器，因此開發人員可以建置可在不同架構的電腦上進行 JIT 編譯和執行的 MSIL 組件集。 然而，如果您的 Managed 程式碼呼叫特定平台的原生 API 或特定平台的類別庫，便只能在特定的作業系統上執行。  
@@ -66,7 +66,7 @@ ms.locfileid: "78160218"
  JIT 編譯還會考慮到在執行期間可能永遠不會呼叫某些程式碼。 它並不耗用時間和記憶體將可攜式執行檔中所有的 MSIL 轉換為機器碼，而是在執行期間視需要轉換 MSIL 並在記憶體中儲存產生的機器碼，以供該處理序內容中的後續呼叫存取。 載入類型並初始化時，載入器會建立虛設常式並附加至類型中的每一個方法。 初次呼叫方法時，虛設常式會將控制項傳遞至 JIT 編譯器，該編譯器會將此方法的 MSIL 轉換成機器碼，並且修改虛設常式為直接指向產生的機器碼。 因此，JIT 編譯方法的後續呼叫會直接移至機器碼。  
   
 ### <a name="install-time-code-generation-using-ngenexe"></a>使用 NGen.exe 產生安裝期間程式碼  
- 由於 JIT 編譯器會在呼叫該組件中所定義的個別方法時，將組件的 MSIL 轉換成機器碼，因此這會對執行階段的效能產生不良影響。 在大部分情況下，效能稍減是可以接受的。 最重要的是，JIT 編譯器產生的程式碼會繫結至觸發編譯的處理序。 該程式碼無法跨多個處理序共用。 為了允許在多個應用程式的引動過程間共用產生的程式碼，或允許在共用組件集的多個處理序間共用產生的程式碼，Common Language Runtime 支援事先編譯模式。 這個預先編譯模式會使用 [Ngen.exe (原生映像產生器)](../../docs/framework/tools/ngen-exe-native-image-generator.md) 將 MSIL 組件轉換成機器碼，與 JIT 編譯器相當類似。 不過，Ngen.exe 的作業與 JIT 編譯器的作業有三個不同的地方：  
+ 由於 JIT 編譯器會在呼叫該組件中所定義的個別方法時，將組件的 MSIL 轉換成機器碼，因此這會對執行階段的效能產生不良影響。 在大部分情況下，效能稍減是可以接受的。 最重要的是，JIT 編譯器產生的程式碼會繫結至觸發編譯的處理序。 該程式碼無法跨多個處理序共用。 為了允許在多個應用程式的引動過程間共用產生的程式碼，或允許在共用組件集的多個處理序間共用產生的程式碼，Common Language Runtime 支援事先編譯模式。 這個預先編譯模式會使用 [Ngen.exe (原生映像產生器)](../framework/tools/ngen-exe-native-image-generator.md) 將 MSIL 組件轉換成機器碼，與 JIT 編譯器相當類似。 不過，Ngen.exe 的作業與 JIT 編譯器的作業有三個不同的地方：  
   
 - 它會事先執行從 MSIL 至機器碼的轉換，而不是在執行應用程式時。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "78160218"
   
  在執行期間，Managed 程式碼會接收服務，例如記憶體回收、安全性、與 Unmanaged 程式碼的互通性、跨語言偵錯支援，以及增強的部署和版本控制支援。  
   
- 在 Microsoft Windows Vista 中，作業系統載入程式通過檢查 COFF 標頭中的位來檢查託管模組。 所設定的位元代表 Managed 模組。 如果載入器偵測到 Managed 模組，則會載入 mscoree.dll，而當載入和卸載 Managed 模組映像時， `_CorValidateImage` 和 `_CorImageUnloading` 會通知載入器。 `_CorValidateImage` 會執行下列動作：  
+ 在 Microsoft Windows Vista 中，作業系統載入器會藉由檢查 COFF 標頭中的位來檢查受控模組。 所設定的位元代表 Managed 模組。 如果載入器偵測到 Managed 模組，則會載入 mscoree.dll，而當載入和卸載 Managed 模組映像時， `_CorValidateImage` 和 `_CorImageUnloading` 會通知載入器。 `_CorValidateImage` 會執行下列動作：  
   
 1. 確定程式碼是有效的 Managed 程式碼。  
   
@@ -107,12 +107,12 @@ ms.locfileid: "78160218"
   
 ## <a name="see-also"></a>另請參閱
 
-- [概觀](../../docs/framework/get-started/overview.md)
-- [語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)
-- [中繼資料和自我描述元件](../../docs/standard/metadata-and-self-describing-components.md)
-- [Ilasm.exe (IL 組譯工具)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [安全性](../../docs/standard/security/index.md)
-- [與非託管代碼交互操作](../../docs/framework/interop/index.md)
-- [部署](../../docs/framework/deployment/net-framework-applications.md)
+- [概觀](../framework/get-started/overview.md)
+- [語言獨立性以及與語言無關的元件](language-independence-and-language-independent-components.md)
+- [中繼資料和自我描述元件](metadata-and-self-describing-components.md)
+- [Ilasm （IL 組譯工具）](../framework/tools/ilasm-exe-il-assembler.md)
+- [安全性](security/index.md)
+- [與 Unmanaged 程式碼互通](../framework/interop/index.md)
+- [部署](../framework/deployment/net-framework-applications.md)
 - [.NET 中的組件](assembly/index.md)
-- [應用程式域](../../docs/framework/app-domains/application-domains.md)
+- [應用程式定義域](../framework/app-domains/application-domains.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：從字串中刪除無效的字元
+title: 作法：從字串中刪除無效的字元
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Replace method
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
-ms.openlocfilehash: cc90e6609f9335b7e2f08271e5540b182901e8c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f2a1e7a3202b14d32ed02c6808fe2411465d9b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127644"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290431"
 ---
-# <a name="how-to-strip-invalid-characters-from-a-string"></a>如何：從字串中刪除無效的字元
+# <a name="how-to-strip-invalid-characters-from-a-string"></a>作法：從字串中刪除無效的字元
 下列範例會使用靜態 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，從字串中去除無效的字元。  
   
 ## <a name="example"></a>範例  
@@ -36,4 +36,4 @@ ms.locfileid: "73127644"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET 規則運算式](regular-expressions.md)

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 3a269e1f3e8fd6e982db3c241c113f471134f9d3
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fbc42ff696107f4a1b06d3611fc97a09cc4a3542
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378452"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276695"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>控制 XML 序列化的屬性
-您可以將下表中的屬性套用到類別和類別成員，以便控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或還原序列化類別之執行個體的方式。 若要了解這些屬性如何控制 XML 序列化，請參閱[使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)。  
+您可以將下表中的屬性套用到類別和類別成員，以便控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或還原序列化類別之執行個體的方式。 若要了解這些屬性如何控制 XML 序列化，請參閱[使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)。  
   
- 這些屬性也可用來控制 XML Web Service 產生的常值樣式 SOAP 訊息。 如需將這些屬性套用至 XML Web Service 方法的詳細資訊，請參閱[以 XML Web Service 進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)。  
+ 這些屬性也可用來控制 XML Web Service 產生的常值樣式 SOAP 訊息。 如需將這些屬性套用至 XML Web Service 方法的詳細資訊，請參閱[以 XML Web Service 進行 XML 序列化](xml-serialization-with-xml-web-services.md)。  
   
- 如需屬性的詳細資訊，請參閱[屬性](../../../docs/standard/attributes/index.md)。  
+ 如需屬性的詳細資訊，請參閱[屬性](../attributes/index.md)。  
   
-|屬性|適用對象|指定|  
+|屬性|適用於|指定|  
 |---------------|----------------|---------------|  
 |<xref:System.Xml.Serialization.XmlAnyAttributeAttribute>|公用欄位、屬性、參數或傳回 <xref:System.Xml.XmlAttribute> 物件陣列的傳回值。|當還原序列化時，陣列將填入代表所有結構描述未知之 XML 屬性的 <xref:System.Xml.XmlAttribute> 物件。|  
 |<xref:System.Xml.Serialization.XmlAnyElementAttribute>|公用欄位、屬性、參數或傳回 <xref:System.Xml.XmlElement> 物件陣列的傳回值。|當還原序列化時，陣列將填入代表所有結構描述未知之 XML 項目的 <xref:System.Xml.XmlElement> 物件。|  
@@ -42,13 +42,13 @@ ms.locfileid: "83378452"
   
  除了這些在 <xref:System.Xml.Serialization> 命名空間都找得到的屬性之外，您也可以對欄位套用 <xref:System.ComponentModel.DefaultValueAttribute> 屬性。 如果未指定任何值，**DefaultValueAttribute** 會設定將自動指派給成員的值。  
   
- 若要控制編碼的 SOAP XML 序列化，請參閱[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)。  
+ 若要控制編碼的 SOAP XML 序列化，請參閱[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [如何：指定 XML 資料流的替代元素名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)
+- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [HOW TO：序列化物件](how-to-serialize-an-object.md)
+- [如何：還原序列化物件](how-to-deserialize-an-object.md)

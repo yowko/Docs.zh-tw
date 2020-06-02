@@ -12,12 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87c3dbde2eb2b5a19b91f34bb2b088af5c0d1827
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711528"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290600"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>規則運算式中的反向參考建構
 
@@ -26,13 +26,13 @@ ms.locfileid: "75711528"
 > [!NOTE]
 > 對於取代字串中的具名和編號擷取群組，會使用不同的語法來參考。 如需詳細資訊，請參閱[替代](substitutions-in-regular-expressions.md)。
 
-.NET 會定義個別的語言項目，以參考編號和具名擷取群組。 如需擷取群組的詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+.NET 會定義個別的語言項目，以參考編號和具名擷取群組。 如需擷取群組的詳細資訊，請參閱[群組建構](grouping-constructs-in-regular-expressions.md)。
 
 ## <a name="numbered-backreferences"></a>編號反向參考
 
 編號反向參考會使用下列語法：
 
-`\`*編號*
+`\` *number*
 
 其中 *number* 是規則運算式中的擷取群組序數位置。 例如，`\4` 會比對第四個擷取群組的內容。 如果規則運算式模式中未定義 *number*，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。 例如，規則運算式 `\b(\w+)\s\1` 有效，因為 `(\w+)` 是運算式中第一個和唯一的擷取群組。 另一方面，`\b(\w+)\s\2` 無效並擲回引數例外狀況，因為沒有編號為 `\2` 的擷取群組。 此外，如果 *number* 識別在特定序數位置的擷取群組，但擷取群組已經被指派和其序數順序不同的數值名稱，則規則運算式剖析器也會擲回 <xref:System.ArgumentException>。
 
@@ -46,7 +46,7 @@ ms.locfileid: "75711528"
 
 - 如果規則運算式包含未定義之群組號碼的反向參考，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。
 
-如果歧義是一個問題，則可以使用`\k<`*名稱*`>`標記法，這是明確的，不能與八進位字元代碼混淆。 同樣地，十六進位字碼 (例如 `\xdd`) 不會不明確，而且不會與反向參考混淆。
+如果不明確的問題，您可以使用 `\k<` *名稱* `>` 標記法，這是明確的，而且不能與八進位字元碼混淆。 同樣地，十六進位字碼 (例如 `\xdd`) 不會不明確，而且不會與反向參考混淆。
 
 下列範例會在字串中尋找雙字組字元。 它會定義由下列項目組成的規則運算式 `(\w)\1`。
 
@@ -92,7 +92,7 @@ ms.locfileid: "75711528"
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]
 
-不過，如果 *name* 是數值的字串表示，且在該位置的擷取群組已經明確地被指派數值名稱，則規則運算式剖析器無法根據擷取群組的序數位置識別它。 相反，它拋出一<xref:System.ArgumentException>個 。 以下示例中的唯一捕獲組名為"2"。 因為 `\k` 建構是用來定義名為 "1" 的反向參考，所以規則運算式剖析器無法識別第一個擷取群組並擲回例外狀況。
+不過，如果 *name* 是數值的字串表示，且在該位置的擷取群組已經明確地被指派數值名稱，則規則運算式剖析器無法根據擷取群組的序數位置識別它。 相反地，它會擲回 <xref:System.ArgumentException> 。 下列範例中的唯一捕捉群組會命名為 "2"。 因為 `\k` 建構是用來定義名為 "1" 的反向參考，所以規則運算式剖析器無法識別第一個擷取群組並擲回例外狀況。
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]
@@ -138,4 +138,4 @@ ms.locfileid: "75711528"
 
 ## <a name="see-also"></a>另請參閱
 
-- [正則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

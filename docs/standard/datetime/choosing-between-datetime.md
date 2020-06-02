@@ -13,12 +13,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 5425d94daf8ab023bef4a1a68f06d5c276499825
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5091d7104f400ae186d1a0ca94df9d2722f95b20
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132583"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286141"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>在 DateTime、DateTimeOffset、 TimeSpan 和  TimeZoneInfo 之間選擇
 
@@ -38,14 +38,14 @@ ms.locfileid: "73132583"
 
 - 若要執行日期和時間運算，且該運算可能有會唯一明確地識別單一時間點的結果。
 
-.NET 包含 <xref:System.DateTime>、<xref:System.DateTimeOffset>、<xref:System.TimeSpan>和 <xref:System.TimeZoneInfo> 類型，這些都可用來建立使用日期和時間的應用程式。
+.Net 包含 <xref:System.DateTime> 、 <xref:System.DateTimeOffset> 、 <xref:System.TimeSpan> 和 <xref:System.TimeZoneInfo> 類型，這些都可以用來建立使用日期和時間的應用程式。
 
 > [!NOTE]
-> 本主題不會討論 <xref:System.TimeZone>，因為它的功能幾乎已完全併入 <xref:System.TimeZoneInfo> 類別中。 盡可能使用 <xref:System.TimeZoneInfo> 類別，而不是 <xref:System.TimeZone> 類別。
+> 本主題不會討論， <xref:System.TimeZone> 因為它的功能幾乎已完全納入 <xref:System.TimeZoneInfo> 類別中。 盡可能使用 <xref:System.TimeZoneInfo> 類別，而不是 <xref:System.TimeZone> 類別。
 
 ## <a name="the-datetime-structure"></a>DateTime 結構
 
-<xref:System.DateTime> 值會定義特定的日期和時間。 其中包含 <xref:System.DateTime.Kind%2A> 屬性，可提供與該日期和時間所屬時區相關的有限資訊。 由 <xref:System.DateTimeKind> 屬性傳回的 <xref:System.DateTime.Kind%2A> 值，表示 <xref:System.DateTime> 值是否代表當地時間 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、國際標準時間 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) 或未指定的時間 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)。
+<xref:System.DateTime> 值會定義特定的日期和時間。 它包含 <xref:System.DateTime.Kind%2A> 屬性，提供有關該日期和時間所屬時區的有限資訊。 由 <xref:System.DateTimeKind> 屬性傳回的 <xref:System.DateTime.Kind%2A> 值，表示 <xref:System.DateTime> 值是否代表當地時間 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、國際標準時間 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) 或未指定的時間 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)。
 
 <xref:System.DateTime> 結構適用於執行下列項目的應用程式：
 
@@ -88,7 +88,7 @@ ms.locfileid: "73132583"
 [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
 
-此輸出顯示在本範例中的每個日期和時間值可屬於至少三個不同時區。 2007 年 6 月 10 日的 <xref:System.DateTimeOffset> 值顯示出若日期和時間值代表日光節約時間，則其相對於 UTC 的位移甚至不一定會對應於起始時區的基底 UTC 位移，或對應於從它的顯示名稱中找到的相對於 UTC 的位移。 這表示因為單一 <xref:System.DateTimeOffset> 的值並不會和時區緊密結合，所以它無法反映與日光節約時間相互轉換的時區。 特別是當使用日期和時間運算來管理 <xref:System.DateTimeOffset> 值的時候，這會有問題。 如需在考慮時區調整規則的方式下該如何執行日期和時間運算的討論，請參閱[使用日期和時間執行算術運算](performing-arithmetic-operations.md)。
+此輸出顯示在本範例中的每個日期和時間值可屬於至少三個不同時區。 2007 年 6 月 10 日的 <xref:System.DateTimeOffset> 值顯示出若日期和時間值代表日光節約時間，則其相對於 UTC 的位移甚至不一定會對應於起始時區的基底 UTC 位移，或對應於從它的顯示名稱中找到的相對於 UTC 的位移。 這表示因為單一 <xref:System.DateTimeOffset> 的值並不會和時區緊密結合，所以它無法反映與日光節約時間相互轉換的時區。 特別是當使用日期和時間運算來管理 <xref:System.DateTimeOffset> 值的時候，這會有問題。 如需如何以考慮時區調整規則的方式來執行日期和時間運算的討論，請參閱[使用日期和時間執行算數運算](performing-arithmetic-operations.md)。
 
 ## <a name="the-timespan-structure"></a>TimeSpan 結構
 
@@ -96,11 +96,11 @@ ms.locfileid: "73132583"
 
 - 反映出兩個日期和時間值之間的時間間隔。 例如，從另一個值中減去 <xref:System.DateTime> 值會傳回 <xref:System.TimeSpan> 值。
 
-- 測量已耗用時間。 例如，<xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.TimeSpan> 值，反映從呼叫開始測量已耗用時間的其中一個 <xref:System.Diagnostics.Stopwatch> 方法以來所經過的時間間隔。
+- 測量已耗用時間。 例如， <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> 屬性會傳回一個 <xref:System.TimeSpan> 值，反映從呼叫開始測量已耗用時間的其中一個方法以來所經過的時間間隔 <xref:System.Diagnostics.Stopwatch> 。
 
-當該值反映不參考特定日期的時間時，也可以使用 <xref:System.TimeSpan> 值做為 <xref:System.DateTime> 值的取代。 這種用法類似于 <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> 和 <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> 屬性，其會傳回代表不參考日期之時間的 <xref:System.TimeSpan> 值。 例如， <xref:System.TimeSpan> 結構可用來反映商店每日開始營業或打烊的時間，或可用來代表任何有規律事件發生的時間。
+<xref:System.TimeSpan>值也可以做為值的取代 <xref:System.DateTime> ，而該值會反映沒有特定日期參考的時間。 這種用法類似于 <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> 和 <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> 屬性，其會傳回 <xref:System.TimeSpan> 代表不參考日期之時間的值。 例如， <xref:System.TimeSpan> 結構可用來反映商店每日開始營業或打烊的時間，或可用來代表任何有規律事件發生的時間。
 
-下列範例會定義 `StoreInfo` 結構，其中包含用來儲存開始營業和打烊時間的 <xref:System.TimeSpan> 物件，以及代表商店所在時區的 <xref:System.TimeZoneInfo> 物件。 該結構也包含兩種方法，`IsOpenNow` 和 `IsOpenAt`，假定使用者處於當地時區，該結構會表示商店是否於使用者指定的時間開始營業。
+下列範例會定義 `StoreInfo` 結構，其中包含用來儲存開始營業和打烊時間的 <xref:System.TimeSpan> 物件，以及代表商店所在時區的 <xref:System.TimeZoneInfo> 物件。 該結構也包含兩種方法， `IsOpenNow` 和 `IsOpenAt`，假定使用者處於當地時區，該結構會表示商店是否於使用者指定的時間開始營業。
 
 [!code-csharp[Conceptual.ChoosingDates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.choosingdates/cs/datetimereplacement1.cs#1)]
 [!code-vb[Conceptual.ChoosingDates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.choosingdates/vb/datetimereplacement1.vb#1)]
@@ -118,6 +118,6 @@ ms.locfileid: "73132583"
 
 當日期和時間物件已具現化後，僅當日期和時間值的所屬時區已知時，才有可能利用 .NET 支援的時區。 情況往往並非如此，特別是在 Web 或網路應用程式的情況下。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [日期、時間及時區](../../../docs/standard/datetime/index.md)
+- [日期、時間和時區](index.md)

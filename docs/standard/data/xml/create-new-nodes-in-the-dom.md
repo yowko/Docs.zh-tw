@@ -3,12 +3,12 @@ title: 在 DOM 中建立新節點
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d99a3c68c7554ab266d71a4cbf2e676bc6db8cbc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710995"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289573"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>在 DOM 中建立新節點
 <xref:System.Xml.XmlDocument> 有一個適用於所有節點型別的建立方法。 必要時請為該方法提供名稱，並針對具有內容的節點 (例如，文字節點) 提供內容或其他參數，即可建立節點。 下列方法需要填入名稱及一些其他參數來建立適當的節點。  
@@ -37,7 +37,7 @@ ms.locfileid: "75710995"
   
  其他節點型別除了需為參數提供資料以外，還有更多需求。  
   
- 如需屬性的詳細資訊，請參閱[為 DOM 中的項目建立新屬性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。 如需項目及屬性名稱驗證的詳細資訊，請參閱[建立新節點時的 XML 項目和屬性名稱驗證](../../../../docs/standard/data/xml/xml-element-and-attribute-name-verification-when-creating-new-nodes.md)。 若要建立實體參考，請參閱[建立新實體參考](../../../../docs/standard/data/xml/creating-new-entity-references.md)。 如需命名空間如何影響實體參考之擴充的詳細資訊，請參閱[命名空間對包含項目和屬性的新節點之實體參考擴充的影響](../../../../docs/standard/data/xml/namespace-affect-on-entity-ref-expansion-for-new-nodes.md)。  
+ 如需屬性的詳細資訊，請參閱[為 DOM 中的項目建立新屬性](creating-new-attributes-for-elements-in-the-dom.md)。 如需項目及屬性名稱驗證的詳細資訊，請參閱[建立新節點時的 XML 項目和屬性名稱驗證](xml-element-and-attribute-name-verification-when-creating-new-nodes.md)。 若要建立實體參考，請參閱[建立新實體參考](creating-new-entity-references.md)。 如需命名空間如何影響實體參考之擴充的詳細資訊，請參閱[命名空間對包含項目和屬性的新節點之實體參考擴充的影響](namespace-affect-on-entity-ref-expansion-for-new-nodes.md)。  
   
  一旦建立新節點，即有數個方法可用來將其插入樹狀結構。 該表格會列出這些方法，並說明新節點在 XML 文件物件模型 (DOM) 中會出現於何處。  
   
@@ -51,4 +51,4 @@ ms.locfileid: "75710995"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

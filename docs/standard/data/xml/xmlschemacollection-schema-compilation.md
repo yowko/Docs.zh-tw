@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3d517652665d6d0693e141d623483ff8946bbbf4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159282"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290236"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 結構描述編譯
 **XmlSchemaCollection** 是一種快取 (Cache) 或程式庫，您可在此儲存和驗證 XML 資料精簡 (XDR) 和 XML 結構描述定義語言 (XSD) 結構描述。 **XmlSchemaCollection** 會藉由在記憶體中快取結構描述，而不是從檔案或 URL 存取它們的方式來提升效能。  
@@ -20,7 +20,7 @@ ms.locfileid: "78159282"
 > 雖然 **XmlSchemaCollection** 類別同時儲存了 XDR 結構描述和 XML 結構描述，但任何會使用或傳回 **XmlSchema** 物件的方法和屬性都只能支援 XML 結構描述。  
   
 > [!IMPORTANT]
-> <xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。 如需有關 <xref:System.Xml.Schema.XmlSchemaSet> 類別的詳細資訊，請參閱[用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
+> <xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。 如需有關 <xref:System.Xml.Schema.XmlSchemaSet> 類別的詳細資訊，請參閱[用於結構描述編譯的 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)。  
   
 ## <a name="add-schemas-to-the-collection"></a>將結構描述加入集合  
  **XmlSchemaCollection** 的 **Add** 方法會將結構描述載入集合，這時結構描述會和命名空間 URI 建立關聯。 對 XML 結構描述來說，命名空間 URI 通常是結構描述的目標命名空間。 對 XDR 結構描述來說，命名空間 URI 是當將結構描述加入集合時指定的命名空間。  
@@ -57,5 +57,5 @@ vr.Schemas.Add(xsc);
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用 XmlSchemaCollection 的 XDR 驗證](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
-- [使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)
+- [使用 XmlSchemaCollection 的 XDR 驗證](xdr-validation-with-xmlschemacollection.md)
+- [使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證](xml-schema-xsd-validation-with-xmlschemacollection.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: 0ad98af240cf8d1041d6a8b64ab71a56e763f76f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e435e0281165b4a9f12bbccbeb10401b57375dcb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419053"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290197"
 ---
 # <a name="names-of-namespaces"></a>命名空間的名稱
 就像其他命名指導方針一樣，命名命名空間的目標是要讓程式設計人員能夠使用架構來立即知道命名空間的內容有何可能。 下列範本會指定命名空間的一般規則：
 
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`
 
- 範例如下所示：
+ 範例如下：
 
  `Fabrikam.Math` `Litware.Security`
 
@@ -84,5 +84,5 @@ ms.locfileid: "83419053"
 
 ## <a name="see-also"></a>另請參閱
 
-- [架構設計方針](../../../docs/standard/design-guidelines/index.md)
-- [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [架構設計方針](index.md)
+- [命名方針](naming-guidelines.md)

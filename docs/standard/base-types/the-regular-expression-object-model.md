@@ -35,27 +35,27 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad7957fd555c1de8fe47c092d3eb399a803fb1fb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159997"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290898"
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
 <a name="introduction"></a> 本主題說明用來處理 .NET 規則運算式的物件模型。 它包含下列區段：  
   
 - [正則運算式引擎](#Engine)  
   
-- [匹配集合和匹配物件](#Match_and_MCollection)  
+- [MatchCollection 和 Match 物件](#Match_and_MCollection)  
   
-- [組集合](#GroupCollection)  
+- [群組集合](#GroupCollection)  
   
-- [捕獲的組](#the_captured_group)  
+- [已捕獲的群組](#the_captured_group)  
   
-- [捕獲集合](#CaptureCollection)  
+- [Capture 集合](#CaptureCollection)  
   
-- [個人捕獲](#the_individual_capture)  
+- [個別的 Capture](#the_individual_capture)  
   
 <a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>規則運算式引擎  
@@ -284,7 +284,7 @@ ms.locfileid: "78159997"
   
  <xref:System.Text.RegularExpressions.Group> 類別的屬性會提供擷取群組的相關資訊：`Group.Value` 屬性包含擷取的子字串，`Group.Index` 屬性會指出擷取群組在輸入文字中的開始位置，`Group.Length` 屬性包含擷取文字的長度，而 `Group.Success` 屬性會指出子字串是否符合擷取群組所定義的模式。  
   
- 將數量詞套用至群組 (如需詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) 會以兩種方式來修改每個擷取群組各一個擷取的關聯性：  
+ 將數量詞套用至群組 (如需詳細資訊，請參閱[數量詞](quantifiers-in-regular-expressions.md)) 會以兩種方式來修改每個擷取群組各一個擷取的關聯性：  
   
 - 如果將 `*` 或 `*?` 數量詞 (可指定零或多個相符項目) 套用至群組，擷取群組在輸入字串中可會沒有相符項目。 沒有擷取文字時，<xref:System.Text.RegularExpressions.Group> 物件的屬性會設定如下表所示。  
   
@@ -352,5 +352,5 @@ ms.locfileid: "78159997"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Text.RegularExpressions>
-- [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
-- [正則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [.NET 規則運算式](regular-expressions.md)
+- [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

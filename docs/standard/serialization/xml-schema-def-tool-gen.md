@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 21ce4ad846e21a328ba199f6253bd259be9d932b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 0e4e84ea7e11b2e7a00c852d4a2075747c71267e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379528"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288962"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。
@@ -38,7 +38,7 @@ _C： \\ Program Files （x86） \\ Microsoft sdk \\ Windows \\ {version} \\ Bin
     <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema" />  
     ```  
   
-3. 視需要，使用方法、屬性或欄位來變更類別。 如需使用屬性修改類別的詳細資訊，請參閱[使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)和[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)。  
+3. 視需要，使用方法、屬性或欄位來變更類別。 如需使用屬性修改類別的詳細資訊，請參閱[使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)和[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)。  
   
  檢查在序列化一個類別 (或多個類別) 時產生的 XML 資料流結構描述，通常很有用。 例如，您可發佈結構描述供其他人使用，或是將它與一個您想要達到符合性的結構描述比較。  
   
@@ -56,12 +56,12 @@ _C： \\ Program Files （x86） \\ Microsoft sdk \\ Windows \\ {version} \\ Bin
   
      將寫入結構描述，以 "schema0.xsd" 名稱開始。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Data.DataSet>
-- [XML 結構描述定義工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
-- [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML 架構定義工具（Xsd.exe）](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML 結構描述定義工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [XML 序列化簡介](introducing-xml-serialization.md)
+- [XML 架構定義工具（Xsd.exe）](xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [HOW TO：序列化物件](how-to-serialize-an-object.md)
+- [如何：還原序列化物件](how-to-deserialize-an-object.md)

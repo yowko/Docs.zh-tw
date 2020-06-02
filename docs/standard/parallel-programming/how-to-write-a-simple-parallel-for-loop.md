@@ -1,5 +1,5 @@
 ---
-title: 如何：撰寫簡單的 Parallel.For 迴圈
+title: 作法：撰寫簡單的 Parallel.For 迴圈
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b18e110b86389dd5d28bbc370e207aaaf7571aaf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139664"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290729"
 ---
-# <a name="how-to-write-a-simple-parallelfor-loop"></a>如何：撰寫簡單的 Parallel.For 迴圈
+# <a name="how-to-write-a-simple-parallelfor-loop"></a>作法：撰寫簡單的 Parallel.For 迴圈
 
 本主題包含兩個範例，示範 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法。 第一個範例使用 <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> 方法多載，而第二個會使用 <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> 多載，這是 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法的兩個最簡單的多載。 當您不需要取消迴圈、中斷迴圈的反覆項目，或維護任何執行緒區域狀態時，可以使用這兩個 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法的多載。
 
 > [!NOTE]
-> 本文件使用 Lambda 運算式來定義 TPL 中的委派。 如果您不熟悉 C# 或 Visual Basic 中的 Lambda 運算式，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。
+> 本文件使用 Lambda 運算式來定義 TPL 中的委派。 如果您不熟悉 C# 或 Visual Basic 中的 Lambda 運算式，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)。
 
 第一個範例會計算單一目錄中的檔案大小。 第二個會計算兩個矩陣的乘積。
 
@@ -44,7 +44,7 @@ ms.locfileid: "73139664"
 
 ## <a name="the-delegate"></a>委派
 
-這個 <xref:System.Threading.Tasks.Parallel.For%2A> 多載的第三個參數是 C# 中類型`Action<int>` 或 Visual Basic 中類型 `Action(Of Integer)` 委派。 `Action` 委派不論有零個、一個或 16 個類型參數，都一律會傳回 void。 在 Visual Basic 中，`Action` 的行為使用 `Sub` 來定義。 這個範例會使用 Lambda 運算式來建立委派，但您也可以用其他方式建立委派。 如需詳細資訊，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。
+這個 <xref:System.Threading.Tasks.Parallel.For%2A> 多載的第三個參數是 C# 中類型`Action<int>` 或 Visual Basic 中類型 `Action(Of Integer)` 委派。 `Action` 委派不論有零個、一個或 16 個類型參數，都一律會傳回 void。 在 Visual Basic 中，`Action` 的行為使用 `Sub` 來定義。 這個範例會使用 Lambda 運算式來建立委派，但您也可以用其他方式建立委派。 如需詳細資訊，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)。
 
 ## <a name="the-iteration-value"></a>反覆項目值
 
@@ -72,5 +72,5 @@ ms.locfileid: "73139664"
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
-- [資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [並行程式設計](../../../docs/standard/parallel-programming/index.md)
+- [資料平行處理](data-parallelism-task-parallel-library.md)
+- [平行程式設計](index.md)

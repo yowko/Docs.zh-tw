@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: 3f020db49bcdcbf6ce3d573348a93b06e87db199
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242721"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291171"
 ---
 # <a name="mutexes"></a>Mutex
-您可以使用 <xref:System.Threading.Mutex> 物件來提供獨佔的資源存取權。 <xref:System.Threading.Mutex> 類別所使用的系統資源比 <xref:System.Threading.Monitor> 類別還多，但前者可跨越應用程式定義域的界限進行封送處理、可搭配多個等候使用，並可用來同步處理不同處理序內的執行緒。 如需受管理之同步處理機制的比較，請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
+您可以使用 <xref:System.Threading.Mutex> 物件來提供獨佔的資源存取權。 <xref:System.Threading.Mutex> 類別所使用的系統資源比 <xref:System.Threading.Monitor> 類別還多，但前者可跨越應用程式定義域的界限進行封送處理、可搭配多個等候使用，並可用來同步處理不同處理序內的執行緒。 如需受管理之同步處理機制的比較，請參閱[同步處理原始物件概觀](overview-of-synchronization-primitives.md)。  
   
  如需程式碼範例，請參閱 <xref:System.Threading.Mutex.%23ctor%2A> 建構函式的參考文件。  
   
@@ -55,5 +55,5 @@ ms.locfileid: "81242721"
 - <xref:System.Security.AccessControl.MutexAccessRule?displayProperty=nameWithType>
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - [執行緒物件和功能](threading-objects-and-features.md)
-- [螺紋和螺紋](threads-and-threading.md)
+- [執行緒和執行緒](threads-and-threading.md)
 - [執行緒](index.md)

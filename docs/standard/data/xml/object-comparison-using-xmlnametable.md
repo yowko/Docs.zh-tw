@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-ms.openlocfilehash: 63278f1aa1fe47377d2dae322a9d12338bbe45dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0dd68e8c9beadf26f858a4a5100e2824bbbd4a19
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710527"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292029"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>使用 XmlNameTable 進行物件比較
 建立 **XmlDocuments** 時，會為此文件特別建立一個名稱表。 當 XML 載入文件，或新項目或屬性建立時，屬性和項目名稱會放入 **XmlNameTable**。 您也可以使用另一個文件中現有的 **NameTable** 來建立 **XmlDocument**。 當 **XmlDocuments** 是以使用 **XmlNameTable** 參數的建構函式建立時，文件可以存取已經儲存在 **XmlNameTable** 中的節點名稱、命名空間和前置詞。 無論名稱表是以何種名稱載入，一旦名稱儲存在表格後，就可以快速地透過物件比較來比較名稱，而不需要進行字串比較。 字串也可以使用 <xref:System.Xml.NameTable.Add%2A> 加入至名稱表。 下列程式碼範例將說明要建立的名稱表，以及要加入表格的字串 **MyString**。 之後，**XmlDocument** 會透過此表格來建立，並且 **Myfile.xml** 中的項目和屬性名稱也會加入至現有的名稱表。  
@@ -53,4 +53,4 @@ if (((object)node1.Name) == ((object)node2.Name))
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

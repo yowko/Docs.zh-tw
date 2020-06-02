@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441002"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289361"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>在 .NET 中使用字串的最佳做法
 
@@ -56,7 +56,7 @@ ms.locfileid: "83441002"
 
 在 .NET 中的字串操作方法大多都是多載。 一般而言，您可讓一或多個多載接受預設值，而其他不接受預設值的多載，則定義用來比較或操作字串的精確方式。 大部分不依賴預設值的方法都會包含 <xref:System.StringComparison>類型的參數，其為一種列舉類型，可明確指定依據文化特性和大小寫進行字串比較的規則。 下表說明 <xref:System.StringComparison> 列舉類型成員。
 
-|StringComparison 成員|說明|
+|StringComparison 成員|描述|
 |-----------------------------|-----------------|
 |<xref:System.StringComparison.CurrentCulture>|使用目前文化特性執行區分大小寫的比較。|
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|使用目前文化特性執行不區分大小寫的比較。|
@@ -309,7 +309,7 @@ InvariantCulture: a + ̊ = å
 當您向使用者顯示非字串資料 (例如數字及日期和時間) 時，請採用使用者的文化特性設定進行格式化。 根據預設，下列所有項目都會在格式化作業中使用目前執行緒文化特性：
 
 - [C#](../../csharp/language-reference/tokens/interpolated.md) 和 [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) 編譯器支援的插入字串。
-- 使用 [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) 或 [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) 串連運算子或直接呼叫 <xref:System.String.Concat%2A?displayProperty=nameWithType> 方法的字串串連作業。
+- 使用 [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) 或 [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) 串連運算子或直接呼叫 <xref:System.String.Concat%2A?displayProperty=nameWithType> 方法的字串串連作業。
 - <xref:System.String.Format%2A?displayProperty=nameWithType> 方法
 - 數值類型以及日期和時間類型的 `ToString` 方法。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 56900ddab5e1e6ee5375c8979dc19694d4ad9c54
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159646"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279694"
 ---
 # <a name="exceptions-in-managed-threads"></a>Managed 執行緒中的例外狀況
 從 .NET Framework version 2.0 開始，通用語言執行平台允許執行緒中大多數未處理的例外狀況自然地繼續。 在大多數情況下，這表示未處理的例外狀況導致應用程式終止。  
@@ -64,7 +64,7 @@ ms.locfileid: "78159646"
   
 - 如果執行緒必須停止，處理序終止作業才能繼續，請讓執行緒成為背景執行緒，以便在處理序結束時自動終止。  
   
- 在所有情況下，此策略應該遵循例外狀況的設計方針。 請參閱[例外狀況的設計方針](../../../docs/standard/design-guidelines/exceptions.md)。  
+ 在所有情況下，此策略應該遵循例外狀況的設計方針。 請參閱[例外狀況的設計方針](../design-guidelines/exceptions.md)。  
   
 ### <a name="application-compatibility-flag"></a>應用程式相容性旗標  
  系統管理員可以在應用程式組態檔的 `<runtime>` 區段中放置相容性旗標，做為暫存的相容性度量。 這會導致通用語言執行平台還原為 1.0 和 1.1 版的行為。  
@@ -74,8 +74,8 @@ ms.locfileid: "78159646"
 ```  
   
 ## <a name="host-override"></a>主機覆寫  
- 在 .NET Framework 2.0 版中，Unmanaged 主機可以使用裝載 API 中的 [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 介面，覆寫通用語言執行平台的預設未處理例外狀況原則。 [Iclrpolicymanager:: Setunhandledexceptionpolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 函數用來設定未處理例外狀況的原則。  
+ 在 .NET Framework 2.0 版中，Unmanaged 主機可以使用裝載 API 中的 [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 介面，覆寫通用語言執行平台的預設未處理例外狀況原則。 [Iclrpolicymanager:: Setunhandledexceptionpolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 函數用來設定未處理例外狀況的原則。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [託管執行緒基礎知識](../../../docs/standard/threading/managed-threading-basics.md)
+- [Managed 執行緒基本概念](managed-threading-basics.md)

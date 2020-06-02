@@ -1,16 +1,17 @@
 ---
 title: 使用 DataAdapter 更新資料來源
+description: 瞭解 DataAdapter 的更新方法如何將資料集的變更解析回 ADO.NET 應用程式中的資料來源。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 4a6e22352a309f9d624c6922abc531cb31a5baf1
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: e2348a3a89aa1c28856bfc21aaa25f2c8327aac7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736692"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286180"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>使用 DataAdapter 更新資料來源
 
@@ -46,14 +47,14 @@ ms.locfileid: "71736692"
 > [!NOTE]
 > 如果 `SelectCommand` 傳回 OUTER JOIN 的結果，`DataAdapter` 將不會為產生的 `PrimaryKey` 設定 `DataTable` 值。 您必須自己定義 `PrimaryKey`，確保正確解析重複的資料列。 如需詳細資訊，請參閱[定義主要索引鍵](./dataset-datatable-dataview/defining-primary-keys.md)。
 
-`Update`若要處理呼叫方法時可能發生的例外狀況，您可以`RowUpdated`使用事件來回應發生的資料列更新錯誤（請參閱[處理 DataAdapter 事件](handling-dataadapter-events.md)），或者您可以將`DataAdapter.ContinueUpdateOnError`設`true`為 before當`Update`更新完成時，呼叫並回應儲存`RowError`于特定資料列之屬性中的錯誤資訊（請參閱資料[列錯誤資訊](./dataset-datatable-dataview/row-error-information.md)）。
+若要處理呼叫方法時可能會發生的例外狀況 `Update` ，您可以使用 `RowUpdated` 事件來回應發生的資料列更新錯誤（請參閱[處理 DataAdapter 事件](handling-dataadapter-events.md)），或者您可以在 `DataAdapter.ContinueUpdateOnError` 呼叫之前將設定為 `true` `Update` ，然後在更新完成時回應儲存于特定資料列之屬性中的錯誤資訊 `RowError` （請參閱資料[列錯誤資訊](./dataset-datatable-dataview/row-error-information.md)）。
 
 > [!NOTE]
-> `AcceptChanges` `Original` `DataRow`在、或`DataTable`上呼叫`Current`將會使用的值來覆寫的所有值。 `DataRow` `DataRow` `DataSet` 如果識別資料列為唯一的欄位值已經被修改，則在呼叫 `AcceptChanges` 之後，`Original` 值就不會再與資料來源內的值相符。 此時，系統會在呼叫 `AcceptChanges` 的 Update 方法期間，自動針對每個資料列呼叫 `DataAdapter`。 您可以先將 `AcceptChangesDuringUpdate` 的 `DataAdapter` 屬性設定為 false，或針對 `RowUpdated` 事件建立事件處理常式並將 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> 設定為 <xref:System.Data.UpdateStatus.SkipCurrentRow>，藉以在呼叫 Update 方法期間保留原始值。 如需詳細資訊，請參閱[合併資料集內容](./dataset-datatable-dataview/merging-dataset-contents.md)和[處理 DataAdapter 事件](handling-dataadapter-events.md)。
+> `AcceptChanges`在 `DataSet` 、或上呼叫將會使用的 `DataTable` `DataRow` `Original` `DataRow` 值來覆寫的所有值 `Current` `DataRow` 。 如果識別資料列為唯一的欄位值已經被修改，則在呼叫 `AcceptChanges` 之後，`Original` 值就不會再與資料來源內的值相符。 此時，系統會在呼叫 `AcceptChanges` 的 Update 方法期間，自動針對每個資料列呼叫 `DataAdapter`。 您可以先將 `AcceptChangesDuringUpdate` 的 `DataAdapter` 屬性設定為 false，或針對 `RowUpdated` 事件建立事件處理常式並將 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> 設定為 <xref:System.Data.UpdateStatus.SkipCurrentRow>，藉以在呼叫 Update 方法期間保留原始值。 如需詳細資訊，請參閱[合併資料集內容](./dataset-datatable-dataview/merging-dataset-contents.md)和[處理 DataAdapter 事件](handling-dataadapter-events.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何藉由明確地設定`UpdateCommand`的`DataAdapter`並呼叫其`Update`方法，來執行修改過的資料列更新。 請注意，在 UPDATE 陳述式之 WHERE 子句中指定的參數是設定為使用 `Original` 的 `SourceColumn` 值。 這一點相當重要，因為 `Current` 值可能已經修改，而不符合資料來源中的值。 `Original` 值是用來填入資料來源之 `DataTable` 的值。
+下列範例示範如何藉由明確地設定的 `UpdateCommand` `DataAdapter` 並呼叫其方法，來執行修改過的資料列更新 `Update` 。 請注意，在 UPDATE 陳述式之 WHERE 子句中指定的參數是設定為使用 `Original` 的 `SourceColumn` 值。 這一點相當重要，因為 `Current` 值可能已經修改，而不符合資料來源中的值。 `Original` 值是用來填入資料來源之 `DataTable` 的值。
 
 [!code-csharp[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/CS/source.cs#1)]
 [!code-vb[DataWorks SqlClient.DataAdapterUpdate#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.DataAdapterUpdate/VB/source.vb#1)]
@@ -180,7 +181,7 @@ ALTER TABLE [dbo].[Course] CHECK CONSTRAINT [FK_Course_Department]
 GO
 ```
 
-C#使用此程式碼範例 Visual Basic 專案，可以在[開發人員程式碼範例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D)中找到。
+使用此程式碼範例的 c # 和 Visual Basic 專案，可以在[開發人員程式碼範例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=How%20to%20use%20DataAdapter%20to%20retrieve%20and%20update%20data&f%5B1%5D)中找到。
 
 ```csharp
 using System;
@@ -383,4 +384,4 @@ class Program {
 - [AcceptChanges 和 RejectChanges](./dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
 - [合併 DataSet 內容](./dataset-datatable-dataview/merging-dataset-contents.md)
 - [擷取身分識別或自動編號值](retrieving-identity-or-autonumber-values.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

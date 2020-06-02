@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159386"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291093"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>同步多執行緒處理的資料
 
@@ -22,11 +22,11 @@ ms.locfileid: "78159386"
   
 - 同步程式碼區域。 您可以使用 <xref:System.Threading.Monitor> 類別或此類別的編譯器支援，僅同步處理需要它的程式碼區塊，進而改善效能。  
   
-- 手動同步處理。 您可以使用 .NET Framework 類別庫提供的同步物件。 請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)，其中包括 <xref:System.Threading.Monitor> 類別的討論。  
+- 手動同步處理。 您可以使用 .NET Framework 類別庫提供的同步物件。 請參閱[同步處理原始物件概觀](overview-of-synchronization-primitives.md)，其中包括 <xref:System.Threading.Monitor> 類別的討論。  
   
 - 同步處理的內容。 針對 .NET Framework 和 Xamarin 應用程式，您可以使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 來啟用 <xref:System.ContextBoundObject> 物件的簡單自動同步。  
   
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的集合類別。 這些類別會提供內建同步處理新增和移除作業。 如需詳細資訊，請參閱[安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)。  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的集合類別。 這些類別會提供內建同步處理新增和移除作業。 如需詳細資訊，請參閱[安全執行緒集合](../collections/thread-safe/index.md)。  
   
  通用語言執行平台提供執行緒模型，其中類別分為一些分類，可以根據需求以各種不同的方式同步處理。 下表顯示為指定同步處理分類的欄位和方法提供哪些同步處理支援。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "78159386"
  這是物件的預設值。 任何執行緒可以隨時存取任何方法或欄位。 一次應該只有一個執行緒存取這些物件。  
   
 ## <a name="manual-synchronization"></a>手動同步  
- .NET Framework 類別庫提供一些類別來同步執行緒。 請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
+ .NET Framework 類別庫提供一些類別來同步執行緒。 請參閱[同步處理原始物件概觀](overview-of-synchronization-primitives.md)。  
   
 ## <a name="synchronized-code-regions"></a>同步的程式碼區域  
  您可以使用 <xref:System.Threading.Monitor> 類別或編譯器關鍵字，來同步處理程式碼區塊、執行個體方法以及靜態方法。 不支援同步處理的靜態欄位。  
@@ -61,7 +61,7 @@ ms.locfileid: "78159386"
 ### <a name="compiler-support"></a>編譯器支援  
  Visual Basic 和 C# 均支援使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 來鎖定物件的語言關鍵字。 Visual Basic 支援 [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 陳述式；C# 支援 [lock](../../csharp/language-reference/keywords/lock-statement.md) 陳述式。  
   
- 在這兩種情況下，如果在程式碼區塊中擲回例外狀況，**lock** 或 **SyncLock** 取得的鎖定會自動釋放。 C# 和 Visual Basic 編譯器使用**try**/Monitor 發出**嘗試最後**阻止 **。在**嘗試開始時輸入，最後一**個**塊中的**Monitor.Exit。** 如果在 **lock** 或 **SyncLock** 區塊內擲回例外狀況，會執行 **finally** 處理常式以允許您進行任何清除工作。  
+ 在這兩種情況下，如果在程式碼區塊中擲回例外狀況，**lock** 或 **SyncLock** 取得的鎖定會自動釋放。 C # 和 Visual Basic 編譯器會發出具有 Monitor 的**try** / **finally**區塊 **。** 請在 try 的開頭輸入，然後在**finally**區塊中進行**monitor. Exit** 。 如果在 **lock** 或 **SyncLock** 區塊內擲回例外狀況，會執行 **finally** 處理常式以允許您進行任何清除工作。  
   
 ## <a name="synchronized-context"></a>同步處理的內容  
 
@@ -70,7 +70,7 @@ ms.locfileid: "78159386"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
-- [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)
-- [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [執行緒和執行緒處理](threads-and-threading.md)
+- [同步處理基本專案的總覽](overview-of-synchronization-primitives.md)
 - [SyncLock 陳述式](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [lock 陳述式](../../csharp/language-reference/keywords/lock-statement.md)

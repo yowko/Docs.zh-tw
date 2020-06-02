@@ -15,19 +15,19 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-ms.openlocfilehash: 7b2dee03619e24c5a2845699a06e88abab0c594b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6baef7b0a5bbdacd33d84df01b1aa943897a9e3d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160127"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276812"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>執行不區分文化特性的大小寫變更
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 方法提供不接受任何參數的多載。 根據預設，不含參數的這些多載會根據 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 的值，執行大小寫變更。 這會產生可能會因為文化特性而有所不同的區分大小寫結果。 若要釐清您希望大小寫變更是區分文化特性還是不區分文化特性，就應該使用要求您明確地指定 `culture` 參數的這些方法的多載。 針對區分文化特性的大小寫變更，請為 `culture` 參數指定 `CultureInfo.CurrentCulture`。 至於不區分文化特性的大小寫變更，則為 `culture` 參數指定 `CultureInfo.InvariantCulture`。  
   
  字串通常會轉換為標準大小寫，讓之後能夠更輕鬆地查閱。 以這種方式使用字串時，您應該為 `culture` 參數指定 `CultureInfo.InvariantCulture`，因為 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 的值在變更大小寫的時間與發生查閱的時間之間可能會有所變更。  
   
- 如果安全性決策必須以大小寫變更作業為基礎，則作業應該不區分文化特性，以確保結果不受 `CultureInfo.CurrentCulture` 的值影響。 如需示範區分文化特性的字串作業如何產生不一致結果的範例，請參閱[使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)一文中的＜使用目前文化特性的字串比較＞一節。  
+ 如果安全性決策必須以大小寫變更作業為基礎，則作業應該不區分文化特性，以確保結果不受 `CultureInfo.CurrentCulture` 的值影響。 如需示範區分文化特性的字串作業如何產生不一致結果的範例，請參閱[使用字串的最佳做法](../base-types/best-practices-strings.md)一文中的＜使用目前文化特性的字串比較＞一節。  
   
 ## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>使用 String.ToUpper 和 String.ToLower 方法  
  為使程式碼更清楚，建議您務必使用 `String.ToUpper` 和 `String.ToLower` 方法的多載，讓您明確地指定 `culture` 參數。 例如，下列程式碼會執行識別碼查閱。 `key.ToLower` 作業預設為區分文化特性，但讀取程式碼時，這種行為並不明確。  
@@ -71,4 +71,4 @@ static object LookupKey(string key)
 - <xref:System.String.ToLower%2A?displayProperty=nameWithType>
 - <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>
 - <xref:System.Char.ToLower%2A?displayProperty=nameWithType>
-- [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [執行不區分文化特性的字串作業](performing-culture-insensitive-string-operations.md)
