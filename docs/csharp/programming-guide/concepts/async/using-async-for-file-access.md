@@ -174,7 +174,7 @@ public async Task ProcessWriteMultAsync()
   
  使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法時，您可以指定 <xref:System.Threading.CancellationToken>，這可用來在中途取消作業。 如需詳細資訊，請參閱[微調非同步應用程式 (C#)](./fine-tuning-your-async-application.md) 和 [Managed 執行緒中的取消作業](../../../../standard/threading/cancellation-in-managed-threads.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
 - [非同步方法的傳回型別 (C#)](./async-return-types.md)

@@ -45,7 +45,7 @@ ms.locfileid: "83378589"
 
 4. 重新編譯型別曾經所在的組件，具有現在包含型別之組件的參考。 例如，如果您要從命令列編譯 c # 檔案，請使用[-reference （c # 編譯器選項）](../../csharp/language-reference/compiler-options/reference-compiler-option.md)選項來指定包含該類型的元件。 在 C++ 中，在來源檔案中使用 [#using](/cpp/preprocessor/hash-using-directive-cpp) 指示詞以指定包含型別的組件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
 - [類型轉送（c + +/CLI）](/cpp/windows/type-forwarding-cpp-cli)

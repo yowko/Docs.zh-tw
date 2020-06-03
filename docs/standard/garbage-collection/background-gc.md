@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: e2e25dcfff759d68087006b63544bf688798c029
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286076"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307068"
 ---
 # <a name="background-garbage-collection"></a>背景垃圾收集
 
@@ -39,11 +39,11 @@ ms.locfileid: "84286076"
 
 下圖顯示在另一個專用線程上執行的背景*工作站*垃圾收集：
 
-![背景工作站記憶體回收](./media/fundamentals/background-workstation-garbage-collection.png)
+![背景工作站記憶體回收](media/fundamentals/background-workstation-garbage-collection.png)
 
 下圖顯示在不同的專用線程上執行的背景*伺服器*垃圾收集：
 
-![背景伺服器記憶體回收](./media/fundamentals/background-server-garbage-collection.png)
+![背景伺服器記憶體回收](media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="concurrent-garbage-collection"></a>並行的記憶體回收
 
@@ -63,7 +63,7 @@ ms.locfileid: "84286076"
 
 下列圖例顯示在分開的專屬執行緒上執行的並行記憶體回收。
 
-![並行記憶體回收執行緒](./media/gc-concurrent.png)
+![並行記憶體回收執行緒](media/gc-concurrent.png)
 
 ## <a name="see-also"></a>另請參閱
 

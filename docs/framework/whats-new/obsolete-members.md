@@ -14,16 +14,16 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81243072"
 ---
-# <a name="obsolete-members-in-net-framework"></a>.NET 框架中的過時成員
+# <a name="obsolete-members-in-net-framework"></a>.NET Framework 中過時的成員
 
-本文列出了 .NET Framework 4.5 和更高版本中過時的類型成員。 類型成員按程式集分組。
+本文列出在 .NET Framework 4.5 和更新版本中已過時的類型成員。 型別成員是依元件分組。
 
-本文不會列出過時的類型成員。 有關過時型態的清單,請參閱[過時類型](obsolete-types.md)。
+本文不會列出過時的類型成員。 如需過時的類型清單，請參閱[過時的類型](obsolete-types.md)。
 
 ## <a name="mscorlibdll"></a>mscorlib.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>|<xref:Microsoft.Win32.Registry.DynData>|<xref:Microsoft.Win32.Registry.DynData> 登錄機碼僅適用於 Win9x，不再受到 CLR 的支援。 在 NT 架構的作業系統上，請改用 <xref:Microsoft.Win32.Registry.PerformanceData?displayProperty=nameWithType> 登錄機碼或 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.PerformanceData%2A?displayProperty=nameWithType> 登錄 Proxy。|
 > |<xref:System.Activator?displayProperty=nameWithType>|<xref:System.Activator.CreateInstance%28System.AppDomain%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.Object%5B%5D%2CSystem.Security.Policy.Evidence%29>|對沙箱使用辨識項的方法已經過時，將在未來的 .NET Framework 版本中移除。 請使用未採用                                           <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> 參數的 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 多載。|
@@ -189,7 +189,7 @@ ms.locfileid: "81243072"
 ## <a name="presentationcoredll"></a>PresentationCore.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffect%2A>|點陣圖效果已被取代而不再有效。 請考慮在適當時改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>。|
 > |<xref:System.Windows.UIElement?displayProperty=nameWithType>|<xref:System.Windows.UIElement.BitmapEffectInput%2A>|點陣圖效果已被取代而不再有效。 請考慮在適當時改用 <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>。|
@@ -229,7 +229,7 @@ ms.locfileid: "81243072"
 ## <a name="presentationframeworkdll"></a>PresentationFramework.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Windows.Data.BindingListCollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.OnBeginChangeLogging%2A>|取代成 <xref:System.Windows.Data.CollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=nameWithType>。|
 > |<xref:System.Windows.Data.CollectionView?displayProperty=nameWithType>|<xref:System.Windows.Data.CollectionView.ClearChangeLog%2A>|取代成 <xref:System.Windows.Data.CollectionView.ClearPendingChanges%2A?displayProperty=nameWithType>。|
@@ -239,7 +239,7 @@ ms.locfileid: "81243072"
 ## <a name="systemactivitiesdll"></a>System.Activities.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.Xaml.IXamlLineInfo%2CSystem.IO.TextReader%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請勿使用這個建構函式。 請改用 <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29> 或 <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29>。|
 > |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=nameWithType>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請勿使用這個建構函式。 請改用 <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29> 或 <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29>。|
@@ -247,7 +247,7 @@ ms.locfileid: "81243072"
 ## <a name="systemactivitiespresentationdll"></a>System.Activities.Presentation.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.DoDragMove%28System.Activities.Presentation.WorkflowViewElement%2CSystem.Windows.Point%29>|這個方法不支援拖曳多個項目。|
 > |<xref:System.Activities.Presentation.DragDropHelper?displayProperty=nameWithType>|<xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Windows.DragEventArgs%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個方法不支援拖曳多個項目。 請改用 <xref:System.Activities.Presentation.DragDropHelper.GetCompositeView%28System.Activities.Presentation.WorkflowViewElement%29>。|
@@ -262,7 +262,7 @@ ms.locfileid: "81243072"
 ## <a name="systemcoredll"></a>System.Core.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords?displayProperty=nameWithType>|<xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 不正確的值；請改用 <xref:System.Diagnostics.Eventing.Reader.StandardEventKeywords.CorrelationHint2>。|
 > |<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>|<xref:System.Linq.ParallelEnumerable.Concat%60%601%28System.Linq.ParallelQuery%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%600%7D%29>|二元運算子的第二個資料來源必須是 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType> 類型，而不是 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 若要修正這個問題，請使用 <xref:System.Linq.ParallelEnumerable.AsParallel%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> 擴充方法將右邊資料來源轉換成 <xref:System.Linq.ParallelQuery%601?displayProperty=nameWithType>。|
@@ -305,7 +305,7 @@ ms.locfileid: "81243072"
 ## <a name="systemdatadll"></a>System.Data.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute.%23ctor%2A>|<xref:System.Data.DataSysDescriptionAttribute> 已被取代。|
 > |<xref:System.Data.Common.DataAdapter?displayProperty=nameWithType>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A>|<xref:System.Data.Common.DataAdapter.CloneInternals%2A> 已被取代。 請使用 <xref:System.Data.Common.DataAdapter.%23ctor%28System.Data.Common.DataAdapter%29> 建構函式。|
@@ -327,7 +327,7 @@ ms.locfileid: "81243072"
 ## <a name="systemdataentitydll"></a>System.Data.Entity.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Data.Metadata.Edm.AssociationSetEnd?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.AssociationSetEnd.Role%2A>|這個屬性即將消失，請改用 <xref:System.Data.Metadata.Edm.AssociationSetEnd.Name%2A?displayProperty=nameWithType> 屬性。|
 > |<xref:System.Data.Metadata.Edm.MetadataWorkspace?displayProperty=nameWithType>|<xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRequiredOriginalValueMembers%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 請改用 <xref:System.Data.Metadata.Edm.MetadataWorkspace.GetRelevantMembersForUpdate%2A?displayProperty=nameWithType>。|
@@ -337,7 +337,7 @@ ms.locfileid: "81243072"
 ## <a name="systemdataoracleclientdll"></a>System.Data.OracleClient.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A>|<xref:System.Data.OracleClient.OracleParameter.Precision%2A> 已被取代。 請使用 <xref:System.Math?displayProperty=nameWithType> 類別來明確設定小數的有效位數。|
 > |<xref:System.Data.OracleClient.OracleParameter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A>|<xref:System.Data.OracleClient.OracleParameter.Scale%2A> 已被取代。 請使用 <xref:System.Math?displayProperty=nameWithType> 類別來明確設定小數的小數位數。|
@@ -346,18 +346,18 @@ ms.locfileid: "81243072"
 ## <a name="systemdesigndll"></a>System.Design.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.InitializeNonDefault%2A>|這個方法已被取代。 請改用 <xref:System.ComponentModel.Design.ComponentDesigner.InitializeExistingComponent%2A?displayProperty=nameWithType>。|
 > |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|這個方法已被取代。 請改用 <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType>。|
 > |<xref:System.ComponentModel.Design.DesignSurface?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A> 方法已由 <xref:System.ComponentModel.Design.DesignSurface.CreateInstance%28System.Type%29> 取代。|
 > |<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer.SerializeToReferenceExpression%2A>|這個方法已被取代。 請改用 <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> 或 <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A>。|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|使用這個屬性會產生編譯器錯誤。<br /><br /> 錯誤：無法再參考這個屬性，但已將其加入來支援現有已編譯的應用程式。 不再使用設計階段項目檢視架構。|
-> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>|建議的替代方法是使用[`ControlDesigner.SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)。|
+> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>|建議的替代做法是使用 [`ControlDesigner.SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A>|建議的替代做法是 <xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A?displayProperty=nameWithType>。|
-> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>|建議的替代方法是使用[`ControlDesigner.Tag.SetDirty`](xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A)與[`ControlDesigner.Tag.IsDirty`](xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A)。|
-> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsPropertyBound%2A>|建議的替代方法是[`ControlDesigner.DataBindings.Contains`](xref:System.Web.UI.DataBindingCollection.Contains%2A)。 <xref:System.Web.UI.DataBindingCollection?displayProperty=nameWithType> 類別可讓您進一步控制與控制項關聯的資料繫結。|
-> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.OnBindingsCollectionChanged%2A>|建議的替代做法是處理 `ControlDesigner.DataBindings.Changed` 事件。 [`ControlDesigner.DataBindings`](xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A)屬性<xref:System.Web.UI.DataBindingCollection>返回的集合允許對與控制項關聯的數據綁定進行更多控制。|
+> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>|建議的替代做法是使用 [`ControlDesigner.Tag.SetDirty`](xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A) 和 [`ControlDesigner.Tag.IsDirty`](xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A) 。|
+> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsPropertyBound%2A>|建議的替代做法是 [`ControlDesigner.DataBindings.Contains`](xref:System.Web.UI.DataBindingCollection.Contains%2A) 。 <xref:System.Web.UI.DataBindingCollection?displayProperty=nameWithType> 類別可讓您進一步控制與控制項關聯的資料繫結。|
+> |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.OnBindingsCollectionChanged%2A>|建議的替代做法是處理 `ControlDesigner.DataBindings.Changed` 事件。 <xref:System.Web.UI.DataBindingCollection>屬性所傳回的集合 [`ControlDesigner.DataBindings`](xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A) 可讓您更充分掌控與控制項相關聯的資料系結。|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.OnControlResize%2A>|建議的替代做法是 <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A>，會在變更控制項的任何屬性時呼叫。|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent%2A>|由於調整大小是由 <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A?displayProperty=nameWithType> 方法處理，因此不建議使用這個方法。|
 > |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.ReadOnly%2A>|建議的替代做法是改從 <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=nameWithType> 繼承，並使用 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType>。 區域可讓您進一步控制設計工具中的內容。|
@@ -367,39 +367,39 @@ ms.locfileid: "81243072"
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching%2A>|建議的替代做法是 <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>。|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A>|建議的替代做法是處理 [HtmlControlDesigner.DataBindings.Changed](xref:System.Web.UI.DataBindingCollection.Changed) 事件。 <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A?displayProperty=nameWithType> 屬性所傳回的 <xref:System.Web.UI.DataBindingCollection> 集合可讓您進一步控制與控制項關聯的資料繫結。|
 > |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.ShouldCodeSerialize%2A>|由於不支援程式碼序列化，因此不建議使用這個屬性。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.ActiveTemplateEditingFrame%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個屬性。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.CreateTemplateEditingFrame%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.EnterTemplateMode%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.ExitTemplateMode%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetCachedTemplateEditingVerbs%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataItemProperty%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataSource%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateEditingVerbs%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplatePropertyParentType%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.ActiveTemplateEditingFrame%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個屬性。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.CreateTemplateEditingFrame%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.EnterTemplateMode%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.ExitTemplateMode%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetCachedTemplateEditingVerbs%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataItemProperty%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContainerDataSource%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplateEditingVerbs%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.GetTemplatePropertyParentType%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
 > |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.InTemplateMode%2A>|建議的替代做法是 <xref:System.Web.UI.Design.ControlDesigner.InTemplateMode%2A?displayProperty=nameWithType>。|
 > |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.OnBehaviorAttached%2A>|建議的替代做法是 <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>。|
-> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.SetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner.GetTemplateContainerDataSource%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
+> |<xref:System.Web.UI.Design.TemplatedControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.TemplatedControlDesigner.SetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner.GetTemplateContainerDataSource%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
 > |<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.BaseDataListDesigner.OnAutoFormat%2A>|由於 [自動格式設定]**** 對話方塊是由設計工具主應用程式啟動，因此不建議使用這個方法。 <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=nameWithType> 屬性會公開可用的自動格式設定清單。|
-> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.CreateTemplateEditingFrame%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetCachedTemplateEditingVerbs%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContainerDataItemProperty%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplatePropertyParentType%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.SetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.CreateTemplateEditingFrame%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetCachedTemplateEditingVerbs%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetTemplateContainerDataItemProperty%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
-> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.SetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 要支援樣本編輯,請公開 屬性中的<xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType>樣本資料並[`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)呼叫 。|
+> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.CreateTemplateEditingFrame%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetCachedTemplateEditingVerbs%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContainerDataItemProperty%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.GetTemplatePropertyParentType%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataGridDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataGridDesigner.SetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.CreateTemplateEditingFrame%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetCachedTemplateEditingVerbs%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetTemplateContainerDataItemProperty%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.GetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
+> |<xref:System.Web.UI.Design.WebControls.DataListDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.DataListDesigner.SetTemplateContent%2A>|由於範本編輯功能是在 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> 中處理，因此不建議使用這個方法。 若要支援範本編輯功能，請公開屬性中的範本資料， <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=nameWithType> 並呼叫 [`ControlDesigner.SetViewFlags(ViewFlags.TemplateEditing, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A) 。|
 > |<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.WebControls.PanelDesigner.OnBehaviorAttached%2A>|建議的替代做法是 <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>。|
 > |<xref:System.Windows.Forms.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults%2A>|這個方法已被取代。 請改用 <xref:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent%2A?displayProperty=nameWithType>。|
 
 ## <a name="systemdll"></a>System.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateCompiler%2A>|呼叫端不應該使用 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> 介面，而是改為直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 類別上使用方法。|
 > |<xref:Microsoft.CSharp.CSharpCodeProvider?displayProperty=nameWithType>|<xref:Microsoft.CSharp.CSharpCodeProvider.CreateGenerator%2A>|呼叫端不應該使用 <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType> 介面，而是改為直接在 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 類別上使用方法。|
@@ -511,7 +511,7 @@ ms.locfileid: "81243072"
 ## <a name="systemdrawingdll"></a>System.Drawing.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Drawing.FontFamily?displayProperty=nameWithType>|<xref:System.Drawing.FontFamily.GetFamilies%2A>|請勿使用 <xref:System.Drawing.FontFamily.GetFamilies%2A> 方法，改為使用 <xref:System.Drawing.FontFamily.Families%2A?displayProperty=nameWithType> 屬性。|
 > |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=nameWithType>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個建構函式已被取代。 使用 <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>。|
@@ -519,7 +519,7 @@ ms.locfileid: "81243072"
 ## <a name="systemmessagingdll"></a>System.Messaging.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetEnumerator%2A>|這個方法會傳回不正確實作 <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> 系列方法的 <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType>。 請改用 <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType>。|
 > |<xref:System.Messaging.MessageQueue?displayProperty=nameWithType>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|這個方法會傳回不正確實作 <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=nameWithType> 系列方法的 <xref:System.Messaging.MessageEnumerator?displayProperty=nameWithType>。 請改用 <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=nameWithType>。|
@@ -527,7 +527,7 @@ ms.locfileid: "81243072"
 ## <a name="systemservicemodeldll"></a>System.ServiceModel.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 這個屬性已經過時。 若要啟用 HTTP <xref:System.Net.CookieContainer>，請改用 <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType> 屬性。|
 > |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 對等通道功能已經過時，未來將會移除。|
@@ -539,7 +539,7 @@ ms.locfileid: "81243072"
 ## <a name="systemservicemodeldiscoverydll"></a>System.ServiceModel.Discovery.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint.TransportSettings%2A> 屬性已經過時。 請考慮使用 <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> 來設定傳輸屬性。|
 > |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=nameWithType>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> 屬性已經過時。 請考慮使用 <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=nameWithType> 來設定傳輸屬性。|
@@ -547,14 +547,14 @@ ms.locfileid: "81243072"
 ## <a name="systemwebdatavisualizationdll"></a>System.Web.DataVisualization.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=nameWithType>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> 已被取代。 請改為查看 <xref:System.Web.UI.Control.ViewState%2A?displayProperty=nameWithType>。|
 
 ## <a name="systemwebdll"></a>System.Web.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetAppConfig%2A>|建議的替代做法是 System.Web.dll 中的 <xref:System.Web.Configuration.WebConfigurationManager.GetWebApplicationSection%2A?displayProperty=nameWithType>。|
 > |<xref:System.Web.HttpContext?displayProperty=nameWithType>|<xref:System.Web.HttpContext.GetConfig%2A>|建議的替代做法是 System.Web.dll 中的 <xref:System.Web.HttpContext.GetSection%2A?displayProperty=nameWithType>。|
@@ -589,18 +589,18 @@ ms.locfileid: "81243072"
 ## <a name="systemwebdynamicdatadll"></a>System.Web.DynamicData.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=nameWithType>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|請使用資料繫結控制項 (例如 <xref:System.Web.UI.WebControls.GridView?displayProperty=nameWithType> 或 <xref:System.Web.UI.WebControls.ListView?displayProperty=nameWithType>) 上的 `EnablePersistedSelection` 屬性。|
 
 ## <a name="systemwebextensionsdll"></a>System.Web.Extensions.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Web.UI.CompositeScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|使用 <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>。|
-> |<xref:System.Web.UI.ScriptManager?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|這個屬性已經過時。 改為對[`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A)<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>每個人設置屬性。|
-> |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|這個屬性已經過時。 而不是使用<xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=nameWithType>,[`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A)設定每個<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>個人的屬性 。|
+> |<xref:System.Web.UI.ScriptManager?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|這個屬性已經過時。 請改為設定 [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 每個個別的屬性 <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType> 。|
+> |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|這個屬性已經過時。 請不要使用 <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=nameWithType> ，而是 [`System.Web.UI.ScriptReference.Path`](xref:System.Web.UI.ScriptReferenceBase.Path%2A) 在每個個別上設定屬性 <xref:System.Web.UI.ScriptReference?displayProperty=nameWithType> 。|
 > |<xref:System.Web.UI.ScriptReference?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReference.IsFromSystemWebExtensions%2A>|使用 <xref:System.Web.UI.ScriptReference.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>。|
 > |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions%2A>|使用 <xref:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript%2A?displayProperty=nameWithType>。|
 > |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=nameWithType>|<xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>|指令碼參考已不再需要 <xref:System.Web.UI.ScriptReferenceBase.NotifyScriptLoaded%2A>。|
@@ -610,7 +610,7 @@ ms.locfileid: "81243072"
 ## <a name="systemwebservicesdll"></a>System.Web.Services.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Web.Services.Discovery.DiscoveryClientProtocol?displayProperty=nameWithType>|<xref:System.Web.Services.Discovery.DiscoveryClientProtocol.LoadExternals%2A>|這個方法將從未來的版本中移除。 資源探索已不再需要這個方法呼叫。|
 > |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=nameWithType>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|這個屬性將從未來的版本中移除。 不再強制要求 SOAP 訊息中一定要有特定標頭。|
@@ -618,10 +618,10 @@ ms.locfileid: "81243072"
 ## <a name="systemwindowsformsdll"></a>System.Windows.Forms.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
-> |<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|這個列舉值已被取代。 沒有取代項目。|
-> |<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|這個方法已被取代。 沒有取代項目。|
+> |<xref:System.Windows.Forms.AccessibleStates?displayProperty=nameWithType>|<xref:System.Windows.Forms.AccessibleStates.Valid>|這個列舉值已被取代。 沒有任何取代項目。|
+> |<xref:System.Windows.Forms.ComboBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ComboBox.AddItemsCore%2A>|這個方法已被取代。 沒有任何取代項目。|
 > |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.RenderRightToLeft%2A>|這個屬性已被取代。 請改用 <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>。|
 > |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%29>|這個方法已被取代。 請改用 <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType> 方法。|
 > |<xref:System.Windows.Forms.Control?displayProperty=nameWithType>|<xref:System.Windows.Forms.Control.Scale%28System.Single%2CSystem.Single%29>|這個方法已被取代。 請改用 <xref:System.Windows.Forms.Control.Scale%28System.Drawing.SizeF%29?displayProperty=nameWithType> 方法。|
@@ -629,13 +629,13 @@ ms.locfileid: "81243072"
 > |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScale%2A>|這個屬性已被取代。 請改用 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A?displayProperty=nameWithType> 屬性。|
 > |<xref:System.Windows.Forms.Form?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.GetAutoScaleSize%2A>|這個方法已被取代。 請改用 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType> 屬性。|
 > |<xref:System.Windows.Forms.Label?displayProperty=nameWithType>|<xref:System.Windows.Forms.Label.RenderTransparent%2A>|這個屬性已被取代。 請改用 <xref:System.Windows.Forms.Control.BackColor%2A>。|
-> |<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|這個方法已被取代。 沒有取代項目。|
+> |<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType>|<xref:System.Windows.Forms.ListBox.AddItemsCore%2A>|這個方法已被取代。 沒有任何取代項目。|
 > |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=nameWithType>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|這個屬性已被取代。 請改用 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=nameWithType> 屬性。|
 
 ## <a name="systemxamldll"></a>System.Xaml.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType%2A>|XAML 剖析器已不使用這個項目。 請參閱＜<xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>＞。|
 > |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|XAML 剖析器不再使用 `expressionType` 引數。 若要指定預期的傳回類型，請使用 <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29>。 若要指定運算式類型的自訂處理方式，請使用 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>。|
@@ -643,7 +643,7 @@ ms.locfileid: "81243072"
 ## <a name="systemxmldll"></a>System.Xml.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.Auto>|驗證類型應該指定為 <xref:System.Xml.ValidationType.DTD?displayProperty=nameWithType> 或 <xref:System.Xml.ValidationType.Schema?displayProperty=nameWithType>。|
 > |<xref:System.Xml.ValidationType?displayProperty=nameWithType>|<xref:System.Xml.ValidationType.XDR>|透過 <xref:System.Xml.XmlValidatingReader?displayProperty=nameWithType> 進行 XDR 驗證已經過時。|
@@ -664,19 +664,19 @@ ms.locfileid: "81243072"
 
 ## <a name="iehostdll-and-ieexecexe"></a>IEHost.dll 和 IEExec.exe
 
-IEHost.dll 和 IEExec.exe 程式集已從 .NET 框架中刪除。 其所有類型及其成員都已過時,在 .NET 框架 4.5 及更高版本中不受支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 這項技術的替代做法包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。
+已從 .NET Framework 中移除 Iehost.dll .dll 和 Ieexec.exe 元件。 其所有類型和成員都已過時，且在 .NET Framework 4.5 和更新版本中不受支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 這項技術的替代做法包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。
 
 ## <a name="isymwrapperdll"></a>ISymWrapper.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=nameWithType>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|建議的替代做法是 <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=nameWithType>。 <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=nameWithType> 會接受匯入工具介面指標當做 <xref:System.IntPtr?displayProperty=nameWithType> 而不是 <xref:System.Int32?displayProperty=nameWithType>，因此可同時在 32 位元和 64 位元架構上運作。|
 
 ## <a name="microsoftbuildconversionv40dll"></a>Microsoft.Build.Conversion.v4.0.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28Microsoft.Build.BuildEngine.ProjectLoadSettings%29>|請改用無參數的 <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> 多載。|
 > |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=nameWithType>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert%28System.String%29>|請改用無參數的 <xref:Microsoft.Build.Conversion.ProjectFileConverter.Convert> 多載。|
@@ -686,7 +686,7 @@ IEHost.dll 和 IEExec.exe 程式集已從 .NET 框架中刪除。 其所有類�
 ## <a name="microsoftbuildenginedll"></a>Microsoft.Build.Engine.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>|請避免設定 <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>。 如果您只要傳入 .NET Framework 位置當做 <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>，就不需要採取任何其他動作。 否則，請改為在登錄或組態檔中定義工具組，或將項目加入引擎的 <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>，以使用自訂 <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>。|
 > |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|如果您只要傳入 .NET Framework 位置當做 <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>，只要變更為無參數的 <xref:Microsoft.Build.BuildEngine.Engine.%23ctor> 建構函式即可。 否則，您可以在登錄或組態檔中定義自訂工具組，或將項目加入引擎的 <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=nameWithType>。 然後，請改用 <xref:Microsoft.Build.BuildEngine.Engine.%23ctor> 或 <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29> 建構函式。|
@@ -694,28 +694,28 @@ IEHost.dll 和 IEExec.exe 程式集已從 .NET 框架中刪除。 其所有類�
 ## <a name="microsoftbuildframeworkdll"></a>Microsoft.Build.Framework.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=nameWithType>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|在 .NET Framework 4.5 中首先被取代。<br /><br /> 使用這個成員會產生編譯器錯誤。<br /><br /> 請改用 <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=nameWithType> 屬性。|
 
 ## <a name="microsoftbuildutilitiesv40dll"></a>Microsoft.Build.Utilities.v4.0.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=nameWithType>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|請使用 <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=nameWithType> 屬性。|
 
 ## <a name="microsoftdataentitybuildtasksdll"></a>Microsoft.Data.Entity.Build.Tasks.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|在 .NET Framework 4.5 中首先被取代。<br /><br /> 僅用於 3.5 版回溯相容性。|
 
 ## <a name="microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll
 
 > [!div class="mx-tdBreakAll"]
-> |類型|member|訊息|
+> |類型|成員|訊息|
 > |----------|------------|-------------|
 > |<xref:Microsoft.VisualBasic.FileSystem?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.FileSystem.FilePut%28System.Object%2CSystem.Object%2CSystem.Object%29>|這個成員已被取代。 請使用 <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A?displayProperty=nameWithType> 來寫入 <xref:System.Object> 類型，或將 `FileNumber` 和 `RecordNumber` 強制轉型成 <xref:System.Int32>，以便寫入非物件類型。|
 > |<xref:Microsoft.VisualBasic.CompilerServices.Conversions?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Conversions.FallbackUserDefinedConversion%2A>|使用這個成員會產生編譯器錯誤。<br /><br /> 請勿使用這個方法。|
@@ -732,5 +732,5 @@ IEHost.dll 和 IEExec.exe 程式集已從 .NET 框架中刪除。 其所有類�
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 框架中過時的內容](whats-obsolete.md)
+- [.NET Framework 中的過時功能](whats-obsolete.md)
 - [淘汰的類型](obsolete-types.md)

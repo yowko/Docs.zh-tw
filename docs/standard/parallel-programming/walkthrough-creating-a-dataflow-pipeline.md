@@ -34,7 +34,7 @@ ms.locfileid: "84284607"
   
 6. 等候管線完成所有工作。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  在開始進行這個逐步解說之前，請先閱讀[資料流程](dataflow-task-parallel-library.md)。  
   
 ## <a name="creating-a-console-application"></a>建立主控台應用程式  

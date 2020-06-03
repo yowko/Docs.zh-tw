@@ -118,6 +118,6 @@ ms.locfileid: "83378639"
 <Assembly:AssemblyDelaySignAttribute(True)>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立組件](create.md)

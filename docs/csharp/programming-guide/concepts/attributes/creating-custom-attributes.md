@@ -66,7 +66,7 @@ class SampleClass
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection>
-- [C# 編程指南](../../index.md)
+- [C # 程式設計指南](../../index.md)
 - [撰寫自訂屬性](../../../../standard/attributes/writing-custom-attributes.md)
 - [反映 (C#)](../reflection.md)
 - [屬性 (C#)](./index.md)

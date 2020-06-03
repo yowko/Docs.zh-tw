@@ -4,12 +4,12 @@ description: 瞭解如何將現有的 ASP.NET Web Forms 應用程式遷移至 Bl
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b614572bd04d9ec694b0feb95173373591d5e117
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c70e4a4f57ddac97db4d58d9f876f7edc6aa6ce9
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144405"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306977"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>從 ASP.NET Web Forms 遷移至 Blazor
 
@@ -285,7 +285,7 @@ EShop 專案可讓您進行基本的靜態檔案存取。 有許多自訂可用�
 
 Web Forms 應用程式中的頁面是副檔名為 *.aspx*的檔案。 Web form 頁面通常會對應至 Blazor 中的元件。 Blazor 元件是在副檔名為*razor*的檔案中撰寫。 針對 eShop 專案，會將五頁轉換成 Razor 頁面。
 
-例如，[詳細資料] 視圖是由 Web form 專案中的三個檔案所組成： *default.aspx*、 *Details.aspx.cs*和*Details.aspx.designer.cs*。 轉換成 Blazor 時，程式碼後置和標記會結合為*razor*。 Razor 編譯（相當於*designer.cs*檔案中的檔案）會儲存在*obj*目錄中，而且預設不會在**方案總管**中看到。 Web Forms 頁面包含下列標記：
+例如，詳細資料檢視包含 Web form 專案中的三個檔案： *details*、 *Details.aspx.cs*和*Details.aspx.designer.cs*。 轉換成 Blazor 時，程式碼後置和標記會結合為*razor*。 Razor 編譯（相當於*designer.cs*檔案中的檔案）會儲存在*obj*目錄中，而且預設不會在**方案總管**中看到。 Web Forms 頁面包含下列標記：
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>

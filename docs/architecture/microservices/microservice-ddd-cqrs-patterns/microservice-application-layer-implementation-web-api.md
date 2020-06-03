@@ -2,12 +2,12 @@
 title: 使用 Web API 實作微服務應用程式層
 description: 瞭解相依性插入和中繼程式模式，以及其在 Web API 應用層中的執行詳細資料。
 ms.date: 01/30/2020
-ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: c6e82b610a528b688cb4334bdec01700abbd2a62
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144600"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306925"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -18,14 +18,14 @@ ms.locfileid: "84144600"
 例如，訂購微服務的應用程式層程式碼可直接實作為 **Ordering.API** 專案 (ASP.NET Core Web API 專案) 的一部分，如圖 7-23 所示。
 
 :::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="方案總管中的 [訂購. API] 微服務螢幕擷取畫面。":::
-Ordering.API 微服務的 [方案總管] 檢視，顯示 Application 資料夾下的子資料夾：Behaviors、Commands、DomainEventHandlers、IntegrationEvents、Models、Queries 和 Validations。
+[微服務] 的 [方案總管] 視圖，顯示應用程式資料夾下的子資料夾： [行為]、[命令]、[DomainEventHandlers]、[IntegrationEvents]、[模型]、[查詢] 和 [驗證]。
 :::image-end:::
 
 **圖 7-23**。 Ordering.API ASP.NET Core Web API 專案中的應用程式層
 
 ASP.NET Core 包含簡單[內建 IoC 容器](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (由 IServiceProvider 介面代表)，它預設會支援建構函式插入，ASP.NET 則是透過 DI 提供特定服務。 ASP.NET Core 會將「服務」** 詞彙用於透過 DI 插入的任何已註冊類型。 您可以在應用程式 Startup 類別的 ConfigureServices 方法中設定內建容器服務。 相依性實作所在之服務為類型所需且以 IoC 容器註冊的服務。
 
-一般而言，您會想要插入可實作基礎結構物件的相依性。 要插入的極典型相依性是存放庫。 但是，您可以插入可能會有的任何其他基礎結構相依性。 為求更簡單的實作，您可以直接插入工作單元模式物件 (EF DbContext 物件)，因為 DBContext 也是您基礎結構持續性物件的實作。
+一般而言，您會想要插入可實作基礎結構物件的相依性。 要插入的一般相依性是存放庫。 但是，您可以插入可能會有的任何其他基礎結構相依性。 為求更簡單的實作，您可以直接插入工作單元模式物件 (EF DbContext 物件)，因為 DBContext 也是您基礎結構持續性物件的實作。
 
 在下列範例中，您可以查看 .NET Core 如何透過建構函式插入所需的存放庫物件。 此類別是命令處理常式，我們將在下節中討論。
 
@@ -433,7 +433,7 @@ public class CreateOrderCommandHandler
 
 使用中繼程序模式的合理原因是，在企業應用程式中，處理要求會變得複雜。 您想要可以新增已開啟數目的跨領域關注，例如記錄、驗證、稽核和安全性。 在這些情況下，您可以依賴中繼程序管道 (請參閱[中繼程序模式](https://en.wikipedia.org/wiki/Mediator_pattern)) 提供這些額外行為或跨領域關注的方法。
 
-中繼程式是封裝此程式之「如何」的物件：它會根據狀態、命令處理常式叫用的方式，或您提供給處理常式的承載來協調執行。 使用中繼程序元件，即可套用裝飾項目 (或自 [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) 以來的[管道行為](https://github.com/jbogard/MediatR/wiki/Behaviors))，以透過集中且透明的方式套用跨領域關注。 如需詳細資訊，請參閱[裝飾項目模式](https://en.wikipedia.org/wiki/Decorator_pattern)。
+中繼程式是封裝此程式之「如何」的物件：它會根據狀態、命令處理常式叫用的方式，或您提供給處理常式的承載來協調執行。 使用中繼程式元件時，您可以套用裝飾專案（或自[MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)之後的[管線行為](https://github.com/jbogard/MediatR/wiki/Behaviors)），以集中且透明的方式套用跨領域考慮。 如需詳細資訊，請參閱[裝飾項目模式](https://en.wikipedia.org/wiki/Decorator_pattern)。
 
 裝飾項目和行為類似[層面導向程式設計 (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)，僅套用至中繼程序元件所管理的特定處理序管線。 根據在編譯期間插入的「層面編織程序」** 或根據物件呼叫攔截，套用 AOP 中實作跨領域關注的層面。 這兩種典型 AOP 方法的運作有時稱為「就像變魔術一樣」，因為不容易看到 AOP 的運作工作。 處理嚴重問題或 Bug 時，AOP 很難進行偵錯。 另一方面，這些裝飾項目/行為十分明確，而且只會套用至中繼程序內容，因此，偵錯更容易預測且更為輕鬆。
 
@@ -477,7 +477,7 @@ public class CreateOrderCommandHandler
 
 > 我認為您可能需要注意這裡的測試 - 它提供不錯的一致窗口，讓您查看系統的行為。 要求傳入，回應輸出。我們發現在建立一致運作的測試方面相當有價值。
 
-首先，讓我們來看一個範例 WebAPI 控制器，您可以在其中實際使用中繼程式物件。 如果您未使用中繼程式物件，則需要插入該控制器的所有相依性，例如記錄器物件和其他專案。 因此，建構函式可能會相當複雜。 另一方面，如果您使用中繼程序物件，則控制器的建構函式可能會較為簡單，即只有一些相依性而不是許多相依性 (如果一個跨領域作業有一個相依性)，如下列範例所示：
+首先，讓我們來看一個範例 WebAPI 控制器，您可以在其中實際使用中繼程式物件。 如果您未使用中繼程式物件，則需要插入該控制器的所有相依性，例如記錄器物件和其他專案。 因此，此函數會很複雜。 另一方面，如果您使用中繼程序物件，則控制器的建構函式可能會較為簡單，即只有一些相依性而不是許多相依性 (如果一個跨領域作業有一個相依性)，如下列範例所示：
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -526,9 +526,9 @@ var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOr
 result = await _mediator.Send(requestCreateOrder);
 ```
 
-不過，這種情況也有點先進，因為我們也會執行等冪命令。 CreateOrderCommand 處理序應該是等冪，因此，如果相同的訊息因任何原因 (例如重試) 而透過網路進行複製，則相同的商務訂單只會處理一次。
+不過，這種情況也稍微先進一點，因為我們也會執行等冪命令。 CreateOrderCommand 處理序應該是等冪，因此，如果相同的訊息因任何原因 (例如重試) 而透過網路進行複製，則相同的商務訂單只會處理一次。
 
-實作方式是包裝商務命令 (在本例中是 CreateOrderCommand)，並將它內嵌到泛型 IdentifiedCommand，而這是透過來自網路且必須為等冪的每個訊息識別碼所追蹤。
+這是藉由包裝商務命令（在此案例中為 CreateOrderCommand），並將它內嵌至泛型 IdentifiedCommand 中，這是由每個訊息的識別碼追蹤，而每個訊息都必須具有等冪性。
 
 在下列程式碼中，您可以看到 IdentifiedCommand 就只是具有識別碼和已包裝商務命令物件的 DTO。
 
@@ -590,9 +590,9 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-由於 IdentifiedCommand 的作用就像是商務命令的信封，因此當商務命令因為不是重複的識別碼而需要處理時，它會接受該內部商務命令，並將它重新提交至中繼程式，如上述程式碼在執行時顯示的最後一個部分， `_mediator.Send(message.Command)` 從[IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)執行。
+由於 IdentifiedCommand 的作用就像是商務命令的信封，因此當商務命令因為不是重複的識別碼而需要處理時，它會接受該內部商務命令，並將它重新提交至中繼程式，如同在上述程式碼從 IdentifiedCommandHandler.cs 執行時所顯示的最後部分一樣 `_mediator.Send(message.Command)` 。 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)
 
-這樣一來，它會連結並執行商務命令處理常式，在本例中，是對 Ordering 資料庫執行交易的 [ CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)，如下列程式碼所示。
+這麼做時，它會連結並執行商務命令處理常式（在此案例中為[CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)），這是針對排序資料庫執行交易的作業，如下列程式碼所示。
 
 ```csharp
 // CreateOrderCommandHandler.cs

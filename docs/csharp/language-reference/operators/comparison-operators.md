@@ -73,9 +73,9 @@ ms.locfileid: "83207219"
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[關係及類型測試運算子](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
+- [C# 參考資料](../index.md)
 - [C # 運算子](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [等號比較運算子](equality-operators.md)

@@ -2,12 +2,12 @@
 title: 設計微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解設計 DDD 導向領域模型時的重要概念。
 ms.date: 01/30/2020
-ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fe78e719570d5758b71531beab883e5c24a88dca
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144587"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306902"
 ---
 # <a name="design-a-microservice-domain-model"></a>設計微服務領域模型
 
@@ -35,7 +35,7 @@ DDD 中的領域實體必須實作與實體資料 (從記憶體存取的物件) 
 
 **圖 7-8**。 實作資料加上行為的領域實體設計範例
 
-領域模型實體會透過方法實作行為，也就是它不是 "Anemic" 模型。 當然，有時候您可以有未實作任何邏輯作為實體類別一部分的實體。 如果子實體沒有任何特殊邏輯，彙總內的子實體就可能會發生這種情況，因為彙總根中已定義大部分邏輯。 如果您有一個複雜的微服務在服務類別 (而不是領域實體) 中實作許多邏輯，則可能會落入 Anemic 領域模型中，如下一節中所述。
+領域模型實體會透過方法實作行為，也就是它不是 "Anemic" 模型。 當然，有時候您可以有未實作任何邏輯作為實體類別一部分的實體。 如果子實體沒有任何特殊邏輯，彙總內的子實體就可能會發生這種情況，因為彙總根中已定義大部分邏輯。 如果您有在服務類別中（而不是在領域實體中）實作為邏輯的複雜微服務，您可能會進入 anemic 領域模型，如下一節所述。
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>豐富領域模型與 Anemic 領域模型
 
@@ -45,7 +45,7 @@ Anemic 領域模型的基本特徵是，乍看之下很像實物。 其中包含
 
 當然，使用 Anemic 領域模型時，會從一組擷取所有領域或商務邏輯的服務物件 (傳統上稱為「商務層」**) 來使用這些資料模型。 商務層位於資料模型最上層，其使用資料模型的方式就像是資料一樣。
 
-Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正的物件，因為它們缺少行為 (方法)。 它們只會保存資料屬性，因此不是物件導向設計。 藉由將所有行為放到服務物件 (商務層) 中，基本上會得到[麵條式程式碼](https://en.wikipedia.org/wiki/Spaghetti_code)或[交易指令碼](https://martinfowler.com/eaaCatalog/transactionScript.html)，因此會失去領域模型所提供的優點。
+Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正的物件，因為它們缺少行為 (方法)。 它們只會保存資料屬性，因此不是物件導向設計。 藉由將所有的行為放入服務物件（商務層）中，您基本上會得到[spaghetti 程式碼](https://en.wikipedia.org/wiki/Spaghetti_code)或[交易腳本](https://martinfowler.com/eaaCatalog/transactionScript.html)，因此您會失去領域模型所提供的優點。
 
 即便如此，如果您的微服務或限定內容很簡單 (CRUD 服務)，只有資料屬性之實體物件形式的 Anemic 領域模型便已足夠，而且可能不值得實作更複雜的 DDD 模式。 在此情況下，它只是持續性模型，因為您刻意建立只有 CRUD 用途資料的實體。
 
@@ -72,7 +72,7 @@ Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正�
 
 微服務中的實體不一定會是另一個微服務中的實體，因為在後者中，限定內容可能代表不同的意思。 例如，電子商務應用程式中的位址可能完全沒有身分識別，因為它可能只代表個人或公司客戶設定檔的一組屬性。 在此情況下，該地址應該會分類為值物件。 不過，在電力公用事業公司的應用程式中，客戶地址對公司領域可能很重要。 因此，地址必須含有身分識別，帳務系統才能直接連結至該地址。 在此情況下，地址應該會分類為領域實體。
 
-具有名字和姓氏的一個人通常是一個實體，因為這個人具有身分識別，即使名字和姓氏與另一組值相同亦然，例如若這些姓名同時指向不同的人。
+具有名稱和姓氏的人員通常是實體，因為某個人具有身分識別，即使名稱和姓氏與另一組值一致（例如，這些名稱也會參考不同的人）。
 
 值物件在關係資料庫和 Orm （例如 Entity Framework （EF））中很難管理，而在檔導向資料庫中，它們比較容易執行和使用。
 
@@ -114,14 +114,14 @@ EF Core 2.0 和更新版本包含[擁有的實體](https://devblogs.microsoft.co
 
 DDD 領域模型由彙總組成，彙總可以只有一個實體或多個實體，而且也可以包含值物件。 請注意，視您的領域而定，購買者彙總可能會有其他子實體，就像是在 eShopOnContainers 參考應用程式中的訂購微服務一樣。 圖 7-9 只會描述購買者具有單一實體的情況，例如只包含彙總根的彙總。
 
-若要維持彙總分離並保持彙總之間的清楚界限，建議在 DDD 領域模型中，不要允許在彙總之間直接瀏覽，而只具有外部索引鍵 (FK) 欄位，如 eShopOnContainers 的[訂購微服務領域模型](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)中所實作。 訂單實體只具有購買者的 FK 欄位，但不具有 EF Core 瀏覽屬性，如下列程式碼所示：
+若要維持彙總分離並保持彙總之間的清楚界限，建議在 DDD 領域模型中，不要允許在彙總之間直接瀏覽，而只具有外部索引鍵 (FK) 欄位，如 eShopOnContainers 的[訂購微服務領域模型](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)中所實作。 Order 實體只有買方的外鍵欄位，而不是 EF Core 導覽屬性，如下列程式碼所示：
 
 ```csharp
 public class Order : Entity, IAggregateRoot
 {
     private DateTime _orderDate;
     public Address Address { get; private set; }
-    private int? _buyerId; //FK pointing to a different aggregate root
+    private int? _buyerId; // FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;

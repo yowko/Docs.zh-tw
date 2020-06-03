@@ -51,7 +51,7 @@ ms.locfileid: "81243202"
 |URL|描述|
 |----------|----------------|
 |[Microsoft 支援服務](https://support.microsoft.com)|提供知識庫文件、資源下載和更新、支援網路廣播及其他服務的存取。|
-|[Visual Studio 問題](https://developercommunity.visualstudio.com)|可讓您提報 .NET 和 Visual Studio 相關的錯誤給 Microsoft，或提供建議。 您還可以通過選擇 **「幫助** > **發送反饋** > **報告**視覺工作室中的問題」來報告 Bug。|
+|[Visual Studio 問題](https://developercommunity.visualstudio.com)|可讓您提報 .NET 和 Visual Studio 相關的錯誤給 Microsoft，或提供建議。 您也可以在 Visual Studio 中選取 [ **Help**說明] [  >  **傳送意見**反應] [回報  >  **問題**] 來報告錯誤。|
 
 ## <a name="third-party-resources"></a>協力廠商資源
 
@@ -64,4 +64,4 @@ ms.locfileid: "81243202"
 ## <a name="see-also"></a>另請參閱
 
 - [開始使用 Visual Basic](../../visual-basic/getting-started/index.md)
-- [聯繫我們](/visualstudio/ide/feedback-options)
+- [告訴我們](/visualstudio/ide/feedback-options)

@@ -31,7 +31,7 @@ ms.locfileid: "82795335"
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)中的[型別參數條件約束](~/_csharplang/spec/classes.md#type-parameter-constraints)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 參考](../index.md)
 - [C # 程式設計指南](../../programming-guide/index.md)

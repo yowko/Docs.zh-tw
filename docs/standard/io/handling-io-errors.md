@@ -87,5 +87,5 @@ ms.locfileid: "81242669"
 
 - [在 .NET 中處理和擲回例外狀況](../exceptions/index.md)
 - [例外狀況處理 (工作平行程式庫)](../parallel-programming/exception-handling-task-parallel-library.md)
-- [異常的最佳做法](../exceptions/best-practices-for-exceptions.md)
+- [例外狀況的最佳做法](../exceptions/best-practices-for-exceptions.md)
 - [如何使用 Catch 區塊中的特定例外狀況](../exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)

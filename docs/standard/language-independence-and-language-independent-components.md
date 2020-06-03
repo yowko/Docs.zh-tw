@@ -105,8 +105,8 @@ ms.locfileid: "84288234"
 
 |類別|請參閱|規則|規則編號|
 |--------------|---------|----------|-----------------|
-|協助工具選項|[成員存取範圍](#MemberAccess)|在覆寫繼承的方法時，不得變更其存取範圍；但覆寫繼承自具有 `family-or-assembly` 存取範圍之不同組件的方法除外。 在這種情況下，覆寫應具有 `family` 存取範圍。|10|
-|協助工具選項|[成員存取範圍](#MemberAccess)|類型和成員應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中的類型也應該是可見和可存取的。 例如，在組件外部是可見的公用方法不得有引數，其類型只有在組件內可見。 構成類型應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中所用的具現化泛型類型也應該是可見和可存取的。 例如，存在於組件外部可見成員的簽章中的具現化泛型類型，不得有類型只能在組件內可見的泛型引數。|12|
+|協助工具|[成員存取範圍](#MemberAccess)|在覆寫繼承的方法時，不得變更其存取範圍；但覆寫繼承自具有 `family-or-assembly` 存取範圍之不同組件的方法除外。 在這種情況下，覆寫應具有 `family` 存取範圍。|10|
+|協助工具|[成員存取範圍](#MemberAccess)|類型和成員應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中的類型也應該是可見和可存取的。 例如，在組件外部是可見的公用方法不得有引數，其類型只有在組件內可見。 構成類型應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中所用的具現化泛型類型也應該是可見和可存取的。 例如，存在於組件外部可見成員的簽章中的具現化泛型類型，不得有類型只能在組件內可見的泛型引數。|12|
 |陣列|[陣列](#arrays)|陣列必須有符合 CLS 規範之類型的項目，而且陣列所有維度的下限必須為零。 只有項目是陣列以及陣列的項目類型是需要在多載之間區別的事實。 當多載根據兩個或多個陣列類型時，項目類型應該是具名類型。|16|
 |屬性|[屬性](#attributes)|屬性的類型必須為 <xref:System.Attribute?displayProperty=nameWithType> 或繼承自它的類型。|41|
 |屬性|[屬性](#attributes)|CLS 只允許自訂屬性編碼的子集。 只有以下這些類型允許出現在這些編碼方式中 (請參閱第四篇)：<xref:System.Type?displayProperty=nameWithType>、<xref:System.String?displayProperty=nameWithType>、<xref:System.Char?displayProperty=nameWithType>、<xref:System.Boolean?displayProperty=nameWithType>、<xref:System.Byte?displayProperty=nameWithType>、<xref:System.Int16?displayProperty=nameWithType>、<xref:System.Int32?displayProperty=nameWithType>、<xref:System.Int64?displayProperty=nameWithType>、<xref:System.Single?displayProperty=nameWithType>、<xref:System.Double?displayProperty=nameWithType>，以及以 CLS 標準基底整數類型為基礎的所有列舉類型。|34|

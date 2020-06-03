@@ -20,7 +20,7 @@ ms.locfileid: "82796063"
 > [!IMPORTANT]
 > 這個範例會使用二進位格式檔案來儲存資料。 這些格式不適用於敏感性資料，例如密碼或信用卡資訊。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 若要建置並執行，請安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
@@ -99,7 +99,7 @@ New customer value: Henry Clay
 
 您現在可以再次建置並執行應用程式。 第一次執行時，請注意利率會從 7.5 開始，然後變更為 7.1。 關閉應用程式，然後再重新執行。 現在，應用程式會列印訊息，表示它已讀取儲存的檔案，而利率即使在變更它的程式碼之前也是 7.1。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [序列化 (C#)](index.md)
 - [C # 程式設計指南](../../index.md)

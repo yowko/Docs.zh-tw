@@ -29,7 +29,7 @@ ms.locfileid: "82795361"
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 參考](../index.md)
 - [查詢關鍵字（LINQ）](query-keywords.md)

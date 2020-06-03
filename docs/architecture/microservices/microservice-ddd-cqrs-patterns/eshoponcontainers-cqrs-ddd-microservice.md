@@ -2,12 +2,12 @@
 title: 在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 在 eShopOnContainers 訂購微服務中的實作。
 ms.date: 03/03/2020
-ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144275"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306938"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方式
 
@@ -27,9 +27,9 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 
 若要執行「查詢端」，您可以在許多方法之間做選擇，包括 EF Core、AutoMapper 投影、預存程式、視圖、具體化視圖或微 ORM 等完整的 ORM。
 
-本指南及 eShopOnContainers 中 (特別是訂購微服務)，我們選擇使用像是 [Dapper](https://github.com/StackExchange/dapper-dot-net) 的微型 ORM 來實作直接查詢。 多虧了輕型架構所帶來的極少負荷，這可讓您實作任何基於查詢的 SQL 陳述式，以取得最佳效能。
+本指南及 eShopOnContainers 中 (特別是訂購微服務)，我們選擇使用像是 [Dapper](https://github.com/StackExchange/dapper-dot-net) 的微型 ORM 來實作直接查詢。 這可讓您根據 SQL 語句來執行任何查詢，以取得最佳效能，因為輕量的架構不會有額外負荷。
 
-請注意，當您使用這種方法時，任何對您模型進行的，會影響到實體永續儲存於 SQL 資料庫的更新都需要另外對 Dapper 或任何其他分離 (非 EF) 的查詢方法所使用的查詢進行更新。
+當您使用這種方法時，對您的模型進行的任何更新，都會影響實體保存至 SQL 資料庫的方式，也需要 Dapper 所使用之 SQL 查詢的個別更新，或其他任何不同的（非 EF）方法來進行查詢。
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>CQRS 及 DDD 模式並非頂層架構
 

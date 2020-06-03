@@ -1,5 +1,5 @@
 ---
-title: 如何搜尋字串(C# 指南)
+title: '如何搜尋字串（c # 指南）'
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
@@ -39,7 +39,7 @@ ms.locfileid: "81121497"
 
 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別可以用來搜尋字串。 這些搜尋的複雜性範圍可以從簡單到複雜文字模式。
 
-下列程式碼範例會搜尋句子中的 "the" 或 "their" 單字，但忽略大小寫。 靜態方法 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 會執行搜尋。 您為其指定要搜尋的字串和搜尋模式。 在此情況下，第三個引數指定不區分大小寫的搜尋。 如需詳細資訊，請參閱 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>。  
+下列程式碼範例會搜尋句子中的 "the" 或 "their" 單字，但忽略大小寫。 靜態方法 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 會執行搜尋。 您為其指定要搜尋的字串和搜尋模式。 在此情況下，第三個引數指定不區分大小寫的搜尋。 如需詳細資訊，請參閱 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 。  
 
 搜尋模式描述您搜尋的文字。 下表描述搜尋模式的每個項目  (下表使用單一 `\`，其在 C# 字串中必須逸出為 `\\`)。
 
@@ -52,7 +52,7 @@ ms.locfileid: "81121497"
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> 當您搜尋完全相符的字串時，`string` 方法通常是較好的選擇。 在源字串中搜索某些模式時,正則表達式更好。
+> 當您搜尋完全相符的字串時，`string` 方法通常是較好的選擇。 當您在來源字串中搜尋某個模式時，正則運算式會更好。
 
 ## <a name="does-a-string-follow-a-pattern"></a>字串遵循模式嗎？
 
@@ -72,14 +72,14 @@ ms.locfileid: "81121497"
 
 此單一搜尋模式會比對許多有效字串。 規則運算式較適合用來搜尋或驗證模式，而不是單一文字字串。
 
-您可以通過查看[GitHub 儲存庫](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的代碼來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](../../../samples/snippets/csharp/how-to/strings.zip)。
+您可以藉由查看[GitHub 存放庫](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](../../../samples/snippets/csharp/how-to/strings.zip)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編程指南](../programming-guide/index.md)
+- [C # 程式設計指南](../programming-guide/index.md)
 - [字串](../programming-guide/strings/index.md)
 - [LINQ 和字串](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [.NET Framework 規則運算式](../../standard/base-types/regular-expressions.md)
 - [規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [在 .NET 中使用字串的最佳做法](../../standard/base-types/best-practices-strings.md)
+- [在 .NET 中使用字串的最佳作法](../../standard/base-types/best-practices-strings.md)

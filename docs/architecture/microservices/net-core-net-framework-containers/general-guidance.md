@@ -2,18 +2,18 @@
 title: 一般方針
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 一般指引
 ms.date: 09/11/2018
-ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6e63d7804abc1703f17378584d58d66a933022c7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144561"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306873"
 ---
 # <a name="general-guidance"></a>一般方針
 
 本節提供了何時應選擇 .NET Core 或 .NET Framework 的摘要。 我們在後續的章節中提供了更多關於這些選擇的詳細資料。
 
-您應該在下列情況下針對您的容器化 Docker 伺服器應用程式使用 .NET Core，並搭配 Linux 或 Windows 容器：
+在下列情況下，針對您的容器化 Docker 伺服器應用程式使用 .NET Core （含 Linux 或 Windows 容器）：
 
 - 您有跨平台需求。 例如，當您想要同時使用 Linux 和 Windows 容器時。
 
@@ -25,7 +25,7 @@ ms.locfileid: "84144561"
 
 使用 .NET Core 的另一個優點便是您可以在相同的電腦上針對應用程式執行並存的 .NET 版本。 這項優點對不使用容器的伺服器或 VM 來說更為重要，因為容器會隔離應用程式需要的 .NET 版本。 (只要他們與基礎 OS 相容。)
 
-在下列情況下，您應為容器化 Docker 伺服器應用程式使用 .NET Framework：
+在下列情況中，使用容器化 Docker 伺服器應用程式的 .NET Framework：
 
 - 您的應用程式目前使用的是 .NET Framework，並且對 Windows 具有強烈的相依性。
 

@@ -30,7 +30,7 @@ ms.locfileid: "83205840"
 
 ## <a name="common-top-level-properties"></a>常見的最上層屬性
 
-### <a name="name"></a>name
+### <a name="name"></a>NAME
 
 ```json
 {
@@ -38,7 +38,7 @@ ms.locfileid: "83205840"
 }
 ```
 
-不再支援。 在 csproj 中，這會依專案檔名來判斷，而該名稱通常與目錄名稱相符。 例如 `MyProjectName.csproj`。
+不再支援。 在 csproj 中，這會依專案檔名來判斷，而該名稱通常與目錄名稱相符。 例如： `MyProjectName.csproj` 。
 
 根據預設，專案檔名也會指定 `<AssemblyName>` 和 `<PackageId>` 屬性的值。
 
@@ -339,7 +339,7 @@ And it's really great!</Description>
 
 如需詳細資訊，請參閱[獨立性部署 (SCD)](../deploying/index.md#publish-self-contained)。
 
-## <a name="tools"></a>工具
+## <a name="tools"></a>tools
 
 ```json
 {
@@ -671,6 +671,6 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以�
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CLI 中變更的高階概觀](cli-msbuild-architecture.md)

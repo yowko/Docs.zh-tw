@@ -25,7 +25,7 @@ ms.locfileid: "82794659"
 
 本教學課程中有許多功能。 讓我們逐一建立它們。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 設定您的電腦以執行 .NET Core。 您可以在[.Net Core 下載](https://dotnet.microsoft.com/download)頁面上找到安裝指示。 您可以在 Windows、Linux、macOS 或 Docker 容器中執行此應用程式。
 
@@ -82,13 +82,13 @@ using System.IO;
 
 <xref:System.Collections.Generic.IEnumerable%601> 介面是在 <xref:System.Collections.Generic> 命名空間中定義。 <xref:System.IO.File> 類別是在 <xref:System.IO> 命名空間中定義。
 
-此方法是 C# 方法的特殊型別，稱為「Iterator 方法」**。 列舉程式方法會傳回延遲評估的序列。 這意謂著序列中的每個項目會在取用序列的程式碼要求該項目時產生。 枚舉器方法是包含一或多個[`yield return`](../language-reference/keywords/yield.md)語句的方法。 `ReadFrom` 方法所傳回的物件包含用來產生序列中每個項目的程式碼。 在此範例中，這牽涉到從原始程式檔讀取下一行文字，並傳回該字串。 每次呼叫程式碼要求序列中的下一個項目時，程式碼都會從檔案讀取下一行文字，並傳回該文字。 完全讀取檔案後，序列會指出已沒有任何其他項目。
+此方法是 C# 方法的特殊型別，稱為「Iterator 方法」**。 列舉程式方法會傳回延遲評估的序列。 這意謂著序列中的每個項目會在取用序列的程式碼要求該項目時產生。 枚舉器方法是包含一或多個 [`yield return`](../language-reference/keywords/yield.md) 語句的方法。 `ReadFrom` 方法所傳回的物件包含用來產生序列中每個項目的程式碼。 在此範例中，這牽涉到從原始程式檔讀取下一行文字，並傳回該字串。 每次呼叫程式碼要求序列中的下一個項目時，程式碼都會從檔案讀取下一行文字，並傳回該文字。 完全讀取檔案後，序列會指出已沒有任何其他項目。
 
-有兩個其他 C# 語法元素可能是您不熟悉的。 這個[`using`](../language-reference/keywords/using-statement.md)方法中的語句會管理資源清除。 在 `using` 陳述式中初始化的變數 (在此範例中為 `reader`) 必須實作 <xref:System.IDisposable> 介面。 該介面會定義單一方法 `Dispose`，而在應該釋出資源時應該呼叫此方法。 編譯器會在執行到達 `using` 陳述式的結尾大括號時產生該呼叫。 編譯器產生的程式碼會確保即使 using 陳述式所定義區塊中的程式碼擲回例外狀況，也會釋出資源。
+有兩個其他 C# 語法元素可能是您不熟悉的。 [`using`](../language-reference/keywords/using-statement.md)這個方法中的語句會管理資源清除。 在 `using` 陳述式中初始化的變數 (在此範例中為 `reader`) 必須實作 <xref:System.IDisposable> 介面。 該介面會定義單一方法 `Dispose`，而在應該釋出資源時應該呼叫此方法。 編譯器會在執行到達 `using` 陳述式的結尾大括號時產生該呼叫。 編譯器產生的程式碼會確保即使 using 陳述式所定義區塊中的程式碼擲回例外狀況，也會釋出資源。
 
 定義 `reader` 變數時，是使用 `var` 關鍵字來定義。 [`var`](../language-reference/keywords/var.md)定義*隱含類型區域變數*。 這意謂著變數的型別取決於指派給該變數之物件的編譯階段型別。 在這裡，這是來自 <xref:System.IO.File.OpenText(System.String)> 方法的傳回值，是一個 <xref:System.IO.StreamReader> 物件。
 
-現在，讓我們填入程式碼，以讀取`Main`方法中的檔案：
+現在，讓我們填入程式碼，以讀取方法中的檔案 `Main` ：
 
 ```csharp
 var lines = ReadFrom("sampleQuotes.txt");
@@ -156,9 +156,9 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>非同步工作
 
-在最後一個步驟中，您將新增程式碼，以便在一個工作中以非同步方式寫入輸出，同時也執行另一個工作以讀取使用者的輸入（如果他們想要加速或減緩文字顯示），或完全停止文字顯示。 這有幾個步驟，而最後，您將會擁有所需的所有更新。 第一個步驟是建立異步<xref:System.Threading.Tasks.Task>的傳回方法，代表您到目前為止所建立的程式碼，以讀取和顯示該檔案。
+在最後一個步驟中，您將新增程式碼，以便在一個工作中以非同步方式寫入輸出，同時也執行另一個工作以讀取使用者的輸入（如果他們想要加速或減緩文字顯示），或完全停止文字顯示。 這有幾個步驟，而最後，您將會擁有所需的所有更新。 第一個步驟是建立非同步傳回 <xref:System.Threading.Tasks.Task> 方法，代表您到目前為止所建立的程式碼，以讀取和顯示該檔案。
 
-將此方法新增至`Program`您的類別（它是從`Main`方法的主體取得）：
+將此方法新增至您的 `Program` 類別（它是從方法的主體取得 `Main` ）：
 
 ```csharp
 private static async Task ShowTeleprompter()
@@ -184,7 +184,7 @@ private static async Task ShowTeleprompter()
 ShowTeleprompter().Wait();
 ```
 
-在這裡，`Main` 中的程式碼會執行同步等候。 您應該儘可能使用 `await` 運算子而不是同步等候。 但是，在主控台應用程式的`Main`方法中，您無法使用`await`運算子。 那會導致應用程式在所有工作完成之前即結束。
+在這裡，`Main` 中的程式碼會執行同步等候。 您應該儘可能使用 `await` 運算子而不是同步等候。 但是，在主控台應用程式的 `Main` 方法中，您無法使用 `await` 運算子。 那會導致應用程式在所有工作完成之前即結束。
 
 > [!NOTE]
 > 如果您使用 C# 7.1 或更新版本，則可以使用 [`async` `Main` 方法](../whats-new/csharp-7-1.md#async-main)建立主控台應用程式。
@@ -217,7 +217,7 @@ private static async Task GetInput()
 }
 ```
 
-這會建立 lambda 運算式來代表從<xref:System.Action>主控台讀取索引鍵的委派，並修改代表使用者按下 ' < ' （小於）或 ' > ' （大於）鍵時的延遲的本機變數。 委派方法會在使用者按下 ' X ' 或 ' x ' 鍵時完成，讓使用者可以隨時停止文字顯示。 此方法會使用 <xref:System.Console.ReadKey> 來封鎖並等候使用者按下按鍵。
+這會建立 lambda 運算式來代表 <xref:System.Action> 從主控台讀取索引鍵的委派，並修改代表使用者按下 ' < ' （小於）或 ' > ' （大於）鍵時的延遲的本機變數。 委派方法會在使用者按下 ' X ' 或 ' x ' 鍵時完成，讓使用者可以隨時停止文字顯示。 此方法會使用 <xref:System.Console.ReadKey> 來封鎖並等候使用者按下按鍵。
 
 若要完成此功能，您必須建立一個會傳回方法的新 `async Task`，該方法既會啟動這兩項工作 (`GetInput` 和 `ShowTeleprompter`)，也會管理這兩項工作之間的共用資料。
 
@@ -247,7 +247,7 @@ namespace TeleprompterConsole
 }
 ```
 
-請將該類別放在新檔案中，然後如以上所示，將該類別包含在 `TeleprompterConsole` 命名空間中。 您也需要加入`using static`語句，以便在沒有封入類別或命名`Min`空間`Max`名稱的情況下，可以參考和方法。 [`using static`](../language-reference/keywords/using-static.md)語句會從一個類別匯入方法。 這與到目前為止所使用的 `using` 陳述式形成對比，該陳述式會從命名空間匯入所有類別。
+請將該類別放在新檔案中，然後如以上所示，將該類別包含在 `TeleprompterConsole` 命名空間中。 您也需要加入 `using static` 語句，以便在沒有封入 `Min` `Max` 類別或命名空間名稱的情況下，可以參考和方法。 [`using static`](../language-reference/keywords/using-static.md)語句會從一個類別匯入方法。 這與到目前為止所使用的 `using` 陳述式形成對比，該陳述式會從命名空間匯入所有類別。
 
 ```csharp
 using static System.Math;

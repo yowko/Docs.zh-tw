@@ -49,7 +49,7 @@ using static <fully-qualified-type-name>;
 
 在此範例中，`using static` 指示詞也可能已套用至 <xref:System.Double> 類型。 因此不需要指定類型名稱，即可呼叫 <xref:System.Double.TryParse(System.String,System.Double@)> 方法。 不過，這會建立較不容易閱讀的程式碼，因為必須檢查指示詞， `using static` 以判斷呼叫了哪個數數值型別的 `TryParse` 方法。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [using 指示詞](using-directive.md)
 - [C # 參考](../index.md)

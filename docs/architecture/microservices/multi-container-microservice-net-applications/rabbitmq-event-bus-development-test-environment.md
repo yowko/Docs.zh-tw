@@ -2,18 +2,18 @@
 title: 針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對開發或測試環境使用 RabbitMQ 實作整合事件的事件匯流排傳訊。
 ms.date: 10/02/2018
-ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1af72d18825eb610d6900178205450e2c2e34c25
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144288"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306886"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 
-首先您應該知道，如果您根據容器中所執行的 RabbitMQ 來建立自訂事件匯流排 (如同 eShopOnContainers 應用程式的做法)，則只能用於開發和測試環境。 除非您將它當做準備好用於生產環境之服務匯流排的一部分來建置，否則不應該用於生產環境中。 簡單的自訂事件匯流排可能會遺失許多商業服務匯流排所具備並可供生產環境使用的重要功能。
+首先您應該知道，如果您根據容器中所執行的 RabbitMQ 來建立自訂事件匯流排 (如同 eShopOnContainers 應用程式的做法)，則只能用於開發和測試環境。 請勿將它用於生產環境，除非您將它建立為生產就緒服務匯流排的一部分。 簡單的自訂事件匯流排可能會遺失許多商業服務匯流排所具備並可供生產環境使用的重要功能。
 
-EShopOnContainers 中的其中一個事件匯流排自訂執行，基本上是使用 RabbitMQ API 的程式庫。 （有另一個以 Azure 服務匯流排為基礎的執行）。
+EShopOnContainers 中的其中一個事件匯流排自訂建立，基本上是使用 RabbitMQ API 的程式庫。 （有另一個以 Azure 服務匯流排為基礎的執行）。
 
 使用 RabbitMQ 實作事件匯流排可讓微服務訂閱事件、發行事件和接收事件，如圖 6-21 所示。
 

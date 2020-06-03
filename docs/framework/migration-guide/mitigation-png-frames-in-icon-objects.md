@@ -18,7 +18,7 @@ ms.locfileid: "80248891"
  這項變更會影響重新撰寫之以 .NET Framework 4.6 為目標的應用程式，以及針對 <xref:System.ArgumentOutOfRangeException> 物件具有 PNG 畫面格時所擲回的 <xref:System.Drawing.Icon> 實作特殊處理的應用程式。 以 .NET Framework 4.6 執行時，轉換會成功，且不再擲回 <xref:System.ArgumentOutOfRangeException> ，因此不會再叫用例外狀況處理常式。  
   
 ### <a name="mitigation"></a>降低  
- 如果此行為不可取，則可以通過將以下元素添加到應用的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分來保留以前的行為：  
+ 如果不需要此行為，您可以將下列專案新增至 app.config 檔案的[ \< runtime >](../configure-apps/file-schema/runtime/runtime-element.md)區段，以保留先前的行為：  
   
 ```xml  
 <AppContextSwitchOverrides

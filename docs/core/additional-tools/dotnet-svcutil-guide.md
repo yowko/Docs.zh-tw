@@ -21,7 +21,7 @@ Windows Communication Foundation （WCF） **dotnet-svcutil**工具是一種 .ne
 > [!IMPORTANT]
 > 您只應該參考來自信任來源的服務。 新增不信任來源的參考可能會危及安全性。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 <!-- markdownlint-disable MD025 -->
 

@@ -11,7 +11,7 @@ ms.locfileid: "81463667"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**本文適用於:✔️** .NET 核心 2.2 SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.2 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 

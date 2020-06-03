@@ -1,6 +1,6 @@
 ---
 title: 實作 Dispose 方法
-ms.date: 05/13/2020
+ms.date: 05/27/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a002e0d27dfe28795b28e6813c4f5d5b3e13cdaf
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: a16034b074b518b25244c47a7d00cb484e145c6e
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396912"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307016"
 ---
 # <a name="implement-a-dispose-method"></a>實作 Dispose 方法
 
@@ -148,7 +148,7 @@ ms.locfileid: "83396912"
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>
@@ -156,5 +156,4 @@ ms.locfileid: "83396912"
 - <xref:Microsoft.Win32.SafeHandles>
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
-- [如何：定義與使用類別和結構 (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Dispose 模式](implementing-dispose.md)
+- [定義和使用類別和結構（c + +/CLI）](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)

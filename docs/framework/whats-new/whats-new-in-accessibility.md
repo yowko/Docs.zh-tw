@@ -20,9 +20,9 @@ ms.locfileid: "80249717"
 
 ## <a name="accessibility-switches"></a>協助工具參數
 
-如果您的應用程式是以 .NET Framework 4.7 或較早版本為目標，但是在 .NET Framework 4.7.1 或更新版本上執行，您可以將其設定為選擇加入協助工具功能。 如果您的應用程式是以 .NET Framework 4.7.1 或更新版本為目標，您也可以將其設定為使用舊版的功能 (且不利用協助工具功能)。 包含協助工具的每個版本的 .NET Framework 都有一個特定于版本的協助工具開關，您將該開關添加到[`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)應用程式佈建檔[`<runtime>`](../configure-apps/file-schema/runtime/index.md)部分中的元素中。 以下是支援的參數：
+如果您的應用程式是以 .NET Framework 4.7 或較早版本為目標，但是在 .NET Framework 4.7.1 或更新版本上執行，您可以將其設定為選擇加入協助工具功能。 如果您的應用程式是以 .NET Framework 4.7.1 或更新版本為目標，您也可以將其設定為使用舊版的功能 (且不利用協助工具功能)。 包含協助工具功能的每個 .NET Framework 版本都具有特定版本的協助工具參數，您可以將其新增至 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 應用程式佈建檔區段中的專案。 以下是支援的參數：
 
-|版本|Switch|
+|版本|參數|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -30,7 +30,7 @@ ms.locfileid: "80249717"
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>利用協助工具增強功能
 
-針對以 .NET Framework 4.7.1 或更新版本為目標的應用程式，預設會啟用新的協助工具功能。 此外，針對 .NET Framework 的早期版本並在 .NET Framework 4.7.1 或更高版本上運行的應用程式可以通過將交換器添加到應用程式佈建檔[`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)[`<runtime>`](../configure-apps/file-schema/runtime/index.md)部分中的元素並將其值`false`設置為 ，退出宣告舊式協助工具行為（從而利用協助工具改進）。 下列顯示如何選擇加入 .NET Framework 4.7.1 中引進的協助工具增強功能：
+針對以 .NET Framework 4.7.1 或更新版本為目標的應用程式，預設會啟用新的協助工具功能。 此外，以舊版 .NET Framework 為目標但在 .NET Framework 4.7.1 或更新版本上執行的應用程式，可以選擇不使用舊版協助工具行為（並藉由將參數新增至 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 應用程式佈建檔的區段中的專案，並將其值設定為），藉此利用協助工具改善 `false` 。 下列顯示如何選擇加入 .NET Framework 4.7.1 中引進的協助工具增強功能：
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ ms.locfileid: "80249717"
 </runtime>
 ```
 
-如果您選擇加入 .NET Framework 較新版本中的協助工具功能，您必須同時明確加入來自舊版 .NET Framework 的功能。 配置應用以利用 .NET Framework 4.7.1 和 4.7.2 中的協助工具改進需要[`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)以下元素：
+如果您選擇加入 .NET Framework 較新版本中的協助工具功能，您必須同時明確加入來自舊版 .NET Framework 的功能。 設定應用程式以利用 .NET Framework 4.7.1 和4.7.2 的協助工具改善，需要下列 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
 
 ```xml
 <runtime>
@@ -48,7 +48,7 @@ ms.locfileid: "80249717"
 </runtime>
 ```
 
-配置應用以利用 .NET Framework 4.7.1、4.7.2 和 4.8 中的協助工具改進需要[`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)以下元素：
+設定應用程式以利用 .NET Framework 4.7.1、4.7.2 和4.8 的協助工具改善需要下列 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素：
 
 ```xml
 <runtime>
@@ -59,7 +59,7 @@ ms.locfileid: "80249717"
 
 ### <a name="restoring-legacy-behavior"></a>還原舊版行為
 
-以 4.7.1 開頭的 .NET Framework 版本為目標的應用程式可以通過將交換器添加到[`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)應用程式佈建檔[`<runtime>`](../configure-apps/file-schema/runtime/index.md)部分的元素並將其值設置為`true`來禁用協助工具。 例如，下列組態會選擇退出 .NET Framework 4.7.2 中引進的協助工具功能：
+以4.7.1 開頭的 .NET Framework 版本為目標的應用程式可以停用協助工具功能，方法是將參數新增至 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 應用程式佈建檔區段中的專案，並將其值設定為 `true` 。 例如，下列組態會選擇退出 .NET Framework 4.7.2 中引進的協助工具功能：
 
 ```xml
 <runtime>
@@ -167,7 +167,7 @@ if (raiseMethod != null) {
 
 下圖顯示當使用者以鍵盤選取按鈕時的工具提示。
 
-![當使用者使用鍵盤導航到按鈕時工具提示的螢幕截圖。](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
+![當使用者流覽至具有鍵盤的按鈕時，工具提示的螢幕擷取畫面。](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
 <a name="wpf48" />
 
@@ -187,7 +187,7 @@ if (raiseMethod != null) {
 
 若要使用這個屬性，只要將它新增至您的 XAML 程式碼，並使用適當的筆刷或繫結即可。 產生的文字選取範圍看起來像這樣：
 
-![使用"Hello World"字樣運行的應用程式的螢幕截圖。](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
+![以 Hello World 選取的單字執行之應用程式的螢幕擷取畫面。](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
 
 您可以結合 `SelectionBrush` 和 `SelectionTextBrush` 屬性的用法，視需要產生任何背景和前景色彩的組合。
 
@@ -224,7 +224,7 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 }
 ```
 
-**有關鍵盤訪問的工具提示**
+**鍵盤存取的工具提示**
 
 在 .NET Framework 4.7.2 和更早版本中，只有當使用者將滑鼠游標停留在控制項上方時會顯示工具提示。 在 .NET Framework 4.8 中，工具提示也會在鍵盤焦點上顯示，以及透過鍵盤快速鍵顯示。
 
@@ -367,7 +367,7 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> 屬性會傳回正確的父控制項。
 
-**改進的視覺提示**
+**改良的視覺提示**
 
 - <xref:System.Windows.Forms.ButtonBase.Text> 屬性為空白的控制項 <xref:System.Windows.Forms.RadioButton> 與 <xref:System.Windows.Forms.CheckBox>，會於接收到焦點時顯示焦點指標。
 
@@ -409,7 +409,7 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - [.NET SDK 工具](#tools471)
 
-- [Windows 工作流基礎 （WF） 工作流設計器](#wf471)
+- [Windows Workflow Foundation （WF）工作流程設計工具](#wf471)
 
 <a name="wpf471"></a>
 
@@ -470,7 +470,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ```
 
-**高對比**
+**High contrast**
 
 從 .NET Framework 4.7.1 開始，已對各種 WPF 控制項進行高對比改善。 現在，設定 <xref:System.Windows.SystemParameters.HighContrast%2A> 佈景主題時，可以看到它們。 其中包括：
 
@@ -480,11 +480,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前：
 
-  ![具有焦點且無焦點視覺的擴展器控制項的螢幕截圖。](./media/whats-new-in-accessibility/expander-control-before.png)
+  ![具有焦點和沒有焦點視覺效果的展開器控制項螢幕擷取畫面。](./media/whats-new-in-accessibility/expander-control-before.png)
 
   之後：
 
-  ![擴展器控制項的螢幕截圖，焦點顯示控制項文本周圍的虛線。](./media/whats-new-in-accessibility/expander-control-after.png)
+  ![具有焦點的展開器控制項螢幕擷取畫面，其中顯示控制項文字周圍的虛線。](./media/whats-new-in-accessibility/expander-control-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控制項
 
@@ -492,11 +492,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前：
 
-  ![在高對比主題上文本可見度較差的收音機和檢查按鈕的螢幕截圖。](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
+  ![高對比主題的無線電和核取按鈕的螢幕擷取畫面，具有不佳的文字可見度。](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
   之後：
 
-  ![收音機和檢查按鈕的螢幕截圖，在高對比主題上具有更好的文本可見度。](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
+  ![在高對比主題上具有較佳文字可見度的選項按鈕和複選按鈕的螢幕擷取畫面。](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 控制項
 
@@ -504,31 +504,31 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前：
 
-  ![具有不同顏色邊框和控制文本的禁用組合盒的螢幕截圖。](./media/whats-new-in-accessibility/combo-disabled-before.png)
+  ![已停用 ComboBox 的螢幕擷取畫面，其中框線和控制項文字具有不同的色彩。](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
   之後：
 
-  ![禁用的 ComboBox 的螢幕截圖，其邊框與控制文本的顏色相同。](./media/whats-new-in-accessibility/combo-disabled-after.png)
+  ![已停用 ComboBox 的螢幕擷取畫面，其框線具有與控制項文字相同的色彩。](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
   此外，已停用和聚焦按鈕會使用正確的佈景主題色彩。
 
   之前：
 
-  ![黑色按鈕的螢幕截圖，灰色文本說"聚焦我"。](./media/whats-new-in-accessibility/button-theme-colors-before.png)
+  ![具有灰色文字的黑色按鈕的螢幕擷取畫面，請將焦點放在這裡。](./media/whats-new-in-accessibility/button-theme-colors-before.png)
 
   之後：
 
-  ![藍色按鈕的螢幕截圖，黑色文本說"聚焦我"。](./media/whats-new-in-accessibility/button-theme-colors-after.png)
+  ![藍色按鈕的螢幕擷取畫面，其中的黑色文字表示焦點。](./media/whats-new-in-accessibility/button-theme-colors-after.png)
 
   最後，在 .NET Framework 4.7 和舊版本中將 <xref:System.Windows.Controls.ComboBox> 控制項的樣式設定為 `Toolbar.ComboBoxStyleKey` 會導致無法看到下拉式箭號。 從 .NET Framework 4.7.1 開始，已修正此問題。 例如：
 
   之前：
 
-  ![帶有不可見下拉箭頭的 ComboBox 控制項的螢幕截圖。](./media/whats-new-in-accessibility/combo-box-style-key-before.png)
+  ![具有不可見下拉式箭號之 ComboBox 控制項的螢幕擷取畫面。](./media/whats-new-in-accessibility/combo-box-style-key-before.png)
 
   之後：
 
-  ![顯示下拉箭頭的 ComBox 控制項的螢幕截圖。](./media/whats-new-in-accessibility/combo-box-style-key-after.png)
+  ![顯示下拉箭號之 ComBoxBox 控制項的螢幕擷取畫面。](./media/whats-new-in-accessibility/combo-box-style-key-after.png)
 
 - <xref:System.Windows.Controls.DataGrid> 控制項
 
@@ -536,21 +536,21 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前：
 
-  ![改進前排序指示器箭頭的螢幕截圖。](./media/whats-new-in-accessibility/sort-indicator-before.png)
+  ![改善之前的排序指標箭號的螢幕擷取畫面。](./media/whats-new-in-accessibility/sort-indicator-before.png)
 
   之後：
 
-  ![改進後排序指示器箭頭的螢幕截圖。](./media/whats-new-in-accessibility/sort-indicator-after.png)
+  ![改善之後的排序指標箭號螢幕擷取畫面。](./media/whats-new-in-accessibility/sort-indicator-after.png)
 
   此外，在 .NET Framework 4.7 和舊版本的高對比模式中，預設連結樣式會在滑鼠移至上方時變更為不正確的色彩。 從 .NET Framework 4.7.1 開始已解決此問題。 同樣地，從 .NET Framework 4.7.1 開始，<xref:System.Windows.Controls.DataGrid> 核取方塊資料行會使用鍵盤焦點回饋的預期色彩。
 
   之前：
 
-  ![連結的螢幕截圖說"點擊我！ 紅色。](./media/whats-new-in-accessibility/default-link-style-before.png)
+  ![連結的螢幕擷取畫面，請按一下 [我！] 以紅色表示。](./media/whats-new-in-accessibility/default-link-style-before.png)
 
   之後：
 
-  ![連結的螢幕截圖說"點擊我！ 在黃色。](./media/whats-new-in-accessibility/default-link-style-after.png)
+  ![連結的螢幕擷取畫面，請按一下 [我！] 以黃色。](./media/whats-new-in-accessibility/default-link-style-after.png)
 
 如需 .NET Framework 4.7.1 中的 WPF 協助工具改善詳細資訊；請參閱 [WPF 的協助工具改善](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
@@ -581,11 +581,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   之前：
 
-  ![在協助工具改進之前，使用在高對比模式下運行的不同控制項的應用的螢幕截圖。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png)
+  ![應用程式的螢幕擷取畫面，在協助工具改善之前，使用在高對比模式下執行的不同控制項。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png)
 
   之後：
 
-  ![在協助工具改進後，使用在高對比模式下運行的不同控制項的應用的螢幕截圖。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png)
+  ![應用程式的螢幕擷取畫面，在協助工具改善之後，使用在高對比模式下執行的不同控制項。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png)
 
 - 執行緒例外狀況對話方塊中的高對比改善。
 
@@ -626,13 +626,13 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ### <a name="aspnet-web-controls"></a>ASP.NET Web 控制項
 
-從 .NET Framework 4.7.1 和 Visual Studio 2017 版本 15.3 開始，ASP.NET改進ASP.NET Web 控制項在 Visual Studio 中使用協助工具技術的工作方式。 變更包括下列項目：
+從 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 版開始，ASP.NET 改善了 ASP.NET web 控制項如何與 Visual Studio 中的協助工具技術搭配使用。 變更包括下列項目：
 
-- 更改以在控制項中實現缺少的 UI 協助工具模式，如 **"詳細資訊視圖"** 嚮導中的 **"添加欄位**"對話方塊或**ListView**嚮導的 **"配置清單視圖"** 對話方塊。
+- 在控制項中執行遺漏 UI 協助工具模式的變更，例如 [**詳細資料檢視**] wizard 中的 [**加入欄位**] 對話方塊，或**ListView** wizard 的 [**設定 listview** ] 對話方塊。
 
-- 更改以改進高對比模式下的顯示，如**資料呼叫器欄位編輯器**。
+- 在高對比模式中改善顯示的變更，例如 [**資料頁] 欄位編輯器**。
 
-- 更改以改進控制項的鍵盤導航體驗，如 DataPager 控制項的 **"編輯呼叫器欄位"** 嚮導中的**欄位**對話方塊 **、"設定物件上下文"** 對話方塊或 **"配置資料來源**嚮導**的配置資料選擇**"對話方塊。
+- 改善控制項鍵盤流覽體驗的變更，例如 DataPager 控制項之 [**編輯頁欄位**] 中的 [**欄位**] 對話方塊、[**設定 ObjectCoNtext** ] 對話方塊，或 [**設定資料來源**] 嚮導的 [**設定資料選取專案**] 對話方塊。
 
 <a name="tools471"></a>
 

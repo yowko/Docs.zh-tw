@@ -57,7 +57,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [new 修飾詞](~/_csharplang/spec/classes.md#the-new-modifier)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 參考](../index.md)
 - [C # 程式設計指南](../../programming-guide/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 98dee04593ea26bbbc3079f5da98d8106a373168
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d59f368f21964c07d371df604f0728fa6ca8ac00
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286063"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307029"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 
@@ -200,7 +200,7 @@ GC 演算法是以數個考慮為基礎：
 
 下圖顯示觸發記憶體回收且造成其他執行緒暫停的執行緒。
 
-![當執行緒觸發記憶體回收時](./media/gc-triggered.png)
+![當執行緒觸發記憶體回收時](media/gc-triggered.png)
 
 ## <a name="unmanaged-resources"></a>非受控資源
 

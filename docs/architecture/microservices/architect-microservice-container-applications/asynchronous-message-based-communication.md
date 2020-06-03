@@ -2,12 +2,12 @@
 title: 非同步訊息通訊
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊息型通訊是微服務架構的基本概念，因為它是最終保持微服務彼此之間相互獨立，同時又能同步的最佳方式。
 ms.date: 09/20/2018
-ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144340"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306964"
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
 
@@ -35,7 +35,7 @@ ms.locfileid: "84144340"
 
 **圖 4-18**. 接收非同步訊息的單一微服務
 
-請注意，當命令來自用戶端應用程式時，它們可以實作為 HTTP 同步命令。 當您需要更高的延展性，或當您已經使用訊息式商務程序時，您應該使用訊息式命令。
+當命令來自用戶端應用程式時，它們可以實作為 HTTP 同步命令。 當您需要更高的擴充性，或當您已經在以訊息為基礎的商務程式時，請使用以訊息為基礎的命令。
 
 ## <a name="multiple-receivers-message-based-communication"></a>多個接收者訊息式通訊
 
@@ -57,7 +57,7 @@ ms.locfileid: "84144340"
 
 **圖 4-19**. 非同步事件驅動訊息通訊
 
-在非同步事件驅動通訊中，一個微服務會將事件發佈至事件匯流排，而許多微服務可以訂閱它，以收到通知並對此採取行動。 您的實作會決定要用於事件驅動、訊息式通訊的通訊協定。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 可以協助達成可靠的佇列通訊。
+在非同步事件驅動通訊中，一個微服務會將事件發佈至事件匯流排，而許多微服務可以訂閱它，以取得通知並採取行動。 您的實作會決定要用於事件驅動、訊息式通訊的通訊協定。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 可以協助達成可靠的佇列通訊。
 
 當您使用事件匯流排時，可能會想要使用抽象層級 (例如事件匯流排介面)，其根據類別中的相關實作，且程式碼使用來自像是 [RabbitMQ](https://www.rabbitmq.com/) 之訊息代理程式的 API，或使用像是 [Azure 服務匯流排與主題](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)的服務匯流排。 或者，您也可以使用較高層級的服務匯流排，像是 NServiceBus、MassTransit 或 Brighter 來相互連貫事件匯流排和發佈/訂閱系統。
 

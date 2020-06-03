@@ -78,7 +78,7 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../language-referenc
   
  如需更多的 `new` 和 `override` 範例，請參閱[了解使用 Override 和 New 關鍵字的時機](./knowing-when-to-use-override-and-new-keywords.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)
 - [類別和結構](./index.md)

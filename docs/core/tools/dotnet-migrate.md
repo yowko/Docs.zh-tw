@@ -13,7 +13,7 @@ ms.locfileid: "84284088"
 
 **本文適用于：** ✔️ .net CORE 2.x SDK
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet migrate` - 將 Preview 2 .NET Core 專案移轉至 .NET Core SDK 型專案。
 
@@ -60,7 +60,7 @@ dotnet migrate -h|--help
 
 如果未指定，則預設值是目前的目錄。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 `--format-report-file-json <REPORT_FILE>`
 
