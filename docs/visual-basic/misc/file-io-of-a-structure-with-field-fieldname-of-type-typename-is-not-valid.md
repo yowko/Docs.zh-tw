@@ -1,17 +1,17 @@
 ---
-title: 檔案 I/O 的結構與欄位 '<fieldname>'的類型'<typename>' 無效
+title: 類型為 ' ' 之欄位 ' ' 的結構檔案 i/o 無效 <fieldname> <typename>
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedFieldType2
 ms.assetid: 028e936f-6210-4290-adb2-46298e13e160
-ms.openlocfilehash: ca40fb53beb5a7888456547747d2fb957c6ef0ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 089fb9a498f9bc696221bca7053fefc072993c64
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624915"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84358434"
 ---
-# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a>檔案 I/O 的結構與欄位 '\<欄位名稱 >' 類型的'\<類型名稱 >' 無效
+# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a>類型為 ' ' 之欄位 ' ' 的結構檔案 i/o 無效 \<fieldname> \<typename>
 您嘗試寫入檔案的結構包含不支援的類型。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -20,5 +20,5 @@ ms.locfileid: "64624915"
   
 ## <a name="see-also"></a>另請參閱
 
-- [My.Computer.FileSystem.WriteAllBytes](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)
-- [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)
+- [My.user. My.computer.filesystem.writeallbytes](xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.WriteAllBytes%2A)
+- [錯誤類型](../programming-guide/language-features/error-types.md)

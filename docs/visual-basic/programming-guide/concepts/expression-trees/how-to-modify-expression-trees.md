@@ -2,14 +2,14 @@
 title: 如何：修改運算式樹狀架構
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 12ccad6df7d6c7d91ebc290163db362eae173209
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1f052120a2e7e12f5a985adce3ae193afec0e9af
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353751"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410988"
 ---
-# <a name="how-to-modify-expression-trees-visual-basic"></a>如何：修改運算式樹狀架構（Visual Basic）
+# <a name="how-to-modify-expression-trees-visual-basic"></a>如何：修改運算式樹狀結構 (Visual Basic)
 
 本主題示範如何修改運算式樹狀架構。 運算式樹狀架構為不可變，這表示無法直接對其進行修改。 若要變更運算式樹狀架構，您必須建立現有運算式樹狀架構的複本，並且在建立複本時進行必要的變更。 您可以使用 <xref:System.Linq.Expressions.ExpressionVisitor> 類別周遊現有的運算式樹狀架構，並複製每個瀏覽的節點。
 
@@ -17,7 +17,7 @@ ms.locfileid: "74353751"
 
 1. 建立新的**主控台應用程式**專案。
 
-2. 將 `Imports` 語句加入至 `System.Linq.Expressions` 命名空間的檔案。
+2. 將 `Imports` 語句加入至命名空間的檔案 `System.Linq.Expressions` 。
 
 3. 將 `AndAlsoModifier` 類別新增至專案。
 
@@ -47,9 +47,9 @@ ms.locfileid: "74353751"
 
     此類別會繼承 <xref:System.Linq.Expressions.ExpressionVisitor> 類別，並針對代表 `AND` 條件運算的運算式進行修改。 它會將這些運算從 `AND` 條件運算變更為 `OR` 條件運算。 為了執行這項操作，此類別會覆寫基底類型的 <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> 方法，因為 `AND` 條件運算式會以二元運算式來表示。 在 `VisitBinary` 方法中，如果傳遞給它的運算式代表 `AND` 條件運算，程式碼會建構新的運算式，以包含 `OR` 條件運算子來取代 `AND` 條件運算子。 如果傳遞給 `VisitBinary` 的運算式不代表 `AND` 條件運算，此方法會延後到基底類別實作。 基底類別方法會建構類似傳入之運算式樹狀架構的節點，但這些節點的樹狀子目錄會由造訪者以遞迴方式產生的運算式樹狀架構來取代。
 
-4. 將 `Imports` 語句加入至 `System.Linq.Expressions` 命名空間的檔案。
+4. 將 `Imports` 語句加入至命名空間的檔案 `System.Linq.Expressions` 。
 
-5. 將程式碼加入至 Module1 檔案中的 `Main` 方法，以建立運算式樹狀架構，並將它傳遞給將會修改它的方法。
+5. 將程式碼加入至 `Main` Module1 檔案中的方法，以建立運算式樹狀架構，並將它傳遞給將會修改它的方法。
 
     ```vb
     Dim expr As Expression(Of Func(Of String, Boolean)) = _
@@ -71,7 +71,7 @@ ms.locfileid: "74353751"
 
 6. 編譯並執行應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [如何：執行運算式樹狀架構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [運算式樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [如何：執行運算式樹狀結構 (Visual Basic)](how-to-execute-expression-trees.md)
+- [運算式樹狀結構 (Visual Basic)](index.md)

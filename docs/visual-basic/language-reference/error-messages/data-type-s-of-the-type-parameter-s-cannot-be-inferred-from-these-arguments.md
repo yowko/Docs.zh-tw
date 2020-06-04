@@ -10,12 +10,12 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 97b03874489473482554078958c7bfd29d87c095
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b278dcc10a8a4e9e67aacdb16dca2588d2ebd0f1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524002"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409776"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>無法從這些引數推斷類型參數的資料類型
 
@@ -58,8 +58,8 @@ End Interface
 
 您可以指定一個或多個類型參數的資料類型，而不是依賴類型推斷。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [Visual Basic 中的類型轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [寬鬆委派轉換](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Generic Procedures in Visual Basic](../../programming-guide/language-features/data-types/generic-procedures.md)
+- [Visual Basic 中的類型轉換](../../programming-guide/language-features/data-types/type-conversions.md)

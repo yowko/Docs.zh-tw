@@ -2,12 +2,12 @@
 title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: 7e54e82c1e9edfd0d9d393a014f9d91f82970363
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 677d49aba38801f2adf42cc745983af30b3eddc5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353535"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400728"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage （Visual Basic）
 
@@ -55,7 +55,7 @@ Class Class1
 End Class
 ```
 
-在此情況下，因為 `MultiUseAttr` 設為 `AllowMultiple`，所以可以重複套用 `true`。 套用多個屬性所顯示的兩種格式都有效。
+在此情況下，因為 `AllowMultiple` 設為 `true`，所以可以重複套用 `MultiUseAttr`。 套用多個屬性所顯示的兩種格式都有效。
 
 如果 `Inherited` 設為 `false`，則衍生自已屬性化類別的類別不會繼承屬性。 例如：
 
@@ -81,11 +81,11 @@ End Class
 
 `AttributeUsage` 屬性是單次使用的屬性--它無法多次套用至相同的類別。 `AttributeUsage` 是 <xref:System.AttributeUsageAttribute> 的別名。
 
-如需詳細資訊，請參閱[使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。
+如需詳細資訊，請參閱[使用反映存取屬性 (Visual Basic)](accessing-attributes-by-using-reflection.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範 `Inherited` 屬性的 `AllowMultiple` 和 `AttributeUsage` 引數的效果，以及如何列舉套用至類別的自訂屬性。
+下列範例示範 `AttributeUsage` 屬性的 `Inherited` 和 `AllowMultiple` 引數的效果，以及如何列舉套用至類別的自訂屬性。
 
 ```vb
 ' Create some custom attributes:
@@ -148,13 +148,13 @@ A3
 A2
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 程式設計指南](../../index.md)
 - [屬性](../../../../standard/attributes/index.md)
-- [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [屬性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [建立自訂屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [反映 (Visual Basic)](../reflection.md)
+- [屬性 (Visual Basic)](../../../language-reference/attributes.md)
+- [建立自訂屬性 (Visual Basic)](creating-custom-attributes.md)
+- [使用反映存取屬性 (Visual Basic)](accessing-attributes-by-using-reflection.md)

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: ff51bb27847a92b07ce6275a8ddee4789e865f08
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2ba411a5f0db21539a9cf99c7645b8c9309caab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642808"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409552"
 ---
-# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<運算式 >' 無法當做類型條件約束
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<expression>' 不能當做類型條件約束使用
 條件約束清單包含運算式，此運算式不表示類型參數上有效的條件約束。  
   
  條件約束清單會對傳遞至類型參數的類型引數強制一些必要需求。 您可以利用任意組合指定下列需求：  
@@ -33,7 +33,7 @@ ms.locfileid: "64642808"
   
  您無法針對相同的類型參數同時指定 `Structure` 和 `Class` ，並且無法多次指定其中一個。  
   
- **錯誤 ID:** BC32061  
+ **錯誤識別碼：** BC32061  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
@@ -41,10 +41,10 @@ ms.locfileid: "64642808"
   
 - 如果運算式不符合上述的需求清單，請將它從條件約束清單中移除。  
   
-- 如果運算式參考介面或類別，請驗證編譯器是否有權存取該介面或類別。 您可能需要限定其名稱，而且也可能需要將參考加入專案中。 如需詳細資訊，請參閱 < 專案參考 」 中[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+- 如果運算式參考介面或類別，請驗證編譯器是否有權存取該介面或類別。 您可能需要限定其名稱，而且也可能需要將參考加入專案中。 如需詳細資訊，請參閱宣告[元素的參考](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)中的「專案的參考」。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Value Types and Reference Types](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [Value Types and Reference Types](../../programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

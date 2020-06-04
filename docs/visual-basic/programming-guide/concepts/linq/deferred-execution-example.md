@@ -2,12 +2,12 @@
 title: 延後執行範例
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: 6ab8f6434bb24b7a66ca4afd1d082911481671f6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 863b018b6047d61f6fb4a5c1ac68151ed69d24a1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354232"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410795"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>延後執行範例（Visual Basic）
 
@@ -61,6 +61,6 @@ Main: str GHI
 
 您可以看到在所傳回之集合中的每個項目在 `foreach` 的 `Main` 迴圈中處理前，字串的整個陣列都沒有轉換為大寫。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [教學課程：延後執行（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [教學課程：延後執行（Visual Basic）](tutorial-deferred-execution.md)

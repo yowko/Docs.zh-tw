@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
-ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 411e3248409ab0184666f4efefb4ec4becf7cab1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946584"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409344"
 ---
 # <a name="optional-expected"></a>必須是 'Optional'
-在程序宣告中的選擇性引數的後面是必要的引數。 下列選擇性引數的每個引數也必須是選擇性的。  
+程式宣告中的選擇性引數後面接著必要的引數。 選擇性引數之後的每個引數也必須是選擇性的。  
   
- **錯誤 ID:** BC30202  
+ **錯誤識別碼：** BC30202  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 如果引數是必要，將它移至引數清單中前面的第一個選擇性引數。  
+1. 如果需要引數，請將它移至引數清單中的第一個選擇性引數之前。  
   
-2. 引數是選擇性，如果使用`Optional`關鍵字。  
+2. 如果引數是選擇性的，請使用 `Optional` 關鍵字。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [選擇性參數](../../programming-guide/language-features/procedures/optional-parameters.md)

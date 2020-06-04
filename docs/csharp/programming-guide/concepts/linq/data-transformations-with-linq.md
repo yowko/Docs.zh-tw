@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 393e3bd24c4bc8b89064e01e1048b24254f5f83b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d20f5d826620ad8654ddf1e9471ecc894b2c0391
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635947"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408519"
 ---
 # <a name="data-transformations-with-linq-c"></a>使用 LINQ 轉換資料 (C#)
-語言集成查詢 （LINQ） 不僅僅是檢索資料。 它也是功能強大的資料轉換工具。 通過使用 LINQ 查詢，可以使用源序列作為輸入，並在許多方面對其進行修改以創建新的輸出序列。 藉由排序及群組，您可以修改序列本身，而不修改項目本身。 但是 LINQ 查詢最強大的功能可能是創建新類型的能力。 這是在 [select](../../../language-reference/keywords/select-clause.md) 子句中完成。 例如，您可以進行下列工作：  
+語言整合式查詢（LINQ）不只是用來抓取資料。 它也是功能強大的資料轉換工具。 藉由使用 LINQ 查詢，您可以使用來源序列做為輸入，並以許多方式加以修改以建立新的輸出序列。 藉由排序及群組，您可以修改序列本身，而不修改項目本身。 但是 LINQ 查詢最強大的功能就是建立新類型的能力。 這是在 [select](../../../language-reference/keywords/select-clause.md) 子句中完成。 例如，您可以進行下列工作：  
   
 - 將多個輸入序列合併為具有新類型的單一輸出序列。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75635947"
  這些只是一些範例。 當然，這些轉換可以用各種方式結合在相同的查詢中。 此外，一個查詢的輸出序列也可用作新查詢的輸入序列。  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>將多個輸入聯結成一個輸出序列  
- 可以使用 LINQ 查詢創建包含來自多個輸入序列的元素的輸出序列。 下列範例示範如何結合兩個記憶體中的資料結構，但相同的原則可以套用以合併 XML 或 SQL 或資料集來源的資料。 假設下列兩個類別類型︰  
+ 您可以使用 LINQ 查詢來建立輸出序列，其中包含來自多個輸入序列的元素。 下列範例示範如何結合兩個記憶體中的資料結構，但相同的原則可以套用以合併 XML 或 SQL 或資料集來源的資料。 假設下列兩個類別類型︰  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75635947"
  如需詳細資訊，請參閱[物件和集合初始設定式](../../classes-and-structs/object-and-collection-initializers.md)和[匿名型別](../../classes-and-structs/anonymous-types.md)。  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>將記憶體中的物件轉換成 XML  
- LINQ 查詢便於在記憶體中資料結構、SQL 資料庫、ADO.NET資料集和 XML 流或文檔之間轉換資料。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
+ LINQ 查詢可讓您輕鬆地在記憶體中的資料結構、SQL 資料庫、ADO.NET 資料集和 XML 資料流程或檔之間轉換資料。 下列範例會將記憶體中資料結構的物件轉換成 XML 項目。  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   
@@ -90,7 +90,11 @@ ms.locfileid: "75635947"
  如需詳細資訊，請參閱[在 C# 中建立 XML 樹狀結構 (LINQ to XML)](./creating-xml-trees-linq-to-xml-2.md)。  
   
 ## <a name="performing-operations-on-source-elements"></a>對來源項目執行作業  
- 輸出序列可能不會包含來自來源序列的任何項目或項目屬性。 輸出可能會是使用來源項目作為輸入引數而計算的值序列。 下列簡單的查詢在執行時，會輸出字串的序列，這些字串的值代表了以 `double` 類型之項目的來源序列為基礎的計算。  
+ 輸出序列可能不會包含來自來源序列的任何項目或項目屬性。 輸出可能會是使用來源項目作為輸入引數而計算的值序列。
+
+ 下列查詢會採用一連串數位來代表圓形的半徑、計算每個半徑的面積，以及傳回包含以匯出區域格式化之字串的輸出序列。
+
+ 輸出序列的每個字串都會使用[字串插補](../../../language-reference/tokens/interpolated.md)來格式化。 插補字串 `$` 前面會加上字串的左引號，而且可以在插入字串內的大括弧內執行運算。 這些作業一旦執行，就會串連結果。
   
 > [!NOTE]
 > 如果查詢會轉譯成某個其他領域，則不支援在查詢運算式中呼叫方法。 例如，您無法在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 呼叫一般 C# 方法，因為 SQL Server 沒有它的內容。 不過，您可以將預存程序對應至方法，並呼叫它們。 如需詳細資訊，請參閱[預存程序](../../../../framework/data/adonet/sql/linq/stored-procedures.md)。  
@@ -104,4 +108,4 @@ ms.locfileid: "75635947"
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](./linq-to-xml-overview.md)
 - [LINQ 查詢運算式](../../../linq/index.md)
-- [選擇子句](../../../language-reference/keywords/select-clause.md)
+- [select 子句](../../../language-reference/keywords/select-clause.md)

@@ -1,18 +1,18 @@
 ---
-title: Expression Trees
+title: 運算式樹狀架構
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: b2266cbae0a9a8a07c2a3569efa33d162ffedd1d
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 5d30b2e2e66aa322e6d43b5fbf4a4baf3435b2a6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266413"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410963"
 ---
 # <a name="expression-trees-visual-basic"></a>運算式樹狀架構 (Visual Basic)
 運算式樹狀架構代表類似樹狀目錄之資料結構中的程式碼，其中，每個節點都是一個運算式，例如，方法呼叫或二進位運算 (如 `x < y`)。  
   
- 您可以編譯和執行運算式樹狀架構所代表的程式碼。 這會啟用動態修改可執行程式碼、在各種資料庫中執行 LINQ 查詢，以及建立動態查詢。 如需 LINQ 中之運算式樹狀架構的詳細資訊，請參閱[如何︰使用運算式樹狀架構建置動態查詢 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)。  
+ 您可以編譯和執行運算式樹狀架構所代表的程式碼。 這會啟用動態修改可執行程式碼、在各種資料庫中執行 LINQ 查詢，以及建立動態查詢。 如需 LINQ 中之運算式樹狀架構的詳細資訊，請參閱[如何︰使用運算式樹狀架構建置動態查詢 (Visual Basic)](how-to-use-expression-trees-to-build-dynamic-queries.md)。  
   
  運算式樹狀架構也用於動態語言執行階段中，以提供動態語言與 .NET Framework 之間的互通性，並讓編譯器寫入器發出運算式樹狀架構，而不是 Microsoft Intermediate Language (MSIL)。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
   
@@ -21,7 +21,7 @@ ms.locfileid: "78266413"
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>從 Lambda 運算式建立運算式樹狀架構  
  將 Lambda 運算式指派給類型為 <xref:System.Linq.Expressions.Expression%601> 的變數時，編譯器會發出程式碼，以建置代表 Lambda 運算式的運算式樹狀架構。  
   
- Visual Basic 編譯器只能從運算式 Lambda (或單行 Lambda) 產生運算式樹狀架構。 它無法剖析陳述式 Lambda (或多行 Lambda)。 如需 Visual Basic 中之 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
+ Visual Basic 編譯器只能從運算式 Lambda (或單行 Lambda) 產生運算式樹狀架構。 它無法剖析陳述式 Lambda (或多行 Lambda)。 如需 Visual Basic 中之 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../language-features/procedures/lambda-expressions.md)。  
   
  下列程式碼範例示範如何讓 Visual Basic 編譯器建立代表 Lambda 運算式 `Function(num) num < 5` 的運算式樹狀架構。  
   
@@ -111,7 +111,7 @@ Console.WriteLine(String.Format("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>運算式樹狀架構的不變性  
- 運算式樹狀架構應該是不變的。 這表示，如果您要修改運算式樹狀架構，則必須複製現有運算式樹狀架構，並取代其中的節點，以建構新的運算式樹狀架構。 您可以使用運算式樹狀架構訪問項來周遊現有運算式樹狀架構。 如需詳細資訊，請參閱[如何︰修改運算式樹狀架構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)。  
+ 運算式樹狀架構應該是不變的。 這表示，如果您要修改運算式樹狀架構，則必須複製現有運算式樹狀架構，並取代其中的節點，以建構新的運算式樹狀架構。 您可以使用運算式樹狀架構訪問項來周遊現有運算式樹狀架構。 如需詳細資訊，請參閱[如何︰修改運算式樹狀架構 (Visual Basic)](how-to-modify-expression-trees.md)。  
   
 ## <a name="compiling-expression-trees"></a>編譯運算式樹狀架構  
  <xref:System.Linq.Expressions.Expression%601> 類型提供 <xref:System.Linq.Expressions.Expression%601.Compile%2A> 方法，以將運算式樹狀架構所代表的程式碼編譯為可執行委派。  
@@ -139,13 +139,13 @@ Console.WriteLine(expr.Compile()(4))
 ' Also prints True.  
 ```  
   
- 如需詳細資訊，請參閱[如何：執行運算式樹狀架構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)。  
+ 如需詳細資訊，請參閱[如何：執行運算式樹狀架構 (Visual Basic)](how-to-execute-expression-trees.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.Expressions>
-- [如何：執行運算式樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [如何：修改運算式樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
-- [蘭姆達運算式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [動態語言運行時概述](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
-- [程式設計概念 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)
+- [如何：執行運算式樹狀結構 (Visual Basic)](how-to-execute-expression-trees.md)
+- [如何：修改運算式樹狀結構 (Visual Basic)](how-to-modify-expression-trees.md)
+- [Lambda 運算式](../../language-features/procedures/lambda-expressions.md)
+- [動態語言執行時間總覽](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [程式設計概念 (Visual Basic)](../index.md)

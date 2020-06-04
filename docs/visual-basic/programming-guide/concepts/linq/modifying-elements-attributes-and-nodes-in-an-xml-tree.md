@@ -1,13 +1,13 @@
 ---
-title: 修改項目、 屬性和 XML Tree1 中的節點
+title: 修改 XML Tree1 中的元素、屬性和節點
 ms.date: 07/20/2015
 ms.assetid: 865cf54e-f8ac-4871-863b-a3e6fc61a4b9
-ms.openlocfilehash: d548e6f5912437e5c5df27f55fcdb28990e92c8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 002e87d58ad1a3730889225bf4b3e50448431f2d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666140"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360926"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>修改 XML 樹狀中的項目、屬性和節點
 下表摘要說明您可以用於修改項目、其子項目或其屬性的方法和屬性。  
@@ -47,4 +47,4 @@ ms.locfileid: "61666140"
   
 ## <a name="see-also"></a>另請參閱
 
-- [修改 XML 樹狀結構 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [修改 XML 樹狀結構（LINQ to XML）（Visual Basic）](modifying-xml-trees-linq-to-xml.md)

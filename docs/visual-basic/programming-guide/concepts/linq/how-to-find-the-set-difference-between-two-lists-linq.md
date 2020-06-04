@@ -1,20 +1,20 @@
 ---
-title: 如何：尋找兩個清單之間的差異 (LINQ)
+title: 作法：尋找兩份清單之間的集合差異 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 42c5b5ee8a6af1323cb5eee12694fb94063eb877
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f533b63b40325b34c5881c1e2f14aa4e576191c7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347516"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396593"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>如何：尋找兩個清單之間的集合差異（LINQ）（Visual Basic）
 此範例示範如何使用 LINQ 比較兩份字串清單，然後輸出在 names1.txt 但不在 names2.txt 中的字串行。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  
   
-1. 將 names1.txt 和 names2.txt 複製到您的方案資料夾，如[如何：合併和比較字串集合（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)中所示。  
+1. 將 names1.txt 和 names2.txt 複製到您的方案資料夾，如[如何：合併和比較字串集合（LINQ）（Visual Basic）](how-to-combine-and-compare-string-collections-linq.md)中所示。  
   
 ## <a name="example"></a>範例  
   
@@ -51,11 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- Visual Basic 中的某些查詢作業類型（例如 <xref:System.Linq.Enumerable.Except%2A>、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Union%2A>和 <xref:System.Linq.Enumerable.Concat%2A>）只能以以方法為基礎的語法來表示。  
+ Visual Basic 中某些類型的查詢作業，例如 <xref:System.Linq.Enumerable.Except%2A> 、、 <xref:System.Linq.Enumerable.Distinct%2A> <xref:System.Linq.Enumerable.Union%2A> 和 <xref:System.Linq.Enumerable.Concat%2A> ，只能以以方法為基礎的語法來表示。  
   
 ## <a name="compile-the-code"></a>編譯程式碼  
-建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 `Imports` System. Linq 命名空間的語句。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 與字串 (Visual Basic)](linq-and-strings.md)

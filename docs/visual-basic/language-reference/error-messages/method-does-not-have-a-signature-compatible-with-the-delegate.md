@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC36563
 ms.assetid: 3ca8b873-e98d-419b-95f2-d75bd2a9eb6c
-ms.openlocfilehash: 925a17bef5147a5679a076af1801bdd305dd5bad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e5e94bbde016ec7342a9933905977dac85fb035
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921026"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397242"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>方法沒有與委派相容的簽章
-方法的簽章與您嘗試使用的委派之間沒有相容性。 `Delegate` 陳述式定義委派類別的參數類型和傳回類型。 任何具有相容類型的參數相符且傳回類型可以用來建立這個委派類型的執行個體的程序。  
+方法的簽章與您嘗試使用的委派之間有不相容的情況。 `Delegate` 陳述式定義委派類別的參數類型和傳回類型。 任何具有相容類型和傳回類型之參數的程式，都可以用來建立這個委派類型的實例。  
   
- **錯誤 ID**:BC36563  
+ **錯誤識別碼**： BC36563  
   
 ## <a name="see-also"></a>另請參閱
 
-- [AddressOf 運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [多載解析](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [AddressOf 運算子](../operators/addressof-operator.md)
+- [Delegate 陳述式](../statements/delegate-statement.md)
+- [多載解析](../../programming-guide/language-features/procedures/overload-resolution.md)
+- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)

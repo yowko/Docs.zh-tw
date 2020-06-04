@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 2d89d3588b854c9e77445a9980530d8dd53c33c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45c9332237dffc7311daeedaf36035d9e9958415
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592002"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397177"
 ---
-# <a name="name-membername-is-not-cls-compliant"></a>名稱\<成員名稱 > 不符合 CLS 標準
-組件標示為`<CLSCompliant(True)>`但公開的成員名稱開頭為底線 (`_`)。  
+# <a name="name-membername-is-not-cls-compliant"></a>名稱 \<membername> 不符合 CLS 標準
+元件會標記為， `<CLSCompliant(True)>` 但會公開名稱開頭為底線（）的成員 `_` 。  
   
- 程式設計項目可以包含一或多個底線，但若要遵守[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準，其開頭不可以底線。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 程式設計專案可以包含一或多個底線，但若要符合[語言獨立性和與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（CLS）的規範，其開頭不得為底線。 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  將 <xref:System.CLSCompliantAttribute> 套用至程式設計項目時，請將屬性的 `isCompliant` 參數設定為 `True` 或 `False` ，表示符合標準或不符合標準。 這個參數沒有預設值，您必須提供值。  
   
@@ -25,15 +25,15 @@ ms.locfileid: "64592002"
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID:** BC40031  
+ **錯誤識別碼：** BC40031  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 如果您有原始程式碼控制，變更成員名稱，使它不是以底線開頭。  
+- 如果您可以控制原始程式碼，請變更成員名稱，使其不以底線開頭。  
   
-- 如果您需要的成員名稱維持不變，移除<xref:System.CLSCompliantAttribute>從其定義或將其標記為`<CLSCompliant(False)>`。 您仍然可以將標記為組件`<CLSCompliant(True)>`。  
+- 如果您要求成員名稱維持不變，請 <xref:System.CLSCompliantAttribute> 從其定義中移除，或將其標記為 `<CLSCompliant(False)>` 。 您仍然可以將元件標示為 `<CLSCompliant(True)>` 。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Visual Basic 命名慣例](../../programming-guide/program-structure/naming-conventions.md)

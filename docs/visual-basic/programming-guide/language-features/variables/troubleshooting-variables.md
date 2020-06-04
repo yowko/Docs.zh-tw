@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: 929540788e8134760446e02c3377e78d00ca17d9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3efecf3883e5a1f49308af732a89ff66dc8b2421
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351779"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410318"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>在 Visual Basic 中為變數進行疑難排解
 此頁面會列出在 Visual Basic 中使用變數時可能發生的一些常見問題。  
@@ -20,16 +20,16 @@ ms.locfileid: "74351779"
   
 - 如果您宣告物件變數屬於特定類型，然後參考該類型未定義的成員，編譯器可能會產生錯誤訊息。  
   
-- 當指派給物件變數的物件未公開您的程式碼嘗試存取的成員時，就會發生執行階段 <xref:System.MemberAccessException> 。 如果變數屬於 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)，您也可能會在成員不是 `Public`中使用變數時可能發生的一些常見問題。 這是因為晚期繫結只允許存取 `Public` 成員。  
+- 當指派給物件變數的物件未公開您的程式碼嘗試存取的成員時，就會發生執行階段 <xref:System.MemberAccessException> 。 如果變數屬於 [Object Data Type](../../../language-reference/data-types/object-data-type.md)，您也可能會在成員不是 `Public`中使用變數時可能發生的一些常見問題。 這是因為晚期繫結只允許存取 `Public` 成員。  
   
- 當 [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 將類型檢查設定為 `On`時，物件變數只能存取您用以宣告之類別的方法和屬性。 下列範例將說明這點。  
+ 當 [Option Strict Statement](../../../language-reference/statements/option-strict-statement.md) 將類型檢查設定為 `On`時，物件變數只能存取您用以宣告之類別的方法和屬性。 下列範例將說明這點。  
 
  [!code-vb[VbVbalrVariables#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#2)]  
   
  在此範例中， `p` 只能使用 <xref:System.Object> 類別本身的成員，其並未包含 `Left` 屬性。 另一方面，已宣告 `q` 屬於 <xref:System.Windows.Forms.Label>類型，因此它可以使用 <xref:System.Windows.Forms.Label> 命名空間中 <xref:System.Windows.Forms> 類別的所有方法和屬性。  
   
 ### <a name="correct-approach"></a>正確方法  
- 若要能夠存取特定類別之物件的所有成員，請盡可能宣告物件變數屬於該類別的類型。 如果您無法執行此作業 (例如假設您在編譯時間不知道物件類型)，您必須將 `Option Strict` 設定為 `Off` ，以宣告變數屬於 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)中使用變數時可能發生的一些常見問題。 這樣就能將任何類型的物件指派給變數，您也應該採取步驟確認目前指派的物件屬於可接受的類型。 您可以使用[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)進行這項判斷。  
+ 若要能夠存取特定類別之物件的所有成員，請盡可能宣告物件變數屬於該類別的類型。 如果您無法執行此作業 (例如假設您在編譯時間不知道物件類型)，您必須將 `Option Strict` 設定為 `Off` ，以宣告變數屬於 [Object Data Type](../../../language-reference/data-types/object-data-type.md)中使用變數時可能發生的一些常見問題。 這樣就能將任何類型的物件指派給變數，您也應該採取步驟確認目前指派的物件屬於可接受的類型。 您可以使用[TypeOf 運算子](../../../language-reference/operators/typeof-operator.md)進行這項判斷。  
   
 ## <a name="other-components-cannot-access-your-variable"></a>其他元件無法存取您的變數  
  Visual Basic 的名稱不區分*大小寫*。 如果兩個名稱只有字母大小寫不同，則編譯器會將它們解譯成相同的名稱。 例如，它會將 `ABC` 和 `abc` 視為相同的宣告元素。  
@@ -42,19 +42,19 @@ ms.locfileid: "74351779"
  若要讓其他元件能夠存取您的變數，請將其名稱視為區分大小寫。 當您正在測試類別或模組時，請確定其他組件繫結至預定的變數。 一旦發行元件後，請勿修改現有的變數名稱，包括變更其大小寫。  
   
 ## <a name="wrong-variable-being-used"></a>使用錯誤的變數  
- 當您有多個名稱相同的變數時，Visual Basic 編譯器會嘗試解析該名稱的每個參考。 如果變數具有不同的範圍，則編譯器會用最小的範圍來解析宣告的參考。 如果範圍相同，則解析會失敗，且編譯器會發出錯誤信號。 如需詳細資訊，請參閱 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+ 當您有多個名稱相同的變數時，Visual Basic 編譯器會嘗試解析該名稱的每個參考。 如果變數具有不同的範圍，則編譯器會用最小的範圍來解析宣告的參考。 如果範圍相同，則解析會失敗，且編譯器會發出錯誤信號。 如需詳細資訊，請參閱 [References to Declared Elements](../declared-elements/references-to-declared-elements.md)。  
   
 ### <a name="correct-approach"></a>正確方法  
- 避免使用具有相同名稱但不同範圍的變數。 如果您想要使用其他組件或專案，請盡可能避免使用這些外部元件所定義的任何名稱。 如果您有多個同名的變數時，請務必限定它的每個參考。 如需詳細資訊，請參閱 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+ 避免使用具有相同名稱但不同範圍的變數。 如果您想要使用其他組件或專案，請盡可能避免使用這些外部元件所定義的任何名稱。 如果您有多個同名的變數時，請務必限定它的每個參考。 如需詳細資訊，請參閱 [References to Declared Elements](../declared-elements/references-to-declared-elements.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [如何：存取物件的成員](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
-- [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [如何：決定物件變數參考的型別](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
-- [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [變數](index.md)
+- [變數宣告](variable-declaration.md)
+- [物件變數](object-variables.md)
+- [物件變數宣告](object-variable-declaration.md)
+- [如何：存取物件的成員](how-to-access-members-of-an-object.md)
+- [物件變數值](object-variable-values.md)
+- [如何：決定物件變數參考的型別](how-to-determine-what-type-an-object-variable-refers-to.md)
+- [References to Declared Elements](../declared-elements/references-to-declared-elements.md)
+- [Declared Element Names](../declared-elements/declared-element-names.md)

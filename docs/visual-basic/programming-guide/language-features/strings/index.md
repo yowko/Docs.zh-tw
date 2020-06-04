@@ -5,35 +5,35 @@ helpviewer_keywords:
 - Visual Basic code, strings
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
-ms.openlocfilehash: db79284e45161f87e447fec7ab7faf91093a3fd7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 302805f8b9a83fceeeaa050332140c157a7a786f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344343"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410551"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic 中的字串
 本節說明在 Visual Basic 中使用字串背後的基本概念。  
   
 ## <a name="in-this-section"></a>本節內容  
- [Visual Basic 中的字串簡介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
+ [Visual Basic 中的字串簡介](introduction-to-strings.md)  
  列出描述在 Visual Basic 中使用字串背後基本概念的主題。  
   
- [如何：在 Visual Basic 中使用 StringBuilder 建立字串](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
+ [如何：在 Visual Basic 中使用 StringBuilder 建立字串](how-to-create-strings-using-a-stringbuilder.md)  
  示範如何有效率地建立由許多較小字串組成的長字串。  
   
- [如何：在字串內搜尋](../../../../visual-basic/programming-guide/language-features/strings/how-to-search-within-a-string.md)  
+ [如何：在字串內搜尋](how-to-search-within-a-string.md)  
  示範如何判斷第一個出現之子字串的索引。  
   
- [在 Visual Basic 中的字串和其他資料類型之間進行轉換](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
+ [在 Visual Basic 中的字串和其他資料類型之間進行轉換](converting-between-strings-and-other-data-types.md)  
  列出描述如何將字串轉換成其他資料類型的主題。  
   
- [在 Visual Basic 中驗證字串](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
+ [在 Visual Basic 中驗證字串](validating-strings.md)  
  列出討論如何驗證字串的主題。  
   
- [逐步解說：在 Visual Basic 中為字串加密和解密](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
+ [逐步解說：在 Visual Basic 中為字串加密和解密](walkthrough-encrypting-and-decrypting-strings.md)  
  示範如何使用三重資料加密標準演算法的密碼編譯服務提供者版本，來加密和解密字串。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 語言功能](../../../../visual-basic/programming-guide/language-features/index.md)
+- [Visual Basic 語言功能](../index.md)

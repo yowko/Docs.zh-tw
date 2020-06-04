@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 7c05c712bcbb0a61bb3121bb71a7823a1c29afb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 919c6873ba63addb776d756a58c44a3fe3f0ec3d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625579"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409620"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>編譯專案中的 XML 結構描述時發生錯誤
-編譯專案中的 XML 結構描述時發生錯誤。 因為這個緣故，XML IntelliSense 無法使用。  
+編譯專案中的 XML 架構時發生錯誤。 因此，無法使用 XML IntelliSense。  
   
- 在專案中包含的 XML 結構描述定義 (XSD) 結構描述中沒有錯誤。 當您將加入專案中設定與現有的 XSD 結構描述衝突的 XSD 結構描述 (.xsd) 檔案，就會發生此錯誤。  
+ 專案中包含的 XML 架構定義（XSD）架構發生錯誤。 當您加入與專案之現有 XSD 架構集衝突的 XSD 架構（.xsd）檔案時，就會發生這個錯誤。  
   
- **錯誤 ID:** BC36810  
+ **錯誤識別碼：** BC36810  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 按兩下警告**錯誤清單**視窗。 Visual Basic 會帶您前往中做為來源的警告與 XSD 檔案的位置。 更正的 XSD 結構描述中的錯誤訊息。  
+- 按兩下 [**錯誤清單**] 視窗中的警告。 Visual Basic 會帶您前往 XSD 檔案中作為警告來源的位置。 更正 XSD 架構中的錯誤。  
   
-- 請確定所有必要的 XSD 結構描述 (.xsd) 檔案包含在專案中。 您可能需要按一下**顯示所有檔案**上**專案**中的功能表以查看您的.xsd 檔案**方案總管 中**。 以滑鼠右鍵按一下 .xsd 檔案，然後按一下**加入至專案**以在您的專案中包含的檔案。  
+- 確定所有必要的 XSD 架構（.xsd）檔案都包含在專案中。 您可能需要按一下 [**專案**] 功能表上的 [**顯示所有**檔案]，才能在**方案總管**中查看 .xsd 檔案。 在 .xsd 檔案上按一下滑鼠右鍵，然後按一下 [**包含在專案中**]，將檔案包含在專案中。  
   
-- 如果您使用 XML to Schema 精靈時，如果您從相同來源推斷結構描述一次以上，就可以會發生這個錯誤。 在此情況下，您可以從專案中，移除現有的 XSD 結構描述檔案加入新的 XML 結構描述項目範本，然後再提供 XML to Schema 精靈與所有適用的 XML 來源專案。  
+- 如果您使用 XML to Schema Wizard，如果您從相同的來源推斷一次以上的架構，就會發生此錯誤。 在這種情況下，您可以從專案中移除現有的 XSD 架構檔案，將新的 XML 加入至架構專案範本，然後為 XML to Schema Wizard 提供專案的所有適用 XML 來源。  
   
-- 如果您的 XSD 結構描述中任何錯誤，XML 編譯器可能沒有足夠的資訊來提供詳細的錯誤訊息。 您可以取得更詳細的錯誤資訊，如果您確定為.xsd 檔的 XML 命名空間包含您專案的相符項目中所識別的 Visual Studio 中設定的 XML 結構描述的 XML 命名空間。  
+- 如果您的 XSD 架構中沒有識別錯誤，則 XML 編譯器可能沒有足夠的資訊來提供詳細的錯誤訊息。 如果您確定專案中包含之 .xsd 檔的 XML 命名空間符合 Visual Studio 中設定之 XML 架構所識別的 XML 命名空間，您可能可以取得更詳細的錯誤資訊。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [錯誤清單視窗](/visualstudio/ide/reference/error-list-window)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)

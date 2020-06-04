@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 1aa1edf0130e388c6cc87662d83591f41a8e2325
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11216186a28509e1f10bafa1b24a440bcedaeeb6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349156"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398241"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Form 應用程式基本概念 (Visual Basic)
 
-Visual Basic 的一個重要部分，就是能夠建立在使用者電腦上本機執行 Windows Forms 應用程式。 您可以使用 Visual Studio，使用 Windows Forms 來建立應用程式和使用者介面。 Windows Forms 應用程式是以命名空間中的<xref:System.Windows.Forms>類別為基礎。
+Visual Basic 的一個重要部分，就是能夠建立在使用者電腦上本機執行 Windows Forms 應用程式。 您可以使用 Visual Studio，使用 Windows Forms 來建立應用程式和使用者介面。 Windows Forms 應用程式是以命名空間中的類別為基礎 <xref:System.Windows.Forms> 。
 
 ## <a name="designing-windows-forms-applications"></a>設計 Windows Forms 應用程式
 
@@ -40,13 +40,13 @@ Windows Forms 是 .NET Framework 的智慧型用戶端元件，這是一組 mana
 
 Windows Forms 包含您可以在表單上放置的各種控制項：顯示文字方塊、按鈕、下拉式方塊、選項按鈕，甚至是網頁的控制項。 如需您可以在表單上使用之所有控制項的清單，請參閱[要在 Windows Forms 上使用的控制項](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md)。 如果現有的控制項不符合您的需求，Windows Form 也支援使用 <xref:System.Windows.Forms.UserControl> 類別來建立您自己的自訂控制項。
 
-Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 Microsoft Office) 中的功能。 使用<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.MenuStrip>控制項，您可以建立包含文字和影像的工具列和功能表、顯示子功能表，以及裝載其他控制項，例如文字方塊和下拉式方塊。
+Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 Microsoft Office) 中的功能。 使用 <xref:System.Windows.Forms.ToolStrip> 和 <xref:System.Windows.Forms.MenuStrip> 控制項，您可以建立包含文字和影像的工具列和功能表、顯示子功能表，以及裝載其他控制項，例如文字方塊和下拉式方塊。
 
-使用 Visual Studio 拖放表單設計工具，您可以輕鬆地建立 Windows Forms 的應用程式：只需選取包含游標的控制項，並將它們放在表單上您想要的位置。 設計工具提供像是格線和「對齊線」等工具，以避免對齊控制項的麻煩。 無論您是在命令列使用 Visual Studio 或編譯，都可以使用<xref:System.Windows.Forms.FlowLayoutPanel>、 <xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控制項，以最短的時間和工作來建立先進的表單版面配置。
+使用 Visual Studio 拖放表單設計工具，您可以輕鬆地建立 Windows Forms 的應用程式：只需選取包含游標的控制項，並將它們放在表單上您想要的位置。 設計工具提供像是格線和「對齊線」等工具，以避免對齊控制項的麻煩。 無論您是在命令列使用 Visual Studio 或編譯，都可以使用 <xref:System.Windows.Forms.FlowLayoutPanel> 、 <xref:System.Windows.Forms.TableLayoutPanel> 和控制項， <xref:System.Windows.Forms.SplitContainer> 以最短的時間和工作來建立先進的表單版面配置。
 
 ### <a name="custom-ui-elements"></a>自訂 UI 元素
 
-最後，如果您必須建立自己的自訂 UI 元素， <xref:System.Drawing>命名空間會包含您在表單上直接呈現線條、圓形和其他圖形所需的所有類別。
+最後，如果您必須建立自己的自訂 UI 元素， <xref:System.Drawing> 命名空間會包含您在表單上直接呈現線條、圓形和其他圖形所需的所有類別。
 
 如需使用這些功能的逐步解說資訊，請參閱下列說明主題。
 
@@ -59,9 +59,9 @@ Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 
 
 ## <a name="displaying-and-manipulating-data"></a>顯示和操作資料
 
-許多應用程式必須顯示來自資料庫、XML 檔案、XML Web 服務或其他資料來源的資料。 Windows Forms 提供一個彈性的控制項， <xref:System.Windows.Forms.DataGridView>稱為控制項，用來以傳統資料列和資料行格式呈現這類表格式資料，讓每個資料片段都佔用自己的儲存格。 使用<xref:System.Windows.Forms.DataGridView> ，您可以自訂個別儲存格的外觀、就地鎖定任意資料列和資料行，以及在資料格內顯示覆雜的控制項，還有其他功能。
+許多應用程式必須顯示來自資料庫、XML 檔案、XML Web 服務或其他資料來源的資料。 Windows Forms 提供一個彈性的控制項 <xref:System.Windows.Forms.DataGridView> ，稱為控制項，用來以傳統資料列和資料行格式呈現這類表格式資料，讓每個資料片段都佔用自己的儲存格。 使用， <xref:System.Windows.Forms.DataGridView> 您可以自訂個別儲存格的外觀、就地鎖定任意資料列和資料行，以及在資料格內顯示覆雜的控制項，還有其他功能。
 
-利用 Windows Form 智慧型用戶端，透過網路連接到資料來源是一項簡單的工作。 Visual Studio <xref:System.Windows.Forms.BindingSource> 2005 和 .NET Framework 2.0 中 Windows Forms 的新元件代表與資料來源的連接，並公開將資料系結至控制項、流覽至上一筆記錄、編輯記錄，以及將變更儲存回原始來源的方法。 <xref:System.Windows.Forms.BindingNavigator> 控制項透過 <xref:System.Windows.Forms.BindingSource> 元件提供一個簡單的介面，可讓使用者在記錄之間巡覽。
+利用 Windows Form 智慧型用戶端，透過網路連接到資料來源是一項簡單的工作。 <xref:System.Windows.Forms.BindingSource>Visual Studio 2005 和 .NET Framework 2.0 中 Windows Forms 的新元件代表與資料來源的連接，並公開將資料系結至控制項、流覽至上一筆記錄、編輯記錄，以及將變更儲存回原始來源的方法。 <xref:System.Windows.Forms.BindingNavigator> 控制項透過 <xref:System.Windows.Forms.BindingSource> 元件提供一個簡單的介面，可讓使用者在記錄之間巡覽。
 
 ### <a name="data-bound-controls"></a>資料繫結控制項
 
@@ -75,7 +75,7 @@ Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 
 
 |至|請參閱|
 |--------|---------|
-|使用<xref:System.Windows.Forms.BindingSource>元件|[如何：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|使用 <xref:System.Windows.Forms.BindingSource> 元件|[如何：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
 |使用 ADO.NET 資料來源|[如何：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |使用 [資料來源] 視窗|[逐步解說：顯示 Windows Form 上的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
@@ -110,4 +110,4 @@ Windows Form 中還有許多其他功能，可讓您快速、輕鬆地實作一�
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - [Windows Form 概觀](../../../framework/winforms/windows-forms-overview.md)
-- [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Forms 物件](../../language-reference/objects/my-forms-object.md)

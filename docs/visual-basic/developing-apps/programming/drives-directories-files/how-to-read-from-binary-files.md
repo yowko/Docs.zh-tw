@@ -1,5 +1,5 @@
 ---
-title: 如何：讀取二進位檔案
+title: 作法：讀取二進位檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4108034b86d99143fff6943e68ca0077ebd21b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335286"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359925"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>如何：在 Visual Basic 中從二進位檔案讀取
 
@@ -56,6 +56,6 @@ ms.locfileid: "74335286"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [如何：以多種格式從文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [在剪貼簿儲存和讀取資料](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)
+- [從檔案讀取](reading-from-files.md)
+- [作法：以多種格式從文字檔讀取](how-to-read-from-text-files-with-multiple-formats.md)
+- [在剪貼簿儲存和讀取資料](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)

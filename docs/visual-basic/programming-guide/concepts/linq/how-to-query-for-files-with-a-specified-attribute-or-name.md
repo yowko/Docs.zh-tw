@@ -1,13 +1,13 @@
 ---
-title: 如何：查詢具有指定之屬性或名稱的檔案
+title: 作法：查詢具有指定屬性或名稱的檔案
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 970fb862b843016425e3a0f0c2bcf00e6fcba3a6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4a6a5630f4ac0eb0cb08aed0dc8a390225194675
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342144"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396411"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>如何：查詢具有指定之屬性或名稱的檔案（Visual Basic）
 這個範例示範如何在指定的樹狀目錄中尋找所有具有指定副檔名 (例如 ".txt") 的檔案。 它也會示範如何根據建立時間來傳回樹狀結構中的最新或最舊檔案。  
@@ -61,9 +61,9 @@ End Module
 ```  
   
 ## <a name="compile-the-code"></a>編譯程式碼  
-建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 `Imports` System. Linq 命名空間的語句。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ 與檔案目錄 (Visual Basic)](linq-and-file-directories.md)

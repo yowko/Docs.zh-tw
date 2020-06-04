@@ -2,12 +2,12 @@
 title: 建立來源 Office Open XML 文件
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 5f7a9baebd2d1db73ab17924e0ff8a7408637ee8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9f44c8d0f4080224c461736fdbdf3acd854e4a89
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346422"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410834"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>建立來源 Office Open XML 檔（Visual Basic）
 這個主題顯示如何建立此教學課程中其他範例所使用的 Office Open XML WordprocessingML 文件。 如果您按照這些指示進行，您的輸出將會符合每個範例中提供的輸出。  
@@ -51,8 +51,8 @@ ms.locfileid: "74346422"
 6. 儲存文件，然後將其命名為 SampleDoc.docx。  
   
     > [!NOTE]
-    > 如果您要使用 Microsoft Word 2003，在 [存檔類型] 下拉式清單中選取 [Word 2007 文件]。  
+    > 如果您要使用 Microsoft Word 2003，在 [存檔類型]**** 下拉式清單中選取 [Word 2007 文件]****。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

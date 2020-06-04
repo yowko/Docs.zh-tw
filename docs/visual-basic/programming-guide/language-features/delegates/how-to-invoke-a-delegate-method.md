@@ -2,12 +2,12 @@
 title: 如何：叫用委派方法
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 520bacfbe6103490e0459cd5af149c1d55a8fce4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f319727c007b93c7b334af0598f1b9f7c034144d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345257"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410717"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>如何：叫用委派方法 (Visual Basic)
 
@@ -15,7 +15,7 @@ ms.locfileid: "74345257"
 
 ### <a name="create-the-delegate-and-matching-procedures"></a>建立委派和比對程式
 
-1. 建立名為 `MySubDelegate`的委派。
+1. 建立名為的委派 `MySubDelegate` 。
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
@@ -31,7 +31,7 @@ ms.locfileid: "74345257"
     End Class
     ```
 
-3. 定義方法來建立委派的實例，並藉由呼叫內建的 `Invoke` 方法，叫用與委派相關聯的方法。
+3. 定義方法，以建立委派的實例，並藉由呼叫內建方法來叫用與委派相關聯的方法 `Invoke` 。
 
     ```vb
     Protected Sub DelegateTest()
@@ -43,9 +43,9 @@ ms.locfileid: "74345257"
     End Sub
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [事件](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Delegate 陳述式](../../../language-reference/statements/delegate-statement.md)
+- [委派](index.md)
+- [事件](../events/index.md)
 - [多執行緒應用程式](../../../../standard/threading/using-threads-and-threading.md)

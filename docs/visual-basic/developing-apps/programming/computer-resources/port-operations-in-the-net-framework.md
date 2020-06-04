@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
-ms.openlocfilehash: 68f0c67b8135c6bb7ce8a134e2a324bc12c0aad9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ef0b8a7aec40603185d227d972cea655fd238c1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345509"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360133"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>.NET Framework 中使用 Visual Basic 的連接埠作業
 
@@ -24,7 +24,7 @@ ms.locfileid: "74345509"
 
 本表會列出並說明用於存取序列埠的主要列舉︰
 
-|列舉型別|說明|
+|列舉型別|Description|
 |---|---|
 |<xref:System.IO.Ports.Handshake>|指定建立 <xref:System.IO.Ports.SerialPort> 物件之序列埠通訊使用的控制通訊協定。|
 |<xref:System.IO.Ports.Parity>|指定 <xref:System.IO.Ports.SerialPort> 物件的同位位元。|
@@ -36,4 +36,4 @@ ms.locfileid: "74345509"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
-- [存取電腦的連接埠](../../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)
+- [存取電腦的連接埠](accessing-the-computer-s-ports.md)

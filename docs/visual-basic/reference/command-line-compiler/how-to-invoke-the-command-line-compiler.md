@@ -1,5 +1,5 @@
 ---
-title: 如何：叫用命令列編譯器
+title: 作法：叫用命令列編譯器
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6def53d4a2d15dda3e3ac43abe35b3100f456fe9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344264"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408604"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>如何：叫用命令列編譯器 (Visual Basic)
 
@@ -28,9 +28,9 @@ ms.locfileid: "74344264"
 
 3. 叫用 Visual Studio 的開發人員命令提示字元。
 
-4. 在命令列中輸入`vbc.exe` *sourceFileName* ，然後按 enter。
+4. 在命令列中輸入 `vbc.exe` *sourceFileName* ，然後按 enter。
 
-    例如，如果您將原始程式碼儲存在名`SourceFiles`為的目錄中，您會開啟命令提示字元，然後`cd SourceFiles`輸入以變更至該目錄。 如果目錄包含名為`Source.vb`的原始程式檔，您可以輸入`vbc.exe Source.vb`來編譯它。
+    例如，如果您將原始程式碼儲存在名為的目錄中 `SourceFiles` ，您會開啟命令提示字元，然後輸入 `cd SourceFiles` 以變更至該目錄。 如果目錄包含名為的原始程式檔 `Source.vb` ，您可以輸入來編譯它 `vbc.exe Source.vb` 。
 
 ## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>若要將 PATH 環境變數設定為 Windows 命令提示字元的編譯器
 
@@ -54,11 +54,11 @@ ms.locfileid: "74344264"
 
 1. 在 [**開始**] 功能表中，按一下 [**附屬**應用程式] 資料夾，然後開啟**Windows 命令提示**字元。
 
-2. 在命令列中輸入`vbc.exe` *sourceFileName* ，然後按 enter。
+2. 在命令列中輸入 `vbc.exe` *sourceFileName* ，然後按 enter。
 
-     例如，如果您將原始程式碼儲存在名`SourceFiles`為的目錄中，您會開啟命令提示字元，然後`cd SourceFiles`輸入以變更至該目錄。 如果目錄包含名為`Source.vb`的原始程式檔，您可以輸入`vbc.exe Source.vb`來編譯它。
+     例如，如果您將原始程式碼儲存在名為的目錄中 `SourceFiles` ，您會開啟命令提示字元，然後輸入 `cd SourceFiles` 以變更至該目錄。 如果目錄包含名為的原始程式檔 `Source.vb` ，您可以輸入來編譯它 `vbc.exe Source.vb` 。
 
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Visual Basic 命令列編譯器](index.md)
+- [條件式編譯](../../programming-guide/program-structure/conditional-compilation.md)

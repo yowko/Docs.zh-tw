@@ -1,16 +1,16 @@
 ---
-title: 如何：重新命名檔案
+title: 作法：重新命名檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: e69dad9ad7f59002ad62b7a06299ff012488e534
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de41ee6627315f0e26964b75f564ff98fe472ec
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334545"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411586"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>如何：在 Visual Basic 中重新命名檔案
 
@@ -51,7 +51,7 @@ ms.locfileid: "74334545"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
-- [如何：移動檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
-- [建立、刪除和移動檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
-- [如何：在相同目錄內建立檔案複本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)
-- [如何：於不同目錄內建立檔案複本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [作法：移動檔案](how-to-move-a-file.md)
+- [建立、刪除和移動檔案和目錄](creating-deleting-and-moving-files-and-directories.md)
+- [作法：在相同目錄中建立檔案複本](how-to-create-a-copy-of-a-file-in-the-same-directory.md)
+- [作法：在不同目錄中建立檔案複本](how-to-create-a-copy-of-a-file-in-a-different-directory.md)

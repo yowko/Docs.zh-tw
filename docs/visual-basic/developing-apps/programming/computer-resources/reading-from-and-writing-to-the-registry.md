@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: 89db9ef9db4235c069d6239d32e4f8679fbabf0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb400ef89edaa4eb743aee3a7f2cc5b9dfec4534
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349755"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360055"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>讀取和寫入登錄 (Visual Basic)
 
@@ -21,19 +21,19 @@ ms.locfileid: "74349755"
   
 ## <a name="in-this-section"></a>本節內容  
 
- [作法：建立登錄機碼並設定其值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
+ [作法：建立登錄機碼並設定其值](how-to-create-a-registry-key-and-set-its-value.md)  
  描述如何使用 `My.Computer.Registry` 物件的 `CreateSubKey` 和 `SetValue` 方法來建立登錄機碼，並設定其值。  
   
- [作法：讀取登錄機碼的值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
+ [作法：讀取登錄機碼的值](how-to-read-a-value-from-a-registry-key.md)  
  描述如何使用 `My.Computer.Registry` 物件的 `GetValue` 方法來讀取登錄機碼中的值。  
   
- [作法：刪除登錄機碼](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ [作法：刪除登錄機碼](how-to-delete-a-registry-key.md)  
  描述如何使用 `My.Computer.Registry.CurrentUser` 屬性的 `DeleteSubKey` 方法來刪除登錄機碼。  
   
- [使用 Microsoft.Win32 命名空間讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
+ [使用 Microsoft.Win32 命名空間讀取和寫入登錄](reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
  描述如何使用 .NET Framework 的 `Registry` 和 `RegistryKey` 類別來存取登錄。  
   
- [安全性和登錄](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
+ [安全性和登錄](security-and-the-registry.md)  
  討論與登錄有關的安全性問題。  
   
 ## <a name="related-sections"></a>相關章節  

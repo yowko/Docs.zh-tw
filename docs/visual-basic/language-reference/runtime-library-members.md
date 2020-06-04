@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: a73589c4b0d0faeac321090e6030f1f8392a5342
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7c7d818e6439f732031e23f297661bb960effb7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349609"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359486"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 執行階段程式庫成員
 
-`Microsoft.VisualBasic` 命名空間包含組成 Visual Basic 執行時間程式庫的類別、模組、常數和列舉。 這些程式庫成員提供程式、屬性和可在程式碼中使用的常數值。 每個模組和類別都代表特定的功能類別。  
+`Microsoft.VisualBasic`命名空間包含組成 Visual Basic 執行時間程式庫的類別、模組、常數和列舉。 這些程式庫成員提供程式、屬性和可在程式碼中使用的常數值。 每個模組和類別都代表特定的功能類別。  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft. ... 集合類別  
   
@@ -193,9 +193,9 @@ ms.locfileid: "74349609"
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft 的常數和列舉  
 
- `Microsoft.VisualBasic` 命名空間會提供常數和列舉，做為 Visual Basic 執行時間程式庫的一部分。 您可以在程式碼中使用這些常數值。 每個列舉都代表特定的功能類別。 如需詳細資訊，請參閱[常數和](../../visual-basic/language-reference/constants-and-enumerations.md)列舉。  
+ `Microsoft.VisualBasic`命名空間會提供常數和列舉，做為 Visual Basic 執行時間程式庫的一部分。 您可以在程式碼中使用這些常數值。 每個列舉都代表特定的功能類別。 如需詳細資訊，請參閱[常數和](constants-and-enumerations.md)列舉。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [常數和列舉](../../visual-basic/language-reference/constants-and-enumerations.md)
-- [關鍵字](../../visual-basic/language-reference/keywords/index.md)
+- [常數和列舉](constants-and-enumerations.md)
+- [關鍵字](keywords/index.md)

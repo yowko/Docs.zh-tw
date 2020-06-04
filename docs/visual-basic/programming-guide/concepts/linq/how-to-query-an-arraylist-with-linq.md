@@ -1,17 +1,17 @@
 ---
-title: 如何：使用 LINQ 查詢 ArrayList
+title: 作法：使用 LINQ 查詢 ArrayList
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: 94a3c6d4c381f41f9ba87bf3af93261712ad1136
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b7b75e017fb314b5e5998b743dbf922f34fd9b7c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347762"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396463"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>如何：使用 LINQ 查詢 ArrayList （Visual Basic）
 
-使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。 例如，如果您有 `Student` 物件的 <xref:System.Collections.ArrayList>，您的[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)看起來應該像這樣：
+使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。 例如，如果您有 <xref:System.Collections.ArrayList> `Student` 物件的，您的[from 子句](../../../language-reference/queries/from-clause.md)看起來應該像這樣：
 
 ```vb
 Dim query = From student As Student In arrList
@@ -20,7 +20,7 @@ Dim query = From student As Student In arrList
 
 藉由指定範圍變數的類型，您就可以將 <xref:System.Collections.ArrayList> 中的每個項目轉換為 `Student`。
 
-在查詢運算式中使用具有明確類型的範圍變數，相當於呼叫 <xref:System.Linq.Enumerable.Cast%2A> 方法。 如果無法執行指定的轉換，則 <xref:System.Linq.Enumerable.Cast%2A> 會擲回例外狀況。 <xref:System.Linq.Enumerable.Cast%2A> 和 <xref:System.Linq.Enumerable.OfType%2A> 是對非泛型 <xref:System.Collections.IEnumerable> 類型執行的兩個標準查詢運算子方法。 在 Visual Basic 中，您必須在資料來源上明確呼叫 <xref:System.Linq.Enumerable.Cast%2A> 方法，以確保特定的範圍變數類型。 如需詳細資訊，請參閱[查詢作業中的類型關聯性（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)。
+在查詢運算式中使用具有明確類型的範圍變數，相當於呼叫 <xref:System.Linq.Enumerable.Cast%2A> 方法。 如果無法執行指定的轉換，則 <xref:System.Linq.Enumerable.Cast%2A> 會擲回例外狀況。 <xref:System.Linq.Enumerable.Cast%2A> 和 <xref:System.Linq.Enumerable.OfType%2A> 是對非泛型 <xref:System.Collections.IEnumerable> 類型執行的兩個標準查詢運算子方法。 在 Visual Basic 中，您必須在 <xref:System.Linq.Enumerable.Cast%2A> 資料來源上明確呼叫方法，以確保特定的範圍變數類型。 如需詳細資訊，請參閱[查詢作業中的類型關聯性（Visual Basic）](type-relationships-in-query-operations.md)。
 
 ## <a name="example"></a>範例
 
@@ -78,6 +78,6 @@ End Module
 '   Garcia: 97
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)

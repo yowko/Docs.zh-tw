@@ -1,5 +1,5 @@
 ---
-title: 如何：從文字檔讀取
+title: 作法：從文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 8af088ad269cc77bc5c83aedb86bde9af2e37a15
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d99209ed123686355e8d49c82ba23f94084f895
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74334582"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411612"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>如何：在 Visual Basic 中從文字檔讀取
 
@@ -64,10 +64,10 @@ ms.locfileid: "74334582"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
-- [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [如何：從逗號分隔文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [如何：從固定寬度的文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
-- [如何：以多種格式從文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [疑難排解：讀取和寫入文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [逐步解說：在 Visual Basic 中管理檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [檔案編碼方式](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
+- [從檔案讀取](reading-from-files.md)
+- [作法：從逗號分隔文字檔讀取](how-to-read-from-comma-delimited-text-files.md)
+- [作法：從固定寬度的文字檔讀取](how-to-read-from-fixed-width-text-files.md)
+- [作法：以多種格式從文字檔讀取](how-to-read-from-text-files-with-multiple-formats.md)
+- [疑難排解：讀取和寫入文字檔](troubleshooting-reading-from-and-writing-to-text-files.md)
+- [逐步解說：在 Visual Basic 中管理檔案和目錄](walkthrough-manipulating-files-and-directories.md)
+- [檔案編碼方式](file-encodings.md)

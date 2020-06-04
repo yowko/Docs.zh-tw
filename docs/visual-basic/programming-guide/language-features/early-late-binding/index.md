@@ -13,26 +13,26 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-ms.openlocfilehash: bd70d8642c18e9bc2baba8128ec908c88e0477ce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e8d87e095b7c3104e3a2d66525644d1771ae883e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345176"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410628"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>早期和晚期繫結 (Visual Basic)
-當物件指派給物件變數時，Visual Basic 編譯器會執行稱為 `binding` 的進程。 將物件指派給宣告為特定物件型別的變數時，該物件即為「早期繫結」。 早期繫結物件讓編譯器能夠配置記憶體，並在應用程式執行之前執行其他最佳化。 例如，下列程式碼片段會將變數宣告為 <xref:System.IO.FileStream> 類型：  
+`binding`當物件指派給物件變數時，Visual Basic 編譯器會執行名為的進程。 將物件指派給宣告為特定物件型別的變數時，該物件即為「早期繫結」**。 早期繫結物件讓編譯器能夠配置記憶體，並在應用程式執行之前執行其他最佳化。 例如，下列程式碼片段會將變數宣告為 <xref:System.IO.FileStream> 類型：  
   
  [!code-vb[VbVbalrOOP#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#90)]  
   
  因為 <xref:System.IO.FileStream> 是特定的物件類型，所以指派給 `FS` 的執行個體就是早期繫結。  
   
- 反之，將物件指派給宣告為  *型別的變數時，該物件即為「晚期繫結」* `Object`。 此型別的物件可以保存對任何物件的參考，但缺少許多早期繫結物件的優點。 例如，下列程式碼片段會宣告一個物件變數來保存 `CreateObject` 函式所傳回的物件：  
+ 反之，將物件指派給宣告為 `Object` 型別的變數時，該物件即為「晚期繫結」**。 此型別的物件可以保存對任何物件的參考，但缺少許多早期繫結物件的優點。 例如，下列程式碼片段會宣告一個物件變數來保存 `CreateObject` 函式所傳回的物件：  
   
  [!code-vb[VbVbalrOOP#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/LateBinding.vb#91)]  
   
 ## <a name="advantages-of-early-binding"></a>早期繫結的優點  
- 您應該盡可能使用早期繫結物件，因為它們可讓編譯器進行重要的最佳化，以產生更有效率的應用程式。 早期繫結物件的速度很明顯地比晚期繫結物件還快，並藉由確實描述正在使用哪種物件，讓您的程式碼更容易閱讀和維護。 早期繫結的另一個優點是它會啟用有用的功能，例如自動程式碼完成和動態說明，因為 Visual Studio 的整合式開發環境（IDE）可以在您編輯時，判斷您要使用的物件類型。錯誤碼. 早期繫結可降低發生執行階段錯誤的次數和嚴重性，因為它讓編譯器能夠在編譯程式時報告錯誤。  
+ 您應該盡可能使用早期繫結物件，因為它們可讓編譯器進行重要的最佳化，以產生更有效率的應用程式。 早期繫結物件的速度很明顯地比晚期繫結物件還快，並藉由確實描述正在使用哪種物件，讓您的程式碼更容易閱讀和維護。 早期繫結的另一個優點是它會啟用有用的功能，例如自動程式碼完成和動態說明，因為 Visual Studio 的整合式開發環境（IDE）可以在您編輯程式碼時，判斷您要使用的物件類型。 早期繫結可降低發生執行階段錯誤的次數和嚴重性，因為它讓編譯器能夠在編譯程式時報告錯誤。  
   
 > [!NOTE]
 > 晚期繫結只能用來存取宣告為 `Public` 的型別成員。 存取宣告為 `Friend` 或 `Protected Friend` 的成員會導致執行階段錯誤。  
@@ -40,5 +40,5 @@ ms.locfileid: "74345176"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
-- [物件存留期：物件的建立和終結](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [物件存留期：物件的建立和終結](../objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)

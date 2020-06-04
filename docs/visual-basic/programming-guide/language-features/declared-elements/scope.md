@@ -1,5 +1,5 @@
 ---
-title: 範圍
+title: 影響範圍
 ms.date: 07/20/2015
 helpviewer_keywords:
 - module scope [Visual Basic]
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 37fcfa897accb23e9c8c56407ce4ebd956b39c4d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1bee904996257474b7457b2aefb1f17d250933cb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345280"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410730"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的範圍
 
-已宣告專案的*範圍*是一組可以參考它的程式碼，但不限定其名稱，或透過[Imports 語句（.net 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)提供它。 元素的範圍可以是下列其中一個層級：
+已宣告專案的*範圍*是一組可以參考它的程式碼，但不限定其名稱，或透過[Imports 語句（.net 命名空間和類型）](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)提供它。 元素的範圍可以是下列其中一個層級：
 
 |層級|描述|
 |-----------|-----------------|
@@ -45,7 +45,7 @@ ms.locfileid: "74345280"
 
 - 您為元素宣告的存取層級
 
-當您定義具有相同名稱但範圍不同的變數時，請小心使用，因為這樣做可能會導致非預期的結果。 如需詳細資訊，請參閱 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。
+當您定義具有相同名稱但範圍不同的變數時，請小心使用，因為這樣做可能會導致非預期的結果。 如需詳細資訊，請參閱 [References to Declared Elements](references-to-declared-elements.md)。
 
 ## <a name="levels-of-scope"></a>範圍層級
 
@@ -57,7 +57,7 @@ ms.locfileid: "74345280"
 
 - `Do` 和 `Loop`
 
-- `For` [`Each`] 和 `Next`
+- `For`[ `Each` ] 和`Next`
 
 - `If` 和 `End If`
 
@@ -71,7 +71,7 @@ ms.locfileid: "74345280"
 
 - `With` 和 `End With`
 
-如果您在區塊內宣告變數，就只能在該區塊內使用它。 在下列範例中，整數變數 `cube` 的範圍是 `If` 和 `End If`之間的區塊，而當執行超出區塊時，您就不能再參考 `cube`。
+如果您在區塊內宣告變數，就只能在該區塊內使用它。 在下列範例中，整數變數的範圍 `cube` 是和之間的區塊 `If` `End If` ，而且 `cube` 當執行超出區塊時，您就不能再參考。
 
 ```vb
 If n < 1291 Then
@@ -85,12 +85,12 @@ End If
 
 ### <a name="procedure-scope"></a>程式範圍
 
-在程式中宣告的元素無法在該程式之外使用。 只有包含宣告的程式可以使用它。 此層級的變數也稱為「*區域變數」（local variables*）。 您可以使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)來宣告它們，其中包含或不使用[Static](../../../../visual-basic/language-reference/modifiers/static.md)關鍵字。
+在程式中宣告的元素無法在該程式之外使用。 只有包含宣告的程式可以使用它。 此層級的變數也稱為「*區域變數」（local variables*）。 您可以使用[Dim 語句](../../../language-reference/statements/dim-statement.md)來宣告它們，其中包含或不使用[Static](../../../language-reference/modifiers/static.md)關鍵字。
 
 程式與區塊領域密切相關。 如果您在程式中宣告變數，但在該程式內的任何區塊外，您可以將變數視為具有區塊範圍，其中區塊是整個程式。
 
 > [!NOTE]
-> 所有的本機元素（即使是 `Static` 變數）都是其出現所在程式的私用專案。 您不能在程式內使用[Public](../../../../visual-basic/language-reference/modifiers/public.md)關鍵字來宣告任何專案。
+> 所有的本機專案（即使是 `Static` 變數）都是其出現所在程式的私用。 您不能在程式內使用[Public](../../../language-reference/modifiers/public.md)關鍵字來宣告任何專案。
 
 ### <a name="module-scope"></a>模組範圍
 
@@ -98,9 +98,9 @@ End If
 
 當您在模組層級進行宣告時，您選擇的存取層級會決定範圍。 包含模組、類別或結構的命名空間也會影響範圍。
 
-您宣告[私](../../../../visual-basic/language-reference/modifiers/private.md)用存取層級的專案可用於該模組中的每個程式，但不適用於不同模組中的任何程式碼。 如果您未使用任何存取層級關鍵字，模組層級的 `Dim` 語句會預設為 `Private`。 不過，您可以使用 `Dim` 語句中的 `Private` 關鍵字，讓範圍和存取層級更明顯。
+您宣告[私](../../../language-reference/modifiers/private.md)用存取層級的專案可用於該模組中的每個程式，但不適用於不同模組中的任何程式碼。 `Dim` `Private` 如果您未使用任何存取層級關鍵字，則模組層級的語句會預設為。 不過，您可以在語句中使用關鍵字，讓範圍和存取層級更明顯 `Private` `Dim` 。
 
-在下列範例中，在模組中定義的所有程式都可以參考 `strMsg`的字串變數。 呼叫第二個程式時，會在對話方塊中顯示 `strMsg` 的字串變數內容。
+在下列範例中，模組中定義的所有程式都可以參考字串變數 `strMsg` 。 呼叫第二個程式時，會在對話方塊中顯示字串變數的內容 `strMsg` 。
 
 ```vb
 ' Put the following declaration at module level (not in any procedure).
@@ -117,7 +117,7 @@ End Sub
 
 ### <a name="namespace-scope"></a>命名空間範圍
 
-如果您使用[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或[Public](../../../../visual-basic/language-reference/modifiers/public.md)關鍵字在模組層級宣告專案，它會變成可供在宣告專案之命名空間中的所有程式使用。 在上述範例中的下列改變之後，字串變數 `strMsg` 可以在其宣告之命名空間中的任何位置參考。
+如果您使用[Friend](../../../language-reference/modifiers/friend.md)或[Public](../../../language-reference/modifiers/public.md)關鍵字在模組層級宣告專案，它會變成可供在宣告專案之命名空間中的所有程式使用。 在上述範例中的下列變更中，字串變數 `strMsg` 可以在其宣告的命名空間中的任何位置參考程式碼。
 
 ```vb
 ' Include this declaration at module level (not inside any procedure).
@@ -126,7 +126,7 @@ Public strMsg As String
 
 命名空間範圍包含嵌套的命名空間。 您也可以從命名空間內的任何命名空間中，取得可從命名空間中取得的專案。
 
-如果您的專案未包含任何[命名空間語句](../../../../visual-basic/language-reference/statements/namespace-statement.md)，則專案中的所有內容都會位於相同的命名空間中。 在此情況下，可以將命名空間範圍視為專案範圍。 模組、類別或結構中的 `Public` 元素也可供參考其專案的任何專案使用。
+如果您的專案未包含任何[命名空間語句](../../../language-reference/statements/namespace-statement.md)，則專案中的所有內容都會位於相同的命名空間中。 在此情況下，可以將命名空間範圍視為專案範圍。 `Public`模組、類別或結構中的元素也可供參考其專案的任何專案使用。
 
 ## <a name="choice-of-scope"></a>選擇範圍
 
@@ -136,19 +136,19 @@ Public strMsg As String
 
 針對任何類型的暫時計算而言，本機變數都是不錯的選擇，原因如下：
 
-- **避免名稱衝突。** 本機變數名稱不容易發生衝突。 例如，您可以建立數個不同的程式，其中包含稱為 `intTemp`的變數。 只要每個 `intTemp` 宣告為區域變數，每個程式都只會辨識自己的 `intTemp`版本。 任何一個程式都可以改變其本機 `intTemp` 中的值，而不會影響其他程式中 `intTemp` 變數。
+- **避免名稱衝突。** 本機變數名稱不容易發生衝突。 例如，您可以建立數個不同的程式，其中包含名為的變數 `intTemp` 。 只要每個 `intTemp` 都宣告為區域變數，每個程式就只會辨識自己的版本 `intTemp` 。 任何一個程式都可以在其本機中改變值， `intTemp` 而不會影響 `intTemp` 其他程式中的變數。
 
-- **記憶體耗用量。** 本機變數只有在其程式正在執行時才會耗用記憶體。 當程式返回呼叫的程式碼時，就會釋放其記憶體。 相反地，[共用](../../../../visual-basic/language-reference/modifiers/shared.md)和[靜態](../../../../visual-basic/language-reference/modifiers/static.md)變數會耗用記憶體資源，直到您的應用程式停止執行為止，因此只有在必要時才使用它們。 *執行個體變數*會耗用記憶體，而其實例會繼續存在，讓它們比區域變數更有效率，但可能比 `Shared` 或 `Static` 變數更有效率。
+- **記憶體耗用量。** 本機變數只有在其程式正在執行時才會耗用記憶體。 當程式返回呼叫的程式碼時，就會釋放其記憶體。 相反地，[共用](../../../language-reference/modifiers/shared.md)和[靜態](../../../language-reference/modifiers/static.md)變數會耗用記憶體資源，直到您的應用程式停止執行為止，因此只有在必要時才使用它們。 *執行個體變數*會耗用記憶體，而其實例會繼續存在，讓它們比區域變數更有效率，但可能比 `Shared` 或變數更有效率 `Static` 。
 
 ### <a name="minimizing-scope"></a>最小化範圍
 
-一般來說，在宣告任何變數或常數時，最好的程式設計作法是讓範圍盡可能縮小（區塊範圍是最窄的）。 這有助於節省記憶體，並將程式碼錯誤地參考錯誤變數的機率降到最低。 同樣地，您應該將變數宣告為[靜態](../../../../visual-basic/language-reference/modifiers/static.md)，只有在必要時，才必須在程序呼叫之間保留其值。
+一般來說，在宣告任何變數或常數時，最好的程式設計作法是讓範圍盡可能縮小（區塊範圍是最窄的）。 這有助於節省記憶體，並將程式碼錯誤地參考錯誤變數的機率降到最低。 同樣地，您應該將變數宣告為[靜態](../../../language-reference/modifiers/static.md)，只有在必要時，才必須在程序呼叫之間保留其值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [如何：控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
-- [Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic 中的存取層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [宣告項目特性](declared-element-characteristics.md)
+- [如何：控制變數的範圍](how-to-control-the-scope-of-a-variable.md)
+- [Visual Basic 中的存留期](lifetime.md)
+- [Visual Basic 中的存取層級](access-levels.md)
+- [References to Declared Elements](references-to-declared-elements.md)
+- [變數宣告](../variables/variable-declaration.md)
