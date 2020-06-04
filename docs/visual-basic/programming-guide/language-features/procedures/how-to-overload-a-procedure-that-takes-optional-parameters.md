@@ -10,31 +10,31 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 4d31980e4b968cff274091ba4f307dffddab1100
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9ae6818b1e03ccd00ed554e98690e02ffa45de99
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350869"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387838"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>如何：多載使用選擇性參數的程序 (Visual Basic)
-如果程式有一或多個[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)參數，您就無法定義多載版本來符合它的任何隱含多載。 如需詳細資訊，請參閱多載[程式的考慮](./considerations-in-overloading-procedures.md)中的「選擇性參數的隱含多載」。  
+如果程式有一或多個[選擇性](../../../language-reference/modifiers/optional.md)參數，您就無法定義多載版本來符合它的任何隱含多載。 如需詳細資訊，請參閱多載[程式的考慮](./considerations-in-overloading-procedures.md)中的「選擇性參數的隱含多載」。  
   
 ## <a name="one-optional-parameter"></a>一個選擇性參數  
   
 #### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>若要多載採用一個選擇性參數的程式  
   
-1. 撰寫 `Sub` 或 `Function` 宣告語句，其中包含參數清單中的選擇性參數。 請勿在此多載的版本中使用 `Optional` 關鍵字。  
+1. 撰寫一個 `Sub` 或宣告 `Function` 語句，其中包含參數清單中的選擇性參數。 請勿在此多載的 `Optional` 版本中使用關鍵字。  
   
-2. 在 `Sub` 或 `Function` 關鍵字之前加上[Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字。  
+2. 在或關鍵字之前加上 `Sub` `Function` [Overloads](../../../language-reference/modifiers/overloads.md)關鍵字。  
   
 3. 撰寫當呼叫程式碼提供選擇性引數時應執行的程式碼。  
   
-4. 視需要使用 `End Sub` 或 `End Function` 語句來終止程式。  
+4. `End Sub` `End Function` 視需要使用或語句來終止程式。  
   
 5. 撰寫與第一個宣告相同的第二個宣告語句，不同之處在于它不會在參數清單中包含選擇性參數。  
   
-6. 撰寫當呼叫程式碼未提供選擇性引數時，應執行的程式碼。 視需要使用 `End Sub` 或 `End Function` 語句來終止程式。  
+6. 撰寫當呼叫程式碼未提供選擇性引數時，應執行的程式碼。 `End Sub` `End Function` 視需要使用或語句來終止程式。  
   
      下列範例顯示的程式是以選擇性參數、一組對等的兩個多載程式來定義，最後是無效和有效的多載版本的範例。  
   
@@ -53,15 +53,15 @@ ms.locfileid: "74350869"
   
 1. 判斷程式邏輯可以接受哪些提供的選擇性引數組合。 如果一個選擇性參數相依于另一個，則可能會發生無法接受的組合。 例如，如果一個參數接受個人名稱，另一個則接受該人員的年齡，則提供年齡但省略名稱的引數組合就無法接受。  
   
-2. 針對所提供之選擇性引數的每個可接受組合，撰寫定義對應參數清單的 `Sub` 或 `Function` 宣告語句。 請勿使用 `Optional` 關鍵字。  
+2. 針對所提供之選擇性引數的每個可接受組合，撰寫 `Sub` `Function` 定義對應參數清單的或宣告語句。 請勿使用 `Optional` 關鍵字。  
   
-3. 在每個宣告中，在 `Sub` 或 `Function` 關鍵字之前加上[Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字。  
+3. 在每個宣告中，在或關鍵字前面加上 `Sub` `Function` [Overloads](../../../language-reference/modifiers/overloads.md)關鍵字。  
   
 4. 遵循每個宣告，撰寫呼叫程式碼提供對應至該宣告之參數清單的引數清單時，應執行的程式碼。  
   
-5. 視需要使用 `End Sub` 或 `End Function` 語句來終止每個程式。  
+5. `End Sub`視需要使用或語句來終止每個程式 `End Function` 。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)

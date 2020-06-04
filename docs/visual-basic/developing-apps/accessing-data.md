@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 0f17df93fc4ef22ef45f7ceff89bfb5f1ab1c18d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: c9094e1550ad837444b7670cf54226322583be79
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523963"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387604"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 應用程式中存取資料
 
@@ -24,7 +24,7 @@ Visual Basic 包括數個新功能，以協助開發可存取資料的應用程�
 [適用於 .NET 的 Visual Studio Data Tools](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
 提供頁面的連結，這些頁面與使用 Visual Studio 建立可處理資料的應用程式相關。
 
-[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
+[LINQ](../programming-guide/language-features/linq/index.md)  
 提供主題的連結，這些主題描述如何搭配使用 LINQ 與 Visual Basic。
 
 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  

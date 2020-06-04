@@ -5,18 +5,18 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 54419c99ae08c9ca2e3cfa86993dc99bc02bbb64
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74340400"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388656"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>如何：呼叫擴充方法 (Visual Basic)
 
 擴充方法可讓您將方法加入至現有的類別。 在宣告擴充方法並將其納入範圍之後，您就可以像它所擴充之類型的實例方法一樣呼叫它。 如需如何撰寫擴充方法的詳細資訊，請參閱[如何：撰寫擴充方法](./how-to-write-an-extension-method.md)。
 
- 下列指示會參考擴充方法 `PrintAndPunctuate`，它會顯示叫用它的字串實例，後面接著針對第二個參數所傳送的任何值，`punc`。
+ 下列指示會參考擴充方法 `PrintAndPunctuate` ，它會顯示叫用它的字串實例，後面接著針對第二個參數傳送的任何值 `punc` 。
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -35,19 +35,19 @@ End Module
 
 ### <a name="to-call-an-extension-method"></a>呼叫擴充方法
 
-1. 宣告具有擴充方法第一個參數之資料類型的變數。 針對 `PrintAndPunctuate`，您需要 <xref:System.String> 變數：
+1. 宣告具有擴充方法第一個參數之資料類型的變數。 針對 `PrintAndPunctuate` ，您需要一個 <xref:System.String> 變數：
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. 該變數會叫用擴充方法，而且其值會系結至第一個參數 `aString`。 下列呼叫語句會顯示 `Ready?`。
+2. 該變數會叫用擴充方法，而且其值會系結至第一個參數 `aString` 。 將會顯示下列呼叫語句 `Ready?` 。
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     請注意，此擴充方法的呼叫看起來就像是呼叫任何一個需要一個參數的 <xref:System.String> 實例方法：
+     請注意，此擴充方法的呼叫看起來就像是呼叫任何一個 <xref:System.String> 需要一個參數的實例方法一樣：
 
     ```vb
     example.EndsWith("dy")
@@ -61,7 +61,7 @@ End Module
     example2.PrintAndPunctuate("!!!")
     ```
 
-     這次的結果是： `or not!!!`。
+     這次的結果是： `or not!!!` 。
 
 ## <a name="example"></a>範例
  下列程式碼是建立和使用簡單擴充方法的完整範例。
@@ -99,4 +99,4 @@ End Module
 
 - [如何：撰寫擴充方法](./how-to-write-an-extension-method.md)
 - [擴充方法](./extension-methods.md)
-- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 中的範圍](../declared-elements/scope.md)
