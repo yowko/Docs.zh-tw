@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63e61d412e4d1238b08ccae94f11adb0c3d1b54d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918342"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401572"
 ---
-# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a><span data-ttu-id="9bd2e-102">'\<name1 >' 模稜兩可，從命名空間或類型的匯入\<name2 >'</span><span class="sxs-lookup"><span data-stu-id="9bd2e-102">'\<name1>' is ambiguous, imported from the namespaces or types '\<name2>'</span></span>
-<span data-ttu-id="9bd2e-103">您提供的名稱模稜兩可，因此與另一個名稱發生衝突。</span><span class="sxs-lookup"><span data-stu-id="9bd2e-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="9bd2e-104">Visual Basic 編譯器並沒有任何衝突解決規則中;您必須自行區分名稱。</span><span class="sxs-lookup"><span data-stu-id="9bd2e-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
+# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a><span data-ttu-id="12321-102">從命名空間或類型 '\<name1>' 匯入的 '\<name2>' 模稜兩可</span><span class="sxs-lookup"><span data-stu-id="12321-102">'\<name1>' is ambiguous, imported from the namespaces or types '\<name2>'</span></span>
+<span data-ttu-id="12321-103">您提供的名稱模稜兩可，因此與另一個名稱發生衝突。</span><span class="sxs-lookup"><span data-stu-id="12321-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="12321-104">Visual Basic 編譯器沒有任何衝突解決規則;您必須自行區分名稱。</span><span class="sxs-lookup"><span data-stu-id="12321-104">The Visual Basic compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
   
- <span data-ttu-id="9bd2e-105">**錯誤 ID:** BC30561</span><span class="sxs-lookup"><span data-stu-id="9bd2e-105">**Error ID:** BC30561</span></span>  
+ <span data-ttu-id="12321-105">**錯誤識別碼：** BC30561</span><span class="sxs-lookup"><span data-stu-id="12321-105">**Error ID:** BC30561</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9bd2e-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="9bd2e-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="12321-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="12321-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="9bd2e-107">藉由移除命名空間匯入，釐清的名稱。</span><span class="sxs-lookup"><span data-stu-id="9bd2e-107">Disambiguate the name by removing namespace imports.</span></span>  
+1. <span data-ttu-id="12321-107">藉由移除命名空間匯入來區分名稱。</span><span class="sxs-lookup"><span data-stu-id="12321-107">Disambiguate the name by removing namespace imports.</span></span>  
   
-2. <span data-ttu-id="9bd2e-108">完整限定名稱。</span><span class="sxs-lookup"><span data-stu-id="9bd2e-108">Fully qualify the name.</span></span>  
+2. <span data-ttu-id="12321-108">完整限定名稱。</span><span class="sxs-lookup"><span data-stu-id="12321-108">Fully qualify the name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9bd2e-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9bd2e-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12321-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="12321-109">See also</span></span>
 
-- [<span data-ttu-id="9bd2e-110">Imports 陳述式 (.NET 命名空間和類型)</span><span class="sxs-lookup"><span data-stu-id="9bd2e-110">Imports Statement (.NET Namespace and Type)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [<span data-ttu-id="9bd2e-111">在 Visual Basic 中的命名空間</span><span class="sxs-lookup"><span data-stu-id="9bd2e-111">Namespaces in Visual Basic</span></span>](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [<span data-ttu-id="9bd2e-112">Namespace 陳述式</span><span class="sxs-lookup"><span data-stu-id="9bd2e-112">Namespace Statement</span></span>](../../../visual-basic/language-reference/statements/namespace-statement.md)
+- [<span data-ttu-id="12321-110">Imports 陳述式 (.NET 命名空間和類型)</span><span class="sxs-lookup"><span data-stu-id="12321-110">Imports Statement (.NET Namespace and Type)</span></span>](../statements/imports-statement-net-namespace-and-type.md)
+- [<span data-ttu-id="12321-111">Visual Basic 中的命名空間</span><span class="sxs-lookup"><span data-stu-id="12321-111">Namespaces in Visual Basic</span></span>](../../programming-guide/program-structure/namespaces.md)
+- [<span data-ttu-id="12321-112">Namespace 陳述式</span><span class="sxs-lookup"><span data-stu-id="12321-112">Namespace Statement</span></span>](../statements/namespace-statement.md)
