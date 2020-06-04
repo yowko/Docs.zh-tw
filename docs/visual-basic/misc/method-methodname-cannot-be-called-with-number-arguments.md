@@ -1,17 +1,17 @@
 ---
-title: 方法 '<methodname>' 無法使用呼叫<number>引數
+title: 無法以 <number> 個引數呼叫方法 '<methodname>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: e168d59da6c0c293d2429f90b858baf3547c22b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f8dedf6797f16e61eb44875f28f4ed9ea787540
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922313"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402105"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>方法 '\<方法名稱 >' 無法使用呼叫\<數字 > 引數
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>無法以 \<number> 個引數呼叫方法 '\<methodname>'
 方法呼叫包含錯誤的引數數目。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -24,4 +24,4 @@ ms.locfileid: "61922313"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以傳值和傳址方式傳遞引數](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [以傳值和傳址方式傳遞引數](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

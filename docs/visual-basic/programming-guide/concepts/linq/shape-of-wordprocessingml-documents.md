@@ -2,12 +2,12 @@
 title: WordprocessingML 文件的組織結構
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 9dd858e28c010d901c2c5fdfb477fe2c6975dbd4
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: eb4acef2caa731d17e8daf1955d50f0d2585c175
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76315846"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406803"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>WordprocessingML 檔的形狀（Visual Basic）
 這個主題說明 WordprocessingML 文件的 XML 組織結構。  
@@ -92,6 +92,6 @@ End Module
 - [Introducing the Office (2007) Open XML File Formats](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12)) (Office (2007) Open XML 檔案格式簡介)
 - [Overview of WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11)) (WordprocessingML 概觀)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

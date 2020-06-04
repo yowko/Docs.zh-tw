@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-ms.openlocfilehash: b576062ccbb751a23ecb68e4ae070103078b0c6c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9a4dc9904f7875f0405227014e2238fe91f4c69
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664229"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402781"
 ---
-# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>'\<類型名稱 >' 是類型，無法當成運算式使用
+# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>'\<typename>' 為類型，無法當成運算式使用
 需要運算式的地方就會出現類型名稱。 運算式必須包含變數、常數、常值、屬性和 `Function` 程序呼叫的一些組合。  
   
- **錯誤 ID:** BC30108  
+ **錯誤識別碼：** BC30108  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
@@ -25,4 +25,4 @@ ms.locfileid: "64664229"
   
 ## <a name="see-also"></a>另請參閱
 
-- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [運算子和運算式](../../programming-guide/language-features/operators-and-expressions/index.md)

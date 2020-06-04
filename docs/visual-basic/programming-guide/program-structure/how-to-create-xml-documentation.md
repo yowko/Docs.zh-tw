@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 41b7ef1f435fd0a4f20c4ca2936e2d91e155f7c5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1421cc85beba42b3cf3656c34b1d02347fbaf164
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347412"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403235"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>如何：在 Visual Basic 中建立 XML 文件
 
@@ -29,16 +29,16 @@ ms.locfileid: "74347412"
 3. 在適當的標記之間新增描述性資訊。
 
     > [!NOTE]
-    > 如果您在 XML 檔區塊內新增額外的行，則每一行必須以 `'''`開頭。
+    > 如果您在 XML 檔區塊內新增額外的行，則每一行必須以開頭 `'''` 。
 
 4. 使用新的 XML 檔批註，加入使用類型或成員的其他程式碼。
 
-    IntelliSense 會顯示類型或成員的 \<摘要 > 標記中的文字。
+    IntelliSense 會顯示 \<summary> 標記中類型或成員的文字。
 
-5. 編譯器代碼，以產生包含檔批註的 XML 檔案。 如需詳細資訊，請參閱 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)。
+5. 編譯器代碼，以產生包含檔批註的 XML 檔案。 如需詳細資訊，請參閱[-doc](../../reference/command-line-compiler/doc.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用 XML 加入程式碼註解](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)
-- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [使用 XML 加入程式碼註解](documenting-your-code-with-xml.md)
+- [XML 註解標籤](../../language-reference/xmldoc/index.md)
+- [-doc](../../reference/command-line-compiler/doc.md)

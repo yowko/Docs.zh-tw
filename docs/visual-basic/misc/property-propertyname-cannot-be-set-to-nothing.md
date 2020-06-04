@@ -1,17 +1,17 @@
 ---
-title: 屬性<propertyname>不設定為 Nothing
+title: 屬性 <propertyname> 不能設定為 Nothing
 ms.date: 07/20/2015
 f1_keywords:
 - vbrGeneral_PropertyNothing
 ms.assetid: 074014b4-5070-4c2f-9496-cbbbe9393dd6
-ms.openlocfilehash: 2741bc611975b283e7a8c1772ffbb7d57b540348
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a392fd31a02dbbba99d22b7573b5b0ad5729d0e1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591788"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411905"
 ---
-# <a name="property-propertyname-cannot-be-set-to-nothing"></a>屬性\<屬性名稱 > 不能設為 Nothing
+# <a name="property-propertyname-cannot-be-set-to-nothing"></a>屬性 \<propertyname> 不能設定為 Nothing
 這個屬性需要 `Nothing`以外的值。 這可能是不正確計算值的結果。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -20,6 +20,6 @@ ms.locfileid: "64591788"
   
 ## <a name="see-also"></a>另請參閱
 
-- [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)
-- [Nothing](../../visual-basic/language-reference/nothing.md)
+- [錯誤類型](../programming-guide/language-features/error-types.md)
+- [Nothing](../language-reference/nothing.md)
 - <xref:System.NullReferenceException>

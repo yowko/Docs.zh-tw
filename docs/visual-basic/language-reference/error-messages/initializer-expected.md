@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13fa8917f228661fc44f5e0920d91c596e250c38
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013799"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402833"
 ---
 # <a name="initializer-expected"></a>必須是初始設定式
-您嘗試使用物件初始設定式中的初始設定清單是空的如下列範例所示，宣告類別的執行個體。  
+您嘗試使用物件初始化運算式來宣告類別的實例，其中的初始設定清單是空的，如下列範例所示。  
   
  `' Not valid.`  
   
  `' Dim aStudent As New Student With {}`  
   
- 至少一個欄位或屬性必須在初始設定式清單中，初始化，如下列範例所示。  
+ 至少必須在初始化運算式清單中初始化一個欄位或屬性，如下列範例所示。  
   
  `Dim aStudent As New Student With {.year = "Senior"}`  
   
- **錯誤 ID:** BC30996  
+ **錯誤識別碼：** BC30996  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 初始化至少一個欄位或屬性初始設定式，或不使用物件初始設定式。  
+1. 在初始化運算式中至少初始化一個欄位或屬性，或不要使用物件初始化運算式。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [如何：使用物件初始設定式宣告物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [物件初始設定式：具名和匿名型別](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [如何：使用物件初始設定式宣告物件](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

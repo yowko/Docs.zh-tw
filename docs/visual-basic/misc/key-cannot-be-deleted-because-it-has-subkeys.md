@@ -2,12 +2,12 @@
 title: 機碼不能刪除，因為它有子機碼。
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
-ms.openlocfilehash: 8a550a8159b5ef150198a80d5028f671e4cb5378
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8147a70b4fad45d5a9938c080a10b44be4ffb59
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604197"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402196"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>機碼不能刪除，因為它有子機碼。
 機碼不能刪除，因為它有子機碼。  
@@ -19,5 +19,5 @@ ms.locfileid: "64604197"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
-- [如何：刪除登錄機碼](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)
+- [作法：刪除登錄機碼](../developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)
 - [讀取和寫入登錄 (Visual Basic)](../developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

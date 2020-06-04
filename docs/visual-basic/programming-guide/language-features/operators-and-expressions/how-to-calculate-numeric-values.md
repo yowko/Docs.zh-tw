@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: d213f6b5a4abf8c52d8872ae36e89796183ff27c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 94b02693f308dcfcfa6983f2750a26d9d419f7be
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348960"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403455"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>如何：計算數值 (Visual Basic)
 您可以透過使用數值運算式來計算數值。 *數值運算式*是一個運算式，其中包含代表數值的常值、常數和變數，以及作用於那些值的運算子。  
@@ -45,9 +45,9 @@ ms.locfileid: "74348960"
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
-     在上述範例中，等號運算子（`=`）右側的運算式值會指派給運算子左邊的變數 `j`，因此 `j` 會評估為276。  
+     在上述範例中，相等運算子（）右側的運算式值 `=` 會指派給 `j` 運算子左邊的變數，因此會 `j` 評估為276。  
   
-     如需詳細資訊，請參閱[陳述式](../../../../visual-basic/language-reference/statements/index.md)。  
+     如需詳細資訊，請參閱[陳述式](../../../language-reference/statements/index.md)。  
   
 ## <a name="multiple-operators"></a>多個運算子  
  如果數值運算式包含多個運算子，則評估它們的順序是由運算子優先順序的規則所決定。 若要覆寫運算子優先順序的規則，請將運算式括在括弧中，如上述範例所示：會先評估括住的運算式。  
@@ -58,15 +58,15 @@ ms.locfileid: "74348960"
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
-     在上述範例中，`j` 的計算會先執行加法運算子（`+`），因為 `(67 + i)` 覆寫一般優先順序，而指派給 `j` 的值是276（4倍69）。 `k` 的計算會以其一般優先順序（`*` 前 `+`）執行運算子，而指派給 `k` 的值為270（268加2）。  
+     在上述範例中，的計算 `j` 會先執行加法運算子（ `+` ），因為前後的括弧 `(67 + i)` 會覆寫一般優先順序，而指派給的值 `j` 為276（4倍69）。 的計算 `k` 會以其一般優先順序（之前）來執行運算子 `*` `+` ，而指派給的值 `k` 為270（268加2）。  
   
-     如需詳細資訊，請參閱[Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
+     如需詳細資訊，請參閱[Visual Basic 中的運算子優先順序](../../../language-reference/operators/operator-precedence.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [運算子和運算式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [數值比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
-- [陳述式](../../../../visual-basic/language-reference/statements/index.md)
-- [Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [算術運算子](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [有效的運算子組合](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)
+- [運算子和運算式](index.md)
+- [數值比較](value-comparisons.md)
+- [陳述式](../../../language-reference/statements/index.md)
+- [Visual Basic 中的運算子優先順序](../../../language-reference/operators/operator-precedence.md)
+- [算術運算子](../../../language-reference/operators/arithmetic-operators.md)
+- [有效的運算子組合](efficient-combination-of-operators.md)

@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 9895709076634ce156ba9d1009f79ba7ddd2ba56
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 021805508a8a053ccc8fab6f1013109bece4b6f2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646375"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404767"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
-聲明對外部文件中實現的過程的引用。
+宣告在外部檔案中執行之程式的參考。
 
 ## <a name="syntax"></a>語法
 
@@ -54,92 +54,92 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 |詞彙|定義|
 |---|---|
-|`attributelist`|選擇性。 請參考[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|
-|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [朋友](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私人](../../../visual-basic/language-reference/modifiers/private.md)<br />- [受保護的好友](../../language-reference/modifiers/protected-friend.md)<br />- [私人保護](../../language-reference/modifiers/private-protected.md)<br /><br /> 請參考[視覺基礎 中的存取等級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|
-|`Shadows`|選擇性。 請參考[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|
-|`charsetmodifier`|選擇性。 指定字元集和檔搜索資訊。 可以是下列其中一項：<br /><br /> -   [安西](../../../visual-basic/language-reference/modifiers/ansi.md)(預設)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [自動](../../../visual-basic/language-reference/modifiers/auto.md)|
-|`Sub`|可選,但必須`Sub``Function`顯示 或必須顯示。 指示外部過程不返回值。|
-|`Function`|可選,但必須`Sub``Function`顯示 或必須顯示。 指示外部過程返回值。|
-|`name`|必要。 此外部引用的名稱。 有關詳細資訊,請參閱[此名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
-|`Lib`|必要。 引入一`Lib`個子句,用於標識包含外部過程的外部檔(DLL 或代碼資源)。|
-|`libname`|必要。 包含聲明過程的檔的名稱。|
-|`Alias`|選擇性。 指示無法通過`name`中 指定的名稱在其檔中標識正在聲明的過程。 在`aliasname`中 指定其標識。|
-|`aliasname`|如果使用關鍵字,`Alias`則需要。 以兩種方式之一識別過程的字串:<br /><br /> 此檔案中的過程的入口點名稱, 在引號`""`( ) 內<br /><br /> -或-<br /><br /> 編號`#`( ), 後跟整數,指定程式在其檔案中的入口點的序號|
-|`parameterlist`|如果過程採用參數,則為必填項。 請參考[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|
-|`returntype`|如果指定`Function``Option Strict`並且`On`為 ,則為"必需" 過程返回的值的數據類型。|
+|`attributelist`|選擇性。 請參閱[屬性清單](attribute-list.md)。|
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公立](../modifiers/public.md)<br />-   [免受](../modifiers/protected.md)<br />-   [給](../modifiers/friend.md)<br />-   [私人](../modifiers/private.md)<br />- [受保護的 Friend](../modifiers/protected-friend.md)<br />- [私用保護](../modifiers/private-protected.md)<br /><br /> 請參閱[Visual Basic 中的存取層級](../../programming-guide/language-features/declared-elements/access-levels.md)。|
+|`Shadows`|選擇性。 請參閱[Shadows](../modifiers/shadows.md)。|
+|`charsetmodifier`|選擇性。 指定字元集和檔案搜尋資訊。 可以是下列其中一項：<br /><br /> -   [Ansi](../modifiers/ansi.md) （預設值）<br />-   [消除](../modifiers/unicode.md)<br />-   [自動](../modifiers/auto.md)|
+|`Sub`|選擇性，但 `Sub` 或 `Function` 必須出現。 表示外部程式不會傳回值。|
+|`Function`|選擇性，但 `Sub` 或 `Function` 必須出現。 表示外部程式會傳回值。|
+|`name`|必要。 此外部參考的名稱。 如需詳細資訊，請參閱宣告的[元素名稱](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
+|`Lib`|必要。 引進 `Lib` 子句，其可識別包含外部程式的外部檔案（DLL 或程式碼資源）。|
+|`libname`|必要。 包含宣告之程式的檔案名。|
+|`Alias`|選擇性。 表示所宣告的程式無法在其檔案中以指定的名稱識別 `name` 。 您在中指定其識別 `aliasname` 。|
+|`aliasname`|如果您使用關鍵字，則為必要 `Alias` 。 以兩種方式之一來識別程式的字串：<br /><br /> 程式在其檔案中的進入點名稱，以引號括住（ `""` ）<br /><br /> -或-<br /><br /> 數位記號（ `#` ），後面接著一個整數，指定程式在其檔案中的進入點序號|
+|`parameterlist`|如果程式採用參數，則為必要。 請參閱[參數清單](parameter-list.md)。|
+|`returntype`|如果 `Function` 已指定，且 `Option Strict` 為，則為必要 `On` 。 程式所傳回值的資料類型。|
 
 ## <a name="remarks"></a>備註
 
-有時,您需要調用在專案外部的檔(如 DLL 或代碼資源)中定義的過程。 執行此操作時,Visual Basic 編譯器無法存取正確呼叫該過程所需的資訊,例如過程的位置、標識方式、其呼叫序列和返回類型以及它使用的字串字串集。 該`Declare`語句創建對外部過程的引用,並提供此必要的資訊。
+有時候您需要呼叫專案外部檔案中定義的程式（例如 DLL 或程式碼資源）。 當您這麼做時，Visual Basic 編譯器無法存取正確呼叫程式所需的資訊，例如程式所在位置、識別方式、其呼叫順序和傳回類型，以及它所使用的字串字元集。 `Declare`語句會建立外部程式的參考，並提供此必要資訊。
 
-您只能在模組層級使用 `Declare`。 這意味著外部引用*的聲明上下文*必須是類、結構或模組,不能是源檔、命名空間、介面、過程或塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+您只能在模組層級使用 `Declare`。 這表示外部參考的宣告*內容*必須是類別、結構或模組，而且不能是原始程式檔、命名空間、介面、程式或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
 
-外部引用預設為[公共](../../../visual-basic/language-reference/modifiers/public.md)訪問。 您可以使用訪問修改器調整其訪問級別。
+外部參考預設為[公用](../modifiers/public.md)存取。 您可以使用存取修飾詞來調整其存取層級。
 
 ## <a name="rules"></a>規則
 
-- **屬性。** 您可以將屬性應用於外部引用。 應用的任何屬性僅在專案中生效,而在外部檔中無效。
+- **特性.** 您可以將屬性套用至外部參考。 您套用的任何屬性只有在您的專案中才有效，而不是在外部檔案中。
 
-- **修飾 符。** 外部程序隱式[共用](../../../visual-basic/language-reference/modifiers/shared.md)。 聲明外部引用時`Shared`不能使用關鍵字,也不能更改其共享狀態。
+- **修改.** 外部程式會隱含[共用](../modifiers/shared.md)。 您不能在宣告 `Shared` 外部參考時使用關鍵字，也無法改變其共用狀態。
 
-  外部過程不能參與重寫、實現介面成員或處理事件。 因此`Overrides`,您不能在`Overridable``NotOverridable``MustOverride``Implements``Handles`語句中使用、、、、、、、、、在語句中使用關鍵字。 `Declare`
+  外部程式無法參與覆寫、執行介面成員或處理事件。 因此，您無法 `Overrides` `Overridable` 在語句中使用、、、、 `NotOverridable` `MustOverride` `Implements` 或 `Handles` 關鍵字 `Declare` 。
 
-- **外部過程名稱。** 您不需要為外部檔案 ( 中區端的`name`名稱 ) 中選擇此外部的名稱`aliasname`( in ) 。 可以使用子`Alias`句指定入口點名稱。 如果外部過程的名稱與 Visual Basic 保留修改器或變數、過程或同一作用域中的任何其他程式設計元素具有相同的名稱,則此功能非常有用。
+- **外部程式名稱。** 您不需要在外部檔案（）中，將此外部參考指定為與程式的進入點名稱相同的名稱（在中 `name` 為） `aliasname` 。 您可以使用 `Alias` 子句來指定進入點名稱。 如果外部程式的名稱與 Visual Basic 保留的修飾詞或變數、程式或相同範圍中的任何其他程式設計項目同名，這就很有用。
 
   > [!NOTE]
-  > 大多數 DLL 中的入口點名稱區分大小寫。
+  > 大部分 Dll 中的進入點名稱都區分大小寫。
 
-- **外部程式編號。** 或者,可以使用`Alias`子句指定外部檔匯出表中的入口點的批號。 為此,您從`aliasname`數位符號 (`#`開始。 如果在 Visual Basic 中不允許外部過程名稱中的任何字元,或者如果外部檔匯出沒有名稱的過程,則此功能非常有用。
+- **外部程式編號。** 或者，您可以使用 `Alias` 子句來指定外部檔案之匯出資料表內進入點的序號。 若要這麼做，請從 `aliasname` 數位記號（ `#` ）開始。 如果 Visual Basic 中不允許外部程式名稱中的任何字元，或如果外部檔案匯出程式但沒有名稱，這會很有用。
 
 ## <a name="data-type-rules"></a>資料類型規則
 
-- **參數數據類型。** 如果是`Option Strict``On`,則必須在`parameterlist`中指定每個參數的數據類型。 這可以是任何數據類型或枚舉、結構、類或介面的名稱。 在`parameterlist`中,`As`使用子句指定要傳遞給每個參數的參數的數據類型。
+- **參數資料類型。** 如果 `Option Strict` 是 `On` ，您就必須在中指定每個參數的資料類型 `parameterlist` 。 這可以是任何資料類型，或是列舉、結構、類別或介面的名稱。 在中 `parameterlist` ，您可以使用 `As` 子句來指定要傳遞至每個參數之引數的資料類型。
 
   > [!NOTE]
-  > 如果未為 .NET 框架編寫外部過程,則必須注意數據類型是否對應。 例如,如果聲明外部引用 Visual Basic 6.0 過程具有`Integer`參數(Visual Basic 6.0 中的`Short``Declare`16 位元),則必須標識 語句中的相應參數,因為這是 Visual Basic 中的 16 位元整數類型。 同樣,Visual `Long` Basic 6.0 中的數據寬`Date`度也不同 ,並且實現方式不同。
+  > 如果未針對 .NET Framework 寫入外部程式，您必須注意資料類型對應。 例如，如果您使用參數（Visual Basic 6.0 中的16位）來宣告 Visual Basic 6.0 程式的外部參考 `Integer` ，則必須在語句中識別對應的引數 `Short` `Declare` ，因為這是 Visual Basic 中的16位整數類型。 同樣地， `Long` 在 Visual Basic 6.0 中具有不同的資料寬度，並以 `Date` 不同方式執行。
 
-- **返回數據類型。** 如果外部過程為`Function``Option Strict``On`和 ,則必須指定返回給調用代碼的值的數據類型。 這可以是任何數據類型或枚舉、結構、類或介面的名稱。
-
-  > [!NOTE]
-  > Visual Basic 編譯器不驗證數據類型是否與外部過程的類型相容。 如果不匹配,則通用語言運行時會在運行時生成<xref:System.Runtime.InteropServices.MarshalDirectiveException>異常。
-
-- **默認數據類型。** 如果`Option Strict``Off`與 沒有指定`parameterlist`參數的資料型態,則 Visual Basic 編譯器會對參數轉換為[物件資料型態](../../../visual-basic/language-reference/data-types/object-data-type.md)。 同樣,如果不指定`returntype`,編譯器將傳回資料類型`Object`為 。
+- **傳回資料類型。** 如果外部程式是 `Function` `Option Strict` ，而是 `On` ，則您必須指定傳回給呼叫程式碼之值的資料類型。 這可以是任何資料類型，或是列舉、結構、類別或介面的名稱。
 
   > [!NOTE]
-  > 由於您正在處理可能已寫入其他平臺上的外部過程,因此對數據類型進行任何假設或允許它們預設是危險的。 指定每個參數的數據類型和返回值(如果有)要安全得多。 這也提高了代碼的可讀性。
+  > Visual Basic 編譯器不會驗證您的資料類型是否與外部程式的相容。 如果出現不相符的情況，common language runtime 會 <xref:System.Runtime.InteropServices.MarshalDirectiveException> 在執行時間產生例外狀況。
+
+- **預設資料類型。** 如果 `Option Strict` 為， `Off` 而您未在中指定參數的資料類型 `parameterlist` ，則 Visual Basic 編譯器會將對應的引數轉換為[Object 資料類型](../data-types/object-data-type.md)。 同樣地，如果您未指定 `returntype` ，編譯器會將傳回資料類型設為 `Object` 。
+
+  > [!NOTE]
+  > 由於您正在處理的外部程式可能是在不同的平臺上撰寫的，因此，對資料類型或允許其預設值的任何假設都是危險的。 指定每個參數的資料類型和傳回值（如果有的話），會比較安全。 這也可以改善程式碼的可讀性。
 
 ## <a name="behavior"></a>行為
 
-- **範圍。** 外部引用在其類、結構或模組中處於作用域中。
+- **範圍.** 外部參考在其類別、結構或模組的範圍內。
 
-- **一生。** 外部引用的存留期與聲明外部引用的類、結構或模組的存留期相同。
+- **期.** 外部參考具有與宣告所在的類別、結構或模組相同的存留期。
 
-- **調用外部過程。** 調用外部過程的方式與調用`Function``Sub`或 過程的方式相同—,如果在表達式中返回值時使用它,或者在[調用語句](../../../visual-basic/language-reference/statements/call-statement.md)中指定它(如果它不返回值)。
+- **呼叫外部程式。** 以呼叫或程式的相同方式呼叫外部程式 `Function` `Sub` （如果它傳回值，則在運算式中使用它），或在[呼叫語句](call-statement.md)中指定它（如果未傳回值）。
 
-  將參數傳遞給外部過程,完全按照`parameterlist``Declare`語句中指定的方式進行。 不考慮參數最初在外部檔中聲明的方式。 同樣,如果存在返回值,則完全按照 語句`returntype``Declare`中 指定的方式使用它。
+  您可以將引數傳遞至與語句中所指定完全相同的外部程式 `parameterlist` `Declare` 。 請勿將參數原本在外部檔案中宣告的方式納入考慮。 同樣地，如果有傳回值，請在語句中使用與所指定完全相同的方法 `returntype` `Declare` 。
 
-- **字元集。** 您可以指定`charsetmodifier`Visual Basic 在呼叫外部過程時應如何封送字串。 修改`Ansi`器指示 Visual Basic 將所有字串封送到`Unicode`ANSI 值,修改器指示它將將所有字串封送到 Unicode 值。 修改`Auto`器指示 Visual Basic`name`根據基於外部引用的 .NET Framework`aliasname`規則對字串進行 封送,或者如果指定。 預設值是 `Ansi`。
+- **字元集。** 您可以指定 `charsetmodifier` Visual Basic 在呼叫外部程式時，應該如何封送處理字串。 `Ansi`修飾詞會引導 Visual Basic 將所有字串封送處理為 ANSI 值，而 `Unicode` 修飾詞會指示它將所有字串封送處理成 Unicode 值。 修飾詞會 `Auto` 根據外部參考的 .NET Framework 規則 `name` ，或在指定時，指示 Visual Basic 來封送處理字串 `aliasname` 。 預設值為 `Ansi`。
 
-  `charsetmodifier`還指定 Visual Basic 應如何查找其外部檔中的外部過程。 `Ansi`和`Unicode`直接視覺基本查找它,而無需修改其名稱在搜索期間。 `Auto`指示 Visual Basic 確定執行時平臺的基本字元集,並可能修改外部過程名稱,如下所示:
+  `charsetmodifier`同時也會指定 Visual Basic 如何在外部檔案中查詢外部程式。 `Ansi`而且 `Unicode` 直接 Visual Basic 在搜尋期間不修改其名稱來進行查詢。 `Auto`會引導 Visual Basic 判斷執行時間平臺的基底字元集，而且可能會修改外部程式名稱，如下所示：
 
-  - 在 ANSI 平臺上(如 Windows 95、Windows 98 或 Windows 千年版)上,首先查找外部過程,無需修改名稱。 如果失敗,將「A」追加到外部過程名稱的末尾,然後再次查找它。
+  - 在 ANSI 平臺上（例如 Windows 95、Windows 98 或 Windows Millennium Edition），請先查閱外部程式而不修改名稱。 如果失敗，請將 "A" 附加至外部程式名稱的結尾，然後重新查詢。
 
-  - 在 Unicode 平臺上(如 Windows NT、Windows 2000 或 Windows XP)上,首先查找外部過程,無需修改名稱。 如果失敗,將「W」追加到外部過程名稱的末尾,然後再次查找它。
+  - 在 Unicode 平臺上（例如 Windows NT、Windows 2000 或 Windows XP），請先查閱外部程式而不修改名稱。 如果失敗，請將 "W" 附加至外部程式名稱的結尾，然後重新查詢。
 
-- **機制。** Visual Basic 使用 .NET 框架*平台呼叫*(PInvoke) 機制解析和存取外部過程。 語句`Declare`<xref:System.Runtime.InteropServices.DllImportAttribute>和 類都自動使用此機制,您不需要任何 PInvoke 的知識。 有關詳細資訊,請參閱[演練:調用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
+- **機構.** Visual Basic 使用 .NET Framework*平台叫用*（PInvoke）機制來解析和存取外部程式。 `Declare`語句和 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別都會自動使用這項機制，而且您不需要任何的 PInvoke 知識。 如需詳細資訊，請參閱[逐步解說：呼叫 Windows api](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)。
 
 > [!IMPORTANT]
-> 如果外部過程在通用語言執行時 (CLR) 之外執行,則它是*非託管代碼*。 調用此類過程(例如 Windows API 函數或 COM 方法)時,可能會使應用程式面臨安全風險。 有關詳細資訊,請參閱[非託管代碼的安全編碼準則](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)。
+> 如果外部程式是在 common language runtime （CLR）外部執行，則為*非受控碼*。 當您呼叫這類程式（例如，Windows API 函式或 COM 方法）時，可能會讓您的應用程式暴露于安全性風險下。 如需詳細資訊，請參閱[安全的非受控碼程式碼撰寫方針](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)。
 
 ## <a name="example"></a>範例
 
-以下範例聲明對返回當前使用者名`Function`的過程的外部引用。 然後,它將外部過程`GetUserNameA`稱為該過程的`getUser`一部分。
+下列範例 `Function` 會宣告會傳回目前使用者名稱之程式的外部參考。 然後，它會在程式中呼叫外部程式 `GetUserNameA` `getUser` 。
 
 [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]
 
 ## <a name="example"></a>範例
 
-提供了<xref:System.Runtime.InteropServices.DllImportAttribute>在非託管代碼中使用函數的替代方法。 下面的範例宣告匯入的函式而不使用敘述`Declare`。
+<xref:System.Runtime.InteropServices.DllImportAttribute>提供了在非受控程式碼中使用函式的替代方式。 下列範例會宣告已匯入的函式，而不使用 `Declare` 語句。
 
 [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]
 
@@ -148,10 +148,10 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
-- [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [AddressOf 運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [Call 陳述式](../../../visual-basic/language-reference/statements/call-statement.md)
-- [逐步解說：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [Imports 陳述式 (.NET 命名空間和類型)](imports-statement-net-namespace-and-type.md)
+- [AddressOf 運算子](../operators/addressof-operator.md)
+- [Function 陳述式](function-statement.md)
+- [Sub 陳述式](sub-statement.md)
+- [參數清單](parameter-list.md)
+- [Call 陳述式](call-statement.md)
+- [逐步解說：呼叫 Windows API](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md)

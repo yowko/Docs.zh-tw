@@ -1,13 +1,13 @@
 ---
-title: 如何：在同層級項目中尋找具有特定名稱的屬性 (XPath-LINQ to XML)
+title: 作法：尋找具有特定名稱的同層級屬性 (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: ea4492dbbe9dc8e32c675e1a938cda0d10321b7a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0317e03de6f671991d6d0a4247ca2e9c172439b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343668"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405270"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>如何：尋找具有特定名稱之同級的屬性（XPath-LINQ to XML）（Visual Basic）
 本主題顯示如何尋找內容節點之同層級的所有屬性。 在集合中，只會傳回具有特定名稱的屬性。  
@@ -19,7 +19,7 @@ ms.locfileid: "74343668"
 ## <a name="example"></a>範例  
  此範例會先尋找 `Book` 項目，接著尋找名稱為 `Book` 的所有同層級項目，然後尋找名稱為 `id` 的所有屬性。 結果為屬性的集合。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：書籍 (LINQ to XML)](sample-xml-file-books-linq-to-xml.md)。  
   
 ```vb  
 Dim books as XDocument = XDocument.Load("Books.xml")  
@@ -54,6 +54,6 @@ id="bk101"
 id="bk102"  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XPath 使用者的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML （Visual Basic）](linq-to-xml-for-xpath-users.md)

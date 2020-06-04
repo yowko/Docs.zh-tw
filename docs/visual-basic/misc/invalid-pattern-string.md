@@ -2,12 +2,12 @@
 title: 無效的模式字串
 ms.date: 07/20/2015
 ms.assetid: ec1aecdb-5339-4a93-be71-eec56b1d7438
-ms.openlocfilehash: 7390b9b32eea248969813b52f8d9799798718de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa408f4cecc2a2774cb98cba96cd04a67afcc546
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790594"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402209"
 ---
 # <a name="invalid-pattern-string"></a>無效的模式字串
 在搜尋的 `Like` 作業中指定的模式字串無效。  
@@ -24,4 +24,4 @@ ms.locfileid: "61790594"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Like 運算子](../../visual-basic/language-reference/operators/like-operator.md)
+- [Like 運算子](../language-reference/operators/like-operator.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 6e9a6975977588ba7692c925d7940cd2ec26671f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635386"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406686"
 ---
 # <a name="lock-statement-c-reference"></a>lock 陳述式 (C# 參考)
 
@@ -56,13 +56,13 @@ finally
 - <xref:System.Type> 執行個體，因為這些可能會由 [typeof](../operators/type-testing-and-cast.md#typeof-operator) 運算子或反映取得。
 - 字串執行個體 (包括字串常值)，因為那些可能會[暫留](/dotnet/api/system.string.intern#remarks)。
 
-盡可能短的時間保持鎖,以減少鎖爭用。
+盡可能保持鎖定，以減少鎖定爭用。
 
 ## <a name="example"></a>範例
 
 下列範例會定義 `Account` 類別，該類別會透過鎖定專用的 `balanceLock` 執行個體來同步對其私用 `balance` 欄位的存取。 使用相同的執行個體進行鎖定，可確保嘗試同時呼叫 `Debit` 或 `Credit` 方法的兩個執行緒無法同時更新 `balance` 欄位。
 
-[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
+[!code-csharp[lock-statement-example](snippets/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -70,8 +70,8 @@ finally
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 關鍵字](index.md)
+- [C# 參考資料](../index.md)
+- [C # 關鍵字](index.md)
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>

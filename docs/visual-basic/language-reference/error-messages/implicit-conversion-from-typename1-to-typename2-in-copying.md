@@ -7,33 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 7ac0e7961e1a039e505c85a35c7c31353ed6578e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4d0f9aac795f683cf58210ea38b3783e451ccfc3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661980"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402858"
 ---
-# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>隱含的轉換，從 '\<typename1 >' 到'\<2&gt >' 的 'ByRef' 參數的值複製 '\<參數名稱 >' 回相符引數。
-與呼叫的程序[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其對應參數的不同類型的引數。  
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>在將 'ByRef' 參數 '\<typename1>' 的值複製回相對應的引數時，將 '\<typename2>' 隱含轉換至 '\<parametername>'
+使用與對應參數不同類型的[ByRef](../modifiers/byref.md)引數來呼叫程式。  
   
- 如果您傳遞的引數`ByRef`，Visual Basic 有時會將引數值複製至區域變數，而不是傳遞參考程序中。 在此情況下，此程序傳回時，Visual Basic 必須接著將本機變數的值複製回呼叫端程式碼中的引數。  
+ 如果您傳遞引數 `ByRef` ，Visual Basic 有時會將引數值複製至程式中的區域變數，而不是傳遞參考。 在這種情況下，當程式傳回時，Visual Basic 必須將區域變數值複製回呼叫程式碼中的引數。  
   
- 如果將 `ByRef` 引數值複製至程序，而且引數和參數的類型相同，則不需要進行轉換。 但如果類型不同，Visual Basic 必須雙向轉換。 因為您無法使用`CType`或任何程序引數或參數，這類轉換上一個轉換關鍵字一律為隱含。  
+ 如果將 `ByRef` 引數值複製至程序，而且引數和參數的類型相同，則不需要進行轉換。 但是，如果類型不同，Visual Basic 必須雙向轉換。 因為您無法 `CType` 在程式引數或參數上使用或任何其他轉換關鍵字，所以這類轉換一律是隱含的。  
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID:** BC41999  
+ **錯誤識別碼：** BC41999  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 可能的話，因此不需要執行任何轉換 Visual Basic，請做為程序參數，使用相同類型的呼叫中引數。  
+- 可能的話，請使用與程式參數相同類型的呼叫引數，因此 Visual Basic 不需要進行任何轉換。  
   
-- 如果您需要呼叫引數類型與參數類型不同的程序，但不需要將值傳回給呼叫中引數，請將此參數定義為 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ，而非 `ByRef`。  
+- 如果您需要呼叫引數類型與參數類型不同的程序，但不需要將值傳回給呼叫中引數，請將此參數定義為 [ByVal](../modifiers/byval.md) ，而非 `ByRef`。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [程序參數和引數](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
-- [以傳值和傳址方式傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [程序](../../programming-guide/language-features/procedures/index.md)
+- [程序參數和引數](../../programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [以傳值和傳址方式傳遞引數](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [隱含和明確轉換](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

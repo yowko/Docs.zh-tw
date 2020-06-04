@@ -1,13 +1,13 @@
 ---
-title: 如何：在命名空間中尋找所有節點
+title: 作法：在命名空間中尋找所有節點
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: f6bc38140bc2ea43393133d78c798469d26671c5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f1660020db59b63dea86ed8953faef743c0f40d4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352974"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405309"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>如何：在命名空間中尋找所有節點（Visual Basic）
 您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>範例  
  下列查詢所存取的 XML 檔案包含兩種不同命名空間中的採購訂單。 此查詢只會使用其中一個命名空間中的項目建立新的樹狀。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：合併的採購訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：合併的採購訂單](sample-xml-file-consolidated-purchase-orders.md)。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -111,4 +111,4 @@ End Module
   
 ## <a name="see-also"></a>另請參閱
 
-- [基本查詢（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查詢（LINQ to XML）（Visual Basic）](basic-queries-linq-to-xml.md)

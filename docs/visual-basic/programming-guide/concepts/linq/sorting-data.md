@@ -2,12 +2,12 @@
 title: 排序資料
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f1d4d8afb9b6e176a7ac048ba3270ecafdce24c9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a5ccff745995ed7f41731cf98fb7c49d3247d994
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350593"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406790"
 ---
 # <a name="sorting-data-visual-basic"></a>排序資料（Visual Basic）
 
@@ -21,7 +21,7 @@ ms.locfileid: "74350593"
 
 ## <a name="methods"></a>方法
 
-|方法名稱|描述|Visual Basic 查詢運算式語法|詳細資訊|
+|方法名稱|Description|Visual Basic 查詢運算式語法|相關資訊|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|依遞增順序排序值。|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|依遞減順序排序值。|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
@@ -147,10 +147,10 @@ MsgBox(sb.ToString())
 ' brown
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
-- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [如何：排序查詢結果](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [如何：依任何字或欄位排序或篩選文字資料（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [標準查詢運算子概觀 (Visual Basic)](standard-query-operators-overview.md)
+- [Order By 子句](../../../language-reference/queries/order-by-clause.md)
+- [如何：排序查詢結果](../../language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [如何：依任何字或欄位排序或篩選文字資料 (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

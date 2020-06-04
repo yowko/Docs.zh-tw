@@ -2,12 +2,12 @@
 title: 靜態編譯的查詢 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: e9f56366f1566f831f1e0ea5bd5a06775d698c3d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f020c1ed8627df8c8386a059f0cea372e8df363e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350571"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406764"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>靜態編譯的查詢（LINQ to XML）（Visual Basic）
 
@@ -58,7 +58,7 @@ For Each el In list1
 Next
 ```
 
-這則範例會與先前兩則範例產生完全相同的結果。 這表示查詢實際上會編譯成靜態連結方法呼叫。 與 Iterator 的延後執行語意 (Semantics) 結合之後，便可改善效能。 如需反覆運算器延後執行語義的詳細資訊，請參閱[LINQ to XML （Visual Basic）中的延後執行和延遲評估](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。
+這則範例會與先前兩則範例產生完全相同的結果。 這表示查詢實際上會編譯成靜態連結方法呼叫。 與 Iterator 的延後執行語意 (Semantics) 結合之後，便可改善效能。 如需反覆運算器延後執行語義的詳細資訊，請參閱[LINQ to XML （Visual Basic）中的延後執行和延遲評估](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。
 
 > [!NOTE]
 > 這些範例是代表編譯器可能會撰寫的程式碼。 雖然實際的實作 (Implementation) 可能會與這些範例稍微不同，不過其效能與這些範例相同或相似。
@@ -94,4 +94,4 @@ reader.Close()
 
 ## <a name="see-also"></a>另請參閱
 
-- [效能（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [效能（LINQ to XML）（Visual Basic）](performance-linq-to-xml.md)
