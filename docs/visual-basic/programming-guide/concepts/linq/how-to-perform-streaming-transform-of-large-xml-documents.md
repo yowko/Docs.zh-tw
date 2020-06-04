@@ -1,31 +1,31 @@
 ---
-title: 如何：執行大型 XML 文件的資料流轉換
+title: 作法：執行大型 XML 文件的串流轉換
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: f5e6063f0a850c03a605d75b0cbdc0bf9e03b325
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: f648371581ed2854c107ebed920068e2abec4239
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78267011"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397982"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a><span data-ttu-id="59ce8-102">如何：執行大型 XML 文檔的流式轉換（可視基本）</span><span class="sxs-lookup"><span data-stu-id="59ce8-102">How to: Perform Streaming Transform of Large XML Documents (Visual Basic)</span></span>
-<span data-ttu-id="59ce8-103">有時候您必須轉換大型 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。</span><span class="sxs-lookup"><span data-stu-id="59ce8-103">Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="59ce8-104">如果您嘗試使用非常大的 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比 (也就是，變成過度)。</span><span class="sxs-lookup"><span data-stu-id="59ce8-104">If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive).</span></span> <span data-ttu-id="59ce8-105">因此，您應該改用資料流技術。</span><span class="sxs-lookup"><span data-stu-id="59ce8-105">Therefore, you should use a streaming technique instead.</span></span>  
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a><span data-ttu-id="9413e-102">如何：執行大型 XML 檔的串流轉換（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="9413e-102">How to: Perform Streaming Transform of Large XML Documents (Visual Basic)</span></span>
+<span data-ttu-id="9413e-103">有時候您必須轉換大型 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。</span><span class="sxs-lookup"><span data-stu-id="9413e-103">Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="9413e-104">如果您嘗試使用非常大的 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比 (也就是，變成過度)。</span><span class="sxs-lookup"><span data-stu-id="9413e-104">If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive).</span></span> <span data-ttu-id="9413e-105">因此，您應該改用資料流技術。</span><span class="sxs-lookup"><span data-stu-id="9413e-105">Therefore, you should use a streaming technique instead.</span></span>  
   
- <span data-ttu-id="59ce8-106">在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。</span><span class="sxs-lookup"><span data-stu-id="59ce8-106">Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order.</span></span> <span data-ttu-id="59ce8-107">特定的標準查詢運算子 (例如，<xref:System.Linq.Enumerable.OrderBy%2A>) 會反覆查看其來源、收集所有資料、排序這些資料，最後產生順序中的第一個項目。</span><span class="sxs-lookup"><span data-stu-id="59ce8-107">Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence.</span></span> <span data-ttu-id="59ce8-108">請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會為應用程式保留小的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="59ce8-108">Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint for your application.</span></span>  
+ <span data-ttu-id="9413e-106">在您僅需要處理一次來源文件的情況下，最適合使用資料流技術，而且您可以用文件的順序處理項目。</span><span class="sxs-lookup"><span data-stu-id="9413e-106">Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order.</span></span> <span data-ttu-id="9413e-107">特定的標準查詢運算子 (例如，<xref:System.Linq.Enumerable.OrderBy%2A>) 會反覆查看其來源、收集所有資料、排序這些資料，最後產生順序中的第一個項目。</span><span class="sxs-lookup"><span data-stu-id="9413e-107">Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence.</span></span> <span data-ttu-id="9413e-108">請注意，如果您在產生第一個項目前使用具體化其來源的查詢運算子，您將不會為應用程式保留小的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="9413e-108">Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint for your application.</span></span>  
   
- <span data-ttu-id="59ce8-109">即使您使用["如何操作：使用訪問標頭資訊（可視基本）"](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)中所述的技術，如果嘗試組合包含轉換後的文檔的 XML 樹，記憶體使用率將太大。</span><span class="sxs-lookup"><span data-stu-id="59ce8-109">Even if you use the technique described in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), if you try to assemble an XML tree that contains the transformed document, memory usage will be too great.</span></span>  
+ <span data-ttu-id="9413e-109">即使您使用[如何：串流 Xml 片段並存取標頭資訊（Visual Basic）](how-to-stream-xml-fragments-with-access-to-header-information.md)中所述的技術，如果您嘗試組合包含已轉換之檔的 xml 樹狀結構，記憶體使用量將會太大。</span><span class="sxs-lookup"><span data-stu-id="9413e-109">Even if you use the technique described in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](how-to-stream-xml-fragments-with-access-to-header-information.md), if you try to assemble an XML tree that contains the transformed document, memory usage will be too great.</span></span>  
   
- <span data-ttu-id="59ce8-110">有兩個主要方法。</span><span class="sxs-lookup"><span data-stu-id="59ce8-110">There are two main approaches.</span></span> <span data-ttu-id="59ce8-111">其中一個方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延緩處理特性。</span><span class="sxs-lookup"><span data-stu-id="59ce8-111">One approach is to use the deferred processing characteristics of <xref:System.Xml.Linq.XStreamingElement>.</span></span> <span data-ttu-id="59ce8-112">另一個方法則是建立 <xref:System.Xml.XmlWriter>，然後使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。</span><span class="sxs-lookup"><span data-stu-id="59ce8-112">Another approach is to create an <xref:System.Xml.XmlWriter>, and use the capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="59ce8-113">這個主題會示範這兩種方法。</span><span class="sxs-lookup"><span data-stu-id="59ce8-113">This topic demonstrates both approaches.</span></span>  
+ <span data-ttu-id="9413e-110">有兩個主要方法。</span><span class="sxs-lookup"><span data-stu-id="9413e-110">There are two main approaches.</span></span> <span data-ttu-id="9413e-111">其中一個方法是使用 <xref:System.Xml.Linq.XStreamingElement> 的延緩處理特性。</span><span class="sxs-lookup"><span data-stu-id="9413e-111">One approach is to use the deferred processing characteristics of <xref:System.Xml.Linq.XStreamingElement>.</span></span> <span data-ttu-id="9413e-112">另一個方法則是建立 <xref:System.Xml.XmlWriter>，然後使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。</span><span class="sxs-lookup"><span data-stu-id="9413e-112">Another approach is to create an <xref:System.Xml.XmlWriter>, and use the capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="9413e-113">這個主題會示範這兩種方法。</span><span class="sxs-lookup"><span data-stu-id="9413e-113">This topic demonstrates both approaches.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="59ce8-114">範例</span><span class="sxs-lookup"><span data-stu-id="59ce8-114">Example</span></span>  
- <span data-ttu-id="59ce8-115">以下示例基於["如何：具有訪問標頭資訊（可視基本）的流 XML 片段""](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)中的示例。</span><span class="sxs-lookup"><span data-stu-id="59ce8-115">The following example builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="9413e-114">範例</span><span class="sxs-lookup"><span data-stu-id="9413e-114">Example</span></span>  
+ <span data-ttu-id="9413e-115">下列範例是以[如何：串流 XML 片段並存取標頭資訊（Visual Basic）](how-to-stream-xml-fragments-with-access-to-header-information.md)中的範例為基礎。</span><span class="sxs-lookup"><span data-stu-id="9413e-115">The following example builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](how-to-stream-xml-fragments-with-access-to-header-information.md).</span></span>  
   
- <span data-ttu-id="59ce8-116">這個範例會使用 <xref:System.Xml.Linq.XStreamingElement> 的延後執行功能來串流輸出。</span><span class="sxs-lookup"><span data-stu-id="59ce8-116">This example uses the deferred execution capabilities of <xref:System.Xml.Linq.XStreamingElement> to stream the output.</span></span> <span data-ttu-id="59ce8-117">此範例可以轉換非常大的文件，同時維護小的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="59ce8-117">This example can transform a very large document while maintaining a small memory footprint.</span></span>  
+ <span data-ttu-id="9413e-116">這個範例會使用 <xref:System.Xml.Linq.XStreamingElement> 的延後執行功能來串流輸出。</span><span class="sxs-lookup"><span data-stu-id="9413e-116">This example uses the deferred execution capabilities of <xref:System.Xml.Linq.XStreamingElement> to stream the output.</span></span> <span data-ttu-id="9413e-117">此範例可以轉換非常大的文件，同時維護小的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="9413e-117">This example can transform a very large document while maintaining a small memory footprint.</span></span>  
   
- <span data-ttu-id="59ce8-118">請注意，自訂座標軸 (`StreamCustomerItem`) 是特別撰寫的，讓它預備擁有 `Customer`、`Name` 和 `Item` 項目的文件，並預期這些項目將會與下列 Source.xml 文件的排列方式相同。</span><span class="sxs-lookup"><span data-stu-id="59ce8-118">Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document.</span></span> <span data-ttu-id="59ce8-119">不過，較為複雜的實作方法則用於剖析無效的文件。</span><span class="sxs-lookup"><span data-stu-id="59ce8-119">A more robust implementation, however, would be prepared to parse an invalid document.</span></span>  
+ <span data-ttu-id="9413e-118">請注意，自訂座標軸 (`StreamCustomerItem`) 是特別撰寫的，讓它預備擁有 `Customer`、`Name` 和 `Item` 項目的文件，並預期這些項目將會與下列 Source.xml 文件的排列方式相同。</span><span class="sxs-lookup"><span data-stu-id="9413e-118">Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document.</span></span> <span data-ttu-id="9413e-119">不過，較為複雜的實作方法則用於剖析無效的文件。</span><span class="sxs-lookup"><span data-stu-id="9413e-119">A more robust implementation, however, would be prepared to parse an invalid document.</span></span>  
   
- <span data-ttu-id="59ce8-120">下列是來源文件 Source.xml：</span><span class="sxs-lookup"><span data-stu-id="59ce8-120">The following is the source document, Source.xml:</span></span>  
+ <span data-ttu-id="9413e-120">下列是來源文件 Source.xml：</span><span class="sxs-lookup"><span data-stu-id="9413e-120">The following is the source document, Source.xml:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>
@@ -197,7 +197,7 @@ Public Class StreamCustomerItemEnumerator
 End Class  
 ```  
   
- <span data-ttu-id="59ce8-121">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="59ce8-121">This code produces the following output:</span></span>  
+ <span data-ttu-id="9413e-121">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="9413e-121">This code produces the following output:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -245,16 +245,16 @@ End Class
 </Root>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="59ce8-122">範例</span><span class="sxs-lookup"><span data-stu-id="59ce8-122">Example</span></span>  
- <span data-ttu-id="59ce8-123">以下示例還基於["如何：具有訪問標頭資訊（可視基本）的流 XML 片段""](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)中的示例。</span><span class="sxs-lookup"><span data-stu-id="59ce8-123">The following example also builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="9413e-122">範例</span><span class="sxs-lookup"><span data-stu-id="9413e-122">Example</span></span>  
+ <span data-ttu-id="9413e-123">下列範例也是以[如何：串流 XML 片段並存取標頭資訊（Visual Basic）](how-to-stream-xml-fragments-with-access-to-header-information.md)中的範例為基礎。</span><span class="sxs-lookup"><span data-stu-id="9413e-123">The following example also builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](how-to-stream-xml-fragments-with-access-to-header-information.md).</span></span>  
   
- <span data-ttu-id="59ce8-124">此範例會使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。</span><span class="sxs-lookup"><span data-stu-id="59ce8-124">This example uses the capability of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="59ce8-125">此範例可以轉換非常大的文件，同時維護小的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="59ce8-125">This example can transform a very large document while maintaining a small memory footprint.</span></span>  
+ <span data-ttu-id="9413e-124">此範例會使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的功能，將項目寫入到 <xref:System.Xml.XmlWriter> 中。</span><span class="sxs-lookup"><span data-stu-id="9413e-124">This example uses the capability of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="9413e-125">此範例可以轉換非常大的文件，同時維護小的記憶體使用量。</span><span class="sxs-lookup"><span data-stu-id="9413e-125">This example can transform a very large document while maintaining a small memory footprint.</span></span>  
   
- <span data-ttu-id="59ce8-126">請注意，自訂座標軸 (`StreamCustomerItem`) 是特別撰寫的，讓它預備擁有 `Customer`、`Name` 和 `Item` 項目的文件，並預期這些項目將會與下列 Source.xml 文件的排列方式相同。</span><span class="sxs-lookup"><span data-stu-id="59ce8-126">Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document.</span></span> <span data-ttu-id="59ce8-127">不過，較為複雜的實作方法將會使用 XSD 驗證來源文件，或做為剖析無效文件的準備。</span><span class="sxs-lookup"><span data-stu-id="59ce8-127">A more robust implementation, however, would either validate the source document with an XSD, or would be prepared to parse an invalid document.</span></span>  
+ <span data-ttu-id="9413e-126">請注意，自訂座標軸 (`StreamCustomerItem`) 是特別撰寫的，讓它預備擁有 `Customer`、`Name` 和 `Item` 項目的文件，並預期這些項目將會與下列 Source.xml 文件的排列方式相同。</span><span class="sxs-lookup"><span data-stu-id="9413e-126">Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document.</span></span> <span data-ttu-id="9413e-127">不過，較為複雜的實作方法將會使用 XSD 驗證來源文件，或做為剖析無效文件的準備。</span><span class="sxs-lookup"><span data-stu-id="9413e-127">A more robust implementation, however, would either validate the source document with an XSD, or would be prepared to parse an invalid document.</span></span>  
   
- <span data-ttu-id="59ce8-128">此範例會使用相同的來源文件 Source.xml 做為本主題中的上一個範例。</span><span class="sxs-lookup"><span data-stu-id="59ce8-128">This example uses the same source document, Source.xml, as the previous example in this topic.</span></span> <span data-ttu-id="59ce8-129">它也會產生完全相同的輸出。</span><span class="sxs-lookup"><span data-stu-id="59ce8-129">It also produces exactly the same output.</span></span>  
+ <span data-ttu-id="9413e-128">此範例會使用相同的來源文件 Source.xml 做為本主題中的上一個範例。</span><span class="sxs-lookup"><span data-stu-id="9413e-128">This example uses the same source document, Source.xml, as the previous example in this topic.</span></span> <span data-ttu-id="9413e-129">它也會產生完全相同的輸出。</span><span class="sxs-lookup"><span data-stu-id="9413e-129">It also produces exactly the same output.</span></span>  
   
- <span data-ttu-id="59ce8-130">使用 <xref:System.Xml.Linq.XStreamingElement> 串流輸出 XML 優於寫入 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="59ce8-130">Using <xref:System.Xml.Linq.XStreamingElement> for streaming the output XML is preferred over writing to an <xref:System.Xml.XmlWriter>.</span></span>  
+ <span data-ttu-id="9413e-130">使用 <xref:System.Xml.Linq.XStreamingElement> 串流輸出 XML 優於寫入 <xref:System.Xml.XmlWriter>。</span><span class="sxs-lookup"><span data-stu-id="9413e-130">Using <xref:System.Xml.Linq.XStreamingElement> for streaming the output XML is preferred over writing to an <xref:System.Xml.XmlWriter>.</span></span>  
   
 ```vb  
 Module Module1  
@@ -392,7 +392,7 @@ Public Class StreamCustomerItemEnumerator
 End Class  
 ```  
   
- <span data-ttu-id="59ce8-131">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="59ce8-131">This code produces the following output:</span></span>  
+ <span data-ttu-id="9413e-131">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="9413e-131">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -439,6 +439,6 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="59ce8-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="59ce8-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9413e-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9413e-132">See also</span></span>
 
-- [<span data-ttu-id="59ce8-133">高級 LINQ 到 XML 程式設計（視覺化基本）</span><span class="sxs-lookup"><span data-stu-id="59ce8-133">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [<span data-ttu-id="9413e-133">Advanced LINQ to XML 程式設計（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="9413e-133">Advanced LINQ to XML Programming (Visual Basic)</span></span>](advanced-linq-to-xml-programming.md)

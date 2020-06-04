@@ -1,5 +1,5 @@
 ---
-title: 如何：在程式碼中中斷和合併陳述式
+title: 作法：程式碼中的 Break 及 Combine 陳述式
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,45 +21,45 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: f1a24c001cd20acc7663fb4cbe60e7e35a9c8fc3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c78cbeaa5c2df2d4f2e3cce2b5b3fb8048ff3388
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347430"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403248"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a><span data-ttu-id="88d02-102">如何：在程式碼中中斷和合併陳述式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88d02-102">How to: Break and Combine Statements in Code (Visual Basic)</span></span>
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a><span data-ttu-id="8641b-102">如何：在程式碼中中斷和合併陳述式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8641b-102">How to: Break and Combine Statements in Code (Visual Basic)</span></span>
 
-<span data-ttu-id="88d02-103">撰寫程式碼時，您有時可能會在程式碼編輯器中建立需要水準滾動的冗長語句。</span><span class="sxs-lookup"><span data-stu-id="88d02-103">When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor.</span></span> <span data-ttu-id="88d02-104">雖然這並不會影響您的程式碼執行方式，但它會讓您或其他人難以在監視器上看到該程式碼。</span><span class="sxs-lookup"><span data-stu-id="88d02-104">Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor.</span></span> <span data-ttu-id="88d02-105">在這種情況下，您應該考慮將單一長語句細分成數行。</span><span class="sxs-lookup"><span data-stu-id="88d02-105">In such cases, you should consider breaking the single long statement into several lines.</span></span>
+<span data-ttu-id="8641b-103">撰寫程式碼時，您有時可能會在程式碼編輯器中建立需要水準滾動的冗長語句。</span><span class="sxs-lookup"><span data-stu-id="8641b-103">When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor.</span></span> <span data-ttu-id="8641b-104">雖然這並不會影響您的程式碼執行方式，但它會讓您或其他人難以在監視器上看到該程式碼。</span><span class="sxs-lookup"><span data-stu-id="8641b-104">Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor.</span></span> <span data-ttu-id="8641b-105">在這種情況下，您應該考慮將單一長語句細分成數行。</span><span class="sxs-lookup"><span data-stu-id="8641b-105">In such cases, you should consider breaking the single long statement into several lines.</span></span>
 
-## <a name="to-break-a-single-statement-into-multiple-lines"></a><span data-ttu-id="88d02-106">將單一語句分成多行</span><span class="sxs-lookup"><span data-stu-id="88d02-106">To break a single statement into multiple lines</span></span>
+## <a name="to-break-a-single-statement-into-multiple-lines"></a><span data-ttu-id="8641b-106">將單一語句分成多行</span><span class="sxs-lookup"><span data-stu-id="8641b-106">To break a single statement into multiple lines</span></span>
 
-<span data-ttu-id="88d02-107">使用行接續字元，也就是底線（`_`），這是您想要行中斷的位置。</span><span class="sxs-lookup"><span data-stu-id="88d02-107">Use the line-continuation character, which is an underscore (`_`), at the point at which you want the line to break.</span></span> <span data-ttu-id="88d02-108">底線的前面必須加上空格，並緊接在行結束字元（回車）或（從16.0 版開始）後面加上一個加上回車的批註。</span><span class="sxs-lookup"><span data-stu-id="88d02-108">The underscore must be immediately preceded by a space and immediately followed by a line terminator (carriage return) or (starting with version 16.0) a comment followed by a carriage return.</span></span>
+<span data-ttu-id="8641b-107">使用行接續字元，也就是底線（ `_` ），這是您想要行中斷的位置。</span><span class="sxs-lookup"><span data-stu-id="8641b-107">Use the line-continuation character, which is an underscore (`_`), at the point at which you want the line to break.</span></span> <span data-ttu-id="8641b-108">底線的前面必須加上空格，並緊接在行結束字元（回車）或（從16.0 版開始）後面加上一個加上回車的批註。</span><span class="sxs-lookup"><span data-stu-id="8641b-108">The underscore must be immediately preceded by a space and immediately followed by a line terminator (carriage return) or (starting with version 16.0) a comment followed by a carriage return.</span></span>
 
   > [!NOTE]
-  > <span data-ttu-id="88d02-109">在某些情況下，如果您省略行接續字元，Visual Basic 編譯器會隱含地繼續下一行程式碼上的語句。</span><span class="sxs-lookup"><span data-stu-id="88d02-109">In some cases, if you omit the line-continuation character, the Visual Basic compiler will implicitly continue the statement on the next line of code.</span></span> <span data-ttu-id="88d02-110">如需可省略行接續字元的語法元素清單，請參閱[語句](../../../visual-basic/programming-guide/language-features/statements.md)中的「隱含行接續」。</span><span class="sxs-lookup"><span data-stu-id="88d02-110">For a list of syntax elements for which you can omit the line-continuation character, see "Implicit Line Continuation" in [Statements](../../../visual-basic/programming-guide/language-features/statements.md).</span></span>
+  > <span data-ttu-id="8641b-109">在某些情況下，如果您省略行接續字元，Visual Basic 編譯器會隱含地繼續下一行程式碼上的語句。</span><span class="sxs-lookup"><span data-stu-id="8641b-109">In some cases, if you omit the line-continuation character, the Visual Basic compiler will implicitly continue the statement on the next line of code.</span></span> <span data-ttu-id="8641b-110">如需可省略行接續字元的語法元素清單，請參閱[語句](../language-features/statements.md)中的「隱含行接續」。</span><span class="sxs-lookup"><span data-stu-id="8641b-110">For a list of syntax elements for which you can omit the line-continuation character, see "Implicit Line Continuation" in [Statements](../language-features/statements.md).</span></span>
 
-  <span data-ttu-id="88d02-111">在下列範例中，語句會分成四行，其中行接續字元會終止所有但最後一行。</span><span class="sxs-lookup"><span data-stu-id="88d02-111">In the following example, the statement is broken into four lines with line-continuation characters terminating all but the last line.</span></span>
+  <span data-ttu-id="8641b-111">在下列範例中，語句會分成四行，其中行接續字元會終止所有但最後一行。</span><span class="sxs-lookup"><span data-stu-id="8641b-111">In the following example, the statement is broken into four lines with line-continuation characters terminating all but the last line.</span></span>
 
   [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]
 
-  <span data-ttu-id="88d02-112">使用此順序可讓您的程式碼在線上和列印時更容易閱讀。</span><span class="sxs-lookup"><span data-stu-id="88d02-112">Using this sequence makes your code easier to read, both online and when printed.</span></span>
+  <span data-ttu-id="8641b-112">使用此順序可讓您的程式碼在線上和列印時更容易閱讀。</span><span class="sxs-lookup"><span data-stu-id="8641b-112">Using this sequence makes your code easier to read, both online and when printed.</span></span>
 
-  <span data-ttu-id="88d02-113">行接續字元必須是該行的最後一個字元。</span><span class="sxs-lookup"><span data-stu-id="88d02-113">The line-continuation character must be the last character on a line.</span></span> <span data-ttu-id="88d02-114">您不能在同一行上以其他任何專案來追蹤。</span><span class="sxs-lookup"><span data-stu-id="88d02-114">You can't follow it with anything else on the same line.</span></span>
+  <span data-ttu-id="8641b-113">行接續字元必須是該行的最後一個字元。</span><span class="sxs-lookup"><span data-stu-id="8641b-113">The line-continuation character must be the last character on a line.</span></span> <span data-ttu-id="8641b-114">您不能在同一行上以其他任何專案來追蹤。</span><span class="sxs-lookup"><span data-stu-id="8641b-114">You can't follow it with anything else on the same line.</span></span>
 
-  <span data-ttu-id="88d02-115">有一些限制可供您使用行接續字元;例如，您無法將它用在引數名稱的中間。</span><span class="sxs-lookup"><span data-stu-id="88d02-115">Some limitations exist as to where you can use the line-continuation character; for example, you can't use it in the middle of an argument name.</span></span> <span data-ttu-id="88d02-116">您可以使用行接續字元來中斷引數清單，但引數的個別名稱必須維持不變。</span><span class="sxs-lookup"><span data-stu-id="88d02-116">You can break an argument list with the line-continuation character, but the individual names of the arguments must remain intact.</span></span>
+  <span data-ttu-id="8641b-115">有一些限制可供您使用行接續字元;例如，您無法將它用在引數名稱的中間。</span><span class="sxs-lookup"><span data-stu-id="8641b-115">Some limitations exist as to where you can use the line-continuation character; for example, you can't use it in the middle of an argument name.</span></span> <span data-ttu-id="8641b-116">您可以使用行接續字元來中斷引數清單，但引數的個別名稱必須維持不變。</span><span class="sxs-lookup"><span data-stu-id="8641b-116">You can break an argument list with the line-continuation character, but the individual names of the arguments must remain intact.</span></span>
 
-  <span data-ttu-id="88d02-117">您無法使用行接續字元來繼續留言。</span><span class="sxs-lookup"><span data-stu-id="88d02-117">You can't continue a comment by using a line-continuation character.</span></span> <span data-ttu-id="88d02-118">編譯器不會檢查批註中的字元是否有特殊意義。</span><span class="sxs-lookup"><span data-stu-id="88d02-118">The compiler doesn't examine the characters in a comment for special meaning.</span></span> <span data-ttu-id="88d02-119">對於多行批註，請在每一行重複批註符號（`'`）。</span><span class="sxs-lookup"><span data-stu-id="88d02-119">For a multiple-line comment, repeat the comment symbol (`'`) on each line.</span></span>
+  <span data-ttu-id="8641b-117">您無法使用行接續字元來繼續留言。</span><span class="sxs-lookup"><span data-stu-id="8641b-117">You can't continue a comment by using a line-continuation character.</span></span> <span data-ttu-id="8641b-118">編譯器不會檢查批註中的字元是否有特殊意義。</span><span class="sxs-lookup"><span data-stu-id="8641b-118">The compiler doesn't examine the characters in a comment for special meaning.</span></span> <span data-ttu-id="8641b-119">對於多行批註，請在每一行重複批註符號（ `'` ）。</span><span class="sxs-lookup"><span data-stu-id="8641b-119">For a multiple-line comment, repeat the comment symbol (`'`) on each line.</span></span>
 
- <span data-ttu-id="88d02-120">雖然建議的方法是將每個語句放在不同的行上，但 Visual Basic 也可以讓您將多個語句放在同一行。</span><span class="sxs-lookup"><span data-stu-id="88d02-120">Although placing each statement on a separate line is the recommended method, Visual Basic also allows you to place multiple statements on the same line.</span></span>
+ <span data-ttu-id="8641b-120">雖然建議的方法是將每個語句放在不同的行上，但 Visual Basic 也可以讓您將多個語句放在同一行。</span><span class="sxs-lookup"><span data-stu-id="8641b-120">Although placing each statement on a separate line is the recommended method, Visual Basic also allows you to place multiple statements on the same line.</span></span>
 
-## <a name="to-place-multiple-statements-on-the-same-line"></a><span data-ttu-id="88d02-121">若要將多個語句放在同一行</span><span class="sxs-lookup"><span data-stu-id="88d02-121">To place multiple statements on the same line</span></span>
+## <a name="to-place-multiple-statements-on-the-same-line"></a><span data-ttu-id="8641b-121">若要將多個語句放在同一行</span><span class="sxs-lookup"><span data-stu-id="8641b-121">To place multiple statements on the same line</span></span>
 
-<span data-ttu-id="88d02-122">以冒號（`:`）分隔語句，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="88d02-122">Separate the statements with a colon (`:`), as in the following example:</span></span>
+<span data-ttu-id="8641b-122">以冒號（）分隔語句 `:` ，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="8641b-122">Separate the statements with a colon (`:`), as in the following example:</span></span>
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 
-## <a name="see-also"></a><span data-ttu-id="88d02-123">請參閱</span><span class="sxs-lookup"><span data-stu-id="88d02-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8641b-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8641b-123">See also</span></span>
 
-- [<span data-ttu-id="88d02-124">程式結構和程式碼慣例</span><span class="sxs-lookup"><span data-stu-id="88d02-124">Program Structure and Code Conventions</span></span>](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [<span data-ttu-id="88d02-125">陳述式</span><span class="sxs-lookup"><span data-stu-id="88d02-125">Statements</span></span>](../../../visual-basic/programming-guide/language-features/statements.md)
+- [<span data-ttu-id="8641b-124">程式結構和程式碼慣例</span><span class="sxs-lookup"><span data-stu-id="8641b-124">Program Structure and Code Conventions</span></span>](program-structure-and-code-conventions.md)
+- [<span data-ttu-id="8641b-125">陳述式</span><span class="sxs-lookup"><span data-stu-id="8641b-125">Statements</span></span>](../language-features/statements.md)
