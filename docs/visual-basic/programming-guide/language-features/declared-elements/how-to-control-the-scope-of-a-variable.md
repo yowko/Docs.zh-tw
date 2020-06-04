@@ -12,29 +12,29 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 0ee6ce183310aa836ecdbbc0bc819e0e83d1872d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8b21f22edea84448e3f2969c3e4b07c08a17a338
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345382"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357344"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>如何：控制變數的範圍 (Visual Basic)
 一般來說，變數會在您宣告它的整個區域中，在*範圍*內，或可見以供參考。 在某些情況下，變數的*存取層級*可能會影響其範圍。  
   
- 如需詳細資訊，請參閱 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)。  
+ 如需詳細資訊，請參閱 [Scope in Visual Basic](scope.md)。  
   
 ## <a name="scope-at-block-or-procedure-level"></a>區塊或程式層級的範圍  
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>使變數只在區塊內可見  
   
-- 將變數的[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)放在該區塊的起始和結束宣告語句之間，例如，在 `For` 迴圈的 `For` 和 `Next` 語句之間。  
+- 將變數的[Dim 語句](../../../language-reference/statements/dim-statement.md)放在該區塊的起始和結束宣告語句之間，例如， `For` 迴圈的和語句之間 `Next` `For` 。  
   
      您只能從區塊內參考該變數。  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>使變數只在程式內可見  
   
-- 將變數的 `Dim` 語句放在程式內，但不在任何區塊（例如 `With`...`End With` 區塊）的外部。  
+- 將變數的語句放在程式 `Dim` 內，但在任何區塊（例如 `With` ... `End With` 區塊）外。  
   
      您只能從程式內參考變數，包括程式中包含的任何區塊內。  
   
@@ -43,17 +43,17 @@ ms.locfileid: "74345382"
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>若要讓變數在整個模組、類別或結構中可見  
   
-1. 將變數的 `Dim` 語句放在模組、類別或結構中，但在任何程式之外。  
+1. 將變數的語句放在 `Dim` 模組、類別或結構中，但在任何程式之外。  
   
-2. 在 `Dim` 語句中包含[Private](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字。  
+2. 在語句中包含[Private](../../../language-reference/modifiers/private.md)關鍵字 `Dim` 。  
   
 3. 您可以從模組、類別或結構中的任何位置參考該變數，而不是從外部。  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>若要讓變數在整個命名空間中可見  
   
-1. 將變數的 `Dim` 語句放在模組、類別或結構中，但在任何程式之外。  
+1. 將變數的語句放在 `Dim` 模組、類別或結構中，但在任何程式之外。  
   
-2. 在 `Dim` 語句中包含[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或[Public](../../../../visual-basic/language-reference/modifiers/public.md)關鍵字。  
+2. 在語句中包含[Friend](../../../language-reference/modifiers/friend.md)或[Public](../../../language-reference/modifiers/public.md)關鍵字 `Dim` 。  
   
 3. 您可以從包含模組、類別或結構之命名空間內的任何位置參考該變數。  
   
@@ -72,9 +72,9 @@ Module demonstrateScope
 End Module  
 ```  
   
- 在上述範例中，模組 `demonstrateScope` 中定義的所有程式都可以參考 `String` 變數 `strMsg`。 呼叫 `usePrivateVariable` 程式時，會在對話方塊中顯示字串變數 `strMsg` 的內容。  
+ 在上述範例中，模組中定義的所有程式都 `demonstrateScope` 可以參考 `String` 變數 `strMsg` 。 `usePrivateVariable`呼叫程式時，它會在對話方塊中顯示字串變數的內容 `strMsg` 。  
   
- 在上述範例中的下列改變之後，字串變數 `strMsg` 可以在其宣告之命名空間中的任何位置參考。  
+ 在上述範例中的下列變更中，字串變數 `strMsg` 可以在其宣告的命名空間中的任何位置參考程式碼。  
   
 ```vb  
 Public strMsg As String  
@@ -86,11 +86,11 @@ Public strMsg As String
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  變數的範圍愈窄，惡意程式碼可能不適當地使用它的機率就愈小。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Visual Basic 中的存取層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Visual Basic 中的範圍](scope.md)
+- [Visual Basic 中的存留期](lifetime.md)
+- [Visual Basic 中的存取層級](access-levels.md)
+- [變數](../variables/index.md)
+- [變數宣告](../variables/variable-declaration.md)
+- [Dim 陳述式](../../../language-reference/statements/dim-statement.md)

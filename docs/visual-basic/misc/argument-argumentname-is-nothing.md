@@ -4,14 +4,14 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNullValue1
 ms.assetid: abbde904-c191-4911-8822-c9dd2f81d616
-ms.openlocfilehash: 2a0be0a10bc8b2a19c1c4b7ab3517ac6a32401e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe06605c25b9bb281ad9818708375a2f8f5c9480
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666049"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412867"
 ---
-# <a name="argument-argumentname-is-nothing"></a>引數 '\<引數名稱 >' 為 Nothing
+# <a name="argument-argumentname-is-nothing"></a>引數 '\<argumentname>' 為 Nothing
 運算式包含 null 引數。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -22,4 +22,4 @@ ms.locfileid: "61666049"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以傳值和傳址方式傳遞引數](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [以傳值和傳址方式傳遞引數](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

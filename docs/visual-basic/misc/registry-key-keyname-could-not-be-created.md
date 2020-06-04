@@ -1,17 +1,17 @@
 ---
-title: 登錄機碼 '<keyname>' 無法建立
+title: 無法建立登錄機碼 '<keyname>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInteraction_ResKeyNotCreated1
 ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
-ms.openlocfilehash: 7d96521f13feda8d1740ee558eca125ee6a715a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a392c5ba1d6fd9ac5fe8e1702d72a37349529339
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592334"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84358111"
 ---
-# <a name="registry-key-keyname-could-not-be-created"></a>登錄機碼 '\<keyname >' 無法建立
+# <a name="registry-key-keyname-could-not-be-created"></a>無法建立登錄機碼 '\<keyname>'
 無法建立指定的登錄機碼，原因可能是安全性權限不足。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -20,4 +20,4 @@ ms.locfileid: "64592334"
   
 ## <a name="see-also"></a>另請參閱
 
-- [登錄摘要](../../visual-basic/language-reference/keywords/registry-summary.md)
+- [登錄摘要](../language-reference/keywords/registry-summary.md)
