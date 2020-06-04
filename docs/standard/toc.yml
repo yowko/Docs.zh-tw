@@ -223,6 +223,10 @@
           displayName: 'unmanaged resources, memory management'
         - name: 實作 Dispose 方法
           href: garbage-collection/implementing-dispose.md
+          displayName: 'using, Dispose, dispose pattern, IDisposable'
+        - name: 實作 DisposeAsync 方法
+          href: garbage-collection/implementing-disposeasync.md
+          displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
         - name: 使用實作 IDisposable 的物件
           href: garbage-collection/using-objects.md
     - name: 記憶體回收
