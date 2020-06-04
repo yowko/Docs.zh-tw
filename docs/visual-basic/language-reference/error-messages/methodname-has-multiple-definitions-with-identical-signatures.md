@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-ms.openlocfilehash: b884220053bbcec633c964a41892bc8df42f41c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b397711cc2fb1fd0c1dfd76899b162ab5fc1542
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602432"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397229"
 ---
-# <a name="methodname-has-multiple-definitions-with-identical-signatures"></a><span data-ttu-id="dbec7-102">'\<方法名稱 >' 有多個具相同簽章的定義</span><span class="sxs-lookup"><span data-stu-id="dbec7-102">'\<methodname>' has multiple definitions with identical signatures</span></span>
-<span data-ttu-id="dbec7-103">A`Function`或`Sub`程序宣告為上一個宣告中使用相同的程序名稱和引數清單。</span><span class="sxs-lookup"><span data-stu-id="dbec7-103">A `Function` or `Sub` procedure declaration uses the identical procedure name and argument list as a previous declaration.</span></span> <span data-ttu-id="dbec7-104">其中一個可能的原因是嘗試多載，原始的程序。</span><span class="sxs-lookup"><span data-stu-id="dbec7-104">One possible cause is an attempt to overload the original procedure.</span></span> <span data-ttu-id="dbec7-105">多載程序必須有不同的引數清單。</span><span class="sxs-lookup"><span data-stu-id="dbec7-105">Overloaded procedures must have different argument lists.</span></span>  
+# <a name="methodname-has-multiple-definitions-with-identical-signatures"></a><span data-ttu-id="cc286-102">'\<methodname>' 有多個具相同簽名碼的定義</span><span class="sxs-lookup"><span data-stu-id="cc286-102">'\<methodname>' has multiple definitions with identical signatures</span></span>
+<span data-ttu-id="cc286-103">或程式宣告會 `Function` `Sub` 使用與先前宣告相同的程式名稱和引數清單。</span><span class="sxs-lookup"><span data-stu-id="cc286-103">A `Function` or `Sub` procedure declaration uses the identical procedure name and argument list as a previous declaration.</span></span> <span data-ttu-id="cc286-104">其中一個可能的原因是嘗試多載原始程式。</span><span class="sxs-lookup"><span data-stu-id="cc286-104">One possible cause is an attempt to overload the original procedure.</span></span> <span data-ttu-id="cc286-105">多載程式必須有不同的引數清單。</span><span class="sxs-lookup"><span data-stu-id="cc286-105">Overloaded procedures must have different argument lists.</span></span>  
   
- <span data-ttu-id="dbec7-106">**錯誤 ID:** BC30269</span><span class="sxs-lookup"><span data-stu-id="dbec7-106">**Error ID:** BC30269</span></span>  
+ <span data-ttu-id="cc286-106">**錯誤識別碼：** BC30269</span><span class="sxs-lookup"><span data-stu-id="cc286-106">**Error ID:** BC30269</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="dbec7-107">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="dbec7-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cc286-107">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="cc286-107">To correct this error</span></span>  
   
-- <span data-ttu-id="dbec7-108">變更的程序名稱或引數清單中，或移除重複的宣告。</span><span class="sxs-lookup"><span data-stu-id="dbec7-108">Change the procedure name or the argument list, or remove the duplicate declaration.</span></span>  
+- <span data-ttu-id="cc286-108">請變更程式名稱或引數清單，或移除重複的宣告。</span><span class="sxs-lookup"><span data-stu-id="cc286-108">Change the procedure name or the argument list, or remove the duplicate declaration.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dbec7-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dbec7-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc286-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc286-109">See also</span></span>
 
-- [<span data-ttu-id="dbec7-110">對已宣告項目的參考</span><span class="sxs-lookup"><span data-stu-id="dbec7-110">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [<span data-ttu-id="dbec7-111">多載化程序的考慮因素</span><span class="sxs-lookup"><span data-stu-id="dbec7-111">Considerations in Overloading Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)
+- [<span data-ttu-id="cc286-110">References to Declared Elements</span><span class="sxs-lookup"><span data-stu-id="cc286-110">References to Declared Elements</span></span>](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [<span data-ttu-id="cc286-111">多載化程序的考慮因素</span><span class="sxs-lookup"><span data-stu-id="cc286-111">Considerations in Overloading Procedures</span></span>](../../programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)
