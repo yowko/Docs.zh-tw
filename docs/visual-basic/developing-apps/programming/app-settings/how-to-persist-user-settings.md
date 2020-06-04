@@ -6,12 +6,12 @@ helpviewer_keywords:
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: b1026e400015ff7807144dca8e9ce6d72fe3d18e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 817111060259bdfbbb26d9f8eafeae439e1f651f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74329633"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410149"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>如何：保存 Visual Basic 中的使用者設定
 
@@ -19,7 +19,7 @@ ms.locfileid: "74329633"
   
  通常，應用程式設計成在關閉應用程式時，保存使用者設定的變更。 這是因為儲存變更可能需要幾秒鐘的時間，視幾個因素而定。  
   
- 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
+ 如需詳細資訊，請參閱 [My.Settings 物件](../../../language-reference/objects/my-settings-object.md)。  
   
 > [!NOTE]
 > 雖然您可以在執行階段變更和儲存使用者範圍設定的值，但是應用程式範圍的設定為唯讀，且無法以程式設計方式變更。 建立應用程式時，您可以透過 [專案設計工具]，或藉由編輯應用程式的組態檔，來變更應用程式範圍的設定。**** 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
@@ -34,8 +34,8 @@ ms.locfileid: "74329633"
   
 ## <a name="see-also"></a>另請參閱
 
-- [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [如何：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [如何：在 Visual Basic 中變更使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [如何：在 Visual Basic 中建立使用者設定的屬性方格](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [My.Settings 物件](../../../language-reference/objects/my-settings-object.md)
+- [如何：在 Visual Basic 中讀取應用程式設定](how-to-read-application-settings.md)
+- [如何：在 Visual Basic 中變更使用者設定](how-to-change-user-settings.md)
+- [如何：在 Visual Basic 中建立使用者設定的屬性方格](how-to-create-property-grids-for-user-settings.md)
 - [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

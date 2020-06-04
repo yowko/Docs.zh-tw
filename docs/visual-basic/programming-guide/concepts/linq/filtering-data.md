@@ -2,12 +2,12 @@
 title: 篩選資料
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: 81e207e451055fb2952e4bf393db067f0851afb4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f7a1aa76dc93cc03952e55f5f8fc3f75176a3f9f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353485"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84383413"
 ---
 # <a name="filtering-data-visual-basic"></a>篩選資料（Visual Basic）
 
@@ -21,14 +21,14 @@ ms.locfileid: "74353485"
 
 ## <a name="methods"></a>方法
 
-|方法名稱|描述|Visual Basic 查詢運算式語法|詳細資訊|
+|方法名稱|Description|Visual Basic 查詢運算式語法|相關資訊|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OfType|根據可轉換為所指定類型的能力來選取值。|不適用。|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
-|位置|根據述詞函式來選取值。|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
+|Where|根據述詞函式來選取值。|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-example"></a>查詢運算式語法範例
 
-下列範例會使用 `Where`，從陣列中篩選具有特定長度的字串。
+下列範例會使用， `Where` 從陣列中篩選具有特定長度的字串。
 
 ```vb
 Dim words() As String = {"the", "quick", "brown", "fox", "jumps"}
@@ -51,12 +51,12 @@ MsgBox(sb.ToString())
 ' fox
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
-- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)
-- [如何：篩選查詢結果](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
-- [如何：使用反映查詢元件的中繼資料（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [如何：查詢具有指定之屬性或名稱的檔案（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [如何：依任何字或欄位排序或篩選文字資料（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [標準查詢運算子概觀 (Visual Basic)](standard-query-operators-overview.md)
+- [Where 子句](../../../language-reference/queries/where-clause.md)
+- [如何：篩選查詢結果](../../language-features/linq/how-to-filter-query-results-by-using-linq.md)
+- [如何：使用反映查詢元件的中繼資料（LINQ）（Visual Basic）](how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [如何：查詢具有指定之屬性或名稱的檔案（Visual Basic）](how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [如何：依任何字或欄位排序或篩選文字資料 (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

@@ -2,12 +2,12 @@
 title: XDocument 類別概觀
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-ms.openlocfilehash: cbc1ccca53978da07f31c0ba7e54eca9f06b0e72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 90c97349006407b2eca861be31080ec17901fa5b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349296"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413228"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>XDocument 類別總覽（Visual Basic）
 本主題說明 <xref:System.Xml.Linq.XDocument> 類別。  
@@ -17,7 +17,7 @@ ms.locfileid: "74349296"
   
  請注意，如果您需要 <xref:System.Xml.Linq.XDocument> 類別所提供的特定功能，您僅需要建立 <xref:System.Xml.Linq.XDocument> 物件。 在許多情況下，您可以直接使用 <xref:System.Xml.Linq.XElement>。 直接使用 <xref:System.Xml.Linq.XElement> 是較簡單的程式設計模型。  
   
- <xref:System.Xml.Linq.XDocument> 是衍生自 <xref:System.Xml.Linq.XContainer>。 因此，它可以包含子節點。 不過，<xref:System.Xml.Linq.XDocument> 物件可以有只有一個 <xref:System.Xml.Linq.XElement> 子節點。 這會反映 XML 標準，也就是說 XML 文件中只能有一個根項目 (Root Element)。  
+ <xref:System.Xml.Linq.XDocument> 衍生自 <xref:System.Xml.Linq.XContainer>。 因此，它可以包含子節點。 不過，<xref:System.Xml.Linq.XDocument> 物件可以有只有一個 <xref:System.Xml.Linq.XElement> 子節點。 這會反映 XML 標準，也就是說 XML 文件中只能有一個根項目 (Root Element)。  
   
 ## <a name="components-of-xdocument"></a>XDocument 的元件  
  <xref:System.Xml.Linq.XDocument> 可以包含下列項目：  
@@ -81,6 +81,6 @@ doc.Save("test.xml")
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML 程式設計總覽（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 程式設計總覽（Visual Basic）](linq-to-xml-programming-overview.md)
