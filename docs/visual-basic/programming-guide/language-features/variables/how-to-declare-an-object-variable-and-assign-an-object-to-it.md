@@ -5,20 +5,20 @@ helpviewer_keywords:
 - object variables [Visual Basic], declaring
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
-ms.openlocfilehash: eaaeda2a986584e6e1a2e0d2cda3890fb6187598
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d9a8c1fb30bfa5988d48202e41202e7ede0f5f27
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344241"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410499"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>如何：在 Visual Basic 中宣告物件變數，並指派物件給它
 
-您可以在[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)中指定 `As Object`，以宣告[Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)的變數。 將物件放在指派語句或初始化子句中的等號（`=`）後面，即可將物件指派給這類變數。
+您可以[Object Data Type](../../../language-reference/data-types/object-data-type.md) `As Object` 在[Dim 語句](../../../language-reference/statements/dim-statement.md)中指定，以宣告 Object 資料類型的變數。 將物件放 `=` 在指派語句或初始化子句中的等號（）後面，即可將物件指派給這類變數。
 
 ## <a name="example"></a>範例
 
-下列範例會宣告 `Object` 變數，並將目前的實例指派給它。
+下列範例會宣告一個 `Object` 變數，並將目前的實例指派給它。
 
 ```vb
 Dim thisObject As Object
@@ -37,16 +37,16 @@ Dim thisObject As Object= "This is an Object"
 
 - <xref:System> 命名空間的參考。
 
-- 要在其中放置 `Dim` 語句的類別、結構或模組。
+- 要在其中放置語句的類別、結構或模組 `Dim` 。
 
 - 要在其中放置指派語句的程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [變數宣告](variable-declaration.md)
+- [物件變數](object-variables.md)
+- [物件變數宣告](object-variable-declaration.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)
+- [Dim 陳述式](../../../language-reference/statements/dim-statement.md)
+- [區域型別推斷](local-type-inference.md)
+- [Long](../../../language-reference/statements/option-strict-statement.md)

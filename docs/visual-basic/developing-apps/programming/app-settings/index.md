@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: 49f65e9c39a29056cb1c552f0d577fcf0d75d658
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c564694c7ca047378c66fd2b7f3f3ecd5ce687b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353236"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410123"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>存取應用程式設定 (Visual Basic)
 
@@ -28,12 +28,12 @@ ms.locfileid: "74353236"
   
 |至|請參閱|  
 |--------|---------|  
-|更新使用者設定的值|[如何：在 Visual Basic 中變更使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|在屬性方格中顯示應用程式和使用者設定|[如何：在 Visual Basic 中建立使用者設定的屬性方格](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|儲存已更新的使用者設定值|[如何：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|判斷使用者設定的值|[如何：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|更新使用者設定的值|[如何：在 Visual Basic 中變更使用者設定](how-to-change-user-settings.md)|  
+|在屬性方格中顯示應用程式和使用者設定|[如何：在 Visual Basic 中建立使用者設定的屬性方格](how-to-create-property-grids-for-user-settings.md)|  
+|儲存已更新的使用者設定值|[如何：保存 Visual Basic 中的使用者設定](how-to-persist-user-settings.md)|  
+|判斷使用者設定的值|[如何：在 Visual Basic 中讀取應用程式設定](how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>另請參閱
 
 - [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)
+- [My.Settings 物件](../../../language-reference/objects/my-settings-object.md)

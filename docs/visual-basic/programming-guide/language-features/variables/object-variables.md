@@ -7,12 +7,12 @@ helpviewer_keywords:
 - objects [Visual Basic], accessing
 - object variables [Visual Basic]
 ms.assetid: 6169a196-2b13-4ba5-a205-154bc1b87844
-ms.openlocfilehash: 7eb860bc732f923316b8ce1d7b94ecdb368bfec3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a5e61f9308d3484dc228a7d09cc2fd30a2f41b35
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351788"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410331"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic 中的物件變數
 
@@ -35,7 +35,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()
 ```
 
-如果您使用控制項的物件變數，可以縮短此程式碼並加快執行速度。 您應該使用您想要指派給它的特定類別（在此案例中為`Control`）來宣告物件變數。 將物件指派給變數之後，您就可以將它視為您處理它所參考的物件完全相同。 您可以設定或取出物件的屬性，或使用其任何方法。 下列範例會使用物件變數來簡化上述範例中的程式碼。
+如果您使用控制項的物件變數，可以縮短此程式碼並加快執行速度。 您應該使用您想要指派給它的特定類別（ `Control` 在此案例中為）來宣告物件變數。 將物件指派給變數之後，您就可以將它視為您處理它所參考的物件完全相同。 您可以設定或取出物件的屬性，或使用其任何方法。 下列範例會使用物件變數來簡化上述範例中的程式碼。
 
 ```vb
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl
@@ -44,10 +44,10 @@ ctrlActv.Location = New Point(100, 100)
 ctrlActv.Show()
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [如何：加快存取具有限定性條件長路徑的物件](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)
-- [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [物件變數指派](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [變數宣告](variable-declaration.md)
+- [如何：加快存取具有限定性條件長路徑的物件](how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)
+- [物件變數宣告](object-variable-declaration.md)
+- [物件變數指派](object-variable-assignment.md)
+- [物件變數值](object-variable-values.md)

@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 3bc4393d2fa14f804c6383780e238b1ac2610a94
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 893ed299b46bd6255ca0e87d008ac53265698614
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352207"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411495"
 ---
-# <a name="summary-visual-basic"></a>\<摘要 > （Visual Basic）
+# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
 指定成員的摘要。  
   
 ## <a name="syntax"></a>語法  
@@ -26,11 +26,11 @@ ms.locfileid: "74352207"
  物件的摘要。  
   
 ## <a name="remarks"></a>備註  
- 使用 `<summary>` 標記來描述類型或類型成員。 使用 [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) 新增類型描述的補充資訊。  
+ 使用 `<summary>` 標記來描述類型或類型成員。 使用將 [\<remarks>](remarks.md) 補充資訊加入至類型描述。  
   
- `<summary>` 標記的文字是 IntelliSense 中類型的唯一資訊來源，也會顯示在物件瀏覽器中。 如需物件瀏覽器的相關資訊，請參閱[查看程式碼的結構](/visualstudio/ide/viewing-the-structure-of-code)。  
+ 標記的文字 `<summary>` 是 IntelliSense 中類型的唯一資訊來源，也會顯示在物件瀏覽器中。 如需物件瀏覽器的相關資訊，請參閱[查看程式碼的結構](/visualstudio/ide/viewing-the-structure-of-code)。  
   
- 使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
+ 使用[-doc](../../reference/command-line-compiler/doc.md)進行編譯，以處理檔案的檔批註。  
   
 ## <a name="example"></a>範例  
  這個範例會使用 `<summary>` 標記來描述 `ResetCounter` 方法和 `Counter` 屬性。  
@@ -39,4 +39,4 @@ ms.locfileid: "74352207"
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML 註解標籤](index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.WebServices object
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
-ms.openlocfilehash: ad616bd46f92261ec5ad6ae81d0db48138631ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf9a0c9840b9228b59af9959cf3a4efb9a1d1ea0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349231"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410188"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>存取應用程式 Web 服務 (Visual Basic)
 
@@ -23,9 +23,9 @@ ms.locfileid: "74349231"
 
 |至|請參閱|
 |---|---|
-|呼叫 Web 服務|[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
-|以非同步方式呼叫 Web 服務並於完成時處理事件|[操作說明：非同步呼叫 Web 服務](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
+|呼叫 Web 服務|[My.WebServices 物件](../../language-reference/objects/my-webservices-object.md)|
+|以非同步方式呼叫 Web 服務並於完成時處理事件|[作法：非同步呼叫 Web 服務](how-to-call-a-web-service-asynchronously.md)|
 
 ## <a name="see-also"></a>另請參閱
 
-- [My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [My.WebServices 物件](../../language-reference/objects/my-webservices-object.md)

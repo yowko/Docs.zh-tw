@@ -15,147 +15,147 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: efae72c65ad67b4a1b157b67dcc4d4d65f31f77b
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 92ac5beb70526795eb140bd794e47981cebfea93
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266374"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410912"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查詢作業 (Visual Basic)
-本主題簡要介紹了視覺化基礎知識中的語言集成查詢 （LINQ） 運算式，以及您在查詢中執行的一些典型操作類型。 如需詳細資訊，請參閱下列主題：  
+本主題提供 Visual Basic 中的語言整合式查詢（LINQ）運算式的簡介，以及您在查詢中執行的一些一般作業類型。 如需詳細資訊，請參閱下列主題：  
   
- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Visual Basic 中的 LINQ 簡介](../../language-features/linq/introduction-to-linq.md)  
   
- [查詢](../../../../visual-basic/language-reference/queries/index.md)  
+ [查詢](../../../language-reference/queries/index.md)  
   
- [逐步解說：在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
+ [逐步解說：在 Visual Basic 中撰寫查詢](walkthrough-writing-queries.md)  
   
-## <a name="specifying-the-data-source-from"></a>指定資料來源（來自）  
- 在 LINQ 查詢中，第一步是指定要查詢的資料來源。 因此，`From`查詢中的子句始終排在第一位。 查詢運算子根據源的類型選擇和塑造結果。  
+## <a name="specifying-the-data-source-from"></a>指定資料來源（從）  
+ 在 LINQ 查詢中，第一個步驟是指定您想要查詢的資料來源。 因此， `From` 查詢中的子句一律會先出現。 查詢運算子會根據來源的類型來選取和塑造結果。  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
- 子`From`句指定資料來源`customers`和*範圍變數*。 `cust` 範圍變數類似于迴圈反覆運算變數，只不過在查詢運算式中，不會發生實際反覆運算。 執行查詢時（通常通過使用`For Each`迴圈）時，範圍變數充當 對 中每個連續元素的`customers`引用。 因為編譯器可以推斷 `cust` 的類型，所以您不需要明確予以指定。 有關使用顯式鍵入和未進行顯式鍵入的查詢的示例，請參閱[查詢操作中的類型關係（可視基本）。](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)  
+ `From`子句會指定資料來源 `customers` 和*範圍變數* `cust` 。 範圍變數就像迴圈反覆運算變數，不同的是，在查詢運算式中，不會發生實際的反復專案。 執行查詢時，通常會使用 `For Each` 迴圈，範圍變數會當做中每個後續元素的參考 `customers` 。 因為編譯器可以推斷 `cust` 的類型，所以您不需要明確予以指定。 如需使用和而不明確輸入來撰寫之查詢的範例，請參閱[查詢作業中的類型關聯性（Visual Basic）](type-relationships-in-query-operations.md)。  
   
- 有關如何在 Visual Basic 中使用`From`子句的詳細資訊，請參閱[From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)。  
+ 如需如何 `From` 在 Visual Basic 中使用子句的詳細資訊，請參閱[from 子句](../../../language-reference/queries/from-clause.md)。  
   
-## <a name="filtering-data-where"></a>篩選資料（在哪裡）  
- 最常見的查詢操作可能是以布林運算式的形式應用篩選器。 然後，查詢僅返回運算式為 true 的元素。 子`Where`句用於執行篩選。 篩選器指定資料來源中要包含在結果序列中的元素。 在下面的示例中，僅包括在倫敦有位址的客戶。  
+## <a name="filtering-data-where"></a>篩選資料（Where）  
+ 最常見的查詢作業可能是以布林運算式的形式套用篩選。 然後，此查詢只會傳回運算式為 true 的元素。 `Where`子句是用來執行篩選。 篩選器會指定要在結果序列中包含的資料來源中的哪些元素。 在下列範例中，只會包含在倫敦具有位址的客戶。  
   
  [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
   
- 可以使用邏輯運算子（如 和`And``Or`）在`Where`子句中組合篩選器運算式。 例如，要僅返回來自倫敦且名稱為 Devon 的客戶，請使用以下代碼：  
+ 您可以使用邏輯運算子（例如 `And` 和） `Or` 來結合子句中的篩選條件運算式 `Where` 。 例如，若只要傳回來自倫敦且其名稱為 Devon 的客戶，請使用下列程式碼：  
   
 ```vb  
 Where cust.City = "London" And cust.Name = "Devon"
 ```  
   
- 要從倫敦或巴黎返回客戶，請使用以下代碼：  
+ 若要傳回來自倫敦或巴黎的客戶，請使用下列程式碼：  
   
 ```vb  
 Where cust.City = "London" Or cust.City = "Paris"
 ```  
   
- 有關如何在 Visual Basic 中使用`Where`子句的詳細資訊，請參閱[子句](../../../../visual-basic/language-reference/queries/where-clause.md)的位置 。  
+ 如需如何 `Where` 在 Visual Basic 中使用子句的詳細資訊，請參閱[Where 子句](../../../language-reference/queries/where-clause.md)。  
   
-## <a name="ordering-data-order-by"></a>訂購資料（按訂單）  
- 將返回的資料按特定順序排序通常很方便。 子`Order By`句將導致返回序列中的元素在指定的欄位或欄位上進行排序。 例如，以下查詢根據`Name`屬性對結果進行排序。 因為`Name`是一個字串，返回的資料將按字母順序排序，從 A 到 Z。  
+## <a name="ordering-data-order-by"></a>排序資料（Order By）  
+ 將傳回的資料排序為特定的順序，通常是很方便的方式。 `Order By`子句會使傳回序列中的專案在指定的欄位上進行排序。 例如，下列查詢會根據屬性來排序結果 `Name` 。 因為 `Name` 是字串，所以傳回的資料會依字母順序從 a 到 Z 排序。  
   
  [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
   
- 若要以相反順序排序結果 (從 Z 到 A)，請使用 `Order By...Descending` 子句。 預設值為`Ascending`既不`Ascending`指定也不`Descending`指定時。  
+ 若要以相反順序排序結果 (從 Z 到 A)，請使用 `Order By...Descending` 子句。 `Ascending`當沒有指定或時，預設值為 `Ascending` `Descending` 。  
   
- 有關如何在視覺化基本版中使用`Order By`子句的詳細資訊，請參閱[按子句排序](../../../../visual-basic/language-reference/queries/order-by-clause.md)。  
+ 如需如何 `Order By` 在 Visual Basic 中使用子句的詳細資訊，請參閱[Order by 子句](../../../language-reference/queries/order-by-clause.md)。  
   
-## <a name="selecting-data-select"></a>選擇資料（選擇）  
- 子`Select`句指定返回元素的形式和內容。 例如，可以指定結果是包含完整的`Customer`物件、一個`Customer`屬性、屬性子集、來自各種資料來源的屬性的組合，還是基於計算的一些新的結果類型。 `Select` 子句不只產生一份來源項目時，作業稱為「投影」**。  
+## <a name="selecting-data-select"></a>選取資料（選取）  
+ `Select`子句會指定傳回元素的表單和內容。 例如，您可以指定您的結果是否包含完整的 `Customer` 物件、只有一個 `Customer` 屬性、屬性的子集、來自各種資料來源的屬性組合，或是以計算為基礎的一些新結果型別。 `Select` 子句不只產生一份來源項目時，作業稱為「投影」**。  
   
- 要檢索由完整`Customer`物件組成的集合，請選擇範圍變數本身：  
+ 若要取出由完整物件所組成的集合 `Customer` ，請選取範圍變數本身：  
   
  [!code-vb[VbLINQBasicOps#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#4)]  
   
- 如果`Customer`實例是具有許多欄位的大型物件，並且要檢索的只是名稱，則可以選擇`cust.Name`，如下例所示。 本地型別推斷認識到，這將結果類型從`Customer`物件集合更改為字串集合。  
+ 如果 `Customer` 實例是具有許多欄位的大型物件，而您想要取出的是名稱，您可以選取 `cust.Name` ，如下列範例所示。 區欄位型別推斷會辨識這項工作會將結果類型從物件集合變更 `Customer` 為字串的集合。  
   
  [!code-vb[VbLINQBasicOps#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#5)]  
   
- 要從資料來源中選擇多個欄位，有兩種選擇：  
+ 若要從資料來源選取多個欄位，您有兩個選擇：  
   
-- 在子`Select`句中，指定要包含在結果中的欄位。 編譯器將定義一個匿名型別，該類型以這些欄位作為其屬性。 有關詳細資訊，請參閱[匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。  
+- 在 `Select` 子句中，指定您想要包含在結果中的欄位。 編譯器會定義具有這些欄位做為其屬性的匿名型別。 如需詳細資訊，請參閱[匿名](../../language-features/objects-and-classes/anonymous-types.md)型別。  
   
-     由於以下示例中返回的元素是匿名型別的實例，因此無法按代碼的其他位置參考型別。 類型的編譯器指定名稱包含在正常 Visual Basic 代碼中不正確字元。 在下面的示例中，查詢返回的集合中的元素`londonCusts4`是匿名型別的實例  
+     因為下列範例中傳回的元素是匿名型別的實例，所以您無法在程式碼中的其他地方依名稱參考該型別。 類型的編譯器指定名稱包含在一般 Visual Basic 程式碼中不正確字元。 在下列範例中，查詢所傳回之集合中的元素 `londonCusts4` 是匿名型別的實例。  
   
      [!code-vb[VbLINQBasicOps#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#6)]  
   
      -或-  
   
-- 定義包含要包含在結果中的特定欄位的命名類型，並在`Select`子句中創建和初始化該類型的實例。 僅當必須使用返回結果的集合之外的單個結果，或者您必須在方法調用中將它們作為參數傳遞時，才使用此選項。 以下示例中的類型`londonCusts5`為 IE無枚（NamePhone）。  
+- 定義名為的型別，其中包含您想要包含在結果中的特定欄位，並在子句中建立和初始化型別的實例 `Select` 。 只有當您必須在傳回的集合以外的個別結果，或是您必須將它們當做方法呼叫中的參數傳遞時，才使用此選項。 `londonCusts5`下列範例中的類型是 IEnumerable （Of NamePhone）。  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   
      [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
- 有關如何在 Visual Basic 中使用`Select`子句的詳細資訊，請參閱[選擇子句](../../../../visual-basic/language-reference/queries/select-clause.md)。  
+ 如需如何 `Select` 在 Visual Basic 中使用子句的詳細資訊，請參閱[Select 子句](../../../language-reference/queries/select-clause.md)。  
   
-## <a name="joining-data-join-and-group-join"></a>加入資料（加入和組加入）  
- 您可以通過多種方式將`From`子句中的多個資料來源合併。 例如，以下代碼使用兩個數據源，並在結果中隱式合併兩個數據源的屬性。 查詢選擇姓氏以母音開頭的學生。  
+## <a name="joining-data-join-and-group-join"></a>聯結資料（聯結和群組聯結）  
+ 您可以 `From` 用數種方式在子句中結合一個以上的資料來源。 例如，下列程式碼會使用兩個數據源，並在結果中隱含結合兩者的屬性。 查詢會選取姓氏以母音開頭的學生。  
   
  [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
   
 > [!NOTE]
-> 您可以使用在["如何：創建專案清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)"中創建的學生清單運行此代碼。  
+> 您可以使用在[如何：建立專案清單](how-to-create-a-list-of-items.md)中建立的學生清單來執行此程式碼。  
   
- 關鍵字`Join`等效于 SQL`INNER JOIN`中。 它基於兩個集合中元素之間的匹配鍵值組合兩個集合。 查詢返回具有匹配鍵值的全部或部分集合元素。 例如，以下代碼複製前一個隱式聯接的操作。  
+ `Join`關鍵字相當於 `INNER JOIN` SQL 中的。 它會根據兩個集合中元素之間相符的索引鍵值，結合兩個集合。 此查詢會傳回具有相符索引鍵值的全部或部分集合元素。 例如，下列程式碼會重複先前的隱含聯結動作。  
   
  [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
- `Group Join`將集合合併到單個分層集合中，就像`LEFT JOIN`SQL 中的集合一樣。 有關詳細資訊，請參閱[加入子句](../../../../visual-basic/language-reference/queries/join-clause.md)和[組加入子句](../../../../visual-basic/language-reference/queries/group-join-clause.md)。  
+ `Group Join`將集合結合成單一階層式集合，就像 `LEFT JOIN` SQL 中的一樣。 如需詳細資訊，請參閱[聯結子句](../../../language-reference/queries/join-clause.md)和[群組聯結子句](../../../language-reference/queries/group-join-clause.md)。  
   
-## <a name="grouping-data-group-by"></a>分組資料（分組）  
- 您可以根據元素的`Group By`一個或多個欄位添加子句來對查詢結果中的元素進行分組。 例如，以下代碼按班級年份對學生進行分組。  
+## <a name="grouping-data-group-by"></a>群組資料（分組依據）  
+ 您可以加入 `Group By` 子句，根據元素的一或多個欄位，將查詢結果中的專案分組。 例如，下列程式碼會依類別年度來分組學生。  
   
  [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
   
- 如果使用"[如何創建：創建專案清單"](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)中創建的學生清單運行此代碼，則語句中的`For Each`輸出為：  
+ 如果您使用[如何：建立專案清單](how-to-create-a-list-of-items.md)中所建立的學生清單來執行此程式碼，則語句的輸出 `For Each` 會是：  
   
- 年： 初級  
+ Year：初級  
   
- 塔克， 邁克爾  
+ Tucker，Michael  
   
- 加西亞， 雨果  
+ Garcia、Hugo  
   
- 加西亞， 黛布拉  
+ Garcia、Debra  
   
- 塔克， 蘭斯  
+ Tucker、Lance  
   
- 年份： 高級  
+ Year：資深  
   
- 奧梅利琴科， 斯韋特蘭娜  
+ Omelchenko, Svetlana  
   
- 奧薩達， 米奇科  
+ Osada、包括 michiko  
   
- 法庫裡， 法迪  
+ Fakhouri, Fadi  
   
- 馮漢英  
+ We feng、Hanying  
   
- 亞當斯， 特裡  
+ Adams，Terry  
   
- 年份： 新生  
+ Year： Freshman  
   
- 莫滕森， 斯文  
+ Mortensen, Sven  
   
- 加西亞， 塞薩爾  
+ Garcia、Cesar  
   
- 以下代碼中顯示的變體對班級年數進行排序，然後按姓氏每年對學生進行訂單。  
+ 下列程式碼中顯示的變化會排序類別年份，然後依姓氏排序每年中的學生。  
   
  [!code-vb[VbLINQBasicOps#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#12)]  
   
- 有關 的詳細資訊`Group By`，請參閱[按子項分組](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
+ 如需的詳細資訊 `Group By` ，請參閱[Group by 子句](../../../language-reference/queries/group-by-clause.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [使用 Visual Basic 撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [查詢](../../../../visual-basic/language-reference/queries/index.md)
-- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [使用 Visual Basic 撰寫 LINQ 入門](getting-started-with-linq.md)
+- [查詢](../../../language-reference/queries/index.md)
+- [標準查詢運算子概觀 (Visual Basic)](standard-query-operators-overview.md)
+- [LINQ](../../language-features/linq/index.md)
