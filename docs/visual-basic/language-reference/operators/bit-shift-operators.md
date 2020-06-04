@@ -6,20 +6,20 @@ helpviewer_keywords:
 - operators [Visual Basic], shift
 - bit shift operators [Visual Basic]
 ms.assetid: 64889319-a057-471b-85d8-69fcd4af6230
-ms.openlocfilehash: 10f64f8f39c5f96072ebe56a1c60753afeafc022
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 549f3caf2c3ccf8b985891acca689e6af0aad73b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336115"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371709"
 ---
 # <a name="bit-shift-operators-visual-basic"></a>位元移位運算子 (Visual Basic)
 以下是在 Visual Basic 中定義的位移位運算子。  
   
- [<\< 運算子](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<\<操作](left-shift-operator.md)  
   
- [>> 運算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
+ [>> 運算子](right-shift-operator.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [依功能列出運算子](operators-listed-by-functionality.md)

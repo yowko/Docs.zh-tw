@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a140607a4fe7e1e13de54e8d56cab53e52aaa2a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353617"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398262"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
 
@@ -45,7 +45,7 @@ ms.locfileid: "74353617"
 
 3. 選取 [簽署組件]**** 方塊。
 
-4. 從 [**選擇強式名稱金鑰**檔] 下拉式清單中選取** \<[新增>** ]。
+4. **\<New>** 從 [**選擇強式名稱金鑰**檔] 下拉式清單中選取。
 
      隨即開啟 [建立強式名稱金鑰]對話方塊。****
 
@@ -53,7 +53,7 @@ ms.locfileid: "74353617"
 
 6. 將密碼輸入 [輸入密碼] 和 [確認密碼] 方塊。********
 
-7. 按一下 [確定]  。
+7. 按一下 [確定]。
 
 8. 重建應用程式。
 
@@ -63,7 +63,7 @@ ms.locfileid: "74353617"
 
 具備強式名稱的類型格式如下：
 
-\<類型名稱>, \<組件名稱>, \<版本號碼>, \<文化特性>, \<強式名稱>
+\<type name>, \<assembly name>, \<version number>, \<culture>, \<strong name>
 
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>若要決定接聽程式的強式名稱
 
@@ -87,7 +87,7 @@ ms.locfileid: "74353617"
 
     2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 **[新增]** 。
+    3. 按一下 [新增] 。
 
 2. 在 `<listeners>` 區段下，具有 `<source>` 屬性 "DefaultSource" 的 `name` 區段中找出 `<sources>` 區段。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段內。
 
@@ -110,7 +110,7 @@ ms.locfileid: "74353617"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [作法：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [作法：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [使用應用程式記錄檔](working-with-application-logs.md)
+- [作法：記錄例外狀況](how-to-log-exceptions.md)
+- [作法：寫入記錄檔訊息](how-to-write-log-messages.md)
+- [逐步解說：變更 My.Application.Log 寫入資訊的位置](walkthrough-changing-where-my-application-log-writes-information.md)

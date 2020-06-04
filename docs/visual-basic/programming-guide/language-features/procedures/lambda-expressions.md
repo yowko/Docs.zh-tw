@@ -9,67 +9,67 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 1827eb5630ed217527de25fc9d9c2bb8994b9aff
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 54a9c0cf275a67c77748c32771c3c5dcbdb916d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249665"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406699"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 運算式 (Visual Basic)
 
-*lambda 運算式*是一個函數或副程式，沒有名稱，可以在委託有效的地方使用。 Lambda 運算式可以是函數或副程式，可以是單行運算式或多行運算式。 可以將值從當前作用域傳遞到 lambda 運算式。
+*Lambda 運算式*是一個不含名稱的函式或副程式，可以在委派有效的任何地方使用。 Lambda 運算式可以是函數或副程式，而且可以是單行或多行。 您可以將值從目前範圍傳遞至 lambda 運算式。
 
 > [!NOTE]
-> 該`RemoveHandler`語句是一個例外。 不能為 的委託參數傳遞 lambda 運算式`RemoveHandler`。
+> `RemoveHandler`語句是例外狀況。 您無法在中傳遞的 lambda 運算式做為的委派參數 `RemoveHandler` 。
 
-使用`Function`or`Sub`關鍵字創建 lambda 運算式，就像創建標準函數或副程式一樣。 但是，lambda 運算式包含在語句中。
+您可以使用或關鍵字來建立 lambda 運算式 `Function` `Sub` ，就如同建立標準函數或副程式一樣。 不過，lambda 運算式會包含在語句中。
 
-下面的示例是 lambda 運算式，該運算式遞增其參數並傳回值。 該示例顯示了函數的單行和多行 lambda 運算式語法。
+下列範例是 lambda 運算式，它會遞增其引數並傳回值。 此範例會顯示函數的單行和多行 lambda 運算式語法。
 
 [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]
 
-下面的示例是 lambda 運算式，該運算式將值寫入主控台。 該示例顯示了副程式的單行和多行 lambda 運算式語法。
+下列範例是將值寫入主控台的 lambda 運算式。 此範例會顯示副程式的單行和多行 lambda 運算式語法。
 
 [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]
 
-請注意，在前面的示例中，lambda 運算式被分配給一個變數名稱。 每當引用變數時，都會調用 lambda 運算式。 您還可以同時聲明和調用 lambda 運算式，如以下示例所示。
+請注意，在先前的範例中，lambda 運算式會指派給變數名稱。 每當您參考變數時，就會叫用 lambda 運算式。 您也可以同時宣告和叫用 lambda 運算式，如下列範例所示。
 
 [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]
 
-lambda 運算式可以作為函式呼叫的值返回（如本主題後面的["上下文](#context)"部分中的示例中所示），也可以作為參數傳遞給採用委託類型的參數，如以下示例所示。
+Lambda 運算式可以當做函式呼叫的值傳回（如本主題稍後的[內容](#context)章節中的範例所示），或當做引數傳遞給採用委派類型的參數，如下列範例所示。
 
 [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]
 
 ## <a name="lambda-expression-syntax"></a>Lambda 運算式語法
 
-lambda 運算式的語法類似于標準函數或副程式的語法。 差異如下：
+Lambda 運算式的語法類似于標準函式或副程式。 差異如下：
 
-- lambda 運算式沒有名稱。
+- Lambda 運算式沒有名稱。
 
-- Lambda 運算式不能具有修飾符，如`Overloads`或`Overrides`。
+- Lambda 運算式不能有修飾詞，例如 `Overloads` 或 `Overrides` 。
 
-- 單行 lambda 函數不使用子句`As`來指定返回類型。 相反，類型是從 lambda 運算式的正文計算到的值推斷的。 例如，如果 lambda 運算式的正文為`cust.City = "London"`，則其返回類型`Boolean`為 。
+- 單行 lambda 函數不會使用 `As` 子句來指定傳回類型。 相反地，型別是從 lambda 運算式主體評估為的值推斷而來。 例如，如果 lambda 運算式的主體是 `cust.City = "London"` ，其傳回型別會是 `Boolean` 。
 
-- 在多行 lambda 函數中，可以使用`As`子句指定返回類型，或者省略`As`子句，以便推斷返回類型。 當多`As`行 lambda 函數省略子句時，返回類型被推斷為多行 lambda 函數中所有`Return`語句中的主要類型。 *主導類型*是所有其他類型都可以擴展到的唯一類型。 如果無法確定此唯一類型，則主導類型是陣列中所有其他類型都可以縮小到的唯一類型。 如果這些類型皆無法決定，則主類型為 `Object`。 在這種情況下，如果`Option Strict`設置為`On`，則會發生編譯器錯誤。
+- 在多行 lambda 函式中，您可以使用子句來指定傳回類型 `As` ，或省略 `As` 子句，以推斷傳回類型。 當 `As` 多行 lambda 函數省略子句時，會將傳回型別推斷為 `Return` 多行 lambda 函式中所有語句的主要型別。 *主要類型*是所有其他類型都可以擴展的唯一類型。 如果無法判斷此唯一類型，則主要類型是陣列中所有其他類型都可以縮小為的唯一類型。 如果這些類型皆無法決定，則主類型為 `Object`。 在此情況下，如果 `Option Strict` 設定為 `On` ，則會發生編譯器錯誤。
 
-     例如`Return`，如果提供給語句的運算式包含 類型`Integer`的值 ，`Long`和`Double`， 生成的陣列的類型`Double`為 。 兩`Integer`者`Long`加寬`Double`至和`Double`僅。 因此， `Double` 是主類型。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。
+     例如，如果提供給語句的運算式 `Return` 包含型別、和的值， `Integer` `Long` `Double` 則產生的陣列會是型別 `Double` 。 `Integer`和 `Long` 只會擴大為 `Double` 和 `Double` 。 因此， `Double` 是主類型。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../data-types/widening-and-narrowing-conversions.md)。
 
-- 單行函數的正文必須是傳回值的運算式，而不是語句。 單行函數`Return`沒有語句。 單行函數返回的值是函數正文中運算式的值。
+- 單行函數的主體必須是傳回值的運算式，而不是語句。 沒有單行函 `Return` 式的語句。 單行函式所傳回的值是函數主體中的運算式值。
 
-- 單行副程式的正文必須是單行語句。
+- 單行副程式的主體必須是單行語句。
 
-- 單行函數和副程式不包括 或`End Function``End Sub`語句。
+- 單行函數和副程式不包含 `End Function` 或 `End Sub` 語句。
 
-- 可以使用`As`關鍵字指定 lambda 運算式參數的資料類型，也可以推斷參數的資料類型。 所有參數都必須具有指定的資料類型，或者必須推斷所有參數。
+- 您可以使用關鍵字來指定 lambda 運算式參數的資料類型 `As` ，或可以推斷參數的資料類型。 所有參數都必須具有指定的資料類型，否則必須推斷全部。
 
-- `Optional`不允許`Paramarray`和參數。
+- `Optional``Paramarray`不允許使用和參數。
 
-- 不允許使用通用參數。
+- 不允許泛型參數。
 
 ## <a name="async-lambdas"></a>非同步 Lambda
 
-通過使用[Async](../../../../visual-basic/language-reference/modifiers/async.md)和[Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)關鍵字，可以輕鬆地創建包含非同步處理的 lambda 運算式和語句。 例如，下列 Windows Form 範例包含呼叫並等候非同步方法 `ExampleMethodAsync`的事件處理常式。
+您可以使用[Async](../../../language-reference/modifiers/async.md)和[Await 運算子](../../../language-reference/operators/await-operator.md)關鍵字，輕鬆建立結合非同步處理的 lambda 運算式和語句。 例如，下列 Windows Form 範例包含呼叫並等候非同步方法 `ExampleMethodAsync`的事件處理常式。
 
 ```vb
 Public Class Form1
@@ -88,7 +88,7 @@ Public Class Form1
 End Class
 ```
 
-您可以通過在[AddHandler 語句](../../../../visual-basic/language-reference/statements/addhandler-statement.md)中使用非同步 lambda 來添加相同的事件處理常式。 若要加入這個處理常式，請將 `Async` 修飾詞加入至 Lambda 參數清單前面，如下列範例所示。
+您可以在[AddHandler 語句](../../../language-reference/statements/addhandler-statement.md)中使用非同步 lambda 來加入相同的事件處理常式。 若要加入這個處理常式，請將 `Async` 修飾詞加入至 Lambda 參數清單前面，如下列範例所示。
 
 ```vb
 Public Class Form1
@@ -110,60 +110,60 @@ Public Class Form1
 End Class
 ```
 
-有關如何創建和使用非同步方法的詳細資訊，請參閱[使用非同步和 Await 進行非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。
+如需如何建立和使用非同步方法的詳細資訊，請參閱[使用 async 和 Await 進行非同步程式設計](../../concepts/async/index.md)。
 
 ## <a name="context"></a>Context
 
-lambda 運算式與其定義上下文的範圍共用上下文。 它具有與在包含作用域中編寫的任何代碼相同的存取權限。 這包括訪問包含作用域中的成員變數、函數和子以及`Me`參數和區域變數。
+Lambda 運算式會與其定義所在的範圍共用其內容。 其存取權限與在包含範圍中撰寫的任何程式碼相同。 這包括存取成員變數、函式和子函式，以及 `Me` 包含範圍內的參數和區域變數。
 
-對包含作用域中的區域變數和參數的訪問可以超出該作用域的存留期。 只要引用 lambda 運算式的委託不能用於垃圾回收，則將保留對原始環境中變數的訪問。 在下面的示例中，變數`target`是 局部的`makeTheGame`， 在 其中定義 lambda 運算式`playTheGame`的方法。 請注意，分配給`takeAGuess``Main`的返回 lambda 運算式仍有權訪問區域變數`target`。
+存取包含範圍中的本機變數和參數，可以延伸超出該範圍的存留期。 只要參考 lambda 運算式的委派無法用於垃圾收集，就會保留原始環境中變數的存取權。 在下列範例中，變數 `target` 是的區域，也就是 `makeTheGame` 定義 lambda 運算式的方法 `playTheGame` 。 請注意，指派給中的傳回 lambda `takeAGuess` 運算式 `Main` 仍然具有區域變數的存取權 `target` 。
 
 [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]
 
-下面的示例演示嵌套 lambda 運算式的廣泛存取權限。 當返回的 lambda 運算式從`Main``aDel`執行 時，它將訪問以下元素：
+下列範例示範嵌套 lambda 運算式的範圍存取權限。 從執行傳回的 lambda 運算式時 `Main` `aDel` ，它會存取下列元素：
 
-- 在其中定義它的類的欄位：`aField`
+- 其定義所在類別的欄位：`aField`
 
-- 定義它的類的屬性：`aProp`
+- 其定義所在之類別的屬性：`aProp`
 
-- 方法`functionWithNestedLambda`的參數，`level1`
+- 方法的參數 `functionWithNestedLambda` ，其定義如下：`level1`
 
-- 的`functionWithNestedLambda`區域變數：`localVar`
+- 的本機變數 `functionWithNestedLambda` ：`localVar`
 
-- 嵌套在 lambda 運算式中的參數：`level2`
+- Lambda 運算式的參數，其會在其中加以嵌套：`level2`
 
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]
 
-## <a name="converting-to-a-delegate-type"></a>轉換為委託類型
+## <a name="converting-to-a-delegate-type"></a>轉換成委派類型
 
-lambda 運算式可以隱式轉換為相容的委託類型。 有關相容性的一般要求的資訊，請參閱[放寬委託轉換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。 例如，以下代碼示例顯示隱式轉換為`Func(Of Integer, Boolean)`或匹配委託簽名的 lambda 運算式。
+Lambda 運算式可以隱含地轉換成相容的委派類型。 如需相容性一般需求的相關資訊，請參閱[寬鬆委派轉換](../delegates/relaxed-delegate-conversion.md)。 例如，下列程式碼範例顯示隱含轉換成或相符委派簽章的 lambda 運算式 `Func(Of Integer, Boolean)` 。
 
 [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]
 
-下面的代碼示例顯示隱式轉換為`Sub(Of Double, String, Double)`或匹配委託簽名的 lambda 運算式。
+下列程式碼範例顯示隱含轉換成或相符之委派簽章的 lambda 運算式 `Sub(Of Double, String, Double)` 。
 
 [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]
 
-將 lambda 運算式分配給委託或將它們作為參數傳遞給過程時，可以指定參數名稱，但省略其資料類型，允許從委託獲取類型。
+當您將 lambda 運算式指派給委派，或將它們當做引數傳遞給程式時，您可以指定參數名稱但省略其資料類型，讓型別可以從委派取得。
 
 ## <a name="examples"></a>範例
 
-- 下面的示例定義 lambda 運算式，如果空`True`數值型別參數具有賦值，並且`False`其值為`Nothing`，則返回該運算式。
+- `True`如果可為 null 的實數值型別引數具有指派的值，且 `False` 其值為，則下列範例會定義傳回的 lambda 運算式 `Nothing` 。
 
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]
 
-- 下面的示例定義一個 lambda 運算式，該運算式返回陣列中最後一個元素的索引。
+- 下列範例會定義 lambda 運算式，以傳回陣列中最後一個元素的索引。
 
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]
 
 ## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
-- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [空數值型別](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [如何：在 Visual Basic 中將程序傳遞至其他程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Visual Basic 中的 LINQ 簡介](../linq/introduction-to-linq.md)
+- [委派](../delegates/index.md)
+- [Function 陳述式](../../../language-reference/statements/function-statement.md)
+- [Sub 陳述式](../../../language-reference/statements/sub-statement.md)
+- [可為 null 的實數值型別](../data-types/nullable-value-types.md)
+- [如何：在 Visual Basic 中將程序傳遞至其他程序](../delegates/how-to-pass-procedures-to-another-procedure.md)
 - [如何：建立 Lambda 運算式](./how-to-create-a-lambda-expression.md)
-- [寬鬆委派轉換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [寬鬆委派轉換](../delegates/relaxed-delegate-conversion.md)

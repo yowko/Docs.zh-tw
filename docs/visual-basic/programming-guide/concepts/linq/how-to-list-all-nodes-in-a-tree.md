@@ -1,13 +1,13 @@
 ---
-title: 如何：列出樹狀中的所有節點
+title: 作法：列出樹狀結構中的所有節點
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-ms.openlocfilehash: ea968298d49397f493cf0963db1214915c2e3822
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 15427ccf4701f3cd4bd1dc348f753c187571972c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336128"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396554"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>如何：列出樹狀結構中的所有節點（Visual Basic）
 列出樹狀中的所有節點有時候很有幫助。 這在精確了解方法或屬性如何影響樹狀結構時相當實用。 以文字格式列出所有節點的其中一個方法為產生正確而且明確識別樹狀結構中任何節點的 XPath 運算式。  
@@ -263,6 +263,6 @@ End Module
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [先進的查詢技術（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [先進的查詢技術（LINQ to XML）（Visual Basic）](advanced-query-techniques-linq-to-xml.md)

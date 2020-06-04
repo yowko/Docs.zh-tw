@@ -1,5 +1,5 @@
 ---
-title: <message> 此錯誤也可能是因為混用了檔案參考和組件的專案參考 '<assemblyname>'
+title: <message> 此錯誤也可能是因為混用檔案參考與組件 '<assemblyname>' 的專案參考所致
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: 951f90a9209ff31896f4426ceb75f05b012897a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 263e30f992ef58b0053acb2fd749d0d9186ef6b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921013"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397255"
 ---
-# <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<訊息 > 這個錯誤也可能是因為混用了檔案參考和組件的專案參考 '\<組件名稱 >'
-\<訊息 > 這個錯誤也可能是因為混用了檔案參考和組件的專案參考 '\<組件名稱 >。 在此情況下，請嘗試更換的檔案參考 '\<assemblyfilename >' 在專案'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  
+# <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<message> 此錯誤也可能是因為混用檔案參考與組件 '\<assemblyname>' 的專案參考所致
+\<message>此錯誤也可能是因為混用了檔案參考與元件 ' 的專案參考 \<assemblyname> 。 在此情況下，請嘗試將專案 ' ' 中 ' ' 的檔案參考取代為 \<assemblyfilename> \<projectname1> ' ' 的專案參考 \<projectname2> 。  
   
- 在您的專案中的程式碼存取的另一個專案，成員，但您的解決方案組態不允許 Visual Basic 編譯器解析參考。  
+ 專案中的程式碼會存取另一個專案的成員，但您的方案設定不允許 Visual Basic 編譯器解析參考。  
   
- 若要存取另一個組件中定義的類型，Visual Basic 編譯器必須有該組件的參考。 這必須是單一的明確參考，不會在專案之間造成循環參考。  
+ 若要存取另一個元件中所定義的類型，Visual Basic 編譯器必須有該元件的參考。 這必須是單一的明確參考，不會在專案之間造成循環參考。  
   
- **錯誤 ID:** BC30971  
+ **錯誤 ID︰** BC30971  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
@@ -32,7 +32,7 @@ ms.locfileid: "61921013"
 ## <a name="see-also"></a>另請參閱
 
 - [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)
-- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
 - [針對中斷參考進行疑難排解](/visualstudio/ide/troubleshooting-broken-references)

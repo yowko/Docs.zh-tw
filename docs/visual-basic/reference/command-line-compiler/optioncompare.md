@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: ac385880f8c13c23dffff67fc2a1ecc5609fd189
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ed9adc7cddd9eb204937b9819e4eeff176821e95
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581409"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400550"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 
@@ -28,7 +28,7 @@ ms.locfileid: "72581409"
 
 ## <a name="remarks"></a>備註
 
-您可以指定`-optioncompare`兩種形式的其中一`-optioncompare:binary`種：使用二進位字串比較， `-optioncompare:text`並使用文字字串比較。 根據預設，編譯器會使用`-optioncompare:binary`。
+您可以指定 `-optioncompare` 兩種形式的其中一種： `-optioncompare:binary` 使用二進位字串比較，並 `-optioncompare:text` 使用文字字串比較。 根據預設，編譯器會使用 `-optioncompare:binary` 。
 
 在 Microsoft Windows 中，目前的字碼頁會決定二進位排序次序。 典型的二進位排序次序如下所示：
 
@@ -48,11 +48,11 @@ ms.locfileid: "72581409"
 
 ### <a name="to-set--optioncompare-programmatically"></a>以程式設計方式設定-optioncompare
 
-請參閱[Option Compare 語句](../../../visual-basic/language-reference/statements/option-compare-statement.md)。
+請參閱[Option Compare 語句](../../language-reference/statements/option-compare-statement.md)。
 
 ## <a name="example"></a>範例
 
-下列程式碼會`ProjFile.vb`編譯並使用二進位字串比較。
+下列程式碼會編譯 `ProjFile.vb` 並使用二進位字串比較。
 
 ```console
 vbc -optioncompare:binary projFile.vb
@@ -60,10 +60,10 @@ vbc -optioncompare:binary projFile.vb
 
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Visual Basic 命令列編譯器](index.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optionstrict](optionstrict.md)
+- [-optioninfer](optioninfer.md)
+- [編譯命令列的範例](sample-compilation-command-lines.md)
+- [Option Compare 陳述式](../../language-reference/statements/option-compare-statement.md)
 - [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

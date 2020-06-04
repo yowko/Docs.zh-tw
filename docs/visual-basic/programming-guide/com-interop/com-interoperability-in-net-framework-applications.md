@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: c3567464616d3b0b3f91ff57e8a169aca046c866
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 377958a21886fe0257633ea19417f9a19bd51ff3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452288"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396865"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 應用程式中的 COM 互通性 (Visual Basic)
 
@@ -25,8 +25,8 @@ ms.locfileid: "77452288"
 
 | | |
 |---------|---------|
-| [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md) | 提供涵蓋 Visual Basic 中 COM 互通性主題的連結，包括 COM 物件、ActiveX 控制項、Win32 Dll、managed 物件，以及 COM 物件的繼承。 |
+| [COM Interop](index.md) | 提供涵蓋 Visual Basic 中 COM 互通性主題的連結，包括 COM 物件、ActiveX 控制項、Win32 Dll、managed 物件，以及 COM 物件的繼承。 |
 | [與 Unmanaged 程式碼互通](../../../framework/interop/index.md) | 簡短描述 managed 和非受控碼之間的一些互動問題，並提供進一步研究的連結。 |
 | [COM 包裝函式](../../../standard/native-interop/com-wrappers.md) | 討論執行時間可呼叫包裝函式，其可讓 managed 程式碼呼叫 COM 方法和 COM 可呼叫包裝函式，以允許 COM 用戶端呼叫 .NET 物件方法。 |
 | [進階 COM 互通性](../../../framework/interop/index.md) | 提供主題連結，其中包含與包裝函式、例外狀況、繼承、執行緒、事件、轉換和封送處理相關的 COM 互通性。 |
-| [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | 討論您可以用來將 COM 類型程式庫中找到的類型定義轉換成 common language runtime 元件中的對等定義的工具。 |
+| [Tlbimp.exe （類型程式庫匯入工具）](../../../framework/tools/tlbimp-exe-type-library-importer.md) | 討論您可以用來將 COM 類型程式庫中找到的類型定義轉換成 common language runtime 元件中的對等定義的工具。 |

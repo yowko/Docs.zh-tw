@@ -16,34 +16,34 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: ec892167f30a7ded739dc188ab4096cb3a5d154c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 087c6f02e1fca9cf2664ca76581c08a9b1a5e447
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400670"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398353"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空間
 命名空間可組織組件中定義的物件。 組件可包含多個命名空間，而命名空間也可包含其他命名空間。 在使用類別庫等大型物件群組時，命名空間可避免語意模糊並簡化參考。  
   
- 例如，.NET 框架在<xref:System.Windows.Forms.ListBox><xref:System.Windows.Forms?displayProperty=nameWithType>命名空間中定義類。 下列程式碼片段示範如何使用這個類別的完整名稱來宣告變數：  
+ 例如，.NET Framework 會 <xref:System.Windows.Forms.ListBox> 在命名空間中定義類別 <xref:System.Windows.Forms?displayProperty=nameWithType> 。 下列程式碼片段示範如何使用這個類別的完整名稱來宣告變數：  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>避免名稱衝突  
- .NET 框架命名空間解決了有時稱為*命名空間污染*的問題，其中類庫的開發人員因在另一個庫中使用類似名稱而受到阻礙。 這些與現有元件的衝突有時稱為 *「名稱衝突」*(name collision)。  
+ .NET Framework 命名空間會解決問題，有時稱為*命名空間污染*，其中類別庫的開發人員會在另一個程式庫中使用類似的名稱而受到阻礙。 這些與現有元件的衝突有時稱為 *「名稱衝突」*(name collision)。  
   
- 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 但是，如果要在同一專案中使用 .NET <xref:System.Windows.Forms.ListBox> Framework 類，則必須使用完全限定的引用以使引用唯一。 如果引用不唯一，Visual Basic 會生成一個錯誤，指出名稱不明確。 下列程式碼範例示範如何宣告這些物件：  
+ 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 不過，如果您想要 <xref:System.Windows.Forms.ListBox> 在相同的專案中使用 .NET Framework 類別，則必須使用完整參考，讓參考成為唯一的。 如果參考不是唯一的，Visual Basic 會產生錯誤，指出名稱不明確。 下列程式碼範例示範如何宣告這些物件：  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- 下圖顯示了兩個命名空間層次結構，兩者都包含名為 的物件`ListBox`：  
+ 下圖顯示兩個命名空間階層，兩者都包含名為的物件 `ListBox` ：  
   
- ![顯示兩個命名空間層次結構的螢幕截圖。](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
+ ![顯示兩個命名空間階層的螢幕擷取畫面。](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- 預設情況下，使用 Visual Basic 創建的每個可執行檔都包含一個與專案同名的命名空間。 例如，如果您在名為 `ListBoxProject`的專案中定義物件，則可執行檔 ListBoxProject.exe 會包含一個稱為 `ListBoxProject`的命名空間。  
+ 根據預設，您使用 Visual Basic 建立的每個可執行檔，都會包含一個與專案同名的命名空間。 例如，如果您在名為 `ListBoxProject`的專案中定義物件，則可執行檔 ListBoxProject.exe 會包含一個稱為 `ListBoxProject`的命名空間。  
   
- 多個組件可以使用相同的命名空間。 視覺化基本將它們視為一組名稱。 例如，您可以在名為 `SomeNameSpace` 的組件中為稱為 `Assemb1`的命名空間定義類別，並自一個名為 `Assemb2`的組件中為相同的命名空間定義其他類別。  
+ 多個組件可以使用相同的命名空間。 Visual Basic 會將它們視為一組名稱。 例如，您可以在名為 `SomeNameSpace` 的組件中為稱為 `Assemb1`的命名空間定義類別，並自一個名為 `Assemb2`的組件中為相同的命名空間定義其他類別。  
   
 ## <a name="fully-qualified-names"></a>完整名稱  
  完整名稱是物件參考，前面會加上定義物件之命名空間的名稱。 如果您建立類別的參考 (在 [專案] **** 功能表中選擇 [加入參考] **** )，就可以使用其他專案中所定義的物件，並且在程式碼中使用該物件的完整名稱。 下列程式碼片段示範如何使用另一個專案命名空間之物件的完整名稱：  
@@ -60,7 +60,7 @@ ms.locfileid: "79400670"
   
  [!code-vb[VbVbalrApplication#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#11)]  
   
- 如果嘗試在未完全`Class1`限定的情況下使用，Visual Basic 會生成一個錯誤，指出`Class1`名稱不明確。  
+ 如果您嘗試在 `Class1` 沒有完整限定的情況下使用，Visual Basic 會產生錯誤，指出名稱 `Class1` 不明確。  
   
 ## <a name="namespace-level-statements"></a>命名空間層級陳述式  
  在命名空間中，您可以定義模組、介面、類別、委派、列舉、結構和其他命名空間等項目。 您無法在命名空間層級定義屬性、程序、變數和事件等項目。 這些項目必須在模組、結構或類別等容器內宣告。  
@@ -99,7 +99,7 @@ End Namespace
  您可以使用 `Global` ，存取其他根層級命名空間 (例如 <xref:Microsoft.VisualBasic?displayProperty=nameWithType>) 和任何與專案相關聯的命名空間。  
   
 ## <a name="global-keyword-in-namespace-statements"></a>Namespace 陳述式中的 Global 關鍵字  
- 您也可以在 `Global` 中使用 [Global](../../../visual-basic/language-reference/statements/namespace-statement.md)(name collision)。 這可讓您從專案的根命名空間定義一個命名空間。  
+ 您也可以在 `Global` 中使用 [Global](../../language-reference/statements/namespace-statement.md)(name collision)。 這可讓您從專案的根命名空間定義一個命名空間。  
   
  專案中的所有命名空間都會以專案的根命名空間為基礎。  Visual Studio 會針對專案中的所有程式碼，將專案名稱指派為預設根命名空間。 例如，如果專案已命名為 `ConsoleApplication1`，其程式設計項目會屬於命名空間 `ConsoleApplication1`。 如果您宣告 `Namespace Magnetosphere`，專案中的 `Magnetosphere` 參考可存取 `ConsoleApplication1.Magnetosphere`。  
   
@@ -124,6 +124,6 @@ End Namespace
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms?displayProperty=nameWithType>
 - [.NET 中的組件](../../../standard/assembly/index.md)
-- [參考和 Imports 陳述式](references-and-the-imports-statement.md)
+- [References 與 Imports 陳述式](references-and-the-imports-statement.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [撰寫 Office 方案中的程式碼](/visualstudio/vsto/writing-code-in-office-solutions)

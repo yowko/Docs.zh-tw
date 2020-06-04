@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: e1e7f2d0fb06599f83ba224ed52a10429d9b11fe
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3a2452ec60a2182adfee365777d9824001ff006a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346965"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400120"
 ---
-# <a name="exception-visual-basic"></a>\<例外狀況 > （Visual Basic）
+# <a name="exception-visual-basic"></a>\<exception> (Visual Basic)
 指定可以擲回的例外狀況。  
   
 ## <a name="syntax"></a>語法  
@@ -31,13 +31,13 @@ ms.locfileid: "74346965"
 ## <a name="remarks"></a>備註  
  使用 `<exception>` 標記來指定可以擲回的例外狀況。 此標記會套用到方法定義。  
   
- 使用 [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) 編譯可處理檔案的文件註解。  
+ 使用[-doc](../../reference/command-line-compiler/doc.md)進行編譯，以處理檔案的檔批註。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用 `<exception>` 標記來描述 `IntDivide` 函數可以擲回的例外狀況。  
+ 這個範例會使用 `<exception>` 標記來描述函式可以擲回的例外狀況 `IntDivide` 。  
   
  [!code-vb[VbVbcnXmlDocComments#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML 註解標籤](index.md)

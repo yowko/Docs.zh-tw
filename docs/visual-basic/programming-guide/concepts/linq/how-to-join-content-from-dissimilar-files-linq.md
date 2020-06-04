@@ -1,13 +1,13 @@
 ---
-title: 如何：從不同的檔案聯結內容 (LINQ)
+title: 作法：聯結不同檔案中的內容 (LINQ)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: a6528f623d084003bb85dc5bae784b8d96c84d02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7dac73a16d0d3fbf409f58628bc5c69716dcee14
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344560"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398366"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>如何：從不同的檔案聯結內容（LINQ）（Visual Basic）
 
@@ -120,7 +120,7 @@ End Class
 ' 12 total names in list
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 與字串 (Visual Basic)](linq-and-strings.md)
+- [LINQ 與檔案目錄 (Visual Basic)](linq-and-file-directories.md)

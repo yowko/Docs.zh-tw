@@ -1,13 +1,13 @@
 ---
-title: 如何：重新排列有分隔符號的檔案中的欄位 (LINQ)
+title: 作法：重新排列分隔檔的欄位 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 736f0218f14f0077683456599d3d7ef3ecec7517
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6f87374978425e0d51542c6eceda23697d7a3a67
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347594"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397891"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>如何：重新排列分隔檔的欄位（LINQ）（Visual Basic）
 
@@ -75,8 +75,8 @@ End Class
 ' 122, Michael Tucker
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [如何：從 CSV 檔案產生 XML](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
+- [LINQ 與字串 (Visual Basic)](linq-and-strings.md)
+- [LINQ 與檔案目錄 (Visual Basic)](linq-and-file-directories.md)
+- [如何：從 CSV 檔案產生 XML](how-to-generate-xml-from-csv-files.md)
