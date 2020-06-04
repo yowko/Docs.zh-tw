@@ -2,12 +2,12 @@
 title: 以不同的組織結構投影 XML
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: 400ceafe8ca219efbbb921d573126e0ca80bbb5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1424b88b478896854b0f094ca4ec8eba82b816b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344489"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396359"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>以不同的形狀投射 XML （Visual Basic）
 本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。  
@@ -17,7 +17,7 @@ ms.locfileid: "75344489"
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。 它也可以識別每個段落的樣式和文字。 最後，此範例會使用不同的組織結構規劃 XML。 此範例在這個教學課程中，會在先前的範例上建置。 進行規劃的新陳述式會在以下程式碼的註解中叫出。  
   
- 如需建立此範例之來源文件的指示，請參閱[建立來源 Office OPEN XML 檔（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 如需建立此範例之來源文件的指示，請參閱[建立來源 Office OPEN XML 檔（Visual Basic）](creating-the-source-office-open-xml-document.md)。  
   
  這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -230,8 +230,8 @@ End Module
 ## <a name="next-steps"></a>後續步驟  
  在下一個範例中，您將在 Word 文件中進行查詢以尋找所有文字：  
   
-- [尋找 Word 檔中的文字（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [尋找 Word 檔中的文字（Visual Basic）](finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -1,13 +1,13 @@
 ---
-title: 如何：根據多個索引鍵排序項目
+title: 作法：排序多個索引鍵的項目
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: bf1749983700656508b781091ab349943dbc7bc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de468f999117030942f9e770cd1235966f17e2c7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333741"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397735"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>如何：排序多個索引鍵上的元素（Visual Basic）
 這個主題顯示如何在多個索引鍵上排序。  
@@ -15,7 +15,7 @@ ms.locfileid: "74333741"
 ## <a name="example"></a>範例  
  在這個範例中，會先按照送貨的郵遞區號，然後按照訂單日期排序結果。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：客戶和訂單 (LINQ to XML)](sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -64,7 +64,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ## <a name="example"></a>範例  
  下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱[命名空間總覽（LINQ to XML）（Visual Basic）](namespaces-overview-linq-to-xml.md)。  
   
- 此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。  
+ 此範例使用下列 XML 文件︰[範例 XML 檔：命名空間中的客戶和訂單](sample-xml-file-customers-and-orders-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -116,6 +116,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [基本查詢（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查詢（LINQ to XML）（Visual Basic）](basic-queries-linq-to-xml.md)

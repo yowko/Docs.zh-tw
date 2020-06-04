@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74353595"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398249"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 
@@ -43,7 +43,7 @@ ms.locfileid: "74353595"
 
 6. 關閉應用程式。
 
-     如需如何檢視應用程式偵錯輸出視窗的資訊，請參閱[輸出視窗](/visualstudio/ide/reference/output-window)。 如需應用程式記錄檔位置的資訊，請參閱[逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。
+     如需如何檢視應用程式偵錯輸出視窗的資訊，請參閱[輸出視窗](/visualstudio/ide/reference/output-window)。 如需應用程式記錄檔位置的資訊，請參閱[逐步解說：判斷 My.Application.Log 寫入資訊的位置](walkthrough-determining-where-my-application-log-writes-information.md)。
 
     > [!NOTE]
     > 根據預設，應用程式會在應用程式關閉時清除記錄檔輸出。
@@ -84,7 +84,7 @@ ms.locfileid: "74353595"
 
     2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 **[新增]** 。
+    3. 按一下 [新增] 。
 
 2. 找出位於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<switches>` 區段。
 
@@ -160,7 +160,7 @@ ms.locfileid: "74353595"
 
     2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 **[新增]** 。
+    3. 按一下 [新增] 。
 
 2. 在方案總管中，以滑鼠右鍵按一下 app.config。**** 選擇 [開啟]****。
 
@@ -249,13 +249,13 @@ ms.locfileid: "74353595"
 
 10. 關閉應用程式。
 
-如需在部署後變更記錄檔設定的詳細資訊，請參閱[使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)。
+如需在部署後變更記錄檔設定的詳細資訊，請參閱[使用應用程式記錄檔](working-with-application-logs.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [逐步解說：建立自訂記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [作法：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [逐步解說：判斷 My.Application.Log 寫入資訊的位置](walkthrough-determining-where-my-application-log-writes-information.md)
+- [逐步解說：變更 My.Application.Log 寫入資訊的位置](walkthrough-changing-where-my-application-log-writes-information.md)
+- [逐步解說：建立自訂記錄檔接聽程式](walkthrough-creating-custom-log-listeners.md)
+- [作法：寫入記錄檔訊息](how-to-write-log-messages.md)
 - [追蹤參數](../../../../framework/debug-trace-profile/trace-switches.md)
-- [記錄來自應用程式的資訊](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+- [記錄來自應用程式的資訊](index.md)

@@ -1,13 +1,13 @@
 ---
-title: 具有 Styles2 WordprocessingML 文件
+title: 使用 Styles2 WordprocessingML 檔
 ms.date: 07/20/2015
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-ms.openlocfilehash: 977de8e4272ca7cea004127adcf1b15726dcc211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caf80014077bf57dc1ffb8eaeac6390cf4258015
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907942"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403546"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>WordprocessingML 文件以及樣式
 更複雜的 WordprocessingML 文件擁有使用樣式格式化的段落。  
@@ -17,7 +17,7 @@ ms.locfileid: "61907942"
  存取封裝時，最好透過這些部分之間的關聯性 (而非使用任意路徑) 進行。 這個問題超出＜管理 WordprocessingML 文件中的內容＞教學課程的範圍，但隨附在此教學課程中的範例程式會示範正確的方法。  
   
 ## <a name="a-document-that-uses-styles"></a>使用樣式的文件  
- 中的 WordML 範例呈現[Shape of WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)主題是一個非常簡單。 下列文件較為複雜：該文件擁有使用樣式格式化的段落。 若要查看組成 Office Open XML 文件的 XML 是執行最簡單的方式[範例的輸出 Office Open XML 文件組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)。  
+ 以[WordprocessingML 檔（Visual Basic）](shape-of-wordprocessingml-documents.md)主題的形式呈現的 WordML 範例非常簡單。 下列文件較為複雜：該文件擁有使用樣式格式化的段落。 查看組成 Office Open XML 檔之 XML 的最簡單方式，就是執行[輸出 Office OPEN Xml 檔元件（Visual Basic）的範例](example-that-outputs-office-open-xml-document-parts.md)。  
   
  在下列文件中，第一個段落的樣式為 `Heading1`。 具有預設樣式的段落有好幾個。 同時，具有樣式 `Code` 的段落也有好幾個。 由於這個相對複雜度，這是利用 LINQ to XML 進行剖析更有趣的文件。  
   
@@ -139,4 +139,4 @@ ms.locfileid: "61907942"
   
 ## <a name="see-also"></a>另請參閱
 
-- [詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Office Open XML WordprocessingML 檔的詳細資料（Visual Basic）](details-of-office-open-xml-wordprocessingml-documents.md)

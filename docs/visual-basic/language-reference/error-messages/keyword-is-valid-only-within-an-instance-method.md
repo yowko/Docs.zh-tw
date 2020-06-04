@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: 8ec1e704815ee10cb98d8cc20fb5982ee4b92832
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 537689405ea30bdd7c075320eba58a8723a93cdb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662018"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397398"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<關鍵字 >' 只能在執行個體方法
-`Me`， `MyClass`，和`MyBase`關鍵字參考特定的類別執行個體。 您無法使用它們在共用`Function`或`Sub`程序。  
+# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' 只能出現在執行個體方法中
+`Me`、 `MyClass` 和關鍵字會 `MyBase` 參考特定的類別實例。 您無法在共用或程式內使用它們 `Function` `Sub` 。  
   
- **錯誤 ID:** BC30043  
+ **錯誤識別碼：** BC30043  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 從程序中移除關鍵字，或移除`Shared`從程序宣告的關鍵字。  
+- 請從程式中移除關鍵字，或從程式宣告 `Shared` 中移除關鍵字。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [物件變數指派](../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [繼承的基本概念](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [物件變數指派](../../programming-guide/language-features/variables/object-variable-assignment.md)
+- [Me、My、MyBase 及 MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [繼承基本概念](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)

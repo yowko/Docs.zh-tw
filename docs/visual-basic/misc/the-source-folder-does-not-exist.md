@@ -2,12 +2,12 @@
 title: 來源資料夾不存在
 ms.date: 07/20/2015
 ms.assetid: c891d006-b721-4d93-b57d-ce51d91fca00
-ms.openlocfilehash: 17d4575a59e795a901732efb8970ac8b2e902f2a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe3fd285f617678fea903e7e1da74a043ee9e441
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620345"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398561"
 ---
 # <a name="the-source-folder-does-not-exist"></a>來源資料夾不存在
 您嘗試執行參考不存在之來源資料夾的作業。 這可能是提供不正確檔案路徑的結果。  
@@ -18,6 +18,6 @@ ms.locfileid: "64620345"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：剖析檔案路徑](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [從檔案讀取](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [建立、刪除和移動檔案和目錄](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+- [作法：剖析檔案路徑](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [從檔案讀取](../developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [建立、刪除和移動檔案和目錄](../developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

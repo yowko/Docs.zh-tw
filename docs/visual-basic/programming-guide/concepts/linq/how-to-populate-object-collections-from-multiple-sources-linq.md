@@ -1,13 +1,13 @@
 ---
-title: 如何：從多個來源填入物件集合 (LINQ)
+title: 作法：從多個來源填入物件集合 (LINQ)
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9c6d8ff5165bf886d8aad87b64305819e65361ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346971"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396515"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>如何：從多個來源填入物件集合（LINQ）（Visual Basic）
 
@@ -18,7 +18,7 @@ ms.locfileid: "74346971"
 
 ## <a name="to-create-the-data-file"></a>建立資料檔
 
-- 如[如何：從不同的檔案聯結內容（LINQ）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)中所述，將名稱 .csv 和分數 .csv 檔案複製到您的專案資料夾中。
+- 如[如何：從不同的檔案聯結內容（LINQ）（Visual Basic）](how-to-join-content-from-dissimilar-files-linq.md)中所述，將名稱 .csv 和分數 .csv 檔案複製到您的專案資料夾中。
 
 ## <a name="example"></a>範例
 
@@ -100,7 +100,7 @@ End Class
 ' The average score of Michael Tucker is 92
 ```
 
-在[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)子句中，物件初始化運算式是用來具現化每個新的 `Student` 物件，方法是使用兩個來源中的資料。
+在[Select 子句](../../../language-reference/queries/select-clause.md)子句中，物件初始化運算式是用來具現化每個新 `Student` 的物件，方法是使用兩個來源中的資料。
 
 如果您不需要儲存查詢的結果，則匿名型別會比具名類型更方便使用。 如果要在執行查詢的方法外傳遞查詢結果，則必須使用具名類型。 下列範例會執行與上述範例相同的工作，但使用匿名型別而不是具名類型：
 
@@ -130,4 +130,4 @@ Next
 
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 與字串 (Visual Basic)](linq-and-strings.md)

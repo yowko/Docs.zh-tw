@@ -1,13 +1,13 @@
 ---
-title: 如何：修改 Office Open XML 文件
+title: 作法：修改 Office Open XML 文件
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: a6d546b064afe7020e5d3287351e946e182f03e6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9fb046f43686405a3d84cb68b49cd6dcd34e0839
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337896"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398021"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>如何：修改 Office Open XML 檔（Visual Basic）
 這個主題顯示會開啟、修改以及儲存 Office Open XML 文件的範例。  
@@ -137,12 +137,12 @@ End Module
   
  如果您在執行此程式後開啟 `SampleDoc.docx`，就可以看到此程式已將文件中第一個段落轉換成大寫。  
   
- 當以[建立來源 Office OPEN Xml 檔（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)中所述的範例 Open xml 檔執行時，此範例會產生下列輸出：  
+ 當以[建立來源 Office OPEN Xml 檔（Visual Basic）](creating-the-source-office-open-xml-document.md)中所述的範例 Open xml 檔執行時，此範例會產生下列輸出：  
   
 ```console  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [先進的查詢技術（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [先進的查詢技術（LINQ to XML）（Visual Basic）](advanced-query-techniques-linq-to-xml.md)

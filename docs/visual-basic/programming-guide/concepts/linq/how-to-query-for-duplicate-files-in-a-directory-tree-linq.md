@@ -1,13 +1,13 @@
 ---
-title: 如何：查詢目錄樹狀中的重複檔案 (LINQ)
+title: 作法：查詢樹狀目錄中的重複檔案 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 9870ccae327bccb0f6f93d49e3b2fc77d72f95cd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b37da0a26c8bb4abc885faa7bb0c467e2d7d2347
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342176"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396424"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>如何：查詢目錄樹狀結構中的重複檔案（LINQ）（Visual Basic）
 同名的檔案有時可能位於多個資料夾中。 例如，在 Visual Studio 安裝資料夾下，有數個資料夾內含 readme.htm 檔案。 這個範例示範如何查詢所指定根資料夾下的這類重複檔案名稱。 第二個範例示範如何查詢大小和建立時間也相符的檔案。  
@@ -101,9 +101,9 @@ End Module
  第一個查詢會使用簡單索引鍵來判斷相符項目；這會尋找同名但內容可能不同的檔案。 第二個查詢會使用複合索引鍵來比對 <xref:System.IO.FileInfo> 物件的三個屬性。 此查詢很有可能找到同名以及內容類似或相同的檔案。  
   
 ## <a name="compile-the-code"></a>編譯程式碼  
-建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 `Imports` System. Linq 命名空間的語句。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ 與檔案目錄 (Visual Basic)](linq-and-file-directories.md)

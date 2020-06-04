@@ -1,13 +1,13 @@
 ---
-title: 如何：使用 XPath 查詢 LINQ to XML
+title: 作法：使用 XPath 查詢 LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
-ms.openlocfilehash: 563756c019ddd458d46f47c843e32ddc7bbaacd1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d95e5a82d146c357f52d03375119474b042d49f6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347649"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397917"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>如何：使用 XPath 查詢 LINQ to XML （Visual Basic）
 本主題說明可讓您使用 XPath 查詢 XML 樹狀結構的擴充方法。 如需有關使用這些擴充方法的詳細資訊，請參閱 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
@@ -44,4 +44,4 @@ Next
   
 ## <a name="see-also"></a>另請參閱
 
-- [先進的查詢技術（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [先進的查詢技術（LINQ to XML）（Visual Basic）](advanced-query-techniques-linq-to-xml.md)

@@ -2,25 +2,25 @@
 title: 取消一項非同步工作或工作清單
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 2956582cd0c8e044fcd37ffab13686489a7c854c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 932bf46f1e3aee220d0412f1688e961faaef3459
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347958"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396697"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消一項非同步工作或工作清單（Visual Basic）
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>取消一項非同步工作或工作清單 (Visual Basic)
 
 如果您不想要等候非同步應用程式完成，則可以設定可用來取消非同步應用程式的按鈕。 遵循本主題中的範例，即可將取消按鈕新增至下載某個網站內容或網站清單的應用程式。
 
-這些範例會使用[微調非同步應用程式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)所述的 UI。
+這些範例會使用[微調非同步應用程式（Visual Basic）](fine-tuning-your-async-application.md)所述的 UI。
 
 > [!NOTE]
 > 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
 
-## <a name="BKMK_CancelaTask"></a> 取消工作
+## <a name="cancel-a-task"></a><a name="BKMK_CancelaTask"></a>取消工作
 
-第一個範例會建立 [取消] 按鈕與單一下載工作的關聯。 如果您在應用程式下載內容時選擇該按鈕，則會取消下載。
+第一個範例會建立 [取消]**** 按鈕與單一下載工作的關聯。 如果您在應用程式下載內容時選擇該按鈕，則會取消下載。
 
 ### <a name="downloading-the-example"></a>下載範例
 
@@ -28,13 +28,13 @@ ms.locfileid: "74347958"
 
 1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
+2. 在功能表列上，依序選擇 [檔案] ****、[開啟舊檔] **** 及 [專案/方案] ****。
 
 3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。
 
-4. 在方案總管中，開啟 **CancelATask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
+4. 在方案總管**** 中，開啟 **CancelATask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。
 
-5. 選擇 F5 鍵執行執行專案。
+5. 選擇 F5 鍵以執行專案。
 
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。
 
@@ -42,9 +42,9 @@ ms.locfileid: "74347958"
 
 ### <a name="building-the-example"></a>建置範例
 
-下列變更會將 [取消] 按鈕新增至下載網站的應用程式。 如果您不想要下載或建置範例，則可以檢閱本主題結尾處的＜完整範例＞一節中的最終產品。 星號會標記程式碼中的變更。
+下列變更會將 [取消]**** 按鈕新增至下載網站的應用程式。 如果您不想要下載或建置範例，則可以檢閱本主題結尾處的＜完整範例＞一節中的最終產品。 星號會標記程式碼中的變更。
 
-若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [StarterCode] 作為 [啟始專案]，而非 [CancelATask]。
+若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [StarterCode]**** 作為 [啟始專案]****，而非 [CancelATask]****。
 
 然後將下列變更新增至該專案的 Mainwindow.xaml 檔案。
 
@@ -57,7 +57,7 @@ ms.locfileid: "74347958"
         Dim cts As CancellationTokenSource
     ```
 
-2. 針對 [取消] 按鈕新增下列事件處理常式。 事件處理常式會使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，以在使用者要求取消時通知 `cts`。
+2. 針對 [取消]**** 按鈕新增下列事件處理常式。 事件處理常式會使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，以在使用者要求取消時通知 `cts`。
 
     ```vb
     ' ***Add an event handler for the Cancel button.
@@ -69,7 +69,7 @@ ms.locfileid: "74347958"
     End Sub
     ```
 
-3. 在 [開始] 按鈕 `startButton_Click` 的事件處理常式中進行下列變更。
+3. 在 [開始]**** 按鈕 `startButton_Click` 的事件處理常式中進行下列變更。
 
     - 具現化 `CancellationTokenSource`、`cts`。
 
@@ -78,7 +78,7 @@ ms.locfileid: "74347958"
       cts = New CancellationTokenSource()
       ```
 
-    - 在下載所指定網站內容的 `AccessTheWebAsync` 呼叫中，傳送 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 的 `cts` 屬性作為引數。 如果要求取消，則 `Token` 屬性會傳播訊息。 新增 catch 區塊，以在使用者選擇取消下載作業時顯示訊息。 下列程式碼示範這些變更。
+    - 在下載所指定網站內容的 `AccessTheWebAsync` 呼叫中，傳送 `cts` 的 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 屬性作為引數。 如果要求取消，則 `Token` 屬性會傳播訊息。 新增 catch 區塊，以在使用者選擇取消下載作業時顯示訊息。 下列程式碼示範這些變更。
 
       ```vb
       Try
@@ -97,7 +97,7 @@ ms.locfileid: "74347958"
       End Try
       ```
 
-4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 型別中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient> 多載來下載網站的內容。 將 `ct` (<xref:System.Threading.CancellationToken> 的 `AccessTheWebAsync` 參數) 傳遞為第二個引數。 如果使用者選擇 [取消] 按鈕，則權杖會夾帶訊息。
+4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 型別中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 多載來下載網站的內容。 將 `ct` (`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 參數) 傳遞為第二個引數。 如果使用者選擇 [取消]**** 按鈕，則權杖會夾帶訊息。
 
     下列程式碼示範 `AccessTheWebAsync` 中的變更。
 
@@ -138,9 +138,9 @@ ms.locfileid: "74347958"
     Download canceled.
     ```
 
-## <a name="BKMK_CancelaListofTasks"></a> 取消工作清單
+## <a name="cancel-a-list-of-tasks"></a><a name="BKMK_CancelaListofTasks"></a>取消工作清單
 
-您可以將相同 `CancellationTokenSource` 執行個體與每項工作建立關聯，以擴充先前的範例來取消許多工作。 如果您選擇 [取消] 按鈕，即會取消所有尚未完成的工作。
+您可以將相同 `CancellationTokenSource` 執行個體與每項工作建立關聯，以擴充先前的範例來取消許多工作。 如果您選擇 [取消]**** 按鈕，即會取消所有尚未完成的工作。
 
 ### <a name="downloading-the-example"></a>下載範例
 
@@ -148,13 +148,13 @@ ms.locfileid: "74347958"
 
 1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2. 在功能表列上，依序選擇 [檔案]、[開啟舊檔]及 [專案/方案]。
+2. 在功能表列上，依序選擇 [檔案] ****、[開啟舊檔] **** 及 [專案/方案] ****。
 
 3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。
 
-4. 在方案總管中，開啟 **CancelAListOfTasks** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
+4. 在方案總管**** 中，開啟 **CancelAListOfTasks** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。
 
-5. 選擇 F5 鍵執行執行專案。
+5. 選擇 F5 鍵以執行專案。
 
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。
 
@@ -162,7 +162,7 @@ ms.locfileid: "74347958"
 
 ### <a name="building-the-example"></a>建置範例
 
-若要自行逐步擴充範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelATask] 作為 [啟始專案]。 將下列變更新增至該專案。 星號會標記程式中的變更。
+若要自行逐步擴充範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelATask]**** 作為 [啟始專案]****。 將下列變更新增至該專案。 星號會標記程式中的變更。
 
 1. 新增方法以建立網址清單。
 
@@ -241,7 +241,7 @@ ms.locfileid: "74347958"
     Downloads complete.
     ```
 
-    如果您在下載完成之前選擇 [取消] 按鈕，則輸出會包含在取消之前完成之下載的長度。
+    如果您在下載完成之前選擇 [取消]**** 按鈕，則輸出會包含在取消之前完成之下載的長度。
 
     ```console
     Length of the downloaded string: 35939.
@@ -253,7 +253,7 @@ ms.locfileid: "74347958"
     Downloads canceled.
     ```
 
-## <a name="BKMK_CompleteExamples"></a> 完整範例
+## <a name="complete-examples"></a><a name="BKMK_CompleteExamples"></a>完整範例
 
 下列各節包含每個先前範例的程式碼。 請注意，您必須新增 <xref:System.Net.Http> 的參考。
 
@@ -463,10 +463,10 @@ End Class
 ' Downloads canceled.
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](index.md)
+- [微調非同步應用程式 (Visual Basic)](fine-tuning-your-async-application.md)
 - [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式)

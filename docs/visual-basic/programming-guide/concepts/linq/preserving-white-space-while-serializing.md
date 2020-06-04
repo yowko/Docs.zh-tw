@@ -1,13 +1,13 @@
 ---
-title: Serializing2 時保留空白字元
+title: 在 Serializing2 時保留空白字元
 ms.date: 07/20/2015
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
-ms.openlocfilehash: e02335f564155fa8dc08fc3320ddc4e8c178a132
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9b73089830bf7e6cb0ea9e469bf667f12c571d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666101"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396398"
 ---
 # <a name="preserving-white-space-while-serializing"></a>序列化時保留空白字元
 本主題描述如何在序列化 XML 樹狀結構時控制空白字元。  
@@ -33,4 +33,4 @@ ms.locfileid: "64666101"
   
 ## <a name="see-also"></a>另請參閱
 
-- [序列化 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [序列化 XML 樹狀結構（Visual Basic）](serializing-xml-trees.md)

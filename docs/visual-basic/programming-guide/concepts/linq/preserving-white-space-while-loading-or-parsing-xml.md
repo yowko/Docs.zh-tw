@@ -2,12 +2,12 @@
 title: 載入或剖析 XML2 時保留空白字元
 ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
-ms.openlocfilehash: 7febbf1ea27d3e73df8b91869befcd0b29a07c6e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9c60c707730ed0b07e82040a4ce3aab5d83eef1c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666130"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396437"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>載入或剖析 XML 時保留空白字元
 這個主題描述如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的空白字元行為。  
@@ -16,7 +16,7 @@ ms.locfileid: "64666130"
   
  其他常見案例為讀取與修改已經過刻意縮排的 XML。 您可能不想用任何方式變更這個縮排。 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，如果您在載入或剖析 XML 時保留空白字元，並在序列化 XML 時停用格式化，就可以達到這個效果。  
   
- 這個主題描述填入 XML 樹狀之方法的空白字元行為。 如需序列化 XML 樹狀結構時控制空白字元的資訊，請參閱[序列化時保留空白字元](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)。  
+ 這個主題描述填入 XML 樹狀之方法的空白字元行為。 如需序列化 XML 樹狀結構時控制空白字元的資訊，請參閱[序列化時保留空白字元](preserving-white-space-while-serializing.md)。  
   
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>填入 XML 樹狀之方法的行為  
  下列 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 類別中的方法會填入 XML 樹狀結構。 您可以從檔案、<xref:System.IO.TextReader>、<xref:System.Xml.XmlReader> 或字串填入 XML 樹狀：  
@@ -39,4 +39,4 @@ ms.locfileid: "64666130"
   
 ## <a name="see-also"></a>另請參閱
 
-- [剖析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [剖析 XML （Visual Basic）](parsing-xml.md)

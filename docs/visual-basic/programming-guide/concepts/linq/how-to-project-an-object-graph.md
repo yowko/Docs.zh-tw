@@ -1,19 +1,19 @@
 ---
-title: 如何：投影物件圖形
+title: 作法：投影物件圖形
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 71d41b515983e19f90e163f76ca400248d3cc848
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 2900a31a469266d392f1b07b4714a08e253d2abd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636675"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396489"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>如何：投影物件圖形（Visual Basic）
 本主題說明如何從 XML 規劃或填入物件圖形。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自[範例 XML 檔：典型採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文件之 `PurchaseOrderItem` 類別的物件圖形。  
+ 下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自[範例 XML 檔：典型採購訂單 (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文件之 `PurchaseOrderItem` 類別的物件圖形。  
   
 ```vb  
 Class Address  
@@ -296,7 +296,7 @@ Sub Main()
 End Sub  
 ```  
   
- 在此範例中，LINQ 查詢的結果會以 `PurchaseOrderItem`的 <xref:System.Collections.Generic.IEnumerable%601> 傳回。 `PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。 程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。  
+ 在此範例中，LINQ 查詢的結果會以的形式傳回 <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` 。 `PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。 程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。  
   
  這個範例會產生下列輸出：  
   
@@ -337,8 +337,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [投影和轉換（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [投影和轉換（LINQ to XML）（Visual Basic）](projections-and-transformations-linq-to-xml.md)

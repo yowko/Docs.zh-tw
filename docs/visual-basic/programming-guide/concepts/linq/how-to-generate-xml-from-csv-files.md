@@ -1,16 +1,16 @@
 ---
-title: 如何：從 CSV 檔案產生 XML
+title: 作法：從 CSV 檔案產生 XML
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 79b609c3a706db4c8b4c082fbeaf143632a75033
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 647cab02c730f18629c669c3526520b2a98a86d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636818"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396606"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>如何：從 CSV 檔案產生 XML （Visual Basic）
-這個範例示範如何使用語言整合式查詢（LINQ）和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，從逗號分隔值（CSV）檔案產生 XML 檔案。  
+這個範例示範如何使用語言整合式查詢（LINQ），並 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 從逗號分隔值（CSV）檔案產生 XML 檔案。  
   
 ## <a name="example"></a>範例  
  下列程式碼會在字串陣列上執行 LINQ 查詢。  
@@ -107,6 +107,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [投影和轉換（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [投影和轉換（LINQ to XML）（Visual Basic）](projections-and-transformations-linq-to-xml.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: c7909b3b6a2c9f0b397b9621b7e5125c232be313
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6c7caf266514c43e40135b33d848a688546acf1c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353205"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396775"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>COM Interop 簡介 (Visual Basic)
 元件物件模型（COM）可讓物件將其功能公開給其他元件，並裝載應用程式。 雖然 COM 物件已是 Windows 程式設計的基礎，但多年來，針對 common language runtime （CLR）所設計的應用程式提供了許多優點。  
@@ -51,14 +51,14 @@ ms.locfileid: "74353205"
 ## <a name="interoperability-marshaling"></a>互通性封送處理  
  所有 .NET Framework 的應用程式都共用一組可啟用物件互通性的通用類型，而不論所使用的程式設計語言為何。 COM 物件的參數和傳回值有時會使用與 managed 程式碼中所使用的資料類型不同。 *互通性封送處理*是指將參數封裝成對等的資料類型，並隨著它們在 COM 物件來回移動而傳回值的過程。 如需詳細資訊，請參閱[Interop 封送處理](../../../framework/interop/interop-marshaling.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
-- [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [COM Interop](index.md)
+- [逐步解說：實作 COM 物件的繼承](walkthrough-implementing-inheritance-with-com-objects.md)
 - [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)
-- [互通性的疑難排解](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [疑難排解互通性的問題](troubleshooting-interoperability.md)
 - [.NET 中的組件](../../../standard/assembly/index.md)
-- [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (類型程式庫匯出工具)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe （類型程式庫匯入工具）](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe （類型程式庫匯出工具）](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Interop 封送處理](../../../framework/interop/interop-marshaling.md)
 - [免註冊的 COM Interop](../../../framework/interop/registration-free-com-interop.md)
