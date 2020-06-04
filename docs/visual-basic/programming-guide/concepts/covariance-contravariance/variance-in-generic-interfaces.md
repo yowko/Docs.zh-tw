@@ -2,14 +2,14 @@
 title: 泛型介面中的變異數
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: 1f6913b322e2d3d9ec2234e556e63d67324277e5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df28a9f24518f24d1be89acba726da7dfbbf9570
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348984"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375586"
 ---
-# <a name="variance-in-generic-interfaces-visual-basic"></a>泛型介面中的變異數（Visual Basic）
+# <a name="variance-in-generic-interfaces-visual-basic"></a>泛型介面中的變異數 (Visual Basic)
 
 .NET Framework 4 針對數個現有泛型介面推出了差異支援。 差異支援可讓實作這些介面的類別以隱含方式轉換。 下列介面現在都是 Variant︰
 
@@ -27,16 +27,16 @@ ms.locfileid: "74348984"
 
 - <xref:System.IComparable%601> (T 是 Contravariant)
 
-共變數允許方法具有比介面泛型型別參數所定義之衍生程度更大的傳回型別。 若要示範共變數功能，請考慮這些泛型介面︰`IEnumerable(Of Object)` 和 `IEnumerable(Of String)`。 `IEnumerable(Of String)` 介面不會繼承 `IEnumerable(Of Object)` 介面。 不過，`String` 型別確實會繼承`Object` 型別，而且在某些情況下，您可能希望將這些介面的物件指派給彼此。 這會顯示在以下程式碼範例中。
+共變數允許方法具有比介面泛型型別參數所定義之衍生程度更大的傳回型別。 若要示範共變數功能，請考慮這些泛型介面︰`IEnumerable(Of Object)` 和 `IEnumerable(Of String)`。 `IEnumerable(Of String)` 介面不會繼承 `IEnumerable(Of Object)` 介面。 不過，`String` 型別確實會繼承`Object` 型別，而且在某些情況下，您可能希望將這些介面的物件指派給彼此。 這顯示在下列程式碼範例中。
 
 ```vb
 Dim strings As IEnumerable(Of String) = New List(Of String)
 Dim objects As IEnumerable(Of Object) = strings
 ```
 
-在舊版的 .NET Framework 中，此程式碼會導致 Visual Basic 中有 `Option Strict On`的編譯錯誤。 但現在您可以使用 `strings`，而不使用 `objects`，如上例所示，因為 <xref:System.Collections.Generic.IEnumerable%601> 介面是 Covariant。
+在舊版的 .NET Framework 中，此程式碼會導致 Visual Basic 中發生編譯錯誤 `Option Strict On` 。 但現在您可以使用 `strings`，而不使用 `objects`，如上例所示，因為 <xref:System.Collections.Generic.IEnumerable%601> 介面是 Covariant。
 
-反變數允許方法具有比介面泛型參數所指定之衍生程度更小的引數型別。 為示範反變數，我們假設您已建立 `BaseComparer` 類別來比較 `BaseClass` 類別的執行個體。 `BaseComparer` 類別會實作 `IEqualityComparer(Of BaseClass)` 介面。 因為 <xref:System.Collections.Generic.IEqualityComparer%601> 介面現在是 Contravariant，所以您可以使用 `BaseComparer` 比較繼承了 `BaseClass` 類別的類別執行個體。 這會顯示在以下程式碼範例中。
+反變數允許方法具有比介面泛型參數所指定之衍生程度更小的引數型別。 為示範反變數，我們假設您已建立 `BaseComparer` 類別來比較 `BaseClass` 類別的執行個體。 `BaseComparer` 類別會實作 `IEqualityComparer(Of BaseClass)` 介面。 因為 <xref:System.Collections.Generic.IEqualityComparer%601> 介面現在是 Contravariant，所以您可以使用 `BaseComparer` 比較繼承了 `BaseClass` 類別的類別執行個體。 這顯示在下列程式碼範例中。
 
 ```vb
 ' Simple hierarchy of classes.
@@ -70,7 +70,7 @@ Sub Test()
 End Sub
 ```
 
-如需更多範例，請參閱針對[泛型集合使用介面中的變異數（Visual Basic）](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)。
+如需更多範例，請參閱針對[泛型集合使用介面中的變異數（Visual Basic）](using-variance-in-interfaces-for-generic-collections.md)。
 
 僅參考型別支援泛型介面的差異。 實值型別不支援差異。 例如，`IEnumerable(Of Integer)` 無法以隱含方式轉換成 `IEnumerable(Of Object)`，因為整數是以實值型別表示。
 
@@ -92,9 +92,9 @@ Dim integers As IEnumerable(Of Integer) = New List(Of Integer)
 Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用泛型集合介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
-- [建立 Variant 泛型介面 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [使用泛型集合介面中的變異數 (Visual Basic)](using-variance-in-interfaces-for-generic-collections.md)
+- [建立 Variant 泛型介面 (Visual Basic)](creating-variant-generic-interfaces.md)
 - [泛型介面](../../../../standard/generics/interfaces.md)
-- [委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [委派中的變異數 (Visual Basic)](variance-in-delegates.md)

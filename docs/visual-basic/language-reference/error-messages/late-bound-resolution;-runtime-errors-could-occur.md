@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: 6b78dfed1d615ba865f136365eac1c9c131ed5a5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f1dc656a09eee05080356892b280a79505f3b9cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661941"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397346"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>晚期繫結程序解析; 可能發生執行階段錯誤
-物件會指派給宣告為變數[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)。  
+已將物件指派給宣告為[Object 資料類型](../data-types/object-data-type.md)的變數。  
   
- 當您宣告一個變數`Object`，編譯器必須執行*晚期繫結*，這會導致額外的作業在執行階段。 它也可能會讓您的應用程式發生執行階段錯誤。 比方說，如果您指派<xref:System.Windows.Forms.Form>要`Object`變數，然後嘗試存取<xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType>屬性，執行階段會擲回<xref:System.MemberAccessException>因為<xref:System.Windows.Forms.Form>類別並未公開`NameTable`屬性。  
+ 當您將變數宣告為時 `Object` ，編譯器必須執行*晚期繫結*，這會在執行時間造成額外的作業。 它也可能會讓您的應用程式發生執行階段錯誤。 例如，如果您將指派 <xref:System.Windows.Forms.Form> 給變數， `Object` 然後嘗試存取 <xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType> 屬性，則執行時間會擲回， <xref:System.MemberAccessException> 因為類別不 <xref:System.Windows.Forms.Form> 會公開 `NameTable` 屬性。  
   
- 如果您宣告為特定類型的變數，編譯器可以執行*早期繫結*在編譯時期。 如此可改善效能、 控制存取權的特定型別、 成員和您的程式碼的可讀性。  
+ 如果您將變數宣告為特定類型，編譯器可以在編譯時期執行*早期繫結*。 這會改善效能、控制特定類型成員的存取權限，以及更好的程式碼可讀性。  
   
  根據預設，這個訊息是一個警告。 如需隱藏警告或將警告視為錯誤的相關資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
- **錯誤 ID:** BC42017  
+ **錯誤識別碼：** BC42017  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 可能的話，將特定類型的變數宣告。  
+- 可能的話，請將變數宣告為特定類型。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [物件變數宣告](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [早期和晚期繫結](../../programming-guide/language-features/early-late-binding/index.md)
+- [物件變數宣告](../../programming-guide/language-features/variables/object-variable-declaration.md)
