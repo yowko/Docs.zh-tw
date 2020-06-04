@@ -1,17 +1,17 @@
 ---
-title: 引數 '<argumentname>'無法轉換為類型'<typename>'
+title: 引數 ' <argumentname> ' 無法轉換成類型 ' <typename> '
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValueType2
 ms.assetid: 5b83a9cf-296b-479f-aa17-df655b8f51a0
-ms.openlocfilehash: 3000633f838be18d3d243c91fa9256f70ec4b65f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 841aca9d57afaff423a7065e9c6d9fc64f14ea2a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659947"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411352"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a>引數 '\<引數名稱 >' 無法轉換為類型'\<類型名稱 >'
+# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a>引數 ' \<argumentname> ' 無法轉換成類型 ' \<typename> '
 轉換會嘗試將引數變更成無效的類型。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -20,4 +20,4 @@ ms.locfileid: "64659947"
   
 ## <a name="see-also"></a>另請參閱
 
-- [轉換函式](../../visual-basic/language-reference/functions/conversion-functions.md)
+- [轉換函式](../language-reference/functions/conversion-functions.md)

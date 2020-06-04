@@ -7,40 +7,40 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: 6d238e9c426b5ae7df0cde745b51eace1cae5d87
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: bac5f9a88df719bc64a8b0541f65e5912275866e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913209"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409747"
 ---
-# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' 參數的值複製 '\<參數名稱 >' 回相符引數會從類型'\<typename1 >' 為類型 '\<2&gt >'
-可擴展為對應參數類型的引數呼叫的程序，並將參數轉換成引數會縮小。  
+# <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>將 'ByRef' 參數 '\<parametername>' 的值複製回相對應的引數，會從類型 '\<typename1>' 減少到類型 '\<typename2>'
+使用引數來呼叫程式，以擴大至對應的參數類型，且從參數轉換為引數會縮小。  
   
- 當您定義類別或結構時，可以定義一個或多個轉換運算子，以將該類別或結構類型轉換成其他類型。 您也可以定義反向轉換運算子，以這些其他類型轉換回您的類別或結構類型。 當您使用類別或結構類型中的程序呼叫時，Visual Basic 就可以使用這些轉換運算子，來將引數的類型轉換成其對應參數的型別。  
+ 當您定義類別或結構時，可以定義一個或多個轉換運算子，以將該類別或結構類型轉換成其他類型。 您也可以定義反向轉換運算子，以這些其他類型轉換回您的類別或結構類型。 當您在程序呼叫中使用類別或結構類型時，Visual Basic 可以使用這些轉換運算子將引數的類型轉換成其對應參數的類型。  
   
- 如果您傳遞的引數[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 有時會將引數值複製至區域變數，而不是傳遞參考程序中。 在此情況下，此程序傳回時，Visual Basic 必須接著將本機變數的值複製回呼叫端程式碼中的引數。  
+ 如果您傳遞[ByRef](../modifiers/byref.md)引數，Visual Basic 有時會將引數值複製至程式中的區域變數，而不是傳遞參考。 在這種情況下，當程式傳回時，Visual Basic 必須將區域變數值複製回呼叫程式碼中的引數。  
   
- 如果將 `ByRef` 引數值複製至程序，而且引數和參數的類型相同，則不需要進行轉換。 但如果類型不同，Visual Basic 必須雙向轉換。 如果其中一個型別是類別或結構類型時，Visual Basic 必須將它與另一個型別。 如果其中一個這些轉換擴展轉換，則可能會縮小反向轉換。  
+ 如果將 `ByRef` 引數值複製至程序，而且引數和參數的類型相同，則不需要進行轉換。 但是，如果類型不同，Visual Basic 必須雙向轉換。 如果其中一種類型是您的類別或結構類型，Visual Basic 必須將它轉換成另一種類型。 如果其中一項轉換是擴展的，反向轉換可能會縮小。  
   
- **錯誤 ID:** BC32053  
+ **錯誤識別碼：** BC32053  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 可能的話，因此不需要執行任何轉換 Visual Basic，請做為程序參數，使用相同類型的呼叫中引數。  
+- 可能的話，請使用與程式參數相同類型的呼叫引數，因此 Visual Basic 不需要進行任何轉換。  
   
-- 如果您需要呼叫引數類型與參數類型不同的程序，但不需要將值傳回給呼叫中引數，請將此參數定義為 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ，而非 `ByRef`。  
+- 如果您需要呼叫引數類型與參數類型不同的程序，但不需要將值傳回給呼叫中引數，請將此參數定義為 [ByVal](../modifiers/byval.md) ，而非 `ByRef`。  
   
-- 如果您需要將值傳回呼叫的引數，定義反向轉換運算子，作為[Widening](../../../visual-basic/language-reference/modifiers/widening.md)、 的話。  
+- 如果您需要將值傳回給呼叫引數，可能的話，請將反向轉換運算子定義為「[擴展](../modifiers/widening.md)」。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [程序參數和引數](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
-- [以傳值和傳址方式傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
-- [如何：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [如何：定義轉換運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [在 Visual Basic 中的類型轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [程序](../../programming-guide/language-features/procedures/index.md)
+- [程序參數和引數](../../programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [以傳值和傳址方式傳遞引數](../../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [運算子程序](../../programming-guide/language-features/procedures/operator-procedures.md)
+- [Operator Statement](../statements/operator-statement.md)
+- [如何：定義運算子](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [How to: Define a Conversion Operator](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Visual Basic 中的類型轉換](../../programming-guide/language-features/data-types/type-conversions.md)
+- [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

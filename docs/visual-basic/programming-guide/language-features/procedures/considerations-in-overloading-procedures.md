@@ -25,17 +25,17 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 4a0cfe176a59b3f90f5850ae8b4e34784c400c6b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c4075c87df8b9daa56ca1d35e0d6661598895fdc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351003"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403365"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>多載化程序的考慮因素 (Visual Basic)
 當您多載程式時，您必須針對每個多載版本使用*不同的簽*章。 這通常表示每個版本都必須指定不同的參數清單。 如需詳細資訊，請參閱程式多載[中的「不同的簽](./procedure-overloading.md)章」。  
   
- 您可以使用 `Sub` 程式來多載 `Function` 程式，反之亦然，前提是它們有不同的簽章。 兩個多載不能有不同的差異，只有其中一個具有傳回值，另一個則沒有。  
+ 您可以使用程式來多載程式 `Function` `Sub` ，反之亦然，前提是它們有不同的簽章。 兩個多載不能有不同的差異，只有其中一個具有傳回值，另一個則沒有。  
   
  您可以使用與多載程式相同的方式來多載屬性，而且具有相同的限制。 但是，您無法使用屬性來多載程式，反之亦然。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "74351003"
 #### <a name="when-to-use-optional-parameters"></a>使用選擇性參數的時機  
  在下列情況中，您可能會偏好使用一或多個選擇性參數：  
   
-- 當呼叫程式碼未提供選擇性引數時，唯一必要的動作是將參數設定為預設值。 在這種情況下，如果您定義具有一或多個 `Optional` 參數的單一版本，程式碼可能會比較不復雜。  
+- 當呼叫程式碼未提供選擇性引數時，唯一必要的動作是將參數設定為預設值。 在這種情況下，如果您定義具有一或多個參數的單一版本，程式碼可能會比較不復雜 `Optional` 。  
   
  如需詳細資訊，請參閱[選擇性參數](./optional-parameters.md)。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "74351003"
 - 呼叫程式碼可以傳遞不同資料類型的值。  
   
 #### <a name="when-to-use-a-parameter-array"></a>使用參數陣列的時機  
- 在下列情況下，`ParamArray` 參數會提供較佳的服務：  
+ 在下列情況下，參數可提供較佳的服務 `ParamArray` ：  
   
 - 您無法預測呼叫程式碼可以傳遞給參數陣列的值數目，而且可能是很大的數位。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "74351003"
  如需詳細資訊，請參閱[參數陣列](./parameter-arrays.md)。  
   
 ## <a name="implicit-overloads-for-optional-parameters"></a>選擇性參數的隱含多載  
- 具有[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)參數的程式相當於兩個多載的程式，一個包含選擇性參數，另一個則沒有。 您無法使用對應于其中任一項的參數清單來多載這類程式。 下列宣告說明這種情況。  
+ 具有[選擇性](../../../language-reference/modifiers/optional.md)參數的程式相當於兩個多載的程式，一個包含選擇性參數，另一個則沒有。 您無法使用對應于其中任一項的參數清單來多載這類程式。 下列宣告說明這種情況。  
   
  [!code-vb[VbVbcnProcedures#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#58)]  
   
@@ -94,13 +94,13 @@ ms.locfileid: "74351003"
  針對具有多個選擇性參數的程式，會有一組隱含的多載，並以類似上述範例中的邏輯抵達。  
   
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray 參數的隱含多載  
- 編譯器會將具有[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數的程式視為具有無限數量的多載，並在呼叫程式碼傳遞給參數陣列的內容中彼此不同，如下所示：  
+ 編譯器會將具有[ParamArray](../../../language-reference/modifiers/paramarray.md)參數的程式視為具有無限數量的多載，並在呼叫程式碼傳遞給參數陣列的內容中彼此不同，如下所示：  
   
-- 呼叫程式碼未提供引數給 `ParamArray` 時的一個多載  
+- 呼叫程式碼未提供引數給時的一個多載`ParamArray`  
   
-- 當呼叫程式碼提供 `ParamArray` 專案類型的一維陣列時，一個多載  
+- 呼叫程式碼提供元素類型的一維陣列時的一個多載 `ParamArray`  
   
-- 針對每個正整數，當呼叫程式碼提供該數目的引數時，一個多載，其中每個都是 `ParamArray` 的元素類型  
+- 針對每個正整數，當呼叫程式碼提供該引數數目（每個元素類型）時，一個多載。 `ParamArray`  
   
  下列宣告說明這些隱含多載。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "74351003"
  [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>無程式設計是多載的替代方法  
- 如果您想要允許呼叫程式碼將不同的資料類型傳遞給參數，另一個替代方法是無類型的程式設計。 您可以使用[Option Strict 語句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)或[-optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md)編譯器選項，將類型檢查參數設定為 `Off`。 然後您就不需要宣告參數的資料類型。 不過，相較于多載，此方法具有下列缺點：  
+ 如果您想要允許呼叫程式碼將不同的資料類型傳遞給參數，另一個替代方法是無類型的程式設計。 您可以 `Off` 使用[Option Strict 語句](../../../language-reference/statements/option-strict-statement.md)或[-optionstrict](../../../reference/command-line-compiler/optionstrict.md)編譯器選項，將類型檢查參數設定為。 然後您就不需要宣告參數的資料類型。 不過，相較于多載，此方法具有下列缺點：  
   
 - 無語言程式設計會產生較不有效率的執行程式碼。  
   
@@ -131,4 +131,4 @@ ms.locfileid: "74351003"
 - [如何：使用選擇性參數的多載程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [如何：多載使用不確定參數數目的程序](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [多載解析](./overload-resolution.md)
-- [多載](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [多載](../../../language-reference/modifiers/overloads.md)

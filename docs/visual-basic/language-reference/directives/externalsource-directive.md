@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: fa0a40827c1b3865b90c7d796ea4dd364774e1c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4c7704c32c3a6c73e069d0b7129d5386696b438
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343836"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402988"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource 指示詞
 
@@ -55,4 +55,4 @@ ms.locfileid: "74343836"
   
 ## <a name="see-also"></a>另請參閱
 
-- [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [條件式編譯](../../programming-guide/program-structure/conditional-compilation.md)

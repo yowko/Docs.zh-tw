@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: d44b538e8413eb1412e937375e9bca77600a29b7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2826a3c98b9f19b08cc943d0f67cdd34ac90f526
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348663"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410538"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>如何：存取物件的成員 (Visual Basic)
 
@@ -22,13 +22,13 @@ ms.locfileid: "74348663"
 
 #### <a name="to-access-members-of-an-object"></a>存取物件的成員
 
-- 在物件變數名稱和成員名稱之間使用成員存取運算子（`.`）。
+- `.`在物件變數名稱和成員名稱之間使用成員存取運算子（）。
 
     ```vb
     currentText = newForm.Text
     ```
 
-    如果成員是[共用](../../../../visual-basic/language-reference/modifiers/shared.md)的，您就不需要變數來存取它。
+    如果成員是[共用](../../../language-reference/modifiers/shared.md)的，您就不需要變數來存取它。
 
 ## <a name="accessing-members-of-an-object-of-known-type"></a>存取已知型別之物件的成員
 
@@ -42,15 +42,15 @@ ms.locfileid: "74348663"
     Dim extraForm As System.Windows.Forms.Form
     ```
 
-    使用 `Option Strict On`，您只能將 <xref:System.Windows.Forms.Form> 物件（或衍生自 <xref:System.Windows.Forms.Form>的類型物件）指派給 `extraForm`。 如果您已定義具有擴展 `CType` 轉換為 <xref:System.Windows.Forms.Form>的類別或結構，您也可以將該類別或結構指派給 `extraForm`。
+    使用 `Option Strict On` ，您只能將 <xref:System.Windows.Forms.Form> 物件（或衍生自之類型的物件 <xref:System.Windows.Forms.Form> ）指派給 `extraForm` 。 如果您已定義將擴輾轉換為的類別或結構 `CType` <xref:System.Windows.Forms.Form> ，您也可以將該類別或結構指派給 `extraForm` 。
 
-2. 在物件變數名稱和成員名稱之間使用成員存取運算子（`.`）。
+2. `.`在物件變數名稱和成員名稱之間使用成員存取運算子（）。
 
     ```vb
     extraForm.Show()
     ```
 
-    不論 `Option Strict` 設定為何，您都可以存取 <xref:System.Windows.Forms.Form> 類別特定的所有方法和屬性。
+    不論設定為何，您都可以存取類別特定的所有方法和屬性 <xref:System.Windows.Forms.Form> `Option Strict` 。
 
 ## <a name="accessing-members-of-an-object-of-unknown-type"></a>存取未知類型物件的成員
 
@@ -58,28 +58,28 @@ ms.locfileid: "74348663"
 
 #### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>若要存取在編譯時期不知道型別之物件的成員
 
-1. 將物件變數宣告為[物件資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)。 （將變數宣告為 `Object` 與將它宣告為 <xref:System.Object?displayProperty=nameWithType>相同）。
+1. 將物件變數宣告為[物件資料類型](../../../language-reference/data-types/object-data-type.md)。 （宣告變數的方式與 `Object` 將它宣告為一樣 <xref:System.Object?displayProperty=nameWithType> ）。
 
     ```vb
     Dim someControl As Object
     ```
 
-    使用 `Option Strict On`，您只能存取在 <xref:System.Object> 類別上定義的成員。
+    有了 `Option Strict On` ，您就只能存取在類別上定義的成員 <xref:System.Object> 。
 
-2. 在物件變數名稱和成員名稱之間使用成員存取運算子（`.`）。
+2. `.`在物件變數名稱和成員名稱之間使用成員存取運算子（）。
 
     ```vb
     someControl.GetType()
     ```
 
-    若要能夠存取您指派給物件變數之任何物件的成員，您必須設定 `Option Strict Off`。 當您這麼做時，編譯器無法保證指定的成員是由您指派給變數的物件所公開。 如果物件未公開您嘗試存取的成員，就會發生 <xref:System.MemberAccessException> 例外狀況。
+    若要能夠存取您指派給物件變數之任何物件的成員，您必須設定 `Option Strict Off` 。 當您這麼做時，編譯器無法保證指定的成員是由您指派給變數的物件所公開。 如果物件未公開您嘗試存取的成員， <xref:System.MemberAccessException> 就會發生例外狀況。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>
-- [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [物件變數](object-variables.md)
+- [物件變數宣告](object-variable-declaration.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)
+- [Long](../../../language-reference/statements/option-strict-statement.md)

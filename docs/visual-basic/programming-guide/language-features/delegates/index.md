@@ -5,20 +5,20 @@ helpviewer_keywords:
 - delegates [Visual Basic]
 - Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
-ms.openlocfilehash: 15b4cb0a038429c5fe67d3e013818a7a2170abcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1f161248fa04f8fab0e5335413e69ca565732f71
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345228"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410679"
 ---
 # <a name="delegates-visual-basic"></a>委派 (Visual Basic)
 
-委派是參考方法的物件。 它們有時稱為「型別安全的函式指標」，因為它們類似於其他程式設計語言中使用的函式指標。 但不同于函式指標，Visual Basic 委派是根據類別 <xref:System.Delegate?displayProperty=nameWithType>的參考型別。 委派可以同時參考共用的方法 (不需類別的特定執行個體就能呼叫的方法) 和執行個體方法。
+委派是參考方法的物件。 它們有時稱為「型別安全的函式指標」**，因為它們類似於其他程式設計語言中使用的函式指標。 但不同于函式指標，Visual Basic 委派是以類別為基礎的參考型別 <xref:System.Delegate?displayProperty=nameWithType> 。 委派可以同時參考共用的方法 (不需類別的特定執行個體就能呼叫的方法) 和執行個體方法。
 
 ## <a name="delegates-and-events"></a>委派和事件
 
-當您在呼叫程序與被呼叫程序之間需要一個媒介時，委派就很有用。 例如，您想要讓引發事件的物件能夠在不同環境下呼叫不同的事件處理常式。 不過，引發事件的物件無法事先知道哪一個事件處理常式正在處理特定事件。 Visual Basic 可讓您在使用 `AddHandler` 語句時，為您建立委派，以動態方式建立事件處理常式與事件的關聯。 在執行階段，委派會將呼叫轉送到適當的事件處理常式。
+當您在呼叫程序與被呼叫程序之間需要一個媒介時，委派就很有用。 例如，您想要讓引發事件的物件能夠在不同環境下呼叫不同的事件處理常式。 不過，引發事件的物件無法事先知道哪一個事件處理常式正在處理特定事件。 Visual Basic 可讓您在使用語句時，為您建立委派，以動態方式建立事件處理常式與事件的關聯 `AddHandler` 。 在執行階段，委派會將呼叫轉送到適當的事件處理常式。
 
 雖然您可以建立自己的委派，但在大多數情況下，Visual Basic 會建立委派，並為您處理詳細資料。 例如，`Event` 陳述式會隱含定義名為 `<EventName>EventHandler` 的委派類別做為包含 `Event` 陳述式之類別的巢狀類別，並包含與事件相同的簽章。 `AddressOf` 陳述式會隱含建立參考特定程序之委派的執行個體。 下兩行程式碼的用法相同。 在第一行中，您會看到明確建立了 `EventHandler` 的執行個體，其中包含對傳送為引數之 `Button1_Click` 方法的參考。 第二行則是可執行相同動作的更便捷方法。
 
@@ -60,13 +60,13 @@ ms.locfileid: "74345228"
 
 [!code-vb[VbVbalrDelegates#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class2.vb#15)]
 
-函式的簽章必須符合委派型別的簽章。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。 如需 lambda 運算式以及要委派的 `AddressOf` 指派的更多範例，請參閱[寬鬆委派轉換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)。
+函式的簽章必須符合委派型別的簽章。 如需 lambda 運算式的詳細資訊，請參閱[Lambda 運算式](../procedures/lambda-expressions.md)。 如需 lambda 運算式以及要委派的 `AddressOf` 指派的更多範例，請參閱[寬鬆委派轉換](relaxed-delegate-conversion.md)。
 
-## <a name="related-topics"></a>相關主題
+## <a name="related-topics"></a>[相關主題]
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
-|[如何：叫用委派方法](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)|提供範例，示範如何將方法和委派產生關聯，然後透過委派叫用該方法。|
-|[如何：在 Visual Basic 中將程序傳遞至其他程序](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)|示範如何使用委派，將一個程序傳遞至另一個程序。|
-|[寬鬆委派轉換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)|描述即便是 Sub 和函式的簽章不同，如何將它們指派給委派或處理常式。|
-|[事件](../../../../visual-basic/programming-guide/language-features/events/index.md)|提供 Visual Basic 中的事件概觀。|
+|[如何：叫用委派方法](how-to-invoke-a-delegate-method.md)|提供範例，示範如何將方法和委派產生關聯，然後透過委派叫用該方法。|
+|[如何：在 Visual Basic 中將程序傳遞至其他程序](how-to-pass-procedures-to-another-procedure.md)|示範如何使用委派，將一個程序傳遞至另一個程序。|
+|[寬鬆委派轉換](relaxed-delegate-conversion.md)|描述即便是 Sub 和函式的簽章不同，如何將它們指派給委派或處理常式。|
+|[事件](../events/index.md)|提供 Visual Basic 中的事件概觀。|

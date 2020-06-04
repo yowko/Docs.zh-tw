@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44f98632fd2fd6c4c087a78b805d5b7da750df87
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349234"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410201"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>存取應用程式表單 (Visual Basic)
 
@@ -25,7 +25,7 @@ ms.locfileid: "74349234"
   
 |至|請參閱|  
 |---|---|  
-|從應用程式的表單存取另一個表單。|[My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|從應用程式的表單存取另一個表單。|[My.Forms 物件](../../language-reference/objects/my-forms-object.md)|  
 |顯示應用程式所有開啟表單的標題。|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |當應用程式啟動時，使用狀態資訊更新啟動顯示畫面。|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
@@ -33,4 +33,4 @@ ms.locfileid: "74349234"
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
-- [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Forms 物件](../../language-reference/objects/my-forms-object.md)

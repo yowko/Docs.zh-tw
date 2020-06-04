@@ -7,22 +7,22 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
-ms.openlocfilehash: 905d6c4bb63323bad790bc833647a5c602d02ada
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ab6ed27e403273c1b3b2b28593825c0cc6b6db7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332320"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410266"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>如何：存取 XML 屬性 (Visual Basic)
-這個範例示範如何使用屬性軸屬性，依名稱存取 XML 元素中的 XML 屬性。 特別是，它會使用 `type` 屬性軸 屬性來存取 `phone` 物件中名為 `type` 的屬性。  
+這個範例示範如何使用屬性軸屬性，依名稱存取 XML 元素中的 XML 屬性。 特別是，它會使用 `type` 屬性軸屬性來存取物件中名為的屬性 `type` `phone` 。  
   
 ## <a name="example"></a>範例  
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
-- [XML 屬性 (Attribute) 軸屬性 (Property)](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
-- [在 Visual Basic 中存取 XML](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [XML Attribute Axis Property](../../../language-reference/xml-axis/xml-attribute-axis-property.md)
+- [在 Visual Basic 中存取 XML](accessing-xml.md)
+- [XML](index.md)

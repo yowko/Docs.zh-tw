@@ -2,18 +2,18 @@
 title: 轉換資料類型
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 25d21954f0bb7555f1f5666f83fb37f4f73e2a60
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1394f53923ba850ae11fbc326a25c279589c3be1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354262"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410847"
 ---
 # <a name="converting-data-types-visual-basic"></a>轉換資料類型（Visual Basic）
 
 轉換方法會變更輸入物件的類型。
 
- LINQ 查詢中的轉換作業可用於各種應用程式。 下列是部份範例：
+ LINQ 查詢中的轉換作業可用於各種應用程式。 以下是一些範例：
 
 - <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> 方法可以用來隱藏類型之標準查詢運算子的自訂實作。
 
@@ -27,7 +27,7 @@ ms.locfileid: "74354262"
 
 此表格中名稱開頭為"As" 的轉換方法會變更來源集合的靜態類型，而不是列舉它。 名稱開頭為 "To" 的方法會列舉來源集合，並將項目放入對應的集合類型。
 
-|方法名稱|描述|Visual Basic 查詢運算式語法|詳細資訊|
+|方法名稱|Description|Visual Basic 查詢運算式語法|相關資訊|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |AsEnumerable|傳回 <xref:System.Collections.Generic.IEnumerable%601> 類型的輸入。|不適用。|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
 |AsQueryable|將 (泛型) <xref:System.Collections.IEnumerable> 轉換成 (泛型) <xref:System.Linq.IQueryable>。|不適用。|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
@@ -80,9 +80,9 @@ Sub Cast()
 End Sub
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
-- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [如何：使用 LINQ 查詢 ArrayList （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [標準查詢運算子概觀 (Visual Basic)](standard-query-operators-overview.md)
+- [From 子句](../../../language-reference/queries/from-clause.md)
+- [如何：使用 LINQ 查詢 ArrayList （Visual Basic）](how-to-query-an-arraylist-with-linq.md)

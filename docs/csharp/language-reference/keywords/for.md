@@ -1,5 +1,5 @@
 ---
-title: 用於語句 - C# 引用
+title: 'for 語句-c # 參考'
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: cb83fa015eea19b156faebb5bed18cc1f0970cc1
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: db7cecc697a9cc9e5ff6b94b78747b799ed7e505
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738800"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401897"
 ---
 # <a name="for-c-reference"></a>for (C# 參考)
 
 當指定的布林運算式評估為 `true` 時，`for` 陳述式會執行某個陳述式或陳述式區塊。
 
-您可以在 `for` 陳述式區塊內的任何位置，使用 [break](break.md) 陳述式跳出迴圈，或使用 [continue](continue.md) 陳述式逐步執行到迴圈中的下一個反覆運算。 您還可以通過`for`[goto、](goto.md)[傳回](return.md)或[引發](throw.md)語句退出迴圈。
+您可以在 `for` 陳述式區塊內的任何位置，使用 [break](break.md) 陳述式跳出迴圈，或使用 [continue](continue.md) 陳述式逐步執行到迴圈中的下一個反覆運算。 您也可以使用 `for` [goto](goto.md)、 [return](return.md)或[throw](throw.md)語句來結束迴圈。
 
 ## <a name="structure-of-the-for-statement"></a>`for` 陳述式的結構
 
@@ -33,7 +33,7 @@ for (initializer; condition; iterator)
 
 下列範例顯示 `for` 陳述式，並已定義所有區段：
 
-[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+[!code-csharp-interactive[for loop example](snippets/IterationKeywordsExamples.cs#5)]
 
 ### <a name="the-initializer-section"></a>「初始設定式」** 區段
 
@@ -97,11 +97,11 @@ i++
 
 下列範例描述幾個較少見的 `for` 陳述式用法︰將值指派給「初始設定式」** 區段中的外部迴圈變數、在「初始設定式」** 和「迭代器」** 區段中叫用方法，以及在「迭代器」** 區段中變更兩個變數的值。 選取 [執行]**** 執行範例程式碼。 之後，您可以修改程式碼，然後再次執行它。
 
-[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
+[!code-csharp-interactive[not typical for loop example](snippets/IterationKeywordsExamples.cs#6)]
 
 下列範例會定義無限迴圈 `for`：
 
-[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
+[!code-csharp[infinite for loop example](snippets/IterationKeywordsExamples.cs#7)]
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -109,7 +109,7 @@ i++
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 編程指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [foreach、in](foreach-in.md)
