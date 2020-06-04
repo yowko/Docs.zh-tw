@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 72e899e7bd30f2edf0e88207bb3b75bdf36fa11c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b9cc830d27625f192d8f5e059bd3783d05d8ba3b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349439"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400224"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA 常值 (Visual Basic)
-表示 <xref:System.Xml.Linq.XCData> 物件的常值。  
+代表物件的常值 <xref:System.Xml.Linq.XCData> 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,16 +49,16 @@ ms.locfileid: "74349439"
 > [!NOTE]
 > XML 常值可以跨越多行，但不會使用行接續字元。 這可讓您從 XML 檔案複製內容，並將它直接貼到 Visual Basic 程式中。  
   
- Visual Basic 編譯器會將 XML CDATA 常值轉換成呼叫 <xref:System.Xml.Linq.XCData.%23ctor%2A> 的函式。  
+ Visual Basic 編譯器會將 XML CDATA 常值轉換為對此函式的呼叫 <xref:System.Xml.Linq.XCData.%23ctor%2A> 。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立一個 CDATA 區段，其中包含「可以包含常值 \<XML > 標記」文字。  
+ 下列範例會建立 CDATA 區段，其中包含「可以包含常值標記」文字 \<XML> 。  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Linq.XCData>
-- [XML 項目常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)
-- [在 Visual Basic 中建立 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 元素常值](xml-element-literal.md)
+- [XML 常值](index.md)
+- [在 Visual Basic 中建立 XML](../../programming-guide/language-features/xml/creating-xml.md)

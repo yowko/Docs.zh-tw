@@ -2,12 +2,12 @@
 title: 序列化
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
-ms.openlocfilehash: 9ce97e541cb204b92663464e36d9e8f221ccc3f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: db14147a23940fa2403613036750be1bca566e8e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351922"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413138"
 ---
 # <a name="serialization-visual-basic"></a>序列化 (Visual Basic)
 序列化程序會將物件轉換成位元組資料流，以將物件儲存或傳輸到記憶體、資料庫或檔案。 其主要目的是儲存物件的狀態，這樣就能在需要時重新建立該物件。 反向的程序則稱為還原序列化。  
@@ -25,7 +25,7 @@ ms.locfileid: "74351922"
 ### <a name="making-an-object-serializable"></a>讓物件可序列化  
  若要將物件序列化，您需要將要序列化的物件、將包含序列化物件的資料流，以及 <xref:System.Runtime.Serialization.Formatter>。 <xref:System.Runtime.Serialization> 包含序列化及還原序列化物件所需的類別。  
   
- 將 <xref:System.SerializableAttribute> 屬性套用至某個類型，以表示此類型的執行個體為可序列化。 如果您嘗試序列化但該類型沒有 <xref:System.Runtime.Serialization.SerializationException> 屬性，則會擲回 <xref:System.SerializableAttribute> 例外狀況。  
+ 將 <xref:System.SerializableAttribute> 屬性套用至某個類型，以表示此類型的執行個體為可序列化。 如果您嘗試序列化但該類型沒有 <xref:System.SerializableAttribute> 屬性，則會擲回 <xref:System.Runtime.Serialization.SerializationException> 例外狀況。  
   
  如果您不要將類別中的某個欄位序列化，請套用 <xref:System.NonSerializedAttribute> 屬性。 如果可序列化型別的欄位包含指標、控制代碼，或一些其他特定環境專屬的資料結構，且無法以有意義的方式在不同環境中重新建構該欄位，則您可能想要讓它成為不可序列化的。  
   
@@ -58,12 +58,12 @@ ms.locfileid: "74351922"
 ## <a name="designer-serialization"></a>設計工具序列化  
  設計工具序列化是特殊格式的序列化，其中包含一種通常與開發工具相關聯的物件持續性。 設計工具序列化程序的作用是將物件圖形轉換成來源檔案，而該檔案稍後可用於復原物件圖形。 來源檔案可以包含程式碼、標記，或甚至 SQL 資料表資訊。  
   
-## <a name="BKMK_RelatedTopics"></a> 相關主題和範例  
- [逐步解說：在 Visual Studio 中保存物件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
+## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a> 相關主題和範例  
+ [逐步解說：在 Visual Studio 中保存物件 (Visual Basic)](walkthrough-persisting-an-object-in-visual-studio.md)  
  示範序列化能如何用來保存物件在執行個體之間的資料，可讓您儲存值，並且在下次物件具現化時擷取它們。  
   
- [如何：從 XML 檔案讀取物件資料 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ [如何：從 XML 檔案讀取物件資料 (Visual Basic)](how-to-read-object-data-from-an-xml-file.md)  
  示範如何讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來寫入 XML 檔案的物件資料。  
   
- [如何：將物件資料寫入 XML 檔案 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [如何：將物件資料寫入 XML 檔案 (Visual Basic)](how-to-write-object-data-to-an-xml-file.md)  
  示範如何使用 <xref:System.Xml.Serialization.XmlSerializer> 類別，將來自某個類別的物件寫入 XML 檔案。

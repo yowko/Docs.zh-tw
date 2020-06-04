@@ -2,12 +2,12 @@
 title: XAttribute 類別概觀
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-ms.openlocfilehash: ceafe5478e41fb4c2038fd9300ef7b1ee6cb8411
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 5b165044b4bea83e1a0789e3dd00367ed27b43e8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636649"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413202"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>System.xml.linq.xattribute> 類別總覽（Visual Basic）
 屬性是與項目相關聯的成對名稱/值。 <xref:System.Xml.Linq.XAttribute> 類別表示 XML 屬性。  
@@ -74,6 +74,6 @@ Console.WriteLine(c)
   
  這個區別只有對於撰寫可在節點層級使用 XML 樹狀結構之程式碼的開發人員特別重要。 這個區別與許多開發人員都無關。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML 程式設計總覽（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 程式設計總覽（Visual Basic）](linq-to-xml-programming-overview.md)

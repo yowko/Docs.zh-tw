@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: c7219c0497bb87f0cc44f27229eaf25f9b3eebce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344798"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414294"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>從命令列建置 (Visual Basic)
 
@@ -35,18 +35,18 @@ Visual Basic 提供命令列編譯器，做為從 Visual Studio 整合式開發�
 
 ## <a name="in-this-section"></a>本節內容
 
-[如何：叫用命令列編譯器](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+[如何：叫用命令列編譯器](how-to-invoke-the-command-line-compiler.md) \
 描述如何在 MS-DOS 提示字元或從特定子目錄叫用命令列編譯器。
 
-[範例編譯命令列](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+[範例編譯命令列](sample-compilation-command-lines.md) \
 提供範例命令列清單，您可以針對自己的用途加以修改。
 
 ## <a name="related-sections"></a>相關章節
 
-[Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md) \
+[Visual Basic 命令列編譯器](index.md) \
 提供編譯器選項清單，以字母順序或依目的組織。
 
-[條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+[條件式編譯](../../programming-guide/program-structure/conditional-compilation.md) \
 描述如何編譯器代碼的特定區段。
 
 [在 Visual Studio 中建立和清除專案與方案](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

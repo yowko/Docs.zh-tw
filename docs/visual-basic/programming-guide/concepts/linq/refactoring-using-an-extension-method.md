@@ -2,15 +2,15 @@
 title: 使用擴充方法進行重構
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: c66fb90f9949ee3e47105498b211c857d5d63804
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5bb3ed44c0c3f7616468f820428fe1a384ab6d45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348023"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413426"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>使用擴充方法（Visual Basic）進行重構
-這個範例是以先前的範例為基礎，藉由使用實作為擴充方法的純虛擬函式來重構字串的串連，以抓取[段落的文字（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)。  
+這個範例是以先前的範例為基礎，藉由使用實作為擴充方法的純虛擬函式來重構字串的串連，以抓取[段落的文字（Visual Basic）](retrieving-the-text-of-the-paragraphs.md)。  
   
  前一個範例使用 <xref:System.Linq.Enumerable.Aggregate%2A> 標準查詢運算子，將多個字串串連到一個字串。 不過，撰寫擴充方法來執行這個動作更為方便，因為所產生的查詢更小而且更簡單。  
   
@@ -19,7 +19,7 @@ ms.locfileid: "75348023"
   
  此範例包含 `StringConcatenate` 方法的多個多載。  
   
- 您可以在[建立來源 Office OPEN XML 檔（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)中找到建立此範例之來源文件的指示。  
+ 您可以在[建立來源 Office OPEN XML 檔（Visual Basic）](creating-the-source-office-open-xml-document.md)中找到建立此範例之來源文件的指示。  
   
  這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -241,9 +241,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>後續步驟  
  下一個範例顯示如何使用純虛擬函式，以另一種方式重構此程式碼：  
   
-- [使用純虛擬函式進行重構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [使用純虛擬函式進行重構 (Visual Basic)](refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [重構為純虛擬函式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [重構為純虛擬函式（Visual Basic）](refactoring-into-pure-functions.md)

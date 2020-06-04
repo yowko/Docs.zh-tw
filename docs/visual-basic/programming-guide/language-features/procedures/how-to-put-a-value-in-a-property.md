@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: ad0d0e81f94dd3dead50f21c3bd6ff580c004dd6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0fb3e137010390097a68aea161efcff93839d94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346047"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414333"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>如何：將值置入屬性 (Visual Basic)
 您可以藉由將屬性名稱放在指派語句的左邊，將值儲存在屬性中。  
   
- 屬性的 `Set` 程式會儲存一個值，但您不會依名稱明確地呼叫它。 您可以使用屬性，就像使用變數一樣。 Visual Basic 會呼叫屬性的程式。  
+ 屬性的程式會 `Set` 儲存值，但您不會依名稱明確地呼叫它。 您可以使用屬性，就像使用變數一樣。 Visual Basic 會呼叫屬性的程式。  
   
 ### <a name="to-store-a-value-in-a-property"></a>若要在屬性中儲存值  
   
 1. 使用指派語句左側的屬性名稱。  
   
-     下列範例會將 Visual Basic `TimeOfDay` 屬性的值設定為 [中午]，並隱含地呼叫其 `Set` 程式。  
+     下列範例會將 Visual Basic 屬性的值設定 `TimeOfDay` 為 [中午]，並隱含地呼叫其程式 `Set` 。  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
@@ -34,13 +34,13 @@ ms.locfileid: "74346047"
   
 4. 在指派語句的右邊產生的值會儲存在屬性中。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
-- [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Visual Basic 中的屬性和變數之間的差異](./differences-between-properties-and-variables.md)
+- [Property Statement](../../../language-reference/statements/property-statement.md)
+- [Visual Basic 中屬性和變數的差異](./differences-between-properties-and-variables.md)
 - [如何：建立屬性](./how-to-create-a-property.md)
 - [如何：宣告混合存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [如何：呼叫屬性程序](./how-to-call-a-property-procedure.md)

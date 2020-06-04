@@ -2,12 +2,12 @@
 title: 重構為純虛擬函式
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 22b371c6136836d6e0f1281f824b69378c0d3e4a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 415b088661eca347330f4776901d68ee514d8dad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346527"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413475"
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>重構為純虛擬函式（Visual Basic）
 
@@ -21,7 +21,7 @@ ms.locfileid: "74346527"
 
  轉換為功能性程式設計的其中一種方式為重構現有的程式碼以排除不必要的副作用與外部相依性。 以此種方式，您可以建立現有程式碼的純虛擬函式版本。
 
-這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)教學課程顯示如何操作 WordprocessingML 檔，並包含兩個如何使用純虛擬函式進行重構的範例。
+這個主題討論什麼是純虛擬函式以及什麼不是純虛擬函式。 [教學課程：管理 WordprocessingML 檔中的內容（Visual Basic）](tutorial-manipulating-content-in-a-wordprocessingml-document.md)教學課程顯示如何操作 WordprocessingML 檔，並包含兩個如何使用純虛擬函式進行重構的範例。
 
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>排除副作用與外部相依性
 
@@ -52,7 +52,7 @@ End Module
 StringOne-StringTwo
 ```
 
-請注意，要修改的資料是否已 `public` 或 `private` 存取，或是 `shared` 成員或實例成員都是不相關的。 純虛擬函式不會變更函式以外的任何資料。
+請注意，要修改的資料是否具有 `public` 或 `private` 存取，或為 `shared` 成員或實例成員，並不相關。 純虛擬函式不會變更函式以外的任何資料。
 
 ### <a name="non-pure-function-that-changes-an-argument"></a>變更引數的非純虛擬函式
 
@@ -103,9 +103,9 @@ End Module
 
 標準查詢運算子的重要特性為它們會被當做純虛擬函式實作。
 
-如需詳細資訊，請參閱[標準查詢運算子總覽（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。
+如需詳細資訊，請參閱[標準查詢運算子總覽（Visual Basic）](standard-query-operators-overview.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [純功能性轉換簡介（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [功能性程式設計與命令式程式設計的比較（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+- [純功能性轉換簡介（Visual Basic）](introduction-to-pure-functional-transformations.md)
+- [功能性程式設計與命令式程式設計的比較（Visual Basic）](functional-programming-vs-imperative-programming.md)

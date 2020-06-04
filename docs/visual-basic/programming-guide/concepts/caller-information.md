@@ -2,19 +2,19 @@
 title: 呼叫端資訊
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7c87b540a68f4d0219918fed66de6c1b635104a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 93fb1e327d65ac19f293a2f77b7d5712fc5e8d2f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349466"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400664"
 ---
-# <a name="caller-information-visual-basic"></a>呼叫端資訊（Visual Basic）
+# <a name="caller-information-visual-basic"></a>呼叫端資訊 (Visual Basic)
 使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。  
   
  若要取得這項資訊，可使用套用至選擇性參數的屬性，每個屬性都有預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：  
   
-|屬性|描述|輸入|  
+|屬性|描述|類型|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含呼叫端的原始程式檔完整路徑。 這是編譯時間的檔案路徑。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|原始程式檔中呼叫方法所在的行號。|`Integer`|  
@@ -55,8 +55,8 @@ End Sub
   
  您可以明確提供選擇性引數來控制呼叫端資訊，或是隱藏呼叫端資訊。  
   
-### <a name="MEMBERNAMES"></a> 成員名稱  
- 您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構] 未變更 `String` 值這個問題。 這項優點對於下列工作特別有用：  
+### <a name="member-names"></a><a name="MEMBERNAMES"></a>成員名稱  
+ 您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構]**** 未變更 `String` 值這個問題。 這項優點對於下列工作特別有用：  
   
 - 使用追蹤和診斷常式。  
   
@@ -74,9 +74,9 @@ End Sub
 |屬性建構函式|套用屬性的成員名稱。 如果屬性為成員內的任何項目 (例如參數、傳回值或泛型類型參數)，這個結果會是與該項目相關聯的成員名稱。|  
 |無包含的成員 (例如，組件層級或套用至類型的屬性)。|選擇性參數的預設值。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [屬性 (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
-- [通用屬性 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
-- [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [程式設計概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [屬性 (Visual Basic)](../../language-reference/attributes.md)
+- [通用屬性 (Visual Basic)](attributes/common-attributes.md)
+- [選擇性參數](../language-features/procedures/optional-parameters.md)
+- [程式設計概念 (Visual Basic)](index.md)

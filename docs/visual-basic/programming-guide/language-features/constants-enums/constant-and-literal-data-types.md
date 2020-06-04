@@ -9,35 +9,35 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 8ebecddfab0724023c269e92c1fc5534f096bf1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b94259326b42104db05d9fc5bb09f686075d0759
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333735"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414527"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>常數和常值資料類型 (Visual Basic)
 常值是以本身的形式表示，而不是以變數的值或運算式的結果（例如數位3或字串 "Hello"）。 常數是一個有意義的名稱，它會取代常值，並在整個程式中保留這個相同的值，而不是變數，其值可能會變更。  
   
- 當[Option 推斷](../../../../visual-basic/language-reference/statements/option-infer-statement.md)為 `Off`，且[option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)為 `On`時，您必須使用資料類型明確宣告所有常數。 在下列範例中，`MyByte` 的資料類型會明確宣告為資料類型 `Byte`：  
+ 當[Option 推斷](../../../language-reference/statements/option-infer-statement.md)為 `Off` ，且[option Strict](../../../language-reference/statements/option-strict-statement.md)為時 `On` ，您必須使用資料類型明確宣告所有常數。 在下列範例中，的資料類型 `MyByte` 會明確宣告為資料類型 `Byte` ：  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
- 當 `Option Infer` `On` 或 `Option Strict` `Off`時，您可以宣告常數，而不需使用 `As` 子句來指定資料類型。 編譯器會從運算式的類型判斷常數的類型。 數值整數常值預設會轉換成 `Integer` 的資料類型。 浮點數字的預設資料類型是 `Double`，而關鍵字 `True` 和 `False` 指定 `Boolean` 常數。  
+ 當 `Option Infer` 是 `On` 或 `Option Strict` 時 `Off` ，您可以使用子句來宣告常數，而不指定資料類型 `As` 。 編譯器會從運算式的類型判斷常數的類型。 數值整數常值預設會轉換成 `Integer` 資料類型。 浮點數字的預設資料類型是 `Double` 、和關鍵字， `True` 並 `False` 指定 `Boolean` 常數。  
   
 ## <a name="literals-and-type-coercion"></a>常值和類型強制型轉  
- 在某些情況下，您可能會想要強制將常值指定為特定的資料類型。例如，將特別大的整數常值指派給 `Decimal`類型的變數時。 下列範例會產生錯誤：  
+ 在某些情況下，您可能會想要強制將常值指定為特定的資料類型。例如，將特別大的整數常值指派給類型的變數時 `Decimal` 。 下列範例會產生錯誤：  
   
 ```vb  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- 此錯誤會因常值的標記法而產生。 `Decimal` 資料類型可以保留這個大的值，但是常值會隱含表示為 `Long`，這不是。  
+ 此錯誤會因常值的標記法而產生。 `Decimal`資料類型可以保留這個大的值，但是常值會以隱含方式表示為 `Long` ，這不是。  
   
  您可以透過兩種方式將常值強制轉型為特定的資料類型：將類型字元附加至其中，或將它放在封入字元中。 類型字元或封入字元必須緊接在常值的前面和/或後面，不含任何類型的中間空格或字元。  
   
- 若要讓先前的範例正常執行，您可以將 `D` 型別字符附加到常值，這會使其表示為 `Decimal`：  
+ 若要讓先前的範例正常執行，您可以將 `D` 類型字元附加到常值，這會使其表示為 `Decimal` ：  
   
  [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
@@ -61,15 +61,15 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Single`|(無)|F 或！|  
 |`String`|"|(無)|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用者定義的常數](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
-- [如何：宣告常數](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
-- [常數的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Option Explicit 陳述式](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
-- [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
-- [常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [使用者定義的常數](user-defined-constants.md)
+- [如何：宣告常數](how-to-declare-a-constant.md)
+- [常數的概觀](constants-overview.md)
+- [Long](../../../language-reference/statements/option-strict-statement.md)
+- [Option Explicit 陳述式](../../../language-reference/statements/option-explicit-statement.md)
+- [列舉的概觀](enumerations-overview.md)
+- [如何：宣告列舉類型](how-to-declare-enumerations.md)
+- [列舉和名稱限定性條件](enumerations-and-name-qualification.md)
+- [資料類型](../../../language-reference/data-types/index.md)
+- [常數和列舉](../../../language-reference/constants-and-enumerations.md)

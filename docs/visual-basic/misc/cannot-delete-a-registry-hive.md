@@ -2,12 +2,12 @@
 title: 無法刪除登錄 Hive
 ms.date: 07/20/2015
 ms.assetid: 53ed771c-83f8-4657-a70d-5f9252cd448e
-ms.openlocfilehash: b359c0c38e344a64fd844fc996bc43705f663628
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 926120e4988c6c9e0c8eb7745296d6dfaf5232b0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644144"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400780"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>無法刪除登錄 Hive
 已嘗試刪除登錄 Hive。 Hive 是最上層的登錄機碼，例如 `HKEY_CURRENT_USER` 和 `HKEY_LOCAL_MACHINE`，且無法刪除。  
@@ -18,5 +18,5 @@ ms.locfileid: "64644144"
   
 ## <a name="see-also"></a>另請參閱
 
-- [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)
-- [如何：刪除登錄機碼](../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)
+- [Computer. Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)
+- [作法：刪除登錄機碼](../developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)

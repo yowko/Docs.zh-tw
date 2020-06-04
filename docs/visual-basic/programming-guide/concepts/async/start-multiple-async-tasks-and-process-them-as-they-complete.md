@@ -2,12 +2,12 @@
 title: 啟動多項非同步工作並在它們完成時進行處理
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: b14171196a95e9a6a12f6b13f6f17d3cfe352bce
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: e227029928676e21d3ed14450140e92b386bf216
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266842"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400793"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>啟動多項非同步工作並在它們完成時進行處理 (Visual Basic)
 使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。  
@@ -24,7 +24,7 @@ ms.locfileid: "78266842"
   
 2. 在功能表列上，依序選擇 [檔案] ****、[開啟舊檔] **** 及 [專案/方案] ****。  
   
-3. 在 **"打開專案"** 對話方塊中，打開保存解壓縮示例代碼的資料夾，然後打開 AsyncFineTuningVB 的解決方案 （.sln） 檔。  
+3. 在 [**開啟專案**] 對話方塊中，開啟保存解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningVB 的方案（.sln）檔案。  
   
 4. 在方案總管**** 中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "78266842"
   
 6. 執行專案數次，確認所下載的長度不一定會以相同的順序出現。  
   
- 如果不想下載專案，可以在本主題末尾查看 MainWindow.xaml.vb 檔。  
+ 如果您不想要下載專案，您可以參閱本主題結尾的 Mainwindow.xaml。  
   
 ## <a name="building-the-example"></a>建置範例  
- 此示例添加到在["一個完成後取消剩餘非同步任務"中開發的代碼（視覺化基本任務），](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)並使用相同的 UI。  
+ 這個範例會新增至在[完成一項工作（Visual Basic）](cancel-remaining-async-tasks-after-one-is-complete.md)並使用相同的 UI 後，于取消剩餘的非同步工作中所開發的程式碼。  
   
  若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelAfterOneTask]**** 作為 [啟始專案]****。 將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。 變更會標上星號。  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- 在專案的 MainWindow.xaml.vb 檔中，對`AccessTheWebAsync`方法進行以下更改。  
+ 在專案的 Mainwindow.xaml 中，對方法進行下列變更 `AccessTheWebAsync` 。  
   
 - 套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。  
   
@@ -80,10 +80,10 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
  您應該執行專案數次，確認所下載的長度不一定會以相同的順序出現。  
   
 > [!CAUTION]
-> 您可以如這個範例所述在迴圈中使用 `WhenAny`，以解決牽涉到少量工作的問題。 不過，如果您有大量的工作要處理，其他方法會更有效率。 有關詳細資訊和示例，請參閱[任務完成時的處理任務](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)。  
+> 您可以如這個範例所述在迴圈中使用 `WhenAny`，以解決牽涉到少量工作的問題。 不過，如果您有大量的工作要處理，其他方法會更有效率。 如需詳細資訊和範例，請參閱在工作[完成時進行處理](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)。  
   
 ## <a name="complete-example"></a>完整範例  
- 以下代碼是主視窗.xaml.vb 檔的完整文本。 星號會標記已針對此範例新增的項目。  
+ 下列程式碼是範例的 Mainwindow.xaml 檔案的完整文字。 星號會標記已針對此範例新增的項目。  
   
  請注意，您必須新增 <xref:System.Net.Http> 的參考。  
   
@@ -208,6 +208,6 @@ End Class
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [微調非同步應用程式 (Visual Basic)](fine-tuning-your-async-application.md)
+- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](index.md)
 - [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式)

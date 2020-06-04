@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: bd3f6e5cff41551240d9904ab93af8758eb104d2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 646c6ce307131f3edba194af19920eade9c1753c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346080"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84389110"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>逐步解說：定義類別 (Visual Basic)
 
@@ -30,26 +30,26 @@ ms.locfileid: "74346080"
   
 ## <a name="to-define-a-class"></a>若要定義類別
   
-1. 按一下 **[檔案**] 功能表上的 [**新增專案**] 來建立專案。 [ **新增專案** ] 對話方塊隨即出現。  
+1. 按一下 **[檔案**] 功能表上的 [**新增專案**] 來建立專案。 [新增專案]  對話方塊隨即出現。  
   
 2. 從 Visual Basic 專案範本清單中選取 [Windows 應用程式]，以顯示新的專案。  
   
-3. 按一下 [**專案**] 功能表上的 [**加入類別**]，將新的類別加入至專案。 [新增項目] 對話方塊隨即出現。  
+3. 按一下 [**專案**] 功能表上的 [**加入類別**]，將新的類別加入至專案。 [加入新項目] **** 對話方塊隨即出現。  
   
 4. 選取 [**類別**] 範本。  
   
-5. 將新類別**命名為 `UserNameInfo.vb`，然後按一下 [** 新增] 以顯示新類別的程式碼。  
+5. 將新類別命名為 `UserNameInfo.vb` ，然後按一下**Add** [新增] 以顯示新類別的程式碼。  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
-    > 您可以使用 Visual Basic 程式**代碼編輯器**，輸入 `Class` 關鍵字並在後面加上新類別的名稱，以將類別新增至啟動表單。 [程式**代碼編輯器**] 會為您提供對應的 `End Class` 語句。  
+    > 您可以使用 [Visual Basic 程式**代碼編輯器**]，輸入 `Class` 關鍵字並在後面加上新類別的名稱，以將類別新增至啟動表單。 [程式**代碼編輯器**] `End Class` 會為您提供對應的語句。  
   
-6. 在 `Class` 和 `End Class` 語句之間加入下列程式碼，以定義類別的私用欄位：  
+6. 在和語句之間加入下列程式碼，以定義類別的私用欄位 `Class` `End Class` ：  
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     將欄位宣告為 `Private` 表示它只能在類別中使用。 您可以使用存取修飾詞（例如提供更多存取權的 `Public`），將欄位從類別外部提供。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+     將欄位宣告為， `Private` 表示它只能在類別中使用。 您可以使用存取修飾詞（例如 `Public` ，提供更多存取權），將欄位從類別外部提供。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../declared-elements/access-levels.md)。  
   
 7. 藉由新增下列程式碼來定義類別的屬性：  
   
@@ -59,11 +59,11 @@ ms.locfileid: "74346080"
   
      [!code-vb[VbVbalrOOP#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#9)]
   
-9. 藉由新增名為 `Sub New`的程式，為新的類別定義參數化的函式：  
+9. 藉由新增名為的程式，為新的類別定義參數化的函式 `Sub New` ：  
   
      [!code-vb[VbVbalrOOP#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#10)]
   
-     當建立以這個類別為基礎的物件時，會自動呼叫 `Sub New` 的函式。 此函式會設定保留使用者名稱的欄位值。  
+     `Sub New`建立以這個類別為基礎的物件時，會自動呼叫此函式。 此函式會設定保留使用者名稱的欄位值。  
   
 ## <a name="to-create-a-button-to-test-the-class"></a>若要建立按鈕來測試類別
   
@@ -75,11 +75,11 @@ ms.locfileid: "74346080"
   
 ## <a name="to-run-your-application"></a>執行應用程式
   
-1. 按 F5 鍵執行您的應用程式。 按一下表單上的按鈕以呼叫測試程式。 它會顯示一則訊息，指出原始 `UserName` 是 "摩爾，胡，"，因為此程式呼叫了物件的 `Capitalize` 方法。  
+1. 按 F5 鍵執行您的應用程式。 按一下表單上的按鈕以呼叫測試程式。 它會顯示一則訊息，說明原始的 `UserName` 是 "摩爾，胡，"，因為程式呼叫了 `Capitalize` 物件的方法。  
   
-2. 按一下 [確定] 來解除訊息方塊。 `Button1 Click` 程式會變更 [`UserName`] 屬性的值，並顯示一則訊息，指出 `UserName` 的新值為 "Worden，Joe"。  
+2. 按一下 [確定]**** 來解除訊息方塊。 此程式 `Button1 Click` 會變更屬性的值 `UserName` ，並顯示一則訊息，指出的新值 `UserName` 為 "Worden，Joe"。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [物件導向程式設計 (Visual Basic)](../../concepts/object-oriented-programming.md)
-- [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [物件和類別](index.md)

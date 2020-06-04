@@ -1,17 +1,17 @@
 ---
-title: 引數 '<argumentname>' 不是有效的值
+title: 引數 '<argumentname>' 不是有效值
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValue1
 ms.assetid: 38d937f1-3f81-4c15-834f-c4a2769a0011
-ms.openlocfilehash: 72b20b57c5d492806d75d3ced8feb8ebfe0b3791
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf885961923dbd738909a209c67cc8409a3fc675
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666088"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412880"
 ---
-# <a name="argument-argumentname-is-not-a-valid-value"></a>引數 '\<引數名稱 >' 不是有效的值
+# <a name="argument-argumentname-is-not-a-valid-value"></a>引數 '\<argumentname>' 不是有效值
 引數的值無效。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -22,4 +22,4 @@ ms.locfileid: "61666088"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以傳值和傳址方式傳遞引數](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [以傳值和傳址方式傳遞引數](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

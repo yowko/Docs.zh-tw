@@ -2,18 +2,18 @@
 title: 集合
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: d27761ba7a955d1dc8843ad168a82a9c9c27a6f6
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202451"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400651"
 ---
 # <a name="collections-visual-basic"></a>集合 (Visual Basic)
 
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。
 
-陣列是最適用於建立和處理固定數目的強類型物件。 如需陣列的資訊，請參閱[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
+陣列是最適用於建立和處理固定數目的強類型物件。 如需陣列的資訊，請參閱[陣列](../language-features/arrays/index.md)。
 
 集合會提供較具彈性的方式來使用物件群組。 與陣列不同的是，您使用的物件群組可依程式變更的需要來動態增減。 對於某些集合，您可以將索引鍵值指派給您放入集合的任何物件，讓您可以藉由使用索引鍵快速擷取物件。
 
@@ -22,7 +22,7 @@ ms.locfileid: "84202451"
 如果集合包含只有一個資料類型的項目，則可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。 當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。
 
 > [!NOTE]
-> 針對本主題中的範例，請[Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)包含 `System.Collections.Generic` 和命名空間的 Imports 語句 `System.Linq` 。
+> 針對本主題中的範例，請[Imports](../../language-reference/statements/imports-statement-net-namespace-and-type.md)包含 `System.Collections.Generic` 和命名空間的 Imports 語句 `System.Linq` 。
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -30,7 +30,7 @@ ms.locfileid: "84202451"
 
 本節中的範例使用泛型 <xref:System.Collections.Generic.List%601> 類別，能夠讓您使用強型別物件清單。
 
-下列範例會建立字串清單，然後使用[For Each ... 來逐一查看字串。下一個](../../../visual-basic/language-reference/statements/for-each-next-statement.md)語句。
+下列範例會建立字串清單，然後使用[For Each ... 來逐一查看字串。下一個](../../language-reference/statements/for-each-next-statement.md)語句。
 
 ```vb
 ' Create a list of strings.
@@ -47,7 +47,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-如果預先知道集合的內容，即可使用「集合初始設定式」** 來初始化集合。 如需詳細資訊，請參閱[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。
+如果預先知道集合的內容，即可使用「集合初始設定式」** 來初始化集合。 如需詳細資訊，請參閱[集合初始設定式](../language-features/collection-initializers/index.md)。
 
 下列範例與前一個範例相同，但有一點除外，就是集合初始設定式是用來將項目加入集合中。
 
@@ -63,7 +63,7 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-您可以使用[For .。。下](../../../visual-basic/language-reference/statements/for-next-statement.md)一個語句，而不是用 `For Each` 來逐一查看集合的語句。 您可以藉由依索引位置存取集合項目來完成這項作業。 項目的索引以 0 開始，並以項目計數減 1 結束。
+您可以使用[For .。。下](../../language-reference/statements/for-next-statement.md)一個語句，而不是用 `For Each` 來逐一查看集合的語句。 您可以藉由依索引位置存取集合項目來完成這項作業。 項目的索引以 0 開始，並以項目計數減 1 結束。
 
 下列範例會使用 `For…Next` 來逐一查看集合的項目，而不是使用 `For Each`。
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-下列範例會移除泛型清單中的項目。 而不是 `For Each` 語句，[針對 .。。](../../../visual-basic/language-reference/statements/for-next-statement.md)會使用以遞減順序逐一查看的下一個語句。 這是因為 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法導致在已移除之項目後面的項目具有較低的索引值。
+下列範例會移除泛型清單中的項目。 而不是 `For Each` 語句，[針對 .。。](../../language-reference/statements/for-next-statement.md)會使用以遞減順序逐一查看的下一個語句。 這是因為 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法導致在已移除之項目後面的項目具有較低的索引值。
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -173,7 +173,7 @@ End Class
 
 下表列出 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間的一些常用類別：
 
-|類別|描述|
+|類別|說明|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|表示根據索引鍵所整理的索引鍵/值組集合。|
 |<xref:System.Collections.Generic.List%601>|表示可以依照索引存取的物件清單。 提供搜尋、排序和修改清單的方法。|
@@ -203,7 +203,7 @@ End Class
 
 下表列出 `System.Collections` 命名空間的一些常用類別：
 
-|類別|描述|
+|類別|說明|
 |---|---|
 |<xref:System.Collections.ArrayList>|代表會視需要動態增加大小的物件陣列。|
 |<xref:System.Collections.Hashtable>|代表根據索引鍵的雜湊程式碼，所整理的索引鍵/值組集合。|
@@ -224,7 +224,7 @@ Visual Basic `Collection` 類別會將其所有項目儲存為類型 `Object`，
 
 可能的話，請盡量使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 或 <xref:System.Collections.Concurrent> 命名空間中的泛型集合，而非 Visual Basic `Collection` 類別。
 
-如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Collection>。
+如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Collection> 。
 
 <a name="BKMK_KeyValuePairs"></a>
 
@@ -330,7 +330,7 @@ End Sub
 
 ## <a name="using-linq-to-access-a-collection"></a>使用 LINQ 存取集合
 
-LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 如需詳細資訊，請參閱[Visual Basic 中的 LINQ 消費者入門](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)。
+LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 如需詳細資訊，請參閱[Visual Basic 中的 LINQ 消費者入門](linq/getting-started-with-linq.md)。
 
 下列範例會對泛型 `List` 執行 LINQ 查詢。 LINQ 查詢會傳回包含結果的不同集合。
 
@@ -538,13 +538,13 @@ End Class
 
 ## <a name="iterators"></a>迭代器
 
-「迭代器」** 是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 反覆運算器會使用[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)語句，一次傳回集合中的每個元素。
+「迭代器」** 是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 反覆運算器會使用[Yield](../../language-reference/statements/yield-statement.md)語句，一次傳回集合中的每個元素。
 
-您可以使用[For Each ... 來呼叫反覆運算器。下一個](../../../visual-basic/language-reference/statements/for-each-next-statement.md)語句。 `For Each` 迴圈的每個反覆項目都會呼叫迭代器。 在迭代器中到達 `Yield` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
+您可以使用[For Each ... 來呼叫反覆運算器。下一個](../../language-reference/statements/for-each-next-statement.md)語句。 `For Each` 迴圈的每個反覆項目都會呼叫迭代器。 在迭代器中到達 `Yield` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
 
-如需詳細資訊，請參閱[反覆運算器（Visual Basic）](../../../visual-basic/programming-guide/concepts/iterators.md)。
+如需詳細資訊，請參閱[反覆運算器（Visual Basic）](iterators.md)。
 
-下列範例使用了 iterator 方法。 Iterator 方法的 `Yield` 語句位於[For .。。下一個](../../../visual-basic/language-reference/statements/for-next-statement.md)迴圈。 在 `ListEvenNumbers` 方法中，`For Each` 陳述式主體的每個反覆項目都會建立對 Iterator 方法的呼叫，這個方法將繼續執行下一個 `Yield` 陳述式。
+下列範例使用了 iterator 方法。 Iterator 方法的 `Yield` 語句位於[For .。。下一個](../../language-reference/statements/for-next-statement.md)迴圈。 在 `ListEvenNumbers` 方法中，`For Each` 陳述式主體的每個反覆項目都會建立對 Iterator 方法的呼叫，這個方法將繼續執行下一個 `Yield` 陳述式。
 
 ```vb
 Public Sub ListEvenNumbers()
@@ -570,10 +570,10 @@ End Function
 
 ## <a name="see-also"></a>另請參閱
 
-- [集合初始化運算式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [程式設計概念 (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
-- [Long](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [集合初始化運算式](../language-features/collection-initializers/index.md)
+- [程式設計概念 (Visual Basic)](index.md)
+- [Long](../../language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](linq/linq-to-objects.md)
 - [平行 LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [集合和資料結構](../../../standard/collections/index.md)
 - [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)

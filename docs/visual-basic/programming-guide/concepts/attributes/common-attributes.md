@@ -2,20 +2,20 @@
 title: 常見屬性
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353533"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400715"
 ---
-# <a name="common-attributes-visual-basic"></a>一般屬性（Visual Basic）
+# <a name="common-attributes-visual-basic"></a>通用屬性 (Visual Basic)
 
 本主題描述最常在 Visual Basic 程式中使用的屬性。
 
 - [全域屬性](#Global)
 
-- [Obsolete 屬性](#Obsolete)
+- [過時的屬性](#Obsolete)
 
 - [條件式屬性](#Conditional)
 
@@ -23,7 +23,7 @@ ms.locfileid: "74353533"
 
 - [Visual Basic 屬性](#VB)
 
-## <a name="Global"></a> 全域屬性
+## <a name="global-attributes"></a><a name="Global"></a>全域屬性
 
 大部分屬性會套用至特定語言項目 (例如類別或方法)；不過，有些屬性是全域屬性，其套用至整個組件或模組。 例如，<xref:System.Reflection.AssemblyVersionAttribute> 屬性可以用來將版本資訊內嵌到組件，與下面類似：
 
@@ -31,7 +31,7 @@ ms.locfileid: "74353533"
 <Assembly: AssemblyVersion("1.0.0.0")>
 ```
 
-全域屬性會出現在原始程式碼中任何頂層 `Imports` 語句之後，以及任何類型、模組或命名空間宣告之前。 全域屬性可以出現在多個原始程式檔中，但必須使用單一編譯階段編譯檔案。 對於 Visual Basic 專案，全域屬性通常會放在 AssemblyInfo .vb 檔案中（當您在 Visual Studio 中建立專案時，就會自動建立檔案）。
+全域屬性會出現在原始程式碼中的任何最上層 `Imports` 語句之後，以及任何類型、模組或命名空間宣告的前面。 全域屬性可以出現在多個原始程式檔中，但必須使用單一編譯階段編譯檔案。 對於 Visual Basic 專案，全域屬性通常會放在 AssemblyInfo .vb 檔案中（當您在 Visual Studio 中建立專案時，就會自動建立檔案）。
 
 組件屬性是提供組件相關資訊的值。 它們的分類如下：
 
@@ -79,7 +79,7 @@ ms.locfileid: "74353533"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|定義自訂屬性，以指定組件資訊清單的組件設定 (例如零售或偵錯)。|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定義組件資訊清單的易記預設別名。|
 
-## <a name="Obsolete"></a> Obsolete 屬性
+## <a name="obsolete-attribute"></a><a name="Obsolete"></a>過時的屬性
 
 `Obsolete` 屬性會將程式實體標記為不再建議使用的標記。 每次使用標記為已淘汰的實體都會接著產生警告或錯誤 (視屬性的設定方式而定)。 例如：
 
@@ -122,7 +122,7 @@ b.NewMethod()
 
 `Obsolete` 屬性是單次使用屬性，並且可以套用至任何允許屬性的實體。 `Obsolete` 是 <xref:System.ObsoleteAttribute> 的別名。
 
-## <a name="Conditional"></a> 條件式屬性
+## <a name="conditional-attribute"></a><a name="Conditional"></a> 條件式屬性
 
 `Conditional` 屬性會根據前置處理識別碼來執行方法。 `Conditional` 屬性是 <xref:System.Diagnostics.ConditionalAttribute> 的別名，而且可以套用至方法或屬性類別。
 
@@ -218,21 +218,21 @@ Class SampleClass
 End Class
 ```
 
-## <a name="CallerInfo"></a> 呼叫端資訊屬性
+## <a name="caller-info-attributes"></a><a name="CallerInfo"></a>呼叫端資訊屬性
 
 使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。
 
 若要取得成員呼叫端資訊，請使用套用至選擇性參數的屬性。 每個選擇性參數都會指定預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：
 
-|屬性|描述|輸入|
+|屬性|描述|類型|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含呼叫端的原始程式檔完整路徑。 這是編譯時期的路徑。|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|原始程式檔中呼叫方法的行號。|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法名稱或屬性名稱。 如需詳細資訊，請參閱[呼叫端資訊（Visual Basic）](../../../../visual-basic/programming-guide/concepts/caller-information.md)。|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法名稱或屬性名稱。 如需詳細資訊，請參閱[呼叫端資訊（Visual Basic）](../caller-information.md)。|`String`|
 
-如需有關「呼叫端資訊」屬性的詳細資訊，請參閱[呼叫端資訊（Visual Basic）](../../../../visual-basic/programming-guide/concepts/caller-information.md)。
+如需有關「呼叫端資訊」屬性的詳細資訊，請參閱[呼叫端資訊（Visual Basic）](../caller-information.md)。
 
-## <a name="VB"></a>Visual Basic 屬性
+## <a name="visual-basic-attributes"></a><a name="VB"></a>Visual Basic 屬性
 
 下表列出 Visual Basic 特有的屬性。
 
@@ -245,15 +245,15 @@ End Class
 
 ### <a name="comclassattribute"></a>COMClassAttribute
 
-使用 `COMClassAttribute` 來簡化從 Visual Basic 建立 COM 元件的程式。 COM 物件與 .NET Framework 元件有很大的不同，而沒有 `COMClassAttribute`，您需要遵循幾個步驟，從 Visual Basic 產生 COM 物件。 對於標記為 `COMClassAttribute`的類別，編譯器會自動執行其中許多步驟。
+使用 `COMClassAttribute` 簡化從 Visual Basic 建立 COM 元件的程式。 COM 物件與 .NET Framework 元件的差異很大，而且 `COMClassAttribute` 您必須遵循幾個步驟，從 Visual Basic 產生 com 物件。 對於標記為的類別 `COMClassAttribute` ，編譯器會自動執行其中許多步驟。
 
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute
 
-使用 `HideModuleNameAttribute`，讓模組成員只能使用模組所需的限定性來存取。
+使用 `HideModuleNameAttribute` 可讓您只使用模組所需的限定性來存取模組成員。
 
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute
 
-使用 `VBFixedStringAttribute` 強制 Visual Basic 建立固定長度的字串。 字串預設為可變長度，而且當您將字串儲存至檔案時，這個屬性會很有用。 下列程式碼將示範此作業：
+用 `VBFixedStringAttribute` 來強制 Visual Basic 建立固定長度的字串。 字串預設為可變長度，而且當您將字串儲存至檔案時，這個屬性會很有用。 下列程式碼將示範此作業：
 
 ```vb
 Structure Worker
@@ -269,11 +269,11 @@ End Structure
 
 使用 `VBFixedArrayAttribute` 來宣告大小固定的陣列。 如同 Visual Basic 字串，陣列預設為可變長度。 將資料序列化或寫入檔案時，這個屬性很有用。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic 程式設計指南](../../index.md)
 - [屬性](../../../../standard/attributes/index.md)
-- [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [使用反映存取屬性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [反映 (Visual Basic)](../reflection.md)
+- [使用反映存取屬性 (Visual Basic)](accessing-attributes-by-using-reflection.md)

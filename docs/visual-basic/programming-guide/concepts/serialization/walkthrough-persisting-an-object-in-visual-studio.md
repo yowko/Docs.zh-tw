@@ -2,18 +2,18 @@
 title: 在 Visual Studio 中保存物件
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: fbd342c929e8519571c0f6bb76d4091efcfe4476
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4eaf87c99ea1577d7f3ca40e628c00cc2700511
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350401"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413125"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio 中保存物件 (Visual Basic)
 雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。  
   
 > [!NOTE]
-> 在 Visual Basic 中，您可以使用 `My.Settings` 物件來儲存簡單的資料，例如名稱或號碼。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
+> 在 Visual Basic 中，您可以使用 `My.Settings` 物件來儲存簡單的資料，例如名稱或號碼。 如需詳細資訊，請參閱 [My.Settings 物件](../../../language-reference/objects/my-settings-object.md)。  
   
  在本逐步解說中，您將建立簡單的 `Loan` 物件，並將其資料保存至檔案。 當您重新建立物件時，即會從檔案擷取資料。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "74350401"
 > 這個範例會將資料儲存在二進位檔中。 這些格式不適用於敏感性資料，例如密碼或信用卡資訊。  
   
 > [!NOTE]
-> 根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請在 [工具] 功能表上按一下 [匯入和匯出設定] 。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
+> 您看到的對話方塊與功能表命令，可能會因您所使用的設定或版本，而與說明中所述不同。 若要變更設定，請在 [工具] **** 功能表上按一下 [匯入和匯出設定] **** 。 如需詳細資訊，請參閱[個人化 VISUAL STUDIO IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-loan-object"></a>建立 Loan 物件  
  第一個步驟是建立 `Loan` 類別，以及使用該類別的測試應用程式。  
@@ -33,7 +33,7 @@ ms.locfileid: "74350401"
   
 1. 建立新的類別庫專案，並將它命名為 "LoanClass"。 如需詳細資訊，請參閱[建立方案與專案](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
   
-2. 在方案總管中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名]。 將檔案重新命名為 `Loan`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `Loan`。  
+2. 在方案總管**** 中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名] ****。 將檔案重新命名為 `Loan`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `Loan`。  
   
 3. 將下列 Public 成員新增至類別：  
   
@@ -77,19 +77,19 @@ ms.locfileid: "74350401"
   
 ### <a name="to-create-a-test-application"></a>若要建立測試應用程式  
   
-1. 若要將 Windows Forms 應用程式專案新增至解決方案，請在 [檔案] 功能表上，選擇 [新增]、[新增專案]。  
+1. 若要將 Windows Forms 應用程式專案新增至解決方案，請在 [檔案]**** 功能表上，選擇 [新增]****、[新增專案]****。  
   
-2. 在 [新增專案] 對話方塊中，選擇 [Windows Forms 應用程式]，並輸入 `LoanApp` 作為專案名稱，然後按一下 [確定] 以關閉對話方塊。  
+2. 在 [新增專案]**** 對話方塊中，選擇 [Windows Forms 應用程式]****，並輸入 `LoanApp` 作為專案名稱，然後按一下 [確定]**** 以關閉對話方塊。  
   
-3. 在方案總管中，選擇 LoanApp 專案。  
+3. 在方案總管**** 中，選擇 LoanApp 專案。  
   
-4. 在 [專案] 功能表上，選擇 [設定為啟始專案]。  
+4. 在 [專案]**** 功能表上，選擇 [設定為啟始專案]****。  
   
-5. 在 [專案] 功能表上，選擇 [加入參考]。  
+5. 在 [**專案**] 功能表上，選擇 [**加入參考**]。  
   
-6. 在 [新增參考] 對話方塊中，依序選擇 [專案] 索引標籤和 LoanClass 專案。  
+6. 在 [新增參考]**** 對話方塊中，依序選擇 [專案]**** 索引標籤和 LoanClass 專案。  
   
-7. 按一下 [確定] 關閉對話方塊。  
+7. 按一下 [確定]  關閉對話方塊。  
   
 8. 在設計工具中，將四個 <xref:System.Windows.Forms.TextBox> 控制項加入表單。  
   
@@ -217,5 +217,5 @@ ms.locfileid: "74350401"
   
 ## <a name="see-also"></a>另請參閱
 
-- [序列化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic 程式設計指南](../../../../visual-basic/programming-guide/index.md)
+- [序列化 (Visual Basic)](index.md)
+- [Visual Basic 程式設計指南](../../index.md)

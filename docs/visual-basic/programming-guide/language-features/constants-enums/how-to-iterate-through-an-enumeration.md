@@ -6,28 +6,28 @@ helpviewer_keywords:
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-ms.openlocfilehash: 6e8fd6760565a73d9d3b3d1d02fc872992eea354
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fb6fbdd45ca0e84ccb9fc55296d78e3867d5fe25
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354028"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414423"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>如何：在 Visual Basic 中逐一查看列舉類型
-列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。 若要逐一查看列舉，您可以使用 <xref:System.Enum.GetValues%2A> 方法，將它移至陣列中。 您也可以使用 `For...Each` 語句逐一查看列舉，使用 <xref:System.Enum.GetNames%2A> 或 <xref:System.Enum.GetValues%2A> 方法來解壓縮字串或數值。  
+列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。 若要逐一查看列舉，您可以使用方法將它移入陣列 <xref:System.Enum.GetValues%2A> 。 您也可以使用語句逐一查看列舉 `For...Each` ，使用 <xref:System.Enum.GetNames%2A> 或 <xref:System.Enum.GetValues%2A> 方法來解壓縮字串或數值。  
   
 ### <a name="to-iterate-through-an-enumeration"></a>逐一查看列舉  
   
-- 宣告陣列，並使用 <xref:System.Enum.GetValues%2A> 方法，將列舉轉換為它，然後再傳遞陣列，就像任何其他變數一樣。 下列範例會在逐一查看列舉時，顯示列舉 <xref:Microsoft.VisualBasic.FirstDayOfWeek> 的每個成員。  
+- 宣告陣列，並使用方法將列舉轉換成它，然後 <xref:System.Enum.GetValues%2A> 再傳遞陣列，就像任何其他變數一樣。 下列範例 <xref:Microsoft.VisualBasic.FirstDayOfWeek> 會在逐一查看列舉時顯示列舉的每個成員。  
   
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
-- [何時使用列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
-- [如何：決定與列舉值相關聯的字串](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
-- [如何：參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [列舉的概觀](enumerations-overview.md)
+- [如何：宣告列舉類型](how-to-declare-enumerations.md)
+- [何時使用列舉類型](when-to-use-an-enumeration.md)
+- [如何：決定與列舉值相關聯的字串](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [如何：參考列舉類型成員](how-to-refer-to-an-enumeration-member.md)
+- [列舉和名稱限定性條件](enumerations-and-name-qualification.md)
+- [陣列](../arrays/index.md)

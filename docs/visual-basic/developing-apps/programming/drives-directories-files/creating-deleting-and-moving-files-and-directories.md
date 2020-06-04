@@ -22,12 +22,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12f5e8d29ea92750884e45bf1d9ef05bbfe672b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348915"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401754"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>在 Visual Basic 中建立、刪除和移動檔案和目錄
 
@@ -35,46 +35,46 @@ ms.locfileid: "74348915"
   
 ## <a name="in-this-section"></a>本節內容  
 
- [如何：將具有特定模式的檔案複製到目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ [作法：將具有特定模式的檔案複製到目錄](how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  示範如何將有特定檔名模式的檔案，例如僅 .txt 檔案，複製到目錄。  
   
- [如何：在相同目錄內建立檔案複本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ [作法：在相同目錄中建立檔案複本](how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
  示範如何在相同的目錄中建立檔案複本。  
   
- [如何：於不同目錄內建立檔案複本](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
+ [作法：在不同目錄中建立檔案複本](how-to-create-a-copy-of-a-file-in-a-different-directory.md)  
  示範如何將檔案複製到另一個目錄。  
   
- [如何：建立檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
+ [作法：建立檔案](how-to-create-a-file.md)  
  示範如何建立檔案。  
   
- [如何：刪除檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [作法：刪除檔案](how-to-delete-a-file.md)  
  示範如何刪除檔案。  
   
- [如何：尋找具有特定模式的檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
+ [作法：尋找具有特定模式的檔案](how-to-find-files-with-a-specific-pattern.md)  
  示範如何僅列出目錄中有特定檔名模式的檔案。  
   
- [如何：移動檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)  
+ [作法：移動檔案](how-to-move-a-file.md)  
  示範如何將檔案移至不同的目錄。  
   
- [如何：重新命名檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)  
+ [作法：重新命名檔案](how-to-rename-a-file.md)  
  示範如何重新命名檔案。  
   
- [如何：將目錄複製到另一個目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
+ [作法：將目錄複製到另一個目錄](how-to-copy-a-directory-to-another-directory.md)  
  示範如何將目錄複製到其他位置。  
   
- [如何：建立目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
+ [作法：建立目錄](how-to-create-a-directory.md)  
  示範如何建立目錄。  
   
- [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
+ [作法：尋找具有特定模式的子目錄](how-to-find-subdirectories-with-a-specific-pattern.md)  
  示範如何列出具有特定模式名稱的目錄。  
   
- [如何：取得目錄的檔案集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)  
+ [作法：取得目錄中的檔案集合](how-to-get-the-collection-of-files-in-a-directory.md)  
  示範如何列出目錄中的檔案。  
   
- [如何：擷取我的文件目錄的內容](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
+ [作法：擷取我的文件目錄的內容](how-to-retrieve-the-contents-of-the-my-documents-directory.md)  
  示範如何讀取特殊的目錄結構。  
   
- [如何：剖析檔案路徑](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [作法：剖析檔案路徑](how-to-parse-file-paths.md)  
  示範如何使用 `My` 方法來合併檔案路徑。  
   
 ## <a name="reference"></a>參考  
@@ -120,8 +120,8 @@ ms.locfileid: "74348915"
   
 ## <a name="related-sections"></a>相關章節  
 
- [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [從檔案讀取](reading-from-files.md)  
  列出與讀取檔案建立關聯的工作。  
   
- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [寫入檔案](writing-to-files.md)  
  列出有關寫入檔案的工作。

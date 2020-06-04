@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: 6ee842dbe65cbd9d147e77ec523a2b031d303738
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d241584195da7d6f74b45b191c4f63204c200d45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002384"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357176"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 指定建立 DLL 時的預設基底位址。  
@@ -36,7 +36,7 @@ ms.locfileid: "72002384"
   
  請注意，此位址中的較低順序單字會四捨五入。 例如，如果您指定0x11110001，它會四捨五入為0x11110000。  
   
- 若要完成 DLL 的簽署程式，請使用強`–R`式命名工具（sn.exe）的選項。  
+ 若要完成 DLL 的簽署程式，請使用 `–R` 強式命名工具（sn.exe）的選項。  
   
  如果目標不是 DLL，則會忽略此選項。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72002384"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target （Visual Basic）](../../../visual-basic/reference/command-line-compiler/target.md)
-- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 命令列編譯器](index.md)
+- [-target （Visual Basic）](target.md)
+- [編譯命令列的範例](sample-compilation-command-lines.md)
 - [Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md)）

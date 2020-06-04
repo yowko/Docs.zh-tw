@@ -1,17 +1,17 @@
 ---
-title: 引數 '<argument1>'必須小於或等於引數的長度'<argument2>'
+title: 引數 ' <argument1> ' 必須小於或等於引數 ' ' 的長度 <argument2>
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IndexLELength2
 ms.assetid: 10765f81-79c5-44c2-89c5-888253105b78
-ms.openlocfilehash: dd090b20e2d32ce8313720cc3cb0d3ef9fd76e72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c4d790d5bff421fa3d439e08b9b583cf0385502
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666192"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84412893"
 ---
-# <a name="argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument-argument2"></a>引數 '\<引數 1 >' 必須是小於或等於引數的長度'\<引數 2 >'
+# <a name="argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument-argument2"></a>引數 ' \<argument1> ' 必須小於或等於引數 ' ' 的長度 \<argument2>
 引數的長度超過允許的限制 (透過第二個引數的長度所決定)。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -22,4 +22,4 @@ ms.locfileid: "61666192"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以傳值和傳址方式傳遞引數](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [以傳值和傳址方式傳遞引數](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 12e983ae62fa9f9ea762d434ffe5b73873a4a2e8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351901"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413100"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 
@@ -27,7 +27,7 @@ ms.locfileid: "74351901"
 
 您可以為每個維度提供*索引*或注*標*，藉以指定陣列的元素。 元素是從索引0到該維度的最高索引的每個維度的連續。
 
-下圖顯示具有不同排名之陣列的概念結構。 圖例中的每個元素都會顯示存取它的索引值。 例如，您可以藉由指定 `(1, 0)`的索引，來存取二維陣列第二個數據列的第一個元素。
+下圖顯示具有不同排名之陣列的概念結構。 圖例中的每個元素都會顯示存取它的索引值。 例如，您可以藉由指定索引來存取二維陣列中第二個數據列的第一個元素 `(1, 0)` 。
 
 ![顯示一維陣列的圖表。](./media/array-dimensions/one-dimensional-array.gif)
 
@@ -88,12 +88,12 @@ Dim salesAmounts(11, 30) As Double
 Dim salesAmounts(4, 11, 30) As Double
 ```
 
-請注意，因為每個索引的大小從0到最大值，所以每個 `salesAmounts` 維度都會宣告為小於該維度所需的長度。 另請注意，陣列的大小會隨著每個新的維度而增加。 上述範例中的三個大小分別為31、372和1860個元素。
+請注意，因為每個索引的大小從0到最大值，所以的每個維度 `salesAmounts` 都會宣告為小於該維度所需的長度。 另請注意，陣列的大小會隨著每個新的維度而增加。 上述範例中的三個大小分別為31、372和1860個元素。
 
 > [!NOTE]
-> 您可以建立陣列，而不使用 `Dim` 語句或 `New` 子句。 例如，您可以呼叫 <xref:System.Array.CreateInstance%2A> 方法，或其他元件可以將以這種方式建立的陣列傳遞給您的程式碼。 這類陣列可以具有小於0的下限。 您一律可以使用 <xref:System.Array.GetLowerBound%2A> 方法或 `LBound` 函數，測試維度的下限。
+> 您可以建立陣列，而不使用 `Dim` 語句或 `New` 子句。 例如，您可以呼叫 <xref:System.Array.CreateInstance%2A> 方法，或另一個元件可以將以這種方式建立的陣列傳遞給您的程式碼。 這類陣列可以具有小於0的下限。 您一律可以使用方法或函數，測試維度的下限 <xref:System.Array.GetLowerBound%2A> `LBound` 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [陣列](index.md)
+- [針對陣列進行疑難排解](troubleshooting-arrays.md)

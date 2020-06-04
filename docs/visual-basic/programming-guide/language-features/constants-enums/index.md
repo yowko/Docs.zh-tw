@@ -11,12 +11,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: 858f22df26d44f47848921ee862c1d4c1ca1fc60
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7d15c46c0f6bb00c23dd98e464f61a5f94b0773a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353977"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414398"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic 的常數和列舉類型
 常數是指使用有意義的名稱來取代維持不變的值。 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 您可以使用常數來提供有意義的名稱，而不是數字，讓程式碼更容易讀取。  
@@ -27,15 +27,15 @@ ms.locfileid: "74353977"
   
 |詞彙|定義|  
 |---|---|  
-|[常數的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|本節中的主題描述常數及其用途。|  
-|[列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|本節中的主題描述列舉及其用途。|  
+|[常數的概觀](constants-overview.md)|本節中的主題描述常數及其用途。|  
+|[列舉的概觀](enumerations-overview.md)|本節中的主題描述列舉及其用途。|  
   
 ## <a name="related-sections"></a>相關章節  
   
 |詞彙|定義|  
 |---|---|  
-|[Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)|描述 `Const` 陳述式，該陳述式可用來宣告常數。|  
-|[Enum 陳述式](../../../../visual-basic/language-reference/statements/enum-statement.md)|描述 `Enum` 陳述式，該陳述式可用來建立列舉。|  
-|[Option Explicit 陳述式](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|描述 `Option Explicit` 陳述式，該陳述式可在模組層級用來強制明確宣告該模組中的所有變數。|  
-|[Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|描述 `Option Infer` 陳述式，該陳述式可讓您在宣告變數時使用區域型別推斷。|  
-|[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|描述 `Option Strict` 陳述式，該陳述式會將隱含資料類型轉換僅限於擴展轉換，而且不允許晚期繫結及產生`Object` 類型的隱含類型。|
+|[Const 陳述式](../../../language-reference/statements/const-statement.md)|描述 `Const` 陳述式，該陳述式可用來宣告常數。|  
+|[End 陳述式](../../../language-reference/statements/enum-statement.md)|描述 `Enum` 陳述式，該陳述式可用來建立列舉。|  
+|[Option Explicit 陳述式](../../../language-reference/statements/option-explicit-statement.md)|描述 `Option Explicit` 陳述式，該陳述式可在模組層級用來強制明確宣告該模組中的所有變數。|  
+|[Option Infer 陳述式](../../../language-reference/statements/option-infer-statement.md)|描述 `Option Infer` 陳述式，該陳述式可讓您在宣告變數時使用區域型別推斷。|  
+|[Long](../../../language-reference/statements/option-strict-statement.md)|描述 `Option Strict` 陳述式，該陳述式會將隱含資料類型轉換僅限於擴展轉換，而且不允許晚期繫結及產生`Object` 類型的隱含類型。|

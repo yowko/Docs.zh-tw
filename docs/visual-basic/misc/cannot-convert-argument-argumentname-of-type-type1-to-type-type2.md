@@ -1,17 +1,17 @@
 ---
-title: 無法將轉換的引數 '<argumentname>'的類型'<type1>' 為 type'<type2>'
+title: 無法將 <argumentname> 類型 ' ' 的引數 ' ' 轉換 <type1> 為類型 ' <type2> '
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-ms.openlocfilehash: 33e732f529be2f4d200355e352bb8b7bc7e629f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8881919c6c0e632dec511066eefbd9800a3000b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008120"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400857"
 ---
-# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>無法轉換引數 '\<引數名稱 >' 的類型'\<type1 >' 為類型 '\<type2 >'
+# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>無法將 \<argumentname> 類型 ' ' 的引數 ' ' 轉換 \<type1> 為類型 ' \<type2> '
 轉換作業嘗試將引數轉換為不相容的類型。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -20,4 +20,4 @@ ms.locfileid: "62008120"
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Visual Basic 中的類型轉換](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic 中的類型轉換](../programming-guide/language-features/data-types/type-conversions.md)

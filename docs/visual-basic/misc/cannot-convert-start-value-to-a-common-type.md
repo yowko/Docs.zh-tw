@@ -1,17 +1,17 @@
 ---
-title: 無法轉換類型的起始值 '<type1>'，限制的值'<type2>'和間距的值'<type3>' 為一般類型
+title: 無法將類型 '<type1>' 的起始值、'<type2>' 的限制值和 '<type3>' 的間距值轉換為一般類型
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-ms.openlocfilehash: cdf92cfcba6b17e49ad818d99066c63635ff9809
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7becef7a7ef6abf20ff48aa8c74c0015dda9fdd7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008094"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400831"
 ---
-# <a name="cannot-convert-start-value-of-type-type1-limit-value-of-type2-and-step-value-of-type3-to-a-common-type"></a>無法轉換類型的起始值 '\<type1 >'，限制的值'\<type2 >' 的間距值和 '\<類型 3> >' 為一般類型
+# <a name="cannot-convert-start-value-of-type-type1-limit-value-of-type2-and-step-value-of-type3-to-a-common-type"></a>無法將類型 '\<type1>' 的起始值、'\<type2>' 的限制值和 '\<type3>' 的間距值轉換為一般類型
 指定的 `For...Next` 控制項值具有不同的類型，因此無效，因為它們無法轉換成一般類型。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -20,4 +20,4 @@ ms.locfileid: "62008094"
   
 ## <a name="see-also"></a>另請參閱
 
-- [For...Next 陳述式](../../visual-basic/language-reference/statements/for-next-statement.md)
+- [For...Next 陳述式](../language-reference/statements/for-next-statement.md)

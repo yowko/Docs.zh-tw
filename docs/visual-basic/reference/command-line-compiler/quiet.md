@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-ms.openlocfilehash: 6e773c60469e8426956c92a5aa377741ba5af4d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: f894ed6a778e026ffd3976a63fe3b677eb6a9557
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005287"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400522"
 ---
 # <a name="-quiet"></a>-quiet
 
@@ -30,7 +30,7 @@ ms.locfileid: "72005287"
 
 `-quiet` 預設為非作用中。 當編譯器報告語法相關的錯誤或警告時，它也會從原始程式碼輸出這一行。 對於剖析編譯器輸出的應用程式而言，編譯器可能更方便只輸出診斷的文字。
 
-在下列範例中， `Module1`會在不`-quiet`使用編譯時輸出包含原始程式碼的錯誤。
+在下列範例中， `Module1` 會在不使用編譯時輸出包含原始程式碼的錯誤 `-quiet` 。
 
 ```vb
 Module Module1
@@ -49,18 +49,18 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-以編譯`-quiet`時，編譯器只會輸出下列內容：
+以編譯時 `-quiet` ，編譯器只會輸出下列內容：
 
 ```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> 此`-quiet`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。
+> 此 `-quiet` 選項無法從 Visual Studio 開發環境中使用; 只有在從命令列進行編譯時，才能使用此選項。
 
 ## <a name="example"></a>範例
 
-下列程式碼會`T2.vb`編譯，且不會顯示語法相關編譯器診斷的程式碼：
+下列 `T2.vb` 程式碼會編譯，且不會顯示語法相關編譯器診斷的程式碼：
 
 ```console
 vbc -quiet t2.vb
@@ -68,5 +68,5 @@ vbc -quiet t2.vb
 
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 命令列編譯器](index.md)
+- [編譯命令列的範例](sample-compilation-command-lines.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 318fcc3f35276ba0b2061ba9677c5fde29429f6f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: eef6314f5fc1f5a7fffa7997559f697130f6f755
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348272"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401442"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的運算子優先順序
 當運算式中發生數個作業時，每個元件都會以預先決定的順序（稱為*運算子優先順序*）進行評估和解析。
@@ -42,42 +42,42 @@ ms.locfileid: "74348272"
  遇到
 
 ### <a name="arithmetic-and-concatenation-operators"></a>算術和串連運算子
- 乘冪（`^`）
+ 乘冪（ `^` ）
 
- 一元識別和否定（`+`，`–`）
+ 一元識別和否定（ `+` ， `–` ）
 
- 乘法和浮點除法（`*`，`/`）
+ 乘法和浮點除法（ `*` ， `/` ）
 
- 整數除法（`\`）
+ 整數除法（ `\` ）
 
- 模組化算術（`Mod`）
+ 模組化算術（ `Mod` ）
 
- 加法和減法（`+`，`–`）
+ 加法和減法（ `+` ， `–` ）
 
- 字串串連（`&`）
+ 字串串連（ `&` ）
 
- 算術位移位（`<<`、`>>`）
+ 算術位移位（ `<<` ， `>>` ）
 
 ### <a name="comparison-operators"></a>比較運算子
- 所有比較運算子（`=`、`<>`、`<`、`<=`、`>`、`>=`、`Is`、`IsNot`、`Like`、`TypeOf`...`Is`）
+ 所有比較運算子（ `=` 、 `<>` 、 `<` 、 `<=` 、、、、、 `>` `>=` `Is` `IsNot` `Like` 、 `TypeOf` ... `Is` ）
 
 ### <a name="logical-and-bitwise-operators"></a>邏輯運算子和位元運算子
- 否定（`Not`）
+ 否定（ `Not` ）
 
- 結合（`And`、`AndAlso`）
+ 結合（ `And` 、 `AndAlso` ）
 
- 內含析取（`Or`、`OrElse`）
+ 內含析取（ `Or` ， `OrElse` ）
 
- 獨佔分離（`Xor`）
+ 獨佔分離（ `Xor` ）
 
 ### <a name="comments"></a>註解
- `=` 運算子只是相等比較運算子，而不是指派運算子。
+ `=`運算子只是相等比較運算子，而不是指派運算子。
 
- 字串串連運算子（`&`）不是算術運算子，但在優先順序上，它會與算術運算子群組在一起。
+ 字串串連運算子（ `&` ）不是算術運算子，但優先順序會與算術運算子群組在一起。
 
- `Is` 和 `IsNot` 運算子都是物件參考比較運算子。 它們不會比較兩個物件的值。它們只會檢查以判斷兩個物件變數是否參考相同的物件實例。
+ `Is`和 `IsNot` 運算子是物件參考比較運算子。 它們不會比較兩個物件的值。它們只會檢查以判斷兩個物件變數是否參考相同的物件實例。
 
-## <a name="associativity"></a>順序關聯性
+## <a name="associativity"></a>關聯性
  當相等優先順序的運算子同時出現在運算式中時（例如乘法和除法），編譯器會在每個作業從左至右遇到時進行評估。 下列範例將說明這點。
 
 ```vb
@@ -86,7 +86,7 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)
 ```
 
- 第一個運算式會評估除法 96/8 （這會產生12），然後是除法 12/4，這會產生三個。 因為編譯器會從左至右評估 `n1` 的作業，所以當明確指出 `n2`的順序時，評估會是相同的。 `n1` 和 `n2` 都有三個結果。 相較之下，`n3` 的結果為48，因為括弧會強制編譯器先評估 8/4。
+ 第一個運算式會評估除法 96/8 （這會產生12），然後是除法 12/4，這會產生三個。 因為編譯器 `n1` 會從左至右評估的作業，所以當明確指出該順序時，評估會是相同的 `n2` 。 `n1`和都 `n2` 有三個結果。 相反地，的 `n3` 結果為48，因為括弧會強制編譯器先評估 8/4。
 
  基於此行為，運算子稱為 Visual Basic 中的*左關聯*。
 
@@ -111,13 +111,13 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [= 運算子](../../../visual-basic/language-reference/operators/assignment-operator.md)
-- [Is 運算子](../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Like 運算子](../../../visual-basic/language-reference/operators/like-operator.md)
-- [TypeOf 運算子](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [Await 運算子](../../../visual-basic/language-reference/operators/await-operator.md)
-- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [= 運算子](assignment-operator.md)
+- [Is 運算子](is-operator.md)
+- [IsNot 運算子](isnot-operator.md)
+- [Like 運算子](like-operator.md)
+- [TypeOf 運算子](typeof-operator.md)
+- [Await 運算子](await-operator.md)
+- [依功能列出運算子](operators-listed-by-functionality.md)
+- [運算子和運算式](../../programming-guide/language-features/operators-and-expressions/index.md)
