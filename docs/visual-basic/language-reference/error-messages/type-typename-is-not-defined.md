@@ -7,35 +7,35 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 1f66b86a61fb0344a449bf0aa46b7655813c7c30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 89e2d1d18b456c96f62d6b9ee1dd8dc9d41bf665
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664250"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386928"
 ---
-# <a name="type-typename-is-not-defined"></a>類型 '\<類型名稱 >' 未定義
-陳述式已參考了尚未定義的類型。 您可以定義在宣告陳述式類型這類`Enum`， `Structure`， `Class`，或`Interface`。  
+# <a name="type-typename-is-not-defined"></a>類型 '\<typename>' 未定義
+語句已參考尚未定義的類型。 您可以在宣告語句中定義類型 `Enum` ，例如、 `Structure` 、 `Class` 或 `Interface` 。  
   
- **錯誤 ID:** BC30002  
+ **錯誤識別碼：** BC30002  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 請確定類型定義，而且它的參考都使用相同的拼字。  
+- 請確定類型定義及其參考皆使用相同的拼寫。  
   
-- 確定存取參考的型別定義。 例如，如果類型是在另一個模組，而且已宣告`Private`、 將型別定義移至參考的模組，或將它宣告`Public`。  
+- 請確定類型定義可供參考存取。 例如，如果類型是在另一個模組中且已宣告 `Private` ，請將類型定義移至參考模組，或將其宣告 `Public` 。  
   
-- 請確定類型的命名空間不會重新定義您的專案內。 如果是，使用`Global`關鍵字來完整限定的型別名稱。 例如，如果專案定義名為命名空間`System`，則<xref:System.Object?displayProperty=nameWithType>無法存取類型，除非它是以完整限定`Global`關鍵字： `Global.System.Object`。  
+- 請確定您的專案中未重新定義類型的命名空間。 如果是，請使用 `Global` 關鍵字來完整限定型別名稱。 例如，如果專案定義名為的命名空間 `System` ，則 <xref:System.Object?displayProperty=nameWithType> 無法存取類型，除非它是以關鍵字完整限定的 `Global` ： `Global.System.Object` 。  
   
-- 如果類型定義，但在 Visual Basic 中，按一下的物件程式庫或在其中定義的型別程式庫未註冊**加入參考**上**專案**功能表、，然後選取適當的物件程式庫或型別程式庫。  
+- 如果已定義類型，但未在 Visual Basic 中註冊其定義所在的物件程式庫或類型程式庫，請按一下 [**專案**] 功能表上的 [**加入參考**]，然後選取適當的物件程式庫或類型程式庫。  
   
-- 請確定類型位於組件的目標.NET Framework 設定檔的一部分。 如需詳細資訊，請參閱[針對 .NET Framework 目標錯誤進行疑難排解](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)。  
+- 請確定該類型位於屬於目標 .NET Framework 設定檔一部分的元件中。 如需詳細資訊，請參閱[針對 .NET Framework 目標錯誤進行疑難排解](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Visual Basic 中的命名空間](../../programming-guide/program-structure/namespaces.md)
+- [End 陳述式](../statements/enum-statement.md)
+- [Structure 陳述式](../statements/structure-statement.md)
+- [Class 陳述式](../statements/class-statement.md)
+- [Interface 陳述式](../statements/interface-statement.md)
 - [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)

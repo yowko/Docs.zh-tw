@@ -1,13 +1,13 @@
 ---
-title: 如何：尋找子項目的子系 (XPath-LINQ to XML)
+title: 作法：尋找子項目的子系 (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: aa6a66f4a53fc74b5946a395f7b61218e680f530
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344677"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405218"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>如何：尋找子專案的子代（XPath-LINQ to XML）（Visual Basic）
 本主題顯示如何利用特定名稱取得子項目的子代項目。  
@@ -69,6 +69,6 @@ Results are identical
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XPath 使用者的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML （Visual Basic）](linq-to-xml-for-xpath-users.md)

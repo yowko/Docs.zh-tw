@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_CannotCalculateRate
 ms.assetid: 17d5c8eb-4716-4b72-977f-a640c02e630d
-ms.openlocfilehash: 86f32251bdbd782e348bbfeb7f0429905b230153
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9ad34342464dc2fe0157513bb4998d519f3462c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904237"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400870"
 ---
 # <a name="cannot-calculate-rate-using-the-arguments-provided"></a>無法使用提供的引數來計算比率
 比率的計算不包含必要的引數。  
@@ -22,4 +22,4 @@ ms.locfileid: "61904237"
   
 ## <a name="see-also"></a>另請參閱
 
-- [財務摘要](../../visual-basic/language-reference/keywords/financial-summary.md)
+- [財務摘要](../language-reference/keywords/financial-summary.md)

@@ -2,12 +2,12 @@
 title: 共變數和反變數
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-ms.openlocfilehash: a75970d98890cb1fb363d4672bd90d376bccf89c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 11dd71a8cfde12b7af1de79e3f5a095f79d8aa6e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352152"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400626"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>共變數和反變數 (Visual Basic)
 
@@ -48,7 +48,7 @@ Dim array() As Object = New String(10) {}
 ' array(0) = 10
 ```
 
-共變數和反變數的方法群組支援可讓您比對方法簽章和委派類型。 這可讓您指派方法給委派，不只是具有相符簽章的方法，也可以是會傳回衍生程度較大類型 (共變數) 的方法，或接受衍生程度比委派類型所指定更小類型 (反變數) 的方法。 如需詳細資訊，請參閱[委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) 和[在委派中使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)。
+共變數和反變數的方法群組支援可讓您比對方法簽章和委派類型。 這可讓您指派方法給委派，不只是具有相符簽章的方法，也可以是會傳回衍生程度較大類型 (共變數) 的方法，或接受衍生程度比委派類型所指定更小類型 (反變數) 的方法。 如需詳細資訊，請參閱[委派中的變異數 (Visual Basic)](variance-in-delegates.md) 和[在委派中使用變異數 (Visual Basic)](using-variance-in-delegates.md)。
 
 下列程式碼範例示範共變數和反變數的方法群組支援。
 
@@ -79,7 +79,7 @@ Shared Sub Test()
 End Sub
 ```
 
-在 .NET Framework 4 或更新版本中，Visual Basic 支援泛型介面和委派中的共變數和反變數，並允許泛型型別參數的隱含轉換。 如需詳細資訊，請參閱[泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。
+在 .NET Framework 4 或更新版本中，Visual Basic 支援泛型介面和委派中的共變數和反變數，並允許泛型型別參數的隱含轉換。 如需詳細資訊，請參閱[泛型介面中的變異數 (Visual Basic)](variance-in-generic-interfaces.md) 和[委派中的變異數 (Visual Basic)](variance-in-delegates.md)。
 
 下列程式碼範例示範泛型介面的隱含參考轉換。
 
@@ -88,15 +88,15 @@ Dim strings As IEnumerable(Of String) = New List(Of String)
 Dim objects As IEnumerable(Of Object) = strings
 ```
 
-如果泛型介面或委派的泛型參數宣告為共變數或反變數，此泛型介面或委派稱為 *variant*。 Visual Basic 可讓您建立自己的 Variant 介面和委派。 如需詳細資訊，請參閱[建立 Variant 泛型介面 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md) 和[委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)。
+如果泛型介面或委派的泛型參數宣告為共變數或反變數，此泛型介面或委派稱為 *variant*。 Visual Basic 可讓您建立自己的 Variant 介面和委派。 如需詳細資訊，請參閱[建立 Variant 泛型介面 (Visual Basic)](creating-variant-generic-interfaces.md) 和[委派中的變異數 (Visual Basic)](variance-in-delegates.md)。
 
-## <a name="related-topics"></a>相關主題
+## <a name="related-topics"></a>[相關主題]
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
-|[泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|
-|[建立 Variant 泛型介面 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|示範如何建立自訂 Variant 介面。|
-|[使用泛型集合介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)|示範 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IComparable%601> 介面中的共變數和反變數支援如何協助您重複使用程式碼。|
-|[委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)|討論泛型和非泛型委派中的共變性和反變數，並提供 .NET Framework 中的 Variant 泛型委派清單。|
-|[使用委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)|示範如何在非泛型委派中使用共變數和反變數支援，以比對方法簽章和委派類型。|
-|[針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)|示範 `Func` 和 `Action` 委派中的共變數和反變數支援如何協助您重複使用程式碼。|
+|[泛型介面中的變異數 (Visual Basic)](variance-in-generic-interfaces.md)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|
+|[建立 Variant 泛型介面 (Visual Basic)](creating-variant-generic-interfaces.md)|示範如何建立自訂 Variant 介面。|
+|[使用泛型集合介面中的變異數 (Visual Basic)](using-variance-in-interfaces-for-generic-collections.md)|示範 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IComparable%601> 介面中的共變數和反變數支援如何協助您重複使用程式碼。|
+|[委派中的變異數 (Visual Basic)](variance-in-delegates.md)|討論泛型和非泛型委派中的共變性和反變數，並提供 .NET Framework 中的 Variant 泛型委派清單。|
+|[使用委派中的變異數 (Visual Basic)](using-variance-in-delegates.md)|示範如何在非泛型委派中使用共變數和反變數支援，以比對方法簽章和委派類型。|
+|[針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)|示範 `Func` 和 `Action` 委派中的共變數和反變數支援如何協助您重複使用程式碼。|
