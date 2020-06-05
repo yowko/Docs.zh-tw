@@ -1,13 +1,13 @@
 ---
-title: 如何：使用群組將檔案分割成許多檔案 (LINQ)
+title: 作法：使用群組將一個檔案分割成多個檔案 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f6b11ab4b4fe11dbf1cb4cf07654b5ef3f6785ad
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348033"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397709"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>如何：使用群組將檔案分割成許多檔案（LINQ）（Visual Basic）
 
@@ -118,9 +118,9 @@ End Class
 
 ## <a name="compile-the-code"></a>編譯程式碼
 
-建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 `Imports` System. Linq 命名空間的語句。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 與字串 (Visual Basic)](linq-and-strings.md)
+- [LINQ 與檔案目錄 (Visual Basic)](linq-and-file-directories.md)

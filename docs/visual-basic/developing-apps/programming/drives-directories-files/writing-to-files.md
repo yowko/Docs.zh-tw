@@ -8,12 +8,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06809ce8a846ea06ff2decdd87f304d1b26a7750
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74352143"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406608"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>在 Visual Basic 中寫入檔案
 
@@ -21,19 +21,19 @@ ms.locfileid: "74352143"
   
 ## <a name="in-this-section"></a>本節內容  
 
- [如何：將文字寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+ [作法：將文字寫入檔案](how-to-write-text-to-files.md)  
  示範如何寫入文字檔。  
   
- [如何：附加至文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ [作法：附加至文字檔](how-to-append-to-text-files.md)  
  示範如何將文字附加至文字檔。  
   
- [如何：寫入二進位檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ [作法：寫入二進位檔案](how-to-write-to-binary-files.md)  
  示範如何寫入二進位檔案。  
   
- [如何：將文字寫入我的文件目錄中的檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ [作法：將文字寫入我的文件目錄中的檔案](how-to-write-text-to-files-in-the-my-documents-directory.md)  
  示範如何在 [我的文件]**** 目錄中建立和寫入新的文字檔。  
   
- [如何：以 StreamWriter 將文字寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ [作法：以 StreamWriter 將文字寫入檔案](how-to-write-text-to-files-with-a-streamwriter.md)  
  示範如何使用 <xref:System.IO.StreamWriter?displayProperty=nameWithType> 物件寫入檔案。  
   
 ## <a name="reference"></a>參考  
@@ -52,14 +52,14 @@ ms.locfileid: "74352143"
   
 ## <a name="related-sections"></a>相關章節  
 
- [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [從檔案讀取](reading-from-files.md)  
  說明如何執行涉及讀取檔案的工作。  
   
- [建立、刪除和移動檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [建立、刪除和移動檔案和目錄](creating-deleting-and-moving-files-and-directories.md)  
  說明如何執行包括建立、刪除、移動和重新命名檔案及目錄的工作。  
   
- [在剪貼簿儲存和讀取資料](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ [在剪貼簿儲存和讀取資料](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  說明如何執行與 `My.Computer.Clipboard` 建立關聯的工作，例如從剪貼簿讀取資料或將資料寫入其中。  
   
- [檔案編碼方式](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [檔案編碼方式](file-encodings.md)  
  提供檔案編碼的概觀。

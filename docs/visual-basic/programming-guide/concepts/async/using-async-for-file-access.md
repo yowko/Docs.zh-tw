@@ -2,12 +2,12 @@
 title: 使用 Async 存取檔案
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 803d182f5b0f3071feb7aae4945bc3c0a1fd82c3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2ee1efa69f4b13224be65fe802ebf5f834c941aa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349114"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400767"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>使用非同步方式存取檔案 (Visual Basic)
 您可以使用非同步功能來存取檔案。 使用 Async 功能，您就可以呼叫非同步方法，而不需要使用回呼或將您的程式碼分散到多種方法或 lambda 運算式上。 若要讓同步程式碼變成非同步，只要呼叫非同步方法 (而不是同步方法)，然後將幾個關鍵字新增至程式碼即可。  
@@ -41,7 +41,7 @@ Imports System.Threading.Tasks
 ## <a name="use-of-the-filestream-class"></a>使用 FileStream 類別  
  本主題中的範例使用 <xref:System.IO.FileStream> 類別，其所包含的一個選項會導致在作業系統層級發生非同步 I/O。 您可以在許多情況下，使用此選項來避免封鎖 ThreadPool 執行緒。 若要啟用此選項，請在建構函式呼叫中指定 `useAsync=true` 或 `options=FileOptions.Asynchronous` 引數。  
   
- 如果您藉由指定檔案路徑來直接開啟它們，就無法搭配使用這個選項與 <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter>。 不過，如果您提供它們已開啟 <xref:System.IO.Stream> 類別的 <xref:System.IO.FileStream>，則可以使用此選項。 請注意，即使已封鎖 ThreadPool 執行緒，非同步呼叫在 UI 應用程式中還是更快，因為在等候期間不會封鎖 UI 執行緒。  
+ 如果您藉由指定檔案路徑來直接開啟它們，就無法搭配使用這個選項與 <xref:System.IO.StreamReader> 和 <xref:System.IO.StreamWriter>。 不過，如果您提供它們已開啟 <xref:System.IO.FileStream> 類別的 <xref:System.IO.Stream>，則可以使用此選項。 請注意，即使已封鎖 ThreadPool 執行緒，非同步呼叫在 UI 應用程式中還是更快，因為在等候期間不會封鎖 UI 執行緒。  
   
 ## <a name="writing-text"></a>寫入文字  
  下列範例會將文字寫入檔案。 在每個 await 陳述式中，此方法會立即結束。 當檔案 I/O 完成時，此方法會在 await 陳述式後面的陳述式繼續進行。 請注意，使用 await 陳述式的方法定義中會有 async 修飾詞。  
@@ -73,10 +73,10 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- 第一個陳述式會傳回一個工作並開始處理檔案。 第二個陳述式具有 await，會立即結束方法並傳回其他工作。 稍後完成處理檔案之後，則會回到 await 後面的陳述式繼續執行。 如需詳細資訊，請參閱[非同步程式中的控制流程（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)。  
+ 第一個陳述式會傳回一個工作並開始處理檔案。 第二個陳述式具有 await，會立即結束方法並傳回其他工作。 稍後完成處理檔案之後，則會回到 await 後面的陳述式繼續執行。 如需詳細資訊，請參閱[非同步程式中的控制流程（Visual Basic）](control-flow-in-async-programs.md)。  
   
 ## <a name="reading-text"></a>讀取文字  
- 下列範例會從檔案讀取文字。 此文字已經過緩衝處理，在本例中已置於 <xref:System.Text.StringBuilder>。 不同於上一個範例，await 的評估會產生一個值。 <xref:System.IO.Stream.ReadAsync%2A> 方法會傳回 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>，因此在作業完成之後，await 的評估會產生 `Int32` 值 (`numRead`)。 如需詳細資訊，請參閱[非同步傳回類型（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)。  
+ 下列範例會從檔案讀取文字。 此文字已經過緩衝處理，在本例中已置於 <xref:System.Text.StringBuilder>。 不同於上一個範例，await 的評估會產生一個值。 <xref:System.IO.Stream.ReadAsync%2A> 方法會傳回 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>，因此在作業完成之後，await 的評估會產生 `Int32` 值 (`numRead`)。 如需詳細資訊，請參閱[非同步傳回類型（Visual Basic）](async-return-types.md)。  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -120,7 +120,7 @@ End Function
 ## <a name="parallel-asynchronous-io"></a>平行非同步 I/O  
  下列範例示範如何平行處理寫入 10 個文字檔的作業。 針對每個檔案，<xref:System.IO.Stream.WriteAsync%2A> 方法會傳回一個工作，此工作之後會新增至工作清單。 `Await Task.WhenAll(tasks)` 陳述式會在所有工作的檔案處理完成時結束方法，並在方法內繼續進行。  
   
- 此範例會在工作完成之後，關閉 <xref:System.IO.FileStream> 區塊中的所有 `Finally` 執行個體。 如果改為在 `FileStream` 陳述式中建立每個 `Imports`，`FileStream` 可能會在工作完成前就被處置。  
+ 此範例會在工作完成之後，關閉 `Finally` 區塊中的所有 <xref:System.IO.FileStream> 執行個體。 如果改為在 `Imports` 陳述式中建立每個 `FileStream`，`FileStream` 可能會在工作完成前就被處置。  
   
  請注意，任何效能提升幾乎完全來自平行處理，而不是非同步處理。 非同步的優點在於不會佔用多個執行緒，而且不會佔用使用者介面執行緒。  
   
@@ -158,10 +158,10 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- 使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法時，您可以指定 <xref:System.Threading.CancellationToken>，這可用來在中途取消作業。 如需詳細資訊，請參閱[微調非同步應用程式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)和[Managed 執行緒中的取消](../../../../standard/threading/cancellation-in-managed-threads.md)。  
+ 使用 <xref:System.IO.Stream.WriteAsync%2A> 和 <xref:System.IO.Stream.ReadAsync%2A> 方法時，您可以指定 <xref:System.Threading.CancellationToken>，這可用來在中途取消作業。 如需詳細資訊，請參閱[微調非同步應用程式（Visual Basic）](fine-tuning-your-async-application.md)和[Managed 執行緒中的取消](../../../../standard/threading/cancellation-in-managed-threads.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [非同步方法的傳回型別 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [非同步程式中的控制流程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](index.md)
+- [非同步方法的傳回型別 (Visual Basic)](async-return-types.md)
+- [非同步程式中的控制流程 (Visual Basic)](control-flow-in-async-programs.md)

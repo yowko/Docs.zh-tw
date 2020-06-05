@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b77618e5cd525cf3ad012405f402681aa5bb52c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333812"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406660"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>逐步解說：在 Visual Basic 中管理檔案和目錄
 
@@ -47,9 +47,9 @@ ms.locfileid: "74333812"
     |控制|屬性|值|  
     |-------------|--------------|-----------|  
     |**ListBox**|**名稱**|`filesListBox`|  
-    |**Button**|**名稱**<br /><br /> **Text**|`browseButton`<br /><br /> **瀏覽**|  
-    |**Button**|**名稱**<br /><br /> **Text**|`examineButton`<br /><br /> **檢查**|  
-    |**CheckBox**|**名稱**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **儲存結果**|  
+    |**Button**|**名稱**<br /><br /> **文字**|`browseButton`<br /><br /> **瀏覽**|  
+    |**Button**|**名稱**<br /><br /> **文字**|`examineButton`<br /><br /> **檢查**|  
+    |**CheckBox**|**名稱**<br /><br /> **文字**|`saveCheckBox`<br /><br /> **儲存結果**|  
     |**FolderBrowserDialog**|**名稱**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>若要選取資料夾，並列出資料夾中的檔案  
@@ -72,7 +72,7 @@ ms.locfileid: "74333812"
   
      隨即將 `GetFiles` 方法所傳回的字串新增至 **ListBox**。  
   
-4. 執行應用程式。 按一下 [ **瀏覽** ] 按鈕。 在 [瀏覽資料夾] 對話方塊中，瀏覽至包含 .txt 檔案的資料夾，然後選取資料夾並按一下 [確定]。********  
+4. 執行應用程式。 按一下 [**流覽]** 按鈕。 在 [瀏覽資料夾] 對話方塊中，瀏覽至包含 .txt 檔案的資料夾，然後選取資料夾並按一下 [確定]。********  
   
      `ListBox` 包含所選資料夾中的 .txt 檔案清單。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "74333812"
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法會將檔案內容讀入 <xref:System.IO.StreamReader>。 系統會由 `StreamReader` 取得第一行的內容，並將其新增至 `StringBuilder`。  
   
-4. 執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。**** 按一下 [確定]  。  
+4. 執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。**** 按一下 [確定]。  
   
      選取 `ListBox` 中的檔案，然後按一下 [檢查]****。 `MessageBox` 隨即顯示檔案資訊。  
   
@@ -167,4 +167,4 @@ ms.locfileid: "74333812"
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [逐步解說：使用 .NET Framework 方法管理檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [逐步解說：使用 .NET Framework 方法管理檔案](walkthrough-manipulating-files-by-using-net-framework-methods.md)

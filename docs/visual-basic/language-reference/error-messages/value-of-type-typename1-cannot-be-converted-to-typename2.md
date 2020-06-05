@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6b35efbc445887c537b94dd299b317a28e5f689
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621192"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406556"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'
-類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'。 型別不相符可能是因為混用了檔案參考和組件的專案參考的 '\<組件名稱 >'。 請嘗試更換的檔案參考 '\<檔案路徑 >' 在專案'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>類型 '\<typename1>' 的值無法轉換成 '\<typename2>'
+類型 ' ' 的值 \<typename1> 無法轉換成 ' \<typename2> '。 類型不符的原因可能是混合了檔案參考與元件 ' ' 的專案參考 \<assemblyname> 。 請嘗試將專案 ' ' 中 ' ' 的檔案參考取代為 \<filepath> \<projectname1> ' ' 的專案參考 \<projectname2> 。  
   
- 其中一個專案可專案參考和檔案參考的情況下，編譯器無法保證一個類型可轉換成另一個。  
+ 在專案同時做為專案參考和檔案參考的情況下，編譯器無法保證一個型別可以轉換成另一個類型。  
   
  下列虛擬程式碼說明可能會產生此錯誤的情況。  
   
@@ -47,19 +47,19 @@ ms.locfileid: "64621192"
   
  `End Class`  
   
- 專案`P1`會透過專案間接的專案參考`P2`專案`P3`，和也直接與檔案參考`P3`。 宣告`commonObject`使用的檔案參考`P3`，而呼叫`P2.getCommonClass`使用的專案參考`P3`。  
+ Project `P1` 會透過專案對專案進行間接專案參考 `P2` `P3` ，同時也會直接參考的檔案 `P3` 。 的宣告會 `commonObject` 使用的檔案參考 `P3` ，而呼叫會 `P2.getCommonClass` 使用的專案參考 `P3` 。  
   
- 在此情況下問題就是檔案參考指定的檔案路徑與名稱的輸出檔案`P3`(通常 p3.dll)，在專案參考中找到的原始碼專案時 (`P3`) 依專案名稱。 因此，編譯器無法保證類型`P3.commonClass`來自相同的原始程式碼，透過兩個不同的參考。  
+ 這種情況的問題在於，檔案參考指定了（通常是 p3）輸出檔的檔案路徑和名稱 `P3` ，而專案參考則是依專案名稱識別來源專案（ `P3` ）。 因此，編譯器無法保證類型會 `P3.commonClass` 透過兩個不同的參考來自相同的原始程式碼。  
   
- 通常會發生這種情況在混合的檔案參考和專案的參考時。 在上圖中，就不會發生問題如果`P1`所做的直接存取的專案參考`P3`而非檔案參考。  
+ 當專案參考和檔案參考混合時，通常就會發生這種情況。 在上圖中，如果 `P1` 直接進行專案參考，而不是檔案參考，就不會發生此問題 `P3` 。  
   
- **錯誤 ID:** BC30955  
+ **錯誤識別碼：** BC30955  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 變更的專案參考的檔案參考。  
+- 將檔案參考變更為專案參考。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Visual Basic 中的類型轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic 中的類型轉換](../../programming-guide/language-features/data-types/type-conversions.md)
 - [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)

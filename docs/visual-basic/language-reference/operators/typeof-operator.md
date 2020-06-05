@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 22af5b8f8488ca44e388596530decd52e33525dc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0cce36073b53442bce63f966f3bd94bd5d70d2a8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350883"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406321"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 運算子 (Visual Basic)
 檢查運算式結果的執行時間類型是否與指定的類型相容。
@@ -47,13 +47,13 @@ result = TypeOf objectexpression IsNot typename
   
 |`typename` 的類型分類|相容性準則|  
 |---------------------------------|-----------------------------|  
-|執行個體|`objectexpression` 的類型 `typename` 或繼承自 `typename`|  
-|結構|`objectexpression` 的類型為 `typename`|  
-|介面|`objectexpression` 會執行 `typename`，或繼承自實作為的類別 `typename`|  
+|類別|`objectexpression` 屬於類型 `typename` 或繼承自 `typename`|  
+|結構|`objectexpression` 屬於類型 `typename`|  
+|介面|`objectexpression` 實作 `typename` 或繼承自實作 `typename` 的類別|  
   
  如果 `objectexpression` 的執行階段類別滿足相容性準則，則 `result` 是 `True`。 否則，`result` 為 `False`。  如果 `objectexpression` 為 null，則 `TypeOf`...`Is` 傳回 `False`，`IsNot` 則傳回 `True`。  
   
- `TypeOf` 一律與 `Is` 關鍵字搭配使用，以建立 `TypeOf`...`Is` 運算式，或使用 `IsNot` 關鍵字來建立 `TypeOf`運算式。`IsNot`  
+ `TypeOf` 一律會使用 `Is` 關鍵字來建構 `TypeOf`...`Is` 運算式，或使用 `IsNot` 關鍵字來建構 `TypeOf`...`IsNot` 運算式。  
   
 ## <a name="example"></a>範例  
  下列範例會使用 `TypeOf`...`Is` 運算式，測試兩個包含各種資料類型的物件參考變數的類型相容性。  
@@ -62,11 +62,11 @@ result = TypeOf objectexpression IsNot typename
   
  變數 `refInteger` 具有執行階段類型 `Integer`。 它相容 `Integer`，但不相容 `Double`。 變數 `refForm` 具有執行階段類型 <xref:System.Windows.Forms.Form>。 它相容 <xref:System.Windows.Forms.Form> (因為那是其類型)、相容 <xref:System.Windows.Forms.Control> (因為 <xref:System.Windows.Forms.Form> 繼承自 <xref:System.Windows.Forms.Control>)，且具有 <xref:System.ComponentModel.IComponent> (因為 <xref:System.Windows.Forms.Form> 繼承自 <xref:System.ComponentModel.Component>，它會實作 <xref:System.ComponentModel.IComponent>)。 不過，`refForm` 不相容 <xref:System.Windows.Forms.Label>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Is 運算子](../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Is 運算子](is-operator.md)
+- [IsNot 運算子](isnot-operator.md)
+- [Comparison Operators in Visual Basic](../../programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic 中的運算子優先順序](operator-precedence.md)
+- [依功能列出運算子](operators-listed-by-functionality.md)
+- [運算子和運算式](../../programming-guide/language-features/operators-and-expressions/index.md)

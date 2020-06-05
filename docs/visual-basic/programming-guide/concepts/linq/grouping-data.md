@@ -2,14 +2,14 @@
 title: 分組資料
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 9a4011b77f91ff241d23f7aeca95925a1e170483
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 8996eee748489c596bc5adc32f53b6b39dbfc6ac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266816"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398379"
 ---
-# <a name="grouping-data-visual-basic"></a>分組資料（可視基礎）
+# <a name="grouping-data-visual-basic"></a>群組資料（Visual Basic）
 分組指的是將資料放在群組中，好讓每一個群組中的項目共用共同的屬性。  
   
  下圖顯示一系列字元的分組結果。 每個群組的索引鍵是字元。  
@@ -20,7 +20,7 @@ ms.locfileid: "78266816"
   
 ## <a name="methods"></a>方法  
   
-|方法名稱|描述|可視基本查詢運算式語法|相關資訊|  
+|方法名稱|Description|Visual Basic 查詢運算式語法|相關資訊|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|共用共同屬性的群組項目。 每個群組都由一個 <xref:System.Linq.IGrouping%602> 物件代表。|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|根據索引鍵選取器函式，將元素插入 <xref:System.Linq.Lookup%602> (一對多字典)。|不適用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -66,7 +66,7 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
-- [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [按子項分組](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [如何：按副檔名分組檔 （LINQ） （可視基本）](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [如何：通過使用組 （LINQ） 將檔拆分為多個檔（可視基本）](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [標準查詢運算子概觀 (Visual Basic)](standard-query-operators-overview.md)
+- [Group By 子句](../../../language-reference/queries/group-by-clause.md)
+- [如何：依副檔名分組檔案（LINQ）（Visual Basic）](how-to-group-files-by-extension-linq.md)
+- [如何：使用群組將檔案分割成許多檔案（LINQ）（Visual Basic）](how-to-split-a-file-into-many-files-by-using-groups-linq.md)

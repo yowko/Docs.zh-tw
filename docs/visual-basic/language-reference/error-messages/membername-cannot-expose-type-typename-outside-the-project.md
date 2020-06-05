@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: ca67e74d7790352bd1842cb8a59fe1525af6e18c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 729a9f385d94412469d318cb804d216827eeb0fd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700893"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397281"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<成員名稱 > ' 無法透過 \<containertype > '\<containertypename > '，在專案外公開類型 '\<typename > '
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<membername>' 無法透過 \<typename> '\<containertype>' 在專案外部公開類型 '\<containertypename>'
 變數、程式參數或函式傳回會在其容器外公開，但它會宣告為不能在容器外公開的類型。  
   
  下列基本架構程式碼會顯示產生此錯誤的情況。  
@@ -27,14 +27,14 @@ Public Class mainClass
 End Class  
 ```  
   
- 宣告 `Protected`、`Friend`、`Protected Friend`或 `Private` 的型別，是為了在其宣告內容外具有有限的存取權。 以較不受限制的存取來使用它做為變數的資料類型，將會破壞此目的。 在上述的基本架構程式碼中，會 `Public` `exposedVar`，並將 `privateClass` 公開給不應存取它的程式碼。  
+ 宣告為、、或的類型， `Protected` `Friend` `Protected Friend` `Private` 目的是要在其宣告內容之外擁有有限的存取權。 以較不受限制的存取來使用它做為變數的資料類型，將會破壞此目的。 在上述的基本架構程式碼中， `exposedVar` 是， `Public` 而且會公開 `privateClass` 給不應存取它的程式碼。  
   
  **錯誤識別碼：** BC30909  
   
-## <a name="to-correct-this-error"></a>若要改正這項錯誤  
+## <a name="to-correct-this-error"></a>更正這個錯誤  
   
 - 將變數、程式參數或函數傳回的存取層級變更為至少與其資料類型的存取層級相同。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Visual Basic 中的存取層級](../../programming-guide/language-features/declared-elements/access-levels.md)

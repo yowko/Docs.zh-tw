@@ -2,27 +2,27 @@
 title: F-P 陳述式
 ms.date: 07/20/2015
 ms.assetid: cdce7ab0-c52e-4d33-a29b-bf32cdacc79f
-ms.openlocfilehash: fcd57321e0fb39a77e89b5b29f66edab6b40763a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0da540df9485fcb9a5b386d76488a5e99264b377
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351216"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404676"
 ---
 # <a name="f-p-statements"></a>F-P 陳述式
 下表包含 Visual Basic language 語句的清單。  
   
 |||||  
 |---|---|---|---|  
-|[針對每個 .。。下一個](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[針對 .。。下一個](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Function](../../../visual-basic/language-reference/statements/function-statement.md)|[Get](../../../visual-basic/language-reference/statements/get-statement.md)|  
-|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[如果 .。。然後 .。。東西](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[Sub New](../../../visual-basic/language-reference/statements/implements-statement.md)|[Imports (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)|  
-|[Imports (XML 命名空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)|[Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)|[Interface](../../../visual-basic/language-reference/statements/interface-statement.md)|[Mid](../../../visual-basic/language-reference/statements/mid-statement.md)|  
-|[模組](../../../visual-basic/language-reference/statements/module-statement.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[發生錯誤時](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
-|[Option \<關鍵字 >](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)|  
-|[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|||  
+|[針對每個 .。。下一個](for-each-next-statement.md)|[For...Next](for-next-statement.md)|[Function](function-statement.md)|[獲取](get-statement.md)|  
+|[GoTo](goto-statement.md)|[If...Then...Else](if-then-else-statement.md)|[實作](implements-statement.md)|[Imports (.NET 命名空間和類型)](imports-statement-net-namespace-and-type.md)|  
+|[Imports (XML 命名空間)](imports-statement-xml-namespace.md)|[沿用](inherits-statement.md)|[介面](interface-statement.md)|[Mid](mid-statement.md)|  
+|[模組](module-statement.md)|[Namespace](namespace-statement.md)|[發生錯誤時](on-error-statement.md)|[運算子](operator-statement.md)|  
+|[件\<keyword>](option-keyword-statement.md)|[Option Compare](option-compare-statement.md)|[Option Explicit](option-explicit-statement.md)|[Option Infer](option-infer-statement.md)|  
+|[Option Strict](option-strict-statement.md)|[屬性](property-statement.md)|||  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [A-E 陳述式](../../../visual-basic/language-reference/statements/a-e-statements.md)
-- [Q-Z 陳述式](../../../visual-basic/language-reference/statements/q-z-statements.md)
-- [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)
+- [A-E 陳述式](a-e-statements.md)
+- [Q-Z 陳述式](q-z-statements.md)
+- [Visual Basic 語言參考](../index.md)

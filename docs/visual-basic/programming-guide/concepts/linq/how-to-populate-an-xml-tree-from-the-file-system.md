@@ -1,13 +1,13 @@
 ---
-title: 如何：從檔案系統填入 XML 樹狀
+title: 作法：從檔案系統填入 XML 樹狀結構
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 5a4c7eaea91db54afcd91d85745dfec27cbabb8c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a3898b63f24bb87ab5e0de47685c36d61f09250b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344481"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396528"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>如何：從檔案系統填入 XML 樹狀結構（Visual Basic）
 XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。 您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。 在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。 反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。  
@@ -114,6 +114,6 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [先進的查詢技術（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [先進的查詢技術（LINQ to XML）（Visual Basic）](advanced-query-techniques-linq-to-xml.md)

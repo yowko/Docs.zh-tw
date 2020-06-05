@@ -1,16 +1,16 @@
 ---
-title: 如何：尋找命名空間中的項目 (XPath-LINQ to XML)
+title: 作法：在命名空間中尋找項目 (XPath-LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 822af6367fab707f52e2dcb7a130d899be1fba26
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3663516e6b6289fe3b1d0599ff3ed4b7dad6a80a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344668"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405192"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>如何：在命名空間中尋找元素（XPath-LINQ to XML）（Visual Basic）
-XPath 運算式可以在特定的命名空間中尋找節點。 XPath 運算式使用命名空間前置詞來指定命名空間。 若要剖析包含命名空間前置詞的 XPath 運算式，您必須將物件傳遞到實作 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法。 這個範例會使用 <xref:System.Xml.XmlNamespaceManager>。  
+XPath 運算式可以在特定的命名空間中尋找節點。 XPath 運算式使用命名空間前置詞來指定命名空間。 若要剖析包含命名空間前置詞的 XPath 運算式，您必須將物件傳遞到實作 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法。 此範例會使用 <xref:System.Xml.XmlNamespaceManager>。  
   
  XPath 運算式為：  
   
@@ -82,4 +82,4 @@ Results are identical
   
 ## <a name="see-also"></a>另請參閱
 
-- [XPath 使用者的 LINQ to XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML （Visual Basic）](linq-to-xml-for-xpath-users.md)

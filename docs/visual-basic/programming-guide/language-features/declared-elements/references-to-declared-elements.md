@@ -6,19 +6,19 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: a6477a9f0abaf8eb9176f4f6ab2a920af6c8f500
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 23bff2eb098982f67ecb1b709e59096d5259a644
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345294"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405179"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>已宣告之項目的參考 (Visual Basic)
 當您的程式碼參考宣告的元素時，Visual Basic 編譯器會將參考中的名稱與該名稱的適當宣告相符。 如果以相同的名稱宣告多個專案，您可以藉由*限定*其名稱來控制要參考哪些元素。  
   
  編譯器會嘗試將名稱參考與最小*範圍*的名稱宣告進行比對。 這表示它會從進行參考的程式碼開始，並透過包含專案的後續層級向外運作。  
   
- 下列範例會顯示兩個名稱相同的變數參考。 此範例會宣告兩個變數，分別命名為 `totalCount`，位於模組 `container`中不同的範圍層級。 當程式 `showCount` 顯示沒有限定的 `totalCount` 時，Visual Basic 編譯器會以最窄的範圍（亦即 `showCount`內的區域宣告）解析宣告的參考。 當它符合包含模組 `container`的 `totalCount` 資格時，編譯器會將參考解析為範圍較廣的宣告。  
+ 下列範例會顯示兩個名稱相同的變數參考。 此範例會宣告兩個變數，每個都會 `totalCount` 在模組中不同的範圍層級上進行命名 `container` 。 當程式 `showCount` 顯示 `totalCount` 但沒有限定性時，Visual Basic 編譯器會以最窄的範圍（亦即內部的區域宣告）解析宣告的參考 `showCount` 。 當它符合 `totalCount` 包含的模組時 `container` ，編譯器會將參考解析為範圍較廣的宣告。  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -70,7 +70,7 @@ End Module
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3. 準備目標元素的限定性字串。 在路徑中的每個元素之後放置句點（`.`）。 您的應用程式必須能夠存取您的限定性字串中的每個元素。  
+3. 準備目標元素的限定性字串。 在 `.` 路徑中的每個元素之後放置句號（）。 您的應用程式必須能夠存取您的限定性字串中的每個元素。  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
@@ -82,7 +82,7 @@ End Module
     grandTotal = 9000  
     ```  
   
-5. 在目標元素名稱前面加上限定性字串。 名稱應該緊接在包含元素的模組、類別或結構後面的句點（`.`）後面。  
+5. 在目標元素名稱前面加上限定性字串。 名稱應該緊接在 `.` 包含元素的模組、類別或結構後面的句點（）後面。  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -95,7 +95,7 @@ End Module
   
 6. 編譯器會使用限定性字串來尋找清楚且明確的宣告，使其可以符合目標專案參考。  
   
- 如果您的應用程式可以存取多個具有相同名稱的程式設計項目，您可能也必須限定名稱參考。 例如，<xref:System.Windows.Forms> 和 <xref:System.Web.UI.WebControls> 命名空間都包含 `Label` 類別（<xref:System.Windows.Forms.Label?displayProperty=nameWithType> 和 <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>）。 如果您的應用程式同時使用，或如果它定義自己的 `Label` 類別，您就必須區分不同的 `Label` 物件。 在變數宣告中包含命名空間或匯入別名。 下列範例會使用匯入別名。  
+ 如果您的應用程式可以存取多個具有相同名稱的程式設計項目，您可能也必須限定名稱參考。 例如， <xref:System.Windows.Forms> 和 <xref:System.Web.UI.WebControls> 命名空間都包含 `Label` 類別（ <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 和 <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType> ）。 如果您的應用程式同時使用，或如果它定義自己的 `Label` 類別，則您必須區分不同的 `Label` 物件。 在變數宣告中包含命名空間或匯入別名。 下列範例會使用匯入別名。  
   
 ```vb  
 ' The following statement must precede all your declarations.  
@@ -105,20 +105,20 @@ Dim winLabel As New win.Label()
 ```  
   
 ## <a name="members-of-other-containing-elements"></a>其他包含元素的成員  
- 當您使用另一個類別或結構的非共用成員時，必須先使用指向類別或結構實例的變數或運算式來限定成員名稱。 在下列範例中，`demoClass` 是名為 `class1`之類別的實例。  
+ 當您使用另一個類別或結構的非共用成員時，必須先使用指向類別或結構實例的變數或運算式來限定成員名稱。 在下列範例中， `demoClass` 是名為之類別的實例 `class1` 。  
   
 ```vb  
 Dim demoClass As class1 = New class1()  
 demoClass.someSub[(argumentlist)]  
 ```  
   
- 您不能使用類別名稱本身來限定未[共用](../../../../visual-basic/language-reference/modifiers/shared.md)的成員。 您必須先在物件變數中建立實例（在此案例中為 `demoClass`），然後再以變數名稱加以參考。  
+ 您不能使用類別名稱本身來限定未[共用](../../../language-reference/modifiers/shared.md)的成員。 您必須先在物件變數中建立實例（在此案例中為 `demoClass` ），然後再以變數名稱來參考它。  
   
- 如果類別或結構具有 `Shared` 的成員，您可以使用類別或結構名稱或指向實例的變數或運算式來限定該成員。  
+ 如果類別或結構具有 `Shared` 成員，您可以使用類別或結構名稱，或使用指向實例的變數或運算式來限定該成員。  
   
- 模組沒有任何個別的實例，而且其所有成員預設都會 `Shared`。 因此，您可以使用模組名稱來限定模組成員。  
+ 模組沒有任何個別的實例，而且其所有成員 `Shared` 預設為。 因此，您可以使用模組名稱來限定模組成員。  
   
- 下列範例會顯示模組成員程式的限定參考。 此範例會在專案的不同模組中，宣告兩個 `Sub` 程式，兩個都有名稱 `perform`。 您可以指定每個模組，而不限定其本身的模組，但如果從任何其他位置參考，則必須限定。 因為 `module3` 中的最後一個參考不符合 `perform`，所以編譯器無法解析該參考。  
+ 下列範例會顯示模組成員程式的限定參考。 此範例會 `Sub` `perform` 在專案的不同模組中，宣告兩個程式，兩者都有名稱。 您可以指定每個模組，而不限定其本身的模組，但如果從任何其他位置參考，則必須限定。 因為中的最後一個參考 `module3` 不符合資格 `perform` ，所以編譯器無法解析該參考。  
   
 ```vb  
 ' Assume these three modules are all in the same assembly.  
@@ -150,9 +150,9 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>專案的參考  
- 若要使用另一個專案中定義的[公用](../../../../visual-basic/language-reference/modifiers/public.md)元素，您必須先設定該專案元件或類型程式庫的*參考*。 若要設定參考，請按一下 [**專案**] 功能表上的 [**加入參考**]，或使用[-reference （Visual Basic）](../../../../visual-basic/reference/command-line-compiler/reference.md)命令列編譯器選項。  
+ 若要使用另一個專案中定義的[公用](../../../language-reference/modifiers/public.md)元素，您必須先設定該專案元件或類型程式庫的*參考*。 若要設定參考，請按一下 [**專案**] 功能表上的 [**加入參考**]，或使用[-reference （Visual Basic）](../../../reference/command-line-compiler/reference.md)命令列編譯器選項。  
   
- 例如，您可以使用 .NET Framework 的 XML 物件模型。 如果您設定 <xref:System.Xml> 命名空間的參考，您可以宣告並使用它的任何類別，例如 <xref:System.Xml.XmlDocument>。 下列範例會使用 <xref:System.Xml.XmlDocument>。  
+ 例如，您可以使用 .NET Framework 的 XML 物件模型。 如果您設定命名空間的參考 <xref:System.Xml> ，您可以宣告並使用它的任何類別，例如 <xref:System.Xml.XmlDocument> 。 下列範例會使用 <xref:System.Xml.XmlDocument>。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -161,7 +161,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>匯入包含元素  
- 您可以使用[Imports 語句（.Net 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)匯*入*包含您要使用之模組或類別的命名空間。 這可讓您參考已匯入之命名空間中定義的元素，而不需完整限定其名稱。 下列範例會重寫前一個範例，以匯入 <xref:System.Xml> 命名空間。  
+ 您可以使用[Imports 語句（.Net 命名空間和類型）](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)匯*入*包含您要使用之模組或類別的命名空間。 這可讓您參考已匯入之命名空間中定義的元素，而不需完整限定其名稱。 下列範例會重寫前一個範例以匯入 <xref:System.Xml> 命名空間。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -171,7 +171,7 @@ Imports System.Xml
 Dim xDoc As XmlDocument  
 ```  
   
- 此外，`Imports` 語句可以為每個匯入的命名空間定義匯*入別名*。 這可讓原始程式碼變得更短且更容易閱讀。 下列範例會重寫上一個範例，以使用 `xD` 做為 <xref:System.Xml> 命名空間的別名。  
+ 此外， `Imports` 語句可以為每個匯入的命名空間定義匯*入別名*。 這可讓原始程式碼變得更短且更容易閱讀。 下列範例會重寫前一個範例， `xD` 做為命名空間的別名使用 <xref:System.Xml> 。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -181,7 +181,7 @@ Imports xD = System.Xml
 Dim xDoc As xD.XmlDocument  
 ```  
   
- `Imports` 語句不會將其他專案中的元素提供給您的應用程式。 也就是說，它不會取代設定參考。 匯入命名空間只會移除限定該命名空間中所定義名稱的需求。  
+ `Imports`語句不會將其他專案中的元素提供給您的應用程式。 也就是說，它不會取代設定參考。 匯入命名空間只會移除限定該命名空間中所定義名稱的需求。  
   
  您也可以使用 `Imports` 語句來匯入模組、類別、結構和列舉。 然後您可以使用這類匯入專案的成員，而不需要限定。 不過，您一律必須使用評估為類別或結構實例的變數或運算式，來限定類別和結構的非共用成員。  
   
@@ -191,14 +191,14 @@ Dim xDoc As xD.XmlDocument
  您可以提供所有元素的唯一名稱，以避免名稱不明確。 然後您可以參考任何專案，而不需要以命名空間、模組或類別來限定其名稱。 您也可以減少意外參考錯誤元素的機會。  
   
 ## <a name="shadowing"></a>遮蔽  
- 當兩個程式設計項目共用相同名稱時，其中一個專案可以隱藏或*遮蔽*另一個。 有陰影的元素無法供參考;相反地，當您的程式碼使用陰影專案名稱時，Visual Basic 編譯器會將它解析成遮蔽元素。 如需範例的詳細說明，請參閱[Visual Basic 中的陰影](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+ 當兩個程式設計項目共用相同名稱時，其中一個專案可以隱藏或*遮蔽*另一個。 有陰影的元素無法供參考;相反地，當您的程式碼使用陰影專案名稱時，Visual Basic 編譯器會將它解析成遮蔽元素。 如需範例的詳細說明，請參閱[Visual Basic 中的陰影](shadowing.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Declared Element Names](declared-element-names.md)
+- [宣告項目特性](declared-element-characteristics.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-- [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [Public](../../../../visual-basic/language-reference/modifiers/public.md)
+- [變數](../variables/index.md)
+- [Imports 陳述式 (.NET 命名空間和類型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New 運算子](../../../language-reference/operators/new-operator.md)
+- [公開](../../../language-reference/modifiers/public.md)

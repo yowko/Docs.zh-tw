@@ -1,5 +1,5 @@
 ---
-title: 如何：將目錄複製到另一個目錄
+title: 作法：將目錄複製到另一個目錄
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: a23079f093f53ab8e20eb71c684a594dcf7f894b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e28f50f6a812188ac7af801cea691818488bd6cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348855"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401715"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>如何：在 Visual Basic 中將目錄複製到另一個目錄
 
@@ -65,5 +65,5 @@ ms.locfileid: "74348855"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
-- [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
-- [如何：取得目錄的檔案集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [作法：尋找具有特定模式的子目錄](how-to-find-subdirectories-with-a-specific-pattern.md)
+- [作法：取得目錄中的檔案集合](how-to-get-the-collection-of-files-in-a-directory.md)
