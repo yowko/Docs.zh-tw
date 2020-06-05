@@ -14,12 +14,12 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b2042862ae81a52d62374e35a456766ed47edc9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348902"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401728"
 ---
 # <a name="file-access-with-visual-basic"></a>使用 Visual Basic 存取檔案
 
@@ -27,23 +27,23 @@ ms.locfileid: "74348902"
   
 ## <a name="in-this-section"></a>本節內容  
 
- [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [從檔案讀取](reading-from-files.md)  
  列出主題，說明如何使用 `My.Computer.FileSystem` 物件從檔案讀取  
   
- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [寫入檔案](writing-to-files.md)  
  列出主題，說明如何使用 `My.Computer.FileSystem` 物件寫入檔案  
   
- [建立、刪除和移動檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ [建立、刪除和移動檔案和目錄](creating-deleting-and-moving-files-and-directories.md)  
  列出主題，說明如何使用 `My.Computer.FileSystem` 物件建立、複製、刪除及移動檔案和資料夾。  
   
- [使用 TextFieldParser 物件剖析文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ [使用 TextFieldParser 物件剖析文字檔](parsing-text-files-with-the-textfieldparser-object.md)  
  討論如何使用 `TextFieldReader` 剖析文字檔 (例如記錄檔)。  
   
- [檔案編碼方式](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [檔案編碼方式](file-encodings.md)  
  說明檔案編碼方式及其用法。  
   
- [逐步解說：在 Visual Basic 中管理檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [逐步解說：在 Visual Basic 中管理檔案和目錄](walkthrough-manipulating-files-and-directories.md)  
  示範如何建立公用程式來報告檔案和資料夾的相關資訊。  
   
- [疑難排解：讀取和寫入文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
+ [疑難排解：讀取和寫入文字檔](troubleshooting-reading-from-and-writing-to-text-files.md)  
  列出讀取和寫入文字檔時遇到的常見問題，並針對每個問題提供補救建議。

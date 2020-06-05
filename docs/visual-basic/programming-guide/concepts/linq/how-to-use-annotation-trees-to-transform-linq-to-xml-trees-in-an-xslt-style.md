@@ -1,13 +1,13 @@
 ---
-title: 如何：使用註釋將 LINQ to XML 樹狀結構轉換為 XSLT 樣式
+title: 作法：使用註釋轉換 XSLT 樣式的 LINQ to XML 樹狀結構
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 099457eaab8c80605138d7e67d7bc2823e316234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348348"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364444"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用注釋轉換 XSLT 樣式中的 LINQ to XML 樹狀結構（Visual Basic）
 
@@ -43,7 +43,7 @@ ms.locfileid: "74348348"
 
 ## <a name="transforming-a-tree"></a>轉換樹狀結構
 
-第一個範例會將所有 `Paragraph` 節點重新命名為 `para`：
+第一個範例會將所有節點重新命名 `Paragraph` 為 `para` ：
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -374,6 +374,6 @@ After Transform
 </Root>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Advanced LINQ to XML 程式設計（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML 程式設計（Visual Basic）](advanced-linq-to-xml-programming.md)

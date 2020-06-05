@@ -1,13 +1,13 @@
 ---
-title: 如何：計算 CSV 文字檔案中的資料行值 (LINQ)
+title: 作法：計算 CSV 文字檔中的欄值 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 230bb26d04a85decc401abaa6c7fd7fc8a6b4806
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 679d53787b1392181696c05e0327ca1b1b910015
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338508"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84357500"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>如何：計算 CSV 文字檔中的資料行值（LINQ）（Visual Basic）
 
@@ -145,9 +145,9 @@ End Class
 
 ## <a name="compile-the-code"></a>編譯程式碼
 
-建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 的主控台應用程式專案，其中包含 `Imports` System. Linq 命名空間的語句。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 與字串 (Visual Basic)](linq-and-strings.md)
+- [LINQ 與檔案目錄 (Visual Basic)](linq-and-file-directories.md)

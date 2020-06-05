@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: bdde4beae242c3175b02cd2af252babb850416f6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 68c898145bd8845c657b6ebb8776a3a9027c359c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346735"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404261"
 ---
 # <a name="rem-statement-visual-basic"></a>REM 陳述式 (Visual Basic)
 用來在程式的原始程式碼中包含說明備註。  
@@ -32,22 +32,22 @@ REM comment
   
 ## <a name="parts"></a>組件  
  `comment`  
- 選擇性。 您想要包含之任何批註的文字。 `REM` 關鍵字與 `comment`之間必須有空格。  
+ 選擇性。 您想要包含之任何批註的文字。 關鍵字與之間必須有空格 `REM` `comment` 。  
   
 ## <a name="remarks"></a>備註  
- 您可以將 `REM` 語句單獨放在一行上，也可以將它放在另一個語句後面的一行。 `REM` 語句必須是該行的最後一個語句。 如果它遵循另一個語句，`REM` 必須以空格與該語句隔開。  
+ 您可以將 `REM` 語句單獨放在一行上，也可以將它放在另一個語句後面的一行。 `REM`語句必須是該行的最後一個語句。 如果它遵循另一個語句， `REM` 必須以空格與該語句隔開。  
   
- 您可以使用單引號（`'`），而不是 `REM`。 無論您的批註是在同一行的另一個語句後面，還是單獨放在一行上，都是如此。  
+ 您可以使用單引號（ `'` ），而不是 `REM` 。 無論您的批註是在同一行的另一個語句後面，還是單獨放在一行上，都是如此。  
   
 > [!NOTE]
-> 您不能使用行接續順序（`_`）繼續 `REM` 語句。 當批註開始時，編譯器不會檢查字元是否有特殊意義。 對於多行批註，請在每一行上使用另一個 `REM` 語句或批註符號（`'`）。  
+> 您不能 `REM` 使用行接續順序（）來繼續執行語句 `_` 。 當批註開始時，編譯器不會檢查字元是否有特殊意義。 對於多行批註，請 `REM` 在每一行上使用另一個語句或批註符號（ `'` ）。  
   
 ## <a name="example"></a>範例  
- 下列範例說明用來在程式中包含說明備註的 `REM` 語句。 它也會顯示使用單引號字元（`'`），而不是 `REM`的替代方法。  
+ 下列範例說明 `REM` 語句，其用來在程式中包含說明備註。 它也會顯示使用單引號字元（ `'` ）而不是的替代方法 `REM` 。  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [程式碼中的註解](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)
-- [操作說明：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [程式碼中的註解](../../programming-guide/program-structure/comments-in-code.md)
+- [作法：程式碼中的 Break 及 Combine 陳述式](../../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: e790a41fc945a395feebc63f8d26efdc51dc4fa9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4868514ab7ddb3c85686f4e71360791f458240a0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74329601"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410097"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>存取電腦的連接埠 (Visual Basic)
 
@@ -18,19 +18,19 @@ ms.locfileid: "74329601"
   
 ## <a name="in-this-section"></a>本節內容  
 
- [作法：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ [作法：顯示可用的序列埠](how-to-show-available-serial-ports.md)  
  示範如何顯示可用的序列埠。  
   
- [作法：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [作法：撥接與序列埠連接的數據機](how-to-dial-modems-attached-to-serial-ports.md)  
  示範如何撥接連接到電腦序列埠的數據機。  
   
- [作法：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [作法：將字串傳送至序列埠](how-to-send-strings-to-serial-ports.md)  
  示範如何將字串傳送至電腦的序列埠。  
   
- [作法：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
+ [作法：接收來自序列埠的字串](how-to-receive-strings-from-serial-ports.md)  
  示範如何接收來自電腦序列埠的字串。  
   
- [.NET Framework 中的連接埠作業](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
+ [.NET Framework 中的連接埠作業](port-operations-in-the-net-framework.md)  
  描述如何在執行連接埠作業時使用 .NET Framework。  
   
 ## <a name="reference"></a>參考  

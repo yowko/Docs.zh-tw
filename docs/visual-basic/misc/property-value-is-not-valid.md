@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID380
 ms.assetid: 38540ad2-e02c-49aa-a2b7-b4c82d719cf1
-ms.openlocfilehash: c0179217ce53962f4e53dae0211595bc0136e919
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf7275f1f94fb8df1ea846e9335cadf9570cb0a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591761"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396891"
 ---
 # <a name="property-value-is-not-valid"></a>屬性值無效
 物件或控制項的其中一個屬性已設定為超出其範圍外部的值。  
@@ -20,4 +20,4 @@ ms.locfileid: "64591761"
   
 ## <a name="see-also"></a>另請參閱
 
-- [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)
+- [錯誤類型](../programming-guide/language-features/error-types.md)
