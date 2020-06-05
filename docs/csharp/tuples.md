@@ -4,12 +4,12 @@ description: 了解 C# 中的未具名和具名 Tuple 類型
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156905"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374612"
 ---
 # <a name="c-tuple-types"></a>C# Tuple 型別
 
@@ -19,7 +19,7 @@ C# Tuple 是您使用輕量型語法所定義的型別。 優點包括更簡單�
 
 > [!NOTE]
 > 新的 Tuple 功能需要 <xref:System.ValueTuple> 類型。
-> 您必須添加 NuGet 包[`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)才能在不包含類型的平臺上使用它。
+> 您必須新增 NuGet 套件 [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) ，才能在不包含類型的平臺上使用它。
 >
 > 這類似於依賴架構中所傳遞類型的其他語言功能。 範例包含依賴 `INotifyCompletion` 介面的 `async` 和 `await` 以及依賴 `IEnumerable<T>` 的 LINQ。 不過，傳遞機制會變更，因為 .NET 變得與平台更為無關。 .NET Framework 可能不會永遠隨附於相同的步調，作為語言編譯器。 如果新語言功能依賴新類型，則在提供語言功能時，會以 NuGet 套件形式提供這些類型。 因為這些新類型會新增至 .NET Standard API 並傳遞為架構的一部分，所以將會移除 NuGet 套件需求。
 
@@ -43,7 +43,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
-上例中的元組使用文本常量初始化，並且不會在 C# 7.1 中使用*元數位段名稱投影*創建元素名稱。
+先前範例中的元組已使用常值常數進行初始化，而且不會使用 c # 7.1 中的*元組功能變數名稱投影*來建立元素名稱。
 
 不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」**。
 具名元組仍會有名為 `Item1`、`Item2`、`Item3` 等等的元素。
@@ -78,7 +78,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 在兩種情況下，候選欄位名稱不會投影至元組欄位：
 
-1. 候選名稱是保留的元組名稱。 示例包括`Item3` `ToString`、`Rest`或 。
+1. 候選名稱是保留的元組名稱。 範例包括 `Item3` 、 `ToString` 或 `Rest` 。
 1. 候選名稱與另一個明確或隱含的元組欄位名稱重複。
 
 這些情況可避免語意模糊。 如果將這些名稱作為元組中的欄位名稱使用，就會造成語意模糊。 這兩種情況都不會造成編譯時期錯誤。 反之，沒有投影名稱的元素不會有語意名稱對其投影。  下列範例將示範這些情況：
@@ -252,7 +252,7 @@ public class Point
 
 任何 Tuple 類型都可以如上進行解構。 也很容易在任何使用者定義型別 (類別、結構，甚至是介面) 上啟用解構。
 
-類型作者可以定義一或多個 `Deconstruct` 方法，以將值指派給任意數目的 `out` 變數，而變數代表構成類型的資料項目。 例如，下列 `Person` 類型會定義 `Deconstruct` 方法，以將人員物件解構為代表名字和姓氏的元素：
+類型作者可以定義一或多個 `Deconstruct` 方法，將值指派給任何數目的[ `out` 變數](language-reference/keywords/out-parameter-modifier.md)，代表構成該類型的資料元素。 例如，下列 `Person` 類型會定義 `Deconstruct` 方法，以將人員物件解構為代表名字和姓氏的元素：
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
@@ -284,13 +284,13 @@ if (("Althea", "Goodwin") == p)
 
 `Deconstruct` 方法可以將 `Person` 物件 `p` 轉換為包含兩個字串的 Tuple，但它並不適用於相等測試的內容中。
 
-## <a name="tuples-as-out-parameters"></a>Tuples 作為出參數
+## <a name="tuples-as-out-parameters"></a>元組當做 out 參數
 
-元數本身*可用作外參數*。 不要與["解構](#deconstruction)"部分前面提到的任何歧義混淆。 在方法調用中，只需描述元組的形狀：
+元組可以當做[ `out` 參數](language-reference/keywords/out-parameter-modifier.md)*本身*來使用。 請勿與先前在[解構](#deconstruction)一節中提及的任何多義性混淆。 在方法呼叫中，您只需要描述元組的圖形：
 
 [!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
 
-或者，您可以使用[_未命名的_](#named-and-unnamed-tuples)元組，並將其欄位稱為`Item1`和 ： `Item2`
+或者，您可以使用[_未命名_](#named-and-unnamed-tuples)的元組，並將其欄位參考為 `Item1` 和 `Item2` ：
 
 ```csharp
 dict.TryGetValue(2, out (int, string) pair);

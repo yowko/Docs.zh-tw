@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a9bac04a7839796229a2e1c61771ca32573f8fcd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187134"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374508"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -21,54 +21,54 @@ ms.locfileid: "79187134"
 
 ## <a name="current-version"></a>目前版本
 
-視覺基本 16.0 / 視覺工作室 2019 版本 16.0*
-有關新功能，請參閱[視覺化基本 16.0](#visual-basic-160)。
+Visual Basic 16.0/Visual Studio 2019 版本 16.0 \
+如需新功能，請參閱[Visual Basic 16.0](#visual-basic-160)。
 
 ## <a name="previous-versions"></a>舊版
 
-視覺基本 15.8 / 視覺工作室 2017 版本 15.8*
-有關新功能，請參閱[視覺化基本 15.8](#visual-basic-158)。
+Visual Basic 15.8/Visual Studio 2017 版本 15.8 \
+如需新功能，請參閱[Visual Basic 15.8](#visual-basic-158)。
 
-視覺基本 15.5 / 視覺工作室 2017 版本 15.5*
-有關新功能，請參閱[視覺化基本 15.5](#visual-basic-155)。
+Visual Basic 15.5/Visual Studio 2017 版本 15.5 \
+如需新功能，請參閱[Visual Basic 15.5](#visual-basic-155)。
 
-視覺基本 15.3 / 視覺工作室 2017 版本 15.3*
-有關新功能，請參閱[視覺化基本 15.3](#visual-basic-153)。
+Visual Basic 15.3/Visual Studio 2017 版本 15.3 \
+如需新功能，請參閱[Visual Basic 15.3](#visual-basic-153)。
 
-視覺基礎 2017 / 視覺工作室 2017*
-有關新功能，請參閱[視覺化基礎 2017](#visual-basic-2017)。
+Visual Basic 2017/Visual Studio 2017 \
+如需新功能，請參閱[Visual Basic 2017](#visual-basic-2017)。
 
-視覺基礎 / 視覺工作室 2015*
-有關新功能，請參閱[視覺化基礎 14](#visual-basic-14)。
+Visual Basic/Visual Studio 2015 \
+如需新功能，請參閱[Visual Basic 14](#visual-basic-14)。
 
-視覺基礎 / 視覺工作室 2013*
-.NET 編譯器平臺（"羅斯林"）的技術預覽
+Visual Basic/Visual Studio 2013 \
+.NET Compiler Platform （"Roslyn"）的技術預覽
 
-視覺基礎 / 視覺工作室 2012*
+Visual Basic/Visual Studio 2012 \
 `Async` 和 `await` 關鍵字、迭代器、呼叫端資訊屬性
 
-視覺基礎，視覺工作室 2010*
+Visual Basic，Visual Studio 2010 \
 自動實作的屬性、集合初始設定式、隱含行接續符號、動態、泛型共變數/反變數、全域命名空間存取
 
-視覺基礎 / 視覺工作室 2008*
+Visual Basic/Visual Studio 2008 \
 Language Integrated Query (LINQ)、XML 常值、區域類型推斷、物件初始設定式、匿名類型、擴充方法、區域 `var` 類型推斷、Lambda 運算式、`if` 運算子、部分方法、可為 Null 的實值類型
 
-視覺基礎 / 視覺工作室 2005*
+Visual Basic/Visual Studio 2005 \
 `My` 類型和協助程式類型 (應用程式、電腦、檔案系統、網路的存取)
 
-視覺基礎 / 視覺工作室 .NET 2003*
+Visual Basic/Visual Studio .NET 2003 \
 位元移位運算子、迴圈變數宣告
 
-視覺基礎 / 視覺工作室 .NET 2002*
+Visual Basic/Visual Studio .NET 2002 \
 第一版的 Visual Basic .NET
 
-## <a name="visual-basic-160"></a>視覺基礎 16.0
+## <a name="visual-basic-160"></a>Visual Basic 16。0
 
-Visual Basic 16.0 側重于向 .NET Core 提供更多視覺化基本運行時 （microsoft.visualbasic.dll） 的功能，是 Visual Basic 的第一個版本，側重于 .NET Core。 視覺化基本運行時的許多部分依賴于 WinForms，這些部分將添加到更高版本的視覺化基本版中。
+Visual Basic 16.0 著重于為 .NET Core 提供 Visual Basic 執行時間（microsoft）的更多功能，而且是著重于 .NET Core Visual Basic 的第一個版本。 Visual Basic 執行時間的許多部分都取決於 WinForms，而這些會在較新版本的 Visual Basic 中新增。
 
-**允許在語句中更多位置的評論**
+**語句中的多個位置允許的批註**
 
-在 Visual Basic 15.8 和早期版本中，注釋僅允許在空白行、語句末尾或允許隱式行延續的特定位置進行。 從 Visual Basic 16.0 開始，在顯式行延續後和以空格後底線開頭的行語句中也允許注釋。
+在 Visual Basic 15.8 和更早版本中，只允許在空白行、語句結尾，或在允許隱含行接續的語句中的特定位置使用批註。 從 Visual Basic 16.0 開始，在明確的行接續之後，以及在行首加上底線的空格後面的語句內，也允許批註。
 
 ```vb
 Public Sub Main()
@@ -124,7 +124,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-[`Private Protected`成員訪問修改器](../language-reference/modifiers/private-protected.md)
+[`Private Protected`成員存取修飾詞](../language-reference/modifiers/private-protected.md)
 
 這個新的關鍵字組合能定義可由其包含類別中的所有成員，以及由衍生自該包含類別的類型 (但僅限於也能在包含組件中找到它們的情況下) 進行存取的成員。 由於結構無法被繼承，因此 `Private Protected` 只能套用至類別的成員。
 
@@ -158,7 +158,7 @@ Visual Basic 命令列編譯器現在支援 [**-refout**](../reference/command-l
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[**塔普萊斯**](../programming-guide/language-features/data-types/tuples.md)
+[**Tuples**](../programming-guide/language-features/data-types/tuples.md)
 
 Tuple 是輕量的資料結構，最常用於從單一方法呼叫傳回多個值。 通常要從方法傳回多個值，您必須執行下列其中一項︰
 
@@ -174,7 +174,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 [!code-vb[ReturnTuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)]
 
-**二進位文本和數位分隔符號**
+**二進位常值和數位分隔符號**
 
 您可以使用前置詞 `&B` 或 `&b` 來定義二進位常值。 此外，還可以使用底線字元 `_` 當作數字分隔符號，提升可讀性。 下列範例會使用這兩種功能指派 `Byte` 值，並將它顯示為十進位、十六進位和二進位數字。
 
@@ -182,11 +182,11 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 如需詳細資訊，請參閱 [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments)、[Integer](../language-reference/data-types/integer-data-type.md#literal-assignments)、[Long](../language-reference/data-types/long-data-type.md#literal-assignments)、[Short](../language-reference/data-types/short-data-type.md#literal-assignments)、[SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments)、[UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments)、[ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) 和 [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments) 資料類型的＜常值指派＞一節。
 
-[**支援 C# 參考傳回值**](../programming-guide/language-features/procedures/ref-return-values.md)
+[**C # 參考傳回值的支援**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 從 C# 7.0 開始，C# 支援參考傳回值。 也就是說，當呼叫方法收到參考傳回的值時，它可以變更參考的值。 Visual Basic 不允許您撰寫使用參考傳回值的方法，但允許您使用和修改參考傳回值。
 
-例如，以 C# 撰寫的下列 `Sentence` 類別包含 `FindNext` 方法，它可以在句子中尋找以指定子字串開頭的下一個文字。 字串會以參考傳回值傳回，而參考所傳遞至方法的 `Boolean` 變數會指出搜尋是否成功。 這意味著，除了讀取返回的值外，調用方還可以修改它，並且修改將反映在類中`Sentence`。
+例如，以 C# 撰寫的下列 `Sentence` 類別包含 `FindNext` 方法，它可以在句子中尋找以指定子字串開頭的下一個文字。 字串會以參考傳回值傳回，而參考所傳遞至方法的 `Boolean` 變數會指出搜尋是否成功。 這表示除了讀取傳回的值之外，呼叫者也可以修改它，而且該修改會反映在 `Sentence` 類別中。
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
@@ -202,23 +202,23 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
-有關詳細資訊，請參閱[參考傳回值](../programming-guide/language-features/procedures/ref-return-values.md)。
+如需詳細資訊，請參閱[參考傳回值](../programming-guide/language-features/procedures/ref-return-values.md)。
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[名稱](../language-reference/operators/nameof.md)
+[NameOf](../language-reference/operators/nameof.md)
 
 您可以取得用於錯誤訊息之類型或成員的未限定字串名稱，而不需要對字串進行硬式編碼。  這可讓您的程式碼在重構時保持正確。  這項功能也可用來連接模型檢視控制器 MVC 連結，以及引發屬性已變更事件。
 
-[字串插補](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+[字串插補](../programming-guide/language-features/strings/interpolated-strings.md)
 
 您可以使用字串插值運算式來建構字串。  字串插值運算式類似包含運算式的範本字串。  對於引數而言，字串插值比[複合格式](../../standard/base-types/composite-formatting.md)更容易了解。
 
-[空條件成員訪問和索引](../language-reference/operators/null-conditional-operators.md)
+[Null-條件式成員存取和索引](../language-reference/operators/null-conditional-operators.md)
 
 您可以在執行成員存取 (`?.`) 或對 (`?[]`) 作業編製索引之前，透過非常精簡的語法來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  如果左運算元或物件參考為 Null，則作業會傳回 Null。
 
-[多行字串文本](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
+[多行字串常值](../programming-guide/language-features/strings/string-basics.md)
 
 字串常值可包含新行字元序列。  您不再需要使用 `<xml><![CDATA[...text with newlines...]]></xml>.Value` 的舊解決方法
 
@@ -226,23 +226,23 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 您可以將註解放到隱含行接續符號之後、初始設定式運算式之內和 LINQ 運算式詞彙之間。
 
-**更智慧的完全限定名稱解析**
+**更聰明的完整名稱解析**
 
 以程式碼 `Threading.Thread.Sleep(1000)` 為例，Visual Basic 之前會查詢命名空間 "Threading"，發現它在 System.Threading 和 System.Windows.Threading 之間模稜兩可，然後回報錯誤。  Visual Basic 現在會同時考慮這兩種可能的命名空間。  如果您顯示完成清單，Visual Studio 編輯器會在完成清單中列出這兩種類型的成員。
 
-**第一個日期文本**
+**以年為優先的日期常值**
 
 您可以有 yyyy-mm-dd 格式的日期常值 (`#2015-03-17 16:10 PM#`)。
 
-**唯讀介面屬性**
+**Readonly 介面屬性**
 
 您可以使用讀寫屬性來實作唯讀介面屬性。 這個介面可確保提供基本功能，並且不會防止實作類別允許設定屬性。
 
-[TypeOf \<expr> IsNot \<類型>](../../visual-basic/language-reference/operators/typeof-operator.md)
+[TypeOf \<expr> IsNot\<type>](../language-reference/operators/typeof-operator.md)
 
 為了增加程式碼的可讀性，您現在可以搭配使用 `TypeOf` 和 `IsNot`。
 
-[#Disable Warning \<識別碼> 和 #Enable Warning \<識別碼>](../../visual-basic/language-reference/directives/index.md)
+[#Disable 警告 \<ID> 和 #Enable 警告\<ID>](../language-reference/directives/index.md)
 
 您可以停用及啟用原始程式檔中區域的特定警告。
 
@@ -250,23 +250,23 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 撰寫文件註解時，您會取得智慧型編輯器，以及驗證參數名稱、適當處理 `crefs` (泛型、運算子等)、色彩標示和重構的建置支援。
 
-[部分模組和介面定義](../../visual-basic/language-reference/modifiers/partial.md)
+[部分模組和介面定義](../language-reference/modifiers/partial.md)
 
 除了類別和結構之外，您還可以宣告部分模組和介面。
 
-[方法體內的#Region指令](../../visual-basic/language-reference/directives/region-directive.md)
+[方法主體內的 #Region 指示詞](../language-reference/directives/region-directive.md)
 
 您可以將 #Region…#End Region 分隔符號放到檔案的任何位置及函式內，甚至是橫跨不同的函式主體。
 
-[重寫定義是隱式重載](../../visual-basic/language-reference/modifiers/overrides.md)
+[覆寫定義是隱含的多載](../language-reference/modifiers/overrides.md)
 
 如果您將 `Overrides` 修飾詞加入定義，編譯器會隱含加入 `Overloads`，讓您可以在一般情況下輸入較少的程式碼。
 
-**屬性參數中允許 CObj**
+**屬性引數中允許的 CObj**
 
 編譯器之前會提供錯誤，指出 CObj(…) 用於屬性建構時不是常數。
 
-**聲明和使用來自不同介面的模棱兩可的方法**
+**從不同的介面宣告及使用不明確的方法**
 
 之前，下列程式碼會產生錯誤，使您無法宣告 `IMock` 或呼叫 `GetDetails` (如果已在 C# 中宣告這些項目)：
 
@@ -291,5 +291,5 @@ End Interface
 
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-visual-studio-2017)
-- [視覺工作室 2019 年的新增功能](/visualstudio/ide/whats-new-visual-studio-2019)
+- [2017 Visual Studio 的新功能](/visualstudio/ide/whats-new-visual-studio-2017)
+- [2019 Visual Studio 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)
