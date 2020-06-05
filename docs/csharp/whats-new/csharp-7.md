@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1291de95b88b3de16fb94fb376fb4153dd4a5862
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: e78d680e19709bf3dd854531d5d9f6b7d6464f49
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102667"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392245"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
@@ -16,15 +16,15 @@ C# 7.0 新增許多新功能至 C# 語言：
 
 - [`out`變數](#out-variables)
   - 您可以宣告 `out` 內嵌值作為使用它們之方法的引數。
-- [Tuple](#tuples)
+- [Tuples](#tuples)
   - 您可以建立包含多個公用欄位的輕量、未具名的類型。 編譯器和 IDE 工具了解這些類型的語意。
 - [捨棄](#discards)
   - 捨棄是當您不在意指派的值時，於指派內使用的僅限寫入且暫時之變數。 解構 Tuple 及使用者定義型別，以及使用 `out` 參數呼叫方法時，捨棄最為實用。
 - [模式比對](#pattern-matching)
   - 您可以建立以任意類型和這些類型成員的值為基礎的分支邏輯。
-- [`ref`部份變數與返回](#ref-locals-and-returns)
+- [`ref`區域變數和傳回](#ref-locals-and-returns)
   - 方法區域變數和傳回值可以是其他儲存體的參考。
-- [本地端功能](#local-functions)
+- [區域函式](#local-functions)
   - 您可以將函式巢狀放置在其他函式內，限制其範圍和可視性。
 - [更多運算式主體成員](#more-expression-bodied-members)
   - 可以使用運算式來撰寫的成員清單已經增長。
@@ -57,7 +57,7 @@ C# 7.0 新增許多新功能至 C# 語言：
 - 不需要指派初始值。
   - 藉由在方法呼叫中使用所在宣告 `out` 變數，就不會在指派它之前意外使用它。
 
-## <a name="tuples"></a>Tuple
+## <a name="tuples"></a>Tuples
 
 C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的。 但有時候豐富的語法需要額外的工作才能得到最少的好處。 您可能經常撰寫需要包含多個資料項目之簡單結構的方法。 為了支援這些案例，C# 已新增 *Tuple*。 Tuple 是輕量的資料結構，其中包含多個欄位來代表資料成員。
 這些欄位不會經過驗證，且您無法定義自己的方法
@@ -70,7 +70,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 [!code-csharp[NamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#NamedTuple "Named tuple")]
 
-`namedLetters` Tuple 包含稱為 `Alpha` 和 `Beta` 的欄位。 這些名稱只會在編譯時間存在而不會保留 (例如，在執行階段使用反映調查 Tuple 時)。
+`namedLetters` Tuple 包含稱為 `Alpha` 和 `Beta` 的欄位。 這些名稱只會在編譯時期存在，而且不會保留，例如在執行時間使用反映檢查元組。
 
 在 Tuple 指派中，您也可以在指派的右邊，指定欄位的名稱︰
 
@@ -114,7 +114,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 模式比對支援 `is` 運算式和 `switch` 運算式。 每個都讓您能檢查物件和其屬性，以判斷該物件是否符合搜尋的模式。 您使用 `when` 關鍵字來指定其他規則給該模式。
 
-模式`is`運算式擴展熟悉的[`is`運算符](../language-reference/keywords/is.md#pattern-matching-with-is)以查詢物件的類型,並在一個指令中分配結果。 下列程式碼會檢查變數是否為 `int`，如果是，則將其加入至目前的總和：
+`is`模式運算式會擴充熟悉的[ `is` 運算子](../language-reference/keywords/is.md#pattern-matching-with-is)，以查詢其類型的物件，並在一個指令中指派結果。 下列程式碼會檢查變數是否為 `int`，如果是，則將其加入至目前的總和：
 
 ```csharp
 if (input is int count)
@@ -211,7 +211,7 @@ C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> 一些由本地函數支援的設計也可以使用*lambda 運算式*來完成。 有關詳細資訊,請參閱[本地函數與 lambda 運算式](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)。
+> 區域函式所支援的部分設計也可以使用*lambda 運算式*來完成。 如需詳細資訊，請參閱區域函式[與 lambda 運算式](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)。
 
 ## <a name="more-expression-bodied-members"></a>更多運算式主體成員
 
@@ -228,7 +228,7 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 ## <a name="throw-expressions"></a>throw 運算式
 
-在 C# 中，`throw` 一直都是陳述式。 因為 `throw` 是陳述式，而不是運算式，所以有您無法在其中使用它的 C# 建構。 這些包含條件運算式、Null 聯合運算式和一些 Lambda 運算式。 新增運算式主體成員會新增 `throw` 運算式適用的更多位置。 因此,您可以編寫這些建構中的任何一個,C# 7.0 引入了[*引發運算式*](../language-reference/keywords/throw.md#the-throw-expression)。
+在 C# 中，`throw` 一直都是陳述式。 因為 `throw` 是陳述式，而不是運算式，所以有您無法在其中使用它的 C# 建構。 這些包含條件運算式、Null 聯合運算式和一些 Lambda 運算式。 新增運算式主體成員會新增 `throw` 運算式適用的更多位置。 為了讓您可以撰寫任何這些結構，c # 7.0 引進了[*擲回運算式*](../language-reference/keywords/throw.md#the-throw-expression)。
 
 此新增可讓您更輕鬆地撰寫更多以運算式為基礎的程式碼。 您不需要額外的陳述式就可以進行錯誤檢查。
 
@@ -236,12 +236,12 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 從非同步方法傳回 `Task` 物件可能會造成在特定路徑的效能瓶頸。 `Task` 是參考型別，因此使用它表示要配置物件。 當使用 `async` 修飾詞宣告的方法傳回快取的結果時，或是以同步方式完成，額外配置可能會在效能關鍵的程式碼區段中變成一項重要的時間成本。 如果這些配置發生在緊密迴圈中，它可能會變得成本很高。
 
-新的語言功能表示 async 方法傳回型別不限於 `Task`、`Task<T>` 和 `void`。 傳回的型別仍然必須滿足非同步模式，也就是表示 `GetAwaiter` 方法必須可存取。 作為一個具體範例,`ValueTask`此類型已新增到 .NET 以使用此新語言功能:
+新的語言功能表示 async 方法傳回型別不限於 `Task`、`Task<T>` 和 `void`。 傳回的型別仍然必須滿足非同步模式，也就是表示 `GetAwaiter` 方法必須可存取。 做為一個具體範例， `ValueTask` 類型已新增至 .net，以使用這項新的語言功能：
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> 您需要添加 NuGet[`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)套件<xref:System.Threading.Tasks.ValueTask%601>才能使用該 類型。
+> 您必須新增 NuGet 套件，才能 [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) 使用 <xref:System.Threading.Tasks.ValueTask%601> 類型。
 
 這項增強功能最能幫助程式庫作者避免在效能關鍵的程式碼中配置 `Task`。
 

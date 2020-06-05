@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - Equals keyword [Visual Basic]
 ms.assetid: 3f5a7f21-3d54-4479-8197-bab62b34ac2e
-ms.openlocfilehash: 2c138a8d6b926e635d8b3cd867280d52dcaf763f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 79028186de80bdb48c202a422e45cab26a7a4860
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335385"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401481"
 ---
 # <a name="equals-clause-visual-basic"></a>Equals 子句 (Visual Basic)
 比較已聯結之集合的索引鍵。  
   
 ## <a name="remarks"></a>備註  
- `Equals` 關鍵字會用於下列內容中：  
+ `Equals`關鍵字用於下列內容中：  
   
- [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [Group Join 子句](group-join-clause.md)  
   
- [Join 子句](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [Join 子句](join-clause.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
+- [關鍵字](../keywords/index.md)

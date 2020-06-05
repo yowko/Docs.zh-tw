@@ -11,16 +11,16 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: b395f5fcf1b89bb49e55e207c4910e95f2aae69d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a1dd183570c8aa50efff85bdaebef90bd3b0120f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346003"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364314"
 ---
 # <a name="operator-procedures-visual-basic"></a>運算子程序 (Visual Basic)
 
-運算子程式是一系列的 Visual Basic 語句，可在您定義的類別或結構上定義標準運算子的行為（例如 `*`、`<>`或 `And`）。 這也稱為「*運算子*多載」。
+運算子程式是一系列的 Visual Basic 語句，可 `*` `<>` `And` 在您定義的類別或結構上定義標準運算子（例如、或）的行為。 這也稱為「*運算子*多載」。
 
 ## <a name="when-to-define-operator-procedures"></a>定義運算子程式的時機
 
@@ -28,7 +28,7 @@ ms.locfileid: "74346003"
 
 Visual Basic 只會定義其基本資料類型的運算子。 當一或兩個運算元屬於您的類別或結構類型時，您可以定義運算子的行為。
 
-如需詳細資訊，請參閱[Operator 語句](../../../../visual-basic/language-reference/statements/operator-statement.md)。
+如需詳細資訊，請參閱[Operator 語句](../../../language-reference/statements/operator-statement.md)。
 
 ## <a name="types-of-operator-procedure"></a>運算子程式的類型
 
@@ -42,7 +42,7 @@ Visual Basic 只會定義其基本資料類型的運算子。 當一或兩個運
 
 - 轉換運算子的定義，可傳回您的類別或結構的類型。
 
- 轉換運算子一律是一元，而且您一律會使用 `CType` 做為您所定義的運算子。
+ 轉換運算子一律是一元，而且您一律 `CType` 會使用做為您所定義的運算子。
 
 ## <a name="declaration-syntax"></a>宣告語法
 
@@ -56,9 +56,9 @@ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  oper
 End Operator
 ```
 
-您只會在類型轉換運算子上使用 `Widening` 或 `Narrowing` 關鍵字。 類型轉換運算子的運算子符號一律是[CType 函數](../../../../visual-basic/language-reference/functions/ctype-function.md)。
+您 `Widening` `Narrowing` 只能在類型轉換運算子上使用或關鍵字。 類型轉換運算子的運算子符號一律是[CType 函數](../../../language-reference/functions/ctype-function.md)。
 
-您可以宣告兩個運算元來定義二元運算子，並宣告一個運算元來定義一元運算子，包括型別轉換運算子。 所有運算元都必須宣告 `ByVal`。
+您可以宣告兩個運算元來定義二元運算子，並宣告一個運算元來定義一元運算子，包括型別轉換運算子。 所有運算元都必須宣告 `ByVal` 。
 
 您可以用宣告[Sub 程式](./sub-procedures.md)參數的相同方式來宣告每個運算元。
 
@@ -66,7 +66,7 @@ End Operator
 
 因為您是在已定義的類別或結構上定義運算子，所以至少有一個運算元必須是該類別或結構的資料類型。 若為類型轉換運算子，運算元或傳回類型必須是類別或結構的資料類型。
 
-如需詳細資訊，請參閱[Operator 語句](../../../../visual-basic/language-reference/statements/operator-statement.md)。
+如需詳細資訊，請參閱[Operator 語句](../../../language-reference/statements/operator-statement.md)。
 
 ## <a name="calling-syntax"></a>呼叫語法
 
@@ -76,27 +76,27 @@ End Operator
 
 `Dim testStruct As`  *結構名稱*
 
-`Dim testNewStruct As`  *結構名稱*  `= testStruct`  *運算子符號*  `10`
+`Dim testNewStruct As`  *結構名稱* `= testStruct`*運算子符號*      `10`
 
 ### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例
 
-下列結構會將帶正負號的128位整數值儲存為組成高順序和低序位部分。 它會定義 `+` 運算子，以加入兩個 `veryLong` 值，並產生產生的 `veryLong` 值。
+下列結構會將帶正負號的128位整數值儲存為組成高順序和低序位部分。 它會定義 `+` 運算子來新增兩個 `veryLong` 值，並產生產生的 `veryLong` 值。
 
 [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]
 
-下列範例顯示 `veryLong`上所定義之 `+` 運算子的一般呼叫。
+下列範例顯示對上定義之運算子的一般呼叫 `+` `veryLong` 。
 
 [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
 - [Sub 程序](./sub-procedures.md)
-- [函式程序](./function-procedures.md)
+- [Function 程序](./function-procedures.md)
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../language-reference/statements/operator-statement.md)
 - [如何：定義運算子](./how-to-define-an-operator.md)
-- [如何：定義轉換運算子](./how-to-define-a-conversion-operator.md)
+- [How to: Define a Conversion Operator](./how-to-define-a-conversion-operator.md)
 - [如何：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
 - [如何：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)

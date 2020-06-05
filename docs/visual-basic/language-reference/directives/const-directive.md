@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 278219edb1bb5d1c0bb015611d69cbe4ae70014b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 91152771a4ef5ec74a7408511ccc2afe28dd442e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343837"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415462"
 ---
 # <a name="const-directive"></a>#Const 指示詞
 
@@ -38,13 +38,13 @@ ms.locfileid: "74343837"
  必要。 所定義之常數的名稱。  
   
  `expression`  
- 必要。 常值、其他條件式編譯器常數，或包含 `Is`以外之任何或所有算術或邏輯運算子的任何組合。  
+ 必要。 常值、其他條件式編譯器常數，或包含除了以外的任何或所有算術或邏輯運算子的任何組合 `Is` 。  
   
 ## <a name="remarks"></a>備註  
 
- 條件式編譯器常數一律為其出現所在檔案的私用。 您無法使用 `#Const` 指示詞來建立公用編譯器常數;您只能在使用者介面中，或使用 `/define` 編譯器選項來建立它們。  
+ 條件式編譯器常數一律為其出現所在檔案的私用。 您無法使用指示詞來建立公用編譯器常數 `#Const` ; 您只能在使用者介面或使用編譯器選項來建立它們 `/define` 。  
   
- 您只能在 `expression`中使用條件式編譯器常數和常值。 使用以 `Const` 定義的標準常數會造成錯誤。 相反地，您可以使用以 `#Const` 關鍵字定義的常數，僅適用于條件式編譯。 常數也可以是未定義的，在此情況下，它們的值為 `Nothing`。  
+ 您只能在中使用條件式編譯器常數和常值 `expression` 。 使用定義的標準常數 `Const` 會造成錯誤。 相反地，您可以使用以關鍵字定義的常數 `#Const` 來進行條件式編譯。 常數也可以是未定義的，在此情況下，它們的值為 `Nothing` 。  
   
 ## <a name="example"></a>範例  
 
@@ -54,8 +54,8 @@ ms.locfileid: "74343837"
   
 ## <a name="see-also"></a>另請參閱
 
-- [-define （Visual Basic）](../../../visual-basic/reference/command-line-compiler/define.md)
-- [#If...Then...#Else 指示詞](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)
-- [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [If...Then...Else 陳述式](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [-define （Visual Basic）](../../reference/command-line-compiler/define.md)
+- [#If .。。Then ... #Else 指示詞](if-then-else-directives.md)
+- [Const 陳述式](../statements/const-statement.md)
+- [條件式編譯](../../programming-guide/program-structure/conditional-compilation.md)
+- [If...Then...Else 陳述式](../statements/if-then-else-statement.md)
