@@ -1,5 +1,6 @@
 ---
 title: 使用 Parallel.ForEach 寫入一個簡單的平行程式
+description: 在本文中，您將瞭解如何在 .NET 中啟用資料平行處理。 在任何 IEnumerable 或 IEnumerable 資料來源上撰寫 Parallel. ForEach 迴圈。 <T>
 ms.date: 02/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 717a04790de27c5ae2aade44d29e4e9ff3fd93cc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 59c8710a8e3fc878b2ceded8595f7f3319d4c953
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290716"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447195"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：撰寫簡單的 Parallel ForEach 迴圈
 
@@ -61,7 +62,7 @@ ms.locfileid: "84290716"
 
 若要從 Visual Studio 執行您的主控台應用程式，請按 **F5**。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料平行處理原則](data-parallelism-task-parallel-library.md)
 - [平行程式設計](index.md)

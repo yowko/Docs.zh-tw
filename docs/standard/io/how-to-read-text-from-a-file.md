@@ -1,5 +1,6 @@
 ---
 title: 如何：從檔案讀取文字
+description: 在本文中，請參閱如何在 .NET 中使用桌面應用程式的 StreamReader 類別，以同步或非同步方式從文字檔讀取文字的範例。
 ms.date: 01/03/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: c46ccaf70d4d1aec030fb61bd8b2924d986e19d1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cbdeab3e907b34b6658eef7228fa6567ae198b08
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291756"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447052"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：從檔案讀取文字
 下列範例將示範如何以同步和非同步方式，從使用適用於桌面應用程式的 .NET 之文字檔讀取文字。 在這兩個範例中，當您建立 <xref:System.IO.StreamReader> 類別的執行個體時，會提供檔案的相對路徑或絕對路徑。
@@ -43,7 +44,7 @@ ms.locfileid: "84291756"
  [!code-csharp[TextFiles](../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFiles/MainWindow.xaml.cs)]
  [!code-vb[TextFiles](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFiles/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StreamReader>  
 - <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  

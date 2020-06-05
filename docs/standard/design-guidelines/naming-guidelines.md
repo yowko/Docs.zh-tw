@@ -1,5 +1,6 @@
 ---
 title: 命名方針
+description: 在此總覽中，請閱讀在架構開發中使用的命名慣例。 前往涵蓋大小寫、一般命名和其他指導方針的文章。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: 1b137be60f4c8c1c7cf1fa1f807841d4bc209089
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fbcf5ef5eb02a5e45b5c981b4247ffe1c9c2631b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290171"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447143"
 ---
 # <a name="naming-guidelines"></a>命名方針
 在開發架構時遵循一組一致的命名慣例，可能是架構可用性的主要貢獻。 它可讓許多開發人員在廣為分隔的專案上使用架構。 除了表單的一致性之外，架構專案的名稱也必須容易理解，而且必須傳達每個元素的函式。  
@@ -38,6 +39,6 @@ ms.locfileid: "84290171"
   
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。**  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [架構設計方針](index.md)

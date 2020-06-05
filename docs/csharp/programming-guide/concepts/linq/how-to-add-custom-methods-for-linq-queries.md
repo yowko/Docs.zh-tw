@@ -1,15 +1,15 @@
 ---
-title: 如何為 LINQ 查詢 （C#） 添加自訂方法
+title: '如何新增 LINQ 查詢的自訂方法（c #）'
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e3f8ba8810d06a2e79093e6022ad6e79f3599468
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141466"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447026"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何為 LINQ 查詢 （C#） 添加自訂方法
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何新增 LINQ 查詢的自訂方法（c #）
 
 您可以將擴充方法新增至 <xref:System.Collections.Generic.IEnumerable%601> 介面，來延伸您可以用於 LINQ 查詢的方法組。 例如，除了標準平均值或最多作業，您可以建立自訂的彙總方法，計算一系列值的單一值。 您也可以建立一個方法，用為自訂篩選器或一系列值的特定資料轉換，並傳回新的序列。 這類方法的範例包括 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A>。
 
@@ -26,26 +26,28 @@ public static class LINQExtension
 {
     public static double Median(this IEnumerable<double> source)
     {
-        if (source.Count() == 0)
+        var countOfElementsInTheSet = source?.Count() ?? 0;
+
+        if (countOfElementsInTheSet == 0)
         {
-            throw new InvalidOperationException("Cannot compute median for an empty set.");
+            throw new InvalidOperationException("Cannot compute median for a null or empty set.");
         }
 
-        var sortedList = from number in source
+        var sortedList = (from number in source
                          orderby number
-                         select number;
+                         select number).ToList();
 
-        int itemIndex = (int)sortedList.Count() / 2;
+        int itemIndex = countOfElementsInTheSet / 2;
 
-        if (sortedList.Count() % 2 == 0)
+        if (countOfElementsInTheSet % 2 == 0)
         {
             // Even number of items.
-            return (sortedList.ElementAt(itemIndex) + sortedList.ElementAt(itemIndex - 1)) / 2;
+            return (sortedList[itemIndex] + sortedList[itemIndex - 1]) / 2;
         }
         else
         {
             // Odd number of items.
-            return sortedList.ElementAt(itemIndex);
+            return sortedList[itemIndex];
         }
     }
 }
@@ -214,7 +216,7 @@ foreach (var element in query)
 */
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [擴充方法](../../classes-and-structs/extension-methods.md)

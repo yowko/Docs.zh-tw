@@ -1,13 +1,13 @@
 ---
 title: C# 中的非同步程式設計
 description: 使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀
-ms.date: 05/26/2020
-ms.openlocfilehash: 703392ca6ba4e6fb08dd8a88817babc167394788
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.date: 06/04/2020
+ms.openlocfilehash: fbbd08f8c0e650c366ca1d283825e629fcb952d7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007958"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446423"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>使用 async 和 await 進行非同步程式設計
 
@@ -32,6 +32,10 @@ ms.locfileid: "84007958"
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-starter/Program.cs" highlight="8-27":::
 
+:::image type="content" source="media/synchronous-breakfast.png" alt-text="同步早餐":::
+
+同步準備的早餐大約需要30分鐘的時間，因為總計是每個個別工作的總和。
+
 > [!NOTE]
 > `Coffee`、 `Egg` 、 `Bacon` 、 `Toast` 和 `Juice` 類別是空的。 它們只是用來示範的標記類別，不包含任何屬性，也不提供其他用途。
 
@@ -50,6 +54,9 @@ ms.locfileid: "84007958"
 我們將從更新此程式碼開始，讓執行緒在工作執行時不會遭到封鎖。 `await` 關鍵字提供一個非封鎖方式來開始工作，然後在工作完成時繼續執行。 準備早餐程式碼的一個簡單非同步版本看起來像下列程式碼片段：
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+
+> [!IMPORTANT]
+> 總經過時間大致上與初始 synchonous 版本相同。 程式碼尚未利用一些主要功能，也就是非同步程式設計。
 
 > [!TIP]
 > 、和的方法主體 `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` 全都已更新為 `Task<Egg>` 分別傳回、 `Task<Bacon>` 和 `Task<Toast>` 。 方法會從其原始版本重新命名，以包含 "Async" 尾碼。 其執行方式會顯示為本文稍後的[最終版本](#final-version)的一部分。
@@ -116,6 +123,10 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="非同步早餐":::
+
+非同步備妥的早餐大約需要20分鐘的時間，這是因為某些工作可以同時執行。
+
 上述程式碼的效果更好。 您會同時開始所有非同步工作。 只有需要結果時，才會等候每個工作。 上述程式碼可能會類似於提出不同微服務要求，然後將結果合併成單一頁面的 Web 應用程式程式碼。 您會立即提出所有要求，然後 `await` 所有這些工作並撰寫網頁。
 
 ## <a name="composition-with-tasks"></a>工作組合
@@ -172,6 +183,10 @@ while (breakfastTasks.Count > 0)
 
 在所有這些變更之後，最終的程式碼版本看起來像這樣：<a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
+
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="任何非同步早餐時":::
+
+非同步準備的早餐最終版本大約需要15分鐘的時間，這是因為某些工作可以並存執行，而且程式碼可以同時監視多個工作，並且只在需要時才採取動作。
 
 此最終程式碼為非同步。 它會更精確地反映人員準備早餐的方式。 將上述程式碼與本文中的第一個程式碼範例做比較。 閱讀程式碼仍會清楚了解核心動作。 閱讀此程式碼的方式，如同閱讀本文開頭準備早餐的指示。 `async` 和 `await` 之語言功能為所有遵循下列書面指示的人員提供轉譯：盡可能開始多個工作且不要防止等候工作完成。
 

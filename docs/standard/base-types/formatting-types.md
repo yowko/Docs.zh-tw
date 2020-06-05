@@ -1,5 +1,6 @@
 ---
 title: 在 .NET 中格式化類型
+description: 瞭解如何在 .NET 中格式化類型。 瞭解如何使用或覆寫 ToString 方法。 瞭解區分文化特性、複合和自訂格式。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: e63a0962efb689a865436df771420e92319110b5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5d280b53d15bc674f325a726d69915d763aec34f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290535"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447078"
 ---
 # <a name="format-types-in-net"></a>.NET 中的格式類型
 

@@ -1,5 +1,6 @@
 ---
 title: 自訂日期與時間格式字串
+description: 瞭解如何使用自訂日期和時間格式字串，將 DateTime 或 DateTimeOffset 值轉換成文字表示，或剖析日期 & 次的字串。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 9aea3e9b52613add1ebc4cf7d9c0087088008d6e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 89601d0628e4f5f00ec02d5cdd6fb79216b1469d
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278995"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447247"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
@@ -44,7 +45,7 @@ ms.locfileid: "84278995"
 
 下表說明自訂日期和時間格式規範，並顯示每個格式規範所產生的結果字串。 根據預設，結果字串會反映 en-US 文化特性的格式設定慣例。 如果特定格式規範會產生當地語系化的結果字串，則範例也會註明結果字串適用的文化特性。 如需使用自訂日期和時間格式字串的詳細資訊，請參閱[注意](#notes)一節。
 
-| 格式規範 | 描述 | 範例 |
+| 格式規範 | 說明 | 範例 |
 | ---------------------- | ----------------- | -------------- |
 |"d"|月份天數，從 1 到 31。<br /><br /> 詳細資訊：["d" 自訂格式規範](#dSpecifier)。|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|月份天數，從 01 到 31。<br /><br /> 詳細資訊：["dd" 自訂格式規範](#ddSpecifier)。|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -653,7 +654,7 @@ ms.locfileid: "84278995"
 [!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
-## <a name="notes"></a>備忘稿
+## <a name="notes"></a>備忘錄
 
 ### <a name="using-single-custom-format-specifiers"></a><a name="UsingSingleSpecifiers"></a>使用單一自訂格式規範
 
@@ -692,7 +693,7 @@ ms.locfileid: "84278995"
 
 許多自訂日期和時間格式規範所產生的結果字串，也取決於目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性。 您的應用程式可以變更對應的 <xref:System.Globalization.DateTimeFormatInfo> 屬性，藉此改變某些自訂日期和時間格式規範所產生的結果。 例如，"ddd" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> 字串陣列中找到的縮寫星期幾名稱加入至結果字串。 同樣地，"MMMM" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> 字串陣列中找到的完整月份名稱加到結果字串。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>

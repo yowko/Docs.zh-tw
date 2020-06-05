@@ -2,14 +2,14 @@
 title: 開始使用 Azure 與 .NET
 description: 了解您需要知道的 Azure 和 .NET 基本概念。
 ms.date: 03/15/2020
-ms.openlocfilehash: 64defed4433647c2a0dcce91493d9ec77d21b541
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: d57d1d50852c9d7fff099554bd64c48c15129bb4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "82072141"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446388"
 ---
-# <a name="introduction-to-azure-and-net"></a>Azure 與 .NET 簡介
+# <a name="introduction-to-azure-and-net"></a>Azure 和 .NET 簡介
 
 本檔概述 .NET 開發人員應該熟悉的重要概念和服務，以開始使用 Azure 服務來開發應用程式。
 
@@ -77,5 +77,5 @@ Azure 中的託管可分為三類。
 
 * [將第一個 ASP.NET Core Web 應用程式部署至 Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
 * [瞭解 Azure SDK for .NET 中的驗證](./sdk/authentication.md)
-* [診斷雲端應用程式中的錯誤](https://blogs.msdn.microsoft.com/webdev/2018/02/07/diagnosing-errors-on-your-cloud-apps)
+* [診斷雲端應用程式中的錯誤](https://devblogs.microsoft.com/aspnet/diagnosing-errors-on-your-cloud-apps/)
 * 下載免費電子書：[適用於 .NET 開發人員的 Azure 快速入門手冊](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook)

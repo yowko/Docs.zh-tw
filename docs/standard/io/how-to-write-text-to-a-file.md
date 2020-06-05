@@ -1,5 +1,6 @@
 ---
 title: 如何：將文字寫入檔案
+description: 瞭解針對 .NET 應用程式將文字寫入或附加至檔案的方式。 使用 StreamWriter 或 File 類別中的方法，以同步或非同步方式寫入文字。
 ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: 395344accf5be416fbcc527e51ba83408f9c5810
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 52d3d07f4ffdbdc6510425a65fc173d36e674d06
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291730"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447208"
 ---
 # <a name="how-to-write-text-to-a-file"></a>如何：將文字寫入檔案
 本主題說明針對 .NET 應用程式將文字寫入檔案的不同方式。
@@ -62,7 +63,7 @@ ms.locfileid: "84291730"
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/file.cs)]
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/file.vb)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StreamWriter>
 - <xref:System.IO.Path>

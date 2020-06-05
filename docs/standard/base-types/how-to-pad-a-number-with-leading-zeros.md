@@ -1,5 +1,6 @@
 ---
 title: 作法：以前置字元零來填補數字
+description: 瞭解如何填補前置零的數位。 將前置零加入整數或數值到特定的總長度或特定數目的前置零。
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: ef18fb1bb7b1592a4e92866028868bf1cf793bbf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6ef0ddb37f1bc73254aa639d7c018ec6a01abd9b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290457"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447182"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>作法：以前置字元零來填補數字
 
@@ -100,7 +101,7 @@ ms.locfileid: "84290457"
 [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
 [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [自訂數值格式字串](custom-numeric-format-strings.md)
 - [標準數值格式字串](standard-numeric-format-strings.md)

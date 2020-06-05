@@ -3,12 +3,12 @@ title: 卸載工具
 description: 概述 .NET Core 卸載工具，這是一個引導式工具，可讓您控制 .NET Core Sdk 和執行時間的清理。
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144509"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446902"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 解除安裝工具
 
@@ -157,11 +157,11 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   移除所有 .NET Core Sdk 和執行時間。
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   只移除版本小於指定版本的 .NET Core Sdk 和執行時間。 指定的版本仍會安裝。
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   除了指定的版本之外，移除所有 .NET Core Sdk 和執行時間。
 
@@ -227,11 +227,11 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
   移除所有 .NET Core Sdk 和執行時間。
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   移除指定版本底下的 .NET Core Sdk 和執行時間。 指定的版本將會保留。
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   除了指定的版本之外，移除 .NET Core Sdk 和執行時間。
 
@@ -337,11 +337,11 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   移除所有 .NET Core Sdk 和執行時間。
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   只移除版本小於指定版本的 .NET Core Sdk 和執行時間。 指定的版本仍會安裝。
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   除了指定的版本之外，移除所有 .NET Core Sdk 和執行時間。
 
@@ -367,7 +367,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`--hosting-bundle`**
 
-  只會移除 .NET Core 執行時間和裝載套件組合。
+  只會移除 .NET Core 裝載套件組合。
 
 * **`--major-minor <MAJOR_MINOR>`**
 
@@ -409,11 +409,11 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   移除所有 .NET Core Sdk 和執行時間。
 
-* **`--all-below <VERSION>`**
+* **`--all-below <VERSION>[ <VERSION>...]`**
 
   移除指定版本底下的 .NET Core Sdk 和執行時間。 指定的版本將會保留。
 
-* **`--all-but <VERSIONS>`**
+* **`--all-but <VERSIONS>[ <VERSION>...]`**
 
   除了指定的版本之外，移除 .NET Core Sdk 和執行時間。
 

@@ -1,5 +1,6 @@
 ---
 title: Windows 系統上的檔案路徑格式
+description: 在本文中，您將瞭解 Windows 系統上的檔案路徑格式，例如傳統 DOS 路徑、DOS 裝置路徑和通用命名慣例（UNC）路徑。
 ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628042"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447130"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -30,7 +31,7 @@ ms.locfileid: "77628042"
 
 如果三個元件全都存在，則是絕對路徑。 如果未指定任何磁碟區或磁碟機代號，且目錄名稱開頭為[目錄分隔符號字元](<xref:System.IO.Path.DirectorySeparatorChar>)，則路徑是相對於目前磁碟機的根目錄。 否則，路徑是相對於目前的目錄。 下表顯示一些可能的目錄和檔案路徑。
 
-|Path  |描述  |
+|路徑  |說明  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | 從磁碟機 C: 根目錄開始的絕對檔案路徑 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 從目前磁碟機根目錄開始的絕對路徑。 |
@@ -44,7 +45,7 @@ ms.locfileid: "77628042"
 
 您可以呼叫 <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> 方法來判斷檔案路徑是否完整 (也就是路徑獨立於目前的目錄，目前目錄變更時它不會變更)。 請注意，這類路徑可以包含相對目錄區段 (`.` 和 `..`)，而且如果解析的路徑永遠指向相同位置便仍然完整。
 
-下例會說明絕對和相對路徑之間的差異。 它假定目錄 D：[FY2018] 存在，並且您尚未為 D：* 設置任何目前的目錄。從運行示例之前的命令提示符。
+下例會說明絕對和相對路徑之間的差異。 它假設目錄 D:\FY2018\ 存在，而且您尚未設定任何目前目錄來進行 D:\在執行範例之前，從命令提示字元。
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -62,7 +63,7 @@ ms.locfileid: "77628042"
 
 以下是 UNC 路徑的一些範例：
 
-|Path  |描述  |
+|路徑  |說明  |
 | -- | -- |
 | `\\system07\C$\` | `system07` 上磁碟機 C: 的根目錄。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 磁碟區 Test 目錄中的 Foo.txt 檔案。|
@@ -202,7 +203,7 @@ DOS 裝置路徑由以下元件組成：
 
 開頭為 `\\?\` 的路徑，在您明確地將其傳遞給 [GetFullPathName 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)時，仍會正規化。
 
-您可以傳遞多個`MAX_PATH`字元的路徑來[獲取完整路徑名稱](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)，而無需`\\?\`。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
+您可以在沒有的情況下，傳遞超過個字元的路徑 `MAX_PATH` 給[GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) `\\?\` 。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
 
 ## <a name="case-and-the-windows-file-system"></a>大小寫與 Windows 檔案系統
 

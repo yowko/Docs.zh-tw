@@ -1,5 +1,6 @@
 ---
 title: 工作型非同步程式設計 - .NET
+description: 在本文中，透過 .NET 中的工作平行程式庫（TPL）瞭解以工作為基礎的非同步程式設計。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 188a80459fec021dc934597ea2f77ac7b4471b2d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285283"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446375"
 ---
 # <a name="task-based-asynchronous-programming"></a>工作型非同步程式設計
 
@@ -95,7 +96,7 @@ ms.locfileid: "84285283"
 
 大多數建立工作的 API 都會提供用來接受 <xref:System.Threading.Tasks.TaskCreationOptions> 參數的多載。 您可以指定其中一個選項，指示工作排程器要如何在執行緒集區上排定工作。 下表列出各種工作建立選項。
 
-|<xref:System.Threading.Tasks.TaskCreationOptions> 參數值|描述|
+|<xref:System.Threading.Tasks.TaskCreationOptions> 參數值|說明|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|未指定選項時的預設值。 排程器會使用其預設的啟發式來排定工作。|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|指定排定工作時，應該讓較早建立的工作較早執行，並讓較晚建立的工作較晚執行。|
@@ -254,11 +255,11 @@ ms.locfileid: "84285283"
 
 ## <a name="tasks-without-delegates"></a>不含委派的工作
 
-在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱<xref:System.Threading.Tasks.TaskCompletionSource%601>。
+在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskCompletionSource%601> 。
 
 ## <a name="custom-schedulers"></a>自訂排程器
 
-大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱<xref:System.Threading.Tasks.TaskScheduler>。
+大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskScheduler> 。
 
 ## <a name="related-data-structures"></a>相關資料結構
 
@@ -278,7 +279,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 |[附加與中斷連結的子工作](attached-and-detached-child-tasks.md)|說明附加的與中斷連結的子工作之間的差異。|
 |[工作取消](task-cancellation.md)|說明 <xref:System.Threading.Tasks.Task> 物件內建的取消支援。|
 |[例外狀況處理](exception-handling-task-parallel-library.md)|說明並行執行緒上發生例外狀況時的處理方式。|
-|[如何：使用 Parallel 來執行平行作業](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A>。|
+|[作法：使用 Parallel.Invoke 執行平行作業](how-to-use-parallel-invoke-to-execute-parallel-operations.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A>。|
 |[作法：從工作傳回值](how-to-return-a-value-from-a-task.md)|說明如何從工作傳回值。|
 |[作法：取消工作及其子系](how-to-cancel-a-task-and-its-children.md)|說明如何取消工作。|
 |[作法：建立經過預先計算的工作](how-to-create-pre-computed-tasks.md)|描述如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法擷取保留在快取中之非同步下載作業的結果。|
@@ -287,7 +288,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 |[資料平行處理](data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|
 |[平行程式設計](index.md)|.NET Framework 平行程式設計的最上層節點。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行程式設計](index.md)
 - [使用 .NET Core & 進行平行程式設計的範例 .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

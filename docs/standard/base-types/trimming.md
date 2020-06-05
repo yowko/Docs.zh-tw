@@ -1,5 +1,6 @@
 ---
 title: 在 .NET 中修剪和移除字串中的字元
+description: 瞭解如何從字串的開頭或結尾修剪空白空格，或從 .NET 的字串中的指定位置移除任何數目的空格或字元。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 0777ba7348d13697fd53f556ac69cba3f98d1e4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 630fe6b51d151d1f1384f2e3cde62750c303d883
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290872"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446889"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>在 .NET 中修剪和移除字串中的字元
 如果您將句子剖析成個別文字，最後可能會得到許多文字，但文字任一端有空格 (也稱為空白字元)。 在這種情況下，您可以使用 **System.String** 類別中的其中一個 Trim 方法，從字串中的指定位置移除任意數目的空格或其他字元。 下表描述可用的 Trim 方法。  
@@ -94,6 +95,6 @@ ms.locfileid: "84290872"
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [基底字元串作業](basic-string-operations.md)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249314"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446759"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
-本文介紹該語句`switch`。 有關`switch`運算式的資訊（在 C# 8.0 仲介紹），請參閱[運算式和運算子](../operators/index.md)部分中有關[`switch`運算式](../operators/switch-expression.md)的文章。
+本文涵蓋 `switch` 語句。 如需 `switch` 運算式（在 c # 8.0 中引進）的詳細資訊，請參閱[運算式和運算子](../operators/index.md)一節中有關[ `switch` 運算式](../operators/switch-expression.md)的文章。
 
 `switch` 是一個選取範圍陳述式，可根據使用「比對運算式」** 的模式比對，從候選項清單中選擇要執行的單一「參數區段」**。
 
@@ -48,8 +48,8 @@ ms.locfileid: "80249314"
 - [char](../builtin-types/char.md)。
 - [字串](../builtin-types/reference-types.md)。
 - [bool](../builtin-types/bool.md)。
-- [整體](../builtin-types/integral-numeric-types.md)值，如 或`int`。 `long`
-- [枚舉](../builtin-types/enum.md)值。
+- [整數](../builtin-types/integral-numeric-types.md)值，例如 `int` 或 `long` 。
+- [列舉](../builtin-types/enum.md)值。
 
 從 C# 7.0 開始，比對運算式可以是任何非 Null 運算式。
 
@@ -61,7 +61,7 @@ ms.locfileid: "80249314"
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，以下代碼生成編譯器錯誤 CS0163："控制項不能從一個案例標籤（\<大小寫標籤>）下降到另一個大小寫標籤。
+switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤 CS0163：「程式控制權無法從一個 case 標籤 (\<case label>) 繼續到另一個」。
 
 ```csharp
 switch (caseSwitch)
@@ -108,7 +108,7 @@ switch (caseSwitch)
 
 `default` case 可以依任何順序出現在 `switch` 陳述式中。 不論它在原始程式碼中的順序為何，一律都會在評估過所有 `case` 標籤之後最後才進行評估。
 
-## <a name="pattern-matching-with-the-switch-statement"></a>使用 `switch` 陳述式進行的 <a name="pattern" /> 模式比對
+## <a name="pattern-matching-with-the-switch-statement"></a>使用 `switch` 陳述式進行的 <a name="pattern"></a> 模式比對
 
 每個 `case` 陳述式都會定義一個模式，並在模式符合比對運算式時，執行其包含參數區段。 所有版本的 C# 都支援常數模式。 從 C# 7.0 開始，支援其餘的模式。
 
@@ -122,8 +122,8 @@ switch (caseSwitch)
 
 其中，*constant* 是用來測試的值。 *constant* 可以是下列任何常數運算式：
 
-- [布林](../builtin-types/bool.md)文本：或`true`。 `false`
-- 任何[積分](../builtin-types/integral-numeric-types.md)常量，如`int`、或`long` `byte`。
+- [Bool](../builtin-types/bool.md)常值： `true` 或 `false` 。
+- 任何[整數](../builtin-types/integral-numeric-types.md)常數，例如 `int` 、 `long` 或 `byte` 。
 - 所宣告之 `const` 變數的名稱。
 - 列舉常數。
 - [char](../builtin-types/char.md) 常值。
@@ -199,10 +199,10 @@ case null:
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的 [switch 陳述式](~/_csharplang/spec/statements.md#the-switch-statement)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
-- [如果-else](if-else.md)
-- [模式匹配](../../pattern-matching.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
+- [if-else](if-else.md)
+- [模式比對](../../pattern-matching.md)
