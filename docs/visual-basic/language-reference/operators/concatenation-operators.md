@@ -5,23 +5,23 @@ helpviewer_keywords:
 - operators [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
-ms.openlocfilehash: 797b9bc03ef07e8c0810a1c53e855f39faf782c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cd288450b0e23bf49c4db2c04008431fd1b8f1be
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331487"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371540"
 ---
 # <a name="concatenation-operators-visual-basic"></a>串連運算子 (Visual Basic)
 以下是在 Visual Basic 中定義的串連運算子。  
   
- [& 運算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [& 運算子](concatenation-operator.md)  
   
- [+ 運算子](../../../visual-basic/language-reference/operators/addition-operator.md)  
+ [+ 運算子](addition-operator.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Text>
 - <xref:System.Text.StringBuilder>
-- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic 中的串連運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic 中的運算子優先順序](operator-precedence.md)
+- [Visual Basic 中的串連運算子](../../programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

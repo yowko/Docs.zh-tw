@@ -1,13 +1,13 @@
 ---
-title: 如何：合併和比較字串集合 (LINQ)
+title: 作法：合併和比較字串集合 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 271ef7805cd2285fa2d8796a31257c0f31bb9a76
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337563"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374858"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>如何：合併和比較字串集合（LINQ）（Visual Basic）
 
@@ -165,9 +165,9 @@ End Class
 
 ## <a name="compile-the-code"></a>編譯程式碼
 
-建立 Visual Basic 主控台應用程式專案。 加入 System. Linq 命名空間的 `Imports` 語句。
+建立 Visual Basic 主控台應用程式專案。 新增 `Imports` System. Linq 命名空間的語句。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [LINQ 和字串（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 與字串 (Visual Basic)](linq-and-strings.md)
+- [LINQ 與檔案目錄 (Visual Basic)](linq-and-file-directories.md)
