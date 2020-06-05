@@ -11,25 +11,25 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 1c099c5082f1c4173a50c70998c99135c94821e6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3e8df5ccfeca4bc0a19237ba6d59e9d0747080ea
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346381"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394294"
 ---
 # <a name="composite-data-types-visual-basic"></a>複合資料類型 (Visual Basic)
 除了 Visual Basic 提供的基本資料類型之外，您也可以組合不同類型的專案來建立*複合資料型別*，例如結構、陣列和類別。 您可以從基本類型和其他複合類型建立複合資料型別。 例如，您可以定義結構專案的陣列，或是包含陣列成員的結構。  
   
 ## <a name="data-types"></a>資料類型  
- 複合類型與任何元件的資料類型不同。 例如，`Integer` 元素的陣列不是 `Integer` 的資料類型。  
+ 複合類型與任何元件的資料類型不同。 例如，元素的陣列 `Integer` 不是 `Integer` 資料類型。  
   
- 陣列資料類型通常會在必要時使用元素類型、括弧和逗號來表示。 例如，`String` 專案的一維陣列會以 `String()`表示，而 `Boolean` 元素的二維陣列則會以 `Boolean(,)`表示。  
+ 陣列資料類型通常會在必要時使用元素類型、括弧和逗號來表示。 例如，一維的 `String` 元素陣列會表示為 `String()` ，而元素的二維陣列 `Boolean` 則會表示為 `Boolean(,)` 。  
   
 ## <a name="structure-types"></a>結構類型  
  沒有組成所有結構的單一資料類型。 相反地，結構的每個定義都代表唯一的資料類型，即使兩個結構以相同的順序定義相同的元素。 不過，如果您建立相同結構的兩個或多個實例，Visual Basic 會將它們視為相同的資料類型。  
   
-## <a name="tuples"></a>Tuple
+## <a name="tuples"></a>Tuples
 
 元組是輕量結構，其中包含兩個或多個預先定義類型的欄位。 從 Visual Basic 2017 開始支援元組。 元組最常用來傳回單一方法呼叫中的多個值，而不需要以傳址方式傳遞引數，或將傳回的欄位封裝在較高的權數類別或結構中。 如需元組的詳細資訊，請參閱[元組](tuples.md)主題。
 
@@ -52,22 +52,22 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- 在上述範例中，`arrayA` 和 `arrayB` 的陣列變數會被視為相同的資料類型（`Byte()`），即使它們已初始化為不同的長度也一樣。 `arrayB` 和 `arrayC` 的變數不屬於相同類型，因為它們的元素類型不同。 `arrayC` 和 `arrayD` 的變數不屬於相同類型，因為它們的次序不同。 `arrayD` 和 `arrayE` 的變數具有相同的類型（`Short(,)`），因為它們的次序和元素類型相同，即使 `arrayD` 尚未初始化也一樣。  
+ 在上述範例中，會將陣列變數 `arrayA` 和 `arrayB` 視為相同的資料類型（）， `Byte()` 即使它們已初始化為不同的長度也一樣。 變數 `arrayB` 和 `arrayC` 不是相同的類型，因為它們的元素類型不同。 變數 `arrayC` 和 `arrayD` 不屬於相同的類型，因為它們的次序不同。 變數 `arrayD` 和 `arrayE` 具有相同的類型（ `Short(,)` ），因為它們的次序和元素類型相同，即使尚未 `arrayD` 初始化也一樣。  
   
- 如需陣列的詳細資訊，請參閱[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ 如需陣列的詳細資訊，請參閱[陣列](../arrays/index.md)。  
   
 ## <a name="class-types"></a>類別類型  
  沒有組成所有類別的單一資料類型。 雖然一個類別可以繼承自另一個類別，但每個都是不同的資料類型。 相同類別的多個實例屬於相同的資料類型。 如果您將一個類別執行個體變數指派給另一個，不只是它們具有相同的資料類型，而是指向記憶體中的相同類別實例。  
   
- 如需類別的詳細資訊，請參閱[物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
+ 如需類別的詳細資訊，請參閱[物件和類別](../objects-and-classes/index.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Visual Basic 中的泛型型別](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [如何：在變數中存放多個值](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
+- [資料類型](index.md)
+- [基礎資料類型](elementary-data-types.md)
+- [Generic Types in Visual Basic](generic-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [Visual Basic 中的類型轉換](type-conversions.md)
+- [結構](structures.md)
+- [疑難排解資料類型的問題](troubleshooting-data-types.md)
+- [作法：在變數中存放多個值](how-to-hold-more-than-one-value-in-a-variable.md)

@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 522814ad48fb7548032b8a37779bb3ff6ca62413
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 962108264563c5e0b2894c5c856a5f23a3c1a8b4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350650"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372452"
 ---
 # <a name="myresponse-object"></a>My.Response 物件
-取得與 <xref:System.Web.UI.Page>相關聯的 <xref:System.Web.HttpResponse> 物件。 此物件可讓您將 HTTP 回應資料傳送給用戶端，並包含該回應的相關資訊。  
+取得 <xref:System.Web.HttpResponse> 與相關聯的物件 <xref:System.Web.UI.Page> 。 此物件可讓您將 HTTP 回應資料傳送給用戶端，並包含該回應的相關資訊。  
   
 ## <a name="remarks"></a>備註  
- `My.Response` 物件包含與頁面相關聯的目前 <xref:System.Web.HttpResponse> 物件。  
+ `My.Response`物件包含 <xref:System.Web.HttpResponse> 與頁面相關聯的目前物件。  
   
- `My.Response` 物件僅適用于 ASP.NET 應用程式。  
+ `My.Response`物件僅適用于 ASP.NET 應用程式。  
   
 ## <a name="example"></a>範例  
- 下列範例會從 `My.Request` 物件取得標頭集合，並使用 `My.Response` 物件將其寫入 ASP.NET 網頁。  
+ 下列範例會從物件取得標頭集合 `My.Request` ，並使用 `My.Response` 物件將其寫入至 ASP.NET 網頁。  
   
  [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Web.HttpResponse>
-- [My.Request 物件](../../../visual-basic/language-reference/objects/my-request-object.md)
+- [My.Request 物件](my-request-object.md)

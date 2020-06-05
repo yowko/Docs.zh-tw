@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: eeef4c13743b75a3d5e61ac46afb94d9ea105b7a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 90408fd8a8cfc9b74c8422d0571d61f8534403f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348032"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404445"
 ---
 # <a name="mid-statement"></a>Mid 陳述式
-以另一個字串中的字元取代 `String` 變數中指定的字元數。  
+以另一個字串中的字元取代變數中指定的字元數 `String` 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,45 +32,45 @@ Mid( _
   
 ## <a name="parts"></a>組件  
  `Target`  
- 必要。 要修改之 `String` 變數的名稱。  
+ 必要。 `String`要修改之變數的名稱。  
   
  `Start`  
- 必要。 `Integer` 運算式。 `Target` 中的字元位置會開始取代文字。 `Start` 使用以一為基礎的索引。  
+ 必要。 `Integer` 運算式。 中的字元位置 `Target` ：取代文字的開始位置。 `Start`使用以一個為基礎的索引。  
   
  `Length`  
- 選擇性。 `Integer` 運算式。 要取代的字元數。 如果省略，則會使用所有的 `String`。  
+ 選擇性。 `Integer` 運算式。 要取代的字元數。 如果省略， `String` 則會使用所有。  
   
  `StringExpression`  
- 必要。 取代 `Target`部分的 `String` 運算式。  
+ 必要。 `String`取代部分的運算式 `Target` 。  
   
 ## <a name="exceptions"></a>例外狀況  
   
-|例外狀況類型|條件|  
+|例外狀況型別|狀況|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` < = 0 或 `Length` < 0。|  
+|<xref:System.ArgumentException>|`Start`<= 0 或 `Length` < 0。|  
   
 ## <a name="remarks"></a>備註  
- 已取代的字元數一律小於或等於 `Target`中的字元數。  
+ 已取代的字元數一律小於或等於中的字元數 `Target` 。  
   
- Visual Basic 具有 <xref:Microsoft.VisualBasic.Strings.Mid%2A> 函數和 `Mid` 語句。 這些專案都是在字串中以指定的字元數來運作，但是 `Mid` 函式會傳回字元，而 `Mid` 語句則會取代這些字元。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Strings.Mid%2A>。  
+ Visual Basic 具有 <xref:Microsoft.VisualBasic.Strings.Mid%2A> 函數和 `Mid` 語句。 這些專案都是在字串中以指定的字元數來運作，但是函式會傳回 `Mid` 字元，而語句則會 `Mid` 取代這些字元。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Strings.Mid%2A> 。  
   
 > [!NOTE]
-> 舊版 Visual Basic 的 `MidB` 語句會取代子字串（以位元組為單位），而不是字元。 它主要是用來在雙位元組字集（DBCS）應用程式中轉換字串。 所有 Visual Basic 字串都是 Unicode，而且不再支援 `MidB`。  
+> `MidB`舊版 Visual Basic 的語句會取代子字串（以位元組為單位），而不是字元。 它主要是用來在雙位元組字集（DBCS）應用程式中轉換字串。 所有 Visual Basic 字串都是 Unicode，不再受到 `MidB` 支援。  
   
 ## <a name="example"></a>範例  
  這個範例會使用 `Mid` 語句，將字串變數中指定數目的字元取代為另一個字串中的字元。  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
-## <a name="requirements"></a>需求  
- **命名空間：** [Microsoft.](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>規格需求  
+ **命名空間：** [Microsoft.](../runtime-library-members.md)  
   
- **模組：** `Strings`  
+ **模組：**`Strings`  
   
  **元件：** Visual Basic 執行時間程式庫（在 Microsoft 中）  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
-- [字串](../../../visual-basic/programming-guide/language-features/strings/index.md)
-- [Visual Basic 中的字串簡介](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [字串](../../programming-guide/language-features/strings/index.md)
+- [Visual Basic 中的字串簡介](../../programming-guide/language-features/strings/introduction-to-strings.md)

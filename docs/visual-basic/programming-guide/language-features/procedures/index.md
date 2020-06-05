@@ -8,21 +8,21 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0d9921704570c6984b203817aed8f5546b2f936
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345985"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408786"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的程序
-程式*是以*宣告語句（`Function`、`Sub`、`Operator`、`Get`、`Set`）和相符的 `End` 宣告括住的 Visual Basic 語句區塊。 Visual Basic 中的所有可執行語句都必須在某個程式內。  
+程式*是以*宣告語句（ `Function` 、 `Sub` 、 `Operator` 、 `Get` 、 `Set` ）和相符的 `End` 宣告括住的 Visual Basic 語句區塊。 Visual Basic 中的所有可執行語句都必須在某個程式內。  
   
 ## <a name="calling-a-procedure"></a>呼叫程序  
- 您可以從程式碼中的其他位置叫用程序。 這稱為「程序呼叫」。 當程序完成執行時，會將控制權交還給叫用程序的程式碼，稱為「呼叫程式碼」。 呼叫程式碼是陳述式或陳述式內的運算式，可依名稱指定程序，並將控制權轉移給它。  
+ 您可以從程式碼中的其他位置叫用程序。 這稱為「程序呼叫」**。 當程序完成執行時，會將控制權交還給叫用程序的程式碼，稱為「呼叫程式碼」**。 呼叫程式碼是陳述式或陳述式內的運算式，可依名稱指定程序，並將控制權轉移給它。  
   
 ## <a name="returning-from-a-procedure"></a>從程序交還  
- 程序會在完成執行時將控制權交還給呼叫程式碼。 它可以使用 [Return 陳述式](../../../../visual-basic/language-reference/statements/return-statement.md)、程序的適當 [Exit 陳述式](../../../../visual-basic/language-reference/statements/exit-statement.md)或程序的 [End \<關鍵字> 陳述式](../../../../visual-basic/language-reference/statements/end-keyword-statement.md)來進行這項操作。 控制權會在下列程序呼叫時間點之後接著傳遞給呼叫程式碼。  
+ 程序會在完成執行時將控制權交還給呼叫程式碼。 若要這樣做，它可以使用[Return 語句](../../../language-reference/statements/return-statement.md)、程式的適當[Exit 語句](../../../language-reference/statements/exit-statement.md)語句，或程式的[End \<keyword> 語句](../../../language-reference/statements/end-keyword-statement.md)語句。 控制權會在下列程序呼叫時間點之後接著傳遞給呼叫程式碼。  
   
 - 若使用 `Return` 陳述式，控制權會立即交還給呼叫程式碼。 `Return` 陳述式後面的陳述式不會執行。 同一個程序中可以有多個 `Return` 陳述式。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74345985"
 - 如果程序沒有 `Return` 或 `Exit` 陳述式，則會以程序主體最後一個陳述式後面的 `End Sub`、`End Function`、`End Get` 或 `End Set` 陳述式結束。 `End` 陳述式會將控制權立即交還給呼叫程式碼。 一個程序中只能有一個 `End` 陳述式。  
   
 ## <a name="parameters-and-arguments"></a>參數和引數  
- 在大部分情況下，程序會在每次呼叫時針對不同的資料執行。 您可以將這項資訊當作程序呼叫的一部分傳遞給程序。 程序會定義零或多個「參數」，每個參數代表預期會收到的值。 程序定義中的每個參數會對應至程序呼叫中的「引數」。 引數代表您傳遞給指定程序呼叫中對應參數的值。  
+ 在大部分情況下，程序會在每次呼叫時針對不同的資料執行。 您可以將這項資訊當作程序呼叫的一部分傳遞給程序。 程序會定義零或多個「參數」**，每個參數代表預期會收到的值。 程序定義中的每個參數會對應至程序呼叫中的「引數」**。 引數代表您傳遞給指定程序呼叫中對應參數的值。  
   
 ## <a name="types-of-procedures"></a>程序類型  
  Visual Basic 使用數種類型的程式：  
@@ -42,13 +42,13 @@ ms.locfileid: "74345985"
   
 - [Function 程序](./function-procedures.md)會傳回值給呼叫程式碼。 該程序可在傳回前執行其他動作。
 
-    某些以 C# 撰寫的函式會傳回「參考傳回值」。 函式呼叫者可以修改傳回值，而且這項修改會反映在所呼叫物件的狀態中。 從 Visual Basic 2017 開始，Visual Basic 程式碼可以使用參考傳回值，但無法以傳址方式傳回值。 如需詳細資訊，請參閱[參考傳回值](ref-return-values.md)。
+    某些以 C# 撰寫的函式會傳回「參考傳回值」**。 函式呼叫者可以修改傳回值，而且這項修改會反映在所呼叫物件的狀態中。 從 Visual Basic 2017 開始，Visual Basic 程式碼可以使用參考傳回值，但無法以傳址方式傳回值。 如需詳細資訊，請參閱[參考傳回值](ref-return-values.md)。
   
 - [屬性程序](./property-procedures.md)會傳回並指派物件或模組上的屬性值。  
   
 - 當一或多個運算元是新定義的類別或結構時，[運算子程序](./operator-procedures.md)會定義標準運算式的行為。  
   
-- [Visual Basic 中的泛型程序](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)除了其一般參數之外，還會定義一或多個「型別參數」，讓呼叫程式碼可在每次呼叫時傳遞特定資料類型。  
+- [Visual Basic 中的泛型程序](../data-types/generic-procedures.md)除了其一般參數之外，還會定義一或多個「型別參數」**，讓呼叫程式碼可在每次呼叫時傳遞特定資料類型。  
   
 ## <a name="procedures-and-structured-code"></a>程序和結構化程式碼  
  應用程式中所有的可執行程式碼行都必須在某個程序內，例如 `Main`、`calculate` 或 `Button1_Click`。 如果您將大型程序細分成較小的程序，您的應用程式會更容易閱讀。  
@@ -65,11 +65,11 @@ ms.locfileid: "74345985"
 
 - [如何：建立程序](./how-to-create-a-procedure.md)
 - [Sub 程序](./sub-procedures.md)
-- [函式程序](./function-procedures.md)
+- [Function 程序](./function-procedures.md)
 - [屬性程序](./property-procedures.md)
 - [運算子程序](./operator-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [遞迴程序](./recursive-procedures.md)
 - [程序多載化](./procedure-overloading.md)
-- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Generic Procedures in Visual Basic](../data-types/generic-procedures.md)
+- [物件和類別](../objects-and-classes/index.md)
