@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 8d9647fa490077f9f6ef82f30eccc4d5ee271985
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e81e131933e0997756ed4185a3ceb12ad19b78de
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346099"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392879"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件的建立和終結 (Visual Basic)
 
@@ -37,11 +37,11 @@ ms.locfileid: "74346099"
 
 ## <a name="using-constructors-and-destructors"></a>使用建構函式和解構函式
 
-建構函式和解構函式控制物件的建立和解構。 Visual Basic 初始化和終結物件的 `Sub New` 和 `Sub Finalize` 程式;它們會取代 Visual Basic 6.0 和更早版本中使用的 `Class_Initialize` 和 `Class_Terminate` 方法。
+建構函式和解構函式控制物件的建立和解構。 `Sub New`中的和 `Sub Finalize` 程式 Visual Basic 初始化和終結物件; 它們會取代 `Class_Initialize` `Class_Terminate` Visual Basic 6.0 和舊版中所使用的和方法。
 
 ### <a name="sub-new"></a>Sub New
 
-`Sub New` 建構函式只能在建立類別時執行一次。 不能從相同類別或衍生類別中的其他建構函式的程式碼的第一行以外的任何地方明確呼叫它。 此外，`Sub New` 方法中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。 如果您未明確定義類別的 `Sub New` 程式，Visual Basic 會在執行時間隱含建立 `Sub New` 的函式。
+`Sub New` 建構函式只能在建立類別時執行一次。 不能從相同類別或衍生類別中的其他建構函式的程式碼的第一行以外的任何地方明確呼叫它。 此外，`Sub New` 方法中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。 `Sub New`如果您未明確定義類別的程式，Visual Basic 會在執行時間隱含地建立函數 `Sub New` 。
 
 若要建立類別的建構函式，請在類別定義中的任何地方建立名為 `Sub New` 的程序。 若要建立參數化建構函式，請指定 `Sub New` 之引數的名稱和資料類型，就像您會為任何其他程序指定引數一樣，如下列程式碼所示：
 
@@ -51,9 +51,9 @@ ms.locfileid: "74346099"
 
 [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]
 
-當您定義衍生自另一個類別的類別時，建構函式的第一行必須是基底類別建構函式的呼叫，除非基底類別具有不帶任何參數的可存取建構函式。 例如，包含上述建構函式的基底類別呼叫就是 `MyBase.New(s)`。 否則，`MyBase.New` 是選擇性的，而且 Visual Basic 執行時間會隱含地呼叫它。
+當您定義衍生自另一個類別的類別時，建構函式的第一行必須是基底類別建構函式的呼叫，除非基底類別具有不帶任何參數的可存取建構函式。 例如，包含上述建構函式的基底類別呼叫就是 `MyBase.New(s)`。 否則， `MyBase.New` 是選擇性的，而且 Visual Basic 執行時間會以隱含方式呼叫它。
 
-撰寫程式碼以呼叫父物件的建構函式之後，您可以將任何其他初始設定程式碼加入 `Sub New` 程序。 `Sub New` 可以在被呼叫為參數化的函式時接受引數。 會從呼叫建構函式的程序傳遞這些參數，例如，`Dim AnObject As New ThisClass(X)`。
+撰寫程式碼以呼叫父物件的建構函式之後，您可以將任何其他初始設定程式碼加入 `Sub New` 程序。 `Sub New` 在被當做參數化建構函式呼叫時，可以接受引數。 會從呼叫建構函式的程序傳遞這些參數，例如，`Dim AnObject As New ThisClass(X)`。
 
 ### <a name="sub-finalize"></a>Sub Finalize
 
@@ -64,14 +64,14 @@ ms.locfileid: "74346099"
 
 `Finalize` 解構函式是受保護的方法，只能從其所屬的類別或衍生類別呼叫。 系統會在物件被終結時自動呼叫 `Finalize`，所以您不應該從衍生類別的 `Finalize` 實作外明確地呼叫 `Finalize`。
 
-有別於 `Class_Terminate` 會在物件未設定為任何設定時立即執行，物件失去範圍的時間與 Visual Basic 呼叫 `Finalize` 解構函式的時間之間通常會有延遲。 Visual Basic .NET 允許第二種類型的析構函式，<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>，可以隨時明確呼叫以立即釋放資源。
+有別於 `Class_Terminate` 會在物件未設定為任何設定時立即執行，物件失去範圍的時間與 Visual Basic 呼叫 `Finalize` 解構函式的時間之間通常會有延遲。 Visual Basic .NET 允許第二種類型的析構函式， <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 可隨時明確呼叫以立即釋放資源。
 
 > [!NOTE]
 > `Finalize` 解構函式不應該擲回例外狀況，因為應用程式無法處理它們，而且可能會導致應用程式終止。
 
 ### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>新方法和 Finalize 方法在類別階層中的運作方式
 
-每當建立類別的執行個體時，通用語言執行平台 (CLR) 會嘗試執行名為 `New` 的程序 (如果它存在於該物件)。 `New` 是一種稱為 `constructor` 的程式，可在物件中的任何其他程式碼執行之前，用來初始化新的物件。 `New` 建構函式可以用來開啟檔案、連接到資料庫、初始化變數，以及處理必須先完成才能使用物件的任何其他工作。
+每當建立類別的執行個體時，通用語言執行平台 (CLR) 會嘗試執行名為 `New` 的程序 (如果它存在於該物件)。 `New` 是一種稱為 `constructor` 的程序，用來在物件中的任何其他程式碼執行之前初始化新物件。 `New` 建構函式可以用來開啟檔案、連接到資料庫、初始化變數，以及處理必須先完成才能使用物件的任何其他工作。
 
 建立衍生類別的執行個體時，基底類別的 `Sub New` 的建構函式會最先執行，然後衍生類別中的建構函式接著執行。 這是因為 `Sub New` 建構函式的程式碼中的第一行使用語法 `MyBase.New()` 呼叫在類別階層中在其本身正上方之類別的建構函式。 然後會針對類別階層中的每個類別呼叫 `Sub New` 建構函式，直到達到基底類別的建構函式。 此時，會執行基底類別的建構函式中的程式碼，接著執行所有衍生類別中的每個建構函式中的程式碼，最後執行最多衍生類別中的程式碼。
 
@@ -85,7 +85,7 @@ ms.locfileid: "74346099"
 
 類別執行個體經常會控制不受 CLR 管理的資源，例如 Windows 控制代碼和資料庫連線。 這些資源必須在類別的 `Finalize` 方法中處置，這樣在記憶體回收行程終結物件時就會釋放它們。 然而，記憶體回收行程只會在 CLR 需要更多的可用記憶體時才會終結物件。 這表示在物件超出範圍之前可能不會釋放資源。
 
-為了補充記憶體回收，您的類別可以提供機制以主動管理系統資源，不過前提是它們實作 <xref:System.IDisposable> 介面。 <xref:System.IDisposable> 有一個方法，<xref:System.IDisposable.Dispose%2A>，當用戶端使用物件完成時，應該呼叫它。 您可以使用 <xref:System.IDisposable.Dispose%2A> 方法立即釋放資源及執行工作，例如關閉檔案和資料庫連線。 與 `Finalize` 解構函式不同的是，不會自動呼叫 <xref:System.IDisposable.Dispose%2A> 方法。 當您想要立即釋放資源時，類別的用戶端必須明確地呼叫 <xref:System.IDisposable.Dispose%2A>。
+為了補充記憶體回收，您的類別可以提供機制以主動管理系統資源，不過前提是它們實作 <xref:System.IDisposable> 介面。 <xref:System.IDisposable> 具有 <xref:System.IDisposable.Dispose%2A> 這種方法，當用戶端完成使用物件時，它們應該加以呼叫。 您可以使用 <xref:System.IDisposable.Dispose%2A> 方法立即釋放資源及執行工作，例如關閉檔案和資料庫連線。 與 `Finalize` 解構函式不同的是，不會自動呼叫 <xref:System.IDisposable.Dispose%2A> 方法。 當您想要立即釋放資源時，類別的用戶端必須明確地呼叫 <xref:System.IDisposable.Dispose%2A>。
 
 ### <a name="implementing-idisposable"></a>實作 IDisposable
 
@@ -158,7 +158,7 @@ End Sub
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IDisposable.Dispose%2A>
-- [元件的初始化和終止](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
-- [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [清除 Unmanaged 資源](../../../../standard/garbage-collection/unmanaged.md)
-- [Nothing](../../../../visual-basic/language-reference/nothing.md)
+- [初始化及終止元件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
+- [New 運算子](../../../language-reference/operators/new-operator.md)
+- [清除非受控資源](../../../../standard/garbage-collection/unmanaged.md)
+- [Nothing](../../../language-reference/nothing.md)
