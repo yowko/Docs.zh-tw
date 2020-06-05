@@ -2,17 +2,17 @@
 title: LINQ 的 Visual Studio IDE 和工具支援
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: 36c3b051a0e8577a5e622f4cdf986945043dbdc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec9c4acf75a32caa7a078782702c0c8c52386702
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351038"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413280"
 ---
-# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>LINQ 的 Visual Studio IDE 和工具支援（Visual Basic）
+# <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>LINQ 的 Visual Studio IDE 和工具支援 (Visual Basic)
 Visual Studio 整合式開發環境 (IDE) 提供支援 LINQ 應用程式開發的下列功能：  
   
-## <a name="object-relational-designer"></a>物件關聯式設計工具  
+## <a name="object-relational-designer"></a>Object Relational Designer  
  物件關聯式設計工具是一種視覺化設計工具，可讓您在[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)的應用程式中，用來產生 Visual Basic 中的類別，以代表基礎資料庫中的關聯式資料。 如需詳細資訊，請參閱 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
 ## <a name="sqlmetal-command-line-tool"></a>SQLMetal 命令列工具  
@@ -26,4 +26,4 @@ Visual Studio 整合式開發環境 (IDE) 提供支援 LINQ 應用程式開發�
   
 ## <a name="see-also"></a>另請參閱
 
-- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Language-Integrated Query (LINQ) (Visual Basic)](index.md)

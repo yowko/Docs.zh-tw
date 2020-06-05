@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: bc5a7377a5e2e4c7ebe7291fd5f0093c4d6e996d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fe19a6160623aa9ea867becdf7a15b51319abf45
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346895"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410434"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>如何：移入和移出變數資料 (Visual Basic)
 
@@ -22,7 +22,7 @@ ms.locfileid: "74346895"
 
 - 在指派語句的左邊使用變數名稱。
 
-    下列範例會將變數的值設定 `alpha`。
+    下列範例會設定變數的值 `alpha` 。
 
     ```vb
     alpha = (beta * 6.27) / (gamma + 2.1)
@@ -40,9 +40,9 @@ ms.locfileid: "74346895"
 
   \-或-
 
-- 在指派語句中的等號（`=`）後面使用變數名稱。
+- 在指派語句中的等號（）後面使用變數名稱 `=` 。
 
-  下列範例會讀取 `startValue` 變數的值，然後在運算式中使用變數 `counter` 的值。
+  下列範例會讀取變數的值 `startValue` ，然後在運算式中使用變數的值 `counter` 。
 
   ```vb
   counter = startValue
@@ -51,8 +51,8 @@ ms.locfileid: "74346895"
 
   變數的值會以常數的形式參與運算式，然後儲存在指派語句左側的變數或屬性中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [變數](index.md)
+- [變數宣告](variable-declaration.md)
+- [物件變數](object-variables.md)

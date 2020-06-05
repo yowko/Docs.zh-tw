@@ -21,15 +21,15 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 73cf56dd72f2baac0474d6f5c4e88228a1fe38cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 611f3d8faf2148b8a983467d9ace4fd6c18b30e6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349843"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373876"
 ---
 # <a name="derived-math-functions-visual-basic"></a>衍生的數學函式 (Visual Basic)
-下表顯示的非內建數學函數，可以衍生自 <xref:System.Math?displayProperty=nameWithType> 物件的內建數學函式。 您可以藉由將 `Imports System.Math` 新增至檔案或專案，來存取內建數學函數。  
+下表顯示的非內建數學函數，可以衍生自物件的內建數學函式 <xref:System.Math?displayProperty=nameWithType> 。 您可以藉由將加入至您的檔案或專案，來存取內建的數學函數 `Imports System.Math` 。  
   
 |函式|衍生的對等專案|  
 |--------------|-------------------------|  
@@ -54,6 +54,6 @@ ms.locfileid: "74349843"
 |反雙曲余割（Acsch （x））|Log （（符號（x） * Sqrt （x \* x + 1） + 1）/x）|  
 |反雙曲餘切（Acoth （x））|Log （（x + 1）/（x –1））/2|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [數學函式](../../../visual-basic/language-reference/functions/math-functions.md)
+- [Math 函數](../functions/math-functions.md)
