@@ -1,15 +1,15 @@
 ---
-title: 模組
+title: 單元
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 6869d981cdca20b915a588969134fc50e8d1ff47
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: df7e32a81746a97a78a4a2a28e57032affa73cc0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838243"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386591"
 ---
 # <a name="modules-visual-basic"></a>模組 (Visual Basic)
 
@@ -17,7 +17,7 @@ Visual Basic 提供數個模組，可讓您簡化程式碼中的一般工作，�
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|包含其他常數。 這些常數可以在程式碼中的任何位置使用。|  
+|<xref:Microsoft.VisualBasic.Constants>|包含其他常數。 這些常數可用在程式碼當中的任何地方。|  
 |<xref:Microsoft.VisualBasic.ControlChars>|包含用於列印和顯示文字的常數控制字元。|  
 |<xref:Microsoft.VisualBasic.Conversion>|包含將十進位數轉換成其他基底的成員、數位的字串、數位的字串，以及另一個資料類型。|  
 |<xref:Microsoft.VisualBasic.DateAndTime>|包含取得目前日期或時間、執行日期計算、傳回日期或時間、設定日期或時間，或處理常式持續時間的成員。|  
@@ -30,6 +30,6 @@ Visual Basic 提供數個模組，可讓您簡化程式碼中的一般工作，�
 |<xref:Microsoft.VisualBasic.Strings>|包含執行字串作業的成員，例如重新格式化字串、搜尋字串、取得字串長度等等。|  
 |<xref:Microsoft.VisualBasic.VBMath>|包含成員執行數學運算。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)
+- [Visual Basic 語言參考](index.md)
