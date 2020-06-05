@@ -2,20 +2,20 @@
 title: 在委派中使用變異數
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 9c2aad0e4b9408939600938412fe5c3e73b5bf15
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 842392a1342f7d3689d4d1f2a2adb7470eeda05e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349035"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375780"
 ---
-# <a name="using-variance-in-delegates-visual-basic"></a>在委派中使用變異數（Visual Basic）
+# <a name="using-variance-in-delegates-visual-basic"></a>使用委派中的變異數 (Visual Basic)
 
-當您將方法指派給委派時，「共變數」和「反變數」可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。
+當您將方法指派給委派時，「共變數」** 和「反變數」** 可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。
 
 ## <a name="example-1-covariance"></a>範例 1︰共變數
 
-### <a name="description"></a>描述
+### <a name="description"></a>Description
 
 此範例示範如何搭配其傳回型別衍生自委派簽章中傳回型別的方法使用委派。 `DogsHandler` 所傳回的資料類型是 `Dogs` 類型，該類型衍生自定義於委派中的 `Mammals` 類型。
 
@@ -46,7 +46,7 @@ End Class
 
 ## <a name="example-2-contravariance"></a>範例 2：反變數
 
-### <a name="description"></a>描述
+### <a name="description"></a>Description
 
 此範例示範如何搭配其參數類型為委派簽章參數類型的基底類型方法來使用委派。 透過反變數，您可以使用一個事件處理常式，而不是不同的處理常式。 下列範例會使用兩個委派：
 
@@ -86,7 +86,7 @@ Private Sub Form1_Load(ByVal sender As System.Object,
 End Sub
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [委派中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [委派中的變異數 (Visual Basic)](variance-in-delegates.md)
+- [針對 Func 與 Action 泛型委派使用變異數 (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)
