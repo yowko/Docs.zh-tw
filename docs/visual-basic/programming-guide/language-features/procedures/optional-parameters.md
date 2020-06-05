@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: d859f7eaaefa051cfdf703d8589bc8c679a3ee85
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4e07b75c94b4aea681e6e862e161bda80b2833fc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345957"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364327"
 ---
 # <a name="optional-parameters-visual-basic"></a>選擇性參數 (Visual Basic)
-您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*會以程序定義中的 `Optional` 關鍵字來表示。 可套用下列規則：  
+您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*會 `Optional` 以程序定義中的關鍵字表示。 適用的規則如下：  
   
 - 程序定義中的每一個選擇性參數都必須指定一個預設值。  
   
@@ -43,14 +43,14 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 Sub name(argument 1, , , argument 4)  
 ```  
   
- 下列範例會建立數個對 `MsgBox` 函式的呼叫。 `MsgBox` 有一個必要參數和兩個選擇性參數。  
+ 下列範例會建立數個對 `MsgBox` 函式的呼叫。 `MsgBox` 會有一個必要參數和兩個選擇性參數。  
   
  第一個對 `MsgBox` 的呼叫會依照 `MsgBox` 定義的引數順序提供這三個引數。 第二個呼叫只會提供必要引數。 第三個和第四個呼叫會提供第一個和第三個引數。 第三個呼叫會依位置執行這個動作，第四個呼叫則會依名稱執行。  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>判斷是否有選擇性引數  
- 程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 下列程式會定義選擇性參數 `office`，並測試其預設值 `QJZ`，以查看它是否已在呼叫中省略：  
+ 程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 下列程式會定義選擇性參數 `office` ，並測試其預設值， `QJZ` 以查看它是否已在呼叫中省略：  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
@@ -59,7 +59,7 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>選擇性參數和多載化  
  另一個用選擇性參數定義程序的方式是使用多載化 (Overloading)。 如果您有一個選擇性參數，您可以定義程序的兩個多載版本，其中一個接受該參數，而另一個則不接受。 隨著選擇性參數數目的增加，這個方法會變得比較複雜。 但是，它的優點是可以完全確定呼叫程式是否提供每一個選擇性引數。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
@@ -67,5 +67,5 @@ Sub name(argument 1, , , argument 4)
 - [依位置和名稱傳遞引數](./passing-arguments-by-position-and-by-name.md)
 - [參數陣列](./parameter-arrays.md)
 - [程序多載化](./procedure-overloading.md)
-- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
-- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+- [選擇性](../../../language-reference/modifiers/optional.md)
+- [ParamArray](../../../language-reference/modifiers/paramarray.md)

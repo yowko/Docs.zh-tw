@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 935926b8b83afa47c20ea68aecd6bc8c40bd0234
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344286"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363690"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic 中的字串基礎
 `String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 本主題介紹 Visual Basic 中字串的基本概念。  
@@ -54,14 +54,14 @@ World]]></xml>.Value
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- 在上述範例中，字串的 `Chars` 屬性會傳回字串中的第四個字元，也就是 `D`，並將其指派給 `myChar`。 您也可以透過 `Length` 屬性取得特定字串的長度。 如果您需要在字串上執行多個陣列類型操作，您可以使用字串的 `Char` 函式將它轉換為 `ToCharArray` 執行個體陣列。 例如：  
+ 在上述範例中，字串的 `Chars` 屬性會傳回字串中的第四個字元，也就是 `D`，並將其指派給 `myChar`。 您也可以透過 `Length` 屬性取得特定字串的長度。 如果您需要在字串上執行多個陣列類型操作，您可以使用字串的 `ToCharArray` 函式將它轉換為 `Char` 執行個體陣列。 例如：  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
  變數 `myArray` 現在包含 `Char` 值的陣列，每個都代表 `myString` 的一個字元。  
   
 ## <a name="the-immutability-of-strings"></a>字串的不變性  
- 字串是*不可變*的，這表示一旦建立之後，就無法變更其值。 不過，這不會讓您將多個值指派給一個字串變數。 參考下列範例：  
+ 字串是*不可變*的，這表示一旦建立之後，就無法變更其值。 不過，這不會讓您將多個值指派給一個字串變數。 請考慮下列範例：  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   
@@ -71,9 +71,9 @@ World]]></xml>.Value
   
  不同於其他內建資料類型，`String` 是參考類型。 將參考類型的變數做為引數傳遞給函式或副程式時，會傳遞儲存資料的記憶體位址的參考，而不是字串的實際值。 因此在前一個範例中，變數的名稱維持不變，但是它指向 `String` 類別的全新和不同的執行個體，其中包含新值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 中的字串簡介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [String 資料類型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Char 資料類型](../../../../visual-basic/language-reference/data-types/char-data-type.md)
-- [基本字串作業](../../../../standard/base-types/basic-string-operations.md)
+- [Visual Basic 中的字串簡介](introduction-to-strings.md)
+- [String 資料類型](../../../language-reference/data-types/string-data-type.md)
+- [Char 資料類型](../../../language-reference/data-types/char-data-type.md)
+- [基底字元串作業](../../../../standard/base-types/basic-string-operations.md)

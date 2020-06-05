@@ -1,27 +1,27 @@
 ---
-title: 函式程式設計和命令式程式設計的比較
+title: 功能性程式設計與命令式程式設計
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0090761dc07218673e1e0299951530d5a4763ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353434"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364795"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>功能性程式設計與命令式程式設計的比較（Visual Basic）
 本主題比較與對照功能性程式設計與更傳統的命令性 (程序性) 程式設計。  
   
-## <a name="functional-programming-vs-imperative-programming"></a>函式程式設計和命令式程式設計的比較  
- 明確建立「功能性程式設計」開發架構時，可支援解決問題的純功能性方法。 功能性程式設計是一種「宣告式程式設計」。 相較之下，多數主流語言 (包括物件導向程式設計 (OOP) 語言，例如 C#、Visual Basic、C++ 與 Java) 的設計主要支援「命令性」(程序性) 程式設計。  
+## <a name="functional-programming-vs-imperative-programming"></a>功能性程式設計與命令式程式設計  
+ 明確建立「功能性程式設計」** 開發架構時，可支援解決問題的純功能性方法。 功能性程式設計是一種「宣告式程式設計」**。 相較之下，多數主流語言 (包括物件導向程式設計 (OOP) 語言，例如 C#、Visual Basic、C++ 與 Java) 的設計主要支援「命令性」**(程序性) 程式設計。  
   
- 利用命令性方法，開發人員可以撰寫詳細描寫電腦必須採取之步驟以達成目標的程式碼。 這有時候稱為「演算法」程式設計。 相較之下，功能性方法包含將問題撰寫成要執行的一組函式。 您可以仔細定義每個函式的輸入，以及每個函式會傳回的東西。 下表描述這兩種方法之間的幾項一般差異。  
+ 利用命令性方法，開發人員可以撰寫詳細描寫電腦必須採取之步驟以達成目標的程式碼。 這有時候稱為「演算法」** 程式設計。 相較之下，功能性方法包含將問題撰寫成要執行的一組函式。 您可以仔細定義每個函式的輸入，以及每個函式會傳回的東西。 下表描述這兩種方法之間的幾項一般差異。  
   
 |特性|命令性方法|功能性方法|  
 |--------------------|-------------------------|-------------------------|  
 |程式設計人員焦點|如何執行工作 (演算法) 以及如何追蹤狀態的變更。|想要的資訊與需要的轉換。|  
 |狀態變更|重要。|非存在。|  
-|執行的順序|重要。|重要性低。|  
+|執行順序|重要。|重要性低。|  
 |主要流量控制|迴圈、條件與函式 (方法) 呼叫。|函式呼叫，包括遞迴。|  
 |主要操作單位|結構或類別的執行個體。|當做第一級物件與資料集合的函式。|  
   
@@ -50,8 +50,8 @@ ms.locfileid: "74353434"
   
  幸運的是，Visual Basic 不需要完整的功能性程式設計，因為它同時支援命令式和功能性程式設計方法。 開發人員可以選擇哪個方法最適合特定的案例。 事實上，程式通常會結合這兩種方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [純功能性轉換簡介（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [純功能性轉換簡介（Visual Basic）](introduction-to-pure-functional-transformations.md)
 - [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)
-- [重構為純虛擬函式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [重構為純虛擬函式（Visual Basic）](refactoring-into-pure-functions.md)
