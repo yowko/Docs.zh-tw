@@ -7,15 +7,15 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 4cdcda7c5c78481af1633bf29d75070c521ab393
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347398"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403222"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>程式碼中以關鍵字做為項目名稱 (Visual Basic)
-任何程式元素（例如變數、類別或成員）的名稱都可以與受限關鍵字相同。 例如，您可以建立名為 `Loop`的變數。 不過，若要參考您的版本（其名稱與受限制的 `Loop` 關鍵字相同），您必須在其前面加上完整限定字串，或將其括在方括弧（`[ ]`）中，如下列範例所示。  
+任何程式元素（例如變數、類別或成員）的名稱都可以與受限關鍵字相同。 例如，您可以建立名為的變數 `Loop` 。 不過，若要參考您的版本（其名稱與受限制的 `Loop` 關鍵字相同），您必須在其前面加上完整限定字串，或將其括在方括弧（ `[ ]` ）中，如下列範例所示。  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
@@ -30,8 +30,8 @@ ms.locfileid: "74347398"
 > [!NOTE]
 > 您的程式也可能包含其他參考元件所提供的元素名稱。 如果這些名稱與受限制的關鍵字衝突，則在其周圍加上方括弧會導致 Visual Basic 將它們解讀為您定義的元素。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic 命名慣例](naming-conventions.md)
+- [程式結構和程式碼慣例](program-structure-and-code-conventions.md)
+- [關鍵字](../../language-reference/keywords/index.md)

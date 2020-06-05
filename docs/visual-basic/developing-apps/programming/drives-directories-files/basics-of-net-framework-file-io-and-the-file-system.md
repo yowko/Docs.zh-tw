@@ -9,18 +9,18 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 187a20617ec901e722a30ebfa571e4a55ed0b5c3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348937"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401793"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
 
 <xref:System.IO> 命名空間中的類別是用來處理磁碟機、檔案和目錄。
 
-<xref:System.IO> 命名空間包含 <xref:System.IO.File> 和 <xref:System.IO.Directory> 類別，提供操縱檔案和目錄的 .NET Framework 功能。 因為這些物件的方法是靜態或共用成員，所以您可以直接使用它們，而不需要先建立類別的執行個體。 這些類別是與 <xref:System.IO.FileInfo> 和 <xref:System.IO.DirectoryInfo> 類別相關聯，對 `My` 功能的使用者而言這應該十分熟悉。 若要使用這些類別，您必須完整限定名稱，或在受影響程式碼的開頭包含 `Imports` 陳述式來匯入適當的命名空間。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。
+<xref:System.IO> 命名空間包含 <xref:System.IO.File> 和 <xref:System.IO.Directory> 類別，提供操縱檔案和目錄的 .NET Framework 功能。 因為這些物件的方法是靜態或共用成員，所以您可以直接使用它們，而不需要先建立類別的執行個體。 這些類別是與 <xref:System.IO.FileInfo> 和 <xref:System.IO.DirectoryInfo> 類別相關聯，對 `My` 功能的使用者而言這應該十分熟悉。 若要使用這些類別，您必須完整限定名稱，或在受影響程式碼的開頭包含 `Imports` 陳述式來匯入適當的命名空間。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)。
 
 > [!NOTE]
 > 本節中的其他主題使用 `My.Computer.FileSystem` 物件，而非處理磁碟機、檔案和目錄的 `System.IO` 類別。 `My.Computer.FileSystem` 物件主要用於 Visual Basic 程式。 `System.IO` 類別旨在由任何支援 .NET Framework 的語言使用，包括 Visual Basic。
@@ -35,7 +35,7 @@ ms.locfileid: "74348937"
 
 資料流中所包含的資料可能來自記憶體、檔案或 TCP/IP 通訊端。 資料流具有可套用至它們的基本作業︰
 
-- **讀取**。 您可以讀取資料流，方法是將資料從資料流傳送至資料結構 (例如字串或位元組陣列)。
+- **正在讀取**。 您可以讀取資料流，方法是將資料從資料流傳送至資料結構 (例如字串或位元組陣列)。
 
 - **撰寫**。 將資料從資料來源傳送至資料流，即可寫入資料流。
 
@@ -62,8 +62,8 @@ ms.locfileid: "74348937"
 |至|請參閱|
 |---|---|
 |讀取和寫入資料檔案|[作法：讀取和寫入新建立的資料檔案](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|讀取檔案中的文字|[作法：讀取檔案中的文字](../../../../standard/io/how-to-read-text-from-a-file.md)|
-|將文字寫入檔案中|[作法：將文字寫入檔案](../../../../standard/io/how-to-write-text-to-a-file.md)|
+|從檔案讀取文字|[作法：讀取檔案中的文字](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|將文字寫入檔案|[作法：將文字寫入檔案](../../../../standard/io/how-to-write-text-to-a-file.md)|
 |讀取字串中的字元|[作法：讀取字串中的字元](../../../../standard/io/how-to-read-characters-from-a-string.md)|
 |將字元寫入字串中|[作法：將字元寫入字串](../../../../standard/io/how-to-write-characters-to-a-string.md)|
 |加密資料|[加密資料](../../../../standard/security/encrypting-data.md)|
@@ -84,7 +84,7 @@ ms.locfileid: "74348937"
 
 ## <a name="file-permissions"></a>檔案權限
 
-使用 <xref:System.Security.Permissions.FileIOPermission> 類別可以控制檔案和目錄的存取。 這對於使用 Web Form 的開發人員來說可能特別重要，其根據預設在名為 ASPNET 的特殊本機使用者帳戶內容中執行，而該帳戶則是在 ASP.NET 和 .NET Framework 安裝期間一同建立的。 當這類應用程式要求存取資源時，ASPNET 使用者帳戶會具有有限的權限，這樣可能會讓使用者無法執行從 Web 應用程式寫入檔案這類動作。 如需詳細資訊，請參閱 <xref:System.Security.Permissions.FileIOPermission>。
+使用 <xref:System.Security.Permissions.FileIOPermission> 類別可以控制檔案和目錄的存取。 這對於使用 Web Form 的開發人員來說可能特別重要，其根據預設在名為 ASPNET 的特殊本機使用者帳戶內容中執行，而該帳戶則是在 ASP.NET 和 .NET Framework 安裝期間一同建立的。 當這類應用程式要求存取資源時，ASPNET 使用者帳戶會具有有限的權限，這樣可能會讓使用者無法執行從 Web 應用程式寫入檔案這類動作。 如需詳細資訊，請參閱 <xref:System.Security.Permissions.FileIOPermission> 。
 
 ## <a name="isolated-file-storage"></a>隔離檔案儲存區
 
@@ -111,4 +111,4 @@ ms.locfileid: "74348937"
 - [撰寫資料流](../../../../standard/io/composing-streams.md)
 - [檔案和資料流程 i/o](../../../../standard/io/index.md)
 - [非同步檔案 i/o](../../../../standard/io/asynchronous-file-i-o.md)
-- [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+- [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](classes-used-in-net-framework-file-io-and-the-file-system.md)

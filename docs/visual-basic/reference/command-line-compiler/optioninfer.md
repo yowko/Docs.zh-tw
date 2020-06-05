@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: d7209e431b84e52e487bccbf73bd633a346efde0
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 524660fca7c56fa490cc85169898bf2bf6d1a16e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775612"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400574"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 可讓您在變數宣告中使用區域類型推斷。  
@@ -34,7 +34,7 @@ ms.locfileid: "72775612"
 > 您可以使用 `-noconfig` 選項來保留編譯器的內部預設值而不是 vbc.rsp 中所指定的預設值。 這個選項的編譯器預設值是 `-optioninfer-`。  
   
 ## <a name="remarks"></a>備註  
- 如果原始程式碼檔案包含[選項推斷語句](../../../visual-basic/language-reference/statements/option-infer-statement.md)，則語句會覆寫`-optioninfer`命令列編譯器設定。  
+ 如果原始程式碼檔案包含[選項推斷語句](../../language-reference/statements/option-infer-statement.md)，則語句會覆寫 `-optioninfer` 命令列編譯器設定。  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中設定-optioninfer  
   
@@ -51,14 +51,14 @@ vbc -optioninfer+ test.vb
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [區域型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Visual Basic 命令列編譯器](index.md)
+- [-optioncompare](optioncompare.md)
+- [-optionexplicit](optionexplicit.md)
+- [-optionstrict](optionstrict.md)
+- [編譯命令列的範例](sample-compilation-command-lines.md)
+- [Option Infer 陳述式](../../language-reference/statements/option-infer-statement.md)
+- [區域型別推斷](../../programming-guide/language-features/variables/local-type-inference.md)
 - [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [專案設計工具、編譯頁 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+- [-noconfig](noconfig.md)
+- [從命令列建置](building-from-the-command-line.md)

@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 237622d0dc6c57f66d402f491a6191a5911574e2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619535"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409734"
 ---
 # <a name="declaration-expected"></a>必須是宣告
-非宣告陳述式，例如指派或迴圈陳述式，就會發生任何程序之外。 允許只宣告外部程序。  
+Nondeclarative 語句（例如指派或迴圈語句）會發生在任何程式之外。 在程式之外只允許宣告。  
   
- 或者，程式設計項目宣告時沒有宣告關鍵字這類`Dim`或`Const`。  
+ 或者，在沒有宣告關鍵字（例如或）的情況下宣告程式設計項目 `Dim` `Const` 。  
   
- **錯誤 ID:** BC30188  
+ **錯誤識別碼：** BC30188  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 非宣告的陳述式移至程序的主體。  
+- 將 nondeclarative 語句移至程式的主體。  
   
-- 開始使用適當的宣告關鍵字宣告。  
+- 使用適當的宣告關鍵字來開始宣告。  
   
-- 請確定宣告關鍵字沒有拼字錯誤。  
+- 請確定宣告關鍵字未拼錯。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [程序](../../programming-guide/language-features/procedures/index.md)
+- [Dim 陳述式](../statements/dim-statement.md)

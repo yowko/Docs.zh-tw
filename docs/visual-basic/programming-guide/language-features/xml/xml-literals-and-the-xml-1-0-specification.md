@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: d5dd90899c8a3c4fb4670258e7ff636822c479da
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1200e9ada45adce267c61f821bc7e2bde211cdc3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346189"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403274"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML 常值和 XML 1.0 規格 (Visual Basic)
 Visual Basic 中的 XML 常值語法支援大部分的可延伸標記語言 (XML) （XML）1.0 規格。 如需有關 XML 1.0 規格的詳細資訊，請參閱 W3C 網站上的[可延伸標記語言 (XML) （XML） 1.0](https://www.w3.org/TR/xml) 。  
@@ -28,8 +28,8 @@ Visual Basic 中的 XML 常值語法支援大部分的可延伸標記語言 (XML
   
 - 檔和元素常值中允許的內嵌運算式語法不是有效的 XML。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML 文件常值](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
-- [XML 項目常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [在 Visual Basic 中建立 XML](creating-xml.md)
+- [XML 文件常值](../../../language-reference/xml-literals/xml-document-literal.md)
+- [XML 元素常值](../../../language-reference/xml-literals/xml-element-literal.md)

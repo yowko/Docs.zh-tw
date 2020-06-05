@@ -7,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e36b84252c3d8762308e95323b8e284977df8c0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649838"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409760"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>常數必須是內建或列舉類型，而不是類別、結構、型別參數或陣列類型
-您已嘗試宣告為類別、 結構或陣列類型或型別參數所包含的泛型類型定義的常數。  
+您已嘗試將常數宣告為類別、結構或陣列類型，或宣告為包含泛型型別所定義的類型參數。  
   
- 常數必須是內建類型 (`Boolean`， `Byte`， `Date`， `Decimal`， `Double`， `Integer`， `Long`， `Object`， `SByte`， `Short`， `Single`， `String`， `UInteger`， `ULong`，或`UShort`)，或有`Enum`以其中一種整數類資料類型為基礎類型。  
+ 常數必須是內建類型（、、、、、、、、、、、、、 `Boolean` `Byte` `Date` `Decimal` `Double` `Integer` `Long` `Object` `SByte` `Short` `Single` `String` `UInteger` `ULong` 或 `UShort` ），或是以 `Enum` 其中一個整數類型為基礎的類型。  
   
- **錯誤 ID:** BC30424  
+ **錯誤識別碼：** BC30424  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 宣告作為內建常數或`Enum`型別。  
+1. 將常數宣告為內建函式或 `Enum` 類型。  
   
-2. 常數，也可以是特殊值，例如`True`， `False`，或`Nothing`。 編譯器會考慮這些預先定義的值必須是適當的內建類型。  
+2. 常數也可以是特殊的值 `True` ，例如、 `False` 或 `Nothing` 。 編譯器會將這些預先定義的值視為適當的內建類型。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [常數和列舉](../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [資料類型](../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [資料類型](../../../visual-basic/language-reference/data-types/index.md)
+- [常數和列舉](../constants-and-enumerations.md)
+- [資料類型](../../programming-guide/language-features/data-types/index.md)
+- [資料類型](../data-types/index.md)

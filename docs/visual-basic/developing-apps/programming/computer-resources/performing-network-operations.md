@@ -5,12 +5,12 @@ helpviewer_keywords:
 - network operations, performing
 - My.Computer.Network object, tasks
 ms.assetid: 8ecc47ce-7730-49cd-b21d-3a13477eec6b
-ms.openlocfilehash: cb39f45ec9382e39569a08e5ba400d43cbc6bbd2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67cfc1363c840c98f1df6529498fce1a82a0a5bf
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74345545"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360146"
 ---
 # <a name="performing-network-operations-visual-basic"></a>執行網路作業 (Visual Basic)
 
@@ -18,13 +18,13 @@ ms.locfileid: "74345545"
   
 ## <a name="in-this-section"></a>本節內容  
 
- [作法：上傳檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [作法：上傳檔案](how-to-upload-a-file.md)  
  示範如何使用 `My.Computer.Network` 上傳檔案，並將它儲存到遠端位置。  
   
- [作法：下載檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ [作法：下載檔案](how-to-download-a-file.md)  
  示範如何使用 `My.Computer.Network` 下載遠端位置的檔案。  
   
- [作法：檢查連線狀態](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
+ [作法：檢查連線狀態](how-to-check-connection-status.md)  
  示範如何判斷電腦是否具有正常運作的網路連線。  
   
 ## <a name="reference"></a>參考  
