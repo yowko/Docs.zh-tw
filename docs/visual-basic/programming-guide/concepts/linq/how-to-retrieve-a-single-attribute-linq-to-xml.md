@@ -1,13 +1,13 @@
 ---
-title: 如何：擷取單一屬性 (LINQ to XML)
+title: 作法：擷取單一屬性 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: 02afbc987cf9f55d16bb56912f3eaf45cd8c9a37
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 34c390fbffc1aea68a2fd8ae64b17d2637a1f4f1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347555"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397852"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>如何：取出單一屬性（LINQ to XML）（Visual Basic）
 這個主題會說明如何擷取項目的單一屬性 (如果有屬性名稱)。 這在撰寫您要尋找具有特定屬性之項目的查詢運算式時，相當實用。  
@@ -38,7 +38,7 @@ work
 ```  
   
 ## <a name="example"></a>範例  
- 如果您要擷取屬性的值，您可以進行轉型，如同將 <xref:System.Xml.Linq.XElement> 物件轉型。 下列範例為其示範。  
+ 如果您要擷取屬性的值，您可以進行轉型，如同將 <xref:System.Xml.Linq.XElement> 物件轉型。 下列範例示範此作業。  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -94,4 +94,4 @@ work
   
 ## <a name="see-also"></a>另請參閱
 
-- [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 軸 (Visual Basic)](linq-to-xml-axes.md)
