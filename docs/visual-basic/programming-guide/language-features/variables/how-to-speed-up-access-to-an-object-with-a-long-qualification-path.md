@@ -8,18 +8,18 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: 83670ae6af0904156b08398024658cf504b7663f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fe93e7bac2a21f1060d1f93765eb35e1ad0c7eb0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346822"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410408"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>如何：加快存取具有限定性條件長路徑的物件 (Visual Basic)
 
 如果您經常存取需要數個方法和屬性之限定性路徑的物件，您可以藉由不重複限定性路徑來加速程式碼。
 
-有兩種方式可以避免重複限定性路徑。 您可以將物件指派給變數，也可以在 `With`...`End With` 區塊中使用它。
+有兩種方式可以避免重複限定性路徑。 您可以將物件指派給變數，也可以在 ... 區塊中使用它 `With` `End With` 。
 
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>藉由將非常限定的物件指派給變數來加速其存取
 
@@ -45,7 +45,7 @@ ms.locfileid: "74346822"
     With someForm.ActiveForm.ActiveControl
     ```
 
-2. 在 `With` 區塊內，于 `End With` 語句之前存取物件的成員。
+2. 在 `With` 區塊內，于語句之前存取物件的成員 `End With` 。
 
     ```vb
         .Text = "Test"
@@ -54,7 +54,7 @@ ms.locfileid: "74346822"
     End With
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [With...End With 陳述式](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [物件變數](object-variables.md)
+- [With...End With 陳述式](../../../language-reference/statements/with-end-with-statement.md)

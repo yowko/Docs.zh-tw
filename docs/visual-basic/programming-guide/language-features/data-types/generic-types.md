@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 3dcd7756b10fab8f66f4d5c10acedd8f600eb2e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350127"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394048"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型類型 (Visual Basic)
 *「泛型類型」* (generic type) 是單一程式設計項目，適用於為各種資料類型執行相同的功能。 當您定義泛型類別或程序時，不需要為想要執行該功能的每種資料類型定義不同的版本。  
@@ -58,34 +58,34 @@ ms.locfileid: "74350127"
   
  您現在可以使用 `stringQ` ，以獨佔方式使用 `String` 值。 因為 `stringQ` 是 `String` 特有的，而不是通用於 `Object` 值，所以您沒有晚期繫結或類型轉換。 這可以節省執行時間，並減少執行階段錯誤。  
   
- 如需使用泛型類型的詳細資訊，請參閱 [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)。  
+ 如需使用泛型類型的詳細資訊，請參閱 [How to: Use a Generic Class](how-to-use-a-generic-class.md)。  
   
 ## <a name="example-of-a-generic-class"></a>泛型類別範例  
  下列範例顯示泛型類別的基本架構定義。  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
- 在上述的基本架構中， `t` 是 *「類型參數」* (type parameter)，即宣告類別時所提供資料類型的預留位置。 您可以在程式碼的其他位置，提供 `classHolder` 的各種資料類型來宣告各種版本的 `t`。 下列範例顯示兩個這類宣告。  
+ 在上述的基本架構中， `t` 是 *「類型參數」*(type parameter)，即宣告類別時所提供資料類型的預留位置。 您可以在程式碼的其他位置，提供 `classHolder` 的各種資料類型來宣告各種版本的 `t`。 下列範例顯示兩個這類宣告。  
   
  [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
- 先前的陳述式宣告 *「已建構類別」* (constructed class)，其中，特定類型會取代類型參數。 這項取代遍及已建構類別內的程式碼。 下列範例顯示 `processNewItem` 程序在 `integerClass`中的外觀。  
+ 先前的陳述式宣告 *「已建構類別」*(constructed class)，其中，特定類型會取代類型參數。 這項取代遍及已建構類別內的程式碼。 下列範例顯示 `processNewItem` 程序在 `integerClass`中的外觀。  
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- 如需更完整的範例，請參閱[如何：定義可在不同資料類型上提供完全相同功能的類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)。  
+ 如需更完整的範例，請參閱[如何：定義可在不同資料類型上提供完全相同功能的類別](how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
 ## <a name="eligible-programming-elements"></a>合格的程式設計項目  
  您可以定義和使用泛型類別、結構、介面、程序和委派。 請注意，.NET Framework 會定義數個泛型類別、結構和介面，以代表常用的泛型元素。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間提供字典、清單、佇列和堆疊。 定義您自己的泛型項目之前，請查看它是否已在 <xref:System.Collections.Generic?displayProperty=nameWithType>中。  
   
- 程序不是類型，但您可以定義和使用泛型程序。 請參閱 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)。  
+ 程序不是類型，但您可以定義和使用泛型程序。 請參閱 [Generic Procedures in Visual Basic](generic-procedures.md)。  
   
 ## <a name="advantages-of-generic-types"></a>泛型類型的優點  
  泛型類型是宣告數個不同程式設計項目的基礎，而這些項目各作用於特定資料類型。 泛型類型的替代項目是：  
   
 1. 作用於 `Object` 資料類型的單一類型。  
   
-2. 類型的一組 *「類型專用」* (type-specific) 版本，每個版本都會分別進行編碼，並作用於一種特定資料類型 (例如 `String`)、 `Integer`或使用者定義的類型 (例如 `customer`)。  
+2. 類型的一組*特定類型*版本，每個版本都會個別編碼並操作一種特定的資料類型，例如 `String` 、 `Integer` 或使用者定義的類型，例如 `customer` 。  
   
  泛型類型優於這些替代項目的優點如下：  
   
@@ -122,11 +122,11 @@ ms.locfileid: "74350127"
   
 - 類型引數必須公開從中建立物件之程式碼可存取的無參數建構函式  
   
-- 類型引數必須是 *「參考類型」* (reference type)，或必須是 *「實值類型」* (value type)  
+- 型別引數必須是*引用型*別，或者它必須是實*值型*別  
   
- 如果您需要多個需求，請在大括弧 ( *) 內使用逗號分隔的* 「條件約束清單」`{ }`(constraint list)。 若要要求可存取的函式，您必須在清單中包含[新的 Operator](../../../../visual-basic/language-reference/operators/new-operator.md)關鍵字。 若需要參考類型，請包括 `Class` 關鍵字；若需要實值類型，請包括 `Structure` 關鍵字。  
+ 如果您需要多個需求，請在大括弧 ( *) 內使用逗號分隔的* 「條件約束清單」`{ }`(constraint list)。 若要要求可存取的函式，您必須在清單中包含[新的 Operator](../../../language-reference/operators/new-operator.md)關鍵字。 若需要參考類型，請包括 `Class` 關鍵字；若需要實值類型，請包括 `Structure` 關鍵字。  
   
- 如需條件約束的詳細資訊，請參閱 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)。  
+ 如需條件約束的詳細資訊，請參閱 [Type List](../../../language-reference/statements/type-list.md)。  
   
 ### <a name="example-of-multiple-constraints"></a>多個條件約束範例  
  下列範例顯示類型參數上具有條件約束清單之泛型類別的基本架構定義。 在建立這個類別之執行個體的程式碼中，類型引數必須同時實作 <xref:System.IComparable> 和 <xref:System.IDisposable> 介面、為參考類型，並且公開可存取的無參數建構函式。  
@@ -136,26 +136,26 @@ ms.locfileid: "74350127"
 ## <a name="important-terms"></a>重要詞彙  
  泛型類型引進並使用下列詞彙：  
   
-- *「泛型類型」* (Generic Type)。 在您宣告時至少提供一種資料類型之類別、結構、介面、程序或委派的定義。  
+- *「泛型類型」*(Generic Type)。 在您宣告時至少提供一種資料類型之類別、結構、介面、程序或委派的定義。  
   
-- *「類型參數」* (Type Parameter)。 在泛型類型定義中，這是您在宣告類型時所提供之資料類型的預留位置。  
+- *「類型參數」*(Type Parameter)。 在泛型類型定義中，這是您在宣告類型時所提供之資料類型的預留位置。  
   
-- *「類型引數」* (Type Argument)。 一種特定資料類型，會在您從泛型類型宣告已建構類型時取代類型參數。  
+- *「類型引數」*(Type Argument)。 一種特定資料類型，會在您從泛型類型宣告已建構類型時取代類型參數。  
   
-- *「條件約束」* (Constraint)。 類型參數上限制您可以為其提供類型引數的條件。 條件約束可以要求的類型引數必須實作特定介面、為特定類別或繼承自特定類別、具有可存取的無參數建構函式，或者為參考類型或實值類型。 您可以合併這些條件約束，但最多只能指定一個類別。  
+- *條件約束*。 類型參數上限制您可以為其提供類型引數的條件。 條件約束可以要求的類型引數必須實作特定介面、為特定類別或繼承自特定類別、具有可存取的無參數建構函式，或者為參考類型或實值類型。 您可以合併這些條件約束，但最多只能指定一個類別。  
   
-- *「已建構類型」* (Constructed Type)。 透過提供其類型參數的類型引數，以從泛型類型宣告的類別、結構、介面、程序或委派。  
+- *「已建構類型」*(Constructed Type)。 透過提供其類型參數的類型引數，以從泛型類型宣告的類別、結構、介面、程序或委派。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [資料類型](index.md)
+- [類型字元](type-characters.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [Visual Basic 中的類型轉換](type-conversions.md)
+- [疑難排解資料類型的問題](troubleshooting-data-types.md)
+- [資料類型](../../../language-reference/data-types/index.md)
+- [的](../../../language-reference/statements/of-clause.md)
+- [一旦](../../../language-reference/statements/as-clause.md)
+- [Object Data Type](../../../language-reference/data-types/object-data-type.md)
 - [共變數和反變數](../../concepts/covariance-contravariance/index.md)
-- [迭代器](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [迭代器](../../concepts/iterators.md)

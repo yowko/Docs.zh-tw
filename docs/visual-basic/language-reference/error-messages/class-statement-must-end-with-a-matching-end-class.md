@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 559595e9902ec2f0a19fd6b13e2c89fa1c2b52d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c231f577d21028e9ef92f37c7ac5f7f1fe2aa3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602408"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415384"
 ---
 # <a name="class-statement-must-end-with-a-matching-end-class"></a>'Class' 陳述式之後必須搭配相對應的 'End Class'
-`Class` 用來起始`Class`區塊，因此它只能出現在區塊中，搭配相對應的開頭`End Class`結束區塊的陳述式。 您有多餘`Class`陳述式，或您有未結束您`Class`含有區塊`End Class`。  
+`Class`是用來起始 `Class` 區塊; 因此，它只能出現在區塊開頭，並以相符 `End Class` 的語句結束區塊。 您有多餘的 `Class` 語句，或尚未 `Class` 使用結束區塊 `End Class` 。  
   
- **錯誤 ID:** BC30481  
+ **錯誤識別碼：** BC30481  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
 - 找到並移除不必要的 `Class` 陳述式。  
   
-- 結束`Class`搭配相對應的區塊`End Class`。  
+- 結束 `Class` 具有相符的區塊 `End Class` 。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [結束\<關鍵字 > 陳述式](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
-- [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)
+- [End \<keyword> 語句](../statements/end-keyword-statement.md)
+- [Class 陳述式](../statements/class-statement.md)

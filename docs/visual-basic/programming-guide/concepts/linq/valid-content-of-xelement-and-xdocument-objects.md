@@ -1,13 +1,13 @@
 ---
-title: XElement 和 XDocument Objects2 的有效內容
+title: System.xml.linq.xelement> 和 XDocument Objects2 的有效內容
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 5e9b5ec54b3005d18a1a0da10d78d3c8ad5300ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d222f19f6f588968a3ef1515dca522a4a80e1ffb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614353"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364340"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 物件的有效內容
 本主題說明可以傳遞給用於將內容加入至項目和文件之建構函式 (Constructor) 和方法的有效引數。  
@@ -45,7 +45,7 @@ ms.locfileid: "64614353"
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- 任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的型別  
+- 實作 <xref:System.Collections.Generic.IEnumerable%601> 的任何類型  
   
  如果物件實作 <xref:System.Collections.Generic.IEnumerable%601>，系統列舉物件中的集合，並加入集合中的所有項目。 如果集合包含 <xref:System.Xml.Linq.XNode> 或 <xref:System.Xml.Linq.XAttribute> 物件，系統會個別加入集合中的每個項目。 如果集合包含文字 (或轉換為文字的物件)，集合中的文字會遭到串連，並加入為單一文字節點。  
   
@@ -90,4 +90,4 @@ ms.locfileid: "64614353"
   
 ## <a name="see-also"></a>另請參閱
 
-- [建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [建立 XML 樹狀結構（Visual Basic）](creating-xml-trees.md)

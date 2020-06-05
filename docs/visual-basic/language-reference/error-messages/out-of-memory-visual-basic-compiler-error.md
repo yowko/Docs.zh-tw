@@ -7,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: f8246c1d9d45f2e20cbecb83f61fe91de8a821d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11f5d6b034600ae4f669be86eea927a7ed5cc16f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661891"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413023"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>記憶體不足 (Visual Basic 編譯器錯誤)
 需要提供更多的記憶體。  
   
- **錯誤 ID:** BC2004  
+ **錯誤識別碼：** BC2004  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 關閉不必要的應用程式、 文件和原始程式檔。  
+- 關閉不必要的應用程式、檔和來源檔案。  
   
-- 消除不必要的控制項和表單，因此一次載入較少  
+- 排除不必要的控制項和表單，使其一次載入較少  
   
-- 減少的`Public`變數。  
+- 減少變數的數目 `Public` 。  
   
-- 檢查可用磁碟空間。  
+- 檢查可用的磁碟空間。  
   
-- 安裝額外的記憶體，或重新配置記憶體，以增加可用的 RAM。  
+- 藉由安裝額外的記憶體或重新配置記憶體來增加可用的 RAM。  
   
-- 請確定當不再需要時釋放該記憶體。  
+- 請確定記憶體在不再需要時釋放。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [錯誤類型](../../programming-guide/language-features/error-types.md)

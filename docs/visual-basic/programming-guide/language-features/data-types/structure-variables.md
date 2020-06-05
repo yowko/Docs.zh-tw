@@ -7,16 +7,16 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 16b6cdc5a849b50f6caa8b7963dac5c12d63cf3e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 270e8ca26185e4a68def3b95f4ce6ab4c57a629c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346298"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393581"
 ---
 # <a name="structure-variables-visual-basic"></a>結構變數 (Visual Basic)
 
-建立結構之後，您可以將程式層級和模組層級變數宣告為該類型。 例如，您可以建立一個結構來記錄電腦系統的相關資訊。 下列範例為其示範。
+建立結構之後，您可以將程式層級和模組層級變數宣告為該類型。 例如，您可以建立一個結構來記錄電腦系統的相關資訊。 下列範例示範此作業。
 
 ```vb
 Public Structure systemInfo
@@ -33,11 +33,11 @@ Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> 在類別和模組中，使用[Dim 語句](../../../../visual-basic/language-reference/statements/dim-statement.md)宣告的結構會預設為公用存取。 如果您想要將結構設為私用，請務必使用[private](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字來宣告。
+> 在類別和模組中，使用[Dim 語句](../../../language-reference/statements/dim-statement.md)宣告的結構會預設為公用存取。 如果您想要將結構設為私用，請務必使用[private](../../../language-reference/modifiers/private.md)關鍵字來宣告。
 
 ## <a name="access-to-structure-values"></a>結構值的存取權
 
-若要從結構變數的元素指派和抓取值，您可以使用與用來設定和取得物件屬性的相同語法。 您可以將成員存取運算子（`.`）放在結構變數名稱和元素名稱之間。 下列範例會存取先前宣告為類型 `systemInfo`之變數的元素。
+若要從結構變數的元素指派和抓取值，您可以使用與用來設定和取得物件屬性的相同語法。 您可以將成員存取運算子（ `.` ）放在結構變數名稱和元素名稱之間。 下列範例會存取先前宣告為類型之變數的元素 `systemInfo` 。
 
 ```vb
 mySystem.cPU = "486"
@@ -53,17 +53,17 @@ If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 yourSystem = mySystem
 ```
 
-如果結構專案是參考型別（例如 `String`、`Object`或陣列），則會複製資料的指標。 在上述範例中，如果 `systemInfo` 包含物件變數，則上述範例會將指標從 `mySystem` 複製到 `yourSystem`，而透過某個結構的物件資料變更會在透過其他結構存取時生效。
+如果結構專案是參考型別（例如 `String` 、 `Object` 或陣列），則會複製資料的指標。 在上述範例中，如果 `systemInfo` 已包含物件變數，則先前的範例會將的指標從複製 `mySystem` 到 `yourSystem` ，而透過某個結構的物件資料變更會在透過其他結構存取時生效。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [值類型和參考類型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [如何：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [結構和其他程式設計項目](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
-- [結構和類別](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [資料類型](index.md)
+- [基礎資料類型](elementary-data-types.md)
+- [複合資料類型](composite-data-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [結構](structures.md)
+- [疑難排解資料類型的問題](troubleshooting-data-types.md)
+- [作法：宣告結構](how-to-declare-a-structure.md)
+- [結構與其他程式設計項目](structures-and-other-programming-elements.md)
+- [結構與類別](structures-and-classes.md)
+- [Structure 陳述式](../../../language-reference/statements/structure-statement.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID68
 ms.assetid: 9a89beda-140e-4b32-8d0a-2dc598ef279a
-ms.openlocfilehash: 2738ce692f5eb2df433cd5cb1a5e1ae4a5968cab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1c31af1df65855d3632e64983314767f76c9375
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970075"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394787"
 ---
 # <a name="device-unavailable"></a>裝置無法使用
 您的網路連線已遺失，或是您嘗試存取的裝置離線或不存在。  
@@ -22,4 +22,4 @@ ms.locfileid: "61970075"
   
 ## <a name="see-also"></a>另請參閱
 
-- [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)
+- [錯誤類型](../programming-guide/language-features/error-types.md)
