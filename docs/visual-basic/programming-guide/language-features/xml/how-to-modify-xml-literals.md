@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 99ec35addcb9fc8d886c9151cde87227b5113eb9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a2ac2e9802d4c8ab522bb430d15cce5616430437
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330850"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374871"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>如何：修改 XML 常值 (Visual Basic)
 
@@ -21,7 +21,7 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
 
 1. 若要修改 XML 常值的值，請取得 XML 常值的參考，並將 `Value` 屬性設為所需的值。
 
-    下列程式碼範例會更新 XML 檔中所有 \<Price > 元素的值。
+    下列程式碼範例會更新 \<Price> XML 檔中所有元素的值。
 
     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]
 
@@ -64,11 +64,11 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
     ```
 
     > [!NOTE]
-    > `Value` 屬性指的是集合中的第一個 XML 元素。 如果集合中有一個以上的專案具有相同的名稱，則設定 `Value` 屬性只會影響集合中的第一個元素。
+    > `Value`屬性會參考集合中的第一個 XML 元素。 如果集合中有一個以上的專案具有相同的名稱，則設定 `Value` 屬性只會影響集合中的第一個元素。
 
 ### <a name="to-add-an-attribute-to-an-xml-literal"></a>若要將屬性加入至 XML 常值
 
-1. 若要將屬性加入至 XML 常值，請先取得 XML 常值的參考。 然後，您可以加入新的 XML 屬性軸屬性來新增屬性。 您也可以使用 <xref:System.Xml.Linq.XContainer.Add%2A> 方法，將新的 <xref:System.Xml.Linq.XAttribute> 物件加入至 XML 常值。 下列範例會顯示這兩個選項。
+1. 若要將屬性加入至 XML 常值，請先取得 XML 常值的參考。 然後，您可以加入新的 XML 屬性軸屬性來新增屬性。 您也可以使用方法，將新的 <xref:System.Xml.Linq.XAttribute> 物件加入至 XML 常值 <xref:System.Xml.Linq.XContainer.Add%2A> 。 下列範例會顯示這兩個選項。
 
     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]
 
@@ -110,13 +110,13 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
     </Catalog>
     ```
 
-    如需 XML 屬性軸屬性的詳細資訊，請參閱[Xml 屬性軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)。
+    如需 XML 屬性軸屬性的詳細資訊，請參閱[Xml 屬性軸屬性](../../../language-reference/xml-axis/xml-attribute-axis-property.md)。
 
 ### <a name="to-add-an-element-to-an-xml-literal"></a>若要將元素加入至 XML 常值
 
-1. 若要將元素加入至 XML 常值，請先取得 XML 常值的參考。 接著，您可以使用 <xref:System.Xml.Linq.XContainer.Add%2A> 方法，將新的 <xref:System.Xml.Linq.XElement> 物件當做專案的最後一個子項目加入。 您可以使用 <xref:System.Xml.Linq.XContainer.AddFirst%2A> 方法，加入新的 <xref:System.Xml.Linq.XElement> 物件做為第一個子項目。
+1. 若要將元素加入至 XML 常值，請先取得 XML 常值的參考。 接著，您可以使用方法，將新的物件加入為專案的 <xref:System.Xml.Linq.XElement> 最後一個子專案 <xref:System.Xml.Linq.XContainer.Add%2A> 。 您可以使用方法，將新的 <xref:System.Xml.Linq.XElement> 物件加入為第一個子項目 <xref:System.Xml.Linq.XContainer.AddFirst%2A> 。
 
-    若要在相對於其他子項目的特定位置加入新專案，請先取得相鄰子項目的參考。 接著，您可以使用 <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> 方法，在相鄰子項目之前加入新的 <xref:System.Xml.Linq.XElement> 物件。 您也可以使用 <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> 方法，在連續的子項目後面加入新的 <xref:System.Xml.Linq.XElement> 物件。
+    若要在相對於其他子項目的特定位置加入新專案，請先取得相鄰子項目的參考。 接著，您可以 <xref:System.Xml.Linq.XElement> 使用方法，在連續的子項目之前加入新的物件 <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> 。 您也可以 <xref:System.Xml.Linq.XElement> 使用方法，在連續的子項目後面加入新的物件 <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> 。
 
     下列範例顯示每個技術的範例。
 
@@ -214,11 +214,11 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
 
 ### <a name="to-modify-an-xml-literal"></a>修改 XML 常值
 
-1. 若要變更 XML 元素的名稱，請先取得元素的參考。 接著，您可以建立新的 <xref:System.Xml.Linq.XElement> 物件，其中包含新的名稱，並將新的 <xref:System.Xml.Linq.XElement> 物件傳遞至現有 <xref:System.Xml.Linq.XElement> 物件的 <xref:System.Xml.Linq.XNode.ReplaceWith%2A> 方法。
+1. 若要變更 XML 元素的名稱，請先取得元素的參考。 接著，您可以建立新 <xref:System.Xml.Linq.XElement> 的物件，其中包含新的名稱，並將新 <xref:System.Xml.Linq.XElement> 物件傳遞至 <xref:System.Xml.Linq.XNode.ReplaceWith%2A> 現有物件的方法 <xref:System.Xml.Linq.XElement> 。
 
-    如果您要取代的元素具有必須保留的子項目，請將新 <xref:System.Xml.Linq.XElement> 物件的值設定為現有專案的 <xref:System.Xml.Linq.XContainer.Nodes%2A> 屬性。 這會將新元素的值設定為現有專案的內部 XML。 否則，您可以將新元素的值設定為現有元素的 `Value` 屬性。
+    如果您要取代的元素具有必須保留的子項目，請將新物件的值設定 <xref:System.Xml.Linq.XElement> 為現有專案的 <xref:System.Xml.Linq.XContainer.Nodes%2A> 屬性。 這會將新元素的值設定為現有專案的內部 XML。 否則，您可以將新元素的值設定為 `Value` 現有元素的屬性。
 
-    下列程式碼範例會以 \<抽象 > 專案取代所有 \<描述 > 元素。 \<描述 > 元素的內容會使用 <xref:System.Xml.Linq.XContainer.Nodes%2A> \<物件 > 描述的 <xref:System.Xml.Linq.XElement> 屬性，保留在新的 \<Abstract > 專案中。
+    下列程式碼範例會以元素取代所有專案 \<Description> \<Abstract> 。 元素的內容 \<Description> 會 \<Abstract> 使用物件的屬性保留在新的專案中 <xref:System.Xml.Linq.XContainer.Nodes%2A> \<Description> <xref:System.Xml.Linq.XElement> 。
 
     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]
 
@@ -286,10 +286,10 @@ Visual Basic 提供便利的方式來修改 XML 常值。 您可以新增或刪�
     </Catalog>
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [在 Visual Basic 中管理 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [如何：從檔案、字串或資料流載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [在 Visual Basic 中管理 XML](manipulating-xml.md)
+- [XML](index.md)
+- [如何：從檔案、字串或資料流載入 XML](how-to-load-xml-from-a-file-string-or-stream.md)
+- [LINQ](../linq/index.md)
+- [Visual Basic 中的 LINQ 簡介](../linq/introduction-to-linq.md)

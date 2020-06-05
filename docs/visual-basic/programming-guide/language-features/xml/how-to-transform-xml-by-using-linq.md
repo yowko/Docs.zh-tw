@@ -5,16 +5,16 @@ helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: a531b189074ac7bdd1c02935368c408ff506a6f1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: dab394ec45567589e002b5d2ac76ec19fb0f76c6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353641"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374877"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>如何：使用 LINQ 轉換 XML (Visual Basic)
 
-[Xml 常](../../../../visual-basic/language-reference/xml-literals/index.md)值可讓您輕鬆地從一個來源讀取 xml，並將它轉換成新的 xml 格式。 您可以利用 LINQ 查詢來抓取要轉換的內容，或將現有檔中的內容變更為新的 XML 格式。
+[Xml 常](../../../language-reference/xml-literals/index.md)值可讓您輕鬆地從一個來源讀取 xml，並將它轉換成新的 xml 格式。 您可以利用 LINQ 查詢來抓取要轉換的內容，或將現有檔中的內容變更為新的 XML 格式。
 
 本主題中的範例會將 XML 來源文件中的內容轉換成 HTML，以便在瀏覽器中查看。
 
@@ -24,7 +24,7 @@ ms.locfileid: "74353641"
 
 1. 在 Visual Studio 中，于 [**主控台應用程式**] 專案範本中建立新的 Visual Basic 專案。
 
-2. 按兩下專案中建立的 [Module1] 檔案，以修改 Visual Basic 程式碼。 將下列程式碼新增至 `Module1` 模組的 `Sub Main`。 此程式碼會將來源 XML 檔建立為 <xref:System.Xml.Linq.XDocument> 物件。
+2. 按兩下專案中建立的 [Module1] 檔案，以修改 Visual Basic 程式碼。 將下列程式碼新增至 `Sub Main` 模組的 `Module1` 。 此程式碼會建立來源 XML 檔做為 <xref:System.Xml.Linq.XDocument> 物件。
 
     ```vb
     Dim catalog =
@@ -58,11 +58,11 @@ ms.locfileid: "74353641"
         </Catalog>
     ```
 
-     [如何：從檔案、字串或資料流程載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)。
+     [如何：從檔案、字串或資料流程載入 XML](how-to-load-xml-from-a-file-string-or-stream.md)。
 
-3. 在建立來源 XML 檔的程式碼之後，新增下列程式碼，以從物件取出所有 \<Book > 專案，並將它們轉換成 HTML 檔案。 \<書籍 > 元素的清單是使用 LINQ 查詢來建立，此查詢會傳回包含已轉換之 HTML 的 <xref:System.Xml.Linq.XElement> 物件集合。 您可以使用內嵌的運算式，將來源文件中的值放入新的 XML 格式。
+3. 在建立來源 XML 檔的程式碼之後，新增下列程式碼以從物件取出所有專案 \<Book> ，並將它們轉換成 HTML 檔案。 專案清單 \<Book> 是使用 LINQ 查詢所建立的，它會傳回 <xref:System.Xml.Linq.XElement> 包含已轉換之 HTML 的物件集合。 您可以使用內嵌的運算式，將來源文件中的值放入新的 XML 格式。
 
-     產生的 HTML 檔案會使用 <xref:System.Xml.Linq.XElement.Save%2A> 方法寫入檔案。
+     產生的 HTML 檔案會使用方法寫入檔案 <xref:System.Xml.Linq.XElement.Save%2A> 。
 
     ```vb
     Dim htmlOutput =
@@ -83,11 +83,11 @@ ms.locfileid: "74353641"
     htmlOutput.Save("BookDescription.html")
     ```
 
-4. `Module1``Sub Main` 之後，請加入新的方法（`Sub`），將 \<描述 > 節點轉換為指定的 HTML 格式。 這個方法是由上一個步驟中的程式碼所呼叫，用來保留 \<描述 > 元素的格式。
+4. 在 `Sub Main` 之後 `Module1` ，請加入新的方法（ `Sub` ），以將節點轉換為 \<Description> 指定的 HTML 格式。 這個方法是由上一個步驟中的程式碼所呼叫，用來保留元素的格式 \<Description> 。
 
-     這個方法會以 HTML 取代 \<Description > 元素的子項目。 `ReplaceWith` 方法是用來保留子項目的位置。 \<描述 > 元素的已轉換內容包含在 HTML 段落（\<p >）元素中。 <xref:System.Xml.Linq.XContainer.Nodes%2A> 屬性是用來抓取 \<Description > 元素的已轉換內容。 這可確保子項目會包含在已轉換的內容中。
+     這個方法會以 HTML 取代元素的子項目 \<Description> 。 `ReplaceWith`方法是用來保留子項目的位置。 元素的已轉換內容 \<Description> 包含在 HTML 段落（ \<p> ）元素中。 <xref:System.Xml.Linq.XContainer.Nodes%2A>屬性是用來抓取元素的已轉換內容 \<Description> 。 這可確保子項目會包含在已轉換的內容中。
 
-     在 `Module1``Sub Main` 之後加入下列程式碼。
+     在之後新增下列程式 `Sub Main` 代碼 `Module1` 。
 
     ```vb
     Public Function TransformDescription(ByVal desc As XElement) As XElement
@@ -156,11 +156,11 @@ ms.locfileid: "74353641"
     </html>
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XML 常值](../../../../visual-basic/language-reference/xml-literals/index.md)
-- [在 Visual Basic 中管理 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [如何：從檔案、字串或資料流載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [XML 常值](../../../language-reference/xml-literals/index.md)
+- [在 Visual Basic 中管理 XML](manipulating-xml.md)
+- [XML](index.md)
+- [如何：從檔案、字串或資料流載入 XML](how-to-load-xml-from-a-file-string-or-stream.md)
+- [LINQ](../linq/index.md)
+- [Visual Basic 中的 LINQ 簡介](../linq/introduction-to-linq.md)

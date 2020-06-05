@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 8b81460eccb6be8baa2ea7bc68d0f80c9d16398e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9eb13d943f9f1cffc984847f7339111e06f5aa6b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349582"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373923"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub 或 Function 未定義 (Visual Basic)
-必須定義 `Sub` 或 `Function`，才能呼叫。 可能導致本錯誤的原因包括：  
+`Sub` `Function` 必須定義或，才能呼叫。 可能導致本錯誤的原因包括：  
   
 - 程式名稱拼錯。  
   
@@ -26,13 +26,13 @@ ms.locfileid: "74349582"
   
 1. 請確定程式名稱的拼寫正確。  
   
-2. 在 [**參考**] 對話方塊中，尋找包含您要呼叫之程式的專案名稱。 如果沒有出現，請按一下 [**流覽]** 按鈕來搜尋它。 選取專案名稱左邊的核取方塊，然後按一下 **[確定]** 。  
+2. 在 [**參考**] 對話方塊中，尋找包含您要呼叫之程式的專案名稱。 如果沒有出現，請按一下 [**流覽]** 按鈕來搜尋它。 選取專案名稱左邊的核取方塊，然後按一下 **[確定]**。  
   
 3. 檢查常式的名稱。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [錯誤類型](../../programming-guide/language-features/error-types.md)
 - [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)
-- [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub 陳述式](../statements/sub-statement.md)
+- [Function 陳述式](../statements/function-statement.md)

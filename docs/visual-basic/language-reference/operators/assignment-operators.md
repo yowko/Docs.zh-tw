@@ -7,38 +7,38 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: 5de4f781d82278fb747b58a41462a470900efde4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 881295f511600cd02e9bf9c9846cf876793a0d8b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336545"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371839"
 ---
 # <a name="assignment-operators-visual-basic"></a>指派運算子 (Visual Basic)
 以下是在 Visual Basic 中定義的指派運算子。  
   
- [= 運算子](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [= 運算子](assignment-operator.md)  
   
- [^= 運算子](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [^ = 運算子](exponentiation-assignment-operator.md)  
   
- [*= 運算子](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)  
+ [* = 運算子](multiplication-assignment-operator.md)  
   
- [/= 運算子](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+ [/= 運算子](floating-point-division-assignment-operator.md)  
   
- [\\= 運算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [\\= 運算子](integer-division-assignment-operator.md)  
   
- [+= 運算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+ [+ = 運算子](addition-assignment-operator.md)  
   
- [-= 運算子](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
+ [-= 運算子](subtraction-assignment-operator.md)  
   
- [<\<= 運算子](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [<\<= 運算子](left-shift-assignment-operator.md)  
   
- [>>= 運算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
+ [>>= 運算子](right-shift-assignment-operator.md)  
   
- [&= 運算子](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
+ [&= 運算子](and-assignment-operator.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [陳述式](../../../visual-basic/language-reference/statements/index.md)
+- [Visual Basic 中的運算子優先順序](operator-precedence.md)
+- [依功能列出運算子](operators-listed-by-functionality.md)
+- [陳述式](../statements/index.md)

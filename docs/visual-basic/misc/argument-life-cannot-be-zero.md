@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_LifeNEZero
 ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
-ms.openlocfilehash: e1a739d08b89c07c33302eb3bfcdc4b1e8c6e80e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a737afb8901382d75c3858f84be1b2359338b057
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659133"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368162"
 ---
 # <a name="argument-life-cannot-be-zero"></a>引數 'Life' 不可以為零
 `Life`的引數無效，該引數必須是指定資產使用年限長度的 `Double` 。  
@@ -22,4 +22,4 @@ ms.locfileid: "64659133"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以傳值和傳址方式傳遞引數](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [以傳值和傳址方式傳遞引數](../programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
