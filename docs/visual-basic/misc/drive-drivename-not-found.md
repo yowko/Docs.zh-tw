@@ -1,17 +1,17 @@
 ---
-title: 磁碟機 '<drivename>' 找不到
+title: 找不到磁碟機 '<drivename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: 9084e885ba98211623781b036e9f7407a44368ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a426130b284a7c09004933bca264e4d52be1df3c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970140"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394592"
 ---
-# <a name="drive-drivename-not-found"></a>磁碟機 '\<磁碟機名稱 >' 找不到
+# <a name="drive-drivename-not-found"></a>找不到磁碟機 '\<drivename>'
 找不到磁碟機。 您的網路連線已遺失，或是您嘗試存取的磁碟機離線或不存在。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -26,4 +26,4 @@ ms.locfileid: "61970140"
   
 ## <a name="see-also"></a>另請參閱
 
-- [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)
+- [錯誤類型](../programming-guide/language-features/error-types.md)
