@@ -10,52 +10,52 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: 4cae7e59083890e82d754bdaa58942c2224357b0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d778c0c99d6d074fe8b73aaf3660074643e7e136
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336061"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371605"
 ---
-# <a name="amp-operator-visual-basic"></a><span data-ttu-id="9874b-102">&amp; 運算子（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="9874b-102">&amp; Operator (Visual Basic)</span></span>
-<span data-ttu-id="9874b-103">產生兩個運算式的字串串連。</span><span class="sxs-lookup"><span data-stu-id="9874b-103">Generates a string concatenation of two expressions.</span></span>  
+# <a name="amp-operator-visual-basic"></a><span data-ttu-id="ff3c0-102">&amp;運算子（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="ff3c0-102">&amp; Operator (Visual Basic)</span></span>
+<span data-ttu-id="ff3c0-103">產生兩個運算式的字串串連。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-103">Generates a string concatenation of two expressions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9874b-104">語法</span><span class="sxs-lookup"><span data-stu-id="9874b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ff3c0-104">語法</span><span class="sxs-lookup"><span data-stu-id="ff3c0-104">Syntax</span></span>  
   
 ```vb  
 result = expression1 & expression2  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="9874b-105">組件</span><span class="sxs-lookup"><span data-stu-id="9874b-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="ff3c0-105">組件</span><span class="sxs-lookup"><span data-stu-id="ff3c0-105">Parts</span></span>  
  `result`  
- <span data-ttu-id="9874b-106">必要。</span><span class="sxs-lookup"><span data-stu-id="9874b-106">Required.</span></span> <span data-ttu-id="9874b-107">任何 `String` 或 `Object` 變數。</span><span class="sxs-lookup"><span data-stu-id="9874b-107">Any `String` or `Object` variable.</span></span>  
+ <span data-ttu-id="ff3c0-106">必要。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-106">Required.</span></span> <span data-ttu-id="ff3c0-107">Any `String` 或 `Object` variable。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-107">Any `String` or `Object` variable.</span></span>  
   
  `expression1`  
- <span data-ttu-id="9874b-108">必要。</span><span class="sxs-lookup"><span data-stu-id="9874b-108">Required.</span></span> <span data-ttu-id="9874b-109">具有擴展為 `String`之資料類型的任何運算式。</span><span class="sxs-lookup"><span data-stu-id="9874b-109">Any expression with a data type that widens to `String`.</span></span>  
+ <span data-ttu-id="ff3c0-108">必要。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-108">Required.</span></span> <span data-ttu-id="ff3c0-109">具有擴展至之資料類型的任何運算式 `String` 。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-109">Any expression with a data type that widens to `String`.</span></span>  
   
  `expression2`  
- <span data-ttu-id="9874b-110">必要。</span><span class="sxs-lookup"><span data-stu-id="9874b-110">Required.</span></span> <span data-ttu-id="9874b-111">具有擴展為 `String`之資料類型的任何運算式。</span><span class="sxs-lookup"><span data-stu-id="9874b-111">Any expression with a data type that widens to `String`.</span></span>  
+ <span data-ttu-id="ff3c0-110">必要。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-110">Required.</span></span> <span data-ttu-id="ff3c0-111">具有擴展至之資料類型的任何運算式 `String` 。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-111">Any expression with a data type that widens to `String`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9874b-112">備註</span><span class="sxs-lookup"><span data-stu-id="9874b-112">Remarks</span></span>  
- <span data-ttu-id="9874b-113">如果 `expression1` 或 `expression2` 的資料類型不 `String` 但擴大到 `String`，則會轉換成 `String`。</span><span class="sxs-lookup"><span data-stu-id="9874b-113">If the data type of `expression1` or `expression2` is not `String` but widens to `String`, it is converted to `String`.</span></span> <span data-ttu-id="9874b-114">如果其中一種資料類型不會擴展到 `String`，編譯器會產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="9874b-114">If either of the data types does not widen to `String`, the compiler generates an error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ff3c0-112">備註</span><span class="sxs-lookup"><span data-stu-id="ff3c0-112">Remarks</span></span>  
+ <span data-ttu-id="ff3c0-113">如果或的資料類型 `expression1` `expression2` 不是 `String` ，而是擴大 `String` 到，則會將它轉換成 `String` 。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-113">If the data type of `expression1` or `expression2` is not `String` but widens to `String`, it is converted to `String`.</span></span> <span data-ttu-id="ff3c0-114">如果其中一種資料類型不會擴展到 `String` ，編譯器會產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-114">If either of the data types does not widen to `String`, the compiler generates an error.</span></span>  
   
- <span data-ttu-id="9874b-115">`result` 的資料類型為 `String`。</span><span class="sxs-lookup"><span data-stu-id="9874b-115">The data type of `result` is `String`.</span></span> <span data-ttu-id="9874b-116">如果其中一個或兩個運算式評估為不是[任何](../../../visual-basic/language-reference/nothing.md)值，或具有 <xref:System.DBNull.Value?displayProperty=nameWithType>的值，則會將其視為字串，其值為 ""。</span><span class="sxs-lookup"><span data-stu-id="9874b-116">If one or both expressions evaluate to [Nothing](../../../visual-basic/language-reference/nothing.md) or have a value of <xref:System.DBNull.Value?displayProperty=nameWithType>, they are treated as a string with a value of "".</span></span>  
-  
-> [!NOTE]
-> <span data-ttu-id="9874b-117">`&` 運算子可以多載 *，這*表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。</span><span class="sxs-lookup"><span data-stu-id="9874b-117">The `&` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="9874b-118">如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="9874b-118">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="9874b-119">如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="9874b-119">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+ <span data-ttu-id="ff3c0-115">的資料類型 `result` 為 `String` 。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-115">The data type of `result` is `String`.</span></span> <span data-ttu-id="ff3c0-116">如果其中一個或兩個運算式評估為不是[任何](../nothing.md)值，或其值為 <xref:System.DBNull.Value?displayProperty=nameWithType> ，則會將它們視為字串，其值為 ""。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-116">If one or both expressions evaluate to [Nothing](../nothing.md) or have a value of <xref:System.DBNull.Value?displayProperty=nameWithType>, they are treated as a string with a value of "".</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="9874b-120">& 符號（&）字元也可以用來將變數識別為類型 `Long`。</span><span class="sxs-lookup"><span data-stu-id="9874b-120">The ampersand (&) character can also be used to identify variables as type `Long`.</span></span> <span data-ttu-id="9874b-121">如需詳細資訊，請參閱[類型字元](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)。</span><span class="sxs-lookup"><span data-stu-id="9874b-121">For more information, see [Type Characters](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).</span></span>  
+> <span data-ttu-id="ff3c0-117">`&`運算子可以多載*overloaded*，這表示當運算元具有該類別或結構的類型時，類別或結構可以重新定義其行為。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-117">The `&` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="ff3c0-118">如果您的程式碼在這類類別或結構上使用這個運算子，請務必瞭解其已重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-118">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="ff3c0-119">如需詳細資訊，請參閱 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-119">For more information, see [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9874b-122">範例</span><span class="sxs-lookup"><span data-stu-id="9874b-122">Example</span></span>  
- <span data-ttu-id="9874b-123">這個範例會使用 `&` 運算子來強制執行字串串連。</span><span class="sxs-lookup"><span data-stu-id="9874b-123">This example uses the `&` operator to force string concatenation.</span></span> <span data-ttu-id="9874b-124">結果為字串值，表示兩個字串運算元的串連。</span><span class="sxs-lookup"><span data-stu-id="9874b-124">The result is a string value representing the concatenation of the two string operands.</span></span>  
+> [!NOTE]
+> <span data-ttu-id="ff3c0-120">& 符號（&）字元也可以用來將變數識別為類型 `Long` 。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-120">The ampersand (&) character can also be used to identify variables as type `Long`.</span></span> <span data-ttu-id="ff3c0-121">如需詳細資訊，請參閱[類型字元](../../programming-guide/language-features/data-types/type-characters.md)。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-121">For more information, see [Type Characters](../../programming-guide/language-features/data-types/type-characters.md).</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="ff3c0-122">範例</span><span class="sxs-lookup"><span data-stu-id="ff3c0-122">Example</span></span>  
+ <span data-ttu-id="ff3c0-123">這個範例會使用 `&` 運算子來強制執行字串串連。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-123">This example uses the `&` operator to force string concatenation.</span></span> <span data-ttu-id="ff3c0-124">結果為字串值，表示兩個字串運算元的串連。</span><span class="sxs-lookup"><span data-stu-id="ff3c0-124">The result is a string value representing the concatenation of the two string operands.</span></span>  
   
  [!code-vb[VbVbalrOperators#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="9874b-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="9874b-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff3c0-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ff3c0-125">See also</span></span>
 
-- [<span data-ttu-id="9874b-126">&= 運算子</span><span class="sxs-lookup"><span data-stu-id="9874b-126">&= Operator</span></span>](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
-- [<span data-ttu-id="9874b-127">串連運算子</span><span class="sxs-lookup"><span data-stu-id="9874b-127">Concatenation Operators</span></span>](../../../visual-basic/language-reference/operators/concatenation-operators.md)
-- [<span data-ttu-id="9874b-128">Visual Basic 中的運算子優先順序</span><span class="sxs-lookup"><span data-stu-id="9874b-128">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="9874b-129">運算子 (依功能排列)</span><span class="sxs-lookup"><span data-stu-id="9874b-129">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="9874b-130">Visual Basic 中的串連運算子</span><span class="sxs-lookup"><span data-stu-id="9874b-130">Concatenation Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [<span data-ttu-id="ff3c0-126">&= 運算子</span><span class="sxs-lookup"><span data-stu-id="ff3c0-126">&= Operator</span></span>](and-assignment-operator.md)
+- [<span data-ttu-id="ff3c0-127">串連運算子</span><span class="sxs-lookup"><span data-stu-id="ff3c0-127">Concatenation Operators</span></span>](concatenation-operators.md)
+- [<span data-ttu-id="ff3c0-128">Visual Basic 中的運算子優先順序</span><span class="sxs-lookup"><span data-stu-id="ff3c0-128">Operator Precedence in Visual Basic</span></span>](operator-precedence.md)
+- [<span data-ttu-id="ff3c0-129">依功能列出運算子</span><span class="sxs-lookup"><span data-stu-id="ff3c0-129">Operators Listed by Functionality</span></span>](operators-listed-by-functionality.md)
+- [<span data-ttu-id="ff3c0-130">Visual Basic 中的串連運算子</span><span class="sxs-lookup"><span data-stu-id="ff3c0-130">Concatenation Operators in Visual Basic</span></span>](../../programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
