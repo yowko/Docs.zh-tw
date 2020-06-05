@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30494
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
-ms.openlocfilehash: 3baf2ec11db72102439b86e151be80d3031cc5d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 39be6c90479becb32257bad5803ff1e2c5464f9d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661936"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397307"
 ---
 # <a name="line-is-too-long"></a>行太長
-來源文字行不能超過 65535 個字元。  
+來源文字行不能超過65535個字元。  
   
- **錯誤 ID:** BC30494  
+ **錯誤識別碼：** BC30494  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 請縮短為 65535 個字元或更少列的長度。  
+- 將行的長度縮短為65535個字元或更少。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [錯誤類型](../../programming-guide/language-features/error-types.md)

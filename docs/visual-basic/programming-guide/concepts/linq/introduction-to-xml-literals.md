@@ -1,20 +1,20 @@
 ---
-title: 視覺化基礎2中的XML文本簡介
+title: Visual Basic2 中的 XML 常值簡介
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 8b92d22727c50274d57a5e407a0ca42807de3a94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266946"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397580"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 常值簡介
-本節提供有關在視覺化基本創建 XML 樹的資訊。  
+本節提供在 Visual Basic 中建立 XML 樹狀結構的相關資訊。  
   
- 有關使用 LINQ 查詢的結果作為 XML 樹的內容的資訊，請參閱[功能構造（LINQ 到 XML）（可視基本）。](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)  
+ 如需將 LINQ 查詢的結果當做 XML 樹狀結構之內容使用的詳細資訊，請參閱[功能性結構（LINQ to XML）（Visual Basic）](functional-construction-linq-to-xml.md)。  
   
- 有關視覺化基礎中的 XML 文本的詳細資訊，請參閱[Visual Basic 中的 LINQ 到 XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
+ 如需 Visual Basic 中 XML 常值的詳細資訊，請參閱[Visual Basic 中 LINQ to XML 的總覽](../../language-features/xml/overview-of-linq-to-xml.md)。  
   
 ## <a name="creating-xml-trees"></a>建立 XML 樹狀結構  
  下列範例顯示如何在此案例 <xref:System.Xml.Linq.XElement> 中建立 `contacts`：  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>複製和附加的比較  
+### <a name="cloning-vs-attaching"></a>複製與正在附加  
  如先前所述，如果您使用內嵌的運算式，將現有的節點 (包括項目) 和屬性加入到新的 XML 樹狀，而且如果現有的節點已經成為父代，這些節點就會遭到複製，而新複製的節點會附加到新的 XML 樹狀中。 如果現有的節點沒有成為父代，這些節點只會附加到新的 XML 樹狀結構。  
   
 ```vb  
@@ -197,4 +197,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>另請參閱
 
-- [創建 XML 樹（視覺化基本）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [建立 XML 樹狀結構（Visual Basic）](creating-xml-trees.md)
