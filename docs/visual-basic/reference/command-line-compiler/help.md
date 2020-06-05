@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: 6013b92206e00a77a8ca30d38846c87372c3873e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b30a5a9d73dd84231f30f20549f5c0ae813742ab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344274"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408630"
 ---
 # <a name="-help---visual-basic"></a>-help、-? （Visual Basic）
 顯示編譯器選項。  
@@ -35,7 +35,7 @@ ms.locfileid: "74344274"
  如果您在編譯中包含此選項，則不會建立任何輸出檔案，也不會進行任何編譯。  
   
 > [!NOTE]
-> 此`-help`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
+> 此 `-help` 選項無法從 Visual Studio 開發環境中使用; 只有在從命令列進行編譯時，才能使用此選項。  
   
 ## <a name="example"></a>範例  
  下列程式碼會顯示命令列的說明。  
@@ -46,5 +46,5 @@ vbc -help
   
 ## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic 命令列編譯器](index.md)
+- [編譯命令列的範例](sample-compilation-command-lines.md)

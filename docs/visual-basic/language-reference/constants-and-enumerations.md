@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 5109bf42c9caa7528c5405bb1a5cff0cfb62a5ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60cd1ddac9bca685ddc5778e7d289710245a183e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705752"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374482"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常數和列舉類型 (Visual Basic)
 
@@ -23,19 +23,19 @@ Visual Basic 為開發人員提供許多預先定義的常數和列舉。 常數
 
  下表列出適用于條件式編譯的預先定義常數。  
   
-|**常數**|**描述**|  
+|**常數**|**說明**|  
 |---|---|  
 |`CONFIG`|字串，對應至**Configuration Manager**中 [使用中的**方案**設定] 方塊的目前設定。|  
-|`DEBUG`|可以在 [**專案屬性**] 對話方塊中設定的 `Boolean` 值。 根據預設，專案的 Debug 設定會定義 `DEBUG`。 當定義 `DEBUG` 時，<xref:System.Diagnostics.Debug> 類別方法會將輸出產生至 [**輸出**] 視窗。 未定義時，不會編譯 <xref:System.Diagnostics.Debug> 類別方法，也不會產生任何 Debug 輸出。|  
-|`TARGET`|字串，代表專案的輸出類型或命令列**目標**選項的設定。 `TARGET` 的可能值為：<br /><br /> -適用于 Windows 應用程式的 "winexe"。<br />-"exe" 代表主控台應用程式。<br />-類別庫的「程式庫」。<br />-模組的「模組」。<br />-**目標**選項可在 Visual Studio 整合式開發環境中設定。 如需詳細資訊，請參閱[-target （Visual Basic）](../../visual-basic/reference/command-line-compiler/target.md)。|  
-|`TRACE`|可以在 [**專案屬性**] 對話方塊中設定的 `Boolean` 值。 根據預設，專案的所有設定都會定義 `TRACE`。 當定義 `TRACE` 時，<xref:System.Diagnostics.Trace> 類別方法會將輸出產生至 [**輸出**] 視窗。 未定義時，不會編譯 <xref:System.Diagnostics.Trace> 類別方法，也不會產生任何 `Trace` 輸出。|  
+|`DEBUG`|`Boolean`可以在 [**專案屬性**] 對話方塊中設定的值。 根據預設，專案的 Debug 設定會定義 `DEBUG` 。 當 `DEBUG` 定義時， <xref:System.Diagnostics.Debug> 類別方法會將輸出產生至 [**輸出**] 視窗。 未定義時，不會 <xref:System.Diagnostics.Debug> 編譯類別方法，也不會產生任何 Debug 輸出。|  
+|`TARGET`|字串，代表專案的輸出類型或命令列**目標**選項的設定。 的可能值 `TARGET` 為：<br /><br /> -適用于 Windows 應用程式的 "winexe"。<br />-"exe" 代表主控台應用程式。<br />-類別庫的「程式庫」。<br />-模組的「模組」。<br />-**目標**選項可在 Visual Studio 整合式開發環境中設定。 如需詳細資訊，請參閱[-target （Visual Basic）](../reference/command-line-compiler/target.md)。|  
+|`TRACE`|`Boolean`可以在 [**專案屬性**] 對話方塊中設定的值。 根據預設，專案的所有設定都會定義 `TRACE` 。 當 `TRACE` 定義時， <xref:System.Diagnostics.Trace> 類別方法會將輸出產生至 [**輸出**] 視窗。 未定義時，不會 <xref:System.Diagnostics.Trace> 編譯類別方法，也不 `Trace` 會產生任何輸出。|  
 |`VBC_VER`|代表 Visual Basic 版本的數位（在*主要*中）。*次要*格式。|  
   
 ### <a name="print-and-display-constants"></a>列印和顯示常數  
 
  當您呼叫 print 和 display 函式時，您可以在程式碼中使用下列常數來取代實際的值。  
   
-|**常數**|**描述**|  
+|**常數**|**說明**|  
 |---|---|  
 |`vbCrLf`|回車/換行字元組合。|  
 |`vbCr`|回車符。|  
@@ -49,11 +49,11 @@ Visual Basic 為開發人員提供許多預先定義的常數和列舉。 常數
 |`vbFormFeed`|未在 Microsoft Windows 中使用。|  
 |`vbVerticalTab`|不適用於 Microsoft Windows。|  
   
-## <a name="enumerations"></a>列舉型別  
+## <a name="enumerations"></a>列舉  
 
  下表列出並描述 Visual Basic 所提供的列舉。  
   
-|列舉|描述|  
+|列舉型別|Description|  
 |---|---|  
 |<xref:Microsoft.VisualBasic.AppWinStyle>|指出呼叫 <xref:Microsoft.VisualBasic.Interaction.Shell%2A> 函式時，被叫用之程式所使用的視窗樣式。|  
 |<xref:Microsoft.VisualBasic.AudioPlayMode>|指示在呼叫音效方法時要如何播放聲音。|  
@@ -73,7 +73,7 @@ Visual Basic 為開發人員提供許多預先定義的常數和列舉。 常數
 |<xref:Microsoft.VisualBasic.OpenAccess>|表示在呼叫檔案存取函式時，要如何開啟檔案。|  
 |<xref:Microsoft.VisualBasic.OpenMode>|表示在呼叫檔案存取函式時，要如何開啟檔案。|  
 |<xref:Microsoft.VisualBasic.OpenShare>|表示在呼叫檔案存取函式時，要如何開啟檔案。|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|指定是否要永久刪除檔案，或將檔案放在回收站中。|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|指定檔案要永久刪除或放在 [資源回收筒] 中。|  
 |<xref:Microsoft.VisualBasic.FileIO.SearchOption>|指定是否要搜尋全部或僅搜尋最上層目錄。|  
 |<xref:Microsoft.VisualBasic.TriState>|表示 `Boolean` 值，或在呼叫數位格式函數時是否應該使用預設值。|  
 |<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|指定當使用者在作業期間按一下 [**取消**] 時應該執行的動作。|  
@@ -81,8 +81,8 @@ Visual Basic 為開發人員提供許多預先定義的常數和列舉。 常數
 |<xref:Microsoft.VisualBasic.VariantType>|指出 Variant 物件的型別，並由 <xref:Microsoft.VisualBasic.Information.VarType%2A> 函式傳回相關資料。|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|表示呼叫 <xref:Microsoft.VisualBasic.Strings.StrConv%2A> 函式時要執行的轉換類型。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)
-- [常數的概觀](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [列舉的概觀](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Visual Basic 語言參考](index.md)
+- [常數的概觀](../programming-guide/language-features/constants-enums/constants-overview.md)
+- [列舉的概觀](../programming-guide/language-features/constants-enums/enumerations-overview.md)
