@@ -3,20 +3,20 @@ title: <udpTransportSettings> 的 <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
 ms.openlocfilehash: b67bdf825948dffe18aabe91b0de236eb929bccc
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854856"
 ---
-# <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udptransportsettings > 的\<udpannouncementendpoint >
-此 configuration 專案會公開[ \<udptransportsettings >](udpannouncementendpoint.md)的 UDP 傳輸設定。  
+# <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> 的 \<udpAnnouncementEndpoint>
+此 configuration 專案會公開的 UDP 傳輸設定 [\<udpAnnouncementEndpoint>](udpannouncementendpoint.md) 。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Udptransportsettings >** ](udpannouncementendpoint.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<updTransportSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<standardEndpoints>**](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<udpAnnouncementEndpoint>**](udpannouncementendpoint.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<updTransportSettings>**  
 
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ ms.locfileid: "70854856"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -53,7 +53,7 @@ ms.locfileid: "70854856"
 |maxPendingMessageCount|整數，指定已接收但尚未從個別通道執行個體的 InputQueue 移除的訊息數目上限。  如果 InputQueue 已達到其暫止訊息計數的限制，則會捨棄訊息。<br /><br /> 預設值為 32。|  
 |maxReceivedMessageSize|整數，指定繫結可處理之訊息的大小上限。<br /><br /> 預設值為 65507。|  
 |maxUnicastRetransmitCount|整數，指定應重新傳送訊息的次數上限 (除了第一次傳送之外)。  如果訊息是傳送至單點傳播位址，並且收到含有對應 RelatesTo 標頭的回應訊息，重新傳輸可能會較早終止 (在重新傳輸您設定的次數之前)。<br /><br /> 預設值為 1。|  
-|multicastInterfaceId|字串，這個字串可唯一識別在多重主目錄電腦上傳送及接收多點傳送流量時應使用的網路介面卡。 在執行階段，傳輸會使用這個屬性值查詢介面索引，接著使用介面索引設定 `IP_MULTICAST_IF` 和 `IPV6_MULTICAST_IF` 通訊端選項。  聯結多點傳送群組時會使用相同的介面索引 (如果適用的話)。<br /><br /> 預設值為 `null`。|  
+|multicastInterfaceId|字串，這個字串可唯一識別在多重主目錄電腦上傳送及接收多點傳送流量時應使用的網路介面卡。 在執行階段，傳輸會使用這個屬性值查詢介面索引，接著使用介面索引設定 `IP_MULTICAST_IF` 和 `IPV6_MULTICAST_IF` 通訊端選項。  聯結多點傳送群組時會使用相同的介面索引 (如果適用的話)。<br /><br /> 預設值是 `null`。|  
 |socketReceiveBufferSize|整數，指定基礎 WinSock 通訊端上接收緩衝區的大小。<br /><br /> 接收通道的使用者可以在繫結上使用此屬性控制系統接收資料時的行為。  例如，假設應用程式會於最大臨界值耗用傳入 WCF 訊息，則使用此屬性較高的值可讓訊息在等候應用程式能夠加以處理時，堆疊在 WinSock 緩衝區中。  同樣的情況下若使用較小的值，則會導致捨棄訊息。這個屬性會公開基礎 WinSock `SO_RCVBUF` 通訊端選項。此屬性的值至少須等於 `maxReceivedMessageSize` 的大小。   將它設定為小於 `maxReceivedMessageSize` 的值，會導致執行階段例外狀況。<br /><br /> 預設值為 65536。|  
 |timeToLive|整數，指定多點傳送封包可以周遊的網路區段躍點數目。  這個屬性會公開與 `IP_MULTICAST_TTL` 和 `IP_TTL` 通訊端選項相關聯的功能。<br /><br /> 預設值為 1。|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "70854856"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|具有固定公告合約及 UDP 傳輸繫結的標準端點。|  
   

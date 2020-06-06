@@ -9,19 +9,19 @@ helpviewer_keywords:
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089105"
 ---
-# <a name="smtp-element-network-settings"></a>\<smtp > 元素（網路設定）
+# <a name="smtp-element-network-settings"></a>\<smtp> 項目 (網路設定)
 設定傳送電子郵件的傳遞格式、傳遞方法和寄件者位址。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<mailSettings >** ](mailsettings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**smtp >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<mailSettings>**](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<smtp>**
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ ms.locfileid: "74089105"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74089105"
 |`deliveryMethod`|指定電子郵件的傳遞方法。 可接受的值為 Network、PickupDirectoryFromIis 和 SpecifiedPickupDirectory。|  
 |`from`|指定外寄電子郵件的寄件者位址。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
 |屬性|描述|  
 |---------------|-----------------|  
@@ -55,9 +55,9 @@ ms.locfileid: "74089105"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
-|[\<mailSettings> 項目 (網路設定)](mailsettings-element-network-settings.md)|設定郵件傳送選項。|  
+|[\<mailSettings>元素（網路設定）](mailsettings-element-network-settings.md)|設定郵件傳送選項。|  
   
 ## <a name="example"></a>範例  
  下列範例會指定適當的 SMTP 參數，以使用預設網路認證來傳送電子郵件。  
@@ -78,7 +78,7 @@ ms.locfileid: "74089105"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>

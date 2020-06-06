@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74802122"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<requestCaching> 項目 (網路設定)
 控制網路要求的快取機制。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<system.web >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<requestcaching> >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<requestCaching>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,21 +35,21 @@ ms.locfileid: "74802122"
 </requestCaching>
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和元素  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`isPrivateCache`|指定快取是否在不同使用者的資訊之間提供隔離。 預設值是 `true`。 中介層應用程式的這個值應該是 `false`。|  
+|`isPrivateCache`|指定快取是否在不同使用者的資訊之間提供隔離。 預設值是 `true`。 `false`中介層應用程式的這個值應該是。|  
 |`disableAllCaching`|指定停用所有 Web 回應的快取，而且無法以程式設計方式覆寫。|  
 |`defaultPolicyLevel`|<xref:System.Net.Cache.RequestCacheLevel> 列舉中的其中一個值。 預設值是 `BypassCache`。|  
 |`unspecifiedMaximumAge`|指定將內容標示為過期的預設時間。|  
   
 ## <a name="policylevel-attribute"></a>policyLevel 屬性  
   
-|{2&gt;值&lt;2}|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`Default`|如果資源是最新的，則會傳回快取的資源、內容長度是正確的，而且會顯示到期、修改和內容長度屬性。|  
 |`BypassCache`|傳回伺服器的資源。|  
@@ -60,16 +60,16 @@ ms.locfileid: "74802122"
 |`NoCacheNoStore`|如果快取的資源已存在，則會予以刪除。 資源會從伺服器下載，並傳回給呼叫端。|  
 |`Revalidate`|如果時間戳記與伺服器上資源的時間戳記相同，請使用資源的快取複本來滿足要求;否則，資源會從伺服器下載、呈現給呼叫端，並儲存在快取中。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 HTTP 快取是否作用中，並描述預設的快取原則。|  
-|[\<defaultFtpCachePolicy > 元素（網路設定）](defaultftpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 FTP 快取是否作用中，並描述預設的快取原則。|  
+|[\<defaultFtpCachePolicy>元素（網路設定）](defaultftpcachepolicy-element-network-settings.md)|選擇性項目。<br /><br /> 描述 FTP 快取是否作用中，並描述預設的快取原則。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
@@ -86,7 +86,7 @@ ms.locfileid: "74802122"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
 - [網路設定結構描述](index.md)

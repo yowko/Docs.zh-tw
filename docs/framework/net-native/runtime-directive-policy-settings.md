@@ -3,10 +3,10 @@ title: 執行階段指示詞原則設定
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76738499"
 ---
 # <a name="runtime-directive-policy-settings"></a>執行階段指示詞原則設定
@@ -16,7 +16,7 @@ ms.locfileid: "76738499"
 
 .NET Native 的執行階段指示詞原則設定，可決定類型和類型成員的中繼資料在執行階段的可用性。 如果沒有必要的中繼資料，依賴反映、序列化和還原序列化的作業，或是將 .NET Framework 類型封送處理至 COM 或 Windows 執行階段的作業會失敗，並擲回例外狀況。 最常見的例外狀況是 [MissingMetadataException](missingmetadataexception-class-net-native.md) 和 (在 Interop 的案例中) [MissingInteropDataException](missinginteropdataexception-class-net-native.md)。
 
-執行階段原則設定是由執行階段指示詞 (.rd.xml) 檔案控制。 每個執行階段指示詞都會為特定的程式項目定義原則，這些程式項目像是組件 ([\<Assembly>](assembly-element-net-native.md) 項目)、類型 ([\<Type>](type-element-net-native.md) 項目) 或方法 ([\<Method>](method-element-net-native.md) 項目)。 指示詞包含一或多個屬性，可定義反映原則類型、序列化原則類型，以及下一節將討論的 interop 原則類型。 屬性的值可定義原則設定。
+執行階段原則設定是由執行階段指示詞 (.rd.xml) 檔案控制。 每個執行時間指示詞都會為特定的程式元素定義原則，例如元件（ [\<Assembly>](assembly-element-net-native.md) 元素）、類型（ [\<Type>](type-element-net-native.md) 元素）或方法（專案 [\<Method>](method-element-net-native.md) ）。 指示詞包含一或多個屬性，可定義反映原則類型、序列化原則類型，以及下一節將討論的 interop 原則類型。 屬性的值可定義原則設定。
 
 ## <a name="policy-types"></a>原則類型
 
@@ -32,9 +32,9 @@ ms.locfileid: "76738499"
 
   下表列出反映原則類型，以及可與其搭配使用的程式元素。
 
-  |元素|啟用|瀏覽|動態|
+  |項目|啟動|瀏覽|動態|
   |-------------|--------------|------------|-------------|
-  |[\<應用程式>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
   |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)||✔️|✔️|
@@ -63,9 +63,9 @@ ms.locfileid: "76738499"
 
   下表列出序列化原則類型，以及可與其搭配使用的程式元素。
 
-  |元素|序列化|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
+  |項目|序列化|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<應用程式>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)|||||
@@ -92,9 +92,9 @@ ms.locfileid: "76738499"
 
   下表列出 interop 原則類型，以及可與其搭配使用的程式元素。
 
-  |元素|MarshalObject|MarshalDelegate|MarshalStructure|
+  |項目|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<應用程式>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
   |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)||||

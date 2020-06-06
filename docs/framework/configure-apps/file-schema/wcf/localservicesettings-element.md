@@ -3,22 +3,22 @@ title: <localServiceSettings> 項目
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400309"
 ---
-# <a name="localservicesettings-element"></a>\<localServiceSettings > 元素
+# <a name="localservicesettings-element"></a>\<localServiceSettings> 項目
 指定此繫結之本機服務的安全性設定。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<localServiceSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<localServiceSettings>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,14 +42,14 @@ ms.locfileid: "70400309"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`detectReplays`|布林值，這個值會指定是否會偵測及自動處理對通道所發出的重新執行攻擊。 預設為 `false`。|  
-|`inactivityTimeout`|正的 <xref:System.TimeSpan>，指定通道在無活動的狀態下要等候多長的時間才會逾時。預設為 "01:00:00"。|  
+|`detectReplays`|布林值，這個值會指定是否會偵測及自動處理對通道所發出的重新執行攻擊。 預設值為 `false`。|  
+|`inactivityTimeout`|正 <xref:System.TimeSpan> 的，指定通道在超時之前等待的非使用狀態持續時間。預設值為 "01:00:00"。|  
 |`issuedCookieLifeTime`|<xref:System.TimeSpan>，指定發出給所有新的安全性 Cookie 的存留期。 超過存留期的 Cookie 會回收，而且必須再次交涉。 預設值為 "10:00:00"。|  
 |`maxCachedCookies`|正整數，這個值會指定可以快取的 Cookie 數目上限。 預設值是 1000。|  
 |`maxClockSkew`|<xref:System.TimeSpan>，指定通訊雙方之系統時鐘之間的最大時間差異。 預設值為 "00:05:00"。<br /><br /> 當這個值設定為預設值時，接收者接受之訊息的傳送時間時間戳記會比收到訊息的時間早或晚 5 分鐘。 沒有通過傳送時間測試的訊息會遭到拒絕。 這個設定會配合 `replayWindow` 屬性使用。|  
@@ -68,7 +68,7 @@ ms.locfileid: "70400309"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<security>](security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
@@ -99,5 +99,5 @@ ms.locfileid: "70400309"
 - [擴充繫結](../../../wcf/extending/extending-bindings.md)
 - [自訂繫結](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [如何：使用 SecurityBindingElement 建立自訂系結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [自訂繫結安全性](../../../wcf/samples/custom-binding-security.md)

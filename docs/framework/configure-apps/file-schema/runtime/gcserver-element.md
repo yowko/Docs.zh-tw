@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 ms.openlocfilehash: 8eab5e36bab90510aff4f1a3e15328197ac59ed7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73968939"
 ---
-# <a name="gcserver-element"></a>\<gcServer > 元素
+# <a name="gcserver-element"></a>\<gcServer> 項目
 
 指定 Common Language Runtime 是否執行伺服器記憶體回收。
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<執行時間 >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer >
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<gcServer>
 
 ## <a name="syntax"></a>語法
 
@@ -32,7 +32,7 @@ ms.locfileid: "73968939"
 
 ## <a name="attributes-and-elements"></a>屬性和元素
 
-下列各節描述屬性、子項目和父項目。
+下列章節說明屬性、子元素和父元素。
 
 ### <a name="attributes"></a>屬性
 
@@ -44,7 +44,7 @@ ms.locfileid: "73968939"
 
 |值|描述|
 |-----------|-----------------|
-|`false`|不執行伺服器記憶體回收。 這是預設值。|
+|`false`|不執行伺服器記憶體回收。 此為預設值。|
 |`true`|執行伺服器記憶體回收。|
 
 ### <a name="child-elements"></a>子元素
@@ -53,7 +53,7 @@ ms.locfileid: "73968939"
 
 ### <a name="parent-elements"></a>父元素
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|
@@ -67,7 +67,7 @@ Common Language Runtime (CLR) 支援兩種類型的記憶體回收：工作站�
 此項目只能用在應用程式組態檔中；如果是在或電腦組態檔中，就會忽略此項目。
 
 > [!NOTE]
-> 在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。 從 .NET Framework 4.5 開始，伺服器記憶體回收為並行。 若要使用非並行伺服器垃圾收集，請將**gcServer**元素設定為 `true`，並將[gcConcurrent 元素](gcconcurrent-element.md)設為 `false`。
+> 在 .NET Framework 4 (含) 以前版本中，當伺服器記憶體回收啟用時，無法使用並行記憶體回收。 從 .NET Framework 4.5 開始，伺服器記憶體回收為並行。 若要使用非並行伺服器垃圾收集，請將**gcServer**元素設定為 `true` ，並將[gcConcurrent 元素](gcconcurrent-element.md)設為 `false` 。
 
 從 .NET Framework 4.6.2 開始，您也可以使用下列元素來設定伺服器 GC：
 
@@ -89,9 +89,9 @@ Common Language Runtime (CLR) 支援兩種類型的記憶體回收：工作站�
 </configuration>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
 - [停用並行垃圾收集](gcconcurrent-element.md#to-disable-background-garbage-collection)

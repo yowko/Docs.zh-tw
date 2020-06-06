@@ -25,10 +25,10 @@ helpviewer_keywords:
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
 ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70972194"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
@@ -40,7 +40,7 @@ ms.locfileid: "70972194"
  本主題描述組態檔的語法，並提供有關組態檔的三種類型資訊：電腦、應用程式和安全性。  
   
 ## <a name="configuration-file-format"></a>組態檔格式  
- 組態檔包含一些項目，為設定組態資訊的邏輯資料結構。 在組態檔內，您要使用標記 (Tag) 來標記項目的開頭和結尾。 例如，`<runtime>` 項目是由 `<runtime>`*child elements*`</runtime>` 所組成。 空白項目會寫成 `<runtime/>` 或 `<runtime></runtime>`。  
+ 組態檔包含一些項目，為設定組態資訊的邏輯資料結構。 在組態檔內，您要使用標記 (Tag) 來標記項目的開頭和結尾。 例如，元素是 `<runtime>` 由 `<runtime>` *子項目*所組成 `</runtime>` 。 空白項目會寫成 `<runtime/>` 或 `<runtime></runtime>`。  
   
  就如同所有的 XML 檔，組態檔中的語法要區分大小寫。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "70972194"
 ## <a name="machine-configuration-files"></a>電腦組態檔  
  電腦組態檔 Machine.config 包含套用於整個電腦的設定值。 這個檔案位於 %*runtime install path*%\Config 目錄中。 Machine.config 包含全電腦的組件繫結、內建[遠端通道](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))和 ASP.NET 的組態設定。  
   
- 組態系統首先會在電腦組態檔中尋找 [ **\<appSettings>** 項目](./file-schema/appsettings/index.md)以及開發人員可能定義的其他組態區段。 接著會查看應用程式組態檔。 若要讓電腦組態檔易於管理，最好將這些設定值放在應用程式組態檔中。 然而，將設定值置於電腦組態檔可讓您的系統更容易維護。 例如，如果您有用戶端和伺服器應用程式都使用到的協力廠商元件，將那元件的設定值放在一個地方會比較容易。 在這個情況中，電腦組態檔是設定值的適當位置，所以您在兩個不同檔案中沒有相同的設定值。  
+ 設定系統會先在電腦設定檔中尋找專案， [ **\<appSettings>** 以及開發](./file-schema/appsettings/index.md)人員可能定義的其他設定區段。 接著會查看應用程式組態檔。 若要讓電腦組態檔易於管理，最好將這些設定值放在應用程式組態檔中。 然而，將設定值置於電腦組態檔可讓您的系統更容易維護。 例如，如果您有用戶端和伺服器應用程式都使用到的協力廠商元件，將那元件的設定值放在一個地方會比較容易。 在這個情況中，電腦組態檔是設定值的適當位置，所以您在兩個不同檔案中沒有相同的設定值。  
   
 > [!NOTE]
 > 使用 XCOPY 部署應用程式將不會複製電腦組態檔中的設定值。  
@@ -70,7 +70,7 @@ ms.locfileid: "70972194"
   
      這些應用程式有兩個組態檔：一個是來源組態檔，開發人員會在開發期間修改這個組態檔，另一個是隨應用程式散發的輸出檔。  
   
-     當您使用 Visual Studio 進行開發時，將應用程式的來源組態檔放置在專案目錄中，並將其 [複製到輸出目錄] 屬性設定為 [永遠複製] 或 [有更新時才複製]。 組態檔的名稱為具有 .config 副檔名的應用程式名稱。 例如，稱為 myApp.exe 的應用程式應擁有稱為 myApp.exe.config 的來源組態檔。  
+     當您使用 Visual Studio 進行開發時，將應用程式的來源組態檔放置在專案目錄中，並將其 [複製到輸出目錄]**** 屬性設定為 [永遠複製]**** 或 [有更新時才複製]****。 組態檔的名稱為具有 .config 副檔名的應用程式名稱。 例如，稱為 myApp.exe 的應用程式應擁有稱為 myApp.exe.config 的來源組態檔。  
   
      Visual Studio 會自動將來源組態檔複製到編譯的組件所在的目錄中，以建立輸出組態檔，該組態檔會隨應用程式一起部署。 在某些情況下，Visual Studio 可能會修改輸出組態檔；如需詳細資訊，請參閱[重新導向組件版本](redirect-assembly-versions.md)文件的[將應用程式層級的組件版本重新導向](redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel)一節。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70972194"
 - 使用者原則組態檔：%USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何：使用 DEVPATH 找出元件](how-to-locate-assemblies-by-using-devpath.md)  
+ [作法：使用 DEVPATH 找出組件](how-to-locate-assemblies-by-using-devpath.md)  
  說明如何在搜尋組件時指示執行階段使用 DEVPATH 環境變數。  
   
  [重新導向組件版本](redirect-assembly-versions.md)  
@@ -113,18 +113,18 @@ ms.locfileid: "70972194"
  [設定密碼編譯類別](configure-cryptography-classes.md)  
  說明如何將演算法名稱對應到加密類別，物件識別項對應到加密演算法。  
   
- [如何：建立發行者原則](how-to-create-a-publisher-policy.md)  
+ [作法：建立發行者原則](how-to-create-a-publisher-policy.md)  
  說明您何時應該以何種方式新增發行者原則檔，以指定組件重新導向和程式碼基底設定。  
   
- [組態檔結構描述](./file-schema/index.md)  
+ [設定檔架構](./file-schema/index.md)  
  說明啟動、執行階段、網路和其他類型組態設定的結構描述階層架構。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [組態檔結構描述](./file-schema/index.md)
+- [設定檔架構](./file-schema/index.md)
 - [指定組件的位置](specify-assembly-location.md)
 - [重新導向組件版本](redirect-assembly-versions.md)
-- [ASP.NET 網站管理](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [管理 ASP.NET 網站](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [安全性原則管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (程式碼存取安全性原則工具)](../tools/caspol-exe-code-access-security-policy-tool.md)
+- [Caspol.exe （代碼啟用安全性原則工具）](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [.NET 中的組件](../../standard/assembly/index.md)

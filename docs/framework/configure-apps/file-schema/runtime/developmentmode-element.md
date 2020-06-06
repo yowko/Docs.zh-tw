@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117624"
 ---
-# <a name="developmentmode-element"></a>\<developmentMode > 元素
+# <a name="developmentmode-element"></a>\<developmentMode> 項目
 指定執行階段是否要在 DEVPATH 環境變數所指定的目錄中搜尋組件。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<developmentMode>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,7 +30,7 @@ ms.locfileid: "73117624"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -43,14 +43,14 @@ ms.locfileid: "73117624"
 |值|描述|  
 |-----------|-----------------|  
 |**true**|在 DEVPATH 環境變數所指定的目錄中搜尋元件。|  
-|**false**|不會在 DEVPATH 環境變數所指定的目錄中搜尋元件。 這是預設值|  
+|**false**|不會在 DEVPATH 環境變數所指定的目錄中搜尋元件。 這是預設值。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
@@ -69,8 +69,8 @@ ms.locfileid: "73117624"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
-- [如何：使用 DEVPATH 找出組件](../../how-to-locate-assemblies-by-using-devpath.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
+- [作法：使用 DEVPATH 找出組件](../../how-to-locate-assemblies-by-using-devpath.md)

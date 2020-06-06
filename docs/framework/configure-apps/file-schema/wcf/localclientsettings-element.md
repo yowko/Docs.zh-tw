@@ -3,22 +3,22 @@ title: <localClientSettings> 項目
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
 ms.openlocfilehash: 3ec0394943c030a8866087c98a912682a2a2112e
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400313"
 ---
-# <a name="localclientsettings-element"></a>\<localClientSettings > 元素
+# <a name="localclientsettings-element"></a>\<localClientSettings> 項目
 指定此繫結之本機用戶端的安全性設定。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<localClientSettings >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<localClientSettings>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,15 +39,15 @@ ms.locfileid: "70400313"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`cacheCookies`|布林值，指定是否啟用 Cookie 快取。 預設為 `false`。|  
+|`cacheCookies`|布林值，指定是否啟用 Cookie 快取。 預設值為 `false`。|  
 |`cookieRenewalThresholdPercentage`|整數，指定可更新的 Cookie 百分比上限。 這個值應介於 0 到 100 之間 (含 0 和 100)。 預設值為 90。|  
-|`detectReplays`|布林值，這個值會指定是否會偵測及自動處理對通道所發出的重新執行攻擊。 預設為 `false`。|  
+|`detectReplays`|布林值，這個值會指定是否會偵測及自動處理對通道所發出的重新執行攻擊。 預設值為 `false`。|  
 |`maxClockSkew`|<xref:System.TimeSpan>，指定通訊雙方之系統時鐘之間的最大時間差異。 預設值為 "00:05:00"。<br /><br /> 當這個值設定為預設值時，接收者接受之訊息的傳送時間時間戳記會比收到訊息的時間早或晚 5 分鐘。 沒有通過傳送時間測試的訊息會遭到拒絕。 這個設定會配合 `replayWindow` 屬性使用。|  
 |`maxCookieCachingTime`|<xref:System.TimeSpan>，指定 Cookie 的最長存留期。 預設值為 "10675199.02:48:05.4775807"。|  
 |`reconnectTransportOnFailure`|布林值，指定使用 WS-Reliable 訊息的連線是否會在傳輸失敗之後嘗試重新連線。 預設為 `true`，表示無限次嘗試重新連線。 無活動逾時會打破這個循環，而這樣會使得通道在無法重新連線時擲回例外狀況。|  
@@ -62,7 +62,7 @@ ms.locfileid: "70400313"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<security>](security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
@@ -81,5 +81,5 @@ ms.locfileid: "70400313"
 - [擴充繫結](../../../wcf/extending/extending-bindings.md)
 - [自訂繫結](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [如何：使用 SecurityBindingElement 建立自訂系結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [自訂繫結安全性](../../../wcf/samples/custom-binding-security.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - disableCachingBindingFailures element
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 ms.openlocfilehash: 23633cb282b8e59b4df4bcc2cd38717d805a207e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117504"
 ---
-# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 元素
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures> 項目
 指定是否要停用發生的系結失敗快取，因為探查找不到元件。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<disableCachingBindingFailures>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,13 +31,13 @@ ms.locfileid: "73117504"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|enabled|必要屬性。<br /><br /> 指定是否要停用發生的系結失敗快取，因為探查找不到元件。|  
+|已啟用|必要屬性。<br /><br /> 指定是否要停用發生的系結失敗快取，因為探查找不到元件。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
@@ -46,20 +46,20 @@ ms.locfileid: "73117504"
 |0|請勿停用發生的系結失敗快取，因為探查找不到元件。 從 .NET Framework 版本2.0 開始，這是預設的系結行為。|  
 |1|停用發生的系結失敗快取，因為探查找不到元件。 此設定會還原為 .NET Framework 版本1.1 的系結行為。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 從 .NET Framework 版本2.0 開始，載入元件的預設行為是快取所有的系結和載入失敗。 也就是說，如果嘗試載入元件失敗，後續載入相同元件的要求會立即失敗，而不會嘗試找出元件。 這個元素會針對發生的系結失敗停用預設行為，因為在探查路徑中找不到該元件。 這些失敗會擲回 <xref:System.IO.FileNotFoundException>。  
+ 從 .NET Framework 版本2.0 開始，載入元件的預設行為是快取所有的系結和載入失敗。 也就是說，如果嘗試載入元件失敗，後續載入相同元件的要求會立即失敗，而不會嘗試找出元件。 這個元素會針對發生的系結失敗停用預設行為，因為在探查路徑中找不到該元件。 這些失敗會擲回 <xref:System.IO.FileNotFoundException> 。  
   
- 某些系結和載入失敗不會受到此元素的影響，而且一律會進行快取。 因為找到元件，但無法載入，所以會發生這些失敗。 它們會擲回 <xref:System.BadImageFormatException> 或 <xref:System.IO.FileLoadException>。 下列清單包含一些這類失敗的範例。  
+ 某些系結和載入失敗不會受到此元素的影響，而且一律會進行快取。 因為找到元件，但無法載入，所以會發生這些失敗。 它們會擲回 <xref:System.BadImageFormatException> 或 <xref:System.IO.FileLoadException> 。 下列清單包含一些這類失敗的範例。  
   
 - 如果您嘗試載入的檔案不是有效的元件，則後續載入元件的嘗試將會失敗，即使錯誤的檔案已被正確的元件取代也一樣。  
   
@@ -78,8 +78,8 @@ ms.locfileid: "73117504"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
 - [執行階段如何找出組件](../../../deployment/how-the-runtime-locates-assemblies.md)

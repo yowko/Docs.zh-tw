@@ -6,18 +6,18 @@ helpviewer_keywords:
 - shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 ms.openlocfilehash: 160f14c856735e1ceac8635506aea52454faea43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115732"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 項目
 指定陰影複製是否使用 .NET Framework 4 中引進的預設啟動行為，或還原為舊版 .NET Framework 的啟動行為。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<shadowcopyverifybytimestamp> >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<shadowCopyVerifyByTimestamp>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,27 +26,27 @@ ms.locfileid: "73115732"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|enabled|必要屬性。<br /><br /> 指定在啟動時，使用陰影複製的應用程式域是否比較元件時間戳記，以判斷元件在陰影複製元件之前是否已更新。|  
+|已啟用|必要屬性。<br /><br /> 指定在啟動時，使用陰影複製的應用程式域是否比較元件時間戳記，以判斷元件在陰影複製元件之前是否已更新。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
 |true|在啟動時，只會複製自上次複製到陰影複製目錄後已更新的元件。 這是 .NET Framework 4 的預設值。|  
-|False|還原為舊版 .NET Framework 的啟動行為，也就是在啟動時複製所有檔案。|  
+|false|還原為舊版 .NET Framework 的啟動行為，也就是在啟動時複製所有檔案。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
@@ -65,8 +65,8 @@ ms.locfileid: "73115732"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
 - [陰影複製組件](../../../app-domains/shadow-copy-assemblies.md)
