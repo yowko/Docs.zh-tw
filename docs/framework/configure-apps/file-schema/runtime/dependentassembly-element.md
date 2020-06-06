@@ -10,52 +10,52 @@ helpviewer_keywords:
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154201"
 ---
-# <a name="dependentassembly-element"></a><span data-ttu-id="1b91d-102">\<依存性程式集>元素</span><span class="sxs-lookup"><span data-stu-id="1b91d-102">\<dependentAssembly> Element</span></span>
-<span data-ttu-id="1b91d-103">封裝每一個組件的繫結原則和組件位置。</span><span class="sxs-lookup"><span data-stu-id="1b91d-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="1b91d-104">為每個程式集`dependentAssembly`使用一個元素。</span><span class="sxs-lookup"><span data-stu-id="1b91d-104">Use one `dependentAssembly` element for each assembly.</span></span>  
+# <a name="dependentassembly-element"></a><span data-ttu-id="6f706-102">\<dependentAssembly> 項目</span><span class="sxs-lookup"><span data-stu-id="6f706-102">\<dependentAssembly> Element</span></span>
+<span data-ttu-id="6f706-103">封裝每一個組件的繫結原則和組件位置。</span><span class="sxs-lookup"><span data-stu-id="6f706-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="6f706-104">`dependentAssembly`針對每個元件使用一個元素。</span><span class="sxs-lookup"><span data-stu-id="6f706-104">Use one `dependentAssembly` element for each assembly.</span></span>  
   
-<span data-ttu-id="1b91d-105">[**\<配置>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="1b91d-105">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="1b91d-106">&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)</span><span class="sxs-lookup"><span data-stu-id="1b91d-106">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
-<span data-ttu-id="1b91d-107">&nbsp;&nbsp;&nbsp;&nbsp;[**\<程式集綁定>**](assemblybinding-element-for-runtime.md)</span><span class="sxs-lookup"><span data-stu-id="1b91d-107">&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)</span></span>\
-<span data-ttu-id="1b91d-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<從屬裝配>**</span><span class="sxs-lookup"><span data-stu-id="1b91d-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dependentAssembly>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dependentAssembly>**  
   
-## <a name="syntax"></a><span data-ttu-id="1b91d-109">語法</span><span class="sxs-lookup"><span data-stu-id="1b91d-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f706-105">語法</span><span class="sxs-lookup"><span data-stu-id="6f706-105">Syntax</span></span>  
   
 ```xml  
 <dependentAssembly>
 </dependentAssembly>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="1b91d-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="1b91d-110">Attributes and Elements</span></span>  
- <span data-ttu-id="1b91d-111">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="1b91d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6f706-106">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="6f706-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="6f706-107">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="6f706-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="1b91d-112">屬性</span><span class="sxs-lookup"><span data-stu-id="1b91d-112">Attributes</span></span>  
- <span data-ttu-id="1b91d-113">無。</span><span class="sxs-lookup"><span data-stu-id="1b91d-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6f706-108">屬性</span><span class="sxs-lookup"><span data-stu-id="6f706-108">Attributes</span></span>  
+ <span data-ttu-id="6f706-109">無。</span><span class="sxs-lookup"><span data-stu-id="6f706-109">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="1b91d-114">子元素</span><span class="sxs-lookup"><span data-stu-id="1b91d-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6f706-110">子元素</span><span class="sxs-lookup"><span data-stu-id="6f706-110">Child Elements</span></span>  
   
-|<span data-ttu-id="1b91d-115">元素</span><span class="sxs-lookup"><span data-stu-id="1b91d-115">Element</span></span>|<span data-ttu-id="1b91d-116">描述</span><span class="sxs-lookup"><span data-stu-id="1b91d-116">Description</span></span>|  
+|<span data-ttu-id="6f706-111">元素</span><span class="sxs-lookup"><span data-stu-id="6f706-111">Element</span></span>|<span data-ttu-id="6f706-112">描述</span><span class="sxs-lookup"><span data-stu-id="6f706-112">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyIdentity`|<span data-ttu-id="1b91d-117">包含有關程式集的標識資訊。</span><span class="sxs-lookup"><span data-stu-id="1b91d-117">Contains identifying information about the assembly.</span></span> <span data-ttu-id="1b91d-118">此元素必須包含在每個`dependentAssembly`元素中。</span><span class="sxs-lookup"><span data-stu-id="1b91d-118">This element must be included in each `dependentAssembly` element.</span></span>|  
-|`codeBase`|<span data-ttu-id="1b91d-119">指定運行時在未在電腦上安裝共用組件時可以找到共用組件的位置。</span><span class="sxs-lookup"><span data-stu-id="1b91d-119">Specifies where the runtime can find a shared assembly if it is not installed on the computer.</span></span>|  
-|`bindingRedirect`|<span data-ttu-id="1b91d-120">將一個組件版本重新導向至另一個版本。</span><span class="sxs-lookup"><span data-stu-id="1b91d-120">Redirects one assembly version to another.</span></span>|  
-|`publisherPolicy`|<span data-ttu-id="1b91d-121">指定運行時是否為此程式集應用發行者策略。</span><span class="sxs-lookup"><span data-stu-id="1b91d-121">Specifies whether the runtime applies publisher policy for this assembly.</span></span>|  
+|`assemblyIdentity`|<span data-ttu-id="6f706-113">包含元件的識別資訊。</span><span class="sxs-lookup"><span data-stu-id="6f706-113">Contains identifying information about the assembly.</span></span> <span data-ttu-id="6f706-114">此元素必須包含在每個 `dependentAssembly` 元素中。</span><span class="sxs-lookup"><span data-stu-id="6f706-114">This element must be included in each `dependentAssembly` element.</span></span>|  
+|`codeBase`|<span data-ttu-id="6f706-115">指定如果電腦上未安裝共用元件，執行時間可以在何處找到。</span><span class="sxs-lookup"><span data-stu-id="6f706-115">Specifies where the runtime can find a shared assembly if it is not installed on the computer.</span></span>|  
+|`bindingRedirect`|<span data-ttu-id="6f706-116">將一個組件版本重新導向至另一個版本。</span><span class="sxs-lookup"><span data-stu-id="6f706-116">Redirects one assembly version to another.</span></span>|  
+|`publisherPolicy`|<span data-ttu-id="6f706-117">指定執行時間是否套用此元件的發行者原則。</span><span class="sxs-lookup"><span data-stu-id="6f706-117">Specifies whether the runtime applies publisher policy for this assembly.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="1b91d-122">父項目</span><span class="sxs-lookup"><span data-stu-id="1b91d-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6f706-118">父項目</span><span class="sxs-lookup"><span data-stu-id="6f706-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="1b91d-123">元素</span><span class="sxs-lookup"><span data-stu-id="1b91d-123">Element</span></span>|<span data-ttu-id="1b91d-124">描述</span><span class="sxs-lookup"><span data-stu-id="1b91d-124">Description</span></span>|  
+|<span data-ttu-id="6f706-119">元素</span><span class="sxs-lookup"><span data-stu-id="6f706-119">Element</span></span>|<span data-ttu-id="6f706-120">描述</span><span class="sxs-lookup"><span data-stu-id="6f706-120">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="1b91d-125">包含有關組件版本重新導向和組件位置的資訊。</span><span class="sxs-lookup"><span data-stu-id="1b91d-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="1b91d-126">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="1b91d-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="1b91d-127">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="1b91d-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="6f706-121">包含有關組件版本重新導向和組件位置的資訊。</span><span class="sxs-lookup"><span data-stu-id="6f706-121">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="6f706-122">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="6f706-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="6f706-123">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="6f706-123">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="1b91d-128">範例</span><span class="sxs-lookup"><span data-stu-id="1b91d-128">Example</span></span>  
- <span data-ttu-id="1b91d-129">下面的示例演示如何封裝兩個程式集的程式集資訊。</span><span class="sxs-lookup"><span data-stu-id="1b91d-129">The following example shows how to encapsulate assembly information for two assemblies.</span></span>  
+## <a name="example"></a><span data-ttu-id="6f706-124">範例</span><span class="sxs-lookup"><span data-stu-id="6f706-124">Example</span></span>  
+ <span data-ttu-id="6f706-125">下列範例顯示如何封裝兩個元件的元件資訊。</span><span class="sxs-lookup"><span data-stu-id="6f706-125">The following example shows how to encapsulate assembly information for two assemblies.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,8 +78,8 @@ ms.locfileid: "79154201"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1b91d-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1b91d-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f706-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6f706-126">See also</span></span>
 
-- [<span data-ttu-id="1b91d-131">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="1b91d-131">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="1b91d-132">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="1b91d-132">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="1b91d-133">重新導向組件版本</span><span class="sxs-lookup"><span data-stu-id="1b91d-133">Redirecting Assembly Versions</span></span>](../../redirect-assembly-versions.md)
+- [<span data-ttu-id="6f706-127">執行時間設定架構</span><span class="sxs-lookup"><span data-stu-id="6f706-127">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="6f706-128">設定檔架構</span><span class="sxs-lookup"><span data-stu-id="6f706-128">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="6f706-129">重新導向組件版本</span><span class="sxs-lookup"><span data-stu-id="6f706-129">Redirecting Assembly Versions</span></span>](../../redirect-assembly-versions.md)
