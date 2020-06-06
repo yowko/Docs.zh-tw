@@ -3,22 +3,22 @@ title: <add> 的 <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
 ms.openlocfilehash: 3b3b4a1584b37601269368ee0e4e973626ddf9cf
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70850391"
 ---
-# <a name="add-of-namespacetable"></a><span data-ttu-id="c4a29-102">\<新增 namespaceTable > \<的 ></span><span class="sxs-lookup"><span data-stu-id="c4a29-102">\<add> of \<namespaceTable></span></span>
-<span data-ttu-id="c4a29-103">代表組態項目，其中包含命名空間與前置詞之間的對應，這個對應稍後可用於 XPath 篩選條件中的路由。</span><span class="sxs-lookup"><span data-stu-id="c4a29-103">Represents a configuration element that contains a namespace to prefix mapping that can then be used in XPath filters for routing.</span></span>  
+# <a name="add-of-namespacetable"></a><span data-ttu-id="6f540-102">\<add> 的 \<namespaceTable></span><span class="sxs-lookup"><span data-stu-id="6f540-102">\<add> of \<namespaceTable></span></span>
+<span data-ttu-id="6f540-103">代表組態項目，其中包含命名空間與前置詞之間的對應，這個對應稍後可用於 XPath 篩選條件中的路由。</span><span class="sxs-lookup"><span data-stu-id="6f540-103">Represents a configuration element that contains a namespace to prefix mapping that can then be used in XPath filters for routing.</span></span>  
   
-<span data-ttu-id="c4a29-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="c4a29-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="c4a29-105">&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="c4a29-105">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
-<span data-ttu-id="c4a29-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<路由 >** ](routing.md)</span><span class="sxs-lookup"><span data-stu-id="c4a29-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<routing>**](routing.md)</span></span>\
-<span data-ttu-id="c4a29-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namespaceTable >** ](namespacetable.md)</span><span class="sxs-lookup"><span data-stu-id="c4a29-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namespaceTable>**](namespacetable.md)</span></span>\
-<span data-ttu-id="c4a29-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**</span><span class="sxs-lookup"><span data-stu-id="c4a29-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<routing>**](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namespaceTable>**](namespacetable.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a><span data-ttu-id="c4a29-109">語法</span><span class="sxs-lookup"><span data-stu-id="c4a29-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f540-104">語法</span><span class="sxs-lookup"><span data-stu-id="6f540-104">Syntax</span></span>  
   
 ```xml  
 <routing>
@@ -29,25 +29,25 @@ ms.locfileid: "70850391"
 </routing>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c4a29-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c4a29-110">Attributes and Elements</span></span>  
- <span data-ttu-id="c4a29-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c4a29-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6f540-105">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="6f540-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="6f540-106">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="6f540-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c4a29-112">屬性</span><span class="sxs-lookup"><span data-stu-id="c4a29-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6f540-107">屬性</span><span class="sxs-lookup"><span data-stu-id="6f540-107">Attributes</span></span>  
   
-|<span data-ttu-id="c4a29-113">屬性</span><span class="sxs-lookup"><span data-stu-id="c4a29-113">Attribute</span></span>|<span data-ttu-id="c4a29-114">說明</span><span class="sxs-lookup"><span data-stu-id="c4a29-114">Description</span></span>|  
+|<span data-ttu-id="6f540-108">屬性</span><span class="sxs-lookup"><span data-stu-id="6f540-108">Attribute</span></span>|<span data-ttu-id="6f540-109">描述</span><span class="sxs-lookup"><span data-stu-id="6f540-109">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c4a29-115">namespace</span><span class="sxs-lookup"><span data-stu-id="c4a29-115">namespace</span></span>|<span data-ttu-id="c4a29-116">包含命名空間的字串。</span><span class="sxs-lookup"><span data-stu-id="c4a29-116">A string containing the namespace.</span></span>|  
-|<span data-ttu-id="c4a29-117">prefix</span><span class="sxs-lookup"><span data-stu-id="c4a29-117">prefix</span></span>|<span data-ttu-id="c4a29-118">包含這個命名空間的前置詞的字串。</span><span class="sxs-lookup"><span data-stu-id="c4a29-118">A string containing the prefix for this namespace.</span></span>|  
+|<span data-ttu-id="6f540-110">namespace</span><span class="sxs-lookup"><span data-stu-id="6f540-110">namespace</span></span>|<span data-ttu-id="6f540-111">包含命名空間的字串。</span><span class="sxs-lookup"><span data-stu-id="6f540-111">A string containing the namespace.</span></span>|  
+|<span data-ttu-id="6f540-112">prefix</span><span class="sxs-lookup"><span data-stu-id="6f540-112">prefix</span></span>|<span data-ttu-id="6f540-113">包含這個命名空間的前置詞的字串。</span><span class="sxs-lookup"><span data-stu-id="6f540-113">A string containing the prefix for this namespace.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c4a29-119">子元素</span><span class="sxs-lookup"><span data-stu-id="c4a29-119">Child Elements</span></span>  
- <span data-ttu-id="c4a29-120">無。</span><span class="sxs-lookup"><span data-stu-id="c4a29-120">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6f540-114">子元素</span><span class="sxs-lookup"><span data-stu-id="6f540-114">Child Elements</span></span>  
+ <span data-ttu-id="6f540-115">無。</span><span class="sxs-lookup"><span data-stu-id="6f540-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c4a29-121">父項目</span><span class="sxs-lookup"><span data-stu-id="c4a29-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6f540-116">父項目</span><span class="sxs-lookup"><span data-stu-id="6f540-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="c4a29-122">項目</span><span class="sxs-lookup"><span data-stu-id="c4a29-122">Element</span></span>|<span data-ttu-id="c4a29-123">描述</span><span class="sxs-lookup"><span data-stu-id="c4a29-123">Description</span></span>|  
+|<span data-ttu-id="6f540-117">元素</span><span class="sxs-lookup"><span data-stu-id="6f540-117">Element</span></span>|<span data-ttu-id="6f540-118">描述</span><span class="sxs-lookup"><span data-stu-id="6f540-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c4a29-124">\<namespaceTable></span><span class="sxs-lookup"><span data-stu-id="c4a29-124">\<namespaceTable></span></span>](namespacetable.md)|<span data-ttu-id="c4a29-125">代表定義一組項目的組態區段，其中包含前置詞對應的命名空間，這些對應稍後可在 XPath 篩選條件中用於路由。</span><span class="sxs-lookup"><span data-stu-id="c4a29-125">Represents a configuration section for defining a set of elements that contain namespace to prefix mappings that can then be used in XPath filters for routing.</span></span>|  
+|[\<namespaceTable>](namespacetable.md)|<span data-ttu-id="6f540-119">代表定義一組項目的組態區段，其中包含前置詞對應的命名空間，這些對應稍後可在 XPath 篩選條件中用於路由。</span><span class="sxs-lookup"><span data-stu-id="6f540-119">Represents a configuration section for defining a set of elements that contain namespace to prefix mappings that can then be used in XPath filters for routing.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="c4a29-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c4a29-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f540-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6f540-120">See also</span></span>
 
 - <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>

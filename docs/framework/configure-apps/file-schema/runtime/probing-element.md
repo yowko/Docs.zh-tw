@@ -10,49 +10,49 @@ helpviewer_keywords:
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73115855"
 ---
-# <a name="probing-element"></a><span data-ttu-id="31149-102">\<探查 > 元素</span><span class="sxs-lookup"><span data-stu-id="31149-102">\<probing> Element</span></span>
-<span data-ttu-id="31149-103">指定載入元件時，common language runtime 要搜尋的應用程式基底子目錄。</span><span class="sxs-lookup"><span data-stu-id="31149-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  
+# <a name="probing-element"></a><span data-ttu-id="5aa9e-102">\<probing> 項目</span><span class="sxs-lookup"><span data-stu-id="5aa9e-102">\<probing> Element</span></span>
+<span data-ttu-id="5aa9e-103">指定載入元件時，common language runtime 要搜尋的應用程式基底子目錄。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-103">Specifies application base subdirectories for the common language runtime to search when loading assemblies.</span></span>  
   
-<span data-ttu-id="31149-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="31149-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="31149-105">&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) </span><span class="sxs-lookup"><span data-stu-id="31149-105">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
-<span data-ttu-id="31149-106">&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > </span><span class="sxs-lookup"><span data-stu-id="31149-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)</span></span>\
-<span data-ttu-id="31149-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<探查 >**</span><span class="sxs-lookup"><span data-stu-id="31149-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<probing>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<probing>**  
   
-## <a name="syntax"></a><span data-ttu-id="31149-108">語法</span><span class="sxs-lookup"><span data-stu-id="31149-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5aa9e-104">語法</span><span class="sxs-lookup"><span data-stu-id="5aa9e-104">Syntax</span></span>  
   
 ```xml  
 <probing privatePath="paths"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="31149-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="31149-109">Attributes and Elements</span></span>  
- <span data-ttu-id="31149-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="31149-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5aa9e-105">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="5aa9e-105">Attributes and Elements</span></span>  
+ <span data-ttu-id="5aa9e-106">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="31149-111">屬性</span><span class="sxs-lookup"><span data-stu-id="31149-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5aa9e-107">屬性</span><span class="sxs-lookup"><span data-stu-id="5aa9e-107">Attributes</span></span>  
   
-|<span data-ttu-id="31149-112">屬性</span><span class="sxs-lookup"><span data-stu-id="31149-112">Attribute</span></span>|<span data-ttu-id="31149-113">描述</span><span class="sxs-lookup"><span data-stu-id="31149-113">Description</span></span>|  
+|<span data-ttu-id="5aa9e-108">屬性</span><span class="sxs-lookup"><span data-stu-id="5aa9e-108">Attribute</span></span>|<span data-ttu-id="5aa9e-109">描述</span><span class="sxs-lookup"><span data-stu-id="5aa9e-109">Description</span></span>|  
 |---------------|-----------------|  
-|`privatePath`|<span data-ttu-id="31149-114">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="31149-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="31149-115">指定可能包含元件之應用程式基底目錄的子目錄。</span><span class="sxs-lookup"><span data-stu-id="31149-115">Specifies subdirectories of the application's base directory that might contain assemblies.</span></span> <span data-ttu-id="31149-116">以分號分隔每個子目錄。</span><span class="sxs-lookup"><span data-stu-id="31149-116">Delimit each subdirectory with a semicolon.</span></span>|  
+|`privatePath`|<span data-ttu-id="5aa9e-110">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-110">Required attribute.</span></span><br /><br /> <span data-ttu-id="5aa9e-111">指定可能包含元件之應用程式基底目錄的子目錄。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-111">Specifies subdirectories of the application's base directory that might contain assemblies.</span></span> <span data-ttu-id="5aa9e-112">以分號分隔每個子目錄。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-112">Delimit each subdirectory with a semicolon.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="31149-117">子項目</span><span class="sxs-lookup"><span data-stu-id="31149-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5aa9e-113">子元素</span><span class="sxs-lookup"><span data-stu-id="5aa9e-113">Child Elements</span></span>  
 
-<span data-ttu-id="31149-118">無。</span><span class="sxs-lookup"><span data-stu-id="31149-118">None.</span></span>  
+<span data-ttu-id="5aa9e-114">無。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-114">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="31149-119">父項目</span><span class="sxs-lookup"><span data-stu-id="31149-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5aa9e-115">父項目</span><span class="sxs-lookup"><span data-stu-id="5aa9e-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="31149-120">項目</span><span class="sxs-lookup"><span data-stu-id="31149-120">Element</span></span>|<span data-ttu-id="31149-121">描述</span><span class="sxs-lookup"><span data-stu-id="31149-121">Description</span></span>|  
+|<span data-ttu-id="5aa9e-116">元素</span><span class="sxs-lookup"><span data-stu-id="5aa9e-116">Element</span></span>|<span data-ttu-id="5aa9e-117">描述</span><span class="sxs-lookup"><span data-stu-id="5aa9e-117">Description</span></span>|  
 |-------------|-----------------|  
-|`assemblyBinding`|<span data-ttu-id="31149-122">包含有關組件版本重新導向和組件位置的資訊。</span><span class="sxs-lookup"><span data-stu-id="31149-122">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
-|`configuration`|<span data-ttu-id="31149-123">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="31149-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="31149-124">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="31149-124">Contains information about assembly binding and garbage collection.</span></span>|  
+|`assemblyBinding`|<span data-ttu-id="5aa9e-118">包含有關組件版本重新導向和組件位置的資訊。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-118">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="5aa9e-119">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-119">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="5aa9e-120">包含有關組件繫結和記憶體回收的資訊。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-120">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="31149-125">範例</span><span class="sxs-lookup"><span data-stu-id="31149-125">Example</span></span>  
- <span data-ttu-id="31149-126">下列範例顯示如何指定執行時間應該搜尋元件的應用程式基底子目錄。</span><span class="sxs-lookup"><span data-stu-id="31149-126">The following example shows how to specify application base subdirectories the runtime should search for assemblies.</span></span>  
+## <a name="example"></a><span data-ttu-id="5aa9e-121">範例</span><span class="sxs-lookup"><span data-stu-id="5aa9e-121">Example</span></span>  
+ <span data-ttu-id="5aa9e-122">下列範例顯示如何指定執行時間應該搜尋元件的應用程式基底子目錄。</span><span class="sxs-lookup"><span data-stu-id="5aa9e-122">The following example shows how to specify application base subdirectories the runtime should search for assemblies.</span></span>  
   
 ```xml  
 <configuration>  
@@ -64,9 +64,9 @@ ms.locfileid: "73115855"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="31149-127">請參閱</span><span class="sxs-lookup"><span data-stu-id="31149-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5aa9e-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5aa9e-123">See also</span></span>
 
-- [<span data-ttu-id="31149-128">執行時間設定架構</span><span class="sxs-lookup"><span data-stu-id="31149-128">Runtime settings schema</span></span>](index.md)
-- [<span data-ttu-id="31149-129">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="31149-129">Configuration file schema</span></span>](../index.md)
-- [<span data-ttu-id="31149-130">指定元件的位置</span><span class="sxs-lookup"><span data-stu-id="31149-130">Specify an assembly's location</span></span>](../../../../standard/assembly/location.md)
-- [<span data-ttu-id="31149-131">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="31149-131">How the runtime locates assemblies</span></span>](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [<span data-ttu-id="5aa9e-124">執行時間設定架構</span><span class="sxs-lookup"><span data-stu-id="5aa9e-124">Runtime settings schema</span></span>](index.md)
+- [<span data-ttu-id="5aa9e-125">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="5aa9e-125">Configuration file schema</span></span>](../index.md)
+- [<span data-ttu-id="5aa9e-126">指定元件的位置</span><span class="sxs-lookup"><span data-stu-id="5aa9e-126">Specify an assembly's location</span></span>](../../../../standard/assembly/location.md)
+- [<span data-ttu-id="5aa9e-127">執行時間如何找出元件</span><span class="sxs-lookup"><span data-stu-id="5aa9e-127">How the runtime locates assemblies</span></span>](../../../deployment/how-the-runtime-locates-assemblies.md)

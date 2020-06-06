@@ -8,51 +8,51 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 ms.openlocfilehash: 6991e3f73ac180fc690ec48e1a0d15f40c915733
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154526"
 ---
-# <a name="remove-element-for-configsections"></a><span data-ttu-id="69a05-102">\<刪除>元素以\<進行配置></span><span class="sxs-lookup"><span data-stu-id="69a05-102">\<remove> element for \<configSections></span></span>
+# <a name="remove-element-for-configsections"></a><span data-ttu-id="30803-102">\<configSections> 的 \<remove> 項目</span><span class="sxs-lookup"><span data-stu-id="30803-102">\<remove> element for \<configSections></span></span>
 
-<span data-ttu-id="69a05-103">刪除預定義的節或節組。</span><span class="sxs-lookup"><span data-stu-id="69a05-103">Removes a predefined section or section group.</span></span>
+<span data-ttu-id="30803-103">移除預先定義的區段或區段群組。</span><span class="sxs-lookup"><span data-stu-id="30803-103">Removes a predefined section or section group.</span></span>
 
-<span data-ttu-id="69a05-104">[**\<配置>**](configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="69a05-104">[**\<configuration>**](configuration-element.md)</span></span>\
-<span data-ttu-id="69a05-105">&nbsp;&nbsp;[**\<配置部分>**](configsections-element-for-configuration.md)</span><span class="sxs-lookup"><span data-stu-id="69a05-105">&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)</span></span>\
-<span data-ttu-id="69a05-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<刪除>**</span><span class="sxs-lookup"><span data-stu-id="69a05-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
-## <a name="syntax"></a><span data-ttu-id="69a05-107">語法</span><span class="sxs-lookup"><span data-stu-id="69a05-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="30803-104">語法</span><span class="sxs-lookup"><span data-stu-id="30803-104">Syntax</span></span>
 
 ```xml
 <remove name="section name or section group name" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="69a05-108">屬性</span><span class="sxs-lookup"><span data-stu-id="69a05-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="30803-105">屬性</span><span class="sxs-lookup"><span data-stu-id="30803-105">Attribute</span></span>
 
-|           | <span data-ttu-id="69a05-109">描述</span><span class="sxs-lookup"><span data-stu-id="69a05-109">Description</span></span> |
+|           | <span data-ttu-id="30803-106">描述</span><span class="sxs-lookup"><span data-stu-id="30803-106">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="69a05-110">**名稱**</span><span class="sxs-lookup"><span data-stu-id="69a05-110">**name**</span></span>  | <span data-ttu-id="69a05-111">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="69a05-111">Required attribute.</span></span><br><br><span data-ttu-id="69a05-112">指定要刪除的節或節組的名稱。</span><span class="sxs-lookup"><span data-stu-id="69a05-112">Specifies the name of the section or section group to remove.</span></span> |
+| <span data-ttu-id="30803-107">**name**</span><span class="sxs-lookup"><span data-stu-id="30803-107">**name**</span></span>  | <span data-ttu-id="30803-108">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="30803-108">Required attribute.</span></span><br><br><span data-ttu-id="30803-109">指定要移除之區段或區段群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="30803-109">Specifies the name of the section or section group to remove.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="69a05-113">父元素</span><span class="sxs-lookup"><span data-stu-id="69a05-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="30803-110">父元素</span><span class="sxs-lookup"><span data-stu-id="30803-110">Parent element</span></span>
 
-|     | <span data-ttu-id="69a05-114">描述</span><span class="sxs-lookup"><span data-stu-id="69a05-114">Description</span></span> |
+|     | <span data-ttu-id="30803-111">描述</span><span class="sxs-lookup"><span data-stu-id="30803-111">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="69a05-115">\*\* \<配置部分>\*\* 元素</span><span class="sxs-lookup"><span data-stu-id="69a05-115">**\<configSections>** Element</span></span>](configsections-element-for-configuration.md) | <span data-ttu-id="69a05-116">包含配置部分和命名空間聲明。</span><span class="sxs-lookup"><span data-stu-id="69a05-116">Contains configuration section and namespace declarations.</span></span> |
+| [<span data-ttu-id="30803-112">**\<configSections>** 元素</span><span class="sxs-lookup"><span data-stu-id="30803-112">**\<configSections>** Element</span></span>](configsections-element-for-configuration.md) | <span data-ttu-id="30803-113">包含設定區段和命名空間宣告。</span><span class="sxs-lookup"><span data-stu-id="30803-113">Contains configuration section and namespace declarations.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="69a05-117">子元素</span><span class="sxs-lookup"><span data-stu-id="69a05-117">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="30803-114">子元素</span><span class="sxs-lookup"><span data-stu-id="30803-114">Child elements</span></span>
 
-<span data-ttu-id="69a05-118">None</span><span class="sxs-lookup"><span data-stu-id="69a05-118">None</span></span>
+<span data-ttu-id="30803-115">None</span><span class="sxs-lookup"><span data-stu-id="30803-115">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="69a05-119">備註</span><span class="sxs-lookup"><span data-stu-id="69a05-119">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="30803-116">備註</span><span class="sxs-lookup"><span data-stu-id="30803-116">Remarks</span></span>
 
-<span data-ttu-id="69a05-120">可以使用**\<刪除>** 元素從應用程式中從設定檔層次結構中較高級別定義的節和節組中刪除。</span><span class="sxs-lookup"><span data-stu-id="69a05-120">You can use the **\<remove>** element to remove sections and section groups from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="30803-117">您可以使用 **\<remove>** 元素，從您的應用程式移除在設定檔階層中較高層級定義的區段和區段群組。</span><span class="sxs-lookup"><span data-stu-id="30803-117">You can use the **\<remove>** element to remove sections and section groups from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="69a05-121">範例</span><span class="sxs-lookup"><span data-stu-id="69a05-121">Example</span></span>
+## <a name="example"></a><span data-ttu-id="30803-118">範例</span><span class="sxs-lookup"><span data-stu-id="30803-118">Example</span></span>
 
-<span data-ttu-id="69a05-122">下面的示例演示如何使用應用程式佈建檔中的**\<刪除>** 元素來刪除以前在電腦設定檔中定義的部分。</span><span class="sxs-lookup"><span data-stu-id="69a05-122">The following example shows how to use the **\<remove>** element in an application configuration file to remove a section previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="30803-119">下列範例顯示如何使用 **\<remove>** 應用程式佈建檔中的專案，來移除先前在電腦設定檔中定義的區段。</span><span class="sxs-lookup"><span data-stu-id="30803-119">The following example shows how to use the **\<remove>** element in an application configuration file to remove a section previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="69a05-123">以下電腦設定檔代碼聲明節**\<示例節>**：</span><span class="sxs-lookup"><span data-stu-id="69a05-123">The following machine configuration file code declares the section **\<sampleSection>**:</span></span>
+<span data-ttu-id="30803-120">下列電腦設定檔程式碼會宣告區段 **\<sampleSection>** ：</span><span class="sxs-lookup"><span data-stu-id="30803-120">The following machine configuration file code declares the section **\<sampleSection>**:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ ms.locfileid: "79154526"
 </configuration>
 ```
 
-<span data-ttu-id="69a05-124">以下應用程式佈建檔代碼將刪除**\<示例節>** 部分。</span><span class="sxs-lookup"><span data-stu-id="69a05-124">The following application configuration file code removes the **\<sampleSection>** section.</span></span> <span data-ttu-id="69a05-125">刪除後，應用程式無法檢索**\<示例節>** 中的設置。</span><span class="sxs-lookup"><span data-stu-id="69a05-125">After removal, the application cannot retrieve the settings in **\<sampleSection>**.</span></span>
+<span data-ttu-id="30803-121">下列應用程式佈建檔案代碼會移除 **\<sampleSection>** 區段。</span><span class="sxs-lookup"><span data-stu-id="30803-121">The following application configuration file code removes the **\<sampleSection>** section.</span></span> <span data-ttu-id="30803-122">移除之後，應用程式就無法抓取中的設定 **\<sampleSection>** 。</span><span class="sxs-lookup"><span data-stu-id="30803-122">After removal, the application cannot retrieve the settings in **\<sampleSection>**.</span></span>
 
 ```xml
 <!-- Application configuration file -->
@@ -78,10 +78,10 @@ ms.locfileid: "79154526"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="69a05-126">組態檔</span><span class="sxs-lookup"><span data-stu-id="69a05-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="30803-123">組態檔</span><span class="sxs-lookup"><span data-stu-id="30803-123">Configuration file</span></span>
 
-<span data-ttu-id="69a05-127">此元素可用於應用程式佈建檔、電腦設定檔 *（Machine.config*） 和*Web.config*檔，這些檔不在應用程式目錄級別。</span><span class="sxs-lookup"><span data-stu-id="69a05-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="30803-124">此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。</span><span class="sxs-lookup"><span data-stu-id="30803-124">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="69a05-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69a05-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="30803-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="30803-125">See also</span></span>
 
-- [<span data-ttu-id="69a05-129">.NET 框架的設定檔架構</span><span class="sxs-lookup"><span data-stu-id="69a05-129">Configuration file schema for the .NET Framework</span></span>](index.md)
+- [<span data-ttu-id="30803-126">.NET Framework 的設定檔架構</span><span class="sxs-lookup"><span data-stu-id="30803-126">Configuration file schema for the .NET Framework</span></span>](index.md)
