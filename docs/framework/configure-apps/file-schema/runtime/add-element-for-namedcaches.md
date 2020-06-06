@@ -6,22 +6,22 @@ helpviewer_keywords:
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 ms.openlocfilehash: c1345022b79df371ad9c89a39a0a8b625e26608c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154501"
 ---
-# <a name="add-element-for-namedcaches"></a><span data-ttu-id="6026b-102">\<為\<具名快取添加>元素></span><span class="sxs-lookup"><span data-stu-id="6026b-102">\<add> Element for \<namedCaches></span></span>
-<span data-ttu-id="6026b-103">向`namedCache`記憶體緩存`namedCaches`的集合添加條目。</span><span class="sxs-lookup"><span data-stu-id="6026b-103">Adds a `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
+# <a name="add-element-for-namedcaches"></a><span data-ttu-id="aa749-102">\<namedCaches> 的 \<add> 項目</span><span class="sxs-lookup"><span data-stu-id="aa749-102">\<add> Element for \<namedCaches></span></span>
+<span data-ttu-id="aa749-103">將 `namedCache` 專案加入至記憶體快取的 `namedCaches` 集合。</span><span class="sxs-lookup"><span data-stu-id="aa749-103">Adds a `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
   
-<span data-ttu-id="6026b-104">[**\<配置>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="6026b-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="6026b-105">&nbsp;&nbsp;[**\<系統.運行時.緩存>**](system-runtime-caching-element-cache-settings.md)</span><span class="sxs-lookup"><span data-stu-id="6026b-105">&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)</span></span>\
-<span data-ttu-id="6026b-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<記憶體緩存>**](memorycache-element-cache-settings.md)</span><span class="sxs-lookup"><span data-stu-id="6026b-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)</span></span>\
-<span data-ttu-id="6026b-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<具名快取>**](namedcaches-element-cache-settings.md)</span><span class="sxs-lookup"><span data-stu-id="6026b-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)</span></span>\
-<span data-ttu-id="6026b-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<添加>**</span><span class="sxs-lookup"><span data-stu-id="6026b-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**</span></span>  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<namedCaches>**](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a><span data-ttu-id="6026b-109">語法</span><span class="sxs-lookup"><span data-stu-id="6026b-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa749-104">語法</span><span class="sxs-lookup"><span data-stu-id="aa749-104">Syntax</span></span>  
   
 ```xml  
 <namedCaches>  
@@ -30,35 +30,35 @@ ms.locfileid: "79154501"
  </namedCaches>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="6026b-110">類型</span><span class="sxs-lookup"><span data-stu-id="6026b-110">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="aa749-105">類型</span><span class="sxs-lookup"><span data-stu-id="aa749-105">Type</span></span>  
  `None`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6026b-111">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="6026b-111">Attributes and Elements</span></span>  
- <span data-ttu-id="6026b-112">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="6026b-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="aa749-106">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="aa749-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="aa749-107">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="aa749-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6026b-113">屬性</span><span class="sxs-lookup"><span data-stu-id="6026b-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="aa749-108">屬性</span><span class="sxs-lookup"><span data-stu-id="aa749-108">Attributes</span></span>  
   
-|<span data-ttu-id="6026b-114">屬性</span><span class="sxs-lookup"><span data-stu-id="6026b-114">Attribute</span></span>|<span data-ttu-id="6026b-115">描述</span><span class="sxs-lookup"><span data-stu-id="6026b-115">Description</span></span>|  
+|<span data-ttu-id="aa749-109">屬性</span><span class="sxs-lookup"><span data-stu-id="aa749-109">Attribute</span></span>|<span data-ttu-id="aa749-110">描述</span><span class="sxs-lookup"><span data-stu-id="aa749-110">Description</span></span>|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|<span data-ttu-id="6026b-116">指定 a<xref:System.Runtime.Caching.MemoryCache>實例可以增長到的最大允許大小（以百萬位元組為單位）的整數值。</span><span class="sxs-lookup"><span data-stu-id="6026b-116">An integer value that specifies the maximum allowed size (in megabytes) that an instance of a <xref:System.Runtime.Caching.MemoryCache> can grow to.</span></span> <span data-ttu-id="6026b-117">預設值為 0，這意味著預設情況下使用<xref:System.Runtime.Caching.MemoryCache>類的自動調整啟發式。</span><span class="sxs-lookup"><span data-stu-id="6026b-117">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
-|`Name`|<span data-ttu-id="6026b-118">快取的名稱。</span><span class="sxs-lookup"><span data-stu-id="6026b-118">The name of the cache.</span></span>|  
-|`PhysicalMemoryLimitPercentage`|<span data-ttu-id="6026b-119">介於 0 和 100 之間的整數值，指定緩存可以使用的物理安裝電腦記憶體的最大百分比。</span><span class="sxs-lookup"><span data-stu-id="6026b-119">An integer value between 0 and 100 that specifies the maximum percentage of physically installed computer memory that can be consumed by the cache.</span></span> <span data-ttu-id="6026b-120">預設值為 0，這意味著預設情況下使用<xref:System.Runtime.Caching.MemoryCache>類的自動調整啟發式。</span><span class="sxs-lookup"><span data-stu-id="6026b-120">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
-|`PollingInterval`|<span data-ttu-id="6026b-121">表示時間間隔的值，在此時間之後，快取實作會比較目前的記憶體負載與針對快取執行個體所設定的絕對和百分比型記憶體限制。</span><span class="sxs-lookup"><span data-stu-id="6026b-121">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="6026b-122">此值以"HH：MM：SS"格式輸入。</span><span class="sxs-lookup"><span data-stu-id="6026b-122">This value is entered in "HH:MM:SS" format.</span></span>|  
+|`CacheMemoryLimitMegabytes`|<span data-ttu-id="aa749-111">整數值，指定實例可以成長到的最大允許大小（以 mb 為單位） <xref:System.Runtime.Caching.MemoryCache> 。</span><span class="sxs-lookup"><span data-stu-id="aa749-111">An integer value that specifies the maximum allowed size (in megabytes) that an instance of a <xref:System.Runtime.Caching.MemoryCache> can grow to.</span></span> <span data-ttu-id="aa749-112">預設值為0，表示 <xref:System.Runtime.Caching.MemoryCache> 預設會使用類別的自動調整大小啟發學習法。</span><span class="sxs-lookup"><span data-stu-id="aa749-112">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
+|`Name`|<span data-ttu-id="aa749-113">快取的名稱。</span><span class="sxs-lookup"><span data-stu-id="aa749-113">The name of the cache.</span></span>|  
+|`PhysicalMemoryLimitPercentage`|<span data-ttu-id="aa749-114">介於0和100之間的整數值，指定可供快取使用之實際安裝電腦記憶體的最大百分比。</span><span class="sxs-lookup"><span data-stu-id="aa749-114">An integer value between 0 and 100 that specifies the maximum percentage of physically installed computer memory that can be consumed by the cache.</span></span> <span data-ttu-id="aa749-115">預設值為0，表示 <xref:System.Runtime.Caching.MemoryCache> 預設會使用類別的自動調整大小啟發學習法。</span><span class="sxs-lookup"><span data-stu-id="aa749-115">The default value is 0, which means that the <xref:System.Runtime.Caching.MemoryCache> class's autosizing heuristics are used by default.</span></span>|  
+|`PollingInterval`|<span data-ttu-id="aa749-116">表示時間間隔的值，在此時間之後，快取實作會比較目前的記憶體負載與針對快取執行個體所設定的絕對和百分比型記憶體限制。</span><span class="sxs-lookup"><span data-stu-id="aa749-116">A value that indicates the time interval after which the cache implementation compares the current memory load against the absolute and percentage-based memory limits that are set for the cache instance.</span></span> <span data-ttu-id="aa749-117">此值會以 "HH： MM： SS" 格式輸入。</span><span class="sxs-lookup"><span data-stu-id="aa749-117">This value is entered in "HH:MM:SS" format.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6026b-123">子元素</span><span class="sxs-lookup"><span data-stu-id="6026b-123">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="aa749-118">子元素</span><span class="sxs-lookup"><span data-stu-id="aa749-118">Child Elements</span></span>  
  `None`  
   
-### <a name="parent-elements"></a><span data-ttu-id="6026b-124">父項目</span><span class="sxs-lookup"><span data-stu-id="6026b-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="aa749-119">父項目</span><span class="sxs-lookup"><span data-stu-id="aa749-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="6026b-125">元素</span><span class="sxs-lookup"><span data-stu-id="6026b-125">Element</span></span>|<span data-ttu-id="6026b-126">描述</span><span class="sxs-lookup"><span data-stu-id="6026b-126">Description</span></span>|  
+|<span data-ttu-id="aa749-120">元素</span><span class="sxs-lookup"><span data-stu-id="aa749-120">Element</span></span>|<span data-ttu-id="aa749-121">描述</span><span class="sxs-lookup"><span data-stu-id="aa749-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6026b-127">\<具名快取></span><span class="sxs-lookup"><span data-stu-id="6026b-127">\<namedCaches></span></span>](namedcaches-element-cache-settings.md)|<span data-ttu-id="6026b-128">包含命名<xref:System.Runtime.Caching.MemoryCache>實例的配置設置集合。</span><span class="sxs-lookup"><span data-stu-id="6026b-128">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|<span data-ttu-id="aa749-122">包含已命名實例的設定集合 <xref:System.Runtime.Caching.MemoryCache> 。</span><span class="sxs-lookup"><span data-stu-id="aa749-122">Contains a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6026b-129">備註</span><span class="sxs-lookup"><span data-stu-id="6026b-129">Remarks</span></span>  
- <span data-ttu-id="6026b-130">該`add`元素向記憶體緩存`namedCaches`的集合添加一個條目。</span><span class="sxs-lookup"><span data-stu-id="6026b-130">The `add` element adds an entry to the `namedCaches` collection for a memory cache.</span></span> <span data-ttu-id="6026b-131">在使用 元素[clear](clear-element-for-namedcaches.md)之前，`add`可以使用 clear 元素來確保集合中沒有其他具名快取。</span><span class="sxs-lookup"><span data-stu-id="6026b-131">You can use the [clear](clear-element-for-namedcaches.md) element before you use the `add` element to be certain that there are no other named caches in the collection.</span></span> <span data-ttu-id="6026b-132">此元素可用於電腦.config 檔和 Web.config 檔中。</span><span class="sxs-lookup"><span data-stu-id="6026b-132">This element can be used in the machine.config file and in the Web.config file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aa749-123">備註</span><span class="sxs-lookup"><span data-stu-id="aa749-123">Remarks</span></span>  
+ <span data-ttu-id="aa749-124">`add`元素會將專案加入至記憶體快取的 `namedCaches` 集合。</span><span class="sxs-lookup"><span data-stu-id="aa749-124">The `add` element adds an entry to the `namedCaches` collection for a memory cache.</span></span> <span data-ttu-id="aa749-125">在您使用專案之前，您可以使用[clear](clear-element-for-namedcaches.md)元素， `add` 以確定集合中沒有任何其他已命名的快取。</span><span class="sxs-lookup"><span data-stu-id="aa749-125">You can use the [clear](clear-element-for-namedcaches.md) element before you use the `add` element to be certain that there are no other named caches in the collection.</span></span> <span data-ttu-id="aa749-126">這個元素可以在 machine.config 檔案和 web.config 檔案中使用。</span><span class="sxs-lookup"><span data-stu-id="aa749-126">This element can be used in the machine.config file and in the Web.config file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6026b-133">範例</span><span class="sxs-lookup"><span data-stu-id="6026b-133">Example</span></span>  
- <span data-ttu-id="6026b-134">下面的示例演示如何為記憶體緩存集合的`namedCache``namedCaches`預設條目定義設置。</span><span class="sxs-lookup"><span data-stu-id="6026b-134">The following example shows how to define settings for the default `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
+## <a name="example"></a><span data-ttu-id="aa749-127">範例</span><span class="sxs-lookup"><span data-stu-id="aa749-127">Example</span></span>  
+ <span data-ttu-id="aa749-128">下列範例示範如何將預設專案的設定定義為 `namedCache` 記憶體快取的 `namedCaches` 集合。</span><span class="sxs-lookup"><span data-stu-id="aa749-128">The following example shows how to define settings for the default `namedCache` entry to the `namedCaches` collection for a memory cache.</span></span>  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ ms.locfileid: "79154501"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6026b-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6026b-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa749-129">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aa749-129">See also</span></span>
 
-- [<span data-ttu-id="6026b-136">\<具名快取>元素（緩存設置）</span><span class="sxs-lookup"><span data-stu-id="6026b-136">\<namedCaches> Element (Cache Settings)</span></span>](namedcaches-element-cache-settings.md)
+- [<span data-ttu-id="aa749-130">\<namedCaches>元素（快取設定）</span><span class="sxs-lookup"><span data-stu-id="aa749-130">\<namedCaches> Element (Cache Settings)</span></span>](namedcaches-element-cache-settings.md)
