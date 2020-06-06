@@ -3,10 +3,10 @@
   items:
     - name: .NET 原生和編譯
       href: net-native-and-compilation.md
-    - name: 開始使用
+    - name: 快速入門
       href: getting-started-with-net-native.md
       items:
-        - name: 範例：動態程式設計疑難排解
+        - name: 範例：針對動態程式設計進行疑難排解
           href: example-troubleshooting-dynamic-programming.md
         - name: 範例：處理繫結資料時所發生的例外狀況
           href: example-handling-exceptions-when-binding-data.md
