@@ -1,20 +1,20 @@
 ---
-title: <系統.服務模型>工作流
+title: <的 System.servicemodel> 工作流程
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
 ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151945"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<系統.服務模型>工作流
+# <a name="systemservicemodel-of-workflow"></a>工作流程的 \<system.serviceModel>
 這個組態區段包含所有工作流程組態項目。  
 
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;**\<系統。服務模式>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.ServiceModel>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -98,17 +98,17 @@ ms.locfileid: "79151945"
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- None  
+ 無  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行為>](behaviors-of-workflow.md)|本節定義**服務行為**集合。  集合中的每個項目都會定義服務使用的行為項目。 每個行為元素都由其唯一**的名稱**屬性標識。|  
-|[\<跟蹤>](tracking.md)|代表定義工作流程服務之追蹤設定的組態區段。<br /><br /> 有關工作流跟蹤及其配置的詳細資訊，請參閱工作流[的工作流跟蹤和跟蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)和[配置跟蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
+|[\<behaviors>](behaviors-of-workflow.md)|這個區段會定義**serviceBehaviors**集合。  集合中的每個項目都會定義服務使用的行為項目。 每個行為元素都是由其唯一的**名稱**屬性來識別。|  
+|[\<tracking>](tracking.md)|代表定義工作流程服務之追蹤設定的組態區段。<br /><br /> 如需工作流程追蹤及其設定的詳細資訊，請參閱工作流程[追蹤和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)追蹤和設定[工作流程的追蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<配置>](../configuration-element.md)|.NET 組態檔中所有組態項目的根項目。|
+|[\<configuration>](../configuration-element.md)|.NET 組態檔中所有組態項目的根項目。|

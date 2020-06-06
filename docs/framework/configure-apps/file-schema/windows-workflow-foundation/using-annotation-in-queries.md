@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 50855b30-d5fe-49a9-89d3-3f1bfd670958
 ms.openlocfilehash: 728408e744bc1eca62158fab1a7a17e985fe3b6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69947290"
 ---
 # <a name="using-annotation-in-queries"></a>在查詢中使用附註
-附註可讓您使用值任意標記追蹤記錄，該值可在建置階段後設定。 例如, 您可能會想要將數個工作流程中的多個追蹤記錄標記為 "Mail Server" = = "Mail Server1"。 當您稍後查詢追蹤記錄時，就可以更輕鬆地找到所有具有這個標記的記錄。  
+附註可讓您使用值任意標記追蹤記錄，該值可在建置階段後設定。 例如，您可能會想要將數個工作流程中的多個追蹤記錄標記為 "Mail Server" = = "Mail Server1"。 當您稍後查詢追蹤記錄時，就可以更輕鬆地找到所有具有這個標記的記錄。  
   
 ## <a name="adding-annotations"></a>加入註解  
  註解可加入至追蹤查詢，如下列範例所示。  

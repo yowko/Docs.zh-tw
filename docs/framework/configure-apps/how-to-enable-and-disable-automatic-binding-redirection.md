@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69913038"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>作法：啟用和停用自動繫結重新導向
@@ -24,7 +24,7 @@ ms.locfileid: "69913038"
 
 如果您有 Visual Studio 2017 15.7 版或更新版本，您可以輕鬆地在專案的屬性頁中停用自動產生的系結重新導向。
 
-1. 以滑鼠右鍵按一下 [方案總管] 中的專案，然後選取 [屬性]。
+1. 以滑鼠右鍵按一下**方案總管**中的專案，然後選取 [**屬性**]。
 
 2. 在 [**應用程式**] 頁面上，取消核取 [**自動產生**系結重新導向] 選項。
 
@@ -35,7 +35,7 @@ ms.locfileid: "69913038"
 1. 使用下列其中一種方法開啟專案檔進行編輯：
 
    - 在 Visual Studio 中，選取**方案總管**中的專案，然後從快捷方式功能表選擇 [**在檔案瀏覽器中開啟資料夾**]。 在 [檔案管理器] 中，尋找專案（.csproj 或. vbproj）檔案，然後在 [記事本] 中開啟。
-   - 在 Visual Studio 的**方案總管**中，以滑鼠右鍵按一下專案，然後選擇 **[卸載專案**]。 再次以滑鼠右鍵按一下卸載的專案，然後選擇 **[編輯 [專案名稱 .csproj]]** 。
+   - 在 Visual Studio 的**方案總管**中，以滑鼠右鍵按一下專案，然後選擇 **[卸載專案**]。 再次以滑鼠右鍵按一下卸載的專案，然後選擇 **[編輯 [專案名稱 .csproj]]**。
 
 2. 在專案檔中尋找下列屬性項目：
 
@@ -56,9 +56,9 @@ ms.locfileid: "69913038"
 1. 使用下列其中一種方法開啟專案檔進行編輯：
 
    - 在 Visual Studio 中，選取**方案總管**中的專案，然後從快捷方式功能表選擇 [**在檔案瀏覽器中開啟資料夾**]。 在 [檔案管理器] 中，尋找專案（.csproj 或. vbproj）檔案，然後在 [記事本] 中開啟。
-   - 在 Visual Studio 的**方案總管**中，以滑鼠右鍵按一下專案，然後選擇 **[卸載專案**]。 再次以滑鼠右鍵按一下卸載的專案，然後選擇 **[編輯 [專案名稱 .csproj]]** 。
+   - 在 Visual Studio 的**方案總管**中，以滑鼠右鍵按一下專案，然後選擇 **[卸載專案**]。 再次以滑鼠右鍵按一下卸載的專案，然後選擇 **[編輯 [專案名稱 .csproj]]**。
 
-2. 將下列元素新增至第一個設定屬性群組（在\<PropertyGroup > 標記底下）：
+2. 將下列元素新增至第一個設定屬性群組（在 \<PropertyGroup> 標記底下）：
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -91,15 +91,15 @@ ms.locfileid: "69913038"
 
 1. 在 Visual Studio 中編譯應用程式，並檢查是否有建置警告。
 
-   ![元件參考衝突的組建警告](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![為組件參考衝突建置警告](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
 2. 如果有組件繫結衝突，則會出現警告。 按兩下警告，或選取警告，然後按**enter**鍵。
 
    可讓您自動將必要的系結重新導向加入至來源**web.config**檔案的對話方塊隨即出現。
 
-   ![系結重新 導向許可權 對話方塊](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![[繫結重新導向] 權限對話方塊](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>另請參閱
 
-- [\<bindingRedirect > 元素](./file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect>元素](./file-schema/runtime/bindingredirect-element.md)
 - [重新導向組件版本](redirect-assembly-versions.md)

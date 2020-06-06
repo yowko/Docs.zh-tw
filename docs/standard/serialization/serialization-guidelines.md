@@ -10,10 +10,10 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84287489"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
@@ -23,7 +23,7 @@ ms.locfileid: "84287489"
   
  .NET 提供已針對多個序列化案例最佳化的三個主要序列化技術。 下表列出這些技術以及與這些技術相關的主要 .NET 類型。  
   
-|技術|相關類別|備忘稿|  
+|技術|相關類別|注意|  
 |----------------|----------------------|-----------|  
 |資料合約序列化|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|一般持續性<br /><br /> Web 服務<br /><br /> JSON|  
 |XML 序列化|<xref:System.Xml.Serialization.XmlSerializer>|XML 格式 <br />(具有完全控制)|  

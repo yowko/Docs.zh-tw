@@ -1,15 +1,15 @@
 ---
-title: <Event>元素（.NET 本機）
+title: <Event>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 ms.openlocfilehash: 60da48d5872d7ce61afcffa7977411bc6e1efc7f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181031"
 ---
-# <a name="event-element-net-native"></a>\<事件>元素（.NET 本機）
+# <a name="event-element-net-native"></a>\<Event>元素（.NET Native）
 將執行階段反映原則套用至事件。  
   
 ## <a name="syntax"></a>語法  
@@ -33,13 +33,13 @@ ms.locfileid: "79181031"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|*method_name*|事件名稱。 事件的類型由父[\<類型>](type-element-net-native.md)或[\<類型即時>](typeinstantiation-element-net-native.md)元素定義。|  
+|*method_name*|事件名稱。 事件的類型是由父系或元素所定義 [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*policy_setting*|要套用至事件之這個原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
@@ -50,8 +50,8 @@ ms.locfileid: "79181031"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<鍵入>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[\<類型即時>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
+|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  如果未明確定義事件的原則，則會繼承其父項目的執行階段原則。  

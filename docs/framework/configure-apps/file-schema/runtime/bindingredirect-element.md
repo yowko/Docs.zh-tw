@@ -10,20 +10,20 @@ helpviewer_keywords:
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 ms.openlocfilehash: d96585b397f75dcb9fac7e7fce93799cc95e7c6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154292"
 ---
-# <a name="bindingredirect-element"></a>\<綁定重定向>元素
+# <a name="bindingredirect-element"></a>\<bindingRedirect> 項目
 將一個組件版本重新導向至另一個版本。  
   
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<程式集綁定>**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<從屬裝配>**](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<綁定重定向>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<dependentAssembly>**](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<bindingRedirect>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,8 +40,8 @@ newVersion="new assembly version"/>
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`oldVersion`|必要屬性。<br /><br /> 指定原本要求的組件版本。 程式集版本號的格式*是主要.* 這個版本號碼每個部分的有效值為 0 至 65535。<br /><br /> 您也可以使用下列格式指定版本範圍：<br /><br /> *n.n.n.n - n.n.n.n*|  
-|`newVersion`|必要屬性。<br /><br /> Specifies the version of the assembly to use instead of the originally requested version in the format: *n.n.n.n*<br /><br /> 這個值可以指定 `oldVersion` 以前的版本。|  
+|`oldVersion`|必要屬性。<br /><br /> 指定原本要求的組件版本。 元件版本號碼的格式為 [*主要. 次要. 組建. 修訂*]。 這個版本號碼每個部分的有效值為 0 至 65535。<br /><br /> 您也可以使用下列格式指定版本範圍：<br /><br /> *n. n-n. n. n. n*|  
+|`newVersion`|必要屬性。<br /><br /> 以下列格式指定要使用的元件版本，而不是原始要求的版本： *n* . n. n. n<br /><br /> 這個值可以指定 `oldVersion` 以前的版本。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -59,11 +59,11 @@ newVersion="new assembly version"/>
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 當您對照強式名稱的組件建置 .NET Framework 應用程式時，即使有可用的新版本，應用程式仍會預設為在執行階段使用該組件版本。 不過，您可以設定應用程式以較新的組件版本執行。 有關運行時如何使用這些檔來確定要使用的程式集版本的詳細資訊，請參閱[運行時如何查找程式集](../../../deployment/how-the-runtime-locates-assemblies.md)。  
+ 當您對照強式名稱的組件建置 .NET Framework 應用程式時，即使有可用的新版本，應用程式仍會預設為在執行階段使用該組件版本。 不過，您可以設定應用程式以較新的組件版本執行。 如需執行時間如何使用這些檔案來判斷要使用哪個元件版本的詳細資訊，請參閱[執行時間如何找出元件](../../../deployment/how-the-runtime-locates-assemblies.md)。  
   
  您可以在 `bindingRedirect` 項目中包含多個 `dependentAssembly` 項目，藉此重新導向多個組件版本。 您也可以將組件從較新版本重新導向至較舊版本。  
   
- 在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 通過在 上設置<xref:System.Security.Permissions.SecurityPermissionFlag>標誌來授予許可權。 <xref:System.Security.Permissions.SecurityPermission> 有關詳細資訊，請參閱[程式集綁定重定向安全許可權](../../assembly-binding-redirection-security-permission.md)。  
+ 在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 許可權是藉由在上設定旗標來授與 <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission> 。 如需詳細資訊，請參閱元件系結重新導向[安全性許可權](../../assembly-binding-redirection-security-permission.md)。  
   
 ## <a name="example"></a>範例  
  下列範例將示範如何將某一個組件版本重新導向至另一個版本。  
@@ -86,6 +86,6 @@ newVersion="new assembly version"/>
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
 - [重新導向組件版本](../../redirect-assembly-versions.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
 ms.openlocfilehash: d31c5cd52ffe0e2a6eb5784735e76436d216444b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155215"
 ---
-# <a name="cryptonamemapping-element"></a>\<加密名稱映射>元素
+# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping> 項目
 包含易記名稱的類別對應。  
 
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<姆斯科利布>**](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<密碼設置>**](cryptographysettings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<加密名稱映射>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<cryptographySettings>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptoNameMapping>**
 
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ ms.locfileid: "79155215"
   
 |元素|描述|  
 |-------------|-----------------|  
-|`cryptoClasses`|包含具有映射到**\<nameentry>** 元素中的易記名稱的加密類的清單。|  
+|`cryptoClasses`|包含在專案中有易記名稱對應的密碼編譯類別清單 **\<nameEntry>** 。|  
 |`nameEntry`|將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
@@ -50,10 +50,10 @@ ms.locfileid: "79155215"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
 |`cryptoNameMapping`|包含易記名稱的類別對應。|  
-|`mscorlib`|包含 \<cryptographySettings> 項目。|  
+|`mscorlib`|包含 \<cryptographySettings> 元素。|  
   
 ## <a name="example"></a>範例  
- 下面的示例演示如何使用**\<加密NameMapping>** 元素來引用加密類並配置運行時。 然後，可以將字串"RSA"傳遞給 方法，<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>並使用 方法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>返回物件`MyCryptoRSAClass`。  
+ 下列範例顯示如何使用專案 **\<cryptoNameMapping>** 來參考密碼編譯類別，以及設定執行時間。 接著，您可以將字串 "RSA" 傳遞給 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 方法，並使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法來傳回 `MyCryptoRSAClass` 物件。  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ ms.locfileid: "79155215"
   
 ## <a name="see-also"></a>另請參閱
 
-- [組態檔結構描述](../index.md)
-- [加密設定架構](index.md)
-- [The signature is valid](../../../../standard/security/cryptographic-services.md)
+- [設定檔架構](../index.md)
+- [密碼編譯設定結構描述](index.md)
+- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)

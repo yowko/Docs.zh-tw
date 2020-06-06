@@ -11,10 +11,10 @@ helpviewer_keywords:
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
 ms.openlocfilehash: b3d76c14dc9180a5f19781122d1a42bcae603e76
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83377246"
 ---
 # <a name="serialization-in-net"></a>.NET 的序列化
@@ -29,7 +29,7 @@ ms.locfileid: "83377246"
   
 - [JSON 序列化](system-text-json-overview.md)只會序列化公用屬性，而且不會保留型別精確度。 JSON 是一種開放式標準，是在網路上共用資料的理想選擇。
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 <xref:System.Runtime.Serialization>  
 包含類別，可以用來序列化和還原序列化物件。

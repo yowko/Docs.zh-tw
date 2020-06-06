@@ -1,15 +1,15 @@
 ---
-title: <Subtypes>元素（.NET 本機）
+title: <Subtypes>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180928"
 ---
-# <a name="subtypes-element-net-native"></a>\<子類型>元素（.NET 本機）
+# <a name="subtypes-element-net-native"></a>\<Subtypes>元素（.NET Native）
 將執行階段原則套用至從包含類型繼承的所有類別。  
   
 ## <a name="syntax"></a>語法  
@@ -47,7 +47,7 @@ ms.locfileid: "79180928"
   
 ## <a name="all-attributes"></a>所有屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "79180928"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<鍵入>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  `<Subtypes>` 元素將原則套用至其包含類型的所有子類型。 當您想將不同的原則套用至衍生類型及其基底類別時，可使用這個元素。  
@@ -89,7 +89,7 @@ ms.locfileid: "79180928"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<類型>元素](type-element-net-native.md)
+- [\<Type>元素](type-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)

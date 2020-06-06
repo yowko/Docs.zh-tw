@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154201"
 ---
-# <a name="dependentassembly-element"></a>\<依存性程式集>元素
-封裝每一個組件的繫結原則和組件位置。 為每個程式集`dependentAssembly`使用一個元素。  
+# <a name="dependentassembly-element"></a>\<dependentAssembly> 項目
+封裝每一個組件的繫結原則和組件位置。 `dependentAssembly`針對每個元件使用一個元素。  
   
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<程式集綁定>**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<從屬裝配>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dependentAssembly>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,10 +41,10 @@ ms.locfileid: "79154201"
   
 |元素|描述|  
 |-------------|-----------------|  
-|`assemblyIdentity`|包含有關程式集的標識資訊。 此元素必須包含在每個`dependentAssembly`元素中。|  
-|`codeBase`|指定運行時在未在電腦上安裝共用組件時可以找到共用組件的位置。|  
+|`assemblyIdentity`|包含元件的識別資訊。 此元素必須包含在每個 `dependentAssembly` 元素中。|  
+|`codeBase`|指定如果電腦上未安裝共用元件，執行時間可以在何處找到。|  
 |`bindingRedirect`|將一個組件版本重新導向至另一個版本。|  
-|`publisherPolicy`|指定運行時是否為此程式集應用發行者策略。|  
+|`publisherPolicy`|指定執行時間是否套用此元件的發行者原則。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -55,7 +55,7 @@ ms.locfileid: "79154201"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="example"></a>範例  
- 下面的示例演示如何封裝兩個程式集的程式集資訊。  
+ 下列範例顯示如何封裝兩個元件的元件資訊。  
   
 ```xml  
 <configuration>  
@@ -80,6 +80,6 @@ ms.locfileid: "79154201"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
 - [重新導向組件版本](../../redirect-assembly-versions.md)

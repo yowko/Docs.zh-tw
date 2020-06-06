@@ -10,14 +10,14 @@ api_type:
 - Assembly
 ms.assetid: 6b44b13c-7a23-4df2-8f9f-45e2b1430002
 ms.openlocfilehash: 99f2eb9447bdf43cb57cfe86f35d2c09044ed470
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69947620"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderctor"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
-會建立[ClientActivityBuilder](microsoft-visualstudio-activities-asr-clientactivitybuilder.md)類別的實例 (instance)。  
+會建立[ClientActivityBuilder](microsoft-visualstudio-activities-asr-clientactivitybuilder.md)類別的實例（instance）。  
   
 ## <a name="syntax"></a>語法  
   

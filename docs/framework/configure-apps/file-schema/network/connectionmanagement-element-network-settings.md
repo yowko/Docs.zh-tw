@@ -9,18 +9,18 @@ helpviewer_keywords:
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154890"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement> 項目 (網路設定)
 指定連接至網路主機的連線數目上限。  
 
-[**\<配置>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<連接管理>**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<connectionManagement>**
 
 ## <a name="syntax"></a>語法  
   
@@ -37,26 +37,26 @@ ms.locfileid: "79154890"
   
 ### <a name="child-elements"></a>子元素  
   
-|**Element**|**描述**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
-|[新增](add-element-for-connectionmanagement-network-settings.md)|將 IP 位址或 DNS 名稱加入連線管理清單中。|  
-|[清楚](clear-element-for-connectionmanagement-network-settings.md)|清除連接管理清單。|  
-|[移除](remove-element-for-connectionmanagement-network-settings.md)|從連接管理清單中刪除 IP 位址或 DNS 名稱。|  
+|[add](add-element-for-connectionmanagement-network-settings.md)|將 IP 位址或 DNS 名稱加入連線管理清單中。|  
+|[明確](clear-element-for-connectionmanagement-network-settings.md)|清除連接管理清單。|  
+|[remove](remove-element-for-connectionmanagement-network-settings.md)|從連接管理清單中移除 IP 位址或 DNS 名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**Element**|**描述**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="remarks"></a>備註  
- 該`connectionManagement`元素定義與伺服器或伺服器組的最大連接數。  
+ `connectionManagement`元素會定義伺服器或伺服器群組的最大連接數目。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下面的示例將應用程式佈建為使用到伺服器`www.contoso.com`的四個連接和到所有其他伺服器的兩個連接。  
+ 下列範例會將應用程式設定為使用伺服器的四個連接 `www.contoso.com` ，以及兩個連接到其他所有伺服器。  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ ms.locfileid: "79154890"
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [網路設置架構](index.md)
+- [網路設定結構描述](index.md)

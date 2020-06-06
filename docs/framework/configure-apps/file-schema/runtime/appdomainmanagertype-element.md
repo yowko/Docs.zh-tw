@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <appDomainManagerType> element
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 ms.openlocfilehash: 8eb6129b3fafaeb81a94d5a4078e41a16583a226
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154419"
 ---
-# <a name="appdomainmanagertype-element"></a>\<應用域管理器類型>元素
+# <a name="appdomainmanagertype-element"></a>\<appDomainManagerType> 項目
 針對預設應用程式網域，指定做為應用程式網域管理員的類型。  
   
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<應用域管理器類型>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<appDomainManagerType>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "79154419"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`value`|必要屬性。 指定作為進程中預設應用程式域的應用程式域管理器的類型的名稱（包括命名空間）。|  
+|`value`|必要屬性。 指定類型的名稱，包括命名空間，做為進程中預設應用程式域的應用程式域管理員。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -46,20 +46,20 @@ ms.locfileid: "79154419"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 要指定應用程式域管理器的類型，必須同時指定此元素和[\<appDomainManagerAssembly>](appdomainmanagerassembly-element.md)元素。 如果未指定其中任一元素，則忽略另一個元素。  
+ 若要指定應用程式域管理員的類型，您必須同時指定這個元素和專案 [\<appDomainManagerAssembly>](appdomainmanagerassembly-element.md) 。 如果未指定任何一個專案，則會忽略另一個元素。  
   
- 載入預設應用程式域時，<xref:System.TypeLoadException>如果[\<應用域管理器元件>](appdomainmanagerassembly-element.md)元素指定的程式集中不存在指定的類型，則引發該類型;進程無法啟動。  
+ 載入預設應用程式域時， <xref:System.TypeLoadException> 如果指定的型別不存在於元素所指定的元件中，就會擲回， [\<appDomainManagerAssembly>](appdomainmanagerassembly-element.md) 而且進程無法啟動。  
   
- 當您為預設應用程式域指定應用程式域管理器類型時，從預設應用程式域創建的其他應用程式域將繼承應用程式域管理器類型。 使用<xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>和<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>屬性為新的應用程式域指定不同的應用程式域管理器類型。  
+ 當您針對預設應用程式域指定應用程式域管理員類型時，從預設應用程式域建立的其他應用程式域會繼承應用程式域管理員類型。 使用 <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> 和 <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> 屬性，為新的應用程式域指定不同的應用程式域管理員類型。  
   
- 指定應用程式域管理器類型需要應用程式具有完全信任。 （例如，在桌面上運行的應用程式具有完全信任。如果應用程式沒有完全信任，則引發 。 <xref:System.TypeLoadException>  
+ 指定應用程式域管理員類型時，應用程式必須具有完全信任。 （例如，在桌面上執行的應用程式會有完全信任）。如果應用程式沒有完全信任， <xref:System.TypeLoadException> 則會擲回。  
   
- 類型和命名空間的格式與用於屬性的<xref:System.Type.FullName%2A?displayProperty=nameWithType>格式相同。  
+ 類型和命名空間的格式與用於屬性的格式相同 <xref:System.Type.FullName%2A?displayProperty=nameWithType> 。  
   
- 此配置元素僅在 .NET 框架 4 和更高版本中可用。  
+ 此 configuration 元素僅適用于 .NET Framework 4 和更新版本。  
   
 ## <a name="example"></a>範例  
- 下面的示例演示如何指定進程預設應用程式域的應用程式域管理器是程式集中`MyMgr``AdMgrExample`的類型。  
+ 下列範例示範如何指定進程的預設應用程式域的應用程式域管理員是 `MyMgr` 元件中的類型 `AdMgrExample` 。  
   
 ```xml  
 <configuration>  
@@ -75,7 +75,7 @@ ms.locfileid: "79154419"
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<應用程式域管理器程式集>元素](appdomainmanagerassembly-element.md)
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [\<appDomainManagerAssembly>元素](appdomainmanagerassembly-element.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
 - [SetAppDomainManagerType 方法](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

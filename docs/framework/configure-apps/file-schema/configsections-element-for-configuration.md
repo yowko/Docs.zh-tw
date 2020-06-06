@@ -8,44 +8,44 @@ helpviewer_keywords:
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
 ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155345"
 ---
-# <a name="configsections-element-for-configuration"></a>\<配置>元素，用於\<配置>
+# <a name="configsections-element-for-configuration"></a>\<configuration> 的 \<configSections> 項目
 
-包含配置部分和命名空間聲明。
+包含設定區段和命名空間宣告。
 
-&nbsp; [** \<配置>**](configuration-element.md)&nbsp;**配置>\<**
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;**\<configSections>**
 
 ## <a name="attributes"></a>屬性
 
-None
+無
 
 ## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<配置>**](configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
+| [**\<configuration>**](configuration-element.md) | 通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。 |
 
 ## <a name="child-elements"></a>子元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<第>節**](section-element.md) | 包含配置部分聲明。 |
-| [**\<部分組>**](sectiongroup-element-for-configsections.md) | 為配置部分定義命名空間。 |
-| [**\<刪除>**](remove-element-for-configsections.md) | 刪除預定義的節或節組。 |
-| [**\<明確>**](clear-element-for-configsections.md) | 清除以前定義的所有節和節組。 |
+| [**\<section>**](section-element.md) | 包含設定區段宣告。 |
+| [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | 定義設定區段的命名空間。 |
+| [**\<remove>**](remove-element-for-configsections.md) | 移除預先定義的區段或區段群組。 |
+| [**\<clear>**](clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
 
 ## <a name="remarks"></a>備註
 
-如果此元素位於設定檔中，則它必須是**\<配置>** 元素的第一個子項目。
+如果這個元素是在設定檔中，它必須是元素的第一個子專案 **\<configuration>** 。
 
 ## <a name="example"></a>範例
 
-下面的示例演示如何定義配置部分並定義該部分的設置：
+下列範例顯示如何定義設定區段，並定義該區段的設定：
 
 ```xml
 <configuration>
@@ -61,8 +61,8 @@ None
 
 ## <a name="configuration-file"></a>組態檔
 
-此元素可用於應用程式佈建檔、電腦設定檔 *（Machine.config*） 和*Web.config*檔，這些檔不在應用程式目錄級別。
+此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 框架的設定檔架構](index.md)
+- [.NET Framework 的設定檔架構](index.md)

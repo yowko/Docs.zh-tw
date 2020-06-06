@@ -3,10 +3,10 @@ title: WCF 組態結構描述
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
 ms.openlocfilehash: 866b0639f4391e1898bbe36e458df87e3c24bfff
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77448655"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 組態結構描述
@@ -36,5 +36,5 @@ Windows Communication Foundation （WCF） configuration 元素可讓您設定 W
  使用 <xref:System.Runtime.Serialization.DataContractSerializer> 等序列化程式時，設定選項的最上層項目。  
   
 ## <a name="related-sections"></a>相關章節  
- [設定 Windows Communication Foundation 應用程式](../../../wcf/configuring-services.md)  
+ [Configuring Windows Communication Foundation Applications](../../../wcf/configuring-services.md)  
  說明如何設定 WCF 服務和用戶端。

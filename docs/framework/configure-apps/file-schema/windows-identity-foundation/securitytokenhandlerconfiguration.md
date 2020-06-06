@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
 ms.openlocfilehash: e3e65820fa4dc341371d4f67689a288cd3f63951
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152563"
 ---
-# <a name="securitytokenhandlerconfiguration"></a>\<安全權杖處理常式配置>
-提供權杖處理常式集合的配置。  
+# \<securityTokenHandlerConfiguration>
+提供權杖處理常式集合的設定。  
   
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<系統.身份模型>**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<身份配置>**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<安全權杖處理常式>**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<安全權杖處理常式配置>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<securityTokenHandlerConfiguration>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,29 +40,29 @@ ms.locfileid: "79152563"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|保存引導上下文|指定是否應在會話權杖中包括引導標記。 還可以通過在`saveBootstrapContext`[\<標識配置>](identityconfiguration.md)元素上設置屬性，在權杖處理常式集合上設置該值。 權杖處理常式集合上設置的值將覆蓋服務上設置的值。|  
-|最大時鐘|指定<xref:System.TimeSpan>允許的最大時鐘偏斜的 。 控制執行時間敏感操作（如驗證登錄會話的過期時間）時允許的最大時鐘偏差。 預設值為 5 分鐘，"00：05：00"。 有關如何指定<xref:System.TimeSpan>值的詳細資訊，請參閱[時間跨度值](../windows-workflow-foundation/index.md)。 還可以通過在`maximumClockSkew`[\<標識配置>](identityconfiguration.md)元素上設置屬性，在服務等級設置最大時鐘偏斜。 權杖處理常式集合上設置的值將覆蓋服務上設置的值。|  
+|saveBootstrapCoNtext|指定啟動程式權杖是否應包含在會話權杖中。 您也可以藉由設定元素上的屬性，在權杖處理常式集合上設定此值 `saveBootstrapContext` [\<identityConfiguration>](identityconfiguration.md) 。 在權杖處理常式集合上設定的值會覆寫服務上設定的值。|  
+|maximumClockSkew|<xref:System.TimeSpan>，指定允許的最大時鐘誤差。 控制執行時間緊迫作業時允許的時鐘誤差上限，例如驗證登入會話的到期時間。 預設值為5分鐘，"00:05:00"。 如需如何指定值的詳細資訊 <xref:System.TimeSpan> ，請參閱[Timespan 值](../windows-workflow-foundation/index.md)。 您也可以在專案上設定屬性，以在服務層級設定最大時鐘誤差 `maximumClockSkew` [\<identityConfiguration>](identityconfiguration.md) 。 在權杖處理常式集合上設定的值會覆寫服務上設定的值。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<觀眾尤裡斯·>](audienceuris.md)|指定此依賴方可接受的識別碼的 URI 集。 選擇性。|  
-|[\<緩存>](caches.md)|註冊用於會話權杖和權杖重播檢測的緩存。 可以在服務等級或安全權杖處理常式集合上指定。 選擇性。|  
-|[\<證書驗證>](certificatevalidation.md)|控制權杖處理常式用於驗證憑證的設置。 可以在服務等級或安全權杖處理常式集合上指定。 如果特定處理常式配置了自己的驗證器，則這些設置將被覆蓋。 選擇性。|  
-|[\<發行人名稱註冊>](issuernameregistry.md)|配置權杖處理常式集合中處理常式使用的頒發者名稱註冊表。 選擇性。|  
-|[\<頒發者權杖解析器>](issuertokenresolver.md)|註冊權杖處理常式集合中處理常式使用的頒發者權杖解析器。 頒發者權杖解析器用於解析傳入權杖和消息上的簽名權杖。 選擇性。|  
-|[\<服務權杖解析器>](servicetokenresolver.md)|註冊權杖處理常式集合中處理常式使用的服務權杖解析器。 服務權杖解析器用於解析傳入權杖和消息上的加密權杖。 選擇性。|  
-|[\<權杖重播檢測>](tokenreplaydetection.md)|啟用權杖重播檢測並指定權杖的過期時間。 可以在服務等級或安全權杖處理常式集合上指定。 選擇性。|  
+|[\<audienceUris>](audienceuris.md)|指定 Uri 的集合，這是此信賴憑證者可接受的識別碼。 選擇性。|  
+|[\<caches>](caches.md)|註冊用於會話權杖和權杖重新執行偵測的快取。 可以在服務層級或安全性權杖處理常式集合中指定。 選擇性。|  
+|[\<certificateValidation>](certificatevalidation.md)|控制權杖處理常式用來驗證憑證的設定。 可以在服務層級或安全性權杖處理常式集合中指定。 如果特定處理常式已設定自己的驗證器，則會覆寫這些設定。 選擇性。|  
+|[\<issuerNameRegistry>](issuernameregistry.md)|設定權杖處理常式集合中處理常式所使用的簽發者名稱登錄。 選擇性。|  
+|[\<issuerTokenResolver>](issuertokenresolver.md)|註冊權杖處理常式集合中處理常式所使用的簽發者 token 解析程式。 簽發者權杖解析程式是用來解析傳入權杖和訊息上的簽署權杖。 選擇性。|  
+|[\<serviceTokenResolver>](servicetokenresolver.md)|註冊權杖處理常式集合中處理常式所使用的服務 token 解析程式。 服務權杖解析程式是用來解析傳入權杖和訊息上的加密權杖。 選擇性。|  
+|[\<tokenReplayDetection>](tokenreplaydetection.md)|啟用權杖重新執行偵測，並指定權杖的到期時間。 可以在服務層級或安全性權杖處理常式集合中指定。 選擇性。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<安全權杖處理常式>](securitytokenhandlers.md)|指定向終結點註冊的安全權杖處理常式的集合。|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|指定已向端點註冊的安全性權杖處理常式集合。|  
   
 ## <a name="remarks"></a>備註  
- 本節提供<xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration>物件的屬性值。 本節中配置的設置將覆蓋服務上配置的設置。 反過來，其中一些設置可以被在將處理常式添加到安全權杖處理常式集合時指定的設置覆蓋。  
+ 本節提供物件的屬性值 <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> 。 在此區段中設定的設定會覆寫在服務上設定的設定。 其中有些設定可以覆寫為將處理常式加入至安全性權杖處理常式集合時所指定的設定。  
   
 ## <a name="example"></a>範例  
   

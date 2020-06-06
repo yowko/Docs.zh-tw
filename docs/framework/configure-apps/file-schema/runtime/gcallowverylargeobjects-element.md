@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 ms.openlocfilehash: 8b2f39a0867228474afdee788474fda11f14ca82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154123"
 ---
-# <a name="gcallowverylargeobjects-element"></a>\<gcAllow非常大的物件>元素
+# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> 項目
 在 64 位元平台上，啟用總大小大於 2 GB 的陣列。  
   
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<gcAllow 非常大的物件>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<gcAllowVeryLargeObjects>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,14 +33,14 @@ ms.locfileid: "79154123"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定是否在 64 位平臺上啟用總大小大於 2 GB 的陣列。|  
+|`enabled`|必要屬性。<br /><br /> 指定在64位平臺上，是否已啟用大小總計大於 2 GB 的陣列。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|未啟用總大小大於 2 GB 的陣列。 這是預設值。|  
-|`true`|在 64 位平臺上啟用總大小大於 2 GB 的陣列。|  
+|`false`|未啟用大小總計大於 2 GB 的陣列。 此為預設值。|  
+|`true`|64位平臺上已啟用大小總計大於 2 GB 的陣列。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -53,19 +53,19 @@ ms.locfileid: "79154123"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在應用程式佈建檔中使用此元素可啟用大小大於 2 GB 但不會改變對物件大小或陣列大小的其他限制的陣列：  
+ 在您的應用程式佈建檔中使用此元素，可讓大小大於 2 GB 的陣列，但不會變更物件大小或陣列大小的其他限制：  
   
-- 陣列中的最大元素數為<xref:System.UInt32.MaxValue?displayProperty=nameWithType>。  
+- 陣列中的元素數目上限為 <xref:System.UInt32.MaxValue?displayProperty=nameWithType> 。  
   
-- 對於單位元組結構的位元組陣列和陣列，任何單個維度中的最大索引為 2，147，483，591 （0x7FFFFFC7），其他類型的為 2，146，435，071 （0X7FFFFF）。  
+- 任何單一維度中的最大索引為2147483591（0x7FFFFFC7），適用于位元組陣列和單一位元組結構的陣列，以及適用于其他類型的2146435071（0X7FEFFFFF）。  
   
-- 字串和其他非陣列物件的最大大小保持不變。  
+- 字串和其他非陣列物件的大小上限不變。  
   
 > [!CAUTION]
-> 在啟用此功能之前，請確保應用程式不包含假定所有陣列大小小於 2 GB 的不安全代碼。 例如，如果使用陣列作為緩衝區的不安全代碼，如果編寫時假定陣列不會超過 2 GB，則很容易出現緩衝區溢位。  
+> 啟用這項功能之前，請確定您的應用程式不包含不安全的程式碼，其假設所有的陣列大小都小於 2 GB。 例如，如果不安全的程式碼是以陣列做為緩衝區，則可能會受到緩衝區溢位的影響，假設陣列不會超過 2 GB。  
   
 ## <a name="example"></a>範例  
- 下面的示例演示如何為應用程式啟用此功能。  
+ 下列範例顯示如何為應用程式啟用這項功能。  
   
 ```xml  
 <configuration>  
@@ -77,9 +77,9 @@ ms.locfileid: "79154123"
   
 ## <a name="supported-in"></a>支援於
 
-.NET 框架 4.5 及更高版本
+.NET Framework 4.5 和更新版本
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)

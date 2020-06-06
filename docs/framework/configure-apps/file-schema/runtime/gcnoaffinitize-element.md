@@ -5,10 +5,10 @@ helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
 ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84004734"
 ---
 # <a name="gcnoaffinitize-element"></a>\<GCNoAffinitize> 項目
@@ -38,7 +38,7 @@ ms.locfileid: "84004734"
 
 #### <a name="enabled-attribute"></a>enabled 屬性
 
-|值|說明|
+|值|描述|
 |-----------|-----------------|
 |`false`|具有 Cpu 的如何伺服器 GC 執行緒。 此為預設值。|
 |`true`|不會將相似化為伺服器 GC 執行緒與 Cpu。|

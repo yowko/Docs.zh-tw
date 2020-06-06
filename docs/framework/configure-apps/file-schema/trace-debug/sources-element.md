@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153265"
 ---
-# <a name="sources-element"></a>\<源>元素
-指定啟動跟蹤消息的跟蹤源。  
+# <a name="sources-element"></a>\<sources> 項目
+指定起始追蹤訊息的追蹤來源。  
 
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<系統.診斷>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<來源>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sources>**
 
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ ms.locfileid: "79153265"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<源>](source-element.md)|必要元素。<br /><br /> 指定起始追蹤訊息的追蹤來源。|  
+|[\<source>](source-element.md)|必要元素。<br /><br /> 指定起始追蹤訊息的追蹤來源。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -51,10 +51,10 @@ ms.locfileid: "79153265"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 此元素可用於電腦設定檔 （Machine.config） 和應用程式佈建檔。  
+ 此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下面的示例演示如何使用 元素`<sources>`添加跟蹤源`mySource`，並為名為 的`sourceSwitch`源交換器設置級別。 添加了將跟蹤資訊寫入主控台的主控台跟蹤攔截器。  
+ 下列範例顯示如何使用專案 `<sources>` 來新增追蹤來源 `mySource` ，以及設定名為之來源交換器的層級 `sourceSwitch` 。 隨即加入主控台追蹤接聽程式，將追蹤資訊寫入主控台。  
   
 ```xml  
 <configuration>  
@@ -87,5 +87,5 @@ ms.locfileid: "79153265"
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [跟蹤和調試設置架構](index.md)
-- [\<源>](source-element.md)
+- [追蹤和偵錯設定結構描述](index.md)
+- [\<source>](source-element.md)

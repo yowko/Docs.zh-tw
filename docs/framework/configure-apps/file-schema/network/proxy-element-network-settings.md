@@ -9,19 +9,19 @@ helpviewer_keywords:
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 ms.openlocfilehash: 590ea747c2fa9e5e85e5e9d05f6fb80fe60251d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154786"
 ---
-# <a name="proxy-element-network-settings"></a>\<代理>元素（網路設置）
+# <a name="proxy-element-network-settings"></a>\<proxy> 項目 (網路設定)
 定義 Proxy 伺服器。  
 
-[**\<配置>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<預設代理>**](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<代理>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<proxy>**
 
 ## <a name="syntax"></a>語法  
   
@@ -40,41 +40,41 @@ ms.locfileid: "79154786"
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**描述**|  
+|**屬性**|**說明**|  
 |-------------------|---------------------|  
 |`autoDetect`|指定是否自動偵測 Proxy。 預設值是 `unspecified`。|  
-|`bypassonlocal`|指定是否略過本機資源的 Proxy。 本地資源包括本機伺服器`http://localhost`（、`http://loopback`或`http://127.0.0.1`） 和沒有句點`http://webserver`（ 的 URI ） 預設值是 `unspecified`。|  
-|`proxyaddress`|指定要使用的代理 URI。|  
-|`scriptLocation`|指定配置腳本的位置。 不要將`bypassonlocal`屬性與此屬性一起使用。 |  
-|`usesystemdefault`|指定是否使用 Internet 資源管理器代理設置。 如果設置為`true`，後續屬性將覆蓋 Internet 資源管理器代理設置。 預設值是 `unspecified`。|  
+|`bypassonlocal`|指定是否略過本機資源的 Proxy。 本機資源包括本機伺服器（ `http://localhost` 、 `http://loopback` 或 `http://127.0.0.1` ），以及沒有句號（）的 URI `http://webserver` 。 預設值是 `unspecified`。|  
+|`proxyaddress`|指定要使用的 proxy URI。|  
+|`scriptLocation`|指定設定腳本的位置。 請勿使用屬性搭配 `bypassonlocal` 這個屬性。 |  
+|`usesystemdefault`|指定是否要使用 Internet Explorer proxy 設定。 如果設定為 `true` ，後續的屬性會覆寫 Internet Explorer proxy 設定。 預設值是 `unspecified`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**Element**|**描述**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
-|[預設代理](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
   
 ## <a name="text-value"></a>文字值  
   
 ## <a name="remarks"></a>備註  
- 該`proxy`元素為應用程式定義代理伺服器。 如果設定檔中缺少此元素，則 .NET 框架將使用 Internet 資源管理器中的代理設置。  
+ `proxy`元素會定義應用程式的 proxy 伺服器。 如果設定檔中缺少此元素，則 .NET Framework 會使用 Internet Explorer 中的 proxy 設定。  
   
- `proxyaddress`屬性的值應為格式良好的統一資源指示器 （URI）。  
+ 屬性的值應該是格式正確的 `proxyaddress` 統一資源指標（URI）。  
   
- 該`scriptLocation`屬性是指代理配置腳本的自動檢測。 在<xref:System.Net.WebProxy>Internet 資源管理器中選擇 **"使用自動設定腳本"** 選項時，該類將嘗試查找配置腳本（通常稱為 Wpad.dat）。 如果`bypassonlocal`設置為任何值，`scriptLocation`則忽略。
+ `scriptLocation`屬性會參考 proxy 設定腳本的自動偵測。 <xref:System.Net.WebProxy>當 Internet Explorer 中選取了 [**使用自動設定腳本**] 選項時，類別會嘗試尋找設定腳本（通常是名為 Wpad. dat）。 如果 `bypassonlocal` 設定為任何值， `scriptLocation` 則會忽略。
   
- 對`usesystemdefault`正在遷移到版本 2.0 的 .NET 框架版本 1.1 應用程式使用該屬性。  
+ 針對要 `usesystemdefault` 遷移至2.0 版的 .NET Framework 版本1.1 應用程式，請使用屬性。  
   
- 如果屬性指定不正確預設`proxyaddress`代理，則引發異常。 例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。  
+ 如果 `proxyaddress` 屬性指定了不正確預設 proxy，則會擲回例外狀況。 例外狀況的 <xref:System.Exception.InnerException%2A> 屬性應該會有此錯誤的根本原因之詳細資訊。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下面的示例使用 Internet Explorer 代理的預設值，指定代理位址，並繞過代理進行本地訪問。  
+ 下列範例會使用 Internet Explorer proxy 的預設值、指定 proxy 位址，並略過 proxy 以進行本機存取。  
   
 ```xml  
 <configuration>  
@@ -93,4 +93,4 @@ ms.locfileid: "79154786"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [網路設置架構](index.md)
+- [網路設定結構描述](index.md)

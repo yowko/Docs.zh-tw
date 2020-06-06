@@ -9,17 +9,17 @@ helpviewer_keywords:
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
 ms.openlocfilehash: d1d805f7154c18dba2dcd4eb7228cc200d8da811
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155177"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<用於加密設定的 mscorlib>元素
-包含[\<加密設定>元素](cryptographysettings-element.md)。  
+# <a name="mscorlib-element-for-cryptography-settings"></a>密碼編譯設定的 \<mscorlib> 項目
+包含[ \<cryptographySettings> 元素](cryptographysettings-element.md)。  
   
-[**\<配置>**](../configuration-element.md)  
-&nbsp;&nbsp;**\<姆斯科利布>**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<mscorlib>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "79155177"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="example"></a>範例  
- 下面的示例演示如何使用**\<mscorlib>** 元素來引用加密類並配置運行時。 然後，可以將字串"RSA"傳遞給 方法，<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>並使用 方法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>返回物件`MyCryptoRSAClass`。  
+ 下列範例顯示如何使用專案 **\<mscorlib>** 來參考密碼編譯類別，以及設定執行時間。 接著，您可以將字串 "RSA" 傳遞給 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 方法，並使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法來傳回 `MyCryptoRSAClass` 物件。  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "79155177"
 
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
-- [組態檔結構描述](../index.md)
-- [加密設定架構](index.md)
-- [The signature is valid](../../../../standard/security/cryptographic-services.md)
+- [設定檔架構](../index.md)
+- [密碼編譯設定結構描述](index.md)
+- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)

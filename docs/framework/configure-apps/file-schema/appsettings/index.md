@@ -8,32 +8,32 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215420"
 ---
 # <a name="app-settings-schema"></a>應用程式設定結構描述
 
 包含自訂應用程式設定，例如檔案路徑、XML Web 服務 URL，或應用程式的任何其他自訂組態資訊。
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<appSettings>**](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-appsettings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<clear>**](clear-element-for-appsettings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<remove>**](remove-element-for-appsettings.md)
 
 | 元素 | 描述 |
 | ------- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 包含 **\<add>** 、 **\<clear>** 和 **\<remove>** 標記以控制應用程式設定。 具有選擇性 **file** 屬性。 |
-| [ **\<add>** ](add-element-for-appsettings.md) | 定義設定。 **\<appSettings>** 的子系。 需要 **key** 和 **value** 屬性。 |
-| [ **\<clear>** ](clear-element-for-appsettings.md) | 清除所有設定。 **\<appSettings>** 的子系。 沒有任何屬性。 |
-| [ **\<remove>** ](remove-element-for-appsettings.md) | 移除設定。 **\<appSettings>** 的子系。 需要 **key** 屬性。 |
+| [**\<appSettings>**](appsettings-element-for-configuration.md) | 包含 **\<add>** 、 **\<clear>** 和 **\<remove>** 標記以控制應用程式設定。 具有選擇性 **file** 屬性。 |
+| [**\<add>**](add-element-for-appsettings.md) | 定義設定。 的子系 **\<appSettings>** 。 需要 **key** 和 **value** 屬性。 |
+| [**\<clear>**](clear-element-for-appsettings.md) | 清除所有設定。 的子系 **\<appSettings>** 。 沒有任何屬性。 |
+| [**\<remove>**](remove-element-for-appsettings.md) | 移除設定。 的子系 **\<appSettings>** 。 需要 **key** 屬性。 |
 
 ## <a name="appsettings-element"></a>\<appSettings> 項目
 
-此項目包含 **\<add>** 、 **\<clear>** 和 **\<remove>** 標記以控制應用程式設定。 它會定義 **file** 的選擇性屬性。
+此元素包含 **\<add>** 、 **\<clear>** 和 **\<remove>** 標記，以控制應用程式設定。 它會定義 **file** 的選擇性屬性。
 
 ## <a name="add-element"></a>\<add> 項目
 
@@ -41,7 +41,7 @@ ms.locfileid: "77215420"
 
 ## <a name="clear-element"></a>\<clear> 項目
 
-移除所繼承之自訂應用程式設定的所有參考，只允許 **\<clear>** 項目之後由 **\<add>** 項目新增的參考。 它不會定義任何屬性。
+移除繼承自訂應用程式設定的所有參考，並僅允許元素後面的專案所新增的參考 **\<add>** **\<clear>** 。 它不會定義任何屬性。
 
 ## <a name="remove-element"></a>\<remove> 項目
 
@@ -70,5 +70,5 @@ ms.locfileid: "77215420"
 
 ## <a name="see-also"></a>另請參閱
 
-- [應用程式設定概觀](../../../winforms/advanced/application-settings-overview.md)
-- [應用程式設定架構](../../../winforms/advanced/application-settings-architecture.md)
+- [應用程式設定總覽](../../../winforms/advanced/application-settings-overview.md)
+- [Application Settings Architecture](../../../winforms/advanced/application-settings-architecture.md)

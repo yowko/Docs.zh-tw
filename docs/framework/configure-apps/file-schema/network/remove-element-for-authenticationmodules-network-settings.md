@@ -11,19 +11,19 @@ helpviewer_keywords:
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 ms.openlocfilehash: d171fea193bbae068e69b8976abb8e56a5623f02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154773"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<刪除>元素進行身份驗證模組（網路設置）
-從應用程式中刪除身份驗證模組。  
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>authenticationModules 的 \<remove> 項目 (網路設定)
+從應用程式移除驗證模組。  
 
-[**\<配置>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<身份驗證模組>**](authenticationmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<刪除>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<authenticationModules>**](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>語法  
   
@@ -38,29 +38,29 @@ ms.locfileid: "79154773"
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**描述**|  
+|**屬性**|**說明**|  
 |-------------------|---------------------|  
-|**型別**|要刪除的身份驗證模組的名稱。|  
+|**type**|要移除的驗證模組名稱。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**Element**|**描述**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
-|[authenticationModules](authenticationmodules-element-network-settings.md)|指定用於驗證網路請求的模組。|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|指定用來驗證網路要求的模組。|  
   
 ## <a name="remarks"></a>備註  
- 該`remove`元素刪除在設定檔或配置層次結構中較高級別中定義的身份驗證模組。  
+ `remove`元素會移除先前在設定檔或設定階層中較高層級定義的驗證模組。  
   
- `type`屬性的值應為有效的類名稱。  
+ 屬性的值 `type` 應該是有效的類別名稱。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 以下示例刪除身份驗證模組。  
+ 下列範例會移除驗證模組。  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ ms.locfileid: "79154773"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [網路設置架構](index.md)
+- [網路設定結構描述](index.md)

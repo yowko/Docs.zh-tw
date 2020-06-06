@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 ms.openlocfilehash: a9afa0db516a542b74d08a4c3754a3244abbbea7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153773"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<使用隨機字串雜湊演算法>元素
-確定通用語言運行時是否根據每個應用程式域計算字串的雜湊代碼。  
+# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> 項目
+判斷 common language runtime 是否會針對每個應用程式網域，計算字串的雜湊碼。  
   
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<使用隨機字串雜湊演算法>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<UseRandomizedStringHashAlgorithm>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,14 +36,14 @@ ms.locfileid: "79153773"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定字串的雜湊代碼是否根據應用程式域計算。|  
+|`enabled`|必要屬性。<br /><br /> 指定是否要根據每個應用程式域來計算字串的雜湊碼。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`0`|通用語言運行時不根據每個應用程式域計算字串的雜湊代碼;因此，不計算字串的雜湊代碼。單個演算法用於計算字串雜湊代碼。 這是預設值。|  
-|`1`|通用語言運行時根據每個應用程式域計算字串的雜湊代碼。 不同應用程式域和不同進程中的相同字串將具有不同的雜湊代碼。|  
+|`0`|通用語言執行平臺不會針對每個應用程式網域來計算字串的雜湊碼。單一演算法用來計算字串雜湊碼。 此為預設值。|  
+|`1`|通用語言執行時間會針對每個應用程式網域，計算字串的雜湊碼。 不同應用程式域和不同進程中的相同字串會有不同的雜湊碼。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -56,14 +56,14 @@ ms.locfileid: "79153773"
 |`runtime`|包含有關執行階段初始化選項的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 預設情況下，<xref:System.StringComparer>類<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>和方法使用單個雜湊演算法，該演算法跨應用程式域生成一致的雜湊代碼。 這相當於將`enabled``<UseRandomizedStringHashAlgorithm>`元素的屬性設置為`0`。 這是 .NET 框架 4 中使用的雜湊演算法。  
+ 根據預設， <xref:System.StringComparer> 類別和 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 方法會使用單一雜湊演算法，在應用程式域之間產生一致的雜湊碼。 這相當於將元素的 `enabled` 屬性設定 `<UseRandomizedStringHashAlgorithm>` 為 `0` 。 這是 .NET Framework 4 中使用的雜湊演算法。  
   
- 類<xref:System.StringComparer>和方法<xref:System.String.GetHashCode%2A?displayProperty=nameWithType>還可以使用不同的雜湊演算法，該演算法根據每個應用程式域計算雜湊代碼。 因此，等效字串的雜湊代碼將因應用程式域而異。 這是一個加入宣告功能;要利用它，必須將`enabled``<UseRandomizedStringHashAlgorithm>`元素的屬性設置為`1`。  
+ <xref:System.StringComparer>類別和 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 方法也可以使用不同的雜湊演算法，根據每個應用程式域來計算雜湊碼。 因此，對等字串的雜湊碼會在應用程式域之間有所不同。 這是可加入宣告的功能;若要利用它，您必須將元素的 `enabled` 屬性設定 `<UseRandomizedStringHashAlgorithm>` 為 `1` 。  
   
- 雜湊表中的字串查找通常是 O（1） 操作。 但是，當發生大量衝突時，查找可能會成為 O（n<sup>2</sup>） 操作。 您可以使用`<UseRandomizedStringHashAlgorithm>`配置元素生成每個應用程式域的隨機雜湊演算法，從而限制潛在衝突的數量，尤其是當計算雜湊代碼的鍵基於使用者輸入的資料時。  
+ 雜湊表中的字串查詢通常是 O （1）運算。 不過，當發生大量衝突時，查閱可能會變成 O （n<sup>2</sup>）運算。 您可以使用 `<UseRandomizedStringHashAlgorithm>` configuration 專案來產生每個應用程式域的隨機雜湊演算法，進而限制可能發生衝突的數目，特別是當計算雜湊碼的索引鍵是根據使用者輸入的資料時。  
   
 ## <a name="example"></a>範例  
- 下面的示例定義一個`DisplayString`類，該類包含私有字串常量`s`，其值為"這是一個字串"。 它也包含 `ShowStringHashCode` 方法，這個方法會將字串值及其雜湊碼與方法執行所在之應用程式定義域的名稱一起顯示。  
+ 下列範例 `DisplayString` 會定義包含私用字串常數的類別， `s` 其值為 "This is a string"。 它也包含 `ShowStringHashCode` 方法，這個方法會將字串值及其雜湊碼與方法執行所在之應用程式定義域的名稱一起顯示。  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  

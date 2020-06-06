@@ -1,5 +1,5 @@
 ---
-title: gc 併發元素
+title: gcConcurrent 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "82102914"
 ---
-# <a name="gcconcurrent-element"></a>\<gc併發>元素
+# <a name="gcconcurrent-element"></a>\<gcConcurrent> 項目
 
 指定 Common Language Runtime 是否會在個別的執行緒執行記憶體回收。
 
-[\<設定>](../configuration-element.md)\
-&nbsp;&nbsp;[\<執行時>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<gc 併發>
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<gcConcurrent>
 
 ## <a name="syntax"></a>語法
 
@@ -41,12 +41,12 @@ ms.locfileid: "82102914"
 |---------------|-----------------|
 |`enabled`|必要屬性。<br /><br />指定執行階段是否同時執行記憶體回收。|
 
-#### <a name="enabled-attribute"></a>開啟的屬性
+#### <a name="enabled-attribute"></a>enabled 屬性
 
 |值|描述|
 |-----------|-----------------|
-|`false`|不同時運行垃圾回收。|
-|`true`|同時執行記憶體回收。 這是預設值。|
+|`false`|不會同時執行垃圾收集。|
+|`true`|同時執行記憶體回收。 此為預設值。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -61,16 +61,16 @@ ms.locfileid: "82102914"
 
 ## <a name="remarks"></a>備註
 
-在 .NET 框架 4 之前,工作站垃圾回收支援併發垃圾回收,該回收在後台在單獨的線程上執行垃圾回收。 在 .NET 框架 4 中,併發垃圾回收被後台 GC 替換,後台 GC 也在單獨的線程的後台執行垃圾回收。 從 .NET 框架 4.5 開始,後台收集在伺服器垃圾回收中可用。 **gcConcurrent**元素控制運行時是否執行併發或後台垃圾回收,是否可用,或者它是否在前臺執行垃圾回收。
+在 .NET Framework 4 之前，工作站垃圾收集支援並行垃圾收集，這會在個別執行緒的背景中執行垃圾收集。 在 .NET Framework 4 中，並行垃圾收集已由背景 GC 取代，這也會在另一個執行緒的背景中執行垃圾收集。 從 .NET Framework 4.5 開始，會在伺服器垃圾收集中提供背景集合。 **GcConcurrent**元素會控制執行時間是否執行並行或背景垃圾收集（如果有的話），或是是否在前景執行垃圾收集。
 
-### <a name="to-disable-background-garbage-collection"></a>關閉後臺垃圾資源
+### <a name="to-disable-background-garbage-collection"></a>若要停用背景垃圾收集
 
 > [!WARNING]
-> 從 .NET 框架 4 開始,併發垃圾回收將被後台垃圾回收替換。 術語*並發*和*背景*在 .NET 框架文檔中可互換使用。 要禁用後台垃圾回收,請使用**gcConcurrent**元素,如本文所述。
+> 從 .NET Framework 4 開始，並行垃圾收集會由背景垃圾收集取代。 .NET Framework 檔中會交替使用「*並行*」和「*背景*」這兩個詞彙。 若要停用背景垃圾收集，請使用**gcConcurrent**元素，如本文中所述。
 
-依預設，執行階段會使用並行或背景記憶體回收，這已針對延遲進行最佳化。 如果您的應用程式與使用者互動程度極高，則請讓並行記憶體回收維持啟用狀態，藉此最小化應用程式為了執行記憶體回收而暫停的時間。 如果將`enabled`**gcConcurrent**元素的屬性`false`設置為 ,運行時將使用非併發垃圾回收,該回收針對輸送量進行了優化。
+依預設，執行階段會使用並行或背景記憶體回收，這已針對延遲進行最佳化。 如果您的應用程式與使用者互動程度極高，則請讓並行記憶體回收維持啟用狀態，藉此最小化應用程式為了執行記憶體回收而暫停的時間。 如果您將 `enabled` **gcConcurrent**元素的屬性設定為 `false` ，執行時間會使用非並行垃圾收集，這會針對輸送量進行優化。
 
-以下設定檔禁用後台垃圾回收:
+下列設定檔會停用背景垃圾收集：
 
 ```xml
 <configuration>
@@ -80,13 +80,13 @@ ms.locfileid: "82102914"
 </configuration>
 ```
 
-如果電腦設定檔中有**gcConcurrent 設定,** 它將為所有 .NET Framework 應用程式定義預設值。 電腦組態檔設定會覆寫應用程式組態檔設定。
+如果電腦設定檔中有**gcConcurrentSetting**設定，它會定義所有 .NET Framework 應用程式的預設值。 電腦組態檔設定會覆寫應用程式組態檔設定。
 
-有關併發和後台垃圾回收的詳細資訊,請參閱[後台垃圾回收](../../../../standard/garbage-collection/background-gc.md)。
+如需並行和背景垃圾收集的詳細資訊，請參閱[背景垃圾收集](../../../../standard/garbage-collection/background-gc.md)。
 
 ## <a name="example"></a>範例
 
-以下範例支援後台垃圾回收:
+下列範例會啟用背景垃圾收集：
 
 ```xml
 <configuration>
@@ -98,6 +98,6 @@ ms.locfileid: "82102914"
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行時設定架構](index.md)
-- [設定檔案架構](../index.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
 - [Fundamentals of Garbage Collection (記憶體回收的基本概念)](../../../../standard/garbage-collection/fundamentals.md)
