@@ -1,15 +1,15 @@
 ---
-title: 範例：動態程式設計疑難排解
+title: 範例：針對動態程式設計進行疑難排解
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 ms.openlocfilehash: ff179854066d024a89cb5a84a19d0b9bb054d6e5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128445"
 ---
-# <a name="example-troubleshooting-dynamic-programming"></a>範例：動態程式設計疑難排解
+# <a name="example-troubleshooting-dynamic-programming"></a>範例：針對動態程式設計進行疑難排解
 > [!NOTE]
 > 本主題討論 .NET 原生開發人員預覽，這是發行前版本的軟體。 您可以從 [Microsoft Connect 網站](https://go.microsoft.com/fwlink/?LinkId=394611)下載預覽 (需要註冊)。  
   
@@ -48,7 +48,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  在此情況下，為 `App.Core.ViewModels` 加入執行階段指示詞就解決了問題。 根本原因是對 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 方法進行的 API 呼叫傳回 **null**，而應用程式靜靜忽略這個問題，直到發生當機。  
   
- 在動態程式設計中，使用 .NET Native 下的反映 Api 是很好的作法，就是使用會在失敗時擲回例外狀況的 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 多載。  
+ 在動態程式設計中，使用 .NET Native 下的反映 Api 時，最好是使用會在失敗時擲回例外狀況的多載 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 。  
   
 ## <a name="is-this-an-isolated-case"></a>這是個案嗎？  
  使用 `App.Core.ViewModels` 時，可能也會發生其他問題。  您必須決定是否值得識別並修正每個遺失中繼資料的例外狀況，還是要節省時間，並為較大類別的類型加入指示詞。  在這裡，如果輸出二進位檔產生的結果大小增加並不是問題，則為 `dynamic` 加入 `App.Core.ViewModels` 中繼資料可能是最佳方法。  
@@ -56,7 +56,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 ## <a name="could-the-code-be-rewritten"></a>可以改寫程式碼嗎？  
  如果應用程式使用 `typeof(LayoutApplicationVM)`，而不是 `Type.GetType("LayoutApplicationVM")`，則工具鏈可能保留了 `browse` 中繼資料。  不過，它還是不會建立 `invoke` 中繼資料，如此一來，在具現化類型時，就會導致 [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外狀況。 若要避免這個例外狀況，您還是必須為命名空間或是指定 `dynamic` 原則的類型加入執行階段指示詞。 如需執行階段指示詞的相關資訊，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用者入門](getting-started-with-net-native.md)
+- [快速入門](getting-started-with-net-native.md)
 - [範例：處理繫結資料時所發生的例外狀況](example-handling-exceptions-when-binding-data.md)

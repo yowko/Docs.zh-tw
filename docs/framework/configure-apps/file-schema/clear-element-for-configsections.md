@@ -8,17 +8,17 @@ helpviewer_keywords:
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
 ms.openlocfilehash: 66abd7f057bc6d060e50a889a945281d07c97592
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155423"
 ---
-# <a name="clear-element-for-configsections"></a>\<用於\<配置>的透明>元素
+# <a name="clear-element-for-configsections"></a>\<configSections> 的 \<clear> 項目
 
-清除以前定義的所有節和節組。
+清除所有先前定義的區段和區段群組。
 
-&nbsp; [** \<配置>**](configuration-element.md)&nbsp;&nbsp;**配置>\<清晰的>** [** \< **](configsections-element-for-configuration.md) &nbsp; &nbsp; &nbsp;
+[**\<configuration>**](configuration-element.md) &nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md) &nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
 
 ## <a name="syntax"></a>語法
 
@@ -30,13 +30,13 @@ ms.locfileid: "79155423"
 
 |           | 描述 |
 | --------- | ----------- |
-| **名稱**  | 必要屬性。<br><br>指定要刪除的節或節組的名稱。 |
+| **name**  | 必要屬性。<br><br>指定要移除之區段或區段群組的名稱。 |
 
 ## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [** \<配置部分>** 元素](configsections-element-for-configuration.md) | 包含配置部分和命名空間聲明。 |
+| [**\<configSections>** 元素](configsections-element-for-configuration.md) | 包含設定區段和命名空間宣告。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -44,13 +44,13 @@ None
 
 ## <a name="remarks"></a>備註
 
-** \<清除>** 元素從應用程式中刪除當前設定檔前面或設定檔層次結構中較高級別定義的所有節和節組。
+**\<clear>** 元素會從您的應用程式移除先前在目前設定檔或設定檔階層中較高層級定義的所有區段和區段群組。
 
 ## <a name="example"></a>範例
 
-本示例定義電腦設定檔和應用程式佈建檔，並演示如何在應用程式佈建檔中使用**\<清除>** 元素來清除以前在電腦設定檔中定義的部分。
+這個範例會定義電腦設定檔和應用程式佈建檔，並示範如何使用 **\<clear>** 應用程式佈建檔中的專案，清除電腦設定檔中先前定義的區段。
 
-以下電腦設定檔代碼聲明兩個部分，**\<示例節>****\<和另一個Sample節>**，在應用程式佈建檔之前讀取：
+下列電腦設定檔程式碼會宣告兩個區段，分別 **\<sampleSection>** **\<anotherSampleSection>** 是在應用程式佈建檔之前讀取：
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ None
 </configuration>
 ```
 
-以下應用程式佈建檔代碼清除以前聲明的所有部分。 應用程式無法使用或檢索在電腦設定檔中聲明的任一部分中的設置。 但是，它可以使用**\<另一節>** 設置，因為它在**\<明確>** 元素之後出現。
+下列應用程式佈建檔程式碼會清除所有先前宣告的區段。 應用程式無法在電腦設定檔中宣告的任一區段中使用或抓取設定。 不過，它可以使用的設定， **\<anotherSection>** 因為它是在 **\<clear>** 元素之後。
 
 ```xml
 <!-- Application configuration file -->
@@ -85,8 +85,8 @@ None
 
 ## <a name="configuration-file"></a>組態檔
 
-此元素可用於應用程式佈建檔、電腦設定檔 *（Machine.config*） 和*Web.config*檔，這些檔不在應用程式目錄級別。
+此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 框架的設定檔架構](index.md)
+- [.NET Framework 的設定檔架構](index.md)

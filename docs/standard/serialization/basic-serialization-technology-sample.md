@@ -4,10 +4,10 @@ description: 這個範例會示範如何將記憶體中的物件圖形序列化�
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: 3f2273e6afb3a72f9734444ffe92d30871fb762b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84276565"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技術範例

@@ -3,19 +3,19 @@ title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
 ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855129"
 ---
-# <a name="messagelogging"></a>\<messageLogging>
+# \<messageLogging>
 這個項目會定義 Windows Communication Foundation (WCF) 的訊息記錄功能設定。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<診斷 >** ](diagnostics.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<messageLogging >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<diagnostics>**](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<messageLogging>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,28 +37,28 @@ ms.locfileid: "70855129"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
 |`logEntireMessage`|布林值，指定是否記錄整個訊息 (訊息標頭和本文)。 預設為 `false`，意指只會記錄訊息標頭。 這個設定會影響所有的訊息記錄層級 (服務、傳輸和格式錯誤)。|  
-|`logMalformedMessages`|布林值，指定是否記錄格式錯誤的訊息。 格式錯誤的訊息不會計入 `maxMessagesToLog`。 預設為 `false`。|  
-|`logMessagesAtServiceLevel`|布林值，指定是否在服務層級追蹤訊息 (在加密和傳輸相關轉換之前)。 預設為 `false`。|  
-|`logMessagesAtTransportLevel`|布林值，指定是否在傳輸層級追蹤訊息。 在組態檔中指定的任何篩選條件都會套用，且只會追蹤符合篩選條件的訊息。 預設為 `false`。|  
+|`logMalformedMessages`|布林值，指定是否記錄格式錯誤的訊息。 格式錯誤的訊息不會計入 `maxMessagesToLog`。 預設值為 `false`。|  
+|`logMessagesAtServiceLevel`|布林值，指定是否在服務層級追蹤訊息 (在加密和傳輸相關轉換之前)。 預設值為 `false`。|  
+|`logMessagesAtTransportLevel`|布林值，指定是否在傳輸層級追蹤訊息。 在組態檔中指定的任何篩選條件都會套用，且只會追蹤符合篩選條件的訊息。 預設值為 `false`。|  
 |`maxMessagesToLog`|正整數，指定要記錄的訊息數目上限。 預設值是 1000。|  
 |`maxSizeOfMessageToLog`|正整數，指定要記錄之訊息的大小上限 (以位元組為單位)。 大於限制的訊息將不會記錄。 這個設定會影響所有的追蹤層級。 預設為 262144(0x4000)。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
-|篩選條件|`filters` 項目含有 XPath 篩選條件的集合。 當啟用傳輸訊息記錄時 (`logMessagesAtTransportLevel` 是 `true`)，將只記錄符合篩選條件的訊息。<br /><br /> 篩選條件只會在傳輸層套用。 服務等級和格式錯誤訊息記錄不受篩選條件的影響。<br /><br /> `filter` 這個項目的唯一屬性為 XpathFilter。<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
+|filters|`filters` 項目含有 XPath 篩選條件的集合。 當啟用傳輸訊息記錄時 (`logMessagesAtTransportLevel` 是 `true`)，將只記錄符合篩選條件的訊息。<br /><br /> 篩選條件只會在傳輸層套用。 服務等級和格式錯誤訊息記錄不受篩選條件的影響。<br /><br /> `filter` 這個項目的唯一屬性為 XpathFilter。<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |診斷|為系統管理員定義執行階段檢查和控制的 WCF 設定。|  
   

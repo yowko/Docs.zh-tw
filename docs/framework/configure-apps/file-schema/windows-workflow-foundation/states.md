@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
 ms.openlocfilehash: 1a7c839a5ff8fac9470aea71a4886d9000086e9e
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70398611"
 ---
-# <a name="states"></a>\<狀態 >
+# \<states>
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   
  如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<筆記本電腦.System.servicemodel >** ](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<追蹤 >** ](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<工作流程 >** ](workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowInstanceQueries >** ](workflowinstancequeries.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowInstanceQuery >** ](workflowinstancequery.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<狀態 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQueries>**](workflowinstancequeries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQuery>**](workflowinstancequery.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<states>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,20 +43,20 @@ ms.locfileid: "70398611"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<state>](states.md)|建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](workflowinstancequery.md)|追蹤工作流程執行個體生命週期變更的查詢，例如已開始或已完成的事件。|  
   
@@ -65,19 +65,19 @@ ms.locfileid: "70398611"
   
  下表說明可能的狀態值。  
   
-|State|描述|  
+|州|描述|  
 |-----------|-----------------|  
 |已中止|工作流程執行個體已中止。|  
 |已完成|工作流程執行個體已完成。|  
-|Deleted|工作流程執行個體已刪除。|  
+|已刪除|工作流程執行個體已刪除。|  
 |閒置|工作流程執行個體閒置中。|  
 |已保存|工作流程執行個體已保存。|  
 |已繼續|工作流程執行個體已繼續。|  
-|自|工作流程執行個體已啟動。|  
+|已開始|工作流程執行個體已啟動。|  
 |未處理的例外狀況|工作流程執行個體發生未處理的例外狀況。|  
 |已卸載|工作流程執行個體已卸載。|  
 |已取消|工作流程執行個體已取消。|  
-|擱置|工作流程執行個體已暫停。|  
+|暫止|工作流程執行個體已暫停。|  
 |已終止|工作流程執行個體已終止。|  
 |Unsuspended|工作流程執行個體已取消暫停。|  
   

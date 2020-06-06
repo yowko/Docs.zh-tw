@@ -9,10 +9,10 @@ helpviewer_keywords:
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
 ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128381"
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 編譯應用程式
@@ -40,15 +40,15 @@ ms.locfileid: "73128381"
 > [!IMPORTANT]
 > 在大部分的應用程式和案例中，相較于編譯為 IL 或 NGEN 影像的應用程式，.NET Native 提供明顯更快的啟動時間和更佳的效能。 不過，您的結果可能會有所不同。 為確保您的應用程式已受益于 .NET Native 的效能增強功能，您應該比較其效能與應用程式的 non-.NET 原生版本。 如需詳細資訊，請參閱[效能會話總覽](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview)。
 
-但是 .NET Native 牽涉到一個以上的程式碼編譯。 它會將轉換 .NET Framework 應用程式建置和執行的方式。 特別之處在於：
+但是 .NET Native 牽涉到一個以上的程式碼編譯。 它會將轉換 .NET Framework 應用程式建置和執行的方式。 尤其是：
 
 - 在預先編譯期間，.NET Framework 的必要部分會以靜態方式連結到您的應用程式。 這樣可以讓應用程式以 .NET Framework 的 app-local 程式庫來執行，並且讓編譯器執行全域分析，以提供優異的效能。 如此一來，即使 .NET Framework 更新之後，應用程式還是一貫地會以更快的速度啟動。
 
 - .NET Native 執行時間已針對靜態先行編譯進行優化，而在大部分的情況下，可提供優異的效能。 同時，它還保留了開發人員會覺得生產力極佳的核心反映功能。
 
-- .NET Native 使用與C++編譯器相同的後端，其已針對靜態先行編譯案例進行優化。
+- .NET Native 使用與 c + + 編譯器相同的後端，其已針對靜態先行編譯案例進行優化。
 
-.NET Native 可以將的效能優勢帶C++到 managed 程式碼開發人員，因為它會使用與幕後相同或C++類似的工具，如下表所示。
+.NET Native 能夠將 c + + 的效能優勢帶給 managed 程式碼開發人員，因為它會在幕後使用與 c + + 相同或類似的工具，如下表所示。
 
 ||.NET Native|C++|
 |-|----------------------------------------------------------------|-----------|
@@ -59,7 +59,7 @@ ms.locfileid: "73128381"
 
 針對適用於 Windows 10 的 Windows 應用程式，您要將應用程式封裝 (.appx 檔) 中的 .NET 機器碼編譯二進位檔上傳至 Windows 市集。
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
 如需有關使用 .NET 機器碼編譯來開發應用程式的詳細資訊，請參閱下列主題：
 
@@ -79,4 +79,4 @@ ms.locfileid: "73128381"
 
 - [將您的 Windows 市集應用程式移轉至 .NET Native](migrating-your-windows-store-app-to-net-native.md)
 
-- [針對 .NET Native 進行疑難排解](net-native-general-troubleshooting.md)
+- [.NET Native 一般疑難排解](net-native-general-troubleshooting.md)

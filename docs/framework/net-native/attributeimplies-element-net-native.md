@@ -1,15 +1,15 @@
 ---
-title: <AttributeImplies>元素（.NET 本機）
+title: <AttributeImplies>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 ms.openlocfilehash: 2ab1fdc71bc43f61f69a0d9b7bea7acb35e14ea5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181068"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<屬性>元素（.NET 本機）
+# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies>元素（.NET Native）
 定義套用包含屬性之程式碼元素的原則。  
   
 ## <a name="syntax"></a>語法  
@@ -47,7 +47,7 @@ ms.locfileid: "79181068"
   
 ## <a name="all-attributes"></a>所有屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "79181068"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<鍵入>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  如果 `<AttributeImplies>` 元素的包含類型是屬性 (也就是衍生自 <xref:System.Attribute?displayProperty=nameWithType> 的類別)，就會使用此元素。 如果屬性套用至特定的程式元素，則 `<AttributeImplies>` 元素所定義的原則會套用至該程式元素。  
@@ -67,7 +67,7 @@ ms.locfileid: "79181068"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<類型>元素](type-element-net-native.md)
+- [\<Type>元素](type-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 ms.openlocfilehash: 58a2bf5118a3a2cd9c33301eca5dcc751c2351bf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283084"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 元素（網路設定）
+# <a name="performancecounter-element-network-settings"></a>\<performanceCounter> 項目 (網路設定)
 啟用或停用網路效能計數器。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<設定 >** ](settings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<performanceCounters >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<performanceCounters>**
 
 ## <a name="syntax"></a>語法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74283084"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和元素  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -41,13 +41,13 @@ ms.locfileid: "74283084"
 |`enabled`|指定是否啟用網路效能計數器。 預設值是 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
- None。  
+ 無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[設置](settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[設定](settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
@@ -56,7 +56,7 @@ ms.locfileid: "74283084"
   
  預設值是網路效能計數器已停用。  
   
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> 屬性可以用來從適用的設定檔取得**已啟用**屬性的目前值。  
+ <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>屬性可以用來從適用的設定檔取得**已啟用**屬性的目前值。  
   
 ## <a name="example"></a>範例  
  下列範例顯示如何設定 <xref:System.Net> 和相關的命名空間，以啟用網路效能計數器。  

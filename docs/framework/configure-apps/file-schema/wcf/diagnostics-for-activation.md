@@ -3,18 +3,18 @@ title: 啟動的 <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
 ms.openlocfilehash: 33b2cd4c5ae1b4076892a61aa7e2b927efa1ddc1
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70400415"
 ---
-# <a name="diagnostics-for-activation"></a>\<啟用的診斷 >
+# <a name="diagnostics-for-activation"></a>啟動的 \<diagnostics>
 設定 Windows Communication Foundation （WCF）接聽程式的診斷功能。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel. 啟用 >** ](system-servicemodel-activation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<診斷 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel.activation>**](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<diagnostics>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -30,7 +30,7 @@ ms.locfileid: "70400415"
  `Type`  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -43,7 +43,7 @@ ms.locfileid: "70400415"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<system.serviceModel.activation>](system-servicemodel-activation.md)|包含 SMSvcHost.exe 接聽程式處理序的組態設定。|  
   

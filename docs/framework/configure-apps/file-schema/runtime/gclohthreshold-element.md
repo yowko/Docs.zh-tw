@@ -5,10 +5,10 @@ helpviewer_keywords:
 - GCLOHThreshold element
 - <GCLOHThreshold> element
 ms.openlocfilehash: d72dc9d27984f60dfb6296217263ce8b176093c6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74451217"
 ---
 # <a name="gclohthreshold-element"></a>GCLOHThreshold 元素
@@ -16,8 +16,8 @@ ms.locfileid: "74451217"
 指定導致垃圾收集行程將物件放在大型物件堆積（LOH）上的閾值大小（以位元組為單位）。
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<執行時間 >](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
+&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
 
 ## <a name="syntax"></a>語法
 
@@ -40,11 +40,11 @@ ms.locfileid: "74451217"
 
 ## <a name="child-elements"></a>子元素
 
-None。
+無。
 
 ## <a name="parent-elements"></a>父元素
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|
@@ -55,7 +55,7 @@ None。
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行時間設定架構](index.md)
+- [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)
-- [記憶體回收的基本概念](../../../../standard/garbage-collection/fundamentals.md)
+- [垃圾收集的基本概念](../../../../standard/garbage-collection/fundamentals.md)
 - [GC 的 NET Core 執行時間設定選項](../../../../core/run-time-config/garbage-collector.md)

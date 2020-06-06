@@ -3,10 +3,10 @@ title: .NET 原生和編譯
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128250"
 ---
 # <a name="net-native-and-compilation"></a>.NET 原生和編譯
@@ -58,9 +58,9 @@ ms.locfileid: "73128250"
 
 由 .NET 原生工具鏈所產生的應用程式會寫入名為 ilc.out 的目錄，位於您專案目錄的偵錯或發行目錄中。 它包含下列檔案：
 
-- *\<appName>* .exe 是虛設常式可執行檔，只會將控制項傳輸至 *\<appName>* .dll 中的特殊 `Main` 匯出。
+- *\<appName>*.exe 是存根可執行檔，只會將控制項傳輸至 `Main` .dll 中的特殊匯出。 *\<appName>*
 
-- *\<appName>* .dll 為 Windows 動態連結程式庫，其中包含您應用程式的程式碼，以及來自 .NET Framework Class Library 的程式碼，和任何有相依性的協力廠商程式庫的程式碼。  它也包含支援程式碼，例如應用程式中與 Windows 交互操作及序列化物件所必需的程式碼。
+- *\<appName>*.dll，這是一種 Windows 動態連結程式庫，其中包含您所有的應用程式程式碼，以及來自 .NET Framework 類別庫和任何相依于之協力廠商程式庫的程式碼。  它也包含支援程式碼，例如應用程式中與 Windows 交互操作及序列化物件所必需的程式碼。
 
 - mrt100_app.dll 為重構的執行階段，會提供執行階段服務，例如記憶體回收。
 
@@ -102,9 +102,9 @@ ms.locfileid: "73128250"
 
 - NGEN 映像通常易於損壞。 例如，修補檔案或相依性的變更通常要求使用它的組件也是由原生映像所產生的。 特別在 .NET Framework 類別庫中的系統組件更是如此。 相反地，.NET 原生允許獨立地服務彼此的應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料和自我描述元件](../../standard/metadata-and-self-describing-components.md)
-- [內部 .NET Native （Channel 9 影片）](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Inside .NET Native (Channel 9 Video)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native) (.NET Native 內部 (Channel 9 影片))
 - [反映和 .NET Native](reflection-and-net-native.md)
-- [針對 .NET Native 進行疑難排解](net-native-general-troubleshooting.md)
+- [.NET Native 一般疑難排解](net-native-general-troubleshooting.md)

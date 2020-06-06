@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74088424"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > 元素（網路設定）
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy> 項目 (網路設定)
 描述 HTTP 快取是否作用中，並描述預設的快取原則。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<requestcaching> >** ](requestcaching-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultHttpCachePolicy >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<requestCaching>**](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultHttpCachePolicy>**
 
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74088424"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -46,19 +46,19 @@ ms.locfileid: "74088424"
 |`minimumFresh`|指定快取物件被視為最新的時間下限。|  
 |`policyLevel`|指定快取原則是自動的，還是略過快取。 預設值是 `BypassCache`。|  
   
-### <a name="child-elements"></a>子項目  
- None  
+### <a name="child-elements"></a>子元素  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[Requestcaching>](requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
+|[requestCaching](requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
   
 ## <a name="remarks"></a>備註  
- `policyLevel` 屬性的值可以是 `BypassCache` 或 `Default`。  
+ 屬性的值 `policyLevel` 為 `BypassCache` 或 `Default` 。  
   
- `maximumAge`、`maximumStale`和 `minimumFresh` 元素的值，都是格式為*d*的明確時間間隔。*hh*：*mm*：*ss* （天、小時、分鐘和秒），或適當的常數 `minValue` 或 `maxValue`。  
+ 、和專案的值為 `maximumAge` `maximumStale` 明確的 `minimumFresh` 時間間隔，格式為*d*。*hh*：*mm*：*ss* （天、小時、分鐘和秒），或適當的常數 `minValue` 或 `maxValue` 。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
@@ -80,7 +80,7 @@ ms.locfileid: "74088424"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>

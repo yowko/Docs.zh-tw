@@ -1,15 +1,15 @@
 ---
-title: <Field> 元素（.NET Native）
+title: <Field>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128412"
 ---
-# <a name="field-element-net-native"></a>\<欄位 > 元素（.NET Native）
+# <a name="field-element-net-native"></a>\<Field>元素（.NET Native）
 將執行階段反映原則套用至欄位。  
   
 ## <a name="syntax"></a>語法  
@@ -22,7 +22,7 @@ ms.locfileid: "73128412"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -35,22 +35,22 @@ ms.locfileid: "73128412"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|*method_name*|欄位名稱。 欄位的類型是由父系 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目定義。|  
+|*method_name*|欄位名稱。 欄位的類型是由父系或元素所定義 [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*policy_setting*|要為欄位套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
@@ -58,7 +58,7 @@ ms.locfileid: "73128412"
 ## <a name="remarks"></a>備註  
  如果未明確定義欄位的原則，則會繼承其父元素的執行階段原則。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

@@ -3,10 +3,10 @@ title: .NET Native 使用者入門
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128403"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 使用者入門
@@ -34,7 +34,7 @@ ms.locfileid: "73128403"
 
 2. 請注意，使用 .NET Native 工具鏈編譯 UWP 應用程式專案與不使用此工具進行編譯之間有一些已知的相容性問題。 如需詳細資訊，請參閱 [移轉指南](migrating-your-windows-store-app-to-net-native.md) 。
 
-您現在可以針對C#在本機系統上執行的 .NET Native 介面區（或在模擬器中），撰寫或 Visual Basic 程式碼。
+您現在可以針對在本機系統（或模擬器）上執行的 .NET Native 介面區，撰寫 c # 或 Visual Basic 程式碼。
 
 > [!IMPORTANT]
 > 當您開發應用程式時，請記下在程式碼中使用的任何序列化或反映。
@@ -45,7 +45,7 @@ ms.locfileid: "73128403"
 
 ## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>步驟 2：處理其他的反映和序列化使用
 
-當您建立專案時會自動將執行階段指示詞檔 Default.rd.xml 加入您的專案。 如果您以 C# 進行開發，它位於您專案的 [屬性] 資料夾。 如果您以 Visual Basic 進行開發，它位於您專案的 [我的專案] 資料夾。
+當您建立專案時會自動將執行階段指示詞檔 Default.rd.xml 加入您的專案。 如果您以 C# 進行開發，它位於您專案的 [屬性] **** 資料夾。 如果您以 Visual Basic 進行開發，它位於您專案的 [我的專案] **** 資料夾。
 
 > [!NOTE]
 > 如需 .NET 原生編譯程序的概觀 (其提供需要執行階段指示詞檔案的背景資訊)，請參閱 [.NET 原生和編譯](net-native-and-compilation.md)。
@@ -58,7 +58,7 @@ ms.locfileid: "73128403"
 
 - 非反映型序列化程式。 .NET Framework 類別庫中不依賴反映的序列化程式，例如 <xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>和 <xref:System.Xml.Serialization.XmlSerializer> 類別。 不過，這些序列化程式需要依據所要序列化或還原序列化的物件來產生程式碼。  如需詳細資訊，請參閱 [Serialization and Metadata](serialization-and-metadata.md)中的＜Microsoft 序列化程式＞一節。
 
-- 協力廠商序列化程式。 協力廠商序列化程式庫是最常見的 Newtonsoft JSON 序列化程式，通常是以反映為基礎，而且需要 \*的 web.config 檔案中的專案，才能支持對象序列化和還原序列化。 如需詳細資訊，請參閱 [Serialization and Metadata](serialization-and-metadata.md)中的＜協力廠商序列化程式＞一節。
+- 協力廠商序列化程式。 協力廠商序列化程式庫是最常見的 Newtonsoft JSON 序列化程式，通常是以反映為基礎，而且需要在. .xml 檔案中的專案 \* ，才能支持對象序列化和還原序列化。 如需詳細資訊，請參閱 [Serialization and Metadata](serialization-and-metadata.md)中的＜協力廠商序列化程式＞一節。
 
 **依賴反映的方法**
 
@@ -79,11 +79,11 @@ ms.locfileid: "73128403"
 
 ## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>步驟 3：部署並測試應用程式的發行組建
 
-更新執行階段指示詞檔案之後，您可以重建並部署應用程式的發行組建。 .NET Native 二進位檔會放在專案 [**屬性**] 對話方塊之 [**組建輸出路徑**] 文字方塊中所指定目錄的 ilc.out 子目錄中，[**編譯**] 索引標籤。未在此資料夾中的二進位檔尚未編譯.NET Native。 請在其目標平台上完整測試您的應用程式，並測試所有情況，包括失敗情況。
+更新執行階段指示詞檔案之後，您可以重建並部署應用程式的發行組建。 .NET Native 二進位檔會放在專案 [**屬性**] 對話方塊之 [**組建輸出路徑**] 文字方塊中所指定目錄的 ilc.out 子目錄中，[**編譯**] 索引標籤。不在此資料夾中的二進位檔尚未使用 .NET Native 編譯。 請在其目標平台上完整測試您的應用程式，並測試所有情況，包括失敗情況。
 
 如果您的應用程式無法正常運作 (特別是如果在執行階段擲回 [MissingMetadataException](missingmetadataexception-class-net-native.md) 或 [MissingInteropDataException](missinginteropdataexception-class-net-native.md) 例外狀況)，請遵循下一節[步驟 4：手動解決遺漏中繼資料的問題](#Step4)中的指示進行。 啟用第一個可能發生的例外狀況可協助您尋找這些錯誤。
 
-當您已測試並調試應用程式的 debug 組建，並確信您已消除[MissingMetadataException](missingmetadataexception-class-net-native.md)和[MissingInteropDataException](missinginteropdataexception-class-net-native.md)例外狀況時，您應該以優化的 .NET Native 應用程式來測試您的應用程式。 若要執行這項操作，請將使用中的專案組態從 [偵錯] 變更為 [發行]。
+當您已測試並調試應用程式的 debug 組建，並確信您已消除[MissingMetadataException](missingmetadataexception-class-net-native.md)和[MissingInteropDataException](missinginteropdataexception-class-net-native.md)例外狀況時，您應該以優化的 .NET Native 應用程式來測試您的應用程式。 若要執行這項操作，請將使用中的專案組態從 [偵錯] **** 變更為 [發行] ****。
 
 <a name="Step4"></a>
 
@@ -119,13 +119,13 @@ ms.locfileid: "73128403"
 
 - [範例：針對動態程式設計進行疑難排解](example-troubleshooting-dynamic-programming.md)
 
-- [.NET Native 應用程式中的執行階段例外狀況](runtime-exceptions-in-net-native-apps.md)
+- [.NET 原生 App 中的執行階段例外狀況](runtime-exceptions-in-net-native-apps.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET Native 安裝和設定](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET Native 和編譯](net-native-and-compilation.md)
+- [.NET Native 設定和組態](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET 原生和編譯](net-native-and-compilation.md)
 - [反映和 .NET Native](reflection-and-net-native.md)
 - [依賴反映的 API](apis-that-rely-on-reflection.md)
 - [序列化和中繼資料](serialization-and-metadata.md)

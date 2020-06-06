@@ -8,51 +8,51 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81242825"
 ---
 # <a name="application-settings-schema"></a>應用程式設定架構
 
-應用程式設置允許 Windows 窗體或 ASP.NET 應用程式儲存和檢索應用程式範圍和用戶範圍的設置。 在此上下文中,*設定*是可能特定於應用程式或特定於當前使用者的任何資訊 - 從資料庫連接字串到使用者首選預設視窗大小的任何資訊。
+應用程式設定可讓 Windows Forms 或 ASP.NET 應用程式儲存和取出應用程式範圍和使用者範圍的設定。 在此內容中，*設定*是指特定于應用程式或目前使用者特有的任何資訊，也就是資料庫連接字串與使用者慣用預設視窗大小的任何一項。
 
-預設情況下,Windows 表單應用程式中的應用程式設置<xref:System.Configuration.LocalFileSettingsProvider>使用類,該類使用.NET 配置系統在 XML 設定檔中儲存設定。 有關應用程式設定使用的檔案的詳細資訊,請參閱[應用程式設定架構結構](../../winforms/advanced/application-settings-architecture.md)。
+根據預設，Windows Forms 應用程式中的應用程式設定會使用 <xref:System.Configuration.LocalFileSettingsProvider> 類別，這會使用 .net 設定系統將設定儲存在 XML 設定檔中。 如需應用程式設定所使用之檔案的詳細資訊，請參閱[應用程式設定架構](../../winforms/advanced/application-settings-architecture.md)。
 
-應用程式設定將以下元素定義為它使用的設定檔的一部分。
+應用程式設定會將下列元素定義為其使用的設定檔的一部分。
 
-| 項目                    | 描述                                                                           |
+| 元素                    | 描述                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<應用程式設定>** | 包含特定於應用程式**\<的所有設置>** 標記。                         |
-| **\<使用者設定>**        | 包含特定於當前用戶**\<的所有設置>** 標記。                        |
-| **\<設定>**             | 定義設定。 應用程式>**\<或 用戶設置的子項>。** ** \<** |
-| **\<值>**               | 定義設置的值。 設置>的子項。 ** \<**                                   |
+| **\<applicationSettings>** | 包含 **\<setting>** 應用程式特定的所有標記。                         |
+| **\<userSettings>**        | 包含 **\<setting>** 目前使用者特定的所有標記。                        |
+| **\<setting>**             | 定義設定。 或的子 **\<applicationSettings>** 系 **\<userSettings>** 。 |
+| **\<value>**               | 定義設定的值。 的子系 **\<setting>** 。                                   |
 
-## <a name="applicationsettings-element"></a>\<應用程式設定>元素
+## <a name="applicationsettings-element"></a>\<applicationSettings> 項目
 
-此元素包含特定於用戶端計算機上的應用程式實例的所有**\<設置>** 標記。 它不會定義任何屬性。
+此元素包含 **\<setting>** 用戶端電腦上應用程式實例特有的所有標記。 它不會定義任何屬性。
 
-## <a name="usersettings-element"></a>\<使用者設定>元素
+## <a name="usersettings-element"></a>\<userSettings> 項目
 
-此元素包含特定於當前使用該應用程式的使用者的所有**\<設置>** 標記。 它不會定義任何屬性。
+此元素包含 **\<setting>** 目前正在使用應用程式之使用者特有的所有標記。 它不會定義任何屬性。
 
-## <a name="setting-element"></a>\<設定>元素
+## <a name="setting-element"></a>\<setting> 項目
 
-此元素定義設置。 它具有以下屬性。
+此元素會定義設定。 它具有下列屬性。
 
 | 屬性        | 描述 |
 | ---------------- | ----------- |
-| **名稱**         | 必要。 設置的唯一 ID。 以視覺化工作室建立的設定將儲存與名稱`ProjectName.Properties.Settings`。 |
-| **序列化** | 必要。 為序列化文字值格式。 有效值為：<br><br>- `string`. 該值使用 序列化為字串。 <xref:System.ComponentModel.TypeConverter><br>- `xml`. 該值使用 XML 序列化進行序列化。<br>- `binary`. 該值使用二進位序列化將該值序列化為文本編碼二進位。<br />- `custom`. 設置提供程式對此設置有固有的知識,並序列化並取消序列化。 |
+| **name**         | 必要。 設定的唯一識別碼。 透過 Visual Studio 建立的設定會以名稱儲存 `ProjectName.Properties.Settings` 。 |
+| **serializeAs** | 必要。 要用來將值序列化為文字的格式。 有效值為：<br><br>- `string`. 此值會使用來序列化為字串 <xref:System.ComponentModel.TypeConverter> 。<br>- `xml`. 此值會使用 XML 序列化進行序列化。<br>- `binary`. 此值會使用二進位序列化序列化為文字編碼的二進位檔。<br />- `custom`. 設定提供者具有此設定的固有知識，並將其序列化和還原序列化。 |
 
-## <a name="value-element"></a>\<數值>元素
+## <a name="value-element"></a>\<value> 項目
 
-此元素包含設置的值。
+此元素包含設定的值。
 
 ## <a name="example"></a>範例
 
-下面的範例顯示了一個應用程式設定檔,該檔定義了兩個應用程式範圍設定和兩個使用者範圍設定:
+下列範例顯示的應用程式佈建檔，會定義兩個應用程式範圍的設定和兩個使用者範圍的設定：
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -90,5 +90,5 @@ ms.locfileid: "81242825"
 
 ## <a name="see-also"></a>另請參閱
 
-- [應用程式設定概述](../../winforms/advanced/application-settings-overview.md)
+- [應用程式設定總覽](../../winforms/advanced/application-settings-overview.md)
 - [Application Settings Architecture](../../winforms/advanced/application-settings-architecture.md)
