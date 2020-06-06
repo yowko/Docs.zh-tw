@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 ms.openlocfilehash: b7333016fea2d46285d3c98181c0ca4904c376f8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74089132"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 元素（網路設定）
+# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager> 項目 (網路設定)
 設定網路資源的連接。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<設定 >** ](settings-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<servicePointManager >**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<servicePointManager>**
 
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74089132"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -48,16 +48,16 @@ ms.locfileid: "74089132"
 |`checkCertificateRevocationList`|指定系統是否應該先檢查憑證是否已被撤銷，再使用憑證。 預設值是 `false`。|  
 |`dnsRefreshTimeout`|指定功能變數名稱服務（DNS）解析與 DNS 迴圈配置資源選項的快取時間長度（以毫秒為單位）。 預設值為 120,000 毫秒 (兩分鐘)。|  
 |`enableDnsRoundRobin`|指定具有多個網際網路通訊協定（IP）位址之主機名稱的 DNS 解析是否會傳回所有位址，或只傳回第一個位址。 預設值是 `false`。|  
-|`encryptionPolicy`|指定套用至 <xref:System.Net.ServicePointManager> 實例上 SSL/TLS 會話的加密原則。 可能的值相當於 <xref:System.Net.Security.EncryptionPolicy> 列舉的值。 當加密原則設定為 `NoEncryption`時，需要使用 <xref:System.Security.Authentication.CipherAlgorithmType.Null>。 預設值是 `RequireEncryption`。|  
-|`expect100Continue`|指定 POST 方法是否預期會收到來自伺服器的 `100-continue` 回應。 預設值是 `true`。|  
+|`encryptionPolicy`|指定套用至實例上 SSL/TLS 會話的加密原則 <xref:System.Net.ServicePointManager> 。 可能的值相當於列舉的值 <xref:System.Net.Security.EncryptionPolicy> 。 <xref:System.Security.Authentication.CipherAlgorithmType.Null>當加密原則設定為時，需要使用 `NoEncryption` 。 預設值是 `RequireEncryption`。|  
+|`expect100Continue`|指定 POST 方法是否預期會收到伺服器的 `100-continue` 回應。 預設值是 `true`。|  
 |`useNagleAlgorithm`|指定服務點管理員所控制的連接是否使用 Nagle 演算法。 預設值是 `true`。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
 |[設定](settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74089132"
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>

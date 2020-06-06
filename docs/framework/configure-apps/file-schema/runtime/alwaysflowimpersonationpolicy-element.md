@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <alwaysFlowImpersonationPolicy> element
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 ms.openlocfilehash: 7c8ac37932a528ff0f000cbaab49124dec51b88c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154479"
 ---
-# <a name="alwaysflowimpersonationpolicy-element"></a>\<源流類比策略>元素
+# <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy> 項目
 指定 Windows 識別一律流經非同步點，而不論模擬的執行方式為何。  
   
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<始終流類比策略>**\  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<alwaysFlowImpersonationPolicy>**\  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,14 +36,14 @@ ms.locfileid: "79154479"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指示 Windows 標識是否跨非同步點流動。|  
+|`enabled`|必要屬性。<br /><br /> 指出 Windows 身分識別是否流經非同步點。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|Windows 標識不會跨非同步點流動，除非通過託管方法（如<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>） 執行類比。 這是預設值。|  
-|`true`|無論類比執行方式如何，Windows 標識始終跨非同步點流動。|  
+|`false`|Windows 識別不會流經非同步點，除非模擬是透過 managed 方法（例如）來執行 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 。 此為預設值。|  
+|`true`|無論模擬的執行方式為何，Windows 身分識別一律會流經非同步點。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -56,24 +56,24 @@ ms.locfileid: "79154479"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在 .NET 框架版本 1.0 和 1.1 中，Windows 標識不會跨非同步點流動。 在 .NET Framework 版本 2.0<xref:System.Threading.ExecutionContext>中，有一個物件包含有關當前正在執行的執行緒的資訊，並跨應用程式域中的非同步點進行流。 如果<xref:System.Security.Principal.WindowsIdentity>類比是使用託管方法（如，<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>而不是通過其他方法（如平台叫用本機方法）實現的，則該函數也會作為流經非同步點的資訊的一部分進行流動。 此元素用於指定 Windows 標識確實跨非同步點流動，而不考慮類比是如何實現的。  
+ 在 .NET Framework 版本1.0 和1.1 中，Windows 識別不會流經非同步點。 在 .NET Framework 版本2.0 中，有一個 <xref:System.Threading.ExecutionContext> 物件包含目前執行中線程的相關資訊，並會在應用程式域內的非同步點之間流動。 <xref:System.Security.Principal.WindowsIdentity>也會在流經非同步點的資訊中流動，但前提是使用 managed 方法（例如）來達成模擬， <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 而不是透過其他方式（例如平台叫用）來達成。 此元素可用來指定 Windows 識別會在非同步點之間流動，不論模擬的達成方式為何。  
   
- 您可以通過兩種其他方式更改此預設行為：  
+ 您可以透過兩種其他方式來改變此預設行為：  
   
-1. 在基於每個執行緒的託管代碼中。  
+1. 在 managed 程式碼中，以每個執行緒為基礎。  
   
-     <xref:System.Threading.ExecutionContext>通過使用 、 或<xref:System.Security.SecurityContext><xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType><xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType><xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>方法修改 和 設置，可以按執行緒禁止流。  
+     您可以 <xref:System.Threading.ExecutionContext> <xref:System.Security.SecurityContext> 使用 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType> 、 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> 或方法來修改和設定，以隱藏每個執行緒的流程 <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> 。  
   
-2. 在調用非託管主機介面以載入通用語言運行時 （CLR）。  
+2. 在非受控裝載介面的呼叫中，載入 common language runtime （CLR）。  
   
-     如果使用非託管託管介面（而不是簡單的託管可執行檔）來載入 CLR，則可以在[CorBindToRuntimeEx 函數](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)的調用中指定一個特殊的標誌。 要為整個過程啟用相容性模式，將`flags`[CorBindToRuntimeEx 函數](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)的參數設置為`STARTUP_ALWAYSFLOW_IMPERSONATION`。  
+     如果使用非受控裝載介面（而不是簡單的 managed 可執行檔）來載入 CLR，您可以在呼叫[CorBindToRuntimeEx 函數](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函式中指定特殊旗標。 若要啟用整個進程的相容性模式，請將 `flags` [CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)函式的參數設定為 `STARTUP_ALWAYSFLOW_IMPERSONATION` 。  
   
 ## <a name="configuration-file"></a>組態檔  
- 在 .NET 框架應用程式中，此元素只能在應用程式佈建檔中使用。  
+ 在 .NET Framework 應用程式中，這個元素只能用在應用程式佈建檔中。  
   
- 對於ASP.NET應用程式，可以在\<Windows 資料夾>_Microsoft.NET_Framework_vx.x.xxx 目錄中的 aspnet.config 檔中配置類比流。  
+ 針對 ASP.NET 應用程式，可以在 \Microsoft.NET\Framework\vx.x.xxxx 目錄中找到的 aspnet .config 檔案中設定模擬流程 \<Windows Folder> 。  
   
- 預設情況下ASP.NET使用以下配置設置禁用 aspnet.config 檔中的類比流：  
+ ASP.NET 預設會使用下列設定來停用 aspnet .config 檔案中的模擬流程：  
   
 ```xml
 <configuration>  
@@ -84,7 +84,7 @@ ms.locfileid: "79154479"
 </configuration>  
 ```  
   
- 在ASP.NET中，如果要改為允許類比流，則必須顯式使用以下配置設置：  
+ 在 ASP.NET 中，如果您想要改為允許模擬的流程，則必須明確地使用下列設定：  
   
 ```xml  
 <configuration>  
@@ -96,7 +96,7 @@ ms.locfileid: "79154479"
 ```  
   
 ## <a name="example"></a>範例  
- 下面的示例演示如何指定 Windows 標識跨非同步點流動，即使類比是通過託管方法以外的方法實現的。  
+ 下列範例示範如何指定 Windows 身分識別流經非同步點，即使透過 managed 方法以外的方式來達成模擬也是一樣。  
   
 ```xml  
 <configuration>  
@@ -108,6 +108,6 @@ ms.locfileid: "79154479"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
-- [\<傳統類比策略>元素](legacyimpersonationpolicy-element.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
+- [\<legacyImpersonationPolicy>元素](legacyimpersonationpolicy-element.md)

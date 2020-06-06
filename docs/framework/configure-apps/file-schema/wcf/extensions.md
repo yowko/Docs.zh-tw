@@ -3,13 +3,13 @@ title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "61700770"
 ---
-# <a name="extensions"></a>\<擴充功能 >
+# \<extensions>
 這個組態項目包含 XML 項目的集合，這些項目包含要與標準可探索中繼資料 (EPR、ContractTypeName、BindingName、Scope 與 ListenURI) 一併發行的 XML 項目集合。 以下是使用這個組態項目的範例。  
   
 ```xml  

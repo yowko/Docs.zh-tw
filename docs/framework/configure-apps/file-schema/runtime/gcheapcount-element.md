@@ -5,19 +5,19 @@ helpviewer_keywords:
 - gcHeapCount element
 - <gcHeapCount> element
 ms.openlocfilehash: 3d6cac4185af182758cb82e6bfd9d96ed24869b4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "74283076"
 ---
-# <a name="gcheapcount-element"></a>\<GCHeapCount > 元素
+# <a name="gcheapcount-element"></a>\<GCHeapCount> 項目
 
 指定要用於伺服器垃圾收集的堆積/執行緒數目。
 
-\<設定 > \
-&nbsp;&nbsp;\<執行時間 > \
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount >
+\<configuration>\
+&nbsp;&nbsp;\<runtime>\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCHeapCount>
 
 ## <a name="syntax"></a>語法
 
@@ -44,11 +44,11 @@ ms.locfileid: "74283076"
 
 ### <a name="child-elements"></a>子元素
 
-None。
+無。
 
 ### <a name="parent-elements"></a>父元素
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|
@@ -98,6 +98,6 @@ None。
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
 - [GCNoAffinitize 元素](gcnoaffinitize-element.md)
 - [GCHeapAffinitizeMask 元素](gcheapaffinitizemask-element.md)
-- [記憶體回收的基本概念](../../../../standard/garbage-collection/fundamentals.md)
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [垃圾收集的基本概念](../../../../standard/garbage-collection/fundamentals.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)

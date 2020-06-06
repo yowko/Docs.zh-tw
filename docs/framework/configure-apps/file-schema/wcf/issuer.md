@@ -3,23 +3,23 @@ title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
 ms.openlocfilehash: 74f5f2fc1a0fa1ffbbb510e4e700c33a13d02ab3
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70397909"
 ---
-# <a name="issuer"></a>\<issuer>
+# \<issuer>
 指定發行安全性權杖的安全性權杖服務 (STS)。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<系結 >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<系結 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<安全性 >** ](security-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<訊息 >** ](message-element-of-wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<簽發者 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<wsFederationHttpBinding>**](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<message>**](message-element-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuer>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,20 +51,20 @@ ms.locfileid: "70397909"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|位址|必要的字串。 STS 的 URL。|  
+|address|必要字串。 STS 的 URL。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<headers>](headers-element.md)|建置器可建立之端點的位址標頭集合。|  
 |[\<identity>](identity.md)|使用發行的權杖時，指定可讓用戶端驗證伺服器的設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<message>](message-element-of-wsfederationhttpbinding.md)|定義[ \<wsFederationHttpBinding >](wsfederationhttpbinding.md)元素的訊息層級安全性設定。|  
+|[\<message>](message-element-of-wsfederationhttpbinding.md)|定義元素的訊息層級安全性設定 [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) 。|  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -72,8 +72,8 @@ ms.locfileid: "70397909"
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.Issuer%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
 - [服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)
-- [同盟與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [聯合與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [服務身分識別和驗證](../../../wcf/feature-details/service-identity-and-authentication.md)
-- [同盟與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [聯合與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [自訂繫結的安全性功能](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [同盟與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [聯合與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)

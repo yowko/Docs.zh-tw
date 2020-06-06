@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 ms.openlocfilehash: fe6de09213c6f980e8eb205a318aae50033b2a84
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155228"
 ---
-# <a name="cryptographysettings-element"></a>\<密碼設置>元素
+# <a name="cryptographysettings-element"></a>\<cryptographySettings> 項目
 包含密碼編譯設定。  
 
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<姆斯科利布>**](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<密碼設置>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<cryptographySettings>**
 
 ## <a name="syntax"></a>語法  
   
@@ -39,18 +39,18 @@ ms.locfileid: "79155228"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<加密名稱映射>](cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
-|[\<oidMap>](oidmap-element.md)|包含 ASN.1 物件識別碼 （OID） 映射到類。|  
+|[\<cryptoNameMapping>](cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
+|[\<oidMap>](oidmap-element.md)|包含對類別的 asn.1 物件識別元（OID）對應。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`mscorlib`|包含元素`cryptographySettings`。|  
+|`mscorlib`|包含 `cryptographySettings` 元素。|  
   
 ## <a name="example"></a>範例  
- 下面的示例演示如何使用**\<加密設定>** 元素來包含加密名稱映射和 OID 映射。 此示例配置運行時，<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>以便返回`MyHashClass`物件，`MyCryptoClass`並且類映射到物件識別碼 1.3.36.2.1。  
+ 下列範例顯示如何使用專案 **\<cryptographySettings>** 來包含密碼編譯名稱對應和 OID 對應。 這個範例會設定執行時間，以便傳回 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> `MyHashClass` 物件，而 `MyCryptoClass` 類別會對應至物件識別碼1.3.36.2.1。  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,6 @@ ms.locfileid: "79155228"
   
 ## <a name="see-also"></a>另請參閱
 
-- [組態檔結構描述](../index.md)
-- [加密設定架構](index.md)
-- [The signature is valid](../../../../standard/security/cryptographic-services.md)
+- [設定檔架構](../index.md)
+- [密碼編譯設定結構描述](index.md)
+- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)

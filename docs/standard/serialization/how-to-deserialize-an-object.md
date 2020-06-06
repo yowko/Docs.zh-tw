@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
 ms.openlocfilehash: e08ae0d77539219223650fd3bcbd1bcee4df2739
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "83379107"
 ---
 # <a name="how-to-deserialize-an-object-using-xmlserializer"></a>如何使用 XmlSerializer 還原序列化物件
@@ -47,7 +47,7 @@ ms.locfileid: "83379107"
     var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 序列化簡介](introducing-xml-serialization.md)
 - [HOW TO：序列化物件](how-to-serialize-an-object.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 52b9caf2d5b3d44c0c6349501dafc371541fdd70
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b1fb9647091cecb80b9c2f04ec9b6bb156eb39ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396343"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84466875"
 ---
 ### <a name="pubternal-apis-removed"></a>已移除 "Pubternal" Api
 
@@ -22,7 +22,7 @@ ms.locfileid: "83396343"
 
 #### <a name="new-behavior"></a>新的行為
 
-受影響的 Api 會以 [internal （~/docs/csharp/language-reference/keywords/internal.md）] 存取修飾詞標示，而且無法再由該元件之外的程式碼使用。
+受影響的 Api 會以[內部](/dotnet/csharp/language-reference/keywords/internal)存取修飾詞標記，而且無法再由該元件外部的程式碼使用。
 
 #### <a name="reason-for-change"></a>變更的原因
 

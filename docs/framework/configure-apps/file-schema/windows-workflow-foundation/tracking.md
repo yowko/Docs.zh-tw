@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
 ms.openlocfilehash: 968cfa8e5402458afd6f13545ed999a472adf2e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151906"
 ---
-# <a name="tracking"></a>\<跟蹤>
+# \<tracking>
 代表定義工作流程服務之追蹤設定的組態區段。  
   
- 有關工作流跟蹤及其配置的詳細資訊，請參閱工作流[的工作流跟蹤和跟蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)和[配置跟蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
+ 如需工作流程追蹤及其設定的詳細資訊，請參閱工作流程[追蹤和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)追蹤和設定[工作流程的追蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
   
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<系統。服務模式>**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<跟蹤>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<tracking>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -87,8 +87,8 @@ ms.locfileid: "79151906"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<參與者>](participants.md)|組態項目的集合，這些項目會定義訂閱追蹤記錄的參與者。 追蹤參與者包含處理來自追蹤記錄之裝載的邏輯 (例如，他們可以選擇寫入檔案)。|  
-|[\<跟蹤設定檔>](trackingprofile.md)|篩選工作流程執行個體發出之追蹤記錄的追蹤設定檔。|  
+|[\<participants>](participants.md)|組態項目的集合，這些項目會定義訂閱追蹤記錄的參與者。 追蹤參與者包含處理來自追蹤記錄之裝載的邏輯 (例如，他們可以選擇寫入檔案)。|  
+|[\<trackingProfile>](trackingprofile.md)|篩選工作流程執行個體發出之追蹤記錄的追蹤設定檔。|  
   
 ### <a name="parent-elements"></a>父項目  
   

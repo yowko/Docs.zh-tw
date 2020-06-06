@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73114928"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 元素
+# <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks> 項目
 要求 common language runtime （CLR）在建立內部使用的特定執行緒時，指定明確的堆疊大小來減少記憶體使用，而不是使用這些執行緒的預設堆疊大小。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<UseSmallInternalThreadStacks>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,27 +26,27 @@ ms.locfileid: "73114928"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|enabled|必要屬性。<br /><br /> 指定在建立內部使用的特定執行緒時，是否要要求 CLR 使用明確堆疊大小，而不是預設堆疊大小。 明確堆疊大小小於 1 MB 的預設堆疊大小。|  
+|已啟用|必要屬性。<br /><br /> 指定在建立內部使用的特定執行緒時，是否要要求 CLR 使用明確堆疊大小，而不是預設堆疊大小。 明確堆疊大小小於 1 MB 的預設堆疊大小。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
 |值|描述|  
 |-----------|-----------------|  
 |true|要求明確堆疊大小。|  
-|False|使用預設堆疊大小。 這是 .NET Framework 4 的預設值。|  
+|false|使用預設堆疊大小。 這是 .NET Framework 4 的預設值。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
@@ -70,7 +70,7 @@ ms.locfileid: "73114928"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)

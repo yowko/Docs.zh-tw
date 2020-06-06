@@ -1,5 +1,5 @@
 ---
-title: <remove>用於<listeners><source>
+title: <remove><listeners>For 的元素<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 ms.openlocfilehash: 657e6db2af9b99b3bbf03afc6aab02c58a830f2d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153331"
 ---
-# <a name="remove-element-for-listeners-for-source"></a>\<刪除>源\<>的偵聽\<器>元素
+# <a name="remove-element-for-listeners-for-source"></a>\<remove>\<listeners>For 的元素\<source>
 從追蹤來源的 `Listeners` 集合移除接聽項。  
 
-[**\<配置>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<系統.診斷>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<來源>**](sources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<源>**](source-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<聽眾>**](listeners-element-for-source.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<刪除>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<source>**](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +37,7 @@ ms.locfileid: "79153331"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`name`|必要屬性。<br /><br /> 要從`Listeners`集合中刪除的攔截器的名稱。|  
+|`name`|必要屬性。<br /><br /> 要從集合中移除的接聽程式名稱 `Listeners` 。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -50,17 +50,17 @@ ms.locfileid: "79153331"
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
 |`sources`|包含起始追蹤訊息的追蹤來源。|  
 |`source`|指定起始追蹤訊息的追蹤來源。|  
-|`listeners`|指定收集、存儲和路由消息的攔截器。|  
+|`listeners`|指定收集、儲存及路由傳送訊息的接聽程式。|  
   
 ## <a name="remarks"></a>備註  
- 該`<remove>`元素從跟蹤源的集合中刪除`Listeners`指定的攔截器。  
+ `<remove>`元素會從追蹤來源的集合中移除指定的接聽 `Listeners` 程式。  
   
- `Listeners`您可以通過調用<xref:System.Diagnostics.TraceListenerCollection.Remove%2A><xref:System.Diagnostics.TraceSource>實例<xref:System.Diagnostics.TraceSource.Listeners%2A>屬性上的方法，以程式設計方式從跟蹤源的集合中刪除元素。  
+ 您可以在 `Listeners` 實例的屬性上呼叫方法，以程式設計方式從集合中移除追蹤來源的元素 <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> <xref:System.Diagnostics.TraceSource.Listeners%2A> <xref:System.Diagnostics.TraceSource> 。  
   
- 此元素可用於電腦設定檔 （Machine.config） 和應用程式佈建檔。  
+ 此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下面的`<remove>`示例演示如何在使用`<add>`元素將攔截器`console`添加到跟蹤源`Listeners``TraceSourceApp`的集合之前使用 元素。  
+ 下列範例示範如何使用專案 `<remove>` ，然後再使用專案 `<add>` ，將接聽 `console` 程式加入至 `Listeners` 追蹤來源的集合 `TraceSourceApp` 。  
   
 ```xml  
 <configuration>  
@@ -83,6 +83,6 @@ ms.locfileid: "79153331"
 
 - <xref:System.Diagnostics.TraceSource.Listeners%2A>
 - <xref:System.Diagnostics.TraceSource>
-- [跟蹤和調試設置架構](index.md)
-- [\<明確>](clear-element-for-listeners-for-source.md)
+- [追蹤和偵錯設定結構描述](index.md)
+- [\<clear>](clear-element-for-listeners-for-source.md)
 - [追蹤接聽程式](../../../debug-trace-profile/trace-listeners.md)

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 ms.openlocfilehash: b502cc4a0958f074018d4b0ce6b3fb118b811c2f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154968"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules> 項目 (網路設定)
-指定用於驗證網路請求的模組。  
+指定用來驗證網路要求的模組。  
 
-[**\<配置>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<身份驗證模組>**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<authenticationModules>**
 
 ## <a name="syntax"></a>語法  
   
@@ -37,26 +37,26 @@ ms.locfileid: "79154968"
   
 ### <a name="child-elements"></a>子元素  
   
-|**Element**|**描述**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
-|[新增](add-element-for-authenticationmodules-network-settings.md)|向應用程式添加身份驗證模組。|  
-|[清楚](clear-element-for-authenticationmodules-network-settings.md)|清除應用程式中的所有身份驗證模組。|  
-|[移除](remove-element-for-authenticationmodules-network-settings.md)|從應用程式中刪除身份驗證模組。|  
+|[add](add-element-for-authenticationmodules-network-settings.md)|將驗證模組新增至應用程式。|  
+|[明確](clear-element-for-authenticationmodules-network-settings.md)|清除應用程式中的所有驗證模組。|  
+|[remove](remove-element-for-authenticationmodules-network-settings.md)|從應用程式移除驗證模組。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**Element**|**描述**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
 ## <a name="remarks"></a>備註  
- 該`authenticationModule`元素指定使用伺服器執行身份驗證過程的身份驗證模組。 身份驗證模組必須實現<xref:System.Net.IAuthenticationModule>介面。  
+ `authenticationModule`元素會指定用來進行伺服器驗證程式的驗證模組。 驗證模組必須執行 <xref:System.Net.IAuthenticationModule> 介面。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 以下示例啟用身份驗證模組。 應將版本和 PublicKeyToken 的值替換為指定模組的正確值。  
+ 下列範例會啟用驗證模組。 您應該將 Version 和 PublicKeyToken 的值取代為指定模組的正確值。  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ ms.locfileid: "79154968"
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [網路設置架構](index.md)
+- [網路設定結構描述](index.md)

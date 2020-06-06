@@ -1,15 +1,15 @@
 ---
-title: <Property> 元素（.NET Native）
+title: <Property>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128203"
 ---
-# <a name="property-element-net-native"></a>\<屬性 > 元素（.NET Native）
+# <a name="property-element-net-native"></a>\<Property>元素（.NET Native）
 將執行階段反映原則套用至屬性。  
   
 ## <a name="syntax"></a>語法  
@@ -22,7 +22,7 @@ ms.locfileid: "73128203"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -35,22 +35,22 @@ ms.locfileid: "73128203"
   
 ## <a name="name-attribute"></a>Name 屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
-|*method_name*|屬性名稱。 屬性的類型是由父 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目所定義。|  
+|*method_name*|屬性名稱。 屬性的類型是由父系或元素所定義 [\<Type>](type-element-net-native.md) [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*policy_setting*|要為屬性套用此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
@@ -73,15 +73,15 @@ ms.locfileid: "73128203"
   
  檔案會針對 `All` 類別，將 `Activate` 值套用至 `Book` 原則，如此可允許透過反映來存取類別建構函式。 `Browse` 類別的 `Book` 原則繼承自其父命名空間。 其設定為 `Required Public`，讓中繼資料在執行階段可供使用。  
   
- 以下是範例的原始程式碼。 `outputBlock` 變數代表 <xref:Windows.UI.Xaml.Controls.TextBlock> 控制項。  
+ 以下是範例的原始程式碼。 `outputBlock`變數代表 <xref:Windows.UI.Xaml.Controls.TextBlock> 控制項。  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
  不過，編譯和執行此範例會擲回 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 例外狀況。 雖然我們已經讓 `Book` 類型的中繼資料可供使用，但我們無法讓屬性 getter 的實作供動態使用。 我們可以用下列兩種方法之一來更正這個錯誤：  
   
-- 在 `Book` 類型的 [\<Type>](type-element-net-native.md) 項目中定義其 `Dynamic` 原則。  
+- 藉由 `Dynamic` `Book` 在其元素中定義類型的原則 [\<Type>](type-element-net-native.md) 。  
   
-- 針對我們要叫用其 getter 的每個屬性，新增巢狀 [\<Property>](property-element-net-native.md) 項目，如下列 default.rd.xml 檔案所示。  
+- 藉由 [\<Property>](property-element-net-native.md) 為每個要叫用其 getter 的屬性新增一個 nested 專案，如同下列的 default.aspx 檔案所示。  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -97,7 +97,7 @@ ms.locfileid: "73128203"
     </Directives>  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

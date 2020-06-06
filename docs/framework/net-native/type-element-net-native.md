@@ -1,15 +1,15 @@
 ---
-title: <Type> 元素（.NET Native）
+title: <Type>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73091847"
 ---
-# <a name="type-element-net-native"></a>\<類型 > 元素（.NET Native）
+# <a name="type-element-net-native"></a>\<Type>元素（.NET Native）
 
 將執行階段原則套用到特定的類型，例如類別或結構。
 
@@ -31,7 +31,7 @@ ms.locfileid: "73091847"
 
 ## <a name="attributes-and-elements"></a>屬性和項目
 
-下列各節描述屬性、子項目和父項目。
+下列章節說明屬性、子元素和父元素。
 
 ### <a name="attributes"></a>屬性
 
@@ -51,19 +51,19 @@ ms.locfileid: "73091847"
 
 ## <a name="name-attribute"></a>Name 屬性
 
-|值|描述|
+|值|說明|
 |-----------|-----------------|
-|*type_name*|類型名稱。 如果這個 `<Type>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素或另一個 `<Type>` 元素的子系，則 *type_name* 可以包含類型的名稱，而不含命名空間。 否則，*type_name* 必須包含完整的類型名稱。|
+|*type_name*|類型名稱。 如果這個 `<Type>` 元素是 [\<Namespace>](namespace-element-net-native.md) 元素或另一個專案的子系 `<Type>` ， *type_name*可以包含類型的名稱，而不含其命名空間。 否則，*type_name* 必須包含完整的類型名稱。|
 
 ## <a name="all-other-attributes"></a>所有其他屬性
 
-|值|描述|
+|值|說明|
 |-----------|-----------------|
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|
 
-### <a name="child-elements"></a>子項目
+### <a name="child-elements"></a>子元素
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |[\<AttributeImplies>](attributeimplies-element-net-native.md)|如果包含之類型是屬性，則定義屬性套用到的程式碼項目的執行階段原則。|
 |[\<Event>](event-element-net-native.md)|將反映原則套用至屬於此類型的事件。|
@@ -79,7 +79,7 @@ ms.locfileid: "73091847"
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |[\<Application>](application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。|
 |[\<Assembly>](assembly-element-net-native.md)|將反映原則套用至指定組件中的所有類型。|
@@ -92,19 +92,19 @@ ms.locfileid: "73091847"
 
 反映、序列化和 interop 屬性都是選用性。 如果都不存在，`<Type>` 項目會做為容器，其子類型會定義個別成員的原則。
 
-如果 `<Type>` 元素是 [\<Assembly>](assembly-element-net-native.md)、[\<Namespace>](namespace-element-net-native.md)、`<Type>` 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素的子系，它會覆寫父元素所定義的原則設定。
+如果 `<Type>` 元素是、、或專案的子系 [\<Assembly>](assembly-element-net-native.md) [\<Namespace>](namespace-element-net-native.md) `<Type>` [\<TypeInstantiation>](typeinstantiation-element-net-native.md) ，則會覆寫父元素所定義的原則設定。
 
-泛型類型的 `<Type>` 項目會將其原則套用至沒有自己的原則的所有例項。 建構的泛型型別原則是由 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素所定義。
+泛型類型的 `<Type>` 項目會將其原則套用至沒有自己的原則的所有例項。 結構化泛型型別的原則是由元素所定義 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 。
 
 如果類型是泛型類型，其名稱會標示抑音符號符號 (\`) 後面接著其泛型參數的數目。 例如，`Name` 類別之 `<Type>` 項目的 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 屬性，會顯示為 ``Name="System.Collections.Generic.List`1"``。
 
 ## <a name="example"></a>範例
 
-下列範例使用反映來顯示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 類別之欄位、屬性和方法的相關資訊。 範例中的變數 `b` 是 <xref:Windows.UI.Xaml.Controls.TextBlock> 控制項。 因為範例只會擷取類型資訊，所以中繼資料的可用性是由 `Browse` 原則設定所控制。
+下列範例使用反映來顯示 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 類別之欄位、屬性和方法的相關資訊。 `b`範例中的變數是 <xref:Windows.UI.Xaml.Controls.TextBlock> 控制項。 因為範例只會擷取類型資訊，所以中繼資料的可用性是由 `Browse` 原則設定所控制。
 
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]
 
- 因為 <xref:System.Collections.Generic.List%601> 類別的中繼資料不會自動包含在 .NET Native 工具鏈中，所以範例無法在執行時間顯示所要求的成員資訊。 若要提供必要的中繼資料，將下列 `<Type>` 項目加入到執行階段指示詞檔案。 請注意，因為我們提供了父代 [<Namespace\>](namespace-element-net-native.md) 元素，所以不必在 `<Type>` 元素中提供完整的類型名稱。
+ 因為類別的中繼資料 <xref:System.Collections.Generic.List%601> 不會自動包含在 .NET Native 工具鏈中，所以範例無法在執行時間顯示所要求的成員資訊。 若要提供必要的中繼資料，將下列 `<Type>` 項目加入到執行階段指示詞檔案。 請注意，因為我們提供了父代 [<Namespace\>](namespace-element-net-native.md) 元素，所以不必在 `<Type>` 元素中提供完整的類型名稱。
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -118,11 +118,11 @@ ms.locfileid: "73091847"
 ```
 
 ## <a name="example"></a>範例
- 下列範例使用反映來擷取 <xref:System.Reflection.PropertyInfo> 物件，代表 <xref:System.String.Chars%2A?displayProperty=nameWithType> 屬性。 然後，它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法擷取字串中的第七個字元的值，並顯示字串中的所有字元。 範例中的變數 `b` 是 <xref:Windows.UI.Xaml.Controls.TextBlock> 控制項。
+ 下列範例使用反映來擷取 <xref:System.Reflection.PropertyInfo> 物件，代表 <xref:System.String.Chars%2A?displayProperty=nameWithType> 屬性。 然後，它使用 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法擷取字串中的第七個字元的值，並顯示字串中的所有字元。 `b`範例中的變數是 <xref:Windows.UI.Xaml.Controls.TextBlock> 控制項。
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
 
- 因為 <xref:System.String> 物件的中繼資料無法使用，所以在使用 .NET Native 工具鏈編譯時，呼叫 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法會在執行時間擲回 <xref:System.NullReferenceException> 例外狀況。 若要消除例外狀況，並提供必要的中繼資料，將下列 `<Type>` 項目加入至執行階段指示詞檔案：
+ 因為物件的中繼資料 <xref:System.String> 無法使用，所以在 <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> <xref:System.NullReferenceException> 使用 .NET Native 工具鏈編譯時，呼叫方法時會在執行時間擲回例外狀況。 若要消除例外狀況，並提供必要的中繼資料，將下列 `<Type>` 項目加入至執行階段指示詞檔案：
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -133,7 +133,7 @@ ms.locfileid: "73091847"
 </Directives>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

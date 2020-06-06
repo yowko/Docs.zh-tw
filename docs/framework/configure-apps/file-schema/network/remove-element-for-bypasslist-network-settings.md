@@ -11,21 +11,21 @@ helpviewer_keywords:
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 ms.openlocfilehash: 97b49a8a520d6a4f72945366874991d2deb18710
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71697899"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<移除 bypasslist 的 > 元素（網路設定）
+# <a name="remove-element-for-bypasslist-network-settings"></a>bypasslist 的 \<remove> 項目 (網路設定)
 
 從 proxy 略過清單中移除 IP 位址或 DNS 名稱。
 
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<system.web >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<移除 >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**  
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +35,7 @@ ms.locfileid: "71697899"
 />
 ```
 
-## <a name="attributes-and-elements"></a>屬性和元素
+## <a name="attributes-and-elements"></a>屬性和項目
 
 下列章節說明屬性、子元素和父元素。
 
@@ -47,19 +47,19 @@ ms.locfileid: "71697899"
 
 ### <a name="child-elements"></a>子元素
 
-None。
+無。
 
 ### <a name="parent-elements"></a>父項目
 
-|**目**|**說明**|
+|**元素**|**說明**|
 |-----------------|---------------------|
 |[bypasslist](bypasslist-element-network-settings.md)|提供一組正則運算式，描述不使用 proxy 的位址。|
 
 ## <a name="remarks"></a>備註
 
-`remove` 元素會從略過 proxy 伺服器的地址清單中，移除描述 IP 位址或 DNS 伺服器名稱的正則運算式。 先前已在設定檔或設定階層的較高層級定義位址。
+`remove`元素會從略過 proxy 伺服器的地址清單中，移除描述 IP 位址或 DNS 伺服器名稱的正則運算式。 先前已在設定檔或設定階層的較高層級定義位址。
 
-`address` 屬性的值應該是描述一組 IP 位址或主機名稱的正則運算式。
+屬性的值 `address` 應該是描述一組 IP 位址或主機名稱的正則運算式。
 
 如需正則運算式的詳細資訊，請參閱。[.NET Framework 正則運算式](../../../../standard/base-types/regular-expressions.md)。
 

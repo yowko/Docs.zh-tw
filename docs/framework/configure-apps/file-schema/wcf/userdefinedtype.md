@@ -3,21 +3,21 @@ title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
 ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70854841"
 ---
-# <a name="userdefinedtype"></a>\<userDefinedType>
+# \<userDefinedType>
 表示要包含在服務合約中的使用者定義型別 (User Defined Type，UDT)。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContract >** ](comcontract.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<userDefinedTypes >** ](userdefinedtypes.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<userDefinedType >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContracts>**](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<comContract>**](comcontract.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<userDefinedTypes>**](userdefinedtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<userDefinedType>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,11 +36,11 @@ ms.locfileid: "70854841"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`name`|選擇性屬性，其中包含提供可讀型別名稱的字串。 雖然這不是供執行階段使用，但是可幫助讀者分辨型別。|  
 |`TypeDefID`|GUID 字串，識別已註冊型別程式庫內的特定 UDT 型別。|  
@@ -52,7 +52,7 @@ ms.locfileid: "70854841"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`userDefinedTypes`|`userDefinedType` 項目的集合。|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "70854841"
   
  如果要避免這個問題，您可以將這些 UDT 新增至組態檔中，以便包含它們做為適當服務合約中的已知型別。 如果要這樣做，您必須唯一識別這些 UDT 和合約，也就是使用其原始的 COM 介面。  
   
- 下列範例示範如何將兩個特定的 udt 新增`userDefinedTypes`至設定檔的 < > 區段中，以供此用途之用。  
+ 下列範例將示範如何將兩個特定的 UDT 新增至組態檔的 <`userDefinedTypes`> 區段，以達成這個目的。  
   
 ```xml  
 <comContracts>
@@ -98,5 +98,5 @@ ms.locfileid: "70854841"
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](comcontracts.md)
-- [整合 COM 應用程式](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [如何：設定 COM + 服務設定](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [與 COM + 應用程式整合](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [HOW TO：設定 COM+ 服務設定](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

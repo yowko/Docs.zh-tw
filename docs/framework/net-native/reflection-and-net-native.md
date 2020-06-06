@@ -3,10 +3,10 @@ title: 反映和 .NET Native
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 ms.openlocfilehash: 65921377be9b8bf1c2d147b384c85cbd037d15f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128178"
 ---
 # <a name="reflection-and-net-native"></a>反映和 .NET Native
@@ -31,7 +31,7 @@ ms.locfileid: "73128178"
   
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 .NET Native 編譯應用程式](index.md)
-- [.NET Native 和編譯](net-native-and-compilation.md)
+- [.NET 原生和編譯](net-native-and-compilation.md)

@@ -3,17 +3,17 @@ title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
 ms.openlocfilehash: e00bbad452398e7f8f4f50208da572986391fc9e
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70399468"
 ---
-# <a name="systemservicemodelactivation"></a>\<system.serviceModel.activation>
+# \<system.serviceModel.activation>
 這個組態區段表示 SMSvcHost.exe 工具的組態設定。 組態項目可於 SMSvcHost.exe.config 檔案中設定。 具體來說，它包含了所有必須設定的整個電腦設定。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System.servicemodel. 啟用 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.serviceModel.activation>**  
   
 ## <a name="sample-configuration-file"></a>範例組態檔  
  以下為範例組態檔 (SMSvcHost.exe.config)，由 SMSvcHost.exe 接聽程式處理序使用。  

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 ms.openlocfilehash: 8aefb8a20d6a95c5b8062d0c03dcb28a3557ca3d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73117466"
 ---
-# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 元素
+# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack> 項目
 指定是否在執行緒啟動時認可完整執行緒堆疊。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<disableCommitThreadStack>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,13 +29,13 @@ ms.locfileid: "73117466"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|enabled|必要屬性。<br /><br /> 指定是否停用在執行緒啟動時認可完整執行緒堆疊 (預設行為)。|  
+|已啟用|必要屬性。<br /><br /> 指定是否停用在執行緒啟動時認可完整執行緒堆疊 (預設行為)。|  
   
 ## <a name="enabled-attribute"></a>啟用屬性  
   
@@ -44,12 +44,12 @@ ms.locfileid: "73117466"
 |0|不停用 Common Language Runtime 的預設行為，也就是在執行緒啟動時認可完整執行緒堆疊。|  
 |1|不停用 Common Language Runtime 的預設行為，也就是在執行緒啟動時認可完整執行緒堆疊。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
@@ -71,7 +71,7 @@ ms.locfileid: "73117466"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [執行階段設定結構描述](index.md)
-- [組態檔結構描述](../index.md)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)

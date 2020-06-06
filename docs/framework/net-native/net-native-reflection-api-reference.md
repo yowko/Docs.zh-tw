@@ -3,10 +3,10 @@ title: .NET 原生反映 API 參考
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 ms.openlocfilehash: 01678ea6230a53416f213730ae6bb66e6bc057f8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128224"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET 原生反映 API 參考
@@ -23,12 +23,12 @@ ms.locfileid: "73128224"
 - 針對方法的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/method.html) 。  
   
 > [!NOTE]
-> 此參考檔說明 .NET Native 唯一的三種例外狀況類型。 如需 .NET Framework 核心反映 API 的參考檔，請參閱 <xref:System.Reflection>、<xref:System.Reflection.Context> 和 <xref:System.Reflection.Emit> 命名空間。 如需 .NET Framework 核心 interop API 的參考文件，請參閱 <xref:System.Runtime.InteropServices>。  
+> 此參考檔說明 .NET Native 唯一的三種例外狀況類型。 如需 .NET Framework 核心反映 API 的參考檔，請參閱 <xref:System.Reflection> 、 <xref:System.Reflection.Context> 和 <xref:System.Reflection.Emit> 命名空間。 如需 .NET Framework 核心 interop API 的參考文件，請參閱 <xref:System.Runtime.InteropServices>。  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 命名空間  
  <xref:System.Reflection> 命名空間包含用於在 .NET Framework 中反映的核心類型。 針對 .NET Native，它也包含兩個新的例外狀況類型：  
   
-|執行個體|描述|  
+|類別|描述|  
 |-----------|-----------------|  
 |[MissingMetadataException](missingmetadataexception-class-net-native.md)|使用反映來擷取不存在的中繼資料時，所擲回的例外狀況。|  
 |[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|當類型或類型成員的中繼資料可用，但已移除其實作時，會擲回這個例外狀況。|  
@@ -38,15 +38,15 @@ ms.locfileid: "73128224"
 ## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices 命名空間  
  <xref:System.Runtime.CompilerServices> 命名空間包含語言編譯器為使用者設計的類型。 針對 .NET Native，它也包含新的例外狀況類型：  
   
-|執行個體|描述|  
+|類別|描述|  
 |-----------|-----------------|  
 |[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|當呼叫手動封送處理方法，但靜態分析或執行階段指示詞檔案中找不到類型的中繼資料時，會擲回這個例外狀況。|  
   
  如需有關這個命名空間中其他類型的說明文件，請參閱 .NET Framework 文件集中的 <xref:System.Runtime.CompilerServices> 參考頁面。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [MissingInteropDataException 類別](missinginteropdataexception-class-net-native.md)
 - [MissingMetadataException 類別](missingmetadataexception-class-net-native.md)
 - [MissingRuntimeArtifactException 類別](missingruntimeartifactexception-class-net-native.md)
-- [使用者入門](getting-started-with-net-native.md)
+- [快速入門](getting-started-with-net-native.md)

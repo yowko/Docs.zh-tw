@@ -3,13 +3,13 @@ title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
 ms.openlocfilehash: 39dc92d65a41d223ebd39aec3dc59871ad1fd101
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77448681"
 ---
-# <a name="behaviorextensions"></a>\<behaviorExtensions >
+# \<behaviorExtensions>
 行為延伸可讓使用者建立使用者定義的行為項目。 這些項目可以和標準的 Windows Communication Foundation (WCF) 行為項目並列使用。 `behaviorExtensions` 區段會定義項目，讓項目可用於組態中。 以下是典型行為擴充的範例。  
   
 ```xml  
@@ -49,7 +49,7 @@ ms.locfileid: "77448681"
   
  攻擊者可能會利用 CLR 搜尋順序並執行未經授權的程式碼。 使用完整 (強式) 名稱來唯一識別類型，可進一步提高您系統的安全性。  
   
- 如需詳細資訊，請參閱[執行時間如何找出元件](../../../deployment/how-the-runtime-locates-assemblies.md)和 <xref:System.AppDomain.TypeResolve>。  
+ 如需詳細資訊，請參閱[執行時間如何找出元件](../../../deployment/how-the-runtime-locates-assemblies.md)和 <xref:System.AppDomain.TypeResolve> 。  
   
 ## <a name="see-also"></a>另請參閱
 

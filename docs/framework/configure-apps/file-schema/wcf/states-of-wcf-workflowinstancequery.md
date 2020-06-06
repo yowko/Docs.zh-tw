@@ -3,27 +3,27 @@ title: <states>在 WCF 中，<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
 ms.openlocfilehash: 5b779cf1074687dbd648b23d04f7cf3a354a2014
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "70855035"
 ---
-# <a name="states-of-wcf-workflowinstancequery"></a>\<\<workflowInstanceQuery WCF 的狀態 > >
+# <a name="states-of-wcf-workflowinstancequery"></a>\<states>在 WCF 中，\<workflowInstanceQuery>
 
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   
 如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<追蹤 >** ](tracking-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<設定檔 >** \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<工作流程 >** ](workflow-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowInstanceQueries >** ](workflowinstancequeries-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowInstanceQuery >** ](workflowinstancequery-of-wcf.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<狀態 >**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<tracking>**](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<profiles>**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<trackingProfile>**](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQueries>**](workflowinstancequeries-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQuery>**](workflowinstancequery-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<states>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,13 +55,13 @@ ms.locfileid: "70855035"
   
 ### <a name="child-elements"></a>子元素
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<states>](state-of-wcf-workflowinstancequery.md)|建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態。|  
   
 ### <a name="parent-elements"></a>父元素  
   
-|元素|說明|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](../windows-workflow-foundation/workflowinstancequery.md)|追蹤工作流程執行個體生命週期變更的查詢，例如已開始或已完成的事件。|  
   
@@ -71,19 +71,19 @@ ms.locfileid: "70855035"
   
 下表說明可能的狀態值。  
   
-|State|描述|  
+|州|描述|  
 |-----------|-----------------|  
 |已中止|工作流程執行個體已中止。|  
 |已完成|工作流程執行個體已完成。|  
-|Deleted|工作流程執行個體已刪除。|  
+|已刪除|工作流程執行個體已刪除。|  
 |閒置|工作流程執行個體閒置中。|  
 |已保存|工作流程執行個體已保存。|  
 |已繼續|工作流程執行個體已繼續。|  
-|自|工作流程執行個體已啟動。|  
+|已開始|工作流程執行個體已啟動。|  
 |未處理的例外狀況|工作流程執行個體發生未處理的例外狀況。|  
 |已卸載|工作流程執行個體已卸載。|  
 |已取消|工作流程執行個體已取消。|  
-|擱置|工作流程執行個體已暫停。|  
+|暫止|工作流程執行個體已暫停。|  
 |已終止|工作流程執行個體已終止。|  
 |Unsuspended|工作流程執行個體已取消暫停。|  
   

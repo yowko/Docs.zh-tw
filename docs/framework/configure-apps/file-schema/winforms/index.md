@@ -3,10 +3,10 @@ title: Windows Form 組態區段
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151828"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows Form 組態區段
@@ -42,15 +42,15 @@ Windows Forms 應用程式組態設定是儲存在應用程式組態檔的 `Syst
 
 元素  |描述 |
 ---------|---------|
-[\<配置>](../configuration-element.md) | 通用語言執行平台和 Windows Forms 應用程式所使用之每個組態檔中的根元素 |
+[\<configuration>](../configuration-element.md) | 通用語言執行平台和 Windows Forms 應用程式所使用之每個組態檔中的根元素 |
 
 ## <a name="remarks"></a>備註
 
 從 .NET Framework 4.7 開始，`<System.Windows.Forms.ApplicationConfigurationSection>` 元素能允許您設定 Windows Forms 應用程式，以利用 .NET Framework 最新版本中的新增功能。
 
-該`<System.Windows.Forms.ApplicationConfigurationSection>`元素可以包括一個或多個子項目[`<add>`](windows-forms-add-configuration-element.md)，每個子項目定義特定的配置設置。
+`<System.Windows.Forms.ApplicationConfigurationSection>`元素可以包含一或多個子專案 [`<add>`](windows-forms-add-configuration-element.md) ，每個專案都定義了特定的設定。
 
 ## <a name="see-also"></a>另請參閱
 
-- [組態檔結構描述](../index.md)
-- [Windows 表單中的高 DPI 支援](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [設定檔架構](../index.md)
+- [Windows Forms 中的高 DPI 支援](../../../winforms/high-dpi-support-in-windows-forms.md)

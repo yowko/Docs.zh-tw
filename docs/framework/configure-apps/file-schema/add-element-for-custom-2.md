@@ -1,5 +1,5 @@
 ---
-title: NameValueSectionHandler 和 DictionarySectionHandler 的 <add> 元素
+title: <add>NameValueSectionHandler 和 DictionarySectionHandler 的元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "77215444"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<為 NameValueSectionHandler 和 DictionarySectionHandler 新增 > 元素
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<add>NameValueSectionHandler 和 DictionarySectionHandler 的元素
 
-新增自訂應用程式設定。 每個 **\<新增 >** 標記都包含一個索引鍵/值組。
+新增自訂應用程式設定。 每個 **\<add>** 標記都包含一個索引鍵/值組。
 
-[ **\<configuration>** ](configuration-element.md)\
-&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<新增 >**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<sectionName>**](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>語法
 
@@ -39,15 +39,15 @@ ms.locfileid: "77215444"
 
 | 元素 | 描述 |
 | ------- | ------------|
-| [ **\<sectionName >** 元素](custom-element-2.md) | 定義使用 <xref:System.Configuration.NameValueSectionHandler> 和 <xref:System.Configuration.DictionarySectionHandler> 類別之自訂設定區段的設定。 |
+| [**\<sectionName>** 元素](custom-element-2.md) | 定義使用和類別之自訂設定區段的設定 <xref:System.Configuration.NameValueSectionHandler> <xref:System.Configuration.DictionarySectionHandler> 。 |
 
 ## <a name="child-elements"></a>子元素
 
-無
+None
 
 ## <a name="example"></a>範例
 
-下列範例示範如何定義自訂設定區段，並使用 **\<新增 >** 元素，將設定放入區段中：
+下列範例示範如何定義自訂的設定區段，並使用 **\<add>** 元素將設定放入區段中：
 
 ```xml
 <configuration>

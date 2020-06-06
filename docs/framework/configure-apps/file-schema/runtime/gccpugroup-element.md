@@ -6,19 +6,19 @@ helpviewer_keywords:
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 ms.openlocfilehash: f1cbe5a7109d6e4aae2e92710920a1c6b3a40d00
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "82102888"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpu組>元素
+# <a name="gccpugroup-element"></a>\<GCCpuGroup> 項目
 
 指定記憶體回收是否支援多個 CPU 群組。
 
-[**\<設定>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<執行時>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<GCCpu組>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<GCCpuGroup>**
 
 ## <a name="syntax"></a>語法
 
@@ -41,8 +41,8 @@ ms.locfileid: "82102888"
 
 |值|描述|
 |-----------|-----------------|
-|`false`|垃圾回收不支援多個 CPU 組。 這是預設值。|
-|`true`|如果啟用了伺服器垃圾回收,垃圾回收支援多個 CPU 組。|
+|`false`|垃圾收集不支援多個 CPU 群組。 此為預設值。|
+|`true`|如果已啟用伺服器垃圾收集，垃圾收集支援多個 CPU 群組。|
 
 ### <a name="child-elements"></a>子元素
 
@@ -57,14 +57,14 @@ ms.locfileid: "82102888"
 
 ## <a name="remarks"></a>備註
 
-當電腦具有多個 CPU 組並啟用伺服器垃圾回收時(請參閱[\<gcServer>](gcserver-element.md)元素),啟用此元素可跨所有 CPU 組擴展垃圾回收,並在創建和平衡堆時考慮所有內核。
+當電腦具有多個 CPU 群組並已啟用伺服器垃圾收集時（請參閱 [\<gcServer>](gcserver-element.md) 元素），啟用此元素會延伸所有 CPU 群組的垃圾收集，並在建立和平衡堆積時將所有核心納入考慮。
 
 > [!NOTE]
-> 此元素僅適用於垃圾回收線程。 要使運行時能夠跨所有 CPU 組分發使用者線程,還必須啟用[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)元素。
+> 這個元素只適用于垃圾收集執行緒。 若要讓執行時間將使用者執行緒分散到所有的 CPU 群組，您也必須啟用 [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) 元素。
 
 ## <a name="example"></a>範例
 
-下面的範例展示如何為多個 CPU 組啟用垃圾回收。
+下列範例顯示如何啟用多個 CPU 群組的垃圾收集。
 
 ```xml
 <configuration>
@@ -77,7 +77,7 @@ ms.locfileid: "82102888"
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行時設定架構](index.md)
-- [設定檔案架構](../index.md)
-- [關閉並發垃圾資源](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [執行時間設定架構](index.md)
+- [設定檔架構](../index.md)
+- [停用並行垃圾收集](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [工作站和伺服器記憶體回收](../../../../standard/garbage-collection/workstation-server-gc.md)

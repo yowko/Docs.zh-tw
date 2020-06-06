@@ -22,10 +22,10 @@ helpviewer_keywords:
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73039152"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework 的組態檔結構描述
@@ -39,13 +39,13 @@ ms.locfileid: "73039152"
 
 ## <a name="in-this-section"></a>本節內容
 
-[ **\<configuration >** 元素](configuration-element.md)\
+[**\<configuration>** 元素](configuration-element.md)\
 所有設定檔的最上層元素。
 
-[ **\<assemblyBinding >** 元素](assemblybinding-element-for-configuration.md)\
+[**\<assemblyBinding>** 元素](assemblybinding-element-for-configuration.md)\
 指定位於組態層級的組件繫結原則。
 
-[ **\<linkedConfiguration >** 元素](linkedconfiguration-element.md)\
+[**\<linkedConfiguration>** 元素](linkedconfiguration-element.md)\
 指定要包含的組態檔。
 
 [啟動設定架構](./startup/index.md)\
@@ -54,13 +54,13 @@ ms.locfileid: "73039152"
 [執行時間設定架構](./runtime/index.md)\
 設定元件系結和執行時間行為的元素。
 
-[網路設定結構描述](./network/index.md)\
+[網路設定架構](./network/index.md)\
 指定 .NET Framework 如何連接到網際網路的元素。
 
 [密碼編譯設定架構](./cryptography/index.md)\
 將易記的演算法名稱對應至實密碼編譯演算法之類別的元素。
 
-設定[區段架構](configuration-sections-schema.md)\
+[設定區段架構](configuration-sections-schema.md)\
 用來建立和使用自訂設定區段的元素。
 
 [追蹤和 Debug 設定架構](./trace-debug/index.md)\
@@ -79,15 +79,15 @@ ms.locfileid: "73039152"
 用於設定 ASP.NET 如何與主應用程式（例如 IIS）搭配運作的元素。 用於 *Aspnet.config* 檔案。
 
 [Windows Forms 設定架構](winforms/index.md)\
-Windows Forms 應用程式設定 區段中的所有元素，包括多監視器和高 DPI 支援等自訂。
+Windows Forms 應用程式設定] 區段中的所有元素，包括多監視器和高 DPI 支援等自訂。
 
 [WCF 設定架構](./wcf/index.md)\
 所有可讓您設定 WCF 服務和用戶端應用程式的元素。
 
-[WCF](./wcf-directive/index.md)指示詞語法\
-描述 `@ServiceHost` 指示詞，這個指示詞會定義 .svc 編譯器所使用的頁面特定屬性。
+[WCF 指示詞語法](./wcf-directive/index.md)\
+描述指示詞，這個指示詞會 `@ServiceHost` 定義 .svc 編譯器所使用的頁面特定屬性。
 
-[WIF 組態結構描述](windows-identity-foundation/index.md)\
+[WIF 設定架構](windows-identity-foundation/index.md)\
 Windows Identity Foundation （WIF）設定架構的所有元素。
 
 ## <a name="related-sections"></a>相關章節

@@ -3,19 +3,19 @@ title: <idn> 項目 (URI 設定)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "71698165"
 ---
-# <a name="idn-element-uri-settings"></a>\<idn > 元素（Uri 設定）
+# <a name="idn-element-uri-settings"></a>\<idn> 項目 (URI 設定)
 
 指定是否要將國際化功能變數名稱（IDN）剖析套用至功能變數名稱。
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<idn >**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<idn>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -25,12 +25,12 @@ ms.locfileid: "71698165"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和元素  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
 
-|**目**|**說明**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否將國際化功能變數名稱（IDN）剖析套用至功能變數名稱，預設值為 none。|  
 
@@ -40,13 +40,13 @@ ms.locfileid: "71698165"
   
 ### <a name="parent-elements"></a>父元素
 
-|**目**|**說明**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
 |[uri](uri-element-uri-settings.md)|包含指定 .NET Framework 如何處理使用統一資源識別項（Uri）所表示之 web 位址的設定。|  
 
 ## <a name="remarks"></a>備註
 
-.NET Framework 3.5 中已擴充現有的 <xref:System.Uri> 類別。 3.0 SP1 和 2.0 SP1，支援國際資源識別碼（IRI）和國際化功能變數名稱（IDN）。 目前的使用者除非特別啟用 IRI 和 IDN 支援，否則不會看到 .NET Framework 2.0 行為的任何變更。 這可確保應用程式與舊版 .NET framework 相容。
+現有的 <xref:System.Uri> 類別已在 .NET Framework 3.5 中擴充。 3.0 SP1 和 2.0 SP1，支援國際資源識別碼（IRI）和國際化功能變數名稱（IDN）。 目前的使用者除非特別啟用 IRI 和 IDN 支援，否則不會看到 .NET Framework 2.0 行為的任何變更。 這可確保應用程式與舊版 .NET framework 相容。
 
 若要啟用對 IRI 的支援，必須進行下列兩項變更：
 
@@ -62,7 +62,7 @@ ms.locfileid: "71698165"
 
 - 已啟用 idn = 全部  
 
-     這個值會將任何 Unicode 功能變數名稱轉換成其 Punycode 對應項（IDN 名稱）。
+     這個值會將任何 Unicode 網域名稱轉換成 Punycode 的對等名稱 (IDN 名稱)。
 
 - 已啟用 idn = AllExceptIntranet
 
@@ -70,7 +70,7 @@ ms.locfileid: "71698165"
 
 - 已啟用 idn = 無
 
-     這個值不會將任何 Unicode 功能變數名稱轉換成使用 Punycode。 這是與 .NET Framework 2.0 行為一致的預設值。
+     這個值不會轉換任何 Unicode 網域名稱即可使用 Punycode。 這是預設值，與 .NET Framework 2.0 的行為一致。
 
  啟用 IDN 會將網域名稱中所有的 Unicode 標籤轉換成對等的 Punycode。 Punycode 名稱只包含 ASCII 字元，而且開頭一律為前置詞 xn--。 這是為了支援網際網路上現有的 DNS 伺服器，因為大部分的 DNS 伺服器僅支援 ASCII 字元 (請參閱 RFC 3940)。
 

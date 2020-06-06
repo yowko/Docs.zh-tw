@@ -1,19 +1,19 @@
 ---
-title: <Application> 元素（.NET Native）
+title: <Application>元素（.NET Native）
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "73128524"
 ---
-# <a name="application-element-net-native"></a>\<應用程式 > 元素（.NET Native）
+# <a name="application-element-net-native"></a>\<Application>元素（.NET Native）
 做為容器，以包含整個應用程式中，可在執行階段將中繼資料用於反映的類型和類型成員，並將執行階段反映原則套用至應用程式中的所有程式元素。  
   
  \<Directives> 項目  
-\<Application> 元素 (rd.xml)  
+\<Application>元素（rd .xml）  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73128524"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。 在「子元素」表格中，原則會指出可在執行階段供特定程式元素使用的中繼資料種類。  
+ 下列章節說明屬性、子元素和父元素。 在「子元素」表格中，原則會指出可在執行階段供特定程式元素使用的中繼資料種類。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -50,18 +50,18 @@ ms.locfileid: "73128524"
   
 ## <a name="all-attributes"></a>所有屬性  
   
-|值|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*policy_setting*|要讓這個原則在應用程式中套用至類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Assembly>](assembly-element-net-native.md)|將原則套用至特定組件中的所有類型。|  
 |[\<Namespace>](namespace-element-net-native.md)|將原則套用至特定命名空間中的所有類型。|  
 |[\<Type>](type-element-net-native.md)|將原則套用至特定類型，例如類別或結構。|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將原則套用至建構的泛型類型。 例如，[\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目可用來定義 `List<String>` 類型的原則。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將原則套用至建構的泛型類型。 例如， [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 元素可用來定義類型的原則 `List<String>` 。|  
 |[\<Method>](method-element-net-native.md)|將原則套用至特定類型上的方法。|  
 |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|將原則套用至建構的泛型方法。|  
 |[\<Property>](property-element-net-native.md)|將原則套用至特定類型上的屬性。|  
@@ -70,22 +70,22 @@ ms.locfileid: "73128524"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<Directives>](directives-element-net-native.md)|執行階段指示詞檔案的根項目。|  
   
 ## <a name="remarks"></a>備註  
- [\<Directives>](directives-element-net-native.md) 元素可以包含零或一個 `<Application>` 元素。 不支援單一反映指示詞檔案中有多個 `<Application>` 元素。  
+ [\<Directives>](directives-element-net-native.md)元素可以包含零個或一個 `<Application>` 元素。 不支援單一反映指示詞檔案中有多個 `<Application>` 元素。  
   
  `<Application>` 元素有兩種用法：  
   
-- 做為容器，以定義在執行階段會需要其中繼資料的程式元素。 在此情況下，`<Application>` 元素不需要任何屬性。 在編譯時期，編譯器工具會在所有程式庫 (包括 .NET Framework 核心程式庫) 中，搜尋 `<Application>` 元素的子元素所識別的程式元素。 相對地，編譯器工具只會在 [\<Library>](library-element-net-native.md) 元素指定的程式庫中，搜尋 [\<Library>](library-element-net-native.md) 的子元素所識別的程式元素。  
+- 做為容器，以定義在執行階段會需要其中繼資料的程式元素。 在此情況下，`<Application>` 元素不需要任何屬性。 在編譯時期，編譯器工具會在所有程式庫 (包括 .NET Framework 核心程式庫) 中，搜尋 `<Application>` 元素的子元素所識別的程式元素。 相反地，編譯器工具只會搜尋元素所指定的程式庫， [\<Library>](library-element-net-native.md) 以代表的子項目所識別的程式元素 [\<Library>](library-element-net-native.md) 。  
   
-- 做為用來為反映、序列化和 interop 設定整個應用程式原則的元素。 `<Application>` 元素的屬性會定義整個應用程式原則，這可能會被 `<Application>` 或 [\<Library>](library-element-net-native.md) 元素定義的子元素覆寫。  
+- 做為用來為反映、序列化和 interop 設定整個應用程式原則的元素。 元素的屬性 `<Application>` 會定義整個應用程式原則，這可能會由或元素所定義的子項目覆 `<Application>` 寫 [\<Library>](library-element-net-native.md) 。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [\<程式庫 > 元素](library-element-net-native.md)
-- [\<指示詞 > 元素](directives-element-net-native.md)
+- [\<Library>元素](library-element-net-native.md)
+- [\<Directives>元素](directives-element-net-native.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
