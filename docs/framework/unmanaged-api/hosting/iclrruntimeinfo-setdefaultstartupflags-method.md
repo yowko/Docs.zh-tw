@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-ms.openlocfilehash: 7d201962976d198372226eb686696fcdccf3eb69
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: aa02d42511a863434fef236f90afae2c5417a78d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762158"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504013"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags 方法
-設定將用來啟動執行時間的啟動旗標和主機設定檔。 這個方法會取代 `startupFlags` [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)和[CorBindToRuntimeHost](corbindtoruntimehost-function.md)函式中的參數使用。  
+設定將用來啟動執行時間的啟動旗標和主機設定檔。 這個方法會取代 `startupFlags` [CorBindToRuntimeEx](corbindtoruntimeex-function.md)和[CorBindToRuntimeHost](corbindtoruntimehost-function.md)函式中的參數使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ HRESULT SetDefaultStartupFlags(
   
 ## <a name="parameters"></a>參數  
  `dwStartupFlags`  
- 在要設定的主機啟動旗標。 使用與[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)和[CorBindToRuntimeHost](corbindtoruntimehost-function.md)函數相同的旗標。  
+ 在要設定的主機啟動旗標。 使用與[CorBindToRuntimeEx](corbindtoruntimeex-function.md)和[CorBindToRuntimeHost](corbindtoruntimehost-function.md)函數相同的旗標。  
   
  `pwzHostConfigFile`  
  在要設定的主機設定檔的目錄路徑。  
@@ -43,7 +43,7 @@ HRESULT SetDefaultStartupFlags(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及指出方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|Description|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
   
@@ -63,4 +63,4 @@ HRESULT SetDefaultStartupFlags(
 
 - [ICLRRuntimeInfo 介面](iclrruntimeinfo-interface.md)
 - [裝載介面](hosting-interfaces.md)
-- [裝載](index.md)
+- [Hosting](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52118dc9-fe6e-4b39-aa48-c3cc3ea4214d
 topic_type:
 - apiref
-ms.openlocfilehash: e5fa3647c86d97730e7ad6a2576dd34af75251d6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f9a58a70b5264d7f1eb33fb0e09c702c94a13e85
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433953"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491750"
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams 方法
 列舉 ParamDef 語彙基元，其代表指定 MethodDef 語彙基元所參考之方法的參數。  
@@ -51,25 +51,25 @@ HRESULT EnumParams (
  [in] `rParams` 陣列的大小上限。  
   
  `pcTokens`  
- 脫銷`rParams`中傳回的 ParamDef token 數目。  
+ 脫銷在中傳回的 ParamDef token 數目 `rParams` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|已成功傳回 `EnumParams`。|  
-|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcTokens` 為零。|  
+|`S_OK`|`EnumParams`已成功傳回。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下， `pcTokens` 是零。|  
   
-## <a name="requirements"></a>需求  
- **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平臺：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

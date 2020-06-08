@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: fb2ecc80f272a3fc9b63b20c5956e7a28f117784
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 727cd82226b9a59c4879ffea5e87f93dd5fe38c9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703469"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504104"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure 方法
 指定當發生指定的失敗時，common language runtime （CLR）應採取的原則動作。  
@@ -54,7 +54,7 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|無法為指定的作業設定原則動作，或為操作指定了不正確原則動作。|  
   
 ## <a name="remarks"></a>備註  
- 根據預設，CLR 會在無法配置資源（例如記憶體）時擲回例外狀況。 `SetActionOnFailure`允許主機藉由指定失敗時所要採取的原則動作來覆寫此行為。 下表顯示支援的[EClrFailure](eclrfailure-enumeration.md)和[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值組合。 （ [EClrFailure](eclrfailure-enumeration.md)值中會省略 FAIL_ 前置詞）。  
+ 根據預設，CLR 會在無法配置資源（例如記憶體）時擲回例外狀況。 `SetActionOnFailure`允許主機藉由指定失敗時所要採取的原則動作來覆寫此行為。 下表顯示支援的[EClrFailure](eclrfailure-enumeration.md)和[EPolicyAction](epolicyaction-enumeration.md)值組合。 （ [EClrFailure](eclrfailure-enumeration.md)值中會省略 FAIL_ 前置詞）。  
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
@@ -69,7 +69,7 @@ HRESULT SetActionOnFailure (
 |`eRudeExitProcess`|X|X|X|X|X|N/A||  
 |`eDisableRuntime`|X|X|X|X|X|N/A||  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

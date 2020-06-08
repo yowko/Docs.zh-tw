@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0afc1197-2a5b-424f-8b82-9cb59a7e00db
 topic_type:
 - apiref
-ms.openlocfilehash: 841953625235406f013e9f140ad91c7b65680e47
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 12b4b897f9dc51175037d39c0368b6ce59fefefb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863949"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498475"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken 方法
 取得指定元資料標記之類別的識別碼。 這個方法在 .NET Framework 版本2.0 中已過時。 請改用[ICorProfilerInfo2：： GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) 。  
@@ -39,23 +39,23 @@ HRESULT GetClassFromToken(
  在包含類別之模組的識別碼。  
   
  `typeDef`  
- 在參考類別的 `mdTypeDef` 中繼資料 token。  
+ 在`mdTypeDef`參考類別的元資料標記。  
   
  `cTypeArgs`  
  脫銷類別識別碼的指標。  
   
 ## <a name="remarks"></a>備註  
- 這個方法已過時;請改用適用于所有類型的 `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs`。  
+ 這個方法已過時;請改用 `ICorProfilerInfo2::GetClassFromTokenAndTypeArgs` 適用于所有類型的。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework 版本：** 1.0、1.1  
+ **.NET Framework 版本：** 1.0、1。1  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)

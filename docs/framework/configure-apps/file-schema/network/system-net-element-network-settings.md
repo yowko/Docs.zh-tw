@@ -1,5 +1,6 @@
 ---
 title: <system.Net> 項目 (網路設定)
+description: <system.Net> network settings 元素包含的設定，可指定 .NET Framework 如何連接到 .NET Framework 中的網路選項。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 88098f2afaad9728e38c4f9935b45f45826a0ca9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154552"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504481"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> 項目 (網路設定)
 包含會指定 .NET Framework 如何連接至網路的設定。  
@@ -36,7 +37,7 @@ ms.locfileid: "79154552"
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[authenticationModules](authenticationmodules-element-network-settings.md)|指定用來驗證網際網路要求的模組。|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|指定網際網路主機的最大連接數目。|  
@@ -48,7 +49,7 @@ ms.locfileid: "79154552"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[設定](../configuration-element.md)|包含所有命名空間的設定。|  
   

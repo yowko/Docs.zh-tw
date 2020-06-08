@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ec34cc13-45a3-4695-abc3-b3347d4e6fc2
 topic_type:
 - apiref
-ms.openlocfilehash: 63f19fe899abd75380249e171f248480949bc471
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7faa4a5f7b1ca1fbf165c40eb3a3cb32a42a21a4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863903"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498332"
 ---
 # <a name="icorprofilerinfogeteventmask-method"></a>ICorProfilerInfo::GetEventMask 方法
 取得分析工具想要從 Common Language Runtime (CLR) 接收事件通知的目前事件分類。  
@@ -39,18 +39,18 @@ HRESULT GetEventMask(
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
-> 您應該呼叫[GetEventMask2](icorprofilerinfo5-geteventmask2-method.md)方法，而不是這個方法。 雖然 `SetEventMask` 方法會繼續受到支援，但[GetEventMask2](icorprofilerinfo5-geteventmask2-method.md)會提供額外的功能。  
+> 您應該呼叫[GetEventMask2](icorprofilerinfo5-geteventmask2-method.md)方法，而不是這個方法。 雖然此 `SetEventMask` 方法會繼續受到支援，但[GetEventMask2](icorprofilerinfo5-geteventmask2-method.md)會提供額外的功能。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [GetEventMask2 方法](icorprofilerinfo5-geteventmask2-method.md)
 - [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)

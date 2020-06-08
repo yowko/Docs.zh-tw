@@ -1,15 +1,16 @@
 ---
 title: FTP - .NET
+description: 深入瞭解 .NET Framework 使用 FtpWebRequest 和 FtpWebResponse 類別所提供的 FTP 通訊協定完整支援。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FTP
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
-ms.openlocfilehash: d945f03077a863d9e1baa6b59fe8a908566aba5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d21ca43cd1041df358dc5e2add9560fb33e85d83
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61642876"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502583"
 ---
 # <a name="ftp"></a>FTP
 
@@ -25,6 +26,6 @@ ms.locfileid: "61642876"
 
 ## <a name="see-also"></a>另請參閱
 
-- [通過代理訪問互聯網](accessing-the-internet-through-a-proxy.md)
+- [透過 Proxy 存取網際網路](accessing-the-internet-through-a-proxy.md)
 - [網路程式設計範例](network-programming-samples.md)
 - [使用應用程式通訊協定](using-application-protocols.md)

@@ -1,5 +1,6 @@
 ---
 title: <httpWebRequest> 項目 (網路設定)
+description: <httpWebRequest>網路設定元素會自訂 .NET Framework 中的 Web 要求參數。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59ab425dcef8ac5283035910a9d78a89a16be8b1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74087462"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504585"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest> 項目 (網路設定)
 自訂 Web 要求參數。  
@@ -39,19 +40,19 @@ ms.locfileid: "74087462"
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`maximumResponseHeadersLength`|指定回應標頭的最大長度（以 kb 為單位）。 預設值為 64。 -1 值表示回應標頭上不會加諸大小限制。|  
 |`maximumErrorResponseLength`|指定錯誤回應的最大長度（以 kb 為單位）。 預設值為 64。 值為-1 表示不會對錯誤回應施加任何大小限制。|  
 |`maximumUnauthorizedUploadLength`|指定上傳以回應未授權錯誤碼的最大長度（以位元組為單位）。 預設值為 -1。 -1 的值表示不會對上載加諸任何大小限制。|  
-|`useUnsafeHeaderParsing`|指定是否啟用不安全的標頭剖析。 預設值是 `false`。|  
+|`useUnsafeHeaderParsing`|指定是否啟用不安全的標頭剖析。 預設值為 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[設定](settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   

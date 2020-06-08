@@ -1,5 +1,6 @@
 ---
 title: <defaultProxy> 項目 (網路設定)
+description: <defaultProxy>Network settings 元素會在 .NET Framework 中設定超文字傳輸通訊協定（HTTP） proxy 伺服器。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 915fdc96dbd4d417f9c9e6aa3ff96de3026491ef
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698200"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504598"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy> 項目 (網路設定)
 設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。  
@@ -39,14 +40,14 @@ ms.locfileid: "71698200"
   
 ### <a name="attributes"></a>屬性  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
-|`enabled`|指定是否使用 Web Proxy。 預設值是 `true`。|  
-|`useDefaultCredentials`|指定此主機的預設認證是否用來存取 Web Proxy。 預設值是 `false`。|  
+|`enabled`|指定是否使用 Web Proxy。 預設值為 `true`。|  
+|`useDefaultCredentials`|指定此主機的預設認證是否用來存取 Web Proxy。 預設值為 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|提供一組位址的規則運算式，說明不使用 Proxy。|  
 |[module](module-element-network-settings.md)|將新的 Proxy 模組加入至應用程式。|  
@@ -54,7 +55,7 @@ ms.locfileid: "71698200"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   

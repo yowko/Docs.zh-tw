@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5604d21f-e6b7-490e-b469-42122a7568e1
 topic_type:
 - apiref
-ms.openlocfilehash: 6e045a99de9ad30516fd12a7b490e26c860bde7e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 157e6bc6cb9603fa9558ad6d39f0b086849fc7b0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866009"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499892"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage 方法
 通知分析工具，進程已收到遠端方法調用或啟用要求。  
@@ -46,20 +46,20 @@ HRESULT RemotingClientSendingMessage(
  這可讓您輕鬆地配對遠端呼叫和邏輯呼叫堆疊的建立。  
   
  `fIsAsync`  
- 在如果呼叫是非同步，則為 `true` 的值;否則，`false`。  
+ 在`true`如果呼叫是非同步，則值為，否則為 `false` 。  
   
 ## <a name="remarks"></a>備註  
  如果訊息要求是非同步，則要求可由任何任意執行緒服務。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

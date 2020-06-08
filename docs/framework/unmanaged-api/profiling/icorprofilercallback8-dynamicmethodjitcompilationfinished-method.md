@@ -1,5 +1,5 @@
 ---
-title: ICorProfiler回檔8：:DynamicMethodJIT編譯完成方法
+title: ICorProfilerCallback8：:D ynamicMethodJITCompilationFinished 方法
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationFinished
@@ -8,17 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: c2e9489654a0fe5fa65ec638ed0f991a6c01415a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 554cc93de934061e87322c7557e05545e5e7bc62
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175105"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499073"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfiler回檔8：:DynamicMethodJIT編譯完成方法
-[在 .NET 框架 4.7 和更高版本中支援]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8：:D ynamicMethodJITCompilationFinished 方法
+[在 .NET Framework 4.7 和更新版本中支援]  
   
-每當動態方法的 JIT 編譯完成時，通知探測器。  
+每當動態方法的 JIT 編譯完成時，就會通知分析工具。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,28 +32,28 @@ HRESULT DynamicMethodJITCompilationFinished(
   
 ## <a name="parameters"></a>參數  
 [in] `functionId`  
-啟動 JIT 編譯的記憶體中函數的識別碼。
+啟動 JIT 編譯之記憶體中函式的識別碼。
 
-[在]`hrStatus`指示 JIT 編譯是否成功的值。
+[in] `hrStatus`值，指出 JIT 編譯是否成功。
 
-[在]`fIsSafeToBlock`指示阻塞可能導致運行時等待調用執行緒從此回檔
-`true`返回;`false`指示阻塞不會影響運行時的操作。  
+[in] `fIsSafeToBlock` 
+ `true`若要指出封鎖可能會導致執行時間等候呼叫執行緒從這個回呼傳回，`false`表示封鎖不會影響執行時間的作業。  
 
 ## <a name="remarks"></a>備註  
 
-每當動態方法的 JIT 編譯完成時，都會觸發此回檔。 這包括各種 IL 存根和 LCG 方法。 其目的是向探測器編寫器提供足夠的資訊，以便向使用者標識編譯的方法。
+每當動態方法的 JIT 編譯完成時，就會觸發此回呼。 這包括各種 IL stub 和 LCG 方法。 其目標是要為 profiler 寫入器提供足夠的資訊，以向使用者識別已編譯的方法。
 
 > [!NOTE]
-> `functionId`值不能用於解析到其中繼資料權杖，因為動態方法沒有中繼資料。
+> `functionId`值無法用來解析其元資料標記，因為動態方法沒有中繼資料。
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

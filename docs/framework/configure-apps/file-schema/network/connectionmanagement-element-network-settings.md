@@ -1,5 +1,6 @@
 ---
 title: <connectionManagement> 項目 (網路設定)
+description: <connectionManagement>網路設定元素會指定 .NET Framework 的網路主機連線數目上限。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4ceec06fb0e21bfae67038efe0ce758d3d5b708f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154890"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504611"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement> 項目 (網路設定)
 指定連接至網路主機的連線數目上限。  
@@ -37,7 +38,7 @@ ms.locfileid: "79154890"
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[add](add-element-for-connectionmanagement-network-settings.md)|將 IP 位址或 DNS 名稱加入連線管理清單中。|  
 |[明確](clear-element-for-connectionmanagement-network-settings.md)|清除連接管理清單。|  
@@ -45,7 +46,7 @@ ms.locfileid: "79154890"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   
