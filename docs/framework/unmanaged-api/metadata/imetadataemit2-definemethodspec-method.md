@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: a5d9342b8bfe650106ccf9daf2a91dfbcd575446
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e067dc4943e6847177c13a683703e3a649a49e4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175534"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503812"
 ---
-# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="49bfb-102">IMetaDataEmit2::DefineMethodSpec 方法</span><span class="sxs-lookup"><span data-stu-id="49bfb-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
-<span data-ttu-id="49bfb-103">創建方法的泛型實例，並獲取定義中的權杖。</span><span class="sxs-lookup"><span data-stu-id="49bfb-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
+# <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="c6342-102">IMetaDataEmit2::DefineMethodSpec 方法</span><span class="sxs-lookup"><span data-stu-id="c6342-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
+<span data-ttu-id="c6342-103">建立方法的泛型實例，並取得定義的 token。</span><span class="sxs-lookup"><span data-stu-id="c6342-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="49bfb-104">語法</span><span class="sxs-lookup"><span data-stu-id="49bfb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6342-104">語法</span><span class="sxs-lookup"><span data-stu-id="c6342-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineMethodSpec (  
@@ -36,29 +36,29 @@ HRESULT DefineMethodSpec (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="49bfb-105">參數</span><span class="sxs-lookup"><span data-stu-id="49bfb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c6342-105">參數</span><span class="sxs-lookup"><span data-stu-id="c6342-105">Parameters</span></span>  
  `tkParent`  
- <span data-ttu-id="49bfb-106">[在]用於創建泛型實例的方法的權杖。</span><span class="sxs-lookup"><span data-stu-id="49bfb-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="49bfb-107">權杖必須為 類型`mdMethodDef`或`mdMemberRef`。</span><span class="sxs-lookup"><span data-stu-id="49bfb-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
+ <span data-ttu-id="c6342-106">在要建立泛型實例之方法的 token。</span><span class="sxs-lookup"><span data-stu-id="c6342-106">[in] A token for the method of which to create the generic instance.</span></span> <span data-ttu-id="c6342-107">Token 的類型必須是 `mdMethodDef` 或 `mdMemberRef` 。</span><span class="sxs-lookup"><span data-stu-id="c6342-107">The token must be of type `mdMethodDef` or `mdMemberRef`.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="49bfb-108">[在]指向方法的二進位 COM+ 簽名的指標。</span><span class="sxs-lookup"><span data-stu-id="49bfb-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
+ <span data-ttu-id="c6342-108">在方法之二進位 COM + 簽章的指標。</span><span class="sxs-lookup"><span data-stu-id="c6342-108">[in] A pointer to the binary COM+ signature of the method.</span></span>  
   
  `cbSibBlob`  
- <span data-ttu-id="49bfb-109">[在]的大小（以位元組為單位）的大小`pvSigBlob`。</span><span class="sxs-lookup"><span data-stu-id="49bfb-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
+ <span data-ttu-id="c6342-109">在的大小（以位元組為單位） `pvSigBlob` 。</span><span class="sxs-lookup"><span data-stu-id="c6342-109">[in] The size, in bytes, of `pvSigBlob`.</span></span>  
   
  `pmi`  
- <span data-ttu-id="49bfb-110">[出]方法的中繼資料簽名定義的權杖。</span><span class="sxs-lookup"><span data-stu-id="49bfb-110">[out] A token to the metadata signature definition of the method.</span></span>  
+ <span data-ttu-id="c6342-110">脫銷方法之中繼資料簽章定義的 token。</span><span class="sxs-lookup"><span data-stu-id="c6342-110">[out] A token to the metadata signature definition of the method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="49bfb-111">需求</span><span class="sxs-lookup"><span data-stu-id="49bfb-111">Requirements</span></span>  
- <span data-ttu-id="49bfb-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="49bfb-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6342-111">規格需求</span><span class="sxs-lookup"><span data-stu-id="c6342-111">Requirements</span></span>  
+ <span data-ttu-id="c6342-112">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c6342-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="49bfb-113">**標題：** 科爾赫</span><span class="sxs-lookup"><span data-stu-id="49bfb-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c6342-113">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="c6342-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="49bfb-114">**庫：** 用作 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="49bfb-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c6342-114">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="c6342-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="49bfb-115">**.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="49bfb-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c6342-115">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6342-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="49bfb-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="49bfb-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6342-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6342-116">See also</span></span>
 
-- [<span data-ttu-id="49bfb-117">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="49bfb-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="49bfb-118">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="49bfb-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="c6342-117">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="c6342-117">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="c6342-118">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="c6342-118">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
