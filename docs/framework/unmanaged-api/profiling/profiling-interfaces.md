@@ -6,17 +6,17 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: 8b6b9acff2945e2d8fd684bfa31e4af086ea5ab9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868144"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494029"
 ---
 # <a name="profiling-interfaces"></a>分析介面
 本節說明 Unmanaged 介面，這類介面可讓您分析由 Common Language Runtime (CLR) 所執行的程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ICLRProfiling 介面](iclrprofiling-interface.md)  
  提供[AttachProfiler](iclrprofiling-attachprofiler-method.md)方法，可讓 profiler 附加至執行中的進程。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "76868144"
  使用 .NET Framework 2.0 及更新版本中支援的方法，延伸 `ICorProfilerInfo` 介面。  
   
  [ICorProfilerInfo3 介面](icorprofilerinfo3-interface.md)  
- 使用 .NET Framework 4 和更新版本中支援的方法來擴充 `ICorProfilerInfo2` 介面。  
+ `ICorProfilerInfo2`使用 .NET Framework 4 和更新版本中支援的方法來擴充介面。  
   
  [ICorProfilerInfo4 介面](icorprofilerinfo4-interface.md)  
  提供程式碼分析工具用於和 CLR 通訊，以控制事件監視以及要求資訊的方法。  
@@ -81,7 +81,7 @@ ms.locfileid: "76868144"
  提供方法，以循序逐一查看由應用程式或分析工具所載入的模組集合。  
   
  [ICorProfilerObjectEnum 介面](icorprofilerobjectenum-interface.md)  
- 提供方法，依序逐一查看由[ngen.exe （原生映射](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)產生器）所產生的凍結物件集合。  
+ 提供方法，依序逐一查看由[ngen.exe （原生映射](../../tools/ngen-exe-native-image-generator.md)產生器）所產生的凍結物件集合。  
   
  [ICorProfilerThreadEnum 介面](icorprofilerthreadenum-interface.md)  
  提供方法，以循序逐一查看 CLR 中的執行緒集合。  

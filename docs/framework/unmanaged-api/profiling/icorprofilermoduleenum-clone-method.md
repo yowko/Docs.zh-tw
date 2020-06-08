@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7dec7e36-8d88-416d-b437-abf98b76c1df
 topic_type:
 - apiref
-ms.openlocfilehash: a6b36883ec0914426b4f4c937390c1622faead25
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: ccbb051ac30fb25199ce12c16fff74bb0b9944fa
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868287"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495082"
 ---
 # <a name="icorprofilermoduleenumclone-method"></a>ICorProfilerModuleEnum::Clone 方法
 取得此[ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md)介面之複本的介面指標。  
@@ -35,16 +35,16 @@ HRESULT Clone([out] ICorProfilerObjectEnum **ppEnum);
  `ppEnum`  
  脫銷介面指標的指標，指向這個[ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md)介面的複本。 列舉值的複本會與此列舉值分開維護自己的列舉狀態。 不過，複本的初始游標位置與此列舉值的目前資料指標位置相同。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerModuleEnum 介面](icorprofilermoduleenum-interface.md)
 - [分析介面](profiling-interfaces.md)

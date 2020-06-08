@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aec05744-e8d4-44c6-b4a8-e583229ac34e
 topic_type:
 - apiref
-ms.openlocfilehash: 98af9931e219c384b017d3c70fe21cdb6e052ac1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 21ebd0c64d6c8bbdac327258ad4c7ffec83a1ce9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615952"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504312"
 ---
 # <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a>ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference 方法
 取得具有指定之識別類型之元件所參考之元件識別的[ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md)列舉值。  
@@ -44,7 +44,7 @@ HRESULT GetProbingAssembliesFromReference (
  在提供供未來擴充性之用。 CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT 是目前版本的 common language runtime （CLR）所支援的唯一值。  
   
  `pwzReferenceIdentity`  
- 在不透明的元件系結識別，通常是從呼叫[ICLRAssemblyIdentityManager：： GetBindingIdentityFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getbindingidentityfromfile-method.md)或[ICLRAssemblyIdentityManager：： GetBindingIdentityFromStream](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md)方法傳回。  
+ 在不透明的元件系結識別，通常是從呼叫[ICLRAssemblyIdentityManager：： GetBindingIdentityFromFile](iclrassemblyidentitymanager-getbindingidentityfromfile-method.md)或[ICLRAssemblyIdentityManager：： GetBindingIdentityFromStream](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md)方法傳回。  
   
  `ppProbingAssemblyEnum`  
  脫銷列舉值的介面指標 `ICLRProbingAssemblyEnum` ，其中包含由所識別之元件所參考的元件參考 `pwzReferenceIdentity` 。  
@@ -60,7 +60,7 @@ HRESULT GetProbingAssembliesFromReference (
 |HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
 |E_FAIL|發生不明的嚴重失敗。 如果方法傳回 E_FAIL，就無法在進程內使用 CLR。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

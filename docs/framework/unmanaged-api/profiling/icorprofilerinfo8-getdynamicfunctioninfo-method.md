@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eaf33f3b0de7a18e400cd16d29c046784e2e190f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861680"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495316"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8：： GetDynamicFunctionInfo 方法
 
@@ -38,11 +38,11 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `functionId`
 
-  在中 \[] 要取得其資訊的函式識別碼。
+  \[in] 要取得其資訊的函式識別碼。
 
 - `moduleId`
 
-  \[in]：定義函式之父類別所在模組的指標。
+  \[in] 定義函式之父類別所在模組的指標。
 
 - `ppvSig`
 
@@ -54,15 +54,15 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `cchName`
 
-  \[in] `wszName` 陣列的大小上限。
+  \[in] 陣列的大小上限 `wszName` 。
 
 - `pcchName`
 
-  \[out] `wszName` 陣列中的字元數。
+  \[out] 陣列中的字元數 `wszName` 。
 
 - `wszName`
 
-  \[out] `WCHAR` 的陣列，這是函式的名稱（如果有的話）。
+  \[out] 陣列 `WCHAR` ，其中是函式的名稱（如果有的話）。
 
 ## <a name="remarks"></a>備註
 
@@ -70,16 +70,16 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 此 API 可用於抓取動態方法的相關資訊，包括易記名稱（如果有的話）。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** CorProf.idl、CorProf.h
 
 **程式庫：** CorGuids.lib
 
-**.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo8 介面](icorprofilerinfo8-interface.md)

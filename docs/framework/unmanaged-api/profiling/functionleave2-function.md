@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: 0b1ecd1266528f8a08ef114de2f111dd0f71ca8b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866927"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500659"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 函式
 通知分析工具，函式即將傳回給呼叫端，並提供堆疊框架和函數傳回值的相關資訊。  
@@ -39,28 +39,28 @@ void __stdcall FunctionLeave2 (
 
 - `funcId`
 
-  中的 \[] 所傳回之函式的識別碼。
+  \[in] 傳回的函式識別碼。
 
 - `clientData`
 
-  \[in]）重新對應的函式識別碼，這是先前透過[FunctionIDMapper](functionidmapper-function.md)函數指定的 profiler。
+  \[in] 重新對應的函式識別碼，這是先前透過[FunctionIDMapper](functionidmapper-function.md)函數指定的 profiler。
 
 - `func`
 
-  \[in]） `COR_PRF_FRAME_INFO` 值，指向堆疊框架的相關資訊。
+  \[in] `COR_PRF_FRAME_INFO` 值，指向堆疊框架的相關資訊。
 
   分析工具應該將此視為不透明的控制碼，以便在[ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)方法中傳回給執行引擎。  
   
 - `retvalRange`
 
-  \[in]） [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)結構的指標，指定函式傳回值的記憶體位置。
+  \[in] [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)結構的指標，指定函式傳回值的記憶體位置。
 
-  為了存取傳回值資訊，必須設定 `COR_PRF_ENABLE_FUNCTION_RETVAL` 旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標。
+  為了存取傳回值資訊， `COR_PRF_ENABLE_FUNCTION_RETVAL` 必須設定旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標。
 
 ## <a name="remarks"></a>備註  
- `FunctionLeave2` 函數傳回之後，`func` 和 `retvalRange` 參數的值無效，因為這些值可能會變更或終結。  
+ 當函式傳回 `func` 時，和參數的值 `retvalRange` 無效， `FunctionLeave2` 因為這些值可能會變更或終結。  
   
- `FunctionLeave2` 函數是回呼;您必須加以執行。 此執行必須使用 `__declspec`（`naked`）儲存類別屬性。  
+ 函式 `FunctionLeave2` 是回呼; 您必須加以執行。 此執行必須使用 `__declspec` （ `naked` ）儲存類別屬性。  
   
  在呼叫此函式之前，執行引擎不會儲存任何暫存器。  
   
@@ -68,20 +68,20 @@ void __stdcall FunctionLeave2 (
   
 - 結束時，您必須透過關閉其呼叫者推送的所有參數來還原堆疊。  
   
- `FunctionLeave2` 的執行不應該封鎖，因為它會延遲垃圾收集。 執行不應嘗試垃圾收集，因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集，執行時間將會封鎖，直到 `FunctionLeave2` 傳回為止。  
+ 的執行 `FunctionLeave2` 不應該封鎖，因為它會延遲垃圾收集。 執行不應嘗試垃圾收集，因為堆疊可能不會處於垃圾收集的唯讀狀態。 如果嘗試垃圾收集，執行時間將會封鎖，直到傳回為止 `FunctionLeave2` 。  
   
- 此外，`FunctionLeave2` 函式不能呼叫 managed 程式碼，或以任何方式執行 managed 記憶體配置。  
+ 此外，函式 `FunctionLeave2` 不能呼叫 managed 程式碼，或以任何方式執行 managed 記憶體配置。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Corprof.idl .idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [FunctionEnter2 函式](functionenter2-function.md)
 - [FunctionTailcall2 函式](functiontailcall2-function.md)

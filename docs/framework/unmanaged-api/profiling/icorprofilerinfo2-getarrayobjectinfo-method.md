@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-ms.openlocfilehash: 839cd574e5352b74b47cd6242d5706bc6405d439
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 368b8f270797beb525e0745a29990667913f4071
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862902"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497347"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo 方法
 取得陣列物件的詳細資訊。  
@@ -50,21 +50,21 @@ HRESULT GetArrayObjectInfo(
  脫銷包含整數的陣列，每個都代表陣列維度的下限。  
   
  `ppData`  
- 脫銷陣列的原始緩衝區位址指標，會根據C++慣例進行配置。  
+ 脫銷陣列的原始緩衝區位址指標，根據 c + + 慣例配置。  
   
 ## <a name="remarks"></a>備註  
- `pDimensionSizes` 和 `pDimensionLowerBounds` 是平行陣列，因此位於每個陣列中相同索引處的元素都是相同實體的特性。  
+ `pDimensionSizes`和 `pDimensionLowerBounds` 是平行陣列，因此位於每個陣列中相同索引的元素都是相同實體的特性。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 介面](icorprofilerinfo2-interface.md)

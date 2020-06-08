@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-ms.openlocfilehash: 87fe0b10f0a1eefa8154c40d39b54285990c410c
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: cca73eec663b9afd12ecea5ab9d7073ea0168d33
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805037"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501552"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore 介面
 提供的方法可讓主機獨立載入元件和模組，而不受 common language runtime （CLR）的影響。  
@@ -28,7 +28,7 @@ ms.locfileid: "83805037"
   
 |方法|描述|  
 |------------|-----------------|  
-|[ProvideAssembly 方法](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)|取得對[IHostAssemblyManager：： GetNonHostStoreAssemblies](ihostassemblymanager-getnonhoststoreassemblies-method.md)的呼叫所傳回之[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)未參考的元件參考。|  
+|[ProvideAssembly 方法](ihostassemblystore-provideassembly-method.md)|取得對[IHostAssemblyManager：： GetNonHostStoreAssemblies](ihostassemblymanager-getnonhoststoreassemblies-method.md)的呼叫所傳回之[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)未參考的元件參考。|  
 |[ProvideModule 方法](ihostassemblystore-providemodule-method.md)|解析元件或連結（非內嵌）資源檔內的模組。|  
   
 ## <a name="remarks"></a>備註  
