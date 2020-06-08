@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b5f9b41e-7301-429c-911f-21d5422292b3
 topic_type:
 - apiref
-ms.openlocfilehash: 4e72cd8bee2cb4f35155d7b99cfe8d9cf63f463a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f577e9252d97ec188ff1076fd8340336b16c8257
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616069"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504325"
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent 介面
-提供[IActionOnCLREvent：： OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)方法，它會在使用[ICLROnEventManager：： RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)方法呼叫註冊的事件上執行回呼。  
+提供[IActionOnCLREvent：： OnEvent](iactiononclrevent-onevent-method.md)方法，它會在使用[ICLROnEventManager：： RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)方法呼叫註冊的事件上執行回呼。  
   
 ## <a name="methods"></a>方法  
   
@@ -30,7 +30,7 @@ ms.locfileid: "83616069"
 |------------|-----------------|  
 |[OnEvent 方法](iactiononclrevent-onevent-method.md)|針對已註冊的事件執行回呼。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

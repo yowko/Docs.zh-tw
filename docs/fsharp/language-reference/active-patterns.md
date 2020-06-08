@@ -1,23 +1,23 @@
 ---
 title: 現用模式
-description: 瞭解如何使用活動模式定義在 F# 程式設計語言中細分輸入資料的命名分區。
+description: '瞭解如何使用現用模式來定義以 F # 程式設計語言細分輸入資料的命名分割。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 898ef201369683bfd49d53e863e86f919f5837fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b6da38baa35f30ae6de8a930be60a4e4fc0fc0d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187064"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493887"
 ---
 # <a name="active-patterns"></a>現用模式
 
-*活動模式*使您能夠定義細分輸入資料的命名分區，以便可以在模式匹配運算式中使用這些名稱，就像對受歧視聯合一樣。 您可以使用作用中的模式，以自訂方式分解每個部分的資料。
+*現用模式*可讓您定義用來細分輸入資料的命名分割，如此一來，您就可以在模式比對運算式中使用這些名稱，就像您針對區分聯集所做的一樣。 您可以使用作用中的模式，以自訂方式分解每個部分的資料。
 
 ## <a name="syntax"></a>語法
 
 ```fsharp
 // Active pattern of one choice.
-let (|identifier|) [arguments] valueToMatch= expression
+let (|identifier|) [arguments] valueToMatch = expression
 
 // Active Pattern with multiple choices.
 // Uses a FSharp.Core.Choice<_,...,_> based on the number of case names. In F#, the limitation n <= 7 applies.
@@ -30,17 +30,17 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 ## <a name="remarks"></a>備註
 
-在前面的語法中，識別碼是由*參數*表示的輸入資料分區的名稱，或者換句話說，是參數所有值集的子集的名稱。 活動模式定義中最多隻能有七個分區。 運算式*描述*要將資料分解到的表單。 可以使用活動模式定義定義規則，以確定作為參數給定的值屬於哪個命名分區。 （* 和 |） 符號稱為*香蕉剪輯*，這種類型的 let 綁定創建的函數稱為*活動識別器*。
+在先前的語法中，識別碼是以*引數*表示之輸入資料的資料分割名稱，換句話說，是引數的所有值集合的子集名稱。 現用模式定義中最多可以有七個數據分割。 *運算式*描述要將資料分解成的表單。 您可以使用現用模式定義來定義規則，以判斷指定為引數的值屬於哪些已命名的分割區。 （| 和 |）符號稱為*香蕉剪輯*，而這種類型的 let 系結所建立的函式稱為作用中辨識*器*。
 
-例如，請考慮以下具有參數的活動模式。
+例如，請考慮下列具有引數的現用模式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
 
-您可以在模式匹配運算式中使用活動模式，如以下示例所示。
+您可以使用模式比對運算式中的現用模式，如下列範例所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
 
-此程式的輸出如下：
+此程式的輸出如下所示：
 
 ```console
 7 is odd
@@ -48,11 +48,11 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 32 is even
 ```
 
-活動模式的另一個用途是以多種方式分解資料類型，例如當同一基礎資料具有各種可能的表示形式時。 例如，`Color`物件可以分解為 RGB 表示形式或滙豐表示形式。
+使用中模式的另一種用法是以多種方式分解資料類型，例如，當相同的基礎資料有各種可能的標記法時。 例如， `Color` 物件可能會分解成 RGB 標記法或 HSB 標記法。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
-上述程式的輸出如下：
+上述程式的輸出如下所示：
 
 ```console
 Red
@@ -72,17 +72,17 @@ BlanchedAlmond
  Hue: 36.000000 Saturation: 1.000000 Brightness: 0.901961
 ```
 
-結合，這兩種使用活動模式的方法使您能夠將資料分區和分解為適當的形式，並在最方便的計算形式中對適當的資料執行適當的計算。
+結合使用現用模式時，這兩種方式可讓您將資料分割和分解成適當的形式，並針對計算最方便的形式，在適當的資料上執行適當的計算。
 
-生成的模式匹配運算式使資料能夠以易於讀的便捷方式寫入，從而大大簡化了潛在的複雜分支和資料分析代碼。
+產生的模式比對運算式可讓您以方便閱讀的方式寫入資料，大幅簡化可能複雜的分支和資料分析程式碼。
 
-## <a name="partial-active-patterns"></a>部分活動模式
+## <a name="partial-active-patterns"></a>部分現用模式
 
-有時，您只需要分區部分輸入空間。 在這種情況下，您編寫一組部分模式，每個模式與某些輸入匹配，但無法匹配其他輸入。 並不總是生成值的活動模式稱為*部分活動模式*;它們具有作為選項類型的傳回值。 要定義部分活動模式，請使用在香蕉夾內模式清單末尾\_的萬用字元 （ ） 。 以下代碼說明了部分活動模式的使用。
+有時候，您只需要分割部分的輸入空間。 在這種情況下，您會撰寫一組符合某些輸入但無法符合其他輸入的部分模式。 不一定會產生值的現用模式稱為「*部分現用模式*」;它們具有屬於選項類型的傳回值。 若要定義部分現用模式，請在 \_ 香蕉剪輯內的模式清單結尾使用萬用字元（）。 下列程式碼說明如何使用部分現用模式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
-上一個示例的輸出如下所示：
+上一個範例的輸出如下所示：
 
 ```console
 1.100000 : Floating point
@@ -92,7 +92,7 @@ BlanchedAlmond
 Something else : Not matched.
 ```
 
-使用部分活動模式時，有時各個選項可以是脫節的，也可以是互斥的，但它們不需要。 在下面的示例中，模式方形和模式立方體並不脫節，因為某些數位既是正方形，也是立方體，如 64。 以下程式使用 AND 模式組合方形和立方體模式。 它列印出所有整數最多 1000 個，這些整數既是正方形和立方體，也是僅多維資料集的整數。
+使用部分現用模式時，有時個別的選擇可能不相鄰或互斥，但它們不需要。 在下列範例中，模式正方形和模式 Cube 不是連續的，因為有些數位同時為正方形和 cube，例如64。 下列程式會使用和模式來結合正方形和 Cube 模式。 它會列印出最多1000的整數，其中同時為正方形和 cube，以及僅為 cube 的所有整數。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
@@ -111,23 +111,23 @@ Something else : Not matched.
 1000 is a cube
 ```
 
-## <a name="parameterized-active-patterns"></a>參數化活動模式
+## <a name="parameterized-active-patterns"></a>參數化現用模式
 
-活動模式始終對要匹配的項至少採用一個參數，但它們也可能採用其他參數，在這種情況下，名稱*參數化的活動模式*適用。 其他參數允許將常規模式專門化。 例如，使用正則運算式解析字串的活動模式通常包括正則運算式作為額外參數，如以下代碼，該代碼還使用前一個代碼示例中定義的部分活動模式`Integer`。 在此示例中，為各種日期格式提供正則運算式的字串用於自訂常規 ParseRegex 活動模式。 整數活動模式用於將匹配的字串轉換為可傳遞給 DateTime 建構函式的整數。
+現用模式一律會針對要比對的專案使用至少一個引數，但它們也可能會採用其他引數，在此情況下，會套用*參數化現用模式*的名稱。 其他引數可讓一般模式特製化。 例如，使用正則運算式來剖析字串的現用模式通常會包含正則運算式做為額外的參數，如下列程式碼所示，這也會使用 `Integer` 先前程式碼範例中定義的部分現用模式。 在此範例中，會提供使用適用于各種日期格式之正則運算式的字串，以自訂一般 ParseRegex 現用模式。 整數現用模式是用來將相符的字串轉換成可傳遞至 DateTime 函數的整數。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
-前一個代碼的輸出如下：
+先前程式碼的輸出如下所示：
 
 ```console
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
-活動模式不僅局限于模式匹配運算式，還可以在 let 綁定上使用它們。
+現用模式不限於模式比對運算式，您也可以在 let-系結上使用它們。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
-前一個代碼的輸出如下：
+先前程式碼的輸出如下所示：
 
 ```console
 Hello, random citizen!
@@ -136,5 +136,5 @@ Hello, George!
 
 ## <a name="see-also"></a>另請參閱
 
-- [F# 語言參考](index.md)
+- [F # 語言參考](index.md)
 - [比對運算式](match-expressions.md)

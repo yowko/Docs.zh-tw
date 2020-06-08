@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: 61b5678a546bdbadbcc6d8ee86447cb17ce72b99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b0da8a06259fe99da52497da3011da94289d301
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175521"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492313"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes 方法
-枚舉與指定類型或成員關聯的自訂屬性定義權杖。  
+列舉與指定的類型或成員相關聯的自訂屬性定義標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,40 +40,40 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [進出]指向返回的枚舉器的指標。  
+ [in、out]傳回之列舉值的指標。  
   
  `tk`  
- [在]枚舉範圍的標記，所有自訂屬性為零。  
+ 在列舉範圍的 token，如果是所有自訂屬性，則為零。  
   
  `tkType`  
- [在]要枚舉的屬性類型的建構函式或`null`所有類型的建構函式的權杖。  
+ 在要列舉之屬性類型的函式的 token，或 `null` 適用于所有類型的標記。  
   
  `rCustomAttributes`  
- [出]自訂屬性權杖的陣列。  
+ 脫銷自訂屬性標記的陣列。  
   
  `cMax`  
  [in] `rCustomAttributes` 陣列的大小上限。  
   
  `pcCustomAttributes`  
- [退出，可選]在 中`rCustomAttributes`返回的權杖值的實際數量。  
+ [out，optional]在中傳回的實際標記值數目 `rCustomAttributes` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`已成功返回。|  
-|`S_FALSE`|沒有要枚舉的自訂屬性。 在這種情況下，`pcCustomAttributes`為零。|  
+|`S_OK`|`EnumCustomAttributes`已成功傳回。|  
+|`S_FALSE`|沒有可列舉的自訂屬性。 在此情況下， `pcCustomAttributes` 是零。|  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

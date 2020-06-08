@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: 514f227e3c0c385f61090079d2f5214dac9b3924
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbf6ce8c8c9628b08872058a794fb0e005764ab1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004526"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501296"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod 方法
 使用指定的簽章建立方法或全域函式的定義，並將權杖傳回給該方法定義。  
@@ -81,7 +81,7 @@ HRESULT DefineMethod (
  您不應該定義重複的方法。 也就是說，您不應該 `DefineMethod` 在 `td` 、和參數中使用一組重複的值來呼叫 `wzName` `pvSig` 。 （這三個參數會一起唯一定義方法）。 不過，如果您在其中一個方法定義中設定了位，就可以使用重複的三重複本 `mdPrivateScope` `dwMethodFlags` 。 （ `mdPrivateScope` 位表示編譯器不會發出這個方法定義的參考）。  
   
 ## <a name="method-implementation-information"></a>方法執行資訊  
- 在宣告方法時，通常不知道方法執行的相關資訊。 因此，呼叫時，您不需要在和參數中傳遞值 `ulCodeRVA` `dwImplFlags` `DefineMethod` 。 稍後可以視需要透過[IMetaDataEmit：： SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)或[IMetaDataEmit：： SetRVA](imetadataemit-setrva-method.md)來提供值。  
+ 在宣告方法時，通常不知道方法執行的相關資訊。 因此，呼叫時，您不需要在和參數中傳遞值 `ulCodeRVA` `dwImplFlags` `DefineMethod` 。 稍後可以視需要透過[IMetaDataEmit：： SetMethodImplFlags](imetadataemit-setmethodimplflags-method.md)或[IMetaDataEmit：： SetRVA](imetadataemit-setrva-method.md)來提供值。  
   
  在某些情況下（例如平台叫用（PInvoke）或 COM Interop 案例），將不會提供方法主體，而且 `ulCodeRVA` 應該設定為零。 在這些情況下，方法不應標記為抽象，因為執行時間會找出該實作為。  
   
@@ -101,7 +101,7 @@ HRESULT DefineMethod (
 |`ulCodeRVA`||0|  
 |`dwImplFlags`|請設定 `miCil` 和 `miManaged`。|請設定 `miNative` 和 `miUnmanaged`。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  

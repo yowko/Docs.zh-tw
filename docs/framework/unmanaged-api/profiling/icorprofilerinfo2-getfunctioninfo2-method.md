@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-ms.openlocfilehash: dcd162aec12dc75585f1828cffdd4cdbedcf9988
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f5438ddc655f0f6a7c11d978a47b1bf9e2a13059
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868656"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496998"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 方法
 取得函式的父類別、中繼資料語彙基元和每個類型引數的 `ClassID` (如果有的話)。  
@@ -65,7 +65,7 @@ HRESULT GetFunctionInfo2(
  [out] 一組 `ClassID`  值的陣列，其中每一項為該函式型別引數的 ID。 方法傳回時， `typeArgs` 將包含部分或所有的 `ClassID` 值。  
   
 ## <a name="remarks"></a>備註  
- 分析工具程式碼可以呼叫[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)來取得給定模組的[中繼資料](../../../../docs/framework/unmanaged-api/metadata/index.md)介面。 然後，傳回至 `pToken` 所參考位置的中繼資料語彙基元可以用來存取此函式的中繼資料。  
+ 分析工具程式碼可以呼叫[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)來取得給定模組的[中繼資料](../metadata/index.md)介面。 然後，傳回至 `pToken` 所參考位置的中繼資料語彙基元可以用來存取此函式的中繼資料。  
   
  透過 `pClassId` 和 `typeArgs` 參數傳回的類別 ID 與類型引數取決於在 `frameInfo` 參數中傳遞的值，如下表所示。  
   
@@ -79,16 +79,16 @@ HRESULT GetFunctionInfo2(
   
  或者，您也可以先使用長度為零的 `pcTypeArgs` 緩衝區來呼叫 `GetFunctionInfo2`，以取得正確的緩衝區大小。 您可以將緩衝區大小設定為 `pcTypeArgs` 傳回的值除以 `ClassID` 值的大小，然後再呼叫 `GetFunctionInfo2` 一次。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 介面](icorprofilerinfo2-interface.md)

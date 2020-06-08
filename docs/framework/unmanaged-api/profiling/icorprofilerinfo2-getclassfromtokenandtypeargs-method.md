@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-ms.openlocfilehash: e0663ff122397ba639a0a219e513be2f3f0cbbef
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 702c5f9f2bc08c824bdc0607741a6afd65a3e89b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862759"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84497253"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs 方法
-使用指定的元資料標記和任何類型引數的 `ClassID` 值，取得類型的 `ClassID`。  
+`ClassID`使用指定的元資料標記和 `ClassID` 任何類型引數的值，取得類型的。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,34 +41,34 @@ HRESULT GetClassFromTokenAndTypeArgs(
  在類型所在之模組的識別碼。  
   
  `typeDef`  
- 在參考型別的 `mdTypeDef` 中繼資料 token。  
+ 在`mdTypeDef`參考類型的元資料標記。  
   
  `cTypeArgs`  
  在給定類型的類型參數數目。 非泛型型別的這個值必須是零。  
   
  `typeArgs`  
- 在`ClassID` 值的陣列，其中每一個都是類型的引數。 如果 `cTypeArgs` 設定為零，`typeArgs` 的值可以是 Null。  
+ 在值的陣列 `ClassID` ，其中每一個都是類型的引數。 如果設定為零，則的值 `typeArgs` 可以是 Null `cTypeArgs` 。  
   
  `pClassID`  
- 脫銷指定類型之 `ClassID` 的指標。  
+ 脫銷`ClassID`指定之類型的指標。  
   
 ## <a name="remarks"></a>備註  
- 使用 `mdTypeRef` 而不是 `mdTypeDef` 元資料標記呼叫 `GetClassFromTokenAndTypeArgs` 方法，可能會產生無法預期的結果;呼叫端應該在傳遞時，將 `mdTypeRef` 解析成 `mdTypeDef`。  
+ `GetClassFromTokenAndTypeArgs`使用 `mdTypeRef` 而不是 `mdTypeDef` 元資料標記呼叫方法，可能會產生無法預期的結果; 呼叫端應 `mdTypeRef` `mdTypeDef` 在傳遞時將解析為。  
   
  如果尚未載入類型，呼叫 `GetClassFromTokenAndTypeArgs` 將會觸發載入，這在許多內容中是危險的作業。 例如，在載入模組或其他類型期間呼叫這個方法，可能會導致無限迴圈，因為執行時間會嘗試迴圈載入專案。  
   
- 一般而言，不建議使用 `GetClassFromTokenAndTypeArgs`。 如果分析工具對特定類型的事件有興趣，則應該儲存該類型的 `ModuleID` 和 `mdTypeDef`，並使用[ICorProfilerInfo2：： GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md)來檢查給定的 `ClassID` 是否為所需類型的。  
+ 一般而言， `GetClassFromTokenAndTypeArgs` 不建議使用。 如果分析工具對特定類型的事件有興趣，則應該儲存 `ModuleID` `mdTypeDef` 該類型的和，並使用[ICorProfilerInfo2：： GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md)來檢查給定的 `ClassID` 是否為所需類型的。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 介面](icorprofilerinfo2-interface.md)

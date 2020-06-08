@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 348ca9d157a668dcd180076475f1fe9861197174
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 4c015d77deb4e6ed3d43074f2903e26b687de84f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616656"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493561"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 函式
 使用儲存在 XML 檔案中的版本資訊，將 common language runtime （CLR）載入進程中。 XML 檔案的格式會在標準應用程式佈建檔案之後進行模型化。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../configure-apps/file-schema/index.md)。  
@@ -42,12 +42,12 @@ HRESULT CorBindToCurrentRuntime (
  `pwszFileName`  
  在應用程式佈建檔的名稱，指定要載入的 CLR 版本。 如果檔案名不是完整名稱，則會假設為與呼叫相同的目錄。  
   
- 要載入的執行階段版本，是由設定檔的[ \< r q>](../../configure-apps/file-schema/startup/requiredruntime-element.md)專案中的 version 屬性所描述。  
+ 要載入的執行階段版本，會由設定檔的元素中的 version 屬性描述 [\<requiredRuntime>](../../configure-apps/file-schema/startup/requiredruntime-element.md) 。  
   
  如果未指定任何版本，或找不到該專案，則會 `<requiredRuntime>` 載入電腦上所安裝的最新 CLR 版本。  
   
  `rclsid`  
- 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
  在`IID`您所要求之介面的。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
@@ -55,7 +55,7 @@ HRESULT CorBindToCurrentRuntime (
  `ppv`  
  脫銷傳回的介面指標。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

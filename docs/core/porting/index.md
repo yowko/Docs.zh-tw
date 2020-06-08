@@ -3,12 +3,12 @@ title: 從 .NET Framework 移植到 .NET Core
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158278"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502765"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>從 .NET Framework 移植到 .NET Core 的總覽
 
@@ -38,15 +38,18 @@ ms.locfileid: "82158278"
 為了識別應該遷移的訂單專案，您可以使用下列工具：
 
 - [Visual Studio 中](/visualstudio/modeling/create-layer-diagrams-from-your-code)的相依性圖表可以在方案中建立程式碼的導向圖形。
-- 執行`msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json`以產生包含專案參考清單的 json 檔。
+- 執行 `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` 以產生包含專案參考清單的 json 檔。
+- 使用參數執行[.net 可攜性分析器](../../standard/analyzers/portability-analyzer.md) `-r DGML` ，以取出元件的相依性圖表。 如需詳細資訊，請參閱[這裡](../../standard/analyzers/portability-analyzer.md#solution-wide-view)。
+
+有了相依性資訊之後，您就可以使用該資訊從分葉節點開始，並在下一節套用步驟的相依性樹狀結構中運作。
 
 ## <a name="per-project-steps"></a>每個專案步驟
 
 將您的專案移植到 .NET Core 時，建議您使用下列進程：
 
-1. 使用`packages.config` [Visual Studio 中的轉換工具](/nuget/consume-packages/migrate-packages-config-to-package-reference)，將所有相依性轉換為[PackageReference](/nuget/consume-packages/package-references-in-project-files)格式。
+1. `packages.config`使用[Visual Studio 中的轉換工具](/nuget/consume-packages/migrate-packages-config-to-package-reference)，將所有相依性轉換為[PackageReference](/nuget/consume-packages/package-references-in-project-files)格式。
 
-   此步驟牽涉到從舊版`packages.config`格式轉換您的相依性。 `packages.config`無法在 .NET Core 上使用，因此如果您有封裝相依性，就需要進行這項轉換。 它也只需要您直接在專案中使用的相依性，藉由減少您必須管理的相依性數目，讓後續步驟更容易。
+   此步驟牽涉到從舊版格式轉換您的相依性 `packages.config` 。 `packages.config`無法在 .NET Core 上使用，因此如果您有封裝相依性，就需要進行這項轉換。 它也只需要您直接在專案中使用的相依性，藉由減少您必須管理的相依性數目，讓後續步驟更容易。
 
 1. 將您的專案檔案轉換成新的 SDK 樣式檔案結構。 您可以為 .NET Core 建立新的專案，並複製原始程式檔，或嘗試使用工具轉換現有的專案檔。
 
@@ -66,7 +69,7 @@ ms.locfileid: "82158278"
 
    讀取分析器所產生的報表時，重要資訊是實際使用的 Api，而不一定是目標平臺支援的百分比。 許多 Api 在 .NET Standard/核心中都有相同的選項，因此，若要瞭解您的程式庫或應用程式所需的 API，將有助於判斷可攜性的含意。
 
-   在某些情況下，Api 不是相等的，而且您必須對平臺執行一些編譯器預處理器指示詞`#if NET45`（也就是）。 此時，您的專案仍會以 .NET Framework 為目標。 針對上述每個目標案例，建議使用已知的條件，並可視為案例。  例如，.NET Core 中的 AppDomain 支援受到限制，但在載入和卸載元件的案例中，有一個新的 API 無法在 .NET Core 中使用。 在程式碼中處理這種情況的常見方式如下：
+   在某些情況下，Api 不是相等的，而且您必須對平臺執行一些編譯器預處理器指示詞（也就是 `#if NET45` ）。 此時，您的專案仍會以 .NET Framework 為目標。 針對上述每個目標案例，建議使用已知的條件，並可視為案例。  例如，.NET Core 中的 AppDomain 支援受到限制，但在載入和卸載元件的案例中，有一個新的 API 無法在 .NET Core 中使用。 在程式碼中處理這種情況的常見方式如下：
 
    ```csharp
    #if FEATURE_APPDOMAIN_LOADING
@@ -78,9 +81,9 @@ ms.locfileid: "82158278"
    #endif
    ```
 
-1. 將[.NET API 分析器](../../standard/analyzers/api-analyzer.md)安裝到您的專案，以識別在<xref:System.PlatformNotSupportedException>某些平臺上擲回的 api，以及一些其他潛在的相容性問題。
+1. 將[.NET API 分析器](../../standard/analyzers/api-analyzer.md)安裝到您的專案，以識別 <xref:System.PlatformNotSupportedException> 在某些平臺上擲回的 api，以及一些其他潛在的相容性問題。
 
-   這項工具與可攜性分析器類似，但不會分析程式碼是否可以在 .NET Core 上建立，而是會分析您是否使用 API，這種方式<xref:System.PlatformNotSupportedException>會在執行時間擲回。 雖然這在您從 .NET Framework 4.7.2 或更高版本中移動時並不常見，但仍可進行檢查。 如需有關在 .NET Core 上擲回例外狀況之 Api 的詳細資訊，請參閱[在 .Net core 上一律會擲回例外狀況的 api](../compatibility/unsupported-apis.md)。
+   這項工具與可攜性分析器類似，但不會分析程式碼是否可以在 .NET Core 上建立，而是會分析您是否使用 API，這種方式會在 <xref:System.PlatformNotSupportedException> 執行時間擲回。 雖然這在您從 .NET Framework 4.7.2 或更高版本中移動時並不常見，但仍可進行檢查。 如需有關在 .NET Core 上擲回例外狀況之 Api 的詳細資訊，請參閱[在 .Net core 上一律會擲回例外狀況的 api](../compatibility/unsupported-apis.md)。
 
 1. 此時，您可以切換為以 .NET Core 為目標（通常適用于應用程式）或 .NET Standard （適用于程式庫）。
 
@@ -109,6 +112,6 @@ ms.locfileid: "82158278"
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [分析](third-party-deps.md)相依性[套件 NuGet 封裝](../deploying/creating-nuget-packages.md)
-> [ASP.NET 以 ASP.NET Core 遷移](/aspnet/core/migration/proper-to-2x)
-> 
+> [分析相關性](third-party-deps.md) 
+> [封裝 NuGet 套件](../deploying/creating-nuget-packages.md) 
+> [ASP.NET 至 ASP.NET Core 遷移](/aspnet/core/migration/proper-to-2x)

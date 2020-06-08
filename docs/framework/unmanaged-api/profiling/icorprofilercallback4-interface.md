@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 665f3cfc-cd6f-4880-906c-ea65ad384783
 topic_type:
 - apiref
-ms.openlocfilehash: 1b85c48859ac29738347d112dd0466a76bfdfd2c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 295d3d440529623f4569fd6c5f4debe7e4558990
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865333"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499437"
 ---
 # <a name="icorprofilercallback4-interface"></a>ICorProfilerCallback4 介面
 提供通用語言執行時間（CLR）用來將資訊傳達給分析工具的回呼方法。  
@@ -38,15 +38,15 @@ ms.locfileid: "76865333"
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback2 介面](icorprofilercallback2-interface.md)
 - [分析介面](profiling-interfaces.md)

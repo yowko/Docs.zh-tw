@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616498"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493431"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage 函式
 驗證受管理的模組映射，並在載入作業系統載入器之後通知它。  
@@ -59,7 +59,7 @@ STDAPI _CorValidateImage (
   
 - 載入 managed 模組映射時，返回載入器。  
   
- 對於可執行映射，作業系統載入器會接著呼叫[_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)函式，而不論可執行檔中所指定的進入點為何。 對於 DLL 元件影像，載入器會呼叫[_CorDllMain](cordllmain-function.md)函式。  
+ 對於可執行映射，作業系統載入器會接著呼叫[_CorExeMain](corexemain-function.md)函式，而不論可執行檔中所指定的進入點為何。 對於 DLL 元件影像，載入器會呼叫[_CorDllMain](cordllmain-function.md)函式。  
   
  `_CorExeMain`或會 `_CorDllMain` 執行下列動作：  
   
@@ -71,7 +71,7 @@ STDAPI _CorValidateImage (
   
  當卸載受控模組映射時，載入器會呼叫[_CorImageUnloading](corimageunloading-function.md)函式。 不過，此函數不會執行任何動作;它只會傳回。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
