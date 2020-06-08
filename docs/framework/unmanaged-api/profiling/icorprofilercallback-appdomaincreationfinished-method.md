@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 8b3f7712436c001e5cd44f214f6edb06390abd41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76f56971223154d3ed966c272081049adf30de54
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177068"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500490"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 方法
-通知探測器已創建應用程式域。  
+通知分析工具已建立應用程式域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,25 +37,25 @@ HRESULT AppDomainCreationFinished(
 
 - `appDomainId`
 
-  \[in] 標識已創建的域。
+  \[在中，識別已建立的網域。
 
 - `hrStatus`
 
-  \[in] 指示應用程式域的創建是否成功完成的 HRESULT。
+  \[中的 HRESULT，指出應用程式域的建立是否已順利完成。
 
 ## <a name="remarks"></a>備註  
- 在調用方法之前，`AppDomainCreationFinished`應用程式 ID 對任何資訊請求無效。  
+ 在呼叫方法之前，應用程式識別碼對任何資訊要求而言都是不正確 `AppDomainCreationFinished` 。  
   
- 回檔後`AppDomainCreationFinished`載入應用程式域的某些部分可能會繼續。 故障 HRESULT `hrStatus` in 表示失敗。 但是，HRESULT 的成功僅`hrStatus`表示創建應用程式域的第一部分已成功。  
+ 載入應用程式域的某些部分可能會在回呼之後繼續進行 `AppDomainCreationFinished` 。 中的失敗 HRESULT `hrStatus` 表示失敗。 不過，中的成功 HRESULT `hrStatus` 只會指出建立應用程式域的第一個部分已成功。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

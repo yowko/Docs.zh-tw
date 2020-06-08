@@ -1,5 +1,6 @@
 ---
 title: IPv6 定址
+description: 瞭解網際網路通訊協定第6版（IPv6）位址，包括文字標記法和網址類別型。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbf68cb5f40450c2f9ecf4900801ee55e326fcb4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047845"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502336"
 ---
 # <a name="ipv6-addressing"></a>IPv6 定址
 
@@ -41,7 +42,7 @@ ms.locfileid: "71047845"
 
 下列是三種使用文字字串表示 IPv6 位址的慣例格式：
 
-- **冒號:十六進位格式**。 這是慣用的格式 n:n:n:n:n:n:n:n。 每個 n 代表位址的八個 16 位元項目的一個十六進位值。 例如：`3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562`。
+- **冒號:十六進位格式**。 這是慣用的格式 n:n:n:n:n:n:n:n。 每個 n 代表位址的八個 16 位元項目的一個十六進位值。 例如： `3FFE:FFFF:7654:FEDA:1245:BA98:3210:4562` 。
 
 - **壓縮格式**。 因為位址長度的原因，位址通常會包含由零組成的長字串。 若要簡化撰寫這些地址，請使用壓縮格式，其中單一連續序列的 0 區塊會以雙冒號符號 (::) 表示。 這個符號在位址中只會出現一次。 例如，多點傳送位址 `FFED:0:0:0:0:BA98:3210:4562` 的壓縮格式是 `FFED::BA98:3210:4562`。 單點傳播位址 `3FFE:FFFF:0:0:8:800:20C4:0` 的壓縮格式是 `3FFE:FFFF::8:800:20C4:0`。 回送位址 `0:0:0:0:0:0:0:1` 的壓縮格式是 `::`1。 未指定的位址 `0:0:0:0:0:0:0:0` 的壓縮格式是 `::`。
 
@@ -77,5 +78,5 @@ IPv6 會定義下列位址類型：
 
 ## <a name="see-also"></a>另請參閱
 
-- [互聯網協定版本 6](internet-protocol-version-6.md)
+- [網際網路通訊協定第6版](internet-protocol-version-6.md)
 - [通訊端](sockets.md)

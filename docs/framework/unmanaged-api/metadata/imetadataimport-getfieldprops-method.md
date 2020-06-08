@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177239"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491239"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps 方法
 取得與指定 FieldDef 語彙基元所參考欄位相關聯的中繼資料。  
@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>參數  
  `mb`  
- [在]表示要為其獲取關聯的中繼資料的欄位的 FieldDef 權杖。  
+ 在FieldDef token，表示要取得相關聯中繼資料的欄位。  
   
  `pClass`  
- [出]指向 TypeDef 權杖的指標，表示欄位所屬的類的類型。  
+ 脫銷TypeDef token 的指標，代表欄位所屬類別的型別。  
   
  `szField`  
- [出]欄位的名稱。  
+ 脫銷欄位的名稱。  
   
  `cchField`  
- [在]*szField*緩衝區的大小以寬字元表示。  
+ 在*SzField*緩衝區的大小（以寬字元為單位）。  
   
  `pchField`  
- [出]返回的緩衝區的實際大小。  
+ 脫銷所傳回緩衝區的實際大小。  
   
  `pdwAttr`  
- [出]與欄位的中繼資料關聯的標誌。  
+ 脫銷與欄位的中繼資料相關聯的旗標。  
   
  `ppvSigBlob`  
- [在]指向描述欄位的二進位中繼資料值的指標。  
+ 在描述欄位之二進位中繼資料值的指標。  
   
  `pcbSigBlob`  
- [出]的大小（以位元組為單位）。 `ppvSigBlob`  
+ 脫銷的大小（以位元組為單位） `ppvSigBlob` 。  
   
  `pdwCPlusTypeFlag`  
- [出]指定欄位的數值型別的標誌。  
+ 脫銷指定欄位之數值型別的旗標。  
   
  `ppValue`  
- [出]欄位的常量值。  
+ 脫銷欄位的常數值。  
   
  `pcchValue`  
- [出]如果不存在字串，則大小`ppValue`以 的 字元表示或零。  
+ 脫銷的大小（以字元為單位 `ppValue` ），如果不存在任何字串，則為零。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

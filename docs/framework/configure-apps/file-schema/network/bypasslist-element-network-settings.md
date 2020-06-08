@@ -1,5 +1,6 @@
 ---
 title: <bypasslist> 項目 (網路設定)
+description: <bypasslist>網路設定元素會提供一組正則運算式，描述不會在 .NET Framework 中使用 proxy 的位址。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 97e69a4978aa4700d13a994619a65312cf70aeaa
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 42b6ddf4c3d09bcf8ef0ada105cefedccc63b505
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154942"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504624"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist> 項目 (網路設定)
 提供一組正則運算式，描述不使用 proxy 的位址。  
@@ -38,7 +39,7 @@ ms.locfileid: "79154942"
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[add](add-element-for-bypasslist-network-settings.md)|將 IP 位址或 DNS 名稱新增至 proxy 略過清單。|  
 |[明確](clear-element-for-bypasslist-network-settings.md)|清除略過清單。|  
@@ -46,7 +47,7 @@ ms.locfileid: "79154942"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
   

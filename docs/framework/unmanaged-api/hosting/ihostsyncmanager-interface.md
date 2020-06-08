@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-ms.openlocfilehash: e96492270c403f93687245cee8b680dc16b3c787
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: fd3c941d89fbd93f30fc1af235f6310b23758973
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803129"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501452"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager 介面
 提供的方法可讓 common language runtime （CLR）藉由呼叫主機來建立同步處理原始物件，而不是使用 Win32 同步處理函式。  
@@ -35,8 +35,8 @@ ms.locfileid: "83803129"
 |[CreateMonitorEvent 方法](ihostsyncmanager-createmonitorevent-method.md)|建立受監視的自動重設事件物件。|  
 |[CreateRWLockReaderEvent 方法](ihostsyncmanager-createrwlockreaderevent-method.md)|建立手動重設的事件物件，以執行讀取器鎖定。|  
 |[CreateRWLockWriterEvent 方法](ihostsyncmanager-createrwlockwriterevent-method.md)|建立自動重設事件物件，以執行寫入器鎖定。|  
-|[CreateSemaphore 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createsemaphore-method.md)|建立[IHostSemaphore](ihostsemaphore-interface.md)物件，以供 CLR 用來做為等候事件的信號。|  
-|[SetCLRSyncManager 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-setclrsyncmanager-method.md)|設定要與目前實例相關聯的[ICLRSyncManager](iclrsyncmanager-interface.md)實例 `IHostSyncManager` 。|  
+|[CreateSemaphore 方法](ihostsyncmanager-createsemaphore-method.md)|建立[IHostSemaphore](ihostsemaphore-interface.md)物件，以供 CLR 用來做為等候事件的信號。|  
+|[SetCLRSyncManager 方法](ihostsyncmanager-setclrsyncmanager-method.md)|設定要與目前實例相關聯的[ICLRSyncManager](iclrsyncmanager-interface.md)實例 `IHostSyncManager` 。|  
   
 ## <a name="remarks"></a>備註  
  CLR 會藉 `IHostSyncManager` 由使用 IID_IHostSyncManager 的來呼叫[IHostControl：： GetHostManager](ihostcontrol-gethostmanager-method.md)方法，以探索主機的執行 `IID` 。  

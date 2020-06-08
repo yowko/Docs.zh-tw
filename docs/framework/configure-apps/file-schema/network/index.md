@@ -1,5 +1,6 @@
 ---
 title: 網路設定結構描述
+description: 瞭解網路設定的架構，其指定 .NET Framework 如何連接至網際網路並處理 Uri。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - elements [.NET Framework], network configuration elements
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - connections [.NET Framework], network configuration elements
 - network resources, network configuration elements
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 5e3bd1b1734fc7fba50b72785531a8b001d6d741
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a22d7f1608db2e8909d0ead11e9110ec8a8a2c5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698156"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504572"
 ---
 # <a name="network-settings-schema"></a>網路設定結構描述
 網路設定會指定 .NET Framework 如何連接至網際網路。

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 799740aa-46ec-4532-95da-6444565b4971
 topic_type:
 - apiref
-ms.openlocfilehash: 0bcfe42a70d64c091851a1eec81d03e49dbde52b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 52594c36c54c74941371f9950fbc6fb543b86de0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616657"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493548"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 函式
 讓非受控主機將 common language runtime （CLR）載入進程中。  
@@ -55,7 +55,7 @@ HRESULT CorBindToRuntime (
  如果 `pwszBuildFlavor` 設定為 null，則會載入工作站組建。 在單處理器機器上執行時，一律會載入工作站組建，即使 `pwszBuildFlavor` 設定為也一樣 `svr` 。 不過，如果 `pwszBuildFlavor` 設定為 `svr` ，且指定了並行垃圾收集（請參閱參數的描述 `flags` ），則會載入伺服器組建。  
   
  `rclsid`  
- 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
  在`IID`從所要求之介面的 `rclsid` 。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
@@ -75,7 +75,7 @@ HRESULT CorBindToRuntime (
   
 2. 將進程預設模式變更為版本1相容性模式，其中物件不 <xref:System.Security.Principal.WindowsIdentity> 會流經任何非同步點，而不論 <xref:System.Threading.ExecutionContext> 目前線程上的設定為何。 您變更預設模式的方式，取決於您使用的是受控可執行檔或非受控裝載介面來載入 CLR：  
   
-    1. 對於受控可執行檔，您必須將 `enabled` [ \< legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)專案的屬性設定為 `true` 。  
+    1. 對於受控可執行檔，您必須將 `enabled` 元素的屬性設定 [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) 為 `true` 。  
   
     2. 若為非受控裝載介面，請在呼叫函式時，于 `STARTUP_LEGACY_IMPERSONATION` 參數中設定旗標 `flags` `CorBindToRuntimeEx` 。  
   
@@ -84,7 +84,7 @@ HRESULT CorBindToRuntime (
 ## <a name="remarks"></a>備註  
  [CorBindToRuntimeEx](corbindtoruntimeex-function.md)並 `CorBindToRuntime` 執行相同的作業，但函式可 `CorBindToRuntimeEx` 讓您設定旗標來指定 CLR 的行為。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

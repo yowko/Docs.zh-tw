@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 99e473268fd0d5bb8ce120b97576277949b86508
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: cac8e9570dab55af6b6e1fcf6f53b6a697727972
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868993"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502908"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 
 使用指定的 Microsoft 中繼語言（MSIL）對應專案，為指定的函式設定 Code Map。
 
 > [!NOTE]
-> 在 .NET Framework 版本2.0 中，在代表特定應用程式域中泛型函式的 `FunctionID` 上呼叫 `SetILInstrumentedCodeMap`，將會影響應用程式域中該函式的所有實例。
+> 在 .NET Framework 版本2.0 中，在 `SetILInstrumentedCodeMap` `FunctionID` 代表特定應用程式域中泛型函式的上呼叫會影響應用程式域中該函式的所有實例。
 
 ## <a name="syntax"></a>語法
 
@@ -45,17 +45,17 @@ HRESULT SetILInstrumentedCodeMap(
 在要設定 Code Map 的函式識別碼。
 
 `fStartJit`\
-在布林值，指出 `SetILInstrumentedCodeMap` 方法的呼叫是否為特定 `FunctionID`的第一個。 設定 `fStartJit` 在第一次呼叫指定 `FunctionID`的 `SetILInstrumentedCodeMap` 時 `true`，並在之後 `false`。
+在布林值，指出對方法的呼叫是否為 `SetILInstrumentedCodeMap` 特定的第一個 `FunctionID` 。 `fStartJit` `true` 在第一次呼叫給定的時，將設為 `SetILInstrumentedCodeMap` `FunctionID` ，並在 `false` 之後設定為。
 
 `cILMapEntries`\
-在`cILMapEntries` 陣列中的元素數目。
+在陣列中的元素數目 `cILMapEntries` 。
 
 `rgILMapEntries`\
 在COR_IL_MAP 結構的陣列，其中每一個都會指定一個 MSIL 位移。
 
 ## <a name="remarks"></a>備註
 
-分析工具通常會在方法的原始程式碼中插入語句，以檢測該方法（例如，在到達指定的原始程式列時通知）。 `SetILInstrumentedCodeMap` 可讓分析工具將原始 MSIL 指令對應至其新位置。 分析工具可以使用[ICorProfilerInfo：： GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)方法來取得給定原生位移的原始 MSIL 位移。
+分析工具通常會在方法的原始程式碼中插入語句，以檢測該方法（例如，在到達指定的原始程式列時通知）。 `SetILInstrumentedCodeMap`可讓分析工具將原始 MSIL 指令對應至其新位置。 分析工具可以使用[ICorProfilerInfo：： GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)方法來取得給定原生位移的原始 MSIL 位移。
 
 偵錯工具會假設每個舊的位移都是指原始、未修改的 MSIL 程式碼內的 MSIL 位移，而且每個新的位移都會參考新檢測的程式碼內的 MSIL 位移。 對應應該以遞增順序排序。 若要讓逐步執行正常運作，請遵循下列指導方針：
 
@@ -83,18 +83,18 @@ HRESULT SetILInstrumentedCodeMap(
 
   - 新的位移20或以上會對應到舊的位移9。
 
-在 .NET Framework 3.5 和舊版中，您可以藉由呼叫[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)方法來配置 `rgILMapEntries` 陣列。 由於執行時間會取得此記憶體的擁有權，因此分析工具不應該嘗試釋放它。
+在 .NET Framework 3.5 和之前的版本中，您可以 `rgILMapEntries` 呼叫[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)方法來配置陣列。 由於執行時間會取得此記憶體的擁有權，因此分析工具不應該嘗試釋放它。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** CorProf.idl、CorProf.h
 
 **程式庫：** CorGuids.lib
 
-**.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)

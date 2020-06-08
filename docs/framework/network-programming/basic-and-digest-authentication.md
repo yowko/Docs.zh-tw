@@ -1,5 +1,6 @@
 ---
 title: 基本和摘要式驗證
+description: 瞭解如何使用基本和摘要式驗證，其中應用程式會在用來要求資料的 WebRequest 物件中提供使用者名稱和密碼。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 9a1ad701e1e8f4ee9966ebd56922c29e2bae7a03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7772430b508b52a63d716550b69018385418c132
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048906"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502690"
 ---
 # <a name="basic-and-digest-authentication"></a>基本和摘要式驗證
 基本和摘要式驗證的 <xref:System.Net> 實作符合 RFC2617 - HTTP 驗證：基本和摘要式驗證 (可在[全球資訊網協會](https://www.w3.org)的網站上取得)。  
@@ -48,5 +49,5 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
   
 ## <a name="see-also"></a>另請參閱
 
-- [NTLM 和 Kerberos 身份驗證](ntlm-and-kerberos-authentication.md)
+- [NTLM 和 Kerberos 驗證](ntlm-and-kerberos-authentication.md)
 - [網際網路驗證](internet-authentication.md)

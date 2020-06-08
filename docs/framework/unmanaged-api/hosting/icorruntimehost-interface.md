@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: ac4787379436faa568727329e7b012f83d0a53d5
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 4b8018bb84dea08987d91f351b1ab0d9f3b48c56
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760728"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503896"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 介面
 提供的方法可讓主機明確啟動和停止 common language runtime （CLR）、建立和設定應用程式域、存取預設網域，以及列舉在進程中執行的所有網域。  
@@ -34,7 +34,7 @@ ms.locfileid: "83760728"
 |[CreateDomain 方法](icorruntimehost-createdomain-method.md)|建立應用程式域。 呼叫端會接收類型的介面指標 <xref:System._AppDomain> ，類型為的實例 <xref:System.AppDomain?displayProperty=nameWithType> 。|  
 |[CreateDomainEx 方法](icorruntimehost-createdomainex-method.md)|建立應用程式域。 這個方法可讓呼叫端傳遞 IAppDomainSetup 實例，以設定傳回之實例的其他功能 <xref:System._AppDomain> 。|  
 |[CreateDomainSetup 方法](icorruntimehost-createdomainsetup-method.md)|取得實例之類型的介面指標 `IAppDomainSetup` <xref:System.AppDomainSetup> 。 `IAppDomainSetup`提供方法來設定應用程式域的各個層面，然後再建立。|  
-|[CreateEvidence 方法](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|取得類型的介面指標 <xref:System.Security.Principal.IIdentity> ，可讓主機建立要傳遞至[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)或[CreateDomainEx](icorruntimehost-createdomainex-method.md)的安全性辨識項。|  
+|[CreateEvidence 方法](icorruntimehost-createevidence-method.md)|取得類型的介面指標 <xref:System.Security.Principal.IIdentity> ，可讓主機建立要傳遞至[CreateDomain](icorruntimehost-createdomain-method.md)或[CreateDomainEx](icorruntimehost-createdomainex-method.md)的安全性辨識項。|  
 |[CreateLogicalThreadState 方法](icorruntimehost-createlogicalthreadstate-method.md)|請勿使用。|  
 |[CurrentDomain 方法](icorruntimehost-currentdomain-method.md)|取得類型的介面指標 <xref:System._AppDomain> ，表示在目前線程上載入的網域。|  
 |[DeleteLogicalThreadState 方法](icorruntimehost-deletelogicalthreadstate-method.md)|請勿使用。|  
@@ -62,7 +62,7 @@ ms.locfileid: "83760728"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.AppDomain>
-- [裝載](index.md)
+- [Hosting](index.md)
 - [ICLRRuntimeHost 介面](iclrruntimehost-interface.md)
 - [執行階段主應用程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
 - [裝載介面](hosting-interfaces.md)

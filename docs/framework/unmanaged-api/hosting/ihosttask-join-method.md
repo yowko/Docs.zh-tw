@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2cffcc52-19e0-4ced-a440-fc7375078ac9
 topic_type:
 - apiref
-ms.openlocfilehash: 8fa59e065042565b4a543106fff714558cef42ec
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 20919bd9889408821cf57817082e3c7d5cebc240
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842240"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503909"
 ---
 # <a name="ihosttaskjoin-method"></a>IHostTask::Join 方法
-封鎖呼叫工作，直到目前[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)實例所表示的工作完成、指定的時間間隔已超過，或呼叫[IHostTask：： Alert](ihosttask-alert-method.md) 。  
+封鎖呼叫工作，直到目前[IHostTask](ihosttask-interface.md)實例所表示的工作完成、指定的時間間隔已超過，或呼叫[IHostTask：： Alert](ihosttask-alert-method.md) 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +43,7 @@ HRESULT Join (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`Join`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
