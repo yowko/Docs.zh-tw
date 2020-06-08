@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 4e7e76a4a3ab291ee97ad0912e3d6224cdf96fba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804494"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501504"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager 介面
 提供的方法可讓 common language runtime （CLR）透過主機提出虛擬記憶體要求，而不是使用標準的 Win32 虛擬記憶體函式。  
@@ -29,7 +29,7 @@ ms.locfileid: "83804494"
 |方法|描述|  
 |------------|-----------------|  
 |[AcquiredVirtualAddressSpace 方法](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|通知主機 common language runtime （CLR）已從作業系統取得指定的記憶體。|  
-|[CreateMAlloc 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|取得[IHostMAlloc](ihostmalloc-interface.md)實例的介面指標，用來向主機所建立的堆積要求記憶體配置。|  
+|[CreateMAlloc 方法](ihostmemorymanager-createmalloc-method.md)|取得[IHostMAlloc](ihostmalloc-interface.md)實例的介面指標，用來向主機所建立的堆積要求記憶體配置。|  
 |[GetMemoryLoad 方法](ihostmemorymanager-getmemoryload-method.md)|取得目前正在使用的實體記憶體數量（由主機所報告）。|  
 |[NeedsVirtualAddressSpace 方法](ihostmemorymanager-needsvirtualaddressspace-method.md)|通知主機 CLR 即將嘗試使用指定的記憶體。|  
 |[RegisterMemoryNotificationCallback 方法](ihostmemorymanager-registermemorynotificationcallback-method.md)|註冊主機所叫用的回呼函式指標，以通知 CLR 目前電腦上的記憶體負載。|  

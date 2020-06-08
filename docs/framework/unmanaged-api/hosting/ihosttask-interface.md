@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a71dbbd5-64b8-47eb-9f03-8e8c85fbe2bc
 topic_type:
 - apiref
-ms.openlocfilehash: f8f476f681764a46700dd5ec83c8f9b2739f18f6
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1b7209a36f8e9d6f02bd4cc1882adeef8af30c3d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842482"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503914"
 ---
 # <a name="ihosttask-interface"></a>IHostTask 介面
 提供可讓 common language runtime （CLR）與主機通訊的方法，以管理工作。  
@@ -30,8 +30,8 @@ ms.locfileid: "83842482"
 |------------|-----------------|  
 |[Alert 方法](ihosttask-alert-method.md)|要求主機喚醒目前實例所代表的工作 `IHostTask` ，讓工作可以中止。|  
 |[GetPriority 方法](ihosttask-getpriority-method.md)|取得目前實例所代表之工作的執行緒優先權層級 `IHostTask` 。|  
-|[Join 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-join-method.md)|封鎖呼叫工作，直到目前實例所代表的工作 `IHostTask` 完成、已超過指定的時間間隔，或呼叫[IHostTask：： Alert](ihosttask-alert-method.md)為止。|  
-|[SetCLRTask 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)|將[ICLRTask 介面](iclrtask-interface.md)實例與目前的實例產生關聯 `IHostTask` 。|  
+|[Join 方法](ihosttask-join-method.md)|封鎖呼叫工作，直到目前實例所代表的工作 `IHostTask` 完成、已超過指定的時間間隔，或呼叫[IHostTask：： Alert](ihosttask-alert-method.md)為止。|  
+|[SetCLRTask 方法](ihosttask-setclrtask-method.md)|將[ICLRTask 介面](iclrtask-interface.md)實例與目前的實例產生關聯 `IHostTask` 。|  
 |[SetPriority 方法](ihosttask-setpriority-method.md)|要求主機調整目前實例所代表之工作的執行緒優先權層級 `IHostTask` 。|  
 |[Start 方法](ihosttask-start-method.md)|要求主機將目前實例所代表的工作 `IHostTask` 從暫停狀態移動到即時狀態，在此情況下可以執行程式碼。|  
   

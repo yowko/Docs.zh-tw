@@ -4,12 +4,12 @@ description: 了解如何使用.NET Portability Analyzer 工具來評估程式�
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 815ac8e0f0c4392a3d89530947b0739d06a0b95d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7fe5aafe1ad8bf87883ebe27f2aa4fb102a01e45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278359"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501792"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -32,6 +32,23 @@ ms.locfileid: "84278359"
 ![可攜性分析器的螢幕擷取畫面。](./media/portability-analyzer/portability-screenshot.png)
 
 您也可以使用 ApiPort 主控台應用程式，可從 [ApiPort 存放庫](https://aka.ms/apiportdownload)下載。 您可以使用 `listTargets` 命令選項來顯示可用的目標清單，然後指定 `-t` 或 `--target` 命令選項來挑選目標平台。
+
+> [!IMPORTANT]
+> 如果在執行此工具時沒有任何結果，則預設目標可能無法使用。 如果您遇到這種情況，請務必新增明確的目標。
+
+### <a name="solution-wide-view"></a>全解決方案的視圖
+
+分析具有許多專案之方案的一個有用步驟，就是將相依性視覺化，以瞭解元件的哪個子集取決於什麼。 一般建議是從相依性圖形中的分葉節點開始，以自下而上的方法來套用分析的結果。
+
+若要取得此內容，您可以執行下列命令：
+
+```
+ApiPort.exe analyze -r DGML -f [directory or file]
+```
+
+在 Visual Studio 中開啟時，其結果會如下所示：
+
+![DGML 分析的螢幕擷取畫面。](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>分析可攜性
 若要在 Visual Studio 中分析整個專案，在 [方案總管]**** 中以滑鼠右鍵按一下您的專案，然後選取 [分析組件可攜性]****。 否則，請移至 [分析]**** 功能表，然後選取 [Analyze Assembly Portability] (分析組件可攜性)****。 從該處選取您專案的可執行檔或 DLL。

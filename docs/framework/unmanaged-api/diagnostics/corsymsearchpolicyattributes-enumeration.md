@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 0cd451854d4dbb3b243339efdc33d7dcd7860eb7
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 8af71314cf8a24c710d3b8980c082daaf9186715
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420600"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501868"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 列舉
-指定搜尋符號讀取器時要使用的原則。 這些常數是由[ISymUnmanagedBinder2：： GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)和[ISymUnmanagedBinder3：： GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md)方法所使用。  
+指定搜尋符號讀取器時要使用的原則。 這些常數是由[ISymUnmanagedBinder2：： GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md)和[ISymUnmanagedBinder3：： GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md)方法所使用。  
   
 > [!IMPORTANT]
 > 從不受信任的來源開啟程式資料庫（PDB）檔案會有安全性風險。  
@@ -48,7 +48,7 @@ typedef enum CorSymSearchPolicyAttributes
 |`AllowOriginalPathAccess`|搜尋在 Debug 目錄中指定的路徑。|  
 |`AllowReferencePathAccess`|在 .exe 檔案所在的位置搜尋 PDB。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-ms.openlocfilehash: 4a91f57126c0cf2074bd086ddb2fb4cd9e0716d4
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 264f16fc9e767584229376e67f5aee6db1069025
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762314"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501608"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence 方法
-取得類型的介面指標 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> ，可讓主機建立要傳遞至[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)或[CreateDomainEx](icorruntimehost-createdomainex-method.md)方法的安全性辨識項。  
+取得類型的介面指標 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> ，可讓主機建立要傳遞至[CreateDomain](icorruntimehost-createdomain-method.md)或[CreateDomainEx](icorruntimehost-createdomainex-method.md)方法的安全性辨識項。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ HRESULT CreateEvidence (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|Description|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|作業成功。|  
 |S_FALSE|作業無法完成。|  

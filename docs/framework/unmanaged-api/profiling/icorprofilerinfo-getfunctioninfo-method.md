@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c42b5891-019d-46b3-b551-4606295b75b8
 topic_type:
 - apiref
-ms.openlocfilehash: 823cc5638ff3e0955aca0bd9ba5795f6b369c6b0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: e7193526bb0da1d28da4bf6bde108fc4d3fba273
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863617"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503012"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo 方法
 取得所指定函式的父類別和元資料標記。  
@@ -51,17 +51,17 @@ HRESULT GetFunctionInfo(
 ## <a name="remarks"></a>備註  
  分析工具程式碼可以呼叫[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)來取得給定模組的中繼資料介面。 然後，傳回至 `pToken` 所參考位置的中繼資料語彙基元可以用來存取此函式的中繼資料。  
   
- 如需使用函式的詳細資訊，可能無法在泛型類別上取得函數的 `ClassID`。 在此情況下，`pClassId` 將會是0。 Profiler 程式碼應該使用[ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)搭配 COR_PRF_FRAME_INFO 值，以提供更多內容。  
+ 在 `ClassID` 泛型類別上，函式的可能無法在沒有使用函式相關詳細資訊的情況下取得。 在此情況下， `pClassId` 將會是0。 Profiler 程式碼應該使用[ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)搭配 COR_PRF_FRAME_INFO 值，以提供更多內容。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)

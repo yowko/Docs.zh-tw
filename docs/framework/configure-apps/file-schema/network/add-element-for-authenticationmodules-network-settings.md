@@ -1,5 +1,6 @@
 ---
 title: authenticationModules 的 <add> 項目 (網路設定)
+description: <add>Connectionmanagement 專案的網路設定元素會將 IP 位址或 DNS 名稱新增至 .NET Framework 中的連接管理清單。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 4181a045079bdb455a63ebda722dd6b0daf33c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155111"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504637"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>authenticationModules 的 \<add> 項目 (網路設定)
 將驗證模組新增至應用程式。  
@@ -38,7 +39,7 @@ ms.locfileid: "79155111"
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`type`|完整型別名稱（以 <xref:System.Type.FullName%2A> 屬性工作表示）和元件名稱（以 <xref:System.Reflection.Assembly.FullName%2A> 屬性工作表示），並以逗號分隔。|  
   
@@ -47,7 +48,7 @@ ms.locfileid: "79155111"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**元素**|**說明**|  
+|**元素**|**描述**|  
 |-----------------|---------------------|  
 |[authenticationModules](authenticationmodules-element-network-settings.md)|指定用來驗證網路要求的模組。|  
   

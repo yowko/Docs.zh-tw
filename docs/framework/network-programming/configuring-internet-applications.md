@@ -1,5 +1,6 @@
 ---
 title: 設定網際網路應用程式
+description: 瞭解如何使用 <system.Net> 元素，在 .NET Framework 中設定網際網路應用程式。 本文包含範例程式碼。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - downloading Internet resources, default proxy
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: ee4dc87383153ae4e8df0a3bed7cce5220e65405
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 760a4ac7cec9abeabfc372c3be5bd3860a6fb03a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048637"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502635"
 ---
 # <a name="configuring-internet-applications"></a>設定網際網路應用程式
-[ \<system.Net>元素（網路設置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)配置元素包含應用程式的網路設定資訊。 使用[\<system.Net>元素（網路設置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)元素，可以設置代理伺服器、設置連接管理參數，並在應用程式中包括自訂身份驗證和請求模組。  
+[ \<system.Net> 元素（網路設定）](../configure-apps/file-schema/network/system-net-element-network-settings.md) configuration 元素包含應用程式的網路設定資訊。 使用專案[ \<system.Net> （網路設定）](../configure-apps/file-schema/network/system-net-element-network-settings.md)專案，您可以設定 proxy 伺服器、設定連接管理參數，以及在應用程式中包含自訂驗證和要求模組。  
   
- [預設代理>元素（網路設置）元素定義類返回的代理伺服器。 \< ](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) `GlobalProxySelection` 任何未將其專屬 <xref:System.Net.HttpWebRequest.Proxy%2A> 屬性設定為特定值的 <xref:System.Net.HttpWebRequest> 都會使用預設 Proxy。 除了設定 Proxy 位址之外，您還可以建立將不會使用 Proxy 的伺服器位址清單，以及指出不應該將 Proxy 用於本機位址。  
+ [ \<defaultProxy> 元素（網路設定）](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md)專案會定義類別所傳回的 proxy 伺服器 `GlobalProxySelection` 。 任何未將其專屬 <xref:System.Net.HttpWebRequest.Proxy%2A> 屬性設定為特定值的 <xref:System.Net.HttpWebRequest> 都會使用預設 Proxy。 除了設定 Proxy 位址之外，您還可以建立將不會使用 Proxy 的伺服器位址清單，以及指出不應該將 Proxy 用於本機位址。  
   
  請務必注意，Microsoft Internet Explorer 設定是與組態設定一起使用，但優先使用後者。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "71048637"
 </configuration>  
 ```  
   
- 使用[\<連接管理>元素（網路設置）](../configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)元素配置可連接到特定伺服器或所有其他伺服器的持久連接數。 下列範例會設定應用程式使用兩個與 `www.contoso.com` 伺服器的持續連線、四個 IP 位址為 192.168.1.2 之伺服器的持續連線，以及一個與所有其他伺服器的持續連線。  
+ 使用專案[ \<connectionManagement> （網路設定）](../configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)專案，設定可以對特定伺服器或所有其他伺服器進行的持續連接數目。 下列範例會設定應用程式使用兩個與 `www.contoso.com` 伺服器的持續連線、四個 IP 位址為 192.168.1.2 之伺服器的持續連線，以及一個與所有其他伺服器的持續連線。  
   
 ```xml  
 <configuration>  
@@ -68,7 +69,7 @@ ms.locfileid: "71048637"
 </configuration>  
 ```  
   
- 自訂身份驗證模組配置了[\<身份驗證模組>元素（網路設置）](../configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)元素。 自訂驗證模組必須實作 <xref:System.Net.IAuthenticationModule> 介面。  
+ 自訂驗證模組是以[ \<authenticationModules> 元素（網路設定）](../configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)專案進行設定。 自訂驗證模組必須實作 <xref:System.Net.IAuthenticationModule> 介面。  
   
  下列範例設定自訂驗證模組。  
   
@@ -82,7 +83,7 @@ ms.locfileid: "71048637"
 </configuration>  
 ```  
   
- 您可以使用[\<WebRequestModule>元素（網路設置）](../configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)元素來配置應用程式，以便使用特定于協定的自訂模組從 Internet 資源請求資訊。 指定的模組必須實作 <xref:System.Net.IWebRequestCreate> 介面。 您可以在組態檔中指定自訂模組來覆寫預設 HTTP、HTTPS 和檔案要求模組，如下列範例所示。  
+ 您可以使用專案[ \<webRequestModules> （網路設定）](../configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)專案，將您的應用程式設定為使用自訂通訊協定特定模組來要求來自網際網路資源的資訊。 指定的模組必須實作 <xref:System.Net.IWebRequestCreate> 介面。 您可以在組態檔中指定自訂模組來覆寫預設 HTTP、HTTPS 和檔案要求模組，如下列範例所示。  
   
 ```xml  
 <configuration>  
@@ -99,6 +100,6 @@ ms.locfileid: "71048637"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 框架中的網路程式設計](index.md)
-- [網路設置架構](../configure-apps/file-schema/network/index.md)
-- [\<system.Net>元素（網路設置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [.NET Framework 中的網路程式設計](index.md)
+- [網路設定結構描述](../configure-apps/file-schema/network/index.md)
+- [\<system.Net>元素（網路設定）](../configure-apps/file-schema/network/system-net-element-network-settings.md)

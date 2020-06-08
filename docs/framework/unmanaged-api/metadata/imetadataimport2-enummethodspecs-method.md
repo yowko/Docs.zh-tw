@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 2df53ba53c64e042abc54a1d2ac043d301acdde9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f6fbc570e7ea85aca5b365611d58a1700fb27cd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177178"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490714"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs 方法
-獲取與指定方法Def或會員Ref權杖關聯的 MethodSpec 權杖陣列的枚舉器。  
+取得與指定的 MethodDef 或 MemberRef token 相關聯的 MethodSpec 標記陣列的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,37 +39,37 @@ HRESULT EnumMethodSpecs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [進出]指向 的枚舉器的`rMethodSpecs`指標。  
+ [in、out]列舉值的指標 `rMethodSpecs` 。  
   
  `tk`  
- [在]代表其方法Spec權杖的方法的會員Ref或 MethodDef 權杖。 如果 值`tk`為 0（零），則將枚舉作用域中的所有 MethodSpec 權杖。  
+ 在MemberRef 或 MethodDef token，代表要列舉其 MethodSpec 標記的方法。 如果的值 `tk` 為0（零），則會列舉範圍中的所有 MethodSpec token。  
   
  `rMethodSpecs`  
- [出]要枚舉的 MethodSpec 權杖的陣列。  
+ 脫銷要列舉之 MethodSpec 標記的陣列。  
   
  `cMax`  
- [在]要放置在 中`rMethodSpecs`的最大權杖數。  
+ 在要放置在中的要求最大權杖數目 `rMethodSpecs` 。  
   
  `pcMethodSpecs`  
- [出]放置在 的`rMethodSpecs`返回的權杖數。  
+ 脫銷所傳回的權杖數目 `rMethodSpecs` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs`已成功返回。|  
-|`S_FALSE`|`phEnum`沒有成員元素。 在這種情況下，`pcMethodSpecs`設置為 0（零）。|  
+|`S_OK`|`EnumMethodSpecs`已成功傳回。|  
+|`S_FALSE`|`phEnum`沒有成員元素。 在此情況下， `pcMethodSpecs` 會設為0（零）。|  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 用作 MsCorEE.dll 中的資源  
+ 連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)

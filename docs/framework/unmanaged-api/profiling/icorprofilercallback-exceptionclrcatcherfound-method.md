@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 73fe8b4b-8f9a-4ba5-a10c-b26521396a66
 topic_type:
 - apiref
-ms.openlocfilehash: a543e5119a3ad5580fb67c31dc0e59ab62eab571
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 4f4d53b086453adce38902518f2de3dde1f2812f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866488"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500243"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound 方法
-在 common language runtime （CLR）本身內找到例外狀況的 `catch` 區塊時呼叫。 這個方法在 .NET Framework 版本2.0 中已過時。  
+在 `catch` common language runtime （CLR）本身內找到例外狀況的區塊時呼叫。 這個方法在 .NET Framework 版本2.0 中已過時。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,16 +31,16 @@ ms.locfileid: "76866488"
 HRESULT ExceptionCLRCatcherFound();  
 ```  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework 版本：** 1.0  
+ **.NET Framework 版本：** 1。0  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
 - [ExceptionCLRCatcherExecute 方法](icorprofilercallback-exceptionclrcatcherexecute-method.md)

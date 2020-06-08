@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: 98d5dcf3b691f16f63390851e207f518bf26ab11
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 708981155589d491a3b1819adb611a28072dd1bf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866516"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500311"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 方法
 通知分析工具，COM Interop 的 vtable 已終結。  
@@ -41,7 +41,7 @@ HRESULT COMClassicVTableDestroyed(
 
 - `wrappedClassId`
 
-  \[在] 中，為其建立此 vtable 的類別識別碼。
+  \[in] 中建立此 vtable 的類別識別碼。
 
 - `implementedIID`
 
@@ -56,16 +56,16 @@ HRESULT COMClassicVTableDestroyed(
   
  分析工具的此方法的執行不應呼叫 managed 程式碼，或以任何方式進行，以造成 managed 記憶體配置。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
 - [COMClassicVTableCreated 方法](icorprofilercallback-comclassicvtablecreated-method.md)

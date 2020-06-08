@@ -1,5 +1,6 @@
 ---
 title: 使用用戶端通訊端
+description: 這個範例示範如何使用 .NET Framework 中的通訊端，建立遠端服務的 TCP/IP 連接。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: fe2ad55c3f60347369c0e92bc834d81d98f3870e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1dc02d0b3651d5766d1d30752566217d8417af0c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71046949"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501998"
 ---
 # <a name="using-client-sockets"></a>使用用戶端通訊端
 在透過 <xref:System.Net.Sockets.Socket> 起始交談之前，您必須先建立應用程式和遠端裝置之間的資料管道。 雖然有其他的網路位址系列和通訊協定存在，但此範例會示範如何建立遠端服務的 TCP/IP 連線。  

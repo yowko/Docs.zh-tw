@@ -1,13 +1,14 @@
 ---
 title: 啟用和停用 IPv6
+description: 請遵循下列設定步驟，以啟用使用 IPv6 通訊協定，包括修改電腦或應用程式的設定檔。
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7729647b09df20a98d5d639a641cb0a31f557330
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048569"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502609"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>啟用和停用 IPv6
 若要使用 IPv6 通訊協定，請確定您執行的作業系統版本支援 IPv6，並確認已正確設定作業系統和網路類別。  
@@ -15,7 +16,7 @@ ms.locfileid: "71048569"
 ## <a name="configuration-steps"></a>設定步驟  
  下表列出各種組態  
   
-|作業系統是否啟用 IPv6？|網路類別是否啟用 IPv6？|描述|  
+|作業系統是否啟用 IPv6？|網路類別是否啟用 IPv6？|說明|  
 |-------------------------------------|---------------------------------------|-----------------|  
 |否|否|可以剖析 IPv6 位址。|  
 |否|是|可以剖析 IPv6 位址。|  
@@ -46,7 +47,7 @@ ms.locfileid: "71048569"
   
 ## <a name="see-also"></a>另請參閱
 
-- [互聯網協定版本 6](internet-protocol-version-6.md)
+- [網際網路通訊協定第6版](internet-protocol-version-6.md)
 - [通訊端](sockets.md)
-- [網路設置架構](../configure-apps/file-schema/network/index.md)
-- [\<ipv6>元素（網路設置）](../configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [網路設定結構描述](../configure-apps/file-schema/network/index.md)
+- [\<ipv6>元素（網路設定）](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

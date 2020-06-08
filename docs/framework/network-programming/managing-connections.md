@@ -1,5 +1,6 @@
 ---
 title: 管理連接
+description: 瞭解針對資料資源使用 HTTP 的應用程式如何使用 .NET Framework ServicePoint 和 ServicePointManager 類別來管理連接。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 11c17c6893800fce8bbff8f49b3a207c161bcdfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 124dff1b104e323b929d13f73cf17d740e747c32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047639"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502284"
 ---
 # <a name="managing-connections"></a>管理連接
 使用 HTTP 連線至資料資源的應用程式可以使用 .NET Framework 的 <xref:System.Net.ServicePoint> 和 <xref:System.Net.ServicePointManager> 類別管理網際網路連線，以及協助它們達到最佳規模和效能。  

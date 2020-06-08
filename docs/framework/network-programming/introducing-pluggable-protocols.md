@@ -1,5 +1,6 @@
 ---
 title: 可插式通訊協定簡介
+description: 瞭解插即用通訊協定，其支援使用網際網路資源的應用程式開發，而不論資源所使用的通訊協定詳細資料。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data requests, pluggable protocols
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 72b47b8159f9f6f0dc3a19c5cbf94335507d9e7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0bc2d0d005e50b04aff360866a146f6fe6b0ea02
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047866"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502349"
 ---
 # <a name="introducing-pluggable-protocols"></a>可插式通訊協定簡介
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空間中的網際網路存取類別，可用來實作 Web 架構和以網際網路為基礎的應用程式。  
@@ -62,12 +63,12 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
 ## <a name="simple-requests-with-webclient"></a>使用 WebClient 的簡單要求  
  凡是需要提出網際網路資源簡單要求的應用程式，<xref:System.Net.WebClient> 類別都會提供常見方法，在網際網路伺服器上傳資料或下載資料。 **WebClient** 依賴 **WebRequest** 類別提供對網際網路資源的存取；因此，**WebClient** 類別可以使用任何已註冊的可插式通訊協定。  
   
- 對於無法使用請求/回應模型的應用程式，或者對於需要在網路上偵聽和發送請求的應用程式 **，System.Net.Sockets**命名空間提供<xref:System.Net.Sockets.TcpClient>和<xref:System.Net.Sockets.TcpListener><xref:System.Net.Sockets.UdpClient>類。 這些類別會處理使用不同的傳輸通訊協定建立連線的詳細資料，並將應用程式的網路連線公開為資料流。  
+ 對於無法使用要求/回應模型的應用程式，或需要在網路上接聽的應用程式，以及傳送要求，**系統 .net. socket**命名空間會提供 <xref:System.Net.Sockets.TcpClient> 、 <xref:System.Net.Sockets.TcpListener> 和 <xref:System.Net.Sockets.UdpClient> 類別。 這些類別會處理使用不同的傳輸通訊協定建立連線的詳細資料，並將應用程式的網路連線公開為資料流。  
   
  熟悉 Windows Sockets 介面的開發人員，或需要在通訊端層級由程式設計提供控制項的開發人員，會發現 **System.Net.Sockets** 類別符合他們的需要。 **System.Net.Sockets** 類別是在 **System.Net** 類別內從 Managed 程式碼到原生程式碼的轉換點。 在大部分情況下，**System.Net.Sockets** 類別會將資料封送處理到其 Windows 32 位元的對應項目，以及處理任何必要的安全性檢查。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [可插式通訊協定程式設計](programming-pluggable-protocols.md)
-- [.NET 框架中的網路程式設計](index.md)
+- [.NET Framework 中的網路程式設計](index.md)
 - [網路程式設計範例](network-programming-samples.md)

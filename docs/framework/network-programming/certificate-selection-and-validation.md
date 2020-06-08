@@ -1,13 +1,14 @@
 ---
 title: 憑證的選取和驗證
+description: 瞭解 System.Net 類別提供幾種方式來選取和驗證 SSL/TLS 連線的憑證。
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: aea47360ab1bb9dad446a5a7b19a91ea688953c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc63413f5c3a5fadd0d62ad61f0b887697c6a45
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048754"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502648"
 ---
 # <a name="certificate-selection-and-validation"></a>憑證的選取和驗證
 <xref:System.Net> 類別支援數種方式來選取並驗證 <xref:System.Security.Cryptography.X509Certificates>，以進行安全通訊端層 (SSL) 連線。 用戶端可以選取一或多個憑證，以向伺服器驗證它自己。 伺服器可能需要用戶端憑證具有一或多個特定屬性，來進行驗證。  
@@ -55,4 +56,4 @@ ms.locfileid: "71048754"
 ## <a name="see-also"></a>另請參閱
 
 - [網路程式設計的安全性](security-in-network-programming.md)
-- [.NET 框架中的網路程式設計](index.md)
+- [.NET Framework 中的網路程式設計](index.md)

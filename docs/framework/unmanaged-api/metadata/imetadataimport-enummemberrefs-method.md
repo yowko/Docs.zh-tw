@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: b8a65b0748fec0e474d8b3b5dc03473fbd716108
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68cdefe7ab362b26bbf060fa46766068eb0d7094
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177338"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503753"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs 方法
 列舉代表指定類型成員的 MemberRef 語彙基元。  
@@ -39,37 +39,37 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [進出]指向枚舉器的指標。  
+ [in、out]列舉值的指標。  
   
  `tkParent`  
- [在]要枚舉其成員的類型的類型的類型類型，TypeDef、TypeRef、方法Def或 ModuleRef 權杖。  
+ 在要列舉其成員之類型的 TypeDef、TypeRef、MethodDef 或 ModuleRef token。  
   
  `rMemberRefs`  
- [出]用於存儲會員Ref權杖的陣列。  
+ 脫銷用來儲存 MemberRef 標記的陣列。  
   
  `cMax`  
  [in] `rMemberRefs` 陣列的大小上限。  
   
  `pcTokens`  
- [出]在 中`rMemberRefs`返回的會員Ref 權杖的實際數量。  
+ 脫銷在中傳回的實際 MemberRef 標記數目 `rMemberRefs` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs`已成功返回。|  
-|`S_FALSE`|沒有要枚舉的會員Ref權杖。 在這種情況下，`pcTokens`是零。|  
+|`S_OK`|`EnumMemberRefs`已成功傳回。|  
+|`S_FALSE`|沒有可列舉的 MemberRef 標記。 在此情況下， `pcTokens` 會是零。|  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

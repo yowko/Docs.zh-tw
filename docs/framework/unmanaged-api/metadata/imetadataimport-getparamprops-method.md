@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: bb73ccdd9eee4b5a655a56b5d6757e0c6003fbc9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437120"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491052"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 方法
 取得指定 ParamDef 語彙基元所參考參數的中繼資料值。  
@@ -56,37 +56,37 @@ HRESULT GetParamProps (
  脫銷保存參數名稱的緩衝區。  
   
  `cchName`  
- 在要求的大小，以 `szName`的寬字元為單位。  
+ 在所要求的大小（以寬字元為單位） `szName` 。  
   
  `pchName`  
- 脫銷`szName`的寬字元傳回大小。  
+ 脫銷傳回的大小（以寬字元為單位） `szName` 。  
   
  `pdwAttr`  
- 脫銷與參數相關聯之任何屬性旗標的指標。 這是 `CorParamAttr` 值的位元遮罩。  
+ 脫銷與參數相關聯之任何屬性旗標的指標。 這是值的位元遮罩 `CorParamAttr` 。  
   
  `pdwCPlusTypeFlag`  
- 脫銷旗標的指標，指定參數為 <xref:System.ValueType>。  
+ 脫銷指定參數為之旗標的指標 <xref:System.ValueType> 。  
   
  `ppValue`  
  脫銷參數所傳回之常數位串的指標。  
   
  `pcchValue`  
- 脫銷`ppValue` 的大小，以寬字元為單位，如果 `ppValue` 不包含字串，則為零。  
+ 脫銷的大小 `ppValue` ，以寬字元為單位，如果 `ppValue` 不包含字串，則為零。  
   
 ## <a name="remarks"></a>備註
 
-`pulSequence` 中的順序值會以1為參數開頭。 傳回值的序號為0。
+參數的順序值 `pulSequence` 開頭為1。 傳回值的序號為0。
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

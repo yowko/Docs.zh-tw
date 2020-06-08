@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e875cbee-1ad9-4f1a-bf03-38cdb8ff371a
 topic_type:
 - apiref
-ms.openlocfilehash: cf455b3fb34d8eed78ffaadffad621062c2b9b22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 71a75defa72e4fe3594b4d0ceff45273b3a35395
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443490"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490350"
 ---
 # <a name="imetadatatablesgetguidheapsize-method"></a>IMetaDataTables::GetGuidHeapSize 方法
 取得 GUID 堆積的大小（以位元組為單位）。  
@@ -37,16 +37,16 @@ HRESULT GetGuidHeapSize (
  `pcbGuids`  
  脫銷GUID 堆積大小的指標，以位元組為單位。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 做為 Mscoree.dll 中的資源使用  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables 介面](imetadatatables-interface.md)
+- [IMetaDataTables2 介面](imetadatatables2-interface.md)

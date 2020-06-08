@@ -1,5 +1,6 @@
 ---
 title: 使用非同步用戶端通訊端
+description: 這個範例會顯示非同步用戶端通訊端。 .NET Framework 非同步程式設計可讓應用程式在處理連接時繼續執行。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 748745ca6799005dccdbfcbcc37a8c2a38f2a88e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf46e9519bcecf4d7a20ff99b86fa5f66af2087
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180643"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502037"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>使用非同步用戶端通訊端
 非同步用戶端通訊端等待網路作業完成時，不會暫停應用程式。 相反地，它會使用標準 .NET Framework 非同步程式設計模型，在一個執行緒上處理網路連線，同時應用程式繼續在原始執行緒上執行。 非同步通訊端適用於大量使用網路的應用程式，或是無法等候網路作業完成再繼續進行的應用程式。  

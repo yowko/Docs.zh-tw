@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae0836d0-1170-4494-bac5-d0e809df51a2
 topic_type:
 - apiref
-ms.openlocfilehash: 40857620e47befce361ff8cb04af527915051df3
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: e1df31ed8b652837a33b360b1378f99e6800cbea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804201"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501517"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>IHostSecurityContext::Capture 方法
-取得從[IHostSecurityManager：： GetSecurityCoNtext](ihostsecuritymanager-getsecuritycontext-method.md)的呼叫所傳回的[IHostSecurityCoNtext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)實例複本。  
+取得從[IHostSecurityManager：： GetSecurityCoNtext](ihostsecuritymanager-getsecuritycontext-method.md)的呼叫所傳回的[IHostSecurityCoNtext](ihostsecuritycontext-interface.md)實例複本。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ HRESULT Capture (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`Capture`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  

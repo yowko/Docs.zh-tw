@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-ms.openlocfilehash: 0eb1f57e3505f9ce5bb8b831d30c3891e51097c3
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: b7a068efcf20b2028e9c193567d15b59e582febf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158563"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500919"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION 列舉
 識別垃圾收集的產生。  
@@ -38,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>成員  
   
-|member|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`COR_PRF_GC_GEN_0`|物件會儲存為層代0。|  
 |`COR_PRF_GC_GEN_1`|物件會儲存為第1代。|  
@@ -53,10 +53,10 @@ typedef enum {
   
  使用世代表示垃圾收集行程在任何時候都只能處理已設定物件的子集。  
   
- COR_PRF_GC_GENERATION_RANGE `COR_PRF_GC_GENERATION`結構會使用列舉型[COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)別。  
+ `COR_PRF_GC_GENERATION` [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)結構會使用列舉型別。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

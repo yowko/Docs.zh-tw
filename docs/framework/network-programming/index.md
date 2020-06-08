@@ -1,5 +1,6 @@
 ---
 title: 以 .NET Framework 進行網路程式設計
+description: 使用這些資源，將 .NET Framework 提供的多層、可擴充和 managed 的網際網路服務整合到您的應用程式中。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74204687"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502401"
 ---
 # <a name="network-programming-in-the-net-framework"></a>以 .NET Framework 進行網路程式設計
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 您的網路應用程式可以建置在可外掛式通訊協定上，以便自動利用新的網際網路通訊協定，或者也可以使用 Windows Socket 介面的 Managed 實作，以便搭配使用通訊端層級上的網路。  
@@ -31,7 +32,7 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  [使用應用程式通訊協定](using-application-protocols.md)  
  說明如何設計使用網路通訊協定 (例如 TCP、UDP 和 HTTP) 的應用程式。  
   
- [互聯網協定版本 6](internet-protocol-version-6.md)  
+ [網際網路通訊協定第6版](internet-protocol-version-6.md)  
  說明在目前版本的網際網路通訊協定組合 (IPv4) 之上網際網路通訊協定第 6 版 (IPv6) 的優點，描述 IPv6 位址、路由和自動設定，以及如何啟用和停用 IPv6。  
   
  [設定網際網路應用程式](configuring-internet-applications.md)  
@@ -49,13 +50,13 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  [System.Net 類別的最佳做法](best-practices-for-system-net-classes.md)  
  提供可讓您善用網際網路應用程式的祕訣和訣竅。  
   
- [通過代理訪問互聯網](accessing-the-internet-through-a-proxy.md)  
+ [透過 Proxy 存取網際網路](accessing-the-internet-through-a-proxy.md)  
  描述如何設定 Proxy。  
   
  [NetworkInformation](networkinformation.md)  
  描述如何蒐集網路事件、變更、統計資料和屬性的相關資訊，以及說明如何判斷遠端主機是否可以使用 <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> 類別取得聯繫。  
   
- [版本 2.0 中對系統.Uri 命名空間的更改](changes-to-the-system-uri-namespace-in-version-2-0.md)  
+ [版本2.0 中的 System.object 命名空間變更](changes-to-the-system-uri-namespace-in-version-2-0.md)  
  說明在版本 2.0 中對 <xref:System.Uri?displayProperty=nameWithType> 類別所做的幾個變更，以修正不正確的行為、提高可用性，以及增強安全性。  
   
  [System.Uri 的國際資源識別項支援](international-resource-identifier-support-in-system-uri.md)  
@@ -80,7 +81,7 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  說明 <xref:System.Net?displayProperty=nameWithType>、 <xref:System.Net.NetworkInformation?displayProperty=nameWithType>和 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空間所新增的增強功能，以支援使用 IPv6 和 Teredo 進行 NAT 周遊。  
   
  [Windows 市集應用程式的網路隔離](network-isolation-for-windows-store-apps.md)  
- 描述在 Windows 8.x 應用商店<xref:System.Net>應用中<xref:System.Net.Http>使用<xref:System.Net.Http.Headers>中的 類和命名空間時網路隔離的影響。  
+ 說明在 <xref:System.Net> <xref:System.Net.Http> Windows 8.X <xref:System.Net.Http.Headers> 存放區應用程式中使用、和命名空間中的類別時，網路隔離的影響。  
   
  [網路程式設計範例](network-programming-samples.md)  
  可供下載的網路程式設計範例的連結，這些範例會使用 <xref:System.Net>、 <xref:System.Net.Cache>、 <xref:System.Net.Configuration>、 <xref:System.Net.Mail>、 <xref:System.Net.Mime>、 <xref:System.Net.NetworkInformation>、 <xref:System.Net.PeerToPeer>、 <xref:System.Net.Security>以及 <xref:System.Net.Sockets> 命名空間中的類別。  

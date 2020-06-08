@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762071"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501647"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName 介面
 提供基本的全域靜態函式，以強式名稱簽署元件。 所有 `ICLRStrongName` 方法都會傳回標準 COM hresult。  
@@ -35,7 +35,7 @@ ms.locfileid: "83762071"
 |[GetHashFromFileW 方法](iclrstrongname-gethashfromfilew-method.md)|產生以 Unicode 字串指定之檔案內容的雜湊。|  
 |[GetHashFromHandle 方法](iclrstrongname-gethashfromhandle-method.md)|使用指定的雜湊演算法產生以指定檔案控制代碼指定之檔案的雜湊。|  
 |[StrongNameCompareAssemblies 方法](iclrstrongname-strongnamecompareassemblies-method.md)|判斷兩個組件是否只有強制名稱簽章不同。|  
-|[StrongNameFreeBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|釋放先前呼叫強式名稱方法所配置的記憶體，例如[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)或[StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)。|  
+|[StrongNameFreeBuffer 方法](iclrstrongname-strongnamefreebuffer-method.md)|釋放先前呼叫強式名稱方法所配置的記憶體，例如[StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)或[StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)。|  
 |[StrongNameGetBlob 方法](iclrstrongname-strongnamegetblob-method.md)|使用位於所指定位址之可執行檔的二進位表示法填滿指定的緩衝區。|  
 |[StrongNameGetBlobFromImage 方法](iclrstrongname-strongnamegetblobfromimage-method.md)|取得位於所指定記憶體位置之組件影像的二進位表示法。|  
 |[StrongNameGetPublicKey 方法](iclrstrongname-strongnamegetpublickey-method.md)|從私密/公開金鑰組取得公開金鑰。|  
@@ -69,4 +69,4 @@ ms.locfileid: "83762071"
 ## <a name="see-also"></a>另請參閱
 
 - [裝載介面](hosting-interfaces.md)
-- [裝載](index.md)
+- [Hosting](index.md)

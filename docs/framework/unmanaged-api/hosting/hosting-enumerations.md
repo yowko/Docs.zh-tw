@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: e6fb22f91d57a356a9a7c3749e44a9fb3c36b699
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616108"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504299"
 ---
 # <a name="hosting-enumerations"></a>裝載列舉
 本節說明裝載 API 所使用的非受控列舉。  
@@ -72,13 +72,13 @@ ms.locfileid: "83616108"
  包含值，指出當要求特定記憶體配置但無法滿足時，失敗的影響。  
   
  [EPolicyAction 列舉](epolicyaction-enumeration.md)  
- 描述主機可以針對[EClrOperation 列舉](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)所描述的作業設定的原則動作，以及[EClrFailure 列舉](eclrfailure-enumeration.md)所描述的失敗。  
+ 描述主機可以針對[EClrOperation 列舉](eclroperation-enumeration.md)所描述的作業設定的原則動作，以及[EClrFailure 列舉](eclrfailure-enumeration.md)所描述的失敗。  
   
  [ESymbolReadingPolicy 列舉](esymbolreadingpolicy-enumeration.md)  
  包含設定讀取程式資料庫（PDB）檔案之原則的值。  
   
  [ETaskType 列舉](etasktype-enumeration.md)  
- 包含值，指出[ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)或[IHostTask 介面](ihosttask-interface.md)介面所代表的工作種類。  
+ 包含值，指出[ICLRTask 介面](iclrtask-interface.md)或[IHostTask 介面](ihosttask-interface.md)介面所代表的工作種類。  
   
  [HOST_TYPE 列舉](host-type-enumeration.md)  
  包含值，指定啟動應用程式的主控制項類型。  

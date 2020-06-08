@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dda867b5-1050-49ba-b01c-fcc83b7a5617
 topic_type:
 - apiref
-ms.openlocfilehash: 3dd82588cf2dbf92fdda66fd7674c17ddc8b7306
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc7f1740d666211b63cd93e6f1c0e6955f61ec5d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177195"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503454"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum 方法
 重設指定列舉程式至指定位置。  
@@ -36,21 +36,21 @@ HRESULT ResetEnum (
   
 ## <a name="parameters"></a>參數  
  `hEnum`  
- [在]要重置的枚舉器。  
+ 在要重設的列舉值。  
   
  `ulPos`  
- [在]放置枚舉器的新位置。  
+ 在要放置枚舉器的新位置。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

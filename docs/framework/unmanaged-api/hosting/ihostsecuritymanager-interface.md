@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: b2c334c7a757c2f4044d08787bdae93ffc2804e4
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803889"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501465"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 介面
 提供的方法可讓您存取和控制目前執行之執行緒的安全性內容。  
@@ -28,7 +28,7 @@ ms.locfileid: "83803889"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetSecurityContext 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|從主機取得要求的[IHostSecurityCoNtext](ihostsecuritycontext-interface.md) 。|  
+|[GetSecurityContext 方法](ihostsecuritymanager-getsecuritycontext-method.md)|從主機取得要求的[IHostSecurityCoNtext](ihostsecuritycontext-interface.md) 。|  
 |[ImpersonateLoggedOnUser 方法](ihostsecuritymanager-impersonateloggedonuser-method.md)|要求使用目前使用者識別的認證來執行程式碼。|  
 |[OpenThreadToken 方法](ihostsecuritymanager-openthreadtoken-method.md)|開啟與目前線程相關聯的任意存取權杖。|  
 |[RevertToSelf 方法](ihostsecuritymanager-reverttoself-method.md)|終止目前使用者身分識別的模擬，並傳回原始的執行緒 token。|  

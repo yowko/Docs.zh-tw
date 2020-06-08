@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4372384-ee69-48d7-97e0-8fab7866597a
 topic_type:
 - apiref
-ms.openlocfilehash: 79ef08ef70ad1132ceacc3e2b997651e57032b9a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 6a6b4d0351e22026dc873aad8281d0259d871a14
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803816"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501478"
 ---
 # <a name="ihostsecuritymanagersetsecuritycontext-method"></a>IHostSecurityManager::SetSecurityContext 方法
 設定目前執行中線程的安全性內容。  
@@ -43,7 +43,7 @@ HRESULT SetSecurityContext (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`SetSecurityContext`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
@@ -53,7 +53,7 @@ HRESULT SetSecurityContext (
 |E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- CLR 會 `SetSecurityContext` 在數個案例中呼叫。 在執行類別和模組的「函式」和「完成項」之前，CLR 會呼叫 `SetSecurityContext` 來保護主機免于執行失敗。 接著，它會使用的另一個呼叫，在執行函式或完成項之後，將安全性內容重設為其原始狀態 `SetSecurityContext` 。 I/o 完成時，會發生類似的模式。 如果主機執行[IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)，則 CLR 會在 `SetSecurityContext` 主機呼叫[ICLRIoCompletionManager：： OnComplete](iclriocompletionmanager-oncomplete-method.md)之後呼叫。  
+ CLR 會 `SetSecurityContext` 在數個案例中呼叫。 在執行類別和模組的「函式」和「完成項」之前，CLR 會呼叫 `SetSecurityContext` 來保護主機免于執行失敗。 接著，它會使用的另一個呼叫，在執行函式或完成項之後，將安全性內容重設為其原始狀態 `SetSecurityContext` 。 I/o 完成時，會發生類似的模式。 如果主機執行[IHostIoCompletionManager](ihostiocompletionmanager-interface.md)，則 CLR 會在 `SetSecurityContext` 主機呼叫[ICLRIoCompletionManager：： OnComplete](iclriocompletionmanager-oncomplete-method.md)之後呼叫。  
   
  在背景工作執行緒的非同步點上，CLR `SetSecurityContext` <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 會在[IHostThreadPoolManager：： QueueUserWorkItem](ihostthreadpoolmanager-queueuserworkitem-method.md)內或內部呼叫，視主機或 CLR 是否正在執行執行緒集區而定。  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-ms.openlocfilehash: 41955bd2f64d53e3620dede6b6da4cef2aab45f4
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1981fdf25440a296801bdbd06c41ebcb4b87e870
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842292"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501382"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>IHostTaskManager::ReverseEnterRuntime 方法
 通知主機正在從非受控碼對 common language runtime （CLR）進行呼叫。  
@@ -33,7 +33,7 @@ HRESULT ReverseEnterRuntime ();
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`ReverseEnterRuntime`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
@@ -47,7 +47,7 @@ HRESULT ReverseEnterRuntime ();
  如果從衍生自 managed 程式碼的序列發出對 CLR 的呼叫，則每個呼叫都會 `ReverseEnterRuntime` 對應至[ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)的呼叫。  
   
 > [!NOTE]
-> 呼叫可能是來自非受控程式碼，而不需要加以嵌套。 在此情況下，不會呼叫[EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)、 [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md)或 `ReverseLeaveRuntime` ，而且呼叫的數目 `ReverseEnterRuntime` 不等於的呼叫次數 `ReverseLeaveRuntime` 。  
+> 呼叫可能是來自非受控程式碼，而不需要加以嵌套。 在此情況下，不會呼叫[EnterRuntime](ihosttaskmanager-enterruntime-method.md)、 [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md)或 `ReverseLeaveRuntime` ，而且呼叫的數目 `ReverseEnterRuntime` 不等於的呼叫次數 `ReverseLeaveRuntime` 。  
   
 ## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  

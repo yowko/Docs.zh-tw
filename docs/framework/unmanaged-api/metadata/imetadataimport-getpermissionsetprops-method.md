@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: 5faf1a6ae89045b2ef17fab789ee6e5bf23eecf2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54c75156c32e5b40aa933ef6530b2cc33edf7de4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175339"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490987"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps 方法
-獲取與指定許可權權杖<xref:System.Security.PermissionSet?displayProperty=nameWithType>表示的中繼資料。  
+取得與 <xref:System.Security.PermissionSet?displayProperty=nameWithType> 指定的許可權標記所表示之相關聯的中繼資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,28 +38,28 @@ HRESULT GetPermissionSetProps (
   
 ## <a name="parameters"></a>參數  
  `pm`  
- [在]表示獲取中繼資料屬性的許可權集的許可權中繼資料權杖。  
+ 在許可權元資料標記，表示用來取得中繼資料屬性的許可權集合。  
   
  `pdwAction`  
- [出]指向許可權集的指標。  
+ 脫銷許可權集合的指標。  
   
  `ppvPermission`  
- [出]指向許可權集的二進位中繼資料簽名的指標。  
+ 脫銷許可權集合之二進位中繼資料簽章的指標。  
   
  `pcbPermission`  
- [出]的大小（以位元組為單位）。 `ppvPermission`  
+ 脫銷的大小（以位元組為單位） `ppvPermission` 。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.PermissionSet>
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

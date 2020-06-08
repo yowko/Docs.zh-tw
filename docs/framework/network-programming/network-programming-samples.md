@@ -1,13 +1,14 @@
 ---
 title: 網路程式設計範例
+description: 針對 .NET Framework System.Net 和擴充類別，請使用這些可下載的網路程式設計範例。
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 087b4b85c705ddfcda850422fa6d0392ba0bdc23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180707"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502258"
 ---
 # <a name="network-programming-samples"></a>網路程式設計範例
 本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。
@@ -25,7 +26,7 @@ ms.locfileid: "79180707"
  [HttpListener 技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
  示範如何處理應用程式中的 HTTP 要求。  
 
- [HttpListener ASPX 主機應用程式示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))演示如何使用<xref:System.Net.HttpListener?displayProperty=nameWithType>類的功能創建將調用路由到託管ASP.NET應用程式的 HTTP 伺服器。
+ [HTTPLISTENER ASPX 主機應用程式範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))示範如何使用類別的功能 <xref:System.Net.HttpListener?displayProperty=nameWithType> 來建立 HTTP 伺服器，以將呼叫路由至託管的 ASP.NET 應用程式。
   
  [Mailer 技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  示範如何從用戶端應用程式傳送電子郵件訊息。  
@@ -58,5 +59,5 @@ ms.locfileid: "79180707"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 框架中的網路程式設計](index.md)
+- [.NET Framework 中的網路程式設計](index.md)
 - [網路程式設計「如何」主題](network-programming-how-to-topics.md)

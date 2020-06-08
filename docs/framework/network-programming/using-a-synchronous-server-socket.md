@@ -1,5 +1,6 @@
 ---
 title: 使用同步伺服器通訊端
+description: 這個範例會顯示 .NET Framework 中的同步伺服器通訊端，這會暫停應用程式，直到在通訊端上收到連線要求為止。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-ms.openlocfilehash: cbc02c755ceefa8f31439f121a98978b82f33fa2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e7d32595f554b32ecc72bbb1f1a469ad5935467
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047026"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502050"
 ---
 # <a name="using-a-synchronous-server-socket"></a>使用同步伺服器通訊端
 同步伺服器通訊端會暫停應用程式執行，直到在通訊端上收到連線要求為止。 同步伺服器通訊端不適用於大量使用網路以進行作業的應用程式，但它們可能適合簡單網路應用程式。  
   
  使用 <xref:System.Net.Sockets.Socket.Bind%2A> 和 <xref:System.Net.Sockets.Socket.Listen%2A> 方法設定 <xref:System.Net.Sockets.Socket> 以接聽端點之後，便已準備好使用 <xref:System.Net.Sockets.Socket.Accept%2A> 方法接受連入的連線要求。 應用程式會暫停，直到呼叫 **Accept** 方法收到連線要求為止。  
   
- 收到連線要求時，**Accept** 會傳回與連線用戶端建立關聯的新 **Socket** 執行個體。 下列範例會從用戶端讀取資料、將它顯示在主控台中，然後將資料回應傳回給用戶端。 **Socket** 未指定任何傳訊通訊協定，因此字串 "\<EOF>" 會標記訊息資料的結束。 它假設名為 `listener` 的**通訊端**已初始化並繫結至端點。  
+ 收到連線要求時，**Accept** 會傳回與連線用戶端建立關聯的新 **Socket** 執行個體。 下列範例會從用戶端讀取資料、將它顯示在主控台中，然後將資料回應傳回給用戶端。 **通訊端**不會指定任何訊息通訊協定，因此字串 " \<EOF> " 會標示訊息資料的結尾。 它假設名為 `listener` 的**通訊端**已初始化並繫結至端點。  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  

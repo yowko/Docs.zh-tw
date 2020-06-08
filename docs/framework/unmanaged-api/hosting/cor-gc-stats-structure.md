@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d4ff73e-739b-40f6-9349-359fbc99c2f9
 topic_type:
 - apiref
-ms.openlocfilehash: 8446960d0746a864c44febbbe4a4d0313d6dcd4d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a6553de31d4f9627809af7691218c39dc734c6f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616706"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501660"
 ---
 # <a name="cor_gc_stats-structure"></a>COR_GC_STATS 結構
 提供有關 common language runtime （CLR）之垃圾收集機制的統計資料。  
@@ -59,7 +59,7 @@ typedef struct _COR_GC_STATS {
 |`KBytesPromotedFromGen1`|從層代1升級至第二代的物件大小（以 kb 為單位）。|  
   
 ## <a name="remarks"></a>備註  
- [ICLRGCManager：： GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)方法需要將 `Flags` 結構的欄位 `COR_GC_STATS` 設定為[COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md)列舉的一個或多個值，以指定要設定的統計資料。  
+ [ICLRGCManager：： GetStats](iclrgcmanager-getstats-method.md)方法需要將 `Flags` 結構的欄位 `COR_GC_STATS` 設定為[COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md)列舉的一個或多個值，以指定要設定的統計資料。  
   
  下表將此結構提供的統計資料對應至兩個[COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md)列舉值 `COR_GC_COUNTS` 和 `COR_GC_MEMORYUSAGE` 。  
   
@@ -75,7 +75,7 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** GCHost .idl  

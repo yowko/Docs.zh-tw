@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: b742f717f4caa0ba23d5a4c1438ed3ce4dcc60d7
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842253"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501393"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager 介面
 提供的方法可讓 common language runtime （CLR）透過主機來處理工作，而不是使用標準作業系統執行緒或光纖函數。  
@@ -40,7 +40,7 @@ ms.locfileid: "83842253"
 |[LeaveRuntime 方法](ihosttaskmanager-leaveruntime-method.md)|通知主機 managed 程式碼即將進行非受控函式的呼叫。|  
 |[ReverseEnterRuntime 方法](ihosttaskmanager-reverseenterruntime-method.md)|通知主機正在從非受控碼對 common language runtime （CLR）進行呼叫。|  
 |[ReverseLeaveRuntime 方法](ihosttaskmanager-reverseleaveruntime-method.md)|通知主控制項離開 CLR，並輸入從 managed 程式碼呼叫的非受控函式。|  
-|[SetCLRTaskManager 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|提供具有 CLR 所實[ICLRTaskManager](iclrtaskmanager-interface.md)實例之介面指標的主機。|  
+|[SetCLRTaskManager 方法](ihosttaskmanager-setclrtaskmanager-method.md)|提供具有 CLR 所實[ICLRTaskManager](iclrtaskmanager-interface.md)實例之介面指標的主機。|  
 |[SetLocale 方法](ihosttaskmanager-setlocale-method.md)|通知主機 CLR 已變更目前工作的地區設定。|  
 |[SetStackGuarantee 方法](ihosttaskmanager-setstackguarantee-method.md)|已保留供內部使用。|  
 |[SetUILocale 方法](ihosttaskmanager-setuilocale-method.md)|通知主機使用者介面地區設定已在目前的工作上變更。|  

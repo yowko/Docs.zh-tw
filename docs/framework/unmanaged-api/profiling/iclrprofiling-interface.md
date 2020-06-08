@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b53ccc6-1b5e-4b30-a100-c9683d553f5a
 topic_type:
 - apiref
-ms.openlocfilehash: 18cbaab08d5e3a5c36bec88ca5d5e48d1367444d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 56d5cfde2efb322521615977f72b0d308ad378f6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866737"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500537"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling 介面
 提供[ICLRProfiling：： AttachProfiler](iclrprofiling-attachprofiler-method.md)方法，可讓 profiler 附加至執行中的進程。  
@@ -33,15 +33,15 @@ ms.locfileid: "76866737"
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [分析介面](profiling-interfaces.md)
 - [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)

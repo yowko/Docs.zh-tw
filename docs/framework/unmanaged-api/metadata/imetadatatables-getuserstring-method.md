@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 21ce66722e069573b651ada950b64ef6d97220fb
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431430"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501140"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>IMetaDataTables::GetUserString 方法
 
@@ -42,20 +42,20 @@ HRESULT GetUserString (
 在將從中抓取硬式編碼字串的索引值。
 
 `pcbData`\
-脫銷`ppData`大小的指標。
+脫銷大小的指標 `ppData` 。
 
 `ppData`\
 脫銷傳回之字串指標的指標。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** Cor。h
 
 連結**庫：** 做為 Mscoree.dll 中的資源使用
 
-**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 

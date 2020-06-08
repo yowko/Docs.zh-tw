@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-ms.openlocfilehash: 0210aca5698cd9c86979c13afd1e622b50d194df
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: bbc163c71b47e6fee0db89284d6e3fd27e882768
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867176"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500880"
 ---
 # <a name="cor_prf_gc_root_flags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 列舉
 表示垃圾收集根目錄的屬性。  
@@ -35,9 +35,9 @@ typedef enum {
 } COR_PRF_GC_ROOT_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`COR_PRF_GC_ROOT_PINNING`|根會防止垃圾收集移動物件。|  
 |`COR_PRF_GC_ROOT_WEAKREF`|根不會防止垃圾收集。|  
@@ -45,17 +45,17 @@ typedef enum {
 |`COR_PRF_GC_ROOT_REFCOUNTED`|如果物件的參考計數是特定值，則根目錄會防止垃圾收集。|  
   
 ## <a name="remarks"></a>備註  
- `COR_PRF_GC_ROOT_FLAGS` 是一個位元遮罩，可提供特殊根的其他相關資訊。 不過，並非所有的根都是特殊的。 例如，某些根不是弱式參考、內部指標、固定或參考計數。 對於這類根，沒有可傳達的旗標。 因此，使用這個列舉的方法（例如[ICorProfilerCallback2：： RootReferences2](icorprofilercallback2-rootreferences2-method.md)方法）會傳送0做為旗標位元遮罩，表示所有旗標都已關閉。  
+ `COR_PRF_GC_ROOT_FLAGS`是一個位元遮罩，可提供特殊根的其他相關資訊。 不過，並非所有的根都是特殊的。 例如，某些根不是弱式參考、內部指標、固定或參考計數。 對於這類根，沒有可傳達的旗標。 因此，使用這個列舉的方法（例如[ICorProfilerCallback2：： RootReferences2](icorprofilercallback2-rootreferences2-method.md)方法）會傳送0做為旗標位元遮罩，表示所有旗標都已關閉。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [分析列舉](profiling-enumerations.md)

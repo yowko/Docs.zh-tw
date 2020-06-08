@@ -1,5 +1,6 @@
 ---
 title: <network> 項目 (網路設定)
+description: <network>網路設定元素會針對 .NET Framework 中的外部 SMTP 伺服器選項設定網路選項。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: f7cfcc3b9d5a717c23175cd15aa48ae97c828e57
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 36857e63871b4672df349934594f0887a042609e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154812"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504546"
 ---
 # <a name="network-element-network-settings"></a>\<network> 項目 (網路設定)
 設定外部簡易郵件傳輸通訊協定（SMTP）伺服器的網路選項。  
@@ -44,11 +45,11 @@ ms.locfileid: "79154812"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |`clientDomain`|指定要在初始 SMTP 通訊協定要求中用來連接 SMTP 郵件伺服器的用戶端功能變數名稱。 預設值是傳送要求的本機電腦的 localhost 名稱。|  
-|`defaultCredentials`|指定是否應該使用預設的使用者認證來存取 smtp 交易的 SMTP 郵件伺服器。 預設值是 `false`。|  
-|`enableSsl`|指定是否使用 SSL 來存取 SMTP 郵件伺服器。 預設值是 `false`。|  
+|`defaultCredentials`|指定是否應該使用預設的使用者認證來存取 smtp 交易的 SMTP 郵件伺服器。 預設值為 `false`。|  
+|`enableSsl`|指定是否使用 SSL 來存取 SMTP 郵件伺服器。 預設值為 `false`。|  
 |`host`|指定要用於 SMTP 交易的 SMTP 郵件伺服器的主機名稱。 此屬性沒有預設值。|  
 |`password`|指定要用於 SMTP 郵件伺服器驗證的密碼。 此屬性沒有預設值。|  
 |`port`|指定要用來連接 SMTP 郵件伺服器的通訊埠編號。 預設值為 25。|  
@@ -60,7 +61,7 @@ ms.locfileid: "79154812"
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|元素|說明|  
 |-------------|-----------------|  
 |[\<smtp>元素（網路設定）](smtp-element-network-settings.md)|設定簡單郵件傳輸通訊協定（SMTP）郵件傳送選項。|  
   

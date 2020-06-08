@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-ms.openlocfilehash: 0cf2014d7007593c51868eff0b488fdab136e362
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: afc818dfe625bfc329ceb1660539eb119702a90d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175170"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500672"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper 函式
-通知探測器，函數的給定識別碼可以重新映射到要用於該函數[的函數Enter2、](functionenter2-function.md)[函數Leave2](functionleave2-function.md)和[函數尾聲2](functiontailcall2-function.md)回檔中使用的替代 ID。 `FunctionIDMapper` 也可讓分析工具指出它是否要接收該函式的回呼。  
+通知分析工具，函式的指定識別碼可能會重新對應到替代識別碼，以便用於該函式的[FunctionEnter2](functionenter2-function.md)、 [FunctionLeave2](functionleave2-function.md)和[FunctionTailcall2](functiontailcall2-function.md)回呼。 `FunctionIDMapper` 也可讓分析工具指出它是否要接收該函式的回呼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,32 +37,32 @@ UINT_PTR __stdcall FunctionIDMapper (
 
 - `funcId`
 
-  \[in] 要重新映射的函數識別碼。
+  \[in] 要重新對應的函式識別碼。
 
 - `pbHookFunction`
 
-  \[out_ 指向探測器`true`在要接收`FunctionEnter2`時`FunctionLeave2`設置的值的指標， `FunctionTailcall2`否則，它將此值設置為`false`。
+  \[out] 值的指標， `true` 如果它想要接收、和回呼，則會將它設定為， `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` 否則會將此值設定為 `false` 。
 
 ## <a name="return-value"></a>傳回值  
- 分析工具會傳回一個值，執行引擎會使用該值做為替代函式識別項。 傳回值不可為 null，除非 `false` 傳回在 `pbHookFunction` 中。 否則，空傳回值將生成不可預知的結果，包括可能停止該過程。  
+ 分析工具會傳回一個值，執行引擎會使用該值做為替代函式識別項。 傳回值不可為 null，除非 `false` 傳回在 `pbHookFunction` 中。 否則，null 傳回值會產生無法預測的結果，包括可能會停止進程。  
   
 ## <a name="remarks"></a>備註  
- 該`FunctionIDMapper`函數是回檔。 探測器實現了它將函數 ID 重新映射到對探測器更有用的其他識別碼。 返回`FunctionIDMapper`用於任何給定函數的備用 ID。 然後，執行引擎通過將此備用 ID（除了傳統的函數`clientData`ID）傳遞給`FunctionEnter2`、`FunctionLeave2`和`FunctionTailcall2`掛鉤參數中的探測器來標識為其調用掛鉤的功能來回應探測器的請求。  
+ `FunctionIDMapper`函數是回呼。 分析工具會執行此程式碼剖析工具，將函式識別碼重新對應至其他對分析工具更有用的識別碼。 `FunctionIDMapper`會傳回要用於任何指定函數的替代識別碼。 然後執行引擎會接受分析工具的要求，方法是將此替代識別碼（除了傳統的函式識別碼）傳遞回到 `clientData` 、和勾點之參數中的分析工具 `FunctionEnter2` `FunctionLeave2` `FunctionTailcall2` ，以識別要呼叫其攔截器的函式。  
   
- 您可以使用[ICorProfilerInfo：：Set功能IDMapper](icorprofilerinfo-setfunctionidmapper-method.md)方法來指定`FunctionIDMapper`函數的實現。 您只能調用該方法`ICorProfilerInfo::SetFunctionIDMapper`一次，我們建議您在[ICorProfiler 回檔：：初始化](icorprofilercallback-initialize-method.md)回檔中調用該方法。  
+ 您可以使用[ICorProfilerInfo：： SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)方法來指定函數的執行 `FunctionIDMapper` 。 您只能呼叫 `ICorProfilerInfo::SetFunctionIDMapper` 方法一次，因此建議您在[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)回呼中執行此動作。  
   
- 預設情況下，假定使用[ICorProfilerInfo：：setEventMask](icorprofilerinfo-seteventmask-method.md)設置COR_PRF_MONITOR_ENTERLEAVE標誌的探測器，並且通過[ICorProfilerInfo 設置掛鉤：設置EnterLeave函數Hooks](icorprofilerinfo-setenterleavefunctionhooks-method.md)或[ICorProfilerInfo2：SetEnterLeave函數Hooks2，](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)應接收 每個函數的`FunctionEnter2`、`FunctionLeave2`和`FunctionTailcall2`回檔。 但是，探測器可以通過`FunctionIDMapper`設置為`pbHookFunction`有選擇地避免接收某些函數的回檔`false`。  
+ 根據預設，假設程式碼剖析工具會使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)設定 COR_PRF_MONITOR_ENTERLEAVE 旗標，並透過[ICorProfilerInfo：： SetEnterLeaveFunctionHooks](icorprofilerinfo-setenterleavefunctionhooks-method.md)或[ICorProfilerInfo2：： SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)設定勾點，應該會收到每個函式的 `FunctionEnter2` 、 `FunctionLeave2` 和 `FunctionTailcall2` 回呼。 不過，分析工具可能會 `FunctionIDMapper` 將設定為，以選擇性地避免接收特定函式的這些回呼 `pbHookFunction` `false` 。  
   
- 探測器應容忍設定檔應用程式的多個執行緒同時調用同一方法/函數的情況。 在這種情況下，探測器可能會收到同`FunctionIDMapper``FunctionID`一的多個回檔。 當同調用多次回檔時，探測器應確定應從此回檔返回相同的`FunctionID`值。  
+ 分析工具應可容忍已剖析應用程式的多個執行緒同時呼叫相同方法/函式的情況。 在這種情況下，分析工具可能會收到 `FunctionIDMapper` 相同的多個回呼 `FunctionID` 。 當使用相同的多次呼叫此回呼時，分析工具應該會傳回相同的值 `FunctionID` 。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾普羅普.伊德爾  
+ **標頭：** Corprof.idl .idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,6 @@
 ---
 title: 進行非同步要求
+description: 瞭解 System.Net 類別如何使用 .NET Framework 標準非同步程式設計模型，以非同步方式存取網際網路資源。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: a49233596bafebd4f07372e59f29ea77afb21458
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0af143b723c90b146dc5de8447d4a7e1866e7105
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180727"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502297"
 ---
 # <a name="making-asynchronous-requests"></a>進行非同步要求
 <xref:System.Net> 類別會使用 .NET Framework 的標準非同步程式設計模型，非同步存取網際網路資源。 <xref:System.Net.WebRequest> 類別的 <xref:System.Net.WebRequest.BeginGetResponse%2A> 和 <xref:System.Net.WebRequest.EndGetResponse%2A> 方法會啟動和完成網際網路資源的非同步要求。  

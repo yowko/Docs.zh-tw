@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-ms.openlocfilehash: 0dc2f625da7f4e37583f198c8d6dba86f6dcdb10
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9a1440be7011130b16d7112ae15026eb74856190
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805058"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501585"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies 方法
 取得[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)的介面指標，表示主機預期會載入 common language RUNTIME （CLR）的元件清單。  
@@ -39,7 +39,7 @@ HRESULT GetNonHostStoreAssemblies (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`GetNonHostStoreAssemblies`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
@@ -56,7 +56,7 @@ HRESULT GetNonHostStoreAssemblies (
   
 - 如果元件出現在清單中，則 CLR 會正常地系結至它。  
   
-- 如果元件未出現在清單中，而且主機已提供[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)的執行，則 CLR 會呼叫[IHostAssemblyStore：:P rovideassembly](ihostassemblystore-provideassembly-method.md) ，讓主機能夠提供要系結的元件。  
+- 如果元件未出現在清單中，而且主機已提供[IHostAssemblyStore](ihostassemblystore-interface.md)的執行，則 CLR 會呼叫[IHostAssemblyStore：:P rovideassembly](ihostassemblystore-provideassembly-method.md) ，讓主機能夠提供要系結的元件。  
   
 - 否則，CLR 會無法系結至元件。  
   

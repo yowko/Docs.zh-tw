@@ -1,5 +1,6 @@
 ---
 title: 以 .NET Framework 進行網路追蹤
+description: 深入瞭解 .NET Framework 中的網路追蹤，其中提供受控應用程式的方法叫用和網路流量的相關資訊。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework], network tracing
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: afb9c3a04258b543e373b6973e576f71f90d7003
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 172f8ce4a50fe9294ee34cf65c0a39eb2f29badc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047586"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502245"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>以 .NET Framework 進行網路追蹤
 針對方法叫用及 Managed 應用程式所產生的網路流量，.NET Framework 中的網路追蹤能提供對這些相關資訊的存取。 若要為開發中的應用程式進行偵錯，以及分析已部署的應用程式，此功能會非常有用。 您可以自訂網路追蹤所提供的輸出，在程式開發時期和實際執行環境中支援不同的使用案例。  

@@ -1,5 +1,6 @@
 ---
-title: 如何：使用 WebRequest 類發送資料
+title: 如何：使用 WebRequest 類別傳送資料
+description: 瞭解如何使用 .NET Framework 中的 WebRequest 類別，將資料傳送至伺服器。 這個程式通常用來將資料張貼到網頁上。
 ms.date: 03/25/2019
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 2467b289df7a0361b51ad91d4458d32742c42275
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b353250fec778ee8b352f13de6d7faaf15c13ee
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70040834"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502440"
 ---
-# <a name="how-to-send-data-by-using-the-webrequest-class"></a>如何：使用 WebRequest 類發送資料
+# <a name="how-to-send-data-by-using-the-webrequest-class"></a>如何：使用 WebRequest 類別傳送資料
 
 下列程序描述將資料傳送到伺服器的步驟。 本程序通常用於在網頁上張貼資料。
 
@@ -157,8 +158,8 @@ ms.locfileid: "70040834"
 
 ## <a name="see-also"></a>另請參閱
 
-- [創建互聯網請求](creating-internet-requests.md)
-- [在網路上使用流](using-streams-on-the-network.md)
+- [建立網際網路要求](creating-internet-requests.md)
+- [在網路上使用資料流程](using-streams-on-the-network.md)
 - [透過 Proxy 存取網際網路](accessing-the-internet-through-a-proxy.md)
-- [請求資料](requesting-data.md)
-- [如何：使用 WebRequest 類請求資料](how-to-request-data-using-the-webrequest-class.md)
+- [要求資料](requesting-data.md)
+- [如何：使用 WebRequest 類別要求資料](how-to-request-data-using-the-webrequest-class.md)

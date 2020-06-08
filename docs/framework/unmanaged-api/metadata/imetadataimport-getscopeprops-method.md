@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8ba42d2-d9fa-43cb-bbc0-f33e1e592cb6
 topic_type:
 - apiref
-ms.openlocfilehash: af1c3d599c5280e584ffb842c96c70a7c3d4ed08
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0916b6382bb9352616d85e21f423301dc6aa9fa9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436885"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490844"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>IMetaDataImport::GetScopeProps 方法
 取得目前中繼資料範圍內組件或模組的名稱以及選擇性地取得其版本識別項。  
@@ -41,27 +41,27 @@ HRESULT GetScopeProps (
  脫銷元件或模組名稱的緩衝區。  
   
  `cchName`  
- 在`szName`的寬字元大小。  
+ 在的大小（以寬字元為單位） `szName` 。  
   
  `pchName`  
- 脫銷`szName`中傳回的寬字元數。  
+ 脫銷在中傳回的寬字元數 `szName` 。  
   
  `pmvid`  
  [out，optional]GUID 的指標，可唯一識別元件或模組的版本。  
   
 ## <a name="remarks"></a>備註  
- [IMetaDataEmit：： SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)方法是用來設定這些屬性。  
+ [IMetaDataEmit：： SetModuleProps](imetadataemit-setmoduleprops-method.md)方法是用來設定這些屬性。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

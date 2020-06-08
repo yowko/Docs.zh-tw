@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-ms.openlocfilehash: 53b3d94e8b1e273fcbc041d25a5bf586a12735c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2ec907759a25048444ebcc81bf5bb0fd23ced58
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177256"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503649"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 方法
-獲取指向方法的指標，該方法由指定內容<xref:System.Type>封閉，並且具有指定的名稱和中繼資料簽名。  
+取得方法之 MethodDef token 的指標，這個標記是由指定的所括住， <xref:System.Type> 且具有指定的名稱和中繼資料簽章。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,38 +39,38 @@ HRESULT FindMethod (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [在]包含`mdTypeDef`要搜索的成員的類型（類或介面）的權杖。 如果此值為`mdTokenNil`，則對全域函數執行查找。  
+ 在用 `mdTypeDef` 來括住要搜尋之成員的類型（類別或介面）的 token。 如果這個值為 `mdTokenNil` ，則會針對全域函式進行查閱。  
   
  `szName`  
- [在]要搜索的方法的名稱。  
+ 在要搜尋之方法的名稱。  
   
  `pvSigBlob`  
- [在]指向方法的二進位中繼資料簽名的指標。  
+ 在方法之二進位中繼資料簽章的指標。  
   
  `cbSigBlob`  
- [在]的大小（以位元組為單位）。 `pvSigBlob`  
+ 在的大小（以位元組為單位） `pvSigBlob` 。  
   
  `pmb`  
- [出]指向匹配的 MethodDef 權杖的指標。  
+ 脫銷相符的 MethodDef token 的指標。  
   
 ## <a name="remarks"></a>備註  
- 使用其封閉類或介面 （））`td``szName`和可選方式指定方法的簽名 （）。`pvSigBlob` 類或介面中可能有多個同名方法。 在這種情況下，傳遞方法的簽名以查找唯一匹配項。  
+ 您可以使用它的封入類別或介面（ `td` ）、它的名稱（） `szName` ，以及選擇性的簽章（）來指定方法 `pvSigBlob` 。 在類別或介面中，可能會有多個方法具有相同的名稱。 在此情況下，請傳遞方法的簽章，以尋找唯一的相符項。  
   
- 傳遞給的簽名`FindMethod`必須在當前作用域中生成，因為簽名綁定到特定作用域。 簽名可以嵌入標識封閉類或數值型別的權杖。 權杖是本地 TypeDef 表中的索引。 不能在當前作用域的上下文之外生成運行時簽名，並且使用該簽名作為輸入 到`FindMethod`的輸入。  
+ 傳遞至的簽章 `FindMethod` 必須已在目前的範圍中產生，因為簽章已系結至特定範圍。 簽章可以內嵌可識別封閉類別或實數值型別的 token。 Token 是本機 TypeDef 資料表的索引。 您無法在目前範圍的內容之外建立執行時間簽章，並使用該簽章做為輸入來輸入至 `FindMethod` 。  
   
- `FindMethod`僅查找直接在類或介面中定義的方法;它找不到繼承的方法。  
+ `FindMethod`只尋找直接定義于類別或介面中的方法;但找不到繼承的方法。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.MethodInfo>
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

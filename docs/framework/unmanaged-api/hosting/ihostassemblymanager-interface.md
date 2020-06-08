@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dfec05bb-3cd7-4bd5-b396-a4f097c3a636
 topic_type:
 - apiref
-ms.openlocfilehash: 8106dd70f6c4099b2246530622f0845f22a0c53f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 4e32a36a4cf751bf7c5a2c918fde0122f21b7878
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805045"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501584"
 ---
 # <a name="ihostassemblymanager-interface"></a>IHostAssemblyManager 介面
 提供的方法可讓主機指定通用語言執行時間（CLR）或主機應載入的元件集。  
@@ -28,8 +28,8 @@ ms.locfileid: "83805045"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetAssemblyStore 方法](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getassemblystore-method.md)|取得[IHostAssemblyStore](ihostassemblystore-interface.md)的介面指標，表示主機所載入的元件清單。|  
-|[GetNonHostStoreAssemblies 方法](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)|取得[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)的介面指標，表示主機預期 CLR 載入的元件清單。|  
+|[GetAssemblyStore 方法](ihostassemblymanager-getassemblystore-method.md)|取得[IHostAssemblyStore](ihostassemblystore-interface.md)的介面指標，表示主機所載入的元件清單。|  
+|[GetNonHostStoreAssemblies 方法](ihostassemblymanager-getnonhoststoreassemblies-method.md)|取得[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)的介面指標，表示主機預期 CLR 載入的元件清單。|  
   
 ## <a name="remarks"></a>備註  
  不需要主機來執行 `IHostAssemblyManager` 或 `IHostAssemblyStore` 。 如果主機確實執行 `IHostAssemblyManager` ，它也必須執行 `IHostAssemblyStore` 。  

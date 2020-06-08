@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 8788d6e2220778a3f0926d5ed3dd59142487bcca
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616186"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504341"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 列舉
-描述主機可以針對[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)所描述的作業設定的原則動作，以及[EClrFailure](eclrfailure-enumeration.md)所描述的失敗。  
+描述主機可以針對[EClrOperation](eclroperation-enumeration.md)所描述的作業設定的原則動作，以及[EClrFailure](eclrfailure-enumeration.md)所描述的失敗。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,9 +57,9 @@ typedef enum {
 |`eUnloadAppDomain`|指定應該卸載 <xref:System.AppDomain> 。 CLR 嘗試執行完成項。|  
   
 ## <a name="remarks"></a>備註  
- 主機會藉由呼叫[ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)介面的方法來設定原則動作。 如需有關強制性和正常中止的詳細資訊，請參閱[EClrOperation](eclroperation-enumeration.md)列舉。  
+ 主機會藉由呼叫[ICLRPolicyManager](iclrpolicymanager-interface.md)介面的方法來設定原則動作。 如需有關強制性和正常中止的詳細資訊，請參閱[EClrOperation](eclroperation-enumeration.md)列舉。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

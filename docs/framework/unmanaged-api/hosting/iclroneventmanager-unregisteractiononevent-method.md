@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c02ec37-cdf0-46b2-890e-235092741236
 topic_type:
 - apiref
-ms.openlocfilehash: 8a9fdcd650e18bb91e2a4e30e5a22fb2a991d25c
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: a3018d8477d5abd7d03ad8675503624d2e44e8f4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703490"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504130"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>ICLROnEventManager::UnregisterActionOnEvent 方法
 將先前註冊的回呼指標取消註冊到指定的事件。  
@@ -39,7 +39,7 @@ HRESULT UnregisterActionOnEvent (
  在其中一個[EClrEvent](eclrevent-enumeration.md)值，表示要取消註冊所描述之回呼指標的事件 `pAction` 。  
   
  `pAction`  
- 在當做參數傳遞至[RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)方法的[IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)物件指標。  
+ 在當做參數傳遞至[RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)方法的[IActionOnCLREvent](iactiononclrevent-interface.md)物件指標。  
   
 ## <a name="return-value"></a>傳回值  
   
@@ -52,7 +52,7 @@ HRESULT UnregisterActionOnEvent (
 |HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
 |E_FAIL|發生不明的嚴重失敗。 在方法傳回 E_FAIL 之後，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

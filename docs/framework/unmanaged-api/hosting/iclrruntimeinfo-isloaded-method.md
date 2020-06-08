@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-ms.openlocfilehash: 3275a69683a312340f35841815685066def10b23
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 45e27ac3c2d4912d2ed3e5d43ea3020b9db5dbdc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762522"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504026"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded 方法
 指出與[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面相關聯的 common language RUNTIME （CLR）是否已載入進程中。 您也可以載入執行時間，而不需要啟動。  
@@ -43,7 +43,7 @@ HRESULT IsLoaded(
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|Description|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
 |E_POINTER|`pbLoaded` 為 null。|  
@@ -57,7 +57,7 @@ HRESULT IsLoaded(
   
 - 已淘汰的函式 `CorBindTo*` （請參閱 .NET Framework 2.0 裝載 API 中已[淘汰的 CLR 裝載](deprecated-clr-hosting-functions.md)函式）。  
   
- 主機可以呼叫其中一個已被取代的函式（ `CorBindTo*` 例如[CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)函數），以具現化 CLR 的特定版本。 然後主機可以呼叫[ICLRMetaHost：： GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)方法，並指定相同的版本號碼來取得[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面。  
+ 主機可以呼叫其中一個已被取代的函式（ `CorBindTo*` 例如[CorBindToRuntime](corbindtoruntime-function.md)函數），以具現化 CLR 的特定版本。 然後主機可以呼叫[ICLRMetaHost：： GetRuntime](iclrmetahost-getruntime-method.md)方法，並指定相同的版本號碼來取得[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面。  
   
  如果主機接著在 `IsLoaded` 傳回的[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面上呼叫方法，則 `pbLoaded` `true` 會傳回; 否則，它會傳回 `false` 。  
   
@@ -74,4 +74,4 @@ HRESULT IsLoaded(
 
 - [ICLRRuntimeInfo 介面](iclrruntimeinfo-interface.md)
 - [裝載介面](hosting-interfaces.md)
-- [裝載](index.md)
+- [Hosting](index.md)

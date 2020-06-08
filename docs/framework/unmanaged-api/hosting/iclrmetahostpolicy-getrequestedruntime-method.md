@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-ms.openlocfilehash: 52da5ec7ccd6ce48871e13a94f5957fa00d2a613
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 37167b7a9aefa6cd9d5e4df043e8bbc1b0514261
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703544"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504117"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime 方法
 
-提供 Common Language Runtime (CLR) 慣用版本的介面，這是根據裝載原則、Managed 組件、版本字串和組態資料流。 這個方法實際上並不會載入或啟動 CLR，而只會傳回代表原則結果的[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面。 這個方法會取代[GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)、 [GetRequestedRuntimeVersion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)、 [CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)、 [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)和[GetCORRequiredVersion](getcorrequiredversion-function.md)方法。
+提供 Common Language Runtime (CLR) 慣用版本的介面，這是根據裝載原則、Managed 組件、版本字串和組態資料流。 這個方法實際上並不會載入或啟動 CLR，而只會傳回代表原則結果的[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面。 這個方法會取代[GetRequestedRuntimeInfo](getrequestedruntimeinfo-function.md)、 [GetRequestedRuntimeVersion](getrequestedruntimeversion-function.md)、 [CorBindToRuntimeHost](corbindtoruntimehost-function.md)、 [CorBindToRuntimeByCfg](corbindtoruntimebycfg-function.md)和[GetCORRequiredVersion](getcorrequiredversion-function.md)方法。
 
 ## <a name="syntax"></a>語法
 
@@ -53,7 +53,7 @@ HRESULT GetRequestedRuntime(
 |`pcchVersion`|[in, out] 必要項。 指定 `pwzVersion` 做為輸入的預期大小，以避免緩衝區滿溢。 如果 `pwzVersion` 為 null，`pcchVersion` 包含 `GetRequestedRuntime` 傳回時 `pwzVersion` 的預期大小，以便預先配置，否則 `pcchVersion` 包含要寫入 `pwzVersion` 的字元數目。|
 |`pwzImageVersion`|[out] 選用。 當 `GetRequestedRuntime` 傳回時，會包含對應至所傳回之[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面的 CLR 版本。|
 |`pcchImageVersion`|[in, out] 選用。 指定 `pwzImageVersion` 做為輸入的大小，以避免緩衝區滿溢。 如果 `pwzImageVersion` 為 null， `pcchImageVersion` 包含 `GetRequestedRuntime` 傳回時的 `pwzImageVersion` 必要大小，以便預先配置。|
-|`pdwConfigFlags`|[out] 選用。 如果 `GetRequestedRuntime` 在系結過程中使用設定檔，當它傳回時，會 `pdwConfigFlags` 包含[METAHOST_CONFIG_FLAGS](metahost-config-flags-enumeration.md)值，指出[ \< 啟動>](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)專案是否已 `useLegacyV2RuntimeActivationPolicy` 設定屬性，以及屬性的值。 將[METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTI加值稅ION_POLICY_MASK](metahost-config-flags-enumeration.md) MASK 套用至 `pdwConfigFlags` ，以取得與相關的值 `useLegacyV2RuntimeActivationPolicy` 。|
+|`pdwConfigFlags`|[out] 選用。 如果 `GetRequestedRuntime` 在系結過程中使用設定檔，當它傳回時，會 `pdwConfigFlags` 包含一個[METAHOST_CONFIG_FLAGS](metahost-config-flags-enumeration.md)值，指出專案是否 [\<startup>](../../configure-apps/file-schema/startup/startup-element.md) 已 `useLegacyV2RuntimeActivationPolicy` 設定屬性，以及屬性的值。 將[METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTI加值稅ION_POLICY_MASK](metahost-config-flags-enumeration.md) MASK 套用至 `pdwConfigFlags` ，以取得與相關的值 `useLegacyV2RuntimeActivationPolicy` 。|
 |`riid`|在指定所要求之[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面的介面識別碼 IID_ICLRRuntimeInfo。|
 |`ppRuntime`|脫銷當傳回時 `GetRequestedRuntime` ，包含對應之[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面的指標。|
 
@@ -81,7 +81,7 @@ HRESULT GetRequestedRuntime(
 |ERROR_INSUFFICIENT_BUFFER|配置給 `pwzVersion` 的記憶體不足。<br /><br /> -或-<br /><br /> 配置給 `pwzImageVersion` 的記憶體不足。|
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` 包括 METAHOST_POLICY_APPLY_UPGRADE_POLICY，且 `pwzVersion` 和 `pcchVersion` 都是 null。|
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>規格需求
 
 **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
@@ -96,4 +96,4 @@ HRESULT GetRequestedRuntime(
 - [ICLRMetaHostPolicy 介面](iclrmetahostpolicy-interface.md)
 - [.NET Framework 4 和 4.5 中新增的 CLR 裝載介面](clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
 - [裝載介面](hosting-interfaces.md)
-- [裝載](index.md)
+- [Hosting](index.md)

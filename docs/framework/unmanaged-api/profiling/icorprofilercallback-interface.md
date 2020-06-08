@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 891cca8ac47a3f8391bd7ab7b27b35d6318bbe0a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866282"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500087"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback 介面
 提供當分析工具已訂閱的事件發生時，common language runtime （CLR）用來通知程式碼分析工具的方法。  
@@ -42,8 +42,8 @@ ms.locfileid: "76866282"
 |[ClassUnloadStarted 方法](icorprofilercallback-classunloadstarted-method.md)|通知分析工具，類別正在卸載。|  
 |[COMClassicVTableCreated 方法](icorprofilercallback-comclassicvtablecreated-method.md)|通知分析工具，已建立指定之 IID 和類別的執行時間可呼叫包裝函式（RCW）。|  
 |[COMClassicVTableDestroyed 方法](icorprofilercallback-comclassicvtabledestroyed-method.md)|通知分析工具，RCW 已終結。|  
-|[ExceptionCatcherEnter 方法](icorprofilercallback-exceptioncatcherenter-method.md)|通知分析工具，控制項正傳遞至適當的 `catch` 區塊。|  
-|[ExceptionCatcherLeave 方法](icorprofilercallback-exceptioncatcherleave-method.md)|通知分析工具，控制項正從適當的 `catch` 區塊傳入。|  
+|[ExceptionCatcherEnter 方法](icorprofilercallback-exceptioncatcherenter-method.md)|通知分析工具，控制項正在傳遞至適當的 `catch` 區塊。|  
+|[ExceptionCatcherLeave 方法](icorprofilercallback-exceptioncatcherleave-method.md)|通知分析工具，控制項已從適當的 `catch` 區塊傳入。|  
 |[ExceptionCLRCatcherExecute 方法](icorprofilercallback-exceptionclrcatcherexecute-method.md)|在 .NET Framework 版本2.0 中已過時。|  
 |[ExceptionCLRCatcherFound 方法](icorprofilercallback-exceptionclrcatcherfound-method.md)|在 .NET Framework 2.0 中已過時。|  
 |[ExceptionOSHandlerEnter 方法](icorprofilercallback-exceptionoshandlerenter-method.md)|未實作。 需要非受控例外狀況資訊的 profiler 必須透過其他方式取得此資訊。|  
@@ -54,7 +54,7 @@ ms.locfileid: "76866282"
 |[ExceptionSearchFunctionEnter 方法](icorprofilercallback-exceptionsearchfunctionenter-method.md)|通知分析工具，例外狀況處理的搜尋階段已輸入函數。|  
 |[ExceptionSearchFunctionLeave 方法](icorprofilercallback-exceptionsearchfunctionleave-method.md)|通知分析工具，例外狀況處理的搜尋階段已完成搜尋函數。|  
 |[ExceptionThrown 方法](icorprofilercallback-exceptionthrown-method.md)|通知分析工具已擲回例外狀況。|  
-|[ExceptionUnwindFinallyEnter 方法](icorprofilercallback-exceptionunwindfinallyenter-method.md)|通知分析工具，例外狀況處理的回溯階段正在輸入包含在指定之函式中的 `finally` 子句。|  
+|[ExceptionUnwindFinallyEnter 方法](icorprofilercallback-exceptionunwindfinallyenter-method.md)|通知分析工具，例外狀況處理的回溯階段正在輸入 `finally` 包含在指定之函式中的子句。|  
 |[ExceptionUnwindFinallyLeave 方法](icorprofilercallback-exceptionunwindfinallyleave-method.md)|通知分析工具，例外狀況處理的回溯階段已離開 `finally` 子句。|  
 |[ExceptionUnwindFunctionEnter 方法](icorprofilercallback-exceptionunwindfunctionenter-method.md)|通知分析工具，例外狀況處理的回溯階段已輸入函數。|  
 |[ExceptionUnwindFunctionLeave 方法](icorprofilercallback-exceptionunwindfunctionleave-method.md)|通知分析工具，例外狀況處理的回溯階段已完成函數的回溯。|  
@@ -99,25 +99,25 @@ ms.locfileid: "76866282"
 |[UnmanagedToManagedTransition 方法](icorprofilercallback-unmanagedtomanagedtransition-method.md)|通知分析工具，已發生從非受控碼到 managed 程式碼的轉換。|  
   
 ## <a name="remarks"></a>備註  
- CLR 會呼叫 `ICorProfilerCallback` （或[ICorProfilerCallback2](icorprofilercallback2-interface.md)）介面中的方法，以便在分析工具已訂閱的事件發生時，通知分析工具。 這是 CLR 用來與程式碼 profiler 通訊的主要回呼介面。  
+ CLR `ICorProfilerCallback` 會呼叫（或[ICorProfilerCallback2](icorprofilercallback2-interface.md)）介面中的方法，以便在分析工具已訂閱的事件發生時，通知分析工具。 這是 CLR 用來與程式碼 profiler 通訊的主要回呼介面。  
   
- 程式碼分析工具必須執行 `ICorProfilerCallback` 介面的方法。 針對 .NET Framework 2.0 版或更新版本，分析工具也必須執行 `ICorProfilerCallback2` 方法。 每個方法的執行都必須傳回 HRESULT，其值為 [成功] 或 [失敗時 E_FAIL] S_OK。 目前，CLR 會忽略[ICorProfilerCallback：： ObjectReferences](icorprofilercallback-objectreferences-method.md)以外的每個回呼所傳回的 HRESULT。  
+ 程式碼分析工具必須執行介面的方法 `ICorProfilerCallback` 。 針對 .NET Framework 2.0 版或更新版本，分析工具也必須執行 `ICorProfilerCallback2` 方法。 每個方法的執行都必須傳回 HRESULT，其值為 [成功] 或 [失敗時 E_FAIL] S_OK。 目前，CLR 會忽略[ICorProfilerCallback：： ObjectReferences](icorprofilercallback-objectreferences-method.md)以外的每個回呼所傳回的 HRESULT。  
   
  在 Microsoft Windows 登錄中，程式碼分析工具必須註冊其元件物件模型（COM）物件，以執行 `ICorProfilerCallback` 和 `ICorProfilerCallback2` 介面。 程式碼分析工具會透過呼叫[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)，訂閱想要接收通知的事件。 這通常會在分析工具的[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)的執行中完成。 然後，分析工具就能夠在事件即將發生或發生在執行中的執行時間進程時，從執行時間接收通知。  
   
 > [!NOTE]
-> Profiler 會註冊單一 COM 物件。 如果分析工具的目標是 .NET Framework 版本1.0 或1.1，則該 COM 物件只需要執行 `ICorProfilerCallback`的方法。 如果它是以 .NET Framework 2.0 版或更新版本為目標，則 COM 物件也必須執行 `ICorProfilerCallback2`的方法。  
+> Profiler 會註冊單一 COM 物件。 如果分析工具的目標是 .NET Framework 版本1.0 或1.1，則該 COM 物件只需要執行的方法 `ICorProfilerCallback` 。 如果它是以 .NET Framework 2.0 版或更新版本為目標，則 COM 物件也必須執行的方法 `ICorProfilerCallback2` 。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [分析介面](profiling-interfaces.md)
 - [ICorProfilerCallback2 介面](icorprofilercallback2-interface.md)

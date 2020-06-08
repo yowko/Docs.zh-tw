@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5245d4b5-b6c3-48df-9cb9-8caf059f43fb
 topic_type:
 - apiref
-ms.openlocfilehash: 7271fe8e28da0bb5fd878aae5d36ab703e64ebf0
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: c95b787101d4d0302ce4d2a5cd3bdc7e11f9cd63
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803026"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501426"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert 方法
 要求主機喚醒目前[IHostTask](ihosttask-interface.md)實例所代表的工作，讓工作可以中止。  
@@ -33,7 +33,7 @@ HRESULT Alert ();
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|此方法已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
@@ -46,7 +46,7 @@ HRESULT Alert ();
  `Alert`當 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 從使用者程式碼呼叫，或 <xref:System.AppDomain> 與目前的相關聯的關閉時，CLR 會呼叫方法 <xref:System.Threading.Thread> 。 主機必須立即傳回，因為呼叫是以非同步方式進行。 如果主機無法立即警示工作，它必須在下一次進入可警示的狀態時喚醒。  
   
 > [!NOTE]
-> `Alert`只會影響執行時間已將 WAIT_ALERTABLE 的[WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md)值傳遞給方法的工作，例如[聯結](ihosttask-join-method.md)。  
+> `Alert`只會影響執行時間已將 WAIT_ALERTABLE 的[WAIT_OPTION](wait-option-enumeration.md)值傳遞給方法的工作，例如[聯結](ihosttask-join-method.md)。  
   
 ## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  

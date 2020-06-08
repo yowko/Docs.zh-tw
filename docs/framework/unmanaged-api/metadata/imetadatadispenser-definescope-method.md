@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 021ef8de602d6dd928f49e69e36f8d4a61425745
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 12a32b5d2f0647ea2d9b696d08d6644e30be0c65
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008361"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501348"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope 方法
 在記憶體中建立新的區域，您可以在其中建立新的中繼資料。  
@@ -54,9 +54,9 @@ HRESULT DefineScope (
 ## <a name="remarks"></a>備註  
  `DefineScope`建立一組記憶體中的中繼資料資料表、產生中繼資料的唯一 GUID （模組版本識別碼或 MVID），並在模組資料表中為所發出的編譯單位建立專案。  
   
- 您可以視需要使用[IMetaDataEmit：： SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)或[IMetaDataEmit：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md)方法，將屬性附加至中繼資料範圍。  
+ 您可以視需要使用[IMetaDataEmit：： SetModuleProps](imetadataemit-setmoduleprops-method.md)或[IMetaDataEmit：:D efinecustomattribute](imetadataemit-definecustomattribute-method.md)方法，將屬性附加至中繼資料範圍。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平臺：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  

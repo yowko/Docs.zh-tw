@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: 8475362ede5ea28009d5abc54c286d6f2a6fed0f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 3f85e7c7fd54079ddce37f739a3a7bc0fa830d31
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804628"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493288"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc 方法
 要求主機從堆積配置指定的記憶體數量，並另外追蹤記憶體的分配位置。  
@@ -55,7 +55,7 @@ HRESULT DebugAlloc (
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|`DebugAlloc`已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
@@ -66,7 +66,7 @@ HRESULT DebugAlloc (
 |E_OUTOFMEMORY|沒有足夠的記憶體可用來完成配置要求。|  
   
 ## <a name="remarks"></a>備註  
- CLR 會藉由呼叫[IHostMemoryManager：： CreateMalloc](ihostmemorymanager-createmalloc-method.md)方法，取得[IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)實例的介面指標。 `DebugAlloc`允許執行時間取得程式碼檔案資訊，以便在進行偵錯工具時使用。  
+ CLR 會藉由呼叫[IHostMemoryManager：： CreateMalloc](ihostmemorymanager-createmalloc-method.md)方法，取得[IHostMalloc](ihostmalloc-interface.md)實例的介面指標。 `DebugAlloc`允許執行時間取得程式碼檔案資訊，以便在進行偵錯工具時使用。  
   
 ## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
