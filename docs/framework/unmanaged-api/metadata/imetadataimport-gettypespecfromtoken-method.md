@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 34b7cebfa063a3ad077b74a753fd37ba67ff53a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43e9671afa92d36966e51bbdc630db4a9d9083b7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175313"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503496"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken 方法
 取得指定語彙基元所代表類型規格的二進位中繼資料簽章。  
@@ -37,27 +37,27 @@ HRESULT GetTypeSpecFromToken (
   
 ## <a name="parameters"></a>參數  
  `typespec`  
- [在]與請求的中繼資料簽名關聯的 TypeSpec 權杖。  
+ 在與所要求之中繼資料簽章相關聯的 TypeSpec token。  
   
  `ppvSig`  
- [出]指向二進位中繼資料簽名的指標。  
+ 脫銷二進位中繼資料簽章的指標。  
   
  `pcbSig`  
- [出]中繼資料簽名的大小（以位元組為單位）。  
+ 脫銷中繼資料簽章的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 指示成功或失敗的 HRESULT。 可以使用 FAILED 宏測試故障。  
+ 表示成功或失敗的 HRESULT。 您可以使用 FAILED 宏來測試失敗。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

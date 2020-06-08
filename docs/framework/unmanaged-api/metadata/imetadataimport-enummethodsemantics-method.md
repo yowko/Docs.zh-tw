@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-ms.openlocfilehash: f20652a7f86576e64646a1f63c3e2c48b55cf811
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 213cbd955e3d47a49abde579a54af48641e225ec
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175456"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491910"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics 方法
 列舉和指定方法相關的屬性及屬性變更事件。  
@@ -39,40 +39,40 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [進出]指向枚舉器的指標。 對於此方法的第一次調用，這必須為 Null。  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `mb`  
- [在]限制枚舉範圍的 MethodDef 權杖。  
+ 在會限制列舉範圍的 MethodDef token。  
   
  `rEventProp`  
- [出]用於存儲事件或屬性的陣列。  
+ 脫銷用來儲存事件或屬性的陣列。  
   
  `cMax`  
  [in] `rEventProp` 陣列的大小上限。  
   
  `pcEventProp`  
- [出]在 中`rEventProp`返回的事件或屬性數。  
+ 脫銷在中傳回的事件或屬性數目 `rEventProp` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics`已成功返回。|  
-|`S_FALSE`|沒有要枚舉的事件或屬性。 在這種情況下，`pcEventProp`為零。|  
+|`S_OK`|`EnumMethodSemantics`已成功傳回。|  
+|`S_FALSE`|沒有要列舉的事件或屬性。 在此情況下， `pcEventProp` 是零。|  
   
 ## <a name="remarks"></a>備註  
- 許多通用語言運行時類型定義與其屬性相關的*屬性*`Changed`事件和`On`*屬性*`Changed`方法。 例如，<xref:System.Windows.Forms.Control?displayProperty=nameWithType>類型定義<xref:System.Windows.Forms.Control.Font%2A>屬性、<xref:System.Windows.Forms.Control.FontChanged>事件和方法。 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 屬性調用<xref:System.Windows.Forms.Control.Font%2A><xref:System.Windows.Forms.Control.OnFontChanged%2A>方法的集訪問器方法，該方法反過來引發事件<xref:System.Windows.Forms.Control.FontChanged>。 您將使用`EnumMethodSemantics`MethodDef 調用，<xref:System.Windows.Forms.Control.OnFontChanged%2A>以獲得對<xref:System.Windows.Forms.Control.Font%2A>屬性和<xref:System.Windows.Forms.Control.FontChanged>事件的引用。  
+ 許多 common language runtime 型別會定義與屬性相關的*屬性* `Changed` 事件和 `On` *屬性* `Changed` 方法。 例如，型別會 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 定義 <xref:System.Windows.Forms.Control.Font%2A> 屬性、 <xref:System.Windows.Forms.Control.FontChanged> 事件和 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 方法。 屬性的 set 存取子方法會 <xref:System.Windows.Forms.Control.Font%2A> 呼叫 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 方法，後者接著會引發 <xref:System.Windows.Forms.Control.FontChanged> 事件。 您可以 `EnumMethodSemantics` 使用的 MethodDef 呼叫 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 來取得 <xref:System.Windows.Forms.Control.Font%2A> 屬性和事件的參考 <xref:System.Windows.Forms.Control.FontChanged> 。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

@@ -1,5 +1,6 @@
 ---
 title: 啟用網路追蹤
+description: 瞭解如何啟用網路追蹤，其中提供 .NET Framework 中受控應用程式的方法叫用和網路流量的相關資訊。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace destinations
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 61ffd422463ca70cc34c39dd216ce8e660809dcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4ad0b23fc93ddcdc11cebcc556d12148df5e8ae2
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180887"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502596"
 ---
 # <a name="enabling-network-tracing"></a>啟用網路追蹤
 針對方法叫用及 Managed 應用程式所產生的網路流量，網路追蹤能提供對這些相關資訊的存取。 您必須完成下列工作，才能在您的應用程式中啟用網路追蹤：  

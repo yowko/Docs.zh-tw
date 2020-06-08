@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22fc0a3f-dce4-4766-9a3c-9fab15f4b4ca
 topic_type:
 - apiref
-ms.openlocfilehash: 2e22b8a2d0213b3bd766d80218d6f396721a90e1
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 7b09bb9c3abcb23997bfd412c3ea939404e583c1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703763"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504169"
 ---
 # <a name="iclrmetahostenumerateloadedruntimes-method"></a>ICLRMetaHost::EnumerateLoadedRuntimes 方法
-傳回列舉，其中包含在給定進程中載入之每個 common language runtime （CLR）版本的有效[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面指標。 這個方法會取代[GetVersionFromProcess](getversionfromprocess-function.md)函數。  
+傳回列舉，其中包含在給定進程中載入之每個 common language runtime （CLR）版本的有效[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)介面指標。 這個方法會取代[GetVersionFromProcess](getversionfromprocess-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,7 @@ HRESULT EnumerateLoadedRuntimes (
 ## <a name="remarks"></a>備註  
  這個方法會列出所有載入的執行時間，即使它們是使用已被取代的函式（例如[CorBindToRuntime](corbindtoruntime-function.md)）載入也是一樣。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MetaHost。h  
@@ -64,4 +64,4 @@ HRESULT EnumerateLoadedRuntimes (
 ## <a name="see-also"></a>另請參閱
 
 - [ICLRMetaHost 介面](iclrmetahost-interface.md)
-- [裝載](index.md)
+- [Hosting](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-ms.openlocfilehash: 81b6f009ea61294f398a21c4def927ef2609f32b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f63b761497b3e9a19a9b939b45acf60d5a7d37b0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615736"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504234"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>ICLRDebugManager::SetConnectionTasks 方法
 將[ICLRTask](iclrtask-interface.md)實例的清單與識別碼和易記名稱產生關聯。  
@@ -58,12 +58,12 @@ HRESULT SetConnectionTasks (
 |E_INVALIDARG|尚未使用此值呼叫[BeginConnection](iclrdebugmanager-beginconnection-method.md) `id` ，或 `dwCount` 或 `id` 為零，或的其中一個元素 `ppCLRTask` 為 null。|  
   
 ## <a name="remarks"></a>備註  
- [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)提供三種方法： `BeginConnection` 、 `SetConnectionTasks` 和[EndConnection](iclrdebugmanager-endconnection-method.md)，用來建立工作清單與識別碼和易記名稱的關聯。  
+ [ICLRDebugManager](iclrdebugmanager-interface.md)提供三種方法： `BeginConnection` 、 `SetConnectionTasks` 和[EndConnection](iclrdebugmanager-endconnection-method.md)，用來建立工作清單與識別碼和易記名稱的關聯。  
   
 > [!IMPORTANT]
 > 這三種方法都必須以特定順序針對每一組工作進行呼叫。 `BeginConnection`會先呼叫以建立新的連接。 `SetConnectionTasks`接下來會呼叫，以提供與該連接相關聯的工作集合。 `EndConnection`最後會呼叫，以移除工作清單與識別碼和易記名稱之間的關聯。不過，可以嵌套不同連接的呼叫。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

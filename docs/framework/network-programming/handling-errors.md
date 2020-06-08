@@ -1,5 +1,6 @@
 ---
 title: 處理錯誤
+description: 瞭解 WebRequest 和 WebResponse 擲回的系統和 web 特定例外狀況。 請使用 Status 屬性來瞭解及解決問題。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: f5be5d8e14d7aa2d98009fc10c9cce314e745ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 786b2bd8bc4d1b394bcfe920053b2f4f55d1cdea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180862"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502570"
 ---
 # <a name="handling-errors"></a>處理錯誤
 
@@ -58,7 +59,7 @@ ms.locfileid: "79180862"
 |SecureChannelFailure|安全通道連結發生錯誤。|  
 |SendFailure|無法將完整的要求傳送到遠端伺服器。|  
 |ServerProtocolViolation|伺服器回應不是有效的 HTTP 回應。|  
-|Success|沒有遇到任何錯誤。|  
+|成功|沒有遇到任何錯誤。|  
 |逾時|在針對要求所設定的逾時內未收到任何回應。|  
 |TrustFailure|無法驗證伺服器憑證。|  
 |MessageLengthLimitExceeded|從伺服器傳送要求或接收回應時，收到超過指定限制的訊息。|  

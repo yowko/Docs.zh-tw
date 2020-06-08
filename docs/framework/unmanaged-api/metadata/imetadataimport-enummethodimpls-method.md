@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175469"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492002"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls 方法
 列舉代表指定類型方法的 MethodBody 和 MethodDeclaration 語彙基元。  
@@ -40,40 +40,40 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [進出]指向枚舉器的指標。 對於此方法的第一次調用，這必須為 Null。  
+ [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
   
  `td`  
- [在]方法要枚舉的類型的類型的 TypeDef 權杖。  
+ 在要列舉其方法實作為之類型的 TypeDef 標記。  
   
  `rMethodBody`  
- [出]要存儲方法體權杖的陣列。  
+ 脫銷要儲存 MethodBody token 的陣列。  
   
  `rMethodDecl`  
- [出]要存儲方法聲明權杖的陣列。  
+ 脫銷要儲存 Ethoddeclaration token 的陣列。  
   
  `cMax`  
- [在]`rMethodBody`和`rMethodDecl`陣列的最大大小。  
+ 在和陣列的大小上限 `rMethodBody` `rMethodDecl` 。  
   
  `pcTokens`  
- [在]在 和`rMethodBody``rMethodDecl`中返回的實際方法數。  
+ 在和中傳回的實際方法數目 `rMethodBody` `rMethodDecl` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`已成功返回。|  
-|`S_FALSE`|沒有要枚舉的方法權杖。 在這種情況下，`pcTokens`為零。|  
+|`S_OK`|`EnumMethodImpls`已成功傳回。|  
+|`S_FALSE`|沒有要列舉的方法權杖。 在此情況下， `pcTokens` 是零。|  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

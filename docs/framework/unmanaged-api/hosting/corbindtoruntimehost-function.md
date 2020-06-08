@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: afb25ad9e1760f390aa8dfb3e1de39ea60f185c2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d1c7f4f5b881f7f55539602c152b557a7950472
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616615"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504403"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 函式
 讓主機將指定版本的 common language runtime （CLR）載入進程中。  
@@ -69,7 +69,7 @@ HRESULT CorBindToRuntimeHost (
  在一組旗標，可控制並行垃圾收集、網域中性程式碼，以及參數的行為 `pwszVersion` 。 如果未設定旗標，則預設值為單一網域。 如需支援值的清單，請參閱[STARTUP_FLAGS 列舉](startup-flags-enumeration.md)。  
   
  `rclsid`  
- 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
  在`IID`您所要求之介面的。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
@@ -77,7 +77,7 @@ HRESULT CorBindToRuntimeHost (
  `ppv`  
  脫銷載入的執行階段版本的介面指標。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll .idl  

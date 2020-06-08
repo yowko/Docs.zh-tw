@@ -1,5 +1,6 @@
 ---
 title: 網路程式設計 HOW TO 主題
+description: 使用這些操作說明文章，瞭解 .NET Framework 中網路程式設計的不同 facet。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - network resources
@@ -7,17 +8,17 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5f8f1a3ca9aaf4bea56f342857d2df0bb18a9ba8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047624"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502271"
 ---
 # <a name="network-programming-how-to-topics"></a>網路程式設計 HOW TO 主題
 下列清單包含網路程式設計概念文件中找到之「如何」主題的連結。  
   
- **請求資料：**  
+ **要求資料：**  
   
 - [如何：要求網頁並擷取結果當作資料流](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
   
@@ -41,11 +42,11 @@ ms.locfileid: "71047624"
   
 - [如何：透過 FTP 下載檔案](how-to-download-files-with-ftp.md)  
   
-- [如何：使用 FTP 上傳檔](how-to-upload-files-with-ftp.md)  
+- [如何：使用 FTP 上傳檔案](how-to-upload-files-with-ftp.md)  
   
 - [如何：使用 FTP 列出目錄內容](how-to-list-directory-contents-with-ftp.md)  
   
- **互聯網協定版本 6：**  
+ **網際網路通訊協定第6版：**  
   
 - [如何：修改電腦設定檔案以啟用 IPv6 支援](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
@@ -63,7 +64,7 @@ ms.locfileid: "71047624"
   
 - [如何：設定要求的快取原則](how-to-set-cache-policy-for-a-request.md)  
   
- **使用代理：**  
+ **使用 proxy：**  
   
 - [如何：啟用 WebRequest 以使用 Proxy 與網際網路通訊](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
@@ -79,6 +80,6 @@ ms.locfileid: "71047624"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 框架中的網路程式設計](index.md)
+- [.NET Framework 中的網路程式設計](index.md)
 - [網路程式設計範例](network-programming-samples.md)
 - [MSDN Code Gallery 上的 .NET 網路範例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

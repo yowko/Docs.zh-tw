@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 88584574-ade5-45b2-9778-489ed5c4dd7f
 topic_type:
 - apiref
-ms.openlocfilehash: 9e7f682752cfefae63b574655a4fc5e8964146a0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: db9ce146da1d6fee8db32a0be43903eaa61e52de
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213175"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501751"
 ---
 # <a name="icordebugfunction3getactiverejitrequestilcode-method"></a>ICorDebugFunction3::GetActiveReJitRequestILCode 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -39,9 +39,9 @@ HRESULT GetActiveReJitRequestILCode(
 ## <a name="remarks"></a>備註  
  如果此 `ICorDebugFunction3` 物件所代表的方法具有作用中 ReJIT 要求，則 `ppReJitedILCode` 會傳回其 IL 的指標。 如果沒有作用中的要求（這是常見的情況），則 `ppReJitedILCode` 為**null**。  
   
- 在執行從[ICorProfilerCallback4：： GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)方法呼叫傳回之後，ReJIT 要求就會變成作用中狀態。 該要求可能未經 JIT 編譯，而執行緒可能仍在原始版本程式碼中執行。 在分析工具的[ICorProfilerInfo4：： RequestRevert](../profiling/icorprofilerinfo4-requestrevert-method.md)方法呼叫期間，ReJIT 要求變成非作用中。 即使在 IL 還原之後，執行緒仍可在 JIT 重新編譯的 (ReJIT) 程式碼中執行。  
+ 在執行從[ICorProfilerCallback4：： GetReJITParameters](../profiling/icorprofilercallback4-getrejitparameters-method.md)方法呼叫傳回之後，ReJIT 要求就會變成作用中狀態。 該要求可能未經 JIT 編譯，而執行緒可能仍在原始版本程式碼中執行。 在分析工具的[ICorProfilerInfo4：： RequestRevert](../profiling/icorprofilerinfo4-requestrevert-method.md)方法呼叫期間，ReJIT 要求變成非作用中。 即使在 IL 還原之後，執行緒仍可在 JIT 重新編譯的 (ReJIT) 程式碼中執行。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
@@ -50,7 +50,7 @@ HRESULT GetActiveReJitRequestILCode(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugFunction3 介面](icordebugfunction3-interface.md)
 - [偵錯介面](debugging-interfaces.md)

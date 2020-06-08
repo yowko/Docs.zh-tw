@@ -2,15 +2,15 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter 介面
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-ms.openlocfilehash: 360d1150b0accd6a070fa36531e570d222787cee
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 04876483fd42e3f6e55222416fd0747891734a52
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441756"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501855"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter 介面
-可讓您定義每個方法符號的選擇性非同步方法資訊。 一律搭配已開啟的方法使用;也就是呼叫[OpenMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)和[CloseMethod 方法](isymunmanagedwriter-closemethod-method.md)之間的。  
+可讓您定義每個方法符號的選擇性非同步方法資訊。 一律搭配已開啟的方法使用;也就是呼叫[OpenMethod 方法](isymunmanagedwriter-openmethod-method.md)和[CloseMethod 方法](isymunmanagedwriter-closemethod-method.md)之間的。  
   
 ## <a name="syntax"></a>語法  
   
@@ -27,7 +27,7 @@ ms.locfileid: "83441756"
 |[DefineCatchHandlerILOffset 方法](isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)|設定編譯器所產生的 catch 處理常式（包裝非同步方法）的 IL 位移。<br /><br /> 產生之 catch 的 IL 位移會由偵錯工具用來處理 catch，就好像它是非使用者程式碼一樣，即使它可能發生在使用者程式碼方法中也一樣。 特別是，它是用來回應**CatchHandlerFound**例外狀況事件。|  
 |[DefineKickoffMethod 方法](isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|設定啟動非同步作業的起始方法。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱

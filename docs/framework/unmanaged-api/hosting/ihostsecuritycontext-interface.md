@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88e2eac0-8ccb-404f-abbc-287d55159842
 topic_type:
 - apiref
-ms.openlocfilehash: bf8e725908177d9a15407b096f68cbcb947c7a01
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: f6e25bfe11880730f6f447ccc0406d716d185624
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804146"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501491"
 ---
 # <a name="ihostsecuritycontext-interface"></a>IHostSecurityContext 介面
 允許 common language runtime （CLR）維護主機所執行的安全性內容資訊。  
@@ -28,7 +28,7 @@ ms.locfileid: "83804146"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Capture 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-capture-method.md)|取得 `IHostSecurityContext` 從呼叫[IHostSecurityManager：： GetSecurityCoNtext](ihostsecuritymanager-getsecuritycontext-method.md)傳回之實例的複本。|  
+|[Capture 方法](ihostsecuritycontext-capture-method.md)|取得 `IHostSecurityContext` 從呼叫[IHostSecurityManager：： GetSecurityCoNtext](ihostsecuritymanager-getsecuritycontext-method.md)傳回之實例的複本。|  
   
 ## <a name="remarks"></a>備註  
  主機可以同時控制 CLR 和使用者程式碼對執行緒標記的所有程式碼存取。 它也可以確保以限制的程式碼存取，在非同步作業或程式碼點之間傳遞完整的安全性內容資訊。 `IHostSecurityContext`封裝此安全性內容資訊，這對執行時間而言是不透明的。 執行時間會使用來捕捉這項資訊 `Capture` ，並將它移到執行緒集區的背景工作專案分派、完成項執行，以及模組和類別的函式。  

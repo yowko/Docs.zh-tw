@@ -1,5 +1,6 @@
 ---
 title: 網際網路通訊協定第 6 版
+description: 瞭解 IPv6 通訊協定，以及它與 IPv4 的不同之處。 .NET Framework 應用程式支援 IPv6，但可能需要設定。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IPv6, improvements
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd8b0b26e449fba7479d2678aff25ed49e721a90
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047883"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502388"
 ---
 # <a name="internet-protocol-version-6"></a>網際網路通訊協定第 6 版
 網際網路通訊協定第 6 版 (IPv6) 是網際網路網路層級的新標準通訊協定套件。 IPv6 旨在解決網際網路通訊協定當前版本 (稱為 IPv4) 有關位址耗竭、安全性、自動組態和擴充性等等的許多問題。 IPv6 展開網際網路的功能，以啟用新種類的應用程式，包括點對點與行動應用程式。 以下是目前 IPv4 通訊協定的主要問題：  
@@ -44,7 +45,7 @@ ms.locfileid: "71047883"
   
  如需詳細資訊，請參閱 [IPv6 定址](ipv6-addressing.md)、[IPv6 路由](ipv6-routing.md)、[IPv6 自動組態](ipv6-auto-configuration.md)、[啟用和停用 IPv6](enabling-and-disabling-ipv6.md) 以及[如何：修改電腦組態檔以啟用 IPv6 支援](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)。  
   
-## <a name="references"></a>參考  
+## <a name="references"></a>參考資料  
  以下是您可在[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/) 網站中找到的精選 RFC 文件：  
   
 - RFC 1287，前進未來網際網路架構。  

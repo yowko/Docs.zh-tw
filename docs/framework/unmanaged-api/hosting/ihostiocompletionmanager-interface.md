@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 90675d9be71342efa903767abbf63102b40a2c35
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804681"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501531"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager 介面
 提供的方法可讓 common language runtime （CLR）與主機所提供的 i/o 完成通訊埠互動。  
@@ -36,7 +36,7 @@ ms.locfileid: "83804681"
 |[GetMaxThreads 方法](ihostiocompletionmanager-getmaxthreads-method.md)|取得主機可以為服務 i/o 要求所分配的執行緒數目上限。|  
 |[GetMinThreads 方法](ihostiocompletionmanager-getminthreads-method.md)|取得主機提供給服務 i/o 要求的執行緒數目下限。|  
 |[InitializeHostOverlapped 方法](ihostiocompletionmanager-initializehostoverlapped-method.md)|提供主機初始化 i/o 要求之任何自訂資料的機會。|  
-|[SetCLRIoCompletionManager 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|提供具有 CLR 所實[ICLRIoCompletionManager](iclriocompletionmanager-interface.md)實例之介面指標的主機。|  
+|[SetCLRIoCompletionManager 方法](ihostiocompletionmanager-setclriocompletionmanager-method.md)|提供具有 CLR 所實[ICLRIoCompletionManager](iclriocompletionmanager-interface.md)實例之介面指標的主機。|  
 |[SetMaxThreads 方法](ihostiocompletionmanager-setmaxthreads-method.md)|設定主機 allots 至服務 i/o 要求的執行緒數目上限。|  
 |[SetMinThreads 方法](ihostiocompletionmanager-setminthreads-method.md)|設定主機應該為 i/o 完成所配置的執行緒數目下限。|  
   

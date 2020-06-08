@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-ms.openlocfilehash: e02d7dd4b287d027b633ae9bf2e98e036062bdd0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36c0ffef2d984604be4ae19899e8f3f912cee123
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175404"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491468"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout 方法
 取得指定 TypeDef 語彙基元所參考類別的配置資訊。  
@@ -40,33 +40,33 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>參數  
  `td`  
- [在]要返回佈局的類的 TypeDef 權杖。  
+ 在具有要傳回之配置的類別的 TypeDef token。  
   
  `pdwPackSize`  
- [出]值 1、2、4、8 或 16，表示類的包大小。  
+ 脫銷其中一個值為1、2、4、8或16，代表類別的套件大小。  
   
  `rFieldOffset`  
- [出][COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)值的陣列。  
+ 脫銷[COR_FIELD_OFFSET](cor-field-offset-structure.md)值的陣列。  
   
  `cMax`  
  [in] `rFieldOffset` 陣列的大小上限。  
   
  `pcFieldOffset`  
- [出]中`rFieldOffset`返回的元素數。  
+ 脫銷在中傳回的元素數目 `rFieldOffset` 。  
   
  `pulClassSize`  
- [出]以 的類大小（以位元組為單位）。 `td`  
+ 脫銷所表示之類別的大小（以位元組為單位） `td` 。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

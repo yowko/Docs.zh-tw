@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-ms.openlocfilehash: 66186d25e8fee0d6b25c0a2069d46ff9a104c625
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe7350e6d8e400ae37b5b8b7854a56f3c5c53ea7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450041"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491741"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs 方法
 列舉代表已匯入的模組之 ModuleRef 語彙基元。  
@@ -47,25 +47,25 @@ HRESULT EnumModuleRefs (
  [in] `rModuleRefs` 陣列的大小上限。  
   
  `pcModuleRefs`  
- 脫銷`rModuleRefs`中傳回的 ModuleRef token 數目。  
+ 脫銷在中傳回的 ModuleRef token 數目 `rModuleRefs` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|已成功傳回 `EnumModuleRefs`。|  
-|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcModuleRefs` 為零。|  
+|`S_OK`|`EnumModuleRefs`已成功傳回。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下， `pcModuleRefs` 是零。|  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

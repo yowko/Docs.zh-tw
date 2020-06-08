@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 8925278bdf4d48efc9e589ffc4e181d904444e6b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 083d0ff285abb4a99ad05c791bc504ff7f282c6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616420"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504364"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>已被取代的 CLR 裝載函式
 本節說明舊版裝載 API 所使用的非受控全域靜態函式。  
@@ -24,7 +24,7 @@ ms.locfileid: "83616420"
  已被取代。 建立指定之 managed 類型的實例。  
   
  [CoInitializeCor 函式](coinitializecor-function.md)  
- 已過時。 若要初始化 common language runtime （CLR），請使用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或[CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)。  
+ 已過時。 若要初始化 common language runtime （CLR），請使用[CorBindToRuntimeEx](corbindtoruntimeex-function.md)或[CorBindToCurrentRuntime](corbindtocurrentruntime-function.md)。  
   
  [CoInitializeEE 函式](coinitializeee-function.md)  
  已被取代。 確保 CLR 執行引擎已載入進程中。 請改用[ICLRRuntimeHost：： Start](iclrruntimehost-start-method.md)方法。  

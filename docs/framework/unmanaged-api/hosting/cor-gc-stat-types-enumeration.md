@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-ms.openlocfilehash: cca393ae34144787ab7800baec7c58209394f30e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d7e78dfc4beba67cc376b221d0cd49f7200f5d23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616712"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501699"
 ---
 # <a name="cor_gc_stat_types-enumeration"></a>COR_GC_STAT_TYPES 列舉
 指定要記錄以進行垃圾收集的統計資料。  
@@ -34,7 +34,7 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>備註  
- 此列舉會指定要由[ICLRGCManager：： GetStats](iclrgcmanager-getstats-method.md)方法來設定[COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)結構中的哪些統計資料。  
+ 此列舉會指定要由[ICLRGCManager：： GetStats](iclrgcmanager-getstats-method.md)方法來設定[COR_GC_STATS](cor-gc-stats-structure.md)結構中的哪些統計資料。  
   
 ## <a name="members"></a>成員  
   
@@ -43,7 +43,7 @@ typedef enum {
 |`COR_GC_COUNTS`|記錄每個層代所執行的垃圾收集數目。|  
 |`COR_GC_MEMORYUSAGE`|記錄記憶體使用量和垃圾收集大小統計資料。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** GCHost .idl，GCHost。h  

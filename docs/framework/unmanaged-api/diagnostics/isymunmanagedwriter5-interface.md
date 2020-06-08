@@ -2,12 +2,12 @@
 title: ISymUnmanagedWriter5 介面
 ms.date: 03/30/2017
 ms.assetid: 15b8526e-4f5d-475c-a1e3-d8b2d145c879
-ms.openlocfilehash: bdc630c3c94c7d03b736efa0a95665f10aac7c6e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d9204457b71b670e1c96ed228ad11116bdf41fe6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609426"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493574"
 ---
 # <a name="isymunmanagedwriter5-interface"></a>ISymUnmanagedWriter5 介面
 ISymUnmanagedWriter5 介面。  
@@ -24,10 +24,10 @@ ISymUnmanagedWriter5 介面。
 |方法|描述|  
 |------------|-----------------|  
 |[CloseMapTokensToSourceSpans 方法](isymunmanagedwriter5-closemaptokenstosourcespans-method.md)|關閉 [特殊自訂資料] 區段，以取得權杖對來源的對應資訊。 關閉之後，就無法再新增任何對應資訊。|  
-|[MapTokenToSourceSpan 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-maptokentosourcespan-method.md)|將給定的元資料標記對應至指定之原始程式檔中的給定原始程式列範圍。<br /><br /> 必須在[OpenMapTokensToSourceSpans 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-openmaptokenstosourcespans-method.md)和[CloseMapTokensToSourceSpans 方法](isymunmanagedwriter5-closemaptokenstosourcespans-method.md)的呼叫之間呼叫。|  
+|[MapTokenToSourceSpan 方法](isymunmanagedwriter5-maptokentosourcespan-method.md)|將給定的元資料標記對應至指定之原始程式檔中的給定原始程式列範圍。<br /><br /> 必須在[OpenMapTokensToSourceSpans 方法](isymunmanagedwriter5-openmaptokenstosourcespans-method.md)和[CloseMapTokensToSourceSpans 方法](isymunmanagedwriter5-closemaptokenstosourcespans-method.md)的呼叫之間呼叫。|  
 |[OpenMapTokensToSourceSpans 方法](isymunmanagedwriter5-openmaptokenstosourcespans-method.md)|開啟特殊的自訂資料區段，以在中發出權杖對來源的範圍對應資訊。 當方法已經開啟時開啟此區段，反之亦然，則為錯誤。|  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **標頭：** CorSym .idl，CorSym。h  
   
 ## <a name="see-also"></a>另請參閱

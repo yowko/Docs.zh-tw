@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: e07210203d8a8010890eeb511ff1c08821bfc4a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fa2b5052a1d569487f0c6c72699ff9ab571beefc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616329"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504390"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 列舉
 描述主機可以設定原則動作的失敗集。  
@@ -51,9 +51,9 @@ typedef enum {
 |`FAIL_CodeContract`|發生程式碼合約失敗。 請參閱程式[代碼合約](../../debug-trace-profile/code-contracts.md)。|  
   
 ## <a name="remarks"></a>備註  
- 請參閱[ICLRPolicyManager：： SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)方法，以取得可供主機用來指定失敗狀況之原則動作的[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值清單。 如需程式碼重要和非關鍵區域的詳細資訊，請參閱[EClrOperation](eclroperation-enumeration.md)。  
+ 請參閱[ICLRPolicyManager：： SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md)方法，以取得可供主機用來指定失敗狀況之原則動作的[EPolicyAction](epolicyaction-enumeration.md)值清單。 如需程式碼重要和非關鍵區域的詳細資訊，請參閱[EClrOperation](eclroperation-enumeration.md)。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

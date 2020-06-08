@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: a4e6f8e43c2ec8c867af9f78bd83b435b78c73d5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446759"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493665"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
@@ -86,7 +86,7 @@ switch (caseSwitch)
 
 每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至包含「第一個」**** 相符 case 標籤的參數區段。 若無任何狀況標籤模式符合比對運算式，會將控制權轉移到具有 `default` 狀況標籤的區段 (如有此區段)。 如果沒有 `default` 狀況，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
 
-如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern)一節。
+如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern-matching with-the-switch-statement)一節。
 
 因為 C# 6 只支援常數模式，且不允許重複常數值，所以狀況標籤會定義互斥值，而且只有一個模式可以符合比對運算式。 因此，`case` 陳述式的出現順序並不重要。
 
@@ -100,7 +100,7 @@ switch (caseSwitch)
 
 - 變更參數區段的順序。
 
-- 在 `case` 標籤中使用 [when 子句](#when)。
+- 在 `case` 標籤中使用 [when 子句](#the-case-statement-and-the-when-clause)。
 
 ## <a name="the-default-case"></a>`default` case
 
@@ -108,7 +108,7 @@ switch (caseSwitch)
 
 `default` case 可以依任何順序出現在 `switch` 陳述式中。 不論它在原始程式碼中的順序為何，一律都會在評估過所有 `case` 標籤之後最後才進行評估。
 
-## <a name="pattern-matching-with-the-switch-statement"></a>使用 `switch` 陳述式進行的 <a name="pattern"></a> 模式比對
+## <a name="pattern-matching-with-the-switch-statement"></a>使用  陳述式進行的 `switch` 模式比對
 
 每個 `case` 陳述式都會定義一個模式，並在模式符合比對運算式時，執行其包含參數區段。 所有版本的 C# 都支援常數模式。 從 C# 7.0 開始，支援其餘的模式。
 
@@ -185,7 +185,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />`case` 陳述式和 `when` 子句
+## <a name="the-case-statement-and-the-when-clause"></a>`case` 陳述式和 `when` 子句
 
 從 C# 7.0 開始，因為 case 陳述式不需要互斥，所以您可以新增 `when` 子句來指定其他條件，您必須滿足這些條件，case 陳述式才會評估為 true。 `when` 子句可以是任何傳回布林值的運算式。
 
@@ -199,7 +199,7 @@ case null:
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的 [switch 陳述式](~/_csharplang/spec/statements.md#the-switch-statement)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 參考](../index.md)
 - [C # 程式設計指南](../../programming-guide/index.md)

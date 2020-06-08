@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177223"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503636"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps 方法
-獲取存儲在指定成員定義的中繼資料中的資訊，包括指定中繼資料權杖引用<xref:System.Type>的成員的名稱、二進位簽名和相對虛擬位址。 這是一個簡單的説明方法：如果*mb*是一個方法Def，則調用**GetMethodProps;** 如果*mb*是 FieldDef，則調用**GetFieldProps。** 有關詳細資訊，請參閱這些其他方法。
+取得儲存在指定之元資料標記所參考之成員的中繼資料中的資訊（包括名稱、二進位簽章和相對虛擬位址） <xref:System.Type> 。 這是簡單的 helper 方法：如果*mb*是 MethodDef，則會呼叫**GetMethodProps** ;如果*mb*是 FieldDef，則會呼叫**GetFieldProps** 。 如需詳細資訊，請參閱這些其他方法。
   
 ## <a name="syntax"></a>語法  
   
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>參數  
  `mb`  
- [在]引用成員獲取關聯的中繼資料的權杖。  
+ 在參考要取得相關聯中繼資料之成員的 token。  
   
  `pClass`  
- [出]指向表示成員類的中繼資料權杖的指標。  
+ 脫銷元資料標記的指標，表示成員的類別。  
   
  `szMember`  
- [出]成員的名稱。  
+ 脫銷成員的名稱。  
   
  `cchMember`  
- [在]`szMember`緩衝區的大小以寬字元表示。  
+ 在緩衝區的大小（以寬字元為單位） `szMember` 。  
   
  `pchMember`  
- [出]返回名稱的寬字元大小。  
+ 脫銷傳回名稱的大小（以寬字元為單位）。  
   
  `pdwAttr`  
- [出]應用於成員的任何標誌值。  
+ 脫銷套用至成員的任何旗標值。  
   
  `ppvSigBlob`  
- [出]指向成員的二進位中繼資料簽名的指標。  
+ 脫銷成員的二進位中繼資料簽章的指標。  
   
  `pcbSigBlob`  
- [出]的大小（以位元組為單位）。 `ppvSigBlob`  
+ 脫銷的大小（以位元組為單位） `ppvSigBlob` 。  
   
  `pulCodeRVA`  
- [出]指向成員的相對虛擬位址的指標。  
+ 脫銷成員之相對虛擬位址的指標。  
   
  `pdwImplFlags`  
- [出]與成員關聯的任何方法實現標誌。  
+ 脫銷與成員相關聯的任何方法執行旗標。  
   
  `pdwCPlusTypeFlag`  
- [出]標記 的標誌<xref:System.ValueType>。 它是`ELEMENT_TYPE_*`值之一。
+ 脫銷標記的旗標 <xref:System.ValueType> 。 它是其中一個 `ELEMENT_TYPE_*` 值。
   
  `ppValue`  
- [出]此成員返回的常量字串值。  
+ 脫銷這個成員傳回的常數位串值。  
   
  `pcchValue`  
- [出]如果`ppValue`不保存字串，`ppValue`則以 字元或零表示的大小。  
+ 脫銷的大小（以字元為單位 `ppValue` ），如果不包含字串，則為零 `ppValue` 。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** 科爾赫  
+ **標頭：** Cor。h  
   
- **庫：** 作為資源包含在 MsCorEE.dll 中  
+ 連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

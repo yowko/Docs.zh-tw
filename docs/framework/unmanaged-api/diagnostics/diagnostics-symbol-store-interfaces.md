@@ -9,12 +9,12 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-ms.openlocfilehash: 044ed5e08a85442c5a73c123cf51529d2fd3f1fc
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 34eee8c05e1c356d4c431245c6837bd2b3a89b32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442172"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504468"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>診斷符號存放區介面
 本主題描述可讓編譯器產生可供偵錯工具使用之符號資訊的非受控介面。  
@@ -42,7 +42,7 @@ ms.locfileid: "83442172"
  這個介面是[ISymUnmanagedAsyncMethodPropertiesWriter 介面](isymunmanagedasyncmethodpropertieswriter-interface.md)的讀取補數。  
   
  [ISymUnmanagedAsyncMethodPropertiesWriter 介面](isymunmanagedasyncmethodpropertieswriter-interface.md)  
- 針對每個方法符號，允許定義選擇性的非同步方法資訊。 必須搭配已開啟的方法使用（也就是在呼叫[OpenMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)和[CloseMethod 方法](isymunmanagedwriter-closemethod-method.md)之間）。  
+ 針對每個方法符號，允許定義選擇性的非同步方法資訊。 必須搭配已開啟的方法使用（也就是在呼叫[OpenMethod 方法](isymunmanagedwriter-openmethod-method.md)和[CloseMethod 方法](isymunmanagedwriter-closemethod-method.md)之間）。  
   
  [ISymUnmanagedBinder 介面](isymunmanagedbinder-interface.md)  
  表示非受控程式碼的符號系結器。  

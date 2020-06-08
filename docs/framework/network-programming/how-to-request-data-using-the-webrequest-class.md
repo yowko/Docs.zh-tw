@@ -1,5 +1,6 @@
 ---
-title: 如何：使用 WebRequest 類請求資料
+title: 如何：使用 WebRequest 類別要求資料
+description: 瞭解如何使用 .NET Framework 中的 WebRequest 類別，從伺服器要求資源（例如網頁或檔案）。
 ms.date: 03/21/2019
 dev_langs:
 - csharp
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: e670a2a503ce704eff847e9e0b3ee340ab52fe62
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5dcc1a7dad226288e3f74969b86e2dd457c0eed0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048158"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502466"
 ---
-# <a name="how-to-request-data-by-using-the-webrequest-class"></a>如何：使用 WebRequest 類請求資料
+# <a name="how-to-request-data-by-using-the-webrequest-class"></a>如何：使用 WebRequest 類別要求資料
 
 下列程序描述向伺服器要求資源 (例如網頁或檔案) 的步驟。 資源必須是以 URI 識別。
 
@@ -100,8 +101,8 @@ ms.locfileid: "71048158"
 
 ## <a name="see-also"></a>另請參閱
 
-- [創建互聯網請求](creating-internet-requests.md)
-- [在網路上使用流](using-streams-on-the-network.md)
+- [建立網際網路要求](creating-internet-requests.md)
+- [在網路上使用資料流程](using-streams-on-the-network.md)
 - [透過 Proxy 存取網際網路](accessing-the-internet-through-a-proxy.md)
-- [請求資料](requesting-data.md)
-- [如何：使用 WebRequest 類發送資料](how-to-send-data-using-the-webrequest-class.md)
+- [要求資料](requesting-data.md)
+- [如何：使用 WebRequest 類別傳送資料](how-to-send-data-using-the-webrequest-class.md)

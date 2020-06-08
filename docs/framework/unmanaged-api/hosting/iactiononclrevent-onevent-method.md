@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0970f10c-4304-4c12-91c0-83e51455afb4
 topic_type:
 - apiref
-ms.openlocfilehash: a216a2925382016adeb100554bdceefdf3ee902b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bbf5e299285071ba6d43fd2c40fc724d19bc7b2a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616056"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504338"
 ---
 # <a name="iactiononclreventonevent-method"></a>IActionOnCLREvent::OnEvent 方法
 在已使用[ICLROnEventManager：： RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)方法的呼叫註冊的事件上執行回呼。  
@@ -55,9 +55,9 @@ HRESULT OnEvent (
 ## <a name="remarks"></a>備註  
  `data`參數是未指定類型物件的指標。 如果 `event` 參數為 `Event_DomainUnload` ， `data` 則為已卸載之的數值識別碼 <xref:System.AppDomain> 。 主機可以使用此識別碼做為金鑰來採取適當的動作。  
   
- 如果 `event` 為 `Event_MDAFired` ， `data` 則是[MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)實例的指標，其中包含來自 Managed 偵錯工具（MDA）的訊息輸出。 Mda 是 CLR 的一項功能，可協助開發人員進行偵錯工具，方法是產生關於事件的 XML 訊息，這是很棘手的陷阱。 這類訊息特別適用于在受控和非受控碼之間的轉換。 如需詳細資訊，請參閱[使用受控偵錯工具診斷錯誤](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
+ 如果 `event` 為 `Event_MDAFired` ， `data` 則是[MDAInfo](mdainfo-structure.md)實例的指標，其中包含來自 Managed 偵錯工具（MDA）的訊息輸出。 Mda 是 CLR 的一項功能，可協助開發人員進行偵錯工具，方法是產生關於事件的 XML 訊息，這是很棘手的陷阱。 這類訊息特別適用于在受控和非受控碼之間的轉換。 如需詳細資訊，請參閱[使用受控偵錯工具診斷錯誤](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

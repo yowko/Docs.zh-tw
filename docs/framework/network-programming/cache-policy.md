@@ -1,5 +1,6 @@
 ---
 title: 快取原則
+description: 深入瞭解快取原則，這是用來判斷是否可以使用所要求資源的快取複本來滿足要求的規則。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - time-based cache policies
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: 2d3d85ebd80f417ebd0fa0e619097e15f2a6a39b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d63d2b6bf8426968d2120647c8ecea2b7602825a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048779"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502661"
 ---
 # <a name="cache-policy"></a>快取原則
 快取原則所定義的規則用來判斷是否可以使用所要求資源的快取複本來滿足要求。 應用程式指定有效期限的用戶端快取需求，但有效的快取原則是由用戶端快取需求、伺服器內容到期需求和伺服器重新驗證需求所決定。 用戶端快取原則與伺服器需求的互動一律會導致最保守的快取原則，協助確保將最新內容傳回給用戶端應用程式。  
@@ -24,7 +25,7 @@ ms.locfileid: "71048779"
   
  下表中所述的類別是用來指定快取原則。  
   
-|類別名稱|描述|  
+|類別名稱|說明|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|針對使用 <xref:System.Net.HttpWebRequest> 物件所要求的資源，代表以位置為基礎和以時間為基礎的快取原則。|  
 |<xref:System.Net.Cache.RequestCachePolicy>|針對使用 <xref:System.Net.WebRequest> 物件所要求的資源，代表以位置為基礎的快取原則或以 <xref:System.Net.Cache.RequestCacheLevel.Default> 時間為基礎的快取原則。|  
@@ -32,7 +33,7 @@ ms.locfileid: "71048779"
 |<xref:System.Net.Cache.HttpRequestCacheLevel>|指定值，用來建立以位置為基礎和以時間為基礎之 <xref:System.Net.Cache.HttpRequestCachePolicy> 物件。|  
 |<xref:System.Net.Cache.RequestCacheLevel>|指定值，用來建立以位置為基礎或 <xref:System.Net.Cache.RequestCacheLevel.Default> 以時間為基礎的 <xref:System.Net.Cache.RequestCachePolicy> 物件。|  
   
- 您可以定義應用程式所提出之所有要求或個別要求的快取原則。 當您同時指定應用程式層級快取原則和要求層級快取原則時，會使用要求層級原則。 您可以透過程式設計方式或是使用應用程式或電腦組態檔，來指定應用程式層級快取原則。 有關詳細資訊，請參閱[\<請求緩存>元素（網路設置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
+ 您可以定義應用程式所提出之所有要求或個別要求的快取原則。 當您同時指定應用程式層級快取原則和要求層級快取原則時，會使用要求層級原則。 您可以透過程式設計方式或是使用應用程式或電腦組態檔，來指定應用程式層級快取原則。 如需詳細資訊，請參閱[ \<requestCaching> 元素（網路設定）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
   
  若要建立快取原則，您必須建立 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 類別的執行個體來建立原則物件。 若要在要求上指定原則，請將要求的 <xref:System.Net.WebRequest.CachePolicy%2A> 屬性設定為原則物件。 以程式設計方式設定應用程式層級原則時，請將 <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> 屬性設定為原則物件。  
   

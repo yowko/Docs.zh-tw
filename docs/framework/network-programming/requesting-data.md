@@ -1,5 +1,6 @@
 ---
 title: 要求資料
+description: 瞭解插即用通訊協定如何讓您開發使用單一介面的應用程式，以從多個通訊協定抓取資料。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047320"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502180"
 ---
 # <a name="requesting-data"></a>要求資料
 開發在現今網際網路分散式作業環境中執行的應用程式，需要從所有類型的資源中擷取資料的有效且易用的方法。 可插式通訊協定可讓您開發應用程式，而應用程式使用單一介面來擷取多個網際網路通訊協定中的資料。  
@@ -54,6 +55,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 框架中的網路程式設計](index.md)
+- [.NET Framework 中的網路程式設計](index.md)
 - [如何：要求網頁並擷取結果當作資料流](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
 - [如何：擷取符合 WebRequest 的通訊協定特定 WebResponse](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

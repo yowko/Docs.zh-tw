@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01837955-ce1e-4068-b338-fd473bd77d1d
 topic_type:
 - apiref
-ms.openlocfilehash: 6ea7605e062eb77e0488b3a9561c4d83be16fa7d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 273922e00c3e5319d5a03652cc77b69f4479ea67
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436705"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503519"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps 方法
-取得與指定的 TypeRef 標記所參考的 <xref:System.Type> 相關聯的中繼資料。  
+取得與指定的 TypeRef 標記所參考之相關聯的中繼資料 <xref:System.Type> 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,21 +48,21 @@ HRESULT GetTypeRefProps (
  脫銷包含型別名稱的緩衝區。  
   
  `cchName`  
- 在要求的大小，以 `szName`的寬字元為單位。  
+ 在所要求的大小（以寬字元為單位） `szName` 。  
   
  `pchName`  
- 脫銷`szName`的寬字元傳回大小。  
+ 脫銷傳回的大小（以寬字元為單位） `szName` 。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

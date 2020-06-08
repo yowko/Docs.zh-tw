@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: dcf2ce8bdb7cec1f567e548ff3314e160fffe9fd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e66b63ffa4ed25e861cff6bd9eb6065f57ff807f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616628"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493496"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 函式
 讓非受控主機將 common language runtime （CLR）載入進程中。 [CorBindToRuntime](corbindtoruntime-function.md)和 `CorBindToRuntimeEx` 函數會執行相同的作業，但函式可 `CorBindToRuntimeEx` 讓您設定旗標來指定 CLR 的行為。  
@@ -102,7 +102,7 @@ HRESULT CorBindToRuntimeEx (
  如需這些旗標的說明，請參閱[STARTUP_FLAGS](startup-flags-enumeration.md)列舉。  
   
  `rclsid`  
- 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
  在`IID`從所要求之介面的 `rclsid` 。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
@@ -122,13 +122,13 @@ HRESULT CorBindToRuntimeEx (
   
 2. 將進程預設模式變更為版本1相容性模式，其中物件不 <xref:System.Security.Principal.WindowsIdentity> 會流經任何非同步點，而不論 <xref:System.Threading.ExecutionContext> 目前線程上的設定為何。 您變更預設模式的方式，取決於您使用的是受控可執行檔或非受控裝載介面來載入 CLR：  
   
-    1. 對於受控可執行檔，您必須將 `enabled` [ \< legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)專案的屬性設定為 `true` 。  
+    1. 對於受控可執行檔，您必須將 `enabled` 元素的屬性設定 [\<legacyImpersonationPolicy>](../../configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) 為 `true` 。  
   
     2. 若為非受控裝載介面，請在呼叫函式時，于 `STARTUP_LEGACY_IMPERSONATION` 參數中設定旗標 `startupFlags` `CorBindToRuntimeEx` 。  
   
      版本1相容性模式適用于整個進程和進程中的所有應用程式域。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

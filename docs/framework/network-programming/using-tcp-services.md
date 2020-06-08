@@ -1,5 +1,6 @@
 ---
 title: 使用 TCP 服務
+description: TcpClient 類別會將詳細資料抽象化，以建立通訊端，以使用 TCP 來要求和接收資料。 使用 .NET Framework 的資料流程處理來讀取和寫入資料。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 3678586647dcf9c47b4494197fbf56cab865b3d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 329701e8f11ca7f87c40ee8b2cc6a337435242b5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73039495"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501959"
 ---
 # <a name="using-tcp-services"></a>使用 TCP 服務
 
@@ -31,7 +32,7 @@ TCP 通訊協定會建立與遠端端點的連線，然後使用該連接來傳�
 
 若要建立 TCP 傳線，您必須知道裝載所需服務之網路裝置的位址，以及服務用來通訊的 TCP 連接埠。 Internet Assigned Numbers Authority (Iana) 定義了通用服務的連接埠編號。(請參閱[服務名稱與傳輸通訊協定連接埠號碼登錄](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) \(英文\))。 不在 Iana 清單上之服務的連接埠編號範圍可以是 1,024 到 65,535。
 
-下面的示例演示了設置**TcpClient**以連接到 TCP 埠 13 上的時間伺服器：
+下列範例示範如何設定**TcpClient** ，以連接到 TCP 埠13上的時間伺服器：
 
 ```vb
 Imports System.Net.Sockets
@@ -105,7 +106,7 @@ public class TcpTimeClient
 }
 ```
 
-<xref:System.Net.Sockets.TcpListener>用於監視傳入請求的 TCP 埠，然後創建套**接字**或**TcpClient**來管理與用戶端的連接。 <xref:System.Net.Sockets.TcpListener.Start%2A> 方法可啟用接聽，而 <xref:System.Net.Sockets.TcpListener.Stop%2A> 方法則可停用連接埠上的接聽。 <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 方法會接受連入連線要求，並建立 **TcpClient** 來處理要求，而 <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 方法會接受連入連線要求，並建立 **Socket** 來處理要求。
+<xref:System.Net.Sockets.TcpListener>是用來監視連入要求的 TCP 埠，然後建立**通訊端**或**TcpClient**來管理用戶端的連線。 <xref:System.Net.Sockets.TcpListener.Start%2A> 方法可啟用接聽，而 <xref:System.Net.Sockets.TcpListener.Stop%2A> 方法則可停用連接埠上的接聽。 <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 方法會接受連入連線要求，並建立 **TcpClient** 來處理要求，而 <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 方法會接受連入連線要求，並建立 **Socket** 來處理要求。
 
 下列範例示範如何建立使用 **TcpListener** 來監視 TCP 連接埠 13 的網路時間伺服器。 接受連入連線要求時，時間伺服器會回應主機伺服器的目前日期和時間。
 

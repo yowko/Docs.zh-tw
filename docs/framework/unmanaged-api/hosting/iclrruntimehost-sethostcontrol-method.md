@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6136be87-e631-4756-81ed-74b66581bad4
 topic_type:
 - apiref
-ms.openlocfilehash: 8d6a4e1ca934c748352b0c4f5120536a4dd24e0b
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 644b31ae8e8f0c51c08bcad57220a028406cfd3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703966"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504068"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>ICLRRuntimeHost::SetHostControl 方法
 設定 common language runtime （CLR）可用來取得[IHostControl 介面](ihostcontrol-interface.md)之主機的介面指標。  
@@ -50,9 +50,9 @@ HRESULT SetHostControl(
 |E_CLR_ALREADY_STARTED|CLR 已經初始化。|  
   
 ## <a name="remarks"></a>備註  
- 您必須在 `SetHostControl` CLR 初始化之前呼叫，也就是在呼叫[Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)或使用任何[中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)之前。 建議您在 `SetHostControl` 呼叫[CorBindToCurrentRuntime 函數](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)或[CorBindToRuntimeEx 函數](corbindtoruntimeex-function.md)之後立即呼叫。  
+ 您必須在 `SetHostControl` CLR 初始化之前呼叫，也就是在呼叫[Start 方法](iclrruntimehost-start-method.md)或使用任何[中繼資料介面](../metadata/metadata-interfaces.md)之前。 建議您在 `SetHostControl` 呼叫[CorBindToCurrentRuntime 函數](corbindtocurrentruntime-function.md)或[CorBindToRuntimeEx 函數](corbindtoruntimeex-function.md)之後立即呼叫。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll. h  

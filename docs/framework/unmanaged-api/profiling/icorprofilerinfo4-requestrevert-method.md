@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: 73d122b1ffa890bfa43f8eef7e24595ac0d26ebe
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b85a7893cf5271c65bc842bb6ea598c825225376
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861784"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495719"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert 方法
 將指定函式的所有執行個體還原成其原始版本。  
@@ -51,17 +51,17 @@ HRESULT RequestRevert (
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
 |S_OK|嘗試還原所有要求；不過，必須檢查傳回的狀態陣列，以判斷哪些函式成功還原。|  
 |CORPROF_E_CALLBACK4_REQUIRED|分析工具必須執行[ICorProfilerCallback4](icorprofilercallback4-interface.md)介面，才能支援此呼叫。|  
-|CORPROF_E_REJIT_NOT_ENABLED|尚未啟用 JIT 重新編譯。 在初始化期間，您必須使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法來設定 `COR_PRF_ENABLE_REJIT` 旗標，以啟用 JIT 重新編譯。|  
+|CORPROF_E_REJIT_NOT_ENABLED|尚未啟用 JIT 重新編譯。 在初始化期間，您必須使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法來設定旗標，以啟用 JIT 重新編譯 `COR_PRF_ENABLE_REJIT` 。|  
 |E_INVALIDARG|`cFunctions` 為 0，或者 `moduleIds` 或 `methodIds` 為 `NULL`。|  
 |E_OUTOFMEMORY|CLR 無法完成要求，因為記憶體不足。|  
   
 ## <a name="status-hresults"></a>狀態 HRESULT  
   
-|狀態陣列 HRESULT|描述|  
+|狀態陣列 HRESULT|說明|  
 |--------------------------|-----------------|  
 |S_OK|已成功還原對應的函式。|  
 |E_INVALIDARG|`moduleID` 或 `methodDef` 參數為 `NULL`。|  
@@ -73,16 +73,16 @@ HRESULT RequestRevert (
 ## <a name="remarks"></a>備註  
  下次呼叫已還原的任何函式執行個體時，便會執行函式的原始版本。 如果函式已在執行中，則會結束執行正在執行的版本。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo4 介面](icorprofilerinfo4-interface.md)
 - [分析介面](profiling-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 75331c7b-988b-436c-9eb9-a270d37b4f06
 topic_type:
 - apiref
-ms.openlocfilehash: 42b8360ac6a7bb62f29046475d6cc98124619770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 94b4c3935c949c0c4008e41244713b6bfa4dba84
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449964"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503714"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs 方法
 列舉在目前中繼資料範圍中定義的 TypeSpec 語彙基元。  
@@ -47,28 +47,28 @@ HRESULT EnumTypeSpecs (
  [in] `rTypeSpecs` 陣列的大小上限。  
   
  `pcTypeSpecs`  
- 脫銷`rTypeSpecs`中傳回的 TypeSpec token 數目。  
+ 脫銷在中傳回的 TypeSpec token 數目 `rTypeSpecs` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|已成功傳回 `EnumTypeSpecs`。|  
-|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcTypeSpecs` 為零。|  
+|`S_OK`|`EnumTypeSpecs`已成功傳回。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下， `pcTypeSpecs` 是零。|  
   
 ## <a name="remarks"></a>備註  
- TypeSpec 標記是由[IMetaDataEmit：： GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md)方法所建立。  
+ TypeSpec 標記是由[IMetaDataEmit：： GetTokenFromTypeSpec](imetadataemit-gettokenfromtypespec-method.md)方法所建立。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

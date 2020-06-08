@@ -1,16 +1,17 @@
 ---
 title: 如何：修改電腦設定檔案以啟用 IPv6 支援
+description: 瞭解如何修改電腦設定檔 machine.config，以在 .NET Framework 中啟用 IPv6 支援。
 ms.date: 03/30/2017
 ms.assetid: 5611b677-b9cc-43b8-a434-60e18d89aada
-ms.openlocfilehash: 73408afe9fcb35daa898c08b087a3411a6cb342b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb7b3665c0dbcf0edefa8c48a9e69297d7259067
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180809"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502518"
 ---
 # <a name="how-to-modify-the-computer-configuration-file-to-enable-ipv6-support"></a>如何：修改電腦設定檔案以啟用 IPv6 支援
-下列程式碼範例示範如何修改電腦組態檔 *machine.config* 來啟用 IPv6 支援。 *machine.config* 檔案是儲存在 Windows 安裝目錄中的 *%Windir%\Microsoft.NET\Framework* 資料夾下。 *在 %Windir%_Microsoft.NET_Framework*的資料夾中，有一個單獨的*電腦.config*檔，用於電腦上安裝的每個版本的 .NET Framework（例如 *，C：_WINDOWS_Microsoft.NET_Framework_v2.0.50727_機器.config）。*  
+下列程式碼範例示範如何修改電腦組態檔 *machine.config* 來啟用 IPv6 支援。 *machine.config* 檔案是儲存在 Windows 安裝目錄中的 *%Windir%\Microsoft.NET\Framework* 資料夾下。 針對電腦上安裝的每個 .NET Framework 版本， *%Windir%\Microsoft.NET\Framework*下的資料夾中有個別的*machine.config*檔案（例如*C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config*）。  
   
  您也可以在應用程式的組態檔中進行這些設定，它的優先順序高於電腦組態檔。  
   
@@ -38,5 +39,5 @@ ms.locfileid: "79180809"
 ## <a name="see-also"></a>另請參閱
 
 - [IPv6 定址](ipv6-addressing.md)
-- [網路設置架構](../configure-apps/file-schema/network/index.md)
-- [\<ipv6>元素（網路設置）](../configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [網路設定結構描述](../configure-apps/file-schema/network/index.md)
+- [\<ipv6>元素（網路設定）](../configure-apps/file-schema/network/ipv6-element-network-settings.md)
