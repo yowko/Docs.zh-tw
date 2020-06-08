@@ -1,5 +1,6 @@
 ---
 title: 非同步伺服器通訊端範例
+description: 此範例 .NET Framework 程式會建立伺服器，以使用非同步通訊端接收來自用戶端的連接。 它會接收並回顯字串。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: 8a9a3cb26968c548aa971bac548313a459c2fdf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 089de8ce9629e30cb6e4458c0f9a4613c9674a21
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180903"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502713"
 ---
-# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="f2d64-102">非同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="f2d64-102">Asynchronous Server Socket Example</span></span>
-<span data-ttu-id="f2d64-103">下列範例程式會建立從用戶端接收連線要求的伺服器。</span><span class="sxs-lookup"><span data-stu-id="f2d64-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="f2d64-104">伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，不會暫停執行伺服器應用程式。</span><span class="sxs-lookup"><span data-stu-id="f2d64-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="f2d64-105">應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。</span><span class="sxs-lookup"><span data-stu-id="f2d64-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="f2d64-106">用戶端的字串必須包含字串 "\<EOF>" 來表示訊息結束。</span><span class="sxs-lookup"><span data-stu-id="f2d64-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="3b33d-104">非同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="3b33d-104">Asynchronous Server Socket Example</span></span>
+<span data-ttu-id="3b33d-105">下列範例程式會建立從用戶端接收連線要求的伺服器。</span><span class="sxs-lookup"><span data-stu-id="3b33d-105">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="3b33d-106">伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，不會暫停執行伺服器應用程式。</span><span class="sxs-lookup"><span data-stu-id="3b33d-106">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="3b33d-107">應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。</span><span class="sxs-lookup"><span data-stu-id="3b33d-107">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="3b33d-108">來自用戶端的字串必須包含字串 " \<EOF> "，以表示訊息的結尾。</span><span class="sxs-lookup"><span data-stu-id="3b33d-108">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -289,8 +290,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f2d64-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f2d64-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b33d-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3b33d-109">See also</span></span>
 
-- [<span data-ttu-id="f2d64-108">非同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="f2d64-108">Asynchronous Client Socket Example</span></span>](asynchronous-client-socket-example.md)
-- [<span data-ttu-id="f2d64-109">使用非同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="f2d64-109">Using an Asynchronous Server Socket</span></span>](using-an-asynchronous-server-socket.md)
-- [<span data-ttu-id="f2d64-110">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="f2d64-110">Socket Code Examples</span></span>](socket-code-examples.md)
+- [<span data-ttu-id="3b33d-110">非同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="3b33d-110">Asynchronous Client Socket Example</span></span>](asynchronous-client-socket-example.md)
+- [<span data-ttu-id="3b33d-111">使用非同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="3b33d-111">Using an Asynchronous Server Socket</span></span>](using-an-asynchronous-server-socket.md)
+- [<span data-ttu-id="3b33d-112">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="3b33d-112">Socket Code Examples</span></span>](socket-code-examples.md)

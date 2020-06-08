@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-ms.openlocfilehash: 0dc2f625da7f4e37583f198c8d6dba86f6dcdb10
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9a1440be7011130b16d7112ae15026eb74856190
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805058"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501585"
 ---
-# <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a><span data-ttu-id="d167f-102">IHostAssemblyManager::GetNonHostStoreAssemblies 方法</span><span class="sxs-lookup"><span data-stu-id="d167f-102">IHostAssemblyManager::GetNonHostStoreAssemblies Method</span></span>
-<span data-ttu-id="d167f-103">取得[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)的介面指標，表示主機預期會載入 common language RUNTIME （CLR）的元件清單。</span><span class="sxs-lookup"><span data-stu-id="d167f-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) that represents the list of assemblies that the host expects the common language runtime (CLR) to load.</span></span>  
+# <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a><span data-ttu-id="994e4-102">IHostAssemblyManager::GetNonHostStoreAssemblies 方法</span><span class="sxs-lookup"><span data-stu-id="994e4-102">IHostAssemblyManager::GetNonHostStoreAssemblies Method</span></span>
+<span data-ttu-id="994e4-103">取得[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)的介面指標，表示主機預期會載入 common language RUNTIME （CLR）的元件清單。</span><span class="sxs-lookup"><span data-stu-id="994e4-103">Gets an interface pointer to an [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) that represents the list of assemblies that the host expects the common language runtime (CLR) to load.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d167f-104">語法</span><span class="sxs-lookup"><span data-stu-id="d167f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="994e4-104">語法</span><span class="sxs-lookup"><span data-stu-id="994e4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNonHostStoreAssemblies (  
@@ -33,49 +33,49 @@ HRESULT GetNonHostStoreAssemblies (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d167f-105">參數</span><span class="sxs-lookup"><span data-stu-id="d167f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="994e4-105">參數</span><span class="sxs-lookup"><span data-stu-id="994e4-105">Parameters</span></span>  
  `ppReferenceList`  
- <span data-ttu-id="d167f-106">脫銷位址的指標 `ICLRAssemblyReferenceList` ，其中包含主機預期 CLR 載入之元件的參考清單。</span><span class="sxs-lookup"><span data-stu-id="d167f-106">[out] A pointer to the address of an `ICLRAssemblyReferenceList` that contains a list of references to assemblies that the host expects the CLR to load.</span></span>  
+ <span data-ttu-id="994e4-106">脫銷位址的指標 `ICLRAssemblyReferenceList` ，其中包含主機預期 CLR 載入之元件的參考清單。</span><span class="sxs-lookup"><span data-stu-id="994e4-106">[out] A pointer to the address of an `ICLRAssemblyReferenceList` that contains a list of references to assemblies that the host expects the CLR to load.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d167f-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="d167f-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="994e4-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="994e4-107">Return Value</span></span>  
   
-|<span data-ttu-id="d167f-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d167f-108">HRESULT</span></span>|<span data-ttu-id="d167f-109">描述</span><span class="sxs-lookup"><span data-stu-id="d167f-109">Description</span></span>|  
+|<span data-ttu-id="994e4-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="994e4-108">HRESULT</span></span>|<span data-ttu-id="994e4-109">說明</span><span class="sxs-lookup"><span data-stu-id="994e4-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d167f-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="d167f-110">S_OK</span></span>|<span data-ttu-id="d167f-111">`GetNonHostStoreAssemblies`已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="d167f-111">`GetNonHostStoreAssemblies` returned successfully.</span></span>|  
-|<span data-ttu-id="d167f-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d167f-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d167f-113">CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="d167f-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="d167f-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="d167f-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="d167f-115">呼叫超時。</span><span class="sxs-lookup"><span data-stu-id="d167f-115">The call timed out.</span></span>|  
-|<span data-ttu-id="d167f-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="d167f-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="d167f-117">呼叫端沒有擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="d167f-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="d167f-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="d167f-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="d167f-119">已封鎖的執行緒或光纖在等候時取消了事件。</span><span class="sxs-lookup"><span data-stu-id="d167f-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="d167f-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d167f-120">E_FAIL</span></span>|<span data-ttu-id="d167f-121">發生不明的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="d167f-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="d167f-122">當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。</span><span class="sxs-lookup"><span data-stu-id="d167f-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="d167f-123">對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="d167f-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="d167f-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="d167f-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="d167f-125">沒有足夠的記憶體可用來建立所要求的參考清單 `ICLRAssemblyReferenceList` 。</span><span class="sxs-lookup"><span data-stu-id="d167f-125">Not enough memory was available to create the list of references for the requested `ICLRAssemblyReferenceList`.</span></span>|  
+|<span data-ttu-id="994e4-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="994e4-110">S_OK</span></span>|<span data-ttu-id="994e4-111">`GetNonHostStoreAssemblies`已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="994e4-111">`GetNonHostStoreAssemblies` returned successfully.</span></span>|  
+|<span data-ttu-id="994e4-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="994e4-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="994e4-113">CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。</span><span class="sxs-lookup"><span data-stu-id="994e4-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="994e4-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="994e4-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="994e4-115">呼叫超時。</span><span class="sxs-lookup"><span data-stu-id="994e4-115">The call timed out.</span></span>|  
+|<span data-ttu-id="994e4-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="994e4-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="994e4-117">呼叫端沒有擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="994e4-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="994e4-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="994e4-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="994e4-119">已封鎖的執行緒或光纖在等候時取消了事件。</span><span class="sxs-lookup"><span data-stu-id="994e4-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="994e4-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="994e4-120">E_FAIL</span></span>|<span data-ttu-id="994e4-121">發生不明的嚴重失敗。</span><span class="sxs-lookup"><span data-stu-id="994e4-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="994e4-122">當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。</span><span class="sxs-lookup"><span data-stu-id="994e4-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="994e4-123">對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="994e4-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="994e4-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="994e4-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="994e4-125">沒有足夠的記憶體可用來建立所要求的參考清單 `ICLRAssemblyReferenceList` 。</span><span class="sxs-lookup"><span data-stu-id="994e4-125">Not enough memory was available to create the list of references for the requested `ICLRAssemblyReferenceList`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d167f-126">備註</span><span class="sxs-lookup"><span data-stu-id="d167f-126">Remarks</span></span>  
- <span data-ttu-id="d167f-127">CLR 會使用下列一組指導方針來解析參考：</span><span class="sxs-lookup"><span data-stu-id="d167f-127">The CLR resolves references using the following set of guidelines:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="994e4-126">備註</span><span class="sxs-lookup"><span data-stu-id="994e4-126">Remarks</span></span>  
+ <span data-ttu-id="994e4-127">CLR 會使用下列一組指導方針來解析參考：</span><span class="sxs-lookup"><span data-stu-id="994e4-127">The CLR resolves references using the following set of guidelines:</span></span>  
   
-- <span data-ttu-id="d167f-128">首先，它會參考所傳回的元件參考清單 `GetNonHostStoreAssemblies` 。</span><span class="sxs-lookup"><span data-stu-id="d167f-128">First, it consults the list of assembly references returned by `GetNonHostStoreAssemblies`.</span></span>  
+- <span data-ttu-id="994e4-128">首先，它會參考所傳回的元件參考清單 `GetNonHostStoreAssemblies` 。</span><span class="sxs-lookup"><span data-stu-id="994e4-128">First, it consults the list of assembly references returned by `GetNonHostStoreAssemblies`.</span></span>  
   
-- <span data-ttu-id="d167f-129">如果元件出現在清單中，則 CLR 會正常地系結至它。</span><span class="sxs-lookup"><span data-stu-id="d167f-129">If the assembly appears in the list, the CLR binds to it normally.</span></span>  
+- <span data-ttu-id="994e4-129">如果元件出現在清單中，則 CLR 會正常地系結至它。</span><span class="sxs-lookup"><span data-stu-id="994e4-129">If the assembly appears in the list, the CLR binds to it normally.</span></span>  
   
-- <span data-ttu-id="d167f-130">如果元件未出現在清單中，而且主機已提供[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)的執行，則 CLR 會呼叫[IHostAssemblyStore：:P rovideassembly](ihostassemblystore-provideassembly-method.md) ，讓主機能夠提供要系結的元件。</span><span class="sxs-lookup"><span data-stu-id="d167f-130">If the assembly does not appear in the list and the host has provided an implementation of [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), the CLR calls [IHostAssemblyStore::ProvideAssembly](ihostassemblystore-provideassembly-method.md) to allow the host to supply the assembly to bind to.</span></span>  
+- <span data-ttu-id="994e4-130">如果元件未出現在清單中，而且主機已提供[IHostAssemblyStore](ihostassemblystore-interface.md)的執行，則 CLR 會呼叫[IHostAssemblyStore：:P rovideassembly](ihostassemblystore-provideassembly-method.md) ，讓主機能夠提供要系結的元件。</span><span class="sxs-lookup"><span data-stu-id="994e4-130">If the assembly does not appear in the list and the host has provided an implementation of [IHostAssemblyStore](ihostassemblystore-interface.md), the CLR calls [IHostAssemblyStore::ProvideAssembly](ihostassemblystore-provideassembly-method.md) to allow the host to supply the assembly to bind to.</span></span>  
   
-- <span data-ttu-id="d167f-131">否則，CLR 會無法系結至元件。</span><span class="sxs-lookup"><span data-stu-id="d167f-131">Otherwise, the CLR fails to bind to the assembly.</span></span>  
+- <span data-ttu-id="994e4-131">否則，CLR 會無法系結至元件。</span><span class="sxs-lookup"><span data-stu-id="994e4-131">Otherwise, the CLR fails to bind to the assembly.</span></span>  
   
- <span data-ttu-id="d167f-132">如果主機設定 `ppReferenceList` 為 null，CLR 會先探查全域組件快取、呼叫 `ProvideAssembly` ，然後再探查應用程式基底，以解析元件參考。</span><span class="sxs-lookup"><span data-stu-id="d167f-132">If the host sets `ppReferenceList` to null, the CLR first probes the global assembly cache, calls `ProvideAssembly`, and then probes the application base to resolve an assembly reference.</span></span>  
+ <span data-ttu-id="994e4-132">如果主機設定 `ppReferenceList` 為 null，CLR 會先探查全域組件快取、呼叫 `ProvideAssembly` ，然後再探查應用程式基底，以解析元件參考。</span><span class="sxs-lookup"><span data-stu-id="994e4-132">If the host sets `ppReferenceList` to null, the CLR first probes the global assembly cache, calls `ProvideAssembly`, and then probes the application base to resolve an assembly reference.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="d167f-133">在初始化之後，CLR 只會呼叫 `GetNonHostStoreAssemblies` 一次。</span><span class="sxs-lookup"><span data-stu-id="d167f-133">Upon initialization, the CLR calls `GetNonHostStoreAssemblies` only once.</span></span> <span data-ttu-id="d167f-134">不會再次呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="d167f-134">The method is not called again.</span></span>  
+> <span data-ttu-id="994e4-133">在初始化之後，CLR 只會呼叫 `GetNonHostStoreAssemblies` 一次。</span><span class="sxs-lookup"><span data-stu-id="994e4-133">Upon initialization, the CLR calls `GetNonHostStoreAssemblies` only once.</span></span> <span data-ttu-id="994e4-134">不會再次呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="994e4-134">The method is not called again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d167f-135">規格需求</span><span class="sxs-lookup"><span data-stu-id="d167f-135">Requirements</span></span>  
- <span data-ttu-id="d167f-136">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d167f-136">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="994e4-135">規格需求</span><span class="sxs-lookup"><span data-stu-id="994e4-135">Requirements</span></span>  
+ <span data-ttu-id="994e4-136">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="994e4-136">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d167f-137">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="d167f-137">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="994e4-137">**標頭：** Mscoree.dll. h</span><span class="sxs-lookup"><span data-stu-id="994e4-137">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d167f-138">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d167f-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="994e4-138">連結**庫：** 包含為 Mscoree.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="994e4-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d167f-139">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d167f-139">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="994e4-139">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="994e4-139">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d167f-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d167f-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="994e4-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="994e4-140">See also</span></span>
 
-- [<span data-ttu-id="d167f-141">ICLRAssemblyReferenceList 介面</span><span class="sxs-lookup"><span data-stu-id="d167f-141">ICLRAssemblyReferenceList Interface</span></span>](iclrassemblyreferencelist-interface.md)
-- [<span data-ttu-id="d167f-142">IHostAssemblyManager 介面</span><span class="sxs-lookup"><span data-stu-id="d167f-142">IHostAssemblyManager Interface</span></span>](ihostassemblymanager-interface.md)
-- [<span data-ttu-id="d167f-143">IHostAssemblyStore 介面</span><span class="sxs-lookup"><span data-stu-id="d167f-143">IHostAssemblyStore Interface</span></span>](ihostassemblystore-interface.md)
+- [<span data-ttu-id="994e4-141">ICLRAssemblyReferenceList 介面</span><span class="sxs-lookup"><span data-stu-id="994e4-141">ICLRAssemblyReferenceList Interface</span></span>](iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="994e4-142">IHostAssemblyManager 介面</span><span class="sxs-lookup"><span data-stu-id="994e4-142">IHostAssemblyManager Interface</span></span>](ihostassemblymanager-interface.md)
+- [<span data-ttu-id="994e4-143">IHostAssemblyStore 介面</span><span class="sxs-lookup"><span data-stu-id="994e4-143">IHostAssemblyStore Interface</span></span>](ihostassemblystore-interface.md)

@@ -1,5 +1,6 @@
 ---
 title: NTLM 與 Kerberos 驗證
+description: 瞭解預設 NTLM 驗證和 Kerberos 驗證如何適用于 .NET Framework 應用程式，並瞭解非預設 NTLM 驗證。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 372101763bdd84b454e6e2db3ec6cf0ebdf3f991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d91ebca084d84acd4eb8facb82ff08679ec35cd0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180693"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502232"
 ---
-# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="1c89d-102">NTLM 與 Kerberos 驗證</span><span class="sxs-lookup"><span data-stu-id="1c89d-102">NTLM and Kerberos Authentication</span></span>
-<span data-ttu-id="1c89d-103">預設 NTLM 驗證和 Kerberos 驗證使用與呼叫端應用程式建立關聯的 Microsoft Windows NT 使用者認證，以嘗試向伺服器進行驗證。</span><span class="sxs-lookup"><span data-stu-id="1c89d-103">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="1c89d-104">使用非預設 NTLM 驗證時，應用程式會將驗證類型設為 NTLM，並使用 <xref:System.Net.NetworkCredential> 物件將使用者名稱、密碼和網域傳遞給主機，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="1c89d-104">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
+# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="2834c-103">NTLM 與 Kerberos 驗證</span><span class="sxs-lookup"><span data-stu-id="2834c-103">NTLM and Kerberos Authentication</span></span>
+<span data-ttu-id="2834c-104">預設 NTLM 驗證和 Kerberos 驗證使用與呼叫端應用程式建立關聯的 Microsoft Windows NT 使用者認證，以嘗試向伺服器進行驗證。</span><span class="sxs-lookup"><span data-stu-id="2834c-104">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="2834c-105">使用非預設 NTLM 驗證時，應用程式會將驗證類型設為 NTLM，並使用 <xref:System.Net.NetworkCredential> 物件將使用者名稱、密碼和網域傳遞給主機，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="2834c-105">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -43,7 +44,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- <span data-ttu-id="1c89d-105">需要使用應用程式使用者認證來連線至網際網路服務的應用程式，可以利用使用者預設認證這麼做，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="1c89d-105">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
+ <span data-ttu-id="2834c-106">需要使用應用程式使用者認證來連線至網際網路服務的應用程式，可以利用使用者預設認證這麼做，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="2834c-106">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -57,12 +58,12 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- <span data-ttu-id="1c89d-106">交涉驗證模組可判斷遠端伺服器使用 NTLM 還是 Kerberos 驗證，並傳送適當的回應。</span><span class="sxs-lookup"><span data-stu-id="1c89d-106">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
+ <span data-ttu-id="2834c-107">交涉驗證模組可判斷遠端伺服器使用 NTLM 還是 Kerberos 驗證，並傳送適當的回應。</span><span class="sxs-lookup"><span data-stu-id="2834c-107">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="1c89d-107">NTLM 驗證未透過 Proxy 伺服器進行運作。</span><span class="sxs-lookup"><span data-stu-id="1c89d-107">NTLM authentication does not work through a proxy server.</span></span>  
+> <span data-ttu-id="2834c-108">NTLM 驗證未透過 Proxy 伺服器進行運作。</span><span class="sxs-lookup"><span data-stu-id="2834c-108">NTLM authentication does not work through a proxy server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c89d-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1c89d-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2834c-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2834c-109">See also</span></span>
 
-- [<span data-ttu-id="1c89d-109">基本和摘要身份驗證</span><span class="sxs-lookup"><span data-stu-id="1c89d-109">Basic and Digest Authentication</span></span>](basic-and-digest-authentication.md)
-- [<span data-ttu-id="1c89d-110">網際網路驗證</span><span class="sxs-lookup"><span data-stu-id="1c89d-110">Internet Authentication</span></span>](internet-authentication.md)
+- [<span data-ttu-id="2834c-110">基本和摘要式驗證</span><span class="sxs-lookup"><span data-stu-id="2834c-110">Basic and Digest Authentication</span></span>](basic-and-digest-authentication.md)
+- [<span data-ttu-id="2834c-111">網際網路驗證</span><span class="sxs-lookup"><span data-stu-id="2834c-111">Internet Authentication</span></span>](internet-authentication.md)

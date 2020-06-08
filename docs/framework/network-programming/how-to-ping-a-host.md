@@ -1,20 +1,21 @@
 ---
 title: 如何：Ping 主機
+description: 使用此範例程式碼，瞭解如何在 .NET Framework 中 ping 遠端主機。 這個範例需要參考 System.Net 命名空間。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: 09ae830bbef078b94bd28e654d93c10cde6108fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac62f58eea41419de2d5651269154d9abb757aba
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180793"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502492"
 ---
-# <a name="how-to-ping-a-host"></a><span data-ttu-id="ac4e4-102">如何：Ping 主機</span><span class="sxs-lookup"><span data-stu-id="ac4e4-102">How to: Ping a Host</span></span>
-<span data-ttu-id="ac4e4-103">這個範例示範如何 Ping 遠端主機。</span><span class="sxs-lookup"><span data-stu-id="ac4e4-103">This sample shows how to ping a remote host.</span></span>  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="2a509-104">如何：Ping 主機</span><span class="sxs-lookup"><span data-stu-id="2a509-104">How to: Ping a Host</span></span>
+<span data-ttu-id="2a509-105">這個範例示範如何 Ping 遠端主機。</span><span class="sxs-lookup"><span data-stu-id="2a509-105">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ac4e4-104">範例</span><span class="sxs-lookup"><span data-stu-id="ac4e4-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2a509-106">範例</span><span class="sxs-lookup"><span data-stu-id="2a509-106">Example</span></span>  
   
 ```csharp
 using System;  
@@ -120,7 +121,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ac4e4-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="ac4e4-105">Compiling the Code</span></span>  
- <span data-ttu-id="ac4e4-106">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="ac4e4-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2a509-107">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="2a509-107">Compiling the Code</span></span>  
+ <span data-ttu-id="2a509-108">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="2a509-108">This example requires:</span></span>  
   
-- <span data-ttu-id="ac4e4-107">對 **System.Net** 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="ac4e4-107">References to the **System.Net** namespace.</span></span>
+- <span data-ttu-id="2a509-109">對 **System.Net** 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="2a509-109">References to the **System.Net** namespace.</span></span>
