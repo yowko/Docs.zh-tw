@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-ms.openlocfilehash: 1e08d246136b33ffaaea91367d428e0bf2db99c1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 41083b2fcd61a9a726e835c3d5710308aa634600
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76864124"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498605"
 ---
-# <a name="icorprofilerinfogetassemblyinfo-method"></a><span data-ttu-id="fab52-102">ICorProfilerInfo::GetAssemblyInfo 方法</span><span class="sxs-lookup"><span data-stu-id="fab52-102">ICorProfilerInfo::GetAssemblyInfo Method</span></span>
-<span data-ttu-id="fab52-103">接受組件識別碼，並傳回組件的名稱及其資訊清單模組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="fab52-103">Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.</span></span>  
+# <a name="icorprofilerinfogetassemblyinfo-method"></a><span data-ttu-id="27958-102">ICorProfilerInfo::GetAssemblyInfo 方法</span><span class="sxs-lookup"><span data-stu-id="27958-102">ICorProfilerInfo::GetAssemblyInfo Method</span></span>
+<span data-ttu-id="27958-103">接受組件識別碼，並傳回組件的名稱及其資訊清單模組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="27958-103">Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fab52-104">語法</span><span class="sxs-lookup"><span data-stu-id="fab52-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="27958-104">語法</span><span class="sxs-lookup"><span data-stu-id="27958-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyInfo(  
@@ -38,41 +38,41 @@ HRESULT GetAssemblyInfo(
     [out] ModuleID    *pModuleId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fab52-105">參數</span><span class="sxs-lookup"><span data-stu-id="fab52-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="27958-105">參數</span><span class="sxs-lookup"><span data-stu-id="27958-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="fab52-106">[in] 組件的識別項。</span><span class="sxs-lookup"><span data-stu-id="fab52-106">[in] The identifier of the assembly.</span></span>  
+ <span data-ttu-id="27958-106">[in] 組件的識別項。</span><span class="sxs-lookup"><span data-stu-id="27958-106">[in] The identifier of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="fab52-107">[in] `szName` 的長度 (以字元為單位)。</span><span class="sxs-lookup"><span data-stu-id="fab52-107">[in] The length, in characters, of `szName`.</span></span>  
+ <span data-ttu-id="27958-107">[in] `szName` 的長度 (以字元為單位)。</span><span class="sxs-lookup"><span data-stu-id="27958-107">[in] The length, in characters, of `szName`.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="fab52-108">[out] 組件名稱總字元長度的指標。</span><span class="sxs-lookup"><span data-stu-id="fab52-108">[out] A pointer to the total character length of the assembly's name.</span></span>  
+ <span data-ttu-id="27958-108">[out] 組件名稱總字元長度的指標。</span><span class="sxs-lookup"><span data-stu-id="27958-108">[out] A pointer to the total character length of the assembly's name.</span></span>  
   
  `szName`  
- <span data-ttu-id="fab52-109">[out] 呼叫端提供的寬字元緩衝區。</span><span class="sxs-lookup"><span data-stu-id="fab52-109">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="fab52-110">函式傳回時，會包含組件的名稱。</span><span class="sxs-lookup"><span data-stu-id="fab52-110">When the function returns, it will contain the assembly's name.</span></span>  
+ <span data-ttu-id="27958-109">[out] 呼叫端提供的寬字元緩衝區。</span><span class="sxs-lookup"><span data-stu-id="27958-109">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="27958-110">函式傳回時，會包含組件的名稱。</span><span class="sxs-lookup"><span data-stu-id="27958-110">When the function returns, it will contain the assembly's name.</span></span>  
   
  `pAppDomainId`  
- <span data-ttu-id="fab52-111">[out] 包含組件之應用程式定義域的識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="fab52-111">[out] A pointer to the ID of the application domain that contains the assembly.</span></span>  
+ <span data-ttu-id="27958-111">[out] 包含組件之應用程式定義域的識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="27958-111">[out] A pointer to the ID of the application domain that contains the assembly.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="fab52-112">[out] 組件資訊清單模組的識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="fab52-112">[out] A pointer to the ID of the assembly's manifest module.</span></span>  
+ <span data-ttu-id="27958-112">[out] 組件資訊清單模組的識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="27958-112">[out] A pointer to the ID of the assembly's manifest module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fab52-113">備註</span><span class="sxs-lookup"><span data-stu-id="fab52-113">Remarks</span></span>  
- <span data-ttu-id="fab52-114">在此方法傳回之後，您必須確認 `szName` 緩衝區的大小足以包含組件的完整檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="fab52-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly.</span></span> <span data-ttu-id="fab52-115">若要這樣做，請比對 `pcchName` 指向的值和 `cchName` 參數。</span><span class="sxs-lookup"><span data-stu-id="fab52-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="fab52-116">如果 `pcchName` 指向大於 `cchName` 的值，請配置較大的 `szName` 緩衝區，並以較大的大小來更新 `cchName`，然後再次呼叫 `GetAssemblyInfo`。</span><span class="sxs-lookup"><span data-stu-id="fab52-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="27958-113">備註</span><span class="sxs-lookup"><span data-stu-id="27958-113">Remarks</span></span>  
+ <span data-ttu-id="27958-114">在此方法傳回之後，您必須確認 `szName` 緩衝區的大小足以包含組件的完整檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="27958-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly.</span></span> <span data-ttu-id="27958-115">若要這樣做，請比對 `pcchName` 指向的值和 `cchName` 參數。</span><span class="sxs-lookup"><span data-stu-id="27958-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="27958-116">如果 `pcchName` 指向大於 `cchName` 的值，請配置較大的 `szName` 緩衝區，並以較大的大小來更新 `cchName`，然後再次呼叫 `GetAssemblyInfo`。</span><span class="sxs-lookup"><span data-stu-id="27958-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.</span></span>  
   
- <span data-ttu-id="fab52-117">或者，您也可以先使用長度為零的 `szName` 緩衝區來呼叫 `GetAssemblyInfo`，以取得正確的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="fab52-117">Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="fab52-118">接著您就可以依據 `pcchName` 中傳回的值來調整緩衝區大小，並再次呼叫 `GetAssemblyInfo`。</span><span class="sxs-lookup"><span data-stu-id="fab52-118">You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.</span></span>  
+ <span data-ttu-id="27958-117">或者，您也可以先使用長度為零的 `szName` 緩衝區來呼叫 `GetAssemblyInfo`，以取得正確的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="27958-117">Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="27958-118">接著您就可以依據 `pcchName` 中傳回的值來調整緩衝區大小，並再次呼叫 `GetAssemblyInfo`。</span><span class="sxs-lookup"><span data-stu-id="27958-118">You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fab52-119">需求</span><span class="sxs-lookup"><span data-stu-id="fab52-119">Requirements</span></span>  
- <span data-ttu-id="fab52-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fab52-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="27958-119">規格需求</span><span class="sxs-lookup"><span data-stu-id="27958-119">Requirements</span></span>  
+ <span data-ttu-id="27958-120">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="27958-120">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fab52-121">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fab52-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="27958-121">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="27958-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fab52-122">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fab52-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="27958-122">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27958-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fab52-123">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fab52-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="27958-123">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27958-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fab52-124">請參閱</span><span class="sxs-lookup"><span data-stu-id="fab52-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="27958-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="27958-124">See also</span></span>
 
-- [<span data-ttu-id="fab52-125">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="fab52-125">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
-- [<span data-ttu-id="fab52-126">分析介面</span><span class="sxs-lookup"><span data-stu-id="fab52-126">Profiling Interfaces</span></span>](profiling-interfaces.md)
-- [<span data-ttu-id="fab52-127">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="fab52-127">Profiling</span></span>](index.md)
+- [<span data-ttu-id="27958-125">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="27958-125">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="27958-126">分析介面</span><span class="sxs-lookup"><span data-stu-id="27958-126">Profiling Interfaces</span></span>](profiling-interfaces.md)
+- [<span data-ttu-id="27958-127">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="27958-127">Profiling</span></span>](index.md)
