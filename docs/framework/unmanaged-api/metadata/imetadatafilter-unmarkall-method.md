@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: a04d91dc-690f-4de8-8c97-55c69a8503b4
 topic_type:
 - apiref
-ms.openlocfilehash: 5e31964271c13788e29c7ef0581afcd809c5a9fc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9c969f4f8f2327e6ddf45b8f0423ecaafc95d81b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440124"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492472"
 ---
-# <a name="imetadatafilterunmarkall-method"></a><span data-ttu-id="37e81-102">IMetaDataFilter::UnmarkAll 方法</span><span class="sxs-lookup"><span data-stu-id="37e81-102">IMetaDataFilter::UnmarkAll Method</span></span>
-<span data-ttu-id="37e81-103">從目前中繼資料範圍中的所有標記移除處理標記。</span><span class="sxs-lookup"><span data-stu-id="37e81-103">Removes the processing marks from all the tokens in the current metadata scope.</span></span>  
+# <a name="imetadatafilterunmarkall-method"></a><span data-ttu-id="2bbd9-102">IMetaDataFilter::UnmarkAll 方法</span><span class="sxs-lookup"><span data-stu-id="2bbd9-102">IMetaDataFilter::UnmarkAll Method</span></span>
+<span data-ttu-id="2bbd9-103">從目前中繼資料範圍中的所有標記移除處理標記。</span><span class="sxs-lookup"><span data-stu-id="2bbd9-103">Removes the processing marks from all the tokens in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37e81-104">語法</span><span class="sxs-lookup"><span data-stu-id="37e81-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2bbd9-104">語法</span><span class="sxs-lookup"><span data-stu-id="2bbd9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT UnmarkAll ();  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="37e81-105">參數</span><span class="sxs-lookup"><span data-stu-id="37e81-105">Parameters</span></span>  
- <span data-ttu-id="37e81-106">`UnmarkAll` 不接受任何參數。</span><span class="sxs-lookup"><span data-stu-id="37e81-106">`UnmarkAll` takes no parameters.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2bbd9-105">參數</span><span class="sxs-lookup"><span data-stu-id="2bbd9-105">Parameters</span></span>  
+ <span data-ttu-id="2bbd9-106">`UnmarkAll`不接受任何參數。</span><span class="sxs-lookup"><span data-stu-id="2bbd9-106">`UnmarkAll` takes no parameters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="37e81-107">需求</span><span class="sxs-lookup"><span data-stu-id="37e81-107">Requirements</span></span>  
- <span data-ttu-id="37e81-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="37e81-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2bbd9-107">規格需求</span><span class="sxs-lookup"><span data-stu-id="2bbd9-107">Requirements</span></span>  
+ <span data-ttu-id="2bbd9-108">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2bbd9-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37e81-109">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="37e81-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2bbd9-109">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="2bbd9-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="37e81-110">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="37e81-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2bbd9-110">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="2bbd9-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="37e81-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37e81-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2bbd9-111">**.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bbd9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37e81-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37e81-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bbd9-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2bbd9-112">See also</span></span>
 
-- [<span data-ttu-id="37e81-113">IMetaDataFilter 介面</span><span class="sxs-lookup"><span data-stu-id="37e81-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [<span data-ttu-id="2bbd9-113">IMetaDataFilter 介面</span><span class="sxs-lookup"><span data-stu-id="2bbd9-113">IMetaDataFilter Interface</span></span>](imetadatafilter-interface.md)

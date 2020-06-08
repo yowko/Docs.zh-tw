@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 036db5e7-8211-4645-9a34-03d1a89be955
 topic_type:
 - apiref
-ms.openlocfilehash: 219d3196e3b2125033a23623b7e77e31c6f1ff03
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 24fe8fd65b36e133b767cd07c8602aa1ea7b9dfc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440471"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493093"
 ---
-# <a name="imetadataemit2getdeltasavesize-method"></a><span data-ttu-id="5927e-102">IMetaDataEmit2::GetDeltaSaveSize 方法</span><span class="sxs-lookup"><span data-stu-id="5927e-102">IMetaDataEmit2::GetDeltaSaveSize Method</span></span>
-<span data-ttu-id="5927e-103">取得值，指出目前的「編輯後繼續」會話所產生之中繼資料大小的任何變更。</span><span class="sxs-lookup"><span data-stu-id="5927e-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span></span>  
+# <a name="imetadataemit2getdeltasavesize-method"></a><span data-ttu-id="9db8f-102">IMetaDataEmit2::GetDeltaSaveSize 方法</span><span class="sxs-lookup"><span data-stu-id="9db8f-102">IMetaDataEmit2::GetDeltaSaveSize Method</span></span>
+<span data-ttu-id="9db8f-103">取得值，指出目前的「編輯後繼續」會話所產生之中繼資料大小的任何變更。</span><span class="sxs-lookup"><span data-stu-id="9db8f-103">Gets a value indicating any change in metadata size that results from the current edit-and-continue session.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5927e-104">語法</span><span class="sxs-lookup"><span data-stu-id="5927e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9db8f-104">語法</span><span class="sxs-lookup"><span data-stu-id="9db8f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDeltaSaveSize (  
@@ -34,23 +34,23 @@ HRESULT GetDeltaSaveSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5927e-105">參數</span><span class="sxs-lookup"><span data-stu-id="5927e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9db8f-105">參數</span><span class="sxs-lookup"><span data-stu-id="9db8f-105">Parameters</span></span>  
  `fSave`  
- <span data-ttu-id="5927e-106">在其中一個[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)值，表示所需的精確度層級。</span><span class="sxs-lookup"><span data-stu-id="5927e-106">[in] One of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) values, indicating the level of precision desired.</span></span> <span data-ttu-id="5927e-107">針對 .NET Framework 版本2.0，會忽略這個參數。</span><span class="sxs-lookup"><span data-stu-id="5927e-107">For the .NET Framework version 2.0, this parameter is ignored.</span></span>  
+ <span data-ttu-id="9db8f-106">在其中一個[CorSaveSize](corsavesize-enumeration.md)值，表示所需的精確度層級。</span><span class="sxs-lookup"><span data-stu-id="9db8f-106">[in] One of the [CorSaveSize](corsavesize-enumeration.md) values, indicating the level of precision desired.</span></span> <span data-ttu-id="9db8f-107">針對 .NET Framework 版本2.0，會忽略這個參數。</span><span class="sxs-lookup"><span data-stu-id="9db8f-107">For the .NET Framework version 2.0, this parameter is ignored.</span></span>  
   
  `pdwSaveSize`  
- <span data-ttu-id="5927e-108">脫銷中繼資料大小的變更。</span><span class="sxs-lookup"><span data-stu-id="5927e-108">[out] The change in the size of the metadata.</span></span>  
+ <span data-ttu-id="9db8f-108">脫銷中繼資料大小的變更。</span><span class="sxs-lookup"><span data-stu-id="9db8f-108">[out] The change in the size of the metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5927e-109">需求</span><span class="sxs-lookup"><span data-stu-id="5927e-109">Requirements</span></span>  
- <span data-ttu-id="5927e-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5927e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9db8f-109">規格需求</span><span class="sxs-lookup"><span data-stu-id="9db8f-109">Requirements</span></span>  
+ <span data-ttu-id="9db8f-110">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9db8f-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5927e-111">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="5927e-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9db8f-111">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="9db8f-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5927e-112">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="5927e-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9db8f-112">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="9db8f-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5927e-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5927e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9db8f-113">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9db8f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5927e-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5927e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9db8f-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9db8f-114">See also</span></span>
 
-- [<span data-ttu-id="5927e-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="5927e-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="5927e-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="5927e-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="9db8f-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="9db8f-115">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="9db8f-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="9db8f-116">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
