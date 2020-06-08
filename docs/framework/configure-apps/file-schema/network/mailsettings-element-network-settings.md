@@ -1,5 +1,6 @@
 ---
 title: <mailSettings> 項目 (網路設定)
+description: <mailSettings>Network settings 元素會設定 .NET Framework 中的郵件傳送選項。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 4e8bf23ce39edadf80f019315c690b597b3d7361
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ce7b8564e4ee5ea73d42259612c077420d36645b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089224"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504559"
 ---
-# <a name="mailsettings-element-network-settings"></a><span data-ttu-id="240d2-102">\<mailSettings> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="240d2-102">\<mailSettings> Element (Network Settings)</span></span>
-<span data-ttu-id="240d2-103">設定郵件傳送選項。</span><span class="sxs-lookup"><span data-stu-id="240d2-103">Configures mail sending options.</span></span>  
+# <a name="mailsettings-element-network-settings"></a><span data-ttu-id="c1ee2-103">\<mailSettings> 項目 (網路設定)</span><span class="sxs-lookup"><span data-stu-id="c1ee2-103">\<mailSettings> Element (Network Settings)</span></span>
+<span data-ttu-id="c1ee2-104">設定郵件傳送選項。</span><span class="sxs-lookup"><span data-stu-id="c1ee2-104">Configures mail sending options.</span></span>  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<mailSettings>**
 
-## <a name="syntax"></a><span data-ttu-id="240d2-104">語法</span><span class="sxs-lookup"><span data-stu-id="240d2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1ee2-105">語法</span><span class="sxs-lookup"><span data-stu-id="c1ee2-105">Syntax</span></span>  
   
 ```xml  
 <mailSettings>
@@ -30,26 +31,26 @@ ms.locfileid: "74089224"
 </mailSettings>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="240d2-105">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="240d2-105">Attributes and Elements</span></span>  
- <span data-ttu-id="240d2-106">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="240d2-106">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c1ee2-106">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c1ee2-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="c1ee2-107">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c1ee2-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="240d2-107">屬性</span><span class="sxs-lookup"><span data-stu-id="240d2-107">Attributes</span></span>  
- <span data-ttu-id="240d2-108">無。</span><span class="sxs-lookup"><span data-stu-id="240d2-108">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c1ee2-108">屬性</span><span class="sxs-lookup"><span data-stu-id="c1ee2-108">Attributes</span></span>  
+ <span data-ttu-id="c1ee2-109">無。</span><span class="sxs-lookup"><span data-stu-id="c1ee2-109">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="240d2-109">子元素</span><span class="sxs-lookup"><span data-stu-id="240d2-109">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c1ee2-110">子元素</span><span class="sxs-lookup"><span data-stu-id="c1ee2-110">Child Elements</span></span>  
   
-|<span data-ttu-id="240d2-110">屬性</span><span class="sxs-lookup"><span data-stu-id="240d2-110">Attribute</span></span>|<span data-ttu-id="240d2-111">描述</span><span class="sxs-lookup"><span data-stu-id="240d2-111">Description</span></span>|  
+|<span data-ttu-id="c1ee2-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c1ee2-111">Attribute</span></span>|<span data-ttu-id="c1ee2-112">說明</span><span class="sxs-lookup"><span data-stu-id="c1ee2-112">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="240d2-112">\<smtp>元素（網路設定）</span><span class="sxs-lookup"><span data-stu-id="240d2-112">\<smtp> Element (Network Settings)</span></span>](smtp-element-network-settings.md)|<span data-ttu-id="240d2-113">設定簡單郵件傳輸通訊協定選項。</span><span class="sxs-lookup"><span data-stu-id="240d2-113">Configures Simple Mail Transport Protocol options.</span></span>|  
+|[<span data-ttu-id="c1ee2-113">\<smtp>元素（網路設定）</span><span class="sxs-lookup"><span data-stu-id="c1ee2-113">\<smtp> Element (Network Settings)</span></span>](smtp-element-network-settings.md)|<span data-ttu-id="c1ee2-114">設定簡單郵件傳輸通訊協定選項。</span><span class="sxs-lookup"><span data-stu-id="c1ee2-114">Configures Simple Mail Transport Protocol options.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="240d2-114">父項目</span><span class="sxs-lookup"><span data-stu-id="240d2-114">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c1ee2-115">父項目</span><span class="sxs-lookup"><span data-stu-id="c1ee2-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="240d2-115">**元素**</span><span class="sxs-lookup"><span data-stu-id="240d2-115">**Element**</span></span>|<span data-ttu-id="240d2-116">**說明**</span><span class="sxs-lookup"><span data-stu-id="240d2-116">**Description**</span></span>|  
+|<span data-ttu-id="c1ee2-116">**元素**</span><span class="sxs-lookup"><span data-stu-id="c1ee2-116">**Element**</span></span>|<span data-ttu-id="c1ee2-117">**描述**</span><span class="sxs-lookup"><span data-stu-id="c1ee2-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="240d2-117">\<system.Net>元素（網路設定）</span><span class="sxs-lookup"><span data-stu-id="240d2-117">\<system.Net> Element (Network Settings)</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="240d2-118">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="240d2-118">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="c1ee2-118">\<system.Net>元素（網路設定）</span><span class="sxs-lookup"><span data-stu-id="c1ee2-118">\<system.Net> Element (Network Settings)</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="c1ee2-119">包含會指定 .NET Framework 如何連接至網路的設定。</span><span class="sxs-lookup"><span data-stu-id="c1ee2-119">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="240d2-119">範例</span><span class="sxs-lookup"><span data-stu-id="240d2-119">Example</span></span>  
- <span data-ttu-id="240d2-120">下列範例會指定適當的 SMTP 參數，以使用預設網路認證來傳送電子郵件。</span><span class="sxs-lookup"><span data-stu-id="240d2-120">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="c1ee2-120">範例</span><span class="sxs-lookup"><span data-stu-id="c1ee2-120">Example</span></span>  
+ <span data-ttu-id="c1ee2-121">下列範例會指定適當的 SMTP 參數，以使用預設網路認證來傳送電子郵件。</span><span class="sxs-lookup"><span data-stu-id="c1ee2-121">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -67,7 +68,7 @@ ms.locfileid: "74089224"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="240d2-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="240d2-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1ee2-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c1ee2-122">See also</span></span>
 
 - <xref:System.Net.Mail.SmtpClient>
-- [<span data-ttu-id="240d2-122">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="240d2-122">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="c1ee2-123">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="c1ee2-123">Network Settings Schema</span></span>](index.md)
