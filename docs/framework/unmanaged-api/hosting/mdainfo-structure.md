@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 33b3044c7b5237e586fdb993a16b6144c271782c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 517e0ae7fb5d5151f94f82d9146ebbf40bad2ef9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007711"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503857"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 結構
 提供事件的相關詳細資料 `Event_MDAFired` ，這會觸發建立 managed 偵錯工具（MDA）。  
@@ -35,7 +35,7 @@ typedef struct _MDAInfo {
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|成員|說明|  
 |------------|-----------------|  
 |`lpMDACaption`|目前 MDA 的標題。 標題描述觸發事件的失敗類型 `Event_MDAFired` 。|  
 |`lpMDAMessage`|目前 MDA 所提供的輸出訊息。|  
@@ -45,13 +45,13 @@ typedef struct _MDAInfo {
   
  當觸發建立 MDA 的事件引發時，執行時間會採取下列步驟：  
   
-- 如果主機未藉由呼叫[ICLROnEventManager：： RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)來註冊[IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)實例以收到事件的通知 `Event_MDAFired` ，執行時間會繼續執行其預設的非裝載行為。  
+- 如果主機未藉由呼叫[ICLROnEventManager：： RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)來註冊[IActionOnCLREvent](iactiononclrevent-interface.md)實例以收到事件的通知 `Event_MDAFired` ，執行時間會繼續執行其預設的非裝載行為。  
   
 - 如果主機已註冊此事件的處理常式，執行時間會檢查偵錯工具是否已附加至進程。 如果是，執行時間會中斷偵錯工具。 當偵錯工具繼續時，它會呼叫主機。 如果未附加任何偵錯工具，執行時間會呼叫 `IActionOnCLREvent::OnEvent` ，並將實例的指標當做 `MDAInfo` 參數傳遞 `data` 。  
   
  主機可以選擇啟動 Mda，並在啟用 MDA 時收到通知。 這可讓主機有機會覆寫預設行為，並中止引發事件的 managed 執行緒，以防止它損毀進程狀態。 如需使用 Mda 的詳細資訊，請參閱[診斷 Managed 偵錯工具的錯誤](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)。  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Mscoree.dll .idl  

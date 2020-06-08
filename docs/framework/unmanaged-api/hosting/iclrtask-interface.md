@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: 419baaf64397830ef86cfd9e5c3437e3f5b57795
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b1327e13006ca4b3f9074c1348b1817c9a1b3728
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763003"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503948"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask 介面
 提供的方法可讓主機提出 common language runtime （CLR）的要求，或提供相關聯工作的通知給 CLR。  
@@ -41,7 +41,7 @@ ms.locfileid: "83763003"
 |[YieldTask 方法](iclrtask-yieldtask-method.md)|要求 CLR 將處理器時間提供給其他工作使用。 CLR 不保證工作會進入可能會產生處理時間的狀態。|  
   
 ## <a name="remarks"></a>備註  
- `ICLRTask`是 CLR 工作的標記法。 在程式碼執行期間的任何時間點，可以將工作描述為正在執行或等待執行。 主機 `ICLRTask::SwitchIn` 會呼叫方法，以通知 CLR 目前實例所代表的工作 `ICLRTask` 現在處於可運作狀態。 呼叫之後， `ICLRTask::SwitchIn` 主機可以在任何作業系統執行緒上排程工作，但執行時間需要執行緒親和性（如呼叫[IHostTaskManager：： BeginThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)和[IHostTaskManager：： EndThreadAffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)方法所指定）的情況除外。 一些時間之後，作業系統可能會決定從執行緒中移除工作，並將它置於非執行中的狀態。 例如，當工作在同步處理原始物件上封鎖，或等候 i/o 作業完成時，就可能發生這種情況。 主機會呼叫[SwitchOut](iclrtask-switchout-method.md)來通知 CLR，目前實例所代表的工作 `ICLRTask` 已不再處於可運作狀態。  
+ `ICLRTask`是 CLR 工作的標記法。 在程式碼執行期間的任何時間點，可以將工作描述為正在執行或等待執行。 主機 `ICLRTask::SwitchIn` 會呼叫方法，以通知 CLR 目前實例所代表的工作 `ICLRTask` 現在處於可運作狀態。 呼叫之後， `ICLRTask::SwitchIn` 主機可以在任何作業系統執行緒上排程工作，但執行時間需要執行緒親和性（如呼叫[IHostTaskManager：： BeginThreadAffinity](ihosttaskmanager-beginthreadaffinity-method.md)和[IHostTaskManager：： EndThreadAffinity](ihosttaskmanager-endthreadaffinity-method.md)方法所指定）的情況除外。 一些時間之後，作業系統可能會決定從執行緒中移除工作，並將它置於非執行中的狀態。 例如，當工作在同步處理原始物件上封鎖，或等候 i/o 作業完成時，就可能發生這種情況。 主機會呼叫[SwitchOut](iclrtask-switchout-method.md)來通知 CLR，目前實例所代表的工作 `ICLRTask` 已不再處於可運作狀態。  
   
  工作通常會在程式碼執行結束時終止。 此時，主機會呼叫來終結 `ICLRTask::ExitTask` 相關聯的 `ICLRTask` 。 不過，也可以使用對的呼叫來回收 `ICLRTask::Reset` 工作，讓 `ICLRTask` 實例再次使用。 這種方法可防止重複建立和終結實例的額外負荷。  
   

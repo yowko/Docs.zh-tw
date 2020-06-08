@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60573ad7-8821-4721-a068-3f7a6d25926a
 topic_type:
 - apiref
-ms.openlocfilehash: 4fed7dbe4ec8343a3854d1f277e3228b14c0bf21
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39343ffc88fc9b421b916e33e3e75e4e34fc233d
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450020"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503786"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties 方法
 列舉 PropertyDef 語彙基元，其代表指定的 TypeDef 語彙基元所參考的類型屬性。  
@@ -51,25 +51,25 @@ HRESULT EnumProperties (
  [in] `rProperties` 陣列的大小上限。  
   
  `pcProperties`  
- 脫銷`rProperties`中傳回的 PropertyDef token 數目。  
+ 脫銷在中傳回的 PropertyDef token 數目 `rProperties` 。  
   
 ## <a name="return-value"></a>傳回值  
   
-|HRESULT|描述|  
+|HRESULT|說明|  
 |-------------|-----------------|  
-|`S_OK`|已成功傳回 `EnumProperties`。|  
-|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcProperties` 為零。|  
+|`S_OK`|`EnumProperties`已成功傳回。|  
+|`S_FALSE`|沒有要列舉的權杖。 在此情況下， `pcProperties` 是零。|  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** Cor。h  
   
  連結**庫：** 包含為 Mscoree.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 介面](imetadataimport-interface.md)
+- [IMetaDataImport2 介面](imetadataimport2-interface.md)

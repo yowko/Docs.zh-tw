@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-ms.openlocfilehash: 858d65783515a89a434cf719ef9d5a999643094c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 527e48d02d5267d6ae41214686c2e8c997d85dca
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865307"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499541"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters 方法
 可讓程式碼分析工具針對新重新編譯的方法主體，設定替代的程式碼產生旗標。  
@@ -36,24 +36,24 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
  在包含 CLR 需要 JIT 重新編譯參數之方法的模組。  
   
  `methodId`  
- 在CLR 需要 JIT 重新編譯參數之方法的 `MethodDef`。  
+ 在`MethodDef`CLR 需要 JIT 重新編譯參數之方法的。  
   
  `pFunctionControl`  
  在[ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md)介面的指標，分析工具可用來為重新編譯的方法提供 JIT 重新編譯資訊。  
   
 ## <a name="remarks"></a>備註  
- CLR 會發出 `GetReJITParameters` 回呼，讓分析工具可以指定參數來重新編譯指定的方法。 每個函式只會發出一次 `GetReJITParameters` 回呼;profiler 所提供的參數會套用至該函式的所有實例。  
+ CLR 會發出回呼，讓分析工具 `GetReJITParameters` 可以指定參數來重新編譯指定的方法。 `GetReJITParameters`每個函式只會發出一次回呼，分析工具提供的參數會套用至該函式的所有實例。  
   
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>規格需求  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 介面](icorprofilercallback4-interface.md)
