@@ -2,24 +2,24 @@
 title: 使用訊息安全性來保護訊息的安全
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746441"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589977"
 ---
 # <a name="securing-messages-using-message-security"></a>使用訊息安全性來保護訊息的安全
-本節將討論使用 <xref:System.ServiceModel.NetMsmqBinding>時的 WCF 訊息安全性。  
+本節將討論使用時的 WCF 訊息安全性 <xref:System.ServiceModel.NetMsmqBinding> 。  
   
 > [!NOTE]
-> 閱讀本主題之前，建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
+> 閱讀本主題之前，建議您先閱讀[安全性概念](security-concepts.md)。  
   
  下圖提供使用 WCF 之佇列通訊的概念模型。 此圖例和術語是要用來說明  
   
  傳輸安全性概念。  
   
- ![排入佇列的應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式-佇列-圖表")  
+ ![佇列應用程式圖表](media/distributed-queue-figure.jpg "分散式-佇列-圖表")  
   
  使用 WCF 傳送佇列訊息時，WCF 訊息會附加為訊息佇列（MSMQ）訊息的主體。 傳輸安全性會保護整個 MSMQ 訊息的安全，而訊息 (或 SOAP) 安全性只能保護 MSMQ 訊息本文的安全。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76746441"
   
  本章節會說明不同的認證類型，以及如何搭配佇列使用這些認證。  
   
-### <a name="certificate"></a>Certificate  
+### <a name="certificate"></a>憑證  
  憑證認證類型會使用 X.509 憑證來識別服務和用戶端。  
   
  在一般案例中，用戶端和服務都會由受信任的憑證授權單位發行有效的憑證。 接著在連線建立之後，用戶端會使用服務的憑證來驗證該服務的有效性，以決定是否能夠信任該服務。 同樣地，服務會使用該用戶端的憑證來驗證用戶端託管。  
@@ -63,9 +63,9 @@ ms.locfileid: "76746441"
 ## <a name="using-transport-and-message-security"></a>使用傳輸和訊息安全性  
  當同時使用傳輸安全性和訊息安全性時，在傳輸層級和 SOAP 訊息層級中用來保護訊息安全的必須是相同的憑證。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [使用傳輸安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [使用傳輸安全性來保護訊息的安全](securing-messages-using-transport-security.md)
+- [訊息佇列上的訊息安全性](../samples/message-security-over-message-queuing.md)
+- [安全性概念](security-concepts.md)
+- [Securing Services and Clients](securing-services-and-clients.md)

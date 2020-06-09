@@ -2,12 +2,12 @@
 title: 追蹤的安全性考量及實用秘訣
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 5ced4f3a3a5e83564703db88b28ee2b3c6eeb1a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a09e387a4f964441f11d07a84bd492345d5b691
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185714"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578873"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>追蹤的安全性考量及實用秘訣
 此主題描述如何保護敏感資訊以防公開，以及使用 WebHost 時的實用秘訣。  
@@ -80,16 +80,16 @@ ms.locfileid: "79185714"
 </system.diagnostics>  
 ```  
   
- 如果`<machineSettings enableLoggingKnownPii="Boolean"/>`元素存在於 Machine.config 檔之外，系統將引發<xref:System.Configuration.ConfigurationErrorsException>一個 。  
+ 如果專案存在於 machine.config 檔案 `<machineSettings enableLoggingKnownPii="Boolean"/>` 外，系統會擲回 <xref:System.Configuration.ConfigurationErrorsException> 。  
   
  只有在應用程式啟動或重新啟動時，才能讓變更生效。 當這兩個屬性都設定為 `true` 時，啟動時會記錄事件。 如果 `logKnownPii` 設定為 `true`，但 `enableLoggingKnownPii` 設定為 `false`，也會記錄事件。  
   
- 有關 PII 日誌記錄的詳細資訊，請參閱[PII 安全鎖定](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md)示例。  
+ 如需 PII 記錄的詳細資訊，請參閱[Pii 安全性鎖定](../../samples/pii-security-lockdown.md)範例。  
   
- 電腦的系統管理員和應用程式部署人員在使用這兩個參數時，應該特別小心謹慎。 如果啟用 PII 記錄，則會記錄安全性金鑰和 PII。 如果停用，敏感資料和應用程式特定資料仍然會記錄在訊息標頭和本文中。 有關隱私和保護 PII 免受暴露的更徹底的討論，請參閱[使用者隱私](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))。  
+ 電腦的系統管理員和應用程式部署人員在使用這兩個參數時，應該特別小心謹慎。 如果啟用 PII 記錄，則會記錄安全性金鑰和 PII。 如果停用，敏感資料和應用程式特定資料仍然會記錄在訊息標頭和本文中。 如需隱私權和保護 PII 免于公開的詳細討論，請參閱[使用者隱私權](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))。  
   
  此外，每次連線以進行連線導向的傳輸，或是每次以其他方式傳送訊息時，都會記錄一次訊息寄件者的 IP 位址。 這不需要寄件者的同意就能進行。 但是，這種記錄行為只會發生在 [資訊] 或 [詳細資料] 追蹤層級中 (不屬於實際執行的預設或建議追蹤層級)，除了即時偵錯以外。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [追蹤](index.md)
