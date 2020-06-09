@@ -2,12 +2,12 @@
 title: ASP.NET 快取整合
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 23c10e56dba7daec2d1027de92e8252c8fe69055
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c541f3caad8a500b9fdb33d00b58706bac876e37
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716170"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594747"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 快取整合
 
@@ -26,15 +26,15 @@ ms.locfileid: "74716170"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`
 
-## <a name="discussion"></a>討論
+## <a name="discussion"></a>討論區
 
-此範例會使用 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>，利用 Windows Communication Foundation （WCF）服務的 ASP.NET 輸出快取。 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 會套用至服務作業，並提供應套用至所指作業之回應的組態檔中快取設定檔的名稱。
+此範例會使用 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 來利用 ASP.NET 輸出快取搭配 Windows Communication Foundation （WCF）服務。 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> 會套用至服務作業，並提供應套用至所指作業之回應的組態檔中快取設定檔的名稱。
 
-在範例服務專案的 Service.cs 檔案中，`GetCustomer` 和 `GetCustomers` 作業都會以 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>標示，這會提供快取設定檔名稱 "CacheFor60Seconds"。 在服務專案的 web.config 檔案中，快取設定檔 "CacheFor60Seconds" 是在 <`system.web`> 的 <`caching`> 元素底下提供。 針對此快取設定檔，`duration` 屬性的值為 "60"，因此與此設定檔相關聯的回應會在 ASP.NET 輸出快取中快取60秒。 此外，在此快取設定檔中，`varmByParam` 屬性會設定為 "format"，因此 `format` 查詢字串參數具有不同值的要求會分別快取其回應。 最後，快取設定檔的 `varyByHeader` 屬性會設定為「接受」，因此具有不同 Accept 標頭值的要求會分別快取其回應。
+在範例服務專案的 Service.cs 檔案中， `GetCustomer` 和 `GetCustomers` 作業都以標示 <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> ，這會提供快取設定檔名稱 "CacheFor60Seconds"。 在服務專案的 web.config 檔案中，快取設定檔 "CacheFor60Seconds" 是在 `caching` < > 的 < > 元素底下提供 `system.web` 。 此快取設定檔的 `duration` 屬性值為 "60"，因此與此設定檔相關聯的回應會在 ASP.NET 輸出快取中快取60秒。 此外，此快取設定檔的 `varmByParam` 屬性設定為 "format"，因此查詢字串參數具有不同值的要求 `format` 會分別快取其回應。 最後，快取設定檔的 `varyByHeader` 屬性會設定為「接受」，因此具有不同 Accept 標頭值的要求會分別快取其回應。
 
-用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 WCF 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別（例如 WCF 通道處理站和 <xref:System.Net.WebClient>）來存取服務。 SDK 中的其他範例（例如[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)範例）說明如何使用這些類別與 WCF 服務進行通訊。
+用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 WCF 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別（例如 WCF 通道處理站和）來存取服務 <xref:System.Net.WebClient> 。 SDK 中的其他範例（例如[基本 HTTP 服務](basic-http-service.md)範例）說明如何使用這些類別與 WCF 服務進行通訊。
 
-## <a name="to-run-the-sample"></a>若要執行範例
+## <a name="to-run-the-sample"></a>執行範例
 
 此範例包含三個專案：
 
@@ -46,11 +46,11 @@ ms.locfileid: "74716170"
 
 當用戶端主控台應用程式執行時，用戶端會對服務發出要求，然後將相關的資訊從回應寫入至主控台視窗。
 
-#### <a name="to-run-the-sample"></a>若要執行範例
+#### <a name="to-run-the-sample"></a>執行範例
 
 1. 開啟「ASP.NET 快取整合範例」的方案。
 
-2. 按下 CTRL+SHIFT+B 以建置方案。
+2. 按 CTRL+SHIFT+B 建置解決方案。
 
 3. 如果 [**方案總管**] 視窗尚未開啟，請按 CTRL + W + S。
 

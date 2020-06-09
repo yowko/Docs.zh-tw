@@ -2,12 +2,12 @@
 title: UriTemplate 與 UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 2742217cb082f5c0354510a7e66818bafd6f1393
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 106ba21b58dabab96afbc8fb6db5cb305386f2fe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595072"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
 Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 Windows Communication Foundation （WCF）新增兩個新類別，讓開發人員可以控制其 Uri。 <xref:System.UriTemplate>和會 <xref:System.UriTemplateTable> 形成 WCF 中以 URI 為基礎的分派引擎的基礎。 這些類別也可以單獨使用，讓開發人員能夠利用範本和 URI 對應機制，而不需要執行 WCF 服務。  
@@ -324,10 +324,10 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 > [!NOTE]
 > 當字元 á 與 Á 出現在 URI 路徑或 <xref:System.UriTemplate> 路徑片段常值中時，兩者將被視為不同的字元 (但是字元 a 與 A 則被視為相同)。 當字元 á 與 Á 出現在 <xref:System.UriTemplate> {variableName} 或查詢字串中時，兩者將被視為相同的字元 (而且字元 a 與 A 亦將被視為相同)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
-- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
-- [UriTemplate 資料表](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
-- [UriTemplate 資料表發送器](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+- [WCF Web HTTP 程式設計模型概觀](wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP 程式設計物件模型](wcf-web-http-programming-object-model.md)
+- [UriTemplate](../samples/uritemplate-sample.md)
+- [UriTemplate 資料表](../samples/uritemplate-table-sample.md)
+- [UriTemplate 資料表發送器](../samples/uritemplate-table-dispatcher-sample.md)

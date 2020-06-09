@@ -1,21 +1,21 @@
 ---
-title: 作法：與 WCF 端點交換佇列訊息
+title: HOW TO：與 WCF 端點交換佇列訊息
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 09b21c9483b4f2716409b560dbbb478fe5a6badd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7da7ba1b680bae2b29eeff8fe669e097ea8eda32
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972228"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595371"
 ---
-# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>作法：與 WCF 端點交換佇列訊息
+# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>HOW TO：與 WCF 端點交換佇列訊息
 佇列可確保用戶端與 Windows Communication Foundation （WCF）服務之間的可靠訊息可能發生，即使在通訊時無法使用服務也一樣。 下列程式示範如何在執行 WCF 服務時，使用標準佇列系結來確保用戶端與服務之間的持久通訊。  
   
- 本節說明如何在 wcf 客戶<xref:System.ServiceModel.NetMsmqBinding>端和 wcf 服務之間使用進行佇列通訊。  
+ 本節說明如何 <xref:System.ServiceModel.NetMsmqBinding> 在 wcf 用戶端和 wcf 服務之間使用進行佇列通訊。  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>若要在 WCF 服務中使用佇列  
   
@@ -24,7 +24,7 @@ ms.locfileid: "70972228"
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
-2. 當服務合約通過使用者定義型別，您必須為這些型別定義資料合約。 下列程式碼示範兩份資料合約：`PurchaseOrder` 和 `PurchaseOrderLineItem`。 這兩個型別定義了傳送至服務的資料 (請注意，定義這類資料合約的類別也定義許多方法。 這些方法不被視為資料合約的部分。 只有以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性宣告的成員才屬於資料合約的部分)。  
+2. 當服務合約通過使用者定義型別，您必須為這些型別定義資料合約。 下列程式碼示範兩份資料合約：`PurchaseOrder` 和 `PurchaseOrderLineItem`。 這兩個型別定義了傳送至服務的資料  (請注意，定義這類資料合約的類別也定義許多方法。 這些方法不被視為資料合約的部分。 只有以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性宣告的成員才屬於資料合約的部分)。  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  
@@ -58,7 +58,7 @@ ms.locfileid: "70972228"
   
 2. 在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，藉以指定位址並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結，如下列範例所示。  
 
-3. 建立交易範圍以寫入至事務佇列、呼叫`SubmitPurchaseOrder`作業並關閉 WCF 用戶端，如下列範例所示。  
+3. 建立交易範圍以寫入至事務佇列、呼叫作業 `SubmitPurchaseOrder` 並關閉 WCF 用戶端，如下列範例所示。  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
@@ -75,13 +75,13 @@ ms.locfileid: "70972228"
  [!code-csharp[S_Msmq_Transacted#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#12)]
  [!code-vb[S_Msmq_Transacted#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#12)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.NetMsmqBinding>
-- [異動 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
-- [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
-- [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
-- [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [交易 MSMQ 繫結](../samples/transacted-msmq-binding.md)
+- [WCF 中的佇列](queuing-in-wcf.md)
+- [如何：與 WCF 端點和訊息佇列應用程式交換訊息](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Windows Communication Foundation 至訊息佇列](../samples/wcf-to-message-queuing.md)
+- [安裝訊息佇列 (MSMQ)](../samples/installing-message-queuing-msmq.md)
+- [訊息佇列至 Windows Communication Foundation](../samples/message-queuing-to-wcf.md)
+- [訊息佇列上的訊息安全性](../samples/message-security-over-message-queuing.md)

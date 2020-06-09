@@ -2,12 +2,12 @@
 title: HOW TO：指定通道安全性認證
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 45a13460ce94cbacae0465fede4b455a2833ce81
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144704"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596938"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>HOW TO：指定通道安全性認證
 Windows Communication Foundation （WCF）服務的標記可讓 COM 應用程式呼叫 WCF 服務。 大部分的 WCF 服務都需要用戶端指定認證以進行驗證和授權。 從 WCF 用戶端呼叫 WCF 服務時，您可以在受控碼或應用程式佈建檔中指定這些認證。 從 COM 應用程式呼叫 WCF 服務時，您可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
@@ -15,7 +15,7 @@ Windows Communication Foundation （WCF）服務的標記可讓 COM 應用程式
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是以 IDispatch 為基礎的介面，因此您無法在 Visual Studio 環境中使用 IntelliSense 功能。  
   
- 本文將使用[訊息安全性範例](../../../../docs/framework/wcf/samples/message-security-sample.md)中定義的 WCF 服務。  
+ 本文將使用[訊息安全性範例](../samples/message-security-sample.md)中定義的 WCF 服務。  
   
 ### <a name="to-specify-a-client-certificate"></a>若要指定用戶端憑證  
   
@@ -115,7 +115,7 @@ Windows Communication Foundation （WCF）服務的標記可讓 COM 應用程式
   
 ### <a name="to-specify-an-issue-token"></a>指定發行權杖  
   
-1. 發行權杖僅適用於使用聯合安全性的應用程式。 如需聯合安全性的詳細資訊，請參閱[同盟和發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)和[同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+1. 發行權杖僅適用於使用聯合安全性的應用程式。 如需聯合安全性的詳細資訊，請參閱[同盟和發行的權杖](federation-and-issued-tokens.md)和[同盟範例](../samples/federation-sample.md)。  
   
      下列 Visual Basic 程式碼範例示範如何呼叫 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> 方法：  
   
@@ -131,10 +131,10 @@ Windows Communication Foundation （WCF）服務的標記可讓 COM 應用程式
   
      如需此方法之參數的詳細資訊，請參閱 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [同盟](../../../../docs/framework/wcf/feature-details/federation.md)
-- [HOW TO：設定聯合服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [同盟](federation.md)
+- [HOW TO：設定聯合服務的認證](how-to-configure-credentials-on-a-federation-service.md)
+- [如何：建立同盟用戶端](how-to-create-a-federated-client.md)
+- [訊息安全性](message-security-in-wcf.md)
+- [繫結和安全性](bindings-and-security.md)

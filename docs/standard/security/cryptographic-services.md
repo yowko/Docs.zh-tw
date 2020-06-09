@@ -1,5 +1,6 @@
 ---
 title: 密碼編譯服務
+description: 閱讀 .NET 支援的加密方法和做法總覽，例如 ClickOnce 資訊清單、Suite B & 新一代密碼編譯（CNG）支援。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: e67b1feb27b6eae7062e7b3e02ac79c8929f1df1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 701dce82669395743c884a613512bfadc06c91b3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288403"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596328"
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 

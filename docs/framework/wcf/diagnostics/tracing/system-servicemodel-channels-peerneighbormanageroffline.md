@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerNeighborManagerOffline
 ms.date: 03/30/2017
 ms.assetid: 15b19e0f-cee5-49ff-8498-f404c39b712f
-ms.openlocfilehash: e41a24101c8224cdaa69c842b4f2720afb3bfb90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea461dba433cf6607b972696220c88bd27e5664b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950354"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596047"
 ---
 # <a name="systemservicemodelchannelspeerneighbormanageroffline"></a>System.ServiceModel.Channels.PeerNeighborManagerOffline
 PeerNode 現在已經離線，表示沒有目前連線的芳鄰。  
@@ -15,8 +15,8 @@ PeerNode 現在已經離線，表示沒有目前連線的芳鄰。
 ## <a name="description"></a>描述  
  這個追蹤會在從本機節點的芳鄰清單移除芳鄰時發生。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

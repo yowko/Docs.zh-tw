@@ -2,16 +2,16 @@
 title: HOW TO：實作探索 Proxy
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: dafd5e25f998f2dda3f736caeea51cd534ce8e5e
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: ca7ab2ee434aef7649d71cbfc33273f48020788f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597068"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>HOW TO：實作探索 Proxy
 
-本主題說明如何實作探索 Proxy。 如需 Windows Communication Foundation （WCF）中探索功能的詳細資訊，請參閱[WCF 探索總覽](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。 探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。 許多其他支援類別都已在此範例中定義和使用。 `OnResolveAsyncResult`、`OnFindAsyncResult`和 `AsyncResult`。 這些類別會實作 <xref:System.IAsyncResult> 介面。 如需 <xref:System.IAsyncResult> 的詳細資訊，請參閱[system.web 介面](xref:System.IAsyncResult)。
+本主題說明如何實作探索 Proxy。 如需 Windows Communication Foundation （WCF）中探索功能的詳細資訊，請參閱[WCF 探索總覽](wcf-discovery-overview.md)。 探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。 許多其他支援類別都已在此範例中定義和使用。 `OnResolveAsyncResult``OnFindAsyncResult`和 `AsyncResult`。 這些類別會實作 <xref:System.IAsyncResult> 介面。 如需有關的詳細資訊， <xref:System.IAsyncResult> 請參閱[system.web 介面](xref:System.IAsyncResult)。
 
  本主題將實作探索 Proxy 分為三個主要部分：
 
@@ -25,7 +25,7 @@ ms.locfileid: "71351572"
 
 1. 啟動 Visual Studio 2012。
 
-2. 建立新的主控台應用程式專案。 將專案命名為 `DiscoveryProxy`，並將方案命名為 `DiscoveryProxyExample`。
+2. 這會建立新的主控台應用程式專案。 將專案命名為 `DiscoveryProxy`，並將方案命名為 `DiscoveryProxyExample`。
 
 3. 將下列參考加入至專案中
 
@@ -487,7 +487,7 @@ OnBegin. / OnEnd. 方法提供後續探索作業的邏輯。 例如，<xref:Syst
 
 1. 開啟 DiscoveryProxyExample 專案中的 Program.cs 檔案。
 
-2. 加入下列 `using` 陳述式。
+2. 新增下列 `using` 陳述式。
 
     ```csharp
     using System;
@@ -546,7 +546,7 @@ OnBegin. / OnEnd. 方法提供後續探索作業的邏輯。 例如，<xref:Syst
     }
     ```
 
-您已經完成實作探索 Proxy。 繼續進行[如何：執行向探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)。
+您已經完成實作探索 Proxy。 繼續進行[如何：執行向探索 Proxy 註冊的可探索服務](discoverable-service-that-registers-with-the-discovery-proxy.md)。
 
 ## <a name="example"></a>範例
 
@@ -973,9 +973,9 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [如何：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [如何：測試探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [WCF 探索概觀](wcf-discovery-overview.md)
+- [HOW TO：實作以探索 Proxy 註冊的可探索服務](discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務](client-app-discovery-proxy-to-find-a-service.md)
+- [如何：測試探索 Proxy](how-to-test-the-discovery-proxy.md)

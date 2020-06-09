@@ -2,17 +2,17 @@
 title: 篩選
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: efbedc16fe48d83cdc4223862bc691e9cbe15c10
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: d04141e4720320784bc92c332a3f0b96a7b1ac92
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964297"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595462"
 ---
 # <a name="filtering"></a>篩選
 Windows Communication Foundation （WCF）篩選系統可以使用宣告式篩選準則來比對訊息，並做出操作決策。 您可以使用篩選條件檢查訊息的部分，以判斷如何處理訊息。 例如，佇列處理序可以使用 XPath 1.0 查詢檢查已知標頭的優先順序項目，以便決定是否要將訊息移到佇列前頭。  
   
- 篩選系統是由一組類別所組成，可以有效率地判斷哪一組篩選準則會針對特定的 WCF 訊息 `true`。  
+ 篩選系統是由一組類別所組成，可以有效率地判斷哪一組篩選準則 `true` 適用于特定的 WCF 訊息。  
   
  篩選系統是 WCF 訊息的核心元件;其設計非常快速。 每個篩選器的執行已針對 WCF 訊息的特定比對進行優化。  
   
@@ -21,7 +21,7 @@ Windows Communication Foundation （WCF）篩選系統可以使用宣告式篩�
 ## <a name="where-filtering-fits"></a>篩選的用途  
  接收到訊息之後，就會執行篩選，篩選是分派訊息至適當應用程式元件的程序一部分。 篩選系統的設計會解決數個 WCF 子系統的需求，包括訊息、路由、安全性、事件處理和系統管理。  
   
-## <a name="filters"></a>篩選器。  
+## <a name="filters"></a>篩選器  
  篩選引擎有兩個主要元件：篩選條件和篩選資料表。 篩選條件會根據使用者指定的邏輯條件，做出有關訊息的布林值決策。 篩選條件會實作 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別。  
   
  <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A> 方法會用於判斷訊息是否符合篩選條件。 其中一個方法會測試訊息的標頭，但無法檢查訊息本文。 另一個方法會採用*訊息緩衝區*做為輸入參數，而且可以檢查訊息本文。  
@@ -42,7 +42,7 @@ Windows Communication Foundation （WCF）篩選系統可以使用宣告式篩�
   
 ### <a name="prefix-endpoint-address-filters"></a>前置詞端點位址篩選條件  
   
-1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的作用就像 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 篩選條件，只除了符合項目可以在訊息 URI 的前置詞上之外。 例如，指定位址 `http://www.adatum.com` 的篩選準則符合 `http://www.adatum.com/userA`的訊息。  
+1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的作用就像 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 篩選條件，只除了符合項目可以在訊息 URI 的前置詞上之外。 例如，指定位址的篩選準則會 `http://www.adatum.com` 符合定址至的訊息 `http://www.adatum.com/userA` 。  
   
 ### <a name="xpath-message-filters"></a>XPath 訊息篩選條件  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 會使用 XPath 運算式來判斷 XML 文件是否包含特定項目、屬性、文字或其他 XML 語法結構。 篩選條件經過最佳化，用於 XPath 的精簡子集時能夠發揮極佳的效率。 XML 路徑語言描述于[W3C Xml 路徑語言1.0 規格](https://www.w3.org/TR/xpath/all/)中。  
@@ -68,7 +68,7 @@ Windows Communication Foundation （WCF）篩選系統可以使用宣告式篩�
   
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> 類別會最佳化適用於大部分傳訊案例的 XPath 子集的比對，並且支援完整的 XPath 1.0 文法。 它具有最佳化的演算法，能夠有效地進行平行比對。  
   
- 這個資料表有數個經過特製化的 `Match` 方法，這些方法可以在 <xref:System.Xml.XPath.XPathNavigator> 和 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 上操作。 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 透過新增 <xref:System.Xml.XPath.XPathNavigator> 屬性來擴充 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 類別。 這個屬性允許儲存 XML 文件中的位置並迅速將其載入，而不需要複製 (Clone) 導覽；此類作業對 <xref:System.Xml.XPath.XPathNavigator> 而言，是非常耗費資源的記憶體配置。 在 XML 檔上執行查詢的過程中，WCF XPath 引擎必須經常記錄游標的位置，因此 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 為訊息處理提供重要的優化。  
+ 這個資料表有數個經過特製化的 `Match` 方法，這些方法可以在 <xref:System.Xml.XPath.XPathNavigator> 和 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 上操作。 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 透過新增 <xref:System.Xml.XPath.XPathNavigator> 屬性來擴充 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 類別。 這個屬性允許儲存 XML 文件中的位置並迅速將其載入，而不需要複製 (Clone) 導覽；此類作業對 <xref:System.Xml.XPath.XPathNavigator> 而言，是非常耗費資源的記憶體配置。 在 XML 檔上執行查詢的過程中，WCF XPath 引擎必須經常記錄游標的位置，以便 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 提供訊息處理的重要優化。  
   
 ## <a name="customer-scenarios"></a>客戶案例  
  您可以視訊息中包含的資料而定，隨時使用篩選將訊息傳送到不同的處理模組。 根據訊息的動作程式碼路由訊息，以及根據訊息的端點位址分離訊息資料流的信號，即為兩個典型的案例。  
@@ -85,4 +85,4 @@ Windows Communication Foundation （WCF）篩選系統可以使用宣告式篩�
   
 ## <a name="see-also"></a>請參閱
 
-- [資料傳輸與序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [資料傳輸與序列化](data-transfer-and-serialization.md)

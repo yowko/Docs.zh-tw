@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 ms.date: 03/30/2017
 ms.assetid: a99275b9-4975-4899-8e21-594ba552f981
-ms.openlocfilehash: 2fd9a3dcfb609b068e0200561b1fe52b44ee30b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9c3334d13733f11b843e84f32ba1df9e82a44ca
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596112"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotpropagated"></a>System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 PeerNode 已接收訊息，但沒有傳播至芳鄰。  
@@ -18,8 +18,8 @@ PeerNode 已接收訊息，但沒有傳播至芳鄰。
 ## <a name="troubleshooting"></a>疑難排解  
  檢查訊息傳播篩選條件是否存在。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

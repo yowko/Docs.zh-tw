@@ -1,5 +1,6 @@
 ---
 title: 如何：從字串讀取字元
+description: 瞭解如何在 .NET 中讀取字串中的字元。 請參閱以同步和非同步方式讀取字元的範例。
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: 6d32e9c5f89dba7590958bae6cc0489f104cd19a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40ff144e0899f3560805a31fa76f391afaeccd67
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291769"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594838"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>如何：從字串讀取字元
 下列程式碼範例會示範如何以同步或非同步的方式，從字串讀取字元。  
@@ -35,7 +36,7 @@ ms.locfileid: "84291769"
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  

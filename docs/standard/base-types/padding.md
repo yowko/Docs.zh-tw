@@ -1,5 +1,6 @@
 ---
 title: 在 .NET 中填補字串
+description: 瞭解如何在 .NET 中填補字串。 使用 PadLeft 和 PadRight 方法來加入開頭或尾端字元，以達到指定的總長度。
 ms.date: 03/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: 83d4b348c4de537d9a71363d34898a50a6a74cb3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5bf7023a3429e932a44ad0a0bd3409012f77cbf9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290392"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594526"
 ---
 # <a name="padding-strings-in-net"></a>在 .NET 中填補字串
 
@@ -47,6 +48,6 @@ ms.locfileid: "84290392"
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]
  [!code-vb[Conceptual.String.BasicOps#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#4)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [基底字元串作業](basic-string-operations.md)

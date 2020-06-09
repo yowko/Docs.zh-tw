@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: 495de5a926cfc0c5aab88337f5f33b991c49e71a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29c2a87daaf763a50aa657c9badc002ff2fa27e1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184995"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593330"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>HOW TO：建立需要工作階段的服務
-工作階段會在兩個或更多的端點之間建立共用狀態，以啟用諸如回呼、多重躍點安全性之類的有用功能，並在用戶端與服務執行個體之間建立關聯。 有關 Windows 通信基礎 （WCF） 應用程式中的會話的詳細資訊，請參閱[使用會話](../../../../docs/framework/wcf/using-sessions.md)。  
+工作階段會在兩個或更多的端點之間建立共用狀態，以啟用諸如回呼、多重躍點安全性之類的有用功能，並在用戶端與服務執行個體之間建立關聯。 如需 Windows Communication Foundation （WCF）應用程式中會話的詳細資訊，請參閱[使用會話](../using-sessions.md)。  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>指定合約需要自身繫結來支援工作階段  
   
-1. 建立其中至少包含一個作業的服務合約。 有關如何創建服務協定的示例，請參閱[如何：定義服務協定](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。  
+1. 建立其中至少包含一個作業的服務合約。 如需如何建立服務合約的範例，請參閱[如何：定義服務合約](../how-to-define-a-wcf-service-contract.md)。  
   
 2. 將 <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 屬性設為下列其中一項，以修改宣告合約的 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>：  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 8937ef8b4007253b06444e59b292395084e4df2f
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 259b353edc269a77a51e790544018481a53af188
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596354"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>如何：安裝和卸載 Windows 服務
 
@@ -26,7 +26,7 @@ ms.locfileid: "81607915"
 > [!WARNING]
 > 如果您想要從電腦解除安裝服務，則不要遵循本文中的步驟。 請改為找出安裝服務的程式或軟體套件，然後在 [設定] 中選擇 [應用程式]**** 以解除安裝該程式。 請注意，許多服務都是 Windows 不可或缺的一部分；如果移除這些服務，可能會導致系統不穩定。
 
-若要使用本文中的步驟，首先需要將服務安裝程式新增至 Windows 服務。 如需詳細資訊，請參閱[逐步解說：建立 Windows 服務應用程式](../windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)。
+若要使用本文中的步驟，首先需要將服務安裝程式新增至 Windows 服務。 如需詳細資訊，請參閱[逐步解說：建立 Windows 服務應用程式](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)。
 
 您無法按下 F5，直接從 Visual Studio 開發環境中執行 Windows 服務專案。 您必須先安裝專案中的服務，才可以執行專案。
 
@@ -35,7 +35,7 @@ ms.locfileid: "81607915"
 
 ### <a name="install-your-service-manually-using-installutilexe-utility"></a>使用 Installutil.exe 公用程式手動安裝您的服務
 
-1. 從 [開始]**** 功能表，選取 [Visual Studio \<版本**>]**** 目錄，然後選取 [VS \<版本**> 開發人員命令提示字元]****。
+1. 在 [**開始**] 功能表中，選取 [ **Visual Studio \<*version*> ** ] 目錄，然後選取 [**針對 VS \<*version*> 開發人員命令提示字元**]。
 
      隨即顯示 Visual Studio 開發人員命令提示字元。
 
@@ -47,7 +47,7 @@ ms.locfileid: "81607915"
     installutil <yourproject>.exe
     ```
 
-     如果您使用 Visual Studio 開發人員命令提示字元，*InstallUtil.exe* 應該位在系統路徑中。 否則，您可以將這個檔案新增至路徑，或使用完整路徑來叫用這個檔案。 此工具會與 *%WINDIR%\Microsoft.NET\Framework [64]\\<framework_version\>* 中的 .NET Framework 一併安裝。
+     如果您使用 Visual Studio 開發人員命令提示字元，*InstallUtil.exe* 應該位在系統路徑中。 否則，您可以將這個檔案新增至路徑，或使用完整路徑來叫用這個檔案。 此工具會與 *%WINDIR%\Microsoft.NET\Framework [64] \\<framework_version \> *中的 .NET Framework 一併安裝。
 
      例如：
      - 針對 32 位元版本的 .NET Framework 4 或 4.5 和更新版本，如果您的 Windows 安裝目錄是 *C:\Windows*，則預設路徑為 *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*。
@@ -55,7 +55,7 @@ ms.locfileid: "81607915"
 
 ### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>使用 Installutil.exe 公用程式手動卸載您的服務
 
-1. 從 [開始]**** 功能表，選取 [Visual Studio \<版本**>]**** 目錄，然後選取 [VS \<版本**> 開發人員命令提示字元]****。
+1. 在 [**開始**] 功能表中，選取 [ **Visual Studio \<*version*> ** ] 目錄，然後選取 [**針對 VS \<*version*> 開發人員命令提示字元**]。
 
      隨即顯示 Visual Studio 開發人員命令提示字元。
 
@@ -95,9 +95,9 @@ ms.locfileid: "81607915"
     sc.exe delete "YourServiceName"
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Windows 服務應用程式簡介](../windows-services/introduction-to-windows-service-applications.md)
-- [How to：建立 Windows 服務](../windows-services/how-to-create-windows-services.md)
-- [如何：將安裝程式新增至您的服務應用程式](../windows-services/how-to-add-installers-to-your-service-application.md)
+- [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
+- [How to：建立 Windows 服務](how-to-create-windows-services.md)
+- [如何：將安裝程式新增至您的服務應用程式](how-to-add-installers-to-your-service-application.md)
 - [Installutil.exe (安裝程式工具)](../tools/installutil-exe-installer-tool.md)

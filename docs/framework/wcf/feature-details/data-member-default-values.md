@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 17e73ab2aa777ae53f31596fa364a4feac297842
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4eaaec880ecfcff24d9d5b4e8347a84738e070b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593473"
 ---
 # <a name="data-member-default-values"></a>資料成員預設值
-在 .NET Framework 中, 類型具有*預設值*的概念。 例如，任何參考型別的預設值為 `null`，整數型別則為零。 有時候資料成員設為預設值時，會需要從序列化資料中省略該成員。 因為此成員為預設值，而實際值不需要序列化，因此這樣做可促進效能。  
+在 .NET Framework 中，類型具有*預設值*的概念。 例如，任何參考型別的預設值為 `null`，整數型別則為零。 有時候資料成員設為預設值時，會需要從序列化資料中省略該成員。 因為此成員為預設值，而實際值不需要序列化，因此這樣做可促進效能。  
   
  若要省略序列化資料中的成員，請將 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 屬性 (Attribute) 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Property) 設為 `false` (預設值為 `true`)。  
   
@@ -45,16 +45,16 @@ ms.locfileid: "69962921"
  `xsi:nil` 屬性 (Attribute) 是全球資訊網協會 (W3C) XML 結構描述執行個體命名空間中的特殊屬性，會提供可互通的方式明確表示 null 值。 請注意，XML 中沒有任何關於職位、薪資及獎金資料成員的資訊。 接收端可以分別將這些成員解譯為 `null`、零和 `null`。 不過不保證協力廠商的還原序列化程式能夠正確解譯，這也是不建議使用此模式的原因。 <xref:System.Runtime.Serialization.DataContractSerializer> 類別永遠會為遺漏的值選取正確解譯。  
   
 ### <a name="interaction-with-isrequired"></a>與 IsRequired 互動  
- 如[資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)中所<xref:System.Runtime.Serialization.DataMemberAttribute>討論, 屬性具有<xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>屬性 (預設為`false`)。 這個屬性會表示還原序列化指定的資料成員時，是否必須以序列化的資料表示該成員。 如果 `IsRequired` 設為 `true` (表示一定要使用一個值)，且 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 設為 `false` (表示如果使用預設值，則不需要使用該值)，因為結果會互相矛盾，所以無法序列化此資料成員的預設值。 如果這類資料成員設為其預設值 (通常為 `null` 或零)，並且嘗試進行序列化，則會擲回 <xref:System.Runtime.Serialization.SerializationException>。  
+ 如[資料合約版本控制](data-contract-versioning.md)中所討論， <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性具有 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性（預設為 `false` ）。 這個屬性會表示還原序列化指定的資料成員時，是否必須以序列化的資料表示該成員。 如果 `IsRequired` 設為 `true` (表示一定要使用一個值)，且 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 設為 `false` (表示如果使用預設值，則不需要使用該值)，因為結果會互相矛盾，所以無法序列化此資料成員的預設值。 如果這類資料成員設為其預設值 (通常為 `null` 或零)，並且嘗試進行序列化，則會擲回 <xref:System.Runtime.Serialization.SerializationException>。  
   
 ### <a name="schema-representation"></a>結構描述表示  
- 當`EmitDefaultValue`屬性設定為`false`時, 資料成員之 XML 架構定義語言 (XSD) 架構表示的詳細資訊會在[資料合約架構參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)中討論。 不過，以下提供簡要的概觀。  
+ 當屬性設定為時，資料成員之 XML 架構定義語言（XSD）架構表示的詳細資訊 `EmitDefaultValue` `false` 會在[資料合約架構參考](data-contract-schema-reference.md)中討論。 不過，以下提供簡要的概觀。  
   
-- 當設定為`false`時, 它會在架構中表示為 Windows Communication Foundation (WCF) 特定的批註。 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 目前沒有可互通的方式能表示這項資訊。 特別是結構描述中的 "default" 屬性 (Attribute) 不是用於此目的時，`minOccurs` 屬性只會受到 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 設定的影響，而 `nillable` 屬性只會受到資料成員的型別影響。  
+- 當 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 設定為時 `false` ，它會在架構中表示為 WINDOWS COMMUNICATION FOUNDATION （WCF）特定的批註。 目前沒有可互通的方式能表示這項資訊。 特別是結構描述中的 "default" 屬性 (Attribute) 不是用於此目的時，`minOccurs` 屬性只會受到 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 設定的影響，而 `nillable` 屬性只會受到資料成員的型別影響。  
   
 - 實際使用的預設值不會在結構描述中表示。 端看接收端點如何適當地解譯遺失的項目而定。  
   
- 在架構匯入時, <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>每次偵測到先前`false`所述的 WCF 特定注釋時, 屬性都會自動設定為。 針對將`nillable`屬性設定為`false` `false`的參考型別, 它也會設定為, 以支援在使用 ASP.NET Web 服務時通常會發生的特定互通性案例。  
+ 在架構匯入時， <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> `false` 每次偵測到先前所述的 WCF 特定注釋時，屬性都會自動設定為。 針對將屬性設定為的參考型別，它也會設定為 `false` `nillable` `false` ，以支援在使用 ASP.NET Web 服務時通常會發生的特定互通性案例。  
   
 ## <a name="see-also"></a>另請參閱
 

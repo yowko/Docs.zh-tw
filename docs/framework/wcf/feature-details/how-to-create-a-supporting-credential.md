@@ -2,12 +2,12 @@
 title: HOW TO：建立支援的認證
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3f33bf5a78c575237ee4bc609a482a81fd30fc53
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964551"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597146"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>HOW TO：建立支援的認證
 您可能具有需要多個認證的自訂安全性配置。 例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。 第二個認證是*支援的認證*。 本主題說明如何在 Windows Communication Foundation （WCF）用戶端中執行這類認證。  
@@ -27,15 +27,15 @@ ms.locfileid: "75964551"
 ## <a name="endorsing-signing-and-encrypting"></a>簽署 (Endorsing)、簽署 (Signing) 和加密  
  支援的認證會導致在訊息內傳輸*支援的權杖*。 WS-SecurityPolicy 規格定義了四種可將支援權杖附加至訊息的方法，如下表所述。  
   
-|用途|描述|  
+|目的|描述|  
 |-------------|-----------------|  
-|已簽署|支援權杖包含在安全性標頭中，而且是由訊息簽章進行簽署。|  
+|簽署人|支援權杖包含在安全性標頭中，而且是由訊息簽章進行簽署。|  
 |簽署|*簽署權杖*會簽署訊息簽章。|  
 |已簽署 (Signed) 和簽署 (Endorsing)|已簽署的簽署權杖會簽署從訊息簽章產生的整個 `ds:Signature` 項目，而這些權杖本身就是由該訊息簽章所簽署；也就是說，這兩個權杖 (用於訊息簽章的權杖和已簽署的簽署權杖) 會彼此進行簽署。|  
 |已簽署和加密|已簽署的加密支援權杖是出現在 `wsse:SecurityHeader` 時，也會進行加密的已簽署支援權杖。|  
   
 ## <a name="programming-supporting-credentials"></a>程式設計的支援認證  
- 若要建立使用支援權杖的服務，您必須建立[\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 （如需詳細資訊，請參閱[如何：使用 SecurityBindingElement 建立自訂](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)系結。）  
+ 若要建立使用支援權杖的服務，您必須建立 [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) 。 （如需詳細資訊，請參閱[如何：使用 SecurityBindingElement 建立自訂](how-to-create-a-custom-binding-using-the-securitybindingelement.md)系結。）  
   
  建立自訂繫結的第一個步驟為建立安全性繫結項目，可以是下列三種類型的其中之一：  
   
@@ -82,4 +82,4 @@ ms.locfileid: "75964551"
   
 ## <a name="see-also"></a>請參閱
 
-- [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

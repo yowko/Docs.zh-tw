@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 92bd3a6809386764251c4a69c6bc583ed745205d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: d1fee4fdde18563ec6ccce4f0675d8581184be08
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921351"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596730"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的佇列
 本節中的主題將討論佇列的 Windows Communication Foundation （WCF）支援。 WCF 藉由利用 Microsoft Message Queuing （先前稱為 MSMQ）做為傳輸來提供佇列的支援，並啟用下列案例：  
@@ -22,44 +22,44 @@ ms.locfileid: "76921351"
   
 - 中斷操作。 當透過高延遲網路或可用性有限的網路進行通訊時 (例如使用行動裝置)，傳送、接收和處理操作可能中斷。 佇列能夠使這些操作繼續進行，即使已經與端點中斷連線也是一樣。 重新建立連線後，佇列會將訊息轉送至接收應用程式。  
   
- 若要使用 WCF 應用程式中的佇列功能，您可以使用其中一個標準系結，或者如果其中一個標準系結無法滿足您的需求，您可以建立自訂系結。 如需相關標準系結和如何選擇的詳細資訊，請參閱[如何：使用 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 若要使用 WCF 應用程式中的佇列功能，您可以使用其中一個標準系結，或者如果其中一個標準系結無法滿足您的需求，您可以建立自訂系結。 如需相關標準系結和如何選擇的詳細資訊，請參閱[如何：使用 WCF 端點和訊息佇列應用程式交換訊息](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 如需建立自訂繫結的詳細資訊，請參閱[自訂繫結](../extending/custom-bindings.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
- [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+## <a name="in-this-section"></a>本節內容  
+ [佇列概觀](queues-overview.md)  
  訊息佇列概念的概觀。  
   
- [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [WCF 中的佇列](queuing-in-wcf.md)  
  WCF 佇列支援的總覽。  
   
- [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- 說明如何使用 <xref:System.ServiceModel.NetMsmqBinding> 類別，在 WCF 用戶端和 WCF 服務之間進行通訊。  
+ [HOW TO：與 WCF 端點交換佇列訊息](how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ 說明如何使用類別在 <xref:System.ServiceModel.NetMsmqBinding> wcf 用戶端和 wcf 服務之間進行通訊。  
   
- [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- 說明如何使用 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 在 WCF 和訊息佇列應用程式之間進行通訊。  
+ [如何：與 WCF 端點和訊息佇列應用程式交換訊息](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ 說明如何使用在 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> WCF 和訊息佇列應用程式之間進行通訊。  
   
- [在工作階段中群組佇列訊息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [在工作階段中群組佇列訊息](grouping-queued-messages-in-a-session.md)  
  說明如何將佇列中的訊息分組，以協助單一接收應用程式處理相關訊息。  
   
- [批次處理異動中的訊息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ [批次處理異動中的訊息](batching-messages-in-a-transaction.md)  
  說明如何批次處理交易中的訊息。  
   
- [使用無效信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [使用無效信件佇列來處理訊息傳輸失敗](using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  說明如何使用寄不出的信件佇列處理訊息傳送和傳遞失敗，以及如何處理來自寄不出的信件佇列的訊息。  
   
- [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
+ [有害訊息處理](poison-message-handling.md)  
  說明如何處理有害訊息 (超過傳送到接收應用程式的最大嘗試傳遞次數的訊息)。  
   
- [Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
+ [Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異](diff-in-queue-in-vista-server-2003-windows-xp.md)  
  摘要說明 Windows Vista、Windows Server 2003 和 Windows XP 之間 WCF 佇列功能的差異。  
   
- [使用傳輸安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [使用傳輸安全性來保護訊息的安全](securing-messages-using-transport-security.md)  
  描述如何使用傳輸安全性來保護佇列訊息的安全。  
   
- [使用訊息安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
+ [使用訊息安全性來保護訊息的安全](securing-messages-using-message-security.md)  
  描述如何使用訊息安全性來保護佇列訊息的安全。  
   
- [為佇列訊息進行疑難排解](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
+ [為佇列訊息進行疑難排解](troubleshooting-queued-messaging.md)  
  說明如何疑難排解常見的佇列問題。  
   
- [佇列通訊的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
+ [佇列通訊的最佳做法](best-practices-for-queued-communication.md)  
  說明使用 WCF 佇列通訊的最佳做法。  

@@ -2,12 +2,12 @@
 title: 佇列訊息的疑難排解
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f695af3d2ad498e1f5975e1a396f1e7b05bf63bc
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095004"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595124"
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
 
@@ -17,17 +17,17 @@ ms.locfileid: "77095004"
 
 **問：** 我使用了 WCF Beta 1，而我安裝了 MSMQ 的修補程式。 我是否需要移除這個 Hotfix？
 
-**答：** 是。 不再支援這個 Hotfix。 WCF 現在可以在沒有修補程式需求的 MSMQ 上運作。
+**答：** 是的。 不再支援這個 Hotfix。 WCF 現在可以在沒有修補程式需求的 MSMQ 上運作。
 
-**問：** MSMQ 有兩個系結： <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 我應該在什麼狀況下使用它們？
+**問：** MSMQ 有兩個系結： <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 。 我應該在什麼狀況下使用它們？
 
-**答：** 當您想要使用 MSMQ 做為兩個 WCF 應用程式之間佇列通訊的傳輸時，請使用 <xref:System.ServiceModel.NetMsmqBinding>。 當您想要使用現有的 MSMQ 應用程式與新的 WCF 應用程式通訊時，請使用 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。
+**答：**<xref:System.ServiceModel.NetMsmqBinding>當您想要使用 MSMQ 做為兩個 WCF 應用程式之間佇列通訊的傳輸時，請使用。 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>當您想要使用現有的 MSMQ 應用程式與新的 WCF 應用程式通訊時，請使用。
 
-**問：** 我必須升級 MSMQ 才能使用 <xref:System.ServiceModel.NetMsmqBinding> 和 `MsmqIntegration` 系結嗎？
+**問：** 我是否需要升級 MSMQ 才能使用和系 <xref:System.ServiceModel.NetMsmqBinding> `MsmqIntegration` 結？
 
 **答：** 否。 這兩個系結都適用于 Windows XP 和 Windows Server 2003 上的 MSMQ 3.0。 當您升級至 Windows Vista 中的 MSMQ 4.0 時，系結的某些功能就會變成可用。
 
-**問：** <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 系結的哪些功能可在 MSMQ 4.0 中使用，但不在 MSMQ 3.0 中？
+**問：** 和系結的哪些功能 <xref:System.ServiceModel.NetMsmqBinding> <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 可在 msmq 4.0 中使用，但不能在 msmq 3.0 中進行？
 
 **答：** 下列功能可在 MSMQ 4.0 中取得，但無法在 MSMQ 3.0 中使用：
 
@@ -37,11 +37,11 @@ ms.locfileid: "77095004"
 
 - 只有 MSMQ 4.0 支援遠端交易讀取。
 
-如需詳細資訊，請參閱[Windows Vista、Windows Server 2003 和 WINDOWS XP 中的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)。
+如需詳細資訊，請參閱[Windows Vista、Windows Server 2003 和 WINDOWS XP 中的佇列功能差異](diff-in-queue-in-vista-server-2003-windows-xp.md)。
 
 **問：** 我可以在佇列通訊的一端使用 MSMQ 3.0，而在另一端使用 MSMQ 4.0 嗎？
 
-**答：** 是。
+**答：** 是的。
 
 **問：** 我想要將現有的 MSMQ 應用程式與新的 WCF 用戶端或伺服器整合。 我是否需要為 MSMQ 基礎結構的兩端同時升級？
 
@@ -51,11 +51,11 @@ ms.locfileid: "77095004"
 
 本章節包含最常見疑難排解問題的解答。 屬於已知限制的問題也會在版本資訊中加以說明。
 
-**問：** 我嘗試使用私用佇列，但收到下列例外狀況： `System.InvalidOperationException`： URL 無效。 佇列的 URL 不可包含 '$' 字元。 請使用 net.msmq://machine/private/queueName 中的語法，來定址私用佇列。
+**問：** 我嘗試使用私用佇列，但收到下列例外狀況： `System.InvalidOperationException` ： URL 無效。 佇列的 URL 不可包含 '$' 字元。 請使用 net.msmq://machine/private/queueName 中的語法，來定址私用佇列。
 
-**答：** 檢查設定和程式碼中的佇列統一資源識別項（URI）。 請勿在 URI 中使用 "$" 字元。 例如，若要定址名為 OrdersQueue 的私用佇列，請將 URI 指定為 `net.msmq://localhost/private/ordersQueue`。
+**答：** 檢查設定和程式碼中的佇列統一資源識別項（URI）。 請勿在 URI 中使用 "$" 字元。 例如，若要定址名為 OrdersQueue 的私用佇列，請將 URI 指定為 `net.msmq://localhost/private/ordersQueue` 。
 
-**問：** 在佇列應用程式上呼叫 `ServiceHost.Open()` 會擲回下列例外狀況： `System.ArgumentException`：基底位址不能包含 URI 查詢字串。 原因為何？
+**問：**`ServiceHost.Open()`在佇列應用程式上呼叫，會擲回下列例外狀況： `System.ArgumentException` ：基底位址不能包含 URI 查詢字串。 原因為何？
 
 **答：** 檢查您的設定檔和程式碼中的佇列 URI。 雖然 MSMQ 佇列支援使用 '?' 字元，但 URI 會將這個字元解譯為字串查詢的開頭。 為了避免這個問題，請使用不含 '?' 字元的佇列名稱。
 
@@ -65,13 +65,13 @@ ms.locfileid: "77095004"
 
 - 檢查異動式佇列需求是否相容於指定的保證。 請注意下列準則：
 
-  - 您只能將具有「正好一次」保證（<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`）的永久性訊息（資料包和會話）傳送至交易式佇列。
+  - 您只能將具有「正好一次」保證（）的永久性訊息（資料包和會話）傳送 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `true` 至交易式佇列。
 
   - 您只能傳送具有「正好一次」保證的工作階段。
 
   - 從異動式佇列接收工作階段中的訊息時需要進行異動。
 
-  - 您只能傳送或接收非交易式佇列的 volatile 或永久性訊息（僅限資料包），而不保證（<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`）。
+  - <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `false` 只有非交易式佇列，您可以傳送或接收不具保證（）的暫時性或持久訊息（僅限資料包）。
 
 - 檢查寄不出的信件佇列。 如果您在其中找到訊息，請判斷它們為何沒有傳遞。
 
@@ -83,13 +83,13 @@ ms.locfileid: "77095004"
 
 **問：** 是否一律需要定義自訂的寄不出的信件佇列，或是否有預設的寄不出的信件佇列？
 
-**答：** 如果保證是「正好一次」（<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`），而且如果您沒有指定自訂的寄不出的信件佇列，預設值就是全系統的交易式寄不出的信件佇列。
+**答：** 如果保證是「正好一次」（ <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `true` ），而且如果您沒有指定自訂的寄不出的信件佇列，預設值就是整個系統的交易式寄不出信件佇列。
 
-如果保證為 none （<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`），則預設為沒有寄不出的信件佇列功能。
+如果保證為 none （ <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>  =  `false` ），則預設值為沒有寄不出的信件佇列功能。
 
 **問：** 我的服務在 SvcHost 上擲回。請開啟並顯示「ListenerFactory 無法符合 EndpointListener 需求」訊息。 原因為何？
 
-A. 請檢查您的服務合約。 您可能忘了將 "IsOneWay =`true`" 放在所有服務作業上。 佇列只會支援單向服務作業。
+A. 請檢查您的服務合約。 您可能忘了將 "IsOneWay = `true` " 放在所有服務作業上。 佇列只會支援單向服務作業。
 
 **問：** 佇列中有訊息，但未叫用服務作業。 發生什麼問題？
 
@@ -107,13 +107,13 @@ A. 請檢查您的服務合約。 您可能忘了將 "IsOneWay =`true`" 放在�
     sc sidtype NetMsmqActivator unrestricted
     ```
 
-如需與非安全性相關的 Web 主機問題，請參閱： [Web 裝載佇列的應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)。
+如需與非安全性相關的 Web 主機問題，請參閱： [Web 裝載佇列的應用程式](web-hosting-a-queued-application.md)。
 
 **問：** 存取會話最簡單的方式是什麼？
 
-**答：** 在對應至會話中最後一則訊息的作業上設定 [自動完成] =`true`，然後在所有剩餘的服務作業上設定 [自動完成] = [`false`]。
+**答：**`true`在對應至會話中最後一則訊息的作業上設定 [自動完成] =，並設定 `false` 所有剩餘服務作業的 [自動完成 =]。
 
-**問：** 為什麼當我從包含佇列會話訊息和佇列資料包訊息的佇列讀取時，我的服務會擲回 `ProtocolException`？
+**問：** 為什麼 `ProtocolException` 當我從包含佇列會話訊息和佇列資料包訊息的佇列讀取時，我的服務會擲回？
 
 **答：** 佇列會話訊息和佇列資料包訊息的組成方式有基本差異。 因此，預期要讀取佇列工作階段訊息的服務無法接收佇列資料包訊息，而預期要讀取佇列資料包訊息的服務無法接收工作階段訊息。 嘗試從相同佇列同時讀取這兩種訊息類型時，便會擲回下列例外狀況：
 
@@ -144,21 +144,21 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 **答：** 根據預設，會使用需要 Active Directory 目錄服務的 MSMQ 內部憑證來簽署訊息。 由於工作群組模式中並沒有提供 Active Directory，因此簽署訊息會失敗。 因此，訊息會放在寄不出的信件佇列中，而且會指出失敗的原因，例如「錯誤的簽章」。
 
-解決方法是關閉安全性。 這是藉由設定 <xref:System.ServiceModel.NetMsmqSecurity.Mode%2A> = <xref:System.ServiceModel.NetMsmqSecurityMode.None>，使其在工作組模式中正常執行。
+解決方法是關閉安全性。 這是藉由設定 <xref:System.ServiceModel.NetMsmqSecurity.Mode%2A>  =  <xref:System.ServiceModel.NetMsmqSecurityMode.None> 讓它在工作組模式中工作而完成。
 
 另一個解決方法是從 <xref:System.ServiceModel.MsmqTransportSecurity> 屬性取得 <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>，並將其設定為 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>，並設定用戶端憑證。
 
 而另外一種解決方法是搭配 Active Directory 整合來安裝 MSMQ。
 
-**問：** 當我在 Active Directory 佇列中傳送具有預設系結（傳輸安全性）的訊息時，會收到「找不到內部憑證」訊息。 如何修正這個問題？
+**問：** 當我在 Active Directory 佇列中傳送具有預設系結（傳輸安全性）的訊息時，會收到「找不到內部憑證」訊息。 我要如何修正此問題？
 
-**答：** 這表示必須更新寄件者 Active Directory 中的憑證。 若要這麼做，請開啟 **控制台**、系統**管理工具**、**電腦管理**、以滑鼠右鍵按一下  **MSMQ**，**然後選取** 選取 [**使用者憑證**] 索引標籤，然後按一下 [**更新**] 按鈕。
+**答：** 這表示必須更新寄件者 Active Directory 中的憑證。 若要這麼做，請開啟 [**控制台**]、[系統**管理工具**]、[**電腦管理**]、以滑鼠右鍵按一下 [ **MSMQ**]，**然後選取 [** 選取 [**使用者憑證**] 索引標籤，然後按一下 [**更新**] 按鈕。
 
-**問：** 當我使用 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> 傳送訊息，並指定要使用的憑證時，我收到「不正確憑證」訊息。 如何修正這個問題？
+**問：** 當我使用傳送訊息 <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> ，並指定要使用的憑證時，我收到「不正確憑證」訊息。 我要如何修正此問題？
 
 **答：** 您不能使用具有憑證模式的本機電腦憑證存放區。 您必須使用憑證嵌入式管理單元，將憑證從電腦憑證存放區複製到目前使用者存放區。 若要取得憑證嵌入式管理單元：
 
-1. 按一下 [**開始**]，選取 [**執行**]，輸入 `mmc`，然後按一下 **[確定]** 。
+1. 按一下 [**開始**]，選取 [**執行**]，輸入 `mmc` ，然後按一下 **[確定]**。
 
 2. 在**Microsoft Management Console**中，開啟 [檔案 **] 功能表，** 然後選取 [**新增/移除嵌入式管理單元**]。
 
@@ -166,17 +166,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 4. 在 [**新增獨立嵌入式管理單元**] 對話方塊中，選取 [憑證]，然後按一下 [**新增**]。
 
-5. 在 [**憑證**嵌入式管理單元] 對話方塊中，選取 [**我的使用者帳戶]，** 然後按一下 **[完成]** 。
+5. 在 [**憑證**嵌入式管理單元] 對話方塊中，選取 [**我的使用者帳戶]，** 然後按一下 **[完成]**。
 
-6. 接下來，使用先前的步驟新增第二個憑證嵌入式管理單元，但這次請選取 [**電腦帳戶**]，然後按 **[下一步]** 。
+6. 接下來，使用先前的步驟新增第二個憑證嵌入式管理單元，但這次請選取 [**電腦帳戶**]，然後按 **[下一步]**。
 
-7. 選取 [本機電腦]，再按一下 [完成]。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。
+7. 選取 [本機電腦]****，再按一下 [完成]****。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。
 
 **問：** 當我的服務在工作組模式中從另一部電腦上的佇列讀取時，出現「拒絕存取」例外狀況。
 
 **答：** 在工作組模式中，若要讓遠端應用程式取得佇列的存取權，應用程式必須具有存取佇列的許可權。 將「匿名登入」新增至佇列的存取控制清單（ACL），並授與讀取權限。
 
-**問：** 當網路服務用戶端（或任何不含網域帳戶的用戶端）傳送佇列訊息時，傳送會因為憑證無效而失敗。 如何修正這個問題？
+**問：** 當網路服務用戶端（或任何不含網域帳戶的用戶端）傳送佇列訊息時，傳送會因為憑證無效而失敗。 我要如何修正此問題？
 
 **答：** 檢查系結設定。 預設繫結會開啟 MSMQ 傳輸安全性以簽署訊息。 請關閉此選項。
 
@@ -192,7 +192,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 - 檢查與交易管理員進行通訊的驗證模式。 如果您是在工作組模式中，則必須選取 [不需要驗證]。 如果您是在網域模式中，則必須選取 [需要相互驗證]。
 
-  ![啟用 XA 交易](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")
+  ![啟用 XA 交易](media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")
 
 - 請確定 MSDTC 位於**網際網路連線防火牆**設定的例外清單中。
 
@@ -204,8 +204,8 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 **問：** 我是否可以使用 MSMQ 啟用服務，根據遠端電腦上佇列中的訊息來啟動應用程式？
 
-**答：** 是。 若要這樣做，您必須將 MSMQ 啟動服務設定成當做網路服務執行，並新增在遠端電腦上佇列的網路服務存取。
+**答：** 是的。 若要這樣做，您必須將 MSMQ 啟動服務設定成當做網路服務執行，並新增在遠端電腦上佇列的網路服務存取。
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>使用自訂 MSMQ 繫結並啟用 ReceiveContext
 
-使用已啟用 <xref:System.ServiceModel.Channels.ReceiveContext> 的自訂 MSMQ 系結時，處理內送訊息會使用執行緒集區執行緒，因為原生 MSMQ 不支援非同步 <xref:System.ServiceModel.Channels.ReceiveContext> 接收的 i/o 完成。 這是因為處理這類訊息會使用 <xref:System.ServiceModel.Channels.ReceiveContext> 的內部交易，而 MSMQ 不支援非同步處理。 若要解決這個問題，您可以將 <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> 新增至端點，以強制執行同步處理，或將 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> 設定為1。
+當您使用自訂 MSMQ 系結並 <xref:System.ServiceModel.Channels.ReceiveContext> 啟用時，處理傳入訊息會使用執行緒集區執行緒，因為原生 MSMQ 不支援非同步接收的 i/o 完成 <xref:System.ServiceModel.Channels.ReceiveContext> 。 這是因為處理這類訊息會使用的內部交易 <xref:System.ServiceModel.Channels.ReceiveContext> ，而 MSMQ 不支援非同步處理。 若要解決這個問題，您可以將加入 <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> 至端點以強制執行同步處理，或將設 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> 為1。

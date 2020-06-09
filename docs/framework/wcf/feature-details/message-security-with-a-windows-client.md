@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: bcfeb5f863b1dd6cf9171a7fc53c8984ea68ecb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcb311523c6ec41b62f6e69fe6bc7635b9d49708
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595228"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
-此方案顯示受消息安全模式保護的 Windows 通信基礎 （WCF） 用戶端和伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
+此案例顯示由訊息安全性模式保護的 Windows Communication Foundation （WCF）用戶端和伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
   
- ![Windows 用戶端的消息安全性](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Windows 用戶端的訊息安全性](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "79184621"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>用戶端  
  下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
@@ -116,7 +116,7 @@ ms.locfileid: "79184621"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全性總覽](security-overview.md)
 - [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

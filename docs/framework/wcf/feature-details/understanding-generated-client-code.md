@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 6bc921355e54023ead3a308a7877ab609f868221
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f04b67ae13307fb3c2a2981204526880f55d58f1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968629"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595059"
 ---
 # <a name="understanding-generated-client-code"></a>了解產生的用戶端程式碼
-[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 會產生用戶端程式碼和用戶端應用程式組態檔，用於建置用戶端應用程式。 本主題將提供產生之程式碼範例的導覽，用於標準服務合約情節。 如需使用所產生的程式碼來建立用戶端應用程式的詳細資訊, 請參閱[WCF 用戶端總覽](../../../../docs/framework/wcf/wcf-client-overview.md)。  
+[ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) 會產生用戶端程式碼和用戶端應用程式組態檔，用於建置用戶端應用程式。 本主題將提供產生之程式碼範例的導覽，用於標準服務合約情節。 如需使用所產生的程式碼來建立用戶端應用程式的詳細資訊，請參閱[WCF 用戶端總覽](../wcf-client-overview.md)。  
   
-## <a name="overview"></a>總覽  
- 如果您使用 Visual Studio 產生專案的 Windows Communication Foundation (WCF) 用戶端類型, 通常不需要檢查產生的用戶端程式代碼。 如果您不是使用為您執行相同服務的開發環境，可以使用如 Svcutil.exe 等工具來產生用戶端程式碼，然後使用該程式碼來開發您的用戶端應用程式。  
+## <a name="overview"></a>概觀  
+ 如果您使用 Visual Studio 產生專案的 Windows Communication Foundation （WCF）用戶端類型，通常不需要檢查產生的用戶端程式代碼。 如果您不是使用為您執行相同服務的開發環境，可以使用如 Svcutil.exe 等工具來產生用戶端程式碼，然後使用該程式碼來開發您的用戶端應用程式。  
   
  由於 Svcutil.exe 有許多選項可修改產生的型別資訊，因此本主題不會討論所有的案例。 然而，下列標準工作包含找出產生的程式碼：  
   
@@ -39,14 +39,14 @@ ms.locfileid: "69968629"
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 您可以使用產生的服務合約介面<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>和類別, 建立用來叫用服務作業的 WCF 通道物件。 如需詳細資訊，請參閱[如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)。  
+ 您可以使用產生的服務合約介面和 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 類別，建立用來叫用服務作業的 WCF 通道物件。 如需詳細資訊，請參閱[如何：使用 ChannelFactory](how-to-use-the-channelfactory.md)。  
   
 ### <a name="finding-wcf-client-classes"></a>尋找 WCF 用戶端類別  
- 若要找出可執行您要使用之服務合約的 WCF 用戶端類別, 請搜尋的<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>延伸模組, 其中型別參數是您先前找到且會擴充該介面的服務合約介面。 下列程式碼範例會顯示型別 <xref:System.ServiceModel.ClientBase%601> 的 `ISampleService`類別。  
+ 若要找出可執行您要使用之服務合約的 WCF 用戶端類別，請搜尋的延伸模組 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> ，其中型別參數是您先前找到且會擴充該介面的服務合約介面。 下列程式碼範例會顯示型別 <xref:System.ServiceModel.ClientBase%601> 的 `ISampleService`類別。  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- 您可以使用這個 WCF 用戶端類別, 方法是建立它的新實例, 並呼叫它所執行的方法。 這些方法會叫用用於設計及設定互動的服務作業。 如需詳細資訊, 請參閱[WCF 用戶端總覽](../../../../docs/framework/wcf/wcf-client-overview.md)。  
+ 您可以使用這個 WCF 用戶端類別，方法是建立它的新實例，並呼叫它所執行的方法。 這些方法會叫用用於設計及設定互動的服務作業。 如需詳細資訊，請參閱[WCF 用戶端總覽](../wcf-client-overview.md)。  
   
 > [!NOTE]
 > 當 SvcUtil.exe 產生 WCF 用戶端類別時，會將 <xref:System.Diagnostics.DebuggerStepThroughAttribute> 加入至用戶端類別，防止偵錯工具逐步執行 WCF 用戶端類別。  
@@ -60,10 +60,10 @@ ms.locfileid: "69968629"
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- 在此情況下，資料型別是由用戶端上特定例外狀況擲回的詳細型別，其中詳細型別參數為 <xref:System.ServiceModel.FaultException%601> 的 `microsoft.wcf.documentation.SampleFault`。 如需資料類型的詳細資訊, 請參閱[指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 如需在用戶端中處理例外狀況的詳細資訊, 請參閱傳送[和接收錯誤](../../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
+ 在此情況下，資料型別是由用戶端上特定例外狀況擲回的詳細型別，其中詳細型別參數為 <xref:System.ServiceModel.FaultException%601> 的 `microsoft.wcf.documentation.SampleFault`。 如需資料類型的詳細資訊，請參閱[指定服務合約中的資料傳輸](specifying-data-transfer-in-service-contracts.md)。 如需在用戶端中處理例外狀況的詳細資訊，請參閱傳送[和接收錯誤](../sending-and-receiving-faults.md)。  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>尋找雙工服務的回呼合約  
- 如果您找出合約介面為其指定 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 屬性值的服務合約，該合約就會指定雙工合約。 雙工合約需要用戶端應用程式建立回呼類別，實作回呼合約並將該類別的執行個體傳遞至用來與服務通訊的 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 或 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> 。 如需雙工用戶端的詳細[資訊, 請參閱如何:使用雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)來存取服務。  
+ 如果您找出合約介面為其指定 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 屬性值的服務合約，該合約就會指定雙工合約。 雙工合約需要用戶端應用程式建立回呼類別，實作回呼合約並將該類別的執行個體傳遞至用來與服務通訊的 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 或 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> 。 如需雙工用戶端的詳細資訊，請參閱[如何：使用雙工合約來存取服務](how-to-access-services-with-a-duplex-contract.md)。  
   
  下列合約會指定型別 `SampleDuplexHelloCallback`的回呼合約。  
   
@@ -80,6 +80,6 @@ ms.locfileid: "69968629"
   
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)
+- [WCF 用戶端概觀](../wcf-client-overview.md)
