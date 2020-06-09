@@ -2,17 +2,17 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 6b7a72fdd814aa9d2e0f125cf4dbdaf63ba753e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8dba147ace7ada221b5d274cd233e4b9618835d9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585126"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-這個範例會示範如何建置自訂通訊協定通道，以便在工作階段管理使用 HTTP Cookie。 此通道支援 Windows 通信基礎 （WCF） 服務與 ASMX 用戶端之間或 WCF 用戶端和 ASMX 服務之間的通信。  
+這個範例會示範如何建置自訂通訊協定通道，以便在工作階段管理使用 HTTP Cookie。 此通道可讓 Windows Communication Foundation （WCF）服務和 .ASMX 用戶端之間，或 WCF 用戶端與 .ASMX 服務之間進行通訊。  
   
- 當用戶端在基於會話的 ASMX Web 服務中調用 Web 方法時，ASP.NET引擎執行以下操作：  
+ 當用戶端在以會話為基礎的 .ASMX Web 服務中呼叫 Web 方法時，ASP.NET 引擎會執行下列動作：  
   
 - 產生唯一 ID (工作階段 ID)。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "79183621"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -72,7 +72,7 @@ ms.locfileid: "79183621"
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- 在某人呼叫 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 方法而且訊息佇列中沒有任何訊息的情況下，通道會先等待指定的時間量，然後才自行關機。 這將清理為非 WCF 用戶端創建的會話通道。  
+ 在某人呼叫 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 方法而且訊息佇列中沒有任何訊息的情況下，通道會先等待指定的時間量，然後才自行關機。 這會清除針對非 WCF 用戶端所建立的會話通道。  
   
  我們會使用 `channelMapping` 來追蹤 `ReplySessionChannels`，而在所有已接受的通道關閉之前，不會關閉基礎 `innerChannel`。 使用這個方法時，`HttpCookieReplySessionChannel` 存在的時間會超過 `HttpCookieReplySessionChannelListener` 的存留期。 我們也不用擔心接聽程式會在執行時進行記憶體回收，因為接受的通道會透過 `OnClosed` 回呼參考其接聽程式。  
   
@@ -80,7 +80,7 @@ InputQueue<RequestContext> requestQueue;
  對應的用戶端通道位於 `HttpCookieSessionChannelFactory` 類別中。 在通道建立期間，通道處理站會使用 `HttpCookieRequestSessionChannel` 包裝內部要求。 `HttpCookieRequestSessionChannel` 類別則會將呼叫轉寄至基礎要求通道。 當用戶端關閉 Proxy 時，`HttpCookieRequestSessionChannel` 會將訊息傳送至服務，指出通道正在關閉。 因此，服務通道堆疊可順利關閉使用中的工作階段通道。  
   
 ## <a name="binding-and-binding-element"></a>繫結和繫結項目  
- 創建服務和用戶端通道後，下一步是將它們集成到 WCF 運行時。 通道通過綁定和繫結元素向 WCF 公開。 繫結是由一個或多個繫結元素所組成。 WCF 提供了多個系統定義的綁定;例如，基本 Http 綁定或 WSHttp 綁定。 `HttpCookieSessionBindingElement` 類別含有繫結項目的實作。 該類別會覆寫通道接聽程式和通道處理站的建立方法，以執行必要的通道接聽程式或通道處理站執行個體化 (Instantiation)。  
+ 建立服務和用戶端通道之後，下一個步驟是將它們整合到 WCF 執行時間。 通道會透過系結和繫結項目公開至 WCF。 繫結是由一個或多個繫結元素所組成。 WCF 提供數個系統定義的系結;例如，BasicHttpBinding 或 WSHttpBinding。 `HttpCookieSessionBindingElement` 類別含有繫結項目的實作。 該類別會覆寫通道接聽程式和通道處理站的建立方法，以執行必要的通道接聽程式或通道處理站執行個體化 (Instantiation)。  
   
  範例會在服務描述中使用原則判斷提示。 這可讓範例將其通道需求發行至使用服務的其他用戶端。 例如，這個繫結項目會發行原則判斷提示，讓可能的用戶端清楚繫結項目可支援工作階段。 由於範例會啟用繫結項目組態中的 `ExchangeTerminateMessage` 屬性，因此會新增必要的判斷提示，表示該服務支援額外的訊息交換動作以終止工作階段對話。 接著，用戶端就可以使用此動作。 下列 WSDL 程式碼會顯示從 `HttpCookieSessionBindingElement` 建立的原則判斷提示。  
   
@@ -130,7 +130,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>測試程式碼  
- 您可以在用戶端和服務目錄中，找到使用此範例傳輸的測試程式碼。 它由兩個測試組成 - 一個測試`allowCookies`使用一`true`個綁定，綁定與設置為用戶端。 第二個測試則會在繫結上啟用明確關閉 (使用終止訊息交換)。  
+ 您可以在用戶端和服務目錄中，找到使用此範例傳輸的測試程式碼。 其中包含兩個測試：一個測試會在 `allowCookies` 用戶端上使用設定為的系結 `true` 。 第二個測試則會在繫結上啟用明確關閉 (使用終止訊息交換)。  
   
  當您執行範例時，您應該會看到下列輸出：  
   
@@ -155,14 +155,14 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 使用以下命令安裝ASP.NET 4.0。  
+1. 使用下列命令安裝 ASP.NET 4.0。  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3. 要生成解決方案，請按照生成 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。  
+3. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。  
   
-4. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
+4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  

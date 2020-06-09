@@ -2,12 +2,12 @@
 title: 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 6971a70e633f7768c165ee6171fd83f0eefc4183
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: acdb820206dee83ff44152a5562642a5c685d648
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425127"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584073"
 ---
 # <a name="token-provider"></a>權杖提供者
 這個範例會示範如何實作自訂權杖提供者。 Windows Communication Foundation （WCF）中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 也隨附于 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：
@@ -246,9 +246,9 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
+2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 

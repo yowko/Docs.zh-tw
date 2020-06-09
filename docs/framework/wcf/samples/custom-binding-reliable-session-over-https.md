@@ -2,12 +2,12 @@
 title: HTTPS 上的自訂繫結可靠工作階段
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: c31f8a5b4e3771f6c6e8de41e6b098474c34cf77
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: ab2dd4725879ba969afdae8a6423a920a9786125
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144860"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585294"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS 上的自訂繫結可靠工作階段
 這個範例示範透過可靠工作階段來使用 SSL 傳輸安全性。 可靠工作階段會實作 WS-Reliable Messaging 通訊協定。 您可以經由在可靠工作階段上撰寫 WS-Security 來建立安全可靠工作階段。 但有時候，您可以改成選擇搭配 SSL 來使用 HTTP 傳輸安全性。  
@@ -24,7 +24,7 @@ ms.locfileid: "84144860"
 ## <a name="sample-details"></a>範例詳細資料  
  SSL 會確定封包本身的安全性。 值得注意的是，這種做法不同於使用 WS-Secure Conversation 來保護可靠工作階段。  
   
- 若要在 HTTPS 上使用可靠工作階段，您必須建立自訂繫結。 這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 自訂系結是使用可靠會話繫結項目和所建立 [\<httpsTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) 。 下列組態是使用自訂繫結。  
+ 若要在 HTTPS 上使用可靠工作階段，您必須建立自訂繫結。 這個範例是以執行計算機服務的[消費者入門](getting-started-sample.md)為基礎。 自訂系結是使用可靠會話繫結項目和所建立 [\<httpsTransport>](../../configure-apps/file-schema/wcf/httpstransport.md) 。 下列組態是使用自訂繫結。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -70,7 +70,7 @@ ms.locfileid: "84144860"
 </configuration>  
 ```  
   
- 範例中的程式碼與[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)服務相同。 您必須建立一個憑證並使用 [Web 伺服器憑證精靈] 指派憑證，再建置及執行範例。 組態檔設定中的端點定義與繫結定義會啟用自訂繫結，如同下列用戶端的範例組態所示。  
+ 範例中的程式碼與[消費者入門](getting-started-sample.md)服務相同。 您必須建立一個憑證並使用 [Web 伺服器憑證精靈] 指派憑證，再建置及執行範例。 組態檔設定中的端點定義與繫結定義會啟用自訂繫結，如同下列用戶端的範例組態所示。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -128,10 +128,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3. 請確定您已執行[Internet Information Services （IIS）伺服器憑證安裝指示](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
+3. 請確定您已執行[Internet Information Services （IIS）伺服器憑證安裝指示](iis-server-certificate-installation-instructions.md)。  
   
-4. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+4. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。  
   
-5. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+5. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  

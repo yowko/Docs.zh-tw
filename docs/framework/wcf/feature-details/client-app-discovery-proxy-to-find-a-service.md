@@ -2,15 +2,15 @@
 title: HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1e770531a196d73dfc7d93bf70ed432df343c88
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185376"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587010"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>HOW TO：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務
-本主題是三個主題中的第三個，討論如何實作探索 Proxy。 在上一個主題"[如何：實現一個可發現的服務，註冊到發現代理](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)"中，您實現了一個WCF服務，該服務向發現代理註冊。 在本主題中，您將創建一個使用發現代理查找 WCF 服務的 WCF 用戶端。  
+本主題是三個主題中的第三個，討論如何實作探索 Proxy。 在上一個主題中，[如何：執行向探索 Proxy 註冊的可探索服務](discoverable-service-that-registers-with-the-discovery-proxy.md)，您已實作為向探索 proxy 註冊其本身的 WCF 服務。 在本主題中，您會建立使用探索 proxy 來尋找 WCF 服務的 WCF 用戶端。  
   
 ### <a name="implement-the-client"></a>實作用戶端  
   
@@ -101,7 +101,7 @@ ms.locfileid: "79185376"
     }  
     ```  
   
- 您已經完成實作用戶端應用程式。 繼續：[測試發現代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)。  
+ 您已經完成實作用戶端應用程式。 繼續進行[如何：測試探索 Proxy](how-to-test-the-discovery-proxy.md)。  
   
 ## <a name="example"></a>範例  
  以下是這個主題的完整程式碼清單。  
@@ -281,8 +281,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [HOW TO：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [HOW TO：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [WCF 探索概觀](wcf-discovery-overview.md)
+- [HOW TO：實作探索 Proxy](how-to-implement-a-discovery-proxy.md)
+- [HOW TO：實作以探索 Proxy 註冊的可探索服務](discoverable-service-that-registers-with-the-discovery-proxy.md)

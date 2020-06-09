@@ -1,23 +1,24 @@
 ---
 title: 非同步程式設計模式
+description: 深入瞭解以工作為基礎的非同步模式（點）、事件架構非同步模式（EAP），& .NET 中的非同步程式設計模型（APM）。
 ms.date: 10/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd4d44d8de8a64be82e9ce6af593a86719b59fcf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160049"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583501"
 ---
 # <a name="asynchronous-programming-patterns"></a>非同步程式設計模式
 
 .NET 提供三種模式來執行非同步作業：  
 
-- **基於任務的非同步模式 （TAP），** 它使用單個方法表示非同步作業的啟動和完成。 TAP 是在 .NET Framework 4 中引進。 **它是在 .NET 中進行非同步程式設計的建議方法。** C# 中的 [async](../../csharp/language-reference/keywords/async.md) 與 [await](../../csharp/language-reference/operators/await.md) 關鍵字，以及 Visual Basic 中的 [Async](../../visual-basic/language-reference/modifiers/async.md) 與 [Await](../../visual-basic/language-reference/operators/await-operator.md) 運算子，都加入對 TAP 的語言支援。 如需詳細資訊，請參閱[以工作為基礎的非同步模式 (TAP)](task-based-asynchronous-pattern-tap.md)  
+- 以工作為**基礎的非同步模式（** 點一下），其使用單一方法來代表非同步作業的起始和完成。 TAP 是在 .NET Framework 4 中引進。 **它是在 .NET 中進行非同步程式設計的建議方法。** C# 中的 [async](../../csharp/language-reference/keywords/async.md) 與 [await](../../csharp/language-reference/operators/await.md) 關鍵字，以及 Visual Basic 中的 [Async](../../visual-basic/language-reference/modifiers/async.md) 與 [Await](../../visual-basic/language-reference/operators/await-operator.md) 運算子，都加入對 TAP 的語言支援。 如需詳細資訊，請參閱[以工作為基礎的非同步模式 (TAP)](task-based-asynchronous-pattern-tap.md)  
 
 - **事件架構非同步模式 (EAP)**，這是用於提供非同步行為的事件架構傳統模型。 它需要一個具有 `Async` 尾碼的方法、一或多個事件，事件處理常式委派類型，以及 `EventArg` 衍生類型。 在 .NET Framework 2.0 中採用了 EAP。 在新的程式開發時，不再建議使用它。 如需詳細資訊，請參閱[事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)。  
 
@@ -65,7 +66,7 @@ public class MyClass
 }  
 ```  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [深入了解非同步](../async-in-depth.md)
 - [C# 中的非同步程式設計](../../csharp/async.md)

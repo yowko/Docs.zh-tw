@@ -1,5 +1,6 @@
 ---
 title: 使用以工作為基礎的非同步模式
+description: 瞭解如何在使用非同步作業時，使用以工作為基礎的非同步模式（點按）。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: 64a9b963ce6a8554a581f9d5d0f77cf4edfa71b4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2553a573a9827b8f9232ddab132bd9331586a0f1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289456"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583826"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用以工作為基礎的非同步模式
 
@@ -833,7 +834,7 @@ private static void Produce(int data)
 > [!NOTE]
 > .NET Framework 4.5 有提供 <xref:System.Threading.Tasks.Dataflow> 命名空間，可透過 **NuGet** 取得。 若要安裝包含 <xref:System.Threading.Tasks.Dataflow> 命名空間的組件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]****，然後在線上搜尋 Microsoft.Tpl.Dataflow 套件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工作式非同步模式 (TAP)](task-based-asynchronous-pattern-tap.md)
 - [實作以工作為基礎的非同步模式](implementing-the-task-based-asynchronous-pattern.md)
