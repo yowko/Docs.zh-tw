@@ -1,13 +1,13 @@
 ---
 title: 函式
-description: 瞭解中的F#函式， F#以及如何支援一般功能程式設計結構。
+description: '瞭解 F # 中的函式，以及 F # 如何支援一般功能程式設計結構。'
 ms.date: 05/16/2016
-ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e49183e0634dee1750757abadbfe9e9c824f51a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423947"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596470"
 ---
 # <a name="functions"></a>函式
 
@@ -36,9 +36,9 @@ let f x = x + 1
 
 在上述範例中，函式名稱為 `f`，引數是類型為 `int` 的 `x`，函式主體為 `x + 1`，而傳回值的類型為 `int`。
 
-函式可以標記為 `inline`。 如需 `inline` 的資訊，請參閱[內嵌函式](../functions/inline-functions.md)。
+函式可以標記為 `inline`。 如需 `inline` 的資訊，請參閱[內嵌函式](inline-functions.md)。
 
-## <a name="scope"></a>範圍
+## <a name="scope"></a>影響範圍
 
 在模組範圍以外的任何範圍層級，重複使用值或函式名稱並非錯誤。 若重複使用名稱，後面宣告的名稱會遮蔽前面宣告的名稱。 不過，在模組中的最上層範圍，名稱必須是唯一名稱。 例如，下列程式碼出現在模組範圍時會產生錯誤，但在函式內時則不會：
 
@@ -102,7 +102,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="partial-application-of-arguments"></a>部分套用引數
 
-若您提供的引數數目比指定的數目更少，則必須建立需要其餘引數的新函式。 這個處理引數的方法稱為「局部調用」，是 F# 這類函式程式設計語言的特色。 例如，假設您要使用兩種大小的管子，其中一個半徑為 **2.0**，另一個半徑為 **3.0**。 您可以建立會判斷管子容量的函式，如下所示：
+若您提供的引數數目比指定的數目更少，則必須建立需要其餘引數的新函式。 這個處理引數的方法稱為「局部調用」**，是 F# 這類函式程式設計語言的特色。 例如，假設您要使用兩種大小的管子，其中一個半徑為 **2.0**，另一個半徑為 **3.0**。 您可以建立會判斷管子容量的函式，如下所示：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
@@ -112,7 +112,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="recursive-functions"></a>遞迴函式
 
-「遞迴函式」是會自我呼叫的函式。 您必須在 **let** 關鍵字後面指定 **rec** 關鍵字來使用遞迴函式。 請從函式主體中叫用遞迴函式，就像叫用任何函式呼叫一樣。 下列遞迴函式會計算<sup>第</sup>n 個的斐波上數位。 Fibonacci 數字序列自古聞名，此序列中的每個連續數字都是前兩個數字的總和。
+「遞迴函式」** 是會自我呼叫的函式。 您必須在 **let** 關鍵字後面指定 **rec** 關鍵字來使用遞迴函式。 請從函式主體中叫用遞迴函式，就像叫用任何函式呼叫一樣。 下列遞迴函式會計算*n*<sup>第</sup>n 個的斐波上數位。 Fibonacci 數字序列自古聞名，此序列中的每個連續數字都是前兩個數字的總和。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -120,7 +120,7 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="function-values"></a>函式值
 
-在 F# 中，所有函式都視為值，而實際上它們稱為「函式值」。 由於函式都是值，因此可以作為其他函式的引數，或在其他會用到這些值的內容中使用。 以下是接受函式值作為引數的函式範例：
+在 F# 中，所有函式都視為值，而實際上它們稱為「函式值」**。 由於函式都是值，因此可以作為其他函式的引數，或在其他會用到這些值的內容中使用。 以下是接受函式值作為引數的函式範例：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
@@ -138,11 +138,11 @@ let vol = cylinderVolume 2.0 3.0
 
 ## <a name="lambda-expressions"></a>Lambda 運算式
 
-「Lambda 運算式」是不具名函式。 在上述範例中，您可以使用 Lambda 運算式，而不定義具名函式 **increment** 和 **mul**，如下所示：
+「Lambda 運算式」** 是不具名函式。 在上述範例中，您可以使用 Lambda 運算式，而不定義具名函式 **increment** 和 **mul**，如下所示：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-您可以透過 `fun` 關鍵字定義 Lambda 運算式。 Lambda 運算式類似函式定義，但是它使用 `->` 語彙基元來分隔引數清單與函式主體，而不是 `=` 語彙基元。 如同一般函式定義，您可以推斷或明確指定引數類型，而 Lambda 運算式的傳回型別是從主體中最後一個運算式的類型來推斷。 如需詳細資訊，請參閱 [Lambda 運算式：`fun` 關鍵字](../functions/lambda-expressions-the-fun-keyword.md)。
+您可以透過 `fun` 關鍵字定義 Lambda 運算式。 Lambda 運算式類似函式定義，但是它使用 `->` 語彙基元來分隔引數清單與函式主體，而不是 `=` 語彙基元。 如同一般函式定義，您可以推斷或明確指定引數類型，而 Lambda 運算式的傳回型別是從主體中最後一個運算式的類型來推斷。 如需詳細資訊，請參閱 [Lambda 運算式：`fun` 關鍵字](lambda-expressions-the-fun-keyword.md)。
 
 ## <a name="function-composition-and-pipelining"></a>函式組合和管線
 
@@ -205,4 +205,4 @@ let result4 = Pipeline2 2
 ## <a name="see-also"></a>請參閱
 
 - [值](../values/index.md)
-- [F# 語言參考](../index.md)
+- [F # 語言參考](../index.md)

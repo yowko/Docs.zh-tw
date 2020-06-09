@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 ms.date: 03/30/2017
 ms.assetid: 2dbe34c5-57c7-4b64-9257-63021911d03c
-ms.openlocfilehash: 22992b4dfad4b4867adda0fcbbd8ecc5eb67d87e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd2a0b67ec140aa2e6fe1abad8e85c0206abd8ea
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997603"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579017"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileoutcometimeout"></a>Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 WS-AT 通訊協定服務在等待來自變動參與者的結果訊息回應時逾時。 如果參與者傳回則交易結果可能不確定。  
@@ -18,8 +18,8 @@ WS-AT 通訊協定服務在等待來自變動參與者的結果訊息回應時�
 ## <a name="troubleshooting"></a>疑難排解  
  請確定所有的「變動」參與者都能夠在指定時間內回應。 預設時間週期為 180 秒。  如果時間不夠的話，請增加 WS-AT 的 `VolatileOutcomeDelay` 計時器原則。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

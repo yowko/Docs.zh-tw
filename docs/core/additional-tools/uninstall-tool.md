@@ -3,12 +3,12 @@ title: 卸載工具
 description: 概述 .NET Core 卸載工具，這是一個引導式工具，可讓您控制 .NET Core Sdk 和執行時間的清理。
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: 4e70fd3438b582bd5a0d6a52d7e58ed5e07f8811
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590795"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 解除安裝工具
 
@@ -27,7 +27,7 @@ ms.locfileid: "84446902"
 
 ## <a name="install-the-tool"></a>安裝工具
 
-您可以從[這裡](https://aka.ms/dotnet-core-uninstall-tool)下載 .Net Core 卸載工具，並在[dotnet/cli-實驗室](https://github.com/dotnet/cli-lab)GitHub 存放庫中找到原始程式碼。
+您可以從[工具的 [版本] 頁面](https://aka.ms/dotnet-core-uninstall-tool)下載 .Net Core 卸載工具，並在[dotnet/cli-實驗室](https://github.com/dotnet/cli-lab)GitHub 存放庫中尋找原始程式碼。
 
 > [!NOTE]
 > 此工具需要提高許可權，才能卸載 .NET Core Sdk 和執行時間。 因此，它應該安裝在受寫入保護的目錄中，例如 Windows 上的*C:\Program*檔案或 macOS 上的 */usr/local/bin* 。 另請參閱[dotnet 命令的更高存取權](../tools/elevated-access.md)。 如需詳細資訊，請參閱[詳細的安裝指示](https://aka.ms/dotnet-core-uninstall-tool)。
@@ -78,7 +78,7 @@ dotnet-core-uninstall list [options]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `normal`。
+  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `normal`。
 
 * **`--x64`**
 
@@ -100,7 +100,7 @@ dotnet-core-uninstall list [options]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `normal`。
+  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `normal`。
   
 ---
 
@@ -203,7 +203,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `normal`。
+  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `normal`。
 
 * **`--x64`**
 
@@ -265,7 +265,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `normal`。
+  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `normal`。
   
 * **`--force`** 強制移除 Visual Studio 或 Sdk 可能使用的版本。
 
@@ -383,7 +383,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `normal`。
+  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `normal`。
 
 * **`--x64`**
 
@@ -447,7 +447,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 * **`-v, --verbosity <LEVEL>`**
 
-  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `normal`。
+  設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `normal`。
 
 * **`-y, --yes`** 執行命令，而不需要 Y/N 確認。
   
@@ -518,7 +518,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 1. 開啟 [新增或移除程式]****。
 2. 搜尋 `Microsoft .NET Core SDK Uninstall Tool`。
-3. 選取 [解除安裝]****。
+3. 選取 [解除安裝]。
 
 ## <a name="macos"></a>[macOS](#tab/macos)
 

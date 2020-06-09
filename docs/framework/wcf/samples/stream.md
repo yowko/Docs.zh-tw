@@ -1,21 +1,21 @@
 ---
-title: STREAM
+title: 資料流
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: f22339ca298f053fa636cc37281276051c70f6d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a482c27dfd0970b319a605a480b5f54689e42d48
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183324"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589834"
 ---
-# <a name="stream"></a>STREAM
+# <a name="stream"></a>資料流
 這個資料流範例將示範資料流傳輸模式通訊的使用。 服務會公開數個傳送和接收資料流的作業。 這個範例會自我裝載。 用戶端和服務都是主控台程式。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
- Windows 通信基礎 （WCF） 可以在兩種傳輸模式下進行通信- 緩衝或流式處理。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
+ Windows Communication Foundation （WCF）可以用兩種傳輸模式（已緩衝處理或串流）進行通訊。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
   
 ## <a name="streaming-and-service-contracts"></a>資料流和服務合約  
  設計服務合約時，資料流是一項需要考慮的重點。 如果作業會接收或傳回大量的資料，您應該考慮透過資料流處理這筆資料，以避免因為要緩衝輸入或輸出訊息而佔用太多記憶體。 若要以資料流方式處理資料，存放該資料的參數必須是訊息中的唯一參數。 例如，如果輸入訊息是要處理成資料流的訊息，這項處理作業就必須剛好只有一個輸入參數。 同樣地，如果要將輸出訊息處理成資料流，這項作業也必須剛好只有一個輸出參數或傳回值。 不論是何種情況，參數或傳回值型別都必須是 `Stream`、`Message` 或 `IXmlSerializable`。 下列是這個資料流範例中使用的服務合約。  
@@ -167,11 +167,11 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。  
   
-3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
   
 > [!NOTE]
 > 如果您使用 Svcutil.exe 重新產生這個範例的組態，請務必修改用戶端組態中的端點名稱，以符合用戶端程式碼。  
@@ -181,6 +181,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  

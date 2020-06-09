@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: bfe6dcfe6850ee17a7bbb59f3a6ccad6c3c3e7d7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: d020f3e97023d07abb572d30dd53896bfec1da46
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964235"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597016"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>HOW TO：取得憑證 (WCF)
 若要使用任何使用 x.509 憑證的 Windows Communication Foundation （WCF）功能，您只需要先取得憑證。  
   
 ### <a name="to-obtain-an-x509-certificate"></a>取得 X.509 憑證  
   
-1. 選擇下列其中一項：  
+1. 選擇下列其中之一：  
   
     - 向憑證授權單位 (例如 VeriSign, Inc) 購買憑證。  
   
@@ -29,5 +29,5 @@ ms.locfileid: "75964235"
   
 ## <a name="see-also"></a>請參閱
 
-- [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [如何：建立開發時要使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [Working with Certificates](working-with-certificates.md)
+- [HOW TO：建立開發時要使用的暫時憑證](how-to-create-temporary-certificates-for-use-during-development.md)

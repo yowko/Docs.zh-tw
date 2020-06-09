@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: 000cc13bc6e80914e9a21b6ee60e91127809ee08
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307081"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579108"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -26,13 +26,13 @@ ms.locfileid: "84307081"
 
 共用類別或結構的成員，可將它提供給每個實例，而不是*非共用*，其中每個實例都會保留自己的複本。 例如，如果變數的值適用于整個應用程式，這就很有用。 如果您將該變數宣告為 `Shared` ，則所有實例都會存取相同的儲存位置，而如果一個實例變更變數的值，則所有實例都會存取更新的值。
 
-共用不會改變成員的存取層級。 例如，類別成員可以是共用和私用（只能從類別記憶體取），或非共用和公用。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
+共用不會改變成員的存取層級。 例如，類別成員可以是共用和私用（只能從類別記憶體取），或非共用和公用。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../programming-guide/language-features/declared-elements/access-levels.md)。
 
 ## <a name="rules"></a>規則
 
 - **宣告內容。** 您只能在模組層級使用 `Shared`。 這表示元素的宣告內容 `Shared` 必須是類別或結構，而且不能是原始程式檔、命名空間或程式。
 
-- **結合的修飾詞。** 您不能 `Shared` 在相同的宣告[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)中，將[覆寫](../../../visual-basic/language-reference/modifiers/overrides.md)、可覆寫、 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)、 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)或[Static](../../../visual-basic/language-reference/modifiers/static.md)指定在一起。
+- **結合的修飾詞。** 您不能 `Shared` 在相同的宣告[Overridable](overridable.md)中，將[覆寫](overrides.md)、可覆寫、 [NotOverridable](notoverridable.md)、 [MustOverride](mustoverride.md)或[Static](static.md)指定在一起。
 
 - **正在.** 您可以存取共用專案，方法是以其類別或結構名稱加以限定，而不是使用其類別或結構之特定實例的變數名稱。 您甚至不需要建立類別或結構的實例來存取其共用成員。
 
@@ -42,7 +42,7 @@ ms.locfileid: "84307081"
      If Double.IsNaN(result) Then Console.WriteLine("Result is mathematically undefined.")
      ```
 
-- **隱含共用。** 您不能 `Shared` 在[Const 語句](../../../visual-basic/language-reference/statements/const-statement.md)中使用修飾詞，但會隱含地共用常數。 同樣地，您無法將模組或介面的成員宣告為 `Shared` ，但它們會隱含共用。
+- **隱含共用。** 您不能 `Shared` 在[Const 語句](../statements/const-statement.md)中使用修飾詞，但會隱含地共用常數。 同樣地，您無法將模組或介面的成員宣告為 `Shared` ，但它們會隱含共用。
 
 ## <a name="behavior"></a>行為
 
@@ -93,7 +93,7 @@ ms.locfileid: "84307081"
 - [Property Statement](../statements/property-statement.md)
 - [Sub 陳述式](../statements/sub-statement.md)
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Shadows](shadows.md)
 - [靜態](static.md)

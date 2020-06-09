@@ -1,14 +1,14 @@
 ---
 title: 使用 ML.NET CLI 自動化模型定型
 description: 探索如何使用 ML.NET CLI 工具，從命令列自動定型最佳模型。
-ms.date: 12/17/2019
+ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589654"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>使用 ML.NET CLI 自動化模型定型
 
@@ -33,24 +33,24 @@ ML.NET CLI 是一種[.Net Core 工具](../core/tools/global-tools.md)。 安裝�
 
 ML.NET CLI 目前支援的 ML 工作如下：
 
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-- 未來：其他機器學習工作，例如 `recommendation`、`ranking`、`anomaly-detection`、`clustering`
+- 分類（二進位和多類別）
+- 迴歸
+- 建議
+- 未來：其他機器學習工作，例如影像分類、排名、異常偵測、叢集
 
-使用範例：
+使用方式範例（分類案例）：
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![image](media/automate-training-with-cli/cli-model-generation.gif)
+![image](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 您可以在*Windows PowerShell*、 *macOS/Linux BASH*或*windows CMD*上以相同的方式執行它。 不過，表格式自動完成 (參數建議) 不適用於 *Windows CMD*。
 
 ## <a name="output-assets-generated"></a>產生的輸出資產
 
-CLI `auto-train` 命令會在輸出資料夾中產生下列資產：
+CLI 中的 ML 工作命令會在輸出檔案夾中產生下列資產：
 
 - 序列化模型 .zip (「最佳模型」) 準備好用於執行預測。
 - C# 解決方案具有：
@@ -68,23 +68,15 @@ CLI `auto-train` 命令會在輸出資料夾中產生下列資產：
 
 這裡的計量是依 ML 工作分組，因此您可以瞭解自動產生的「最佳模型」的品質。
 
-### <a name="metrics-for-binary-classification-models"></a>二元分類模型的計量
+### <a name="metrics-for-classification-models"></a>分類模型的計量
 
-下列顯示 CLI 找到之前五個模型的二元分類 ML 工作計量清單：
-
-![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
-
-精確度是分類問題的熱門計量，不過，精確度不一定是最佳的計量，可以從中選取最佳的模型，如下列參考中所述。 在某些情況下，您需要評估模型品質和其他計量。
-
-若要探索及瞭解 CLI 所輸出的計量，請參閱[二元分類的評估度量](resources/metrics.md#evaluation-metrics-for-binary-classification)。
-
-### <a name="metrics-for-multi-class-classification-models"></a>多元分類模型的計量
-
-下列顯示 CLI 找到之前五個模型的多元分類 ML 工作計量清單：
+以下顯示 CLI 找到的前五個模型的分類計量清單：
 
 ![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-若要探索及瞭解 CLI 所輸出的計量，請參閱[多元分類的評估度量](resources/metrics.md#evaluation-metrics-for-multi-class-classification)。
+ 精確度是分類問題的熱門計量，不過，精確度不一定是最佳的計量，可以從中選取最佳的模型，如下列參考中所述。 在某些情況下，您需要評估模型品質和其他計量。
+
+若要探索及瞭解 CLI 所輸出的計量，請參閱[分類的評估度量](resources/metrics.md#evaluation-metrics-for-multi-class-classification)。
 
 ### <a name="metrics-for-regression-and-recommendation-models"></a>回歸和建議模型的計量
 
@@ -96,7 +88,7 @@ CLI `auto-train` 命令會在輸出資料夾中產生下列資產：
 
 若要探索及瞭解 CLI 所輸出的計量，請參閱[回歸的評估計量](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何安裝 ML.NET CLI 工具](how-to-guides/install-ml-net-cli.md)
 - [教學課程：使用 ML.NET CLI 來分析情感](tutorials/sentiment-analysis-cli.md)

@@ -2,21 +2,21 @@
 title: System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased
 ms.date: 03/30/2017
 ms.assetid: 21922b4d-9a83-45cb-a6fc-5b1c2f9a2c17
-ms.openlocfilehash: 9f3a26fd4cc817d1e8938401b3fbf0bdf894b217
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 649d576fdf68df2570da46f63393a1fa7f32125f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939291"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84588323"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinstancereleased"></a>System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased
 System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased  
   
 ## <a name="description"></a>描述  
- ComPlus:釋放的執行個體。  
+ ComPlus：已釋放執行個體。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

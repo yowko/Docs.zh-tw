@@ -2,12 +2,12 @@
 title: 網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 300d689925d60998ef475ad63f3878bf6d066850
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 301a10c615a13a42e1a6e1b89d2724476ca4fbae
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989859"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594656"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 若要執行能與網際網路資訊服務 (IIS) 安全通訊的範例，您必須建立並安裝伺服器憑證。  
@@ -34,9 +34,9 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 5. 完成精靈。 選取選項以指派憑證。 從顯示的憑證清單中，選取 ServiceModelSamples-HTTPS-Server 憑證。  
   
-     ![IIS 憑證嚮導](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
+     ![IIS 憑證精靈](media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6. 使用 HTTPS 位址`https://localhost/servicemodelsamples/service.svc`，在瀏覽器中測試服務的存取權。  
+6. 使用 HTTPS 位址，在瀏覽器中測試服務的存取權 `https://localhost/servicemodelsamples/service.svc` 。  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>如果先前是使用 Httpcfg.exe 設定 SSL  
   
@@ -63,9 +63,9 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 4. 從 [**類型**] 下拉式清單中選取 [ **HTTPS** ]。  
   
-5. 從 [ **SSL 憑證**] 下拉式清單中選取 [ **ServiceModelSamples-HTTPS-伺服器**]，然後按一下 **[確定]** 。  
+5. 從 [ **SSL 憑證**] 下拉式清單中選取 [ **ServiceModelSamples-HTTPS-伺服器**]，然後按一下 **[確定]**。  
   
-6. 使用 HTTPS 位址`https://localhost/servicemodelsamples/service.svc`，在瀏覽器中測試服務的存取權。  
+6. 使用 HTTPS 位址，在瀏覽器中測試服務的存取權 `https://localhost/servicemodelsamples/service.svc` 。  
   
 > [!NOTE]
 > 因為您剛剛安裝的測試憑證不是受信任的憑證，您在瀏覽使用這個憑證保護的本機網址時，可能會碰到其他 Internet Explorer 安全性警告。  

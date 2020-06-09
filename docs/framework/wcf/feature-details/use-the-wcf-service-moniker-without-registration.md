@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: c08fc362694469560eb7368eb5e536c08ec19bdf
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f69314948a0e0a69e49ec148f94572f17d0b8e3c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975989"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595046"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>HOW TO：使用 Windows Communication Foundation 服務 Moniker 且不註冊
 若要連接到 Windows Communication Foundation （WCF）服務並與之通訊，WCF 用戶端應用程式必須具有服務位址、系結設定和服務合約的詳細資料。  
@@ -59,4 +59,4 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
   
 ## <a name="see-also"></a>請參閱
 
-- [如何：註冊和設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+- [如何：註冊和設定服務 Moniker](how-to-register-and-configure-a-service-moniker.md)
