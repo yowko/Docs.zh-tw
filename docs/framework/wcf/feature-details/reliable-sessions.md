@@ -9,38 +9,38 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-ms.openlocfilehash: 9a2cd06c4c5a73d9fb5c4c7f09632e10c3eb0d87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 910ad952192243c6aa8a79417ad711d8c2a4ba2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991155"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590536"
 ---
 # <a name="reliable-sessions"></a>可靠工作階段
 
-本章節說明哪些 Windows Communication Foundation (WCF) 可靠的工作階段、 其用途，如何以及何時要使用其中一個，哪些繫結組態支援它，而最佳做法的指標。 下表將針對本節重點與相關主題的詳細資料提供摘要說明。
+本節說明什麼是 Windows Communication Foundation （WCF）可靠會話、用於哪些用途、使用方式和時機、哪些系結設定支援它，以及最佳做法的指標。 下表將針對本節重點與相關主題的詳細資料提供摘要說明。
 
-可靠工作階段 WCF 提供的功能，確保端點之間傳送的訊息會透過 SOAP 或傳輸媒介傳輸和傳遞一次，並選擇性地依照傳送的順序相同。
+可靠會話 WCF 提供的功能，可確保端點之間傳送的訊息會跨 SOAP 或傳輸媒介傳輸，而且只會傳遞一次，並選擇性地以其傳送的相同順序傳送。
 
-若要使用的 WCF 應用程式中的可靠工作階段，請使用其中一個系統提供繫結在 WCF 中支援可靠工作階段，根據預設，或選擇，或是建立您自己自訂的繫結支援工作階段。
+若要使用與 WCF 應用程式的可靠會話，請在 WCF 中使用其中一個系統提供的系結，此系結預設會支援可靠會話，或做為選項，或建立您自己的自訂系結來支援會話。
 
 ## <a name="in-this-section"></a>本節內容
 
-[可靠工作階段概觀](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)說明可靠工作階段，使用支援可靠工作階段的不同繫結的時機，以及其運作方式。
+[可靠會話總覽](reliable-sessions-overview.md)描述可靠會話、使用時機、支援可靠會話的不同系結，以及它們的工作方式。
 
-[如何：Exchange 訊息在可靠工作階段](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)說明如何透過使用自訂繫結組態中指定的 HTTP 建立可靠工作階段。
+[如何：在可靠的會話內交換訊息](how-to-exchange-messages-within-a-reliable-session.md)說明如何使用設定中指定的自訂系結，透過 HTTP 建立可靠會話。
 
-[如何：保護可靠工作階段內的訊息](../../../../docs/framework/wcf/feature-details/how-to-secure-messages-within-reliable-sessions.md)說明如何保護可靠工作階段。
+[如何：保護可靠會話內的訊息](how-to-secure-messages-within-reliable-sessions.md)說明如何保護可靠會話的安全。
 
-[如何：使用 HTTPS 建立自訂可靠工作階段繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)說明如何透過 HTTPS 建立可靠工作階段。
+How [to：使用 HTTPS 建立自訂可靠會話](how-to-create-a-custom-reliable-session-binding-with-https.md)系結說明如何透過 HTTPS 建立可靠會話。
 
-[最佳做法的可靠工作階段](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md)說明一些與使用可靠工作階段相關聯的最佳作法。
+[可靠會話的最佳做法](best-practices-for-reliable-sessions.md)說明一些與使用可靠會話相關聯的最佳作法。
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 <xref:System.ServiceModel.ReliableSession>
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [佇列和可靠工作階段](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)
-- [工作階段、執行個體與並行](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
+- [佇列和可靠工作階段](queues-and-reliable-sessions.md)
+- [工作階段、執行個體與並行](sessions-instancing-and-concurrency.md)

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 69db887bf8e7b51c4450c04bd1a08d3d952e84f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643564"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596964"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>HOW TO：使用 X.509 憑證來確保服務安全
-保護使用 X.509 憑證的服務是大部分繫結 Windows Communication Foundation (WCF) 中使用的基本技術。 此主題會介紹使用 X.509 憑證設定自我主控服務的步驟。  
+使用 x.509 憑證保護服務是 Windows Communication Foundation （WCF）中大部分系結使用的基本技術。 此主題會介紹使用 X.509 憑證設定自我主控服務的步驟。  
   
- 必要條件是能夠用來驗證伺服器的有效憑證。 憑證必須透過受信任的憑證授權單位發行至伺服器。 如果憑證無效，任何嘗試使用服務的用戶端都不會信任該服務，因此無法建立連線。 如需使用憑證的詳細資訊，請參閱[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 必要條件是能夠用來驗證伺服器的有效憑證。 憑證必須透過受信任的憑證授權單位發行至伺服器。 如果憑證無效，任何嘗試使用服務的用戶端都不會信任該服務，因此無法建立連線。 如需使用憑證的詳細資訊，請參閱使用[憑證](working-with-certificates.md)。  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>使用程式碼搭配憑證設定服務  
   
-1. 建立服務合約以及實作的服務。 如需詳細資訊，請參閱 <<c0> [ 設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)。  
+1. 建立服務合約以及實作的服務。 如需詳細資訊，請參閱[設計和執行服務](../designing-and-implementing-services.md)。  
   
 2. 建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，並將其安全性模式設定為 <xref:System.ServiceModel.SecurityMode.Message>，如下列程式碼所示。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "64643564"
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4. 建立服務基底位址之 <xref:System.Uri> 類別的執行個體。 因為`WSHttpBinding`使用 HTTP 傳輸，統一資源識別元 (URI) 必須以該結構描述中，開頭或 Windows Communication Foundation (WCF) 將會擲回例外狀況，在服務開啟時。  
+4. 建立服務基底位址之 <xref:System.Uri> 類別的執行個體。 因為 `WSHttpBinding` 會使用 HTTP 傳輸，所以統一資源識別元（URI）必須以該架構開頭，或 Windows Communication Foundation （WCF）會在服務開啟時擲回例外狀況。  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
@@ -82,6 +82,6 @@ ms.locfileid: "64643564"
   
 - <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Working with Certificates](working-with-certificates.md)

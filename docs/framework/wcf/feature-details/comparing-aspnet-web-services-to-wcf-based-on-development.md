@@ -2,12 +2,12 @@
 title: 根據開發情況比較 ASP.NET Web 服務與 WCF
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c5a2145a6d7b631a666df94eb0c1fc53cbc3c55f
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c6e83bb234751dc477776f0fa540ffa8688dc667
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202269"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597588"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>根據開發情況比較 ASP.NET Web 服務與 WCF
 
@@ -201,7 +201,7 @@ public class LineItem
 }
 ```
 
-Windows 軟體發展工具組（SDK）包含稱為「 [System.servicemodel 中繼資料公用程式工具」（Svcutil .exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)的命令列工具。 如同搭配 ASP.NET Web 服務使用的 xsd.exe 工具，Svcutil 可以從 XML 架構產生 .NET 資料類型的定義。 如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可以發出採用 XML 結構描述定義格式的 XML，型別就是資料合約，否則這些型別會使用 <xref:System.Xml.Serialization.XmlSerializer> 來進行序列化。 Svcutil 也可以使用參數，從資料合約產生 XML 架構。 `dataContractOnly`
+Windows 軟體發展工具組（SDK）包含稱為「 [System.servicemodel 中繼資料公用程式工具」（Svcutil .exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)的命令列工具。 如同搭配 ASP.NET Web 服務使用的 xsd.exe 工具，Svcutil 可以從 XML 架構產生 .NET 資料類型的定義。 如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可以發出採用 XML 結構描述定義格式的 XML，型別就是資料合約，否則這些型別會使用 <xref:System.Xml.Serialization.XmlSerializer> 來進行序列化。 Svcutil 也可以使用參數，從資料合約產生 XML 架構。 `dataContractOnly`
 
 > [!NOTE]
 > 雖然 ASP.NET Web 服務會使用 <xref:System.Xml.Serialization.XmlSerializer> ，而 wcf ASP.NET 相容性模式讓 wcf 服務模擬 ASP.NET Web 服務的行為，但 ASP.NET 相容性選項不會將一個限制為使用 <xref:System.Xml.Serialization.XmlSerializer> 。 使用者還是可以搭配 ASP.NET 相容性模式中的執行服務使用 <xref:System.Runtime.Serialization.DataContractSerializer>。
@@ -320,7 +320,7 @@ public class DerivativesCalculatorServiceType: IDerivativesCalculator
 
 在程式設計服務類型時，常見的使用方式會包括 <xref:System.ServiceModel.OperationContext> 類別。 它的靜態 <xref:System.ServiceModel.OperationContext.Current%2A> 屬性會提供有關其中執行作業之內容資訊的存取。 <xref:System.ServiceModel.OperationContext> 類似於 <xref:System.Web.HttpContext> 和 <xref:System.EnterpriseServices.ContextUtil> 類別兩者。
 
-## <a name="hosting"></a>裝載
+## <a name="hosting"></a>Hosting
 
 ASP.NET Web 服務會編譯為類別庫 (Class Library) 組件。 此時會提供稱為服務檔的檔案，該檔案擁有 .asmx 的副檔名，而且它所包含的 `@ WebService` 指示詞可識別其中包含服務程式碼的類別，以及可在其中找到該類別的組件。
 
@@ -418,9 +418,9 @@ typeof(Service), //"Service" is the name of the service type baseAddresses))
 
 ## <a name="client-development"></a>用戶端開發
 
-ASP.NET Web 服務的用戶端是使用命令列工具 WSDL.exe 所產生的，這項工具會提供 .asmx 檔案的 URL 做為輸入。 WCF 提供的對應工具是「 [System.servicemodel 中繼資料公用程式工具」（Svcutil .exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 它會產生程式碼模組，其中包含服務合約的定義和 WCF 用戶端類別的定義。 它還會產生含有服務位址和繫結的組態檔。
+ASP.NET Web 服務的用戶端是使用命令列工具 WSDL.exe 所產生的，這項工具會提供 .asmx 檔案的 URL 做為輸入。 WCF 提供的對應工具是「 [System.servicemodel 中繼資料公用程式工具」（Svcutil .exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)。 它會產生程式碼模組，其中包含服務合約的定義和 WCF 用戶端類別的定義。 它還會產生含有服務位址和繫結的組態檔。
 
-在程式設計遠端服務的用戶端時，通常建議根據非同步模式來進行程式設計。 根據預設，WSDL.exe 工具所產生的程式碼永遠可供同步和非同步模式使用。 「 [System.servicemodel 中繼資料公用程式」工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的程式碼可以提供任一種模式。 根據預設，此程式碼會提供給同步模式使用。 如果是使用 `/async` 參數來執行工具，所產生的程式碼會提供給非同步模式使用。
+在程式設計遠端服務的用戶端時，通常建議根據非同步模式來進行程式設計。 根據預設，WSDL.exe 工具所產生的程式碼永遠可供同步和非同步模式使用。 「 [System.servicemodel 中繼資料公用程式」工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的程式碼可以提供任一種模式。 根據預設，此程式碼會提供給同步模式使用。 如果是使用 `/async` 參數來執行工具，所產生的程式碼會提供給非同步模式使用。
 
 不保證在 ASP 產生的 WCF 用戶端類別中的名稱。根據預設，NET 的 WSDL.EXE 工具會比對 Svcutil 所產生之 WCF 用戶端類別中的名稱。 尤其是，在 Svcutil.exe 工具產生的程式碼中，必須使用 <xref:System.Xml.Serialization.XmlSerializer> 進行序列化的類別屬性名稱預設會被加上後置字元 Property，但是 WSDL.exe 工具就不是這種情形。
 
@@ -763,6 +763,6 @@ WCF 其中一項最重要的創新，就是以宣告為基礎來授權存取受�
 
 ASP.NET 設定語言可讓您指定個別服務的文化特性。 除了 ASP.NET 相容性模式以外，WCF 不支援該設定。 若要將不使用 ASP.NET 相容性模式的 WCF 服務當地語系化，請將服務類型編譯成文化特性特定的元件，並針對每個特定文化特性的元件擁有個別的文化特性（culture）特定端點。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [依據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [依據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
