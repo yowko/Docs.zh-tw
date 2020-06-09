@@ -1,19 +1,19 @@
 ---
-title: 傳輸
+title: 傳送
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52b0cf35a2f8bab17252d3711f3143738c2bc39c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185698"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587764"
 ---
-# <a name="transfer"></a>傳輸
-本主題介紹 Windows 通信基礎 （WCF） 活動跟蹤模型中的傳輸。  
+# <a name="transfer"></a>傳送
+本主題描述 Windows Communication Foundation （WCF）活動追蹤模型中的傳輸。  
   
 ## <a name="transfer-definition"></a>傳輸定義  
- 活動之間的傳輸表示在端點內相關活動中事件之間的因果關係。 當控制在這些活動之間流動時 (例如跨活動界限的方法呼叫)，有兩個活動會與傳輸相關。 在 WCF 中，當服務上傳入位元組時，偵聽活動將傳輸到創建消息物件的接收位元組活動。 有關端到端跟蹤方案及其各自的活動和跟蹤設計的清單，請參閱端到端[跟蹤方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
+ 活動之間的傳輸表示在端點內相關活動中事件之間的因果關係。 當控制在這些活動之間流動時 (例如跨活動界限的方法呼叫)，有兩個活動會與傳輸相關。 在 WCF 中，在服務上傳入位元組時，「接聽時間」活動會傳送至建立訊息物件的接收位元組活動。 如需端對端追蹤案例的清單，以及其各自的活動和追蹤設計，請參閱[端對端追蹤案例](end-to-end-tracing-scenarios.md)。  
   
  若要發出傳輸追蹤，請使用追蹤來源的 `ActivityTracing` 設定，如同下列組態程式碼所示。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "79185698"
   
  當 M 和 N 之間具有控制流程時，就會從活動 M 將傳輸追蹤發出至活動 N。例如，由於跨活動界限的方法呼叫，N 就會執行 M 的部分工作。 N 可能已存在或已建立。 當 N 是執行 M 之部分工作的新活動時，M 就會繁衍 (Spawn) N。  
   
- 從 N 傳輸回 M 之後可能不會從 M 傳輸至 N。這是因為當 N 完成該工作時，M 可以繁衍 N 中的部分工作並且不會進行追蹤。 實際上，M 可以在 N 完成其工作之前就終止。 這將發生在生成攔截器活動 （N） 然後終止的"打開服務主機"活動 （M） 中。 從 N 傳輸回 M 表示 N 已完成與 M 相關的工作。  
+ 從 N 傳輸回 M 之後可能不會從 M 傳輸至 N。這是因為當 N 完成該工作時，M 可以繁衍 N 中的部分工作並且不會進行追蹤。 實際上，M 可以在 N 完成其工作之前就終止。 這會發生在會產生接聽程式活動（N）然後終止的 "Open ServiceHost" 活動（M）中。 從 N 傳輸回 M 表示 N 已完成與 M 相關的工作。  
   
  N 則可以繼續執行其他與 M 不相關的處理，例如持續從不同登入活動接收登入要求 (M) 的現有驗證器活動 (N)。  
   
@@ -104,7 +104,7 @@ ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);
   
 ## <a name="see-also"></a>另請參閱
 
-- [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [設定追蹤](configuring-tracing.md)
+- [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [端對端追蹤案例](end-to-end-tracing-scenarios.md)
+- [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

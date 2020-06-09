@@ -2,21 +2,21 @@
 title: 使用 NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 82222dbfa3f35ed00d0173f2bc927c32e9e98470
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac6fc658731d032051f2dfd4058397f9b9a55828
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184237"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585632"
 ---
 # <a name="using-the-nethttpbinding"></a>使用 NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> 是為了使用 HTTP 或 WebSocket 服務而設計的繫結，其預設會使用二進位編碼。 <xref:System.ServiceModel.NetHttpBinding> 將會偵測其所搭配使用的是要求-回覆合約還是雙工合約，並改變行為來配合，也就是針對要求-回覆合約使用 HTTP，並針對雙工合約使用 WebSockets。 使用 <xref:System.ServiceModel.Channels.WebSocketTransportUsage> 設定即可覆寫這個行為：  
   
-1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>- 這強制 WebSocket 甚至用於請求回復合同。  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>-這會強制使用 Websocket，即使是要求-回復合約也一樣。  
   
-2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>- 這可以防止使用 WebSocket。 嘗試將這個設定用於雙工合約會導致例外狀況。  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>-這可防止使用 Websocket。 嘗試將這個設定用於雙工合約會導致例外狀況。  
   
-3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>- 這是預設值，行為情況如上所述。  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>-這是預設值，並如上面所述運作。  
   
  <xref:System.ServiceModel.NetHttpBinding> 在 HTTP 模式和 WebSocket 模式下都會支援可靠工作階段。 在 WebSocket 模式中，工作階段是由傳輸提供。  
   
@@ -58,9 +58,9 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
         }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [設定服務的繫結](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
-- [綁定](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [雙工服務](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [設定服務的繫結](../configuring-bindings-for-wcf-services.md)
+- [繫結](bindings.md)
+- [系統提供的繫結](../system-provided-bindings.md)
+- [雙工服務](duplex-services.md)

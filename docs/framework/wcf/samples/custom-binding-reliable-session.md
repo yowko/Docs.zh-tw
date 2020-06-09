@@ -2,12 +2,12 @@
 title: 自訂繫結可靠工作階段
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: 76c701aaae368171bc7047784e1dc126937c84f0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: bd690f96eea885c4d414f9725125e1918fdffa23
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463932"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585139"
 ---
 # <a name="custom-binding-reliable-session"></a>自訂繫結可靠工作階段
 
@@ -18,18 +18,18 @@ ms.locfileid: "81463932"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在,請轉到[Windows 通信基礎 (WCF) 和 Windows 工作流基礎 (WF) 範例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通訊基礎 (WCF) 和示例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`
 
 ## <a name="sample-details"></a>範例詳細資料
 
-可靠的工作階段會提供可靠傳訊和工作階段功能。 可靠的傳訊失敗時會重試通訊，而且允許指定傳遞保證，例如訊息依序到達。 工作階段會保持呼叫之間的用戶端狀態。 此範例會實作維持用戶端狀態的工作階段，並且指定依序傳遞保證。 此範例以計算器服務的[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 可靠工作階段的功能已在用戶端和服務的應用程式組態檔中啟用和設定。
+可靠的工作階段會提供可靠傳訊和工作階段功能。 可靠的傳訊失敗時會重試通訊，而且允許指定傳遞保證，例如訊息依序到達。 工作階段會保持呼叫之間的用戶端狀態。 此範例會實作維持用戶端狀態的工作階段，並且指定依序傳遞保證。 此範例是以執行計算機服務的[消費者入門](getting-started-sample.md)為基礎。 可靠工作階段的功能已在用戶端和服務的應用程式組態檔中啟用和設定。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
-綁定元素的順序在定義自定義綁定時非常重要,因為每個綁定都表示通道堆疊中的一個圖層(請參閱[自定義綁定](../../../../docs/framework/wcf/extending/custom-bindings.md))。
+繫結項目的順序對於定義自訂系結很重要，因為每個都代表通道堆疊中的一層（請參閱[自訂](../extending/custom-bindings.md)系結）。
 
 範例的服務組態會如下列程式碼範例所示加以定義。
 
@@ -103,20 +103,20 @@ Press <ENTER> to terminate client.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 使用以下指令安裝ASP.NET 4.0:
+1. 使用下列命令安裝 ASP.NET 4.0：
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. 確保已為 Windows[通訊基礎範例執行一次性設定 。](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)
+2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
-4. 要在單機或跨計算機配置中運行範例,請按照[運行 Windows 通信基礎範例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。
+4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
     > [!IMPORTANT]
-    > 在跨計算機配置中運行用戶端時,請確保將`address`[\<終結點>](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素的屬性中的「本地主機」和[\<複合Duplex>](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)`clientBaseAddress`的屬性替換為相應計算機的名稱,如下例所示。
+    > 在跨電腦設定中執行用戶端時，請務必將專案的屬性和的屬性中的 "localhost" 取代為 `address` [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) `clientBaseAddress` [\<compositeDuplex>](../../configure-apps/file-schema/wcf/compositeduplex.md) 適當電腦的名稱，如下列範例所示。
 
     ```xml
     <endpoint name = ""
