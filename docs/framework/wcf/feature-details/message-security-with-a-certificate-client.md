@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 3660877194931c2be5b9b1c9aa54e2595701697f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602631"
 ---
 # <a name="message-security-with-a-certificate-client"></a>憑證用戶端的訊息安全性
-以下方案顯示使用消息安全模式保護的 Windows 通信基礎 （WCF） 用戶端和服務。 用戶端與服務皆以憑證驗證。 有關詳細資訊，請參閱[分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。
+下列案例顯示使用訊息安全性模式保護的 Windows Communication Foundation （WCF）用戶端和服務。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱[分散式應用程式安全性](distributed-application-security.md)。
 
- ![顯示具有證書的用戶端的螢幕截圖。](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
+ ![顯示具有憑證之用戶端的螢幕擷取畫面。](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- 有關應用程式範例，請參閱[消息安全證書](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
+ 如需範例應用程式，請參閱[訊息安全性憑證](../samples/message-security-certificate.md)。  
 
 |特性|描述|  
 |--------------------|-----------------|  
@@ -84,7 +84,7 @@ ms.locfileid: "79184649"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>用戶端  
  下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
@@ -101,7 +101,7 @@ ms.locfileid: "79184649"
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>組態  
- 下列組態指定使用端點行為的用戶端憑證。 如需憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 該代碼還使用<>`identity`元素來指定預期的伺服器標識的網域名稱系統 （DNS）。 有關標識的詳細資訊，請參閱[服務標識和身份驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 下列組態指定使用端點行為的用戶端憑證。 如需憑證的詳細資訊，請參閱[使用憑證](working-with-certificates.md)。 程式碼也會使用 <`identity`> 元素，來指定預期伺服器識別的網域名稱系統（DNS）。 如需有關身分識別的詳細資訊，請參閱[服務身分識別和驗證](service-identity-and-authentication.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -143,9 +143,9 @@ ms.locfileid: "79184649"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [安全性總覽](security-overview.md)
+- [服務身分識別和驗證](service-identity-and-authentication.md)
+- [Working with Certificates](working-with-certificates.md)
 - [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

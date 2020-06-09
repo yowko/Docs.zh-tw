@@ -1,5 +1,6 @@
 ---
 title: 常用的集合類型
+description: 瞭解 .NET 中常用的集合類型，例如雜湊表、佇列、堆疊、包、字典和清單。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 47e54bb76c65dd5acc8ce1921ee385a5cb55cf95
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d0f2abc71524408c2bd2fa35a1a2dde0e664d273
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287987"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600837"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合類型
 集合類型是資料集合 (例如雜湊表、佇列、堆疊、封包、字典和清單) 最常見的一些呈現方式。  

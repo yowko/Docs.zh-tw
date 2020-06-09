@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 33205f9e12fcee53f2f29b63b836ea0cbc792025
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834727"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601279"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱與密碼來驗證
 
-本主題示範如何啟用 Windows Communication Foundation （WCF）服務，以使用 Windows 網域使用者名稱和密碼來驗證用戶端。 這裡假設您有運作中的自我裝載 WCF 服務。 如需建立基本自我裝載 WCF 服務的範例，請參閱[消費者入門教學](../../../../docs/framework/wcf/getting-started-tutorial.md)課程。 本主題假設服務是在程式碼中進行設定。 如果您想要查看使用設定檔設定類似服務的範例，請參閱[訊息安全性使用者名稱](../samples/message-security-user-name.md)。
+本主題示範如何啟用 Windows Communication Foundation （WCF）服務，以使用 Windows 網域使用者名稱和密碼來驗證用戶端。 這裡假設您有運作中的自我裝載 WCF 服務。 如需建立基本自我裝載 WCF 服務的範例，請參閱[消費者入門教學](../getting-started-tutorial.md)課程。 本主題假設服務是在程式碼中進行設定。 如果您想要查看使用設定檔設定類似服務的範例，請參閱[訊息安全性使用者名稱](../samples/message-security-user-name.md)。
 
 若要設定服務使用 Windows 網域使用者名和密碼驗證其用戶端，請使用 <xref:System.ServiceModel.WSHttpBinding>，並將其 `Security.Mode` 屬性設定為 `Message`。 此外，將使用者名稱和密碼從用戶端傳送至服務時，您必須指定要用來加密使用者名稱和密碼的 X 509 憑證。
 
@@ -40,7 +40,7 @@ ms.locfileid: "71834727"
     // ...
     ```
 
-    您可以使用自己的憑證，只需將程式碼修改成參考您的憑證。 如需建立和使用憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 確認憑證是在本機電腦的 [受信任的人] 憑證存放區中。 您可以執行 mmc.exe 並**選取 [檔案**]、[**新增/移除嵌入式管理單元 ...** ] 功能表項目來完成此動作。 在 [**新增或移除嵌入式管理單元**] 對話方塊中，選取 [憑證] 嵌入式**管理**單元，然後按一下 [**新增**]。 在 [憑證嵌入式管理單元] 對話方塊中，選取 [**電腦帳戶**]。 根據預設，從訊息安全性使用者名稱範例所產生的憑證位於 [個別/憑證] 資料夾中。  它會在 MMC 視窗的 [發行至] 資料行底下列為 "localhost"。 將憑證拖放到 [**受信任的人**] 資料夾。 這樣可讓 WCF 在執行驗證時，將憑證視為受信任的憑證。
+    您可以使用自己的憑證，只需將程式碼修改成參考您的憑證。 如需建立和使用憑證的詳細資訊，請參閱[使用憑證](working-with-certificates.md)。 確認憑證是在本機電腦的 [受信任的人] 憑證存放區中。 您可以執行 mmc.exe 並**選取 [檔案**]、[**新增/移除嵌入式管理單元 ...** ] 功能表項目來完成此動作。 在 [**新增或移除嵌入式管理單元**] 對話方塊中，選取 [憑證] 嵌入式**管理**單元，然後按一下 [**新增**]。 在 [憑證嵌入式管理單元] 對話方塊中，選取 [**電腦帳戶**]。 根據預設，從訊息安全性使用者名稱範例所產生的憑證位於 [個別/憑證] 資料夾中。  它會在 MMC 視窗的 [發行至] 資料行底下列為 "localhost"。 將憑證拖放到 [**受信任的人**] 資料夾。 這樣可讓 WCF 在執行驗證時，將憑證視為受信任的憑證。
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>若要呼叫服務傳遞使用者名稱和密碼
 
@@ -81,7 +81,7 @@ ms.locfileid: "71834727"
     // Call the service operation using the proxy
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>

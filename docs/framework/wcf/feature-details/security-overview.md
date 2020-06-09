@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 1e551572fa6d94e9fd1170eb7e3b258f2e8fb926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 517d80395e09598fcbd067034223dc6ba58cbe2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76728899"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600434"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation 安全性總覽
 Windows Communication Foundation （WCF）是以 SOAP 訊息為基礎的分散式程式設計平臺，而保護用戶端與服務之間的訊息是保護資料的必要條件。 WCF 提供了一種多樣又互通的平臺，可根據現有的安全性基礎結構和 SOAP 訊息的可辨識安全性標準來交換安全訊息。  
@@ -18,7 +18,7 @@ Windows Communication Foundation （WCF）是以 SOAP 訊息為基礎的分散�
 > [!NOTE]
 > 如需 WCF 安全性的完整指南，請參閱[Wcf 安全性指引](https://archive.codeplex.com/?p=WCFSecurity)。  
   
- 如果您已經使用現有技術（例如 HTTPS、Windows 整合式安全性），或使用者名稱和密碼來驗證使用者，則 WCF 會使用熟悉的概念。 WCF 不僅與現有的安全性基礎結構整合，還會使用安全的 SOAP 訊息，將分散式安全性延伸到僅限 Windows 網域。 除了現有的通訊協定之外，也請考慮使用 SOAP 做為通訊協定的主要優點，將現有的安全性機制執行。 例如，識別用戶端或服務的認證 (如使用者名稱和密碼，或 X.509 憑證) 有互通的 XML 架構 SOAP 設定檔。 使用這些設定檔，訊息可以利用像 XML 數位簽章和 XML 加密的開放規格，來安全交換。 如需規格的清單，請參閱[系統提供的互通性系結所支援的 Web 服務通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。  
+ 如果您已經使用現有技術（例如 HTTPS、Windows 整合式安全性），或使用者名稱和密碼來驗證使用者，則 WCF 會使用熟悉的概念。 WCF 不僅與現有的安全性基礎結構整合，還會使用安全的 SOAP 訊息，將分散式安全性延伸到僅限 Windows 網域。 除了現有的通訊協定之外，也請考慮使用 SOAP 做為通訊協定的主要優點，將現有的安全性機制執行。 例如，識別用戶端或服務的認證 (如使用者名稱和密碼，或 X.509 憑證) 有互通的 XML 架構 SOAP 設定檔。 使用這些設定檔，訊息可以利用像 XML 數位簽章和 XML 加密的開放規格，來安全交換。 如需規格的清單，請參閱[系統提供的互通性系結所支援的 Web 服務通訊協定](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。  
   
  這和 Windows 平台上的元件物件模型 (Component Object Model，COM) 很相似，後者會啟用安全、分散式應用程式。 COM 有功能齊全的安全性機制，藉此安全性內容可以在元件間流動，這個機制會強制完整性、機密性和驗證。 不過，COM 並不會啟用跨平臺的安全訊息，例如 WCF。 使用 WCF，您可以跨網際網路建立跨 Windows 網域的服務和用戶端。 WCF 的互通訊息是建立動態、商業驅動服務的必要條件，可協助您安心瞭解資訊的安全性。  
   
@@ -85,32 +85,32 @@ Windows Communication Foundation （WCF）是以 SOAP 訊息為基礎的分散�
   
 - 另一方面，*訊息安全性模式*會使用 WS-security （和其他規格）來執行傳輸安全性。 因為訊息安全性是直接套用至 SOAP 訊息，並且會與應用程式資料包含在 SOAP 封套中，所以它的優點是與傳輸通訊協定無關、更具擴充性和確保端對端安全性 (相對於點對點)。因為必須處理 SOAP 訊息的 XML 特性，它的缺點是比傳輸安全性慢上好幾倍。  
   
- 如需這些差異的詳細資訊，請參閱[保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。  
+ 如需這些差異的詳細資訊，請參閱[保護服務和用戶端](securing-services-and-clients.md)。  
   
  第三個安全性模式同時使用前兩個模式，且結合兩者的優點。 這個模式稱為 `TransportWithMessageCredential`。 在這個模式中，訊息安全性會用來驗證用戶端，而傳輸安全性則會用來驗證伺服器及提供訊息機密性和完整性。 `TransportWithMessageCredential` 安全性模式因此受惠，幾乎與傳輸安全性模式一樣快速，並且以訊息安全性的相同方式提供用戶端驗證擴充性。 不過，不像訊息安全性模式，它不會提供完整的端對端安全性。  
   
 ### <a name="access-control"></a>存取控制  
  *存取控制*也稱為授權。 *授權*可讓不同的使用者有不同的許可權來查看資料。 例如，因為公司的人力資源檔案包含敏感的員工資料，所以只有經理才能檢視員工資料。 而且，經理只能檢視其直屬員工的資料。 在這種情況下，存取控制是根據角色 (「經理」) 和經理的特定身分識別 (以防止某個經理查看另一個經理的員工記錄)。  
   
- 在 WCF 中，存取控制功能是透過整合 common language runtime （CLR） <xref:System.Security.Permissions.PrincipalPermissionAttribute>，以及透過一組稱為身分*識別模型*的 api 來提供。 如需存取控制和宣告型授權的詳細資訊，請參閱[擴充安全性](../../../../docs/framework/wcf/extending/extending-security.md)。  
+ 在 WCF 中，存取控制功能是透過與 common language runtime （CLR）的整合 <xref:System.Security.Permissions.PrincipalPermissionAttribute> ，以及透過一組稱為「身分*識別模型*」的 api 來提供。 如需存取控制和宣告型授權的詳細資訊，請參閱[擴充安全性](../extending/extending-security.md)。  
   
 ### <a name="auditing"></a>稽核  
- 「*審核*」是將安全性事件記錄到 Windows 事件記錄檔中。 您可以記錄安全性相關的事件，例如驗證失敗 (或成功)。 如需詳細資訊，請參閱「[審核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」。 如需程式設計的詳細資訊，請參閱[如何： Audit Security Events](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
+ 「*審核*」是將安全性事件記錄到 Windows 事件記錄檔中。 您可以記錄安全性相關的事件，例如驗證失敗 (或成功)。 如需詳細資訊，請參閱「[審核](auditing-security-events.md)」。 如需程式設計的詳細資訊，請參閱[如何： Audit Security Events](how-to-audit-wcf-security-events.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [保護服務安全](../../../../docs/framework/wcf/securing-services.md)
-- [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
-- [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [使用設定檔設定服務](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
-- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [擴充安全性](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [保護服務安全](../securing-services.md)
+- [常見的安全性案例](common-security-scenarios.md)
+- [繫結和安全性](bindings-and-security.md)
+- [Securing Services and Clients](securing-services-and-clients.md)
+- [驗證](authentication-in-wcf.md)
+- [授權](authorization-in-wcf.md)
+- [聯合與發行的權杖](federation-and-issued-tokens.md)
+- [稽核](auditing-security-events.md)
+- [安全性指引與最佳做法](security-guidance-and-best-practices.md)
+- [使用組態檔設定服務](../configuring-services-using-configuration-files.md)
+- [系統提供的繫結](../system-provided-bindings.md)
+- [端點建立概觀](../endpoint-creation-overview.md)
+- [擴充安全性](../extending/extending-security.md)
+- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

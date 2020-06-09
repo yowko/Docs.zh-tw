@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqDetected
 ms.date: 03/30/2017
 ms.assetid: ff20cef5-89d2-408e-a431-8c31a9d878d5
-ms.openlocfilehash: 8e40089915cb356a68119b25430a7d007f84a007
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96c391cd066055dd09ae62713bde60c9bd66878e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61596604"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601968"
 ---
 # <a name="systemservicemodelchannelsmsmqdetected"></a>System.ServiceModel.Channels.MsmqDetected
 System.ServiceModel.Channels.MsmqDetected  
@@ -15,8 +15,8 @@ System.ServiceModel.Channels.MsmqDetected
 ## <a name="description"></a>描述  
  已順利偵測 MSMQ。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

@@ -2,15 +2,15 @@
 title: 部分信任功能相容性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 3e0f1c2f673d4ba603df7da431d10c211cf779ac
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 85e34e365d125fe4f00756549ba5bda4311b78f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212116"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579159"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能相容性
-Windows Communication Foundation （WCF）在部分信任的環境中執行時，支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。  
+Windows Communication Foundation （WCF）在部分信任的環境中執行時，支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](supported-deployment-scenarios.md) 主題所述的特定案例中。  
   
 ## <a name="minimum-permission-requirements"></a>基本權限需求  
  WCF 支援應用程式中以下列任一標準命名許可權集合執行的功能子集：  
@@ -71,12 +71,12 @@ Windows Communication Foundation （WCF）在部分信任的環境中執行時�
   
 - 在部分信任環境中，實作 <xref:System.Runtime.Serialization.IObjectReference> 的型別會擲回例外狀況。  
   
- 如需在部分信任應用程式中安全使用 [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) 的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataContractSerializer> 中的＜序列化＞一節。  
+ 如需在部分信任應用程式中安全使用 [Partial Trust Best Practices](partial-trust-best-practices.md) 的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataContractSerializer> 中的＜序列化＞一節。  
   
 ### <a name="collection-types"></a>集合型別  
  有些集合型別會同時實作 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Collections.IEnumerable>。 例如，可實作 <xref:System.Collections.Generic.ICollection%601>的型別。 此類型別可實作 `public` 的 `GetEnumerator()`實作，以及 `GetEnumerator()`的明確實作。 在此情況下， <xref:System.Runtime.Serialization.DataContractSerializer> 會叫用 `public` 的 `GetEnumerator()`實作，而不是叫用 `GetEnumerator()`的明確實作。 如果所有 `GetEnumerator()` 實作都不是 `public` ，且都是明確的實作，則 <xref:System.Runtime.Serialization.DataContractSerializer> 會叫用 `IEnumerable.GetEnumerator()`。  
   
- 針對在部分信任環境中執行 WCF 的集合類型，如果未 `public`任何 `GetEnumerator()` 的實作為，或沒有明確的介面執行，則會擲回安全性例外狀況。  
+ 針對在部分信任環境中執行 WCF 時的集合類型，如果沒有任何實作為 `GetEnumerator()` `public` ，或它們都不是明確介面的執行，則會擲回安全性例外狀況。  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  在部分信任中， <xref:System.Collections.Generic.List%601>不支援許多 .NET Framework 集合型別，例如 <xref:System.Collections.ArrayList>、 <xref:System.Collections.Generic.Dictionary%602> 、 <xref:System.Collections.Hashtable> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 。 這些型別的 `[Serializable]` 屬性都已經過設定，如前面「序列化」一節所述，部分信任的環境不支援這個屬性。 <xref:System.Runtime.Serialization.DataContractSerializer> 會以特殊方式處理集合，因此能夠解決這個限制，但 <xref:System.Runtime.Serialization.NetDataContractSerializer> 沒有這類機制來避免這個限制。  
@@ -86,16 +86,16 @@ Windows Communication Foundation （WCF）在部分信任的環境中執行時�
  在部分信任中執行時，無法搭配 <xref:System.Runtime.Serialization.NetDataContractSerializer> 使用代理 (透過 <xref:System.Runtime.Serialization.SurrogateSelector> 機制)。 請注意，這個限制只適用於使用代理時，不適用於序列化代理時。  
   
 ## <a name="enabling-common-behaviors-to-run"></a>讓通用行為執行  
- 當應用程式在部分信任環境中執行時，不會執行已加入至設定檔之[\<s >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)區段的 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性（APTCA）標記的服務或端點行為，而且當發生這種情況時，不會擲回任何例外狀況。 若要強制執行通用行為，您必須執行下列其中一項：  
+ <xref:System.Security.AllowPartiallyTrustedCallersAttribute> [\<commonBehaviors>](../../configure-apps/file-schema/wcf/commonbehaviors.md) 當應用程式在部分信任環境中執行時，未以屬性（APTCA）標記的服務或端點行為，將不會執行，而且當發生這種情況時，不會擲回任何例外狀況。 若要強制執行通用行為，您必須執行下列其中一項：  
   
-- 使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性標記您的通用行為，讓它可以在部署為部分信任應用程式時執行。 請注意，您可以在電腦上設定登錄項目，以防止已標記 APTCA 的組件執行。 。  
+- 使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性標記您的通用行為，讓它可以在部署為部分信任應用程式時執行。 請注意，您可以在電腦上設定登錄項目，以防止已標記 APTCA 的組件執行。 .  
   
-- 確定應用程式是否會部署為完全信任的應用程式，而使用者無法修改程式碼存取安全性設定以在部分信任環境中執行應用程式。 如果可以執行這項操作，行為就不會執行，也不會擲回例外狀況。 若要確保此情況，請參閱使用[caspol.exe （代碼啟用安全性原則工具）](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)的**levelfinal**選項。  
+- 確定應用程式是否會部署為完全信任的應用程式，而使用者無法修改程式碼存取安全性設定以在部分信任環境中執行應用程式。 如果可以執行這項操作，行為就不會執行，也不會擲回例外狀況。 若要確保此情況，請參閱使用[caspol.exe （代碼啟用安全性原則工具）](../../tools/caspol-exe-code-access-security-policy-tool.md)的**levelfinal**選項。  
   
- 如需常見行為的範例，請參閱[如何：鎖定企業中的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
+ 如需常見行為的範例，請參閱[如何：鎖定企業中的端點](../extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
   
 ## <a name="configuration"></a>組態  
- 有一個例外，部分信任的程式碼只能載入本機 `app.config` 檔案中的 WCF 設定區段。 若要載入在 machine.config 或根 web.config 檔案中參考 WCF 區段的 WCF 設定區段，需要 ConfigurationPermission （無限制）。 若沒有此許可權，在載入設定時，本機設定檔外部的 WCF 設定區段（行為、系結）參考會導致例外狀況。  
+ 有一個例外，部分信任的程式碼只能載入本機檔案中的 WCF 設定區段 `app.config` 。 若要載入在 machine.config 或根 web.config 檔案中參考 WCF 區段的 WCF 設定區段，需要 ConfigurationPermission （無限制）。 若沒有此許可權，在載入設定時，本機設定檔外部的 WCF 設定區段（行為、系結）參考會導致例外狀況。  
   
  唯一的例外是序列化的已知型別組態，如本主題的「序列化」一節所述。  
   
@@ -111,7 +111,7 @@ Windows Communication Foundation （WCF）在部分信任的環境中執行時�
  當 WCF 在部分信任環境中執行時，訊息記錄無法運作。 如果在部分信任情況下啟用的話，儘管不會導致服務啟動失敗，但也無法記錄訊息。  
   
 ### <a name="tracing"></a>追蹤  
- 在部分信任環境中執行時，可使用受限制的追蹤功能。 在設定檔中的 <`listeners`> 元素中，您可以新增的類型只會 <xref:System.Diagnostics.TextWriterTraceListener> 和新的 <xref:System.Diagnostics.EventSchemaTraceListener>。 使用標準 <xref:System.Diagnostics.XmlWriterTraceListener> 可能導致不完整或不正確的記錄。  
+ 在部分信任環境中執行時，可使用受限制的追蹤功能。 在設定檔中的 <`listeners`> 元素中，您唯一可以新增的類型是 <xref:System.Diagnostics.TextWriterTraceListener> 和新的 <xref:System.Diagnostics.EventSchemaTraceListener> 。 使用標準 <xref:System.Diagnostics.XmlWriterTraceListener> 可能導致不完整或不正確的記錄。  
   
  下列為支援的追蹤來源：  
   
@@ -119,7 +119,7 @@ Windows Communication Foundation （WCF）在部分信任的環境中執行時�
   
 - <xref:System.Runtime.Serialization>  
   
-- <xref:System.IdentityModel.Claims>、<xref:System.IdentityModel.Policy>、<xref:System.IdentityModel.Selectors> 和 <xref:System.IdentityModel.Tokens>。  
+- <xref:System.IdentityModel.Claims>、 <xref:System.IdentityModel.Policy>、 <xref:System.IdentityModel.Selectors>和 <xref:System.IdentityModel.Tokens>。  
   
  下列為不支援的追蹤來源：  
   
@@ -166,5 +166,5 @@ Windows Communication Foundation （WCF）在部分信任的環境中執行時�
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
-- [支援的部署案例](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
-- [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+- [Supported Deployment Scenarios](supported-deployment-scenarios.md)
+- [Partial Trust Best Practices](partial-trust-best-practices.md)

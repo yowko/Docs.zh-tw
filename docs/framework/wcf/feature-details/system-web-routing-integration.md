@@ -2,15 +2,15 @@
 title: System.Web.Routing 整合
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: a80b5c3b336b4fd18b347a25ceaf509baf6461b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 059f14c94bb7502a2e4f4616ca2c5e6ac5273afa
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184387"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600733"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 整合
-在 Internet 資訊服務 （IIS） 中託管 Windows 通信基礎 （WCF） 服務時，您將一個 .svc 檔放在虛擬目錄中。 此 .svc 檔案會指定要使用的服務主機處理站，以及實作服務的類別。 向服務發出請求時，請在 URI 中指定 .svc 檔，例如`http://contoso.com/EmployeeServce.svc`： 。 對於撰寫 REST 服務的程式設計人員而言，此類型的 URI 不是最佳的方法。 REST 服務的 URI 會指定特定資源，且一般來說沒有任何擴充。 集成<xref:System.Web.Routing>功能允許您託管 WCF REST 服務，該服務無需擴展即可回應 URI。 有關路由的詳細資訊，請參閱[ASP.NET路由](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))。  
+在 Internet Information Service （IIS）中裝載 Windows Communication Foundation （WCF）服務時，您會在虛擬目錄中放置 .svc 檔案。 此 .svc 檔案會指定要使用的服務主機處理站，以及實作服務的類別。 對服務提出要求時，您可以在 URI 中指定 .svc 檔案，例如： `http://contoso.com/EmployeeServce.svc` 。 對於撰寫 REST 服務的程式設計人員而言，此類型的 URI 不是最佳的方法。 REST 服務的 URI 會指定特定資源，且一般來說沒有任何擴充。 <xref:System.Web.Routing>整合功能可讓您裝載 WCF REST 服務，以回應沒有延伸模組的 uri。 如需路由的詳細資訊，請參閱[ASP.NET 路由](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))。  
   
 ## <a name="using-systemwebrouting-integration"></a>使用 System.Web.Routing 整合  
  若要使用 <xref:System.Web.Routing> 整合功能，請使用 <xref:System.ServiceModel.Activation.ServiceRoute> 類別建立一個或多個路由，並且將路由加入至 Global.asax 檔案中的 <xref:System.Web.Routing.RouteTable>。 這些路由會指定服務回應的相對 URI。 下列範例示範如何執行。  
@@ -49,7 +49,7 @@ ms.locfileid: "79184387"
     </system.webServer>  
 ```  
   
- 這會載入路由需要的模組與處理常式。 如需詳細資訊，請參閱[路由](../../../../docs/framework/wcf/feature-details/routing.md)。 您也必須在 `aspNetCompatibilityEnabled` 項目中，將 `true` 屬性設定為 `<serviceHostingEnvironment>`，如下列範例所示。  
+ 這會載入路由需要的模組與處理常式。 如需詳細資訊，請參閱[路由](routing.md)。 您也必須在 `aspNetCompatibilityEnabled` 項目中，將 `true` 屬性設定為 `<serviceHostingEnvironment>`，如下列範例所示。  
   
 ```xml  
 <system.serviceModel>  
@@ -69,7 +69,7 @@ ms.locfileid: "79184387"
     }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [WCF Web HTTP 程式設計模型](wcf-web-http-programming-model.md)
 - [ASP.NET 路由](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))
