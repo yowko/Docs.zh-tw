@@ -2,18 +2,18 @@
 title: 傳輸：自訂跨 UDP 異動範例
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ba9fb91623606d3aaba5ba56784b20bb92d343a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce1e6f0aedff46aaf58e22d8c23c37b03f8789dd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143794"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596535"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a><span data-ttu-id="71ff8-102">傳輸：自訂跨 UDP 異動範例</span><span class="sxs-lookup"><span data-stu-id="71ff8-102">Transport: Custom Transactions over UDP Sample</span></span>
-<span data-ttu-id="71ff8-103">此示例基於 Windows 通信基礎 （WCF）[傳輸可擴充性](../../../../docs/framework/wcf/samples/transport-extensibility.md)中的[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。</span><span class="sxs-lookup"><span data-stu-id="71ff8-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample in the Windows Communication Foundation (WCF)[Transport Extensibility](../../../../docs/framework/wcf/samples/transport-extensibility.md).</span></span> <span data-ttu-id="71ff8-104">它會延伸 UDP 傳輸範例以支援自訂異動流程，並示範 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 屬性的使用方式。</span><span class="sxs-lookup"><span data-stu-id="71ff8-104">It extends the UDP Transport sample to support custom transaction flow and demonstrates the use of the <xref:System.ServiceModel.Channels.TransactionMessageProperty> property.</span></span>  
+# <a name="transport-custom-transactions-over-udp-sample"></a><span data-ttu-id="7a343-102">傳輸：自訂跨 UDP 異動範例</span><span class="sxs-lookup"><span data-stu-id="7a343-102">Transport: Custom Transactions over UDP Sample</span></span>
+<span data-ttu-id="7a343-103">這個範例是以 Windows Communication Foundation （WCF）[傳輸](transport-extensibility.md)擴充性中的[transport： UDP](transport-udp.md)範例為基礎。</span><span class="sxs-lookup"><span data-stu-id="7a343-103">This sample is based on the [Transport: UDP](transport-udp.md) sample in the Windows Communication Foundation (WCF)[Transport Extensibility](transport-extensibility.md).</span></span> <span data-ttu-id="7a343-104">它會延伸 UDP 傳輸範例以支援自訂異動流程，並示範 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 屬性的使用方式。</span><span class="sxs-lookup"><span data-stu-id="7a343-104">It extends the UDP Transport sample to support custom transaction flow and demonstrates the use of the <xref:System.ServiceModel.Channels.TransactionMessageProperty> property.</span></span>  
   
-## <a name="code-changes-in-the-udp-transport-sample"></a><span data-ttu-id="71ff8-105">變更 UDP 傳輸範例中的程式碼</span><span class="sxs-lookup"><span data-stu-id="71ff8-105">Code Changes in the UDP Transport Sample</span></span>  
- <span data-ttu-id="71ff8-106">為了示範交易流程，此範例變更了服務合約，讓 `ICalculatorContract` 可以要求 `CalculatorService.Add()` 的交易範圍。</span><span class="sxs-lookup"><span data-stu-id="71ff8-106">To demonstrate transaction flow, the sample changes the service contract for `ICalculatorContract` to require a transaction scope for `CalculatorService.Add()`.</span></span> <span data-ttu-id="71ff8-107">範例還另外將 `System.Guid` 參數新增至 `Add` 作業的合約。</span><span class="sxs-lookup"><span data-stu-id="71ff8-107">The sample also adds an extra `System.Guid` parameter to the contract of the `Add` operation.</span></span> <span data-ttu-id="71ff8-108">這個參數是用來將用戶端異動識別碼傳遞給服務。</span><span class="sxs-lookup"><span data-stu-id="71ff8-108">This parameter is used to pass the identifier of the client transaction to the service.</span></span>  
+## <a name="code-changes-in-the-udp-transport-sample"></a><span data-ttu-id="7a343-105">變更 UDP 傳輸範例中的程式碼</span><span class="sxs-lookup"><span data-stu-id="7a343-105">Code Changes in the UDP Transport Sample</span></span>  
+ <span data-ttu-id="7a343-106">為了示範交易流程，此範例變更了服務合約，讓 `ICalculatorContract` 可以要求 `CalculatorService.Add()` 的交易範圍。</span><span class="sxs-lookup"><span data-stu-id="7a343-106">To demonstrate transaction flow, the sample changes the service contract for `ICalculatorContract` to require a transaction scope for `CalculatorService.Add()`.</span></span> <span data-ttu-id="7a343-107">範例還另外將 `System.Guid` 參數新增至 `Add` 作業的合約。</span><span class="sxs-lookup"><span data-stu-id="7a343-107">The sample also adds an extra `System.Guid` parameter to the contract of the `Add` operation.</span></span> <span data-ttu-id="7a343-108">這個參數是用來將用戶端異動識別碼傳遞給服務。</span><span class="sxs-lookup"><span data-stu-id="7a343-108">This parameter is used to pass the identifier of the client transaction to the service.</span></span>  
   
 ```csharp  
 class CalculatorService : IDatagramContract, ICalculatorContract  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- <span data-ttu-id="71ff8-109">[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例使用 UDP 資料包在用戶端和服務之間傳遞消息。</span><span class="sxs-lookup"><span data-stu-id="71ff8-109">The [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample uses UDP packets to pass messages between a client and a service.</span></span> <span data-ttu-id="71ff8-110">[傳輸：自訂傳輸示例](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)使用相同的機制來傳輸消息，但當事務流動時，它將與編碼消息一起插入到 UDP 資料包中。</span><span class="sxs-lookup"><span data-stu-id="71ff8-110">The [Transport: Custom Transport Sample](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) uses the same mechanism to transport messages, but when a transaction is flowed, it is inserted into the UDP packet along with the encoded message.</span></span>  
+ <span data-ttu-id="7a343-109">[Transport： udp](transport-udp.md)範例會使用 udp 封包來傳遞用戶端和服務之間的訊息。</span><span class="sxs-lookup"><span data-stu-id="7a343-109">The [Transport: UDP](transport-udp.md) sample uses UDP packets to pass messages between a client and a service.</span></span> <span data-ttu-id="7a343-110">[傳輸：自訂傳輸範例](transport-custom-transactions-over-udp-sample.md)會使用與傳輸訊息相同的機制，但當交易流動時，它就會連同編碼的訊息一起插入 UDP 封包中。</span><span class="sxs-lookup"><span data-stu-id="7a343-110">The [Transport: Custom Transport Sample](transport-custom-transactions-over-udp-sample.md) uses the same mechanism to transport messages, but when a transaction is flowed, it is inserted into the UDP packet along with the encoded message.</span></span>  
   
 ```csharp  
 byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -46,13 +46,13 @@ byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPr
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- <span data-ttu-id="71ff8-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` 是 Helper 方法，其中包含的新功能可以將目前交易的傳播權杖與訊息實體 (Entity) 合併，再將它放在緩衝區中。</span><span class="sxs-lookup"><span data-stu-id="71ff8-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` is a helper method that contains new functionality to merge the propagation token for the current transaction with the message entity and place it into a buffer.</span></span>  
+ <span data-ttu-id="7a343-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` 是 Helper 方法，其中包含的新功能可以將目前交易的傳播權杖與訊息實體 (Entity) 合併，再將它放在緩衝區中。</span><span class="sxs-lookup"><span data-stu-id="7a343-111">`TransactionMessageBuffer.WriteTransactionMessageBuffer` is a helper method that contains new functionality to merge the propagation token for the current transaction with the message entity and place it into a buffer.</span></span>  
   
- <span data-ttu-id="71ff8-112">對於自訂事務流傳輸，用戶端實現必須知道哪些服務操作需要事務流，並將此資訊傳遞給 WCF。</span><span class="sxs-lookup"><span data-stu-id="71ff8-112">For custom transaction flow transport, the client implementation must know what service operations require transaction flow and to pass this information to WCF.</span></span> <span data-ttu-id="71ff8-113">其中也必須有可以用來傳輸使用者交易至傳輸層的機制。</span><span class="sxs-lookup"><span data-stu-id="71ff8-113">There should also be a mechanism for transmitting the user transaction to the transport layer.</span></span> <span data-ttu-id="71ff8-114">此示例使用"WCF 消息檢查器"來獲取此資訊。</span><span class="sxs-lookup"><span data-stu-id="71ff8-114">This sample uses "WCF message inspectors" to obtain this information.</span></span> <span data-ttu-id="71ff8-115">此處實作的用戶端訊息偵測器稱為 `TransactionFlowInspector`，它會執行下列工作：</span><span class="sxs-lookup"><span data-stu-id="71ff8-115">The client message inspector implemented here, which is called `TransactionFlowInspector`, performs the following tasks:</span></span>  
+ <span data-ttu-id="7a343-112">若為自訂交易流程傳輸，用戶端執行必須知道哪些服務作業需要交易流程，並將此資訊傳遞給 WCF。</span><span class="sxs-lookup"><span data-stu-id="7a343-112">For custom transaction flow transport, the client implementation must know what service operations require transaction flow and to pass this information to WCF.</span></span> <span data-ttu-id="7a343-113">其中也必須有可以用來傳輸使用者交易至傳輸層的機制。</span><span class="sxs-lookup"><span data-stu-id="7a343-113">There should also be a mechanism for transmitting the user transaction to the transport layer.</span></span> <span data-ttu-id="7a343-114">這個範例會使用「WCF 訊息偵測器」來取得此資訊。</span><span class="sxs-lookup"><span data-stu-id="7a343-114">This sample uses "WCF message inspectors" to obtain this information.</span></span> <span data-ttu-id="7a343-115">此處實作的用戶端訊息偵測器稱為 `TransactionFlowInspector`，它會執行下列工作：</span><span class="sxs-lookup"><span data-stu-id="7a343-115">The client message inspector implemented here, which is called `TransactionFlowInspector`, performs the following tasks:</span></span>  
   
-- <span data-ttu-id="71ff8-116">判斷交易是否必須針對指定的訊息動作流動 (這會在 `IsTxFlowRequiredForThisOperation()` 中進行)。</span><span class="sxs-lookup"><span data-stu-id="71ff8-116">Determines whether a transaction must be flowed for a given message action (this takes place in `IsTxFlowRequiredForThisOperation()`).</span></span>  
+- <span data-ttu-id="7a343-116">判斷交易是否必須針對指定的訊息動作流動 (這會在 `IsTxFlowRequiredForThisOperation()` 中進行)。</span><span class="sxs-lookup"><span data-stu-id="7a343-116">Determines whether a transaction must be flowed for a given message action (this takes place in `IsTxFlowRequiredForThisOperation()`).</span></span>  
   
-- <span data-ttu-id="71ff8-117">在需要流動異動時，使用 `TransactionFlowProperty` 將目前環境異動附加至訊息 (這會在 `BeforeSendRequest()` 中完成)。</span><span class="sxs-lookup"><span data-stu-id="71ff8-117">Attaches the current ambient transaction to the message using `TransactionFlowProperty`, if a transaction is required to be flowed (this is done in `BeforeSendRequest()`).</span></span>  
+- <span data-ttu-id="7a343-117">在需要流動異動時，使用 `TransactionFlowProperty` 將目前環境異動附加至訊息 (這會在 `BeforeSendRequest()` 中完成)。</span><span class="sxs-lookup"><span data-stu-id="7a343-117">Attaches the current ambient transaction to the message using `TransactionFlowProperty`, if a transaction is required to be flowed (this is done in `BeforeSendRequest()`).</span></span>  
   
 ```csharp  
 public class TransactionFlowInspector : IClientMessageInspector  
@@ -92,7 +92,7 @@ public class TransactionFlowInspector : IClientMessageInspector
 }  
 ```  
   
- <span data-ttu-id="71ff8-118">`TransactionFlowInspector` 本身是使用自訂行為 (`TransactionFlowBehavior`) 傳遞給架構。</span><span class="sxs-lookup"><span data-stu-id="71ff8-118">The `TransactionFlowInspector` itself is passed to the framework using a custom behavior: the `TransactionFlowBehavior`.</span></span>  
+ <span data-ttu-id="7a343-118">`TransactionFlowInspector` 本身是使用自訂行為 (`TransactionFlowBehavior`) 傳遞給架構。</span><span class="sxs-lookup"><span data-stu-id="7a343-118">The `TransactionFlowInspector` itself is passed to the framework using a custom behavior: the `TransactionFlowBehavior`.</span></span>  
   
 ```csharp  
 public class TransactionFlowBehavior : IEndpointBehavior  
@@ -117,7 +117,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
 }  
 ```  
   
- <span data-ttu-id="71ff8-119">備妥前述機制之後，使用者程式碼會在呼叫服務作業之前建立 `TransactionScope`。</span><span class="sxs-lookup"><span data-stu-id="71ff8-119">With the preceding mechanism in place, the user code creates a `TransactionScope` before calling the service operation.</span></span> <span data-ttu-id="71ff8-120">如果需要讓交易流動至服務作業，訊息偵測器可以確保交易傳遞給傳輸。</span><span class="sxs-lookup"><span data-stu-id="71ff8-120">The message inspector ensures that the transaction is passed to the transport in case it is required to be flowed to the service operation.</span></span>  
+ <span data-ttu-id="7a343-119">備妥前述機制之後，使用者程式碼會在呼叫服務作業之前建立 `TransactionScope`。</span><span class="sxs-lookup"><span data-stu-id="7a343-119">With the preceding mechanism in place, the user code creates a `TransactionScope` before calling the service operation.</span></span> <span data-ttu-id="7a343-120">如果需要讓交易流動至服務作業，訊息偵測器可以確保交易傳遞給傳輸。</span><span class="sxs-lookup"><span data-stu-id="7a343-120">The message inspector ensures that the transaction is passed to the transport in case it is required to be flowed to the service operation.</span></span>  
   
 ```csharp  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
@@ -151,7 +151,7 @@ catch (Exception)
 }  
 ```  
   
- <span data-ttu-id="71ff8-121">從用戶端收到 UDP 封包時，服務會將它還原序列化，以擷取訊息及可能的交易。</span><span class="sxs-lookup"><span data-stu-id="71ff8-121">Upon receiving a UDP packet from the client, the service deserializes it to extract the message and possibly a transaction.</span></span>  
+ <span data-ttu-id="7a343-121">從用戶端收到 UDP 封包時，服務會將它還原序列化，以擷取訊息及可能的交易。</span><span class="sxs-lookup"><span data-stu-id="7a343-121">Upon receiving a UDP packet from the client, the service deserializes it to extract the message and possibly a transaction.</span></span>  
   
 ```csharp  
 count = listenSocket.EndReceiveFrom(result, ref dummy);  
@@ -159,9 +159,9 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- <span data-ttu-id="71ff8-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` 是 Helper 方法，它會反轉 `TransactionMessageBuffer.WriteTransactionMessageBuffer()` 所執行的序列化 (Serialization) 程序。</span><span class="sxs-lookup"><span data-stu-id="71ff8-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` is the helper method that reverses the serialization process performed by `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.</span></span>  
+ <span data-ttu-id="7a343-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` 是 Helper 方法，它會反轉 `TransactionMessageBuffer.WriteTransactionMessageBuffer()` 所執行的序列化 (Serialization) 程序。</span><span class="sxs-lookup"><span data-stu-id="7a343-122">`TransactionMessageBuffer.ReadTransactionMessageBuffer()` is the helper method that reverses the serialization process performed by `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.</span></span>  
   
- <span data-ttu-id="71ff8-123">如果有異動流入，就會將它附加至 `TransactionMessageProperty` 中的訊息。</span><span class="sxs-lookup"><span data-stu-id="71ff8-123">If a transaction was flowed in, it is appended to the message in the `TransactionMessageProperty`.</span></span>  
+ <span data-ttu-id="7a343-123">如果有異動流入，就會將它附加至 `TransactionMessageProperty` 中的訊息。</span><span class="sxs-lookup"><span data-stu-id="7a343-123">If a transaction was flowed in, it is appended to the message in the `TransactionMessageProperty`.</span></span>  
   
 ```csharp  
 message = MessageEncoderFactory.Encoder.ReadMessage(msg, bufferManager);  
@@ -172,15 +172,15 @@ if (transaction != null)
 }  
 ```  
   
- <span data-ttu-id="71ff8-124">這可以確保發送器在分派階段收到異動，且在呼叫訊息所定址的服務作業時使用此異動。</span><span class="sxs-lookup"><span data-stu-id="71ff8-124">This ensures that the dispatcher picks up the transaction at dispatch time and uses it when calling the service operation addressed by the message.</span></span>  
+ <span data-ttu-id="7a343-124">這可以確保發送器在分派階段收到異動，且在呼叫訊息所定址的服務作業時使用此異動。</span><span class="sxs-lookup"><span data-stu-id="7a343-124">This ensures that the dispatcher picks up the transaction at dispatch time and uses it when calling the service operation addressed by the message.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="71ff8-125">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="71ff8-125">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="7a343-125">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="7a343-125">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="71ff8-126">要生成解決方案，請按照生成 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。</span><span class="sxs-lookup"><span data-stu-id="71ff8-126">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="7a343-126">若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。</span><span class="sxs-lookup"><span data-stu-id="7a343-126">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="71ff8-127">當前示例應與[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例類似運行。</span><span class="sxs-lookup"><span data-stu-id="71ff8-127">The current sample should be run similarly to the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span> <span data-ttu-id="71ff8-128">若要執行，請使用 UdpTestService.exe 啟動服務。</span><span class="sxs-lookup"><span data-stu-id="71ff8-128">To run it, start the service with UdpTestService.exe.</span></span> <span data-ttu-id="71ff8-129">如果您正在運行 Windows Vista，則必須使用較高的權限啟動服務。</span><span class="sxs-lookup"><span data-stu-id="71ff8-129">If you are running Windows Vista, you must start the service with elevated privileges.</span></span> <span data-ttu-id="71ff8-130">為此，請按右鍵檔資源管理器中的 UdpTestService.exe，然後按一下"**以管理員身份運行**"。</span><span class="sxs-lookup"><span data-stu-id="71ff8-130">To do so, right-click UdpTestService.exe in File Explorer and click **Run as administrator**.</span></span>  
+2. <span data-ttu-id="7a343-127">目前的範例應該以類似[Transport： UDP](transport-udp.md)範例的方式執行。</span><span class="sxs-lookup"><span data-stu-id="7a343-127">The current sample should be run similarly to the [Transport: UDP](transport-udp.md) sample.</span></span> <span data-ttu-id="7a343-128">若要執行，請使用 UdpTestService.exe 啟動服務。</span><span class="sxs-lookup"><span data-stu-id="7a343-128">To run it, start the service with UdpTestService.exe.</span></span> <span data-ttu-id="7a343-129">如果您執行的是 Windows Vista，就必須以較高的許可權來啟動服務。</span><span class="sxs-lookup"><span data-stu-id="7a343-129">If you are running Windows Vista, you must start the service with elevated privileges.</span></span> <span data-ttu-id="7a343-130">若要這樣做，請以滑鼠右鍵按一下檔案瀏覽器中的 Udptestservice.exe，然後按一下 [**以系統管理員身分執行**]。</span><span class="sxs-lookup"><span data-stu-id="7a343-130">To do so, right-click UdpTestService.exe in File Explorer and click **Run as administrator**.</span></span>  
   
-3. <span data-ttu-id="71ff8-131">此程序產生以下輸出。</span><span class="sxs-lookup"><span data-stu-id="71ff8-131">This produces the following output.</span></span>  
+3. <span data-ttu-id="7a343-131">此程序產生以下輸出。</span><span class="sxs-lookup"><span data-stu-id="7a343-131">This produces the following output.</span></span>  
   
     ```console  
     Testing Udp From Code.  
@@ -188,7 +188,7 @@ if (transaction != null)
     Press <ENTER> to terminate the service and start service from config...  
     ```  
   
-4. <span data-ttu-id="71ff8-132">此時，您可以執行 UdpTestClient.exe 以啟動用戶端。</span><span class="sxs-lookup"><span data-stu-id="71ff8-132">At this time, you can start the client by running UdpTestClient.exe.</span></span> <span data-ttu-id="71ff8-133">用戶端所產生的輸出如下所示。</span><span class="sxs-lookup"><span data-stu-id="71ff8-133">The output produced by the client is as follows.</span></span>  
+4. <span data-ttu-id="7a343-132">此時，您可以執行 UdpTestClient.exe 以啟動用戶端。</span><span class="sxs-lookup"><span data-stu-id="7a343-132">At this time, you can start the client by running UdpTestClient.exe.</span></span> <span data-ttu-id="7a343-133">用戶端所產生的輸出如下所示。</span><span class="sxs-lookup"><span data-stu-id="7a343-133">The output produced by the client is as follows.</span></span>  
   
     ```console
     0  
@@ -199,7 +199,7 @@ if (transaction != null)
     Press <ENTER> to complete test.  
     ```  
   
-5. <span data-ttu-id="71ff8-134">服務輸出如下。</span><span class="sxs-lookup"><span data-stu-id="71ff8-134">The service output is as follows.</span></span>  
+5. <span data-ttu-id="7a343-134">服務輸出如下。</span><span class="sxs-lookup"><span data-stu-id="7a343-134">The service output is as follows.</span></span>  
   
     ```console
     Hello, world!  
@@ -219,9 +219,9 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6. <span data-ttu-id="71ff8-135">如果服務應用程式可以找到與用戶端傳送的異動識別碼 (在 `The client transaction has flowed to the service` 作業的 `clientTransactionId` 參數中傳送) 相符的服務異動識別碼，就會顯示`CalculatorService.Add()`訊息。</span><span class="sxs-lookup"><span data-stu-id="71ff8-135">The service application displays the message `The client transaction has flowed to the service` if it can match the transaction identifier sent by the client, in the `clientTransactionId` parameter of the `CalculatorService.Add()` operation, to the identifier of the service transaction.</span></span> <span data-ttu-id="71ff8-136">只有在用戶端異動已流至服務時，才能取得相符的異動識別項。</span><span class="sxs-lookup"><span data-stu-id="71ff8-136">A match is obtained only if the client transaction has flowed to the service.</span></span>  
+6. <span data-ttu-id="7a343-135">如果服務應用程式可以找到與用戶端傳送的異動識別碼 (在 `The client transaction has flowed to the service` 作業的 `clientTransactionId` 參數中傳送) 相符的服務異動識別碼，就會顯示`CalculatorService.Add()`訊息。</span><span class="sxs-lookup"><span data-stu-id="7a343-135">The service application displays the message `The client transaction has flowed to the service` if it can match the transaction identifier sent by the client, in the `clientTransactionId` parameter of the `CalculatorService.Add()` operation, to the identifier of the service transaction.</span></span> <span data-ttu-id="7a343-136">只有在用戶端異動已流至服務時，才能取得相符的異動識別項。</span><span class="sxs-lookup"><span data-stu-id="7a343-136">A match is obtained only if the client transaction has flowed to the service.</span></span>  
   
-7. <span data-ttu-id="71ff8-137">若要使用組態來對已發行的端點執行用戶端應用程式，請在服務應用程式視窗上按下 ENTER，然後再執行測試用戶端一次。</span><span class="sxs-lookup"><span data-stu-id="71ff8-137">To run the client application against endpoints published using configuration, press ENTER on the service application window and then run the test client again.</span></span> <span data-ttu-id="71ff8-138">您應該會在服務上看見下列輸出。</span><span class="sxs-lookup"><span data-stu-id="71ff8-138">You should see the following output on the service.</span></span>  
+7. <span data-ttu-id="7a343-137">若要使用組態來對已發行的端點執行用戶端應用程式，請在服務應用程式視窗上按下 ENTER，然後再執行測試用戶端一次。</span><span class="sxs-lookup"><span data-stu-id="7a343-137">To run the client application against endpoints published using configuration, press ENTER on the service application window and then run the test client again.</span></span> <span data-ttu-id="7a343-138">您應該會在服務上看見下列輸出。</span><span class="sxs-lookup"><span data-stu-id="7a343-138">You should see the following output on the service.</span></span>  
   
     ```console  
     Testing Udp From Config.  
@@ -229,15 +229,15 @@ if (transaction != null)
     Press <ENTER> to terminate the service and exit...  
     ```  
   
-8. <span data-ttu-id="71ff8-139">現在，針對服務執行用戶端，就會產生跟前面相似的輸出。</span><span class="sxs-lookup"><span data-stu-id="71ff8-139">Running the client against the service now produces similar output as before.</span></span>  
+8. <span data-ttu-id="7a343-139">現在，針對服務執行用戶端，就會產生跟前面相似的輸出。</span><span class="sxs-lookup"><span data-stu-id="7a343-139">Running the client against the service now produces similar output as before.</span></span>  
   
-9. <span data-ttu-id="71ff8-140">若要使用 Svcutil.exe 重新產生用戶端程式碼和組態，請啟動服務應用程式，然後從範例的根目錄執行下列 Svcutil.exe 命令。</span><span class="sxs-lookup"><span data-stu-id="71ff8-140">To regenerate the client code and configuration using Svcutil.exe, start the service application and then run the following Svcutil.exe command from the root directory of the sample.</span></span>  
+9. <span data-ttu-id="7a343-140">若要使用 Svcutil.exe 重新產生用戶端程式碼和組態，請啟動服務應用程式，然後從範例的根目錄執行下列 Svcutil.exe 命令。</span><span class="sxs-lookup"><span data-stu-id="7a343-140">To regenerate the client code and configuration using Svcutil.exe, start the service application and then run the following Svcutil.exe command from the root directory of the sample.</span></span>  
   
     ```console  
     svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
-10. <span data-ttu-id="71ff8-141">請注意，Svcutil.exe 不會為 `sampleProfileUdpBinding` 產生繫結延伸組態，您必須以手動方式新增。</span><span class="sxs-lookup"><span data-stu-id="71ff8-141">Note that Svcutil.exe does not generate the binding extension configuration for the `sampleProfileUdpBinding`; you must add it manually.</span></span>  
+10. <span data-ttu-id="7a343-141">請注意，Svcutil.exe 不會為 `sampleProfileUdpBinding` 產生繫結延伸組態，您必須以手動方式新增。</span><span class="sxs-lookup"><span data-stu-id="7a343-141">Note that Svcutil.exe does not generate the binding extension configuration for the `sampleProfileUdpBinding`; you must add it manually.</span></span>  
   
     ```xml  
     <configuration>  
@@ -254,14 +254,14 @@ if (transaction != null)
     ```  
   
 > [!IMPORTANT]
-> <span data-ttu-id="71ff8-142">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="71ff8-142">The samples may already be installed on your machine.</span></span> <span data-ttu-id="71ff8-143">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="71ff8-143">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="7a343-142">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="7a343-142">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7a343-143">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="7a343-143">Check for the following (default) directory before continuing.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> <span data-ttu-id="71ff8-144">如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。</span><span class="sxs-lookup"><span data-stu-id="71ff8-144">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="71ff8-145">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="71ff8-145">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="7a343-144">如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="7a343-144">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7a343-145">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="7a343-145">This sample is located in the following directory.</span></span>  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a><span data-ttu-id="71ff8-146">另請參閱</span><span class="sxs-lookup"><span data-stu-id="71ff8-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a343-146">請參閱</span><span class="sxs-lookup"><span data-stu-id="7a343-146">See also</span></span>
 
-- [<span data-ttu-id="71ff8-147">傳輸：UDP</span><span class="sxs-lookup"><span data-stu-id="71ff8-147">Transport: UDP</span></span>](../../../../docs/framework/wcf/samples/transport-udp.md)
+- [<span data-ttu-id="7a343-147">傳輸：UDP</span><span class="sxs-lookup"><span data-stu-id="7a343-147">Transport: UDP</span></span>](transport-udp.md)
