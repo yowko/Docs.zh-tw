@@ -2,12 +2,12 @@
 title: 工作流程服務總覽
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: cb013dd419d09af61eaff290709164427b1b655f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f752eca621f9d30f38d85d7e71228fdfe1343c32
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347868"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594864"
 ---
 # <a name="workflow-services-overview"></a>工作流程服務總覽
 
@@ -46,7 +46,7 @@ WCF 定義兩種以 MSMQ 為主的繫結：<xref:System.ServiceModel.NetMsmqBind
 
 ## <a name="hosting-a-workflow-service"></a>裝載工作流程服務
 
-就像 WCF 服務一樣，必須裝載工作流程服務。 WCF 服務會使用 <xref:System.ServiceModel.ServiceHost> 類別來裝載服務，而工作流程服務則會使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 來裝載服務。 就像 WCF 服務一樣，工作流程服務也可以透過各種方式來裝載，例如：
+就像 WCF 服務一樣，必須裝載工作流程服務。 WCF 服務會使用 <xref:System.ServiceModel.ServiceHost> 類別來裝載服務，並使用工作流程服務 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 來裝載服務。 就像 WCF 服務一樣，工作流程服務也可以透過各種方式來裝載，例如：
 
 - 在 managed .NET Framework 應用程式中。
 
@@ -56,9 +56,9 @@ WCF 定義兩種以 MSMQ 為主的繫結：<xref:System.ServiceModel.NetMsmqBind
 
 - 在 Managed Windows 服務中。
 
-裝載于 managed .NET Framework 應用程式或 managed Windows 服務中的工作流程服務會建立 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別的實例，並將包含工作流程定義的 <xref:System.ServiceModel.Activities.WorkflowService> 實例傳遞至 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 屬性中。 包含傳訊活動的工作流程定義會公開為工作流程服務。
+裝載于 managed .NET Framework 應用程式或 managed Windows 服務中的工作流程服務會建立類別的實例 <xref:System.ServiceModel.Activities.WorkflowServiceHost> ，並將實例（ <xref:System.ServiceModel.Activities.WorkflowService> 其中包含屬性中的工作流程定義）傳遞給它 <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> 。 包含傳訊活動的工作流程定義會公開為工作流程服務。
 
-若要將工作流程服務裝載於 IIS 或 WAS 中，請將包含工作流程服務定義的 .xamlx 檔案置入虛擬目錄中。 系統會自動建立預設端點（使用 <xref:System.ServiceModel.BasicHttpBinding>）以取得詳細資訊，請參閱[簡化](../../../../docs/framework/wcf/simplified-configuration.md)的設定。 您也可以將 Web.config 檔案置於虛擬目錄中，指定您自己的端點。 如果工作流程定義位於組件中，您可以將 .svc 檔案置於虛擬目錄內，並將工作流程組件置於 App_Code 目錄中。 .svc 檔案必須指定服務主機處理站，以及實作工作流程服務的類別。 下列範例示範如何指定服務主機處理站，以及指定實作工作流程服務的類別。
+若要將工作流程服務裝載於 IIS 或 WAS 中，請將包含工作流程服務定義的 .xamlx 檔案置入虛擬目錄中。 <xref:System.ServiceModel.BasicHttpBinding>系統會自動建立預設端點（使用）以取得詳細資訊，請參閱[簡化](../simplified-configuration.md)的設定。 您也可以將 Web.config 檔案置於虛擬目錄中，指定您自己的端點。 如果工作流程定義位於組件中，您可以將 .svc 檔案置於虛擬目錄內，並將工作流程組件置於 App_Code 目錄中。 .svc 檔案必須指定服務主機處理站，以及實作工作流程服務的類別。 下列範例示範如何指定服務主機處理站，以及指定實作工作流程服務的類別。
 
 ```
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory

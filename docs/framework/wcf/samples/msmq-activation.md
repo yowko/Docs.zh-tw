@@ -2,16 +2,16 @@
 title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 805ab78908b4d1146cce94cac5357bafbb35c832
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0dbd24a612d56c0fe88066f625be2a8369b7df5b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744798"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602531"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 
-這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用 `netMsmqBinding`，而且是以[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例為基礎。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。
+這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用 `netMsmqBinding` ，而且是以[雙向通訊](two-way-communication.md)範例為基礎。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -19,11 +19,11 @@ ms.locfileid: "76744798"
 > [!NOTE]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
 >
-> \<InstallDrive >： \ WF_WCF_Samples
+> \<InstallDrive>： \ WF_WCF_Samples
 >
 > 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WCF 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
-> \<InstallDrive >： \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation。
+> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
 Windows 進程啟用服務（WAS）是適用于 Windows Server 2008 的新進程啟用機制，提供先前僅供 HTTP 應用程式使用非 HTTP 通訊協定之應用程式的類似 IIS 功能。 Windows Communication Foundation （WCF）會使用接聽程式介面卡介面，來傳達透過 WCF 支援的非 HTTP 通訊協定（例如 TCP、具名管道和 MSMQ）接收的啟用要求。 SMSvcHost.exe 中執行的 Managed Windows 服務會裝載可透過非 HTTP 通訊協定接收要求的功能。
 
@@ -214,9 +214,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 1. 請確定已安裝 IIS 7.0，因為 WAS 啟用時需要它。
 
-2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，您必須安裝 WCF 非 HTTP 啟用元件：
+2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。 此外，您必須安裝 WCF 非 HTTP 啟用元件：
 
-    1. 在 [開始] 功能表內選擇 [控制台]。
+    1. 在 [開始]**** 功能表內選擇 [控制台]****。
 
     2. 選取 [**程式和功能**]。
 
@@ -226,13 +226,13 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     5. 展開 [ **Microsoft .NET Framework 3.0** ] 節點，並檢查 [ **Windows Communication Foundation 非 HTTP 啟用**] 功能。
 
-3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
 4. 從命令視窗執行 client.exe，以執行用戶端。 這會建立佇列，並將訊息傳送給它。 讓用戶端繼續執行，以便查看服務讀取訊息的結果。
 
 5. 根據預設，MSMQ 啟動服務會以網路服務的身分執行。 因此，用來啟動應用程式的佇列必須讓「網路服務」擁有接收和查看其中訊息的權限。 您可以使用訊息佇列 MMC 來新增此權限：
 
-    1. 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Compmgmt.msc` 然後按 enter。
+    1. 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Compmgmt.msc` ，再按 enter 鍵。
 
     2. 在 [**服務和應用程式**] 底下，展開 [**訊息佇列**]。
 
@@ -267,11 +267,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         > 這個命令是單行文字。
 
-        此命令可讓您使用 `http://localhost/servicemodelsamples` 和 `net.msmq://localhost/servicemodelsamples`來存取/servicemodelsamples 應用程式。
+        此命令可讓您使用和來存取/servicemodelsamples 應用程式 `http://localhost/servicemodelsamples` `net.msmq://localhost/servicemodelsamples` 。
 
-7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Services.msc`。 搜尋 [Net.tcp 接聽程式**介面卡]** 的服務清單。 按一下滑鼠右鍵並選取 [內容]。 將 [**啟動類型**] 設定為 [**自動**]，按一下 [套用] **，然後按一下**[**開始**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
+7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Services.msc` 。 搜尋 [Net.tcp 接聽程式**介面卡]** 的服務清單。 按一下滑鼠右鍵並選取 [內容]****。 將 [**啟動類型**] 設定為 [**自動**]，按一下 [套用] **，然後按一下**[**開始**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
 
-8. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 使用下列程式碼：
+8. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 使用下列程式碼：
 
     ```csharp
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");
@@ -347,6 +347,6 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric 主控與持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.PrepareMessageRetry
 ms.date: 03/30/2017
 ms.assetid: ada4baa5-b60d-46b8-ad46-4d69f8d8a9fa
-ms.openlocfilehash: 02e275fa212128c65beda4bc3703949e75ea5092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c53c1617f3aa3c5f16ba16e8ec548e46ce22137
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594331"
 ---
 # <a name="microsofttransactionstransactionbridgepreparemessageretry"></a>Microsoft.Transactions.TransactionBridge.PrepareMessageRetry
 準備訊息重試已傳送給沒有回應的參與者。  
@@ -18,8 +18,8 @@ ms.locfileid: "61997902"
 ## <a name="troubleshooting"></a>疑難排解  
  調查讓回應無法準時傳遞的潛在網路或產品問題。  如果看到許多這類訊息，這可能表示基礎結構發生問題或回應時間異常地長。 這兩種問題都會大幅降低系統內的異動量。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

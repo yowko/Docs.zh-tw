@@ -2,12 +2,12 @@
 title: 含 WCF 服務的 ASMX 用戶端
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: a560650dba250d1ee4f0b959ead70a2915c9997f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: fd13d4907f1be09440387a36e14ecdc4926ba7e7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716130"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594773"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>含 WCF 服務的 ASMX 用戶端
 
@@ -35,7 +35,7 @@ public interface ICalculator
 }
 ```
 
-<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 會將 CLR 型別對應成 XML 表示。 <xref:System.Runtime.Serialization.DataContractSerializer> 解譯某些 XML 表示的方式與 XmlSerializer 的方式不同。 當使用 XmlSerializer 時，非 WCF proxy 產生器（例如 Wsdl.exe）會產生更能使用的介面。 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 會套用至 `ICalculator` 介面，以確保使用 XmlSerializer 將 CLR 類型對應至 XML。 服務實作會計算並傳回適當結果。
+<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 會將 CLR 型別對應成 XML 表示。 <xref:System.Runtime.Serialization.DataContractSerializer> 解譯某些 XML 表示的方式與 XmlSerializer 的方式不同。 當使用 XmlSerializer 時，非 WCF proxy 產生器（例如 Wsdl.exe）會產生更能使用的介面。 <xref:System.ServiceModel.XmlSerializerFormatAttribute>會套用至 `ICalculator` 介面，以確保使用 XMLSERIALIZER 將 CLR 類型對應至 XML。 服務實作會計算並傳回適當結果。
 
 此服務會公開 (Expose) 單一的端點來與已使用組態檔 Web.config 定義之服務進行通訊。 端點是由位址、繫結及合約所組成。 服務會公開位在網際網路資訊服務 (IIS) 主機提供之基底位址上的端點。 `binding` 屬性會設定為 basicHttpBinding，它會提供使用 SOAP 1.1 並與 WS-I BasicProfile 1.1 相容的 HTTP 通訊，如下列範例組態所示。
 
@@ -51,7 +51,7 @@ public interface ICalculator
 </services>
 ```
 
-.ASMX 用戶端會使用 Web 服務描述語言（WSDL）公用程式（Wsdl.exe）所產生的具型別 proxy，與 WCF 服務進行通訊。 此具型別的 Proxy 會包含在 generatedClient.cs 檔中。 WSDL 公用程式會擷取所指定服務的中繼資料，然後產生讓用戶端用來進行通訊的具型別 Proxy。 根據預設，此架構不會公開任何中繼資料。 若要公開產生 proxy 所需的中繼資料，您必須加入[\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) ，並將其 `httpGetEnabled` 屬性設定為 `True`，如下列設定所示。
+.ASMX 用戶端會使用 Web 服務描述語言（WSDL）公用程式（Wsdl.exe）所產生的具型別 proxy，與 WCF 服務進行通訊。 此具型別的 Proxy 會包含在 generatedClient.cs 檔中。 WSDL 公用程式會擷取所指定服務的中繼資料，然後產生讓用戶端用來進行通訊的具型別 Proxy。 根據預設，此架構不會公開任何中繼資料。 若要公開產生 proxy 所需的中繼資料，您必須加入 [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) ，並將其 `httpGetEnabled` 屬性設為， `True` 如下列設定所示。
 
 ```xml
 <behaviors>
@@ -132,14 +132,14 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
 > [!NOTE]
-> 如需傳遞和傳回復雜資料類型的詳細資訊，請參閱： [Windows Forms 用戶端中的資料](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)系結、 [Windows Presentation Foundation 用戶端中的資料](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)系結，以及[ASP.NET 用戶端中的資料](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)系結。
+> 如需傳遞和傳回復雜資料類型的詳細資訊，請參閱： [Windows Forms 用戶端中的資料](data-binding-in-a-windows-forms-client.md)系結、 [Windows Presentation Foundation 用戶端中的資料](data-binding-in-a-wpf-client.md)系結，以及[ASP.NET 用戶端中的資料](data-binding-in-an-aspnet-client.md)系結。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。

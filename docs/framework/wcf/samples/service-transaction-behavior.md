@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 38ad03d64d95e0653fba8018c59c62db9a698096
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 0be5bf0dbe6416febb898fb5150c5a516c8b0969
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715114"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591523"
 ---
 # <a name="service-transaction-behavior"></a>服務異動行為
 
-這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 這個範例是以實作為計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，但是會擴充以維護資料庫資料表中所執行作業的伺服器記錄檔，以及計算機作業的具狀態運行總計。 對伺服器記錄資料表的持續性寫入會依用戶端協調的異動結果而定，如果用戶端異動沒有完成，Web 服務異動就會確保資料庫的更新並未經過認可。
+這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 這個範例是以實作為計算機服務的[消費者入門](getting-started-sample.md)為基礎，但是會擴充以維護資料庫資料表中所執行作業的伺服器記錄檔，以及計算機作業的具狀態運行總計。 對伺服器記錄資料表的持續性寫入會依用戶端協調的異動結果而定，如果用戶端異動沒有完成，Web 服務異動就會確保資料庫的更新並未經過認可。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -101,7 +101,7 @@ client.Close();
 
   - `ReleaseServiceInstanceOnTransactionComplete` 屬性會指定是否要在交易完成時回收服務執行個體。 設定為 `false` 時，服務會維護多個作業要求中的相同服務執行個體。 這是維護執行總數的必要項。 如果設定為 `true`，就會在每次完成動作之後產生新執行個體。
 
-  - `TransactionAutoCompleteOnSessionClose` 屬性會指定是否要在工作階段關閉時完成未完成的異動。 藉由將它設定為 `false`，就需要個別作業將 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> 屬性設定為 `true`，或明確要求呼叫 <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> 方法以完成交易。 這個範例會示範這兩種方法。
+  - `TransactionAutoCompleteOnSessionClose` 屬性會指定是否要在工作階段關閉時完成未完成的異動。 將它設定為 `false` ，就需要個別作業將 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> 屬性設為 `true` 或，以明確要求呼叫 <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> 方法來完成交易。 這個範例會示範這兩種方法。
 
 - 在 `ServiceContractAttribute` 上：
 
@@ -209,11 +209,11 @@ Creating new service instance...
 
 1. 確定您已安裝 SQL Server 2005 Express Edition 或 SQL Server 2005。 在服務的 App.config 檔案中，可能會設定資料庫 `connectionString`，或者可能將 appSettings 的 `usingSql` 值設定為 `false` 來停用資料庫互動。
 
-2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
-如果您跨電腦執行範例，您必須設定 Microsoft 分散式交易協調器（MSDTC）以啟用網路交易流程，並使用 Wsatconfig.exe 工具來啟用 Windows Communication Foundation （WCF）交易網路部門.
+如果您跨電腦執行範例，您必須設定 Microsoft 分散式交易協調器（MSDTC）以啟用網路交易流程，並使用 Wsatconfig.exe 工具來啟用 Windows Communication Foundation （WCF）交易網路支援。
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>若要設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以支援跨電腦執行範例
 
@@ -227,9 +227,9 @@ Creating new service instance...
 
     4. 檢查**網路 DTC 存取**並**允許輸入**。
 
-    5. 按一下 **[是]** 以重新開機 MS DTC 服務，然後按一下 **[確定]** 。
+    5. 按一下 **[是]** 以重新開機 MS DTC 服務，然後按一下 **[確定]**。
 
-    6. 按一下 [確定] 關閉對話方塊。
+    6. 按一下 [確定]  關閉對話方塊。
 
 2. 在服務電腦和用戶端電腦上，設定 [Windows 防火牆] 將 Microsoft Distributed Transaction Coordinator (MSDTC) 加入預期應用程式清單中：
 
@@ -253,9 +253,9 @@ Creating new service instance...
 
     4. 檢查 [**網路 DTC 存取**] 和 [**允許輸出**]。
 
-    5. 按一下 **[是]** 以重新開機 MS DTC 服務，然後按一下 **[確定]** 。
+    5. 按一下 **[是]** 以重新開機 MS DTC 服務，然後按一下 **[確定]**。
 
-    6. 按一下 [確定] 關閉對話方塊。
+    6. 按一下 [確定]  關閉對話方塊。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。

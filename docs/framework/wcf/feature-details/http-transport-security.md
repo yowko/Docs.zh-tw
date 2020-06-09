@@ -2,12 +2,12 @@
 title: HTTP 傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 4bd3fbfd39538eee4344ef0a8ca4fe61b372ab70
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212138"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592719"
 ---
 # <a name="http-transport-security"></a>HTTP 傳輸安全性
 使用 HTTP 來傳輸時，會由安全通訊端層 (SSL) 實作提供安全性。 在網際網路上會廣泛使用 SSL 以對用戶端驗證服務，進而對通道提供機密性 (加密)。 本主題說明 SSL 的運作方式，以及它在 Windows Communication Foundation （WCF）中的執行方式。  
@@ -51,9 +51,9 @@ ms.locfileid: "76212138"
 
  如果您要建立自我裝載的 WCF 應用程式，請使用[HTTPcfg.exe](/windows/win32/http/httpcfg-exe)工具。
   
- 如需使用 Httpcfg.exe 來設定具有 x.509 憑證之埠的詳細資訊，請參閱[如何：使用 SSL 憑證設定埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ 如需使用 Httpcfg.exe 來設定具有 x.509 憑證之埠的詳細資訊，請參閱[如何：使用 SSL 憑證設定埠](how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 ## <a name="see-also"></a>請參閱
 
-- [傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [傳輸安全性](transport-security.md)
+- [訊息安全性](message-security-in-wcf.md)

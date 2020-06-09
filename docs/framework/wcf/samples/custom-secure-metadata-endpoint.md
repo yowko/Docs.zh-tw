@@ -2,15 +2,15 @@
 title: 自訂安全中繼資料端點
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 89f12b4490d556884aaa15dcb102b5ad876707ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e392f396b62ad2a3d3cda6e7d6ff31f186f0964
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183840"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592433"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自訂安全中繼資料端點
-此示例演示如何使用使用非中繼資料交換綁定之一的安全中繼資料終結點實現服務，以及如何配置[ServiceModel 中繼資料實用程式工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或用戶端以從此類中繼資料終結點獲取中繼資料。 有兩個系統提供的繫結可用來公開中繼資料端點：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 可用來以不安全的方式，透過 HTTP 公開中繼資料端點。 mexHttpsBinding 可用來以安全的方式，透過 HTTPS 公開中繼資料端點。 此範例說明如何使用 <xref:System.ServiceModel.WSHttpBinding> 公開安全的中繼資料端點。 當您要變更繫結上的安全性設定時，您會想要這麼做，但是您不想使用 HTTPS。 如果使用 mexHttpsBinding，您的中繼資料端點將是安全的，但是沒有方法可以修改繫結設定。  
+這個範例會示範如何使用使用其中一個非中繼資料交換系結的安全中繼資料端點來執行服務，以及如何設定[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)或用戶端，以從這類中繼資料端點提取中繼資料。 有兩個系統提供的繫結可用來公開中繼資料端點：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 可用來以不安全的方式，透過 HTTP 公開中繼資料端點。 mexHttpsBinding 可用來以安全的方式，透過 HTTPS 公開中繼資料端點。 此範例說明如何使用 <xref:System.ServiceModel.WSHttpBinding> 公開安全的中繼資料端點。 當您要變更繫結上的安全性設定時，您會想要這麼做，但是您不想使用 HTTPS。 如果使用 mexHttpsBinding，您的中繼資料端點將是安全的，但是沒有方法可以修改繫結設定。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -89,7 +89,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 .\svcutil.exe http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- 領導"\\"確保運行此目錄中的 Svcutil.exe 副本（具有相應 Svcutil.exe.config 的拷貝）。  
+ 前置的 ". \\ "確保會執行此目錄中的 Svcutil 複本（具有對應的 Svcutil 的副本）。  
   
 ## <a name="metadataresolver-client"></a>MetadataResolver 用戶端  
  如果用戶端知道合約以及如何在設計階段與中繼資料互動，用戶端就可以使用 `MetadataResolver`，動態找出繫結和應用程式端點的位址。 這個範例用戶端會示範如何藉由建立和設定 `MetadataResolver`，進而設定 `MetadataExchangeClient` 所使用的繫結和認證。  
@@ -132,29 +132,29 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
   
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 要生成解決方案，請按照生成 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。  
+2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1. 從範例安裝資料夾執行 Setup.bat。 這會安裝執行範例所需的所有憑證。 請注意，Setup.bat 使用 FindPrivateKey.exe 工具，該工具通過運行安裝程式 CertTool.bat 從[Windows 通信基礎示例的一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)進行安裝。  
+1. 從範例安裝資料夾執行 Setup.bat。 這會安裝執行範例所需的所有憑證。 請注意，安裝程式會使用 FindPrivateKey，此工具是從[Windows Communication Foundation 範例的一次性安裝程式執行](one-time-setup-procedure-for-the-wcf-samples.md)setupCertTool 所安裝。  
   
 2. 從 \MetadataResolverClient\bin 或 \SvcutilClient\bin 執行用戶端應用程式。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-3. 如果用戶端和服務無法通信，請參閱[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+3. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 4. 當您完成範例時，請執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
 #### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
-1. 在伺服器上執行 `setup.bat service`。 使用`setup.bat``service`參數運行將創建具有電腦完全限定功能變數名稱的服務證書，並將服務證書匯出到名為 Service.cer 的檔。  
+1. 在伺服器上執行 `setup.bat service`。 `setup.bat`使用引數執行時，會 `service` 建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名為 .cer 的檔案。  
   
-2. 在伺服器上編輯 Web.config，以反映新的憑證名稱。 也就是說，將`findValue`[\<服務證書>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)元素中的屬性更改為電腦的完全限定功能變數名稱。  
+2. 在伺服器上編輯 Web.config，以反映新的憑證名稱。 也就是，將 `findValue` 元素中的屬性變更 [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) 為電腦的完整功能變數名稱。  
   
 3. 從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
   
-4. 在用戶端上執行 `setup.bat client`。 使用`setup.bat``client`參數運行將創建名為 Client.com的用戶端憑證，並將用戶端憑證匯出到名為 Client.cer 的檔。  
+4. 在用戶端上執行 `setup.bat client`。 `setup.bat`使用 `client` 引數執行會建立名為 Client.com 的用戶端憑證，並將用戶端憑證匯出至名為 client .cer 的檔案。  
   
 5. 在用戶端機器上之 `MetadataResolverClient` 的 App.config 檔案中，變更 MEX 端點的位址值以符合服務的新位址。 您可以藉由使用伺服器的完整網域名稱取代 localhost，完成這個動作。 也請將 metadataResolverClient.cs 檔案中的其他 "localhost" 變更為新的服務憑證名稱 (伺服器的完整網域名稱)。 對 SvcutilClient 專案的 App.config 執行相同的動作。  
   
@@ -168,20 +168,20 @@ ChannelFactory<ICalculator> cf = new ChannelFactory<ICalculator>(endpoint.Bindin
   
 10. 在用戶端機器上，從 VS 執行 MetadataResolverClient 或 SvcutilClient。  
   
-    1. 如果用戶端和服務無法通信，請參閱[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+    1. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 - 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
     > [!NOTE]
-    > 跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果已運行跨電腦使用證書的 Windows 通信基礎 （WCF） 示例，請確保清除已安裝在 CurrentUser - TrustedPeople 存儲中的服務證書。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。 例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    > 跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已在電腦上執行使用憑證的 Windows Communication Foundation （WCF）範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`。 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` 。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  

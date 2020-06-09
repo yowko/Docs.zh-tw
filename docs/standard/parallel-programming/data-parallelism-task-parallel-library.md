@@ -1,5 +1,6 @@
 ---
 title: 資料平行處理原則 (工作平行程式庫)
+description: 閱讀工作平行程式庫（TPL）如何支援資料平行處理，在 .NET 中的來源集合或陣列元素上同時執行相同的作業。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: d7500666f12624d1a81d399a325827a416e5af3c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 513c5dde1526a8a21f68171f304b245d0a34f563
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276773"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594461"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>資料平行處理原則 (工作平行程式庫)
 「資料平行處理原則」** 是指在來源集合或陣列中的元素上，同時 (也就是平行) 執行相同作業的情節。 在資料平行作業中，會將來源集合分割，讓多個執行緒可以同時在不同區段上操作。  
@@ -51,6 +52,6 @@ ms.locfileid: "84276773"
 |[工作平行程式庫 (TPL)](task-parallel-library-tpl.md)|提供工作平行程式庫的概觀。|  
 |[平行程式設計](index.md)|介紹如何以 .NET Framework 進行平行程式設計。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行程式設計](index.md)

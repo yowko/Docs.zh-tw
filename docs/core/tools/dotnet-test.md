@@ -2,18 +2,18 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: 1190ecb75e83c9930c60726e7cd83203b11928cb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cbe9e7cce1722efb808c68ee49bb9012be6dcff7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283932"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594448"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet test` - 用來執行單元測試的 .NET 測試驅動程式。
 
@@ -145,7 +145,7 @@ dotnet test -h|--help
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱<xref:Microsoft.Build.Framework.LoggerVerbosity>。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱 <xref:Microsoft.Build.Framework.LoggerVerbosity> 。
 
 - **`RunSettings`** 參量
 
@@ -192,8 +192,8 @@ dotnet test -h|--help
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
   ```
-  
-  - 在目前目錄中的專案中執行測試，並在測試主控制項損毀時回報進行中的測試：
+
+- 在目前目錄中的專案中執行測試，並在測試主控制項損毀時回報進行中的測試：
 
   ```dotnetcli
   dotnet test --blame
@@ -209,9 +209,9 @@ dotnet test -h|--help
 
 | 測試架構 | 支援的屬性                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>優先順序</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>名稱</li><li>ClassName</li><li>優先順序</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特性</li></ul>                                   |
-| NUnit          | <ul><li>FullyQualifiedName</li><li>Name</li><li>TestCategory</li><li>優先順序</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>名稱</li><li>TestCategory</li><li>優先順序</li></ul>                                   |
 
 `<operator>` 描述屬性和值之間的關聯性：
 
@@ -230,14 +230,14 @@ dotnet test -h|--help
 
 | 運算子            | 函式 |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | 或       |
 | `&`                 | AND      |
 
 使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。
 
 如需如何使用選擇性單元測試篩選的詳細資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [架構和目標](../../standard/frameworks.md)
 - [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

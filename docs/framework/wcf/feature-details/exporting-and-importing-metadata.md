@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: 692382de81459ad52d306ca7fd05546b4e36294d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f07a1a10529aa1615bb00a0f3faeca9cb249aa64
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963671"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595527"
 ---
 # <a name="exporting-and-importing-metadata"></a>匯出和匯入中繼資料
-在 Windows Communication Foundation (WCF) 中, 匯出中繼資料是描述服務端點並將其投射至平行、標準化標記法的程式, 用戶端可用來瞭解如何使用服務。 匯入服務中繼資料是從服務中繼資料產生 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體或組件的程序。  
+在 Windows Communication Foundation （WCF）中，匯出中繼資料是描述服務端點並將其投射至平行、標準化標記法的程式，用戶端可用來瞭解如何使用服務。 匯入服務中繼資料是從服務中繼資料產生 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體或組件的程序。  
   
 ## <a name="exporting-metadata"></a>匯出中繼資料  
- 若要從 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 執行個體匯出中繼資料，請使用 <xref:System.ServiceModel.Description.MetadataExporter> 抽象類別的實作。 型別是包含在 WCF 中<xref:System.ServiceModel.Description.MetadataExporter>的抽象類別的執行。 <xref:System.ServiceModel.Description.WsdlExporter>  
+ 若要從 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 執行個體匯出中繼資料，請使用 <xref:System.ServiceModel.Description.MetadataExporter> 抽象類別的實作。 <xref:System.ServiceModel.Description.WsdlExporter>型別是包含在 WCF 中的 <xref:System.ServiceModel.Description.MetadataExporter> 抽象類別的執行。  
   
  <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 型別會使用在 <xref:System.ServiceModel.Description.MetadataSet> 執行個體中封裝的附加原則運算式來產生 Web 服務描述語言 (WSDL) 中繼資料。 您可以使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 執行個體來反覆匯出 <xref:System.ServiceModel.Description.ContractDescription> 物件和 <xref:System.ServiceModel.Description.ServiceEndpoint> 物件的中繼資料。 您也可以匯出 <xref:System.ServiceModel.Description.ServiceEndpoint> 物件的集合，並將之與特定服務名稱進行關聯。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "69963671"
 ## <a name="importing-metadata"></a>匯入中繼資料  
   
 ### <a name="importing-wsdl-documents"></a>匯入 WSDL 文件  
- 若要在 WCF 中匯入服務中繼資料, 請<xref:System.ServiceModel.Description.MetadataImporter>使用抽象類別的執行。 型別是包含在 WCF 中<xref:System.ServiceModel.Description.MetadataImporter>的抽象類別的執行。 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> <xref:System.ServiceModel.Description.WsdlImporter> 型別會匯入 WSDL 中繼資料，其中包含與 <xref:System.ServiceModel.Description.MetadataSet> 物件組合在一起的附加原則。  
+ 若要在 WCF 中匯入服務中繼資料，請使用 <xref:System.ServiceModel.Description.MetadataImporter> 抽象類別的執行。 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>型別是包含在 WCF 中的 <xref:System.ServiceModel.Description.MetadataImporter> 抽象類別的執行。 <xref:System.ServiceModel.Description.WsdlImporter> 型別會匯入 WSDL 中繼資料，其中包含與 <xref:System.ServiceModel.Description.MetadataSet> 物件組合在一起的附加原則。  
   
  <xref:System.ServiceModel.Description.WsdlImporter> 型別可讓您控制匯入中繼資料的方式。 您可以匯入所有端點、所有繫結或是所有合約。 您可以匯入與特定 WSDL 服務、繫結或連接埠類型相關聯的所有端點。 您也可以匯入特定 WSDL 連接埠的端點、特定 WSDL 繫結的繫結，或是特定 WSDL 連接埠類型的合約。  
   
@@ -48,27 +48,27 @@ ms.locfileid: "69963671"
  <xref:System.ServiceModel.Description.WsdlExporter> 型別會在匯出處理期間重新擲回所有攔截到的例外狀況。 這些例外狀況不會在 `Errors` 屬性中當成錯誤來擷取。 一旦 <xref:System.ServiceModel.Description.WsdlExporter> 擲回例外狀況，就會呈現錯誤狀態而無法重複使用。 當因為使用萬用字元動作而無法匯出作業，以及當碰到重複的繫結名稱時，<xref:System.ServiceModel.Description.WsdlExporter> 就會將警告新增至自身的 `Errors` 屬性中。  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何：將中繼資料匯入服務端點](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [HOW TO：將中繼資料匯入服務端點](how-to-import-metadata-into-service-endpoints.md)  
  說明如何將下載的中繼資料匯入描述物件中。  
   
- [如何：從服務端點匯出中繼資料](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [HOW TO：從服務端點匯出中繼資料](how-to-export-metadata-from-service-endpoints.md)  
  說明如何將描述物件匯出至中繼資料。  
   
- [ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [ServiceDescription 與 WSDL 參考](servicedescription-and-wsdl-reference.md)  
  說明描述物件與 WSDL 之間的對應。  
   
- [如何：使用 Svcutil 從已編譯的服務程式代碼匯出中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料](how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  說明使用 Svcutil.exe 來匯出編譯組件中有關服務、合約與資料型別的中繼資料。  
   
- [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [資料合約結構描述參考](data-contract-schema-reference.md)  
  說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.ServiceModel.Description.WsdlExporter>  
   
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [匯出 WCF 延伸模組的自訂中繼資料](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)
-- [匯入 WCF 延伸模組的自訂中繼資料](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)
+- [匯出 WCF 延伸模組的自訂中繼資料](../extending/exporting-custom-metadata-for-a-wcf-extension.md)
+- [匯入 WCF 延伸模組的自訂中繼資料](../extending/importing-custom-metadata-for-a-wcf-extension.md)

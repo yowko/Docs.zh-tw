@@ -2,16 +2,16 @@
 title: WCF 中的訊息安全性
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 32f6659f6ac744ab7af07c23e7e26ea1124d020c
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 6875339df327371a79bc9b9072aca2df0bc7d3f6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212076"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602657"
 ---
 # <a name="message-security-in-wcf"></a>WCF 中的訊息安全性
 
-Windows Communication Foundation （WCF）有兩種主要模式可提供安全性（`Transport` 和 `Message`），以及結合這兩者的第三種模式（`TransportWithMessageCredential`）。 本主題將說明訊息安全性以及使用的原因。
+Windows Communication Foundation （WCF）有兩種主要模式可提供安全性（ `Transport` 和 `Message` ），以及結合這兩者的第三個模式（ `TransportWithMessageCredential` ）。 本主題將說明訊息安全性以及使用的原因。
 
 ## <a name="what-is-message-security"></a>什麼是訊息安全性？
 
@@ -29,7 +29,7 @@ Windows Communication Foundation （WCF）有兩種主要模式可提供安全�
 
 - 支援多重傳輸。 您可以使用許多不同的傳輸來傳送安全訊息，例如具名管道和 TCP，而不必依賴通訊協定來達到安全性。 使用傳輸層級安全性，所有的安全性資訊都會限定在單一特定傳輸連線的範圍內，並且無法從訊息內容本身取得。 不論您使用何種傳輸來傳輸訊息，訊息安全性都可以保護訊息的安全，且安全性內容會直接內嵌在訊息中。
 
-- 支援一整組認證和宣告。 訊息安全性是以 WS-Security 規格為基礎，提供可傳輸 SOAP 訊息內任何類型宣告的可延伸架構。 和傳輸安全性不同的是，您可以使用的驗證機制 (或宣告) 集合不受傳輸功能的限制。 WCF 訊息安全性包括多種類型的驗證和宣告傳輸，而且可以擴充以支援其他必要的類型。 例如，基於這些原因，聯合認證案例一定要有訊息安全性。 如需 WCF 支援之同盟案例的詳細資訊，請參閱[同盟和發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。
+- 支援一整組認證和宣告。 訊息安全性是以 WS-Security 規格為基礎，提供可傳輸 SOAP 訊息內任何類型宣告的可延伸架構。 和傳輸安全性不同的是，您可以使用的驗證機制 (或宣告) 集合不受傳輸功能的限制。 WCF 訊息安全性包括多種類型的驗證和宣告傳輸，而且可以擴充以支援其他必要的類型。 例如，基於這些原因，聯合認證案例一定要有訊息安全性。 如需 WCF 支援之同盟案例的詳細資訊，請參閱[同盟和發行的權杖](federation-and-issued-tokens.md)。
 
 ## <a name="how-message-and-transport-security-compare"></a>如何比較訊息和傳輸安全性
 
@@ -65,7 +65,7 @@ Windows Communication Foundation （WCF）有兩種主要模式可提供安全�
 
 ## <a name="see-also"></a>請參閱
 
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [如何：使用傳輸安全性和訊息認證](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
-- [Microsoft 模式和做法，第3章：執行傳輸和訊息層安全性](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))
+- [Securing Services and Clients](securing-services-and-clients.md)
+- [傳輸安全性](transport-security.md)
+- [如何：使用傳輸安全性和訊息認證](how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft 典範與實例，第 3 章：實作傳輸和訊息層安全性](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))
