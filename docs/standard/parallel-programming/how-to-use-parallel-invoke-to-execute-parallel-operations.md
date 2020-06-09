@@ -1,5 +1,6 @@
 ---
 title: 作法：使用 Parallel.Invoke 執行平行作業
+description: 請參閱如何在工作平行程式庫（TPL）中使用 Parallel. Invoke 方法，這會在 .NET 中對共用資料來源執行平行作業。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: 2b353fb8cb5e04ee4cab6b49f55539ecb40fab4f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 084ade48b1406d23a11eb311739525f35ac973df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290794"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596341"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>作法：使用 Parallel.Invoke 執行平行作業
 
@@ -36,7 +37,7 @@ ms.locfileid: "84290794"
 
 將整個範例複製並貼到 Microsoft Visual Studio 專案中，然後按 **F5** 鍵。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行程式設計](index.md)
 - [作法：取消工作及其子系](how-to-cancel-a-task-and-its-children.md)

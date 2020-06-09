@@ -10,23 +10,23 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 05bcddabf625e478616cce39f08b0ff8af282716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf45b39f59e2fe38fec88d1fac23ab824c009546
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184945"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597081"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>HOW TO：啟用訊息重新執行偵測
 當攻擊者複製兩方之間的訊息資料流，並且對其中一方或多方重新執行資料流時，即表示發生重新執行攻擊。 除非緩解攻擊，否則受到攻擊的電腦會將資料流當成合法訊息來處理，導致發生一連串負面的影響，例如項目的重複排序。  
   
- 有關郵件重播檢測的詳細資訊，請參閱[消息重播檢測](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10))。  
+ 如需訊息重新執行偵測的詳細資訊，請參閱訊息重新執行[偵測](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10))。  
   
- 以下過程演示了可以使用 Windows 通信基礎 （WCF） 控制重播檢測的各種屬性。  
+ 下列程式示範各種屬性，可讓您用來控制使用 Windows Communication Foundation （WCF）的重新執行偵測。  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>若要透過程式碼在用戶端上控制重新執行偵測  
   
-1. 建立用於 <xref:System.ServiceModel.Channels.SecurityBindingElement> 的 <xref:System.ServiceModel.Channels.CustomBinding>。 有關詳細資訊，請參閱[如何：使用安全繫結元素創建自訂綁定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 下列範例會使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> (使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 來建立)。  
+1. 建立用於 <xref:System.ServiceModel.Channels.SecurityBindingElement> 的 <xref:System.ServiceModel.Channels.CustomBinding>。 如需詳細資訊，請參閱[如何：使用 SecurityBindingElement 建立自訂](how-to-create-a-custom-binding-using-the-securitybindingelement.md)系結。 下列範例會使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> (使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 來建立)。  
   
 2. 請使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> 屬性將參照傳回 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 類別，並在必要時設定下列任何一個屬性：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "79184945"
   
     3. `ReplayWindow`. `TimeSpan` 值。 它會控制訊息在經由伺服器傳送出去 (透過媒介) 並在抵達用戶端之前，可以在網路中存留的時間長短。 用戶端會追蹤於最近 `ReplayWindow` 傳送的訊息簽章，以利進行重新執行偵測。  
   
-    4. `ReplayCacheSize`. 整數值。 用戶端會將訊息簽章儲存到快取中。 這項設定將指定快取可以儲存的簽章數量。 如果最近一次重新執行視窗中傳送的訊息數量到達快取上限，則會等到最早的快取簽章抵達時間限制才會開始接受新的訊息。 預設值為 500000。  
+    4. `ReplayCacheSize`. 整數值。 用戶端會將訊息簽章儲存到快取中。 這項設定將指定快取可以儲存的簽章數量。 如果最近一次重新執行視窗中傳送的訊息數量到達快取上限，則會等到最早的快取簽章抵達時間限制才會開始接受新的訊息。 預設值為500000。  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>若要透過程式碼在服務上控制重新執行偵測  
   
@@ -46,11 +46,11 @@ ms.locfileid: "79184945"
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>若要透過組態來控制用戶端或服務的重新執行偵測  
   
-1. 創建[\<自訂綁定>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+1. 建立 [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) 。  
   
 2. 建立 `<security>` 項目。  
   
-3. 創建[\<本地用戶端設置>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)或[\<本機服務設置>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)。  
+3. 建立 [\<localClientSettings>](../../configure-apps/file-schema/wcf/localclientsettings-element.md) 或 [\<localServiceSettings>](../../configure-apps/file-schema/wcf/localservicesettings-element.md) 。  
   
 4. 必要時設定 `detectReplays`、`maxClockSkew`、`replayWindow`，和 `replayCacheSize` 的屬性值。 下列範例將同時設定 `<localServiceSettings>` 項目的屬性。  
   
@@ -102,10 +102,10 @@ ms.locfileid: "79184945"
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
-- [安全對話與安全工作階段](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
-- [\<本地用戶端設置>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [安全對話與安全工作階段](secure-conversations-and-secure-sessions.md)
+- [\<localClientSettings>](../../configure-apps/file-schema/wcf/localclientsettings-element.md)
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

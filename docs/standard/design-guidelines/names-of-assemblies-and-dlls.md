@@ -1,5 +1,6 @@
 ---
 title: 組件和 DLL 的名稱
+description: 瞭解命名元件和動態連結程式庫（Dll）的指導方針。 元件可以跨越一個或多個檔案，但它通常會與 DLL 對應一對一。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: 138ae8154b0d10fb813f0c98ceb7c58a2471b780
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: de7ce3ee774d4598521d7156d0d660c3fe30154c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291951"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594474"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>組件和 DLL 的名稱
 「元件」（assembly）是受控碼程式的部署和身分識別單位。 雖然元件可以跨越一個或多個檔案，但通常元件會與 DLL 對應一對一。 因此，本節只會描述 DLL 命名慣例，然後對應至元件命名慣例。
@@ -34,7 +35,7 @@ ms.locfileid: "84291951"
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [架構設計方針](index.md)
 - [命名方針](naming-guidelines.md)

@@ -1,111 +1,172 @@
 ---
-title: ML.NET CLI 命令引用
+title: ML.NET CLI 命令參考
 description: ML.NET CLI 工具中的 auto-train 命令概觀、範例和參考。
-ms.date: 12/18/2019
+ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594539"
 ---
-# <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 命令引用
+# <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 命令參考
 
-`auto-train` 命令是 ML.NET CLI 工具所提供的主要命令。 該命令允許您使用自動機器學習 （AutoML） 以及示例 C# 代碼來運行/評分該模型，生成高品質的ML.NET模型。 此外，還生成了用於訓練模型的 C# 代碼，以便您研究模型的演算法和設置。
+`classification`、 `regression` 和 `recommendation` 命令是 ML.NET CLI 工具所提供的主要命令。 這些命令可讓您使用自動化機器學習（AutoML），為分類、回歸和建議模型產生良好品質的 ML.NET 模型，以及用來執行/評分該模型的範例 c # 程式碼。 此外，系統會為您產生用來定型模型的 c # 程式碼，以研究模型的演算法和設定。
 
 > [!NOTE]
 > 本主題參考 ML.NET CLI 和 ML.NET AutoML，它們目前為公開預覽版，因此内容可能會有變更。
 
 ## <a name="overview"></a>概觀
 
-使用方式範例：
+使用範例：
 
 ```console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
+mlnet regression --dataset "cars.csv" --label-col price
 ```
 
-`mlnet auto-train` 命令會產生下列資產：
+`mlnet`ML 工作命令（ `classification` 、 `regression` 和）會 `recommendation` 產生下列資產：
 
 - 隨時可用的序列化模型 .zip (「最佳模型」)。
-- C# 代碼以運行/評分生成模型。
-- C# 代碼，帶有用於生成該模型的訓練代碼。
+- 用來執行/評分產生之模型的 c # 程式碼。
+- C # 程式碼，其中包含用來產生該模型的定型代碼。
 
-前兩個資產可以直接用於最終使用者應用（ASP.NET酷睿 Web 應用、服務、桌面應用等），以便對模型進行預測。
+前兩個資產可以直接用於您的終端使用者應用程式（ASP.NET Core web 應用程式、服務、傳統型應用程式等），以使用模型進行預測。
 
-第三個資產（訓練代碼）顯示了 CLI 使用哪些ML.NET API 代碼來訓練生成的模型，以便您可以調查模型的特定演算法和設置。
+第三個資產（訓練程式碼）會顯示 CLI 用來定型所產生模型的 ML.NET API 程式碼，因此您可以調查模型的特定演算法和設定。
 
 ## <a name="examples"></a>範例
 
-二進位分類問題的最簡單的 CLI 命令（AutoML 從提供的資料推斷出大部分配置）：
+分類問題最簡單的 CLI 命令（AutoML 會從所提供的資料推斷大部分的設定）：
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "customer-feedback.tsv" --label-col Sentiment
 ```
 
 適用於迴歸問題的另一個簡單 CLI 命令：
 
 ``` console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet regression --dataset "cars.csv" --label-col Price
 ```
 
-使用定型資料集、測試資料集和進一步自訂的明確引數，來建立並定型二元分類模型：
+使用訓練資料集、測試資料集和進一步自訂的明確引數來建立和定型分類模型：
 
 ```console
-mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-col "InsuranceRisk" --cache on --train-time 600
 ```
 
 ## <a name="command-options"></a>命令選項
 
-`mlnet auto-train`基於提供的資料集訓練多個模型，最後選擇最佳模型，將其保存為序列化 .ZIP 檔案，並生成相關的 C# 代碼進行評分和培訓。
+`mlnet`ML 工作命令（ `classification` 、 `regression` 和）會 `recommendation` 根據所提供的資料集和 ML.NET CLI 選項來訓練多個模型。 這些命令也會選取最佳的模型、將模型儲存為序列化的 .zip 檔案，並產生相關的 c # 程式碼來進行計分和定型。
+
+### <a name="classification-options"></a>分類選項
+
+`mlnet classification`執行會將分類模型定型。 如果您想要 ML 模型將資料分類成2個或多個類別（例如情感分析），請選擇此命令。
 
 ```console
-mlnet auto-train
+mlnet classification
 
---task | --mltask | -T <value>
+--dataset <path> (REQUIRED)
 
---dataset | -d <value>
+--label-col <col> (REQUIRED)
 
-[
- [--validation-dataset | -v <value>]
-  --test-dataset | -t <value>
-]
+--cache <option>
 
---label-column-name | -n <value>
-|
---label-column-index | -i <value>
+--has-header (Default: true)
 
-[--ignore-columns | -I <value>]
+--ignore-cols <cols>
 
-[--has-header | -h <value>]
+--log-file-path <path>
 
-[--max-exploration-time | -x <value>]
+--name <name>
 
-[--verbosity | -V <value>]
+-o, --output <path>
 
-[--cache | -c <value>]
+--test-dataset <path>
 
-[--name | -N <value>]
+--train-time <time> (Default: 30 minutes, in seconds)
 
-[--output-path | -o <value>]
+--validation-dataset <path>
 
-[--help | -h]
+-v, --verbosity <v>
+
+-?, -h, --help
 
 ```
 
-不正確輸入選項會導致 CLI 工具發出有效輸入清單和錯誤訊息。
+### <a name="regression-options"></a>回歸選項
 
-## <a name="task"></a>Task
+`mlnet regression`執行將會定型回歸模型。 如果您想要 ML 模型預測數值（例如價格預測），請選擇此命令。
 
-`--task | --mltask | -T` (string)
+```console
+mlnet classification
 
-單一字串，提供所要解決的 ML 問題。 例如，下列任何工作 (CLI 最終會支援 AutoML 中支援的所有工作)：
+--dataset <path> (REQUIRED)
 
-- `regression` - 如果使用 ML 模型來預測數值，則選擇此選項
-- `binary-classification` - 如果 ML 模型結果有兩個可能的類別布林值 (0 或 1)，則選擇此選項。
-- `multiclass-classification` - 如果 ML 模型結果有多個可能的類別值，則選擇此選項。
+--label-col <col> (REQUIRED)
 
-在這個引數中只應提供一個 ML 工作。
+--cache <option>
+
+--has-header (Default: true)
+
+--ignore-cols <cols>
+
+--log-file-path <path>
+
+--name <name>
+
+-o, --output <path>
+
+--test-dataset <path>
+
+--train-time <time> (Default: 30 minutes, in seconds)
+
+--validation-dataset <path>
+
+-v, --verbosity <v>
+
+-?, -h, --help
+
+```
+
+### <a name="recommendation-options"></a>建議選項
+
+`mlnet recommendation`執行將會定型建議模型。  如果您想要讓 ML 模型根據評等向使用者推薦專案（例如產品建議），請選擇此命令。
+
+```console
+mlnet classification
+
+--dataset <path> (REQUIRED)
+
+--item-col <col> (REQUIRED)
+
+--rating-col <col> (REQUIRED)
+
+--user-col <col> (REQUIRED)
+
+--cache <option>
+
+--has-header (Default: true)
+
+--log-file-path <path>
+
+--name <name>
+
+-o, --output <path>
+
+--test-dataset <path>
+
+--train-time <time> (Default: 30 minutes, in seconds)
+
+--validation-dataset <path>
+
+-v, --verbosity <v>
+
+-?, -h, --help
+
+```
+
+不正確輸入選項會導致 CLI 工具發出有效輸入的清單和錯誤訊息。
 
 ## <a name="dataset"></a>資料集
 
@@ -113,9 +174,9 @@ mlnet auto-train
 
 這個引數提供下列任一選項的檔案路徑：
 
-- *答：整個資料集檔：* 如果使用此選項且使用者未提供`--test-dataset`和`--validation-dataset`，則交叉驗證（k 折等）或自動資料拆分方法將在內部用於驗證模型。 在此情況下，使用者只需提供資料集檔案路徑。
+- *答：整個資料集檔案：* 如果使用此選項，且使用者未提供 `--test-dataset` 和 `--validation-dataset` ，則會在內部使用交叉驗證（k-折迭等）或自動化資料分割方法來驗證模型。 在此情況下，使用者只需提供資料集檔案路徑。
 
-- *B：訓練資料集檔：* 如果使用者還提供用於模型驗證的資料集（使用`--test-dataset`和可選`--validation-dataset`），則`--dataset`參數意味著僅具有"訓練資料集"。 例如，使用 80% - 20% 方法來驗證模型的品質並取得準確度計量時，「定型資料集」會有 80% 的資料，而「測試資料集」會有 20% 的資料。
+- *B：訓練資料集檔案：* 如果使用者也提供模型驗證的資料集（使用 `--test-dataset` 和選擇性 `--validation-dataset` ），則 `--dataset` 引數表示只有「訓練資料集」。 例如，使用 80% - 20% 方法來驗證模型的品質並取得準確度計量時，「定型資料集」會有 80% 的資料，而「測試資料集」會有 20% 的資料。
 
 ## <a name="test-dataset"></a>測試資料集
 
@@ -154,27 +215,41 @@ mlnet auto-train
 
 在任何情況下，這些百分比都會由提供已分割檔案的使用者使用 CLI 來決定。
 
-## <a name="label-column-name"></a>標籤列名稱
+## <a name="label-column"></a>標籤資料行
 
-`--label-column-name | -n` (string)
+`--label-col`（int 或 string）
 
-透過這個引數，您可以藉由使用資料集標頭中所設定的資料行名稱，來指定特定目標/目的資料行 (您想要預測的變數)。
+使用這個引數時，您可以使用資料集標頭中所設定的資料行名稱或資料集檔案中的資料行數值索引（從0開始），來指定特定目標/目標資料行（您想要預測的變數）。
 
-這個引數只能用於受監督的 ML 工作，例如「分類問題」**。 不能用於不受監督的 ML 工作，例如「叢集」**。
+這個引數會用於*分類*和*回歸*問題。
 
-## <a name="label-column-index"></a>標籤列索引
+## <a name="item-column"></a>專案資料行
 
-`--label-column-index | -i` (int)
+`--item-col`（int 或 string）
 
-透過這個引數，您可以藉由使用資料集檔案中的資料行數值索引 (資料行索引值以 1 起始)，來指定特定目標/目的資料行 (您想要預測的變數)。
+[專案] 資料行具有 [使用者] 速率的專案清單（建議使用者使用專案）。 您可以使用資料集標頭中所設定的資料行名稱，或是資料集檔案中的資料行數值索引來指定這個資料行（資料行索引值是從0開始）。
 
-*注：* 如果使用者也使用 ， `--label-column-name` `--label-column-name`是正在使用的使用者。
+這個引數僅用於*建議*工作。
 
-這個引數只能用於受監督的 ML 工作，例如「分類問題」**。 不能用於不受監督的 ML 工作，例如「叢集」**。
+## <a name="rating-column"></a>評等資料行
 
-## <a name="ignore-columns"></a>忽略列
+`--rating-col`（int 或 string）
 
-`--ignore-columns | -I` (string)
+[評等] 資料行具有使用者所提供專案的評等清單。 您可以使用資料集標頭中所設定的資料行名稱，或是資料集檔案中的資料行數值索引來指定這個資料行（資料行索引值是從0開始）。
+
+這個引數僅用於*建議*工作。
+
+## <a name="user-column"></a>使用者資料行
+
+`--user-col`（int 或 string）
+
+[使用者] 資料行有使用者的清單，可提供專案的評等。 您可以使用資料集標頭中所設定的資料行名稱，或是資料集檔案中的資料行數值索引來指定這個資料行（資料行索引值是從0開始）。
+
+這個引數僅用於*建議*工作。
+
+## <a name="ignore-columns"></a>略過資料行
+
+`--ignore-columns` (string)
 
 透過這個引數，您可以忽略資料集檔案中的現有資料行，讓定型程序不會載入和使用這些資料行。
 
@@ -186,7 +261,7 @@ mlnet auto-train
 
 ## <a name="has-header"></a>具有標頭
 
-`--has-header | -h` (bool)
+`--has-header` (bool)
 
 指定資料集檔案是否有標頭資料列。
 可能的值包括：
@@ -194,15 +269,13 @@ mlnet auto-train
 - `true`
 - `false`
 
-如果使用者未指定這個引數，預設值為 `true`。
+如果使用者未指定這個引數，ML.NET CLI 會嘗試偵測此屬性。
 
-為了使用 `--label-column-name` 引數，您的資料集檔案中必須有標頭，且您必須將 `--has-header` 設定為 `true` (預設值)。
+## <a name="train-time"></a>定型時間
 
-## <a name="max-exploration-time"></a>最大勘探時間
+`--train-time` (string)
 
-`--max-exploration-time | -x` (string)
-
-根據預設，最大探索時間為 30 分鐘
+根據預設，探索/訓練時間上限為30分鐘。
 
 這個引數為用於探索多個定型器和設定的程序，設定最大時間 (以秒為單位)。 如果為單一反覆運算所提供的時間太短 (例如 2 秒)，則可能會超過設定的時間。 在此情況下，實際時間是在單一反覆運算中產生一個模型設定所需的時間。
 
@@ -210,7 +283,7 @@ mlnet auto-train
 
 ## <a name="cache"></a>快取
 
-`--cache | -c` (string)
+`--cache` (string)
 
 如果您使用快取，則會將整個定型資料集載入記憶體。
 
@@ -220,15 +293,15 @@ mlnet auto-train
 
 您可以指定下列值：
 
-`on`：強制訓練時使用的緩存。
-`off`：強制緩存在訓練時不使用。
-`auto`：根據 AutoML 啟發式，緩存將被使用或不。 通常，如果您使用 `auto` 選項，則小型/中型資料集會使用快取，而大型資料集不會使用快取。
+`on`：強制在定型時使用快取。
+`off`：在定型時強制不使用快取。
+`auto`：視 AutoML 啟發學習法而定，將會使用快取。 通常，如果您使用 `auto` 選項，則小型/中型資料集會使用快取，而大型資料集不會使用快取。
 
 如果您沒有指定 `--cache` 參數，則預設會使用 `auto` 快取設定。
 
 ## <a name="name"></a>名稱
 
-`--name | -N` (string)
+`--name` (string)
 
 所建立輸出專案或方案的名稱。 如果未指定名稱，則會使用名稱 `sample-{mltask}`。
 
@@ -242,7 +315,7 @@ ML.NET 模型檔案 (.ZIP 檔案) 也會有相同的名稱。
 
 ## <a name="verbosity"></a>詳細程度
 
-`--verbosity | -V` (string)
+`--verbosity | -v` (string)
 
 設定標準輸出的詳細資訊層級。
 
@@ -252,17 +325,17 @@ ML.NET 模型檔案 (.ZIP 檔案) 也會有相同的名稱。
 - `m[inimal]` (預設)
 - `diag[nostic]` (記錄資訊層級)
 
-根據預設，CLI 工具在運作時應該至少會顯示一些基本回饋，例如提及它正在運作，以及剩餘時間或完成的時間百分比 (如果可能)。
+根據預設，CLI 工具應該會在工作時顯示一些最小的意見反應（ `minimal` ），例如，它正在運作，以及可能會有多少時間或已完成的時間。
 
-## <a name="help"></a>説明
+## <a name="help"></a>[說明]
 
-`-h|--help`
+`-h |--help`
 
 印出命令的說明，以及每個命令的參數描述。
 
 ## <a name="see-also"></a>另請參閱
 
 - [如何安裝 ML.NET CLI 工具](../how-to-guides/install-ml-net-cli.md)
-- [ML.NET CLI 概述](../automate-training-with-cli.md)
-- [教程：使用 cLI ML.NET分析情緒](../tutorials/sentiment-analysis-cli.md)
+- [ML.NET CLI 的總覽](../automate-training-with-cli.md)
+- [教學課程：使用 ML.NET CLI 來分析情感](../tutorials/sentiment-analysis-cli.md)
 - [ML.NET CLI 中的遙測](../resources/ml-net-cli-telemetry.md)
