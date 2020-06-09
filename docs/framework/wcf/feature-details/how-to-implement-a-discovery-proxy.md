@@ -2,45 +2,45 @@
 title: HOW TO：實作探索 Proxy
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: dafd5e25f998f2dda3f736caeea51cd534ce8e5e
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: ca7ab2ee434aef7649d71cbfc33273f48020788f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597068"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="c4307-102">HOW TO：實作探索 Proxy</span><span class="sxs-lookup"><span data-stu-id="c4307-102">How to: Implement a Discovery Proxy</span></span>
+# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="df689-102">HOW TO：實作探索 Proxy</span><span class="sxs-lookup"><span data-stu-id="df689-102">How to: Implement a Discovery Proxy</span></span>
 
-<span data-ttu-id="c4307-103">本主題說明如何實作探索 Proxy。</span><span class="sxs-lookup"><span data-stu-id="c4307-103">This topic explains how to implement a discovery proxy.</span></span> <span data-ttu-id="c4307-104">如需 Windows Communication Foundation （WCF）中探索功能的詳細資訊，請參閱[WCF 探索總覽](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="c4307-104">For more information about the discovery feature in Windows Communication Foundation (WCF), see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="c4307-105">探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。</span><span class="sxs-lookup"><span data-stu-id="c4307-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="c4307-106">許多其他支援類別都已在此範例中定義和使用。</span><span class="sxs-lookup"><span data-stu-id="c4307-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="c4307-107">`OnResolveAsyncResult`、`OnFindAsyncResult`和 `AsyncResult`。</span><span class="sxs-lookup"><span data-stu-id="c4307-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="c4307-108">這些類別會實作 <xref:System.IAsyncResult> 介面。</span><span class="sxs-lookup"><span data-stu-id="c4307-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> <span data-ttu-id="c4307-109">如需 <xref:System.IAsyncResult> 的詳細資訊，請參閱[system.web 介面](xref:System.IAsyncResult)。</span><span class="sxs-lookup"><span data-stu-id="c4307-109">For more information about <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
+<span data-ttu-id="df689-103">本主題說明如何實作探索 Proxy。</span><span class="sxs-lookup"><span data-stu-id="df689-103">This topic explains how to implement a discovery proxy.</span></span> <span data-ttu-id="df689-104">如需 Windows Communication Foundation （WCF）中探索功能的詳細資訊，請參閱[WCF 探索總覽](wcf-discovery-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="df689-104">For more information about the discovery feature in Windows Communication Foundation (WCF), see [WCF Discovery Overview](wcf-discovery-overview.md).</span></span> <span data-ttu-id="df689-105">探索 Proxy 可透過建立延伸類別的方式來實作，該類別可擴充<xref:System.ServiceModel.Discovery.DiscoveryProxy> 抽象類別。</span><span class="sxs-lookup"><span data-stu-id="df689-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="df689-106">許多其他支援類別都已在此範例中定義和使用。</span><span class="sxs-lookup"><span data-stu-id="df689-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="df689-107">`OnResolveAsyncResult``OnFindAsyncResult`和 `AsyncResult`。</span><span class="sxs-lookup"><span data-stu-id="df689-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="df689-108">這些類別會實作 <xref:System.IAsyncResult> 介面。</span><span class="sxs-lookup"><span data-stu-id="df689-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> <span data-ttu-id="df689-109">如需有關的詳細資訊， <xref:System.IAsyncResult> 請參閱[system.web 介面](xref:System.IAsyncResult)。</span><span class="sxs-lookup"><span data-stu-id="df689-109">For more information about <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
 
- <span data-ttu-id="c4307-110">本主題將實作探索 Proxy 分為三個主要部分：</span><span class="sxs-lookup"><span data-stu-id="c4307-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>
+ <span data-ttu-id="df689-110">本主題將實作探索 Proxy 分為三個主要部分：</span><span class="sxs-lookup"><span data-stu-id="df689-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>
 
-- <span data-ttu-id="c4307-111">定義類別，包含資料存放區並可擴充抽象 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 類別。</span><span class="sxs-lookup"><span data-stu-id="c4307-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>
+- <span data-ttu-id="df689-111">定義類別，包含資料存放區並可擴充抽象 <xref:System.ServiceModel.Discovery.DiscoveryProxy> 類別。</span><span class="sxs-lookup"><span data-stu-id="df689-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>
 
-- <span data-ttu-id="c4307-112">實作 Helper `AsyncResult` 類別。</span><span class="sxs-lookup"><span data-stu-id="c4307-112">Implement the helper `AsyncResult` class.</span></span>
+- <span data-ttu-id="df689-112">實作 Helper `AsyncResult` 類別。</span><span class="sxs-lookup"><span data-stu-id="df689-112">Implement the helper `AsyncResult` class.</span></span>
 
-- <span data-ttu-id="c4307-113">裝載探索 Proxy。</span><span class="sxs-lookup"><span data-stu-id="c4307-113">Host the Discovery Proxy.</span></span>
+- <span data-ttu-id="df689-113">裝載探索 Proxy。</span><span class="sxs-lookup"><span data-stu-id="df689-113">Host the Discovery Proxy.</span></span>
 
-### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="c4307-114">若要建立新的主控台應用程式專案</span><span class="sxs-lookup"><span data-stu-id="c4307-114">To create a new console application project</span></span>
+### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="df689-114">若要建立新的主控台應用程式專案</span><span class="sxs-lookup"><span data-stu-id="df689-114">To create a new console application project</span></span>
 
-1. <span data-ttu-id="c4307-115">啟動 Visual Studio 2012。</span><span class="sxs-lookup"><span data-stu-id="c4307-115">Start Visual Studio 2012.</span></span>
+1. <span data-ttu-id="df689-115">啟動 Visual Studio 2012。</span><span class="sxs-lookup"><span data-stu-id="df689-115">Start Visual Studio 2012.</span></span>
 
-2. <span data-ttu-id="c4307-116">建立新的主控台應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="c4307-116">Create a new console application project.</span></span> <span data-ttu-id="c4307-117">將專案命名為 `DiscoveryProxy`，並將方案命名為 `DiscoveryProxyExample`。</span><span class="sxs-lookup"><span data-stu-id="c4307-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>
+2. <span data-ttu-id="df689-116">這會建立新的主控台應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="df689-116">Create a new console application project.</span></span> <span data-ttu-id="df689-117">將專案命名為 `DiscoveryProxy`，並將方案命名為 `DiscoveryProxyExample`。</span><span class="sxs-lookup"><span data-stu-id="df689-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>
 
-3. <span data-ttu-id="c4307-118">將下列參考加入至專案中</span><span class="sxs-lookup"><span data-stu-id="c4307-118">Add the following references to the project</span></span>
+3. <span data-ttu-id="df689-118">將下列參考加入至專案中</span><span class="sxs-lookup"><span data-stu-id="df689-118">Add the following references to the project</span></span>
 
-    1. <span data-ttu-id="c4307-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="c4307-119">System.ServiceModel.dll</span></span>
+    1. <span data-ttu-id="df689-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="df689-119">System.ServiceModel.dll</span></span>
 
-    2. <span data-ttu-id="c4307-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="c4307-120">System.Servicemodel.Discovery.dll</span></span>
+    2. <span data-ttu-id="df689-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="df689-120">System.Servicemodel.Discovery.dll</span></span>
 
     > [!CAUTION]
-    > <span data-ttu-id="c4307-121">確定您參考的組件為 4.0 版或更新版本。</span><span class="sxs-lookup"><span data-stu-id="c4307-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>
+    > <span data-ttu-id="df689-121">確定您參考的組件為 4.0 版或更新版本。</span><span class="sxs-lookup"><span data-stu-id="df689-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>
 
-### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="c4307-122">若要實作 ProxyDiscoveryService 類別</span><span class="sxs-lookup"><span data-stu-id="c4307-122">To implement the ProxyDiscoveryService class</span></span>
+### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="df689-122">若要實作 ProxyDiscoveryService 類別</span><span class="sxs-lookup"><span data-stu-id="df689-122">To implement the ProxyDiscoveryService class</span></span>
 
-1. <span data-ttu-id="c4307-123">將新的程式碼檔案加入至專案，並將其命名為 DiscoveryProxy.cs。</span><span class="sxs-lookup"><span data-stu-id="c4307-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>
+1. <span data-ttu-id="df689-123">將新的程式碼檔案加入至專案，並將其命名為 DiscoveryProxy.cs。</span><span class="sxs-lookup"><span data-stu-id="df689-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>
 
-2. <span data-ttu-id="c4307-124">將下列 `using` 陳述式加入至 DiscoveryProxy.cs。</span><span class="sxs-lookup"><span data-stu-id="c4307-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>
+2. <span data-ttu-id="df689-124">將下列 `using` 陳述式加入至 DiscoveryProxy.cs。</span><span class="sxs-lookup"><span data-stu-id="df689-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>
 
     ```csharp
     using System;
@@ -50,7 +50,7 @@ ms.locfileid: "71351572"
     using System.Xml;
     ```
 
-3. <span data-ttu-id="c4307-125">從 `DiscoveryProxyService` 衍生 <xref:System.ServiceModel.Discovery.DiscoveryProxy>。</span><span class="sxs-lookup"><span data-stu-id="c4307-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="c4307-126">將 `ServiceBehavior` 屬性套用至類別，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="c4307-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>
+3. <span data-ttu-id="df689-125">從 `DiscoveryProxyService` 衍生 <xref:System.ServiceModel.Discovery.DiscoveryProxy>。</span><span class="sxs-lookup"><span data-stu-id="df689-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="df689-126">將 `ServiceBehavior` 屬性套用至類別，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="df689-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>
 
     ```csharp
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -60,14 +60,14 @@ ms.locfileid: "71351572"
     }
     ```
 
-4. <span data-ttu-id="c4307-127">在 `DiscoveryProxy` 類別內定義字典以保存已註冊的服務。</span><span class="sxs-lookup"><span data-stu-id="c4307-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>
+4. <span data-ttu-id="df689-127">在 `DiscoveryProxy` 類別內定義字典以保存已註冊的服務。</span><span class="sxs-lookup"><span data-stu-id="df689-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>
 
     ```csharp
     // Repository to store EndpointDiscoveryMetadata.
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;
     ```
 
-5. <span data-ttu-id="c4307-128">定義初始化字典的建構函式。</span><span class="sxs-lookup"><span data-stu-id="c4307-128">Define a constructor that initializes the dictionary.</span></span>
+5. <span data-ttu-id="df689-128">定義初始化字典的建構函式。</span><span class="sxs-lookup"><span data-stu-id="df689-128">Define a constructor that initializes the dictionary.</span></span>
 
     ```csharp
     public DiscoveryProxyService()
@@ -76,9 +76,9 @@ ms.locfileid: "71351572"
             }
     ```
 
-### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="c4307-129">若要定義用來更新探索 Proxy 快取的方法</span><span class="sxs-lookup"><span data-stu-id="c4307-129">To define the methods used to update the discovery proxy cache</span></span>
+### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="df689-129">若要定義用來更新探索 Proxy 快取的方法</span><span class="sxs-lookup"><span data-stu-id="df689-129">To define the methods used to update the discovery proxy cache</span></span>
 
-1. <span data-ttu-id="c4307-130">實作 `AddOnlineservice` 方法，將服務加入至快取。</span><span class="sxs-lookup"><span data-stu-id="c4307-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="c4307-131">Proxy 每次收到公告訊息時都會呼叫此動作。</span><span class="sxs-lookup"><span data-stu-id="c4307-131">This is called every time the proxy receives an announcement message.</span></span>
+1. <span data-ttu-id="df689-130">實作 `AddOnlineservice` 方法，將服務加入至快取。</span><span class="sxs-lookup"><span data-stu-id="df689-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="df689-131">Proxy 每次收到公告訊息時都會呼叫此動作。</span><span class="sxs-lookup"><span data-stu-id="df689-131">This is called every time the proxy receives an announcement message.</span></span>
 
     ```csharp
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -92,7 +92,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-2. <span data-ttu-id="c4307-132">實作 `RemoveOnlineService` 方法，這個方法可用來移除來自快取的服務。</span><span class="sxs-lookup"><span data-stu-id="c4307-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>
+2. <span data-ttu-id="df689-132">實作 `RemoveOnlineService` 方法，這個方法可用來移除來自快取的服務。</span><span class="sxs-lookup"><span data-stu-id="df689-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>
 
     ```csharp
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -109,7 +109,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-3. <span data-ttu-id="c4307-133">實作 `MatchFromOnlineService` 方法，這些方法會嘗試比對某個服務與字典中的服務。</span><span class="sxs-lookup"><span data-stu-id="c4307-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>
+3. <span data-ttu-id="df689-133">實作 `MatchFromOnlineService` 方法，這些方法會嘗試比對某個服務與字典中的服務。</span><span class="sxs-lookup"><span data-stu-id="df689-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>
 
     ```csharp
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -145,7 +145,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-4. <span data-ttu-id="c4307-134">實作 `PrintDiscoveryMetadata` 方法，這個方法可提供使用者探索 Proxy 進行中的主控台文字輸出。</span><span class="sxs-lookup"><span data-stu-id="c4307-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>
+4. <span data-ttu-id="df689-134">實作 `PrintDiscoveryMetadata` 方法，這個方法可提供使用者探索 Proxy 進行中的主控台文字輸出。</span><span class="sxs-lookup"><span data-stu-id="df689-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>
 
     ```csharp
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -160,7 +160,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-5. <span data-ttu-id="c4307-135">將下列 AsyncResult 類別加入至 DiscoveryProxyService。</span><span class="sxs-lookup"><span data-stu-id="c4307-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="c4307-136">這些類別用於區分不同的非同步作業結果。</span><span class="sxs-lookup"><span data-stu-id="c4307-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>
+5. <span data-ttu-id="df689-135">將下列 AsyncResult 類別加入至 DiscoveryProxyService。</span><span class="sxs-lookup"><span data-stu-id="df689-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="df689-136">這些類別用於區分不同的非同步作業結果。</span><span class="sxs-lookup"><span data-stu-id="df689-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>
 
     ```csharp
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult
@@ -224,9 +224,9 @@ ms.locfileid: "71351572"
     }
     ```
 
-### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="c4307-137">若要定義可實作探索 Proxy 功能的方法</span><span class="sxs-lookup"><span data-stu-id="c4307-137">To define the methods that implement the discovery proxy functionality</span></span>
+### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="df689-137">若要定義可實作探索 Proxy 功能的方法</span><span class="sxs-lookup"><span data-stu-id="df689-137">To define the methods that implement the discovery proxy functionality</span></span>
 
-1. <span data-ttu-id="c4307-138">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c4307-139">當探索 Proxy 收到線上公告訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-139">This method is called when the discovery proxy receives an online announcement message.</span></span>
+1. <span data-ttu-id="df689-138">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="df689-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="df689-139">當探索 Proxy 收到線上公告訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="df689-139">This method is called when the discovery proxy receives an online announcement message.</span></span>
 
     ```csharp
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -237,7 +237,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-2. <span data-ttu-id="c4307-140">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c4307-141">當探索 Proxy 完成處理公告訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>
+2. <span data-ttu-id="df689-140">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="df689-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="df689-141">當探索 Proxy 完成處理公告訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="df689-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>
 
     ```csharp
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -246,7 +246,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-3. <span data-ttu-id="c4307-142">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c4307-143">當探索 Proxy 收到離線公告訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>
+3. <span data-ttu-id="df689-142">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="df689-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="df689-143">當探索 Proxy 收到離線公告訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="df689-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>
 
     ```csharp
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -257,7 +257,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-4. <span data-ttu-id="c4307-144">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c4307-145">當探索 Proxy 完成處理離線公告訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>
+4. <span data-ttu-id="df689-144">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="df689-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="df689-145">當探索 Proxy 完成處理離線公告訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="df689-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>
 
     ```csharp
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -266,7 +266,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-5. <span data-ttu-id="c4307-146">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c4307-147">當探索 Proxy 收到尋找要求時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-147">This method is called when the discovery proxy receives a find request.</span></span>
+5. <span data-ttu-id="df689-146">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="df689-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="df689-147">當探索 Proxy 收到尋找要求時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="df689-147">This method is called when the discovery proxy receives a find request.</span></span>
 
     ```csharp
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -285,7 +285,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-6. <span data-ttu-id="c4307-148">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c4307-149">當探索 Proxy 完成處理尋找要求時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-149">This method is called when the discovery proxy finishes processing a find request.</span></span>
+6. <span data-ttu-id="df689-148">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="df689-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="df689-149">當探索 Proxy 完成處理尋找要求時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="df689-149">This method is called when the discovery proxy finishes processing a find request.</span></span>
 
     ```csharp
     protected override void OnEndFind(IAsyncResult result)
@@ -294,7 +294,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-7. <span data-ttu-id="c4307-150">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c4307-151">當探索 Proxy 收到解析訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-151">This method is called when the discovery proxy receives a resolve message.</span></span>
+7. <span data-ttu-id="df689-150">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="df689-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="df689-151">當探索 Proxy 收到解析訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="df689-151">This method is called when the discovery proxy receives a resolve message.</span></span>
 
     ```csharp
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -311,7 +311,7 @@ ms.locfileid: "71351572"
     }
     ```
 
-8. <span data-ttu-id="c4307-152">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c4307-153">當探索 Proxy 完成處理解析訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="c4307-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>
+8. <span data-ttu-id="df689-152">覆寫 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="df689-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="df689-153">當探索 Proxy 完成處理解析訊息時，就會呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="df689-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>
 
     ```csharp
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -320,22 +320,22 @@ ms.locfileid: "71351572"
     }
     ```
 
-<span data-ttu-id="c4307-154">OnBegin.</span><span class="sxs-lookup"><span data-stu-id="c4307-154">The OnBegin..</span></span> <span data-ttu-id="c4307-155">/ OnEnd.</span><span class="sxs-lookup"><span data-stu-id="c4307-155">/ OnEnd..</span></span> <span data-ttu-id="c4307-156">方法提供後續探索作業的邏輯。</span><span class="sxs-lookup"><span data-stu-id="c4307-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="c4307-157">例如，<xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 和 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 方法可實作探索 Proxy 的尋找邏輯。</span><span class="sxs-lookup"><span data-stu-id="c4307-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="c4307-158">當探索 Proxy 收到檢測訊息時，便會執行這些方法來傳送回應至用戶端。</span><span class="sxs-lookup"><span data-stu-id="c4307-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="c4307-159">您可以修改尋找邏輯，例如，您可透過演算法或應用程式特定 XML 中繼資料剖析的方式，加入自訂範圍比對，做為尋找作業的一部分。</span><span class="sxs-lookup"><span data-stu-id="c4307-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>
+<span data-ttu-id="df689-154">OnBegin.</span><span class="sxs-lookup"><span data-stu-id="df689-154">The OnBegin..</span></span> <span data-ttu-id="df689-155">/ OnEnd.</span><span class="sxs-lookup"><span data-stu-id="df689-155">/ OnEnd..</span></span> <span data-ttu-id="df689-156">方法提供後續探索作業的邏輯。</span><span class="sxs-lookup"><span data-stu-id="df689-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="df689-157">例如，<xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> 和 <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> 方法可實作探索 Proxy 的尋找邏輯。</span><span class="sxs-lookup"><span data-stu-id="df689-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="df689-158">當探索 Proxy 收到檢測訊息時，便會執行這些方法來傳送回應至用戶端。</span><span class="sxs-lookup"><span data-stu-id="df689-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="df689-159">您可以修改尋找邏輯，例如，您可透過演算法或應用程式特定 XML 中繼資料剖析的方式，加入自訂範圍比對，做為尋找作業的一部分。</span><span class="sxs-lookup"><span data-stu-id="df689-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>
 
-### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="c4307-160">若要實作 AsyncResult 類別</span><span class="sxs-lookup"><span data-stu-id="c4307-160">To implement the AsyncResult class</span></span>
+### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="df689-160">若要實作 AsyncResult 類別</span><span class="sxs-lookup"><span data-stu-id="df689-160">To implement the AsyncResult class</span></span>
 
-1. <span data-ttu-id="c4307-161">定義抽象基底類別 AsyncResult，這個類別用於衍生各種非同步結果類別。</span><span class="sxs-lookup"><span data-stu-id="c4307-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>
+1. <span data-ttu-id="df689-161">定義抽象基底類別 AsyncResult，這個類別用於衍生各種非同步結果類別。</span><span class="sxs-lookup"><span data-stu-id="df689-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>
 
-2. <span data-ttu-id="c4307-162">建立名為 AsyncResult.cs 的新程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="c4307-162">Create a new code file called AsyncResult.cs.</span></span>
+2. <span data-ttu-id="df689-162">建立名為 AsyncResult.cs 的新程式碼檔案。</span><span class="sxs-lookup"><span data-stu-id="df689-162">Create a new code file called AsyncResult.cs.</span></span>
 
-3. <span data-ttu-id="c4307-163">將下列 `using` 陳述式加入至 AsyncResult.cs。</span><span class="sxs-lookup"><span data-stu-id="c4307-163">Add the following `using` statements to AsyncResult.cs.</span></span>
+3. <span data-ttu-id="df689-163">將下列 `using` 陳述式加入至 AsyncResult.cs。</span><span class="sxs-lookup"><span data-stu-id="df689-163">Add the following `using` statements to AsyncResult.cs.</span></span>
 
     ```csharp
     using System;
     using System.Threading;
     ```
 
-4. <span data-ttu-id="c4307-164">加入下列 AsyncResult 類別。</span><span class="sxs-lookup"><span data-stu-id="c4307-164">Add the following AsyncResult class.</span></span>
+4. <span data-ttu-id="df689-164">加入下列 AsyncResult 類別。</span><span class="sxs-lookup"><span data-stu-id="df689-164">Add the following AsyncResult class.</span></span>
 
     ```csharp
     abstract class AsyncResult : IAsyncResult
@@ -483,11 +483,11 @@ ms.locfileid: "71351572"
     }
     ```
 
-### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="c4307-165">若要裝載 DiscoveryProxy</span><span class="sxs-lookup"><span data-stu-id="c4307-165">To host the DiscoveryProxy</span></span>
+### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="df689-165">若要裝載 DiscoveryProxy</span><span class="sxs-lookup"><span data-stu-id="df689-165">To host the DiscoveryProxy</span></span>
 
-1. <span data-ttu-id="c4307-166">開啟 DiscoveryProxyExample 專案中的 Program.cs 檔案。</span><span class="sxs-lookup"><span data-stu-id="c4307-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>
+1. <span data-ttu-id="df689-166">開啟 DiscoveryProxyExample 專案中的 Program.cs 檔案。</span><span class="sxs-lookup"><span data-stu-id="df689-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>
 
-2. <span data-ttu-id="c4307-167">加入下列 `using` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="c4307-167">Add the following `using` statements.</span></span>
+2. <span data-ttu-id="df689-167">新增下列 `using` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="df689-167">Add the following `using` statements.</span></span>
 
     ```csharp
     using System;
@@ -495,7 +495,7 @@ ms.locfileid: "71351572"
     using System.ServiceModel.Discovery;
     ```
 
-3. <span data-ttu-id="c4307-168">在 `Main()` 方法中，加入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="c4307-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="c4307-169">這樣做可建立 `DiscoveryProxy` 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c4307-169">This creates an instance of the `DiscoveryProxy` class.</span></span>
+3. <span data-ttu-id="df689-168">在 `Main()` 方法中，加入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="df689-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="df689-169">這樣做可建立 `DiscoveryProxy` 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="df689-169">This creates an instance of the `DiscoveryProxy` class.</span></span>
 
     ```csharp
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -505,7 +505,7 @@ ms.locfileid: "71351572"
     ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());
     ```
 
-4. <span data-ttu-id="c4307-170">接著，加入下列程式碼以加入探索端點與公告端點。</span><span class="sxs-lookup"><span data-stu-id="c4307-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>
+4. <span data-ttu-id="df689-170">接著，加入下列程式碼以加入探索端點與公告端點。</span><span class="sxs-lookup"><span data-stu-id="df689-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>
 
     ```csharp
     try
@@ -546,11 +546,11 @@ ms.locfileid: "71351572"
     }
     ```
 
-<span data-ttu-id="c4307-171">您已經完成實作探索 Proxy。</span><span class="sxs-lookup"><span data-stu-id="c4307-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="c4307-172">繼續進行[如何：執行向探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)。</span><span class="sxs-lookup"><span data-stu-id="c4307-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>
+<span data-ttu-id="df689-171">您已經完成實作探索 Proxy。</span><span class="sxs-lookup"><span data-stu-id="df689-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="df689-172">繼續進行[如何：執行向探索 Proxy 註冊的可探索服務](discoverable-service-that-registers-with-the-discovery-proxy.md)。</span><span class="sxs-lookup"><span data-stu-id="df689-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="c4307-173">範例</span><span class="sxs-lookup"><span data-stu-id="c4307-173">Example</span></span>
+## <a name="example"></a><span data-ttu-id="df689-173">範例</span><span class="sxs-lookup"><span data-stu-id="df689-173">Example</span></span>
 
-<span data-ttu-id="c4307-174">以下是本主題所使用之程式碼的完整清單。</span><span class="sxs-lookup"><span data-stu-id="c4307-174">This is the full listing of the code used in this topic.</span></span>
+<span data-ttu-id="df689-174">以下是本主題所使用之程式碼的完整清單。</span><span class="sxs-lookup"><span data-stu-id="df689-174">This is the full listing of the code used in this topic.</span></span>
 
 ```csharp
 // DiscoveryProxy.cs
@@ -973,9 +973,9 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c4307-175">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c4307-175">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df689-175">請參閱</span><span class="sxs-lookup"><span data-stu-id="df689-175">See also</span></span>
 
-- [<span data-ttu-id="c4307-176">WCF 探索概觀</span><span class="sxs-lookup"><span data-stu-id="c4307-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [<span data-ttu-id="c4307-177">如何：實作以探索 Proxy 註冊的可探索服務</span><span class="sxs-lookup"><span data-stu-id="c4307-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [<span data-ttu-id="c4307-178">如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務</span><span class="sxs-lookup"><span data-stu-id="c4307-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [<span data-ttu-id="c4307-179">如何：測試探索 Proxy</span><span class="sxs-lookup"><span data-stu-id="c4307-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [<span data-ttu-id="df689-176">WCF 探索概觀</span><span class="sxs-lookup"><span data-stu-id="df689-176">WCF Discovery Overview</span></span>](wcf-discovery-overview.md)
+- [<span data-ttu-id="df689-177">HOW TO：實作以探索 Proxy 註冊的可探索服務</span><span class="sxs-lookup"><span data-stu-id="df689-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [<span data-ttu-id="df689-178">如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務</span><span class="sxs-lookup"><span data-stu-id="df689-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](client-app-discovery-proxy-to-find-a-service.md)
+- [<span data-ttu-id="df689-179">如何：測試探索 Proxy</span><span class="sxs-lookup"><span data-stu-id="df689-179">How to: Test the Discovery Proxy</span></span>](how-to-test-the-discovery-proxy.md)
