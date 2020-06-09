@@ -2,18 +2,18 @@
 title: 發出使用者程式碼追蹤
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 93da2eb74705a0581923d0317315e628f374be3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998111"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589288"
 ---
 # <a name="emitting-user-code-traces"></a>發出使用者程式碼追蹤
 
-除了啟用追蹤來收集檢測資料產生 Windows Communication Foundation (WCF) 組態中的，您也可以發出使用者程式碼中以程式設計方式追蹤。 如此一來，您就可以主動建立供日後深入診斷之用的檢測資料。 本主題將討論如何完成這項工作。
+除了在設定中啟用追蹤來收集 Windows Communication Foundation （WCF）所產生的檢測資料之外，您也可以在使用者程式碼中以程式設計方式發出追蹤。 如此一來，您就可以主動建立供日後深入診斷之用的檢測資料。 本主題將討論如何完成這項工作。
 
-颾魤 ㄛ[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)範例包含下列各節所示的程式碼。
+此外，[延伸追蹤](../../samples/extending-tracing.md)範例包含下列各節所示範的所有程式碼。
 
 ## <a name="creating-a-trace-source"></a>建立追蹤來源
 
@@ -72,9 +72,9 @@ Trace.CorrelationManager.ActivityId = oldID;
 如果同時在用戶端和服務的組態檔中，將其 `propagateActivity` 追蹤來源的 `true` 屬性設定為 `System.ServiceModel`，則會在用戶端定義的同一個活動中進行「加法」要求的服務處理。 如果服務定義了本身的活動和傳輸，服務追蹤就不會出現在用戶端傳播的活動中， 而會出現在和用戶端傳播的識別碼所代表之活動相互關聯的活動中 (此相互關聯是由傳輸追蹤建立)。
 
 > [!NOTE]
-> 如果`propagateActivity`屬性設為`true`WCF 用戶端與服務上，設定環境活動中的服務作業範圍。
+> 如果在 `propagateActivity` `true` 用戶端和服務上將屬性設定為，則服務作業範圍中的環境活動會由 WCF 設定。
 
-您可以使用下列程式碼來檢查活動是否已由 WCF 所設定範圍中。
+您可以使用下列程式碼來檢查是否已在 WCF 範圍內設定活動。
 
 ```csharp
 // Check if an activity was set in scope by WCF, if it was
@@ -109,13 +109,13 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>在服務追蹤檢視器工具中檢視使用者追蹤
 
-本節包含執行所產生的追蹤的螢幕擷取畫面[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)取樣，請使用檢視時[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。
+本節包含使用[服務追蹤檢視器工具（svctraceviewer.exe）](../../service-trace-viewer-tool-svctraceviewer-exe.md)查看時，執行[延伸追蹤](../../samples/extending-tracing.md)範例所產生之追蹤的螢幕擷取畫面。
 
-在下列圖表中，左面板上選取先前建立的 「 加法要求 」 活動。 它和構成應用程式用戶端程式的另外三個「數學運算」活動 (除法、減法、乘法) 列在一起。 使用者程式碼為每項作業各定義了一個新活動，以便隔離不同要求中可能發生的錯誤。
+在下圖中，會在左面板上選取先前建立的「新增要求」活動。 它和構成應用程式用戶端程式的另外三個「數學運算」活動 (除法、減法、乘法) 列在一起。 使用者程式碼為每項作業各定義了一個新活動，以便隔離不同要求中可能發生的錯誤。
 
-示範如何使用傳輸中的[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)範例中，也建立封裝四個作業要求的計算機 」 活動。 每個要求都有往返於「計算機」活動和要求活動之間的傳輸 (本圖的右上方面板中會反白顯示追蹤)。
+為了示範[延伸追蹤](../../samples/extending-tracing.md)範例中的傳輸使用方式，也會建立封裝這四個作業要求的計算機活動。 每個要求都有往返於「計算機」活動和要求活動之間的傳輸 (本圖的右上方面板中會反白顯示追蹤)。
 
-當您選取左面板上的活動時，這個活動所包含的追蹤會顯示在右上方面板中。 如果`propagateActivity`是`true`中每個端點的要求路徑，則要求活動中的追蹤會從所有參與要求的處理序。 在這個範例中，您可以在面板的第 4 欄中看見來自用戶端和服務兩方的追蹤。
+當您選取左面板上的活動時，這個活動所包含的追蹤會顯示在右上方面板中。 如果 `propagateActivity` 是在 `true` 要求路徑中的每個端點，則要求活動中的追蹤會來自參與要求的所有處理常式。 在這個範例中，您可以在面板的第 4 欄中看見來自用戶端和服務兩方的追蹤。
 
 這個活動會顯示下列處理順序：
 
@@ -131,24 +131,24 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 在下列圖表中，也會看到往返「計算機」活動的傳輸追蹤，以及每個要求活動各兩對的「開始」和「停止」追蹤，一對屬於用戶端，另一對屬於服務 (亦即，每個追蹤來源各有一對追蹤)。
 
-![追蹤檢視器：發出使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")依據建立時間 （左面板） 的活動和其巢狀的活動 （右上角面板） 的清單
+![追蹤檢視器：發出使用者&#45;程式碼追蹤](media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")依建立時間（左面板）及其嵌套活動的活動清單（右上方面板）
 
-如果服務程式碼擲回連帶導致用戶端擲回的例外狀況 (例如，用戶端未獲得其要求的回應時)，服務和用戶端的警告或錯誤訊息都會因為直接的相互關聯而在同一個活動中產生。 在下圖中，服務會擲回例外狀況，指出 「 服務拒絕處理此要求在使用者程式碼 」。 用戶端也會擲回的例外狀況，指出 「 伺服器無法處理要求，因為發生內部錯誤 」。
+如果服務程式碼擲回連帶導致用戶端擲回的例外狀況 (例如，用戶端未獲得其要求的回應時)，服務和用戶端的警告或錯誤訊息都會因為直接的相互關聯而在同一個活動中產生。 在下圖中，服務會擲回例外狀況，指出「服務會拒絕在使用者程式碼中處理此要求」。 用戶端也會擲回例外狀況，指出「伺服器無法處理要求，因為發生內部錯誤。」
 
-下圖顯示是否要求活動識別碼已傳播跨端點指定的要求錯誤將會出現相同的活動：
+下列影像顯示，如果要求活動識別碼已傳播，則指定要求的端點之間的錯誤會出現在相同的活動中：
 
-![如果螢幕擷取畫面顯示給定要求的端點之間的錯誤。](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
+![顯示指定要求之端點間錯誤的螢幕擷取畫面。](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)
 
 按兩下左面板上的「乘法」活動時，會顯示下圖，其中包含每個相關處理序的「乘法」活動追蹤。 我們可以看到警告先發生在服務 (擲回例外狀況)，接著會因為無法處理要求而在用戶端產生警告和錯誤。 因此，我們可以看出端點間發生錯誤的因果關係，從而得知錯誤的根本原因。
 
-下圖顯示錯誤相互關聯的圖形檢視：
+下圖顯示錯誤相互關聯的圖表視圖：
 
-![如果螢幕擷取畫面會顯示錯誤相互關聯的圖形檢視。](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
+![顯示錯誤相互關聯之圖形視圖的螢幕擷取畫面。](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)
 
-為了取得前述的追蹤，我們將使用者追蹤來源設定為 `ActivityTracing`，而將 `propagateActivity=true` 追蹤來源設定為 `System.ServiceModel`。 我們並未將 `ActivityTracing` 設定給 `System.ServiceModel` 追蹤來源，來讓使用者程式碼使用使用者程式碼活動傳播  （當 ServiceModel 活動追蹤開啟時，用戶端中所定義的活動識別碼不會傳播到服務使用者程式碼;傳輸，不過，相互關聯的用戶端和服務使用者程式碼活動的中繼的 WCF 活動。）
+為了取得前述的追蹤，我們將使用者追蹤來源設定為 `ActivityTracing`，而將 `propagateActivity=true` 追蹤來源設定為 `System.ServiceModel`。 我們並未將 `ActivityTracing` 設定給 `System.ServiceModel` 追蹤來源，來讓使用者程式碼使用使用者程式碼活動傳播  （當 System.servicemodel 活動追蹤為開啟時，用戶端中定義的活動識別碼不會傳播到服務使用者程式碼;不過，傳輸會讓用戶端和服務使用者程式碼活動與中繼 WCF 活動相互關聯）。
 
 定義活動和傳播活動識別碼可讓我們在端點之間執行直接錯誤相互關聯。 如此一來，就可以更迅速地找到錯誤的根本原因。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)
+- [擴充追蹤](../../samples/extending-tracing.md)

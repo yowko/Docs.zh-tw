@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 4a5e56f6b7f33a4c6f29aa384635737eeee37ddd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eb3274b98234324bd47aa456feb4845da5a7f3a9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095030"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599278"
 ---
 # <a name="debug-windows-authentication-errors"></a>Debug Windows 驗證錯誤
 
@@ -63,7 +63,7 @@ ms.locfileid: "77095030"
 ### <a name="kerberos-protocol"></a>Kerberos 通訊協定  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos 通訊協定的 SPN/UPN 問題  
- 當使用 Windows 驗證，而且 SSPI 有使用或交涉 Kerberos 通訊協定時，用戶端端點所使用的 URL 就必須包含在服務 URL 內之服務主機的完整網域名稱。 這假設用來執行服務的帳戶具有電腦（預設）服務主體名稱（SPN）金鑰的存取權，這是在電腦新增至 Active Directory 網域時所建立的，最常見的作法是在Network Service 帳戶。 如果服務無法存取電腦 SPN 金鑰，您就必須在用戶端端點身分識別中，提供用來執行服務之帳戶的正確 SPN 或使用者主要名稱 (UPN)。 如需 WCF 如何與 SPN 和 UPN 搭配運作的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 當使用 Windows 驗證，而且 SSPI 有使用或交涉 Kerberos 通訊協定時，用戶端端點所使用的 URL 就必須包含在服務 URL 內之服務主機的完整網域名稱。 這時會假定，用以執行服務的帳戶可以存取該電腦 (預設) 服務主要名稱 (SPN) 金鑰 (也就是當該電腦新增到 Active Directory 網域時所建立的金鑰，而新增作業最常是透過使用 Network Service 帳戶執行該服務來達成)。 如果服務無法存取電腦 SPN 金鑰，您就必須在用戶端端點身分識別中，提供用來執行服務之帳戶的正確 SPN 或使用者主要名稱 (UPN)。 如需 WCF 如何與 SPN 和 UPN 搭配運作的詳細資訊，請參閱[服務身分識別和驗證](service-identity-and-authentication.md)。  
   
  在負載平衡的使用案例 (例如 Web 伺服陣列與 Web 處理序區) 中，常見的作法是為每一個應用程式定義一個唯一的帳戶、指派一個 SPN 給該帳戶，並且確保應用程式的所有服務都以該帳戶執行。  
   
@@ -94,12 +94,12 @@ ms.locfileid: "77095030"
   
     1. 在程式碼中使用下列陳述式來做到這點：`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2. 或者，您可以將組態檔中的 `allowNtlm` 屬性設定為 `false` 來做到這點。 這個屬性包含在\<的[windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)中。  
+    2. 或者，您可以將組態檔中的 `allowNtlm` 屬性設定為 `false` 來做到這點。 這個屬性包含在中 [\<windows>](../../configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md) 。  
   
 ### <a name="ntlm-protocol"></a>NTLM 通訊協定  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>交涉 SSP 退而使用 NTLM，但是 NTLM 已停用  
- [<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>] 屬性會設定為 [`false`]，這會導致 Windows Communication Foundation （WCF）在使用 NTLM 時，盡力擲回例外狀況。 將此屬性設定為 `false` 可能無法防止 NTLM 認證透過網路傳送。  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>屬性會設定為 `false` ，讓 WINDOWS COMMUNICATION FOUNDATION （WCF）在使用 NTLM 時，盡力擲回例外狀況。 將此屬性設定為 `false` 可能不會防止 NTLM 認證透過網路傳送。  
   
  下列程式碼示範如何停用退回使用 NTLM。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "77095030"
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- 如需模擬的詳細資訊，請參閱[委派和](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)模擬。  
+ 如需模擬的詳細資訊，請參閱[委派和](delegation-and-impersonation-with-wcf.md)模擬。  
   
  或者，用戶端會使用內建帳戶 SYSTEM 來執行為 Windows 服務。  
   
@@ -145,11 +145,11 @@ ms.locfileid: "77095030"
 #### <a name="developing-and-deploying-with-different-identities"></a>以不同的身分進行開發及部署  
  如果您在某一台電腦上開發應用程式，然後又在另一台電腦上進行部署，而且在每一台電腦上都使用不同的帳戶類型進行驗證，您可能會產生不同的行為。 例如，假設您是使用 `SSPI Negotiated`驗證模式，在 Windows XP Pro 機器上開發應用程式。 您又使用本機使用者帳戶進行身分驗證，然後又使用了 NTLM 通訊協定。 應用程式開發完成後，您以網域帳戶先在 Windows Server 2003 機器上部署服務而後執行。 此時，用戶端將無法驗證服務，因為它會使用 Kerberos 和網域控制站。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ClientBase%601>
-- [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
-- [不支援的情節](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [委派和模擬](delegation-and-impersonation-with-wcf.md)
+- [不支援的案例](unsupported-scenarios.md)

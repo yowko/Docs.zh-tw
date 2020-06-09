@@ -1,5 +1,6 @@
 ---
 title: 使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)
+description: 瞭解如何在 .NET 中使用 XmlSchemaSet 類別，針對 XML 架構定義語言（XSD）架構來驗證 XML 檔。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 1729380180d4440ac107885a39eff706c7fc8e5c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 995323d1882da13d45cdac516518d5b67845715a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290288"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594500"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>使用 XmlSchemaSet 驗證 XML 架構（XSD）
 
@@ -42,7 +43,7 @@ ms.locfileid: "84290288"
  [!code-csharp[XmlSchemaSetOverall Example #1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaSetOverall Example/CS/xmlschemasetexample.cs#1)]
  [!code-vb[XmlSchemaSetOverall Example #1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaSetOverall Example/VB/xmlschemasetexample.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [用於結構描述編譯的 XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
 - [使用 XML 結構描述](working-with-xml-schemas.md)

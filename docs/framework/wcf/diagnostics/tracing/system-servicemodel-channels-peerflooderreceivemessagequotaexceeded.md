@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerFlooderReceiveMessageQuotaExceeded
 ms.date: 03/30/2017
 ms.assetid: b8371d0a-843e-440b-b86a-6996db131cb0
-ms.openlocfilehash: 0ca3d198ce225221348ac7b405ea91ad215cd298
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93afa0b495e20c02c58ac1fa75c31715eaa0e8dc
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950640"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596086"
 ---
 # <a name="systemservicemodelchannelspeerflooderreceivemessagequotaexceeded"></a>System.ServiceModel.Channels.PeerFlooderReceiveMessageQuotaExceeded
 訊息的傳入接收速率太高。  
@@ -18,8 +18,8 @@ ms.locfileid: "61950640"
 ## <a name="troubleshooting"></a>疑難排解  
  降低訊息在 mesh 內傳送的速率。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)
