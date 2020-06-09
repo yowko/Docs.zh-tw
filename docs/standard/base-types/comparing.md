@@ -1,5 +1,6 @@
 ---
 title: 在 .NET 中比較字串
+description: 閱讀有關在 .NET 中比較字串的方法。 瞭解 Compare、CompareOrdinal、CompareTo、StartsWith、EndsWith、Equals、IndexOf、& LastIndexOf 方法。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ed73d18341c3b9c6e61e12fdf322b9a67affd4a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289326"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602189"
 ---
 # <a name="comparing-strings-in-net"></a>在 .NET 中比較字串
 .NET 會提供數種方法來比較字串值。 下表列出並描述數值比較的方法。  
@@ -148,7 +149,7 @@ ms.locfileid: "84289326"
   
  當搭配 **String.Remove** 方法使用時，這兩種方法都很實用。 您可以使用 **IndexOf** 或 **LastIndexOf** 方法來擷取字元的位置，然後提供該位置給 **移除** 方法，以移除字元或以該字元開頭的單字。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [基底字元串作業](basic-string-operations.md)
 - [執行不區分文化特性的字串作業](../globalization-localization/performing-culture-insensitive-string-operations.md)

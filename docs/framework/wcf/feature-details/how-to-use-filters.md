@@ -2,23 +2,23 @@
 title: HOW TO：使用篩選
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 34ea961b0ef5db51efcae0b86f2c06171d6d756c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 434171138e75a0f4c336cd80cc2beb574b10001e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464106"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598888"
 ---
 # <a name="how-to-use-filters"></a>HOW TO：使用篩選
 本主題概要說明建立使用多個篩選條件之路由組態所需的基本步驟。 在此範例中，會將訊息路由至計算機服務的兩種實作 (regularCalc 與 roundingCalc)。 兩項實作都支援相同的作業，不過其中一個服務會在傳回之前將所有的計算結果四捨五入至最接近的整數值。 用戶端應用程式必須能夠指出是否要使用四捨五入後的服務版本，如果未指定任何服務偏好設定，則會在兩項服務之間平衡訊息負載。 由這兩項服務公開的作業為：  
   
-- 加  
+- 新增  
   
-- 減  
+- 減去  
   
-- 乘  
+- 乘以  
   
-- 除  
+- 除以  
   
  由於兩項服務皆實作同一個作業，因此您不能使用 [動作] 篩選條件，因為訊息中指定的動作不會是唯一的動作。 相反的，您必須進行額外的工作，以確保訊息能夠路由至正確的端點。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "81464106"
     </services>  
     ```  
   
-     路由服務會使用這個組態公開三個獨立的端點。 視執行階段選擇而定，用戶端應用程式會將訊息傳送至其中一個位址。 到達"虛擬"服務終結點之一("舍入/計算機"或"常規/計算機")的消息將轉發到相應的計算機實現。 如果用戶端應用程式不將要求傳送至特定的端點，訊息就會以一般端點為對象。 無論選擇何種端點，用戶端應用程式都可以選擇加入自訂標頭，表示應將訊息轉送至四捨五入計算機實作。  
+     路由服務會使用這個組態公開三個獨立的端點。 視執行階段選擇而定，用戶端應用程式會將訊息傳送至其中一個位址。 抵達其中一個「虛擬」服務端點（「舍入/計算機」或「一般/計算機」）的訊息會轉送到對應的計算機執行。 如果用戶端應用程式不將要求傳送至特定的端點，訊息就會以一般端點為對象。 無論選擇何種端點，用戶端應用程式都可以選擇加入自訂標頭，表示應將訊息轉送至四捨五入計算機實作。  
   
 2. 下列範例定義路由服務用來路由訊息的用戶端 (目的地) 端點。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "81464106"
   
 ### <a name="define-filters"></a>定義篩選  
   
-1. 要基於用戶端應用程式添加到消息的「捨入計算器」自訂標頭路由消息,請定義一個篩選器,該篩選器使用 XPath 查詢來檢查此標頭是否存在。 由於此標頭是通過使用自定義命名空間定義的,因此還會添加一個命名空間條目,該條目定義 XPath 查詢中使用的自定義命名空間前綴。 下列範例定義必要的路由區段、命名空間資料表，以及 XPath 篩選條件。  
+1. 若要根據用戶端應用程式新增至訊息的 "RoundingCalculator" 自訂標頭來路由傳送訊息，請定義使用 XPath 查詢的篩選準則，以檢查此標頭是否存在。 由於此標頭是使用自訂命名空間所定義，因此也會加入命名空間專案，以定義 XPath 查詢中使用的自訂命名空間前置詞 "custom"。 下列範例定義必要的路由區段、命名空間資料表，以及 XPath 篩選條件。  
   
     ```xml  
     <routing>  
@@ -110,21 +110,21 @@ ms.locfileid: "81464106"
     </routing>  
     ```  
   
-     此消息**篩選器**在郵件中尋找包含「捨入」值的舍入計算機標頭。 這個標頭是由用戶端設定的，用於指出應將訊息路由至 roundingCalc 服務。  
+     此**MessageFilter**會在訊息中尋找包含「進位」值的 RoundingCalculator 標頭。 這個標頭是由用戶端設定的，用於指出應將訊息路由至 roundingCalc 服務。  
   
     > [!NOTE]
-    > s12 命名空間前置字串在命名空間表中預設定義,並表示`http://www.w3.org/2003/05/soap-envelope`命名空間 。
+    > S12 命名空間前置詞預設會定義在命名空間資料表中，代表命名空間 `http://www.w3.org/2003/05/soap-envelope` 。
   
-2. 您必須同時設定會尋找兩個虛擬端點上接收到之訊息的篩選條件。 第一個虛擬終結點是「一般/計算機」終結點。 用戶端可以將要求傳送至這個端點，指出應將訊息路由至 regularCalc 服務。 下列組態定義的篩選條件會使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>，判斷訊息是否透過具有 filterData 中指定之名稱的端點送達。  
+2. 您必須同時設定會尋找兩個虛擬端點上接收到之訊息的篩選條件。 第一個虛擬端點是「標準/計算機」端點。 用戶端可以將要求傳送至這個端點，指出應將訊息路由至 regularCalc 服務。 下列組態定義的篩選條件會使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter>，判斷訊息是否透過具有 filterData 中指定之名稱的端點送達。  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     如果名為「計算機終結點」的服務終結點收到消息,則此篩選器將評估為`true`。  
+     如果訊息是由名為 "calculatorEndpoint" 的服務端點接收，則此篩選準則會評估為 `true` 。  
   
-3. 接下來，需要定義的篩選條件會尋找傳送至 roundingEndpoint 的位址之訊息。 用戶端可以將要求傳送至這個端點，指出應將訊息路由至 roundingCalc 服務。 以下配置定義一個篩選器,該篩選器使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>用於確定消息是否到達"舍入/計算機"終結點。  
+3. 接下來，需要定義的篩選條件會尋找傳送至 roundingEndpoint 的位址之訊息。 用戶端可以將要求傳送至這個端點，指出應將訊息路由至 roundingCalc 服務。 下列設定會定義使用的篩選準則， <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 以判斷訊息是否抵達「舍入/計算機」端點。  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -132,17 +132,17 @@ ms.locfileid: "81464106"
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     如果在以`http://localhost/routingservice/router/rounding/`開頭的位址收到消息,則此篩選器將計算為**true**。 由於此配置使用的基本位址是`http://localhost/routingservice/router`,並且為舍入終結點指定的位址是"舍入/計算機",因此用於與此終結點通信的完整位址為`http://localhost/routingservice/router/rounding/calculator`,這與此篩選器匹配。  
+     如果訊息是在以開頭的位址接收， `http://localhost/routingservice/router/rounding/` 則此篩選準則會評估為**true**。 因為此設定所使用的基底位址是 `http://localhost/routingservice/router` ，而為 roundingEndpoint 指定的位址是「舍入/計算機」，所以用來與此端點通訊的完整位址是 `http://localhost/routingservice/router/rounding/calculator` ，其符合此篩選準則。  
   
     > [!NOTE]
     > PrefixEndpointAddress 篩選條件執行比對時不會評估主機名稱，因為可以使用多種主機名稱 (均為從用戶端應用程式參考主機的有效方式) 參考單一主機。 例如，下列所有名稱皆可參考同一個主機：  
     >
-    > - localhost  
+    > - 本機主機  
     > - 127.0.0.1  
     > - `www.contoso.com`  
     > - ContosoWeb01  
   
-4. 最終的篩選條件必須支援路由送達一般端點 (沒有自訂標頭) 的訊息。 在這個案例中，訊息應在 regularCalc 和 roundingCalc 服務之間交替。 要支援這些消息的"迴圈"路由,請使用自定義篩選器,允許一個篩選器實例與處理的每條消息匹配。  下列內容定義 RoundRobinMessageFilter 的兩個執行個體，這些執行個體群組在一起，表示應在彼此之間交替。  
+4. 最終的篩選條件必須支援路由送達一般端點 (沒有自訂標頭) 的訊息。 在這個案例中，訊息應在 regularCalc 和 roundingCalc 服務之間交替。 若要支援這些訊息的「迴圈配置資源」路由，請使用自訂篩選準則，讓一個篩選準則實例符合每個已處理的訊息。  下列內容定義 RoundRobinMessageFilter 的兩個執行個體，這些執行個體群組在一起，表示應在彼此之間交替。  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -156,7 +156,7 @@ ms.locfileid: "81464106"
                     filterData="group1"/>  
     ```  
   
-     在執行階段時期，這個篩選條件類型會在所有已定義的此類型篩選執行個體之間交替 (這些執行個體已設定在一個集合的相同群組中)。 這將導致此自定義篩選器處理的消息在返回`true`和`RoundRobinFilter1``RoundRobinFilter2`之間交替。  
+     在執行階段時期，這個篩選條件類型會在所有已定義的此類型篩選執行個體之間交替 (這些執行個體已設定在一個集合的相同群組中)。 這會使此自訂篩選準則處理的訊息在傳回和的之間為替代 `true` `RoundRobinFilter1` `RoundRobinFilter2` 。  
   
 ### <a name="define-filter-tables"></a>若要定義篩選資料表  
   
@@ -165,7 +165,7 @@ ms.locfileid: "81464106"
     > [!NOTE]
     > 指定篩選條件優先順序可以讓您控制處理篩選條件的順序，但這麼做可能會對路由服務的效能造成負面影響。 如果可行，請建構使用不需篩選條件優先順序的篩選條件邏輯。  
   
-     下面定義篩選器表,並將前面定義的"XPathFilter"添加到優先順序為2的表中。 此項目還指定,如果與`XPathFilter`訊息比,則訊息將路由到`roundingCalcEndpoint`。  
+     下列定義篩選資料表，並將稍早定義的 "XPathFilter" 新增至優先順序為2的資料表。 這個專案也會指定如果 `XPathFilter` 符合訊息，則訊息會路由傳送至 `roundingCalcEndpoint` 。  
   
     ```xml  
     <routing>  
@@ -325,6 +325,6 @@ ms.locfileid: "81464106"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)
+- [路由服務](../samples/routing-services.md)

@@ -2,12 +2,12 @@
 title: System.ServiceModel.PerformanceCountersFailedOnRelease
 ms.date: 03/30/2017
 ms.assetid: ec1a7bb1-c787-45ec-8292-73d104f3d7bb
-ms.openlocfilehash: d8d18dd0ed8ff254c1aec0b6d62a03bc978917a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb7e8809a88ccdd189949d5962d8585c4c5b5873
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598095"
 ---
 # <a name="systemservicemodelperformancecountersfailedonrelease"></a>System.ServiceModel.PerformanceCountersFailedOnRelease
 System.ServiceModel.PerformanceCountersFailedOnRelease  
@@ -15,8 +15,8 @@ System.ServiceModel.PerformanceCountersFailedOnRelease
 ## <a name="description"></a>描述  
  卸載效能計數器失敗。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

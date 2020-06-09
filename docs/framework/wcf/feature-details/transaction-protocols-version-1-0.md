@@ -2,15 +2,15 @@
 title: 異動通訊協定 1.0 版
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 6063c643be4c60e9830a020d10ac9fbcd236dac2
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: f725361b9a90c9336b763cc7f292ae043e445966
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144769"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598706"
 ---
 # <a name="transaction-protocols-version-10"></a>異動通訊協定 1.0 版
-Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成交易和 WS 協調通訊協定的1.0 版。 如需1.1 版的詳細資訊，請參閱[交易通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
+Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成交易和 WS 協調通訊協定的1.0 版。 如需1.1 版的詳細資訊，請參閱[交易通訊協定](transaction-protocols.md)。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -99,7 +99,7 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
 #### <a name="activation-message-binding-configuration"></a>啟動訊息繫結組態  
  啟動訊息通常不會參與互通性，因為啟動訊息一般會發生在應用程式與其本機異動管理員之間。  
   
- B1221： WCF 使用雙工 HTTPS 系結（如[訊息通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)中所述）來啟用訊息。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
+ B1221： WCF 使用雙工 HTTPS 系結（如[訊息通訊協定](messaging-protocols.md)中所述）來啟用訊息。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
   
  第 8 節的 WS-Atomic 異動規格進一步描述有關相互關聯與訊息交換模式的詳細資料。  
   
@@ -110,11 +110,11 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
  `t:IssuedTokens`應產生新的標頭，以附加至外寄 `wscoor:CreateCoordinationContextResponse` 訊息。  
   
 #### <a name="registration-message-binding-configuration"></a>登錄訊息繫結組態  
- B1231： WCF 使用雙工 HTTPS 系結（如[訊息通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)中所述）。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
+ B1231： WCF 使用雙工 HTTPS 系結（如[訊息通訊協定](messaging-protocols.md)中所述）。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
   
  第 8 節的 WS-AtomicTransaction 進一步描述有關相互關聯與訊息交換模式描述的詳細資料。  
   
- R1232：外寄 `wscoor:Register` 訊息必須使用 `IssuedTokenOverTransport` [安全性通訊協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)中所述的驗證模式。  
+ R1232：外寄 `wscoor:Register` 訊息必須使用 `IssuedTokenOverTransport` [安全性通訊協定](security-protocols.md)中所述的驗證模式。  
   
  `wsse:Timestamp`必須使用發出的來簽署元素 `SecurityContextToken STx` 。 這個簽章是證明與特定異動關聯之權杖的所有權，並且用來驗證異動中登錄的參與者。 RegistrationResponse 訊息會透過 HTTPS 傳回。  
   

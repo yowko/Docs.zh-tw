@@ -2,31 +2,31 @@
 title: 路由合約
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 660652caa804b8c19f6dd18bcba51bf4abc3ba12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69dff2c82f67a16d51e11a92052c59672a054e04
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991103"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601071"
 ---
 # <a name="routing-contracts"></a>路由合約
 路由合約會定義路由服務可以處理的訊息模式。  每一個合約都是無型別合約，可讓服務在不知道訊息結構描述或動作的情況下接收訊息。 如此可讓路由服務以一般方式路由傳送訊息，而不需要額外設定所路由傳送之基礎訊息的細節。  
   
 ## <a name="routing-contracts"></a>路由合約  
- 由於路由服務接受泛型 WCF 訊息物件，因此選取合約時最重要的考量會是通道的組織結構，此通道將在與用戶端和服務進行通訊時使用。 處理訊息時，路由服務會使用對稱的訊息幫浦，因此一般來說，傳入合約的組織結構必須符合傳出合約的組織結構。 不過，一些情況下，服務模型的發送器可以修改圖形，例如當發送器雙工通道轉換為要求-回覆通道，或當它則不需要且未使用 （也就是，從通道中移除工作階段支援當**SessionMode.Allowed**、 轉換**IInputSessionChannel**成**IInputChannel**)。  
+ 由於路由服務接受泛型 WCF 訊息物件，因此選取合約時最重要的考量會是通道的組織結構，此通道將在與用戶端和服務進行通訊時使用。 處理訊息時，路由服務會使用對稱的訊息幫浦，因此一般來說，傳入合約的組織結構必須符合傳出合約的組織結構。 不過，在某些情況下，服務模型的發送器可以修改圖形，例如當發送器將雙工通道轉換成要求-回復通道時，或從通道移除不必要且未使用的會話支援時（也就是在**SessionMode**時，將**IInputSessionChannel**轉換為**IInputChannel**）。  
   
- 為了支援這些訊息幫浦，路由服務會在 <xref:System.ServiceModel.Routing> 命名空間中提供合約，這些合約必須在定義路由服務使用的服務端點時使用。 這些都是無型別合約，允許接收任何訊息型別或動作，並且可讓路由服務在不知道特定訊息結構描述的情況下處理訊息。 如需路由服務所使用合約的詳細資訊，請參閱[路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)。  
+ 為了支援這些訊息幫浦，路由服務會在 <xref:System.ServiceModel.Routing> 命名空間中提供合約，這些合約必須在定義路由服務使用的服務端點時使用。 這些都是無型別合約，允許接收任何訊息型別或動作，並且可讓路由服務在不知道特定訊息結構描述的情況下處理訊息。 如需路由服務所使用之合約的詳細資訊，請參閱[路由合約](routing-contracts.md)。  
   
  路由服務提供的合約位於 <xref:System.ServiceModel.Routing> 命名空間中，並且將於下表中說明。  
   
 |合約|圖形|通道類型|  
 |--------------|-----------|-------------------|  
-|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputChannel -> IOutputChannel|  
-|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode = SessionMode.Required<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputSessionChannel -> IOutputSessionChannel|  
-|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true|IReplyChannel -> IRequestChannel|  
-|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
+|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputChannel-> IOutputChannel|  
+|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode = SessionMode.Required<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputSessionChannel-> IOutputSessionChannel|  
+|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true|IReplyChannel-> IRequestChannel|  
+|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel-> IDuplexSessionChannel|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [路由服務](../../../../docs/framework/wcf/feature-details/routing-service.md)
-- [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [路由服務](routing-service.md)
+- [路由簡介](routing-introduction.md)

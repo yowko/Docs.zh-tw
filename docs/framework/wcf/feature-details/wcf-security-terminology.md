@@ -6,22 +6,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a07d7c6da71f4195cb1641ae8ac7585b4158ed63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743353"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600967"
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全性用語
 您可能會對討論安全性時使用的一些用語感到陌生。 本主題僅針對一些安全性名詞提供簡短說明，而不會針對每個項目逐一提供完整的文件說明。  
   
- 如需 Windows Communication Foundation （WCF）檔中所使用之詞彙的詳細資訊，請參閱[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
+ 如需 Windows Communication Foundation （WCF）檔中所使用之詞彙的詳細資訊，請參閱[基本 Windows Communication Foundation 概念](../fundamental-concepts.md)。  
   
- 存取控制清單 (ACL)  
- 套用到物件的安全性保護清單 （物件可以是檔案、進程、事件，或具有安全描述項的任何其他專案）。ACL 中的專案是存取控制專案（ACE）。 ACL 有兩種：Discretionary 存取控制清單和系統存取控制清單。  
+ Access Control List (ACL) - 存取控制清單 (ACL)  
+ 套用到物件的安全性保護清單  （物件可以是檔案、進程、事件，或具有安全描述項的任何其他專案）。ACL 中的專案是存取控制專案（ACE）。 ACL 有兩種：Discretionary 存取控制清單和系統存取控制清單。  
   
- 驗證  
+ 驗證 (authentication)  
  用於驗證使用者、電腦、服務或處理序為何者或是否符合自稱之身分的處理序。  
   
  授權  
@@ -34,7 +34,7 @@ ms.locfileid: "76743353"
  CA 階層架構包含多個 CA。 其組織方式是讓每個 CA 都由較高層級階層中的另一個 CA 所認證，直到達到階層的最上層（也稱為「*根授權*」）為止。  
   
  憑證 (certificate)  
- 一種數位簽署的聲明，包含實體和實體之公開金鑰的相關資訊，將這兩項資訊繫結在一起。 當實體通過授權單位驗證後，就會由稱為憑證授權單位的信任組織 (或實體) 發給憑證。  
+ 包含實體與實體公開金鑰相關資訊的數位簽署陳述式，因此會將這兩個資訊片段繫結在一起。 當實體通過授權單位驗證後，就會由稱為憑證授權單位的信任組織 (或實體) 發給憑證。  
   
  憑證可包含不同的資料類型。 例如，X.509 憑證包含憑證格式、憑證序號、用來簽署憑證的演算法、發行憑證的 CA 名稱、要求憑證的實體名稱與其公開金鑰，以及 CA 的簽章。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76743353"
  由公開金鑰密碼編譯標準 (PKCS) #7 (包含任何類型的資料加上內容的訊息雜湊 (摘要)) 所定義的資料內容類型。  
   
  數位簽章  
- 將寄件者身分識別與要傳送之資訊繫結在一起的資料。 數位簽章可以與任何訊息、檔案或其他的數位編碼資訊包裝在一起，或是個別傳輸。 數位簽章可以用在公開金鑰環境中，並提供驗證與完整性服務。  
+ 將傳送者的身分識別繫結至所傳送資訊的資料。 數位簽章可與任何訊息、檔案，或其他數位編碼資訊一併送出，也可以個別傳輸。 數位簽章可以用在公開金鑰環境中，並提供驗證與完整性服務。  
   
  編碼  
  將資料轉換為位元資料流的處理序。 編碼是將資料轉換為零 (0) 與壹 (1) 資料流之序列化處理序的一部分。  
@@ -62,7 +62,7 @@ ms.locfileid: "76743353"
  交換金鑰組  
  公開/私密金鑰組，可用來加密工作階段金鑰，使其能安全地儲存並與其他使用者交換。  
   
- 雜湊  
+ hash  
  透過將數學函式 (請參閱「雜湊演算法」) 套用到任意數量的資料，所取得的固定大小數值。 資料通常會包含亂數據，稱為*nonce*。 服務與用戶端同時都會提供交換 Nonce 以增加結果的複雜性。 結果也稱為「*訊息摘要*」。 傳送雜湊值會比傳送機密資料 (例如密碼) 要來得安全，即使密碼已經加密也是一樣。 雜湊傳送者與接收者必須在雜湊演算法與 Nonce 上達成共識，以便在收到雜湊時可以加以驗證。  
   
  雜湊演算法  
@@ -92,13 +92,13 @@ ms.locfileid: "76743353"
  plaintext  
  尚未加密的訊息。 純文字訊息有時稱為*明文*訊息。  
   
- privilege  
+ 權限  
  使用者用來執行各種系統相關作業的權限，例如關閉系統、載入裝置驅動程式，或是變更系統時間等等。 使用者的存取權杖包含使用者或使用者群組所擁有的權限清單。  
   
  私密金鑰  
  公開金鑰演算法中使用的金鑰組的密碼部分。 一般來說，私密金鑰可用來加密對稱工作階段金鑰、對訊息進行數位簽署，或是針對使用對應公開金鑰加密的訊息進行解密。 請參閱「公開金鑰」。  
   
- 處理程序  
+ 處理序  
  應用程式賴以執行的安全性內容。 一般來說，安全性內容會與使用者相關聯，因此所有在特定處理序下執行的應用程式都會具備擁有之使用者的權限。  
   
  公開/私密金鑰組  
@@ -173,7 +173,7 @@ ms.locfileid: "76743353"
  決定是否信任特定檔案的軟體。 此決策是依據檔案相關的憑證而定。  
   
  使用者主要名稱 (UPN)  
- 使用者帳戶名稱（有時稱為*使用者登入名稱*），以及識別使用者帳戶所在網域的功能變數名稱。 這是登入 Windows 網域的標準用法。 格式為： someone@example.com （如電子郵件地址）。  
+ 使用者帳戶名稱（有時稱為*使用者登入名稱*），以及識別使用者帳戶所在網域的功能變數名稱。 這是登入 Windows 網域時的標準用法。 格式為： someone@example.com （如電子郵件地址）。  
   
 > [!NOTE]
 > 除了標準 UPN 形式，WCF 也會接受下層格式的 Upn，例如 cohowinery. com\someone。  
@@ -181,8 +181,8 @@ ms.locfileid: "76743353"
  X.509  
  國際認可的標準，適用於定義其所需部分的憑證。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Windows Communication Foundation 的基本概念](../../../../docs/framework/wcf/fundamental-concepts.md)
-- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Communication Foundation 的基本概念](../fundamental-concepts.md)
+- [安全性概念](security-concepts.md)
+- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

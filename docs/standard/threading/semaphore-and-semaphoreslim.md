@@ -1,5 +1,6 @@
 ---
 title: Semaphore 和 SemaphoreSlim
+description: 深入瞭解 & SemaphoreSlim 的信號。 「類別信號」是 Win32 信號物件周圍的精簡型包裝函式。 類別 SemaphoreSlim 是快速輕量信號。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 9a18a6517548bb402e1e3b9ac02e95aae32a8f4a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291132"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600447"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 類別代表具名 (系統) 或區域號誌。 它是 Win32 號誌物件周圍的精簡型包裝函式。 Win32 號誌是計算的號誌，可以用來控制資源集區的存取。  
@@ -44,7 +45,7 @@ ms.locfileid: "84291132"
   
  使用存取控制安全性來保護代表具名號誌的 <xref:System.Threading.Semaphore> 物件，最好是使用指定 <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> 物件的建構函式。 您也可以使用 <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> 方法套用存取控制安全性，但這會在建立號誌的時間與它受保護的時間之間留下弱點時段。 使用存取控制安全性來保護號誌，有助於防止惡意攻擊，但不能解決意外名稱衝突的問題。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>

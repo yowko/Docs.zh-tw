@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 07c0df0cfb40e8c75532b73f133e32dcb369a3ec
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2ef2d0eefb571f64040fabd16fd65fdfde7a626d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045203"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600201"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 類別
 
-Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技術, 將您應用程式中的資料轉換成 XML, 在用戶端與服務之間傳輸, 這是一種稱為序列化的進程。
+Windows Communication Foundation （WCF）可以使用兩種不同的序列化技術，將您應用程式中的資料轉換成 XML，在用戶端與服務之間傳輸，這是一種稱為序列化的進程。
 
 ## <a name="datacontractserializer-as-the-default"></a>DataContractSerializer 為預設值
 
-根據預設, WCF 會<xref:System.Runtime.Serialization.DataContractSerializer>使用類別來序列化資料類型。 這個序列化程式支援下列型別：
+根據預設，WCF 會使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別來序列化資料類型。 這個序列化程式支援下列型別：
 
 - 基本型別 (例如，整數、字串和位元組陣列) 以及一些特殊型別，例如 <xref:System.Xml.XmlElement> 和 <xref:System.DateTime>，它們被視為基本型別。
 
@@ -32,21 +32,21 @@ Windows Communication Foundation (WCF) 可以使用兩種不同的序列化技�
 
 - 許多常用的集合型別，包括許多泛型集合型別。
 
-許多 .NET Framework 類型都屬於後面兩個類別, 因此可序列化。 可序列化型別的陣列也是可序列化的。 如需完整清單, 請參閱[指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。
+許多 .NET Framework 類型都屬於後面兩個類別，因此可序列化。 可序列化型別的陣列也是可序列化的。 如需完整清單，請參閱[指定服務合約中的資料傳輸](specifying-data-transfer-in-service-contracts.md)。
 
-與<xref:System.Runtime.Serialization.DataContractSerializer>資料合約類型一起使用的, 是撰寫新 WCF 服務的建議方式。 如需詳細資訊, 請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。
+<xref:System.Runtime.Serialization.DataContractSerializer>與資料合約類型一起使用的，是撰寫新 WCF 服務的建議方式。 如需詳細資訊，請參閱[使用資料合約](using-data-contracts.md)。
 
 ## <a name="when-to-use-the-xmlserializer-class"></a>何時使用 XmlSerializer 類別
 
-WCF 也支援<xref:System.Xml.Serialization.XmlSerializer>類別。 類別<xref:System.Xml.Serialization.XmlSerializer>對 WCF 而言不是唯一的。 這是 ASP.NET Web 服務所使用的相同序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 類別支援的型別集範圍比 <xref:System.Runtime.Serialization.DataContractSerializer> 類別小多了，但允許對於結果 XML 有更多的控制權，並支援更多的 XML 結構描述定義語言 (XSD) 標準。 它在可序列化型別上也不需要任何宣告式屬性。 如需詳細資訊, 請參閱 .NET Framework 檔中的 XML 序列化主題。 <xref:System.Xml.Serialization.XmlSerializer> 類別不支援資料合約類型。
+WCF 也支援 <xref:System.Xml.Serialization.XmlSerializer> 類別。 <xref:System.Xml.Serialization.XmlSerializer>類別對 WCF 而言不是唯一的。 這是 ASP.NET Web 服務所使用的相同序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 類別支援的型別集範圍比 <xref:System.Runtime.Serialization.DataContractSerializer> 類別小多了，但允許對於結果 XML 有更多的控制權，並支援更多的 XML 結構描述定義語言 (XSD) 標準。 它在可序列化型別上也不需要任何宣告式屬性。 如需詳細資訊，請參閱 .NET Framework 檔中的 XML 序列化主題。 <xref:System.Xml.Serialization.XmlSerializer> 類別不支援資料合約類型。
 
-當使用 Svcutil 或 Visual Studio 中的**加入服務參考**功能來產生協力廠商服務的用戶端程式代碼, 或存取協力廠商架構時, 系統會自動為您選取適當的序列化程式。 如果結構描述與 <xref:System.Runtime.Serialization.DataContractSerializer> 不相容，便會選擇 <xref:System.Xml.Serialization.XmlSerializer>。
+當使用 Svcutil 或 Visual Studio 中的**加入服務參考**功能來產生協力廠商服務的用戶端程式代碼，或存取協力廠商架構時，系統會自動為您選取適當的序列化程式。 如果結構描述與 <xref:System.Runtime.Serialization.DataContractSerializer> 不相容，便會選擇 <xref:System.Xml.Serialization.XmlSerializer>。
 
 ## <a name="manually-switching-to-the-xmlserializer"></a>手動切換至 XmlSerializer
 
 有時候，您可能必須手動切換至 <xref:System.Xml.Serialization.XmlSerializer>。 例如，這會發生在下列案例中：
 
-- 將應用程式從 ASP.NET Web 服務遷移至 WCF 時, 您可能會想要重複<xref:System.Xml.Serialization.XmlSerializer>使用現有、相容的類型, 而不是建立新的資料合約類型。
+- 將應用程式從 ASP.NET Web 服務遷移至 WCF 時，您可能會想要重複使用現有、 <xref:System.Xml.Serialization.XmlSerializer> 相容的類型，而不是建立新的資料合約類型。
 
 - 當出現在訊息中 XML 的精確控制權很重要，但 Web 服務描述語言 (WSDL) 文件無法使用時，例如，當使用必須符合與 DataContractSerializer 不相容的特定標準化、已發行的結構描述來建立服務時。
 
@@ -73,9 +73,9 @@ WCF 也支援<xref:System.Xml.Serialization.XmlSerializer>類別。 類別<xref:
 
 用於此服務的序列化程式是合約的重要部分，且無法藉由選擇不同的繫結程序或變更其他組態設定來改變。
 
-其他重要的安全性考量適用於 <xref:System.Xml.Serialization.XmlSerializer> 類別。 首先, 強烈建議使用<xref:System.Xml.Serialization.XmlSerializer>類別的任何 WCF 應用程式, 都是使用受到保護而無法洩漏的金鑰來簽署。 這個建議適用於執行手動切換至 <xref:System.Xml.Serialization.XmlSerializer> 時，以及 (由 Svcutil.exe、「加入服務參考」或類似工具) 執行自動切換時。 這是因為<xref:System.Xml.Serialization.XmlSerializer>序列化引擎支援載入*預先產生的序列化元件*, 只要它們是使用與應用程式相同的索引鍵來簽署。 未簽章的應用程式完全不受保護，如果惡意組件符合放在應用程式資料夾或全域組件快取中預先產生之序列化組件的預期名稱，便可能會受到攻擊。 當然，攻擊者必須先取得這兩個位置其中之一的寫入存取權，才能嘗試這個動作。
+其他重要的安全性考量適用於 <xref:System.Xml.Serialization.XmlSerializer> 類別。 首先，強烈建議使用類別的任何 WCF 應用程式， <xref:System.Xml.Serialization.XmlSerializer> 都是使用受到保護而無法洩漏的金鑰來簽署。 這個建議適用於執行手動切換至 <xref:System.Xml.Serialization.XmlSerializer> 時，以及 (由 Svcutil.exe、「加入服務參考」或類似工具) 執行自動切換時。 這是因為 <xref:System.Xml.Serialization.XmlSerializer> 序列化引擎支援載入*預先產生的序列化元件*，只要它們是使用與應用程式相同的索引鍵來簽署。 未簽章的應用程式完全不受保護，如果惡意組件符合放在應用程式資料夾或全域組件快取中預先產生之序列化組件的預期名稱，便可能會受到攻擊。 當然，攻擊者必須先取得這兩個位置其中之一的寫入存取權，才能嘗試這個動作。
 
-另一個每當您使用 <xref:System.Xml.Serialization.XmlSerializer> 時都會存在的威脅，是與系統暫存資料夾有關的寫入存取權。 序列化引擎會在此資料夾中建立並使用暫時的*序列化元件。* <xref:System.Xml.Serialization.XmlSerializer> 您應該知道，暫存資料夾的任何寫入存取處理都可能會使用惡意程式碼來覆寫這些序列化組件。
+另一個每當您使用 <xref:System.Xml.Serialization.XmlSerializer> 時都會存在的威脅，是與系統暫存資料夾有關的寫入存取權。 <xref:System.Xml.Serialization.XmlSerializer>序列化引擎會在此資料夾中建立並使用暫時的*序列化元件*。 您應該知道，暫存資料夾的任何寫入存取處理都可能會使用惡意程式碼來覆寫這些序列化組件。
 
 ## <a name="rules-for-xmlserializer-support"></a>XmlSerializer 支援的規則
 
@@ -92,11 +92,11 @@ WCF 也支援<xref:System.Xml.Serialization.XmlSerializer>類別。 類別<xref:
 當使用 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 時，不支援 <xref:System.Xml.Serialization.XmlSerializer> 屬性。
 
 > [!NOTE]
-> 在此情況下, <xref:System.Xml.Serialization.XmlSerializer>會擲回下列例外狀況, 這會在 WCF 之前釋放:「在架構最上層宣告的元素不能有`maxOccurs` > 1。 經由使用 `XmlArray` 或 `XmlArrayItem`，而不使用 `XmlElementAttribute`，或使用 Wrapped 參數樣式，來提供 "more" 的包裝函式項目」。
+> 在此情況下， <xref:System.Xml.Serialization.XmlSerializer> 會擲回下列例外狀況，這會在 WCF 之前釋放：「在架構最上層宣告的專案不能有 `maxOccurs` > 1。 經由使用 `XmlArray` 或 `XmlArrayItem`，而不使用 `XmlElementAttribute`，或使用 Wrapped 參數樣式，來提供 "more" 的包裝函式項目」。
 >
 > 如果您收到此類例外狀況，請查看這種情況是否適用。
 
-WCF 不支援訊息合約<xref:System.Xml.Serialization.SoapIncludeAttribute>和<xref:System.Xml.Serialization.XmlIncludeAttribute>作業合約中的和屬性; 請<xref:System.Runtime.Serialization.KnownTypeAttribute>改用屬性。
+WCF 不支援 <xref:System.Xml.Serialization.SoapIncludeAttribute> <xref:System.Xml.Serialization.XmlIncludeAttribute> 訊息合約和作業合約中的和屬性; 請改用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。
 
 ## <a name="types-that-implement-the-ixmlserializable-interface"></a>實作 IXmlSerializable 介面的型別
 
@@ -119,7 +119,7 @@ WCF 不支援訊息合約<xref:System.Xml.Serialization.SoapIncludeAttribute>和
 
 當還原序列化實作 `IXmlSerializable` 且為上述定義的內容型別之型別的資料成員時，還原序列化程式會將 XML 讀取器放在資料成員的包裝函式項目上，並將控制權傳遞至 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法。 此方法必須讀取整個項目，包括開始和結束標記。 請確定您的 `ReadXml` 程式碼會處理項目是空白的案例。 此外，您的 `ReadXml` 實作不應依賴以特定的方式為包裝函式項目命名。 由序列化程式所選擇的名稱可能會有所不同。
 
-允許將 `IXmlSerializable` 內容型別多型指派為如型別 <xref:System.Object> 的資料成員。 也允許型別執行個體為 null。 最後，可以使用 `IXmlSerializable` 型別並啟用物件圖形保留，以及搭配 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 所有這些功能都需要 WCF 序列化程式將特定屬性附加至包裝函式專案 (XML 架構實例命名空間中的 "nil" 和 "type", 以及 WCF 特定命名空間中的 "Id"、"Ref"、"Type" 和 "Assembly")。
+允許將 `IXmlSerializable` 內容型別多型指派為如型別 <xref:System.Object> 的資料成員。 也允許型別執行個體為 null。 最後，可以使用 `IXmlSerializable` 型別並啟用物件圖形保留，以及搭配 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 所有這些功能都需要 WCF 序列化程式將特定屬性附加至包裝函式專案（XML 架構實例命名空間中的 "nil" 和 "type"，以及 WCF 特定命名空間中的 "Id"、"Ref"、"Type" 和 "Assembly"）。
 
 #### <a name="attributes-to-ignore-when-implementing-readxml"></a>實作 ReadXml 時要忽略的屬性
 
@@ -129,11 +129,11 @@ WCF 不支援訊息合約<xref:System.Xml.Serialization.SoapIncludeAttribute>和
 
 當匯出結構描述和 `IXmlSerializable` 內容型別時，會呼叫結構描述提供者方法。 <xref:System.Xml.Schema.XmlSchemaSet> 會傳遞至結構描述提供者方法。 此方法會將有效的結構描述新增至結構描述集。 結構描述集包含在發生結構描述匯出時已知的結構描述。 當結構描述提供者方法必須將項目新增至結構描述集時，必須判斷有適當命名空間的 <xref:System.Xml.Schema.XmlSchema> 是否已經存在於此集合中。 如果是，結構描述提供者方法必須將新項目新增至現有的 `XmlSchema`。 否則，就必須建立新的 `XmlSchema` 執行個體。 如果是使用 `IXmlSerializable` 型別的陣列，這就很重要。 例如，如果您的 `IXmlSerializable` 型別在命名空間 "B" 中匯出為型別 "A"，就有可能在呼叫結構描述提供者方法時，結構描述集已經包含 "B" 的結構描述以保存 "ArrayOfA" 型別。
 
-除了將型別新增至 <xref:System.Xml.Schema.XmlSchemaSet>，內容型別的結構描述提供者方法還必須傳回非 null 的值。 它會傳回 <xref:System.Xml.XmlQualifiedName>，指定用於指定的 `IXmlSerializable` 型別的結構描述型別的名稱。 這個限定名稱也會做為型別的資料合約名稱和命名空間。 當結構描述提供者方法傳回時，允許立即傳回不存在於結構描述集中的型別。 然而，預期在匯出所有相關型別時 (在 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 上為所有相關型別呼叫 <xref:System.Runtime.Serialization.XsdDataContractExporter> 方法，並存取 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 屬性)，此型別會存在於結構描述集中。 在完成所有相關 `Schemas` 呼叫之前存取 `Export` 屬性會造成 <xref:System.Xml.Schema.XmlSchemaException>。 如需匯出程式的詳細資訊, 請參閱[從類別匯出架構](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。
+除了將型別新增至 <xref:System.Xml.Schema.XmlSchemaSet>，內容型別的結構描述提供者方法還必須傳回非 null 的值。 它會傳回 <xref:System.Xml.XmlQualifiedName>，指定用於指定的 `IXmlSerializable` 型別的結構描述型別的名稱。 這個限定名稱也會做為型別的資料合約名稱和命名空間。 當結構描述提供者方法傳回時，允許立即傳回不存在於結構描述集中的型別。 然而，預期在匯出所有相關型別時 (在 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 上為所有相關型別呼叫 <xref:System.Runtime.Serialization.XsdDataContractExporter> 方法，並存取 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 屬性)，此型別會存在於結構描述集中。 在完成所有相關 `Schemas` 呼叫之前存取 `Export` 屬性會造成 <xref:System.Xml.Schema.XmlSchemaException>。 如需匯出程式的詳細資訊，請參閱[從類別匯出架構](exporting-schemas-from-classes.md)。
 
-結構描述提供者方法也可能傳回 <xref:System.Xml.Schema.XmlSchemaType> 以使用。 此型別可能是或不是匿名的。 如果是匿名的，每當使用 `IXmlSerializable` 型別做為資料成員時，便會將 `IXmlSerializable` 型別的結構描述匯出為匿名型別。 `IXmlSerializable` 型別仍然會有資料合約名稱和命名空間。 (這取決於[資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)中所述, <xref:System.Runtime.Serialization.DataContractAttribute>不同之處在于屬性不能用來自訂名稱)。如果不是匿名的，則必須是 `XmlSchemaSet` 中的其中一個型別。 這種情況等於傳回型別的 `XmlQualifiedName`。
+結構描述提供者方法也可能傳回 <xref:System.Xml.Schema.XmlSchemaType> 以使用。 此型別可能是或不是匿名的。 如果是匿名的，每當使用 `IXmlSerializable` 型別做為資料成員時，便會將 `IXmlSerializable` 型別的結構描述匯出為匿名型別。 `IXmlSerializable` 型別仍然會有資料合約名稱和命名空間。 （這取決於[資料合約名稱](data-contract-names.md)中所述，不同之處在于 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性不能用來自訂名稱）。如果不是匿名的，則必須是中的其中一個類型 `XmlSchemaSet` 。 這種情況等於傳回型別的 `XmlQualifiedName`。
 
-此外，會匯出型別的全域項目宣告。 如果型別沒有套用 <xref:System.Xml.Serialization.XmlRootAttribute> 屬性 (Attribute)，項目會有和資料合約相同的名稱及命名空間，且其 "nillable" 屬性 (Property) 也會為 `true`。 唯一的例外是架構命名空間 (`http://www.w3.org/2001/XMLSchema`) –如果型別的資料合約是在這個命名空間中, 則對應的全域專案會在空白命名空間中, 因為禁止將新的專案加入架構命名空間中。 如果型別已套用 `XmlRootAttribute` 屬性 (Attribute)，則會使用下列屬性 (Property) 匯出全域項目宣告：<xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>、<xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> 和 <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> 屬性 (Property)。 套用 `XmlRootAttribute` 的預設值是資料合約名稱、空白命名空間以及為 `true` 的 "nillable"。
+此外，會匯出型別的全域項目宣告。 如果型別沒有套用 <xref:System.Xml.Serialization.XmlRootAttribute> 屬性 (Attribute)，項目會有和資料合約相同的名稱及命名空間，且其 "nillable" 屬性 (Property) 也會為 `true`。 唯一的例外是架構命名空間（ `http://www.w3.org/2001/XMLSchema` ）–如果型別的資料合約是在這個命名空間中，則對應的全域專案會在空白命名空間中，因為禁止將新的專案加入架構命名空間中。 如果型別已套用 `XmlRootAttribute` 屬性 (Attribute)，則會使用下列屬性 (Property) 匯出全域項目宣告：<xref:System.Xml.Serialization.XmlRootAttribute.ElementName%2A>、<xref:System.Xml.Serialization.XmlRootAttribute.Namespace%2A> 和 <xref:System.Xml.Serialization.XmlRootAttribute.IsNullable%2A> 屬性 (Property)。 套用 `XmlRootAttribute` 的預設值是資料合約名稱、空白命名空間以及為 `true` 的 "nillable"。
 
 相同的全域項目宣告規則亦適用於舊版資料集型別。 請注意，`XmlRootAttribute` 無法覆寫透過自訂程式碼新增的全域項目宣告，不論是使用結構描述提供者方法新增至 `XmlSchemaSet` 或透過舊版資料集型別的 `GetSchema`。
 
@@ -147,7 +147,7 @@ WCF 不支援訊息合約<xref:System.Xml.Serialization.SoapIncludeAttribute>和
 
 - `ReadXml` 實作不應讀取包裝函式項目。 它預期會讀取 `WriteXml` 所產生的一個項目。
 
-- 當定期序列化項目型別時 (例如，做為資料合約中的資料成員)，序列化程式會在呼叫 `WriteXml` 之前輸出包裝函式項目，就像使用內容型別一樣。 然而，當在最上層序列化項目型別時，序列化程式通常完全不會輸出包含 `WriteXml` 撰寫之項目的包裝函式項目，除非在 `DataContractSerializer` 或 `NetDataContractSerializer` 建構函式中建構序列化程式時已明確指定根名稱和命名空間。 如需詳細資訊, 請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。
+- 當定期序列化項目型別時 (例如，做為資料合約中的資料成員)，序列化程式會在呼叫 `WriteXml` 之前輸出包裝函式項目，就像使用內容型別一樣。 然而，當在最上層序列化項目型別時，序列化程式通常完全不會輸出包含 `WriteXml` 撰寫之項目的包裝函式項目，除非在 `DataContractSerializer` 或 `NetDataContractSerializer` 建構函式中建構序列化程式時已明確指定根名稱和命名空間。 如需詳細資訊，請參閱[序列化和還原序列化](serialization-and-deserialization.md)。
 
 - 當在最上層序列化項目型別，但在建構期間沒有指定根名稱和命名空間時，<xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> 基本上不會執行任何動作，而 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> 會呼叫 `WriteXml`。 在這個模式中，正在序列化的物件不得為 `null`，且無法多型指派。 另外，物件圖形保留無法啟用，且 `NetDataContractSerializer` 無法使用。
 
@@ -171,9 +171,9 @@ WCF 不支援訊息合約<xref:System.Xml.Serialization.SoapIncludeAttribute>和
 
 當匯入從 `IXmlSerializable` 型別產生的結構描述時，有一些可能性：
 
-- 產生的架構可能是有效的資料合約架構, 如[資料合約架構參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)中所述。 在這種情況中，結構描述會如平常般匯入，並產生一般資料合約類型。
+- 產生的架構可能是有效的資料合約架構，如[資料合約架構參考](data-contract-schema-reference.md)中所述。 在這種情況中，結構描述會如平常般匯入，並產生一般資料合約類型。
 
-- 所產生的結構描述可能不是有效的資料合約結構描述。 例如，您的結構描述提供者方法可能會產生結構描述，其中包含資料合約模型中不支援的 XML 屬性。 在這種情況中，您可以將結構描述匯入為 `IXmlSerializable` 型別。 此匯入模式預設為不開啟, 但可以很容易啟用–例如, 使用`/importXmlTypes`命令列參數來切換至[system.servicemodel 中繼資料公用程式工具 (Svcutil .exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 匯入架構中會詳細說明這種方式[來產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。 請注意，您必須對您的型別執行個體直接使用 XML。 您可能也會考慮使用不同的序列化技術，支援範圍更廣的結構描述 – 請參閱有關使用 `XmlSerializer` 的主題。
+- 所產生的結構描述可能不是有效的資料合約結構描述。 例如，您的結構描述提供者方法可能會產生結構描述，其中包含資料合約模型中不支援的 XML 屬性。 在這種情況中，您可以將結構描述匯入為 `IXmlSerializable` 型別。 此匯入模式預設為不開啟，但可以很容易啟用–例如，使用 `/importXmlTypes` 命令列參數來切換至[System.servicemodel 中繼資料公用程式工具（Svcutil .exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)。 匯入架構中會詳細說明這種方式[來產生類別](importing-schema-to-generate-classes.md)。 請注意，您必須對您的型別執行個體直接使用 XML。 您可能也會考慮使用不同的序列化技術，支援範圍更廣的結構描述 – 請參閱有關使用 `XmlSerializer` 的主題。
 
 - 您可能會想要在 Proxy 中重複使用現有的 `IXmlSerializable` 型別，而非產生一個新的。 在這種情況中，「匯入結構描述以產生型別」主題中所說明的參照型別功能可用於指出要重複使用的型別。 這會對應至在 svcutil.exe 上使用 `/reference` 參數，指定包含要重複使用之型別的組件。
 
@@ -195,7 +195,7 @@ WCF 不支援訊息合約<xref:System.Xml.Serialization.SoapIncludeAttribute>和
 </configuration>
 ```
 
-如果您遇到相容性問題, 例如`XmlSerializer`無法使用非公用的新覆寫來序列化衍生類別, 您可以使用下列設定`XMLSerializer`來切換回舊版行為:
+如果您遇到相容性問題，例如無法使用 `XmlSerializer` 非公用的新覆寫來序列化衍生類別，您可以使用下列設定來切換回 `XMLSerializer` 舊版行為：
 
 ```xml
 <configuration>
@@ -205,7 +205,7 @@ WCF 不支援訊息合約<xref:System.Xml.Serialization.SoapIncludeAttribute>和
 </configuration>
 ```
 
-除了上述設定之外, 您還可以在執行 .NET Framework 4.5 或更新版本的電腦上使用下列設定:
+除了上述設定之外，您還可以在執行 .NET Framework 4.5 或更新版本的電腦上使用下列設定：
 
 ```xml
 <configuration>
@@ -216,14 +216,14 @@ WCF 不支援訊息合約<xref:System.Xml.Serialization.SoapIncludeAttribute>和
 ```
 
 > [!NOTE]
-> `<xmlSerializer useLegacySerializerGeneration="true"/>`參數僅適用于執行 .NET Framework 4.5 或更新版本的電腦。 上述`appSettings`方法適用于所有 .NET Framework 版本。
+> `<xmlSerializer useLegacySerializerGeneration="true"/>`參數僅適用于執行 .NET Framework 4.5 或更新版本的電腦。 上述 `appSettings` 方法適用于所有 .NET Framework 版本。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.DataContractFormatAttribute>
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.ServiceModel.MessageHeaderArrayAttribute>
-- [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [如何：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Specifying Data Transfer in Service Contracts](specifying-data-transfer-in-service-contracts.md)
+- [使用資料合約](using-data-contracts.md)
+- [如何：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 10e257a1cbc8778565a9838aeef423522f9d2970
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9e3cf262ef617a1ae5ee92bcc3d6fd5c691602f9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290613"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600409"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的物件和類別
 
@@ -59,7 +59,7 @@ Visual Basic 中的每個物件都是由*類別*所定義。 類別會描述物�
 > [!NOTE]
 > 可能的話，您應該將變數宣告為您想要指派給它的類別型別。 這稱為「早期繫結」**。 如果您在編譯時期不知道類別類型，可藉由將變數宣告為 [Object 資料類型](../../../language-reference/data-types/object-data-type.md)來叫用「晚期繫結」**。 不過，晚期繫結會讓效能降低，並限制存取執行階段物件的成員。 如需詳細資訊，請參閱[物件變數宣告](../variables/object-variable-declaration.md)。
 
-### <a name="multiple-instances"></a>多個執行個體
+### <a name="multiple-instances"></a>多重執行個體
 
 從類別新建的物件通常是彼此相同的。 不過，當它們以個別物件存在之後，就能個別變更其變數和屬性，而與其他執行個體無關。 例如，如果您在表單中新增三個核取方塊，每個核取方塊物件都是 <xref:System.Windows.Forms.CheckBox> 類別的執行個體。 個別的 <xref:System.Windows.Forms.CheckBox> 物件會共用一組由類別所定義的通用特性和功能 (屬性、變數、程序及事件)。 但是，每個物件都有自己的名稱、可個別啟用及停用，而且可以放在表單的不同位置。
 
@@ -110,7 +110,7 @@ warningLabel.ForeColor = System.Drawing.Color.Red
 
 - 屬性是 `String` 資料型別，而且對於字串的大小或值沒有任何限制。
 
-- 如需詳細資訊，請參閱[屬性程序](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)。
+- 如需詳細資訊，請參閱[屬性程序](../procedures/property-procedures.md)。
 
 > [!TIP]
 > 一律將非固定欄位保持為私用。 當您想要將它設為公用時，請改用屬性。

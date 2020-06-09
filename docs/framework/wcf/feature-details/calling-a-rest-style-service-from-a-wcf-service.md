@@ -2,12 +2,12 @@
 title: 從 WCF 服務呼叫 REST 樣式服務
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: c2a3467fb5fe28194dcb8ee7715353f4cb6a1bff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaa5d08faa335740124fcf698b22d2d324cd2c54
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048214"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576482"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>從 WCF 服務呼叫 REST 樣式服務
 
@@ -86,7 +86,7 @@ public class NormalService : INormalInterface
 
 ## <a name="create-the-client-proxy-for-the-rest-style-service"></a>為 REST 樣式服務建立用戶端 Proxy
 
-使用<xref:System.ServiceModel.ClientBase%601>實作用戶端 proxy。 針對所呼叫的每個方法，會建立一個新的 <xref:System.ServiceModel.OperationContextScope>，並用來呼叫作業。
+使用 <xref:System.ServiceModel.ClientBase%601> 來執行用戶端 proxy。 針對所呼叫的每個方法，會建立一個新的 <xref:System.ServiceModel.OperationContextScope>，並用來呼叫作業。
 
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface
@@ -140,7 +140,7 @@ public static void Main()
 }
 ```
 
-## <a name="complete-code-listing"></a>列出完整的程式碼清單
+## <a name="complete-code-listing"></a>完整程式碼清單
 
 以下是本主題實作範例的完整清單：
 
@@ -241,7 +241,7 @@ public class CallingRESTSample
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：建立基本 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)
-- [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [如何：建立基本 WCF Web HTTP 服務](how-to-create-a-basic-wcf-web-http-service.md)
+- [WCF Web HTTP 程式設計物件模型](wcf-web-http-programming-object-model.md)

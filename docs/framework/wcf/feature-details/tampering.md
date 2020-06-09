@@ -2,15 +2,15 @@
 title: 竄改
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
-ms.openlocfilehash: 7a4265c30a6713f9557de2b3d1e99c87b7dd3e58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e618ab369a46d403aa8db26c4b472e2be3634785
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703383"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600707"
 ---
 # <a name="tampering"></a>竄改
-*竄改*是改變一則訊息或傳遞的訊息，以及用於不該適用於使用修改的訊息動作。  
+「*篡改*」是改變訊息的動作，或是訊息的傳遞，並使用修改過的訊息，做為其用途以外的目的。  
   
 ## <a name="do-not-disable-ws-addressing"></a>請勿停用 WS-Addressing  
  WS-Addressing 規格會提供每個訊息的位址標頭，允許訊息收件者驗證訊息的寄件者。 您可以將 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 屬性設為 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>，藉此停用這個功能。  
@@ -19,11 +19,11 @@ ms.locfileid: "61703383"
   
  為減少這種情況發生，絕不要將 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 屬性設為 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>，同時避免使用 <xref:System.ServiceModel.Channels.MessageVersion>，例如靜態 <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A> 屬性，這類屬性會將 <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> 屬性設為 <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [安全性考量](security-considerations-in-wcf.md)
+- [資訊洩漏](information-disclosure.md)
+- [權限提高](elevation-of-privilege.md)
+- [拒絕服務](denial-of-service.md)
+- [不支援的案例](unsupported-scenarios.md)
+- [重新執行攻擊](replay-attacks.md)

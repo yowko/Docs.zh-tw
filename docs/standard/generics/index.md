@@ -1,5 +1,6 @@
 ---
 title: .NET 的泛型
+description: 瞭解 .NET 中的泛型。 定義 & 使用泛型、瞭解其優點 & 缺點、瞭解類別庫 & 語言支援等等。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: d7f606126237d4d045f55dde03c125455c8a8634
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 91bb96c04c8a5d410f0a88c7e8eedf622fe66c94
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84275954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599811"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 

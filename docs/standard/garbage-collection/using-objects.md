@@ -1,5 +1,6 @@
 ---
 title: 使用實作 IDisposable 的物件
+description: 瞭解如何使用在 .NET 中執行 IDisposable 介面的物件。 使用非受控資源的類型會執行 IDisposable，以允許資源回收。
 ms.date: 05/13/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: 87eefe2bd347ba1564b2f06d49bbee3b85efdb97
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7d5d4080f22aab6870a230d495b4a4b9ebcb3b96
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287593"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599850"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>使用實作 IDisposable 的物件
 
@@ -61,7 +62,7 @@ C# `using` 陳述式還可讓您以單一陳述式取得多項資源，其內部
 
 如果類別將 <xref:System.IDisposable> 實作為實例成員（也就是欄位或屬性），則類別也應該會執行 <xref:System.IDisposable> 。 如需詳細資訊，請參閱[執行 cascade dispose](implementing-dispose.md#cascade-dispose-calls)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [清除 Unmanaged 資源](unmanaged.md)
 - [using 語句（c # 參考）](../../csharp/language-reference/keywords/using-statement.md)

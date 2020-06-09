@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: f58da6f1cdaad1b976659ee2e9febe12cc07726f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: df42f3fa8f5a15572987b0d4859856c7f838e632
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991147"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586230"
 ---
 # <a name="request-reply-services"></a>要求-回覆服務
 要求-回復服務是 Windows Communication Foundation （WCF）中的預設作業合約類型。 用戶端呼叫服務作業然後等候服務回應。 您可以使用同步 (用戶端會鎖定，直到其接收到來自服務或呼叫階段的回應) 或非同步 (用戶端會呼叫服務作業、繼續工作，然後接收來自其他執行緒服務的回應) 方式呼叫服務作業。  
@@ -30,7 +30,7 @@ public interface IRequestReplyCalculator
   
  您不需要將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性設定為 `false`，因為這是預設行為。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)
-- [雙工服務](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [單向服務](one-way-services.md)
+- [雙工服務](duplex-services.md)

@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 0e82d1898bec7cda474a5a92958b5af1b30c9de7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcde7bb4cc193d18737d26facbbd69ccd597d66b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599330"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>透過 TCP 與 SOAP 安全性的 HTTPS 與 SSL 之間的憑證驗證差異
-除了通過 HTTP （HTTPS） 或 TCP 傳輸層安全 （TLS）外，還可以在 Windows 通信基礎 （WCF） 中使用具有消息層 （SOAP） 安全性的證書。 此主題說明這類憑證的不同驗證方法。  
+除了透過 HTTP （HTTPS）或 TCP 的傳輸層安全性（TLS）之外，您還可以使用 Windows Communication Foundation （WCF）中的憑證搭配訊息層（SOAP）安全性。 此主題說明這類憑證的不同驗證方法。  
   
 ## <a name="validation-of-https-client-certificates"></a>HTTPS 用戶端憑證的驗證  
- 使用 HTTPS 在用戶端與服務之間通訊時，用戶端用來驗證服務的憑證必須支援信賴鏈結的原則。 也就是說，它必須鏈結至受信任的根憑證授權單位。 否則，HTTP 層將發出訊息為「遠端伺服器傳回錯誤：(403) 禁止」的 <xref:System.Net.WebException>。 WCF 將此異常作為<xref:System.ServiceModel.Security.MessageSecurityException>。  
+ 使用 HTTPS 在用戶端與服務之間通訊時，用戶端用來驗證服務的憑證必須支援信賴鏈結的原則。 也就是說，它必須鏈結至受信任的根憑證授權單位。 否則，HTTP 層將發出訊息為「遠端伺服器傳回錯誤：(403) 禁止」的 <xref:System.Net.WebException>。 WCF 會將此例外狀況呈現為 <xref:System.ServiceModel.Security.MessageSecurityException> 。  
   
 ## <a name="validation-of-https-service-certificates"></a>HTTPS 服務憑證的驗證  
  使用 HTTPS 在用戶端與服務之間通訊時，伺服器驗證的憑證必須預設支援信賴鏈結的原則。 也就是說，它必須鏈結至受信任的根憑證授權單位。 不進行線上檢查憑證是否已經被撤銷。 您可以登錄 <xref:System.Net.Security.RemoteCertificateValidationCallback> 回呼覆寫此行為，如下列程式碼所示。  
@@ -47,7 +47,7 @@ ms.locfileid: "79185399"
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
-- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Working with Certificates](working-with-certificates.md)

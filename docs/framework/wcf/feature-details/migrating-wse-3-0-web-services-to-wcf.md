@@ -2,30 +2,30 @@
 title: 從 WSE 3.0 Web 服務移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 8f79674350109d111fe263704dee6c40c1a12451
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ecf27c227b3e39d0c449a1d2ff32dc5bd59c750b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184573"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598784"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>從 WSE 3.0 Web 服務移轉至 WCF
-將 WSE 3.0 Web 服務遷移到 Windows 通信基礎 （WCF） 的好處包括提高性能並支援其他傳輸、其他安全方案和 WS-* 規範。 從 WSE 3.0 遷移到 WCF 的 Web 服務的性能可高達 200% 到 400%。 有關 WCF 支援的傳輸的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 有關 WCF 支援的方案的清單，請參閱[常見安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 有關 WCF 支援的規範的清單，請參閱[Web 服務協定互通性指南](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)。  
+將 WSE 3.0 Web 服務遷移至 Windows Communication Foundation （WCF）的優點包括提升的效能，以及其他傳輸、額外的安全性案例和 WS-* 規格的支援。 從 WSE 3.0 遷移至 WCF 的 Web 服務，最高可享有200% 到400% 的效能改進。 如需 WCF 支援之傳輸的詳細資訊，請參閱[選擇傳輸](choosing-a-transport.md)。 如需 WCF 支援的案例清單，請參閱[常見的安全性案例](common-security-scenarios.md)。 如需 WCF 支援的規格清單，請參閱[Web 服務通訊協定互通性指南](web-services-protocols-interoperability-guide.md)。  
   
- 以下各節提供有關如何將 WSE 3.0 Web 服務的特定功能遷移到 WCF 的指導。  
+ 下列各節提供如何將 WSE 3.0 Web 服務的特定功能遷移至 WCF 的指引。  
   
 ## <a name="general"></a>一般  
- WSE 3.0 和 WCF 應用程式包括線級互通性和一組通用術語。 WSE 3.0 和 WCF 應用程式基於它們都支援的 WS-* 規範集，可進行線級交互操作。 開發 WSE 3.0 或 WCF 應用程式時，有一組通用的術語，例如 WSE 中交鑰匙安全斷言的名稱和身份驗證模式。  
+ WSE 3.0 和 WCF 應用程式包含連線層級互通性和一組常用的術語。 WSE 3.0 和 WCF 應用程式都是以其所支援的 WS-* 規格集合為基礎的網路層級互通性。 當 WSE 3.0 或 WCF 應用程式開發時，會有一組常見的術語，例如 WSE 中的全包式安全性判斷提示名稱和驗證模式。  
   
- 儘管 WCF 和 ASP.NET 或 WSE 3.0 程式設計模型之間有許多類似的方面，但它們是不同的。 有關 WCF 程式設計模型的詳細資訊，請參閱[基本程式設計生命週期](../../../../docs/framework/wcf/basic-programming-lifecycle.md)。  
+ 雖然 WCF 和 ASP.NET 或 WSE 3.0 程式設計模型之間有許多類似的層面，但它們是不同的。 如需 WCF 程式設計模型的詳細資訊，請參閱[基本程式設計週期](../basic-programming-lifecycle.md)。  
   
 > [!NOTE]
-> 要將 WSE Web 服務遷移到 WCF，[可以使用服務模型中繼資料實用程式工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具生成用戶端。 然而，該用戶端同時內含可用來做為 WCF 服務起點的介面與類別。 產生的介面會將 <xref:System.ServiceModel.OperationContractAttribute> 屬性套用到合約成員 (同時將 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> 屬性設為 `*`)。 當 WSE 用戶端使用此設置調用 Web 服務時，將引發以下異常 **：Web.Services3.回應處理異常：WSE910：在處理回應訊息期間發生錯誤，您可以在內部異常中找到錯誤**。 若要緩解這個情況，請將 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.OperationContractAttribute> 屬性 (Property) 設為非 `null` 值，例如 `http://Microsoft.WCF.Documentation/ResponseToOCAMethod`。  
+> 若要將 WSE Web 服務遷移至 WCF，您可以使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)工具來產生用戶端。 然而，該用戶端同時內含可用來做為 WCF 服務起點的介面與類別。 產生的介面會將 <xref:System.ServiceModel.OperationContractAttribute> 屬性套用到合約成員 (同時將 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> 屬性設為 `*`)。 當 WSE 用戶端使用此設定呼叫 Web 服務時，會擲回下列例外狀況： **Services3. ResponseProcessingException： WSE910：處理回應訊息期間發生錯誤，您可以在內部例外狀況中找到錯誤**。 若要緩解這個情況，請將 <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.OperationContractAttribute> 屬性 (Property) 設為非 `null` 值，例如 `http://Microsoft.WCF.Documentation/ResponseToOCAMethod`。  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="wse-30-web-services-that-are-secured-using-a-policy-file"></a>使用原則檔來保護安全的 WSE 3.0 Web 服務  
- WCF 服務可以使用設定檔來保護服務，該機制類似于 WSE 3.0 策略檔。 在 WSE 3.0 中，當您使用原則檔來保護 Web 服務安全時，可以使用通行安全性判斷提示或自訂原則判斷提示來進行。 交鑰匙安全斷言與 WCF 安全繫結元素的身份驗證模式緊密映射。 WCF 身份驗證模式和 WSE 3.0 交鑰匙安全斷言不僅名稱相同或類似，還使用相同的憑據類型來保護消息。 例如，WSE `usernameForCertificate` 3.0 中的交鑰匙安全斷言映射到 WCF 中的`UsernameForCertificate`身份驗證模式。 以下代碼示例演示了在 WSE 3.0 中使用`usernameForCertificate`交鑰匙安全斷言的最小策略如何映射到自訂`UsernameForCertificate`綁定中的 WCF 中的身份驗證模式。  
+ WCF 服務可以使用設定檔來保護服務，而且該機制類似于 WSE 3.0 原則檔案。 在 WSE 3.0 中，當您使用原則檔來保護 Web 服務安全時，可以使用通行安全性判斷提示或自訂原則判斷提示來進行。 全包式安全性判斷提示會緊密對應至 WCF 安全性繫結項目的驗證模式。 WCF 驗證模式和 WSE 3.0 通行安全性判斷提示不只會命名相同或類似，它們會使用相同的認證類型來保護訊息的安全。 比方說，WSE 3.0 中的「全包式」安全性判斷提示會 `usernameForCertificate` 對應到 `UsernameForCertificate` WCF 中的驗證模式。 下列程式碼範例示範在 WSE 3.0 中使用「全包式」安全性判斷提示的最小原則，如何 `usernameForCertificate` 對應至自訂系結中 `UsernameForCertificate` WCF 的驗證模式。  
   
  **WSE 3.0**  
   
@@ -50,44 +50,44 @@ ms.locfileid: "79184573"
 </customBinding>  
 ```  
   
- 要將策略檔中指定的 WSE 3.0 Web 服務的安全設置遷移到 WCF，必須在設定檔中創建自訂綁定，並且必須將交鑰匙安全斷言設置為等效身份驗證模式。 另外，自訂繫結必須設定為使用 August 2004 WS-Addressing 規格，以便 WSE 3.0 用戶端與服務進行通訊。 當遷移的 WCF 服務不需要與 WSE 3.0 用戶端通信，並且必須僅維護安全同位時，請考慮使用具有適當安全設置的 WCF 系統定義的綁定，而不是創建自訂綁定。  
+ 若要將原則檔中指定的 WSE 3.0 Web 服務安全性設定遷移至 WCF，必須在設定檔案中建立自訂系結，而且必須將通行安全性判斷提示設為其對等的驗證模式。 另外，自訂繫結必須設定為使用 August 2004 WS-Addressing 規格，以便 WSE 3.0 用戶端與服務進行通訊。 當遷移的 WCF 服務不需要與 WSE 3.0 用戶端通訊，而且必須只維護安全性同位時，請考慮使用 WCF 系統定義的系結搭配適當的安全性設定，而不是建立自訂系結。  
   
- 下表列出了 WSE 3.0 策略檔和 WCF 中的等效自訂綁定之間的映射。  
+ 下表列出 WSE 3.0 原則檔案與 WCF 中對等的自訂系結之間的對應。  
   
 |WSE 3.0 組合安全性判斷提示|WCF 自訂繫結組態|  
 |----------------------------------------|--------------------------------------|  
-|\<使用者名 超運輸安全/>|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<相互證書10安全/>|`<customBinding>   <binding name="MyBinding">     <security messageSecurityVersion="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" authenticationMode="MutualCertificate" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<使用者名用於證書安全/>|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<匿名證書安全/>|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<克伯羅斯安全/>|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<相互證書11安全/>|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="MutualCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameOverTransportSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<mutualCertificate10Security />|`<customBinding>   <binding name="MyBinding">     <security messageSecurityVersion="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" authenticationMode="MutualCertificate" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<anonymousForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<kerberosSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<mutualCertificate11Security />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="MutualCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
   
- 有關在 WCF 中創建自訂綁定的詳細資訊，請參閱[自訂綁定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 如需在 WCF 中建立自訂系結的詳細資訊，請參閱[自訂](../extending/custom-bindings.md)系結。  
   
 ### <a name="wse-30-web-services-that-are-secured-using-application-code"></a>使用應用程式程式碼來保護安全的 WSE 3.0 Web 服務  
- 無論使用 WSE 3.0 還是使用 WCF，都可以在應用程式代碼中指定安全要求，而不是在配置中指定。 在 WSE 3.0 中，您可以建立衍生自 `Policy` 類別的類別，然後呼叫 `Add` 方法來新增需求以達到這個目的。 有關在代碼中指定安全要求的詳細資訊，請參閱[：不使用策略檔案保護 Web 服務](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa528763(v=msdn.10))。 在 WCF 中，要在代碼中指定安全要求，請<xref:System.ServiceModel.Channels.BindingElementCollection>創建類的實例，並將<xref:System.ServiceModel.Channels.SecurityBindingElement>的實例<xref:System.ServiceModel.Channels.BindingElementCollection>添加到 。 安全性判斷提示需求可透過 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的靜態驗證模式協助程式方法來加以設定。 有關使用 WCF 在代碼中指定安全要求的詳細資訊，請參閱[：使用安全繫結元素創建自訂綁定](how-to-create-a-custom-binding-using-the-securitybindingelement.md)以及如何[：為指定的身份驗證模式創建安全繫結元素](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
+ 無論使用的是 WSE 3.0 或 WCF，都可以在應用程式代碼中指定安全性需求，而不是在設定中。 在 WSE 3.0 中，您可以建立衍生自 `Policy` 類別的類別，然後呼叫 `Add` 方法來新增需求以達到這個目的。 如需在程式碼中指定安全性需求的詳細資訊，請參閱[如何：保護 Web 服務，而不使用原則](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa528763(v=msdn.10))檔案。 在 WCF 中，若要在程式碼中指定安全性需求，請建立類別的實例， <xref:System.ServiceModel.Channels.BindingElementCollection> 並將的實例加入 <xref:System.ServiceModel.Channels.SecurityBindingElement> 至 <xref:System.ServiceModel.Channels.BindingElementCollection> 。 安全性判斷提示需求可透過 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的靜態驗證模式協助程式方法來加以設定。 如需使用 WCF 在程式碼中指定安全性需求的詳細資訊，請參閱[如何：使用 SecurityBindingElement 建立自訂](how-to-create-a-custom-binding-using-the-securitybindingelement.md)系結和[如何：為指定的驗證模式建立 SecurityBindingElement](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
 ### <a name="wse-30-custom-policy-assertion"></a>WSE 3.0 自訂原則判斷提示  
- 在 WSE 3.0 中，有兩種自訂原則判斷提示類型：分別是用來保護 SOAP 訊息安全的原則判斷提示，以及無法保護 SOAP 訊息安全的原則判斷提示。 安全 SOAP 訊息派生自 WSE 3.0`SecurityPolicyAssertion`類和 WCF 中的概念<xref:System.ServiceModel.Channels.SecurityBindingElement>等效項的策略斷言是類。  
+ 在 WSE 3.0 中，有兩種自訂原則判斷提示類型：分別是用來保護 SOAP 訊息安全的原則判斷提示，以及無法保護 SOAP 訊息安全的原則判斷提示。 保護 SOAP 訊息從 WSE 3.0 類別衍生的原則判斷提示， `SecurityPolicyAssertion` 以及 WCF 中對等的概念是 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別。  
   
- 需要注意的一個重要點是 WSE 3.0 交鑰匙安全斷言是 WCF 身份驗證模式的子集。 如果在 WSE 3.0 中創建了自訂策略斷言，則可能存在等效的 WCF 身份驗證模式。 例如，WSE 3.0 不會提供等同於 `UsernameOverTransport` 通行安全性判斷提示的 CertificateOverTransport 安全性判斷提示，但會使用 X.509 憑證來執行用戶端驗證。 如果您已為此方案定義了自己的自訂策略斷言，則 WCF 使遷移變得簡單明瞭。 WCF 為此方案定義了身份驗證模式，因此您可以利用靜態身份驗證模式説明器方法配置 WCF<xref:System.ServiceModel.Channels.SecurityBindingElement>。  
+ 值得注意的一點是，WSE 3.0 全包式安全性判斷提示是 WCF 驗證模式的子集。 如果您已在 WSE 3.0 中建立自訂原則判斷提示，可能會有對等的 WCF 驗證模式。 例如，WSE 3.0 不會提供等同於 `UsernameOverTransport` 通行安全性判斷提示的 CertificateOverTransport 安全性判斷提示，但會使用 X.509 憑證來執行用戶端驗證。 如果您已針對此案例定義自己的自訂原則判斷提示，WCF 可讓您直接進行遷移。 WCF 會定義此案例的驗證模式，因此您可以利用靜態驗證模式 helper 方法來設定 WCF <xref:System.ServiceModel.Channels.SecurityBindingElement> 。  
   
- 如果沒有 WCF 身份驗證模式等效于保護 SOAP 訊息的自訂策略斷言、從 派生<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>類<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>或<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>WCF 類並指定等效繫結元素。 有關詳細資訊，請參閱[如何：使用安全繫結元素創建自訂綁定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
+ 當沒有等同于可保護 SOAP 訊息安全之自訂原則判斷提示的 WCF 驗證模式時，請從 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 WCF 類別衍生類別， <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 並指定相等的繫結項目。 如需詳細資訊，請參閱[如何：使用 SecurityBindingElement 建立自訂](how-to-create-a-custom-binding-using-the-securitybindingelement.md)系結。  
   
- 要轉換不保護 SOAP 訊息的自訂策略斷言，請參閱[篩選](../../../../docs/framework/wcf/feature-details/filtering.md)和示例[自訂消息攔截器](../../../../docs/framework/wcf/samples/custom-message-interceptor.md)。  
+ 若要轉換不保護 SOAP 訊息的自訂原則判斷提示，請參閱[篩選](filtering.md)和範例[自訂訊息攔截](../samples/custom-message-interceptor.md)器。  
   
 ### <a name="wse-30-custom-security-token"></a>WSE 3.0 自訂安全性權杖  
- 用於創建自訂權杖的 WCF 程式設計模型與 WSE 3.0 不同。 有關在 WSE 中創建自訂權杖的詳細資訊，請參閱[創建自訂安全權杖](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa529304(v=msdn.10))。 有關在 WCF 中創建自訂權杖的詳細資訊，請參閱[如何：創建自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+ 用來建立自訂權杖的 WCF 程式設計模型與 WSE 3.0 不同。 如需在 WSE 中建立自訂權杖的詳細資訊，請參閱[建立自訂安全性權杖](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa529304(v=msdn.10))。 如需在 WCF 中建立自訂權杖的詳細資訊，請參閱[如何：建立自訂權杖](../extending/how-to-create-a-custom-token.md)。  
   
 ### <a name="wse-30-custom-token-manager"></a>WSE 3.0 自訂權杖管理員  
- 在 WCF 中，用於創建自訂權杖管理器的程式設計模型與 WSE 3.0 不同。 有關如何創建自訂權杖管理器和自訂安全權杖所需的其他元件的詳細資訊，請參閱[如何：創建自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+ 在 WCF 中建立自訂權杖管理員的程式設計模型與 WSE 3.0 不同。 如需如何建立自訂權杖管理員和自訂安全性權杖所需之其他元件的詳細資訊，請參閱[如何：建立自訂權杖](../extending/how-to-create-a-custom-token.md)。  
   
 > [!NOTE]
-> 如果已創建自訂`UsernameToken`安全權杖管理器，WCF 提供了一種比創建自訂安全權杖管理器更容易指定身份驗證邏輯的機制。 有關詳細資訊，請參閱[操作：使用自訂使用者名和密碼驗證器](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)。  
+> 如果您已建立自訂 `UsernameToken` 安全性權杖管理員，WCF 會提供更簡單的機制來指定驗證邏輯，而不是建立自訂安全性權杖管理員。 如需詳細資訊，請參閱[如何：使用自訂使用者名稱和密碼驗證](how-to-use-a-custom-user-name-and-password-validator.md)程式。  
   
 ### <a name="wse-30-web-services-that-use-mtom-encoded-soap-messages"></a>使用 MTOM 編碼 SOAP 訊息的 WSE 3.0 Web 服務  
- 與 WSE 3 應用程式一樣，WCF 應用程式可以在配置中指定 MTOM 消息編碼。 要遷移此設置，>[\<將 mtomMessage 編碼](../../../../docs/framework/configure-apps/file-schema/wcf/mtommessageencoding.md)添加到服務的綁定中。 以下代碼示例演示了如何在 WSE 3.0 中為 WCF 中的等效服務指定 MTOM 編碼。  
+ 就像 WSE 3 應用程式一樣，WCF 應用程式也可以在設定中指定 MTOM 訊息編碼。 若要遷移此設定，請將新增 [\<mtomMessageEncoding>](../../configure-apps/file-schema/wcf/mtommessageencoding.md) 至服務的系結。 下列程式碼範例示範如何在 WSE 3.0 中為 WCF 中對等的服務指定 MTOM 編碼。  
   
  **WSE 3.0**  
   
@@ -111,21 +111,21 @@ ms.locfileid: "79184573"
   
 ### <a name="wse-30-applications-that-use-the-wse-messaging-api"></a>使用 WSE 訊息 API 的 WSE 3.0 應用程式  
 
- 當您使用 WSE 訊息 API 來直接存取於用戶端與 Web 服務之間進行通訊的 XML 時，可以將應用程式轉換為使用 "Plain Old XML" (POX)。 有關 POX 的更多詳細資訊，請參閱[與 POX 應用程式的互通性](interoperability-with-pox-applications.md)。 有關 WSE 消息 API 的更多詳細資訊，請參閱[使用 WSE 消息傳遞 API 發送和接收 SOAP 訊息](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa529293(v=msdn.10))。  
+ 當您使用 WSE 訊息 API 來直接存取於用戶端與 Web 服務之間進行通訊的 XML 時，可以將應用程式轉換為使用 "Plain Old XML" (POX)。 如需 POX 的詳細資訊，請參閱[與 POX 應用程式的互通性](interoperability-with-pox-applications.md)。 如需 WSE 訊息 API 的詳細資訊，請參閱[使用 WSE 訊息 Api 傳送和接收 SOAP 訊息](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa529293(v=msdn.10))。  
   
 ## <a name="transports"></a>傳輸  
   
 ### <a name="tcp"></a>TCP  
- 預設情況下，使用 TCP 傳輸發送 SOAP 訊息的 WSE 3.0 用戶端和 Web 服務不與 WCF 用戶端和 Web 服務交互操作。 這種不相容情況是因為 TCP 通訊協定中使用的框架處理方式差異以及效能因素所導致。 但是，WCF 示例詳細介紹了如何實現與 WSE 3.0 交互的自訂 TCP 會話。 有關此示例的詳細資訊，請參閱[傳輸：WSE 3.0 TCP 互通性](../../../../docs/framework/wcf/samples/transport-wse-3-0-tcp-interoperability.md)。  
+ 根據預設，使用 TCP 傳輸來傳送 SOAP 訊息的 WSE 3.0 用戶端和 Web 服務不會與 WCF 用戶端和 Web 服務相交互操作。 這種不相容情況是因為 TCP 通訊協定中使用的框架處理方式差異以及效能因素所導致。 不過，WCF 範例會詳細說明如何執行與 WSE 3.0 交互操作的自訂 TCP 會話。 如需此範例的詳細資訊，請參閱[傳輸： WSE 3.0 TCP 互通性](../samples/transport-wse-3-0-tcp-interoperability.md)。  
   
- 要指定 WCF 應用程式使用 TCP 傳輸，請使用[\<netTcp 綁定>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
+ 若要指定 WCF 應用程式使用 TCP 傳輸，請使用 [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md) 。  
   
 ### <a name="custom-transport"></a>自訂傳輸  
- WCF 中的 WSE 3.0 自訂傳輸等效于通道擴展。 有關創建通道擴展的詳細資訊，請參閱[擴展通道圖層](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
+ 在 WCF 中，對等的 WSE 3.0 自訂傳輸是通道延伸模組。 如需建立通道擴充功能的詳細資訊，請參閱[擴充通道層](../extending/extending-the-channel-layer.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [基本程式設計週期](../../../../docs/framework/wcf/basic-programming-lifecycle.md)
-- [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [HOW TO：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [基本程式設計週期](../basic-programming-lifecycle.md)
+- [自訂繫結](../extending/custom-bindings.md)
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [HOW TO：為指定的驗證模式建立 SecurityBindingElement](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

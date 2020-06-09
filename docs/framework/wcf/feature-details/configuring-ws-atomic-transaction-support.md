@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: d396ccdaca81eab74de5e20d7ba7a9a00acbf7a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597471"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>設定 WS-不可部分完成的交易支援
 
@@ -23,11 +23,11 @@ WS-AT 組態公用程式 (wsatConfig.exe) 可用來進行 WS-AT 設定。 若要
 
 您可以在 Windows SDK 安裝位置 "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation" 中存取命令列視窗。
 
-如需命令列工具的詳細資訊，請參閱[ws-atomictransaction 設定公用程式（wsatconfig.exe .exe）](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。
+如需命令列工具的詳細資訊，請參閱[ws-atomictransaction 設定公用程式（wsatconfig.exe .exe）](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。
 
-如果您執行的是 Windows XP 或 Windows Server 2003，您可以流覽至 [控制台]/[系統**管理工具]/[元件服務**]，以滑鼠右鍵按一下 [**我的電腦**]，**然後選取 [** 內容]，以存取 MMC 嵌入式管理單元。 這個位置和您設定 Microsoft Distributed Transaction Coordinator (MSDTC) 的位置一樣。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。如果您執行的是 Windows Vista 或 Windows Server 2008，可以按一下 [**開始**] 按鈕，然後在 [**搜尋**] 方塊中輸入 `dcomcnfg.exe`，即可找到 MMC 嵌入式管理單元。 開啟 MMC 時，流覽至**My 電腦 \ 分散式 Transaction COORDINATOR\LOCAL DTC**節點，按一下滑鼠右鍵並選取 [**屬性**]。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。
+如果您執行的是 Windows XP 或 Windows Server 2003，您可以流覽至 [控制台]/[系統**管理工具]/[元件服務**]，以滑鼠右鍵按一下 [**我的電腦**]，**然後選取 [** 內容]，以存取 MMC 嵌入式管理單元。 這個位置和您設定 Microsoft Distributed Transaction Coordinator (MSDTC) 的位置一樣。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。如果您執行的是 Windows Vista 或 Windows Server 2008，可以按一下 [**開始**] 按鈕，然後 `dcomcnfg.exe` 在 [**搜尋**] 方塊中輸入，即可找到 MMC 嵌入式管理單元。 開啟 MMC 時，流覽至**My 電腦 \ 分散式 Transaction COORDINATOR\LOCAL DTC**節點，按一下滑鼠右鍵並選取 [**屬性**]。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。
 
-如需嵌入式管理單元的詳細資訊，請參閱[ws-atomictransaction 設定 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)。
+如需嵌入式管理單元的詳細資訊，請參閱[ws-atomictransaction 設定 MMC 嵌入式管理單元](../ws-atomictransaction-configuration-mmc-snap-in.md)。
 
 若要啟用工具的使用者介面，您必須先登錄下列路徑中的 WsatUI.dll 檔
 
@@ -57,7 +57,7 @@ WS-AT 通訊協定服務需要系統管理員明確授權個別帳戶，才能�
 
 ### <a name="create-and-export-certificates"></a>建立及匯出憑證
 
-這個程序需要 MMC 憑證嵌入式管理單元。 依序開啟 [開始]、[執行] 功能表，並在輸入方塊中輸入 "mmc" 然後按下 [確定]，即可存取嵌入式管理單元。 然後，在 [**主控台**1] 視窗中，流覽至 [檔案] **/[新增-移除**] 嵌入式管理單元，按一下 [新增]，然後從 [**可用的獨立嵌入式管理單元**] 清單中選擇 [**憑證**]。 最後，選取 [要管理的**電腦帳戶**]，然後按一下 **[確定]** 。 [**憑證**] 節點會出現在嵌入式管理單元主控台中。
+這個程序需要 MMC 憑證嵌入式管理單元。 依序開啟 [開始]、[執行] 功能表，並在輸入方塊中輸入 "mmc" 然後按下 [確定]，即可存取嵌入式管理單元。 然後，在 [**主控台**1] 視窗中，流覽至 [檔案] **/[新增-移除**] 嵌入式管理單元，按一下 [新增]，然後從 [**可用的獨立嵌入式管理單元**] 清單中選擇 [**憑證**]。 最後，選取 [要管理的**電腦帳戶**]，然後按一下 **[確定]**。 [**憑證**] 節點會出現在嵌入式管理單元主控台中。
 
 您必須已擁有必要的憑證，才能建立信任。 若要瞭解如何在執行下列步驟之前建立和安裝新憑證，請參閱[如何：在開發期間于 WCF 中建立和安裝暫存用戶端憑證](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10))。
 
@@ -81,7 +81,7 @@ WS-AT 通訊協定服務需要系統管理員明確授權個別帳戶，才能�
 
 由於 WS-AT 通訊協定服務可同時作用為用戶端和伺服器，此服務必須同時接聽連入連線並初始化連出連線。 因此，您必須設定 MSDTC，讓它在與外部的另一方進行通訊時知道要使用的憑證，以及在接受連入通訊時知道要授權的憑證。
 
-您可以使用 MMC WS-AT 嵌入式管理單元設定此項。 如需此工具的詳細資訊，請參閱[ws-atomictransaction 設定 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)主題。 下列步驟描述如何在執行 MSDTC 的兩部電腦之間建立信任。
+您可以使用 MMC WS-AT 嵌入式管理單元設定此項。 如需此工具的詳細資訊，請參閱[ws-atomictransaction 設定 MMC 嵌入式管理單元](../ws-atomictransaction-configuration-mmc-snap-in.md)主題。 下列步驟描述如何在執行 MSDTC 的兩部電腦之間建立信任。
 
 1. 進行電腦 A 的設定。 針對 [端點憑證]，選取 [certA]。 針對 [已授權的憑證]，選取 certB。
 
@@ -102,15 +102,15 @@ WS-AT 通訊協定服務需要系統管理員明確授權個別帳戶，才能�
 
 ## <a name="tracing"></a>追蹤
 
-WS-AT 通訊協定服務支援整合式交易特定的追蹤，可以透過使用 ws-atomictransaction 設定[MMC 嵌入式管理](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)單元工具來啟用和管理。 追蹤所包含的資料會指出登記特定交易的時間、交易到達終結狀態的時間、每個交易登記所接收的結果等。 您可以使用[服務追蹤檢視器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)工具來查看所有追蹤。
+WS-AT 通訊協定服務支援整合式交易特定的追蹤，可以透過使用 ws-atomictransaction 設定[MMC 嵌入式管理](../ws-atomictransaction-configuration-mmc-snap-in.md)單元工具來啟用和管理。 追蹤所包含的資料會指出登記特定交易的時間、交易到達終結狀態的時間、每個交易登記所接收的結果等。 您可以使用[服務追蹤檢視器工具（svctraceviewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)工具來查看所有追蹤。
 
 WS-AT 通訊協定服務也支援經由 ETW 追蹤工作階段的整合式 ServiceModel 追蹤。 如此除了現有的交易追蹤之外，也會提供更詳細的通訊特定追蹤。  若要啟用這些額外的追蹤，請遵循這些步驟
 
-1. 開啟 [**開始]/[執行**] 功能表，在輸入方塊中輸入 "regedit"，然後選取 **[確定]** 。
+1. 開啟 [**開始]/[執行**] 功能表，在輸入方塊中輸入 "regedit"，然後選取 **[確定]**。
 
-2. 在 **登錄編輯程式** 中，流覽至左窗格的下列資料夾，Hkey_Local_Machine \software\microsoft\wsat\3.0\
+2. 在 [**登錄編輯程式**] 中，流覽至左窗格的下列資料夾，Hkey_Local_Machine \software\microsoft\wsat\3.0\]
 
-3. 以滑鼠右鍵按一下右窗格中的 `ServiceModelDiagnosticTracing` 值，然後選取 [**修改**]。
+3. 以滑鼠右鍵按一下 `ServiceModelDiagnosticTracing` 右窗格中的值，然後選取 [**修改**]。
 
 4. 在 [**數值資料**] 輸入方塊中，輸入下列其中一個有效值，以指定您要啟用的追蹤層級。
 
@@ -118,7 +118,7 @@ WS-AT 通訊協定服務也支援經由 ETW 追蹤工作階段的整合式 Servi
 
 - 1：嚴重
 
-- 3：錯誤。 這是預設值
+- 3：錯誤。 這是預設值。
 
 - 7：警告
 
@@ -128,5 +128,5 @@ WS-AT 通訊協定服務也支援經由 ETW 追蹤工作階段的整合式 Servi
 
 ## <a name="see-also"></a>請參閱
 
-- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [WS-AtomicTransaction 設定 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction 組態 MMC 嵌入式管理單元](../ws-atomictransaction-configuration-mmc-snap-in.md)

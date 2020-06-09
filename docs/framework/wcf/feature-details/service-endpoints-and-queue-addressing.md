@@ -2,17 +2,17 @@
 title: 服務端點與佇列定址
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 8b323993a698dac219e0f2be43e9b508a19065dd
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: a17e680732cd257fbdfd95eb09df8c53f5894400
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202417"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600383"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
 本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您，下圖顯示傳統 Windows Communication Foundation （WCF）佇列的應用程式部署。  
   
- ![佇列應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式-佇列-圖表")  
+ ![佇列應用程式圖表](media/distributed-queue-figure.jpg "分散式-佇列-圖表")  
   
  當用戶端需要將訊息傳送到服務時，它會針對傳送到目標佇列的訊息加以定址。 為了讓服務讀取來自佇列的訊息，服務會將其接聽位址設為目標佇列。 WCF 中的定址是統一資源識別元（URI），而訊息佇列（MSMQ）佇列名稱不是以 URI 為基礎。 因此，您必須瞭解如何使用 WCF 來定址在 MSMQ 中建立的佇列。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "84202417"
   
  接聽項會使用佇列位址來當成接聽 URI 以讀取訊息。 換句話說，佇列位址等於 TCP 通訊端的接聽連接埠。  
   
- 當端點要從佇列中讀取時，必須以先前開啟 ServiceHost 時所指定的相同配置來指定佇列位址。 如需範例，請參閱[NET MSMQ Binding](../../../../docs/framework/wcf/samples/net-msmq-binding.md)。  
+ 當端點要從佇列中讀取時，必須以先前開啟 ServiceHost 時所指定的相同配置來指定佇列位址。 如需範例，請參閱[NET MSMQ Binding](../samples/net-msmq-binding.md)。  
   
 ### <a name="multiple-contracts-in-a-queue"></a>佇列中多個合約  
  佇列中的訊息可以實作不同的合約。 在此情況下，下列任何一項必須為真，以順利讀取並處理所有訊息：  
@@ -89,7 +89,7 @@ ms.locfileid: "84202417"
   
  net.tcp：//localhost/[private/] \<*custom-dead-letter-queue-name*> 。  
   
- WCF 服務會確認它所收到的所有訊息都已定址到它正在接聽的特定佇列。 如果訊息的目的地佇列不符合找到的佇列，則服務將無法處理訊息。 這是負責接聽寄不出的信件佇列的服務必須解決的問題，因為寄不出的信件佇列中任何訊息都是要傳送到其他地方的。 若要從寄不出的信件佇列或有害佇列中讀取訊息，必須使用包含 `ServiceBehavior` 參數的 <xref:System.ServiceModel.AddressFilterMode.Any>。 如需範例，請參閱[無效信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)。  
+ WCF 服務會確認它所收到的所有訊息都已定址到它正在接聽的特定佇列。 如果訊息的目的地佇列不符合找到的佇列，則服務將無法處理訊息。 這是負責接聽寄不出的信件佇列的服務必須解決的問題，因為寄不出的信件佇列中任何訊息都是要傳送到其他地方的。 若要從寄不出的信件佇列或有害佇列中讀取訊息，必須使用包含 `ServiceBehavior` 參數的 <xref:System.ServiceModel.AddressFilterMode.Any>。 如需範例，請參閱[無效信件佇列](../samples/dead-letter-queues.md)。  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 與服務定址  
  `MsmqIntegrationBinding` 是用來與傳統 MSMQ 應用程式進行通訊的。 為了簡化與現有 MSMQ 應用程式的交互操作，WCF 僅支援格式名稱定址。 因此，使用此繫結來傳送的訊息必須符合下列 URI 配置：  
@@ -104,6 +104,6 @@ ms.locfileid: "84202417"
   
  請注意，您無法使用包含 `MsmqIntegrationBinding` 的 net.msmq:// 定址。 由於 `MsmqIntegrationBinding` 支援自由格式的 MSMQ 格式名稱定址，因此您可以使用使用此系結的 WCF 服務來使用 MSMQ 中的多播和通訊群組清單功能。 當您使用 `CustomDeadLetterQueue` 時，需指定 `MsmqIntegrationBinding` 則是一個例外。 它必須是 net.msmq:// 的格式，與使用 `NetMsmqBinding` 來指定的方式很類似。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [以 Web 裝載佇列應用程式](web-hosting-a-queued-application.md)

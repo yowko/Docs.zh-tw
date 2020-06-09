@@ -1,16 +1,16 @@
 ---
-title: 如何：服務資料分割
+title: HOW TO：服務資料切割
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947865"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601188"
 ---
-# <a name="how-to-service-data-partitioning"></a>如何：服務資料分割
-本主題概要說明在相同目的地服務之多個執行個體中分割訊息所需的基本步驟。 使用服務資料分割的時機，通常是在需要調整服務的規模以便提供更優良的服務品質，或是需要以某種特定的方式處理來自不同客戶的要求。 例如, 來自高價值或「金級」客戶的訊息, 可能需要以高於標準客戶訊息的優先順序來處理。  
+# <a name="how-to-service-data-partitioning"></a>HOW TO：服務資料切割
+本主題概要說明在相同目的地服務之多個執行個體中分割訊息所需的基本步驟。 使用服務資料分割的時機，通常是在需要調整服務的規模以便提供更優良的服務品質，或是需要以某種特定的方式處理來自不同客戶的要求。 例如，來自高價值或「金級」客戶的訊息，可能需要以高於標準客戶訊息的優先順序來處理。  
   
  在此範例中，訊息會路由到 regularCalc 服務兩個執行個體的其中之一。 服務的兩個執行個體完全相同，但 calculator1 端點代表的服務會處理從高價值客戶接收到的訊息，而 calculator 2 端點則處理來自其他客戶的訊息。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "69947865"
     </filterTables>  
     ```  
   
-4. 若要針對包含在篩選資料表中的篩選評估傳入的訊息，您必須使用路由行為讓篩選資料表與服務端點產生關聯。 下列範例示範如何將 "filterTable1" 與服務端點產生關聯:  
+4. 若要針對包含在篩選資料表中的篩選評估傳入的訊息，您必須使用路由行為讓篩選資料表與服務端點產生關聯。 下列範例示範如何將 "filterTable1" 與服務端點產生關聯：  
   
     ```xml  
     <behaviors>  
@@ -173,6 +173,6 @@ ms.locfileid: "69947865"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)
+- [路由服務](../samples/routing-services.md)

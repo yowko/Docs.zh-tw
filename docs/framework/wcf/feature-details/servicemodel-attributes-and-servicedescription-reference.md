@@ -2,22 +2,22 @@
 title: ServiceModel 屬性與 ServiceDescription 參考
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e39a63d399edccc580b27ad4bfbc9ab05015ef9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747730"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600344"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 屬性與 ServiceDescription 參考
-*描述樹狀目錄*是類型的階層架構 (開頭為<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>類別)，合起來描述服務的各個層面。 Windows Communication Foundation (WCF) 會使用描述樹狀目錄來建置有效的服務執行階段，以發佈 Web 服務描述語言 (WSDL)、 XML 結構描述定義語言 (XSD) 和用戶端可用來服務有關的原則判斷提示 （中繼資料）若要連線，並使用服務，以及產生各種程式碼和組態檔值的表示法描述樹狀結構。  
+*描述樹狀*結構是類型的階層（從 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> 類別開始），會一起描述服務的每個層面。 Windows Communication Foundation （WCF）會使用描述樹狀結構來建立有效的服務執行時間，以發行 Web 服務描述語言（WSDL）、XML 架構定義語言（XSD），以及用戶端可用來連接和使用服務之服務的相關原則判斷提示（中繼資料），並產生描述樹狀目錄值的各種程式碼和設定檔案表示。  
   
- 本主題說明如何從服務合約取得與合約有關的屬性，以及如何實作這些屬性並新增到描述樹狀目錄中。 在某些情況下，屬性值會轉換成行為屬性，然後行為會插入描述樹狀目錄中。 如需有關如何將描述樹狀目錄值轉換成中繼資料的詳細資訊，請參閱[ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
+ 本主題說明如何從服務合約取得與合約有關的屬性，以及如何實作這些屬性並新增到描述樹狀目錄中。 在某些情況下，屬性值會轉換成行為屬性，然後行為會插入描述樹狀目錄中。 如需描述樹狀結構值如何轉換成中繼資料的詳細資訊，請參閱[ServiceDescription 和 WSDL 參考](servicedescription-and-wsdl-reference.md)。  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>將操作對應至描述樹狀目錄  
- 在 WCF 應用程式，服務合約會被塑造介面 （或類別），使用屬性來標示的作業群組中的介面或類別和其方法。 開啟 <xref:System.ServiceModel.ServiceHost> 類別時，會反映任何服務合約和實作並與組態資訊合併至描述樹狀目錄中。  
+ 在 WCF 應用程式中，服務合約是由使用屬性來將介面或類別及其方法標記為作業群組的介面（或類別）進行模型化。 開啟 <xref:System.ServiceModel.ServiceHost> 類別時，會反映任何服務合約和實作並與組態資訊合併至描述樹狀目錄中。  
   
- 有兩種類型的作業模型：*參數*模型並*訊息合約*模型。 參數模型使用沒有由 <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> 類別標記的參數或傳回值類型的 Managed 方法。 在此模型中，開發人員控制序列化的參數和傳回值，但 WCF 產生用來填入服務和其合約的描述樹狀結構的值。  
+ 有兩種類型的作業模型：*參數*模型和*訊息合約*模型。 參數模型使用沒有由 <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType> 類別標記的參數或傳回值類型的 Managed 方法。 在此模型中，開發人員會控制參數和傳回值的序列化，但是 WCF 會產生用來填入服務及其合約之描述樹狀目錄的值。  
   
  在組態檔中指定的繫結會直接載入至 <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType> 屬性中。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "61747730"
 |---------------------------------------|-------------------------------------|  
 |CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>，<xref:System.ServiceModel.Description.MessageDescription> 加入至所有操作 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> 中。|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 與可能的子系保護層級。 如需有關保護層級階層的詳細資訊，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 與可能的子系保護層級。 如需保護層級階層的詳細資訊，請參閱[瞭解保護層級](../understanding-protection-level.md)。|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |ServiceKnownTypesAttribute 值|受影響的描述樹狀目錄值|  
@@ -48,7 +48,7 @@ ms.locfileid: "61747730"
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |名稱|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 與可能的子系保護層級。 如需有關保護層級階層的詳細資訊，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 與可能的子系保護層級。 如需保護層級階層的詳細資訊，請參閱[瞭解保護層級](../understanding-protection-level.md)。|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 用於輸出訊息或輸入訊息，視合約/回呼合約而定。|  
   
 |FaultContractAttribute 值|受影響的描述樹狀目錄值|  
@@ -80,28 +80,28 @@ ms.locfileid: "61747730"
   
 |MessageHeaderAttribute 值|受影響的描述樹狀目錄值|  
 |----------------------------------|-------------------------------------|  
-|行動|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 中對應標頭的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 中對應標頭的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> 中對應標頭的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中對應標頭的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |命名空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中對應標頭的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中對應標頭的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 中對應標頭的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|轉送|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 中對應標頭的 <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute 值|受影響的描述樹狀目錄值|  
 |--------------------------------------|-------------------------------------|  
 |名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |命名空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|順序|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|單|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |MessageHeaderArrayAttribute 值|受影響的描述樹狀目錄值|  
 |---------------------------------------|-------------------------------------|  
-|行動|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
+|Actor|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A>|  
 |MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A>|  
 |名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A>|  
 |命名空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
+|轉送|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A>|  
   
 |MessagePropertyAttribute 值|受影響的描述樹狀目錄值|  
 |------------------------------------|-------------------------------------|  
@@ -111,8 +111,8 @@ ms.locfileid: "61747730"
 |-------------------------------------|-------------------------------------|  
 |名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
- 如需有關如何將描述樹狀目錄值轉換成中繼資料的詳細資訊，請參閱[ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
+ 如需描述樹狀結構值如何轉換成中繼資料的詳細資訊，請參閱[ServiceDescription 和 WSDL 參考](servicedescription-and-wsdl-reference.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+- [ServiceDescription 與 WSDL 參考](servicedescription-and-wsdl-reference.md)

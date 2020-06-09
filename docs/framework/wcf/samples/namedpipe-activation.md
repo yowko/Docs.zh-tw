@@ -2,16 +2,16 @@
 title: NamedPipe 啟用
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a562ec51d35af08f49e89b652670e9a57b0f00c2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8d9a10b94c52514db611144352653b911d109056
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837853"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602462"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 啟用
 
-此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，而且需要 Windows Vista 才能執行。
+此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。 這個範例是以[消費者入門](getting-started-sample.md)為基礎，而且需要 Windows Vista 才能執行。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -161,11 +161,11 @@ Press <ENTER> to terminate client.
 
 1. 請確定已安裝 IIS 7.0。 WAS 啟用需要 IIS 7.0。
 
-2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
     此外，您必須安裝 WCF 非 HTTP 啟用元件：
 
-    1. 在 [開始] 功能表內選擇 [控制台]。
+    1. 在 [開始]**** 功能表內選擇 [控制台]****。
 
     2. 選取 [**程式和功能**]。
 
@@ -198,9 +198,9 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > 這個命令是單行文字。
 
-        此命令可讓您使用 `http://localhost/servicemodelsamples` 和 `net.tcp://localhost/servicemodelsamples`來存取/servicemodelsamples 應用程式。
+        此命令可讓您使用和來存取/servicemodelsamples 應用 `http://localhost/servicemodelsamples` 程式 `net.tcp://localhost/servicemodelsamples` 。
 
-4. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+4. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
 5. 移除您為此範例新增的 net.pipe 網站繫結。
 
@@ -226,4 +226,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>請參閱
 
-- [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric 主控與持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

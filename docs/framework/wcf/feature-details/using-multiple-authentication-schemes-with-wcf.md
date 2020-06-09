@@ -2,18 +2,18 @@
 title: 搭配 WCF 使用多個驗證配置
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: b0f5da9a4c6fdfede9a86434f49f9e9821778176
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1874963573a6ec12939bd12b79574f1e2c889bfd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932675"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600214"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>搭配 WCF 使用多個驗證配置
-WCF 現在允許您在單一端點上指定多個驗證配置。 此外，Web 裝載服務可以直接從 IIS 繼承驗證設定。 自我裝載服務可以指定可使用的驗證配置。 如需在 IIS 中設定驗證設定的詳細資訊，請參閱[IIS 驗證](https://go.microsoft.com/fwlink/?LinkId=232458)  
+WCF 現在允許您在單一端點上指定多個驗證配置。 此外，Web 裝載服務可以直接從 IIS 繼承驗證設定。 自我裝載服務可以指定可使用的驗證配置。 如需在 IIS 中設定驗證設定的詳細資訊，請參閱[Iis 驗證](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
 ## <a name="iis-hosted-services"></a>IIS 裝載的服務  
- 對於 IIS 裝載的服務，設定您希望在 IIS 中使用的驗證配置。 然後在您服務的 web.config 檔案中，將繫結組態 clientCredential 類型指定為"InheritedFromHost"下列 XML 程式碼片段所示：  
+ 對於 IIS 裝載的服務，設定您希望在 IIS 中使用的驗證配置。 然後在您服務的 web.config 檔案中，將系結設定中的 clientCredential 類型指定為 "InheritedFromHost"，如下列 XML 程式碼片段所示：  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ WCF 現在允許您在單一端點上指定多個驗證配置。 此外，Web �
     </bindings>  
 ```  
   
- 您可以指定您只想要使用 ServiceAuthenticationBehavior 服務搭配使用的驗證配置的子集或\<serviceAuthenticationManager > 項目。 在程式碼中進行這項設定時，請使用 ServiceAuthenticationBehavior，如下列程式碼片段所示。  
+ 您可以使用 ServiceAuthenticationBehavior 或專案，指定您只想要將驗證配置子集與您的服務搭配使用 \<serviceAuthenticationManager> 。 在程式碼中進行這項設定時，請使用 ServiceAuthenticationBehavior，如下列程式碼片段所示。  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- 當設定此組態檔中，使用\<serviceAuthenticationManager > 項目，如下列 XML 程式碼片段所示。  
+ 在設定檔中進行此設定時，請使用 \<serviceAuthenticationManager> 元素，如下列 XML 程式碼片段所示。  
   
 ```xml  
 <behaviors>  
@@ -63,7 +63,7 @@ else
  這將確保只會根據在 IIS 中選取的部分，考慮將這裡列出的驗證配置子集套用在服務端點。 這表示開發人員可以在 serviceAuthenticationManager 清單中省略該項基本驗證，將其從清單中排除，即使已在 IIS 中啟用亦同，這項驗證將不會套用在服務端點上。  
   
 ## <a name="self-hosted-services"></a>自我裝載的服務  
- 自我裝載服務的設定方式有點不同，因為沒有可繼承其設定的 IIS。 您在這裡使用\<serviceAuthenticationManager > 項目或 ServiceAuthenticationBehavior 來指定可供繼承的驗證設定。 在程式碼中，看起來像這樣：  
+ 自我裝載服務的設定方式有點不同，因為沒有可繼承其設定的 IIS。 在這裡，您會使用 \<serviceAuthenticationManager> 元素或 ServiceAuthenticationBehavior 來指定將繼承的驗證設定。 在程式碼中，看起來像這樣：  
   
 ```csharp  
 // ...  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [端點：位址、 繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [設定系統提供的繫結](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [繫結](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [繫結和安全性](bindings-and-security.md)
+- [端點：位址、繫結和合約](endpoints-addresses-bindings-and-contracts.md)
+- [設定系統提供的繫結](configuring-system-provided-bindings.md)
+- [自訂繫結的安全性功能](security-capabilities-with-custom-bindings.md)
+- [繫結](bindings.md)
+- [自訂繫結](../extending/custom-bindings.md)
