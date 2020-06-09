@@ -5,34 +5,34 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-ms.openlocfilehash: e8efbc5a3dec5f60dbefc8f6dc377d97b29b7653
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a73dd90d268c61e0df974861753119e205a870f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699613"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599070"
 ---
-# <a name="how-to-control-service-instancing"></a><span data-ttu-id="cba04-102">HOW TO：控制服務執行個體</span><span class="sxs-lookup"><span data-stu-id="cba04-102">How to: Control Service Instancing</span></span>
-<span data-ttu-id="cba04-103">設定服務的執行個體模式，可讓您指定 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (及其相關之使用者定義的服務物件) 建立的時機。</span><span class="sxs-lookup"><span data-stu-id="cba04-103">Setting the instance mode of a service enables you to specify when a <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (and its associated user-defined service object) is created.</span></span> <span data-ttu-id="cba04-104">如需可能的模式，請參閱 <xref:System.ServiceModel.InstanceContextMode> 列舉。</span><span class="sxs-lookup"><span data-stu-id="cba04-104">See the <xref:System.ServiceModel.InstanceContextMode> enumeration for the possible modes.</span></span> <span data-ttu-id="cba04-105">如需行為的詳細資訊，請參閱[設定和擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。</span><span class="sxs-lookup"><span data-stu-id="cba04-105">For more information about behaviors, see [Configuring and Extending the Runtime with Behaviors](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span></span> <span data-ttu-id="cba04-106">如需實用範例，請參閱[行為](../../../../docs/framework/wcf/samples/behaviors.md)。</span><span class="sxs-lookup"><span data-stu-id="cba04-106">For working examples, see [Behaviors](../../../../docs/framework/wcf/samples/behaviors.md).</span></span>  
+# <a name="how-to-control-service-instancing"></a><span data-ttu-id="fa774-102">HOW TO：控制服務執行個體</span><span class="sxs-lookup"><span data-stu-id="fa774-102">How to: Control Service Instancing</span></span>
+<span data-ttu-id="fa774-103">設定服務的執行個體模式，可讓您指定 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (及其相關之使用者定義的服務物件) 建立的時機。</span><span class="sxs-lookup"><span data-stu-id="fa774-103">Setting the instance mode of a service enables you to specify when a <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (and its associated user-defined service object) is created.</span></span> <span data-ttu-id="fa774-104">如需可能的模式，請參閱 <xref:System.ServiceModel.InstanceContextMode> 列舉。</span><span class="sxs-lookup"><span data-stu-id="fa774-104">See the <xref:System.ServiceModel.InstanceContextMode> enumeration for the possible modes.</span></span> <span data-ttu-id="fa774-105">如需行為的詳細資訊，請參閱[使用行為設定和擴充運行](../extending/configuring-and-extending-the-runtime-with-behaviors.md)時間。</span><span class="sxs-lookup"><span data-stu-id="fa774-105">For more information about behaviors, see [Configuring and Extending the Runtime with Behaviors](../extending/configuring-and-extending-the-runtime-with-behaviors.md).</span></span> <span data-ttu-id="fa774-106">如需實用範例，請參閱[行為](../samples/behaviors.md)。</span><span class="sxs-lookup"><span data-stu-id="fa774-106">For working examples, see [Behaviors](../samples/behaviors.md).</span></span>  
   
-### <a name="to-control-the-service-instance-lifetime-using-code"></a><span data-ttu-id="cba04-107">使用程式碼控制服務執行個體存留期</span><span class="sxs-lookup"><span data-stu-id="cba04-107">To control the service instance lifetime using code</span></span>  
+### <a name="to-control-the-service-instance-lifetime-using-code"></a><span data-ttu-id="fa774-107">使用程式碼控制服務執行個體存留期</span><span class="sxs-lookup"><span data-stu-id="fa774-107">To control the service instance lifetime using code</span></span>  
   
-1. <span data-ttu-id="cba04-108">將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 套用至服務類別。</span><span class="sxs-lookup"><span data-stu-id="cba04-108">Apply the <xref:System.ServiceModel.ServiceBehaviorAttribute> to the service class.</span></span>  
+1. <span data-ttu-id="fa774-108">將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 套用至服務類別。</span><span class="sxs-lookup"><span data-stu-id="fa774-108">Apply the <xref:System.ServiceModel.ServiceBehaviorAttribute> to the service class.</span></span>  
   
-2. <span data-ttu-id="cba04-109">將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為下列其中一值：<xref:System.ServiceModel.InstanceContextMode.PerCall>、<xref:System.ServiceModel.InstanceContextMode.PerSession> 或 <xref:System.ServiceModel.InstanceContextMode.Single>。</span><span class="sxs-lookup"><span data-stu-id="cba04-109">Set the <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> property to one of the following values: <xref:System.ServiceModel.InstanceContextMode.PerCall>, <xref:System.ServiceModel.InstanceContextMode.PerSession>, or <xref:System.ServiceModel.InstanceContextMode.Single>.</span></span>  
+2. <span data-ttu-id="fa774-109">將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為下列其中一值：<xref:System.ServiceModel.InstanceContextMode.PerCall>、<xref:System.ServiceModel.InstanceContextMode.PerSession> 或 <xref:System.ServiceModel.InstanceContextMode.Single>。</span><span class="sxs-lookup"><span data-stu-id="fa774-109">Set the <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> property to one of the following values: <xref:System.ServiceModel.InstanceContextMode.PerCall>, <xref:System.ServiceModel.InstanceContextMode.PerSession>, or <xref:System.ServiceModel.InstanceContextMode.Single>.</span></span>  
   
      [!code-csharp[C_ControlServiceInstancing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_controlserviceinstancing/cs/source.cs#1)]
      [!code-vb[C_ControlServiceInstancing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_controlserviceinstancing/vb/source.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="cba04-110">範例</span><span class="sxs-lookup"><span data-stu-id="cba04-110">Example</span></span>  
- <span data-ttu-id="cba04-111">下列程式碼範例會將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性 (Property) 設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall>。</span><span class="sxs-lookup"><span data-stu-id="cba04-111">The following code example sets the <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> property of the <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute to <xref:System.ServiceModel.InstanceContextMode.PerCall>.</span></span>  
+## <a name="example"></a><span data-ttu-id="fa774-110">範例</span><span class="sxs-lookup"><span data-stu-id="fa774-110">Example</span></span>  
+ <span data-ttu-id="fa774-111">下列程式碼範例會將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性 (Property) 設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall>。</span><span class="sxs-lookup"><span data-stu-id="fa774-111">The following code example sets the <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> property of the <xref:System.ServiceModel.ServiceBehaviorAttribute> attribute to <xref:System.ServiceModel.InstanceContextMode.PerCall>.</span></span>  
   
  [!code-csharp[c_ControlServiceInstancing#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_controlserviceinstancing/cs/source.cs#2)]
  [!code-vb[c_ControlServiceInstancing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_controlserviceinstancing/vb/source.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="cba04-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cba04-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fa774-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="fa774-112">See also</span></span>
 
 - <xref:System.ServiceModel.ServiceBehaviorAttribute>
 - <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>
 - <xref:System.ServiceModel.InstanceContextMode>
-- [<span data-ttu-id="cba04-113">服務：行為範例</span><span class="sxs-lookup"><span data-stu-id="cba04-113">Service: Behaviors Samples</span></span>](../samples/behaviors.md)
+- [<span data-ttu-id="fa774-113">服務：行為範例</span><span class="sxs-lookup"><span data-stu-id="fa774-113">Service: Behaviors Samples</span></span>](../samples/behaviors.md)
