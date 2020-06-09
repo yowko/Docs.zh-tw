@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288039"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599863"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 
@@ -109,7 +109,7 @@ Unicode 標準定義了超過1100000個程式[代碼點](https://www.unicode.org
 
 |Decimal|Hex       |範例|描述|
 |------:|----------|-------|-----------|
-|10     | `U+000A` |不適用| [換行字元](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|10     | `U+000A` |N/A| [換行字元](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |65     | `U+0061` | a | [拉丁小寫字母 A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [拉丁文大寫字母 Y 加上長音符](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68675 | `U+10C43`| 𐱃 | [舊的土耳其文字母](https://www.unicode.org/charts/PDF/U10C00.pdf) |
@@ -250,7 +250,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 * 「 string ×」看起來與「×」相同，但以兩個純量值表示，並包含兩個 `char` 實例。
 
-  * `U+0065 LATIN SMALL LETTER A`
+  * `U+0061 LATIN SMALL LETTER A`
   * `U+0301 COMBINING ACUTE ACCENT`
 
 * 最後， string " `👩🏽‍🚒` " 會以四個純量值表示，並包含七個 `char` 實例。
@@ -384,7 +384,7 @@ string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is
 
 如需如何使用內建類別的詳細資訊 `Encoding` ，請參閱[如何在 .net 中使用字元編碼類別](character-encoding.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.String>
 - <xref:System.Char>

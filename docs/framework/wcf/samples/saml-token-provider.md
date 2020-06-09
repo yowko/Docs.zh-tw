@@ -2,12 +2,12 @@
 title: SAML 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: d599992949b87f0ac3f178d8f79f244781eda6fa
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: db1307b0f440f8bd55f1728b6645aec706dfe442
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976716"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602410"
 ---
 # <a name="saml-token-provider"></a>SAML 權杖提供者
 這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation （WCF）中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 也隨附于 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：
@@ -352,9 +352,9 @@ ms.locfileid: "73976716"
 
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
+2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。
 
 > [!NOTE]
 > 如果您使用 Svcutil.exe 重新產生這個範例的組態，請務必修改用戶端組態中的端點名稱，以符合用戶端程式碼。

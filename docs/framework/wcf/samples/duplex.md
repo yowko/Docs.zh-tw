@@ -1,19 +1,19 @@
 ---
-title: 雙面列印
+title: 雙工
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 64036a1314bc3f60023cdc555fa1eaece7c687c8
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 77eab6a4975fc67c20558a53f399c7e709215587
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715150"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575195"
 ---
-# <a name="duplex"></a>雙面列印
+# <a name="duplex"></a>雙工
 
-雙工範例示範如何定義和實作雙工合約。 用戶端建立與服務的工作階段，並提供服務所需的通道以供服務將訊息傳回用戶端，這個程序即是所謂的雙工通訊。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 雙工合約被定義為一對介面，其中的主要介面從用戶端到服務，回呼介面從服務到用戶端。 在此範例中，`ICalculatorDuplex` 介面允許用戶端執行數學運算，透過工作階段執行結果。 服務傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。
+雙工範例示範如何定義和實作雙工合約。 用戶端建立與服務的工作階段，並提供服務所需的通道以供服務將訊息傳回用戶端，這個程序即是所謂的雙工通訊。 這個範例是以[消費者入門](getting-started-sample.md)為基礎。 雙工合約被定義為一對介面，其中的主要介面從用戶端到服務，回呼介面從服務到用戶端。 在此範例中，`ICalculatorDuplex` 介面允許用戶端執行數學運算，透過工作階段執行結果。 服務傳回 `ICalculatorDuplexCallback` 介面上的結果。 雙工合約需要一個工作階段，因為必須建立內容，將用戶端與服務之間傳送的訊息關聯在一起。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -164,14 +164,14 @@ client.Close();
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建立C#方案C++的、或 Visual Basic .net 版本，請遵循[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+2. 若要建立解決方案的 c #、c + + 或 Visual Basic .NET 版本，請遵循[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示。
 
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
     > [!IMPORTANT]
-    > 在跨電腦設定中執行用戶端時，請務必將[\<client > 專案的\<端點 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)的 `address` 屬性，以及 `clientBaseAddress` [wsDualHttpBinding\<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)專案之 > 系結[\<](../../configure-apps/file-schema/wcf/bindings.md)元素的 > 屬性取代為適當的電腦名稱稱，如下所示：
+    > 在跨電腦設定中執行用戶端時，請務必以適當電腦的名稱取代專案的 `address` 屬性[ \<endpoint> \<client> ](../../configure-apps/file-schema/wcf/endpoint-of-client.md)中的 "localhost"，以及專案之專案的屬性（如下所 `clientBaseAddress` [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md) 示）：
 
     ```xml
     <client>

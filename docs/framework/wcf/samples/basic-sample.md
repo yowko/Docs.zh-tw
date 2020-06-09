@@ -2,21 +2,21 @@
 title: 基本範例
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 2ea5af0a1c05b5632632b2619c0ee4813696d2fc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: db560ec7dea3912ecec8d84943cc9a01512d1f33
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738177"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575767"
 ---
 # <a name="basic-sample"></a>基本範例
 
 這個範例示範如何建立可探索的服務，以及如何搜尋和呼叫可探索的服務。 這個範例包含二個專案：服務和用戶端。
 
 > [!NOTE]
-> 這個範例會在程式碼中實作探索。  如需在設定中執行探索的範例，請參閱[configuration](../../../../docs/framework/wcf/samples/configuration-sample.md)。
+> 這個範例會在程式碼中實作探索。  如需在設定中執行探索的範例，請參閱[configuration](configuration-sample.md)。
 
-## <a name="service"></a>Service
+## <a name="service"></a>服務
 
 這是簡單的計算機服務實作。 與探索相關的程式碼位於 `Main` 中，其中 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 會加入至服務主機，並且加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，如下列程式碼所示。
 

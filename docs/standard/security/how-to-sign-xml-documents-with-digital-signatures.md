@@ -1,5 +1,6 @@
 ---
 title: 如何：使用數位簽章簽署 XML 文件
+description: 瞭解如何使用數位簽章簽署 XML 檔。 在 .NET 中使用 System.web 命名空間中的類別。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 81fa5e4c503f26dc13758090f845fd8387287084
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97bd23182ed54b899b76dbf43e179fe0c94b011d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277176"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598563"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>如何：使用數位簽章簽署 XML 文件
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別，以數位簽章簽署 XML 文件或 XML 文件的一部分。  XML 數位簽章 (XMLDSIG) 可讓您驗證在簽署資料後，資料未經過變更。  如需 XMLDSIG 標準的詳細資訊，請參閱全球資訊網協會（W3C）建議[XML 簽章語法和處理](https://www.w3.org/TR/xmldsig-core/)。  
@@ -116,7 +117,7 @@ ms.locfileid: "84277176"
   
  絕對不要直接將私密金鑰內嵌在您的原始程式碼。  使用[Ildasm （IL](../../framework/tools/ildasm-exe-il-disassembler.md)解譯器）或在文字編輯器（如 [記事本]）中開啟元件，可以輕鬆地從元件中讀取內嵌索引鍵。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Cryptography.Xml>
 - [操作說明：驗證 XML 文件的數位簽章](how-to-verify-the-digital-signatures-of-xml-documents.md)

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: e2aaf1a5e6ae1074a81c08fc798f22ea5e9ce139
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44d06762bf66950ea0cc06986c61ecd548ae2e0c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184615"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576404"
 ---
 # <a name="message-security-with-mutual-certificates"></a>相互憑證的訊息安全性
-以下方案顯示了使用消息安全模式保護的 Windows 通信基礎 （WCF） 服務和用戶端。 用戶端與服務以憑證加以驗證。  
+下列案例顯示使用訊息安全性模式保護的 Windows Communication Foundation （WCF）服務和用戶端。 用戶端與服務以憑證加以驗證。  
   
  因為案例使用具有 X.509 憑證權杖設定檔的 WS-Security，所以這個案例是互通的。  
   
 > [!NOTE]
 > 這個案例並不執行服務憑證的交涉。 在任何通訊前，必須先對用戶端提供服務憑證。 伺服器憑證可在應用程式散發，或在超出範圍通訊中提供。  
   
- ![具有相互證書的消息安全性](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![相互憑證的訊息安全性](media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -90,7 +90,7 @@ ms.locfileid: "79184615"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>用戶端  
  下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
@@ -107,7 +107,7 @@ ms.locfileid: "79184615"
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>組態  
- 下列組態會設定用戶端。 必須使用[\<用戶端憑證>指定用戶端](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)證書。 此外，服務證書是使用[\<預設證書>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)指定。  
+ 下列組態會設定用戶端。 您必須使用來指定用戶端憑證 [\<clientCertificate>](../../configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md) 。 此外，也會使用來指定服務憑證 [\<defaultCertificate>](../../configure-apps/file-schema/wcf/defaultcertificate-element.md) 。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -158,8 +158,8 @@ ms.locfileid: "79184615"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全性總覽](security-overview.md)
 - [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
-- [如何：在開發過程中在 WCF 中創建和安裝臨時證書，用於運輸安全](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))
+- [如何：在 WCF 中建立和安裝用於開發期間傳輸安全性的暫時憑證](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))

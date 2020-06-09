@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 0d7b952382b50daae0291ed6afb22bb612447670
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: abd81b5e7bf611fc6b4f446a82628b83130f2d54
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920153"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599200"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異
 本主題摘要說明 Windows Vista、Windows Server 2003 和 Windows XP 之間的 Windows Communication Foundation （WCF）佇列功能差異。  
@@ -26,9 +26,9 @@ ms.locfileid: "76920153"
   
  Windows Vista、Windows Server 2003 和 Windows XP 上的訊息佇列（MSMQ）與有害處理相關的主要差異包括下列各項：  
   
-- Windows Vista 中的 MSMQ 支援子佇列，而 Windows Server 2003 和 Windows XP 則不支援子佇列。 子佇列是在有害訊息處理中使用。 重試佇列和有害佇列都是應用程式佇列的子佇列，應用程式佇列是根據有害訊息處理設定而建立的。 `MaxRetryCycles` 會指示要建立多少重試子佇列。 因此，在 Windows Server 2003 或 Windows XP 上執行時，`MaxRetryCycles` 會被忽略，而且不允許 `ReceiveErrorHandling.Move`。  
+- Windows Vista 中的 MSMQ 支援子佇列，而 Windows Server 2003 和 Windows XP 則不支援子佇列。 子佇列是在有害訊息處理中使用。 重試佇列和有害佇列都是應用程式佇列的子佇列，應用程式佇列是根據有害訊息處理設定而建立的。 `MaxRetryCycles` 會指示要建立多少重試子佇列。 因此，在 Windows Server 2003 或 Windows XP 上執行時， `MaxRetryCycles` 會忽略且 `ReceiveErrorHandling.Move` 不允許。  
   
-- Windows Vista 中的 MSMQ 支援否定通知，而 Windows Server 2003 和 Windows XP 則否。 來自接收佇列管理員的負認可會造成傳送佇列管理員將拒絕的訊息放在寄不出的信件佇列中。 因此，Windows Server 2003 和 Windows XP 不允許 `ReceiveErrorHandling.Reject`。  
+- Windows Vista 中的 MSMQ 支援否定通知，而 Windows Server 2003 和 Windows XP 則否。 來自接收佇列管理員的負認可會造成傳送佇列管理員將拒絕的訊息放在寄不出的信件佇列中。 因此， `ReceiveErrorHandling.Reject` Windows Server 2003 和 WINDOWS XP 不允許使用。  
   
 - Windows Vista 中的 MSMQ 支援訊息屬性，它會保留嘗試傳遞訊息的次數計數。 Windows Server 2003 和 Windows XP 上無法使用此 [中止計數] 屬性。 WCF 會在記憶體中維護中止計數，因此當 Web 伺服陣列中的多個 WCF 服務讀取相同的訊息時，這個屬性可能不會包含正確的值。  
   
@@ -37,5 +37,5 @@ ms.locfileid: "76920153"
   
 ## <a name="see-also"></a>請參閱
 
-- [使用無效信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [使用無效信件佇列來處理訊息傳輸失敗](using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [有害訊息處理](poison-message-handling.md)

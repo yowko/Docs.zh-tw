@@ -2,23 +2,23 @@
 title: System.ServiceModel.ServiceOperationMissingReplyContext
 ms.date: 03/30/2017
 ms.assetid: 1373c661-e63a-4e11-a635-689451450274
-ms.openlocfilehash: 99b6c4cdb0546411eb894b518b01cc6ee6e72065
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2a6d413de3e858d46548e0a51fc1ff555bbdcac
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759969"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597731"
 ---
 # <a name="systemservicemodelserviceoperationmissingreplycontext"></a>System.ServiceModel.ServiceOperationMissingReplyContext
 System.ServiceModel.ServiceOperationMissingReplyContext  
   
 ## <a name="description"></a>描述  
- 雙向作業的 ReplyContext 為 null。 追蹤資料會顯示下列訊息：「 回覆作業有沒有 IRequestContext 可用於回覆 」。  
+ 雙向作業的 ReplyContext 為 null。 追蹤資料會顯示下列訊息：「回覆作業沒有 IRequestContext 可用於回覆。」  
   
  這個追蹤對於在開發期間偵錯十分有用。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

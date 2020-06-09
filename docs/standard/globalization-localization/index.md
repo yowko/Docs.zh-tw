@@ -1,5 +1,6 @@
 ---
 title: 全球化與當地語系化 .NET 應用程式
+description: 瞭解如何開發可供全球使用的應用程式。 瞭解 .NET 中的全球化、當地語系化性檢查和當地語系化。
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: 10d07a02a7ff744a87b920fd97df24b076c22cc3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a3894b7bf9b8aa013b346c169d21c6db270fe987
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288286"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600785"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>全球化與當地語系化 .NET 應用程式
 
@@ -30,7 +31,7 @@ ms.locfileid: "84288286"
 
 這個步驟包含檢閱應用程式的程式碼和設計，確保它可以輕鬆地當地語系化並識別當地語系化時可能發生的阻礙，以及確認應用程式的可執行碼與其資源分開。 如果全球化階段有效，則當地語系化能力檢閱將確認全球化期間所選擇的設計和編碼。 當地語系化能力階段也可能會找出任何其餘的問題，如此應用程式的原始程式碼就不需要在當地語系化階段進行修改。
 
-[當地語系化](localization.md)
+[Localization](localization.md)
 
 這個步驟包含自訂特定文化特性或地區的應用程式。 如果已正確執行全球化和當地語系化能力的步驟，則當地語系化的主要工作就是轉譯使用者介面。
 
@@ -58,7 +59,7 @@ ms.locfileid: "84288286"
 
 討論建立當地語系化應用程式的第二個階段，包括識別當地語系化過程中可能遭遇到的阻礙。
 
-[當地語系化](localization.md)
+[Localization](localization.md)
 
 討論建立當地語系化應用程式的最後一個階段，包括自訂特定區域或文化特性的應用程式使用者介面。
 

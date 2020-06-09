@@ -1,50 +1,50 @@
 ---
-title: Basic2
+title: 基本2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6c1dcfaebd74e7cc401b555e834bca2ac8da856
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944114"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575676"
 ---
 # <a name="basic"></a>基本
-本節包含示範基本的 Windows Communication Foundation (WCF) 功能的範例區段。  
+本節包含示範基本 Windows Communication Foundation （WCF）功能的範例區段。  
   
 ## <a name="in-this-section"></a>本節內容  
- [快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- 示範如何實作一般服務與一般用戶端使用 WCF。  
+ [快速入門](getting-started-sample.md)  
+ 示範如何使用 WCF 來執行一般服務和一般用戶端。  
   
- [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
+ [AJAX](ajax.md)  
  示範非同步 JavaScript 和 XML。  
   
- [Binding](../../../../docs/framework/wcf/samples/binding.md)  
+ [繫結](binding.md)  
  使用端點項目的繫結屬性示範。  
   
- [用戶端](../../../../docs/framework/wcf/samples/client.md)  
+ [用戶端](client.md)  
  示範 WCF 用戶端應用程式。  
   
- [Contract](../../../../docs/framework/wcf/samples/contract.md)  
+ [合約](contract.md)  
  示範資料合約。  
   
- [探索](../../../../docs/framework/wcf/samples/discovery-samples.md)  
+ [探索](discovery-samples.md)  
  示範 WCF 探索。  
   
- [管理](../../../../docs/framework/wcf/samples/management.md)  
+ [管理](management.md)  
  示範 WCF 管理。  
   
- [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)  
+ [路由服務](routing-services.md)  
  示範 WCF 路由服務。  
   
- [安全性](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
+ [安全性](security-in-wcf.md)  
  示範 WCF 安全性。  
   
- [服務](../../../../docs/framework/wcf/samples/services.md)  
+ [服務](services.md)  
  示範 WCF 服務。  
   
- [摘要整合](../../../../docs/framework/wcf/samples/syndication.md)  
+ [新聞訂閱](syndication.md)  
  DemonstratesWCF 新聞訂閱。  
   
- [Web](../../../../docs/framework/wcf/samples/web.md)  
- 示範在 WCF 中 Web 裝載。
+ [Web](web.md)  
+ 示範如何在 WCF 中裝載 Web。

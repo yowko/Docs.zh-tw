@@ -2,15 +2,15 @@
 title: 單向
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 3203762e05c794ed28b65d8fded6972fac1f5820
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 07fc4ecf981acbad577758c943aa22405f528a52
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183448"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575248"
 ---
 # <a name="one-way"></a>單向
-這個範例示範具有單向服務作業的服務合約。 與雙向服務作業的情況不同，用戶端不會等候服務作業完成。 此示例基於["入門"](../../../../docs/framework/wcf/samples/getting-started-sample.md)並使用`wsHttpBinding`綁定。 這個範例中的服務是自我裝載的主控台應用程式，您可以用來觀察接收和處理要求的服務。 用戶端也是主控台應用程式。  
+這個範例示範具有單向服務作業的服務合約。 與雙向服務作業的情況不同，用戶端不會等候服務作業完成。 這個範例是以[消費者入門](getting-started-sample.md)為基礎，並使用系結 `wsHttpBinding` 。 這個範例中的服務是自我裝載的主控台應用程式，您可以用來觀察接收和處理要求的服務。 用戶端也是主控台應用程式。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -88,11 +88,11 @@ Processing Divide(22,7) - result: 3.14285714285714
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。  
   
-3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
   
 > [!NOTE]
 > 請先執行服務，然後才執行用戶端；先關閉用戶端，再關閉服務。 這可以避免當用戶端因服務消失而無法正常關閉安全性工作階段時，所發生的用戶端例外狀況。  
@@ -102,6 +102,6 @@ Processing Divide(22,7) - result: 3.14285714285714
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  

@@ -1,5 +1,6 @@
 ---
 title: 選取集合類別
+description: 瞭解如何決定要在 .NET 中選擇哪一個集合類別。 使用錯誤的類型可能會限制您使用集合。
 ms.date: 03/18/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: 62f4f768753637043ab91219cfb63c741a194b96
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 52a839661a09d6fa7561d67b82d1c1bf854e3cfd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600811"
 ---
 # <a name="selecting-a-collection-class"></a>選取集合類別
 
@@ -82,7 +83,7 @@ ms.locfileid: "84287922"
 
 PLINQ 提供 LINQ to Objects 的平行實作，這項實作透過更有效率地使用多核心電腦，在許多情況下會提供更快的查詢執行速度。 如需詳細資訊，請參閱 [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>

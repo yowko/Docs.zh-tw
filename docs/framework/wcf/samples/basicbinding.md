@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: ddbe3e505028acf3abbadc9a741f66fdceca3784
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 84bfe78aa9e82b9600c48e0a32514f669fcc7d77
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716064"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575650"
 ---
 # <a name="basicbinding"></a>BasicBinding
 
@@ -27,9 +27,9 @@ ms.locfileid: "74716064"
 
 ## <a name="sample-details"></a>範例詳細資料
 
-這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。
+這個範例是以執行計算機服務的[消費者入門](getting-started-sample.md)為基礎。
 
-若要使用包含預設行為的基本繫結，則只需要繫結區段名稱。 如果您要設定基本繫結，並變更其部分設定，則必須定義繫結組態。 端點必須使用 <`endpoint`> 專案的 `bindingConfiguration` 屬性，依名稱參考系結設定，如下列範例程式碼所示。
+若要使用包含預設行為的基本繫結，則只需要繫結區段名稱。 如果您要設定基本繫結，並變更其部分設定，則必須定義繫結組態。 端點必須使用 <> 元素的屬性，依名稱參考系結設定 `bindingConfiguration` `endpoint` ，如下列範例程式碼所示。
 
 ```xml
 <services>
@@ -90,8 +90,8 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
-4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。

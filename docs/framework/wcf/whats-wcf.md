@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320206"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600850"
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 Windows Communication Foundation （WCF）是用來建立服務導向應用程式的架構。 使用 WCF 時，您可以將資料當做非同步訊息，從一個服務端點傳送到另一個。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：
@@ -52,9 +52,9 @@ WCF 包含下列功能集。 如需詳細資訊，請參閱[WCF 功能詳細資�
 
 - **資料合約**
 
-     因為 WCF 是使用 .NET Framework 所建立，所以它也包含提供您想要強制執行之合約的程式碼易懂方法。 其中一種通用的合約類型就是資料合約。 基本上，當您使用 Visual C# 或 Visual Basic 撰寫服務程式碼時，處理資料最簡單的做法，就是建立類別，以屬於資料實體的屬性來表示資料實體。 WCF 包含完整的系統，可讓您以這種簡單的方式處理資料。 一旦表示資料的類別已建立，您的服務便會自動產生中繼資料，而讓用戶端能夠遵照您所設計的資料型別。 如需詳細資訊，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。
+     因為 WCF 是使用 .NET Framework 所建立，所以它也包含提供您想要強制執行之合約的程式碼易懂方法。 其中一種通用的合約類型就是資料合約。 基本上，當您使用 Visual C# 或 Visual Basic 撰寫服務程式碼時，處理資料最簡單的做法，就是建立類別，以屬於資料實體的屬性來表示資料實體。 WCF 包含完整的系統，可讓您以這種簡單的方式處理資料。 一旦表示資料的類別已建立，您的服務便會自動產生中繼資料，而讓用戶端能夠遵照您所設計的資料型別。 如需詳細資訊，請參閱[使用資料合約](feature-details/using-data-contracts.md)。
 
-- **Security**
+- **安全性**
 
      訊息經過加密後可以保護隱私權，而您也可以要求使用者必須先驗證才能接收訊息。 使用諸如 SSL 或 WS-SecureConversation 等公認的標準即可實作安全性。 如需詳細資訊，請參閱[安全性](./feature-details/security.md)。
 
@@ -70,9 +70,9 @@ WCF 包含下列功能集。 如需詳細資訊，請參閱[WCF 功能詳細資�
 
      永久性的訊息是指不會因為通訊中斷而遺失的訊息。 處於永久性訊息模式的訊息一律儲存至資料庫。 萬一發生中斷，資料庫可以讓您在恢復連線後繼續進行訊息交換。 您也可以使用 Windows Workflow Foundation （WF）來建立持久的訊息。 如需詳細資訊，請參閱[工作流程服務](./feature-details/workflow-services.md)。
 
-- **異動**
+- **交易**
 
-     WCF 也支援使用下列三種交易模型之一的交易： AtomicTransactions、<xref:System.Transactions> 命名空間中的 Api，以及 Microsoft 分散式交易協調器。 如需 WCF 中交易支援的詳細資訊，請參閱[交易](./feature-details/transactions-in-wcf.md)。
+     WCF 也支援使用下列三種交易模型之一的交易： AtomicTransactions、命名空間中的 Api <xref:System.Transactions> ，以及 Microsoft 分散式交易協調器。 如需 WCF 中交易支援的詳細資訊，請參閱[交易](./feature-details/transactions-in-wcf.md)。
 
 - **AJAX 與 REST 支援**
 
@@ -100,7 +100,7 @@ Windows Server AppFabric 應用程式伺服器的裝載功能是特別設計來�
 - [Windows Communication Foundation 的基本概念](fundamental-concepts.md)
 - [Windows Communication Foundation 架構](architecture.md)
 - [方針及最佳做法](guidelines-and-best-practices.md)
-- [快速入門教學課程](getting-started-tutorial.md)
+- [消費者入門教學課程](getting-started-tutorial.md)
 - [文件指南](guide-to-the-documentation.md)
 - [基本 WCF 程式設計](basic-wcf-programming.md)
 - [Windows Communication Foundation 範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

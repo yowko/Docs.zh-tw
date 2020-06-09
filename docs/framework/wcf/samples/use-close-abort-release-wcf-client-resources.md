@@ -3,16 +3,16 @@ title: 使用關閉和中止發行 WCF 用戶端資源
 description: Dispose 可能會失敗，並在網路失敗時擲回例外狀況。 這可能會造成不必要的行為。 相反地，請使用 [關閉並中止]，以在網路失敗時釋放用戶端資源。
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: 38861252a470f71a6fa88554e289344e2918d710
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b338b760f461d7b773f43dd1f5e6dbce98f9e15a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715325"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599915"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>當網路連線中斷時，安全地關閉和中止釋放資源
 
-這個範例會示範如何使用 `Close` 和 `Abort` 方法，在使用具型別用戶端時清除資源。 當網路連接不穩定時，`using` 語句會造成例外狀況。 這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。
+這個範例會示範 `Close` 如何使用和方法，在使用具型別 `Abort` 用戶端時清除資源。 `using`當網路連接不穩定時，語句會造成例外狀況。 這個範例是以執行計算機服務的[消費者入門](getting-started-sample.md)為基礎。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -46,7 +46,7 @@ using (CalculatorClient client = new CalculatorClient())
 
 因為 `Dispose`() 會在 "finally" 區塊內發生，如果 `ApplicationException`() 失敗，則永遠無法在 using 區塊之外見到 `Dispose`。 如果區塊外面的程式碼必須知道 `ApplicationException` 何時發生，"using" 建構便可能因為遮罩了這個例外狀況而造成問題。
 
-最後，範例會在 `DemonstrateCleanupWithExceptions` 中示範如何於例外狀況發生時正確清除。 這段程式碼會使用 try/catch 區塊，報告錯誤並呼叫 `Abort`。 如需從用戶端呼叫捕捉例外狀況的詳細資訊，請參閱[預期的例外](../../../../docs/framework/wcf/samples/expected-exceptions.md)狀況範例。
+最後，範例會在 `DemonstrateCleanupWithExceptions` 中示範如何於例外狀況發生時正確清除。 這段程式碼會使用 try/catch 區塊，報告錯誤並呼叫 `Abort`。 如需從用戶端呼叫捕捉例外狀況的詳細資訊，請參閱[預期的例外](expected-exceptions.md)狀況範例。
 
 ```csharp
 try
@@ -105,11 +105,11 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。

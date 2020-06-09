@@ -2,15 +2,15 @@
 title: WCF Web HTTP 服務說明網頁
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 8d798c8080bf1afee87305cd00a27db2ece7e970
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975929"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600162"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP 服務說明網頁
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者流覽至 WCF WEB HTTP 服務，並將 "/Help" 附加至 URL 結尾（例如 `http://localhost:8000/Customers/Help`）時，會顯示如下的說明頁面。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 會為 WCF WEB HTTP 服務提供自動說明頁面。 此說明頁面會列出每項作業、要求與回應格式和結構描述的說明。 此功能預設為關閉。 當使用者流覽至 WCF WEB HTTP 服務並在 URL 結尾附加 "/Help" 時，會顯示如下的說明 `http://localhost:8000/Customers/Help` 頁面。  
   
  ![已開啟 WCF REST 說明頁面的瀏覽器。](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- 如需資料合約序列化架構的詳細資訊，請參閱[資料合約架構參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。
+ 如需資料合約序列化架構的詳細資訊，請參閱[資料合約架構參考](data-contract-schema-reference.md)。

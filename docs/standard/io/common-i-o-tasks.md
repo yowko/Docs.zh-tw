@@ -1,16 +1,17 @@
 ---
 title: 一般 I/O 工作
+description: 瞭解如何在 .NET 中使用 System.IO 命名空間內的類別 & 方法，& 一般目錄工作執行一般檔案工作。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: 9474d6c0340583e285a6dc47933c602f799f121d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4b97b4e464622e482a9ef45e143865ee82e6b5d4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287415"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598602"
 ---
 # <a name="common-io-tasks"></a>一般 I/O 工作
 <xref:System.IO> 命名空間 (Namespace) 提供了幾個允許可在檔案、目錄和資料流上執行各種動作 (例如讀取和寫入) 的類別。 如需詳細資訊，請參閱檔案[和資料流程 i/o](index.md)。  
@@ -51,7 +52,7 @@ ms.locfileid: "84287415"
 |尋找目錄的大小|<xref:System.IO.Directory?displayProperty=nameWithType> 類別|  
 |判斷目錄是否存在|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType> 方法|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [檔案和資料流程 i/o](index.md)
 - [撰寫資料流](composing-streams.md)

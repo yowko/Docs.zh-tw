@@ -5,17 +5,17 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: cb271bcf8fb27bae4c8ef6b60df0f8d2940ecb9a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964831"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599138"
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
 Windows Communication Foundation （WCF）安全性分為三個主要功能區域：傳輸安全性、存取控制和審核。 傳輸安全性提供完整性、機密性與驗證。 傳輸安全性是由下列其中一項提供：傳輸安全性、訊息安全性或 `TransportWithMessageCredential`。  
   
- 如需 WCF 訊息安全性的總覽，請參閱[安全性總覽](../../../../docs/framework/wcf/feature-details/security-overview.md)。 如需 WCF 安全性的其他兩個部分的詳細資訊，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)和[審核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
+ 如需 WCF 訊息安全性的總覽，請參閱[安全性總覽](security-overview.md)。 如需 WCF 安全性的其他兩個部分的詳細資訊，請參閱[授權](authorization-in-wcf.md)和[審核](auditing-security-events.md)。  
   
 ## <a name="transfer-security-scenarios"></a>傳輸安全性案例  
  採用 WCF 傳輸安全性的常見案例包括下列各項：  
@@ -29,22 +29,22 @@ Windows Communication Foundation （WCF）安全性分為三個主要功能區�
 ## <a name="integrity-confidentiality-and-authentication"></a>完整性、機密性與驗證  
  完整性、機密性及驗證這三項功能合稱為傳輸安全性。 傳輸安全性所提供的各種功能，會協助減少分散式應用程式的威脅。 下表簡要說明構成傳輸安全性的這三項功能。  
   
-|函數|描述|  
+|函式|描述|  
 |--------------|-----------------|  
 |完整性|*完整性*是指資料完整且正確的保證，特別是在從某個點開始到另一個點，而且可能被許多執行者讀取之後。 完整性必須維持，才能避免資料竄改，而且通常是藉由訊息數位簽署達成這個目的。|  
-|機密性|*機密性*是指保證訊息未被預定讀取者以外的任何人讀取。 例如，信用卡號在透過網際網路傳送時必須保持其機密。 機密性通常是藉由使用公開金鑰/私密金鑰配置加密資料的方式提供。|  
-|驗證  (可能為英文網頁)|*驗證*是指已宣告身分識別的驗證。 例如，使用銀行帳戶時，必須只允許實際的帳戶擁有人提款。 驗證可藉由各種方法提供。 其中一種常見的方法是使用者帳號/密碼系統。 另一種方式則是使用由協力廠商提供的 X.509 憑證。|  
+|保密|*機密性*是指保證訊息未被預定讀取者以外的任何人讀取。 例如，信用卡號在透過網際網路傳送時必須保持其機密。 機密性通常是藉由使用公開金鑰/私密金鑰配置加密資料的方式提供。|  
+|驗證|*驗證*是指已宣告身分識別的驗證。 例如，使用銀行帳戶時，必須只允許實際的帳戶擁有人提款。 驗證可藉由各種方法提供。 其中一種常見的方法是使用者帳號/密碼系統。 另一種方式則是使用由協力廠商提供的 X.509 憑證。|  
   
 ## <a name="security-modes"></a>安全性模式  
  WCF 有數種傳輸安全性模式，如下表所述。  
   
-|Mode|描述|  
+|模式|描述|  
 |----------|-----------------|  
-|None|未在傳輸層或訊息層提供任何安全性。 根據預設，沒有任何預先定義的系結會使用此模式，但[\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)元素，或使用程式碼時，<xref:System.ServiceModel.BasicHttpBinding> 類別。|  
-|Transport|使用安全傳輸 (例如 HTTPS) 以獲得完整性、機密性和雙向驗證。|  
+|None|未在傳輸層或訊息層提供任何安全性。 除了 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 元素或使用程式碼時，沒有任何預先定義的系結會使用此模式 <xref:System.ServiceModel.BasicHttpBinding> 。|  
+|傳輸|使用安全傳輸 (例如 HTTPS) 以獲得完整性、機密性和雙向驗證。|  
 |訊息|使用 SOAP 訊息安全性，以獲得完整性、機密性和雙向驗證。 SOAP 訊息是根據 WS-Security 標準加以保護。|  
-|混合模式 (Mixed Mode)|使用傳輸安全性，以獲得完整性、機密性和伺服器驗證。 使用訊息安全性 (WS-Security 和其他標準) 以獲得用戶端驗證。<br /><br /> (此模式的列舉型別為 `TransportWithMessageCredential`)|  
-|兩者|在兩個層級執行保護和驗證。 這個模式只能在[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)元素中使用。|  
+|混合模式|使用傳輸安全性，以獲得完整性、機密性和伺服器驗證。 使用訊息安全性 (WS-Security 和其他標準) 以獲得用戶端驗證。<br /><br /> (此模式的列舉型別為 `TransportWithMessageCredential`)|  
+|兩者|在兩個層級執行保護和驗證。 這個模式只能在元素中使用 [\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md) 。|  
   
 ## <a name="credentials-and-transfer-security"></a>認證和傳輸安全性  
  *認證*是呈現來建立宣告身分識別或功能的資料。 出示認證包括出示資料以及資料的所有權證明。 WCF 支援傳輸和訊息安全性層級的各種認證類型。 您可以指定 WCF 系結的認證類型。  
@@ -57,7 +57,7 @@ Windows Communication Foundation （WCF）安全性分為三個主要功能區�
   
  在憑證認證中，主體名稱、主體別名或憑證內的特定欄位可用來代表所宣告的身分識別和 (或) 能力。 認證中資料所有權的證明，是使用相關的私密金鑰產生簽章的方式建立。  
   
- 如需程式設計傳輸安全性和指定認證的詳細資訊，請參閱系結[和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)和[安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
+ 如需程式設計傳輸安全性和指定認證的詳細資訊，請參閱系結[和安全性](bindings-and-security.md)和[安全性行為](security-behaviors-in-wcf.md)。  
   
 ### <a name="transport-client-credential-types"></a>傳輸用戶端認證類型  
  下表說明建立使用傳輸安全性的應用程式時，可能使用的值。 您可以在程式碼或繫結設定中使用這些值。  
@@ -65,7 +65,7 @@ Windows Communication Foundation （WCF）安全性分為三個主要功能區�
 |設定|描述|  
 |-------------|-----------------|  
 |None|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
-|Basic|指定基本驗證。 如需詳細資訊，請參閱 RFC2617、[HTTP 驗證：基本和摘要式驗證](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)。|  
+|基本|指定基本驗證。 如需詳細資訊，請參閱 RFC2617、[HTTP 驗證：基本和摘要式驗證](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)。|  
 |Digest|指定摘要式驗證。 如需詳細資訊，請參閱 RFC2617、[HTTP 驗證：基本和摘要式驗證](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)。|  
 |Ntlm|指定在 Windows 網域上使用 SSPI 交涉的 Windows 驗證。<br /><br /> SSPI 交涉的結果會是使用 Kerberos 通訊協定或 NT LanMan (NTLM)。|  
 |Windows|指定在 Windows 網域上使用 SSPI 的 Windows 驗證。 SSPI 會挑選 Kerberos 通訊協定或 NTLM 做為驗證服務。<br /><br /> SSPI 會先嘗試 Kerberos 通訊協定，如果失敗的話，才會使用 NTLM。|  
@@ -96,7 +96,7 @@ Windows Communication Foundation （WCF）安全性分為三個主要功能區�
   
 ## <a name="see-also"></a>請參閱
 
-- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [端點建立概觀](../endpoint-creation-overview.md)
+- [系統提供的繫結](../system-provided-bindings.md)
+- [安全性總覽](security-overview.md)
+- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

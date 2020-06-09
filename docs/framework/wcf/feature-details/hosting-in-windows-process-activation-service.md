@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597302"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
 當工作者處理序包含裝載 Windows Communication Foundation (WCF) 服務的應用程式時，Windows 處理序啟用服務 (WAS) 會管理這些工作者處理序的啟用和存留期。 WAS 處理序模型會透過移除對 HTTP 的相依性，將 HTTP 伺服器的 IIS 6.0 處理序模型一般化。 這可讓 WCF 服務在支援以訊息為基礎之啟用的主控環境中，同時使用 HTTP 和非 HTTP 通訊協定（例如 Net.tcp），並提供在指定的電腦上裝載大量應用程式的功能。  
   
- 如需建立在 WAS 裝載環境中執行之 WCF 服務的詳細資訊，請參閱[如何：在 was 中裝載 Wcf 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
+ 如需建立在 WAS 裝載環境中執行之 WCF 服務的詳細資訊，請參閱[如何：在 was 中裝載 Wcf 服務](how-to-host-a-wcf-service-in-was.md)。  
   
  WAS 處理序模型提供的幾項功能，可將應用程式裝載得更為穩固、容易管理，而且能夠更有效率地運用資源：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "84143559"
   
  下表針對 WAS 網站 (包含 HTTP 和非 HTTP 網站繫結) 說明幾個可能的定址案例。  
   
-|案例|網站繫結|應用程式路徑|基底應用程式 URI|  
+|狀況|網站繫結|應用程式路徑|基底應用程式 URI|  
 |--------------|-------------------|----------------------|---------------------------|  
 |僅限 HTTP|HTTP： *：80：\*|/appTwo|`http://localhost/appTwo/`|  
 |HTTP 和非 HTTP 兩者|HTTP： *：80：\*<br /><br /> net.tcp：808：\*|/appTwo|`http://localhost/appTwo/`<br />`net.tcp://localhost/appTwo/`|  
@@ -48,10 +48,10 @@ ms.locfileid: "84143559"
 ## <a name="the-was-runtime"></a>WAS 執行階段  
  為了定址與管理方便，應用程式會組織成網站。 在執行階段，應用程式也會組織成應用程式集區中的群組。 一個應用程式集區可包含來自許多不同網站的不同應用程式。 應用程式集區中的所有應用程式都共用一組執行階段特徵。 例如，它們會在相同版本的 Common Language Runtime (CLR) 中執行，而且共用相同的處理序身分識別。 每個應用程式集區都對應至一個背景工作處理序 (w3wp.exe) 的執行個體。 每個在共用應用程式集區內執行的 Managed 應用程式都會透過 CLR AppDomain 與其他應用程式隔離開來。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [WAS 啟動架構](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [設定用於 WCF 的 WAS](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [如何：安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [How to: Host a WCF Service in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [WAS 啟動架構](was-activation-architecture.md)
+- [設定用於 WCF 的 WAS](configuring-the-wpa--service-for-use-with-wcf.md)
+- [如何：安裝和設定 WCF 啟用元件](how-to-install-and-configure-wcf-activation-components.md)
+- [How to: Host a WCF Service in WAS](how-to-host-a-wcf-service-in-was.md)
 - [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -2,15 +2,15 @@
 title: HOW TO：實作以探索 Proxy 註冊的可探索服務
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 053ace300610cd4129c4541f4e2658ac8d09da85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf878dff59a9a258567ff99098b0b3f8761194e2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626976"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599226"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>HOW TO：實作以探索 Proxy 註冊的可探索服務
-本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在上一個主題中， [How to:實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，實作探索 proxy。 本主題中，您會建立 WCF 服務，以傳送公告訊息 (`Hello`和`Bye`) 至探索 proxy，使其註冊和取消註冊其本身以探索 proxy。
+本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在上一個主題中，how [to：執行探索 proxy](how-to-implement-a-discovery-proxy.md)，您已實作為探索 proxy。 在本主題中，您會建立 WCF 服務，將公告訊息（ `Hello` 和 `Bye` ）傳送至探索 proxy，使其向探索 proxy 註冊並取消註冊。
 
 ### <a name="to-define-the-service-contract"></a>若要定義服務合約
 
@@ -156,7 +156,7 @@ ms.locfileid: "64626976"
     }
     ```
 
-您已經完成實作可探索的服務。 繼續前往[How to:實作使用探索 Proxy 尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)。
+您已經完成實作可探索的服務。 繼續進行[如何：執行使用探索 Proxy 來尋找服務的用戶端應用程式](client-app-discovery-proxy-to-find-a-service.md)。
 
 ## <a name="example"></a>範例
  以下是本主題所使用之程式碼的完整清單。
@@ -289,8 +289,8 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [WCF 探索](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [如何：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [如何：實作使用探索 Proxy 尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [WCF 探索](wcf-discovery.md)
+- [HOW TO：實作探索 Proxy](how-to-implement-a-discovery-proxy.md)
+- [如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務](client-app-discovery-proxy-to-find-a-service.md)

@@ -2,12 +2,12 @@
 title: 訊息活動
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 1e65a3ead9df4103fb270911e3bbb2cc03fcfcba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 69a0e9a415b10d9c58d04eac27e48b1ed6a78064
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347581"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576391"
 ---
 # <a name="messaging-activities"></a>訊息活動
 
@@ -41,7 +41,7 @@ ms.locfileid: "75347581"
 
 資料包 MEP 包含傳送訊息的用戶端，以及接收訊息的服務。 如果用戶端是工作流程，請使用 <xref:System.ServiceModel.Activities.Send> 活動傳送訊息。 若要在工作流程中接收訊息，請使用 <xref:System.ServiceModel.Activities.Receive> 活動。 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 活動各有一個名為 `Content` 的屬性。 此屬性包含要傳送或接收的資料。 實作要求-回應 MEP 時，用戶端和服務都會使用多組活動。 用戶端會使用 <xref:System.ServiceModel.Activities.Send> 活動傳送訊息，並且使用 <xref:System.ServiceModel.Activities.ReceiveReply> 活動接收來自服務的回應。 這兩種活動之間是透過 <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> 屬性建立關聯。 此屬性會設定為傳送原始訊息的 <xref:System.ServiceModel.Activities.Send> 活動。 服務也會使用一組關聯的活動：<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply>。 這兩種活動之間是透過 <xref:System.ServiceModel.Activities.SendReply.Request%2A> 屬性建立關聯。 此屬性會設定為接收原始訊息的 <xref:System.ServiceModel.Activities.Receive> 活動。 <xref:System.ServiceModel.Activities.ReceiveReply> 和 <xref:System.ServiceModel.Activities.SendReply> 活動就像 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive>，可讓您傳送 <xref:System.ServiceModel.Channels.Message> 執行個體或訊息合約型別。
 
-由於工作流程會長時間執行，因此雙工通訊模式必須也支援長時間執行的對話。 若要支援長時間執行的對話，初始化對話的用戶端必須讓服務可在之後資料能夠使用時回呼。 例如，訂單要求提交讓管理員核准之後，可能經過一天、一週甚至一年都未處理；管理訂單核准的工作流程必須知道要在核准之後繼續執行。 使用相互關聯的工作流程中可支援這種雙向通訊模式。 若要實作雙工模式，請使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 活動。 在 [<xref:System.ServiceModel.Activities.Receive>] 活動上，使用 <xref:System.ServiceModel.Activities.CorrelationHandle>初始化相互關聯。 在 <xref:System.ServiceModel.Activities.Send> 活動上，將該相互關聯控制代碼設定為 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 屬性值。 如需詳細資訊，請參閱永久性[雙工](durable-duplex-correlation.md)。
+由於工作流程會長時間執行，因此雙工通訊模式必須也支援長時間執行的對話。 若要支援長時間執行的對話，初始化對話的用戶端必須讓服務可在之後資料能夠使用時回呼。 例如，訂單要求提交讓管理員核准之後，可能經過一天、一週甚至一年都未處理；管理訂單核准的工作流程必須知道要在核准之後繼續執行。 使用相互關聯的工作流程中可支援這種雙向通訊模式。 若要實作雙工模式，請使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 活動。 在 <xref:System.ServiceModel.Activities.Receive> 活動上，使用初始化相互關聯 <xref:System.ServiceModel.Activities.CorrelationHandle> 。 在 <xref:System.ServiceModel.Activities.Send> 活動上，將該相互關聯控制代碼設定為 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 屬性值。 如需詳細資訊，請參閱永久性[雙工](durable-duplex-correlation.md)。
 
 > [!NOTE]
 > 工作流程使用回呼相互關聯（「永久性雙工」）的雙工執行，適用于長時間執行的交談。 這與採用回呼合約的 WCF 雙工不同，後者會處理短時間執行 (通道的存留期) 的對話。
@@ -55,7 +55,7 @@ ms.locfileid: "75347581"
 
 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.SendReply> 活動也有一個名為 `Content` 的屬性。 此屬性的型別為 <xref:System.ServiceModel.Activities.SendContent>，並且表示 <xref:System.ServiceModel.Activities.Send> 或 <xref:System.ServiceModel.Activities.SendReply> 活動傳送的資料。 .NET Framework 會定義分別稱為 <xref:System.ServiceModel.Activities.SendMessageContent> 和 <xref:System.ServiceModel.Activities.SendParametersContent> 的兩個相關型別，兩者都是衍生自 <xref:System.ServiceModel.Activities.SendContent>。 將 <xref:System.ServiceModel.Activities.Send> 或 <xref:System.ServiceModel.Activities.SendReply> 活動的 `Content` 屬性設定為其中一種型別的執行個體，即可從工作流程服務傳送資料。 要使用的類型是依據活動傳送的資料型別而定。 如果活動傳送 `Message` 物件或訊息合約型別，則使用 <xref:System.ServiceModel.Activities.SendMessageContent>。 如果活動傳送資料合約型別，則使用 <xref:System.ServiceModel.Activities.SendParametersContent>。 <xref:System.ServiceModel.Activities.SendParametersContent> 可讓您傳送多個參數，而 <xref:System.ServiceModel.Activities.SendMessageContent> 只能讓您傳送一個物件，也就是訊息 (或訊息合約型別)。
 
-以命令方式程式設計訊息傳遞活動時，可使用泛型 <xref:System.Activities.InArgument%601> 和 <xref:System.Activities.OutArgument%601> 包裝您指派給訊息的物件，或 <xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.SendReply>、<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 活動的參數屬性。 針對 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 活動的 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.SendReply> 活動和 <xref:System.Activities.OutArgument%601> 使用 <xref:System.Activities.InArgument%601>。 `In` 引數會搭配傳送活動使用，因為資料會傳遞至活動內。 `Out` 引數則搭配接收活動使用，因為資料會從活動傳出，如下列範例中所示。
+以命令方式程式設計訊息傳遞活動時，可使用泛型 <xref:System.Activities.InArgument%601> 和 <xref:System.Activities.OutArgument%601> 包裝您指派給訊息的物件，或 <xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.SendReply>、<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 活動的參數屬性。 <xref:System.Activities.InArgument%601>針對和 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.SendReply> 活動以及和活動 <xref:System.Activities.OutArgument%601> 使用 <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.ReceiveReply> 。 `In` 引數會搭配傳送活動使用，因為資料會傳遞至活動內。 `Out` 引數則搭配接收活動使用，因為資料會從活動傳出，如下列範例中所示。
 
 ```csharp
 Receive reserveSeat = new Receive
@@ -101,7 +101,7 @@ Request = rcv
 
 ## <a name="add-service-reference"></a>新增服務參考
 
-從工作流應用程式呼叫工作流程服務時，Visual Studio 2012 會產生自訂訊息傳遞活動，以封裝一般的 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 在要求/回復 MEP 中使用的活動。 若要使用這項功能，請以滑鼠右鍵按一下 Visual Studio 中的用戶端專案，然後選取 [**加入** > **服務參考**]。 在位址方塊中輸入服務的基底位址，然後按一下 [移至]。 可用的服務會顯示在 [**服務：** ] 方塊中。 展開服務節點，即可顯示支援的合約。 選取您想要呼叫的合約，[**作業**] 方塊中會顯示可用作業的清單。 接著，您可以指定所產生之活動的命名空間，然後按一下 **[確定]** 。 接著您會看見一個對話方塊，說明作業已成功完成，而且在您重建專案之後，產生的自訂活動會位於工具方塊內。 服務合約中會針對每一項作業定義一個活動。 重建專案之後，您可以拖放自訂活動至工作流程，並且在 [屬性] 視窗中設定任何必要的屬性。
+從工作流應用程式呼叫工作流程服務時，Visual Studio 2012 會產生自訂訊息活動，以封裝 <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> 要求/回復 MEP 中常用的和活動。 若要使用這項功能，請以滑鼠右鍵按一下 Visual Studio 中的用戶端專案，然後選取 [**加入**  >  **服務參考**]。 在位址方塊中輸入服務的基底位址，然後按一下 [移至]。 可用的服務會顯示在 [**服務：** ] 方塊中。 展開服務節點，即可顯示支援的合約。 選取您想要呼叫的合約，[**作業**] 方塊中會顯示可用作業的清單。 接著，您可以指定所產生之活動的命名空間，然後按一下 **[確定]**。 接著您會看見一個對話方塊，說明作業已成功完成，而且在您重建專案之後，產生的自訂活動會位於工具方塊內。 服務合約中會針對每一項作業定義一個活動。 重建專案之後，您可以拖放自訂活動至工作流程，並且在 [屬性] 視窗中設定任何必要的屬性。
 
 ## <a name="messaging-activity-templates"></a>訊息活動範本
 
@@ -109,7 +109,7 @@ Request = rcv
 
 ## <a name="messaging-activities-and-transactions"></a>訊息活動和交易
 
-呼叫工作流程服務時，您可能想要讓異動流向服務作業。 若要執行這項操作，請將 <xref:System.ServiceModel.Activities.Receive> 活動放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動包含 `Receive` 活動和主體。 流向服務的異動會在執行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 主體的整個過程中維持環境。 當主體執行完成時，異動即完成。 如需工作流程和交易的詳細資訊，請參閱[工作流程交易](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。
+呼叫工作流程服務時，您可能想要讓異動流向服務作業。 若要執行這項操作，請將 <xref:System.ServiceModel.Activities.Receive> 活動放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動包含 `Receive` 活動和主體。 流向服務的異動會在執行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 主體的整個過程中維持環境。 當主體執行完成時，異動即完成。 如需工作流程和交易的詳細資訊，請參閱[工作流程交易](../../windows-workflow-foundation/workflow-transactions.md)。
 
 ## <a name="see-also"></a>請參閱
 

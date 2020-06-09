@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-ms.openlocfilehash: 8aff6afb09c97d7d01f5e7b7f1b92ae24bb99fb7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 5cea72e503087ac2a8f3b6ff2a07c2919ee00630
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141761"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597419"
 ---
 # <a name="enabling-transaction-flow"></a>啟用交易流程
 Windows Communication Foundation （WCF）提供高度彈性的選項來控制交易流程。 服務的異動流程設定可以使用屬性和組態的組合來表示。  
@@ -33,25 +33,25 @@ Windows Communication Foundation （WCF）提供高度彈性的選項來控制�
   
 |TransactionFlow<br /><br /> 繫結|TransactionFlow 繫結屬性|TransactionFlowProtocol 繫結程序通訊協定|交易流程的類型|  
 |---------------------------------|--------------------------------------|----------------------------------------------|------------------------------|  
-|強制|true|WS-AT|異動必須以可互通的 WS-AT 格式來流動。|  
-|強制|true|OleTransactions|交易必須以 WCF OleTransactions 格式流動。|  
-|強制|False|不適用|由於不是有效的組態而不適用。|  
-|Allowed|true|WS-AT|交易可以用可互通的 WS-AT 格式來流動。|  
-|Allowed|true|OleTransactions|交易可能會以 WCF OleTransactions 格式流動。|  
-|Allowed|False|任何值|未流動交易。|  
+|強制性|true|WS-AT|異動必須以可互通的 WS-AT 格式來流動。|  
+|強制性|true|OleTransactions|交易必須以 WCF OleTransactions 格式流動。|  
+|強制性|false|不適用|由於不是有效的組態而不適用。|  
+|允許|true|WS-AT|交易可以用可互通的 WS-AT 格式來流動。|  
+|允許|true|OleTransactions|交易可能會以 WCF OleTransactions 格式流動。|  
+|允許|false|任何值|未流動交易。|  
 |NotAllowed|任何值|任何值|未流動交易。|  
   
  下表摘要說明訊息處理的結果。  
   
 |傳入訊息|異動流程設定|異動標頭|訊息處理結果|  
 |----------------------|-----------------------------|------------------------|-------------------------------|  
-|異動符合預期的通訊協定格式|Allowed 或 Mandatory|`MustUnderstand`等於 `true`。|處理序|  
-|交易不符合預期的通訊協定格式|強制|`MustUnderstand`等於 `false`。|由於需要交易而被拒絕|  
-|交易不符合預期的通訊協定格式|Allowed|`MustUnderstand`等於 `false`。|由於不瞭解標頭而被拒絕|  
+|異動符合預期的通訊協定格式|Allowed 或 Mandatory|`MustUnderstand`等於 `true`。|程序|  
+|交易不符合預期的通訊協定格式|強制性|`MustUnderstand`等於 `false`。|由於需要交易而被拒絕|  
+|交易不符合預期的通訊協定格式|允許|`MustUnderstand`等於 `false`。|由於不瞭解標頭而被拒絕|  
 |使用任何通訊協定格式的異動|NotAllowed|`MustUnderstand`等於 `false`。|由於不瞭解標頭而被拒絕|  
-|無交易|強制|N/A|由於需要交易而被拒絕|  
-|無交易|Allowed|N/A|處理序|  
-|無交易|NotAllowed|N/A|處理序|  
+|無交易|強制性|N/A|由於需要交易而被拒絕|  
+|無交易|允許|N/A|程序|  
+|無交易|NotAllowed|N/A|程序|  
   
  雖然合約中的每個方法可能都有不同的交易流程需求，但是交易流程通訊協定設定的範圍是位於繫結層級。 這表示端點相同 (繫結程序因而相同) 的所有方法也有相同的原則允許或要求異動流程，而且這些方法在可行的情況下擁有相同的異動通訊協定。  
   
@@ -59,13 +59,13 @@ Windows Communication Foundation （WCF）提供高度彈性的選項來控制�
  在服務合約中的所有方法不一定有相同的異動流程需求。 因此，WCF 也會提供以屬性為基礎的機制，以允許表示每個方法的交易流程喜好設定。 指定服務作業接受異動標頭時所位於之層級的 <xref:System.ServiceModel.TransactionFlowAttribute> 會完成這項動作。 若要啟用交易流程，您應該要使用這個屬性來標記您的服務合約方法。 這個屬性會接受其中一個 <xref:System.ServiceModel.TransactionFlowOption> 列舉值，其預設值為 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed>。 如果已指定 <xref:System.ServiceModel.TransactionFlowOption.NotAllowed> 以外的任何值，即表示此方法一定不能是單向方法。 開發人員可以使用這個屬性來指定方法層級的交易流程需求，或是設計階段的條件約束。  
   
 ## <a name="enabling-transaction-flow-at-the-endpoint-level"></a>啟用端點層級上的交易流程  
- 除了 <xref:System.ServiceModel.TransactionFlowAttribute> 屬性所提供的方法層級交易流程設定之外，WCF 還提供交易流程的整個端點設定，讓系統管理員能夠控制較高層級的交易流程。  
+ 除了屬性所提供的方法層級交易流程設定之外 <xref:System.ServiceModel.TransactionFlowAttribute> ，WCF 還提供交易流程的整個端點設定，讓系統管理員可以控制較高層級的交易流程。  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 會完成這個動作，它可讓您在端點的繫結設定中啟用或停用傳入交易流程，並且指定傳入交易的所需交易通訊協定格式。  
   
  如果該繫結已停用交易流程，但是服務合約上的其中一個作業需要傳入交易，則會在服務啟動時擲回驗證例外狀況。  
   
- WCF 提供的大部分系結都包含 `transactionFlow` 和 `transactionProtocol` 屬性，可讓您將特定的系結設定為接受傳入交易。 如需設定 configuration 元素的詳細資訊，請參閱\<系結[>](../../configure-apps/file-schema/wcf/bindings.md)。  
+ WCF 提供的大部分系結 `transactionFlow` 都包含和 `transactionProtocol` 屬性，可讓您將特定的系結設定為接受傳入交易。 如需設定 configuration 元素的詳細資訊，請參閱 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) 。  
   
  系統管理員或部署者都可以透過組態檔，在部署時使用端點層級異動流程來設定異動流程需求或條件約束。  
   
@@ -92,4 +92,4 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Supp
   
  異動流程原則判斷提示會指定用戶端應該傳送到服務以代表異動的 SOAP 標頭，藉此變動異動流程。 所有異動標頭都必須標記為 `MustUnderstand` 等於 `true`。 任何不是這樣標記的訊息都會被拒絕，並且產生 SOAP 錯誤。  
   
- 單一作業中只能存在一個與交易相關的原則判斷提示。 在作業上具有多個交易判斷提示的原則檔會被視為無效，而且會被 WCF 拒絕。 此外，每個連接埠類型內部只能存在單一異動通訊協定。 具有參考單一端口類型內多個交易通訊協定之作業的原則檔會被視為無效，而且會被[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)拒絕。 輸出訊息或是單向輸入訊息如果存在異動判斷提示，該原則文件就會被視為無效。
+ 單一作業中只能存在一個與交易相關的原則判斷提示。 在作業上具有多個交易判斷提示的原則檔會被視為無效，而且會被 WCF 拒絕。 此外，每個連接埠類型內部只能存在單一異動通訊協定。 具有參考單一端口類型內多個交易通訊協定之作業的原則檔會被視為無效，而且會被[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)拒絕。 輸出訊息或是單向輸入訊息如果存在異動判斷提示，該原則文件就會被視為無效。

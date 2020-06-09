@@ -2,12 +2,12 @@
 title: WSDL 與原則
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144678"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600097"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 與原則
 本主題涵蓋 Windows Communication Foundation （WCF） WSDL 1.1、WS-原則和 Ws-policyattachment 的執行詳細資料，以及 WCF 引進的其他 WS-原則判斷提示和 WSDL 1.1 延伸模組。  
@@ -72,8 +72,8 @@ ms.locfileid: "84144678"
 |mssp:MustNotSendCancel|「巢狀」|所指定的需求為：使用取消繫結 [WS-Trust, WS-SC] 的要求安全性權杖 (RST) 要求訊息 [WS-Trust]，不要傳送至提供之 SecurityContextToken 的簽發者。 如果出現這個判斷提示，則這種要求訊息一定不能傳送至簽發者。 如果未出現這個判斷提示，則這種要求訊息可以傳送至簽發者。|  
 |mssp:RequireClientCertificate|「巢狀」|這個選用項目會對用戶端憑證指定要求，也就是是否要做為 TLSNEGO 通訊協定的一部分而提供。 如果出現這個判斷提示，則必須提供用戶端憑證。 如果未出現這個判斷提示，則不可提供用戶端憑證。 這個判斷提示不可在 mssp:SslContextToken 以外使用。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [自訂 WSDL 發行集](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [HOW TO：匯出自訂的 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [如何：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [自訂 WSDL 發行物](../samples/custom-wsdl-publication.md)
+- [HOW TO：匯出自訂的 WSDL](../extending/how-to-export-custom-wsdl.md)
+- [如何：匯入自訂 WSDL](../extending/how-to-import-custom-wsdl.md)

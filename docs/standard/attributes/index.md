@@ -1,5 +1,6 @@
 ---
 title: 使用屬性擴充中繼資料
+description: 瞭解如何在 .NET 中使用屬性擴充中繼資料。 屬性是與關鍵字類似的描述性宣告，用來標注程式設計專案，例如類型和欄位。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: d27dc3d77a8f72123f23d9f5a893d144bacee662
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c77de970c5550bd896e83854414592d70eb9dc48
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276266"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598628"
 ---
 # <a name="extending-metadata-using-attributes"></a>使用屬性擴充中繼資料
 Common Language Runtime 可讓您加入稱為屬性 (Attribute) 之類似關鍵字的描述性宣告，以標註類型、欄位、方法和屬性 (Property) 等程式設計項目。 當您編譯執行階段的程式碼時，它會轉換成 Microsoft 中繼語言 (MSIL)，並與編譯器所產生的中繼資料一起放在可攜式執行檔 (PE) 中。 屬性可讓您將額外的描述性資訊放入中繼資料，其可使用執行階段反映服務來擷取。 編譯器會在您宣告衍生自 <xref:System.Attribute?displayProperty=nameWithType> 的特殊類別執行個體時建立屬性。  

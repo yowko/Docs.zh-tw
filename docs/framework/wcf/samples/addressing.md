@@ -2,15 +2,15 @@
 title: 定址
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 55bb30ba3df80e41986b1337f8732dd8ad3231ff
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 3221a12a21aebe20e0f6822554937623dc3fbb8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463760"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575962"
 ---
 # <a name="addressing"></a>定址
-此定址範例會示範端點位址的各方面與功能。 此範例基於[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在此範例中的服務會自動裝載。 服務和用戶端都是主控台應用程式。 服務會定義使用相對與絕對端點位址組合的多個端點。  
+此定址範例會示範端點位址的各方面與功能。 此範例是以[消費者入門](getting-started-sample.md)為基礎。 在此範例中的服務會自動裝載。 服務和用戶端都是主控台應用程式。 服務會定義使用相對與絕對端點位址組合的多個端點。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -40,7 +40,7 @@ ms.locfileid: "81463760"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 在此範例中，相對位址是空白的 ("")，因此端點位址會與基底位址相同。 實際終結點位址為`http://localhost:8000/servicemodelsamples/service`。
+ 在此範例中，相對位址是空白的 ("")，因此端點位址會與基底位址相同。 實際的端點位址是 `http://localhost:8000/servicemodelsamples/service` 。
   
  第二個端點定義也是指定相對位址，如下列範例組態所示。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "81463760"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 此相對位址 "test" 會附加在基底位址。 實際終結點位址為`http://localhost:8000/servicemodelsamples/service/test`。
+ 此相對位址 "test" 會附加在基底位址。 實際的端點位址是 `http://localhost:8000/servicemodelsamples/service/test` 。
   
  第三個端點定義是指定絕對位址，如下列範例組態所示。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "81463760"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 位址中不需要基底位址。 實際終結點位址為`http://localhost:8001/hello/servicemodelsamples`。
+ 位址中不需要基底位址。 實際的端點位址是 `http://localhost:8001/hello/servicemodelsamples` 。
   
- 第四個端點位址是指定絕對位址以及不同的傳輸 (TCP)。 位址中不需要基底位址。 實際終結點位址為`net.tcp://localhost:9000/servicemodelsamples/service`。
+ 第四個端點位址是指定絕對位址以及不同的傳輸 (TCP)。 位址中不需要基底位址。 實際的端點位址是 `net.tcp://localhost:9000/servicemodelsamples/service` 。
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -117,11 +117,11 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 確保已為 Windows[通訊基礎範例執行一次性設定 。](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。  
   
-3. 要在單機或跨計算機配置中運行範例,請按照[運行 Windows 通信基礎範例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
   
     > [!NOTE]
     > 如果您使用 Svcutil.exe 重新產生這個範例的組態，請務必修改用戶端組態中的端點名稱，以符合用戶端程式碼。  
@@ -131,6 +131,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在,請轉到[Windows 通信基礎 (WCF) 和 Windows 工作流基礎 (WF) 範例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通訊基礎 (WCF) 和示例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  

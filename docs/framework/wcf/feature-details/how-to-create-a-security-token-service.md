@@ -8,29 +8,29 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 39c54c5d91c38e43fd7d0b1205537948e84a0782
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cfcca524e5dd2b0c1560eb7600795766e2db1d6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587536"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598953"
 ---
 # <a name="how-to-create-a-security-token-service"></a>HOW TO：建立安全性權杖服務
 安全性權杖服務實作於 WS-Trust 規格定義的通訊協定。 此通訊協定定義用來核發、更新、取消及驗證安全性權杖的訊息格式以及訊息交換模式。 指定的安全性權杖服務提供一個或一個以上的這些功能。 此主題檢視最常見的狀況：實作權杖核發。  
   
 ## <a name="issuing-tokens"></a>核發權杖  
- WS-Trust 根據 `RequestSecurityToken` XML Schema 定義語言 (XSD) 結構描述項目以及執行權杖核發的 `RequestSecurityTokenResponse` XSD 結構描述項目，定義訊息的格式。 除此之外，它還定義關聯的動作統一資源識別源 (URI)。 URI 相關聯的動作`RequestSecurityToken`訊息是 `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` 。 URI 相關聯的動作`RequestSecurityTokenResponse`訊息是 `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` 。  
+ WS-Trust 根據 `RequestSecurityToken` XML Schema 定義語言 (XSD) 結構描述項目以及執行權杖核發的 `RequestSecurityTokenResponse` XSD 結構描述項目，定義訊息的格式。 除此之外，它還定義關聯的動作統一資源識別源 (URI)。 與訊息相關聯的動作 URI `RequestSecurityToken` 是 `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` 。 與訊息相關聯的動作 URI `RequestSecurityTokenResponse` 是 `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` 。  
   
 ### <a name="request-message-structure"></a>要求訊息結構  
  發出要求訊息結構通常包括下列項目：  
   
-- 要求輸入的 URI 值為`http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`。
+- 具有值的要求類型 URI `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue` 。
   
-- 語彙基元型別 URI。 此 URI 的值是安全性判斷提示標記語言 (SAML) 1.1 權杖 `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` 。  
+- 語彙基元型別 URI。 針對安全性判斷提示標記語言（SAML）1.1 權杖，此 URI 的值為 `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` 。  
   
 - 此金鑰大小值表示關聯於核發之權杖的金鑰位元數。  
   
-- 金鑰型別 URI。 對稱金鑰，這個 URI 的值是 `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey` 。  
+- 金鑰型別 URI。 若為對稱金鑰，此 URI 的值為 `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey` 。  
   
  此外，也許存在一些其他項目：  
   
@@ -98,10 +98,10 @@ ms.locfileid: "64587536"
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- 如需詳細資訊，請參閱 <<c0> [ 聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ 如需詳細資訊，請參閱[同盟範例](../samples/federation-sample.md)。  
   
 ## <a name="creating-response-messages"></a>建立回應訊息  
- 一旦安全性權杖服務處理發出的要求，並且建構出要核發之權杖以及證明金鑰後，就需要建構回應訊息，至少包括要求的權杖、證明權杖以及核發的權杖參照。 此核發的權杖一般而言是 <xref:System.IdentityModel.Tokens.SamlSecurityToken> 自 <xref:System.IdentityModel.Tokens.SamlAssertion>所建造，如以下範例所示。  
+ 一旦安全性權杖服務處理發出的要求，並且建構出要核發之權杖以及證明金鑰後，就需要建構回應訊息，至少包括要求的權杖、證明權杖以及核發的權杖參照。 此核發的權杖一般而言是  自 所建造，如以下範例所示。  
   
  [!code-csharp[c_CreateSTS#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#5)]
  [!code-vb[c_CreateSTS#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#5)]  
@@ -111,7 +111,7 @@ ms.locfileid: "64587536"
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- 如需如何建構證明權杖，當用戶端和安全性權杖服務都提供共用金鑰的金鑰內容的詳細資訊，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ 如需如何在用戶端和 Security Token Service 同時提供共用金鑰的金鑰資料時，如何建立證明權杖的詳細資訊，請參閱[同盟範例](../samples/federation-sample.md)。  
   
  核發的權杖參照以建立 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> 類別執行個體而建構。  
   
@@ -121,9 +121,9 @@ ms.locfileid: "64587536"
  然後將這些不同的值序列化成回應訊息傳回用戶端。  
   
 ## <a name="example"></a>範例  
- 安全性權杖服務的完整程式碼，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+ 如需 Security Token Service 的完整程式碼，請參閱[同盟範例](../samples/federation-sample.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IdentityModel.Tokens.SigningCredentials>
 - <xref:System.IdentityModel.Tokens.SecurityKey>
@@ -132,4 +132,4 @@ ms.locfileid: "64587536"
 - <xref:System.IdentityModel.Tokens.SamlAssertion>
 - <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>
 - <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>
-- [同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [聯合範例](../samples/federation-sample.md)

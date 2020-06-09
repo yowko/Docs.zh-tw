@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 2e0fb579897797b732859692092665225a0d6168
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: baf13af39fe575a75f1304b21f3b4ad70dd370ab
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919358"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597315"
 ---
 # <a name="host-in-internet-information-services"></a>Internet Information Services 中的主機
 
@@ -23,7 +23,7 @@ WCF 可以裝載于下列作業系統上的下列 IIS 版本：
 
 - Windows Server 2003 上的 IIS 6.0。 IIS 6.0 提供先進的進程模型，可提供改良的擴充性、可靠性和應用程式隔離。 此環境適用于以獨佔方式使用 HTTP 通訊的 WCF 服務生產部署。
 
-- Windows Vista 和 Windows Server 2008 上的 IIS 7.0。 IIS 7.0 提供與 IIS 6.0 相同的先進進程模型，但使用 Windows 進程啟用服務（WAS）允許透過 HTTP 以外的通訊協定進行啟用和網路通訊。 此環境適用于透過 WCF 支援的任何網路通訊協定進行通訊的 WCF 服務開發（包括 HTTP、net.tcp、net.pipe 和 net.tcp）。 如需 WAS 的詳細資訊，請參閱[在 Windows 進程啟用服務中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。
+- Windows Vista 和 Windows Server 2008 上的 IIS 7.0。 IIS 7.0 提供與 IIS 6.0 相同的先進進程模型，但使用 Windows 進程啟用服務（WAS）允許透過 HTTP 以外的通訊協定進行啟用和網路通訊。 此環境適用于透過 WCF 支援的任何網路通訊協定進行通訊的 WCF 服務開發（包括 HTTP、net.tcp、net.pipe 和 net.tcp）。 如需 WAS 的詳細資訊，請參閱[在 Windows 進程啟用服務中裝載](hosting-in-windows-process-activation-service.md)。
 
 - [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))適用于 IIS 7.0 和 Windows 進程啟用服務（WAS），以提供豐富的應用程式裝載環境來 NET4 WCF 和 WF 服務。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱[Appfabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))和[appfabric 裝載概念](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10))。
 
@@ -33,13 +33,13 @@ WCF 可以裝載于下列作業系統上的下列 IIS 版本：
 
 - 裝載于 IIS 中的 WCF 服務會像任何其他類型的 IIS 應用程式一樣進行部署和管理，包括 ASP.NET 應用程式和 .ASMX。
 
-- IIS 提供處理程序啟動、健康情況管理以及回收功能，以提升裝載應用程式的可靠性。
+- IIS 可提供處理序啟動、系統健康狀態管理，與回收功能來增加所裝載之應用程式的可靠性。
 
 - 如同 ASP.NET，裝載在 ASP.NET 中的 WCF 服務可以利用 ASP.NET 共用裝載模型，其中多個應用程式位於共同的工作者進程中，以改善伺服器密度和擴充性。
 
 - 裝載于 IIS 的 WCF 服務會使用與 ASP.NET 2.0 相同的動態編譯模型，這可簡化託管服務的開發和部署。
 
-在決定要在 IIS 中裝載 WCF 服務時，請務必記住 IIS 5.1 和 IIS 6.0 僅限於 HTTP 通訊。 如需選擇裝載環境的詳細資訊，請參閱[裝載服務](../../../../docs/framework/wcf/hosting-services.md)。
+在決定要在 IIS 中裝載 WCF 服務時，請務必記住 IIS 5.1 和 IIS 6.0 僅限於 HTTP 通訊。 如需選擇裝載環境的詳細資訊，請參閱[裝載服務](../hosting-services.md)。
 
 ## <a name="deploy-an-iis-hosted-wcf-service"></a>部署裝載于 IIS 的 WCF 服務
 
@@ -55,17 +55,17 @@ WCF 可以裝載于下列作業系統上的下列 IIS 版本：
 
 - 設定 WCF 服務。
 
-如需每項工作的討論，請參閱[部署 Internet Information Services 託管的 WCF 服務](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。
+如需每項工作的討論，請參閱[部署 Internet Information Services 託管的 WCF 服務](deploying-an-internet-information-services-hosted-wcf-service.md)。
 
 ## <a name="wcf-services-and-aspnet"></a>WCF 服務和 ASP.NET
 
-WCF 服務可以與 ASP.NET 並存裝載，或在 ASP.NET 相容性模式中裝載，服務可以充分利用 ASP.NET Web 應用程式平臺所提供的功能。 如需這些功能的討論，請參閱[WCF 服務和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。
+WCF 服務可以與 ASP.NET 並存裝載，或在 ASP.NET 相容性模式中裝載，服務可以充分利用 ASP.NET Web 應用程式平臺所提供的功能。 如需這些功能的討論，請參閱[WCF 服務和 ASP.NET](wcf-services-and-aspnet.md)。
 
 ## <a name="see-also"></a>請參閱
 
-- [使用 ServiceHostFactory 擴充裝載](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
-- [部署已裝載 Internet Information Services 的 WCF 服務](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
-- [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
-- [Internet Information Services 裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [設定 Internet Information Services 7.0 for Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
+- [使用 ServiceHostFactory 擴充裝載](../extending/extending-hosting-using-servicehostfactory.md)
+- [部署已裝載 Internet Information Services 的 WCF 服務](deploying-an-internet-information-services-hosted-wcf-service.md)
+- [WCF 服務與 ASP.NET](wcf-services-and-aspnet.md)
+- [Internet Information Services 裝載最佳做法](internet-information-services-hosting-best-practices.md)
+- [設定 Internet Information Services 7.0 for Windows Communication Foundation](configuring-iis-for-wcf.md)
 - [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

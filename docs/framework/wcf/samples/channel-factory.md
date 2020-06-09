@@ -2,21 +2,21 @@
 title: 通道處理站
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: eac315cf88b2ecc7471f194ef6c3be902b3ccbaa
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2aa44c4ef274fa548d490b0d8a648457a7b1e03b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716050"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600655"
 ---
 # <a name="channel-factory"></a>通道處理站
 
-本範例示範用戶端應用程式如何使用 <xref:System.ServiceModel.ChannelFactory> 類別而非使用產生的用戶端來建立通道。 這個範例是以執行計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。
+本範例示範用戶端應用程式如何使用 <xref:System.ServiceModel.ChannelFactory> 類別而非使用產生的用戶端來建立通道。 這個範例是以執行計算機服務的[消費者入門](getting-started-sample.md)為基礎。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
-此範例使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立服務端點的通道。 一般而言，若要建立服務端點的通道，您可以使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端類型，並建立所產生類型的實例。 您也可以使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立通道，如此範例所示。 下列範例程式碼所建立的服務，與[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)中的服務相同。
+此範例使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立服務端點的通道。 一般而言，若要建立服務端點的通道，您可以使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端類型，並建立所產生類型的實例。 您也可以使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立通道，如此範例所示。 下列範例程式碼所建立的服務，與[消費者入門](getting-started-sample.md)中的服務相同。
 
 ```csharp
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
@@ -59,11 +59,11 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。 請注意，此範例不會啟用中繼資料發行。 您必須先為此範例啟用中繼資料發行，以重新產生用戶端類型。
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。 請注意，此範例不會啟用中繼資料發行。 您必須先為此範例啟用中繼資料發行，以重新產生用戶端類型。
 
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
 ### <a name="to-run-the-sample-cross-machine"></a>若要執行跨電腦範例
 

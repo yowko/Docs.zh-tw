@@ -2,12 +2,12 @@
 title: 建立 ASP.NET AJAX 的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: 2ec4d2f1f2fb3a6a184a524ed0134360407b4649
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8c82d4c61b32572fd1ad7d8f19e939273cc2280b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964058"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599304"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>建立 ASP.NET AJAX 的 WCF 服務
 
@@ -21,13 +21,13 @@ ASP.NET AJAX 包含內建的用戶端指令碼程式庫與伺服器元件，以�
 
 如果您不是使用 Visual Studio 範本，則您可以透過下列兩種方法來建立 ASP.NET AJAX 端點：
 
-- 使用動態主機啟動 (而不是透過任何組態) 來建立端點。 如果您不熟悉 WCF 組態系統的話，這是最基本的操作方式。 如需詳細資訊，請參閱[如何：新增 ASP.NET AJAX 端點而不使用](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)設定。
+- 使用動態主機啟動 (而不是透過任何組態) 來建立端點。 如果您不熟悉 WCF 組態系統的話，這是最基本的操作方式。 如需詳細資訊，請參閱[如何：新增 ASP.NET AJAX 端點而不使用](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)設定。
 
-- 使用設定，將啟用 AJAX 的端點新增至 WCF 服務。 如需詳細資訊，請參閱[如何：使用設定來新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。
+- 使用設定，將啟用 AJAX 的端點新增至 WCF 服務。 如需詳細資訊，請參閱[如何：使用設定來新增 ASP.NET AJAX 端點](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。
 
-[WCF WEB HTTP 程式設計模型總覽](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)中所述的 Web 程式設計模型，可搭配 ASP.NET AJAX services 使用。 尤其是：
+[WCF WEB HTTP 程式設計模型總覽](wcf-web-http-programming-model-overview.md)中所述的 Web 程式設計模型，可搭配 ASP.NET AJAX services 使用。 具體來說：
 
-- 您可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 屬性，在 HTTP GET 和 HTTP POST 動詞之間進行選擇。 如果使用方式正確的話，可能會大幅改善應用程式的效能。 如需詳細資訊，請參閱 how [to：選擇 HTTP POST 和 HTTP GET 要求以 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)。
+- 您可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 屬性，在 HTTP GET 和 HTTP POST 動詞之間進行選擇。 如果使用方式正確的話，可能會大幅改善應用程式的效能。 如需詳細資訊，請參閱 how [to：選擇 HTTP POST 和 HTTP GET 要求以 ASP.NET AJAX 端點](http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)。
 
 - 您可以使用 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 屬性，讓您的服務傳回 XML 資料，而不是預設的 JavaScript Object Notation (JSON)。 使用 ASP.NET AJAX 架構來執行這項作業會導致 JavaScript 用戶端接收 XML DOM 物件。
 
@@ -52,15 +52,15 @@ ASP.NET AJAX 包含內建的用戶端指令碼程式庫與伺服器元件，以�
 
  更先進的案例需要瞭解 WCF 中的其他 AJAX 支援詳細資料：
 
-- 若要瞭解如何使用 JavaScript 在 AJAX 頁面用戶端與 WCF 服務之間傳輸資料，以及有關 .NET Framework 類型如何對應至 JavaScript 類型的詳細資訊，請參閱[JSON 和其他資料傳輸格式的支援](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)。
+- 若要瞭解如何使用 JavaScript 在 AJAX 頁面用戶端與 WCF 服務之間傳輸資料，以及有關 .NET Framework 類型如何對應至 JavaScript 類型的詳細資訊，請參閱[JSON 和其他資料傳輸格式的支援](support-for-json-and-other-data-transfer-formats.md)。
 
 - 為了善加利用各項 ASP.NET 功能，例如 URL 驗證與存取 ASP.NET 工作階段資訊，您可能會想要透過組態來啟用 ASP.NET 相容性模式。
 
-WCF 中的 AJAX 端點甚至可能會在沒有 ASP.NET AJAX 架構的情況下使用。 這麼做需要瞭解 WCF 中 AJAX 支援的支援架構。 如需此架構的討論，請參閱[WCF WEB HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)。 如需示範此方法的程式碼範例，請參閱[使用 JSON 和 XML 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)。
+WCF 中的 AJAX 端點甚至可能會在沒有 ASP.NET AJAX 架構的情況下使用。 這麼做需要瞭解 WCF 中 AJAX 支援的支援架構。 如需此架構的討論，請參閱[WCF WEB HTTP 程式設計物件模型](wcf-web-http-programming-object-model.md)。 如需示範此方法的程式碼範例，請參閱[使用 JSON 和 XML 的 AJAX 服務](../samples/ajax-service-with-json-and-xml-sample.md)。
 
 ## <a name="see-also"></a>請參閱
 
-- [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [如何：不使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
-- [如何：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
-- [如何：在 ASP.NET AJAX 端點的 HTTP POST 和 HTTP GET 要求之間進行選擇](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+- [WCF Web HTTP 程式設計模型](wcf-web-http-programming-model.md)
+- [如何：不使用組態新增 ASP.NET AJAX 端點](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
+- [如何：使用組態新增 ASP.NET AJAX 端點](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [HOW TO：在 ASP.NET AJAX 端點的 HTTP POST 和 HTTP GET 要求之間進行選擇](http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

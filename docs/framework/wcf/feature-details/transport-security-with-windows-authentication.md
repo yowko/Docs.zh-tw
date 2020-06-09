@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: d335cd47de68dccdbb6af7f402d1182fcd811a7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6703da4f97cba38ee0dc334d3010ca509d1fb3ef
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184307"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598693"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 驗證的傳輸安全性
-以下方案顯示了由 Windows 安全保護的 Windows 通信基礎 （WCF） 用戶端和服務。 有關程式設計的詳細資訊，請參閱[：使用 Windows 憑據保護服務](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
+下列案例顯示由 Windows 安全性保護的 Windows Communication Foundation （WCF）用戶端和服務。 如需程式設計的詳細資訊，請參閱[如何：使用 Windows 認證保護服務](../how-to-secure-a-service-with-windows-credentials.md)。  
   
  內部網路 Web 服務顯示人力資源資訊。 用戶端為 Windows Form 應用程式。 應用程式部署於由 Kerberos 控制站負責網域安全的網域內。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "79184307"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>用戶端  
  下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
@@ -117,8 +117,8 @@ ms.locfileid: "79184307"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [如何：利用 Windows 認證保護服務的安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [安全性總覽](security-overview.md)
+- [如何：利用 Windows 認證保護服務的安全](../how-to-secure-a-service-with-windows-credentials.md)
 - [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

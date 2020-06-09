@@ -5,34 +5,34 @@ helpviewer_keywords:
 - WCF, using transactions
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
-ms.openlocfilehash: 367abc45b9383a77ba2917030316bda17b4be98c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e743cd14d2a601f52baaf6769e96503dcd3701d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933129"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600694"
 ---
 # <a name="transactions-in-wcf"></a>WCF 的異動
-Windows Communication Foundation (WCF) 的交易功能可讓數個元件同時參與資料作業。 本章節中的主題會詳細檢查這項功能。  
+Windows Communication Foundation （WCF）交易功能可讓數個元件同時參與資料作業。 本章節中的主題會詳細檢查這項功能。  
   
 ## <a name="in-this-section"></a>本節內容  
- [Windows Communication Foundation 異動概觀](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
- 利用 WCF 所提供的交易功能的概觀。  
+ [Windows Communication Foundation 異動概觀](transactions-overview.md)  
+ WCF 所提供之交易功能的總覽。  
   
- [異動模型](../../../../docs/framework/wcf/feature-details/transaction-models.md)  
+ [異動模型](transaction-models.md)  
  比較各種由 Microsoft 提供的異動程式撰寫模型。  
   
- [使用 WS-AtomicTransaction](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
- 說明 WS-AtomicTransaction (WS-AT)，實作於 WCF 中的互通異動傳播通訊協定。  
+ [使用 WS-AtomicTransaction](using-ws-atomictransaction.md)  
+ 說明 ws-atomictransaction （WS-AT），這是在 WCF 中實作為互通的交易傳播通訊協定。  
   
- [System.ServiceModel 中的異動式支援](../../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- 說明 WCF 所提供的交易式功能。  
+ [System.ServiceModel 中的異動式支援](transactional-support-in-system-servicemodel.md)  
+ 描述 WCF 所提供的交易功能。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
   
 ## <a name="related-sections"></a>相關章節  
- [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [基本 WCF 程式設計](../basic-wcf-programming.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [可靠工作階段概觀](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [可靠工作階段概觀](reliable-sessions-overview.md)

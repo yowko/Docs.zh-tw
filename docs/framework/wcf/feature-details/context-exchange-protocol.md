@@ -2,15 +2,15 @@
 title: 內容交換通訊協定
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: 00adb68d96f77ce0953811d13b5377ec4ed1e0ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86d2a19b086fbd5d6be6f1a084bfd7aaace0e250
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185256"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597432"
 ---
 # <a name="context-exchange-protocol"></a>內容交換通訊協定
-本節介紹 Windows 通信基礎 （WCF） 版本 .NET 框架版本 3.5 中引入的上下文切換式通訊協定。 這項通訊協定可讓用戶端通道接受服務所提供的內容，並透過相同的用戶端通道執行個體將之套用到該服務的後續所有要求。 內容交換通訊協定的實作可透過 HTTP Cookie 或 SOAP 標頭這兩種機制，在伺服器與用戶端之間傳播內容。  
+本節說明 Windows Communication Foundation （WCF） release .NET Framework 3.5 版中引進的內容交換通訊協定。 這項通訊協定可讓用戶端通道接受服務所提供的內容，並透過相同的用戶端通道執行個體將之套用到該服務的後續所有要求。 內容交換通訊協定的實作可透過 HTTP Cookie 或 SOAP 標頭這兩種機制，在伺服器與用戶端之間傳播內容。  
   
  內容交換通訊協定可在自訂通道層中實作。 通道會透過 <xref:System.ServiceModel.Channels.ContextMessageProperty> 屬性，在應用程式層來回傳送內容。 至於端點之間的傳輸，內容值將在通道層上序列化為 SOAP 標頭，或是在代表 HTTP 要求和回應的訊息屬性之間來回轉換。 在第二個情況中，我們預期其中一個基礎通道層會將 HTTP 要求和回應訊息屬性個別轉換至 HTTP Cookie，反之亦然。 您可透過 <xref:System.ServiceModel.Channels.ContextExchangeMechanism> 上的 <xref:System.ServiceModel.Channels.ContextBindingElement> 屬性，選擇用來交換內容的機制。 有效值為 `HttpCookie` 或 `SoapHeader`。  
   
@@ -67,6 +67,6 @@ ms.locfileid: "79185256"
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Web 服務通訊協定互通性手冊](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+- [Web 服務通訊協定互通性手冊](web-services-protocols-interoperability-guide.md)

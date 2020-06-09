@@ -1,5 +1,6 @@
 ---
 title: BlockingCollection 概觀
+description: 閱讀有關 BlockingCollection <T> （.net 中的安全線程集合類別）的資訊。 這個類別所提供的功能，像是並行新增 & 從多個執行緒取得專案。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-ms.openlocfilehash: 708ab9dc8df2ee3128036ffc71e9abc51a56e33b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fc11f6c28a551e56d3bac4c5be9c08a396c0c6b1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287909"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600798"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概觀
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是提供下列功能的安全執行緒集合類別︰  
@@ -78,7 +79,7 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 ## <a name="using-many-blockingcollections-as-one"></a>將多個 BlockingCollection 當成一個使用  
  如果消費者需要同時從多個集合擷取項目，您可以建立 <xref:System.Collections.Concurrent.BlockingCollection%601> 陣列，並使用將新增至或擷取自陣列中任何集合的靜態方法 (例如 <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>)。 如果封鎖其中一個集合，則方法會立即嘗試另一個集合，直到找到可執行作業的集合為止。 如需詳細資訊，請參閱[如何：在管線中使用封鎖回收的陣列](how-to-use-arrays-of-blockingcollections.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [集合和資料結構](../index.md)
