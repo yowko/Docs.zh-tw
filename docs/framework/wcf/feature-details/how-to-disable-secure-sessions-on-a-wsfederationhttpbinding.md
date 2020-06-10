@@ -8,42 +8,42 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: 810c5b127a34fb0a35e8fd2d83ff59e00aca0ba1
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: df057d64feb89d1e43b938b36cb48f2f103b17d0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972040"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595384"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a><span data-ttu-id="2ff99-102">作法：在 WSFederationHttpBinding 上停用安全工作階段</span><span class="sxs-lookup"><span data-stu-id="2ff99-102">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a><span data-ttu-id="36791-102">HOW TO：在 WSFederationHttpBinding 上停用安全工作階段</span><span class="sxs-lookup"><span data-stu-id="36791-102">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>
 
-<span data-ttu-id="2ff99-103">某些服務可能會要求聯合認證，但卻不支援安全工作階段。</span><span class="sxs-lookup"><span data-stu-id="2ff99-103">Some services may require federated credentials but not support secure sessions.</span></span> <span data-ttu-id="2ff99-104">在此情況下，您必須停用安全工作階段功能。</span><span class="sxs-lookup"><span data-stu-id="2ff99-104">In that case, you must disable the secure session feature.</span></span> <span data-ttu-id="2ff99-105">與 <xref:System.ServiceModel.WSHttpBinding> 不同的是，<xref:System.ServiceModel.WSFederationHttpBinding> 類別不會在您與服務進行通訊時，提供停用安全工作階段的方法。</span><span class="sxs-lookup"><span data-stu-id="2ff99-105">Unlike the <xref:System.ServiceModel.WSHttpBinding>, the <xref:System.ServiceModel.WSFederationHttpBinding> class does not provide a way to disable secure sessions when communicating with a service.</span></span> <span data-ttu-id="2ff99-106">反之，您必須建立自訂繫結，以便使用啟動安裝程式繫結來取代安全工作階段。</span><span class="sxs-lookup"><span data-stu-id="2ff99-106">Instead, you must create a custom binding that replaces the secure session settings with a bootstrap.</span></span>
+<span data-ttu-id="36791-103">某些服務可能會要求聯合認證，但卻不支援安全工作階段。</span><span class="sxs-lookup"><span data-stu-id="36791-103">Some services may require federated credentials but not support secure sessions.</span></span> <span data-ttu-id="36791-104">在此情況下，您必須停用安全工作階段功能。</span><span class="sxs-lookup"><span data-stu-id="36791-104">In that case, you must disable the secure session feature.</span></span> <span data-ttu-id="36791-105">與 <xref:System.ServiceModel.WSHttpBinding> 不同的是，<xref:System.ServiceModel.WSFederationHttpBinding> 類別不會在您與服務進行通訊時，提供停用安全工作階段的方法。</span><span class="sxs-lookup"><span data-stu-id="36791-105">Unlike the <xref:System.ServiceModel.WSHttpBinding>, the <xref:System.ServiceModel.WSFederationHttpBinding> class does not provide a way to disable secure sessions when communicating with a service.</span></span> <span data-ttu-id="36791-106">反之，您必須建立自訂繫結，以便使用啟動安裝程式繫結來取代安全工作階段。</span><span class="sxs-lookup"><span data-stu-id="36791-106">Instead, you must create a custom binding that replaces the secure session settings with a bootstrap.</span></span>
 
-<span data-ttu-id="2ff99-107">此主題將示範如何修改 <xref:System.ServiceModel.WSFederationHttpBinding> 內所包含的繫結項目來建立自訂繫結。</span><span class="sxs-lookup"><span data-stu-id="2ff99-107">This topic demonstrates how to modify the binding elements contained within a <xref:System.ServiceModel.WSFederationHttpBinding> to create a custom binding.</span></span> <span data-ttu-id="2ff99-108">除了不使用安全工作階段之外，其餘結果會與 <xref:System.ServiceModel.WSFederationHttpBinding> 相同。</span><span class="sxs-lookup"><span data-stu-id="2ff99-108">The result is identical to the <xref:System.ServiceModel.WSFederationHttpBinding> except that it does not use secure sessions.</span></span>
+<span data-ttu-id="36791-107">此主題將示範如何修改 <xref:System.ServiceModel.WSFederationHttpBinding> 內所包含的繫結項目來建立自訂繫結。</span><span class="sxs-lookup"><span data-stu-id="36791-107">This topic demonstrates how to modify the binding elements contained within a <xref:System.ServiceModel.WSFederationHttpBinding> to create a custom binding.</span></span> <span data-ttu-id="36791-108">除了不使用安全工作階段之外，其餘結果會與 <xref:System.ServiceModel.WSFederationHttpBinding> 相同。</span><span class="sxs-lookup"><span data-stu-id="36791-108">The result is identical to the <xref:System.ServiceModel.WSFederationHttpBinding> except that it does not use secure sessions.</span></span>
 
-## <a name="to-create-a-custom-federated-binding-without-secure-session"></a><span data-ttu-id="2ff99-109">若要建立一個不包含安全工作階段的自訂聯合繫結</span><span class="sxs-lookup"><span data-stu-id="2ff99-109">To create a custom federated binding without secure session</span></span>
+## <a name="to-create-a-custom-federated-binding-without-secure-session"></a><span data-ttu-id="36791-109">若要建立一個不包含安全工作階段的自訂聯合繫結</span><span class="sxs-lookup"><span data-stu-id="36791-109">To create a custom federated binding without secure session</span></span>
 
-1. <span data-ttu-id="2ff99-110">在程式碼中以命令方式建立 <xref:System.ServiceModel.WSFederationHttpBinding> 類別的執行個體，或是從組態檔中載入一個執行個體。</span><span class="sxs-lookup"><span data-stu-id="2ff99-110">Create an instance of the <xref:System.ServiceModel.WSFederationHttpBinding> class either imperatively in code or by loading one from the configuration file.</span></span>
+1. <span data-ttu-id="36791-110">在程式碼中以命令方式建立 <xref:System.ServiceModel.WSFederationHttpBinding> 類別的執行個體，或是從組態檔中載入一個執行個體。</span><span class="sxs-lookup"><span data-stu-id="36791-110">Create an instance of the <xref:System.ServiceModel.WSFederationHttpBinding> class either imperatively in code or by loading one from the configuration file.</span></span>
 
-2. <span data-ttu-id="2ff99-111">將 <xref:System.ServiceModel.WSFederationHttpBinding> 複製到 <xref:System.ServiceModel.Channels.CustomBinding>。</span><span class="sxs-lookup"><span data-stu-id="2ff99-111">Clone the <xref:System.ServiceModel.WSFederationHttpBinding> into a <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>
+2. <span data-ttu-id="36791-111">將 <xref:System.ServiceModel.WSFederationHttpBinding> 複製到 <xref:System.ServiceModel.Channels.CustomBinding>。</span><span class="sxs-lookup"><span data-stu-id="36791-111">Clone the <xref:System.ServiceModel.WSFederationHttpBinding> into a <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>
 
-3. <span data-ttu-id="2ff99-112">在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中尋找 <xref:System.ServiceModel.Channels.CustomBinding>。</span><span class="sxs-lookup"><span data-stu-id="2ff99-112">Find the <xref:System.ServiceModel.Channels.SecurityBindingElement> in the <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>
+3. <span data-ttu-id="36791-112">在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中尋找 <xref:System.ServiceModel.Channels.CustomBinding>。</span><span class="sxs-lookup"><span data-stu-id="36791-112">Find the <xref:System.ServiceModel.Channels.SecurityBindingElement> in the <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>
 
-4. <span data-ttu-id="2ff99-113">在 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> 中尋找 <xref:System.ServiceModel.Channels.SecurityBindingElement>。</span><span class="sxs-lookup"><span data-stu-id="2ff99-113">Find the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> in the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>
+4. <span data-ttu-id="36791-113">在 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> 中尋找 <xref:System.ServiceModel.Channels.SecurityBindingElement>。</span><span class="sxs-lookup"><span data-stu-id="36791-113">Find the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> in the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>
 
-5. <span data-ttu-id="2ff99-114">將原始的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 取代為來自 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> 的啟動安裝安全性繫結項目。</span><span class="sxs-lookup"><span data-stu-id="2ff99-114">Replace the original <xref:System.ServiceModel.Channels.SecurityBindingElement> with the bootstrap security binding element from the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.</span></span>
+5. <span data-ttu-id="36791-114">將原始的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 取代為來自 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> 的啟動安裝安全性繫結項目。</span><span class="sxs-lookup"><span data-stu-id="36791-114">Replace the original <xref:System.ServiceModel.Channels.SecurityBindingElement> with the bootstrap security binding element from the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.</span></span>
 
-## <a name="example"></a><span data-ttu-id="2ff99-115">範例</span><span class="sxs-lookup"><span data-stu-id="2ff99-115">Example</span></span>
+## <a name="example"></a><span data-ttu-id="36791-115">範例</span><span class="sxs-lookup"><span data-stu-id="36791-115">Example</span></span>
 
-<span data-ttu-id="2ff99-116">下列範例會建立了一個不包含安全工作階段的自訂聯合繫結。</span><span class="sxs-lookup"><span data-stu-id="2ff99-116">This following example creates a custom federated binding without secure session.</span></span>
+<span data-ttu-id="36791-116">下列範例會建立了一個不包含安全工作階段的自訂聯合繫結。</span><span class="sxs-lookup"><span data-stu-id="36791-116">This following example creates a custom federated binding without secure session.</span></span>
 
 [!code-csharp[c_CustomFederationBinding#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customfederationbinding/cs/c_customfederationbinding.cs#0)]
 [!code-vb[c_CustomFederationBinding#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customfederationbinding/vb/c_customfederationbinding.vb#0)]
 
-## <a name="compiling-the-code"></a><span data-ttu-id="2ff99-117">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="2ff99-117">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="36791-117">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="36791-117">Compiling the Code</span></span>
 
-- <span data-ttu-id="2ff99-118">若要編譯此程式碼範例，請建立一個可參考 System.ServiceModel.dll 組件的專案。</span><span class="sxs-lookup"><span data-stu-id="2ff99-118">To compile the code example, create a project that references the System.ServiceModel.dll assembly.</span></span>
+- <span data-ttu-id="36791-118">若要編譯此程式碼範例，請建立一個可參考 System.ServiceModel.dll 組件的專案。</span><span class="sxs-lookup"><span data-stu-id="36791-118">To compile the code example, create a project that references the System.ServiceModel.dll assembly.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2ff99-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2ff99-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="36791-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="36791-119">See also</span></span>
 
-- [<span data-ttu-id="2ff99-120">繫結和安全性</span><span class="sxs-lookup"><span data-stu-id="2ff99-120">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [<span data-ttu-id="36791-120">繫結和安全性</span><span class="sxs-lookup"><span data-stu-id="36791-120">Bindings and Security</span></span>](bindings-and-security.md)
