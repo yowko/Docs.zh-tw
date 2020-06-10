@@ -1,5 +1,6 @@
 ---
 title: 逐步解說：建立密碼編譯應用程式
+description: 逐步解說建立密碼編譯應用程式。 瞭解如何在 Windows Forms 應用程式中加密和解密內容。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 246028566c59e5c8a77b26a21729d3f143d38d07
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72116227fbec2435d428ad2bbdb4cc74e5c3663f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289703"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602176"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>逐步解說：建立密碼編譯應用程式
 本逐步解說示範如何加密和解密內容。 程式碼範例是針對 Windows Form 應用程式所設計。 此應用程式不會示範真實世界案例，例如使用智慧卡。 相反地，它會示範加密和解密的基本概念。  
@@ -43,7 +44,7 @@ ms.locfileid: "84289703"
 |匯入公開金鑰|將金鑰從 XML 檔案載入到金鑰容器。|  
 |測試應用程式|列出測試此應用程式的程序。|  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成這個逐步解說：  
   
 - <xref:System.IO> 和 <xref:System.Security.Cryptography> 命名空間的參考。  
@@ -51,7 +52,7 @@ ms.locfileid: "84289703"
 ## <a name="creating-a-windows-forms-application"></a>建立 Windows Forms 應用程式  
  在此逐步解說中的大部分程式碼範例，已設計為按鈕控制項的事件處理常式。 下表列出範例應用程式所需的控制項，及其必要名稱以符合程式碼範例。  
   
-|控制|Name|文字屬性 (如有需要)|  
+|控制|名稱|文字屬性 (如有需要)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|加密檔案|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|解密檔案|  
@@ -208,6 +209,6 @@ ms.locfileid: "84289703"
   
 2. 按一下 `Decrypt File` 按鈕，然後選取剛才加密的檔案。 這將會成功，因為您有完整金鑰組可以解密。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [密碼編譯服務](cryptographic-services.md)
