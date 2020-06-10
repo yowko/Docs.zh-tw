@@ -1,5 +1,6 @@
 ---
 title: 規則運算式中的群組建構
+description: 瞭解如何在 .NET 中使用群組結構。 群組結構會描繪正則運算式的子運算式，並捕捉輸入字串的子字串。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 5be98a5a213592b169bee430d84c4fc3a1d5fcef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d737e5758ee7a940aeea3ded9a7937d687393116
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290522"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662624"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的群組建構
 群組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用分組建構來執行下列作業：  
@@ -118,7 +119,7 @@ ms.locfileid: "84290522"
   
  有一個簡單的規則運算式模式，說明如何以程式設計方式，或是使用規則運算式語言語法，來參考編號 (未具名) 和具名群組。 規則運算式 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` 會依號碼或依名稱產生下列擷取群組。 第一個擷取群組 (編號 0) 一律參考整個模式。  
   
-|Number|Name|模式|  
+|數字|名稱|模式|  
 |------------|----------|-------------|  
 |0|0 (預設名稱)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (預設名稱)|`((?<One>abc)\d+)`|  

@@ -1,5 +1,6 @@
 ---
 title: 記憶體對應檔案
+description: 探索 .NET 中的記憶體對應檔案，其中包含虛擬記憶體中的檔案內容，並允許應用程式直接寫入記憶體來修改檔案。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 1a8c087449ed623e93f8c8ea467200f5e3e7e70f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: db63c15357b0670c55b1174b91b02e2f49a0c4c1
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278788"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661975"
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
 記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 .NET Framework 4 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用受控程式碼來存取記憶體對應檔案，如[管理記憶體對應檔案](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) \(英文\) 所述。  

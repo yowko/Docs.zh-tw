@@ -1,5 +1,6 @@
 ---
 title: 例外狀況處理 (工作平行程式庫)
+description: 使用 .NET 中的工作平行程式庫（TPL）探索例外狀況處理。 & 需詳細資訊，請參閱嵌套的匯總例外狀況、內部例外狀況、未觀察到工作例外狀況。
 ms.date: 04/20/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: 674abcfe4477e14295f131e766a48422779391de
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f1c1a994f4b3a8df0556a0190bc4eacb63f2921e
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290041"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662533"
 ---
 # <a name="exception-handling-task-parallel-library"></a>例外狀況處理 (工作平行程式庫)
 

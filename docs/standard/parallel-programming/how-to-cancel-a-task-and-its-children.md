@@ -1,5 +1,6 @@
 ---
 title: 作法：取消工作及其子系
+description: 請參閱如何在 .NET 中取消工作及其子系的範例。 這些範例涵蓋從可取消的工作建立的步驟，到工作已取消的通知。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: ca6b5f10840d935aa45cb660da86685d1c90554b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290028"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662676"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>作法：取消工作及其子系
 這些範例示範如何執行下列工作：  

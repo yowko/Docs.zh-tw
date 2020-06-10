@@ -1,5 +1,6 @@
 ---
 title: 如何：建立使用者定義的例外狀況
+description: 瞭解如何建立使用者定義的例外狀況，這是從 .NET 中的例外狀況基類衍生的例外狀況類別階層的替代方法。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - exceptions, examples
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
-ms.openlocfilehash: 6de00490a17fff005dd50a7acc5247089c073f68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14eb6246ba4347f33766f7dff36463f2bf996330
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708871"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662793"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>如何建立使用者定義的例外狀況
 
@@ -33,4 +34,4 @@ ms.locfileid: "75708871"
 
 ## <a name="see-also"></a>另請參閱
 
-- [異常](index.md)
+- [例外狀況](index.md)

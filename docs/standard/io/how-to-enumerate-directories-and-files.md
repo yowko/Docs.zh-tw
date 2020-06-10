@@ -1,5 +1,6 @@
 ---
 title: 如何：列舉目錄和檔案
+description: 瞭解如何使用可列舉集合來列舉目錄和檔案，以提供比 .NET 中的陣列更好的效能。
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: bcb10426175c1f2cabeec6d8d4f8d2ed74e5e3b4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 276668f4a3eee89610a81b1256820770d1f72dc3
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291873"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662572"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>如何：列舉目錄和檔案
 當您使用目錄和檔案的大型集合時，相較於陣列，可列舉的集合會提供更佳的效能。 若要列舉目錄和檔案，請使用能夠傳回可列舉目錄或檔案名稱、或是其 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 物件集合的方法。  

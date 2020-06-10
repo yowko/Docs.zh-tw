@@ -1,5 +1,6 @@
 ---
 title: Managed 執行緒處理的最佳實施方針
+description: 瞭解 .NET 中受控執行緒的最佳作法。 使用難以協調多個執行緒或處理封鎖執行緒的棘手情況。
 ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 30d746d739654ecad2b485b9d69cfe300caca2ff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fa0af1461ba568583127316934b9d55577dd4c5a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291184"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662819"
 ---
 # <a name="managed-threading-best-practices"></a>受控執行緒處理最佳做法
 在為多執行緒功能設計程式時需要非常小心。 您可以藉由將要求排入佇列以供執行緒集區的執行緒執行，來降低大部分工作的複雜性。 本主題要解決的是更困難的情況，例如協調多個執行緒的工作，或處理封鎖起來的執行緒。  

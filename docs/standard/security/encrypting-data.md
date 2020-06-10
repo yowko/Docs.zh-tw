@@ -1,5 +1,6 @@
 ---
 title: 加密資料
+description: 瞭解如何在 .NET 中加密資料。 您可以在資料流程上使用對稱式加密，也可以在少量的位元組上使用非對稱式加密。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6cebdecd461f28f8228ebb8440dbff218dc211db
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288351"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662520"
 ---
 # <a name="encrypting-data"></a>加密資料
 對稱式加密和非對稱式加密是使用不同的程序執行。 對稱式加密在資料流上執行，因此適用於加密大量資料。 非對稱式加密在少數的位元組上執行，因此只適用於小量的資料。  

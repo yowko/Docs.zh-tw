@@ -1,5 +1,6 @@
 ---
 title: 規則運算式選項
+description: 瞭解如何在 .NET 中使用正則運算式選項，例如不區分大小寫比對、多行模式和從右至左模式。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 268e05c2212539b030ccc3c7195f618bb3afa707
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289287"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662871"
 ---
 # <a name="regular-expression-options"></a>規則運算式選項
 
 依預設，輸入字串與規則運算式模式中任何常值字元的比較會區分大小寫，規則運算式模式中的空白字元會解譯成常值空白字元，而規則運算式中的擷取群組會隱含也會明確命名。 您可以藉由指定規則運算式選項來修改這些預設規則運算式行為和幾個其他方面。 這些選項 (列示於下表) 可以內嵌為規則運算式模式的部分，或是提供給 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態模式比對方法，以做為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值。
 
-|RegexOptions 成員|內嵌字元|效果|
+|RegexOptions 成員|內嵌字元|作用|
 |-------------------------|----------------------|------------|
 |<xref:System.Text.RegularExpressions.RegexOptions.None>|無法使用|使用預設行為。 如需詳細資訊，請參閱[預設選項](#default-options)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|使用不區分大小寫的比對方式。 如需詳細資訊，請參閱不[區分大小寫](#case-insensitive-matching)比對。|
@@ -110,7 +111,7 @@ ms.locfileid: "84289287"
 
 ## <a name="default-options"></a>預設選項
 
-<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項指出未指定任何選項，而規則運算式引擎使用其預設行為。 這包括下列項目：
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項指出未指定任何選項，而規則運算式引擎使用其預設行為。 其中包括下列項目：
 
 - 模式被解譯為標準規則運算式，而不是 ECMAScript 規則運算式。
 

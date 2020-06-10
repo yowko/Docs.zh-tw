@@ -1,5 +1,6 @@
 ---
 title: 在類別和結構之間選擇
+description: 瞭解如何決定是否要將類型設計為類別，或將類型設計為結構。 瞭解 .NET 中的參考型別和實數值型別有何不同。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280357"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662598"
 ---
 # <a name="choosing-between-class-and-struct"></a>在類別和結構之間選擇
 每個架構設計工具所面臨的基本設計決策之一，是要將型別設計為類別（參考型別）還是結構（實值型別）。 瞭解參考型別和實值型別的行為差異，對於進行這項選擇十分重要。

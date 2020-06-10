@@ -1,17 +1,18 @@
 ---
 title: 使用執行緒和執行緒處理
+description: 瞭解如何在 .NET 中使用執行緒和執行緒，讓您可以撰寫應用程式來同時執行許多作業（多執行緒）。
 ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: c092994818c9105a555acaf63ceba4b8e99bcada
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588422"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663027"
 ---
 # <a name="using-threads-and-threading"></a>使用執行緒和執行緒處理
 
@@ -28,13 +29,13 @@ ms.locfileid: "80588422"
 
 ## <a name="how-to-stop-a-thread"></a>如何：停止執行緒
 
-要終止線緒的執行,請使用<xref:System.Threading.CancellationToken?displayProperty=nameWithType>。 它提供了一種以協作方式停止線程的統一方法。 有關詳細資訊,請參閱[在託管線程中取消](cancellation-in-managed-threads.md)。
+若要終止執行緒的執行，請使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 。 它提供統一的方式來停止執行緒的合作。 如需詳細資訊，請參閱[managed 執行緒中的取消](cancellation-in-managed-threads.md)。
 
-有時無法以協作方式停止線程,因為它運行的第三方代碼不是為協作取消而設計的。 在這種情況下,您可能希望強制終止其執行。 要強制終止線程的執行,可以在 .NET 框架中<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>使用 方法 。 該方法會在叫用該方法的執行緒上引發 <xref:System.Threading.ThreadAbortException>。 如需詳細資訊，請參閱[終結執行緒](destroying-threads.md)。 .NET Core 中不支援<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>該方法 。 如果需要在 .NET Core 中強制終止第三方代碼的執行,請在單獨的程序中執行<xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>它並使用 。
+有時候，無法以合作方式停止執行緒，因為它會執行協力廠商程式碼，而不是針對合作取消所設計。 在此情況下，您可能會想要強制終止其執行。 若要強制終止執行執行緒，請在 .NET Framework 中，您可以使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。 該方法會在叫用該方法的執行緒上引發 <xref:System.Threading.ThreadAbortException>。 如需詳細資訊，請參閱[終結執行緒](destroying-threads.md)。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.Net Core 不支援方法。 如果您需要終止在 .NET Core 中強制執行協力廠商程式碼，請在個別進程中執行它，然後使用 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> 。
 
-在<xref:System.Threading.CancellationToken?displayProperty=nameWithType>.NET 框架 4 之前不可用。 要停止舊版 .NET Framework 版本中的線程,應使用線程同步技術手動實現協作取消。 例如,您可以創建易失性布林欄`shouldStop`位,並用它來請求線程執行的代碼停止。 有關詳細資訊,請參閱 C#<xref:System.Threading.Volatile?displayProperty=nameWithType>參考與 中的[易失性](../../csharp/language-reference/keywords/volatile.md)。
+<xref:System.Threading.CancellationToken?displayProperty=nameWithType>.NET Framework 4 之前無法使用。 若要停止舊版 .NET Framework 版本中的執行緒，您應該使用執行緒同步處理技術來手動執行合作取消。 例如，您可以建立 volatile 布林值欄位 `shouldStop` ，並用它來要求要停止的執行緒所執行的程式碼。 如需詳細資訊，請參閱[volatile](../../csharp/language-reference/keywords/volatile.md) In c # 參考和 <xref:System.Threading.Volatile?displayProperty=nameWithType> 。
 
-使用<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>方法使調用線程等待線程停止的終止。
+使用 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 方法，讓呼叫執行緒等候停止的執行緒終止。
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>如何：暫停或插斷執行緒
 
@@ -44,7 +45,7 @@ ms.locfileid: "80588422"
 
 下表列出 <xref:System.Threading.Thread>屬性的一部分：  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|若執行緒已啟動且尚未正常終止或中止，則傳回 `true`。|  
 |<xref:System.Threading.Thread.IsBackground%2A>|取得或設定布林值，指出執行緒是否為背景執行緒。 背景執行緒與前景執行緒相似，但背景執行緒不會防止處理序停止。 一旦屬於處理程序的所有前景執行緒停止，通用語言執行平台會呼叫背景執行緒上仍在執行的 <xref:System.Threading.Thread.Abort%2A> 方法來結束處理程序。 如需詳細資訊，請參閱[前景與背景執行緒](foreground-and-background-threads.md)。|  
@@ -56,4 +57,4 @@ ms.locfileid: "80588422"
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [執行緒和執行緒處理](threads-and-threading.md)
-- [平行編程式](../parallel-programming/index.md)
+- [平行程式設計](../parallel-programming/index.md)

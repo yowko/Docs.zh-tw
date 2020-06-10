@@ -1,5 +1,6 @@
 ---
 title: 如何：在 ConcurrentDictionary 中加入和移除項目
+description: 閱讀如何從 .NET 中的 ConcurrentDictionary<TKey，TValue> 集合類別新增、抓取、更新和移除專案的範例。
 ms.date: 05/04/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 6c093e907e43f9f2b978624a986dfe5d8a49869f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 827eb9db984289929c591046a4713419c9587312
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287896"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662858"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>如何：在 ConcurrentDictionary 中加入和移除項目
 

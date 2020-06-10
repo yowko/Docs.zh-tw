@@ -1,5 +1,6 @@
 ---
 title: PLINQ 簡介
+description: 瞭解如何在 .NET 中使用 PLINQ 以平行方式進行查詢。 PLINQ 代表平行語言整合查詢（LINQ）。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: e50b2bf15d9a627f70ff01616bf2c72c70d7ff33
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9dbc4fde3f72d01aee91978ed5cb0baf0895de26
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290677"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662455"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 簡介
 
@@ -41,7 +42,7 @@ PLINQ 查詢在很多方面類似於非平行 LINQ to Objects 查詢。 PLINQ �
 
 除了標準查詢運算子外，<xref:System.Linq.ParallelEnumerable> 類別還會包含一組方法，以供啟用平行執行特有的行為。 下表列出這些 PLINQ 特有的方法。
 
-|ParallelEnumerable 運算子|描述|
+|ParallelEnumerable 運算子|說明|
 |---------------------------------|-----------------|
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|PLINQ 的進入點。 指定系統應該在情況允許時平行處理其餘查詢。|
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|指定系統應該將其餘查詢當作非平行 LINQ 查詢來循序執行。|

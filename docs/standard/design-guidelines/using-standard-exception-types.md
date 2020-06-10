@@ -1,5 +1,6 @@
 ---
 title: 使用標準例外狀況類型
+description: 瞭解 .NET 中的標準例外狀況類型。 深入瞭解 SystemException、ApplicationException、ArgumentException、ComException 等等。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: b8e05f22a66fabeab28cc83a074471df29aae218
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f95529eabd87d9ec7c379b9f790e039e1192ac53
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291353"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663053"
 ---
 # <a name="using-standard-exception-types"></a>使用標準例外狀況類型
 本節說明架構所提供的標準例外狀況，以及其使用方式的詳細資料。 清單完全不是完整的。 如需其他架構例外狀況類型的使用方式，請參閱 .NET Framework 參考檔。

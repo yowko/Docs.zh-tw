@@ -1,5 +1,6 @@
 ---
 title: 檔案與資料流 I/O - .NET
+description: 瞭解檔案和資料流程 i/o 的基本概念，也就是在 .NET 中從儲存媒體傳輸資料。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 3c69e0fd23b1f8bc11fe908c66ba492f31a53f30
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2761d17846009ba06a2ffb1fc58b430f3ec9a949
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75706591"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662715"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 
@@ -97,7 +98,7 @@ ms.locfileid: "75706591"
 
 ## <a name="asynchronous-io-operations"></a>非同步 I/O 作業
 
-讀取或寫入大量資料可能會耗用大量資源。 如果您的應用程式需要保持對使用者的回應能力，您應該以非同步方式執行這些工作。 進行同步 I/O 作業時，UI 執行緒會遭到封鎖，直至耗用資源的作業完成為止。  在開發 Windows 8.x 應用商店應用時使用非同步 I/O 操作，以防止造成應用已停止工作的印象。
+讀取或寫入大量資料可能會耗用大量資源。 如果您的應用程式需要保持對使用者的回應能力，您應該以非同步方式執行這些工作。 進行同步 I/O 作業時，UI 執行緒會遭到封鎖，直至耗用資源的作業完成為止。  開發 Windows 8.x 存放區應用程式時，請使用非同步 i/o 作業，以防止建立您的應用程式已停止運作的印象。
 
 非同步成員的名稱中包含 `Async`，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.FlushAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A> 方法。 這些方法可搭配 `async` 和 `await` 關鍵字使用。
 
@@ -127,7 +128,7 @@ ms.locfileid: "75706591"
 
 隔離儲存區 (Isolated Storage) 為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 儲存區提供依使用者、組件和 (選擇性) 網域隔離的虛擬檔案系統。 隔離儲存區在應用程式未具備存取使用者檔案的權限時特別實用。 您可以藉由電腦的安全性原則所控制的方式儲存應用程式的設定或檔案。
 
-獨立存儲不適用於 Windows 8.x 應用商店應用;因此，如果存儲大小存儲，則不可用於"獨立存儲"應用。而是在<xref:Windows.Storage?displayProperty=nameWithType>命名空間中使用應用程式資料類。 如需詳細資訊，請參閱[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)。
+Windows 8.x 存放區應用程式無法使用隔離儲存區;相反地，請使用命名空間中的應用程式資料類別 <xref:Windows.Storage?displayProperty=nameWithType> 。 如需詳細資訊，請參閱[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29)。
 
 以下是實作隔離儲存區時經常使用的類別：
 
@@ -141,11 +142,11 @@ ms.locfileid: "75706591"
 
 ## <a name="io-operations-in-windows-store-apps"></a>在 Windows 市集應用程式中的 I/O 作業
 
-Windows 8.x 應用商店應用的 .NET 包含許多用於讀取和寫入流的類型;但是，此集不包括所有 .NET 框架 I/O 類型。
+適用于 Windows 8.x 存放區應用程式的 .NET 包含許多用來讀取和寫入資料流程的類型;不過，此集合不包含所有的 .NET Framework i/o 類型。
 
-在 Windows 8.x 應用商店應用中使用 I/O 操作時需要注意的一些重要差異：
+在 Windows 8.x Store 應用程式中使用 i/o 作業時，需要注意的一些重要差異：
 
-- 與檔<xref:System.IO.File>操作特別相關的類型，如 ，<xref:System.IO.FileInfo><xref:System.IO.Directory>和<xref:System.IO.DirectoryInfo>， 不包括在 Windows 8.x 應用商店應用的 .NET 中。 您應該改為使用 Windows 執行階段之 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的型別，例如 <xref:Windows.Storage.StorageFile> 與 <xref:Windows.Storage.StorageFolder>。
+- 與檔案作業特別相關的類型（例如 <xref:System.IO.File> 、 <xref:System.IO.FileInfo> <xref:System.IO.Directory> 和 <xref:System.IO.DirectoryInfo> ）不會包含在適用于 Windows 8.x 存放區應用程式的 .net 中。 您應該改為使用 Windows 執行階段之 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的型別，例如 <xref:Windows.Storage.StorageFile> 與 <xref:Windows.Storage.StorageFolder>。
 
 - 無法使用隔離儲存區，請改用[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 
@@ -153,31 +154,31 @@ Windows 8.x 應用商店應用的 .NET 包含許多用於讀取和寫入流的�
 
 - 無法使用路徑壓縮類型 <xref:System.IO.Compression.ZipFile> 和 <xref:System.IO.Compression.ZipFileExtensions>。 您應該改為使用 <xref:Windows.Storage.Compression?displayProperty=nameWithType> 命名空間中的型別。
 
-如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 有關詳細資訊，請參閱[如何：在 .NET 框架流和 Windows 運行時流](how-to-convert-between-dotnet-streams-and-winrt-streams.md)或<xref:System.IO.WindowsRuntimeStreamExtensions>轉換。
+如有需要，您可以在 .NET Framework 資料流和 Windows 執行階段資料流之間進行轉換。 如需詳細資訊，請參閱[如何：在 .NET Framework 資料流程和 Windows 執行階段資料流程之間進行轉換](how-to-convert-between-dotnet-streams-and-winrt-streams.md) <xref:System.IO.WindowsRuntimeStreamExtensions> 。
 
-有關 Windows 8.x 應用商店應用中的 I/O 操作的詳細資訊，請參閱[快速入門：讀取和寫入檔](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))。
+如需有關 Windows 8.x 存放區應用程式中 i/o 作業的詳細資訊，請參閱[快速入門：讀取和寫入](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))檔案。
 
 ## <a name="io-and-security"></a>I/O 及安全性
 
 當您使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](how-to-add-or-remove-access-control-list-entries.md)。
 
-預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 相反，對傳統的 .NET 框架應用程式使用[獨立存儲](isolated-storage.md)，或者對 Windows 8.x 應用商店應用程式使用[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
+預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 相反地，針對傳統 .NET Framework 應用程式使用[隔離儲存區](isolated-storage.md)，或使用 Windows 8.X 存放區應用[程式的應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 
 只會對已建構的資料流進行安全性檢查。 因此，請不要開啟資料流，然後將它傳遞至較不受信任的程式碼或應用程式定義域。
 
 ## <a name="related-topics"></a>相關主題
 
-- [常見 I/O 任務](common-i-o-tasks.md)\
+- [一般 i/o 工作](common-i-o-tasks.md)\
 提供與檔案、目錄和資料流相關聯的 I/O 工作清單，並且連結至每一項工作的相關內容和範例。
 
-- [非同步檔 I/O](asynchronous-file-i-o.md)\
+- [非同步檔案 i/o](asynchronous-file-i-o.md)\
 描述非同步 I/O 的效能利益和基本作業。
 
-- [隔離存儲](isolated-storage.md)\
+- [隔離儲存區](isolated-storage.md)\
 描述資料儲存機制，此機制藉著定義標準化方式將程式碼與儲存的資料產生關聯，以提供隔離和安全。
 
-- [管道](pipe-operations.md)\
+- [Ray](pipe-operations.md)\
 描述 .NET Framework 中的非同步與具名管道作業。
 
-- [記憶體映射檔](memory-mapped-files.md)\
+- [記憶體對應檔案](memory-mapped-files.md)\
 描述記憶體對應檔案，這些檔案包含磁碟檔案在虛擬記憶體中的內容。 您可以使用記憶體對應檔案來編輯超大的檔案，以及建立供處理序間通訊使用的共用記憶體。

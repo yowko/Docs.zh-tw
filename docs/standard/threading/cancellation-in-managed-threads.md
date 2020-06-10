@@ -1,5 +1,6 @@
 ---
 title: Managed 執行緒中的取消作業
+description: 瞭解 managed 執行緒中的取消作業。 瞭解非同步或長時間執行同步作業之合作取消的取消權杖。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: e56d0f71afdc9281271b7d15316a133e7c720bd0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9af4a64e50eff65023d5ed5bda868af2f8323a96
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277878"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662832"
 ---
 # <a name="cancellation-in-managed-threads"></a>Managed 執行緒中的取消作業
 從 .NET Framework 4 開始，.NET Framework 使用統一的模型來進行非同步或長時間執行的同步作業的合作式取消。 此模型是根據一個被稱為取消權杖的輕量級物件。 叫用一或多個可取消作業的物件，例如藉由建立新的執行緒或工作，會將權杖傳遞至每個作業。 個別作業可以依序將權杖的複本傳遞至其他作業。 之後的某些時候 ，建立權杖的物件可以使用它來要求作業停止活動。 只有要求的物件可以發出取消要求，而且每個接聽程式負責留意要求，並且以適當且即時的方式回應。  
@@ -52,7 +53,7 @@ ms.locfileid: "84277878"
 ## <a name="cancellation-types"></a>取消類型  
  取消架構被實作為一組相關的類型，這些會在下表中列出。  
   
-|類型名稱|描述|  
+|類型名稱|說明|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|建立取消權杖，並發出取消要求給該權杖所有複本的物件。|  
 |<xref:System.Threading.CancellationToken>|輕量型的實值類型通常做為方法參數傳遞至一或多個接聽程式。 接聽程式會監控權杖中 `IsCancellationRequested` 屬性的值，藉由輪詢、回呼，或等候控制代碼。|  

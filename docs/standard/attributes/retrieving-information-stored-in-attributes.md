@@ -1,5 +1,6 @@
 ---
 title: 擷取儲存於屬性中的資訊
+description: 瞭解如何抓取屬性中儲存的資訊，例如屬性實例、相同範圍的多個實例、針對不同範圍 & 多個實例。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fc8dcb38471d80d01d1f87993783af3d24868506
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf147a0ae6833039247c4c0878996973cc3db545
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276128"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661857"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>擷取儲存於屬性中的資訊
 擷取自訂屬性是一個簡單的程序。 首先，對想要擷取的屬性宣告執行個體。 然後，使用 <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 方法將新屬性初始化為所要擷取之屬性的值。 在將新屬性 (Attribute) 初始化之後，只要使用其屬性 (Poperty) 即可取得值。  

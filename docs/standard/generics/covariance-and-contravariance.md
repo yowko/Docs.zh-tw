@@ -1,5 +1,6 @@
 ---
 title: 泛型中的共變數和反變數
+description: 瞭解「共變數」，這可讓您使用更多衍生的型別和逆變性，這可讓您在 .NET 泛型中使用較小的衍生型別。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: b11b5fc93d9b7289e62d6abc9d3ca19027a107c5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 12de1554bb6e33b69d0d2bba24001e7e4c2d8a65
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287554"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663040"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
  共變數和反變數這兩個詞，是指使用比原本所指定更多 (較明確) 或更少 (較不明確) 衍生類型的能力。 泛型類型參數支援共變數和反變數，可在指派和使用泛型類型時提供更大的彈性。 當您參考類型系統時，共變數、反變數和不可變數的定義如下。 範例中會假設名為 `Base` 的基底類別，以及名為 `Derived`的衍生類別。  

@@ -1,5 +1,6 @@
 ---
 title: 類型成員名稱
+description: 瞭解在 .NET 中命名類型成員的指導方針，例如方法、屬性、事件和欄位。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 87cf793229cfc7d8d0547af935369a3febee41a3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290184"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662494"
 ---
 # <a name="names-of-type-members"></a>類型成員名稱
 類型由成員組成：方法、屬性、事件、建構函式及欄位。 下列各節會描述為類型成員命名的方針。

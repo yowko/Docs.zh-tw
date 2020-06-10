@@ -1,5 +1,6 @@
 ---
 title: 在 .NET 中使用 StringBuilder 類別
+description: 瞭解如何在 .NET 中使用 StringBuilder 類別。 您可以使用這個類別來修改字串，而不需要建立新的物件。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: a8116013cc20ead3be13763ce72999d2c608dbce
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b10d1c4579f10ca4fb84797ee67342825aaa9c32
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289261"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662936"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>在 .NET 中使用 StringBuilder 類別
 <xref:System.String> 物件不可變。 每次您使用 <xref:System.String?displayProperty=nameWithType> 類別的其中一個方法時，就會在記憶體中建立新的字串物件，這需要為該新物件配置新的空間。 在您需要重複修改字串的情況下，與建立新 <xref:System.String> 物件相關聯的額外負荷可能成本高昂。 當您想要修改字串，而不建立新物件時，可以使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別。 例如，在迴圈中將許多字串串連在一起時，可以使用 <xref:System.Text.StringBuilder> 類別來提升效能。  

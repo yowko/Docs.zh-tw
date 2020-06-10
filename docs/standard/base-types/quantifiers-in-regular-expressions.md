@@ -1,5 +1,6 @@
 ---
 title: 規則運算式中的數量詞
+description: 瞭解正則運算式數量詞，這會指定要比對的輸入中必須有多少個字元、群組或字元類別的實例。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: dbfe4422b89b6223988ec9c6034d4b91b6ec8b5d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2fc47a834f8f5b18021aa4f321345b8d7e4e8459
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276144"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662884"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>規則運算式中的數量詞
 數量詞指定輸入中要有多少字元、群組或字元類別的執行個體，才能找到相符項目。  下表列出 .NET 支援的數量詞。  
   
-|Greedy (窮盡) 數量詞|Lazy (最少) 數量詞|描述|  
+|Greedy (窮盡) 數量詞|Lazy (最少) 數量詞|說明|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|比對零或多次。|  
 |`+`|`+?`|比對一或多次。|  

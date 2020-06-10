@@ -1,5 +1,6 @@
 ---
 title: 資料流程 (工作平行程式庫)
+description: 瞭解如何在工作平行程式庫（TPL）中使用資料流程元件，以改善啟用並行的應用程式的穩定性。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: e1d4dc596f57a4c75c11806f95099ee5593c6c03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285530"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662546"
 ---
 # <a name="dataflow-task-parallel-library"></a>資料流程 (工作平行程式庫)
 工作平行程式庫 (TPL) 提供資料流程元件來協助增加啟用並行的應用程式之穩定性。 這些資料流程元件合稱為「TPL 資料流程程式庫」**。 此資料流程模型以提供針對廣泛資料流程以及管線工作的同處理序訊息傳遞，將以行動為基礎的程式撰寫升級。 資料流程元件會在 TPL 的類型與排程基礎結構上建置，並整合 C#、Visual Basic 以及 F# 語言對非同步程式設計的支援。 當您有多個必須非同步式互相溝通的作業時，或當您因為資料變為可用而要處理資料時，這些資料流程元件就會相當實用。 例如，請考慮一個應用程式，它會處理來自網路攝影機的影像資料。 使用資料流模型，應用程式就可以在影像畫面可用時處理它們。 例如，如果應用程式因執行光源修正或消除紅眼而增強影像畫面，則您可以建立資料流程元件的「管線」**。 此管線的每個階段都可能使用更廣泛的平行處理原則功能 (例如 TPL 提供的功能) 來轉換該影像。  

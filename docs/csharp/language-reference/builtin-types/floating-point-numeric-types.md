@@ -1,6 +1,6 @@
 ---
 title: 浮點數值型別 - C# 參考
-description: 瞭解內建 C# 浮點型態:浮動點、雙數和十進制
+description: '瞭解內建的 c # 浮點類型： float、double 和 decimal'
 ms.date: 02/10/2020
 f1_keywords:
 - float
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a1142d1aa04003ae1942902672cfc7a05edc99c0
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121474"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662663"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮點數值型別 (C# 參考)
 
-*浮點數值類型*表示實數。 所有浮點數值類型都是[值類型](value-types.md)。 它們也是[簡單的類型](value-types.md#built-in-value-types),可以使用[文本](#real-literals)初始化。 所有浮點數值類型都支援[算術](../operators/arithmetic-operators.md)、[比較](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)運算符。
+*浮點數數值型別*代表實數。 所有浮點數數值型別都是實[數值型別](value-types.md)。 它們也是[簡單類型](value-types.md#built-in-value-types)，而且可以使用[常](#real-literals)值進行初始化。 所有浮點數數值型別都支援[算術](../operators/arithmetic-operators.md)、比較和[等號](../operators/equality-operators.md)[比較](../operators/comparison-operators.md)運算子。
 
 ## <a name="characteristics-of-the-floating-point-types"></a>浮點數型別的特性
 
 C# 支援下列預先定義的浮點數型別：
   
-|C# 型別/關鍵字|大概範圍|Precision|大小|.NET 類型|
+|C# 型別/關鍵字|大概範圍|準確率|大小|.NET 類型|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|±1.5 x 10<sup>−45</sup> 到 ±3.4 x 10<sup>38</sup>|~6-9 位數|4 個位元組|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|±5.0 × 10<sup>−324</sup> 至 ±1.7 × 10<sup>308</sup>|~15-17 位數|8 個位元組|<xref:System.Double?displayProperty=nameWithType>|
@@ -50,14 +50,14 @@ System.Double b = 12.3;
 
 相較於 `float` 與 `double`，因為 `decimal` 型別的精確度較高且範圍較小，所以非常適合財務與金融計算。
 
-您可以在運算式中混合[積分](integral-numeric-types.md)類型和`float``double`和類型。 在這種情況下,積分類型將隱式轉換為其中一個浮點類型,如有必要,`float`該類型將隱式轉換為`double`。 運算式評估如下：
+您可以在運算式中混合[整數](integral-numeric-types.md)類資料類型和 `float` 和 `double` 類型。 在此情況下，整數類資料類型會隱含地轉換成其中一個浮點類型，並在必要時，將 `float` 類型隱含地轉換成 `double` 。 運算式評估如下：
 
-- 如果表示式中有`double`類型,則表示式在關係與相等`double`[`bool`](bool.md)比較 中計算到或 。
-- 如果運算式中沒有`double`類型,則運算式將計算到`float``bool`或在關係和相等比較中。
+- 如果運算式中有 `double` 類型，則運算式會評估為 `double` ，或 [`bool`](bool.md) 在關聯式和相等比較中為。
+- 如果運算式中沒有 `double` 類型，則運算式會評估為 `float` ，或 `bool` 在關聯式和相等比較中為。
 
-您還可以在運算式中混合積分類型和`decimal`類型。 在這種情況下,積分類型隱式轉換為`decimal`類型,運算式在關係和相等比較`decimal``bool`中計算為或 。
+您也可以在運算式中混合整數類資料類型和 `decimal` 類型。 在此情況下，整數類資料類型會隱含地轉換成 `decimal` 類型，而運算式會 `decimal` `bool` 在關聯式和相等比較中，評估為，或為。
 
-不能將`decimal`類型與 運算式`float``double`中的和類型混合。 在這種情況下,如果要執行算術、比較或相等操作,則必須顯式將操作數從 類型轉換`decimal`為 類型,如下例所示:
+您不能 `decimal` 在運算式中混用類型與 `float` 和 `double` 類型。 在此情況下，如果您想要執行算術、比較或相等運算，您必須明確地將運算元從或轉換成 `decimal` 類型，如下列範例所示：
 
 ```csharp-interactive
 double a = 1.0;
@@ -68,15 +68,15 @@ Console.WriteLine((decimal)a + b);
 
 您可以使用[標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)或[自訂數值格式字串](../../../standard/base-types/custom-numeric-format-strings.md)，設定浮點數值格式。
 
-## <a name="real-literals"></a>真實文字
+## <a name="real-literals"></a>實際常值
 
-真實文本的類型由其後綴決定,如下所示:
+實際常值的類型取決於其後置詞，如下所示：
 
-- 沒有尾尾或`d`包含`D`後的文字的類型`double`
-- 以`f`文字`F`的文字的類型`float`
-- 以`m`文字`M`的文字的類型`decimal`
+- 不含尾碼或具有 `d` 或尾碼的常 `D` 值屬於類型`double`
+- 具有 `f` 或尾碼的常 `F` 值屬於類型`float`
+- 具有 `m` 或尾碼的常 `M` 值屬於類型`decimal`
 
-以下代碼展示每個範例:
+下列程式碼示範每個的範例：
 
 ```csharp
 double d = 3D;
@@ -90,13 +90,13 @@ decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-前面的範例還顯示`_`用作*數位分隔符*的用途,該分隔符支援從 C# 7.0 開始。 您可以將數字分隔符用於所有類型的數字文本。
+上述範例也會示範如何使用 `_` 做為*數位分隔符號*，從 c # 7.0 開始支援。 您可以使用數位分隔符號搭配所有類型的數值常值。
 
-您還可以使用科學記數法,即指定真實文本的指數部分,如下例所示:
+您也可以使用科學記號標記法，也就是指定實際常值的指數部分，如下列範例所示：
 
 ```csharp-interactive
 double d = 0.42e2;
-Console.WriteLine(d);  // output 42;
+Console.WriteLine(d);  // output 42
 
 float f = 134.45E-2f;
 Console.WriteLine(f);  // output: 1.3445
@@ -107,20 +107,20 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>轉換
 
-浮點數值類型之間只有一個隱式轉換:從`float`到`double`。 但是,您可以將任何浮點類型轉換為具有[顯式強制轉換](../operators/type-testing-and-cast.md#cast-expression)的任何其他浮點類型。 有關詳細資訊,請參閱[內建數位轉換](numeric-conversions.md)。
+浮點數數值型別之間只有一個隱含轉換：從 `float` 到 `double` 。 不過，您可以使用[明確轉換](../operators/type-testing-and-cast.md#cast-expression)，將任何浮點類型轉換成任何其他浮點類型。 如需詳細資訊，請參閱[內建數值轉換](numeric-conversions.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的下列幾節：
 
-- [浮點型態](~/_csharplang/spec/types.md#floating-point-types)
-- [小數型別](~/_csharplang/spec/types.md#the-decimal-type)
-- [真實文字](~/_csharplang/spec/lexical-structure.md#real-literals)
+- [浮點類型](~/_csharplang/spec/types.md#floating-point-types)
+- [Decimal 類型](~/_csharplang/spec/types.md#the-decimal-type)
+- [實際常值](~/_csharplang/spec/lexical-structure.md#real-literals)
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [值類型](value-types.md)
+- [C# 參考資料](../index.md)
+- [實值型別](value-types.md)
 - [整數型別](integral-numeric-types.md)
 - [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET 中的數值](../../../standard/numerics.md)

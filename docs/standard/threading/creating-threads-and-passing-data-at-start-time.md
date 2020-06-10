@@ -1,5 +1,6 @@
 ---
 title: 建立執行緒，並在啟動期間傳遞資料
+description: 瞭解如何在 .NET 中的作業系統進程開始時，建立執行緒並傳遞資料。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - threading [.NET Framework], passing data to threads
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-ms.openlocfilehash: a628cbb4c9ec8e1c9ccd9fd73e72a82ecf2b2836
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 811028d3c853441ff3a61d3628a44e5c65ba7059
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138096"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84661910"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>建立執行緒，並在啟動期間傳遞資料
 
@@ -63,5 +64,5 @@ ms.locfileid: "73138096"
 - <xref:System.Threading.ThreadStart>
 - <xref:System.Threading.ParameterizedThreadStart>
 - <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>
-- [執行緒處理](index.md)
+- [執行緒](index.md)
 - [使用執行緒和執行緒處理](using-threads-and-threading.md)

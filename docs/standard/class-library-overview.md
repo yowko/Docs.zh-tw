@@ -1,5 +1,6 @@
 ---
 title: .NET 類別庫概觀
+description: 瞭解 .NET 類別庫。 .NET 部署包含類別、介面、委派和實數值型別，以提供系統功能的存取權。
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289235"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662923"
 ---
 # <a name="net-class-library-overview"></a>.NET 類別庫概觀
 
@@ -84,19 +85,19 @@ ms.locfileid: "84289235"
   
  下表列出 .NET 所提供基底類型的清單、簡要描述各類型，並且指示 Visual Basic、C#、C++ 和 F# 中的對應類型。  
   
-|類別|類別名稱|描述|Visual Basic 資料類型|C# 資料型別|C++/CLI 資料類型|F# 資料類型|  
+|類別|類別名稱|說明|Visual Basic 資料類型|C# 資料型別|C++/CLI 資料類型|F# 資料類型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整數|<xref:System.Byte>|8 位元不帶正負號的整數。|**節**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8 位元帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**SByte**|**sbyte**|**char**<br /> -或-<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|16 位元帶正負號的整數。|**短缺**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32 位元帶正負號的整數。|**介於**|**int**|**int**<br /><br /> -或-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 位元帶正負號的整數。|**整數**|**int**|**int**<br /><br /> -或-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 位元帶正負號的整數。|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|32 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**UInteger**|**uint**|**不帶正負號的整數**<br /> -或-<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64 位元不帶正負號的整數。<br /><br /> 不符合 CLS 標準。|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|浮點|<xref:System.Single>|單精確度 (32 位元) 浮點數。|**Single**|**float**|**float**|**float32**<br> 或<br>**single**|  
+|浮點數|<xref:System.Single>|單精確度 (32 位元) 浮點數。|**Single**|**float**|**float**|**float32**<br> 或<br>**single**|  
 ||<xref:System.Double>|雙精度 (64 位元) 浮點數。|**兩**|**double**|**double**|**float**<br> 或 <br> **double**|  
-|邏輯|<xref:System.Boolean>|布林值 (true 或 false)。|**Boolean**|**bool**|**bool**|**bool**|  
+|邏輯|<xref:System.Boolean>|布林值 (true 或 false)。|**布林值**|**bool**|**bool**|**bool**|  
 |其他|<xref:System.Char>|Unicode (16 位元) 字元。|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|這是一個 128 位元的十進位值。|**十進位**|**decimal**|**十進位**|**decimal**|  
 ||<xref:System.IntPtr>|帶正負號的整數，其大小取決於基礎平台 (在 32 位元平台為 32 位元值，而在 64 位元平台為 64 位元值)。|**IntPtr**<br /><br /> 非內建型別|**IntPtr**<br /><br /> 非內建型別|**IntPtr**<br /><br /> 非內建型別|**unativeint**|  

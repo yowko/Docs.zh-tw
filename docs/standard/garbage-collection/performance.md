@@ -1,17 +1,18 @@
 ---
 title: 記憶體回收和效能
+description: 瞭解垃圾收集和記憶體使用量的相關問題。 瞭解如何將垃圾收集對應用程式的影響降至最低。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 1d9c72a64d172dcadf1bff1b1edf3050ca5f7d05
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: dee5a4b54806bdadc18d759c5df7016da060fd75
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287619"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662845"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 
