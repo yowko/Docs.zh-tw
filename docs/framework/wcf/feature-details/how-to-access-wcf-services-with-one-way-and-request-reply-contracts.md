@@ -2,15 +2,15 @@
 title: HOW TO：使用單向和要求-回覆合約來存取 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c8bd0d21be1d87d536eb6f943e782fc4da352a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185148"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597185"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>HOW TO：使用單向和要求-回覆合約來存取 WCF 服務
-以下過程介紹如何訪問定義單向協定和請求-回復協定且不使用雙工通訊模式的 Windows 通信基礎 （WCF） 服務。  
+下列程式描述如何存取定義單向合約和要求-回復合約，而不使用雙工通訊模式的 Windows Communication Foundation （WCF）服務。  
   
 ### <a name="to-define-the-service"></a>若要定義服務  
   
@@ -109,7 +109,7 @@ ms.locfileid: "79185148"
   
 ### <a name="to-access-the-service"></a>若要存取服務  
   
-1. 使用中繼資料交換終結點位址運行[服務模型中繼資料實用程式工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用以下命令列為服務創建用戶端類：`Svcutil http://localhost:8000/Service`[服務模型中繼資料實用程式工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成一組介面和類，如以下示例代碼所示。  
+1. 使用中繼資料交換端點位址執行[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md) ，以使用下列命令列來建立服務的用戶端類別： `Svcutil http://localhost:8000/Service` [System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)會產生一組介面和類別，如下列範例程式碼所示。  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -400,6 +400,6 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [單向服務](one-way-services.md)

@@ -1,33 +1,33 @@
 ---
 title: 如何安裝 ML.NET 命令列介面 (CLI) 工具
-description: 瞭解如何安裝、升級、降級和卸載ML.NET命令列介面 （CLI） 工具。
-ms.date: 12/18/2019
+description: 瞭解如何安裝、升級、降級和卸載 ML.NET 命令列介面（CLI）工具。
+ms.date: 06/08/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 9f678c7117d32bf817139951db7eef2c3d0f5eb2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13203246411deadf3ab13a5eba0d2c8e6e9027c5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848635"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602267"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>如何安裝 ML.NET 命令列介面 (CLI) 工具
 
-瞭解如何在 Windows、Mac 或 Linux 上安裝ML.NET CLI（命令列介面）。
+瞭解如何在 Windows、Mac 或 Linux 上安裝 ML.NET CLI （命令列介面）。
 
-ML.NET CLI 使用自動機器學習 （AutoML） 和培訓資料集生成高品質ML.NET模型和原始程式碼。
+ML.NET CLI 會使用自動化機器學習（AutoML）和訓練資料集，產生良好品質的 ML.NET 模型和原始程式碼。
 
 > [!NOTE]
 > 本主題參考 ML.NET CLI 和 ML.NET AutoML，它們目前為公開預覽版，因此内容可能會有變更。
 
 ## <a name="pre-requisites"></a>必要條件
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-- (選擇性) [Visual Studio 2017 或 2019](https://visualstudio.microsoft.com/vs/)
+- 選擇性[Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 
-您可以通過按`F5`鍵或使用`dotnet run`（.NET 核心 CLI）使用 Visual Studio 運行生成的 C# 代碼專案。
+您可以按下 `F5` 鍵或使用（.NET Core CLI），以 Visual Studio 執行產生的 c # 程式碼專案 `dotnet run` 。
 
-注意：如果在安裝[.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)後，`dotnet tool`該命令不起作用，請從 Windows 登出並重新登錄。
+注意：如果在安裝之後 .NET Core SDK `dotnet tool` 命令無法運作，請登出 Windows 並重新登入。
 
 ## <a name="install"></a>安裝
 
@@ -54,7 +54,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 mlnet
 ```
 
-您應該會看到 mlnet 工具可用命令的說明，例如 'auto-train' 命令。
+您應該會看到 mlnet 工具（例如 ' 分類 ' 命令）可用命令的說明。
 
 ## <a name="install-a-specific-release-version"></a>安裝特定的發行版本
 
@@ -122,7 +122,7 @@ dotnet tool update -g mlnet
 
 ML.NET CLI 可以安裝在預設目錄或特定位置。 預設目錄如下：
 
-| OS          | Path                          |
+| OS          | 路徑                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -134,9 +134,9 @@ ML.NET CLI 可以安裝在預設目錄或特定位置。 預設目錄如下：
 通用工具也可以安裝在特定目錄中。 安裝在特定目錄時，使用者必須確保命令可用，方法是在路徑中包含該目錄、使用指定的目錄呼叫命令，或從指定的目錄中呼叫工具。
 在此情況下，.NET Core CLI 不會將這個位置自動新增至 PATH 環境變數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ML.NET CLI 概述](../automate-training-with-cli.md)
-- [教程：使用 cLI ML.NET 分析情緒](../tutorials/sentiment-analysis-cli.md)
+- [ML.NET CLI 總覽](../automate-training-with-cli.md)
+- [教學課程：使用 ML.NET CLI 來分析情感](../tutorials/sentiment-analysis-cli.md)
 - [ML.NET CLI auto-train 命令參考指南](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI 中的遙測](../resources/ml-net-cli-telemetry.md)

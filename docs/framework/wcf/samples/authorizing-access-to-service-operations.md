@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-ms.openlocfilehash: c2ad6977674666ef65df1ea4cfe58cfd4bff8b69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3097c86f50a75dec8a649ca4e1edd2511a046ca8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585528"
 ---
 # <a name="authorizing-access-to-service-operations"></a>授權存取服務作業
-此示例演示如何使用[\<服務授權>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)啟用使用屬性<xref:System.Security.Permissions.PrincipalPermissionAttribute>來授權訪問服務操作。 此示例基於["入門"](../../../../docs/framework/wcf/samples/getting-started-sample.md)示例。 服務和用戶端使用[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)配置。 `mode` `Message` `clientCredentialType`[安全\<>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)的屬性已設置為 ，並已設置為`Windows`。 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 會套用至每個服務方法，並且用來限制每個作業的存取。 呼叫者必須是 Windows 系統管理員才能存取每個作業。  
+這個範例會示範如何使用來啟用屬性的使用，以授與 [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) <xref:System.Security.Permissions.PrincipalPermissionAttribute> 服務作業的存取權。 這個範例是以[消費者入門](getting-started-sample.md)範例為基礎。 服務和用戶端是使用進行設定 [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) 。 的 `mode` 屬性已 [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) 設定為 `Message` ，而且已 `clientCredentialType` 設定為 `Windows` 。 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 會套用至每個服務方法，並且用來限制每個作業的存取。 呼叫者必須是 Windows 系統管理員才能存取每個作業。  
   
  在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 服務設定檔使用[\<服務授權>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)來設置屬性`principalPermissionMode`：  
+ 服務設定檔會使用 [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) 來設定 `principalPermissionMode` 屬性：  
   
 ```xml  
 <behaviors>  
@@ -53,12 +53,12 @@ public double Add(double n1, double n2)
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 如果用戶端是以 Administrators 群組成員的帳戶執行，該用戶端便能與每個作業進行成功通訊，否則就會拒絕存取。 為了體驗授權失敗，這時要使用不屬於 Administrators 群組的帳戶來執行用戶端。 在主控台視窗中按 ENTER 鍵，即可關閉用戶端。  
   
- 藉由實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler>，即可向服務通知授權失敗。 有關實現`IErrorHandler`的資訊[，請參閱擴展對錯誤處理和報告的控制](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)。  
+ 藉由實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler>，即可向服務通知授權失敗。 如需有關執行的資訊，請參閱[擴充對錯誤處理和報告的控制](extending-control-over-error-handling-and-reporting.md) `IErrorHandler` 。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。  
   
-3. 要在單電腦或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
+3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  

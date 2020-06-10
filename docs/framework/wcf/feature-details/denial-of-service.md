@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964429"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599265"
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
@@ -17,9 +17,9 @@ ms.locfileid: "75964429"
 ## <a name="excess-memory-consumption"></a>過多記憶體耗用  
  讀取具有大量唯一本機名稱、命名空間或前置詞的 XML 文件時，會發生問題。 如果您正在使用衍生自 <xref:System.Xml.XmlReader> 的類別，且您為每個項目呼叫 <xref:System.Xml.XmlReader.LocalName%2A>、<xref:System.Xml.XmlReader.Prefix%2A> 或 <xref:System.Xml.XmlReader.NamespaceURI%2A> 屬性，則傳回的字串會新增至 <xref:System.Xml.NameTable>。 <xref:System.Xml.NameTable> 所持有的集合大小一定不會減小，它會建立字串控制代碼的虛擬「記憶體遺漏」(Memory Leak)。  
   
- 緩和的方法包括：  
+ 風險降低的方式包括：  
   
-- 衍生自 <xref:System.Xml.NameTable> 類別並強制執行最大的大小配額 (當配額已滿時，您無法避免使用 <xref:System.Xml.NameTable> 或切換 <xref:System.Xml.NameTable>)。  
+- 衍生自 <xref:System.Xml.NameTable> 類別並強制執行最大的大小配額  (當配額已滿時，您無法避免使用 <xref:System.Xml.NameTable> 或切換 <xref:System.Xml.NameTable>)。  
   
 - 避免使用提到的屬性，並盡量搭配使用 <xref:System.Xml.XmlReader.MoveToAttribute%2A> 方法和 <xref:System.Xml.XmlReader.IsStartElement%2A> 方法，這些方法不會傳回字串，這樣就可避免 <xref:System.Xml.NameTable> 集合太滿的問題。  
   
@@ -44,10 +44,10 @@ ms.locfileid: "75964429"
 ## <a name="auditing-event-log-can-be-filled"></a>稽核事件記錄檔已滿  
  如果惡意使用者發現已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。 如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。  
   
- 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需使用事件檢視器來查看和管理事件記錄檔的詳細資訊，請參閱[事件檢視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))。 如需詳細資訊，請參閱「[審核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」。  
+ 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需使用事件檢視器來查看和管理事件記錄檔的詳細資訊，請參閱[事件檢視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))。 如需詳細資訊，請參閱「[審核](auditing-security-events.md)」。  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>不正確 IAuthorizationPolicy 的執行可能導致服務變成沒有回應  
- 在 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 介面的錯誤執行上呼叫 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法，可能會導致服務沒有回應。  
+ <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>在發生錯誤的介面執行上呼叫方法， <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 可能會導致服務沒有回應。  
   
  避免方法：僅使用信任的程式碼。 也就是說，僅使用您所撰寫並測試過的程式碼，或使用來自可信任提供者的程式碼。 在沒有謹慎的考慮之前，請勿將不受信任的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 延伸項目外掛至您的程式碼。 這個做法適用於服務實作中使用的所有延伸項目。 WCF 不會區分使用擴充點插入的應用程式代碼和外部程式碼。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75964429"
   
  影響是 WCF 服務可能無法在具有自動註冊的網域上開啟。 這是因為預設服務 X.509 認證搜尋準則可能不明確，起因則為存在多個具有電腦完整網域名稱系統 (DNS) 名稱的憑證。 某個憑證可能源自自動註冊，而其他憑證可能為自行發行的憑證。  
   
- 若要減輕此問題，請在[\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)上使用更精確的搜尋準則，以參考要使用的確切憑證。 例如，請使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 選項，並依照其唯一指紋 (雜湊) 指定憑證。  
+ 若要減輕此問題，請在上使用更精確的搜尋條件，以參考要使用的確切憑證 [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) 。 例如，請使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 選項，並依照其唯一指紋 (雜湊) 指定憑證。  
   
  如需自動註冊功能的詳細資訊，請參閱[Windows Server 2003 中的憑證自動註冊](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10))。  
   
@@ -75,16 +75,16 @@ ms.locfileid: "75964429"
  當服務順利驗證用戶端而且是藉由服務建立安全工作階段時，服務會持續追蹤工作階段，直到用戶端取消服務或工作階段到期為止。 每個建立的工作階段都不利於服務之同時作用中工作階段的數量上限。 達到這個限制時，將會拒絕嘗試以該服務建立新工作階段的用戶端，直到一或多個作用中工作階段到期或由用戶端所取消為止。 用戶端在服務中可以擁有多個工作階段，而且會對該限制計數每個工作階段。  
   
 > [!NOTE]
-> 當您使用具狀態的工作階段時，之前的段落就沒有作用。 如需可設定狀態會話的詳細資訊，請參閱[如何：為安全會話建立安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+> 當您使用具狀態的工作階段時，之前的段落就沒有作用。 如需可設定狀態會話的詳細資訊，請參閱[如何：為安全會話建立安全性內容權杖](how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
  若要避免這個情況，請設定 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性，以設定作用中工作階段數的上限和工作階段的最長存留時間。  
   
 ## <a name="see-also"></a>請參閱
 
-- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [安全性考量](security-considerations-in-wcf.md)
+- [資訊洩漏](information-disclosure.md)
+- [權限提高](elevation-of-privilege.md)
+- [拒絕服務](denial-of-service.md)
+- [重新執行攻擊](replay-attacks.md)
+- [竄改](tampering.md)
+- [不支援的案例](unsupported-scenarios.md)

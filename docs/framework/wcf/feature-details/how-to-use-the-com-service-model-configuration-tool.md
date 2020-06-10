@@ -1,17 +1,17 @@
 ---
-title: 作法：使用 COM+ 服務模型組態工具
+title: HOW TO：使用 COM+ 服務模型組態工具
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 67bacade0435f1c63bc79b3282f6bded55b67304
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f9e761bafd84726b51a2010a932c68c67c37f899
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991577"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595280"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>作法：使用 COM+ 服務模型組態工具
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>HOW TO：使用 COM+ 服務模型組態工具
 一旦您選取了適當的裝載模式，請使用 COM+ 服務模型組態命令列工具 (ComSvcConfig.exe) 來設定將公開為 Web 服務的應用程式介面。  
   
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "70991577"
   
  在 Windows 7 電腦上使用 ComSvcConfig.exe 設定 Web 服務以使用最新的服務模型版本 (目前為 4.5 版) 時，請執行下列步驟：  
   
-1. 將登錄機碼`[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR`設定為0x00000001 的 DWORD 值  
+1. 將登錄機碼設定 `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` 為0x00000001 的 DWORD 值  
   
 2. 執行 comsvcconfig.exe  
   
@@ -41,7 +41,7 @@ ms.locfileid: "70991577"
   
      此命令會將 `IFinances` 元件的 `ItemOrders.IFinancial` 介面 (來自 OnlineStore COM+ 應用程式) 新增到即將公開為 Web 服務的介面集合。 服務將使用 COM+ 裝載模式，因此需要明確的應用程式啟動。  
   
-     雖然萬用字元星號（\*）字元可用於元件和介面，但請避免使用它，因為您可能只想要將選取的功能公開為 Web 服務。 如果與此元件的未來版本一起執行，使用萬用字元會不小心將決定組態語法時尚不存在的介面一併公開出來。  
+     雖然萬用字元星號（ \* ）字元可用於元件和介面，但請避免使用它，因為您可能只想要將選取的功能公開為 Web 服務。 如果與此元件的未來版本一起執行，使用萬用字元會不小心將決定組態語法時尚不存在的介面一併公開出來。  
   
      /verbose 選項會指示工具在任何錯誤旁邊加上警告。  
   
@@ -109,6 +109,6 @@ ms.locfileid: "70991577"
     ComSvcConfig.exe /?  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [整合 COM+ 應用程式概觀](integrating-with-com-plus-applications-overview.md)

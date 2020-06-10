@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: db6bca8728789879f9bfea40904bfc80352d1dbe
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 9239e8bd9b85986d41006c4b2a21b6f2304e8275
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601227"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>HOW TO：使用程式碼發行服務的中繼資料
 這是討論 Windows Communication Foundation （WCF）服務發行中繼資料的兩個 how to 主題之一。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用程式碼發行服務的中繼資料。  
   
 > [!CAUTION]
-> 本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 若您的服務需要以安全的方法發行中繼資料。 請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
+> 本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 若您的服務需要以安全的方法發行中繼資料。 請參閱[自訂安全中繼資料端點](../samples/custom-secure-metadata-endpoint.md)。  
   
- 如需在設定檔案中發行中繼資料的詳細資訊，請參閱[如何：使用設定檔發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)。 發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。 若要確定程式碼可以運作，您必須建立基本的 WCF 服務。 下列程式碼提供您基本的自我裝載服務。  
+ 如需在設定檔案中發行中繼資料的詳細資訊，請參閱[如何：使用設定檔發行服務的中繼資料](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)。 發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。 若要確定程式碼可以運作，您必須建立基本的 WCF 服務。 下列程式碼提供您基本的自我裝載服務。  
   
  [!code-csharp[htPublishMetadataCode#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#0)]
  [!code-vb[htPublishMetadataCode#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#0)]  
@@ -69,7 +69,7 @@ ms.locfileid: "84144912"
      [!code-vb[htPublishMetadataCode#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#9)]  
   
     > [!NOTE]
-    > 如果您沒有將任何端點加入至服務中，執行階段會為您加入預設端點。 在這個範例中，由於服務將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 設定為 `true`，表示服務已啟用中繼資料發行。 如需預設端點的詳細資訊，請參閱[簡化](../../../../docs/framework/wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)設定。  
+    > 如果您沒有將任何端點加入至服務中，執行階段會為您加入預設端點。 在這個範例中，由於服務將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 設定為 `true`，表示服務已啟用中繼資料發行。 如需預設端點的詳細資訊，請參閱[簡化](../simplified-configuration.md)的設定和[WCF 服務的簡化](../samples/simplified-configuration-for-wcf-services.md)設定。  
   
 9. 開啟服務主機並等候傳入呼叫。 當使用者按下 ENTER 鍵時，關閉服務主機。  
   
@@ -86,10 +86,10 @@ ms.locfileid: "84144912"
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：於受管理的應用程式中裝載 WCF 服務](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [自我裝載](../../../../docs/framework/wcf/samples/self-host.md)
-- [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [HOW TO：使用組態檔發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [如何：於受管理的應用程式中裝載 WCF 服務](../how-to-host-a-wcf-service-in-a-managed-application.md)
+- [自我裝載](../samples/self-host.md)
+- [中繼資料架構概觀](metadata-architecture-overview.md)
+- [使用中繼資料](using-metadata.md)
+- [HOW TO：使用組態檔發行服務的中繼資料](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
