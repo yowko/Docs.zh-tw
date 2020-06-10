@@ -2,12 +2,12 @@
 title: System.ServiceModel.Security.SecurityServerSessionKeyUpdated
 ms.date: 03/30/2017
 ms.assetid: 2740a8e1-b775-464f-8ef4-6c44640285a0
-ms.openlocfilehash: 8341143a16f8dfc76ebf5c8c3c7af5a7165a563d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e3e1593feaa8cf612e06d3f919c8c4bd537c802
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792271"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595800"
 ---
 # <a name="systemservicemodelsecuritysecurityserversessionkeyupdated"></a>System.ServiceModel.Security.SecurityServerSessionKeyUpdated
 System.ServiceModel.Security.SecurityServerSessionKeyUpdated  
@@ -15,8 +15,8 @@ System.ServiceModel.Security.SecurityServerSessionKeyUpdated
 ## <a name="description"></a>描述  
  伺服器已更新安全性工作階段金鑰。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

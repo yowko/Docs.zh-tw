@@ -3,14 +3,14 @@ title: .NET Core SDK 和執行時間相依性-.NET Core
 description: 詳細說明在 Windows、Linux 和 macOS 上安裝 .NET Core SDK 和執行時間的作業系統和 CPU 架構必要條件。
 author: leecow
 ms.author: leecow
-ms.date: 04/30/2020
+ms.date: 06/01/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 81f6ab436428d71f71d9fd0f560bd2b0512a519b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895481"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590756"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 相依性和需求
 
@@ -28,7 +28,7 @@ ms.locfileid: "82895481"
 .NET Core 3.1 支援下列 Windows 版本：
 
 > [!NOTE]
-> 代表`+`最小版本的符號。
+> `+`代表最小版本的符號。
 
 | OS                            | 版本                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
@@ -46,7 +46,7 @@ ms.locfileid: "82895481"
 .NET Core 3.0 支援下列 Windows 版本：
 
 > [!NOTE]
-> 代表`+`最小版本的符號。
+> `+`代表最小版本的符號。
 
 | OS                            | 版本                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
@@ -57,14 +57,14 @@ ms.locfileid: "82895481"
 
 如需 .NET Core 3.0 支援的作業系統、發行版本和生命週期原則的詳細資訊，請參閱[.Net core 3.0 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。
 
-# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2。2](#tab/netcore22)
 
 *.NET Core 2.2 目前不受支援。如需詳細資訊，請參閱[.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
 
 .NET Core 2.2 支援下列 Windows 版本：
 
 > [!NOTE]
-> 代表`+`最小版本的符號。
+> `+`代表最小版本的符號。
 
 | OS                            | 版本                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
@@ -80,7 +80,7 @@ ms.locfileid: "82895481"
 .NET Core 2.1 支援下列 Windows 版本：
 
 > [!NOTE]
-> 代表`+`最小版本的符號。
+> `+`代表最小版本的符號。
 
 | OS                            | 版本                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
@@ -120,7 +120,7 @@ ms.locfileid: "82895481"
 >
 > \- 或 -
 >
-> 找到*程式庫用 hostfxr* ，但從*C\\\<： path_to_app>\\用 hostfxr*載入失敗。
+> 找到*程式庫用 hostfxr* ，但從*C： \\ \<path_to_app> \\ 用 hostfxr*載入它失敗。
 
 ::: zone-end
 
@@ -133,7 +133,7 @@ ms.locfileid: "82895481"
 下列 Linux 發行版本/版本支援 .NET Core 3.1：
 
 > [!NOTE]
-> 代表`+`最小版本的符號。
+> `+`代表最小版本的符號。
 
 | OS                             | 版本               | 架構    |
 | ------------------------------ | --------------------- | ---------------- |
@@ -164,7 +164,7 @@ ms.locfileid: "82895481"
 下列 Linux 發行版本/版本支援 .NET Core 3.0：
 
 > [!NOTE]
-> 代表`+`最小版本的符號。
+> `+`代表最小版本的符號。
 
 | OS                             | 版本               | 架構    |
 | ------------------------------ | --------------------- | ---------------- |
@@ -183,7 +183,7 @@ ms.locfileid: "82895481"
 
 如需如何在 ARM64 上安裝 .NET Core 3.0 的詳細資訊，請參閱 [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213) (在 Linux ARM64 上安裝 .NET Core 3.0)。
 
-# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2。2](#tab/netcore22)
 
 *.NET Core 2.2 目前不受支援。如需詳細資訊，請參閱[.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
 
@@ -192,7 +192,7 @@ ms.locfileid: "82895481"
 下列 Linux 發行版本/版本支援 .NET Core 2.2：
 
 > [!NOTE]
-> 代表`+`最小版本的符號。
+> `+`代表最小版本的符號。
 
 | OS                             |  版本                |  架構   |
 | ------------------------------ | ----------------------- | ---------------- |
@@ -216,7 +216,7 @@ ms.locfileid: "82895481"
 下列 Linux 發行版本/版本支援 .NET Core 2.1：
 
 > [!NOTE]
-> 代表`+`最小版本的符號。
+> `+`代表最小版本的符號。
 
 | OS                             |  版本                |  架構   |
 | ------------------------------ | ----------------------- | ---------------- |
@@ -262,7 +262,7 @@ Ubuntu 發行版本需要安裝下列程式庫：
 - libgdiplus （6.0.1 版或更新版本）
 
 > [!WARNING]
-> 最新版的 Ubuntu 包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
+> 最新版的 Ubuntu 包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱 <https://www.mono-project.com/download/stable/> 。
 
 ### <a name="centos-and-fedora"></a>CentOS 與 Fedora
 
@@ -289,7 +289,7 @@ Fedora 使用者：如果您的 OpenSSL 版本 >= 1.1，您必須安裝相容性
 - libgdiplus （6.0.1 版或更新版本）
 
 > [!WARNING]
-> 大部分的 CentOS 和 Fedora 版本都包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
+> 大部分的 CentOS 和 Fedora 版本都包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱 <https://www.mono-project.com/download/stable/> 。
 
 ### <a name="alpine"></a>Alpine
 
@@ -316,7 +316,7 @@ Alpine 發行版本需要安裝下列程式庫：
 下列 macOS 版本支援 .NET Core：
 
 > [!NOTE]
-> 代表`+`最小版本的符號。
+> `+`代表最小版本的符號。
 
 | .NET Core 版本 | macOS                 | 架構 |     |
 | ----------------- | --------------------- | --------------| --- |

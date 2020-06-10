@@ -1,31 +1,31 @@
 ---
-title: 權限提高
+title: 提高權限
 ms.date: 03/30/2017
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 8838b139efa20bc796fc21567cc6fc9ee8691eee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 823b41f86080d4802f76fe69865279a7c3506238
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283237"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597406"
 ---
-# <a name="elevation-of-privilege"></a>權限提高
+# <a name="elevation-of-privilege"></a>提高權限
 提高*許可權*結果的許可權，是授與一開始授權的攻擊者以外的許可權。 例如，具有「唯讀」權限的攻擊者以不明方式將權限提高為「讀取和寫入」。  
   
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>受信任的 STS 應該簽署 SAML 權杖宣告  
  安全性判斷提示標記語言 (SAML) 權杖是一種泛型 XML 權杖，同時也是預設的發行權杖類型。 在典型的交換中，結尾 Web 服務所信任的安全性權杖服務 (STS) 可以建構 SAML 權杖。 SAML 權杖會在陳述式中包含宣告。 攻擊者可從有效權杖中複製宣告、建立新的 SAML 權杖，然後使用不同的簽發者進行簽署。 其目的就是判斷伺服器是否正在驗證簽發者，如果不是的話，會運用弱點來建構 SAML 權杖，針對受信任 STS 原先要賦予的權限賦予更多的權限。  
   
- <xref:System.IdentityModel.Tokens.SamlAssertion> 類別會驗證 SAML 權杖中包含的數位簽章，而預設的 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 則要求當 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 類別的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 設為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> 時，必須使用有效的 X.509 憑證來簽署 SAML 權杖。 單獨 `ChainTrust` 模式不足以判斷 SAML 權杖的簽發者是否受信任。 需要更細微信任模型的服務可以使用授權與強制執行原則來檢查由已發行權杖驗證所產生的宣告集之簽發者，或是使用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 上的 X.509 驗證設定來限制允許的簽署憑證集。 如需詳細資訊，請參閱使用身分識別模型和[同盟和發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)來[管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
+ <xref:System.IdentityModel.Tokens.SamlAssertion> 類別會驗證 SAML 權杖中包含的數位簽章，而預設的 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 則要求當 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 類別的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 設為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> 時，必須使用有效的 X.509 憑證來簽署 SAML 權杖。 單是 `ChainTrust` 模式還不足以判斷 SAML 權杖的簽發者是否受信任。 需要更細微信任模型的服務可以使用授權與強制執行原則來檢查由已發行權杖驗證所產生的宣告集之簽發者，或是使用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 上的 X.509 驗證設定來限制允許的簽署憑證集。 如需詳細資訊，請參閱使用身分識別模型和[同盟和發行的權杖](federation-and-issued-tokens.md)來[管理宣告與授權](managing-claims-and-authorization-with-the-identity-model.md)。  
   
 ## <a name="switching-identity-without-a-security-context"></a>切換不含安全性內容的身分識別  
  下列僅適用于 WinFX。  
   
  在用戶端與伺服器之間建立連線時，除了下列情況以外，用戶端的身分識別不會變更：在 WCF 用戶端開啟之後，如果所有條件皆成立：  
   
-- 建立安全性內容（使用傳輸安全性會話或訊息安全性會話）的程式已關閉（如果訊息安全性或傳輸無法建立安全性會話，則會在傳輸安全性案例中使用），<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 屬性設為 `false`。 HTTPS 即是此類傳輸的範例之一)。  
+- 建立安全性內容（使用傳輸安全性會話或訊息安全性會話）的程式已關閉（ <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> `false` 當訊息安全性或傳輸無法建立安全性會話時，會將屬性設定為，以便在傳輸安全性案例中使用）。 HTTPS 即是此類傳輸的範例之一)。  
   
 - 您目前使用 Windows 驗證。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74283237"
 > 使用 `BeginOpen` 方法時，所擷取的認證無法保證一定是呼叫該方法的處理序認證。  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>權杖快取允許重新執行使用已過時資料  
- WCF 會使用本地安全機構（LSA） `LogonUser` 函式，依使用者名稱和密碼來驗證使用者。 因為登入功能是成本高昂的作業，所以 WCF 可讓您快取代表已驗證使用者的權杖，以提高效能。 快取機制可儲存 `LogonUser` 的結果以供後續使用。 此機制預設為停用;若要啟用它，請將 [<xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A>] 屬性設定為 [`true`]，或使用[\<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)的 [`cacheLogonTokens`] 屬性。  
+ WCF 會使用本地安全機構（LSA）函式 `LogonUser` ，依使用者名稱和密碼來驗證使用者。 因為登入功能是成本高昂的作業，所以 WCF 可讓您快取代表已驗證使用者的權杖，以提高效能。 快取機制可儲存 `LogonUser` 的結果以供後續使用。 此機制預設為停用;若要啟用它，請將 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> 屬性設定為 `true` ，或使用的 `cacheLogonTokens` 屬性 [\<userNameAuthentication>](../../configure-apps/file-schema/wcf/usernameauthentication.md) 。  
   
  您可以將 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> 屬性 (Property) 設為 <xref:System.TimeSpan>，或是使用 `cachedLogonTokenLifetime` 項目的 `userNameAuthentication` 屬性 (Attribute) 為快取權杖設定存留時間 (TTL)；預設時間為 15 分鐘。 請注意，一旦快取了權杖，任何使用相同使用者名稱與密碼的用戶端都可以使用該權杖，就算使用者帳戶已從 Windows 中刪除，或當其密碼已經變更也是一樣。 在 TTL 到期且權杖從快取中移除之後，WCF 允許（可能是惡意的）使用者進行驗證。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74283237"
 ## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a>服務使用的憑證不同於用戶端原先想要的憑證  
  在特定情況下，用戶端可以使用 X.509 憑證來數位簽署訊息，並讓服務擷取與原先不同的憑證。  
   
- 這可能發生在下列情況下：  
+ 在下列狀況下可能會發生這種情形：  
   
 - 用戶端使用 X.509 憑證來數位簽署訊息，而且未將 X.509 憑證附加至訊息，只有使用其主體金鑰識別碼來參照憑證。  
   
@@ -82,11 +82,11 @@ ms.locfileid: "74283237"
   
  若要緩解這個情況，請以另一種方式來參照 X.509 憑證，例如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [安全性考量](security-considerations-in-wcf.md)
+- [資訊洩漏](information-disclosure.md)
+- [拒絕服務](denial-of-service.md)
+- [重新執行攻擊](replay-attacks.md)
+- [竄改](tampering.md)
+- [不支援的案例](unsupported-scenarios.md)

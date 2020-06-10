@@ -2,12 +2,12 @@
 title: 在 Windows 服務應用程式中裝載
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: a07aade4619b644dadd1d5acdcb5252b305b94d0
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: ba49d123508ceb8da677d1e9c67721e4f86aa7c3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964483"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597328"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服務應用程式中裝載
 Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特別適合那些必須駐留在長時間執行的可執行檔中，且不會顯示任何使用者介面形式的應用程式使用。 Windows 服務應用程式的處理序存留期是由服務控制管理員 (SCM) 負責管理，可讓您啟動、停止與暫停 Windows 服務應用程式。 您可以將 Windows 服務程式設定為在電腦啟動時自動啟動，使其成為適合「always on」應用程式的裝載環境。 如需 Windows 服務應用程式的詳細資訊，請參閱[Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=89450)。  
@@ -30,7 +30,7 @@ Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特�
   
     - 覆寫 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 以開啟一或多個 <xref:System.ServiceModel.ServiceHost> 執行個體。 單一 Windows 服務應用程式可以裝載多個以群組形式啟動和停止的 WCF 服務。  
   
-    - 覆寫 <xref:System.ServiceProcess.ServiceBase.OnStop%2A>，以在 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>期間啟動的任何執行中 WCF 服務的 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Closed>。  
+    - 覆寫 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 以呼叫在 <xref:System.ServiceModel.Channels.CommunicationObject.Closed> <xref:System.ServiceModel.ServiceHost> 期間啟動的任何執行中 WCF 服務 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 。  
   
     - 訂閱 <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> 的 <xref:System.ServiceModel.ServiceHost> 事件，並在發生錯誤時，使用 <xref:System.ServiceProcess.ServiceController> 類別來關閉 Windows 服務應用程式。  
   
@@ -40,7 +40,7 @@ Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特�
 
 - <xref:System.ServiceProcess>
 - [逐步解說：在元件設計工具中建立 Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [如何：在 Managed Windows 服務中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [Windows 服務主機](../../../../docs/framework/wcf/samples/windows-service-host.md)
+- [How to: Host a WCF Service in a Managed Windows Service](how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Windows 服務主機](../samples/windows-service-host.md)
 - [服務應用程式的程式設計架構](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

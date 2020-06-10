@@ -2,12 +2,12 @@
 title: 可序列化的型別
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e65fcb93c5c36bb289b825cef58b3adc6f5155f5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591669"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586100"
 ---
 # <a name="serializable-types"></a>可序列化的型別
 根據預設，<xref:System.Runtime.Serialization.DataContractSerializer> 會序列化所有公開可見的型別。 型別的所有公用讀取/寫入屬性 (Property) 和欄位都會序列化。  
@@ -36,12 +36,12 @@ ms.locfileid: "65591669"
 - 若要「選擇不」序列化公用成員、屬性 (Property) 或欄位的處理序，請將 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 屬性 (Attribute) 套用至該成員。  
   
 ## <a name="inheritance"></a>繼承  
- 未標記的型別 (沒有 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性的型別) 可以繼承自沒有這個屬性的型別，不過不允許反向操作，也就是說，擁有這個屬性的型別無法繼承自未標記的型別。 此規則會強制執行主要是為了確保在舊版的.NET Framework 撰寫程式碼的回溯相容性。  
+ 未標記的型別 (沒有 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性的型別) 可以繼承自沒有這個屬性的型別，不過不允許反向操作，也就是說，擁有這個屬性的型別無法繼承自未標記的型別。 強制執行此規則主要是為了確保與舊版 .NET Framework 中撰寫的程式碼具有回溯相容性。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [資料合約序列化程式支援的型別](types-supported-by-the-data-contract-serializer.md)

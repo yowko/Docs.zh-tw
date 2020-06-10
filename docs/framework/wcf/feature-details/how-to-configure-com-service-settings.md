@@ -1,18 +1,18 @@
 ---
-title: 作法：設定 COM+ 服務設定
+title: HOW TO：設定 COM+ 服務設定
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 31096ca510c868cf43ca6ef60126c98a8832d2c5
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3fb4b31038845d223248e72d32b3e7413f2aef63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895121"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597172"
 ---
-# <a name="how-to-configure-com-service-settings"></a>作法：設定 COM+ 服務設定
-使用 COM+ 服務組態工具加入或移除應用程式介面時，Web 服務組態會在應用程式的組態檔中更新。 在 com + 裝載模式中，app.config 檔案會放在應用程式根目錄中（%programfiles%\complus applications\ 應用程式\\{appid} 是預設值）。 在兩個 Web 裝載模式中，Web.config 檔案都會放在指定的 vroot 目錄中。  
+# <a name="how-to-configure-com-service-settings"></a>HOW TO：設定 COM+ 服務設定
+使用 COM+ 服務組態工具加入或移除應用程式介面時，Web 服務組態會在應用程式的組態檔中更新。 在 COM + 裝載模式中，app.config 檔案會放在應用程式根目錄中（%Programfiles%\complus applications\ 應用程式 \\ {appid} 是預設值）。 在兩個 Web 裝載模式中，Web.config 檔案都會放在指定的 vroot 目錄中。  
   
 > [!NOTE]
 > 訊息簽章應用來保護用戶端和伺服器之間的訊息不受竄改。 此外，訊息或傳輸層加密也應該用來保護用戶端和伺服器之間的訊息，以免資訊洩漏。 如同 Windows Communication Foundation （WCF）服務，您應該使用節流來限制同時呼叫、連接、實例和暫止作業的數目。 這有助防止資源過度消耗。 節流行為是透過服務組態檔設定所指定的。  
@@ -55,7 +55,7 @@ public interface IFinancesContract : IDisposable
   
 - 將端點位址從預設形式 ApplicationName/ComponentName/InterfaceName 變更為更容易使用的形式。  
   
-- 將服務的命名空間從預設`http://tempuri.org/InterfaceID`表單修改為更相關的表單。  
+- 將服務的命名空間從預設 `http://tempuri.org/InterfaceID` 表單修改為更相關的表單。  
   
 - 變更端點以使用不同的傳輸繫結。  
   
@@ -96,6 +96,6 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [整合 COM 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [與 COM + 應用程式整合](integrating-with-com-plus-applications.md)

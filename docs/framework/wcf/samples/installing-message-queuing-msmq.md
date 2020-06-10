@@ -2,12 +2,12 @@
 title: 安裝訊息佇列 (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 1bf79ed5dbcb9f2ace903260cc440e77df3aef09
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921095"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592290"
 ---
 # <a name="installing-message-queuing-msmq"></a>安裝訊息佇列 (MSMQ)
 下列程序示範如何安裝 Message Queuing 4.0 和 Message Queuing 3.0。  
@@ -27,27 +27,27 @@ ms.locfileid: "76921095"
   
 5. 按一下 [**目錄服務整合**] （針對加入網域的電腦），然後按一下 [ **HTTP 支援**]。  
   
-6. 按 **[下一步]** ，然後按一下 [**安裝**]。  
+6. 按 **[下一步]**，然後按一下 [**安裝**]。  
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>若要在 Windows 7 或 Windows Vista 上安裝 Message Queuing 4.0  
   
-1. 開啟 [**控制台**]。  
+1. 開啟 [ **控制台**]。  
   
 2. 按一下 [**程式**]，然後按一下 [**程式和功能**] 下**的 [開啟或關閉 Windows 功能**]。  
   
-3. 依序展開 [Microsoft Message Queue (MSMQ) 伺服器] 和 [Microsoft Message Queue (MSMQ) 伺服器核心]，然後選取下列訊息佇列功能的核取方塊進行安裝：  
+3. 展開 [Microsoft Message Queue (MSMQ) 伺服器]，展開 [Microsoft Message Queue (MSMQ) 伺服器核心]，然後選取下列訊息佇列功能的核取方塊進行安裝：  
   
     - MSMQ Active Directory 網域服務整合 (針對加入網域的電腦)。  
   
     - MSMQ HTTP 支援。  
   
-4. 按一下 [ **確定**]。  
+4. 按一下 [確定]。  
   
 5. 如果系統提示您重新開機電腦，請按一下 **[確定]** 以完成安裝。  
   
 #### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>若要在 Windows XP 和 Windows Server 2003 上安裝 Message Queuing 3.0  
   
-1. 開啟 [**控制台**]。  
+1. 開啟 [ **控制台**]。  
   
 2. 按一下 [新增] [**移除程式**]，然後按一下 [**新增 Windows 元件**]。  
   
@@ -58,10 +58,10 @@ ms.locfileid: "76921095"
   
 4. 確定在詳細資料頁面上選取 MSMQ HTTP 支援的選項。  
   
-5. 按一下 **[確定]** 以結束 [詳細資料] 頁面，然後按 **[下一步]** 。 完成安裝。  
+5. 按一下 **[確定]** 以結束 [詳細資料] 頁面，然後按 **[下一步]**。 完成安裝。  
   
 6. 如果系統提示您重新開機電腦，請按一下 **[確定]** 以完成安裝。  
   
 ## <a name="see-also"></a>請參閱
 
-- [設定指示](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [設定指示](set-up-instructions.md)

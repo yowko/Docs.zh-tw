@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.ChannelCreated
 ms.date: 03/30/2017
 ms.assetid: 6406f162-a53d-487e-b281-3f232fce15f1
-ms.openlocfilehash: f64c5bba5d2f85bcc42be339697de50d3bc56def
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 473c9b5e87869666631c215686544083d95b3d50
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666868"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602072"
 ---
 # <a name="systemservicemodelchannelschannelcreated"></a>System.ServiceModel.Channels.ChannelCreated
 System.ServiceModel.Channels.ChannelCreated  
@@ -15,8 +15,8 @@ System.ServiceModel.Channels.ChannelCreated
 ## <a name="description"></a>描述  
  已建立通道。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [追蹤](index.md)
+- [使用追蹤來疑難排解應用程式](using-tracing-to-troubleshoot-your-application.md)
+- [系統管理與診斷](../index.md)

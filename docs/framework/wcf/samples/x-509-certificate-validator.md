@@ -2,12 +2,12 @@
 title: X.509 憑證驗證程式
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: ba73381bb6211dcbd1ddad1457f9ae8611008d43
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141217"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594825"
 ---
 # <a name="x509-certificate-validator"></a>X.509 憑證驗證程式
 
@@ -23,7 +23,7 @@ ms.locfileid: "82141217"
 
 - 伺服器是使用該伺服器的 X.509 憑證來驗證的。
 
-服務會公開單一端點，以便與使用設定檔 App.config 定義的服務進行通訊。端點是由位址、系結和合約所組成。 系結會使用預設為使用`wsHttpBinding` `WSSecurity`和用戶端憑證驗證的標準來設定。 服務行為會指定 [自訂] 模式，以驗證用戶端 X.509 憑證以及該驗證程式類別的類型。 行為也會使用 serviceCertificate 項目來指定伺服器憑證。 伺服器憑證必須包含與[ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) `findValue`中相同的值`SubjectName` 。
+服務會公開單一端點，以便與使用設定檔 App.config 定義的服務進行通訊。端點是由位址、系結和合約所組成。 系結會使用 `wsHttpBinding` 預設為使用 `WSSecurity` 和用戶端憑證驗證的標準來設定。 服務行為會指定 [自訂] 模式，以驗證用戶端 X.509 憑證以及該驗證程式類別的類型。 行為也會使用 serviceCertificate 項目來指定伺服器憑證。 伺服器憑證必須包含與中相同的值 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 。
 
 ```xml
   <system.serviceModel>
@@ -305,7 +305,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
+1. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。
 
 2. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
 
@@ -332,13 +332,13 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 4. 將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。
 
-5. 在伺服器上，于`setup.bat service`使用系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元中執行。 `setup.bat`使用`service`引數執行時，會建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名為 .cer 的檔案。
+5. 在伺服器上，于 `setup.bat service` 使用系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元中執行。 `setup.bat`使用引數執行時，會 `service` 建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名為 .cer 的檔案。
 
-6. 編輯 setup.exe 以反映新的憑證名稱（在`findValue` [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的屬性中），這與電腦的完整功能變數名稱相同。 同時將\<服務>/\<baseAddresses> 元素中的電腦名稱稱，從 localhost 變更為您的服務電腦的完整限定名稱。
+6. 編輯 setup.exe 以反映新的憑證名稱（在 `findValue` 的屬性中 [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ），這與電腦的完整功能變數名稱相同。 也將專案中的電腦名稱稱 \<service> / \<baseAddresses> 從 localhost 變更為服務電腦的完整名稱。
 
 7. 從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。
 
-8. 在用戶端上， `setup.bat client`于使用系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元中執行。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。
+8. 在用戶端上，于 `setup.bat client` 使用系統管理員許可權開啟 Visual Studio 的開發人員命令提示字元中執行。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。
 
 9. 在用戶端電腦上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。 若要這麼做，請使用伺服器的完整網域名稱取代 localhost。
 

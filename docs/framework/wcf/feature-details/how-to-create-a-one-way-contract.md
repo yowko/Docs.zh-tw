@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-ms.openlocfilehash: cc777da65ce1c0d425404b1cc8d47e8189684a7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42c056c9b56ed1245290cd66833cc6565f517b66
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593447"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>HOW TO：建立單向合約
-本主題說明的基本步驟可用來建立使用單向合約的方法。 這類方法會叫用 Windows Communication Foundation (WCF) 服務，從用戶端上的作業，但不是會期待收到回覆。 例如，您可以使用此合約類型，將通知發行給許多訂閱者。 您也可以在建立雙工 (雙向) 合約時使用單向合約，以供用戶端與伺服器彼此各自進行通訊，並方便任何一方初始化對另一方的呼叫。 這麼做可以特別允許伺服器對用戶端進行單向呼叫，而用戶端會將此呼叫視為事件。 如需指定單向方法的詳細資訊，請參閱 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性與 <xref:System.ServiceModel.OperationContractAttribute> 類別。  
+本主題說明的基本步驟可用來建立使用單向合約的方法。 這類方法會從用戶端叫用 Windows Communication Foundation （WCF）服務上的作業，但不會預期回復。 例如，您可以使用此合約類型，將通知發行給許多訂閱者。 您也可以在建立雙工 (雙向) 合約時使用單向合約，以供用戶端與伺服器彼此各自進行通訊，並方便任何一方初始化對另一方的呼叫。 這麼做可以特別允許伺服器對用戶端進行單向呼叫，而用戶端會將此呼叫視為事件。 如需指定單向方法的詳細資訊，請參閱 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性與 <xref:System.ServiceModel.OperationContractAttribute> 類別。  
   
- 如需建立雙工合約的用戶端應用程式的詳細資訊，請參閱[How to:存取服務使用單向和要求-回覆合約](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)。 如需實用範例，請參閱 <<c0> [ 單向](../../../../docs/framework/wcf/samples/one-way.md)範例。  
+ 如需建立雙工合約之用戶端應用程式的詳細資訊，請參閱[如何：使用單向和要求-回復合約來存取服務](how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)。 如需實用範例，請參閱[單向](../samples/one-way.md)範例。  
   
 ### <a name="to-create-a-one-way-contract"></a>若要建立單向合約  
   
@@ -31,11 +31,11 @@ ms.locfileid: "62039399"
  [!code-csharp[S_Service_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [如何：定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [工作階段](../../../../docs/framework/wcf/samples/session.md)
-- [如何：建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [設計與實作服務](../designing-and-implementing-services.md)
+- [如何：定義服務合約](../how-to-define-a-wcf-service-contract.md)
+- [工作階段](../samples/session.md)
+- [HOW TO：建立雙工合約](how-to-create-a-duplex-contract.md)

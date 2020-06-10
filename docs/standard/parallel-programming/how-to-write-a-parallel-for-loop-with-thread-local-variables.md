@@ -1,5 +1,6 @@
 ---
 title: 作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈
+description: 請參閱如何在 .NET 中撰寫平行. For 迴圈的範例，其使用執行緒區域變數，這會在迴圈的每個個別工作中儲存和抓取狀態。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: bb6ac1a64c3a71646946d1af894d1124b12e4769
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9cff507757aab2e5676df2fabb02a237a2172c17
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290755"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599785"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈
 此範例說明如何使用執行緒區域變數，儲存及擷取 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈所建立之每項工作的狀態。 使用執行緒區域資料，可讓您避免因同步處理大量的共用狀態存取而產生額外負荷。 您可以計算並儲存值，直到工作的所有反覆運算完成為止，而無須在每次反覆運算時寫入至共用資源。 接著，您可以將最終結果寫入至共用資源，或將其傳遞至其他方法。  
@@ -42,7 +43,7 @@ Function() new MyClass()
   
  如需如何使用 Lambda 運算式的詳細資訊，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](lambda-expressions-in-plinq-and-tpl.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [資料平行處理](data-parallelism-task-parallel-library.md)
 - [平行程式設計](index.md)

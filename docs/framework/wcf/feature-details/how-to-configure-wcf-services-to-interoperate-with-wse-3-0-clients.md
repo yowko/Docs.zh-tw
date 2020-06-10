@@ -2,12 +2,12 @@
 title: HOW TO：將 WCF 服務設為與 WSE 3.0 用戶端相互操作
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: bd9f2bec94ca45f76590f64366428a00edd5d6ea
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 600b9c28d92f9e2b6e4d586b052cc5762d591521
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141740"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599057"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>HOW TO：將 WCF 服務設為與 WSE 3.0 用戶端相互操作
 
@@ -19,13 +19,13 @@ ms.locfileid: "74141740"
 
     若要指定使用 WS-Addressing August 2004 版本規格進行訊息編碼，這時必須要建立自訂繫結。
 
-    1. 將子系[\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)新增至服務設定檔的\<系結[>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 。
+    1. 將子系新增 [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) 至 [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) 服務設定檔的。
 
-    2. 指定系結的名稱，方法是將\<系結[>](../../configure-apps/file-schema/wcf/bindings.md)新增至[\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)並設定 `name` 屬性。
+    2. 將加入 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) 至， [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) 並設定屬性，以指定系結的名稱 `name` 。
 
-    3. 藉由將子[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)新增至\<系結[>](../../configure-apps/file-schema/wcf/bindings.md)，指定用來保護與 WSE 3.0 相容之訊息的驗證模式和版本的 WS-安全性規格。
+    3. 將子系新增至，以指定用來保護與 WSE 3.0 相容之訊息的驗證模式和版本的 WS-安全性規格 [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) 。
 
-        若要設定驗證模式，請設定[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)的 [`authenticationMode`] 屬性。 驗證模式約略相等於 WSE 3.0 中的組合安全性判斷提示 (Assertion)。 下表將 WCF 中的驗證模式對應到 WSE 3.0 中的安全判斷提示。
+        若要設定驗證模式，請設定的 `authenticationMode` 屬性 [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) 。 驗證模式約略相等於 WSE 3.0 中的組合安全性判斷提示 (Assertion)。 下表將 WCF 中的驗證模式對應到 WSE 3.0 中的安全判斷提示。
 
         |WCF 驗證模式|WSE 3.0 組合安全性判斷提示|
         |-----------------------------|----------------------------------------|
@@ -36,20 +36,20 @@ ms.locfileid: "74141740"
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameOverTransport>|`usernameOverTransportSecurity`|
         |<xref:System.ServiceModel.Configuration.AuthenticationMode.UserNameForCertificate>|`usernameForCertificateSecurity`|
 
-        \* `mutualCertificate10Security` 和 `mutualCertificate11Security` 全包式安全性判斷提示之間的其中一項主要差異，是 WSE 用來保護 SOAP 訊息安全的 WS-Security 規格版本。 若是 `mutualCertificate10Security` 會使用 WS-Security 1.0，若是 `mutualCertificate11Security` 則使用 WS-Security 1.1。 針對 WCF，會在[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)的 [`messageSecurityVersion`] 屬性中指定 WS-Security 規格的版本。
+        \*和通行安全性判斷提示之間的主要差異之一， `mutualCertificate10Security` `mutualCertificate11Security` 是 WSE 用來保護 SOAP 訊息安全的 WS-安全性規格版本。 若是 `mutualCertificate10Security` 會使用 WS-Security 1.0，若是 `mutualCertificate11Security` 則使用 WS-Security 1.1。 針對 WCF，會在的屬性中指定 WS-Security 規格的版本 `messageSecurityVersion` [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) 。
 
-        若要設定用來保護 SOAP 訊息安全的 WS-Security 規格版本，請設定[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)的 [`messageSecurityVersion`] 屬性。 為了與 WSE 3.0 進行相互操作，`messageSecurityVersion` 屬性的值要設定為 <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>。
+        若要設定用來保護 SOAP 訊息安全的 WS-Security 規格版本，請設定的 `messageSecurityVersion` 屬性 [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) 。 為了與 WSE 3.0 進行相互操作，`messageSecurityVersion` 屬性的值要設定為 <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>。
 
-    4. 指定 WCF 使用的 WS-ADDRESSING 規格2004年8月版本，方法是加入[\<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) ，並將 `messageVersion` 設定為 <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>的值。
+    4. 藉由加入 [\<textMessageEncoding>](../../configure-apps/file-schema/wcf/textmessageencoding.md) ，並將設 `messageVersion` 為其值，以指定由 WCF 使用 ws-addressing 規格的2004年8月版本 <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A> 。
 
         > [!NOTE]
         > 如果使用的是 SOAP 1.2，請將 `messageVersion` 屬性設為 <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>。
 
 2. 指定服務使用自訂繫結。
 
-    1. 將[\<端點 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素的 `binding` 屬性設定為 [`customBinding`]。
+    1. 將 `binding` 元素的屬性設定 [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) 為 `customBinding` 。
 
-    2. 將[\<端點 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)元素的 `bindingConfiguration` 屬性設定為自訂系結之\<系結[>](../../configure-apps/file-schema/wcf/bindings.md)的 `name` 屬性中所指定的值。
+    2. 將 `bindingConfiguration` 元素的屬性設定 [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-element.md) 為 `name` 自訂系結之的屬性中所指定的值 [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) 。
 
 ## <a name="example"></a>範例
 
@@ -94,4 +94,4 @@ ms.locfileid: "74141740"
 
 ## <a name="see-also"></a>請參閱
 
-- [如何：自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [HOW TO：自訂系統提供的繫結](../extending/how-to-customize-a-system-provided-binding.md)
