@@ -1,17 +1,17 @@
 ---
-title: 使用 Visual Studio Code 建立具有 .NET Core 的主控台應用程式
+title: 使用 Visual Studio Code 建立 .NET Core 主控台應用程式
 description: 瞭解如何使用 Visual Studio Code 和 .NET Core CLI 建立 .NET Core 主控台應用程式。
 ms.date: 05/22/2020
-ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6d8f9adb2f77dbfd2d1cf54c80f1cdea582b1d96
+ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201693"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84717506"
 ---
-# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立具有 .NET Core 的主控台應用程式
+# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET Core 主控台應用程式
 
-本教學課程說明如何使用 Visual Studio Code 和 .NET Core CLI 來建立和執行 .NET Core 主控台應用程式。 專案工作（例如建立、編譯和執行專案）是使用 CLI 來完成，因此，您可以使用不同的程式碼編輯器來遵循此教學課程，並視需要在終端機中執行命令。
+本教學課程說明如何使用 Visual Studio Code 和 .NET Core CLI 來建立和執行 .NET Core 主控台應用程式。 專案工作，例如建立、編譯和執行專案，都是使用 .NET Core CLI 來完成。 您可以使用不同的程式碼編輯器來遵循此教學課程，並視需要在終端機中執行命令。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -20,25 +20,29 @@ ms.locfileid: "84201693"
 
 ## <a name="create-the-app"></a>建立應用程式
 
-1. 開啟 Visual Studio Code。
+建立名為 "HelloWorld" 的 .NET Core 主控台應用程式專案。
 
-1. 建立專案。
+1. 啟動 Visual Studio Code。
 
-   1. **File**  >  從主功能表選取 [檔案] [**開啟資料夾**] / [**開啟 ...** ]，建立*HelloWorld*資料夾，然後按一下 [**選取資料夾**] [ / **開啟**]。
+1. 從**File**主功能表選取 [檔案] [  >  **開啟資料夾**] （檔案開啟**File**  >  **...** on macOS）。
 
-      資料夾名稱預設會成為專案名稱和命名空間名稱。 您稍後會在本教學課程中新增程式碼，假設專案命名空間為 `HelloWorld` 。
+1. 在 [**開啟資料夾**] 對話方塊中，建立*HelloWorld*資料夾，然後按一下 [**選取資料夾**] （在 macOS 上**開啟**）。
 
-   1. 從主功能表選取 [**查看**終端機]，以在 Visual Studio Code 中開啟**終端**機  >  **Terminal** 。
+   資料夾名稱預設會成為專案名稱和命名空間名稱。 您稍後會在本教學課程中新增程式碼，假設專案命名空間為 `HelloWorld` 。
 
-      **終端**機會在*HelloWorld*資料夾中以命令提示字元開啟。
+1. 從主功能表選取 [**查看**終端機]，以在 Visual Studio Code 中開啟**終端**機  >  **Terminal** 。
 
-   1. 在**終端**機中，輸入下列命令：
+   **終端**機會在*HelloWorld*資料夾中以命令提示字元開啟。
 
-      ```dotnetcli
-      dotnet new console
-      ```
+1. 在**終端**機中，輸入下列命令：
 
-適用于 .NET Core 的主控台應用程式範本會定義一個類別， `Program` 其中包含單一方法，其 `Main` 採用 <xref:System.String> 陣列做為引數。 *Program.cs*檔案包含下列程式碼：
+   ```dotnetcli
+   dotnet new console
+   ```
+
+此範本會建立簡單的 "Hello World" 應用程式。 它會呼叫 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法來顯示 "Hello World！" 。
+
+範本程式碼會定義具有單一方法的類別，其 `Program` `Main` 接受 <xref:System.String> 陣列做為引數：
 
 ```csharp
 using System;
@@ -56,8 +60,6 @@ namespace HelloWorld
 ```
 
 `Main` 是應用程式進入點，是執行階段在啟動應用程式時會自動呼叫的方法。 在應用程式啟動時所提供的所有命令列引數，都會在 *args* 陣列中提供。
-
-此範本會建立一個簡單的應用程式， <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 以呼叫方法來顯示 "Hello World！" 。
 
 ## <a name="run-the-app"></a>執行應用程式
 
@@ -85,11 +87,11 @@ dotnet run
 
    ![遺失資產的提示](media/with-visual-studio-code/missing-assets.png)
 
-1. 以 `Main` 下列程式碼取代*Program.cs*中方法的內容，這目前只是呼叫的那一行 `Console.WriteLine` ：
+1. 以下列程式碼取代 `Main` *Program.cs*中方法的內容，也就是呼叫的那一行 `Console.WriteLine` ：
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
 
-   此程式碼會在主控台中顯示「What is your name?」， 在主控台視窗中，等候使用者輸入後面接著**Enter**鍵的字串。 它會將此字串儲存在名為的變數中 `name` 。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。 最後，它會在主控台視窗中顯示這些值。
+   此程式碼會在主控台中顯示「What is your name?」， 在主控台視窗中，等候使用者輸入後面接著<kbd>Enter</kbd>鍵的字串。 它會將此字串儲存在名為的變數中 `name` 。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。 最後，它會在主控台視窗中顯示這些值。
 
    `\n`代表換行字元。
 
@@ -106,7 +108,7 @@ dotnet run
    dotnet run
    ```
 
-1. 輸入名稱並按**enter**鍵，以回應提示。
+1. 輸入名稱並按<kbd>enter</kbd>鍵，以回應提示。
 
    :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="已修改程式輸出的終端機視窗":::
 
@@ -118,7 +120,7 @@ dotnet run
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已建立 .NET Core 應用程式。 在下一個教學課程中，您會對應用程式進行 debug。
+在本教學課程中，您已建立 .NET Core 主控台應用程式。 在下一個教學課程中，您會對應用程式進行 debug。
 
 > [!div class="nextstepaction"]
 > [使用 Visual Studio Code 來調試 .NET Core 主控台應用程式](debugging-with-visual-studio-code.md)

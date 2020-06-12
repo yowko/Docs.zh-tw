@@ -1,15 +1,15 @@
 ---
-title: 在 Visual Studio Code 中使用 .NET Core 測試 .NET Standard 類別庫
+title: 使用 Visual Studio Code 測試具有 .NET Core 的 .NET Standard 類別庫
 description: 建立 .NET Core 類別庫的單元測試專案。 確認 .NET Core 類別庫可在單元測試中正常運作。
-ms.date: 05/29/2020
-ms.openlocfilehash: be227453bd441028cc6ce348c00fad944140238f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 06/08/2020
+ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292186"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701029"
 ---
-# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio-code"></a>教學課程：在 Visual Studio Code 中使用 .NET Core 測試 .NET Standard 程式庫
+# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 測試具有 .NET Core 的 .NET Standard 類別庫
 
 本教學課程說明如何藉由將測試專案加入至方案，來自動化單元測試。
 
@@ -19,7 +19,9 @@ ms.locfileid: "84292186"
 
 ## <a name="create-a-unit-test-project"></a>建立單元測試專案
 
-1. 開啟 Visual Studio Code。
+單元測試能在開發與發佈期間提供自動化的軟體測試。 您在本教學課程中使用的測試架構是 MSTest。 [MSTest](https://github.com/Microsoft/testfx-docs)是您可以從中選擇的三種測試架構之一。 其他則是[xUnit](https://xunit.net/)和[nUnit](https://nunit.org/)。
+
+1. 啟動 Visual Studio Code。
 
 1. 開啟 `ClassLibraryProjects` 您在[Visual Studio 中建立 .NET Standard 程式庫](library-with-visual-studio.md)中建立的解決方案。
 
@@ -55,16 +57,17 @@ ms.locfileid: "84292186"
 
    執行單元測試時，會自動執行在標記為[[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)的測試類別中，以[[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)標記的每個方法。
 
-   > [!NOTE]
-   > MSTest 是您可以從中選擇的三種測試架構之一。 其他則是 xUnit 和 nUnit。
-
 1. 將測試專案加入至方案。
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-1. 執行下列命令，以建立類別庫專案的專案參考：
+## <a name="add-a-project-reference"></a>新增專案參考
+
+若要讓測試專案與類別搭配使用 `StringLibrary` ，請在專案中加入 `StringLibraryTest` 專案的參考 `StringLibrary` 。
+
+1. 執行以下命令：
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -89,7 +92,7 @@ ms.locfileid: "84292186"
 
 由於您的程式庫方法會處理字串，因此您也會想要確定它會成功處理[空字串（ `String.Empty` ）](xref:System.String.Empty)和和 `null` 字串。 空字串是沒有任何字元的，其 <xref:System.String.Length> 為0。 一個 `null` 字串尚未初始化。 您可以 `StartsWithUpper` 直接呼叫做為靜態方法，並傳遞單一 <xref:System.String> 引數。 或者，您可以 `StartsWithUpper` 在指派給的變數上呼叫作為擴充方法 `string` `null` 。
 
-您會定義三個方法，每個方法會 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 針對字串陣列中的每個元素重複呼叫方法。 因為測試方法會在發現第一次失敗時失敗，所以您會呼叫方法多載，讓您傳遞一個字串來表示方法呼叫中所使用的字串值。
+您將定義三個方法，每個方法都會 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 針對字串陣列中的每個元素呼叫方法。 您將呼叫方法多載，讓您指定要在測試失敗時顯示的錯誤訊息。 訊息會識別造成失敗的字串。
 
 建立測試方法：
 
@@ -122,7 +125,7 @@ ms.locfileid: "84292186"
 
 ## <a name="handle-test-failures"></a>處理測試失敗
 
-如果您執行的是測試導向開發（TDD），您必須先撰寫測試，而且第一次執行時才會失敗。 接著，您可以將程式碼新增至應用程式，讓測試成功。 在此情況下，您在撰寫應用程式驗證碼之後就已建立測試，因此您未看到測試失敗。 若要驗證測試在預期失敗時失敗，請在測試輸入中加入不正確值。
+如果您執行的是測試導向開發（TDD），您必須先撰寫測試，而且第一次執行時才會失敗。 接著，您可以將程式碼新增至應用程式，讓測試成功。 在本教學課程中，您已在撰寫應用程式驗證碼之後建立測試，因此您未看到測試失敗。 若要驗證測試在預期失敗時失敗，請在測試輸入中加入不正確值。
 
 1. 修改 `TestDoesNotStartWithUpper` 方法中的 `words` 陣列，以包含字串「錯誤」。
 
@@ -137,7 +140,7 @@ ms.locfileid: "84292186"
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   終端機輸出顯示一個測試失敗，並提供失敗測試的錯誤訊息。
+   終端機輸出顯示一個測試失敗，並提供失敗測試的錯誤訊息：「IsFalse 失敗。 'Error' 的預期︰false；實際：True」。 由於失敗，因此在測試「錯誤」之後，陣列中沒有任何字串。
 
    ```
    Starting test execution, please wait...
@@ -157,11 +160,11 @@ ms.locfileid: "84292186"
    Total time: 1.7825 Seconds
    ```
 
-1. 復原您在步驟 1 中所做的修改，並移除字串 "Error"。 重新執行測試和測試階段。
+1. 移除您在步驟1中新增的字串 "Error"。 重新執行測試和測試階段。
 
 ## <a name="test-the-release-version-of-the-library"></a>測試程式庫的發行版本
 
-在執行程式庫的「偵錯工具」版本後，現在所有測試都已成功，請針對程式庫的發行組建，再次執行測試。 許多因素 (包括編譯器最佳化) 有時會在偵錯和發行組建之間導致不同的行為。
+現在，在執行程式庫的「偵錯工具」組建時，所有測試都已成功，請針對程式庫的發行組建，再次執行測試。 許多因素 (包括編譯器最佳化) 有時會在偵錯和發行組建之間導致不同的行為。
 
 1. 使用發行組建設定執行測試：
 
@@ -173,7 +176,7 @@ ms.locfileid: "84292186"
 
 ## <a name="additional-resources"></a>其他資源
 
-- [.NET Core 與 .NET Standard 中的單元測試](../testing/index.md)
+* [.NET Core 與 .NET Standard 中的單元測試](../testing/index.md)
 
 ## <a name="next-steps"></a>後續步驟
 

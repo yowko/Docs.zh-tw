@@ -2,12 +2,12 @@
 title: Windows Forms 的重大變更
 description: 列出 .NET Core Windows Forms 中的重大變更。
 ms.date: 01/08/2020
-ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: bd87e438ecf9930bfcd5377f9a3799d5f3693f49
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158433"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702464"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 中的重大變更
 
@@ -20,6 +20,7 @@ ms.locfileid: "82158433"
 | [已移除狀態列控制項](#removed-status-bar-controls) | 5.0 |
 | [WinForms 方法現在會擲回 ArgumentException](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [WinForms 方法現在會擲回 System.argumentnullexception](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
+| [WinForms 屬性現在會擲回 ArgumentOutOfRangeException](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
 | [移除的控制項](#removed-controls) | 3.1 |
 | [如果顯示工具提示，則不會引發 CellFormatting 事件](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
 | [DefaultFont 已變更為 Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
@@ -50,7 +51,11 @@ ms.locfileid: "82158433"
 
 ***
 
-## <a name="net-core-31"></a>.NET Core 3。1
+[!INCLUDE [invalid-args-cause-argumentoutofrangeexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentoutofrangeexception.md)]
+
+***
+
+## <a name="net-core-31"></a>.NET Core 3.1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 

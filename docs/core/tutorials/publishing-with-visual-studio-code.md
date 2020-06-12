@@ -1,15 +1,15 @@
 ---
-title: 使用 Visual Studio Code 發佈 .NET Core Hello World 應用程式
+title: 使用 Visual Studio Code 發行 .NET Core 主控台應用程式
 description: 發行會建立一組執行 .NET Core 應用程式所需的檔案。
-ms.date: 05/28/2020
-ms.openlocfilehash: b49b12bf41e3ea7be8dbc459eb7d9b1fbef25790
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.date: 06/08/2020
+ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84246679"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701446"
 ---
-# <a name="tutorial-publish-a-net-core-console-application-with-visual-studio-code"></a>教學課程：使用 Visual Studio Code 發行 .NET Core 主控台應用程式
+# <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 發行 .NET Core 主控台應用程式
 
 本教學課程說明如何發佈主控台應用程式，讓其他使用者可以執行它。 發行會建立一組執行應用程式所需的檔案。 若要部署檔案，請將檔案複製到目的電腦。
 
@@ -21,7 +21,7 @@ ms.locfileid: "84246679"
 
 ## <a name="publish-the-app"></a>發佈應用程式
 
-1. 開啟 Visual Studio Code。
+1. 啟動 Visual Studio Code。
 
 1. 在 Visual Studio Code 中，開啟您在[建立 .Net Core 主控台應用程式](with-visual-studio-code.md)中建立的*HelloWorld*專案資料夾。
 
@@ -71,7 +71,7 @@ ms.locfileid: "84246679"
 
       這是與[framework 相依](../deploying/deploy-with-cli.md#framework-dependent-deployment)的應用程式部署版本。 若要執行此動態連結程式庫，請 `dotnet HelloWorld.dll` 在命令提示字元中輸入。 這種執行應用程式的方法可在已安裝 .NET Core 執行時間的任何平臺上運作。
 
-   * *HelloWorld* （在 Linux 上為*HelloWorld* ，而不是在 macOS 上建立）。
+   * *HelloWorld.exe* （在 Linux 上為*HelloWorld* ，而不是在 macOS 上建立）。
 
       這是與[framework 相依的應用程式可執行檔](../deploying/deploy-with-cli.md#framework-dependent-executable)版本。 檔案是作業系統特定的檔案。
 
@@ -85,7 +85,7 @@ ms.locfileid: "84246679"
 
 ## <a name="run-the-published-app"></a>執行已發佈的應用程式
 
-1. 在**Explorer**中，以滑鼠右鍵按一下 [*發行*] 資料夾（或<kbd>Ctrl</kbd>+ 按一下 [macOS]），然後選取 [**在終端機中開啟**]。
+1. 在**Explorer**中，以滑鼠右鍵按一下 [*發行*] 資料夾（以<kbd>Ctrl</kbd>-按一下 [macOS]），然後選取 [**在終端機中開啟**]。
 
    :::image type="content" source="media/publishing-with-visual-studio-code/open-in-terminal.png" alt-text="顯示在終端機中開啟的內容功能表":::
 
@@ -109,10 +109,7 @@ ms.locfileid: "84246679"
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已發佈主控台應用程式。 若要瞭解如何建立程式庫，請參閱[使用 .NET Core CLI 開發程式庫](libraries.md)。
-
-<!--In the next tutorial, you create a class library.
+在本教學課程中，您已發佈主控台應用程式。 在下一個教學課程中，您會建立類別庫。
 
 > [!div class="nextstepaction"]
-> [Create a .NET Standard library in Visual Studio](library-with-visual-studio.md)
--->
+> [在 Visual Studio for Mac 中建立 .NET Standard 程式庫](library-with-visual-studio-mac.md)
