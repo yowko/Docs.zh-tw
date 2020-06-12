@@ -95,13 +95,13 @@ items:
             displayName: 'tutorials, visual studio code, vs code'
           - name: 發佈應用程式
             href: tutorials/publishing-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: 建立程式庫
             href: tutorials/library-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: 對程式庫進行單元測試
             href: tutorials/testing-library-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: 安裝並使用套件
             href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
             displayName: 'tutorials, cli'
@@ -111,13 +111,25 @@ items:
       - name: 使用 Visual Studio for Mac
         items:
           - name: 建立主控台應用程式
-            href: tutorials/using-on-mac-vs.md
-            displayName: tutorials
-          - name: 建立程式庫，並對其進行單元測試
-            href: tutorials/using-on-mac-vs-full-solution.md
-            displayName: tutorials
+            href: tutorials/with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+          - name: 對應用程式進行偵錯
+            href: tutorials/debugging-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: 發佈應用程式
+            href: tutorials/publishing-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: 建立程式庫
+            href: tutorials/library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: 對程式庫進行單元測試
+            href: tutorials/testing-library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
           - name: 安裝並使用套件
             href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: 建立及發行套件
+            href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
             displayName: tutorials
       - name: 進階主題
         items:
