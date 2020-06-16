@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 64190546157bc9386314a3080c5364fd854d7704
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aab59463daad30748277602b9ab1d8ca2f3fa1f5
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602221"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767672"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情感
 
@@ -94,8 +94,6 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
     - 實驗的**目標探索/訓練時間**為**10 秒**
 
     您會看到 CLI 中的輸出類似如下：
-
-    <!-- markdownlint-disable MD023 MD025 -->
 
     ![在 PowerShell 上 ML.NET CLI 分類](./media/mlnet-cli/mlnet-classification-powershell.gif)
 
@@ -225,7 +223,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 > - 了解為了執行模型所產生的 C# 程式碼 (用於終端使用者應用程式的程式碼)
 > - 探索用來訓練「最佳品質」模型的已產生 c # 程式碼（賺取目的）
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 ML.NET CLI 自動化模型定型](../automate-training-with-cli.md)
 - [教學課程：在可調整的 ASP.NET Core web 應用程式和 WebAPIs 上執行 ML.NET 模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)

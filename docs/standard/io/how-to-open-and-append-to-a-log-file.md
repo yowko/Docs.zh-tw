@@ -1,5 +1,6 @@
 ---
 title: 如何：開啟並附加至記錄檔
+description: 使用 .NET 中的 StreamWriter 和 StreamReader 類別來開啟並附加至記錄檔，這會將字元寫入和讀取資料流程中的字元。
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: 025c35344b9262e1f2fa6da87b68e46e21a54222
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a66dadd24cc327824e91df733f11a23112cd384a
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291821"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769167"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>如何：開啟並附加至記錄檔
 <xref:System.IO.StreamWriter> 和 <xref:System.IO.StreamReader> 會在資料流中寫入字元和讀取字元。 下列程式碼範例會開啟用於輸入的 *log.txt* 檔案，或者，如果該檔案不存在，則會建立它，並將記錄資訊附加至檔案的結尾。 此範例接著會將檔案的內容寫入標準輸出以供顯示。

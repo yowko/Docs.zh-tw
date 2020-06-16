@@ -1,5 +1,6 @@
 ---
 title: .NET Framework 規則運算式
+description: 使用正則運算式來尋找特定的字元模式、驗證文字、使用文字子字串，& 將解壓縮的字串加入至 .NET 中的集合。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,25 +21,25 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 819310891192833f0c71d0104fceec11b1b25375
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635728"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768829"
 ---
 # <a name="net-regular-expressions"></a>.NET 規則運算式
 
-規則運算式提供功能強大、彈性且有效率的方法來處理文字。 一般表示式的粗模式匹配表示法使您能夠快速分析大量文本,以便:
+規則運算式提供功能強大、彈性且有效率的方法來處理文字。 正則運算式的廣泛模式比對標記法可讓您快速剖析大量文字，使其符合下列條件：
 
 - 尋找特定的字元模式。
-- 驗證文本以確保與預定義的模式(如電子郵寄地址)匹配。
-- 提取、編輯、替換或刪除文字子字串。
-- 將提取的字串添加到集合以生成報表。
+- 驗證文字，以確保它符合預先定義的模式（例如電子郵件地址）。
+- 解壓縮、編輯、取代或刪除文字子字串。
+- 將解壓縮的字串加入至集合，以便產生報表。
 
 對許多處理字串或剖析大型文字區塊的應用程式而言，規則運算式是不可或缺的工具。  
   
-## <a name="how-regular-expressions-work"></a>正規表示式的工作原理
+## <a name="how-regular-expressions-work"></a>正則運算式的工作方式
 
  使用規則運算式來處理文字的核心是規則運算式引擎，以 .NET 中的 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 物件來表示。 使用規則運算式來處理文字時，至少需要提供規則運算式引擎以及下列兩個資訊項目：  
   
@@ -70,7 +71,7 @@ ms.locfileid: "80635728"
 > [!TIP]
 > <xref:System.Web.RegularExpressions> 命名空間包含一些規則運算式物件，這些物件會實作預先定義的規則運算式模式，以用於剖析來自 HTML、XML 和 ASP.NET 文件的字串。 例如，<xref:System.Web.RegularExpressions.TagRegex> 類別會識別字串中的開始標記，而 <xref:System.Web.RegularExpressions.CommentRegex> 類別會識別字串中的 ASP.NET 註解。
 
-### <a name="example-1-replace-substrings"></a>範例 1:取代子字串  
+### <a name="example-1-replace-substrings"></a>範例1：取代子字串  
 
  假設郵寄清單包含的名稱有時候會包括稱謂 (Mr.、Mrs.、Miss 或 Ms.) 以及姓名。 當您從清單產生信封標籤時，如果不想包括稱謂，就可以使用規則運算式來移除稱謂，如下列範例所示。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "80635728"
   
  規則運算式模式 `(Mr\.? |Mrs\.? |Miss |Ms\.? )` 會比對所出現的任何 "Mr "、"Mr. "、"Mrs "、"Mrs. "、"Miss "、"Ms 或 "Ms. "。 呼叫 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法會將相符的字串取代為 <xref:System.String.Empty?displayProperty=nameWithType>；換句話說，就是將其從原始字串中移除。  
   
-### <a name="example-2-identify-duplicated-words"></a>範例 2:識別重複的單字  
+### <a name="example-2-identify-duplicated-words"></a>範例2：識別重複的文字  
 
  不小心重複文字是作者常犯的錯誤。 規則運算式可用來識別重複的文字，如下列範例所示。  
   
@@ -89,7 +90,7 @@ ms.locfileid: "80635728"
  規則運算式模式 `\b(\w+?)\s\1\b` 可解譯如下：  
   
 > [!div class="mx-tdCol2BreakAll"]
-> |模式|解譯|  
+> |模式|解讀|  
 > |-|-|
 > |`\b`|從字緣開始。|  
 > |`(\w+?)`|比對一或多個字元，但字元數愈少愈好。 這些一起構成可稱之為 `\1` 的群組。|  
@@ -99,9 +100,9 @@ ms.locfileid: "80635728"
   
  呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法時，規則運算式選項設為 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>。 因此，比對作業不區分大小寫，而且此範例會將子字串 "This this" 視為重複。  
   
- 輸入字串包括子字串「這是? This"。 不過，因為中間有標點符號，所以不會將其視為重複。  
+ 輸入字串包含子字串 "this？ This"。 不過，因為中間有標點符號，所以不會將其視為重複。  
   
-### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>範例 3:動態建構區分區域性的正規表示式  
+### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>範例3：以動態方式建立區分文化特性的正則運算式  
 
  下列範例說明規則運算式結合 .NET 全球化功能所提供的彈性，功能有多麼強大。 它會使用 <xref:System.Globalization.NumberFormatInfo> 物件來判定系統目前文化特性中的幣值格式， 然後利用該資訊動態建構可從文字擷取幣值的規則運算式。 針對每個比對，它會擷取僅包含數值字串的子群組，將其轉換成 <xref:System.Decimal> 值，並計算執行總計。  
   
@@ -111,9 +112,9 @@ ms.locfileid: "80635728"
  在目前文化特性為 English - United States (en-US) 的電腦上，此範例會動態建立規則運算式 `\$\s*[-+]?([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`。 此規則運算式模式可解譯如下：  
 
 > [!div class="mx-tdCol2BreakAll"]
-> |模式|解譯|  
+> |模式|解讀|  
 > |-|-|  
-> |`\$`|在輸入字串中尋找單獨出現的貨幣符號 (`$`)。 規則運算式模式字串包含反斜線，表示貨幣符號要解譯為字面意義，而不是規則運算式錨點。 (僅`$`符號就表示正則表達式引擎應嘗試在字串末尾開始其匹配。為了確保當前區域性的貨幣符號不會被誤解為正則表達式符號,該示例調用<xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType>方法以轉義字元。|  
+> |`\$`|在輸入字串中尋找單獨出現的貨幣符號 (`$`)。 規則運算式模式字串包含反斜線，表示貨幣符號要解譯為字面意義，而不是規則運算式錨點。 （ `$` 單獨的符號表示正則運算式引擎應該嘗試在字串結尾處開始比對）。為了確保目前文化特性的貨幣符號不會誤譯為正則運算式符號，此範例會呼叫 <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> 方法來將字元轉義。|  
 > |`\s*`|尋找出現零或多次的空格字元。|  
 > |`[-+]?`|尋找出現一或多次的正號或負號。|  
 > |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|此運算式外面括號將其定義成擷取群組或子運算式。 如果找到相符項目，從 <xref:System.Text.RegularExpressions.Group> 屬性傳回之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件，擷取此部分比對字串的相關資訊。 (集合中的第一個項目代表整個比對。)|  
@@ -132,7 +133,7 @@ ms.locfileid: "80635728"
 |[規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)|提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。|  
 |[規則運算式物件模型](the-regular-expression-object-model.md)|提供資訊和程式碼範例，說明如何使用規則運算式類別。|  
 |[規則運算式行為的詳細資訊](details-of-regular-expression-behavior.md)|提供 .NET 規則運算式之功能和行為的相關資訊。|
-|[在可視化工作室中使用正則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)||
+|[在 Visual Studio 中使用正則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)||
   
 ## <a name="reference"></a>參考  
 

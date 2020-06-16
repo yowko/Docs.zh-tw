@@ -1,5 +1,6 @@
 ---
 title: 非同步程式設計模型 (APM)
+description: 瞭解 .NET 中的非同步程式設計模型（APM）。 探索如何開始和結束非同步作業。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 96ad18e613d68ee97f4e5666afe77febadc6f991
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ab5d15d24aac80ef4a31c039f7af9dacce4a8d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289976"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769180"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同步程式設計模型 (APM)
 使用 <xref:System.IAsyncResult> 設計模式的非同步作業會實作為兩種方法，一種名為 `BeginOperationName`，另一種名為 `EndOperationName`，這兩種方法分別負責開始和結束非同步作業 *OperationName*。 例如， <xref:System.IO.FileStream> 類別提供 <xref:System.IO.FileStream.BeginRead%2A> 和 <xref:System.IO.FileStream.EndRead%2A> 方法，以非同步方式讀取檔案的位元組。 這些方法實作 <xref:System.IO.FileStream.Read%2A> 方法的非同步版本。  
@@ -29,7 +30,7 @@ ms.locfileid: "84289976"
 ## <a name="beginning-an-asynchronous-operation"></a>開始非同步作業  
  `BeginOperationName` 方法開始非同步作業 *OperationName*，並傳回實作 <xref:System.IAsyncResult> 介面的物件。 <xref:System.IAsyncResult> 物件會儲存非同步作業的相關資訊。 下表顯示非同步作業的相關資訊。  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|選擇性的應用程式特定物件，其中包含非同步作業的相關資訊。|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|<xref:System.Threading.WaitHandle> 可用來封鎖應用程式執行，直到非同步作業完成。|  

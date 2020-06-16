@@ -2,18 +2,18 @@
 title: 參數
 ms.date: 12/13/2019
 description: 瞭解如何使用 SQL 參數。
-ms.openlocfilehash: 1d2f818ad392a919faedd785394de28a9c6f56c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b24610a5cb65e2b24171452acef9bf55b4995431
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400453"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768946"
 ---
 # <a name="parameters"></a>參數
 
 參數是用來防止 SQL 插入式攻擊。 請使用參數來確保輸入只會被視為常值，而且永遠不會執行，而不會將使用者輸入與 SQL 語句串連。 在 SQLite 中，參數通常可在 SQL 語句中允許常值的任何位置使用。
 
-參數的前面可以是`:`、 `@`或。 `$`
+參數的前面可以是 `:` 、 `@` 或 `$` 。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_Parameter)]
 
@@ -21,16 +21,16 @@ ms.locfileid: "79400453"
 
 ## <a name="truncation"></a>截斷
 
-使用<xref:Microsoft.Data.Sqlite.SqliteParameter.Size>屬性來截斷文字和 BLOB 值。
+使用 <xref:Microsoft.Data.Sqlite.SqliteParameter.Size> 屬性來截斷文字和 BLOB 值。
 
 ```csharp
 // Truncate name to 30 characters
-command.Parameters.AddWithValue("$name", name).Length = 30;
+command.Parameters.AddWithValue("$name", name).Size = 30;
 ```
 
 ## <a name="alternative-types"></a>替代類型
 
-有時候，您可能會想要使用替代的 SQLite 類型。 藉由設定<xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType>屬性來執行此動作。
+有時候，您可能會想要使用替代的 SQLite 類型。 藉由設定屬性來執行此動作 <xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType> 。
 
 您可以使用下列替代型別對應。 如需預設對應，請參閱[資料類型](types.md)。
 

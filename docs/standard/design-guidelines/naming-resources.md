@@ -1,5 +1,6 @@
 ---
 title: 命名資源
+description: 請參閱 .NET 中資源的命名方針，這類似于命名屬性的指導方針。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-ms.openlocfilehash: 762ba99c4751ba40f5f33e99455cf950af35cdf6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 765337bcf9fad4f9a8c9272a15b5c77d02770471
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290145"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768244"
 ---
 # <a name="naming-resources"></a>命名資源
 因為可當地語系化的資源可以透過特定物件來參考，如同它們是屬性一樣，資源的命名指導方針類似于屬性方針。

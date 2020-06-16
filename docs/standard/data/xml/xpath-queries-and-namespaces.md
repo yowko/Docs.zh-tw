@@ -1,17 +1,18 @@
 ---
 title: XPath 查詢及命名空間
+description: 瞭解 & 命名空間的 XPath 查詢。 XPath 查詢知道 XML 檔中的命名空間 & 可以使用命名空間前置詞來限定元素 & 屬性名稱。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: d3314a7ff4cf957dac4cd8ad0416aad434b19af2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e8533d372a747432201dfbc4d879ecd3fbceaf8e
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283191"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769245"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 查詢及命名空間
 XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前置詞來限定項目及屬性名稱。 使用命名空間前置詞限定項目及屬性名稱，會將 XPath 查詢傳回的節點限制為那些只屬於特定命名空間的節點。  

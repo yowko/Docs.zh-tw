@@ -1,5 +1,6 @@
 ---
 title: 作法：處理平行迴圈中的例外狀況
+description: 瞭解如何在 .NET 中處理平行迴圈中的例外狀況。 請參閱範例，以瞭解如何在 AggregateException 中包裝迴圈中的所有例外狀況。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 87405425e85ed16d10b3e8b382c6e414fff10ddf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 61c22d6e82282f8aeb54818c813d4489e3bc9641
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278528"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768972"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>作法：處理平行迴圈中的例外狀況
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 多載沒有任何特殊機制可用來處理可能擲回的例外狀況。 在這方面，它們類似于一般 `for` 和 `foreach` 迴圈（ `For` 和 `For Each` Visual Basic）; 未處理的例外狀況會使迴圈在所有目前執行中的反復專案完成時立即終止。

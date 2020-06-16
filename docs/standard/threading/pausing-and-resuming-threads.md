@@ -1,5 +1,6 @@
 ---
 title: 暫停和中斷執行緒
+description: 瞭解如何在 .NET 中暫停 & 中斷線程。 瞭解如何使用 Thread 之類的方法。睡眠 & 執行緒. 中斷，& 例外狀況，例如 System.threading.threadinterruptedexception>。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], pausing
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
-ms.openlocfilehash: 369631603791d90c51244c1dc9907b9d8ec17364
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7f414ec716bac5f1e840c5e8a0946024e059fb6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291158"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769115"
 ---
 # <a name="pausing-and-interrupting-threads"></a>暫停和中斷執行緒
 

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 05/04/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f8e5cc134d4132c83544effa7f1937f2a2c8d012
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9b170765740600641f96056adc08ff0b69a03338
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596302"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768310"
 ---
 # <a name="install-the-net-core-sdk"></a>安裝 .NET Core SDK
 
@@ -124,6 +124,8 @@ Visual Studio for Mac 在選取 [ **.Net Core** ] 工作負載時安裝 .NET Cor
 
 ::: zone-end
 
+::: zone pivot="os-windows,os-macos"
+
 ## <a name="install-alongside-visual-studio-code"></a>與 Visual Studio Code 一起安裝
 
 Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，可在您的桌面上執行。 Visual Studio Code 適用于 Windows、macOS 和 Linux。
@@ -133,6 +135,8 @@ Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，�
 01. [下載並安裝 Visual Studio Code](https://code.visualstudio.com/Download)。
 01. [下載並安裝 .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)。
 01. [從 Visual Studio Code Marketplace 安裝 c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能。
+
+::: zone-end
 
 ::: zone pivot="os-windows"
 
@@ -148,7 +152,7 @@ dotnet-install.ps1 -Channel Current
 
 ::: zone-end
 
-::: zone pivot="os-linux,os-macos"
+::: zone pivot="os-macos"
 
 ## <a name="install-with-bash-automation"></a>使用 bash automation 進行安裝
 

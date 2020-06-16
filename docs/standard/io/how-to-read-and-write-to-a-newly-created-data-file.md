@@ -1,5 +1,6 @@
 ---
 title: 如何：讀取和寫入新建立的資料檔案
+description: 瞭解如何使用 BinaryReader 和 BinaryWriter 類別，在 .NET 中讀取和寫入新建立的資料檔案。
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 18f44af81a38a48da3115d2082ef45af39f06529
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9a6b2985b7f532476c0f4c0f998d710f95e55d3a
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291808"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769154"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：讀取和寫入新建立的資料檔案
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType> 和 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 類別用於寫入和讀取資料，而不是字元字串。 下列範例顯示如何建立空的檔案資料流、將資料寫入其中，以及從中讀取資料。

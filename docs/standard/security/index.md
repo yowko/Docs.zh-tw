@@ -1,5 +1,6 @@
 ---
 title: .NET 的安全性
+description: 瞭解 .NET 中的安全性。 請遵循描述主要安全性概念、以角色為基礎的安全性、密碼編譯模型，以及安全程式碼撰寫方針的連結。
 ms.date: 06/04/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - security [.NET Framework]
 - security [.NET]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-ms.openlocfilehash: 2e4c289d7049fb587cdc9a4928f98852483fde5f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 21511b580a4f922d2aef04cc79f5d551f0406b45
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705989"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767815"
 ---
 # <a name="security-in-net"></a>.NET 的安全性
 

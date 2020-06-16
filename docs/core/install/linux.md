@@ -4,12 +4,12 @@ description: 瞭解哪些 Linux 散發套件支援在 Linux 上安裝 .NET Core�
 author: thraka
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: fec3cf9e99c2db5d7312280f676bc2a3344f1ae1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fbb057825395d4e024f99e1abbd1a6e65ba1dce7
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602891"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768349"
 ---
 # <a name="install-net-core-on-linux"></a>在 Linux 上安裝 .NET Core
 
@@ -28,6 +28,26 @@ ms.locfileid: "84602891"
 - 2.0
 
 這些不支援的版本在下列各節中並未詳述，而您的里程可能會因您嘗試安裝而異。
+
+## <a name="alpine"></a>Alpine
+
+沒有安裝程式可供 Alpine。 您必須使用[安裝腳本](linux-alpine.md#scripted-install)或遵循[手動安裝](linux-alpine.md#manual-install)指示。
+
+下表列出目前支援的 .NET Core 版本，以及支援的 Alpine 版本。 在[.Net Core 版本達到支援終止](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)，或[Alpine 版本達到生命週期結束](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases)之前，這些版本仍受到支援。
+
+- ✔️表示仍然支援 Alpine 或 .NET Core 的版本。
+- A ❌ 表示該 Alpine 版本不支援 Alpine 或 .Net Core 的版本。
+- 當 Alpine 版本和 .NET Core 版本都✔️時，就會支援該作業系統和 .NET 組合。
+
+| Alpine                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview |
+|-----------------------------|---------------|---------------|----------------|
+| ✔️ [3.12](linux-alpine.md)  | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
+| ✔️ [3.11](linux-alpine.md)  | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
+| ✔️ [3.10](linux-alpine.md)  | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
+| ✔️ [3.9](linux-alpine.md)   | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
+| ❌[3.8](linux-alpine.md)   | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
+
+如需詳細資訊，請參閱[在 Alpine 上安裝 .Net Core](linux-alpine.md)。
 
 ## <a name="centos"></a>CentOS
 

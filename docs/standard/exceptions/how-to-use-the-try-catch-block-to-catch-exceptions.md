@@ -1,5 +1,6 @@
 ---
 title: 操作說明：使用 Try/Catch 區塊攔截例外狀況
+description: 使用 try 區塊來包含可能引發或擲回例外狀況的語句。 放置語句來處理一或多個 catch 區塊中的例外狀況。
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60ed213ea777fe35873fd1e67555b7506e3ca587
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708462"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768907"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 區塊攔截例外狀況
 
@@ -38,5 +39,5 @@ ms.locfileid: "75708462"
 
 ## <a name="see-also"></a>另請參閱
 
-- [異常](index.md)
+- [例外狀況](index.md)
 - [在 .NET 中處理 I/O 錯誤](../io/handling-io-errors.md)

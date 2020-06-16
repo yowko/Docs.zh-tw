@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144743"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767776"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：在 ML.NET 中使用 ONNX 偵測物件
 
@@ -19,7 +19,7 @@ ms.locfileid: "84144743"
 
 若要從頭開始定型物件偵測模型，將會需要設定數以百萬計的參數、大量的標籤定型資料，以及大量的計算資源 (數以百計的 GPU 小時)。 使用預先定型的模型可讓您快速地進行定型過程。
 
-在本教學課程中，您會了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 >
 > - 了解問題
@@ -94,7 +94,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
     - 選擇 [nuget.org] 作為 [套件來源]，選取 [瀏覽] 索引標籤，搜尋 **Microsoft.ML**。
     - 選取 [安裝]**** 按鈕。
     - 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
-    - 針對 **Microsoft.ML.ImageAnalytics** 和 **Microsoft.ML.OnnxTransformer** 重複這些步驟。
+    - 針對**ImageAnalytics**、 **OnnxTransformer**和**OnnxRuntime**重複上述步驟。」）。
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>準備您的資料及預先定型模型
 

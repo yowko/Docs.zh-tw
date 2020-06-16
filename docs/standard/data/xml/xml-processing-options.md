@@ -1,14 +1,15 @@
 ---
 title: XML 處理選項
+description: 預覽 XML 處理的選項，包括 LINQ to XML、XmlReader、XmlWriter、XslCompiledTransform、XPathNavigator、、XmlLite 和 MSXML。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-ms.openlocfilehash: 544c3467f46f5bebf79cb95906faeca7926c3824
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c41b3dd99264b9043c5914b84bbb76ac02b317ac
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291418"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767763"
 ---
 # <a name="xml-processing-options"></a>XML 處理選項
 請參閱下表，以取得您可以用來處理 XML 資料的 Microsoft 技術清單。  

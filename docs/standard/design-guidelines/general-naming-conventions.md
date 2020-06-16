@@ -1,5 +1,6 @@
 ---
 title: 一般命名慣例
+description: 使用與 word 選擇相關的一般命名慣例、使用縮寫和縮略字的指導方針，以及避免語言特定名稱的指引。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: c90987fd28d5157cfb7f7eea4680b5ab4be1a200
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290950"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769076"
 ---
 # <a name="general-naming-conventions"></a>一般命名慣例
 
@@ -64,7 +65,7 @@ ms.locfileid: "84290950"
 |**byte**|**節**|**unsigned char**|**節**|
 |**short**|**短缺**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**介於**|**int**|**Int32**|
+|**int**|**整數**|**int**|**Int32**|
 |**uint**|**UInt32**|**不帶正負號的整數**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|

@@ -1,5 +1,6 @@
 ---
 title: 列舉設計
+description: 列舉的設計，這是一種特殊的實值型別。 簡單的列舉會保存小型、封閉的選擇集。 旗標列舉支援列舉值的位運算。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: efdfcda95a67941f0fde5f7a96467af7dd374396
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40a9faf53dc8a03674cd59074244c15cd304bdd2
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280136"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768533"
 ---
 # <a name="enum-design"></a>列舉設計
 

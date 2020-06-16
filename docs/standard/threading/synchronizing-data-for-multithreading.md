@@ -1,5 +1,6 @@
 ---
 title: 同步處理多執行緒處理的資料
+description: 瞭解如何在 .NET 中同步處理多執行緒的資料。 選擇如已同步處理的程式碼區域、手動同步處理或同步處理的內容等策略。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4d528c54816961caa251ce054abf2c6cf07e9d01
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291093"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769102"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>同步多執行緒處理的資料
 
