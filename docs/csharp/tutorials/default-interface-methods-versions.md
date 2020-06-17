@@ -4,14 +4,14 @@ description: 本進階教學課程探討如何安全地將新功能新增至現�
 ms.date: 05/06/2019
 ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 650aea78b421783b3f249b3670578aa60e800ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e73f9001414631975248f1a1658833d2785169b
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156775"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803217"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>教程：使用 C# 8.0 中的預設介面方法更新介面
+# <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>教學課程：使用 c # 8.0 中的預設介面方法來更新介面
 
 從 C# 8.0 開始，您可以在宣告介面成員時，於 .NET Core 3.0 上定義實作。 最常見的情節是安全地將成員新增至已發行並由無數個用戶端所使用的介面。
 
@@ -25,7 +25,7 @@ ms.locfileid: "79156775"
 
 ## <a name="prerequisites"></a>必要條件
 
-您需要設置電腦以運行 .NET Core，包括 C# 8.0 編譯器。 C# 8.0 編譯器可從[Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始。
+您必須設定電腦以執行 .NET Core，包括 c # 8.0 編譯器。 從[Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用 c # 8.0 編譯器。
 
 ## <a name="scenario-overview"></a>案例概觀
 
@@ -39,19 +39,19 @@ ms.locfileid: "79156775"
 
 針對這些介面，小組可以建置適用於其使用者的程式庫，來為其客戶打造更好的體驗。 其目標是加深與現有客戶的關係，並改善與新客戶的關係。
 
-現在，您可以將程式庫升級到下一版。 其中一項所要求功能是讓擁有許多訂單的客戶享有忠誠度折扣。 此新的忠誠度折扣會在每次客戶下單時套用。 此特定折扣屬於每個個別客戶。 的每個`ICustomer`實現都可以為會員折扣設置不同的規則。
+現在，您可以將程式庫升級到下一版。 其中一項所要求功能是讓擁有許多訂單的客戶享有忠誠度折扣。 此新的忠誠度折扣會在每次客戶下單時套用。 此特定折扣屬於每個個別客戶。 每個的執行 `ICustomer` 都可以為忠誠度折扣設定不同的規則。
 
-新增此功能的最自然方式，就是使用方法來增強 `ICustomer` 介面以套用任何忠誠度折扣。 這一設計建議引起了有經驗的開發人員的關注："介面一旦發佈就不可改變！ 這是中斷性變更！」 C# 8.0 新增「預設介面實作」** 來升級介面。 程式庫作者可以將新成員新增至介面，並為這些成員提供預設實作。
+新增此功能的最自然方式，就是使用方法來增強 `ICustomer` 介面以套用任何忠誠度折扣。 這種設計建議會造成經驗豐富的開發人員的問題：「介面在發行後不變！ 這是中斷性變更！」 C# 8.0 新增「預設介面實作」** 來升級介面。 程式庫作者可以將新成員新增至介面，並為這些成員提供預設實作。
 
 預設介面實作可讓開發人員升級介面，同時仍可讓任何實作者覆寫該實作。 程式庫使用者可以接受預設實作作為非中斷性變更。 如果他們的商務規則不同，則可以進行覆寫。
 
-## <a name="upgrade-with-default-interface-methods"></a>使用預設介面方法升級
+## <a name="upgrade-with-default-interface-methods"></a>使用預設介面方法進行升級
 
 小組同意最有可能的預設實作，就是客戶的忠誠度折扣。
 
-升級應該提供設定兩個屬性的功能：必須符合折扣資格的訂單數目，以及折扣百分比。 這使得它成為預設介面方法的完美方案。 您可以將方法添加到介面，`ICustomer`並提供最有可能的實現。 所有現有及任何新的實作都可使用預設實作，或提供自己的實作。
+升級應該提供設定兩個屬性的功能：必須符合折扣資格的訂單數目，以及折扣百分比。 這讓它成為預設介面方法的絕佳案例。 您可以將方法加入至 `ICustomer` 介面，並提供最可能的執行。 所有現有及任何新的實作都可使用預設實作，或提供自己的實作。
 
-首先，將新方法新增至實作：
+首先，將新方法新增至介面，包括方法的主體：
 
 [!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 
@@ -71,7 +71,7 @@ ms.locfileid: "79156775"
 
 [!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
-這個小代碼片段中有許多新的語言功能。 介面現在可以包含靜態成員，包括欄位和方法。 也會啟用不同的存取修飾詞。 其他欄位是私用的，而新方法是公用的。 介面成員上允許任何修飾詞。
+該小型程式碼片段中顯示許多新的語言功能。 介面現在可以包含靜態成員，包括欄位和方法。 也會啟用不同的存取修飾詞。 其他欄位是私用的，而新方法是公用的。 介面成員上允許任何修飾詞。
 
 使用一般公式來計算忠誠度折扣 (但參數不同) 的應用程式不需要提供自訂實作；這些應用程式可透過靜態方法來設定引數。 例如，下列程式碼會設定「客戶感謝」，獎勵其成員資格超過一個月的任何客戶：
 

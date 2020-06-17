@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: b10d1c4579f10ca4fb84797ee67342825aaa9c32
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662936"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803218"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>在 .NET 中使用 StringBuilder 類別
 <xref:System.String> 物件不可變。 每次您使用 <xref:System.String?displayProperty=nameWithType> 類別的其中一個方法時，就會在記憶體中建立新的字串物件，這需要為該新物件配置新的空間。 在您需要重複修改字串的情況下，與建立新 <xref:System.String> 物件相關聯的額外負荷可能成本高昂。 當您想要修改字串，而不建立新物件時，可以使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別。 例如，在迴圈中將許多字串串連在一起時，可以使用 <xref:System.Text.StringBuilder> 類別來提升效能。  
@@ -67,7 +67,7 @@ ms.locfileid: "84662936"
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|將字串中傳遞的格式規範取代為格式化的文字。|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|將字串或物件插入目前 **StringBuilder** 的指定索引。|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|從目前 **StringBuilder** 移除指定的字元數。|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|取代指定索引處的指定字元。|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|以另一個指定的字元或字串，取代目前**StringBuilder**中所有出現的指定字元或字串。|  
   
 ### <a name="append"></a>附加  
  **Append** 方法可以用來將物件的文字或字串表示加入至目前 **StringBuilder** 所代表的字串結尾。 下列範例會將 **StringBuilder** 初始化為 "Hello World"，然後附加一些文字到物件的結尾。 會視需要自動配置空格。  

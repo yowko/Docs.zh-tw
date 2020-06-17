@@ -2,18 +2,18 @@
 title: 使用 Visual Studio Code 建立 .NET Core 主控台應用程式
 description: 瞭解如何使用 Visual Studio Code 和 .NET Core CLI 建立 .NET Core 主控台應用程式。
 ms.date: 05/22/2020
-ms.openlocfilehash: 6d8f9adb2f77dbfd2d1cf54c80f1cdea582b1d96
-ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
+ms.openlocfilehash: 466a1353b574711a73570428569b58eab7ad8135
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84717506"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811690"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET Core 主控台應用程式
 
 本教學課程說明如何使用 Visual Studio Code 和 .NET Core CLI 來建立和執行 .NET Core 主控台應用程式。 專案工作，例如建立、編譯和執行專案，都是使用 .NET Core CLI 來完成。 您可以使用不同的程式碼編輯器來遵循此教學課程，並視需要在終端機中執行命令。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 1. 已安裝[c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能的[Visual Studio Code](https://code.visualstudio.com/) 。 如需有關如何在 Visual Studio Code 上安裝延伸模組的詳細資訊，請參閱[VS Code 延伸模組 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)。
 2. [.Net Core 3.1 SDK 或更新版本](https://dotnet.microsoft.com/download)
@@ -89,7 +89,7 @@ dotnet run
 
 1. 以下列程式碼取代 `Main` *Program.cs*中方法的內容，也就是呼叫的那一行 `Console.WriteLine` ：
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
    此程式碼會在主控台中顯示「What is your name?」， 在主控台視窗中，等候使用者輸入後面接著<kbd>Enter</kbd>鍵的字串。 它會將此字串儲存在名為的變數中 `name` 。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。 最後，它會在主控台視窗中顯示這些值。
 

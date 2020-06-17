@@ -2,12 +2,12 @@
 title: 使用 Visual Studio for Mac 建立 .NET Core 主控台應用程式
 description: 瞭解如何使用 Visual Studio for Mac 建立 .NET Core 主控台應用程式。
 ms.date: 06/02/2020
-ms.openlocfilehash: 57f16e510270b7256b285493b1f978101fc11804
-ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
+ms.openlocfilehash: 9cab838eaab2c59d8a0270267514f57acb7c60fb
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84717519"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811662"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 建立 .NET Core 主控台應用程式
 
@@ -19,7 +19,7 @@ ms.locfileid: "84717519"
 > * 在 Visual Studio for Mac 中，從功能表**選取**  >  [說明] [回報**問題**] 或 [從歡迎畫面**回報問題**]，這會開啟用來提出錯誤報表的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/8/index.html)入口網站追蹤您的意見反應。
 > * 若要提出建議，請從功能表**選取 [** 說明]  >  [**提供建議**] 或從 [歡迎使用] 畫面中**提供建議**，這會帶您前往[Visual Studio for Mac 的開發人員社區網頁](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * [Visual Studio for Mac 8.6 版或更新版本](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 選取 [安裝 .NET Core] 選項。 安裝 Xamarin 對於 .NET Core 開發而言是選擇性的。 如需詳細資訊，請參閱下列資源：
 
@@ -84,7 +84,7 @@ namespace HelloWorld
 
 1. 在*Program.cs*中，以 `Main` 下列程式碼取代方法的內容，也就是呼叫的那一行 `Console.WriteLine` ：
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
    此程式碼會在主控台中顯示「What is your name?」， 在主控台視窗中，等候使用者輸入後面接著<kbd>enter</kbd>鍵的字串。 它會將此字串儲存在名為的變數中 `name` 。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `date` 的變數。 最後，它會在主控台視窗中顯示這些值。
 

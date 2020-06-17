@@ -2,15 +2,15 @@
 title: ASP.NET Core 的重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 04/29/2020
+ms.date: 06/11/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2e89a14c948365da1e7a04fc8d5ca4008842f8d8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a6ddf97f907a1cba57e51d6fd516d1f94272f725
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446963"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803278"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
 
@@ -21,7 +21,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [已移除過時的 Antiforgery、CORS、診斷、MVC 和路由 Api](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [驗證： Google + 淘汰](#authentication-google-deprecated-and-replaced)
 - [驗證：已移除 HttpCoNtext 驗證屬性](#authentication-httpcontextauthentication-property-removed)
-- [驗證： Newtonsoft 已取代的 Json 類型](#authentication-newtonsoftjson-types-replaced)
+- [驗證：已取代之類型上的 Newtonsoft.Js](#authentication-newtonsoftjson-types-replaced)
 - [驗證： OAuthHandler ExchangeCodeAsync 簽章已變更](#authentication-oauthhandler-exchangecodeasync-signature-changed)
 - [授權： AddAuthorization 多載已移至不同的元件](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [授權： IAllowAnonymous 已從 AuthorizationFilterCoNtext 移除。篩選](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
@@ -50,7 +50,9 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [身分識別： SignInAsync 擲回未驗證身分識別的例外狀況](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [身分識別：使用的函式接受新的參數](#identity-signinmanager-constructor-accepts-new-parameter)
 - [身分識別： UI 使用靜態 web 資產功能](#identity-ui-uses-static-web-assets-feature)
+- [Kestrel：預設偵測到執行時間的設定變更](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel：已移除連接介面卡](#kestrel-connection-adapters-removed)
+- [Kestrel：預設支援的 TLS 通訊協定版本已變更](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel：已移除空的 HTTPS 元件](#kestrel-empty-https-assembly-removed)
 - [Kestrel：要求尾標頭已移至新的集合](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel：傳輸抽象層變更](#kestrel-transport-abstractions-removed-and-made-public)
@@ -98,7 +100,14 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 
 ***
 
-[!INCLUDE [Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
+[!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
+
+***
+[!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
+
+***
+
+[!INCLUDE[Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
 
 ***
 

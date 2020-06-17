@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7ef8e17b8a42defc0858123332976d30c83f20c8
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 3c8fc7c4702b786c05e14397dc36d994c77e114d
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84700428"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811660"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET Core 主控台應用程式
 
 本教學課程說明如何在 Visual Studio 2019 中建立及執行 .NET Core 主控台應用程式。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 已安裝 **.Net Core 跨平臺開發**工作負載的[Visual Studio 2019 16.6 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 當您選取此工作負載時，會自動安裝 .NET Core 3.1 SDK。
 
@@ -93,8 +93,8 @@ End Module
 
 1. 在*Program.cs*或*Program .vb*中，以 `Main` 下列程式碼取代方法的內容，也就是呼叫的那一行 `Console.WriteLine` ：
 
-   [!code-csharp[GettingStarted#1](./snippets/with-visual-studio/csharp/Program.cs#1)]
-   [!code-vb[GettingStarted#1](./snippets/with-visual-studio/vb/Program.vb#1)]
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
+   :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="MainMethod":::
 
    此程式碼會在主控台中顯示「What is your name?」， 在主控台視窗中，等候使用者輸入後面接著<kbd>Enter</kbd>鍵的字串。 它會將此字串儲存在名為的變數中 `name` 。 它也會抓取屬性的值 <xref:System.DateTime.Now?displayProperty=nameWithType> ，其中包含目前的本地時間，並將它指派給名為的變數 `date` （ `currentDate` 在 Visual Basic 中）。 最後，它會在主控台視窗中顯示這些值。
 

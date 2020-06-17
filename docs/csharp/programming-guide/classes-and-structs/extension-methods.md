@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241405"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803180"
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 
@@ -54,7 +54,7 @@ int i = s.WordCount();
 using System.Linq;
 ```
 
-（您可能也必須新增對 system.string 的參考）。您會注意到，標準查詢運算子現在會出現在 IntelliSense 中，做為大部分類型可用的其他方法 <xref:System.Collections.Generic.IEnumerable%601> 。
+（您可能也必須加入 System.Core.dll 的參考）。您會注意到，標準查詢運算子現在會出現在 IntelliSense 中，做為大部分類型可用的其他方法 <xref:System.Collections.Generic.IEnumerable%601> 。
 
 ## <a name="binding-extension-methods-at-compile-time"></a>在編譯時期繫結擴充方法
 
@@ -80,7 +80,7 @@ using System.Linq;
 
 使用繪圖紙架構或其他分層應用程式設計時，通常會有一組可用於跨應用程式界限進行通訊的領域實體或資料傳輸物件。 這些物件通常不包含任何功能，或僅適用于應用程式所有層級的最低功能。 擴充方法可用來新增每個應用層特有的功能，而不需使用不需要或不想要在其他圖層中的方法將物件載入。
 
-```aspx-csharp
+```csharp
 public class DomainEntity
 {
     public int Id { get; set; }

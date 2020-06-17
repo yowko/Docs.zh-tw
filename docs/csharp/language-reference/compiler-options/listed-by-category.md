@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447039"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811686"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>依分類列出的 C# 編譯器選項
 
@@ -37,7 +37,7 @@ ms.locfileid: "84447039"
 |[-preferreduilang](preferreduilang-compiler-option.md)|指定編譯器輸出的語言。|
 |[-refout](refout-compiler-option.md)|除了主要組件，再另外產生參考組件。|
 |[-refonly](refonly-compiler-option.md)|產生參考組件，而非主要組件。|
-|[-目標](target-compiler-option.md)|使用下列五個選項的其中一個來指定輸出檔案的格式： [-target： appcontainerexe](target-appcontainerexe-compiler-option.md)、 [-target： exe](target-exe-compiler-option.md)、 [-target： library](target-library-compiler-option.md)、 [-target： module](target-module-compiler-option.md)、 [-target： winexe](target-winexe-compiler-option.md)或[-target： winmdobj](target-winmdobj-compiler-option.md)。|
+|[-target](target-compiler-option.md)|使用下列五個選項的其中一個來指定輸出檔案的格式： [-target： appcontainerexe](target-appcontainerexe-compiler-option.md)、 [-target： exe](target-exe-compiler-option.md)、 [-target： library](target-library-compiler-option.md)、 [-target： module](target-module-compiler-option.md)、 [-target： winexe](target-winexe-compiler-option.md)或[-target： winmdobj](target-winmdobj-compiler-option.md)。|
 |modulename\<string>|指定來源模組的名稱|
 
 ## <a name="net-framework-assemblies"></a>.NET Framework 組件
@@ -62,7 +62,7 @@ ms.locfileid: "84447039"
 |選項|目的|
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|建立檔案，其中包含可簡化錯誤回報的資訊。|
-|[-已核取](checked-compiler-option.md)|指定超出資料類型範圍的整數算術，是否會導致在執行階段發生例外狀況。|
+|[-checked](checked-compiler-option.md)|指定超出資料類型範圍的整數算術，是否會導致在執行階段發生例外狀況。|
 |[-debug](debug-compiler-option.md)|指示編譯器發出偵錯資訊。|
 |[-errorreport](errorreport-compiler-option.md)|設定錯誤報告行為。|
 |[-fullpaths](fullpaths-compiler-option.md)|在編譯器輸出中指定檔案的絕對路徑。|
@@ -107,7 +107,7 @@ ms.locfileid: "84447039"
 |[-unsafe](unsafe-compiler-option.md)|啟用使用 [unsafe](../keywords/unsafe.md) 關鍵字的程式碼編譯。|
 |[-utf8output](utf8output-compiler-option.md)|使用 UTF-8 編碼顯示編譯器輸出。|
 |-parallel[+&#124;-]|指定是否要使用並行組建 (+)。|
-|checksumalgorithm\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|
+|checksumalgorithm\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為： SHA256 （預設值）或 SHA1。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|
 
 ## <a name="obsolete-options"></a>過時的選項
 
@@ -115,7 +115,7 @@ ms.locfileid: "84447039"
 |---|---|
 |-incremental|啟用累加編譯。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 編譯器選項](index.md)
 - [依字母順序列出 C# 編譯器選項](listed-alphabetically.md)
