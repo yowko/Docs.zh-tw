@@ -4,12 +4,12 @@ description: 了解如何使用.NET Portability Analyzer 工具來評估程式�
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 7fe5aafe1ad8bf87883ebe27f2aa4fb102a01e45
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903606"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -32,9 +32,6 @@ ms.locfileid: "84501792"
 ![可攜性分析器的螢幕擷取畫面。](./media/portability-analyzer/portability-screenshot.png)
 
 您也可以使用 ApiPort 主控台應用程式，可從 [ApiPort 存放庫](https://aka.ms/apiportdownload)下載。 您可以使用 `listTargets` 命令選項來顯示可用的目標清單，然後指定 `-t` 或 `--target` 命令選項來挑選目標平台。
-
-> [!IMPORTANT]
-> 如果在執行此工具時沒有任何結果，則預設目標可能無法使用。 如果您遇到這種情況，請務必新增明確的目標。
 
 ### <a name="solution-wide-view"></a>全解決方案的視圖
 

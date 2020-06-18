@@ -1,17 +1,17 @@
 ---
-title: .NET Core 執行階段識別項 (RID) 目錄
+title: .NET Core 執行時間識別碼（RID）目錄
 description: 了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的使用方式。
 ms.date: 02/22/2019
-ms.openlocfilehash: b581f46becc6808ca957ac66c0c22e5e5f973bd1
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 903dd9c619008c9e3c6149a471ba814bdc9c97cc
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903281"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
-RID 是*執行階段識別項*的縮寫。 RID 值是用來識別應用程式執行所在的目標平台。
+RID 是執行時間*識別碼*的縮寫。 RID 值是用來識別應用程式執行所在的目標平台。
 .NET 套件會使用它們來代表 NuGet 套件中的平台特定資產。 下列值是 RID 的範例：`linux-x64`、`ubuntu.14.04-x64`、`win7-x64` 或 `osx.10.12-x64`。
 針對具有原生相依性的套件，RID 也可指定能在哪些平台上還原套件。
 
@@ -39,7 +39,7 @@ RID 是*執行階段識別項*的縮寫。 RID 值是用來識別應用程式執
 
 ## <a name="rid-graph"></a>RID 圖表
 
-RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。 您可以在位於存放`dotnet/runtime`庫的執行時間[*json*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案中，看到支援的 rid 和 rid 圖表清單。 在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。 這些陳述式指出相容的 RID。
+RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。 您可以在位於存放庫之檔案的[*runtime.js*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)中，看到支援的 RID 和 rid 圖表清單 `dotnet/runtime` 。 在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。 這些陳述式指出相容的 RID。
 
 當 NuGet 還原套件時，它會嘗試尋找與所指定執行階段完全相符的項目。
 若找不到完全相符的項目，NuGet 會返回到圖形，直到它根據 RID 圖形找到最接近的相容系統。
@@ -80,7 +80,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 ## <a name="using-rids"></a>使用 RID
 
 若要使用 RID，必須先了解有哪些 RID 存在。 新的值會定期新增至平台。
-如需最新和完整的版本，請參閱存放`dotnet/runtime`庫上的執行時間[. json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案。
+如需最新和完整的版本，請參閱存放庫上的檔案[runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。
 
 .NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值，適用於 .NET Core 2.0 和更新版本。 由於大部分發行版本的 RID 都會對應至可攜式 RID，因此在處理多個 Linux 發行版本時特別有用。
 
@@ -88,7 +88,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="windows-rids"></a>Windows RID
 
-僅列出常見值。 如需最新和完整的版本，請參閱存放庫上`dotnet/runtime`的[執行時間. json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案。
+僅列出常見值。 如需最新和完整的版本，請參閱儲存機制上的檔案[runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
   - `win-x64`
@@ -112,7 +112,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="linux-rids"></a>Linux RID
 
-僅列出常見值。 如需最新和完整的版本，請參閱存放`dotnet/runtime`庫上的執行時間[. json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
+僅列出常見值。 如需最新和完整的版本，請參閱存放庫上的檔案[runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
   - `linux-x64`（大部分的桌面散發套件，例如 CentOS、Debian、Fedora、Ubuntu 和衍生版本）
@@ -131,7 +131,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新和完整的版本，請參閱存放`dotnet/runtime`庫上的執行時間[. json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案。
+macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新和完整的版本，請參閱存放庫上的檔案[runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
   - `osx-x64` (最低 OS 版本為 macOS 10.12 Sierra)
@@ -148,6 +148,6 @@ macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新和�
 
 如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-macos)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段識別碼](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)
