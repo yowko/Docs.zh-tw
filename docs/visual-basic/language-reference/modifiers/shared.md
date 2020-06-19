@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990187"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -24,7 +24,7 @@ ms.locfileid: "84579108"
 
 ## <a name="when-to-use-shared"></a>使用 Shared 的時機
 
-共用類別或結構的成員，可將它提供給每個實例，而不是*非共用*，其中每個實例都會保留自己的複本。 例如，如果變數的值適用于整個應用程式，這就很有用。 如果您將該變數宣告為 `Shared` ，則所有實例都會存取相同的儲存位置，而如果一個實例變更變數的值，則所有實例都會存取更新的值。
+共用類別或結構的成員，可將它提供給每個實例，而不是*非共用*，其中每個實例都會保留自己的複本。 共用非常有用，例如，如果變數的值適用于整個應用程式。 如果您將該變數宣告為 `Shared` ，則所有實例都會存取相同的儲存位置，而如果一個實例變更變數的值，則所有實例都會存取更新的值。
 
 共用不會改變成員的存取層級。 例如，類別成員可以是共用和私用（只能從類別記憶體取），或非共用和公用。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../programming-guide/language-features/declared-elements/access-levels.md)。
 
@@ -50,7 +50,7 @@ ms.locfileid: "84579108"
 
 - **透過執行個體變數存取。** 藉由使用包含其類別或結構之特定實例的變數名稱來限定共用專案，可以存取該元素。 雖然這通常會如預期般運作，但編譯器會產生警告訊息，並透過類別或結構名稱而不是變數來進行存取。
 
-- **透過實例運算式來存取。** 如果您透過傳回其類別或結構實例的運算式來存取共用專案，編譯器會透過類別或結構名稱進行存取，而不會評估運算式。 如果您想要運算式來執行其他動作以及傳回實例，這會產生非預期的結果。 下列範例將說明這點。
+- **透過實例運算式來存取。** 如果您透過傳回其類別或結構實例的運算式來存取共用專案，編譯器會透過類別或結構名稱進行存取，而不會評估運算式。 如果您想要運算式執行其他動作以及傳回實例，此存取會產生非預期的結果。 下列範例將說明這種情況。
   
     ```vb
     Sub Main()
@@ -93,7 +93,7 @@ ms.locfileid: "84579108"
 - [Property Statement](../statements/property-statement.md)
 - [Sub 陳述式](../statements/sub-statement.md)
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Shadows](shadows.md)
 - [靜態](static.md)

@@ -4,12 +4,12 @@ description: 了解撰寫單元測試的最佳做法，提高 .NET Core 和 .NET
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989371"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 的單元測試最佳做法
 
@@ -43,11 +43,17 @@ ms.locfileid: "78240957"
 
 ## <a name="characteristics-of-a-good-unit-test"></a>良好單元測試的特性
 
-- **快**。 具有數千個單元測試的成熟專案並不罕見。 單元測試應只需要極少的時間執行。 毫秒。
-- **隔離**。 單元測試是獨立的，可以單獨執行，並且對所有外部因素 (例如檔案系統或資料庫) 沒有任何相依性。
-- **可重複**。 執行單元測試應該與其結果一致，亦即，如果您未變更回合之間的任何項目，會一律傳回相同的結果。
+- **快速**。 具有數千個單元測試的成熟專案並不罕見。 單元測試應只需要極少的時間執行。 毫秒。
+- 已**隔離**。 單元測試是獨立的，可以單獨執行，並且對所有外部因素 (例如檔案系統或資料庫) 沒有任何相依性。
+- 可**重複**。 執行單元測試應該與其結果一致，亦即，如果您未變更回合之間的任何項目，會一律傳回相同的結果。
 - **自我檢查**。 測試應該能夠自行偵測到通過或失敗，不需要任何人為互動。
 - **及時**。 相較於所測試的程式碼，單元測試不應耗費不成比例的冗長時間來撰寫。 相較於撰寫程式碼，如果您發現測試程式碼花費大量時間，請考慮使用更易於測試的設計。
+
+## <a name="code-coverage"></a>程式碼涵蓋範圍
+
+較高的程式碼涵蓋範圍百分比通常與較高的程式碼品質相關聯。 不過，測量本身*無法*判斷程式碼的品質。 設定過度確保建構完善的程式碼涵蓋範圍百分比目標可能是敵對。 假設有數千個條件式分支的複雜專案，並假設您設定了95% 程式碼涵蓋範圍的目標。 專案目前維護90% 的程式碼涵蓋範圍。 在剩餘的5% 中，要考慮所有邊緣案例所需的時間量，可能是一項很大的工作，而價值主張很快就會降低。
+
+較高的程式碼涵蓋範圍百分比不是成功的指標，也不代表高程式碼品質。 It jusst 代表單元測試所涵蓋的程式碼數量。 如需詳細資訊，請參閱[單元測試程式碼涵蓋範圍](unit-testing-code-coverage.md)。
 
 ## <a name="lets-speak-the-same-language"></a>讓我們使用相同的語言
 說到測試，遺憾的是「模擬」(*mock*) 一詞遭到誤用。 以下將定義撰寫單元測試時最常見的 *fakes* 類型：
@@ -111,7 +117,7 @@ Assert.True(mockOrder.Validated);
 - 用以測試的案例。
 - 叫用案例時的預期行為。
 
-#### <a name="why"></a>原因為何？
+#### <a name="why"></a>為什麼？
 
 - 命名標準很重要，因為名稱會明確表示測試目的。
 
@@ -127,10 +133,10 @@ Assert.True(mockOrder.Validated);
 **排列、採取動作、判定**是進行單元測試時的常見模式。 顧名思義，其中包含三個主要動作：
 
 - 「排列」** 物件，並視需要建立和設定這些物件。
-- *對物件執行操作*。
+- 對物件*採取動作*。
 - 「判定」** 某個項目如預期般運作。
 
-#### <a name="why"></a>原因為何？
+#### <a name="why"></a>為什麼？
 
 - 清楚分隔正在測試的項目與「排列」** 和「判定」** 步驟。
 - 這麼做可使判定與「採取動作」程式碼相互摻雜的機率更低。
@@ -146,7 +152,7 @@ Assert.True(mockOrder.Validated);
 ### <a name="write-minimally-passing-tests"></a>撰寫最低限度通過測試
 要在單元測試中使用的輸入應該是最簡單的，才能驗證您目前正在測試的行為。
 
-#### <a name="why"></a>原因為何？
+#### <a name="why"></a>為什麼？
 
 - 測試對程式碼基底的未來變更變得更具復原性。
 - 更接近測試行為而不是實作。
@@ -162,7 +168,7 @@ Assert.True(mockOrder.Validated);
 ### <a name="avoid-magic-strings"></a>避免魔術字串
 相較於在生產環境程式碼中為變數命名，在單元測試中為變數命名的重要性有過之而無不及。 單元測試不應該包含魔術字串。
 
-#### <a name="why"></a>原因為何？
+#### <a name="why"></a>為什麼？
 
 - 避免測試的讀者為了找出使該值變得特殊的原因而需要檢查生產環境程式碼。
 - 明確地顯示您想要「證明」** 的項目，而不是嘗試「完成」** 的項目。
@@ -181,7 +187,7 @@ Assert.True(mockOrder.Validated);
 ### <a name="avoid-logic-in-tests"></a>避免在測試中使用邏輯
 撰寫您的單元測試時，請避免使用手動字串串連和邏輯條件，例如 `if`、`while`、`for`、`switch` 等等。
 
-#### <a name="why"></a>原因為何？
+#### <a name="why"></a>為什麼？
 
 - 在測試內帶進 Bug 的機率更低。
 - 著重最終結果，而不是實作詳細資料。
@@ -200,7 +206,7 @@ Assert.True(mockOrder.Validated);
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>慣用 Helper 方法來設定及終止
 如果您的測試需要類似的物件或狀態，比起利用 Setup 和 Teardown 屬性 (若有)，更慣用 Helper 方法。
 
-#### <a name="why"></a>原因為何？
+#### <a name="why"></a>為什麼？
 
 - 讀取測試時混淆較少，因為在每個測試內都可以看見所有的程式碼。
 - 對於給定的測試，設定太多或太少的機率更低。
@@ -235,7 +241,7 @@ Assert.True(mockOrder.Validated);
 - 為每個判定建立個別測試。
 - 使用參數化測試。
 
-#### <a name="why"></a>原因為何？
+#### <a name="why"></a>為什麼？
 
 - 如果某個判定失敗，將不會評估後續的判定。
 - 確保您不會在測試中判定多個案例。

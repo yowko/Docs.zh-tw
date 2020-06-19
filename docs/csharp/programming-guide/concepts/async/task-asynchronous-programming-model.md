@@ -2,12 +2,12 @@
 title: 使用 async 和 await 進行非同步工作程式設計模型 (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: d575a369a3c9766938e3996c527e27539e3e62e2
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990074"
 ---
 # <a name="task-asynchronous-programming-model"></a>非同步工作程式設計模型
 
@@ -40,7 +40,7 @@ ms.locfileid: "84241951"
 
 C# 中的 [async](../../../language-reference/keywords/async.md) 和 [await](../../../language-reference/operators/await.md) 關鍵字都是非同步程式設計的核心。 藉由使用這兩個關鍵字，您可以使用 .NET Framework、.NET Core 或 Windows 執行階段中的資源來建立異步方法，幾乎就像建立同步方法一樣容易。 使用 `async` 關鍵字的非同步方法就稱為*非同步方法*。
 
-下列範例將示範非同步方法。 程式碼中的一切對您而言應該幾乎完全熟悉。
+下列範例將示範非同步方法。 程式碼中幾乎所有的內容都看起來應該很熟悉。
 
 您可以在本主題結尾找到完整的 Windows Presentation Foundation (WPF) 範例檔案，並且可從[非同步範例：＜使用 Async 和 Await 進行非同步程式設計＞中的範例 (英文)](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/) 下載範例。
 
@@ -171,7 +171,7 @@ Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `asyn
 `async` 和 `await` 都是內容關鍵字。 如需詳細資訊和範例，請參閱下列主題：
 
 - [async](../../../language-reference/keywords/async.md)
-- [遇到](../../../language-reference/operators/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="return-types-and-parameters"></a><a name="BKMK_ReturnTypesandParameters"></a>傳回類型和參數
 
@@ -234,7 +234,7 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 
 ## <a name="naming-convention"></a><a name="BKMK_NamingConvention"></a>命名慣例
 
-依照慣例，會傳回通常可等候類型 (例如 `Task`、`Task<T>`、`ValueTask`、`ValueTask<T>`) 的方法應該具有結尾為 "Async" 的名稱。 會開始執行非同步作業但不會傳回可等候類型的方法不應該具有結尾為 "Async" 的名稱，但其名稱開頭可以是 "Begin"、"Start" 或一些其他動詞，以建議此方法不會傳回或擲回作業結果。
+依照慣例，傳回常用可等候類型（例如、 `Task` `Task<T>` 、、）的方法 `ValueTask` ， `ValueTask<T>` 其名稱應該以 "Async" 結尾。 會開始執行非同步作業但不會傳回可等候類型的方法不應該具有結尾為 "Async" 的名稱，但其名稱開頭可以是 "Begin"、"Start" 或一些其他動詞，以建議此方法不會傳回或擲回作業結果。
 
 當事件、基底類別或介面合約採用不同的名稱時，您可以忽略慣例。 例如，您不應該重新命名一般事件處理常式，例如 `Button1_Click` 。
 
@@ -245,7 +245,7 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 |[逐步解說：使用 async 和 await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)|顯示如何將同步 WPF 方案轉換為非同步 WPF 方案。 應用程式會下載一系列的網站。|[非同步範例：存取 Web 逐步解說 (英文)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
 |[如何使用 System.threading.tasks.task.whenall 擴充非同步逐步解說（c #）](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|將 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 加入至前一個逐步解說。 使用 `WhenAll` 會同時開始進行所有的下載。||
 |[如何使用 async 和 await，同時發出多個 web 要求（c #）](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|示範如何同時啟動數個工作。|[非同步範例：平行進行多個 Web 要求 (英文)](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|
-|[非同步方法的傳回型別 (C#)](./async-return-types.md)|說明非同步方法可以傳回的類型，並解釋每種類型的適用時機。||
+|[非同步方法的傳回型別 (C#)](./async-return-types.md)|說明非同步方法可以傳回的類型，並說明每個類型的適當時機。||
 |[非同步程式中的控制流程（c #）](./control-flow-in-async-programs.md)|在非同步程式中詳細追蹤一連串 await 運算式的控制流程。|[非同步範例：非同步程式中的控制流程 (英文)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|
 |[微調非同步應用程式 (C#)](./fine-tuning-your-async-application.md)|顯示如何將下列功能加入至您的非同步方案：<br /><br /> - [取消一項非同步工作或工作清單（c #）](./cancel-an-async-task-or-a-list-of-tasks.md)<br />- [在一段時間後取消非同步工作（c #）](./cancel-async-tasks-after-a-period-of-time.md)<br />- [完成一項作業之後，取消剩餘的非同步工作（c #）](./cancel-remaining-async-tasks-after-one-is-complete.md)<br />- [啟動多項非同步工作並在它們完成時進行處理（c #）](./start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式)|
 |[處理非同步應用程式中的重新進入 (C#)](./handling-reentrancy-in-async-apps.md)|示範如何處理使用中的非同步作業在執行時重新開機的情況。||
@@ -264,6 +264,6 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 ## <a name="see-also"></a>另請參閱
 
 - [async](../../../language-reference/keywords/async.md)
-- [遇到](../../../language-reference/operators/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [非同步程式設計](../../../async.md)
 - [非同步總覽](../../../../standard/async.md)

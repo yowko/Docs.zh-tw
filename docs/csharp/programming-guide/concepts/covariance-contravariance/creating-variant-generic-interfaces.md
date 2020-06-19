@@ -2,12 +2,12 @@
 title: 建立 Variant 泛型介面 (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: 27760fd73c8c40fc108106b87b2102ab5e07263c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a8e3e010c0e5d5490aee35603cad4fd6c1dc29e0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990050"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>建立 Variant 泛型介面 (C#)
 
@@ -144,9 +144,9 @@ interface ICovariant<out T> { }
 
 ### <a name="avoiding-ambiguity"></a>避免語意模糊
 
-當您實作 Variant 泛型介面時，變異數有時會導致語意模糊。 對此應該要設法避免。
+當您實作 Variant 泛型介面時，變異數有時會導致語意模糊。 這類不明確的情況應該避免。
 
-例如，如果您在一個類別中，明確地實作相同 Variant 泛型介面與不同泛型型別參數，它可能會造成語意模糊。 在此情況下，編譯器不會產生錯誤，但未指定在執行階段將選擇哪個介面實作。 這可能會導致您的程式碼中有細微錯誤。 請參考下列程式碼範例。
+例如，如果您在一個類別中，明確地實作相同 Variant 泛型介面與不同泛型型別參數，它可能會造成語意模糊。 在此情況下，編譯器不會產生錯誤，但不會指定在執行時間選擇哪一個介面執行。 這種不明確的可能會導致程式碼中的細微錯誤。 請參考下列程式碼範例。
 
 ```csharp
 // Simple class hierarchy.

@@ -1,17 +1,17 @@
 ---
-title: 訂單單元測試
+title: 排序單元測試
 description: 瞭解如何使用 .NET Core 訂購單元測試。
 author: IEvangelist
 ms.date: 05/18/2020
 zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: ce0d01c924075ffcc9ad49ef8aca49222c10c921
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3400ae440a828054624d67c14807ee72783e466a
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83704556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989257"
 ---
-# <a name="order-unit-tests"></a>訂單單元測試
+# <a name="order-unit-tests"></a>排序單元測試
 
 有時候，您可能會想要以特定循序執行單元測試。 在理想的情況下，單元測試執行的順序並_不_重要，而且[最佳做法](unit-testing-best-practices.md)是避免排序單元測試。 無論如何，都可能需要這麼做。 在此情況下，本文示範如何排序測試回合。
 
@@ -84,4 +84,4 @@ XUnit 測試架構可讓您更精確地控制測試回合順序。 您會執行 
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [單元測試最佳做法](unit-testing-best-practices.md)
+> [單元測試程式碼涵蓋範圍](unit-testing-code-coverage.md)

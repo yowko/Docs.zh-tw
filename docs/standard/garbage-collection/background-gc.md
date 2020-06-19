@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990228"
 ---
 # <a name="background-garbage-collection"></a>背景垃圾收集
 
@@ -57,7 +57,7 @@ ms.locfileid: "84307068"
 
 在 [工作站] 或 [伺服器垃圾收集] 中，您可以[啟用並行垃圾收集](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)，讓執行緒可以與在集合大部分持續時間內執行垃圾收集的專用線程並存執行。 此選項只會影響層代2中的垃圾收集;層代0和1一律為非並行，因為它們會快速完成。
 
-並行記憶體回收會將回收期間的暫停降到最低，藉以加快互動式應用程式的回應速度。 當並行記憶體回收執行緒正在執行時，Managed 執行緒幾乎可以繼續執行。 這會在記憶體回收進行時縮短暫停時間。
+並行記憶體回收會將回收期間的暫停降到最低，藉以加快互動式應用程式的回應速度。 當並行記憶體回收執行緒正在執行時，Managed 執行緒幾乎可以繼續執行。 這項設計會導致在發生垃圾收集時暫停的時間較短。
 
 並行記憶體回收會針對專屬執行緒執行。 根據預設，CLR 會執行工作站垃圾收集，同時在單處理器和多處理器電腦上啟用並行垃圾收集。
 
