@@ -4,12 +4,12 @@ description: 瞭解如何使用 .NET 單元測試的程式碼涵蓋範圍功能�
 author: IEvangelist
 ms.author: dapine
 ms.date: 06/16/2020
-ms.openlocfilehash: 47f10ae367f511d5d02d32bfcb35bf4775a3e946
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990273"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105420"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>使用程式碼涵蓋範圍進行單元測試
 
@@ -266,10 +266,11 @@ cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 > 或者，如果您的組建系統已經使用 MSBuild，您就可以使用 MSBuild 封裝。 從命令提示字元中，將目錄變更為*XUnit Coverlet* ，然後執行 `dotnet test` 命令：
 >
 > ```dotnetcli
-> dotnet test --collect:"XPlat Code Coverage"
+> dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 > ```
 >
-> 產生的*coverage.cobertura.xml*檔案是輸出。
+> 產生的*coverage.cobertura.xml*檔案是輸出。  
+> 您可以遵循[這裡](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md)的 msbuild 整合指南
 
 ## <a name="generate-reports"></a>產生報表
 
