@@ -10,12 +10,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 122441e9238fd91199aed255b0125f69081c0a8c
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205491"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990146"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
 
@@ -61,7 +61,7 @@ ms.locfileid: "83205491"
 | .NET Framework 4.7     | Windows 10 Creators Update：460798<br />在所有其他 Windows 作業系統（包括其他 Windows 10 作業系統）上：460805 |
 | .NET Framework 4.7.1   | Windows 10 秋季建立者更新和 Windows Server，版本1709：461308<br/>在所有其他 Windows 作業系統（包括其他 Windows 10 作業系統）上：461310 |
 | .NET Framework 4.7.2   | Windows 10 2018 年4月更新和 Windows Server，版本1803：461808<br/>在 Windows 10 2018 年4月更新和 Windows Server 的所有 Windows 作業系統上，版本1803：461814 |
-| .NET Framework 4.8     | 在 Windows 10 5 月2019更新和 Windows 10 十一月2019更新：528040<br/>在 Windows 10 5 月2020更新：528209<br/>在所有其他 Windows 作業系統（包括其他 Windows 10 作業系統）上：528049 |
+| .NET Framework 4.8     | 在 Windows 10 5 月2019更新和 Windows 10 十一月2019更新：528040<br/>在 Windows 10 5 月2020更新：528372<br/>在所有其他 Windows 作業系統（包括其他 Windows 10 作業系統）上：528049 |
 
 ### <a name="minimum-version"></a>最小版本
 
@@ -173,9 +173,9 @@ ms.locfileid: "83205491"
 
 隨 .NET Framework 安裝的 .NET Framework CLR 會分別進行版本設定。 偵測 .NET Framework CLR 版本的方法有兩種：
 
-- **Clrver .exe 工具**
+- **Clrver.exe 工具**
 
-  使用[Clr 版本工具（Clrver）](../tools/clrver-exe-clr-version-tool.md)來判斷電腦上安裝了哪些 CLR 版本。 開啟[Visual Studio 的開發人員命令提示字元](../tools/developer-command-prompt-for-vs.md)，然後輸入 `clrver` 。
+  使用[Clr 版本工具（Clrver.exe）](../tools/clrver-exe-clr-version-tool.md) ，判斷電腦上安裝了哪些 CLR 版本。 開啟[Visual Studio 的開發人員命令提示字元](../tools/developer-command-prompt-for-vs.md)，然後輸入 `clrver` 。
 
   範例輸出：
 
@@ -209,7 +209,7 @@ ms.locfileid: "83205491"
   [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
   [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：判斷已安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)
 - [安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)

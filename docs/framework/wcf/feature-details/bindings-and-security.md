@@ -1,5 +1,6 @@
 ---
 title: 繫結和安全性
+description: 瞭解如何為您的安全性需求選取正確的系結。 WCF 隨附的系統提供系結可提供快速的方式來設計 WCF 應用程式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], security
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 0c41f357d63158979e448c2cc36f1e80b74b18d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587504"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245325"
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
 
@@ -192,7 +193,7 @@ WCF 中的每個系結都有兩種形式：作為 API，以及做為設定檔中
 
 下表摘要說明了安全性模式設定中提供的功能，也就是說，列出了當安全性模式設定為 `Transport`、`Message` 或 `TransportWithMessageCredential` 時可以使用的功能。 此表可協助您找出應用程式所需的安全性功能。
 
-|設定|特性|
+|設定|功能|
 |-------------|--------------|
 |傳輸|伺服器驗證<br /><br /> 用戶端驗證<br /><br /> 點對點安全性<br /><br /> 互通性<br /><br /> 硬體加速<br /><br /> 高輸送量<br /><br /> 安全的防火牆<br /><br /> 高延遲的應用程式<br /><br /> 多個躍點間重新加密|
 |訊息|伺服器驗證<br /><br /> 用戶端驗證<br /><br /> 端對端安全性<br /><br /> 互通性<br /><br /> 豐富的宣告<br /><br /> 同盟<br /><br /> 多重要素驗證<br /><br /> 自訂權杖<br /><br /> 公證/時間戳記服務<br /><br /> 高延遲的應用程式<br /><br /> 訊息簽章的持續性|
@@ -202,14 +203,14 @@ WCF 中的每個系結都有兩種形式：作為 API，以及做為設定檔中
 
 |繫結|傳輸模式支援|訊息模式支援|TransportWithMessageCredential 支援|
 |-------------|----------------------------|--------------------------|--------------------------------------------|
-|`BasicHttpBinding`|是|是|是|
-|`WSHttpBinding`|是|是|是|
+|`BasicHttpBinding`|Yes|Yes|Yes|
+|`WSHttpBinding`|Yes|Yes|是|
 |`WSDualHttpBinding`|否|是|否|
-|`NetTcpBinding`|是|是|是|
-|`NetNamedPipeBinding`|是|否|否|
+|`NetTcpBinding`|是|Yes|Yes|
+|`NetNamedPipeBinding`|是|No|否|
 |`NetMsmqBinding`|是|是|否|
-|`MsmqIntegrationBinding`|是|否|否|
-|`wsFederationHttpBinding`|否|是|是|
+|`MsmqIntegrationBinding`|是|No|否|
+|`wsFederationHttpBinding`|否|是|Yes|
 
 ## <a name="transport-credentials-in-bindings"></a>繫結中的傳輸認證
 
@@ -237,7 +238,7 @@ WCF 中的每個系結都有兩種形式：作為 API，以及做為設定檔中
 |憑證|允許服務要求用戶端使用憑證進行驗證。|
 |IssuedToken|允許服務使用安全性權杖服務提供自訂權杖。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性總覽](security-overview.md)
 - [Securing Services and Clients](securing-services-and-clients.md)

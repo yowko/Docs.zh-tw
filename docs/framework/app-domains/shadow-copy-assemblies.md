@@ -1,17 +1,18 @@
 ---
 title: 陰影複製組件
+description: 探索 .NET 中元件的陰影複製，讓應用程式域中使用的元件可以在不卸載應用程式域的情況下進行更新。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], shadow copying
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-ms.openlocfilehash: 9fc8a4aeeeca40f71ed9114a9db40b9a56e5fe6b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: a7ff72763dd26dbc50cd37e070c2d25ababa00f3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204564"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104557"
 ---
 # <a name="shadow-copying-assemblies"></a>陰影複製組件
 
@@ -74,7 +75,7 @@ Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸�
 
 從 .NET Framework 4 開始，預設啟動行為會直接比較應用程式目錄中每個組件的檔案日期和時間，以及陰影複製目錄中複本的檔案日期和時間。 如果已更新組件，便會使用和舊版 .NET Framework 相同的程序複製組件；否則會載入陰影複製目錄中的複本。
 
-對於組件不常變更，且變更通常發生在組件一小部分的應用程式而言，會產生最大的效能改進。 如果應用程式中大部分的組件經常變更，則新的預設行為可能會導致效能變差。 您可以藉由將[ \<shadowcopyverifybytimestamp>> 元素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)新增至設定檔，以還原舊版 .NET Framework 的啟動行為`enabled="false"`。
+對於組件不常變更，且變更通常發生在組件一小部分的應用程式而言，會產生最大的效能改進。 如果應用程式中大部分的組件經常變更，則新的預設行為可能會導致效能變差。 您可以使用將專案[ \<shadowCopyVerifyByTimestamp> 新增至設定檔，以還原](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)舊版 .NET Framework 的啟動行為 `enabled="false"` 。
 
 <a name="ObsoleteMethods"></a>
 
@@ -88,4 +89,4 @@ Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸�
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<Shadowcopyverifybytimestamp>> 元素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<shadowCopyVerifyByTimestamp>元素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

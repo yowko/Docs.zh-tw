@@ -1,5 +1,6 @@
 ---
-title: 連接.m_WriteList欄位
+title: '[連接]。 m_WriteList] 欄位'
+description: 取得連接的相關資訊。在 .NET 中 m_WriteList] 欄位。 此 ArrayList 欄位具有已排入佇列以透過 HTTP 傳送的 HttpWebRequest 物件。
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-ms.openlocfilehash: 6c60831ddf23ce8ac9afcf244383d24732c3ef8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a627cb062036e3ab098c2d6e97f9a77ebfa75a33
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989591"
 ---
-# <a name="connectionm_writelist-field"></a>連接.m\_寫入清單欄位
+# <a name="connectionm_writelist-field"></a>連接. m \_ WriteList 欄位
 
-`Connection.m_WriteList`<xref:System.Collections.ArrayList>是排隊通過<xref:System.Net.HttpWebRequest>HTTP 發送的物件。
+`Connection.m_WriteList`是物件的，已 <xref:System.Collections.ArrayList> <xref:System.Net.HttpWebRequest> 排入佇列以透過 HTTP 傳送。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
   
 ```csharp  
 private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> 該`Connection.m_WriteList`欄位是私有的，不應直接用於代碼。
+> `Connection.m_WriteList`欄位是私用的，不適合直接在程式碼中使用。
 >
-> 在任何情況下，Microsoft 都不支援在生產應用程式中使用此欄位。
+> 在任何情況下，Microsoft 不支援在生產應用程式中使用此欄位。
 
 ## <a name="requirements"></a>需求
 
-**命名空間：**<xref:System.Net>
+**命名空間：** <xref:System.Net>
 
-**裝配：** 系統（系統中）
+**元件：** 系統（在 System.dll 中）
 
-**.NET 框架版本：** 自 2.0 起可用。
+**.NET Framework 版本：** 自2.0 開始提供。

@@ -1,17 +1,18 @@
 ---
 title: 何謂 Windows Communication Foundation
+description: 瞭解 Windows Communication Foundation，這是用來建立服務導向應用程式的架構。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 84cb45d62409769a79fa6a401fdb1aa6934c4099
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600850"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245605"
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 Windows Communication Foundation （WCF）是用來建立服務導向應用程式的架構。 使用 WCF 時，您可以將資料當做非同步訊息，從一個服務端點傳送到另一個。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：
@@ -94,7 +95,7 @@ Microsoft Silverlight 為可供建立高互通性多樣化 Web 應用程式的�
 
 Windows Server AppFabric 應用程式伺服器的裝載功能是特別設計來部署和管理使用 WCF 進行通訊的應用程式。 裝載功能包括專為啟用 WCF 之應用程式設計的豐富工具和設定選項。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel>
 - [Windows Communication Foundation 的基本概念](fundamental-concepts.md)

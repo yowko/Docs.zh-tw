@@ -1,15 +1,16 @@
 ---
 title: 設定追蹤
+description: 瞭解如何啟用追蹤、設定追蹤來源、設定活動追蹤和傳播，以及設定追蹤接聽項來存取 WCF 中的追蹤。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2fbe5b48a9405c9236923ffec268683bdf570831
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579003"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245345"
 ---
 # <a name="configuring-tracing"></a>設定追蹤
 本主題將說明如何啟用追蹤、設定追蹤來源以發出追蹤並設定追蹤層級、設定活動追蹤與傳播以支援端對端追蹤相互關聯，以及設定追蹤接聽項來存取追蹤。  
@@ -32,7 +33,7 @@ ms.locfileid: "84579003"
   
  如果您使用 WCF 擴充性點，例如自訂作業啟動程式，您應該發出自己的追蹤。 這是因為如果您執行擴充性點，WCF 就無法在預設路徑中發出標準追蹤。 如果您沒有透過發出追蹤來實作手動追蹤支援，可能無法看見預期的追蹤。  
   
- 您可以藉由編輯應用程式的設定檔（Web 主控應用程式的 web.config，或自我裝載應用程式的 applicationhost.config）來設定追蹤。 下列是這類編輯的範例。 如需這些設定的詳細資訊，請參閱「設定追蹤接聽程式來使用追蹤」一節。  
+ 您可以藉由編輯應用程式的設定檔（Web 裝載應用程式的 Web.config，或自我裝載應用程式 Appname.exe.config，來設定追蹤。 下列是這類編輯的範例。 如需這些設定的詳細資訊，請參閱「設定追蹤接聽程式來使用追蹤」一節。  
   
 ```xml  
 <configuration>  
@@ -53,7 +54,7 @@ ms.locfileid: "84579003"
 ```  
   
 > [!NOTE]
-> 若要在 Visual Studio 中編輯 WCF 服務專案的設定檔，請以滑鼠右鍵按一下應用程式的設定檔，也就是 Web 裝載應用程式的 web.config，或**方案總管**中自我裝載應用程式的 Appname .exe。 然後選擇 [**編輯 WCF**設定] 內容功能表項目。 這會啟動設定[編輯器工具（svcconfigeditor.exe）](../../configuration-editor-tool-svcconfigeditor-exe.md)，可讓您使用圖形化使用者介面修改 WCF 服務的設定。  
+> 若要在 Visual Studio 中編輯 WCF 服務專案的設定檔，請以滑鼠右鍵按一下應用程式的設定檔（Web 裝載應用程式的 Web.config），或**方案總管**中的自我裝載應用程式 Appname.exe.config。 然後選擇 [**編輯 WCF**設定] 內容功能表項目。 這會啟動設定[編輯器工具（SvcConfigEditor.exe）](../../configuration-editor-tool-svcconfigeditor-exe.md)，讓您使用圖形化使用者介面修改 WCF 服務的設定。  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>設定追蹤來源來發出追蹤  
  WCF 會定義每個元件的追蹤來源。 組件中產生的追蹤是由針對該來源而定義的接聽項所存取。 下列為定義的追蹤來源：  
@@ -153,11 +154,11 @@ ms.locfileid: "84579003"
 |追蹤層級|追蹤事件的本質|追蹤事件的內容|追蹤事件|使用者目標|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |關閉|N/A|N/A|未發出任何追蹤。|N/A|  
-|重要|「負面」事件：表示未預期的處理或錯誤狀況的事件。||已記錄包含下列的未處理例外狀況：<br /><br /> -OutOfMemoryException<br />-ThreadAbortException （CLR 會叫用任何 ThreadAbortExceptionHandler）<br />-StackOverflowException （無法攔截）<br />-ConfigurationErrorsException<br />-SEHException<br />-應用程式啟動錯誤<br />-Failfast 事件<br />-系統停止回應<br />-有害訊息：導致應用程式失敗的訊息追蹤。|Administrators<br /><br /> 應用程式開發人員|  
-|錯誤|「負面」事件：表示未預期的處理或錯誤狀況的事件。|發生未預期的處理。 應用程式無法如預期般執行工作。 然而，應用程式仍舊繼續執行。|已記錄所有例外狀況。|Administrators<br /><br /> 應用程式開發人員|  
-|警告|「負面」事件：表示未預期的處理或錯誤狀況的事件。|潛在問題已經發生或是可能發生，但是應用程式仍舊正常運作。 然而，它可能無法繼續正常運作。|-應用程式收到的要求超過其節流設定所允許的數量。<br />-接收的佇列接近設定的最大容量。<br />-已超過超時。<br />-拒絕認證。|Administrators<br /><br /> 應用程式開發人員|  
-|資訊|「正面」事件：標示成功里程碑的事件|不管應用程式是否正常運作，都屬於應用程式執行的重要與成功里程碑。|一般來說，會產生對監控與診斷系統狀態、衡量效能，或描述分析有幫助的訊息。 您可以使用這類資訊來進行容量規劃與效能管理：<br /><br /> -建立通道。<br />-建立端點接聽程式。<br />-訊息進入/離開傳輸。<br />-已抓取安全性權杖。<br />-Configuration 設定已讀取。|Administrators<br /><br /> 應用程式開發人員<br /><br /> 產品開發人員。|  
-|「詳細資訊」|「正面」事件：標示成功里程碑的事件。|系統會發出使用者程式碼和服務的低層級事件。|一般來說，您可以使用此層級來進行偵錯或應用程式最佳化。<br /><br /> -瞭解的訊息標頭。|Administrators<br /><br /> 應用程式開發人員<br /><br /> 產品開發人員。|  
+|重要|「負面」事件：表示未預期的處理或錯誤狀況的事件。||已記錄包含下列的未處理例外狀況：<br /><br /> -OutOfMemoryException<br />-ThreadAbortException （CLR 會叫用任何 ThreadAbortExceptionHandler）<br />-StackOverflowException （無法攔截）<br />-ConfigurationErrorsException<br />-SEHException<br />-應用程式啟動錯誤<br />-Failfast 事件<br />-系統停止回應<br />-有害訊息：導致應用程式失敗的訊息追蹤。|系統管理員<br /><br /> 應用程式開發人員|  
+|錯誤|「負面」事件：表示未預期的處理或錯誤狀況的事件。|發生未預期的處理。 應用程式無法如預期般執行工作。 然而，應用程式仍舊繼續執行。|已記錄所有例外狀況。|系統管理員<br /><br /> 應用程式開發人員|  
+|警告|「負面」事件：表示未預期的處理或錯誤狀況的事件。|潛在問題已經發生或是可能發生，但是應用程式仍舊正常運作。 然而，它可能無法繼續正常運作。|-應用程式收到的要求超過其節流設定所允許的數量。<br />-接收的佇列接近設定的最大容量。<br />-已超過超時。<br />-拒絕認證。|系統管理員<br /><br /> 應用程式開發人員|  
+|資訊|「正面」事件：標示成功里程碑的事件|不管應用程式是否正常運作，都屬於應用程式執行的重要與成功里程碑。|一般來說，會產生對監控與診斷系統狀態、衡量效能，或描述分析有幫助的訊息。 您可以使用這類資訊來進行容量規劃與效能管理：<br /><br /> -建立通道。<br />-建立端點接聽程式。<br />-訊息進入/離開傳輸。<br />-已抓取安全性權杖。<br />-Configuration 設定已讀取。|系統管理員<br /><br /> 應用程式開發人員<br /><br /> 產品開發人員。|  
+|「詳細資訊」|「正面」事件：標示成功里程碑的事件。|系統會發出使用者程式碼和服務的低層級事件。|一般來說，您可以使用此層級來進行偵錯或應用程式最佳化。<br /><br /> -瞭解的訊息標頭。|系統管理員<br /><br /> 應用程式開發人員<br /><br /> 產品開發人員。|  
 |ActivityTracing||介於處理活動與元件之間的流程事件。|這個層級可以讓系統管理員與開發人員相互關聯相同應用程式定義域中的多個應用程式：<br /><br /> -活動界限的追蹤，例如 [開始]/[停止]。<br />-傳輸的追蹤。|全部|  
 |全部||應用程式可以正常運作。 已發出所有事件。|所有先前的事件。|全部|  
   
@@ -180,7 +181,7 @@ ms.locfileid: "84579003"
   
  您無法使用具有使用者定義追蹤來源的 `propagateActivity` 屬性。 若要進行使用者程式碼活動識別碼傳播，請確定您未設定 ServiceModel `ActivityTracing`，而且讓 ServiceModel `propagateActivity` 屬性仍舊設定為 `true`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [追蹤](index.md)
 - [系統管理與診斷](../index.md)

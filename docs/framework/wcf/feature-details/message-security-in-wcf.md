@@ -1,13 +1,14 @@
 ---
 title: WCF 中的訊息安全性
+description: 深入瞭解 TransportWithMessageCredential，這是一種使用傳輸和訊息安全性模式組合的 WCF 訊息安全性。
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 6875339df327371a79bc9b9072aca2df0bc7d3f6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 315a12c73929bfe71340e42f122ae542d4fddc07
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602657"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245020"
 ---
 # <a name="message-security-in-wcf"></a>WCF 中的訊息安全性
 
@@ -63,7 +64,7 @@ Windows Communication Foundation （WCF）有兩種主要模式可提供安全�
 
 - 需要實作 XML 層級的安全性機制及支援 WS-Security 規格。 這可能會影響互通性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Securing Services and Clients](securing-services-and-clients.md)
 - [傳輸安全性](transport-security.md)

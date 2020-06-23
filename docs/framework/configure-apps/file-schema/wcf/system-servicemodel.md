@@ -1,5 +1,6 @@
 ---
 title: <system.serviceModel>
+description: 瞭解可讓您設定 WCF 服務和用戶端應用程式的 WCF System.servicemodel configuration 元素。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.ServiceModel
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399447"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243954"
 ---
 # \<system.serviceModel>
 此設定區段包含所有的 Windows Communication Foundation （WCF） System.servicemodel configuration 元素。  
@@ -21,7 +22,7 @@ ms.locfileid: "70399447"
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.serviceModel>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -58,7 +59,7 @@ ms.locfileid: "70399447"
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   

@@ -1,15 +1,16 @@
 ---
 title: <netTcpBinding>
+description: 代表安全、可靠且優化的系結，僅適用于使用 TCP 的 WCF 跨電腦通訊。 根據預設，可靠的訊息處理是關閉的。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: c43c141093c8287adb6d5a841a43ac893deefccd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 95c2c691bf328050f3d189c790d111d2fdeb1bb0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74139338"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243993"
 ---
 # \<netTcpBinding>
 
@@ -20,7 +21,7 @@ ms.locfileid: "74139338"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netTcpBinding>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netTcpBinding>
@@ -69,7 +70,7 @@ ms.locfileid: "74139338"
 |`hostNameComparisonMode`|指定用於剖析 URI 的 HTTP 主機名稱比較模式。 這個屬性的型別為 <xref:System.ServiceModel.HostNameComparisonMode>，表示比對 URI 時此主機名稱是否會用來取用服務。 預設值為 <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>，表示比對時忽略主機名稱。|  
 |`listenBacklog`|正整數，指定在接聽程式上等待接受的通道數目上限。 超過這個限制的連線都會排入佇列，直到低於此限制的空間可用為止。 `connectionTimeout` 屬性會限制用戶端在擲回連線例外狀況之前，等待連線的時間。 預設值為 10。|  
 |`maxBufferPoolSize`|指定此繫結之緩衝區集區大小上限的整數。 預設為 512 * 1024 個位元組。 Windows Communication Foundation (WCF) 的許多部分會使用緩衝區。 每次使用這些組件時建立並終結緩衝區是高度耗費資源的作業，回收緩衝區的記憶體也是如此。 有了緩衝集區，您就可以從集區取出緩衝區來使用，用完後再還給集區， 因此可以避免建立及終結緩衝區的負荷。|  
-|`maxBufferSize`|正整數，指定記憶體中用來儲存訊息的緩衝區大小上限 (以位元組為單位)。<br /><br /> 如果 `transferMode` 屬性等於 `Buffered`，則此屬性應該等於 `maxReceivedMessageSize` 屬性值。<br /><br /> 如果 `transferMode` 屬性等於 `Streamed`，則此屬性不能超過 `maxReceivedMessageSize` 屬性值，並且應該至少為標頭的大小。<br /><br /> 預設值為 65536。 如需詳細資訊，請參閱 <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A> 。|  
+|`maxBufferSize`|正整數，指定記憶體中用來儲存訊息的緩衝區大小上限 (以位元組為單位)。<br /><br /> 如果 `transferMode` 屬性等於 `Buffered`，則此屬性應該等於 `maxReceivedMessageSize` 屬性值。<br /><br /> 如果 `transferMode` 屬性等於 `Streamed`，則此屬性不能超過 `maxReceivedMessageSize` 屬性值，並且應該至少為標頭的大小。<br /><br /> 預設值為 65536。 如需詳細資訊，請參閱 <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>。|  
 |`maxConnections`|整數，指定服務建立/接受的傳出和傳入連線數目上限。 傳入和傳出連線是依據此屬性指定的個別限制來計算的。<br /><br /> 超過限制的傳入連線都會排入佇列，直到低於此限制的空間可用為止。<br /><br /> 超過限制的傳出連線都會排入佇列，直到低於此限制的空間可用為止。<br /><br /> 預設值為 10。|  
 |`maxReceivedMessageSize`|正整數，指定在使用此繫結設定之通道上可以接收的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。|  
 |`name`|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 .NET Framework 4 開始，系結和行為都不需要有名稱。 如需預設設定和無相關系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)的設定和[WCF 服務的簡化](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  

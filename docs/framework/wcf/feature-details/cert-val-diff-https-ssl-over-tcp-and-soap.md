@@ -1,5 +1,6 @@
 ---
 title: 透過 TCP 與 SOAP 安全性的 HTTPS 與 SSL 之間的憑證驗證差異
+description: 瞭解除了 HTTPS 或 TCP 以外，WCF 提供的訊息層（SOAP）安全性的憑證，以及 WCF 如何驗證這類憑證。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: dcde7bb4cc193d18737d26facbbd69ccd597d66b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97d51e5b65ebf20e80a69512370b68a51eeb28a7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599330"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245267"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>透過 TCP 與 SOAP 安全性的 HTTPS 與 SSL 之間的憑證驗證差異
 除了透過 HTTP （HTTPS）或 TCP 的傳輸層安全性（TLS）之外，您還可以使用 Windows Communication Foundation （WCF）中的憑證搭配訊息層（SOAP）安全性。 此主題說明這類憑證的不同驗證方法。  
@@ -47,7 +48,7 @@ ms.locfileid: "84599330"
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
 - [Working with Certificates](working-with-certificates.md)

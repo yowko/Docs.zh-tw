@@ -1,5 +1,6 @@
 ---
 title: CoreResponseData 類別
+description: 瞭解 CoreResponseData 類別，其代表 HTTP 標頭和回應主體的剖析。 它位於 .NET 的 System.Net 命名空間中。
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 39a14a3df5059cc47cd4879e4d4ba351cc7b655b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8248cc20f6528a1c3bc64c9b9339a3a3000d03a0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989797"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData 類別
 
-類`CoreResponseData`表示 HTTP 標頭和回應正文的解析。
+`CoreResponseData`類別代表 HTTP 標頭和回應主體的剖析。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
   
 ```csharp
 internal class CoreResponseData
 ```
 
 > [!WARNING]
-> 此 API 是內部的，它不打算直接用於您的代碼。 相反，您應該使用 掛鉤<xref:System.Diagnostics.DiagnosticSource>網路代碼。 請參閱[診斷源使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
+> 這個 API 是內部的，不適合直接在程式碼中使用。 相反地，您應該使用 <xref:System.Diagnostics.DiagnosticSource> 來攔截網路程式碼。 請參閱[DiagnosticSource 使用者手冊](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
 >
-> 在任何情況下，Microsoft 都不支援在生產應用程式中使用此類。
+> 在任何情況下，Microsoft 不支援在生產應用程式中使用此類別。
 
 ## <a name="requirements"></a>需求
 
-**命名空間：**<xref:System.Net>
+**命名空間：** <xref:System.Net>
 
-**裝配：** 系統（系統中）
+**元件：** 系統（在 System.dll 中）
 
-**.NET 框架版本：** 自 2.0 起可用。
+**.NET Framework 版本：** 自2.0 開始提供。

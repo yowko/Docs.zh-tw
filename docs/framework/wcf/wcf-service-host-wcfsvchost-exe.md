@@ -1,17 +1,18 @@
 ---
 title: WCF 服務主機 (WcfSvcHost.exe)
+description: 使用 WCF 服務主機來裝載並測試您已執行的服務。 您可以使用 WCF 測試用戶端或您自己的用戶端來測試服務。
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: b8fb32111a80178f5eb92411eb4990decb645bb6
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: efc9512766d2a9cc814083ab632226d98917bf4e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837736"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245722"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服務主機 (WcfSvcHost.exe)
 
-Windows Communication Foundation （WCF）服務主機（WcfSvcHost .exe）可讓您啟動 Visual Studio 偵錯工具（F5），以自動裝載並測試您已執行的服務。 接著，您可以使用 WCF 測試用戶端（WcfTestClient）或您自己的用戶端來測試服務，以尋找並修正任何可能的錯誤。
+Windows Communication Foundation （WCF）服務主機（WcfSvcHost.exe）可讓您啟動 Visual Studio 偵錯工具（F5），以自動裝載並測試您已執行的服務。 然後，您可以使用 WCF 測試用戶端（WcfTestClient.exe）或您自己的用戶端來測試服務，以尋找並修正任何可能的錯誤。
 
 ## <a name="wcf-service-host"></a>WCF 服務主機
 
@@ -51,7 +52,7 @@ WCF 服務主機可以裝載下列 WCF 服務程式庫專案類型： WCF 服務
 
 #### <a name="using-a-custom-client"></a>使用自訂用戶端
 
-若要使用自訂用戶端，請在 [**方案 Explorer** ] 中的專案上按一下滑鼠右鍵，Visual Studio，選取 [**屬性**]，然後選取 [**調試**程式] 索引標籤。按一下 [**開始專案**]，然後在 [**命令列引數**] 對話方塊中編輯 `/client` 參數，以指向您的自訂用戶端，如下列範例
+若要使用自訂用戶端，請在 [**方案 Explorer** ] 中的專案上按一下滑鼠右鍵，Visual Studio，選取 [**屬性**]，然後選取 [**調試**程式] 索引標籤。按一下 [**開始專案**]，然後 `/client` 在 [**命令列引數**] 對話方塊中編輯參數，以指向您的自訂用戶端，如下列範例
 
 `/client:"path/CustomClient.exe"`
 
@@ -103,7 +104,7 @@ WCF 服務主機可以裝載下列 WCF 服務程式庫專案類型： WCF 服務
 
 - 停止 Visual Studio 中的「調試」會話。
 
-- 從 [ **WCF 服務主機**] 視窗的 [檔案 **] 功能表** **中選取 [** 結束]。
+- 從 [ **WCF 服務主機**] 視窗的 [檔案 **] 功能表****中選取 [** 結束]。
 
 - 在系統通知區域中，從 WCF 服務主機匣圖示的內容**功能表中選取**[結束]。
 
@@ -111,16 +112,16 @@ WCF 服務主機可以裝載下列 WCF 服務程式庫專案類型： WCF 服務
 
 ## <a name="using-service-host-without-administrator-privilege"></a>在沒有系統管理員權限的情況下使用服務主機
 
-若要讓沒有系統管理員許可權的使用者開發 WCF 服務，在安裝 Visual Studio 期間，會為命名空間 "http://+:8731/Design_Time_Addresses" 建立 ACL （存取控制清單）。 ACL 會設定為 (UI)，其中包含已登入電腦的所有互動使用者。 系統管理員可以在此 ACL 中新增或移除使用者，或開啟其他埠。此 ACL 可讓使用者在不授與系統管理員許可權的情況下，使用 WCF 服務自動裝載（wcfSvcHost .exe）。
+若要讓沒有系統管理員許可權的使用者開發 WCF 服務，在安裝 Visual Studio 期間，會為命名空間 "" 建立 ACL （存取控制清單） http://+:8731/Design_Time_Addresses 。 ACL 會設定為 (UI)，其中包含已登入電腦的所有互動使用者。 系統管理員可以在此 ACL 中新增或移除使用者，或開啟其他埠。此 ACL 可讓使用者在不授與系統管理員許可權的情況下，使用 WCF 服務自動裝載（wcfSvcHost.exe）。
 
-在 Windows Vista 中，您可以使用以提升許可權的系統管理員帳戶來修改存取權。 下列是使用 netsh.exe 的範例。
+您可以使用 Windows Vista 中的 [netsh.exe] 工具，以提高許可權的系統管理員帳戶修改存取權。 下列是使用 netsh.exe 的範例。
 
 ```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-如需有關 netsh 的詳細資訊，請參閱「[如何使用 Netsh 工具和命令列參數](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))」。
+如需 netsh.exe 的詳細資訊，請參閱「[如何使用 Netsh.exe 工具和命令列參數](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))」。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF 測試用戶端 (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

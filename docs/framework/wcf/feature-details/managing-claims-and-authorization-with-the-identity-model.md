@@ -1,5 +1,6 @@
 ---
 title: 使用身分識別模型來管理宣告與授權
+description: 瞭解 WCF 身分識別模型的主要程式設計概念，這是用來執行授權的宣告型模型。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authorization [WCF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: f9138102435aab07e5c1771ce5dba85bacbcac99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0d5687f8ac5021c008254f0f5cc453eda5e538c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586347"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245124"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用身分識別模型來管理宣告與授權
 授權就是決定哪些實體可以擁有變更、檢視或另外存取電腦資源等權限的程序。 例如，在公司裡只有經理可以存取這家公司員工的檔案。 Windows Communication Foundation （WCF）支援兩種執行授權處理的機制。 第一種機制可讓您使用現有的 Common Language Runtime (CLR) 建構來控制授權。 第二個是以宣告為基礎的模型，稱為身分*識別模型*。 WCF 使用身分識別模型來建立傳入訊息的宣告;識別模型類別可以擴充，以支援自訂授權配置的新宣告類型。 本主題將顯示識別模型功能的主要程式設計概念概觀，以及此功能使用之最重要類別的清單。  
@@ -57,7 +58,7 @@ ms.locfileid: "84586347"
  識別宣告  
  所擁有權限即為識別的宣告。  
   
- 簽發者  
+ Issuer  
  宣告集，其包含至少一個識別宣告且被視為已發行其他宣告集。  
   
  屬性  
@@ -75,7 +76,7 @@ ms.locfileid: "84586347"
 ## <a name="claims"></a>Claims  
  識別模型為宣告架構的系統。 宣告會描述與系統中某些實體關聯的功能，這類實體通常是指該系統的使用者。 與特定實體關聯的一組宣告可以視為金鑰。 這些特定宣告會定義該金鑰的形狀，就像是用來開啟門鎖的實體鑰匙。 宣告可用來獲得資源的存取權。 判定特定受保護資源之權限的方式，就是比較存取該資源時所需要的宣告和正在嘗試存取之實體的相關聯宣告。  
   
- 宣告就是權限對於特定值的運算式。 權限可以是 "Read"、"Write" 或 "Execute" 或其他權限。 值可以是資料庫、檔案、信箱或屬性。 宣告也具有宣告類型， 宣告類型和權限的組合會提供可指定關於特定值之能力的機制。 例如，"File" 類型的宣告，在值 "事蹟. doc" 上具有「讀取」許可權，表示與這類宣告相關聯的實體具有檔案簡介檔的讀取權限。"Name" 類型的宣告，在值 "聖馬丁" 上具有右 "PossessProperty"，表示與這類宣告相關聯的實體擁有名稱屬性，其值為 "聖馬丁"。  
+ 宣告就是權限對於特定值的運算式。 權限可以是 "Read"、"Write" 或 "Execute" 或其他權限。 值可以是資料庫、檔案、信箱或屬性。 宣告也具有宣告類型， 宣告類型和權限的組合會提供可指定關於特定值之能力的機制。 例如，"File" 類型的宣告，在值 "Biography.doc" 上具有「讀取」許可權，表示與這類宣告相關聯的實體具有該檔案的讀取權限 Biography.doc。"Name" 類型的宣告，在值 "聖馬丁" 上具有右 "PossessProperty"，表示與這類宣告相關聯的實體擁有名稱屬性，其值為 "聖馬丁"。  
   
  雖然各種宣告類型和權限都會定義成為識別模型的一部分，但是系統仍具備擴充性，可以讓各種系統建置於識別模型基礎架構的頂端，以便視需要定義其他宣告類型和權限。  
   
@@ -153,13 +154,13 @@ ms.locfileid: "84586347"
 ### <a name="significant-members"></a>顯著性成員  
  下列成員經常用來建立新的宣告類型。  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|衍生類別會實作這個方法，以便在執行服務中的作業之前先執行宣告架構的存取檢查。 在已提供 <xref:System.ServiceModel.OperationContext> 或其他地方的任何資訊以及所有資訊，可以在做出存取檢查決策時加以檢查。 如果 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 傳回 `true`，則會授與存取並允許作業執行。 如果 `CheckAccessCore` 傳回 `false`，則會拒絕存取且不會執行作業。 如需範例，請參閱[如何：為服務建立自訂授權管理員](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|傳回服務的 <xref:System.ServiceModel.ServiceAuthorizationManager>。 <xref:System.ServiceModel.ServiceAuthorizationManager> 負責做出授權決策。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|對此服務所指定的自訂授權原則集合。 除了與傳入訊息中之認證關聯的原則以外，這些原則也會加以評估。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>

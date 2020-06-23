@@ -1,5 +1,6 @@
 ---
 title: jitCompilationStart MDA
+description: 使用 jitCompilationStart managed 偵錯工具（MDA），此功能會在即時（JIT）編譯器開始編譯 .NET 函式時開始報告。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compilation
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: 9cae942bc01e9263720dbfe9acfb21bbb70bc548
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: bf2d09f433f0b8e4056fecd1f4e82bf3b91dd2bc
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216264"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904126"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 當 Just-In-time (JIT) 編譯器開始編譯函式時，會啟動 `jitCompilationStart` Managed 偵錯助理 (MDA)。  
@@ -36,8 +37,8 @@ ms.locfileid: "77216264"
 method name="Test!ns2.C0::m"  
 ```  
   
-## <a name="configuration"></a>組態  
- 下列組態檔顯示的各種篩選器，可用來篩選出第一次 JIT 編譯時要報告哪些方法。 您可以藉由將 name 屬性的值設定為 \*來指定要報告的所有方法。  
+## <a name="configuration"></a>設定  
+ 下列組態檔顯示的各種篩選器，可用來篩選出第一次 JIT 編譯時要報告哪些方法。 您可以將 name 屬性的值設定為，以指定報告所有方法 \* 。  
   
 ```xml  
 <mdaConfig>  

@@ -1,5 +1,6 @@
 ---
 title: 調整表單大小
+description: 瞭解如何設定 [大小] 屬性的新值，或個別調整 [高度] 或 [寬度] 屬性，以調整表單的高度和寬度。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d6383e4d29d9407d3da97bf8b94761f06d99748
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739311"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903268"
 ---
-# <a name="how-to-resize-windows-forms"></a>如何：調整 Windows Form 的大小
+# <a name="how-to-resize-windows-forms"></a>作法：調整 Windows Forms 大小
 
 您可以使用幾種方式來指定 Windows Form 的大小。 您可以為 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定新值，或個別調整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 屬性，以程式設計方式來變更表單的高度和寬度。 如果您使用 Visual Studio，您可以使用 Windows Form 設計工具變更大小。 另請參閱[如何：使用設計工具調整 Windows Forms 大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))。
 
@@ -58,7 +59,7 @@ Form1->Width = 300;
 
 -或-
 
-設定 <xref:System.Drawing.Size.Width%2A> 屬性來變更 <xref:System.Drawing.Size.Height%2A> 或 <xref:System.Windows.Forms.Form.Size%2A>。
+設定 <xref:System.Windows.Forms.Form.Size%2A> 屬性來變更 <xref:System.Drawing.Size.Width%2A> 或 <xref:System.Drawing.Size.Height%2A>。
 
 不過，如下列程式碼範例所示，這種方法比直接設定 <xref:System.Windows.Forms.Control.Width%2A> 或 <xref:System.Windows.Forms.Control.Height%2A> 屬性更困難。
 
@@ -93,7 +94,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> 除非您透過將 <xref:System.Drawing.Size.Height%2A> 屬性設定為新的 <xref:System.Drawing.Size.Width%2A> 結構，來同時設定高度和寬度維度，否則請一律使用 <xref:System.Windows.Forms.Form.Size%2A> 或 <xref:System.Drawing.Size> 屬性來變更表單的維度。 <xref:System.Windows.Forms.Form.Size%2A> 屬性會傳回實值類型的 <xref:System.Drawing.Size> 結構。 您無法指派新值給實值類型的屬性。 因此，下列程式碼範例將無法進行編譯。
+> 除非您透過將 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定為新的 <xref:System.Drawing.Size> 結構，來同時設定高度和寬度維度，否則請一律使用 <xref:System.Drawing.Size.Height%2A> 或 <xref:System.Drawing.Size.Width%2A> 屬性來變更表單的維度。 <xref:System.Windows.Forms.Form.Size%2A> 屬性會傳回實值類型的 <xref:System.Drawing.Size> 結構。 您無法指派新值給實值類型的屬性。 因此，下列程式碼範例將無法進行編譯。
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE
@@ -115,5 +116,5 @@ f->Size->X += 100;
 
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Forms 使用者入門](getting-started-with-windows-forms.md)
+- [使用 Windows Forms 的消費者入門](getting-started-with-windows-forms.md)
 - [增強 Windows Forms 應用程式](./advanced/index.md)

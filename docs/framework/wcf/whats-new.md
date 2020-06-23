@@ -1,16 +1,17 @@
 ---
 title: Windows Communication Foundation 4.5 的新功能
+description: 本文說明 Windows Communication Foundation （WCF）4.5 版的新功能，以及其他資源的連結。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449500"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245618"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 的新功能
 
@@ -32,7 +33,7 @@ ms.locfileid: "77449500"
 
 ### <a name="contract-first-development"></a>合約優先開發
 
-WCF 現可支援合約優先開發。 Svcutil 具有/serviceContract 參數，可讓您從 WSDL 檔案產生服務和資料合約。
+WCF 現可支援合約優先開發。 svcutil.exe 具有/serviceContract 參數，可讓您從 WSDL 檔案產生服務和資料合約。
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>從可攜式子集專案加入服務參考
 
@@ -40,7 +41,7 @@ WCF 現可支援合約優先開發。 Svcutil 具有/serviceContract 參數，�
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 相容模式預設值已變更
 
-WCF 會在寫入 WCF 服務時提供 ASP.NET 相容模式，將 ASP.NET HTTP 管線功能的完整存取權限授與開發人員。 若要使用此模式，您必須在 web.config 的[\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md)區段中，將 `aspNetCompatibilityEnabled` 屬性設定為 true。此外，此 appDomain 中的任何服務都必須在其 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>的 `RequirementsMode` 屬性。 根據預設，<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 現在已設定為 [<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>]。 如需詳細資訊，請參閱[WCF 服務和 ASP.NET](./feature-details/wcf-services-and-aspnet.md)。
+WCF 會在寫入 WCF 服務時提供 ASP.NET 相容模式，將 ASP.NET HTTP 管線功能的完整存取權限授與開發人員。 若要使用此模式，您必須 `aspNetCompatibilityEnabled` 在 web.config 的區段中，將屬性設定為 true [\<serviceHostingEnvironment>](../configure-apps/file-schema/wcf/servicehostingenvironment.md) 。此外，此 appDomain 中的任何服務都必須將 `RequirementsMode` 其屬性 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> 。 根據預設 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> ，現在會設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 。 如需詳細資訊，請參閱[WCF 服務和 ASP.NET](./feature-details/wcf-services-and-aspnet.md)。
 
 ### <a name="new-transport-default-values"></a>新的傳輸預設值
 
@@ -78,11 +79,11 @@ WebSockets 是透過連接埠 80 和 443 提供真正雙向通訊的技術，其
 
 下列資料表說明已變更的設定以及可找到其他資訊的位置。
 
-|屬性|另一|新的預設值|如需詳細資訊，請參閱|
+|屬性|開啟|新的預設值|如需詳細資訊，請參閱|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 處理器的數量|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 用於傳輸的處理器數量<br /><br /> 4 \* Smsvchost.exe 的處理器數目|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> 設定[Net.tcp 埠共用服務](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 用於傳輸的處理器數量<br /><br /> 4 \* SMSvcHost.exe 的處理器數目|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>設定[Net.tcp 埠共用服務](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 處理器的數量|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
 |receiveTimeout|SMSvcHost.exe|30 秒|[設定 Net.TCP 連接埠共用服務](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
@@ -92,7 +93,7 @@ WebSockets 是透過連接埠 80 和 443 提供真正雙向通訊的技術，其
 
 ## <a name="configuring-wcf-services-in-code"></a>在程式碼中設定 WCF 服務
 
-Windows Communication Foundation （WCF）可讓開發人員使用設定檔或程式碼來設定服務。 當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 WCF 也可以讓您在程式碼中設定服務。 在舊版的 WCF （4.0 和更早版本）中，您可以輕鬆地在自我裝載的案例中設定程式碼中的服務，<xref:System.ServiceModel.ServiceHost> 類別可讓您在呼叫 ServiceHost 之前設定端點和行為。開啟。 但是在 Web 裝載案例中，您就無法存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從 .NET 4.5 開始，WCF 提供更簡單的方式，在程式碼中設定自我裝載和 web 裝載的服務。 如需詳細資訊，請參閱[在程式碼中設定 WCF 服務](configuring-wcf-services-in-code.md)。
+Windows Communication Foundation （WCF）可讓開發人員使用設定檔或程式碼來設定服務。 當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 WCF 也可以讓您在程式碼中設定服務。 在舊版的 WCF （4.0 和更早版本）中，您可以輕鬆地在自我裝載案例中設定程式碼中的服務，此類別可讓 <xref:System.ServiceModel.ServiceHost> 您在呼叫 ServiceHost 之前設定端點和行為。 但是在 Web 裝載案例中，您就無法存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從 .NET 4.5 開始，WCF 提供更簡單的方式，在程式碼中設定自我裝載和 web 裝載的服務。 如需詳細資訊，請參閱[在程式碼中設定 WCF 服務](configuring-wcf-services-in-code.md)。
 
 ## <a name="channelfactory-caching"></a>ChannelFactory 快取
 

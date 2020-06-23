@@ -1,19 +1,20 @@
 ---
 title: 追蹤與訊息記錄的建議設定
+description: 瞭解 WCF 中不同作業環境的建議追蹤和訊息記錄設定。
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 9d2586570a3f590735c2a8e1ca176580886c8d92
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 71067a4d6f4cec65a148a8162c40e44d82b85784
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578912"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245320"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>追蹤與訊息記錄的建議設定
 本主題將說明不同作業環境中，建議的追蹤和訊息記錄設定。  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>實際執行環境的建議設定  
- 如果您使用 WCF 追蹤來源，請將實際執行環境的 `switchValue` 設為 Warning。 如果您使用 WCF `System.ServiceModel` 追蹤來源，請將 `switchValue` 屬性設為 `Warning` 以及將 `propagateActivity` 屬性設為 `true`。 如果您使用的是使用者定義的追蹤來源，請將 `switchValue` 屬性設為 `Warning, ActivityTracing`。 這可以使用設定[編輯器工具（svcconfigeditor.exe）](../../configuration-editor-tool-svcconfigeditor-exe.md)手動完成。 如果您無法預測對效能的衝擊，則可在之前提到的所有案例中，將 `switchValue` 屬性設為 `Information`，如此就會產生相當大量的追蹤資料。 以下範例將示範這些建議的設定。  
+ 如果您使用 WCF 追蹤來源，請將實際執行環境的 `switchValue` 設為 Warning。 如果您使用 WCF `System.ServiceModel` 追蹤來源，請將 `switchValue` 屬性設為 `Warning` 以及將 `propagateActivity` 屬性設為 `true`。 如果您使用的是使用者定義的追蹤來源，請將 `switchValue` 屬性設為 `Warning, ActivityTracing`。 您可以使用設定[編輯器工具（SvcConfigEditor.exe）](../../configuration-editor-tool-svcconfigeditor-exe.md)手動完成此作業。 如果您無法預測對效能的衝擊，則可在之前提到的所有案例中，將 `switchValue` 屬性設為 `Information`，如此就會產生相當大量的追蹤資料。 以下範例將示範這些建議的設定。  
   
 ```xml  
 <configuration>  
@@ -112,6 +113,6 @@ logman start mytrace -pf logman.providers -o test.etl –ets
 logman stop mytrace -ets  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 Windows Management Instrumentation 進行診斷](../wmi/index.md)

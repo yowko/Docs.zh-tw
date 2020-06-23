@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 0d462fcc92fc1be5ddbc2e76237d8436219c7295
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ae30b8c29dcf3aaa183ff295c7ee8592322797f
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504533"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141777"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy> 項目 (網路設定)
 定義 Proxy 伺服器。  
@@ -24,15 +24,15 @@ ms.locfileid: "84504533"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<proxy>**
 
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <proxy
-  autoDetect="true|false|unspecified"
-  bypassonlocal="true|false|unspecified"
+  autoDetect="True|False|Unspecified"
+  bypassonlocal="True|False|Unspecified"
   proxyaddress="uriString"
   scriptLocation="uriString"
-  usesystemdefault="true|false|unspecified"
+  usesystemdefault="True|False|Unspecified"
 />
 ```  
   
@@ -41,20 +41,20 @@ ms.locfileid: "84504533"
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**描述**|  
+|**屬性**|**說明**|  
 |-------------------|---------------------|  
-|`autoDetect`|指定是否自動偵測 Proxy。 預設值為 `unspecified`。|  
-|`bypassonlocal`|指定是否略過本機資源的 Proxy。 本機資源包括本機伺服器（ `http://localhost` 、 `http://loopback` 或 `http://127.0.0.1` ），以及沒有句號（）的 URI `http://webserver` 。 預設值為 `unspecified`。|  
+|`autoDetect`|指定是否自動偵測 Proxy。 預設值是 `Unspecified`。|  
+|`bypassonlocal`|指定是否略過本機資源的 Proxy。 本機資源包括本機伺服器（ `http://localhost` 、 `http://loopback` 或 `http://127.0.0.1` ），以及沒有句號（）的 URI `http://webserver` 。 預設值是 `Unspecified`。|  
 |`proxyaddress`|指定要使用的 proxy URI。|  
 |`scriptLocation`|指定設定腳本的位置。 請勿使用屬性搭配 `bypassonlocal` 這個屬性。 |  
-|`usesystemdefault`|指定是否要使用 Internet Explorer proxy 設定。 如果設定為 `true` ，後續的屬性會覆寫 Internet Explorer proxy 設定。 預設值為 `unspecified`。|  
+|`usesystemdefault`|指定是否要使用 Internet Explorer proxy 設定。 如果設定為 `True` ，後續的屬性會覆寫 Internet Explorer proxy 設定。 預設值是 `Unspecified`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**元素**|**描述**|  
+|**元素**|**說明**|  
 |-----------------|---------------------|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
   
@@ -82,9 +82,9 @@ ms.locfileid: "84504533"
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
     </defaultProxy>  
   </system.net>  

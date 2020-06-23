@@ -1,15 +1,16 @@
 ---
-title: 如何：與其他應用程式共用元件
+title: 作法：與其他應用程式共用組件
+description: 請參閱如何在 .NET 中與其他應用程式共用元件。 元件可以是私用（預設值）或共用的。 若要共用元件，請將它放在 GAC 中。
 ms.date: 08/19/2019
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: b4c183c3fc0b04121be8bbc2db4027887cbc3132
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 9cef25059968875f17ce5dc77b04c44a2f3945f6
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644283"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104655"
 ---
-# <a name="how-to-share-an-assembly-with-other-applications"></a>如何：與其他應用程式共用元件
+# <a name="how-to-share-an-assembly-with-other-applications"></a>作法：與其他應用程式共用組件
 組件可以是私用或共用的︰根據預設，大多數簡單的程式由於不會供其他應用程式使用，因此只會包含一個私用組件。  
 
 若要與其他應用程式共用元件，必須將它放在[全域組件快取（GAC）](gac.md)中。  

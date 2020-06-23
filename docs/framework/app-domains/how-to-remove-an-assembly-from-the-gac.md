@@ -1,5 +1,6 @@
 ---
-title: 如何：從全域組件快取移除組件
+title: 作法：從全域組件快取移除組件
+description: 瞭解如何使用全域組件快取工具（Gacutil.exe）或 Windows Installer，從 .NET 中的全域組件快取移除元件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-ms.openlocfilehash: c7d85222f35a61154e3eec70d8c9dad2ca6a32f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e3a596ea6029ded190c33032e96b601de9d4012d
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119859"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104761"
 ---
-# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>如何：從全域組件快取移除組件
+# <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>作法：從全域組件快取移除組件
 
 從全域組件快取 (GAC) 移除組件的方式有兩種：
 
@@ -30,14 +31,14 @@ ms.locfileid: "73119859"
 
 在命令提示字元中，輸入下列命令：
 
-**gacutil –u** \<*組件名稱*>
+**gacutil – u**\<*assembly name*>
 
 在這個命令中，「組件名稱」** 是要從全域組件快取移除的組件名稱。
 
 > [!WARNING]
 > 您不應該使用 Gacutil.exe 移除生產系統上的組件，因為某個應用程式可能仍需要這個組件。 您應該改用 Windows Installer，以維護安裝在 GAC 中之每個組件的參考計數。
 
-下列範例會從全域程式集`hello.dll`緩存中移除名為的元件：
+下列範例會 `hello.dll` 從全域組件快取中移除名為的元件：
 
 ```console
 gacutil -u hello
@@ -54,4 +55,4 @@ gacutil -u hello
 
 - [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
 - [如何：將元件安裝到全域組件快取中](install-assembly-into-gac.md)
-- [Gacutil .exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)

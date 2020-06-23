@@ -1,5 +1,6 @@
 ---
 title: 使用 WCF 用戶端存取服務
+description: 瞭解如何為您的 WCF 服務建立 WCF 用戶端 proxy。 用戶端應用程式會使用用戶端 proxy 與服務進行通訊。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 462d9a3923009f0124c2b90b6fa86dfa9869a3c5
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 25446a89a0b5657d32d77e2d0d57f58f36bed71b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72316541"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245540"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 用戶端存取服務
 
@@ -26,10 +27,10 @@ ms.locfileid: "72316541"
 
 3. 具現化 WCF 用戶端 Proxy。
 
-您可以使用服務模型中繼資料公用程式工具（SvcUtil）手動產生 WCF 用戶端 proxy。如需詳細資訊，請參閱[System.servicemodel 中繼資料公用程式工具（SvcUtil）](servicemodel-metadata-utility-tool-svcutil-exe.md)。 WCF 用戶端 proxy 也可以使用**加入服務參考**功能，在 Visual Studio 內產生。 若要使用上述任一方法來產生 WCF 用戶端 Proxy，服務都必須正在執行中。 如果服務是自我裝載的，則必須執行主機。 如果服務裝載於 IIS/WAS，就不需要執行任何其他動作。
+您可以使用服務模型中繼資料公用程式工具（SvcUtil.exe），以手動方式產生 WCF 用戶端 proxy。如需詳細資訊，請參閱[System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)。 WCF 用戶端 proxy 也可以使用**加入服務參考**功能，在 Visual Studio 內產生。 若要使用上述任一方法來產生 WCF 用戶端 Proxy，服務都必須正在執行中。 如果服務是自我裝載的，則必須執行主機。 如果服務裝載於 IIS/WAS，就不需要執行任何其他動作。
 
 ## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel 中繼資料公用程式工具
- [System.servicemodel 中繼資料公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)是一種命令列工具，可用於從中繼資料產生程式碼。 下列用法是基本 Svcutil.exe 命令的範例。
+ [System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)是用來從中繼資料產生程式碼的命令列工具。 下列用法是基本 Svcutil.exe 命令的範例。
 
 ```console
 Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -56,7 +57,7 @@ Svcutil.exe <file1 [,file2]>
 
 ## <a name="add-service-reference-in-visual-studio"></a>在 Visual Studio 中加入服務參考
 
- 在服務執行的情況下，以滑鼠右鍵按一下將包含 WCF 用戶端 proxy 的專案，然後選取 [**新增** > **服務參考**]。 在 [**加入服務參考] 對話方塊**中，輸入您要呼叫之服務的 URL，然後按一下 [**移至**] 按鈕。 對話將會顯示您所指定之位址上的可用服務清單。 按兩下服務查看可用的合約和作業，指定產生之程式碼的命名空間，然後按一下 [**確定]** 按鈕。
+ 在服務執行的情況下，以滑鼠右鍵按一下將包含 WCF 用戶端 proxy 的專案，然後選取 [**加入**  >  **服務參考**]。 在 [**加入服務參考] 對話方塊**中，輸入您要呼叫之服務的 URL，然後按一下 [**移至**] 按鈕。 對話將會顯示您所指定之位址上的可用服務清單。 按兩下服務查看可用的合約和作業，指定產生之程式碼的命名空間，然後按一下 [**確定]** 按鈕。
 
 ## <a name="example"></a>範例
  下列程式碼範例會顯示對服務建立的服務合約。
@@ -176,7 +177,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 ## <a name="debugging-exceptions-thrown-by-a-client"></a>對用戶端擲回的例外狀況進行偵錯
 
-WCF 用戶端擲出的許多例外狀況是由服務上的例外狀況所造成。 以下提供一些這類範例：
+WCF 用戶端擲出的許多例外狀況是由服務上的例外狀況所造成。 其範例包括：
 
 - <xref:System.Net.Sockets.SocketException>：現有的連接遭遠端主機強制關閉。
 
@@ -186,12 +187,12 @@ WCF 用戶端擲出的許多例外狀況是由服務上的例外狀況所造成�
 
 發生這類例外狀況時，最佳的解決方式是開啟服務端的追蹤功能，並且判斷該處發生哪種例外狀況。 如需追蹤的詳細資訊，請參閱[追蹤](./diagnostics/tracing/index.md)和[使用追蹤來疑難排解您的應用程式](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：建立用戶端](how-to-create-a-wcf-client.md)
 - [如何：使用雙面合約存取服務](./feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [如何：以非同步方式呼叫服務作業](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [如何：使用單向和要求-回覆合約來存取服務](./feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [HOW TO：以非同步方式呼叫 WCF 服務作業](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [HOW TO：使用單向和要求-回覆合約來存取服務](./feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
 - [如何：存取 WSE 3.0 服務](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [了解產生的用戶端程式碼](./feature-details/understanding-generated-client-code.md)
 - [如何：使用 XmlSerializer 改善 WCF 用戶端應用程式的啟動時間](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

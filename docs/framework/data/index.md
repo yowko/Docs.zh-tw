@@ -1,17 +1,18 @@
 ---
 title: 資料和模型化-.NET
+description: 查看描述模型化和如何在 .NET 中存取資料之文章的連結。 這些文章涵蓋 WCF Data Services、ADO.NET 及交易處理。
 ms.date: 09/09/2019
 helpviewer_keywords:
 - .NET Framework, data access
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: ad9e63f74f5a79eba937ef16310926ae9b9f287d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 654f6f37e40d5df76910a7de7c5de4ffa2787b58
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894370"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141833"
 ---
 # <a name="data-and-modeling-in-net"></a>.NET 中的資料和模型
 
@@ -30,13 +31,13 @@ ms.locfileid: "70894370"
   
 ## <a name="related-sections"></a>相關章節
 
- [Language-Integrated Query (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)  
- 提供使用C#之語言整合式查詢（LINQ）相關檔的連結。  
+ [語言整合式查詢（LINQ）](../../csharp/programming-guide/concepts/linq/index.md)  
+ 提供使用 c # 之語言整合式查詢（LINQ）相關檔的連結。  
   
  [Language-Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
  提供使用 Visual Basic 之語言整合式查詢（LINQ）相關檔的連結。  
   
- [XML 文件和資料](../../standard/data/xml/index.md)  
+ [XML 檔和資料](../../standard/data/xml/index.md)  
  提供用於 .NET Framework 中 XML 文件和資料的全面性整合類別集合的概觀。  
   
  [XML 標準參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256177(v=vs.100))  

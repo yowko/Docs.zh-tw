@@ -1,5 +1,6 @@
 ---
 title: SAML 權杖與宣告
+description: 瞭解 WFC 如何使用 SAML 權杖來攜帶語句，這些語句是由某個實體與另一個實體相關的宣告集。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 6220365d5c43299a75d1e0fa8e46a7392b0ccaa2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c054e594af69def96879852a5145675b3123614a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590367"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244942"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 權杖與宣告
 安全性判斷提示標記語言（SAML）*權杖*是宣告的 XML 標記法。 根據預設，在同盟安全性案例中使用的 SAML 權杖 Windows Communication Foundation （WCF）會*發行權杖*。  
@@ -42,7 +43,7 @@ ms.locfileid: "84590367"
 ## <a name="from-samlattributes-to-claims"></a>從 SamlAttributes 到宣告  
  當 SAML 權杖在訊息內接收時，SAML 權杖內的各種陳述式會轉變成  物件，置於 之內。 來自每個 SAML 陳述式的宣告均由 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 的 <xref:System.IdentityModel.Policy.AuthorizationContext> 屬性傳回，並且可進行檢查以決定是否驗證並授權使用者。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>

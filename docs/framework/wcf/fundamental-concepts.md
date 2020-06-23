@@ -1,5 +1,6 @@
 ---
 title: Windows Communication Foundation 的主要概念
+description: 深入瞭解 Windows Communication Foundation （WCF）架構的基本概念與此高階說明。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], concepts
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 360479a2ba17c4542d61a737856d23992296e276
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 93e75942487a1a81a8b0e8ecd8d9d666610152dc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802307"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244670"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 的主要概念
 
@@ -54,14 +55,14 @@ WCF 支援數種訊息模式，包括要求-回復、單向和雙工通訊。 �
 
 WCF 檔中使用的其他概念和詞彙包括下列各項：
 
-**訊息**  
+**Message**  
  這是獨立的資料單位，可由數個部分組成，其中包括本文和標頭。
 
-**Service**  
+**服務**  
  這是公開一個或多個端點的建構，其中每個端點會公開一項或多項服務作業。
 
-**Endpoint**  
- 這是訊息傳送或接收 (或兩者) 所在位置的建構。 它包含一個位置（位址），定義訊息的傳送位置、描述如何傳送訊息的通訊機制規格（系結），以及一組可傳送或接收之訊息的定義（或兩者）描述可以傳送之訊息的位置（服務合約）。
+**端點**  
+ 這是訊息傳送或接收 (或兩者) 所在位置的建構。 它包含一個位置（位址），它會定義訊息的傳送位置、描述如何傳送訊息的通訊機制規格（系結），以及一組可在該位置傳送或接收（或兩者）的訊息定義（服務合約），描述可以傳送的訊息。
 
 WCF 服務會對外界公開為端點集合。
 
@@ -80,17 +81,17 @@ WCF 服務會對外界公開為端點集合。
 HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```
 
-**Binding**  
+**綁定**  
  定義端點如何與外界通訊。 它是由一組稱為繫結項目的元件所建構，這些元件會彼此「堆疊」，以建立通訊基礎結構。 繫結至少會定義傳輸 (例如 HTTP 或 TCP) 和使用的編碼方式 (例如文字或二進位)。 繫結程序可以包含用來指定像是安全性機制 (用來保護訊息) 等詳細資料的繫結程序項目，或端點所使用的訊息模式。 如需詳細資訊，請參閱設定[服務](configuring-services.md)。
 
 **Binding 元素**  
  表示一項特定的繫結程序，例如傳輸、編碼方式、基礎結構層級通訊協定的實作 (例如 WS-ReliableMessaging)，或通訊堆疊的任何其他元件。
 
-**行為**  
+**「行為」**  
  此元件可控制服務、端點、特定作業或用戶端的各種執行階段層面。 行為是根據範圍來分組：通用行為會影響全域所有的端點、服務行為只會影響服務相關的層面、端點行為只會影響端點相關的屬性，而作業層級行為會影響特定作業。 例如，其中一個服務行為是節流，這會在過多訊息威脅造成服務處理功能過度負荷時，指定服務的回應方式。 另一方面，端點行為只會控制與端點相關的層面，例如尋找安全性認證的方式和位置。
 
 **系統提供的系結**  
- WCF 包含一些系統提供的繫結。 這些繫結是已針對特定案例最佳化的繫結項目集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 是設計來與可執行各種 WS\* 規格的服務交互操作。 這些預先定義的繫結只會提供可正確套用至特定案例的選項，因此能夠節省時間。 如果預先定義的繫結不符合您的需求，請建立自訂繫結。
+ WCF 包含一些系統提供的繫結。 這些繫結是已針對特定案例最佳化的繫結項目集合。 例如， <xref:System.ServiceModel.WSHttpBinding> 是為了與執行各種 WS 規格的服務進行互通性而設計的 \* 。 這些預先定義的繫結只會提供可正確套用至特定案例的選項，因此能夠節省時間。 如果預先定義的繫結不符合您的需求，請建立自訂繫結。
 
 **設定與編碼**  
  應用程式可以透過程式碼、組態或兩者的組合來控制。 組態的優點是，在撰寫程式碼之後，允許開發人員以外的其他人 (例如，網路系統管理員) 設定用戶端和服務參數，而不需要重新編譯。 組態不僅可讓您設定如端點位址的值，還能讓您加入端點、繫結和行為，取得進一步的控制。 程式碼可讓開發人員嚴格控制服務或用戶端的所有元件，而且透過組態所做的任何設定都可以使用程式碼進行檢查，並在必要時加以覆寫。
@@ -113,7 +114,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **資料合約**  
  服務所使用的資料型別其中繼資料內的描述。 這讓其他項目得以與服務相互溝通。 資料型別可以用於訊息的任何部分，例如做為參數或傳回型別。 如果服務只使用簡單型別，就不需要明確使用資料合約。
 
-**裝載**  
+**Hosting**  
  服務必須裝載於某些處理序。 _主機_是控制服務存留期的應用程式。 服務可以是自我裝載，或由現有裝載處理序管理。
 
 **自我裝載服務**  
@@ -122,7 +123,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **裝載進程**  
  一種應用程式，設計用來裝載服務。 其中包括網際網路資訊服務 (IIS)、Windows Activation Services (WAS) 和 Windows 服務。 在這些裝載案例中，主機會控制服務的存留期。 例如，您可以使用 IIS 來設定包含服務組件和組態檔的虛擬目錄。 當接收到訊息時，IIS 就會啟動服務並控制它的存留期。
 
-**執行個體**  
+**實例**  
  服務具有執行個體模型 (Instancing Model)。 執行個體模型有三種：「單一」表示單一 CLR 物件會服務所有用戶端，「每一呼叫」表示會建立新 CLR 物件來處理每個用戶端呼叫，而「每一工作階段」表示會建立一組 CLR 物件，每個物件各代表單一個別工作階段。 執行個體模型的選擇取決於應用程式需求和預期的服務使用模式。
 
 **用戶端應用程式**  
@@ -131,20 +132,20 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **通道**  
  這是繫結項目的實體實作。 繫結表示組態，通道則是與該組態相關聯的實作。 因此，每個繫結項目都有相關聯的通道。 通道會彼此堆疊，以建立繫結程序的實體實作，也就是「通道堆疊」。
 
-**WCF 用戶端**  
- 用戶端應用程式的結構，會將服務作業公開為方法（以您選擇的 .NET Framework 程式設計語言，例如 Visual Basic 或C#視覺效果）。 任何應用程式都可以裝載 WCF 用戶端，包括裝載服務的應用程式， 因此，您可以建立包含其他服務之 WCF 用戶端的服務。
+**WCF Client - WCF 用戶端**  
+ 用戶端應用程式的結構，會將服務作業公開為方法（以您選擇的 .NET Framework 程式設計語言，例如 Visual Basic 或 Visual c #）。 任何應用程式都可以裝載 WCF 用戶端，包括裝載服務的應用程式， 因此，您可以建立包含其他服務之 WCF 用戶端的服務。
 
-WCF 用戶端可以使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)來自動產生，並將它指向發行中繼資料的執行中服務。
+WCF 用戶端可以使用[System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)自動產生，並將它指向發行中繼資料的執行中服務。
 
 **中繼資料**  
- 在服務中描述服務的特性，外部實體必須了解這些服務特性，才能與此服務通訊。 中繼資料[公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)可以取用中繼資料，以產生 WCF 用戶端和隨附的設定，讓用戶端應用程式可用來與服務互動。
+ 在服務中描述服務的特性，外部實體必須了解這些服務特性，才能與此服務通訊。 [System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)可以取用中繼資料，以產生 WCF 用戶端和隨附的設定，讓用戶端應用程式可用來與服務互動。
 
 服務公開的中繼資料包括 XML 結構描述文件 (定義服務的資料合約) 和 WSDL 文件 (描述服務的方法)。
 
 啟用時，WCF 會藉由檢查服務及其端點，自動產生服務的中繼資料。 若要從服務發行中繼資料，您必須明確啟用中繼資料行為。
 
-**Security**  
- 在 WCF 中，包含機密性（加密訊息以防止竊聽）、完整性（偵測到對訊息進行篡改的方法）、驗證（驗證服務器和用戶端的方法），以及授權（控制存取權資源）。 這些函式是利用現有的安全性機制來提供，例如 TLS over HTTP （也稱為 HTTPS），或藉由執行一或多個不同的 WS-\* 安全性規格。
+**安全性**  
+ 在 WCF 中，包含機密性（加密訊息以防止竊聽）、完整性（偵測到對訊息進行篡改的方法）、驗證（驗證服務器和用戶端的方法），以及授權（控制資源的存取權）。 這些函式是利用現有的安全性機制來提供，例如 TLS over HTTP （也稱為 HTTPS），或藉由執行一或多個不同的 WS- \* 安全性規格。
 
 **傳輸安全性模式**  
  指定由傳輸層機制 (例如 HTTPS) 提供機密性、完整性和驗證。 在使用如 HTTPS 的傳輸時，這個模式的優點在於效能會更有效率，而且易於理解 (因為普遍使用在網際網路上)。 缺點是，這種類型的安全性是個別套用在通訊路徑上的每個躍點，因此通訊容易受到「攔截式」攻擊。
@@ -155,10 +156,10 @@ WCF 用戶端可以使用[System.servicemodel 中繼資料公用程式工具（S
 **使用訊息認證安全性模式傳輸**  
  指定使用傳輸層來提供訊息的機密性、驗證和完整性，而每個訊息都包含訊息接收者所需的多個認證 (宣告)。
 
-**WS-\***  
+**ATL-WS-01\***  
  一組發展中 Web 服務 (WS) 規格的縮寫，例如 WCF 中所實作的 WS-Security 與 WS-ReliableMessaging 等等。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [什麼是 Windows Communication Foundation](whats-wcf.md)
 - [Windows Communication Foundation 架構](architecture.md)

@@ -1,18 +1,19 @@
 ---
 title: 追蹤和訊息記錄
+description: 瞭解如何使用服務追蹤檢視器工具（SvcTraceViewer.exe），透過此 WFC 範例來查看追蹤和訊息記錄。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 9af50f138a2788fc7af0ce5d07e95df49d6675cb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bb49334252c2415223b0f8f5559a6dc838d175e3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602644"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246021"
 ---
 # <a name="tracing-and-message-logging"></a>追蹤和訊息記錄
-這個範例示範如何啟用追蹤和訊息記錄。 系統會使用[服務追蹤檢視器工具（svctraceviewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)來查看產生的追蹤和訊息記錄。 這個範例是以[消費者入門](getting-started-sample.md)為基礎。  
+這個範例示範如何啟用追蹤和訊息記錄。 系統會使用[服務追蹤檢視器工具（SvcTraceViewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)來查看產生的追蹤和訊息記錄。 這個範例是以[消費者入門](getting-started-sample.md)為基礎。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -132,7 +133,7 @@ ms.locfileid: "84602644"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [追蹤](../diagnostics/tracing/index.md)
 - [AppFabric 監控範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

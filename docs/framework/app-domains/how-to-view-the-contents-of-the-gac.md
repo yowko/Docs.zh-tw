@@ -1,5 +1,6 @@
 ---
-title: 如何：檢視全域組件快取的內容
+title: 作法：檢視全域組件快取的內容
+description: 瞭解如何使用全域組件快取（GAC）工具（gacutil.exe），在 .NET 中查看全域組件快取的內容。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d775efc073f3aad745eff7a7707efdec06172c2
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119827"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104683"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>操作說明：檢視全域組件快取的內容
 
@@ -42,4 +43,4 @@ gacutil /l
 ## <a name="see-also"></a>另請參閱
 
 - [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
-- [Gacutil .exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)

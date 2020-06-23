@@ -1,26 +1,27 @@
 ---
 title: 伺服器端 UI 自動化提供者實作
+description: 瞭解如何在 .NET 中為自訂控制項執行伺服器端 UI 自動化提供者。 WPF 和非 WPF 元素的執行方式不同。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - server-side UI Automation provider implementation
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ea1b5e668e29d854233d4dde4c0e6152d591da97
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789616"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903892"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>伺服器端 UI 自動化提供者實作
 
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。
 
-本節描述如何為自訂控制項實作伺服器端 UI 自動化提供者。
+本節描述如何為自訂控制項實作伺服器端使用者介面自動化提供者。
 
-Windows Presentation Foundation （WPF）專案和非 WPF 專案的執行（例如針對 Windows Forms 所設計的元素）基本上不同。 WPF 元素透過衍生自 <xref:System.Windows.Automation.Peers.AutomationPeer>的類別，提供 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的支援。 非 WPF 元素會透過提供者介面的實現來提供支援。
+Windows Presentation Foundation （WPF）專案和非 WPF 專案的執行（例如針對 Windows Forms 所設計的元素）基本上不同。 WPF 元素 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 透過衍生自的類別提供的支援 <xref:System.Windows.Automation.Peers.AutomationPeer> 。 非 WPF 元素會透過提供者介面的實現來提供支援。
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +41,7 @@ Windows Presentation Foundation （WPF）專案和非 WPF 專案的執行（例�
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>依非 WPF 項目的提供者實作
 
-不屬於 WPF 架構的自訂控制項，但是以 managed 程式碼撰寫的（最常見的是 Windows Forms 控制項），藉由執行介面來提供 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援。 每個項目必須至少實作下一節中第一個資料表列出的其中一個介面。 此外，如果項目支援一或多個 控制模式，它必須針對每個控制項模式實作適當的介面。
+不屬於 WPF 架構的自訂控制項，但是以 managed 程式碼撰寫的（最常見的是 Windows Forms 控制項），藉由執行介面來提供的支援 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。 每個項目必須至少實作下一節中第一個資料表列出的其中一個介面。 此外，如果項目支援一或多個控制項模式，它必須針對每個控制項模式實作適當的介面。
 
 您的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者專案必須參考下列組件：
 
@@ -115,9 +116,9 @@ Windows Presentation Foundation （WPF）專案和非 WPF 專案的執行（例�
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>
 
 > [!NOTE]
-> 簡單項目的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 或裝載在視窗中之片段根的項目取自於視窗；不過，根之下的片段項目 (例如清單方塊中的清單項目) 必須提供自己的識別項。 如需詳細資訊，請參閱<xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。
+> 簡單項目的 <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> 或裝載在視窗中之片段根的項目取自於視窗；不過，根之下的片段項目 (例如清單方塊中的清單項目) 必須提供自己的識別項。 如需詳細資訊，請參閱 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>。
 >
-> 應該針對 Windows Forms 控制項中裝載的提供者傳回 <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>。 在此情況下，預設視窗提供者可能無法擷取正確值。
+> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>應該針對 Windows Forms 控制項中裝載的提供者傳回。 在此情況下，預設視窗提供者可能無法擷取正確值。
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 通常由主機提供者所提供。 例如，如果自訂控制項衍生自 <xref:System.Windows.Forms.Control>，則名稱衍生自控制項的 `Text` 屬性。
 
@@ -189,7 +190,7 @@ rebar 控制項就是這種情況的好範例。 Rebar 包含群組列，其中�
 
 為了達成此目的，rebar 的片段根提供者會公開一組代表群組列的子系。 每個群組列都有可能公開屬性和模式的單一提供者。 在實作 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>時，群組列提供者會傳回控制項 HWND 的預設視窗提供者，而取得此提供者的方式為呼叫 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>，並傳入控制項的視窗控制代碼。 最後，rebar 的片段根提供者會實作 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> 介面，以及在實作 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> 時，它會傳回指定的 HWND 中包含之控制項的適當群組列提供者。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [UI 自動化提供者概觀](ui-automation-providers-overview.md)
 - [公開伺服器端 UI 自動化提供者](expose-a-server-side-ui-automation-provider.md)

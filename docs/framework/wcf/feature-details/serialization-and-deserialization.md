@@ -1,16 +1,17 @@
 ---
 title: 序列化和還原序列化
+description: 瞭解 WCF 序列化引擎，這會在兩個方向的 .NET Framework 物件和 XML 之間轉譯。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 8d62fe1cb646bfa00f3fd2e694f08d9fed297bc2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600421"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244903"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
 Windows Communication Foundation （WCF）包含新的序列化引擎，也就是 <xref:System.Runtime.Serialization.DataContractSerializer> 。 會 <xref:System.Runtime.Serialization.DataContractSerializer> 在兩個方向的 .NET Framework 物件和 XML 之間轉譯。 本主題會說明序列化程式的運作方式。  
@@ -260,7 +261,7 @@ Windows Communication Foundation （WCF）包含新的序列化引擎，也就�
   
  另請注意，不 `NetDataContractSerializer` 會針對物件圖形中的每個節點輸出完整的 .NET Framework 型別和元件名稱。 它只會針對不夠清楚的部分來輸出資訊。 亦即，它會在根物件層級以及任何多型案例中輸出。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>

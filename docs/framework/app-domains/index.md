@@ -1,5 +1,6 @@
 ---
 title: 使用應用程式定義域和組件設計程式
+description: 瞭解如何在 .NET 中使用應用程式域和元件進行程式設計。 如需建立應用程式域 & 元件 & 範例，請參閱 how to 主題的連結。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], programming
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-ms.openlocfilehash: 3f66eacaf30f8001cdbf3a486e5ce1c878712e2f
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 1c28fe0abeb279a1dbbc6dcf043c1780c72d79df
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644278"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903434"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>使用應用程式定義域和組件設計程式
 
@@ -22,7 +23,7 @@ Microsoft Internet Explorer、ASP.NET 和 Windows 殼層這類主機會在執行
   
 ## <a name="in-this-section"></a>本節內容  
 
-[應用程式定義域和組件操作說明主題](application-domains-and-assemblies-how-to-topics.md)  
+[應用程式定義域和組件 HOW TO 主題](application-domains-and-assemblies-how-to-topics.md)  
 提供使用應用程式定義域和組件設計程式之概念文件中所有操作說明主題的連結。  
   
 [使用應用程式定義域](use.md)  
@@ -39,7 +40,7 @@ Microsoft Internet Explorer、ASP.NET 和 Windows 殼層這類主機會在執行
 [.NET 中的組件](../../standard/assembly/index.md)  
 提供組件的概觀。  
   
-[應用程式域](application-domains.md)  
+[應用程式定義域](application-domains.md)  
 提供應用程式定義域的概觀。  
   
 [反映概觀](../reflection-and-codedom/reflection.md)  

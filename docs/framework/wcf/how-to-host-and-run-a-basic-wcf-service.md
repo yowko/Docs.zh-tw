@@ -1,5 +1,6 @@
 ---
 title: 教學課程：裝載和執行基本 Windows Communication Foundation 服務
+description: 瞭解如何在主控台應用程式中裝載 WCF 服務，做為一系列文章的一部分，協助您開始建立 WCF 應用程式。
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 872844487578843492e05dd2abb87b50e0bec91c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5318991087e71430523681d601d3b38c4513027b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291392"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246125"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>教學課程：裝載和執行基本 Windows Communication Foundation 服務
 
@@ -37,7 +38,7 @@ ms.locfileid: "84291392"
 
 1. 在 Visual Studio 中建立主控台應用程式專案：
 
-    1. 從 [檔案]**功能表中，選取 [** **開啟**  >  **專案/方案**]，然後流覽至您先前建立的**GettingStarted**方案（*GettingStarted*）。 選取 [開啟]  。
+    1. 從 [檔案]**功能表中，選取 [** **開啟**  >  **專案/方案**]，然後流覽至您先前建立的**GettingStarted**方案（*GettingStarted*）。 選取 [開啟] 。
 
     2. 從 [ **View** ] 功能表中，選取 [**方案總管**]。
 
@@ -194,7 +195,7 @@ ms.locfileid: "84291392"
 
 1. 建立解決方案，然後從 Visual Studio 內執行**GettingStartedHost**主控台應用程式。
 
-    服務必須以系統管理員許可權執行。 因為您以系統管理員許可權開啟 Visual Studio，所以當您在 Visual Studio 中執行**GettingStartedHost**時，應用程式也會以系統管理員許可權執行。 或者，您可以系統管理員身分開啟新的命令提示字元（從快捷方式功能表選取 [**更多**以  >  **系統管理員身分執行**]），然後在其中執行**GettingStartedHost** 。
+    服務必須以系統管理員許可權執行。 因為您以系統管理員許可權開啟 Visual Studio，所以當您在 Visual Studio 中執行**GettingStartedHost**時，應用程式也會以系統管理員許可權執行。 或者，您可以系統管理員身分開啟新的命令提示字元（從快捷方式功能表選取 [**更多**以  >  **系統管理員身分執行**]），然後在其中執行**GettingStartedHost.exe** 。
 
 2. 開啟網頁瀏覽器，並流覽至位於的服務頁面 `http://localhost:8000/GettingStarted/CalculatorService` 。
 

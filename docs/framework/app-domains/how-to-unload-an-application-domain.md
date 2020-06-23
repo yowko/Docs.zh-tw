@@ -1,5 +1,6 @@
 ---
-title: 如何：卸載應用程式定義域
+title: 作法：卸載應用程式定義域
+description: 閱讀如何在 .NET 中卸載應用程式網域，並使用 AppDomain. Unload 方法，正常地關閉指定的應用程式域。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - application domains, unloading
 - unloading application domains
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
-ms.openlocfilehash: 4d5f98229c3a9da69a350ae325cd42e8deb6b7bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b64a9553f63aa4a8deb57f23a97fa464edd64fee
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119839"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104681"
 ---
-# <a name="how-to-unload-an-application-domain"></a>如何：卸載應用程式定義域
+# <a name="how-to-unload-an-application-domain"></a>作法：卸載應用程式定義域
 當您完成使用應用程式定義域時，請使用 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 方法將它卸載。 **Unload** 方法會依正常程序關閉指定的應用程式定義域。 在卸載過程中，任何新的執行緒皆不得存取應用程式定義域，且系統會將所有應用程式定義域特定的資料結構釋放出來，  
   
  並將已載入應用程式定義域的組件移除，而不再可供使用。 如果應用程式定義域中的組件為定義域中性組件，則系統會將組件的資料保留在記憶體中，直到整個程序關閉為止。 目前沒有任何機制可以卸載定義域中性的組件，因此您只能關閉整個程序。 有時候，卸載應用程式定義域的要求可能無法運作，並會導致 <xref:System.CannotUnloadAppDomainException>。  
@@ -32,5 +33,5 @@ ms.locfileid: "73119839"
 ## <a name="see-also"></a>另請參閱
 
 - [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)
-- [如何：建立應用程式定義域](how-to-create-an-application-domain.md)
+- [作法：建立應用程式定義域](how-to-create-an-application-domain.md)
 - [使用應用程式定義域](use.md)

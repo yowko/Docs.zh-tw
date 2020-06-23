@@ -1,6 +1,7 @@
 ---
-title: 如何：使用 OpenFileDialog 元件打開檔
+title: 如何：使用 OpenFileDialog 元件開啟檔案
 ms.date: 02/11/2019
+description: 瞭解如何使用 OpenFileDialog 元件開啟 [Windows] 對話方塊，以流覽和選取檔案。
 dev_langs:
 - csharp
 - vb
@@ -9,33 +10,33 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: ca69de19ab1b9ae387002898145fe99e35a7b6b9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d571885011b0f0c723c73a417f294f30f96952f4
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182124"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904425"
 ---
-# <a name="how-to-open-files-with-the-openfiledialog"></a>如何：使用打開檔對話方塊打開檔
+# <a name="how-to-open-files-with-the-openfiledialog"></a>如何：使用 OpenFileDialog 開啟檔案
 
-元件<xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType>將打開用於流覽和選擇檔的 Windows 對話方塊。 要打開和讀取所選檔，可以使用 方法<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType>或創建類的<xref:System.IO.StreamReader?displayProperty=nameWithType>實例。 以下示例顯示了這兩種方法。
+此 <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> 元件會開啟 [Windows] 對話方塊，供您流覽和選取檔案。 若要開啟和讀取選取的檔案，您可以使用 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> 方法，或建立類別的實例 <xref:System.IO.StreamReader?displayProperty=nameWithType> 。 下列範例會示範這兩種方法。
 
-在 .NET 框架中，要獲取<xref:System.Windows.Forms.FileDialog.FileName%2A>或設置該屬性需要<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>類授予的權限等級。 這些示例運行<xref:System.Security.Permissions.FileIOPermission>許可權檢查，如果在部分信任上下文中運行，則由於許可權不足，可能會引發異常。 有關詳細資訊，請參閱[代碼訪問安全基礎知識](../../misc/code-access-security-basics.md)。
+在 .NET Framework 中，若要取得或設定 <xref:System.Windows.Forms.FileDialog.FileName%2A> 屬性，需要由類別授與的許可權層級 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 。 這些範例會執行 <xref:System.Security.Permissions.FileIOPermission> 許可權檢查，而且如果在部分信任內容中執行，可能會因為許可權不足而擲回例外狀況。 如需詳細資訊，請參閱[代碼啟用安全性基本概念](../../misc/code-access-security-basics.md)。
 
-可以從 C# 或 Visual Basic 命令列生成和運行這些示例為 .NET 框架應用。 有關詳細資訊，請參閱使用[csc.exe 的命令列構建](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[從命令列生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。
+您可以從 c # 或 Visual Basic 命令列 .NET Framework 的應用程式，建立並執行這些範例。 如需詳細資訊，請參閱使用 csc.exe或[從命令列建立](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)[的命令列建立](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。
 
-從 .NET Core 3.0 開始，您還可以從具有 .NET 核心 Windows 表單*\<資料夾名稱>.csproj*專案檔案的資料夾中生成並運行 Windows .NET Core 應用示例。
+從 .NET Core 3.0 開始，您也可以從具有 .NET Core Windows Forms * \<folder name> .csproj*專案檔的資料夾，將範例建立並執行為 Windows .net core 應用程式。
 
-## <a name="example-read-a-file-as-a-stream-with-streamreader"></a>示例：使用流閱讀器將檔作為流讀取  
+## <a name="example-read-a-file-as-a-stream-with-streamreader"></a>範例：使用 StreamReader 將檔案讀取為數據流  
   
-下面的示例使用 Windows 表單<xref:System.Windows.Forms.Button>控制項<xref:System.Windows.Forms.Control.Click>的事件處理常式打開 方法 。 <xref:System.Windows.Forms.OpenFileDialog> <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 使用者選擇檔並選擇 **"確定"** 後，<xref:System.IO.StreamReader>類的實例讀取該檔並在表單的文字方塊中顯示其內容。 有關從檔流讀取的詳細資訊，請參閱<xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>和<xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>。  
+下列範例會使用 Windows Forms <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，以 <xref:System.Windows.Forms.OpenFileDialog> 方法開啟 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 。 在使用者選擇檔案並選取 **[確定]** 之後，類別的實例會 <xref:System.IO.StreamReader> 讀取檔案，並在表單的文字方塊中顯示其內容。 如需從檔案資料流程讀取的詳細資訊，請參閱 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 和 <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType> 。  
 
  [!code-csharp[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
  [!code-vb[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
 
-## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>示例：使用 OpenFile 從篩選的選擇中打開檔
+## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>範例：使用 OpenFile 從篩選後的選取範圍開啟檔案
 
-下面的示例使用<xref:System.Windows.Forms.Button>控制項<xref:System.Windows.Forms.Control.Click>的事件處理常式<xref:System.Windows.Forms.OpenFileDialog>打開 僅顯示文字檔的篩選器。 使用者選擇文字檔並選擇 **"確定"** 後，<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>該方法將用於在記事本中打開該檔。
+下列範例 <xref:System.Windows.Forms.Button> 會使用控制項的 <xref:System.Windows.Forms.Control.Click> 事件處理常式，開啟 <xref:System.Windows.Forms.OpenFileDialog> 具有只顯示文字檔的篩選準則。 使用者選擇文字檔並選取 **[確定]** 之後， <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 會使用方法在 [記事本] 中開啟檔案。
 
  [!code-csharp[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
  [!code-vb[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
@@ -43,4 +44,4 @@ ms.locfileid: "79182124"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [打開檔對話元件](openfiledialog-component-windows-forms.md)
+- [OpenFileDialog 元件](openfiledialog-component-windows-forms.md)

@@ -1,13 +1,14 @@
 ---
 title: ETW 追蹤
+description: 這個範例示範如何使用 Windows 事件追蹤（ETW）和 ETWTraceListener 來執行端對端（E2E）追蹤。
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 0bdbf6699a0cfa3dce58abda4c989fb25d764459
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 210186285ed749a5d1567becd6738939b0bd9d03
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600554"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244422"
 ---
 # <a name="etw-tracing"></a>ETW 追蹤
 這個範例示範如何使用 Event Tracing for Windows (ETW) 和範例隨附的 `ETWTraceListener`，以實作端對端 (E2E) 追蹤。 此範例是以[消費者入門](getting-started-sample.md)為基礎，並包含 ETW 追蹤。  
@@ -52,7 +53,7 @@ ms.locfileid: "84600554"
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。 如需這些工具的詳細資訊，請參閱<https://go.microsoft.com/fwlink/?LinkId=56580>  
   
- 使用 ETWTraceListener 時，追蹤會記錄在二進位的 .etl 檔案中。 開啟 ServiceModel 追蹤之後，所有產生的追蹤都會出現在同一個檔案中。 使用[服務追蹤檢視器工具（svctraceviewer.exe .exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)來查看 .etl 和 .svclog 記錄檔。 此檢視器會建立系統的端對端檢視，讓您能夠從訊息的來源至其目的端及消費點追蹤該訊息。  
+ 使用 ETWTraceListener 時，追蹤會記錄在二進位的 .etl 檔案中。 開啟 ServiceModel 追蹤之後，所有產生的追蹤都會出現在同一個檔案中。 使用[服務追蹤檢視器工具（SvcTraceViewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)來查看 .etl 和 .svclog 記錄檔。 此檢視器會建立系統的端對端檢視，讓您能夠從訊息的來源至其目的端及消費點追蹤該訊息。  
   
  ETW 追蹤接聽項支援循環記錄。 若要啟用這項功能，請移至 [**開始**]、[**執行**]，然後輸入 `cmd` 以啟動命令主控台。 以記錄檔名稱取代下列命令中的 `<logfilename>` 參數。  
   
@@ -74,7 +75,7 @@ logman start Wcf
 logman stop Wcf  
 ```  
   
- 這個程式會產生二進位迴圈記錄檔，您可以使用您選擇的工具來處理，包括[服務追蹤檢視器工具（svctraceviewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)或 Tracerpt。  
+ 這個程式會產生二進位迴圈記錄檔，您可以使用您選擇的工具來處理，包括[服務追蹤檢視器工具（SvcTraceViewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)或 Tracerpt。  
   
  您也可以參閱[迴圈追蹤](circular-tracing.md)範例，以取得替代接聽程式執行迴圈記錄的詳細資訊。  
   
@@ -106,6 +107,6 @@ logman stop Wcf
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [AppFabric 監控範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

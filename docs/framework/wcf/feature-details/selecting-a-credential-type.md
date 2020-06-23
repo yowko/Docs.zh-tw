@@ -1,13 +1,14 @@
 ---
 title: 選取認證類型
+description: 瞭解認證、如何在 WCF 中使用它們，以及如何為您的應用程式選取正確的認證，以建立宣告的身分識別或功能。
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 7bcc5f407077b32d85b7f1e5f7ddbc5aba4b80c1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7a8a6880e5fc3982bb7f470c34a77c771c26effd
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586191"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244916"
 ---
 # <a name="selecting-a-credential-type"></a>選取認證類型
 *認證*是資料 WINDOWS COMMUNICATION FOUNDATION （WCF）用來建立宣告的身分識別或功能。 例如，護照是政府發給的認證，以證明一個國家或地區的公民身分。 在 WCF 中，認證可以採用許多形式，例如使用者名稱權杖和 x.509 憑證。 本主題討論認證、如何在 WCF 中使用它們，以及如何為您的應用程式選取正確的認證。  
@@ -97,7 +98,7 @@ ms.locfileid: "84586191"
   
  如需認證和安全會話的詳細資訊，請參閱安全[會話的安全性考慮](security-considerations-for-secure-sessions.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>

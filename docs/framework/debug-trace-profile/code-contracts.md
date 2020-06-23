@@ -1,5 +1,6 @@
 ---
 title: 程式碼合約
+description: 探索程式碼合約，這種方法可讓您在 .NET 程式碼中指定前置條件、後置條件和物件不變數。
 ms.date: 09/05/2018
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 60f794373af75bd3f745c224e0a8c7a84192e4c4
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904139"
 ---
 # <a name="code-contracts"></a>程式碼合約
 
@@ -67,7 +68,7 @@ if (x == null) throw new ...
 Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ```
 
-請注意，先前測試中的條件是否定的前置條件。 （實際的前置條件會 `x != null`）。否定的前置條件具有高度限制：必須如前一個範例所示加以撰寫。也就是說，它應該不會包含 `else` 子句，而 `then` 子句的主體必須是單一 `throw` 語句。 `if` 測試受限於單純性和可視性規則 (請參閱[使用方式方針](#usage_guidelines))，但是 `throw` 運算式只受限於單純性規則。 不過，所擲回之例外狀況的類型可視性，必須與發生合約的方法相同。
+請注意，先前測試中的條件是否定的前置條件。 （實際的前置條件是 `x != null` 。）否定的前置條件具有高度限制：必須如前一個範例所示加以撰寫。也就是說，它不應包含任何 `else` 子句，而且子句的主體 `then` 必須是單一 `throw` 語句。 `if` 測試受限於單純性和可視性規則 (請參閱[使用方式方針](#usage_guidelines))，但是 `throw` 運算式只受限於單純性規則。 不過，所擲回之例外狀況的類型可視性，必須與發生合約的方法相同。
 
 ## <a name="postconditions"></a>Postconditions
 
@@ -91,9 +92,9 @@ Contract.Ensures(this.F > 0);
 Contract.EnsuresOnThrow<T>(this.F > 0);
 ```
 
-此引數是每當擲回的例外狀況是 `true` 的子類型時，必須為 `T` 的條件。
+此引數是每當擲回的例外狀況是 `T` 的子類型時，必須為 `true` 的條件。
 
-有些例外狀況類型很難用在例外後置條件中。 例如，將類型 <xref:System.Exception> 用於 `T` 時，無論擲回的例外狀況類型為何，即使是堆疊溢位或其他無法控制的例外狀況，該方法都必須保證此條件。 例外後置條件應該只限用於呼叫成員時，可能會擲回的特定例外狀況；例如，針對 <xref:System.InvalidTimeZoneException> 方法呼叫擲回 <xref:System.TimeZoneInfo> 時。
+有些例外狀況類型很難用在例外後置條件中。 例如，將類型 <xref:System.Exception> 用於 `T` 時，無論擲回的例外狀況類型為何，即使是堆疊溢位或其他無法控制的例外狀況，該方法都必須保證此條件。 例外後置條件應該只限用於呼叫成員時，可能會擲回的特定例外狀況；例如，針對 <xref:System.TimeZoneInfo> 方法呼叫擲回 <xref:System.InvalidTimeZoneException> 時。
 
 ### <a name="special-postconditions"></a>特殊後置條件
 
@@ -101,7 +102,7 @@ Contract.EnsuresOnThrow<T>(this.F > 0);
 
 - 若要參考後置條件中的方法傳回值，您可以使用 `Contract.Result<T>()` 運算式，其中 `T` 要取代為方法的傳回類型。 當編譯器無法推斷類型時，您必須明確地提供類型。 例如，C# 編譯器無法推斷沒有採用任何引數之方法的類型，因此需要下列後置條件：`Contract.Ensures(0 <Contract.Result<int>())` 傳回類型為 `void` 的方法，不能參考其後置條件中的 `Contract.Result<T>()`。
 
-- 後置條件中的 prestate 值是指位於方法或屬性開頭之運算式的值。 它會使用 `Contract.OldValue<T>(e)` 運算式，其中 `T` 是 `e` 的類型。 只要編譯器能夠推斷其類型，您就可以省略泛型類型引數。 （例如， C#編譯器一律會推斷類型，因為它接受引數）。`e` 和可能出現舊運算式的內容有幾項限制。 舊運算式不能包含另一個舊運算式。 最重要的是，舊的運算式必須參考存在於方法前置條件狀態中的值。 換句話說，只要方法的前置條件是 `true`，它就必須是可供評估的運算式。 以下是該規則的一些執行個體。
+- 後置條件中的 prestate 值是指位於方法或屬性開頭之運算式的值。 它會使用 `Contract.OldValue<T>(e)` 運算式，其中 `T` 是 `e` 的類型。 只要編譯器能夠推斷其類型，您就可以省略泛型類型引數。 （例如，c # 編譯器一律會推斷類型，因為它接受引數）。有數個限制 `e` ，以及可能出現舊運算式的內容。 舊運算式不能包含另一個舊運算式。 最重要的是，舊的運算式必須參考存在於方法前置條件狀態中的值。 換句話說，只要方法的前置條件是 `true`，它就必須是可供評估的運算式。 以下是該規則的一些執行個體。
 
   - 該值必須存在於方法的前置條件狀態中。 為了參考物件上的欄位，前置條件必須保證物件一律為非 null。
 
@@ -145,7 +146,7 @@ Contract.EnsuresOnThrow<T>(this.F > 0);
       如同 <xref:System.Diagnostics.Contracts.Contract.OldValue%2A> 方法，只要編譯器能夠推斷其類型，您就可以省略泛型型別引數。 合約重寫器會將方法呼叫取代為 `out` 參數的值。 <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> 方法只會出現在後置條件中。 方法的引數必須是 `out` 參數，或是結構 `out` 參數的欄位。 參考結構建構函式後置條件中的欄位時，後者也很有用。
 
       > [!NOTE]
-      > 目前，程式碼合約分析工具不會檢查 `out` 參數是否正確初始化，並忽略其於後置條件中的相關記錄。 因此，在上述範例中，如果合約之後的字行使用 `x` 的值，而不是指派整數給它，則編譯器不會發出正確的錯誤。 不過，在未定義 CONTRACTS_FULL 前置處理器符號的組建 (例如 發行組建) 上，編譯器會發出錯誤。
+      > 目前，程式碼合約分析工具不會檢查 `out` 參數是否正確初始化，並忽略其於後置條件中的相關記錄。 因此，在上述範例中，如果合約之後的字行使用 `x` 的值，而不是指派整數給它，則編譯器不會發出正確的錯誤。 不過，在未定義 CONTRACTS_FULL 前置處理器符號的組建 (例如 asa 發行組建) 上，編譯器會發出錯誤。
 
 ## <a name="invariants"></a>非變異值
 
@@ -163,7 +164,7 @@ protected void ObjectInvariant ()
 }
 ```
 
-CONTRACTS_FULL 前置處理器符號會有條件地定義非變異值。 在執行階段檢查期間，會在每個公用方法的結尾檢查非變異值。 如果非變異值提及在相同類別中的公用方法，則會停用通常在該公用方法結尾進行的非變異檢查。 此檢查反而只會發生在該類別最外層的方法呼叫結尾。 如果因為呼叫另一個類別上的方法而重新輸入此類別，也會進行這項檢查。 不會檢查物件完成項和 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作為不變數。
+CONTRACTS_FULL 前置處理器符號會有條件地定義非變異值。 在執行階段檢查期間，會在每個公用方法的結尾檢查非變異值。 如果非變異值提及在相同類別中的公用方法，則會停用通常在該公用方法結尾進行的非變異檢查。 此檢查反而只會發生在該類別最外層的方法呼叫結尾。 如果因為呼叫另一個類別上的方法而重新輸入此類別，也會進行這項檢查。 不會針對物件完成項和執行檢查不變數 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 。
 
 <a name="usage_guidelines"></a>
 
@@ -204,7 +205,7 @@ CONTRACTS_FULL 前置處理器符號會有條件地定義非變異值。 在執�
 
 <a name="visibility"></a>
 
-### <a name="visibility"></a>可視性
+### <a name="visibility"></a>可見性
 
 合約中提及之所有成員的可視性，必須至少與其所在的方法相同。 例如，針對公用方法，不能在前置條件中提及私用欄位；用戶端無法在呼叫該方法之前，先驗證這類合約。 不過，如果該欄位標示 <xref:System.Diagnostics.Contracts.ContractPublicPropertyNameAttribute>，則不受限於這些規則。
 

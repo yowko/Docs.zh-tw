@@ -1,15 +1,16 @@
 ---
 title: DataContractSerializer 範例
+description: 這個範例示範 WCF 中的 DataContractSerializer，它會針對資料合約類別執行一般序列化和還原序列化服務。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 07c6d3b10f2a0478f8fb3835f0b040668c5013ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c2f62c8926f09e2d4cdea1941909e7d8f59c43a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600006"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244396"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer 範例
 DataContractSerializer 範例會示範執行資料合約類別之一般序列化與還原序列化服務的 <xref:System.Runtime.Serialization.DataContractSerializer>。 此範例會建立 `Record` 物件、將它序列化為記憶體資料流程，並將記憶體資料流程還原序列化回另一個 `Record` 物件，以示範的使用方式 <xref:System.Runtime.Serialization.DataContractSerializer> 。 此範例會接著會序列化使用二進位寫入器的 `Record` 物件，以便示範該寫入器會如何影響序列化。  

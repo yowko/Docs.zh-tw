@@ -1,15 +1,16 @@
 ---
 title: 基本程式設計週期
+description: 瞭解建立 WCF 應用程式的工作。 WCF 可讓應用程式在相同電腦上、透過網路，或在不同的應用程式平臺上進行通訊。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: fe578ba3c655c9c9ea8398b9b2e4d4f974153c8e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c672827fff780fd263f5355520bb6ccf02bb902e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320819"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245527"
 ---
 # <a name="basic-programming-lifecycle"></a>基本程式設計週期
 Windows Communication Foundation （WCF）可讓應用程式進行通訊，不論它們是在同一部電腦、跨網際網路或不同的應用程式平臺上。 本主題概述建立 WCF 應用程式所需的工作。 如需實用的範例應用程式，請參閱[消費者入門教學](getting-started-tutorial.md)課程。  
@@ -31,6 +32,6 @@ Windows Communication Foundation （WCF）可讓應用程式進行通訊，不�
   
  當您熟悉開發服務合約之後，您也可以閱讀擴充性[簡介](introduction-to-extensibility.md)。 如果您的服務有問題，請查看[WCF 疑難排解快速入門](wcf-troubleshooting-quickstart.md)，以查看其他人是否有相同或類似的問題。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [履行服務合約](implementing-service-contracts.md)

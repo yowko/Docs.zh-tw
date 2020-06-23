@@ -1,16 +1,17 @@
 ---
 title: HOW TO：在 Managed 應用程式中裝載 WCF 服務
+description: 瞭解如何藉由建立自我裝載服務並加以測試，在受控應用程式中託管 WCF 服務。
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7d1d61b683f60a6c643d2a2f03d367a6ae6c6c15
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320983"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246164"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>如何：在 managed 應用程式中裝載 WCF 服務
 
@@ -28,13 +29,13 @@ ms.locfileid: "72320983"
 
 1. 建立新的主控台應用程式：
 
-   1. 開啟**Visual Studio，然後從 [檔案**] 功能表選取 [**新增** > **專案**]。
+   1. 開啟 Visual Studio，然後**New**  >  從 [檔案] **File**功能表選取 [新增**專案**]。
 
-   2. 在 [**安裝的範本**] 清單中，選取 [**視覺效果C#**  ] 或 [ **Visual Basic**]，然後選取 [ **Windows 桌面**]。
+   2. 在 [**安裝的範本**] 清單中，選取 [ **Visual c #** ] 或 [ **Visual Basic**]，然後選取 [ **Windows 桌面**]。
 
-   3. 選取 [**主控台應用程式**] 範本。 在 [**名稱**] 方塊中輸入 `SelfHost`，然後選擇 **[確定]** 。
+   3. 選取 [**主控台應用程式**] 範本。 `SelfHost`在 [**名稱**] 方塊中輸入，然後選擇 **[確定]**。
 
-2. 以滑鼠右鍵按一下**方案總管**中的 [ **SelfHost** ]，然後選取 [**新增參考**]。 從 [ **.net** ] 索引標籤中選取 [ **system.servicemodel** ]，然後選擇 **[確定]** 。
+2. 以滑鼠右鍵按一下**方案總管**中的 [ **SelfHost** ]，然後選取 [**新增參考**]。 從 [ **.net** ] 索引標籤中選取 [ **system.servicemodel** ]，然後選擇 **[確定]**。
 
     > [!TIP]
     > 如果看不到 [**方案總管**] 視窗，請從 [ **View** ] 功能表中選取 [**方案總管**]。
@@ -65,20 +66,20 @@ ms.locfileid: "72320983"
     > [!NOTE]
     > 本範例將使用預設端點，所以這項服務不需要組態檔。 如果沒有設定端點，執行階段就會針對服務所實作的每份服務合約，為每個基底位址各建立一個端點。 如需預設端點的詳細資訊，請參閱[簡化](simplified-configuration.md)的設定和[WCF 服務的簡化](./samples/simplified-configuration-for-wcf-services.md)設定。
 
-7. 按**Ctrl** +**Shift** +**B**以建立方案。
+7. 按**Ctrl** + **Shift** + **B**以建立方案。
 
 ## <a name="test-the-service"></a>測試服務
 
-1. 按**Ctrl** +**F5**以執行服務。
+1. 按**Ctrl** + **F5**執行服務。
 
 2. 開啟 [ **WCF 測試用戶端**]。
 
     > [!TIP]
-    > 若要開啟**WCF 測試用戶端**，請開啟 Visual Studio 的開發人員命令提示字元，並執行**WcfTestClient**。
+    > 若要開啟**WCF 測試用戶端**，請開啟 Visual Studio 的開發人員命令提示字元，然後執行**WcfTestClient.exe**。
 
 3. 從 [檔案] 功能表**中選取**[**新增服務**]。
 
-4. 在 [位址] 方塊中輸入 `http://localhost:8080/hello`，然後按一下 **[確定]** 。
+4. `http://localhost:8080/hello`在 [位址] 方塊中輸入，然後按一下 **[確定]**。
 
     > [!TIP]
     > 請確認服務正在執行中，否則這個步驟會失敗。 若您已從程式碼變更了基底位址，即應在此步驟中使用修改後的基底位址。
@@ -94,12 +95,12 @@ ms.locfileid: "72320983"
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [如何：在 IIS 中裝載 WCF 服務](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [How to: Host a WCF Service in IIS](./feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [自我裝載](./samples/self-host.md)
 - [裝載服務](hosting-services.md)
 - [如何：定義服務合約](how-to-define-a-wcf-service-contract.md)

@@ -1,13 +1,14 @@
 ---
 title: 診斷追蹤
+description: 瞭解 .NET 中的診斷追蹤。 追蹤就是在應用程式執行期間，所產生的特定訊息之發行動作。
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-ms.openlocfilehash: 76712710bf42f498ba859c7b1cd18a261387078c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5de8fdf7b95cf01b119118dac75d373c32949dcd
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174416"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141807"
 ---
 # <a name="diagnostic-traces"></a>診斷追蹤
 追蹤就是在應用程式執行期間，所產生的特定訊息之發行動作。 使用追蹤功能時，您必須具有收集和記錄所傳送訊息的機制。 追蹤訊息由「接聽項」負責接收。 接聽項的用途是收集、儲存和傳送追蹤訊息。 接聽項會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
@@ -39,13 +40,13 @@ ms.locfileid: "79174416"
   
 |追蹤層級|描述|  
 |-----------------|-----------------|  
-|重大|已發生如下列所述的嚴重失敗情況：<br /><br /> - 可能導致使用者功能立即丟失的錯誤。<br />- 需要管理員採取措施以避免功能遺失的事件。<br />- 代碼掛起。<br />- 此跟蹤級別還可以為解釋其他關鍵跟蹤提供足夠的上下文。 如此便可協助找出導致嚴重失敗的作業序列。|  
+|重要|已發生如下列所述的嚴重失敗情況：<br /><br /> -可能會導致使用者功能立即遺失的錯誤。<br />-需要系統管理員採取動作以避免功能遺失的事件。<br />-程式碼停止回應。<br />-此追蹤層級也可以提供足夠的內容來解讀其他重要追蹤。 如此便可協助找出導致嚴重失敗的作業序列。|  
 |錯誤|已經發生可導致使用者功能喪失的錯誤 (例如，無效的組態或網路行為)。|  
 |警告|存在一個可間接導致錯誤或嚴重失敗的狀況 (例如，配置失敗或到達上限)。 對使用者程式碼錯誤的正常處理 (例如，交易中止、逾時、驗證失敗) 也可能產生警告。|  
 |資訊|會產生對監控與診斷系統狀態、衡量效能，或描述分析有幫助的訊息。 這些訊息包含交易與登記存留期事件，例如正在建立或認可的交易、重要界限的跨越，或是重要資源的配置。 這時開發人員可以使用此類資訊來進行容量規劃與效能管理。|  
   
 ## <a name="trace-codes"></a>追蹤程式碼  
- 下表列出由 <xref:System.Transactions> 基礎結構所產生的追蹤程式碼。 表中包括跟蹤代碼識別碼、跟蹤的枚<xref:System.Diagnostics.EventTypeFilter.EventType%2A>舉級別以及跟蹤的**TraceRecord**中包含的額外資料。 此外，跟蹤的相應跟蹤級別也存儲在**追蹤記錄中**。  
+ 下表列出由 <xref:System.Transactions> 基礎結構所產生的追蹤程式碼。 資料表中包含追蹤程式碼識別碼、 <xref:System.Diagnostics.EventTypeFilter.EventType%2A> 追蹤的列舉層級，以及追蹤的**TraceRecord**中包含的額外資料。 此外，追蹤的對應追蹤層級也會儲存在**TraceRecord**中。  
   
 |TraceCode|EventType|TraceRecord 中的額外資料|  
 |---------------|---------------|-------------------------------|  
@@ -56,12 +57,12 @@ ms.locfileid: "79174416"
 |TransactionRollbackCalled|警告|TransactionTraceId|  
 |TransactionAborted|警告|TransactionTraceId|  
 |TransactionInDoubt|警告|TransactionTraceId|  
-|TransactionScopeCreated|資訊|TransactionScopeResult，可能為下列各項：<br /><br /> - 新交易<br />- 交易通過。<br />- 已傳遞從屬事務。<br />- 使用當前事務。<br />-沒有交易<br /><br /> 目前新 TransactionTraceId|  
-|TransactionScopeDisposed|資訊|作用域的"預期"當前事務的事務跟蹤Id。|  
-|TransactionScopeIncomplete|警告|作用域的"預期"當前事務的事務跟蹤Id。|  
-|TransactionScopeNestedIncorrectly|警告|作用域的"預期"當前事務的事務跟蹤Id。|  
+|TransactionScopeCreated|資訊|TransactionScopeResult，可能為下列各項：<br /><br /> -新交易。<br />-交易已通過。<br />-相依交易已通過。<br />-使用目前的交易。<br />-無交易。<br /><br /> 目前新 TransactionTraceId|  
+|TransactionScopeDisposed|資訊|範圍的「預期」目前交易的 TransactionTraceId。|  
+|TransactionScopeIncomplete|警告|範圍的「預期」目前交易的 TransactionTraceId。|  
+|TransactionScopeNestedIncorrectly|警告|範圍的「預期」目前交易的 TransactionTraceId。|  
 |TransactionScopeCurrentTransactionChanged|警告|目前舊有 TransactionTraceId、其他 TransactionTraceId|  
-|TransactionScopeTimeout|警告|作用域的"預期"當前事務的事務跟蹤Id。|  
+|TransactionScopeTimeout|警告|範圍的「預期」目前交易的 TransactionTraceId。|  
 |DependentCloneCreated|資訊|TransactionTraceId、所建立的相依交易型別 (RollbackIfNotComplete/BlockCommitUntilComplete)|  
 |DependentCloneComplete|資訊|TransactionTraceId|  
 |RecoveryComplete|資訊|資源管理員 GUID (從基底)|  
@@ -69,7 +70,7 @@ ms.locfileid: "79174416"
 |TransactionSerialized|資訊|TransactionTraceId。|  
 |TransactionException|錯誤|例外狀況訊息|  
 |InvalidOperationException|錯誤|例外狀況訊息|  
-|InternalError|重大|例外狀況訊息|  
+|InternalError|重要|例外狀況訊息|  
 |TransferEvent||當交易已還原序列化，或是由 <xref:System.Transactions> 交易提升為分散式交易，則會寫入來自 ExecutionContext 與分散式交易識別碼的目前 ActivityID。<br /><br /> 當 DTC 回呼 Managed 程式碼，分散式交易識別碼就會針對回呼的持續時間設為 ExecutionContext 中的 ActivityID。|  
 |ConfiguredDefaultTimeoutAdjusted|警告|無額外的資料|  
 |TransactionTimeout|警告|目前逾時的交易 TransactionTraceId。|  
