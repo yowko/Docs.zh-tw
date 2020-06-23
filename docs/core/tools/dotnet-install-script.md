@@ -2,12 +2,12 @@
 title: dotnet-install 指令碼
 description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet-安裝腳本。
 ms.date: 04/30/2020
-ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 464e6fafa1c2e661892bcb3b35ba172ca1d7e76b
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802716"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141239"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -28,7 +28,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
 
-dotnet-install.ps1 -Help
+Get-Help ./dotnet-install.ps1
 ```
 
 Linux/macOS：
@@ -94,9 +94,9 @@ dotnet-install.sh --help
 
   用來作為要附加至 Azure 摘要的查詢字串。 這可允許變更 URL 以使用非公用 Blob 儲存體帳戶。
 
-- **`-Help|--help`**
+- **`--help`**
 
-  印出指令碼的說明。
+  印出指令碼的說明。 僅適用于 bash 腳本。 針對 PowerShell，請使用 `Get-Help ./dotnet-install.ps1` 。
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
@@ -104,7 +104,7 @@ dotnet-install.sh --help
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  指定將用來判斷 SDK 版本之[global json](global-json.md)檔案的路徑。 *Global. json*檔案必須有的值 `sdk:version` 。
+  指定將用來判斷 SDK 版本之檔案的[global.js](global-json.md)路徑。 檔案*上的global.js*必須有的值 `sdk:version` 。
 
 - **`-NoCdn|--no-cdn`**
 

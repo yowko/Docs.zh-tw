@@ -4,12 +4,12 @@ description: 瞭解如何在 .NET 中針對 Apache Spark 應用程式執行使�
 ms.date: 06/11/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 96597c7e2d45dfdf8406b0d3e80daad270996b97
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: fe3dec187f94f84adb1217c39ff6aabc4b4db1c5
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105589"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85142013"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>在適用于 Apache Spark 的 .NET 中建立使用者定義函數（UDF）
 
@@ -61,7 +61,7 @@ DataFrame udfResult = df.Select(udf(df["name"]));
 
 ## <a name="udf-serialization"></a>UDF 序列化
 
-因為 Udf 是需要在背景工作角色上執行的函式，所以必須將它們序列化並傳送至背景工作角色，做為來自驅動程式的承載的一部分。 [委派](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)（這是方法的參考）必須序列化以及其[目標](https://docs.microsoft.com/en-us/dotnet/api/system.delegate.target?view=netframework-4.8)，這是目前的委派叫用實例方法的類別實例。 請參閱[GitHub 中](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149)的此程式碼範例，以深入瞭解 UDF 序列化的執行方式。
+因為 Udf 是需要在背景工作角色上執行的函式，所以必須將它們序列化並傳送至背景工作角色，做為來自驅動程式的承載的一部分。 [委派](../../csharp/programming-guide/delegates/index.md)（這是方法的參考）必須序列化以及其[目標](xref:System.Delegate.Target%2A)，這是目前的委派叫用實例方法的類別實例。 請參閱[GitHub 中](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149)的此程式碼範例，以深入瞭解 UDF 序列化的執行方式。
 
 適用于 Apache Spark 的 .NET 會使用 .NET Core，這不支援序列化委派。 取而代之的是，反映是用來序列化定義委派的目標。 在通用範圍中定義多個委派時，它們會有一個共用的關閉，而成為序列化的反映目標。
 
