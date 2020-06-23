@@ -1,17 +1,18 @@
 ---
 title: WCF 資料服務用戶端程式庫
+description: 瞭解如何使用 WCF Data Services 用戶端程式庫來存取和變更 .NET Framework 用戶端應用程式中的資料。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 556482e3e43460016162dfbdd9b31f9a68c0af46
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 58d038d5c2ac4973c2b41f4d49c1746f48f2a2fb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900879"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247736"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF 資料服務用戶端程式庫
 如果任何應用程式可以傳送 HTTP 要求並處理資料服務傳回的 OData 摘要，就可以與以開放式資料通訊協定（OData）為基礎的資料服務互動。 此互通性可讓您從各種 Web 啟用的應用程式存取 OData 服務。 WCF Data Services 包含用戶端程式庫，可在您從 .NET Framework 或 Silverlight 應用程式取用 OData 摘要時，提供更豐富的程式設計體驗。  
@@ -20,7 +21,7 @@ ms.locfileid: "75900879"
   
  本節將描述如何使用用戶端程式庫，存取和變更 .NET Framework 用戶端應用程式的資料。 如需如何搭配 Silverlight 架構應用程式使用 WCF Data Services 用戶端程式庫的詳細資訊，請參閱[WCF Data Services （Silverlight）](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v%3dvs.95))。 有其他用戶端程式庫可讓您在其他種類的應用程式中取用 OData 摘要。 如需 OData SDK 的詳細資訊，請參閱[ODATA sdk-範例程式碼](https://www.odata.org/ecosystem/#sdk)。
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [產生資料服務用戶端程式庫](generating-the-data-service-client-library-wcf-data-services.md)  
  描述如何產生以 OData 摘要為基礎的用戶端程式庫和用戶端資料服務類別。  
   
@@ -51,7 +52,7 @@ ms.locfileid: "75900879"
  [使用二進位資料](working-with-binary-data-wcf-data-services.md)  
  說明如何存取及變更資料服務當做資料流傳回的二進位資料。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [定義 WCF Data Services](defining-wcf-data-services.md)
-- [使用者入門](getting-started-with-wcf-data-services.md)
+- [定義 WCF 資料服務](defining-wcf-data-services.md)
+- [快速入門](getting-started-with-wcf-data-services.md)

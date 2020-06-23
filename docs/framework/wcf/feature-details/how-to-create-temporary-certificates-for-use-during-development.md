@@ -1,16 +1,17 @@
 ---
 title: HOW TO：建立開發時要使用的暫時憑證
+description: 瞭解如何使用 PowerShell Cmdlet 來建立兩個暫存的 x.509 憑證，以用於開發安全的 WCF 服務或用戶端。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 9e01ccb29ad017a2657ab08b54d7f01ef4564481
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0a21548386639a9f6a8c8572e5d7928ffdb270d6
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964542"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247035"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：建立開發時要使用的暫時憑證
 
@@ -31,7 +32,7 @@ ms.locfileid: "75964542"
 $rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-我們需要將憑證匯出到 PFX 檔案，以便將它匯入到稍後步驟所需的位置。 以私密金鑰匯出憑證時，需要密碼才能保護它。 我們會將密碼儲存在 `SecureString` 中，並使用[get-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) Cmdlet，將具有相關私密金鑰的憑證匯出至 PFX 檔案。 我們也會使用[Export-certificate](/powershell/module/pkiclient/export-certificate) Cmdlet，將公開憑證只儲存到 CRT 檔案中。
+我們需要將憑證匯出到 PFX 檔案，以便將它匯入到稍後步驟所需的位置。 以私密金鑰匯出憑證時，需要密碼才能保護它。 我們會將密碼儲存在中 `SecureString` ，並使用[get-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) Cmdlet，將具有相關私密金鑰的憑證匯出至 PFX 檔案。 我們也會使用[Export-certificate](/powershell/module/pkiclient/export-certificate) Cmdlet，將公開憑證只儲存到 CRT 檔案中。
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
@@ -42,7 +43,7 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>建立由根授權憑證簽署的新憑證
 
-下列命令會使用簽發者的私密金鑰，建立主體名稱為 "SignedByRootCA" 之 `RootCA` 所簽署的憑證。
+下列命令會 `RootCA` 使用簽發者的私密金鑰，建立由主體名稱為 "SignedByRootCA" 之所簽署的憑證。
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
@@ -62,7 +63,7 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>在受信任的根憑證授權單位中安裝自我簽署憑證
 
-1. 請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元來檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)。
+1. 請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱 [做法：使用 MMC 嵌入式管理單元檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)。
 
 2. 開啟資料夾以儲存憑證，可以是 [ **本機電腦** ] 或 [ **目前使用者**]。
 
@@ -112,8 +113,8 @@ Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 請用滑鼠右鍵按一下憑證，然後按一下 [ **刪除** ]，以確定從 [ **受信任的根憑證授權單位** ] 和 [ **個人**] 資料夾中刪除暫時的根授權憑證。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用憑證](working-with-certificates.md)
-- [如何：使用 MMC 嵌入式管理單元來檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Working with Certificates](working-with-certificates.md)
+- [How to: View Certificates with the MMC Snap-in](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Securing Services and Clients](securing-services-and-clients.md)

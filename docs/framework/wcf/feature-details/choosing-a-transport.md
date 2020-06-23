@@ -1,15 +1,16 @@
 ---
 title: 選擇傳輸
+description: 瞭解在 WCF 提供的主要傳輸中選擇的準則： HTTP、TCP 和具名管道。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 7e1f6b2e1905fb92ebfe78be351feeaebb374c11
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e1a92203de25aa399316eea91a758802768442a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587062"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247490"
 ---
 # <a name="choosing-a-transport"></a>選擇傳輸
 本主題討論在 Windows Communication Foundation （WCF）中所包含的三個主要傳輸中選擇的準則： HTTP、TCP 和具名管道。 WCF 也包含訊息佇列（也稱為 MSMQ）傳輸，但本檔並未涵蓋訊息佇列。  
@@ -52,7 +53,7 @@ ms.locfileid: "84587062"
   
 |屬性|描述|偏好的傳輸|  
 |---------------|-----------------|------------------------|  
-|診斷|Diagnostics 可讓您自動偵測傳輸連接問題。 所有的傳輸都支援傳回說明連接之錯誤資訊的能力。 不過，WCF 不包含用來調查網路問題的診斷工具。|無|  
+|診斷|Diagnostics 可讓您自動偵測傳輸連接問題。 所有的傳輸都支援傳回說明連接之錯誤資訊的能力。 不過，WCF 不包含用來調查網路問題的診斷工具。|None|  
 |Hosting|所有 WCF 端點都必須裝載在應用程式內。 IIS 6.0 和舊版僅支援使用 HTTP 傳輸的裝載應用程式。 在 Windows Vista 上，已新增支援以裝載所有的 WCF 傳輸，包括 TCP 和具名管道。 如需詳細資訊，請參閱在[Windows 進程啟用服務](hosting-in-windows-process-activation-service.md)中[裝載 Internet Information Services](hosting-in-internet-information-services.md)和裝載。|HTTP|  
 |檢閱|Inspection 是在傳輸期間從訊息擷取及處理資訊的能力。 HTTP 通訊協定會分開路由及控制資訊與資料，讓它更容易建立檢查及分析訊息的工具。 容易檢查的傳輸在網路應用裝置中可能也需要較少的處理能力。 所使用的安全性層級會影響是否可以檢查訊息。|HTTP|  
 |Latency|Latency 是完成訊息交換所需要的最小時間量。 所有的網路作業多少都會有延遲時間，視所選擇的傳輸而定。 與原生訊息交換模式為要求/回覆的傳輸 (例如 HTTP) 使用雙工或單向通訊，會因訊息的強制關聯造成額外的延遲時間。 在這種情況中，請考慮使用原生訊息交換模式為雙工的傳輸，例如 TCP。|TCP、具名<br /><br /> Pipe|  

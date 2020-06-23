@@ -1,19 +1,20 @@
 ---
 title: HOW TO：建立自訂宣告
+description: 瞭解如何在 WCF 中建立自訂宣告。 WCF 支援各種內建宣告，而某些應用程式可能需要自訂宣告。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: e78f577e0fd3473575fab998e55616936212ebb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89f2b1359b48b71720db6ff38f27883745cfe612
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185610"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247542"
 ---
 # <a name="how-to-create-a-custom-claim"></a>HOW TO：建立自訂宣告
-Windows 通信基礎 （WCF） 中的標識模型基礎結構提供了一組內置聲明類型和許可權，以及用於創建<xref:System.IdentityModel.Claims.Claim>具有這些類型和許可權的實例的説明器函數。 這些內置聲明旨在對預設情況下 WCF 支援的用戶端憑據類型中的資訊建模。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
+Windows Communication Foundation （WCF）中的身分識別模型基礎結構會提供一組內建的宣告類型和許可權，其中包含用來建立 <xref:System.IdentityModel.Claims.Claim> 具有這些類型和許可權之實例的 helper 函數。 這些內建的宣告是設計用來根據預設支援的用戶端認證類型中的資訊模型。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>依據基本資料型別建立自訂宣告  
   
@@ -21,15 +22,15 @@ Windows 通信基礎 （WCF） 中的標識模型基礎結構提供了一組內�
   
     1. 決定用於宣告類型的唯一值。  
   
-         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 有關由 WCF 定義的聲明類型的清單，請參閱類<xref:System.IdentityModel.Claims.ClaimTypes>。  
+         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需 WCF 所定義的宣告類型清單，請參閱 <xref:System.IdentityModel.Claims.ClaimTypes> 類別。  
   
     2. 選擇基本資料型別和資源的值。  
   
-         資源就是物件。 資源的 CLR 類型可以為基本，例如 <xref:System.String> 或 <xref:System.Int32>，或任何可序列化的類型。 資源的 CLR 類型必須是可序列化的，因為聲明由 WCF 在不同點序列化。 基本類型為可序列化。  
+         資源就是物件。 資源的 CLR 類型可以為基本，例如 <xref:System.String> 或 <xref:System.Int32>，或任何可序列化的類型。 資源的 CLR 類型必須是可序列化的，因為宣告會在 WCF 的各種點進行序列化。 基本類型為可序列化。  
   
-    3. 選擇由 WCF 定義的權利或自訂權利的唯一值。  
+    3. 選擇由 WCF 定義的許可權，或自訂許可權的唯一值。  
   
-         權限為唯一字串識別碼。 WCF 定義的許可權在類中<xref:System.IdentityModel.Claims.Rights>定義。  
+         權限為唯一字串識別碼。 WCF 所定義的許可權會定義在 <xref:System.IdentityModel.Claims.Rights> 類別中。  
   
          自訂宣告設計者的責任在於確保用於權限的字串識別碼為獨一無二的。  
   
@@ -44,11 +45,11 @@ Windows 通信基礎 （WCF） 中的標識模型基礎結構提供了一組內�
   
     1. 決定用於宣告類型的唯一值。  
   
-         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 有關由 WCF 定義的聲明類型的清單，請參閱類<xref:System.IdentityModel.Claims.ClaimTypes>。  
+         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需 WCF 所定義的宣告類型清單，請參閱 <xref:System.IdentityModel.Claims.ClaimTypes> 類別。  
   
     2. 選擇或定義資源的可序列化非基本類型。  
   
-         資源就是物件。 資源的 CLR 類型必須是可序列化的，因為聲明由 WCF 在不同點序列化。 基本類型已為可序列化。  
+         資源就是物件。 資源的 CLR 類型必須是可序列化的，因為宣告會在 WCF 的各種點進行序列化。 基本類型已為可序列化。  
   
          定義新類型時，請將 <xref:System.Runtime.Serialization.DataContractAttribute> 套用至類別。 也將 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性套用至需要序列化以做為宣告一部分之新類型的所有成員。  
   
@@ -57,9 +58,9 @@ Windows 通信基礎 （WCF） 中的標識模型基礎結構提供了一組內�
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)]
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]
   
-    3. 選擇由 WCF 定義的權利或自訂權利的唯一值。  
+    3. 選擇由 WCF 定義的許可權，或自訂許可權的唯一值。  
   
-         權限為唯一字串識別碼。 WCF 定義的許可權在類中<xref:System.IdentityModel.Claims.Rights>定義。  
+         權限為唯一字串識別碼。 WCF 所定義的許可權會定義在 <xref:System.IdentityModel.Claims.Rights> 類別中。  
   
          自訂宣告設計者的責任在於確保用於權限的字串識別碼為獨一無二的。  
   

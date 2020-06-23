@@ -1,5 +1,6 @@
 ---
 title: 組態編輯器工具 (SvcConfigEditor.exe)
+description: 瞭解如何使用 WCF 服務設定編輯器來管理 WCF 系結、行為、服務及診斷的設定。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration files, creating
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: 3d482e2b03346c9443066c480575a1394324b9bf
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 258437ff616b969d40feabbfff364ad2cc6b25bc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320710"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247645"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>組態編輯器工具 (SvcConfigEditor.exe)
 
@@ -61,20 +62,20 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 ### <a name="opening-a-configuration-file"></a>開啟組態檔
 
-1. 使用 [命令] 視窗流覽至您的 WCF 安裝位置，然後輸入 `SvcConfigEditor.exe`，以啟動 [服務設定編輯器]。
+1. 使用 [命令] 視窗流覽至您的 WCF 安裝位置，然後輸入，以啟動 [服務設定編輯器] `SvcConfigEditor.exe` 。
 
 2. 從 [**檔案**] 功能表中，選取 [**開啟**]，然後按一下您要管理的檔案類型。
 
 3. 在 [**開啟**] 對話方塊中，流覽至您想要管理的特定檔案，然後按兩下該檔案。
 
-檢視器會自動遵循組態合併路徑並建立合併組態的檢視。 例如，非託管服務的實際設定是 Machine.config 和 app.config 的組合。任何變更都會套用至 Svcconfigeditor.exe 中的使用中檔案。 如果您想要編輯組態合併路徑中的特定檔案，應該直接開啟它。
+檢視器會自動遵循組態合併路徑並建立合併組態的檢視。 例如，非託管服務的實際設定是 Machine.config 和 App.config 的組合。任何變更都會套用至 Svcconfigeditor.exe 中的使用中檔案。 如果您想要編輯組態合併路徑中的特定檔案，應該直接開啟它。
 
 > [!NOTE]
 > 組態編輯器會在目前已開啟的組態檔已在編輯器之外修改時，重新載入該組態檔。 發生這種情況時，所有未永久儲存在編輯器內的變更都會遺失。 如果持續發生重新載入，最有可能的原因是有服務不斷的存取組態檔，例如在背景中執行的防毒軟體。 若要解決這個問題，請確定該檔案開啟時，組態編輯器是唯一能夠存取該檔案的處理序。
 
 ### <a name="services"></a>服務
 
-[**服務**] 節點會顯示目前已在設定檔中指派的所有服務。 樹狀目錄中的每個子節點會對應至設定檔中 < `services` > 元素的子項目。
+[**服務**] 節點會顯示目前已在設定檔中指派的所有服務。 樹狀目錄中的每個子節點會對應至 `services` 設定檔中 <> 元素的子項目。
 
 當您按一下 [**服務**] 節點時，您可以在 [**詳細資料**窗格] 的 [服務摘要] 頁面上，查看或執行工作。
 
@@ -82,7 +83,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 您可以透過下列方式建立新的服務組態：
 
-- 使用 Wizard：按一下 [**建立新服務**] 連結。 在 [工作窗格] 或 [摘要] 頁面上啟動精靈。 您也可以**在 檔案** 功能表中執行此動作->**加入新專案**。
+- 使用 Wizard：按一下 [**建立新服務**] 連結。 在 [工作窗格] 或 [摘要] 頁面上啟動精靈。 您也可以**在 [檔案**] 功能表中執行此動作->**加入新專案**]。
 
 - 手動建立：您可以在 [**服務**] 節點上按一下滑鼠右鍵，然後選擇 [**新增服務**]。
 
@@ -90,7 +91,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 您可以透過下列方式建立新的服務端點組態：
 
-- 使用 Wizard 建立：按一下 [**建立新的服務端點**] 連結。 在 [工作窗格] 或 [摘要] 頁面上啟動精靈。 您也可以**在 檔案** 功能表中執行此動作->**加入新專案**。
+- 使用 Wizard 建立：按一下 [**建立新的服務端點**] 連結。 在 [工作窗格] 或 [摘要] 頁面上啟動精靈。 您也可以**在 [檔案**] 功能表中執行此動作->**加入新專案**]。
 
 - 手動建立：建立服務之後，您可以用滑鼠右鍵按一下 [**端點**] 節點，然後選擇 [**新增服務端點**]。
 
@@ -110,18 +111,18 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 1. 按一下 [**主機**] 節點。
 
-2. 按一下 [**新增 ...** ] [**基底位址**] 區段中的按鈕。
+2. 按一下 [新增…] **** [**基底位址**] 區段中的按鈕。
 
 3. 在對話方塊中輸入基底位址 URI。
 
 4. 按一下 [確定]。
 
 > [!NOTE]
-> 您無法在此工具內編輯[\<baseAddressPrefixFilters >](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md)的值。 若要新增或修改這個項目，您應使用文字編輯器或 Visual Studio。
+> 您無法在 [\<baseAddressPrefixFilters>](../configure-apps/file-schema/wcf/baseaddressprefixfilters.md) 此工具內編輯的值。 若要新增或修改這個項目，您應使用文字編輯器或 Visual Studio。
 
-### <a name="client"></a>用戶端
+### <a name="client"></a>Client
 
-[**用戶端**] 節點會顯示設定檔中的所有用戶端端點。 樹狀目錄中的每個子節點會對應至設定檔中 < `client` > 元素的子項目。
+[**用戶端**] 節點會顯示設定檔中的所有用戶端端點。 樹狀目錄中的每個子節點會對應至 `client` 設定檔中 <> 元素的子項目。
 
 當您按一下 [**用戶端**] 節點時，您可以在 [**詳細資料窗格]** 的用戶端 [**摘要] 頁面**上，查看或執行工作。
 
@@ -129,7 +130,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 您可以透過下列方式來建立新的用戶端端點組態：
 
-- 由 Wizard 建立：按一下 [**建立新用戶端**] 連結。 在視窗左下角的 [工作**窗格**] 或 [**摘要] 頁面**上，啟動精靈。 您也可以**在 檔案** 功能表中執行此動作->**加入新專案**。 精靈會提示您指向服務組態的位置，從這裡產生用戶端組態。 然後您可以選擇要連接的服務端點。
+- 由 Wizard 建立：按一下 [**建立新用戶端**] 連結。 在視窗左下角的 [工作**窗格**] 或 [**摘要] 頁面**上，啟動精靈。 您也可以**在 [檔案**] 功能表中執行此動作->**加入新專案**]。 精靈會提示您指向服務組態的位置，從這裡產生用戶端組態。 然後您可以選擇要連接的服務端點。
 
 - 手動建立：以滑鼠右鍵按一下 [**用戶端**] 底下的 [**端點**] 節點，然後選擇 [**新增用戶端端點**]。
 
@@ -143,7 +144,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 標準端點是專屬端點，可將位址、連絡人和繫結的一個或多個部分設為預設值。
 
-這類設定會儲存在 [**標準端點**] 節點中。 [**標準端點**] 節點會顯示設定檔中的所有標準端點設定。 樹狀目錄中的每個子節點會對應至設定檔中 `<standardEndpoints>` 元素的子項目。
+這類設定會儲存在 [**標準端點**] 節點中。 [**標準端點**] 節點會顯示設定檔中的所有標準端點設定。 樹狀目錄中的每個子節點會對應至設定檔中專案的子項目 `<standardEndpoints>` 。
 
 當您按一下 [**標準端點**] 節點時，可以在 [**詳細資料窗格]** 的標準端點 [**摘要] 頁面**上，查看或執行工作。
 
@@ -151,7 +152,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 您可以透過下列方式建立新的標準端點組態：
 
-- 以滑鼠右鍵按一下 [**標準端點**] 節點，然後選取 [**新增標準端點**設定]。 在對話方塊中選取系結類型，然後按一下 **[確定]** 。
+- 以滑鼠右鍵按一下 [**標準端點**] 節點，然後選取 [**新增標準端點**設定]。 在對話方塊中選取系結類型，然後按一下 **[確定]**。
 
 - 選取 [**標準端點**] 節點，然後按一下 [**新增標準端點**設定]。 在視窗左下角的 [工作**窗格**] 中。
 
@@ -181,7 +182,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 繫結組態是用來設定端點上的繫結。 這類設定會儲存**在 [系**結] 節點中。 端點會依據名稱參考繫結組態，而多個端點可參考單一繫結組態。
 
-[系結 **] 節點會**顯示設定檔中的所有系結設定。 樹狀目錄中的每個子節點會對應至設定檔中 < `bindings` > 元素的子項目。
+[系結 **] 節點會**顯示設定檔中的所有系結設定。 樹狀目錄中的每個子節點會對應至設定檔中 <> 元素的子項目 `bindings` 。
 
 當您按一下 [系結]**節點時**，可以在 [**詳細資料窗格]** 的 [系結**摘要] 頁面**上，查看或執行工作。
 
@@ -189,7 +190,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 您可以透過下列方式建立新的繫結組態。
 
-- 以滑鼠右鍵按一下 **[系**結] 節點，然後選取 [**新增**系結設定]。 在對話方塊中選取系結類型，然後按一下 **[確定]** 。
+- 以滑鼠右鍵按一下 **[系**結] 節點，然後選取 [**新增**系結設定]。 在對話方塊中選取系結類型，然後按一下 **[確定]**。
 
 - 選取 [系結]**節點，然後**按一下 [**新增**系結設定]。 在視窗左下角的 [工作**窗格**] 中。
 
@@ -199,11 +200,11 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 1. 選取您要在其中新增擴充功能項目的繫結。
 
-2. 按一下 [加入]。
+2. 按一下 [新增] 。
 
 3. 從可用延伸清單中，選取您要加入的繫結項目延伸。 若要選取多個項目，請同時按下 CTRL 鍵。
 
-4. 按一下 [加入]。
+4. 按一下 [新增] 。
 
 #### <a name="adjusting-the-extension-position-in-a-custom-binding"></a>調整自訂繫結中的擴充功能位置
 
@@ -225,7 +226,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 ### <a name="diagnostics"></a>診斷
 
-[**診斷**] 節點會顯示設定檔中的所有診斷設定。 它可讓您開啟或關閉效能計數器、啟用或停用 Windows Management Instrumentation （WMI）、設定 WCF 追蹤，以及設定 WCF 訊息記錄。 [**診斷**] 節點中的設定會對應至設定檔中 `<system.serviceModel>` 的 [< `system.diagnostics` >] 區段和 [`<diagnostics>`] 區段。
+[**診斷**] 節點會顯示設定檔中的所有診斷設定。 它可讓您開啟或關閉效能計數器、啟用或停用 Windows Management Instrumentation （WMI）、設定 WCF 追蹤，以及設定 WCF 訊息記錄。 [**診斷**] 節點中的設定會對應至設定檔中的 [<`system.diagnostics`>] 區段和 [] `<diagnostics>` 區段 `<system.serviceModel>` 。
 
 當您按一下 [**診斷**] 節點時，可以在 [**詳細資料窗格]** 的診斷 [**摘要] 頁面**上，查看或執行工作。
 
@@ -268,19 +269,19 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 > [!NOTE]
 > 如果您想要在關閉應用程式時自動清除追蹤和訊息記錄，請啟用 [**自動清除**] 選項。
 
-[**診斷** **摘要] 頁面**可讓您完成設定診斷作業的最常見工作。 不過，如果您想要手動編輯 [接聽程式] 和 [來源] 設定，必須展開 [診斷] 節點，然後編輯 [**訊息記錄** **]、[** 接聽**程式**和**來源**] 節點中的設定。
+[**診斷****摘要] 頁面**可讓您完成設定診斷作業的最常見工作。 不過，如果您想要手動編輯 [接聽程式] 和 [來源] 設定，必須展開 [診斷] 節點，然後編輯 [**訊息記錄** **]、[** 接聽**程式**和**來源**] 節點中的設定。
 
 #### <a name="enabling-wcf-custom-tracing-or-message-logging"></a>啟用 WCF 自訂追蹤或訊息記錄
 
 1. 按一下 [**診斷**] 節點，然後將它展開。
 
-2. 以滑鼠右鍵按一下 **[接聽**程式] 節點，然後選取 [新增接聽程式 **]** 。
+2. 以滑鼠右鍵按一下 **[接聽**程式] 節點，然後選取 [新增接聽程式 **]**。
 
 3. 在 [ **InitData** ] 欄位中輸入追蹤檔名稱。 您可以按一下 [...]按鈕以流覽至路徑。
 
-4. 按一下 [ **TypeName** ] 行就會顯示「...」button. 按一下此按鈕以開啟 [**追蹤接聽程式類型瀏覽器]** ，您可以用來尋找已經安裝的預先設定追蹤接聽項。
+4. 按一下 [ **TypeName** ] 行就會顯示「...」button. 按一下此按鈕以開啟 [**追蹤接聽程式類型瀏覽器]**，您可以用來尋找已經安裝的預先設定追蹤接聽項。
 
-5. 請注意 [**來源**] 區段。 按一下此區段中的 [**新增**] 以開啟含有下拉式功能表的對話方塊，其中會列出可用的追蹤來源。 選取追蹤來源，然後按一下 **[確定]** 。
+5. 請注意 [**來源**] 區段。 按一下此區段中的 [**新增**] 以開啟含有下拉式功能表的對話方塊，其中會列出可用的追蹤來源。 選取追蹤來源，然後按一下 **[確定]**。
 
 6. 若要編輯訊息記錄設定，請按一下 [**訊息記錄**] 節點。 您可以編輯屬性方格中的設定。
 
@@ -308,11 +309,11 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 2. 選取您要編輯的行為。
 
-3. 按一下 [加入]。
+3. 按一下 [新增] 。
 
 4. 從可用擴充功能清單中，選取您要新增的行為項目擴充功能。
 
-5. 按一下 [加入]。
+5. 按一下 [新增] 。
 
 ##### <a name="adjusting-the-extension-position-in-a-behavior"></a>調整行為中的延伸位置
 
@@ -342,13 +343,13 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 您可以註冊新的系結延伸、繫結項目延伸、標準端點延伸和行為延伸模組，以便在 WCF 設定中使用。 擴充功能是名稱/型別的配對。 名稱可定義組態中延伸的名稱，而型別則可實作延伸。 延伸有四種型別：
 
-- 繫結延伸可定義整個繫結型別。 範例：`basicHttpBinding`。
+- 繫結延伸可定義整個繫結型別。 範例： `basicHttpBinding`.
 
-- 繫結項目延伸可定義繫結項目。 範例：`textMessageEncoding`。
+- 繫結項目延伸可定義繫結項目。 範例： `textMessageEncoding`.
 
-- 標準端點延伸可定義整個標準端點。 範例：`discoveryEndpoint`。
+- 標準端點延伸可定義整個標準端點。 範例： `discoveryEndpoint`.
 
-- 行為項目延伸可定義行為項目。 範例：`clientVia`。
+- 行為項目延伸可定義行為項目。 範例： `clientVia`.
 
  已經於組態中註冊的擴充功能可比照同類型的任何其他 WCF 元件使用。
 
@@ -356,7 +357,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 在進階節點中選取其中一個延伸節點：
 
-1. 按一下 [新增]。
+1. 按一下 **[新增]** 。
 
 2. 輸入名稱和型別。
 
@@ -374,7 +375,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 #### <a name="creating-a-configuration-file"></a>建立組態檔
 
-1. 使用 [命令] 視窗流覽至您的 WCF 安裝位置，然後輸入 `SvcConfigEditor.exe`，以啟動 [服務設定編輯器]。
+1. 使用 [命令] 視窗流覽至您的 WCF 安裝位置，然後輸入，以啟動 [服務設定編輯器] `SvcConfigEditor.exe` 。
 
 2. 從 [**檔案] 功能表中**，選取 [**開啟**]，然後按一下 [**可執行**檔]、[ **Com + 服務**] 或 [ **WebHosted 服務**]，視您要建立的配置檔案類型而定。
 
@@ -389,13 +390,13 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 ## <a name="configuring-com"></a>設定 COM+
 
-服務組態編輯器可讓您針對現有的 COM+ 應用程式建立新的組態檔，或是編輯現有的 COM+ 組態。 只有當設定檔中存在 < `comContract` > 區段時，才會顯示 [ **COM 合約**] 節點。
+服務組態編輯器可讓您針對現有的 COM+ 應用程式建立新的組態檔，或是編輯現有的 COM+ 組態。 只有當 <> 區段存在於設定檔中時，才會顯示 [ **COM 合約**] 節點 `comContract` 。
 
 ### <a name="creating-a-new-com-configuration"></a>建立新 COM+ 組態
 
 在建立新的 COM+ 組態之前，請先確定您的 COM+ 應用程式已安裝在 [元件服務] 中，並在 [全域組件快取] (GAC) 中註冊。
 
-1. 選取 **[** 檔案] 功能表->**整合** -> **com + 應用程式。** 這個作業會關閉目前開啟的檔案。 如果目前檔案中包含未儲存的資料，就會出現 [儲存] 對話方塊。 接著會啟動**Com + 整合嚮導**。
+1. 選取 **[** 檔案] 功能表->**整合**  ->  **com + 應用程式]。** 這個作業會關閉目前開啟的檔案。 如果目前檔案中包含未儲存的資料，就會出現 [儲存] 對話方塊。 接著會啟動**Com + 整合嚮導**。
 
 2. 從第一頁的樹狀目錄中選取 COM+ 應用程式。 如果您在樹狀目錄中找不到您的 COM+ 應用程式，請確認該應用程式是否已經安裝在 [元件服務] 中，並且在 [全域組件快取] (GAC) 中註冊。
 
@@ -409,7 +410,7 @@ C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe
 
 ### <a name="editing-an-existing-com-configuration"></a>編輯現有的 COM+ 組態
 
-1. 選取 **[** 檔案] 功能表->**開啟** -> **com + 服務**。
+1. 選取 **[** 檔案] 功能表->**開啟**  ->  **com + 服務**.。。
 
 2. 從清單中選取您要編輯的 COM+ 服務。
 

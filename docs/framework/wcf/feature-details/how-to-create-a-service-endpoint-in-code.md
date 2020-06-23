@@ -1,16 +1,17 @@
 ---
 title: HOW TO：在程式碼中建立服務端點
+description: 瞭解如何在類別中執行服務，並以程式設計方式定義其端點。 在 WCF 中，端點通常會定義在設定檔中。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 25ea843df7871d730926fe7b9aac9f21d58e263e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3b2ff2a17975bc381db61edc2c0f85f67edd3325
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598927"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247048"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>HOW TO：在程式碼中建立服務端點
 在此範例中，已為計算機服務定義了 `ICalculator` 合約、在 `CalculatorService` 類別中實作了服務，並於程式碼中定義其端點，同時指定服務必須使用 <xref:System.ServiceModel.BasicHttpBinding> 類別。  
@@ -46,6 +47,6 @@ ms.locfileid: "84598927"
   
      如需預設端點的詳細資訊，請參閱[簡化](../simplified-configuration.md)的設定和[WCF 服務的簡化](../samples/simplified-configuration-for-wcf-services.md)設定。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：在程式碼中指定服務繫結](../how-to-specify-a-service-binding-in-code.md)

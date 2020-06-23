@@ -1,5 +1,6 @@
 ---
 title: 資料合約已知型別
+description: 瞭解資料合約模型如何使用 KnownTypeAttribute 類別來指定要在 WCF 還原序列化期間包含的類型。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: b7d78def4d656dea59af5400c7ed7deeef28cd0c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 52b0caaaac976893dcf5ef5c228ccc4f53bdbe9e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597445"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247477"
 ---
 # <a name="data-contract-known-types"></a>資料合約已知型別
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 類別可讓您預先指定在還原序列化期間應該納入考量的型別。 如需實用範例，請參閱 [Known Types](../samples/known-types.md) 範例。  
@@ -167,7 +168,7 @@ ms.locfileid: "84597445"
   
  在先前的組態檔中，會宣告稱為 `MyCompany.Library.Shape` 的資料合約型別，而讓 `MyCompany.Library.Circle` 做為已知的型別。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.KnownTypeAttribute>
 - <xref:System.Collections.Hashtable>

@@ -1,15 +1,16 @@
 ---
 title: 設定訊息記錄
+description: 瞭解如何設定訊息記錄，包括如何啟用記錄、記錄層級、訊息篩選，以及如何在 WCF 中設定自訂接聽程式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 283f43239d6cf5aea5ea668397a52313ff526e2a
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 5203f19a18e5fa6b0ed7f68e1d1de0447da41abd
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345190"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247658"
 ---
 # <a name="configuring-message-logging"></a>設定訊息記錄
 
@@ -17,7 +18,7 @@ ms.locfileid: "80345190"
 
 ## <a name="enabling-message-logging"></a>啟用訊息記錄
 
-預設情況下，Windows 通信基礎 （WCF） 不會記錄消息。 若要啟動訊息記錄，您必須將追蹤接聽項加入至 `System.ServiceModel.MessageLogging` 追蹤來源，並在組態檔中設定 `<messagelogging>` 項目的屬性。
+Windows Communication Foundation （WCF）預設不會記錄訊息。 若要啟動訊息記錄，您必須將追蹤接聽項加入至 `System.ServiceModel.MessageLogging` 追蹤來源，並在組態檔中設定 `<messagelogging>` 項目的屬性。
 
 下列範例示範如何啟用記錄並指定其他選項。
 
@@ -47,7 +48,7 @@ ms.locfileid: "80345190"
 </system.serviceModel>
 ```
 
-有關郵件日誌記錄設置的詳細資訊，請參閱[跟蹤和郵件日誌記錄的建議設置](./tracing/recommended-settings-for-tracing-and-message-logging.md)。
+如需訊息記錄設定的詳細資訊，請參閱[追蹤和訊息記錄的建議設定](./tracing/recommended-settings-for-tracing-and-message-logging.md)。
 
 您可以使用 `add` 來指定所要使用之接聽項的名稱和型別。 在範例組態中，我們已將接聽項命名為 "messages"，並且加入標準 .NET Framework 追蹤接聽項 (`System.Diagnostics.XmlWriterTraceListener`) 做為要使用的型別。 如果您要使用 `System.Diagnostics.XmlWriterTraceListener`，就必須在組態檔中指定輸出檔案位置和名稱。 將 `initializeData` 設定為記錄檔的名稱，即可做到這點。 否則，系統會擲回例外狀況 (Exception)。 您也可以實作會將記錄發出到預設檔案的自訂接聽項。
 
@@ -63,7 +64,7 @@ ms.locfileid: "80345190"
 </source>
 ```
 
-如果想要停用追蹤來源，您就應該改成使用 `logMessagesAtServiceLevel` 項目的 `logMalformedMessages`、`logMessagesAtTransportLevel` 及 `messageLogging` 屬性。 您應該將所有這些屬性都設定為 `false`。 使用先前程式碼範例中的組態檔、透過組態編輯器 UI 介面，或是使用 WMI，都可以做到這點。 有關配置編輯器工具的詳細資訊，請參閱[配置編輯器工具 （SvcConfigEditor.exe）](../configuration-editor-tool-svcconfigeditor-exe.md)。 有關 WMI 的詳細資訊，請參閱[使用 Windows 管理檢測進行診斷](./wmi/index.md)。
+如果想要停用追蹤來源，您就應該改成使用 `logMessagesAtServiceLevel` 項目的 `logMalformedMessages`、`logMessagesAtTransportLevel` 及 `messageLogging` 屬性。 您應該將所有這些屬性都設定為 `false`。 使用先前程式碼範例中的組態檔、透過組態編輯器 UI 介面，或是使用 WMI，都可以做到這點。 如需 Configuration Editor 工具的詳細資訊，請參閱設定[編輯器工具（SvcConfigEditor.exe）](../configuration-editor-tool-svcconfigeditor-exe.md)。 如需 WMI 的詳細資訊，請參閱[使用 Windows Management Instrumentation 進行診斷](./wmi/index.md)。
 
 ## <a name="logging-levels-and-options"></a>記錄層級和選項
 
@@ -71,7 +72,7 @@ ms.locfileid: "80345190"
 
 對於傳出的訊息，系統會緊接在訊息離開使用者程式碼之後，以及在訊息傳送到網路上之前進行記錄。
 
-WCF 在兩個不同的級別（服務和傳輸）記錄消息。 格式錯誤的訊息也會加以記錄。 三個分類彼此獨立，而且可以透過組態來個別啟動。
+WCF 會記錄兩個不同層級、服務和傳輸的訊息。 格式錯誤的訊息也會加以記錄。 三個分類彼此獨立，而且可以透過組態來個別啟動。
 
 您可以設定 `logMessagesAtServiceLevel` 項目的 `logMalformedMessages`、`logMessagesAtTransportLevel` 及 `messageLogging` 屬性以控制記錄層級。
 
@@ -85,7 +86,7 @@ WCF 在兩個不同的級別（服務和傳輸）記錄消息。 格式錯誤的
 
 ### <a name="malformed-level"></a>格式錯誤層級
 
-格式不正確的消息是 WCF 堆疊在處理的任何階段拒絕的消息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義了要以 CDATA 形式記錄之訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 有關此屬性的詳細資訊，請參閱其他選項部分。
+格式不正確的訊息是由 WCF 堆疊在處理的任何階段遭到拒絕的訊息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義了要以 CDATA 形式記錄之訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 如需此屬性的詳細資訊，請參閱其他選項一節。
 
 ### <a name="other-options"></a>其他選項
 
@@ -102,11 +103,11 @@ WCF 在兩個不同的級別（服務和傳輸）記錄消息。 格式錯誤的
 
 如果組態檔中未定義追蹤接聽項，則無論指定的記錄層級為何，都不會產生記錄輸出。
 
-包含本節所描述屬性的訊息記錄選項，可以在執行階段使用 Windows Management Instrumentation (WMI) 來加以變更。 這可以通過訪問[AppDomainInfo](./wmi/appdomaininfo.md)實例來實現，該實例公開了這些布林屬性：`LogMessagesAtServiceLevel`和`LogMessagesAtTransportLevel`。 `LogMalformedMessages` 因此，如果您為訊息記錄設定一個追蹤接聽項，但在組態中將這些選項設定為 `false`，那麼您可以在稍後應用程式執行時，將選項變更為 `true`。 這會在執行階段有效地啟用訊息記錄。 同樣地，如果您在組態檔中啟用訊息記錄，則您可以在執行階段使用 WMI 來停用訊息記錄。 有關詳細資訊，請參閱使用[Windows 管理檢測進行診斷](./wmi/index.md)。
+包含本節所描述屬性的訊息記錄選項，可以在執行階段使用 Windows Management Instrumentation (WMI) 來加以變更。 這可以藉由存取[AppDomainInfo](./wmi/appdomaininfo.md)實例來完成，這會公開下列布林值屬性： `LogMessagesAtServiceLevel` 、 `LogMessagesAtTransportLevel` 和 `LogMalformedMessages` 。 因此，如果您為訊息記錄設定一個追蹤接聽項，但在組態中將這些選項設定為 `false`，那麼您可以在稍後應用程式執行時，將選項變更為 `true`。 這會在執行階段有效地啟用訊息記錄。 同樣地，如果您在組態檔中啟用訊息記錄，則您可以在執行階段使用 WMI 來停用訊息記錄。 如需詳細資訊，請參閱[使用 Windows Management Instrumentation 進行診斷](./wmi/index.md)。
 
 訊息記錄中的 `source` 欄位會指定要用哪種內容來記錄訊息：何時傳送/接收要求訊息、針對要求-回覆或單向要求、在服務模型或傳輸層，或是在發生格式錯誤訊息的情況下。
 
-對於格式錯誤的消息，`source`等於`Malformed`。 否則，便依據內容將來源指定為下列值。
+若為格式錯誤的訊息， `source` 會等於 `Malformed` 。 否則，便依據內容將來源指定為下列值。
 
 針對要求/回覆
 
@@ -175,6 +176,6 @@ WCF 在兩個不同的級別（服務和傳輸）記錄消息。 格式錯誤的
 
 ## <a name="see-also"></a>另請參閱
 
-- [\<消息記錄>](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [\<messageLogging>](../../configure-apps/file-schema/wcf/messagelogging.md)
 - [訊息記錄](message-logging.md)
 - [追蹤與訊息記錄的建議設定](./tracing/recommended-settings-for-tracing-and-message-logging.md)

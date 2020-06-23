@@ -1,5 +1,6 @@
 ---
 title: 資料成員順序
+description: 瞭解 WCF 中的資料成員順序。 應用程式可能需要知道或變更傳送或預期資料成員的順序。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 717d7014f4c4a56249ead0c839cf05f4f83a6f5f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593460"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247360"
 ---
 # <a name="data-member-order"></a>資料成員順序
 在某些應用程式中，知道來自各個資料成員之資料的傳送順序或是資料的預期收到順序是十分有用的 (例如，資料出現在序列化 XML 中的順序)。 有時候可能需要變更這個順序。 本主題將說明排序規則。  
@@ -62,7 +63,7 @@ ms.locfileid: "84593460"
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [資料合約等價](data-contract-equivalence.md)

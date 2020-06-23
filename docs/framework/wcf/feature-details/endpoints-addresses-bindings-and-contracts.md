@@ -1,17 +1,18 @@
 ---
 title: 端點：位址、繫結和合約
+description: 瞭解與 WCF 服務的所有通訊如何透過服務端點進行，讓用戶端存取服務提供的功能。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3ac7f0b165b99a1ed3702628958f7d4c7702f5b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ce0874bfed716716b6fd1801b35a4266095cd752
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593512"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247308"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>端點：位址、繫結和合約
 
@@ -41,7 +42,7 @@ ms.locfileid: "84593512"
 
   如需詳細資訊，請參閱[指定端點位址](../specifying-an-endpoint-address.md)。
 
-- 繫結：繫結會指定與端點的通訊方式。 包括：
+- 繫結：繫結會指定與端點的通訊方式。 這包括：
 
   - 要使用的傳輸通訊協定 (例如，TCP 或 HTTP)。
 
@@ -88,10 +89,10 @@ ms.locfileid: "84593512"
 [如何：在程式碼中建立服務端點](how-to-create-a-service-endpoint-in-code.md)\
 說明如何透過程式碼建立服務端點。
 
-[如何：使用 Svcutil 來驗證已編譯的服務程式代碼](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
-描述如何使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)，在不裝載服務的情況下，偵測服務執行和設定中的錯誤。
+[如何：使用 Svcutil.exe 驗證已編譯的服務程式代碼](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
+說明如何在不使用[System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)裝載服務的情況下，偵測服務部署和設定中的錯誤。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定服務](../configuring-services.md)
 - [擴充繫結](../extending/extending-bindings.md)

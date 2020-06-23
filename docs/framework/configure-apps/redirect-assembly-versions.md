@@ -1,5 +1,6 @@
 ---
 title: 重新導向組件版本
+description: 將編譯時間系結參考重新導向至不同版本的 .NET 元件、協力廠商元件，或您自己的應用程式元件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assembly binding, redirection
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 0d55171e37ec056b3470d238a60bc32f2feb04fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4cfd4336fb9999c996bea28eb86f1143932d4c51
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646049"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141730"
 ---
 # <a name="redirecting-assembly-versions"></a>重新導向組件版本
 
@@ -23,7 +24,7 @@ ms.locfileid: "81646049"
 ## <a name="assembly-unification-and-default-binding"></a>組件統一和預設繫結
  .NET Framework 組件的繫結有時會透過名為 *「組件統一」*(assembly unification) 的處理序進行重新導向。 .NET Framework 包含某個版本的通用語言執行平台，以及大約二十多個組成類型程式庫的 .NET Framework 組件。 執行階段將這些 .NET Framework 組件視為單一單位。 根據預設，應用程式啟動時，任何類型參考只要位於執行階段所執行的程式碼中，都會導向至 .NET Framework 組件；且該組建將與載入處理序的執行階段具有相同的版本號碼。 與此模型同時發生的重新導向，皆為執行階段的預設行為。
 
- 例如，如果您的應用程式參考了 system.string 命名空間中的類型，而且是使用 .NET Framework 4.5 建立的，它就會包含執行階段版本4.5 隨附之 system.string 元件的靜態參考。 如果您要將點的繫結參考重新導向至隨附於 .NET Framework 4 的 System.XML 組件，可以將重新導向資訊放在應用程式設定檔中。 統一的 .NET Framework 組件之設定檔中的繫結重新導向會取消統一該組件。
+ 例如，如果您的應用程式參考 System.XML 命名空間中的類型，而且是使用 .NET Framework 4.5 所建立，則會包含執行階段版本4.5 隨附之 System.XML 元件的靜態參考。 如果您要將點的繫結參考重新導向至隨附於 .NET Framework 4 的 System.XML 組件，可以將重新導向資訊放在應用程式設定檔中。 統一的 .NET Framework 組件之設定檔中的繫結重新導向會取消統一該組件。
 
  此外，如果有多個可用版本，您可能會想要以手動方式將協力廠商組件的組件繫結重新導向。
 
@@ -57,7 +58,7 @@ ms.locfileid: "81646049"
 
 當您在以 .NET Framework 4.5.1 或更新版本為目標的 Visual Studio 中建立桌面應用程式時，應用程式會使用自動系結重新導向。 這表示如果兩個元件參考了同一個強式名稱組件的不同版本，則執行階段會自動將繫結重新導向加入較新版組件的輸出應用程式設定檔 (app.config)。 此重新導向會覆寫可能執行的組件統一。 來源 app.config 檔案則不會加以修改。 例如，假設您的應用程式直接參考頻外 .NET Framework 元件，但使用以相同元件較舊版本為目標的協力廠商程式庫。 當您編譯應用程式時，輸出應用程式設定檔已修改為包含較新版元件的繫結重新導向。 如果您建立的是 Web 應用程式，則會收到有關繫結衝突的建置警告，從而提供您選項將必要的繫結重新導向加入來源 Web 設定檔中。
 
-如果您以手動方式將系結重新導向加入至來源 app.config 檔案，在編譯時期，Visual Studio 會嘗試根據您新增的系結重新導向來整合元件。 例如，假設您為組件插入下列繫結重新導向：
+如果您手動將系結重新導向加入至來源 app.config 檔案，在編譯時期，Visual Studio 會嘗試根據您新增的系結重新導向來統一元件。 例如，假設您為組件插入下列繫結重新導向：
 
 `<bindingRedirect oldVersion="3.0.0.0" newVersion="2.0.0.0" />`
 

@@ -1,5 +1,6 @@
 ---
 title: 資料成員預設值
+description: 瞭解如何在具有 .NET Framework 預設值時，從序列化資料中省略資料成員。 WCF 可以藉由不序列化預設值來改善效能。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: e4eaaec880ecfcff24d9d5b4e8347a84738e070b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97946a6b7da14efdcb5229b4cc5d0799eb8d7723
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593473"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247373"
 ---
 # <a name="data-member-default-values"></a>資料成員預設值
 在 .NET Framework 中，類型具有*預設值*的概念。 例如，任何參考型別的預設值為 `null`，整數型別則為零。 有時候資料成員設為預設值時，會需要從序列化資料中省略該成員。 因為此成員為預設值，而實際值不需要序列化，因此這樣做可促進效能。  

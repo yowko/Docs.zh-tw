@@ -1,18 +1,19 @@
 ---
 title: 概觀說明
+description: 瞭解 Windows Communication Foundation （WCF）訊息系統和支援其使用的類別。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], concepts
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
-ms.openlocfilehash: 4227eaa881c8505cd14265c22451ad872838c83a
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: b84de045e388dde69283a72357949ba779d7fb3c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960912"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247684"
 ---
-# <a name="conceptual-overview"></a>概念總覽
+# <a name="conceptual-overview"></a>概念概觀
 
 本主題摘要說明 Windows Communication Foundation （WCF）訊息系統和支援其使用之類別的相關資訊。
 
@@ -27,7 +28,7 @@ ms.locfileid: "72960912"
  [Windows Communication Foundation 架構](architecture.md)\
  WCF 架構的圖形表示。
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 <xref:System.ServiceModel>
 

@@ -1,13 +1,14 @@
 ---
 title: 使用單一階段交易認可和可提升單一階段告知進行最佳化
+description: 使用單一階段交易認可和可提升單一階段通知，將效能優化。 瞭解 .NET 中的系統交易基礎結構。
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-ms.openlocfilehash: f486315b8a8c90e6616ca95fb6be4b2ae3719b7e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 89ce82e673340c93254983c078f78a2501129383
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205893"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141974"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>使用單一階段交易認可和可提升單一階段告知進行最佳化
 
@@ -32,9 +33,9 @@ ms.locfileid: "70205893"
 如果 <xref:System.Transactions> 交易需要擴大規模 (例如，用以支援多個 RM)，則 <xref:System.Transactions> 會呼叫 <xref:System.Transactions.ITransactionPromoter.Promote%2A> 介面之來源 <xref:System.Transactions.ITransactionPromoter> 介面上的 <xref:System.Transactions.IPromotableSinglePhaseNotification> 方法，以告知資源管理員。 接著，資源管理員會從內部將交易由本機交易 (不需要記錄) 轉換為可參與 DTC 交易的交易物件，並將其與已經完成的工作產生關聯。 一旦交易被要求認可，交易管理員仍舊會將 <xref:System.Transactions.IPromotableSinglePhaseNotification.SinglePhaseCommit%2A> 告知傳送給資源管理員，使其認可在擴大規模期間所建立的分散式交易。
 
 > [!NOTE]
-> **TransactionCommitted**追蹤 (在擴大的交易上叫用 Commit 時產生) 包含 DTC 交易的活動識別碼。
+> **TransactionCommitted**追蹤（在擴大的交易上叫用 Commit 時產生）包含 DTC 交易的活動識別碼。
 
-如需管理擴大的詳細資訊, 請參閱[交易管理擴大](transaction-management-escalation.md)。
+如需管理擴大的詳細資訊，請參閱[交易管理擴大](transaction-management-escalation.md)。
 
 ## <a name="transaction-management-escalation-scenario"></a>交易管理擴大規模案例
 
@@ -58,13 +59,13 @@ ms.locfileid: "70205893"
 
 ## <a name="single-phase-commit-optimization"></a>單一階段交易認可最佳化
 
-在執行階段使用單一階段交易認可通訊協定會比較有效率，因為所有的更新不需要任何個別的協調作業就可完成。 若要充分善用此最佳化優勢，您應該使用資源的 <xref:System.Transactions.ISinglePhaseNotification> 介面來實作資源管理員，並使用 <xref:System.Transactions.Transaction.EnlistDurable%2A> 或 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 方法來登記交易。 具體而言, *EnlistmentOptions*參數應該等於<xref:System.Transactions.EnlistmentOptions.None> , 以確保會執行單一階段認可。
+在執行階段使用單一階段交易認可通訊協定會比較有效率，因為所有的更新不需要任何個別的協調作業就可完成。 若要充分善用此最佳化優勢，您應該使用資源的 <xref:System.Transactions.ISinglePhaseNotification> 介面來實作資源管理員，並使用 <xref:System.Transactions.Transaction.EnlistDurable%2A> 或 <xref:System.Transactions.Transaction.EnlistVolatile%2A> 方法來登記交易。 具體而言， *EnlistmentOptions*參數應該等於， <xref:System.Transactions.EnlistmentOptions.None> 以確保會執行單一階段認可。
 
 由於 <xref:System.Transactions.ISinglePhaseNotification> 介面是衍生自 <xref:System.Transactions.IEnlistmentNotification> 介面，即使 RM 無法執行單一階段交易認可，仍舊可以收到兩階段交易認可告知。 如果您的 RM 收到來自 TM 的 <xref:System.Transactions.ISinglePhaseNotification.SinglePhaseCommit%2A> 告知，它應該嘗試執行必要的工作以便認可交易，並接著藉由呼叫 <xref:System.Transactions.SinglePhaseEnlistment.Committed%2A> 參數上的 <xref:System.Transactions.SinglePhaseEnlistment.Aborted%2A>、<xref:System.Transactions.SinglePhaseEnlistment.InDoubt%2A>，或 <xref:System.Transactions.SinglePhaseEnlistment> 方法來告知交易管理員是否應該認可或復原交易。 此階段對登記項目的 <xref:System.Transactions.Enlistment.Done%2A> 回應將意指唯讀語意。 因此，您不應該在其他任何方法以外，回應 <xref:System.Transactions.Enlistment.Done%2A>。
 
-如果只有一個變動性登記, 而且沒有永久性登記, 則 volatile 登記會接收 SPC 通知。 如果有任何變動性登記, 而且只有一個永久性登記, 則 volatile 登記會收到2PC。 當它完成時，永久性登記會收到 SPC。
+如果只有一個變動性登記，而且沒有永久性登記，則 volatile 登記會接收 SPC 通知。 如果有任何變動性登記，而且只有一個永久性登記，則 volatile 登記會收到2PC。 當它完成時，永久性登記會收到 SPC。
 
 ## <a name="see-also"></a>另請參閱
 
-- [將資源登記為異動中的參與者](enlisting-resources-as-participants-in-a-transaction.md)
+- [將資源登記成為交易中的參與者](enlisting-resources-as-participants-in-a-transaction.md)
 - [在單一階段和多重階段中認可異動](committing-a-transaction-in-single-phase-and-multi-phase.md)

@@ -1,15 +1,16 @@
 ---
 title: HOW TO：使用使用者名稱與密碼來驗證
+description: 瞭解如何使用 Windows 網域使用者名稱和密碼，以及範例程式碼，讓 WCF 服務驗證用戶端。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f938f8041b2577b3705266948f29b42f23a6fd7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601279"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247243"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱與密碼來驗證
 
@@ -32,7 +33,7 @@ ms.locfileid: "84601279"
     // ...
     ```
 
-2. 指定伺服器憑證，用以加密透過網路傳送之使用者名及密碼的資訊。 這個程式碼應直接加在上面程式碼之後。 下列範例會使用來自「[訊息安全性使用者名稱](../samples/message-security-user-name.md)」範例中的安裝程式所建立的憑證：
+2. 指定伺服器憑證，用以加密透過網路傳送之使用者名及密碼的資訊。 這個程式碼應直接加在上面程式碼之後。 下列範例會使用來自「[訊息安全性使用者名稱](../samples/message-security-user-name.md)」範例的 setup.bat 檔案所建立的憑證：
 
     ```csharp
     // ...
@@ -81,7 +82,7 @@ ms.locfileid: "84601279"
     // Call the service operation using the proxy
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>

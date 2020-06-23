@@ -5,16 +5,19 @@ helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-ms.openlocfilehash: fde2bab99f156ddffec678022a58e7b14e0af01e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3161f77399030c287649ee5757814963b6afb7cf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716163"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247723"
 ---
 # <a name="constrained-execution-regions"></a>限制的執行區域
 限制的執行區域 (CER) 是編寫可靠 Managed 程式碼的機制一部分。 CER 定義一個區域，其中限制 Common Language Runtime (CLR) 擲回頻外例外狀況，而頻外例外狀況會防止執行區域中的整個程式碼。 在該區域內，使用者程式碼無法執行導致擲回頻外例外狀況的程式碼。 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 方法的前面必須緊接著 `try` 區塊，並將 `catch`、`finally` 和 `fault` 區塊標記為限制的執行區域。 標記為限制的區域之後，程式碼只能呼叫具有強式可靠性合約的其他程式碼；而且，除非程式碼已準備好處理失敗，否則程式碼不應該配置非預期或不可靠的方法，或是對其進行虛擬呼叫。 CLR 會針對在 CER 中執行的程式碼延遲執行緒中止。  
-  
+
+> [!IMPORTANT]
+> 只有 .NET Framework 支援 CER。 本文不適用於 .NET Core 或 .NET 5 和更新版本。
+
  除了已標註的 `try` 區塊之外，限制的執行區域還會以不同的形式用於 CLR 中，值得注意的是在衍生自 <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject> 類別的類別以及使用 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> 方法執行之程式碼中執行的重要完成項。  
   
 ## <a name="cer-advance-preparation"></a>CER 事先準備  
@@ -47,9 +50,9 @@ ms.locfileid: "75716163"
 ### <a name="reliability-guarantees"></a>可靠性保證  
  可靠性保證是以 <xref:System.Runtime.ConstrainedExecution.Cer> 列舉值呈現，指出所指定方法的可靠性程度：  
   
-- <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>。 在例外狀況下，此方法可能會失敗。 在此情況下，此方法會向呼叫端方法回報成功還是失敗。 此方法必須包含在 CER 中，確保它可以報告傳回值。  
+- <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. 在例外狀況下，此方法可能會失敗。 在此情況下，此方法會向呼叫端方法回報成功還是失敗。 此方法必須包含在 CER 中，確保它可以報告傳回值。  
   
-- <xref:System.Runtime.ConstrainedExecution.Cer.None>。 方法、類型或組件沒有 CER 的概念，而且很可能無法在 CER 內安全地呼叫，進而大幅降低狀態損毀。 它不會利用 CER 保證。 這具有如下表示：  
+- <xref:System.Runtime.ConstrainedExecution.Cer.None>. 方法、類型或組件沒有 CER 的概念，而且很可能無法在 CER 內安全地呼叫，進而大幅降低狀態損毀。 它不會利用 CER 保證。 這具有如下表示：  
   
     1. 在例外狀況下，此方法可能會失敗。  
   
@@ -59,18 +62,18 @@ ms.locfileid: "75716163"
   
     4. 如果未將方法、類型或組件明確地識別為成功，則會將它隱含地識別為 <xref:System.Runtime.ConstrainedExecution.Cer.None>。  
   
-- <xref:System.Runtime.ConstrainedExecution.Cer.Success>。 在例外狀況下，此方法一定會成功。 為了達到這個層級的可靠性，您應該一律建構所呼叫方法的 CER，即使是從非 CER 區域內呼叫它也是一樣。 如果方法如預期完成，則方法會成功，但可以主觀檢視成功。 例如，將 Count 標上 `ReliabilityContractAttribute(Cer.Success)` 表示在 CER 下執行時，一律會傳回 <xref:System.Collections.ArrayList> 中的項目計數，而且絕不會讓內部欄位處於未定狀態。  不過，也會將 <xref:System.Threading.Interlocked.CompareExchange%2A> 方法標記為成功，並了解成功可能表示因競爭條件而無法將值取代為新值。  重點在於此方法會依記載的運作方式運作，而且不需要寫入 CER 程式碼，以預期正確行為以外的任何異常行為，但不可靠程式碼看起來都一樣。  
+- <xref:System.Runtime.ConstrainedExecution.Cer.Success>. 在例外狀況下，此方法一定會成功。 為了達到這個層級的可靠性，您應該一律建構所呼叫方法的 CER，即使是從非 CER 區域內呼叫它也是一樣。 如果方法如預期完成，則方法會成功，但可以主觀檢視成功。 例如，將 Count 標上 `ReliabilityContractAttribute(Cer.Success)` 表示在 CER 下執行時，一律會傳回 <xref:System.Collections.ArrayList> 中的項目計數，而且絕不會讓內部欄位處於未定狀態。  不過，也會將 <xref:System.Threading.Interlocked.CompareExchange%2A> 方法標記為成功，並了解成功可能表示因競爭條件而無法將值取代為新值。  重點在於此方法會依記載的運作方式運作，而且不需要寫入 CER 程式碼，以預期正確行為以外的任何異常行為，但不可靠程式碼看起來都一樣。  
   
 ### <a name="corruption-levels"></a>損毀層級  
  損毀層級是以 <xref:System.Runtime.ConstrainedExecution.Consistency> 列舉值呈現，指出所指定環境中有多少狀態可能損毀：  
   
-- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>。 在例外狀況下，Common Language Runtime (CLR) 不保證目前應用程式定義域中的狀態一致性。  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. 在例外狀況下，Common Language Runtime (CLR) 不保證目前應用程式定義域中的狀態一致性。  
   
-- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>。 在例外狀況下，保證此方法將狀態損毀限制為目前執行個體。  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. 在例外狀況下，保證此方法將狀態損毀限制為目前執行個體。  
   
 - <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>：在例外狀況下，CLR 不保證相關狀態一致性；亦即，此狀況可能會損毀處理序。  
   
-- <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>。 在例外狀況下，此方法一定不會損毀狀態。  
+- <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. 在例外狀況下，此方法一定不會損毀狀態。  
   
 ## <a name="reliability-trycatchfinally"></a>可靠性 try/catch/finally  
  可靠性 `try/catch/finally` 是一種例外狀況處理機制，且預測性保證的層級與未管理版本相同。 `catch/finally` 區塊是 CER。 區塊中的方法需要事先準備，而且必須為不可中斷。  
@@ -108,10 +111,10 @@ ms.locfileid: "75716163"
   
 - 取得或設定 Transparent Proxy 上的欄位。  
   
-- 序列化 (Serialization)：  
+- 序列化：  
   
 - 函式指標和委派。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [可靠性最佳做法](reliability-best-practices.md)

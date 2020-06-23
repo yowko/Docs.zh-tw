@@ -1,5 +1,6 @@
 ---
 title: HOW TO：使用自訂使用者名稱與密碼驗證程式
+description: 瞭解如何為 WFC 應用程式納入自訂密碼驗證器，以取代預設的 Windows 使用者名稱和密碼驗證。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 5ada34ca2d0d757ea333fed60aef179d6578356c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f69db7bf8248593b64cdae4378983c2460de597
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601175"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246788"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>HOW TO：使用自訂使用者名稱與密碼驗證程式
 
@@ -119,7 +120,7 @@ ms.locfileid: "84601175"
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
 - [如何：使用 ASP.NET 成員資格提供者](how-to-use-the-aspnet-membership-provider.md)

@@ -1,22 +1,23 @@
 ---
 title: 雙工服務
+description: 瞭解如何在 WCF 中建立雙工服務合約，讓這兩個端點可以透過用戶端建立的通道，將訊息傳送給彼此。
 ms.date: 05/09/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 4fd8b679dcd4ac9efce5fa915118736b15206068
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a43bb63a0ccf1a34b79dce755c19f7ed4cb6c16c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834774"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247347"
 ---
 # <a name="duplex-services"></a>雙工服務
 
 雙工服務合約為訊息交換模式，其中的兩個端點可以彼此獨立地傳送訊息。 因此，雙工服務可以將訊息傳送回用戶端端點，以提供類似事件的行為。 用戶端建立與服務的連線，並提供服務所需的通道以供服務將訊息傳回用戶端，這個程序即是所謂的雙工通訊。 請注意，雙工服務的類似事件行為只會在工作階段內運作。
 
-若要建立雙工合約，您可建立一組介面。 第一個是服務合約介面，說明用戶端可叫用的作業。 該服務合約必須在<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>屬性中指定*回呼合約*。 回呼合約是一個介面，會定義服務可在用戶端端點上呼叫的作業。 雙工合約不需要工作階段，不過系統提供的雙工繫結會利用工作階段。
+若要建立雙工合約，您可建立一組介面。 第一個是服務合約介面，說明用戶端可叫用的作業。 該服務合約必須在屬性中指定*回呼合約* <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 。 回呼合約是一個介面，會定義服務可在用戶端端點上呼叫的作業。 雙工合約不需要工作階段，不過系統提供的雙工繫結會利用工作階段。
 
 以下為雙工合約的範例。
 
@@ -33,7 +34,7 @@ ms.locfileid: "71834774"
 [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
 [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]
 
-針對雙工合約所產生的 WCF 用戶端，需要<xref:System.ServiceModel.InstanceContext>在結構上提供類別。 這個 <xref:System.ServiceModel.InstanceContext> 類別會用來做為站台，讓物件實作回呼介面並處理服務傳回的訊息。 <xref:System.ServiceModel.InstanceContext> 類別是以 `CallbackHandler` 類別的執行個體所建構。 這個物件會處理回呼介面上，從服務傳回至用戶端的訊息。
+針對雙工合約所產生的 WCF 用戶端，需要在 <xref:System.ServiceModel.InstanceContext> 結構上提供類別。 這個 <xref:System.ServiceModel.InstanceContext> 類別會用來做為站台，讓物件實作回呼介面並處理服務傳回的訊息。 <xref:System.ServiceModel.InstanceContext> 類別是以 `CallbackHandler` 類別的執行個體所建構。 這個物件會處理回呼介面上，從服務傳回至用戶端的訊息。
 
 [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
 [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]
@@ -87,10 +88,10 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 當服務或用戶端關閉其通道時，雙工模型不會自動偵測。 因此，如果用戶端意外終止，則預設不會通知服務，或服務意外終止時，用戶端將不會收到通知。 如果您使用已中斷連線的服務，則<xref:System.ServiceModel.CommunicationException>會引發例外狀況。 用戶端和服務可以實作自己的通訊協定來通知彼此 (如果選擇這樣做的話)。 如需有關錯誤處理的詳細資訊，請參閱[WCF 錯誤處理](../wcf-error-handling.md)。
+> 當服務或用戶端關閉其通道時，雙工模型不會自動偵測。 因此，如果用戶端意外終止，則預設不會通知服務，或服務意外終止時，用戶端將不會收到通知。 如果您使用已中斷連線的服務，則 <xref:System.ServiceModel.CommunicationException> 會引發例外狀況。 用戶端和服務可以實作自己的通訊協定來通知彼此 (如果選擇這樣做的話)。 如需有關錯誤處理的詳細資訊，請參閱[WCF 錯誤處理](../wcf-error-handling.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-- [雙面](../samples/duplex.md)
+- [雙工](../samples/duplex.md)
 - [指定用端執行階段行為](../specifying-client-run-time-behavior.md)
-- [如何：建立通道處理站，並使用它來建立和管理通道](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [如何：建立通道處理站並使用它來建立與管理通道](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

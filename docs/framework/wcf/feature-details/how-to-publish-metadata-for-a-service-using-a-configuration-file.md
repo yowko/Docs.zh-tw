@@ -1,13 +1,14 @@
 ---
 title: HOW TO：使用組態檔發行服務的中繼資料
+description: 瞭解如何使用設定檔發佈 WCF 服務的中繼資料。 發行可讓用戶端使用 GET 或 HTTP/GET 要求來取得該中繼資料。
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 976e1e0bb2c6479f7599165a1c6fe83bae4e17c1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d5d425be7f02a204476c4f6e81441aca9ea39fcc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596977"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246814"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>HOW TO：使用組態檔發行服務的中繼資料
 這是示範發行 Windows Communication Foundation （WCF）服務之中繼資料的兩個 how to 主題之一。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用組態檔發行服務的中繼資料。  
@@ -253,7 +254,7 @@ namespace Metadata.Samples
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - [如何：於受管理的應用程式中裝載 WCF 服務](../how-to-host-a-wcf-service-in-a-managed-application.md)

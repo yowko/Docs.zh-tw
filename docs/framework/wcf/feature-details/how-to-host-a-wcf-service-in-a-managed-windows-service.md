@@ -1,16 +1,17 @@
 ---
 title: HOW TO：在 Managed Windows 服務中裝載 WCF 服務
+description: 瞭解如何建立由 Windows 服務託管的 WCF 服務。 所有 Windows 版本都提供這個裝載選項。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4e07aa7aac82fae5cfd1bfc759ef724cf87a873a
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593174"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246932"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：在 Managed Windows 服務中裝載 WCF 服務
 
@@ -110,7 +111,7 @@ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.M
     </configuration>
     ```
 
-     以滑鼠右鍵按一下**方案總管**中的 app.config 檔案，然後選取 [**屬性**]。 在 [**複製到輸出目錄**] 底下，選取 [**更新時複製**]。
+     以滑鼠右鍵按一下**方案總管**中的 App.config 檔案，然後選取 [**屬性**]。 在 [**複製到輸出目錄**] 底下，選取 [**更新時複製**]。
 
      此範例會在組態檔中明確地指定端點。 如果您沒有將任何端點加入至服務中，執行階段會為您加入預設端點。 在這個範例中，由於服務將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 設定為 `true`，表示您的服務也已啟用中繼資料發行。 如需預設端點、繫結和行為的詳細資訊，請參閱[簡化的組態](../simplified-configuration.md)和 [WCF 服務的簡化組態](../samples/simplified-configuration-for-wcf-services.md)。
 
@@ -133,7 +134,7 @@ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.M
 
 就像「自我裝載」選項一樣，Windows 服務裝載環境要求將某些裝載程式碼撰寫成應用程式的一部分。 服務會實作成為主控台應用程式並包含專屬的裝載程式碼。 在其他裝載環境中，例如 Internet Information Services (IIS) 所裝載的 Windows 處理序啟用服務 (WAS)，開發人員就不需要撰寫裝載程式碼。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [簡化設定](../simplified-configuration.md)
 - [在受控應用程式中裝載](hosting-in-a-managed-application.md)
