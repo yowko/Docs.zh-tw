@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter.raise__WritingCancelled方法（系統.Windows.Xps）
+title: System.windows.xps.xpsdocumentwriter>. raise__WritingCancelled 方法（System.web）
+description: 瞭解 raise__WritingCancelled System.windows.xps.xpsdocumentwriter> 方法，它會針對 .NET 中的 XML 論文規格（XPS）檔引發 WritingCancelled 事件。
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,14 +10,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 8cede25e9041d99ac3c601000e4afbef666a897c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5436be347792209780c4b3b617f26f731d98ac90
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155719"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105253"
 ---
-# <a name="xpsdocumentwriterraise__writingcancelled-method"></a>XpsDocumentWriter.引發\_\_書寫取消方法
+# <a name="xpsdocumentwriterraise__writingcancelled-method"></a>System.windows.xps.xpsdocumentwriter>. raise \_ \_ WritingCancelled 方法
 
 引發 <xref:System.Windows.Xps.XpsDocumentWriter.WritingCancelled> 事件。
 
@@ -37,8 +38,8 @@ public void raise__WritingCancelled (object value0,
 
 ## <a name="requirements"></a>需求
 
-**命名空間：**<xref:System.Windows.Xps>
+**命名空間：** <xref:System.Windows.Xps>
 
-**裝配：** 系統.列印（系統中.列印.dll）
+**元件：** System. 列印（system.printing.dll）
 
-**.NET 框架版本：** 3.0
+**.NET Framework 版本：** 3。0

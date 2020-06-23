@@ -1,5 +1,6 @@
 ---
 title: HOW TO：設定安全性模式
+description: 瞭解如何在最預先定義的系結上設定三種常見的 WCF 安全性模式： Transport、Message 和 TransportWithMessageCredential。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 9b9e25cbafb6387b4584a21fd642d80bc41cd8dc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2f834e1930b7676592f6cbc29a577424d75ebc01
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320901"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244539"
 ---
 # <a name="how-to-set-the-security-mode"></a>HOW TO：設定安全性模式
 
@@ -56,7 +57,7 @@ Windows Communication Foundation （WCF）安全性有三種常見的安全性�
 
 1. 建立繫結的執行個體。
 
-2. 將 `Mode` 屬性設定為 `Transport`。
+2. 將 `Mode` 屬性設為 `Transport`。
 
 3. 將 `ClientCredential` 屬性設定為適當值。 下列程式碼會將屬性設為 `Windows`。
 
@@ -67,7 +68,7 @@ Windows Communication Foundation （WCF）安全性有三種常見的安全性�
 
 1. 建立繫結的執行個體。
 
-2. 將 `Mode` 屬性設定為 `Message`。
+2. 將 `Mode` 屬性設為 `Message`。
 
 3. 將 `ClientCredential` 屬性設定為適當值。 下列程式碼會將屬性設為 `Certificate`。
 
@@ -76,9 +77,9 @@ Windows Communication Foundation （WCF）安全性有三種常見的安全性�
 
 ### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>若要在組態中設定 Mode 與 ClientCredentialType 屬性
 
-1. 將適當的繫結項目新增至設定檔的[\<bindings >](../configure-apps/file-schema/wcf/bindings.md)元素。 下列範例會將[\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md)元素。
+1. 將適當的繫結項目新增至 [\<bindings>](../configure-apps/file-schema/wcf/bindings.md) 設定檔的元素。 下列範例會加入 [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) 元素。
 
-2. 新增 `<binding>` 元素，並將其 `name` 屬性設定為適當的值。
+2. 新增專案 `<binding>` ，並將其 `name` 屬性設定為適當的值。
 
 3. 新增 `<security>` 項目，並將 `mode` 屬性設為 `Message`、`Transport` 或 `TransportWithMessageCredential`。
 
@@ -116,14 +117,14 @@ Windows Communication Foundation （WCF）安全性有三種常見的安全性�
 
 如需詳細資訊，請參閱[如何：使用傳輸安全性和訊息認證](./feature-details/how-to-use-transport-security-and-message-credentials.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：使用 SSL 憑證設定連接埠](./feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [如何：使用傳輸安全性和訊息認證](./feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [傳輸安全性](./feature-details/transport-security.md)
 - [訊息安全性](./feature-details/message-security-in-wcf.md)
-- [安全性概觀](./feature-details/security-overview.md)
+- [安全性總覽](./feature-details/security-overview.md)
 - [系統提供的繫結](system-provided-bindings.md)
-- [\<security >](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [\<security >](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [\<security >](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<security>](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

@@ -1,18 +1,19 @@
 ---
 title: HOW TO：建立基本 WCF Web HTTP 服務
+description: 瞭解如何建立可在 WCF 中公開 web 端點的服務。 Web 端點會使用 XML 或 JSON 來傳送資料。 沒有 SOAP 封套。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 7481367f27d973ba809dff5ca1c4a4f168fbbb98
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895186"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247100"
 ---
-# <a name="how-to-create-a-basic-wcf-web-http-service"></a>作法：建立基本 WCF Web HTTP 服務
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a>HOW TO：建立基本 WCF Web HTTP 服務
 
 Windows Communication Foundation （WCF）可讓您建立公開 Web 端點的服務。 Web 端點會透過 XML 或 JSON 來傳送資料，而且不使用任何 SOAP 封套。 本主題示範如何公開這類端點。
 
@@ -77,7 +78,7 @@ Windows Communication Foundation （WCF）可讓您建立公開 Web 端點的服
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>若要在 Internet Explorer 中呼叫對應至 GET 的服務作業
 
-1. 開啟 Internet Explorer 並輸入 "`http://localhost:8000/EchoWithGet?s=Hello, world!`"，然後按 enter。 URL 包含服務的基底位址（`http://localhost:8000/`）、端點的相對位址（""）、要呼叫的服務作業（"EchoWithGet"），以及後面接著以連字號（&）分隔之具名引數清單的問號。
+1. 開啟 Internet Explorer 並輸入 " `http://localhost:8000/EchoWithGet?s=Hello, world!` "，然後按 enter。 URL 包含服務的基底位址（ `http://localhost:8000/` ）、端點的相對位址（""）、要呼叫的服務作業（"EchoWithGet"），以及後面接著以連字號（&）分隔之具名引數清單的問號。
 
 ## <a name="to-call-service-operations-in-code"></a>若要透過程式碼呼叫服務作業
 

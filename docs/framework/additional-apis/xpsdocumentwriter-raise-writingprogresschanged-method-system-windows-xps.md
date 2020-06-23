@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter.raise__WritingProgressChanged方法（系統.Windows.Xps）
+title: System.windows.xps.xpsdocumentwriter>. raise__WritingProgressChanged 方法（System.web）
+description: 瞭解 raise__WritingProgressChanged System.windows.xps.xpsdocumentwriter> 方法，它會在 .NET 中引發 XPS 檔的 WritingProgressChanged 事件。
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,14 +10,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: cceabb2b4b1fad68fdda44fea8172cb21319b4bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e012c0900a83e1adbf0ceaddeb91792598b4377
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155631"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105208"
 ---
-# <a name="xpsdocumentwriterraise__writingprogresschanged-method"></a>XpsDocumentWriter.提高\_\_書寫進度更改方法
+# <a name="xpsdocumentwriterraise__writingprogresschanged-method"></a>System.windows.xps.xpsdocumentwriter>. raise \_ \_ WritingProgressChanged 方法
 
 引發 <xref:System.Windows.Xps.XpsDocumentWriter.WritingProgressChanged> 事件。
 
@@ -37,8 +38,8 @@ public void raise__WritingProgressChanged (object value0,
   
 ## <a name="requirements"></a>需求
 
-**命名空間：**<xref:System.Windows.Xps>
+**命名空間：** <xref:System.Windows.Xps>
 
-**裝配：** 系統.列印（系統中.列印.dll）
+**元件：** System. 列印（system.printing.dll）
 
-**.NET 框架版本：** 3.0
+**.NET Framework 版本：** 3。0

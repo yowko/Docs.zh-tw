@@ -1,15 +1,16 @@
 ---
 title: 憑證驗證的傳輸安全性
+description: 瞭解在使用傳輸安全性時，WFC 如何使用憑證進行伺服器和用戶端驗證。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 47322cbcddf9f33101bbfbeaa07a3fab74b9d26a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3da1202a5ad3b953470b50dd5924b2ab45f301eb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576014"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244774"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>憑證驗證的傳輸安全性
 
@@ -26,8 +27,8 @@ ms.locfileid: "84576014"
 |安全性模式|傳輸|  
 |互通性|使用現有 Web 服務用戶端和服務。|  
 |驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是 (使用 SSL 憑證)<br /><br /> 是 (使用 X.509 憑證)|  
-|資料完整性|是|  
-|資料機密性|是|  
+|資料完整性|Yes|  
+|資料機密性|Yes|  
 |傳輸|HTTPS|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -138,7 +139,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性總覽](security-overview.md)
 - [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

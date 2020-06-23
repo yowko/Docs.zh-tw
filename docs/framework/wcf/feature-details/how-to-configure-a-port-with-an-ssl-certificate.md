@@ -1,5 +1,6 @@
 ---
 title: HOW TO：使用 SSL 憑證設定連接埠
+description: 瞭解如何使用 x.509 憑證設定埠，此為自我裝載的 WCF 服務所需，而且具有 WSHttpBinding 類別，並使用傳輸安全性。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 30b24c4ff06cc7249d3ddb6d95549a574e313f52
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0eccdf916dae7b886cbc4e6563e6dfe17039c321
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579614"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247178"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>HOW TO：使用 SSL 憑證設定連接埠
 
@@ -22,22 +23,22 @@ ms.locfileid: "84579614"
   
  若要設定連接埠，使用的工具取決於電腦上執行的作業系統。  
   
- 如果您執行的是 Windows Server 2003，請使用 Httpcfg.exe 工具。 在 Windows Server 2003 上，已安裝此工具。 如需詳細資訊，請參閱[Httpcfg.exe 總覽](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))。 [Windows 支援工具檔](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10))會說明 HTTPcfg.exe 工具的語法。  
+ 如果您正在執行 Windows Server 2003，請使用 HttpCfg.exe 工具。 在 Windows Server 2003 上，已安裝此工具。 如需詳細資訊，請參閱[Httpcfg.exe 總覽](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))。 [Windows 支援工具檔](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10))說明 Httpcfg.exe 工具的語法。  
   
- 如果您執行的是 Windows Vista，請使用已安裝的 dism.exe 工具。
+ 如果您執行的是 Windows Vista，請使用已安裝的 Netsh.exe 工具。
   
 > [!NOTE]
 > 修改儲存在電腦上的憑證需要系統管理許可權。  
   
 ## <a name="determine-how-ports-are-configured"></a>判斷如何設定埠  
   
-1. 在 Windows Server 2003 或 Windows XP 中，使用 Httpcfg.exe 工具來查看目前的埠設定，其方式是使用**查詢**和**ssl**參數，如下列範例所示。  
+1. 在 Windows Server 2003 或 Windows XP 中，使用 [HttpCfg.exe] 工具來查看目前的埠設定，使用**查詢**和**ssl**參數，如下列範例所示。  
   
     ```console
     httpcfg query ssl  
     ```  
   
-2. 在 Windows Vista 中，使用 Netsh 工具來查看目前的埠設定，如下列範例所示。  
+2. 在 Windows Vista 中，使用 [Netsh.exe] 工具來查看目前的埠設定，如下列範例所示。  
   
     ```console  
     netsh http show sslcert  
@@ -55,7 +56,7 @@ ms.locfileid: "84579614"
   
 ## <a name="bind-an-ssl-certificate-to-a-port-number"></a>將 SSL 憑證系結至埠號碼  
   
-1. 在 Windows Server 2003 或 Windows XP 中，使用安全通訊端層（SSL）存放區上「設定」模式中的 Httpcfg.exe，將憑證系結至通訊埠編號。 此工具是使用指紋來識別憑證，如下列範例所示。  
+1. 在 Windows Server 2003 或 Windows XP 中，使用安全通訊端層（SSL）存放區上 [設定] 模式中的 [HttpCfg.exe] 工具，將憑證系結至埠號碼。 此工具是使用指紋來識別憑證，如下列範例所示。  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -65,7 +66,7 @@ ms.locfileid: "84579614"
   
     - **-H**參數會指定憑證的指紋。  
   
-2. 在 Windows Vista 中，請使用 Netsh 工具，如下列範例所示。  
+2. 在 Windows Vista 中，使用 [Netsh.exe] 工具，如下列範例所示。  
   
     ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}
@@ -73,13 +74,13 @@ ms.locfileid: "84579614"
   
     - **Certhash**參數會指定憑證的指紋。  
   
-    - **Ipport**參數會指定 IP 位址和埠，而函式就如同所述的 HTTPcfg.exe .exe 工具的 **-i**參數。  
+    - **Ipport**參數會指定 IP 位址和埠，而函式就如同所述 Httpcfg.exe 工具的 **-i**參數。  
   
     - **Appid**參數是可以用來識別擁有應用程式的 GUID。  
   
 ## <a name="bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>將 SSL 憑證系結至埠號碼並支援用戶端憑證  
   
-1. 在 Windows Server 2003 或 Windows XP 中，若要支援在傳輸層使用 x.509 憑證進行驗證的用戶端，請遵循先前的程式，但將其他命令列參數傳遞至 Httpcfg.exe，如下列範例所示。  
+1. 在 Windows Server 2003 或 Windows XP 中，若要支援在傳輸層使用 x.509 憑證進行驗證的用戶端，請遵循先前的程式，但將其他命令列參數傳遞至 HttpCfg.exe，如下列範例所示。  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
@@ -101,13 +102,13 @@ ms.locfileid: "84579614"
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. 在 Windows Server 2003 或 Windows XP 中，請搭配**delete**和**Ssl**關鍵字使用 HTTPcfg.exe 工具。 使用 **-i**參數指定 `IP` ： `port` 號碼，並使用 **-h**參數指定指紋。  
+2. 在 Windows Server 2003 或 Windows XP 中，使用 HttpCfg.exe 工具搭配**delete**和**ssl**關鍵字。 使用 **-i**參數指定 `IP` ： `port` 號碼，並使用 **-h**參數指定指紋。  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-3. 在 Windows Vista 中，請使用 Netsh 工具，如下列範例所示。  
+3. 在 Windows Vista 中，使用 [Netsh.exe] 工具，如下列範例所示。  
   
     ```console  
     Netsh http delete sslcert ipport=0.0.0.0:8005  
@@ -120,6 +121,6 @@ ms.locfileid: "84579614"
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [HTTP 傳輸安全性](http-transport-security.md)

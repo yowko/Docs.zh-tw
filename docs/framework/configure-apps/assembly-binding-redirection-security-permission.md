@@ -1,16 +1,17 @@
 ---
 title: 組件繫結重新導向安全性使用權限
+description: 瞭解 .NET 中的應用程式佈建檔中明確元件系結重新導向所需的安全性許可權。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: b59689e78f901637674c0a1df28ed74411e8e7c7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a8596bcac4efb0aea07efcfde6726d8bbf148c24
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69921379"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105087"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>組件繫結重新導向安全性使用權限
 在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 許可權是藉由在上設定旗標來授與 <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission> 。 受控元件預設沒有任何許可權。  
@@ -28,7 +29,7 @@ ms.locfileid: "69921379"
 |網際網路區域|**OFF**|  
 |不受信任的區域|**OFF**|  
   
- 系統管理員可以變更這些安全性設定，以支援或限制指定電腦上的特定案例。 沒有任何工具可變更**BindingRedirects**旗標設定的預設值;系統管理員必須手動編輯使用者電腦上的安全 .config 檔案。  
+ 系統管理員可以變更這些安全性設定，以支援或限制指定電腦上的特定案例。 沒有任何工具可變更**BindingRedirects**旗標設定的預設值;系統管理員必須手動編輯使用者電腦上的 Security.config 檔案。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,6 @@
 ---
-title: 如何：建立多檔案元件
+title: 作法：建置多檔案組件
+description: 瞭解如何使用範例程式碼，在 .NET 中建立（建立）多檔案元件，以說明程式中的每個步驟。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,14 +18,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429564"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104943"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>如何：建立多檔案元件
+# <a name="how-to-build-a-multifile-assembly"></a>作法：建置多檔案組件
 
 本文說明如何建立多檔案組件，並提供說明程序中每個步驟的程式碼。
 
@@ -99,7 +100,7 @@ ms.locfileid: "74429564"
 
 3. 使用必要的編譯器選項來編譯其他所有模組，以便指出程式碼中所參考的其他模組。 這個步驟使用 **/addmodule** 編譯器選項。
 
-   在下列範例中，名為*Client*的程式碼模組有一個`Main`進入點方法，它會參考在步驟1中建立的*Stringer*模組中的方法。
+   在下列範例中，名為*Client*的程式碼模組具有進入點 `Main` 方法，它會參考步驟1中所建立之*Stringer.dll*模組中的方法。
 
    ```cpp
    #using "Stringer.netmodule"
@@ -209,11 +210,11 @@ ms.locfileid: "74429564"
 
     在命令提示字元中，輸入下列命令：
 
-    **al** \<*模組*> 名稱\<*模組名稱*> .。。 **/main：**\<*方法名稱*> **/out：**\<*檔案名*> **/target：**\<*assembly file type*>
+    **al** \<*module name*>\<*module name*>.。。 **/main：** \<*method name*>**/out：** \<*file name*>**/target：**\<*assembly file type*>
 
     在這個命令中，「模組名稱」** 引數會指定組件中包含的所有模組名稱。 **/main:** 選項指定方法名稱，這個名稱是組件的進入點。 **/out:** 選項指定輸出檔案的名稱，其中包含組件中繼資料。 **/Target：** 選項指定元件為主控台應用程式可執行檔（*.Exe*）、Windows 可執行檔（*win.ini*）或程式庫（*.lib*）檔案。
 
-    在下列範例中， *al.exe*會建立一個元件，它是名為*myAssembly*的主控台應用程式可執行檔。 應用程式是由兩個稱為 *.netmodule*和*Stringer*的模組所組成，以及名為*myAssembly*的可執行檔，其中僅包含元件中繼資料。 元件的進入點是類別`Main` `MainClientApp`中的方法，位於*Client .dll*中。
+    在下列範例中， *Al.exe*會建立一個元件，這是名為*myAssembly.exe*的主控台應用程式可執行檔。 應用程式包含兩個稱為 *.netmodule*和*Stringer*的模組，以及名為*myAssembly.exe*的可執行檔，其中僅包含元件中繼資料。 元件的進入點是類別中的 `Main` 方法 `MainClientApp` ，位於*Client.dll*。
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe

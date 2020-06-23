@@ -1,16 +1,17 @@
 ---
 title: Windows 驗證的傳輸安全性
+description: 請參閱此案例，其中顯示由 Windows 安全性保護的 WCF 用戶端/服務。 在此範例中，內部網路服務會顯示人力資源資訊。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6703da4f97cba38ee0dc334d3010ca509d1fb3ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b6134d4cbdff0c1adea704a7f3aaff7e40fd75ec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598693"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244760"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 驗證的傳輸安全性
 下列案例顯示由 Windows 安全性保護的 Windows Communication Foundation （WCF）用戶端和服務。 如需程式設計的詳細資訊，請參閱[如何：使用 Windows 認證保護服務](../how-to-secure-a-service-with-windows-credentials.md)。  
@@ -24,8 +25,8 @@ ms.locfileid: "84598693"
 |安全性模式|傳輸|  
 |互通性|僅限 WCF|  
 |驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是 (使用 Windows 整合式驗證)<br /><br /> 是 (使用 Windows 整合式驗證)|  
-|完整性|是|  
-|保密|是|  
+|完整性|Yes|  
+|保密|Yes|  
 |傳輸|NET.TCP|  
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
   
@@ -42,7 +43,7 @@ ms.locfileid: "84598693"
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
  可使用以下組態來取代程式碼設定服務端點。  
   
 ```xml  
@@ -73,7 +74,7 @@ ms.locfileid: "84598693"
 </configuration>  
 ```  
   
-## <a name="client"></a>用戶端  
+## <a name="client"></a>Client  
  下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
@@ -89,7 +90,7 @@ ms.locfileid: "84598693"
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
  可使用以下組態來取代程式碼建立用戶端。  
   
 ```xml  
@@ -117,7 +118,7 @@ ms.locfileid: "84598693"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性總覽](security-overview.md)
 - [如何：利用 Windows 認證保護服務的安全](../how-to-secure-a-service-with-windows-credentials.md)

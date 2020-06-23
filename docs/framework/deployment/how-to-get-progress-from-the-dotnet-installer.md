@@ -1,5 +1,6 @@
 ---
 title: 如何：取得 .NET Framework 4.5 安裝程式的進度
+description: 瞭解如何從 .NET 4.5 安裝程式取得進度。 如果您為此 .NET 版本開發應用程式，您可以在應用程式的安裝程式中包含（連鎖） .NET 4.5 安裝程式。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: cd81ad83aee80341d0334cfa8caa165b25ee0564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716493"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904256"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>如何：取得 .NET Framework 4.5 安裝程式的進度
 
@@ -20,11 +21,11 @@ ms.locfileid: "75716493"
 
 - **調用**。 若要呼叫 .NET Framework 4.5 安裝程式並從 MMIO 區段接收進度資訊，您的安裝程式必須執行下列動作：
 
-    1. 調用 .NET 框架 4.5 可轉散布程式：
+    1. 呼叫 .NET Framework 4.5 可轉散發程式：
 
         `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
-        *其中分區名稱*是要用於標識應用的任何名稱。 .NET Framework 安裝程式會以非同步方式讀寫 MMIO 區段，所以您可能會覺得在這段期間使用事件和訊息很方便。 在範例中，.NET Framework 安裝程序是由配置 MMIO 區段 (`TheSectionName`) 及定義事件 (`TheEventName`) 的建構函式所建立：
+        其中，*區段名稱*是您想要用來識別應用程式的任何名稱。 .NET Framework 安裝程式會以非同步方式讀寫 MMIO 區段，所以您可能會覺得在這段期間使用事件和訊息很方便。 在範例中，.NET Framework 安裝程序是由配置 MMIO 區段 (`TheSectionName`) 及定義事件 (`TheEventName`) 的建構函式所建立：
 
         ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
@@ -32,9 +33,9 @@ ms.locfileid: "75716493"
 
         請用對您安裝程式而言的唯一名稱來取代這些名稱。
 
-    2. 讀取 MMIO 區段。 在 .NET 框架 4.5 中，下載和安裝操作是同時執行的：.NET 框架的一部分可能正在安裝，而另一部分正在下載。 因此，傳回 (也就是寫入) 至 MMIO 區段的進度是從 0 遞增到 255 的兩個數字 (`m_downloadSoFar` 和 `m_installSoFar`)。 當 255 寫入而 .NET Framework 結束時，安裝即已完成。
+    2. 讀取 MMIO 區段。 在 .NET Framework 4.5 中，下載和安裝作業會同時進行：在下載另一個元件時，可能會安裝 .NET Framework 的其中一個部分。 因此，傳回 (也就是寫入) 至 MMIO 區段的進度是從 0 遞增到 255 的兩個數字 (`m_downloadSoFar` 和 `m_installSoFar`)。 當 255 寫入而 .NET Framework 結束時，安裝即已完成。
 
-- **結束代碼**。 呼叫 .NET Framework 4.5 可轉散發程式命令中的下列結束代碼會指出安裝成功或失敗：
+- 結束**代碼**。 呼叫 .NET Framework 4.5 可轉散發程式命令中的下列結束代碼會指出安裝成功或失敗：
 
   - 0 - 安裝順利完成。
 

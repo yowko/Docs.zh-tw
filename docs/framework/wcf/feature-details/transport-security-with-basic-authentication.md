@@ -1,16 +1,17 @@
 ---
 title: 基本驗證的傳輸安全性
+description: 請參閱此 WCF 案例，其中會顯示 WCF 服務和用戶端的基本驗證。 服務需要用戶端信任的有效憑證。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 7c83de70e404fe8304bc2e35c1bb5df9e42f95b7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f15a19feaed631a76948efd24ee225acf789cb2d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576092"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244851"
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本驗證的傳輸安全性
 下圖顯示 Windows Communication Foundation （WCF）服務和用戶端。 伺服器需要可用於 Secure Sockets Layer (SSL) 的有效 X.509 憑證，而用戶端必須信任伺服器的憑證。 此外，Web 服務已經有可以使用的 SSL 實作。 如需在 Internet Information Services （IIS）上啟用基本驗證的詳細資訊，請參閱 <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication> 。  
@@ -22,8 +23,8 @@ ms.locfileid: "84576092"
 |安全性模式|傳輸|  
 |互通性|使用現有的 Web 服務用戶端和服務|  
 |驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是 (使用 HTTPS)<br /><br /> 是 (透過使用者名稱/密碼)|  
-|完整性|是|  
-|保密|是|  
+|完整性|Yes|  
+|保密|Yes|  
 |傳輸|HTTPS|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -40,7 +41,7 @@ ms.locfileid: "84576092"
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
  下列會設定服務以使用具有傳輸層級安全性的基本驗證：  
   
 ```xml  
@@ -69,7 +70,7 @@ ms.locfileid: "84576092"
 </configuration>  
 ```  
   
-## <a name="client"></a>用戶端  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>程式碼  
  下列程式碼顯示包含使用者名稱和密碼的用戶端程式碼。 請注意，使用者必須提供有效的 Windows 使用者名稱和密碼。 此處未顯示傳回使用者名稱和密碼的程式碼。 請使用對話方塊或其他介面向使用者查詢資訊。  
@@ -80,7 +81,7 @@ ms.locfileid: "84576092"
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>組態  
+### <a name="configuration"></a>設定  
  下列程式碼顯示用戶端組態。  
   
 > [!NOTE]
@@ -110,7 +111,7 @@ ms.locfileid: "84576092"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>

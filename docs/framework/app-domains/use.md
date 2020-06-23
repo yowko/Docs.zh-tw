@@ -1,17 +1,18 @@
 ---
 title: 使用應用程式定義域
+description: 使用應用程式域，提供 common language runtime （CLR）的隔離單位。 應用程式域會在進程內建立和執行。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application domains, about
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: df2a63716904ebfc6ee163121a1f07e53aa07514
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645431"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105188"
 ---
 # <a name="using-application-domains"></a>使用應用程式定義域
 
@@ -21,19 +22,19 @@ ms.locfileid: "81645431"
   
 ## <a name="in-this-section"></a>本節內容  
 
-[如何：建立應用程式定義域](how-to-create-an-application-domain.md)  
+[作法：建立應用程式定義域](how-to-create-an-application-domain.md)  
 描述如何以程式設計方式建立應用程式定義域。  
   
-[如何：卸載應用程式定義域](how-to-unload-an-application-domain.md)  
+[作法：卸載應用程式定義域](how-to-unload-an-application-domain.md)  
 描述如何以程式設計方式卸載應用程式定義域。  
   
-[操作說明：設定應用程式定義域](how-to-configure-an-application-domain.md)  
+[作法：設定應用程式定義域](how-to-configure-an-application-domain.md)  
 提供設定應用程式定義域的簡介。  
   
 [從應用程式定義域擷取安裝資訊](retrieve-setup-information.md)  
 說明如何從應用程式定義域擷取安裝資訊。  
   
-[操作說明：將組件載入應用程式定義域](how-to-load-assemblies-into-an-application-domain.md)  
+[作法：將組件載入應用程式定義域](how-to-load-assemblies-into-an-application-domain.md)  
 說明如何將組件載入應用程式定義域。  
   
 [操作說明：從組件中取得類型和成員資訊](../reflection-and-codedom/get-type-member-information.md)  
@@ -42,7 +43,7 @@ ms.locfileid: "81645431"
 [陰影複製組件](shadow-copy-assemblies.md)  
 說明陰影複製如何在使用組件時更新組件，以及如何設定陰影複製。  
   
-[如何：接收第一個可能發生的例外狀況通知](how-to-receive-first-chance-exception-notifications.md)  
+[作法：接收第一個可能發生的例外狀況通知](how-to-receive-first-chance-exception-notifications.md)  
 說明您如何在 Common Language Runtime 開始搜尋例外狀況處理常式之前，收到已擲回例外狀況的通知。  
   
 [解析組件載入](../../standard/assembly/resolve-loads.md)  
@@ -63,7 +64,7 @@ ms.locfileid: "81645431"
 [發出動態方法和組件](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
 描述如何建立動態組件。  
   
-[應用程式域](application-domains.md)  
+[應用程式定義域](application-domains.md)  
 提供應用程式定義域的概觀。  
   
 [反映概觀](../reflection-and-codedom/reflection.md)  

@@ -1,16 +1,17 @@
 ---
 title: 傳輸安全性概觀
+description: 瞭解 WCF 系統提供之系結中的主要傳輸安全性機制。 這些安全性機制取決於所使用的系結和傳輸。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 5c6b6389122b32ed8db701020a8c13ba17225867
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6302a949e8d0a041446b75dd3769b8ba2d1fc2b5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585671"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244825"
 ---
 # <a name="transport-security-overview"></a>傳輸安全性概觀
 Windows Communication Foundation （WCF）中的傳輸安全性機制取決於所使用的系結和傳輸。 例如，使用 <xref:System.ServiceModel.WSHttpBinding> 類別時，傳輸為 HTTP，而保護此傳輸的主要機制則為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。 本主題討論 WCF 系統提供之系結中所使用的主要傳輸安全性機制。  
@@ -82,7 +83,7 @@ Windows Communication Foundation （WCF）中的傳輸安全性機制取決於�
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>用戶端  
+#### <a name="client"></a>Client  
  若是使用用戶端類型，您必須指定使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 類別之 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 方法的憑證。  
   
 > [!NOTE]

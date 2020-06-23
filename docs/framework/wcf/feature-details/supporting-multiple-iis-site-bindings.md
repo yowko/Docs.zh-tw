@@ -1,22 +1,23 @@
 ---
 title: 支援多重 IIS 網站繫結
+description: 瞭解在 IIS 中裝載 WCF 服務時，如何提供在相同網站上使用相同通訊協定的多個基底位址。
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: e364be55687323d3059c4a7e084818e3f7d54d5f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 290dca03dbed7d0a7442a3903b735eb189929ed1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743437"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244864"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>支援多重 IIS 網站繫結
-在 Internet Information Services （IIS）7.0 下裝載 Windows Communication Foundation （WCF）服務時，您可能會想要在相同的網站上提供多個使用相同通訊協定的基底位址。 這樣可讓相同的服務回應數個不同的 URI。 當您想要裝載接聽 `http://www.contoso.com` 和 `http://contoso.com`的服務時，這會很有用。 當您所建立的服務具有內部使用者基底位址，同時具有外部使用者個別基底位址時，也適用此方式。 例如：`http://internal.contoso.com` 和 `http://www.contoso.com`。  
+在 Internet Information Services （IIS）7.0 下裝載 Windows Communication Foundation （WCF）服務時，您可能會想要在相同的網站上提供多個使用相同通訊協定的基底位址。 這樣可讓相同的服務回應數個不同的 URI。 當您想要裝載在和上接聽的服務時，這會很有用 `http://www.contoso.com` `http://contoso.com` 。 當您所建立的服務具有內部使用者基底位址，同時具有外部使用者個別基底位址時，也適用此方式。 例如：`http://internal.contoso.com` 和 `http://www.contoso.com`。  
   
 > [!NOTE]
 > 不過這個功能僅適用於 HTTP 通訊協定。  
   
 ## <a name="multiple-base-addresses"></a>多個基底位址  
- 這項功能僅適用于在 IIS 底下裝載的 WCF 服務。 預設不會啟用此功能。 若要啟用它，您必須將 `multipleSiteBindingsEnabled` 屬性加入至 web.config 檔案中的 <`serviceHostingEnvironment`> 專案，並將它設定為 [`true`]，如下列範例所示。  
+ 這項功能僅適用于在 IIS 底下裝載的 WCF 服務。 預設不會啟用此功能。 若要啟用它，您必須將 `multipleSiteBindingsEnabled` 屬性加入至 `serviceHostingEnvironment` Web.config 檔案中的 <> 元素，並將它設定為 `true` ，如下列範例所示。  
   
 ```xml  
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  

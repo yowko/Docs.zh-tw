@@ -1,5 +1,6 @@
 ---
-title: 如何：建立應用程式定義域
+title: 作法：建立應用程式定義域
+description: 請參閱如何在 .NET 中建立應用程式域。 您可以建立應用程式域來載入元件以管理個人，或建立一個以執行程式碼。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - application domains, creating
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
-ms.openlocfilehash: 83bf0ad96b352ed5c015723dd89aee7913d2a88e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8e44e682f64854dbc0181b26f6ed3fa2905b7814
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119880"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104809"
 ---
-# <a name="how-to-create-an-application-domain"></a>如何：建立應用程式定義域
+# <a name="how-to-create-an-application-domain"></a>作法：建立應用程式定義域
 Common Language Runtime Host 會在有需要時自動建立應用程式定義域。 不過，您可以建立自己的應用程式定義域，將它們載入您想要自行管理的組件中。 您也可以建立要從中執行程式碼的應用程式定義域。  
   
  使用 <xref:System.AppDomain?displayProperty=nameWithType> 類別的其中一個多載 **CreateDomain** 方法，建立新的應用程式定義域。 您可以提供應用程式定義域的名稱，並依該名稱參考它。  

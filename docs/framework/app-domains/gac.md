@@ -1,5 +1,6 @@
 ---
 title: 全域組件快取
+description: 瞭解全域組件快取，這是安裝 .NET 通用語言執行時間的電腦程式代碼快取。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-ms.openlocfilehash: 22adf103ce38e189a277405af220880d5ce0b1db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f08bb4cf279924b12432f259dae8ce5a8474285
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119924"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104905"
 ---
 # <a name="global-assembly-cache"></a>全域組件快取
 每部安裝通用語言執行平台的電腦都有稱為「全域組件快取」的全電腦程式碼快取。 全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。  

@@ -1,5 +1,6 @@
 ---
 title: 使用組件和全域組件快取
+description: 使用 .NET 中的元件和全域組件快取（GAC）。 請查看您可能想要在 GAC 中安裝元件的原因。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 7834fbc4d74b44c4bc5204ac451e92cac22e1ef5
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 16cfd9faf02d5b58acad1cc0cf19be61c9814d35
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645424"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105157"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用組件和全域組件快取
 
@@ -48,10 +49,10 @@ ms.locfileid: "81645424"
 [如何：將元件安裝到全域組件快取中](install-assembly-into-gac.md)  
 描述將組件安裝到全域組件快取中的方式。  
   
-[操作說明：檢視全域組件快取的內容](how-to-view-the-contents-of-the-gac.md)  
+[作法：檢視全域組件快取的內容](how-to-view-the-contents-of-the-gac.md)  
 說明如何使用 [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md) 來檢視全域組件快取的內容。  
   
-[如何：從全域組件快取移除組件](how-to-remove-an-assembly-from-the-gac.md)  
+[作法：從全域組件快取移除組件](how-to-remove-an-assembly-from-the-gac.md)  
 說明如何使用 [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md) 來移除全域組件快取中的組件。  
   
 [使用 Serviced 元件和全域組件快取](use-serviced-components-with-the-gac.md)  

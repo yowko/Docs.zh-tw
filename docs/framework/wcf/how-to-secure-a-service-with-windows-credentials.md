@@ -1,5 +1,6 @@
 ---
 title: HOW TO：使用 Windows 認證來確保服務安全
+description: 瞭解如何在位於 Windows 網域中的 WCF 服務上啟用傳輸安全性，並由相同網域中的用戶端呼叫。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: d02e697b23b6c745a59f3c9c37dd9c565f2f710e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 8ef164e1475bfd5f047a99426a2bed43a7aa7353
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320928"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244629"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
 
@@ -53,11 +54,11 @@ ms.locfileid: "72320928"
 
 1. 將這個程序的程式碼插入到前一個程序的程式碼後面。
 
-2. 建立名稱為 <xref:System.Type> 的 `contractType` 變數，並將其類型指派為介面 (`ICalculator`)。 使用 Visual Basic 時，請使用 `GetType` 運算子;使用C#時，請使用 `typeof` 關鍵字。
+2. 建立名稱為 <xref:System.Type> 的 `contractType` 變數，並將其類型指派為介面 (`ICalculator`)。 使用 Visual Basic 時，請使用 `GetType` 運算子; 使用 c # 時，請使用 `typeof` 關鍵字。
 
 3. 建立第二個名稱為 <xref:System.Type> 的 `serviceType` 變數，並將其類型指派為實作的合約 (`Calculator`)。
 
-4. 使用服務的基底位址，建立名稱為 <xref:System.Uri> 之 `baseAddress` 類別的執行個體。 基底位址必須具有符合傳輸的配置。 在此情況下，傳輸配置為 HTTP，而位址包含特殊的統一資源識別元（URI） "localhost" 和埠號碼（8036），以及基底端點位址（"serviceModelSamples/）： `http://localhost:8036/serviceModelSamples/`。
+4. 使用服務的基底位址，建立名稱為 <xref:System.Uri> 之 `baseAddress` 類別的執行個體。 基底位址必須具有符合傳輸的配置。 在此情況下，傳輸配置為 HTTP，而位址包含特殊的統一資源識別元（URI） "localhost" 和埠號碼（8036），以及基底端點位址（"serviceModelSamples/）： `http://localhost:8036/serviceModelSamples/` 。
 
 5. 使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 變數，建立 `baseAddress` 類別的執行個體。
 
@@ -70,7 +71,7 @@ ms.locfileid: "72320928"
 
 ### <a name="using-the-binding-in-a-client"></a>在用戶端中使用繫結
 
-這項程序會說明如何產生與服務進行通訊的 Proxy。 此 proxy 是使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)所產生，它會使用服務中繼資料來建立 proxy。
+這項程序會說明如何產生與服務進行通訊的 Proxy。 此 proxy 是使用使用服務中繼資料建立 proxy 的[System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](servicemodel-metadata-utility-tool-svcutil-exe.md)所產生。
 
 此程序還會建立可與服務進行通訊之 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，然後呼叫該服務。
 
@@ -106,13 +107,13 @@ ms.locfileid: "72320928"
 
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>使用組態在 Windows 網域的服務上啟用傳輸安全性
 
-1. 將[\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md)元素新增至設定檔的[\<bindings >](../configure-apps/file-schema/wcf/bindings.md)專案區段。
+1. 將 [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) 元素新增至 [\<bindings>](../configure-apps/file-schema/wcf/bindings.md) 設定檔的元素區段。
 
-2. 將 < `binding` > 元素新增至 < `WSHttpBinding` > 專案，並將 `configurationName` 屬性設定為適合您應用程式的值。
+2. 將 <`binding`> 元素新增至 <`WSHttpBinding`> 專案，並將 `configurationName` 屬性設定為適用于您應用程式的值。
 
-3. 新增 < `security` > 元素，並將 `mode` 屬性設定為 Message。
+3. 新增 <`security`> 元素，並將 `mode` 屬性設定為 Message。
 
-4. 新增 < `message` > 元素，並將 `clientCredentialType` 屬性設定為 Windows。
+4. 新增 <`message`> 元素，並將 `clientCredentialType` 屬性設定為 Windows。
 
 5. 在服務的組態檔中，將 `<bindings>` 區段取代為下列程式碼。 如果您還沒有服務設定檔，請參閱使用系結[來設定服務和用戶端](using-bindings-to-configure-services-and-clients.md)。
 
@@ -136,7 +137,7 @@ ms.locfileid: "72320928"
 
 1. 使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱[如何：建立用戶端](how-to-create-a-wcf-client.md)。
 
-2. 將產生之設定檔的[\<bindings >](../configure-apps/file-schema/wcf/bindings.md)區段取代為上一節中的設定程式碼。
+2. [\<bindings>](../configure-apps/file-schema/wcf/bindings.md)將產生之設定檔的區段取代為上一節中的設定程式碼。
 
 3. 程序程式碼會插入至用戶端程式的 `Main` 方法開頭。
 
@@ -155,10 +156,10 @@ ms.locfileid: "72320928"
 [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)]
 [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [如何：建立用戶端](how-to-create-a-wcf-client.md)
 - [保護服務安全](securing-services.md)
-- [安全性概觀](./feature-details/security-overview.md)
+- [安全性總覽](./feature-details/security-overview.md)

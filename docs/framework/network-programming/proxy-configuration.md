@@ -12,12 +12,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: d1c8b69223ab470d505d9f8007bc01b29fdc66b8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4d62f5736e9aa469be49d101e85851bc01b7c159
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502206"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141601"
 ---
 # <a name="proxy-configuration"></a>Proxy 組態
 Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回要求的資源，或將要求轉送至資源所在的伺服器。 Proxy 可透過減少傳送至遠端伺服器的要求數目，來提升網路效能。 Proxy 也可用來限制對資源的存取。  
@@ -54,7 +54,7 @@ Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回�
   
  下表顯示靜態 Proxy 的組態選項。  
   
-|屬性 (Attribute)、屬性 (Property) 或組態檔設定|說明|  
+|屬性 (Attribute)、屬性 (Property) 或組態檔設定|描述|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` 或 <xref:System.Net.WebProxy.Address>|所要使用的 Proxy 位址。|  
 |`bypassonlocal` 或 <xref:System.Net.WebProxy.BypassProxyOnLocal>|控制本機位址是否要略過 Proxy。|  
@@ -67,7 +67,7 @@ Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回�
 <system.net>  
     <defaultProxy>  
         <proxy  proxyaddress="http://proxy.contoso.com:3128"  
-                bypassonlocal="true"  
+                bypassonlocal="True"  
         />  
         <bypasslist>  
             <add address="[a-z]+.blueyonderairlines.com$" />  

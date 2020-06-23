@@ -1,5 +1,6 @@
 ---
 title: 將演算法名稱對應至密碼編譯類別
+description: 將演算法名稱對應至 .NET 中的密碼編譯類別。 開發人員有四個建立密碼編譯物件的選項。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - mapping algorithm names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a1d7acdd34182dd82f4dce66d136c4ef4de6e95
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69912872"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105357"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>將演算法名稱對應至密碼編譯類別
 有四種方式可供開發人員使用 Windows SDK 建立密碼編譯物件：  
@@ -32,7 +33,7 @@ ms.locfileid: "69912872"
  如果使用的雜湊演算法並不重要，開發人員可以呼叫 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 方法，它會傳回可執行雜湊轉換的物件。  
   
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>對應設定檔中的演算法名稱  
- 根據預設，執行時間會 <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> 針對所有四個案例傳回物件。 不過，電腦系統管理員可以變更最後兩個案例中的方法所傳回的物件類型。 若要這樣做，您必須將易記的演算法名稱對應至您想要在電腦設定檔案（Machine.config）中使用的類別。  
+ 根據預設，執行時間會 <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> 針對所有四個案例傳回物件。 不過，電腦系統管理員可以變更最後兩個案例中的方法所傳回的物件類型。 若要這樣做，您必須將易記的演算法名稱對應至您想要在電腦設定檔案中使用的類別（Machine.config）。  
   
  下列範例會示範如何設定運行**時間，讓** **cryptoconfig.createfromname CREATEFROMNAME （"SHA1"）** 和**HashAlgorithm. create**會傳回一個物件，以供您使用此方法。 *。 `MySHA1HashClass`  
   

@@ -1,5 +1,6 @@
 ---
 title: 作法：使用 DEVPATH 找出組件
+description: 使用 XML 電腦設定檔和 DEVPATH 環境變數，測試共用元件是否可在 .NET 中搭配許多應用程式正常運作。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 6fa864f814d6a9ce04f2bce92c61cd0075ab5145
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 50b61eedddabd660b1834565a61738f460ae9ff9
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69912991"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105381"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>作法：使用 DEVPATH 找出組件
 開發人員可能會想要確定它們所建立的共用元件能與多個應用程式正確搭配運作。 開發人員可以建立 DEVPATH 環境變數，以指向元件的組建輸出目錄，而不是在開發週期期間持續將元件放在全域組件快取中。  

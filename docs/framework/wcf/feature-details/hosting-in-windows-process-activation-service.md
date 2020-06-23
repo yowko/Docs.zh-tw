@@ -1,15 +1,16 @@
 ---
 title: 在 Windows Process Activation Service 中裝載
+description: 瞭解 WAS 如何管理背景工作進程（包含裝載 WCF 服務的應用程式）的啟用和存留期。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0b23c21762009341fd62c029431824dd26d6c3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597302"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247256"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
 當工作者處理序包含裝載 Windows Communication Foundation (WCF) 服務的應用程式時，Windows 處理序啟用服務 (WAS) 會管理這些工作者處理序的啟用和存留期。 WAS 處理序模型會透過移除對 HTTP 的相依性，將 HTTP 伺服器的 IIS 6.0 處理序模型一般化。 這可讓 WCF 服務在支援以訊息為基礎之啟用的主控環境中，同時使用 HTTP 和非 HTTP 通訊協定（例如 Net.tcp），並提供在指定的電腦上裝載大量應用程式的功能。  
@@ -48,7 +49,7 @@ ms.locfileid: "84597302"
 ## <a name="the-was-runtime"></a>WAS 執行階段  
  為了定址與管理方便，應用程式會組織成網站。 在執行階段，應用程式也會組織成應用程式集區中的群組。 一個應用程式集區可包含來自許多不同網站的不同應用程式。 應用程式集區中的所有應用程式都共用一組執行階段特徵。 例如，它們會在相同版本的 Common Language Runtime (CLR) 中執行，而且共用相同的處理序身分識別。 每個應用程式集區都對應至一個背景工作處理序 (w3wp.exe) 的執行個體。 每個在共用應用程式集區內執行的 Managed 應用程式都會透過 CLR AppDomain 與其他應用程式隔離開來。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WAS 啟動架構](was-activation-architecture.md)
 - [設定用於 WCF 的 WAS](configuring-the-wpa--service-for-use-with-wcf.md)

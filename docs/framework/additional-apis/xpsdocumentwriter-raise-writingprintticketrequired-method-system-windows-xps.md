@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter.raise__WritingPrintTicketRequired方法（系統.Windows.Xps）
+title: System.windows.xps.xpsdocumentwriter>. raise__WritingPrintTicketRequired 方法（System.web）
+description: 使用 raise__WritingPrintTicketRequired System.windows.xps.xpsdocumentwriter> 方法，它會針對 .NET 中的 XPS 檔引發 WritingPrintTicketRequired 事件。
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,14 +10,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 4baa5a568f73f60e2448db968283e2b7b64844c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8227c65df69107578791e532f20a1b2560366611
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155644"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105046"
 ---
-# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a>XpsDocumentWriter.提高\_\_寫作列印票要求方法
+# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a>System.windows.xps.xpsdocumentwriter>. raise \_ \_ WritingPrintTicketRequired 方法
 
 引發 <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> 事件。
 
@@ -37,8 +38,8 @@ public void raise__WritingPrintTicketRequired (object value0,
 
 ## <a name="requirements"></a>需求
 
-**命名空間：**<xref:System.Windows.Xps>
+**命名空間：** <xref:System.Windows.Xps>
 
-**裝配：** 系統.列印（系統中.列印.dll）
+**元件：** System. 列印（system.printing.dll）
 
-**.NET 框架版本：** 3.0
+**.NET Framework 版本：** 3。0

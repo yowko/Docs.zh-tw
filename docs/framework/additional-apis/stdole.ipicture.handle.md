@@ -1,5 +1,6 @@
 ---
-title: IPicture.Handle 屬性 (stdole)
+title: 圖片. Handle 屬性（stdole）
+description: 取得 .NET 中圖片屬性的相關參考資訊。 這個屬性會取得在此圖片物件中管理之圖片的控制碼。
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: e65be9cbccbe4e52b81b2eba7a473720eb966e83
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 85c8f2c3fcdbecd69bc9b3dc9c13f4ccea41038b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634430"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105341"
 ---
 # <a name="ipicturehandle-property"></a>IPicture.Handle 屬性
 
-取得在此圖片物件，指定的位置內管理圖片的控制代碼。
+取得在此圖片物件中，對指定位置管理之圖片的控制碼。
 
 ```csharp
 int Handle { get; }
@@ -31,6 +32,6 @@ int Handle { get; }
 
 ## <a name="requirements"></a>需求
 
-**命名空間︰** `stdole`
+**命名空間：** `stdole`
 
-**組件：** stdole （在 stdole.dll)
+**元件：** stdole （在 stdole.dll 中）
