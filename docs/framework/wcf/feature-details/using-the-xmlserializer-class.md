@@ -1,5 +1,6 @@
 ---
 title: 使用 XmlSerializer 類別
+description: 瞭解 XmlSerializer，這是 WCF 用來將應用程式中的資料序列化成 XML，並在用戶端與服務之間傳輸的。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 2ef2d0eefb571f64040fabd16fd65fdfde7a626d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7473de3f34ba543b4fabfe93167ea267f16dda5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600201"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246374"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 類別
 
@@ -40,7 +41,7 @@ Windows Communication Foundation （WCF）可以使用兩種不同的序列化�
 
 WCF 也支援 <xref:System.Xml.Serialization.XmlSerializer> 類別。 <xref:System.Xml.Serialization.XmlSerializer>類別對 WCF 而言不是唯一的。 這是 ASP.NET Web 服務所使用的相同序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 類別支援的型別集範圍比 <xref:System.Runtime.Serialization.DataContractSerializer> 類別小多了，但允許對於結果 XML 有更多的控制權，並支援更多的 XML 結構描述定義語言 (XSD) 標準。 它在可序列化型別上也不需要任何宣告式屬性。 如需詳細資訊，請參閱 .NET Framework 檔中的 XML 序列化主題。 <xref:System.Xml.Serialization.XmlSerializer> 類別不支援資料合約類型。
 
-當使用 Svcutil 或 Visual Studio 中的**加入服務參考**功能來產生協力廠商服務的用戶端程式代碼，或存取協力廠商架構時，系統會自動為您選取適當的序列化程式。 如果結構描述與 <xref:System.Runtime.Serialization.DataContractSerializer> 不相容，便會選擇 <xref:System.Xml.Serialization.XmlSerializer>。
+當您使用 Svcutil.exe 或 Visual Studio 中的**加入服務參考**功能來產生協力廠商服務的用戶端程式代碼，或存取協力廠商架構時，系統會自動為您選取適當的序列化程式。 如果結構描述與 <xref:System.Runtime.Serialization.DataContractSerializer> 不相容，便會選擇 <xref:System.Xml.Serialization.XmlSerializer>。
 
 ## <a name="manually-switching-to-the-xmlserializer"></a>手動切換至 XmlSerializer
 
@@ -173,7 +174,7 @@ WCF 不支援 <xref:System.Xml.Serialization.SoapIncludeAttribute> <xref:System.
 
 - 產生的架構可能是有效的資料合約架構，如[資料合約架構參考](data-contract-schema-reference.md)中所述。 在這種情況中，結構描述會如平常般匯入，並產生一般資料合約類型。
 
-- 所產生的結構描述可能不是有效的資料合約結構描述。 例如，您的結構描述提供者方法可能會產生結構描述，其中包含資料合約模型中不支援的 XML 屬性。 在這種情況中，您可以將結構描述匯入為 `IXmlSerializable` 型別。 此匯入模式預設為不開啟，但可以很容易啟用–例如，使用 `/importXmlTypes` 命令列參數來切換至[System.servicemodel 中繼資料公用程式工具（Svcutil .exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)。 匯入架構中會詳細說明這種方式[來產生類別](importing-schema-to-generate-classes.md)。 請注意，您必須對您的型別執行個體直接使用 XML。 您可能也會考慮使用不同的序列化技術，支援範圍更廣的結構描述 – 請參閱有關使用 `XmlSerializer` 的主題。
+- 所產生的結構描述可能不是有效的資料合約結構描述。 例如，您的結構描述提供者方法可能會產生結構描述，其中包含資料合約模型中不支援的 XML 屬性。 在這種情況中，您可以將結構描述匯入為 `IXmlSerializable` 型別。 預設不會開啟此匯入模式，但可輕鬆啟用–例如，使用 `/importXmlTypes` 命令列參數來切換至 [ [System.servicemodel 中繼資料公用程式] 工具（Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)。 匯入架構中會詳細說明這種方式[來產生類別](importing-schema-to-generate-classes.md)。 請注意，您必須對您的型別執行個體直接使用 XML。 您可能也會考慮使用不同的序列化技術，支援範圍更廣的結構描述 – 請參閱有關使用 `XmlSerializer` 的主題。
 
 - 您可能會想要在 Proxy 中重複使用現有的 `IXmlSerializable` 型別，而非產生一個新的。 在這種情況中，「匯入結構描述以產生型別」主題中所說明的參照型別功能可用於指出要重複使用的型別。 這會對應至在 svcutil.exe 上使用 `/reference` 參數，指定包含要重複使用之型別的組件。
 
@@ -218,7 +219,7 @@ WCF 不支援 <xref:System.Xml.Serialization.SoapIncludeAttribute> <xref:System.
 > [!NOTE]
 > `<xmlSerializer useLegacySerializerGeneration="true"/>`參數僅適用于執行 .NET Framework 4.5 或更新版本的電腦。 上述 `appSettings` 方法適用于所有 .NET Framework 版本。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.DataContractFormatAttribute>
 - <xref:System.Runtime.Serialization.DataContractSerializer>

@@ -1,5 +1,6 @@
 ---
 title: WCF 安全性程式設計
+description: 瞭解如何建立安全的 WCF 應用程式，包括驗證、機密性和完整性。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b3c96e91c0d6f01fa30b3b617449e7d4a148933
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596769"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244981"
 ---
 # <a name="programming-wcf-security"></a>WCF 安全性程式設計
 本主題說明用來建立安全 Windows Communication Foundation （WCF）應用程式的基本程式設計工作。 本主題僅涵蓋驗證、機密性和完整性，統稱為*傳輸安全性*。 本主題並未涵蓋授權（控制對資源或服務的存取權）;如需授權的詳細資訊，請參閱[授權](authorization-in-wcf.md)。  
@@ -102,7 +103,7 @@ ms.locfileid: "84596769"
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [基本 WCF 程式設計](../basic-wcf-programming.md)
 - [常見的安全性案例](common-security-scenarios.md)

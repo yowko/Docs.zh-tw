@@ -1,5 +1,6 @@
 ---
 title: 使用訊息合約
+description: 瞭解如何使用訊息合約屬性來建立訊息合約，並在 WFC 中指定 SOAP 訊息的結構。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a75298b50df74ddf15904af43a0eb62c5ba8496
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600266"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244708"
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
 通常在建立 Windows Communication Foundation （WCF）應用程式時，開發人員會特別注意資料結構和序列化問題，而不需要考慮資料的結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 （如需詳細資訊，請參閱[在服務合約中指定資料傳輸](specifying-data-transfer-in-service-contracts.md)）。  
@@ -447,7 +448,7 @@ public class OperationDetails
   
  如果您要接收訊息物件做為 `Result` 屬性，並讓傳回的值做為該物件的屬性，則使用 `/messageContract` 命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用資料合約](using-data-contracts.md)
 - [設計與實作服務](../designing-and-implementing-services.md)

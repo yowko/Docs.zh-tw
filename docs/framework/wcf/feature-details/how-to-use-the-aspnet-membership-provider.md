@@ -1,17 +1,18 @@
 ---
 title: HOW TO：使用 ASP.NET 成員資格提供者
+description: 瞭解 ASP.NET 成員資格提供者如何支援網站，讓使用者建立使用者名稱和密碼以進行存取，而不需要 Windows 網域帳戶。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 840e4a5d365f2adbaf335c1061a580665a39824d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d527993dcf1fc5d5cd39bf22c3e772baf60e62f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595319"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246723"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>HOW TO：使用 ASP.NET 成員資格提供者
 
@@ -28,7 +29,7 @@ Windows Communication Foundation （WCF）開發人員可以基於安全性目�
 
 ### <a name="to-configure-the-membership-provider"></a>設定成員資格提供者
 
-1. 在 web.config 檔案中，< `system.web` > 元素底下，建立 < `membership` > 專案。
+1. 在 Web.config 檔案中，<> 專案底下 `system.web` ，建立 <`membership`> 元素。
 
 2. 在 `<membership>` 項目。
 
@@ -156,7 +157,7 @@ Windows Communication Foundation （WCF）開發人員可以基於安全性目�
 </configuration>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [HOW TO：使用 ASP.NET 角色提供者搭配服務](how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [成員資格和角色提供者](../samples/membership-and-role-provider.md)

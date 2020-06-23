@@ -1,5 +1,6 @@
 ---
 title: 使用憑證
+description: 瞭解 x.509 數位憑證功能，以及如何在 WCF 中使用它們。 本文中的資源可以進一步說明這些概念。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: e61437efd87c30758c36d642bb9269ad2966c951
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8090e84b33e2a6f442d387c7012e6ccdc2900dd1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600110"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246398"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 
@@ -188,7 +189,7 @@ IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 
 
 在第一版的 WCF 中，您不需要諮詢網域原則便可進行對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>

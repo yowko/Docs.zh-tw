@@ -1,13 +1,14 @@
 ---
 title: HOW TO：以 SSL 設定 IIS 裝載的 WCF 服務
+description: 瞭解如何設定 IIS 裝載的 WCF 服務，以使用 HTTP 傳輸安全性，這需要已向 IIS 註冊的憑證。
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: fb3e87021c3dce1172250f33fd302916920af74d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8dc4692863d93e407a122c0ba93ae38323b8b213
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597224"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245254"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>HOW TO：以 SSL 設定 IIS 裝載的 WCF 服務
 本主題說明如何設定 IIS 裝載的 WCF 服務以使用 HTTP 傳輸安全性。 HTTP 傳輸安全性必須使用 SSL 憑證才能註冊到 IIS。 如果您沒有 SSL 憑證，則可以使用 IIS 來產生測試憑證。 接下來，您必須將 SSL 繫結加入至網站，並設定網站的驗證屬性。 最後，您需要將 WCF 服務設定為使用 HTTPS。  
@@ -144,7 +145,7 @@ ms.locfileid: "84597224"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在網際網路資訊服務中裝載](hosting-in-internet-information-services.md)
 - [Internet Information Service 裝載指示](../samples/internet-information-service-hosting-instructions.md)

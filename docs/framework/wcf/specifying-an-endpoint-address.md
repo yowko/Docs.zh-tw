@@ -1,5 +1,6 @@
 ---
 title: 指定端點位址
+description: 瞭解端點位址，這是 WCF 中 ServiceEndpoint 的一個部分。 所有與 WCF 服務的通訊都是透過其端點進行。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: e1bd9e5a27d1bc86d2d3e04ee82221a27a4e1fa8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441015"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245980"
 ---
 # <a name="specifying-an-endpoint-address"></a>指定端點位址
 
@@ -42,13 +43,13 @@ EPR 模型的一部分，就是每個端點參考都包含可新增額外識別�
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>在組態中定義端點位址
 
-若要在設定檔中定義端點，請使用[ \< 端點>](../configure-apps/file-schema/wcf/endpoint-element.md)元素。
+若要在設定檔中定義端點，請使用 [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) 元素。
 
 [!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>呼叫方法時（也就是當裝載應用程式嘗試啟動服務時），系統會尋找具有指定 "UE" 之 name 屬性的[ \< 服務>](../configure-apps/file-schema/wcf/service.md)元素。範例. HelloService」。 如果找到[ \< 服務>](../configure-apps/file-schema/wcf/service.md)元素，系統就會載入指定的類別，並使用設定檔中提供的端點定義來建立端點。 這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。 使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。
+<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>呼叫方法時（也就是當裝載應用程式嘗試啟動服務時），系統會尋找 [\<service>](../configure-apps/file-schema/wcf/service.md) 具有指定 "UE" 之名稱屬性的元素。範例. HelloService」。 如果 [\<service>](../configure-apps/file-schema/wcf/service.md) 找到元素，系統就會載入指定的類別，並使用設定檔中提供的端點定義來建立端點。 這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。 使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。
 
-選擇性標頭會在>的[ \< 標頭](../configure-apps/file-schema/wcf/headers-element.md)中宣告。 以下是在設定檔中用來為服務指定端點的元素範例，這些專案可區別兩個標頭：來自的「金級」用戶端 `http://tempuri1.org/` 和來自的「標準」用戶端 `http://tempuri2.org/` 。 呼叫此服務的用戶端必須在其設定檔中>適當的[ \< 標頭](../configure-apps/file-schema/wcf/headers-element.md)。
+選擇性標頭會在中宣告 [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) 。 以下是在設定檔中用來為服務指定端點的元素範例，這些專案可區別兩個標頭：來自的「金級」用戶端 `http://tempuri1.org/` 和來自的「標準」用戶端 `http://tempuri2.org/` 。 呼叫此服務的用戶端 [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) 在其設定檔中必須具有適當的。
 
 [!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 
@@ -91,4 +92,4 @@ EPR 模型的一部分，就是每個端點參考都包含可新增額外識別�
 - <xref:System.ServiceModel.EndpointAddress>
 - [服務身分識別和驗證](./feature-details/service-identity-and-authentication.md)
 - [端點建立概觀](endpoint-creation-overview.md)
-- [裝載](./feature-details/hosting.md)
+- [Hosting](./feature-details/hosting.md)

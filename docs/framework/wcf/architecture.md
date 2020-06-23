@@ -1,17 +1,18 @@
 ---
 title: Windows Communication Foundation 架構
+description: 瞭解 Windows Communication Foundation 架構的主要層，包括合約、服務執行時間、訊息和啟動 & 裝載。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f34a05a436dd021f0d1fcc05f3a12a058123acdc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a07d5c4be2e36b8123e39a0a04d841797e34212b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320840"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245566"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 架構
 下圖說明 Windows Communication Foundation （WCF）架構的主要層。  
@@ -25,11 +26,11 @@ ms.locfileid: "72320840"
  原則和繫結會規定與服務進行通訊時的必要條件。  例如，繫結必須 (至少需要) 指定使用的傳輸 (例如，HTTP 或 TCP)，以及編碼方式。 原則包含在與服務通訊時必須符合的安全性需求和其他條件。  
   
 ### <a name="service-runtime"></a>服務執行階段  
- 服務執行階段層包含只會在服務之實際作業期間發生的行為，也就是服務的執行階段行為。 節流設定會控制要處理多少訊息，而隨著對服務的要求擴大到預設限制，這個數量可能會有所不同。 錯誤行為會指定在服務發生內部錯誤時所要發生的動作，例如，控制有哪些資訊要傳送到用戶端 （太多資訊可能會讓惡意使用者有機會發動攻擊的優勢）。中繼資料行為會控管中繼資料是否可供外部世界使用。 執行個體 (Instance) 行為會指定可以執行服務之執行個體的數目 (例如，「單一」就是指定僅能使用一個執行個體來處理所有訊息)。 異動行為可使異動的作業在發生失敗時進行復原。 分派行為是控制 WCF 基礎結構處理訊息的方式。  
+ 服務執行階段層包含只會在服務之實際作業期間發生的行為，也就是服務的執行階段行為。 節流設定會控制要處理多少訊息，而隨著對服務的要求擴大到預設限制，這個數量可能會有所不同。 錯誤行為會指定在服務發生內部錯誤時所要發生的動作，例如，控制有哪些資訊要傳送到用戶端  （太多資訊可能會讓惡意使用者有機會發動攻擊的優勢）。中繼資料行為會控管中繼資料是否可供外部世界使用。 執行個體 (Instance) 行為會指定可以執行服務之執行個體的數目 (例如，「單一」就是指定僅能使用一個執行個體來處理所有訊息)。 異動行為可使異動的作業在發生失敗時進行復原。 分派行為是控制 WCF 基礎結構處理訊息的方式。  
   
  擴充性可使執行階段處理序進行自訂。 例如，訊息檢查是檢查訊息之部分的功能，而啟用參數篩選功能時，便會根據作用於訊息標頭的篩選來發生預設動作。  
   
-### <a name="messaging"></a>訊息  
+### <a name="messaging"></a>Messaging (傳訊)  
  訊息層是由*通道*所組成。 通道是指能以某種方式 (例如，藉由驗證訊息) 處理訊息的元件。 一組通道也稱為「*通道堆疊*」。 通道會在訊息和訊息標頭上運作。 這點不同於服務執行階段層，其主要著重於關於處理訊息本文的執行。  
   
  通道類型有兩種：傳輸通道和通訊協定通道。  
@@ -45,7 +46,7 @@ ms.locfileid: "72320840"
   
  服務也可以裝載 *，或*在外部代理程式所管理的可執行檔中執行，例如 IIS 或 Windows 啟用服務（WAS）。 WAS 可讓 WCF 應用程式在執行 WAS 的電腦上部署時自動啟用。 服務也可以透過手動方式來當做可執行檔 (.exe 檔) 執行。 服務也可以自動當做 Windows 服務執行。 COM + 元件也可以裝載為 WCF 服務。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [什麼是 Windows Communication Foundation](whats-wcf.md)
 - [Windows Communication Foundation 的基本概念](fundamental-concepts.md)

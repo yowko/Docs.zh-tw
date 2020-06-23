@@ -1,16 +1,17 @@
 ---
 title: 匿名用戶端的傳輸安全性
+description: 請參閱此 WCF 案例，其使用傳輸安全性來驗證服務器，方法是使用用戶端所信任的憑證。 用戶端未經過驗證。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 08cfb8c1a5581f17a251224430018764bed80b0f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344749"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245007"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>匿名用戶端的傳輸安全性
 
@@ -20,21 +21,21 @@ ms.locfileid: "75344749"
 
 如需搭配服務使用憑證的詳細資訊，請參閱使用[憑證](working-with-certificates.md)和[如何：使用 SSL 憑證設定埠](how-to-configure-a-port-with-an-ssl-certificate.md)。
 
-![使用匿名用戶端的傳輸安全性](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
+![搭配匿名用戶端使用傳輸安全性](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
 |特性|描述|
 |--------------------|-----------------|
-|安全性模式|Transport|
+|安全性模式|傳輸|
 |互通性|與現有的 Web 服務和用戶端|
-|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是<br /><br /> 應用層級（沒有 WCF 支援）|
-|完整性|是|
-|機密性|是|
-|Transport|HTTPS|
+|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|Yes<br /><br /> 應用層級（沒有 WCF 支援）|
+|完整性|Yes|
+|保密|Yes|
+|傳輸|HTTPS|
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|
 
 ## <a name="service"></a>服務
 
-下列程式碼和組態要獨立執行。 請執行下列其中一項動作：
+下列程式碼和組態要獨立執行。 執行下列其中一個動作：
 
 - 使用不含組態的程式碼建立獨立服務。
 
@@ -47,7 +48,7 @@ ms.locfileid: "75344749"
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
-### <a name="configuration"></a>組態
+### <a name="configuration"></a>設定
 
 下列程式碼會使用組態設定相同端點。 此用戶端不會透過任何機制進行驗證，因此屬於匿名。
 
@@ -80,7 +81,7 @@ ms.locfileid: "75344749"
 
 ## <a name="client"></a>Client
 
-下列程式碼和組態要獨立執行。 請執行下列其中一項動作：
+下列程式碼和組態要獨立執行。 執行下列其中一個動作：
 
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。
 
@@ -94,7 +95,7 @@ ms.locfileid: "75344749"
 [!code-csharp[c_SecurityScenarios#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
 [!code-vb[c_SecurityScenarios#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]
 
-### <a name="configuration"></a>組態
+### <a name="configuration"></a>設定
 
 可以使用下列組態來取代程式碼，進行設定服務。
 
@@ -121,9 +122,9 @@ ms.locfileid: "75344749"
 </configuration>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [安全性概觀](security-overview.md)
+- [安全性總覽](security-overview.md)
 - [WS 傳輸安全性](../samples/ws-transport-security.md)
 - [傳輸安全性概觀](transport-security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

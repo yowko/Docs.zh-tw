@@ -1,5 +1,6 @@
 ---
 title: 使用平台叫用封送處理資料
+description: 在 .NET 中使用平台叫用封送處理資料。 查看 Windows Api 和 C 樣式函式中使用的資料類型清單，並尋找其 .NET managed 類型對等專案。
 ms.date: 03/20/2019
 dev_langs:
 - cpp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27045790780c1eef9537bdf7e52deb579e2b467c
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399935"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904100"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>使用平台叫用封送處理資料
 

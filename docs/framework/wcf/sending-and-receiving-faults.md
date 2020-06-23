@@ -1,5 +1,6 @@
 ---
 title: 傳送和接收錯誤
+description: 瞭解當發生錯誤狀況時，服務或雙工用戶端如何傳送 SOAP 錯誤，以及用戶端或服務應用程式如何處理這些錯誤。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: dc9dcb5d8e36984d1e5a2e5c5124e74509de7f3d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 23f63fde2755a29cd545d3aefe699cad8dbecb3b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320220"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244318"
 ---
 # <a name="sending-and-receiving-faults"></a>傳送和接收錯誤
 
@@ -29,7 +30,7 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
 [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
 [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]
 
-若要將 `GreetingFault` 錯誤資訊傳送到用戶端，請捕捉適當的錯誤情況並擲回包含新的 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 物件之新的 `GreetingFault` (屬於 `GreetingFault` 型別) 做為引數，如下列程式碼範例所示。 如果用戶端是 WCF 用戶端應用程式，它會將此視為 managed 例外狀況，其中類型是 `GreetingFault` 類型的 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>。
+若要將 `GreetingFault` 錯誤資訊傳送到用戶端，請捕捉適當的錯誤情況並擲回包含新的 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 物件之新的 `GreetingFault` (屬於 `GreetingFault` 型別) 做為引數，如下列程式碼範例所示。 如果用戶端是 WCF 用戶端應用程式，它會將此視為屬於類型的 managed 例外狀況 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> `GreetingFault` 。
 
 [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
 [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]
@@ -39,11 +40,11 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
 傳送未宣告的錯誤可能非常適合用來在 WCF 應用程式中快速診斷和偵測問題，但它的實用性會受到限制。 在偵錯時，使用 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性是較普遍的建議做法。 當您將此值設為 true，用戶端會碰到諸如 <xref:System.ServiceModel.FaultException%601> 類別的 <xref:System.ServiceModel.ExceptionDetail> 例外狀況之類的錯誤。
 
 > [!IMPORTANT]
-> 因為 managed 例外狀況可以公開內部應用程式資訊，所以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設定為 `true` 可以允許 WCF 用戶端取得內部服務作業例外狀況的相關資訊，包括個人標識或其他機密更多資訊.
+> 因為 managed 例外狀況可以公開內部應用程式資訊，所以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或設定 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 為 `true` 可允許 WCF 用戶端取得內部服務作業例外狀況的相關資訊，包括個人標識或其他機密資訊。
 >
-> 因此，若您只是暫時對服務應用程式進行偵錯，才建議把 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設為 `true`。 此外，若某個方法以這種方式傳回未處理的 Managed 例外狀況，則該方法的 WSDL 不會包含 <xref:System.ServiceModel.FaultException%601> 型別之 <xref:System.ServiceModel.ExceptionDetail> 的合約。 用戶端必須預期會有未知的 SOAP 錯誤（以 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 物件的形式傳回 WCF 用戶端），才能正確取得偵錯工具資訊。
+> 因此，若您只是暫時對服務應用程式進行偵錯，才建議把 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設為 `true`。 此外，若某個方法以這種方式傳回未處理的 Managed 例外狀況，則該方法的 WSDL 不會包含 <xref:System.ServiceModel.FaultException%601> 型別之 <xref:System.ServiceModel.ExceptionDetail> 的合約。 用戶端必須預期會有未知的 SOAP 錯誤（以物件的形式傳回給 WCF 用戶端 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> ），才能正確取得偵錯工具資訊。
 
-若要傳送未宣告的 SOAP 錯誤，請擲回 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 物件 (亦即，不是泛型 <xref:System.ServiceModel.FaultException%601> 型別)，並將字串傳送至建構函式。 這會公開給 WCF 用戶端應用程式，做為擲回的 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 例外狀況，其中字串可透過呼叫 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> 方法來取得。
+若要傳送未宣告的 SOAP 錯誤，請擲回 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 物件 (亦即，不是泛型 <xref:System.ServiceModel.FaultException%601> 型別)，並將字串傳送至建構函式。 這會公開給 WCF 用戶端應用程式，做為擲回的 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 例外狀況，其中字串可透過呼叫方法來取得 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> 。
 
 > [!NOTE]
 > 如果您宣告 String 型別的 SOAP 錯誤，則請將此項目做為 <xref:System.ServiceModel.FaultException%601> 擲回服務 (當中的型別參數是一個 <xref:System.String?displayProperty=nameWithType>，而字串值則是指派給 <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> 屬性，而且無法透過 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> 取得)。
@@ -67,7 +68,7 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
 收到作業合約中指定的錯誤時，用戶端會擲回 <xref:System.ServiceModel.FaultException%601> 例外狀況，以回應雙向作業 (也就是具有 <xref:System.ServiceModel.OperationContractAttribute> 屬性，且將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 設為 `false` 的方法)。
 
 > [!NOTE]
-> 當 WCF 服務將 [<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>] 或 [<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>] 屬性設定 `true` 為時，用戶端會將此體驗為類型 <xref:System.ServiceModel.ExceptionDetail> 的未宣告 <xref:System.ServiceModel.FaultException%601>。 用戶端可以捕捉此特定錯誤，或是在 <xref:System.ServiceModel.FaultException> 的 catch 區塊中處理此錯誤。
+> 當 WCF 服務將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性設定為時 `true` ，用戶端會將此體驗為未宣告 <xref:System.ServiceModel.FaultException%601> 的類型 <xref:System.ServiceModel.ExceptionDetail> 。 用戶端可以捕捉此特定錯誤，或是在 <xref:System.ServiceModel.FaultException> 的 catch 區塊中處理此錯誤。
 
 一般來說，只有 <xref:System.ServiceModel.FaultException%601>、<xref:System.TimeoutException>，和 <xref:System.ServiceModel.CommunicationException> 例外狀況會與用戶端及服務相關。
 
@@ -112,10 +113,10 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
 [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
 [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [預期的例外狀況](./samples/expected-exceptions.md)
-- [使用 Close 和 Abort 釋放 WCF 用戶端資源](./samples/use-close-abort-release-wcf-client-resources.md)
+- [使用關閉和中止發行 WCF 用戶端資源](./samples/use-close-abort-release-wcf-client-resources.md)

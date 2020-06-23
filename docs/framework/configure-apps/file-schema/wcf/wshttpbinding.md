@@ -1,15 +1,16 @@
 ---
 title: <wsHttpBinding>
+description: 定義安全、可靠且互通的 HTTP 系結，適用于非雙工服務合約，其會執行 WS-TRUST 訊息和 WS-MANAGEMENT。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: a71ad2a2279eabbcf917df58d7bedec0e728f9e5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d603f699145622cb1b70ecf99ea542572e841eac
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140388"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243980"
 ---
 # \<wsHttpBinding>
 為非雙工服務合約定義安全、可靠且互通的繫結。 此繫結會實作下列規格：WS-Reliable 訊息用於可靠性以及 WS-Security 用於訊息安全性和驗證。 傳輸是 HTTP，而訊息編碼是 Text/XML 編碼。  
@@ -19,7 +20,7 @@ ms.locfileid: "74140388"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<wsHttpBinding>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <wsHttpBinding>

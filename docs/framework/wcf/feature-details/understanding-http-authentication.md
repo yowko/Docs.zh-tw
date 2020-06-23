@@ -1,13 +1,14 @@
 ---
 title: 了解 HTTP 驗證
+description: 請參閱這篇 WCF 中的 HTTP 驗證簡介，包括 HTTP 驗證配置及選擇驗證架構。
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: a31c9f96185364c59dca1ff26251a30f5d7a88bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 761ab7a92aa26ce1437eefa360e5b46df179e32d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595085"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246515"
 ---
 # <a name="understanding-http-authentication"></a>了解 HTTP 驗證
 驗證是一種識別用戶端是否具備存取資源之資格的程序。 HTTP 通訊協定支援驗證作為存取安全資源的交涉方法。  
@@ -35,7 +36,7 @@ ms.locfileid: "84595085"
   
 - 伺服器不應存在任何 (以 WWW-Authentication 標頭表示) 不預備接受或未能提供保護資源適當安全的配置。 用戶端可自行選擇任何伺服器提供的驗證配置。 有些用戶端預設選擇最薄弱的驗證配置，或是伺服器清單中第一項驗證配置。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [傳輸安全性概觀](transport-security-overview.md)
 - [使用模擬搭配傳輸安全性](using-impersonation-with-transport-security.md)

@@ -1,6 +1,7 @@
 ---
 title: 從 ComboBox、ListBox 或 CheckedListBox 控制項新增和移除專案
 ms.date: 03/30/2017
+description: 瞭解如何只在沒有資料系結的情況下，新增和移除 Windows Forms ComboBox、ListBox 和 CheckedListBox 控制項。
 dev_langs:
 - csharp
 - vb
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 3a83d98af42386b566b4af7bc11ff383dea8fd6b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f3701257bbe410bf03c4c21700705e87b581bf2e
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746300"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904438"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：從 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目
-專案可以用各種方式加入至 Windows Forms 下拉式方塊、清單方塊或已核取清單方塊，因為這些控制項可以系結至各種不同的資料來源。 不過，本主題將示範最簡單的方法，而且不需要資料系結。 顯示的專案通常是字串;不過，您可以使用任何物件。 控制項中顯示的文字是物件的 `ToString` 方法所傳回的值。  
+專案可以用各種方式加入至 Windows Forms 下拉式方塊、清單方塊或已核取清單方塊，因為這些控制項可以系結至各種不同的資料來源。 不過，本主題將示範最簡單的方法，而且不需要資料系結。 顯示的專案通常是字串;不過，您可以使用任何物件。 控制項中顯示的文字是物件的方法所傳回的值 `ToString` 。  
   
 ### <a name="to-add-items"></a>若要加入專案  
   
-1. 使用 `ObjectCollection` 類別的 `Add` 方法，將字串或物件新增至清單。 使用 `Items` 屬性來參考集合：  
+1. 使用類別的方法，將字串或物件新增至清單 `Add` `ObjectCollection` 。 使用屬性來參考集合 `Items` ：  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +43,7 @@ ms.locfileid: "76746300"
   
      - 或 -  
   
-2. 使用 `Insert` 方法，將字串或物件插入清單中所需的點：  
+2. 使用方法，在清單中的所需點插入字串或物件 `Insert` ：  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -89,9 +90,9 @@ ms.locfileid: "76746300"
   
 ### <a name="to-remove-an-item"></a>若要移除專案  
   
-1. 呼叫 `Remove` 或 `RemoveAt` 方法來刪除專案。  
+1. 呼叫 `Remove` 或 `RemoveAt` 方法以刪除專案。  
   
-     `Remove` 有一個指定要移除之專案的引數。`RemoveAt` 移除具有指定之索引編號的專案。  
+     `Remove`具有一個指定要移除之專案的引數。`RemoveAt` 移除具有指定之索引編號的專案。  
   
     ```vb  
     ' To remove item with index 0:  
@@ -122,7 +123,7 @@ ms.locfileid: "76746300"
   
 ### <a name="to-remove-all-items"></a>移除所有專案  
   
-1. 呼叫 `Clear` 方法，從集合中移除所有專案：  
+1. 呼叫 `Clear` 方法來移除集合中的所有專案：  
   
     ```vb  
     ListBox1.Items.Clear()  
@@ -141,6 +142,6 @@ ms.locfileid: "76746300"
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [操作說明：排序 Windows Forms 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [如何：排序 Windows Form 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [何時使用 Windows Forms ComboBox 取代 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)
+- [用來列出選項的 Windows Form 控制項](windows-forms-controls-used-to-list-options.md)

@@ -1,5 +1,6 @@
 ---
 title: 使用資料合約
+description: 瞭解定義每個參數或傳回類型的資料合約，哪些資料會序列化為要在 WCF 用戶端和伺服器之間交換。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 0d11b48d3021bf0d92d74ab67bc18c2bdd2bdd0e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 80ea2a8bd67c627fbe11ee07e640704c1a41ef7b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594994"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244721"
 ---
 # <a name="using-data-contracts"></a>使用資料合約
 「 *資料合約* 」(Data Contract) 是服務與用戶端之間的正式合約，其中會抽象地描述要交換的資料。 也就是說，若要進行通訊，用戶端與服務並不需要共用相同的型別，而只需要共用相同的資料合約。 資料合約會針對每個參數或傳回型別精確地定義哪些資料要序列化 (變成 XML) 才能進行交換。  
@@ -66,7 +67,7 @@ ms.locfileid: "84594994"
   
  如需定義資料合約的 WCF 服務完整程式碼範例，請參閱 [Basic Data Contract](../samples/basic-data-contract.md) 範例。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>

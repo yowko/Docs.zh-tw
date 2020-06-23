@@ -1,5 +1,6 @@
 ---
 title: 使用者入門範例
+description: 瞭解如何使用 WCF 來執行一般服務和一般用戶端。 這個範例是所有其他基本技術範例的基礎。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b23be1b33f227154b916429c063ec4106229bb3c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575182"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246229"
 ---
 # <a name="getting-started-sample"></a>使用者入門範例
 
@@ -32,7 +33,7 @@ ms.locfileid: "84575182"
 
 此服務會描述其在服務合約中 (即服務公開為中繼資料的服務合約) 所執行的作業。 此服務也包含會實作這些作業的程式碼。
 
-用戶端包含服務合約的定義，以及用來存取服務的 Proxy 類別。 使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)，從服務中繼資料產生 proxy 程式碼。
+用戶端包含服務合約的定義，以及用來存取服務的 Proxy 類別。 使用[System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)從服務中繼資料產生 proxy 程式碼。
 
 在 Windows Vista 上，服務裝載于 Windows 啟用服務（WAS）中。 在 Windows XP 和 Windows Server 2003 上，它是由 Internet Information Services （IIS）和 ASP.NET 所主控。 使用 IIS 或 WAS 裝載服務，便可以讓服務在第一次存取時就自動啟動。
 
@@ -174,7 +175,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
-用戶端會使用由[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的用戶端類別，透過指定的合約型別進行通訊。 這個產生的用戶端會包含在 generatedClient.cs 或 generatedClient.vb 檔中。 這個公用程式會擷取指定服務的中繼資料，然後產生用戶端應用程式透過指定合約型別來進行通訊的用戶端。 裝載的服務必須可用來產生用戶端程式碼，因為該服務將被用來擷取更新的中繼資料。
+用戶端會使用由[System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)所產生的用戶端類別，透過指定的合約型別進行通訊。 這個產生的用戶端會包含在 generatedClient.cs 或 generatedClient.vb 檔中。 這個公用程式會擷取指定服務的中繼資料，然後產生用戶端應用程式透過指定合約型別來進行通訊的用戶端。 裝載的服務必須可用來產生用戶端程式碼，因為該服務將被用來擷取更新的中繼資料。
 
  從用戶端目錄中的 SDK 命令提示字元執行下列命令，以產生具型別的 Proxy：
 
@@ -283,7 +284,7 @@ Press <ENTER> to terminate client.
 
 3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：於受管理的應用程式中裝載 WCF 服務](../how-to-host-a-wcf-service-in-a-managed-application.md)
 - [How to: Host a WCF Service in IIS](../feature-details/how-to-host-a-wcf-service-in-iis.md)

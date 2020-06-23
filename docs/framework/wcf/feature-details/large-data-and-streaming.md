@@ -1,13 +1,14 @@
 ---
 title: 大型資料與資料流
+description: 瞭解 WCF XML 通訊、編碼器和串流資料的考慮，包括二進位資料的傳輸。
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 21993f230b19a76020807e1f17bd6256f2ee0b1c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586321"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246580"
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
 
@@ -239,6 +240,6 @@ public class UploadStreamMessage
 > [!NOTE]
 > 使用緩衝或資料流傳輸是由端點處決定。 如果是 HTTP 傳輸，傳輸模式不會在連線上傳播，或是在 Proxy 伺服器與其他媒介之間進行傳播。 設定傳輸模式不會反映在服務介面的描述中。 將 WCF 用戶端產生到服務之後，您必須針對要搭配資料流程傳輸使用的服務編輯設定檔，以設定模式。 如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [HOW TO：啟用資料流](how-to-enable-streaming.md)

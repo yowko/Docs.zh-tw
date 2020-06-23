@@ -1,5 +1,6 @@
 ---
-title: EventStatus 列舉型別 (adodb)
+title: EventStatus 列舉（adodb）
+description: 取得 .NET 中 EventStatus 列舉的相關資訊。 這個列舉是在 adodb 命名空間和 adodb 元件（在 adodb.dll 程式庫中）。
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 1eddac7f9b813ea76e8347deb6f4bd7548abe504
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7effa55efb104c9203e7051ef998b03ff3315e93
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989845"
 ---
 # <a name="eventstatus-enumeration"></a>EventStatus 列舉
 
@@ -36,6 +37,6 @@ public enum EventStatusEnum
 
 ## <a name="requirements"></a>需求
 
-**命名空間︰** `adodb`
+**命名空間：** `adodb`
 
-**組件：** adodb （以 adodb.dll)
+**元件：** adodb （在 adodb.dll 中）

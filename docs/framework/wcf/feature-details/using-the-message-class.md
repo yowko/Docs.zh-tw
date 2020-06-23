@@ -1,16 +1,17 @@
 ---
 title: 使用 Message 類別
+description: 瞭解 Message 類別，這是 WCF 的基礎。 您只需要在某些先進的案例中，直接使用 Message 類別來進行程式設計。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 142578ef76a70fed27dc0137378b59e228cd25c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f806e257cfd3ccc5118a5783e2eda48eef4ba0bf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585645"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246489"
 ---
 # <a name="using-the-message-class"></a>使用 Message 類別
 <xref:System.ServiceModel.Channels.Message>類別是 Windows Communication Foundation （WCF）的基礎。 用戶端和服務之間的通訊，最終結果都是要傳送和接收 <xref:System.ServiceModel.Channels.Message> 執行個體。  
@@ -94,7 +95,7 @@ ms.locfileid: "84585645"
  [!code-csharp[C_UsingTheMessageClass#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#5)]
  [!code-vb[C_UsingTheMessageClass#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#5)]  
   
- 有兩個額外的 Helper 方法會寫出特定 SOAP 開始項目標記。 這些方法不會存取訊息本文，因此不會變更訊息狀態。 它們包括：  
+ 有兩個額外的 Helper 方法會寫出特定 SOAP 開始項目標記。 這些方法不會存取訊息本文，因此不會變更訊息狀態。 其中包括：  
   
 - <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> 會寫入開始本文項目，例如 `<soap:Body>`。  
   

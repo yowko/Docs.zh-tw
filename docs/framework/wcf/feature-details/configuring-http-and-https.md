@@ -1,21 +1,22 @@
 ---
 title: 設定 HTTP 和 HTTPS
+description: 瞭解如何設定 HTTP/HTTPS 以允許 WCF 服務和用戶端進行通訊。 使用 Netsh.exe 設定 URL 註冊和防火牆例外。
 ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: f7fd2bad6ced09b638cc1bb5d539fab1b9ce7d25
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fbff78ff8e2c5c4fa73a56a3fdc15163596aa985
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336691"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245137"
 ---
 # <a name="configuring-http-and-https"></a>設定 HTTP 和 HTTPS
 
 WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。 HTTP/HTTPS 設定是使用 Internet Information Services (IIS)，或使用命令列工具設定。 在 IIS HTTP 或 HTTPS 之下裝載 WCF 服務時，設定可以在 IIS (使用 inetmgr.exe 工具) 內進行。 如果是自我裝載的 WCF 服務，可以使用命令列工具設定 HTTP 或 HTTPS 設定。
 
-您至少要設定 URL 註冊，並為您的服務將使用的 URL 新增防火牆例外。 您可以使用 Netsh 工具來設定這些設定。
+您至少要設定 URL 註冊，並為您的服務將使用的 URL 新增防火牆例外。 您可以使用 Netsh.exe 工具來設定這些設定。
 
 ## <a name="configuring-namespace-reservations"></a>設定命名空間保留
 
@@ -23,13 +24,13 @@ WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。 HTTP/HTTPS 設
 
 執行中的應用程式可以建立類似的要求來新增命名空間註冊區。 註冊區與保留區會競爭使用命名空間的各個部分。 根據與[萬用字元的命名空間宣告之間的解析](/windows/desktop/Http/routing-incoming-requests)順序所提供的解析順序，保留的優先順序可能高於註冊。 在此情況中，保留區會封鎖執行中的應用程式，使其無法接收要求。
 
-下列範例會使用 Netsh 工具：
+下列範例會使用 Netsh.exe 工具：
 
 ```console
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ```
 
-此命令會為 DOMAIN\user 帳戶的指定 URL 命名空間新增 URL 保留專案。 如需使用 netsh 命令的詳細資訊，請在命令提示字元中輸入 `netsh http add urlacl /?`，然後按 Enter 鍵。
+此命令會為 DOMAIN\user 帳戶的指定 URL 命名空間新增 URL 保留專案。 如需使用 netsh 命令的詳細資訊，請 `netsh http add urlacl /?` 在命令提示字元中輸入，然後按 enter 鍵。
 
 ## <a name="configuring-a-firewall-exception"></a>設定防火牆例外狀況
 
@@ -57,9 +58,9 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 使用 <xref:System.ServiceModel.WSDualHttpBinding> 時，用戶端連線會使用與命名空間保留區及 Windows 防火牆相容的預設值。 如果您選擇自訂雙向連線的用戶端基底位址，則您必須同時在用戶端上設定這些 HTTP 設定值以符合新的位址。
 
-HTTP 伺服器 API 有一些無法透過 Httpcfg.exe 取得的 advanced configuration 設定。 這些設定會維護在登錄中，並套用至所有在系統中使用 HTTP 伺服器 API 的應用程式。 如需這些設定的相關資訊，請參閱[IIS 的](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows)HTTP.sys 登錄設定。 大部分的使用者都不需要變更這些設定。
+HTTP 伺服器 API 有一些無法透過 Httpcfg.exe 取得的 advanced configuration 設定。 這些設定會維護在登錄中，並套用至所有在系統中使用 HTTP 伺服器 API 的應用程式。 如需這些設定的相關資訊，請參閱[Http.sys IIS 的登錄設定](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows)。 大部分的使用者都不需要變更這些設定。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - [如何：使用 SSL 憑證設定連接埠](how-to-configure-a-port-with-an-ssl-certificate.md)

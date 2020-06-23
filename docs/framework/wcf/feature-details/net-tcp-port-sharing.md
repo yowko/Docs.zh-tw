@@ -1,16 +1,17 @@
 ---
 title: Net.TCP Port Sharing
+description: 瞭解適用于高效能通訊的 TCP 通訊協定，以及可讓您在 WCF 中跨多個使用者進程共用埠的服務。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: d9c6caa546d9f31f4e68b850dc1b1e750da2e93c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a9579c588906f509dd835d3c9b25571495d147e0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598758"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245241"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Port Sharing
 Windows Communication Foundation （WCF）會針對高效能通訊提供新的 TCP 型網路通訊協定（net.tcp：//）。 WCF 也引進了新的系統元件，這是 Net.tcp 埠共用服務，可讓您跨多個使用者進程共用 net.tcp 埠。  
@@ -22,7 +23,7 @@ Windows Communication Foundation （WCF）會針對高效能通訊提供新的 T
   
  在 HTTP.SYS 模型中，許多不同的 HTTP 應用程式流量在經過多工處理後，可以傳入單一 TCP 連接埠，而這已經變成了 Windows 平台的標準做法。 這種做法提供防火牆管理員一個共同的控制點，同時讓應用程式開發人員在建置可以運用網路的新應用程式時，將部署成本降到最低。  
   
- 在多個 HTTP 應用程式之間共用連接埠的能力，一直都是網際網路資訊服務 (IIS) 的標準功能之一。 不過，它只是介紹 HTTP。具有 IIS 6.0 的 SYS （核心模式 HTTP 通訊協定接聽程式），此基礎結構已完全一般化。 事實上，HTTP.SYS 可讓任意使用者處理序共用專門用來處理 HTTP 流量的 TCP 連接埠。 這項功能可讓許多 HTTP 應用程式共存於同一部實體電腦內個別、隔離的處理序中，同時透過 TCP 連接埠 80 共用所需的網路基礎結構以便傳送與接收流量。 Net.TCP 連接埠共用服務可讓 net.tcp 應用程式共用同樣類型的連接埠。  
+ 在多個 HTTP 應用程式之間共用連接埠的能力，一直都是網際網路資訊服務 (IIS) 的標準功能之一。 不過，它只是導入 HTTP.SYS （核心模式 HTTP 通訊協定接聽程式）與 IIS 6.0 的引進，此基礎結構已完全一般化。 事實上，HTTP.SYS 可讓任意使用者處理序共用專門用來處理 HTTP 流量的 TCP 連接埠。 這項功能可讓許多 HTTP 應用程式共存於同一部實體電腦內個別、隔離的處理序中，同時透過 TCP 連接埠 80 共用所需的網路基礎結構以便傳送與接收流量。 Net.TCP 連接埠共用服務可讓 net.tcp 應用程式共用同樣類型的連接埠。  
   
 ## <a name="port-sharing-architecture"></a>連接埠共用架構  
  WCF 中的埠共用架構有三個主要元件：  
@@ -48,7 +49,7 @@ Windows Communication Foundation （WCF）會針對高效能通訊提供新的 T
 ## <a name="security-implications-of-port-sharing"></a>連接埠共用的安全性含意  
  儘管 Net.TCP 連接埠共用服務會在應用程式與網路之間提供一層處理，您還是應該將使用連接埠共用的應用程式視為直接在網路上接聽一樣來加以保護。 具體來說，使用連接埠共用的應用程式應該評估執行時所需的處理序權限。 請考慮使用內建的網路服務帳戶來執行應用程式，在此情況下會以網路通訊所需的最低處理序權限來執行。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定 Net.TCP 連接埠共用服務](configuring-the-net-tcp-port-sharing-service.md)
 - [Hosting](hosting.md)

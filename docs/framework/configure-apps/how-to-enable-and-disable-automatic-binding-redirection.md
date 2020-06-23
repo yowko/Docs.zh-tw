@@ -1,16 +1,17 @@
 ---
 title: 啟用或停用自動產生的系結重新導向
+description: 閱讀如何啟用或停用自動系結重新導向。 這項功能會影響以 .NET 4.5.1 或更新版本為目標的桌面應用程式和 web 應用程式。
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69913038"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105389"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>作法：啟用和停用自動繫結重新導向
 
@@ -18,7 +19,7 @@ ms.locfileid: "69913038"
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>在桌面應用程式中停用自動系結重新導向
 
-針對以 .NET Framework 4.5.1 和更新版本為目標的 Windows 桌面應用程式，預設會啟用自動系結重新導向。 編譯應用程式時，會將系結重新導向新增至輸出設定（**app.config**）檔案，並覆寫可能會發生的元件統一。 未修改來源**app.config**檔案。 您可以藉由修改應用程式的專案檔，或在 Visual Studio 的專案屬性中取消勾選核取方塊，來停用這項功能。
+針對以 .NET Framework 4.5.1 和更新版本為目標的 Windows 桌面應用程式，預設會啟用自動系結重新導向。 當編譯應用程式時，會將系結重新導向新增至輸出設定（**app.config**）檔案，並覆寫可能會發生的元件統一。 不會修改來源**app.config**檔案。 您可以藉由修改應用程式的專案檔，或在 Visual Studio 的專案屬性中取消勾選核取方塊，來停用這項功能。
 
 ### <a name="disable-through-project-properties"></a>透過專案屬性停用
 
@@ -87,7 +88,7 @@ ms.locfileid: "69913038"
 
 在 Web 應用程式中，自動繫結重新導向是以不同的方式實作。 因為必須修改 web 應用程式的來源設定（**web.config**）檔案，所以不會自動將系結重新導向新增至設定檔。 不過，如果發生繫結衝突，Visual Studio 會通知您，那麼您就可以加入繫結重新導向來解決衝突。 由於系統一律會提示您加入系結重新導向，因此您不需要明確停用 web 應用程式的這項功能。
 
-若要將系結重新導向加入至**web.config**檔案：
+若要將系結重新導向新增至**web.config**檔案：
 
 1. 在 Visual Studio 中編譯應用程式，並檢查是否有建置警告。
 
@@ -95,7 +96,7 @@ ms.locfileid: "69913038"
 
 2. 如果有組件繫結衝突，則會出現警告。 按兩下警告，或選取警告，然後按**enter**鍵。
 
-   可讓您自動將必要的系結重新導向加入至來源**web.config**檔案的對話方塊隨即出現。
+   這個對話方塊可讓您自動將必要的系結重新導向新增至來源**web.config**檔案。
 
    ![[繫結重新導向] 權限對話方塊](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 

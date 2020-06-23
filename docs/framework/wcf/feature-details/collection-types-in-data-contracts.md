@@ -1,5 +1,6 @@
 ---
 title: 資料合約中的集合型別
+description: 瞭解資料合約模型如何處理 .NET Framework 中的集合，以及 WCF 如何支援集合類型的資料序列化。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a10b7c5295407cfbb36446581a4b75670e37bc6a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83acf1f74bf3cb117f3f94743eda32d3f2cc4b82
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579745"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245176"
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 
@@ -393,7 +394,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 
 |宣告的型別|指派非自訂的集合|指派自訂的集合|
 |-------------------|--------------------------------------------|---------------------------------------|
-|物件|合約名稱已經序列化。|合約名稱已經序列化。<br /><br /> 已使用自訂。|
+|Object|合約名稱已經序列化。|合約名稱已經序列化。<br /><br /> 已使用自訂。|
 |集合介面|合約名稱未序列化。|合約名稱未序列化。<br /><br /> 不使用自訂。\*|
 |非自訂的集合|合約名稱未序列化。|合約名稱已經序列化。<br /><br /> 已使用自訂。**|
 |自訂的集合|合約名稱已經序列化。 不使用自訂。\*\*|合約名稱已經序列化。<br /><br /> 會使用已指派類型的自訂。\*\*|

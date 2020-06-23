@@ -1,5 +1,6 @@
 ---
 title: Winmdexp.exe 錯誤訊息
+description: 瞭解 Winmdexp.exe （Windows 執行時間中繼資料匯出工具）錯誤訊息，只有在 .NET 編譯成功時，才會在組建程式中出現。
 ms.date: 03/30/2017
 f1_keywords:
 - WME1095
@@ -157,21 +158,21 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: e99bdd106c845964f63915c87617e30eb51488f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5fb5abe84d43df85be557a2bec2245284a74024b
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74447308"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904191"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 錯誤訊息
 當您在 Visual Studio 2012 中使用 **Windows 執行階段元件**範本時，建置流程會呼叫 [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](winmdexp-exe-windows-runtime-metadata-export-tool.md)，因此 Winmdexp.exe 錯誤訊息就會出現在 [錯誤清單]**** 中。 Winmdexp.exe 會在使用 `/target:winmdobj` 選項編譯的模組上執行。 由於它需要編譯的模組做為輸入，因此除非編譯成功，否則其錯誤訊息不會出現。  
   
- 錯誤訊息的設計是包含解決回報之錯誤狀況所需的一切資訊。 不過，有些問題需要的資訊更多，而訊息中無法全部包含。 您可以在[診斷 Windows 運行時元件錯誤條件](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))中找到其他資訊。  
+ 錯誤訊息的設計是包含解決回報之錯誤狀況所需的一切資訊。 不過，有些問題需要的資訊更多，而訊息中無法全部包含。 您可以在[診斷 Windows 執行階段元件錯誤狀況](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))中找到其他資訊。  
   
- 如果該文件中沒有討論到您遇到的錯誤，而您認為訊息中包含的資訊不足，無法解決這個問題，請使用該文件中的意見反應連結並納入錯誤訊息。 或者，您也可以在[開發人員社區網站](https://developercommunity.visualstudio.com/)提交 Bug。 您也可以在 [Microsoft 論壇](https://social.msdn.microsoft.com/Forums/)上尋找詳細資訊。  
+ 如果該文件中沒有討論到您遇到的錯誤，而您認為訊息中包含的資訊不足，無法解決這個問題，請使用該文件中的意見反應連結並納入錯誤訊息。 或者，您也可以在[開發人員社區網站](https://developercommunity.visualstudio.com/)提出 bug。 您也可以在 [Microsoft 論壇](https://social.msdn.microsoft.com/Forums/)上尋找詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- [診斷 Windows 執行階段元件錯誤條件](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))
+- [Winmdexp.exe （Windows 執行階段中繼資料匯出工具）](winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [診斷 Windows 執行階段元件錯誤狀況](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))

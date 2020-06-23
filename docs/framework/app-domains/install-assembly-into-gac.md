@@ -1,5 +1,6 @@
 ---
-title: 操作說明：將組件安裝到全域組件快取
+title: 作法：將組件安裝到全域組件快取
+description: 將元件安裝到 .NET 的全域組件快取（GAC）中，讓許多應用程式可以共用它。 使用 Windows Installer 或 GAC 公用程式。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08a5475d74327265f28b65676ae56be15afb57d3
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155559"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104670"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>操作說明：將組件安裝到全域組件快取
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>作法：將組件安裝到全域組件快取
 
 全域組件快取 (GAC) 會儲存數個應用程式共用的組件。 使用下列其中一個元件，將組件安裝到[全域組件快取](gac.md)：
 
@@ -32,7 +33,7 @@ ms.locfileid: "79155559"
 
 ## <a name="global-assembly-cache-tool"></a>全域組件快取工具
 
-您可以使用[.Net 全域組件快取公用程式（gacutil）](../tools/gacutil-exe-gac-tool.md)將元件加入至全域組件快取，以及查看全域組件快取的內容。
+您可以使用[.Net 全域組件快取公用程式（gacutil.exe）](../tools/gacutil-exe-gac-tool.md)將元件加入至全域組件快取，以及查看全域組件快取的內容。
 
    > [!NOTE]
    > *Gacutil.exe* 只能用於開發目的。 請勿使用這個檔案將生產組件安裝到全域組件快取。
@@ -43,9 +44,9 @@ ms.locfileid: "79155559"
 gacutil -i <assembly name>
 ```
 
-在此命令中， * \<元件名稱>* 是要安裝在全域組件快取中的元件名稱。
+在此命令中， *\<assembly name>* 是要在全域組件快取中安裝之元件的名稱。
 
-如果*gacutil*不在您的系統路徑中，請使用[適用于 VS * \<版本*的開發人員命令提示字元>](../tools/developer-command-prompt-for-vs.md)。
+如果*gacutil.exe*不在您的系統路徑中，請使用[VS *\<version>* 的開發人員命令提示](../tools/developer-command-prompt-for-vs.md)字元。
 
 下列範例會將檔案名稱為 *hello.dll* 的組件安裝到全域組件快取。
 
@@ -60,5 +61,5 @@ gacutil -i hello.dll
 
 - [使用元件和全域組件快取](working-with-assemblies-and-the-gac.md)
 - [如何：從全域組件快取移除元件](how-to-remove-an-assembly-from-the-gac.md)
-- [Gacutil （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)
 - [如何：使用強式名稱簽署元件](../../standard/assembly/sign-strong-name.md)

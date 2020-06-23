@@ -1,5 +1,6 @@
 ---
 title: 服務身分識別和驗證
+description: 瞭解服務的端點身分識別，這是由 WCF 用來驗證服務的服務 WSDL 所產生的值。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 6c12c3aadf53f9fddef2f0b0124994db15565cb5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae217b4a2c3432321c7ef2e663922a87b82acbea
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600370"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246567"
 ---
 # <a name="service-identity-and-authentication"></a>服務身分識別和驗證
 服務的*端點身分識別*是從服務 Web 服務描述語言（WSDL）產生的值。 這個值會傳播至任何用戶端上，用來驗證服務。 在用戶端初始化對某個端點的通訊，且服務也向用戶端進行自我驗證之後，用戶端就會比較端點身分識別值與端點驗證處理序傳回的實際值。 如果兩者相符，則可確定用戶端已聯繫所需的服務端點。 這項功能可防止用戶端被重新導向至惡意服務所裝載的端點，以保護*網路釣魚*。  
@@ -32,7 +33,7 @@ ms.locfileid: "84600370"
   
  用戶端上的身分識別處理與服務上的用戶端驗證很類似。 安全服務會等到用戶端認證經過驗證之後，才會執行程式碼。 同理，用戶端會等到服務認證根據事先從服務中繼資料得知的內容經過驗證之後，才會將訊息傳送至服務。  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> 類別的 <xref:System.ServiceModel.EndpointAddress> 屬性代表用戶端所呼叫之服務的身分識別。 服務會在其中繼資料內發行 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 當用戶端開發人員對服務端點執行[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)時，產生的設定會包含服務屬性的值 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 。 WCF 基礎結構（如果設定為安全性）會驗證服務是否擁有指定的身分識別。  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A> 類別的 <xref:System.ServiceModel.EndpointAddress> 屬性代表用戶端所呼叫之服務的身分識別。 服務會在其中繼資料內發行 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 當用戶端開發人員對服務端點執行[System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)時，產生的設定會包含服務屬性的值 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 。 WCF 基礎結構（如果設定為安全性）會驗證服務是否擁有指定的身分識別。  
   
 > [!IMPORTANT]
 > 中繼資料包含所需的服務身分識別，因此建議您透過安全方式來公開服務中繼資料，例如為服務建立 HTTPS 端點。 如需詳細資訊，請參閱[如何：保護中繼資料端點](how-to-secure-metadata-endpoints.md)。  
@@ -64,7 +65,7 @@ ms.locfileid: "84600370"
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>指定用戶端的身分識別  
- 在設計階段，用戶端開發人員通常會使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端設定。 產生的組態檔 (供用戶端使用) 會包含伺服器的身分識別。 例如，下列由服務產生的程式碼會指定 DNS 身分識別，如先前範例所示。 請注意，用戶端的端點身分識別值符合服務的身分識別值。 此時，如果用戶端接收服務的 Windows (Kerberos) 認證，值應該會是 `contoso.com`。  
+ 在設計階段，用戶端開發人員通常會使用[System.servicemodel 中繼資料公用程式工具（Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端設定。 產生的組態檔 (供用戶端使用) 會包含伺服器的身分識別。 例如，下列由服務產生的程式碼會指定 DNS 身分識別，如先前範例所示。 請注意，用戶端的端點身分識別值符合服務的身分識別值。 此時，如果用戶端接收服務的 Windows (Kerberos) 認證，值應該會是 `contoso.com`。  
 
  如果，服務 (而不是 Windows) 將憑證指定為用戶端認證類型，則憑證的 DNS 屬性應該會是 `contoso.com` (或者，如果 DNS 屬性為 `null`，則憑證的主體名稱必須是 `contoso.com`)。  
   
@@ -104,7 +105,7 @@ ms.locfileid: "84600370"
   
  如需如何針對自訂系結正確堆疊繫結項目的詳細資訊，請參閱[建立使用者定義的](../extending/creating-user-defined-bindings.md)系結。 如需使用建立自訂系結的詳細資訊 <xref:System.ServiceModel.Channels.SecurityBindingElement> ，請參閱[如何：為指定的驗證模式建立 SecurityBindingElement](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [HOW TO：使用 SecurityBindingElement 建立自訂繫結](how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [HOW TO：為指定的驗證模式建立 SecurityBindingElement](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

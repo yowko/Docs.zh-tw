@@ -1,13 +1,14 @@
 ---
 title: WCF 服務和 ASP.NET
+description: 深入瞭解如何將 WCF 服務與 ASP.NET 並存裝載，並以 ASP.NET 相容性模式加以裝載。
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 0a64e277d3465b77a2553d6b9c3901f09a6e1a52
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 1d7401f6a326bc50923123acf803e26ce8238415
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544747"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246411"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 服務和 ASP.NET
 
@@ -25,19 +26,19 @@ ASP.NET HTTP 執行時間會處理 ASP.NET 要求，但不會參與處理以 WCF
 
 - ASP.NET 和 WCF 服務可以共用 AppDomain 狀態。 因為這兩個架構可以並存于相同的 AppDomain 中，所以 WCF 也可以與 ASP.NET 共用 AppDomain 狀態（包括靜態變數、事件等等）。
 
-- WCF 服務的行為一致，與裝載環境和傳輸無關。 ASP.NET HTTP 執行階段主要用來與 IIS/ASP.NET 裝載環境和 HTTP 通訊搭配使用。 相反地，WCF 的設計是跨主機環境（WCF 在 IIS 內部和外部都有一致的行為）和跨傳輸（在 IIS 7.0 和更新版本中裝載的服務在其公開的所有端點之間具有一致的行為，即使其中一些端點會使用 HTTP 以外的通訊協定）。
+- WCF 服務的行為一致，與裝載環境和傳輸無關。 ASP.NET HTTP 執行階段主要用來與 IIS/ASP.NET 裝載環境和 HTTP 通訊搭配使用。 相反地，WCF 的設計是跨主機環境（WCF 在 IIS 內部和外部都有一致的行為）和跨傳輸（在 IIS 7.0 和更新版本中裝載的服務在其公開的所有端點都具有一致的行為，即使這些端點使用 HTTP 以外的通訊協定）。
 
 - 在 AppDomain 中，HTTP 執行時間所執行的功能會套用至 ASP.NET 內容，但不適用於 WCF。 ASP.NET 應用程式平臺的許多 HTTP 特定功能並不適用于包含 ASP.NET 內容之 AppDomain 內所裝載的 WCF 服務。 下列為這些功能的範例：
 
-  - 從 WCF 服務存取時，會一律 `null` HttpCoNtext： <xref:System.Web.HttpContext.Current%2A>。 請改用 <xref:System.ServiceModel.Channels.RequestContext> 。
+  - HttpCoNtext： <xref:System.Web.HttpContext.Current%2A> `null` 當從 WCF 服務記憶體取時，一律為。 請改用 <xref:System.ServiceModel.Channels.RequestContext>。
 
   - 以檔案為基礎的授權：當決定是否授權服務要求時，WCF 安全性模型不允許套用至服務 .svc 檔案的存取控制清單（ACL）。
 
-  - 以設定為基礎的 URL 授權：同樣地，WCF 安全性模型不會遵守在 System.web 的 \<授權 > configuration 元素中指定的任何 URL 型授權規則。 如果服務位於 ASP 所保護的 URL 空間中，則會忽略 WCF 要求的這些設定。NET 的 URL 授權規則。
+  - 以設定為基礎的 URL 授權：同樣地，WCF 安全性模型不會遵守 System.web 的 configuration 元素中指定的任何 URL 型授權規則 \<authorization> 。 如果服務位於 ASP 所保護的 URL 空間中，則會忽略 WCF 要求的這些設定。NET 的 URL 授權規則。
 
-  - HttpModule 擴充性：當引發 <xref:System.Web.HttpApplication.PostAuthenticateRequest> 事件時，WCF 裝載基礎結構會攔截 WCF 要求，而不會將處理傳回 ASP.NET HTTP 管線。 編碼為在管線稍後的階段攔截要求的模組不會攔截 WCF 要求。
+  - HttpModule 擴充性： WCF 裝載基礎結構會在事件引發時攔截 WCF 要求 <xref:System.Web.HttpApplication.PostAuthenticateRequest> ，而不會將處理傳回 ASP.NET HTTP 管線。 編碼為在管線稍後的階段攔截要求的模組不會攔截 WCF 要求。
 
-  - ASP.NET 模擬：根據預設，WCF 要求一律以 IIS 進程身分識別來執行，即使 ASP.NET 設為使用 System.web 的 \<identity 模擬 = "true"/> 設定選項來啟用模擬。
+  - ASP.NET 模擬：根據預設，WCF 要求一律會以 IIS 進程身分識別來執行，即使 ASP.NET 是設定為使用 System.web 的 configuration 選項來啟用模擬也一樣 \<identity impersonate="true" /> 。
 
 這些限制僅適用于裝載于 IIS 應用程式中的 WCF 服務。 ASP.NET 內容的行為不會受到 WCF 的存在影響。
 
@@ -57,7 +58,7 @@ ASP.NET HTTP 執行時間會處理 ASP.NET 要求，但不會參與處理以 WCF
 
 雖然 WCF 模型的設計是要在裝載環境和傳輸之間保持一致的行為，但通常應用程式不需要這麼多的彈性。 WCF 的 ASP.NET 相容性模式適用于不需要在 IIS 外部裝載，或透過 HTTP 以外的通訊協定進行通訊，但卻使用 ASP.NET Web 應用程式平臺所有功能的情況。
 
-不同于預設並存設定，其中 WCF 裝載基礎結構會攔截 WCF 訊息並將其路由傳送至 HTTP 管線，在 ASP.NET 相容性模式中執行的 WCF 服務會完全參與 ASP.NET HTTP 要求生命週期。 在相容性模式中，WCF 服務會透過 <xref:System.Web.IHttpHandler> 的執行方式來使用 HTTP 管線，這類似于處理 ASPX 頁面和 .ASMX Web 服務的要求。 因此，WCF 的行為與與下列 ASP.NET 功能相關的 .ASMX 相同：
+不同于預設並存設定，其中 WCF 裝載基礎結構會攔截 WCF 訊息並將其路由傳送至 HTTP 管線，在 ASP.NET 相容性模式中執行的 WCF 服務會完全參與 ASP.NET HTTP 要求生命週期。 在相容性模式中，WCF 服務會透過執行來使用 HTTP 管線 <xref:System.Web.IHttpHandler> ，其方式類似于處理 ASPX 頁面和 .Asmx Web 服務的要求。 因此，WCF 的行為與與下列 ASP.NET 功能相關的 .ASMX 相同：
 
 - <xref:System.Web.HttpContext>：在 ASP.NET 相容性模式中執行的 WCF 服務可以存取 <xref:System.Web.HttpContext.Current%2A> 和其相關聯的狀態。
 
@@ -65,7 +66,7 @@ ASP.NET HTTP 執行時間會處理 ASP.NET 要求，但不會參與處理以 WCF
 
 - 可設定的 URL 授權： ASP。當 WCF 服務在 ASP.NET 相容性模式中執行時，會對 WCF 要求強制執行 NET 的 URL 授權規則。
 
-- <xref:System.Web.HttpModuleCollection> 擴充性：因為在 ASP.NET 相容性模式中執行的 WCF 服務會完全參與 ASP.NET HTTP 要求生命週期，所以 HTTP 管線中設定的任何 HTTP 模組都能夠在服務叫用前後的 WCF 要求上運作。
+- <xref:System.Web.HttpModuleCollection>擴充性：由於在 ASP.NET 相容性模式中執行的 WCF 服務會完全參與 ASP.NET HTTP 要求生命週期，因此 HTTP 管線中設定的任何 HTTP 模組都能夠在服務叫用前後的 WCF 要求上運作。
 
 - ASP.NET 模擬： WCF 服務會使用 ASP.NET 模擬執行緒目前的身分識別來執行，如果應用程式已啟用 ASP.NET 模擬，這可能會與 IIS 進程身分識別不同。 如果已針對特定服務作業啟用 ASP.NET 模擬和 WCF 模擬，則服務執行最後會使用從 WCF 取得的身分識別來執行。
 
@@ -77,9 +78,9 @@ WCF 的 ASP.NET 相容性模式會透過下列設定（位於應用程式的 Web
 </system.serviceModel>
 ```
 
-如果未指定，則此值預設為 `false`。 `false` 的值表示應用程式中執行的所有 WCF 服務都不會在 ASP.NET 的相容性模式中執行。
+如果未指定，則此值預設為 `false` 。 的值 `false` 表示應用程式中執行的所有 WCF 服務都不會在 ASP.NET 相容性模式中執行。
 
-由於 ASP.NET 相容性模式意指的是與 WCF 預設值截然不同的要求處理語義，因此個別服務實現可以控制是否要在應用程式內執行，其 ASP.NET已啟用相容性模式。 服務可以透過 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 來指出是否支援 ASP.NET 相容性模式。 這個屬性的預設值為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。
+由於 ASP.NET 相容性模式意指的是與 WCF 預設值截然不同的要求處理語義，因此個別服務實現可以控制是否在已啟用 ASP.NET 相容性模式的應用程式內執行。 服務可以透過 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 來指出是否支援 ASP.NET 相容性模式。 這個屬性的預設值為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。
 
 ```csharp
 [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
@@ -91,19 +92,19 @@ public class CalculatorService : ICalculatorSession
 
 |整個應用程式的相容性模式設定|[AspNetCompatibilityRequirementsMode]<br /><br /> 設定|觀察結果|
 |--------------------------------------------------|---------------------------------------------------------|---------------------|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|服務成功啟動。|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|服務成功啟動。|
-|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|當服務接收訊息時，發生啟動錯誤。|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|當服務接收訊息時，發生啟動錯誤。|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|服務成功啟動。|
-|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|服務成功啟動。|
+|aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|服務成功啟動。|
+|aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|服務成功啟動。|
+|aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|當服務接收訊息時，發生啟動錯誤。|
+|aspNetCompatibilityEnabled = " `false` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|當服務接收訊息時，發生啟動錯誤。|
+|aspNetCompatibilityEnabled = " `false` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|服務成功啟動。|
+|aspNetCompatibilityEnabled = " `false` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|服務成功啟動。|
 
 > [!NOTE]
 > IIS 7.0 和 WAS 允許 WCF 服務透過 HTTP 以外的通訊協定進行通訊。 不過，在已啟用 ASP.NET 相容性模式的應用程式中執行的 WCF 服務不允許公開非 HTTP 端點。 此類組態會在服務接收其第一則訊息時，產生啟動例外狀況。
 
 如需啟用 WCF 服務之 ASP.NET 相容性模式的詳細資訊，請參閱 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> 和[ASP.NET 相容性](../samples/aspnet-compatibility.md)範例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
 - [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

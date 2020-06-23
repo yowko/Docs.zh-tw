@@ -1,5 +1,6 @@
 ---
 title: 使用 WCF 的委派和模擬
+description: 瞭解 WCF 用來限制用戶端存取服務網域資源的模擬和委派方法。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: e491925fdbe8d44df8e0c64b563eb92569453e35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599252"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245072"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>使用 WCF 的委派和模擬
 「*模擬* 」(Impersonation) 是服務用來限制用戶端存取服務網域資源的常用技術。 服務網域資源可以是像是本機檔案 (模擬) 的電腦資源，或是在另一部電腦上的資源，例如檔案共用 (委派)。 如需範例應用程式，請參閱 [Impersonating the Client](../samples/impersonating-the-client.md)。 如需如何使用模擬的範例，請參閱 [How to: Impersonate a Client on a Service](../how-to-impersonate-a-client-on-a-service.md)。  
@@ -118,8 +119,8 @@ ms.locfileid: "84599252"
 |識別|n/a|n/a|識別|  
 |模擬|是|n/a|模擬|  
 |模擬|否|n/a|識別|  
-|委派|是|是|委派|  
-|委派|是|否|模擬|  
+|委派|Yes|Yes|委派|  
+|委派|Yes|No|模擬|  
 |委派|否|n/a|識別|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>從使用者名稱認證和快取權杖模擬取得的模擬等級  
@@ -127,16 +128,16 @@ ms.locfileid: "84599252"
   
 |`AllowedImpersonationLevel`|服務具有 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取權杖 `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|n/a|是|是|委派|  
-|n/a|是|否|模擬|  
+|n/a|Yes|Yes|委派|  
+|n/a|Yes|No|模擬|  
 |n/a|否|n/a|識別|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>從 S4U 架構模擬取得的模擬等級  
   
 |服務具有 `SeTcbPrivilege`|服務具有 `SeImpersonatePrivilege`|服務和用戶端能夠委派|快取權杖 `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|是|是|n/a|模擬|  
-|是|否|n/a|識別|  
+|Yes|是|n/a|模擬|  
+|Yes|否|n/a|識別|  
 |否|n/a|n/a|識別|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>將用戶端憑證對應至 Windows 帳戶  
@@ -179,9 +180,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 |模擬等級|服務可以執行跨處理序委派|服務可以執行跨電腦委派|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|否|否|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|是|否|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|是|是|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|No|否|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|是|No|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|是|Yes|  
   
  下列程式碼範例示範如何使用委派。  
   
@@ -201,7 +202,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  如需設定限制委派的詳細指示，請參閱[Kerberos 通訊協定轉換和限制委派](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10))。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>

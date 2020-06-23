@@ -1,6 +1,7 @@
 ---
-title: 從命令列創建 Windows 表單應用程式
+title: 從命令列建立 Windows Forms 應用程式
 titleSuffix: ''
+description: 瞭解如何完成從命令列建立和執行 Windows Forms 應用程式的基本步驟。
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -10,32 +11,32 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-ms.openlocfilehash: 7bd3add526a6b60d628b05d46eca22ce407c36b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b63bf884b9fd03a0510c7f240f19d7a14196971a
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903450"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何：從命令列創建 Windows 表單應用程式
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何：從命令列建立 Windows Forms 應用程式
 
-下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[演練：在 WPF 中託管 Windows 表單控制項](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。
+下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。
   
 ## <a name="procedure"></a>程序  
   
 #### <a name="to-create-the-form"></a>建立表單  
   
-1. 在空代碼檔中，鍵入以下`Imports`或`using`語句：  
+1. 在空白的程式碼檔案中，輸入下列 `Imports` 或 `using` 語句：  
   
      [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
-2. 聲明從 Form`Form1`類繼承的名為的類：
+2. 宣告 `Form1` 繼承自表單類別且名為的類別：
   
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. 為`Form1`創建 無參數建構函式。
+3. 為建立無參數的函式 `Form1` 。
   
      您在後續的程序中，會將更多程式碼加入建構函式中。
   
@@ -44,9 +45,9 @@ ms.locfileid: "79181992"
   
 4. 將 `Main` 方法加入類別中。
   
-    1. 將<xref:System.STAThreadAttribute>應用 到`Main`C# 方法以指定 Windows 表單應用程式是單線程單元。 （在 Visual Basic 中不需要該屬性，因為預設情況下，使用 Visual Basic 開發的 Windows 表單應用程式使用單線程單元模型。  
+    1. 將套用 <xref:System.STAThreadAttribute> 至 c # `Main` 方法，以指定您的 Windows Forms 應用程式是單一執行緒的單元。 （屬性在 Visual Basic 中不是必要的，因為使用 Visual Basic 開發的 Windows form 應用程式預設會使用單一執行緒的單元模型）。  
   
-    2. 調用<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>以將作業系統樣式應用於應用程式。  
+    2. 呼叫 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 以將作業系統樣式套用至您的應用程式。  
   
     3. 建立表單的執行個體，並加以執行。  
   
@@ -59,19 +60,19 @@ ms.locfileid: "79181992"
   
 2. 編譯表單。  
   
-    - 如果使用 C#，則鍵入：`csc form1.cs`  
+    - 如果您使用的是 c #，請輸入：`csc form1.cs`  
   
          `-or-`  
   
-    - 如果使用 Visual Basic，則鍵入：`vbc form1.vb`  
+    - 如果您使用 Visual Basic，請輸入：`vbc form1.vb`  
   
 3. 在命令提示字元中，輸入：`Form1.exe`  
   
-## <a name="adding-a-control-and-handling-an-event"></a>添加控制項和處理事件
+## <a name="adding-a-control-and-handling-an-event"></a>加入控制項和處理事件
 
-先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。 下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。 有關可添加到 Windows 表單的控制項的詳細資訊，請參閱[Windows 表單控制項](./controls/index.md)。
+先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。 下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。 如需可加入至 Windows Forms 之控制項的詳細資訊，請參閱[Windows Forms 控制項](./controls/index.md)。
   
- 除了了解如何建立 Windows Forms 應用程式，您還應該了解以事件為基礎的程式設計，以及如何處理使用者輸入。 有關詳細資訊，請參閱在[Windows 表單 中創建事件處理常式](creating-event-handlers-in-windows-forms.md)[和處理使用者輸入](./controls/handling-user-input.md)  
+ 除了了解如何建立 Windows Forms 應用程式，您還應該了解以事件為基礎的程式設計，以及如何處理使用者輸入。 如需詳細資訊，請參閱[在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)和[處理使用者輸入](./controls/handling-user-input.md)  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>宣告按鈕控制項及處理其 Click 事件  
   
@@ -81,7 +82,7 @@ ms.locfileid: "79181992"
   
 3. 將按鈕加入表單中。  
   
-     以下代碼示例演示如何聲明按鈕控制項：
+     下列程式碼範例示範如何宣告按鈕控制項：
   
      [!code-csharp[System.Windows.Forms.FormWithButton#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.FormWithButton#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
@@ -90,7 +91,7 @@ ms.locfileid: "79181992"
   
 5. 在 Click 事件處理常式中，顯示含有 "Hello World" 訊息的 <xref:System.Windows.Forms.MessageBox>。  
   
-     以下代碼示例演示如何處理按鈕控制項的按一下事件：
+     下列程式碼範例示範如何處理按鈕控制項的 click 事件：
   
      [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
@@ -106,7 +107,7 @@ ms.locfileid: "79181992"
   
 ## <a name="example"></a>範例  
 
-以下代碼示例是前面過程的完整示例：
+下列程式碼範例是先前程式的完整範例：
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
@@ -115,6 +116,6 @@ ms.locfileid: "79181992"
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [變更 Windows Forms 的外觀](changing-the-appearance-of-windows-forms.md)
+- [變更 Windows Form 的外觀](changing-the-appearance-of-windows-forms.md)
 - [增強 Windows Forms 應用程式](./advanced/index.md)
-- [Windows Forms 使用者入門](getting-started-with-windows-forms.md)
+- [使用 Windows Forms 的消費者入門](getting-started-with-windows-forms.md)

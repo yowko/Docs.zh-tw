@@ -1,13 +1,14 @@
 ---
 title: 從 WCF 服務呼叫 REST 樣式服務
+description: 瞭解如何藉由建立範圍並從該範圍呼叫 REST 樣式服務，讓 WCF 服務使用與 REST 樣式服務的正確內容。
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: eaa5d08faa335740124fcf698b22d2d324cd2c54
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 15f468923cf55feb85e7aeca1a2cc5e38050d665
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576482"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245293"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>從 WCF 服務呼叫 REST 樣式服務
 
@@ -241,7 +242,7 @@ public class CallingRESTSample
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：建立基本 WCF Web HTTP 服務](how-to-create-a-basic-wcf-web-http-service.md)
 - [WCF Web HTTP 程式設計物件模型](wcf-web-http-programming-object-model.md)

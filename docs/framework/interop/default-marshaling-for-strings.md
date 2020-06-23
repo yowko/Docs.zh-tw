@@ -1,5 +1,6 @@
 ---
 title: 字串的預設封送處理
+description: 在 .NET 中，針對介面、平台叫用、結構、& 固定長度的字串緩衝區中的字串，檢查預設的封送處理行為。
 ms.date: 03/20/2019
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-ms.openlocfilehash: 49f2d871a42db484e20f0bfc35634a0e8b959c2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 440a49730f351b820cd68a741e79f94434f585c8
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123553"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904113"
 ---
 # <a name="default-marshaling-for-strings"></a>字串的預設封送處理
 
@@ -27,7 +28,7 @@ ms.locfileid: "73123553"
 
 |列舉類型|Unmanaged 格式的描述|
 |----------------------|-------------------------------------|
-|`UnmanagedType.BStr` (預設值)|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|
+|`UnmanagedType.BStr` (預設)|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|
 |`UnmanagedType.LPStr`|ANSI 字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPWStr`|Unicode 字元之 Null 終端陣列的指標|
 
@@ -88,7 +89,7 @@ interface IStringWorker : IDispatch
 |----------------------|-------------------------------------|
 |`UnmanagedType.AnsiBStr`|具有前置長度和 ANSI 字元的 COM 樣式 `BSTR`。|
 |`UnmanagedType.BStr`|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|
-|`UnmanagedType.LPStr` (預設值)|ANSI 字元之 Null 終端陣列的指標。|
+|`UnmanagedType.LPStr` (預設)|ANSI 字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPTStr`|平台相依字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPUTF8Str`|UTF-8 編碼字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPWStr`|Unicode 字元之 Null 終端陣列的指標|
@@ -145,7 +146,7 @@ End Class
 |列舉類型|Unmanaged 格式的描述|
 |----------------------|-------------------------------------|
 |`UnmanagedType.BStr`|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|
-|`UnmanagedType.LPStr` (預設值)|ANSI 字元之 Null 終端陣列的指標。|
+|`UnmanagedType.LPStr` (預設)|ANSI 字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPTStr`|平台相依字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPUTF8Str`|UTF-8 編碼字元之 Null 終端陣列的指標。|
 |`UnmanagedType.LPWStr`|Unicode 字元之 Null 終端陣列的指標|
@@ -232,7 +233,7 @@ End Structure
 
 解決方式為傳遞 <xref:System.Text.StringBuilder> 緩衝區作為引數，而非 <xref:System.String>。 `StringBuilder` 可以為已取值，而且由被呼叫端修改，前提是它不會超過 `StringBuilder` 的容量。 它也可以初始化為固定長度。 例如，如果您初始化 `StringBuilder` 緩衝區為 `N` 的容量，封送處理器會提供 (`N`+1) 個字元大小的緩衝區。 +1 代表 Unmanged 字串具有 null 結束字元，但 `StringBuilder` 沒有。
 
-例如，Windows [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API 函式（定義于*winuser*中）要求呼叫端傳遞固定長度的字元緩衝區，函式會將視窗的文字寫入其中。 `LpString` 指向大小為 `nMaxCount` 的呼叫端配置緩衝區。 呼叫端必須配置緩衝區，並設定 `nMaxCount` 引數為配置緩衝區的大小。 下列範例顯示在 *winuser.h* 中所定義的 `GetWindowText` 函式宣告。
+例如，Windows API 函式 [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) （定義于*winuser*中）要求呼叫端傳遞固定長度的字元緩衝區，函式會將視窗的文字寫入其中。 `LpString` 指向大小為 `nMaxCount` 的呼叫端配置緩衝區。 呼叫端必須配置緩衝區，並設定 `nMaxCount` 引數為配置緩衝區的大小。 下列範例顯示在 *winuser.h* 中所定義的 `GetWindowText` 函式宣告。
 
 ```cpp
 int GetWindowText(

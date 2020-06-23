@@ -1,16 +1,17 @@
 ---
 title: 自動調整
+description: 瞭解自動調整如何讓表單及其控制項（設計于一部電腦上）適當地顯示在另一部電腦上。
 ms.date: 06/15/2017
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: 96dbbb5ed20027e25f1bde89748710766ec06506
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 93d6b9097c85d7fa7ca88b405ee3d3654e51304b
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732371"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903684"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows Forms 中的自動調整
 
@@ -28,11 +29,11 @@ ms.locfileid: "76732371"
 
 ## <a name="original-support-for-automatic-scaling"></a>自動調整的原始支援
 
-1\.0 和1.1 版 .NET Framework 以直接的方式來支援自動調整，其相依于 UI 所使用的 Windows 預設字型，以 Win32 SDK 值**DEFAULT_GUI_FONT**表示。 這種字型通常只有在顯示解析度變更時才會變更。 之前會使用下列機制來實作自動縮放：
+1.0 和1.1 版 .NET Framework 以直接的方式來支援自動調整，其相依于 UI 所使用的 Windows 預設字型，以 Win32 SDK 值**DEFAULT_GUI_FONT**表示。 這種字型通常只有在顯示解析度變更時才會變更。 之前會使用下列機制來實作自動縮放：
 
 1. 在設計階段，<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 屬性 (現在已被取代) 會設定為開發人員電腦上預設系統字型的高度和寬度。
 
-2. 在執行階段，使用者電腦的預設系統字型會用來初始化 <xref:System.Windows.Forms.Control.Font%2A> 類別的 <xref:System.Windows.Forms.Form> 屬性。
+2. 在執行階段，使用者電腦的預設系統字型會用來初始化 <xref:System.Windows.Forms.Form> 類別的 <xref:System.Windows.Forms.Control.Font%2A> 屬性。
 
 3. 在顯示表單之前，會呼叫 <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> 方法來縮放表單。 這個方法會從 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 和 <xref:System.Windows.Forms.Control.Font%2A> 計算相對縮放比例，然後呼叫 <xref:System.Windows.Forms.Control.Scale%2A> 方法實際縮放表單和其子系。
 
@@ -40,13 +41,13 @@ ms.locfileid: "76732371"
 
 雖然這項機制在大部分情況下便已足夠，但是仍有下列限制：
 
-- 由於 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 屬性將基準字型大小表示為整數值，因此當表單透過多個解析度迴圈時，就會發生舍入錯誤。
+- 由於 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 屬性會以整數值表示基準字型大小，因此當表單透過多個解析度迴圈時，就會發生舍入錯誤。
 
 - 自動縮放只會在 <xref:System.Windows.Forms.Form> 類別中實作，並不會在 <xref:System.Windows.Forms.ContainerControl> 類別中實作。 因此，只有在使用者控制項是以與表單相同的解析度所設計，並且在設計階段置於表單中時，使用者控制項才能正確縮放。
 
 - 多位開發人員只能在其電腦解析度都相同時，才能同時設計表單和其子控制項。 同樣地，它也會根據與父表單關聯的解析度來繼承表單。
 
-- 它與 .NET Framework 2.0 版（例如 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>）引進的較新版面建構管理員不相容。
+- 它與 .NET Framework 版本2.0 （例如和）引進的較新版面建構管理員不相容 <xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel> 。
 
 - 它不支援直接根據 .NET Compact Framework 相容性所需的顯示解析度進行縮放。
 
@@ -84,7 +85,7 @@ Windows Form 現在使用下列邏輯來自動縮放表單和其內容：
 
 4. 在下列情況下，也會自動叫用 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>：
 
-    - 為了在縮放模式為 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 時回應 <xref:System.Windows.Forms.AutoScaleMode.Font> 事件。
+    - 為了在縮放模式為 <xref:System.Windows.Forms.AutoScaleMode.Font> 時回應 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 事件。
 
     - 當繼續容器控制項的配置，並在 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 或 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 屬性中偵測到變更時。
 
@@ -105,4 +106,4 @@ Windows Form 現在使用下列邏輯來自動縮放表單和其內容：
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [使用視覺化樣式呈現控制項](./controls/rendering-controls-with-visual-styles.md)
-- [操作說明：避免自動縮放以提高效能](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [如何：避免自動縮放以提高效能](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

@@ -1,17 +1,18 @@
 ---
 title: WCF 功能詳細資料
+description: 深入瞭解 WCF 透過應用程式的訊息功能提供的廣泛控制。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - features [WCF]
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 80728cd5f677617e8727e9f8c4b0c4b85767975c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596886"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246632"
 ---
 # <a name="wcf-feature-details"></a>WCF 功能詳細資料
 Windows Communication Foundation （WCF）可讓您廣泛控制應用程式的訊息功能。 本節的主題將詳述可用的功能。 如需基本程式設計的詳細資訊，請參閱[基本 WCF 程式設計](../basic-wcf-programming.md)。  

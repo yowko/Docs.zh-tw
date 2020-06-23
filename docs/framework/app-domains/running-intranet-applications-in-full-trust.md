@@ -1,17 +1,18 @@
 ---
 title: 在完全信任環境下執行內部網路應用程式
+description: 以完全信任的方式執行 .NET 3.5 SP1 的內部網路應用程式。 應用程式及其程式庫元件可以從網路共用執行為完全信任的元件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - full trust, running intranet applications in
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-ms.openlocfilehash: 33b025fa62343277fc96fc7771587e95f556e7a6
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: f4fb3b61e434154b1c7252377c234aeff49f0227
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645440"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104602"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>在完全信任環境下執行內部網路應用程式
 
@@ -23,7 +24,7 @@ ms.locfileid: "81645440"
   
 - 程式庫組件必須和可執行組件位於相同的資料夾。 完全信任的授權集不提供給位於子資料夾或於不同路徑參考的組件。  
   
-- 如果可執行檔延遲載入組件，即必須使用啟動可執行檔所用的相同路徑。 例如，如果共用\\ \\*網路-電腦*\\*共用*對應至磁碟機號，而可執行檔是從該路徑執行，則可執行檔使用網路路徑載入的元件將不會被授與完全信任。 若要在 <xref:System.Security.SecurityZone.MyComputer> 區域中延遲載入組件，可執行檔必須使用磁碟機代號路徑。  
+- 如果可執行檔延遲載入組件，即必須使用啟動可執行檔所用的相同路徑。 例如，如果共用 \\ \\ *網路-電腦* \\ *共用*對應至磁碟機號，而可執行檔是從該路徑執行，則可執行檔使用網路路徑載入的元件將不會被授與完全信任。 若要在 <xref:System.Security.SecurityZone.MyComputer> 區域中延遲載入組件，可執行檔必須使用磁碟機代號路徑。  
   
 ## <a name="restoring-the-former-intranet-policy"></a>還原先前的內部網路原則  
 

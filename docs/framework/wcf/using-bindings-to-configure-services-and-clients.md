@@ -1,15 +1,16 @@
 ---
 title: 使用繫結來設定服務和用戶端
+description: 系結包含 WFC 用戶端或服務所使用的設定資訊。 瞭解如何定義系結，以及如何指定服務端點的系結。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: dd83072d3a1c76279fcc00ea5b0a4a41e278e10a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 60db37d4381191314e9d5588dd61015a7078e84d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321516"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245930"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用繫結來設定服務和用戶端
 繫結是指定連接端點所需要之通訊詳細資料的物件。 更明確的說，繫結包含藉由定義傳輸、網路格式 (訊息編碼) 的細節，用於建立用戶端或服務執行階段的組態資訊，以及用於個別端點或用戶端通道的通訊協定。 若要建立可運作的 Windows Communication Foundation （WCF）服務，服務中的每個端點都需要系結。 本主題將說明什麼是繫結、如何定義繫結，以及如何為端點指定特定繫結。  
@@ -20,7 +21,7 @@ ms.locfileid: "72321516"
  通訊協定  
  判斷使用的安全性機制，是可靠的傳訊能力或交易內容流量設定。  
   
- Transport  
+ 傳輸  
  判斷要使用的基礎傳輸通訊協定 (例如，TCP 或 HTTP)。  
   
  編碼  
@@ -40,7 +41,7 @@ ms.locfileid: "72321516"
  如需系統提供之系結的完整清單和描述，請參閱[系統提供的](system-provided-bindings.md)系結。  
   
 ## <a name="custom-bindings"></a>自訂繫結  
- 如果系統提供的繫結集合沒有服務應用程式所需的正確功能組合，您可以建立 <xref:System.ServiceModel.Channels.CustomBinding> 繫結。 如需有關 <xref:System.ServiceModel.Channels.CustomBinding> 系結之元素的詳細資訊，請參閱[\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md)和[自訂](./extending/custom-bindings.md)系結。  
+ 如果系統提供的繫結集合沒有服務應用程式所需的正確功能組合，您可以建立 <xref:System.ServiceModel.Channels.CustomBinding> 繫結。 如需系結之元素的詳細資訊 <xref:System.ServiceModel.Channels.CustomBinding> ，請參閱 [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) 和[自訂](./extending/custom-bindings.md)系結。  
   
 ## <a name="using-bindings"></a>使用繫結  
  使用繫結牽涉到兩個基本步驟：  
@@ -56,9 +57,9 @@ ms.locfileid: "72321516"
   
 - [教學課程：建立 Windows Communication Foundation 用戶端](how-to-create-a-wcf-client.md)提供使用設定來建立用戶端的範例。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [建立端點概觀](endpoint-creation-overview.md)
+- [端點建立概觀](endpoint-creation-overview.md)
 - [如何：在設定中指定服務繫結](how-to-specify-a-service-binding-in-configuration.md)
 - [如何：在程式碼中指定服務繫結](how-to-specify-a-service-binding-in-code.md)
 - [如何：在設定中指定用戶端繫結](how-to-specify-a-client-binding-in-configuration.md)

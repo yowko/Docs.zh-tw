@@ -1,13 +1,14 @@
 ---
 title: 用戶端組態
+description: 瞭解如何使用 WCF 用戶端設定來指定端點的位址、系結、行為和合約，以用來連接至服務。
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 2d17438095e65ccf922061c03e406bab35b07c5d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c3e3d4904bad39e951e8ba69013ac95894130489
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593655"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245371"
 ---
 # <a name="client-configuration"></a>用戶端組態
 您可以使用 Windows Communication Foundation （WCF）用戶端設定來指定位址、系結、行為和合約，也就是用戶端端點的 "ABC" 屬性，用戶端會用來連接到服務端點。 [\<client>](../../configure-apps/file-schema/wcf/client.md)元素具有 [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) 元素，其屬性是用來設定端點 abc。 這些屬性會在設定[端點](#configuring-endpoints)一節中討論。  
@@ -15,7 +16,7 @@ ms.locfileid: "84593655"
  [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md)元素也包含元素， [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md) 該專案用來指定匯入和匯出中繼資料的設定、 [\<headers>](../../configure-apps/file-schema/wcf/headers.md) 包含自訂位址標頭集合的專案，以及 [\<identity>](../../configure-apps/file-schema/wcf/identity.md) 可讓其他端點與訊息交換的端點進行驗證的元素。 [\<headers>](../../configure-apps/file-schema/wcf/headers.md)和 [\<identity>](../../configure-apps/file-schema/wcf/identity.md) 專案是的一部分， <xref:System.ServiceModel.EndpointAddress> 並會在[位址](endpoint-addresses.md)一文中討論。 設定[中繼資料](#configuring-metadata)一節中會提供說明中繼資料延伸模組使用方式的主題連結。  
   
 ## <a name="configuring-endpoints"></a>設定端點  
- 用戶端設定的設計可讓用戶端指定一個或多個端點，每個端點都有自己的名稱、位址和合約，而每個端點 [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) 都會參考用戶端設定中的和元素，以用來設定該端點。 用戶端設定檔案應命名為 "App.config"，因為這是 WCF 執行時間所預期的名稱。 下列範例示範用戶端組態檔。  
+ 用戶端設定的設計可讓用戶端指定一個或多個端點，每個端點都有自己的名稱、位址和合約，而每個端點 [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) 都會參考用戶端設定中的和元素，以用來設定該端點。 用戶端設定檔應該命名為 "App.config"，因為這是 WCF 執行時間所預期的名稱。 下列範例示範用戶端組態檔。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -93,7 +94,7 @@ ms.locfileid: "84593655"
 ### <a name="configuring-metadata"></a>設定中繼資料  
  [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md)元素可用來指定用來註冊中繼資料匯入延伸模組的設定。 如需擴充中繼資料系統的詳細資訊，請參閱[擴充中繼資料系統](../extending/extending-the-metadata-system.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [端點：位址、繫結和合約](endpoints-addresses-bindings-and-contracts.md)
 - [設定用戶端行為](../configuring-client-behaviors.md)

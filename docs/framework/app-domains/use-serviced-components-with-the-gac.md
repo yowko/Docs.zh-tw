@@ -1,5 +1,6 @@
 ---
 title: 使用 Serviced 元件和全域組件快取
+description: 在 .NET 中使用服務元件（受控碼 COM + 元件）搭配全域組件快取。 查看 CLR 和 COM + 服務是否可以處理非 GAC 元件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - serviced components, global assembly cache
 - global assembly cache, serviced components
 ms.assetid: 3423e5d9-234c-4571-8161-e35f6d130128
-ms.openlocfilehash: 99627cb14088f037c58bfa1eec72bd4f88d06011
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b7371865b7b1cedda0ee03b2cc28c74b5c3da0b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119761"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104479"
 ---
 # <a name="using-serviced-components-with-the-global-assembly-cache"></a>使用 Serviced 元件和全域組件快取
 Serviced 元件 (受控碼 COM+ 元件) 都應該放在全域組件快取中。 在某些情況下，通用語言執行平台和 COM + 服務可以處理不在全域組件快取中的 Serviced 元件；但在其他案例中則不能。 下列案例可說明這種情況：  
@@ -26,4 +27,4 @@ Serviced 元件 (受控碼 COM+ 元件) 都應該放在全域組件快取中。 
 ## <a name="see-also"></a>另請參閱
 
 - [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
-- [Gacutil .exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)
