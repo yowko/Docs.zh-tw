@@ -1,5 +1,6 @@
 ---
-title: IPictureDisp.Handle 屬性 (stdole)
+title: IPictureDisp. Handle 屬性（stdole）
+description: 閱讀 .NET 中的 IPictureDisp 屬性。 這個屬性位於 stdole 命名空間和 stdole 元件（在 stdole.dll 程式庫中）。
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -10,25 +11,25 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 27a081b0faee348d8ff2064aa473fef315ee5d1c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c75cb2b28801924987d42fe442fee492245fe809
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634414"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105315"
 ---
-# <a name="ipicturedisphandle-property"></a><span data-ttu-id="1712b-102">IPictureDisp.Handle 屬性</span><span class="sxs-lookup"><span data-stu-id="1712b-102">IPictureDisp.Handle Property</span></span>
+# <a name="ipicturedisphandle-property"></a><span data-ttu-id="7602e-104">IPictureDisp.Handle 屬性</span><span class="sxs-lookup"><span data-stu-id="7602e-104">IPictureDisp.Handle Property</span></span>
 
 ```csharp
 int Handle { get; }
 ```
 
-## <a name="property-value"></a><span data-ttu-id="1712b-103">屬性值</span><span class="sxs-lookup"><span data-stu-id="1712b-103">Property value</span></span>
+## <a name="property-value"></a><span data-ttu-id="7602e-105">屬性值</span><span class="sxs-lookup"><span data-stu-id="7602e-105">Property value</span></span>
 
 <xref:System.Int32>\
 
-## <a name="requirements"></a><span data-ttu-id="1712b-104">需求</span><span class="sxs-lookup"><span data-stu-id="1712b-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="7602e-106">需求</span><span class="sxs-lookup"><span data-stu-id="7602e-106">Requirements</span></span>
 
-<span data-ttu-id="1712b-105">**命名空間︰** `stdole`</span><span class="sxs-lookup"><span data-stu-id="1712b-105">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="7602e-107">**命名空間：** `stdole`</span><span class="sxs-lookup"><span data-stu-id="7602e-107">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="1712b-106">**組件：** stdole （在 stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="1712b-106">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="7602e-108">**元件：** stdole （在 stdole.dll 中）</span><span class="sxs-lookup"><span data-stu-id="7602e-108">**Assembly:** stdole (in stdole.dll)</span></span>

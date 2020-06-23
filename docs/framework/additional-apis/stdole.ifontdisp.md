@@ -1,5 +1,6 @@
 ---
-title: IFontDisp 介面 (stdole)
+title: IFontDisp 介面（stdole）
+description: 請參閱 .NET 中有關 IFontDisp 介面的參考資訊。 這個介面位於 stdole 命名空間和 stdole 元件（在 stdole.dll 程式庫中）。
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,14 +10,14 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 82d487b599401188f42d6a4dc6856030d5a2eef6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2e955997c66dc4db0de804ee6eded02735a3276
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675256"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105331"
 ---
-# <a name="ipicturefont-interface"></a><span data-ttu-id="cebf1-102">IPictureFont 介面</span><span class="sxs-lookup"><span data-stu-id="cebf1-102">IPictureFont Interface</span></span>
+# <a name="ifontdisp-interface"></a><span data-ttu-id="fc235-104">IFontDisp 介面</span><span class="sxs-lookup"><span data-stu-id="fc235-104">IFontDisp Interface</span></span>
 
 ```csharp
 [GuidAttribute("BEF6E003-A874-101A-8BBA-00AA00300CAB")]
@@ -24,8 +25,8 @@ ms.locfileid: "61675256"
 public interface IFontDisp
 ```
 
-## <a name="requirements"></a><span data-ttu-id="cebf1-103">需求</span><span class="sxs-lookup"><span data-stu-id="cebf1-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fc235-105">需求</span><span class="sxs-lookup"><span data-stu-id="fc235-105">Requirements</span></span>
 
-<span data-ttu-id="cebf1-104">**命名空間︰** `stdole`</span><span class="sxs-lookup"><span data-stu-id="cebf1-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="fc235-106">**命名空間：** `stdole`</span><span class="sxs-lookup"><span data-stu-id="fc235-106">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="cebf1-105">**組件：** stdole （在 stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="cebf1-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="fc235-107">**元件：** stdole （在 stdole.dll 中）</span><span class="sxs-lookup"><span data-stu-id="fc235-107">**Assembly:** stdole (in stdole.dll)</span></span>

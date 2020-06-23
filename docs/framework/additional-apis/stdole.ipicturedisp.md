@@ -1,5 +1,6 @@
 ---
-title: IPictureDisp 介面 (stdole)
+title: IPictureDisp 介面（stdole）
+description: 在 .NET 中尋找 IPictureDisp 介面的相關資訊。 這個介面位於 stdole 命名空間和 stdole 元件（在 stdole.dll 程式庫中）。
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,14 +10,14 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: eb5db8598780a18d2bd65b08964f5df84fc9b8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 54f2139500bfa62a6c862157283079f05d69215b
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706009"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105304"
 ---
-# <a name="ipicturedisp-interface"></a><span data-ttu-id="6765a-102">IPictureDisp 介面</span><span class="sxs-lookup"><span data-stu-id="6765a-102">IPictureDisp Interface</span></span>
+# <a name="ipicturedisp-interface"></a><span data-ttu-id="a27b5-104">IPictureDisp 介面</span><span class="sxs-lookup"><span data-stu-id="a27b5-104">IPictureDisp Interface</span></span>
 
 ```csharp
 [InterfaceTypeAttribute()]
@@ -24,8 +25,8 @@ ms.locfileid: "61706009"
 public interface IPictureDisp
 ```
 
-## <a name="requirements"></a><span data-ttu-id="6765a-103">需求</span><span class="sxs-lookup"><span data-stu-id="6765a-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a27b5-105">需求</span><span class="sxs-lookup"><span data-stu-id="a27b5-105">Requirements</span></span>
 
-<span data-ttu-id="6765a-104">**命名空間︰** `stdole`</span><span class="sxs-lookup"><span data-stu-id="6765a-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="a27b5-106">**命名空間：** `stdole`</span><span class="sxs-lookup"><span data-stu-id="a27b5-106">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="6765a-105">**組件：** stdole （在 stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="6765a-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="a27b5-107">**元件：** stdole （在 stdole.dll 中）</span><span class="sxs-lookup"><span data-stu-id="a27b5-107">**Assembly:** stdole (in stdole.dll)</span></span>
