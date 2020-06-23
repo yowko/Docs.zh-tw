@@ -1,5 +1,6 @@
 ---
-title: 核心回應資料.m_ResponseHeaders欄位
+title: CoreResponseData。 m_ResponseHeaders] 欄位
+description: 瞭解 .NET 中的 m_ResponseHeaders CoreResponseData 欄位。 此欄位是 WebHeaderCollection 類型，具有與伺服器回應相關聯的標頭。
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 723df6dc2de978695608d106e3a01bde286fc4fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7c7b896193cb81e9fc9e3ec28110359003a36728
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156099"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989793"
 ---
-# <a name="coreresponsedatam_responseheaders-field"></a><span data-ttu-id="83807-102">核心回應資料.m\_回應標題欄位</span><span class="sxs-lookup"><span data-stu-id="83807-102">CoreResponseData.m\_ResponseHeaders Field</span></span>
+# <a name="coreresponsedatam_responseheaders-field"></a><span data-ttu-id="02a87-104">CoreResponseData. m \_ ResponseHeaders 欄位</span><span class="sxs-lookup"><span data-stu-id="02a87-104">CoreResponseData.m\_ResponseHeaders Field</span></span>
 
-<span data-ttu-id="83807-103">`CoreResponseData.m_ResponseHeaders`是與<xref:System.Net.WebHeaderCollection>伺服器回應關聯的標頭。</span><span class="sxs-lookup"><span data-stu-id="83807-103">`CoreResponseData.m_ResponseHeaders` is a <xref:System.Net.WebHeaderCollection> of headers associated with the server response.</span></span>
+<span data-ttu-id="02a87-105">`CoreResponseData.m_ResponseHeaders`這是 <xref:System.Net.WebHeaderCollection> 與伺服器回應相關聯的標頭。</span><span class="sxs-lookup"><span data-stu-id="02a87-105">`CoreResponseData.m_ResponseHeaders` is a <xref:System.Net.WebHeaderCollection> of headers associated with the server response.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="83807-104">語法</span><span class="sxs-lookup"><span data-stu-id="83807-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="02a87-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="02a87-106">Syntax</span></span>
   
 ```csharp
 public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> <span data-ttu-id="83807-105">此 API 不應直接用於代碼。</span><span class="sxs-lookup"><span data-stu-id="83807-105">This API is not meant to be used directly in your code.</span></span> <span data-ttu-id="83807-106">相反，您應該使用 掛鉤<xref:System.Diagnostics.DiagnosticSource>網路代碼。</span><span class="sxs-lookup"><span data-stu-id="83807-106">Instead, you should use a <xref:System.Diagnostics.DiagnosticSource> to hook networking code.</span></span> <span data-ttu-id="83807-107">請參閱[診斷源使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。</span><span class="sxs-lookup"><span data-stu-id="83807-107">See [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span></span>
+> <span data-ttu-id="02a87-107">此 API 不適合直接在您的程式碼中使用。</span><span class="sxs-lookup"><span data-stu-id="02a87-107">This API is not meant to be used directly in your code.</span></span> <span data-ttu-id="02a87-108">相反地，您應該使用 <xref:System.Diagnostics.DiagnosticSource> 來攔截網路程式碼。</span><span class="sxs-lookup"><span data-stu-id="02a87-108">Instead, you should use a <xref:System.Diagnostics.DiagnosticSource> to hook networking code.</span></span> <span data-ttu-id="02a87-109">請參閱[DiagnosticSource 使用者手冊](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。</span><span class="sxs-lookup"><span data-stu-id="02a87-109">See [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span></span>
 >
-> <span data-ttu-id="83807-108">在任何情況下，Microsoft 都不支援在生產應用程式中使用此類。</span><span class="sxs-lookup"><span data-stu-id="83807-108">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="02a87-110">在任何情況下，Microsoft 不支援在生產應用程式中使用此類別。</span><span class="sxs-lookup"><span data-stu-id="02a87-110">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="83807-109">需求</span><span class="sxs-lookup"><span data-stu-id="83807-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="02a87-111">需求</span><span class="sxs-lookup"><span data-stu-id="02a87-111">Requirements</span></span>
 
-<span data-ttu-id="83807-110">**命名空間：**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="83807-110">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="02a87-112">**命名空間：** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="02a87-112">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="83807-111">**裝配：** 系統（系統中）</span><span class="sxs-lookup"><span data-stu-id="83807-111">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="02a87-113">**元件：** 系統（在 System.dll 中）</span><span class="sxs-lookup"><span data-stu-id="02a87-113">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="83807-112">**.NET 框架版本：** 自 2.0 起可用。</span><span class="sxs-lookup"><span data-stu-id="83807-112">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="02a87-114">**.NET Framework 版本：** 自2.0 開始提供。</span><span class="sxs-lookup"><span data-stu-id="02a87-114">**.NET Framework versions:** Available since 2.0.</span></span>
