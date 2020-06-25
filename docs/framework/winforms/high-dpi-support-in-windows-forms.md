@@ -1,5 +1,6 @@
 ---
 title: 高 DPI 支援
+description: 如需常見的高 DPI 和動態 DPI 案例，請瞭解 Windows Forms 中的支援。 另請瞭解如何設定 Windows Forms 應用程式，以提供高 DPI 支援。
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-ms.openlocfilehash: a5c3125475c2de2cf83a3d97e356b26c0acdde99
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a9e0766307095da447c772de5a3065c18b7b7154
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741893"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325643"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms 中的高 DPI 支援
 
 從 .NET Framework 4.7 開始，Windows Forms 包含常見高 DPI 和動態 DPI 案例的增強功能。 其中包括：
 
-- 改善數個 Windows Forms 控制項的縮放和版面配置，例如 <xref:System.Windows.Forms.MonthCalendar> 控制項和 <xref:System.Windows.Forms.CheckedListBox> 控制項。
+- 改善數個 Windows Forms 控制項（例如控制項和控制項）的縮放和版面配置 <xref:System.Windows.Forms.MonthCalendar> <xref:System.Windows.Forms.CheckedListBox> 。
 
 - 單一傳遞調整。  在 .NET Framework 4.6 和舊版中，縮放是透過多個階段來執行，這會導致某些控制項的縮放比例超出所需。
 
@@ -45,9 +46,9 @@ ms.locfileid: "76741893"
   </compatibility>
   ```
 
-- 在*app.config*檔案中啟用每個監視器的 DPI 感知。
+- 啟用*app.config*檔案中的個別監視器 DPI 感知。
 
-  Windows Forms 引進新的[`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md)元素，以支援從 .NET Framework 4.7 開始新增的新功能和自訂專案。 若要利用支援高 DPI 的新功能，請在您的應用程式佈建檔中新增下列各項。
+  Windows Forms 引進新的 [`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md) 元素，以支援從 .NET Framework 4.7 開始新增的新功能和自訂專案。 若要利用支援高 DPI 的新功能，請在您的應用程式佈建檔中新增下列各項。
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -56,11 +57,11 @@ ms.locfileid: "76741893"
   ```
 
   > [!IMPORTANT]
-  > 在舊版的 .NET Framework 中，您使用了資訊清單來新增高 DPI 支援。 不再建議使用此方法，因為它會覆寫 app.config 檔案中定義的設定。
+  > 在舊版的 .NET Framework 中，您使用了資訊清單來新增高 DPI 支援。 不再建議使用此方法，因為它會覆寫在 app.config 檔案上定義的設定。
 
 - 呼叫靜態 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。
 
-  這應該是應用程式進入點中的第一個方法呼叫。 例如，
+  這應該是應用程式進入點中的第一個方法呼叫。 例如：
 
   ```csharp
   static void Main()
@@ -73,7 +74,7 @@ ms.locfileid: "76741893"
 
 ## <a name="opting-out-of-individual-high-dpi-features"></a>退出個別的高 DPI 功能
 
-將 `DpiAwareness` 值設定為 `PerMonitorV2`，會啟用從 .NET Framework 4.7 開始 .NET Framework 版本所支援的所有高 DPI 感知功能。 一般來說，這適用于大部分的 Windows Forms 應用程式。 不過，您可能會想要退出宣告一或多個個別的功能。 執行此作業最重要的原因是您現有的應用程式程式碼已處理該功能。  例如，如果您的應用程式處理自動調整，您可能會想要停用自動調整大小功能，如下所示：
+將值設定為，會 `DpiAwareness` `PerMonitorV2` 啟用從 .NET Framework 4.7 開始 .NET Framework 版本所支援的所有高 DPI 感知功能。 一般來說，這適用于大部分的 Windows Forms 應用程式。 不過，您可能會想要退出宣告一或多個個別的功能。 執行此作業最重要的原因是您現有的應用程式程式碼已處理該功能。  例如，如果您的應用程式處理自動調整，您可能會想要停用自動調整大小功能，如下所示：
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -88,15 +89,15 @@ ms.locfileid: "76741893"
 
 從 .NET Framework 4.7 開始，三個新的事件可讓您以程式設計方式處理動態 DPI 變更：
 
-- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>，當控制項的 DPI 設定在其父控制項或表單發生 DPI 變更事件之後，以程式設計方式變更時，就會引發此錯誤。
+- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>，當控制項的 DPI 設定在它的父控制項或表單發生 DPI 變更事件之後，以程式設計方式變更時，就會引發此錯誤。
 - <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>，當控制項的 DPI 設定在其父控制項或表單發生 DPI 變更事件之前，以程式設計方式變更時，就會引發此錯誤。
-- <xref:System.Windows.Forms.Form.DpiChanged>，當目前顯示表單的顯示裝置上的 DPI 設定變更時，就會引發此情況。
+- <xref:System.Windows.Forms.Form.DpiChanged>，這是在目前顯示表單的顯示裝置上，DPI 設定變更時引發。
 
 ## <a name="new-helper-methods-and-properties"></a>新的 helper 方法和屬性
 
 .NET Framework 4.7 也會新增一些新的 helper 方法和屬性，以提供 DPI 縮放比例的相關資訊，並可讓您執行 DPI 縮放比例。 其中包括：
 
-- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>，會將值從邏輯轉換為裝置圖元。
+- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>，可將值從邏輯轉換成裝置圖元。
 
 - <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>，可將點陣圖影像調整為裝置的邏輯 DPI。
 

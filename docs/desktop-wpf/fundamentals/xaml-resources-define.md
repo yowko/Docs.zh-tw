@@ -1,15 +1,15 @@
 ---
 title: 定義 XAML 資源
 description: 瞭解適用于 .NET Core 的 WPF 中的 XAML 資源。 瞭解 XAML 資源的類型，並瞭解如何定義 XAML 資源。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: b278bb92afc308578d60e347871e0150b26a95db
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: f8eaf3fd931aa6804b0b9a9c19c6bcc042678ebf
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "82071280"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325716"
 ---
 # <a name="overview-of-xaml-resources"></a>XAML 資源的總覽
 
@@ -24,11 +24,11 @@ ms.locfileid: "82071280"
 
 ## <a name="using-resources-in-xaml"></a>在 XAML 中使用資源
 
-下列範例會將定義<xref:System.Windows.Media.SolidColorBrush>為頁面根項目上的資源。 然後，此範例會參考資源，並使用它來設定數個子項目的屬性， <xref:System.Windows.Shapes.Ellipse>包括、 <xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Controls.Button>。
+下列範例會將定義 <xref:System.Windows.Media.SolidColorBrush> 為頁面根項目上的資源。 然後，此範例會參考資源，並使用它來設定數個子項目的屬性，包括 <xref:System.Windows.Shapes.Ellipse> 、 <xref:System.Windows.Controls.TextBlock> 和 <xref:System.Windows.Controls.Button> 。
 
 [!code-xaml[FEResourceSH_snip#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]
 
-每個架構層級專案<xref:System.Windows.FrameworkElement> （ <xref:System.Windows.FrameworkContentElement>或）都<xref:System.Windows.FrameworkElement.Resources%2A>有一個屬性，其<xref:System.Windows.ResourceDictionary>為包含已定義資源的類型。 您可以在任何元素上定義資源，例如<xref:System.Windows.Controls.Button>。 不過，資源最常定義在根項目上，在此範例<xref:System.Windows.Controls.Page>中為。
+每個架構層級專案（ <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> ）都有一個 <xref:System.Windows.FrameworkElement.Resources%2A> 屬性，其為 <xref:System.Windows.ResourceDictionary> 包含已定義資源的類型。 您可以在任何元素上定義資源，例如 <xref:System.Windows.Controls.Button> 。 不過，資源最常定義在根項目上， <xref:System.Windows.Controls.Page> 在此範例中為。
 
 資源字典中的每個資源都必須有唯一索引鍵。 當您在標記中定義資源時，您可以透過[x：Key](../xaml-services/xkey-directive.md)指示詞指派唯一索引鍵。 索引鍵通常是字串；不過，您也可以使用適當的標記延伸，將它設定為其他物件類型。 WPF 中的特定功能區域會使用資源的非字串索引鍵，特別是針對樣式、元件資源和資料樣式。
 
@@ -36,7 +36,7 @@ ms.locfileid: "82071280"
 
 [!code-xaml[FEResourceSH_snip#KeyNameUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]
 
-在上述範例中，當 XAML 載入`{StaticResource MyBrush}`器處理上<xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Button>屬性的值時，資源查閱邏輯會先檢查<xref:System.Windows.Controls.Button>元素的資源字典。 如果<xref:System.Windows.Controls.Button>沒有資源索引鍵`MyBrush`的定義（在此範例中，它不是，它的資源集合是空的），則查閱接下來會<xref:System.Windows.Controls.Button>檢查的父<xref:System.Windows.Controls.Page>元素，也就是。 如果您在<xref:System.Windows.Controls.Page>根項目上定義資源，則的邏輯樹狀結構中的所有元素都<xref:System.Windows.Controls.Page>可以存取它。 而且，您可以重複使用相同的資源來設定接受資源所代表之相同類型的任何屬性值。 在`MyBrush`上述範例中，相同的資源會設定兩個不同的<xref:System.Windows.Controls.Control.Background%2A>屬性： <xref:System.Windows.Controls.Button>的、和<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>。
+在上述範例中，當 XAML 載入器處理上屬性的值時 `{StaticResource MyBrush}` <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Button> ，資源查閱邏輯會先檢查元素的資源字典 <xref:System.Windows.Controls.Button> 。 如果 <xref:System.Windows.Controls.Button> 沒有資源索引鍵的定義 `MyBrush` （在此範例中，它不是，它的資源集合是空的），則查閱接下來會檢查的父元素 <xref:System.Windows.Controls.Button> ，也就是 <xref:System.Windows.Controls.Page> 。 如果您在根項目上定義資源，則的 <xref:System.Windows.Controls.Page> 邏輯樹狀結構中的所有元素都 <xref:System.Windows.Controls.Page> 可以存取它。 而且，您可以重複使用相同的資源來設定接受資源所代表之相同類型的任何屬性值。 在上述範例中，相同的 `MyBrush` 資源會設定兩個不同的屬性：的 <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Button> 、和 <xref:System.Windows.Shapes.Shape.Fill%2A> 的 <xref:System.Windows.Shapes.Rectangle> 。
 
 ## <a name="static-and-dynamic-resources"></a>靜態和動態資源
 
@@ -58,7 +58,7 @@ ms.locfileid: "82071280"
 
 - 您的應用程式設計將大部分的資源集中在頁面或應用層級的資源字典中。 靜態資源參考不會根據執行時間行為重新評估，例如重載頁面。 因此，根據您的資源和應用程式設計，避免大量動態資源參考時，可能會有一些效能上的好處。
 
-- 您要設定的屬性值不在<xref:System.Windows.DependencyObject>或上。 <xref:System.Windows.Freezable>
+- 您要設定的屬性值不在 <xref:System.Windows.DependencyObject> 或上 <xref:System.Windows.Freezable> 。
 
 - 您所建立的資源字典將會編譯成 DLL，並封裝為應用程式的一部分，或在應用程式之間共用。
 
@@ -76,7 +76,7 @@ ms.locfileid: "82071280"
 
 01. 查閱程式接著會將邏輯樹狀結構向上移至父元素和其資源字典。 此程式會繼續進行，直到達到根項目為止。
 
-01. 已檢查應用程式資源。 應用程式資源是資源字典中的資源，由 WPF 應用程式<xref:System.Windows.Application>的物件所定義。
+01. 已檢查應用程式資源。 應用程式資源是資源字典中的資源，由 <xref:System.Windows.Application> WPF 應用程式的物件所定義。
 
 資源字典內的靜態資源參考必須參考資源參考之前已在語彙上定義的資源。 靜態資源參考無法解析向前參考。 基於這個理由，請設計您的資源字典結構，以便在每個個別資源字典的開頭或附近定義資源。
 
@@ -88,11 +88,11 @@ ms.locfileid: "82071280"
 
 動態資源的最佳使用時機：
 
-- 資源的值（包括系統資源）或其他可供使用者設定的資源，取決於執行時間之前不知道的條件。 例如，您可以建立 setter 值，參考、 <xref:System.Windows.SystemColors> <xref:System.Windows.SystemFonts>或<xref:System.Windows.SystemParameters>公開的系統屬性。 由於這些值最終是來自使用者和作業系統的執行階段環境，因此是真正動態的。 您也可能有會變更的應用程式層級佈景主題，其中的頁面層級資源存取也必須擷取該變更。
+- 資源的值（包括系統資源）或其他可供使用者設定的資源，取決於執行時間之前不知道的條件。 例如，您可以建立 setter 值，參考、或公開的系統屬性 <xref:System.Windows.SystemColors> <xref:System.Windows.SystemFonts> <xref:System.Windows.SystemParameters> 。 由於這些值最終是來自使用者和作業系統的執行階段環境，因此是真正動態的。 您也可能有會變更的應用程式層級佈景主題，其中的頁面層級資源存取也必須擷取該變更。
 
 - 您正在建立或參考自訂控制項的主題樣式。
 
-- 您想要<xref:System.Windows.ResourceDictionary>在應用程式存留期間調整的內容。
+- 您想要 <xref:System.Windows.ResourceDictionary> 在應用程式存留期間調整的內容。
 
 - 您有內含相互依存性的複雜資源結構，可能需要向前參考。 靜態資源參考不支援向前參考，但動態資源參考會支援它們，因為在執行時間之前，不需要評估資源，而向前參考則不是相關的概念。
 
@@ -104,17 +104,17 @@ ms.locfileid: "82071280"
 
 ### <a name="dynamic-resource-lookup-behavior"></a>動態資源查閱行為
 
-如果您呼叫<xref:System.Windows.FrameworkElement.FindResource%2A>或<xref:System.Windows.FrameworkElement.SetResourceReference%2A>，動態資源參考的資源查閱行為會與您程式碼中的查閱行為類似：
+如果您呼叫或，動態資源參考的資源查閱行為會與您程式碼中的查閱行為類似 <xref:System.Windows.FrameworkElement.FindResource%2A> <xref:System.Windows.FrameworkElement.SetResourceReference%2A> ：
 
 01. Lookup 會在設定屬性的元素所定義的資源字典中，檢查所要求的索引鍵：
 
-    - 如果元素定義<xref:System.Windows.FrameworkElement.Style%2A>屬性， <xref:System.Windows.FrameworkElement.Style?displayProperty=fullName>則專案的會核取其<xref:System.Windows.Style.Resources>字典。
+    - 如果元素定義 <xref:System.Windows.FrameworkElement.Style%2A> 屬性，則專案的會 <xref:System.Windows.FrameworkElement.Style?displayProperty=fullName> 核取其 <xref:System.Windows.Style.Resources> 字典。
 
-    - 如果元素定義<xref:System.Windows.Controls.Control.Template%2A>屬性，則會檢查<xref:System.Windows.FrameworkTemplate.Resources?displayProperty=fullName>專案的字典。
+    - 如果元素定義 <xref:System.Windows.Controls.Control.Template%2A> 屬性，則 <xref:System.Windows.FrameworkTemplate.Resources?displayProperty=fullName> 會檢查項目的字典。
 
 01. 查閱會將邏輯樹狀結構向上移至父元素和其資源字典。 此程式會繼續進行，直到達到根項目為止。
 
-01. 已檢查應用程式資源。 應用程式資源是資源字典中的資源，由 WPF 應用程式<xref:System.Windows.Application>的物件所定義。
+01. 已檢查應用程式資源。 應用程式資源是資源字典中的資源，由 <xref:System.Windows.Application> WPF 應用程式的物件所定義。
 
 01. 針對目前作用中的主題，會檢查主題資源字典。 如果佈景主題在執行階段變更，則會重新評估其值。
 
@@ -122,9 +122,9 @@ ms.locfileid: "82071280"
 
 例外狀況行為 (如果有的話) 則有所不同：
 
-- 如果資源是由<xref:System.Windows.FrameworkElement.FindResource%2A>呼叫所要求，而且找不到，則會擲回例外狀況。
+- 如果資源是由呼叫所要求， <xref:System.Windows.FrameworkElement.FindResource%2A> 而且找不到，則會擲回例外狀況。
 
-- 如果資源是由<xref:System.Windows.FrameworkElement.TryFindResource%2A>呼叫所要求，而且找不到，則不會擲回任何例外狀況，且`null`傳回的值為。 如果要設定的屬性不接受`null`，則根據所設定的個別屬性，仍然可能會擲回更深入的例外狀況。
+- 如果資源是由呼叫所要求， <xref:System.Windows.FrameworkElement.TryFindResource%2A> 而且找不到，則不會擲回任何例外狀況，且傳回的值為 `null` 。 如果要設定的屬性不接受 `null` ，則根據所設定的個別屬性，仍然可能會擲回更深入的例外狀況。
 
 - 如果資源是由 XAML 中的動態資源參考所要求，而且找不到，則行為取決於一般屬性系統。 一般行為就如同資源所在的層級上沒有發生屬性設定作業一樣。 比方說，如果您嘗試使用無法評估的資源來設定個別按鈕元素的背景，則沒有任何值設定結果，但有效值仍然可以來自屬性系統和值優先順序的其他參與者。 例如，背景值仍然可能來自本機定義的按鈕樣式或主題樣式。 對於未由主題樣式定義的屬性，失敗資源評估之後的有效值可能來自屬性中繼資料中的預設值。
 
@@ -132,31 +132,31 @@ ms.locfileid: "82071280"
 
 動態資源參考有一些值得注意的限制。 至少必須有下列其中一項條件成立：
 
-- 要設定的屬性必須是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>上的屬性。 該屬性必須由所支援<xref:System.Windows.DependencyProperty>。
+- 要設定的屬性必須是或上的屬性 <xref:System.Windows.FrameworkElement> <xref:System.Windows.FrameworkContentElement> 。 該屬性必須由所支援 <xref:System.Windows.DependencyProperty> 。
 
-- 參考適用于中的值`StyleSetter`。
+- 參考適用于中的值 `StyleSetter` 。
 
-- 要設定的屬性必須是上的屬性， <xref:System.Windows.Freezable>它是以<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>屬性的值或<xref:System.Windows.Setter>值的形式提供。
+- 要設定的屬性必須是上的屬性 <xref:System.Windows.Freezable> ，它是以 <xref:System.Windows.FrameworkElement> 或屬性的值 <xref:System.Windows.FrameworkContentElement> 或值的形式提供 <xref:System.Windows.Setter> 。
 
-因為所設定的屬性必須是<xref:System.Windows.DependencyProperty>或<xref:System.Windows.Freezable>屬性，所以大部分的屬性變更都可以傳播至 UI，因為屬性系統會通知屬性變更（變更的動態資源值）。 大部分的控制項都包含邏輯，會在<xref:System.Windows.DependencyProperty>變更時強制控制項的另一個版面配置，而該屬性可能會影響版面配置。 不過，並非所有具有[DynamicResource 標記延伸](../../framework/wpf/advanced/dynamicresource-markup-extension.md)作為其值的屬性，都保證會在 UI 中提供即時更新。 該功能仍然可能因屬性而異，並取決於擁有屬性的類型，或甚至是應用程式的邏輯結構。
+因為所設定的屬性必須是 <xref:System.Windows.DependencyProperty> 或 <xref:System.Windows.Freezable> 屬性，所以大部分的屬性變更都可以傳播至 UI，因為屬性系統會通知屬性變更（變更的動態資源值）。 大部分的控制項都包含邏輯，會在變更時強制控制項的另一個版面配置， <xref:System.Windows.DependencyProperty> 而該屬性可能會影響版面配置。 不過，並非所有具有[DynamicResource 標記延伸](../../framework/wpf/advanced/dynamicresource-markup-extension.md)作為其值的屬性，都保證會在 UI 中提供即時更新。 該功能仍然可能因屬性而異，並取決於擁有屬性的類型，或甚至是應用程式的邏輯結構。
 
 ## <a name="styles-datatemplates-and-implicit-keys"></a>樣式、DataTemplates 和隱含索引鍵
 
-雖然中的<xref:System.Windows.ResourceDictionary>所有專案都必須有索引鍵，但這並不表示所有資源都必須`x:Key`具有明確的。 有幾種物件類型會在定義為資源時支援隱含索引鍵，其中索引鍵值會繫結至另一個屬性的值。 這種類型的索引鍵稱為隱含索引鍵，而`x:Key`屬性則是明確的索引鍵。 您可以藉由指定明確索引鍵，來覆寫任何隱含索引鍵。
+雖然中的所有專案都 <xref:System.Windows.ResourceDictionary> 必須有索引鍵，但這並不表示所有資源都必須具有明確的 `x:Key` 。 有幾種物件類型會在定義為資源時支援隱含索引鍵，其中索引鍵值會繫結至另一個屬性的值。 這種類型的索引鍵稱為隱含索引鍵，而 `x:Key` 屬性則是明確的索引鍵。 您可以藉由指定明確索引鍵，來覆寫任何隱含索引鍵。
 
-當您定義時，資源的其中一個重要<xref:System.Windows.Style>案例是。 事實上，幾乎一律<xref:System.Windows.Style>會定義為資源字典中的專案，因為樣式原本就是要重複使用。 如需樣式的詳細資訊，請參閱設定樣式[和範本](styles-templates-overview.md)。
+當您定義時，資源的其中一個重要案例是 <xref:System.Windows.Style> 。 事實上， <xref:System.Windows.Style> 幾乎一律會定義為資源字典中的專案，因為樣式原本就是要重複使用。 如需樣式的詳細資訊，請參閱設定樣式[和範本](styles-templates-overview.md)。
 
-控制項的樣式可以透過隱含索引鍵來建立及參考。 定義預設控制項外觀的佈景主題樣式會依賴此隱含索引鍵。 從要求它的觀點來看，隱含索引鍵是<xref:System.Type>控制項本身的。 從定義資源的觀點來看，隱含索引鍵是<xref:System.Windows.Style.TargetType%2A>樣式的。 因此，如果您要建立自訂控制項的主題，或建立與現有主題樣式互動的樣式，就不需要為該指定[x：Key](../xaml-services/xkey-directive.md)指示<xref:System.Windows.Style>詞。 此外，如果您想要使用佈景主題樣式，則完全不需要指定任何樣式。 例如，下列樣式定義的運作方式，雖然<xref:System.Windows.Style>資源似乎沒有索引鍵：
+控制項的樣式可以透過隱含索引鍵來建立及參考。 定義預設控制項外觀的佈景主題樣式會依賴此隱含索引鍵。 從要求它的觀點來看，隱含索引鍵是 <xref:System.Type> 控制項本身的。 從定義資源的觀點來看，隱含索引鍵是 <xref:System.Windows.Style.TargetType%2A> 樣式的。 因此，如果您要建立自訂控制項的主題，或建立與現有主題樣式互動的樣式，就不需要為該指定[x：Key](../xaml-services/xkey-directive.md)指示詞 <xref:System.Windows.Style> 。 此外，如果您想要使用佈景主題樣式，則完全不需要指定任何樣式。 例如，下列樣式定義的運作方式，雖然 <xref:System.Windows.Style> 資源似乎沒有索引鍵：
 
 [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]
 
-該樣式的確有一個索引鍵：隱含索引鍵`typeof(System.Windows.Controls.Button)`。 在標記中，您可以將<xref:System.Windows.Style.TargetType%2A>直接指定為類型名稱（或者，您可以選擇性地使用[{x:Type...}](../xaml-services/xtype-markup-extension.md) 傳回<xref:System.Type>。
+該樣式的確有一個索引鍵：隱含索引鍵 `typeof(System.Windows.Controls.Button)` 。 在標記中，您可以將 <xref:System.Windows.Style.TargetType%2A> 直接指定為類型名稱（或者，您可以選擇性地使用[{x:Type...}](../xaml-services/xtype-markup-extension.md) 傳回 <xref:System.Type> 。
 
-透過 WPF 使用的預設主題樣式機制，該樣式會套用為頁面<xref:System.Windows.Controls.Button>上的執行時間樣式，即使<xref:System.Windows.Controls.Button>本身不會嘗試指定其<xref:System.Windows.FrameworkElement.Style%2A>屬性或樣式的特定資源參考也一樣。 您在頁面中所定義的樣式，會與主題字典樣式所擁有的相同索引鍵，在查閱序列中找到。 您可以只指定`<Button>Hello</Button>`頁面中的任何位置，而您使用<xref:System.Windows.Style.TargetType%2A>定義的樣式`Button`會套用至該按鈕。 如果您想要的話，仍然可以使用與標記相同的型別值<xref:System.Windows.Style.TargetType%2A>來明確地為樣式索引鍵，但這是選擇性的。
+透過 WPF 使用的預設主題樣式機制，該樣式會套用為頁面上的執行時間樣式 <xref:System.Windows.Controls.Button> ，即使 <xref:System.Windows.Controls.Button> 本身不會嘗試指定其 <xref:System.Windows.FrameworkElement.Style%2A> 屬性或樣式的特定資源參考也一樣。 您在頁面中所定義的樣式，會與主題字典樣式所擁有的相同索引鍵，在查閱序列中找到。 您可以只指定 `<Button>Hello</Button>` 頁面中的任何位置，而您使用定義的 <xref:System.Windows.Style.TargetType%2A> 樣式 `Button` 會套用至該按鈕。 如果您想要的話，仍然可以使用與標記相同的型別值來明確地為樣式索引鍵 <xref:System.Windows.Style.TargetType%2A> ，但這是選擇性的。
 
-如果<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>為，則`true`樣式的隱含索引鍵不適用於控制項。 （也請注意<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> ，可能會設定為控制項類別的原生行為的一部分，而不是明確地在控制項的實例上）。此外，為了支援衍生類別案例的隱含索引鍵，控制項必須覆寫<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> （WPF 中提供的所有現有控制項都包含此覆寫）。 如需樣式、主題和控制項設計的詳細資訊，請參閱[設計可設定樣式控制項的方針](../../framework/wpf/controls/guidelines-for-designing-stylable-controls.md)。
+如果為，則樣式的隱含索引鍵不適用於控制項 <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> `true` 。 （也請注意， <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> 可能會設定為控制項類別的原生行為的一部分，而不是明確地在控制項的實例上）。此外，為了支援衍生類別案例的隱含索引鍵，控制項必須覆寫 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> （WPF 中提供的所有現有控制項都包含此覆寫）。 如需樣式、主題和控制項設計的詳細資訊，請參閱[設計可設定樣式控制項的方針](../../framework/wpf/controls/guidelines-for-designing-stylable-controls.md)。
 
-<xref:System.Windows.DataTemplate>也有隱含的索引鍵。 的隱含索引鍵<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>屬性值。 <xref:System.Windows.DataTemplate.DataType%2A>也可以指定為類型的名稱，而不是明確地使用[{x:Type...}](../xaml-services/xtype-markup-extension.md)。 如需詳細資訊，請參閱[資料範本化總覽](../../framework/wpf/data/data-templating-overview.md)。
+<xref:System.Windows.DataTemplate>也有隱含的索引鍵。 的隱含索引鍵 <xref:System.Windows.DataTemplate> 是 <xref:System.Windows.DataTemplate.DataType%2A> 屬性值。 <xref:System.Windows.DataTemplate.DataType%2A>也可以指定為類型的名稱，而不是明確地使用[{x:Type...}](../xaml-services/xtype-markup-extension.md)。 如需詳細資訊，請參閱[資料範本化總覽](../../framework/wpf/data/data-templating-overview.md)。
 
 ## <a name="see-also"></a>另請參閱
 

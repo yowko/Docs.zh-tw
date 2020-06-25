@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4ce32c766e7a454c1294eb38266a84602cf8e241
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245631"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325939"
 ---
 # <a name="isolated-storage"></a>隔離儲存區
 <a name="top"></a> 對於傳統型應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。
@@ -122,12 +122,12 @@ __本節適用于下列架構：__
 
 呼叫下列任何 Api 的元件或應用程式會從整部電腦範圍讀取：
 
- * [Remove-isolatedstoragefile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator)，傳遞包含 IsolatedStorageScope 旗標的範圍
- * [Remove-isolatedstoragefile. GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
- * [Remove-isolatedstoragefile. GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
- * [Remove-isolatedstoragefile. GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
- * [Remove-isolatedstoragefile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore)，傳遞包含 IsolatedStorageScope 旗標的範圍
- * [Remove-isolatedstoragefile](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove)，傳遞包含旗標的範圍 `IsolatedStorageScope.Machine`
+* [Remove-isolatedstoragefile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator)，傳遞包含 IsolatedStorageScope 旗標的範圍
+* [Remove-isolatedstoragefile. GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
+* [Remove-isolatedstoragefile. GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
+* [Remove-isolatedstoragefile. GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
+* [Remove-isolatedstoragefile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore)，傳遞包含 IsolatedStorageScope 旗標的範圍
+* [Remove-isolatedstoragefile](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove)，傳遞包含旗標的範圍 `IsolatedStorageScope.Machine`
 
 如果使用參數呼叫[隔離儲存區工具](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` ，則會受到影響 `/machine` ，如下列程式碼所示：
 

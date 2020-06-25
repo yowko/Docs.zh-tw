@@ -1,6 +1,6 @@
 ---
-title: jitCompilationStart MDA
-description: 使用 jitCompilationStart managed 偵錯工具（MDA），此功能會在即時（JIT）編譯器開始編譯 .NET 函式時開始報告。
+title: jitCompilationStart managed 偵錯工具（MDA）
+description: 當即時（JIT）編譯器開始編譯 .NET 函式時，會報告 jitCompilationStart managed 偵錯工具（MDA）。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compilation
@@ -8,30 +8,31 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: bf2d09f433f0b8e4056fecd1f4e82bf3b91dd2bc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 13e20c1a940b7bfa777245ba35f3cc1b003d15b2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904126"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325534"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
+
 當 Just-In-time (JIT) 編譯器開始編譯函式時，會啟動 `jitCompilationStart` Managed 偵錯助理 (MDA)。  
   
 ## <a name="symptoms"></a>徵狀  
- 因為 mscorjit.dll 已載入至處理序，所以已經是原生映像格式的程式的工作集大小會增加。  
+ 已是原生影像格式之程式的工作集大小會增加，因為 mscorjit.dll 會載入至進程中。  
   
 ## <a name="cause"></a>原因  
- 並非所有與程式相依的組件都是以原生格式產生，或者以原生格式產生的組件未正確登錄。  
-  
+並非程式相依的所有元件都是以原生格式產生，或元件未正確註冊。  
+
 ## <a name="resolution"></a>解決方案  
- 啟用此 MDA 可讓您判斷哪一個函式正在進行 JIT 編譯。 判斷包含函式的組件是否以原生格式產生，並已正確登錄。  
+ 啟用此 MDA 可讓您識別正在進行 JIT 編譯的函式。 請確定包含函式的元件會產生原生格式，並已正確註冊。
   
-## <a name="effect-on-the-runtime"></a>對執行階段的影響  
- 此 MDA 會在方法剛要進行 JIT 編譯之前記錄訊息，所以啟用此 MDA 會對效能造成重大影響。 請注意，如果是內嵌的方法，這個 MDA 就不會另行產生訊息。  
+## <a name="effect-on-the-runtime"></a>對執行時間的影響  
+ 此 MDA 會在方法剛要進行 JIT 編譯之前記錄訊息，所以啟用此 MDA 會對效能造成重大影響。 如果方法是內嵌的，此 MDA 將不會產生個別的訊息。  
   
 ## <a name="output"></a>輸出  
- 下列程式碼範例會顯示範例輸出。 在本例中，輸出會顯示在組件 Test 中，類別 "ns2.CO" 上的方法 "m" 已經 JIT 編譯過。  
+ 下列程式碼範例會顯示範例輸出。 在此情況下，輸出顯示在元件測試中，類別 "ns2.CO" 上的方法 "m" 已進行 JIT 編譯。  
   
 ```output
 method name="Test!ns2.C0::m"  

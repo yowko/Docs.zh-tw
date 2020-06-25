@@ -1,19 +1,19 @@
 ---
 title: 安裝和管理 SDK 範本-.NET Core
 description: 瞭解如何在 Windows、Linux 和 macOS 上安裝 .NET Core 範本。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/24/2020
 zone_pivot_groups: operating-systems-set-one
 no-loc:
 - dotnet new
 - dotnet nuget add source
-ms.openlocfilehash: 0a3c8655d55bf63de1e91337ce3a2ac399b07d0f
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 09acae1409eb0492be10bd3a61b14da5be57c6c7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200612"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324493"
 ---
 # <a name="manage-net-project-and-item-templates"></a>管理 .NET 專案和專案範本
 
@@ -23,21 +23,21 @@ ms.locfileid: "82200612"
 
 ## <a name="install-template"></a>安裝範本
 
-範本會透過具有`-i`參數的[dotnet new](../tools/dotnet-new.md) SDK 命令來安裝。 您可以提供範本的 NuGet 套件識別碼，或包含範本檔案的資料夾。
+範本會透過 [dotnet new](../tools/dotnet-new.md) SDK 命令搭配參數來安裝 `-i` 。 您可以提供範本的 NuGet 套件識別碼，或包含範本檔案的資料夾。
 
 ### <a name="nuget-hosted-package"></a>NuGet 主控的套件
 
 .NET CLI 範本會上傳至[NuGet](https://www.nuget.org/)以進行寬分佈。 您也可以從私人摘要安裝範本。 *Nupkg*範本檔案不會上傳至 NuGet 摘要，而是可以散發並手動安裝，如[本機 NuGet 封裝](#local-nuget-package)一節中所述。
 
-如需有關設定 NuGet 摘要的詳細資訊，請參閱[dotnet NuGet 新增來源](../tools/dotnet-nuget-add-source.md)。
+如需有關設定 NuGet 摘要的詳細資訊，請參閱 [dotnet nuget add source](../tools/dotnet-nuget-add-source.md) 。
 
-若要從預設的 NuGet 摘要安裝範本套件，請使用`dotnet new -i {package-id}`下列命令：
+若要從預設的 NuGet 摘要安裝範本套件，請使用 `dotnet new -i {package-id}` 下列命令：
 
 ```dotnetcli
 dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates
 ```
 
-若要從具有特定版本的預設 NuGet 摘要安裝範本套件，請使用`dotnet new -i {package-id}::{version}`命令：
+若要從具有特定版本的預設 NuGet 摘要安裝範本套件，請使用 `dotnet new -i {package-id}::{version}` 命令：
 
 ```dotnetcli
 dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.2.6
@@ -45,7 +45,7 @@ dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.2.6
 
 ### <a name="local-nuget-package"></a>本機 NuGet 套件
 
-建立範本套件時，會產生*nupkg*檔案。 如果您有包含範本的*nupkg*檔案，您可以使用下列`dotnet new -i {path-to-package}`命令來安裝它：
+建立範本套件時，會產生*nupkg*檔案。 如果您有包含範本的*nupkg*檔案，您可以使用下列命令來安裝它 `dotnet new -i {path-to-package}` ：
 
 ::: zone pivot="os-windows"
 
@@ -65,7 +65,7 @@ dotnet new -i ~/code/nuget-packages/Some.Templates.1.0.0.nupkg
 
 ### <a name="folder"></a>資料夾
 
-除了從*nupkg*檔案安裝範本以外，您也可以使用`dotnet new -i {folder-path}`命令直接從資料夾安裝範本。 指定的資料夾會被視為任何找到的範本的範本套件識別碼。 已安裝在指定資料夾階層中找到的任何範本。
+除了從*nupkg*檔案安裝範本以外，您也可以使用命令直接從資料夾安裝範本 `dotnet new -i {folder-path}` 。 指定的資料夾會被視為任何找到的範本的範本套件識別碼。 已安裝在指定資料夾階層中找到的任何範本。
 
 ::: zone pivot="os-windows"
 
@@ -83,7 +83,7 @@ dotnet new -i ~/code/nuget-packages/some-folder/
 
 ::: zone-end
 
-在`{folder-path}`命令上指定的會成為所有找到的範本的範本套件識別碼。 如 [[清單範本](#list-templates)] 區段中所指定，您可以使用`dotnet new -u`命令來取得已安裝的範本清單。 在此範例中，範本套件識別碼會顯示為用於安裝的資料夾：
+在 `{folder-path}` 命令上指定的會成為所有找到的範本的範本套件識別碼。 如 [[清單範本](#list-templates)] 區段中所指定，您可以使用命令來取得已安裝的範本清單 `dotnet new -u` 。 在此範例中，範本套件識別碼會顯示為用於安裝的資料夾：
 
 ::: zone pivot="os-windows"
 
@@ -127,13 +127,13 @@ Currently installed items:
 
 ## <a name="uninstall-template"></a>卸載範本
 
-範本會透過[dotnet new](../tools/dotnet-new.md) SDK 命令與`-u`參數一起卸載。 您可以提供範本的 NuGet 套件識別碼，或包含範本檔案的資料夾。
+範本會透過 [dotnet new](../tools/dotnet-new.md) SDK 命令與參數一起卸載 `-u` 。 您可以提供範本的 NuGet 套件識別碼，或包含範本檔案的資料夾。
 
 ### <a name="nuget-package"></a>Nuget 套件
 
 安裝 NuGet 範本套件之後（從 NuGet 摘要或*nupkg*檔案），您可以藉由參考 nuget 套件識別碼來將它卸載。
 
-若要卸載範本套件，請使用`dotnet new -u {package-id}`命令：
+若要卸載範本套件，請使用 `dotnet new -u {package-id}` 命令：
 
 ```dotnetcli
 dotnet new -u Microsoft.DotNet.Web.Spa.ProjectTemplates
@@ -143,7 +143,7 @@ dotnet new -u Microsoft.DotNet.Web.Spa.ProjectTemplates
 
 透過[資料夾路徑](#folder)安裝範本時，資料夾路徑會變成範本套件識別碼。
 
-若要卸載範本套件，請使用`dotnet new -u {package-folder-path}`命令：
+若要卸載範本套件，請使用 `dotnet new -u {package-folder-path}` 命令：
 
 ::: zone pivot="os-windows"
 
@@ -192,7 +192,7 @@ Currently installed items:
 | .NET Core 2.1    | [`Microsoft.DotNet.Common.ProjectTemplates.2.1`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.2.1) |
 | .NET Core 2.2    | [`Microsoft.DotNet.Common.ProjectTemplates.2.2`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.2.2) |
 | .NET Core 3.0    | [`Microsoft.DotNet.Common.ProjectTemplates.3.0`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.3.0) |
-| .NET Core 3。1    | [`Microsoft.DotNet.Common.ProjectTemplates.3.1`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.3.1) |
+| .NET Core 3.1    | [`Microsoft.DotNet.Common.ProjectTemplates.3.1`](https://www.nuget.org/packages/Microsoft.DotNet.Common.ProjectTemplates.3.1) |
 | ASP.NET Core 2.1 | [`Microsoft.DotNet.Web.ProjectTemplates.2.1`](https://www.nuget.org/packages/Microsoft.DotNet.Web.ProjectTemplates.2.1)       |
 | ASP.NET Core 2。2 | [`Microsoft.DotNet.Web.ProjectTemplates.2.2`](https://www.nuget.org/packages/Microsoft.DotNet.Web.ProjectTemplates.2.2)       |
 | ASP.NET Core 3。0 | [`Microsoft.DotNet.Web.ProjectTemplates.3.0`](https://www.nuget.org/packages/Microsoft.DotNet.Web.ProjectTemplates.3.0)       |
@@ -230,7 +230,7 @@ Currently installed items:
     >
     > 還原成功。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [教學課程：建立專案範本](../tutorials/cli-templates-create-item-template.md)
 - [dotnet new](../tools/dotnet-new.md)

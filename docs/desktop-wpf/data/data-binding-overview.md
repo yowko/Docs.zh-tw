@@ -1,18 +1,18 @@
 ---
 title: 資料繫結概觀
 description: 瞭解您可以在適用于 .NET Core 的 Windows Presentation Foundation 中新增至專案的不同資料來源。 資料來源可以系結至 XAML 元素，以建立動態應用程式。
-author: thraka
+author: adegeo
 ms.date: 09/19/2019
 ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 4f7119ab8286e80160a500481675f83dfaef7713
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662975"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325747"
 ---
 # <a name="data-binding-overview-in-wpf"></a>WPF 中的資料系結總覽
 
@@ -199,7 +199,7 @@ WPF 中的資料系結功能有數個優於傳統模型的優點，包括透過�
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ColorBrushConverter.cs#ColorBrushConverter)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ColorBrushConverter.vb#ColorBrushConverter)]
 
-如需相關資訊，請參閱 <xref:System.Windows.Data.IValueConverter>。
+如需相關資訊，請參閱 <xref:System.Windows.Data.IValueConverter> 。
 
 現在會使用自訂轉換器，而不是預設轉換，我們的圖表看起來像這樣。
 
@@ -442,7 +442,7 @@ WPF 資料系結模型可讓您 <xref:System.Windows.Data.Binding.ValidationRule
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [系結至 LINQ 查詢的結果](../../framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
-- [資料繫結](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [資料系結](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
 - [資料系結示範][data-binding-demo]
 - [How-to 文章](../../framework/wpf/data/data-binding-how-to-topics.md)
 - [繫結至 ADO.NET 資料來源](../../framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

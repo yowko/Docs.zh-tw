@@ -1,16 +1,16 @@
 ---
 title: 移除 .NET Core 執行階段和 SDK
 description: 本文說明如何判斷目前所安裝的 .NET Core 執行階段和 SDK 版本，然後如何在 Windows、Mac 及 Linux 上移除它們。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/28/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: f1482c243ba22fa81c69ede847a0f6b36a9cb83c
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 1e4a846cf5e3d0209f5ade873520ef64abc12e7c
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595780"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324646"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>如何移除 .NET Core 執行階段和 SDK
 
@@ -20,11 +20,11 @@ ms.locfileid: "82595780"
 
 [.NET Core 版本選取](../versions/selection.md)行為及不同更新之間的 .NET Core 執行階段相容性，可讓您安全地移除舊版。 .NET Core 執行階段更新在主要版本「範圍」內 (例如 1.x 和 2.x) 是相容的。 此外，較新版本的 .NET Core SDK 通常能夠繼續以相容的方式，來建置以舊版執行階段為目標的應用程式。
 
-一般而言，您只需要最新的 SDK，以及您應用程式所需之執行階段的最新修補版本。 您可能想要保留舊版 SDK 或執行階段版本的實例，包括維護以*json*為基礎的應用程式。 除非您的應用程式有特定理由需要舊版 SDK 或執行階段，否則您可以安全地移除舊版。
+一般而言，您只需要最新的 SDK，以及您應用程式所需之執行階段的最新修補版本。 您可能想要保留舊版 SDK 或執行階段版本的實例，包括維護應用程式*project.js*。 除非您的應用程式有特定理由需要舊版 SDK 或執行階段，否則您可以安全地移除舊版。
 
 ## <a name="determine-what-is-installed"></a>判斷已安裝的項目
 
-從 .NET Core 2.1 開始，.NET CLI 可讓您選擇使用電腦上安裝的 SDK 和執行階段版本清單。  使用[`dotnet --list-sdks`](../tools/dotnet.md#options)查看電腦上安裝的 sdk 清單。 使用[`dotnet --list-runtimes`](../tools/dotnet.md#options)查看電腦上安裝的執行時間清單。 如需詳細資訊，請參閱[如何檢查是否已安裝 .Net Core](how-to-detect-installed-versions.md)。
+從 .NET Core 2.1 開始，.NET CLI 可讓您選擇使用電腦上安裝的 SDK 和執行階段版本清單。  使用 [`dotnet --list-sdks`](../tools/dotnet.md#options) 查看電腦上安裝的 sdk 清單。 使用 [`dotnet --list-runtimes`](../tools/dotnet.md#options) 查看電腦上安裝的執行時間清單。 如需詳細資訊，請參閱[如何檢查是否已安裝 .Net Core](how-to-detect-installed-versions.md)。
 
 ## <a name="uninstall-net-core"></a>卸載 .NET Core
 
@@ -66,7 +66,7 @@ ms.locfileid: "82595780"
 apt-get remove dotnet-host
 ```
 
-請注意，沒有附加至`dotnet-host`的版本。
+請注意，沒有附加至的版本 `dotnet-host` 。
 
 如果您使用 tarball 安裝，則必須使用手動方法移除 .NET Core。
 
@@ -104,7 +104,7 @@ SDK 和執行階段的父目錄會列於 `dotnet --list-sdks` 和 `dotnet --list
 
 ## <a name="net-core-uninstall-tool"></a>.NET Core 解除安裝工具
 
-[.Net core 卸載工具](../additional-tools/uninstall-tool.md)（`dotnet-core-uninstall`）可讓您從系統中移除 .net Core sdk 和執行時間。 有一組選項可用來指定應該卸載的版本。
+[.Net Core 卸載工具](../additional-tools/uninstall-tool.md)（ `dotnet-core-uninstall` ）可讓您從系統中移除 .net Core sdk 和執行時間。 有一組選項可用來指定應該卸載的版本。
 
 ## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>Visual Studio .NET Core SDK 版本的相依性
 
@@ -122,7 +122,7 @@ SDK 和執行階段的父目錄會列於 `dotnet --list-sdks` 和 `dotnet --list
 
 ## <a name="remove-the-nuget-fallback-folder"></a>移除 NuGet fallback 資料夾
 
-在 .NET Core 3.0 SDK 之前，.NET Core SDK 安裝程式會使用名為*NuGetFallbackFolder*的資料夾來儲存 NuGet 套件的快取。 此快取是在作業期間使用`dotnet restore` ， `dotnet build /t:Restore`例如或。 *NuGetFallbackFolder*位於 Windows 上的*C:\Program Files\dotnet\sdk*和 macOS 上的 */usr/local/share/dotnet/sdk* 。
+在 .NET Core 3.0 SDK 之前，.NET Core SDK 安裝程式會使用名為*NuGetFallbackFolder*的資料夾來儲存 NuGet 套件的快取。 此快取是在作業期間使用，例如 `dotnet restore` 或 `dotnet build /t:Restore` 。 *NuGetFallbackFolder*位於 Windows 上的*C:\Program Files\dotnet\sdk*和 macOS 上的 */usr/local/share/dotnet/sdk* 。
 
 如果有下列情況，您可能會想要移除此資料夾：
 

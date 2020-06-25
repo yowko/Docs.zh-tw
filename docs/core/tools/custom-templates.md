@@ -1,14 +1,14 @@
 ---
 title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
-author: thraka
+author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 56fcbfbc168143007f0772ce8a12347f7e25e50b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005308"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324505"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -31,12 +31,12 @@ ms.locfileid: "84005308"
 dotnet new --list
 ```
 
-## <a name="configuration"></a>組態
+## <a name="configuration"></a>設定
 
 範本是由下列部分組成：
 
 - 來源檔案和資料夾。
-- 設定檔（*範本. json*）。
+- 設定檔（*template.js*）。
 
 ### <a name="source-files-and-folders"></a>來源檔案和資料夾
 
@@ -55,7 +55,7 @@ dotnet new --list
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| 成員            | 類型          | 描述 |
+| member            | 類型          | 說明 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |

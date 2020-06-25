@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662949"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324133"
 ---
 # <a name="how-to-search-strings"></a>如何搜尋字串
 
@@ -23,11 +23,11 @@ ms.locfileid: "84662949"
 
 ## <a name="does-a-string-contain-text"></a>字串是否包含文字？
 
-<xref:System.String.Contains%2A?displayProperty=nameWithType>、<xref:System.String.StartsWith%2A?displayProperty=nameWithType> 和 <xref:System.String.EndsWith%2A?displayProperty=nameWithType> 方法會搜尋字串中的特定文字。 下列範例示範所有這些方法，以及使用不區分大小寫搜尋的變化：
+<xref:System.String.Contains%2A?displayProperty=nameWithType>、 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 和方法會 <xref:System.String.EndsWith%2A?displayProperty=nameWithType> 搜尋字串中的特定文字。 下列範例顯示每個方法，以及使用不區分大小寫搜尋的變化：
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
-上述範例示範這些方法的使用重點。 搜尋預設會**區分大小寫**。 您可以使用 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> 列舉值，來指定不區分大小寫的搜尋。
+上述範例示範這些方法的使用重點。 搜尋預設會**區分大小寫**。 您可以使用 <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> 列舉值來指定不區分大小寫的搜尋。
 
 ## <a name="where-does-the-sought-text-occur-in-a-string"></a>所搜尋文字在字串中的位置？
 
@@ -41,7 +41,7 @@ ms.locfileid: "84662949"
 
 下列程式碼範例會搜尋句子中的 "the" 或 "their" 單字，但忽略大小寫。 靜態方法 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 會執行搜尋。 您為其指定要搜尋的字串和搜尋模式。 在此情況下，第三個引數指定不區分大小寫的搜尋。 如需詳細資訊，請參閱 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 。
 
-搜尋模式描述您搜尋的文字。 下表描述搜尋模式的每個項目  (下表使用單一 `\`，其在 C# 字串中必須逸出為 `\\`)。
+搜尋模式描述您搜尋的文字。 下表描述搜尋模式的每個項目  （下表使用單一 `\` ，必須 `\\` 在 c # 字串中將其轉義為）。
 
 | 模式  | 意義                          |
 |----------|----------------------------------|

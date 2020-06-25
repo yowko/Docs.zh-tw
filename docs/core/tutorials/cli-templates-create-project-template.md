@@ -1,18 +1,18 @@
 ---
 title: 建立適用於 dotnet new 的專案範本
 description: 了解如何針對 dotnet new 命令建立專案範本。
-author: thraka
+author: adegeo
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: f53f4037f832265a35f65bf2e5096c7e5a37bcf1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 75fedb2333a4ef9e16a27126055b6cacaf37c1c5
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503529"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324321"
 ---
-# <a name="tutorial-create-a-project-template"></a>教程：創建專案範本
+# <a name="tutorial-create-a-project-template"></a>教學課程：建立專案範本
 
 透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 此教學課程是指導您如何建立、安裝及解除安裝能搭配 `dotnet new` 命令使用之範的本系列文章第二部分。
 
@@ -26,7 +26,7 @@ ms.locfileid: "77503529"
 > * 測試項目範本
 > * 將項目範本解除安裝
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)。
 * 開啟終端機並瀏覽至 _working\templates_ 資料夾。
@@ -47,7 +47,7 @@ working
 
 ## <a name="modify-programcs"></a>修改 Program.cs
 
-開啟 _program.cs_ 檔案。 該主控台專案不會使用非同步進入點，因次讓我們來加入它。 將代碼更改為以下內容並保存該檔。
+開啟 _program.cs_ 檔案。 該主控台專案不會使用非同步進入點，因次讓我們來加入它。 將您的程式碼變更為下列，並儲存檔案。
 
 ```csharp
 using System;
@@ -87,13 +87,13 @@ namespace consoleasync
 
 在您完成專案範本之前，您應該測試它以確保其能正確編譯及執行。
 
-在終端中，運行以下命令。
+在您的終端機中，執行下列命令。
 
 ```dotnetcli
 dotnet run
 ```
 
-您將獲得以下輸出。
+您會取得下列輸出。
 
 ```console
 Hello World with C# 8.0!
@@ -109,7 +109,7 @@ Hello World with C# 8.0!
 
 當您建立範本時，範本資料夾中的所有檔案和資料夾都會包含為範本的一部分，除了特殊設定資料夾之外。 此設定資料夾名為 _.template.config_。
 
-首先，建立名為 _.template.config_ 的新子資料夾，然後進入它。 然後，建立名為 _template.json_ 的新檔案。 您的資料夾結構應如下所示。
+首先，建立名為 _.template.config_ 的新子資料夾，然後進入它。 然後，建立名為 _template.json_ 的新檔案。 您的資料夾結構看起來應該像這樣。
 
 ```console
 working
@@ -119,7 +119,7 @@ working
                 template.json
 ```
 
-使用您最喜愛的文字編輯器打開_範本.json，_ 並粘貼到以下 json 代碼並保存它。
+使用您慣用的文字編輯器開啟中的template.js，並貼_上_下列 json 程式碼並加以儲存。
 
 ```json
 {
@@ -140,7 +140,7 @@ working
 
 `classifications` 項目代表您執行 `dotnet new` 並取得範本清單時所會看見的 [標籤]**** 欄。 使用者也可以根據分類標籤搜尋。 不要將 JSON 檔案中的 `tags` 屬性與 `classifications` 標籤清單混淆在一起。 它們是不同的東西，但不幸地具有類似的名稱。 *template.json* 檔案的完整結構描述位於 [JSON 結構描述存放區](http://json.schemastore.org/template)。 如需 *template.json* 檔案的詳細資訊，請參閱 [dotnet 範本化 Wiki](https://github.com/dotnet/templating/wiki) \(英文\)。
 
-您已經具備有效的 _.template.config/template.json_ 檔案，現在您的範本已經準備好並可供安裝。 在您安裝範本之前，請確定您已將不想要包含在範本中的所有額外檔案資料夾和檔案刪除，例如 _bin_ 或 _obj_ 資料夾。 在您的終端機中，瀏覽至 _consoleasync_ 資料夾，並執行 `dotnet new -i .\` 以安裝位於目前資料夾中的範本。 如果您使用的是 Linux 或 macOS 作業系統，請使用前斜杠： `dotnet new -i ./`。
+您已經具備有效的 _.template.config/template.json_ 檔案，現在您的範本已經準備好並可供安裝。 在您安裝範本之前，請確定您已將不想要包含在範本中的所有額外檔案資料夾和檔案刪除，例如 _bin_ 或 _obj_ 資料夾。 在您的終端機中，瀏覽至 _consoleasync_ 資料夾，並執行 `dotnet new -i .\` 以安裝位於目前資料夾中的範本。 如果您使用的是 Linux 或 macOS 作業系統，請使用正斜線： `dotnet new -i ./` 。
 
 此命令會輸出已安裝範本的清單，其中應該會包含您的範本。
 
@@ -148,7 +148,7 @@ working
 dotnet new -i .\
 ```
 
-您將獲得類似于以下內容的輸出。
+您會取得如下所示的輸出。
 
 ```console
 Usage: new [options]
@@ -173,27 +173,27 @@ Worker Service                                    worker                [C#]    
 
 您已經安裝項目範本，現在請測試它。
 
-1. 導航到_測試_資料夾
+1. 流覽至_測試_資料夾
 
-1. 使用以下命令創建新的主控台應用程式，該命令生成一個工作專案，您可以使用 該`dotnet run`命令輕鬆測試。
+1. 使用下列命令建立新的主控台應用程式，以產生可使用命令輕鬆測試的工作專案 `dotnet run` 。
 
     ```dotnetcli
     dotnet new consoleasync
     ```
 
-    您將獲得以下輸出。
+    您會取得下列輸出。
 
     ```console
     The template "Example templates: async project" was created successfully.
     ```
 
-1. 使用以下命令運行專案。
+1. 使用下列命令執行專案。
 
     ```dotnetcli
     dotnet run
     ```
 
-    您將獲得以下輸出。
+    您會取得下列輸出。
 
     ```console
     Hello World with C# 8.0!
@@ -209,7 +209,7 @@ Worker Service                                    worker                [C#]    
 dotnet new -u
 ```
 
-您將獲得類似于以下內容的輸出。
+您會取得如下所示的輸出。
 
 ```console
 Template Instantiation Commands for .NET Core CLI
@@ -239,7 +239,7 @@ Currently installed items:
       Example templates: async project (consoleasync) C#
 ```
 
-要卸載範本，請運行以下命令。
+若要卸載範本，請執行下列命令。
 
 ```dotnetcli
 dotnet new -u C:\working\templates\consoleasync

@@ -1,15 +1,15 @@
 ---
 title: 安裝 .NET Core 和 Linux 發行版本
 description: 瞭解哪些 Linux 散發套件支援在 Linux 上安裝 .NET Core。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: e668ad733481c2d9b73994b6344b38768f5851fe
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 22c07c5a8263dd6059f415cb4d9e2915811351b0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903372"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324629"
 ---
 # <a name="install-net-core-on-linux"></a>在 Linux 上安裝 .NET Core
 
@@ -76,7 +76,7 @@ Debian 使用 APT （Advanced Package Tool）做為套件管理員。
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [10](linux-debian.md#debian-10-)     | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ❌ [8](linux-debian.md#debian-8-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
+| ❌[8](linux-debian.md#debian-8-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
 
 如需詳細資訊，請參閱[在 Debian 上安裝 .Net Core](linux-debian.md)。
 

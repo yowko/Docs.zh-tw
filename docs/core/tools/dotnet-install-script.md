@@ -2,16 +2,16 @@
 title: dotnet-install 指令碼
 description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet-安裝腳本。
 ms.date: 04/30/2020
-ms.openlocfilehash: 464e6fafa1c2e661892bcb3b35ba172ca1d7e76b
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141239"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324429"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet-install.ps1` | `dotnet-install.sh`-用來安裝 .NET Core SDK 和共用執行時間的腳本。
 
@@ -44,24 +44,47 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
-## <a name="description"></a>描述
+Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。
 
-這些 `dotnet-install` 腳本是用來執行 .NET Core SDK 的非系統管理員安裝，其中包括 .NET Core CLI 和共用執行時間。
+## <a name="description"></a>說明
+
+`dotnet-install`腳本會執行 .NET Core SDK 的非系統管理員安裝，其中包括 .NET Core CLI 和共用執行時間。 有兩個腳本：
+
+* 適用于 Windows 的 PowerShell 腳本。
+* 可在 Linux/macOS 上運作的 bash 腳本。
+
+### <a name="purpose"></a>目的
+
+ 使用腳本的目的是持續整合（CI）案例，其中：
+
+* SDK 需要在沒有使用者互動的情況下安裝，而且沒有系統管理員許可權。
+* SDK 安裝不需要跨多個 CI 執行保存。
+
+  一般的事件順序：
+  * CI 已觸發。
+  * CI 會使用其中一個腳本來安裝 SDK。
+  * CI 會完成其工作，並清除包含 SDK 安裝的暫存資料。
+
+若要設定開發環境或執行應用程式，請使用安裝程式，而不是這些腳本。
+
+### <a name="recommended-version"></a>建議的版本
 
 建議您使用穩定版本的腳本：
 
 - Bash （Linux/macOS）：<https://dot.net/v1/dotnet-install.sh>
 - PowerShell （Windows）：<https://dot.net/v1/dotnet-install.ps1>
 
-這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。 有兩個指令碼：一個是在 Windows 上運作的 PowerShell 指令碼，另一個是在 Linux/macOS 上運作的 Bash 指令碼。 這兩個指令碼有相同的行為。 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。
+### <a name="script-behavior"></a>腳本行為
 
-安裝指令碼會從 CLI 組建放置區下載 ZIP/tarball 檔案，並且繼續將它安裝在預設位置或 `-InstallDir|--install-dir` 所指定的位置。 根據預設，安裝指令碼會下載並安裝 SDK。 如果您想要只取得共用執行階段，請指定 `-Runtime|--runtime` 引數。
+這兩個指令碼有相同的行為。 他們會從 CLI 組建中下載 ZIP/tarball 檔案，並繼續將它安裝在預設位置或所指定的位置 `-InstallDir|--install-dir` 。
 
-根據預設，指令碼會將安裝位置新增到目前工作階段的 $PATH。 指定 `-NoPath|--no-path` 引數可以覆寫此預設行為。
+根據預設，安裝指令碼會下載並安裝 SDK。 如果您想要只取得共用執行階段，請指定 `-Runtime|--runtime` 引數。
+
+根據預設，指令碼會將安裝位置新增到目前工作階段的 $PATH。 指定 `-NoPath|--no-path` 引數可以覆寫此預設行為。 腳本不會設定 `DOTNET_ROOT` 環境變數。
 
 執行指令碼之前，請安裝所有必要的[相依性 (英文)](../install/dependencies.md)。
 
-您可以使用 `-Version|--version` 引數安裝特定版本。 版本必須指定為三部分版本（例如 `2.1.0` ）。 如果未提供，就會使用 `latest` 版本。
+您可以使用 `-Version|--version` 引數安裝特定版本。 版本必須指定為三部分版本號碼，例如 `2.1.0` 。 如果未指定版本，腳本會安裝 `latest` 版本。
 
 安裝腳本不會更新 Windows 上的登錄。 他們只需要下載壓縮的二進位檔，並將它們複製到資料夾即可。 如果您想要更新登錄機碼值，請使用 .NET Core 安裝程式。
 

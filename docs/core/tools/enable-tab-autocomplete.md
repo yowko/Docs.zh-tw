@@ -1,23 +1,23 @@
 ---
 title: 啟用 TAB 鍵自動完成
 description: 本文描述如何為適用於 PowerShell、Bash 和 zsh 的 .NET Core CLI 啟用 tab 鍵自動完成。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 491e1ca34c20c3994a571fc2deff7392c6bdb3f2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156747"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324388"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>如何為 .NET Core CLI 啟用 TAB 鍵自動完成
 
-**本文適用于：✔️** .NET 核心 2.1 SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-本文描述如何為 PowerShell、Bash 和 zsh 等三種殼層設定 tab 鍵自動完成。 有關其他 shell，請參閱其有關如何配置選項卡完成的文檔。
+本文描述如何為 PowerShell、Bash 和 zsh 等三種殼層設定 tab 鍵自動完成。 如需其他 shell，請參閱其檔，以瞭解如何設定 tab 鍵自動完成。
 
-設置後，通過在 shell 中鍵入`dotnet`命令，然後按 TAB 鍵觸發 .NET Core CLI 的選項卡完成。 目前的命令列會傳送至 `dotnet complete` 命令，並由您的殼層處理結果。 您可以直接傳送某些內容至 `dotnet complete` 命令來測試結果，而不啟用 tab 鍵自動完成。 例如：
+設定完成後，您可以 `dotnet` 在 shell 中輸入命令，然後按下 tab 鍵，來觸發 .NET Core CLI 的 tab 鍵自動完成。 目前的命令列會傳送至 `dotnet complete` 命令，並由您的殼層處理結果。 您可以直接傳送某些內容至 `dotnet complete` 命令來測試結果，而不啟用 tab 鍵自動完成。 例如：
 
 ```console
 > dotnet complete "dotnet a"

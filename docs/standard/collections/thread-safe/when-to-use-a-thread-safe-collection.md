@@ -6,30 +6,31 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: cea9c038896d07d526874e2ae4c33e479eaa3963
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769128"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326045"
 ---
-# <a name="when-to-use-a-thread-safe-collection"></a>使用安全執行緒集合的時機
-.NET Framework 4 引進五種新的集合類型，特別針對支援多執行緒新增和移除作業而設計。 若要達到執行緒安全，這些新的類型會使用各種有效率的鎖定和無鎖定同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。  
+# <a name="when-to-use-a-thread-safe-collection"></a>使用安全線程集合的時機
+
+.NET Framework 4 引進了五個特別設計來支援多執行緒新增和移除作業的集合類型。 為了達到執行緒安全，這些類型會使用各種有效率的鎖定和無鎖定同步處理機制。 同步處理會增加作業的負荷。 負荷量取決於使用的同步處理類型、執行的作業類型，以及其他因素 (例如，嘗試同時存取集合的執行緒數目)。  
   
  在某些情況下，同步處理負荷會顯得微不足道，並且在受到外部鎖定保護時，讓多執行緒類型執行速度大幅加快，而且擴充的狀況遠優於其非安全執行緒對等項目。 在其他情況下，負荷可能會讓安全執行緒類型的執行和擴充速度等於甚於比外部鎖定之非安全執行緒版本的類型還要慢。  
   
  下列各節所提供的一般指引是有關何時使用安全執行緒集合，與其具有使用者所提供之讀取和寫入作業鎖定的非安全執行緒對等項目。 因為效能可能會因許多因素而不同，所以本指南不是特定的，也不一定適用於所有情況。 如果效能十分重要，則決定要使用之集合類型的最佳方式是根據代表性電腦組態和負載來測量效能。 本範例使用下列詞彙：  
   
- *單純生產者-消費者案例*  
+ *單純生產者-消費者案例*\
  任何指定的執行緒都是新增或移除元素，而非同時執行兩項作業。  
   
- *混合生產者-消費者案例*  
+ *混合生產者-消費者案例*\
  任何指定的執行緒都是新增和移除元素。  
   
- *加速*  
+ *加速效果*\
  相對於相同案例中的另一種類型，具有較快速的演算法效能。  
   
- *延展性*  
+ *延展性*\
  效能會隨著電腦上的核心數目等比例地增加。 在八個核心上進行擴充之演算法的執行速度，比兩個核心還要快。  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) 與 Queue(T) 的比較  

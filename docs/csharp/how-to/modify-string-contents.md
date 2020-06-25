@@ -3,16 +3,16 @@ title: '如何修改字串內容-c # 指南'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663001"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324161"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何在 C 中修改字串內容\#
 
-本文示範多種技術，會藉由修改現有的 `string`來產生 `string`。 所有示範的技術均會傳回修改結果，作為新的 `string` 物件。 為明確示範此做法，所有的範例都會將結果儲存到新的變數。 接著，您可在執行各個範例時，對原本的 `string` 與修改後產生的 `string` 進行檢查。
+本文示範多種技術，會藉由修改現有的 `string`來產生 `string`。 所有示範的技術均會傳回修改結果，作為新的 `string` 物件。 為了示範原始和修改過的字串是相異的實例，這些範例會將結果儲存在新的變數中。 `string` `string` 當您執行每個範例時，您可以檢查原始的和新的。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "84663001"
 
 :::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
-您可以使用 unsafe 程式碼修改固定區塊中的字串，但**強烈**建議您在建立字串之後修改字串內容。 這麼做會以無法預期的方式來中斷專案。 例如，如果有人實習一個具有與您相同內容的字串，則會取得您的複本，而且不會預期您要修改其字串。
+您可以使用 unsafe 程式碼修改固定區塊中的字串，但**強烈**建議您在建立字串之後修改字串內容。 這麼做會以無法預期的方式來中斷專案。 例如，如果有人實習一個具有與您相同內容的字串，他們會取得您的複本，而且不會預期您要修改其字串。
 
 ## <a name="see-also"></a>另請參閱
 

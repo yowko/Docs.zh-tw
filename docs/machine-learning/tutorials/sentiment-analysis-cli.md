@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: aab59463daad30748277602b9ab1d8ca2f3fa1f5
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767672"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326030"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情感
 
@@ -175,7 +175,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
         ```
 
     - 下一行程式碼會 `ConsumeModel.Predict()` 在指定的輸入資料上使用方法，以進行預測並傳回結果（以 ModelOutput.cs 架構為基礎）。
-    - 最後幾行程式碼印出範例資料的屬性（在此案例中為批註），以及情感預測以及正情感（1）和負情感（2）的對應分數。
+    - 最後幾行程式碼會列印出範例資料的屬性（在此案例中為批註），以及情感預測以及正情感（1）和負面情感的對應分數（2）。
 
 1. 執行專案，使用從資料集的第一個資料列載入的原始範例資料，或是提供您自己的自訂硬式編碼範例資料。 您應該取得類似如下的預測：
 

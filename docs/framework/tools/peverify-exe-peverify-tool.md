@@ -11,19 +11,18 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-ms.openlocfilehash: d7962bc91d89d3bd183697011aed1afca0fb0fc1
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 478c04a45c7f9d3ad568a6bc4a12a89fe786583a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904204"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325618"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify 工具)
-PEVerify 工具可以協助像是編譯器撰寫者、指令碼引擎開發人員等產生 Microsoft Intermediate Language (MSIL) 的開發人員，判斷其 MSIL 程式碼和相關聯的中繼資料是否符合類型安全需求。 只有在避免使用某些語言建構時，某些編譯器才會產生可驗證的類型安全程式碼。 如果您是使用這類編譯器的開發人員，可能會想要驗證您並未損及程式碼的類型安全。 在這種情況下，您可以在檔案上執行 PEVerify 工具來檢查 MSIL 和中繼資料。  
+
+PEVerify 工具可協助產生 Microsoft 中繼語言（MSIL）（例如編譯器撰寫者和腳本引擎開發人員）的開發人員，判斷其 MSIL 程式碼和相關聯的中繼資料是否符合型別安全需求。 只有在避免使用某些語言建構時，某些編譯器才會產生可驗證的類型安全程式碼。 如果您使用這種編譯器，您可能會想要確認您沒有洩漏程式碼的型別安全。 您可以在檔案上執行 PEVerify 工具，以檢查 MSIL 和中繼資料。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
-  
- 在命令提示字元中，請輸入下列項目：  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
   
 ## <a name="syntax"></a>語法  
   
@@ -33,11 +32,11 @@ peverify filename [options]
   
 ## <a name="parameters"></a>參數  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |*filename*|要檢查其 MSIL 和中繼資料的可攜式執行檔 (PE)。|  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|發生 *maxErrorCount* 錯誤之後中止驗證。<br /><br /> .NET Framework 2.0 (含) 以後版本不支援此參數。|  
 |**/clock**|以毫秒為單位測量並報告下列驗證時間：<br /><br /> **MD Val. cycle**<br /> 中繼資料驗證週期<br /><br /> **MD Val. pure**<br /> 單純中繼資料驗證<br /><br /> **IL Ver. cycle**<br /> Microsoft Intermediate Language (MSIL) 驗證週期<br /><br /> **IL Ver pure**<br /> 單純 MSIL 驗證<br /><br /> **MD Val. cycle** 和 **IL Ver. cycle** 時間包括了執行必要的啟始和關閉程序所需的時間。 **MD Val. pure** 和 **IL Ver pure** 時間則是反映純粹執行驗證所需的時間。|  
@@ -46,7 +45,7 @@ peverify filename [options]
 |**/ignore=** *hex.code* [, *hex.code*]|忽略指定的錯誤碼。|  
 |**/ignore=@** *responseFile*|忽略指定的回應檔中列出的錯誤碼。|  
 |**/il**|針對 *filename* 所指定組件中實作的方法，執行 MSIL 型別安全驗證檢查。 除非您指定 **/quiet** 選項，否則此工具會針對每個找到的問題傳回詳細描述。|  
-|**/md**|在 *filename* 所指定的組件上，執行中繼資料驗證檢查。 這會逐步檢查檔案內的所有中繼資料結構，並報告遇到的所有驗證問題。|  
+|**/md**|在 *filename* 所指定的組件上，執行中繼資料驗證檢查。 此選項會引導檔案內的完整元資料結構，並報告所有遇到的驗證問題。|  
 |**/nologo**|不顯示產品版本和著作權資訊。|  
 |**/nosymbols**|在 .NET Framework 2.0 版中，隱藏回溯相容性的行號。|  
 |**/quiet**|指定無訊息模式，隱藏驗證問題報告的輸出。 Peverify.exe 仍會報告檔案是否為類型安全，但不會報告阻礙類型安全驗證之問題的資訊。|  
@@ -62,7 +61,7 @@ peverify filename [options]
   
  Peverify.exe 會依據資料流分析加上有效的中繼資料上數百項規則的清單，執行全面性的 MSIL 驗證檢查。 如需 Peverify.exe 所執行檢查的詳細資訊，請參閱 Windows SDK 的 [Tools Developers Guide] 資料夾中的「中繼資料驗證規格」與「MSIL 指令集規格」。  
   
- 請注意，.NET Framework 2.0 版 (含) 以後版本支援傳回使用下列 MSIL 指令指定的可驗證 `byref`：`dup`、`ldsflda`、`ldflda`、`ldelema`、`call` 和 `unbox`。  
+.NET Framework 2.0 版或更新版本支援 `byref` 使用下列 MSIL 指令來指定可驗證的傳回： `dup` 、 `ldsflda` 、 `ldflda` 、、 `ldelema` `call` 和 `unbox` 。  
   
 ## <a name="examples"></a>範例  
  下列命令會對 `myAssembly.exe` 組件中實作的方法，執行中繼資料驗證檢查和 MSIL 類型安全驗證檢查。  

@@ -1,17 +1,17 @@
 ---
 title: 在 Windows、Linux 和 macOS 上安裝 .NET Core 執行時間-.NET Core
 description: 瞭解如何在 Windows、Linux 和 macOS 上安裝 .NET Core。 探索執行 .NET Core 應用程式所需的相依性。
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 05/04/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d3f7083366e2019d01884b5dff6e60d05ed565dd
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 6a0390ff1db900815628e4c7eb69e7a6c5f148a8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768283"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324590"
 ---
 # <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行時間
 

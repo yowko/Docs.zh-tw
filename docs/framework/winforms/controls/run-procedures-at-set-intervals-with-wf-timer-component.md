@@ -1,5 +1,6 @@
 ---
-title: 使用計時器元件按設置間隔運行過程
+title: 使用計時器元件以設定的間隔執行程式
+description: 瞭解如何使用 Windows Form 計時器元件，以設定的間隔來執行程式，或在設定的時間間隔經過時執行。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 52d68a8136551384f67ff6232799600af09f8b66
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6847819fcec98d01d38b8e44604a259f06be7c02
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182051"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325771"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>如何：使用 Windows Form Timer 元件以設定的間隔執行程序
 您有時可能會想要建立一個程序，依特定時間間隔執行，直到迴圈完成，或是在經過設定的時間間隔之後執行。 <xref:System.Windows.Forms.Timer> 元件可讓您建立這樣的程序。  
@@ -26,11 +27,11 @@ ms.locfileid: "79182051"
  這個元件是專為 Windows Form 環境所設計。 如果您需要適用於伺服器環境的計時器，請參閱[伺服器架構的計時器簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。  
   
 > [!NOTE]
-> 使用 <xref:System.Windows.Forms.Timer> 元件時，有一些限制。 有關詳細資訊，請參閱[Windows 表單計時器元件的間隔屬性 的限制](limitations-of-the-timer-component-interval-property.md)。  
+> 使用 <xref:System.Windows.Forms.Timer> 元件時，有一些限制。 如需詳細資訊，請參閱[Windows Forms Timer 元件的 Interval 屬性的限制](limitations-of-the-timer-component-interval-property.md)。  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>若要使用計時器元件，依設定的間隔來執行程序  
   
-1. 加入 <xref:System.Windows.Forms.Timer> 至您的表單。 請參閱下面的＜範例＞一節，以取得以程式設計方式執行此動作的範例。 Visual Studio 還支援向表單中添加元件。 另請參閱[如何：將沒有使用者介面的控制項添加到 Windows 表單](how-to-add-controls-without-a-user-interface-to-windows-forms.md)。  
+1. 加入 <xref:System.Windows.Forms.Timer> 至您的表單。 請參閱下面的＜範例＞一節，以取得以程式設計方式執行此動作的範例。 Visual Studio 也支援將元件新增至表單。 另請參閱[如何：將沒有使用者介面的控制項加入至 Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md)。  
   
 2. 設定計時器的 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性 (以毫秒為單位)。 此屬性可決定，經過多少時間之後，會再執行該程序。  
   
@@ -41,10 +42,10 @@ ms.locfileid: "79182051"
   
 4. 請將 <xref:System.Windows.Forms.Timer.Enabled%2A> 屬性設為 `true`，以啟動計時器。 <xref:System.Windows.Forms.Timer.Tick> 事件會開始發生，依所設定的間隔來執行您的程序。  
   
-5. 在適當的時間，將 <xref:System.Windows.Forms.Timer.Enabled%2A> 屬性設為 `false`，使程序停止再次執行。 將間隔設置為`0`不會導致計時器停止。  
+5. 在適當的時間，將 <xref:System.Windows.Forms.Timer.Enabled%2A> 屬性設為 `false`，使程序停止再次執行。 將間隔設定為 `0` 並不會使計時器停止。  
   
 ## <a name="example"></a>範例  
- 第一個程式碼範例會追蹤一天的時間，以一秒為增量單位。 它會在表單上使用 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.Timer> 元件。 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性設為 1000 (等於 1 秒)。 在 <xref:System.Windows.Forms.Timer.Tick> 事件中，標籤的標題設為目前的時間。 按一下按鈕時，<xref:System.Windows.Forms.Timer.Enabled%2A> 屬性會設為 `false`，使計時器停止更新標籤的標題。 <xref:System.Windows.Forms.Button>以下代碼示例要求具有具有名為`Button1`的控制項的表單，一個<xref:System.Windows.Forms.Timer>名為 的`Timer1`控制項和一<xref:System.Windows.Forms.Label>個名為`Label1`的控制項。  
+ 第一個程式碼範例會追蹤一天的時間，以一秒為增量單位。 它會在表單上使用 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.Timer> 元件。 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性設為 1000 (等於 1 秒)。 在 <xref:System.Windows.Forms.Timer.Tick> 事件中，標籤的標題設為目前的時間。 按一下按鈕時，<xref:System.Windows.Forms.Timer.Enabled%2A> 屬性會設為 `false`，使計時器停止更新標籤的標題。 下列程式碼範例要求您的表單具有 <xref:System.Windows.Forms.Button> 名為的控制項 `Button1` 、 <xref:System.Windows.Forms.Timer> 名為的控制項 `Timer1` ，以及 <xref:System.Windows.Forms.Label> 名為的控制項 `Label1` 。  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -149,7 +150,7 @@ private:
 ```  
   
 ## <a name="example"></a>範例  
- 這個第二個程式碼範例會每隔 600 毫秒執行一次程序，直到迴圈完成為止。 <xref:System.Windows.Forms.Button>以下代碼示例要求具有具有名為`Button1`的控制項的表單，一個<xref:System.Windows.Forms.Timer>名為 的`Timer1`控制項和一<xref:System.Windows.Forms.Label>個名為`Label1`的控制項。  
+ 這個第二個程式碼範例會每隔 600 毫秒執行一次程序，直到迴圈完成為止。 下列程式碼範例要求您的表單具有 <xref:System.Windows.Forms.Button> 名為的控制項 `Button1` 、 <xref:System.Windows.Forms.Timer> 名為的控制項 `Timer1` ，以及 <xref:System.Windows.Forms.Label> 名為的控制項 `Label1` 。  
   
 ```vb  
 ' This variable will be the loop counter.  

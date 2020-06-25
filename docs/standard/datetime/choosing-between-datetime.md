@@ -1,6 +1,6 @@
 ---
-title: 在 DateTime、DateTimeOffset、 TimeSpan 和  TimeZoneInfo 之間選擇
-description: 瞭解如何在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 類型之間進行選擇，以代表 .NET 中的日期和時間資訊。
+title: 比較 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo
+description: 瞭解 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 類型之間的差異，以在 .NET 中代表日期和時間資訊。
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 0b89d0fd36af00796105af50f51803c90cce2605
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 03d00fb802032b981a5ebe80f7166eba0fb54a60
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662806"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326057"
 ---
-# <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>在 DateTime、DateTimeOffset、 TimeSpan 和  TimeZoneInfo 之間選擇
+# <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間進行選擇
 
-使用日期和時間資訊的 .NET 應用程式大不相同，並且可透過數種方式使用該資訊。 日期和時間資訊的較常見用法包含下列一或多項：
+.NET 應用程式可以透過數種方式來使用日期和時間資訊。 日期和時間資訊的常見用法包括：
 
 - 只反映日期，使時間資訊不重要。
 
@@ -33,7 +33,7 @@ ms.locfileid: "84662806"
 
 - 若要從 .NET 外部的來源抓取日期和時間資訊，通常會將日期和時間資訊儲存成簡單的資料類型。
 
-- 若要唯一且明確地識別單一時間點。 有些應用程式只在主機系統上需要明確的日期和時間；有些則需要在不同系統上都明確 (也就是一個系統上已序列化的日期可以有意義地還原序列化，並且在世界各地的另一個系統上使用)。
+- 若要唯一且明確地識別單一時間點。 有些應用程式只需要在主機系統上有明確的日期和時間。 其他應用程式要求它在系統之間是明確的（也就是說，在某個系統上序列化的日期可以有意義地還原序列化，並在世界各地的另一個系統上使用）。
 
 - 若要保留多個相關時間 (例如要求者的當地時間和 Web 要求的回條之伺服器時間)。
 
@@ -48,7 +48,7 @@ ms.locfileid: "84662806"
 
 <xref:System.DateTime> 值會定義特定的日期和時間。 它包含 <xref:System.DateTime.Kind%2A> 屬性，提供有關該日期和時間所屬時區的有限資訊。 由 <xref:System.DateTimeKind> 屬性傳回的 <xref:System.DateTime.Kind%2A> 值，表示 <xref:System.DateTime> 值是否代表當地時間 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、國際標準時間 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) 或未指定的時間 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)。
 
-<xref:System.DateTime> 結構適用於執行下列項目的應用程式：
+<xref:System.DateTime>結構適用于具有下列一或多個特性的應用程式：
 
 - 只使用日期。
 
@@ -73,7 +73,7 @@ ms.locfileid: "84662806"
 
 <xref:System.DateTimeOffset> 結構代表日期和時間值，以及表示該值與 UTC 差異大小的位移。 因此，該值一律明確地識別單一時間點。
 
-<xref:System.DateTimeOffset> 類型包含 <xref:System.DateTime> 類型的所有功能並感知時區。 這讓它適合執行下列動作的應用程式：
+<xref:System.DateTimeOffset> 類型包含 <xref:System.DateTime> 類型的所有功能並感知時區。 這適用于下列應用程式：
 
 - 唯一且明確地識別單一時間點。 <xref:System.DateTimeOffset> 類型可用來明確定義「現在」的意義，以記錄交易的時間、記錄系統或應用程式事件的時間以及記錄檔案建立及修改的時間。
 
@@ -82,14 +82,14 @@ ms.locfileid: "84662806"
 - 只要時間已儲存為兩個不同的值或一個結構中的兩個成員，就可保留多個相關時間。
 
 > [!NOTE]
-> <xref:System.DateTimeOffset> 值的用途比 <xref:System.DateTime> 值的更為普遍。 因此對於應用程式開發，應該考慮將 <xref:System.DateTimeOffset> 做為預設的日期和時間類型。
+> <xref:System.DateTimeOffset> 值的用途比 <xref:System.DateTime> 值的更為普遍。 因此，請考慮 <xref:System.DateTimeOffset> 作為應用程式開發的預設日期和時間類型。
 
-<xref:System.DateTimeOffset> 值與特定的時區並沒有密切的關係，但可能來自各種不同的時區。 為了說明這點，下列範例會列出可和一些 <xref:System.DateTimeOffset> 的值有關的時區 (包括本機的太平洋標準時間)。
+<xref:System.DateTimeOffset>值未系結至特定時區，但可能來自各種不同的時間區域。 下列範例會列出一些 <xref:System.DateTimeOffset> 值（包括當地的太平洋標準時間）可以屬於的時區。
 
 [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
 
-此輸出顯示在本範例中的每個日期和時間值可屬於至少三個不同時區。 2007 年 6 月 10 日的 <xref:System.DateTimeOffset> 值顯示出若日期和時間值代表日光節約時間，則其相對於 UTC 的位移甚至不一定會對應於起始時區的基底 UTC 位移，或對應於從它的顯示名稱中找到的相對於 UTC 的位移。 這表示因為單一 <xref:System.DateTimeOffset> 的值並不會和時區緊密結合，所以它無法反映與日光節約時間相互轉換的時區。 特別是當使用日期和時間運算來管理 <xref:System.DateTimeOffset> 值的時候，這會有問題。 如需如何以考慮時區調整規則的方式來執行日期和時間運算的討論，請參閱[使用日期和時間執行算數運算](performing-arithmetic-operations.md)。
+此輸出顯示在本範例中的每個日期和時間值可屬於至少三個不同時區。 <xref:System.DateTimeOffset>6/10/2007 的值顯示如果日期和時間值代表日光節約時間，則其與 utc 的時差不一定會對應至原始時區的基底 UTC 時差，或從其顯示名稱中找到的 UTC 位移。 因為單一 <xref:System.DateTimeOffset> 值不會與時區緊密結合，所以無法反映時區與日光節約時間的來回轉換。 當使用日期和時間運算來操作值時，這可能會造成問題 <xref:System.DateTimeOffset> 。 如需如何以考慮時區調整規則的方式來執行日期和時間運算的討論，請參閱[使用日期和時間執行算數運算](performing-arithmetic-operations.md)。
 
 ## <a name="the-timespan-structure"></a>TimeSpan 結構
 
@@ -117,7 +117,7 @@ ms.locfileid: "84662806"
 
 在某些情況下，欲充分利用 <xref:System.TimeZoneInfo> 類別可能需要進一步的開發工作。 如果日期和時間值未與它們所屬的時區緊密結合，則需要進一步的工作。 除非您的應用程式提供將日期和時間與相關聯時區連結的一些機制，否則特定日期和時間值很容易就會從其時區解除關聯。 連結此資訊的一種方法是定義類別或結構，其中包含日期和時間值，以及與其相關聯的時區物件。
 
-當日期和時間物件已具現化後，僅當日期和時間值的所屬時區已知時，才有可能利用 .NET 支援的時區。 情況往往並非如此，特別是在 Web 或網路應用程式的情況下。
+若要利用 .NET 中的時區支援，您必須知道當日期和時間物件具現化時，日期和時間值所屬的時區。 時區通常不是已知的，特別是在 web 或網路應用程式中。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,6 @@
 ---
 title: 如何：使用 WebBrowser 控制項巡覽至 URL
+description: 瞭解如何使用 Windows Forms WebBrowser. 導覽控制項來流覽至特定的 URL。 同時瞭解如何判斷新檔的載入時間。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: f6cb26ff247bba75cc351d453314bade2d38d9f5
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: e6ad360cc73a84ca040869832bb59d354cb78bd5
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144834"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325574"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>如何：使用 WebBrowser 控制項巡覽至 URL
 下列程式碼範例示範如何將控制項導覽 <xref:System.Windows.Forms.WebBrowser> 至特定的 URL。

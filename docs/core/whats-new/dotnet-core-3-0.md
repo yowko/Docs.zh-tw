@@ -3,15 +3,15 @@ title: .NET Core 3.0 的新功能
 description: 了解 .NET Core 3.0 所提供的新功能。
 dev_langs:
 - csharp
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 7caeaaa834dc827998d7d1bc3a25ba4e194996f4
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378829"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324412"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -257,14 +257,14 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 
 不論是全域工具還是區域工具，都需要一個相容的執行階段版本。 NuGet.org 上目前許多工具都以 .NET Core 執行階段 2.1 為目標。 若要在全域或本機安裝這些工具，您仍然需要安裝 [.NET Core 2.1 執行階段](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
 
-### <a name="new-globaljson-options"></a>新的 global. json 選項
+### <a name="new-globaljson-options"></a>選項的新 global.js
 
-當您嘗試定義所使用的 .NET Core SDK 版本時， *global.asax*檔案有新的選項可提供更大的彈性。 新的選項包括：
+檔案*上的global.js*有新選項，可在您嘗試定義所使用的 .NET Core SDK 版本時提供更大的彈性。 新的選項包括：
 
 - `allowPrerelease`：指出 SDK 解析程式在選取要使用的 SDK 版本時，是否應考慮發行前版本。
 - `rollForward`：表示選取 SDK 版本時要使用的向前復原原則，可以在特定 SDK 版本遺失時做為回溯，或做為使用較高版本的指示詞。
 
-如需有關變更的詳細資訊，包括預設值、支援的值和新的比對規則，請參閱[global.asax 總覽](../tools/global-json.md)。
+如需有關變更的詳細資訊，包括預設值、支援的值和新的比對規則，請參閱[global.js上的總覽](../tools/global-json.md)。
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>較小的記憶體回收堆積大小
 
@@ -539,13 +539,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>快速的內建 JSON 支援
 
-.NET 使用者大多依賴[Newtonsoft](https://www.newtonsoft.com/json)和其他熱門的 json 程式庫，這會繼續是不錯的選擇。 `Newtonsoft.Json`使用 .NET 字串作為其基底資料類型，這是本質上的 UTF-16。
+.NET 使用者主要依賴于和其他熱門 JSON 程式庫上的[Newtonsoft.Js](https://www.newtonsoft.com/json) ，這會繼續是不錯的選擇。 `Newtonsoft.Json`使用 .NET 字串作為其基底資料類型，這是本質上的 UTF-16。
 
 新的內建 JSON 支援是高效能、低配置，並可搭配 UTF-8 編碼的 JSON 文字使用。 如需 <xref:System.Text.Json> 命名空間和類型的詳細資訊，請參閱下列文章：
 
 * [.NET 中的 JSON 序列化-總覽](../../standard/serialization/system-text-json-overview.md)
 * [如何在 .net 中序列化和還原序列化 JSON](../../standard/serialization/system-text-json-how-to.md)。
-* [如何從 Newtonsoft 遷移至 System.web. Json](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
+* [如何從上的 Newtonsoft.Js遷移至 System.Text.Js](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>HTTP/2 支援
 

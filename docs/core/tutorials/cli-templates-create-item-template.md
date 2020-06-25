@@ -1,18 +1,18 @@
 ---
 title: 針對 dotnet new 建立項目範本 - .NET Core CLI
 description: 了解如何針對 dotnet new 命令建立項目範本。 項目範本可能會包含數個檔案。
-author: thraka
+author: adegeo
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b804d26b2f33d4d600c17de2f7f71101a0f9c98
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503551"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324370"
 ---
-# <a name="tutorial-create-an-item-template"></a>教程：創建專案範本
+# <a name="tutorial-create-an-item-template"></a>教學課程：建立專案範本
 
 透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 此教學課程是指導您如何建立、安裝及解除安裝能搭配 `dotnet new` 命令使用之範的本系列文章第一部分。
 
@@ -26,7 +26,7 @@ ms.locfileid: "77503551"
 > * 測試項目範本
 > * 將項目範本解除安裝
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 * [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 * 請參閱參考文章 [dotnet new 的自訂範本](../tools/custom-templates.md)。
@@ -41,7 +41,7 @@ ms.locfileid: "77503551"
 
 首先，請建立父資料夾；其名稱並不重要。 然後，建立名為 _working_ 的子資料夾。 在 _working_ 資料夾中，建立名為 _templates_ 的子資料夾。
 
-接下來，在父資料夾底下建立名為 _test_ 的資料夾。 資料夾結構應如下所示。
+接下來，在父資料夾底下建立名為 _test_ 的資料夾。 資料夾結構看起來應該如下所示。
 
 ```console
 parent_folder
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-使用您最喜愛的文字編輯器打開_範本.json，_ 並粘貼到以下 JSON 代碼並保存它。
+使用您慣用的文字編輯器開啟中的template.js，並貼_上_下列 JSON 程式碼並加以儲存。
 
 ```json
 {
@@ -122,8 +122,8 @@ working
 
 您已經具備有效的 _.template.config/template.json_ 檔案，現在您的範本已經準備好並可供安裝。 在您的終端機中，瀏覽至 _extensions_ 資料夾，並執行下列命令以安裝位於目前資料夾中的範本：
 
-* **在 Windows**上 ：`dotnet new -i .\`
-* **在Linux或macOS**上 ：`dotnet new -i ./`
+* **在 Windows 上**：`dotnet new -i .\`
+* **在 Linux 或 MacOS 上**：`dotnet new -i ./`
 
 此命令會輸出已安裝範本的清單，其中應該會包含您的範本。
 
@@ -155,7 +155,7 @@ Worker Service                                    worker                [C#]    
 dotnet new console
 ```
 
-您將獲得類似于以下內容的輸出。
+您會取得如下所示的輸出。
 
 ```console
 The template "Console Application" was created successfully.
@@ -167,13 +167,13 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
-使用 運行專案。
+使用執行專案。
 
 ```dotnetcli
 dotnet run
 ```
 
-您將獲得以下輸出。
+您會取得下列輸出。
 
 ```console
 Hello World!
@@ -185,7 +185,7 @@ Hello World!
 dotnet new stringext
 ```
 
-您將獲得以下輸出。
+您會取得下列輸出。
 
 ```console
 The template "Example templates: string extensions" was created successfully.
@@ -203,7 +203,7 @@ Console.WriteLine("Hello World!".Reverse());
 dotnet run
 ```
 
-您將獲得以下輸出。
+您會取得下列輸出。
 
 ```console
 !dlroW olleH
@@ -219,7 +219,7 @@ dotnet run
 dotnet new -u
 ```
 
-您將獲得類似于以下內容的輸出。
+您會取得如下所示的輸出。
 
 ```console
 Template Instantiation Commands for .NET Core CLI
@@ -249,7 +249,7 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-要卸載範本，請運行以下命令。
+若要卸載範本，請執行下列命令。
 
 ```dotnetcli
 dotnet new -u C:\working\templates\extensions

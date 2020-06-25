@@ -1,5 +1,6 @@
 ---
 title: DataGridView 控制項
+description: 瞭解如何使用 `DataGridView` 控制項來顯示少量資料的唯讀視圖，或調整其大小，以顯示非常大型資料集的可編輯檢視。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tables [Windows Forms]
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: fc40c0f08c0c11fa9acc94ce12caab8766658f1e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f9a45e8be7975697ca5c0d019c6bc4119f562aea
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746944"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325901"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView 控制項 (Windows Form)
 `DataGridView` 控制項以表格式顯示資料，是一項功能強大、有彈性的方式。 您可以使用 `DataGridView` 控制來顯示少量資料的唯讀檢視，或者您可以調整它的大小，以顯示非常大的資料集之可編輯檢視。  
@@ -31,10 +32,10 @@ ms.locfileid: "76746944"
  [DataGridView 控制項概觀](datagridview-control-overview-windows-forms.md)  
  提供描述 Windows Form `DataGridView` 控制項架構和核心概念的主題。  
   
- [Windows Forms DataGridView 控制項的預設功能](default-functionality-in-the-windows-forms-datagridview-control.md)  
+ [Windows Form DataGridView 控制項的預設功能](default-functionality-in-the-windows-forms-datagridview-control.md)  
  描述當 Windows Form `DataGridView` 控制項繫結至資料來源時的預設外觀和行為。  
   
- [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)  
+ [Windows Form DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)  
  描述在 Windows Form `DataGridView` 控制項中用於顯示資料，並允許使用者修改或加入資料的資料行類型。  
   
  [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)  
@@ -43,7 +44,7 @@ ms.locfileid: "76746944"
  [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何修改控制項基本外觀和儲存格資料顯示格式。  
   
- [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [在 Windows Form DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何以手動方式或從外部資料來源將資料填入控制項。  
   
  [調整 Windows Forms DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
@@ -52,22 +53,22 @@ ms.locfileid: "76746944"
  [在 Windows Forms DataGridView 控制項中排序資料](sorting-data-in-the-windows-forms-datagridview-control.md)  
  提供描述控制項中排序功能的主題。  
   
- [Windows Forms DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)  
+ [Windows Form DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何變更使用者加入和修改控制項資料的方式。  
   
- [選取範圍和剪貼簿與 Windows Forms DataGridView 控制項搭配使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ [選取範圍和剪貼簿與 Windows Form DataGridView 控制項搭配使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
  提供主題描述控制項中儲存格、資料列和資料行的選取功能。  
   
- [在 Windows Forms DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [在 Windows Form DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  提供主題描述如何使用儲存格、資料列和資料行物件進行程式設計。  
   
- [自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)  
+ [自訂 Windows Form DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)  
  提供主題描述自訂繪製 `DataGridView` 儲存格和資料列，並建立衍生儲存格、資料行和資料列類型。  
   
- [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows Form DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  提供主題描述處理大量資料時，如何有效率地使用控制項來避免發生效能問題。  
   
- [Windows Forms DataGridView 控制項中的預設鍵盤和滑鼠處理](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 控制項中的預設鍵盤和滑鼠控制](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
  描述使用者可如何透過鍵盤和滑鼠與 `DataGridView` 控制項互動。  
   
  [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
@@ -84,4 +85,4 @@ ms.locfileid: "76746944"
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

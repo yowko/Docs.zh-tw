@@ -1,5 +1,6 @@
 ---
-title: 演練：執行拖放操作
+title: 逐步解說：執行拖放作業
+description: 瞭解如何藉由處理一連串的事件，在 Windows Forms 中執行拖放作業，最值得注意的是 System.windows.dragdrop.dragenter>、DragLeave 和 System.windows.dragdrop.drop> 事件。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,29 +9,29 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: b5e4bf753733cb9bd010672f40e8fbeb0cf036bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83bfda875e2fdec3981bbcb8f8f7be00db342440
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182436"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325816"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>逐步解說：在 Windows Form 中執行拖放作業
-要在基於 Windows 的應用程式中執行拖放操作，必須處理一系列事件，其中最著名的是<xref:System.Windows.Forms.Control.DragEnter>，<xref:System.Windows.Forms.Control.DragLeave>和<xref:System.Windows.Forms.Control.DragDrop>事件。 使用這些事件的事件引數中所提供的資訊，即可輕鬆地運用拖放作業。  
+若要在以 Windows 為基礎的應用程式內執行拖放作業，您必須處理一連串的事件，最值得注意的是 <xref:System.Windows.Forms.Control.DragEnter> 、 <xref:System.Windows.Forms.Control.DragLeave> 和 <xref:System.Windows.Forms.Control.DragDrop> 事件。 使用這些事件的事件引數中所提供的資訊，即可輕鬆地運用拖放作業。  
   
 ## <a name="dragging-data"></a>拖曳資料  
- 所有拖放作業都是從拖曳開始。 在<xref:System.Windows.Forms.Control.DoDragDrop%2A>方法中實現了在方法中實現在拖動開始時啟用收集資料的功能。  
+ 所有拖放作業都是從拖曳開始。 在方法中實作為拖曳開始時，啟用收集資料的功能 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 。  
   
- 在下面的示例中，<xref:System.Windows.Forms.Control.MouseDown>該事件用於啟動拖動操作，因為它是最直觀的（大多數拖放操作從按下滑鼠按鍵開始）。 不過，請記住，可以使用任何事件來啟始拖放程序。  
+ 在下列範例中，會 <xref:System.Windows.Forms.Control.MouseDown> 使用事件來啟動拖曳作業，因為它是最直覺化的（大部分的拖放動作都是以按下滑鼠按鍵的方式開始）。 不過，請記住，可以使用任何事件來啟始拖放程序。  
   
 > [!NOTE]
-> 特定控制項會有自訂拖曳特定事件。 <xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>控制項，例如，有一個<xref:System.Windows.Forms.TreeView.ItemDrag>事件。  
+> 特定控制項會有自訂拖曳特定事件。 <xref:System.Windows.Forms.ListView> <xref:System.Windows.Forms.TreeView> 例如，和控制項有 <xref:System.Windows.Forms.TreeView.ItemDrag> 事件。  
   
 #### <a name="to-start-a-drag-operation"></a>啟動拖曳作業  
   
-1. 對於將開始<xref:System.Windows.Forms.Control.MouseDown>拖動的控制項，使用`DoDragDrop`方法設置要拖動的資料，並且允許的效果拖動將具有。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.DragEventArgs.Data%2A> 和 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>。  
+1. 在將 <xref:System.Windows.Forms.Control.MouseDown> 開始拖曳之控制項的事件中，使用 `DoDragDrop` 方法來設定要拖曳的資料，而允許的效果將會有。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.DragEventArgs.Data%2A> 和 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>。  
   
-     下列範例示範如何啟始拖曳作業。 拖動開始的控制項是<xref:System.Windows.Forms.Button>控制項，要拖動的資料是表示控制項<xref:System.Windows.Forms.Control.Text%2A>屬性的<xref:System.Windows.Forms.Button>字串，允許的效果是複製或移動。  
+     下列範例示範如何啟始拖曳作業。 拖曳開始位置為控制項的控制項，所拖曳 <xref:System.Windows.Forms.Button> 的資料是代表 <xref:System.Windows.Forms.Control.Text%2A> 控制項屬性的字串 <xref:System.Windows.Forms.Button> ，而允許的效果可能是複製或移動。  
   
     ```vb  
     Private Sub Button1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button1.MouseDown  
@@ -48,18 +49,18 @@ ms.locfileid: "79182436"
     ```  
   
     > [!NOTE]
-    > 任何資料都可以用作`DoDragDrop`方法中的參數;在上面的示例中，使用了<xref:System.Windows.Forms.Control.Text%2A><xref:System.Windows.Forms.Button>控制項的屬性（而不是硬編碼值或從資料集檢索資料），因為該屬性與從中拖動的位置（<xref:System.Windows.Forms.Button>控制項）相關。 當您將拖放作業併入 Windows 應用程式時，請記住這點。  
+    > 任何資料都可以做為方法中的參數 `DoDragDrop` 。在上述範例中，會 <xref:System.Windows.Forms.Control.Text%2A> 使用控制項的屬性 <xref:System.Windows.Forms.Button> （而不是將值硬式編碼或從資料集抓取資料），因為屬性與從拖曳的位置（ <xref:System.Windows.Forms.Button> 控制項）有關。 當您將拖放作業併入 Windows 應用程式時，請記住這點。  
   
- 當拖動操作有效時，您可以處理<xref:System.Windows.Forms.Control.QueryContinueDrag>事件，該事件"請求"系統的許可權以繼續拖動操作。 處理此方法時，調用對拖動操作有影響的方法也是適當的點，例如當游標懸停在<xref:System.Windows.Forms.TreeNode><xref:System.Windows.Forms.TreeView>控制項上時展開 控制項中的 。  
+ 當拖曳作業生效時，您可以處理 <xref:System.Windows.Forms.Control.QueryContinueDrag> 事件，這會「詢問」系統的許可權，以繼續拖曳操作。 處理這個方法時，您也可以呼叫將會影響拖曳作業的方法，例如， <xref:System.Windows.Forms.TreeNode> 當游標停留在控制項上時，展開控制項中的 <xref:System.Windows.Forms.TreeView> 。  
   
 ## <a name="dropping-data"></a>卸除資料  
- 當您開始將資料從某個位置拖曳至 Windows Forms 或控制項時，當然會想要將它卸除到某個位置。 游標在通過已正確設定可卸除資料的表單或控制項的某個區域時會變更。 可以通過設置<xref:System.Windows.Forms.Control.AllowDrop%2A>屬性和處理<xref:System.Windows.Forms.Control.DragEnter>和<xref:System.Windows.Forms.Control.DragDrop>事件來使 Windows 表單或控制項中的任何區域接受丟棄的資料。  
+ 當您開始將資料從某個位置拖曳至 Windows Forms 或控制項時，當然會想要將它卸除到某個位置。 游標在通過已正確設定可卸除資料的表單或控制項的某個區域時會變更。 您可以藉由設定 <xref:System.Windows.Forms.Control.AllowDrop%2A> 屬性和處理 <xref:System.Windows.Forms.Control.DragEnter> 和事件，讓 Windows Form 或控制項內的任何區域接受已捨棄的資料 <xref:System.Windows.Forms.Control.DragDrop> 。  
   
 #### <a name="to-perform-a-drop"></a>執行卸除  
   
-1. 將<xref:System.Windows.Forms.Control.AllowDrop%2A>屬性設置為 true。  
+1. 將 <xref:System.Windows.Forms.Control.AllowDrop%2A> 屬性設定為 true。  
   
-2. 對於`DragEnter`發生丟棄的控制項，請確保拖動的資料是可接受的類型（在本例中為<xref:System.Windows.Forms.Control.Text%2A>）。 然後，代碼設置在枚舉中<xref:System.Windows.Forms.DragDropEffects>放置到值時將發生的效果。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>。  
+2. 在 `DragEnter` 發生卸載之控制項的事件中，請確定所拖曳的資料是可接受的類型（在此案例中為 <xref:System.Windows.Forms.Control.Text%2A> ）。 然後，此程式碼會設定當 drop 發生于列舉值中時，將會發生的效果 <xref:System.Windows.Forms.DragDropEffects> 。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.DragEventArgs.Effect%2A> 。  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,11 +84,11 @@ ms.locfileid: "79182436"
     ```  
   
     > [!NOTE]
-    > 可以通過將自己的物件指定<xref:System.Windows.Forms.DataFormats>為方法的<xref:System.Object>參數來<xref:System.Windows.Forms.DataObject.SetData%2A>定義您自己的物件。 這麼做時，請確定可序列化所指定的物件。 如需詳細資訊，請參閱 <xref:System.Runtime.Serialization.ISerializable>。  
+    > 您可以指定自己的 <xref:System.Windows.Forms.DataFormats> 物件做為方法的參數，藉以定義自己的物件 <xref:System.Object> <xref:System.Windows.Forms.DataObject.SetData%2A> 。 這麼做時，請確定可序列化所指定的物件。 如需詳細資訊，請參閱 <xref:System.Runtime.Serialization.ISerializable> 。  
   
-3. 對於<xref:System.Windows.Forms.Control.DragDrop>發生放置的控制項，使用 方法<xref:System.Windows.Forms.DataObject.GetData%2A>檢索要拖動的資料。 如需詳細資訊，請參閱 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>。  
+3. 在發生卸載之 <xref:System.Windows.Forms.Control.DragDrop> 控制項的事件中，使用方法來抓取要拖曳 <xref:System.Windows.Forms.DataObject.GetData%2A> 的資料。 如需詳細資訊，請參閱 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A> 。  
   
-     在下面的示例中，<xref:System.Windows.Forms.TextBox>控制項是拖動到（將發生丟棄的位置）的控制項。 代碼設置控制項<xref:System.Windows.Forms.Control.Text%2A>的屬性<xref:System.Windows.Forms.TextBox>等於要拖動的資料。  
+     在下列範例中， <xref:System.Windows.Forms.TextBox> 控制項是要拖曳至的控制項（將會在其中進行卸載）。 程式碼會將 <xref:System.Windows.Forms.Control.Text%2A> 控制項的屬性設定 <xref:System.Windows.Forms.TextBox> 為等於所拖曳的資料。  
   
     ```vb  
     Private Sub TextBox1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragDrop  
@@ -104,7 +105,7 @@ ms.locfileid: "79182436"
     ```  
   
     > [!NOTE]
-    > 此外，您可以使用 該<xref:System.Windows.Forms.DragEventArgs.KeyState%2A>屬性，以便根據拖放操作期間按下的鍵，會發生某些效果（例如，在按下 CTRL 鍵時複製拖動的資料是標準）。  
+    > 此外，您可以使用 <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> 屬性，如此一來，根據拖放作業期間所按下的按鍵，就會發生某些效果（例如，在按下 CTRL 鍵時，複製拖曳的資料的標準）。  
   
 ## <a name="see-also"></a>另請參閱
 

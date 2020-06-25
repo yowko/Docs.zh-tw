@@ -1,37 +1,37 @@
 ---
 title: 建立適用於 dotnet new 的範本套件
 description: 了解如何建立將會針對 dotnet new 命令建置範本套件的 csproj 檔案。
-author: thraka
+author: adegeo
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25264fff42c47f5bb660f68f85dbb123b5b2608c
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503497"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324334"
 ---
-# <a name="tutorial-create-a-template-pack"></a>教程：創建範本包
+# <a name="tutorial-create-a-template-pack"></a>教學課程：建立範本套件
 
-透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 本教程是一系列的第三部分，它教您如何創建、安裝和卸載範本以與`dotnet new`命令一起使用。
+透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 本教學課程是系列中的第三部分，會教您如何建立、安裝和卸載範本以搭配 `dotnet new` 命令使用。
 
 在這部分的系列文章中，您將了解如何：
 
 > [!div class="checklist"]
 >
-> * 創建\*.csproj 專案以生成範本包
+> * 建立 \* .csproj 專案以建立範本套件
 > * 設定專案檔以用於封裝
 > * 從 NuGet 套件檔案安裝範本
 > * 依套件識別碼將範本解除安裝
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)和[第 2 部分](cli-templates-create-project-template.md)。
 
-  此教學課程會使用在此教學課程系列的前兩個部分中所建立的兩個範本。 只要將範本作為資料夾複製到_工作範本\\_資料夾中，就可以使用不同的範本。
+  此教學課程會使用在此教學課程系列的前兩個部分中所建立的兩個範本。 只要您將範本當做資料夾複製到_working\templates \\ _資料夾，就可以使用不同的範本。
 
-* 打開終端並導航到_工作\\_資料夾。
+* 開啟終端機，並流覽至_工作 \\ _資料夾。
 
 ## <a name="create-a-template-pack-project"></a>建立範本套件專案
 
@@ -49,7 +49,7 @@ ms.locfileid: "77503497"
 dotnet new console -n templatepack -o .
 ```
 
-參數`-n`將 _.csproj_檔案名設置為_範本包.csproj_。 參數`-o`在目前的目錄中創建檔。 您應該會看到類似以下輸出的結果。
+`-n`參數會將 _.csproj_檔案名設定為_templatepack_。 `-o`參數會在目前的目錄中建立檔案。 您應該會看到類似以下輸出的結果。
 
 ```dotnetcli
 dotnet new console -n templatepack -o .

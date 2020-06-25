@@ -1,35 +1,35 @@
 ---
-title: 檢查 Windows、Linux 和 macOS 安裝的 .NET 核心版本 - .NET Core
-description: 瞭解如何列出電腦上安裝了 .NET Core 的哪些版本。 這包括 .NET 核心運行時和 SDK。
-author: thraka
+title: 檢查 Windows、Linux 和 macOS 上已安裝的 .NET Core 版本-.NET Core
+description: 瞭解如何列出電腦上已安裝的 .NET Core 版本。 這包括 .NET Core 執行時間和 SDK。
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645340"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324816"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a>如何檢查 .NET 核心是否已安裝
+# <a name="how-to-check-that-net-core-is-already-installed"></a>如何檢查是否已安裝 .NET Core
 
-本文教您如何檢查計算機上安裝了 .NET Core 運行時和 SDK 的哪些版本。 如果您具有整合的開發環境(如適用於 Mac 的可視化工作室或視覺工作室),則可能已安裝 .NET 內核。
+本文會教您如何檢查電腦上已安裝的 .NET Core 執行時間和 SDK 版本。 如果您有整合式開發環境（例如 Visual Studio 或 Visual Studio for Mac），則可能已經安裝 .NET core。
 
-安裝 SDK 會安裝相應的運行時。
+安裝 SDK 會安裝對應的執行時間。
 
-如果本文中的任何命令失敗,則未安裝運行時或 SDK。 有關詳細資訊,請參閱[下載並安裝 .NET 核心](index.md)。
+如果本文中有任何命令失敗，您就不會安裝執行時間或 SDK。 如需詳細資訊，請參閱[下載並安裝 .Net Core](index.md)。
 
 ## <a name="check-sdk-versions"></a>檢查 SDK 版本
 
-您可以看到 .NET 核心 SDK 的哪些版本當前隨終端一起安裝。 打開終端並運行以下命令。
+您可以查看目前已安裝終端機的 .NET Core SDK 版本。 開啟終端機並執行下列命令。
 
 ```dotnetcli
 dotnet --list-sdks
 ```
 
-您將獲得類似於以下內容的輸出。
+您會取得如下所示的輸出。
 
 ::: zone pivot="os-windows"
 
@@ -76,15 +76,15 @@ dotnet --list-sdks
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a>檢查執行時版本
+## <a name="check-runtime-versions"></a>檢查執行階段版本
 
-您可以看到 .NET Core 執行時的哪些版本目前已安裝以下命令。
+您可以使用下列命令來查看目前安裝的 .NET Core 執行階段版本。
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-您將獲得類似於以下內容的輸出。
+您會取得如下所示的輸出。
 
 ::: zone pivot="os-windows"
 
@@ -168,54 +168,54 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="check-for-install-folders"></a>檢查安裝資料夾
 
-可能已安裝 .NET Core,但不會添加到作業系統或使用者`PATH`配置檔的變數中。 運行前幾節中的命令可能不起作用。 作為替代方法,您可以檢查 .NET Core 安裝檔夾是否存在。
+.NET Core 可能已安裝，但未新增至 `PATH` 您的作業系統或使用者設定檔的變數。 執行先前章節中的命令可能無法運作。 或者，您可以檢查 .NET Core 安裝資料夾是否存在。
 
-從安裝程式或腳本安裝 .NET Core 時,它將安裝到標準資料夾中。 在安裝 .NET Core 的安裝程式或文稿的大部分時間裡,您都提供了安裝到其他資料夾的選項。 如果選擇安裝到其他資料夾,請調整資料夾路徑的開頭。
+當您從安裝程式或腳本安裝 .NET Core 時，它會安裝到標準資料夾中。 在大部分的情況中，您用來安裝 .NET Core 的安裝程式或腳本，都能讓您選擇安裝到不同的資料夾。 如果您選擇安裝到不同的資料夾，請調整資料夾路徑的開頭。
 
 ::: zone pivot="os-windows"
 
-- **點網執行**\
-_C:\\\\程式\\檔案 dotnet dotnet.exe_
+- **dotnet 可執行檔**\
+_C： \\ program files \\ dotnet \\dotnet.exe_
 
 - **.NET SDK**\
-_C:\\\\程式\\檔案 dotnet\\sdk [版本]\\_
+_C： \\ program files \\ dotnet \\ sdk \\ {version}\\_
 
-- **.NET 執行時**\
-_C:\\\\程式\\檔案 dotnet\\\\分享 [執行時類型] [版本]\\_
+- **.NET 執行時間**\
+_C： \\ program files \\ dotnet \\ shared \\ {runtime-type} \\ {version}\\_
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-- **點網執行**\
-_/家庭/使用者/共享/點網/點網_
+- **dotnet 可執行檔**\
+_/home/user/share/dotnet/dotnet_
 
 - **.NET SDK**\
-_/家庭/使用者/共享/點網/sdk/{版本}/_
+_/home/user/share/dotnet/sdk/{version}/_
 
-- **.NET 執行時**\
-_/家庭/使用者/共用/點網/共用/[運行時類型]/{版本}/_
+- **.NET 執行時間**\
+_/home/user/share/dotnet/shared/{runtime-type}/{version}/_
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-- **點網執行**\
-_/usr/本地/共用/點網/點網_
+- **dotnet 可執行檔**\
+_/usr/local/share/dotnet/dotnet_
 
 - **.NET SDK**\
-_/usr/本地/共用/點網/sdk/{版本}/_
+_/usr/local/share/dotnet/sdk/{version}/_
 
-- **.NET 執行時**\
-_/usr/本地/共用/點網/共用/[運行時類型]/[版本]/_
+- **.NET 執行時間**\
+_/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 
 ::: zone-end
 
 ## <a name="more-information"></a>詳細資訊
 
-您可以使用`dotnet --info`指令 同時查看 SDK 版本和執行時版本。 您還將獲得其他與環境相關的資訊,如作業系統版本和運行時識別碼 (RID)。
+您可以使用命令來查看 SDK 版本和執行階段版本 `dotnet --info` 。 您也會取得其他環境相關資訊，例如作業系統版本和執行時間識別碼（RID）。
 
 ## <a name="next-steps"></a>後續步驟
 
-- [安裝 .NET 核心執行時](runtime.md)。
-- [安裝 .NET 核心 SDK](sdk.md)。
+- [安裝 .Net Core 運行](runtime.md)時間。
+- [安裝 .NET Core SDK](sdk.md)。

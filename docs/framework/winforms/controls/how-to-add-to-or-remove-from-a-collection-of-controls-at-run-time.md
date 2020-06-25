@@ -1,5 +1,6 @@
 ---
 title: 如何：在執行階段時從控制項集合新增或移除
+description: 瞭解如何在表單上的任何容器控制項中加入控制項，並移除控制項，例如面板或分組控制項，或甚至表單本身。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +13,15 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 369946581847b4bdcf8bc658aeb94b14c529061c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c3f2d1f42b130de4d808871265b50510cfb8f47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182281"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325869"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>如何：在執行階段時從控制項集合新增或移除
-應用程式開發中的常見任務是向表單上的任何容器控制項（如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控制項，甚至表單本身）添加控制項並刪除控制項。 在設計階段，可以將控制項直接拖曳至面板或群組方塊。 在執行階段，這些控制項會維護 `Controls` 集合，以便持續追蹤有哪些控制項置於其上。  
+應用程式開發的一般工作，是將控制項加入至表單上的任何容器控制項，並從中移除控制項（例如 <xref:System.Windows.Forms.Panel> 或 <xref:System.Windows.Forms.GroupBox> 控制項，甚至是表單本身）。 在設計階段，可以將控制項直接拖曳至面板或群組方塊。 在執行階段，這些控制項會維護 `Controls` 集合，以便持續追蹤有哪些控制項置於其上。  
   
 > [!NOTE]
 > 下列程式碼範例適用於任何可維護內含控制項集合的控制項。  
@@ -33,7 +34,7 @@ ms.locfileid: "79182281"
   
 3. 將控制項新增至父控制項的 `Controls` 集合。  
   
-     以下代碼示例演示如何創建控制項的<xref:System.Windows.Forms.Button>實例。 它需要具有<xref:System.Windows.Forms.Panel>控制項的表單，並且正在創建的`NewPanelButton_Click`按鈕的事件處理方法已存在。  
+     下列程式碼範例顯示如何建立控制項的實例 <xref:System.Windows.Forms.Button> 。 它需要具有控制項的表單， <xref:System.Windows.Forms.Panel> 而且所建立之按鈕的事件處理方法 `NewPanelButton_Click` 已經存在。  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -66,11 +67,11 @@ ms.locfileid: "79182281"
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>以程式設計方式移除集合中的控制項  
   
-1. 移除事件的事件處理常式。 在視覺化基本版中，使用"刪除處理常式語句"關鍵字;在"可視基本"中，使用["刪除處理常式語句"](../../../visual-basic/language-reference/statements/removehandler-statement.md)關鍵字。在 C# 中，使用[-# 運算子](../../../csharp/language-reference/operators/subtraction-operator.md)。  
+1. 移除事件的事件處理常式。 在 Visual Basic 中，使用[RemoveHandler 語句](../../../visual-basic/language-reference/statements/removehandler-statement.md)關鍵字;在 c # 中，使用[-= 運算子](../../../csharp/language-reference/operators/subtraction-operator.md)。  
   
 2. 使用 `Remove` 方法，從面板的 `Controls` 集合中刪除所需控制項。  
   
-3. 調用<xref:System.Windows.Forms.Control.Dispose%2A>方法以釋放控制項使用的所有資源。  
+3. 呼叫 <xref:System.Windows.Forms.Control.Dispose%2A> 方法以釋放控制項所使用的所有資源。  
   
     ```vb  
     Public Sub RemoveControl()  
