@@ -1,35 +1,35 @@
 ---
-title: 檢查 Windows、Linux 和 macOS 安裝的 .NET 核心版本 - .NET Core
-description: 瞭解如何列出電腦上安裝了 .NET Core 的哪些版本。 這包括 .NET 核心運行時和 SDK。
-author: thraka
+title: 檢查 Windows、Linux 和 macOS 上已安裝的 .NET Core 版本-.NET Core
+description: 瞭解如何列出電腦上已安裝的 .NET Core 版本。 這包括 .NET Core 執行時間和 SDK。
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645340"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324816"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a><span data-ttu-id="0b4a8-104">如何檢查 .NET 核心是否已安裝</span><span class="sxs-lookup"><span data-stu-id="0b4a8-104">How to check that .NET Core is already installed</span></span>
+# <a name="how-to-check-that-net-core-is-already-installed"></a><span data-ttu-id="2dddf-104">如何檢查是否已安裝 .NET Core</span><span class="sxs-lookup"><span data-stu-id="2dddf-104">How to check that .NET Core is already installed</span></span>
 
-<span data-ttu-id="0b4a8-105">本文教您如何檢查計算機上安裝了 .NET Core 運行時和 SDK 的哪些版本。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-105">This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer.</span></span> <span data-ttu-id="0b4a8-106">如果您具有整合的開發環境(如適用於 Mac 的可視化工作室或視覺工作室),則可能已安裝 .NET 內核。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-106">.NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.</span></span>
+<span data-ttu-id="2dddf-105">本文會教您如何檢查電腦上已安裝的 .NET Core 執行時間和 SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="2dddf-105">This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer.</span></span> <span data-ttu-id="2dddf-106">如果您有整合式開發環境（例如 Visual Studio 或 Visual Studio for Mac），則可能已經安裝 .NET core。</span><span class="sxs-lookup"><span data-stu-id="2dddf-106">.NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.</span></span>
 
-<span data-ttu-id="0b4a8-107">安裝 SDK 會安裝相應的運行時。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-107">Installing an SDK installs the corresponding runtime.</span></span>
+<span data-ttu-id="2dddf-107">安裝 SDK 會安裝對應的執行時間。</span><span class="sxs-lookup"><span data-stu-id="2dddf-107">Installing an SDK installs the corresponding runtime.</span></span>
 
-<span data-ttu-id="0b4a8-108">如果本文中的任何命令失敗,則未安裝運行時或 SDK。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-108">If any command in this article fails, you don't have the runtime or SDK installed.</span></span> <span data-ttu-id="0b4a8-109">有關詳細資訊,請參閱[下載並安裝 .NET 核心](index.md)。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-109">For more information, see [Download and install .NET Core](index.md).</span></span>
+<span data-ttu-id="2dddf-108">如果本文中有任何命令失敗，您就不會安裝執行時間或 SDK。</span><span class="sxs-lookup"><span data-stu-id="2dddf-108">If any command in this article fails, you don't have the runtime or SDK installed.</span></span> <span data-ttu-id="2dddf-109">如需詳細資訊，請參閱[下載並安裝 .Net Core](index.md)。</span><span class="sxs-lookup"><span data-stu-id="2dddf-109">For more information, see [Download and install .NET Core](index.md).</span></span>
 
-## <a name="check-sdk-versions"></a><span data-ttu-id="0b4a8-110">檢查 SDK 版本</span><span class="sxs-lookup"><span data-stu-id="0b4a8-110">Check SDK versions</span></span>
+## <a name="check-sdk-versions"></a><span data-ttu-id="2dddf-110">檢查 SDK 版本</span><span class="sxs-lookup"><span data-stu-id="2dddf-110">Check SDK versions</span></span>
 
-<span data-ttu-id="0b4a8-111">您可以看到 .NET 核心 SDK 的哪些版本當前隨終端一起安裝。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-111">You can see which versions of the .NET Core SDK are currently installed with a terminal.</span></span> <span data-ttu-id="0b4a8-112">打開終端並運行以下命令。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-112">Open a terminal and run the following command.</span></span>
+<span data-ttu-id="2dddf-111">您可以查看目前已安裝終端機的 .NET Core SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="2dddf-111">You can see which versions of the .NET Core SDK are currently installed with a terminal.</span></span> <span data-ttu-id="2dddf-112">開啟終端機並執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="2dddf-112">Open a terminal and run the following command.</span></span>
 
 ```dotnetcli
 dotnet --list-sdks
 ```
 
-<span data-ttu-id="0b4a8-113">您將獲得類似於以下內容的輸出。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-113">You get output similar to the following.</span></span>
+<span data-ttu-id="2dddf-113">您會取得如下所示的輸出。</span><span class="sxs-lookup"><span data-stu-id="2dddf-113">You get output similar to the following.</span></span>
 
 ::: zone pivot="os-windows"
 
@@ -76,15 +76,15 @@ dotnet --list-sdks
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a><span data-ttu-id="0b4a8-114">檢查執行時版本</span><span class="sxs-lookup"><span data-stu-id="0b4a8-114">Check runtime versions</span></span>
+## <a name="check-runtime-versions"></a><span data-ttu-id="2dddf-114">檢查執行階段版本</span><span class="sxs-lookup"><span data-stu-id="2dddf-114">Check runtime versions</span></span>
 
-<span data-ttu-id="0b4a8-115">您可以看到 .NET Core 執行時的哪些版本目前已安裝以下命令。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-115">You can see which versions of the .NET Core runtime are currently installed with the following command.</span></span>
+<span data-ttu-id="2dddf-115">您可以使用下列命令來查看目前安裝的 .NET Core 執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="2dddf-115">You can see which versions of the .NET Core runtime are currently installed with the following command.</span></span>
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-<span data-ttu-id="0b4a8-116">您將獲得類似於以下內容的輸出。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-116">You get output similar to the following.</span></span>
+<span data-ttu-id="2dddf-116">您會取得如下所示的輸出。</span><span class="sxs-lookup"><span data-stu-id="2dddf-116">You get output similar to the following.</span></span>
 
 ::: zone pivot="os-windows"
 
@@ -166,56 +166,56 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ::: zone-end
 
-## <a name="check-for-install-folders"></a><span data-ttu-id="0b4a8-117">檢查安裝資料夾</span><span class="sxs-lookup"><span data-stu-id="0b4a8-117">Check for install folders</span></span>
+## <a name="check-for-install-folders"></a><span data-ttu-id="2dddf-117">檢查安裝資料夾</span><span class="sxs-lookup"><span data-stu-id="2dddf-117">Check for install folders</span></span>
 
-<span data-ttu-id="0b4a8-118">可能已安裝 .NET Core,但不會添加到作業系統或使用者`PATH`配置檔的變數中。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-118">It's possible that .NET Core is installed but not added to the `PATH` variable for your operating system or user profile.</span></span> <span data-ttu-id="0b4a8-119">運行前幾節中的命令可能不起作用。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-119">Running the commands from the previous sections may not work.</span></span> <span data-ttu-id="0b4a8-120">作為替代方法,您可以檢查 .NET Core 安裝檔夾是否存在。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-120">As an alternative, you can check that the .NET Core install folders exist.</span></span>
+<span data-ttu-id="2dddf-118">.NET Core 可能已安裝，但未新增至 `PATH` 您的作業系統或使用者設定檔的變數。</span><span class="sxs-lookup"><span data-stu-id="2dddf-118">It's possible that .NET Core is installed but not added to the `PATH` variable for your operating system or user profile.</span></span> <span data-ttu-id="2dddf-119">執行先前章節中的命令可能無法運作。</span><span class="sxs-lookup"><span data-stu-id="2dddf-119">Running the commands from the previous sections may not work.</span></span> <span data-ttu-id="2dddf-120">或者，您可以檢查 .NET Core 安裝資料夾是否存在。</span><span class="sxs-lookup"><span data-stu-id="2dddf-120">As an alternative, you can check that the .NET Core install folders exist.</span></span>
 
-<span data-ttu-id="0b4a8-121">從安裝程式或腳本安裝 .NET Core 時,它將安裝到標準資料夾中。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-121">When you install .NET Core from an installer or script, it's installed to a standard folder.</span></span> <span data-ttu-id="0b4a8-122">在安裝 .NET Core 的安裝程式或文稿的大部分時間裡,您都提供了安裝到其他資料夾的選項。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-122">Much of the time the installer or script you're using to install .NET Core gives you an option to install to a different folder.</span></span> <span data-ttu-id="0b4a8-123">如果選擇安裝到其他資料夾,請調整資料夾路徑的開頭。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-123">If you choose to install to a different folder, adjust the start of the folder path.</span></span>
+<span data-ttu-id="2dddf-121">當您從安裝程式或腳本安裝 .NET Core 時，它會安裝到標準資料夾中。</span><span class="sxs-lookup"><span data-stu-id="2dddf-121">When you install .NET Core from an installer or script, it's installed to a standard folder.</span></span> <span data-ttu-id="2dddf-122">在大部分的情況中，您用來安裝 .NET Core 的安裝程式或腳本，都能讓您選擇安裝到不同的資料夾。</span><span class="sxs-lookup"><span data-stu-id="2dddf-122">Much of the time the installer or script you're using to install .NET Core gives you an option to install to a different folder.</span></span> <span data-ttu-id="2dddf-123">如果您選擇安裝到不同的資料夾，請調整資料夾路徑的開頭。</span><span class="sxs-lookup"><span data-stu-id="2dddf-123">If you choose to install to a different folder, adjust the start of the folder path.</span></span>
 
 ::: zone pivot="os-windows"
 
-- <span data-ttu-id="0b4a8-124">**點網執行**</span><span class="sxs-lookup"><span data-stu-id="0b4a8-124">**dotnet executable**</span></span>\
-<span data-ttu-id="0b4a8-125">_C:\\\\程式\\檔案 dotnet dotnet.exe_</span><span class="sxs-lookup"><span data-stu-id="0b4a8-125">_C:\\program files\\dotnet\\dotnet.exe_</span></span>
+- <span data-ttu-id="2dddf-124">**dotnet 可執行檔**</span><span class="sxs-lookup"><span data-stu-id="2dddf-124">**dotnet executable**</span></span>\
+<span data-ttu-id="2dddf-125">_C： \\ program files \\ dotnet \\dotnet.exe_</span><span class="sxs-lookup"><span data-stu-id="2dddf-125">_C:\\program files\\dotnet\\dotnet.exe_</span></span>
 
-- <span data-ttu-id="0b4a8-126">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="0b4a8-126">**.NET SDK**</span></span>\
-<span data-ttu-id="0b4a8-127">_C:\\\\程式\\檔案 dotnet\\sdk [版本]\\_</span><span class="sxs-lookup"><span data-stu-id="0b4a8-127">_C:\\program files\\dotnet\\sdk\\{version}\\_</span></span>
+- <span data-ttu-id="2dddf-126">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="2dddf-126">**.NET SDK**</span></span>\
+<span data-ttu-id="2dddf-127">_C： \\ program files \\ dotnet \\ sdk \\ {version}\\_</span><span class="sxs-lookup"><span data-stu-id="2dddf-127">_C:\\program files\\dotnet\\sdk\\{version}\\_</span></span>
 
-- <span data-ttu-id="0b4a8-128">**.NET 執行時**</span><span class="sxs-lookup"><span data-stu-id="0b4a8-128">**.NET Runtime**</span></span>\
-<span data-ttu-id="0b4a8-129">_C:\\\\程式\\檔案 dotnet\\\\分享 [執行時類型] [版本]\\_</span><span class="sxs-lookup"><span data-stu-id="0b4a8-129">_C:\\program files\\dotnet\\shared\\{runtime-type}\\{version}\\_</span></span>
+- <span data-ttu-id="2dddf-128">**.NET 執行時間**</span><span class="sxs-lookup"><span data-stu-id="2dddf-128">**.NET Runtime**</span></span>\
+<span data-ttu-id="2dddf-129">_C： \\ program files \\ dotnet \\ shared \\ {runtime-type} \\ {version}\\_</span><span class="sxs-lookup"><span data-stu-id="2dddf-129">_C:\\program files\\dotnet\\shared\\{runtime-type}\\{version}\\_</span></span>
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-- <span data-ttu-id="0b4a8-130">**點網執行**</span><span class="sxs-lookup"><span data-stu-id="0b4a8-130">**dotnet executable**</span></span>\
-<span data-ttu-id="0b4a8-131">_/家庭/使用者/共享/點網/點網_</span><span class="sxs-lookup"><span data-stu-id="0b4a8-131">_/home/user/share/dotnet/dotnet_</span></span>
+- <span data-ttu-id="2dddf-130">**dotnet 可執行檔**</span><span class="sxs-lookup"><span data-stu-id="2dddf-130">**dotnet executable**</span></span>\
+<span data-ttu-id="2dddf-131">_/home/user/share/dotnet/dotnet_</span><span class="sxs-lookup"><span data-stu-id="2dddf-131">_/home/user/share/dotnet/dotnet_</span></span>
 
-- <span data-ttu-id="0b4a8-132">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="0b4a8-132">**.NET SDK**</span></span>\
-<span data-ttu-id="0b4a8-133">_/家庭/使用者/共享/點網/sdk/{版本}/_</span><span class="sxs-lookup"><span data-stu-id="0b4a8-133">_/home/user/share/dotnet/sdk/{version}/_</span></span>
+- <span data-ttu-id="2dddf-132">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="2dddf-132">**.NET SDK**</span></span>\
+<span data-ttu-id="2dddf-133">_/home/user/share/dotnet/sdk/{version}/_</span><span class="sxs-lookup"><span data-stu-id="2dddf-133">_/home/user/share/dotnet/sdk/{version}/_</span></span>
 
-- <span data-ttu-id="0b4a8-134">**.NET 執行時**</span><span class="sxs-lookup"><span data-stu-id="0b4a8-134">**.NET Runtime**</span></span>\
-<span data-ttu-id="0b4a8-135">_/家庭/使用者/共用/點網/共用/[運行時類型]/{版本}/_</span><span class="sxs-lookup"><span data-stu-id="0b4a8-135">_/home/user/share/dotnet/shared/{runtime-type}/{version}/_</span></span>
+- <span data-ttu-id="2dddf-134">**.NET 執行時間**</span><span class="sxs-lookup"><span data-stu-id="2dddf-134">**.NET Runtime**</span></span>\
+<span data-ttu-id="2dddf-135">_/home/user/share/dotnet/shared/{runtime-type}/{version}/_</span><span class="sxs-lookup"><span data-stu-id="2dddf-135">_/home/user/share/dotnet/shared/{runtime-type}/{version}/_</span></span>
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-- <span data-ttu-id="0b4a8-136">**點網執行**</span><span class="sxs-lookup"><span data-stu-id="0b4a8-136">**dotnet executable**</span></span>\
-<span data-ttu-id="0b4a8-137">_/usr/本地/共用/點網/點網_</span><span class="sxs-lookup"><span data-stu-id="0b4a8-137">_/usr/local/share/dotnet/dotnet_</span></span>
+- <span data-ttu-id="2dddf-136">**dotnet 可執行檔**</span><span class="sxs-lookup"><span data-stu-id="2dddf-136">**dotnet executable**</span></span>\
+<span data-ttu-id="2dddf-137">_/usr/local/share/dotnet/dotnet_</span><span class="sxs-lookup"><span data-stu-id="2dddf-137">_/usr/local/share/dotnet/dotnet_</span></span>
 
-- <span data-ttu-id="0b4a8-138">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="0b4a8-138">**.NET SDK**</span></span>\
-<span data-ttu-id="0b4a8-139">_/usr/本地/共用/點網/sdk/{版本}/_</span><span class="sxs-lookup"><span data-stu-id="0b4a8-139">_/usr/local/share/dotnet/sdk/{version}/_</span></span>
+- <span data-ttu-id="2dddf-138">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="2dddf-138">**.NET SDK**</span></span>\
+<span data-ttu-id="2dddf-139">_/usr/local/share/dotnet/sdk/{version}/_</span><span class="sxs-lookup"><span data-stu-id="2dddf-139">_/usr/local/share/dotnet/sdk/{version}/_</span></span>
 
-- <span data-ttu-id="0b4a8-140">**.NET 執行時**</span><span class="sxs-lookup"><span data-stu-id="0b4a8-140">**.NET Runtime**</span></span>\
-<span data-ttu-id="0b4a8-141">_/usr/本地/共用/點網/共用/[運行時類型]/[版本]/_</span><span class="sxs-lookup"><span data-stu-id="0b4a8-141">_/usr/local/share/dotnet/shared/{runtime-type}/{version}/_</span></span>
+- <span data-ttu-id="2dddf-140">**.NET 執行時間**</span><span class="sxs-lookup"><span data-stu-id="2dddf-140">**.NET Runtime**</span></span>\
+<span data-ttu-id="2dddf-141">_/usr/local/share/dotnet/shared/{runtime-type}/{version}/_</span><span class="sxs-lookup"><span data-stu-id="2dddf-141">_/usr/local/share/dotnet/shared/{runtime-type}/{version}/_</span></span>
 
 ::: zone-end
 
-## <a name="more-information"></a><span data-ttu-id="0b4a8-142">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="0b4a8-142">More information</span></span>
+## <a name="more-information"></a><span data-ttu-id="2dddf-142">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="2dddf-142">More information</span></span>
 
-<span data-ttu-id="0b4a8-143">您可以使用`dotnet --info`指令 同時查看 SDK 版本和執行時版本。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-143">You can see both the SDK versions and runtime versions with the command `dotnet --info`.</span></span> <span data-ttu-id="0b4a8-144">您還將獲得其他與環境相關的資訊,如作業系統版本和運行時識別碼 (RID)。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-144">You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).</span></span>
+<span data-ttu-id="2dddf-143">您可以使用命令來查看 SDK 版本和執行階段版本 `dotnet --info` 。</span><span class="sxs-lookup"><span data-stu-id="2dddf-143">You can see both the SDK versions and runtime versions with the command `dotnet --info`.</span></span> <span data-ttu-id="2dddf-144">您也會取得其他環境相關資訊，例如作業系統版本和執行時間識別碼（RID）。</span><span class="sxs-lookup"><span data-stu-id="2dddf-144">You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="0b4a8-145">後續步驟</span><span class="sxs-lookup"><span data-stu-id="0b4a8-145">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="2dddf-145">後續步驟</span><span class="sxs-lookup"><span data-stu-id="2dddf-145">Next steps</span></span>
 
-- <span data-ttu-id="0b4a8-146">[安裝 .NET 核心執行時](runtime.md)。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-146">[Install the .NET Core Runtime](runtime.md).</span></span>
-- <span data-ttu-id="0b4a8-147">[安裝 .NET 核心 SDK](sdk.md)。</span><span class="sxs-lookup"><span data-stu-id="0b4a8-147">[Install the .NET Core SDK](sdk.md).</span></span>
+- <span data-ttu-id="2dddf-146">[安裝 .Net Core 運行](runtime.md)時間。</span><span class="sxs-lookup"><span data-stu-id="2dddf-146">[Install the .NET Core Runtime](runtime.md).</span></span>
+- <span data-ttu-id="2dddf-147">[安裝 .NET Core SDK](sdk.md)。</span><span class="sxs-lookup"><span data-stu-id="2dddf-147">[Install the .NET Core SDK](sdk.md).</span></span>

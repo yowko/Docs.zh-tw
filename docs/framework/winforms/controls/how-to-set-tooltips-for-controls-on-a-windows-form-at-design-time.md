@@ -1,5 +1,6 @@
 ---
-title: HOW TO：在設計階段設定 Windows Forms 的控制項工具提示
+title: 如何：在設計階段設定 Windows Form 上控制項的工具提示
+description: 瞭解如何在 Visual Studio 中以程式設計方式或在 Windows Form 設計工具中設定控制項的工具提示。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 0d6725fc1a00826870e6400bffce63a1788e802c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 15134b38d11de30d0e6a2f998f6ea266affc40d7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211691"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325968"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="a1c18-102">HOW TO：在設計階段設定 Windows Form 上控制項的工具提示</span><span class="sxs-lookup"><span data-stu-id="a1c18-102">How to: Set ToolTips for controls on a Windows Form at design time</span></span>
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a><span data-ttu-id="4957c-103">如何：在設計階段設定 Windows Form 上控制項的工具提示</span><span class="sxs-lookup"><span data-stu-id="4957c-103">How to: Set ToolTips for controls on a Windows Form at design time</span></span>
 
-<span data-ttu-id="a1c18-103">您可以設定<xref:System.Windows.Forms.ToolTip>在程式碼，或在 Windows Form 設計工具，在 Visual Studio 中的字串。</span><span class="sxs-lookup"><span data-stu-id="a1c18-103">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer in Visual Studio.</span></span> <span data-ttu-id="a1c18-104">如需詳細資訊<xref:System.Windows.Forms.ToolTip>元件，請參閱 < [ToolTip 元件概觀](tooltip-component-overview-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="a1c18-104">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](tooltip-component-overview-windows-forms.md).</span></span>
+<span data-ttu-id="4957c-104">您可以在程式 <xref:System.Windows.Forms.ToolTip> 代碼中，或在 Visual Studio 的 Windows Form 設計工具中設定字串。</span><span class="sxs-lookup"><span data-stu-id="4957c-104">You can set a <xref:System.Windows.Forms.ToolTip> string in code or in the Windows Forms Designer in Visual Studio.</span></span> <span data-ttu-id="4957c-105">如需元件的詳細資訊 <xref:System.Windows.Forms.ToolTip> ，請參閱[工具提示元件總覽](tooltip-component-overview-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="4957c-105">For more information about the <xref:System.Windows.Forms.ToolTip> component, see [ToolTip Component Overview](tooltip-component-overview-windows-forms.md).</span></span>
 
-## <a name="set-a-tooltip-programmatically"></a><span data-ttu-id="a1c18-105">以程式設計方式設定工具提示</span><span class="sxs-lookup"><span data-stu-id="a1c18-105">Set a ToolTip programmatically</span></span>
+## <a name="set-a-tooltip-programmatically"></a><span data-ttu-id="4957c-106">以程式設計方式設定工具提示</span><span class="sxs-lookup"><span data-stu-id="4957c-106">Set a ToolTip programmatically</span></span>
 
-1. <span data-ttu-id="a1c18-106">新增控制項，將會顯示工具提示。</span><span class="sxs-lookup"><span data-stu-id="a1c18-106">Add the control that will display the ToolTip.</span></span>
+1. <span data-ttu-id="4957c-107">加入將顯示工具提示的控制項。</span><span class="sxs-lookup"><span data-stu-id="4957c-107">Add the control that will display the ToolTip.</span></span>
 
-2. <span data-ttu-id="a1c18-107">使用<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>方法的<xref:System.Windows.Forms.ToolTip>元件。</span><span class="sxs-lookup"><span data-stu-id="a1c18-107">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>
+2. <span data-ttu-id="4957c-108">使用 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 元件的方法 <xref:System.Windows.Forms.ToolTip> 。</span><span class="sxs-lookup"><span data-stu-id="4957c-108">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>
 
     ```vb
     ' In this example, Button1 is the control to display the ToolTip.
@@ -41,17 +42,17 @@ ms.locfileid: "65211691"
     toolTip1->SetToolTip(button1, "Save changes");
     ```
 
-## <a name="set-a-tooltip-in-the-designer"></a><span data-ttu-id="a1c18-108">設定設計工具中的工具提示</span><span class="sxs-lookup"><span data-stu-id="a1c18-108">Set a ToolTip in the designer</span></span>
+## <a name="set-a-tooltip-in-the-designer"></a><span data-ttu-id="4957c-109">在設計工具中設定工具提示</span><span class="sxs-lookup"><span data-stu-id="4957c-109">Set a ToolTip in the designer</span></span>
 
-1. <span data-ttu-id="a1c18-109">在 Visual Studio 中，新增<xref:System.Windows.Forms.ToolTip>元件至表單。</span><span class="sxs-lookup"><span data-stu-id="a1c18-109">In Visual Studio, add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>
+1. <span data-ttu-id="4957c-110">在 Visual Studio 中，將 <xref:System.Windows.Forms.ToolTip> 元件新增至表單。</span><span class="sxs-lookup"><span data-stu-id="4957c-110">In Visual Studio, add a <xref:System.Windows.Forms.ToolTip> component to the form.</span></span>
 
-2. <span data-ttu-id="a1c18-110">選取的控制項，將會顯示工具提示，或將它新增至表單。</span><span class="sxs-lookup"><span data-stu-id="a1c18-110">Select the control that will display the ToolTip, or add it to the form.</span></span>
+2. <span data-ttu-id="4957c-111">選取要顯示工具提示的控制項，或將它新增至表單。</span><span class="sxs-lookup"><span data-stu-id="4957c-111">Select the control that will display the ToolTip, or add it to the form.</span></span>
 
-3. <span data-ttu-id="a1c18-111">在 **屬性**視窗中，將**ToolTip1 的**適當的文字字串的值。</span><span class="sxs-lookup"><span data-stu-id="a1c18-111">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>
+3. <span data-ttu-id="4957c-112">在 [**屬性**] 視窗中，將 [ToolTip1 值]**上的工具提示**設定為適當的文字字串。</span><span class="sxs-lookup"><span data-stu-id="4957c-112">In the **Properties** window, set the **ToolTip on ToolTip1** value to an appropriate string of text.</span></span>
 
-### <a name="to-remove-a-tooltip-programmatically"></a><span data-ttu-id="a1c18-112">若要以程式設計方式移除工具提示</span><span class="sxs-lookup"><span data-stu-id="a1c18-112">To remove a ToolTip programmatically</span></span>
+### <a name="to-remove-a-tooltip-programmatically"></a><span data-ttu-id="4957c-113">以程式設計方式移除工具提示</span><span class="sxs-lookup"><span data-stu-id="4957c-113">To remove a ToolTip programmatically</span></span>
 
-1. <span data-ttu-id="a1c18-113">使用<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>方法的<xref:System.Windows.Forms.ToolTip>元件。</span><span class="sxs-lookup"><span data-stu-id="a1c18-113">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>
+1. <span data-ttu-id="4957c-114">使用 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 元件的方法 <xref:System.Windows.Forms.ToolTip> 。</span><span class="sxs-lookup"><span data-stu-id="4957c-114">Use the <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> method of the <xref:System.Windows.Forms.ToolTip> component.</span></span>
 
     ```vb
     ' In this example, Button1 is the control displaying the ToolTip.
@@ -68,14 +69,14 @@ ms.locfileid: "65211691"
     toolTip1->SetToolTip(button1, NULL);
     ```
 
-## <a name="remove-a-tooltip-in-the-designer"></a><span data-ttu-id="a1c18-114">在設計工具中移除的工具提示</span><span class="sxs-lookup"><span data-stu-id="a1c18-114">Remove a ToolTip in the designer</span></span>
+## <a name="remove-a-tooltip-in-the-designer"></a><span data-ttu-id="4957c-115">移除設計師中的工具提示</span><span class="sxs-lookup"><span data-stu-id="4957c-115">Remove a ToolTip in the designer</span></span>
 
-1. <span data-ttu-id="a1c18-115">在 Visual Studio 中，選取 顯示工具提示控制項。</span><span class="sxs-lookup"><span data-stu-id="a1c18-115">In Visual Studio, select the control that is displaying the ToolTip.</span></span>
+1. <span data-ttu-id="4957c-116">在 [Visual Studio 中，選取顯示工具提示的控制項。</span><span class="sxs-lookup"><span data-stu-id="4957c-116">In Visual Studio, select the control that is displaying the ToolTip.</span></span>
 
-2. <span data-ttu-id="a1c18-116">在 [**屬性**] 視窗中，刪除中的文字**ToolTip1 的**。</span><span class="sxs-lookup"><span data-stu-id="a1c18-116">In the **Properties** window, delete the text in the **ToolTip on ToolTip1**.</span></span>
+2. <span data-ttu-id="4957c-117">在 [**屬性**] 視窗中，刪除**ToolTip1 上工具提示**中的文字。</span><span class="sxs-lookup"><span data-stu-id="4957c-117">In the **Properties** window, delete the text in the **ToolTip on ToolTip1**.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a1c18-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a1c18-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4957c-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4957c-118">See also</span></span>
 
-- [<span data-ttu-id="a1c18-118">ToolTip 元件概觀</span><span class="sxs-lookup"><span data-stu-id="a1c18-118">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)
-- [<span data-ttu-id="a1c18-119">如何：變更 Windows Form ToolTip 元件的延遲時間</span><span class="sxs-lookup"><span data-stu-id="a1c18-119">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
-- [<span data-ttu-id="a1c18-120">ToolTip 元件</span><span class="sxs-lookup"><span data-stu-id="a1c18-120">ToolTip Component</span></span>](tooltip-component-windows-forms.md)
+- [<span data-ttu-id="4957c-119">ToolTip 元件概觀</span><span class="sxs-lookup"><span data-stu-id="4957c-119">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)
+- [<span data-ttu-id="4957c-120">操作說明：變更 Windows Forms ToolTip 元件的延遲時間</span><span class="sxs-lookup"><span data-stu-id="4957c-120">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [<span data-ttu-id="4957c-121">ToolTip 元件</span><span class="sxs-lookup"><span data-stu-id="4957c-121">ToolTip Component</span></span>](tooltip-component-windows-forms.md)
