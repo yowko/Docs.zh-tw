@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: Dotnet publish 命令會將 .NET Core 專案或方案發行至目錄。
 ms.date: 02/24/2020
-ms.openlocfilehash: 697746291a8b34a856433049fe7264ad0ea4af7a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
+ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761898"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85365579"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -32,13 +32,13 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>描述
 
 `dotnet publish` 會編譯應用程式，讀取在其專案檔中指定的相依性，然後將產生的一組檔案發行到目錄中。 此輸出包含下列資產：
 
 - 組件中的中繼語言 (IL) 程式碼，副檔名為 *dll*。
-- 包含專案所有相依性的 *.deps.json json*檔案。
-- *.Runtimeconfig.json json*檔案，指定應用程式預期的共用執行時間，以及執行時間的其他設定選項（例如垃圾收集類型）。
+- 檔案*上的.deps.js* ，其中包含專案的所有相依性。
+- .runtimeconfig.js檔案，指定應用程式預期的共用執行時間，以及運行*時間*的其他設定選項（例如垃圾收集類型）。
 - 應用程式的相依性，這些相依性會從 NuGet 快取複製到輸出資料夾。
 
 `dotnet publish`　命令的輸出已準備好部署到裝載系統 (例如伺服器、電腦、Mac、膝上型電腦) 以供執行。 這是準備應用程式以供部署的唯一正式支援的方法。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 如需詳細資訊，請參閱[使用 .NET Core CLI 發佈 .Net Core 應用程式](../deploying/deploy-with-cli.md)。
@@ -49,7 +49,7 @@ dotnet publish -h|--help
 
 ### <a name="msbuild"></a>MSBuild
 
-`dotnet publish` 命令會呼叫 MSBuild，這會叫用 `Publish` 目標。 所有傳遞給 `dotnet publish` 的參數都會傳遞給 MSBuild。 `-c` 和 `-o` 參數會分別對應至 MSBuild 的 `Configuration` 和 `OutputPath` 屬性。
+`dotnet publish` 命令會呼叫 MSBuild，這會叫用 `Publish` 目標。 所有傳遞給 `dotnet publish` 的參數都會傳遞給 MSBuild。 `-c` 和 `-o` 參數會分別對應至 MSBuild 的 `Configuration` 和 `PublishDir` 屬性。
 
 此 `dotnet publish` 命令接受 MSBuild 選項，例如 `-p` 用於設定屬性和 `-l` 定義記錄器。 例如，您可以使用下列格式來設定 MSBuild 屬性： `-p:<NAME>=<VALUE>` 。 您也可以參考 *.pubxml*檔案來設定發行相關屬性，例如：
 
@@ -229,7 +229,7 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
 
 - [.NET Core 應用程式發行總覽](../deploying/index.md)
 - [使用 .NET Core CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)
-- [目標 Framework](../../standard/frameworks.md)
+- [目標架構](../../standard/frameworks.md)
 - [執行時間識別碼（RID）目錄](../rid-catalog.md)
 - [使用 macOS Catalina Notarization](../install/macos-notarization-issues.md)
 - [已發行應用程式的目錄結構](/aspnet/core/hosting/directory-structure)
