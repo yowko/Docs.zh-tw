@@ -1,5 +1,6 @@
 ---
 title: failedQI MDA
+description: 請參閱 .NET 中的 failedQI managed 偵錯工具（MDA），這可能會在執行時間可呼叫包裝函式（RCW）中的轉型或 COM 呼叫失敗時啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - failed QueryInterface
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-ms.openlocfilehash: 4c36ec514645a38ef1228e76bdf6dbd06e886bae
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2d7f14c67d47e58bcb88eab4621df63d7c598a7a
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217511"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415936"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
-當執行階段代表執行階段可呼叫包裝函式 (RCW)，在 COM 介面指標上呼叫 `failedQI`，而 `QueryInterface` 呼叫失敗時，就會啟動 `QueryInterface` Managed 偵錯助理 (MDA)。  
+當執行階段代表執行階段可呼叫包裝函式 (RCW)，在 COM 介面指標上呼叫 `QueryInterface`，而 `QueryInterface` 呼叫失敗時，就會啟動 `failedQI` Managed 偵錯助理 (MDA)。  
   
 ## <a name="symptoms"></a>徵狀  
  在 RCW 上轉換失敗，或從 RCW 呼叫 COM 時意外失敗。  
@@ -38,7 +39,7 @@ ms.locfileid: "77217511"
 ## <a name="output"></a>輸出  
  介面的 Managed 名稱、介面的 GUID，以及失敗的 HRESULT。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  

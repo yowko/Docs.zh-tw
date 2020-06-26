@@ -1,5 +1,6 @@
 ---
 title: asynchronousThreadAbort MDA
+description: 檢查當執行緒嘗試將非同步中止放入另一個執行緒時，如何啟用 asynchronousThreadAbort managed 偵錯工具（MDA）。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - asynchronous thread aborts
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 469372d57d9c21198353d171fec16458691eb25d
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217585"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415663"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 當執行緒嘗試在另一個執行緒中在引入非同步中止時，就會啟用 `asynchronousThreadAbort` Managed 偵錯助理 (MDA)。 同步執行緒中止不會啟動 `asynchronousThreadAbort` MDA。
@@ -43,7 +44,7 @@ ms.locfileid: "77217585"
 ## <a name="output"></a>輸出
  此 MDA 會報告執行中止之執行緒的 ID，以及作為中止目標之執行緒的 ID。 由於僅限於非同步中止，因此這兩者絕對不會相同。
 
-## <a name="configuration"></a>組態
+## <a name="configuration"></a>設定
 
 ```xml
 <mdaConfig>

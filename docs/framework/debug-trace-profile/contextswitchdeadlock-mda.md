@@ -1,5 +1,6 @@
 ---
 title: contextSwitchDeadlock MDA
+description: 瞭解 .NET 中的 coNtextSwitchDeadlock managed 偵錯工具（MDA），這是在 COM 內容轉換期間偵測到鎖死時啟動的。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 52db4f2c88bac4e8cac621cca989fa10acb43f94
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217563"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416014"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -60,7 +61,7 @@ ms.locfileid: "77217563"
 
 描述目前內容和目標內容的訊息。
 
-## <a name="configuration"></a>組態
+## <a name="configuration"></a>設定
 
 ```xml
 <mdaConfig>

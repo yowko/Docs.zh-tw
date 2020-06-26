@@ -1,5 +1,6 @@
 ---
 title: dateTimeInvalidLocalFormat MDA
+description: 請參閱 dateTimeInvalidLocalFormat managed 偵錯工具（MDA），這會在 UTC 儲存的日期時間值取得僅限本機日期時間格式時啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [.NET Framework], formatting
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-ms.openlocfilehash: b01f030c474e426cb87fb907f99f241eeb76a7fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d092b93af55d2cdf14e9284d8cffcdc8440cbf81
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174754"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415988"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 使用只能用於當地 <xref:System.DateTime> 執行個體的格式來格式化儲存為全球定位時間 (UTC) 的 <xref:System.DateTime> 執行個體時，會啟用 `dateTimeInvalidLocalFormat` MDA。 針對未指定或預設 <xref:System.DateTime> 執行個體，不會啟用此 MDA。  
@@ -54,7 +55,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="output"></a>輸出  
  此 MDA 啟用沒有任何特殊輸出。不過，呼叫堆疊可以用來決定已啟用 MDA 之 <xref:System.DateTime.ToString%2A> 呼叫的位置。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  

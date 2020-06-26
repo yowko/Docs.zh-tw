@@ -1,5 +1,6 @@
 ---
 title: gcManagedToUnmanaged MDA
+description: 請參閱錯誤 gcmanagedtounmanaged managed 偵錯工具。 此 MDA 可能會因為在轉換到非受控碼期間過早垃圾收集而啟動。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), garbage collection
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - garbage collection, run-time errors
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
-ms.openlocfilehash: f7e6334e20a6e0db1d52307a833de0ecd0d74cc4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 76c621a1f2bb780d38228f2a84d4c77441774770
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217480"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415910"
 ---
 # <a name="gcmanagedtounmanaged-mda"></a>gcManagedToUnmanaged MDA
 每當執行緒從 Managed 轉換到 Unmanaged 程式碼時，`gcManagedToUnmanaged` Managed 偵錯助理 (MDA) 會造成記憶體回收。  
@@ -37,7 +38,7 @@ ms.locfileid: "77217480"
 ## <a name="output"></a>輸出  
  此 MDA 不會產生輸出。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  

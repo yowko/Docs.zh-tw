@@ -1,5 +1,6 @@
 ---
 title: fatalExecutionEngineError MDA
+description: 請參閱 .NET 中的 fatalExecutionEngineError managed 偵錯工具（MDA），這可能是因為非預期的進程終止而啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - corrupted CLR
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-ms.openlocfilehash: e25c9ef6ec43089f1d85479d1afe301232ed1d4f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0806d2eaa1752c88bebd03304fbe5c8094416a48
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217495"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415923"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
 在 Common Language Runtime (CLR) 中偵測到嚴重錯誤時，就會啟動 `fatalExecutionEngineError` Managed 偵錯助理 (MDA)。 處理程序會終止。  
@@ -61,7 +62,7 @@ ms.locfileid: "77217495"
 ## <a name="output"></a>輸出  
  造成嚴重錯誤的 CLR 函式位址、發生錯誤的執行緒識別碼，以及錯誤碼。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  

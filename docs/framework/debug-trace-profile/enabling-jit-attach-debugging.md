@@ -1,16 +1,17 @@
 ---
 title: 啟用 JIT 附加偵錯
+description: 當您遇到錯誤時，請啟用即時（JIT）附加偵錯工具，以將偵錯工具附加至進程。 它可以由特定方法或函式觸發。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-ms.openlocfilehash: 7adf1316a36d781439d364746fa11795a7fe165a
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d1190c51a9cc6b5322ec832e0d35bc01dc855b12
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217527"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416040"
 ---
 # <a name="enabling-jit-attach-debugging"></a>啟用 JIT 附加偵錯
 JIT 附加偵錯是當您將偵錯工具附加至處理序發生錯誤時，所使用的描述語句，或者可為特定的方法或函式所觸發。  
@@ -35,5 +36,5 @@ JIT 附加偵錯是當您將偵錯工具附加至處理序發生錯誤時，所�
   
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯、追蹤和程式碼剖析](index.md)
+- [偵錯工具、追蹤和程式碼剖析](index.md)
 - [使映像偵錯更容易](making-an-image-easier-to-debug.md)

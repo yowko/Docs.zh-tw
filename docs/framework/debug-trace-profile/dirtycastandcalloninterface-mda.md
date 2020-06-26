@@ -1,5 +1,6 @@
 ---
 title: dirtyCastAndCallOnInterface MDA
+description: 檢查 dirtyCastAndCallOnInterface managed 偵錯工具，當早期繫結的 vtable 呼叫在晚期繫結的類別介面上完成時，就會叫用此輔助程式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), early bound calls AutoDispatch
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-ms.openlocfilehash: 6e4f0074958e8a6a8ca322968e9c29e89481c0c8
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2ed5589909915a261a22c48490e469ae52659c8c
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216504"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416066"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface MDA
 在已標記為僅限晚期繫結的類別介面上，嘗試透過 vtable 進行早期繫結呼叫時，會啟動 `dirtyCastAndCallOnInterface` Managed 偵錯助理 (MDA)。  
@@ -29,7 +30,7 @@ ms.locfileid: "77216504"
 ## <a name="resolution"></a>解決方案  
  建議的解決方式是定義明確介面以供 COM 使用，並讓 COM 用戶端透過這個介面 (而不是透過自動產生的類別介面) 進行呼叫。 或者，從 COM 的呼叫也可以轉換成經由 `IDispatch` 的晚期繫結程序呼叫。  
   
- 最後，您可以將類別識別為 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`)，以允許從 COM 發出早期繫結呼叫；不過由於 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> 中所述的版本控制限制，強烈不建議使用 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>。  
+ 最後，您可以將類別識別為 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`)，以允許從 COM 發出早期繫結呼叫；不過由於 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 中所述的版本控制限制，強烈不建議使用 <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual>。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。 它只會報告有關晚期繫結介面上之早期繫結呼叫的資料。  
@@ -37,7 +38,7 @@ ms.locfileid: "77216504"
 ## <a name="output"></a>輸出  
  以早期繫結存取之方法或欄位的名稱。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  

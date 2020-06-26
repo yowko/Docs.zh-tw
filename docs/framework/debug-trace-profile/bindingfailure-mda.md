@@ -1,5 +1,6 @@
 ---
 title: bindingFailure MDA
+description: 閱讀 bindingFailure managed 偵錯工具（MDA），這是當元件無法在 .NET 中載入時啟動的。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding failure
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-ms.openlocfilehash: e3a9a915d25cbe5f052f039055167cf3ae4bf424
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 98c7947c7e5d2a1f0af8c26744d3b292ed8cb4c4
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216922"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415624"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
@@ -68,7 +69,7 @@ MDA 回報無法載入的組件，包含要求的路徑和 (或) 顯示名稱、
 
 如果該資料無法用於 CLR，則顯示名稱或所要求的路徑可能空白。 如果失敗的呼叫是 <xref:System.Reflection.Assembly.Load%2A> 方法，則執行階段可能無法判斷組件的顯示名稱。
 
-## <a name="configuration"></a>組態
+## <a name="configuration"></a>設定
 
 ```xml
 <mdaConfig>
@@ -80,7 +81,7 @@ MDA 回報無法載入的組件，包含要求的路徑和 (或) 顯示名稱、
 
 ## <a name="example"></a>範例
 
-下列程式碼範例示範可啟用此 MDA 的情況：
+下列程式碼範例示範可以啟動此 MDA 的情況：
 
 ```csharp
 using System;

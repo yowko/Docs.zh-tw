@@ -1,5 +1,6 @@
 ---
 title: callbackOnCollectedDelegate MDA
+description: 請參閱 .NET 中的 callbackOnCollectedDelegate managed 偵錯工具（MDA），這是在委派進行垃圾收集後發生回呼時叫用的。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-ms.openlocfilehash: d4ca777fa5b41433eec227762fe315f22ab33cf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32f02a4e65455f11f3bfa9260caae8b4e48f494e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174221"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416027"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 如果委派以函式指標形式從 Managed 程式碼封送處理至 Unmanaged 程式碼，而在對委派進行記憶體回收之後，將回呼放在該函式指標上，`callbackOnCollectedDelegate` Managed 偵錯助理 (MDA) 就會啟動。  
@@ -45,7 +46,7 @@ ms.locfileid: "79174221"
 ## <a name="output"></a>輸出  
  MDA 會報告在其 Unmanaged 函式指標上嘗試回呼之前，所回收之委派的類型名稱。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
  下列範例顯示應用程式組態選項。 它將 MDA 保持運作的 Thunk 數目設為 1,500。 預設的 `listSize` 值為 1,000，最小值為 50，最大值為  2,000。  
   
 ```xml  

@@ -1,5 +1,6 @@
 ---
 title: 使用偵錯工具顯示屬性增強偵錯功能
+description: 開始使用 .NET 中的偵錯工具顯示內容，讓類型開發人員也可以在偵錯工具中顯示類型時，指定其外觀。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-ms.openlocfilehash: ca118bffb045a0e7e3a5084916a0ff8020ebda90
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: f266bf7278f472c51dd355df5ba04a123cbd7df0
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216497"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415962"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用偵錯工具顯示屬性增強偵錯功能
 
-偵錯工具顯示屬性能讓指定並最了解該類型執行階段行為的開發人員，也指定該類型在偵錯工具中顯示的外觀。 此外，提供 `Target` 屬性的偵錯工具顯示屬性，也可供沒有原始程式碼背景的使用者在組件層級使用。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 屬性控制類型或成員在偵錯工具變數視窗中顯示的方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 屬性決定欄位或屬性是否以及如何顯示在偵錯工具變數視窗中。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性會指定類型的替代類型 (或 Proxy)，並且變更在偵錯工具視窗中顯示類型的方式。 當您查看具有 proxy 或替代類型的變數時，proxy 會在 [偵錯工具顯示] 視窗中代表原始類型。 偵錯工具變數視窗只會顯示 proxy 型別的 Public 成員。 私用成員不會顯示。  
+偵錯工具顯示屬性能讓指定並最了解該類型執行階段行為的開發人員，也指定該類型在偵錯工具中顯示的外觀。 此外，提供 `Target` 屬性的偵錯工具顯示屬性，也可供沒有原始程式碼背景的使用者在組件層級使用。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 屬性控制類型或成員在偵錯工具變數視窗中顯示的方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 屬性決定欄位或屬性是否以及如何顯示在偵錯工具變數視窗中。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性會指定類型的替代類型 (或 Proxy)，並且變更在偵錯工具視窗中顯示類型的方式。 當您檢視有 Proxy (或替代類型) 的變數時，Proxy 會替代偵錯工具顯示視窗中的原始類型。 偵錯工具變數視窗只會顯示 proxy 型別的 Public 成員。 私用成員不會顯示。  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>使用 DebuggerDisplayAttribute  
 
@@ -95,7 +96,7 @@ class MyHashtable : Hashtable
 
 ### <a name="description"></a>描述
 
-您可以在 Visual Studio 中查看下列程式碼範例，以查看套用 <xref:System.Diagnostics.DebuggerDisplayAttribute>、<xref:System.Diagnostics.DebuggerBrowsableAttribute>和 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性的結果。
+您可以在 Visual Studio 中查看下列程式碼範例，以查看套用 <xref:System.Diagnostics.DebuggerDisplayAttribute> 、 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 和屬性的結果 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 。
 
 ### <a name="code"></a>程式碼
 

@@ -1,5 +1,6 @@
 ---
 title: dangerousThreadingAPI MDA
+description: 檢查 dangerousThreadingAPI managed 偵錯工具（MDA），這是在目前線程以外的執行緒上呼叫 Thread 時啟動的。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - suspending threads
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-ms.openlocfilehash: d3fe7d11657c2f9edd1fea7ff639f878f993d6b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9069ccb6f106c83db94f88bc464bc0888d28586c
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174767"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416001"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 在目前執行緒以外的執行緒上呼叫 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 方法時，會啟用 `dangerousThreadingAPI` Managed 偵錯助理 (MDA)。  
@@ -39,7 +40,7 @@ ms.locfileid: "79174767"
 ## <a name="output"></a>輸出  
  MDA 識別可啟用它的危險執行緒處理方法。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
   
 ```xml  
 <mdaConfig>  
