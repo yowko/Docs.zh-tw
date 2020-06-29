@@ -1,6 +1,6 @@
 - name: 什麼是中斷性變更？
   href: index.md
-- name: 中斷性變更的類別
+- name: 相容性
   href: categories.md
 - name: 頁面選取器
   href: breaking-changes.md
@@ -25,7 +25,7 @@
           href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
         - name: 永遠擲回的 API
           href: unsupported-apis.md
-- name: 依區域
+- name: 依技術範圍
   expanded: true
   items:
     - name: ASP.NET Core
