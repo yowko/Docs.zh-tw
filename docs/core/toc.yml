@@ -8,22 +8,12 @@ items:
   - name: 安裝
     items:
       - name: 總覽
-        href: install/index.md
-      - name: 安裝 SDK
-        href: install/sdk.md
-      - name: 安裝執行階段
-        href: install/runtime.md
-      - name: 支援的 OS 和相依性
-        href: install/dependencies.md
-      - name: 移除過時的執行階段及 SDK
-        href: install/remove-runtime-sdk-versions.md
-      - name: 管理 .NET 範本
-        href: install/templates.md
-      - name: macOS Notarization 問題
-        href: install/macos-notarization-issues.md
-      - name: 如何檢查 .NET Core 版本
-        href: install/how-to-detect-installed-versions.md
-      - name: Linux
+        href: install/index.yml
+      - name: 安裝在 Windows 上
+        href: install/windows.md
+      - name: 在 macOS 上安裝
+        href: install/macos.md
+      - name: 安裝在 Linux 上
         items:
           - name: 總覽
             href: install/linux.md
@@ -43,6 +33,14 @@ items:
             href: install/linux-rhel.md
           - name: SLES
             href: install/linux-sles.md
+      - name: 移除過時的執行階段及 SDK
+        href: install/remove-runtime-sdk-versions.md
+      - name: 管理 .NET 範本
+        href: install/templates.md
+      - name: macOS Notarization 問題
+        href: install/macos-notarization-issues.md
+      - name: 如何檢查 .NET Core 版本
+        href: install/how-to-detect-installed-versions.md
       - name: 安裝當地語系化的 IntelliSense
         href: install/localized-intellisense.md
   - name: 開始使用
