@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 5844dbc2c3c89baeb39b69f16846f92ac10e97f1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 349854b0dec5a585990b9c5e7c0b575df5bf70f3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615630"
 ---
-### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a><span data-ttu-id="3cd9f-101">如果使用複合索引鍵，而且一個索引鍵為空白，XSD 結構描述驗證現在會正確地偵測唯一條件約束的違規</span><span class="sxs-lookup"><span data-stu-id="3cd9f-101">XSD Schema validation now correctly detects violations of unique constraints if compound keys are used and one key is empty</span></span>
+### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a><span data-ttu-id="3cdfa-101">如果使用複合索引鍵，而且一個索引鍵為空白，XSD 結構描述驗證現在會正確地偵測唯一條件約束的違規</span><span class="sxs-lookup"><span data-stu-id="3cdfa-101">XSD Schema validation now correctly detects violations of unique constraints if compound keys are used and one key is empty</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="3cd9f-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="3cd9f-102">Details</span></span>|<span data-ttu-id="3cd9f-103">.NET Framework 4.6 之前的版本有錯誤 (bug)，會導致 XSD 驗證在其中一個索引鍵為空白時，無法偵測複合索引鍵上的唯一條件約束。</span><span class="sxs-lookup"><span data-stu-id="3cd9f-103">Versions of the .NET Framework prior to 4.6 had a bug that caused XSD validation to not detect unique constraints on compound keys if one of the keys was empty.</span></span> <span data-ttu-id="3cd9f-104">在 .NET Framework 4.6 中，已修正此問題。</span><span class="sxs-lookup"><span data-stu-id="3cd9f-104">In the .NET Framework 4.6, this issue is corrected.</span></span> <span data-ttu-id="3cd9f-105">這會導致更正確的驗證，但也可能會導致之前可驗證的某些 XML 無法驗證。</span><span class="sxs-lookup"><span data-stu-id="3cd9f-105">This will result in more correct validation, but it may also result in some XML not validating which previously would have.</span></span>|
-|<span data-ttu-id="3cd9f-106">建議</span><span class="sxs-lookup"><span data-stu-id="3cd9f-106">Suggestion</span></span>|<span data-ttu-id="3cd9f-107">如果需要較鬆散的 .NET Framework 4.0 驗證，正在驗證的應用程式可以將目標設為 .NET Framework 4.5 版 (或舊版)。</span><span class="sxs-lookup"><span data-stu-id="3cd9f-107">If looser .NET Framework 4.0 validation is needed, the validating application can target version 4.5 (or earlier) of the .NET Framework.</span></span> <span data-ttu-id="3cd9f-108">不過，重定目標為 .NET Framework 4.6 時，應完成程式碼檢閱，以確保重複的複合索引鍵 (如本問題說明中所述) 不會導致無效。</span><span class="sxs-lookup"><span data-stu-id="3cd9f-108">When retargeting to .NET Framework 4.6, however, code review should be done to be sure that duplicate compound keys (as described in this issue's description) are not expected to validate.</span></span>|
-|<span data-ttu-id="3cd9f-109">影響範圍</span><span class="sxs-lookup"><span data-stu-id="3cd9f-109">Scope</span></span>|<span data-ttu-id="3cd9f-110">Edge</span><span class="sxs-lookup"><span data-stu-id="3cd9f-110">Edge</span></span>|
-|<span data-ttu-id="3cd9f-111">版本</span><span class="sxs-lookup"><span data-stu-id="3cd9f-111">Version</span></span>|<span data-ttu-id="3cd9f-112">4.6</span><span class="sxs-lookup"><span data-stu-id="3cd9f-112">4.6</span></span>|
-|<span data-ttu-id="3cd9f-113">類型</span><span class="sxs-lookup"><span data-stu-id="3cd9f-113">Type</span></span>|<span data-ttu-id="3cd9f-114">正在重定目標</span><span class="sxs-lookup"><span data-stu-id="3cd9f-114">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="3cdfa-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="3cdfa-102">Details</span></span>
+
+<span data-ttu-id="3cdfa-103">.NET Framework 4.6 之前的版本有錯誤 (bug)，會導致 XSD 驗證在其中一個索引鍵為空白時，無法偵測複合索引鍵上的唯一條件約束。</span><span class="sxs-lookup"><span data-stu-id="3cdfa-103">Versions of the .NET Framework prior to 4.6 had a bug that caused XSD validation to not detect unique constraints on compound keys if one of the keys was empty.</span></span> <span data-ttu-id="3cdfa-104">在 .NET Framework 4.6 中，已修正此問題。</span><span class="sxs-lookup"><span data-stu-id="3cdfa-104">In the .NET Framework 4.6, this issue is corrected.</span></span> <span data-ttu-id="3cdfa-105">這會導致更正確的驗證，但也可能會導致之前可驗證的某些 XML 無法驗證。</span><span class="sxs-lookup"><span data-stu-id="3cdfa-105">This will result in more correct validation, but it may also result in some XML not validating which previously would have.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="3cdfa-106">建議</span><span class="sxs-lookup"><span data-stu-id="3cdfa-106">Suggestion</span></span>
+
+<span data-ttu-id="3cdfa-107">如果需要較鬆散的 .NET Framework 4.0 驗證，正在驗證的應用程式可以將目標設為 .NET Framework 4.5 版 (或舊版)。</span><span class="sxs-lookup"><span data-stu-id="3cdfa-107">If looser .NET Framework 4.0 validation is needed, the validating application can target version 4.5 (or earlier) of the .NET Framework.</span></span> <span data-ttu-id="3cdfa-108">不過，重定目標為 .NET Framework 4.6 時，應完成程式碼檢閱，以確保重複的複合索引鍵 (如本問題說明中所述) 不會導致無效。</span><span class="sxs-lookup"><span data-stu-id="3cdfa-108">When retargeting to .NET Framework 4.6, however, code review should be done to be sure that duplicate compound keys (as described in this issue's description) are not expected to validate.</span></span>
+
+| <span data-ttu-id="3cdfa-109">名稱</span><span class="sxs-lookup"><span data-stu-id="3cdfa-109">Name</span></span>    | <span data-ttu-id="3cdfa-110">值</span><span class="sxs-lookup"><span data-stu-id="3cdfa-110">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="3cdfa-111">影響範圍</span><span class="sxs-lookup"><span data-stu-id="3cdfa-111">Scope</span></span>   | <span data-ttu-id="3cdfa-112">Edge</span><span class="sxs-lookup"><span data-stu-id="3cdfa-112">Edge</span></span>        |
+| <span data-ttu-id="3cdfa-113">版本</span><span class="sxs-lookup"><span data-stu-id="3cdfa-113">Version</span></span> | <span data-ttu-id="3cdfa-114">4.6</span><span class="sxs-lookup"><span data-stu-id="3cdfa-114">4.6</span></span>         |
+| <span data-ttu-id="3cdfa-115">類型</span><span class="sxs-lookup"><span data-stu-id="3cdfa-115">Type</span></span>    | <span data-ttu-id="3cdfa-116">正在重定目標</span><span class="sxs-lookup"><span data-stu-id="3cdfa-116">Retargeting</span></span> |

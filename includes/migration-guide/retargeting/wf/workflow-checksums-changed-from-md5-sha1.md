@@ -1,17 +1,37 @@
 ---
-ms.openlocfilehash: 0b42e320ba439a4cfc196471fc6dd4b3c15cd9d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72d48d1daa85b6891c122f2fcc5279642253b926
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614388"
 ---
-### <a name="workflow-checksums-changed-from-md5-to-sha1"></a><span data-ttu-id="be058-101">工作流程總和檢查碼從 MD5 變更為 SHA1</span><span class="sxs-lookup"><span data-stu-id="be058-101">Workflow checksums changed from MD5 to SHA1</span></span>
+### <a name="workflow-checksums-changed-from-md5-to-sha1"></a><span data-ttu-id="4ff93-101">工作流程總和檢查碼從 MD5 變更為 SHA1</span><span class="sxs-lookup"><span data-stu-id="4ff93-101">Workflow checksums changed from MD5 to SHA1</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="be058-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="be058-102">Details</span></span>|<span data-ttu-id="be058-103">為了支援使用 Visual Studio 進行偵錯，工作流程執行階段會使用雜湊演算法為工作流程執行個體產生總和檢查碼。</span><span class="sxs-lookup"><span data-stu-id="be058-103">To support debugging with Visual Studio, the Workflow runtime generates a checksum for a workflow instance using a hashing algorithm.</span></span> <span data-ttu-id="be058-104">在 .NET Framework 4.6.2 和更早版本中，工作流程總和檢查碼雜湊使用 MD5 演算法，它會在啟用 FIPS 的系統上造成問題。</span><span class="sxs-lookup"><span data-stu-id="be058-104">In the .NET Framework 4.6.2 and earlier versions, workflow checksum hashing used the MD5 algorithm, which caused issues on FIPS-enabled systems.</span></span> <span data-ttu-id="be058-105">從 .NET Framework 4.7 開始，演算法是 SHA1。</span><span class="sxs-lookup"><span data-stu-id="be058-105">Starting with the .NET Framework 4.7, the algorithm is SHA1.</span></span> <span data-ttu-id="be058-106">如果您的程式碼已保存這些總和檢查碼，就會不相容。</span><span class="sxs-lookup"><span data-stu-id="be058-106">If your code has persisted these checksums, they will be incompatible.</span></span>|
-|<span data-ttu-id="be058-107">建議</span><span class="sxs-lookup"><span data-stu-id="be058-107">Suggestion</span></span>|<span data-ttu-id="be058-108">如果您的程式碼因為總和檢查碼失敗而無法載入工作流程執行個體，請嘗試將 <code>AppContext</code> 參數 &quot;Switch.System.Activities.UseMD5ForWFDebugger&quot; 設為 true。在程式碼中：</span><span class="sxs-lookup"><span data-stu-id="be058-108">If your code is unable to load workflow instances due to a checksum failure, try setting the <code>AppContext</code> switch &quot;Switch.System.Activities.UseMD5ForWFDebugger&quot; to true.In code:</span></span><pre><code class="lang-csharp">System.AppContext.SetSwitch(&quot;Switch.System.Activities.UseMD5ForWFDebugger&quot;, true);&#13;&#10;</code></pre><span data-ttu-id="be058-109">或者，在組態中：</span><span class="sxs-lookup"><span data-stu-id="be058-109">Or in configuration:</span></span><pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Activities.UseMD5ForWFDebugger=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="be058-110">影響範圍</span><span class="sxs-lookup"><span data-stu-id="be058-110">Scope</span></span>|<span data-ttu-id="be058-111">Minor</span><span class="sxs-lookup"><span data-stu-id="be058-111">Minor</span></span>|
-|<span data-ttu-id="be058-112">版本</span><span class="sxs-lookup"><span data-stu-id="be058-112">Version</span></span>|<span data-ttu-id="be058-113">4.7</span><span class="sxs-lookup"><span data-stu-id="be058-113">4.7</span></span>|
-|<span data-ttu-id="be058-114">類型</span><span class="sxs-lookup"><span data-stu-id="be058-114">Type</span></span>|<span data-ttu-id="be058-115">正在重定目標</span><span class="sxs-lookup"><span data-stu-id="be058-115">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="4ff93-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="4ff93-102">Details</span></span>
+
+<span data-ttu-id="4ff93-103">為了支援使用 Visual Studio 進行偵錯，工作流程執行階段會使用雜湊演算法為工作流程執行個體產生總和檢查碼。</span><span class="sxs-lookup"><span data-stu-id="4ff93-103">To support debugging with Visual Studio, the Workflow runtime generates a checksum for a workflow instance using a hashing algorithm.</span></span> <span data-ttu-id="4ff93-104">在 .NET Framework 4.6.2 和更早版本中，工作流程總和檢查碼雜湊使用 MD5 演算法，它會在啟用 FIPS 的系統上造成問題。</span><span class="sxs-lookup"><span data-stu-id="4ff93-104">In the .NET Framework 4.6.2 and earlier versions, workflow checksum hashing used the MD5 algorithm, which caused issues on FIPS-enabled systems.</span></span> <span data-ttu-id="4ff93-105">從 .NET Framework 4.7 開始，演算法是 SHA1。</span><span class="sxs-lookup"><span data-stu-id="4ff93-105">Starting with the .NET Framework 4.7, the algorithm is SHA1.</span></span> <span data-ttu-id="4ff93-106">如果您的程式碼已保存這些總和檢查碼，就會不相容。</span><span class="sxs-lookup"><span data-stu-id="4ff93-106">If your code has persisted these checksums, they will be incompatible.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="4ff93-107">建議</span><span class="sxs-lookup"><span data-stu-id="4ff93-107">Suggestion</span></span>
+
+<span data-ttu-id="4ff93-108">如果您的程式碼因為總和檢查碼失敗而無法載入工作流程執行個體，請嘗試將 `AppContext` 參數 &quot;Switch.System.Activities.UseMD5ForWFDebugger&quot; 設為 true。在程式碼中：</span><span class="sxs-lookup"><span data-stu-id="4ff93-108">If your code is unable to load workflow instances due to a checksum failure, try setting the `AppContext` switch &quot;Switch.System.Activities.UseMD5ForWFDebugger&quot; to true.In code:</span></span>
+
+```csharp
+System.AppContext.SetSwitch("Switch.System.Activities.UseMD5ForWFDebugger", true);
+```
+
+<span data-ttu-id="4ff93-109">或者，在組態中：</span><span class="sxs-lookup"><span data-stu-id="4ff93-109">Or in configuration:</span></span>
+
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.Activities.UseMD5ForWFDebugger=true" />
+  </runtime>
+</configuration>
+```
+
+| <span data-ttu-id="4ff93-110">名稱</span><span class="sxs-lookup"><span data-stu-id="4ff93-110">Name</span></span>    | <span data-ttu-id="4ff93-111">值</span><span class="sxs-lookup"><span data-stu-id="4ff93-111">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="4ff93-112">影響範圍</span><span class="sxs-lookup"><span data-stu-id="4ff93-112">Scope</span></span>   | <span data-ttu-id="4ff93-113">Minor</span><span class="sxs-lookup"><span data-stu-id="4ff93-113">Minor</span></span>       |
+| <span data-ttu-id="4ff93-114">版本</span><span class="sxs-lookup"><span data-stu-id="4ff93-114">Version</span></span> | <span data-ttu-id="4ff93-115">4.7</span><span class="sxs-lookup"><span data-stu-id="4ff93-115">4.7</span></span>         |
+| <span data-ttu-id="4ff93-116">類型</span><span class="sxs-lookup"><span data-stu-id="4ff93-116">Type</span></span>    | <span data-ttu-id="4ff93-117">正在重定目標</span><span class="sxs-lookup"><span data-stu-id="4ff93-117">Retargeting</span></span> |
