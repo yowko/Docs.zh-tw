@@ -1,5 +1,6 @@
 ---
 title: COM Interop 範例：COM 用戶端與 .NET 伺服器
+description: 閱讀程式碼範例，其中會顯示 COM 用戶端與執行抵押計算之 .NET 伺服器的互通性。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-ms.openlocfilehash: 5a72f3f23f4601b8b0a2ee8c6f5df66ae0bc66a3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a9c17cda6a6d129327b296e5d7d851902f78d35
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620881"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="59137-102">COM Interop 範例：COM 用戶端與 .NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="59137-102">COM Interop Sample: COM Client and .NET Server</span></span>
-<span data-ttu-id="59137-103">此範例示範執行貸款計算之 [COM 用戶端](#cpconcominteropsamplecomclientnetserveranchor1)與 [.NET 伺服器](#cpconcominteropsamplecomclientnetserveranchor2)的交互操作。</span><span class="sxs-lookup"><span data-stu-id="59137-103">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="59137-104">在此範例中，用戶端會建立和呼叫 Managed `Loan` 類別的執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="59137-104">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="59137-105">這個範例的程式碼範例會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="59137-105">Code examples from this sample appear throughout this section.</span></span>  
+# <a name="com-interop-sample-com-client-and-net-server"></a><span data-ttu-id="6bf74-103">COM Interop 範例：COM 用戶端與 .NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="6bf74-103">COM Interop Sample: COM Client and .NET Server</span></span>
+<span data-ttu-id="6bf74-104">此範例示範執行貸款計算之 [COM 用戶端](#cpconcominteropsamplecomclientnetserveranchor1)與 [.NET 伺服器](#cpconcominteropsamplecomclientnetserveranchor2)的交互操作。</span><span class="sxs-lookup"><span data-stu-id="6bf74-104">This sample demonstrates the interoperation of a [COM Client](#cpconcominteropsamplecomclientnetserveranchor1) and a [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) that performs mortgage calculations.</span></span> <span data-ttu-id="6bf74-105">在此範例中，用戶端會建立和呼叫 Managed `Loan` 類別的執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="6bf74-105">In this example, the client creates and calls an instance of the managed `Loan` class, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="6bf74-106">這個範例的程式碼範例會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="6bf74-106">Code examples from this sample appear throughout this section.</span></span>  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>
-## <a name="com-client"></a><span data-ttu-id="59137-106">COM 用戶端</span><span class="sxs-lookup"><span data-stu-id="59137-106">COM Client</span></span>  
+## <a name="com-client"></a><span data-ttu-id="6bf74-107">COM 用戶端</span><span class="sxs-lookup"><span data-stu-id="6bf74-107">COM Client</span></span>  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -86,7 +87,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>
-## <a name="net-server"></a><span data-ttu-id="59137-107">.NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="59137-107">.NET Server</span></span>  
+## <a name="net-server"></a><span data-ttu-id="6bf74-108">.NET 伺服器</span><span class="sxs-lookup"><span data-stu-id="6bf74-108">.NET Server</span></span>  
   
 ```vb  
 Imports System  
@@ -387,6 +388,6 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="59137-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="59137-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6bf74-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6bf74-109">See also</span></span>
 
-- [<span data-ttu-id="59137-109">將 .NET Framework 元件公開給 COM</span><span class="sxs-lookup"><span data-stu-id="59137-109">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)
+- [<span data-ttu-id="6bf74-110">將 .NET Framework 元件公開給 COM</span><span class="sxs-lookup"><span data-stu-id="6bf74-110">Exposing .NET Framework Components to COM</span></span>](exposing-dotnet-components-to-com.md)

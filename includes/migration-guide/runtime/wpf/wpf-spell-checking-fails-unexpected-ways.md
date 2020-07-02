@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 09e3f0e168e0dcbe79d8ee7216f2671c67bfb87e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4f0095bc9fde98087dce528c8154d9c9ac6ddb7
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621780"
 ---
-### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a><span data-ttu-id="afc2b-101">WPF 拼字檢查以非預期的方式失敗</span><span class="sxs-lookup"><span data-stu-id="afc2b-101">WPF Spell Checking fails in unexpected ways</span></span>
+### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a><span data-ttu-id="c425a-101">WPF 拼字檢查以非預期的方式失敗</span><span class="sxs-lookup"><span data-stu-id="c425a-101">WPF Spell Checking fails in unexpected ways</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="afc2b-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="afc2b-102">Details</span></span>|<span data-ttu-id="afc2b-103">這包括一些 WPF 拼字檢查工具問題：</span><span class="sxs-lookup"><span data-stu-id="afc2b-103">This includes a number of WPF Spell Checker issues:</span></span><ul><li><span data-ttu-id="afc2b-104">WPF 拼字檢查工具有時會擲回 <xref:System.Runtime.InteropServices.COMException?displayProperty=name></span><span class="sxs-lookup"><span data-stu-id="afc2b-104">WPF Spell Checker sometimes throws <xref:System.Runtime.InteropServices.COMException?displayProperty=name></span></span></li><li><span data-ttu-id="afc2b-105">使用 [以不同的使用者身分執行] 來啟動應用程式時，WPF 拼字檢查工具會失敗並顯示 <xref:System.UnauthorizedAccessException></span><span class="sxs-lookup"><span data-stu-id="afc2b-105">WPF Spell Checker fails with <xref:System.UnauthorizedAccessException> when applications are launched using 'run as different user'</span></span></li><li><span data-ttu-id="afc2b-106">WPF 拼字檢查工具會誤將複合字識別為拼字錯誤，例如德文中的 'Hausnummer'。</span><span class="sxs-lookup"><span data-stu-id="afc2b-106">WPF Spell Checker incorrectly identifies spelling errors in compound words like 'Hausnummer' in German.</span></span></li></ul>|
-|<span data-ttu-id="afc2b-107">建議</span><span class="sxs-lookup"><span data-stu-id="afc2b-107">Suggestion</span></span>|<span data-ttu-id="afc2b-108">問題 #1 - 此問題已在 .NET Framework 4.6.2 中修正。問題 #2 - 使用 [以不同的使用者身分執行] 來啟動應用程式時，不再支援 WPF 拼字檢查工具。</span><span class="sxs-lookup"><span data-stu-id="afc2b-108">Issue #1 - This has been fixed in .NET Framework 4.6.2 Issue #2 - WPF Spell Checker is no longer supported when applications are launched using 'run as different user'.</span></span> <span data-ttu-id="afc2b-109">從 .NET Framework 4.6.2 開始，以這種方式啟動的應用程式將不會再意外損毀 - 而是以無訊息的方式停用拼字檢查工具。</span><span class="sxs-lookup"><span data-stu-id="afc2b-109">Starting .NET Framework 4.6.2, applications launched in this manner will no longer crash unexpectedly - instead the Spell Checker will be silently disabled.</span></span> <span data-ttu-id="afc2b-110">問題 #3 - 此問題已在 .NET Framework 4.6.2 中修正。</span><span class="sxs-lookup"><span data-stu-id="afc2b-110">Issue #3 - This has been fixed in .NET Framework 4.6.2.</span></span>|
-|<span data-ttu-id="afc2b-111">影響範圍</span><span class="sxs-lookup"><span data-stu-id="afc2b-111">Scope</span></span>|<span data-ttu-id="afc2b-112">Edge</span><span class="sxs-lookup"><span data-stu-id="afc2b-112">Edge</span></span>|
-|<span data-ttu-id="afc2b-113">版本</span><span class="sxs-lookup"><span data-stu-id="afc2b-113">Version</span></span>|<span data-ttu-id="afc2b-114">4.6.1</span><span class="sxs-lookup"><span data-stu-id="afc2b-114">4.6.1</span></span>|
-|<span data-ttu-id="afc2b-115">類型</span><span class="sxs-lookup"><span data-stu-id="afc2b-115">Type</span></span>|<span data-ttu-id="afc2b-116">執行階段</span><span class="sxs-lookup"><span data-stu-id="afc2b-116">Runtime</span></span>|
+#### <a name="details"></a><span data-ttu-id="c425a-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="c425a-102">Details</span></span>
+
+<span data-ttu-id="c425a-103">這包括一些 WPF 拼字檢查工具問題：</span><span class="sxs-lookup"><span data-stu-id="c425a-103">This includes a number of WPF Spell Checker issues:</span></span><ul><li><span data-ttu-id="c425a-104">WPF 拼字檢查工具有時會擲回 <xref:System.Runtime.InteropServices.COMException?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="c425a-104">WPF Spell Checker sometimes throws <xref:System.Runtime.InteropServices.COMException?displayProperty=fullName></span></span></li><li><span data-ttu-id="c425a-105">使用 [以不同的使用者身分執行] 來啟動應用程式時，WPF 拼字檢查工具會失敗並顯示 <xref:System.UnauthorizedAccessException></span><span class="sxs-lookup"><span data-stu-id="c425a-105">WPF Spell Checker fails with <xref:System.UnauthorizedAccessException> when applications are launched using 'run as different user'</span></span></li><li><span data-ttu-id="c425a-106">WPF 拼字檢查工具會誤將複合字識別為拼字錯誤，例如德文中的 'Hausnummer'。</span><span class="sxs-lookup"><span data-stu-id="c425a-106">WPF Spell Checker incorrectly identifies spelling errors in compound words like 'Hausnummer' in German.</span></span></li></ul>
+
+#### <a name="suggestion"></a><span data-ttu-id="c425a-107">建議</span><span class="sxs-lookup"><span data-stu-id="c425a-107">Suggestion</span></span>
+
+<span data-ttu-id="c425a-108">問題 #1 - 此問題已在 .NET Framework 4.6.2 中修正。問題 #2 - 使用 [以不同的使用者身分執行] 來啟動應用程式時，不再支援 WPF 拼字檢查工具。</span><span class="sxs-lookup"><span data-stu-id="c425a-108">Issue #1 - This has been fixed in .NET Framework 4.6.2 Issue #2 - WPF Spell Checker is no longer supported when applications are launched using 'run as different user'.</span></span> <span data-ttu-id="c425a-109">從 .NET Framework 4.6.2 開始，以這種方式啟動的應用程式將不會再意外損毀 - 而是以無訊息的方式停用拼字檢查工具。</span><span class="sxs-lookup"><span data-stu-id="c425a-109">Starting .NET Framework 4.6.2, applications launched in this manner will no longer crash unexpectedly - instead the Spell Checker will be silently disabled.</span></span> <span data-ttu-id="c425a-110">問題 #3 - 此問題已在 .NET Framework 4.6.2 中修正。</span><span class="sxs-lookup"><span data-stu-id="c425a-110">Issue #3 - This has been fixed in .NET Framework 4.6.2.</span></span>
+
+| <span data-ttu-id="c425a-111">名稱</span><span class="sxs-lookup"><span data-stu-id="c425a-111">Name</span></span>    | <span data-ttu-id="c425a-112">值</span><span class="sxs-lookup"><span data-stu-id="c425a-112">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="c425a-113">影響範圍</span><span class="sxs-lookup"><span data-stu-id="c425a-113">Scope</span></span>   |<span data-ttu-id="c425a-114">Edge</span><span class="sxs-lookup"><span data-stu-id="c425a-114">Edge</span></span>|
+|<span data-ttu-id="c425a-115">版本</span><span class="sxs-lookup"><span data-stu-id="c425a-115">Version</span></span>|<span data-ttu-id="c425a-116">4.6.1</span><span class="sxs-lookup"><span data-stu-id="c425a-116">4.6.1</span></span>|
+|<span data-ttu-id="c425a-117">類型</span><span class="sxs-lookup"><span data-stu-id="c425a-117">Type</span></span>|<span data-ttu-id="c425a-118">執行階段</span><span class="sxs-lookup"><span data-stu-id="c425a-118">Runtime</span></span>|

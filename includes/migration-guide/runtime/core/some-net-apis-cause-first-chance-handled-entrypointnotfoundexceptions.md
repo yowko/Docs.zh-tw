@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: b23f06ec5b27fbd7976a4b62ba6105c607eaee39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ed526095459a48aa37b585dfed79cc12b9fb9e56
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622045"
 ---
-### <a name="some-net-apis-cause-first-chance-handled-entrypointnotfoundexceptions"></a><span data-ttu-id="7a9bb-101">某些 .NET API 會造成第一個可能發生 (已處理) 的 EntryPointNotFoundException</span><span class="sxs-lookup"><span data-stu-id="7a9bb-101">Some .NET APIs cause first chance (handled) EntryPointNotFoundExceptions</span></span>
+### <a name="some-net-apis-cause-first-chance-handled-entrypointnotfoundexceptions"></a><span data-ttu-id="68459-101">某些 .NET API 會造成第一個可能發生 (已處理) 的 EntryPointNotFoundException</span><span class="sxs-lookup"><span data-stu-id="68459-101">Some .NET APIs cause first chance (handled) EntryPointNotFoundExceptions</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="7a9bb-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="7a9bb-102">Details</span></span>|<span data-ttu-id="7a9bb-103">在 .NET Framework 4.5 中，少數 .NET 方法已開始擲回第一個可能發生的 <xref:System.EntryPointNotFoundException?displayProperty=name>。</span><span class="sxs-lookup"><span data-stu-id="7a9bb-103">In the .NET Framework 4.5, a small number of .NET methods began throwing first chance <xref:System.EntryPointNotFoundException?displayProperty=name>s.</span></span> <span data-ttu-id="7a9bb-104">這些例外狀況在 .NET Framework 中已處理，但可能會中斷未預期第一個可能發生例外狀況的測試自動化。</span><span class="sxs-lookup"><span data-stu-id="7a9bb-104">These exceptions were handled within the .NET Framework, but could break test automation that did not expect the first chance exceptions.</span></span> <span data-ttu-id="7a9bb-105">這些相同的 API 會在啟用 HighVersionLie 時中斷一些 ApiVerifier 案例。</span><span class="sxs-lookup"><span data-stu-id="7a9bb-105">These same APIs break some ApiVerifier scenarios when HighVersionLie is enabled.</span></span>|
-|<span data-ttu-id="7a9bb-106">建議</span><span class="sxs-lookup"><span data-stu-id="7a9bb-106">Suggestion</span></span>|<span data-ttu-id="7a9bb-107">您可以升級至 .NET Framework 4.5.1 來避免此錯誤 (bug)。</span><span class="sxs-lookup"><span data-stu-id="7a9bb-107">This bug can be avoided by upgrading to .NET Framework 4.5.1.</span></span> <span data-ttu-id="7a9bb-108">或者，您也可以更新測試自動化，不要在發生第一個可能的 <xref:System.EntryPointNotFoundException?displayProperty=name> 時中斷。</span><span class="sxs-lookup"><span data-stu-id="7a9bb-108">Alternatively, test automation can be updated to not break on first-chance <xref:System.EntryPointNotFoundException?displayProperty=name>s.</span></span>|
-|<span data-ttu-id="7a9bb-109">範圍</span><span class="sxs-lookup"><span data-stu-id="7a9bb-109">Scope</span></span>|<span data-ttu-id="7a9bb-110">Edge</span><span class="sxs-lookup"><span data-stu-id="7a9bb-110">Edge</span></span>|
-|<span data-ttu-id="7a9bb-111">版本</span><span class="sxs-lookup"><span data-stu-id="7a9bb-111">Version</span></span>|<span data-ttu-id="7a9bb-112">4.5</span><span class="sxs-lookup"><span data-stu-id="7a9bb-112">4.5</span></span>|
-|<span data-ttu-id="7a9bb-113">類型</span><span class="sxs-lookup"><span data-stu-id="7a9bb-113">Type</span></span>|<span data-ttu-id="7a9bb-114">執行階段</span><span class="sxs-lookup"><span data-stu-id="7a9bb-114">Runtime</span></span>|
-|<span data-ttu-id="7a9bb-115">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="7a9bb-115">Affected APIs</span></span>|<ul><li><xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String,System.Object[])?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.%23ctor(System.Type)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="68459-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="68459-102">Details</span></span>
+
+<span data-ttu-id="68459-103">在 .NET Framework 4.5 中，少數 .NET 方法已開始擲回第一個可能發生的 <xref:System.EntryPointNotFoundException?displayProperty=fullName>。</span><span class="sxs-lookup"><span data-stu-id="68459-103">In the .NET Framework 4.5, a small number of .NET methods began throwing first chance <xref:System.EntryPointNotFoundException?displayProperty=fullName>s.</span></span> <span data-ttu-id="68459-104">這些例外狀況在 .NET Framework 中已處理，但可能會中斷未預期第一個可能發生例外狀況的測試自動化。</span><span class="sxs-lookup"><span data-stu-id="68459-104">These exceptions were handled within the .NET Framework, but could break test automation that did not expect the first chance exceptions.</span></span> <span data-ttu-id="68459-105">這些相同的 API 會在啟用 HighVersionLie 時中斷一些 ApiVerifier 案例。</span><span class="sxs-lookup"><span data-stu-id="68459-105">These same APIs break some ApiVerifier scenarios when HighVersionLie is enabled.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="68459-106">建議</span><span class="sxs-lookup"><span data-stu-id="68459-106">Suggestion</span></span>
+
+<span data-ttu-id="68459-107">您可以升級至 .NET Framework 4.5.1 來避免此錯誤 (bug)。</span><span class="sxs-lookup"><span data-stu-id="68459-107">This bug can be avoided by upgrading to .NET Framework 4.5.1.</span></span> <span data-ttu-id="68459-108">或者，您也可以更新測試自動化，不要在發生第一個可能的 <xref:System.EntryPointNotFoundException?displayProperty=fullName> 時中斷。</span><span class="sxs-lookup"><span data-stu-id="68459-108">Alternatively, test automation can be updated to not break on first-chance <xref:System.EntryPointNotFoundException?displayProperty=fullName>s.</span></span>
+
+| <span data-ttu-id="68459-109">名稱</span><span class="sxs-lookup"><span data-stu-id="68459-109">Name</span></span>    | <span data-ttu-id="68459-110">值</span><span class="sxs-lookup"><span data-stu-id="68459-110">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="68459-111">影響範圍</span><span class="sxs-lookup"><span data-stu-id="68459-111">Scope</span></span>   |<span data-ttu-id="68459-112">Edge</span><span class="sxs-lookup"><span data-stu-id="68459-112">Edge</span></span>|
+|<span data-ttu-id="68459-113">版本</span><span class="sxs-lookup"><span data-stu-id="68459-113">Version</span></span>|<span data-ttu-id="68459-114">4.5</span><span class="sxs-lookup"><span data-stu-id="68459-114">4.5</span></span>|
+|<span data-ttu-id="68459-115">類型</span><span class="sxs-lookup"><span data-stu-id="68459-115">Type</span></span>|<span data-ttu-id="68459-116">執行階段</span><span class="sxs-lookup"><span data-stu-id="68459-116">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="68459-117">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="68459-117">Affected APIs</span></span>
+
+-<xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String,System.Object[])?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.%23ctor(System.Type)></li></ul>|
