@@ -1,5 +1,6 @@
 ---
 title: 做為回呼方法，委派封送處理
+description: 瞭解如何將委派封送處理為回呼方法。 請參閱如何將委派傳遞至預期函式指標的非受控函式的範例。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data marshaling, Callback sample
 - marshaling, Callback sample
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
-ms.openlocfilehash: c71c89e5797745144a2baed2d4846e3d9f9f26be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bf9ef3b9d48c0869dcc96820c3a2fb6fb608479e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618944"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>做為回呼方法，委派封送處理
 此範例示範如何將委派傳遞至需要函式指標的 Unmanaged 函式。 委派是可保留方法參考的類別，並且相當於型別安全函式指標或回呼函式。

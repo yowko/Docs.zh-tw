@@ -1,21 +1,23 @@
 ---
 title: 在 .NET 中使用廣播變數以進行 Apache Spark
 description: 瞭解如何在 .NET 中針對 Apache Spark 應用程式使用廣播變數。
-ms.date: 06/11/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 391e32cda14a9b3186ac96800351ddcb39a3d359
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: d86b160855cc4d3f3a6502f5606d4766b7c06aa0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617852"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>在 .NET 中使用廣播變數以進行 Apache Spark
 
 在本文中，您將瞭解如何在 .NET 中使用廣播變數以進行 Apache Spark。 [Apache Spark 中的廣播變數](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables)是跨多個執行程式共用變數的機制，這些都是唯讀的。 廣播變數可讓您保留在每部電腦上快取的唯讀變數，而不是使用工作傳送它的複本。 您可以使用廣播變數，以有效率的方式為每個節點提供大型輸入資料集的複本。
 
 由於資料只會傳送一次，因此，相較于每個工作隨附于執行程式的本機變數，廣播變數的效能優勢。 請參閱[官方廣播變數檔](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables)，以更深入瞭解廣播變數及其使用原因。
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="create-broadcast-variables"></a>建立廣播變數
 

@@ -1,5 +1,6 @@
 ---
 title: 封裝 COM 的 .NET Framework 組件
+description: 封裝 COM 的 .NET 元件。 收集 COM 應用程式可以取用的類型清單、版本控制和部署指示，以及類型程式庫。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620829"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>封裝 COM 的 .NET Framework 組件
 

@@ -1,5 +1,6 @@
 ---
 title: 如何新增啟動顯示畫面
+description: 瞭解如何在 Windows Presentation Foundation （WPF）應用程式中加入啟始視窗或啟動顯示畫面。
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 39f53e21c40f036c65894b4f275cd5fb414999be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d0cf2e2a550320650c3b4a0c257071a0403c32b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617956"
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>如何：在 WPF 應用程式中加入啟動顯示畫面
 
@@ -24,19 +25,19 @@ ms.locfileid: "76740444"
 
 2. 將影像檔案新增至 WPF 應用程式專案。
 
-3. 在 **方案總管**中，選取映射。
+3. 在 [**方案總管**中，選取映射。
 
-4. 在 屬性視窗中，按一下 **組建動作** 屬性的下拉箭號。
+4. 在 [屬性視窗中，按一下 [**組建動作**] 屬性的下拉箭號。
 
 5. 從下拉式清單中選取 [ **SplashScreen** ]。
 
-6. 按 **F5** 鍵以建置並執行應用程式。
+6. 按**F5**以建立並執行應用程式。
 
      啟動顯示畫面影像會出現在螢幕的中央，然後在主應用程式視窗出現時淡化。
 
 ## <a name="to-exclude-the-splash-screen-from-build"></a>若要從組建中排除啟動顯示畫面
 
-1. 在 **方案總管**中，選取啟動顯示畫面影像。
+1. 在 [**方案總管**中，選取啟動顯示畫面影像。
 
 2. 在 [**屬性**] 視窗中，將 [**建立] 動作**設定為 [**無**]。
 
@@ -47,4 +48,4 @@ ms.locfileid: "76740444"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.SplashScreen>
-- [如何：將現有的專案加入至專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))
+- [如何：將現有的項目加入專案中](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

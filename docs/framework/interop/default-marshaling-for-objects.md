@@ -1,5 +1,6 @@
 ---
 title: 物件的預設封送處理
+description: 瞭解物件的預設封送處理。 檢查封送處理選項。 將物件封送處理至介面或變數、物件的變體，以及 ByRef 變體。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7b8f94f4dfd8e8b9e8e04df8de5f8266a8581a92
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618443"
 ---
 # <a name="default-marshaling-for-objects"></a>物件的預設封送處理
 
@@ -116,7 +117,7 @@ struct ObjectHolder {
 
 ## <a name="marshaling-object-to-interface"></a>將物件封送處理成介面
 
-向 COM 將物件公開為介面時，該介面是 Managed 類型 <xref:System.Object> 的類別介面 (**_Object** 介面)。 此介面在產生的類型**IDispatch**程式庫<xref:System.Runtime.InteropServices.UnmanagedType>中會輸入為 IDispatch （）或**iunknown** （**unmanagedtype.lpwstr iunknown**）。 COM 用戶端可以動態方式叫用 Managed 類別的成員，或其衍生類別透過 **_Object** 介面所實作的任何成員。 用戶端也可以呼叫 **QueryInterface** 取得 Managed 類型明確實作的任何其他介面。
+向 COM 將物件公開為介面時，該介面是 Managed 類型 <xref:System.Object> 的類別介面 (**_Object** 介面)。 此介面在產生的類型程式庫中會輸入為**IDispatch** （ <xref:System.Runtime.InteropServices.UnmanagedType> ）或**iunknown** （**unmanagedtype.lpwstr iunknown**）。 COM 用戶端可以動態方式叫用 Managed 類別的成員，或其衍生類別透過 **_Object** 介面所實作的任何成員。 用戶端也可以呼叫 **QueryInterface** 取得 Managed 類型明確實作的任何其他介面。
 
 ## <a name="marshaling-object-to-variant"></a>將物件封送處理成 Variant
 
@@ -314,8 +315,8 @@ COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；�
 |----------|--------|-----------------------------|
 |**Variant**  *v*|**物件**  *o*|永不|
 |**物件**  *o*|**Variant**  *v*|永不|
-|**Variant**   ***\****  *pv*|**Ref 物件**  *o*|一律|
-|**Ref 物件**  *o*|**Variant**   ***\****  *pv*|一律|
+|**Variant** ***\*****pv*     |**Ref 物件**  *o*|永遠|
+|**Ref 物件**  *o*|**Variant** ***\*****pv*     |永遠|
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**物件**  *o*|永不|
 |**Variant**  *v* **（VT_BYREF** *&#124;* **VT_）**|**Ref 物件**  *o*|只有當類型不變更時。|
 

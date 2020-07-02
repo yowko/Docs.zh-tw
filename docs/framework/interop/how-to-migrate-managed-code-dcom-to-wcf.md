@@ -1,15 +1,16 @@
 ---
-title: 如何：將 Managed 程式碼 DCOM 移轉至 WCF
+title: 作法：將受控碼 DCOM 移轉至 WCF
+description: 將伺服器和用戶端之間的分散式元件物件模型（DCOM） managed 程式碼呼叫遷移至 Windows Communication Foundation （WCF）。
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-ms.openlocfilehash: 2576e88c25ae381e90ec7d613efb648048145b3b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc6ac1dd01e17bb184d1f1faca372134d6130d33
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619087"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>如何：將 Managed 程式碼 DCOM 移轉至 WCF
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>作法：將受控碼 DCOM 移轉至 WCF
 對於分散式環境中伺服器與用戶端之間的 Managed 程式碼呼叫，Windows Communication Foundation (WCF) 是比分散式元件物件模型 (DCOM) 更建議使用的安全選擇。 本文將說明如何在下列情節中將程式碼從 DCOM 移轉至 WCF。  
   
 - 遠端服務以傳值方式將物件傳回給用戶端  

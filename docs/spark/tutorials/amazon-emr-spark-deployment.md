@@ -1,15 +1,15 @@
 ---
 title: 將適用於 Apache Spark 的 .NET 應用程式部署到 Amazon EMR Spark
 description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署到 Amazon EMR Spark。
-ms.date: 05/17/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6cf26044693c5d923d11e1bbc72232e7009fe73
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73454930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618255"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>將適用於 Apache Spark 的 .NET 應用程式部署到 Amazon EMR Spark
 
@@ -24,7 +24,9 @@ ms.locfileid: "73454930"
 > * 將您的應用程式部署到 Amazon EMR Spark
 > * 執行您的應用程式
 
-## <a name="prerequisites"></a>必要條件
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+
+## <a name="prerequisites"></a>Prerequisites
 
 開始之前，請執行下列作業：
 
@@ -33,7 +35,7 @@ ms.locfileid: "73454930"
 
 ## <a name="prepare-worker-dependencies"></a>準備背景工作相依性
 
-**Microsoft.Spark.Worker**是一個後端元件，它位於 Spark 群集的各個輔助節點上。 當您想要執行 C# UDF (使用者定義函式) 時，Spark 需要了解如何啟動 .NET CLR 來執行 UDF。 **Microsoft.Spark.Worker** 會向 Spark 提供類別集合，其會啟用此功能。
+**在 spark**叢集的個別背景工作節點上，會有一個後端元件。 當您想要執行 C# UDF (使用者定義函式) 時，Spark 需要了解如何啟動 .NET CLR 來執行 UDF。 **Microsoft.Spark.Worker** 會向 Spark 提供類別集合，其會啟用此功能。
 
 1. 選取要部署在您叢集上的 [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp 版本。
 
@@ -63,7 +65,7 @@ ms.locfileid: "73454930"
 
 4. 將下列項目上傳到您叢集可存取的分散式檔案系統 (例如 S3)：
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 包含在[Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 包中，並位於應用的生成輸出目錄中。
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`：此 jar 包含在[Microsoft Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet 套件中，並且會在應用程式的組建輸出目錄中共存。
    * `<your app>.zip`
    * 要放在每個執行程式中工作目錄的檔案 (例如相依性檔案或每個背景工作都可存取的通用資料) 或組件 (例如包含您使用者定義函式或您應用程式相依程式庫的 DLL)。
 

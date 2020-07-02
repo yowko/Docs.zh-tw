@@ -1,23 +1,23 @@
 ### YamlMime:Landing
 title: .NET Core 文件
-summary: 瞭解 .NET Core，這是一個用於構建跨平臺應用的開源通用開發框架。
+summary: 深入瞭解 .NET Core，這是一種開放原始碼、一般用途的開發架構，可用於建立跨平臺應用程式。
 metadata:
   title: .NET Core 文件
-  description: .NET Core 是一個開源的通用開發平臺，用於構建跨平臺應用。
+  description: .NET Core 是一種開放原始碼的一般用途開發平臺，可用於建立跨平臺應用程式。
   ms.topic: landing-page
   ms.date: 03/25/2020
-  ms.openlocfilehash: b11a41587e2b9eba2df744da3d8c19baa0936fb2
-  ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+  ms.openlocfilehash: 0d8e8515512068ba391a906182142eb5ee2f38c4
+  ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/27/2020
-  ms.locfileid: "80351705"
+  ms.lasthandoff: 07/01/2020
+  ms.locfileid: "85620751"
 landingContent:
 - title: 了解 .NET Core
   linkLists:
   - linkListType: overview
     links:
-    - text: .NET 核心簡介
+    - text: .NET Core 簡介
       url: introduction.md
     - text: .NET Core 概觀
       url: about.md
@@ -27,9 +27,11 @@ landingContent:
     links:
     - text: .NET Core 使用者入門
       url: get-started.md
+    - text: ASP.NET Core 使用者入門
+      url: /aspnet/core/
   - linkListType: concept
     links:
-    - text: .NET 核心支援政策
+    - text: .NET Core 支援原則
       url: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
   - linkListType: whats-new
     links:
@@ -45,33 +47,33 @@ landingContent:
       url: versions/selection.md
   - linkListType: download
     links:
-    - text: .NET 核心下載
+    - text: .NET Core 下載
       url: https://dotnet.microsoft.com/download/dotnet-core
   - linkListType: how-to-guide
     links:
-    - text: 安裝 .NET 核心 SDK
+    - text: 安裝 .NET Core SDK
       url: install/sdk.md
-    - text: 安裝 .NET 核心運行時
+    - text: 安裝 .NET Core 執行時間
       url: install/runtime.md
-    - text: 使用 Linux 套裝軟體管理器進行安裝
+    - text: 使用 Linux 套件管理員安裝
       url: install/linux-package-manager-ubuntu-1904.md
     - text: 檢查已安裝的版本
       url: install/how-to-detect-installed-versions.md
   - linkListType: reference
     links:
-    - text: .NET 核心 SDK 和運行時依賴項
+    - text: .NET Core SDK 和執行時間相依性
       url: install/dependencies.md
 - title: .NET Core 使用者入門
   linkLists:
   - linkListType: video
     links:
-    - text: 教程：10分鐘內的"你好世界"
+    - text: 教學課程：10分鐘內的 Hello World
       url: https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro
   - linkListType: tutorial
     links:
-    - text: 在視覺化工作室代碼中創建 Hello World 應用程式
+    - text: 在 Visual Studio Code 中建立 Hello World 應用程式
       url: tutorials/with-visual-studio-code.md
-    - text: 在視覺工作室中創建 Hello World 應用程式
+    - text: 在 Visual Studio 中建立 Hello World 應用程式
       url: tutorials/with-visual-studio.md
     - text: 將 .NET Core 應用程式容器化
       url: docker/build-container.md
@@ -79,13 +81,13 @@ landingContent:
     links:
     - text: 應用程式發佈
       url: deploying/index.md
-- title: 從 .NET 框架遷移
+- title: 從 .NET Framework 遷移
   linkLists:
   - linkListType: overview
     links:
     - text: 從 .NET Framework 移植到 .NET Core
       url: porting/index.md
-- title: 使用命令列中的 .NET 核心
+- title: 從命令列使用 .NET Core
   linkLists:
   - linkListType: overview
     links:
@@ -105,7 +107,7 @@ landingContent:
       url: tools/dotnet-new.md
     - text: dotnet publish
       url: tools/dotnet-publish.md
-- title: 使用 .NET 核心進行單元測試
+- title: 使用 .NET Core 進行單元測試
   linkLists:
   - linkListType: overview
     links:
@@ -113,7 +115,7 @@ landingContent:
       url: testing/index.md
   - linkListType: tutorial
     links:
-    - text: 使用點網測試和 xUnit 測試 C# 代碼
+    - text: '使用 dotnet 測試和 xUnit 測試 c # 程式碼'
       url: testing/unit-testing-with-dotnet-test.md
     - text: 使用 NUnit 進行單元測試
       url: testing/unit-testing-with-nunit.md

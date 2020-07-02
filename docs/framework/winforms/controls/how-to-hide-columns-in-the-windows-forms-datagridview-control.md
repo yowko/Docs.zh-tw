@@ -1,6 +1,6 @@
 ---
 title: 隱藏 DataGridView 控制項中的資料行
-description: 瞭解如何藉由將 DataGridViewColumn 屬性設定為 false，以程式設計方式隱藏 Windows Forms DataGridView 控制項中的資料行。
+description: 瞭解如何藉由將 DataGridViewColumn 屬性設定為 false，以程式設計方式隱藏在 Windows Forms DataGridView 控制項中的資料行。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 46d7faea76098406b8e0a91d22922bf9ca391e28
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 27e9f331151acd68d76233bc7dbb09c2d870afde
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618047"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>如何：隱藏 Windows Form DataGridView 控制項中的資料行
 有時候您會想要只顯示 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項中某些可用的資料行。 例如，您可能會想要對具有管理認證的使用者顯示員工薪資資料行，而對其他使用者隱藏該資料行。 或者，您可能會想要將控制項繫結至包含許多資料行的資料來源，但您只想要顯示其中部分資料行。 在此情況下，您通常會移除不想顯示的資料行，而不是加以隱藏。  

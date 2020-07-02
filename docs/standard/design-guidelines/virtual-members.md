@@ -7,12 +7,12 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 9eb6cbef969e51dee1a72d402c124d06f08fe5c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 918208bb44f84988b7fe903c589e82c7bf1f59e3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620764"
 ---
 # <a name="virtual-members"></a>虛擬成員
 可以覆寫虛擬成員，因此變更子類別的行為。 它們在其提供的擴充性方面相當類似回呼，但它們在執行效能和記憶體耗用量方面比較好。 此外，在需要建立一種特殊類型（特製化）的案例中，虛擬成員的外觀更為自然。
@@ -33,7 +33,7 @@ ms.locfileid: "84288494"
 
  類別的公用成員應該為該類別的直接取用者提供正確的功能集。 虛擬成員是設計用來在子類別中覆寫，而受保護的存取範圍是將所有虛擬擴充點限定于其使用位置的絕佳方式。
 
- *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
+ *部分 &copy; 2005，2009 Microsoft Corporation。已保留擁有權限。*
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。**
 

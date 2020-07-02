@@ -1,17 +1,18 @@
 ---
 title: 將 COM 元件公開給 .NET Framework
+description: 瞭解將 COM 元件公開給 .NET 的程式。 COM 元件在 managed 程式碼中相當重要，做為中介層商務應用程式或隔離的功能。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-ms.openlocfilehash: 914f72b5e4840555541943620ca2df1f629b0604
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 459ba7ffed2e4f6c458f89a63b2baa37180d270d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620842"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>將 COM 元件公開給 .NET Framework
 本節摘要說明向 Managed 程式碼公開現有 COM 元件所需要的程序。 如需撰寫與 .NET Framework 緊密整合的 COM 伺服器的詳細資訊，請參閱[交互操作的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))。
@@ -38,8 +39,8 @@ ms.locfileid: "73123517"
   
 ## <a name="see-also"></a>另請參閱
 
-- [與非受控程式碼交互操作](index.md)
+- [與 Unmanaged 程式碼互通](index.md)
 - [交互操作的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [COM Interop 範例：.NET 用戶端與 COM 伺服器](com-interop-sample-net-client-and-com-server.md)
 - [語言獨立性以及與語言無關的元件](../../standard/language-independence-and-language-independent-components.md)
-- [Gacutil .exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil.exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)

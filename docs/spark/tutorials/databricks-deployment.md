@@ -1,15 +1,15 @@
 ---
 title: 將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks
 description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks。
-ms.date: 05/12/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 9e0b99b6706bf51adaa6e3795d1c81179e14cb7a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618333"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Databricks
 
@@ -24,7 +24,9 @@ ms.locfileid: "84202234"
 > - 建立 Spark 作業和 Spark 叢集。
 > - 在 Spark 叢集上執行您的應用程式。
 
-## <a name="prerequisites"></a>Prerequisites
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+
+## <a name="prerequisites"></a>必要條件
 
 開始之前，請執行下列工作：
 
@@ -52,8 +54,8 @@ ms.locfileid: "84202234"
     |**訂用帳戶**     | 從下拉式清單中選取您的 Azure 訂用帳戶。        |
     |**資源群組**     | 指定您是要建立新的資源群組，還是使用現有資源群組。 資源群組是存放 Azure 方案相關資源的容器。 如需詳細資訊，請參閱 [Azure 資源群組概觀](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)。 |
     |**位置**     | 選取您的慣用區域。 如需可用區域的詳細資訊，請參閱[依區域提供的 Azure 服務](https://azure.microsoft.com/regions/services/)。        |
-    |定價層      |  選擇 [標準]****、[進階]**** 或 [試用]****。 如需這些定價層的詳細資訊，請參閱 [Databricks 定價頁面](https://azure.microsoft.com/pricing/details/databricks/)。       |
-    |**虛擬網路**     |   No       |
+    |定價層     |  選擇 [標準]、[進階] 或 [試用]。 如需這些定價層的詳細資訊，請參閱 [Databricks 定價頁面](https://azure.microsoft.com/pricing/details/databricks/)。       |
+    |**虛擬網路**     |   否       |
 
 3. 選取 [建立]。 工作區建立需要幾分鐘的時間。 在工作區建立期間，您可以在 [通知]**** 中檢視部署狀態。
 
@@ -73,7 +75,7 @@ ms.locfileid: "84202234"
    python3 --version
    ```
 
-2. 使用 pip 安裝 Databricks CLI。 根據預設，Python 3.4 和更新版本包含 pip。 使用適用于 Python 3 的 pip3。 執行以下命令：
+2. 使用 pip 安裝 Databricks CLI。 根據預設，Python 3.4 和更新版本包含 pip。 使用適用于 Python 3 的 pip3。 執行下列命令：
 
    ```bash
    pip3 install databricks-cli
@@ -135,7 +137,7 @@ ms.locfileid: "84202234"
 
    **在 Windows 上：**
 
-   流覽至 mySparkApp/bin/Release/netcoreapp 3.1/ubuntu. 16.04-x64。 然後，在 [**發行**資料夾] 上按一下滑鼠右鍵，然後選取 **[傳送至 > 壓縮的（zipped）資料夾**]。 將新資料夾命名為**publish .zip**。
+   流覽至 mySparkApp/bin/Release/netcoreapp 3.1/ubuntu. 16.04-x64。 然後，在 [**發行**資料夾] 上按一下滑鼠右鍵，然後選取 **[傳送至 > 壓縮的（zipped）資料夾**]。 將新資料夾命名為**publish.zip**。
 
    **在 Linux 上，執行下列命令：**
 
@@ -155,7 +157,7 @@ ms.locfileid: "84202234"
    databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. 執行下列命令，上傳您的叢集執行應用程式所需的其餘檔案：壓縮的 publish 資料夾、 *input .txt*和*microsoft-spark-2.4. x-0.3.1 .jar*。
+2. 執行下列命令，上傳您的叢集將執行應用程式所需的其餘檔案：壓縮的 publish 資料夾、 *input.txt*和*microsoft-spark-2.4. x-0.3.1 .jar*。
 
    ```console
    cd mySparkApp

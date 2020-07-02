@@ -1,17 +1,18 @@
 ---
 title: Interop 封送處理
+description: 開始使用 interop 封送處理，這會控制如何在方法引數中傳遞資料，並在呼叫期間于 managed 和非受控記憶體之間傳回值。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: 70514811a9d236dc485f64fc34297cdb057a1512
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca733d59abc4ca3d9d470b054ee9e34b5084ae38
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618970"
 ---
 # <a name="interop-marshaling"></a>Interop 封送處理
 
@@ -122,10 +123,10 @@ Common Language Runtime 會保留 Managed 和 Unmanaged 參考的識別。 下�
 |[預設的封送處理行為](default-marshaling-behavior.md)|描述 Interop 封送處理服務用來封送處理資料的規則。|
 |[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)|描述如何宣告方法參數，以及將引數傳遞給 Unmanaged 程式庫所匯出的函式。|
 |[使用 COM Interop 封送處理資料](marshaling-data-with-com-interop.md)|描述如何自訂 COM 包裝函式來變更封送處理行為。|
-|[如何：將 Managed 程式碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何從 DCOM 移轉至 WCF。|
-|[操作說明：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)|描述如何將自訂例外狀況對應到 HRESULT，並提供每一個 HRESULT 與其在 .NET Framework 中可比較的例外狀況類別之完整對應。|
+|[作法：將受控碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何從 DCOM 移轉至 WCF。|
+|[作法：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)|描述如何將自訂例外狀況對應到 HRESULT，並提供每一個 HRESULT 與其在 .NET Framework 中可比較的例外狀況類別之完整對應。|
 |[使用泛型型別交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|描述使用泛型類型來取得 COM 互通性時所支援的動作。|
-|[與非受控程式碼交互操作](index.md)|描述 Common Language Runtime 提供的互通性服務。|
+|[與 Unmanaged 程式碼互通](index.md)|描述 Common Language Runtime 提供的互通性服務。|
 |[進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。|
 |[交互操作的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|提供撰寫整合式 COM 元件的秘訣。|
 

@@ -4,12 +4,12 @@ description: 示範在 Ubuntu 上安裝 .NET Core SDK 和 .NET Core 執行時間
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: eef724138f2b908bf8601a509d298a06e55fb13e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619425"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>在 Ubuntu 上安裝 .NET Core SDK 或 .NET Core 執行時間
 
@@ -201,16 +201,17 @@ sudo apt-get update; \
 
 當您使用套件管理員進行安裝時，系統會為您安裝這些程式庫。 但是，如果您手動安裝 .NET Core 或發行獨立的應用程式，您必須確定已安裝這些程式庫：
 
-- liblttng-ust0
-- libcurl3 (適用於 14.x 及 16.x)
-- libcurl4 (適用於 18.x)
-- libssl1.0.0
-- libkrb5-3
-- zlib1g
+- libc6
+- libgcc1
+- libgssapi-krb5-krb5-2
 - libicu52 (適用於 14.x)
 - libicu55 (適用於 16.x)
-- libicu57 (適用於 17.x)
 - libicu60 (適用於 18.x)
+- libicu66 （適用于 20. x）
+- libssl1.0.0 1.0.0 （適用于 14. x、16. x）
+- libssl1.0.0 1.1 （適用于 18. x、20. x）
+- libstdc + + 6
+- zlib1g
 
 針對使用*system.web*元件的 .net Core 應用程式，您也需要下列相依性：
 

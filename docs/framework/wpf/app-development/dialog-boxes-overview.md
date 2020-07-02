@@ -1,5 +1,6 @@
 ---
 title: 對話方塊概觀
+description: 瞭解您可以用來收集和顯示資訊的 Windows Foundation 簡報（WPF）中各種對話方塊。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: c98d6a45d151d4b683a21e48eaeb5f4a19eaadb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 822604dd694f2f6260496872fd7a1a8440a62535
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618138"
 ---
-# <a name="dialog-boxes-overview"></a>對話方塊概述
-獨立應用程式通常有一個主視窗，該視窗既顯示應用程式運行的主資料，又公開通過[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]功能表列、工具列和狀態列等機制處理該資料的功能。 重要的應用程式還可能顯示其他視窗來執行下列動作：  
+# <a name="dialog-boxes-overview"></a>對話方塊總覽
+獨立應用程式通常會有一個主視窗，它會顯示應用程式運作的主要資料，並透過 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 功能表列、工具列和狀態列等機制來公開處理該資料的功能。 重要的應用程式還可能顯示其他視窗來執行下列動作：  
   
 - 對使用者顯示特定資訊。  
   
@@ -26,26 +27,26 @@ ms.locfileid: "79187447"
   
 - 顯示並收集資訊。  
   
- 這些類型的視窗稱為*對話方塊*，有兩種類型：模式和無模式。  
+ 這些類型的視窗稱為*對話方塊*，而且有兩種類型：強制回應和非強制回應。  
   
- 當函數需要使用者的其他資料以繼續時，函數將顯示*模式*對話方塊。 由於該函式需要透過強制回應對話方塊收集資料，因此當強制回應對話方塊保持開啟時，也可以防止使用者在應用程式中啟動其他視窗。 在大多數情況下，強制回應對話方塊允許使用者在完成強制回應對話方塊後通過按下 **"確定"** 或 **"取消"** 按鈕發出信號。 按下 **"確定"** 按鈕表示使用者已輸入資料，並希望該函數繼續處理該資料。 按下 **"取消"** 按鈕表示使用者希望完全停止該函數的執行。 強制回應對話方塊的最常見範例為開啟、儲存及列印資料。  
+ 當函式需要使用者的其他資料才能繼續時，函數會顯示*模式*對話方塊。 由於該函式需要透過強制回應對話方塊收集資料，因此當強制回應對話方塊保持開啟時，也可以防止使用者在應用程式中啟動其他視窗。 在大部分情況下，強制回應對話方塊可讓使用者在完成強制回應對話方塊時，按下 **[確定**] 或 [**取消**] 按鈕來發出信號。 按下 [**確定]** 按鈕，表示使用者已輸入資料，而且想要讓該函數繼續處理該資料。 按下 [**取消**] 按鈕表示使用者想要完全停止執行函式。 強制回應對話方塊的最常見範例為開啟、儲存及列印資料。  
   
- 另一方面，*無模式*對話方塊不會阻止使用者在打開時啟動其他視窗。 例如，如果使用者想要尋找出現在文件中的特定字組，主視窗通常會開啟對話方塊，詢問使用者要尋找哪個字組。 不過，由於尋找字組並不會防止使用者編輯文件，因此對話方塊不需要是強制回應。 無強制回應對話方塊至少提供關閉對話方塊的 **"關閉"** 按鈕，並可能提供用於執行特定功能的其他按鈕，例如 **"查找下一步**"按鈕，以查找與單詞搜索的查找條件匹配的下一個單詞。  
+ 另一方面，非*模式*對話方塊則不會防止使用者在開啟其他視窗時加以啟用。 例如，如果使用者想要尋找出現在文件中的特定字組，主視窗通常會開啟對話方塊，詢問使用者要尋找哪個字組。 不過，由於尋找字組並不會防止使用者編輯文件，因此對話方塊不需要是強制回應。 [非模式] 對話方塊至少會提供關閉對話方塊的 [**關閉**] 按鈕，而且可能會提供其他按鈕來執行特定函式，例如 **[尋找下一個]** 按鈕，以尋找符合文字搜尋搜尋準則的下一個單字。  
   
- Windows 演示文稿基礎 （WPF） 允許您創建多種類型的對話方塊，包括訊息方塊、通用對話方塊和自訂對話方塊。 本主題討論每個，[對話方塊示例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)提供匹配的示例。  
+ Windows Presentation Foundation （WPF）可讓您建立數種類型的對話方塊，包括訊息方塊、通用對話方塊和自訂對話方塊。 本主題將討論每個，而[對話方塊範例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)會提供相符的範例。  
 
 <a name="Message_Boxes"></a>
 ## <a name="message-boxes"></a>訊息方塊  
- *訊息方塊*是一個對話方塊，可用於顯示文本資訊並允許使用者使用按鈕做出決定。 下圖所示的訊息方塊顯示文字資訊、提出問題，並提供使用者三個按鈕來回答問題。  
+ *訊息方塊*是可用來顯示文字資訊的對話方塊，可讓使用者使用按鈕進行決策。 下圖所示的訊息方塊顯示文字資訊、提出問題，並提供使用者三個按鈕來回答問題。  
   
- ![Word 處理器對話方塊，詢問是否要在應用程式關閉之前保存對文檔的更改。](./media/dialog-boxes-overview/word-processor-dialog.png)  
+ ![[文字處理器] 對話方塊，詢問您是否要在應用程式關閉之前，先儲存檔的變更。](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
- 要創建訊息方塊，請使用 類<xref:System.Windows.MessageBox>。 <xref:System.Windows.MessageBox>允許您使用如下所示的代碼配置訊息方塊文本、標題、圖示和按鈕。  
+ 若要建立訊息方塊，請使用 <xref:System.Windows.MessageBox> 類別。 <xref:System.Windows.MessageBox>可讓您使用如下所示的程式碼，設定訊息方塊文字、標題、圖示和按鈕。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- 要顯示訊息方塊，請調用`static`<xref:System.Windows.MessageBox.Show%2A>方法，如下代碼所示。  
+ 若要顯示訊息方塊，您可以呼叫 `static` <xref:System.Windows.MessageBox.Show%2A> 方法，如下列程式碼所示。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -55,98 +56,98 @@ ms.locfileid: "79187447"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- 有關使用訊息方塊的詳細資訊，請參閱<xref:System.Windows.MessageBox>、[訊息方塊示例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)和[對話方塊示例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)。  
+ 如需使用訊息方塊的詳細資訊，請參閱 <xref:System.Windows.MessageBox> 、 [MessageBox 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)和[對話方塊範例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)。  
   
- 儘管<xref:System.Windows.MessageBox>可以提供簡單的對話方塊使用者體驗，但使用<xref:System.Windows.MessageBox>的優點是，在部分信任安全沙箱中運行的應用程式可以顯示的唯一視窗類型（請參閱[安全性](../security-wpf.md)），如 XAML 瀏覽器應用程式 （XBAPs）。  
+ 雖然 <xref:System.Windows.MessageBox> 可能會提供簡單的對話方塊使用者體驗，但使用的優點 <xref:System.Windows.MessageBox> 是，在部分信任安全性沙箱（請參閱[安全性](../security-wpf.md)）中執行的應用程式（例如 XAML 瀏覽器應用程式（xbap））可以顯示唯一的視窗類型。  
   
- 大多數對話方塊所顯示及收集的資料會比訊息方塊的結果更複雜，包括文字、選取範圍 (核取方塊)、互斥選取範圍 (選項按鈕)，以及清單選取範圍 (清單方塊、下拉式方塊、下拉式清單方塊)。 對於這些，Windows 演示文稿基礎 （WPF） 提供了幾個常見的對話方塊，並允許您創建自己的對話方塊，儘管其中任一對話方塊的使用僅限於完全信任運行的應用程式。  
+ 大多數對話方塊所顯示及收集的資料會比訊息方塊的結果更複雜，包括文字、選取範圍 (核取方塊)、互斥選取範圍 (選項按鈕)，以及清單選取範圍 (清單方塊、下拉式方塊、下拉式清單方塊)。 在這些情況下，Windows Presentation Foundation （WPF）提供數個常見的對話方塊，並可讓您建立自己的對話方塊，雖然僅限於以完全信任執行的應用程式。  
   
 <a name="Common_Dialogs"></a>
-## <a name="common-dialog-boxes"></a>常見對話方塊  
- Windows 實現所有應用程式共有的各種可重用對話方塊，包括用於打開檔、保存檔和列印的對話方塊。 由於這些對話方塊是由作業系統實作，因此可在作業系統上執行的所有應用程式之間共用，以協助確保使用者體驗的一致性；當使用者在一個應用程式中熟悉如何使用某個作業系統提供的對話方塊時，就不需要了解如何在其他應用程式中使用該對話方塊。 由於這些對話方塊對所有應用程式都可用，並且因為它們有助於提供一致的使用者體驗，因此它們稱為*通用對話方塊*。  
+## <a name="common-dialog-boxes"></a>通用對話方塊  
+ Windows 會執行各種可重複使用的對話方塊，通用於所有應用程式，包括用來開啟檔案、儲存檔案和列印的對話方塊。 由於這些對話方塊是由作業系統實作，因此可在作業系統上執行的所有應用程式之間共用，以協助確保使用者體驗的一致性；當使用者在一個應用程式中熟悉如何使用某個作業系統提供的對話方塊時，就不需要了解如何在其他應用程式中使用該對話方塊。 因為這些對話方塊可供所有應用程式使用，而且因為它們有助於提供一致的使用者體驗，所以也稱為*通用對話方塊*。  
   
- Windows 演示文稿基礎 （WPF） 封裝打開的檔、保存檔並列印公共對話方塊，並將其公開為託管類，供您在獨立應用程式中使用。 本主題提供每個對話方塊的簡短概觀。  
+ Windows Presentation Foundation （WPF）會封裝開啟的檔案、儲存檔案和列印通用對話方塊，並將它們公開為受控類別，供您在獨立應用程式中使用。 本主題提供每個對話方塊的簡短概觀。  
   
 <a name="Open_File_Dialog"></a>
-### <a name="open-file-dialog"></a>打開檔對話方塊  
+### <a name="open-file-dialog"></a>開啟檔案對話方塊  
  如下圖所示，檔案開啟功能使用 [開啟檔案] 對話方塊，來擷取要開啟之檔案的名稱。  
   
- ![顯示要檢索檔的位置的打開對話方塊。](./media/dialog-boxes-overview/open-file-dialog-box.png)  
+ ![[開啟] 對話方塊，其中顯示要取出檔案的位置。](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
- 公共打開的檔對話方塊作為類實現，<xref:Microsoft.Win32.OpenFileDialog>位於命名空間中。 <xref:Microsoft.Win32> 下列程式碼示範如何建立、設定及顯示一個對話方塊，以及如何處理結果。  
+ 一般的 [開啟檔案] 對話方塊會實作為 <xref:Microsoft.Win32.OpenFileDialog> 類別，並位於 <xref:Microsoft.Win32> 命名空間中。 下列程式碼示範如何建立、設定及顯示一個對話方塊，以及如何處理結果。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#openfiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#openfiledialogboxcodebehind)]  
   
- 有關打開的檔對話方塊的詳細資訊，請參閱<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>。  
+ 如需 [開啟檔案] 對話方塊的詳細資訊，請參閱 <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType> 。  
   
 > [!NOTE]
-> <xref:Microsoft.Win32.OpenFileDialog>可用於通過運行具有部分信任的應用程式安全地檢索檔案名（請參閱[安全](../security-wpf.md)）。  
+> <xref:Microsoft.Win32.OpenFileDialog>可以用來安全地透過以部分信任執行的應用程式來抓取檔案名（請參閱[安全性](../security-wpf.md)）。  
   
 <a name="Save_File_Dialog"></a>
 ### <a name="save-file-dialog-box"></a>儲存對話方塊  
  如下圖所示，檔案儲存功能使用 [儲存檔案] 對話方塊，來擷取要儲存之檔案的名稱。  
   
- ![顯示保存檔的位置的對話方塊。](./media/dialog-boxes-overview/save-file-dialog-box.png)  
+ ![[另存新檔] 對話方塊，其中顯示儲存檔案的位置。](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
- 公共保存檔對話方塊作為<xref:Microsoft.Win32.SaveFileDialog>類實現，並位於命名空間中。 <xref:Microsoft.Win32> 下列程式碼示範如何建立、設定及顯示一個對話方塊，以及如何處理結果。  
+ [一般儲存檔案] 對話方塊會實作為 <xref:Microsoft.Win32.SaveFileDialog> 類別，並位於 <xref:Microsoft.Win32> 命名空間中。 下列程式碼示範如何建立、設定及顯示一個對話方塊，以及如何處理結果。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#savefiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#savefiledialogboxcodebehind)]  
   
- 有關保存檔對話方塊的詳細資訊，請參閱<xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>。  
+ 如需 [儲存檔案] 對話方塊的詳細資訊，請參閱 <xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType> 。  
   
 <a name="Print_Dialog"></a>
 ### <a name="print-dialog-box"></a>列印對話方塊
 
 如下圖所示，列印功能使用 [列印] 對話方塊，來選擇及設定使用者想要列印資料的目標印表機。  
   
-![顯示"列印"對話方塊的螢幕截圖。](./media/dialog-boxes-overview/print-data-dialog-box.png)  
+![顯示 [列印] 對話方塊的螢幕擷取畫面。](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
-公共列印對話方塊作為<xref:System.Windows.Controls.PrintDialog>類實現，並位於命名空間中。 <xref:System.Windows.Controls> 下列程式碼示範如何建立、設定及顯示一個對話方塊。  
+一般 [列印] 對話方塊會實作為 <xref:System.Windows.Controls.PrintDialog> 類別，並位於 <xref:System.Windows.Controls> 命名空間中。 下列程式碼示範如何建立、設定及顯示一個對話方塊。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#printdialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#printdialogboxcodebehind)]  
   
- 有關列印對話方塊的詳細資訊，請參閱<xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>。 有關 WPF 中列印的詳細討論，請參閱[列印概述](../advanced/printing-overview.md)。  
+ 如需 [列印] 對話方塊的詳細資訊，請參閱 <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 。 如需在 WPF 中列印的詳細討論，請參閱[列印總覽](../advanced/printing-overview.md)。  
   
 <a name="Custom_Dialog_Boxes"></a>
 ## <a name="custom-dialog-boxes"></a>自訂對話方塊
 
-雖然通用對話方塊很有用，而且應該盡可能使用，但這類對話方塊並不支援定義域專屬對話方塊的需求。 在此情況下，您必須建立自己的對話方塊。 如稍後所示，對話方塊是具有特殊行為的視窗。 <xref:System.Windows.Window>實現這些行為，因此，您用於<xref:System.Windows.Window>創建自訂模式和無強制回應對話方塊。  
+雖然通用對話方塊很有用，而且應該盡可能使用，但這類對話方塊並不支援定義域專屬對話方塊的需求。 在此情況下，您必須建立自己的對話方塊。 如稍後所示，對話方塊是具有特殊行為的視窗。 <xref:System.Windows.Window>會執行這些行為，因此，您可以使用 <xref:System.Windows.Window> 來建立自訂的強制回應和非強制回應對話方塊。  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>
 ### <a name="creating-a-modal-custom-dialog-box"></a>建立模式自訂對話方塊
 
-本主題演示如何使用<xref:System.Windows.Window>`Margins`對話方塊作為示例創建典型的強制回應對話方塊實現（請參閱[對話方塊示例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)）。 對話方塊`Margins`顯示在下圖中。  
+本主題說明如何使用 <xref:System.Windows.Window> 來建立典型的強制回應對話方塊實 `Margins` 作為範例（請參閱[對話方塊範例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)）。 `Margins`下圖顯示此對話方塊。  
   
- ![帶有用於定義邊距、上邊距、右邊距和下邊距的欄位的邊距對話方塊。](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
+ ![[邊界] 對話方塊，其中包含用來定義左邊界、上邊界、右邊界和下邊界的欄位。](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
-#### <a name="configuring-a-modal-dialog-box"></a>配置強制回應對話方塊
+#### <a name="configuring-a-modal-dialog-box"></a>設定強制回應對話方塊
 
 一般對話方塊的使用者介面包括：  
   
 - 收集想要的資料所需的各種控制項。  
   
-- 使用者按一下"**確定"** 按鈕以關閉對話方塊、返回到函數並繼續處理。  
+- 使用者按一下 **[確定**] 按鈕以關閉對話方塊，並返回函式，然後繼續處理。  
   
-- 使用者按一下的 **"取消"** 按鈕以關閉對話方塊並停止該函數的進一步處理。  
+- [**取消**] 按鈕，使用者可以按一下以關閉對話方塊，並停止函式進行進一步的處理。  
   
-- 標題列中的 **"關閉**"按鈕。  
+- 標題列中的 [**關閉**] 按鈕。  
   
 - 圖示。  
   
 - **最小化**、**最大化**和**還原**按鈕。  
   
-- 用於**最小化**、最大化、還原和關閉對話方塊的系統功能表。  
+- 用來最小化、最大化、還原和關閉對話方塊的**系統**功能表。  
   
-- 打開對話方塊的視窗上方和中心的位置。  
+- 在開啟對話方塊之視窗的上方和中央位置。  
   
-- 盡可能調整大小以防止對話方塊太小，並為使用者提供有用的預設大小。 這要求您同時設置預設值和最小維度。  
+- 能夠在可能的情況下調整大小，讓對話方塊無法變得太小，並為使用者提供實用的預設大小。 這需要您設定預設值和最小維度。  
   
-- ESC 鍵作為鍵盤快速鍵，導致按下 **"取消"** 按鈕。 為此，您可以將<xref:System.Windows.Controls.Button.IsCancel%2A>**"取消"** 按鈕的屬性設置為`true`。  
+- ESC 鍵，做為鍵盤快速鍵，可讓您按下 [**取消**] 按鈕。 方法是將 <xref:System.Windows.Controls.Button.IsCancel%2A> [**取消**] 按鈕的屬性設為 `true` 。  
   
-- ENTER（或 RETURN）鍵作為鍵盤快速鍵，用於按下 **"確定"** 按鈕。 為此，您可以設置<xref:System.Windows.Controls.Button.IsDefault%2A>**"確定"** 按鈕`true`的屬性。  
+- 輸入（或傳回）鍵做為鍵盤快速鍵，可讓您按下 [**確定]** 按鈕。 您可以藉由設定 [ <xref:System.Windows.Controls.Button.IsDefault%2A> **確定]** 按鈕的屬性來執行此動作 `true` 。  
   
 下列程式碼示範這項設定。  
   
@@ -161,19 +162,19 @@ ms.locfileid: "79187447"
   
 當功能表項目所執行的函式顯示不需要使用者互動的對話方塊時 (例如 [關於] 對話方塊)，則不需要省略符號。  
   
-#### <a name="opening-a-modal-dialog-box"></a>打開強制回應對話方塊
+#### <a name="opening-a-modal-dialog-box"></a>開啟強制回應對話方塊
 
 對話方塊通常是使用者選取功能表項目以執行定義域專屬函式所顯示的結果，例如在文書處理器中設定文件的邊界。 將視窗顯示為對話方塊類似於顯示標準視窗，不過需要進行額外的對話方塊專屬設定。 具現化、設定及開啟對話方塊的整個過程如下列程式碼所示。  
   
 [!code-csharp[Opening a modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-11,78-88,193-195)]
 [!code-vb[Opening a modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58-67,130-132)]  
 
-在這裡，代碼將預設資訊（當前邊距）傳遞給對話方塊。 它還使用對顯示<xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType>對話方塊的視窗的引用設置屬性。 通常，應始終設置對話方塊的擁有者以提供所有對話方塊共有的視窗狀態相關行為（有關詳細資訊，請參閱[WPF Windows 概述](wpf-windows-overview.md)）。
+在這裡，此程式碼會將預設資訊（目前的邊界）傳遞至對話方塊。 它也會 <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType> 使用顯示對話方塊之視窗的參考來設定屬性。 一般來說，您應該一律設定對話方塊的 [擁有者]，提供所有對話方塊通用的視窗狀態相關行為（如需詳細資訊，請參閱[WPF Windows 總覽](wpf-windows-overview.md)）。
 
 > [!NOTE]
-> 您必須提供擁有者以支援對話方塊的使用者介面 （UI） 自動化（請參閱 UI[自動化概述](../../ui-automation/ui-automation-overview.md)）。
+> 您必須提供擁有者，以支援對話方塊的使用者介面（UI）自動化（請參閱[UI 自動化總覽](../../ui-automation/ui-automation-overview.md)）。
 
-配置對話方塊後，通過調用<xref:System.Windows.Window.ShowDialog%2A>方法以模態方式顯示該對話方塊。  
+設定對話方塊之後，會藉由呼叫方法來以模式顯示 <xref:System.Windows.Window.ShowDialog%2A> 。  
   
 #### <a name="validating-user-provided-data"></a>驗證使用者提供的資料
 
@@ -187,99 +188,99 @@ ms.locfileid: "79187447"
   
 - 從效能的觀點來看，多層式應用程式中的資料驗證可以減少用戶層與應用程式層之間的來回行程次數，特別是當應用程式是由 Web 服務或伺服器架構資料庫組成時。  
 
-要驗證 WPF 中的繫結控制項，需要定義驗證規則並將其與綁定相關聯。 驗證規則是從 派生的自訂類<xref:System.Windows.Controls.ValidationRule>。 下面的示例顯示驗證規則，`MarginValidationRule`該規則檢查綁定值是否為 和<xref:System.Double>，並且在指定範圍內。  
+若要在 WPF 中驗證繫結控制項，您必須定義驗證規則，並將它與系結產生關聯。 驗證規則是衍生自的自訂類別 <xref:System.Windows.Controls.ValidationRule> 。 下列範例顯示驗證規則， `MarginValidationRule` 它會檢查系結的值是否為 <xref:System.Double> ，而且是否在指定的範圍內。  
 
 [!code-csharp[Margin validation rules](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginValidationRule.cs)]
 [!code-vb[Margin validation rules](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginValidationRule.vb)]  
 
-在此代碼中，驗證規則的驗證邏輯是通過重寫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法實現的，該方法驗證資料並返回適當的<xref:System.Windows.Controls.ValidationResult>。  
+在此程式碼中，驗證規則的驗證邏輯是藉由覆寫 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 方法來執行，它會驗證資料並傳回適當的 <xref:System.Windows.Controls.ValidationResult> 。  
 
 若要建立驗證規則與繫結控制項的關聯，您可以使用下列標記。  
   
 [!code-xaml[Associating a validation rule with a control](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml?range=1-16,57-68,111-112)]
 
-關聯驗證規則後，WPF 將自動在將資料輸入繫結控制項時應用它。 當控制項包含無效資料時，WPF 將在無效控制項周圍顯示紅色邊框，如下圖所示。  
+一旦與驗證規則相關聯，WPF 會在將資料輸入繫結控制項時自動套用。 當控制項包含不正確資料時，WPF 會在不正確控制項周圍顯示紅色框線，如下圖所示。  
   
-![邊距對話方塊，其紅色邊框圍繞不正確左邊距值。](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
+![邊界對話方塊，在不正確左邊界值周圍有紅色框線。](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
 
-WPF 不會將使用者限制為無效控制項，直到使用者輸入有效資料。 這是很好的對話方塊行為；使用者應該能夠自由地巡覽對話方塊中的控制項，而不論資料是否有效。 但是，這意味著使用者可以輸入無效資料並按下 **"確定"** 按鈕。 因此，當通過處理<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件按下 **"確定"** 按鈕時，代碼還需要驗證對話方塊中的所有控制項。  
+WPF 在輸入有效的資料之前，不會將使用者限制為不正確控制項。 這是很好的對話方塊行為；使用者應該能夠自由地巡覽對話方塊中的控制項，而不論資料是否有效。 不過，這表示使用者可以輸入不正確資料，然後按下 [**確定]** 按鈕。 基於這個理由，您的程式碼也需要在處理事件時按下 [**確定**] 按鈕時，驗證對話方塊中的所有控制項 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 。  
   
 [!code-csharp[Validating all controls in a dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,26-29,33-68)]
 [!code-vb[Validating all controls in a dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27-29,33-62)]  
 
-此代碼枚舉視窗上的所有依賴項物件，如果任何依賴項物件無效（如<xref:System.Windows.Controls.Validation.GetHasError%2A>返回，無效控制項獲取焦點，`IsValid`則該方法返回`false`，並且視窗被視為無效。  
+這個程式碼會列舉視窗上的所有相依性物件，如果有任何不正確（如所傳回），則 <xref:System.Windows.Controls.Validation.GetHasError%2A> 不正確控制項會取得焦點， `IsValid` 方法 `false` 會傳回，而此視窗會被視為無效。  
   
 一旦對話方塊有效，就可以安全地將它關閉並傳回。 在傳回過程中，必須將結果傳回呼叫函式。  
   
-#### <a name="setting-the-modal-dialog-result"></a>設置模態對話方塊結果
+#### <a name="setting-the-modal-dialog-result"></a>設定強制回應對話方塊結果
 
-使用<xref:System.Windows.Window.ShowDialog%2A>打開對話方塊從根本上說就像調用方法：使用<xref:System.Windows.Window.ShowDialog%2A>等待直到<xref:System.Windows.Window.ShowDialog%2A>返回打開對話方塊的代碼。 返回<xref:System.Windows.Window.ShowDialog%2A>時，調用它的代碼需要根據使用者是按下 **"確定"** 按鈕還是 **"取消"** 按鈕來決定是繼續處理還是停止處理。 為了便於做出此決策，該對話方塊需要將使用者的選擇作為從<xref:System.Boolean><xref:System.Windows.Window.ShowDialog%2A>方法返回的值返回。  
+使用開啟對話方塊 <xref:System.Windows.Window.ShowDialog%2A> ，基本上就像呼叫方法一樣：使用開啟對話方塊的程式碼會等候， <xref:System.Windows.Window.ShowDialog%2A> 直到傳回為止 <xref:System.Windows.Window.ShowDialog%2A> 。 當傳回時 <xref:System.Windows.Window.ShowDialog%2A> ，呼叫它的程式碼必須根據使用者是否按下 [**確定]** 按鈕或 [**取消**] 按鈕，決定是否要繼續處理或停止處理。 為了協助進行這種決策，對話方塊必須傳回使用者的選擇，做為 <xref:System.Boolean> 從方法傳回的值 <xref:System.Windows.Window.ShowDialog%2A> 。  
 
-按一下 **"確定"** 按鈕時，<xref:System.Windows.Window.ShowDialog%2A>應返回`true`。 這是通過在按一下<xref:System.Windows.Window.DialogResult%2A>**"確定"** 按鈕時設置對話方塊的屬性來實現的。  
+按一下 [**確定]** 按鈕時， <xref:System.Windows.Window.ShowDialog%2A> 應該會傳回 `true` 。 <xref:System.Windows.Window.DialogResult%2A>當按一下 [**確定]** 按鈕時，設定對話方塊的屬性即可達成此目的。  
 
 [!code-csharp[Responding to the OK button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,25-27,32-33,67-68)]
 [!code-vb[Responding to the OK button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27,31-33,61-62)]  
 
-請注意，設置<xref:System.Windows.Window.DialogResult%2A>屬性還會導致視窗自動關閉，這減輕了顯式調用<xref:System.Windows.Window.Close%2A>的需要。  
+請注意，設定 <xref:System.Windows.Window.DialogResult%2A> 屬性也會使視窗自動關閉，這可減輕明確呼叫的需求 <xref:System.Windows.Window.Close%2A> 。  
   
-按一下 **"取消"** 按鈕時，<xref:System.Windows.Window.ShowDialog%2A>應返回`false`，這還需要設置<xref:System.Windows.Window.DialogResult%2A>屬性。  
+按一下 [**取消**] 按鈕時， <xref:System.Windows.Window.ShowDialog%2A> 應該會傳回 `false` ，這也需要設定 <xref:System.Windows.Window.DialogResult%2A> 屬性。  
   
 [!code-csharp[Responding to the Cancel button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,19-24,67-68)]
 [!code-vb[Responding to the Cancel button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,22-25,61-62)]  
 
-當按鈕的屬性<xref:System.Windows.Controls.Button.IsCancel%2A>設置為`true`，並且使用者按下 **"取消"** 按鈕或 ESC 鍵時，<xref:System.Windows.Window.DialogResult%2A>將自動設置為`false`。 以下標記的效果與前面的代碼相同，無需處理事件<xref:System.Windows.Controls.Primitives.ButtonBase.Click>。  
+當按鈕的 <xref:System.Windows.Controls.Button.IsCancel%2A> 屬性設定為 `true` ，而且使用者按下 [**取消**] 按鈕或 ESC 鍵時，會 <xref:System.Windows.Window.DialogResult%2A> 自動設定為 `false` 。 下列標記與上述程式碼具有相同的效果，而不需要處理 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件。  
   
 [!code-xaml[Markup instead of handling the Click event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#L109-L109)]  
 
-當使用者按下標題列中的`false`**"關閉"** 按鈕或從 **"系統**"功能表中選擇"**關閉**"功能表項目時，將自動返回一個對話方塊。  
+`false`當使用者按下標題列中的 [**關閉**] 按鈕，或從 [**系統**] 功能表選擇 [**關閉**] 功能表項目時，對話方塊就會自動返回。  
 
-#### <a name="processing-data-returned-from-a-modal-dialog-box"></a>處理從強制回應對話方塊返回的資料  
+#### <a name="processing-data-returned-from-a-modal-dialog-box"></a>處理從強制回應對話方塊傳回的資料  
 
-當<xref:System.Windows.Window.DialogResult%2A>由對話方塊設置時，打開它的函數可以通過在返回時<xref:System.Windows.Window.DialogResult%2A><xref:System.Windows.Window.ShowDialog%2A>檢查該屬性來獲取對話方塊的結果。  
+當 <xref:System.Windows.Window.DialogResult%2A> 由對話方塊設定時，開啟它的函式可以在傳回時檢查屬性，以取得對話方塊的結果 <xref:System.Windows.Window.DialogResult%2A> <xref:System.Windows.Window.ShowDialog%2A> 。  
   
 [!code-csharp[Processing data returned from the modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,77-79,89-96,194-195)]
 [!code-vb[Processing data returned from the modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58,69-73,131-132)]
 
-如果對話方塊結果是`true`，則函數將該結果用作檢索和處理使用者提供的資料的提示。  
+如果對話方塊結果為，則函式會 `true` 使用該函式做為提示，以取得並處理使用者所提供的資料。  
   
 > [!NOTE]
-> 返回<xref:System.Windows.Window.ShowDialog%2A>後，無法重新打開對話方塊。 您必須改為建立新的執行個體。
+> <xref:System.Windows.Window.ShowDialog%2A>傳回之後，就無法重新開啟對話方塊。 您必須改為建立新的執行個體。
 
-如果對話方塊結果是`false`，則函數應適當地結束處理。  
+如果對話方塊結果為 `false` ，函數應該會適當地結束處理。  
   
 <a name="Creating_a_Modeless_Custom_Dialog_Box"></a>
-### <a name="creating-a-modeless-custom-dialog-box"></a>創建無模式自訂對話方塊
+### <a name="creating-a-modeless-custom-dialog-box"></a>建立非模式自訂對話方塊
 
 非強制回應對話方塊 (例如下圖所示的 [尋找] 對話方塊) 與強制回應對話方塊具有相同的基本外觀。  
 
-![顯示"查找"對話方塊的螢幕截圖。](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
+![顯示 [尋找] 對話方塊的螢幕擷取畫面。](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
 
 不過，其行為稍有不同，如下列各節中所述。  
   
-#### <a name="opening-a-modeless-dialog-box"></a>打開無強制回應對話方塊
+#### <a name="opening-a-modeless-dialog-box"></a>開啟非強制回應對話方塊
 
-通過調用<xref:System.Windows.Window.Show%2A>方法打開無強制回應對話方塊。  
+藉由呼叫方法，即可開啟非強制回應對話方塊 <xref:System.Windows.Window.Show%2A> 。  
 
 [!code-xaml[XAML to define a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#L21-L22)]  
 
 [!code-csharp[Opening a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,65-76,194-195)]
 [!code-vb[Openng a modeless dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,18-23,131,132)]  
 
-不像<xref:System.Windows.Window.ShowDialog%2A> <xref:System.Windows.Window.Show%2A> ，立即返回。 因此，呼叫視窗無法得知非強制回應對話方塊何時關閉，因此不會知道何時要檢查對話方塊結果，或從對話方塊取得資料以進一步處理。 相反地，對話方塊必須建立其他方式，以將資料傳回呼叫視窗進行處理。  
+不同于 <xref:System.Windows.Window.ShowDialog%2A> ，會 <xref:System.Windows.Window.Show%2A> 立即傳回。 因此，呼叫視窗無法得知非強制回應對話方塊何時關閉，因此不會知道何時要檢查對話方塊結果，或從對話方塊取得資料以進一步處理。 相反地，對話方塊必須建立其他方式，以將資料傳回呼叫視窗進行處理。  
   
-#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>處理從無強制回應對話方塊返回的資料  
+#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>處理從非強制回應對話方塊傳回的資料  
 
-在此示例中，`FindDialogBox`可能會將一個或多個查找結果返回給主視窗，具體取決於搜索的文本，而不帶任何特定頻率。 如同強制回應對話方塊，非強制回應對話方塊可以透過屬性傳回結果。 不過，主控對話方塊的視窗必須知道何時要查看這些屬性。 其中一個做法是，讓對話方塊實作每次找到文字時所引發的事件。 `FindDialogBox`實現`TextFoundEvent`為此目的，首先需要委託。  
+在此範例中， `FindDialogBox` 可能會將一或多個尋找結果傳回主視窗，視搜尋的文字沒有任何特定頻率而定。 如同強制回應對話方塊，非強制回應對話方塊可以透過屬性傳回結果。 不過，主控對話方塊的視窗必須知道何時要查看這些屬性。 其中一個做法是，讓對話方塊實作每次找到文字時所引發的事件。 `FindDialogBox``TextFoundEvent`針對此目的執行，這會先需要委派。  
 
 [!code-csharp[The TextFoundEventHandler delegate](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs)]
 [!code-vb[The TextFoundEventHandler delegate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb)]  
 
-使用`TextFoundEventHandler`委託實現`FindDialogBox`。 `TextFoundEvent`
+使用委派時，會執行 `TextFoundEventHandler` `FindDialogBox` `TextFoundEvent` 。
   
 [!code-csharp[The TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-17,125-126)]
 [!code-vb[The TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-15,102-103)]
 
-因此，`Find`當找到搜尋結果時，可以引發事件。  
+因此， `Find` 可以在找到搜尋結果時引發事件。  
   
 [!code-csharp[Raising the TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,50-52,91-94,124-127)]
 [!code-vb[Raising the TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,15,60-64,102-103)]  
@@ -289,17 +290,17 @@ WPF 不會將使用者限制為無效控制項，直到使用者輸入有效資�
 [!code-csharp[Registering and handling the event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,184-195)]
 [!code-vb[Registering and handling the event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,126-132)]  
 
-#### <a name="closing-a-modeless-dialog-box"></a>關閉無強制回應對話方塊
+#### <a name="closing-a-modeless-dialog-box"></a>關閉非強制回應對話方塊
 
-由於<xref:System.Windows.Window.DialogResult%2A>不需要設置，因此可以使用系統提供機制關閉無強制回應對話方塊，包括：  
+因為 <xref:System.Windows.Window.DialogResult%2A> 不需要設定，所以您可以使用系統提供的機制來關閉非強制回應對話方塊，包括下列各項：  
   
-- 按一下標題列中的 **"關閉**"按鈕。  
+- 按一下標題列中的 [**關閉**] 按鈕。  
   
 - 按下 ALT+F4。  
   
-- 從 **"系統**"功能表中選擇 **"關閉**"。  
+- 從 [**系統**] 功能表選擇 [**關閉**]。  
   
-或者，當按一下"<xref:System.Windows.Window.Close%2A>**關閉**"按鈕時，代碼可以調用。  
+或者， <xref:System.Windows.Window.Close%2A> 當您按一下 [**關閉**] 按鈕時，您的程式碼可以呼叫。  
 
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  

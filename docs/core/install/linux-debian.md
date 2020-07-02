@@ -4,12 +4,12 @@ description: 示範在 Debian 上安裝 .NET Core SDK 和 .NET Core 執行時間
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ded9d2be72e8ec476d5ace752e44d92eb0ee1028
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 68a3e848b3d80806e875dfb2fb7e2cbf223f8ad5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619490"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>在 Debian 上安裝 .NET Core SDK 或 .NET Core 執行時間
 
@@ -127,7 +127,26 @@ sudo apt-get update; \
 
 ## <a name="dependencies"></a>相依性
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+當您使用套件管理員進行安裝時，系統會為您安裝這些程式庫。 但是，如果您手動安裝 .NET Core 或發行獨立的應用程式，您必須確定已安裝這些程式庫：
+
+- libc6
+- libgcc1
+- libgssapi-krb5-krb5-2
+- libicu52 （適用于8.x）
+- libicu57 （適用于 9. x）
+- libicu63 （適用于4.x）
+- libicu67 （適用于 11. x）
+- libssl1.0.0 1.0.0 （適用于8.x）
+- libssl1.0.0 1.1 （適用于 9. x-11. x）
+- libstdc + + 6
+- zlib1g
+
+針對使用*system.web*元件的 .net Core 應用程式，您也需要下列相依性：
+
+- libgdiplus （6.0.1 版或更新版本）
+
+  > [!WARNING]
+  > 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的*libgdiplus* 。 如需詳細資訊，請參閱 <https://www.mono-project.com/download/stable/> 。
 
 ## <a name="scripted-install"></a>腳本式安裝
 

@@ -1,5 +1,6 @@
 ---
-title: HOW TO：實作 INotifyPropertyChanged 介面
+title: 作法：實作 INotifyPropertyChanged 介面
+description: 瞭解如何在 Windows Forms 資料系結中使用的商務物件上，執行 INotifyPropertyChanged 介面。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], implementing
 ms.assetid: eac428af-b43b-46ac-80d9-1a5f88658725
-ms.openlocfilehash: cfdfb22fd854a8f630243e0f612761c71cb778d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83d2ef32787d2dbcd877bc77dcede10111098f8a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619264"
 ---
-# <a name="how-to-implement-the-inotifypropertychanged-interface"></a>HOW TO：實作 INotifyPropertyChanged 介面
-下列程式碼範例示範如何實作<xref:System.ComponentModel.INotifyPropertyChanged>介面。 在 Windows Form 資料繫結中使用的商務物件上實作這個介面。 實作時，介面與繫結控制項的商務物件的屬性變更。  
+# <a name="how-to-implement-the-inotifypropertychanged-interface"></a>作法：實作 INotifyPropertyChanged 介面
+下列程式碼範例示範如何執行 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 在用於 Windows Forms 資料系結的商務物件上，執行此介面。 當執行時，介面會與繫結控制項通訊，而該屬性會在商務物件上進行變更。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/CS/Form1.cs#1)]
@@ -23,7 +24,7 @@ ms.locfileid: "61802033"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：套用 PropertyNameChanged 模式](how-to-apply-the-propertynamechanged-pattern.md)
-- [Windows Forms 資料繫結](windows-forms-data-binding.md)
-- [如何：使用 BindingSource 和 INotifyPropertyChanged 介面引發變更通知](./controls/raise-change-notifications--bindingsource.md)
-- [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
+- [作法：套用 PropertyNameChanged 模式](how-to-apply-the-propertynamechanged-pattern.md)
+- [Windows Form 資料繫結](windows-forms-data-binding.md)
+- [如何：使用 BindingSource 和 INotifyPropertyChanged 介面引發變更告知](./controls/raise-change-notifications--bindingsource.md)
+- [Windows Form 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)

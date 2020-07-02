@@ -1,5 +1,6 @@
 ---
 title: 繫結宣告概觀
+description: 瞭解如何在 XAML 中宣告系結，以在 Windows Presentation Foundation （WPF）中開發應用程式。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 8d4943de0cacb5fe0b5a0c37a5a68f15243ad528
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619633"
 ---
 # <a name="binding-declarations-overview"></a>繫結宣告概觀
 
@@ -25,7 +26,7 @@ ms.locfileid: "75544462"
 
 <a name="Prereq"></a>
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 在閱讀本主題之前，請務必先熟悉標記延伸的概念和使用方式。 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)。
 
@@ -41,13 +42,13 @@ ms.locfileid: "75544462"
 
 ### <a name="markup-extension-usage"></a>標記延伸使用方式
 
-<xref:System.Windows.Data.Binding> 是一種標記延伸。 當您使用繫結延伸宣告繫結時，該宣告是由一系列子句組成，這些子句接在 `Binding` 關鍵字後面，並以逗號 (,) 分隔。 繫結宣告中的子句可以按照任何順序，而且有許多可能的組合。 子句是*名稱*=*值*組，其中*name*是 <xref:System.Windows.Data.Binding> 屬性的名稱，而*值*則是您要為屬性設定的值。
+<xref:System.Windows.Data.Binding> 是一種標記延伸。 當您使用繫結延伸宣告繫結時，該宣告是由一系列子句組成，這些子句接在 `Binding` 關鍵字後面，並以逗號 (,) 分隔。 繫結宣告中的子句可以按照任何順序，而且有許多可能的組合。 子句是*名稱* = *值*組，其中*name*是屬性的名稱 <xref:System.Windows.Data.Binding> ，而*值*則是您要為屬性設定的值。
 
 在標記中建立繫結宣告字串時，必須將這些字串附加至目標物件的特定相依性屬性。 下列範例顯示如何使用系結延伸模組來系結 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 屬性，並指定 <xref:System.Windows.Data.Binding.Source%2A> 和 <xref:System.Windows.Data.Binding.Path%2A> 屬性。
 
 [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]
 
-您可以用這種方式指定 <xref:System.Windows.Data.Binding> 類別的大部分屬性。 如需系結延伸模組的詳細資訊，以及無法使用系結延伸模組設定的 <xref:System.Windows.Data.Binding> 屬性清單，請參閱系結[標記延伸](../advanced/binding-markup-extension.md)的總覽。
+您可以用 <xref:System.Windows.Data.Binding> 這種方式指定類別的大部分屬性。 如需系結延伸模組以及無法使用系結延伸模組設定之屬性清單的詳細資訊 <xref:System.Windows.Data.Binding> ，請參閱系結[標記延伸](../advanced/binding-markup-extension.md)的總覽。
 
 <a name="ObjectElementSyntax"></a>
 
@@ -59,7 +60,7 @@ ms.locfileid: "75544462"
 
 [!code-xaml[BindConversionMarkup#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]
 
-此範例會使用延伸模組語法來宣告系結，以系結 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 的屬性。 <xref:System.Windows.Controls.TextBlock.Text%2A> 屬性的系結宣告會使用物件元素語法。
+此範例會使用延伸模組語法宣告系結來系結 <xref:System.Windows.Controls.TextBlock.Foreground%2A> 屬性。 屬性的系結宣告會 <xref:System.Windows.Controls.TextBlock.Text%2A> 使用物件元素語法。
 
 如需不同詞彙的詳細資訊，請參閱 [XAML 語法詳細資料](../advanced/xaml-syntax-in-detail.md)。
 
@@ -67,30 +68,30 @@ ms.locfileid: "75544462"
 
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding 和 PriorityBinding
 
-<xref:System.Windows.Data.MultiBinding> 和 <xref:System.Windows.Data.PriorityBinding> 不支援 XAML 延伸模組語法。 因此，如果您要在 XAML 中宣告 <xref:System.Windows.Data.MultiBinding> 或 <xref:System.Windows.Data.PriorityBinding>，則必須使用物件元素語法。
+<xref:System.Windows.Data.MultiBinding>和不 <xref:System.Windows.Data.PriorityBinding> 支援 XAML 延伸模組語法。 因此，如果您要 <xref:System.Windows.Data.MultiBinding> 在 XAML 中宣告或，則必須使用物件元素語法 <xref:System.Windows.Data.PriorityBinding> 。
 
 <a name="BindinginCode"></a>
 
 ## <a name="creating-a-binding-in-code"></a>在程式碼中建立繫結
 
-指定系結的另一種方式是直接在程式碼中的 <xref:System.Windows.Data.Binding> 物件上設定屬性。 下列範例顯示如何建立 <xref:System.Windows.Data.Binding> 物件，並在程式碼中指定屬性。  在此範例中，`TheConverter` 是可執行 <xref:System.Windows.Data.IValueConverter> 介面的物件。
+另一個指定系結的方式是直接在程式碼中的物件上設定屬性 <xref:System.Windows.Data.Binding> 。 下列範例顯示如何建立 <xref:System.Windows.Data.Binding> 物件，並在程式碼中指定屬性。  在此範例中， `TheConverter` 是用來執行介面的物件 <xref:System.Windows.Data.IValueConverter> 。
 
 [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
 [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]
 
-如果您要系結的物件是 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 您可以直接在物件上呼叫 `SetBinding` 方法，而不是使用 <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>。 如需範例，請參閱[使用程式碼建立繫結](how-to-create-a-binding-in-code.md)。
+如果您要系結的物件是 <xref:System.Windows.FrameworkElement> 或， <xref:System.Windows.FrameworkContentElement> 您可以 `SetBinding` 直接在物件上呼叫方法，而不是使用 <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> 。 如需範例，請參閱[使用程式碼建立繫結](how-to-create-a-binding-in-code.md)。
 
 <a name="Path_Syntax"></a>
 
 ## <a name="binding-path-syntax"></a>繫結路徑語法
 
-使用 [<xref:System.Windows.Data.Binding.Path%2A>] 屬性來指定您想要系結的來源值：
+使用 <xref:System.Windows.Data.Binding.Path%2A> 屬性來指定您想要系結的來源值：
 
-- 在最簡單的情況下，<xref:System.Windows.Data.Binding.Path%2A> 屬性值就是要用於系結之來源物件的屬性名稱，例如 `Path=PropertyName`。
+- 在最簡單的情況下， <xref:System.Windows.Data.Binding.Path%2A> 屬性值就是要用於系結之來源物件的屬性名稱，例如 `Path=PropertyName` 。
 
-- 屬性的子屬性可以透過類似的語法來指定C#。 例如，子句 `Path=ShoppingCart.Order` 會將繫結設定為物件或屬性 `ShoppingCart` 的子屬性 `Order`。
+- 屬性的子屬性可以透過與 c # 中類似的語法來指定。 例如，子句 `Path=ShoppingCart.Order` 會將繫結設定為物件或屬性 `ShoppingCart` 的子屬性 `Order`。
 
-- 若要繫結至附加屬性，請在附加屬性前後加上括號。 例如，若要系結至附加屬性 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>，`Path=(DockPanel.Dock)`語法。
+- 若要繫結至附加屬性，請在附加屬性前後加上括號。 例如，若要系結至附加屬性 <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> ，語法為 `Path=(DockPanel.Dock)` 。
 
 - 屬性的索引子可以在方括弧內指定，接在套用索引子的屬性名稱後面。 例如，子句 `Path=ShoppingCart[0]` 會將繫結設定為索引，而該索引對應於屬性之內部索引處理常值字串 "0" 的方式。 此語法也支援巢狀索引子。
 
@@ -108,7 +109,7 @@ ms.locfileid: "75544462"
 
 - 在索引子 ([ ]) 內，插入號字元 (^) 會逸出下一個字元。
 
-- 如果您在 XAML 中設定 <xref:System.Windows.Data.Binding.Path%2A>，則也需要對 XML 語言定義的特殊字元進行 escape （使用 XML 實體）：
+- 如果您 <xref:System.Windows.Data.Binding.Path%2A> 在 XAML 中設定，您也需要對 xml 語言定義的特殊字元進行 escape （使用 xml 實體）：
 
   - 使用 `&amp;` 逸出 "&" 字元。
 
@@ -132,17 +133,17 @@ ms.locfileid: "75544462"
 
 - 建立預設轉換器，以嘗試在繫結來源值和繫結目標值之間執行型別轉換。 如果無法進行轉換，預設轉換器會傳回 `null`。
 
-- 如果您未設定 <xref:System.Windows.Data.Binding.ConverterCulture%2A>，系結引擎會使用系結目標物件的 `Language` 屬性。 在 XAML 中，這個值預設為 "en-US"，但如果已明確設定，則會繼承頁面之根元素 (或任何元素) 的值。
+- 如果未設定，系結 <xref:System.Windows.Data.Binding.ConverterCulture%2A> 引擎會使用系結 `Language` 目標物件的屬性。 在 XAML 中，這個值預設為 "en-US"，但如果已明確設定，則會繼承頁面之根元素 (或任何元素) 的值。
 
 - 只要繫結已經有資料內容 (例如繼承的資料內容來自父元素)，而且該內容所傳回的任何項目或集合不需要進一步修改路徑即可適用於繫結，繫結宣告可以完全沒有子句：`{Binding}`。這通常是資料樣式設定指定繫結的方式，其中繫結的作用對象是集合。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)中的＜使用整個物件做為繫結來源＞一節。
 
-- 預設 <xref:System.Windows.Data.Binding.Mode%2A> 會根據所系結的相依性屬性，在單向和雙向之間有所不同。 您永遠都可以明確宣告繫結模式，以確保繫結具有所需的行為。 一般而言，使用者可編輯的控制項屬性（例如 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>）預設為雙向系結，而其他大多數屬性則預設為單向系結。
+- 預設會根據所系結的相依性屬性，在 <xref:System.Windows.Data.Binding.Mode%2A> 單向和雙向之間有所不同。 您永遠都可以明確宣告繫結模式，以確保繫結具有所需的行為。 一般而言，使用者可編輯的控制項屬性（例如 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType> ）預設為雙向系結，而其他大多數屬性則預設為單向系結。
 
-- 預設 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 值會根據系結的相依性屬性，在 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> 和 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 之間有所不同。 大多數相依性屬性的預設值為 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，而 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 屬性具有 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 的預設值。
+- 根據系結的相依性 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 屬性，預設值會在和之間有所不同 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 。 大多數相依性屬性的預設值為 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，而 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 屬性具有 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 的預設值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
-- [「如何」主題](data-binding-how-to-topics.md)
+- [資料系結總覽](../../../desktop-wpf/data/data-binding-overview.md)
+- [操作說明主題](data-binding-how-to-topics.md)
 - [資料繫結](../advanced/optimizing-performance-data-binding.md)
 - [PropertyPath XAML 語法](../advanced/propertypath-xaml-syntax.md)

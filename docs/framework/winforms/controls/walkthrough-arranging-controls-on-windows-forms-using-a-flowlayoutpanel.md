@@ -1,5 +1,6 @@
 ---
 title: 使用 FlowLayoutPanel 排列控制項
+description: 瞭解如何使用 FlowLayoutPanel 控制項和 TableLayoutPanel 控制項，提供直覺的方式來排列 Windows Forms 專案中的控制項。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 6df0a910ee346f319fbee835e5e632808630a99e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: efcb38275be7b0cf94afb6b68aa139876f7cf5fd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619282"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
 
@@ -20,7 +21,7 @@ ms.locfileid: "76745397"
 
 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項和 <xref:System.Windows.Forms.TableLayoutPanel> 控制項提供直覺的方式，排列表單上的控制項。 這兩者都提供自動且可設定的功能，可用來控制其內含子控制項的相對位置，而且也都能為執行階段提供動態配置功能，所以每當父表單變更維度時，子控制項的大小和位置就會相應調整。 配置面板可以巢嵌在配置面板內，從而提供精緻的使用者介面。
 
-<xref:System.Windows.Forms.TableLayoutPanel> 會在方格中排列其內容，提供類似 HTML \<table > 元素的功能。 其儲存格依資料列和資料行排列，大小可以各不相同。 如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。
+會 <xref:System.Windows.Forms.TableLayoutPanel> 在方格中排列其內容，提供類似于 HTML 元素的功能 \<table> 。 其儲存格依資料列和資料行排列，大小可以各不相同。 如需詳細資訊，請參閱 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。
 
 <xref:System.Windows.Forms.FlowLayoutPanel> 會以特定的水平或垂直文字方向排列其內容。 其內容可以從某一資料列換行至下一個資料列，或從某一資料行換行至下一個資料行。 此外，也可裁剪其內容而不換行。 這個逐步解說中所述的工作包括：
 
@@ -46,9 +47,9 @@ ms.locfileid: "76745397"
 
 ## <a name="create-the-project"></a>建立專案
 
-1. 在 Visual Studio 中，建立名為 "FlowLayoutPanelExample **" （檔案** > **新** > **專案** >  **C# Visual**或**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**）的 Windows 應用程式專案。
+1. 在 Visual Studio 中，建立名為 "FlowLayoutPanelExample" 的 Windows 應用程式專案 **（[** 檔案] [新增] [專案] [  >  **New**  >  **Project**  >  **Visual c #** ] 或 [ **Visual Basic**  >  **傳統桌面**  >  **Windows Forms 應用程式**）。
 
-2. 選取 [表單設計工具]中的表單。
+2. 選取 [表單設計工具] **** 中的表單。
 
 ## <a name="arranging-controls-horizontally-and-vertically"></a>以水平或垂直方式排列控制項
  <xref:System.Windows.Forms.FlowLayoutPanel> 控制項允許您沿著資料列或資料行放置控制項，但不需要精確指定每個個別控制項的位置。
@@ -130,14 +131,14 @@ ms.locfileid: "76745397"
 
 1. 在 [工具箱] <xref:System.Windows.Forms.Button>**中按兩下**控制項圖示。 請注意，新的 <xref:System.Windows.Forms.Button> 控制項隨即出現在 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中。
 
-2. 在數個 [工具箱]的控制項上按兩下。 請注意， <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中會陸續出現新的控制項。
+2. 在數個 [工具箱] **** 的控制項上按兩下。 請注意， <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中會陸續出現新的控制項。
 
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>繪製控制項外框以插入控制項
  您可以將控制項插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中，在儲存格中繪製其外框來指定其大小。
 
 ### <a name="to-insert-a-control-by-drawing-its-outline"></a>繪製控制項外框以插入控制項
 
-1. 按一下 [工具箱]的 <xref:System.Windows.Forms.Button> 控制項圖示。 請勿拖曳到表單。
+1. 按一下 [工具箱] **** 的 <xref:System.Windows.Forms.Button> 控制項圖示。 請勿拖曳到表單。
 
 2. 將滑鼠指標移至 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項上。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.Button> 控制項圖示。
 
@@ -150,7 +151,7 @@ ms.locfileid: "76745397"
 
 ### <a name="to-insert-a-control-using-the-caret"></a>使用插入號以插入控制項
 
-1. 將 <xref:System.Windows.Forms.Button> 控制項從 [工具箱] 拖曳到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項，指向兩個 <xref:System.Windows.Forms.Button> 控制項之間的空白處。 請注意，系統會繪製插入列，指出將 <xref:System.Windows.Forms.Button> 放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項時，會將放置在何處。 請先移動滑鼠指標，觀察插入列的移動方式，再將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。
+1. 將 <xref:System.Windows.Forms.Button> 控制項從 [工具箱] **** 拖曳到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項，指向兩個 <xref:System.Windows.Forms.Button> 控制項之間的空白處。 請注意，會繪製插入列，表示將放置在控制項中的位置 <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.FlowLayoutPanel> 。 請先移動滑鼠指標，觀察插入列的移動方式，再將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。
 
 2. 將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。 請注意，新的 <xref:System.Windows.Forms.Button> 控制項未對齊其他控制項，因為其 <xref:System.Windows.Forms.Control.Margin%2A> 屬性有不同的值。
 
@@ -161,7 +162,7 @@ ms.locfileid: "76745397"
 
 1. 從 [工具箱] <xref:System.Windows.Forms.Button>**將三個** 控制項拖曳至表單。 將它們放在相鄰的位置，但不要對齊。
 
-2. 按一下 [工具箱]的 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。 請勿拖曳到表單。
+2. 按一下 [工具箱] **** 的 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。 請勿拖曳到表單。
 
 3. 將滑鼠指標靠近三個 <xref:System.Windows.Forms.Button> 控制項。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。
 
@@ -187,8 +188,8 @@ ms.locfileid: "76745397"
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：使用對齊線排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [逐步解說：使用對齊線排列 Windows Form 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [操作說明：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
-- [操作說明：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
+- [如何：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
+- [如何：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
 - [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)

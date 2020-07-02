@@ -1,5 +1,6 @@
 ---
 title: 操作說明：建立和繫結至 ObservableCollection
+description: 瞭解如何建立和系結至 Windows Presentation Foundation 中衍生自 ObservableCollection 類別的集合。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 596f6ae71e83c5aa3b2b80764f68a8abf08cdb7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 36e3d2d84aff0ab96c9b2914da28d4c968c32bac
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617865"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>操作說明：建立和繫結至 ObservableCollection
-這個範例示範如何建立和系結至衍生自 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別的集合，這是可在新增或移除專案時提供通知的集合類別。  
+這個範例示範如何建立和系結至衍生自類別的集合 <xref:System.Collections.ObjectModel.ObservableCollection%601> ，這是可在新增或移除專案時提供通知的集合類別。  
   
 ## <a name="example"></a>範例  
  下列範例顯示 `NameList` 集合的實作：  
@@ -136,14 +137,14 @@ End Class
  這裡並未顯示 `NameItemTemplate` 的定義。  
   
 > [!NOTE]
-> 集合中的物件必須滿足[繫結來源概觀](binding-sources-overview.md)中所述的需求。 特別的是，如果您使用 <xref:System.Windows.Data.BindingMode.OneWay> 或 <xref:System.Windows.Data.BindingMode.TwoWay> （例如，您想要在來源屬性動態變更時更新 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]），您必須執行適當的屬性變更通知機制，例如 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。  
+> 集合中的物件必須滿足[繫結來源概觀](binding-sources-overview.md)中所述的需求。 特別是，如果您使用 <xref:System.Windows.Data.BindingMode.OneWay> 或 <xref:System.Windows.Data.BindingMode.TwoWay> （例如，想要在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 來源屬性動態變更時進行更新），您必須執行適當的屬性變更通知機制，例如 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。  
   
  如需詳細資訊，請參閱[資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)中的＜繫結至集合＞一節。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [排序檢視中的資料](how-to-sort-data-in-a-view.md)
-- [篩選檢視中的資料](how-to-filter-data-in-a-view.md)
-- [使用 XAML 中的檢視排序和群組資料](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
-- [「如何」主題](data-binding-how-to-topics.md)
+- [排序視圖中的資料](how-to-sort-data-in-a-view.md)
+- [篩選視圖中的資料](how-to-filter-data-in-a-view.md)
+- [使用 XAML 中的視圖排序和分組資料](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [資料系結總覽](../../../desktop-wpf/data/data-binding-overview.md)
+- [操作說明主題](data-binding-how-to-topics.md)

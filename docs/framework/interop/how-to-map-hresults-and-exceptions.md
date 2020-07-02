@@ -1,5 +1,6 @@
 ---
-title: 如何：對應 HRESULT 和例外狀況
+title: 作法：對應 HRESULT 和例外狀況
+description: 請參閱如何將 COM 方法傳回的 HRESULT 值對應至 .NET 方法所擲回的例外狀況。 執行時間會處理 COM 和 .NET 之間的轉換。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 827e79bdefcde7ae94567e5341ade76097dc8eaa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619100"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>如何：對應 HRESULT 和例外狀況
+# <a name="how-to-map-hresults-and-exceptions"></a>作法：對應 HRESULT 和例外狀況
 COM 方法是藉由傳回 HRESULT 來報告錯誤；.NET 方法則是藉由擲回例外狀況來報告錯誤。 執行階段則負責處理兩者之間的轉換。 .NET Framework 的每一個例外狀況類別都會對應到一個 HRESULT。  
   
  使用者定義的例外狀況類別可以指定任何適當的 HRESULT。 當例外狀況是藉由設定例外狀況物件上的 **HResult** 欄位而產生時，這些例外狀況類別可以動態地變更要傳回的 HRESULT。 例外狀況的其他資訊會透過 **IErrorInfo** 介面提供給用戶端，而該介面是實作於 Unmanaged 處理序中的 .NET 物件上。  
@@ -130,11 +131,11 @@ CMyClass::MethodThatThrows
   
 |例外狀況欄位|來自 COM 的資訊來源|  
 |---------------------|------------------------------------|  
-|**錯誤碼**|從呼叫傳回的 HRESULT。|  
+|**ErrorCode**|從呼叫傳回的 HRESULT。|  
 |**HelpLink**|如果 **IErrorInfo->HelpContext** 是非零值，則字串是由串連 **IErrorInfo->GetHelpFile**、"#" 和 **IErrorInfo->GetHelpContext** 所構成。 否則，字串是從 **IErrorInfo->GetHelpFile** 所傳回。|  
 |**InnerException**|一律為 null 參考（在 Visual Basic 中為**任何內容**）。|  
-|**訊息**|從 **IErrorInfo->GetDescription** 傳回的字串。|  
-|**來源**|從 **IErrorInfo->GetSource** 傳回的字串。|  
+|**Message**|從 **IErrorInfo->GetDescription** 傳回的字串。|  
+|**Source**|從 **IErrorInfo->GetSource** 傳回的字串。|  
 |**StackTrace**|堆疊追蹤。|  
 |**TargetSite**|傳回失敗 HRESULT 之方法的名稱。|  
   

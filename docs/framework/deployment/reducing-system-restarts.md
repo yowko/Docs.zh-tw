@@ -1,17 +1,18 @@
 ---
 title: 在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
+description: 瞭解如何在 .NET 4.5 安裝期間減少系統重新開機。 如果在 .NET 4.5 安裝期間使用 .NET 4 應用程式，則可能需要重新開機。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, reducing system restarts
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-ms.openlocfilehash: 6261a883e7b99b7fd38da2a17ab4820c81552506
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfde0c2f7297c048ba70062918e2281afbccf391
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618203"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
 .NET Framework 4.5 安裝程式會使用[重新啟動管理員](/windows/win32/rstmgr/about-restart-manager)，盡可能在安裝時防止系統重新啟動。 如果您的應用程式安裝程式安裝 .NET Framework，則可以與 [重新啟動管理員] 互動來利用這項功能。 如需詳細資訊，請參閱[如何：取得 .NET Framework 4.5 安裝程式的進度](how-to-get-progress-from-the-dotnet-installer.md)。  
@@ -19,7 +20,7 @@ ms.locfileid: "75716421"
 ## <a name="reasons-for-a-restart"></a>重新啟動的原因  
  如果安裝期間正在使用 .NET Framework 4 應用程式，則 .NET Framework 4.5 安裝需要重新啟動系統。 這是因為 .NET Framework 4.5 會取代 .NET Framework 4 檔案，因此這些檔案必須在安裝期間可供使用。 在許多情況下，事先偵測和關閉正在使用的 .NET Framework 4 應用程式，即可避免重新啟動。 不過，不應該關閉部分系統應用程式。 在這些情況下，無法避免重新啟動。  
   
-## <a name="end-user-experience"></a>一般使用者體驗  
+## <a name="end-user-experience"></a>使用者體驗  
  如果安裝程式偵測到正在使用 .NET Framework 4 應用程式，則執行完整 .NET Framework 4.5 安裝的終端使用者就有機會可以避免重新啟動系統。 訊息會列出所有執行中 .NET Framework 4 應用程式，並提供選項來關閉這些應用程式，再進行安裝。 如果使用者確認，則安裝程式會關閉這些應用程式，並避免重新啟動系統。 如果使用者在一段時間內未回應訊息，則會繼續安裝，而不需要關閉任何應用程式。  
   
  如果 [重新啟動管理員] 偵測到即使關閉執行中應用程式也需要重新啟動系統的情況，則不會顯示訊息。  

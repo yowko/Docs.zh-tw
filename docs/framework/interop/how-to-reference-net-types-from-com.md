@@ -1,5 +1,6 @@
 ---
-title: 如何：參考 COM 的 .NET 類型
+title: 作法：參考 COM 的 .NET 類型
+description: 參考 COM 的 .NET 類型。 VB 用戶端可以在物件瀏覽器中查看 .NET 物件，但 c + + 用戶端必須使用 import 指示詞來參考 TLB 檔案 \# 。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f8d052c7b9bac9c4bab61ab1950e9e89a7c73912
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618957"
 ---
-# <a name="how-to-reference-net-types-from-com"></a>如何：參考 COM 的 .NET 類型
+# <a name="how-to-reference-net-types-from-com"></a>作法：參考 COM 的 .NET 類型
 從用戶端和伺服器程式碼的觀點來看，COM 和 .NET Framework 之間的差異大部分是無形的。 Microsoft Visual Basic 用戶端可以在物件瀏覽器中檢視 .NET 物件，這會公開物件方法和語法、屬性及欄位，完全如同它是任何其他 COM 物件一樣。  
   
  匯入型別程式庫的程序對 C++ 的用戶端而言稍嫌複雜，不過您可以使用相同的工具，將中繼資料匯出至 COM 類型程式庫。 若要從 Unmanaged C++ 用戶端參考 .NET 物件成員，請使用 **#import** 指示詞參考 TLB 檔案 (使用 Tlbexp.exe 產生)。 從 C++ 參考型別程式庫時，您必須指定 **raw_interfaces_only** 選項，或匯入基底類別程式庫 Mscorlib.tlb 中的定義。  

@@ -1,5 +1,6 @@
 ---
-title: HOW TO：設定 JPEG 壓縮層級
+title: 如何：設定 JPEG 壓縮層級
+description: 瞭解如何藉由修改 Windows Forms 上的壓縮層級，來調整 JPEG 影像的品質。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 1b325c0cb8fe9da4b198d19164c73af9b1609973
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f6a96e8a05fff40eb08da0ce318faa86a06cc3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618710"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>HOW TO：設定 JPEG 壓縮層級
-當您將影像儲存至磁碟以減少檔案大小或改善其品質時，可能會想要修改影像的參數。 您可以修改其壓縮層級來調整 JPEG 影像的品質。 若要儲存 JPEG 影像時，請指定的壓縮層級，您必須建立<xref:System.Drawing.Imaging.EncoderParameters>物件，並將它傳遞給<xref:System.Drawing.Image.Save%2A>方法<xref:System.Drawing.Image>類別。 初始化<xref:System.Drawing.Imaging.EncoderParameters>物件，使其具有陣列，其中包含一個<xref:System.Drawing.Imaging.EncoderParameter>。 當您建立<xref:System.Drawing.Imaging.EncoderParameter>，指定<xref:System.Drawing.Imaging.Encoder.Quality>編碼器，以及所要的壓縮層級。  
+# <a name="how-to-set-jpeg-compression-level"></a>如何：設定 JPEG 壓縮層級
+當您將影像儲存至磁碟以減少檔案大小或改善其品質時，可能會想要修改影像的參數。 您可以修改其壓縮層級來調整 JPEG 影像的品質。 若要在儲存 JPEG 影像時指定壓縮等級，您必須建立 <xref:System.Drawing.Imaging.EncoderParameters> 物件，並將它傳遞給 <xref:System.Drawing.Image.Save%2A> 類別的方法 <xref:System.Drawing.Image> 。 初始化 <xref:System.Drawing.Imaging.EncoderParameters> 物件，使其具有由一個組成的陣列 <xref:System.Drawing.Imaging.EncoderParameter> 。 當您建立時 <xref:System.Drawing.Imaging.EncoderParameter> ，請指定 <xref:System.Drawing.Imaging.Encoder.Quality> 編碼器和所需的壓縮等級。  
   
 ## <a name="example"></a>範例  
- 下列範例程式碼會建立<xref:System.Drawing.Imaging.EncoderParameter>物件，並儲存三個 JPEG 影像。 每個 JPEG 影像時，會儲存使用不同的品質層級上，藉由修改`long`值傳遞至<xref:System.Drawing.Imaging.EncoderParameter>建構函式。 品質層級 0 對應到最大壓縮，而品質層級 100 對應到最小壓縮。  
+ 下列範例程式碼會建立 <xref:System.Drawing.Imaging.EncoderParameter> 物件，並儲存三個 JPEG 影像。 每個 JPEG 影像都會以不同的品質層級儲存，方法是修改 `long` 傳遞給此函式的值 <xref:System.Drawing.Imaging.EncoderParameter> 。 品質層級 0 對應到最大壓縮，而品質層級 100 對應到最小壓縮。  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -125,7 +126,7 @@ End Function
   
 - Windows Forms 應用程式。  
   
-- A <xref:System.Windows.Forms.PaintEventArgs>，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
+- <xref:System.Windows.Forms.PaintEventArgs>，它是的參數 <xref:System.Windows.Forms.PaintEventHandler> 。  
   
 - 名為 `TestPhoto.jpg` 且位在 **c:\\** 的影像檔。  
   

@@ -1,22 +1,23 @@
 ---
 title: 開發自訂控制項
+description: 瞭解 Windows Form 控制項。 具體而言，您將瞭解如何結合現有的控制項、擴充現有的控制項，以及撰寫您自己的自訂控制項。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 9dbc1c4530b3a0f4e579ca67c7ae88c1685222ea
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 12013496c9650489fdd7512206317000fc0ec78c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746006"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618372"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>使用 .NET Framework 開發自訂的 Windows Form 控制項
 Windows Form 控制項是可重複使用的元件，這些控制項可封裝使用者介面功能，並可用於用戶端 Windows 應用程式。 Windows Form 不僅提供許多立即可用的控制項，也提供用以開發您自己的控制項的基礎結構。 您可以結合現有的控制項、擴充現有的控制項，或撰寫您自己的自訂控制項。 本節提供背景資訊和範例，以協助您開發 Windows Form 控制項。  
   
 ## <a name="in-this-section"></a>本節內容  
- [在 Windows Forms 中使用控制項的概觀](overview-of-using-controls-in-windows-forms.md)  
+ [在 Windows Form 中使用控制項的概觀](overview-of-using-controls-in-windows-forms.md)  
  重點說明在 Windows Forms 應用程式中使用控制項的基本項目。  
   
  [各種自訂控制項](varieties-of-custom-controls.md)  
@@ -28,19 +29,19 @@ Windows Form 控制項是可重複使用的元件，這些控制項可封裝使�
  [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)  
  示範如何將屬性加入 Windows Form 控制項。  
   
- [Windows Forms 控制項中的事件](events-in-windows-forms-controls.md)  
+ [Windows Form 控制項中的事件](events-in-windows-forms-controls.md)  
  示範如何在 Windows Form 控制項中處理及定義事件。  
   
  [Windows Forms 控制項中的屬性](attributes-in-windows-forms-controls.md)  
  描述可以套用至屬性 (Property) 或您的自訂控制項和元件之其他成員的屬性 (Attribute)。  
   
- [自訂控制項繪製和轉譯 ](custom-control-painting-and-rendering.md)  
+ [自訂控制項繪製和轉譯](custom-control-painting-and-rendering.md)  
  示範如何自訂控制項的外觀。  
   
  [Windows Forms 控制項中的配置](layout-in-windows-forms-controls.md)  
  示範如何為控制項和表單建立複雜的配置。  
   
- [Windows Forms 控制項中的多執行緒](multithreading-in-windows-forms-controls.md)  
+ [在 Windows Form 控制項中的多執行緒](multithreading-in-windows-forms-controls.md)  
  示範如何實作多執行緒的控制項。  
   
 ## <a name="reference"></a>參考  

@@ -4,12 +4,12 @@ description: 示範在 openSUSE 上安裝 .NET Core SDK 和 .NET Core 執行時�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 3a2ff1ca1519428f42c88048dde22aa11baaaa01
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619464"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>在 openSUSE 上安裝 .NET Core SDK 或 .NET Core 執行時間
 
@@ -69,7 +69,22 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 ## <a name="dependencies"></a>相依性
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+當您使用套件管理員進行安裝時，系統會為您安裝這些程式庫。 但是，如果您手動安裝 .NET Core 或發行獨立的應用程式，您必須確定已安裝這些程式庫：
+
+- krb5
+- libicu
+- libopenssl1_0_0
+
+如果目標執行時間環境的 OpenSSL 版本是1.1 或更新版本，您將需要安裝**相容性 compat-openssl10**。
+
+如需相依性的詳細資訊，請參閱[獨立的 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)。
+
+針對使用*system.web*元件的 .net Core 應用程式，您也需要下列相依性：
+
+- [libgdiplus （6.0.1 版或更新版本）](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的*libgdiplus* 。 如需詳細資訊，請參閱 <https://www.mono-project.com/download/stable/> 。
 
 ## <a name="scripted-install"></a>腳本式安裝
 

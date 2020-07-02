@@ -1,5 +1,6 @@
 ---
 title: 圖形和繪圖
+description: 瞭解圖形、畫筆、筆刷和色彩物件，以及如何執行如繪製圖形、繪製文字，或在 Windows Forms 中顯示影像之類的工作。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - GDI+, using in managed code
 - drawing [Windows Forms]
 ms.assetid: 362532c5-1a06-4257-bdc8-723461009ede
-ms.openlocfilehash: 10ad18d38c84f6e447601ab6c8bf1a953dabb7cf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 58d8cde6aa102225cf9e3c342efe37218c818307
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618398"
 ---
 # <a name="graphics-and-drawing-in-windows-forms"></a>Windows Form 中的圖形和繪圖
 通用語言執行平臺會使用稱為 GDI + 的 Windows 圖形裝置介面（GDI）的先進實作為。 使用 GDI +，您可以建立圖形、繪製文字，並將圖形影像當做物件來操作。 GDI + 的設計可提供效能和方便使用。 您可以使用 GDI + 在 Windows Forms 和控制項上轉譯圖形影像。 雖然您無法直接在 Web Forms 上使用 GDI +，但是您可以透過影像 Web 服務器控制項顯示圖形影像。  
@@ -48,5 +49,5 @@ ms.locfileid: "76746398"
  提供列印功能。  
   
 ## <a name="related-sections"></a>相關章節  
- [自訂控制項繪製和轉譯 ](../controls/custom-control-painting-and-rendering.md)  
+ [自訂控制項繪製和轉譯](../controls/custom-control-painting-and-rendering.md)  
  詳細說明如何提供繪製控制項的程式碼。

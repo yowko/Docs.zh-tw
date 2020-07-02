@@ -1,5 +1,6 @@
 ---
 title: 使用 .NET Framework 開發以 Windows 為基礎的用戶端應用程式
+description: 使用 .NET 開發以 Windows 為基礎的應用程式。 您可以使用通用 Windows 平臺（UWP）、Windows Presentation Foundation （WPF）或 Windows Forms。
 ms.date: 01/09/2018
 helpviewer_keywords:
 - client application services
@@ -13,39 +14,39 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: b6b5f47980e7c0c87128b9efb782e637ed7144f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920ecfae60274a8a504e4d300e531fd8b512901
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79181637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619386"
 ---
-# <a name="develop-client-applications-with-net-framework"></a>使用 .NET 框架開發用戶端應用程式
+# <a name="develop-client-applications-with-net-framework"></a>使用 .NET Framework 開發用戶端應用程式
 
-有幾種方法可以使用 .NET 框架開發基於 Windows 的應用程式。 您可以使用下列任一工具及架構：
+有數種方式可使用 .NET Framework 開發 Windows 應用程式。 您可以使用下列任一工具及架構：
 
 - [通用 Windows 平台 (UWP)](/windows/uwp/)
 - [Windows Presentation Foundation (WPF)](./wpf/index.md)
 - [Windows Forms](./winforms/index.md)
 
-本節包含描述如何使用 Windows 演示文稿基礎或 Windows 表單創建基於 Windows 的應用程式的文章。 但是，您也可以使用 .NET 框架和用戶端應用程式為通過 Microsoft 應用商店（UWP 應用程式）提供的電腦或設備創建 Web 應用程式。
+本節包含的文章說明如何使用 Windows Presentation Foundation 或 Windows Forms 來建立以 Windows 為基礎的應用程式。 不過，您也可以針對透過 Microsoft Store （UWP 應用程式）提供的電腦或裝置，使用 .NET Framework 和用戶端應用程式來建立 web 應用程式。
 
 ## <a name="related-sections"></a>相關章節
 
 [通用 Windows 平臺](/windows/uwp/)\
-介紹如何創建 UWP 應用程式，您可以通過 Microsoft 應用商店提供給使用者。
+描述如何建立 UWP 應用程式，讓使用者可以透過 Microsoft Store 來使用。
 
-[UWP 應用的 .NET API](/dotnet/api/index?view=dotnet-uwp-10.0)\
-支援 UWP 應用的 .NET 類型的參考。
+[適用于 UWP 應用程式的 .NET API](/dotnet/api/index?view=dotnet-uwp-10.0)\
+支援 UWP 應用程式之 .NET 類型的參考。
   
-[為多個平臺開發](../standard/cross-platform/index.md)\
-描述可以使用 .NET 框架定位多個用戶端應用類型的不同方法。
+[針對多個平臺進行開發](../standard/cross-platform/index.md)\
+描述您可以用來 .NET Framework 以多個用戶端應用程式類型為目標的不同方法。
 
-[開始使用ASP.NET網站](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
+[開始使用 ASP.NET Web Sites](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
 描述您可以使用 ASP.NET 開發 Web 應用程式的方式。
 
-[.NET API 用於 Windows 手機銀光](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))\
-清單 .NET 框架 API 可用於使用 Windows Phone 銀光構建應用。
+[適用于 Windows Phone Silverlight 的 .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))\
+列出 .NET Framework Api，您可以使用 Windows Phone Silverlight 來建立應用程式。
 
 ## <a name="see-also"></a>另請參閱
 

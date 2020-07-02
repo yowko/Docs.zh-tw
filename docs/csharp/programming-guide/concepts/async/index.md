@@ -2,12 +2,12 @@
 title: C# 中的非同步程式設計
 description: 使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀
 ms.date: 06/04/2020
-ms.openlocfilehash: fbbd08f8c0e650c366ca1d283825e629fcb952d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 992ccd3a015653ea9ee13dfc309d47711ad0fca4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446423"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619711"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>使用 async 和 await 進行非同步程式設計
 
@@ -56,7 +56,7 @@ ms.locfileid: "84446423"
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
 
 > [!IMPORTANT]
-> 總經過時間大致上與初始 synchonous 版本相同。 程式碼尚未利用一些主要功能，也就是非同步程式設計。
+> 總經過時間大致上與初始 synchonous 版本相同。 程式碼尚未利用非同步程式設計的一些主要功能。
 
 > [!TIP]
 > 、和的方法主體 `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` 全都已更新為 `Task<Egg>` 分別傳回、 `Task<Bacon>` 和 `Task<Toast>` 。 方法會從其原始版本重新命名，以包含 "Async" 尾碼。 其執行方式會顯示為本文稍後的[最終版本](#final-version)的一部分。

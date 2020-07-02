@@ -1,17 +1,18 @@
 ---
-title: 如何：手動建立包裝函式
+title: 作法：手動建立包裝函式
+description: 手動建立 COM 類型的包裝函式。 使用現有的 IDL 檔案或類型程式庫，或建立 managed 宣告，並將元件匯出至類型程式庫。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e562a7e963ff744bf9193821d54dd898db521464
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619581"
 ---
-# <a name="how-to-create-wrappers-manually"></a>如何：手動建立包裝函式
+# <a name="how-to-create-wrappers-manually"></a>作法：手動建立包裝函式
 若您決定在 Managed 原始程式碼中手動宣告 COM 類型，現有的介面定義語言 (IDL) 檔或類型程式庫，將會是最佳的啟動位置。 沒有 IDL 檔案或無法產生類型程式庫檔案時，可建立 Managed 宣告並將所產生的組件匯出至類型程式庫，進而模擬 COM類型。  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>從 Managed 原始檔模擬 COM 類型  

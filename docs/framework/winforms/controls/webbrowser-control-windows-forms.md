@@ -1,20 +1,21 @@
 ---
 title: WebBrowser 控制項
+description: 瞭解 Windows Forms WebBrowser 控制項如何裝載網頁，並為您的應用程式提供網頁流覽功能。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WebBrowser control [Windows Forms]
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-ms.openlocfilehash: b2dc9d124623d8018356c147c34ac6bc8da82209
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3961a4071929a1688b3f9c1e9b2d30835b487f89
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619672"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 控制項 (Windows Form)
-Windows Forms `WebBrowser` 控制項裝載網頁，並提供 Web 流覽功能給您的應用程式。  
+Windows Forms `WebBrowser` 控制項裝載網頁，並提供 web 流覽功能給您的應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
  [WebBrowser 控制項概觀](webbrowser-control-overview.md)  
@@ -23,7 +24,7 @@ Windows Forms `WebBrowser` 控制項裝載網頁，並提供 Web 流覽功能給
  [WebBrowser 安全性](webbrowser-security.md)  
  說明與控制項相關的安全性問題。  
   
- [操作說明：使用 WebBrowser 控制項巡覽至 URL](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [如何：使用 WebBrowser 控制項巡覽至 URL](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  示範如何使用控制項來流覽至特定的 URL。  
   
  [操作說明：使用 WebBrowser 控制項列印](how-to-print-with-a-webbrowser-control.md)  
@@ -39,7 +40,7 @@ Windows Forms `WebBrowser` 控制項裝載網頁，並提供 Web 流覽功能給
  描述如何在應用程式代碼與控制項所裝載之網頁中的 DHTML 之間設定雙向通訊。  
   
  [使用 Managed HTML 文件物件模型](using-the-managed-html-document-object-model.md)  
- 提供主題，說明如何操作或建立由 <xref:System.Windows.Forms.WebBrowser> 控制項所裝載的 HTML 頁面。  
+ 提供主題，說明如何操作或建立控制項所裝載的 HTML 頁面 <xref:System.Windows.Forms.WebBrowser> 。  
   
 ## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.WebBrowser> 類別  
@@ -80,4 +81,4 @@ Windows Forms `WebBrowser` 控制項裝載網頁，並提供 Web 流覽功能給
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

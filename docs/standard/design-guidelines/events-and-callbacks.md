@@ -8,12 +8,12 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4000944c3b913f71bc18462cea9062e9237ae53f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619529"
 ---
 # <a name="events-and-callbacks"></a>事件和回呼
 回呼是擴充點，可讓架構透過委派回呼使用者程式碼。 這些委派通常會透過方法的參數傳遞至架構。
@@ -30,7 +30,7 @@ ms.locfileid: "84289794"
 
  ✔️ `Func<...>` `Action<...>` `Expression<...>` 在定義具有回呼的 api 時，請使用新的、或類型，而不是自訂委派。
 
- `Func<...>`和 `Action<...>` 代表泛型委派。 `Expression<...>`表示函式定義，可以在執行時間進行編譯並接著叫用，但也可以序列化並傳遞至遠端進程。
+ `Func<...>`和 `Action<...>` 代表泛型委派。 `Expression<...>`表示函式定義，可以在執行時間編譯並接著叫用，但也可以序列化並傳遞至遠端進程。
 
  ✔️會測量並瞭解使用的效能含意 `Expression<...>` ，而不是使用 `Func<...>` 和 `Action<...>` 委派。
 
@@ -38,7 +38,7 @@ ms.locfileid: "84289794"
 
  ✔️確實瞭解，藉由呼叫委派，您會執行任意程式碼，而且可能會有安全性、正確性和相容性的影響。
 
- *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
+ *部分 &copy; 2005，2009 Microsoft Corporation。已保留擁有權限。*
 
  獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。**
 
