@@ -1,55 +1,57 @@
 ---
-title: 在 Windows 上為 Apache Spark 應用程式構建 .NET
-description: 瞭解如何在 Windows 上為 Apache Spark 應用程式構建 .NET。
-ms.date: 01/29/2020
+title: 在 Windows 上建立適用于 Apache Spark 應用程式的 .NET
+description: 瞭解如何在 Windows 上建立適用于 Apache Spark 應用程式的 .NET。
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: cb7154185fc9aa08bc447cb846798995301a6651
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d52e5be8c8e528880eece5a9b46fb08933c1eb3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617661"
 ---
-# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>瞭解如何在 Windows 上為 Apache Spark 應用程式構建 .NET
+# <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>瞭解如何在 Windows 上建立適用于 Apache Spark 應用程式的 .NET
 
-本文教您如何在 Windows 上為 Apache Spark 應用程式構建 .NET。
+本文會教您如何在 Windows 上建立適用于 Apache Spark 應用程式的 .NET。
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>必要條件
 
-如果您已經具備以下所有先決條件，請跳到[生成](#build)步驟。
+如果您已經擁有下列所有必要條件，請跳至[組建](#build)步驟。
 
-  1. 下載並安裝**[.NET 核心 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** - 安裝`dotnet`SDK 會將工具鏈添加到您的路徑中。 .NET 核心 2.1、2.2 和 3.1 支援。
-  2. 安裝**[Visual Studio 2019（](https://www.visualstudio.com/downloads/)** 版本 16.3 或更高版本）。 社區版本是完全免費的。 配置安裝時，至少包括以下元件：
+  1. 下載並安裝**[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** -安裝 SDK 會將 `dotnet` 工具鏈新增至您的路徑。 支援 .NET Core 2.1、2.2 和3.1。
+  2. 安裝**[Visual Studio 2019](https://www.visualstudio.com/downloads/)** （版本16.3 或更新版本）。 此社區版本完全免費。 設定安裝時，請至少包含下列元件：
      * .NET 桌面開發
-       * 所有必需的元件
+       * 所有必要元件
          * .NET Framework 4.6.1 開發工具
      * .NET Core 跨平台開發
-       * 所有必需的元件
+       * 所有必要元件
   3. 安裝**[JAVA 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**。
-     - 為您的作業系統選取適當版本。 例如，適用于 Windows x64 電腦的*jdk-8u201-windows-x64.exe。*
-     - 使用安裝程式進行安裝，並驗證您能夠從命令`java`行運行。
-  4. 安裝**[阿帕奇馬文3.6.0+。](https://maven.apache.org/download.cgi)**
+     - 為您的作業系統選取適當版本。 例如， *jdk-8u201-windows-x64.exe* Windows x64 電腦。
+     - 使用安裝程式進行安裝，並確認您能夠 `java` 從命令列執行。
+  4. 安裝**[Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi)**。
      - 下載 [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip)。
-     - 解壓縮到本機目錄。 例如，[C：\bin_apache-maven-3.6.0。\*
-     - 將 Apache Maven 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 例如 *，C：\bin_apache-maven-3.6.0\bin*。
-     - 驗證是否能夠從命令列`mvn`運行。
-  5. 安裝**[阿帕奇火花2.3+。](https://spark.apache.org/downloads.html)**
-     - 下載[Apache Spark 2.3+](https://spark.apache.org/downloads.html)並將其提取到本地資料夾中（例如 *，C：\bin_spark-2.3.2-bin-hadoop2.7），\*使用[7-zip](https://www.7-zip.org/)。（支援的火花版本是 2.3、* 2.4.0、 2.4.1、 2.4.3 和 2.4.4）
-     - 添加新[的環境變數](https://www.java.com/en/download/help/path.xml)`SPARK_HOME`。 例如，[C：\bin_spark-2.3.2-bin-hadoop2.7。\*
+     - 解壓縮到本機目錄。 例如，* C:\bin\apache-maven-3.6.0 \* 。
+     - 將 Apache Maven 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 例如， *C:\bin\apache-maven-3.6.0\bin*。
+     - 確認您能夠 `mvn` 從命令列執行。
+  5. 安裝**[Apache Spark 2.3 +](https://spark.apache.org/downloads.html)**。
+     - 下載[Apache Spark 2.3 +](https://spark.apache.org/downloads.html) ，並* \* 使用[7-zip](https://www.7-zip.org/)將它解壓縮至本機資料夾（例如 C:\bin\spark-2.3.2-bin-hadoop2.7）。（支援的 spark 版本為 2.3.*、2.4.0、2.4.1、2.4.3 和2.4.4）
+     - [新增環境變數](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` 。 例如，* C:\bin\spark-2.3.2-bin-hadoop2.7 \* 。
 
        ```powershell
        set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\
        ```
 
-     - 將 Apache Spark 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 例如 *，C：\bin_spark-2.3.2-bin-hadoop2.7\bin*。
+     - 將 Apache Spark 新增到您的 [PATH 環境變數](https://www.java.com/en/download/help/path.xml)之中。 例如， *C:\bin\spark-2.3.2-bin-hadoop2.7\bin*。
 
        ```powershell
        set PATH=%SPARK_HOME%\bin;%PATH%
        ```
 
-     - 驗證是否能夠從命令列`spark-shell`運行。
-        示例主控台輸出：
+     - 確認您能夠 `spark-shell` 從命令列執行。
+        範例主控台輸出：
 
         ```
         Welcome to
@@ -69,57 +71,57 @@ ms.locfileid: "79185750"
 
         </details>
 
-  6. 安裝**[WinUtils](https://github.com/steveloughran/winutils)**。
-     - 從`winutils.exe` [WinUtils 存儲庫](https://github.com/steveloughran/winutils)下載二進位檔案。 您應該選擇使用 Spark 分發編譯的 Hadoop 版本。 對於考試，使用有 2.7.1 用於 Spark 2.3.2。
-     - 將`winutils.exe`二進位檔案保存到您選擇的目錄中。 例如 *，C：\hadoop\bin。*
-     - 設置為`HADOOP_HOME`使用 winutils.exe（無 bin）反映目錄。 例如，使用命令列：
+  6. 安裝**[winutils.exe](https://github.com/steveloughran/winutils)**。
+     - `winutils.exe`從 winutils.exe 存放[庫](https://github.com/steveloughran/winutils)下載二進位檔。 您應該選取用來編譯 Spark 發佈的 Hadoop 版本。 針對 exammple，請使用適用于 Spark 2.3.2 的 hadoop 2.7.1。
+     - 將 `winutils.exe` 二進位檔儲存到您選擇的目錄。 例如， *C:\hadoop\bin*。
+     - 設定 `HADOOP_HOME` 以反映具有 winutils.exe 的目錄（不含 bin）。 例如，使用命令列：
 
        ```powershell
        set HADOOP_HOME=C:\hadoop
        ```
 
-     - 將 PATH 環境變數`%HADOOP_HOME%\bin`設置為包括 。 例如，使用命令列：
+     - 將 PATH 環境變數設定為包含 `%HADOOP_HOME%\bin` 。 例如，使用命令列：
 
        ```powershell
        set PATH=%HADOOP_HOME%\bin;%PATH%
        ```
 
-在移動到下一節之前，`dotnet``java`請確保能夠`mvn`從`spark-shell`命令列運行 、、。 感覺有更好的方法嗎？ [打開問題](https://github.com/dotnet/spark/issues)，隨時作出貢獻。
+在 `dotnet` 移到下一節之前，請確定您能夠 `java` `mvn` `spark-shell` 從命令列執行、、。 覺得有更好的方法嗎？ 提出[問題](https://github.com/dotnet/spark/issues)，並歡迎您參與。
 
 > [!NOTE]
-> 如果更新了任何環境變數，則可能需要命令列的新實例。
+> 如果更新任何環境變數，可能需要新的命令列實例。
 
 ## <a name="build"></a>Build
 
-在本指南的其餘部分中，您需要將 Apache Spark 的 .NET 存儲庫克隆到您的電腦中。 您可以選擇克隆存儲庫的任何位置。 例如，[C：github]點網火花\*。
+在本指南的其餘部分，您必須將 Apache Spark 存放庫的 .NET 複製到您的電腦。 您可以為複製的存放庫選擇任何位置。 例如，* C:\github\dotnet-spark \* 。
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
 ```
 
-### <a name="build-net-for-apache-spark-scala-extensions-layer"></a>為阿帕奇火花斯卡拉擴展層構建 .NET
+### <a name="build-net-for-apache-spark-scala-extensions-layer"></a>Apache Spark Scala extensions 層的組建 .NET
 
-提交 .NET 應用程式時，Apache Spark 的 .NET 具有用 Scala 編寫的必要邏輯，該邏輯通知 Apache Spark 如何處理您的請求（例如，請求創建新 Spark 會話、請求將資料從 .NET 端傳輸到 JVM 端等）。 此邏輯可以在[.NET 中找到 Spark Scala 原始程式碼](https://github.com/dotnet/spark/tree/master/src/scala)。
+當您提交 .NET 應用程式時，.NET for Apache Spark 具有以 Scala 撰寫的必要邏輯，會通知 Apache Spark 如何處理您的要求（例如，要求建立新的 Spark 會話，要求將資料從 .NET 端傳輸到 JVM 端等等）。 您可以在[適用于 Spark 的 .Net Scala 原始程式碼](https://github.com/dotnet/spark/tree/master/src/scala)中找到此邏輯。
 
-無論您是使用 .NET 框架還是 .NET Core，都需要為 Apache Spark Scala 擴展層構建 .NET：
+無論您使用的是 .NET Framework 或 .NET Core，都必須建立 .NET for Apache Spark Scala 擴充層：
 
 ```powershell
 cd src\scala
 mvn clean package
 ```
 
-您應該會看到為支援的 Spark 版本創建的 JAR：
+您應該會看到針對支援的 Spark 版本所建立的 Jar：
 
 * `microsoft-spark-2.3.x\target\microsoft-spark-2.3.x-<version>.jar`
 * `microsoft-spark-2.4.x\target\microsoft-spark-2.4.x-<version>.jar`
 
-### <a name="build-the-net-for-spark-sample-applications"></a>為 Spark 應用程式範例構建 .NET
+### <a name="build-the-net-for-spark-sample-applications"></a>建立適用于 Spark 的 .NET 範例應用程式
 
-本節介紹如何為 Apache Spark 構建 .NET[的應用程式範例](https://github.com/dotnet/spark/tree/master/examples)。 這些步驟將有助於瞭解任何 .NET 用於 Spark 應用程式的總體構建過程。
+本節說明如何為 Apache Spark 建立適用于 .NET 的[範例應用程式](https://github.com/dotnet/spark/tree/master/examples)。 這些步驟將協助您瞭解任何適用于 Spark 應用程式的 .NET 的整體建立流程。
 
-#### <a name="using-visual-studio-for-net-framework"></a>將視覺化工作室用於 .NET 框架
+#### <a name="using-visual-studio-for-net-framework"></a>使用 .NET Framework 的 Visual Studio
 
-  1. 在`src\csharp\Microsoft.Spark.sln`Visual Studio 中`Microsoft.Spark.CSharp.Examples`打開並在`examples`資料夾下生成專案（這反過來還將生成 .NET 繫結項目目）。 如果需要，可以在`Microsoft.Spark.Examples`專案中編寫自己的代碼（此示例中的"input_file.json"是一個 json 檔，該檔包含要創建資料框的資料：
+  1. `src\csharp\Microsoft.Spark.sln`在 Visual Studio 中開啟，並在 `Microsoft.Spark.CSharp.Examples` 資料夾下建立專案 `examples` （這也會再建立 .net 系結專案）。 如有需要，您可以在專案中撰寫自己的程式碼 `Microsoft.Spark.Examples` （在此範例中，' input_file.json ' 是 json 檔案，其中包含您想要用來建立資料框架的資料）：
   
       ```csharp
         // Instantiate a session
@@ -138,8 +140,8 @@ mvn clean package
         df.Filter(df["age"] > 21).Show();
       ```
 
-     生成成功後，您將看到輸出目錄中生成的相應二進位檔案。
-     示例主控台輸出：
+     組建成功之後，您會看到輸出目錄中產生的適當二進位檔。
+     範例主控台輸出：
 
       ```powershell
             Directory: C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461
@@ -161,19 +163,19 @@ mvn clean package
         ------------------------------------------- More framework files -------------------------------------
       ```
 
-#### <a name="using-net-core-cli-for-net-core"></a>將 .NET 核心 CLI 用於 .NET 內核
+#### <a name="using-net-core-cli-for-net-core"></a>使用適用于 .NET Core 的 .NET Core CLI
 
 > [!NOTE]
-> 我們目前正在為 Spark .NET 自動化 .NET 核心構建。 在此之前，我們感謝您手動執行某些步驟的耐心。
+> 我們目前正致力於將適用于 Spark .NET 的 .NET Core 組建自動化。 在那之前，我們非常感謝您的耐心等候您手動執行一些步驟。
 
-  1. 生成工作人員：
+  1. 建立背景工作：
 
       ```powershell
       cd C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker\
       dotnet publish -f netcoreapp2.1 -r win10-x64
       ```
 
-      示例主控台輸出：
+      範例主控台輸出：
 
       ```powershell
       PS C:\github\dotnet-spark\src\csharp\Microsoft.Spark.Worker> dotnet publish -f netcoreapp2.1 -r win10-x64
@@ -187,14 +189,14 @@ mvn clean package
         Microsoft.Spark.Worker -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish\
       ```
 
-  2. 生成示例：
+  2. 建立範例：
 
       ```powershell
       cd C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples\
       dotnet publish -f netcoreapp2.1 -r win10-x64
       ```
 
-      示例主控台輸出：
+      範例主控台輸出：
 
       ```powershell
       PS C:\github\dotnet-spark\examples\Microsoft.Spark.CSharp.Examples> dotnet publish -f netcoreapp2.1 -r win10-x64
@@ -208,23 +210,23 @@ mvn clean package
         Microsoft.Spark.CSharp.Examples -> C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish\
       ```
 
-## <a name="run-the-net-for-spark-sample-applications"></a>為 Spark 應用程式範例運行 .NET
+## <a name="run-the-net-for-spark-sample-applications"></a>執行適用于 Spark 的 .NET 範例應用程式
 
-生成示例後，無論目標是 .NET Framework`spark-submit`還是 .NET Core，運行示例都將完成。 請確保您已遵循[先決條件](#prerequisites)部分並安裝了 Apache Spark。
+當您建立範例之後， `spark-submit` 無論您是以 .NET Framework 或 .Net Core 為目標，都可以執行它們。 請確定您已遵循[必要條件](#prerequisites)一節，並已安裝 Apache Spark。
 
-  1. 將`DOTNET_WORKER_DIR`或`PATH`環境變數設置為包括已生成`Microsoft.Spark.Worker`二進位檔案的路徑（例如 *，C：github_dotnet_spark_x_x_x_s_x_microsoft.Spark.Worker_debug_net461*表示 .NET Framework，C：_gitnet_dotnet-spark_工件*\Microsoft.Spark.Worker_Debug_netcoreapp2.1_win10-x64_發佈*為 .NET Core）：
+  1. 將 `DOTNET_WORKER_DIR` 或 `PATH` 環境變數設定為包含 `Microsoft.Spark.Worker` 已產生二進位檔的路徑（例如， *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* for .NET Framework， *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish* for .net Core）：
 
       ```powershell
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
       ```
   
-  2. 打開 Powershell 並轉到已生成應用二進位的目錄（例如 *，C：github_dotnet_spark_sas_microsoft.Spark.CSharp.示例_debug_net461*的 .NET *Framework，C：_gitnet_spark_t_t_t_s_t_s_t_sat_Sa.Spark.CSharp.example_debug_netcore2.1_win10-x64_發佈*為 .NET Core）：
+  2. 開啟 Powershell 並移至已產生應用程式二進位檔的目錄（例如， *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* for .NET Framework， *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish* for .net Core）：
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish
       ```
 
-  3. 運行應用遵循基本結構：
+  3. 執行您的應用程式會遵循基本結構：
 
      ```powershell
      spark-submit.cmd `
@@ -235,9 +237,9 @@ mvn clean package
        <path-to-your-app-exe> <argument(s)-to-your-app>
      ```
 
-     下面是您可以運行的一些示例：
+     以下是您可以執行的一些範例：
 
-     - **[微軟.Spark.示例.Sql.Batch.基本](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
+     - **[Microsoft.Spark.Examples.Sql.Batch。基本](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/Basic.cs)**
 
          ```powershell
          spark-submit.cmd `
@@ -247,7 +249,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Batch.Basic %SPARK_HOME%\examples\src\main\resources\people.json
          ```
 
-     - **[微軟.Spark.示例.Sql.流式處理.結構化網路WordCount](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
+     - **[StructuredNetworkWordCount 的範例中。](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)**
 
          ```powershell
          spark-submit.cmd `
@@ -257,7 +259,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkWordCount localhost 9999
          ```
 
-     - **[微軟.Spark.示例.Sql.Streaming.結構化卡夫卡WordCount（可訪問）](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+     - **[StructuredKafkaWordCount （可供存取 maven）。](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
          ```powershell
          spark-submit.cmd `
@@ -268,7 +270,7 @@ mvn clean package
          Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredKafkaWordCount localhost:9092 subscribe test
          ```
 
-     - **[微軟.Spark.示例.Sql.Streaming.結構化卡夫卡WordCount（提供jars）](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
+     - **[StructuredKafkaWordCount （所提供的 jar）。](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)**
 
          ```powershell
          spark-submit.cmd

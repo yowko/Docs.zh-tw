@@ -1,17 +1,18 @@
 ---
 title: 將 .NET 元件公開給 COM
+description: 將 .NET 元件公開給 COM。 限定交互操作的 .NET 類型。 套用 interop 屬性。 封裝 COM 的元件。 使用 COM 的 managed 類型。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-ms.openlocfilehash: 09045fb455a2163641d6f4af0ba07520ead59f1e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 918c90f6741047f7d3cdf89a9b182700ecb2ed93
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617453"
 ---
 # <a name="exposing-net-components-to-com"></a>將 .NET 元件公開給 COM
 
@@ -51,5 +52,5 @@ ms.locfileid: "73123478"
 
 ## <a name="see-also"></a>另請參閱
 
-- [與非受控程式碼交互操作](index.md)
+- [與 Unmanaged 程式碼互通](index.md)
 - [COM Interop 範例：COM 用戶端與 .NET 伺服器](com-interop-sample-com-client-and-net-server.md)

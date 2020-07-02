@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 0de86fd8fd9aaafa238f27f56de0051d61e25176
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9e331a1ae4ca4117ab0c27fde4e04ef53ad83990
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617505"
 ---
 # <a name="keywords-visual-basic"></a>關鍵字 (Visual Basic)
 
@@ -30,54 +30,54 @@ ms.locfileid: "84373690"
 
 |||||
 |---|---|---|---|
-|[AddHandler](../statements/addhandler-statement.md)|[AddressOf](../operators/addressof-operator.md)|[鋸齒](../statements/alias-clause.md)|[和](../operators/and-operator.md)|  
-|[AndAlso](../operators/andalso-operator.md)|[一旦](../statements/as-clause.md)|[Boolean](../data-types/boolean-data-type.md)|[RemoveHandler](../modifiers/byref.md)|  
-|[節](../data-types/byte-data-type.md)|[ByVal](../modifiers/byval.md)|[呼叫](../statements/call-statement.md)|[例圖](../statements/select-case-statement.md)|  
-|[抓住](../statements/try-catch-finally-statement.md)|[CBool](../functions/type-conversion-functions.md)|[CByte](../functions/type-conversion-functions.md)|[CChar](../functions/type-conversion-functions.md)|  
-|[CDate](../functions/type-conversion-functions.md)|[CDbl](../functions/type-conversion-functions.md)|[CDec](../functions/type-conversion-functions.md)|[Char](../data-types/char-data-type.md)|  
-|[CInt](../functions/type-conversion-functions.md)|[類別條件約束](../statements/type-list.md)|[Class 陳述式](../statements/class-statement.md)|[CLng](../functions/type-conversion-functions.md)|  
-|[CObj](../functions/type-conversion-functions.md)|[賦值](../statements/const-statement.md)|[繼續](../statements/continue-statement.md)|[CSByte](../functions/type-conversion-functions.md)|  
-|[CShort](../functions/type-conversion-functions.md)|[CSng](../functions/type-conversion-functions.md)|[CStr](../functions/type-conversion-functions.md)|[CType](../functions/type-conversion-functions.md)|  
-|[CUInt](../functions/type-conversion-functions.md)|[CULng](../functions/type-conversion-functions.md)|[CUShort](../functions/type-conversion-functions.md)|[日期](../data-types/date-data-type.md)|  
-|[十進位](../data-types/decimal-data-type.md)|[聲明](../statements/declare-statement.md)|[預設值](../modifiers/default.md)|[代理人](../statements/delegate-statement.md)|  
-|[顯](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[對](../statements/do-loop-statement.md)|[兩](../data-types/double-data-type.md)|  
-|[彼此](../statements/for-each-next-statement.md)|[東西](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[End 語句](../statements/end-statement.md)|  
-|[成品\<keyword>](../statements/end-keyword-statement.md)|`EndIf`|[列舉](../statements/enum-statement.md)|[抹](../statements/erase-statement.md)|  
-|[錯誤](../statements/on-error-statement.md)|[事件](../statements/event-statement.md)|[結束](../statements/exit-statement.md)|[False](../data-types/boolean-data-type.md)|  
-|[一點](../statements/try-catch-finally-statement.md)|[For (在 For…Next 中)](../statements/for-next-statement.md)|[For Each…Next](../statements/for-each-next-statement.md)|[給](../modifiers/friend.md)|  
-|[Function](../statements/function-statement.md)|[獲取](../statements/get-statement.md)|[GetType](../operators/gettype-operator.md)|[GetXMLNamespace](../operators/getxmlnamespace-operator.md)|  
-|[全球](../../programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../statements/goto-statement.md)|[控制代碼](../statements/handles-clause.md)|  
-|[只有](../statements/if-then-else-statement.md)|[If （）](../operators/if-operator.md)|[實作](../statements/implements-clause.md)|[Implements 陳述式](../statements/implements-statement.md)|  
-|[Imports (.NET 命名空間和類型)](../statements/imports-statement-net-namespace-and-type.md)|[Imports (XML 命名空間)](../statements/imports-statement-xml-namespace.md)|[位於](../statements/in-clause.md)|[In （泛型修飾詞）](../modifiers/in-generic-modifier.md)|  
-|[沿用](../statements/inherits-statement.md)|[整數](../data-types/integer-data-type.md)|[介面](../statements/interface-statement.md)|[均](../operators/is-operator.md)|  
-|[IsNot](../operators/isnot-operator.md)|[現在](../queries/let-clause.md)|[Lib](../statements/declare-statement.md)|[就](../operators/like-operator.md)|  
-|[Long](../data-types/long-data-type.md)|[進入](../statements/do-loop-statement.md)|[我](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)|[乘](../operators/mod-operator.md)|  
-|[模組](../modifiers/module-keyword.md)|[Module 陳述式](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[New](../modifiers/mustoverride.md)|  
-|[MyBase](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[MyClass](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Namespace](../statements/namespace-statement.md)|
-|[Narrowing](../modifiers/narrowing.md)|[New 條件約束](../statements/type-list.md)|[New 運算子](../operators/new-operator.md)|[下一步](../statements/for-next-statement.md)|
-|[Next (在 Resume 中)](../statements/resume-statement.md)|[Not](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
-|[NotOverridable](../modifiers/notoverridable.md)|[Object](../data-types/object-data-type.md)|[的](../statements/of-clause.md)|[開啟](../../misc/on.md)|
-|[運算子](../statements/operator-statement.md)|[選項](../statements/option-keyword-statement.md)|[選擇性](../modifiers/optional.md)|[或](../operators/or-operator.md)|
-|[OrElse](../operators/orelse-operator.md)|[Out （泛型修飾詞）](../modifiers/out-generic-modifier.md)|[多載](../modifiers/overloads.md)|[Overrides](../modifiers/overridable.md)|
-|[覆寫](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Partial](../modifiers/partial.md)|[私用](../modifiers/private.md)|
-|[屬性](../statements/property-statement.md)|[免受](../modifiers/protected.md)|[公開](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
-|[唯讀](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[剩餘](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
-|[繼續](../statements/resume-statement.md)|[退貨](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[選取](../statements/select-case-statement.md)|
-[設定](../statements/set-statement.md)|[Shadows](../modifiers/shadows.md)|[共用][](../modifiers/shared.md)|[短缺](../data-types/short-data-type.md)|
-|[Single](../data-types/single-data-type.md)|[靜態](../modifiers/static.md)|[步驟](../statements/for-next-statement.md)|[停止](../statements/stop-statement.md)|
-|[String](../data-types/string-data-type.md)|[結構條件約束](../statements/type-list.md)|[Structure 陳述式](../statements/structure-statement.md)|[Sub](../statements/sub-statement.md)|
-|[SyncLock](../statements/synclock-statement.md)|[請](../statements/then-statement.md)|[放棄](../statements/throw-statement.md)|[若要](../statements/for-next-statement.md)|
-|[真正](../data-types/boolean-data-type.md)|[次](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf…Is](../operators/typeof-operator.md)|
-|[UInteger](../data-types/uinteger-data-type.md)|[ULong](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[用](../statements/using-statement.md)|
-|`Variant`|`Wend`|[即使](../statements/try-catch-finally-statement.md)|[等待](../statements/while-end-while-statement.md)|
-[Widening](../modifiers/widening.md)|[熟悉](../statements/with-end-with-statement.md)|[WithEvents](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|
-[Xor](../operators/xor-operator.md)|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|
-|[#End](../directives/if-then-else-directives.md)|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|
-|[&=](../operators/and-assignment-operator.md)|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|
-[/=](../operators/floating-point-division-assignment-operator.md)|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|
-|[^=](../operators/exponentiation-assignment-operator.md)|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|
-|[-=](../operators/subtraction-assignment-operator.md)|[>> 運算子](../operators/right-shift-operator.md)|[>>= 運算子](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|
-|[<\<=](../operators/left-shift-assignment-operator.md)|
+|[`AddHandler`](../statements/addhandler-statement.md)|[`AddressOf`](../operators/addressof-operator.md)|[`Alias`](../statements/alias-clause.md)|[`And`](../operators/and-operator.md)|
+|[`AndAlso`](../operators/andalso-operator.md)|[`As`](../statements/as-clause.md)|[`Boolean`](../data-types/boolean-data-type.md)|[`ByRef`](../modifiers/byref.md)|
+|[`Byte`](../data-types/byte-data-type.md)|[`ByVal`](../modifiers/byval.md)|[`Call`](../statements/call-statement.md)|[`Case`](../statements/select-case-statement.md)|
+|[`Catch`](../statements/try-catch-finally-statement.md)|[`CBool`](../functions/type-conversion-functions.md)|[`CByte`](../functions/type-conversion-functions.md)|[`CChar`](../functions/type-conversion-functions.md)|
+|[`CDate`](../functions/type-conversion-functions.md)|[`CDbl`](../functions/type-conversion-functions.md)|[`CDec`](../functions/type-conversion-functions.md)|[`Char`](../data-types/char-data-type.md)|
+|[`CInt`](../functions/type-conversion-functions.md)|[`Class`Constraint](../statements/type-list.md)|[`Class`句](../statements/class-statement.md)|[`CLng`](../functions/type-conversion-functions.md)|
+|[`CObj`](../functions/type-conversion-functions.md)|[`Const`](../statements/const-statement.md)|[`Continue`](../statements/continue-statement.md)|[`CSByte`](../functions/type-conversion-functions.md)|
+|[`CShort`](../functions/type-conversion-functions.md)|[`CSng`](../functions/type-conversion-functions.md)|[`CStr`](../functions/type-conversion-functions.md)|[`CType`](../functions/type-conversion-functions.md)|
+|[`CUInt`](../functions/type-conversion-functions.md)|[`CULng`](../functions/type-conversion-functions.md)|[`CUShort`](../functions/type-conversion-functions.md)|[`Date`](../data-types/date-data-type.md)|
+|[`Decimal`](../data-types/decimal-data-type.md)|[`Declare`](../statements/declare-statement.md)|[`Default`](../modifiers/default.md)|[`Delegate`](../statements/delegate-statement.md)|
+|[`Dim`](../statements/dim-statement.md)|[`DirectCast`](../operators/directcast-operator.md)|[`Do`](../statements/do-loop-statement.md)|[`Double`](../data-types/double-data-type.md)|
+|[`Each`](../statements/for-each-next-statement.md)|[`Else`](../statements/else-statement.md)|[`ElseIf`](../statements/if-then-else-statement.md)|[`End`句](../statements/end-statement.md)|
+|[`End` \<keyword>](../statements/end-keyword-statement.md)|`EndIf`|[`Enum`](../statements/enum-statement.md)|[`Erase`](../statements/erase-statement.md)|
+|[`Error`](../statements/on-error-statement.md)|[`Event`](../statements/event-statement.md)|[`Exit`](../statements/exit-statement.md)|[`False`](../data-types/boolean-data-type.md)|
+|[`Finally`](../statements/try-catch-finally-statement.md)|[`For`（在中 `For…Next` ）](../statements/for-next-statement.md)|[`For Each…Next`](../statements/for-each-next-statement.md)|[`Friend`](../modifiers/friend.md)|
+|[`Function`](../statements/function-statement.md)|[`Get`](../statements/get-statement.md)|[`GetType`](../operators/gettype-operator.md)|[`GetXMLNamespace`](../operators/getxmlnamespace-operator.md)|
+|[`Global`](../../programming-guide/program-structure/namespaces.md)|`GoSub`|[`GoTo`](../statements/goto-statement.md)|[`Handles`](../statements/handles-clause.md)|
+|[`If`](../statements/if-then-else-statement.md)|[`If()`](../operators/if-operator.md)|[`Implements`](../statements/implements-clause.md)|[`Implements`句](../statements/implements-statement.md)|
+|[`Imports`（.NET 命名空間和類型）](../statements/imports-statement-net-namespace-and-type.md)|[`Imports`（XML 命名空間）](../statements/imports-statement-xml-namespace.md)|[`In`](../statements/in-clause.md)|[`In`（泛型修飾詞）](../modifiers/in-generic-modifier.md)|
+|[`Inherits`](../statements/inherits-statement.md)|[`Integer`](../data-types/integer-data-type.md)|[`Interface`](../statements/interface-statement.md)|[`Is`](../operators/is-operator.md)|
+|[`IsNot`](../operators/isnot-operator.md)|[`Let`](../queries/let-clause.md)|[`Lib`](../statements/declare-statement.md)|[`Like`](../operators/like-operator.md)|
+|[`Long`](../data-types/long-data-type.md)|[`Loop`](../statements/do-loop-statement.md)|[`Me`](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)|[`Mod`](../operators/mod-operator.md)|
+|[`Module`](../modifiers/module-keyword.md)|[`Module`句](../statements/module-statement.md)|[`MustInherit`](../modifiers/mustinherit.md)|[`MustOverride`](../modifiers/mustoverride.md)|
+|[`MyBase`](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[`MyClass`](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[`NameOf`](../operators/nameof.md)|[`Namespace`](../statements/namespace-statement.md)|
+|[`Narrowing`](../modifiers/narrowing.md)|[`New`Constraint](../statements/type-list.md)|[`New`操作](../operators/new-operator.md)|[`Next`](../statements/for-next-statement.md)|
+|[`Next`（在中 `Resume` ）](../statements/resume-statement.md)|[`Not`](../operators/not-operator.md)|[`Nothing`](../nothing.md)|[`NotInheritable`](../modifiers/notinheritable.md)|
+|[`NotOverridable`](../modifiers/notoverridable.md)|[`Object`](../data-types/object-data-type.md)|[`Of`](../statements/of-clause.md)|[`On`](../../misc/on.md)|
+|[`Operator`](../statements/operator-statement.md)|[`Option`](../statements/option-keyword-statement.md)|[`Optional`](../modifiers/optional.md)|[`Or`](../operators/or-operator.md)|
+|[`OrElse`](../operators/orelse-operator.md)|[`Out`（泛型修飾詞）](../modifiers/out-generic-modifier.md)|[`Overloads`](../modifiers/overloads.md)|[`Overridable`](../modifiers/overridable.md)|
+|[`Overrides`](../modifiers/overrides.md)|[`ParamArray`](../modifiers/paramarray.md)|[`Partial`](../modifiers/partial.md)|[`Private`](../modifiers/private.md)|
+|[`Property`](../statements/property-statement.md)|[`Protected`](../modifiers/protected.md)|[`Public`](../modifiers/public.md)|[`RaiseEvent`](../statements/raiseevent-statement.md)|
+|[`ReadOnly`](../modifiers/readonly.md)|[`ReDim`](../statements/redim-statement.md)|[`REM`](../statements/rem-statement.md)|[`RemoveHandler`](../statements/removehandler-statement.md)|
+|[`Resume`](../statements/resume-statement.md)|[`Return`](../statements/return-statement.md)|[`SByte`](../data-types/sbyte-data-type.md)|[`Select`](../statements/select-case-statement.md)|
+[`Set`](../statements/set-statement.md)|[`Shadows`](../modifiers/shadows.md)|[`Shared`](../modifiers/shared.md)|[`Short`](../data-types/short-data-type.md)|
+|[`Single`](../data-types/single-data-type.md)|[`Static`](../modifiers/static.md)|[`Step`](../statements/for-next-statement.md)|[`Stop`](../statements/stop-statement.md)|
+|[`String`](../data-types/string-data-type.md)|[`Structure`Constraint](../statements/type-list.md)|[`Structure`句](../statements/structure-statement.md)|[`Sub`](../statements/sub-statement.md)|
+|[`SyncLock`](../statements/synclock-statement.md)|[`Then`](../statements/then-statement.md)|[`Throw`](../statements/throw-statement.md)|[`To`](../statements/for-next-statement.md)|
+|[`True`](../data-types/boolean-data-type.md)|[`Try`](../statements/try-catch-finally-statement.md)|[`TryCast`](../operators/trycast-operator.md)|[`TypeOf…Is`](../operators/typeof-operator.md)|
+|[`UInteger`](../data-types/uinteger-data-type.md)|[`ULong`](../data-types/ulong-data-type.md)|[`UShort`](../data-types/ushort-data-type.md)|[`Using`](../statements/using-statement.md)|
+|`Variant`|`Wend`|[`When`](../statements/try-catch-finally-statement.md)|[`While`](../statements/while-end-while-statement.md)|
+[`Widening`](../modifiers/widening.md)|[`With`](../statements/with-end-with-statement.md)|[`WithEvents`](../modifiers/withevents.md)|[`WriteOnly`](../modifiers/writeonly.md)|
+[`Xor`](../operators/xor-operator.md)|[`#Const`](../directives/const-directive.md)|[`#Else`](../directives/if-then-else-directives.md)|[`#ElseIf`](../directives/if-then-else-directives.md)|
+|[`#End`](../directives/if-then-else-directives.md)|[`#If`](../directives/if-then-else-directives.md)|[`=`](../operators/assignment-operator.md)|[`&`](../operators/concatenation-operator.md)|
+|[`&=`](../operators/and-assignment-operator.md)|[`*`](../operators/multiplication-operator.md)|[`*=`](../operators/multiplication-assignment-operator.md)|[`/`](../operators/floating-point-division-operator.md)|
+[`/=`](../operators/floating-point-division-assignment-operator.md)|[`\`](../operators/integer-division-operator.md)|[`\=`](../operators/integer-division-assignment-operator.md)|[`^`](../operators/exponentiation-operator.md)|
+|[`^=`](../operators/exponentiation-assignment-operator.md)|[`+`](../operators/addition-operator.md)|[`+=`](../operators/addition-assignment-operator.md)|[`-`](../operators/subtraction-operator.md)|
+|[`-=`](../operators/subtraction-assignment-operator.md)|[`>>`操作](../operators/right-shift-operator.md)|[`>>=`操作](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|
+|[`<<=`](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
 > `EndIf`、 `GoSub` 、 `Variant` 和 `Wend` 會保留為保留的關鍵字，但不會再用於 Visual Basic。 `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../queries/let-clause.md)。
@@ -86,20 +86,20 @@ ms.locfileid: "84373690"
 
 下列不是保留關鍵字，表示您可以使用它們作為程式設計項目的名稱。 不過，不建議這麼做，因為它會讓程式碼很難讀取，而且可能會導致難以察覺的細微錯誤。
 
-|||||  
-|---|---|---|---|  
-|[Aggregate](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[組件](../modifiers/assembly.md)|[非同步](../modifiers/async.md)|  
-|[Auto](../modifiers/auto.md)|[遇到](../operators/await-operator.md)|[二進位](../statements/option-compare-statement.md)|[比較](../statements/option-compare-statement.md)|  
-|[Custom](../statements/event-statement.md)|[有別](../queries/distinct-clause.md)|[等](../queries/equals-clause.md)|[確切](../statements/option-explicit-statement.md)|  
-|[From](../queries/from-clause.md)|[分組依據](../queries/group-by-clause.md)|[群組聯結](../queries/group-join-clause.md)|[登錄](../statements/into-clause.md)|  
-|[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[Iterator](../modifiers/iterator.md)|[加入](../queries/join-clause.md)|  
-|[關鍵](../modifiers/key.md)|[Mid](../statements/mid-statement.md)|[關閉](../../misc/off.md)|[排序依據](../queries/order-by-clause.md)|  
-|[保留](../statements/redim-statement.md)|[跳過](../queries/skip-clause.md)|[Skip While](../queries/skip-while-clause.md)|[Strict](../statements/option-strict-statement.md)|  
-|[採取](../queries/take-clause.md)|[Take While](../queries/take-while-clause.md)|[文字](../statements/option-compare-statement.md)|[消除](../modifiers/unicode.md)|  
-|[否則](../statements/do-loop-statement.md)|[希望](../queries/where-clause.md)|[看出](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
-|[#Region](../directives/region-directive.md)||||  
-  
-## <a name="related-topics"></a>[相關主題]  
+|||||
+|---|---|---|---|
+|[`Aggregate`](../queries/aggregate-clause.md)|[`Ansi`](../modifiers/ansi.md)|[`Assembly`](../modifiers/assembly.md)|[`Async`](../modifiers/async.md)|
+|[`Auto`](../modifiers/auto.md)|[`Await`](../operators/await-operator.md)|[`Binary`](../statements/option-compare-statement.md)|[`Compare`](../statements/option-compare-statement.md)|
+|[`Custom`](../statements/event-statement.md)|[`Distinct`](../queries/distinct-clause.md)|[`Equals`](../queries/equals-clause.md)|[`Explicit`](../statements/option-explicit-statement.md)|
+|[`From`](../queries/from-clause.md)|[`Group By`](../queries/group-by-clause.md)|[`Group Join`](../queries/group-join-clause.md)|[`Into`](../statements/into-clause.md)|
+|[`IsFalse`](../operators/isfalse-operator.md)|[`IsTrue`](../operators/istrue-operator.md)|[`Iterator`](../modifiers/iterator.md)|[`Join`](../queries/join-clause.md)|
+|[`Key`](../modifiers/key.md)|[`Mid`](../statements/mid-statement.md)|[`Off`](../../misc/off.md)|[`Order By`](../queries/order-by-clause.md)|
+|[`Preserve`](../statements/redim-statement.md)|[`Skip`](../queries/skip-clause.md)|[`Skip While`](../queries/skip-while-clause.md)|[`Strict`](../statements/option-strict-statement.md)|
+|[`Take`](../queries/take-clause.md)|[`Take While`](../queries/take-while-clause.md)|[`Text`](../statements/option-compare-statement.md)|[`Unicode`](../modifiers/unicode.md)|
+|[`Until`](../statements/do-loop-statement.md)|[`Where`](../queries/where-clause.md)|[`Yield`](../statements/yield-statement.md)|[`#ExternalSource`](../directives/externalsource-directive.md)|
+|[`#Region`](../directives/region-directive.md)||||
+
+## <a name="related-topics"></a>相關主題  
   
 |Title|描述|  
 |-----------|-----------------|  

@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 71c81cf188fa4c2300661f10eb87e7ae00e031f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e25d5d9b545e5cb400cbf701fb13da572fadf10
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614336"
 ---
 ### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a>ETW 事件名稱不能只有 "Start" 或 "Stop" 尾碼不同
 
-|   |   |
-|---|---|
-|詳細資料|在 .NET Framework 4.6 和 4.6.1 中，當兩個 Windows 事件追蹤 (ETW) 事件名稱的差異只在 &quot;Start&quot; 或 &quot;Stop&quot; 尾碼時 (例如當一個事件的名稱為 <code>LogUser</code> 而另一個事件的名稱為 <code>LogUserStart</code> 時)，執行階段會擲回 <xref:System.ArgumentException>。 在此情況下，執行階段無法建構事件來源，因此無法發出任何記錄。|
-|建議|若要避免這個例外狀況，請確定沒有兩個事件的名稱差異只在 &quot;Start&quot; 或 &quot;Stop&quot; 尾碼。從 .NET Framework 4.6.2 開始已移除這項需求；執行階段可以釐清差異只在於 &quot;Start&quot; 和 &quot;Stop&quot; 尾碼的事件名稱。|
-|影響範圍|Edge|
-|版本|4.6|
-|類型|正在重定目標|
+#### <a name="details"></a>詳細資料
+
+在 .NET Framework 4.6 和4.6.1 中，執行時間會在 <xref:System.ArgumentException> 兩個 Windows 事件追蹤（ETW）事件名稱不同于 "Start" 或 "Stop" 後置詞時擲回（當一個事件名為 `LogUser` 且另一個名為時 `LogUserStart` ）。 在此情況下，執行階段無法建構事件來源，因此無法發出任何記錄。
+
+#### <a name="suggestion"></a>建議
+
+若要避免這個例外狀況，請確定沒有任何兩個事件名稱的差異只在於 "Start" 或 "Stop" 後置詞。從 .NET Framework 4.6.2 開始，會移除這項需求;執行時間可以區分只有 "Start" 和 "Stop" 尾碼不同的事件名稱。
+
+| 名稱    | 值       |
+|:--------|:------------|
+| 影響範圍   | Edge        |
+| 版本 | 4.6         |
+| 類型    | 正在重定目標 |

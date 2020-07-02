@@ -1,19 +1,21 @@
 ---
 title: 針對 Apache Spark 的背景工作角色和使用者定義的函數二進位檔部署 .NET
 description: 瞭解如何部署適用于 Apache Spark 背景工作角色和使用者定義函數二進位檔的 .NET。
-ms.date: 01/21/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 042f336431a1c8cad7d94cf10cbe64b72ddfce5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617713"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>針對 Apache Spark 的背景工作角色和使用者定義的函數二進位檔部署 .NET
 
 本 how to 提供如何針對 Apache Spark worker 和使用者定義函數二進位檔部署 .NET 的一般指示。 您會瞭解要設定的環境變數，以及用來啟動應用程式的一些常用參數 `spark-submit` 。
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="configurations"></a>組態
 設定會顯示一般環境變數和參數設定，以便為 Apache Spark 的背景工作角色和使用者定義的函數二進位檔部署 .NET。
@@ -46,12 +48,12 @@ ms.locfileid: "84596457"
 
 ## <a name="frequently-asked-questions"></a>常見問題集
 ### <a name="when-i-run-a-spark-app-with-udfs-i-get-a-filenotfoundexception-error-what-should-i-do"></a>當我使用 Udf 執行 spark 應用程式時，會收到「FileNotFoundException」錯誤。 我該怎麼辦？
-> **錯誤：** [錯誤] [TaskRunner] [0] ProcessStream （）失敗，發生例外狀況： FileNotFoundException：元件 ' MySparkApp，版本 = 1.0.0.0，文化特性 = 中性，PublicKeyToken = null ' 找不到檔案： ' mySparkApp .dll '
+> **錯誤：** [錯誤] [TaskRunner] [0] ProcessStream （）失敗，發生例外狀況： FileNotFoundException：元件 ' MySparkApp，版本 = 1.0.0.0，文化特性 = 中性，PublicKeyToken = null ' 找不到檔案： ' mySparkApp.dll '
 
 **答：** 檢查是否 `DOTNET_ASSEMBLY_SEARCH_PATHS` 已正確設定環境變數。 它應該是包含您的路徑 `mySparkApp.dll` 。
 
 ### <a name="after-i-upgraded-my-net-for-apache-spark-version-and-reset-the-dotnet_worker_dir-environment-variable-why-do-i-still-get-the-following-ioexception-error"></a>升級 Apache Spark 版本的 .NET 並重設 `DOTNET_WORKER_DIR` 環境變數之後，為什麼仍然會收到下列 `IOException` 錯誤訊息？
-> **錯誤：** 在階段11.0 中遺失工作0.0 （TID 24、localhost、執行器驅動程式）： IOException：無法執行程式 "nuget.exe"： CreateProcess 錯誤 = 2，系統找不到指定的檔案。
+> **錯誤：** 在階段11.0 中遺失工作0.0 （TID 24、localhost、執行器驅動程式）： IOException：無法執行程式 "Microsoft.Spark.Worker.exe"： CreateProcess 錯誤 = 2，系統找不到指定的檔案。
 
 **答：** 請先嘗試重新開機您的 PowerShell 視窗（或其他命令視窗），使其可以接受最新的環境變數值。 然後啟動您的程式。
 

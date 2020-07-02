@@ -6,20 +6,19 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 12a67d75a5f9642408cca69b2e3764a67f101549
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617557"
 ---
 # <a name="attributes"></a>屬性
-
 <xref:System.Attribute?displayProperty=nameWithType>是用來定義自訂屬性的基類。
 
- 屬性（attribute）是可以新增至程式設計專案（例如元件、類型、成員和參數）的批註。 它們會儲存在元件的中繼資料中，而且可以在執行時間使用反映 Api 來存取。 例如，.NET <xref:System.ObsoleteAttribute> 會定義屬性（attribute），它可以套用至類型或成員，以表示類型或成員已被取代。
+ 屬性（attribute）是可以新增至程式設計專案（例如元件、類型、成員和參數）的批註。 它們會儲存在元件的中繼資料中，而且可以在執行時間使用反映 Api 來存取。 例如，架構 <xref:System.ObsoleteAttribute> 會定義，它可以套用至類型或成員，以表示類型或成員已被取代。
 
- 屬性可以有一或多個屬性，其中包含與屬性相關的其他資料。 例如， `ObsoleteAttribute` 可能會包含類型或成員已被取代之版本的其他相關資訊，以及取代過時 api 之新 api 的描述。
+ 屬性可以有一或多個屬性，其中包含與屬性相關的其他資料。 例如， `ObsoleteAttribute` 可能會包含有關發行的其他資訊，其中類型或成員已被取代，而新 api 的描述則取代過時的 api。
 
  套用屬性時，必須指定屬性的某些屬性。 這些稱為必要的屬性或必要的引數，因為它們是以位置函式參數表示。 例如，的 <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> 屬性 <xref:System.Diagnostics.ConditionalAttribute> 是必要的屬性。
 

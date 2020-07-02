@@ -1,15 +1,15 @@
 ---
 title: 將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight
 description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署到 HDInsight。
-ms.date: 01/23/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: edb876921030f5034d03c821051457ca111855f8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: e6b2fdd1818250c47ce6cb64439ecab58ae99ad8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617635"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Azure HDInsight
 
@@ -25,7 +25,9 @@ ms.locfileid: "84144756"
 > * 建立並執行 HDInsight 腳本動作。
 > * 在 HDInsight 叢集上執行適用于 Apache Spark 應用程式的 .NET。
 
-## <a name="prerequisites"></a>Prerequisites
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+
+## <a name="prerequisites"></a>必要條件
 
 開始之前，請執行下列工作：
 
@@ -51,7 +53,7 @@ ms.locfileid: "84144756"
 
 1. 請造訪[Azure 入口網站](https://portal.azure.com)。
 
-2. 選取 [ **+ 建立資源**]。 然後，從 [**分析**] 類別中選取 [ **HDInsight** ]。
+2. 選取 [+ 建立資源]。 然後，從 [**分析**] 類別中選取 [ **HDInsight** ]。
 
     ![從 Azure 入口網站建立 HDInsight 資源](./media/hdinsight-deployment/create-hdinsight-resource.png)
 
@@ -104,7 +106,7 @@ ms.locfileid: "84144756"
 
    **在 Windows 上：**
 
-   流覽至*mySparkApp/bin/Release/netcoreapp 3.0/ubuntu. 16.04-x64*。 然後，在 [**發行**資料夾] 上按一下滑鼠右鍵，然後選取 **[傳送至 > 壓縮的（zipped）資料夾**]。 將新資料夾命名為**publish .zip**。
+   流覽至*mySparkApp/bin/Release/netcoreapp 3.0/ubuntu. 16.04-x64*。 然後，在 [**發行**資料夾] 上按一下滑鼠右鍵，然後選取 **[傳送至 > 壓縮的（zipped）資料夾**]。 將新資料夾命名為**publish.zip**。
 
    **在 Linux 上，執行下列命令：**
 
@@ -118,9 +120,9 @@ ms.locfileid: "84144756"
 
 * Microsoft. Spark. 背景工作角色
 * install-worker.sh
-* 發行 .zip
+* publish.zip
 * microsoft-spark-2.3. x-0.3.0 .jar
-* 輸入 .txt。
+* input.txt。
 
 1. 開啟 Azure 儲存體總管，然後從左側功能表流覽至您的儲存體帳戶。 向下切入至儲存體帳戶中**Blob 容器**下的叢集 blob 容器。
 
@@ -132,13 +134,13 @@ ms.locfileid: "84144756"
 
    在您的本機電腦上建立名為**install-worker.sh**的新檔案，並貼上位於 GitHub 的[install-worker.sh 內容](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh)。 然後，將*install-worker.sh*上傳至您的 blob 容器。
 
-4. 您的叢集需要包含應用程式已發佈檔案的發佈 .zip 檔案。 流覽至您已發行的資料夾， **mySparkApp/bin/Release/netcoreapp 3.0/ubuntu. 16.04-x64**，然後找出**publish. zip**。 然後將*publish*上傳至您的 blob 容器。
+4. 您的叢集需要包含應用程式已發佈檔案的 publish.zip 檔案。 流覽至您已發行的資料夾， **mySparkApp/bin/Release/netcoreapp 3.0/ubuntu. 16.04-x64**，然後找出**publish.zip**。 然後將*publish.zip*上傳至您的 blob 容器。
 
 5. 您的叢集需要封裝成 jar 檔案的應用程式代碼。 流覽至您已發行的資料夾**mySparkApp/bin/Release/netcoreapp 3.0/ubuntu. 16.04-x64**，然後找出**microsoft-spark-2.3. x-0.3.0。** 然後，將 jar 檔案上傳到您的 blob 容器。
 
    可能有多個 .jar 檔案（適用于版本 2.3. x 和 2.4. x 版的 Spark）。 您必須選擇與叢集建立期間所選擇的 Spark 版本相符的 .jar 檔案。 例如，如果您在叢集建立期間選擇 Spark 2.3.2，請選擇 [ *microsoft-spark-2.3 x-0.3.0* ]。
 
-6. 您的叢集需要您應用程式的輸入。 流覽至您的**mySparkApp**目錄，並找出 [**輸入 .txt**]。 將您的輸入檔案上傳至 blob 容器中的**使用者/sshuser**目錄。 您將透過 ssh 連線到您的叢集，而此資料夾是您的叢集尋找其輸入的位置。 *輸入 .txt*檔案是上傳至特定目錄的唯一檔案。
+6. 您的叢集需要您應用程式的輸入。 流覽至您的**mySparkApp**目錄，並找出**input.txt**。 將您的輸入檔案上傳至 blob 容器中的**使用者/sshuser**目錄。 您將透過 ssh 連線到您的叢集，而此資料夾是您的叢集尋找其輸入的位置。 *input.txt*檔案是上傳至特定目錄的唯一檔案。
 
 ## <a name="run-the-hdinsight-script-action"></a>執行 HDInsight 腳本動作
 
@@ -187,4 +189,4 @@ HDInsight 會將您的資料儲存在 Azure 儲存體中，因此您可以放心
 在本教學課程中，您已將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight。 若要深入了解 HDInsight，請繼續前往 Azure HDInsight 文件。
 
 > [!div class="nextstepaction"]
-> [Azure HDInsight 檔](https://docs.microsoft.com/azure/hdinsight/)
+> [Azure HDInsight 文件](https://docs.microsoft.com/azure/hdinsight/)

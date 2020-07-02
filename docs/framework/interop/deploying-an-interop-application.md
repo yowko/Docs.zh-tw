@@ -1,5 +1,6 @@
 ---
 title: 部署 Interop 應用程式
+description: 部署 interop 應用程式，其中通常會有 .NET 用戶端元件、不同 COM 類型程式庫的 interop 元件，以及已註冊的 COM 元件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], interop
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-ms.openlocfilehash: 04f8e53220b2e0fa09735400ae84dcb8b1c3478a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 744307d4175d151d07acbedd5815e538307c8973
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617479"
 ---
 # <a name="deploying-an-interop-application"></a>部署 Interop 應用程式
 Interop 應用程式通常包含 .NET 用戶端組件、代表各種不同 COM 型別程式庫的一或多個 Interop 組件，以及一或多個已登錄的 COM 元件。 Visual Studio 與 Windows SDK 提供工具以匯入型別程式庫，並將它轉換成 Interop 組件，如[匯入型別程式庫作為組件](importing-a-type-library-as-an-assembly.md)中所述。 有兩種方式可以部署 Interop 應用程式：  
