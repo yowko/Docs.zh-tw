@@ -1,5 +1,6 @@
 ---
 title: 呼叫 DLL 函式
+description: 檢查有關呼叫可能令人混淆的 DLL 函式的問題。 函式呼叫進程會根據傳回型別是否為可直接上傳而有所不同。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged functions, calling
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-ms.openlocfilehash: 14589544e05f6c59f4f58f7723fef40e75af9823
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90f8f47148e652a9942a35be1564bed94c155216
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620894"
 ---
 # <a name="calling-a-dll-function"></a>呼叫 DLL 函式
 雖然呼叫 Unmanaged DLL 函式與呼叫其他 Managed 程式碼幾乎完全相同，但具有一開始讓 DLL 函式混淆的差異。 本節介紹描述一些異常呼叫相關問題的主題。  
@@ -28,7 +29,7 @@ ms.locfileid: "73123723"
  [回呼函式](callback-functions.md)  
  提供回呼函式的基本資訊。  
   
- [如何：實作回呼函式](how-to-implement-callback-functions.md)  
+ [作法：實作回呼函式](how-to-implement-callback-functions.md)  
  描述如何在 Managed 程式碼中實作回呼函式。  
   
 ## <a name="related-sections"></a>相關章節  

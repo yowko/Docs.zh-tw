@@ -1,5 +1,6 @@
 ---
 title: 匯入類型程式庫做為組件
+description: 匯入類型程式庫（其中包含 COM 類型定義）做為元件。 瞭解從型別程式庫建立中繼資料的方式，產生 interop 元件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5187e3c2ce533f25a38e93bc3715dd3e2e47c11
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622714"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>匯入類型程式庫做為組件
 
@@ -80,5 +81,5 @@ COM 類型程式庫可以是單獨的檔案，副檔名為 .tlb (例如 Loanlib.
 - [在受控程式碼中使用 COM 型別](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [編譯 Interop 專案](compiling-an-interop-project.md)
 - [部署 Interop 應用程式](deploying-an-interop-application.md)
-- [如何：將參考加入至類型程式庫](how-to-add-references-to-type-libraries.md)
-- [如何：從類型程式庫產生 Interop 組件](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [作法：將參考新增至型別程式庫](how-to-add-references-to-type-libraries.md)
+- [作法：從型別程式庫產生 Interop 組件](how-to-generate-interop-assemblies-from-type-libraries.md)

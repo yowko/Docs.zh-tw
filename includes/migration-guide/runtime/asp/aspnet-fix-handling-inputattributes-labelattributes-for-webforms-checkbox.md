@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: ea0e1583cd611a624cf2d2edf9defb2294eb89d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae557ce57557d027dba35b7da213c08aee85f2c7
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621947"
 ---
 ### <a name="aspnet-fix-handling-of-inputattributes-and-labelattributes-for-webforms-checkbox-control"></a>ASP.NET 修正 WebForms CheckBox 控制項的 InputAttributes 和 LabelAttributes 處理方式
 
-|   |   |
-|---|---|
-|詳細資料|若應用程式是以 .NET Framework 4.7.2 和更早版本為目標，回傳後會遺失以程式設計方式新增至 WebForms <xref:System.Web.UI.WebControls.CheckBox> 控制項的 <xref:System.Web.UI.WebControls.CheckBox.InputAttributes?displayProperty=nameWithType> 和 <xref:System.Web.UI.WebControls.CheckBox.LabelAttributes?displayProperty=nameWithType>。 若應用程式是以 .NET Framework 4.8 或更新版本為目標，則回傳後仍會保留這些項目。|
-|建議|為了確保回傳時還原屬性的正確行為，請將 <code>targetFrameworkVersion</code> 設為 4.8 或更高。 例如：<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;system.web&gt;&#13;&#10;&lt;httpRuntime targetFramework=&quot;4.8&quot;/&gt;&#13;&#10;&lt;/system.web&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>將它設得更低或完全不設時，則會保留既有的不正確行為。|
-|影響範圍|Unknown|
+#### <a name="details"></a>詳細資料
+
+若應用程式是以 .NET Framework 4.7.2 和更早版本為目標，回傳後會遺失以程式設計方式新增至 WebForms <xref:System.Web.UI.WebControls.CheckBox> 控制項的 <xref:System.Web.UI.WebControls.CheckBox.InputAttributes?displayProperty=nameWithType> 和 <xref:System.Web.UI.WebControls.CheckBox.LabelAttributes?displayProperty=nameWithType>。 若應用程式是以 .NET Framework 4.8 或更新版本為目標，則回傳後仍會保留這些項目。
+
+#### <a name="suggestion"></a>建議
+
+為了確保回傳時還原屬性的正確行為，請將 <code>targetFrameworkVersion</code> 設為 4.8 或更高。 例如：<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;system.web&gt;&#13;&#10;&lt;httpRuntime targetFramework=&quot;4.8&quot;/&gt;&#13;&#10;&lt;/system.web&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>將它設得更低或完全不設時，則會保留既有的不正確行為。
+
+| 名稱    | 值       |
+|:--------|:------------|
+| 影響範圍   |Unknown|
 |版本|4.8|
-|類型|執行階段|
-|受影響的 API|<ul><li><xref:System.Web.UI.WebControls.CheckBox?displayProperty=nameWithType></li></ul>|
+|類型|執行階段
+
+#### <a name="affected-apis"></a>受影響的 API
+
+-<xref:System.Web.UI.WebControls.CheckBox?displayProperty=nameWithType></li></ul>|

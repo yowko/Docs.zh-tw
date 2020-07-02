@@ -1,5 +1,6 @@
 ---
 title: 套件 Uri
+description: 瞭解使用統一資源識別項（Uri）在 Windows Presentation Foundation （WPF）中識別和載入檔案的許多方式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pack URI scheme [WPF]
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 1d19dec0d846659f8de6ed518a7f98d224354a82
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621687"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 
 在 Windows Presentation Foundation （WPF）中，統一資源識別項（Uri）是用來以許多方式來識別和載入檔案，包括下列各項：
 
-- 指定要在應用程式第一次啟動時顯示的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。
+- 指定 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 要在應用程式第一次啟動時顯示的。
 
 - 載入影像。
 
@@ -52,7 +53,7 @@ ms.locfileid: "77124477"
 
 URI 所指定的配置是由其前置詞所定義。HTTP、ftp 和 file 都是已知的範例。 套件 URI 配置會使用 "pack" 作為其配置，並包含兩個元件：授權單位和路徑。 以下是 pack URI 的格式。
 
-pack://*授權*/*路徑*
+pack://*授權*單位 / *路徑*
 
 *授權*單位會指定元件所包含的封裝類型，而*路徑*則會指定元件在封裝內的位置。
 
@@ -97,11 +98,11 @@ pack://*授權*/*路徑*
 
 - **路徑**︰相對於本機組件專案資料夾根之資源檔的名稱，包括其路徑。
 
-下列範例顯示位於本機組件之專案資料夾根目錄中 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 資源檔的 pack URI。
+下列範例 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會顯示位於本機組件之專案資料夾根目錄中的資源檔的 PACK URI。
 
 `pack://application:,,,/ResourceFile.xaml`
 
-下列範例顯示位於本機組件專案資料夾之子資料夾中 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 資源檔的 pack URI。
+下列範例 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會顯示位於本機組件專案資料夾之子資料夾中的資源檔的 PACK URI。
 
 `pack://application:,,,/Subfolder/ResourceFile.xaml`
 
@@ -115,7 +116,7 @@ pack://*授權*/*路徑*
 
 - **路徑**：編譯為所參考組件之資源檔的名稱。 路徑必須符合下列格式：
 
-  *AssemblyShortName*{ *;版本*] { *;PublicKey*]; 元件/*路徑*
+  *AssemblyShortName*{*;版本*] {*;PublicKey*]; 元件/*路徑*
 
   - **AssemblyShortName**：所參考組件的簡短名稱。
 
@@ -127,15 +128,15 @@ pack://*授權*/*路徑*
 
   - **/Path**︰相對於所參考組件專案資料夾根之資源檔的名稱，包括其路徑。
 
-下列範例顯示位於所參考元件之專案資料夾根目錄中 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 資源檔的 pack URI。
+下列範例 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會顯示位於所參考元件之專案資料夾根目錄中的資源檔的 PACK URI。
 
 `pack://application:,,,/ReferencedAssembly;component/ResourceFile.xaml`
 
-下列範例顯示位於所參考元件專案資料夾之子資料夾中 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 資源檔的 pack URI。
+下列範例 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 會顯示位於所參考元件專案資料夾之子資料夾中的資源檔的 PACK URI。
 
 `pack://application:,,,/ReferencedAssembly;component/Subfolder/ResourceFile.xaml`
 
-下列範例顯示的是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 資源檔的 pack URI，此檔案位於參考的版本特定元件之專案資料夾的根資料夾中。
+下列範例會顯示資源檔的 pack URI，此檔案 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 位於參考的版本特定元件之專案資料夾的根資料夾中。
 
 `pack://application:,,,/ReferencedAssembly;v1.0.0.1;component/ResourceFile.xaml`
 
@@ -153,11 +154,11 @@ pack://*授權*/*路徑*
 
 - **路徑**：內容檔的名稱，包括其相對於應用程式主要可執行組件之檔案系統位置的路徑。
 
-下列範例顯示與可執行元件位於相同資料夾中 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 內容檔案的 pack URI。
+下列範例顯示內容檔案的 pack URI，此檔案 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 位於與可執行檔元件相同的資料夾中。
 
 `pack://application:,,,/ContentFile.xaml`
 
-下列範例顯示 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 內容檔案的 pack URI，此檔案位於與應用程式可執行元件相對的子資料夾中。
+下列範例顯示內容檔案的 pack URI，此檔案 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 位於與應用程式可執行元件相關的子資料夾中。
 
 `pack://application:,,,/Subfolder/ContentFile.xaml`
 
@@ -174,11 +175,11 @@ pack://*授權*/*路徑*
 
 - **路徑**：來源網站檔案的名稱，包括其相對於從中啟動可執行組件之位置的路徑。
 
-下列範例會顯示 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 來源網站檔案的 pack URI，儲存在可執行檔元件啟動的位置。
+下列範例會顯示原始網站檔案的 pack URI [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ，並儲存在可執行檔元件啟動的位置。
 
 `pack://siteoforigin:,,,/SiteOfOriginFile.xaml`
 
-下列範例顯示的是來源 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 網站檔案的 pack URI，儲存在相對於啟動應用程式可執行元件之位置的子資料夾中。
+下列範例顯示的是原始網站檔案的 pack URI [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ，儲存在相對於啟動應用程式可執行元件之位置的子資料夾中。
 
 `pack://siteoforigin:,,,/Subfolder/SiteOfOriginFile.xaml`
 
@@ -186,9 +187,9 @@ pack://*授權*/*路徑*
 
 ## <a name="page-files"></a>分頁檔
 
-設定為 MSBuild `Page` 專案的 XAML 檔案，會以與資源檔相同的方式編譯成元件。 因此，可以使用資源檔的 pack Uri 來識別 MSBuild `Page` 專案。
+設定為 MSBuild 專案的 XAML 檔案， `Page` 會以與資源檔相同的方式編譯成元件。 因此， `Page` 可以使用資源檔的套件 uri 來識別 MSBuild 專案。
 
-通常設定為 MSBuild`Page` 專案的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案類型具有下列其中一項做為其根項目：
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]通常設定為 MSBuild 專案的檔案類型 `Page` 具有下列其中一項做為其根項目：
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -206,7 +207,7 @@ pack://*授權*/*路徑*
 
 ## <a name="absolute-vs-relative-pack-uris"></a>絕對與相對的套件 Uri
 
-完整的 pack URI 包括配置、授權和路徑，而且會被視為絕對套件 URI。 做為開發人員的簡化，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 元素通常可讓您使用相對 pack URI 設定適當的屬性，其中只包含路徑。
+完整的 pack URI 包括配置、授權和路徑，而且會被視為絕對套件 URI。 做為開發人員的簡化， [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 元素通常可讓您使用相對 PACK URI 設定適當的屬性，其中只包含路徑。
 
 例如，請考慮本機組件中資源檔的下列絕對套件 URI。
 
@@ -253,15 +254,15 @@ Pack Uri 的格式可讓不同類型檔案的套件 Uri 看起來相同。 例�
 
 為了判斷 pack URI 所參考的檔案類型，WPF 會使用下列啟發學習法，解析本機組件和內容檔案中資源檔的 Uri：
 
-1. 探查符合 pack URI 之 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 屬性的元件中繼資料。
+1. 探查符合 pack URI 之屬性的元件中繼資料 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 。
 
-2. 如果找到 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 屬性，則 pack URI 的路徑會參考內容檔。
+2. 如果 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 找到屬性，則 PACK URI 的路徑會參考內容檔。
 
-3. 如果找不到 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 屬性，請探查編譯到本機組件中的集合資源檔。
+3. 如果 <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> 找不到屬性，請探查編譯到本機組件中的集合資源檔。
 
 4. 如果找到符合 pack URI 路徑的資源檔，則 pack URI 的路徑會參考資源檔。
 
-5. 如果找不到資源，內部建立的 <xref:System.Uri> 將會無效。
+5. 如果找不到資源，內部建立的 <xref:System.Uri> 會是不正確。
 
 URI 解析不適用於參考下列各項的 Uri：
 
@@ -297,7 +298,7 @@ URI 解析不適用於參考下列各項的 Uri：
 
 ### <a name="using-pack-uris-in-markup"></a>透過標記使用套件 URI
 
-在標記中指定的 pack URI，是藉由設定具有 pack URI 之屬性的元素。 例如，
+在標記中指定的 pack URI，是藉由設定具有 pack URI 之屬性的元素。 例如：
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -334,19 +335,19 @@ URI 解析不適用於參考下列各項的 Uri：
 
 ### <a name="using-pack-uris-in-code"></a>透過程式碼使用套件 URI
 
-您可以將 <xref:System.Uri> 類別具現化，並將 pack URI 當做參數傳遞至函式，以在程式碼中指定 pack URI。 下列範例就將此進行示範。
+您可以藉由具現化 <xref:System.Uri> 類別，並將 PACK uri 當做參數傳遞至函式，以在程式碼中指定 PACK uri。 下列範例就將此進行示範。
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
 ```
 
-根據預設，<xref:System.Uri> 類別會將 pack Uri 視為絕對。 因此，當使用相對 pack URI 建立 <xref:System.Uri> 類別的實例時，就會引發例外狀況（exception）。
+根據預設， <xref:System.Uri> 類別會將 Pack uri 視為絕對。 因此，當 <xref:System.Uri> 使用相對 PACK URI 建立類別的實例時，就會引發例外狀況。
 
 ```csharp
 Uri uri = new Uri("/File.xaml");
 ```
 
-幸運的是，<xref:System.Uri> 類別的 <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> 多載會接受型別 <xref:System.UriKind> 的參數，讓您指定 pack URI 是絕對或相對的。
+幸運的是，類別函式的多載 <xref:System.Uri.%23ctor%28System.String%2CSystem.UriKind%29> <xref:System.Uri> 接受類型的參數 <xref:System.UriKind> ，可讓您指定 pack URI 為絕對或相對的。
 
 ```csharp
 // Absolute URI (default)
@@ -356,7 +357,7 @@ Uri relativeUri = new Uri("/File.xaml",
                         UriKind.Relative);
 ```
 
-當您確定提供的 pack URI 是其中一個或另一個時，您應該只指定 <xref:System.UriKind.Absolute> 或 <xref:System.UriKind.Relative>。 如果您不知道所使用的 pack URI 類型，例如當使用者在執行時間輸入 pack URI 時，請改用 <xref:System.UriKind.RelativeOrAbsolute>。
+<xref:System.UriKind.Absolute> <xref:System.UriKind.Relative> 當您確定提供的 pack URI 是其中一個或另一個時，您應該只指定或。 如果您不知道所使用的 pack URI 類型，例如當使用者在執行時間輸入 pack URI 時，請改用 <xref:System.UriKind.RelativeOrAbsolute> 。
 
 ```csharp
 // Relative or Absolute URI provided by user via a text box
@@ -364,7 +365,7 @@ TextBox userProvidedUriTextBox = new TextBox();
 Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 ```
 
-[表 3] 說明您可以使用 <xref:System.Uri?displayProperty=nameWithType>在程式碼中指定的各種相對套件 Uri。
+[表 3] 說明您可以在程式碼中使用指定的各種相對套件 Uri <xref:System.Uri?displayProperty=nameWithType> 。
 
 表 3：使用程式碼的絕對套件 URI
 
@@ -380,7 +381,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 |來源網站檔案|`Uri uri = new Uri("pack://siteoforigin:,,,/SOOFile.xaml", UriKind.Absolute);`|
 |子資料夾中的來源網站檔案|`Uri uri = new Uri("pack://siteoforigin:,,,/Subfolder/SOOFile.xaml", UriKind.Absolute);`|
 
-[表 4] 說明您可以使用 <xref:System.Uri?displayProperty=nameWithType>在程式碼中指定的各種相對套件 Uri。
+[表 4] 說明您可以在程式碼中使用指定的各種相對套件 Uri <xref:System.Uri?displayProperty=nameWithType> 。
 
 表 4：使用程式碼的相對套件 URI
 
@@ -403,7 +404,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>指定要在啟動應用程式時顯示的 UI
 
-<xref:System.Windows.Application.StartupUri%2A> 指定啟動 WPF 應用程式時所要顯示的第一個 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 針對獨立應用程式，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 可以是視窗，如下列範例所示。
+<xref:System.Windows.Application.StartupUri%2A>指定 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 啟動 WPF 應用程式時所要顯示的第一個。 若是獨立應用程式， [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 可以是視窗，如下列範例所示。
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
@@ -411,7 +412,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-如果應用程式是獨立應用程式，而且已使用 <xref:System.Windows.Application.StartupUri%2A>來指定頁面，WPF 會開啟一個 <xref:System.Windows.Navigation.NavigationWindow> 來裝載該頁面。 針對 Xbap，此頁面會顯示在主機瀏覽器中。
+如果應用程式是獨立應用程式，而且已使用指定頁面 <xref:System.Windows.Application.StartupUri%2A> ，WPF 會開啟 <xref:System.Windows.Navigation.NavigationWindow> 來裝載頁面。 針對 Xbap，此頁面會顯示在主機瀏覽器中。
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -433,7 +434,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-如需詳細資訊，請參閱 <xref:System.Windows.Window.Icon%2A>。
+如需詳細資訊，請參閱 <xref:System.Windows.Window.Icon%2A> 。
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
@@ -453,7 +454,7 @@ WPF 可讓應用程式使用各種不同的媒體類型，這些都可以用 pac
 
 #### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>從來源網站載入資源字典
 
-資源字典（<xref:System.Windows.ResourceDictionary>）可以用來支援應用程式主題。 建立和管理主題的一種方法是將多個主題建立為位在應用程式來源網站的資源字典。 這樣可新增和更新主題，而不需要重新編譯和重新部署應用程式的。 您可以使用套件 Uri 來識別和載入這些資源字典，如下列範例所示。
+資源字典（ <xref:System.Windows.ResourceDictionary> ）可以用來支援應用程式主題。 建立和管理主題的一種方法是將多個主題建立為位在應用程式來源網站的資源字典。 這樣可新增和更新主題，而不需要重新編譯和重新部署應用程式的。 您可以使用套件 Uri 來識別和載入這些資源字典，如下列範例所示。
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 

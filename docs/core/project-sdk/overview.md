@@ -4,12 +4,12 @@ titleSuffix: ''
 description: 深入瞭解 .NET Core 專案 Sdk。
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 9db62ab7774e3dd71412fa346d78ae0c62a2f81f
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803037"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core 專案 Sdk
 
@@ -19,7 +19,7 @@ ms.locfileid: "84144235"
 
 下列 Sdk 適用于 .NET Core：
 
-| 識別碼 | 描述 | 存放庫|
+| ID | 描述 | 存放庫|
 | - | - | - |
 | `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Web` | .NET Core [WEB SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/aspnet/websdk> |
@@ -41,7 +41,7 @@ ms.locfileid: "84144235"
 </Project>
 ```
 
-若要指定來自 NuGet 的 SDK，請在名稱結尾包含版本，或指定*global.asax*檔案中的名稱和版本。
+若要指定來自 NuGet 的 SDK，請在名稱結尾包含版本，或在檔案的*global.js*中指定名稱和版本。
 
 ```xml
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
@@ -91,7 +91,7 @@ ms.locfileid: "84144235"
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
 | 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
 | 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
-| 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx |
+| None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx |
 
 > [!NOTE]
 > 和 `./bin` `./obj` MSBuild 屬性所表示的和資料夾 `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` 預設會從 glob 中排除。 排除會以屬性工作表示 `$(DefaultItemExcludes)` 。
@@ -176,6 +176,6 @@ ms.locfileid: "84144235"
 
 ## <a name="see-also"></a>另請參閱
 
-- [安裝 .NET Core](../install/index.md)
+- [安裝 .NET Core](../install/index.yml)
 - [如何使用 MSBuild 專案 Sdk](/visualstudio/msbuild/how-to-use-project-sdk)
 - [使用 NuGet 封裝自訂 MSBuild 目標和 .props](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)

@@ -1,5 +1,6 @@
 ---
 title: 使用 Unmanaged DLL 函式
+description: 使用平台叫用服務來取用非受控 DLL 函式，讓 managed 程式碼呼叫在 DLL 程式庫中執行的非受控函式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged functions, calling
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 880cbd4701ae4aee35038f6402b3beb70e60290c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622181"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
 平台叫用服務，可讓受控碼呼叫實作在動態連結程式庫 (DLL) 中的非受控函式，如 Windows API 中的函式。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
@@ -71,6 +72,6 @@ ms.locfileid: "79399970"
 
 ## <a name="see-also"></a>另請參閱
 
-- [與非受控程式碼交互操作](index.md)
+- [與 Unmanaged 程式碼互通](index.md)
 - [平台叫用範例](platform-invoke-examples.md)
 - [Interop 封送處理](interop-marshaling.md)

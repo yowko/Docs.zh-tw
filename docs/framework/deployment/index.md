@@ -1,5 +1,6 @@
 ---
 title: 部署 .NET Framework 和應用程式
+description: 開始使用您的應用程式來部署 .NET。 .NET 預設會提供不影響的應用程式、私用元件、控制的程式碼共用等等。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cce888c962c9ab83c13cce4040eb9ba50270972d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803493"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和應用程式
 
@@ -32,11 +33,11 @@ ms.locfileid: "75716468"
 
     - [Web 安裝程式](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [Offline installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [離線安裝程式](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - 安裝模式：
 
-    - [靜默安裝](deployment-guide-for-developers.md#chaining_custom)
+    - [無訊息安裝](deployment-guide-for-developers.md#chaining_custom)
 
     - [顯示 UI](deployment-guide-for-developers.md#chaining_default)
 
@@ -64,7 +65,7 @@ ms.locfileid: "75716468"
 
 **服務**
 
-- 有關一般資訊，請參閱[.NET 框架博客](https://devblogs.microsoft.com/dotnet/)。
+- 如需一般資訊，請參閱[.NET Framework 的 blog](https://devblogs.microsoft.com/dotnet/)。
 
 - [偵測版本](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
@@ -162,8 +163,8 @@ ms.locfileid: "75716468"
 |-----------|-----------------|
 |[執行階段如何找出組件](how-the-runtime-locates-assemblies.md)|描述 Common Language Runtime 如何決定要用哪個組件來實現繫結要求。|
 |[組件載入的最佳做法](best-practices-for-assembly-loading.md)|討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。|
-|[在 .NET 框架 4.5 安裝期間減少系統重新開機](reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|
-|[系統管理員部署手冊](guide-for-administrators.md)|說明系統管理員如何使用 Microsoft 終結點組態管理員通過網路部署 .NET 框架及其系統依賴項。|
+|[減少 .NET Framework 4.5 安裝期間的系統重新開機](reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|
+|[系統管理員部署手冊](guide-for-administrators.md)|說明系統管理員如何使用 Microsoft 端點 Configuration Manager，在網路上部署 .NET Framework 及其系統相依性。|
 |[開發人員部署手冊](deployment-guide-for-developers.md)|說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。|
 |[部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)|討論 Visual Studio 中的部署選項，包括使用 ClickOnce 和 Windows Installer 技術發行應用程式的指示。|
 |[發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)|描述如何封裝 Windows Forms 應用程式，並使用 ClickOnce 將它部署到網路上的用戶端電腦。|

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803023"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -32,7 +32,7 @@ ms.locfileid: "83614353"
 
 1. 建立專案。
 
-   選取 **[** 檔案] [  >  **新增**  >  **專案**]。 在 [新增專案]**** 對話方塊中，展開 [已安裝]**** 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]****，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)]**** 範本。 在 [名稱]**** 文字方塊中輸入專案名稱，例如 "FDD"。 選取 [**確定]** 按鈕。
+   選取 [File] \(檔案\) >  [New] \(新增\) >  [Project] \(專案\)。 在 [新增專案]**** 對話方塊中，展開 [已安裝]**** 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]****，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)]**** 範本。 在 [名稱]**** 文字方塊中輸入專案名稱，例如 "FDD"。 選取 [**確定]** 按鈕。
 
 1. 新增應用程式的原始程式碼。
 
@@ -43,7 +43,7 @@ ms.locfileid: "83614353"
 
 1. 建立應用程式的偵錯組建。
 
-   選取 [**組建**] [  >  **組建方案**]。 您也可以藉由選取 [**調試**程式] [開始] [偵測]，來編譯和執行應用程式的 debug 組建  >  ** **。
+   選取 [建置] > [建置方案]。 您也可以藉由選取 [**調試**程式] [開始] [偵測]，來編譯和執行應用程式的 debug 組建  >  ** **。
 
 1. 部署您的應用程式。
 
@@ -83,7 +83,7 @@ ms.locfileid: "83614353"
 
 1. 建立專案。
 
-   選取 **[** 檔案] [  >  **新增**  >  **專案**]。 在 [新增專案]**** 對話方塊中，展開 [已安裝]**** 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]****，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)]**** 範本。 在 [名稱]**** 文字方塊中輸入專案名稱 (例如 "SCD")，然後選取 [確定]**** 按鈕。
+   選取 [File] \(檔案\) >  [New] \(新增\) >  [Project] \(專案\)。 在 [新增專案]**** 對話方塊中，展開 [已安裝]**** 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]****，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)]**** 範本。 在 [名稱]**** 文字方塊中輸入專案名稱 (例如 "SCD")，然後選取 [確定]**** 按鈕。
 
 1. 新增應用程式的原始程式碼。
 
@@ -98,11 +98,11 @@ ms.locfileid: "83614353"
 
    在您的專案 (而非解決方案) 點擊右鍵，進入 [方案總管]****，然後選取 [Edit SCD.csproj] \(編輯 SCD.csproj\)**** 或 [Edit SCD.vbproj] \(編輯 SCD.vbproj\)**** 啟用非變異模式。 接著，將反白處新增至檔案中：
 
-   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=7-9)]
 
 1. 建立應用程式的偵錯組建。
 
-   選取 [**組建**] [  >  **組建方案**]。 您也可以藉由選取 [**調試**程式] [開始] [偵測]，來編譯和執行應用程式的 debug 組建  >  ** **。 透過此偵錯步驟，您可以識別應用程式在主機平台上執行時的問題。 您仍然必須在每個目標平台上進行測試。
+   選取 [建置] > [建置方案]。 您也可以藉由選取 [**調試**程式] [開始] [偵測]，來編譯和執行應用程式的 debug 組建  >  ** **。 透過此偵錯步驟，您可以識別應用程式在主機平台上執行時的問題。 您仍然必須在每個目標平台上進行測試。
 
    如果您啟用了不因全球化而異的模式，請務必測試您的應用程式是否適合缺少不區分文化特性的資料。
 
@@ -192,9 +192,9 @@ ms.locfileid: "83614353"
 
 1. 選取 Visual Studio 發行您應用程式的位置。
 
-   如果您只是要發行到單一平臺，可以接受 [**選擇資料夾**] 文字方塊中的預設值;這會將應用程式的架構相依部署發佈至* \< 專案目錄> \bin\release\netcoreapp2.1\publish*目錄。
+   如果您只是要發行到單一平臺，可以接受 [**選擇資料夾**] 文字方塊中的預設值;這會將應用程式的架構相依部署發佈至* \<project-directory> \bin\Release\netcoreapp2.1\publish*目錄。
 
-   如果您要發行到多個平台，請附加識別目標平台的字串。 例如，如果您將字串 "linux" 附加至檔案路徑，Visual Studio 會將應用程式的架構相依部署發行至* \< 專案目錄> \bin\release\netcoreapp2.1\publish\linux*目錄。
+   如果您要發行到多個平台，請附加識別目標平台的字串。 例如，如果您將字串 "linux" 附加至檔案路徑，Visual Studio 會將應用程式的架構相依部署發佈至* \<project-directory> \bin\Release\netcoreapp2.1\publish\linux*目錄。
 
 1. 若要建立設定檔，請選取下拉式清單圖示旁的 [發行]**** 按鈕，然後選取 [建立設定檔]****。 然後選取 [建立設定檔]**** 按鈕來建立設定檔。
 
@@ -216,7 +216,7 @@ ms.locfileid: "83614353"
 
 重複這些步驟來定義其他應用程式目標平台。
 
-您已完成設定您的設定檔，並已準備好發行應用程式。 若要這樣做：
+您已完成設定您的設定檔，並已準備好發行應用程式。 作法：
 
    1. 如果 [發行]**** 視窗目前未開啟，請以滑鼠右鍵按一下 [方案總管]**** 中的專案 (而非解決方案)，然後選取 [發行]****。
 

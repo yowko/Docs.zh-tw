@@ -1,5 +1,6 @@
 ---
 title: 封送處理類別、結構和等位
+description: 請參閱如何封送處理類別、結構和等位。 查看封送處理類別的範例、具有嵌套結構的結構、結構的陣列，以及等位。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621518"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
 
@@ -31,7 +32,7 @@ ms.locfileid: "82200011"
 
 下表列出類別、結構和等位的封送處理選項，並描述其用法，以及提供對應平台的叫用範例連結。
 
-|類型|說明|範例|
+|類型|描述|範例|
 |----------|-----------------|------------|
 |傳值呼叫|做為 In/Out 參數，如 Managed 案例，會傳遞具有整數成員的類別。|[SysTime 範例](#systime-sample)|
 |結構傳值。|傳遞結構做為 In 參數。|[結構範例](#structures-sample)|
@@ -225,7 +226,7 @@ union MYUNION2
 
 ## <a name="platform-sample"></a>平臺範例
 
-在某些情況下`struct` ， `union`和版面配置可能會根據目標平臺而有所不同。 例如，在 COM 案例[`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret)中定義時，請考慮類型：
+在某些情況下， `struct` 和 `union` 版面配置可能會根據目標平臺而有所不同。 例如，在 [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) COM 案例中定義時，請考慮類型：
 
 ```c++
 #include <pshpack8.h> /* Defines the packing of the struct */
@@ -242,7 +243,7 @@ typedef struct _STRRET
 #include <poppack.h>
 ```
 
-上述`struct`的會以 Windows 標頭宣告，而這些標頭會影響類型的記憶體配置。 在受管理的環境中定義時，需要這些版面配置詳細資料，才能正確地與機器碼互通。
+上述的 `struct` 會以 Windows 標頭宣告，而這些標頭會影響類型的記憶體配置。 在受管理的環境中定義時，需要這些版面配置詳細資料，才能正確地與機器碼互通。
 
 在32位進程中，此類型的正確 managed 定義如下：
 
@@ -381,7 +382,7 @@ typedef struct _MYSTRSTRUCT2
 [!code-csharp[Conceptual.Interop.Marshaling#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
 [!code-vb[Conceptual.Interop.Marshaling#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)
 - [封送處理字串](marshaling-strings.md)

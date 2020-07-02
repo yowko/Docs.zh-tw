@@ -1,21 +1,22 @@
 ---
 title: .NET Framework 中的效能計數器
+description: 閱讀有關 .NET 中效能計數器的資訊。 有一些效能計數器適用于例外狀況、interop、JIT 編譯程式、載入、記憶體、網路、安全性等等。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 44a5d1cb70d294d720290a4754bb5f5cb47f79a4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3702e9d2e0a369f5391c16088202caf5d7ced7ea
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803699"
 ---
-# <a name="performance-counters-in-the-net-framework"></a>.NET 框架中的效能計數器
+# <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
 
-本主題提供了可在[Windows 效能監視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)中找到的效能計數器的清單。  
+本主題提供您可以在[Windows 效能監視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)中找到的效能計數器清單。  
 
 ## <a name="exception-performance-counters"></a>例外狀況效能計數器  
  效能主控台 .NET CLR 例外狀況分類包含計數器，此計數器提供應用程式擲回例外狀況的相關資訊。 下表描述的是這些效能計數器。  
@@ -23,7 +24,7 @@ ms.locfileid: "79400019"
 |效能計數器|描述|  
 |-------------------------|-----------------|  
 |**# of Exceps Thrown**|顯示自應用程式啟動後擲回例外狀況的總數。 這包含 .NET 例外狀況和轉換成 .NET 例外狀況的 Unmanaged 例外狀況。 例如，從 Unmanaged 程式碼傳回的 HRESULT 會轉換成在 Managed 程式碼中的例外狀況。<br /><br /> 此計數器包含已處理和未處理的例外狀況。 重新擲回的例外狀況會再計算一次。|  
-|**# of Exceps Thrown / Sec**|顯示每秒擲回的例外狀況數目。 這包含 .NET 例外狀況和轉換成 .NET 例外狀況的 Unmanaged 例外狀況。 例如，從 Unmanaged 程式碼傳回的 HRESULT 會轉換成在 Managed 程式碼中的例外狀況。<br /><br /> 此計數器包含已處理和未處理的例外狀況。 它不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。 如果引發大量（>100s）異常，則此計數器是潛在性能問題的指示器。|  
+|**# of Exceps Thrown / Sec**|顯示每秒擲回的例外狀況數目。 這包含 .NET 例外狀況和轉換成 .NET 例外狀況的 Unmanaged 例外狀況。 例如，從 Unmanaged 程式碼傳回的 HRESULT 會轉換成在 Managed 程式碼中的例外狀況。<br /><br /> 此計數器包含已處理和未處理的例外狀況。 它不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。 如果擲回大量（>100）例外狀況，此計數器就是潛在效能問題的指標。|  
 |**# of Filters / Sec**|顯示每秒所執行的 .NET 例外狀況篩選數目。 不論例外狀況是否已處理，都會評估例外狀況篩選。<br /><br /> 這個計數器不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。|  
 |**# of Finallys / Sec**|顯示每秒執行的 Finally 區塊數目。 不論 Try 區塊如何結束，都保證會執行 Finally 區塊。  只有例外狀況的 Finally 區塊會被列入計算；該計數器不會把正常程式碼路徑上的 Finally 區塊列入計算。<br /><br /> 這個計數器不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。|  
 |**Throw to Catch Depth / Sec**|顯示從擲回例外狀況的框架周遊到處理例外狀況的框架之每秒堆疊框架數目。 當進入例外狀況處理常式時，此計數器會重設為零，因此巢狀例外狀況會顯示處理常式至處理常式的堆疊深度。<br /><br /> 這個計數器不是時間累積下的平均數；它會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。|  
@@ -112,7 +113,7 @@ ms.locfileid: "79400019"
 |**Gen 1 heap size**|顯示目前層代 1 中的位元組數目；此計數器不會顯示層代 1 的最大大小。 在此層代中不會直接配置物件；它們會從上一個層代 0 記憶體回收提升。 這個計數器於記憶體回收的結尾更新，而非每次配置時更新。|  
 |**Gen 1 Promoted Bytes/Sec**|顯示每秒從層代 1 提升至層代 2 的位元組。 只因等候最終處理而提升的物件並不包含在此計數器內。<br /><br /> 當記憶體未被回收時，記憶體就會被提升。 層代 2 中沒有任何提升，因為這是最舊的層代。 此計數器是每秒所建立的存留最久物件的指示器。<br /><br /> 這個計數器會顯示最後兩個樣本中觀察到的值之間的差異除以樣本間隔的持續時間。|  
 |**Gen 2 heap size**|顯示目前層代 2 中的位元組數目。 在此層代中不會直接配置物件；它們會在上一次層代 1 記憶體回收期間從層代 1 提升。 這個計數器於記憶體回收的結尾更新，而非每次配置時更新。|  
-|**大型物件堆積大小**|顯示大型物件堆的當前大小（以位元組為單位）。 大於大約 85，000 個位元組的物件由垃圾回收器視為大物件，並直接分配在特殊堆中。 它們不是代代相傳的。 這個計數器於記憶體回收的結尾更新，而非每次配置時更新。|  
+|**大型物件堆積大小**|顯示大型物件堆積的目前大小（以位元組為單位）。 大於大約85000個位元組的物件會被垃圾收集行程視為大型物件，並直接配置在特殊堆積中。 它們不會透過層代進行升級。 這個計數器於記憶體回收的結尾更新，而非每次配置時更新。|  
 |**處理序識別碼**|顯示所監視之 CLR 處理序執行個體的處理序 ID。|  
 |**Promoted Finalization-Memory from Gen 0**|顯示只因等待最終處理而從層代 0 提升至層代 1 的記憶體位元組數。 這個計數器不是累計的；它會顯示在上一次記憶體回收的結尾觀察到的值。|  
 |**Promoted Memory from Gen 0**|顯示未被記憶體回收，且從層代 0 提升至層代 1 的記憶體位元組數。 只因等候最終處理而提升的物件並不包含在此計數器內。 這個計數器不是累計的；它會顯示在上一次記憶體回收的結尾觀察到的值。|  
@@ -194,7 +195,7 @@ ms.locfileid: "79400019"
   
  網路效能計數器可以使用 <xref:System.Diagnostics.PerformanceCounter> 和在 <xref:System.Diagnostics> 命名空間中的相關類別存取及管理。 網路效能計數器也可以使用 Windows 效能監視器主控台檢視。  
   
- 需要在組態檔中啟用，才能使用網路效能計數器。 藉由組態檔中的單一設定可啟用或停用所有網路效能計數器。 不能啟用或停用個別的網路效能計數器。 有關詳細資訊，請參閱[\<效能計數器>元素（網路設置）。](../configure-apps/file-schema/network/performancecounter-element-network-settings.md)  
+ 需要在組態檔中啟用，才能使用網路效能計數器。 藉由組態檔中的單一設定可啟用或停用所有網路效能計數器。 不能啟用或停用個別的網路效能計數器。 如需詳細資訊，請參閱[ \<performanceCounter> 元素（網路設定）](../configure-apps/file-schema/network/performancecounter-element-network-settings.md)。  
   
  如果已啟用網路計數器，這會建立並更新每個 AppDomain 和全域效能計數器。 如果停用，應用程式不會提供任何網路效能計數器資料。  
   
@@ -230,4 +231,4 @@ for (int i = 0; i < Array.Length; i++)
 ## <a name="see-also"></a>另請參閱
 
 - [效能計數器](performance-counters.md)
-- [運行時分析](runtime-profiling.md)
+- [執行時間分析](runtime-profiling.md)

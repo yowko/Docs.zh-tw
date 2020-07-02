@@ -1,7 +1,7 @@
 ---
-title: .NET Framework 規則運算式
+title: .NET 規則運算式
 description: 使用正則運算式來尋找特定的字元模式、驗證文字、使用文字子字串，& 將解壓縮的字串加入至 .NET 中的集合。
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f57199c2ddf6569020554e74b6e70801844da641
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802893"
 ---
 # <a name="net-regular-expressions"></a>.NET 規則運算式
 
@@ -67,6 +67,8 @@ ms.locfileid: "84768829"
 ## <a name="regular-expression-examples"></a>規則運算式範例
 
 <xref:System.String> 類別包含數種字串搜尋和取代方法，可供您在大型字串中尋找常值字串時使用。 當您想要在大型字串中尋找數個子字串時，或是當您想要識別字串中的模式時，規則運算式最為好用，如下列範例所示。
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 > [!TIP]
 > <xref:System.Web.RegularExpressions> 命名空間包含一些規則運算式物件，這些物件會實作預先定義的規則運算式模式，以用於剖析來自 HTML、XML 和 ASP.NET 文件的字串。 例如，<xref:System.Web.RegularExpressions.TagRegex> 類別會識別字串中的開始標記，而 <xref:System.Web.RegularExpressions.CommentRegex> 類別會識別字串中的 ASP.NET 註解。
@@ -126,7 +128,7 @@ ms.locfileid: "84768829"
   
  如果在輸入字串中找到上述每個子模式，則比對成功，並且會將包含此比對相關資訊的 <xref:System.Text.RegularExpressions.Match> 物件加入至 <xref:System.Text.RegularExpressions.MatchCollection> 物件。  
   
-## <a name="related-topics"></a>相關主題  
+## <a name="related-topics"></a>相關的主題  
   
 |Title|描述|  
 |-----------|-----------------|  

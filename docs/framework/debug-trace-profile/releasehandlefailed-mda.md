@@ -1,5 +1,6 @@
 ---
 title: releaseHandleFailed MDA
+description: 請參閱 releaseHandleFailed managed 偵錯工具（MDA），這可能會因為 .NET 中的資源或記憶體流失而啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803634"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 當衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 之類別的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法傳回 `false` 時，會啟動 `releaseHandleFailed` Managed 偵錯助理 (MDA) 來通知開發人員。  

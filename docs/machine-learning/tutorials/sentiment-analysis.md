@@ -1,17 +1,17 @@
 ---
-title: 教學:分析網站評論 - 二進位分類
+title: 教學課程：分析網站批註-二元分類
 description: 本教學課程示範如何建立 .NET Core 主控台應用程式，來分類網站評論中的情感並採取適當動作。 二元情感分類器在 Visual Studio 中使用 C#。
-ms.date: 09/30/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6e13cfca93c54648b1a0423c5983013d3e2a1a0
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b193752437c3e84476858bb3b70ba642d8562769
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803244"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教程:在ML.NET中用二進位分類分析網站評論的情緒
+# <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教學課程：使用 ML.NET 中的二進位分類來分析網站批註的情感
 
 本教學課程示範如何建立 .NET Core 主控台應用程式，來分類網站評論中的情感並採取適當動作。 二元情感分類器在 Visual Studio 2017 中使用 C#。
 
@@ -28,9 +28,9 @@ ms.locfileid: "81243293"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-- [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019),安裝了".NET 核心跨平台開發"工作負載
+- 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本
 
 - [UCI 情感標記句子資料集](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (ZIP 檔案)
 
@@ -38,22 +38,24 @@ ms.locfileid: "81243293"
 
 1. 建立稱為 "SentimentAnalysis" 的 **.NET Core 主控台應用程式**。
 
-2. 在項目中創建名為*Data*的目錄以儲存資料集檔。
+2. 在專案中建立名為*Data*的目錄，以儲存您的資料集檔案。
 
 3. 安裝「Microsoft.ML NuGet 套件」****：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇'nuget.org"作為套件源,然後選擇 **「瀏覽**」選項卡。搜尋**Microsoft.ML,** 選擇所需的包,然後選擇「**安裝**」按鈕。 同意您所選套件的授權條款，以繼續進行安裝。 對**Microsoft.ML.FastTree** NuGet 包執行相同的操作。
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇 "nuget.org" 作為套件來源，然後選取 [**流覽**] 索引標籤。搜尋**Microsoft.ML**，選取您想要的套件，然後選取 [**安裝**] 按鈕。 同意您所選套件的授權條款，以繼續進行安裝。
 
 ## <a name="prepare-your-data"></a>準備您的資料
 
 > [!NOTE]
-> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015,並在UCI機器學習存儲庫託管 - Dua,D.和卡拉塔尼斯基杜,E.(2017年)。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 Irvine, CA: University of California, School of Information and Computer Science.
+> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 Irvine, CA:University of California, School of Information and Computer Science。
 
 1. 下載並解壓縮 [UCI 情感標記句子資料集 ZIP 檔案](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)。
 
 2. 將 `yelp_labelled.txt` 檔案複製到您所建立的 *Data* 目錄。
 
-3. 在 [方案總管] 中，以滑鼠右鍵按一下 `yelp_labeled.txt` 檔案，並選取 [內容]****。 在 **「進階」** 下,將 **「複製到輸出目錄**」的值更改為 **「如果更新」,則將其更改為"複製**"。
+3. 在 [方案總管] 中，以滑鼠右鍵按一下 `yelp_labeled.txt` 檔案，並選取 [內容]****。 在 [ **Advanced**] 底下，將 [**複製到輸出目錄**] 的值變更為 [**更新時複製**]。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -61,7 +63,7 @@ ms.locfileid: "81243293"
 
     [!code-csharp[AddUsings](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#AddUsings "Add necessary usings")]
 
-1. 將以下代碼加入方法的正行,`Main`以建立一個欄位來儲存最近下載的資料集檔路徑:
+1. 將下列程式碼新增至方法上方的一行 `Main` ，以建立欄位以保存最近下載的資料集檔案路徑：
 
     [!code-csharp[Declare global variables](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
@@ -87,7 +89,7 @@ ms.locfileid: "81243293"
 |--------------------------------------|----------|
 |女服務生的服務速度有點慢。|    0     |
 |不夠酥脆。                    |    0     |
-|哇。。。喜歡這個地方              |    1     |
+|Wow .。。就愛了。              |    1     |
 |服務很迅速。              |    1     |
 
 `SentimentPrediction` 是在模型定型後所使用的預測類別。 它繼承自 `SentimentData`，以便輸入 `SentimentText` 可以和輸出預測一起顯示。 `Prediction` 布林值是在提供新輸入 `SentimentText` 時，模型預測的值。
@@ -131,7 +133,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     [!code-csharp[LoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#LoadData "loading dataset")]
 
-    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)方法定義數據架構並在檔中讀取。 會接受資料路徑變數然後傳回 `IDataView`。
+    [LoadFromTextFile （）](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)方法會定義資料架構，並在檔案中讀取。 會接受資料路徑變數然後傳回 `IDataView`。
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>分割資料集以進行模型定型與測試
 
@@ -141,7 +143,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     [!code-csharp[SplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#SplitData "Split the Data")]
 
-    前面的代碼使用[TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A)方法將載入的資料集拆分為訓練數據集和測試數據集,<xref:Microsoft.ML.DataOperationsCatalog.TrainTestData>並在類中 返回它們。 您可以使用 `testFraction` 參數來指定資料的測試集百分比。 預設值是 10%，但您在本例中會使用 20% 以評估更多資料。
+    先前的程式碼會使用[TrainTestSplit （）](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A)方法，將載入的資料集分割成定型和測試資料集，並在類別中傳回它們 <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> 。 您可以使用 `testFraction` 參數來指定資料的測試集百分比。 預設值是 10%，但您在本例中會使用 20% 以評估更多資料。
 
 2. 在 `LoadData()` 方法的結尾傳回 `splitDataView`：
 
@@ -181,7 +183,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
     |--------------------------------------|----------|----------------------|
     |女服務生的服務速度有點慢。|    0     |[0.76, 0.65, 0.44, …] |
     |不夠酥脆。                    |    0     |[0.98, 0.43, 0.54, …] |
-    |哇。。。喜歡這個地方              |    1     |[0.35, 0.73, 0.46, …] |
+    |Wow .。。就愛了。              |    1     |[0.35, 0.73, 0.46, …] |
     |服務很迅速。              |    1     |[0.39, 0, 0.75, …]    |
 
 ### <a name="add-a-learning-algorithm"></a>新增學習演算法
@@ -282,7 +284,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
-    [預測引擎](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API,它允許您對單個數據實例執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是線程安全的。 在單線程或原型環境中使用是可以接受的。 為提高生產環境中的性能和線程安全性,請使用`PredictionEnginePool`該服務,該服務創建一[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)個 物件,供整個應用程式使用。 請參閱有關如何[`PredictionEnginePool`在 ASP.NET核心 Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)的本指南。
+    [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是安全線程。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立物件的， [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 以便在 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 整個應用程式中使用。 請參閱本指南，以瞭解如何[ `PredictionEnginePool` 在 ASP.NET CORE Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
 
     > [!NOTE]
     > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
@@ -291,7 +293,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     [!code-csharp[PredictionData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
-5. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)以將以下內容加入方法的下一行碼,`UseModelWithSingleItem()`將測試註解資料傳遞給 :
+5. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)將下列內容新增為方法中的下一行程式碼，藉以將測試批註資料傳遞至 `UseModelWithSingleItem()` 。
 
     [!code-csharp[Predict](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#Predict "Create a prediction of sentiment")]
 
@@ -376,7 +378,7 @@ Press any key to continue . . .
 
 恭喜！ 您現在已成功建置可對訊息情感進行分類和預測的機器學習模型。
 
-建立成功的模型是一個需要反覆嘗試的程序。 此模型一開始的品質較低，因為此教學課程是使用小型的資料集來提供快速的模型定型。 如果您對模型品質不滿意,則可以嘗試通過提供較大的訓練數據集或為每個演算法選擇具有不同[超參數](../resources/glossary.md#hyperparameter)的不同訓練演演演算法來改進模型品質。
+建立成功的模型是一個需要反覆嘗試的程序。 此模型一開始的品質較低，因為此教學課程是使用小型的資料集來提供快速的模型定型。 如果您不滿意模型品質，可以嘗試藉由提供較大的訓練資料集，或選擇不同的定型演算法，並針對每個演算法使用不同的[超參數](../resources/glossary.md#hyperparameter)，來進行改善。
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到本教學課程的原始程式碼。
 

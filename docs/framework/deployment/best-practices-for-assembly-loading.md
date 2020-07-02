@@ -1,5 +1,6 @@
 ---
 title: 組件載入的最佳作法
+description: 探索 .NET 中元件載入的最佳作法。 避免類型身分識別的問題，可能會導致不正確轉換、遺漏方法和其他例外狀況。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies,binding
@@ -12,23 +13,23 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181694"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803492"
 ---
 # <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
 本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
   
 - [了解載入內容的優缺點](#load_contexts)  
   
-- [避免對部分程式集名稱綁定](#avoid_partial_names)  
+- [避免部分元件名稱上的系結](#avoid_partial_names)  
   
 - [避免將組件載入多個內容](#avoid_loading_into_multiple_contexts)  
   
-- [避免將程式集的多個版本載入到同一上下文中](#avoid_loading_multiple_versions)  
+- [避免將多個版本的元件載入相同的內容中](#avoid_loading_multiple_versions)  
   
 - [考慮切換成預設載入內容](#switch_to_default)  
   

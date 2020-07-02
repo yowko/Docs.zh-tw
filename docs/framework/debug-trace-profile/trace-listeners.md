@@ -1,5 +1,6 @@
 ---
 title: 追蹤接聽項
+description: 探索追蹤接聽項，這是一種機制，用來收集和記錄在 .NET 中傳送的追蹤訊息。 接聽程式會收集、儲存及路由傳送訊息。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +15,15 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d08f86c782284a296090cf63e4b03c8d446a95fc
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803519"
 ---
 # <a name="trace-listeners"></a>追蹤接聽項
-使用 **Trace**、**Debug** 和 <xref:System.Diagnostics.TraceSource> 時，您必須具有收集和記錄所傳送訊息的機制。 追蹤訊息由「接聽程式」負責接收。 接聽程式的目的是為了收集、儲存和路由傳送追蹤訊息。 接聽程式會將追蹤輸出導向適當的目標，例如記錄檔、視窗或文字檔。  
+使用 **Trace**、**Debug** 和 <xref:System.Diagnostics.TraceSource> 時，您必須具有收集和記錄所傳送訊息的機制。 接聽*程式會*接收追蹤訊息。 接聽項的用途是收集、儲存和傳送追蹤訊息。 接聽項會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
   
  接聽程式可供 **Debug**、**Trace** 和 <xref:System.Diagnostics.TraceSource> 類別使用，其中每一項都可以將輸出傳送至各種不同的接聽程式物件。 以下是常用的預先定義接聽程式：  
   
@@ -30,11 +31,11 @@ ms.locfileid: "77216147"
   
 - <xref:System.Diagnostics.EventLogTraceListener>會將輸出重新導向至事件記錄檔。  
   
-- <xref:System.Diagnostics.DefaultTraceListener> 會發出 **Write** 和 **WriteLine** 訊息至 **OutputDebugString** 和 **Debugger.Log** 方法。 在 Visual Studio 中，這會造成 [輸出] 視窗中出現偵錯訊息。 **Fail** 和失敗的 **Assert** 訊息也會發送至 **OutputDebugString** Windows API 和 **Debugger.Log** 方法，這也造成會顯示訊息方塊。 因為 **DefaultTraceListener** 會被自動納入所有的 **集合，並且這是唯一被自動納入的接聽項，所以這種行為是**Debug**和**Trace`Listeners` 訊息的預設行為。  
+- <xref:System.Diagnostics.DefaultTraceListener> 會發出 **Write** 和 **WriteLine** 訊息至 **OutputDebugString** 和 **Debugger.Log** 方法。 在 Visual Studio 中，這會造成 [輸出] 視窗中出現偵錯訊息。 **Fail** 和失敗的 **Assert** 訊息也會發送至 **OutputDebugString** Windows API 和 **Debugger.Log** 方法，這也造成會顯示訊息方塊。 因為 **DefaultTraceListener** 會被自動納入所有的 `Listeners` 集合，並且這是唯一被自動納入的接聽項，所以這種行為是 **Debug** 和 **Trace** 訊息的預設行為。  
   
 - <xref:System.Diagnostics.ConsoleTraceListener> 會將追蹤或偵錯輸出導向至標準輸出或標準錯誤資料流。  
   
-- <xref:System.Diagnostics.DelimitedListTraceListener> 會將追蹤或偵錯輸出導向文字寫入器，例如資料流寫入器，或是導向資料流，例如檔案資料流。 追蹤輸出是以分隔的文字格式，使用 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 屬性所指定的分隔符號。  
+- <xref:System.Diagnostics.DelimitedListTraceListener> 會將追蹤或偵錯輸出導向文字寫入器，例如資料流寫入器，或是導向資料流，例如檔案資料流。 追蹤輸出是以分隔的文字格式，使用屬性所指定的分隔符號 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 。  
   
 - <xref:System.Diagnostics.XmlWriterTraceListener> 會將追蹤或偵錯輸出當成 XML 編碼資料導向至 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
   
@@ -80,5 +81,5 @@ System.Diagnostics.Trace.Listeners.Add(
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TraceListener>
-- [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)
+- [追蹤和稽核應用程式](tracing-and-instrumenting-applications.md)
 - [追蹤參數](trace-switches.md)

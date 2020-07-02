@@ -1,5 +1,6 @@
 ---
-title: 如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
+title: 作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
+description: 配置.以網路為基礎的 COM 元件，適用于免註冊啟用。 安裝程式需要 Win32 樣式的應用程式資訊清單和 .NET 元件資訊清單。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622194"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
   
 - COM 應用程式必須有 Win32 樣式應用程式資訊清單，才能識別 Managed 元件。  
@@ -170,7 +171,7 @@ ms.locfileid: "80291760"
   
     `/win32res:myresource.res`  
   
-     同樣地`myresource.res` ，是包含內嵌資源的資源檔名稱。  
+     同樣地， `myresource.res` 是包含內嵌資源的資源檔名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

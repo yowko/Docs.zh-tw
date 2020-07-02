@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: f1a5070c106055b268d43751300d84269fed6a36
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 68b1f723b3dcc4fd16073a653a778aa480cfa32e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621752"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用以工作為基礎的非同步模式
 
@@ -521,7 +521,7 @@ public async void btnDownload_Click(object sender, RoutedEventArgs e)
             Task.WhenAll(from url in urls select GetBitmapAsync(url));
         if (downloads == await Task.WhenAny(downloads, Task.Delay(3000)))
         {
-            foreach(var bmp in downloads) panel.AddImage(bmp);
+            foreach(var bmp in downloads.Result) panel.AddImage(bmp);
             status.Text = "Downloaded";
         }
         else

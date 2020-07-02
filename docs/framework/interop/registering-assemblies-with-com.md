@@ -1,5 +1,6 @@
 ---
 title: 向 COM 註冊組件
+description: 使用元件註冊工具（Regasm.exe），向 COM 註冊或取消註冊元件，這會將類別的相關資訊新增至系統登錄。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, registering assemblies
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1b73a79b8167e7f75b8c68f708179e88c575d66a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621895"
 ---
 # <a name="registering-assemblies-with-com"></a>向 COM 註冊組件
 您可以執行稱為[組件註冊工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 的命令列工具，註冊或取消登錄與 COM 搭配使用的組件。 Regasm.exe 會將此類別的相關資訊新增至容器登錄，讓 COM 用戶端可以明確地使用 .NET Framework 類別。 <xref:System.Runtime.InteropServices.RegistrationServices> 類別提供對等功能。  
@@ -44,6 +45,6 @@ ms.locfileid: "73113812"
 ## <a name="see-also"></a>另請參閱
 
 - [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)
-- [如何：參考 COM 的 .NET 類型](how-to-reference-net-types-from-com.md)
+- [作法：參考 COM 的 .NET 類型](how-to-reference-net-types-from-com.md)
 - [呼叫 .NET 物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [部署供 COM 存取的應用程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

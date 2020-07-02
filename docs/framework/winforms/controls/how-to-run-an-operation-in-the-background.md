@@ -1,5 +1,6 @@
 ---
-title: HOW TO：在背景執行作業
+title: 如何：在背景執行作業
+description: 瞭解如何使用 BackgroundWorker 類別，在背景中執行耗時的 Windows Forms 作業。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: 77f75a7eb1d7cc536df7110ef55727fbdf789f23
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6b2a97f5acf1e906dfe141aee62e99a4e50dca9f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621570"
 ---
-# <a name="how-to-run-an-operation-in-the-background"></a>HOW TO：在背景執行作業
+# <a name="how-to-run-an-operation-in-the-background"></a>如何：在背景執行作業
 如果您有要花費較長時間才能完成的作業，但您不想導致使用者介面發生延遲，就可以使用 <xref:System.ComponentModel.BackgroundWorker> 類別在另一個執行緒上執行該作業。  
   
- 下列程式碼範例示範如何在背景執行耗時的作業。 表單具有 [開始] 和 [取消] 按鈕。 按一下 [開始] 按鈕以執行非同步作業。 按一下 [取消] 按鈕以停止執行中的非同步作業。 每個作業的結果會顯示於 <xref:System.Windows.Forms.MessageBox>。  
+ 下列程式碼範例示範如何在背景執行耗時的作業。 表單具有 [開始]**** 和 [取消]**** 按鈕。 按一下 [開始]**** 按鈕以執行非同步作業。 按一下 [取消]**** 按鈕以停止執行中的非同步作業。 每個作業的結果會顯示於 <xref:System.Windows.Forms.MessageBox>。  
   
  在 Visual Studio 中對於本工作有更詳盡的支援。  
   
@@ -42,5 +43,5 @@ ms.locfileid: "65591609"
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [操作說明：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [BackgroundWorker 元件](backgroundworker-component.md)

@@ -3,15 +3,15 @@ title: 教學課程：使用 ONNX 深度學習模型來偵測物件
 description: 本教學課程會示範如何使用 ML.NET 中預先定型的 ONNX 深度學習模型來偵測影像中物件。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803400"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：在 ML.NET 中使用 ONNX 偵測物件
 
@@ -19,7 +19,7 @@ ms.locfileid: "84767776"
 
 若要從頭開始定型物件偵測模型，將會需要設定數以百萬計的參數、大量的標籤定型資料，以及大量的計算資源 (數以百計的 GPU 小時)。 使用預先定型的模型可讓您快速地進行定型過程。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 > [!div class="checklist"]
 >
 > - 了解問題
@@ -89,6 +89,8 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 1. 建立稱為 "ObjectDetection" 的 **.NET Core 主控台應用程式**。
 
 1. 安裝「Microsoft.ML NuGet 套件」****：
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     - 在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。
     - 選擇 [nuget.org] 作為 [套件來源]，選取 [瀏覽] 索引標籤，搜尋 **Microsoft.ML**。
@@ -665,7 +667,7 @@ for (var i = 0; i < images.Count(); i++)
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-完成了！
+就這麼簡單！
 
 ## <a name="results"></a>結果
 

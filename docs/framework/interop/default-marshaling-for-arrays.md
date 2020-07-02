@@ -1,5 +1,6 @@
 ---
 title: 陣列的預設封送處理
+description: 瞭解陣列的預設封送處理。 審查 managed 陣列、非受控陣列、將陣列參數傳遞給 .NET 程式碼，以及將陣列傳遞給 COM。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eafed0e0a0150923aae0fa68a1b96e6d9d66b07a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622558"
 ---
 # <a name="default-marshaling-for-arrays"></a>陣列的預設封送處理
 在包含整個 Managed 程式碼的應用程式中，Common Language Runtime 會將陣列類型傳遞為 In/Out 參數。 相較之下，Interop 封送處理器預設會將陣列傳遞為 In 參數。  
@@ -29,7 +30,7 @@ ms.locfileid: "79181453"
   
  如下表所示，任何 Managed 陣列執行個體都必須是特定項目類型、順位和下限。  
   
-|Managed 陣列類型|項目類型|Rank|下限|簽章標記法|  
+|Managed 陣列類型|項目類型|排名|下限|簽章標記法|  
 |------------------------|------------------|----------|-----------------|------------------------|  
 |**ELEMENT_TYPE_ARRAY**|依類型指定。|依順位指定。|選擇性依界限指定。|*類型* **[** *n*，*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Unknown|Unknown|Unknown|**System.Array**|  
@@ -43,8 +44,8 @@ ms.locfileid: "79181453"
   
 |Unmanaged 類型|匯入的類型|  
 |--------------------|-------------------|  
-|**SafeArray （** *類型* **）**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType***>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。 不是順位 = 1 或下限 = 0 的安全陣列無法封送處理為 **SZARRAY**。|  
-|*類型*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType***>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。|  
+|**SafeArray （** *類型* **）**|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。 不是順位 = 1 或下限 = 0 的安全陣列無法封送處理為 **SZARRAY**。|  
+|*類型*  **[]**|**ELEMENT_TYPE_SZARRAY****\<** *ConvertedType* **>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。|  
   
 ### <a name="safe-arrays"></a>安全陣列  
  將安全陣列從型別程式庫匯入至 .NET 組件時，會將陣列轉換成一維已知類型陣列 (例如 **int**)。 套用至參數的相同類型轉換規則也會套用至陣列項目。 例如，**BSTR** 類型的安全陣列變成 Managed 字串陣列，而變異值的安全陣列變成 Managed 物件陣列。 **SAFEARRAY** 項目類型擷取自型別程式庫，並儲存至 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉的 **SAFEARRAY** 值中。  
@@ -182,8 +183,8 @@ void New3(ref String ar);
   
 |Managed 陣列類型|匯出為|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *類型***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 類型是在簽章中提供。 順位一律為 1，下限一律為 0。 在執行階段，一律會知道大小。|  
-|**ELEMENT_TYPE_ARRAY** **\<** *類型***\<** *bounds* *rank*等級 [界限**>**] **>** **\<** **>**|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 在簽章中，提供類型、順位和界限。 在執行階段，一律會知道大小。|  
+|**ELEMENT_TYPE_SZARRAY****\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 類型是在簽章中提供。 順位一律為 1，下限一律為 0。 在執行階段，一律會知道大小。|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>****\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 在簽章中，提供類型、順位和界限。 在執行階段，一律會知道大小。|  
 |**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 在執行階段，一律可辨識類型、順位、界限和大小。|  
   
  與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串]**** 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
@@ -309,7 +310,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS\<System.Array>  
  將包含 <xref:System.Array?displayProperty=nameWithType> 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成 **_Array** 介面。 Managed 陣列的內容只能透過 **_Array** 介面的方法和屬性進行存取。 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將 **System.Array** 封送處理為 **SAFEARRAY**。 封送處理為安全陣列時，會將陣列項目封送處理為變異值。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  

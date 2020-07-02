@@ -1,16 +1,17 @@
 ---
 title: 部署 .NET Framework
+description: 瞭解如何為想要以應用程式安裝 .NET 的開發人員，以及想要透過網路部署 .NET 的系統管理員，部署 .NET。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e9fef2af56ca278b0e326c15546ca9f849a3253
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622766"
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
 本節 .NET Framework 文件為想要與應用程式一起安裝 .NET Framework 的開發人員，和想要在網路上部署 .NET Framework 系統管理員提供資訊。 它也討論與部署相關的啟用及重新啟動問題，以及如何監視 .NET Framework 安裝進度。  
@@ -20,9 +21,9 @@ ms.locfileid: "75716539"
  說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。  
   
  [系統管理員部署手冊](guide-for-administrators.md)  
- 說明系統管理員如何使用 Microsoft 終結點組態管理員通過網路部署 .NET 框架及其系統依賴項。  
+ 說明系統管理員如何使用 Microsoft 端點 Configuration Manager，在網路上部署 .NET Framework 及其系統相依性。  
   
- [在 .NET 框架 4.5 安裝期間減少系統重新開機](reducing-system-restarts.md)  
+ [減少 .NET Framework 4.5 安裝期間的系統重新開機](reducing-system-restarts.md)  
  描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。  
   
  [如何：取得 .NET Framework 4.5 安裝程式的進度](how-to-get-progress-from-the-dotnet-installer.md)  

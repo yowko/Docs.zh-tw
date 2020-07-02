@@ -4,12 +4,12 @@ description: 了解 .NET Core 如何自動為您的程式尋找及選擇執行�
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 5e855adc72f0e75e6f31643f8a8618e6d91be06e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803114"
 ---
 # <a name="select-the-net-core-version-to-use"></a>選取要使用的 .NET Core 版本
 
@@ -80,13 +80,13 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 當您從使用的來源執行應用程式時 [`dotnet run`](../tools/dotnet-run.md) ，從使用的[**framework 相依部署**](../deploying/index.md#publish-runtime-dependent) [`dotnet myapp.dll`](../tools/dotnet.md#description) ，或從與[**framework 相依的可執行檔**](../deploying/index.md#publish-runtime-dependent)使用 `myapp.exe` ， `dotnet` 可執行檔是應用程式的**主機**。
 
-該主機會選擇電腦上最新安裝的修補程式版本。 例如，如果您在專案檔中指定 `netcoreapp3.0`，且 `3.0.4` 是最新安裝的 .NET 執行階段，則會使用 `3.0.4` 執行階段。
+該主機會選擇電腦上最新安裝的修補程式版本。 例如，如果您在專案檔中指定 `netcoreapp3.0`，且 `3.0.2` 是最新安裝的 .NET 執行階段，則會使用 `3.0.2` 執行階段。
 
 如果找不到可接受的 `3.0.*` 版本，則會使用新的 `3.*` 版本。 例如，如果您指定 `netcoreapp3.0` 並只安裝 `3.1.0`，應用程式會使用 `3.1.0` 執行階段來執行。 此行為稱為「次要版本向前復原」。 也不會考慮舊版。 若未安裝可接受的執行階段，應用程式將不會執行。
 
 如果您將目標設為3.0，則幾個使用範例會示範此行為：
 
-- 已指定✔️3.0。 3.0.5 是已安裝的最高修補程式版本。 會使用3.0.5。
+- 已指定✔️3.0。 3.0.3 是已安裝的最高修補程式版本。 會使用3.0.3。
 - ❌已指定3.0。 沒有 3.0. * 版本已安裝。 2.1.1 是安裝的最高執行時間。 顯示錯誤訊息。
 - 已指定✔️3.0。 沒有 3.0. * 版本已安裝。 3.1.0 是安裝的最高執行階段版本。 會使用3.1.0。
 - ❌已指定2.0。 未安裝 2.x 版本。 3.0.0 是安裝的最高執行時間。 顯示錯誤訊息。
@@ -95,27 +95,27 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 1. 應用程式會指定需要3.0。
 2. 不過，執行時，不會安裝版本 3.0. *，3.1.0 是。 將使用版本3.1.0。
-3. 之後，使用者會安裝3.0.5 並再次執行應用程式，現在將會使用3.0.5。
+3. 之後，使用者會安裝3.0.3 並再次執行應用程式，現在將會使用3.0.3。
 
-3.0.5 和3.1.0 的行為可能不同，特別是針對序列化二進位資料等案例。
+3.0.3 和3.1.0 的行為可能不同，特別是針對序列化二進位資料等案例。
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>獨立部署包含選取的執行階段
 
 您可以將應用程式發佈為[**獨立散發**](../deploying/index.md#publish-self-contained)。 此方法會將 .NET Core 執行階段和程式庫與您的應用程式配套。 獨立部署不會相依於執行階段環境。 執行階段版本選取發生於發佈時，而不是執行時。
 
-發佈過程會選取指定執行階段系列的最新修補程式版本。 例如， `dotnet publish` 如果 .Net core 3.0.4 是 .Net core 3.0 執行時間系列中的最新修補程式版本，則會選取它。 目標 Framework (包括最新安裝的安全性修補程式) 會封裝於應用程式。
+發佈過程會選取指定執行階段系列的最新修補程式版本。 例如， `dotnet publish` 如果 .Net core 3.0.3 是 .Net core 3.0 執行時間系列中的最新修補程式版本，則會選取它。 目標 Framework (包括最新安裝的安全性修補程式) 會封裝於應用程式。
 
 如果不符合針對應用程式指定的最低版本，就會發生錯誤。 `dotnet publish` 會繫結至最新的執行階段修補程式版本 (指定的主要.次要版本系列內)。 `dotnet publish` 不支援 `dotnet run` 的向前復原語意。 如需修補程式和獨立部署的詳細資訊，請參閱部署 .NET Core 應用程式中有關[執行階段修補程式選取](../deploying/runtime-patch-selection.md)的文章。
 
 獨立部署可能需要特定修補程式版本。 您可以覆寫專案檔中的最低執行階段修補程式版本 (改為較高或較低版本)，如下列範例所示：
 
 ``` xml
-<RuntimeFrameworkVersion>3.0.4</RuntimeFrameworkVersion>
+<RuntimeFrameworkVersion>3.0.3</RuntimeFrameworkVersion>
 ```
 
 `RuntimeFrameworkVersion` 項目會覆寫預設版本原則。 針對獨立部署，`RuntimeFrameworkVersion` 會指定「確切」** 的執行階段架構版本。 針對架構相依應用程式，`RuntimeFrameworkVersion` 會指定所需的「最低」** 執行階段架構版本。
 
 ## <a name="see-also"></a>另請參閱
 
-- [下載並安裝 .Net Core](../install/index.md)。
+- [下載並安裝 .Net Core](../install/index.yml)。
 - [如何移除 .Net Core 執行時間和 SDK](../install/remove-runtime-sdk-versions.md)。

@@ -1,5 +1,6 @@
 ---
 title: reportAvOnComRelease MDA
+description: 請參閱 reportAvOnComRelease managed 偵錯工具（MDA），這可能是因為在 .NET 中發生存取違規和記憶體損毀所造成。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), reference counting errors
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - report access violation on Com release
 - reference counting errors
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
-ms.openlocfilehash: fca6b209e6432678a264f10762adb3871e3596ce
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: f9ba343060cb4d16de5909a5b619353546aca8ca
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803606"
 ---
 # <a name="reportavoncomrelease-mda"></a>reportAvOnComRelease MDA
 如果在執行 COM Interop 並使用與原始 COM 呼叫組合的 `reportAvOnComRelease` 或 <xref:System.Runtime.InteropServices.Marshal.Release%2A> 方法時，因為使用者參考計數錯誤而擲回例外狀況，就會啟用 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> Managed 偵錯助理 (MDA)。  

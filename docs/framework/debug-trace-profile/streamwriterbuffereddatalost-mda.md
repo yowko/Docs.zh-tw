@@ -1,5 +1,6 @@
 ---
 title: streamWriterBufferedDataLost MDA
+description: 請參閱 streamWriterBufferedDataLost managed 偵錯工具（MDA），如果 StreamWriter 不會將最後1– 4 KB 的資料寫入檔案，這可能會啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StreamWriter class, data buffering problems
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 18b2a5a95756ed125d26b2846c0b1ddc320463ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c10ea6bb9dc0aaafa2ac1798696579af7592895
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803478"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 `streamWriterBufferedDataLost` Managed 偵錯助理 (MDA) 會在寫入 <xref:System.IO.StreamWriter> 時啟動，但在終結 <xref:System.IO.StreamWriter> 的執行個體之前，不會接著呼叫 <xref:System.IO.StreamWriter.Flush%2A> 或 <xref:System.IO.StreamWriter.Close%2A> 方法。 此 MDA 啟用時，執行階段會判斷在 <xref:System.IO.StreamWriter> 內是否仍有任何緩衝資料存在。 如果緩衝資料不存在，則會啟動 MDA。 呼叫 <xref:System.GC.Collect%2A> 和 <xref:System.GC.WaitForPendingFinalizers%2A> 方法可以強制執行完成項。 否則完成項會在任意時間執行，並且可能根本不是在處理序結束時。 明確執行完成項並啟用這個 MDA，可協助您更可靠地重現這種類型的問題。  

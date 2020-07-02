@@ -1,5 +1,6 @@
 ---
 title: 與非受控程式碼交互操作
+description: 使用非受控碼來檢查互通性。 CLR 會向用戶端和伺服器隱藏 .NET 元件和非受控碼的物件模型有何不同。
 ms.date: 01/17/2018
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cebd75907fd202715cb337593186d248107bdbb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621869"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>與非受控程式碼交互操作
 
@@ -37,22 +38,22 @@ ms.locfileid: "73457963"
 [Interop 封送處理](interop-marshaling.md)  
 描述適用於 COM Interop 和平台叫用的封送處理。
 
-[操作說明：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)  
+[作法：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)  
 描述例外狀況與 HRESULT 之間的對應。
 
 [類型等價和內嵌 Interop 類型](type-equivalence-and-embedded-interop-types.md)  
 描述如何將 COM 類型的類型資訊內嵌於組件，以及通用語言執行平台如何決定內嵌 COM 類型的對等項。
 
-[如何：使用 Tlbimp.exe 產生主要 Interop 組件](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+[作法：使用 Tlbimp.exe 產生主要 Interop 組件](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
 描述如何使用 *Tlbimp.exe* (類型程式庫匯入工具) 產生主要 Interop 組件。
 
-[如何：登錄主要 Interop 組件](how-to-register-primary-interop-assemblies.md)  
+[作法：登錄主要 Interop 組件](how-to-register-primary-interop-assemblies.md)  
 描述如何註冊主要 Interop 組件，以便您能在專案中加以參考。
 
 [免註冊的 COM Interop](registration-free-com-interop.md)  
 描述 COM Interop 如何在不使用 Windows 登錄的情況下啟動元件。
 
-[如何：設定免註冊啟用的 .NET Framework 架構 COM 元件](configure-net-framework-based-com-components-for-reg.md)  
+[作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用](configure-net-framework-based-com-components-for-reg.md)  
 描述如何建立應用程式資訊清單，以及如何建立和內嵌元件資訊清單。
 
 ## <a name="related-sections"></a>相關章節

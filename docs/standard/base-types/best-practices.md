@@ -1,7 +1,7 @@
 ---
 title: .NET 中規則運算式的最佳做法
 description: 了解如何在 .NET 中建立有效率且有效的規則運算式。
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,18 +10,20 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: ecfe0cca59b50da9231709dbd9a2de9b56391d4f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 30d4a8f6ddc4ae1f83f5c0802e872661cbe6c6f1
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802920"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正則運算式最佳做法
 
 .NET 中的規則運算式引擎是一項強大而功能完整的工具，會依據模式比對而非比較與比對常值文字的方式處理文字。 在大部分情況下，它會快速且有效率地執行模式比對。 不過，在某些情況下，規則運算式引擎速度可能變得相當慢。 而只有鮮少情況下，它甚至可能在處理相對小的輸入卻耗費數小時甚至數天時停止回應。
 
 本主題說明一些開發人員可以採用的最佳做法，確保其規則運算式達到最佳效能。
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="consider-the-input-source"></a>考慮輸入來源
 
@@ -269,7 +271,7 @@ ms.locfileid: "84291054"
 
 - 在 `n` 語言項目中使用 `(?imnsx:subexpression)` 選項。 這個選項會停用 `subexpression` 中的所有未命名或隱含擷取。 任何未命名或隱含巢狀擷取群組所進行的擷取也都會停用。
 
-## <a name="related-topics"></a>相關主題
+## <a name="related-topics"></a>相關的主題
 
 |Title|描述|
 |-----------|-----------------|

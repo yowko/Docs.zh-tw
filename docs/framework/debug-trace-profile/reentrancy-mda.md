@@ -1,5 +1,6 @@
 ---
 title: 重新進入 MDA
+description: 檢查重新進入的 MDA，如果物件堆積損毀，或從原生轉換成 managed 程式碼時發生其他嚴重錯誤，則可能會啟動。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged code, debugging
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-ms.openlocfilehash: 5cbe8e843ad72785010240f3db30b1d344c80650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f666e505b8382b0bec8dcfdb34c775850e46c429
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803101"
 ---
 # <a name="reentrancy-mda"></a>重新進入 MDA
 如果未透過循序轉換執行先前從 Managed 程式碼到機器碼的切換時嘗試從機器碼轉換成 Managed 程式碼，啟用 `reentrancy` Managed 偵錯助理 (MDA)。  

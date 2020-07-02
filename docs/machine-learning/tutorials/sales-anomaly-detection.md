@@ -1,15 +1,15 @@
 ---
 title: 教學課程：偵測產品銷售中的異常
 description: 了解如何建置產品銷售資料的異常偵測應用程式。 此教學課程會示範如何在 Visual Studio 2019 中使用 C# 建立 .NET Core 主控台應用程式。
-ms.date: 11/15/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 2fc9c552f5a00d59ea2fddcbcfcbd240cf2fc83c
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: b744b2597abceb91d2c36f596b79fb75c2492563
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803283"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售額中的異常
 
@@ -26,7 +26,7 @@ ms.locfileid: "84201996"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本。
 
@@ -43,6 +43,8 @@ ms.locfileid: "84201996"
 2. 在專案中建立名為*Data*的目錄，以儲存您的資料集檔案。
 
 3. 安裝「Microsoft.ML NuGet 套件」****：
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇 [nuget.org] 作為 [套件來源]，選取 [流覽] 索引標籤，搜尋**Microsoft.ML** ，然後選取 [**安裝**] 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。 針對**時間序列**重複這些步驟。
 

@@ -1,5 +1,6 @@
 ---
 title: 設定控制項所顯示的文字
+description: 瞭解如何設定 Windows Forms 控制項所顯示的文字。 使用 [Text] 屬性來設定或傳回文字，或使用 [字型] 屬性來變更字型。
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 35bae5830bfee8ab91f7b6c7b9dcc6d6b8db00ca
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622844"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>如何：設定 Windows Forms 控制項所顯示的文字
 
-Windows Forms 控制項通常會顯示一些與控制項主要功能相關的文字。 例如，<xref:System.Windows.Forms.Button> 控制項通常會顯示一個標題，指出按一下按鈕時將執行的動作。 針對所有控制項，您都可以使用 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定或傳回該文字。 您可以使用 <xref:System.Windows.Forms.Control.Font%2A> 屬性來變更字型。
+Windows Forms 控制項通常會顯示一些與控制項主要功能相關的文字。 例如， <xref:System.Windows.Forms.Button> 控制項通常會顯示一個標題，指出按一下按鈕時將執行的動作。 針對所有控制項，您都可以使用 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定或傳回該文字。 您可以使用 <xref:System.Windows.Forms.Control.Font%2A> 屬性來變更字型。
 
 您也可以使用[設計](#designer)工具來設定文字。
 
@@ -78,7 +79,7 @@ Windows Forms 控制項通常會顯示一些與控制項主要功能相關的文
 
    若要建立加底線的快速鍵，請在將做為快速鍵的字母之前包含連字號（&）。
 
-2. 在 **屬性**] 視窗中，選取 [**字型**] 屬性旁邊的 [Visual Studio](./media/visual-studio-ellipsis-button.png)的屬性視窗中的省略號按鈕（![省略號按鈕（...）。
+2. 在 [**屬性**] 視窗中，選取 ![ ](./media/visual-studio-ellipsis-button.png) [**字型**] 屬性旁邊的省略號按鈕（[Visual Studio 的屬性視窗中的省略號按鈕（...））。
 
    在 [標準字型] 對話方塊中，選取字型、字型樣式、大小、效果（例如刪除線或底線），以及您想要的腳本。
 
@@ -86,4 +87,4 @@ Windows Forms 控制項通常會顯示一些與控制項主要功能相關的文
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
 - [操作說明：建立 Windows Forms 控制項的便捷鍵](how-to-create-access-keys-for-windows-forms-controls.md)
-- [操作說明：回應 Windows Forms Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：回應 Windows Form Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)

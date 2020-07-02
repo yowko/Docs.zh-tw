@@ -1,5 +1,6 @@
 ---
 title: 封送處理不同類型的陣列
+description: 封送處理不同的陣列類型，例如透過值或參考的整數、依值的2維整數、依值的字串，以及具有整數或字串的結構。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1473c7917189f0b36c96b2adcf20005c5fd6b48
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621492"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送處理不同類型的陣列
 陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。 雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。 此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。 如需詳細資訊，請參閱 [複製和固定](copying-and-pinning.md)。  

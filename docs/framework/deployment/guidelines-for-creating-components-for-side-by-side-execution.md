@@ -1,16 +1,17 @@
 ---
 title: 建立並存執行元件的方針
+description: 請參閱建立並存執行元件的指導方針。 例如，將類型識別系結至特定檔案版本，或使用版本感知儲存體。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622636"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>建立並存執行元件的方針
 請遵循這些一般方針建立為並存執行而設計的 Managed 應用程式或元件：  
@@ -63,4 +64,4 @@ ms.locfileid: "73121591"
 ## <a name="see-also"></a>另請參閱
 
 - [並存執行](side-by-side-execution.md)
-- [如何：啟用和停用自動繫結重新導向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [作法：啟用和停用自動繫結重新導向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

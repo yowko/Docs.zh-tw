@@ -1,19 +1,21 @@
 ---
 title: 在適用于 Apache Spark 的 .NET 中建立使用者定義函數（UDF）
 description: 瞭解如何在 .NET 中針對 Apache Spark 應用程式執行使用者定義函數（UDF）。
-ms.date: 06/11/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: fe3dec187f94f84adb1217c39ff6aabc4b4db1c5
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 97afda8ed17d3719c534d72ad3ad026745a70922
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85142013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620920"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>在適用于 Apache Spark 的 .NET 中建立使用者定義函數（UDF）
 
 在本文中，您將瞭解如何在 .NET 中使用使用者定義函數（UDF）來進行 Apache Spark。 [Udf）](https://spark.apache.org/docs/latest/api/java/org/apache/spark/sql/expressions/UserDefinedFunction.html)是一項 Spark 功能，可讓您使用自訂函式來擴充系統的內建功能。 Udf 會從資料表內的單一資料列轉換值，以根據 UDF 中定義的邏輯，為每個資料列產生一個對應的輸出值。
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="define-udfs"></a>定義 Udf
 

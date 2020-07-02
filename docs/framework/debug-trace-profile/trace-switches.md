@@ -1,5 +1,6 @@
 ---
 title: 追蹤參數
+description: 探索追蹤參數，這可讓您啟用、停用和篩選追蹤輸出。 .NET 提供 BooleanSwitch、TraceSwitch 和 SourceSwitch 類別。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-ms.openlocfilehash: a8ce4ee5de4d330b88e98e85cce4b6547e969613
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29de46afa2a96dd7011cec40f4f76e7bfb8ee454
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803532"
 ---
 # <a name="trace-switches"></a>追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。 它們是存在於您的程式碼中的物件，並可透過 .config 檔案在外部設定。 .NET Framework 中提供三種類型的追蹤參數： <xref:System.Diagnostics.BooleanSwitch> 類別、 <xref:System.Diagnostics.TraceSwitch> 類別和 <xref:System.Diagnostics.SourceSwitch> 類別。 <xref:System.Diagnostics.BooleanSwitch> 類別是做為切換參數，可啟用或停用各種追蹤陳述式。 <xref:System.Diagnostics.TraceSwitch> 和 <xref:System.Diagnostics.SourceSwitch> 類別可讓您針對特定追蹤層級啟用追蹤參數，以顯示針對該層級及其下所有層級指定的 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.TraceSource> 訊息。 如果您停用此參數，就不會顯示追蹤訊息。 所有這些類別都是衍生自抽象 (**MustInherit**) 類別 **Switch**，如同任何使用者開發的參數。  

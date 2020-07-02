@@ -1,7 +1,7 @@
 ---
 title: 規則運算式範例：掃描 HREF
 description: 請參閱 .NET 中的正則運算式範例。 此範例會搜尋輸入字串，並顯示所有 href 屬性值和其位置。
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,17 +14,19 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 36273901ac9afb762ac70ee5d6dcd80ff0ede11d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802844"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>規則運算式範例：掃描 HREF
 下列範例將搜尋輸入字串，並顯示所有 href="..." 值和它們在字串中的位置。  
-  
-## <a name="the-regex-object"></a>Regex 物件  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
+## <a name="the-regex-object"></a>Regex 物件
  由於可從使用者程式碼多次呼叫 `DumpHRefs` 方法，因此它會使用 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法。 這可讓規則運算式引擎快取規則運算式，並避免在每次呼叫方法時因將新 <xref:System.Text.RegularExpressions.Regex> 物件具現化而導致的額外負荷。 接著會使用 <xref:System.Text.RegularExpressions.Match> 物件逐一查看字串中的所有相符項目。  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
@@ -55,6 +57,6 @@ ms.locfileid: "84583488"
   
  為了解決這些問題，<xref:System.Text.RegularExpressions.Regex> 類別支援 `(?<name>…)` 的語法，可將相符項目擷取至指定的位置 (該位置可以使用字串或整數命名；重新叫用整數的速度更快)。 因此，相同字串的所有替代比對皆可導向相同的位置。 萬一發生衝突時，最後一個進入位置的比對就是成功的比對 (不過，您可以使用單一位置之多個比對的完整清單。 如需詳細資訊，請參閱 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合。)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 規則運算式](regular-expressions.md)

@@ -1,16 +1,17 @@
 ---
 title: Blittable 和非 Blittable 類型
+description: 深入瞭解全像一層和非直接的類型。 可直接上建的資料類型通常會在受控和非受控記憶體中表示，不需要特殊處理。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 816b854120f09efef69bd8ceb2d3650e5a8e7af0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 68f4197a2710b6825c83bbc51daaf8f6b5a2c81f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621531"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 和非 Blittable 類型
 大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」**，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
@@ -65,7 +66,7 @@ ms.locfileid: "73123726"
 |[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|轉換成類別介面。|  
 |[System.object](default-marshaling-for-objects.md)|轉換成變異值或介面。|  
 |[System.Mdarray](default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
-|[System.String](default-marshaling-for-strings.md)|轉換成 Null 參考中的字串終止，或轉換成 BSTR。|  
+|[System.string](default-marshaling-for-strings.md)|轉換成 Null 參考中的字串終止，或轉換成 BSTR。|  
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|轉換成具有固定記憶體配置的結構。|  
 |[System.Szarray](default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
   

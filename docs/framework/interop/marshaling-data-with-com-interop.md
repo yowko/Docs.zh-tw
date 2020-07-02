@@ -1,15 +1,16 @@
 ---
 title: 使用 COM Interop 封送處理資料
+description: 請參閱涵蓋以 COM Interop 封送處理資料的文章。 Tlbimp.exe 和 Tlbexp.exe 工具會在 COM 類型程式庫和 interop 元件之間進行轉換。
 ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eedfb60a75e2fe5fafdaa786dbb54adddf28400e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621505"
 ---
 # <a name="marshaling-data-with-com-interop"></a>使用 COM Interop 封送處理資料
 COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和公開 Managed 物件給 COM 的支援。 廣泛支援封送處理資料至 COM 或對來自 COM 的資料封送處理，幾乎一律會提供正確的封送處理行為。  
@@ -25,7 +26,7 @@ COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和
 ## <a name="in-this-section"></a>本節內容  
 [如何：手動建立包裝](how-to-create-wrappers-manually.md)函式描述如何在 managed 原始程式碼中手動建立 COM 包裝函式。
 
- [如何：將 Managed 程式碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
+ [作法：將受控碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  描述如何將受控的 DCOM 程式碼移轉至 WCF 的最安全解決方案。  
   
 ## <a name="related-sections"></a>相關章節  

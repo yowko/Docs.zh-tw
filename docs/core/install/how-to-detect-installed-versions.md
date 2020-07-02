@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 96db0d707cefed791d9c2c01a6615e9af5168cc5
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802984"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>如何檢查是否已安裝 .NET Core
 
@@ -19,7 +19,7 @@ ms.locfileid: "85324816"
 
 安裝 SDK 會安裝對應的執行時間。
 
-如果本文中有任何命令失敗，您就不會安裝執行時間或 SDK。 如需詳細資訊，請參閱[下載並安裝 .Net Core](index.md)。
+如果本文中有任何命令失敗，您就不會安裝執行時間或 SDK。 如需詳細資訊，請參閱安裝適用于[Windows](windows.md)、 [macOS](macos.md)或[Linux](linux.md)的文章。
 
 ## <a name="check-sdk-versions"></a>檢查 SDK 版本
 
@@ -211,7 +211,7 @@ _/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
 
 ::: zone-end
 
-## <a name="more-information"></a>詳細資訊
+## <a name="more-information"></a>更多資訊
 
 您可以使用命令來查看 SDK 版本和執行階段版本 `dotnet --info` 。 您也會取得其他環境相關資訊，例如作業系統版本和執行時間識別碼（RID）。
 

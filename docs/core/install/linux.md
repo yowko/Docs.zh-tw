@@ -4,14 +4,20 @@ description: 瞭解哪些 Linux 散發套件支援在 Linux 上安裝 .NET Core�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: 22c07c5a8263dd6059f415cb4d9e2915811351b0
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 06a90d7fecfe9f25d26caccb2fe3aedec0176f64
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803088"
 ---
 # <a name="install-net-core-on-linux"></a>在 Linux 上安裝 .NET Core
+
+> [!div class="op_single_selector"]
+>
+> - [在 Windows 上安裝](windows.md)
+> - [在 macOS 上安裝](macos.md)
+> - [在 Linux 上安裝](linux.md)
 
 .NET Core 適用于不同的 Linux 發行版本。 大部分的 Linux 平臺和發佈都有每年的主要版本，而且大部分都提供用來安裝 .NET Core 的套件管理員。 本文說明目前支援的專案，以及所使用的套件管理員。
 
@@ -174,3 +180,9 @@ Ubuntu 會使用 APT （Advanced Package Tool）作為套件管理員。
 | ✔️ [16.04 （LTS）](linux-ubuntu.md#1604-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
 
 如需詳細資訊，請參閱[在 Ubuntu 上安裝 .Net Core](linux-ubuntu.md)。
+
+## <a name="next-steps"></a>後續步驟
+
+- [如何檢查是否已安裝 .Net Core](how-to-detect-installed-versions.md?pivots=os-linux)。
+- [教學課程：使用 Visual Studio Code 建立新的應用程式](../tutorials/with-visual-studio-code.md)。
+- [教學課程：容器化 .Net Core 應用程式](../docker/build-container.md)。

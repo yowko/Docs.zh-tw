@@ -1,18 +1,19 @@
 ---
-title: 如何：登錄主要 Interop 組件
+title: 作法：登錄主要 Interop 組件
+description: 使用元件註冊工具（Regasm.exe）來註冊主要 interop 元件，並閱讀 interop 元件的其他相關問題。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a15bda7b40f160b31028c62cf7c73bdedd9541fa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622740"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>如何：登錄主要 Interop 組件
+# <a name="how-to-register-primary-interop-assemblies"></a>作法：登錄主要 Interop 組件
 
 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的資訊，請參閱 [COM 可呼叫包裝函式](../../standard/native-interop/com-callable-wrapper.md)。
 

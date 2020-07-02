@@ -1,27 +1,28 @@
 ---
 title: .NET Framework 開發人員部署手冊
+description: 閱讀適用于開發人員的 .NET 部署指南。 如果您想要將任何版本的 .NET （從4.5 版到4.8）與您的應用程式一起安裝，請使用此資訊。
 ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95c2cacc062bbe05ce0bc5c3e832bfe3006cf412
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622662"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
 
-可以從下載頁面下載 .NET Framework 的可轉散布包和語言包：
+您可以從下載頁面下載 .NET Framework 的可轉散發套件和語言套件：
 
-- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4。8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
 - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
@@ -33,19 +34,19 @@ ms.locfileid: "77628120"
 
 - 從 .NET Framework 4.5.1 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的 .NET Framework 版本是 .NET Framework 4.5 的就地更新；亦即，它們會使用相同的執行階段版本，但組件版本會更新並包含新的型別和成員。
 
-- .NET 框架 4.5 和更高版本在 .NET 框架 4 上以增量方式構建。 在安裝了 .NET Framework 4 的系統上安裝 .NET Framework 4.5 或更高版本時，版本 4 程式集將替換為較新版本。
+- .NET Framework 4.5 和更新版本是在 .NET Framework 4 上以累加方式建立。 當您在已安裝 .NET Framework 4 的系統上安裝 .NET Framework 4.5 或更新版本時，第4版元件會取代為較新的版本。
 
 - 如果您參考應用程式中的 Microsoft [Out-of-Band 封裝](../get-started/the-net-framework-and-out-of-band-releases.md) ，應用程式封裝中就會包含該組件。
 
-- 您必須具有管理員許可權才能安裝 .NET 框架 4.5 或更高版本。
+- 您必須具有系統管理員許可權，才能安裝 .NET Framework 4.5 或更新版本。
 
-- .NET 框架 4.5 包含在 Windows 8 和 Windows 伺服器 2012 中，因此您不必在這些作業系統上使用應用進行部署。 同樣，.NET 框架 4.5.1 包含在 Windows 8.1 和 Windows 伺服器 2012 R2 中。 所有作業系統中都不包含 .NET Framework 4.5.2。 .NET Framework 4.6 隨附於 Windows 10 中，.NET Framework 4.6.1 隨附於 Windows 10 年 11 月更新中，而 .NET Framework 4.6.2 則隨附於 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 Creators Update 中，.NET Framework 4.7.1 隨附於 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 則隨附於 Windows 10 2018 年 10 月更新與 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 已隨附於 Windows 10 2019 年 5 月更新中。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../get-started/system-requirements.md)。
+- .NET Framework 4.5 隨附于 Windows 8 和 Windows Server 2012，所以您不需要在這些作業系統上使用應用程式部署它。 同樣地，.NET Framework 4.5.1 包含在 Windows 8.1 和 Windows Server 2012 R2 中。 所有作業系統中都不包含 .NET Framework 4.5.2。 .NET Framework 4.6 隨附於 Windows 10 中，.NET Framework 4.6.1 隨附於 Windows 10 年 11 月更新中，而 .NET Framework 4.6.2 則隨附於 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 Creators Update 中，.NET Framework 4.7.1 隨附於 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 則隨附於 Windows 10 2018 年 10 月更新與 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 已隨附於 Windows 10 2019 年 5 月更新中。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../get-started/system-requirements.md)。
 
 - 從 .NET Framework 4.5 開始，您的使用者可以在安裝過程中檢視執行中的 .NET Framework 應用程式清單，並輕鬆地將它們關閉。 這有助於避免系統因安裝 .NET Framework 而重新啟動。 請參閱 [減少系統重新啟動](reducing-system-restarts.md)。
 
-- 卸載 .NET 框架 4.5 或更高版本也會刪除預先存在的 .NET 框架 4 檔。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱[安裝 .NET 框架 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。
+- 卸載 .NET Framework 4.5 或更新版本時，也會移除已存在的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱[安裝 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。
 
-- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您以前安裝了 .NET Framework 4.5 可轉散布包日期為 2012 年 8 月 16 日，我們建議您使用[.NET Framework 下載頁](https://dotnet.microsoft.com/download/dotnet-framework/net45)中的最新可轉散布更新副本。 如需這個問題的詳細資訊，請參閱 [Microsoft 安全性摘要報告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
+- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為2012年8月16日的 .NET Framework 4.5 可轉散發套件，我們建議您使用[.NET Framework 下載頁面](https://dotnet.microsoft.com/download/dotnet-framework/net45)中的最新可轉散發套件來更新您的複本。 如需這個問題的詳細資訊，請參閱 [Microsoft 安全性摘要報告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
 
 如需系統管理員如何在網路上部署 .NET Framework 及其系統相依性的詳細資訊，請參閱[系統管理員部署手冊](guide-for-administrators.md)。
 
@@ -55,20 +56,20 @@ ms.locfileid: "77628120"
 
 |應用程式的部署策略|可用的部署方法|可供使用的 .NET Framework 可轉散發套件|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|從 Web 安裝|- [安裝感知](#installaware-deployment)<br />- [安裝護盾](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web 安裝程式](#redistributable-packages)|
-|從光碟安裝|- [安裝感知](#installaware-deployment)<br />- [安裝護盾](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Offline installer](#redistributable-packages)|
-|從區域網路安裝 (適用於企業應用程式)|- [Clickonce](#clickonce-deployment)|[Web 安裝程式](#redistributable-packages) (如需相關限制，請參閱 [ClickOnce](#clickonce-deployment) ) 或 [離線安裝程式](#redistributable-packages)|
+|從 Web 安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web 安裝程式](#redistributable-packages)|
+|從光碟安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[離線安裝程式](#redistributable-packages)|
+|從區域網路安裝 (適用於企業應用程式)|- [ClickOnce](#clickonce-deployment)|[Web 安裝程式](#redistributable-packages) (如需相關限制，請參閱 [ClickOnce](#clickonce-deployment) ) 或 [離線安裝程式](#redistributable-packages)|
 
-## <a name="redistributable-packages"></a>可轉散布包
+## <a name="redistributable-packages"></a>可轉散發套件
 
-.NET Framework 可透過兩種可轉散發套件提供：Web 安裝程式 (啟動載入器) 和離線安裝程式 (獨立可轉散發套件)。 所有 .NET 框架下載都託管在[下載 .NET 框架頁上](https://dotnet.microsoft.com/download/dotnet-framework/)。 下表比較了兩個包：
+.NET Framework 可透過兩種可轉散發套件提供：Web 安裝程式 (啟動載入器) 和離線安裝程式 (獨立可轉散發套件)。 所有 .NET Framework 下載都裝載在 [[下載 .NET Framework] 頁面](https://dotnet.microsoft.com/download/dotnet-framework/)上。 下表比較這兩個套件：
 
 ||Web 安裝程式|離線安裝程式|
 |-|-------------------|-----------------------|
 |是否需要網際網路連線？|是|否|
 |下載大小|較小 (僅包含目標平台的安裝程式)*|較大*|
 |語言套件|包含**|除非您使用以所有作業系統為目標的套件，否則必須 [單獨安裝](#chain_langpack)。|
-|部署方法|支援所有方法：<br /><br />- [Clickonce](#clickonce-deployment)<br />- [安裝感知](#installaware-deployment)<br />- [安裝護盾](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|支援所有方法：<br /><br /> - [Clickonce](#clickonce-deployment)<br />- [安裝感知](#installaware-deployment)<br />- [安裝護盾](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|
+|部署方法|支援所有方法：<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|
 
 \* 離線安裝程式比較大，因為其中包含適用所有目標平台的元件。 當您完成執行安裝程式後，Windows 作業系統只會快取所使用的安裝程式。 如果在安裝完成之後刪除離線安裝程式，則使用的磁碟空間與 Web 安裝程式所使用的磁碟空間相同。 如果用來建立應用程式安裝程式的工具 (例如，[InstallAware](#installaware-deployment) 或 [InstallShield](#installshield-deployment)) 提供了安裝程式檔案資料夾，而這個資料夾會在安裝完成後移除，則將離線安裝程式放在安裝程式資料夾中，便可自動刪除離線安裝程式。
 
@@ -110,7 +111,7 @@ ClickOnce 部署適用於以 Visual Basic 和 Visual C# 建立的專案，但不
 
 1. 開啟您要發行的應用程式專案。
 
-2. 在解決方案資源管理器中，打開專案的快捷方式功能表，然後選擇 **"屬性**"。
+2. 在方案總管中，開啟專案的快捷方式功能表，然後選擇 [**屬性**]。
 
 3. 選擇 [ **發行** ] 窗格。
 
@@ -122,7 +123,7 @@ ClickOnce 部署適用於以 Visual Basic 和 Visual C# 建立的專案，但不
 
 7. 選擇選項以指定必要條件的來源位置，然後選擇 [ **確定**]。
 
-     如果為 .NET 框架下載位置提供 URL，則可以指定 .NET Framework 下載頁面或您自己的網站。 如果您要將可轉散發套件放在自己的伺服器上，該套件必須是離線安裝程式，而不是 Web 安裝程式。 您只能連結到 .NET 框架下載頁上的 Web 安裝程式。 URL 也可以指定要用來散發您的應用程式的光碟。
+     如果您提供 .NET Framework 下載位置的 URL，您可以指定 [.NET Framework 下載] 頁面或您自己的網站。 如果您要將可轉散發套件放在自己的伺服器上，該套件必須是離線安裝程式，而不是 Web 安裝程式。 您只能在 .NET Framework 下載頁面上連結到 web 安裝程式。 URL 也可以指定要用來散發您的應用程式的光碟。
 
 8. 在 [ **屬性頁** ] 對話方塊中，選擇 [ **確定**]。
 
@@ -134,7 +135,7 @@ InstallAware 可以從單一來源來建立 Windows 應用程式 (APPX)、Window
 
 ### <a name="installshield-deployment"></a>InstallShield 部署
 
-InstallShield 構建 Windows 應用包 （MSIX、 APPX）、Windows 安裝程式包 （MSI） 和本機代碼 （EXE） 安裝程式。 InstallShield 還提供視覺化工作室集成。 有關詳細資訊，請參閱[安裝防護網站](https://www.flexerasoftware.com/install/products/installshield.html)。
+InstallShield 會建立 Windows 應用程式套件（MSIX、APPX）、Windows Installer 套件（MSI）和機器碼（EXE）安裝程式。 InstallShield 也提供 Visual Studio 整合。 如需詳細資訊，請參閱[InstallShield](https://www.flexerasoftware.com/install/products/installshield.html)網站。
 
 <a name="wix"></a>
 
@@ -218,13 +219,13 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 - 使用 [命令列選項](#command-line-options)自訂部署。 例如，如果您要鏈結 .NET Framework Web 安裝程式，但是想要覆寫預設語言套件，請使用 `/LCID` 選項，如前一節所述。
 
-- [故障排除](#troubleshooting)。
+- [疑難排解](#troubleshooting)。
 
 <a name="detect_net"></a>
 
 ### <a name="detecting-the-net-framework"></a>偵測 .NET Framework
 
-.NET Framework 安裝程式會在安裝成功時寫入登錄機碼。 您可以測試是否已安裝 .NET Framework 4.5 或更新版本，方法是檢查登錄中的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 資料夾是否有名為 `Release` 的 `DWORD` 值。 （請注意，"NET 框架設置"不是以句點開頭。此金鑰的存在表明.NET Framework 4.5 或更高版本已安裝在該電腦上。 `Release` 的值會指出所安裝的 .NET Framework 版本。
+.NET Framework 安裝程式會在安裝成功時寫入登錄機碼。 您可以測試是否已安裝 .NET Framework 4.5 或更新版本，方法是檢查登錄中的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 資料夾是否有名為 `Release` 的 `DWORD` 值。 （請注意，"NET Framework Setup" 不是以句號開頭）。此機碼是否存在，表示該電腦上已安裝 .NET Framework 4.5 或更新版本。 `Release` 的值會指出所安裝的 .NET Framework 版本。
 
 > [!IMPORTANT]
 > 當您嘗試偵測是否有特定版本時，您應該檢查是否有值  **大於或等於** 版本關鍵字值。
@@ -249,18 +250,18 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |安裝在 Windows 10 以外的所有 OS 版本上的 .NET Framework 4.6|393297|
 |.NET Framework 4.5.2|379893|
 |隨 Windows 8.1 或 Windows Server 2012 R2 安裝的 .NET Framework 4.5.1|378675|
-|.NET 框架 4.5.1 安裝在 Windows 8， Windows 7|378758|
+|在 Windows 8、Windows 7 上安裝 .NET Framework 4.5。1|378758|
 |.NET Framework 4.5|378389|
 
 ### <a name="detecting-the-language-packs"></a>刪除語言套件
 
 您可以測試是否安裝特定的語言套件，方法是檢查登錄中 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\\*LCID* 資料夾內名為 `Release` 的 DWORD 值。 (請注意，"NET Framework Setup" 不是以句號開頭。) *LCID* 可指定地區設定識別碼，請參閱 [支援的語言](#supported-languages) ，以取得這些項目的清單。
 
-例如，要檢測是否安裝了完整的日語語言包 （LCID=1041），請從註冊表中檢索以下命名值：
+例如，若要偵測是否已安裝完整的日文語言套件（LCID = 1041），請從登錄中取出下列已命名的值：
 
 | | |
 |-|-|
-| Key | HKEY_LOCAL_MACHINE_軟體_微軟_NET 框架設置\NDP_v4_Full_1041 |
+| 機碼 | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
 | 名稱 | 版本 |
 | 類型 | DWORD |
 
@@ -270,12 +271,12 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>將語言套件鏈結至您的應用程式安裝
 
-.NET Framework 提供了一組獨立的語言套件可執行檔，其中包含特定文化特性的當地語系化資源。 語言包可從下載 .NET 框架頁面獲得：
+.NET Framework 提供了一組獨立的語言套件可執行檔，其中包含特定文化特性的當地語系化資源。 您可以從 [下載 .NET Framework] 頁面取得語言套件：
 
-- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4。8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
 - [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
@@ -331,7 +332,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 ## <a name="uninstalling-the-net-framework"></a>解除安裝 .NET Framework
 
-從 Windows 8 開始，您可以通過在"控制台"中使用**打開和關閉 Windows 功能**卸載 .NET 框架 4.5 或更高版本。 在舊版本的 Windows 中，可以使用"控制台中的**添加或刪除程式**"卸載 .NET 框架 4.5 或更高版本。
+從 Windows 8 開始，您可以使用 [控制台] 中的 [開啟**或關閉 Windows 功能**]，卸載 .NET Framework 4.5 或更新版本。 在舊版 Windows 中，您可以使用 [控制台] 中的 [**新增或移除程式**] 來卸載 .NET Framework 4.5 或更新版本。
 
 > [!IMPORTANT]
 > 針對 Windows 7 和舊版作業系統，解除安裝 .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2, 或 4.8 不會還原 .NET Framework 4.5 檔案，而解除安裝 .NET Framework 4.5 不會還原 .NET Framework 4 檔案。 如果您想要還原為舊版，則必須重新安裝舊版及其所有更新。
@@ -345,24 +346,24 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |選項|描述|
 |------------|-----------------|
 |**/CEIPConsent**|覆寫預設的行為並傳送匿名意見給 Microsoft 以協助改善未來的部署經驗。 只有當安裝程式提示同意，同時使用者授與權限傳送匿名意見給 Microsoft 時，才能使用此選項。|
-|**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"**。 有關連結包的示例，請參閱[從安裝包獲取進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))。|
+|**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"**。 如需連結套件的範例，請參閱[從安裝套件取得進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))。|
 |**/LCID**  `LCID`<br /><br /> 其中， `LCID` 可指定地區設定識別碼 (請參閱 [支援的語言](#supported-languages))。|安裝 `LCID` 指定的語言套件並強制以該語言顯示 UI (除非已設定無訊息模式)。<br /><br /> 對於 Web 安裝程式，此選項會從 Web 鏈結安裝語言套件。 **注意：** 此選項只適用於 Web 安裝程式。|
 |**/log** `file` &#124; `folder`|指定記錄檔的位置。 預設為程序的暫存資料夾，而預設檔案名稱將會根據套件。 如果副檔名是 .txt，則會產生文字記錄檔。 如果您指定其他副檔名或未指定副檔名，則會建立 HTML 記錄檔。|
 |**/msioptions**|指定針對 .msi 和 .msp 項目傳遞的選項，例如： `/msioptions "PROPERTY1='Value'"`。|
-|**/norestart**|避免安裝程式自動重新開機。 如果使用此選項，連結應用必須捕獲返回代碼並處理重新開機（請參閱[從安裝包獲取進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))）。|
+|**/norestart**|避免安裝程式自動重新開機。 如果您使用此選項，則連結應用程式必須捕獲傳回碼並處理重新開機（請參閱[從安裝套件取得進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))）。|
 |**/passive**|設定被動模式。 顯示進度列，表示安裝正在進行，但不會對使用者顯示任何提示或錯誤訊息。 在此模式中，當安裝程式進行鏈結時，鏈結套件必須處理 [傳回碼](#return-codes)。|
-|**/管道**|建立通訊通道，讓鏈結套件能夠取得進度。|
+|**/pipe**|建立通訊通道，讓鏈結套件能夠取得進度。|
 |**/promptrestart**|(僅限被動模式) 如果安裝程式需要重新啟動，則會提示使用者。 如果需要重新啟動，此選項會需要使用者互動。|
 |**/q**|設定無訊息模式。|
-|**/維修**|觸發修復功能。|
+|**/repair**|觸發修復功能。|
 |**/serialdownload**|強制在套件下載完成後才進行安裝。|
 |**/showfinalerror**|設定被動模式。 只有在安裝失敗時才顯示錯誤。 但如果安裝未成功，此選項需要使用者互動。|
 |**/showrmui**|只可搭配 **/passive** 選項使用。 顯示訊息方塊，提示使用者關閉目前正在執行的 .NET Framework 應用程式。 此訊息方塊在被動與非被動模式中的行為相同。|
-|**/卸載**|解除安裝 .NET Framework 可轉散發套件。|
+|**/uninstall**|解除安裝 .NET Framework 可轉散發套件。|
 
 ### <a name="supported-languages"></a>支援的語言
 
-下表列出了 .NET 框架語言包，這些語言包可用於 .NET Framework 4.5 和更高版本。
+下表列出適用于 .NET Framework 4.5 和更新版本的 .NET Framework 語言套件。
 
 |LCID|語言 – 國家/地區|文化特性|
 |----------|--------------------------------|-------------|
@@ -393,8 +394,8 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 ## <a name="see-also"></a>另請參閱
 
 - [系統管理員部署手冊](guide-for-administrators.md)
-- [系統要求](../get-started/system-requirements.md)
+- [系統需求](../get-started/system-requirements.md)
 - [安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../install/troubleshoot-blocked-installations-and-uninstallations.md)
-- [在 .NET 框架 4.5 安裝期間減少系統重新開機](reducing-system-restarts.md)
+- [減少 .NET Framework 4.5 安裝期間的系統重新開機](reducing-system-restarts.md)
 - [如何：取得 .NET Framework 4.5 安裝程式的進度](how-to-get-progress-from-the-dotnet-installer.md)
