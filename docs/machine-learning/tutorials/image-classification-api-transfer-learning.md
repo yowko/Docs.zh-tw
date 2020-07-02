@@ -3,15 +3,15 @@ title: 教學課程：使用傳輸學習的自動化視覺效果檢查
 description: 本教學課程說明如何使用「傳輸學習」來定型 ML.NET 中的 TensorFlow 深度學習模型，其方式是使用影像偵測 API，將具體介面的影像分類為破裂或未破解。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803738"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教學課程：搭配 ML.NET 影像分類 API 使用傳輸學習的自動化視覺效果檢查
 
@@ -26,7 +26,7 @@ ms.locfileid: "84144418"
 > - 使用傳輸學習來定型自訂 TensorFlow 影像分類模型
 > - 使用自訂模型分類影像
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本，或是已安裝「.net Core 跨平臺開發」工作負載的 Visual Studio 2017 15.6 或更新版本。
 
@@ -81,7 +81,10 @@ ML.NET 提供各種執行影像分類的方式。 本教學課程會使用影像
 既然您已大致瞭解轉移學習和影像分類 API，現在正是建立應用程式的時候了。
 
 1. 建立名為 "DeepLearning_ImageClassification_Binary" 的**c # .Net Core 主控台應用程式**。
-1. 安裝**Microsoft.ML**版本**1.4.0** NuGet 套件：
+1. 安裝**Microsoft.ML** NuGet 套件：
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. 在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。
     1. 選擇 "nuget.org" 作為套件來源。
     1. 選取 [瀏覽]**** 索引標籤。
@@ -89,7 +92,7 @@ ML.NET 提供各種執行影像分類的方式。 本教學課程會使用影像
     1. 搜尋**Microsoft.ML**。
     1. 選取 [安裝]**** 按鈕。
     1. 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
-    1. 針對**1.4.0**、SciSharp**版本** **1.15.0**和**TensorFlow**版本**ImageAnalytics** NuGet 套件，重複上述步驟。（適用于**microsoft ml** ）。
+    1. 針對**SciSharp、TensorFlow**和**ImageAnalytics** NuGet 套件，重複這些步驟（適用**于此程式）。**
 
 ### <a name="prepare-and-understand-the-data"></a>準備並了解資料
 
@@ -378,7 +381,7 @@ Image: 7001-163.jpg | Actual Value: UD | Predicted Value: UD
 Image: 7001-210.jpg | Actual Value: UD | Predicted Value: UD
 ```
 
-在檢查*7001-220 .jpg*影像之後，您可以看到它實際上不會被破解。
+檢查*7001-220.jpg*的影像之後，您可以看到它實際上不會被破解。
 
 ![用於預測的 SDNET2018 資料集影像](./media/image-classification-api-transfer-learning/predictedimage.jpg)
 

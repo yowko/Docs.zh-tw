@@ -1,5 +1,6 @@
 ---
 title: openGenericCERCall MDA
+description: 請參閱 openGenericCERCall managed 偵錯工具，如果線上程中止或應用程式域卸載時，CER 程式碼不會執行，這可能會啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4df33b0cdf9759edec47f02b3feb671d03284ec8
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803933"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
@@ -29,7 +30,7 @@ ms.locfileid: "79181772"
 
 在 JIT 編譯期間，包含物件參考型別的具現化僅具有代表性，因為共用產生的程式碼，而且每個物件參考型別變數都可能是任何物件參考型別。 這可以避免事先準備一些執行階段資源。
 
-特別的是，具有泛型型別變數的方法可以在背景緩慢地配置資源。 這些稱為泛型字典項目。 例如，對於`List<T> list = new List<T>();``T`是泛型型別變數的語句，運行時必須查找並可能在運行時創建確切的具現化，例如 ，`List<Object>, List<String>`依此類推。 這可能會因超出開發人員控制的各種原因而失敗，例如記憶體不足。
+特別的是，具有泛型型別變數的方法可以在背景緩慢地配置資源。 這些稱為泛型字典項目。 例如，對於 `List<T> list = new List<T>();` `T` 是泛型型別變數的語句，執行時間必須查閱，而且可能會在執行時間建立確切的具現化，例如，等等 `List<Object>, List<String>` 。 這可能會因超出開發人員控制的各種原因而失敗，例如記憶體不足。
 
 只應該在 JIT 編譯期間啟用此 MDA，而不是有確切的具現化時。
 
@@ -45,7 +46,7 @@ ms.locfileid: "79181772"
 
 ## <a name="output"></a>輸出
 
-以下是此 MDA 的輸出示例：
+以下是此 MDA 的輸出範例：
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.

@@ -1,5 +1,6 @@
 ---
 title: overlappedFreeError MDA
+description: 請參閱 .NET 中的 overlappedFreeError managed 偵錯工具（MDA），這可能會在存取違規或垃圾收集堆積發生損毀時啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - OverlappedFreeError MDA
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-ms.openlocfilehash: 8a0c72cf26ef8434719ff6661ef15a44f51c8740
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 9be33c59723ecb2743f2bc610d7fb69d24ff388c
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803908"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
-重疊作業完成之前，呼叫 `overlappedFreeError` 方法時，會啟用 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> Managed 偵錯助理 (MDA)。  
+重疊作業完成之前，呼叫 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> 方法時，會啟用 `overlappedFreeError` Managed 偵錯助理 (MDA)。  
   
 ## <a name="symptoms"></a>徵狀  
  已進行記憶體回收之堆積的存取違規或損毀。  

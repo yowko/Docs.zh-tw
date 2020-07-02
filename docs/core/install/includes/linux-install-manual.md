@@ -1,26 +1,39 @@
 ---
-ms.openlocfilehash: e7d35045892c62f759aad5067962ac5c15a9fb8b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ea2883912907843e4b6d65db5ba186af43f27aaa
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85805447"
 ---
 
-.NET Core SDK 和 .NET Core 執行時間都可以在下載之後手動安裝。 如果您安裝 .NET Core SDK，就不需要安裝對應的執行時間。 首先，從下列其中一個網站下載 SDK 或執行時間的二進位版本：
+<!-- Note, this content is copied in ../macos.md. Any fixes should be applied there too, though content may be different -->
+
+作為套件管理員的替代方案，您可以下載並手動安裝 SDK 和執行時間。 手動安裝通常是在持續整合測試或不支援的 Linux 發行版本中執行。 對於開發人員或使用者，通常最好是使用套件管理員。
+
+如果您安裝 .NET Core SDK，就不需要安裝對應的執行時間。 首先，從下列其中一個網站下載 SDK 或執行時間的**二進位**版本：
 
 - ✔️ [.net 5.0 preview 下載](https://dotnet.microsoft.com/download/dotnet/5.0)
 - ✔️ [.Net Core 3.1 下載](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- ❌[.Net Core 3.0 下載](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- ❌[.Net Core 2.2 下載](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 - ✔️ [.Net Core 2.1 下載](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [所有 .NET Core 下載](https://dotnet.microsoft.com/download/dotnet-core)
 
 接下來，將下載的檔案解壓縮，並使用 `export` 命令來設定 .Net core 所使用的變數，然後確保 .Net core 在 PATH 中。
 
-若要將執行時間解壓縮，並在終端機上提供 .NET Core CLI 命令，請先下載 .NET Core 二進位版本。 然後，開啟終端機，並從儲存檔案的目錄執行下列命令。
+若要將執行時間解壓縮，並在終端機上提供 .NET Core CLI 命令，請先下載 .NET Core 二進位版本。 然後，開啟終端機，並從儲存檔案的目錄執行下列命令。 封存檔案名稱可能會根據您下載的內容而有所不同。
+
+**使用下列命令來解壓縮運行**時間：
 
 ```bash
 mkdir -p "$HOME/dotnet" && tar zxf aspnetcore-runtime-3.1.0-linux-x64.tar.gz -C "$HOME/dotnet"
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+**使用下列命令來解壓縮 SDK**：
+
+```bash
+mkdir -p "$HOME/dotnet" && tar zxf dotnet-sdk-3.1.301-linux-x64.tar.gz -C "$HOME/dotnet"
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```

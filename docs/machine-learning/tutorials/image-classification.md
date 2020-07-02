@@ -1,15 +1,15 @@
 ---
 title: 教學課程：從 TensorFlow ML.NET 影像分類模型
 description: 瞭解如何將現有 TensorFlow 模型的知識，轉移到新的 ML.NET 影像分類模型。 TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模型利用轉移學習，將影像分類成較少的類別。
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 38fa349e743da54a21aeb65b76a0273a17c3fae7
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803998"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>教學課程：從預先定型的 TensorFlow 模型產生 ML.NET 影像分類模型
 
@@ -35,7 +35,7 @@ TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模�
 
 在本教學課程中，您會使用已定型的部分 TensorFlow 模型，將影像分類成一千個類別-在 ML.NET 模型中，將影像分類成3個類別。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本，或是已安裝「.net Core 跨平臺開發」工作負載的 Visual Studio 2017 15.6 或更新版本。
 * [教學課程資產目錄 .ZIP 檔案](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
@@ -74,7 +74,7 @@ TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模�
 
 * Food
 * Toy (玩具)
-* Appliance (設備)
+* 設備
 
 本教學課程使用 TensorFlow[開始模型](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)深度學習模型，這是在資料集上定型的熱門影像辨識模型 `ImageNet` 。 TensorFlow 模型會將整個影像分類為一千個類別，例如 "傘"、"Jersey" 和 "洗碗機"。
 
@@ -122,12 +122,14 @@ toaster2.png    appliance
 
 1. 安裝「Microsoft.ML NuGet 套件」****：
 
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     * 在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。
     * 選擇 [nuget.org] 作為 [套件來源]，選取 [瀏覽] 索引標籤，搜尋 **Microsoft.ML**。
-    * 按一下 [**版本**] 下拉式清單，選取清單中的 [ **1.4.0** ] 套件，然後選取 [**安裝**] 按鈕。
+    * 選取 [安裝]**** 按鈕。
     * 選取 [**預覽變更**] 對話方塊上的 [**確定]** 按鈕。
     * 如果您同意所列套件的授權條款，請選取 [**授權接受**] 對話方塊上的 [**我接受**] 按鈕。
-    * 針對**ImageAnalytics v 1.4.0**、 **SciSharp、TensorFlow**和**1.15.0 v**TensorFlow，重複執行這些步驟。
+    * 為**ImageAnalytics**、 **SciSharp、TensorFlow**和**TensorFlow**重複這些步驟：。
 
 ### <a name="download-assets"></a>下載資產
 
