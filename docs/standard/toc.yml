@@ -46,6 +46,8 @@
           href: base-types/type-conversion.md
         - name: 類型轉換表
           href: base-types/conversion-tables.md
+        - name: 在匿名和元組型別之間選擇
+          href: base-types/choosing-between-anonymous-and-tuple.md
         - name: 將數字、日期、其他類型格式化
           items:
             - name: 總覽
@@ -639,8 +641,6 @@
       items:
         - name: 在類別和結構之間選擇
           href: design-guidelines/choosing-between-class-and-struct.md
-        - name: 在匿名和元組型別之間選擇
-          href: design-guidelines/choosing-between-anonymous-and-tuple.md
         - name: 抽象類別設計
           href: design-guidelines/abstract-class.md
         - name: 靜態類別設計
