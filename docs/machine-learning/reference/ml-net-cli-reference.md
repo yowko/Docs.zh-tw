@@ -3,12 +3,12 @@ title: ML.NET CLI 命令參考
 description: ML.NET CLI 工具中的 auto-train 命令概觀、範例和參考。
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
+ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594539"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946937"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 命令參考
 
@@ -19,7 +19,7 @@ ms.locfileid: "84594539"
 
 ## <a name="overview"></a>概觀
 
-使用範例：
+使用方式範例：
 
 ```console
 mlnet regression --dataset "cars.csv" --label-col price
@@ -309,7 +309,7 @@ ML.NET 模型檔案 (.ZIP 檔案) 也會有相同的名稱。
 
 ## <a name="output-path"></a>輸出路徑
 
-`--output-path | -o` (string)
+`--output | -o` (string)
 
 放置所產生輸出的根位置/資料集。 預設值是目前的目錄。
 
