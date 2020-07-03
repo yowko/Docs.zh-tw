@@ -3,13 +3,13 @@ title: 使用程式碼涵蓋範圍進行單元測試
 description: 瞭解如何使用 .NET 單元測試的程式碼涵蓋範圍功能。
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/16/2020
-ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.date: 07/01/2020
+ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105420"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853907"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>使用程式碼涵蓋範圍進行單元測試
 
@@ -18,6 +18,8 @@ ms.locfileid: "85105420"
 本文討論使用 ReportGenerator 進行單元測試的程式碼涵蓋範圍使用 Coverlet 和產生報告。 雖然本文著重于 c # 和 xUnit 做為測試架構，但 MSTest 和 NUnit 也適用。 Coverlet 是[GitHub 上的開放原始碼專案](https://github.com/coverlet-coverage/coverlet)，可提供適用于 c # 的跨平臺程式碼涵蓋範圍架構。 [Coverlet](https://dotnetfoundation.org/projects/coverlet)是 .net foundation 的一部分。 Coverlet 會收集 Cobertura 涵蓋範圍測試回合資料，用於產生報告。
 
 此外，本文會詳細說明如何使用從 Coverlet 測試回合收集到的程式碼涵蓋範圍資訊來產生報表。 您可以使用 GitHub 上的另一個[開放原始碼專案-ReportGenerator](https://github.com/danielpalme/ReportGenerator)來產生報告。 ReportGenerator 會將 Cobertura 所產生的涵蓋範圍報表，轉換成各種格式的人類可閱讀報表。
+
+本文是以[範例原始程式碼專案](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)為基礎，可在範例瀏覽器上取得。
 
 ## <a name="system-under-test"></a>待測系統
 
@@ -300,6 +302,7 @@ reportgenerator
 - [GitHub ReportGenerator 存放庫](https://github.com/danielpalme/ReportGenerator)
 - [ReportGenerator 專案網站](https://danielpalme.github.io/ReportGenerator)
 - [.NET Core CLI 測試命令](../tools/dotnet-test.md)
+- [範例原始程式碼](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>後續步驟
 

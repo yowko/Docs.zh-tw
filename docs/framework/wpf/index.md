@@ -1,5 +1,6 @@
 ---
 title: Windows Presentation Foundation
+description: 瞭解在 Windows 中建立企業營運桌面應用程式的 Windows Presentation Foundation （WPF）中的統一程式設計模型。
 ms.date: 01/25/2018
 applies_to:
 - Windows 10
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 078e747ab9237324aba8168b543b2347e845de81
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919360"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853414"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
 
 Windows Presentation Foundation （WPF）為開發人員提供了統一的程式設計模型，可在 Windows 上建立企業營運桌面應用程式。
 
 - [WPF 簡介](introduction-to-wpf.md)
-- [使用者入門](getting-started/index.md)
+- [快速入門](getting-started/index.md)
 - [應用程式開發](app-development/index.md)
 - [進階](advanced/index.md)
 - [控制項](controls/index.md)
 - [Data](data/index.md)
 - [圖形和多媒體](graphics-multimedia/index.md)
-- [Security](security-wpf.md)
+- [安全性](security-wpf.md)
 - [WPF 範例](wpf-samples.md)
 - [類別庫](class-library-wpf.md)

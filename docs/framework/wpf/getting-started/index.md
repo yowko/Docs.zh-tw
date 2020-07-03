@@ -1,17 +1,18 @@
 ---
 title: 開始使用
+description: 使用 Windows Presentation Foundation （WPF）的 UI 架構（.NET Framework 的子集）來建立桌面用戶端應用程式。
 ms.date: 01/26/2018
 helpviewer_keywords:
 - getting started [WPF]
 - introduction [WPF]
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
-ms.openlocfilehash: 68e0be41acd1206ccad34dcbb478c6e628ad9f04
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 2977831bf17ac11a67f71037d26e4f4665131721
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646411"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853856"
 ---
 # <a name="get-started-wpf"></a>開始使用 (WPF)
 
@@ -24,7 +25,7 @@ Windows Presentation Foundation (WPF) 是建立桌面用戶端應用程式的 UI
 |我想直接開始|[逐步解說：我的第一個 WPF 桌面應用程式](walkthrough-my-first-wpf-desktop-application.md)|  
 |我該如何設計應用程式 UI？|[在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)|  
 |剛開始使用 .NET 嗎？|[.NET Framework 的概觀](../../get-started/overview.md)<br /><br /> [Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/quickstart-visual-basic-console)|  
-|WPF 的相關詳細資訊...|[Visual Studio 中的 WPF 簡介](introduction-to-wpf-in-vs.md)<br /><br /> [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)<br /><br /> [控制項](../controls/index.md)<br /><br /> [資料繫結概述](../../../desktop-wpf/data/data-binding-overview.md)|  
+|WPF 的相關詳細資訊...|[Visual Studio 中的 WPF 簡介](introduction-to-wpf-in-vs.md)<br /><br /> [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)<br /><br /> [控制項](../controls/index.md)<br /><br /> [資料系結總覽](../../../desktop-wpf/data/data-binding-overview.md)|  
 |您是 Windows Form 開發人員嗎？|[Windows Form 控制項和對等 WPF 控制項](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF 和 Windows Form 互通](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>另請參閱

@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# 中的分支與迴圈
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: ac4f7318dc25fef9f612649f2c3f57a5142f3ead
-  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+  ms.openlocfilehash: 87ffc9668191a52774f21470dbc415bba3579a49
+  ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/06/2020
-  ms.locfileid: "82860939"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85853920"
 items:
 - durationInMinutes: 1
   content: >
@@ -182,7 +182,7 @@ items:
   content: >
     上一個範例示範了整數除法運算會將結果截斷。
 
-    您可以使用**餘數**運算子（ `%`字元）來取得**餘數**：
+    您可以使用**餘數**運算子（字元）來取得**餘數** `%` ：
 
 
     ```csharp
@@ -240,11 +240,11 @@ items:
     當 `int` 型別不符合您的需求時，還有其他具有不同限制和精確度的數字型別可供使用。 接下來讓我們來探索這些類型的數位。
 - title: 使用 Double 型別
   durationInMinutes: 5
-  content: "`double` 數字型別代表雙精確度浮點數。 您可能不熟悉這些字詞。 **浮點**數位非常適合用來代表可能非常大或非常小的非整數數位。 **雙精確度**是一個相對詞彙，描述用來儲存值的二進位數位數目。 **雙精確度**數位有兩倍的二進位數作為**單精確度**。 在現代的電腦上，比較常使用雙精確度而非單精確度數字。 使用`float`關鍵字來宣告**單精確度**數位。\n讓我們開始探索吧。 在互動式視窗中嘗試下列程式碼並查看結果：\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\n請注意答案包括商數的小數部分。 請嘗試略為複雜的雙精確度浮點數運算式：\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\n雙精確度浮點數值的範圍遠大於整數值。 在互動式視窗中嘗試下列程式碼：\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\n這些值會以科學記號標記法呈現。 `E` 左邊的數字是有效數字。 右邊的數字則為指數，亦即 10 的次方。\n\n就像數學上的小數數字，C# 中的雙精確度浮點數會發生捨入誤差。 請嘗試此程式碼：\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\n您知道`0.3`是， `3/10`而不是與完全相同`1/3`。 同樣地`0.33` ， `33/100`為。 這比較接近`1/3`，但還是不精確。 \n\n***挑戰***\n\n嘗試使用`double`類型的大量、小型數位、乘法和除法的其他計算。  嘗試更複雜的計算。\n"
+  content: "`double` 數字型別代表雙精確度浮點數。 您可能不熟悉這些字詞。 **浮點**數位非常適合用來代表可能非常大或非常小的非整數數位。 **雙精確度**是一個相對詞彙，描述用來儲存值的二進位數位數目。 **雙精確度**數位有兩倍的二進位數作為**單精確度**。 在現代的電腦上，比較常使用雙精確度而非單精確度數字。 使用關鍵字來宣告**單精確度**數位 `float` 。\n讓我們開始探索吧。 在互動式視窗中嘗試下列程式碼並查看結果：\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\n請注意答案包括商數的小數部分。 請嘗試略為複雜的雙精確度浮點數運算式：\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\n雙精確度浮點數值的範圍遠大於整數值。 在互動式視窗中嘗試下列程式碼：\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\n這些值會以科學記號標記法呈現。 `E` 左邊的數字是有效數字。 右邊的數字則為指數，亦即 10 的次方。\n\n就像數學上的小數數字，C# 中的雙精確度浮點數會發生捨入誤差。 請嘗試此程式碼：\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\n您知道 `0.3` 是 `3/10` ，而不是與完全相同 `1/3` 。 同樣地， `0.33` 為 `33/100` 。 這比較接近 `1/3` ，但還是不精確。 \n\n***挑戰***\n\n嘗試使用類型的大量、小型數位、乘法和除法的其他計算 `double` 。  嘗試更複雜的計算。\n"
 - title: 使用十進位類型
   durationInMinutes: 8
   content: >
-    您已經看過 C# 中的基本數字型別：整數和雙精確度浮點數。  還有另一個要瞭解的`decimal`型別：型別。 `decimal` 類型的範圍較小，但精確度較 `double` 來得高。 讓我們來看一下：
+    您已經看過 C# 中的基本數字型別：整數和雙精確度浮點數。  還有另一個要瞭解的型別： `decimal` 型別。 `decimal` 類型的範圍較小，但精確度較 `double` 來得高。 讓我們來看一下：
 
 
     ```csharp
@@ -285,21 +285,18 @@ items:
     請注意，使用 decimal (小數) 型別的運算在小數點右邊會有更多的數字。
 
 
-    數字上的 `M` 尾碼乃是指示常數應使用 `decimal` 型別。 否則，編譯器會假設`double`型別。
+    數字上的 `M` 尾碼乃是指示常數應使用 `decimal` 型別。 否則，編譯器會假設 `double` 型別。
 
 
     > [!NOTE]
 
-    > 在`M` `double`和`decimal`關鍵字之間，選擇了字母做為最具視覺效果的相異字母。
-
-
-    請注意，使用 decimal (小數) 型別的運算在小數點右邊會有更多的數字。
+    > 在 `M` 和關鍵字之間，選擇了字母做為最具視覺效果的相異字母 `double` `decimal` 。
 
 
     ***挑戰***
 
 
-    您已經了解不同的數字型別，接著請撰寫程式碼，以計算半徑 2.50 公分的圓形面積。 提醒您圓形面積是 PI 乘以半徑的平方。 提示：.NET 包含 PI 的常數：<xref:System.Math.PI?displayProperty=nameWithType>，可用來作為該值。 <xref:System.Math.PI?displayProperty=nameWithType>與`System.Math`命名空間中宣告的所有常數一樣，都`double`是一個值。 基於這個理由，您應該使用`double`而不`decimal`是這項挑戰的值。
+    您已經了解不同的數字型別，接著請撰寫程式碼，以計算半徑 2.50 公分的圓形面積。 提醒您圓形面積是 PI 乘以半徑的平方。 提示：.NET 包含 PI 的常數：<xref:System.Math.PI?displayProperty=nameWithType>，可用來作為該值。 <xref:System.Math.PI?displayProperty=nameWithType>與命名空間中宣告的所有常數一樣， `System.Math` 都是一個 `double` 值。 基於這個理由，您應該使用 `double` 而不是 `decimal` 這項挑戰的值。
 
 
     您應該會取得介於 19 和 20 的答案。
