@@ -2,12 +2,11 @@
 title: 自訂服務裝載
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 70d527599c310cba694624839f14a313f6000337
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
-ms.translationtype: MT
+ms.openlocfilehash: 8302c3c829883da954d200526ca641eb4c169f98
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728436"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052022"
 ---
 # <a name="custom-service-host"></a>自訂服務裝載
 這個範例會示範如何使用 <xref:System.ServiceModel.ServiceHost> 類別的自訂衍生，以變更服務的執行階段行為。 這個方法會提供可重複使用替代方案，以便透過常用方法來設定大量服務。 此範例也會示範如何使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 類別，以便在網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 裝載環境中使用自訂 ServiceHost。  
@@ -17,12 +16,12 @@ ms.locfileid: "82728436"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf） [!INCLUDE[wf1](../../../../includes/wf1-md.md)]和範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
 ## <a name="about-the-scenario"></a>關於案例
- 為避免不慎洩漏可能的敏感性服務中繼資料，Windows Communication Foundation （WCF）服務的預設設定會停用中繼資料發行。 此行為預設是安全的，但也表示您無法使用中繼資料匯入工具（例如 Svcutil）來產生呼叫服務所需的用戶端程式代碼，除非在設定中明確啟用服務的中繼資料發行行為。  
+ 為避免不慎洩漏可能的敏感性服務中繼資料，Windows Communication Foundation （WCF）服務的預設設定會停用中繼資料發行。 此行為預設是安全的，但也表示您無法使用中繼資料匯入工具（例如 Svcutil.exe）來產生呼叫服務所需的用戶端程式代碼，除非在設定中明確啟用服務的中繼資料發行行為。  
   
  啟用大量服務的中繼資料發行，需要將相同的組態項目加入至每個個別服務，而這會產生大量組態資訊，這些資訊基本上都是相同的。 除了個別設定每個服務，也撰寫命令式程式碼，讓中繼資料一次發行，然後在數個不同的服務中重複使用該程式碼。 這是藉由建立衍生自 <xref:System.ServiceModel.ServiceHost> 並覆寫 `ApplyConfiguration`() 方法，以命令方式新增中繼資料發行行為的新類別來達成。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "82728436"
 ## <a name="implementing-a-custom-servicehost"></a>實作自訂 ServiceHost
  <xref:System.ServiceModel.ServiceHost> 類別會公開數個繼承者可覆寫以變更服務之執行階段行為的有用虛擬方法。 例如，`ApplyConfiguration`() 方法會從組態存放區讀取服務組態資訊，並因此變更主機的 <xref:System.ServiceModel.Description.ServiceDescription>。 預設的執行會從應用程式的設定檔讀取設定。 自訂實作可以覆寫 `ApplyConfiguration`()，以進一步使用命令式程式碼變更 <xref:System.ServiceModel.Description.ServiceDescription>，或甚至完全取代預設組態存放區。 例如，從資料庫讀取服務的端點設定，而不是從應用程式的設定檔。  
   
- 在此範例中，我們想要建立自訂的 ServiceHost 來新增 ServiceMetadataBehavior （這會啟用中繼資料發行），即使此行為未明確新增至服務的設定檔也一樣。 若要完成此動作，請建立繼承自<xref:System.ServiceModel.ServiceHost>的新類別`ApplyConfiguration`，並覆寫（）。  
+ 在此範例中，我們想要建立自訂的 ServiceHost 來新增 ServiceMetadataBehavior （這會啟用中繼資料發行），即使此行為未明確新增至服務的設定檔也一樣。 若要完成此動作，請建立繼承自的新類別， <xref:System.ServiceModel.ServiceHost> 並覆寫 `ApplyConfiguration` （）。  
   
 ```csharp
 class SelfDescribingServiceHost : ServiceHost  
@@ -57,7 +56,7 @@ class SelfDescribingServiceHost : ServiceHost
 }  
 ```  
   
- 因為我們不想要忽略應用程式佈建檔案中所提供的任何設定，所以覆寫`ApplyConfiguration`（）的第一件事就是呼叫基底執行。 完成此方法時，就可以使用下列命令式程式碼，以命令方式將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 新增至描述。  
+ 因為我們不想要忽略應用程式佈建檔案中所提供的任何設定，所以覆寫（）的第一件事 `ApplyConfiguration` 就是呼叫基底執行。 完成此方法時，就可以使用下列命令式程式碼，以命令方式將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 新增至描述。  
   
 ```csharp
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
@@ -119,7 +118,7 @@ SelfDescribingServiceHost host =
 host.Open();  
 ```  
   
- 我們的自訂主機仍會從應用程式的設定檔讀取服務的端點設定，如同我們已使用預設<xref:System.ServiceModel.ServiceHost>類別來裝載服務。 不過，由於新增邏輯以在自訂主機內啟用中繼資料發行，就不再需要於組態中明確啟用中繼資料發行行為。 當您建置其中包含多個服務的應用程式，而且想要在每個服務上啟用中繼資料發行，但不想要重複撰寫相同的組態項目時，這個方法特別有用。  
+ 我們的自訂主機仍會從應用程式的設定檔讀取服務的端點設定，如同我們已使用預設 <xref:System.ServiceModel.ServiceHost> 類別來裝載服務。 不過，由於新增邏輯以在自訂主機內啟用中繼資料發行，就不再需要於組態中明確啟用中繼資料發行行為。 當您建置其中包含多個服務的應用程式，而且想要在每個服務上啟用中繼資料發行，但不想要重複撰寫相同的組態項目時，這個方法特別有用。  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>在 IIS 或 WAS 中使用自訂 ServiceHost  
  在自我裝載案例中使用自訂服務主機很簡單，因為這是您的應用程式程式碼，而且主要負責建立及開啟服務主機執行個體。 不過，在 IIS 或 WAS 裝載環境中，WCF 基礎結構會動態具現化服務的主機，以回應傳入的訊息。 自訂服務主機也可以在此裝載環境中使用，但形式上在 ServiceHostFactory 中需要額外的程式碼。 下列程式碼會顯示 <xref:System.ServiceModel.Activation.ServiceHostFactory> 衍生，而這個衍生會傳回自訂 `SelfDescribingServiceHost` 的執行個體。  
@@ -145,22 +144,22 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
  若要搭配服務執行使用自訂處理站，我們必須將一些額外的中繼資料新增至服務的 .svc 檔案。  
   
-```xml
+```aspx-csharp
 <% @ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"
                Factory="Microsoft.ServiceModel.Samples.SelfDescribingServiceHostFactory"
                language=c# Debug="true" %>
 ```
   
- 在這裡，我們已將`Factory`額外的屬性`@ServiceHost`新增至指示詞，並將自訂 factory 的 CLR 型別名稱傳遞為屬性的值。 當 IIS 或 WAS 收到此服務的訊息時，WCF 裝載基礎結構會先建立 ServiceHostFactory 的實例，然後藉由呼叫`ServiceHostFactory.CreateServiceHost()`來具現化服務主機本身。  
+ 在這裡，我們已將額外的屬性新增至指示詞 `Factory` `@ServiceHost` ，並將自訂 FACTORY 的 CLR 型別名稱傳遞為屬性的值。 當 IIS 或 WAS 收到此服務的訊息時，WCF 裝載基礎結構會先建立 ServiceHostFactory 的實例，然後藉由呼叫來具現化服務主機本身 `ServiceHostFactory.CreateServiceHost()` 。  
   
 ## <a name="running-the-sample"></a>執行範例  
  雖然此範例提供功能完整的用戶端和服務執行，但此範例的重點在於說明如何透過自訂主機來改變服務的執行時間行為。請執行下列步驟：  
   
 ### <a name="observe-the-effect-of-the-custom-host"></a>觀察自訂主機的效果
   
-1. 開啟服務的 Web.config 檔案，並觀察沒有設定明確啟用服務的中繼資料。  
+1. 開啟服務的 Web.config 檔案，並觀察沒有任何設定明確啟用服務的中繼資料。  
   
-2. 開啟服務的 .svc 檔案，並觀察其@ServiceHost指示詞是否包含指定自訂 ServiceHostFactory 名稱的 Factory 屬性。  
+2. 開啟服務的 .svc 檔案，並觀察其指示詞是否 @ServiceHost 包含指定自訂 ServiceHostFactory 名稱的 Factory 屬性。  
   
 ### <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例
   
@@ -168,11 +167,11 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 
 2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。
 
-3. 建立解決方案之後，請執行 Setup .bat 來設定 IIS 7.0 中的 ServiceModelSamples 應用程式。 ServiceModelSamples 目錄現在應該會顯示為 IIS 7.0 應用程式。
+3. 建立解決方案之後，請執行 Setup.bat 以在 IIS 7.0 中設定 ServiceModelSamples 應用程式。 ServiceModelSamples 目錄現在應該會顯示為 IIS 7.0 應用程式。
 
 4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
-5. 若要移除 IIS 7.0 應用程式，請執行*清除 .bat*。
+5. 若要移除 IIS 7.0 應用程式，請執行*Cleanup.bat*。
 
 ## <a name="see-also"></a>另請參閱
 

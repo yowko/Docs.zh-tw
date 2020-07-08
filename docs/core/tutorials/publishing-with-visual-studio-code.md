@@ -1,13 +1,12 @@
 ---
 title: 使用 Visual Studio Code 發行 .NET Core 主控台應用程式
 description: 發行會建立一組執行 .NET Core 應用程式所需的檔案。
-ms.date: 06/08/2020
-ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
-ms.translationtype: MT
+ms.date: 07/04/2020
+ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701446"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051879"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 發行 .NET Core 主控台應用程式
 
@@ -15,7 +14,7 @@ ms.locfileid: "84701446"
 
 .NET Core CLI 是用來發佈應用程式，因此如果您想要的話，也可以依照此教學課程，使用 Visual Studio Code 以外的程式碼編輯器。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 本教學課程適用于您在 Visual Studio Code 中建立[.Net Core 主控台應用程式](with-visual-studio-code.md)中建立的主控台應用程式。
 
@@ -29,7 +28,7 @@ ms.locfileid: "84701446"
 
    終端機會在*HelloWorld*資料夾中開啟。
 
-1. 執行以下命令：
+1. 執行下列命令：
 
    ```dotnetcli
    dotnet publish --configuration Release
@@ -112,4 +111,4 @@ ms.locfileid: "84701446"
 在本教學課程中，您已發佈主控台應用程式。 在下一個教學課程中，您會建立類別庫。
 
 > [!div class="nextstepaction"]
-> [在 Visual Studio for Mac 中建立 .NET Standard 程式庫](library-with-visual-studio-mac.md)
+> [在 Visual Studio Code 中建立 .NET Standard 程式庫](library-with-visual-studio-code.md)
