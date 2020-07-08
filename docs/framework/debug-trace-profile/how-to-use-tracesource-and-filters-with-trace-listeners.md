@@ -1,5 +1,6 @@
 ---
 title: 如何：使用 TraceSource 和含有追蹤接聽項的篩選條件
+description: 在 .NET 中搭配使用 TraceSource 類別和篩選與追蹤接聽項。 TraceSource 會取代舊版追蹤和 Debug 類別的靜態方法。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -14,12 +15,11 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-ms.openlocfilehash: 7d2b9da72ae0b2a5c60eb90da0b56b45634e6e05
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 432c866f7c3ca1fd59f8f3d36acd61740b6584c0
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181817"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051255"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>如何：使用 TraceSource 和含有追蹤接聽項的篩選條件
 .NET Framework 2.0 版的其中一個新功能是增強型追蹤系統。 基本的前提不變：追蹤訊息透過接聽項的參數來傳送，將資料報告給關聯的輸出媒體。 2.0 版的主要不同之處是可以透過 <xref:System.Diagnostics.TraceSource> 類別的執行個體來起始追蹤。 <xref:System.Diagnostics.TraceSource> 類別預期作為增強型追蹤系統，並可用來取代較舊之 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 追蹤類別的靜態方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 類別仍然存在，但建議的做法是使用 <xref:System.Diagnostics.TraceSource> 類別進行追蹤。  

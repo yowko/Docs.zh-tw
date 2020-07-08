@@ -1,5 +1,6 @@
 ---
 title: 如何：使用追蹤和偵錯進行條件式編譯
+description: 瞭解如何在編譯 .NET 應用程式時，使用 TRACE 和 DEBUG 條件屬性來有條件地進行編譯。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 8758b793866ec0317f91d636476d33bd001ddd78
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217459"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051216"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用追蹤和偵錯進行條件式編譯
 當您於開發期間偵錯應用程式時，追蹤及偵錯輸出都會移至 Visual Studio 中的 [輸出] 視窗。 然而，若要在已部署的應用程式中包含追蹤功能，您必須在啟用 **TRACE** 編譯器指示詞的情況下編譯已經過檢測的應用程式。 這可將追蹤程式碼編譯成應用程式的發行版本。 如果您沒有啟用 **TRACE** 指示詞，則在編譯期間會忽略所有的追蹤程式碼，並且不會在您將部署的可執行程式碼中包含追蹤程式碼。  
@@ -34,13 +34,13 @@ ms.locfileid: "77217459"
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>從屬性頁對話方塊變更編譯設定  
   
-1. 以滑鼠右鍵按一下方案總管 中的專案節點。  
+1. 以滑鼠右鍵按一下方案總管**** 中的專案節點。  
   
-2. 從捷徑功能表中選擇 [屬性]。  
+2. 從捷徑功能表中選擇 [屬性]****。  
   
-    - 在 Visual Basic 中，按一下屬性頁左窗格內的 [編譯] 索引標籤，然後按一下 [進階編譯選項] 按鈕，即可顯示 [進階編譯器設定] 對話方塊。 請選取您想要啟用之編譯器設定的核取方塊。 清除您想要停用之設定值的核取方塊。  
+    - 在 Visual Basic 中，按一下屬性頁左窗格內的 [編譯]**** 索引標籤，然後按一下 [進階編譯選項]**** 按鈕，即可顯示 [進階編譯器設定]**** 對話方塊。 請選取您想要啟用之編譯器設定的核取方塊。 清除您想要停用之設定值的核取方塊。  
   
-    - 在 C# 中，按一下屬性頁左窗格內的 [建置] 索引標籤，然後選取您想要啟用之編譯器設定的核取方塊。 清除您想要停用之設定值的核取方塊。  
+    - 在 C# 中，按一下屬性頁左窗格內的 [建置]**** 索引標籤，然後選取您想要啟用之編譯器設定的核取方塊。 清除您想要停用之設定值的核取方塊。  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>使用命令列來編譯已經過檢測的程式碼  
   
@@ -48,16 +48,16 @@ ms.locfileid: "77217459"
   
      例如，在命令列上輸入下列編譯器指令會在已編譯可執行檔中包含追蹤程式碼：  
   
-     針對 Visual Basic： **vbc-r:System.dll-d:TRACE = TRUE-d:DEBUG = FALSE MyApplication .vb**  
+     針對 Visual Basic： **vbc -r:System.dll-d:TRACE = TRUE-d:DEBUG = FALSE MyApplication .vb**  
   
-     適用C#于： **csc-r:System.dll-d:TRACE-d:DEBUG = FALSE MyApplication.cs**  
+     若為 c #： **csc -r:System.dll-d:TRACE-d:DEBUG = FALSE MyApplication.cs**  
   
     > [!TIP]
     > 若要編譯一個以上的應用程式檔案，請在檔案名稱之間保留一個空格，例如，**MyApplication1.vb MyApplication2.vb MyApplication3.vb** 或 **MyApplication1.cs MyApplication2.cs MyApplication3.cs**。  
   
      上述範例中使用的條件式編譯指示詞的意義如下：  
   
-    |Directive|意義|  
+    |指示詞|意義|  
     |---------------|-------------|  
     |`vbc`|Visual Basic 編譯器|  
     |`csc`|C# 編譯器|  
@@ -71,7 +71,7 @@ ms.locfileid: "77217459"
   
 1. 請在原始程式碼檔案上方輸入適用於您的程式語言之陳述式。  
   
-    |語言|帳單明細|結果|  
+    |語言|引數|結果|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|啟用追蹤|  
     ||**#CONST TRACE = false**|停用追蹤|  
@@ -91,14 +91,14 @@ ms.locfileid: "77217459"
 將編譯器指示詞標為註解。  
   
 > [!NOTE]
-> 當您準備編譯時，可從 [建置] 功能表中選取 [建置]，或使用命令列方法 (但不輸入 **d:** ) 來定義條件式編譯的符號。  
+> 當您準備編譯時，可從 [建置]**** 功能表中選取 [建置]****，或使用命令列方法 (但不輸入 **d:**) 來定義條件式編譯的符號。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)
+- [追蹤和稽核應用程式](tracing-and-instrumenting-applications.md)
 - [如何：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)
 - [追蹤參數](trace-switches.md)
 - [追蹤接聽程式](trace-listeners.md)
-- [如何：將追蹤陳述式新增至應用程式碼](how-to-add-trace-statements-to-application-code.md)
-- [如何設定 Visual Studio 命令列的環境變數](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [操作說明：叫用命令列編譯器](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [如何：將追蹤陳述式加入至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
+- [如何為 Visual Studio 命令列設定環境變數](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [作法：叫用命令列編譯器](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

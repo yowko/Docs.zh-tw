@@ -1,5 +1,6 @@
 ---
 title: loaderLock MDA
+description: 請參閱 .NET 中的 loaderLock managed 偵錯工具（MDA），它會偵測嘗試在持有 Windows OS 載入器鎖定的執行緒上執行 managed 程式碼。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 055b07a805c5f0b613519d6019950a9b249a4b38
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217356"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051618"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` Managed 偵錯助理 (MDA) 偵測到在保留 Microsoft Windows 作業系統載入器鎖定的執行緒上，有執行 Managed 程式碼的嘗試。  所有這樣的執行都不合法，因為它可能會產生死結，並在作業系統載入器尚未初始化 DLL 之前就先使用 DLL。  

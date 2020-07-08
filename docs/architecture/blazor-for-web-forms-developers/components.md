@@ -4,12 +4,11 @@ description: 瞭解如何使用 Blazor 建立可重複使用的 UI 元件，以�
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
-ms.translationtype: MT
+ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378326"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051448"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>使用 Blazor 建立可重複使用的 UI 元件
 
@@ -77,18 +76,18 @@ Razor 指示詞是以 `@` 字元開頭，而且通常用於檔案開頭的新行
 
 下表摘要說明 Blazor 中使用的各種 Razor 指示詞，以及其 ASP.NET Web form 對應項（如果有的話）。
 
-|指示詞    |描述|範例|Web Forms 對等|
+|指示詞    |說明|範例|Web Forms 對等|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|無|
+|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|None|
 |`@code`      |將類別成員加入至元件|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|執行指定的介面|`@implements IDisposable`|使用程式碼後置|
 |`@inherits`  |繼承自指定的基類|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|無|
+|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|None|
 |`@layout`    |指定元件的版面配置元件|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|無|
+|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|None|
 |`@page`      |指定元件的路由|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |指定元件的泛型型別參數|`@typeparam TItem`|使用程式碼後置|
-|`@using`     |指定要帶入範圍的命名空間|`@using MyComponentNamespace`|*在 web.config*中新增命名空間|
+|`@using`     |指定要帶入範圍的命名空間|`@using MyComponentNamespace`|在*web.config*中新增命名空間|
 
 Razor 元件也會廣泛使用專案上的指示詞*屬性*，以控制元件的編譯方式（事件處理、資料系結、元件 & 專案參考等等）。 指示詞屬性全都遵循通用的泛型語法，其中括弧中的值是選擇性的：
 
@@ -98,7 +97,7 @@ Razor 元件也會廣泛使用專案上的指示詞*屬性*，以控制元件的
 
 下表摘要說明 Blazor 中使用的 Razor 指示詞的各種屬性。
 
-|屬性    |描述|範例|
+|屬性    |說明|範例|
 |-------------|-----------|-------|
 |`@attributes`|呈現屬性的字典|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |建立雙向資料系結    |`<input @bind="username" @bind:event="oninput" />`|
@@ -110,7 +109,7 @@ Blazor （、、等）所使用的各種指示詞屬性 `@onclick` `@bind` `@ref
 
 *.Aspx*和 *.ascx*檔案中使用的許多語法都具有 Razor 中的平行語法。 以下是 ASP.NET Web Forms 和 Razor 語法的簡單比較。
 
-|功能                      |Web Form           |語法               |Razor         |語法 |
+|功能                      |Web Form           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |指示詞                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |程式碼區塊                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -146,7 +145,7 @@ Blazor （、、等）所使用的各種指示詞屬性 `@onclick` `@bind` `@ref
 不同于 ASP.NET Web Forms，Blazor 中的元件：
 
 - 請勿使用元素前置詞（例如 `asp:` ）。
-- 不需要在頁面*或 web.config 中註冊。*
+- 不需要在頁面上或在*web.config*中註冊。
 
 您可以將 Razor 元件視為 .NET 類型，因為這正是它們的意義。 如果參考包含元件的元件，則元件可供使用。 若要將元件的命名空間帶入範圍中，請套用指示詞 `@using` ：
 
@@ -602,8 +601,8 @@ Blazor 元件可以將其子內容捕捉為 `RenderFragment` ，並將該內容�
 ```html
 <h1>My list</h1>
 <ul>
-    <li>The message is: message1</li>
-    <li>The message is: message2</li>
+    <li><p>The message is: message1</p></li>
+    <li><p>The message is: message2</p></li>
 <ul>
 ```
 

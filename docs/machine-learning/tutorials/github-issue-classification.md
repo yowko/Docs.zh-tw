@@ -4,12 +4,11 @@ description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitH
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 5233924dab063fd1ba0232672613f9701f637385
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
-ms.translationtype: MT
+ms.openlocfilehash: d4ab7f0fcc6b582e74f54d3f0e60032696277249
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803725"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051541"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>教學課程：使用多元分類搭配 ML.NET 來分類支援問題
 
@@ -74,7 +73,7 @@ ms.locfileid: "85803725"
 * `_trainingDataView` 是用來處理定型資料集的 <xref:Microsoft.ML.IDataView>。
 * `_predEngine` 是用於單一預測的 <xref:Microsoft.ML.PredictionEngine%602>。
 
-將下列程式碼新增至 `Main` 方法正上方的一行，以指定這些路徑和其他變數：
+將下列程式碼新增至方法正上方的 `Main` 那一行，以指定這些路徑和其他變數：
 
 [!code-csharp[DeclareGlobalVariables](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#DeclareGlobalVariables)]
 

@@ -1,5 +1,6 @@
 ---
 title: 如何：建立和初始設定追蹤接聽項
+description: 瞭解如何在 .NET 中使用 Defaulttracelistener 這種類別來建立和初始化追蹤接聽項。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 752306124e41a7fb7458daccc8c2891631eb9616
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217435"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051203"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>如何：建立和初始設定追蹤接聽項
 
@@ -97,5 +97,5 @@ ms.locfileid: "77217435"
 
 - [追蹤接聽程式](trace-listeners.md)
 - [追蹤參數](trace-switches.md)
-- [如何：將追蹤陳述式新增至應用程式碼](how-to-add-trace-statements-to-application-code.md)
-- [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)
+- [如何：將追蹤陳述式加入至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
+- [追蹤和稽核應用程式](tracing-and-instrumenting-applications.md)

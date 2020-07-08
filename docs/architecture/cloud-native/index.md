@@ -3,12 +3,11 @@ title: 架構適用于 Azure 的雲端原生 .NET 應用程式
 description: 建立雲端原生應用程式的指南，利用 Azure 的容器、微服務和無伺服器功能。
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: b315f097b1584bd93f694c10f36ee7524d7e020a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
-ms.translationtype: MT
+ms.openlocfilehash: 172097b4915deb2d6f0b06441d7c4ca389bbca25
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144379"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051502"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>架構適用于 Azure 的雲端原生 .NET 應用程式
 
@@ -84,7 +83,7 @@ Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 - 身分識別與安全性
 - DevOps
 
-本指南以 PDF 形式和線上版本提供。 請隨意將本檔或其線上版本的連結轉寄給您的小組，以協助確保這些主題的一般瞭解。 大部分的主題都是以一致的方式瞭解基礎原則和模式，以及與這些主題相關的決策所牽涉到的取捨。 本檔的目標是要為小組及其領導者提供針對其應用程式架構、開發和裝載做出明智決策所需的資訊。
+本指南以[PDF](https://dotnet.microsoft.com/download/e-book/cloud-native-azure/pdf)形式和線上版本提供。 請隨意將本檔或其線上版本的連結轉寄給您的小組，以協助確保這些主題的一般瞭解。 大部分的主題都是以一致的方式瞭解基礎原則和模式，以及與這些主題相關的決策所牽涉到的取捨。 本檔的目標是要為小組及其領導者提供針對其應用程式架構、開發和裝載做出明智決策所需的資訊。
 
 ## <a name="send-your-feedback"></a>傳送您的意見反應
 

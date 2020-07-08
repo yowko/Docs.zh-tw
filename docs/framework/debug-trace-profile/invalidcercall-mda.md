@@ -1,5 +1,6 @@
 ---
 title: invalidCERCall MDA
+description: 檢查 invalidCERCall managed 偵錯工具（MDA），這是在限制的執列區域（CER）圖形中有不正確呼叫時啟動的。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalid CER calls
@@ -9,12 +10,11 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-ms.openlocfilehash: f8e467401f7c50898613c7cf6eca68a8a705431a
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: dec32a81929d72274757b75cb03d6615d9fa948b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217387"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051788"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 當方法的限制執行區域 (CER) 圖形內的呼叫沒有可靠性合約或過度弱式合約時，就會啟動 `invalidCERCall` Managed 偵錯助理 (MDA)。 弱式合約是宣告最差狀態損毀範圍超過執行個體傳遞至呼叫的範圍，也就是 <xref:System.AppDomain> 或處理序狀態可能會損毀，或在 CER 內呼叫時，其結果不一定是決定性可計算結果。  
@@ -25,7 +25,7 @@ ms.locfileid: "77217387"
 ## <a name="cause"></a>原因  
  CER 中的程式碼要呼叫沒有 <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 的函式，或使用與 CER 中所執行者不相容之弱式 <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> 的函式。  
   
- 就可靠性合約語法而言，弱式合約是未指定 <xref:System.Runtime.ConstrainedExecution.Consistency> 列舉值或指定 <xref:System.Runtime.ConstrainedExecution.Consistency>、<xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess> 或 <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain> 之 <xref:System.Runtime.ConstrainedExecution.Cer.None> 值的合約。 任何這些狀況都指出，呼叫的程式碼可能會阻礙 CER 中其他程式碼的工作，以維護一致的狀態。  CER 允許程式碼以非常確定的方式處理錯誤，維護對應用程式相當重要的內部非變異值，並讓它繼續在記憶體不足例外狀況等暫時性錯誤的情況下執行。  
+ 就可靠性合約語法而言，弱式合約是未指定 <xref:System.Runtime.ConstrainedExecution.Consistency> 列舉值或指定 <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>、<xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain> 或 <xref:System.Runtime.ConstrainedExecution.Cer.None> 之 <xref:System.Runtime.ConstrainedExecution.Consistency> 值的合約。 任何這些狀況都指出，呼叫的程式碼可能會阻礙 CER 中其他程式碼的工作，以維護一致的狀態。  CER 允許程式碼以非常確定的方式處理錯誤，維護對應用程式相當重要的內部非變異值，並讓它繼續在記憶體不足例外狀況等暫時性錯誤的情況下執行。  
   
  啟動此 MDA 指出在 CER 中呼叫方法，可能會因為呼叫端未預期的方式，或讓 <xref:System.AppDomain> 或處理序保持損毀或無法修復的狀態而失敗。 當然，呼叫的程式碼可能會正確執行，而此問題只是遺漏合約。 不過，有關撰寫可靠程式碼的問題是很微妙的，缺少合約明顯表示程式碼可能不會正確執行。 合約表示程式設計人員是以可靠方式編寫程式碼，並承諾在未來修訂程式碼時也不會變更這些保證。  也就是說，合約宣告的是意圖，而不僅是實作的詳細資料。  
   

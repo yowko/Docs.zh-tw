@@ -1,5 +1,6 @@
 ---
 title: 封送處理 MDA
+description: 檢查封送處理 managed 偵錯工具（MDA），這是在 CLR 設定方法參數或結構欄位的封送處理資訊時叫用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, run-time errors
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
-ms.openlocfilehash: f7bb630d3a1e832cf6bf083ce4cf603034248ceb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 77811c526d1770b91b14aa1199dfc7b3177e6c59
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217327"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051151"
 ---
 # <a name="marshaling-mda"></a>封送處理 MDA
 當 CLR 設定方法參數或結構之欄位的封送處理資訊時，會啟動 `marshaling` managed 偵錯助理 (MDA)。 此 MDA 不適用於 JIT 編譯的組件。  
@@ -29,7 +29,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>組態  
- MDA 組態可讓您根據相關的欄位或方法名稱篩選報告的封送處理資訊。  下列範例顯示如何使用 `methodFilter``fieldFilter` 和 `match` 項目以指定篩選條件。  將 `name` 屬性設定為星號（\*）將會符合所有專案。  
+ MDA 組態可讓您根據相關的欄位或方法名稱篩選報告的封送處理資訊。  下列範例顯示如何使用 `methodFilter``fieldFilter` 和 `match` 項目以指定篩選條件。  `name`將屬性設定為星號（ \* ）會比對所有專案。  
   
 ```xml  
 <mdaConfig>  

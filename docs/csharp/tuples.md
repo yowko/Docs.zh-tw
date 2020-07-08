@@ -4,12 +4,11 @@ description: 了解 C# 中的未具名和具名 Tuple 類型
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
-ms.translationtype: MT
+ms.openlocfilehash: 0fb6f043857a9932b7a86f773cce812e0fd49dcb
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374612"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051853"
 ---
 # <a name="c-tuple-types"></a>C# Tuple 型別
 
@@ -46,7 +45,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 先前範例中的元組已使用常值常數進行初始化，而且不會使用 c # 7.1 中的*元組功能變數名稱投影*來建立元素名稱。
 
 不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」**。
-具名元組仍會有名為 `Item1`、`Item2`、`Item3` 等等的元素。
+命名的元組仍然具有名為 `Item1` 、 `Item2` 、 `Item3` 等等的元素。
 但對於您已命名的任一元素，也會有同義字。
 您可以指定每個元素的名稱來建立具名元組。 其中一個方式是在 Tuple 初始化期間指定名稱：
 
@@ -54,7 +53,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 這些同義字是由編譯器和語言所處理，讓您可以有效率地使用具名 Tuple。 IDE 和編輯器可以使用 Roslyn API 來讀取這些語意名稱。 您可以在相同組件的任何地方，依據這些語意名稱來參考具名 Tuple 的元素。 產生所編譯的輸出時，編譯器會將您定義的名稱取代為 `Item*` 對等項目。 編譯過的 Microsoft Intermediate Language (MSIL) 不會包括您為這些元素指定的名稱。
 
-從 C# 7.1 開始，元組的欄位名稱可從用來將元組初始化的變數提供。 即為 **[元組投影初始設定式](#tuple-projection-initializers)**。 下列程式碼會建立名為 `accumulation` 的元組，並有元素 `count` (整數) 與 `sum` (雙精度浮點數)。
+從 C# 7.1 開始，元組的欄位名稱可從用來將元組初始化的變數提供。 提供元組的功能變數名稱稱為「**[元組投影初始化運算式](#tuple-projection-initializers)**」。 下列程式碼會建立名為 `accumulation` 的元組，並有元素 `count` (整數) 與 `sum` (雙精度浮點數)。
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -110,11 +109,11 @@ Tuple 成員的名稱不會參與相等測試。 不過，如果其中一個運�
 
 [!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
-它是當您有不同的圖形時，比較兩個 Tuple 是否相等 (或不相等) 的編譯時間錯誤。 編譯器不會為了比較而嘗試解構任何巢狀 Tuple。
+當兩個元組的相等（或不相等）有不同的圖形時，就會發生編譯時期錯誤。 編譯器不會為了比較而嘗試解構任何巢狀 Tuple。
 
 ## <a name="assignment-and-tuples"></a>指派和 Tuple
 
-該語言支援具有相同元素數目之 Tuple 型別之間的指派，其中右側的每個元素可以隱含地轉換成其對應的左側元素。 不會考慮對指派進行其他轉換。 它是當 Tuple 有不同圖形時，將一個 Tuple 指派到另一個 Tuple 的編譯時間錯誤。 編譯器將不會嘗試任何巢狀 Tuple 的解構以指派它們。
+該語言支援具有相同元素數目之 Tuple 型別之間的指派，其中右側的每個元素可以隱含地轉換成其對應的左側元素。 不會考慮對指派進行其他轉換。 當某個元組有不同的圖形時，就會將它指派給另一個，這是編譯時期錯誤。 編譯器將不會嘗試任何巢狀 Tuple 的解構以指派它們。
 讓我們看看 Tuple 類型之間允許的指派類型。
 
 請考慮在下列範例中使用的這些參數：
@@ -147,12 +146,12 @@ named = differentShape;
 
 > [!NOTE]
 > 這些範例會計算未修正的樣本標準差。
-> 更正的範例標準差公式會將與平均值的平方差總和除以 (N-1)，而非 N，就像 `Average` 擴充方法一樣。 如需標準差的這些公式之差異的詳細資料，請參閱統計文字。
+> 更正的範例標準差公式會將與平均值的平方差總和除以 (N-1)，而非 N，就像 `Average` 擴充方法一樣。
 
 上述程式碼會遵循標準差的文字方塊公式。 它會產生正確答案，但這是沒有效率的實作。 這個方法會列舉序列兩次︰一次是產生平均值，一次是產生平均值差之平方的平均值。
 (請記住，LINQ 查詢會變慢，因此，計算與平均值的差異以及這些差異的平均值只會建立一個列舉)。
 
-有替代公式可以只使用該序列的一個列舉來計算標準差。  此計算會產生兩個值，因為它會列舉序列︰序列中所有項目的總和，以及每個值平方的總和︰
+有替代公式可以只使用該序列的一個列舉來計算標準差。  這項計算會產生兩個值，因為它會列舉序列：序列中所有專案的總和，以及每個值平方的總和：
 
 [!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 

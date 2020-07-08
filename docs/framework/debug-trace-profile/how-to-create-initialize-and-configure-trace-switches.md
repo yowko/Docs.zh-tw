@@ -1,5 +1,6 @@
 ---
 title: 如何：建立，初始化和設定追蹤參數
+description: 使用 .NET 中的 BooleanSwitch 和 TraceSwitch 類別來建立、初始化和設定追蹤參數。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 8bf3b974ff0ef9f719274ab684b3dce85295c917
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 6a43e143abba96c841f04b7be9d482c55e78aa8f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181832"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051320"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：建立，初始化和設定追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
@@ -31,7 +31,7 @@ ms.locfileid: "79181832"
   
 1. 將參數定義為 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 類型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 類型，並設定參數的名稱和描述。  
   
-2. 設定追蹤參數。 有關詳細資訊，請參閱[配置跟蹤開關](#configure)。  
+2. 設定追蹤參數。 如需詳細資訊，請參閱設定[追蹤參數](#configure)。  
   
      下列程式碼會建立兩個參數，每種類型各一個：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "79181832"
 ## <a name="configuring-trace-switches"></a>設定追蹤參數  
  在散發應用程式之後，您仍然可透過設定應用程式中的追蹤參數，來啟用或停用追蹤輸出。 設定參數表示在初始化參數之後，從外部來源變更其值。 您可以使用組態檔，來變更參數物件的值。 您可以設定開啟或關閉追蹤參數，或設定其層級，並決定要一起傳送至接聽程式的訊息數量和類型。  
   
- 參數是使用 .config 檔案來設定的。 若為 Web 應用程式，這會是與專案關聯的 Web.config 檔案。 在 Windows 應用程式中，此檔案名為（應用程式名稱）。在已部署的應用程式中，此檔必須駐留在與可執行檔相同的資料夾中。  
+ 參數是使用 .config 檔案來設定的。 若為 Web 應用程式，這會是與專案關聯的 Web.config 檔案。 在 Windows 應用程式中，這個檔案的名稱為（應用程式名稱） .exe.config。在已部署的應用程式中，這個檔案必須位於與可執行檔相同的資料夾中。  
   
  當應用程式第一次執行建立參數執行個體的程式碼時，會檢查組態檔是否有具名參數的相關追蹤層級資訊。 追蹤系統只會檢查一次組態檔是否有任何特定參數，也就是在應用程式第一次建立參數時。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "79181832"
   
          隨即會建立並開啟應用程式組態檔。 這是根項目為 `<configuration>.` 的 XML 文件。  
   
-    - **Visual C#：** 在 [新增項目]**** 對話方塊中，選擇 [XML 檔]****。 命名此檔**應用.config**。在 XML 編輯器中，在 XML 聲明之後，添加以下 XML：  
+    - **Visual C#：** 在 [新增項目]**** 對話方塊中，選擇 [XML 檔]****。 將此檔案命名為**app.config**。在 XML 編輯器中，于 XML 宣告之後，加入下列 XML：  
   
         ```xml  
         <configuration>  
@@ -128,4 +128,4 @@ ms.locfileid: "79181832"
 - [追蹤和稽核應用程式](tracing-and-instrumenting-applications.md)
 - [如何：將追蹤陳述式加入至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
 - [追蹤參數](trace-switches.md)
-- [跟蹤和調試設置架構](../configure-apps/file-schema/trace-debug/index.md)
+- [追蹤和偵錯設定結構描述](../configure-apps/file-schema/trace-debug/index.md)

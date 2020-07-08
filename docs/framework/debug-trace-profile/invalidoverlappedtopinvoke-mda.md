@@ -1,5 +1,6 @@
 ---
 title: invalidOverlappedToPinvoke MDA
+description: 請參閱 .NET 中的 invalidOverlappedToPinvoke managed 偵錯工具（MDA），這可能會在當機或無法解釋堆積損毀期間啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overlapped pointers
@@ -9,18 +10,17 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped pointers
 - pointers, overlapped
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
-ms.openlocfilehash: 1f557cc370d5c6121b0ad9a4528bd75dcb70a93c
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 162efd55bf636cf2e8698706bd011379f2f6f11f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216282"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051697"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
 當不是在記憶體回收堆積上建立的重疊指標傳遞至特定的 Win32 函式時，就會啟動 `invalidOverlappedToPinvoke` Managed 偵錯助理 (MDA)。  
   
 > [!NOTE]
-> 根據預設，只有在程式碼中定義了平台叫用呼叫，而且偵錯工具報告每一個方法的 JustMyCode 狀態時，才會啟用這個 MDA。 不了解 JustMyCode (例如 MDbg.exe 沒有副檔名) 的偵錯工具，不會啟動此 MDA。 使用組態檔和在 .mda.config 檔案 `justMyCode="false"`) 中明確設定 `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`，可針對這些偵錯工具啟用此 MDA。  
+> 根據預設，只有在程式碼中定義了平台叫用呼叫，而且偵錯工具報告每一個方法的 JustMyCode 狀態時，才會啟用這個 MDA。 不了解 JustMyCode (例如 MDbg.exe 沒有副檔名) 的偵錯工具，不會啟動此 MDA。 使用組態檔和在 .mda.config 檔案 `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`) 中明確設定 `justMyCode="false"`，可針對這些偵錯工具啟用此 MDA。  
   
 ## <a name="symptoms"></a>徵狀  
  當機或無法解釋的堆積損毀。  
@@ -30,7 +30,7 @@ ms.locfileid: "77216282"
   
  下表會顯示這個 MDA 追蹤的函式。  
   
-|模組|函數|  
+|模組|函式|  
 |------------|--------------|  
 |HttpApi.dll|`HttpReceiveHttpRequest`|  
 |IpHlpApi.dll|`NotifyAddrChange`|  

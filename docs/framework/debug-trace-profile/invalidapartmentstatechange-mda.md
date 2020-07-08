@@ -1,5 +1,6 @@
 ---
 title: invalidApartmentStateChange MDA
+description: 瞭解 .NET 中的 invalidApartmentStateChange managed 偵錯工具（MDA），這會在 COM 單元狀態發生問題時啟動。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid apartment state
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217421"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051823"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` Managed 偵錯助理 (MDA) 是由下列兩個問題之一所啟動：  
@@ -29,7 +29,7 @@ ms.locfileid: "77217421"
   
 - 執行緒的 COM Apartment 狀態不是原來要求的。 這可能會導致 Proxy 用於執行緒模型和目前執行緒模型不同的 COM 元件。 接著，在透過未設定跨 Apartment 封送處理的介面呼叫 COM 物件時，這可能會造成 <xref:System.InvalidCastException> 被擲回。  
   
-- 執行緒的 COM Apartment 狀態與預期的不同。 在<xref:System.Runtime.InteropServices.COMException>執行階段可呼叫包裝函式<xref:System.InvalidCastException> (RCW) 上進行呼叫時，這會造成 [ 具有 RPC_E_WRONG_THREAD 的 HRESULT 以及 ](../../standard/native-interop/runtime-callable-wrapper.md)。 這也會造成多個執行緒同時存取某些單一執行緒的 COM 元件，導致損毀或資料遺失。  
+- 執行緒的 COM Apartment 狀態與預期的不同。 在[執行階段可呼叫包裝函式](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) 上進行呼叫時，這會造成 <xref:System.Runtime.InteropServices.COMException> 具有 RPC_E_WRONG_THREAD 的 HRESULT 以及 <xref:System.InvalidCastException>。 這也會造成多個執行緒同時存取某些單一執行緒的 COM 元件，導致損毀或資料遺失。  
   
 ## <a name="cause"></a>原因  
   

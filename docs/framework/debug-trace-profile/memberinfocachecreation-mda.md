@@ -1,5 +1,6 @@
 ---
 title: memberInfoCacheCreation MDA
+description: 瞭解 .NET 中的 memberInfoCacheCreation managed 偵錯工具（MDA），這會在建立 MemberInfo 快取時啟動。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - member info cache creation
@@ -10,15 +11,14 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-ms.openlocfilehash: e5dbc769bd634afae06582ee614addafd611fad9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c48be7ac8632b8072981be01e01997ee8c34b6b3
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217305"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051138"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
-建立 `memberInfoCacheCreation` 快取時，會啟用 <xref:System.Reflection.MemberInfo> Managed 偵錯助理 (MDA)。 這明顯指出利用耗用大量資源之反映功能的程式。  
+建立 <xref:System.Reflection.MemberInfo> 快取時，會啟用 `memberInfoCacheCreation` Managed 偵錯助理 (MDA)。 這明顯指出利用耗用大量資源之反映功能的程式。  
   
 ## <a name="symptoms"></a>徵狀  
  程式的工作集會增加，因為程式正在使用耗用大量資源的反映。  

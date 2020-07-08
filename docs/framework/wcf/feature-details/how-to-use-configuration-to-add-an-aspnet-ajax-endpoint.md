@@ -2,12 +2,11 @@
 title: HOW TO：使用組態新增 ASP.NET AJAX 端點
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 0aa59ce04e09d700d853f213c6fc9d3a25cdb43b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 97f8174161068f2c72b6bd2bc4e8a3044f5bccdd
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601149"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051658"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>HOW TO：使用組態新增 ASP.NET AJAX 端點
 Windows Communication Foundation （WCF）可讓您建立服務，讓 ASP.NET AJAX 啟用的端點可在用戶端網站上從 JavaScript 呼叫。 若要建立此類端點，您可以使用設定檔，如同所有其他的 Windows Communication Foundation （WCF）端點，或使用不需要任何設定元素的方法。 本主題示範組態方法。  
@@ -90,7 +89,7 @@ Windows Communication Foundation （WCF）可讓您建立服務，讓 ASP.NET AJ
   
 1. 若要在 IIS 中裝載服務，請在應用程式中建立一個名為 service 且副檔名為 .svc 的新檔案。 藉由為服務新增適當的[ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md)指示詞資訊來編輯此檔案。 例如，`CalculatorService` 範例中的服務檔案內容包含下列資訊。  
   
-    ```
+    ```aspx-csharp
     <%@ServiceHost
     language=c#
     Debug="true"
@@ -104,7 +103,7 @@ Windows Communication Foundation （WCF）可讓您建立服務，讓 ASP.NET AJ
   
 1. 端點是在與 .svc 檔案相對的空白位址上設定的，因此服務現在可供使用，並可透過將要求傳送至服務來叫用/ \<operation> -例如，針對作業的 .svc/Add。 `Add` 您可以將端點 URL 輸入 ASP.NET AJAX 指令碼管理員控制項的指令碼集合來加以使用。 如需範例，請參閱[使用 HTTP POST 的 AJAX 服務](../samples/ajax-service-using-http-post.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立 ASP.NET AJAX 的 WCF 服務](creating-wcf-services-for-aspnet-ajax.md)
 - [HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

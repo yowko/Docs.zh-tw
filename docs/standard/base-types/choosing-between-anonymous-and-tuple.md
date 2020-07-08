@@ -3,12 +3,11 @@ title: 在匿名和元組類型之間選擇
 description: 瞭解何時適合在匿名型別和元組類型之間進行選擇。
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 24ab770d709b9f3968f4c7fe4b01eb0729dbd751
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
-ms.translationtype: MT
+ms.openlocfilehash: 2f927b59d7206dd0f405c11529f93b56a1c778a0
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853996"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052074"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>在匿名和元組類型之間選擇
 
@@ -101,9 +100,9 @@ C # 提供具有類型的元組語言支援 <xref:System.ValueTuple> ，以及�
 
 您可能想要一律使用 <xref:System.ValueTuple> over <xref:System.Tuple> 和匿名型別，但您應該考慮一些取捨。 <xref:System.ValueTuple>類型是可變動的，而 <xref:System.Tuple> 是唯讀的。 匿名型別可以在運算式樹狀架構中使用，而元組則不能。 下表概述一些主要差異。
 
-### <a name="key-differences"></a>重要差異
+### <a name="key-differences"></a>主要差異
 
-| 名稱                     | 存取修飾詞 | 類型     | 自訂屬性名稱 | 解構支援 | 運算式樹狀架構支援 |
+| Name                     | 存取修飾詞 | 類型     | 自訂成員名稱 | 解構支援 | 運算式樹狀架構支援 |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | 匿名型別          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |

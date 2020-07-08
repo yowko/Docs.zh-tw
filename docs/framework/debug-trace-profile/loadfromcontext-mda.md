@@ -1,5 +1,6 @@
 ---
 title: loadFromContext MDA
+description: 瞭解 .NET 中的 loadFromCoNtext managed 偵錯工具（MDA），如果元件已載入 LoadFrom 內容中，就會啟用此功能。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), LoadFrom context
@@ -7,12 +8,11 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-ms.openlocfilehash: d0090a0272d1c3b6175b351175689df1e1e4fdbd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181801"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051645"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 如果組件載入到 `LoadFrom` 內容中，就會啟動 `loadFromContext` Managed 偵錯助理 (MDA)。 這種情況可能是因為呼叫 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或其他類似方法而發生。  

@@ -2,20 +2,19 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: fdd6d83836c4ef31a4d7c8e68cb0cc050ac6bea4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
-ms.translationtype: MT
+ms.openlocfilehash: cb425d9f4dadd97e93946a2b4cd9d059ea8504ce
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76787793"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051359"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 
 將用來產生服務主機的處理站，與要裝載的服務和存取或編譯 .svc 檔案中提供的程式碼所需的其他程式設計方面加以關聯。
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service = "Service, ServiceNamespace"
 Factory = "Factory, FactoryNamespace"
@@ -27,7 +26,7 @@ CodeBehind = "CodeBehind"
 
 ## <a name="attributes"></a>屬性
 
-### <a name="service"></a>Service
+### <a name="service"></a>服務
 
 所裝載之服務的 CLR 型別名稱。 這應該是實作一個以上的服務合約之型別的限定名稱。
 
@@ -39,7 +38,7 @@ CodeBehind = "CodeBehind"
 
 指出是否應該使用 debug 符號來編譯 Windows Communication Foundation （WCF）服務。 `true`如果 WCF 服務應使用 debug 符號進行編譯，則為，否則為 `false` 。
 
-### <a name="language"></a>Language
+### <a name="language"></a>語言
 
 指定編譯檔案內 (.svc) 所有內嵌程式碼時使用的語言。 值可以代表任何。NET 支援的語言，包括 `C#` 、 `VB` 和 `JS` ，分別參考 c #、Visual Basic 和 JScript .net。 這是一個選擇性的屬性。
 
@@ -63,7 +62,7 @@ CodeBehind = "CodeBehind"
 
 例如，若要啟用已啟用 AJAX 的端點 `MyService` ，請 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 在指示詞中指定屬性值的， `Factory` 而不是預設的（ <xref:System.ServiceModel.Activation.ServiceHostFactory> `@ServiceHost` 如下列範例所示）：
 
-```xml
+```aspx-csharp
 <% @ServiceHost
 Service="MyService"
 Language="C#"

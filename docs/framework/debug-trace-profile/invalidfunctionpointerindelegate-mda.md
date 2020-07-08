@@ -1,5 +1,6 @@
 ---
 title: invalidFunctionPointerInDelegate MDA
+description: 請參閱 invalidFunctionPointerInDelegate managed 偵錯工具（MDA），如果傳入不正確函式指標以進行委派，則會叫用此功能。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalidFunctionPointerInDelegate MDA
@@ -11,12 +12,11 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-ms.openlocfilehash: 723f51e14c314bde40c34d629ba7fc4f6276c633
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a17427d117c62ba782af3c9549c84623a3013b06
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217370"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051736"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>invalidFunctionPointerInDelegate MDA
 當無效的函式指標傳入，以建構取代原生函式指標的委派時，就會啟用 `invalidFunctionPointerInDelegate` Managed 偵錯助理 (MDA)。  

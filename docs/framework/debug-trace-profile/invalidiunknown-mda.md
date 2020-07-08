@@ -1,5 +1,6 @@
 ---
 title: invalidIUnknown MDA
+description: 檢查 invalidIUnknown managed 偵錯工具（MDA），這會在不正確 IUnknown 指標從機器碼傳遞至 managed 程式碼時啟用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid IUnknown pointer
@@ -8,15 +9,14 @@ helpviewer_keywords:
 - IUnknown pointers
 - managed debugging assistants (MDAs), invalid IUnknown pointer
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
-ms.openlocfilehash: 5df9a3f506d8c2de6f1a3125459adc2d59d510bf
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 65d704463ed746390ff1710b590bf080013bf53d
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217358"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051723"
 ---
 # <a name="invalidiunknown-mda"></a>invalidIUnknown MDA
-當無效的 `invalidIUnknown` 指標從原生程式碼傳遞至 Managed 程式碼時，會啟動 `IUnknown` Managed 偵錯助理 (MDA)。 查詢 `IUnknown` 介面時，`IUnknown` 無法成功傳回。  
+當無效的 `IUnknown` 指標從原生程式碼傳遞至 Managed 程式碼時，會啟動 `invalidIUnknown` Managed 偵錯助理 (MDA)。 查詢 `IUnknown` 介面時，`IUnknown` 無法成功傳回。  
   
 ## <a name="symptoms"></a>徵狀  
  引數封送處理期間，在封送處理 COM 介面指標時，發生未預期的錯誤。  

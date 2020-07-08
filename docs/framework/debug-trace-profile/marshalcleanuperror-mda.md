@@ -1,5 +1,6 @@
 ---
 title: marshalCleanupError MDA
+description: 請檢查 marshalCleanupError managed 偵錯工具（MDA），這是叫用的，因為清除暫存結構時發生未預期的錯誤。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - cleanup operations
@@ -10,12 +11,11 @@ helpviewer_keywords:
 - MarshalCleanupError MDA
 - memory, cleanup errors
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
-ms.openlocfilehash: 1a14c548ce960d53f47934595171189db28edfbb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 3c7498d6f51484de3a2e84d611a2634f53724ab6
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216160"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051606"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
 如果通用語言執行平台 (CLR) 在嘗試清除用來封送處理本機與 Managed 程式碼界限間之資料類型的暫存結構和記憶體時，發生錯誤，就會啟用 `marshalCleanupError` Managed 偵錯助理 (MDA)。  

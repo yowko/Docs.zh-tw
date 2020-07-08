@@ -2,12 +2,11 @@
 title: HOW TO：在可靠的工作階段內交換訊息
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 5b01ddfd95db2f7e88f9481265c348f4f16fbbee
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579472"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052035"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：在可靠的工作階段內交換訊息
 
@@ -27,13 +26,13 @@ ms.locfileid: "84579472"
 
    [!code-csharp[c_HowTo_UseReliableSession#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/service.cs#1122)]
 
-1. 建立*web.config*檔案以設定的端點 `CalculatorService` ，其會使用 <xref:System.ServiceModel.WSHttpBinding> 已啟用可靠會話和所需訊息的排序傳遞。
+1. 建立*Web.config*檔案來設定的端點 `CalculatorService` ，其會使用 <xref:System.ServiceModel.WSHttpBinding> 已啟用可靠會話和所需訊息的排序傳遞。
 
    [!code-xml[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]
 
 1. 建立包含這一行的*服務 .svc*檔案：
 
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
@@ -41,7 +40,7 @@ ms.locfileid: "84579472"
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>以 WSHttpBinding 設定用戶端以使用可靠會話
 
-1. 從命令列使用[System.servicemodel 中繼資料公用程式工具（*Svcutil*）](../servicemodel-metadata-utility-tool-svcutil-exe.md) ，以從服務中繼資料產生程式碼：
+1. 從命令列使用[System.servicemodel 中繼資料公用程式工具（*Svcutil.exe*）](../servicemodel-metadata-utility-tool-svcutil-exe.md) ，以從服務中繼資料產生程式碼：
 
    ```console
    Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -55,7 +54,7 @@ ms.locfileid: "84579472"
 
    [!code-csharp[C_HowTo_UseReliableSession#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/cs/client.cs#1222)]
 
-1. *Svcutil*也會為使用類別的用戶端產生設定 <xref:System.ServiceModel.WSHttpBinding> 。 使用 Visual Studio 時，將設定檔命名為*app.config。*
+1. *Svcutil.exe*也會為使用類別的用戶端產生設定 <xref:System.ServiceModel.WSHttpBinding> 。 使用 Visual Studio 時，將設定檔命名為*App.config* 。
 
    [!code-xml[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]
 
@@ -67,7 +66,7 @@ ms.locfileid: "84579472"
 
 ## <a name="example"></a>範例
 
-好幾個系統提供的繫結預設都支援可靠工作階段。 它們包括：
+好幾個系統提供的繫結預設都支援可靠工作階段。 這些包括：
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -77,6 +76,6 @@ ms.locfileid: "84579472"
 
 如需如何建立支援可靠會話之自訂系結的範例，請參閱[如何：使用 HTTPS 建立自訂可靠會話](how-to-create-a-custom-reliable-session-binding-with-https.md)系結。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [可靠工作階段](reliable-sessions.md)
