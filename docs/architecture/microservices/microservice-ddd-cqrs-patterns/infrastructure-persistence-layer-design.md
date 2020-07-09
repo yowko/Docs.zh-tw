@@ -2,16 +2,16 @@
 title: 設計基礎結構持續性層
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索基礎結構持續性層設計中的存放庫模式。
 ms.date: 10/08/2018
-ms.openlocfilehash: 1b2665e81ade60affa84563121c04bca08537f07
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3c18582eb5db61a61b366c06f361d297e698b39a
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988475"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100843"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>設計基礎結構持續性層
 
-數據持久性元件提供對微服務邊界(即微服務資料庫)內託管的數據的訪問。 它們包含存放庫和[工作單位](https://martinfowler.com/eaaCatalog/unitOfWork.html)類別 (例如自訂 Entity Framework (EF) <xref:Microsoft.EntityFrameworkCore.DbContext> 物件) 等元件的實際實作。 EF DbContext 會同時實作存放庫和工作單位模式。
+資料持續性元件可讓您存取裝載于微服務界限內的資料（也就是微服務的資料庫）。 它們包含存放庫和[工作單位](https://martinfowler.com/eaaCatalog/unitOfWork.html)類別 (例如自訂 Entity Framework (EF) <xref:Microsoft.EntityFrameworkCore.DbContext> 物件) 等元件的實際實作。 EF DbContext 會同時實作存放庫和工作單位模式。
 
 ## <a name="the-repository-pattern"></a>儲存機制模式
 
@@ -23,7 +23,7 @@ ms.locfileid: "80988475"
 
 ### <a name="define-one-repository-per-aggregate"></a>每個彙總定義一個儲存機制
 
-您應針對每個彙總或彙總根，建立一個儲存機制類別。 在以領域驅動設計 (DDD) 模式為基礎的微服務中，您唯一可用來更新資料庫的通道應該是存放庫。 這是因為它們與聚合根有一對一的關係,該根控制聚合的不變和事務一致性。 您還是可以透過其他通道來查詢資料庫 (例如您可以遵循 CQRS 方法來這樣做)，因為查詢不會變更資料庫的狀態。 不過，交易區域 (也就是更新) 必須一律受到存放庫和彙總根的控制。
+您應針對每個彙總或彙總根，建立一個儲存機制類別。 在以領域驅動設計 (DDD) 模式為基礎的微服務中，您唯一可用來更新資料庫的通道應該是存放庫。 這是因為它們與匯總根有一對一的關聯性，它會控制匯總的不變數和交易一致性。 您還是可以透過其他通道來查詢資料庫 (例如您可以遵循 CQRS 方法來這樣做)，因為查詢不會變更資料庫的狀態。 不過，交易區域 (也就是更新) 必須一律受到存放庫和彙總根的控制。
 
 基本上，儲存機制可讓您將來自資料庫的資料，以領域實體形式填入記憶體。 一旦實體在記憶體中，就可以變更，然後透過交易保存回到資料庫。
 
@@ -33,11 +33,11 @@ ms.locfileid: "80988475"
 
 在這裡要特別再次強調的是，您應該只會針對每個彙總根定義一個存放庫，如圖 7-17 所示。 若要達到在彙總內所有物件之間維持交易一致性的彙總根目標，請絕對不要針對資料庫中的每個資料表建立儲存機制。
 
-![顯示域和其他基礎結構關係的圖表。](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
+![顯示網域和其他基礎結構關聯性的圖表。](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **圖 7-17**。 儲存機制、彙總和資料庫資料表之間的關聯性
 
-上圖顯示了域和基礎結構層之間的關係:買方聚合依賴於 IBuyerRepository 和訂單聚合取決於 IOrderRepository 介面,這些介面由依賴於也在那裡實現的訪問數據層表的相應存儲庫在基礎結構層中實現。
+上圖顯示網域和基礎結構層之間的關聯性：買方匯總相依于 IBuyerRepository，而 Order 匯總取決於 IOrderRepository 介面，這些介面會由相依于 UnitOfWork 的對應存放庫在基礎結構層中執行，而這些儲存機制會存取資料層中的資料表。
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>每個存放庫強制執行一個彙總根
 
@@ -84,7 +84,7 @@ public interface IRepository<T> where T : IAggregateRoot
 
 從單元測試的關注點分離觀點來看，您的邏輯會在記憶體內部的領域實體上運作。 它假設儲存機制類別已達到這些目的。 一旦您的邏輯修改領域實體，它會假設儲存機制類別將會正確地儲存這些實體。 此處的重點是對領域模型及其領域邏輯建立單元測試。 彙總根是 DDD 中的主要一致性界限。
 
-在 eShopOnContainers 中實現的儲存庫依賴於 EF Core 使用其更改追蹤器實現儲存庫和工作單元模式的 DbContext,因此它們不會複製此功能。
+在 eShopOnContainers 中執行的存放庫，依賴使用其變更追蹤器的 EF Core 的 DbCoNtext 執行庫和工作單元模式，因此不會複製這項功能。
 
 ### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>儲存機制模式與舊版資料存取類別 (DAL 類別) 模式之間的差異
 
@@ -102,31 +102,31 @@ public interface IRepository<T> where T : IAggregateRoot
 
 例如，當 Jimmy Bogard 對本指南提供直接意見反應時表示：
 
-> 這可能是我最大的反饋。 我真的不是存儲庫的粉絲,主要是因為它們隱藏了底層持久性機制的重要細節。 這就是為什麼我也去MediatR的命令。 我可以利用持續性層的完整強大功能，並將所有領域行為推送至我的彙總根。 我通常不想嘲笑我的存儲庫——我仍然需要用真實的東西進行集成測試。 去CQRS意味著我們不再需要存儲庫了。
+> 這可能是我最大的意見反應。 我其實不是存放庫的風扇，主要是因為它們會隱藏基礎持續性機制的重要詳細資料。 這也是為什麼我要 MediatR 命令的原因。 我可以利用持續性層的完整強大功能，並將所有領域行為推送至我的彙總根。 我通常不會想要模擬我的存放庫–我還是需要讓該整合測試真正的東西。 進行 CQRS 的意思是，我們還不需要存放庫。
 
-存放庫可能很有用，但它們對您的 DDD 設計並不如彙總模式和豐富領域模型同樣重要。 因此，是否使用儲存機制模式完全取決於您。 無論如何,每次使用 EF Core 時,您都會使用儲存庫模式,儘管在這種情況下,存儲庫涵蓋整個微服務或邊界上下文。
+存放庫可能很有用，但它們對您的 DDD 設計並不如彙總模式和豐富領域模型同樣重要。 因此，是否使用儲存機制模式完全取決於您。 無論如何，您會在使用 EF Core 時使用存放庫模式，不過在此情況下，存放庫會涵蓋整個微服務或限定內容。
 
 ## <a name="additional-resources"></a>其他資源
 
 ### <a name="repository-pattern"></a>存放庫模式
 
-- **愛德華·希亞特和羅布存儲庫模式。** \
+- **Edward Hieatt 和對我的竊取。存放庫模式。** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **儲存庫模式** \
+- **存放庫模式** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **埃裡克·埃文斯域驅動設計:解決軟體核心的複雜性。** (書籍，包括存放庫模式的討論) \
+- **Eric Evans。領域驅動設計：處理軟體核心的複雜性。** (書籍，包括存放庫模式的討論) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>工作單位模式
 
-- **馬丁·福勒工作單位模式。** \
+- **聖馬丁 Fowler。工作單位模式。** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **在 mVC 應用程式中實現 ASP.NET 的儲存庫和工作模式單元** \
+- **在 ASP.NET MVC 應用程式中執行存放庫和工作單位模式** \
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
->[前一個](domain-events-design-implementation.md)
->[下一個](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[上一個](domain-events-design-implementation.md) 
+>[下一步](infrastructure-persistence-layer-implementation-entity-framework-core.md)

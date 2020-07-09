@@ -2,12 +2,12 @@
 title: 設計領域模型層中的驗證
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解領域模型驗證的關鍵概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 94df2d6441581fbbae479da2524d6ffce2037d68
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988501"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100908"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>設計領域模型層中的驗證
 
@@ -49,21 +49,21 @@ public void SetAddress(string line1, string line2,
 
 如果狀態的值無效，則已經變更第一個地址行和縣 (市)。 這可能會讓地址無效。
 
-類似的方法可用於實體的構造函數,引發異常以確保實體在創建後有效。
+實體的函式中可以使用類似的方法，引發例外狀況，以確保實體在建立後是有效的。
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>在以資料註解為基礎的模型中使用驗證屬性
 
-資料註解與 Required 或 MaxLength 屬性相似，可用來設定 EF Core 資料庫欄位屬性 (如[資料表對應](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping)一節中詳細資料所述)，但與 .NET Framework 中 EF 4.x 以來的版本不同，它們[已不再能用於 EF Core 中的實體驗證](https://github.com/dotnet/efcore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 方法也一樣)。
+資料註解與 Required 或 MaxLength 屬性相似，可用來設定 EF Core 資料庫欄位屬性 (如[資料表對應](infrastructure-persistence-layer-implementation-entity-framework-core.md#table-mapping)一節中詳細資料所述)，但與 .NET Framework 中 EF 4.x 以來的版本不同，它們[已不再能用於 EF Core 中的實體驗證](https://github.com/dotnet/efcore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 方法也一樣)。
 
-數據註釋和<xref:System.ComponentModel.DataAnnotations.IValidatableObject>介面仍可用於模型綁定期間的模型驗證,在控制器的操作調用之前,像往常一樣調用,但該模型旨在成為ViewModel或 DTO,這是 MVC 或 API 問題,而不是域模型問題。
+在模型系結 <xref:System.ComponentModel.DataAnnotations.IValidatableObject> 期間，資料注釋和介面仍然可以用於模型系結期間，如往常般在控制器的動作叫用之前，但該模型的目的是 ViewModel 或 DTO，而這是 MVC 或 API 的考慮，而不是領域模型的顧慮。
 
-在釐清概念差異之後，若您的動作會接受實體類別物件參數 (不建議)，則您仍然可以在實體類別中使用資料註解和 `IValidatableObject` 進行驗證。 在這種情況下,驗證將在模型綁定上進行,就在調用操作之前,您可以檢查控制器的 ModelState.IsValid 屬性以檢查結果,但隨後又在控制器中發生,而不是像自 EF 4.x 以來在 DbContext 中持久化實體物件那樣在 DbContext 中持久化。
+在釐清概念差異之後，若您的動作會接受實體類別物件參數 (不建議)，則您仍然可以在實體類別中使用資料註解和 `IValidatableObject` 進行驗證。 在此情況下，驗證會在模型系結時進行，在叫用動作之前，您可以檢查控制器的 ModelState 屬性來檢查結果，然後在控制器中執行，而不是在保存 DbCoNtext 中的實體物件之前，從 EF 4.x 開始。
 
-您仍可以通過重寫 DbContext 的 SaveChanges 方法,使用`IValidatableObject.Validate`數據註釋和方法在實體類中實現自定義驗證。
+您仍然可以藉 `IValidatableObject.Validate` 由覆寫 DbCoNtext 的 SaveChanges 方法，使用資料批註和方法，在實體類別中執行自訂驗證。
 
-您可以在 [GitHub 上的這個留言](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)裡看到驗證 `IValidatableObject` 實體的範例實作。 該示例不執行基於屬性的驗證,但在同一重寫中使用反射應易於實現。
+您可以在 [GitHub 上的這個留言](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)裡看到驗證 `IValidatableObject` 實體的範例實作。 該範例不會執行以屬性為基礎的驗證，但是在相同的覆寫中，使用反映就可以輕鬆地執行。
 
-但是,從 DDD 的角度來看,域模型最好在實體行為方法中使用異常,或者通過實現規範和通知模式來強制實施驗證規則來保持精益。
+不過，從 DDD 的觀點來看，領域模型最適合使用實體行為方法中的例外狀況，或藉由執行規格和通知模式來強制執行驗證規則。
 
 它可以合理地使用接受輸入之 ViewModel 類別 (而非領域實體) 中應用程式層的資料註解，以允許 UI 層內的模型驗證。 不過，在領域模型內，這不應該排除驗證。
 
@@ -85,27 +85,27 @@ public void SetAddress(string line1, string line2,
 
 ## <a name="additional-resources"></a>其他資源
 
-- **瑞秋·阿佩爾ASP.NET核心MVC中模型驗證簡介** \
+- **Rachel Appel。ASP.NET Core MVC 中的模型驗證簡介** \
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
-- **里克·安德森新增驗證** \
+- **Rick Anderson。新增驗證** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **馬丁·福勒在驗證中將引發異常取代為通知** \
+- **聖馬丁 Fowler。在驗證中將擲回例外狀況取代為通知** \
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **規範與通知模式** \
+- **規格和通知模式** \
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **列夫·戈羅丁斯基網域驅動程式 (DDD) 的驗證** \
+- **Lev Gorodinski.網域驅動設計（DDD）中的驗證** \
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **科林·傑克網域模型驗證** \
+- **Colin 插孔。領域模型驗證** \
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **吉米·博加德DDD 世界中的驗證** \
+- **Jimmy Bogard。DDD 世界中的驗證** \
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
-> [前一個](enumeration-classes-over-enum-types.md)
-> [下一個](client-side-validation.md)
+> [上一個](enumeration-classes-over-enum-types.md) 
+> [下一步](client-side-validation.md)

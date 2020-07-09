@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: ee5edc80d9c020dbbeced3fc36d3ff273036d7b1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b5643dd7eddefebc9cbf922ff5cce75d72dee4dd
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761885"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100895"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -150,7 +150,7 @@ private async void OnSeeTheDotNetsButtonClick(object sender, RoutedEventArgs e)
     NetworkProgressBar.IsEnabled = true;
     NetworkProgressBar.Visibility = Visibility.Visible;
 
-    // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
+    // The await operator suspends OnSeeTheDotNetsButtonClick(), returning control to its caller.
     // This is what allows the app to be responsive and not block the UI thread.
     var html = await getDotNetFoundationHtmlTask;
     int count = Regex.Matches(html, @"\.NET").Count;
@@ -248,13 +248,13 @@ LINQ 中的 Lambda 運算式會使用延後執行，這表示程式碼可能會�
 
 從非同步方法傳回 `Task` 物件可能會造成在特定路徑的效能瓶頸。 `Task` 是參考型別，因此使用它表示要配置物件。 如果使用修飾詞宣告的方法傳回快取 `async` 的結果，或同步完成，則額外的配置可能會在程式碼的效能關鍵區段中變成相當長的時間成本。 如果這些配置發生在緊密迴圈中，它可能會變得成本很高。 如需詳細資訊，請參閱[一般化非同步](whats-new/csharp-7.md#generalized-async-return-types)傳回型別。
 
-* **請考慮使用**`ConfigureAwait(false)`
+* **請考慮使用** `ConfigureAwait(false)`
 
 常見的問題是：「我應該使用 <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> 方法嗎？」。 方法可讓 `Task` 實例設定其 awaiter。 這是很重要的考慮，並不正確地設定它可能會影響效能，甚至會造成鎖死。 如需的詳細資訊 `ConfigureAwait` ，請參閱[ConfigureAwait 常見問題](https://devblogs.microsoft.com/dotnet/configureawait-faq)。
 
 * **撰寫較不具狀態的程式碼**
 
-請不要依賴全域物件的狀態或特定方法的執行。 相反地，請只取決於方法的傳回值。 原因為何？
+請不要依賴全域物件的狀態或特定方法的執行。 相反地，請只取決於方法的傳回值。 為什麼？
 
 * 程式碼會比較容易理解。
 * 程式碼會比較容易測試。

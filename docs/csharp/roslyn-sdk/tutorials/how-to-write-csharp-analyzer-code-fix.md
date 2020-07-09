@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396288"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100934"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -16,7 +16,26 @@ ms.locfileid: "83396288"
 
 在本教學課程中，您將探索如何使用 Roslyn API 建立**分析器**和隨附的**程式碼修正**。 分析器是執行原始程式碼分析並向使用者報告問題的方式之一。 分析器也可以選擇性地提供程式碼修正，以顯示對使用者的原始程式碼所做的修改。 本教學課程所建立的分析器會尋找可使用 `const` 修飾詞來宣告、但並未這麼做的區域變數宣告。 隨附的程式碼修正會修改這些宣告，而新增 `const` 修飾詞。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
+
+> [!NOTE]
+> **具有程式碼修正（.NET Standard）** 範本的目前 Visual Studio 分析器有已知的 bug，應在 Visual Studio 2019 16.7 版中修正。 除非進行下列變更，否則範本中的專案將不會編譯：
+>
+> 1. 選取 [**工具**] [選項] [  >  **Options**  >  **NuGet 套件管理員**  >  **套件來源**]
+>    - 選取加號按鈕，以新增來源：
+>    - 將**來源**設定為 `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` ，然後選取 [**更新**]
+> 1. 在 [**方案總管**] 中，以滑鼠右鍵按一下 [ **MakeConst** ] 專案，然後選取 [**編輯專案檔案**]
+>    - 更新 `<AssemblyName>` 節點以新增 `.Visx` 尾碼：
+>      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
+>    - 更新 `<ProjectReference>` 第41行上的節點來更改 `TargetFramework` 值：
+>      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
+> 1. 更新*MakeConst. Test*專案中的*MakeConstUnitTests.cs*檔案：
+>    - 將第9行變更為下列內容，請注意命名空間的改變：
+>      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
+>    - 將第24行變更為下列方法：
+>      - `await Verify.VerifyAnalyzerAsync(test);`
+>    - 將行62變更為下列方法：
+>      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -55,7 +74,7 @@ Console.WriteLine(x);
 - 在 [Visual C# > 擴充性]**** 下方，選擇 [具有程式碼修正的分析器 (.NET Standard)]****。
 - 將您的專案命名為 "**MakeConst**"，然後按一下 [確定]。
 
-具有程式碼修正範本的分析器會建立三個專案：一個包含分析器和程式碼修正，第二個是單元測試專案，第三個則是 VSIX 專案。 預設啟始專案為 VSIX 專案。 按 **F5** 以啟動 VSIX 專案。 這會啟動已載入新分析器的第二個 Visual Studio 執行個體。
+具有程式碼修正範本的分析器會建立三個專案：一個包含分析器和程式碼修正，第二個是單元測試專案，第三個則是 VSIX 專案。 預設啟始專案為 VSIX 專案。 按 <kbd>F5</kbd> 以啟動 VSIX 專案。 這會啟動已載入新分析器的第二個 Visual Studio 執行個體。
 
 > [!TIP]
 > 當您執行分析器時，您會啟動 Visual Studio 的第二個複本。 此複本會使用不同的登錄區來儲存設定。 這可讓您區分兩個 Visual Studio 複本中的的視覺化設定。 您可以挑選不同的佈景主題，用於 Visual Studio 的實驗性執行。 此外，請勿使用 Visual Studio 的實驗性執行漫遊您的設定或登入 Visual Studio 帳戶。 設定會因此而不同。
@@ -148,7 +167,7 @@ if (localDeclaration.Modifiers.Any(SyntaxKind.ConstKeyword))
 
 最後，您必須確認變數有可能是 `const`。 其意義是確定變數在初始化後未曾進行指派。
 
-您將使用 <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext> 執行某種語意分析。 您可以使用 `context` 引數判斷區域變數宣告是否可設為 `const`。 <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType>代表單一來源檔案中的所有語義資訊。 您可以在說明[語意模型](../work-with-semantics.md)的文章中深入了解相關資訊。 您將使用 <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> 執行區域宣告陳述式的資料流程分析。 然後，您可以使用此資料流程分析的結果，確保區域變數不會在其他任何位置以新值寫入。 呼叫 <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> 擴充方法以擷取變數的 <xref:Microsoft.CodeAnalysis.ILocalSymbol>，並確認它並未包含於資料流程分析的 <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> 集合中。 請在 `AnalyzeNode` 方法的結尾新增下列程式碼：
+您將使用 <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext> 執行某種語意分析。 您可以使用 `context` 引數判斷區域變數宣告是否可設為 `const`。 <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType>代表單一來源檔案中的所有語義資訊。 您可以在說明[語意模型](../work-with-semantics.md)的文章中深入了解相關資訊。 您將使用 <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> 執行區域宣告陳述式的資料流程分析。 然後，您可以使用此資料流程分析的結果，確保區域變數不會在其他任何位置以新值寫入。 呼叫 <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> 擴充方法以擷取變數的 <xref:Microsoft.CodeAnalysis.ILocalSymbol>，並確認它並未包含於資料流程分析的 <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> 集合中。 將下列程式碼新增至 `AnalyzeNode` 方法的結尾：
 
 ```csharp
 // Perform data flow analysis on the local declaration.
@@ -170,7 +189,7 @@ if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-您可以按 **F5** 執行您的分析器，以查看進度。 您可以載入先前建立的主控台應用程式，然後新增下列測試程式碼：
+您可以按 <kbd>F5</kbd> 執行您的分析器，以查看進度。 您可以載入先前建立的主控台應用程式，然後新增下列測試程式碼：
 
 ```csharp
 int x = 0;
@@ -247,11 +266,11 @@ using Microsoft.CodeAnalysis.Formatting;
 1. 將現有宣告取代為新宣告，以建立新文件。
 1. 傳回新文件。
 
-請在 `MakeConstAsync` 方法的結尾新增下列程式碼：
+將下列程式碼新增至 `MakeConstAsync` 方法的結尾：
 
 [!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-您的程式碼修正已可供試用。  按 F5，在 Visual Studio 的第二個執行個體中執行分析器專案。 在第二個 Visual Studio 執行個體中建立新的 C# 主控台應用程式專案，並將數個以常數值初始化的區域變數宣告新增至 Main 方法。 您會看到系統將其報告為警告，如下所示。
+您的程式碼修正已可供試用。  按<kbd>F5</kbd>以在 Visual Studio 的第二個實例中執行分析器專案。 在第二個 Visual Studio 執行個體中建立新的 C# 主控台應用程式專案，並將數個以常數值初始化的區域變數宣告新增至 Main 方法。 您會看到系統將其報告為警告，如下所示。
 
 ![可設為常數警告](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
@@ -310,7 +329,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試]**** > [視窗]**** > [測試總管]****，以開啟 [測試總管]****。  按 [全部執行]**** 連結。
+執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試]**** > [視窗]**** > [測試總管]****，以開啟 [測試總管]****。 然後選取 [**全部執行**] 連結。
 
 ## <a name="create-tests-for-valid-declarations"></a>建立有效宣告的測試
 
@@ -503,12 +522,12 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-執行測試，應該全部都會通過。 請執行您完成的分析器，這值得自傲。 按 Ctrl+F5，在已載入 Roslyn Preview 延伸模組的第二個 Visual Studio 執行個體中執行分析器專案。
+執行測試，應該全部都會通過。 請執行您完成的分析器，這值得自傲。 按下<kbd>Ctrl + F5</kbd> ，在已載入 Roslyn Preview 擴充功能的第二個 Visual Studio 實例中執行分析器專案。
 
 - 在第二個 Visual Studio 執行個體中建立新的 C# 主控台應用程式專案，並將 `int x = "abc";` 新增至 Main 方法。 由於有第一個 Bug 修正，系統應該不會針對此區域變數宣告發出警告 (雖然如預期發生了編譯器錯誤)。
 - 接著，將 `object s = "abc";` 新增至 Main 方法。 由於有第二個 Bug 修正，應該不會出現警告。
 - 最後，新增另一個使用 `var` 關鍵字的區域變數。 您會看到回報的警告，且左下方會出現建議。
-- 請將編輯器插入號移至波浪底線上方，然後按 Ctrl+， 以顯示建議的程式碼修正。 選取您的程式碼修正時，請留意 var 的關鍵字現在已可正確處理。
+- 將編輯器插入號移到彎曲的底線上，然後按<kbd>Ctrl +</kbd>。 以顯示建議的程式碼修正。 選取您的程式碼修正時，請留意 var 的關鍵字現在已可正確處理。
 
 最後，新增下列程式碼：
 

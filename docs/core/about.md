@@ -2,14 +2,17 @@
 title: .NET Core 概觀
 description: 瞭解 .NET Core 的特性和組合，並將其與其他 .NET 部署進行比較。
 ms.date: 03/26/2020
-ms.openlocfilehash: e57451968ed8c4d5457acea084d3c6c9f998b8da
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d5ef79fe5a8fbb56beae77edd01830fe6561fa51
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144522"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100726"
 ---
 # <a name="net-core-overview"></a>.NET Core 概觀
+
+> [!div class="button"]
+> [下載 .NET Core](https://dotnet.microsoft.com/download)
 
 .NET Core 有以下特性：
 
@@ -21,7 +24,7 @@ ms.locfileid: "84144522"
 - **命令列工具：** 包含便於使用的命令列工具，可用於本機開發及持續整合。
 - **彈性的部署：** 您可以在應用程式中包含 .NET Core，或並存安裝（全使用者或全系統安裝）。 可搭配 [Docker 容器](docker/introduction.md)使用。
 
-## <a name="languages"></a>Languages
+## <a name="languages"></a>語言
 
 [C #](../csharp/index.yml)、 [Visual Basic](../visual-basic/index.yml)和[F #](../fsharp/index.yml)語言可以用來撰寫適用于 .net Core 的應用程式和程式庫。 這些語言可用於您慣用的文字編輯器或整合式開發環境（IDE），包括：
 

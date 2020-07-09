@@ -1,13 +1,16 @@
 ---
 title: 在匿名和元組類型之間選擇
 description: 瞭解何時適合在匿名型別和元組類型之間進行選擇。
+author: IEvangelist
+ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2f927b59d7206dd0f405c11529f93b56a1c778a0
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052074"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100960"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>在匿名和元組類型之間選擇
 
@@ -102,7 +105,7 @@ C # 提供具有類型的元組語言支援 <xref:System.ValueTuple> ，以及�
 
 ### <a name="key-differences"></a>主要差異
 
-| Name                     | 存取修飾詞 | 類型     | 自訂成員名稱 | 解構支援 | 運算式樹狀架構支援 |
+| 名稱                     | 存取修飾詞 | 類型     | 自訂成員名稱 | 解構支援 | 運算式樹狀架構支援 |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | 匿名型別          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |

@@ -13,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 ms.openlocfilehash: a929ec2b9196f1f6cad0528fdf7323839a86fa55
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86052061"
@@ -47,7 +48,7 @@ ms.locfileid: "86052061"
 ## <a name="output"></a>輸出  
  沒有此 MDA 的輸出。  
   
-## <a name="configuration"></a>組態  
+## <a name="configuration"></a>設定  
  `modulus` 屬性指定雜湊碼上所使用的模數。 預設值為 1。  
   
 ```xml  
