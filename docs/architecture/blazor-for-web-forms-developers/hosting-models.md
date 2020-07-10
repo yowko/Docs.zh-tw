@@ -1,93 +1,96 @@
 ---
-title: 布拉佐應用程式託管模型
-description: 瞭解託管 Blazor 應用的不同方式,包括在 WebAssembly 上的瀏覽器或伺服器上。
+title: Blazor應用程式裝載模型
+description: 瞭解裝載應用程式的不同方式 Blazor ，包括在或伺服器上的瀏覽器中 WebAssembly 。
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 77a022b01efba01038790c9601ea03f315a28fdf
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: a0d37392a65cfcbff9642476d9fdb1e5c662e66a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607928"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173259"
 ---
-# <a name="blazor-app-hosting-models"></a>布拉佐應用程式託管模型
+# <a name="blazor-app-hosting-models"></a>Blazor應用程式裝載模型
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Blazor 應用可以像 ASP.NET Web 窗體應用一樣託管在 IIS 中。 Blazor 應用程式也可以以以下方式之一託管:
+Blazor應用程式可以裝載于 IIS 中，就像 ASP.NET Web Forms 應用程式一樣。 Blazor應用程式也可以透過下列其中一種方式來主控：
 
-- WebAssembly 瀏覽器中的用戶端。
-- ASP.NET核心應用中的伺服器端。
+- 在瀏覽器中的用戶端 WebAssembly 。
+- ASP.NET Core 應用程式中的伺服器端。
 
-## <a name="blazor-webassembly-apps"></a>布拉佐爾網路裝配應用程式
+## <a name="blazor-webassembly-apps"></a>BlazorWebAssembly應用程式
 
-Blazor WebAssembly 應用直接在瀏覽器中基於 Web 大會的 .NET 運行時執行。 Blazor WebAssembly 應用程式的工作方式與前端 JavaScript 框架(如"角"或"反應")類似。 但是,您編寫 C# 時不是編寫 JavaScript。 .NET 運行時隨應用以及應用程式集和任何必需的依賴項一起下載。 無需瀏覽器外掛程式或擴展。
+BlazorWebAssembly應用程式會直接在以 .net 執行時間為基礎的瀏覽器中執行 WebAssembly 。 BlazorWebAssembly應用程式的運作方式類似于前端 JavaScript 架構，例如角度或反應。 不過，您可以撰寫 c #，而不是撰寫 JavaScript。 .NET 執行時間會隨應用程式一起下載，以及應用程式元件和任何必要的相依性。 不需要瀏覽器外掛程式或擴充功能。
 
-下載的程式集是正常的 .NET 程式集,就像在任何其他 .NET 應用中使用一樣。 由於運行時支援 .NET 標準,因此您可以將現有的 .NET 標準庫與 Blazor WebAssembly 應用一起使用。 但是,這些程式集仍將在瀏覽器安全沙箱中執行。 某些功能可能會引發<xref:System.PlatformNotSupportedException>,例如嘗試存取檔案系統或打開任意網路連接。
+下載的元件是一般的 .NET 元件，就像您會在任何其他 .NET 應用程式中使用一樣。 由於執行時間支援 .NET Standard，因此您可以將現有的 .NET Standard 程式庫與 Blazor WebAssembly 應用程式搭配使用。 不過，這些元件仍然會在瀏覽器安全性沙箱中執行。 某些功能可能會擲回 <xref:System.PlatformNotSupportedException> ，像是嘗試存取檔案系統或開啟任意的網路連接。
 
-當應用載入時,將啟動 .NET 執行時並指向應用程式集。 應用啟動邏輯運行,並呈現根元件。 Blazor 根據元件呈現的輸出計算 UI 更新。 然後應用 DOM 更新。
+當應用程式載入時，.NET 執行時間會啟動並指向應用程式元件。 應用程式啟動邏輯會執行，而根元件則會呈現。 Blazor根據元件所呈現的輸出，計算 UI 更新。 接著會套用 DOM 更新。
 
 ![Blazor WebAssembly](media/hosting-models/blazor-webassembly.png)
 
-Blazor WebAssembly 應用程式運行純用戶端。 此類應用可以部署到靜態網站託管解決方案(如 GitHub 頁面或 Azure 靜態網站託管)。 伺服器根本不需要 .NET。 深度連結到應用的某些部分通常需要伺服器上的路由解決方案。 路由解決方案將請求重定向到應用的根目錄。 例如,可以使用 IIS 中的 URL 重寫規則來處理此重定向。
+BlazorWebAssembly應用程式純粹是以用戶端執行。 這類應用程式可以部署至靜態網站裝載解決方案，例如 GitHub 頁面或 Azure 靜態網站裝載。 伺服器上完全不需要 .NET。 應用程式元件的深層連結通常需要伺服器上的路由解決方案。 路由解決方案會將要求重新導向至應用程式的根目錄。 例如，您可以在 IIS 中使用 URL 重寫規則來處理此重新導向。
 
-要獲得 Blazor 和全堆疊 .NET Web 開發的所有優勢,請使用 ASP.NET 核心託管 Blazor WebAssembly 應用程式。 通過在用戶端和伺服器上使用 .NET,可以輕鬆地共用代碼並使用一組一致的語言、框架和工具構建應用。 Blazor 提供了方便的範本來設置包含 Blazor WebAssembly 應用和ASP.NET核心主機專案的解決方案。 生成解決方案後,Blazor 應用中生成的靜態檔由已設置回退路由的ASP.NET酷睿應用託管。
+若要取得 Blazor 和完整堆疊 .net 網頁程式開發的所有優點，請使用 ASP.NET Core 來裝載您的 Blazor WebAssembly 應用程式。 藉由在用戶端和伺服器上使用 .NET，您可以輕鬆地共用程式碼，並使用一組一致的語言、架構和工具來建立應用程式。 Blazor提供方便的範本，讓您設定同時包含 Blazor WebAssembly 應用程式和 ASP.NET Core 主專案的方案。 建立解決方案時，應用程式內建的靜態檔案 Blazor 是由已設定 fallback 路由的 ASP.NET Core 應用程式所主控。
 
-## <a name="blazor-server-apps"></a>布拉佐爾伺服器應用程式
+## <a name="blazor-server-apps"></a>Blazor伺服器應用程式
 
-回想一下[Blazor架構](architecture-comparison.md#blazor)討論,Blazor元件將其輸出呈現為`RenderTree`稱為的中間抽象。 然後,Blazor 框架將呈現的內容與以前呈現的內容進行比較。 差異應用於 DOM。 Blazor 元件與其呈現輸出的應用方式分離。 因此,元件本身不必在更新 UI 的進程相同的進程中運行。 事實上,他們甚至不必在同一台計算機上運行。
+回想[ Blazor 一下，](architecture-comparison.md#blazor)元件會將 Blazor 其輸出轉譯為名為的中繼抽象概念 `RenderTree` 。 Blazor然後，架構會比較呈現的內容與先前轉譯的內容。 這些差異會套用至 DOM。 Blazor元件會與其呈現輸出的套用方式分離。 因此，元件本身不需要與更新 UI 的進程在相同的進程中執行。 事實上，它們甚至不需要在同一部電腦上執行。
 
-在 Blazor Server 應用中,元件在伺服器上運行,而不是在瀏覽器中用戶端運行。 瀏覽器中發生的 UI 事件透過即時連接發送到伺服器。 事件將發送到正確的元件實例。 元件渲染和計算的 UI 差異被序列化並發送到瀏覽器,並將其應用於 DOM。
+在 Blazor 伺服器應用程式中，元件會在伺服器上執行，而不是在瀏覽器中的用戶端上執行。 在瀏覽器中發生的 UI 事件會透過即時連線傳送至伺服器。 事件會分派至正確的元件實例。 元件會轉譯，而匯出的 UI diff 會序列化並傳送至它套用至 DOM 的瀏覽器。
 
-![Blazor 伺服器](media/hosting-models/blazor-server.png)
+![Blazor伺服器](media/hosting-models/blazor-server.png)
 
-如果您使用了ASP.NETAJAX和控制,Blazor<xref:System.Web.UI.UpdatePanel>伺服器託管模型聽起來可能很熟悉。 控制件`UpdatePanel`處理應用部分頁面更新以回應以觸發頁面上的事件。 觸發時,請求`UpdatePanel`部分更新,然後應用它,而無需刷新頁面。 使用管理 UI`ViewState`的狀態 。 Blazor Server 應用略有不同,因為應用需要與用戶端建立活動連接。 此外,伺服器上維護所有 UI 狀態。 除了這些差異之外,這兩個模型在概念上是相似的。
+Blazor如果您已使用 ASP.NET AJAX 和控制項，伺服器裝載模型可能會很熟悉 <xref:System.Web.UI.UpdatePanel> 。 `UpdatePanel`控制項會處理部分頁面更新的套用，以回應頁面上的觸發程式事件。 觸發時， `UpdatePanel` 會要求部分更新，然後套用它，而不需要重新整理頁面。 UI 的狀態是使用來管理 `ViewState` 。 Blazor伺服器應用程式稍有不同，因為應用程式需要與用戶端使用中的連接。 此外，所有 UI 狀態都會保留在伺服器上。 除了這些差異之外，這兩個模型在概念上類似。
 
-## <a name="how-to-choose-the-right-blazor-hosting-model"></a>如何選擇正確的布拉佐託管模式
+## <a name="how-to-choose-the-right-blazor-hosting-model"></a>如何選擇正確的 Blazor 裝載模型
 
-如[Blazor 託管模型文檔](/aspnet/core/blazor/hosting-models)中所述,不同的 Blazor 託管模型有不同的權衡。
+如[ Blazor 主控模型](/aspnet/core/blazor/hosting-models)檔中所述，不同的 Blazor 裝載模型會有不同的取捨。
 
-Blazor WebAssembly 託管模型具有以下優點:
+Blazor WebAssembly 裝載模型具有下列優點：
 
-- 沒有 .NET 伺服器端依賴項。 應用程式在下載到用戶端後已完全正常運行。
-- 充分利用客戶端資源和功能。
-- 工作從伺服器卸載到用戶端。
-- ASP.NET 酷網路伺服器不需要託管應用。 可以使用無伺服器部署方案(例如,從CDN為應用提供服務)。
+- 沒有 .NET 伺服器端相依性。 應用程式會在下載至用戶端之後完全正常運作。
+- 用戶端資源和功能都可以充分運用。
+- 工作會從伺服器卸載至用戶端。
+- 不需要 ASP.NET Core web 伺服器來裝載應用程式。 無伺服器部署案例可能 (例如，從 CDN) 提供應用程式。
 
-Blazor WebAssembly 託管模型的缺點有:
+裝載模型的缺點 Blazor WebAssembly 如下：
 
-- 瀏覽器功能限制應用。
-- 需要有能力的用戶端硬體和軟體(例如,Web 組裝支援)。
-- 下載大小較大,並且載入應用需要更長的時間。
-- .NET 運行時和工具支援不太成熟。 例如[,.NET 標準](../../standard/net-standard.md)支持和調試存在限制。
+- 瀏覽器功能會限制應用程式。
+- 例如，支援的用戶端硬體和軟體 (WebAssembly 需要) 。
+- 下載大小較大，且應用程式需要較長的時間來載入。
+- .NET 執行時間和工具支援較不成熟。 例如， [.NET Standard](../../standard/net-standard.md)支援和偵錯工具中有一些限制。
 
-相反,Blazor 伺服器託管模型具有以下優點:
+相反地， Blazor 伺服器裝載模型提供下列優點：
 
-- 下載大小比用戶端應用小得多,並且應用程式的載入速度也快得多。
-- 該應用程式充分利用了伺服器功能,包括使用任何 .NET 核心相容 API。
-- 伺服器上的 .NET Core 用於運行應用,因此現有的 .NET 工具(如調試)按預期工作。
-- 支援精簡用戶端。 例如,伺服器端應用適用於不支援 WebAssembly 和資源受限的設備上的瀏覽器。
-- 應用程式的 .NET/C++ 代碼庫(包括應用的元件代碼)不提供給用戶端。
+- 下載大小遠小於用戶端應用程式，且應用程式載入速度會更快。
+- 應用程式會充分利用伺服器功能，包括使用任何 .NET Core 相容的 Api。
+- 伺服器上的 .NET Core 是用來執行應用程式，因此現有的 .NET 工具（例如，「偵測」）會如預期般運作。
+- 支援瘦用戶端。 例如，伺服器端應用程式會使用不支援的瀏覽器， WebAssembly 以及在資源限制的裝置上。
+- 應用程式的 .NET/c # 程式碼基底（包括應用程式的元件代碼）不會提供給用戶端。
 
-Blazor 伺服器託管模型的缺點有:
+Blazor伺服器裝載模型的缺點如下：
 
-- 更高的 UI 延遲。 每個使用者交互都涉及網路躍點。
-- 沒有離線支援。 如果用戶端連接失敗,應用將停止工作。
-- 對於許多用戶的應用來說,可擴充性具有挑戰性。 伺服器必須管理多個用戶端連接並處理用戶端狀態。
-- 需要ASP.NET核心伺服器才能為應用提供服務。 無法使用無伺服器部署方案。 例如,不能從 CDN 為應用提供服務。
+- 較高的 UI 延遲。 每個使用者互動都牽涉到網路躍點。
+- 沒有離線支援。 如果用戶端連線失敗，應用程式就會停止運作。
+- 對於具有許多使用者的應用程式而言，擴充性是極具挑戰性的。 伺服器必須管理多個用戶端連接並處理用戶端狀態。
+- 需要 ASP.NET Core 伺服器才能服務應用程式。 無伺服器部署案例無法進行。 例如，您無法從 CDN 服務應用程式。
 
-前面的權衡清單可能很嚇人,但您的託管模型可以在以後更改。 無論選擇了何種 Blazor 託管模型,元件模型都是*相同的*。 原則上,相同的元件可用於任一託管模型。 你的應用代碼不會更改;但是,你的應用代碼不會更改。但是,引入抽象是一個很好的做法,這樣您的元件將保持與模型無關的託管。 這些抽象允許你的應用更容易採用不同的託管模型。
+前述的取捨清單可能會恐嚇，但您的裝載模型稍後可以變更。 不論選取的 Blazor 裝載模型為何，元件模型都*相同*。 原則上，相同的元件可以與任一裝載模型搭配使用。 您的應用程式代碼不會變更;不過，導入抽象概念是個很好的作法，讓您的元件保持裝載不受模型限制。 抽象概念可讓您的應用程式更輕鬆地採用不同的裝載模型。
 
 ## <a name="deploy-your-app"></a>部署您的應用程式
 
-ASP.NET Web 窗體應用通常託管在 Windows 伺服器電腦或群集上的 IIS 上。 Blazor 應用程式還可以:
+ASP.NET Web Forms 應用程式通常裝載于 Windows Server 電腦或叢集上的 IIS。 Blazor應用程式也可以：
 
-- 託管在IIS上,作為靜態檔或作為ASP.NET核心應用。
-- 利用 ASP.NET Core 的靈活性,託管在各種平台和伺服器基礎架構上。 例如,您可以在 Linux 上使用[Nginx](/aspnet/core/host-and-deploy/linux-nginx)或[Apache](/aspnet/core/host-and-deploy/linux-apache)託管 Blazor 應用程式。 有關如何發佈和部署 Blazor 應用的詳細資訊,請參閱 Blazor[託管和部署](/aspnet/core/host-and-deploy/blazor/)文檔。
+- 以靜態檔案或 ASP.NET Core 應用程式的形式裝載在 IIS 上。
+- 利用 ASP.NET Core 的彈性，裝載在各種平臺和伺服器基礎結構上。 例如，您可以 Blazor 使用[Nginx](/aspnet/core/host-and-deploy/linux-nginx)或[Apache](/aspnet/core/host-and-deploy/linux-apache) on Linux 裝載應用程式。 如需有關如何發佈和部署應用程式的詳細資訊 Blazor ，請參閱 Blazor [裝載和部署](/aspnet/core/host-and-deploy/blazor/)檔。
 
-在下一節中,我們將介紹如何設置 Blazor WebAssembly 和 Blazor Server 應用的專案。
+在下一節中，我們將探討如何 Blazor WebAssembly Blazor 設定和伺服器應用程式的專案。
 
 >[!div class="step-by-step"]
->[前一個](architecture-comparison.md)
->[下一個](project-structure.md)
+>[上一個](architecture-comparison.md) 
+>[下一步](project-structure.md)

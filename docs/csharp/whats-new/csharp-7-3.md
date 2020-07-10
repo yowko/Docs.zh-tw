@@ -2,12 +2,12 @@
 title: C# 7.3 的新功能
 description: C# 7.3 新功能的概觀
 ms.date: 05/16/2018
-ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd8f554516fb5078d9d2ed1eec787f36e8f4c7a7
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204548"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174753"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 的新功能
 
@@ -87,7 +87,7 @@ class C
 }
 ```
 
-有關詳細資訊，請參閱語句[`fixed`上的文章](../language-reference/keywords/fixed-statement.md)。
+如需詳細資訊，請參閱有關[ `fixed` 語句](../language-reference/keywords/fixed-statement.md)的文章。
 
 ### <a name="ref-local-variables-may-be-reassigned"></a>`ref` 區域變數可能會重新指派
 
@@ -98,7 +98,7 @@ ref VeryLargeStruct refLocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
-有關詳細資訊，請參閱有關[`ref`返回和`ref`本地變數](../programming-guide/classes-and-structs/ref-returns.md)的文章，以及有關[`foreach`](../language-reference/keywords/foreach-in.md)的文章。
+如需詳細資訊，請參閱有關傳回[ `ref` 和 `ref` 區域變數](../programming-guide/classes-and-structs/ref-returns.md)的文章，以及上的文章 [`foreach`](../language-reference/keywords/foreach-in.md) 。
 
 ### <a name="stackalloc-arrays-support-initializers"></a>`stackalloc` 陣列支援初始設定式
 
@@ -117,21 +117,21 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-有關詳細資訊，請參閱[`stackalloc`運算子](../language-reference/operators/stackalloc.md)文章。
+如需詳細資訊，請參閱[ `stackalloc` 運算子](../language-reference/operators/stackalloc.md)一文。
 
 ### <a name="more-types-support-the-fixed-statement"></a>更多型別支援 `fixed` 陳述式
 
 `fixed` 陳述式支援一組有限的型別。 從 C# 7.3 開始，包含傳回 `ref T` 或 `ref readonly T` 之 `GetPinnableReference()` 方法的任何型別都可能是 `fixed`。 新增此功能表示 `fixed` 可以與 <xref:System.Span%601?displayProperty=nameWithType> 和相關型別一起使用。
 
-有關詳細資訊，請參閱語言引用中的[`fixed`語句](../language-reference/keywords/fixed-statement.md)文章。
+如需詳細資訊，請參閱語言參考中的[ `fixed` 語句](../language-reference/keywords/fixed-statement.md)一文。
 
 ### <a name="enhanced-generic-constraints"></a>增強泛型限制式
 
 您現在可以指定型別 <xref:System.Enum?displayProperty=nameWithType> 或 <xref:System.Delegate?displayProperty=nameWithType> 作為型別參數的基底類別限制式。
 
-您還可以使用新`unmanaged`約束來指定類型參數必須是不可空的[不可託管類型](../language-reference/builtin-types/unmanaged-types.md)。
+您也可以使用 new `unmanaged` 條件約束，指定型別參數必須是不可為 null 的[非受控型](../language-reference/builtin-types/unmanaged-types.md)別。
 
-有關詳細資訊，請參閱有關[`where`類型參數的泛型約束](../language-reference/keywords/where-generic-type-constraint.md)和[約束](../programming-guide/generics/constraints-on-type-parameters.md)的文章。
+如需詳細資訊，請參閱[ `where` 泛型條件約束](../language-reference/keywords/where-generic-type-constraint.md)的相關文章和[類型參數的條件約束](../programming-guide/generics/constraints-on-type-parameters.md)。
 
 將這些條件約束新增至現有型別是[不相容變更](version-update-considerations.md#incompatible-changes)。 封閉式泛型型別可能不再符合這些新的條件約束。
 
@@ -141,7 +141,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="tuples-support--and-"></a>Tuple 支援 `==` 和 `!=`
 
-C# Tuple 型別現在支援 `==` 和 `!=`。 如需詳細資訊，請參閱 [Tuple](../tuples.md) 文章中涵蓋[相等](../tuples.md#equality-and-tuples)的一節。
+C# Tuple 型別現在支援 `==` 和 `!=`。 如需詳細資訊，請參閱「[元組類型](../language-reference/builtin-types/value-tuples.md)」一文的「[元組相等](../language-reference/builtin-types/value-tuples.md#tuple-equality)」一節。
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>將屬性附加至自動實作屬性的支援欄位
 
@@ -168,7 +168,7 @@ static void M(in S arg);
 > [!NOTE]
 > 這已實作為錯誤 (Bug) 修正。 即使將語言版本設定為 "7.2"，這也不再模棱兩可。
 
-有關詳細資訊，請參閱參數[`in`修改器](../language-reference/keywords/in-parameter-modifier.md)上的文章。
+如需詳細資訊，請參閱[ `in` 參數修飾](../language-reference/keywords/in-parameter-modifier.md)詞上的一文。
 
 ### <a name="extend-expression-variables-in-initializers"></a>在初始設定式中擴充運算式變數
 

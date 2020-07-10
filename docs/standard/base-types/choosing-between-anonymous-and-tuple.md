@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 9c186133a639faf187c89d872856d860a20f5a2d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100960"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174214"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>在匿名和元組類型之間選擇
 
@@ -18,7 +18,7 @@ ms.locfileid: "86100960"
 
 ## <a name="usability-and-functionality"></a>可用性和功能
 
-匿名型別是使用語言整合式查詢（LINQ）運算式，在 c # 3.0 中引進。 使用 LINQ 時，開發人員通常會將查詢的結果投影到匿名型別，其中包含所要使用之物件的幾個 select 屬性。 請考慮下列範例，其會具現化 <xref:System.DateTime> 物件的陣列，並逐一查看其投射為具有兩個屬性的匿名型別。
+匿名型別是使用語言整合式查詢 (LINQ) 運算式，在 c # 3.0 中引進。 使用 LINQ 時，開發人員通常會將查詢的結果投影到匿名型別，其中包含所要使用之物件的幾個 select 屬性。 請考慮下列範例，其會具現化 <xref:System.DateTime> 物件的陣列，並逐一查看其投射為具有兩個屬性的匿名型別。
 
 ```csharp-interactive
 var dates = new[]
@@ -90,12 +90,7 @@ foreach (var (formatted, ticks) in
 }
 ```
 
-C # 提供具有類型的元組語言支援 <xref:System.ValueTuple> ，以及的語義：
-
-- [元組指派](../../csharp/tuples.md#assignment-and-tuples)
-- [元組解構](../../csharp/deconstruct.md)（不限於元組）
-- [元組等號檢查](../../csharp/tuples.md#equality-and-tuples)
-- [元組投影初始設定式](../../csharp/tuples.md#tuple-projection-initializers)
+如需有關元組的詳細資訊，請參閱[ (c # 參考) 的元組類型](../../csharp/language-reference/builtin-types/value-tuples.md)或[ (Visual Basic) 的元](../../visual-basic/programming-guide/language-features/data-types/tuples.md)組。
 
 不過，上述範例的功能完全相同。其可用性和其基礎的執行方式稍有不同。
 
@@ -127,5 +122,6 @@ C # 提供具有類型的元組語言支援 <xref:System.ValueTuple> ，以及�
 
 - [匿名型別](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [運算式樹狀架構](../../csharp/expression-trees.md)
-- [元組類型](../../csharp/tuples.md)
+- [元組類型 (c # 參考) ](../../csharp/language-reference/builtin-types/value-tuples.md)
+- [元組 (Visual Basic) ](../../visual-basic/programming-guide/language-features/data-types/tuples.md)
 - [類型設計方針](../design-guidelines/type.md)

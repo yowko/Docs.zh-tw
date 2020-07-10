@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 新功能的概觀。
 ms.date: 04/09/2019
-ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe6e49eb01e24a27bc7970900c05150378ab194a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399704"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174766"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -19,7 +19,7 @@ C# 7.1 也新增了[語言版本選擇](../language-reference/configure-language
 
 - [`async``Main`方法](#async-main)
   - 應用程式的進入點允許使用`async`修飾詞。
-- [`default`文本運算式](#default-literal-expressions)
+- [`default`常值運算式](#default-literal-expressions)
   - 目標類型可以推斷時，可以在預設值運算式中使用預設常值運算式。
 - [Tuple 型別推導](#inferred-tuple-element-names)
   - 在許多情況下，Tuple 項目的名稱均可從 Tuple 初始化推斷來加以推斷。
@@ -106,7 +106,7 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-您可以在[元組](../tuples.md)文章中深入了解此功能。
+您可以在[元組類型](../language-reference/builtin-types/value-tuples.md)一文中深入瞭解這項功能。
 
 ## <a name="pattern-matching-on-generic-type-parameters"></a>泛型型別參數的模式比對
 

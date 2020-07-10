@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: b86fe4fd91b395498926512650490f8d3a0383a1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ffda4ad93451d6991aeb20ed01511f16fd3e512b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761833"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174149"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計指南)
 
@@ -141,7 +141,7 @@ public partial class Form1 : Form
 
 ## <a name="lambda-expressions-and-tuples"></a>Lambda 運算式和元組
 
-從 c # 7.0 開始，c # 語言提供[元組](../../tuples.md)的內建支援。 您可以將元組當做引數提供給 Lambda 運算式，而您的 Lambda 運算式也可以傳回元組。 在某些情況下，C# 編譯器會使用型別推斷來判斷元組元件的類型。
+從 c # 7.0 開始，c # 語言提供[元組](../../language-reference/builtin-types/value-tuples.md)的內建支援。 您可以將元組當做引數提供給 Lambda 運算式，而您的 Lambda 運算式也可以傳回元組。 在某些情況下，C# 編譯器會使用型別推斷來判斷元組元件的類型。
 
 若要定義元組，請以括號括住其元件的逗號分隔清單。 下列範例使用具有 3 個元件的元組將一連串數字傳遞至 Lambda 運算式，這會使每個值加倍，並傳回具有三個元件的元組，其中包含乘法運算的結果。
 
@@ -151,7 +151,7 @@ public partial class Form1 : Form
 
 [!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
-如需 C# 元組的詳細資訊，請參閱 [C# 元組型別](../../tuples.md)。
+如需 c # 元組的詳細資訊，請參閱[元組類型](../../language-reference/builtin-types/value-tuples.md)。
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>具有標準查詢運算子的 Lambda
 

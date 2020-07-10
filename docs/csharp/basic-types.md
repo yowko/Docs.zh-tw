@@ -4,12 +4,12 @@ description: 了解所有 C# 程式中的核心類型 (數字、字串和物件)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 93a0023969bb8bb089922a9e30fbf599eddc7203
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202214"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174175"
 ---
 # <a name="types-variables-and-values"></a>類型、變數和值
 
@@ -74,13 +74,13 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
   
 在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。 為此，您可以建立「匿名型別」**。 如需詳細資訊，請參閱[匿名](programming-guide/classes-and-structs/anonymous-types.md)型別。
 
-通常會想要從方法傳回多個值。 您可以建立在單一方法呼叫中傳回多個值的「Tuple 類型」**。 如需詳細資訊，請參閱[元組](tuples.md)。
+通常會想要從方法傳回多個值。 您可以建立在單一方法呼叫中傳回多個值的「Tuple 類型」**。 如需詳細資訊，請參閱[元組類型](language-reference/builtin-types/value-tuples.md)。
 
 ## <a name="the-common-type-system"></a>一般型別系統
 
 請務必了解 .NET Framework 中有關型別系統的兩個基本概念：  
   
-- 它支援繼承原則。 型別可以衍生自稱為「基底型別」** 的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底型別同樣可以衍生自一些其他型別，所衍生的型別會繼承其繼承階層架構中兩個基底型別的成員。 所有類型 (包括 <xref:System.Int32> 這類內建數字類型 (C# 關鍵字：`int`)) 最終衍生自單一基底類型，即 <xref:System.Object> (C# 關鍵字：`object`)。 這個統一類型階層稱為[一般型別系統](../standard/common-type-system.md)（CTS）。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](programming-guide/classes-and-structs/inheritance.md)。  
+- 它支援繼承原則。 型別可以衍生自稱為「基底型別」** 的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底型別同樣可以衍生自一些其他型別，所衍生的型別會繼承其繼承階層架構中兩個基底型別的成員。 所有類型 (包括 <xref:System.Int32> 這類內建數字類型 (C# 關鍵字：`int`)) 最終衍生自單一基底類型，即 <xref:System.Object> (C# 關鍵字：`object`)。 這個統一類型階層稱為[一般類型系統](../standard/common-type-system.md) (CTS) 。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](programming-guide/classes-and-structs/inheritance.md)。  
   
 - CTS 中的每個型別都會定義為「實值型別」** 或「參考型別」**。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用或關鍵字定義的類型 `struct` `enum` 是實數值型別。 如需實數值型別的詳細資訊，請參閱實[數值型別](language-reference/builtin-types/value-types.md)。 您使用 [class](language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 如需參考型別的詳細資訊，請參閱[類別](programming-guide/classes-and-structs/classes.md)。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
 

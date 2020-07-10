@@ -1,5 +1,6 @@
 ---
 title: 將網頁瀏覽器功能新增至應用程式
+description: 瞭解如何使用 WebBrowser 控制項將 web 瀏覽器功能新增至 Windows Forms 應用程式。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: 7cb789121f4aa9a1e7cef54f992d0697ce6dfc62
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a5a33961ac8301bda86bb5f34e65ac159308987f
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543569"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174545"
 ---
 # <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>如何將 web 瀏覽器功能新增至 Windows Forms 應用程式
 
 利用 <xref:System.Windows.Forms.WebBrowser> 控制項，您可以將 Web 瀏覽器功能加入應用程式。 根據預設，此控制項的作用類似 Web 瀏覽器。 設定 <xref:System.Windows.Forms.WebBrowser.Url%2A> 屬性來載入初始 URL 之後，您可以按一下超連結或使用鍵盤快速鍵來巡覽，在巡覽歷程記錄中前後移動。 根據預設，您可以透過滑鼠右鍵捷徑功能表來存取其他瀏覽器功能。 您也可以將新文件拖曳至控制項加以開啟。 <xref:System.Windows.Forms.WebBrowser> 控制項也有數個屬性、方法和事件，可讓您用來實作類似 Internet Explorer 中的使用者介面功能。
 
-下列程式碼範例會實作網址列、一般瀏覽器按鈕、[檔案] 功能表、狀態列，以及可顯示目前頁面標題的標題列。
+下列程式碼範例會實作網址列、一般瀏覽器按鈕、[檔案]**** 功能表、狀態列，以及可顯示目前頁面標題的標題列。
 
 ## <a name="example"></a>範例
 

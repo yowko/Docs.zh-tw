@@ -1,22 +1,25 @@
 ---
-title: 使用 Blazor 建立可重複使用的 UI 元件
-description: 瞭解如何使用 Blazor 建立可重複使用的 UI 元件，以及它們與 ASP.NET Web form 控制項之間的比較。
+title: 使用建立可重複使用的 UI 元件Blazor
+description: 瞭解如何使用建立可重複使用的 UI 元件 Blazor ，以及它們與 ASP.NET Web form 控制項之間的比較。
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 9577fc916bb11783b885b2641242820865c0b115
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051448"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173335"
 ---
-# <a name="build-reusable-ui-components-with-blazor"></a>使用 Blazor 建立可重複使用的 UI 元件
+# <a name="build-reusable-ui-components-with-blazor"></a>使用建立可重複使用的 UI 元件Blazor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-ASP.NET Web form 的其中一項很棒的東西，就是它可以將可重複使用的使用者介面（UI）程式碼片段封裝成可重複使用的 UI 控制項。 您可以使用 *.ascx*檔案，在標記中定義自訂使用者控制項。 您也可以使用完整的設計工具支援，在程式碼中建立精緻的伺服器控制項。
+ASP.NET Web form 的其中一個很棒的東西，就是它可以將可重複使用的使用者介面 (UI) 程式碼片段封裝成可重複使用的 UI 控制項。 您可以使用 *.ascx*檔案，在標記中定義自訂使用者控制項。 您也可以使用完整的設計工具支援，在程式碼中建立精緻的伺服器控制項。
 
-Blazor 也支援透過*元件*的 UI 封裝。 元件：
+Blazor也支援透過*元件*的 UI 封裝。 元件：
 
 - 是獨立的 UI 區塊。
 - 會維護自己的狀態和轉譯邏輯。
@@ -25,7 +28,7 @@ Blazor 也支援透過*元件*的 UI 封裝。 元件：
 
 ## <a name="an-introduction-to-razor"></a>Razor 簡介
 
-Razor 是以 HTML 和 c # 為基礎的輕量標記範本化語言。 使用 Razor，您可以在標記和 c # 程式碼之間順暢地轉換，以定義您的元件轉譯邏輯。 編譯*razor*檔案時，會在 .net 類別中以結構化的方式來捕獲轉譯邏輯。 已編譯類別的名稱取自*razor*檔案名。 命名空間是從專案的預設命名空間和資料夾路徑取得，或者您可以使用指示詞明確指定命名空間（以下是 Razor 指示詞的 `@namespace` 詳細資訊）。
+Razor 是以 HTML 和 c # 為基礎的輕量標記範本化語言。 使用 Razor，您可以在標記和 c # 程式碼之間順暢地轉換，以定義您的元件轉譯邏輯。 編譯*razor*檔案時，會在 .net 類別中以結構化的方式來捕獲轉譯邏輯。 已編譯類別的名稱取自*razor*檔案名。 命名空間是從專案的預設命名空間和資料夾路徑取得，或者您可以使用指示詞明確指定命名空間， `@namespace` () 下的 Razor 指示詞。
 
 元件的轉譯邏輯是使用標準的 HTML 標籤撰寫的，並使用 c # 新增動態邏輯。 `@`字元是用來轉換成 c #。 Razor 通常會在您切換回 HTML 時，聰明地找出。 例如，下列元件會呈現 `<p>` 具有目前時間的標記：
 
@@ -74,30 +77,30 @@ Razor 指示詞是以 `@` 字元開頭，而且通常用於檔案開頭的新行
 @namespace MyComponentNamespace
 ```
 
-下表摘要說明 Blazor 中使用的各種 Razor 指示詞，以及其 ASP.NET Web form 對應項（如果有的話）。
+下表摘要說明中所使用的各種 Razor 指示詞 Blazor ，以及其 ASP.NET Web form 對應項（如果有的話）。
 
-|指示詞    |說明|範例|Web Forms 對等|
+|指示詞    |描述|範例|Web Forms 對等|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|None|
+|`@attribute` |將類別層級屬性加入至元件|`@attribute [Authorize]`|無|
 |`@code`      |將類別成員加入至元件|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|執行指定的介面|`@implements IDisposable`|使用程式碼後置|
 |`@inherits`  |繼承自指定的基類|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|None|
+|`@inject`    |將服務插入元件|`@inject IJSRuntime JS`|無|
 |`@layout`    |指定元件的版面配置元件|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|None|
+|`@namespace` |設定元件的命名空間|`@namespace MyNamespace`|無|
 |`@page`      |指定元件的路由|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |指定元件的泛型型別參數|`@typeparam TItem`|使用程式碼後置|
 |`@using`     |指定要帶入範圍的命名空間|`@using MyComponentNamespace`|在*web.config*中新增命名空間|
 
-Razor 元件也會廣泛使用專案上的指示詞*屬性*，以控制元件的編譯方式（事件處理、資料系結、元件 & 專案參考等等）。 指示詞屬性全都遵循通用的泛型語法，其中括弧中的值是選擇性的：
+Razor 元件也會廣泛使用專案上的指示詞*屬性*，以控制如何編譯元件 (事件處理、資料系結、元件 & 元素) 參考等等的各種層面。 指示詞屬性全都遵循通用的泛型語法，其中括弧中的值是選擇性的：
 
 ```razor
 @directive(-suffix(:name))(="value")
 ```
 
-下表摘要說明 Blazor 中使用的 Razor 指示詞的各種屬性。
+下表摘要說明中所使用之 Razor 指示詞的各種屬性 Blazor 。
 
-|屬性    |說明|範例|
+|屬性    |描述|範例|
 |-------------|-----------|-------|
 |`@attributes`|呈現屬性的字典|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |建立雙向資料系結    |`<input @bind="username" @bind:event="oninput" />`|
@@ -105,15 +108,15 @@ Razor 元件也會廣泛使用專案上的指示詞*屬性*，以控制元件的
 |`@key`       |指定比較演算法用來保留集合中元素的索引鍵|`<DetailsEditor @key="person" Details="person.Details" />`|
 |`@ref`       |捕捉元件或 HTML 元素的參考|`<MyDialog @ref="myDialog" />`|
 
-Blazor （、、等）所使用的各種指示詞屬性 `@onclick` `@bind` `@ref` 會涵蓋在下列各節和之後的章節中。
+ (、、) 等所使用的各種指示詞屬性 Blazor `@onclick` `@bind` `@ref` 會在下列各節和後續章節中說明。
 
 *.Aspx*和 *.ascx*檔案中使用的許多語法都具有 Razor 中的平行語法。 以下是 ASP.NET Web Forms 和 Razor 語法的簡單比較。
 
-|功能                      |Web Form           |Syntax               |Razor         |Syntax |
+|功能                      |Web Form           |語法               |Razor         |語法 |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |指示詞                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |程式碼區塊                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|運算式<br>（HTML 編碼）|`<%: %>`            |`<%:DateTime.Now %>` |隱`@`<br>確切`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|運算式<br> (HTML 編碼) |`<%: %>`            |`<%:DateTime.Now %>` |隱`@`<br>確切`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |註解                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |資料繫結                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
@@ -130,7 +133,7 @@ Blazor （、、等）所使用的各種指示詞屬性 `@onclick` `@bind` `@ref
 }
 ```
 
-因為 Razor 是以 c # 為基礎，所以必須從 c # 專案（*.csproj*）中進行編譯。 您無法從 Visual Basic 專案（*. vbproj*）編譯*razor*檔案。 您仍然可以參考 Blazor 專案中 Visual Basic 專案。 相反的情況也是如此。
+因為 Razor 是以 c # 為基礎，所以必須從 c # 專案中編譯， (*.csproj*) 。 您無法從 Visual Basic 專案編譯*razor*檔案， (*. vbproj*) 。 您仍然可以參考專案中 Visual Basic 專案 Blazor 。 相反的情況也是如此。
 
 如需完整的 Razor 語法參考，請參閱[ASP.NET Core 的 Razor 語法參考](/aspnet/core/mvc/views/razor)。
 
@@ -142,9 +145,9 @@ Blazor （、、等）所使用的各種指示詞屬性 `@onclick` `@bind` `@ref
 <Counter />
 ```
 
-不同于 ASP.NET Web Forms，Blazor 中的元件：
+不同于 ASP.NET Web form，中的元件 Blazor ：
 
-- 請勿使用元素前置詞（例如 `asp:` ）。
+- 請勿使用元素前置詞 (例如， `asp:`) 。
 - 不需要在頁面上或在*web.config*中註冊。
 
 您可以將 Razor 元件視為 .NET 類型，因為這正是它們的意義。 如果參考包含元件的元件，則元件可供使用。 若要將元件的命名空間帶入範圍中，請套用指示詞 `@using` ：
@@ -155,7 +158,7 @@ Blazor （、、等）所使用的各種指示詞屬性 `@onclick` `@bind` `@ref
 <Counter />
 ```
 
-如預設 Blazor 專案中所示，通常會將指示詞放入 `@using` *_Imports 的 razor*檔案中，使其匯入相同目錄和子目錄中的所有*razor*檔案。
+如預設專案中所示 Blazor ，通常會將指示詞放入 `@using` _Imports 的*razor*檔案中，使其匯入相同目錄和子目錄中的所有*razor*檔案。
 
 如果元件的命名空間不在範圍內，您可以使用其完整類型名稱指定元件，如同您在 c # 中所能執行的動作：
 
@@ -165,7 +168,7 @@ Blazor （、、等）所使用的各種指示詞屬性 `@onclick` `@bind` `@ref
 
 ## <a name="component-parameters"></a>元件參數
 
-在 ASP.NET Web Forms 中，您可以使用公用屬性將參數和資料傳送至控制項。 這些屬性可以使用屬性在標記中設定，或直接在程式碼中設定。 Blazor 元件的工作方式類似，雖然元件屬性也必須標記 `[Parameter]` 為屬性，才能視為元件參數。
+在 ASP.NET Web Forms 中，您可以使用公用屬性將參數和資料傳送至控制項。 這些屬性可以使用屬性在標記中設定，或直接在程式碼中設定。 Blazor元件的工作方式類似，雖然元件屬性也必須以屬性標記， `[Parameter]` 才能視為元件參數。
 
 下列 `Counter` 元件會定義名為的元件參數 `IncrementAmount` ，可以用來指定 `Counter` 每次按下按鈕時應該遞增的數量。
 
@@ -189,7 +192,7 @@ Blazor （、、等）所使用的各種指示詞屬性 `@onclick` `@bind` `@ref
 }
 ```
 
-若要在 Blazor 中指定元件參數，請使用屬性，就像您在 ASP.NET Web Forms 中所做的一樣：
+若要在中指定元件參數 Blazor ，請使用屬性，就像您在 ASP.NET Web form 中所做的一樣：
 
 ```razor
 <Counter IncrementAmount="10" />
@@ -197,7 +200,7 @@ Blazor （、、等）所使用的各種指示詞屬性 `@onclick` `@bind` `@ref
 
 ## <a name="event-handlers"></a>事件處理常式
 
-ASP.NET Web Forms 和 Blazor 都提供以事件為基礎的程式設計模型來處理 UI 事件。 這類事件的範例包括按鈕點擊和文字輸入。 在 ASP.NET Web Forms 中，您可以使用 HTML 伺服器控制項來處理 DOM 所公開的 UI 事件，也可以處理 Web 服務器控制項所公開的事件。 事件會透過表單回傳要求呈現在伺服器上。 請考慮下列 Web Forms 按鈕的 click 範例：
+兩者都 ASP.NET Web form，並 Blazor 提供以事件為基礎的程式設計模型來處理 UI 事件。 這類事件的範例包括按鈕點擊和文字輸入。 在 ASP.NET Web Forms 中，您可以使用 HTML 伺服器控制項來處理 DOM 所公開的 UI 事件，也可以處理 Web 服務器控制項所公開的事件。 事件會透過表單回傳要求呈現在伺服器上。 請考慮下列 Web Forms 按鈕的 click 範例：
 
 *計數器 .ascx*
 
@@ -217,7 +220,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-在 Blazor 中，您可以直接使用表單的指示詞屬性來註冊 DOM UI 事件的處理常式 `@on{event}` 。 `{event}`預留位置代表事件的名稱。 例如，您可以聆聽按鈕的點擊方式，如下所示：
+在中 Blazor ，您可以直接使用表單的指示詞屬性來註冊 DOM UI 事件的處理常式 `@on{event}` 。 `{event}`預留位置代表事件的名稱。 例如，您可以聆聽按鈕的點擊方式，如下所示：
 
 ```razor
 <button @onclick="OnClick">Click me!</button>
@@ -308,7 +311,7 @@ public partial class Counter : System.Web.UI.UserControl
 
 ## <a name="data-binding"></a>資料繫結
 
-Blazor 提供簡單的機制，可將 UI 元件的資料系結至元件的狀態。 此方法不同于 ASP.NET Web form 中的功能，可將資料從資料來源系結至 UI 控制項。 在[處理資料](data.md)一節中，我們將討論如何處理來自不同資料來源的資料。
+Blazor提供簡單的機制，可將 UI 元件的資料系結至元件的狀態。 此方法不同于 ASP.NET Web form 中的功能，可將資料從資料來源系結至 UI 控制項。 在[處理資料](data.md)一節中，我們將討論如何處理來自不同資料來源的資料。
 
 若要從 UI 元件建立雙向資料系結至元件的狀態，請使用指示詞 `@bind` 屬性。 在下列範例中，核取方塊的值會系結至 `isChecked` 欄位。
 
@@ -430,9 +433,9 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazor 元件也有定義完善的生命週期。 元件的生命週期可用來初始化元件狀態和執行 advanced 元件行為。
+Blazor元件也具有妥善定義的生命週期。 元件的生命週期可用來初始化元件狀態和執行 advanced 元件行為。
 
-所有 Blazor 的元件生命週期方法都有同步和非同步版本。 元件呈現是同步的。 您無法在元件轉譯過程中執行非同步邏輯。 所有非同步邏輯都必須當做生命週期方法的一部分來執行 `async` 。
+所有的 Blazor 元件生命週期方法都有同步和非同步版本。 元件呈現是同步的。 您無法在元件轉譯過程中執行非同步邏輯。 所有非同步邏輯都必須當做生命週期方法的一部分來執行 `async` 。
 
 ### <a name="oninitialized"></a>OnInitialized
 
@@ -454,7 +457,7 @@ protected override async Task OnParametersSetAsync() { await ... }
 
 ### <a name="onafterrender"></a>OnAfterRender
 
-在 `OnAfterRender` `OnAfterRenderAsync` 元件完成呈現之後，會呼叫和方法。 此時會填入元素和元件參考（以下是這些概念的詳細資訊）。 此時會啟用與瀏覽器的互動。 可以安全地進行與 DOM 的互動和 JavaScript 的執行。
+在 `OnAfterRender` `OnAfterRenderAsync` 元件完成呈現之後，會呼叫和方法。 此時會填入元素和元件參考 () 下的這些概念的詳細資訊。 此時會啟用與瀏覽器的互動。 可以安全地進行與 DOM 的互動和 JavaScript 的執行。
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -479,7 +482,7 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 ### <a name="idisposable"></a>IDisposable
 
-`IDisposable`當元件從 UI 中移除時，Blazor 元件可以執行來處置資源。 Razor 元件可以使用指示詞來執行 `IDispose` `@implements` ：
+Blazor元件可以在 `IDisposable` 元件從 UI 中移除時，執行以處置資源。 Razor 元件可以使用指示詞來執行 `IDispose` `@implements` ：
 
 ```razor
 @using System
@@ -497,9 +500,9 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 ## <a name="capture-component-references"></a>捕捉元件參考
 
-在 ASP.NET Web form 中，通常會藉由參考其識別碼，直接在程式碼中操作控制項實例。 在 Blazor 中，您也可以捕捉和操作元件的參考，不過這種情況較不常見。
+在 ASP.NET Web form 中，通常會藉由參考其識別碼，直接在程式碼中操作控制項實例。 在中 Blazor ，您也可以捕捉和操作元件的參考，雖然較不常見。
 
-若要在 Blazor 中捕捉元件參考，請使用指示詞 `@ref` 屬性。 屬性的值應該符合可設定欄位的名稱，其類型與參考的元件相同。
+若要在中捕捉元件參考 Blazor ，請使用指示詞 `@ref` 屬性。 屬性的值應該符合可設定欄位的名稱，其類型與參考的元件相同。
 
 ```razor
 <MyLoginDialog @ref="loginDialog" ... />
@@ -520,17 +523,17 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 ## <a name="capture-element-references"></a>Capture 元素參考
 
-Blazor 元件可以捕捉元素的參考。 不同于 ASP.NET Web Forms 中的 HTML 伺服器控制項，您無法直接使用 Blazor 中的專案參考來操作 DOM。 Blazor 會使用其 DOM 比較演算法，為您處理大部分的 DOM 互動。 Blazor 中的已捕捉元素參考是不透明的。 不過，它們是用來傳遞 JavaScript interop 呼叫中的特定元素參考。 如需 JavaScript interop 的詳細資訊，請參閱[ASP.NET Core Blazor javascript interop](/aspnet/core/blazor/javascript-interop)。
+Blazor元件可以捕獲元素的參考。 不同于 ASP.NET Web Forms 中的 HTML 伺服器控制項，您無法直接使用中的專案參考來操作 DOM Blazor 。 Blazor使用其 DOM 比較演算法，為您處理大部分的 DOM 互動。 中的已捕捉專案參考 Blazor 是不透明的。 不過，它們是用來傳遞 JavaScript interop 呼叫中的特定元素參考。 如需 JavaScript interop 的詳細資訊，請參閱[ASP.NET Core Blazor javascript interop](/aspnet/core/blazor/javascript-interop)。
 
 ## <a name="templated-components"></a>樣板化元件
 
 在 ASP.NET Web Forms 中，您可以建立樣板*化控制項*。 樣板化控制項可讓開發人員指定用來呈現容器控制項的 HTML 部分。 建立樣板化伺服器控制項的機制很複雜，但它們可以讓您以可自訂的方式呈現資料的強大案例。 樣板化控制項的範例包括 `Repeater` 和 `DataList` 。
 
-您也可以藉由定義或類型的元件參數，將 Blazor 元件樣板化 `RenderFragment` `RenderFragment<T>` 。 `RenderFragment`代表 Razor 標記的區塊，可由元件呈現。 `RenderFragment<T>`是 Razor 標記的區塊，它會接受呈現轉譯片段時可指定的參數。
+Blazor元件也可以藉由定義或類型的元件參數來進行樣板化 `RenderFragment` `RenderFragment<T>` 。 `RenderFragment`代表 Razor 標記的區塊，可由元件呈現。 `RenderFragment<T>`是 Razor 標記的區塊，它會接受呈現轉譯片段時可指定的參數。
 
 ### <a name="child-content"></a>子內容
 
-Blazor 元件可以將其子內容捕捉為 `RenderFragment` ，並將該內容轉譯為元件轉譯的一部分。 若要捕獲子內容，請定義類型的元件參數 `RenderFragment` ，並將它命名為 `ChildContent` 。
+Blazor元件可以將其子內容捕捉為 `RenderFragment` ，並將該內容轉譯為元件轉譯的一部分。 若要捕獲子內容，請定義類型的元件參數 `RenderFragment` ，並將它命名為 `ChildContent` 。
 
 *ChildContentComponent razor*
 
@@ -608,7 +611,7 @@ Blazor 元件可以將其子內容捕捉為 `RenderFragment` ，並將該內容�
 
 ## <a name="code-behind"></a>程式碼後置
 
-Blazor 元件通常是在單一的*razor*檔案中撰寫。 不過，也可以使用程式碼後置檔案來分隔程式碼和標記。 若要使用元件檔案，請新增符合元件檔檔案名的 c # 檔案，但已加入 *.cs*副檔名（*Counter.razor.cs*）。 使用 c # 檔案來定義元件的基類。 您可以將基類命名為任何您想要的名稱，但通常會將類別命名為與 component 類別相同，但 `Base` 已加入延伸模組（ `CounterBase` ）。 以元件為基礎的類別也必須衍生自 `ComponentBase` 。 然後，在 Razor 元件檔案中，加入指示詞 `@inherits` 以指定元件的基類（ `@inherits CounterBase` ）。
+Blazor元件通常是在單一的*razor*檔案中撰寫。 不過，也可以使用程式碼後置檔案來分隔程式碼和標記。 若要使用元件檔案，請新增符合元件檔檔案名的 c # 檔案，但已新增 (*Counter.razor.cs*) 的 *.cs 副檔名。* 使用 c # 檔案來定義元件的基類。 您可以將基類命名為任何您想要的名稱，但通常會將類別命名為與 component 類別相同，但 `Base` () 加入延伸模組 `CounterBase` 。 以元件為基礎的類別也必須衍生自 `ComponentBase` 。 然後，在 Razor 元件檔案中加入指示詞， `@inherits` 以指定元件 () 的基類 `@inherits CounterBase` 。
 
 *Counter. razor*
 
@@ -640,7 +643,7 @@ public class CounterBase : ComponentBase
 
 ## <a name="additional-resources"></a>其他資源
 
-上述並不是 Blazor 元件所有層面的完整處理。 如需如何[建立和使用 Razor 元件 ASP.NET Core](/aspnet/core/blazor/components)的詳細資訊，請參閱 Blazor 檔。
+上述並不是元件所有層面的完整處理 Blazor 。 如需如何[建立和使用 Razor 元件 ASP.NET Core](/aspnet/core/blazor/components)的詳細資訊，請參閱 Blazor 檔集。
 
 >[!div class="step-by-step"]
 >[上一個](app-startup.md) 

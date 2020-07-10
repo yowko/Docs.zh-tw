@@ -1,5 +1,6 @@
 ---
-title: 作法：實作使用背景作業的表單
+title: 如何：實作使用背景作業的表單
+description: 瞭解如何執行使用背景作業的 Windows Form，讓一個作業可以繼續執行，而另一個作業繼續進行。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: e06b18558f6b3fa3cef47613bbaef16fb7c740f0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 23bf4bc02fbf998d92dfce6d84e4e337cbefe7d9
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046196"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174519"
 ---
-# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>作法：實作使用背景作業的表單
+# <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>如何：實作使用背景作業的表單
 下列範例程式會建立表單，計算 Fibonacci 數字。 該計算在執行緒上執行，與使用者介面執行緒中的不同，因此使用者介面會繼續執行，在繼續計算時不會造成延遲。  
   
  在 Visual Studio 中對於本工作有更詳盡的支援。  
   
- 另請[參閱逐步解說:執行使用背景](walkthrough-implementing-a-form-that-uses-a-background-operation.md)作業的表單。  
+ 另請參閱[逐步解說：實作使用背景作業的表單](walkthrough-implementing-a-form-that-uses-a-background-operation.md)。  
   
 ## <a name="example"></a>範例  
  [!code-cpp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
@@ -50,4 +51,4 @@ ms.locfileid: "70046196"
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [事件架構非同步模式概觀](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Managed 執行緒處理的最佳實施方針](../../../standard/threading/managed-threading-best-practices.md)
+- [受控執行緒最佳做法](../../../standard/threading/managed-threading-best-practices.md)

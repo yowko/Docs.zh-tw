@@ -3,18 +3,21 @@ title: 現代化 Web 應用程式的特性
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 現代化 Web 應用程式的特性
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd6658a6143e132d488660d1aa4a35e427ba2d84
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451560"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174792"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>現代化 Web 應用程式的特性
 
 > "… 有了適當的設計，功能即容易取得。 這種方法艱鉅，但會持續成功。」  
-> _\-鄧尼斯·裡奇_
+> _\-Dennis Ritchie_
 
 現代化 Web 應用程式具有比以往更高的使用者期望和更高的需求。 現今的 Web 應用程式應該要在世界上的任何地方全天候可用，並可讓幾乎所有裝置或所有尺寸的螢幕使用。 Web 應用程式必須安全、靈活、可調整，以符合尖峰需求。 越來越複雜的案例應透過使用 JavaScript 建置在用戶端上豐富的使用者體驗來處理，並有效率地透過 Web API 進行通訊。
 
@@ -26,7 +29,7 @@ ASP.NET Core 已針對現代化 Web 應用程式和雲端式裝載案例最佳�
 
 ![eShopOnWeb](./media/image2-1.png)
 
-**圖 2-1。** eShopOnWeb
+**圖2-1。** eShopOnWeb
 
 > ### <a name="reference-application"></a>參考應用程式
 >
@@ -45,11 +48,11 @@ ASP.NET Core 可跨平台，能在 Linux、MacOS 及 Windows 上執行。 這為
 
 NuGet 套件是 .NET Core 中的頭等公民，而 ASP.NET Core 應用程式是透過 NuGet 的許多程式庫所組成。 此功能的細微性有助於確保應用程式僅依賴和部署實際所需的功能，從而減少其使用量和安全性弱點介面區。
 
-ASP.NET Core 還完全支援[依賴項注入](https://deviq.com/dependency-injection/)，無論是在內部還是在應用程式級別。 介面能擁有多個實作，可以視需要交換。 相依性插入可讓應用程式與這些介面 (而非特定實作) 鬆散結合，使其更易於擴充、維護及測試。
+ASP.NET Core 也完全支援內部和應用層級的相依性[插入](https://deviq.com/dependency-injection/)。 介面能擁有多個實作，可以視需要交換。 相依性插入可讓應用程式與這些介面 (而非特定實作) 鬆散結合，使其更易於擴充、維護及測試。
 
 ## <a name="easily-tested-with-automated-tests"></a>以自動化測試輕鬆進行測試
 
-ASP.NET Core 應用程式支援單元測試，其鬆散結合程度和相依性插入的支援使其可以輕鬆將基礎結構問題與假實作交換，以用於測試目的。 ASP.NET核心還附帶一個測試伺服器，可用於託管記憶體中的應用。 功能測試可以對此記憶體中的伺服器發出請求，執行完整的應用程式堆疊 (包含中介軟體、路由、模型繫結、篩選等) 與接收回應，只需要一小部分的時間來將應用程式裝載在實際伺服器上，並透過網路層級傳送要求。 這些測試對於在現代化 Web 應用程式中越來越重要的 API 來說，尤其易於撰寫且具有價值。
+ASP.NET Core 應用程式支援單元測試，其鬆散結合程度和相依性插入的支援使其可以輕鬆將基礎結構問題與假實作交換，以用於測試目的。 ASP.NET Core 也隨附可用於在記憶體中裝載應用程式的 TestServer。 功能測試可以對此記憶體中的伺服器發出請求，執行完整的應用程式堆疊 (包含中介軟體、路由、模型繫結、篩選等) 與接收回應，只需要一小部分的時間來將應用程式裝載在實際伺服器上，並透過網路層級傳送要求。 這些測試對於在現代化 Web 應用程式中越來越重要的 API 來說，尤其易於撰寫且具有價值。
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>支援傳統和 SPA 行為
 
@@ -61,19 +64,19 @@ ASP.NET Core 應用程式支援單元測試，其鬆散結合程度和相依性�
 
 ## <a name="simple-development-and-deployment"></a>簡單開發與部署
 
-ASP.NET酷睿應用程式可以使用簡單的文字編輯器和命令列介面或功能齊全的開發環境（如 Visual Studio）編寫。 整合型應用程式通常會部署到單一端點。 作為持續整合 (CI) 與持續傳遞 (CD) 管道的一部分，部署可以輕鬆自動進行。 除了傳統的 CI/CD 工具外，Microsoft Azure 還集成了 git 存儲庫的支援，並可以自動部署更新，因為它們被部署到指定的 git 分支或標記。 Azure DevOps 提供了功能齊全的 CI/CD 生成和部署管道，GitHub 操作為託管在那裡的專案提供了另一個選項。
+ASP.NET Core 的應用程式可以使用簡單的文字編輯器和命令列介面，或是功能完整的開發環境（例如 Visual Studio）來撰寫。 整合型應用程式通常會部署到單一端點。 作為持續整合 (CI) 與持續傳遞 (CD) 管道的一部分，部署可以輕鬆自動進行。 除了傳統的 CI/CD 工具之外，Microsoft Azure 還整合了 git 存放庫的支援，並且可以在對指定的 git 分支或標記進行更新時，自動部署更新。 Azure DevOps 提供功能完整的 CI/CD 組建和部署管線，而 GitHub 動作則為裝載于該處的專案提供另一個選項。
 
 ## <a name="traditional-aspnet-and-web-forms"></a>傳統的 ASP.NET 和 Web Form
 
-除了 ASP.NET Core 之外，傳統 ASP.NET 4.x 仍然是建置 Web 應用程式穩定且可靠的平台。 ASP.NET支援 MVC 和 Web API 開發模型以及 Web 表單，它非常適合基於頁面的豐富應用程式開發，並具有豐富的協力廠商元件生態系統。 Microsoft Azure 長期支援ASP.NET 4.x 應用程式，許多開發人員都熟悉此平臺。
+除了 ASP.NET Core 之外，傳統 ASP.NET 4.x 仍然是建置 Web 應用程式穩定且可靠的平台。 ASP.NET 支援 MVC 和 Web API 開發模型，以及 Web form，其適用于豐富的網頁型應用程式開發，並具備豐富的協力廠商元件生態系統。 Microsoft Azure 對 ASP.NET 4.x 應用程式有絕佳的長期以來非常支援，而且許多開發人員都熟悉此平臺。
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
-Blazor 包含在ASP.NET核心 3.0 及更高版本中。 它提供了一種使用 Razor、C# 和 ASP.NET Core 構建豐富的互動式 Web 用戶端應用程式的新機制。 它在開發現代 Web 應用程式時提供了另一個需要考慮的解決方案。 布拉佐有兩個版本需要考慮：伺服器端和用戶端。
+Blazor隨附于 ASP.NET Core 3.0 和更新版本中。 它提供新的機制，讓您使用 Razor、c # 和 ASP.NET Core 來建立豐富的互動式 web 用戶端應用程式。 它提供開發現代化 web 應用程式時要考慮的另一個解決方案。 有兩個 Blazor 要考慮的版本：伺服器端和用戶端。
 
-伺服器端 Blazor 于 2019 年發佈，ASP.NET酷 3.0。 顧名思義，它在伺服器上運行，通過網路將用戶端文檔的更改呈現回瀏覽器。 伺服器端 Blazor 提供豐富的用戶端體驗，無需用戶端 JavaScript，也無需為每個用戶端頁面交互單獨載入頁面。 載入頁的更改從伺服器請求並由伺服器處理，然後使用 SignalR 發送回用戶端。
+伺服器端 Blazor 已在2019中以 ASP.NET Core 3.0 發行。 正如其名，它會在伺服器上執行，並透過網路將用戶端檔的變更轉譯回瀏覽器。 伺服器端 Blazor 提供豐富的用戶端體驗，而不需要用戶端 JavaScript，也不需要針對每個用戶端頁面互動進行個別的頁面載入。 載入的頁面中的變更是由伺服器所要求，然後再使用 SignalR 傳送回用戶端。
 
-用戶端 Blazor 將于 2020 年發佈，將無需在伺服器上呈現更改。 相反，它將利用 WebAssembly 在用戶端運行 .NET 代碼。 如果需要請求資料，用戶端仍然可以對伺服器進行 API 呼叫，但所有用戶端行為都通過 WebAssembly 在用戶端中運行，WebAssembly 已經支援 WebAssembly，並且只是一個 JAVAscript 庫。
+用戶端 Blazor 將于2020發行，而且不需要在伺服器上轉譯變更。 相反地，它會利用在 WebAssembly 用戶端中執行 .net 程式碼。 如果需要要求資料，用戶端仍然可以對伺服器進行 API 呼叫，但所有的用戶端行為都是在用戶端透過執行 WebAssembly ，而所有主要瀏覽器都已支援，而且只是 JAVAscript 程式庫。
 
 > ### <a name="references--modern-web-applications"></a>參考資料 – 現代化 Web 應用程式
 >
@@ -81,9 +84,9 @@ Blazor 包含在ASP.NET核心 3.0 及更高版本中。 它提供了一種使用
 >   <https://docs.microsoft.com/aspnet/core/>
 > - **ASP.NET Core 中的測試**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **布拉佐爾 - 開始**  
+> - **Blazor-開始使用**  
 >   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]
->[上一個](index.md)
->[下一個](choose-between-traditional-web-and-single-page-apps.md)
+>[上一個](index.md) 
+>[下一步](choose-between-traditional-web-and-single-page-apps.md)

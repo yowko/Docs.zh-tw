@@ -1,5 +1,6 @@
 ---
 title: 設定面板背景
+description: 瞭解如何使用設計工具來設定 Windows Forms 面板的背景色彩和背景影像。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 36e552475334c25b9d5a6fafb82155c6ebcba266
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 109ff6184de9c79d1576207bbeb29ad939670b6f
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182101"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173376"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>如何：設定 Windows Form 面板的背景
-Windows 表單<xref:System.Windows.Forms.Panel>控制項可以同時顯示背景顏色和背景圖像。 屬性<xref:System.Windows.Forms.Control.BackColor%2A>設置包含控制項（如標籤和選項按鈕）的背景顏色。 如果未設置<xref:System.Windows.Forms.Control.BackgroundImage%2A>該屬性，<xref:System.Windows.Forms.Control.BackColor%2A>則所選內容將填充整個面板。 如果設置了<xref:System.Windows.Forms.Control.BackgroundImage%2A>該屬性，則圖像將顯示在包含的控制項後面。  
+Windows Forms <xref:System.Windows.Forms.Panel> 控制項可以同時顯示背景色彩和背景影像。 <xref:System.Windows.Forms.Control.BackColor%2A>屬性會設定包含控制項的背景色彩，例如標籤和選項按鈕。 如果 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 未設定屬性，則 <xref:System.Windows.Forms.Control.BackColor%2A> 選取專案將會填滿整個面板。 如果 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 已設定屬性，則影像會顯示在包含的控制項後方。  
   
-### <a name="to-set-the-background-programmatically"></a>以程式設計方式設置背景  
+### <a name="to-set-the-background-programmatically"></a>以程式設計方式設定背景  
   
-1. 將面板的屬性<xref:System.Windows.Forms.Control.BackColor%2A>設置為 類型<xref:System.Drawing.Color?displayProperty=nameWithType>的值 。  
+1. 將面板的 <xref:System.Windows.Forms.Control.BackColor%2A> 屬性設定為類型的值 <xref:System.Drawing.Color?displayProperty=nameWithType> 。  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +38,7 @@ Windows 表單<xref:System.Windows.Forms.Panel>控制項可以同時顯示背景
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2. 使用<xref:System.Windows.Forms.Control.BackgroundImage%2A><xref:System.Drawing.Image?displayProperty=nameWithType>類<xref:System.Drawing.Image.FromFile%2A>的方法設置面板的屬性。  
+2. 使用類別的方法，設定面板的 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 屬性 <xref:System.Drawing.Image.FromFile%2A> <xref:System.Drawing.Image?displayProperty=nameWithType> 。  
   
     ```vb  
     ' You should replace the bolded image

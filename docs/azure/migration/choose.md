@@ -4,12 +4,12 @@ description: 了解哪些 Azure 移轉路徑適合您的 ASP.NET Web 應用程�
 author: CESARDELATORRE
 ms.author: cesardl
 ms.date: 03/01/2020
-ms.openlocfilehash: a8ad946b03f97272cb8685620858af6b21a372dc
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 162dc8eb87dfd78d050b93b1c24ac573d7092126
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "82072106"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174292"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>選擇正確的 Azure 裝載選項
 
@@ -46,7 +46,7 @@ ms.locfileid: "82072106"
 
 ## <a name="networking-and-security-considerations"></a>網路和安全性考量
 
-在將應用程式部署至如 Microsoft Azure 等公用雲端時，您可能想要[建立網路 DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/) 來隔離和保護特定網路，例如 [Azure 與內部部署間的周邊網路](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) 或 [Azure 與網際網路間的 DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)。 周邊網路可以透過 [Azure 虛擬網路](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)來實作。
+在將應用程式部署至如 Microsoft Azure 等公用雲端時，您可能想要[建立網路 DMZ](/azure/architecture/reference-architectures/dmz/) 來隔離和保護特定網路，例如 [Azure 與內部部署間的周邊網路](/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) 或 [Azure 與網際網路間的 DMZ](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)。 周邊網路可以透過 [Azure 虛擬網路](/azure/virtual-network/virtual-networks-overview)來實作。
 
 Azure 虛擬網路可讓您：
 
@@ -57,15 +57,15 @@ Azure 虛擬網路可讓您：
 - 使用虛擬應用設備建立精密的網路拓撲
 - 為您的應用程式取得隔離且高度安全的環境
 
-若要開始建置您自己的虛擬網路，請參閱 [Azure 虛擬網路文件](https://docs.microsoft.com/azure/virtual-network/)。
+若要開始建置您自己的虛擬網路，請參閱 [Azure 虛擬網路文件](/azure/virtual-network/)。
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>移轉至 Azure 時的驗證和授權考量
 
 任何組織要移到雲端時的首要考量皆是安全性。 大部分的公司投入了大量的時間、金錢和工程設計和開發安全性模型，因此他們必須能夠運用現有的投資，例如身分識別存放區和單一登入解決方案。
 
-許多執行於內部部署的現有企業 B2E .NET 應用程式使用 Active Directory 進行驗證和身分識別管理。 Azure AD Connect 可讓您整合內部部署目錄與 Azure Active Directory。 若要開始，請參閱[整合您的內部部署目錄與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)。
+許多執行於內部部署的現有企業 B2E .NET 應用程式使用 Active Directory 進行驗證和身分識別管理。 Azure AD Connect 可讓您整合內部部署目錄與 Azure Active Directory。 若要開始，請參閱[整合您的內部部署目錄與 Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect)。
 
-請參閱[混合式身分識別解決方案的身分識別需求](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs)以進一步進行 Azure Active Directory 的相關規劃。
+請參閱[混合式身分識別解決方案的身分識別需求](/azure/active-directory/active-directory-hybrid-identity-design-considerations-business-needs)以進一步進行 Azure Active Directory 的相關規劃。
 
 其他驗證通訊協定的選擇還有 [OAuth](https://en.wikipedia.org/wiki/OAuth) 和 [OpenID](https://en.wikipedia.org/wiki/OpenID)，其在消費者導向應用程式中很常見。 使用自發的身分識別資料庫 (例如由 IdentityServer4 使用 OAuth 包裝的 ASP.NET 身分識別 SQL 資料庫)，通常不需連線到內部部署資料庫或目錄。
 

@@ -3,13 +3,16 @@ title: 在傳統 Web 應用程式和單頁應用程式之間作選擇
 description: 了解建置 Web 應用程式時，如何在傳統 Web 應用程式和單頁應用程式 (SPA) 之間作選擇。
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662702"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174363"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>在傳統 Web 應用程式和單頁應用程式 (SPA) 之間作選擇
 
@@ -38,21 +41,21 @@ ms.locfileid: "84662702"
 
 SPA 方法的使用者經驗改善，必須根據這些考慮來進行權衡。
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
-ASP.NET Core 3.0 推出了新的模型，用以建置豐富的互動式可組合 UI，該模型稱為 Blazor。 Blazor 伺服器端可以讓開發人員在伺服器上使用 c # 和 Razor 建立 UI，並使用持續性的 SignalR 連線，以互動方式將 ui 即時連接到瀏覽器。
+ASP.NET Core 3.0 引進了新的模型，可讓您建立名為的豐富、互動式且可組合的 UI Blazor 。 Blazor伺服器端可以讓開發人員在伺服器上使用 c # 和 Razor 建立 UI，並使用持續的 SignalR 連接，以互動方式即時連線至瀏覽器的 UI。
 
-Blazor WebAssembly 引進 Blazor 應用程式的另一個選項，可讓他們使用 WebAssembly 在瀏覽器中執行。 因為它是在 WebAssembly 上實際執行的 .NET，所以您可以從應用程式的伺服器端部分重複使用程式碼和程式庫。
+BlazorWebAssembly引進應用程式的另一個選項 Blazor ，讓他們能夠使用在瀏覽器中執行 WebAssembly 。 因為它是在上執行的實際 .NET WebAssembly ，所以您可以從應用程式的伺服器端部分重複使用程式碼和程式庫。
 
-Blazor 提供新的第三個選項，可在評估是否要建立單純伺服器呈現的 web 應用程式或 SPA 時考慮。 您可以使用 Blazor 建立豐富的 SPA 型用戶端行為，而不需要進行重要的 JavaScript 開發。 Blazor 應用程式可以呼叫 Api 來要求資料或執行伺服器端作業。
+Blazor提供新的第三個選項，可在評估是否要建立單純伺服器呈現的 web 應用程式或 SPA 時考慮。 您可以使用建立豐富、SPA 類似的用戶端行為 Blazor ，而不需要進行重要的 JavaScript 開發。 Blazor應用程式可以呼叫 Api 來要求資料或執行伺服器端作業。
 
-在下列情況中，請考慮使用 Blazor 建立您的 web 應用程式：
+在下列情況中，請考慮建立您的 web 應用程式 Blazor ：
 
 - 您的應用程式必須公開豐富的使用者介面
 
 - 您的小組比 JavaScript 或 TypeScript 開發更熟悉 .NET 開發
 
-如需 Blazor 的詳細資訊，請參閱[開始使用 Blazor](https://blazor.net/docs/get-started.html)。
+如需的詳細資訊 Blazor ，請參閱[開始 Blazor 使用](https://blazor.net/docs/get-started.html)。
 
 ## <a name="when-to-choose-traditional-web-apps"></a>選擇傳統 Web 應用程式的時機
 
@@ -78,7 +81,7 @@ Blazor 提供新的第三個選項，可在評估是否要建立單純伺服器�
 
 SPAs 可以支援豐富的用戶端功能，且當使用者採取動作或在應用程式各區域間巡覽時，也不需重新載入頁面。 SPA 可以更快速載入、在背景擷取資料、對個別使用者的動作回應更快，因為重新載入完整頁面的情況很少。 SPA 可支援增量更新，不需使用者按一下按鈕來提交表單即可儲存部分完成的表單或文件。 SPA 比傳統應用程式更容易支援豐富的用戶端行為，例如拖放操作。 SPA 可以設計為以離線模式執行；對用戶端模型進行的更新在其重新建立連線之後，最終會同步回伺服器。 如果您的應用程式需求包含超越一般 HTML 表單所提供的豐富功能，請選擇 SPA 樣式的應用程式。
 
-Spa 通常需要實作為傳統 web 應用程式的內建功能，例如在反映目前作業的網址列中顯示有意義的 URL （並允許使用者將此 URL 的書簽或深層連結傳回給它）。 SPA 也應允許使用者使用瀏覽器的 [上一頁] 和 [下一頁] 按鈕，且不產生意外的結果。
+Spa 通常需要實作為傳統 web 應用程式的內建功能，例如在反映目前作業 (的網址列中顯示有意義的 URL，並允許使用者將此 URL 加入書簽或深層連結，以回到) 。 SPA 也應允許使用者使用瀏覽器的 [上一頁] 和 [下一頁] 按鈕，且不產生意外的結果。
 
 **您的小組熟悉 JavaScript 及/或 TypeScript 開發**
 
@@ -93,29 +96,29 @@ Spa 通常需要實作為傳統 web 應用程式的內建功能，例如在反�
 > - **JavaScript 架構的比較**  
 >   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
-**您的應用程式必須已針對其他（內部或公用）用戶端公開 API**
+**您的應用程式必須已針對其他 (內部或公用) 用戶端公開 API**
 
 如果您已經支援其他用戶端使用的 Web API，則建立利用這些 API 的 SPA 實作會較容易，不用重現伺服器端格式中的邏輯。 當使用者與應用程式互動時，SPA 大量使用 Web API 來查詢及更新資料。
 
-## <a name="when-to-choose-blazor"></a>選擇 Blazor 的時機
+## <a name="when-to-choose-blazor"></a>選擇時機Blazor
 
-以下是為您的 web 應用程式選擇 Blazor 時，更詳細的說明。
+以下是為 Blazor 您的 web 應用程式選擇時機的詳細說明。
 
 **您的應用程式必須公開豐富的使用者介面**
 
-如同以 JavaScript 為基礎的 Spa，Blazor 應用程式可以支援豐富的用戶端行為，而不需要頁面重載。 這些應用程式對使用者的回應速度更快，只會提取回應指定使用者互動所需的資料（或 HTML）。 伺服器端 Blazor 應用程式的設計正確，可設定為以用戶端 Blazor 應用程式的形式執行，並在支援這項功能時進行最少的變更。
+如同以 JavaScript 為基礎的 Spa， Blazor 應用程式可以在沒有頁面重載的情況下支援豐富的用戶端行為。 這些應用程式對使用者的回應速度更快，只會取得回應指定使用者互動所需的資料 (或 HTML) 。 伺服器端 Blazor 應用程式的設計正確，可設定為以用戶端應用程式的身分執行，只要 Blazor 支援這項功能即可進行最少的變更。
 
 **您的小組比 JavaScript 或 TypeScript 開發更熟悉 .NET 開發**
 
-許多開發人員使用 .NET 和 Razor 比使用 JavaScript 或 TypeScript 之類的用戶端語言更具生產力。 由於應用程式的伺服器端已使用 .NET 進行開發，因此使用 Blazor 可確保小組中的每個 .NET 開發人員都能瞭解並可能建立應用程式前端的行為。
+許多開發人員使用 .NET 和 Razor 比使用 JavaScript 或 TypeScript 之類的用戶端語言更具生產力。 由於應用程式的伺服器端已使用 .NET 進行開發，因此使用 Blazor 可確保小組中的每個 .net 開發人員都能瞭解並可能建立應用程式前端的行為。
 
 ## <a name="decision-table"></a>決策表
 
-下列決策表摘要說明在傳統 web 應用程式、SPA 或 Blazor 應用程式之間進行選擇時，所要考慮的一些基本因素。
+下列決策表摘要說明在傳統 web 應用程式、SPA 或應用程式之間進行選擇時，所要考慮的一些基本因素 Blazor 。
 
-| **因數**                                           | **傳統 Web 應用程式** | **單頁應用程式** | **Blazor 應用程式**  |
+| **因素**                                           | **傳統 Web 應用程式** | **單一頁面應用程式** | **Blazor相關**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
-| 小組必須熟悉 JavaScript/TypeScript | **基本**             | **必要**                | **基本**     |
+| 小組必須熟悉 JavaScript/TypeScript | **最低限度**             | **必要**                | **最低限度**     |
 | 支援無指令碼的瀏覽器                   | **支援**           | **不受支援**           | **支援**   |
 | 最少的用戶端應用程式行為             | **適用**         | **大材小用**                | **有效**      |
 | 內容豐富且複雜的使用者介面需求            | **局限性**             | **適用**             | **適用** |

@@ -1,5 +1,6 @@
 ---
-title: HOW TO：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
+title: 如何：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
+description: 瞭解如何以程式設計方式錨定和停駐 Windows Forms FlowLayoutPanel 控制項中的子控制項。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 3e9a5be944e199254ddb9cee0772c4d55be8fb77
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b4fb3bf6d148a526a75926bd67c1f967286332bf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046073"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174532"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>HOW TO：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
+# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>如何：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
 
 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項在其子控制項中支援 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性。
 
@@ -22,11 +23,11 @@ ms.locfileid: "70046073"
 
 1. 請在表單上建立 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。
 
-2. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> <xref:System.Windows.Forms.FlowDirection.TopDown>將控制項的設定為 300, 並將其設定為。 <xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.Control.Width%2A>
+2. 將 <xref:System.Windows.Forms.Control.Width%2A> 控制項的設定 <xref:System.Windows.Forms.FlowLayoutPanel> 為**300**，並將其設定 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 為 <xref:System.Windows.Forms.FlowDirection.TopDown> 。
 
 3. 建立兩個 <xref:System.Windows.Forms.Button> 控制項，並置入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。
 
-4. 將第一個按鈕的設為**200。** <xref:System.Windows.Forms.Control.Width%2A>
+4. 將 <xref:System.Windows.Forms.Control.Width%2A> 第一個按鈕的設為**200**。
 
 5. 將第二個按鈕的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為 <xref:System.Windows.Forms.DockStyle.Fill>。
 

@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803208"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174402"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>教學課程：使用時間序列分析和 ML.NET 預測自行車出租服務需求
 
@@ -27,7 +27,7 @@ ms.locfileid: "85803208"
 > * 儲存預測模型
 > * 使用預測模型
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本，或是已安裝「.net Core 跨平臺開發」工作負載的 Visual Studio 2017 15.6 或更新版本。
 
@@ -41,7 +41,7 @@ ms.locfileid: "85803208"
 
 分析本教學課程中使用的資料的技術是單一變數時間序列分析。 單一變數時間序列分析會以特定間隔（例如每月銷售），查看一段時間內的單一數值觀察。
 
-本教學課程中使用的演算法是[單一頻譜分析（SSA）](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf)。 SSA 的運作方式是將時間序列分解成一組主要元件。 這些元件可以解讀為與趨勢、雜訊、季節性和許多其他因素相對應的信號部分。 然後，系統會重建這些元件，並用來預測未來一些時間的值。
+本教學課程中使用的演算法是[ (SSA) 的單一頻譜分析](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf)。 SSA 的運作方式是將時間序列分解成一組主要元件。 這些元件可以解讀為與趨勢、雜訊、季節性和許多其他因素相對應的信號部分。 然後，系統會重建這些元件，並用來預測未來一些時間的值。
 
 ## <a name="create-console-application"></a>建立主控台應用程式
 
@@ -63,12 +63,12 @@ ms.locfileid: "85803208"
 1. 下載[ *DailyDemand .mdf*資料庫](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf)檔案，並將它儲存至*資料*目錄。
 
 > [!NOTE]
-> 本教學課程中使用的資料來自[UCI 自行車共用資料集](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)。 Fanaee-T、Hadi 和 Gama、Joao、「結合集團偵測器和背景知識的事件標記」、人工智慧中的進度（2013）： pp 1-15、Springer link 柏林 Heidelberg、 [Web 連結](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3)。
+> 本教學課程中使用的資料來自[UCI 自行車共用資料集](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)。 Fanaee-T、Hadi 和 Gama、Joao、「結合集團偵測器和背景知識的事件標記」、人工智慧 (2013) ： pp 1-15、Springer link 柏林 Heidelberg、 [Web 連結](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3)。
 
 原始資料集包含數個對應至季節性和氣象的資料行。 為了簡潔起見，因為本教學課程中使用的演算法只需要單一數值資料行中的值，所以原始資料集已壓縮成隻包含下列資料行：
 
 - **dteday**：觀察的日期。
-- **year**：觀察的編碼年份（0 = 2011，1 = 2012）。
+- **year**：觀察 (0 = 2011，1 = 2012) 的編碼年份。
 - **cnt**：當天的自行車租用總數。
 
 原始資料集會對應到在 SQL Server 資料庫中具有下列架構的資料庫資料表。
@@ -102,7 +102,7 @@ CREATE TABLE [Rentals] (
     `ModelInput`類別包含下列資料行：
 
     - **RentalDate**：觀察的日期。
-    - **Year**：觀察的編碼年份（0 = 2011，1 = 2012）。
+    - **Year**：觀察 (0 = 2011，1 = 2012) 的編碼年份。
     - **TotalRentals**：當天的自行車租金總數。
 
 1. `ModelOutput`在新建立的類別底下建立類別 `ModelInput` 。
@@ -161,7 +161,7 @@ CREATE TABLE [Rentals] (
 
     [!code-csharp [DefinePipeline](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L36-L45)]
 
-    `forecastingPipeline`第一年會採用365資料點並取樣，或將時間序列資料集分割成參數所指定的30天（每月）間隔 `seriesLength` 。 每個範例都是透過每週或7天的時段進行分析。 在判斷下一個期間的預測值為何時，會使用過去七天的值進行預測。 此模型設定為以參數所定義，預測未來七個週期 `horizon` 。 由於預測是一種明智的猜測，因此不一定總是100% 精確。 因此，最好能在最佳和最糟的案例中，根據上限和下限所定義的值範圍來瞭解。 在此情況下，較低和上限的信心層級會設定為95%。 信賴等級可以相應增加或減少。 值愈高，範圍的寬度就會介於上限和下限之間，以達到所需的信心層級。
+    `forecastingPipeline`第一年會採用365資料點並取樣，或將時間序列資料集分割為30天 (每月) 間隔，如參數所指定 `seriesLength` 。 每個範例都是透過每週或7天的時段進行分析。 在決定下一個期間的預測值 (s) 為時，會使用過去七天的值進行預測。 此模型設定為以參數所定義，預測未來七個週期 `horizon` 。 由於預測是一種明智的猜測，因此不一定總是100% 精確。 因此，最好能在最佳和最糟的案例中，根據上限和下限所定義的值範圍來瞭解。 在此情況下，較低和上限的信心層級會設定為95%。 信賴等級可以相應增加或減少。 值愈高，範圍的寬度就會介於上限和下限之間，以達到所需的信心層級。
 
 1. 使用 [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*) 方法來定型模型，並將資料符合先前定義的 `forecastingPipeline` 。
 

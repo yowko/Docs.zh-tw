@@ -1,15 +1,17 @@
 ---
 title: 資料存取和管理
-description: 瞭解如何存取和處理 ASP.NET Web Forms 和 Blazor 中的資料。
+description: 瞭解如何存取和處理 ASP.NET Web Forms 和中的資料 Blazor 。
 author: csharpfritz
 ms.author: jefritz
+no-loc:
+- Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: b9805da60722de1b5d4f91107e856f647f7564a7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446468"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173300"
 ---
 # <a name="work-with-data"></a>使用資料
 
@@ -25,11 +27,11 @@ ms.locfileid: "84446468"
 
 ![Data Sources](media/data/datasources.png)
 
-ADO.NET 是與資料庫互動的低層級方法。 您的應用程式可以使用命令、記錄集和資料集來建立與資料庫的連接，以進行互動。 結果可能會系結至螢幕上的欄位，而不需要大量程式碼。 這種方法的缺點是每一組 ADO.NET 物件（ `Connection` 、 `Command` 和）都已系結 `Recordset` 至資料庫廠商所提供的程式庫。 使用這些元件會使程式碼變得更嚴格，而且不容易遷移到不同的資料庫。
+ADO.NET 是與資料庫互動的低層級方法。 您的應用程式可以使用命令、記錄集和資料集來建立與資料庫的連接，以進行互動。 結果可能會系結至螢幕上的欄位，而不需要大量程式碼。 這種方法的缺點是，每組 ADO.NET 物件 (`Connection` 、 `Command` 和) 已系結 `Recordset` 至資料庫廠商所提供的程式庫。 使用這些元件會使程式碼變得更嚴格，而且不容易遷移到不同的資料庫。
 
 ## <a name="entity-framework"></a>Entity Framework
 
-Entity Framework （EF）是 .NET Foundation 所維護的開放原始碼物件關聯式對應架構。 EF 一開始是使用 .NET Framework 發行，可讓您產生資料庫連接、儲存架構和互動的程式碼。 使用此抽象概念，您可以專注于應用程式的商務規則，並允許受信任的資料庫管理員管理資料庫。 在 .NET Core 中，您可以使用名為 EF Core 的 EF 更新版本。 EF Core 使用命令列工具提供一系列的命令，協助產生和維護您的程式碼與資料庫之間的互動 `dotnet ef` 。 我們來看一下幾個範例，讓您使用資料庫。
+Entity Framework (EF) 是 .NET Foundation 所維護的開放原始碼物件關聯式對應架構。 EF 一開始是使用 .NET Framework 發行，可讓您產生資料庫連接、儲存架構和互動的程式碼。 使用此抽象概念，您可以專注于應用程式的商務規則，並允許受信任的資料庫管理員管理資料庫。 在 .NET Core 中，您可以使用名為 EF Core 的 EF 更新版本。 EF Core 使用命令列工具提供一系列的命令，協助產生和維護您的程式碼與資料庫之間的互動 `dotnet ef` 。 我們來看一下幾個範例，讓您使用資料庫。
 
 ### <a name="ef-code-first"></a>EF Code First
 
@@ -75,7 +77,7 @@ services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer("MY DATABASE CONNECTION STRING"));
 ```
 
-上述程式碼會使用指定的連接字串連接到 SQL Server 資料庫。 您可以將連接字串放在*appsettings*檔案、環境變數或其他設定儲存位置，並適當地取代此內嵌字串。
+上述程式碼會使用指定的連接字串連接到 SQL Server 資料庫。 您可以將連接字串放在檔案、環境變數或其他設定存放位置的*appsettings.js*中，並適當地取代此內嵌字串。
 
 接著，您可以使用下列命令，產生適用于此類別的資料庫資料表：
 
@@ -102,7 +104,7 @@ dotnet ef dbcontext scaffold "CONNECTION STRING" Microsoft.EntityFrameworkCore.S
 
 ## <a name="interact-with-web-services"></a>與 web 服務互動
 
-第一次發行 ASP.NET 時，SOAP 服務是 web 伺服器和用戶端交換資料的慣用方式。 自該時間以來已經變更過許多，而且與服務的慣用互動已轉移至直接的 HTTP 用戶端互動。 使用 ASP.NET Core 和 Blazor，您可以 `HttpClient` 在 `Startup` 類別的方法中註冊的設定 `ConfigureServices` 。 當您需要與 HTTP 端點互動時，請使用該設定。 請考慮下列設定程式碼：
+第一次發行 ASP.NET 時，SOAP 服務是 web 伺服器和用戶端交換資料的慣用方式。 自該時間以來已經變更過許多，而且與服務的慣用互動已轉移至直接的 HTTP 用戶端互動。 使用 ASP.NET Core 和 Blazor ，您可以 `HttpClient` 在 `Startup` 類別的方法中註冊的設定 `ConfigureServices` 。 當您需要與 HTTP 端點互動時，請使用該設定。 請考慮下列設定程式碼：
 
 ```csharp
 services.AddHttpClient("github", client =>
@@ -115,7 +117,7 @@ services.AddHttpClient("github", client =>
 });
 ```
 
-每當您需要從 GitHub 存取資料時，請建立名稱為的用戶端 `github` 。 用戶端是以基底位址設定，而且要求標頭會適當地設定。 使用指示詞 `IHttpClientFactory` `@inject` 或屬性上的屬性，將插入至您的 Blazor 元件 `[Inject]` 。 建立您的命名用戶端，並使用下列語法與服務互動：
+每當您需要從 GitHub 存取資料時，請建立名稱為的用戶端 `github` 。 用戶端是以基底位址設定，而且要求標頭會適當地設定。 使用指示詞 `IHttpClientFactory` Blazor `@inject` 或屬性上的屬性，將插入至您的元件 `[Inject]` 。 建立您的命名用戶端，並使用下列語法與服務互動：
 
 ```razor
 @inject IHttpClientFactory factory

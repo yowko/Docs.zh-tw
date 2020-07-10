@@ -1,5 +1,6 @@
 ---
-title: 作法：列印 Windows Form
+title: 如何：列印 Windows Form
+description: 瞭解如何使用 CopyFromScreen 方法，以程式設計方式列印目前 Windows Form 的複本。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: cd10e0a43ff37b921dc8e024d7a6a51fafbb0400
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b59ea4b5347903b36a166c4f8ac0d8d7db18635e
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591848"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174688"
 ---
-# <a name="how-to-print-a-windows-form"></a>作法：列印 Windows Form
-在開發程序的一部分，您通常會想要列印一份 Windows 表單。 下列程式碼範例示範如何使用列印一份目前的表單<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法。  
+# <a name="how-to-print-a-windows-form"></a>如何：列印 Windows Form
+在開發過程中，您通常會想要列印 Windows Form 的複本。 下列程式碼範例示範如何使用方法來列印目前表單的複本 <xref:System.Drawing.Graphics.CopyFromScreen%2A> 。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
@@ -27,15 +28,15 @@ ms.locfileid: "65591848"
 ## <a name="robust-programming"></a>穩固程式設計  
  以下條件可能會造成例外狀況：  
   
-- 您沒有存取印表機的權限。  
+- 您沒有存取印表機的許可權。  
   
-- 不沒有安裝任何印表機。  
+- 未安裝印表機。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 若要執行此程式碼範例，您必須存取您使用您的電腦與印表機的權限。  
+ 若要執行這個程式碼範例，您必須擁有存取電腦所用印表機的許可權。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [如何：使用 GDI + 呈現影像](how-to-render-images-with-gdi.md)
-- [如何：列印 Windows Form 中的圖形](how-to-print-graphics-in-windows-forms.md)
+- [如何：使用 GDI+ 呈現影像](how-to-render-images-with-gdi.md)
+- [如何：列印 Windows Forms 中的圖形](how-to-print-graphics-in-windows-forms.md)

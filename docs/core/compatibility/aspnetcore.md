@@ -2,15 +2,15 @@
 title: ASP.NET Core 的重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 06/23/2020
+ms.date: 07/08/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: cf6b2eb46504c12aa670ccfc68531598dd9705a3
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ca9e615e88964e1c37e9c0b721bca8c34bf671ac
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325451"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174389"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
 
@@ -27,6 +27,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [授權： IAllowAnonymous 已從 AuthorizationFilterCoNtext 移除。篩選](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [授權： IAuthorizationPolicyProvider 的部署需要新的方法](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
 - [Azure：已移除 Microsoft 前面的 Azure 整合套件](#azure-microsoft-prefixed-azure-integration-packages-removed)
+- [Blazor：在編譯時期從元件修剪的空白空白字元](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
 - [Caching： CompactOnMemoryPressure 屬性已移除](#caching-compactonmemorypressure-property-removed)
 - [快取： SqlClient 使用新的封裝](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Caching： ResponseCaching "pubternal" 類型已變更為 internal](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -88,6 +89,10 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5。0
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
 
 ***
 

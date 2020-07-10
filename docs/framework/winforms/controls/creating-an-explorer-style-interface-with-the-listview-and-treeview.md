@@ -1,5 +1,6 @@
 ---
 title: 逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
+description: 瞭解如何使用設計工具建立具有 Windows Forms ListView 和 TreeView 控制項的 Explorer 樣式介面。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,50 +14,50 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 44d4db1ef3da85dbf411498f486882b86a05c140
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69658575"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174623"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
 
-Visual Studio 的優點之一，就是能夠在短時間內建立專業型式的 Windows Forms 應用程式。 常見的案例是使用<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>控制項來建立使用者介面（UI），這與 windows 作業系統的 windows Explorer 功能相似。 Windows Explorer 會顯示使用者電腦上檔案和資料夾的階層式結構。
+Visual Studio 的優點之一，就是能夠在短時間內建立專業型式的 Windows Forms 應用程式。 常見的案例是使用 <xref:System.Windows.Forms.ListView> 和 <xref:System.Windows.Forms.TreeView> 控制項（類似 windows 作業系統的 windows Explorer 功能）來建立使用者介面 (UI) 。 Windows Explorer 會顯示使用者電腦上檔案和資料夾的階層式結構。
 
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>建立包含 ListView 和 TreeView 控制項的表單
 
-1. 在 [檔案] 功能表中，指向 [新增]，然後按一下 [專案]。
+1. 在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。
 
-2. 在 [**新增專案**] 對話方塊中, 執行下列動作:
+2. 在 [新增專案] **** 對話方塊中，執行下列操作：
 
-    1. 在 [類別] 中，選擇 [ **Visual Basic** ] 或 [**視覺效果C#** ]。
+    1. 在 [類別] 中，選擇 [ **Visual Basic** ] 或 [ **Visual c #**]。
 
     2. 在範本清單中，選擇 [ **Windows Forms 應用程式**]。
 
 3. 按一下 [確定]。 隨即建立新的 Windows Forms 專案。
 
-4. 將控制項新增至表單，並將<xref:System.Windows.Forms.SplitContainer.Dock%2A>其屬性設定為<xref:System.Windows.Forms.DockStyle.Fill>。 <xref:System.Windows.Forms.SplitContainer>
+4. 將 <xref:System.Windows.Forms.SplitContainer> 控制項新增至表單，並將其 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill> 。
 
-5. <xref:System.Windows.Forms.ImageList>將名`imageList1`為的新增至表單，並使用屬性視窗來新增兩個影像：資料夾影像和檔影像（依該順序）。
+5. 將 <xref:System.Windows.Forms.ImageList> 名為 `imageList1` 的新增至表單，並使用屬性視窗來新增兩個影像：資料夾影像和檔影像（依該順序）。
 
-6. 將名`treeview1`為的<xref:System.Windows.Forms.SplitContainer>控制項新增至表單，並將它放在控制項的左側。 <xref:System.Windows.Forms.TreeView> 在 [屬性視窗`treeView1` ] 中，執行下列動作：
+6. 將 <xref:System.Windows.Forms.TreeView> 名為的控制項新增 `treeview1` 至表單，並將它放在控制項的左側 <xref:System.Windows.Forms.SplitContainer> 。 在 [屬性視窗] 中 `treeView1` ，執行下列動作：
 
-    1. 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。
+    1. 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為 <xref:System.Windows.Forms.DockStyle.Fill>。
 
     2. 將 <xref:System.Windows.Forms.TreeView.ImageList%2A> 屬性設定為 `imagelist1.`
 
-7. 將名`listView1`為的<xref:System.Windows.Forms.SplitContainer>控制項新增至表單，並將它放在控制項的右側。 <xref:System.Windows.Forms.ListView> 在 [屬性視窗`listview1` ] 中，執行下列動作：
+7. 將 <xref:System.Windows.Forms.ListView> 名為的控制項新增 `listView1` 至表單，並將它放在控制項的右側 <xref:System.Windows.Forms.SplitContainer> 。 在 [屬性視窗] 中 `listview1` ，執行下列動作：
 
-    1. 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。
+    1. 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為 <xref:System.Windows.Forms.DockStyle.Fill>。
 
-    2. 將 <xref:System.Windows.Forms.ListView.View%2A> 屬性設定為 <xref:System.Windows.Forms.View.Details>。
+    2. 將 <xref:System.Windows.Forms.ListView.View%2A> 屬性設為 <xref:System.Windows.Forms.View.Details>。
 
-    3. 按一下![屬性<xref:System.Windows.Forms.ListView.Columns%2A>中的省略號（](./media/visual-studio-ellipsis-button.png)Visual Studio 屬性視窗中的省略號按鈕（...），以開啟 [ColumnHeader 集合編輯器] **。** 新增三個數據行， <xref:System.Windows.Forms.ColumnHeader.Text%2A>並分別`Name`將其屬性`Last Modified`設為、 `Type`和。 按一下 [確定] 關閉對話方塊。
+    3. 在屬性的 Visual Studio 屬性視窗中，按一下 ![ 省略號按鈕 ( ( ... ) ，以開啟 [ColumnHeader 集合編輯器]。 ](./media/visual-studio-ellipsis-button.png) <xref:System.Windows.Forms.ListView.Columns%2A> **.** 新增三個數據行，並分別將其 <xref:System.Windows.Forms.ColumnHeader.Text%2A> 屬性設為 `Name` 、 `Type` 和 `Last Modified` 。 按一下 [確定]  關閉對話方塊。
 
     4. 將 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 屬性設定為 `imageList1.`
 
-8. 執行程式碼，以<xref:System.Windows.Forms.TreeView>使用節點和子節點填入。 將此程式碼新增`Form1`至類別。
+8. 執行程式碼，以 <xref:System.Windows.Forms.TreeView> 使用節點和子節點填入。 將此程式碼新增至 `Form1` 類別。
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]
@@ -66,17 +67,17 @@ Visual Studio 的優點之一，就是能夠在短時間內建立專業型式的
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#4)]
 
-10. 在表單的函式或<xref:System.Windows.Forms.Form.Load>事件處理方法中，從上一個步驟呼叫設定方法。 將此程式碼新增至表單的函式。
+10. 在表單的函 <xref:System.Windows.Forms.Form.Load> 式或事件處理方法中，從上一個步驟呼叫設定方法。 將此程式碼新增至表單的函式。
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]
 
-11. `listview1`處理的<xref:System.Windows.Forms.TreeView.NodeMouseClick> `treeview1`事件，並在按一下節點時 **，** 執行程式碼以填入節點的內容。 將此程式碼新增`Form1`至類別。
+11. 處理的 <xref:System.Windows.Forms.TreeView.NodeMouseClick> 事件 `treeview1` **，** 並在按一下節點時，執行程式碼以填入 `listview1` 節點的內容。 將此程式碼新增至 `Form1` 類別。
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]
 
-     如果您使用C#的是，請確定您有<xref:System.Windows.Forms.TreeView.NodeMouseClick>與其事件處理方法相關聯的事件。 將此程式碼新增至表單的函式。
+     如果您使用的是 c #，請確定您有與其 <xref:System.Windows.Forms.TreeView.NodeMouseClick> 事件處理方法相關聯的事件。 將此程式碼新增至表單的函式。
 
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#5)]
 
@@ -88,23 +89,23 @@ Visual Studio 的優點之一，就是能夠在短時間內建立專業型式的
 
 - 按 F5 執行應用程式。
 
-     您會看到一個分割表單， <xref:System.Windows.Forms.TreeView>其中包含一個控制項，它會在左側顯示您的專案<xref:System.Windows.Forms.ListView>目錄，並在右側有三個數據行的控制項。 您可以<xref:System.Windows.Forms.TreeView>藉由選取 [目錄節點] 來進行<xref:System.Windows.Forms.ListView>流覽，並填入所選目錄的內容。
+     您會看到一個分割表單，其中包含一個 <xref:System.Windows.Forms.TreeView> 控制項，它會在左側顯示您的專案目錄，並在 <xref:System.Windows.Forms.ListView> 右側有三個數據行的控制項。 您可以藉由選取 [目錄節點] 來進行流覽 <xref:System.Windows.Forms.TreeView> ，並 <xref:System.Windows.Forms.ListView> 填入所選目錄的內容。
 
 ## <a name="next-steps"></a>後續步驟
 
-此應用程式提供您可搭配使用<xref:System.Windows.Forms.TreeView>和<xref:System.Windows.Forms.ListView>控制項的方式範例。 如需這些控制項的詳細資訊，請參閱下列主題：
+此應用程式提供您可搭配使用和控制項的方式 <xref:System.Windows.Forms.TreeView> 範例 <xref:System.Windows.Forms.ListView> 。 如需這些控制項的詳細資訊，請參閱下列主題：
 
-- [如何：將自訂資訊新增至 TreeView 或 ListView 控制項（Windows Forms）](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [操作說明：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 
-- [如何：將搜尋功能新增至 ListView 控制項](how-to-add-search-capabilities-to-a-listview-control.md)
+- [如何：將搜尋能力加入至 ListView 控制項](how-to-add-search-capabilities-to-a-listview-control.md)
 
-- [如何：將快捷方式功能表附加至 TreeView 節點](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)
+- [操作說明：將捷徑功能表附加至 TreeView 節點](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [ListView 控制項](listview-control-windows-forms.md)
-- [如何：使用 Windows Forms TreeView 控制項加入和移除節點](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [如何：使用 Windows Forms ListView 控制項新增和移除專案](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [如何：將資料行新增至 Windows Forms ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [如何：使用 Windows Form TreeView 控制項加入和移除節點](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [操作說明：使用 Windows Forms ListView 控制項加入和移除項目](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [操作說明：將資料行加入至 Windows Forms ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)

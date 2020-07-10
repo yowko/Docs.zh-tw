@@ -2,12 +2,12 @@
 title: 語言功能和程式庫類型之間的關聯性 | Microsoft Docs
 description: 語言功能經常會依賴程式庫類型進行實作。 了解該關聯性。
 ms.date: 07/20/2017
-ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abf15385da3756c35db2df822cc2e11e9edf5758
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61706022"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174097"
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>語言功能和程式庫類型之間的關聯性
 
@@ -21,7 +21,7 @@ C# 語言定義要求標準程式庫具有特定類型和這些類型的特定�
 
 第一個版本很簡單：編譯器和標準程式庫一起出貨，各只有一個版本。
 
-後續的 C# 版本偶爾會在相依性中新增新的類型或成員。 範例包括 <xref:System.Runtime.CompilerServices.INotifyCompletion>、<xref:System.Runtime.CompilerServices.CallerFilePathAttribute> 和 <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>。 C# 7.0 會繼續此行為，在 <xref:System.ValueTuple> 新增相依性實作 [Tuple](../tuples.md) 語言功能。
+後續的 C# 版本偶爾會在相依性中新增新的類型或成員。 範例包括 <xref:System.Runtime.CompilerServices.INotifyCompletion>、<xref:System.Runtime.CompilerServices.CallerFilePathAttribute> 和 <xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>。 C# 7.0 會繼續此行為，在 <xref:System.ValueTuple> 新增相依性實作 [Tuple](../language-reference/builtin-types/value-tuples.md) 語言功能。
 
 語言設計小組努力將相容標準程式庫中所需類型和成員的介面區縮減至最小。 該目標與新程式庫功能順利併入到語言的全新設計平衡。 未來的 C# 版本中會有在標準程式庫中需要新類型和成員的新功能。 請務必了解如何管理工作中的這些相依性。
 
