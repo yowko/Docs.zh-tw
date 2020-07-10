@@ -1,23 +1,25 @@
 ---
-title: 安全性： ASP.NET Web Forms 和 Blazor 中的驗證和授權
-description: 瞭解如何處理 ASP.NET Web Forms 和 Blazor 中的驗證和授權。
+title: 安全性： ASP.NET Web Forms 和中的驗證和授權Blazor
+description: 瞭解如何在 ASP.NET Web Forms 和中處理驗證和授權 Blazor 。
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: c524d8ee76d67654236cf71537bfd5c9f33daef7
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cacd6df15c7eb18c136491d0667f69b9c2036d66
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183858"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173025"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a><span data-ttu-id="91423-103">安全性： ASP.NET Web Forms 和 Blazor 中的驗證和授權</span><span class="sxs-lookup"><span data-stu-id="91423-103">Security: authentication and authorization in ASP.NET Web Forms and Blazor</span></span>
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-blazor"></a><span data-ttu-id="f18c2-103">安全性： ASP.NET Web Forms 和中的驗證和授權Blazor</span><span class="sxs-lookup"><span data-stu-id="f18c2-103">Security: authentication and authorization in ASP.NET Web Forms and Blazor</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="91423-104">*即將推出此內容。*</span><span class="sxs-lookup"><span data-stu-id="91423-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="f18c2-104">*即將推出此內容。*</span><span class="sxs-lookup"><span data-stu-id="f18c2-104">*This content is coming soon.*</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="91423-105">[上一頁](config.md)
->[下一頁](migration.md)</span><span class="sxs-lookup"><span data-stu-id="91423-105">[Previous](config.md)
+><span data-ttu-id="f18c2-105">[上一個](config.md) 
+>[下一步](migration.md)</span><span class="sxs-lookup"><span data-stu-id="f18c2-105">[Previous](config.md)
 [Next](migration.md)</span></span>
