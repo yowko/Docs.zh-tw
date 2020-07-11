@@ -1,106 +1,150 @@
 ---
 title: dotnet tool update 命令
-description: dotnet 工具更新指令更新您電腦上的指定的 .NET 核心工具。
-ms.date: 02/14/2020
-ms.openlocfilehash: 6176846dbe8e2a91d9c6959dede15718d8f983b2
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+description: Dotnet tool update 命令會更新您電腦上指定的 .NET Core 工具。
+ms.date: 07/08/2020
+ms.openlocfilehash: 7c4bde44ac9964828074baeb1a697ba64ed17887
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463292"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226617"
 ---
-# <a name="dotnet-tool-update"></a><span data-ttu-id="f2f21-103">dotnet tool update</span><span class="sxs-lookup"><span data-stu-id="f2f21-103">dotnet tool update</span></span>
+# <a name="dotnet-tool-update"></a><span data-ttu-id="52fe1-103">dotnet tool update</span><span class="sxs-lookup"><span data-stu-id="52fe1-103">dotnet tool update</span></span>
 
-<span data-ttu-id="f2f21-104">**本文適用於:✔️** .NET 核心 2.1 SDK 和更高版本</span><span class="sxs-lookup"><span data-stu-id="f2f21-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
+<span data-ttu-id="52fe1-104">**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本</span><span class="sxs-lookup"><span data-stu-id="52fe1-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="f2f21-105">名稱</span><span class="sxs-lookup"><span data-stu-id="f2f21-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="52fe1-105">名稱</span><span class="sxs-lookup"><span data-stu-id="52fe1-105">Name</span></span>
 
-<span data-ttu-id="f2f21-106">`dotnet tool update`- 更新機器上指定的[.NET 核心工具](global-tools.md)。</span><span class="sxs-lookup"><span data-stu-id="f2f21-106">`dotnet tool update` - Updates the specified [.NET Core tool](global-tools.md) on your machine.</span></span>
+<span data-ttu-id="52fe1-106">`dotnet tool update`-在您的電腦上更新指定的[.Net Core 工具](global-tools.md)。</span><span class="sxs-lookup"><span data-stu-id="52fe1-106">`dotnet tool update` - Updates the specified [.NET Core tool](global-tools.md) on your machine.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="f2f21-107">概要</span><span class="sxs-lookup"><span data-stu-id="f2f21-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="52fe1-107">概要</span><span class="sxs-lookup"><span data-stu-id="52fe1-107">Synopsis</span></span>
 
 ```dotnetcli
-dotnet tool update <PACKAGE_NAME> -g|--global
+dotnet tool update <PACKAGE_ID> -g|--global
     [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [-v|--verbosity <LEVEL>] [--add-source <SOURCE>]
+    [--add-source <SOURCE>] [--disable-parallel]
+    [--ignore-failed-sources] [--interactive] [--no-cache]
+    [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
-dotnet tool update <PACKAGE_NAME> --tool-path <PATH>
+dotnet tool update <PACKAGE_ID> --tool-path <PATH>
     [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [-v|--verbosity <LEVEL>] [--add-source <SOURCE>]
+    [--add-source <SOURCE>] [--disable-parallel]
+    [--ignore-failed-sources] [--interactive] [--no-cache]
+    [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
-dotnet tool update <PACKAGE_NAME>
+dotnet tool update <PACKAGE_ID> --local
     [--configfile <FILE>] [--framework <FRAMEWORK>]
-    [-v|--verbosity <LEVEL>] [--add-source <SOURCE>]
+    [--add-source <SOURCE>] [--disable-parallel]
+    [--ignore-failed-sources] [--interactive] [--no-cache]
+    [--tool-manifest <PATH>]
+    [-v|--verbosity <LEVEL>] [--version <VERSION>]
 
 dotnet tool update -h|--help
 ```
 
-## <a name="description"></a><span data-ttu-id="f2f21-108">描述</span><span class="sxs-lookup"><span data-stu-id="f2f21-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="52fe1-108">描述</span><span class="sxs-lookup"><span data-stu-id="52fe1-108">Description</span></span>
 
-<span data-ttu-id="f2f21-109">該`dotnet tool update`指令提供了一種將電腦上的 .NET Core 工具更新到套件的最新穩定版本的方法。</span><span class="sxs-lookup"><span data-stu-id="f2f21-109">The `dotnet tool update` command provides a way for you to update .NET Core tools on your machine to the latest stable version of the package.</span></span> <span data-ttu-id="f2f21-110">此命令會解除安裝並重新安裝工具，並有效地更新它。</span><span class="sxs-lookup"><span data-stu-id="f2f21-110">The command uninstalls and reinstalls a tool, effectively updating it.</span></span> <span data-ttu-id="f2f21-111">要使用 此指令,請指定以下選項之一:</span><span class="sxs-lookup"><span data-stu-id="f2f21-111">To use the command, you specify one of the following options:</span></span>
+<span data-ttu-id="52fe1-109">此 `dotnet tool update` 命令可讓您將電腦上的 .Net Core 工具更新為套件的最新穩定版本。</span><span class="sxs-lookup"><span data-stu-id="52fe1-109">The `dotnet tool update` command provides a way for you to update .NET Core tools on your machine to the latest stable version of the package.</span></span> <span data-ttu-id="52fe1-110">此命令會解除安裝並重新安裝工具，並有效地更新它。</span><span class="sxs-lookup"><span data-stu-id="52fe1-110">The command uninstalls and reinstalls a tool, effectively updating it.</span></span> <span data-ttu-id="52fe1-111">若要使用命令，您可以指定下列其中一個選項：</span><span class="sxs-lookup"><span data-stu-id="52fe1-111">To use the command, you specify one of the following options:</span></span>
 
-* <span data-ttu-id="f2f21-112">要更新安裝在預設位置的全域工具,請使用 選項`--global`</span><span class="sxs-lookup"><span data-stu-id="f2f21-112">To update a global tool that was installed in the default location, use the `--global` option</span></span>
-* <span data-ttu-id="f2f21-113">要更新安裝在自訂位置的全域工具,請使用 選項`--tool-path`。</span><span class="sxs-lookup"><span data-stu-id="f2f21-113">To update a global tool that was installed in a custom location, use the `--tool-path` option.</span></span>
-* <span data-ttu-id="f2f21-114">要更新本地工具,請省略和`--global``--tool-path`選項。</span><span class="sxs-lookup"><span data-stu-id="f2f21-114">To update a local tool, omit the `--global` and `--tool-path` options.</span></span>
+* <span data-ttu-id="52fe1-112">若要更新已安裝在預設位置中的全域工具，請使用 `--global` 選項</span><span class="sxs-lookup"><span data-stu-id="52fe1-112">To update a global tool that was installed in the default location, use the `--global` option</span></span>
+* <span data-ttu-id="52fe1-113">若要更新已安裝在自訂位置的全域工具，請使用 `--tool-path` 選項。</span><span class="sxs-lookup"><span data-stu-id="52fe1-113">To update a global tool that was installed in a custom location, use the `--tool-path` option.</span></span>
+* <span data-ttu-id="52fe1-114">若要更新本機工具，請使用 `--local` 選項。</span><span class="sxs-lookup"><span data-stu-id="52fe1-114">To update a local tool, use the `--local` option.</span></span>
 
-<span data-ttu-id="f2f21-115">**本地工具可從 .NET 核心 SDK 3.0 開始。**</span><span class="sxs-lookup"><span data-stu-id="f2f21-115">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
+<span data-ttu-id="52fe1-115">**從 .NET Core SDK 3.0 開始提供本機工具。**</span><span class="sxs-lookup"><span data-stu-id="52fe1-115">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="f2f21-116">引數</span><span class="sxs-lookup"><span data-stu-id="f2f21-116">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="52fe1-116">引數</span><span class="sxs-lookup"><span data-stu-id="52fe1-116">Arguments</span></span>
 
-- **`PACKAGE_NAME`**
+- **`PACKAGE_ID`**
 
-  <span data-ttu-id="f2f21-117">包含要更新的 .NET Core 全域工具的 NuGet 套件的名稱/ ID。</span><span class="sxs-lookup"><span data-stu-id="f2f21-117">Name/ID of the NuGet package that contains the .NET Core global tool to update.</span></span> <span data-ttu-id="f2f21-118">您可以使用 [dotnet tool list](dotnet-tool-list.md) 命令來找到此套件名稱。</span><span class="sxs-lookup"><span data-stu-id="f2f21-118">You can find the package name using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
+  <span data-ttu-id="52fe1-117">包含要更新之 .NET Core 通用工具之 NuGet 套件的名稱/識別碼。</span><span class="sxs-lookup"><span data-stu-id="52fe1-117">Name/ID of the NuGet package that contains the .NET Core global tool to update.</span></span> <span data-ttu-id="52fe1-118">您可以使用 [dotnet tool list](dotnet-tool-list.md) 命令來找到此套件名稱。</span><span class="sxs-lookup"><span data-stu-id="52fe1-118">You can find the package name using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
 
-## <a name="options"></a><span data-ttu-id="f2f21-119">選項。</span><span class="sxs-lookup"><span data-stu-id="f2f21-119">Options</span></span>
+## <a name="options"></a><span data-ttu-id="52fe1-119">選項</span><span class="sxs-lookup"><span data-stu-id="52fe1-119">Options</span></span>
 
 - **`--add-source <SOURCE>`**
 
-  <span data-ttu-id="f2f21-120">新增其他 NuGet 套件來源以在安裝期間使用。</span><span class="sxs-lookup"><span data-stu-id="f2f21-120">Adds an additional NuGet package source to use during installation.</span></span>
+  <span data-ttu-id="52fe1-120">新增其他 NuGet 套件來源以在安裝期間使用。</span><span class="sxs-lookup"><span data-stu-id="52fe1-120">Adds an additional NuGet package source to use during installation.</span></span>
 
 - **`--configfile <FILE>`**
 
-  <span data-ttu-id="f2f21-121">要使用的 NuGet 組態檔 (*nuget.config*)。</span><span class="sxs-lookup"><span data-stu-id="f2f21-121">The NuGet configuration (*nuget.config*) file to use.</span></span>
+  <span data-ttu-id="52fe1-121">要使用的 NuGet 組態檔 (*nuget.config*)。</span><span class="sxs-lookup"><span data-stu-id="52fe1-121">The NuGet configuration (*nuget.config*) file to use.</span></span>
+
+- **`--disable-parallel`**
+
+  <span data-ttu-id="52fe1-122">防止平行還原多個專案。</span><span class="sxs-lookup"><span data-stu-id="52fe1-122">Prevent restoring multiple projects in parallel.</span></span>
 
 - **`--framework <FRAMEWORK>`**
 
-  <span data-ttu-id="f2f21-122">指定要更新其工具的[目標 Framework](../../standard/frameworks.md)。</span><span class="sxs-lookup"><span data-stu-id="f2f21-122">Specifies the [target framework](../../standard/frameworks.md) to update the tool for.</span></span>
+  <span data-ttu-id="52fe1-123">指定要更新其工具的[目標 Framework](../../standard/frameworks.md)。</span><span class="sxs-lookup"><span data-stu-id="52fe1-123">Specifies the [target framework](../../standard/frameworks.md) to update the tool for.</span></span>
 
-- **`-g|--global`**
+- **`--ignore-failed-sources`**
 
-  <span data-ttu-id="f2f21-123">指定更新適用於使用者範圍工具。</span><span class="sxs-lookup"><span data-stu-id="f2f21-123">Specifies that the update is for a user-wide tool.</span></span> <span data-ttu-id="f2f21-124">無法與 `--tool-path` 選項合併使用。</span><span class="sxs-lookup"><span data-stu-id="f2f21-124">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="f2f21-125">省略兩者`--global``--tool-path`並 指定要更新的工具是本地工具。</span><span class="sxs-lookup"><span data-stu-id="f2f21-125">Omitting both `--global` and `--tool-path` specifies that the tool to be updated is a local tool.</span></span>
+  <span data-ttu-id="52fe1-124">將套件來源失敗視為警告。</span><span class="sxs-lookup"><span data-stu-id="52fe1-124">Treat package source failures as warnings.</span></span>
 
-- **`-h|--help`**
+- **`--interactive`**
 
-  <span data-ttu-id="f2f21-126">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="f2f21-126">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="52fe1-125">允許命令停止並等候使用者輸入或動作 (例如完成驗證)。</span><span class="sxs-lookup"><span data-stu-id="52fe1-125">Allows the command to stop and wait for user input or action (for example to complete authentication).</span></span>
+
+- **`--local`**
+
+  <span data-ttu-id="52fe1-126">更新工具和本機工具資訊清單。</span><span class="sxs-lookup"><span data-stu-id="52fe1-126">Update the tool and the local tool manifest.</span></span> <span data-ttu-id="52fe1-127">無法與 `--global` 選項合併使用。</span><span class="sxs-lookup"><span data-stu-id="52fe1-127">Can't be combined with the `--global` option.</span></span>
+
+- **`--no-cache`**
+
+  <span data-ttu-id="52fe1-128">不要快取套件和 HTTP 要求。</span><span class="sxs-lookup"><span data-stu-id="52fe1-128">Do not cache packages and HTTP requests.</span></span>
+
+- **`--tool-manifest <PATH>`**
+
+  <span data-ttu-id="52fe1-129">資訊清單檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="52fe1-129">Path to the manifest file.</span></span>
 
 - **`--tool-path <PATH>`**
 
-  <span data-ttu-id="f2f21-127">指定安裝全域工具的位置。</span><span class="sxs-lookup"><span data-stu-id="f2f21-127">Specifies the location where the global tool is installed.</span></span> <span data-ttu-id="f2f21-128">PATH 可為絕對路徑或相對路徑。</span><span class="sxs-lookup"><span data-stu-id="f2f21-128">PATH can be absolute or relative.</span></span> <span data-ttu-id="f2f21-129">無法與 `--global` 選項合併使用。</span><span class="sxs-lookup"><span data-stu-id="f2f21-129">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="f2f21-130">省略兩者`--global``--tool-path`並 指定要更新的工具是本地工具。</span><span class="sxs-lookup"><span data-stu-id="f2f21-130">Omitting both `--global` and `--tool-path` specifies that the tool to be updated is a local tool.</span></span>
+  <span data-ttu-id="52fe1-130">指定安裝通用工具的位置。</span><span class="sxs-lookup"><span data-stu-id="52fe1-130">Specifies the location where the global tool is installed.</span></span> <span data-ttu-id="52fe1-131">PATH 可為絕對路徑或相對路徑。</span><span class="sxs-lookup"><span data-stu-id="52fe1-131">PATH can be absolute or relative.</span></span> <span data-ttu-id="52fe1-132">無法與 `--global` 選項合併使用。</span><span class="sxs-lookup"><span data-stu-id="52fe1-132">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="52fe1-133">省略 `--global` 和都會 `--tool-path` 指定要更新的工具是本機工具。</span><span class="sxs-lookup"><span data-stu-id="52fe1-133">Omitting both `--global` and `--tool-path` specifies that the tool to be updated is a local tool.</span></span>
+
+- **`--version <VERSION>`**
+
+  <span data-ttu-id="52fe1-134">要更新的工具套件版本範圍。</span><span class="sxs-lookup"><span data-stu-id="52fe1-134">The version range of the tool package to update to.</span></span> <span data-ttu-id="52fe1-135">這不能用來降級版本，您必須 `uninstall` 先更新版本。</span><span class="sxs-lookup"><span data-stu-id="52fe1-135">This cannot be used to downgrade versions, you must `uninstall` newer versions first.</span></span>
+
+- **`-g|--global`**
+
+  <span data-ttu-id="52fe1-136">指定更新適用於使用者範圍工具。</span><span class="sxs-lookup"><span data-stu-id="52fe1-136">Specifies that the update is for a user-wide tool.</span></span> <span data-ttu-id="52fe1-137">無法與 `--tool-path` 選項合併使用。</span><span class="sxs-lookup"><span data-stu-id="52fe1-137">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="52fe1-138">省略 `--global` 和都會 `--tool-path` 指定要更新的工具是本機工具。</span><span class="sxs-lookup"><span data-stu-id="52fe1-138">Omitting both `--global` and `--tool-path` specifies that the tool to be updated is a local tool.</span></span>
+
+- **`-h|--help`**
+
+  <span data-ttu-id="52fe1-139">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="52fe1-139">Prints out a short help for the command.</span></span>
 
 - **`-v|--verbosity <LEVEL>`**
 
-  <span data-ttu-id="f2f21-131">設定命令的詳細資訊層級。</span><span class="sxs-lookup"><span data-stu-id="f2f21-131">Sets the verbosity level of the command.</span></span> <span data-ttu-id="f2f21-132">允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="f2f21-132">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+  <span data-ttu-id="52fe1-140">設定命令的詳細資訊層級。</span><span class="sxs-lookup"><span data-stu-id="52fe1-140">Sets the verbosity level of the command.</span></span> <span data-ttu-id="52fe1-141">允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。</span><span class="sxs-lookup"><span data-stu-id="52fe1-141">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="f2f21-133">範例</span><span class="sxs-lookup"><span data-stu-id="f2f21-133">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="52fe1-142">範例</span><span class="sxs-lookup"><span data-stu-id="52fe1-142">Examples</span></span>
 
 - **`dotnet tool update -g dotnetsay`**
 
-  <span data-ttu-id="f2f21-134">更新[點網路賽](https://www.nuget.org/packages/dotnetsay/)全域工具。</span><span class="sxs-lookup"><span data-stu-id="f2f21-134">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool.</span></span>
+  <span data-ttu-id="52fe1-143">更新[dotnetsay](https://www.nuget.org/packages/dotnetsay/)通用工具。</span><span class="sxs-lookup"><span data-stu-id="52fe1-143">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool.</span></span>
 
 - **`dotnet tool update dotnetsay --tool-path c:\global-tools`**
 
-  <span data-ttu-id="f2f21-135">更新位於特定 Windows 目錄中的[dotnetsay](https://www.nuget.org/packages/dotnetsay/)全域工具。</span><span class="sxs-lookup"><span data-stu-id="f2f21-135">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool located in a specific Windows directory.</span></span>
+  <span data-ttu-id="52fe1-144">更新位於特定 Windows 目錄中的[dotnetsay](https://www.nuget.org/packages/dotnetsay/)通用工具。</span><span class="sxs-lookup"><span data-stu-id="52fe1-144">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool located in a specific Windows directory.</span></span>
 
 - **`dotnet tool update dotnetsay --tool-path ~/bin`**
 
-  <span data-ttu-id="f2f21-136">更新位於特定 Linux/macOS 目錄中的[dotnetsay](https://www.nuget.org/packages/dotnetsay/)全域工具。</span><span class="sxs-lookup"><span data-stu-id="f2f21-136">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool located in a specific Linux/macOS directory.</span></span>
+  <span data-ttu-id="52fe1-145">更新位於特定 Linux/macOS 目錄中的[dotnetsay](https://www.nuget.org/packages/dotnetsay/)通用工具。</span><span class="sxs-lookup"><span data-stu-id="52fe1-145">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool located in a specific Linux/macOS directory.</span></span>
 
 - **`dotnet tool update dotnetsay`**
 
-  <span data-ttu-id="f2f21-137">更新為目前目錄安裝的[dotnetsay](https://www.nuget.org/packages/dotnetsay/)本地工具。</span><span class="sxs-lookup"><span data-stu-id="f2f21-137">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) local tool installed for the current directory.</span></span>
+  <span data-ttu-id="52fe1-146">更新針對目前的目錄所安裝的[dotnetsay](https://www.nuget.org/packages/dotnetsay/)本機工具。</span><span class="sxs-lookup"><span data-stu-id="52fe1-146">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) local tool installed for the current directory.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f2f21-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f2f21-138">See also</span></span>
+- **`dotnet tool update -g dotnetsay --version 2.0.*`**
 
-- [<span data-ttu-id="f2f21-139">.NET 核心工具</span><span class="sxs-lookup"><span data-stu-id="f2f21-139">.NET Core tools</span></span>](global-tools.md)
-- [<span data-ttu-id="f2f21-140">教學:使用 .NET 核心 CLI 安裝與使用 .NET 核心全域工具</span><span class="sxs-lookup"><span data-stu-id="f2f21-140">Tutorial: Install and use a .NET Core global tool using the .NET Core CLI</span></span>](global-tools-how-to-use.md)
-- [<span data-ttu-id="f2f21-141">教學:使用 .NET 核心 CLI 安裝與使用 .NET 核心本地工具</span><span class="sxs-lookup"><span data-stu-id="f2f21-141">Tutorial: Install and use a .NET Core local tool using the .NET Core CLI</span></span>](local-tools-how-to-use.md)
+  <span data-ttu-id="52fe1-147">將[dotnetsay](https://www.nuget.org/packages/dotnetsay/)通用工具更新為最新的修補程式版本，其主要版本為 `2` ，而次要版本為 `0` 。</span><span class="sxs-lookup"><span data-stu-id="52fe1-147">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool to the latest patch version, with a major version of `2`, and a minor version of `0`.</span></span>
+
+- **`dotnet tool update -g dotnetsay --version (2.0.*,2.1.4)`**
+
+  <span data-ttu-id="52fe1-148">將[dotnetsay](https://www.nuget.org/packages/dotnetsay/)通用工具更新為指定範圍內的最低版本 `(> 2.0.0 && < 2.1.4)` ，將 `2.1.0` 會安裝版本。</span><span class="sxs-lookup"><span data-stu-id="52fe1-148">Updates the [dotnetsay](https://www.nuget.org/packages/dotnetsay/) global tool to the lowest version within the specified range `(> 2.0.0 && < 2.1.4)`, version `2.1.0` would be installed.</span></span> <span data-ttu-id="52fe1-149">如需有關語義版本控制範圍的詳細資訊，請參閱[NuGet 封裝版本範圍](/nuget/concepts/package-versioning#version-ranges)。</span><span class="sxs-lookup"><span data-stu-id="52fe1-149">For more information on semantic versioning ranges, see [NuGet packaging version ranges](/nuget/concepts/package-versioning#version-ranges).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="52fe1-150">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52fe1-150">See also</span></span>
+
+- [<span data-ttu-id="52fe1-151">.NET Core 工具</span><span class="sxs-lookup"><span data-stu-id="52fe1-151">.NET Core tools</span></span>](global-tools.md)
+- [<span data-ttu-id="52fe1-152">語意化版本控制系統</span><span class="sxs-lookup"><span data-stu-id="52fe1-152">Semantic versioning</span></span>](https://semver.org)
+- [<span data-ttu-id="52fe1-153">教學課程：使用 .NET Core CLI 安裝和使用 .NET Core 通用工具</span><span class="sxs-lookup"><span data-stu-id="52fe1-153">Tutorial: Install and use a .NET Core global tool using the .NET Core CLI</span></span>](global-tools-how-to-use.md)
+- [<span data-ttu-id="52fe1-154">教學課程：使用 .NET Core CLI 安裝和使用 .NET Core 本機工具</span><span class="sxs-lookup"><span data-stu-id="52fe1-154">Tutorial: Install and use a .NET Core local tool using the .NET Core CLI</span></span>](local-tools-how-to-use.md)
