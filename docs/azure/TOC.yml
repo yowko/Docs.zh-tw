@@ -1,16 +1,57 @@
 - name: 適用於 .NET 開發人員的 Azure
   href: index.yml
+- name: 透過 .NET 開始使用 Azure
+  expanded: true
   items:
     - name: Azure 與 .NET 簡介
       href: intro.md
-    - name: 移轉至 Azure
-      expanded: true
+    - name: 開發人員工具
+      href: tools.md
+    - name: 驗證
+      href: authentication.md
+    - name: 記錄
+      href: logging.md
+    - name: SDK 範例
+      href: /samples/dotnet/samples/azure-identity-resource-management-storage/
+- name: 移轉至 Azure
+  items:
+    - name: 選擇正確的 Azure 裝載選項
+      href: ./migration/choose.md
+    - name: 將 .NET Web 應用程式或服務遷移至 Azure App Service
+      href: ./migration/app-service.md
+    - name: 將 ASP.NET 應用程式移轉至 Azure 虛擬機器
+      href: ./migration/vm.md
+    - name: 將 SQL Server 資料庫移轉至 Azure
+      href: ./migration/sql.md
+- name: 範例程式碼
+  items:
+    - name: Web apps 和無伺服器
+      href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-functions%2Cazure-app-service%2Cazure-logic-apps
+    - name: 資料庫
+      href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-cosmos-db%2Cazure-sql-database
+    - name: 存放裝置
       items:
-        - name: 選擇 Azure 裝載選項
-          href: ./migration/choose.md
-        - name: 將 .NET Web 應用程式或服務遷移至 Azure App Service
-          href: ./migration/app-service.md
-        - name: 將 ASP.NET 應用程式移轉至 Azure 虛擬機器
-          href: ./migration/vm.md
-        - name: 將 SQL Server 資料庫移轉至 Azure
-          href: ./migration/sql.md
+        - name: Azure 儲存體
+          href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-storage
+        - name: Redis 快取
+          href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-redis-cache
+    - name: 身分識別及安全性
+      href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-active-directory%2Cazure-key-vault
+    - name: IoT
+      href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-iot-hub%2Cazure-iot-edge%2Cazure-iot-central
+    - name: 資料科學
+      items:
+        - name: 機器學習服務
+          href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-machine-learning-service
+        - name: Databricks
+          href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-databricks
+        - name: HDInsight
+          href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-hdinsight
+    - name: 具有認知服務的 AI
+      href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-cognitive-services
+    - name: 搜尋
+      href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb&products=azure-search
+    - name: 所有範例
+      href: /samples/browse/?languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb
+- name: 應用程式開發介面參考
+  href: /dotnet/api/overview/azure/?view=azure-dotnet
