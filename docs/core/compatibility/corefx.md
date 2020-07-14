@@ -2,12 +2,12 @@
 title: 基類庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 09/20/2019
-ms.openlocfilehash: 1c56358e69d0dd6e8572a41229c1b9edbcdad795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 64510809a1cf69ea0e4c4816eb2df54233e8eceb
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365608"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281292"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,8 @@ ms.locfileid: "85365608"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [預設 ActivityIdFormat 為 W3C](#default-activityidformat-is-w3c) | 5.0 |
+| [Vector2 的行為變更。 Lerp 和 Vector4. Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
 | [SSE 和 SSE2 CompareGreaterThan 方法會適當地處理 NaN 輸入](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
 | [如果實例已經存在，CreateCounterSetInstance 現在會擲回 InvalidOperationException](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
 | [已移除 DotNet PlatformAbstractions 套件](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
@@ -29,7 +31,7 @@ ms.locfileid: "85365608"
 | [TypeDescriptionProviderAttribute 已移至另一個元件](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [Ziparchiveentry 中不再處理具有不一致專案大小的封存](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
 | [JSON 序列化程式例外狀況類型已從 JsonException 變更為 NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
-| [在 Utf8JsonWriter 中變更（string） null 的語義](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
+| [在 Utf8JsonWriter 中變更 (字串的語義) null](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
 | [JsonEncodedText 方法有額外的 JavaScriptEncoder 引數](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
 | [JsonFactoryConverter. CreateConverter 簽章已變更](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
 | [JsonElement API 變更](#jsonelement-api-changes) | 3.0 |
@@ -43,6 +45,14 @@ ms.locfileid: "85365608"
 | [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [default-activityidformat-changed](../../../includes/core-changes/corefx/5.0/default-activityidformat-changed.md)]
+
+***
+
+[!INCLUDE [vector-lerp-behavior-change](../../../includes/core-changes/corefx/5.0/vector-lerp-behavior-change.md)]
+
+***
 
 [!INCLUDE [sse-comparegreaterthan-intrinsics](../../../includes/core-changes/corefx/5.0/sse-comparegreaterthan-intrinsics.md)]
 

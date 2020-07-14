@@ -1,5 +1,6 @@
 ---
 title: 指定字元集
+description: 瞭解如何指定使用窄 (ANSI) 或寬 (Unicode) 編碼的字元集。 您也可以指定自動執行時間選取。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a4f18431d89343a77ccf2b920edac485e7dcfca3
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125170"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282121"
 ---
 # <a name="specifying-a-character-set"></a>指定字元集
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位控制字串封送處理，並決定平台叫用如何在 DLL 中尋找函式名稱。 這個主題將描述這兩種行為。  
@@ -144,7 +145,7 @@ extern "C" int MessageBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)

@@ -1,5 +1,6 @@
 ---
 title: 安全性和序列化
+description: 閱讀安全性和序列化的相關資訊。 使用 SecurityPermission 搭配指定的 SerializationFormatter 旗標，以查看或修改物件實例資料。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: 634388e3920e0b9dbee85aa3ea555471cee604ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79952ceee4c8b771aaadd4fc97a547bc65136770
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181109"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281260"
 ---
 # <a name="security-and-serialization"></a>安全性和序列化
 由於序列化可允許其他程式碼看到或修改在其他情況下無法存取的物件執行個體資料，因此執行序列化的程式碼需要特殊權限： <xref:System.Security.Permissions.SecurityPermission> ，並指定 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 旗標。 依照預設原則，這個使用權限不會授與給網際網路下載或內部網路的程式碼；只有本機電腦上的程式碼才會被授與這個使用權限。  
@@ -45,6 +46,6 @@ ms.locfileid: "79181109"
   
 - 用於序列化的特殊建構函式也應該執行徹底的輸入驗證，並且應該為受保護或私用，協助防範惡意程式碼的濫用。 它應該強制執行以其他方式 (例如明確建立類別或透過某種處理站間接建立) 取得這種類別的執行個體時，相同的安全性檢查和必要權限。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)

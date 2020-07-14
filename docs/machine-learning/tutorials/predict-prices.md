@@ -4,12 +4,12 @@ description: 本教學課程會示範如何使用 ML.NET 建置迴歸模型，�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 0a8ab9ca07d2d83f41b40a3f5782e8e7e201976f
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 27054e28f9a4fa628f0d7348d45528b690d7da83
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803231"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281767"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教學課程：使用回歸與 ML.NET 預測價格
 
@@ -69,11 +69,11 @@ ms.locfileid: "85803231"
 1. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *TaxiTrip.cs*。 接著，選取 [新增]**** 按鈕。
 1. 將下列的 `using` 指示詞加入新檔案：
 
-   [!code-csharp[AddUsings](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/TaxiTrip.cs#1 "Add necessary usings")]
+   [!code-csharp[AddUsings](./snippets/predict-prices/csharp/TaxiTrip.cs#1 "Add necessary usings")]
 
 移除現有的類別定義，然後將下列程式碼 (具有 `TaxiTrip` 和 `TaxiTripFarePrediction` 這兩個類別) 新增至 *TaxiTrip.cs* 檔案：
 
-[!code-csharp[DefineTaxiTrip](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
+[!code-csharp[DefineTaxiTrip](./snippets/predict-prices/csharp/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
 `TaxiTrip` 是輸入資料類別，並含有每個資料集資料行的定義。 使用 <xref:Microsoft.ML.Data.LoadColumnAttribute> 屬性來指定資料集中來源資料行的索引。
 
@@ -86,7 +86,7 @@ ms.locfileid: "85803231"
 
 在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：
 
-[!code-csharp[AddUsings](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#1 "Add necessary usings")]
+[!code-csharp[AddUsings](./snippets/predict-prices/csharp/Program.cs#1 "Add necessary usings")]
 
 您必須建立三個欄位，保存含有資料集的檔案與用來儲存模型之檔案的檔案路徑：
 
@@ -96,7 +96,7 @@ ms.locfileid: "85803231"
 
 將下列程式碼加入至緊接在 `Main` 方法上方，以指定這些路徑和 `_textLoader` 變數：
 
-[!code-csharp[InitializePaths](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#2 "Define variables to store the data file paths")]
+[!code-csharp[InitializePaths](./snippets/predict-prices/csharp/Program.cs#2 "Define variables to store the data file paths")]
 
 所有 ML.NET 作業都是從 [MLContext 類別](xref:Microsoft.ML.MLContext)開始。 將 `mlContext` 初始化會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
 
@@ -104,11 +104,11 @@ ms.locfileid: "85803231"
 
 將 `Main` 方法中的 `Console.WriteLine("Hello World!")` 程式碼替換成下列程式碼，宣告並初始化 `mlContext` 變數：
 
-[!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#3 "Create the ML Context")]
+[!code-csharp[CreateMLContext](./snippets/predict-prices/csharp/Program.cs#3 "Create the ML Context")]
 
 將下列內容加入為 `Main` 方法中的下一行程式碼，來呼叫 `Train` 方法：
 
-[!code-csharp[Train](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#5 "Train your model")]
+[!code-csharp[Train](./snippets/predict-prices/csharp/Program.cs#5 "Train your model")]
 
 `Train()` 方法會執行下列工作：
 
@@ -130,19 +130,19 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字或文字表格式資料彈性且有效率的方式。 `IDataView` 可載入文字檔案或即時進行 (例如 SQL 資料庫或記錄檔)。 將下列程式碼新增為 `Train()` 方法的第一行：
 
-[!code-csharp[LoadTrainData](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#6 "loading training dataset")]
+[!code-csharp[LoadTrainData](./snippets/predict-prices/csharp/Program.cs#6 "loading training dataset")]
 
-當您想要預測出租車行程費用時，資料 `FareAmount` 行是 `Label` 您將預測的（模型的輸出）。 使用 `CopyColumnsEstimator` 轉換類別來複製 `FareAmount` ，並新增下列程式碼：
+當您想要預測出租車行程費用時，資料 `FareAmount` 行是 `Label` 您將預測 (模型) 的輸出。 使用 `CopyColumnsEstimator` 轉換類別來複製 `FareAmount` ，並新增下列程式碼：
 
-[!code-csharp[CopyColumnsEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
+[!code-csharp[CopyColumnsEstimator](./snippets/predict-prices/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-訓練模型的演算法需要**數值**特徵，因此您必須將類別資料（ `VendorId` 、和 `RateCode` `PaymentType` ）值轉換成數位（ `VendorIdEncoded` 、 `RateCodeEncoded` 和 `PaymentTypeEncoded` ）。 若要進行該操作，請使用 [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 轉換類別，這會將不同數值索引鍵值指派給每個資料行中的不同值，並新增下列程式碼：
+訓練模型的演算法需要**數值**特徵，因此您必須將類別資料 (`VendorId` 、 `RateCode` 和 `PaymentType`) 值轉換成數位 (`VendorIdEncoded` 、 `RateCodeEncoded` 和 `PaymentTypeEncoded`) 。 若要進行該操作，請使用 [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 轉換類別，這會將不同數值索引鍵值指派給每個資料行中的不同值，並新增下列程式碼：
 
-[!code-csharp[OneHotEncodingEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
+[!code-csharp[OneHotEncodingEstimator](./snippets/predict-prices/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
 資料準備工作的最後一個步驟是使用 `mlContext.Transforms.Concatenate` 轉換類別，將所有特徵資料行合併為 **Features** 資料行。 根據預設，學習演算法只會處理來自 **Features** 資料行的特徵。 新增下列程式碼：
 
-[!code-csharp[ColumnConcatenatingEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
+[!code-csharp[ColumnConcatenatingEstimator](./snippets/predict-prices/csharp/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
 ## <a name="choose-a-learning-algorithm"></a>選擇學習演算法
 
@@ -150,19 +150,19 @@ ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字�
 
 請將下列內容新增為 `Train()` 中的下一行程式碼，來將 [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer) 機器學習服務工作新增到資料轉換定義：
 
-[!code-csharp[FastTreeRegressionTrainer](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#10 "Add the FastTreeRegressionTrainer")]
+[!code-csharp[FastTreeRegressionTrainer](./snippets/predict-prices/csharp/Program.cs#10 "Add the FastTreeRegressionTrainer")]
 
 ## <a name="train-the-model"></a>將模型定型
 
 在 `Train()` 方法中新增下列程式碼，調整模型使其符合定型的 `dataview`，並傳回已定型的模型：
 
-[!code-csharp[TrainModel](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#11 "Train the model")]
+[!code-csharp[TrainModel](./snippets/predict-prices/csharp/Program.cs#11 "Train the model")]
 
 [Fit()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法透過轉換資料集和套用定型來定型模型。
 
 使用 `Train()` 方法中的下列程式碼行，傳回定型的模型：
 
-[!code-csharp[ReturnModel](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#12 "Return the model")]
+[!code-csharp[ReturnModel](./snippets/predict-prices/csharp/Program.cs#12 "Return the model")]
 
 ## <a name="evaluate-the-model"></a>評估模型
 
@@ -184,15 +184,15 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 請使用下列程式碼，在緊接著 `Train` 方法呼叫底下，從 `Main` 方法新增對新方法的呼叫：
 
-[!code-csharp[CallEvaluate](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#14 "Call the Evaluate method")]
+[!code-csharp[CallEvaluate](./snippets/predict-prices/csharp/Program.cs#14 "Call the Evaluate method")]
 
 使用 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) 方法載入測試資料集。 透過在 `Evaluate` 方法中新增下列程式碼，使用此資料集作為品質檢查來評估模型：
 
-[!code-csharp[LoadTestDataset](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#15 "Load the test dataset")]
+[!code-csharp[LoadTestDataset](./snippets/predict-prices/csharp/Program.cs#15 "Load the test dataset")]
 
 接下來，透過將下列程式碼新增到 `Evaluate()` 來轉換 `Test` 資料：
 
-[!code-csharp[PredictWithTransformer](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#16 "Predict using the Transformer")]
+[!code-csharp[PredictWithTransformer](./snippets/predict-prices/csharp/Program.cs#16 "Predict using the Transformer")]
 
 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法會針對測試資料集輸入資料列進行預測。
 
@@ -200,7 +200,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 若要顯示這些計量以判斷模型的品質，您必須先取得計量。 將下列程式碼加入為 `Evaluate` 方法中的下一行：
 
-[!code-csharp[ComputeMetrics](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#17 "Compute Metrics")]
+[!code-csharp[ComputeMetrics](./snippets/predict-prices/csharp/Program.cs#17 "Compute Metrics")]
 
 在您設定好預測後，[Evaluate()](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) 方法會評估模型，將預測值與測試資料集中的實際 `Labels` 進行比較，並傳回模型的執行情況。
 
@@ -215,11 +215,11 @@ Console.WriteLine($"*------------------------------------------------");
 
 [RSquared](../resources/glossary.md#coefficient-of-determination) 是迴歸模型的另一個評估計量。 RSquared 接受介於 0 和 1 之間的值。 其值越接近 1，模型就越好。 將下列程式碼新增至 `Evaluate` 方法，以顯示 RSquared 值：
 
-[!code-csharp[DisplayRSquared](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#18 "Display the RSquared metric.")]
+[!code-csharp[DisplayRSquared](./snippets/predict-prices/csharp/Program.cs#18 "Display the RSquared metric.")]
 
 [RMS](../resources/glossary.md#root-of-mean-squared-error-rmse) 是迴歸模型的評估計量之一。 此計量值越低，模型就越好。 將下列程式碼新增至 `Evaluate` 方法，以顯示 RMS 值：
 
-[!code-csharp[DisplayRMS](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#19 "Display the RMS metric.")]
+[!code-csharp[DisplayRMS](./snippets/predict-prices/csharp/Program.cs#19 "Display the RMS metric.")]
 
 ## <a name="use-the-model-for-predictions"></a>使用模型來進行預測
 
@@ -241,11 +241,11 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 請使用下列程式碼，在緊接著 `Evaluate` 方法呼叫底下，從 `Main` 方法新增對新方法的呼叫：
 
-[!code-csharp[CallTestSinglePrediction](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#20 "Call the TestSinglePrediction method")]
+[!code-csharp[CallTestSinglePrediction](./snippets/predict-prices/csharp/Program.cs#20 "Call the TestSinglePrediction method")]
 
 將下列程式碼新增到 `TestSinglePrediction()` 來使用 `PredictionEngine` 預測車資：
 
-[!code-csharp[MakePredictionEngine](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#22 "Create the PredictionFunction")]
+[!code-csharp[MakePredictionEngine](./snippets/predict-prices/csharp/Program.cs#22 "Create the PredictionFunction")]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是安全線程。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立物件的， [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 以便在 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 整個應用程式中使用。 請參閱本指南，以瞭解如何[ `PredictionEnginePool` 在 ASP.NET CORE Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
 
@@ -254,17 +254,17 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 本教學課程會使用此類別內的一個測試行程。 您可以稍後新增其他案例來對此方法進行實驗。 透過建立 `TaxiTrip` 的執行個體，在 `TestSinglePrediction()` 方法中新增車程，以測試定型模型的費用預測：
 
-[!code-csharp[PredictionData](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#23 "Create test data for single prediction")]
+[!code-csharp[PredictionData](./snippets/predict-prices/csharp/Program.cs#23 "Create test data for single prediction")]
 
 接下來，根據計程車車程資料的單一執行個體預測車資，然後透過將下列內容作為 `TestSinglePrediction()` 方法的下一行程式碼，來將它傳遞至 `PredictionEngine`：
 
-[!code-csharp[Predict](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#24 "Create a prediction of taxi fare")]
+[!code-csharp[Predict](./snippets/predict-prices/csharp/Program.cs#24 "Create a prediction of taxi fare")]
 
 [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 函式會在資料的單一執行個體上進行預測。
 
 若要顯示指定之車程的預測費用，請將下列程式碼加入到 `TestSinglePrediction` 方法：
 
-[!code-csharp[Predict](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#25 "Display the prediction.")]
+[!code-csharp[Predict](./snippets/predict-prices/csharp/Program.cs#25 "Display the prediction.")]
 
 執行程式以查看您測試案例的預測計程車車資。
 

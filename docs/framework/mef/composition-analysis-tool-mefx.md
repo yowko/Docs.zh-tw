@@ -1,17 +1,18 @@
 ---
 title: 撰寫分析工具 (Mefx)
+description: 閱讀撰寫分析工具 (Mefx) ，它會分析包含 .NET 中 (MEF) 元件 Managed Extensibility Framework 的 DLL 和 EXE 檔案。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Composition Analysis Tool [MEF]
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: 7d0acf16ace5aad60b32b7139a58a258fb080ee0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abb1459afc5aeb2d39ee553c62fe382bb7af58d5
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181294"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281273"
 ---
 # <a name="composition-analysis-tool-mefx"></a>撰寫分析工具 (Mefx)
 撰寫分析工具 (Mefx) 是命令列應用程式，可分析包含 Managed Extensibility Framework (MEF) 組件的程式庫 (.dll) 和應用程式檔案 (.exe)。 Mefx 的主要目的在於提供開發人員診斷其 MEF 應用程式中複合錯誤的方式，而不必將累贅的追蹤程式碼加入應用程式本身。 它還有助於了解協力廠商所提供程式庫的組件。 本主題說明如何使用 Mefx 及提供其語法的參考。  

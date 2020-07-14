@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 7caeaaa834dc827998d7d1bc3a25ba4e194996f4
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 9f553e9af16be0891f208832c5daa444a1b736e2
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324412"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281507"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -56,7 +56,7 @@ C # 8.0 也是此版本的一部分，其中包括[可為 null 的參考型別](
 
 .NET Core 現在預設會建立[執行時間相依的可執行檔](../deploying/index.md#publish-runtime-dependent)。 這對於使用 .NET Core 全域安裝版本的應用程式來說，是一項新行為。 先前，只有[獨立式部署](../deploying/index.md#publish-self-contained)會產生可執行檔。
 
-在 `dotnet build` 或期間 `dotnet publish` ，會建立可執行檔（稱為**appHost**），以符合您所使用之 SDK 的環境和平臺。 針對這些可執行檔，您可以預期能夠進行與其他原生可執行檔相同的操作，例如：
+在 `dotnet build` 或期間 `dotnet publish` ，會建立可執行檔 (稱為**appHost**) ，以符合您所使用之 SDK 的環境和平臺。 針對這些可執行檔，您可以預期能夠進行與其他原生可執行檔相同的操作，例如：
 
 - 您可以按兩下可執行檔。
 - 您可以直接從命令提示字元啟動應用程式，例如在 Windows 上為 `myapp.exe`，在 Linux 和 macOS 上為 `./myapp`。
@@ -65,7 +65,7 @@ C # 8.0 也是此版本的一部分，其中包括[可為 null 的參考型別](
 
 *僅限 macOS*
 
-從適用于 macOS 的公證 .NET Core SDK 3.0 開始，預設會停用產生預設可執行檔（稱為 appHost）的設定。 如需詳細資訊，請參閱[MacOS Catalina Notarization 和對 .Net Core 下載和專案的影響](../install/macos-notarization-issues.md)。
+從適用于 macOS 的公證 .NET Core SDK 3.0 開始，預設會停用產生預設可執行檔 (稱為 appHost) 的設定。 如需詳細資訊，請參閱[MacOS Catalina Notarization 和對 .Net Core 下載和專案的影響](../install/macos-notarization-issues.md)。
 
 當 appHost 設定啟用時，.NET Core 會在您建立或發行時產生原生符合-O 可執行檔。 當您的應用程式是從使用命令的原始程式碼執行 `dotnet run` ，或直接啟動符合-O 可執行檔時，就會在 appHost 的內容中執行。
 
@@ -140,7 +140,7 @@ dotnet publish -r <rid> -c Release
 
 ### <a name="tiered-compilation"></a>階層式編譯
 
-.NET Core 3.0 預設會開啟[階層式編譯](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC)。 這項功能可讓執行時間更方便地使用即時（JIT）編譯器，以達到更佳的效能。
+.NET Core 3.0 預設會開啟[階層式編譯](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC)。 這項功能可讓執行時間更單純地使用即時 (JIT) 編譯器，以達到更佳的效能。
 
 階層式編譯的主要優點是提供兩種方式來 jitting 方法：以較低品質但更快速的層級，或較高品質但較慢的階層。 品質是指方法的優化程度。 TC 有助於改善應用程式的效能，因為它會經歷各種執行階段，從啟動到穩定的狀態。 停用階層式編譯時，每個方法都會以單一方式編譯，而非啟動效能的穩定狀態效能。
 
@@ -148,8 +148,8 @@ dotnet publish -r <rid> -c Release
 
 - 如果方法有預先編譯的程式碼或[ReadyToRun](#readytorun-images)，則會使用預先產生程式碼。
 - 否則，方法會進行 jit 編譯。 一般而言，這些方法都是實數值型別的泛型。
-  - *快速 JIT*會更快速地產生較低品質（或較不優化的）程式碼。 在 .NET Core 3.0 中，預設會針對不包含迴圈且在啟動時慣用的方法，啟用快速 JIT。
-  - 完全優化 JIT 會產生較高品質（或更優化的）程式碼，速度更慢。 針對不使用快速 JIT 的方法（例如，如果方法是使用進行屬性化 <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType> ），則會使用完全優化的 jit。
+  - *快速 JIT*會更快速地產生較低品質的 (或較少的優化) 程式碼。 在 .NET Core 3.0 中，預設會針對不包含迴圈且在啟動時慣用的方法，啟用快速 JIT。
+  - 完全優化 JIT 會產生較高品質的 (或更緩慢的優化) 程式碼。 針對不使用快速 JIT 的方法 (例如，如果方法是使用) 來屬性化 <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType> ，則會使用完全優化的 jit。
 
 對於經常被呼叫的方法，即時編譯器最後會在背景中建立完全優化的程式碼。 然後，優化的程式碼會取代該方法的預先編譯器代碼。
 
@@ -170,7 +170,7 @@ dotnet publish -r <rid> -c Release
 ```
 
 > [!TIP]
-> 如果您在專案檔中變更這些設定，可能需要執行全新的組建，才會反映新的設定（刪除 `obj` 和 `bin` 目錄並重建）。
+> 如果您在專案檔中變更這些設定，您可能需要執行全新的組建，才會反映新的設定， (刪除 `obj` 和 `bin` 目錄並重建) 。
 
 如需在執行時間設定編譯的詳細資訊，請參閱[編譯的執行時間設定選項](../run-time-config/compilation.md)。
 
@@ -234,7 +234,7 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 
 除了 **Disable** 設定，所有設定都會使用最高可用的修補程式版本。
 
-根據預設，如果要求的版本（如應用程式中所指定 `.runtimeconfig.json` ）是發行版本，則只會將發行版本視為向前復原。 任何發行前版本都會被忽略。 如果沒有相符的發行版本，則會將發行前版本納入考慮。 設定可以變更此行為 `DOTNET_ROLL_FORWARD_TO_PRERELEASE=1` ，在此情況下，一律會考慮所有版本。
+根據預設，如果應用程式) 中所指定的要求版本 (`.runtimeconfig.json` 是發行版本，則只會將發行版本視為向前復原。 任何發行前版本都會被忽略。 如果沒有相符的發行版本，則會將發行前版本納入考慮。 設定可以變更此行為 `DOTNET_ROLL_FORWARD_TO_PRERELEASE=1` ，在此情況下，一律會考慮所有版本。
 
 ### <a name="build-copies-dependencies"></a>組建複本相依性
 
@@ -391,7 +391,7 @@ GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結�
 
 下列 C# 8.0 範例示範連線至 <https://www.cloudflare.com> 之 Ubuntu 18.10 上的 .NET Core 3.0：
 
-[!code-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
+[!code-csharp[TLSExample](./snippets/dotnet-core-3-0/csharp/TLS.cs#TLS)]
 
 ### <a name="cryptography-ciphers"></a>密碼編譯加密方式
 
@@ -399,7 +399,7 @@ GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結�
 
 下列程式碼示範如何使用 `AesGcm` 加密方式將隨機資料加密和解密。
 
-[!code-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
+[!code-csharp[AesGcm](./snippets/dotnet-core-3-0/csharp/Cipher.cs#AesGcm)]
 
 ### <a name="cryptographic-key-importexport"></a>密碼編譯金鑰匯入/匯出
 
@@ -424,7 +424,7 @@ RSA 金鑰也支援：
 
 匯出方法會產生 DER 編碼的二進位資料，而匯入方法也是如此。 如果金鑰是以適合文字的 PEM 格式儲存的，呼叫端在呼叫匯入方法之前，就必須先對內容進行 Base64 解碼。
 
-[!code-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
+[!code-csharp[RSA](./snippets/dotnet-core-3-0/csharp/RSA.cs#Rsa)]
 
 **PKCS#8** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> 來檢查，而 **PFX/PKCS#12** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType> 來檢查。 **PFX/PKCS#12** 檔案可以使用 <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType> 來操作。
 
@@ -553,15 +553,15 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 預設通訊協定會保持為 HTTP/1.1，但 HTTP/2 可以兩種不同的方式啟用。 首先，您可以設定 HTTP 要求訊息來使用 HTTP/2：
 
-[!code-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+[!code-csharp[Http2Request](./snippets/dotnet-core-3-0/csharp/http.cs#Request)]
 
 再來，您可以變更 <xref:System.Net.Http.HttpClient> 來預設使用 HTTP/2：
 
-[!code-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+[!code-csharp[Http2Client](./snippets/dotnet-core-3-0/csharp/http.cs#Client)]
 
 當您在開發應用程式時，經常會想要使用未加密的連線。 如果您知道目標端點會使用 HTTP/2，便可以針對 HTTP/2 開啟未加密的連線。 若要開啟它，您可以將 `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` 環境變數設定為 `1`，或是在應用程式內容中啟用它：
 
-[!code-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
+[!code-csharp[Http2Context](./snippets/dotnet-core-3-0/csharp/http.cs#AppContext)]
 
 ## <a name="next-steps"></a>後續步驟
 

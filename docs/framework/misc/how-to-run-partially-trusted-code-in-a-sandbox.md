@@ -1,5 +1,6 @@
 ---
 title: 如何：在沙箱中執行部分信任的程式碼
+description: 探索如何在 .NET 的沙箱中執行部分信任的程式碼。 AppDomain 類別是沙箱 managed 應用程式的有效方式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f186f1d901b51dd4c61ba6b22197465a41f2c44
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181186"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282030"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>如何：在沙箱中執行部分信任的程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -114,7 +115,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - 您可使用會指向不包含組件位置的程式碼基底。  
   
-    - 您可以在 <xref:System.Security.CodeAccessPermission.Assert%2A> 之下建立完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)，這可讓您建立關鍵類別的執行個體。 （每當程式集沒有透明度標記且載入為完全受信任的標記時，就會發生這種情況。因此，您必須小心只創建您信任的代碼使用此函數，我們建議您僅在新的應用程式域中創建完全受信任的類的實例。  
+    - 您可以在 <xref:System.Security.CodeAccessPermission.Assert%2A> 之下建立完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)，這可讓您建立關鍵類別的執行個體。  (這會在您的元件沒有透明度標記並載入為完全信任的情況下發生。 ) 因此，您必須謹慎地只建立與此函式信任的程式碼，並建議您只在新的應用程式域中建立完全信任的類別實例。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -271,6 +272,6 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)

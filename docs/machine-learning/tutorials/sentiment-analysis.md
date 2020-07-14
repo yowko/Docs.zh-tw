@@ -4,12 +4,12 @@ description: 本教學課程示範如何建立 .NET Core 主控台應用程式�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b193752437c3e84476858bb3b70ba642d8562769
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: de8ea511b3d421e391b182a6de079b854d3f2390
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803244"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281746"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教學課程：使用 ML.NET 中的二進位分類來分析網站批註的情感
 
@@ -49,7 +49,7 @@ ms.locfileid: "85803244"
 ## <a name="prepare-your-data"></a>準備您的資料
 
 > [!NOTE]
-> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 Irvine, CA:University of California, School of Information and Computer Science。
+> 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. (2017) 。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 Irvine, CA:University of California, School of Information and Computer Science。
 
 1. 下載並解壓縮 [UCI 情感標記句子資料集 ZIP 檔案](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)。
 
@@ -61,11 +61,11 @@ ms.locfileid: "85803244"
 
 1. 在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：
 
-    [!code-csharp[AddUsings](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#AddUsings "Add necessary usings")]
+    [!code-csharp[AddUsings](./snippets/sentiment-analysis/csharp/Program.cs#AddUsings "Add necessary usings")]
 
 1. 將下列程式碼新增至方法上方的一行 `Main` ，以建立欄位以保存最近下載的資料集檔案路徑：
 
-    [!code-csharp[Declare global variables](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
+    [!code-csharp[Declare global variables](./snippets/sentiment-analysis/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
 1. 接下來，為輸入資料和預測建立類別。 將新類別新增至專案：
 
@@ -75,11 +75,11 @@ ms.locfileid: "85803244"
 
 1. *SentimentData.cs* 檔案隨即在程式碼編輯器中開啟。 將以下 `using` 陳述式新增至 *SentimentData.cs* 頂端：
 
-    [!code-csharp[AddUsings](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/SentimentData.cs#AddUsings "Add necessary usings")]
+    [!code-csharp[AddUsings](./snippets/sentiment-analysis/csharp/SentimentData.cs#AddUsings "Add necessary usings")]
 
 1. 移除現有的類別定義，然後將下列程式碼 (具有 `SentimentData` 和 `SentimentPrediction` 這兩個類別) 新增至 *SentimentData.cs* 檔案：
 
-    [!code-csharp[DeclareTypes](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/SentimentData.cs#DeclareTypes "Declare data record types")]
+    [!code-csharp[DeclareTypes](./snippets/sentiment-analysis/csharp/SentimentData.cs#DeclareTypes "Declare data record types")]
 
 ### <a name="how-the-data-was-prepared"></a>如何準備資料
 
@@ -108,11 +108,11 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 1. 將 `Main` 方法中的 `Console.WriteLine("Hello World!")` 程式碼行取代為下列程式碼，以宣告 mlContext 變數並將它初始化：
 
-    [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreateMLContext "Create the ML Context")]
+    [!code-csharp[CreateMLContext](./snippets/sentiment-analysis/csharp/Program.cs#CreateMLContext "Create the ML Context")]
 
 2. 將下列程式碼加入為 `Main()` 方法中的下一行程式碼：
 
-    [!code-csharp[CallLoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallLoadData)]
+    [!code-csharp[CallLoadData](./snippets/sentiment-analysis/csharp/Program.cs#CallLoadData)]
 
 3. 請使用下列程式碼，在緊接著 `Main()` 方法之後，建立 `LoadData()` 方法：
 
@@ -131,9 +131,9 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 4. 將下列程式碼新增為 `LoadData()` 方法的第一行：
 
-    [!code-csharp[LoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#LoadData "loading dataset")]
+    [!code-csharp[LoadData](./snippets/sentiment-analysis/csharp/Program.cs#LoadData "loading dataset")]
 
-    [LoadFromTextFile （）](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)方法會定義資料架構，並在檔案中讀取。 會接受資料路徑變數然後傳回 `IDataView`。
+    [LoadFromTextFile ( # B1](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)方法會定義資料架構，並在檔案中讀取。 會接受資料路徑變數然後傳回 `IDataView`。
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>分割資料集以進行模型定型與測試
 
@@ -141,19 +141,19 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 1. 若要將載入的資料分割成所需的資料集，請將下列程式碼加入為 `LoadData()` 方法中的下一行：
 
-    [!code-csharp[SplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#SplitData "Split the Data")]
+    [!code-csharp[SplitData](./snippets/sentiment-analysis/csharp/Program.cs#SplitData "Split the Data")]
 
-    先前的程式碼會使用[TrainTestSplit （）](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A)方法，將載入的資料集分割成定型和測試資料集，並在類別中傳回它們 <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> 。 您可以使用 `testFraction` 參數來指定資料的測試集百分比。 預設值是 10%，但您在本例中會使用 20% 以評估更多資料。
+    先前的程式碼會使用[TrainTestSplit ( # B1](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A)方法，將載入的資料集分割成定型和測試資料集，並在類別中傳回它們 <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> 。 您可以使用 `testFraction` 參數來指定資料的測試集百分比。 預設值是 10%，但您在本例中會使用 20% 以評估更多資料。
 
 2. 在 `LoadData()` 方法的結尾傳回 `splitDataView`：
 
-    [!code-csharp[ReturnSplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#ReturnSplitData)]
+    [!code-csharp[ReturnSplitData](./snippets/sentiment-analysis/csharp/Program.cs#ReturnSplitData)]
 
 ## <a name="build-and-train-the-model"></a>建置和定型模型
 
 1. 將下列呼叫新增至 `BuildAndTrainModel` 方法作為 `Main()` 方法中的下一行程式碼：
 
-    [!code-csharp[CallBuildAndTrainModel](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallBuildAndTrainModel)]
+    [!code-csharp[CallBuildAndTrainModel](./snippets/sentiment-analysis/csharp/Program.cs#CallBuildAndTrainModel)]
 
     `BuildAndTrainModel()` 方法會執行下列工作：
 
@@ -175,11 +175,11 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 1. 呼叫 `FeaturizeText` 作為下一行程式碼：
 
-    [!code-csharp[FeaturizeText](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#FeaturizeText "Featurize the text")]
+    [!code-csharp[FeaturizeText](./snippets/sentiment-analysis/csharp/Program.cs#FeaturizeText "Featurize the text")]
 
     上述程式碼中的 `FeaturizeText()` 方法會將文字資料行 (`SentimentText`) 轉換成機器學習演算法所使用的數值索引鍵類型 `Features` 資料行，並將它新增為新的資料集資料行：
 
-    |SentimentText                         |情感 |特性              |
+    |SentimentText                         |情感 |功能              |
     |--------------------------------------|----------|----------------------|
     |女服務生的服務速度有點慢。|    0     |[0.76, 0.65, 0.44, …] |
     |不夠酥脆。                    |    0     |[0.98, 0.43, 0.54, …] |
@@ -192,7 +192,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 透過將下列內容新增為 `BuildAndTrainModel()` 中的下一行程式碼，將機器學習工作附加到資料轉換定義：
 
-[!code-csharp[SdcaLogisticRegressionBinaryTrainer](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#AddTrainer "Add a SdcaLogisticRegressionBinaryTrainer")]
+[!code-csharp[SdcaLogisticRegressionBinaryTrainer](./snippets/sentiment-analysis/csharp/Program.cs#AddTrainer "Add a SdcaLogisticRegressionBinaryTrainer")]
 
 [SdcaLogisticRegressionBinaryTrainer](xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer) 是您的分類定型演算法。 這會附加到 `estimator`，並接受特徵化 `SentimentText` (`Features`) 和 `Label` 輸入參數，以從歷史資料學習。
 
@@ -200,7 +200,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 將下列內容新增為 `BuildAndTrainModel()` 方法中的下一行程式碼，調整模型為合適於 `splitTrainSet` 資料並傳回已定型模型：
 
-[!code-csharp[TrainModel](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#TrainModel "Train the model")]
+[!code-csharp[TrainModel](./snippets/sentiment-analysis/csharp/Program.cs#TrainModel "Train the model")]
 
 [Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) 方法透過轉換資料集和套用定型來定型模型。
 
@@ -208,7 +208,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
  在 `BuildAndTrainModel()` 方法的結尾傳回模型：
 
-[!code-csharp[ReturnModel](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#ReturnModel "Return the model")]
+[!code-csharp[ReturnModel](./snippets/sentiment-analysis/csharp/Program.cs#ReturnModel "Return the model")]
 
 ## <a name="evaluate-the-model"></a>評估模型
 
@@ -232,17 +232,17 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 2. 請使用下列程式碼，在緊接著 `BuildAndTrainModel()` 方法呼叫底下，從 `Main()` 方法新增對新方法的呼叫：
 
-    [!code-csharp[CallEvaluate](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallEvaluate "Call the Evaluate method")]
+    [!code-csharp[CallEvaluate](./snippets/sentiment-analysis/csharp/Program.cs#CallEvaluate "Call the Evaluate method")]
 
 3. 將下列程式碼新增至 `Evaluate()` 以轉換 `splitTestSet` 資料：
 
-    [!code-csharp[PredictWithTransformer](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#TransformData "Predict using the Transformer")]
+    [!code-csharp[PredictWithTransformer](./snippets/sentiment-analysis/csharp/Program.cs#TransformData "Predict using the Transformer")]
 
     之前的程式碼使用 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法會對測試資料集多個所提供的輸入資料列進行預測。
 
 4. 將下列內容新增為 `Evaluate()` 方法中的下一行程式碼來評估模型：
 
-    [!code-csharp[ComputeMetrics](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#Evaluate "Compute Metrics")]
+    [!code-csharp[ComputeMetrics](./snippets/sentiment-analysis/csharp/Program.cs#Evaluate "Compute Metrics")]
 
 在您設定好預測 (`predictions`) 後，[Evaluate()](xref:Microsoft.ML.BinaryClassificationCatalog.Evaluate%2A) 方法會評估模型，將預測值與測試資料集中的實際 `Labels` 進行比較，並傳回與模型執行情況相關的 [CalibratedBinaryClassificationMetrics](xref:Microsoft.ML.Data.CalibratedBinaryClassificationMetrics) 物件。
 
@@ -250,7 +250,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 使用下列程式碼來顯示計量：
 
-[!code-csharp[DisplayMetrics](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#DisplayMetrics "Display selected metrics")]
+[!code-csharp[DisplayMetrics](./snippets/sentiment-analysis/csharp/Program.cs#DisplayMetrics "Display selected metrics")]
 
 - `Accuracy` 計量會取得模型的準確度，這是資料集中正確預測的比例。
 
@@ -278,11 +278,11 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 2. 請使用下列程式碼，在緊接著 `Evaluate()` 方法呼叫底下，從 `Main()` 方法新增對新方法的呼叫：
 
-    [!code-csharp[CallUseModelWithSingleItem](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
+    [!code-csharp[CallUseModelWithSingleItem](./snippets/sentiment-analysis/csharp/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
 3. 新增下列程式碼，建立作為 `UseModelWithSingleItem()` 方法中的第一行：
 
-    [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
+    [!code-csharp[CreatePredictionEngine](./snippets/sentiment-analysis/csharp/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是安全線程。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立物件的， [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 以便在 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 整個應用程式中使用。 請參閱本指南，以瞭解如何[ `PredictionEnginePool` 在 ASP.NET CORE Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
 
@@ -291,17 +291,17 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 4. 透過建立 `SentimentData` 的執行個體，在 `UseModelWithSingleItem()` 方法中新增評論，以測試定型模型的預測：
 
-    [!code-csharp[PredictionData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
+    [!code-csharp[PredictionData](./snippets/sentiment-analysis/csharp/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
 5. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)將下列內容新增為方法中的下一行程式碼，藉以將測試批註資料傳遞至 `UseModelWithSingleItem()` 。
 
-    [!code-csharp[Predict](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#Predict "Create a prediction of sentiment")]
+    [!code-csharp[Predict](./snippets/sentiment-analysis/csharp/Program.cs#Predict "Create a prediction of sentiment")]
 
     [Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 函式會對單一資料列進行預測。
 
 6. 使用下列程式碼來顯示 `SentimentText` 和對應的情感預測：
 
-    [!code-csharp[OutputPrediction](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#OutputPrediction "Display prediction output")]
+    [!code-csharp[OutputPrediction](./snippets/sentiment-analysis/csharp/Program.cs#OutputPrediction "Display prediction output")]
 
 ## <a name="use-the-model-for-prediction"></a>使用模型來進行預測
 
@@ -325,27 +325,27 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 2. 請使用下列程式碼，在緊接著 `UseModelWithSingleItem()` 方法呼叫底下，從 `Main` 方法新增對新方法的呼叫：
 
-    [!code-csharp[CallPredictModelBatchItems](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CallUseModelWithBatchItems "Call the CallUseModelWithBatchItems method")]
+    [!code-csharp[CallPredictModelBatchItems](./snippets/sentiment-analysis/csharp/Program.cs#CallUseModelWithBatchItems "Call the CallUseModelWithBatchItems method")]
 
 3. 新增一些評論以測試 `UseModelWithBatchItems()` 方法中定型模型的預測：
 
-    [!code-csharp[PredictionData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#CreateTestIssues "Create test data for predictions")]
+    [!code-csharp[PredictionData](./snippets/sentiment-analysis/csharp/Program.cs#CreateTestIssues "Create test data for predictions")]
 
 ### <a name="predict-comment-sentiment"></a>預測評論情感
 
 利用 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法，使用該模型來預測評論資料情感：
 
-[!code-csharp[Predict](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#Prediction "Create predictions of sentiments")]
+[!code-csharp[Predict](./snippets/sentiment-analysis/csharp/Program.cs#Prediction "Create predictions of sentiments")]
 
 ### <a name="combine-and-display-the-predictions"></a>合併並顯示預測
 
 使用下列程式碼來為預測建立標頭：
 
-[!code-csharp[OutputHeaders](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#AddInfoMessage "Display prediction outputs")]
+[!code-csharp[OutputHeaders](./snippets/sentiment-analysis/csharp/Program.cs#AddInfoMessage "Display prediction outputs")]
 
 因為 `SentimentPrediction` 繼承自 `SentimentData`，所以 `Transform()` 方法會使用預測欄位填入 `SentimentText`。 隨著 ML.NET 處理的進行，每個元件都會新增資料行，使其易於顯示結果：
 
-[!code-csharp[DisplayPredictions](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#DisplayResults "Display the predictions")]
+[!code-csharp[DisplayPredictions](./snippets/sentiment-analysis/csharp/Program.cs#DisplayResults "Display the predictions")]
 
 ## <a name="results"></a>結果
 

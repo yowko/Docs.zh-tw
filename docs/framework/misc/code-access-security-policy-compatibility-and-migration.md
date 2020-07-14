@@ -1,22 +1,23 @@
 ---
 title: 程式碼存取安全性原則相容性和移轉
+description: 閱讀摘要，並參閱 .NET 4 中有關代碼啟用安全性原則相容性和遷移的連結。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - policy migration, compatibility
 - CLR policy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-ms.openlocfilehash: 949739b3336a9182eef583cc405e60e09d7ec09d
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: e5affd9d16635fa28342b5b7390a083185975f2b
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217153"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281728"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>程式碼存取安全性原則相容性和移轉
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-代碼啟用安全性（CAS）的原則部分在 .NET Framework 4 中已過時。 因此，如果您以[明確](#explicit_use)或[隱含](#implicit_use)方式（透過其他類型和成員）呼叫過時的原則類型和成員，可能會遇到編譯警告和執行時間例外狀況。
+代碼啟用安全性 (CAS) 的原則部分在 .NET Framework 4 中已過時。 因此，如果您透過其他類型和成員) [明確](#explicit_use)或[隱含](#implicit_use)地 (呼叫過時的原則類型和成員，則可能會遇到編譯警告和執行時間例外狀況。
 
 您可以透過下列方式避免出現警告和錯誤：
 
@@ -24,7 +25,7 @@ ms.locfileid: "77217153"
 
    \- 或 -
 
-- 使用[\<NetFx40_LegacySecurityPolicy > configuration](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)專案來選擇舊版的 CAS 原則行為。
+- 使用[ \<NetFx40_LegacySecurityPolicy> configuration](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)專案加入舊版的 CAS 原則行為。
 
 本主題包含下列幾節：
 
@@ -34,9 +35,9 @@ ms.locfileid: "77217153"
 
 - [錯誤與警告](#errors_and_warnings)
 
-- [遷移：取代過時的呼叫](#migration)
+- [移轉：取代過時呼叫](#migration)
 
-- [相容性：使用 CAS 原則舊版選項](#compatibility)
+- [相容性：使用 CAS 原則的舊版選項](#compatibility)
 
 <a name="explicit_use"></a>
 
@@ -124,15 +125,15 @@ CAS 原則通常用於決定組件或應用程式定義域的權限授權集或�
 
 ### <a name="application-domain-sandboxing"></a>應用程式定義域沙箱作業
 
-<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。 .NET Framework 4 會公開不需要針對此用途使用 <xref:System.Security.Policy.PolicyLevel> 的成員。 如需詳細資訊，請參閱[如何：在沙箱中執行部分信任的程式碼](how-to-run-partially-trusted-code-in-a-sandbox.md)。
+<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。 .NET Framework 4 會公開不需要用於此用途的成員 <xref:System.Security.Policy.PolicyLevel> 。 如需詳細資訊，請參閱[如何：在沙箱中執行部分信任的程式碼](how-to-run-partially-trusted-code-in-a-sandbox.md)。
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>決定部分信任程式碼的安全或合理權限集合
 
-主機通常需要決定對裝載的程式碼進行沙箱化處理的適當權限。 在 .NET Framework 4 之前，CAS 原則提供了使用 <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> 方法來執行此動作的方法。 做為取代，.NET Framework 4 提供 <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> 方法，其會傳回所提供辨識項的安全標準許可權集合。
+主機通常需要決定對裝載的程式碼進行沙箱化處理的適當權限。 在 .NET Framework 4 之前，CAS 原則提供了使用方法來執行此動作的方法 <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> 。 做為取代，.NET Framework 4 會提供 <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> 方法，以傳回所提供辨識項的安全標準許可權集合。
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>非沙箱化案例：組件載入的多載
 
-不對組件進行沙箱化處理，而使用組件載入多載的原因，可能是為了要使用在其他情況下無法使用的參數。 從 .NET Framework 4 開始，不需要 <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> 物件做為參數（例如 <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>）的元件載入多載，可啟用此案例。
+不對組件進行沙箱化處理，而使用組件載入多載的原因，可能是為了要使用在其他情況下無法使用的參數。 從 .NET Framework 4 開始，不需要物件做為參數（例如）的元件載入多載會 <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType> 啟用此案例。
 
 如果您要對組件進行沙箱化處理，請使用 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> 多載。
 
@@ -140,7 +141,7 @@ CAS 原則通常用於決定組件或應用程式定義域的權限授權集或�
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>相容性：使用 CAS 原則的舊版選項
 
-[\<NetFx40_LegacySecurityPolicy > configuration 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)可讓您指定進程或程式庫使用舊版的 CAS 原則。 當您啟用這個項目時，原則和辨識項多載的運作方式與在舊版 Framework 中的運作方式相同。
+[ \<NetFx40_LegacySecurityPolicy> Configuration 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)可讓您指定進程或程式庫使用舊版的 CAS 原則。 當您啟用這個項目時，原則和辨識項多載的運作方式與在舊版 Framework 中的運作方式相同。
 
 > [!NOTE]
 > CAS 原則行為是以執行階段版本為依據所指定，如此一來，修改某一個執行階段版本的 CAS 原則，就不會影響另一個版本的 CAS 原則。
@@ -153,7 +154,7 @@ CAS 原則通常用於決定組件或應用程式定義域的權限授權集或�
 </configuration>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何：在沙箱中執行部分信任的程式碼](how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)

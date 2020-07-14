@@ -72,7 +72,7 @@ Visual Basic 元組的欄位是讀寫;在具現化元組之後，您可以修改
 
 ## <a name="tuples-versus-structures"></a>元組與結構
 
-Visual Basic 元組是實數值型別，它是**system.valuetuple**泛型型別之一的實例。 例如，在 `holiday` 上一個範例中定義的元組是結構的實例 <xref:System.ValueTuple%603> 。 其設計為數據的輕量容器。 因為元組的目標是要讓您輕鬆地建立具有多個資料項目的物件，所以它缺少自訂結構可能會有的部分功能。 其中包括：
+Visual Basic 元組是實數值型別，它是**system.valuetuple**泛型型別之一的實例。 例如，在 `holiday` 上一個範例中定義的元組是結構的實例 <xref:System.ValueTuple%603> 。 其設計為數據的輕量容器。 因為元組的目標是要讓您輕鬆地建立具有多個資料項目的物件，所以它缺少自訂結構可能會有的部分功能。 這些包括：
 
 - 自訂成員。 您不能為元組定義自己的屬性、方法或事件。
 
@@ -171,6 +171,6 @@ Visual Basic 元組是 .NET Framework 4.7 中引進的其中一個**system.value
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 語言參考](index.md)

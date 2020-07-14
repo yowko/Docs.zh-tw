@@ -5,12 +5,12 @@ author: pkulikov
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 0cc42a196589a7ffe77300c9f2cd9cb28229a0a9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 8ee8b177dc9cc89c4f54956b8c0a274b1d093ece
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803972"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282081"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教學課程：使用 k 來分類鳶尾花的花卉-表示使用 ML.NET 的叢集
 
@@ -77,11 +77,11 @@ ms.locfileid: "85803972"
 1. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *IrisData.cs*。 接著，選取 [新增]**** 按鈕。
 1. 將下列的 `using` 指示詞加入新檔案：
 
-   [!code-csharp[Add necessary usings](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/IrisData.cs#Usings)]
+   [!code-csharp[Add necessary usings](./snippets/iris-clustering/csharp/IrisData.cs#Usings)]
 
 移除現有的類別定義，然後將下列程式碼 (定義 `IrisData` 和 `ClusterPrediction` 這兩個類別) 新增至 *IrisData.cs* 檔案：
 
-[!code-csharp[Define data classes](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/IrisData.cs#ClassDefinitions)]
+[!code-csharp[Define data classes](./snippets/iris-clustering/csharp/IrisData.cs#ClassDefinitions)]
 
 `IrisData` 是輸入資料類別，它含有資料集中每個特徵的定義。 請使用 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) 屬性來指定資料集檔案中來源資料行的索引。
 
@@ -102,21 +102,21 @@ ms.locfileid: "85803972"
 
 將下列程式碼加入 `Main` 方法的緊鄰上方，以指定這些路徑：
 
-[!code-csharp[Initialize paths](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#Paths)]
+[!code-csharp[Initialize paths](./snippets/iris-clustering/csharp/Program.cs#Paths)]
 
 若要將上述的程式碼進行編譯，請在 *Program.cs* 檔案頂端加入下列 `using` 指示詞：
 
-[!code-csharp[Add usings for paths](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#UsingsForPaths)]
+[!code-csharp[Add usings for paths](./snippets/iris-clustering/csharp/Program.cs#UsingsForPaths)]
 
 ## <a name="create-ml-context"></a>建立 ML 內容
 
 在 *Program.cs* 檔案頂端加入下列額外的 `using` 指示詞：
 
-[!code-csharp[Add Microsoft.ML usings](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#MLUsings)]
+[!code-csharp[Add Microsoft.ML usings](./snippets/iris-clustering/csharp/Program.cs#MLUsings)]
 
 在 `Console.WriteLine("Hello World!");` 方法中，以下列程式碼取代 `Main` 行：
 
-[!code-csharp[Create ML context](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreateContext)]
+[!code-csharp[Create ML context](./snippets/iris-clustering/csharp/Program.cs#CreateContext)]
 
 <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> 類別表示機器學習環境，並為資料載入、模型定型、預測和其他工作提供記錄機制和進入點。 這在概念上類似於在 Entity Framework 中使用的 `DbContext`。
 
@@ -124,7 +124,7 @@ ms.locfileid: "85803972"
 
 將下列程式碼新增至 `Main` 方法，以設定載入資料的方式：
 
-[!code-csharp[Create text loader](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreateDataView)]
+[!code-csharp[Create text loader](./snippets/iris-clustering/csharp/Program.cs#CreateDataView)]
 
 泛型[ `MLContext.Data.LoadFromTextFile` 擴充方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)會從提供的型別推斷資料集架構 `IrisData` ，並傳回 <xref:Microsoft.ML.IDataView> 可當做轉換器輸入使用的。
 
@@ -135,9 +135,9 @@ ms.locfileid: "85803972"
 - 將載入的資料行串連成一個 [特徵]**** 資料行，以供叢集定型器使用；
 - 使用 <xref:Microsoft.ML.Trainers.KMeansTrainer> 定型器透過 k-means++ 叢集演算法將模型定型。
 
-將下列程式碼新增至 `Main` 方法：
+將下列程式碼加入 `Main` 方法：
 
-[!code-csharp[Create pipeline](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreatePipeline)]
+[!code-csharp[Create pipeline](./snippets/iris-clustering/csharp/Program.cs#CreatePipeline)]
 
 此程式碼指定應該將資料集分成三個叢集。
 
@@ -145,19 +145,19 @@ ms.locfileid: "85803972"
 
 上述小節中加入的步驟已準備好訓練的管道，不過，還沒有開始執行。 將下列程式碼行新增至 `Main` 方法，以執行資料載入和模型定型：
 
-[!code-csharp[Train the model](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#TrainModel)]
+[!code-csharp[Train the model](./snippets/iris-clustering/csharp/Program.cs#TrainModel)]
 
 ### <a name="save-the-model"></a>儲存模型
 
 此時，您已有一個可整合至任何現有或新 .NET 應用程式的模型。 若要將您的模型儲存成 .zip 檔案，請將下列程式碼新增至 `Main` 方法：
 
-[!code-csharp[Save the model](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#SaveModel)]
+[!code-csharp[Save the model](./snippets/iris-clustering/csharp/Program.cs#SaveModel)]
 
 ## <a name="use-the-model-for-predictions"></a>使用模型來進行預測
 
 為了進行預測，請使用 <xref:Microsoft.ML.PredictionEngine%602> 類別，其帶領輸入類型的執行個體通過轉換程式管線，並產生輸出類型的執行個體。 將下列程式碼行新增至 `Main` 方法，以建立該類別的執行個體：
 
-[!code-csharp[Create predictor](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#Predictor)]
+[!code-csharp[Create predictor](./snippets/iris-clustering/csharp/Program.cs#Predictor)]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是安全線程。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立物件的， [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 以便在 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 整個應用程式中使用。 請參閱本指南，以瞭解如何[ `PredictionEnginePool` 在 ASP.NET CORE Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
 
@@ -170,15 +170,15 @@ ms.locfileid: "85803972"
 1. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *TestIrisData.cs*。 接著，選取 [新增]**** 按鈕。
 1. 將類別修改成靜態，如以下範例所示：
 
-   [!code-csharp[Make class static](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/TestIrisData.cs#Static)]
+   [!code-csharp[Make class static](./snippets/iris-clustering/csharp/TestIrisData.cs#Static)]
 
 本教學課程介紹此類別內一個鳶尾花資料執行個體。 您可以新增其他案例來對此模型進行實驗。 將下列程式碼新增至 `TestIrisData` 類別：
 
-[!code-csharp[Test data](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/TestIrisData.cs#TestData)]
+[!code-csharp[Test data](./snippets/iris-clustering/csharp/TestIrisData.cs#TestData)]
 
 若要找出指定項目所屬的群集，請返回 *Program.cs* 檔案，然後將下列程式碼加入至 `Main` 方法：
 
-[!code-csharp[Predict and output results](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#PredictionExample)]
+[!code-csharp[Predict and output results](./snippets/iris-clustering/csharp/Program.cs#PredictionExample)]
 
 執行程式，以查看哪些群集包含指定的資料執行個體以及從該執行個體到群集矩心的平方距離。 您的結果應該與以下類似：
 

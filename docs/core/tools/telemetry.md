@@ -3,12 +3,12 @@ title: .NET Core SDK 遙測
 description: 探索收集使用方式資訊以進行分析的 .NET Core SDK 遙測功能，它會收集哪些資料以及如何停用。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507278"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226565"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
@@ -16,7 +16,7 @@ ms.locfileid: "79507278"
 
 根據 [Creative Commons Attribution 授權](https://creativecommons.org/licenses/by/4.0/)，所收集的資料為匿名，且將會以彙總形式發佈。
 
-## <a name="scope"></a>影響範圍
+## <a name="scope"></a>範圍
 
 `dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用 `dotnet` 啟動應用程式時 (格式如下)，「不會收集」** 遙測：
 
@@ -46,13 +46,13 @@ The .NET Core tools collect usage data in order to help us improve your experien
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-要禁用此消息和 .NET Core 歡迎消息，請`DOTNET_NOLOGO`將環境變數`true`設置為 。 請注意，此變數對遙測退出宣告沒有影響。
+若要停用此訊息和 .NET Core 歡迎訊息，請將 `DOTNET_NOLOGO` 環境變數設定為 `true` 。 請注意，此變數對遙測選擇不會有任何影響。
 
 ## <a name="data-points"></a>資料點
 
 遙測功能不會收集個人資料，例如使用者名稱或電子郵件地址。 它不會掃描您的程式碼，也不會擷取專案層級資料，例如名稱、存放庫或作者。 資料使用 [Azure 監視器](https://azure.microsoft.com/services/monitor/)技術安全地傳送至 Microsoft 伺服器、在限制存取下保留，並在嚴格安全性控制下從安全的 [Azure 儲存體](https://azure.microsoft.com/services/storage/)系統發佈。
 
-保護您的隱私權對我們而言很重要。 如果您懷疑遙測收集敏感性資料或資料處理的方式不安全或不適當，請在 [dotnet/cli](https://github.com/dotnet/cli/issues) 存放庫中提出問題或傳送電子郵件至 [dotnet@microsoft.com](mailto:dotnet@microsoft.com) 以進行調查。
+保護您的隱私權對我們而言很重要。 如果您懷疑遙測正在收集敏感性資料，或資料被, 或不當處理，請在[dotnet/sdk](https://github.com/dotnet/sdk/issues)存放庫中提出問題，或傳送電子郵件給 [dotnet@microsoft.com](mailto:dotnet@microsoft.com) 進行調查。
 
 遙測功能會收集下列資料：
 
@@ -80,7 +80,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 某些命令會傳送額外的資料。 命令的子集會傳送第一個引數：
 
-| Command               | 傳送的第一個引數資料                |
+| 命令               | 傳送的第一個引數資料                |
 |-----------------------|-----------------------------------------|
 | `dotnet help <arg>`   | 要查詢的命令說明。  |
 | `dotnet new <arg>`    | 範本名稱 (已雜湊)。             |
@@ -130,7 +130,7 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-of-information"></a>避免無意中洩露資訊
+### <a name="avoid-inadvertent-disclosure-of-information"></a>避免意外洩漏資訊
 
 .NET Core 參與者及執行其自行建置之 .NET Core SDK 版本的任何其他人，都應該考慮其 SDK 原始程式碼的路徑。 如果使用 .NET Core SDK 時發生損毀，且該 SDK是自訂偵錯組建或透過自訂組建符號檔所設定，則會在堆疊追蹤過程中從組建電腦收集 SDK 來源檔案路徑，且不會進行雜湊處理。
 
@@ -139,4 +139,4 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ## <a name="see-also"></a>另請參閱
 
 - [.NET Core CLI Telemetry - 2019 Q2 Data](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2) (.NET Core CLI 遙測 - 2019 年第 2 季資料)
-- [遙測參考來源 (dotnet/cli 存放庫)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
+- [遙測參考來源 (dotnet/sdk 存放庫) ](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

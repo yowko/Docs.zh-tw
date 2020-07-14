@@ -1,17 +1,18 @@
 ---
 title: 指定進入點
+description: 瞭解如何指定進入點，以在 DLL 中識別函式的位置。 您可以藉由將進入點對應到另一個名稱，來重新命名函式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - EntryPoint field
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5628c54103410d127c2f9c4f56e1c6f897ada754
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181316"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282017"
 ---
 # <a name="specifying-an-entry-point"></a>指定進入點
 
@@ -90,7 +91,7 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)

@@ -2,15 +2,15 @@
 title: ASP.NET Core 的重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 07/08/2020
+ms.date: 07/10/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: ca9e615e88964e1c37e9c0b721bca8c34bf671ac
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 1a3c8b04bc574822f1576ca0720ed7a01c303880
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174389"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281676"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
 
@@ -62,6 +62,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [Kestrel：傳輸抽象層變更](#kestrel-transport-abstractions-removed-and-made-public)
 - [當地語系化：已標記為過時的 Api](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
 - [當地語系化：已移除 "Pubternal" Api](#localization-pubternal-apis-removed)
+- [當地語系化：已在要求當地語系化中介軟體中移除過時的函式](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [當地語系化：已移除 ResourceManagerWithCultureStringLocalizer 類別和 WithCulture 介面成員](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [記錄： DebugLogger 類別已設為內部](#logging-debuglogger-class-made-internal)
 - [MVC：已移除控制器動作非同步尾碼](#mvc-async-suffix-trimmed-from-controller-action-names)
@@ -128,6 +129,10 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 ***
 
 [!INCLUDE[Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
+
+***
+
+[!INCLUDE[Localization: Obsolete constructor removed in request localization middleware](~/includes/core-changes/aspnetcore/5.0/localization-requestlocalizationmiddleware-constructor-removed.md)]
 
 ***
 

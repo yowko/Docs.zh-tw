@@ -4,12 +4,12 @@ description: 了解如何建置產品銷售資料的異常偵測應用程式。 
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: b744b2597abceb91d2c36f596b79fb75c2492563
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: cf61f197e4befebdbb1fbf2ca4cbcdc61c48780a
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803283"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281663"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>教學課程：使用 ML.NET 偵測產品銷售額中的異常
 
@@ -50,7 +50,7 @@ ms.locfileid: "85803283"
 
 4. 在您的 *Program.cs* 檔案最上方新增下列 `using` 陳述式：
 
-    [!code-csharp[AddUsings](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#AddUsings "Add necessary usings")]
+    [!code-csharp[AddUsings](./snippets/sales-anomaly-detection/csharp/Program.cs#AddUsings "Add necessary usings")]
 
 ### <a name="download-your-data"></a>下載您的資料
 
@@ -92,7 +92,7 @@ ms.locfileid: "85803283"
 
 4. 移除現有類別定義，然後將下列具有 `ProductSalesData` 和 `ProductSalesPrediction` 兩個類別的程式碼新增至 *ProductSalesData.cs* 檔案：
 
-    [!code-csharp[DeclareTypes](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/ProductSalesData.cs#DeclareTypes "Declare data record types")]
+    [!code-csharp[DeclareTypes](./snippets/sales-anomaly-detection/csharp/ProductSalesData.cs#DeclareTypes "Declare data record types")]
 
     `ProductSalesData` 會指定輸入資料類別。 [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) 屬性會指定應該載入資料集內的哪些資料行 (依資料行索引)。
 
@@ -105,13 +105,13 @@ ms.locfileid: "85803283"
 
 6. 將下列程式碼新增至緊接在 `Main` 方法上方的一行，以指定這些路徑：
 
-    [!code-csharp[Declare global variables](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
+    [!code-csharp[Declare global variables](./snippets/sales-anomaly-detection/csharp/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
 1. 將 `Main` 方法中的 `Console.WriteLine("Hello World!")` 程式碼替換成下列程式碼，宣告並初始化 `mlContext` 變數：
 
-    [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateMLContext "Create the ML Context")]
+    [!code-csharp[CreateMLContext](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateMLContext "Create the ML Context")]
 
     [MLContext 類別](xref:Microsoft.ML.MLContext)是所有 ML.NET 作業的起點，且初始化 `mlContext` 會建立新的 ML.NET 環境，其可在模型建立工作流程物件之間共用。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
 
@@ -121,7 +121,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 1. 將下列程式碼新增為 `Main()` 方法的下一行：
 
-    [!code-csharp[LoadData](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#LoadData "loading dataset")]
+    [!code-csharp[LoadData](./snippets/sales-anomaly-detection/csharp/Program.cs#LoadData "loading dataset")]
 
     [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) 會定義資料結構描述並讀入檔案中。 會接受資料路徑變數然後傳回 `IDataView`。
 
@@ -160,7 +160,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 將下列方法新增至 `Program.cs`：
 
-[!code-csharp[CreateEmptyDataView](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEmptyDataView)]
+[!code-csharp[CreateEmptyDataView](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateEmptyDataView)]
 
 `CreateEmptyDataView()` 會產生空白資料檢視物件，其包含將作為 `IEstimator.Fit()` 方法輸入的正確結構描述。
 
@@ -183,25 +183,25 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 1. 使用 [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator) 定型偵測尖峰的模型。 使用下列程式碼將它新增至 `DetectSpike()` 方法：
 
-    [!code-csharp[AddSpikeTrainer](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#AddSpikeTrainer)]
+    [!code-csharp[AddSpikeTrainer](./snippets/sales-anomaly-detection/csharp/Program.cs#AddSpikeTrainer)]
 
 1. 將下列內容新增為 `DetectSpike()` 方法的下一行程式碼來建立尖峰偵測轉換：
 
-    [!code-csharp[TrainModel1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TrainModel1)]
+    [!code-csharp[TrainModel1](./snippets/sales-anomaly-detection/csharp/Program.cs#TrainModel1)]
 
 1. 新增下列程式碼將 `productSales` 資料轉換成 `DetectSpike()` 方法中的下一行程式碼：
 
-    [!code-csharp[TransformData1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TransformData1)]
+    [!code-csharp[TransformData1](./snippets/sales-anomaly-detection/csharp/Program.cs#TransformData1)]
 
     上述程式碼使用 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法對多個資料集輸入資料列進行預測。
 
-1. `transformedData`使用 CreateEnumerable （）方法搭配下列程式碼，將您的轉換成強型別 `IEnumerable` ，以便更輕鬆地顯示： [CreateEnumerable()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A)
+1. `transformedData` `IEnumerable` 使用[CreateEnumerable ( # B1](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A)方法搭配下列程式碼，將您的轉換成強型別，以方便顯示：
 
-    [!code-csharp[CreateEnumerable1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEnumerable1)]
+    [!code-csharp[CreateEnumerable1](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateEnumerable1)]
 
 1. 使用下列 <xref:System.Console.WriteLine?displayProperty=nameWithType> 程式碼建立顯示標頭行：
 
-    [!code-csharp[DisplayHeader1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayHeader1)]
+    [!code-csharp[DisplayHeader1](./snippets/sales-anomaly-detection/csharp/Program.cs#DisplayHeader1)]
 
     您會在尖峰偵測結果中顯示下列資訊：
 
@@ -211,11 +211,11 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 1. 使用下列程式碼逐一查看 `predictions` `IEnumerable` 並顯示結果：
 
-    [!code-csharp[DisplayResults1](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayResults1)]
+    [!code-csharp[DisplayResults1](./snippets/sales-anomaly-detection/csharp/Program.cs#DisplayResults1)]
 
 1. 在 `Main()` 方法中新增 `DetectSpike()` 方法的呼叫：
 
-    [!code-csharp[CallDetectSpike](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CallDetectSpike)]
+    [!code-csharp[CallDetectSpike](./snippets/sales-anomaly-detection/csharp/Program.cs#CallDetectSpike)]
 
 ## <a name="spike-detection-results"></a>尖峰偵測結果
 
@@ -289,23 +289,23 @@ Alert   Score   P-Value
 
 1. 使用下列程式碼在 `DetectChangepoint()` 方法中建立 [iidChangePointEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator)：
 
-    [!code-csharp[AddChangepointTrainer](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#AddChangepointTrainer)]
+    [!code-csharp[AddChangepointTrainer](./snippets/sales-anomaly-detection/csharp/Program.cs#AddChangepointTrainer)]
 
 1. 如同您先前進行的操作，請在 `DetectChangePoint()` 方法中新增下列程式碼行，以從估算工具建立轉換：
 
-    [!code-csharp[TrainModel2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TrainModel2)]
+    [!code-csharp[TrainModel2](./snippets/sales-anomaly-detection/csharp/Program.cs#TrainModel2)]
 
 1. 將下列程式碼新增至 `DetectChangePoint()`，以使用 `Transform()` 方法來轉換資料：
 
-    [!code-csharp[TransformData2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#TransformData2)]
+    [!code-csharp[TransformData2](./snippets/sales-anomaly-detection/csharp/Program.cs#TransformData2)]
 
 1. 如同您先前所做的， `transformedData` 使用方法搭配下列程式碼，將轉換成強型別 `IEnumerable` 以方便顯示 `CreateEnumerable()` ：
 
-    [!code-csharp[CreateEnumerable2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CreateEnumerable2)]
+    [!code-csharp[CreateEnumerable2](./snippets/sales-anomaly-detection/csharp/Program.cs#CreateEnumerable2)]
 
 1. 下列列程式碼作為 `DetectChangePoint()` 方法中的下一行，建立顯示標頭：
 
-    [!code-csharp[DisplayHeader2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayHeader2)]
+    [!code-csharp[DisplayHeader2](./snippets/sales-anomaly-detection/csharp/Program.cs#DisplayHeader2)]
 
     您會在變更點偵測結果中顯示下列資訊：
 
@@ -316,11 +316,11 @@ Alert   Score   P-Value
 
 1. 逐一查看 `predictions` `IEnumerable` ，並使用下列程式碼來顯示結果：
 
-    [!code-csharp[DisplayResults2](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#DisplayResults2)]
+    [!code-csharp[DisplayResults2](./snippets/sales-anomaly-detection/csharp/Program.cs#DisplayResults2)]
 
 1. 在 `Main()` 方法中新增 `DetectChangepoint()` 方法的下列呼叫：
 
-    [!code-csharp[CallDetectChangepoint](~/samples/snippets/machine-learning/ProductSalesAnomalyDetection/csharp/Program.cs#CallDetectChangepoint)]
+    [!code-csharp[CallDetectChangepoint](./snippets/sales-anomaly-detection/csharp/Program.cs#CallDetectChangepoint)]
 
 ## <a name="change-point-detection-results"></a>變更點偵測結果
 

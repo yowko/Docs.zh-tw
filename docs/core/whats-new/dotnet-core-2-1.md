@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 94f3db14046ad5d63975d0ca44425abed5d52062
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283438"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281533"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -77,7 +77,7 @@ dotnet tool install -g dotnetsay
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>使用 `dotnet tool` 命令來管理工具
 
-在 .NET Core 2.1 SDK 中，所有工具作業都使用 `dotnet tool` 命令。 有下列選項可供使用：
+在 .NET Core 2.1 SDK 中，所有工具作業都使用 `dotnet tool` 命令。 可用選項如下：
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md)以安裝工具。
 
@@ -177,17 +177,17 @@ dotnet tool install -g dotnetsay
 
 下列範例使用 <xref:System.Span%601> 和 <xref:System.Memory%601> 執行個體來提供陣列中 10 個元素的虛擬檢視。
 
-[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
+[!code-csharp[Span\<T>](./snippets/dotnet-core-2-1/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](./snippets/dotnet-core-2-1/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 壓縮
 
 .NET Core 2.1 新增對 Brotli 壓縮和解壓縮的支援。 Brotli 是定義於 [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) \(英文\) 中的一般用途無失真壓縮演算法，並受到大部分網頁瀏覽器和主流 Web 伺服器的支援。 您可以使用資料流形式的 <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> 類別，或是高效能範圍型的 <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> 和 <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> 類別。 下列範例說明搭配 <xref:System.IO.Compression.BrotliStream> 類別進行壓縮：
 
-[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
+[!code-csharp[Brotli compression](./snippets/dotnet-core-2-1/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](./snippets/dotnet-core-2-1/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> 行為與 <xref:System.IO.Compression.DeflateStream> 和 <xref:System.IO.Compression.GZipStream> 相同，這可讓您輕鬆地將呼叫這些 API 的程式碼轉換為 <xref:System.IO.Compression.BrotliStream>。
 
@@ -249,7 +249,7 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 如需重大變更的詳細資訊，請參閱[從2.0 版遷移至2.1 的重大變更](../compatibility/2.0-2.1.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Core 3.1 的新功能](dotnet-core-3-1.md)
 - [EF Core 2.1 的新功能](/ef/core/what-is-new/ef-core-2.1)

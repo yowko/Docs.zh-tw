@@ -90,7 +90,7 @@ class SampleClass
 
 大部分屬性都具有方法或程序，可以設定及取得屬性值。 但是您可以建立唯讀或唯寫屬性來限制不得修改或讀取。 在 C# 中，則可以省略 `get` 或 `set` 屬性方法。 不過，自動執行的屬性不能是寫入。 唯讀自動執行的屬性可以在包含類別的函式中設定。
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [get](../../language-reference/keywords/get.md)
 - [set](../../language-reference/keywords/set.md)
@@ -122,7 +122,7 @@ public int SampleMethod(int sampleParam) { }
 
 在多數情況下，您是在類別定義中宣告方法。 不過， C# 也支援「擴充方法」**，允許您在現有類別的實際定義之外將方法新增至類別。
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [方法](../classes-and-structs/methods.md)
 - [擴充方法](../classes-and-structs/extension-methods.md)
@@ -188,9 +188,9 @@ Container.Nested nestedInstance = new Container.Nested()
 | C# 修飾詞 | 定義 |
 |--|--|
 | [public](../../language-reference/keywords/public.md) | 類型或成員可由相同組件或參考該組件的另一個組件中的任何其他程式碼存取。 |
-| [私人](../../language-reference/keywords/private.md) | 類型或成員只能由相同類別中的程式碼存取。 |
-| [受保護](../../language-reference/keywords/protected.md) | 類型或成員只能由相同類別中，或是衍生類別中的程式碼存取。 |
-| [內部](../../language-reference/keywords/internal.md) | 類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。 |
+| [private](../../language-reference/keywords/private.md) | 類型或成員只能由相同類別中的程式碼存取。 |
+| [protected](../../language-reference/keywords/protected.md) | 類型或成員只能由相同類別中，或是衍生類別中的程式碼存取。 |
+| [internal](../../language-reference/keywords/internal.md) | 類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。 |
 | [protected internal](../../language-reference/keywords/protected-internal.md) | 類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。 |
 | [private protected](../../language-reference/keywords/private-protected.md) | 只有在基底類別組件中，於相同類別或衍生類別內的程式碼才能存取類型或成員。 |
 
@@ -224,7 +224,7 @@ var sampleObject = new SampleClass
 };
 ```
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [new 運算子](../../language-reference/operators/new-operator.md)
 - [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
@@ -296,7 +296,7 @@ public sealed class A { }
 public abstract class B { }
 ```
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [sealed](../../language-reference/keywords/sealed.md)
 - [概要](../../language-reference/keywords/abstract.md)
@@ -309,8 +309,8 @@ public abstract class B { }
 
 | C# 修飾詞 | 定義 |
 |--|--|
-| [虛擬](../../language-reference/keywords/virtual.md) | 允許在衍生類別中覆寫類別成員。 |
-| [覆寫](../../language-reference/keywords/override.md) | 覆寫在基底類別中定義的虛擬 (可覆寫) 成員。 |
+| [virtual](../../language-reference/keywords/virtual.md) | 允許在衍生類別中覆寫類別成員。 |
+| [override](../../language-reference/keywords/override.md) | 覆寫在基底類別中定義的虛擬 (可覆寫) 成員。 |
 | [概要](../../language-reference/keywords/abstract.md) | 要求在衍生類別中覆寫類別成員。 |
 | [new 修飾詞](../../language-reference/keywords/new-modifier.md) | 隱藏繼承自基底類別的成員。 |
 
@@ -361,7 +361,7 @@ var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [.NET 的泛型](../../../standard/generics/index.md)
 - [泛型 - C# 程式設計手冊](../generics/index.md)

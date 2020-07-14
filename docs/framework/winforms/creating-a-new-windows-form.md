@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: f1ef899e46c804cb174814b0abbd9490ce6221d5
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: e9431ebad3fee4eaa1d39f4ac95a57a6d0313fc8
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325953"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281715"
 ---
 # <a name="creating-a-new-windows-form"></a>建立新的 Windows Form
 本主題包含主題的連結，說明如何建立第一個 Windows Forms 應用程式。 此外，本節中的主題會介紹一些在您開始建立 Windows Forms 應用程式時應該了解的基本詞彙和方針。 若要深入瞭解 Windows Forms 應用程式、您可以在其上使用的控制項、事件和處理事件，以及如何處理使用者的輸入，請參閱相關主題清單。  
   
 ## <a name="in-this-section"></a>本節內容  
- [Windows Forms 座標](windows-forms-coordinates.md)。  
+ [Windows Form 座標](windows-forms-coordinates.md)  
  說明用戶端和螢幕座標。  
   
  [作法：從命令列建立 Windows Forms 應用程式](how-to-create-a-windows-forms-application-from-the-command-line.md)  

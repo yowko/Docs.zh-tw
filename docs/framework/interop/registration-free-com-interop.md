@@ -1,5 +1,6 @@
 ---
 title: 免註冊的 COM Interop
+description: 使用免註冊 COM Interop 來啟動元件，而不使用 Windows 登錄來儲存元件資訊。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6a4dfc54152ade6136e4292bbd1c4522553d491
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124968"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281598"
 ---
 # <a name="registration-free-com-interop"></a>免註冊的 COM Interop
 免註冊的 COM Interop 不需要使用 Windows 登錄來儲存組件資訊，即可啟動元件。 您不是在部署期間在電腦上登錄元件，而是在設計階段建立 Win32 樣式資訊清單檔案，其中包含繫結和啟動的相關資訊。 這些資訊清單檔案 (而不是登錄機碼) 會引導物件的啟動。  
@@ -52,6 +53,6 @@ ms.locfileid: "73124968"
     > [!NOTE]
     > 並存執行是 .NET Framework 的功能，可讓多版執行階段，以及使用某版執行階段的多版應用程式和元件，同時在同一部電腦上執行。 並存執行和並存組件是提供並行功能的不同機制。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：設定免註冊啟用的 .NET Framework 架構 COM 元件](configure-net-framework-based-com-components-for-reg.md)
+- [作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用](configure-net-framework-based-com-components-for-reg.md)
