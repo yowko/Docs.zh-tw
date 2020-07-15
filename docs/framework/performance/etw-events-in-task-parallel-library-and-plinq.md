@@ -1,19 +1,20 @@
 ---
 title: 工作平行程式庫和 PLINQ 中的 ETW 事件
+description: 深入瞭解工作平行程式庫和 PLINQ 中的 ETW 事件。 使用這些事件來分析應用程式並進行疑難排解。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: 61429babf7378b9d271ffd60a6228ae4bfe7a5e5
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: a1a068b7ba94d5e5be4fd90d6adb48b0d25a8b9e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644253"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309634"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>工作平行程式庫和 PLINQ 中的 ETW 事件
 
-工作平行程式庫和 PLINQ 都會產生 Windows 事件追蹤 (ETW) 事件，您可使用 Windows Performance Analyzer 等工具，利用這些事件對應用程式進行程式碼剖析和疑難排解。 但是,在大多數情況下,分析並行應用程式代碼的最佳方式是在可視化工作室中使用[併發可視化工具](/visualstudio/profiling/concurrency-visualizer)。
+工作平行程式庫和 PLINQ 都會產生 Windows 事件追蹤 (ETW) 事件，您可使用 Windows Performance Analyzer 等工具，利用這些事件對應用程式進行程式碼剖析和疑難排解。 不過，在大部分的情況下，分析平行應用程式程式碼的最佳方式是在 Visual Studio 中使用並行[視覺化](/visualstudio/profiling/concurrency-visualizer)。
 
 ## <a name="task-parallel-library-etw-events"></a>工作平行程式庫 ETW 事件
 

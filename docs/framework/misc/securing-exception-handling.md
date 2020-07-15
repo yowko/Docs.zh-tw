@@ -10,15 +10,15 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 009e587c0458488db6c2aa92e13311ddc08a64b1
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281991"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309036"
 ---
 # <a name="securing-exception-handling"></a>設定例外狀況處理的安全性
-在 Visual C++ 和 Visual Basic 中，堆疊進一步的篩選運算式會在任何**finally**語句之前執行。 與該篩選相關聯的**catch**區塊會在**finally**語句之後執行。 如需詳細資訊，請參閱[使用使用者篩選的例外](../../standard/exceptions/using-user-filtered-exception-handlers.md)狀況。 本節將探討此順序的安全性含意。 請考慮下列可說明篩選語句和**finally**語句執行順序的虛擬程式碼範例。  
+在 Visual C++ 和 Visual Basic 中，堆疊進一步的篩選運算式會在任何語句之前執行 `finally` 。 與該篩選相關聯的**catch**區塊會在 `finally` 語句之後執行。 如需詳細資訊，請參閱[使用使用者篩選的例外](../../standard/exceptions/using-user-filtered-exception-handlers.md)狀況。 本節將探討此順序的安全性含意。 請考慮下列可說明篩選語句和語句執行順序的虛擬程式碼範例 `finally` 。  
   
 ```cpp  
 void Main()
@@ -59,7 +59,7 @@ Finally
 Catch  
 ```  
   
- 此篩選準則會在**finally**語句之前執行，因此在執行其他程式碼時，可能會造成狀態變更的任何專案引進安全性問題。 例如：  
+ 此篩選準則會在 `finally` 語句之前執行，因此在執行其他程式碼時，可能會造成狀態變更的任何專案引進安全性問題。 例如：  
   
 ```cpp  
 try
@@ -78,7 +78,7 @@ finally
 }  
 ```  
   
- 這個虛擬程式可讓篩選準則更高堆疊，以執行任意程式碼。 其他會有類似效果的作業範例是暫時模擬另一個身分識別、設定略過部分安全性檢查的內部旗標，或變更與執行緒相關聯的文化特性。 建議的解決方法是引進例外狀況處理常式，以將程式碼的變更與呼叫端的篩選區塊隔離線上程狀態。 不過，請務必適當地引進例外狀況處理常式，否則將不會修正此問題。 下列範例會切換 UI 文化特性，但任何一種執行緒狀態變更都可能類似地公開。  
+ 這個虛擬程式可讓篩選準則更高堆疊，以執行任意程式碼。 其他會有類似效果的作業範例是暫時模擬另一個身分識別、設定略過部分安全性檢查的內部旗標，或變更與執行緒相關聯的文化特性。 建議的解決方法是引進例外狀況處理常式，以將程式碼的變更與呼叫端的篩選區塊隔離線上程狀態。 不過，請務必適當地引進例外狀況處理常式，否則不會修正此問題。 下列範例會切換 UI 文化特性，但任何一種執行緒狀態變更都可能類似地公開。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -135,9 +135,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- 這不會修正問題，因為**finally**語句尚未在取得控制項之前執行 `FilterFunc` 。  
+ 這不會修正問題，因為 `finally` 語句在取得控制項之前並未執行 `FilterFunc` 。  
   
- 下列範例會藉由確保**finally**子句在提供呼叫端例外狀況篩選區塊的例外狀況之前先執行，以修正問題。  
+ 下列範例會修正此問題，方法是確保 `finally` 子句先執行，再提供呼叫端例外狀況篩選區塊的例外狀況。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -159,6 +159,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)

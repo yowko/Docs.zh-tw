@@ -1,18 +1,18 @@
 ---
 title: 自訂結構封送處理 - .NET
-description: 了解如何自訂 .NET 如何以原生表示法封送處理您的結構。
+description: 瞭解如何自訂 .NET 將結構封送處理成原生標記法的方式。
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 8248ca589f41967a9112ba61c09599b337814de7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c82e0099c44b8033cad241d69bdd284243711a50
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003889"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374529"
 ---
-# <a name="customizing-structure-marshaling"></a>自訂結構封送處理
+# <a name="customize-structure-marshaling"></a>自訂結構封送處理
 
 有時候，結構的預設封送處理規則並不是完全如您所需要。 .NET 執行階段提供一些延伸點，讓您自訂您結構的配置以及封送處理欄位的方式。
 
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-使用 WinRT 型 API 時，您可能需要將字串封送處理為 `HSTRING`。  使用 <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 值，您可以將字串封送處理為 `HSTRING`。
+使用 WinRT 型 API 時，您可能需要將字串封送處理為 `HSTRING`。 使用 <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 值，您可以將字串封送處理為 `HSTRING`。
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>自訂十進位欄位封送處理
 
-如果您使用的是 Windows，您可能會遇到一些使用原生[ `CY` 或 `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1)結構的 api。 根據預設，.NET `decimal` 類型會封送處理至原生 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 結構。 不過，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 搭配 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值來指示封送處理器將 `decimal` 值轉換為原生 `CY` 值。
+如果您使用的是 Windows，您可能會遇到一些使用原生[ `CY` 或 `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy-r1)結構的 api。 根據預設，.NET `decimal` 類型會封送處理至原生 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal-r1) 結構。 不過，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 搭配 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值來指示封送處理器將 `decimal` 值轉換為原生 `CY` 值。
 
 ```csharp
 public struct Currency
@@ -334,7 +334,7 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>封送處理 `System.Object`
+## <a name="marshal-systemobject"></a>送給`System.Object`
 
 在 Windows 上，您可以將 `object` 型別欄位封送處理為機器碼。 您可以將這些欄位封送處理為下列三種類型的其中一種：
 

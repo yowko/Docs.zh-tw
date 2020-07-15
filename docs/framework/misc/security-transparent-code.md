@@ -1,16 +1,17 @@
 ---
 title: 安全性透明的程式碼
+description: 瞭解透明程式碼模型的用途、如何指定透明度層級，以及安全性中的透明度強制執行。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a167efe12b88f796fba4abc6d60ebffe4693709a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215813"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309842"
 ---
 # <a name="security-transparent-code"></a>安全性透明的程式碼
 
@@ -33,7 +34,7 @@ ms.locfileid: "77215813"
 透明度是在 .NET Framework 2.0 版所引入的，以簡化安全性模型，並且讓您更輕鬆地撰寫和部署安全程式庫與應用程式。 Microsoft Silverlight 中也使用了透明程式碼，以簡化部分信任應用程式的開發。
 
 > [!NOTE]
-> 當您開發部分信任應用程式時，必須注意目標主機的權限需求。 您可以開發使用某些主機不允許之資源的應用程式。 雖然這種應用程式在編譯時不會發生任何錯誤，不過在將它載入裝載環境時，就會失敗。 如果您已經使用 Visual Studio 開發應用程式，就可以在來自開發環境的部分信任或受限制的權限集合中啟用偵錯。 如需詳細資訊，請參閱 [如何：以限制使用權限偵錯 ClickOnce 應用程式](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。 提供給 ClickOnce 應用程式的「計算使用權限」功能也可用於任何部分信任的應用程式。
+> 當您開發部分信任應用程式時，必須注意目標主機的權限需求。 您可以開發使用某些主機不允許之資源的應用程式。 雖然這種應用程式在編譯時不會發生任何錯誤，不過在將它載入裝載環境時，就會失敗。 如果您已經使用 Visual Studio 開發應用程式，就可以在來自開發環境的部分信任或受限制的權限集合中啟用偵錯。 如需詳細資訊，請參閱 [How to: Debug a ClickOnce Application with Restricted Permissions](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。 提供給 ClickOnce 應用程式的「計算使用權限」功能也可用於任何部分信任的應用程式。
 
 ## <a name="specifying-the-transparency-level"></a>指定透明度層級
 
@@ -41,7 +42,7 @@ ms.locfileid: "77215813"
 
 這些層級如下所示：
 
-- 層級2（<xref:System.Security.SecurityRuleSet.Level2>）– .NET Framework 4 透明度規則。
+- 層級2（ <xref:System.Security.SecurityRuleSet.Level2> ）– .NET Framework 4 透明度規則。
 
 - 層級 1 (<xref:System.Security.SecurityRuleSet.Level1>) – .NET Framework 2.0 透明度規則。
 
@@ -97,4 +98,4 @@ ms.locfileid: "77215813"
 ## <a name="see-also"></a>另請參閱
 
 - [安全性透明的程式碼，層級1](security-transparent-code-level-1.md)
-- [安全性透明的程式碼，層級2](security-transparent-code-level-2.md)
+- [安全性透明的程式碼，層級 2](security-transparent-code-level-2.md)

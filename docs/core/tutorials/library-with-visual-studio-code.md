@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 建立 .NET Standard 類別庫
 description: 瞭解如何使用 Visual Studio Code 建立 .NET Standard 類別庫。
 ms.date: 06/08/2020
-ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 714b5cf2125f1d296adc4a4dc7d1b6c9420417ed
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701795"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308880"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET Standard 程式庫
 
@@ -15,7 +15,7 @@ ms.locfileid: "84701795"
 
 「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 部署呼叫您的程式庫。 當您完成類別庫時，您可以將它散發為協力廠商元件，或作為一或多個應用程式的配套元件。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 1. 已安裝[c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能的[Visual Studio Code](https://code.visualstudio.com/) 。 如需有關如何在 Visual Studio Code 上安裝延伸模組的詳細資訊，請參閱[VS Code 延伸模組 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)。
 2. [.Net Core 3.1 SDK 或更新版本](https://dotnet.microsoft.com/download)
@@ -172,7 +172,7 @@ ms.locfileid: "84701795"
 1. 執行以下命令：
 
    ```dotnetcli
-   dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
+   dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
    ```
 
    終端機輸出如下列範例所示：

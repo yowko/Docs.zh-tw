@@ -2,12 +2,12 @@
 title: 將您的 Windows 市集應用程式移轉至 .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389708"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309192"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>將您的 Windows Store 應用程式遷移至 .NET Native
 
@@ -58,7 +58,7 @@ ms.locfileid: "81389708"
 > [!NOTE]
 > 將應用程式移植到 .NET Native 時，您應該徹底測試所有動態程式碼路徑。
 
-.NET Native 的預設設定對大部分的開發人員而言已經足夠，但有些開發人員可能會想要使用執行時間指示詞（.）來微調其設定。 此外，在某些情況下，.NET Native 編譯器無法判斷哪些中繼資料必須可用於反映，並依賴提示，特別是在下列情況下：
+.NET Native 的預設設定對大部分的開發人員而言已經足夠，但有些開發人員可能想要使用執行時間指示詞（.rd.xml）檔案微調其設定。 此外，在某些情況下，.NET Native 編譯器無法判斷哪些中繼資料必須可用於反映，並依賴提示，特別是在下列情況下：
 
 - 無法以靜態方式判斷某些結構，例如 <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 。
 
@@ -79,7 +79,7 @@ ms.locfileid: "81389708"
 
 - 不支援 .NET Framework 類別庫中，透過類型和成員的私用反映。 不過，您可以透過自己的私用類型和成員，以及協力廠商程式庫中的類型和成員來進行反映。
 
-- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 屬性針對表示傳回值的 `false` 物件，正確地傳回 <xref:System.Reflection.ParameterInfo> 。 在適用於 Windows 市集應用程式的 .NET 中，它會傳回 `true`。 中繼語言 (IL) 不會直接支援此作業，而是將解譯工作留給語言。
+- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 屬性針對表示傳回值的 `false` 物件，正確地傳回 <xref:System.Reflection.ParameterInfo> 。 在適用於 Windows 市集應用程式的 .NET 中，它會傳回 `true`。 中繼語言（IL）不直接支援這種情況，而轉譯會留給語言。
 
 - 不支援 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 結構上的公用成員。 只有針對 LINQ、運算式樹狀架構和靜態陣列初始設定，才會支援這些類型。
 
@@ -278,7 +278,7 @@ ms.locfileid: "81389708"
 
 - 委派
 
-- 字串 (Unicode、Ansi 和 HSTRING)
+- 字串（Unicode、ANSI 和 HSTRING）
 
 - 結構 (`byref` 和 `byval`)
 

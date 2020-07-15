@@ -4,26 +4,27 @@ description: 瞭解您可以在哪些版本的 macOS 上安裝 .NET Core。
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: bb1a0fa24e2f6e8850cbe59378793ff846f04ba9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804481"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308919"
 ---
 # <a name="install-net-core-on-macos"></a>在 macOS 上安裝 .NET Core
 
 > [!div class="op_single_selector"]
 >
-> - [在 Windows 上安裝](windows.md)
+> - [安裝在 Windows 上](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [在 Linux 上安裝](linux.md)
+> - [安裝在 Linux 上](linux.md)
 
 在本文中，您將瞭解如何在 macOS 上安裝 .NET Core。 .NET Core 是由執行時間和 SDK 所組成。 執行時間是用來執行 .NET Core 應用程式，且不一定會包含在應用程式中。 SDK 可用來建立 .NET Core 應用程式和程式庫。 .NET Core 執行時間一律會與 SDK 一起安裝。
 
 .NET Core 的最新版本為3.1。
 
-[下載 .NET Core。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [下載 .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>支援的版本
 
@@ -59,13 +60,15 @@ ms.locfileid: "85804481"
 *.NET Core 執行時間*\
 此執行時間是最簡單的執行時間，不包含任何其他執行時間。 強烈建議您安裝*ASP.NET Core 運行*時間，以與 .net Core 應用程式達到最佳的相容性。
 
-[下載 .NET Core 執行時間。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [下載 .NET Core 執行時間](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK 資訊
 
 SDK 可用來建立及發佈 .NET Core 應用程式和程式庫。 安裝 SDK 同時包含[運行](#runtime-information)時間： ASP.NET CORE 和 .net Core。
 
-[下載 .NET Core SDK。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [下載 .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>相依性
 

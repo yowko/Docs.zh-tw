@@ -4,12 +4,12 @@ description: 本教學課程會示範如何使用 ML.NET 建置迴歸模型，�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 27054e28f9a4fa628f0d7348d45528b690d7da83
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: beb48c9252b83cd693c351d39882b7ac9d08d882
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281767"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309712"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教學課程：使用回歸與 ML.NET 預測價格
 
@@ -25,7 +25,7 @@ ms.locfileid: "86281767"
 > * 評估模型
 > * 使用模型來進行預測
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本，或是已安裝「.net Core 跨平臺開發」工作負載的 Visual Studio 2017 15.6 或更新版本。
 
@@ -35,7 +35,7 @@ ms.locfileid: "86281767"
 
 1. 在您專案中建立名為 *Data* 的目錄以用來儲存資料集和模型檔案。
 
-1. 安裝**Microsoft.ML** NuGet 套件：
+1. 安裝**Microsoft.ML**和**FastTree** NuGet 套件：
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
@@ -132,11 +132,11 @@ ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字�
 
 [!code-csharp[LoadTrainData](./snippets/predict-prices/csharp/Program.cs#6 "loading training dataset")]
 
-當您想要預測出租車行程費用時，資料 `FareAmount` 行是 `Label` 您將預測 (模型) 的輸出。 使用 `CopyColumnsEstimator` 轉換類別來複製 `FareAmount` ，並新增下列程式碼：
+當您想要預測出租車行程費用時，資料 `FareAmount` 行是 `Label` 您將預測的（模型的輸出）。 使用 `CopyColumnsEstimator` 轉換類別來複製 `FareAmount` ，並新增下列程式碼：
 
 [!code-csharp[CopyColumnsEstimator](./snippets/predict-prices/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-訓練模型的演算法需要**數值**特徵，因此您必須將類別資料 (`VendorId` 、 `RateCode` 和 `PaymentType`) 值轉換成數位 (`VendorIdEncoded` 、 `RateCodeEncoded` 和 `PaymentTypeEncoded`) 。 若要進行該操作，請使用 [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 轉換類別，這會將不同數值索引鍵值指派給每個資料行中的不同值，並新增下列程式碼：
+訓練模型的演算法需要**數值**特徵，因此您必須將類別資料（ `VendorId` 、和 `RateCode` `PaymentType` ）值轉換成數位（ `VendorIdEncoded` 、 `RateCodeEncoded` 和 `PaymentTypeEncoded` ）。 若要進行該操作，請使用 [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 轉換類別，這會將不同數值索引鍵值指派給每個資料行中的不同值，並新增下列程式碼：
 
 [!code-csharp[OneHotEncodingEstimator](./snippets/predict-prices/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
 

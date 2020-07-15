@@ -1,6 +1,6 @@
 ---
 title: 指定字元集
-description: 瞭解如何指定使用窄 (ANSI) 或寬 (Unicode) 編碼的字元集。 您也可以指定自動執行時間選取。
+description: 瞭解如何指定使用窄（ANSI）或寬（Unicode）編碼的字元集。 您也可以指定自動執行時間選取。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: a4f18431d89343a77ccf2b920edac485e7dcfca3
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282121"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309790"
 ---
-# <a name="specifying-a-character-set"></a>指定字元集
+# <a name="specify-a-character-set"></a>指定字元集
+
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位控制字串封送處理，並決定平台叫用如何在 DLL 中尋找函式名稱。 這個主題將描述這兩種行為。  
   
  某些 API 匯出兩個版本的函式，接受字串引數：窄 (ANSI) 和寬 (Unicode)。 例如，Win32 API 包括 **MessageBox** 函式的下列進入點名稱：  
@@ -62,11 +63,12 @@ ms.locfileid: "86282121"
   
 - 平台叫用會在執行階段，根據在目標平台，在 ANSI 和 Unicode 格式之間選擇。  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>在 Visual Basic 中指定字元集  
- 下列範例會宣告 **MessageBox** 函式三次，每次都有不同的字元集行為。 您可以在宣告陳述式新增 **Ansi**、**Unicode** 或 **Auto** 關鍵字，在 Visual Basic 中指定字元集行為。  
-  
- 如果您省略字元集關鍵字，如同您在第一個宣告陳述式的做法，<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位會預設為 ANSI 字元集。 在範例中的第二個和第三個陳述式，明確地以關鍵字指定字元集。  
-  
+## <a name="specify-a-character-set-in-visual-basic"></a>在 Visual Basic 中指定字元集
+
+您可以藉由在宣告語句中加入 `Ansi` 、或關鍵字，在 Visual Basic 中指定字元集行為 `Unicode` `Auto` 。 如果您省略 character set 關鍵字， <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位會預設為 ANSI 字元集。
+
+下列範例會宣告 **MessageBox** 函式三次，每次都有不同的字元集行為。 第一個語句會省略 character set 關鍵字，因此字元集預設為 ANSI。 第二個和第三個語句使用關鍵字明確指定字元集。
+
 ```vb
 Friend Class NativeMethods
     Friend Declare Function MessageBoxA Lib "user32.dll" (
@@ -89,8 +91,9 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>在 C# 和 C++ 指定字元集  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位將基礎字元集識別為 ANSI 或 Unicode。 字元集控制應該如何封送處理方法的字串引數。 您可以使用下列格式之一來表示字元集：  
+## <a name="specify-a-character-set-in-c-and-c"></a>在 c # 和 c + + 中指定字元集
+
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位將基礎字元集識別為 ANSI 或 Unicode。 字元集控制應該如何封送處理方法的字串引數。 您可以使用下列格式之一來表示字元集：  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]
@@ -145,7 +148,7 @@ extern "C" int MessageBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)

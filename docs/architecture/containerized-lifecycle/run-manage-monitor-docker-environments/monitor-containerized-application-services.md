@@ -2,12 +2,12 @@
 title: 監視容器化應用程式服務
 description: 了解監視容器架構的一些重要層面
 ms.date: 02/15/2019
-ms.openlocfilehash: e14553d510751d8a75020a1b6beb9fd7bc29596e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e41df53ad94784436442c3cf7defed3fab510455
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673455"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374438"
 ---
 # <a name="monitor-containerized-application-services"></a>監視容器化應用程式服務
 
@@ -19,10 +19,10 @@ ms.locfileid: "68673455"
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Azure 監視器概述** \
+- **Azure 監視器總覽** \
   <https://docs.microsoft.com/azure/azure-monitor/overview>
 
-- **什麼是應用見解？** \
+- **什麼是 Application Insights？** \
   <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 - **Azure 監視器計量是什麼？** \
@@ -47,8 +47,8 @@ Azure 具有工具可用來管理雲端和內部部署資源的四個重要層�
   - 使資料在傳送過程及待用期間保持加密。
   - 確保根據多重要素驗證進行存取，以防止未經授權的使用。
 
-- **本地資源**。 使用[真正一致的混合式雲端](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/)。
+- **內部部署資源**。 使用[混合式雲端解決方案](https://azure.microsoft.com/solutions/hybrid-cloud-app/)。
 
 >[!div class="step-by-step"]
->[上一個](manage-production-docker-environments.md)
->[下一個](../key-takeaways/index.md)
+>[上一個](manage-production-docker-environments.md) 
+>[下一步](../key-takeaways/index.md)

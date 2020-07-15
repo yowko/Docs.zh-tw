@@ -1,14 +1,14 @@
 ---
 title: .NET Compiler Platform SDK 概念和物件模型
 description: 這個概觀提供有效率地使用 .NET 編譯器 SDK 所需的背景。 您將學習 API 層、所含的主要類型和整體物件模型。
-ms.date: 10/10/2017
+ms.date: 07/13/2020
 ms.custom: mvc
-ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: a65d282dd3c58279bbfd635c0386d50ce3f30055
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975936"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374464"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>了解 .NET Compiler Platform SDK 模型
 
@@ -24,27 +24,25 @@ ms.locfileid: "82975936"
 
 ![編譯器管線 API 可存取屬於編譯器管線一部分的每個步驟](media/compiler-api-model/compiler-pipeline-api.png)
 
-對應至所有這些階段，.NET Compiler Platform SDK 會公開物件模型，以允許存取該階段的資訊。 剖析階段會公開語法樹狀結構、宣告階段會公開階層式符號表、繫結階段會公開編譯器語意分析的結果，而發出階段是產生 IL 位元組碼的 API。
+對應至所有這些階段，.NET Compiler Platform SDK 會公開物件模型，以允許存取該階段的資訊。 剖析階段會公開語法樹狀結構，宣告階段會公開階層式符號表，系結階段會公開編譯器的語義分析結果，而發出階段是產生 IL 位元組代碼的 API。
 
 ![編譯器管線各步驟可從編譯器 API 使用的語言服務](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 每個編譯器都會將這些元件一起合併為單一端對端整體。
 
-這些 API 與 Visual Studio 使用的相同。 例如，概述和格式化功能的程式碼會使用語法樹狀結構、物件瀏覽器和導覽功能會使用符號表、重構和 [移至定義] 使用語意模型，而 [編輯後繼續] 會使用所有這些項目 (包含發出 API)。
+這些 API 與 Visual Studio 使用的相同。 例如，程式碼大綱和格式化功能會使用語法樹狀結構、**物件瀏覽器**和導覽功能使用符號表、重構和 [**移至定義**] 使用語義模型，而 [**編輯後繼續**] 則會使用所有這些，包括發出 API。
 
 ## <a name="api-layers"></a>API 層
 
-.NET 編譯器 SDK 包含兩個主要 API 層：編譯器 API 和工作區 API。
-
-![編譯器管線 API 所代表的 API 層](media/compiler-api-model/api-layers.png)
+.NET 編譯器 SDK 是由數個 Api 層所組成：編譯器 Api、診斷 Api、腳本 Api 和工作區 Api。
 
 ### <a name="compiler-apis"></a>編譯器 API
 
-編譯器層所包含的物件模型對應至編譯器管線的每個階段所公開的資訊 (語法和語意)。 編譯器層也包含單一編譯器叫用的不可變快照集，包含組件參考、編譯器選項和原始程式碼檔。 有兩個不同的 API 代表 C# 語言和 Visual Basic 語言。 這兩個 API 與圖形類似，但進行調整以取得所有個別語言的高畫質。 此層沒有與 Visual Studio 元件的相依性。
+編譯器層所包含的物件模型對應至編譯器管線的每個階段所公開的資訊 (語法和語意)。 編譯器層也包含單一編譯器叫用的不可變快照集，包含組件參考、編譯器選項和原始程式碼檔。 有兩個不同的 API 代表 C# 語言和 Visual Basic 語言。 這兩個 Api 在圖形中很類似，但會針對每個個別語言量身打造。 此層沒有與 Visual Studio 元件的相依性。
 
 ### <a name="diagnostic-apis"></a>診斷 API
 
-進行分析時，編譯器可能會產生一組診斷，其涵蓋語法、語意和明確指派錯誤的所有項目，以及各種警告和參考性診斷。 編譯器 API 層會透過允許將使用者定義分析器插入編譯程序的可延伸 API，公開診斷。 它可以產生使用者定義診斷 (例如 StyleCop 或 FxCop 這類工具所產生的診斷) 和編譯器定義診斷。 使用這種方式產生診斷的優點是自然與 MSBuild 和 Visual Studio 這類工具整合，而這些工具取決於下列這類體驗的診斷：根據原則來終止組建，以及在編輯器中顯示即時波浪線並建議程式碼修正。
+進行分析時，編譯器可能會產生一組診斷，其涵蓋語法、語意和明確指派錯誤的所有項目，以及各種警告和參考性診斷。 編譯器 API 層會透過允許將使用者定義分析器插入編譯程序的可延伸 API，公開診斷。 它可以產生使用者定義診斷 (例如 StyleCop 或 FxCop 這類工具所產生的診斷) 和編譯器定義診斷。 以這種方式產生診斷，有其優點：使用 MSBuild 和 Visual Studio 之類的工具進行自然整合，這取決於診斷，例如根據原則停止組建，以及在編輯器中顯示即時波浪線，以及建議程式碼修正。
 
 ### <a name="scripting-apis"></a>指令碼 API
 

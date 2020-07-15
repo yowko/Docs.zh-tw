@@ -1,15 +1,16 @@
 ---
 title: 控制 .NET Framework 記錄
+description: 使用 Windows 事件追蹤（ETW）來控制 .NET 記錄和記錄 common language runtime （CLR）事件。 使用 Logman、Tracerpt 和 Xperf 等工具。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504108"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309582"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 記錄
 
@@ -17,7 +18,7 @@ ms.locfileid: "77504108"
 
 - [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令列工具，隨附於 Windows 作業系統。
 
-- [Windows 效能工具組](/windows-hardware/test/wpt/xperf-command-line-reference)中的 [Xperf](/windows-hardware/test/wpt/) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://docs.microsoft.com/archive/blogs/pigscanfly/)。
+- [Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://docs.microsoft.com/archive/blogs/pigscanfly/)。
 
 若要擷取 CLR 事件資訊，您必須在電腦上安裝 CLR 提供者。 若要確認是否已安裝此提供者，請在命令提示字元中輸入 `logman query providers`。 提供者的清單隨即顯示。 此清單應該會包含 CLR 提供者的項目，如下所示。
 
@@ -27,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。 以系統管理員身分開啟 [命令提示字元] 視窗。 將提示目錄變更為 .NET Framework 4 資料夾（%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET 版本 > \）。 這個資料夾包含 CLR-ETW.man 檔案。 在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：
+如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。 以系統管理員身分開啟 [命令提示字元] 視窗。 將提示目錄變更為 .NET Framework 4 資料夾（%WINDIR%\Microsoft.NET\Framework [64] \v4. \<.NET version>\ ). 這個資料夾包含 CLR-ETW.man 檔案。 在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：
 
 `wevtutil im CLR-ETW.man`
 
@@ -99,7 +100,7 @@ Provider                                 GUID
 
      `xperf clrevents.etl`
 
-     這個命令會開啟 Xperf ETL 檔案檢視器。 在這個檢視器中，CLR 事件會顯示在 [一般事件] 檢視中。 若要顯示依類型分類的事件資料格，請在這個檢視中選取一個時間區域，並按一下滑鼠右鍵，然後選取 [摘要]。
+     這個命令會開啟 Xperf ETL 檔案檢視器。 在這個檢視器中，CLR 事件會顯示在 [一般事件]**** 檢視中。 若要顯示依類型分類的事件資料格，請在這個檢視中選取一個時間區域，並按一下滑鼠右鍵，然後選取 [摘要]****。
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>若要將 .etl 檔案轉換為逗點分隔值檔案
 
@@ -111,5 +112,5 @@ Provider                                 GUID
 
 ## <a name="see-also"></a>另請參閱
 
-- [Windows 效能工具組](/windows-hardware/test/wpt/)
+- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [Common Language Runtime 中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

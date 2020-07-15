@@ -1,16 +1,17 @@
 ---
 title: 應用程式定義域資源監視 (ARM) ETW 事件
+description: 閱讀 .NET 中應用程式域資源監視（ARM） ETW 事件的相關資訊，例如 ThreadCreated、AppDomainMemAllocated、AppDomainMemSurvived 等等。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d118b3196b019a804df5399464cb86f7492c61b0
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716220"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309777"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>應用程式定義域資源監視 (ARM) ETW 事件
 
@@ -22,14 +23,14 @@ ms.locfileid: "75716220"
 
 下表說明關鍵字和層級。 如需詳細資訊，請參閱[CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)。
 
-|引發事件的關鍵字|Level|
+|引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 |`ThreadingKeyword` (0x10000)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event|事件 ID|引發的時機|
+|事件|事件識別碼|引發的時機|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|已為應用程式網域建立執行緒。|
 
@@ -39,7 +40,7 @@ ms.locfileid: "75716220"
 |----------------|---------------|-----------------|
 |ThreadID|win:UInt64|已建立執行緒的識別碼。|
 |AppDomainID|win:UInt64|目前回報其執行緒活動之應用程式網域的識別項。|
-|旗標|win:UInt32|執行緒建立旗標。|
+|Flags|win:UInt32|執行緒建立旗標。|
 |ManagedThreadIndex|win:UInt32|已建立之執行緒的 Managed 索引。|
 |OSThreadID|win:UInt32|已建立之執行緒的作業系統識別碼。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
@@ -48,13 +49,13 @@ ms.locfileid: "75716220"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|Level|
+|引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event|事件 ID|引發的時機|
+|事件|事件識別碼|引發的時機|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|每 4 MB 的記憶體 (大約)，配置於應用程式網域中。|
 
@@ -70,13 +71,13 @@ ms.locfileid: "75716220"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|Level|
+|引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event|事件 ID|引發的時機|
+|事件|事件識別碼|引發的時機|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|已結束回收每個記憶體。|
 
@@ -93,14 +94,14 @@ ms.locfileid: "75716220"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|Level|
+|引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 |`ThreadingKeyword` (0x10000)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event|事件 ID|引發的時機|
+|事件|事件識別碼|引發的時機|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|進入應用程式網域的執行緒。|
 
@@ -116,14 +117,14 @@ ms.locfileid: "75716220"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|Level|
+|引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 |`ThreadingKeyword` (0x10000)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event|事件 ID|引發的時機|
+|事件|事件識別碼|引發的時機|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|一個執行緒終止。|
 
@@ -135,6 +136,6 @@ ms.locfileid: "75716220"
 |AppDomainID|win:UInt64|應用程式網域識別項。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CLR ETW 事件](clr-etw-events.md)

@@ -2,12 +2,12 @@
 title: 適用于雲端原生應用程式的 Azure 安全性
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |適用于雲端原生應用程式的 Azure 安全性
 ms.date: 05/13/2020
-ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614249"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374490"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>適用于雲端原生應用程式的 Azure 安全性
 
@@ -66,7 +66,7 @@ Azure 本身會持續從[Microsoft 內部的駭客小組](https://azure.microsof
 
 .NET Framework 已經是非常安全的架構。 它可避免非受控碼的某些陷阱，例如離開陣列的結尾。 致力於在發現安全性漏洞時進行修正。 甚至還有一個[bug 豐富程式](https://www.microsoft.com/msrc/bounty)，可讓研究人員找出架構中的問題並回報，而不是利用它們。
 
-有許多方法可讓 .NET 程式碼更安全。 遵循適用于 .NET 的[安全](https://docs.microsoft.com/dotnet/standard/security/secure-coding-guidelines)程式碼撰寫方針一文的指導方針，是確保程式碼從頭開始安全的合理步驟。 [OWASP 前10名](https://owasp.org/www-project-top-ten/)是建立安全程式碼的另一個寶貴指南。
+有許多方法可讓 .NET 程式碼更安全。 遵循適用于 .NET 的[安全](../../standard/security/secure-coding-guidelines.md)程式碼撰寫方針一文的指導方針，是確保程式碼從頭開始安全的合理步驟。 [OWASP 前10名](https://owasp.org/www-project-top-ten/)是建立安全程式碼的另一個寶貴指南。
 
 建立程式是放置掃描工具以偵測原始程式碼中的問題，再使其進入生產環境的最佳位置。 大部分的專案都會相依于某些其他封裝。 可以掃描過時套件的工具，將會在夜間組建中攔截問題。 即使在建立 Docker 映射時，檢查並確定基底映射並不會有已知的弱點，會很有説明。 另一個要檢查的事項是沒有人不慎簽入認證。
 
@@ -139,7 +139,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 測試安全性主體是否具有特定許可權時，會將角色和範圍的組合納入考慮。 這種組合提供強大的授權機制。
 
-## <a name="deny"></a>拒絕
+## <a name="deny"></a>Deny
 
 先前，RBAC 只允許「允許」規則。 這種行為會使某些範圍變得複雜，而無法建立。 例如，允許所有儲存體帳戶的安全性主體存取權，但其中一個需要授與明確許可權給可能無止盡的儲存體帳戶清單。 每次建立新的儲存體帳戶時，都必須將其新增至此帳戶清單。 這會增加不需要的管理額外負荷。
 
@@ -227,7 +227,7 @@ TLS 是一個複雜的通訊協定，而且只知道連線使用 TLS 並不足�
 
 在任何應用程式中，資料會放在磁片上的幾個地方。 應用程式程式碼本身是從某種儲存機制載入。 大部分的應用程式也會使用某種類型的資料庫，例如 SQL Server、Cosmos DB，或甚至是出乎意料的價格有效率表格儲存體。 這些資料庫全都使用大量加密的儲存體，以確保具有適當許可權的應用程式以外的任何人都可以讀取您的資料。 即使系統操作員也無法讀取已加密的資料。 因此，客戶可以確保其秘密資訊保持機密。
 
-### <a name="storage"></a>儲存體
+### <a name="storage"></a>存放裝置
 
 許多 Azure 的基礎都是 Azure 儲存體引擎。 虛擬機器磁片會裝載在 Azure 儲存體上。 Azure Kubernetes Services 會在 Azure 儲存體上裝載的虛擬機器上執行。 即使是無伺服器技術（例如 Azure Functions 應用程式和 Azure 容器實例），也會用盡屬於 Azure 儲存體一部分的磁片。
 

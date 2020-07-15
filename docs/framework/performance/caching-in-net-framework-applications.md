@@ -1,17 +1,18 @@
 ---
 title: .NET Framework 應用程式中的快取
+description: 在 .NET 應用程式中使用快取。 閱讀有關快取資料、ASP.NET 應用程式中的快取或 WCF REST 服務，以及在 .NET 中擴充快取的資訊。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ASP.NET caching
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 8fe2a386da8cdb4bb075b67a5e52c840a7b66c77
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b08a07e9b446c2998150a327dccdc8d0481722a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935280"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309764"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 應用程式中的快取
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。  
@@ -19,7 +20,7 @@ ms.locfileid: "75935280"
  .NET Framework 所提供的快取功能可用來改善 Windows 用戶端和伺服器應用程式的效能和延展性，包含 ASP.NET。  
   
 > [!NOTE]
-> 在 .NET Framework 3.5 和更早版本中，ASP.NET 在 <xref:System.Web.Caching> 命名空間中提供記憶體內部快取實作為。 在舊版的 .NET Framework 中，快取僅適用于 <xref:System.Web> 命名空間，因此需要 ASP.NET 類別的相依性。 在 .NET Framework 4 中，<xref:System.Runtime.Caching> 命名空間包含針對 Web 和非 Web 應用程式所設計的 API。  
+> 在 .NET Framework 3.5 和更早版本中，ASP.NET 提供了命名空間中的記憶體內部快取實作為功能 <xref:System.Web.Caching> 。 在舊版的 .NET Framework 中，快取僅適用于 <xref:System.Web> 命名空間，因此需要 ASP.NET 類別的相依性。 在 .NET Framework 4 中，<xref:System.Runtime.Caching> 命名空間包含針對 Web 和非 Web 應用程式所設計的 API。  
   
 ## <a name="caching-data"></a>快取資料  
  您可以使用 <xref:System.Runtime.Caching> 命名空間中的類別來快取資訊。 這個命名空間中的快取類別提供下列功能：  
@@ -47,7 +48,7 @@ ms.locfileid: "75935280"
  <xref:System.Runtime.Caching> 命名空間中的快取類別提供在 ASP.NET 中快取資料的功能。  
   
 > [!NOTE]
-> 如果您的應用程式以 .NET Framework 3.5 或更早版本為目標，則必須使用 <xref:System.Web.Caching> 命名空間中定義的快取類別。 如需詳細資訊，請參閱 [ASP.NET 快取概觀](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))。  
+> 如果您的應用程式以 .NET Framework 3.5 或更早版本為目標，則必須使用在命名空間中定義的快取類別 <xref:System.Web.Caching> 。 如需詳細資訊，請參閱 [ASP.NET 快取概觀](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))。  
   
 > [!NOTE]
 > 當您開發新的應用程式時，建議您使用 <xref:System.Runtime.Caching.MemoryCache> 類別。 <xref:System.Runtime.Caching> 命名空間中所提供的 API 就像 <xref:System.Web.Caching.Cache> 命名空間中提供的 API。 因此，如果您已在舊版 ASP.NET 中使用快取，則會熟悉 API。 如需如何在 ASP.NET 應用程式中使用快取的範例，請參閱[逐步解說：在 ASP.NET 中快取應用程式資料](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))。  
@@ -75,7 +76,7 @@ ms.locfileid: "75935280"
   
  如需詳細資訊，請參閱 Scott Guthrie 部落格上的 [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://weblogs.asp.net/scottgu/extensible-output-caching-with-asp-net-4-vs-2010-and-net-4-0-series)(ASP.NET 4 (VS 2010 和 .NET 4.0 系列) 中的可擴充輸出快取) 一文。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>

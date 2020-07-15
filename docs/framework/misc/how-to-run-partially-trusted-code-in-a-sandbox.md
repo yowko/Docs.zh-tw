@@ -9,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 4f186f1d901b51dd4c61ba6b22197465a41f2c44
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: e02b5d679fb1f5947373399ac1226732623ef96d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282030"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309231"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>如何：在沙箱中執行部分信任的程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -115,7 +115,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - 您可使用會指向不包含組件位置的程式碼基底。  
   
-    - 您可以在 <xref:System.Security.CodeAccessPermission.Assert%2A> 之下建立完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)，這可讓您建立關鍵類別的執行個體。  (這會在您的元件沒有透明度標記並載入為完全信任的情況下發生。 ) 因此，您必須謹慎地只建立與此函式信任的程式碼，並建議您只在新的應用程式域中建立完全信任的類別實例。  
+    - 您可以在 <xref:System.Security.CodeAccessPermission.Assert%2A> 之下建立完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)，這可讓您建立關鍵類別的執行個體。 （當您的元件沒有透明度標記並載入為完全信任時，就會發生這種情況）。因此，您必須謹慎地只建立您信任此函式的程式碼，而且我們建議您只在新的應用程式域中建立完全信任類別的實例。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -123,7 +123,7 @@ AppDomain.CreateDomain( string friendlyName,
            typeof(Sandboxer).FullName );  
     ```  
   
-     請注意若要在新的定義域中建立類別的執行個體，此類別必須擴充 <xref:System.MarshalByRefObject> 類別  
+     若要在新的網域中建立類別的實例，類別必須擴充 <xref:System.MarshalByRefObject> 類別。
   
     ```csharp
     class Sandboxer:MarshalByRefObject  
@@ -272,6 +272,6 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)

@@ -1,6 +1,6 @@
 ---
 title: 連結要求
-description: 閱讀連結要求，這會在即時 (JIT) 編譯期間造成安全性檢查，並只檢查程式碼的立即呼叫元件。
+description: 閱讀連結要求，這會在即時（JIT）編譯期間造成安全性檢查，並只檢查程式碼的立即呼叫元件。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: cd89c4ef27abb92fba567a1f3b490cb9d78fdddd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: eaf9ee1bb5cd10c724240bacac014503685a0c8c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282051"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309101"
 ---
 # <a name="link-demands"></a>連結要求
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  連結要求會在 Just-In-Time 編譯期間進行安全性檢查，並且只檢查程式碼組件的即時呼叫者。 當您的程式碼繫結至類型參考，包括函式指標參考和方法呼叫時，連結就會發生。 如果呼叫的組件並沒有足夠權限可連結到您的程式碼，則程式碼載入和執行時不會允許連結且會擲回執行階段例外狀況。 連結要求可以在繼承自您的程式碼的類別中被覆寫。  
   
- 請注意，對這種類型的需求不會執行完整堆疊查核行程，而且您的程式碼仍會受到引誘攻擊。 例如，如果元件 A 中的方法受到連結要求的保護，則元件 B 中的直接呼叫端會根據元件 B 的許可權進行評估。 不過，如果連結要求使用元件 B 中的方法間接呼叫元件 A 中的方法，則不會評估元件 C 中的方法。連結要求只會指定立即呼叫元件中的直接呼叫端許可權，必須連結至您的程式碼。 它並未指定所有呼叫端必須擁有以便執行程式碼的權限。  
+ 此類型的要求不會執行完整的堆疊逐步解說，而且您的程式碼仍然容易遭受引誘攻擊。 例如，如果元件 A 中的方法受到連結要求的保護，則元件 B 中的直接呼叫端會根據元件 B 的許可權進行評估。 不過，如果連結要求使用元件 B 中的方法間接呼叫元件 A 中的方法，則不會評估元件 C 中的方法。連結要求只會指定立即呼叫元件中的直接呼叫端許可權，必須連結至您的程式碼。 它並未指定所有呼叫端必須擁有以便執行程式碼的權限。  
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>、<xref:System.Security.CodeAccessPermission.Deny%2A> 和 <xref:System.Security.CodeAccessPermission.PermitOnly%2A> 堆疊查核行程修飾詞不會影響連結要求的評估。  由於連結要求不會執行堆疊查核行程，堆疊查核行程修飾詞不會影響連結要求。  
   
@@ -53,7 +53,7 @@ public static string ReadData()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [屬性](../../standard/attributes/index.md)
 - [代碼啟用安全性](code-access-security.md)

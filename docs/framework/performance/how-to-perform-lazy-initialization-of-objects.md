@@ -1,5 +1,6 @@
 ---
 title: 如何：執行物件的延遲初始化
+description: 請參閱如何使用 system.string 類別來執行物件的延遲初始化 <T> 。 延遲初始化表示如果不需要，則不會建立物件。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbee0d8a5c3075ad7429feb92b87a566fdd35454
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180589"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309725"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>如何：執行物件的延遲初始化
 <xref:System.Lazy%601?displayProperty=nameWithType> 類別可簡化執行物件延遲初始化和具現化的工作。 以延遲方式初始化物件時，您可以避免必須在永不需要這些物件時完全建立它們，也可以延後其初始化作業，直到第一次存取這些物件為止。 如需詳細資訊，請參閱[延遲初始化](lazy-initialization.md)。  

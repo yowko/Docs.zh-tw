@@ -2,12 +2,12 @@
 title: F# 程式碼格式方針
 description: '瞭解格式化 F # 程式碼的指導方針。'
 ms.date: 11/04/2019
-ms.openlocfilehash: dde69c573f1ef58d398ae47676b9403f588680b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a65600a6c685929aef8582e49caded6340fb09e2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617265"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309699"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 程式碼格式方針
 
@@ -102,25 +102,34 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>將參數放在長成員定義的新行上
 
-如果您有很長的成員定義，請將參數放在新行上，並將其縮排到一個範圍內。
+如果您有很長的成員定義，請將參數放在新行上，並將其縮排，以符合後續參數的縮排層級。
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters(
-        aVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
         // ... the body of the method follows
 ```
 
 這也適用于函式：
 
 ```fsharp
-type C(
-    aVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+type C(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
     // ... the body of the class follows
+```
+
+如果有明確的傳回型別注釋，它可以在的結尾 `)` 和之前 `=` ，或在新行上。 如果傳回型別也有完整的名稱，則可能比較好後者：
+
+```fsharp
+type C() =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse)
+                                            : AVeryLongReturnType =
+        // ... the body of the method follows
 ```
 
 ### <a name="type-annotations"></a>類型注釋
@@ -178,7 +187,7 @@ let myFunBad (a: decimal) b c:decimal = a + b + c
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a>命名慣例
+## <a name="naming-conventions"></a>命名規範
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>針對類別系結、運算式系結和模式系結值和函式使用 camelCase
 

@@ -1,5 +1,6 @@
 ---
-title: 安全透明代碼,等級 1
+title: 安全性透明的程式碼，層級1
+description: 請參閱層級1透明度程式碼模型、透明度屬性和安全性透明度範例。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 6f6c6ecd9ecab8c531be971a0e7896994127beb8
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: c44fe3339f3bf24d266fa97487868ce090d51bb1
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645739"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309090"
 ---
-# <a name="security-transparent-code-level-1"></a>安全透明代碼,等級 1
+# <a name="security-transparent-code-level-1"></a>安全性透明的程式碼，層級1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從 .NET 架構 4 開始,可以使用[等級 2 透明度](security-transparent-code-level-2.md)。 不過，仍然保留層級 1 透明度，讓您可以識別必須以舊版安全性規則來執行的舊版程式碼。  
+ 透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從 .NET Framework 4 開始，您可以使用[層級2透明度](security-transparent-code-level-2.md)。 不過，仍然保留層級 1 透明度，讓您可以識別必須以舊版安全性規則來執行的舊版程式碼。  
   
 > [!IMPORTANT]
-> 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 對於為 .NET 框架 4 開發的代碼,始終使用級別 2 透明度。  
+> 您應該僅針對相容性指定層級 1 透明度；也就是說，您應該僅針對使用 .NET Framework 3.5 或更早版本 (使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或沒有使用透明度模型) 所開發的程式碼指定層級 1。 例如，對於允許來自部分信任呼叫端 (APTCA) 之呼叫的 .NET Framework 2.0 組件，請使用層級 1 透明度。 針對 .NET Framework 4 所開發的程式碼，請一律使用層級2透明度。  
   
  本主題包含下列幾節：  
   
@@ -62,8 +63,8 @@ ms.locfileid: "81645739"
 |屬性|描述|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|僅在該組件層級受允許。 將該組件中的所有類型和成員都識別為安全性透明。 該組件不能包含任何安全性關鍵程式碼。|  
-|<xref:System.Security.SecurityCriticalAttribute>|在無 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 屬性的組件層級使用時，根據預設，會將組件中的所有程式碼識別為安全性透明，但也表示該組件可能包含安全性關鍵程式碼。<br /><br /> 在類別層級使用時，會將類別或方法識別為安全性關鍵，而不是識別類別的成員。 若要將所有成員都設成安全性關鍵，請將 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 屬性設為 <xref:System.Security.SecurityCriticalScope.Everything>。 <br /><br /> 在成員層級使用時，該屬性只適用於該成員。<br /><br /> 已識別為安全性關鍵的類別或成員可以執行權限提高。 **重要提示:** 在級別 1 透明度中,當從程式集外部調用安全關鍵類型和成員時,它們將被視為安全關鍵類型。 您應該使用完全信任的連結要求來保護安全性關鍵類型和成員，以避免未經授權的權限提高。|  
-|<xref:System.Security.SecuritySafeCriticalAttribute>|識別可以由組件中安全性透明程式碼存取的安全性關鍵程式碼。 否則安全性透明程式碼無法存取相同組件中的私用或內部安全性關鍵成員。 這麼做會影響安全性關鍵程式碼，並可能造成非預期的權限提高。 安全性安全關鍵程式碼應該經過嚴密的安全性稽核。 **註:** 安全關鍵類型和成員必須驗證調用方的許可權,以確定調用方是否有權訪問受保護的資源。|  
+|<xref:System.Security.SecurityCriticalAttribute>|在無 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 屬性的組件層級使用時，根據預設，會將組件中的所有程式碼識別為安全性透明，但也表示該組件可能包含安全性關鍵程式碼。<br /><br /> 在類別層級使用時，會將類別或方法識別為安全性關鍵，而不是識別類別的成員。 若要將所有成員都設成安全性關鍵，請將 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 屬性設為 <xref:System.Security.SecurityCriticalScope.Everything>。 <br /><br /> 在成員層級使用時，該屬性只適用於該成員。<br /><br /> 已識別為安全性關鍵的類別或成員可以執行權限提高。 **重要事項：** 在層級1透明度中，從元件外部呼叫安全性關鍵類型和成員時，會將其視為安全性安全關鍵。 您應該使用完全信任的連結要求來保護安全性關鍵類型和成員，以避免未經授權的權限提高。|  
+|<xref:System.Security.SecuritySafeCriticalAttribute>|識別可以由組件中安全性透明程式碼存取的安全性關鍵程式碼。 否則安全性透明程式碼無法存取相同組件中的私用或內部安全性關鍵成員。 這麼做會影響安全性關鍵程式碼，並可能造成非預期的權限提高。 安全性安全關鍵程式碼應該經過嚴密的安全性稽核。 **注意：** 安全性安全關鍵類型和成員必須驗證呼叫端的許可權，以判斷呼叫端是否具有存取受保護資源的授權。|  
   
  <xref:System.Security.SecuritySafeCriticalAttribute> 屬性可以讓安全性透明程式碼存取相同組件中安全性關鍵的成員。 請考慮將組件中的安全性透明及安全性關鍵程式碼區分成兩個組件。 安全性透明程式碼無法查看安全性關鍵程式碼的私用或內部成員。 此外，安全性關鍵程式碼一般是為了存取公用介面而受稽核的。 您可能不希望私用或內部狀態在組件外還能存取；您可能想要讓狀態保持隔離。 <xref:System.Security.SecuritySafeCriticalAttribute> 屬性會維護安全性透明與安全性關鍵程式碼之間的狀態隔離，但是可在必要時提供覆寫隔離的功能。 安全性透明程式碼無法存取私用或內部安全性關鍵程式碼，除非那些成員已經以 <xref:System.Security.SecuritySafeCriticalAttribute> 標記。 套用 <xref:System.Security.SecuritySafeCriticalAttribute> 之前，請先將成員視為已公開並加以稽核。  
   

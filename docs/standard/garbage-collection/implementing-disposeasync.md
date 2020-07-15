@@ -10,12 +10,12 @@ dev_langs:
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 31c4cc9136862551e02fae030e38ebd6c2916a38
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 91ace1932e8bb751e8e1d85e00b3e239a01aa9ea
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100921"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309816"
 ---
 # <a name="implement-a-disposeasync-method"></a>實作 DisposeAsync 方法
 
@@ -64,11 +64,11 @@ public async ValueTask DisposeAsync()
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/disposeasync.cs":::
 
-先前的範例使用 <xref:System.Text.Json.Utf8JsonWriter> ，如需的詳細資訊 `System.Text.Json` ，請參閱[從上的 Newtonsoft.Js遷移至上的 System.Text.Js](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md)。
+上述範例會使用 <xref:System.Text.Json.Utf8JsonWriter> 。 如需的詳細資訊 `System.Text.Json` ，請參閱[如何從上的 Newtonsoft.Js遷移至](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md)上的 System.Text.Js。
 
 ## <a name="using-async-disposable"></a>使用非同步可處置
 
-若要適當地取用會執行介面的物件 <xref:System.IAsyncDisposable> ，您可以使用[await](../../csharp/language-reference/operators/await.md)，並搭配[使用](../../csharp/language-reference/keywords/using.md)關鍵字。 請考慮下列範例，其中 `ExampleAsyncDisposable` 類別會具現化，然後包裝在 `await using` 語句中。
+若要適當地取用會執行介面的物件 <xref:System.IAsyncDisposable> ，您可以使用[await](../../csharp/language-reference/operators/await.md)，並搭配[使用](../../csharp/language-reference/keywords/using-statement.md)關鍵字。 請考慮下列範例，其中 `ExampleAsyncDisposable` 類別會具現化，然後包裝在 `await using` 語句中。
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/proper-await-using.cs":::
 

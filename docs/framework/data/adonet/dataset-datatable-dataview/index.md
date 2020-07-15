@@ -3,17 +3,18 @@ title: DataSet、DataTable 和 DataView
 description: 瞭解使用 ADO.NET 資料集的數種方式，此為記憶體常駐的資料表示，可提供一致的關聯式程式設計模型。
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: f6562452261cbc1f7ee36fb264b858646a42e4f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 53e12f701b9be1938d62f46bbeb6e63d95c03386
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286892"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374503"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable 和 DataView
+
 ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論內含資料來源為何，都可提供一致的關聯式程式設計模型。 <xref:System.Data.DataSet> 表示一組完整的資料，包括內含、排序和約束資料的資料表，以及資料表間的關聯性。  
   
- <xref:System.Data.DataSet> 的使用方式有幾種，可以獨立或組合套用。 您可以：  
+<xref:System.Data.DataSet> 的使用方式有幾種，可以獨立或組合套用。 您可以：  
   
 - 以程式設計方式在 <xref:System.Data.DataTable> 內建立 <xref:System.Data.DataRelation>、<xref:System.Data.Constraint> 和 <xref:System.Data.DataSet>，並填入資料表的資料。  
   
@@ -21,9 +22,13 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
   
 - 使用 XML 載入並保存 <xref:System.Data.DataSet> 內容。 如需詳細資訊，請參閱[在 DataSet 中使用 XML](using-xml-in-a-dataset.md)。  
   
- 也可以使用 XML Web Service 傳輸強型別的 <xref:System.Data.DataSet>。 <xref:System.Data.DataSet> 的設計非常適合使用 XML Web Service 來傳輸資料。 如需 XML Web Service 的概觀，請參閱 [XML Web Service 概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100))。 如需使用來自 XML Web Service 之 <xref:System.Data.DataSet> 的範例，請參閱[從 XML Web Service 使用 DataSet](consuming-a-dataset-from-an-xml-web-service.md)。  
+也可以使用 XML Web Service 傳輸強型別的 <xref:System.Data.DataSet>。 <xref:System.Data.DataSet> 的設計非常適合使用 XML Web Service 來傳輸資料。 如需 XML Web Service 的概觀，請參閱 [XML Web Service 概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100))。 如需使用來自 XML Web Service 之 <xref:System.Data.DataSet> 的範例，請參閱[從 XML Web Service 使用 DataSet](consuming-a-dataset-from-an-xml-web-service.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本節內容
+
+ [安全性指導](security-guidance.md)  
+ 提供和的安全性 <xref:System.Data.DataSet> 指引 <xref:System.Data.DataTable> 。
+
  [建立資料集](creating-a-dataset.md)  
  說明建立 <xref:System.Data.DataSet> 執行個體的語法。  
   
@@ -63,7 +68,8 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
  [從 XML Web Service 使用資料集](consuming-a-dataset-from-an-xml-web-service.md)  
  說明如何建立可透過 <xref:System.Data.DataSet> 傳輸資料的 XML Web Service。  
   
-## <a name="related-sections"></a>相關章節  
+## <a name="related-sections"></a>相關章節
+
  [ADO.NET 的新功能](../whats-new.md)  
  簡介 ADO.NET 的新功能。  
   

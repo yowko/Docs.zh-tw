@@ -1,5 +1,6 @@
 ---
 title: CLR ETW 關鍵字和層級
+description: 審查適用于 Windows （ETW）關鍵字和層級的 common language runtime （CLR）事件追蹤。 事件 CLR ETW 關鍵字可依分類啟用事件篩選。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW keywords
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-ms.openlocfilehash: 2106ed0d85cd116be4d7c46396ad6e1597c4341d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfbe047640a3a640cf37adeea6fa3656cfd9ec6d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400061"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309673"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 關鍵字和層級
 Windows 事件追蹤 (ETW) 的事件可依分類和層級篩選。 事件 [CLR ETW 關鍵字](#clr-etw-keywords) 可以依分類啟用事件篩選；這些在執行階段和取消提供者時會加以組合使用。 [事件層級](#etw-event-levels) 會標以旗標識別。  
@@ -24,9 +25,9 @@ Windows 事件追蹤 (ETW) 的事件可依分類和層級篩選。 事件 [CLR E
   
 - [CLR ETW 執行階段關鍵字](#runtime)  
   
-- [CLR ETW 已減少關鍵字](#rundown)  
+- [CLR ETW 取消關鍵字](#rundown)  
   
-- [運行時提供程式符號解析度的關鍵字組合](#runtime_combo)  
+- [執行時間提供者之符號解析的關鍵字組合](#runtime_combo)  
   
 - [取消提供者之符號解析的關鍵字組合](#rundown_combo)  
   
@@ -49,7 +50,7 @@ Windows 事件追蹤 (ETW) 的事件可依分類和層級篩選。 事件 [CLR E
 |`ContentionKeyword`|0x00004000|啟用 [爭用事件](contention-etw-events.md)收集。|  
 |`ExceptionKeyword`|0x00008000|啟用 [例外事件](exception-thrown-v1-etw-event.md)收集。|  
 |`ThreadingKeyword`|0x00010000|啟用 [執行緒集區](thread-pool-etw-events.md)收集。|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|（可在 .NET 框架 4.5 及更高版本中提供。禁止高開銷`NGenKeyword`關鍵字，並防止 NGen 模組內的方法建置事件。 從 .NET 框架 4.5 開始，分析`OverrideAndSuppressNGenEventsKeyword`工具`NGenKeyword`應同時使用並一起禁止 NGen 模組中方法建置事件。 這可以讓程式碼剖析工具更有效率地使用 NGen PDB，從而取得 NGen 模組中方法的相關資訊。 .NET Framework 4 與更舊版本中的 CLR 不支援 NGen PDB 建立。 在這些舊版本中，CLR 不會辨識 `OverrideAndSuppressNGenEventsKeyword` ，並會處理 `NGenKeyword` ，以為 NGen 模組中的方法產生事件。|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|（可在 .NET Framework 4.5 和更新版本中取得）。隱藏高額外負荷的 `NGenKeyword` 關鍵字，並防止在 NGen 模組內的方法產生事件。 從 .NET Framework 4.5 開始，程式碼剖析工具應該 `OverrideAndSuppressNGenEventsKeyword` 一起使用和 `NGenKeyword` 來抑制 NGen 模組中的方法產生事件。 這可以讓程式碼剖析工具更有效率地使用 NGen PDB，從而取得 NGen 模組中方法的相關資訊。 .NET Framework 4 與更舊版本中的 CLR 不支援 NGen PDB 建立。 在這些舊版本中，CLR 不會辨識 `OverrideAndSuppressNGenEventsKeyword` ，並會處理 `NGenKeyword` ，以為 NGen 模組中的方法產生事件。|  
 |`PerfTrackKeyWord`|0x2000000|啟用 `ModuleLoad` 和 `ModuleRange` 事件的收集。|  
 |`StackKeyword`|0x40000000|啟用 CLR [堆疊追蹤事件](stack-etw-event.md)收集。|  
   
@@ -66,7 +67,7 @@ Windows 事件追蹤 (ETW) 的事件可依分類和層級篩選。 事件 [CLR E
 |`EndRundownKeyword`|0x00000100|啟用在結束取消期間的系統狀態列舉。|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|啟用 <xref:System.AppDomain> 或 `StartRundownKeyword` .搭配使用時， `EndRundownKeyword`層級的資源監控事件收集。|  
 |`ThreadingKeyword`|0x00010000|啟用執行緒集區事件收集。|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|（可在 .NET 框架 4.5 及更高版本中提供。禁止高開銷`NGenRundownKeyword`關鍵字，並防止 NGen 模組內的方法建置事件。 從 .NET 框架 4.5 開始，分析`OverrideAndSuppressNGenEventsRundownKeyword`工具`NGenRundownKeyword`應同時使用並一起禁止 NGen 模組中方法建置事件。 這可以讓程式碼剖析工具更有效率地使用 NGen PDB，從而取得 NGen 模組中方法的相關資訊。 .NET Framework 4 與更舊版本中的 CLR 不支援 NGen PDB 建立。 在這些舊版本中，CLR 不會辨識 `OverrideAndSuppressNGenEventsRundownKeyword` ，並會處理 `NGenRundownKeyword` ，以為 NGen 模組中的方法產生事件。|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|（可在 .NET Framework 4.5 和更新版本中取得）。隱藏高額外負荷的 `NGenRundownKeyword` 關鍵字，並防止在 NGen 模組內的方法產生事件。 從 .NET Framework 4.5 開始，程式碼剖析工具應該 `OverrideAndSuppressNGenEventsRundownKeyword` 一起使用和 `NGenRundownKeyword` 來抑制 NGen 模組中的方法產生事件。 這可以讓程式碼剖析工具更有效率地使用 NGen PDB，從而取得 NGen 模組中方法的相關資訊。 .NET Framework 4 與更舊版本中的 CLR 不支援 NGen PDB 建立。 在這些舊版本中，CLR 不會辨識 `OverrideAndSuppressNGenEventsRundownKeyword` ，並會處理 `NGenRundownKeyword` ，以為 NGen 模組中的方法產生事件。|  
 |`PerfTrackKeyWord`|0x2000000|啟用 `ModuleDCStart`、 `ModuleDCEnd`、 `ModuleRangeDCStart`及 `ModuleRangeDCEnd` 事件的收集。|
   
 <a name="runtime_combo"></a>

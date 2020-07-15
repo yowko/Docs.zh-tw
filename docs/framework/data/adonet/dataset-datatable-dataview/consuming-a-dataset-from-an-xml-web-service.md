@@ -1,33 +1,34 @@
 ---
-title: 從 XML Web Service 使用資料集
-ms.date: 03/30/2017
+title: 使用 XML Web Service 中的資料集
+ms.date: 07/14/2020
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 2c8924ee3374489dded7e819ecde8e4d9da750bb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389739"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374382"
 ---
-# <a name="consume-a-dataset-from-an-xml-web-service"></a>使用 XML Web 服務的資料集
+# <a name="consume-a-dataset-from-an-xml-web-service"></a>使用 XML web service 中的資料集
 
-<xref:System.Data.DataSet> 採用中斷連接設計為架構，而部分原因是為了使網際網路的資料傳輸更方便。 **DataSet**是"可序列化的",因為它可以指定為 XML Web 服務的輸入或輸出,而無需任何其他編碼才能將**DataSet**的內容從 XML Web 服務流式傳輸到用戶端並返回。 **DataSet**使用 DiffGram 格式隱式轉換為 XML 串流,透過網路發送,然後從 XML 串流重建為接收端的**DataSet。** 您可以採用這種簡單靈活的方式，以 XML Web Service 來傳輸和傳回關聯式資料。 有關 DiffGram 格式的詳細資訊,請參閱[DiffGram](diffgrams.md)。  
+<xref:System.Data.DataSet> 採用中斷連接設計為架構，而部分原因是為了使網際網路的資料傳輸更方便。 此**資料集**是「可序列化」，因為它可以指定為 XML Web Service 的輸入或輸出，而不需要任何額外的編碼，將**資料集**的內容從 XML Web Service 串流至用戶端並返回。 **資料集會**使用 DiffGram 格式（透過網路傳送）隱含轉換成 xml 資料流程，然後從 XML 資料流程重建為接收端上的**資料集**。 這可讓您使用 XML Web Service 來傳輸和傳回關聯式資料，這是一種簡單且有彈性的方法。 如需 DiffGram 格式的詳細資訊，請參閱[diffgram](diffgrams.md)。  
   
- 下面的範例展示如何建立使用**DataSet**傳輸關係資料(包括修改資料)的XML Web服務和用戶端,並將任何更新解析回原始資料來源。  
+ 下列範例示範如何建立使用**資料集**的 XML Web Service 和用戶端，以傳輸關聯式資料（包括修改過的資料），並將任何更新解析回原始資料來源。  
   
 > [!NOTE]
-> 建立 XML Web Service 時，建議您務必考量涉及的安全性課題。 有關保護 XML Web 服務的資訊,請參閱[保護使用 ASP.NET 建立的 XML Web 服務](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))。  
+> `DataSet`如果輸入不受信任，則傳輸或 `DataTable` 實例做為 XML Web Service 呼叫的一部分並不安全。 如需詳細資訊，請參閱[資料集和 DataTable 安全性指引](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance)。
+> 我們也建議您在建立 XML Web Service 時，一律考慮安全性含意。 如需保護 XML Web Service 的詳細資訊，請參閱[保護使用 ASP.NET 所建立的 XML Web Service](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))。  
   
-## <a name="create-an-xml-web-service"></a>建立 XML Web 服務
+## <a name="create-an-xml-web-service"></a>建立 XML web service
   
 1. 建立 XML Web Service  
   
-     在此範例中,將建立一個傳回資料的 XML Web 服務,在此範例中,從**Northwind**資料庫中傳回客戶清單,並接收包含資料更新**的 DataSet,XML** Web 服務將這些資料解析回原始資料來源。  
+     在此範例中，會建立一個會傳回資料的 XML Web Service （在此案例中為來自**Northwind**資料庫的客戶清單），並接收包含資料更新的資料**集**，XML Web Service 會解析回原始資料來源。  
   
-     XML Web 服務公開了兩種方法 **:GetCustomers,** 以返回客戶清單和**更新客戶**,以解析更新回資料來源。 XML Web Service 以 DataSetSample.asmx 為檔案名稱儲存在 Web 伺服器內。 下列程式碼列出 DataSetSample.asmx 的內容大綱。  
+     XML Web Service 會公開兩個方法： **GetCustomers**，以傳回客戶清單和**UpdateCustomers**，以將更新解析回資料來源。 XML Web Service 以 DataSetSample.asmx 為檔案名稱儲存在 Web 伺服器內。 下列程式碼列出 DataSetSample.asmx 的內容大綱。  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -158,13 +159,13 @@ ms.locfileid: "81389739"
     }  
     ```  
   
-     在典型方案中,將編寫**UpdateCustomers**方法來捕獲樂觀的併發衝突。 為了簡化起見，這個範例並不包括這項步驟。 有關樂觀併發的詳細資訊,請參閱[樂觀併發](../optimistic-concurrency.md)。  
+     在典型的案例中，會撰寫**UpdateCustomers**方法來攔截開放式平行存取違規。 為了簡化起見，這個範例並不包括這項步驟。 如需開放式平行存取的詳細資訊，請參閱[開放式並行](../optimistic-concurrency.md)存取。  
   
 2. 建立 XML Web Service Proxy  
   
      XML Web Service 的用戶端需要 SOAP Proxy，才能使用公開方法。 您可以命令 Visual Studio 產生這個 Proxy。 藉由從 Visual Studio 中設定現有 Web 服務的 Web 參考，會透明地執行這個步驟所說明的所有行為。 如果要自行建立 Proxy 類別，請繼續這些說明。 然而在大多數情況下，使用 Visual Studio 來建立用戶端應用程式的 Proxy 類別已足以因應。  
   
-     Proxy 可使用 Web 服務描述語言工具建立。 例如,如果 XML Web`http://myserver/data/DataSetSample.asmx`服務在 URL 上公開,則發出如下命令,以建立具有**WebData.DSSample**命名空間的 Visual Basic .NET 代理,並將其儲存在檔案範例.vb 中。  
+     Proxy 可使用 Web 服務描述語言工具建立。 例如，如果 XML Web Service 在 URL `http://myserver/data/DataSetSample.asmx` 中公開，請發出如下所示的命令，以建立命名空間為**已 dssample**的 Visual Basic .net proxy，並將它儲存在檔案範例 .vb 中。  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
@@ -190,11 +191,11 @@ ms.locfileid: "81389739"
   
 3. 建立 XML Web Service 用戶端。  
   
-     如果要讓 Visual Studio 為您生成 Web 服務代理類,只需創建用戶端專案,並在解決方案資源管理器視窗中右鍵單擊專案,然後選擇「**添加** > **服務引用**」 。 在 **"添加服務參考"** 對話方塊中,選擇 **「進階**」,然後選擇「**添加 Web 引用**」。。 從可用 Web 服務清單中選擇 Web 服務(如果 Web 服務在當前解決方案或當前電腦上不可用,則可能需要提供 Web 服務終結點的位址)。 如果您自行建立 XML Web Service Proxy (如上述步驟所述)，您可以將它匯入您的用戶端程式碼，並使用 XML Web Service 方法。
+     如果您想要讓 Visual Studio 為您產生 Web 服務 proxy 類別，只需建立用戶端專案，然後在 [方案總管] 視窗中，以滑鼠右鍵按一下專案，然後選取 [**加入**  >  **服務參考**]。 在 [**加入服務參考**] 對話方塊中，選取 [ **Advanced**]，然後選取 [**加入 Web 參考**]。 從可用的 Web 服務清單中選取 Web 服務（如果 Web 服務無法在目前方案或目前的電腦上使用，這可能需要提供 Web 服務端點的位址）。 如果您自行建立 XML Web Service Proxy (如上述步驟所述)，您可以將它匯入您的用戶端程式碼，並使用 XML Web Service 方法。
 
-     以下範例代碼匯入代理庫,呼叫**GetCustomer**以取得客戶清單,添加新客戶,然後返回帶有**更新客戶**更新的**DataSet。**  
+     下列範例程式碼會匯入 proxy 程式庫、呼叫**GetCustomers**以取得客戶清單、加入新的客戶，然後傳回具有**UpdateCustomers**更新的**資料集**。  
   
-     這個範例將**DataSet 傳回的資料集****傳遞給****更新客戶,** 因為只有修改的行需要傳遞給**更新客戶**。 **UpdateCustomers**傳回已解析**的 DataSet**,然後可以**合併**到現有**DataSet**中,以合併已解決的更改和更新中的任何行錯誤資訊。 以下代碼假定您已使用 Visual Studio 建立 Web 引用,並且您在 **「新增 Web 引用」** 對話框中將 Web 引用重新命名為 DsSample。  
+     這個範例會將**GetChanges**傳回的**資料集**傳遞至**UpdateCustomers** ，因為只需要將修改過的資料列傳遞至**UpdateCustomers**。 **UpdateCustomers**會傳回已解析的**資料集**，然後您可以將它**合併**到現有的**資料集**，以併入已解決的變更和更新中的任何資料列錯誤資訊。 下列程式碼假設您已使用 Visual Studio 建立 Web 參考，而且您已在 [**加入 Web 參考**] 對話方塊中將 web 參考重新命名為已 dssample。  
   
     ```vb  
     Imports System  
@@ -270,5 +271,5 @@ ms.locfileid: "81389739"
 - [從 DataAdapter 填入資料集](../populating-a-dataset-from-a-dataadapter.md)
 - [使用 DataAdapter 更新資料來源](../updating-data-sources-with-dataadapters.md)
 - [DataAdapter 的參數](../dataadapter-parameters.md)
-- [Web 服務描述語言工具 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
+- [Web 服務描述語言工具（Wsdl.exe）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

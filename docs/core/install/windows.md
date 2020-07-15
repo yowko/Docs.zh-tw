@@ -4,26 +4,27 @@ description: 瞭解您可以在上安裝 .NET Core 的 Windows 版本。
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: e26494de7e9246b241cb965d8d735a781aab5478
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804482"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308945"
 ---
 # <a name="install-net-core-on-windows"></a>在 Windows 上安裝 .NET Core
 
 > [!div class="op_single_selector"]
 >
-> - [在 Windows 上安裝](windows.md)
+> - [安裝在 Windows 上](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [在 Linux 上安裝](linux.md)
+> - [安裝在 Linux 上](linux.md)
 
 在本文中，您將瞭解如何在 Windows 上安裝 .NET Core。 .NET Core 是由執行時間和 SDK 所組成。 執行時間是用來執行 .NET Core 應用程式，且不一定會包含在應用程式中。 SDK 可用來建立 .NET Core 應用程式和程式庫。 .NET Core 執行時間一律會與 SDK 一起安裝。
 
 .NET Core 的最新版本為3.1。
 
-[下載 .NET Core。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [下載 .NET Core](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>支援的版本
 
@@ -71,13 +72,15 @@ Windows 10 版本的服務結束日期是依版本分割。 下表只會考慮**
 *.NET Core 執行時間*\
 此執行時間是最簡單的執行時間，不包含任何其他執行時間。 強烈建議您同時安裝*ASP.NET Core 運行*時間和*桌面運行*時間，以獲得與 .net Core 應用程式的最佳相容性。
 
-[下載 .NET Core 執行時間。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [下載 .NET Core 執行時間](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK 資訊
 
 SDK 可用來建立及發佈 .NET Core 應用程式和程式庫。 安裝 SDK 包括三個[運行](#runtime-information)時間： ASP.NET Core、桌面和 .net Core。
 
-[下載 .NET Core SDK。](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [下載 .NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>相依性
 
@@ -91,7 +94,7 @@ SDK 可用來建立及發佈 .NET Core 應用程式和程式庫。 安裝 SDK �
 > [!NOTE]
 > `+`代表最小版本的符號。
 
-| OS                            | 版本                        | 架構   |
+| 作業系統                            | 版本                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 用戶端                | 8.1                            | x64、x86        |
 | Windows 10 用戶端             | 版本 1609 +                  | x64、x86        |
@@ -109,7 +112,7 @@ SDK 可用來建立及發佈 .NET Core 應用程式和程式庫。 安裝 SDK �
 > [!NOTE]
 > `+`代表最小版本的符號。
 
-| OS                            | 版本                        | 架構   |
+| 作業系統                            | 版本                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
@@ -127,7 +130,7 @@ SDK 可用來建立及發佈 .NET Core 應用程式和程式庫。 安裝 SDK �
 > [!NOTE]
 > `+`代表最小版本的符號。
 
-| OS                            | 版本                        | 架構   |
+| 作業系統                            | 版本                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
@@ -143,7 +146,7 @@ SDK 可用來建立及發佈 .NET Core 應用程式和程式庫。 安裝 SDK �
 > [!NOTE]
 > `+`代表最小版本的符號。
 
-| OS                            | 版本                        | 架構   |
+| 作業系統                            | 版本                        | 架構   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows 用戶端                | 7 SP1 +、8。1                    | x64、x86        |
 | Windows 10 用戶端             | 版本 1607 +                  | x64、x86        |
@@ -218,7 +221,8 @@ dotnet-install.ps1 -Channel Current
 
 Visual Studio 可以安裝最新的 .NET Core SDK 和執行時間。
 
-- [下載 Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)。
+> [!div class="button"]
+> [下載 Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)。
 
 ### <a name="select-a-workload"></a>選取工作負載
 

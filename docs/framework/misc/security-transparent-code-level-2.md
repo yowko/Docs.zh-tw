@@ -1,5 +1,6 @@
 ---
 title: 安全性透明的程式碼，層級 2
+description: 瞭解層級2透明程式碼。 請參閱使用範例和行為、覆寫模式、繼承規則等等。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparency
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 12e991e4977b0866343158c05681ddf4bd0c869b
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3b87a48ac3f9925fd868be9e58d5904014ca6c09
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645737"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309205"
 ---
 # <a name="security-transparent-code-level-2"></a>安全性透明的程式碼，層級 2
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-在 .NET 框架 4 中引入了 2 級透明度。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
+層級2透明度是在 .NET Framework 4 中引進。 此模型的三個原則是透明程式碼、安全性安全關鍵程式碼和安全性關鍵程式碼。
 
 - 透明程式碼，包括以完全信任執行的程式碼，只可以呼叫其他透明程式碼或安全性安全關鍵程式碼。 它只能執行定義域之部分信任權限集合 (如果存在的話) 所允許的動作。 透明程式碼無法進行下列作業：
 
@@ -42,7 +43,7 @@ ms.locfileid: "81645737"
 
 ## <a name="usage-examples-and-behaviors"></a>使用範例和行為
 
-要指定 .NET 框架 4 規則(第 2 級透明度),請使用以下註解進行程式集:
+若要指定 .NET Framework 4 規則（層級2透明度），請針對元件使用下列注釋：
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -54,7 +55,7 @@ ms.locfileid: "81645737"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-如果不對程式集進行編號,則默認情況下將使用 .NET 框架 4 規則。 但是,建議的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>屬性,而不是根據預設值。
+如果您沒有標注元件，預設會使用 .NET Framework 4 規則。 不過，建議的最佳作法是使用屬性， <xref:System.Security.SecurityRulesAttribute> 而不是根據預設值。
 
 ### <a name="assembly-wide-annotation"></a>組件範圍的註釋
 
@@ -68,7 +69,7 @@ ms.locfileid: "81645737"
 
 - `AllowPartiallyTrustedCallers` (僅限層級 2)：所有程式碼都預設為透明的。 不過，個別的類型和成員可以有其他屬性。
 
-下表將級別 2 的程式集級別行為與級別 1 進行比較。
+下表比較層級2與層級1的元件層級行為。
 
 |組件屬性|層級 2|層級 1|
 |------------------------|-------------|-------------|
@@ -165,7 +166,7 @@ ms.locfileid: "81645737"
 已加入下列屬性至 <xref:System.Reflection> 命名空間來識別類型、方法或欄位是否為 `SecurityCritical`、`SecuritySafeCritical`，或 `SecurityTransparent`：<xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 和 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>。 您可以使用這些屬性來判斷透明度，方法是使用反映，而非檢查屬性是否存在。 透明度規則很複雜，而且檢查屬性是否存在可能不足夠。
 
 > [!NOTE]
-> 方法`SafeCritical`傳`true`回<xref:System.Type.IsSecurityCritical%2A><xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>和`SafeCritical`,因為確實至關重要(它具有與關鍵代碼相同的功能,但可以從透明代碼調用它)。
+> `SafeCritical`方法會傳回 `true` 和的 <xref:System.Type.IsSecurityCritical%2A> <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> ，因為 `SafeCritical` 確實相當重要（其功能與關鍵程式碼相同，不過可從透明程式碼呼叫）。
 
 動態方法會繼承它們所附加之目標模組的透明度，但是不會繼承類型的透明度 (如果它們附加至類型的話)。
 
@@ -175,9 +176,9 @@ ms.locfileid: "81645737"
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
-<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 屬性預設為 `false`，因此這個屬性必須設定為 `true`，才能略過驗證。 您應該僅針對最佳化目的進行此作業。 您應該透過使用`transparent`[PEVerify 工具](../tools/peverify-exe-peverify-tool.md)中的選項確保程式集中的透明代碼是可驗證的。
+<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 屬性預設為 `false`，因此這個屬性必須設定為 `true`，才能略過驗證。 您應該僅針對最佳化目的進行此作業。 您應該使用 `transparent` [PEVerify 工具](../tools/peverify-exe-peverify-tool.md)中的選項，確保元件中的透明程式碼是可驗證的。
 
 ## <a name="see-also"></a>另請參閱
 
-- [安全透明代碼,等級 1](security-transparent-code-level-1.md)
+- [安全性透明的程式碼，層級1](security-transparent-code-level-1.md)
 - [安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
