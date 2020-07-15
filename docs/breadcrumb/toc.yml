@@ -435,11 +435,11 @@
             - name: 資料繫結
               tocHref: /dotnet/desktop-wpf/data
               topicHref: /dotnet/desktop-wpf/data/index
-        - name: 'C# 指南'
+        - name: C# 指南
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
-            - name: 'C# 簡介'
+            - name: C# 簡介
               tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
               topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
             - name: 開始使用
@@ -461,7 +461,7 @@
               tocHref: /dotnet/csharp/programming-guide/
               topicHref: /dotnet/csharp/programming-guide/index
               items:
-                - name: 'C# 程式深入解析'
+                - name: C# 程式深入解析
                   tocHref: /dotnet/csharp/programming-guide/inside-a-program/
                   topicHref: /dotnet/csharp/programming-guide/inside-a-program/index
                 - name: 陣列
@@ -562,25 +562,25 @@
                 - name: 編譯器錯誤
                   tocHref: /dotnet/csharp/language-reference/compiler-messages/
                   topicHref: /dotnet/csharp/language-reference/compiler-messages/index
-                - name: 'C# 6.0 草稿規格'
+                - name: C# 6.0 草稿規格
                   tocHref: /dotnet/csharp/language-reference/language-specification/
                   topicHref: /dotnet/csharp/language-reference/language-specification/index
-                - name: 'C# 7.0 語言提案'
+                - name: C# 7.0 語言提案
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/index
-                - name: 'C# 7.1 語言提案'
+                - name: C# 7.1 語言提案
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/index
-                - name: 'C# 7.2 語言提案'
+                - name: C# 7.2 語言提案
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/index
-                - name: 'C# 7.3 語言提案'
+                - name: C# 7.3 語言提案
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/index
-                - name: 'C# 8.0 語言提案'
+                - name: C# 8.0 語言提案
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/index
-        - name: 'F# 指南'
+        - name: F# 指南
           tocHref: /dotnet/fsharp/
           topicHref: /dotnet/fsharp/index
         - name: Visual Basic 指南
@@ -699,6 +699,6 @@
           tocHref: /dotnet/azure/
           topicHref: /dotnet/azure/index
           items:
-            - name: 適用於 .NET 的 Azure SDK
-              tocHref: /dotnet/azure/sdk/
-              topicHref: /dotnet/azure/sdk/index
+            - name: 適用於 .NET 開發人員的 Azure
+              tocHref: /dotnet/azure/
+              topicHref: /dotnet/azure/index
