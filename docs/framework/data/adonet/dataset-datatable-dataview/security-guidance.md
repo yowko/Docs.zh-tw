@@ -3,12 +3,12 @@ title: 資料集和 DataTable 安全性指引
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: c6b32afeadccc3fd22d6611d282840233280440f
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
+ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86382453"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405288"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>資料集和 DataTable 安全性指引
 
@@ -195,7 +195,8 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 
 如需和的詳細資訊 `TraceSource` `TraceListener` ，請參閱檔 how [To：搭配追蹤接聽項使用 TraceSource 和篩選](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners)。
 
-**注意**：在「audit 模式」中執行應用程式無法在 .net Core 中使用，或在 .net 5.0 和更新版本中提供。
+> [!NOTE]
+> .NET Core 或 .NET 5.0 和更新版本中不提供以 audit 模式執行應用程式的功能。
 
 <a name="ratr"></a>
 
@@ -207,7 +208,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 * 可用的選項取決於應用程式的目標架構。
 
 > [!WARNING]
-> 移除所有類型的限制可能會在應用程式內引進安全性漏洞。 使用這種機制時，請確定應用**程式不會使用** `DataSet` 或 `DataTable` 來讀取不受信任的輸入。 如需詳細資訊，請參閱[CVE-2020-1147](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1147) ，以及[與不受信任的輸入有關](#swr)的下一節標題為安全。
+> 移除所有類型的限制可能會在應用程式內引進安全性漏洞。 使用這種機制時，請確定應用**程式不會使用** `DataSet` 或 `DataTable` 來讀取不受信任的輸入。 如需詳細資訊，請參閱[CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) ，以及[與不受信任的輸入有關](#swr)的下一節標題為安全。
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>透過 AppCoNtext 設定（.NET Framework 4.6-4.8、.NET Core 2.1 和更新版本、.NET 5.0 和更新版本）
 
@@ -463,7 +464,8 @@ public class MyClass
 
 `DataSet` `DataTable` 以這種方式從不受信任的 JSON blob 還原序列化或是不安全的。 此模式很容易遭到阻絕服務攻擊。 這類攻擊可能會使應用程式損毀或呈現無回應。
 
-**注意**： Microsoft 不保證或不支援執行協力廠商程式庫，例如_上的Newtonsoft.Js_。 這項資訊是為了完整性而提供，而且在撰寫本文時是正確的。
+> [!NOTE]
+> Microsoft 不保證或不支援執行協力廠商程式庫，例如_上的Newtonsoft.Js_。 這項資訊是為了完整性而提供，而且在撰寫本文時是正確的。
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>透過 BinaryFormatter 還原序列化 DataSet 或 DataTable
 

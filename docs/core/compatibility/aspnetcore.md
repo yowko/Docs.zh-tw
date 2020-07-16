@@ -2,15 +2,15 @@
 title: ASP.NET Core 的重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 07/13/2020
+ms.date: 07/14/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 75f33e7d6d76206ebe46b1a229ccb152d79ddc61
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: b73492e0c2f60c2b214984d3987de1e9e6530847
+ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309556"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86402000"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
 
@@ -71,6 +71,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [MVC：類型已變更為內部](#mvc-pubternal-types-changed-to-internal)
 - [MVC： Web API 相容性填充碼已移除](#mvc-web-api-compatibility-shim-removed)
 - [Razor：將執行時間編譯移至封裝](#razor-runtime-compilation-moved-to-a-package)
+- [安全性：已移除 Cookie 名稱編碼](#security-cookie-name-encoding-removed)
 - [安全性： Microsoft.identitymodel NuGet 套件版本已更新](#security-identitymodel-nuget-package-versions-updated)
 - [會話狀態：已移除已淘汰的 Api](#session-state-obsolete-apis-removed)
 - [共用架構：從 AspNetCore 應用程式移除元件](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
@@ -138,6 +139,10 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Security: Cookie name encoding removed](~/includes/core-changes/aspnetcore/5.0/security-cookie-name-encoding-removed.md)]
 
 ***
 
