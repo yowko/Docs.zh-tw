@@ -4,11 +4,11 @@
   href: introduction-to-wpf.md
 - name: 開始使用
   href: getting-started/
-- name: XBOX Video Application Development
+- name: 應用程式開發
   href: app-development/
 - name: 進階
   href: advanced/
-- name: 控制
+- name: 控制項
   href: controls/
 - name: 資料
   href: data/

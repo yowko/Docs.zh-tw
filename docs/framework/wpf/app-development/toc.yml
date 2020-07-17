@@ -21,7 +21,7 @@
           href: wpf-windows-overview.md
         - name: 對話方塊概觀
           href: dialog-boxes-overview.md
-        - name: 如何主題
+        - name: HOW TO 主題
           href: window-management-how-to-topics.md
           items:
             - name: 自動調整視窗大小以符合其內容
@@ -45,7 +45,7 @@
           href: structured-navigation-overview.md
         - name: 巡覽拓撲概觀
           href: navigation-topologies-overview.md
-        - name: 如何主題
+        - name: HOW TO 主題
           href: navigation-how-to-topics.md
           items:
             - name: 呼叫頁面函式
@@ -77,7 +77,7 @@
     - name: WPF 增益集概觀
       href: wpf-add-ins-overview.md
       items:
-        - name: 如何主題
+        - name: HOW TO 主題
           href: how-to-topics.md
           items:
             - name: 建立傳回 UI 的增益集
@@ -123,7 +123,7 @@
           href: building-a-wpf-application-wpf.md
         - name: 部署 WPF 應用程式
           href: deploying-a-wpf-application-wpf.md
-        - name: 如何主題
+        - name: HOW TO 主題
           href: build-and-deploy-how-to-topics.md
           items:
             - name: 設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式

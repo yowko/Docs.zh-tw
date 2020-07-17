@@ -23,7 +23,7 @@
       href: data.md
     - name: 中介軟體
       href: middleware.md
-    - name: 組態
+    - name: 設定
       href: config.md
     - name: 安全性
       href: security-authentication-authorization.md

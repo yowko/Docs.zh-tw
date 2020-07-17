@@ -1,4 +1,4 @@
-- name: 'C# 6.0 草稿規格'
+- name: C# 6.0 草稿規格
   items:
     - name: 簡介
       href: ../../../../_csharplang/spec/introduction.md
@@ -6,7 +6,7 @@
       href: ../../../../_csharplang/spec/lexical-structure.md
     - name: 基本概念
       href: ../../../../_csharplang/spec/basic-concepts.md
-    - name: 類型
+    - name: 型別
       href: ../../../../_csharplang/spec/types.md
     - name: 變數
       href: ../../../../_csharplang/spec/variables.md

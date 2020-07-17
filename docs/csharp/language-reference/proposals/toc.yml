@@ -1,6 +1,6 @@
 - name: 最新功能規格
   items:
-    - name: 'C# 7.0 規格提案'
+    - name: C# 7.0 規格提案
       items:
         - name: 模式比對
           href: ../../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
@@ -14,7 +14,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: 數字分隔符號
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-    - name: 'C# 7.1 規格提案'
+    - name: C# 7.1 規格提案
       items:
         - name: Async main 方法
           href: ../../../../_csharplang/proposals/csharp-7.1/async-main.md
@@ -24,7 +24,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
         - name: 使用泛型進行模式比對
           href: ../../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-    - name: 'C# 7.2 規格提案'
+    - name: C# 7.2 規格提案
       items:
         - name: 唯讀參考
           href: ../../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
@@ -38,7 +38,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
         - name: 前置數字分隔符號
           href: ../../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-    - name: 'C# 7.3 規格提案'
+    - name: C# 7.3 規格提案
       items:
         - name: 非受控的泛型型別條件約束
           href: ../../../../_csharplang/proposals/csharp-7.3/blittable.md
@@ -58,7 +58,7 @@
           href: ../../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
         - name: 改進的多載候選項目
           href: ../../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-    - name: 'C# 8.0 規格提案'
+    - name: C# 8.0 規格提案
       items:
         - name: 可為 Null 的參考型別 - 提案
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md

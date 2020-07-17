@@ -48,7 +48,7 @@
 - name: 在 ADO.NET 中傳送和修改資料
   href: retrieving-and-modifying-data.md
   items:
-    - name: 連接到資料來源
+    - name: 連接資料來源
       href: connecting-to-a-data-source.md
       items:
         - name: 建立連接
@@ -115,9 +115,9 @@
     - name: 異動和並行存取
       href: transactions-and-concurrency.md
       items:
-        - name: 本機交易
+        - name: 本機異動
           href: local-transactions.md
-        - name: 分散式交易
+        - name: 分散式異動
           href: distributed-transactions.md
         - name: System.Transactions 與 SQL Server 整合
           href: system-transactions-integration-with-sql-server.md
@@ -168,7 +168,7 @@
     - name: LINQ to DataSet
       href: linq-to-dataset.md
       items:
-        - name: 開始使用
+        - name: 快速入門
           href: getting-started-linq-to-dataset.md
           items:
             - name: LINQ to DataSet 概觀
@@ -177,7 +177,7 @@
               href: loading-data-into-a-dataset.md
             - name: 下載範例資料庫
               href: downloading-sample-databases-linq-to-dataset.md
-            - name: 如何：在 Visual Studio 中建立 LINQ to DataSet 專案
+            - name: 作法：在 Visual Studio 中建立 LINQ to DataSet 專案
               href: how-to-create-a-linq-to-dataset-project-in-vs.md
         - name: 程式設計手冊
           href: programming-guide-linq-to-dataset.md
@@ -197,7 +197,7 @@
               href: comparing-datarows-linq-to-dataset.md
             - name: 從查詢建立 DataTable
               href: creating-a-datatable-from-a-query-linq-to-dataset.md
-            - name: 如何：實作 CopyToDataTable<T>，其中泛型類型 T 不是 DataRow
+            - name: 作法：實作 CopyToDataTable<T>，其中泛型型別 T 不是 DataRow
               href: implement-copytodatatable-where-type-not-a-datarow.md
             - name: 泛型 Field 和 SetField 方法
               href: generic-field-and-setfield-methods-linq-to-dataset.md
@@ -214,7 +214,7 @@
                   href: querying-the-datarowview-collection-in-a-dataview.md
                 - name: DataView 效能
                   href: dataview-performance.md
-                - name: 如何：將 DataView 物件繫結至 Windows Form DataGridView 控制項
+                - name: 作法：將 DataView 物件繫結至 Windows Forms DataGridView 控制項
                   href: how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md
             - name: 偵錯 LINQ to DataSet 查詢
               href: debugging-linq-to-dataset-queries.md
@@ -226,13 +226,13 @@
                 - name: 查詢運算式範例
                   href: query-expression-examples-linq-to-dataset.md
                   items:
-                    - name: 投射
+                    - name: Projection
                       href: query-expression-syntax-examples-projection-linq-to-dataset.md
                     - name: 限制
                       href: query-expression-syntax-examples-restriction-linq-to-dataset.md
                     - name: 資料分割
                       href: query-expression-syntax-examples-partitioning.md
-                    - name: 訂購
+                    - name: 排序
                       href: query-expression-syntax-examples-ordering-linq-to-dataset.md
                     - name: 項目運算子
                       href: query-expression-syntax-examples-element-operators.md
@@ -243,11 +243,11 @@
                 - name: 以方法為基礎的查詢範例
                   href: method-based-query-examples-linq-to-dataset.md
                   items:
-                    - name: 投射
+                    - name: Projection
                       href: method-based-query-syntax-examples-projection.md
                     - name: 資料分割
                       href: method-based-query-syntax-examples-partitioning-linq.md
-                    - name: 訂購
+                    - name: 排序
                       href: method-based-query-syntax-examples-ordering-linq-to-dataset.md
                     - name: 設定運算子
                       href: method-based-query-syntax-examples-set-operators.md
@@ -268,7 +268,7 @@
       href: entity-data-model-key-concepts.md
     - name: 實體資料模型：命名空間
       href: entity-data-model-namespaces.md
-    - name: 實體資料模型：基本資料型別
+    - name: 實體資料模型：基本資料類型
       href: entity-data-model-primitive-data-types.md
     - name: 實體資料模型：繼承
       href: entity-data-model-inheritance.md

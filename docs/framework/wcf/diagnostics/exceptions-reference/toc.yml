@@ -3,7 +3,7 @@
   items:
     - name: COM+ 整合
       href: com-integration.md
-    - name: 組態
+    - name: 設定
       href: configuration.md
     - name: 核心通訊：通道架構
       href: core-communications-channel-framework.md
