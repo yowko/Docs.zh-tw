@@ -1,7 +1,7 @@
 - name: LINQ to SQL
   href: index.md
   items:
-    - name: 開始使用
+    - name: 快速入門
       href: getting-started.md
       items:
         - name: LINQ to SQL 的功能
@@ -21,13 +21,13 @@
               href: walkthrough-manipulating-data-visual-basic.md
             - name: 逐步解說：僅使用預存程序 (Visual Basic)
               href: walkthrough-using-only-stored-procedures-visual-basic.md
-            - name: '逐步解說：簡單的物件模型和查詢 (C#)'
+            - name: 逐步解說：簡單的物件模型和查詢 (C#)
               href: walkthrough-simple-object-model-and-query-csharp.md
-            - name: '逐步解說：跨關聯性查詢 (C#)'
+            - name: 逐步解說：跨關聯性查詢 (C#)
               href: walkthrough-querying-across-relationships-csharp.md
-            - name: '逐步解說：操作資料 (C#)'
+            - name: 逐步解說：操作資料 (C#)
               href: walkthrough-manipulating-data-csharp.md
-            - name: '逐步解說：僅使用預存程序 (C#)'
+            - name: 逐步解說：僅使用預存程序 (C#)
               href: walkthrough-using-only-stored-procedures-csharp.md
     - name: 程式設計手冊
       href: programming-guide.md
@@ -35,76 +35,76 @@
         - name: 建立物件模型
           href: creating-the-object-model.md
           items:
-            - name: '如何：在 Visual Basic 或 C# 中產生物件模型'
+            - name: 作法：以 Visual Basic 或 C# 產生物件模型
               href: how-to-generate-the-object-model-in-visual-basic-or-csharp.md
-            - name: 如何：產生物件模型當做外部檔案
+            - name: 作法：產生物件模型作為外部檔案
               href: how-to-generate-the-object-model-as-an-external-file.md
-            - name: 如何：藉由修改 DBML 檔案產生自訂程式碼
+            - name: 作法：藉由修改 DBML 檔案產生自訂程式碼
               href: how-to-generate-customized-code-by-modifying-a-dbml-file.md
-            - name: 如何：驗證 DBML 和外部對應檔
+            - name: 作法：驗證 DBML 和外部對應檔
               href: how-to-validate-dbml-and-external-mapping-files.md
-            - name: 如何：讓實體可序列化
+            - name: 作法：讓實體可序列化
               href: how-to-make-entities-serializable.md
-            - name: 如何：使用程式碼編輯器自訂實體類別
+            - name: 作法：使用程式碼編輯器自訂實體類別
               href: how-to-customize-entity-classes-by-using-the-code-editor.md
               items:
-                - name: 如何：指定資料庫名稱
+                - name: 作法：指定資料庫名稱
                   href: how-to-specify-database-names.md
-                - name: 如何：將資料表表示為類別
+                - name: 作法：將資料表表示為類別
                   href: how-to-represent-tables-as-classes.md
-                - name: 如何：將資料行表示為類別成員
+                - name: 作法：將資料行表示為類別成員
                   href: how-to-represent-columns-as-class-members.md
-                - name: 如何：表示主索引鍵
+                - name: 作法：表示主索引鍵
                   href: how-to-represent-primary-keys.md
-                - name: 如何：對應資料庫關聯性
+                - name: 作法：對應資料庫關聯性
                   href: how-to-map-database-relationships.md
-                - name: 如何：將資料行表示為資料庫產生的資料行
+                - name: 作法：將資料行表示為資料庫產生的資料行
                   href: how-to-represent-columns-as-database-generated.md
-                - name: 如何：將資料行表示為時間戳記或版本資料行
+                - name: 作法：將資料行表示為時間戳記或版本資料行
                   href: how-to-represent-columns-as-timestamp-or-version-columns.md
-                - name: 如何：指定資料庫的資料類型
+                - name: 作法：指定資料庫的資料類型
                   href: how-to-specify-database-data-types.md
-                - name: 如何：表示計算資料行
+                - name: 作法：表示計算資料行
                   href: how-to-represent-computed-columns.md
-                - name: 如何：指定私用儲存欄位
+                - name: 作法：指定私用儲存欄位
                   href: how-to-specify-private-storage-fields.md
-                - name: 如何：將資料行表示為可存放 Null 值的資料行
+                - name: 作法：將資料行表示為可存放 Null 值的資料行
                   href: how-to-represent-columns-as-allowing-null-values.md
-                - name: 如何：對應繼承階層架構
+                - name: 作法：對應繼承階層
                   href: how-to-map-inheritance-hierarchies.md
-                - name: 如何：指定並行衝突檢查
+                - name: 作法：指定並行衝突檢查
                   href: how-to-specify-concurrency-conflict-checking.md
         - name: 與資料庫通訊
           href: communicating-with-the-database.md
           items:
-            - name: 如何：連接至資料庫
+            - name: 作法：連接到資料庫
               href: how-to-connect-to-a-database.md
-            - name: 如何：直接執行 SQL 命令
+            - name: 作法：直接執行 SQL 命令
               href: how-to-directly-execute-sql-commands.md
-            - name: 如何：重複使用 ADO.NET 命令和 DataContext 之間的連接
+            - name: 作法：重複使用 ADO.NET 命令和 DataContext 之間的連接
               href: how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md
         - name: 查詢資料庫
           href: querying-the-database.md
           items:
-            - name: 如何：查詢資訊
+            - name: 作法：查詢資訊
               href: how-to-query-for-information.md
-            - name: 如何：以唯讀形式擷取資訊
+            - name: 作法：以唯讀形式擷取資訊
               href: how-to-retrieve-information-as-read-only.md
-            - name: 如何：控制擷取的相關資料多寡
+            - name: 作法：控制擷取的相關資料多寡
               href: how-to-control-how-much-related-data-is-retrieved.md
-            - name: 如何：篩選相關資料
+            - name: 作法：篩選相關資料
               href: how-to-filter-related-data.md
-            - name: 如何：關閉延後載入
+            - name: 作法：關閉延後載入
               href: how-to-turn-off-deferred-loading.md
-            - name: 如何：直接執行 SQL 查詢
+            - name: 作法：直接執行 SQL 查詢
               href: how-to-directly-execute-sql-queries.md
-            - name: 如何：儲存和重新使用查詢
+            - name: 作法：儲存和重複使用查詢
               href: how-to-store-and-reuse-queries.md
-            - name: 如何：在查詢中處理複合索引鍵
+            - name: 作法：在查詢中處理複合索引鍵
               href: how-to-handle-composite-keys-in-queries.md
-            - name: 如何：一次擷取多個物件
+            - name: 作法：一次擷取多個物件
               href: how-to-retrieve-many-objects-at-once.md
-            - name: 如何：在 DataContext 層級篩選
+            - name: 作法：在 DataContext 層級篩選
               href: how-to-filter-at-the-datacontext-level.md
             - name: 查詢範例
               href: query-examples.md
@@ -155,45 +155,45 @@
         - name: 變更資料和提交
           href: making-and-submitting-data-changes.md
           items:
-            - name: 如何：將資料列插入至資料庫
+            - name: 作法：將資料列插入至資料庫
               href: how-to-insert-rows-into-the-database.md
-            - name: 如何：更新資料庫中的資料列
+            - name: 作法：更新資料庫中的資料列
               href: how-to-update-rows-in-the-database.md
-            - name: 如何：從資料庫刪除資料列
+            - name: 作法：從資料庫刪除資料列
               href: how-to-delete-rows-from-the-database.md
-            - name: 如何：將變更提交至資料庫
+            - name: 作法：將變更提交至資料庫
               href: how-to-submit-changes-to-the-database.md
-            - name: 如何：使用異動括住提交的資料
+            - name: 作法：使用異動括住提交的資料
               href: how-to-bracket-data-submissions-by-using-transactions.md
-            - name: 如何：動態建立資料庫
+            - name: 作法：動態建立資料庫
               href: how-to-dynamically-create-a-database.md
-            - name: 如何：管理變更衝突
+            - name: 作法：管理變更衝突
               href: how-to-manage-change-conflicts.md
               items:
-                - name: 如何：偵測和解決發生衝突的提交內容
+                - name: 作法：偵測和解決發生衝突的提交內容
                   href: how-to-detect-and-resolve-conflicting-submissions.md
-                - name: 如何：指定並行例外狀況的擲回時機
+                - name: 作法：指定並行例外狀況的擲回時機
                   href: how-to-specify-when-concurrency-exceptions-are-thrown.md
-                - name: 如何：指定用於測試並行衝突的成員
+                - name: 作法：指定用於測試並行衝突的成員
                   href: how-to-specify-which-members-are-tested-for-concurrency-conflicts.md
-                - name: 如何：擷取實體衝突資訊
+                - name: 作法：擷取實體衝突資訊
                   href: how-to-retrieve-entity-conflict-information.md
-                - name: 如何：擷取成員衝突資訊
+                - name: 作法：擷取成員衝突資訊
                   href: how-to-retrieve-member-conflict-information.md
-                - name: 如何：藉由保留資料庫值來解決衝突
+                - name: 作法：藉由保留資料庫值來解決衝突
                   href: how-to-resolve-conflicts-by-retaining-database-values.md
-                - name: 如何：藉由覆寫資料庫值來解決衝突
+                - name: 作法：藉由覆寫資料庫值來解決衝突
                   href: how-to-resolve-conflicts-by-overwriting-database-values.md
-                - name: 如何：藉由與資料庫值合併來解決衝突
+                - name: 作法：藉由與資料庫值合併來解決衝突
                   href: how-to-resolve-conflicts-by-merging-with-database-values.md
         - name: 偵錯支援
           href: debugging-support.md
           items:
-            - name: 如何：顯示產生的 SQL
+            - name: 作法：顯示產生的 SQL
               href: how-to-display-generated-sql.md
-            - name: 如何：顯示變更集
+            - name: 作法：顯示變更集
               href: how-to-display-a-changeset.md
-            - name: 如何：顯示 LINQ to SQL 命令
+            - name: 作法：顯示 LINQ to SQL 命令
               href: how-to-display-linq-to-sql-commands.md
             - name: 疑難排解
               href: troubleshooting.md
@@ -207,7 +207,7 @@
             - name: 自訂插入、更新和刪除作業
               href: customizing-insert-update-and-delete-operations.md
               items:
-                - name: 自訂作業：概觀
+                - name: 自訂作業：總覽
                   href: customizing-operations-overview.md
                 - name: 插入、更新和刪除作業
                   href: insert-update-and-delete-operations.md
@@ -238,7 +238,7 @@
               href: the-linq-to-sql-object-model.md
             - name: 物件狀態和變更追蹤
               href: object-states-and-change-tracking.md
-            - name: 開放式並行存取：概觀
+            - name: 開放式並行存取：總覽
               href: optimistic-concurrency-overview.md
             - name: 查詢概念
               href: query-concepts.md
@@ -247,7 +247,7 @@
                   href: linq-to-sql-queries.md
                 - name: 跨關聯性查詢
                   href: querying-across-relationships.md
-                - name: 遠端和本機執行的比較
+                - name: 遠端與本機執行的比較
                   href: remote-vs-local-execution.md
                 - name: 延後和立即載入的比較
                   href: deferred-versus-immediate-loading.md
@@ -260,34 +260,34 @@
             - name: 預存程序
               href: stored-procedures.md
               items:
-                - name: 如何：傳回資料列集
+                - name: 作法：傳回資料列集
                   href: how-to-return-rowsets.md
-                - name: 如何：使用有參數的預存程序
+                - name: 作法：使用有參數的預存程序
                   href: how-to-use-stored-procedures-that-take-parameters.md
-                - name: 如何：使用與多個結果型式對應的預存程序
+                - name: 作法：使用與多個結果型式對應的預存程序
                   href: how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md
-                - name: 如何：使用與循序結果型式對應的預存程序
+                - name: 作法：使用與循序結果型式對應的預存程序
                   href: how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md
                 - name: 使用預存程序來自訂作業
                   href: customizing-operations-by-using-stored-procedures.md
                 - name: 以獨佔模式使用預存程序來自訂作業
                   href: customizing-operations-by-using-stored-procedures-exclusively.md
-            - name: 交易支援
+            - name: 異動支援
               href: transaction-support.md
             - name: SQL-CLR 類型不符
               href: sql-clr-type-mismatches.md
             - name: SQL-CLR 自訂類型對應
               href: sql-clr-custom-type-mappings.md
-            - name: 使用者定義的函式
+            - name: 使用者定義函式
               href: user-defined-functions.md
               items:
-                - name: 如何：使用純量值使用者定義函式
+                - name: 作法：使用純量值使用者定義函式
                   href: how-to-use-scalar-valued-user-defined-functions.md
-                - name: 如何：使用資料表值使用者定義函式
+                - name: 作法：使用資料表值使用者定義函式
                   href: how-to-use-table-valued-user-defined-functions.md
-                - name: 如何：以內嵌方式呼叫使用者定義函式
+                - name: 作法：以內嵌方式呼叫使用者定義函式
                   href: how-to-call-user-defined-functions-inline.md
-    - name: 參考
+    - name: 參考資料
       href: reference.md
       items:
         - name: 資料類型與函式

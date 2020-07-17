@@ -8,21 +8,21 @@
     - name: EDM 產生器 (EdmGen.exe)
       href: edm-generator-edmgen-exe.md
       items:
-        - name: 如何：使用 EdmGen.exe 產生模型和對應檔
+        - name: 作法：使用 EdmGen.exe 產生模型和對應檔
           href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
-        - name: 如何：使用 EdmGen.exe 產生物件層程式碼
+        - name: 作法：使用 EdmGen.exe 產生物件層程式碼
           href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
-        - name: 如何：使用 EdmGen.exe 驗證模型和對應檔
+        - name: 作法：使用 EdmGen.exe 驗證模型和對應檔
           href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
-    - name: 如何：定義連接字串
+    - name: 作法：定義連接字串
       href: how-to-define-the-connection-string.md
-    - name: 如何：讓模型和對應檔成為內嵌資源
+    - name: 作法：讓模型和對應檔成為內嵌資源
       href: how-to-make-model-and-mapping-files-embedded-resources.md
     - name: 使用資料定義語言
       href: working-with-data-definition-language.md
 - name: 查詢概念模型
   href: querying-a-conceptual-model.md
-- name: 使用物件
+- name: 處理物件
   href: working-with-objects.md
 - name: 處理資料提供者
   href: working-with-data-providers.md
@@ -35,25 +35,25 @@
         - name: Entity Framework 的 EntityClient 提供者
           href: entityclient-provider-for-the-entity-framework.md
           items:
-            - name: 如何：建置 EntityCollection 連接字串
+            - name: 作法：建置 EntityCollection 連接字串
               href: how-to-build-an-entityconnection-connection-string.md
-            - name: 如何：執行可傳回 PrimitiveType 結果的查詢
+            - name: 作法：執行可傳回 PrimitiveType 結果的查詢
               href: how-to-execute-a-query-that-returns-primitivetype-results.md
-            - name: 如何：執行可傳回 StructuralType 結果的查詢
+            - name: 作法：執行可傳回 StructuralType 結果的查詢
               href: how-to-execute-a-query-that-returns-structuraltype-results.md
-            - name: 如何：執行可傳回 RefType 結果的查詢
+            - name: 作法：執行可傳回 RefType 結果的查詢
               href: how-to-execute-a-query-that-returns-reftype-results.md
-            - name: 如何：執行可傳回複雜類型的查詢
+            - name: 作法：執行可傳回複雜類型的查詢
               href: how-to-execute-a-query-that-returns-complex-types.md
-            - name: 如何：執行可傳回巢狀集合的查詢
+            - name: 作法：執行可傳回巢狀集合的查詢
               href: how-to-execute-a-query-that-returns-nested-collections.md
-            - name: 如何：使用 EntityCommand 執行 Entity SQL 查詢
+            - name: 作法：使用 EntityCommand 執行參數化 Entity SQL 查詢
               href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
-            - name: 如何：使用 EntityCommand 執行參數化預存程序
+            - name: 作法：使用 EntityCommand 執行參數化預存程序
               href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
-            - name: 如何：執行多型查詢
+            - name: 作法：執行多型查詢
               href: how-to-execute-a-polymorphic-query.md
-            - name: 如何：使用 NAVIGATE 運算子導覽關聯性
+            - name: 作法：使用 Navigate 運算子巡覽關聯性
               href: how-to-navigate-relationships-with-the-navigate-operator.md
         - name: 適用於 Entity Framework 的 SqlClient
           href: sqlclient-for-the-entity-framework.md
@@ -65,13 +65,13 @@
                   href: conceptual-model-canonical-to-sql-server-functions-mapping.md
                 - name: 彙總函式
                   href: aggregate-functions-sqlclient-for-entity-framework.md
-                - name: 日期和時間函式
+                - name: 日期及時間函式
                   href: date-and-time-functions.md
                 - name: 數學函式
                   href: mathematical-functions.md
                 - name: 字串函式
                   href: string-functions.md
-                - name: 系統函數
+                - name: 系統函式
                   href: system-functions.md
             - name: 適用於 Entity Framework 之 SqlClient 的類型
               href: sqlclient-for-ef-types.md
@@ -113,7 +113,7 @@
   href: resources.md
 - name: Entity Framework 詞彙
   href: terminology.md
-- name: 開始使用
+- name: 快速入門
   href: getting-started.md
 - name: 語言參考
   href: language-reference/index.md

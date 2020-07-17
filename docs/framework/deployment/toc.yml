@@ -10,11 +10,11 @@
           href: guide-for-administrators.md
         - name: 在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
           href: reducing-system-restarts.md
-        - name: 如何：取得 .NET Framework 4.5 安裝程式的進度
+        - name: 作法：取得 .NET Framework 4.5 安裝程式的進度
           href: how-to-get-progress-from-the-dotnet-installer.md
-        - name: .NET Framework 初始化錯誤：管理使用者經驗
+        - name: .NET Framework 初始化錯誤：管理使用者體驗
           href: initialization-errors-managing-the-user-experience.md
-        - name: 如何：偵錯 CLR 啟用問題
+        - name: 作法：對 CLR 啟用問題進行偵錯
           href: how-to-debug-clr-activation-issues.md
     - name: 部署 .NET Framework 應用程式
       href: net-framework-applications.md

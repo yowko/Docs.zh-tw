@@ -1,4 +1,4 @@
-- name: 分析
+- name: 程式碼剖析
   href: index.md
   items:
     - name: 分析概觀
@@ -249,7 +249,7 @@
               href: icorprofilerfunctionenum-clone-method.md
             - name: GetCount 方法
               href: icorprofilerfunctionenum-getcount-method.md
-            - name: 下一個方法
+            - name: Next 方法
               href: icorprofilerfunctionenum-next-method.md
             - name: Reset 方法
               href: icorprofilerfunctionenum-reset-method.md
@@ -484,7 +484,7 @@
               href: icorprofilermoduleenum-clone-method.md
             - name: GetCount 方法
               href: icorprofilermoduleenum-getcount-method.md
-            - name: 下一個方法
+            - name: Next 方法
               href: icorprofilermoduleenum-next-method.md
             - name: Reset 方法
               href: icorprofilermoduleenum-reset-method.md
@@ -497,7 +497,7 @@
               href: icorprofilerobjectenum-clone-method.md
             - name: GetCount 方法
               href: icorprofilerobjectenum-getcount-method.md
-            - name: 下一個方法
+            - name: Next 方法
               href: icorprofilerobjectenum-next-method.md
             - name: Reset 方法
               href: icorprofilerobjectenum-reset-method.md
@@ -510,7 +510,7 @@
               href: icorprofilerthreadenum-clone-method.md
             - name: GetCount 方法
               href: icorprofilerthreadenum-getcount-method.md
-            - name: 下一個方法
+            - name: Next 方法
               href: icorprofilerthreadenum-next-method.md
             - name: Reset 方法
               href: icorprofilerthreadenum-reset-method.md

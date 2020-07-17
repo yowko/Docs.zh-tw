@@ -4,7 +4,7 @@
     - name: 作業效能計數器
       href: operation-performance-counters.md
       items:
-        - name: Calls
+        - name: 呼叫數
           href: calls.md
         - name: 每秒的呼叫數
           href: calls-per-second.md
@@ -35,7 +35,7 @@
     - name: 服務效能計數器
       href: service-performance-counters.md
       items:
-        - name: Calls
+        - name: 呼叫數
           href: service-calls.md
         - name: 每秒的呼叫數
           href: service-calls-per-second.md
@@ -108,7 +108,7 @@
     - name: 端點效能計數器
       href: endpoint-performance-counters.md
       items:
-        - name: Calls
+        - name: 呼叫數
           href: endpoint-calls.md
         - name: 每秒的呼叫數
           href: endpoint-calls-per-second.md

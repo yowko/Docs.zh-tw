@@ -63,9 +63,9 @@
       href: getqualifierset.md
     - name: InheritsFrom
       href: inheritsfrom.md
-    - name: '[初始化]'
+    - name: Initialize
       href: initialize.md
-    - name: 下一頁
+    - name: 下一步
       href: next.md
     - name: NextMethod
       href: nextmethod.md
