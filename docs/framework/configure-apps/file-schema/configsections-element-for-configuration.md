@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e4bb7a7cfb0b140ca6d13c162708c3c30bd496d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155345"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441683"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configuration> 的 \<configSections> 項目
 
@@ -36,8 +36,6 @@ ms.locfileid: "79155345"
 | --- | ----------- |
 | [**\<section>**](section-element.md) | 包含設定區段宣告。 |
 | [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | 定義設定區段的命名空間。 |
-| [**\<remove>**](remove-element-for-configsections.md) | 移除預先定義的區段或區段群組。 |
-| [**\<clear>**](clear-element-for-configsections.md) | 清除所有先前定義的區段和區段群組。 |
 
 ## <a name="remarks"></a>備註
 
@@ -61,8 +59,8 @@ ms.locfileid: "79155345"
 
 ## <a name="configuration-file"></a>組態檔
 
-此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。
+此元素可用於應用程式佈建檔案、電腦設定檔案（*Machine.config*），以及不在應用程式目錄層級的*Web.config*檔案。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 的設定檔架構](index.md)

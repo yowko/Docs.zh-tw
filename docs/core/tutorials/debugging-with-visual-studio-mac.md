@@ -2,20 +2,20 @@
 title: 使用 Visual Studio for Mac 來調試 .NET Core 主控台應用程式
 description: 瞭解如何使用 Visual Studio Mac 來偵測 .NET Core 主控台應用程式。
 ms.date: 06/08/2020
-ms.openlocfilehash: 4941605923a9897d481aca4ec31408ab62e873f3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 7e2a25266fab40b5ef1d0a38b8bbf06a6843746b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713816"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416020"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 來對 .NET Core 主控台應用程式進行 Debug
 
 本教學課程介紹 Visual Studio for Mac 中提供的調試工具。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
-- 本教學課程適用于您在 Visual Studio for Mac 中建立[.Net Core 主控台應用程式](using-on-mac-vs.md)中建立的主控台應用程式。
+- 本教學課程適用于您在 Visual Studio for Mac 中建立[.Net Core 主控台應用程式](with-visual-studio-mac.md)中建立的主控台應用程式。
 
 ## <a name="use-debug-build-configuration"></a>使用 Debug build configuration
 
@@ -27,7 +27,7 @@ ms.locfileid: "84713816"
 
 1. 啟動 Visual Studio for Mac。
 
-1. 在 Visual Studio for Mac 中，開啟您在[建立 .Net Core 主控台應用程式](using-on-mac-vs.md)中建立的專案。
+1. 在 Visual Studio for Mac 中，開啟您在[建立 .Net Core 主控台應用程式](with-visual-studio-mac.md)中建立的專案。
 
    目前的組建組態會顯示在工具列上。 下列工具列影像顯示 Visual Studio 設定為編譯應用程式的 Debug 版本：
 

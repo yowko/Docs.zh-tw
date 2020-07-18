@@ -19,38 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325939"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416384"
 ---
-# <a name="isolated-storage"></a>隔離儲存區
-<a name="top"></a> 對於傳統型應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。
+# <a name="isolated-storage"></a>隔離儲存區 (Isolated Storage)
+
+ 對於傳統型應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。
 
 > [!IMPORTANT]
 > Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
-
-本主題包含下列幾節：
-
-- [資料區間和存放區](#data_compartments_and_stores)
-
-- [隔離儲存區的配額](#quotas)
-
-- [安全存取](#secure_access)
-
-- [容許的用法和安全性風險](#allowed_usage)
-
-- [隔離儲存區位置](#isolated_storage_locations)
-
-- [建立、列舉和刪除隔離儲存區](#isolated_storage_tasks)
-
-- [隔離儲存區的案例](#scenarios_for_isolated_storage)
-
-- [相關主題](#related_topics)
-
-- [參考](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -114,11 +95,11 @@ __本節適用于下列架構：__
 - .NET Core 2.1 +
 - .NET 5.0 +
 
-.NET Framework 和 .NET Core 提供[隔離儲存區](/dotnet/standard/io/isolated-storage)，做為保存使用者、應用程式或元件資料的機制。 這是舊版元件，主要是針對現在已過時的代碼啟用安全性案例所設計。
+.NET Framework 和 .NET Core 提供隔離儲存區，做為保存使用者、應用程式或元件資料的機制。 這是舊版元件，主要是針對現在已過時的代碼啟用安全性案例所設計。
 
 各種隔離儲存區 Api 和工具可以用來跨信任界限讀取資料。 例如，從全電腦範圍讀取資料，可以從電腦上其他可能較不受信任的使用者帳戶匯總資料。 從電腦範圍隔離儲存區中讀取的元件或應用程式，應該要知道讀取此資料的結果。
 
-### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>可從全電腦範圍讀取的安全性敏感 Api
+### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>可從全電腦範圍讀取的安全性敏感 Api
 
 呼叫下列任何 Api 的元件或應用程式會從整部電腦範圍讀取：
 
@@ -129,7 +110,7 @@ __本節適用于下列架構：__
 * [Remove-isolatedstoragefile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore)，傳遞包含 IsolatedStorageScope 旗標的範圍
 * [Remove-isolatedstoragefile](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove)，傳遞包含旗標的範圍 `IsolatedStorageScope.Machine`
 
-如果使用參數呼叫[隔離儲存區工具](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) `storeadm.exe` ，則會受到影響 `/machine` ，如下列程式碼所示：
+如果使用參數呼叫[隔離儲存區工具](../../framework/tools/storeadm-exe-isolated-storage-tool.md) `storeadm.exe` ，則會受到影響 `/machine` ，如下列程式碼所示：
 
 ```txt
 storeadm.exe /machine [any-other-switches]
@@ -252,9 +233,9 @@ __重要事項：__ 如果您的環境有多個相互不受信任的使用者，
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>[相關主題]
+## <a name="related-articles"></a>相關文章
 
-|Title|描述|
+|標題|描述|
 |-----------|-----------------|
 |[隔離的類型](types-of-isolation.md)|描述各種類型的隔離。|
 |[作法：取得隔離儲存區的存放區](how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|
@@ -269,7 +250,7 @@ __重要事項：__ 如果您的環境有多個相互不受信任的使用者，
 
 <a name="reference"></a>
 
-## <a name="reference"></a>參考
+## <a name="reference"></a>參考資料
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

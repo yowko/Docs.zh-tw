@@ -2,15 +2,15 @@
 title: ASP.NET Core 的重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 07/14/2020
+ms.date: 07/15/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: b73492e0c2f60c2b214984d3987de1e9e6530847
-ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
+ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86402000"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441943"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
 
@@ -26,8 +26,10 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [授權： AddAuthorization 多載已移至不同的元件](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [授權： IAllowAnonymous 已從 AuthorizationFilterCoNtext 移除。篩選](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [授權： IAuthorizationPolicyProvider 的部署需要新的方法](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [授權：端點路由中的資源是 HttpCoNtext](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure：已移除 Microsoft 前面的 Azure 整合套件](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Blazor：在編譯時期從元件修剪的空白空白字元](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor： NuGet 套件的目標 framework 已變更](#blazor-target-framework-of-nuget-packages-changed)
 - [Caching： CompactOnMemoryPressure 屬性已移除](#caching-compactonmemorypressure-property-removed)
 - [快取： SqlClient 使用新的封裝](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Caching： ResponseCaching "pubternal" 類型已變更為 internal](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -91,11 +93,19 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5。0
 
+[!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
+
+***
+
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
 
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
 
 ***
 

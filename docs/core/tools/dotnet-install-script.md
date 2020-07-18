@@ -2,12 +2,12 @@
 title: dotnet-install 指令碼
 description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet-安裝腳本。
 ms.date: 04/30/2020
-ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324429"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415930"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -46,7 +46,7 @@ dotnet-install.sh --help
 
 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet-install`腳本會執行 .NET Core SDK 的非系統管理員安裝，其中包括 .NET Core CLI 和共用執行時間。 有兩個腳本：
 
@@ -82,7 +82,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 根據預設，指令碼會將安裝位置新增到目前工作階段的 $PATH。 指定 `-NoPath|--no-path` 引數可以覆寫此預設行為。 腳本不會設定 `DOTNET_ROOT` 環境變數。
 
-執行指令碼之前，請安裝所有必要的[相依性 (英文)](../install/dependencies.md)。
+執行指令碼之前，請安裝所有必要的[相依性 (英文)](../install/windows.md#dependencies)。
 
 您可以使用 `-Version|--version` 引數安裝特定版本。 版本必須指定為三部分版本號碼，例如 `2.1.0` 。 如果未指定版本，腳本會安裝 `latest` 版本。
 
@@ -96,7 +96,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`-AzureFeed|--azure-feed`**
 
-  指定給安裝程式的 Azure 摘要 URL。 建議您不要變更這個值。 預設值是 `https://dotnetcli.azureedge.net/dotnet`。
+  指定給安裝程式的 Azure 摘要 URL。 建議您不要變更這個值。 預設值為 `https://dotnetcli.azureedge.net/dotnet`。
 
 - **`-Channel|--channel <CHANNEL>`**
 
@@ -107,7 +107,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   - 代表特定版本的 X.Y 格式兩段式版本 (例如 `2.1` 或 `3.0`)。
   - 分支名稱：例如， `release/3.1.1xx` 或 `master` （針對夜間版本）。 使用此選項可從預覽頻道安裝版本。 使用[安裝程式和二進位](https://github.com/dotnet/core-sdk#installers-and-binaries)檔中列出的通道名稱。
 
-  預設值是 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。
+  預設值為 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。
 
 - **`-DryRun|--dry-run`**
 
@@ -252,7 +252,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Core 版本](https://github.com/dotnet/core/releases)
 - [.NET Core 執行階段和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

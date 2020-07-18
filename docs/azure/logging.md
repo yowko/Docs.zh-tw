@@ -5,12 +5,12 @@ ms.date: 03/20/2020
 ms.custom: azure-sdk-dotnet
 ms.author: casoper
 author: camsoper
-ms.openlocfilehash: 5a1fb35aeca034a7cdd1caa813a3839919a5f926
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 0b255713bc9c13e0cbdaeb25a3d0fe46e91e815d
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174913"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416033"
 ---
 # <a name="logging-with-the-azure-sdk-for-net"></a>使用 Azure SDK for .NET 進行記錄
 
@@ -36,7 +36,7 @@ HTTP 要求記錄專案：
 
 HTTP 回應記錄專案：
 
--  (經過時間) 的 i/o 作業持續時間
+- I/o 作業的持續時間（經過時間）
 - 要求識別碼
 - HTTP 狀態碼
 - HTTP 原因片語
@@ -56,9 +56,9 @@ HTTP 回應記錄專案：
 
 ## <a name="enable-logging-with-built-in-methods"></a>使用內建方法來啟用記錄
 
-Azure SDK for .NET 用戶端程式庫會透過[ `EventSource` 類別](/dotnet/api/system.diagnostics.tracing.eventsource)，將事件記錄到 Windows 的事件追蹤 (ETW) ，這通常適用于 .net。 事件來源可讓您在應用程式程式碼中使用結構化記錄，以最少的效能額外負荷。 若要取得這些事件記錄檔的存取權，您必須註冊事件接聽程式。
+Azure SDK for .NET 用戶端程式庫會透過[ `EventSource` 類別](/dotnet/api/system.diagnostics.tracing.eventsource)，將事件記錄到 Windows 事件追蹤（ETW），這通常適用于 .net。 事件來源可讓您在應用程式程式碼中使用結構化記錄，以最少的效能額外負荷。 若要取得這些事件記錄檔的存取權，您必須註冊事件接聽程式。
 
-SDK 包含在 `Azure.Core.Diagnostics.AzureEventSourceListener` Azure Core NuGet 套件) 中定義的類別 (，其中包含兩個靜態方法，可簡化 .net 應用程式的完整記錄： `CreateConsoleLogger` 和 `CreateTraceLogger` 。 這些方法會接受指定記錄層級的選擇性參數。
+SDK 包含 `Azure.Core.Diagnostics.AzureEventSourceListener` 類別（定義于 Azure Core NuGet 套件中），其中包含兩個靜態方法，可簡化 .net 應用程式的完整記錄： `CreateConsoleLogger` 和 `CreateTraceLogger` 。 這些方法會接受指定記錄層級的選擇性參數。
 
 ### <a name="log-to-the-console-window"></a>登入主控台視窗
 
@@ -70,7 +70,7 @@ using AzureEventSourceListener listener = AzureEventSourceListener.CreateConsole
 
 ### <a name="log-to-diagnostic-traces"></a>記錄到診斷追蹤
 
-如果您執行追蹤接聽程式，您可以使用 `CreateTraceLogger` 方法來記錄至標準 .net 事件追蹤機制， ([`System.Diagnostics.Tracing`](/dotnet/api/system.diagnostics.tracing)) 。 如需 .NET 中事件追蹤的詳細資訊，請參閱[追蹤](/dotnet/framework/debug-trace-profile/trace-listeners)接聽程式。 這個範例會指定詳細資訊的記錄層級：
+如果您要執行追蹤接聽程式，您可以使用 `CreateTraceLogger` 方法來記錄標準 .net 事件追蹤機制（ [`System.Diagnostics.Tracing`](/dotnet/api/system.diagnostics.tracing) ）。 如需 .NET 中事件追蹤的詳細資訊，請參閱[追蹤](../framework/debug-trace-profile/trace-listeners.md)接聽程式。 這個範例會指定詳細資訊的記錄層級：
 
 ```csharp
 using AzureEventSourceListener listener = AzureEventSourceListener.CreateTraceLogger(EventLevel.Verbose);
@@ -94,9 +94,9 @@ using AzureEventSourceListener listener = new AzureEventSourceListener((e, messa
     level: EventLevel.Verbose);
 ```
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
 - [在 Azure App Service 中啟用應用程式的診斷記錄功能](/azure/app-service/troubleshoot-diagnostic-logs)
 - 查看[Azure 安全性記錄和審核](/azure/security/fundamentals/log-audit)選項
 - 瞭解如何使用[Azure 平臺記錄](/azure/azure-monitor/platform/platform-logs-overview)
-- 深入瞭解[.Net Core 記錄和追蹤](/dotnet/core/diagnostics/logging-tracing)
+- 深入瞭解[.Net Core 記錄和追蹤](../core/diagnostics/logging-tracing.md)

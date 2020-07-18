@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 1dc9f3d261738a6dff0339c094c7aba5e32680ee
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200050"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416068"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF Data Services
 
@@ -63,14 +63,14 @@ ms.locfileid: "82200050"
 
     - 此伺服器無法處理區塊 HTTP 資料流程，這會在從資料服務存取大型二進位資料時，由 WCF Data Services 用戶端預設傳送。 如需詳細資訊，請參閱[串流處理提供者](streaming-provider-wcf-data-services.md)。
 
-    - 此伺服器在 URL 中處理句號（`.`）字元時發生問題，即使索引鍵值中的 WCF Data Services 支援這個字元亦然。
+    - 此伺服器在 URL 中處理句號（ `.` ）字元時發生問題，即使索引鍵值中的 WCF Data Services 支援這個字元亦然。
 
     > [!TIP]
     > 雖然您可以在開發期間使用 Visual Studio 程式開發伺服器來測試您的資料服務，但您應該在部署到執行 IIS 的 Web 服務器之後，再次進行測試。
 
 3. **Azure 開發環境**
 
-     適用于 Visual Studio 的 azure 工具組含一組整合的工具，可讓您在 Visual Studio 中開發 Azure 服務。 透過這些工具，您可以開發可部署至 Azure 的資料服務，而且您可以在部署之前，先在本機電腦上測試資料服務。 使用 Visual Studio 開發在 Azure 平臺上執行的資料服務時，請使用這些工具。 如需安裝工具的相關資訊，請參閱[適用于 Visual Studio 2015 的 Azure tools](../../../azure/sdk/vs2015-install.md)。 如需有關開發在 Azure 上執行之資料服務的詳細資訊，請參閱文章[在 azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)。
+     適用于 Visual Studio 的 azure 工具組含一組整合的工具，可讓您在 Visual Studio 中開發 Azure 服務。 透過這些工具，您可以開發可部署至 Azure 的資料服務，而且您可以在部署之前，先在本機電腦上測試資料服務。 使用 Visual Studio 開發在 Azure 平臺上執行的資料服務時，請使用這些工具。 如需安裝工具的相關資訊，請參閱[適用于 Visual Studio 2015 的 Azure tools](../../../azure/vs2015-install.md)。 如需有關開發在 Azure 上執行之資料服務的詳細資訊，請參閱文章[在 azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)。
 
 ### <a name="development-tips"></a>開發秘訣
 
@@ -115,7 +115,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
 - **Azure**
 
-     您可以使用[適用于 Visual Studio 的 Azure 工具](../../../azure/sdk/vs2015-install.md)，將資料服務部署至 azure。 如需將資料服務部署至 Azure 的詳細資訊，請參閱[在 azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)。
+     您可以使用[適用于 Visual Studio 的 Azure 工具](../../../azure/vs2015-install.md)，將資料服務部署至 azure。 如需將資料服務部署至 Azure 的詳細資訊，請參閱[在 azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)。
 
 ### <a name="deployment-considerations"></a>部署考量
 
@@ -128,5 +128,5 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 ## <a name="see-also"></a>請參閱
 
 - [裝載資料服務](hosting-the-data-service-wcf-data-services.md)
-- [Securing WCF Data Services](securing-wcf-data-services.md)
+- [保護 WCF Data Services 的安全](securing-wcf-data-services.md)
 - [定義 WCF 資料服務](defining-wcf-data-services.md)

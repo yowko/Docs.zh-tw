@@ -1,13 +1,13 @@
 ---
-title: 與 .NET 核心 SDK 和工具的持續集成 （CI）
-description: 瞭解如何在生成伺服器上使用 .NET 核心 SDK 及其工具，並實現持續集成。
+title: 使用 .NET Core SDK 和工具的持續整合（CI）
+description: 瞭解如何透過持續整合，在組建伺服器上使用 .NET Core SDK 和其工具。
 ms.date: 05/18/2017
-ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ddccb477bc112157a155e2217e04c329e7ab51c5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451034"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415987"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 
@@ -30,9 +30,9 @@ macOS 使用者應使用 PKG 安裝程式。 在 Linux 上，您可以選擇使�
 在建置開始時，安裝程式指令碼會自動執行，以擷取和安裝所需的 SDK 版本。 「所需版本」** 是您專案所需建置的任何 SDK 版本。 指令碼可讓您將 SDK 安裝在伺服器上的本機目錄中，從安裝位置執行工具，然後在建置之後清除 (或讓 CI 服務清除)。 這可以為整個建置程序提供封裝和隔離。 您可以在 [dotnet-install](dotnet-install-script.md) 一文中找到安裝指令碼參考。
 
 > [!NOTE]
-> **Azure 開發人員服務**
+> **Azure DevOps Services**
 >
-> 使用安裝程式指令碼時，不會自動安裝原生相依性。 如果作業系統沒有原生相依性，您必須加以安裝。 有關詳細資訊，請參閱[.NET 核心依賴項和要求](../install/dependencies.md)。
+> 使用安裝程式指令碼時，不會自動安裝原生相依性。 如果作業系統沒有原生相依性，您必須加以安裝。 如需詳細資訊，請參閱[.Net Core 相依性和需求](../install/windows.md#dependencies)。
 
 ## <a name="ci-setup-examples"></a>CI 設定範例
 
@@ -155,7 +155,7 @@ install:
 
    ![選取空的組建定義](./media/using-ci-with-cli/select-empty-build-definition.png)
 
-1. 設定要建置的存放庫之後，系統就會將您導向至組建定義。 選擇 **"添加生成步驟**"
+1. 設定要建置的存放庫之後，系統就會將您導向至組建定義。 選取 [**新增組建步驟**]：
 
    ![加入建置步驟](./media/using-ci-with-cli/add-build-step.png)
 
@@ -173,6 +173,6 @@ install:
 
 使用 .NET Core 工具建立 .NET Core 程式碼建置程序的結構時，可以採取兩種方法：直接使用 MSBuild，或使用 .NET Core 命令列命令。 您可以視自己對特定方法的熟悉程度並權衡其複雜度，來選擇要使用的方法。 MSBuild 可讓您以工作和目標的形式表示建置程序，但使用此方法必須額外學習 MSBuild 專案檔語法。 使用 .NET Core 命令列工具或許比較簡單，但您必須使用如 `bash` 或 PowerShell 之類的指令碼語言撰寫協調流程邏輯。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 下載 - Linux](https://dotnet.microsoft.com/download?initial-os=linux) \(英文\)

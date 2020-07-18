@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: d8506893f5b3eefa6f46dc9f773e43b125ee5210
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 19ccdb634d4e53ea66c032502f2adb70423ab121
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291657"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416260"
 ---
 ### <a name="azure-microsoft-prefixed-azure-integration-packages-removed"></a>Azure：已移除 Microsoft 前面的 Azure 整合套件
 
 `Microsoft.*`ASP.NET Core 5.0 中不包含下列提供 ASP.NET Core 與 Azure sdk 之間整合的套件：
 
-* [AzureKeyVault](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.AzureKeyVault/)，它會將[Azure Key Vault](/azure/key-vault/)整合至設定[系統](/aspnet/core/fundamentals/configuration/)。
+* [Microsoft.Extensions.Configuration。AzureKeyVault](https://www.nuget.org/packages/Microsoft.Extensions.Configuration.AzureKeyVault/)，它會將[Azure Key Vault](/azure/key-vault/)整合至設定[系統](/aspnet/core/fundamentals/configuration/)。
 * [AspNetCore. DataProtection. AzureKeyVault](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureKeyVault/)，可將 Azure Key Vault 整合到 ASP.NET Core 的[資料保護系統](/aspnet/core/security/data-protection/introduction)。
 * [AspNetCore. DataProtection. AzureStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection.AzureStorage/)，可將[Azure Blob 儲存體](/azure/storage/blobs/)整合到 ASP.NET Core 的資料保護系統。
 
@@ -41,9 +41,9 @@ ms.locfileid: "80291657"
 
 | 多久 | 新增 |
 |--|--|
-| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [AspNetCore. DataProtection. 金鑰](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Keys) |
-| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [AspNetCore. DataProtection Blob](https://www.nuget.org/packages/Azure.AspNetCore.DataProtection.Blobs) |
-| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure 副檔名。秘密](https://www.nuget.org/packages/Azure.Extensions.Configuration.Secrets) |
+| `Microsoft.AspNetCore.DataProtection.AzureKeyVault` | [AspNetCore. DataProtection. 金鑰](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys) |
+| `Microsoft.AspNetCore.DataProtection.AzureStorage` | [AspNetCore. DataProtection Blob](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs) |
+| `Microsoft.Extensions.Configuration.AzureKeyVault` | [Azure.Extensions.AspNetCore.Configuration。越長](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets) |
 
 新的套件會使用新版本的 Azure SDK，其中包含重大變更。 一般使用模式不會變更。 有些多載和選項可能會不同，以適應基礎 Azure SDK Api 中的變更。
 

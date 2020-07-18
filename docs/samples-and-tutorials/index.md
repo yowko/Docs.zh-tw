@@ -4,12 +4,12 @@ description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507425"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417330"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
 
@@ -87,9 +87,9 @@ ms.locfileid: "82507425"
 
 此教學課程示範如何使用 Visual Studio for Mac 建置簡單 .NET Core 主控台應用程式。
 
-**[使用 Visual Studio for Mac 在 macOS 上建立完整的 .NET Core 解決方案](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[使用 Visual Studio for Mac 在 macOS 上建立 .NET Standard 程式庫](../core/tutorials/library-with-visual-studio-mac.md)**
 
-本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
+本教學課程說明如何使用 Visual Studio for Mac 建立 .NET Standard 程式庫。
 
 **[建立支援外掛程式的 .NET Core 應用程式](../core/tutorials/creating-app-with-plugin-support.md)**
 

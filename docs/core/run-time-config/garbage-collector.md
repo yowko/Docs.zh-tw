@@ -1,14 +1,14 @@
 ---
 title: 垃圾收集行程 config 設定
 description: 瞭解用來設定垃圾收集行程如何管理 .NET Core 應用程式記憶體的執行時間設定。
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202089"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441399"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用於垃圾收集的執行時間設定選項
 
@@ -20,7 +20,7 @@ ms.locfileid: "84202089"
 >
 > - 這些設定也可以在應用程式執行時動態變更，因此您設定的任何執行時間設定可能會遭到覆寫。
 > - 某些設定（例如[延遲層級](../../standard/garbage-collection/latency.md)）通常只會在設計階段透過 API 進行設定。 此頁面會省略這類設定。
-> - 針對 [數值]，使用十進位標記法做為 *.runtimeconfig.json*檔案中的設定，並針對環境變數設定使用十六進位標記法。 若為十六進位值，您可以使用或不搭配 "0x" 前置詞來指定它們。
+> - 針對 [數值]，在 [檔案中的*runtimeconfig.js* ] 和 [用於環境變數的十六進位標記法] 設定中，使用十進位標記來進行設定。 若為十六進位值，您可以使用或不搭配 "0x" 前置詞來指定它們。
 
 ## <a name="flavors-of-garbage-collection"></a>垃圾收集的種類
 
@@ -37,14 +37,14 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.Server` | `false`-工作站<br/>`true`-伺服器 | .NET Core 1.0 |
+| **runtimeconfig.js于** | `System.GC.Server` | `false`-工作站<br/>`true`-伺服器 | .NET Core 1.0 |
 | **MSBuild 屬性** | `ServerGarbageCollection` | `false`-工作站<br/>`true`-伺服器 | .NET Core 1.0 |
 | **環境變數** | `COMPlus_gcServer` | `0`-工作站<br/>`1`-伺服器 | .NET Core 1.0 |
-| **.NET Framework 的 app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-工作站<br/>`true`-伺服器 |  |
+| **.NET Framework 的app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-工作站<br/>`true`-伺服器 |  |
 
 ### <a name="examples"></a>範例
 
-*.runtimeconfig.json json*檔案：
+檔案*上的runtimeconfig.js* ：
 
 ```json
 {
@@ -76,14 +76,14 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.Concurrent` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
+| **runtimeconfig.js于** | `System.GC.Concurrent` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
 | **MSBuild 屬性** | `ConcurrentGarbageCollection` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
 | **環境變數** | `COMPlus_gcConcurrent` | `1`-背景 GC<br/>`0`-非並行 GC | .NET Core 1.0 |
-| **.NET Framework 的 app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-背景 GC<br/>`false`-非並行 GC |  |
+| **.NET Framework 的app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-背景 GC<br/>`false`-非並行 GC |  |
 
 ### <a name="examples"></a>範例
 
-*.runtimeconfig.json json*檔案：
+檔案*上的runtimeconfig.js* ：
 
 ```json
 {
@@ -123,9 +123,9 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.HeapCount` | *十進位值* | .NET Core 3.0 |
+| **runtimeconfig.js于** | `System.GC.HeapCount` | *十進位值* | .NET Core 3.0 |
 | **環境變數** | `COMPlus_GCHeapCount` | *十六進位值* | .NET Core 3.0 |
-| **.NET Framework 的 app.config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *十進位值* | .NET Framework 4.6.2 |
+| **.NET Framework 的app.config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *十進位值* | .NET Framework 4.6.2 |
 
 範例：
 
@@ -140,7 +140,7 @@ ms.locfileid: "84202089"
 ```
 
 > [!TIP]
-> 如果您要在 *.runtimeconfig.json*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要將堆積數目限制為16，JSON 檔案的值會是16，而環境變數的值則是0x10 或10。
+> 如果您要在*runtimeconfig.js*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要將堆積數目限制為16，JSON 檔案的值會是16，而環境變數的值則是0x10 或10。
 
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
@@ -151,9 +151,9 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.HeapAffinitizeMask` | *十進位值* | .NET Core 3.0 |
+| **runtimeconfig.js于** | `System.GC.HeapAffinitizeMask` | *十進位值* | .NET Core 3.0 |
 | **環境變數** | `COMPlus_GCHeapAffinitizeMask` | *十六進位值* | .NET Core 3.0 |
-| **.NET Framework 的 app.config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *十進位值* | .NET Framework 4.6.2 |
+| **.NET Framework 的app.config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *十進位值* | .NET Framework 4.6.2 |
 
 範例：
 
@@ -178,7 +178,7 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.GCHeapAffinitizeRanges` | 以逗號分隔的處理器編號或處理器編號範圍清單。<br/>Unix 範例： "1-10，12，50-52，70"<br/>Windows 範例： "0： 1-10，0：12，1： 50-52，1： 70" | .NET Core 3.0 |
+| **runtimeconfig.js于** | `System.GC.GCHeapAffinitizeRanges` | 以逗號分隔的處理器編號或處理器編號範圍清單。<br/>Unix 範例： "1-10，12，50-52，70"<br/>Windows 範例： "0： 1-10，0：12，1： 50-52，1： 70" | .NET Core 3.0 |
 | **環境變數** | `COMPlus_GCHeapAffinitizeRanges` | 以逗號分隔的處理器編號或處理器編號範圍清單。<br/>Unix 範例： "1-10，12，50-52，70"<br/>Windows 範例： "0： 1-10，0：12，1： 50-52，1： 70" | .NET Core 3.0 |
 
 範例：
@@ -205,9 +205,9 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | 不適用 | 不適用 | 不適用 |
+| **runtimeconfig.js于** | N/A | N/A | N/A |
 | **環境變數** | `COMPlus_GCCpuGroup` | `0`-已停用<br/>`1`-已啟用 | .NET Core 1.0 |
-| **.NET Framework 的 app.config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-已停用<br/>`true`-已啟用 |  |
+| **.NET Framework 的app.config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-已停用<br/>`true`-已啟用 |  |
 
 > [!NOTE]
 > 若要將 common language runtime （CLR）設定為同時將執行緒集區中的執行緒散發到所有 CPU 群組，請啟用 [ [Thread_UseAllCpuGroups 元素](../../framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)] 選項。 針對 .NET Core 應用程式，您可以將環境變數的值設定為，以啟用此選項 `COMPlus_Thread_UseAllCpuGroups` `1` 。
@@ -220,9 +220,9 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.NoAffinitize` | `false`-將相似化為<br/>`true`-不將相似化為 | .NET Core 3.0 |
+| **runtimeconfig.js于** | `System.GC.NoAffinitize` | `false`-將相似化為<br/>`true`-不將相似化為 | .NET Core 3.0 |
 | **環境變數** | `COMPlus_GCNoAffinitize` | `0`-將相似化為<br/>`1`-不將相似化為 | .NET Core 3.0 |
-| **.NET Framework 的 app.config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-將相似化為<br/>`true`-不將相似化為 | .NET Framework 4.6.2 |
+| **.NET Framework 的app.config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-將相似化為<br/>`true`-不將相似化為 | .NET Framework 4.6.2 |
 
 範例：
 
@@ -240,6 +240,7 @@ ms.locfileid: "84202089"
 
 - 指定 GC 堆積和 GC 簿記的認可大小上限（以位元組為單位）。
 - 此設定僅適用于64位電腦。
+- 如果設定了[每個物件堆積的限制](#per-object-heap-limits)，則會忽略此設定。
 - 只有在特定情況下才適用的預設值是容器的 20 MB 或75% 的記憶體限制。 預設值適用于下列情況：
 
   - 進程在具有指定記憶體限制的容器內執行。
@@ -247,7 +248,7 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.HeapHardLimit` | *十進位值* | .NET Core 3.0 |
+| **runtimeconfig.js于** | `System.GC.HeapHardLimit` | *十進位值* | .NET Core 3.0 |
 | **環境變數** | `COMPlus_GCHeapHardLimit` | *十六進位值* | .NET Core 3.0 |
 
 範例：
@@ -263,7 +264,7 @@ ms.locfileid: "84202089"
 ```
 
 > [!TIP]
-> 如果您要在 *.runtimeconfig.json*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要指定200數量（MiB）的堆積固定限制，其值會是209715200（針對 JSON 檔案）和0xC800000 或 C800000 （適用于環境變數）。
+> 如果您要在*runtimeconfig.js*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要指定200數量（MiB）的堆積固定限制，其值會是209715200（針對 JSON 檔案）和0xC800000 或 C800000 （適用于環境變數）。
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
@@ -271,6 +272,7 @@ ms.locfileid: "84202089"
 - 如果也設定了[HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) ，則會忽略此設定。
 - 此設定僅適用于64位電腦。
 - 如果處理常式是在具有指定記憶體限制的容器內執行，則會以該記憶體限制的百分比來計算百分比。
+- 如果設定了[每個物件堆積的限制](#per-object-heap-limits)，則會忽略此設定。
 - 只有在特定情況下才適用的預設值是容器上 20 MB 或75% 記憶體限制的較小者。 預設值適用于下列情況：
 
   - 進程在具有指定記憶體限制的容器內執行。
@@ -278,7 +280,7 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.HeapHardLimitPercent` | *十進位值* | .NET Core 3.0 |
+| **runtimeconfig.js于** | `System.GC.HeapHardLimitPercent` | *十進位值* | .NET Core 3.0 |
 | **環境變數** | `COMPlus_GCHeapHardLimitPercent` | *十六進位值* | .NET Core 3.0 |
 
 範例：
@@ -294,7 +296,41 @@ ms.locfileid: "84202089"
 ```
 
 > [!TIP]
-> 如果您要在 *.runtimeconfig.json*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要將堆積使用量限制為30%，JSON 檔案的值會是30，而0x1E 或1E 則適用于環境變數。
+> 如果您要在*runtimeconfig.js*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要將堆積使用量限制為30%，JSON 檔案的值會是30，而0x1E 或1E 則適用于環境變數。
+
+### <a name="per-object-heap-limits"></a>每個物件的堆積限制
+
+您可以針對每個物件堆積指定 GC 的允許堆積使用方式。 不同的堆積包括大型物件堆積（LOH）、小型物件堆積（SOH）和釘選的物件堆積（POH）。
+
+#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH、COMPLUS_GCHeapHardLimitLOH、COMPLUS_GCHeapHardLimitPOH
+
+- 如果您指定任何 `COMPLUS_GCHeapHardLimitSOH` 、 `COMPLUS_GCHeapHardLimitLOH` 或設定的值 `COMPLUS_GCHeapHardLimitPOH` ，您也必須指定和的值 `COMPLUS_GCHeapHardLimitSOH` `COMPLUS_GCHeapHardLimitLOH` 。 如果您沒有這麼做，執行時間將無法初始化。
+- `COMPLUS_GCHeapHardLimitPOH` 的預設值為 0。 `COMPLUS_GCHeapHardLimitSOH`和 `COMPLUS_GCHeapHardLimitLOH` 沒有預設值。
+
+| | 設定名稱 | 值 | 引進的版本 |
+| - | - | - | - |
+| **環境變數** | `COMPLUS_GCHeapHardLimitSOH` | *十六進位值* | .NET 5。0 |
+| **環境變數** | `COMPLUS_GCHeapHardLimitLOH` | *十六進位值* | .NET 5。0 |
+| **環境變數** | `COMPLUS_GCHeapHardLimitPOH` | *十六進位值* | .NET 5。0 |
+
+> [!TIP]
+> 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要指定200數量（MiB）的堆積固定限制，此值會是0xC800000 或 C800000。
+
+#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent、COMPLUS_GCHeapHardLimitLOHPercent、COMPLUS_GCHeapHardLimitPOHPercent
+
+- 如果您指定任何 `COMPLUS_GCHeapHardLimitSOHPercent` 、 `COMPLUS_GCHeapHardLimitLOHPercent` 或設定的值 `COMPLUS_GCHeapHardLimitPOHPercent` ，您也必須指定和的值 `COMPLUS_GCHeapHardLimitSOHPercent` `COMPLUS_GCHeapHardLimitLOHPercent` 。 如果您沒有這麼做，執行時間將無法初始化。
+- 如果 `COMPLUS_GCHeapHardLimitSOH` 指定、和，則會忽略這些設定 `COMPLUS_GCHeapHardLimitLOH` `COMPLUS_GCHeapHardLimitPOH` 。
+- 值為1表示 GC 使用該物件堆積的總實體記憶體的1%。
+- 每個值都必須大於零且小於100。 此外，這三個百分比值的總和必須小於100。 否則，執行時間將無法初始化。
+
+| | 設定名稱 | 值 | 引進的版本 |
+| - | - | - | - |
+| **環境變數** | `COMPLUS_GCHeapHardLimitSOHPercent` | *十六進位值* | .NET 5。0 |
+| **環境變數** | `COMPLUS_GCHeapHardLimitLOHPercent` | *十六進位值* | .NET 5。0 |
+| **環境變數** | `COMPLUS_GCHeapHardLimitPOHPercent` | *十六進位值* | .NET 5。0 |
+
+> [!TIP]
+> 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要將堆積使用量限制為30%，此值會是0x1E 或1E。
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>RetainVM/COMPlus_GCRetainVM
 
@@ -303,13 +339,13 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.RetainVM` | `false`-發行至 OS<br/>`true`-put 待命 | .NET Core 1.0 |
+| **runtimeconfig.js于** | `System.GC.RetainVM` | `false`-發行至 OS<br/>`true`-put 待命 | .NET Core 1.0 |
 | **MSBuild 屬性** | `RetainVMGarbageCollection` | `false`-發行至 OS<br/>`true`-put 待命 | .NET Core 1.0 |
 | **環境變數** | `COMPlus_GCRetainVM` | `0`-發行至 OS<br/>`1`-put 待命 | .NET Core 1.0 |
 
 ### <a name="examples"></a>範例
 
-*.runtimeconfig.json json*檔案：
+檔案*上的runtimeconfig.js* ：
 
 ```json
 {
@@ -343,7 +379,7 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | 不適用 | 不適用 | 不適用 |
+| **runtimeconfig.js于** | N/A | N/A | N/A |
 | **環境變數** | `COMPlus_GCLargePages` | `0`-已停用<br/>`1`-已啟用 | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>大型物件
@@ -356,9 +392,9 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | 不適用 | 不適用 | 不適用 |
+| **runtimeconfig.js于** | N/A | N/A | N/A |
 | **環境變數** | `COMPlus_gcAllowVeryLargeObjects` | `1`-已啟用<br/> `0`-已停用 | .NET Core 1.0 |
-| **.NET Framework 的 app.config** | [Gcallowverylargeobjects>](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1`-已啟用<br/> `0`-已停用 | .NET Framework 4.5 |
+| **.NET Framework 的app.config** | [Gcallowverylargeobjects>](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1`-已啟用<br/> `0`-已停用 | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>大型物件堆積閾值
 
@@ -370,9 +406,9 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.LOHThreshold` | *十進位值* | .NET Core 1.0 |
+| **runtimeconfig.js于** | `System.GC.LOHThreshold` | *十進位值* | .NET Core 1.0 |
 | **環境變數** | `COMPlus_GCLOHThreshold` | *十六進位值* | .NET Core 1.0 |
-| **.NET Framework 的 app.config** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *十進位值* | .NET Framework 4.8 |
+| **.NET Framework 的app.config** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *十進位值* | .NET Framework 4.8 |
 
 範例：
 
@@ -387,7 +423,7 @@ ms.locfileid: "84202089"
 ```
 
 > [!TIP]
-> 如果您要在 *.runtimeconfig.json*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要設定120000個位元組的閾值大小，JSON 檔案的值會是120000，而環境變數的值則是0x1D4C0 或1D4C0。
+> 如果您要在*runtimeconfig.js*中設定選項，請指定十進位值。 如果您要將選項設定為環境變數，請指定十六進位值。 例如，若要設定120000個位元組的閾值大小，JSON 檔案的值會是120000，而環境變數的值則是0x1D4C0 或1D4C0。
 
 ## <a name="standalone-gc"></a>獨立 GC
 
@@ -398,5 +434,5 @@ ms.locfileid: "84202089"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | 不適用 | 不適用 | 不適用 |
+| **runtimeconfig.js于** | N/A | N/A | N/A |
 | **環境變數** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

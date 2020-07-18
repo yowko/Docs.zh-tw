@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8cb7ee2ea2418602d944c3c08cec2b9279dca3b9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601058"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441813"
 ---
 # <a name="security-considerations-for-data"></a>資料的安全性考量
 
@@ -189,7 +189,7 @@ WCF 支援的二進位 XML 編碼包含*字典字串*功能。 只要使用幾�
 
 下表為有關配額的指引摘要。
 
-|狀況|要設定的重要配額|
+|條件|要設定的重要配額|
 |---------------|-----------------------------|
 |沒有資料流或資料流處理小型訊息、文字或 MTOM 編碼|`MaxReceivedMessageSize`、`MaxBytesPerRead` 和 `MaxDepth`|
 |沒有資料流或資料流處理小型訊息、二進位編碼|`MaxReceivedMessageSize`、 `MaxSessionSize`和所有的 `ReaderQuotas`|
@@ -284,7 +284,7 @@ WCF 支援的二進位 XML 編碼包含*字典字串*功能。 只要使用幾�
 
 <xref:System.Runtime.Serialization.NetDataContractSerializer> 是對型別使用緊密結合的序列化引擎。 這與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>很類似。 也就是說，它會從傳入資料讀取 .NET Framework 元件和類型名稱，以判斷要具現化的類型。 雖然它是 WCF 的一部分，但並沒有提供方法來插入此序列化引擎。必須撰寫自訂程式碼。 的 `NetDataContractSerializer` 主要目的是為了簡化從 .NET Framework 遠端處理到 WCF 的作業。 如需詳細資訊，請參閱[序列化和還原序列化](serialization-and-deserialization.md)中的相關章節。
 
-由於訊息本身可能會指出可以載入的任何型別，因此 <xref:System.Runtime.Serialization.NetDataContractSerializer> 機制原本就是不安全的，且只應搭配受信任的資料使用。 藉由撰寫安全、型別有限制的型別繫結器，且該繫別器只允許載入安全型別 (使用 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 屬性)，有可能保護它的安全。
+由於訊息本身可能會指出可以載入的任何型別，因此 <xref:System.Runtime.Serialization.NetDataContractSerializer> 機制原本就是不安全的，且只應搭配受信任的資料使用。 如需詳細資訊，請參閱[BinaryFormatter 安全性指南](/dotnet/standard/serialization/binaryformatter-security-guide)。
 
 即使和受信任的資料一起使用，傳入資料仍可能不足以指定要載入的型別，特別是如果 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 屬性設定為 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple>時。 任何可以存取應用程式目錄或全域組件快取的人，都可以使用應載入的型別來取代惡意型別。 請正確設定權限，永遠確保應用程式目錄和全域組件快取的安全性。
 

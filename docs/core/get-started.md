@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 5cfd9925f4ee93ef4ebe15ebf16febdfb98aaa9a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325006"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416053"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -75,7 +75,7 @@ Hello World!
 - [使用 Visual Studio Code 在 macOS 上開始使用 .NET Core](./tutorials/using-on-macos.md)
 - [使用命令列開始使用 .NET Core](./tutorials/cli-create-console-app.md)
 - [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](./tutorials/using-on-mac-vs.md)
-- [使用 Visual Studio for Mac 在 macOS 上建立完整的 .NET Core 解決方案](./tutorials/using-on-mac-vs-full-solution.md)
+- [使用 Visual Studio for Mac 在 macOS 上建立 .NET Standard 程式庫](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |
 |---|---|

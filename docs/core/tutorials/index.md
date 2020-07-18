@@ -4,12 +4,12 @@ description: 遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: a685b7d8d6c849cfea061a997780b9cafeb6d938
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c26d3e2e55723fed98f2013fe7131d2b06f910d2
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283724"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415936"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>藉由探索這些教學課程來瞭解 .NET Core 和 .NET Core SDK 工具
 
@@ -42,7 +42,7 @@ ms.locfileid: "84283724"
 ## <a name="use-visual-studio-for-mac"></a>使用 Visual Studio for Mac
 
 - [建立主控台應用程式](using-on-mac-vs.md)
-- [建立程式庫，並對其進行單元測試](using-on-mac-vs-full-solution.md)
+- [建立程式庫，並對其進行單元測試](library-with-visual-studio-mac.md)
 - [安裝並使用套件](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
 ## <a name="advanced-topics"></a>進階主題

@@ -1,23 +1,23 @@
 ---
-title: 安裝 .NET Core 和 Linux 發行版本
+title: 在 Linux 散發套件上安裝 .NET Core
 description: 瞭解哪些 Linux 散發套件支援在 Linux 上安裝 .NET Core。
 author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: 06a90d7fecfe9f25d26caccb2fe3aedec0176f64
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: c827dfbb05a7d49ee18209ef2c8b5613f45a4578
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803088"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441400"
 ---
 # <a name="install-net-core-on-linux"></a>在 Linux 上安裝 .NET Core
 
 > [!div class="op_single_selector"]
 >
-> - [在 Windows 上安裝](windows.md)
+> - [安裝在 Windows 上](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [在 Linux 上安裝](linux.md)
+> - [安裝在 Linux 上](linux.md)
 
 .NET Core 適用于不同的 Linux 發行版本。 大部分的 Linux 平臺和發佈都有每年的主要版本，而且大部分都提供用來安裝 .NET Core 的套件管理員。 本文說明目前支援的專案，以及所使用的套件管理員。
 
@@ -82,7 +82,7 @@ Debian 使用 APT （Advanced Package Tool）做為套件管理員。
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [10](linux-debian.md#debian-10-)     | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ❌[8](linux-debian.md#debian-8-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
+| ❌ [8](linux-debian.md#debian-8-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
 
 如需詳細資訊，請參閱[在 Debian 上安裝 .Net Core](linux-debian.md)。
 
@@ -100,7 +100,7 @@ Fedora 會使用 DNF 作為其套件管理員。
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [32](linux-fedora.md#fedora-32-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
 | ✔️ [31](linux-fedora.md#fedora-31-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ❌ [30](linux-fedora.md#fedora-30-) | ✔️2。1        | ✔️3。1        | ❌5.0 預覽 |
+| ❌[30](linux-fedora.md#fedora-30-) | ✔️2。1        | ✔️3。1        | ❌5.0 預覽 |
 | ❌[29](linux-fedora.md#fedora-29-) | ✔️2。1        | ✔️3。1        | ❌5.0 預覽 |
 | ❌[28](linux-fedora.md#fedora-28-) | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
 | ❌[27](linux-fedora.md#fedora-27-) | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
@@ -174,7 +174,7 @@ Ubuntu 會使用 APT （Advanced Package Tool）作為套件管理員。
 | ❌[19.04](linux-ubuntu.md#1904-)       | ✔️2。1        | ✔️3。1        | ❌5.0 預覽 |
 | ❌[18.10](linux-ubuntu.md#1810-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
 | ✔️ [18.04 （LTS）](linux-ubuntu.md#1804-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ❌ [17.10](linux-ubuntu.md#1710-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
+| ❌[17.10](linux-ubuntu.md#1710-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
 | ❌ [17.04](linux-ubuntu.md#1704-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
 | ❌[16.10](linux-ubuntu.md#1610-)       | ❌2.1        | ❌3.1        | ❌5.0 預覽 |
 | ✔️ [16.04 （LTS）](linux-ubuntu.md#1604-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |

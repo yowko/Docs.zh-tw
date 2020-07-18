@@ -1,22 +1,22 @@
 ---
 title: .NET Core CLI
 titleSuffix: ''
-description: .NET 核心 CLI 及其功能的概述。
+description: .NET Core CLI 及其功能的總覽。
 ms.date: 02/13/2020
-ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80110837"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415969"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI 概觀
 
-**本文適用于：✔️** .NET 核心 2.1 SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-.NET Core 命令列介面 （CLI） 是一個跨平臺工具鏈，用於開發、構建、運行和發佈 .NET Core 應用程式。
+.NET Core 命令列介面（CLI）是用於開發、建立、執行和發佈 .NET Core 應用程式的跨平臺工具鏈。
 
-.NET 核心 CLI 包含在[.NET 核心 SDK](../sdk.md)中。 要瞭解如何安裝 .NET 核心 SDK，請參閱[安裝 .NET 核心 SDK](../install/sdk.md)。
+.NET Core CLI 包含在[.NET Core SDK](../sdk.md)中。 若要瞭解如何安裝 .NET Core SDK，請參閱[安裝 .Net Core](../install/windows.md)。
 
 ## <a name="cli-commands"></a>CLI 命令
 
@@ -59,11 +59,11 @@ ms.locfileid: "80110837"
 - [`tool install`](dotnet-tool-install.md)
 - [`tool list`](dotnet-tool-list.md)
 - [`tool update`](dotnet-tool-update.md)
-- [`tool restore`](global-tools.md#install-a-local-tool)自 .NET 核心 SDK 3.0 起可用。
-- [`tool run`](global-tools.md#invoke-a-local-tool)自 .NET 核心 SDK 3.0 起可用。
+- [`tool restore`](global-tools.md#install-a-local-tool)自 .NET Core SDK 3.0 開始提供。
+- [`tool run`](global-tools.md#invoke-a-local-tool)自 .NET Core SDK 3.0 開始提供。
 - [`tool uninstall`](dotnet-tool-uninstall.md)
 
-工具是從 NuGet 包安裝並從命令提示符調用的主控台應用程式。 您可以自己編寫工具或安裝由協力廠商編寫的工具。 工具也稱為全域工具、刀具路徑工具和本地工具。 有關詳細資訊，請參閱[.NET 核心工具概述](global-tools.md)。
+工具是從 NuGet 套件安裝並從命令提示字元叫用的主控台應用程式。 您可以自行撰寫工具，或安裝由協力廠商撰寫的工具。 工具也稱為「通用工具」、「工具路徑工具」和「本機工具」。 如需詳細資訊，請參閱[.Net Core 工具總覽](global-tools.md)。
 
 ## <a name="command-structure"></a>命令結構
 
@@ -87,21 +87,21 @@ dotnet /build_output/my_app.dll
 dotnet build
 ```
 
-首先，驅動器會決定要使用的 SDK 版本。 如果沒有[全域.json](global-json.md)檔，則使用可用的 SDK 的最新版本。 這可能是預覽版或穩定的版本，視兩者中何者版本最新。  確定 SDK 版本之後，就會開始執行命令。
+首先，驅動器會決定要使用的 SDK 版本。 如果檔案中沒有[global.js](global-json.md) ，就會使用可用的最新 SDK 版本。 這可能是預覽版或穩定的版本，視兩者中何者版本最新。  確定 SDK 版本之後，就會開始執行命令。
 
-### <a name="command"></a>Command
+### <a name="command"></a>命令
 
 此命令會執行動作。 例如，`dotnet build` 會建置程式碼。 `dotnet publish` 會發佈程式碼。 命令是使用 `dotnet {command}` 慣例實作為主控台應用程式。
 
 ### <a name="arguments"></a>引數
 
-您在命令列上傳遞的引數即為叫用命令的引數。 例如，執行`dotnet publish my_app.csproj`時，`my_app.csproj`參數指示要發佈的專案，並將其傳遞給命令。 `publish`
+您在命令列上傳遞的引數即為叫用命令的引數。 例如，當您執行時 `dotnet publish my_app.csproj` ， `my_app.csproj` 引數會指出要發行的專案，並將它傳遞至 `publish` 命令。
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
-您在命令列上傳遞的選項即為叫用命令的選項。 例如，執行 時`dotnet publish --output /build_output`，`--output`選項及其值將傳遞給命令。 `publish`
+您在命令列上傳遞的選項即為叫用命令的選項。 例如，當您執行時 `dotnet publish --output /build_output` ， `--output` 選項和其值會傳遞至 `publish` 命令。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [點網/sdk GitHub 存儲庫](https://github.com/dotnet/sdk/)
-- [.NET core 安裝指南 (英文)](../install/sdk.md)
+- [dotnet/sdk GitHub 存放庫](https://github.com/dotnet/sdk/)
+- [.NET core 安裝指南 (英文)](../install/windows.md)

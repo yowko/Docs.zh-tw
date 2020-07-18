@@ -3,12 +3,12 @@ title: 資料集和 DataTable 安全性指引
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
-ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
+ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405288"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416194"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>資料集和 DataTable 安全性指引
 
@@ -193,7 +193,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 </configuration>
 ```
 
-如需和的詳細資訊 `TraceSource` `TraceListener` ，請參閱檔 how [To：搭配追蹤接聽項使用 TraceSource 和篩選](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners)。
+如需和的詳細資訊 `TraceSource` `TraceListener` ，請參閱檔 how [To：搭配追蹤接聽項使用 TraceSource 和篩選](../../../debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)。
 
 > [!NOTE]
 > .NET Core 或 .NET 5.0 和更新版本中不提供以 audit 模式執行應用程式的功能。
@@ -236,7 +236,7 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 </configuration>
 ```
 
-如需詳細資訊，請參閱 [\<AppContextSwitchOverrides>](/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) 元素。
+如需詳細資訊，請參閱 [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素。
 
 在 .NET Core、.NET 5 和 ASP.NET Core 中，這項設定是由_上的runtimeconfig.js_所控制，如下列 JSON 所示：
 
@@ -272,7 +272,7 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 |---|---|
 | **登錄機碼** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **值名稱** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
-| **值類型** | `REG_SZ` |
+| **實值型別** | `REG_SZ` |
 | **值資料** | `true` |
 
 在64位的作業系統上，我需要為64位金鑰（如上所示）和32位金鑰新增這兩個值。 32位金鑰位於 `HKLM\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\AppContext` 。
@@ -308,7 +308,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");
 ```
 
-（上述程式碼範例是在[從 DataAdapter 填入資料集中](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)找到之較大範例的一部分）。
+（上述程式碼範例是在[從 DataAdapter 填入資料集中](../populating-a-dataset-from-a-dataadapter.md)找到之較大範例的一部分）。
 
 > 大部分的應用程式都可以簡化並假設其資料庫層是受信任的。 不過，如果您的應用程式是[威脅](https://www.microsoft.com/securityengineering/sdl/threatmodeling)模型化的習慣，您的威脅模型可能會考慮到應用程式（用戶端）和資料庫層（伺服器）之間的信任界限。 使用[相互驗證](/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections)或用戶端與伺服器之間的[AAD 驗證](/azure/azure-sql/database/authentication-aad-overview)，是協助解決與此相關聯之風險的一種方式。 本節的其餘部分將討論用戶端連接到不受信任的伺服器時可能產生的結果。
 
@@ -487,4 +487,4 @@ public class MyClass
 * 引進[了各種不同](/ef/core/providers/)的資料庫提供者生態系統，讓您可以輕鬆地透過 Entity Framework 物件模型來投影資料庫查詢。
 * 從不受信任的來源還原序列化資料時，提供內建的保護功能。
 
-針對使用 SOAP 端點的應用程式 `.aspx` ，請考慮將這些端點變更為使用[WCF](/dotnet/framework/wcf/)。 WCF 是一種功能更完整的 `.asmx` web 服務取代。 WCF 端點[可以透過 SOAP 公開](/dotnet/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients)，以與現有的呼叫端相容。
+針對使用 SOAP 端點的應用程式 `.aspx` ，請考慮將這些端點變更為使用[WCF](/dotnet/framework/wcf/)。 WCF 是一種功能更完整的 `.asmx` web 服務取代。 WCF 端點[可以透過 SOAP 公開](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)，以與現有的呼叫端相容。

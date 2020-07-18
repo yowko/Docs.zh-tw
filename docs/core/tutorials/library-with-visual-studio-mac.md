@@ -2,16 +2,16 @@
 title: 使用 Visual Studio for Mac 建立 .NET Standard 類別庫
 description: 瞭解如何使用 Visual Studio for Mac 建立 .NET Standard 類別庫。
 ms.date: 06/08/2020
-ms.openlocfilehash: 3a107fff2fd6aef5e06d9af3eac334fbf5688fa5
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713739"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416010"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 建立 .NET Standard 程式庫
 
-在本教學課程中，您會建立包含單一字串處理方法的簡單類別庫。 您可以將它實作為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
+在本教學課程中，您會建立包含單一字串處理方法的類別庫。 您可以將它實作為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
 
 「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.1 為目標的類別庫可供以任何支援2.1 版 .NET Standard 的 .NET 實作為目標的應用程式使用。 當您完成類別庫時，您可以將它散發為協力廠商元件，或作為一或多個應用程式的配套元件。
 
@@ -21,7 +21,7 @@ ms.locfileid: "84713739"
 > - 在 Visual Studio for Mac 中，從功能表**選取**  >  [說明] [回報**問題**]，或從 [歡迎使用] 畫面中選取 [**回報問題**]，這會開啟用來提出錯誤報表的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/41/index.html)入口網站追蹤您的意見反應。
 > - 若要提出建議，請從功能表**選取 [** 說明]  >  [**提供建議**] 或從 [歡迎使用] 畫面中**提供建議**，這會帶您前往[Visual Studio for Mac 的開發人員社區網頁](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 * [安裝 Visual Studio for Mac 8.6 版或更新](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)版本。 選取 [安裝 .NET Core] 選項。 安裝 Xamarin 對於 .NET Core 開發而言是選擇性的。 如需詳細資訊，請參閱下列資源：
 
