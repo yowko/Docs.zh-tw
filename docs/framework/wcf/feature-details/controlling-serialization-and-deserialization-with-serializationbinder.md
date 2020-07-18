@@ -1,15 +1,19 @@
 ---
 title: 以 SerializationBinder 控制序列化與還原序列化
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
-ms.openlocfilehash: 1101a3caf2a033b4dbbc5f45737f187c58adbef2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5a7d0bf2aabfcdf789a77cf0fcfeb26357575806
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595566"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86444478"
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>以 SerializationBinder 控制序列化與還原序列化
+
+> [!WARNING]
+> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>並不安全，而且***也無法成為安全***的。 如需詳細資訊，請參閱[BinaryFormatter 安全性指南](../../../standard/serialization/binaryformatter-security-guide.md)。
+
 在序列化期間，格式器會傳輸在建立正確型別和版本之物件執行個體時的必要資訊。 這項資訊通常包含物件的完整型別名稱和組件名稱。 根據預設，還原序列化會使用這項資訊建立完全相同物件的執行個體。 某些使用者可能因為執行還原序列化的電腦上不存在原始類別、原始類別已在組件之間移動，或是伺服器和用戶端上需要不同版本的類別，而需要控制要序列化和還原序列化的類別。 如需詳細資訊，請參閱序列化系結器的[使用](../samples/usage-of-serialization-binder.md)方式。  
   
 > [!WARNING]
