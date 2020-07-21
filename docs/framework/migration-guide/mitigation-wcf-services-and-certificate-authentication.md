@@ -1,13 +1,14 @@
 ---
 title: 風險降低︰WCF 服務和憑證驗證
+description: 瞭解如何從 .NET Framework 4.6 中 WCF SSL 通訊協定預設清單的變更，減少憑證驗證問題。
 ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
-ms.openlocfilehash: 8c8493efa2c3223809ad87e01e3faddaea859ca8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b6460e58bb32151003430d6573c4bcf1b514081b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457790"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475368"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>風險降低︰WCF 服務和憑證驗證
 
@@ -15,7 +16,7 @@ ms.locfileid: "73457790"
 
 ## <a name="impact"></a>影響
 
-TLS 1.2 不支援 MD5 憑證驗證。 因此，如果客戶使用的 SSL 憑證使用 MD5 執行雜湊演算法，WCF 用戶端就無法連線到 WCF 服務。 如需詳細資訊，請參閱[風險降低︰WCF 服務和憑證驗證](mitigation-wcf-services-and-certificate-authentication.md)。
+TLS 1.2 不支援 MD5 憑證驗證。 因此，如果客戶使用的 SSL 憑證使用 MD5 作為雜湊演算法，WCF 用戶端就無法連接到 WCF 服務。 如需詳細資訊，請參閱[風險降低︰WCF 服務和憑證驗證](mitigation-wcf-services-and-certificate-authentication.md)。
 
 ## <a name="mitigation"></a>降低
 

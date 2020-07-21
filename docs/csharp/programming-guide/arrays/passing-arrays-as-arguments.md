@@ -1,15 +1,16 @@
 ---
 title: 傳遞陣列當做引數 - C# 程式設計手冊
+description: 'C # 中的陣列可以當做引數傳遞至方法參數。 因為陣列是參考型別，所以方法可以變更項目的值。'
 ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: 2e53008910a9062ada25680eb4b8e54a225fd226
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68f174421e56e2cf082fe670f93c4f6627d7c17b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705687"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474627"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>傳遞陣列當做引數 (C# 程式設計手冊)
 
@@ -57,8 +58,8 @@ ms.locfileid: "75705687"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [陣 列](index.md)
+- [C # 程式設計指南](../index.md)
+- [陣列](index.md)
 - [一維陣列](single-dimensional-arrays.md)
 - [多維陣列](multidimensional-arrays.md)
-- [鋸齒狀陣列](jagged-arrays.md)
+- [不規則陣列](jagged-arrays.md)

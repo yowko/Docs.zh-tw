@@ -1,13 +1,14 @@
 ---
 title: 風險降低：自訂 IMessageFilter.PreFilterMessage 實作
+description: 瞭解以 .NET Framework 4.6.1 和更新版本為目標 Windows Forms 應用程式中所包含的自訂 Imessagefilter.prefiltermessage Imessagefilter.prefiltermessage 實作。
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
-ms.openlocfilehash: 7757e8d1fd0258ab2d972b7321082e4afa37f710
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5fe7500d3ed6ff293514495df150a747e7946dda
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400117"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475251"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>風險降低：自訂 IMessageFilter.PreFilterMessage 實作
 
@@ -29,7 +30,7 @@ ms.locfileid: "79400117"
 
 ## <a name="mitigation"></a>降低
 
-如果此更改不可取，則針對 .NET Framework 4.6.1 或更高版本的應用可以通過將以下配置設置添加到應用設定檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分來退出宣告：
+如果不需要這項變更，以 .NET Framework 4.6.1 或更新版本為目標的應用程式可以藉由在 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 應用程式佈建檔的區段中新增下列設定，來選擇不使用此項：
 
 ```xml
 <runtime>
@@ -37,7 +38,7 @@ ms.locfileid: "79400117"
 </runtime>
 ```
 
-此外，針對 .NET Framework 的早期版本但在 .NET Framework 4.6.1 或更高版本下運行的應用可以加入宣告此行為，將以下配置設置添加到應用設定檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分：
+此外，以舊版 .NET Framework 為目標但在 .NET Framework 4.6.1 或更新版本下執行的應用程式，可以藉由在 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 應用程式佈建檔的區段中新增下列設定，來加入宣告此行為：
 
 ```xml
 <runtime>

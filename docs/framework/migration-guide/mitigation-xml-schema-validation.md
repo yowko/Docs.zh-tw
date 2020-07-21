@@ -1,16 +1,17 @@
 ---
 title: 風險降低：XML 結構描述驗證
+description: 如果使用了複合索引鍵，而且 .NET Framework 4.6 中的一個索引鍵是空的，則 XSD 架構驗證會偵測 unique 條件約束的違規。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
-ms.openlocfilehash: 99cc1eae08697909d89e5c1e46cd604c7da543bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0672361ca5c0bc7cb6ec166f59278b93555e0947
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457747"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475303"
 ---
 # <a name="mitigation-xml-schema-validation"></a>風險降低：XML 結構描述驗證
 在 .NET Framework 4.6 中，如果使用複合索引鍵且其中一個索引鍵是空的，則 XSD 結構描述驗證會偵測出唯一條件約束違規。  

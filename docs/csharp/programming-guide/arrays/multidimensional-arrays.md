@@ -1,16 +1,17 @@
 ---
 title: 多維陣列 - C# 程式設計手冊
+description: 'C # 中的陣列可以有一個以上的維度。 這個範例宣告會建立四個數據列和兩個數據行的二維陣列。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: ee5fae36ff844fadad7e1b6a766020319b67a83c
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: a2f204c0866672b317569fbc620aa8af60829ffd
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021753"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475004"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>多維陣列 (C# 程式設計手冊)
 
@@ -28,7 +29,7 @@ ms.locfileid: "82021753"
   
  [!code-csharp[csProgGuideArrays#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#13)]  
   
- 還可以初始化陣列,而無需指定排名。  
+ 您也可以在不指定順位的情況下初始化陣列。  
   
  [!code-csharp[csProgGuideArrays#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#14)]  
   
@@ -50,7 +51,7 @@ ms.locfileid: "82021753"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編程指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [陣列](./index.md)
 - [一維陣列](./single-dimensional-arrays.md)
 - [不規則陣列](./jagged-arrays.md)

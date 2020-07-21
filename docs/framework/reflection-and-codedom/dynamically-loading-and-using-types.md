@@ -1,5 +1,6 @@
 ---
 title: 動態載入和使用類型
+description: 在 .NET 中動態載入和使用類型。 使用反映，可提供語言編譯器用來執行隱含晚期繫結的基礎結構。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 940f334ec6a42c4d8da461d634051ff979b8f98d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130258"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475082"
 ---
 # <a name="dynamically-loading-and-using-types"></a>動態載入和使用類型
 反映會提供語言編譯器所使用的基礎結構，以實作隱含晚期繫結。 繫結是尋找對應至唯一指定的類型宣告 (也就是實作) 的程序。 當此程序發生在執行階段，而不是在編譯時期時，它稱為晚期繫結。 Visual Basic 可讓您在程式碼內使用隱含晚期繫結；Visual Basic 編譯器會呼叫 Helper 方法，它會使用反映來取得物件類型。 傳遞至 helper 方法的引數會導致在執行階段叫用適當的方法。 這些引數是在其上叫用方法的執行個體 (物件)、被叫用方法的名稱 (字串)，以及傳遞給被叫用方法的引數 (物件陣列)。  
@@ -64,7 +65,7 @@ End Module
   
  **BindToMethod** 會傳回要叫用的 <xref:System.Reflection.MethodBase>，如果不可能進行這種叫用則傳回 null 參考 (在 Visual Basic 中為 **Nothing**)。 **MethodBase** 傳回值不一定要是 *match* 參數中所包含的其中一者，雖然這是常見的情況。  
   
- 有 ByRef 引數存在時，呼叫端可能會想要取回它們。 因此，**Binder** 允許用戶端將引數的陣列對應回其原始形式，如果 **BindToMethod** 已操作引數陣列的話。 若要這樣做，必須向呼叫端保證，引數的順序不變。 依名稱傳遞引數時，**Binder** 會重新排列引數陣列，那也是呼叫端看到的情況。 如需詳細資訊，請參閱 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>。  
+ 有 ByRef 引數存在時，呼叫端可能會想要取回它們。 因此，**Binder** 允許用戶端將引數的陣列對應回其原始形式，如果 **BindToMethod** 已操作引數陣列的話。 若要這樣做，必須向呼叫端保證，引數的順序不變。 依名稱傳遞引數時，**Binder** 會重新排列引數陣列，那也是呼叫端看到的情況。 如需詳細資訊，請參閱 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType> 。  
   
  可用成員的集合是在類型或任何基底類型中定義的成員。 如果指定 <xref:System.Reflection.BindingFlags>，則會在集合中傳回任何存取範圍的成員。 如果未指定 **BindingFlags.NonPublic**，繫結器必須強制執行存取範圍規則。 指定 **Public** 或 **NonPublic** 繫結旗標時，您也必須指定 **Instance** 或 **Static** 繫結旗標，否則不會傳回任何成員。  
   

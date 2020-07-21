@@ -1,13 +1,14 @@
 ---
 title: 風險降低：WPF 視窗呈現
+description: 瞭解在 Windows 8 或更新版本上執行的 .NET Framework 4.6 中，WPF 視窗呈現的影響和緩和。
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-ms.openlocfilehash: 42d6abf1ba6ed7c17a5a5604e98b5ee46d0c3ac2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d624478d17a4076107438f71b0a86eeb6d9f3ea4
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457776"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475329"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>風險降低：WPF 視窗呈現
 

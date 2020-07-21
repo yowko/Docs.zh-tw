@@ -9,18 +9,18 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: ea5481810e629d911c4d5aba62e60c98d0783f34
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 80cec001b27000e71b74f380a0f33e30602c01af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644350"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473905"
 ---
 # <a name="-target-c-compiler-options"></a>-target (C# 編譯器選項)
-**目標**編譯器選項可以以以下四種形式之一指定:  
+可以用下列其中一種形式指定 **-target**編譯器選項：  
   
  [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
- 為 Windows 8.x 應用商店應用創建 .exe 檔。  
+ 建立 Windows 8.x 存放區應用程式的 .exe 檔案。  
   
  [-target:exe](./target-exe-compiler-option.md)  
  建立 .exe 檔案。  
@@ -37,7 +37,7 @@ ms.locfileid: "81644350"
  [-target:winmdobj](./target-winmdobj-compiler-option.md)  
  建立中繼 .winmdobj 檔案。  
   
- 除非指定 **-目標:模組** **,-目標**會導致將 .NET 框架程式集清單放置在輸出檔中。 有關詳細資訊,請參閱[.NET](../../../standard/assembly/index.md)中的程式集和[通用屬性](../attributes/global.md)。  
+ 除非您指定 **-target： module**，否則 **-target**會將 .NET Framework 的組件資訊清單放在輸出檔中。 如需詳細資訊，請參閱[.net 中的元件](../../../standard/assembly/index.md)和[通用屬性](../attributes/global.md)。  
   
  編譯時，組件資訊清單會放在第一個 .exe 輸出檔，如果沒有 .exe 輸出檔，則會放在第一個 DLL 中。 例如，在下列命令列中，資訊清單會放在 `1.exe` 中：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "81644350"
 csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- 編譯器在每次編譯時都只會建立一個組件資訊清單。 編譯中所有檔案的資訊會放入組件資訊清單中。 除使用 **-target:模組**創建的輸出檔外,所有輸出檔都可以包含程式集清單。 在命令列產生多個輸出檔時，只能建立一個組件資訊清單，而且它必須移至命令列上所指定的第一個輸出檔。 無論第一個輸出檔是什麼 **(-目標:exe,-****目標:winexe,****目標:庫**或 **-目標:模組**),在同一編譯中生成的任何其他輸出檔都必須是模組 **(-目標:模組**)。  
+ 編譯器在每次編譯時都只會建立一個組件資訊清單。 編譯中所有檔案的資訊會放入組件資訊清單中。 除了以 **-target： module**所建立的輸出檔以外，所有輸出檔案都可以包含組件資訊清單。 在命令列產生多個輸出檔時，只能建立一個組件資訊清單，而且它必須移至命令列上所指定的第一個輸出檔。 不論第一個輸出檔是什麼（**-target： exe**、 **-target： winexe**、 **-target： library**或-target **： module**），在相同編譯中產生的任何其他輸出檔都必須是模組（**-target： module**）。  
   
  如果您建立組件，則可以使用 <xref:System.CLSCompliantAttribute> 屬性指出所有或部分程式碼符合 CLS 標準。  
   
@@ -64,6 +64,6 @@ public class TestClass
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
 - [-subsystemversion (C# 編譯器選項)](./subsystemversion-compiler-option.md)

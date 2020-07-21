@@ -1,23 +1,24 @@
 ---
 title: 欄位 - C# 程式設計手冊
+description: 'C # 中的欄位是直接在類別或結構中宣告之任何型別的變數。 欄位是其包含類型的「成員」。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bd2e198cd623788a21d4da73e89851a6d77e3bb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628237"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474783"
 ---
 # <a name="fields-c-programming-guide"></a>欄位 (C# 程式設計手冊)
 
 「欄位」** 是任意類型的變數，可在[類別](../../language-reference/keywords/class.md)或[結構](../../language-reference/builtin-types/struct.md)中直接宣告。 欄位是其包含類型的「成員」**。
 
-類或結構可能具有實例欄位、靜態欄位或兩者。 執行個體欄位是專屬於某種類型的執行個體。 如果您有搭配執行個體欄位 F 的類別 T，您可以建立兩個類型 T 的物件，然後修改每個物件中的 F 值，而不會影響另一個物件中的值。 相較之下，靜態欄位屬類別本身所擁有，並在該類別的所有執行個體之間共用。 只能通過使用類名稱訪問靜態欄位。 如果通過實例名稱訪問靜態欄位，則會收到[CS0176](../../misc/cs0176.md)編譯時間錯誤。
+類別或結構可能具有實例欄位、靜態欄位或兩者。 執行個體欄位是專屬於某種類型的執行個體。 如果您有搭配執行個體欄位 F 的類別 T，您可以建立兩個類型 T 的物件，然後修改每個物件中的 F 值，而不會影響另一個物件中的值。 相較之下，靜態欄位屬類別本身所擁有，並在該類別的所有執行個體之間共用。 您只能使用類別名稱來存取靜態欄位。 如果您依實例名稱存取靜態欄位，您會收到[CS0176](../../misc/cs0176.md)編譯時期錯誤。
 
-一般而言，您應該只針對具有 private 或 protected 存取範圍的變數使用欄位。 類向用戶端代碼公開的資料應通過[方法](./methods.md)、[屬性](./properties.md)和[索引子](../indexers/index.md)提供。 藉由使用這些建構來間接存取內部欄位，即可防範無效的輸入值。 儲存由公用屬性公開之資料的私用欄位稱為「備份存放區」** 或「支援欄位」**。
+一般而言，您應該只針對具有 private 或 protected 存取範圍的變數使用欄位。 您的類別公開給用戶端程式代碼的資料，應該透過[方法](./methods.md)、[屬性](./properties.md)和[索引子](../indexers/index.md)來提供。 藉由使用這些建構來間接存取內部欄位，即可防範無效的輸入值。 儲存由公用屬性公開之資料的私用欄位稱為「備份存放區」** 或「支援欄位」**。
 
 這些欄位通常會儲存必須可供多個類別方法存取的資料，以及其儲存時間必須比任何一個方法的存留期都還要長的資料。 例如，表示行事曆日期的類別可能會有三個整數欄位，分別代表月、日和年。 未在單一方法以外範圍使用的變數，應在方法主體本身內宣告為「區域變數」**。
 
@@ -38,9 +39,9 @@ ms.locfileid: "77628237"
 > [!NOTE]
 > 欄位初始設定式無法參考其他執行個體欄位。
 
-欄位可以標記為[公共](../../language-reference/keywords/public.md)、[私有](../../language-reference/keywords/private.md)、[受保護](../../language-reference/keywords/protected.md)、[內部](../../language-reference/keywords/internal.md)、[受保護的內部](../../language-reference/keywords/protected-internal.md)或[私有保護](../../language-reference/keywords/private-protected.md)。 這些存取修飾詞定義類別使用者如何存取欄位。 如需詳細資訊，請參閱[存取修飾詞](./access-modifiers.md)。
+欄位可以標記為[public](../../language-reference/keywords/public.md)、 [private](../../language-reference/keywords/private.md)、 [protected](../../language-reference/keywords/protected.md)、 [internal](../../language-reference/keywords/internal.md)、 [protected internal](../../language-reference/keywords/protected-internal.md)或[private protected](../../language-reference/keywords/private-protected.md)。 這些存取修飾詞定義類別使用者如何存取欄位。 如需詳細資訊，請參閱[存取修飾詞](./access-modifiers.md)。
 
-欄位可以選擇性地宣告為 [static](../../language-reference/keywords/static.md)。 這可隨時向呼叫者提供欄位，即使沒有任何類別執行個體存在。 有關詳細資訊，請參閱[靜態類和靜態類成員](./static-classes-and-static-class-members.md)。
+欄位可以選擇性地宣告為 [static](../../language-reference/keywords/static.md)。 這可隨時向呼叫者提供欄位，即使沒有任何類別執行個體存在。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)。
 
 欄位可以宣告為 [readonly](../../language-reference/keywords/readonly.md)。 您只能在初始化期間或在建構函式中指派值給唯讀欄位。 `static readonly` 欄位非常類似於常數，不同之處在於 C# 編譯器無法在編譯時期存取靜態唯讀欄位的值，只有在執行階段才能這麼做。 如需詳細資訊，請參閱[常數](./constants.md)。
 
@@ -50,7 +51,7 @@ ms.locfileid: "77628237"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [類別和結構](./index.md)
 - [使用建構函式](./using-constructors.md)
 - [繼承](./inheritance.md)

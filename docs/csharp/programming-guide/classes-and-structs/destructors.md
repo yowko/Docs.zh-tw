@@ -1,17 +1,18 @@
 ---
 title: 完成項 - C# 程式設計手冊
+description: 'C # 中的完成項（也稱為「析構函數」）會在垃圾收集行程收集類別實例時，執行任何必要的最後清除。'
 ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 62fc531a8064a8a5cb144a89aa9975b3199db976
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 392b69633e596f0682fdfb4a5875f46755203ff7
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990117"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474887"
 ---
 # <a name="finalizers-c-programming-guide"></a>完成項 (C# 程式設計手冊)
 完成項 (也稱為**解構函式**) 可在記憶體回收行程收集類別執行個體時，用來執行任何必要的最後清除。  

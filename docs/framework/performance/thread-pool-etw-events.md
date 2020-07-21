@@ -1,16 +1,17 @@
 ---
 title: 執行緒集區 ETW 事件
+description: 審查執行緒集區 ETW 事件，這會收集 .NET 中線程的相關資訊。 執行緒集區事件是背景工作執行緒集區事件或 i/o 執行緒集區事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240489"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475199"
 ---
 # <a name="thread-pool-etw-events"></a>執行緒集區 ETW 事件
 這些事件會收集背景工作和 I/O 執行緒的資訊。  
@@ -68,7 +69,7 @@ ms.locfileid: "78240489"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|Throughput|win:Double|每個時間單位完成的數目。|  
+|輸送量|win:Double|每個時間單位完成的數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
@@ -111,7 +112,7 @@ ms.locfileid: "78240489"
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
 |Duration|win:Double|收集這些統計資料期間的時間量 (以秒為單位)。|  
-|Throughput|win:Double|在這段間隔期間，每秒完成的平均數目。|  
+|輸送量|win:Double|在這段間隔期間，每秒完成的平均數目。|  
 |ThreadWave|win:Double|保留供內部使用。|  
 |ThroughputWave|win:Double|保留供內部使用。|  
 |ThroughputErrorEstimate|win:Double|保留供內部使用。|  
@@ -142,7 +143,7 @@ ms.locfileid: "78240489"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|I/O 執行緒的數目，其包含新建立的執行緒。|  
+|計數|win:UInt64|I/O 執行緒的數目，其包含新建立的執行緒。|  
 |NumRetired|win:UInt64|已淘汰之背景工作執行緒的數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
@@ -163,7 +164,7 @@ ms.locfileid: "78240489"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
+|計數|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
 |NumRetired|win:UInt64|已淘汰的 I/O 執行緒數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
@@ -184,7 +185,7 @@ ms.locfileid: "78240489"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|執行緒集區中的 I/O 執行緒數目，包含此執行緒。|  
+|計數|win:UInt64|執行緒集區中的 I/O 執行緒數目，包含此執行緒。|  
 |NumRetired|win:UInt64|已淘汰的 I/O 執行緒數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
@@ -205,7 +206,7 @@ ms.locfileid: "78240489"
   
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
-|Count|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
+|計數|win:UInt64|執行緒集區中剩餘的 I/O 執行緒數目。|  
 |NumRetired|win:UInt64|已淘汰的 I/O 執行緒數目。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   

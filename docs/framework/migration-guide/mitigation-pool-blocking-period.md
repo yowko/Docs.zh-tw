@@ -1,13 +1,14 @@
 ---
 title: 風險降低︰集區封鎖期
+description: 瞭解如何減輕因連線至 Azure SQL 資料庫而移除連線集區封鎖期間所造成的問題。
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
-ms.openlocfilehash: 98396d4254975d1806a8477cbcd2380cb52ceaf3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be60fe87952697d964571176743a4e6f839c4894
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457854"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475407"
 ---
 # <a name="mitigation-pool-blocking-period"></a>風險降低︰集區封鎖期
 已移除 Azure SQL Database 連線的連線集區封鎖期。  

@@ -1,13 +1,14 @@
 ---
 title: 風險降低︰路徑冒號檢查
+description: 瞭解 .NET Framework 4.6.2 中所做的變更，以支援檢查適當的磁片磁碟機分隔符號語法（冒號）。
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: c6e1106b6f5d8457417992941b9f28712d484442
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f32ee54f88bc4747fd0d8065b0dce06b151d1d9a
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181251"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475446"
 ---
 # <a name="mitigation-path-colon-checks"></a>風險降低︰路徑冒號檢查
 從以 .NET Framework 4.6.2 為目標的應用程式開始，為了支援先前不支援的路徑 (就長度和格式兩方面) 而有數項變更。 特別是提供更正確的適當磁碟機分隔符號語法 (冒號) 檢查。  

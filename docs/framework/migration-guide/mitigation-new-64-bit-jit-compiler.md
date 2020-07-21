@@ -1,20 +1,21 @@
 ---
 title: 風險降低：新的 64 位元 JIT 編譯器
+description: 瞭解 .NET Framework 4.6 中包含的新64位 JIT 編譯程式，以及編譯期間可能發生的非預期行為或例外狀況。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compiler, 64-bit
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: 883aaf032bde632b08f965d3450cfbea4feb8e65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f059cbdd3b2a66ac8a668b7b8a80d9ad1551fa64
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181260"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475225"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>風險降低：新的 64 位元 JIT 編譯器
-從 .NET Framework 4.6 開始，執行階段包含新的 64 位元 JIT 編譯器，用於 Just-In-Time 編譯。 這項變更不會影響使用 32 位元 JIT 編譯器的編譯。  
+從 .NET Framework 4.6 開始，執行時間會包含新的64位 JIT 編譯程式以進行即時編譯。 這種變更不會影響使用32位 JIT 編譯程式的編譯。  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>未預期的行為或例外狀況  
  在某些情況下，使用新版 64 位元 JIT 編譯器的編譯會產生執行階段例外狀況，或是產生在執行舊版 64 位元 JIT 編譯器所編譯的程式碼時未觀察到的行為。 下列是已知的差異︰  
@@ -50,7 +51,7 @@ ms.locfileid: "79181260"
 ## <a name="mitigation-of-other-issues"></a>降低其他問題的風險  
  如果舊版和新版 64 位元 JIT 編譯器編譯的程式碼之間有任何差異，或是使用新版 64 位元 JIT 編譯器編譯的應用程式偵錯版本和發行版本之間有任何差異，您可以使用舊版 64 位元 JIT 編譯器搭配下列方式來編譯應用程式：  
   
-- 根據每個應用程式，您可以將[\<使用LegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md)元素添加到應用程式的設定檔中。 下列程式碼會停止以新版 64 位元 JIT 編譯器進行編譯，改用舊版 64 位元 JIT 編譯器。  
+- 以每個應用程式為基礎，您可以將 [\<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) 元素新增至應用程式的設定檔。 下列程式碼會停止以新版 64 位元 JIT 編譯器進行編譯，改用舊版 64 位元 JIT 編譯器。  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -70,4 +71,4 @@ ms.locfileid: "79181260"
 ## <a name="see-also"></a>另請參閱
 
 - [應用程式相容性](application-compatibility.md)
-- [\<使用傳統jit>元素](../configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [\<useLegacyJit>元素](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

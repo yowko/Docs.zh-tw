@@ -1,23 +1,24 @@
 ---
 title: 執行階段資訊 ETW 事件
+description: 請參閱執行時間資訊 ETW 事件，其會記錄 SKU、版本號碼、執行時間的啟動方式（包括命令列參數）、GUID 等等。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-ms.openlocfilehash: 2927ed088ba6c9e46b9676d55d0046575e23cfb1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 385519229bdb76841cdf592d95e96d2288ec5e1a
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715946"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474224"
 ---
 # <a name="runtime-information-etw-events"></a>執行階段資訊 ETW 事件
 執行階段的這些 ETW 事件記錄資訊，包含 SKU、版本號碼、執行階段啟用方式、用來啟動它的命令列參數、GUID (適用時)，以及其他相關資訊。 如果多個執行階段是在某個處理序內執行，則這些事件所提供的資訊 (ClrInstanceID) 有助於釐清執行階段。  
   
  下表顯示兩個執行階段資訊事件。 事件可能會透過任何關鍵字或遮罩引發。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
-|Event|事件 ID|Provider|描述|  
+|事件|事件識別碼|提供者|描述|  
 |-----------|--------------|--------------|-----------------|  
 |`RuntimeInformationEvent`|187|CLRRuntime|在載入執行階段時引發。|  
 |`RuntimeInformationDCStart`|187|CLRRundown|列舉已載入的執行階段。|  
@@ -27,7 +28,7 @@ ms.locfileid: "75715946"
 |欄位名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
-|Sku|win:UInt16|1 - 桌面 CLR。<br /><br /> 2 - CoreCLR。|  
+|SKU|win:UInt16|1 - 桌面 CLR。<br /><br /> 2 - CoreCLR。|  
 |BclVersion - 主要版本|win:UInt16|mscorlib.dll 的主要版本。|  
 |BclVersion - 次要版本|win:UInt16|mscorlib.dll 的次要版本號碼。|  
 |BclVersion - 組建編號|win:UInt16|mscorlib.dll. 的組建編號。|  
@@ -42,6 +43,6 @@ ms.locfileid: "75715946"
 |ComObjectGUID|win:GUID|只有在 StartupMode=0x08 時才為非 Null。|  
 |RuntimeDLLPath|win:UnicodeString|已載入處理序中之 CLR .dll 檔案的路徑。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CLR ETW 事件](clr-etw-events.md)

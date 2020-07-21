@@ -1,5 +1,6 @@
 ---
 title: .NET Framework 中的版本相容性
+description: 瞭解 .NET Framework 版本之間的相容性，包括回溯相容性和並存執行。
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795998"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475498"
 ---
 # <a name="version-compatibility"></a>版本相容性
 
@@ -22,7 +23,7 @@ ms.locfileid: "82795998"
 
 根據預設，應用程式會在其所建立的 .NET Framework 版本上執行。 如果該版本不存在，且應用程式組態檔不會定義支援的版本，則可能會發生 .NET Framework 初始化錯誤。 在此例中，嘗試執行應用程式的作業將會失敗。
 
-若要定義應用程式執行所在的特定版本，請將一或多個[ \<supportedruntime>>](../configure-apps/file-schema/startup/supportedruntime-element.md)元素新增至應用程式的設定檔。 每一個 `<supportedRuntime>` 項目都會列出支援的執行階段版本，最先指定的是最優先的版本，而最後指定的則是優先順序最低的版本。
+若要定義應用程式執行所在的特定版本，請將一或多個 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素新增至應用程式的設定檔。 每一個 `<supportedRuntime>` 項目都會列出支援的執行階段版本，最先指定的是最優先的版本，而最後指定的則是優先順序最低的版本。
 
 ```xml
 <configuration>
@@ -59,7 +60,7 @@ ms.locfileid: "82795998"
 
 - 如果您正在重新編譯現有原始程式碼以便在 .NET Framework 4.5 或其點版本執行，或如果您正在開發的新版本應用程式或元件針對 .NET Framework 4.5，或針對來自其現有原始程式碼基底的點版本，請檢查 [.NET Framework 類別庫中已淘汰的功能](../whats-new/whats-obsolete.md)中已淘汰類型和成員，並套用所述的因應措施。 (之前編譯的程式碼將會針對已標示為過時的型別和成員繼續執行)。
 
-- 如果您認為 .NET Framework 4.5 中的變更已破壞您的應用程式，請檢查[執行階段設定結構描述](../configure-apps/file-schema/runtime/index.md)，特別是 [\<Appcontextswitchoverrides > 項目](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)，以判斷您是否可以在您的應用程式組態檔中使用執行階段設定來還原先前行為。
+- 如果您判斷 .NET Framework 4.5 中的變更已中斷您的應用程式，請檢查[執行時間設定架構](../configure-apps/file-schema/runtime/index.md)， [ \<AppContextSwitchOverrides> 特別是專案，以](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)判斷您是否可以在應用程式的設定檔中使用執行時間設定來還原先前的行為。
 
 - 如果您遇到未記載的問題，請在 [.NET 開發人員社群網站](https://developercommunity.visualstudio.com/spaces/61/index.html)或 [Microsoft/dotnet GitHub 存放庫](https://github.com/microsoft/dotnet/issues)中開啟問題。
 
@@ -67,7 +68,7 @@ ms.locfileid: "82795998"
 
 如果您找不到問題的適當因應措施，請記住 .NET Framework 4.5 （或其小數點版本之一）與版本1.1、2.0 和3.5 並存執行，而且是取代第4版的就地更新。 針對以1.1、2.0 和3.5 版為目標的應用程式，您可以在目的電腦上安裝適當版本的 .NET Framework，以在其最佳環境中執行應用程式。 如需並存執行的詳細資訊，請參閱[並存執行](../deployment/side-by-side-execution.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [新功能](../whats-new/index.md)
 - [類別庫中的過時功能](../whats-new/whats-obsolete.md)

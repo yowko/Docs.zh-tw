@@ -1,5 +1,6 @@
 ---
 title: SQL Server 程式設計和主機保護屬性
+description: 開始使用 SQL Server 程式設計和主機保護屬性。 請參閱 SQL Server 許可權集合和程式設計模型限制。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQL Server [.NET Framework]
@@ -12,24 +13,24 @@ helpviewer_keywords:
 - host protection attributes
 - HostProtectionAttribute class, reliability
 ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
-ms.openlocfilehash: 88fa360664627e9f535a6daaaf6f29df01b64a62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33db32897d2f49d2c10f94dc73aeae728c17db73
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715920"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474198"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server 程式設計和主機保護屬性
-在 SQL Server 主機中載入和執行 Managed 程式碼的功能需要符合主機對程式碼存取安全性和主機資源保護的需求。  程式碼存取安全性需求由三個 SQL Server 權限集合其中之一所指定：SAFE、EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 權限集合內執行的程式碼，必須避免已套用 <xref:System.Security.Permissions.HostProtectionAttribute> 屬性的特定類型或成員。 <xref:System.Security.Permissions.HostProtectionAttribute> 不像可靠性保證一樣是安全性權限，關鍵在於它會識別主機可能不允許的特定程式碼建構 (類型或方法)。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 會強制使用有助於保護主機穩定性的程式設計模型。  
+在 SQL Server 主機中載入和執行 Managed 程式碼的功能需要符合主機對程式碼存取安全性和主機資源保護的需求。  程式碼存取安全性需求由三個 SQL Server 權限集合其中之一所指定：SAFE、EXTERNAL-ACCESS 或 UNSAFE。 在 SAFE 或 EXTERNAL-ACCESS 權限集合內執行的程式碼，必須避免已套用 <xref:System.Security.Permissions.HostProtectionAttribute> 屬性的特定類型或成員。 <xref:System.Security.Permissions.HostProtectionAttribute> 不像可靠性保證一樣是安全性權限，關鍵在於它會識別主機可能不允許的特定程式碼建構 (類型或方法)。  使用 <xref:System.Security.Permissions.HostProtectionAttribute> 會強制使用有助於保護主機之穩定性的程式設計模型。  
   
 ## <a name="host-protection-attributes"></a>主機保護屬性  
  主機保護屬性可識別不適合主機程式設計模型的類型或成員，並且代表下列遞增的可靠性威脅層級：  
   
-- 不是良性。  
+- 否則為良性。  
   
-- 可能會導致伺服器管理的使用者程式碼不穩定。  
+- 可能會導致受伺服器管理的使用者程式碼不穩定。  
   
-- 可能會導致伺服器處理序本身不穩定。  
+- 可能會導致伺服器處理序本身的不穩定。  
   
  SQL Server 不允許使用具有 <xref:System.Security.Permissions.HostProtectionAttribute> 且其 <xref:System.Security.Permissions.HostProtectionResource> 值指定為 <xref:System.Security.Permissions.HostProtectionResource.SharedState>、<xref:System.Security.Permissions.HostProtectionResource.Synchronization>、<xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort> 或 <xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt> 的類型或成員。 這可防止組件呼叫可啟用共用狀態、執行同步處理、可能造成終止時資源流失，或影響 SQL Server 程序完整性的成員。  
   
@@ -55,25 +56,25 @@ ms.locfileid: "75715920"
   
 |權限集合|SAFE|EXTERNAL-ACCESS|UNSAFE|  
 |--------------------|----------|----------------------|------------|  
-|程式碼存取安全性|僅限執行|執行 + 存取外部資源|無限制的|  
-|程式設計模型限制|是|是|無限制|  
+|程式碼存取安全性|僅限 Execute|對外部資源的 Execute + 存取權|不受限制|  
+|程式設計模型限制|是|是|沒有限制|  
 |可驗證性需求|是|是|否|  
-|呼叫原生程式碼的能力|否|否|是|  
+|呼叫機器碼的能力|否|否|是|  
   
- SAFE 是最可靠且安全的模式，並且在允許的程式設計模型方面有相關限制。 SAFE 程式碼具有高可靠性和安全性功能。 SAFE 組件有足夠的權限來執行、執行計算，以及存取本機資料庫。 SAFE 組件必須是可驗證的型別安全，且不允許呼叫 Unmanaged 程式碼。  
+ SAFE 是最可靠及安全的模式，其包含了根據允許的程式設計模型的相關限制。 SAFE 程式碼具有高可靠性和安全性功能。 SAFE 組件有被授與足夠的權限來執行、進行運算，以及存取本機資料庫。 SAFE 組件需要是可驗證的類型安全，且不允許呼叫 Unmanaged 程式碼。  
   
  EXTERNAL-ACCESS 提供了中級安全性選項，允許程式碼存取資料庫之外的資源，但仍然保有 SAFE 的可靠性和安全性。  
   
- UNSAFE 適用於只能由資料庫管理員建立的高度信任程式碼。 此受信任的程式碼沒有程式碼存取限制，且可以呼叫 Unmanaged (原生) 程式碼。  
+ UNSAFE 適用於高度信任的程式碼，這類程式碼只能由資料庫管理員建立； 此受信任的程式碼沒有程式碼存取限制，且可以呼叫 Unmanaged (原生) 程式碼。  
   
- SQL Server 使用主機層級程式碼存取安全性原則層來設定主機原則，根據儲存在 SQL Server 目錄的權限集合，授與三個權限集合的其中一個。 在資料庫內執行的 Managed 程式碼一律會取得這些程式碼存取權限集合的其中一個。  
+ SQL Server 使用主機層級程式碼存取安全性原則層來設定主機原則，根據儲存在 SQL Server 目錄的權限集合，授與三個權限集合的其中一個。 在資料庫內執行的 Managed 程式碼一定會取得這些程式碼存取權限集合當中的一個。  
   
 ## <a name="programming-model-restrictions"></a>程式設計模型限制  
- SQL Server 中的 Managed 程式碼程式設計模型需要的函式、程序和類型，不需要使用跨多個引動過程保留的狀態，或是在多個使用者工作階段之間共用狀態。 此外，如先前所述，共用狀態的存在可能會導致嚴重的例外狀況，影響應用程式的延展性和可靠性。  
+ SQL Server 中的 Managed 程式碼程式設計模型需要的函式、程序和類型，不需要使用跨多個引動過程保留的狀態，或是在多個使用者工作階段之間共用狀態。 再者，如之前所述，共用狀態的存在可能會造成嚴重的例外狀況，而這些例外狀況會影響應用程式的延展性和可靠性。  
   
  基於這些考量，SQL Server 不允許使用靜態變數和靜態資料成員。 對於 SAFE 及 EXTERNAL-ACCESS 組件，SQL Server 會在 CREATE ASSEMBLY 時，檢查組件的中繼資料，並且如果它找到使用靜態資料成員和變數，便讓這類組件的建立作業失敗。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Permissions.HostProtectionAttribute>
 - <xref:System.Security.Permissions.HostProtectionResource>

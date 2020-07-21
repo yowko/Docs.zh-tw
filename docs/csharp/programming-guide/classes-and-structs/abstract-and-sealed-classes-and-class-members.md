@@ -1,5 +1,6 @@
 ---
 title: 抽象和密封類別以及類別成員 - C# 程式設計手冊
+description: 'C # 中的 abstract 關鍵字會建立不完整的類別和類別成員。 Sealed 關鍵字會防止繼承先前的虛擬類別或類別成員。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract classes [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 07738031f1dec05424f7c3756f49a8f1f9a2c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 391a8ccbb1fbe6626d1cd5a4b6fcfd9ace3506e6
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715000"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474484"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象和密封類別以及類別成員 (C# 程式設計手冊)
 [abstract](../../language-reference/keywords/abstract.md) 關鍵字可讓您建立類別和[類別](../../language-reference/keywords/class.md)成員，這些類別和成員並不完整，因此必須在衍生類別中實作。  
@@ -49,9 +50,9 @@ ms.locfileid: "75715000"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [類別和結構](./index.md)
 - [繼承](./inheritance.md)
 - [方法](./methods.md)
-- [領域](./fields.md)
+- [欄位](./fields.md)
 - [如何定義抽象屬性](./how-to-define-abstract-properties.md)

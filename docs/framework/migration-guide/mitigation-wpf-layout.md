@@ -1,13 +1,14 @@
 ---
 title: 風險降低：WPF 版面配置
+description: 瞭解如何減輕 WPF 控制項配置變更所造成的問題，例如將物件移動到一個圖元的位置。
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4e4612f7b39eefbf0e76ac86c8eb644c257ba75
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457777"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475342"
 ---
 # <a name="mitigation-wpf-layout"></a>風險降低：WPF 版面配置
 WPF 控制項的版面配置可能略有不同。  

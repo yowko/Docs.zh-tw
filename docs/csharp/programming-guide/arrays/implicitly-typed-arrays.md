@@ -1,17 +1,18 @@
 ---
 title: 隱含類型陣列 - C# 程式設計手冊
+description: 'C # 中的隱含型別陣列型別是從陣列初始化運算式中的元素推斷而來。 在查詢運算式中使用隱含類型陣列。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], implicitly-typed
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 943760af30422cd333fdff65cdf678108c9d9564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f14f68207dfb79c92eaa01ac2a8ffaa08facc03
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705713"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474705"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>隱含類型陣列 (C# 程式設計手冊)
 
@@ -33,10 +34,10 @@ ms.locfileid: "75705713"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [隱含型別區域變數](../classes-and-structs/implicitly-typed-local-variables.md)
-- [陣 列](./index.md)
-- [匿名型別](../classes-and-structs/anonymous-types.md)
+- [C # 程式設計指南](../index.md)
+- [隱含類型區域變數](../classes-and-structs/implicitly-typed-local-variables.md)
+- [陣列](./index.md)
+- [匿名類型](../classes-and-structs/anonymous-types.md)
 - [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
-- [無 功](../../language-reference/keywords/var.md)
+- [var](../../language-reference/keywords/var.md)
 - [C# 中的 LINQ](../../linq/index.md)

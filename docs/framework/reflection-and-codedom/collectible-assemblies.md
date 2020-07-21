@@ -1,17 +1,17 @@
 ---
 title: 動態類型產生的可回收組件
-description: ''
+description: 在 .NET 中開始使用動態類型產生的可回收元件。 瞭解可回收元件的存留期和限制。
 ms.date: 08/29/2017
 helpviewer_keywords:
 - reflection, dynamic assembly
 - assemblies, collectible
 - collectible assemblies, retrieving
-ms.openlocfilehash: 02c7048e0321282463aa3558287d1d13c5e4f8d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4981b93dbd49a6da96740bebed0f2ed7b89036c8
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180537"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475121"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>動態類型產生的可回收組件
 
@@ -61,7 +61,7 @@ ms.locfileid: "79180537"
 
 - **COM Interop**無法在可回收元件內定義 COM 介面，而且可將可回收元件內的類型實例轉換成 COM 物件。 可回收組件中的類型不能作為 COM 可呼叫包裝函式 (CCW) 或執行階段可呼叫包裝函式 (RCW)。 不過，可回收組件中的類型可以使用可實作 COM 介面的物件。
 
-- **平台叫用**具有<xref:System.Runtime.InteropServices.DllImportAttribute>屬性的方法在可回收元件中宣告時，將不會編譯。 <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> 指令不能用於可回收組件中的類型實作，而且無法將此等類型封送處理至非受控碼。 不過，您可以使用非可回收組件中所宣告的進入點來呼叫原生程式碼。
+- **平台叫用**具有屬性的方法在 <xref:System.Runtime.InteropServices.DllImportAttribute> 可回收元件中宣告時，將不會編譯。 <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> 指令不能用於可回收組件中的類型實作，而且無法將此等類型封送處理至非受控碼。 不過，您可以使用非可回收組件中所宣告的進入點來呼叫原生程式碼。
 
 - **封送處理**無法封送處理可回收元件中所定義的物件（特別是委派）。 這是所有暫時發出型別的限制。
 

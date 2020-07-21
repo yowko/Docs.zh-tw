@@ -1,5 +1,6 @@
 ---
 title: 發出動態方法和組件
+description: 使用 System.object 發出動態方法和元件，此命名空間可讓編譯器或工具在執行時間發出中繼資料和 MSIL 程式碼。
 ms.date: 08/30/2017
 helpviewer_keywords:
 - reflection emit
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76d2a83943d9df06cc66cf86c6869f18fac2a12c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180533"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475043"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>發出動態方法和組件
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: f216534140b6e207ac110bb54b3e4f93a8ac6b70
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811686"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474016"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>依分類列出的 C# 編譯器選項
 
@@ -28,7 +28,7 @@ ms.locfileid: "84811686"
 
 |選項|目的|
 |------------|-------------|
-|[-deterministic](deterministic-compiler-option.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
+|[-具決定性](deterministic-compiler-option.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
 |[-doc](doc-compiler-option.md)|指定要寫入已處理文件註解的 XML 檔案。|
 |[-out](out-compiler-option.md)|指定輸出檔。|
 |[-pathmap](pathmap-compiler-option.md)|指定編譯器所輸出來源路徑名稱的對應。|
@@ -37,7 +37,7 @@ ms.locfileid: "84811686"
 |[-preferreduilang](preferreduilang-compiler-option.md)|指定編譯器輸出的語言。|
 |[-refout](refout-compiler-option.md)|除了主要組件，再另外產生參考組件。|
 |[-refonly](refonly-compiler-option.md)|產生參考組件，而非主要組件。|
-|[-target](target-compiler-option.md)|使用下列五個選項的其中一個來指定輸出檔案的格式： [-target： appcontainerexe](target-appcontainerexe-compiler-option.md)、 [-target： exe](target-exe-compiler-option.md)、 [-target： library](target-library-compiler-option.md)、 [-target： module](target-module-compiler-option.md)、 [-target： winexe](target-winexe-compiler-option.md)或[-target： winmdobj](target-winmdobj-compiler-option.md)。|
+|[-目標](target-compiler-option.md)|使用下列其中一個選項來指定輸出檔的格式： [-target： appcontainerexe](target-appcontainerexe-compiler-option.md)、 [-target： exe](target-exe-compiler-option.md)、 [-target： library](target-library-compiler-option.md)、 [-target： module](target-module-compiler-option.md)、 [-target： winexe](target-winexe-compiler-option.md)或[-target： winmdobj](target-winmdobj-compiler-option.md)。|
 |modulename\<string>|指定來源模組的名稱|
 
 ## <a name="net-framework-assemblies"></a>.NET Framework 組件
@@ -62,7 +62,7 @@ ms.locfileid: "84811686"
 |選項|目的|
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|建立檔案，其中包含可簡化錯誤回報的資訊。|
-|[-checked](checked-compiler-option.md)|指定超出資料類型範圍的整數算術，是否會導致在執行階段發生例外狀況。|
+|[-已核取](checked-compiler-option.md)|指定超出資料類型範圍的整數算術，是否會導致在執行階段發生例外狀況。|
 |[-debug](debug-compiler-option.md)|指示編譯器發出偵錯資訊。|
 |[-errorreport](errorreport-compiler-option.md)|設定錯誤報告行為。|
 |[-fullpaths](fullpaths-compiler-option.md)|在編譯器輸出中指定檔案的絕對路徑。|
@@ -95,7 +95,7 @@ ms.locfileid: "84811686"
 |[@](response-file-compiler-option.md)|指定回應檔。|
 |[-?](help-compiler-option.md)|將編譯器選項列出至 stdout。|
 |[-baseaddress](baseaddress-compiler-option.md)|指定載入 DLL 時慣用的基底位址。|
-|[-codepage](codepage-compiler-option.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|
+|[-字碼頁](codepage-compiler-option.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|
 |[-help](help-compiler-option.md)|將編譯器選項列出至 stdout。|
 |[-highentropyva](highentropyva-compiler-option.md)|指定可執行檔支援位址空間配置隨機載入 (ASLR)。|
 |[-langversion](langversion-compiler-option.md)|指定語言版本：Default、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或 Latest |

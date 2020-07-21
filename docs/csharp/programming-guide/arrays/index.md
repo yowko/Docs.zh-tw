@@ -1,20 +1,21 @@
 ---
 title: 陣列 - C# 程式設計手冊
+description: '在 c # 中，將相同類型的多個變數儲存在陣列資料結構中。 藉由指定類型或指定物件來儲存任何類型，以宣告陣列。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: bbabc84c144e5b3415c19f346b890782e251662c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715060"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474731"
 ---
 # <a name="arrays-c-programming-guide"></a>陣列 (C# 程式設計手冊)
 
-您可以在陣列資料結構中儲存相同類型的多個變數。 您可以指定陣列元素的類型來宣告陣列。 如果希望陣列存儲任何類型的元素，則可以指定`object`為其類型。 在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object>。
+您可以在陣列資料結構中儲存相同類型的多個變數。 您可以指定陣列元素的類型來宣告陣列。 如果您想要讓陣列儲存任何類型的專案，您可以將指定 `object` 為其類型。 在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object>。
 
 ```csharp
 type[] arrayName;
@@ -26,7 +27,7 @@ type[] arrayName;
 
 [!code-csharp[csProgGuideArrays#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#1)]
 
-## <a name="array-overview"></a>陣列概述
+## <a name="array-overview"></a>陣列總覽
 
 陣列具有下列屬性︰
 
@@ -50,5 +51,5 @@ type[] arrayName;
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [集合](../concepts/collections.md)

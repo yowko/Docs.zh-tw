@@ -1,5 +1,6 @@
 ---
 title: C# 程式設計手冊
+description: '使用這些資源以取得 c # 的重要 c # 語言功能和功能的詳細資訊，可透過 .NET 來存取。'
 ms.date: 05/02/2017
 f1_keywords:
 - cs.langref
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241652"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473873"
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 
@@ -62,7 +63,7 @@ ms.locfileid: "84241652"
   
  [命名空間](./namespaces/index.md)  
   
- [不安全的程式碼和指標](./unsafe-code-pointers/index.md)  
+ [Unsafe 程式碼和指標](./unsafe-code-pointers/index.md)  
   
  [XML 檔批註](./xmldoc/index.md)  
   

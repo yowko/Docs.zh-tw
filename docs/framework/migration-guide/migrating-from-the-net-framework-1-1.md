@@ -1,26 +1,27 @@
 ---
 title: 從 .NET Framework 1.1 移轉
+description: 瞭解在 Windows 7 或更新版本上執行使用 .NET Framework 1.1 編譯之應用程式所需的步驟。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974974"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475264"
 ---
-# <a name="migrate-from-the-net-framework-11"></a>從 .NET 框架 1.1 遷移
+# <a name="migrate-from-the-net-framework-11"></a>從 .NET Framework 1.1 遷移
 
-Windows 7 和更高版本的 Windows 作業系統不支援 .NET 框架 1.1。 因此，針對 .NET 框架 1.1 的應用程式在 Windows 7 或更高版本的作業系統版本上未經修改就無法運行。 本主題討論運行針對 Windows 7 和更高版本的 Windows 作業系統的 .NET 框架 1.1 的應用程式所需的步驟。 有關 .NET 框架 1.1 和 Windows 8 的詳細資訊，請參閱[在 Windows 8 和更高版本中運行 .NET 框架 1.1 應用](../install/run-net-framework-1-1-apps.md)。
+Windows 7 和更新版本的 Windows 作業系統不支援 .NET Framework 1.1。 因此，以 .NET Framework 1.1 為目標的應用程式不需要在 Windows 7 或更新版本的作業系統版本上進行修改，就不會執行。 本主題討論在 Windows 7 和更新版本的 Windows 作業系統下執行以 .NET Framework 1.1 為目標的應用程式所需的步驟。 如需 .NET Framework 1.1 和 Windows 8 的詳細資訊，請參閱[在 Windows 8 和更新版本上執行 .NET Framework 1.1 應用程式](../install/run-net-framework-1-1-apps.md)。
 
-## <a name="retarget-or-recompile"></a>重新置放或重新編譯
+## <a name="retarget-or-recompile"></a>重定目標或重新編譯
 
-有兩種方法可以使使用 .NET 框架 1.1 編譯的應用程式在 Windows 7 或更高版本的 Windows 作業系統上運行：
+有兩種方式可取得使用 .NET Framework 1.1 編譯的應用程式，以在 Windows 7 或更新版本的 Windows 作業系統上執行：
 
-- 將應用程式重新置放為在 .NET 框架 4 和更高版本下運行。 重新置放要求您向應用程式的設定檔中添加[\<受支援的 Runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md)元素，以允許它在 .NET 框架 4 和更高版本中運行。 這類組態檔的形式如下：
+- 將應用程式的目標重定為在 .NET Framework 4 和更新版本下執行。 重定會要求您將專案新增 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 至應用程式的設定檔，使其能夠在 .NET Framework 4 和更新版本下執行。 這類組態檔的形式如下：
 
     ```xml
     <configuration>
@@ -30,7 +31,7 @@ Windows 7 和更高版本的 Windows 作業系統不支援 .NET 框架 1.1。 �
     </configuration>
     ```
 
-- 使用以 .NET 框架 4 或更高版本為目標的編譯器重新編譯應用程式。 如果您原本使用 Visual Studio 2003 來開發及編譯解決方案，您可以在 Visual Studio 2010 (更新版本也可以) 中開啟此解決方案，並且使用 [專案相容性]**** 對話方塊來將此解決方案和專案檔從 Visual Studio 2003 使用的格式轉換成 Microsoft Build Engine (MSBuild) 格式。
+- 使用以 .NET Framework 4 或更新版本為目標的編譯器來重新編譯應用程式。 如果您原本使用 Visual Studio 2003 來開發及編譯解決方案，您可以在 Visual Studio 2010 (更新版本也可以) 中開啟此解決方案，並且使用 [專案相容性]**** 對話方塊來將此解決方案和專案檔從 Visual Studio 2003 使用的格式轉換成 Microsoft Build Engine (MSBuild) 格式。
 
 不論您偏好重新編譯應用程式還是重新設定應用程式的目標，您都必須決定您的應用程式是否會受到較新 .NET Framework 版本中引入的任何變更所影響。 這些變更有兩種：
 
@@ -42,7 +43,7 @@ Windows 7 和更高版本的 Windows 作業系統不支援 .NET 框架 1.1。 �
 
 ## <a name="breaking-changes"></a>重大變更
 
-當發生重大變更時，重新設定目標及重新編譯的應用程式可能會有替代解決辦法可用 (視特定變更而定)。 在某些情況下，您可以將子項目添加到應用程式的設定檔的[\<運行時>](../configure-apps/file-schema/startup/supportedruntime-element.md)元素以還原以前的行為。 例如，下列組態檔會還原 .NET Framework 1.1 中使用的字串排序和比較行為，而且可以搭配重新設定目標或重新編譯的應用程式使用。
+當發生重大變更時，重新設定目標及重新編譯的應用程式可能會有替代解決辦法可用 (視特定變更而定)。 在某些情況下，您可以將子專案新增至 [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 應用程式佈建檔的元素，以還原先前的行為。 例如，下列組態檔會還原 .NET Framework 1.1 中使用的字串排序和比較行為，而且可以搭配重新設定目標或重新編譯的應用程式使用。
 
 ```xml
 <configuration>

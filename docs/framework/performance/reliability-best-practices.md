@@ -1,5 +1,6 @@
 ---
 title: 可靠性最佳作法
+description: 請參閱 .NET 主機型伺服器應用程式（例如 SQL Server）中可靠性的最佳做法。 防止它們流失資源或關閉。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marking locks
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-ms.openlocfilehash: bd51ea1b79ac1dbd89a862f3961cc8508a87f301
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 134b71153f95dffd4525f307d291ce4389e0ce60
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715976"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474237"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 
@@ -239,7 +240,7 @@ HPA 只會影響裝載 Common Language Runtime 以及實作主機保護的 Unman
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要無限期地封鎖未受管理的程式碼
 
-因為 CLR 無法中止執行緒，所以使用 Unmanaged 程式碼進行封鎖可能會導致拒絕服務攻擊，而不是使用 Managed 程式碼進行封鎖。  已封鎖的執行緒會防止 CLR 卸載 <xref:System.AppDomain>，至少不執行一些非常不安全的作業。  使用 Windows 同步處理原始物件進行封鎖，是我們無法允許的一個明確範例。  如果可能的話，應該避免在對通訊端 `ReadFile` 的呼叫中進行封鎖，最好是在理想的情況下，Windows API 應該提供一種機制，讓這類作業的運作時間。
+因為 CLR 無法中止執行緒，所以使用 Unmanaged 程式碼進行封鎖可能會導致拒絕服務攻擊，而不是使用 Managed 程式碼進行封鎖。  已封鎖的執行緒會防止 CLR 卸載 <xref:System.AppDomain>，至少不執行一些非常不安全的作業。  使用 Windows 同步處理原始物件進行封鎖，是我們無法允許的一個明確範例。  `ReadFile`如果可能的話，應該避免在對通訊端的呼叫中封鎖，在理想的情況下，WINDOWS API 應該提供一種機制，讓這類作業的運作時間。
 
 在理想情況下，所有呼叫原生的方法都應該使用具有合理有限逾時的 Win32 呼叫。  如果允許使用者指定逾時，則在沒有某種特定安全性權限時，不應該允許使用者指定無限逾時。  準則是，如果方法將封鎖超過 ~10 秒，則需要使用支援逾時的版本，或需要額外的 CLR 支援。
 
@@ -275,7 +276,7 @@ Unmanaged 記憶體可能會流失，就像作業系統控制代碼一樣。 可
 
 #### <a name="code-analysis-rule"></a>程式碼分析規則
 
-檢閱所有使用 Managed 程式碼並擷取所有物件或擷取所有例外狀況的 catch 區塊。  在C#中，這表示 `catch` {} 和 `catch(Exception)` {}標記。  請考慮將例外狀況類型設為極為特別，或檢閱程式碼，確保它在擷取到非預期的例外狀況類型時不會以錯誤的方式操作。
+檢閱所有使用 Managed 程式碼並擷取所有物件或擷取所有例外狀況的 catch 區塊。  在 c # 中，這表示會同時標記 `catch` {} 和 `catch(Exception)` {} 。  請考慮將例外狀況類型設為極為特別，或檢閱程式碼，確保它在擷取到非預期的例外狀況類型時不會以錯誤的方式操作。
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假設受控執行緒是 Win32 執行緒–它是一個光纖
 
@@ -311,7 +312,7 @@ CER 是前面緊接 <xref:System.Runtime.CompilerServices.RuntimeHelpers.Prepare
 
 這麼做會指示 Just-In-Time 編譯器在執行 `try` 區塊之前準備 finally 區塊中的所有程式碼。 這保證會建置 finally 區塊中的程式碼，而且在所有情況下都會執行該程式碼。 CER 中通常不會有空的 `try` 區塊。 使用 CER 可防止非同步執行緒中止和記憶體不足例外狀況。 請參閱 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>，以了解可額外處理極深層程式碼堆疊溢位的 CER 形式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.ConstrainedExecution>
 - [SQL Server 程式設計和主機保護屬性](sql-server-programming-and-host-protection-attributes.md)

@@ -1,16 +1,17 @@
 ---
 title: .NET Framework 4 移轉問題
+description: 瞭解 .NET Framework 3.5 Service Pack 1 與 .NET Framework 4 之間的遷移問題，包括標準相容性和安全性的修正和變更。
 ms.date: 05/02/2017
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: 8e83859733f021afbe074a7b4818b155d74efdff
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: bbb9a3803986c922fd1ef04a87cd1e230fc3d623
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420457"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475277"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
@@ -24,19 +25,19 @@ ms.locfileid: "83420457"
 
 命名空間： <xref:System.Web> 、 <xref:System.Web.Mobile> 、 <xref:System.Web.Security> 、<xref:System.Web.UI.WebControls>
 
-元件： System.web （在 System.web .dll 中）
+元件： System.web （在 System.Web.dll 中）
 
 | 功能  | 3.5 SP1 的差異 | 建議變更 |
 | -------- | ------------------------ | ------------------- |
 | **瀏覽器定義檔** | 瀏覽器定義檔已更新成包含新增和已更新瀏覽器及裝置的資訊。 已移除 Netscape Navigator 這類較舊的瀏覽器和裝置，並已新增 Google Chrome 和 Apple iPhone 這類較新的瀏覽器和裝置。<br><br>如果您的應用程式包含繼承自其中一個已移除瀏覽器定義的自訂瀏覽器定義，則您會看到錯誤。<br><br><xref:System.Web.HttpBrowserCapabilities> 物件 (由頁面的 `Request.Browse` 屬性所公開) 是透過瀏覽器定義檔所驅動。 因此，ASP.NET 4 中存取此物件的屬性所傳回的資訊，可能會與舊版 ASP.NET 中所傳回的資訊不同。 | 如果您的應用程式依賴舊的瀏覽器定義檔，則可以從下列資料夾中複製它們：<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers*<br><br>將檔案複製到 ASP.NET 4 的對應 [設定* \\ \\ 瀏覽器*] 資料夾中。 在您複製檔案之後，請執行 [Aspnet_regbrowsers.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229858(v=vs.90)) 命令列工具。 如需詳細資訊，請參閱 [https://www.asp.net/mobile](/aspnet/mobile/overview) 網站。 |
 | **在混合 ASP.NET 版本下執行的子應用程式** | 因為發生組態或編譯錯誤，所以可能無法啟動設定為執行舊版 ASP.NET 之應用程式子系的 ASP.NET 4 應用程式。 發生的特定錯誤取決於應用程式是在 IIS 6.0 還是 IIS 7 或 IIS 7.5 下執行。 | 您可以變更受影響應用程式的組態檔，讓組態系統正確地辨識 ASP.NET 4 應用程式。 如需您必須進行之變更的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜ASP.NET 4 Child Applications Fail to Start When Under ASP.NET 2.0 or ASP.NET 3.5 Applications＞(在 ASP.NET 2.0 或 ASP.NET 3.5 應用程式下時，無法啟動 ASP.NET 4 子應用程式) 一節。 |
-| **ClientID 變更** | ASP.NET 4 中的新 `clientIDMode` 設定可讓您指定 ASP.NET 如何產生 HTML 項目的 `id` 屬性。 在舊版 ASP.NET 中，預設行為相當於 `clientIDMode` 的 `AutoID` 設定。 預設設定現在為 `Predictable`。 如需詳細資訊，請參閱 [ASP.NET 網頁伺服器控制項識別](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29)。 | 如果您使用 Visual Studio 從 ASP.NET 2.0 或 ASP.NET 3.5 升級您的應用程式，此工具會自動將設定新增至 web.config 檔案，以保留舊版 .NET Framework 的行為。 不過，如果您將 IIS 中的應用程式集區變更為以 .NET Framework 4 為目標來升級應用程式，ASP.NET 預設會使用新的模式。 若要停用新的用戶端識別碼模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages clientIDMode="AutoID" />` |
+| **ClientID 變更** | ASP.NET 4 中的新 `clientIDMode` 設定可讓您指定 ASP.NET 如何產生 HTML 項目的 `id` 屬性。 在舊版 ASP.NET 中，預設行為相當於 `clientIDMode` 的 `AutoID` 設定。 預設設定現在為 `Predictable`。 如需詳細資訊，請參閱 [ASP.NET 網頁伺服器控制項識別](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29)。 | 如果您使用 Visual Studio 從 ASP.NET 2.0 或 ASP.NET 3.5 升級您的應用程式，此工具會自動將設定新增至 Web.config 檔案，以保留舊版 .NET Framework 的行為。 不過，如果您將 IIS 中的應用程式集區變更為以 .NET Framework 4 為目標來升級應用程式，ASP.NET 預設會使用新的模式。 若要停用新的用戶端識別碼模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages clientIDMode="AutoID" />` |
 | **代碼啟用安全性（CAS）** | 已在 ASP.NET 3.5 中新增的 ASP.NET 2.0 NET 功能使用 .NET Framework 1.1 和 .NET Framework 2.0 程式碼存取安全性 (CAS) 模型。 不過，已大幅全面檢查 ASP.NET 4 中 CAS 的實作。 因此，如果部分信任 ASP.NET 應用程式依賴在全域組件快取中執行的受信任程式碼，則可能會因各種安全性例外狀況而失敗。 依賴對電腦 CAS 原則進行大量修改的部分信任應用程式可能也會失敗，並擲回安全性例外狀況。 | 在 `trust` 組態項目中使用新 `legacyCasModel` 屬性，即可將部分信任 ASP.NET 4 應用程式還原為 ASP.NET 1.1 和 2.0 的行為，如下列範例所示：<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>重要事項： 還原為舊版 CAS 模型可能代表安全性降低。<br><br>如需新 ASP.NET 4 程式碼存取安全性模型的詳細資訊，請參閱 [ASP.NET 4 應用程式中的程式碼存取安全性](https://docs.microsoft.com/previous-versions/dd984947(v=vs.100))。 |
-| **組態檔** | .NET Framework 和 ASP.NET 4 的根設定檔（machine.config 檔案和根 Web.config 檔案）已更新，以包含 ASP.NET 3.5 中應用程式 Web.config 檔案中找到的大部分已設定資訊。 因為受管理 IIS 7 和 IIS 7.5 組態系統的複雜度，所以在 ASP.NET 4 以及 IIS 7 和 IIS 7.5 下執行 ASP.NET 3.5 應用程式可能會導致 ASP.NET 錯誤或 IIS 錯誤。 | 使用 Visual Studio 中的專案升級工具，以將 ASP.NET 3.5 應用程式升級至 ASP.NET 4。 Visual Studio 2010 會自動修改 ASP.NET 3.5 應用程式的 Web.config 檔案，以包含 ASP.NET 4 的適當設定。<br><br>不過，您可以使用 .NET Framework 4 來執行 ASP.NET 3.5 應用程式，而不需要重新編譯。 在這種情況下，您可能必須先手動修改應用程式的 Web.config 檔案，然後才能在 .NET Framework 4 和 IIS 7 或 IIS 7.5 底下執行應用程式。 您必須進行的特定變更取決於正在使用的軟體組合，包含 Service Pack (SP) 版本。 如需受這項變更影響的可能軟體組合以及如何解決特定組合的問題的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜Configuration Errors Related to New ASP.NET 4 Root Configuration＞(與新 ASP.NET 4 根組態相關的組態錯誤) 一節。 |
+| **組態檔** | 適用于 .NET Framework 和 ASP.NET 4 的根設定檔（machine.config 檔案和根 Web.config 檔案）已更新，可包含在 ASP.NET 3.5 中的應用程式 Web.config 檔案中找到的大部分未定案設定資訊。 因為受管理 IIS 7 和 IIS 7.5 組態系統的複雜度，所以在 ASP.NET 4 以及 IIS 7 和 IIS 7.5 下執行 ASP.NET 3.5 應用程式可能會導致 ASP.NET 錯誤或 IIS 錯誤。 | 使用 Visual Studio 中的專案升級工具，以將 ASP.NET 3.5 應用程式升級至 ASP.NET 4。 Visual Studio 2010 會自動修改 ASP.NET 3.5 應用程式的 Web.config 檔案，以包含 ASP.NET 4 的適當設定。<br><br>不過，您可以使用 .NET Framework 4 來執行 ASP.NET 3.5 應用程式，而不需要重新編譯。 在這種情況下，您可能必須在執行 .NET Framework 4 和 IIS 7 或 IIS 7.5 之下的應用程式之前，手動修改應用程式的 Web.config 檔案。 您必須進行的特定變更取決於正在使用的軟體組合，包含 Service Pack (SP) 版本。 如需受這項變更影響的可能軟體組合以及如何解決特定組合的問題的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜Configuration Errors Related to New ASP.NET 4 Root Configuration＞(與新 ASP.NET 4 根組態相關的組態錯誤) 一節。 |
 | **控制項轉譯** | 在舊版 ASP.NET 中，某些控制項已發出您無法停用的標記。 根據預設，ASP.NET 4 中不再產生這種類型的標記。 轉譯變更會影響下列控制項：<br><br>\*`Image`和 `ImageButton` 控制項不再呈現 `border="0"` 屬性。<br>\*`BaseValidator`衍生自它的類別和驗證控制項，預設不會再轉譯紅色文字。<br>\*`HtmlForm`控制項不會呈現 `name` 屬性。<br>\*`Table`控制項不再呈現 `border="0"` 屬性。<br><br>如果未針對使用者輸入設計的控制項 (例如，`Label` 控制項) 的 `Enabled` 屬性設定為 `false` (或者，如果它們從容器控制項繼承此設定)，則它們不再轉譯 `disabled="disabled"` 屬性。 | 如果您使用 Visual Studio 從 ASP.NET 2.0 或 ASP.NET 3.5 升級應用程式，則工具會自動將設定新增至 Web.config 檔案，以保留舊版轉譯。 不過，如果您將 IIS 中的應用程式集區變更為以 .NET Framework 4 為目標來升級應用程式，ASP.NET 預設會使用新的轉譯模式。 若要停用新的轉譯模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
 | **預設文件中的事件處理常式** | 已要求具有與其對應之預設文件的無副檔名 URL 時，ASP.NET 4 會將 HTML `form` 項目的 `action` 屬性值轉譯為空字串。 在舊版 ASP.NET 中，`http://contoso.com` 要求會導致 Default.aspx 要求。 在該文件中，會轉譯開啟 `form` 標記，如下列範例所示：<br><br>`<form action="Default.aspx" />`<br><br>在 ASP.NET 4 中，`http://contoso.com` 要求也會導致 Default.aspx 要求，但 ASP.NET 現在會轉譯 HTML 開啟 `form` 標記，如下列範例所示：<br><br>`<form action="" />`<br><br>`action` 屬性是空字串時，IIS `DefaultDocumentModule` 物件會建立 Default.aspx 的子要求。 在大部分的情況下，應用程式碼可以辨識此子要求，Default.aspx 頁面則會正常執行。 不過，Managed 程式碼與 IIS 7 或 IIS 7.5 整合模式之間的可能互動可能會在子要求期間讓受管理 .aspx 頁面適當地停止運作。 如果發生下列狀況，預設 .aspx 文件的子要求將會導致錯誤或未預期的行為：<br><br>\*.Aspx 頁面會傳送至瀏覽器，並將 `form` 元素的 `action` 屬性設定為 ""。<br>\*表單會回傳給 ASP.NET。<br>\*Managed HTTP 模組會讀取實體主體的某個部分，例如 `Request.Form` 或 `Request.Params` 。 這會將 POST 要求的實體主體讀入受管理記憶體中。 因此，任何以 IIS 7 或 IIS 7.5 整合模式執行的機器碼模組都無法再使用實體主體。<br>\*IIS `DefaultDocumentModule` 物件最後會執行，並建立 default.aspx 檔的子要求。 不過，因為 Managed 程式碼的某個部分已經讀取實體主體，所以沒有實體主體可用來傳送至子要求。<br>\*當 HTTP 管線針對子要求執行時，.aspx 檔案的處理常式會在處理常式執行階段期間執行。<br><br>因為沒有實體主體，所以沒有表單變數和檢視狀態。 因此，沒有可用的 .aspx 頁面處理常式資訊，可用來判斷應該引發的事件 (如果有的話)。 因此，未執行受影響 .aspx 頁面的回傳事件處理常式。 | 如需這項變更所引發問題之解決方式的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜Event Handlers Might Not Be Not Raised in a Default Document in IIS 7 or IIS 7.5 Integrated Mode＞(在預設文件中可能未以 IIS 7 或 IIS 7.5 整合模式引發事件處理常式)。 |
 | **雜湊演算法** | ASP.NET 使用加密和雜湊演算法來協助保護資料，例如表單驗證 Cookie 和檢視狀態。 ASP.NET 4 預設會將 <xref:System.Security.Cryptography.HMACSHA256> 演算法用於對 Cookie 和檢視狀態的雜湊作業。 舊版 ASP.NET 使用較舊的 <xref:System.Security.Cryptography.HMACSHA1> 演算法。 | 如果您執行混合使用 ASP.NET 2.0 和 ASP.NET 4 的應用程式，其中，表單驗證 Cookie 這類資料必須跨 .NET Framework 版本作用，請在 Web.config 檔案中新增下列設定，以設定 ASP.NET 4 Web 應用程式使用較舊的 <xref:System.Security.Cryptography.HMACSHA1> 演算法：<br><br>`<machineKey validation="SHA1" />` |
-| **在 Internet Explorer 中裝載控制項** | 您無法再於 Internet Explorer 中裝載 Windows Form 控制項，因為在 Web 上裝載控制項有更好的方案。 因此，已從 .NET Framework 中移除 Iehost.dll .dll 和 Ieexec.exe 元件。 | 您可以使用下列技術，在 Web 應用程式進行自訂控制項開發：<br><br>\*您可以建立 Silverlight 應用程式，並將它設定為在瀏覽器外部執行。 如需詳細資訊，請參閱 [Out-of-Browser Support](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/dd550721%28v=vs.95%29) (瀏覽器外用支援)。<br>\*您可以建立 XAML 瀏覽器應用程式（XBAP），以利用 WPF 功能（需要用戶端電腦上的 .NET Framework）。 如需詳細資訊，請參閱[WPF XAML 瀏覽器應用程式總覽](../wpf/app-development/wpf-xaml-browser-applications-overview.md)。 |
+| **在 Internet Explorer 中裝載控制項** | 您無法再於 Internet Explorer 中裝載 Windows Form 控制項，因為在 Web 上裝載控制項有更好的方案。 因此，IEHost.dll 和 IEExec.exe 元件已從 .NET Framework 中移除。 | 您可以使用下列技術，在 Web 應用程式進行自訂控制項開發：<br><br>\*您可以建立 Silverlight 應用程式，並將它設定為在瀏覽器外部執行。 如需詳細資訊，請參閱 [Out-of-Browser Support](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/dd550721%28v=vs.95%29) (瀏覽器外用支援)。<br>\*您可以建立 XAML 瀏覽器應用程式（XBAP），以利用 WPF 功能（需要用戶端電腦上的 .NET Framework）。 如需詳細資訊，請參閱[WPF XAML 瀏覽器應用程式總覽](../wpf/app-development/wpf-xaml-browser-applications-overview.md)。 |
 | **HtmlEncode 和 UrlEncode 方法** | <xref:System.Web.HttpUtility> 和 <xref:System.Web.HttpServerUtility> 類別的 `HtmlEncode` 和 `UrlEncode` 方法已更新成編碼單引號字元 (')，如下所示：<br><br>\*方法會將 `HtmlEncode` 單引號的實例編碼為`&#39;`<br>\*方法會將 `UrlEncode` 單引號的實例編碼為`%27` | 檢查您的程式碼，找出使用 `HtmlEncode` 和 `UrlEncode` 方法的位置，並確定編碼變更不會導致影響應用程式的變更。 |
 | **ASP.NET 2.0 應用程式中的 HttpException 錯誤** | 在 IIS 6 上啟用 ASP.NET 4 之後，IIS 6 上執行的 ASP.NET 2.0 應用程式 (在 Windows Server 2003 或 Windows Server 2003 R2 中) 可能會產生下列這類錯誤：`System.Web.HttpException: Path '/[yourApplicationRoot]/eurl.axd/[Value]' was not found.` | * 如果不需要 ASP.NET 4 即可執行網站，請重新對應網站以改成使用 ASP.NET 2.0。<br><br>-或-<br><br>\*如果需要 ASP.NET 4 才能執行網站，請將任何子 ASP.NET 2.0 虛擬目錄移到另一個對應至 ASP.NET 2.0 的網站。<br><br>-或-<br><br>\*停用無副檔名 Url。 如需詳細資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜ASP.NET 2.0 Applications Might Generate HttpException Errors That Reference eurl.axd＞(ASP.NET 2.0 應用程式可以產生可參考 eurl.axd 的 HttpException 錯誤)。 |
 | **成員資格類型** | ASP.NET 成員資格中使用的某些類型 (例如，<xref:System.Web.Security.MembershipProvider>) 已從 System.Web.dll 移至 System.Web.ApplicationServices.dll 組件。 已移動類型，以解析用戶端和擴充 .NET Framework SKU 中類型之間的架構層相依性。 | 在 ASP.NET 4 專案中使用時，可能無法編譯已從舊版 ASP.NET 升級並使用已移動之成員資格類型的類別庫。 如果是這樣，請將類別庫專案中的參考新增至 System.Web.ApplicationServices.dll。 |
@@ -58,8 +59,8 @@ ms.locfileid: "83420457"
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **CardSpace** | Windows CardSpace 已不再包含在 .NET Framework 中;它是分開提供的。 | 請從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=199868)下載 Windows CardSpace。 |
-| **組態檔** | 已修正 .NET Framework 如何存取應用程式佈建檔。 | 如果您的應用程式佈建檔案名為*應用程式名稱 .config*，請將它重新命名為*application-name*。例如，將*myapp*重新命名為*myapp. .config*。 |
-| **C# 程式碼編譯器** | `Compiler` `CompilerError` `ErrorLevel` 命名空間中的、和類別 <xref:Microsoft.CSharp> 已無法再使用，而且其元件（cscompmgd）已不再包含在 .NET Framework 中。 | 在 <xref:System.CodeDom.Compiler> 命名空間中使用 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別和其他類別。 如需詳細資訊，請參閱[使用 CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y2k85ax6%28v=vs.100%29)。 |
+| **組態檔** | 已修正 .NET Framework 如何存取應用程式佈建檔。 | 如果您的應用程式佈建檔案名稱為*application-name.config*，請將它重新命名為*application-name.exe.config*。例如，將*MyApp.config*重新命名為*MyApp.exe.config*。 |
+| **C# 程式碼編譯器** | `Compiler` `CompilerError` `ErrorLevel` 命名空間中的、和類別 <xref:Microsoft.CSharp> 已無法再使用，而且其元件（cscompmgd.dll）不再包含在 .NET Framework 中。 | 在 <xref:System.CodeDom.Compiler> 命名空間中使用 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別和其他類別。 如需詳細資訊，請參閱[使用 CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y2k85ax6%28v=vs.100%29)。 |
 | **裝載** (Unmanaged API) | 為了改善裝載功能，有些裝載啟用 API 已遭取代。 同進程並存執行功能可讓應用程式在相同的進程中載入和啟動多個版本的 .NET Framework。 例如，您可以執行應用程式，載入以 .NET Framework 2.0 SP1 為基礎的增益集，以及在相同程式中以 .NET Framework 4 為基礎的增益集。 舊元件會繼續使用舊版 .NET Framework，新元件則會使用新版 .NET Framework。 | 使用[同處理序並存執行](../deployment/in-process-side-by-side-execution.md)中所述的組態。 |
 | **新的安全性模型** | 代碼啟用安全性（CAS）原則已關閉，並以簡化的模型取代，如[.NET Framework 4 中的安全性變更中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233103%28v=vs.100%29)所述。 | 如果您取決於應用程式中的 CAS，則可能需要修改。 如需詳細資訊，請參閱[程式碼存取安全性原則相容性和移轉](../misc/code-access-security-policy-compatibility-and-migration.md)。 |
 
@@ -126,7 +127,7 @@ ms.locfileid: "83420457"
 | ------- | ------------------------ | ------------------- |
 | **緩衝區長度** (Unmanaged API) | 為了節省記憶體，[ICorProfilerInfo2::GetStringLayout](../unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) 方法之 `pBufferLengthOffset` 參數的功能已變更成符合 `pStringLengthOffset` 參數。 這兩個參數現在會指向字串長度的位移位置。 已從字串類別呈現移除緩衝區長度。 | 移除緩衝區長度的任何相依性。 |
 | **JIT 偵錯** | 若要簡化 Just-In-Time (JIT) 偵錯的註冊，.NET Framework 偵錯工具現在只會使用 AeDebug 登錄機碼，以控制機器碼的 JIT 偵錯行為。 這項變更會導致下列各項：<br><br>\*您不能再為受控碼和機器碼註冊兩個不同的偵錯工具。<br>\*您不能再自動啟動偵錯工具的非互動式進程，但可以提示使用者提供互動式進程。<br>\*當偵錯工具無法啟動時，或沒有任何已註冊的偵錯工具應該啟動時，您就不會再收到通知。<br>\*不再支援相依于應用程式互動性的自動啟動原則。 | 依需要調整偵錯作業。 |
-| **平台叫用** | 為了改善與 Unmanaged 程式碼之互通性的效能，平台叫用中的不正確呼叫慣例現在會讓應用程式失敗。 在舊版本中，封送處理層會解析堆疊中的這些錯誤。 | 對 Microsoft Visual Studio 中的應用程式進行偵錯將會警告您發生這些錯誤，因此您可以更正它們。<br><br>如果您有無法更新的二進位檔，您可以在應用程式的設定檔中包含[ \< NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)元素，讓呼叫錯誤能夠在堆疊中解決，如同在舊版中所述。 不過，這可能會影響應用程式的效能。 |
+| **平台叫用** | 為了改善與 Unmanaged 程式碼之互通性的效能，平台叫用中的不正確呼叫慣例現在會讓應用程式失敗。 在舊版本中，封送處理層會解析堆疊中的這些錯誤。 | 對 Microsoft Visual Studio 中的應用程式進行偵錯將會警告您發生這些錯誤，因此您可以更正它們。<br><br>如果您有無法更新的二進位檔，您可以將 [\<NetFx40_PInvokeStackResilience>](../configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md) 元素包含在應用程式的設定檔中，讓呼叫錯誤能夠在堆疊中解析，如同在舊版中一樣。 不過，這可能會影響應用程式的效能。 |
 | **已移除介面** (Unmanaged API) | 為了避免開發人員混淆，已移除下列介面，因為它們未提供任何有用的執行階段案例，而且 CLR 未提供或接受任何實作：<br><br>\* **INativeImageINativeImageDependency**<br>\* **INativeImageInstallInfo**<br>\* **INativeImageEvaluate**<br>\* **INativeImageConverter**<br>\* **ICorModule**<br>\* **IMetaDataConverter** | 無。 |
 
 ## <a name="data"></a>資料
@@ -139,7 +140,7 @@ ms.locfileid: "83420457"
 
 命名空間： <xref:System.Data> 、 <xref:System.Data.Objects.DataClasses> 、<xref:System.Data.SqlClient>
 
-元件： System.web （在 system.string 中）、system.string （在 system.string 中）（在 system.string 中）
+元件： System.web （在 System.Data.dll 中）、system.string （在 System.Data.Entity.dll 中）
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
@@ -156,7 +157,7 @@ ms.locfileid: "83420457"
 
 命名空間： <xref:System.Data> 、 <xref:System.Data.Objects> 、<xref:System.Data.Objects.DataClasses>
 
-元件： System.object （在 system.string 中）。
+元件： System.web （在 System.Data.Entity.dll 中）
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
@@ -171,7 +172,7 @@ ms.locfileid: "83420457"
 
 命名空間<xref:System.Data.Linq>
 
-Assembly： System.object （在 system.string 中）。
+Assembly： System.object （在 System.Data.Linq.dll 中）
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
@@ -184,17 +185,17 @@ Assembly： System.object （在 system.string 中）。
 
 命名空間： <xref:System.Data.Services> 、 <xref:System.Data.Services.Client> 、 <xref:System.Data.Services.Common> 、<xref:System.Data.Services.Providers>
 
-元件： System.object （在 system.string 中）、system.string （在 system.string 中）。（在 System.web 中）。（在 system.string 中）
+元件： System.object （在 System.Data.Services.dll 中）、System.web （在 System.Data.Services.Client.dll 中）
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **批次二進位內容** | WCF Data Services 現在支援要求和回應中的批次二進位內容。 |
 | **變更攔截器** | 變更攔截器現在是針對刪除要求所執行。<br><br>變更攔截器是一種方法，會在每次伺服器收到修改實體集中實體的要求時執行。 它會在執行內送要求之前執行。 變更攔截器可存取所變更的實體以及對其執行的作業。 |
 | **例外狀況** | 下列情況現在會擲回更有用的例外狀況，而不是 <xref:System.NullReferenceException>：<br><br>\*<xref:System.ServiceProcess.TimeoutException>當資料服務的呼叫超時時。<br>\*<xref:System.Data.Services.Client.DataServiceRequestException>當對資料服務提出錯誤的要求時。<br><br>在應用程式中，您應該變更用來攔截新例外狀況的例外狀況處理。 |
-| **標題** | 已對標頭進行下列改善：<br><br>\*WCF Data Services 現在會正確地拒絕 `eTag` 具有未指定值的標頭。<br>\*WCF Data Services 現在會傳回錯誤，而且當要求中有標頭時，不會對連結執行刪除要求的要求 `if-*` 。<br>\*WCF Data Services 現在會以 Accept 標頭中的用戶端所指定的格式（Atom、JSON），將錯誤傳回給用戶端。 |
+| **標頭** | 已對標頭進行下列改善：<br><br>\*WCF Data Services 現在會正確地拒絕 `eTag` 具有未指定值的標頭。<br>\*WCF Data Services 現在會傳回錯誤，而且當要求中有標頭時，不會對連結執行刪除要求的要求 `if-*` 。<br>\*WCF Data Services 現在會以 Accept 標頭中的用戶端所指定的格式（Atom、JSON），將錯誤傳回給用戶端。 |
 | **JSON 讀取器** | 現在，JavaScript 物件標記法 (JSON) 讀取器在處理傳送至 WCF 資料服務的 JSON 承載時，會於讀取單一反斜線 ("\\") 逸出字元時正確地傳回錯誤。 |
 | **合併** | 已對 <xref:System.Data.Services.Client.MergeOption> 列舉進行下列改善：<br><br>\*[ <xref:System.Data.Services.Client.MergeOption> 合併] 選項不會再修改用戶端上的實體，因為任何後續的資料服務回應都會產生此情況。<br>\*在 <xref:System.Data.Services.Client.MergeOption> 動態 SQL 與預存程式的更新之間，此選項現在是一致的。 |
-| **Requests** | 現在，在處理資料服務的要求之前，會呼叫 <xref:System.Data.Services.DataService%601.OnStartProcessingRequest%2A> 方法。 這可讓 <xref:System.Data.Services.Providers.ServiceOperation> 服務的要求正常運作。 |
+| **要求** | 現在，在處理資料服務的要求之前，會呼叫 <xref:System.Data.Services.DataService%601.OnStartProcessingRequest%2A> 方法。 這可讓 <xref:System.Data.Services.Providers.ServiceOperation> 服務的要求正常運作。 |
 | **資料流** | WCF Data Services 不再關閉進行讀取和寫入作業的基礎資料流。 |
 | **URI** | 已修正 WCF Data Services 用戶端的 URI 逸出。 |
 
@@ -213,7 +214,7 @@ Assembly： System.object （在 system.string 中）。
 
 命名空間： <xref:System.Windows> 、<xref:System.Windows.Controls>
 
-元件： PresentationFramework （在 PresentationFramework 中）
+元件： PresentationFramework （在 PresentationFramework.dll 中）
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -229,7 +230,7 @@ Assembly： System.object （在 system.string 中）。
 
 命名空間： <xref:System.Windows> 、 <xref:System.Windows.Controls> 、 <xref:System.Windows.Data> 、<xref:System.Windows.Input>
 
-元件： PresentationFramework （在 PresentationFramework 中）、PresentationCore （在 PresentationCore 中）、WindowsBase （在 WindowsBase 中）
+元件： PresentationFramework （在 PresentationFramework.dll 中）、PresentationCore （在 PresentationCore.dll 中）、WindowsBase （在 WindowsBase.dll 中）
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -247,7 +248,7 @@ Assembly： System.object （在 system.string 中）。
 
 命名空間： <xref:System.Windows> 、 <xref:System.Windows.Controls> 、 <xref:System.Windows.Data> 、 <xref:System.Windows.Input> 、<xref:System.Windows.Media.Effects>
 
-元件： PresentationFramework （在 PresentationFramework 中）、PresentationCore （在 PresentationCore 中）、WindowsBase （在 WindowsBase 中）
+元件： PresentationFramework （在 PresentationFramework.dll 中）、PresentationCore （在 PresentationCore.dll 中）、WindowsBase （在 WindowsBase.dll 中）
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -259,7 +260,7 @@ Assembly： System.object （在 system.string 中）。
 
 命名空間： <xref:System.Windows> 、 <xref:System.Windows.Controls> 、 <xref:System.Windows.Data> 、<xref:System.Windows.Input>
 
-元件： PresentationFramework （在 PresentationFramework 中）、PresentationCore （在 PresentationCore 中）、WindowsBase （在 WindowsBase 中）
+元件： PresentationFramework （在 PresentationFramework.dll 中）、PresentationCore （在 PresentationCore.dll 中）、WindowsBase （在 WindowsBase.dll 中）
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -272,7 +273,7 @@ Assembly： System.object （在 system.string 中）。
 
 命名空間： <xref:System.Windows> 、 <xref:System.Windows.Automation.Peers> 、 <xref:System.Windows.Automation.Provider> 、 <xref:System.Windows.Controls> 、 <xref:System.Windows.Data> 、<xref:System.Windows.Input>
 
-元件： PresentationFramework （在 PresentationFramework 中）、PresentationCore （在 PresentationCore 中）、uiautomationprovider.dll （在 Uiautomationprovider.dll 中）、WindowsBase （在 WindowsBase 中）
+元件： PresentationFramework （在 PresentationFramework.dll 中）、PresentationCore （在 PresentationCore.dll 中）、Uiautomationprovider.dll （在 UIAutomationProvider.dll 中）、WindowsBase （在 WindowsBase.dll 中）
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -287,7 +288,7 @@ Assembly： System.object （在 system.string 中）。
 
 命名空間： <xref:System.Windows> 、 <xref:System.Windows.Controls> 、 <xref:System.Windows.Data> 、 <xref:System.Windows.Input> 、<xref:System.Windows.Markup>
 
-元件： PresentationFramework （在 PresentationFramework 中）、PresentationCore （在 PresentationCore 中）、WindowsBase （在 WindowsBase 中）
+元件： PresentationFramework （在 PresentationFramework.dll 中）、PresentationCore （在 PresentationCore.dll 中）、WindowsBase （在 WindowsBase.dll 中）
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -302,7 +303,7 @@ Assembly： System.object （在 system.string 中）。
 
 命名空間 <xref:System.Xml.Linq> ： <xref:System.Xml.Schema> 、、<xref:System.Xml.XPath>
 
-元件： system.string （在 system.string 中）、system.string （在 system.string 中）中（system.web）
+元件： System.Xml （在 System.Xml.dll 中），System.Xml。Linq （在 System.Xml.Linq.dll 中）
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
@@ -318,18 +319,18 @@ Assembly： System.object （在 system.string 中）。
 
 命名空間 <xref:System.Xml.Linq> ： <xref:System.Xml.Schema> 、、<xref:System.Xml.XPath>
 
-元件： system.string （在 system.string 中）、system.string （在 system.string 中）中（system.web）
+元件： System.Xml （在 System.Xml.dll 中），System.Xml。Linq （在 System.Xml.Linq.dll 中）
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **命名空間解析程式** | <xref:System.Xml.XmlReader.ReadContentAs%2A> 方法不再忽略傳遞給它的 <xref:System.Xml.IXmlNamespaceResolver> 解析程式。<br><br>在舊版本中，已忽略指定的命名空間解析程式，並改成使用 <xref:System.Xml.XmlReader>。 |
 | **空白字元** | 為了避免在建立讀取器時資料遺失，<xref:System.Xml.XmlReader.Create%2A> 方法不再捨棄明顯的空白字元。<br><br>XML 驗證會辨識混合內容模式，其中，文字可以與 XML 標記混合使用。 在混合模式中，所有空白字元都是重要且應予以回報的。 |
 
-### <a name="writing"></a>撰寫
+### <a name="writing"></a>寫入
 
 命名空間 <xref:System.Xml.Linq> ： <xref:System.Xml.Schema> 、、<xref:System.Xml.XPath>
 
-元件： system.string （在 system.string 中）、system.string （在 system.string 中）中（system.web）
+元件： System.Xml （在 System.Xml.dll 中），System.Xml。Linq （在 System.Xml.Linq.dll 中）
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |

@@ -1,16 +1,17 @@
 ---
 title: 搭配陣列使用 foreach - C# 程式設計手冊
+description: 'C # 中的 foreach 語句會逐一查看陣列的元素。 若為一維陣列，foreach 會以增加的索引連續處理元素。'
 ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: bb121b0f5d990ef6e596b34a45606e2abde6811a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d924a3ef3351cbb30b809a1542f35314ee721852
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705674"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474536"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>搭配陣列使用 foreach (C# 程式設計手冊)
 
@@ -29,8 +30,8 @@ ms.locfileid: "75705674"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Array>
-- [C# 程式設計指南](../index.md)
-- [陣 列](index.md)
+- [C # 程式設計指南](../index.md)
+- [陣列](index.md)
 - [一維陣列](single-dimensional-arrays.md)
 - [多維陣列](multidimensional-arrays.md)
-- [鋸齒狀陣列](jagged-arrays.md)
+- [不規則陣列](jagged-arrays.md)

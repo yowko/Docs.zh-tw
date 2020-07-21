@@ -1,16 +1,17 @@
 ---
 title: 方法 ETW 事件
+description: 請參閱 ETW 事件，以收集方法特定的資訊，例如 CLR 方法事件、CLR 方法標記或 CLR 方法詳細資料事件，以及 MethodJittingStarted。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f48867a0aef417ad0b19a15d78e0c0f01a7c30a1
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715988"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474315"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 
@@ -24,7 +25,7 @@ ms.locfileid: "75715988"
 
 下表說明關鍵字和層級。 如需詳細資訊，請參閱[CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)。
 
-|引發事件的關鍵字|Level|
+|引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 執行階段提供者|告知性 (4)|
 |`NGenKeyword` (0x20) 執行階段提供者|告知性 (4)|
@@ -33,7 +34,7 @@ ms.locfileid: "75715988"
 
 下表說明事件資訊：
 
-|Event|事件 ID|描述|
+|事件|事件識別碼|描述|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|在 Just-In-Time 載入 (JIT 載入) 方法或 NGEN 映像載入時引發。 動態和泛型的方法並不會使用這個版本的方法載入。 JIT Helper 永遠不會使用這個版本。|
 |`MethodUnLoad_V1`|137|在模組已卸載或應用程式定義域損毀時引發。 動態方法永遠不會使用這個版本的方法卸載。|
@@ -58,7 +59,7 @@ ms.locfileid: "75715988"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|Level|
+|引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) 取消提供者|告知性 (4)|
 |`JitRundownKeyword` (0x10) 取消提供者|告知性 (4)|
@@ -66,7 +67,7 @@ ms.locfileid: "75715988"
 
 下表說明事件資訊：
 
-|Event|事件 ID|描述|
+|事件|事件識別碼|描述|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|在啟動取消期間、列舉開始之前傳送。|
 |`DCStartComplete_V1`|145|在啟動取消期間、列舉結尾時傳送。|
@@ -83,7 +84,7 @@ ms.locfileid: "75715988"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|Level|
+|引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 執行階段提供者|詳細資訊 (5)|
 |`NGenKeyword` (0x20) 執行階段提供者|詳細資訊 (5)|
@@ -92,7 +93,7 @@ ms.locfileid: "75715988"
 
 下表說明事件資訊：
 
-|Event|事件 ID|描述|
+|事件|事件識別碼|描述|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|在 JIT 載入方法或 NGEN 映像載入時引發。 動態和泛型的方法一律會使用這個版本的方法載入。 JIT Helper 一律會使用這個版本。|
 |`MethodUnLoadVerbose_V1`|144|在動態方法損毀、模組已卸載或應用程式定義域損毀時引發。 動態方法永遠一律會使用這個版本的方法卸載。|
@@ -118,7 +119,7 @@ ms.locfileid: "75715988"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|Level|
+|引發事件的關鍵字|層級|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 執行階段提供者|詳細資訊 (5)|
 |`NGenKeyword` (0x20) 執行階段提供者|詳細資訊 (5)|
@@ -127,7 +128,7 @@ ms.locfileid: "75715988"
 
 下表說明事件資訊：
 
-|Event|事件 ID|描述|
+|事件|事件識別碼|描述|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|當某個方法正在進行 JIT 編譯時引發。|
 
@@ -144,6 +145,6 @@ ms.locfileid: "75715988"
 |MethodSignature|win:UnicodeString|方法的簽章 (以逗號分隔的類型名稱清單)。|
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CLR ETW 事件](clr-etw-events.md)

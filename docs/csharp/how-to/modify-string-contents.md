@@ -1,14 +1,15 @@
 ---
 title: '如何修改字串內容-c # 指南'
+description: '請參閱數個方法的範例，以使用 c # 修改現有的字串內容，這會傳回新的字串物件。'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324161"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473964"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何在 C 中修改字串內容\#
 

@@ -1,16 +1,17 @@
 ---
 title: 載入器 ETW 事件
+description: 審查載入器 ETW 事件，其中包括應用程式域事件、CLR 載入器元件事件、模組事件、CLR 網域模組事件和模組範圍事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 0f8f96cf73882ef6556e5b9e64cf9adf389a2318
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180555"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474354"
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 9765d13191f862a2e92bb00aa66a92c3a64ac303
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eb3a591ba7b58e187eb03e65a3da6dfb47c9475c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446935"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473977"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>依字母順序列出 C# 編譯器選項
 
@@ -30,11 +30,11 @@ ms.locfileid: "84446935"
 |[-bugreport](bugreport-compiler-option.md)|建立「錯誤報告」檔案。 如果這個檔案與 -errorreport:prompt 或 -errorreport:send 搭配使用，就會與任何損毀資訊一併傳送。|
 |[-已核取](checked-compiler-option.md)|會導致編譯器產生溢位檢查。|
 |checksumalgorithm\<alg>|針對儲存在 PDB 中的來源檔案總和檢查碼，指定計算所用的演算法。  支援的值為： SHA256 （預設值）或 SHA1。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。 |
-|[-codepage](codepage-compiler-option.md)|指定開啟原始程式檔時所要使用的字碼頁。|
+|[-字碼頁](codepage-compiler-option.md)|指定開啟原始程式檔時所要使用的字碼頁。|
 |[-debug](debug-compiler-option.md)|發出偵錯資訊。|
 |[-define](define-compiler-option.md)|定義條件式編譯符號。|
 |[-delaysign](delaysign-compiler-option.md)|只使用強式名稱金鑰的公開部分來延遲簽署組件。|
-|[-deterministic](deterministic-compiler-option.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
+|[-具決定性](deterministic-compiler-option.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
 |[-doc](doc-compiler-option.md)|指定要產生的 XML 文件檔案。|
 |-embed|在 PDB 中內嵌所有來源檔案。|
 |內嵌\<file list>|在 PDB 中內嵌特定檔案。|
@@ -77,7 +77,7 @@ ms.locfileid: "84446935"
 |[-資源](resource-compiler-option.md)|嵌入指定的資源。|
 |ruleset\<file>|指定停用特定診斷的規則集檔案。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|指定可執行檔能夠使用的最低子系統版本。|
-|[-目標](target-compiler-option.md)|使用下列四個選項的其中一個來指定輸出檔的格式： [-target： appcontainerexe](target-appcontainerexe-compiler-option.md)、 [-target： exe](target-exe-compiler-option.md)、 [-target： library](target-library-compiler-option.md)、 [-target： module](target-module-compiler-option.md)、 [-target： winexe](target-winexe-compiler-option.md)、 [-target： winmdobj](target-winmdobj-compiler-option.md)。|
+|[-目標](target-compiler-option.md)|使用下列其中一個選項來指定輸出檔的格式： [-target： appcontainerexe](target-appcontainerexe-compiler-option.md)、 [-target： exe](target-exe-compiler-option.md)、 [-target： library](target-library-compiler-option.md)、 [-target： module](target-module-compiler-option.md)、 [-target： winexe](target-winexe-compiler-option.md)、 [-target： winmdobj](target-winmdobj-compiler-option.md)。|
 |[-unsafe](unsafe-compiler-option.md)|允許 [unsafe](../keywords/unsafe.md) 程式碼。|
 |[-utf8output](utf8output-compiler-option.md)|在 UTF-8 編碼中輸出編譯器訊息。|
 |-version|顯示編譯器版本號碼並結束。|
@@ -87,7 +87,7 @@ ms.locfileid: "84446935"
 |[-win32manifest](win32manifest-compiler-option.md)|指定自訂 win32 資訊清單檔。|
 |[-win32res](win32res-compiler-option.md)|指定 win32 資源檔案 (.res)。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 編譯器選項](index.md)
 - [依分類列出的 C# 編譯器選項](listed-by-category.md)
