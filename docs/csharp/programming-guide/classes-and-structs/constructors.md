@@ -1,65 +1,66 @@
 ---
 title: 建構函式 - C# 程式設計手冊
+description: '建立類別或結構時，會呼叫 c # 中的函式。 使用函式來設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。'
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 8eedfaed111f01cc2ec55a2f42df66d4588bd42f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a731e648143f5e0ecf8860625962d8baa29fe26
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399788"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474900"
 ---
-# <a name="constructors-c-programming-guide"></a><span data-ttu-id="e121e-102">建構函式 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="e121e-102">Constructors (C# Programming Guide)</span></span>
+# <a name="constructors-c-programming-guide"></a><span data-ttu-id="e7976-104">建構函式 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="e7976-104">Constructors (C# Programming Guide)</span></span>
 
-<span data-ttu-id="e121e-103">每當建立[類別](../../language-reference/keywords/class.md)或[結構](../../language-reference/builtin-types/struct.md)時，都會呼叫其建構函式。</span><span class="sxs-lookup"><span data-stu-id="e121e-103">Whenever a [class](../../language-reference/keywords/class.md) or [struct](../../language-reference/builtin-types/struct.md) is created, its constructor is called.</span></span> <span data-ttu-id="e121e-104">類別或結構可有使用不同引數的多個建構函式。</span><span class="sxs-lookup"><span data-stu-id="e121e-104">A class or struct may have multiple constructors that take different arguments.</span></span> <span data-ttu-id="e121e-105">建構函式能讓程式設計師可以設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e121e-105">Constructors enable the programmer to set default values, limit instantiation, and write code that is flexible and easy to read.</span></span> <span data-ttu-id="e121e-106">如需詳細資訊和範例，請參閱[使用建構函式](./using-constructors.md)和[執行個體建構函式](./instance-constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="e121e-106">For more information and examples, see [Using Constructors](./using-constructors.md) and [Instance Constructors](./instance-constructors.md).</span></span>  
+<span data-ttu-id="e7976-105">每當建立[類別](../../language-reference/keywords/class.md)或[結構](../../language-reference/builtin-types/struct.md)時，都會呼叫其建構函式。</span><span class="sxs-lookup"><span data-stu-id="e7976-105">Whenever a [class](../../language-reference/keywords/class.md) or [struct](../../language-reference/builtin-types/struct.md) is created, its constructor is called.</span></span> <span data-ttu-id="e7976-106">類別或結構可有使用不同引數的多個建構函式。</span><span class="sxs-lookup"><span data-stu-id="e7976-106">A class or struct may have multiple constructors that take different arguments.</span></span> <span data-ttu-id="e7976-107">建構函式能讓程式設計師可以設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e7976-107">Constructors enable the programmer to set default values, limit instantiation, and write code that is flexible and easy to read.</span></span> <span data-ttu-id="e7976-108">如需詳細資訊和範例，請參閱[使用建構函式](./using-constructors.md)和[執行個體建構函式](./instance-constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="e7976-108">For more information and examples, see [Using Constructors](./using-constructors.md) and [Instance Constructors](./instance-constructors.md).</span></span>  
 
-## <a name="parameterless-constructors"></a><span data-ttu-id="e121e-107">無參數建構函式</span><span class="sxs-lookup"><span data-stu-id="e121e-107">Parameterless constructors</span></span>
+## <a name="parameterless-constructors"></a><span data-ttu-id="e7976-109">無參數建構函式</span><span class="sxs-lookup"><span data-stu-id="e7976-109">Parameterless constructors</span></span>
   
-<span data-ttu-id="e121e-108">如果不為類提供建構函式，C# 預設情況下會創建一個建構函式，該建構函式會具現化物件並將成員變數設置到[C# 類型文章的預設值](../../language-reference/builtin-types/default-values.md)中列出的預設值。</span><span class="sxs-lookup"><span data-stu-id="e121e-108">If you don't provide a constructor for your class, C# creates one by default that instantiates the object and sets member variables to the default values as listed in the [Default values of C# types](../../language-reference/builtin-types/default-values.md) article.</span></span> <span data-ttu-id="e121e-109">如果不為結構提供建構函式，C# 依賴于*隱式無參數建構函式*來自動將每個欄位初始化到其預設值。</span><span class="sxs-lookup"><span data-stu-id="e121e-109">If you don't provide a constructor for your struct, C# relies on an *implicit parameterless constructor* to automatically initialize each field to its default value.</span></span> <span data-ttu-id="e121e-110">有關詳細資訊和示例，請參閱[實例建構函式](instance-constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="e121e-110">For more information and examples, see [Instance constructors](instance-constructors.md).</span></span>  
+<span data-ttu-id="e7976-110">如果您未提供類別的函式，則 c # 預設會建立一個函式，以具現化物件，並將成員變數設定為預設值，如[c # 類型的預設值一](../../language-reference/builtin-types/default-values.md)文所列。</span><span class="sxs-lookup"><span data-stu-id="e7976-110">If you don't provide a constructor for your class, C# creates one by default that instantiates the object and sets member variables to the default values as listed in the [Default values of C# types](../../language-reference/builtin-types/default-values.md) article.</span></span> <span data-ttu-id="e7976-111">如果您未提供結構的函式，則 c # 會依賴*隱含的無參數的函數*，將每個欄位自動初始化為其預設值。</span><span class="sxs-lookup"><span data-stu-id="e7976-111">If you don't provide a constructor for your struct, C# relies on an *implicit parameterless constructor* to automatically initialize each field to its default value.</span></span> <span data-ttu-id="e7976-112">如需詳細資訊和範例，請參閱[實例構造](instance-constructors.md)函式。</span><span class="sxs-lookup"><span data-stu-id="e7976-112">For more information and examples, see [Instance constructors](instance-constructors.md).</span></span>  
 
-## <a name="constructor-syntax"></a><span data-ttu-id="e121e-111">建構函式語法</span><span class="sxs-lookup"><span data-stu-id="e121e-111">Constructor syntax</span></span>
+## <a name="constructor-syntax"></a><span data-ttu-id="e7976-113">建構函式語法</span><span class="sxs-lookup"><span data-stu-id="e7976-113">Constructor syntax</span></span>
 
-<span data-ttu-id="e121e-112">建構函式是名稱與其類型名稱相同的方法。</span><span class="sxs-lookup"><span data-stu-id="e121e-112">A constructor is a method whose name is the same as the name of its type.</span></span> <span data-ttu-id="e121e-113">其方法簽章只包含方法名稱及其參數清單，不包含傳回的類型。</span><span class="sxs-lookup"><span data-stu-id="e121e-113">Its method signature includes only the method name and its parameter list; it does not include a return type.</span></span> <span data-ttu-id="e121e-114">下例示範名為 `Person` 的類別建構函式。</span><span class="sxs-lookup"><span data-stu-id="e121e-114">The following example shows the constructor for a class named `Person`.</span></span>
+<span data-ttu-id="e7976-114">建構函式是名稱與其類型名稱相同的方法。</span><span class="sxs-lookup"><span data-stu-id="e7976-114">A constructor is a method whose name is the same as the name of its type.</span></span> <span data-ttu-id="e7976-115">其方法簽章只包含方法名稱及其參數清單，不包含傳回的類型。</span><span class="sxs-lookup"><span data-stu-id="e7976-115">Its method signature includes only the method name and its parameter list; it does not include a return type.</span></span> <span data-ttu-id="e7976-116">下例示範名為 `Person` 的類別建構函式。</span><span class="sxs-lookup"><span data-stu-id="e7976-116">The following example shows the constructor for a class named `Person`.</span></span>
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
 
-<span data-ttu-id="e121e-115">如果建構函式可以實作為單一陳述式，您就可以使用[運算式主體定義](../statements-expressions-operators/expression-bodied-members.md)。</span><span class="sxs-lookup"><span data-stu-id="e121e-115">If a constructor can be implemented as a single statement, you can use an [expression body definition](../statements-expressions-operators/expression-bodied-members.md).</span></span> <span data-ttu-id="e121e-116">下列範例定義 `Location` 類別，這個類別的建構函式包含名為 *name* 的單一字串參數。</span><span class="sxs-lookup"><span data-stu-id="e121e-116">The following example defines a `Location` class whose constructor has a single string parameter named *name*.</span></span> <span data-ttu-id="e121e-117">運算式主體定義會將引數指派給 `locationName` 欄位。</span><span class="sxs-lookup"><span data-stu-id="e121e-117">The expression body definition assigns the argument to the `locationName` field.</span></span>
+<span data-ttu-id="e7976-117">如果建構函式可以實作為單一陳述式，您就可以使用[運算式主體定義](../statements-expressions-operators/expression-bodied-members.md)。</span><span class="sxs-lookup"><span data-stu-id="e7976-117">If a constructor can be implemented as a single statement, you can use an [expression body definition](../statements-expressions-operators/expression-bodied-members.md).</span></span> <span data-ttu-id="e7976-118">下列範例定義 `Location` 類別，這個類別的建構函式包含名為 *name* 的單一字串參數。</span><span class="sxs-lookup"><span data-stu-id="e7976-118">The following example defines a `Location` class whose constructor has a single string parameter named *name*.</span></span> <span data-ttu-id="e7976-119">運算式主體定義會將引數指派給 `locationName` 欄位。</span><span class="sxs-lookup"><span data-stu-id="e7976-119">The expression body definition assigns the argument to the `locationName` field.</span></span>
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
-## <a name="static-constructors"></a><span data-ttu-id="e121e-118">靜態建構函式</span><span class="sxs-lookup"><span data-stu-id="e121e-118">Static constructors</span></span>
+## <a name="static-constructors"></a><span data-ttu-id="e7976-120">靜態建構函式</span><span class="sxs-lookup"><span data-stu-id="e7976-120">Static constructors</span></span>
 
-<span data-ttu-id="e121e-119">前例都已顯示建立新物件的執行個體建構函式。</span><span class="sxs-lookup"><span data-stu-id="e121e-119">The previous examples have all shown instance constructors, which create a new object.</span></span> <span data-ttu-id="e121e-120">類別或結構也可以有靜態建構函式，用來初始化類型的靜態成員。</span><span class="sxs-lookup"><span data-stu-id="e121e-120">A class or struct can also have a static constructor, which initializes static members of the type.</span></span>  <span data-ttu-id="e121e-121">靜態建構函式無參數。</span><span class="sxs-lookup"><span data-stu-id="e121e-121">Static constructors are parameterless.</span></span> <span data-ttu-id="e121e-122">如果不提供靜態建構函式來初始化靜態欄位，C# 編譯器會初始化靜態欄位到其預設值，如[C# 類型的預設值](../../language-reference/builtin-types/default-values.md)一文中列出的值。</span><span class="sxs-lookup"><span data-stu-id="e121e-122">If you don't provide a static constructor to initialize static fields, the C# compiler initializes static fields to their default value as listed in the [Default values of C# types](../../language-reference/builtin-types/default-values.md) article.</span></span>
+<span data-ttu-id="e7976-121">前例都已顯示建立新物件的執行個體建構函式。</span><span class="sxs-lookup"><span data-stu-id="e7976-121">The previous examples have all shown instance constructors, which create a new object.</span></span> <span data-ttu-id="e7976-122">類別或結構也可以有靜態建構函式，用來初始化類型的靜態成員。</span><span class="sxs-lookup"><span data-stu-id="e7976-122">A class or struct can also have a static constructor, which initializes static members of the type.</span></span>  <span data-ttu-id="e7976-123">靜態建構函式無參數。</span><span class="sxs-lookup"><span data-stu-id="e7976-123">Static constructors are parameterless.</span></span> <span data-ttu-id="e7976-124">如果您未提供靜態的函式來初始化靜態欄位，c # 編譯器會將靜態欄位初始化為其預設值，如[c # 類型的預設值一](../../language-reference/builtin-types/default-values.md)文所列。</span><span class="sxs-lookup"><span data-stu-id="e7976-124">If you don't provide a static constructor to initialize static fields, the C# compiler initializes static fields to their default value as listed in the [Default values of C# types](../../language-reference/builtin-types/default-values.md) article.</span></span>
 
-<span data-ttu-id="e121e-123">下列範例會使用靜態建構函式來初始化靜態欄位。</span><span class="sxs-lookup"><span data-stu-id="e121e-123">The following example uses a static constructor to initialize a static field.</span></span>
+<span data-ttu-id="e7976-125">下列範例會使用靜態建構函式來初始化靜態欄位。</span><span class="sxs-lookup"><span data-stu-id="e7976-125">The following example uses a static constructor to initialize a static field.</span></span>
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-<span data-ttu-id="e121e-124">您也可以使用運算式主體定義來定義靜態建構函式，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="e121e-124">You can also define a static constructor with an expression body definition, as the following example shows.</span></span>
+<span data-ttu-id="e7976-126">您也可以使用運算式主體定義來定義靜態建構函式，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="e7976-126">You can also define a static constructor with an expression body definition, as the following example shows.</span></span>
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
-<span data-ttu-id="e121e-125">如需詳細資訊及範例，請參閱[靜態建構函式](./static-constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="e121e-125">For more information and examples, see [Static Constructors](./static-constructors.md).</span></span>  
+<span data-ttu-id="e7976-127">如需詳細資訊及範例，請參閱[靜態建構函式](./static-constructors.md)。</span><span class="sxs-lookup"><span data-stu-id="e7976-127">For more information and examples, see [Static Constructors](./static-constructors.md).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e121e-126">本節內容</span><span class="sxs-lookup"><span data-stu-id="e121e-126">In This Section</span></span>  
- [<span data-ttu-id="e121e-127">使用建構函式</span><span class="sxs-lookup"><span data-stu-id="e121e-127">Using Constructors</span></span>](./using-constructors.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e7976-128">本節內容</span><span class="sxs-lookup"><span data-stu-id="e7976-128">In This Section</span></span>  
+ [<span data-ttu-id="e7976-129">使用建構函式</span><span class="sxs-lookup"><span data-stu-id="e7976-129">Using Constructors</span></span>](./using-constructors.md)  
   
- [<span data-ttu-id="e121e-128">實例建構函式</span><span class="sxs-lookup"><span data-stu-id="e121e-128">Instance Constructors</span></span>](./instance-constructors.md)  
+ [<span data-ttu-id="e7976-130">執行個體建構函式</span><span class="sxs-lookup"><span data-stu-id="e7976-130">Instance Constructors</span></span>](./instance-constructors.md)  
   
- [<span data-ttu-id="e121e-129">私用建構函式</span><span class="sxs-lookup"><span data-stu-id="e121e-129">Private Constructors</span></span>](./private-constructors.md)  
+ [<span data-ttu-id="e7976-131">私用建構函式</span><span class="sxs-lookup"><span data-stu-id="e7976-131">Private Constructors</span></span>](./private-constructors.md)  
   
- [<span data-ttu-id="e121e-130">靜態建構函式</span><span class="sxs-lookup"><span data-stu-id="e121e-130">Static Constructors</span></span>](./static-constructors.md)  
+ [<span data-ttu-id="e7976-132">靜態建構函式</span><span class="sxs-lookup"><span data-stu-id="e7976-132">Static Constructors</span></span>](./static-constructors.md)  
   
- [<span data-ttu-id="e121e-131">如何撰寫複製建構函式</span><span class="sxs-lookup"><span data-stu-id="e121e-131">How to write a copy constructor</span></span>](./how-to-write-a-copy-constructor.md)  
+ [<span data-ttu-id="e7976-133">如何撰寫複製建構函式</span><span class="sxs-lookup"><span data-stu-id="e7976-133">How to write a copy constructor</span></span>](./how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e121e-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e121e-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e7976-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7976-134">See also</span></span>
 
-- [<span data-ttu-id="e121e-133">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="e121e-133">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="e121e-134">類別和結構</span><span class="sxs-lookup"><span data-stu-id="e121e-134">Classes and Structs</span></span>](./index.md)
-- [<span data-ttu-id="e121e-135">完成項</span><span class="sxs-lookup"><span data-stu-id="e121e-135">Finalizers</span></span>](./destructors.md)
-- [<span data-ttu-id="e121e-136">靜態</span><span class="sxs-lookup"><span data-stu-id="e121e-136">static</span></span>](../../language-reference/keywords/static.md)
-- [<span data-ttu-id="e121e-137">為什麼初始化器作為建構函式以相反的順序運行？第一部分</span><span class="sxs-lookup"><span data-stu-id="e121e-137">Why Do Initializers Run In The Opposite Order As Constructors? Part One</span></span>](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [<span data-ttu-id="e7976-135">C # 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="e7976-135">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="e7976-136">類別和結構</span><span class="sxs-lookup"><span data-stu-id="e7976-136">Classes and Structs</span></span>](./index.md)
+- [<span data-ttu-id="e7976-137">完成項</span><span class="sxs-lookup"><span data-stu-id="e7976-137">Finalizers</span></span>](./destructors.md)
+- [<span data-ttu-id="e7976-138">static</span><span class="sxs-lookup"><span data-stu-id="e7976-138">static</span></span>](../../language-reference/keywords/static.md)
+- [<span data-ttu-id="e7976-139">為什麼初始化運算式是以相反的循序執行，做為構造函式？第一部</span><span class="sxs-lookup"><span data-stu-id="e7976-139">Why Do Initializers Run In The Opposite Order As Constructors? Part One</span></span>](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
