@@ -1,29 +1,30 @@
 ---
-title: 如何實現具有自動實現屬性的羽量級類 - C# 程式設計指南
+title: '如何使用自動執行的屬性來執行輕量類別-c # 程式設計手冊'
+description: '瞭解如何在 c # 中建立封裝自動實作為屬性的不可變輕量類別。 有兩種方法可以執行。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 6d121f6be768d41d22ea01d871662913b2daae2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de9034772bad1f28e27abe01595309dd84ddc3e7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170269"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864562"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="fa840-102">如何實現具有自動實現屬性的羽量級類（C# 程式設計指南）</span><span class="sxs-lookup"><span data-stu-id="fa840-102">How to implement a lightweight class with auto-implemented properties (C# Programming Guide)</span></span>
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a><span data-ttu-id="32e3f-104">如何使用自動執行的屬性來執行輕量類別（c # 程式設計手冊）</span><span class="sxs-lookup"><span data-stu-id="32e3f-104">How to implement a lightweight class with auto-implemented properties (C# Programming Guide)</span></span>
 
-<span data-ttu-id="fa840-103">這個範例顯示如何建立不可變的輕量型類別，只用來封裝一組自動實作屬性。</span><span class="sxs-lookup"><span data-stu-id="fa840-103">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="fa840-104">當您必須使用參考類型語意時，請使用這種建構，而不是結構。</span><span class="sxs-lookup"><span data-stu-id="fa840-104">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>
+<span data-ttu-id="32e3f-105">這個範例顯示如何建立不可變的輕量型類別，只用來封裝一組自動實作屬性。</span><span class="sxs-lookup"><span data-stu-id="32e3f-105">This example shows how to create an immutable lightweight class that serves only to encapsulate a set of auto-implemented properties.</span></span> <span data-ttu-id="32e3f-106">當您必須使用參考類型語意時，請使用這種建構，而不是結構。</span><span class="sxs-lookup"><span data-stu-id="32e3f-106">Use this kind of construct instead of a struct when you must use reference type semantics.</span></span>
 
-<span data-ttu-id="fa840-105">您可以使用兩種方式建立固定屬性：</span><span class="sxs-lookup"><span data-stu-id="fa840-105">You can make an immutable property in two ways:</span></span>
+<span data-ttu-id="32e3f-107">您可以使用兩種方式建立固定屬性：</span><span class="sxs-lookup"><span data-stu-id="32e3f-107">You can make an immutable property in two ways:</span></span>
 
-- <span data-ttu-id="fa840-106">您可以將 [set](../../language-reference/keywords/set.md) 存取子宣告為 [private](../../language-reference/keywords/private.md)。</span><span class="sxs-lookup"><span data-stu-id="fa840-106">You can declare the [set](../../language-reference/keywords/set.md) accessor to be [private](../../language-reference/keywords/private.md).</span></span>  <span data-ttu-id="fa840-107">屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。</span><span class="sxs-lookup"><span data-stu-id="fa840-107">The property is only settable within the type, but it is immutable to consumers.</span></span>
+- <span data-ttu-id="32e3f-108">您可以將 [set](../../language-reference/keywords/set.md) 存取子宣告為 [private](../../language-reference/keywords/private.md)。</span><span class="sxs-lookup"><span data-stu-id="32e3f-108">You can declare the [set](../../language-reference/keywords/set.md) accessor to be [private](../../language-reference/keywords/private.md).</span></span>  <span data-ttu-id="32e3f-109">屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。</span><span class="sxs-lookup"><span data-stu-id="32e3f-109">The property is only settable within the type, but it is immutable to consumers.</span></span>
 
-  <span data-ttu-id="fa840-108">當您宣告私用 `set` 存取子時，則無法使用物件初始設定式來初始化屬性。</span><span class="sxs-lookup"><span data-stu-id="fa840-108">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="fa840-109">您必須使用建構函式或 Factory 方法。</span><span class="sxs-lookup"><span data-stu-id="fa840-109">You must use a constructor or a factory method.</span></span>
-- <span data-ttu-id="fa840-110">只能聲明[get](../../language-reference/keywords/get.md)訪問器，這使得屬性在任何地方不可變，但類型建構函式除外。</span><span class="sxs-lookup"><span data-stu-id="fa840-110">You can declare only the [get](../../language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type's constructor.</span></span>
+  <span data-ttu-id="32e3f-110">當您宣告私用 `set` 存取子時，則無法使用物件初始設定式來初始化屬性。</span><span class="sxs-lookup"><span data-stu-id="32e3f-110">When you declare a private `set` accessor, you cannot use an object initializer to initialize the property.</span></span> <span data-ttu-id="32e3f-111">您必須使用建構函式或 Factory 方法。</span><span class="sxs-lookup"><span data-stu-id="32e3f-111">You must use a constructor or a factory method.</span></span>
+- <span data-ttu-id="32e3f-112">您只能宣告[get](../../language-reference/keywords/get.md)存取子，讓屬性在類型的函式以外的地方變成不可變。</span><span class="sxs-lookup"><span data-stu-id="32e3f-112">You can declare only the [get](../../language-reference/keywords/get.md) accessor, which makes the property immutable everywhere except in the type's constructor.</span></span>
 
-<span data-ttu-id="fa840-111">下面的示例顯示只有獲取訪問器的屬性與具有 get 和私有集的屬性有何不同。</span><span class="sxs-lookup"><span data-stu-id="fa840-111">The following example shows how a property with only get accessor differs than one with get and private set.</span></span>
+<span data-ttu-id="32e3f-113">下列範例顯示只有 get 存取子的屬性與 get 和 private set 不同。</span><span class="sxs-lookup"><span data-stu-id="32e3f-113">The following example shows how a property with only get accessor differs than one with get and private set.</span></span>
 
 ```csharp
 class Contact
@@ -46,9 +47,9 @@ class Contact
 }
 ```
 
-## <a name="example"></a><span data-ttu-id="fa840-112">範例</span><span class="sxs-lookup"><span data-stu-id="fa840-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="32e3f-114">範例</span><span class="sxs-lookup"><span data-stu-id="32e3f-114">Example</span></span>
 
-<span data-ttu-id="fa840-113">下列範例顯示兩個方式來實作不可變的類別，該類別具有自動實作屬性。</span><span class="sxs-lookup"><span data-stu-id="fa840-113">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="fa840-114">每一種方法會宣告具有私用 `set` 的其中一個屬性，以及僅具有 `get` 的其中一個屬性。</span><span class="sxs-lookup"><span data-stu-id="fa840-114">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="fa840-115">第一個類別僅使用建構函式來初始化屬性，第二個類別使用會呼叫建構函式的靜態 Factory 方法。</span><span class="sxs-lookup"><span data-stu-id="fa840-115">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>
+<span data-ttu-id="32e3f-115">下列範例顯示兩個方式來實作不可變的類別，該類別具有自動實作屬性。</span><span class="sxs-lookup"><span data-stu-id="32e3f-115">The following example shows two ways to implement an immutable class that has auto-implemented properties.</span></span> <span data-ttu-id="32e3f-116">每一種方法會宣告具有私用 `set` 的其中一個屬性，以及僅具有 `get` 的其中一個屬性。</span><span class="sxs-lookup"><span data-stu-id="32e3f-116">Each way declares one of the properties with a private `set` and one of the properties with a `get` only.</span></span>  <span data-ttu-id="32e3f-117">第一個類別僅使用建構函式來初始化屬性，第二個類別使用會呼叫建構函式的靜態 Factory 方法。</span><span class="sxs-lookup"><span data-stu-id="32e3f-117">The first class uses a constructor only to initialize the properties, and the second class uses a static factory method that calls a constructor.</span></span>
 
 ```csharp
 // This class is immutable. After an object is created,
@@ -143,10 +144,10 @@ public class Program
 */
 ```
 
-<span data-ttu-id="fa840-116">編譯器會針對每個自動實作屬性建立支援欄位。</span><span class="sxs-lookup"><span data-stu-id="fa840-116">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="fa840-117">欄位不是可以直接從原始程式碼存取的。</span><span class="sxs-lookup"><span data-stu-id="fa840-117">The fields are not accessible directly from source code.</span></span>
+<span data-ttu-id="32e3f-118">編譯器會針對每個自動實作屬性建立支援欄位。</span><span class="sxs-lookup"><span data-stu-id="32e3f-118">The compiler creates backing fields for each auto-implemented property.</span></span> <span data-ttu-id="32e3f-119">欄位不是可以直接從原始程式碼存取的。</span><span class="sxs-lookup"><span data-stu-id="32e3f-119">The fields are not accessible directly from source code.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fa840-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fa840-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32e3f-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="32e3f-120">See also</span></span>
 
-- [<span data-ttu-id="fa840-119">屬性</span><span class="sxs-lookup"><span data-stu-id="fa840-119">Properties</span></span>](./properties.md)
-- [<span data-ttu-id="fa840-120">struct</span><span class="sxs-lookup"><span data-stu-id="fa840-120">struct</span></span>](../../language-reference/builtin-types/struct.md)
-- [<span data-ttu-id="fa840-121">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="fa840-121">Object and Collection Initializers</span></span>](./object-and-collection-initializers.md)
+- [<span data-ttu-id="32e3f-121">屬性</span><span class="sxs-lookup"><span data-stu-id="32e3f-121">Properties</span></span>](./properties.md)
+- [<span data-ttu-id="32e3f-122">結構</span><span class="sxs-lookup"><span data-stu-id="32e3f-122">struct</span></span>](../../language-reference/builtin-types/struct.md)
+- [<span data-ttu-id="32e3f-123">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="32e3f-123">Object and Collection Initializers</span></span>](./object-and-collection-initializers.md)
