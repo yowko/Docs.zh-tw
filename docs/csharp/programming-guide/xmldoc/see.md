@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 0f10feb0931c6d38c817fdecb925f68d439abb59
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 731e42a6d4d354b043a56dbe150bb03a693a9454
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287242"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863782"
 ---
 # <a name="see-c-programming-guide"></a>\<see>（C # 程式設計手冊）
 
@@ -33,7 +33,7 @@ ms.locfileid: "84287242"
 
 ## <a name="remarks"></a>備註
 
-`<see>`標記可讓您指定文字中的連結。 用 [\<seealso>](./seealso.md) 來指示文字應該放在 [另請參閱] 區段中。 使用 [cref 屬性](./cref-attribute.md)，建立程式碼項目之文件頁面的內部超連結。
+`<see>`標記可讓您指定文字中的連結。 用 [\<seealso>](./seealso.md) 來指示文字應該放在 [另請參閱] 區段中。 使用 [cref 屬性](./cref-attribute.md)，建立程式碼項目之文件頁面的內部超連結。 此外， ``href`` 是有效的屬性，可做為超連結。
 
 使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)進行編譯，以處理檔案的檔批註。
 

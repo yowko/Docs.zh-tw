@@ -1,23 +1,24 @@
 ---
 title: 巢狀類型 - C# 程式設計手冊
+description: '在類別、結構或介面中定義的類型，在 c # 中稱為巢狀型別。'
 ms.date: 02/08/2020
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 12e44ccc1254424c152a238c8390f133550fa54c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e1c6c1e8b22b5447d43915ab02984aa13146301
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626486"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864939"
 ---
 # <a name="nested-types-c-programming-guide"></a>巢狀類型 (C# 程式設計手冊)
 
-在[類](../../language-reference/keywords/class.md)、[結構](../../language-reference/builtin-types/struct.md)或[介面](../../language-reference/keywords/interface.md)中定義的類型稱為巢狀型別。 例如：
+在[類別](../../language-reference/keywords/class.md)、[結構](../../language-reference/builtin-types/struct.md)或[介面](../../language-reference/keywords/interface.md)中定義的型別稱為「嵌套型別」。 例如：
 
 [!code-csharp[DeclareNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedClass)]
 
-無論外部類型是類、介面還是結構，巢狀型別預設為[私有](../../language-reference/keywords/private.md)類型 。它們只能從包含類型訪問。 在上述範例中，外部類型無法存取 `Nested` 類別。
+不論外部類型是類別、介面或結構，巢狀型別都會預設為[私](../../language-reference/keywords/private.md)用;它們只能從其包含類型存取。 在上述範例中，外部類型無法存取 `Nested` 類別。
 
 您也可以指定[存取修飾詞](../../language-reference/keywords/access-modifiers.md)來定義巢狀型別的存取範圍，如下所示：
 
@@ -43,7 +44,7 @@ ms.locfileid: "77626486"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [類別和結構](./index.md)
 - [存取修飾詞](./access-modifiers.md)
 - [建構函式](./constructors.md)

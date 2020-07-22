@@ -1,5 +1,6 @@
 ---
-title: 如何：使用反映發出定義泛型方法
+title: 作法：使用反映發出定義泛型方法
+description: 定義具有反映發出的泛型方法。 其中一個範例會建立具有兩個型別參數的泛型方法。 第二個範例顯示如何發出方法主體。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - reflection emit, generic methods
 - generics [.NET Framework], dynamic types
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
-ms.openlocfilehash: d16f6728b01583fe3ffb8d892522f3892444c537
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b85fb480e5862daa3b2800f75392adbe92348f2
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130166"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865134"
 ---
-# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>如何：使用反映發出定義泛型方法
+# <a name="how-to-define-a-generic-method-with-reflection-emit"></a>作法：使用反映發出定義泛型方法
 
 第一個程序示範如何建立有兩個類型參數的簡單泛型方法，以及如何將類別條件約束、介面條件約束和特殊條件約束套用至類型參數。
 
@@ -167,4 +168,4 @@ ms.locfileid: "73130166"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [操作說明：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)
+- [作法：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)

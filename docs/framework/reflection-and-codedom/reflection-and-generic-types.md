@@ -1,5 +1,6 @@
 ---
 title: 反映和泛用類型
+description: 在 .NET 中開始使用反映和泛型型別。 與一般類型不同的是，泛型型別會與一組類型參數或類型引數相關聯。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-ms.openlocfilehash: 4894b5cc64dca431c8d05b638847dd6cb7017bde
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd0dda92dc4473e05c59072973076cbb06bcaa06
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180485"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865290"
 ---
 # <a name="reflection-and-generic-types"></a>反映和泛用類型
 從反映的的觀點來看，泛型類型與一般類型間的差異在於泛型類型具有與其相關聯的一組類型參數 (若其定義為泛型類型) 或類型引數 (若其為建構類型)。 泛型方法與一般方法的差異也如同上述。  
@@ -121,9 +122,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 
 ## <a name="related-topics"></a>相關主題  
   
-|Title|描述|  
+|標題|描述|  
 |-----------|-----------------|  
-|[如何：使用反映檢視和執行個體化泛型類型](how-to-examine-and-instantiate-generic-types-with-reflection.md)|示範如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的屬性及方法，來檢查泛型類型。|  
+|[作法：使用反映檢查和具現化泛型型別](how-to-examine-and-instantiate-generic-types-with-reflection.md)|示範如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的屬性及方法，來檢查泛型類型。|  
 |[泛型](../../standard/generics/index.md)|說明泛型功能，及在 .NET Framework 下如何加以支援。|  
-|[操作說明：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)|示範如何在動態組件中使用反映發出以產生泛型類型。|  
+|[作法：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)|示範如何在動態組件中使用反映發出以產生泛型類型。|  
 |[檢視類型資訊](viewing-type-information.md)|描述 <xref:System.Type> 類別，並提供程式碼範例以說明如何搭配不同的反映類別來使用 <xref:System.Type> ，以取得建構函式、方法、欄位、屬性與事件的相關資訊。|

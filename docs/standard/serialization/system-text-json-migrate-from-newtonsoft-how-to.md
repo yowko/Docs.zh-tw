@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83703589"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865329"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>如何從遷移 Newtonsoft.Json 至System.Text.Json
 
@@ -318,11 +318,27 @@ The JSON value could not be converted to System.String.
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-[使用 POCO 類別上的屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至集合，以註冊此自訂轉換器 <xref:System.Text.Json.JsonSerializerOptions.Converters> 。
+藉由[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)集合中，來註冊此自訂的轉換器 <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> 。
 
-如果您遵循此模式，請不要在遞迴呼叫或時傳入 options <xref:System.Text.Json.JsonSerializer.Serialize%2A> 物件 <xref:System.Text.Json.JsonSerializer.Deserialize%2A> 。 Options 物件包含 <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> 集合。 如果您將它傳遞給 `Serialize` 或 `Deserialize` ，自訂轉換器會呼叫自己的，使無限迴圈產生堆疊溢位例外狀況。 如果預設選項不可行，請使用您所需的設定來建立選項的新實例。 這個方法將會變慢，因為每個新的實例會獨立快取。
+這種遞迴呼叫轉換器的模式需要您使用註冊轉換器 <xref:System.Text.Json.JsonSerializerOptions> ，而不是使用屬性。 如果您使用屬性來註冊轉換器，則自訂轉換器會以遞迴方式呼叫本身。 結果是在堆疊溢位例外狀況中結束的無限迴圈。
 
-上述的轉換器程式碼是簡化的範例。 如果您需要處理屬性（例如[[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute)或不同的選項（例如自訂編碼器），則需要額外的邏輯。 此外，範例程式碼不會處理在此函式中設定預設值的屬性。 而這種方法不會區分下列案例：
+當您使用 options 物件來註冊轉換器時，請避免在以遞迴方式呼叫或時傳遞 options 物件，以避免無限迴圈 <xref:System.Text.Json.JsonSerializer.Serialize%2A> <xref:System.Text.Json.JsonSerializer.Deserialize%2A> 。 Options 物件包含 <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> 集合。 如果您將它傳遞給 `Serialize` 或 `Deserialize` ，自訂轉換器會呼叫自己的，使無限迴圈產生堆疊溢位例外狀況。 如果預設選項不可行，請使用您所需的設定來建立選項的新實例。 這個方法將會變慢，因為每個新的實例會獨立快取。
+
+有替代模式可以 `JsonConverterAttribute` 在要轉換的類別上使用註冊。 在此方法中，轉換器程式碼 `Serialize` `Deserialize` 會在衍生自類別的類別上呼叫或，以進行轉換。 衍生的類別沒有套用 `JsonConverterAttribute` 。 在下列替代方法的範例中：
+
+* `WeatherForecastWithRequiredPropertyConverterAttribute`這是要還原序列化的類別，並已套用 `JsonConverterAttribute` 至它。
+* `WeatherForecastWithoutRequiredPropertyConverterAttribute`是不具有轉換器屬性的衍生類別。
+* 轉換器中的程式碼會呼叫 `Serialize` 和， `Deserialize` `WeatherForecastWithoutRequiredPropertyConverterAttribute` 以避免無限迴圈。 因為額外的物件具現化和複製屬性值，所以這種序列化方法會產生效能成本。
+
+以下是 `WeatherForecast*` 類型：
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+
+以下是轉換器：
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+
+如果您需要處理屬性（例如[[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) ）或不同的選項（例如自訂編碼器），必要的屬性轉換器會需要額外的邏輯。 此外，範例程式碼不會處理在此函式中設定預設值的屬性。 而這種方法不會區分下列案例：
 
 * JSON 中遺漏了屬性。
 * JSON 中有不可為 null 類型的屬性，但值為類型的預設值，例如為零 `int` 。
@@ -391,7 +407,7 @@ The JSON value could not be converted to System.String.
 如果您使用遵循上述範例的自訂轉換器：
 
 * 程式 `OnDeserializing` 代碼沒有新 POCO 實例的存取權。 若要在還原序列化開始時操作新的 POCO 實例，請將該程式碼放在 POCO 函式中。
-* 當遞迴呼叫或時，請勿傳入 options `Serialize` 物件 `Deserialize` 。 Options 物件包含 `Converters` 集合。 如果您將它傳遞給 `Serialize` 或 `Deserialize` ，則會使用轉換器，並產生無限迴圈，導致堆疊溢位例外狀況。
+* 在 options 物件中註冊轉換器，而不在遞迴呼叫或時傳遞 options 物件，以避免無限迴圈 `Serialize` `Deserialize` 。 如需詳細資訊，請參閱本文稍早的[必要屬性](#required-properties)一節。
 
 ### <a name="public-and-non-public-fields"></a>公用和非公用欄位
 

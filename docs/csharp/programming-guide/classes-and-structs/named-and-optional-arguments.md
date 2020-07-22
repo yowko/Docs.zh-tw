@@ -1,5 +1,6 @@
 ---
 title: 具名和選擇性引數 - C# 程式設計手冊
+description: 'C # 中的具名引數會依名稱指定引數，而不是位置。 可以省略選擇性的引數。'
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 15b685248730c1f742035612a201d97d180bbc41
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46b9dc23644e68aea2767f2b990fe7f243a4f357
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399809"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864978"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」** 可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
@@ -50,7 +51,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參�
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- 任何順序順序命名的參數之後的位置參數都無效。
+ 遵循任何順序不正確的引數的位置引數無效。
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -112,7 +113,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參�
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 有關詳細資訊和示例，請參閱如何在[Office 程式設計中使用具名引數和可選參數](./how-to-use-named-and-optional-arguments-in-office-programming.md)以及如何[使用 C# 功能訪問 Office 交互操作物件](../interop/how-to-access-office-onterop-objects.md)。  
+ 如需詳細資訊和範例，請參閱[如何在 Office 程式設計中使用命名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何使用 c # 功能存取 Office interop 物件](../interop/how-to-access-office-onterop-objects.md)。  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  使用具名和選擇性引數會以下列方式影響多載解析︰  
@@ -129,6 +130,6 @@ C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參�
 ## <a name="see-also"></a>另請參閱
 
 - [如何在 Office 程式設計中使用具名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [使用動態型別](../types/using-type-dynamic.md)
+- [使用動態類型](../types/using-type-dynamic.md)
 - [使用建構函式](./using-constructors.md)
 - [使用索引子](../indexers/using-indexers.md)

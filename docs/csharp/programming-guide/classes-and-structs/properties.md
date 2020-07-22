@@ -1,5 +1,6 @@
 ---
 title: 屬性 - C# 程式設計手冊
+description: 'C # 中的屬性是一個成員，它會使用存取子方法來讀取、寫入或計算私用欄位的值，就像是公用資料成員一樣。'
 ms.date: 03/10/2017
 f1_keywords:
 - cs.properties
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ee530e981e0c85302b2b11cc739d6c51d6650ddd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231e8e6a11f2655ccdea5489f054910a1ecf2586
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170100"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863938"
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
@@ -65,9 +66,9 @@ ms.locfileid: "79170100"
   
 - [屬性與索引子之間的比較](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [限制存取子的存取範圍](./restricting-accessor-accessibility.md)  
+- [限制存取子協助工具](./restricting-accessor-accessibility.md)  
   
-- [自動實現屬性](./auto-implemented-properties.md)  
+- [自動實作的屬性](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
@@ -75,7 +76,7 @@ ms.locfileid: "79170100"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [使用屬性](./using-properties.md)
 - [索引子](../indexers/index.md)
 - [get 關鍵字](../../language-reference/keywords/get.md)

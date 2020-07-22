@@ -1,5 +1,6 @@
 ---
 title: 檢視類型資訊
+description: 使用 System.object 的檢視類型資訊，這是 .NET 中的反映的核心。 請參閱 ConstructorInfo、MemberInfo、MethodInfo、FieldInfo 和 PropertyInfo。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-ms.openlocfilehash: bf119ff547df59cd369d688fd81ab058893614f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd74021e1f1a79626e171db13def98e546cd51df
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130022"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865199"
 ---
 # <a name="viewing-type-information"></a>檢視類型資訊
 <xref:System.Type?displayProperty=nameWithType> 類別是反映的核心。 Common Language Runtime 會在反映提出要求時，建立載入類型的**類型**。 您可以使用**類型**物件的方法、欄位、屬性和巢狀類別，找出有關該類型的所有資訊。  
@@ -66,7 +67,7 @@ ms.locfileid: "73130022"
  [!code-csharp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source3.cs#3)]
  [!code-vb[Conceptual.Types.ViewInfo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source3.vb#3)]  
   
- 下列範例會使用所有的反映** \*資訊**類別和<xref:System.Reflection.BindingFlags>來列出所指定類別的所有成員（構造函式、欄位、屬性、事件和方法），並將成員分割成靜態和實例類別目錄。  
+ 下列範例會使用所有的反映** \* 資訊**類別和 <xref:System.Reflection.BindingFlags> 來列出所指定類別的所有成員（構造函式、欄位、屬性、事件和方法），並將成員分割成靜態和實例類別目錄。  
   
  [!code-cpp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source4.cpp#4)]
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]
@@ -88,4 +89,4 @@ ms.locfileid: "73130022"
 - <xref:System.Reflection.FieldInfo>
 - <xref:System.Reflection.EventInfo>
 - <xref:System.Reflection.ParameterInfo>
-- [反映和泛型型別](reflection-and-generic-types.md)
+- [反映和泛用類型](reflection-and-generic-types.md)

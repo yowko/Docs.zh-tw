@@ -1,5 +1,6 @@
 ---
-title: 如何：使用反映取得類型和成員資訊
+title: 作法：使用反映取得類型和成員資訊
+description: 瞭解如何使用 system.string 命名空間，透過反映取得類型和成員資訊。
 ms.date: 09/03/2019
 helpviewer_keywords:
 - reflection, obtaining member information
@@ -9,15 +10,15 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130208"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865316"
 ---
-# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>如何：使用反映取得類型和成員資訊
-<xref:System.Reflection>命名空間包含許多方法，可取得類型及其成員的相關資訊。 本文示範其中一種方法： <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>。 如需其他資訊，請參閱[反映總覽](reflection.md)。
+# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>作法：使用反映取得類型和成員資訊
+<xref:System.Reflection>命名空間包含許多方法，可取得類型及其成員的相關資訊。 本文示範其中一種方法： <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> 。 如需其他資訊，請參閱[反映總覽](reflection.md)。
   
 ## <a name="example"></a>範例
 

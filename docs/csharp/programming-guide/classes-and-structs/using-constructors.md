@@ -1,15 +1,16 @@
 ---
 title: 使用建構函式 - C# 程式設計手冊
+description: '這個範例會示範如何在 c # 中使用 new 運算子來具現化類別。 在配置給新物件的記憶體之後，就會叫用簡單的函式。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7c227b61c6d5b4ead00fced0dba046b90683fde1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b441b04bd6bfcb5564f40a90718e822f56ac21e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626408"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863951"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用建構函式 (C# 程式設計手冊)
 
@@ -21,7 +22,7 @@ ms.locfileid: "77626408"
   
  不接受任何參數的建構函式稱為「無參數建構函式」**。 每當使用 `new` 運算子來具現化物件，而且未提供引數給 `new` 時，便會叫用無參數建構函式。 如需詳細資訊，請參閱[執行個體建構函式](./instance-constructors.md)。  
   
- 除非類別是[靜態](../../language-reference/keywords/static.md)，否則沒有建構函式的類別會從 C# 編譯器取得一個公開無參數建構函式，以啟用類別具現化。 有關詳細資訊，請參閱[靜態類和靜態類成員](./static-classes-and-static-class-members.md)。  
+ 除非類別是[靜態](../../language-reference/keywords/static.md)，否則沒有建構函式的類別會從 C# 編譯器取得一個公開無參數建構函式，以啟用類別具現化。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)。  
   
  您可以將建構函式設為私用，避免具現化類別，如下所示：  
   
@@ -29,7 +30,7 @@ ms.locfileid: "77626408"
   
  如需詳細資訊，請參閱 [私用建構函式](./private-constructors.md)。  
   
- [結構](../../language-reference/builtin-types/struct.md)型別的建構函式與類別建構函式相似，但 `structs` 無法包含明確的無參數建構函式，因為編譯器會自動提供一個。 此建構函式初始化 到[預設值](../../language-reference/builtin-types/default-values.md)`struct`中的每個欄位。 但是，這個無參數建構函式只會在使用 `new` 具現化 `struct` 時叫用。 例如，此程式碼使用 <xref:System.Int32> 的無參數建構函式，因此您可以保證該整數已進行初始化：  
+ [結構](../../language-reference/builtin-types/struct.md)型別的建構函式與類別建構函式相似，但 `structs` 無法包含明確的無參數建構函式，因為編譯器會自動提供一個。 此函式會將中的每個欄位初始化 `struct` 為[預設值](../../language-reference/builtin-types/default-values.md)。 但是，這個無參數建構函式只會在使用 `new` 具現化 `struct` 時叫用。 例如，此程式碼使用 <xref:System.Int32> 的無參數建構函式，因此您可以保證該整數已進行初始化：  
   
 ```csharp  
 int i = new int();  
@@ -94,7 +95,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [類別和結構](./index.md)
 - [建構函式](./constructors.md)
 - [完成項](./destructors.md)

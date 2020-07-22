@@ -1,16 +1,17 @@
 ---
 title: 私用建構函式 - C# 程式設計手冊
+description: '私用函數是 c # 中的特殊實例函式，用來限制物件的建立方式。 它們可以與 factory 方法或其他結構慣用語搭配使用。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: 2f8b93fbeb7c2996f3e2683fe86f159fbfa61a92
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6b86ccb870da0262bcbc516e176e00d17724f9f
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705440"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864055"
 ---
 # <a name="private-constructors-c-programming-guide"></a>私用建構函式 (C# 程式設計手冊)
 私用建構函式是一種特殊的執行個體建構函式。 它通常會用於只包含靜態成員的類別。 如果類別具有一或多個私用建構函式，而且沒有任何公用建構函式，則其他類別 (巢狀類別除外) 無法建立此類別的執行個體。 例如：  
@@ -36,7 +37,7 @@ ms.locfileid: "75705440"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [類別和結構](./index.md)
 - [建構函式](./constructors.md)
 - [完成項](./destructors.md)

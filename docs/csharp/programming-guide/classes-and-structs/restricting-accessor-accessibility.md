@@ -1,5 +1,6 @@
 ---
 title: 限制存取子的存取範圍 - C# 程式設計手冊
+description: 'C # 中屬性的 get 和 set 存取子，預設具有相同的可見度或存取層級，如同它們所屬的屬性。 您可以限制存取。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - read-only properties [C#]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: a332fef814f0c81914eb7b8c308de68f719fbaac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18fd1d58dc6125b5180118b2e0d3edc885a4b971
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714685"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863964"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>限制存取子的存取範圍 (C# 程式設計手冊)
 屬性或索引子的 [get](../../language-reference/keywords/get.md) 和 [set](../../language-reference/keywords/set.md) 部分稱為「存取子」**。 根據預設，這些存取子具有其所屬屬性或索引子的相同可見度或存取層級。 如需詳細資訊，請參閱[存取範圍層級](../../language-reference/keywords/accessibility-levels.md)。 不過，限制其中一個存取子的存取權時，這有時十分有用。 一般而言，這包含限制 `set` 存取子的存取範圍，同時保留可公開存取的 `get` 存取子。 例如：  
@@ -65,7 +66,7 @@ ms.locfileid: "75714685"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [屬性](./properties.md)
 - [索引子](../indexers/index.md)
 - [存取修飾詞](./access-modifiers.md)

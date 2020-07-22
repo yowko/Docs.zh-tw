@@ -1,18 +1,19 @@
 ---
 title: 如何在 C# 中定義常數
+description: '瞭解如何在 c # 中定義常數，這是在編譯時期設定其值的欄位。 使用常數為特殊值提供有意義的名稱。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 15526655de8af6fed464376db1ac761468215210
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: afa2799cf76f976e332f91b631dc90e2799a0aa0
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75337663"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864640"
 ---
-# <a name="how-to-define-constants-in-c"></a>如何以 C 定義常量\#
+# <a name="how-to-define-constants-in-c"></a>如何在 C 中定義常數\#
 常數是欄位，其值於編譯時期設定且絕對不會變更。 使用常數提供有意義的名稱，而不是特殊值的數值常值 (「神奇號碼」)。  
   
 > [!NOTE]

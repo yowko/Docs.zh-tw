@@ -1,18 +1,19 @@
 ---
-title: 如何實現具有自動實現屬性的羽量級類 - C# 程式設計指南
+title: '如何使用自動執行的屬性來執行輕量類別-c # 程式設計手冊'
+description: '瞭解如何在 c # 中建立封裝自動實作為屬性的不可變輕量類別。 有兩種方法可以執行。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 6d121f6be768d41d22ea01d871662913b2daae2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de9034772bad1f28e27abe01595309dd84ddc3e7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170269"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864562"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何實現具有自動實現屬性的羽量級類（C# 程式設計指南）
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何使用自動執行的屬性來執行輕量類別（c # 程式設計手冊）
 
 這個範例顯示如何建立不可變的輕量型類別，只用來封裝一組自動實作屬性。 當您必須使用參考類型語意時，請使用這種建構，而不是結構。
 
@@ -21,9 +22,9 @@ ms.locfileid: "79170269"
 - 您可以將 [set](../../language-reference/keywords/set.md) 存取子宣告為 [private](../../language-reference/keywords/private.md)。  屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。
 
   當您宣告私用 `set` 存取子時，則無法使用物件初始設定式來初始化屬性。 您必須使用建構函式或 Factory 方法。
-- 只能聲明[get](../../language-reference/keywords/get.md)訪問器，這使得屬性在任何地方不可變，但類型建構函式除外。
+- 您只能宣告[get](../../language-reference/keywords/get.md)存取子，讓屬性在類型的函式以外的地方變成不可變。
 
-下面的示例顯示只有獲取訪問器的屬性與具有 get 和私有集的屬性有何不同。
+下列範例顯示只有 get 存取子的屬性與 get 和 private set 不同。
 
 ```csharp
 class Contact
@@ -148,5 +149,5 @@ public class Program
 ## <a name="see-also"></a>另請參閱
 
 - [屬性](./properties.md)
-- [struct](../../language-reference/builtin-types/struct.md)
+- [結構](../../language-reference/builtin-types/struct.md)
 - [物件和集合初始設定式](./object-and-collection-initializers.md)

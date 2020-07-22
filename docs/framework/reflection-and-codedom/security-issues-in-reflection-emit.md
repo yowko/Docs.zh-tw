@@ -1,5 +1,6 @@
 ---
 title: 反映發出中的安全性問題
+description: 瞭解反映發出中的安全性問題，這會透過動態元件或與現有元件連線或匿名裝載的動態方法來完成。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: d1b6994f7ee9efa9f6472deffb2f3d869606e182
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: d0ca26a1d0964c935137b0a30a5d7c78f93c597b
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644192"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865238"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 .NET Framework 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  

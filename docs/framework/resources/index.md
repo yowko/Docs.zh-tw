@@ -1,5 +1,6 @@
 ---
 title: .NET 應用程式中的資源
+description: 瞭解 .NET 應用程式中的資源。 資源是在邏輯上與應用程式一起部署的任何不必要資料。
 ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 0620cb16c3233f8ba2a665c9c4cb5f44bc5d5e84
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645673"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865160"
 ---
 # <a name="resources-in-net-apps"></a>.NET 應用程式中的資源
 
@@ -48,11 +49,11 @@ ms.locfileid: "81645673"
 
 - 如果未明確指派文化特性，則會從 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 屬性擷取預設執行緒 UI 文化特性。
 
-- 如果未明確指派預設執行緒 UI 文化特性 (透過在本機電腦上擷取目前使用者的文化特性)。 在 Windows 上執行的 .NET 執行時間是藉由[`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage)呼叫 windows 函式來進行。
+- 如果未明確指派預設執行緒 UI 文化特性 (透過在本機電腦上擷取目前使用者的文化特性)。 在 Windows 上執行的 .NET 執行時間是藉由呼叫 Windows 函式來進行 [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 。
 
 如需如何設定目前 UI 文化特性的詳細資訊，請參閱 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 參考頁面。
 
-然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取資源，<xref:System.Resources?displayProperty=nameWithType> 命名空間包含您可以用來擷取資源的額外類型。 其中包括：
+然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取資源，<xref:System.Resources?displayProperty=nameWithType> 命名空間包含您可以用來擷取資源的額外類型。 其中包含：
 
 - <xref:System.Resources.ResourceReader> 類別，可讓您列舉內嵌在組件中，或儲存在獨立二進位 .resources 檔中的資源。 當您不知道資源在執行階段可用的確切名稱時，這個項目很有用。
 

@@ -1,5 +1,6 @@
 ---
-title: 逐步解說：在部分信任案例中發出程式碼
+title: 逐步解說：在部分信任情節中發出程式碼
+description: 請參閱如何在部分信任案例中發出程式碼。 反映發出會使用相同的 Api，但某些功能在部分信任的程式碼中需要特殊許可權。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-ms.openlocfilehash: fd420c9754494b95c55df403edec87743572db03
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 70adb3ce67b45459b18741948092a912f6173731
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129985"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865186"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任案例中發出程式碼
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任情節中發出程式碼
 
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。
 
@@ -208,7 +209,7 @@ ms.locfileid: "73129985"
 
 - 執行 `AccessPrivateMethod` 方法的第一個多載，並略過 JIT 可見度檢查。 動態方法成功編譯並執行，因為發出程式碼的組件和包含私用方法的組件相同。 因此，信任層級是相等的。 如果包含 `Worker` 類別的應用程式曾有數個組件，則同樣的程序對這些組件任一個都會成功，因為它們位於相同的信任層級。
 
-- 執行 `AccessPrivateMethod` 方法的第二個多載，再次略過 JIT 可見度檢查。 這次在編譯時，動態方法會失敗，因為它會嘗試存取`internal` `FirstChar` <xref:System.String>類別的屬性。 包含 <xref:System.String> 類別的組件為完全信任。 因此，它的信任層級高於發出程式碼的組件。
+- 執行 `AccessPrivateMethod` 方法的第二個多載，再次略過 JIT 可見度檢查。 這次在編譯時，動態方法會失敗，因為它會嘗試存取 `internal` `FirstChar` 類別的屬性 <xref:System.String> 。 包含 <xref:System.String> 類別的組件為完全信任。 因此，它的信任層級高於發出程式碼的組件。
 
 這項比較會示範 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 如何啟用部分信任的程式碼，略跳過其他部分信任程式碼的可見度檢查，卻不危及信任程式碼的安全性。
 

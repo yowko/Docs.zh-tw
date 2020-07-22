@@ -1,5 +1,6 @@
 ---
 title: .NET 中的反映
+description: 在 .NET 中審核反映。 取得已載入元件和其中所定義類型的相關資訊，例如類別、介面、結構和列舉。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET], reflection
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 90d9cf4c473d73d1eeeb5f2a1098f8626c20359f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46c67595126af2c62b28d29983775943586a0b90
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180480"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865277"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反映
 
-<xref:System.Reflection>命名<xref:System.Type?displayProperty=nameWithType>空間中的類別連同，可讓您取得已載入[元件](../../standard/assembly/index.md)和其中所定義類型的相關資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和實數值型別（也就是[結構](../../standard/base-types/common-type-system.md#structures)和列舉） [ ](../../standard/base-types/common-type-system.md#enumerations)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
+命名空間中的 <xref:System.Reflection> 類別連同，可 <xref:System.Type?displayProperty=nameWithType> 讓您取得已載入[元件](../../standard/assembly/index.md)和其中所定義類型的相關資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和實數值型別（也就是[結構](../../standard/base-types/common-type-system.md#structures)和列舉） [ ](../../standard/base-types/common-type-system.md#enumerations)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
   
 [Common Language Runtime](../../standard/clr.md) 載入器會管理[應用程式定義域](../app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
   
@@ -71,16 +72,16 @@ ms.locfileid: "79180480"
 
 ## <a name="related-topics"></a>相關主題  
   
-|Title|描述|  
+|標題|描述|  
 |-----------|-----------------|  
 |[檢視類型資訊](viewing-type-information.md)|描述 <xref:System.Type> 類別，並提供程式碼範例說明如何搭配幾個反映類別來使用 <xref:System.Type>，以取得建構函式、方法、欄位、屬性和事件的相關資訊。|  
-|[反映和泛型型別](reflection-and-generic-types.md)|說明反映如何處理泛型類型和泛型方法的型別參數和型別引數。|  
+|[反映和泛用類型](reflection-and-generic-types.md)|說明反映如何處理泛型類型和泛型方法的型別參數和型別引數。|  
 |[反映的安全性考量](security-considerations-for-reflection.md)|描述判斷可使用哪種程度的反映之規則，以探索類型資訊和存取類型。|  
 |[動態載入和使用類型](dynamically-loading-and-using-types.md)|描述支援晚期繫結的反映自訂繫結介面。|  
-|[操作說明：將組件載入僅限反映的內容](how-to-load-assemblies-into-the-reflection-only-context.md)|描述僅限反映的載入內容。 示範如何載入組件、如何測試內容，以及如何檢查套用至僅限反映的內容中組件的屬性。|  
+|[作法：將組件載入僅限反映的內容](how-to-load-assemblies-into-the-reflection-only-context.md)|描述僅限反映的載入內容。 示範如何載入組件、如何測試內容，以及如何檢查套用至僅限反映的內容中組件的屬性。|  
 |[存取自訂屬性](accessing-custom-attributes.md)|示範如何使用反映來查詢屬性是否存在和屬性的值。|  
 |[指定完整的類型名稱](specifying-fully-qualified-type-names.md)|描述完整的類型名稱之格式，根據巴克斯格式 (BNF)，以及指定特殊字元、組件名稱、指標、參考和陣列所需的語法來描述。|  
-|[如何：使用反映連結委派](how-to-hook-up-a-delegate-using-reflection.md)|說明如何建立方法的委派，以及連結委派到事件。 說明如何在執行階段使用 <xref:System.Reflection.Emit.DynamicMethod> 建立事件處理方法。|  
+|[作法：使用反映連結委派](how-to-hook-up-a-delegate-using-reflection.md)|說明如何建立方法的委派，以及連結委派到事件。 說明如何在執行階段使用 <xref:System.Reflection.Emit.DynamicMethod> 建立事件處理方法。|  
 |[發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)|說明如何產生動態組件和動態方法。|  
   
 ## <a name="reference"></a>參考  

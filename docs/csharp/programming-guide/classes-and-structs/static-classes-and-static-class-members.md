@@ -1,5 +1,6 @@
 ---
 title: 靜態類別和靜態類別成員 - C# 程式設計手冊
+description: '靜態類別無法在 c # 中具現化。 您可以使用類別名稱本身來存取靜態類別的成員。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 71cbf8278b3a8092e93a8ae3d8be291540f16cc3
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 4f187d772d2f2e4375fbe3cfdc8c48af691f1c7c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990100"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863873"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>靜態類別和靜態類別成員 (C# 程式設計手冊)
 
@@ -91,7 +92,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)
-- [靜止](../../language-reference/keywords/static.md)
+- [static](../../language-reference/keywords/static.md)
 - [類別](./classes.md)
 - [class](../../language-reference/keywords/class.md)
 - [靜態建構函式](./static-constructors.md)

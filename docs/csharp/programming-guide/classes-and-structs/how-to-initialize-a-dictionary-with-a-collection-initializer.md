@@ -1,15 +1,16 @@
 ---
 title: 如何使用集合初始設定式來初始化字典 - C# 程式設計手冊
+description: '瞭解如何在 c # 中使用 Add 方法或索引初始化運算式來初始化字典。 這個範例會顯示這兩個選項。'
 ms.date: 12/20/2018
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-ms.openlocfilehash: 1e6e7fac9dd49ad1943ac9046bd9e4932c383257
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f33240b02785c5c886a1ebebb8984d29c9f7795
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75741363"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865043"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>如何：使用集合初始設定式來初始化字典 (C# 程式設計手冊)
 
@@ -21,9 +22,9 @@ ms.locfileid: "75741363"
 
 [!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToDictionaryInitializer.cs#HowToDictionaryInitializer)]  
 
-請注意，在第一個宣告中，該集合的每個項目中都有兩組大括弧。 最內層大括弧將 物件初始化器封閉`StudentName`，最外層大括弧將包含要添加到 的`students`<xref:System.Collections.Generic.Dictionary%602>鍵/值對的初始化程式。 最後，會以括號括住目錄的整個集合初始設定式。 在第二個初始化中，指派左側是索引鍵，右側是其值，並使用 `StudentName` 的物件初始設定式。
+請注意，在第一個宣告中，該集合的每個項目中都有兩組大括弧。 最內層的括弧會括住的物件初始化運算式 `StudentName` ，而最外層的大括弧會括住將加入至的索引鍵/值組的初始化運算式 `students` <xref:System.Collections.Generic.Dictionary%602> 。 最後，會以括號括住目錄的整個集合初始設定式。 在第二個初始化中，指派左側是索引鍵，右側是其值，並使用 `StudentName` 的物件初始設定式。
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [物件和集合初始設定式](./object-and-collection-initializers.md)

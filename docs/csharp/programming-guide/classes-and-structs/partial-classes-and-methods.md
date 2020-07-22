@@ -1,17 +1,18 @@
 ---
 title: 部分類別和方法 - C# 程式設計手冊
+description: 'C # 中的部分類別和方法會將類別、結構、介面或方法的定義分割成兩個或多個原始程式檔。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 792159786131654d6ee0363f7ab7b87ac50d32bb
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399816"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864744"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 
@@ -54,7 +55,7 @@ ms.locfileid: "79399816"
 
 - XML 註解
 
-- 介面
+- interfaces
 
 - 泛型型別參數屬性
 
@@ -94,13 +95,13 @@ ms.locfileid: "79399816"
 
   - [私人](../../language-reference/keywords/private.md)
 
-  - [保護](../../language-reference/keywords/protected.md)
+  - [protected](../../language-reference/keywords/protected.md)
 
   - [內部](../../language-reference/keywords/internal.md)
 
-  - [抽象](../../language-reference/keywords/abstract.md)
+  - [概要](../../language-reference/keywords/abstract.md)
 
-  - [密封](../../language-reference/keywords/sealed.md)
+  - [sealed](../../language-reference/keywords/sealed.md)
 
   - 基底類別
 
@@ -171,8 +172,8 @@ partial void onNameChanged()
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [類](./classes.md)
+- [C # 程式設計指南](../index.md)
+- [類別](./classes.md)
 - [結構類型](../../language-reference/builtin-types/struct.md)
 - [介面](../interfaces/index.md)
-- [部分（類型）](../../language-reference/keywords/partial-type.md)
+- [partial (類型)](../../language-reference/keywords/partial-type.md)

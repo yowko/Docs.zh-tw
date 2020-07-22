@@ -4,12 +4,12 @@ description: 示範在 Ubuntu 上安裝 .NET Core SDK 和 .NET Core 執行時間
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c590bd89b718a5cd31dae9f83049eac910cb4049
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619425"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863887"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>在 Ubuntu 上安裝 .NET Core SDK 或 .NET Core 執行時間
 
@@ -30,11 +30,11 @@ Ubuntu 支援 .NET Core。 本文說明如何在 Ubuntu 上安裝 .NET Core。 �
 | Ubuntu                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview （僅限手動安裝） |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [20.04 （LTS）](#2004-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ✔️ [19.10](#1910-)       | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
+| ❌[19.10](#1910-)       | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
 | ❌[19.04](#1904-)       | ✔️2。1        | ✔️3。1        | ❌5.0 預覽 |
 | ❌[18.10](#1810-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
 | ✔️ [18.04 （LTS）](#1804-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ❌ [17.10](#1710-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
+| ❌[17.10](#1710-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
 | ❌ [17.04](#1704-)       | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
 | ❌[16.10](#1610-)       | ❌2.1        | ❌3.1        | ❌5.0 預覽 |
 | ✔️ [16.04 （LTS）](#1604-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
@@ -60,7 +60,9 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
 
-## <a name="1910-"></a>19.10 ✔️
+## <a name="1910-"></a>19.10❌
+
+[!INCLUDE [linux-not-supported](includes/linux-not-supported-ubuntu.md)]
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 
@@ -228,6 +230,6 @@ sudo apt-get update; \
 
 [!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
 - [教學課程：使用 Visual Studio Code 建立具有 .NET Core SDK 的主控台應用程式](../tutorials/with-visual-studio-code.md)

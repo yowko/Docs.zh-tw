@@ -1,5 +1,6 @@
 ---
 title: 指定完整的類型名稱
+description: 如需反映作業的有效輸入，請使用完整的類型名稱，其具有元件名稱規格、命名空間規格和類型名稱。
 ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-ms.openlocfilehash: 707c71482196d789ed9a88db34af048ec57734fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ff33b6abd31a82c6b80aa794564c5c48648cde63
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130024"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865225"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>指定完整的類型名稱
 
@@ -187,7 +188,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 
 ## <a name="specifying-generic-types"></a>指定泛型型別
 
-SimpleTypeSpec\`NUMBER 代表含有 1 到 *n* 泛型型別參數的開放式泛型型別。 例如，若要取得開放式泛型型別 List\<T> 或封閉式泛型型別 List\<String> 的參考，請使用``Type.GetType("System.Collections.Generic.List`1")``。若要取得泛型型別 Dictionary\<TKey,TValue> 的參考，請使用 ``Type.GetType("System.Collections.Generic.Dictionary`2")``。
+SimpleTypeSpec\`NUMBER 代表含有 1 到 *n* 泛型型別參數的開放式泛型型別。 例如，若要取得開放式泛型型別清單 \<T> 或封閉式泛型型別清單的參考，請 \<String> 使用 ``Type.GetType("System.Collections.Generic.List`1")`` 來取得泛型型別字典的參考 \<TKey,TValue> ，請使用 ``Type.GetType("System.Collections.Generic.Dictionary`2")`` 。
 
 ## <a name="specifying-pointers"></a>指定指標
 
@@ -212,7 +213,7 @@ SimpleTypeSpec & 代表 Managed 指標或參考。 例如，若要取得類型 M
 
 請注意，就執行階段而言是 `MyArray[] != MyArray[*]`，但對多維陣列而言，兩種標記法是一樣的。 亦即 `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` 評估為 **true**。
 
-針對**ModuleBuilder**， `MyArray[0..5]`表示大小為6、下限為0的一維陣列。 `MyArray[4…]` 表示大小不明、下限 4 的一維陣列。
+針對**ModuleBuilder**， `MyArray[0..5]` 表示大小為6、下限為0的一維陣列。 `MyArray[4…]` 表示大小不明、下限 4 的一維陣列。
 
 ## <a name="see-also"></a>另請參閱
 

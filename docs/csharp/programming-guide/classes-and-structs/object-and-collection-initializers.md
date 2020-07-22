@@ -1,16 +1,17 @@
 ---
 title: 物件和集合初始設定式 - C# 程式設計手冊
+description: 'C # 中的物件初始化運算式會在叫用函式之後，將值指派給建立物件的可存取欄位或屬性。'
 ms.date: 12/19/2018
 helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: ae8741e2f29db0a470ad8d3b121375fbdeaff0d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81deed8a21bff10364524c3e0784c562d4e727e6
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170191"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864770"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>物件和集合初始設定式 (C# 程式設計手冊)
 
@@ -57,13 +58,13 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>具有匿名類型的物件初始設定式
 
-儘管物件初始化器可用於任何上下文，但它們在 LINQ 查詢運算式中特別有用。 查詢運算式經常使用[匿名型別](./anonymous-types.md)，此型別只能使用物件初始設定式初始化，如下列宣告所示。  
+雖然物件初始化運算式可以用於任何內容中，但它們在 LINQ 查詢運算式中特別有用。 查詢運算式經常使用[匿名型別](./anonymous-types.md)，此型別只能使用物件初始設定式初始化，如下列宣告所示。  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```
 
-匿名型別使`select`LINQ 查詢運算式中的子句能夠將原始序列的物件轉換為其值和形狀可能與原始物件不同的物件。 如果您只要儲存序列中每個物件的部分資訊，這就會很實用。 在下列範例中，假設產品物件 (`p`) 包含許多欄位和方法，而您只想要建立包含產品名稱和單價的物件序列。  
+匿名型別 `select` 可讓 LINQ 查詢運算式中的子句將原始序列的物件轉換成物件，其值和圖形可能與原始的不同。 如果您只要儲存序列中每個物件的部分資訊，這就會很實用。 在下列範例中，假設產品物件 (`p`) 包含許多欄位和方法，而您只想要建立包含產品名稱和單價的物件序列。  
   
 [!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
 
@@ -102,7 +103,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
 [!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
 
-上述範例會產生呼叫 <xref:System.Collections.Generic.Dictionary%602.Item(%600)> 以設定值的程式碼。 在 C# 6 之前，可以使用以下語法初始化字典和其他關聯容器。 請注意，它會使用具有多個值的物件，而不是使用括弧和指派的索引子語法：
+上述範例會產生呼叫 <xref:System.Collections.Generic.Dictionary%602.Item(%600)> 以設定值的程式碼。 在 c # 6 之前，您可以使用下列語法來初始化字典和其他關聯的容器。 請注意，它會使用具有多個值的物件，而不是使用括弧和指派的索引子語法：
 
 [!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
 
@@ -124,6 +125,6 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [C# 中的 LINQ](../../linq/index.md)
-- [匿名型別](anonymous-types.md)
+- [匿名類型](anonymous-types.md)

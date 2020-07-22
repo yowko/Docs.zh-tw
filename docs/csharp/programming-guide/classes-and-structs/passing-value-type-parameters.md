@@ -1,16 +1,17 @@
 ---
 title: 傳遞實值類型的參數 - C# 程式設計手冊
+description: '當您以 c # 的值將實值型別變數傳遞至方法時，任何變更都不會影響原始資料。 若要變更值，請以傳址方式傳遞。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: 13982254922d72337feeb502d2c84ebb42cf27bb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 84829722cfb0b7ce71aff36f27a7c97cfa07ad5e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004552"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864692"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>傳遞實值類型的參數 (C# 程式設計手冊)
 相對於[參考型別](../../language-reference/keywords/reference-types.md)變數 (包含對其資料的參考)，[實值型別](../../language-reference/builtin-types/value-types.md)變數會直接包含資料。 以傳值方式將實值型別變數傳遞至方法，意味著將變數的複本傳遞至方法。 在方法內所進行之參數的任何變更，都不會影響儲存在引數變數中的原始資料。 如果您想要讓呼叫的方法變更參數值，就必須使用 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 關鍵字，以傳址方式來傳遞它。 您也可以使用 [in](../../language-reference/keywords/in-parameter-modifier.md) 關鍵字以傳址方式傳遞值，以避免發生複製的情況，同時確保該值不會變更。 為求簡化，下列範例使用 `ref`。  

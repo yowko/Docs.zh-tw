@@ -1,15 +1,16 @@
 ---
 title: '如何執行和呼叫自訂擴充方法-c # 程式設計手冊'
+description: 瞭解如何針對任何 .NET 類型執行擴充方法。 用戶端程式代碼可以藉由加入 DLL 的參考並加入 using 指示詞，來使用您的方法。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: f9937c4b7c6e66af0ee3bc6f6d9ef3b3b1edd530
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7856e78713648a42d1c961f50f7e83f2f7ef05b7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241821"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865056"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何執行和呼叫自訂擴充方法（c # 程式設計手冊）
 本主題示範如何針對任何 .NET 類型實作您自己的延伸模組方法。 用戶端程式碼可以使用您的擴充方法，方法是將參考新增至包含這些方法的 DLL，然後新增 [using](../../language-reference/keywords/using-directive.md) 指示詞，以指定會在其中定義擴充方法的命名空間。  
@@ -45,7 +46,7 @@ ms.locfileid: "84241821"
 - [LINQ (Language-Integrated Query)](../../linq/linq-in-csharp.md)
 - [靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)
 - [protected](../../language-reference/keywords/protected.md)
-- [internal](../../language-reference/keywords/internal.md)
+- [內部](../../language-reference/keywords/internal.md)
 - [public](../../language-reference/keywords/public.md)
-- [this](../../language-reference/keywords/this.md)
+- [該表](../../language-reference/keywords/this.md)
 - [命名空間](../../language-reference/keywords/namespace.md)

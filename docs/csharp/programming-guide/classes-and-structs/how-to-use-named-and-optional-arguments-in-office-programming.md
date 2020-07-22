@@ -1,19 +1,20 @@
 ---
-title: 如何在 Office 程式設計中使用具名引數和可選參數 - C# 程式設計指南
+title: '如何在 Office 程式設計中使用命名和選擇性引數-c # 程式設計指南'
+description: 瞭解如何使用具名引數和選擇性引數，以方便存取 COM 介面，例如 Microsoft Office automation Api。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e24331d37e8fdbe2bc66a2d9f73a5f6a7242af9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714868"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864341"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>如何在 Office 程式設計中使用具名引數和可選參數（C# 程式設計指南）
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>如何在 Office 程式設計中使用命名和選擇性引數（c # 程式設計手冊）
 
 C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的便利性、彈性和可讀性。 此外，這些功能還可大幅加速對 COM 介面 (例如 Microsoft Office Automation API) 的存取。
 
@@ -37,7 +38,7 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
 6. 在 [名稱]**** 欄位中鍵入專案的名稱。
 
-7. 按一下 [確定]****。
+7. 按一下 [確定]。
 
      新的專案隨即會出現在方案總管**** 中。
 
@@ -47,33 +48,33 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
 2. 在 [.NET]**** 頁面上，選取 [元件名稱]**** 清單中的 [Microsoft.Office.Interop.Word]****。
 
-3. 按一下 [確定]****。
+3. 按一下 [確定]。
 
 ## <a name="to-add-necessary-using-directives"></a>加入必要的 using 指示詞
 
 1. 在方案總管**** 中，以滑鼠右鍵按一下 *Program.cs* 檔案，然後按一下 [檢視程式碼]****。
 
-2. 將以下`using`指令添加到代碼檔的頂部：
+2. 將下列指示詞新增 `using` 至程式碼檔案的頂端：
 
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]
 
 ## <a name="to-display-text-in-a-word-document"></a>在 Word 文件中顯示文字
 
-1. 在Program.cs`Program`中的類*Program.cs*中，添加以下方法來創建 Word 應用程式和 Word 文檔。 [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) 方法有四個選擇性參數。 此範例會使用其預設值。 因此，呼叫陳述式中不需要引數。
+1. 在 `Program` *Program.cs*的類別中，新增下列方法來建立 word 應用程式和 word 檔。 [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) 方法有四個選擇性參數。 此範例會使用其預設值。 因此，呼叫陳述式中不需要引數。
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 
-2. 在方法末尾添加以下代碼，以定義在文檔中顯示文本的位置以及要顯示的文本：
+2. 在方法的結尾新增下列程式碼，以定義要在檔中顯示文字的位置，以及要顯示的文字：
 
      [!code-csharp[csProgGuideNamedAndOptional#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#7)]
 
 ## <a name="to-run-the-application"></a>若要執行應用程式
 
-1. 將以下語句添加到 Main：
+1. 將下列語句加入 Main：
 
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]
 
-2. 按<kbd>CTRL</kbd>+<kbd>F5</kbd>以運行專案。 隨即會出現含有指定文字的 Word 文件。
+2. 按<kbd>CTRL</kbd> + <kbd>F5</kbd>執行專案。 隨即會出現含有指定文字的 Word 文件。
 
 ## <a name="to-change-the-text-to-a-table"></a>將文字變更為表格
   
@@ -85,25 +86,25 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
      [!code-csharp[csProgGuideNamedAndOptional#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#9)]
 
-     在早期版本的 C# 中，調用`ConvertToTable`要求為每個參數調用傳址參數，如下代碼所示：
+     在舊版的 c # 中，呼叫 `ConvertToTable` 需要每個參數都有參考引數，如下列程式碼所示：
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]
 
-2. 按<kbd>CTRL</kbd>+<kbd>F5</kbd>以運行專案。
+2. 按<kbd>CTRL</kbd> + <kbd>F5</kbd>執行專案。
 
 ## <a name="to-experiment-with-other-parameters"></a>試驗其他參數
 
-1. 要更改`DisplayInWord`表，使其具有一列和三行，請將 中的最後一行替換為以下語句，然後鍵入<kbd>CTRL</kbd>+<kbd>F5</kbd>。  
+1. 若要變更資料表，使其具有一個資料行和三個數據列，請將中的最後一行取代 `DisplayInWord` 為下列語句，然後輸入<kbd>CTRL</kbd> + <kbd>F5</kbd>。  
 
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]
 
-2. 要為表指定預定義的格式，請用以下語句替換 中`DisplayInWord`的最後一行，然後鍵入<kbd>CTRL</kbd>+<kbd>F5</kbd>。 此格式可以是任何 [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) 常數。
+2. 若要為數據表指定預先定義的格式，請將中的最後一行取代 `DisplayInWord` 為下列語句，然後輸入<kbd>CTRL</kbd> + <kbd>F5</kbd>。 此格式可以是任何 [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) 常數。
 
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]
 
 ## <a name="example"></a>範例
 
-以下代碼包括完整的示例：
+下列程式碼包含完整的範例：
 
  [!code-csharp[csProgGuideNamedAndOptional#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#12)]
 

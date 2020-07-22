@@ -1,5 +1,6 @@
 ---
 title: 如何：使用 CodeDOM 建立 XML 文件檔案
+description: 在此詳細範例中，請參閱如何產生程式碼，以使用程式碼檔物件模型（CodeDOM）來建立 XML 檔檔案。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: b9e11a51048733dbfc42ff9f575e18effc80db07
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f905b996910c6cfbc62378cc4cd6bb8c0e0e6fd4
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596242"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865147"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>如何：使用 CodeDOM 建立 XML 檔檔案
 
@@ -50,7 +51,7 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
  [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]
  [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
   
- 程式碼範例會在*HelloWorldDoc*檔案中建立下列 xml 檔。  
+ 此程式碼範例會在*HelloWorldDoc.xml*檔案中建立下列 XML 檔。  
   
 ```xml  
 <?xml version="1.0" ?>
@@ -79,7 +80,7 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
   
 此程式碼範例需要設定 `FullTrust` 權限，才能順利執行。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 XML 記錄您的程式碼（Visual Basic）](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [XML 文件註解](../../csharp/programming-guide/xmldoc/index.md)

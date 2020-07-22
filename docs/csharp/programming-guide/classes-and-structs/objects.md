@@ -1,16 +1,17 @@
 ---
 title: 物件 - C# 程式設計手冊
+description: 'C # 會使用類別或結構定義來定義物件的類型。 在物件導向語言（例如 c #）中，程式是由動態互動的物件所組成。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: a9411557e9177c8dbed45ec25984d574479da0de
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b54db325c568dec702e4e50c3c265286662092fe
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241782"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864757"
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
 類別或結構定義就像是指定型別可以做什麼的藍圖。 物件基本上是根據藍圖配置和設定的記憶體區塊。 程式可建立許多同類別的物件。 物件也稱為執行個體，可儲存在具名變數或陣列或集合中。 用戶端程式碼是使用這些變數呼叫方法，並存取物件公用屬性的程式碼。 在 C# 之類的物件導向語言中，一般程式包含多個動態互動的物件。  
@@ -48,7 +49,7 @@ ms.locfileid: "84241782"
 - 若要判斷兩個類別執行個體中的欄位值是否相等，您或許可以使用 <xref:System.Object.Equals%2A> 方法或 [== 運算子](../../language-reference/operators/equality-operators.md#equality-operator-)。 但請只有當類別覆寫或多載它們，以提供「相等」表示的型別物件的自訂定義時，才使用它們。 此類別可能也會實作 <xref:System.IEquatable%601> 介面或 <xref:System.Collections.Generic.IEqualityComparer%601> 介面。 這兩個介面都會提供可用以測試值相等的方法。 在設計您自己的類別以覆寫時 `Equals` ，請務必遵循[如何定義類型](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md)和的實值相等中所述的指導方針 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 。
   
 ## <a name="related-sections"></a>相關章節  
- 如需詳細資訊：  
+ 其他資訊：  
   
 - [類別](./classes.md)  
   
