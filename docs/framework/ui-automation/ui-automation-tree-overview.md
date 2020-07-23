@@ -1,16 +1,17 @@
 ---
 title: UI 自動化樹狀目錄概觀
+description: 閱讀有關 UI 自動化樹狀結構的總覽。 瞭解使用者介面自動化樹狀結構的不同視圖，例如原始視圖、控制項視圖和內容視圖。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: a0b888e8ecc80e3739c583931a86da3cdb7242d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ffe4b4e6157f5bff3284d6978e0ec28641cf72d
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179456"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924548"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 自動化樹狀目錄概觀
 > [!NOTE]
@@ -18,7 +19,7 @@ ms.locfileid: "79179456"
   
  輔助技術產品和測試指令碼會瀏覽 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構，蒐集 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 和其項目的相關資訊。  
   
- 樹中有[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]一個根項目 （<xref:System.Windows.Automation.AutomationElement.RootElement%2A>）， 表示當前桌面，其子項目表示應用程式視窗。 這些子項目每個都可以包含代表 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的項目，例如功能表、按鈕、工具列和清單方塊。 接著這些項目可以包含例如清單項目的項目。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]樹狀結構內有一個根項目（ <xref:System.Windows.Automation.AutomationElement.RootElement%2A> ），代表目前的桌面，而其子項目代表應用程式視窗。 這些子項目每個都可以包含代表 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的項目，例如功能表、按鈕、工具列和清單方塊。 接著這些項目可以包含例如清單項目的項目。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構不是固定的結構，且很少完全看到它，因為它可能包含數千個項目。 其中的部分會在需要時建置，且它可能隨著加入、移動或移除項目而發生變更。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "79179456"
   
 <a name="uiautomation_raw_view"></a>
 ### <a name="raw-view"></a>未經處理的檢視  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀的未經處理檢閱，是 <xref:System.Windows.Automation.AutomationElement> 物件的完整樹狀，桌面為其根目錄。 未經處理的檢視會密切依循應用程式的原生程式設計結構，因此是最詳細的可用檢視。 它也是樹狀結構其他檢視的建置基底。 由於此視圖取決於基礎[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]框架，[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]因此按鈕的原始視圖的原始視圖將不同于 Win32 按鈕。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀的未經處理檢閱，是 <xref:System.Windows.Automation.AutomationElement> 物件的完整樹狀，桌面為其根目錄。 未經處理的檢視會密切依循應用程式的原生程式設計結構，因此是最詳細的可用檢視。 它也是樹狀結構其他檢視的建置基底。 由於此視圖相依于基礎 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構，因此按鈕的原始視圖 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 會有與 Win32 按鈕不同的原始視圖。  
   
  未經處理的檢視是藉由搜尋未指定屬性的項目而取得，或是藉由使用 <xref:System.Windows.Automation.TreeWalker.RawViewWalker> 來導覽樹狀結構而取得。  
   

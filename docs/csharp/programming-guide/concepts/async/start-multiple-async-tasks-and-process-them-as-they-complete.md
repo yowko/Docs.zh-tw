@@ -1,13 +1,14 @@
 ---
 title: 在非同步工作完成時進行處理
+description: '這個範例示範如何使用 c # 中的 System.threading.tasks.task.whenany 來啟動多個工作，並在其完成時處理其結果，而不是依照開始順序來處理它們。'
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a7cfa0bdf783fe9bb735241ca398fde7895f1493
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71736735"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925146"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>啟動多項非同步工作並在它們完成時進行處理 (C#)
 
@@ -23,17 +24,17 @@ ms.locfileid: "71736735"
 您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
 
 > [!TIP]
-> 如果不想下載專案，則可以在本主題末尾查看*MainWindow.xaml.cs*檔。
+> 如果您不想要下載專案，您可以改為參閱本主題結尾的*MainWindow.xaml.cs*檔案。
 
-1. 從 *.zip*檔中提取您下載的檔，然後啟動視覺化工作室。
+1. 將您從 *.zip*檔案下載的檔案解壓縮，然後啟動 Visual Studio。
 
-2. 在功能表列上，選擇 **"檔** > **打開** > **專案/解決方案**"。
+2. 在功能表列上 **，選擇 [** 檔案] [  >  **開啟**  >  **專案/方案**]。
 
-3. 在 **"打開專案"** 對話方塊中，打開保存您下載的示例代碼的資料夾，然後打開*AsyncFineTuningCS*/*AsyncFineTuningVB*的解決方案 *（.sln*） 檔。
+3. 在 [**開啟專案**] 對話方塊中，開啟包含您所下載之範例程式碼的資料夾，然後開啟*AsyncFineTuningCS*AsyncFineTuningVB 的方案（*.sln*）檔案 / * *。
 
 4. 在方案總管**** 中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。
 
-5. 選擇<kbd>F5</kbd>鍵以在調試時運行程式，或者按<kbd>Ctrl</kbd>+<kbd>F5</kbd>鍵運行程式而不偵錯工具。
+5. 選擇<kbd>F5</kbd>鍵以執行程式，或按下<kbd>Ctrl</kbd> + <kbd>F5</kbd>鍵以執行程式，而不進行任何偵錯工具。
 
 6. 執行專案數次，確認所下載的長度不一定會以相同的順序出現。
 
@@ -49,7 +50,7 @@ ms.locfileid: "71736735"
 IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
 ```
 
-在專案的*MainWindow.xaml.cs*檔中，對`AccessTheWebAsync`方法進行以下更改：
+在專案的*MainWindow.xaml.cs*檔案中，對方法進行下列變更 `AccessTheWebAsync` ：
 
 - 套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。
 
@@ -71,7 +72,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3. 等候 `ProcessURLAsync` 呼叫所傳回的 `firstFinishedTask`。 `firstFinishedTask` 變數是 <xref:System.Threading.Tasks.Task%601>，其中 `TReturn` 是整數。 工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。 如果任務出錯`await`，將引發存儲在 中`AggregateException`的第一個子異常，這與讀取`Result`將引發 的屬性`AggregateException`不同。
+    3. 等候 `ProcessURLAsync` 呼叫所傳回的 `firstFinishedTask`。 `firstFinishedTask` 變數是 <xref:System.Threading.Tasks.Task%601>，其中 `TReturn` 是整數。 工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。 如果工作發生錯誤， `await` 將會擲回儲存在中的第一個子例外狀況 `AggregateException` ，不同于讀取 `Result` 會擲回的屬性 `AggregateException` 。
 
         ```csharp
         int length = await firstFinishedTask;
@@ -85,7 +86,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 ## <a name="complete-example"></a>完整範例
 
-以下代碼是示例*MainWindow.xaml.cs*檔的完整文本。 星號會標記已針對此範例新增的項目。 同時請注意，您必須新增 <xref:System.Net.Http> 的參考。
+下列程式碼是範例的*MainWindow.xaml.cs*檔案的完整文字。 星號會標記已針對此範例新增的項目。 同時請注意，您必須新增 <xref:System.Net.Http> 的參考。
 
 您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
 

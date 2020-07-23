@@ -1,54 +1,54 @@
 ---
-title: 除錯記憶體洩漏教程
-description: 瞭解如何在 .NET Core 中調試記憶體洩漏。
+title: 調試記憶體流失教學課程
+description: 瞭解如何在 .NET Core 中偵測記憶體流失。
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021354"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924886"
 ---
-# <a name="tutorial-debug-a-memory-leak-in-net-core"></a>教程:在 .NET 核心中調試記憶體洩漏
+# <a name="debug-a-memory-leak-in-net-core"></a>在 .NET Core 中偵測記憶體流失
 
-**本文適用於:✔️** .NET Core 3.0 SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 3.1 SDK 和更新版本
 
-本教程演示了分析 .NET 核心記憶體洩漏的工具。
+本教學課程示範用來分析 .NET Core 記憶體流失的工具。
 
-本教程使用示例應用,該應用旨在有意洩漏記憶體。 示例作為練習提供。 您可以分析無意中洩漏記憶體的應用。
+本教學課程使用範例應用程式，其設計目的是刻意流失記憶體。 範例是以練習的形式提供。 您也可以分析意外流失記憶體的應用程式。
 
 在本教學課程中，您將：
 
 > [!div class="checklist"]
 >
-> - 使用[點網計數器](dotnet-counters.md)檢查託管記憶體使用方式。
-> - 生成轉儲檔。
-> - 使用轉儲檔分析記憶體使用方式。
+> - 使用[dotnet-計數器](dotnet-counters.md)檢查 managed 記憶體使用量。
+> - 產生傾印檔案。
+> - 使用傾印檔案來分析記憶體使用量。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 教學課程會使用：
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更新版本。
-- [點網跟蹤](dotnet-trace.md)到清單進程。
-- [點網計數器](dotnet-counters.md),用於檢查託管記憶體使用方式。
-- [點網轉儲](dotnet-dump.md)以收集和分析轉儲檔。
-- 要診斷[的示例調試目標](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)應用。
+- [.Net Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core)或更新版本。
+- [dotnet-](dotnet-trace.md)用來列出進程的追蹤。
+- [dotnet-](dotnet-counters.md)用來檢查 managed 記憶體使用量的計數器。
+- [dotnet-](dotnet-dump.md)傾印以收集和分析傾印檔案。
+- 要診斷的[範例 debug 目標](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)應用程式。
 
-本教程假定示例和工具已安裝並可供使用。
+本教學課程假設已安裝範例和工具，並可供使用。
 
-## <a name="examine-managed-memory-usage"></a>檢查託管記憶體使用方式
+## <a name="examine-managed-memory-usage"></a>檢查 managed 記憶體使用量
 
-在開始收集診斷數據以幫助我們根本原因此方案之前,您需要確保實際看到記憶體洩漏(記憶體增長)。 您可以使用[點網計數器](dotnet-counters.md)工具來確認這一點。
+在您開始收集診斷資料以協助我們根本造成這種情況時，您必須確定您確實看到記憶體流失（記憶體成長）。 您可以使用[dotnet 計數器](dotnet-counters.md)工具來確認。
 
-開啟主控台視窗並瀏覽到下載的目錄並解壓縮[範例除錯目標](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)。 執行目標:
+開啟主控台視窗，並流覽至您下載並解壓縮[範例 debug 目標](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)的目錄。 執行目標：
 
 ```dotnetcli
 dotnet run
 ```
 
-從單獨的主控台,使用[點網追蹤](dotnet-trace.md)工具搜尋行程 ID:
+從個別的主控台，使用[dotnet 追蹤](dotnet-trace.md)工具來尋找處理序識別碼：
 
 ```console
 dotnet-trace ps
@@ -60,13 +60,13 @@ dotnet-trace ps
 4807 DiagnosticScena /home/user/git/samples/core/diagnostics/DiagnosticScenarios/bin/Debug/netcoreapp3.0/DiagnosticScenarios
 ```
 
-現在,使用[點網計數器](dotnet-counters.md)工具檢查託管記憶體使用方式。 指定`--refresh-interval`刷新之間的秒數:
+現在，使用[dotnet 計數器](dotnet-counters.md)工具來檢查 managed 記憶體使用量。 指定重新整理 `--refresh-interval` 之間的秒數：
 
 ```console
 dotnet-counters monitor --refresh-interval 1 -p 4807
 ```
 
-即時輸出應類似於:
+即時輸出應該類似：
 
 ```console
 Press p to pause, r to resume, q to quit.
@@ -94,61 +94,61 @@ Press p to pause, r to resume, q to quit.
     Working Set (MB)                                  83
 ```
 
-專注於這條線:
+重點放在這一行：
 
 ```console
     GC Heap Size (MB)                                  4
 ```
 
-您可以看到託管堆內存在啟動后立即為 4 MB。
+在啟動之後，您可以看到受控堆積記憶體是 4 MB。
 
-現在,點擊`http://localhost:5000/api/diagscenario/memleak/20000`URL 。
+現在，請按下 URL `https://localhost:5001/api/diagscenario/memleak/20000` 。
 
-觀察記憶體使用量已增長到 30 MB。
+請注意，記憶體使用量已增加至 30 MB。
 
 ```console
     GC Heap Size (MB)                                 30
 ```
 
-通過觀察記憶體使用方式,您可以安全地說記憶體在增長或洩漏。 下一步是收集正確的記憶體分析數據。
+藉由監看記憶體使用量，您可以放心地指出記憶體正在增加或流失。 下一個步驟是收集正確的記憶體分析資料。
 
 ### <a name="generate-memory-dump"></a>產生記憶體傾印
 
-分析可能的記憶體洩漏時,您需要存取應用的記憶體堆。 然後,您可以分析記憶體內容。 觀察對象之間的關係,您創建關於為什麼記憶沒有被釋放的理論。 常見的診斷資料來源是 Windows 上的記憶體轉儲或 Linux 上的等效核心轉儲。 要生成 .NET Core 應用程式的轉印,可以使用[dotnet 轉印存)](dotnet-dump.md)工具。
+分析可能的記憶體流失時，您需要存取應用程式的記憶體堆積。 然後您就可以分析記憶體內容。 查看物件之間的關聯性時，您會建立理論，說明為何無法釋放記憶體。 常見的診斷資料來源是 Windows 上的記憶體傾印或 Linux 上的對等核心傾印。 若要產生 .NET Core 應用程式的傾印，您可以使用[dotnet-dump）](dotnet-dump.md)工具。
 
-使用以前啟動[的範例除錯目標](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/),執行以下指令以產生 Linux 核心轉印:
+使用先前啟動的[範例 debug 目標](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)，執行下列命令以產生 Linux 核心傾印：
 
 ```dotnetcli
 dotnet-dump collect -p 4807
 ```
 
-結果是位於同一資料夾中的核心轉儲。
+結果是位於相同資料夾中的核心傾印。
 
 ```console
 Writing minidump with heap to ./core_20190430_185145
 Complete
 ```
 
-### <a name="restart-the-failed-process"></a>重新啟動失敗的行程
+### <a name="restart-the-failed-process"></a>重新開機失敗的進程
 
-收集轉儲后,您應該有足夠的資訊來診斷失敗的進程。 如果失敗的進程在生產伺服器上運行,現在正是通過重新啟動流程進行短期補救的理想時間。
+收集到傾印之後，您應該會有足夠的資訊來診斷失敗的進程。 如果失敗的進程是在實際執行伺服器上執行，現在是重新開機程式，這是短期補救的理想時機。
 
-在本教學中,您現在已完成[範例調試目標](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/),您可以關閉它。 導覽到啟動伺服器的終端機,`Control-C`然後按 。
+在本教學課程中，您現在已完成[範例的 debug 目標](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)，而且您可以將它關閉。 流覽至啟動伺服器的終端機，然後按<kbd>Ctrl + C</kbd>。
 
-### <a name="analyze-the-core-dump"></a>分析核心傾儲
+### <a name="analyze-the-core-dump"></a>分析核心傾印
 
-現在生成了核心轉儲,請使用[dotnet 轉儲](dotnet-dump.md)工具分析轉儲:
+現在您已產生核心傾印，請使用[dotnet](dotnet-dump.md)傾印工具來分析傾印：
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
 ```
 
-要`core_20190430_185145`分析的核心轉儲的名稱在哪裡。
+其中 `core_20190430_185145` 是您想要分析的核心傾印名稱。
 
 > [!NOTE]
-> 如果您發現錯誤,抱怨找不到*libdl.so,* 您可能需要安裝*libc6-dev*套件。 如需詳細資訊，請參閱 [Linux 上 .NET Core 的必要條件](../install/dependencies.md?pivots=os-linux)。
+> 如果您看到錯誤，指出找不到*libdl.so* ，您可能必須安裝*libc6 開發人員*套件。 如需詳細資訊，請參閱 [Linux 上 .NET Core 的必要條件](../install/dependencies.md?pivots=os-linux)。
 
-您將看到一個提示,您可以在其中輸入 SOS 命令。 通常,您要查看的第一件事是託管堆的總體狀態:
+您會看到提示，您可以在其中輸入 SOS 命令。 通常，您想要查看的第一件事是受控堆積的整體狀態：
 
 ```console
 > dumpheap -stat
@@ -168,9 +168,9 @@ Statistics:
 Total 428516 objects
 ```
 
-在這裡,您可以看到大多數對像是或`String``Customer`物件。
+在這裡，您可以看到大部分的物件都是 `String` 或 `Customer` 物件。
 
-可以將`dumpheap`這個指令與方法表 (MT) 再使用,`String`以取得所有實體的清單:
+您可以使用 `dumpheap` 命令搭配方法資料表（MT）來取得所有實例的清單 `String` ：
 
 ```console
 > dumpheap -mt 00007faddaa50f90
@@ -191,7 +191,7 @@ Statistics:
 Total 206770 objects
 ```
 
-現在,可以使用`System.String`實例`gcroot`上的命令來查看物件如何以及為什麼紮根。 耐心等待,因為此命令需要幾分鐘時間使用 30 MB 堆:
+您現在可以 `gcroot` 在實例上使用命令， `System.String` 以查看物件的根目錄和原因。 請耐心等候，因為此命令需要幾分鐘的時間，其中包含 30 MB 的堆積：
 
 ```console
 > gcroot -all 00007f6ad09421f8
@@ -220,26 +220,26 @@ HandleTable:
 Found 2 roots.
 ```
 
-您可以看到,`String``Customer`由 物件直接持有,並`CustomerCache`間接由 物件持有。
+您可以看到， `String` 直接由 `Customer` 物件持有，而且物件間接持有 `CustomerCache` 。
 
-您可以繼續轉儲物件,以查看大多數`String`物件遵循類似的模式。 此時,調查提供了足夠的信息來識別代碼中的根本原因。
+您可以繼續傾印物件，以查看大部分的 `String` 物件遵循類似的模式。 此時，調查已提供足夠的資訊來識別程式碼中的根本原因。
 
-此常規過程允許您識別主要記憶體洩漏的來源。
+這個一般程式可讓您識別主要記憶體流失的來源。
 
 ## <a name="clean-up-resources"></a>清除資源
 
-在本教學中,您啟動了一個範例 Web 伺服器。 如[「重新啟動失敗的進程](#restart-the-failed-process)」部分所述,此伺服器應該已關閉。
+在本教學課程中，您已啟動範例 web 伺服器。 此伺服器應已關閉，如[重新開機失敗的進程](#restart-the-failed-process)一節中所述。
 
-您還可以刪除建立的轉儲檔。
+您也可以刪除已建立的傾印檔案。
+
+## <a name="see-also"></a>另請參閱
+
+- [dotnet-列出進程的追蹤](dotnet-trace.md)
+- [dotnet-](dotnet-counters.md)檢查 managed 記憶體使用量的計數器
+- [dotnet-](dotnet-dump.md)用來收集和分析傾印檔案的傾印
+- [dotnet/診斷](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)
 
 ## <a name="next-steps"></a>後續步驟
 
-祝賀您完成本教程。
-
-我們仍在發佈更多診斷教程。 您可以在[dotnet/診斷](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)儲存庫上讀取草稿版本。
-
-本教程介紹了關鍵 .NET 診斷工具的基礎知識。 有關高級用法,請參閱以下參考文檔:
-
-* [點網跟蹤](dotnet-trace.md)到清單進程。
-* [點網計數器](dotnet-counters.md),用於檢查託管記憶體使用方式。
-* [點網轉儲](dotnet-dump.md)以收集和分析轉儲檔。
+> [!div class="nextstepaction"]
+> [在 .NET Core 中的高 CPU 調試](debug-highcpu.md)

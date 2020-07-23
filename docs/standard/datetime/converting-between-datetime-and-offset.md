@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: cf55db7c22ad2495bdbeb3202fcefb89bae42d69
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 86f2c982d7f87e83102933d1de73d6e13086dc87
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768673"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924899"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>在 DateTime 與 DateTimeOffset 之間轉換
 
@@ -105,7 +105,7 @@ ms.locfileid: "84768673"
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
 
-當您 <xref:System.DateTime> 使用屬性來抓取值時 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> ，屬性的存取子會 `get` 先將 <xref:System.DateTimeOffset> 值轉換成 UTC，然後藉由呼叫方法將它轉換成當地時間 <xref:System.DateTimeOffset.ToLocalTime%2A> 。 這表示您可以從屬性取得值， <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 以在執行類型轉換的同時執行時區轉換。 這也表示執行轉換時會套用當地時區的調整規則。 下列程式碼說明 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 如何使用屬性來執行類型和時區轉換。
+當您 <xref:System.DateTime> 使用屬性來抓取值時 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> ，屬性的存取子會 `get` 先將 <xref:System.DateTimeOffset> 值轉換成 UTC，然後藉由呼叫方法將它轉換成當地時間 <xref:System.DateTimeOffset.ToLocalTime%2A> 。 這表示您可以從屬性取得值， <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 以在執行類型轉換的同時執行時區轉換。 這也表示執行轉換時會套用當地時區的調整規則。 下列程式碼說明 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 如何使用屬性來執行類型和時區轉換。 範例輸出適用于設定為太平洋時區（美國和加拿大）的電腦。 11月日期是太平洋標準時間，也就是 UTC-8，而六月日期是日光節約時間，也就是 UTC-7。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#11)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#11)]

@@ -1,5 +1,6 @@
 ---
 title: 如何：安裝和卸載 Windows 服務
+description: 請參閱如何安裝和卸載 Windows 服務。 如果您是使用 .NET 開發 Windows 服務，您可以使用 InstallUtil.exe 或 PowerShell。
 ms.date: 02/05/2019
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 259b353edc269a77a51e790544018481a53af188
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5597043bb1c5af05f5f3633cba6ee6e6de1c52c1
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596354"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925601"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>如何：安裝和卸載 Windows 服務
 
-如果您要使用 .NET Framework 開發 Windows 服務，您可以使用[*installutil.exe*](../tools/installutil-exe-installer-tool.md)命令列公用程式或[PowerShell](/powershell/scripting/overview)來快速安裝服務應用程式。 開發人員若想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 如需詳細資訊，請參閱[建立安裝程式套件（Windows 桌面）](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。
+如果您要使用 .NET Framework 開發 Windows 服務，您可以使用[*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md)命令列公用程式或[PowerShell](/powershell/scripting/overview)，快速安裝服務應用程式。 開發人員若想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 如需詳細資訊，請參閱[建立安裝程式套件（Windows 桌面）](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。
 
 > [!WARNING]
 > 如果您想要從電腦解除安裝服務，則不要遵循本文中的步驟。 請改為找出安裝服務的程式或軟體套件，然後在 [設定] 中選擇 [應用程式]**** 以解除安裝該程式。 請注意，許多服務都是 Windows 不可或缺的一部分；如果移除這些服務，可能會導致系統不穩定。
@@ -33,7 +34,7 @@ ms.locfileid: "84596354"
 > [!TIP]
 > 您可以使用 [伺服器總管]**** 來確認您已安裝或解除安裝服務。 如需詳細資訊，請參閱 [How to use Server Explorer in Visual Studio](https://support.microsoft.com/help/316649/how-to-use-the-server-explorer-in-visual-studio-net-and-visual-studio) (如何在 Visual Studio 中使用伺服器總管)。
 
-### <a name="install-your-service-manually-using-installutilexe-utility"></a>使用 Installutil.exe 公用程式手動安裝您的服務
+### <a name="install-your-service-manually-using-installutilexe-utility"></a>使用 InstallUtil.exe 公用程式手動安裝您的服務
 
 1. 在 [**開始**] 功能表中，選取 [ **Visual Studio \<*version*> ** ] 目錄，然後選取 [**針對 VS \<*version*> 開發人員命令提示字元**]。
 
@@ -53,7 +54,7 @@ ms.locfileid: "84596354"
      - 針對 32 位元版本的 .NET Framework 4 或 4.5 和更新版本，如果您的 Windows 安裝目錄是 *C:\Windows*，則預設路徑為 *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*。
      - 針對 64 位元版本的 .NET Framework 4 或 4.5 和更新版本，預設路徑為 *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*。
 
-### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>使用 Installutil.exe 公用程式手動卸載您的服務
+### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>使用 InstallUtil.exe 公用程式手動卸載您的服務
 
 1. 在 [**開始**] 功能表中，選取 [ **Visual Studio \<*version*> ** ] 目錄，然後選取 [**針對 VS \<*version*> 開發人員命令提示字元**]。
 
@@ -95,7 +96,7 @@ ms.locfileid: "84596354"
     sc.exe delete "YourServiceName"
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
 - [How to：建立 Windows 服務](how-to-create-windows-services.md)

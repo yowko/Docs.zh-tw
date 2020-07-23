@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 02/27/2020
-ms.openlocfilehash: 276fad896a6a8a647ed05a9de8c582d463d9ab8f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005309"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925472"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -48,10 +48,10 @@ dotnet restore -h|--help
 
 若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *nuget.config* 組態檔提供。 安裝 .NET Core SDK 時，會提供預設的設定檔案。 若要指定其他摘要，請執行下列其中一項動作：
 
-- 在專案目錄中建立您自己的*nuget .config*檔案。 如需詳細資訊，請參閱本文稍後的[一般 nuget](/nuget/consume-packages/configuring-nuget-behavior)設定和[nuget .config 差異](#nugetconfig-differences)。
+- 在專案目錄中建立您自己的*nuget.config*檔案。 如需詳細資訊，請參閱本文稍後的[常見 NuGet](/nuget/consume-packages/configuring-nuget-behavior)設定和[nuget.config 差異](#nugetconfig-differences)。
 - 使用 `dotnet nuget` 之類的命令 [`dotnet nuget add source`](dotnet-nuget-add-source.md) 。
 
-您可以使用選項覆寫*nuget .config*摘要。 `-s`
+您可以使用選項覆寫*nuget.config*摘要 `-s` 。
 
 如需如何使用已驗證摘要的相關資訊，請參閱[從已驗證](/nuget/consume-packages/consuming-packages-authenticated-feeds)的摘要取用套件。
 
@@ -73,7 +73,7 @@ dotnet restore -h|--help
 
   繫結重新導向不適用於 `<PackageReference>` 元素，且 .NET Core 針對 NuGet 套件僅支援 `<PackageReference>` 元素。
 
-- [解](/nuget/schema/nuget-config-file#solution-section)
+- [解決方案](/nuget/schema/nuget-config-file#solution-section)
 
   這是 Visual Studio 特定設定，不適用於 .NET Core。 .Net Core 不會使用 `packages.config` 檔案，而是針對 NuGet 套件使用 `<PackageReference>` 元素。
 
@@ -87,7 +87,7 @@ dotnet restore -h|--help
 
   要還原之專案檔的選用路徑。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`--configfile <FILE>`**
 
@@ -119,7 +119,7 @@ dotnet restore -h|--help
 
 - **`--lock-file-path <LOCK_FILE_PATH>`**
 
-  寫入專案鎖定檔案的輸出位置。 根據預設，這會是*PROJECT_ROOT \packages.lock.json*。
+  寫入專案鎖定檔案的輸出位置。 根據預設，這會*PROJECT_ROOT\packages.lock.json*。
 
 - **`--locked-mode`**
 
@@ -143,7 +143,7 @@ dotnet restore -h|--help
 
 - **`-s|--source <SOURCE>`**
 
-  指定要在還原作業期間使用的 NuGet 套件來源 URI。 此設定會覆寫*nuget.exe*檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
+  指定要在還原作業期間使用的 NuGet 套件來源 URI。 此設定會覆寫*nuget.config*檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
 
 - **`--use-lock-file`**
 
@@ -161,10 +161,10 @@ dotnet restore -h|--help
   dotnet restore
   ```
 
-- 還原在 `app1` 指定路徑中找到之專案的相依性和工具：
+- 還原在指定路徑中找到之 `app1` 專案的相依性和工具︰
 
   ```dotnetcli
-  dotnet restore ~/projects/app1/app1.csproj
+  dotnet restore ./projects/app1/app1.csproj
   ```
 
 - 使用提供作為來源的檔案路徑，還原目前目錄中專案的相依性和工具：

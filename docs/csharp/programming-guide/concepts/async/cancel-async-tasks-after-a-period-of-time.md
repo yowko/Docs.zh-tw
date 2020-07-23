@@ -1,13 +1,14 @@
 ---
 title: 在一段時間後取消非同步工作 (C#)
+description: '在 c # 中使用 CancellationTokenSource. CancelAfter 方法，排定取消未在此範例中的期間內完成的任何相關工作。'
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: 110c4700d0d2afc87f9144bf258cdd4991f107f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f32af1d893c60ac17648f60fa3aa90adaa0383e8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204342"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925288"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>在一段時間後取消非同步工作 (C#)
 
@@ -24,13 +25,13 @@ ms.locfileid: "70204342"
 
 1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2. 在功能表列上，選擇 **"檔** > **打開** > **專案/解決方案**"。
+2. 在功能表列上 **，選擇 [** 檔案] [  >  **開啟**  >  **專案/方案**]。
 
 3. 在 [開啟專案]**** 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
 
 4. 在方案總管**** 中，開啟 **CancelAfterTime** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。
 
-5. 選擇 **F5** 鍵以執行專案。 （或者，按**Ctrl**+**F5**運行專案而不調試它）。
+5. 選擇 **F5** 鍵以執行專案。 （或者，按**Ctrl** +**F5**來執行專案，而不進行調試。
 
 6. 執行程式數次，確認輸出可能會顯示所有網站、沒有網站或某些網站的輸出。
 

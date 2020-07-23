@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127549"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924379"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的受控與非受控執行緒處理
 
@@ -23,9 +23,6 @@ ms.locfileid: "73127549"
  當 Unmanaged 執行緒透過類似 COM 可呼叫包裝函式來進入執行階段時，系統會檢查此執行緒的執行緒本機存放區，以尋找內部 Managed <xref:System.Threading.Thread> 物件。 如果找到一個物件，表示執行階段已感知此執行緒。 但是，如果找不到任何 <xref:System.Threading.Thread> 物件，執行階段會建置新物件並安裝到此執行緒的執行緒本機存放區中。  
   
  在 Managed 執行緒中， <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> 是穩定的 Managed 執行緒識別。 在執行緒的存留期間，此值不會與其他任何執行緒的值相衝突，不論您是從哪一個應用程式定義域取得此值。  
-  
-> [!NOTE]
-> 作業系統的 **ThreadId** 與 Managed 執行緒之間沒有固定的關係，因為未受管理的主機可控制 Managed 執行緒與 Unmanaged 執行緒之間的關係。 具體來說，精密的主機可使用 Fiber 應用程式開發介面，對同一個作業系統執行緒排程許多 Managed 執行緒，或是在不同的作業系統執行緒之間移動 Managed 執行緒。  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>從 Win32 執行緒處理對應至受控執行緒處理
 
@@ -48,7 +45,7 @@ ms.locfileid: "73127549"
   
 ## <a name="managed-threads-and-com-apartments"></a>受控執行緒與 COM Apartment
 
-可標記 Managed 執行緒，以表示它將裝載[單一執行緒](/windows/desktop/com/single-threaded-apartments)或[多執行緒](/windows/desktop/com/multithreaded-apartments) Apartment。 （有關 COM 執行緒體系結構的詳細資訊，請參閱[進程、執行緒和公寓](/windows/desktop/com/processes--threads--and-apartments)。類 的<xref:System.Threading.Thread><xref:System.Threading.Thread.TrySetApartmentState%2A>的 和<xref:System.Threading.Thread.GetApartmentState%2A>方法返回並分配執行緒的單元狀態。 <xref:System.Threading.Thread.SetApartmentState%2A> 如果尚未設定此狀態，則 <xref:System.Threading.Thread.GetApartmentState%2A> 會傳回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
+可標記 Managed 執行緒，以表示它將裝載[單一執行緒](/windows/desktop/com/single-threaded-apartments)或[多執行緒](/windows/desktop/com/multithreaded-apartments) Apartment。 （如需 COM 執行緒架構的詳細資訊，請參閱[進程、執行緒和單元](/windows/desktop/com/processes--threads--and-apartments)）。<xref:System.Threading.Thread.GetApartmentState%2A>類別的、 <xref:System.Threading.Thread.SetApartmentState%2A> 和方法會傳回 <xref:System.Threading.Thread.TrySetApartmentState%2A> <xref:System.Threading.Thread> 並指派執行緒的單元狀態。 如果尚未設定此狀態，則 <xref:System.Threading.Thread.GetApartmentState%2A> 會傳回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
   
  只有在執行緒處於 <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> 狀態時，才能設定此屬性；每個執行緒只能設定此屬性一次。  
   

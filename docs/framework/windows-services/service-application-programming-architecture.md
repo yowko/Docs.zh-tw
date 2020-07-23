@@ -1,5 +1,6 @@
 ---
 title: 服務應用程式的程式設計架構
+description: 瞭解服務應用程式設計架構。 Windows 服務應用程式是以繼承自 System.serviceprocess.dll. ServiceBase 的類別為基礎。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 1c197b487f1cb7596f507f663fe3f1fb83857cbd
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c59ccc5a8b2f11fda9c4734487092c1aabb74908
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053494"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925575"
 ---
 # <a name="service-application-programming-architecture"></a>服務應用程式的程式設計架構
 Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 類別的類別為基礎。 您會覆寫來自這個類別的方法，並定義適用於它們的功能以決定服務的行為方式。  
@@ -49,7 +50,7 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
 > [!NOTE]
 > 這些方法表示服務在其存留期間行進的狀態；服務會從某個狀態轉換到下一個狀態。 例如，您絕對不會讓服務在呼叫 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 之前回應 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 命令。  
   
- 還有其他數個感興趣的屬性和方法。 其中包括：  
+ 還有其他數個感興趣的屬性和方法。 其中包含：  
   
 - <xref:System.ServiceProcess.ServiceBase> 類別上的 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。 這是服務的主要進入點。 當您使用 Windows 服務範本建立服務時，會將程式碼插入應用程式的 `Main` 方法來執行服務。 此程式碼如下所示：  
   
@@ -69,4 +70,4 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
-- [如何：建立 Windows 服務](how-to-create-windows-services.md)
+- [作法：建立 Windows 服務](how-to-create-windows-services.md)

@@ -1,13 +1,14 @@
 ---
 title: 取消一項非同步工作或工作清單 (C#)
+description: '使用這些範例來新增按鈕，以在非同步應用程式完成前取消它。 這個 c # 應用程式會下載一或多個網站的內容。'
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bdbc3bc7c3b752fab160429d71356fb87d9976
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595715"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925342"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>取消一項非同步工作或工作清單 (C#)
 
@@ -28,7 +29,7 @@ ms.locfileid: "69595715"
 
 1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2. 在功能表列上，選擇 **"檔** > **打開** > **專案/解決方案**"。
+2. 在功能表列上 **，選擇 [** 檔案] [  >  **開啟**  >  **專案/方案**]。
 
 3. 在 [開啟專案]**** 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
 
@@ -148,7 +149,7 @@ ms.locfileid: "69595715"
 
 1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
 
-2. 在功能表列上，選擇 **"檔** > **打開** > **專案/解決方案**"。
+2. 在功能表列上 **，選擇 [** 檔案] [  >  **開啟**  >  **專案/方案**]。
 
 3. 在 [開啟專案]**** 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
 
@@ -156,7 +157,7 @@ ms.locfileid: "69595715"
 
 5. 選擇 **F5** 鍵以執行專案。
 
-     選擇**Ctrl**+**F5**鍵以運行專案而不調試它。
+     選擇**Ctrl** + **F5**鍵以執行專案，而不進行調試。
 
 如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。
 

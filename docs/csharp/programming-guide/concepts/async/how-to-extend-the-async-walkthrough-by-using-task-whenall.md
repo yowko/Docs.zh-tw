@@ -1,15 +1,16 @@
 ---
-title: 如何使用 Task.WhenAll （C#） 擴展非同步演練
+title: '如何使用 System.threading.tasks.task.whenall 擴充非同步逐步解說（c #）'
+description: '瞭解如何使用 System.threading.tasks.task.whenall 來改善 c # 中非同步方案的效能。 這個方法會以非同步方式等候多個非同步作業。'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: afd7dda4e876b7faa54ae4a8e62d640d2b9aaf07
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 275f4aeca854f8938642dbea40bf7fd9dc5362d9
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73970027"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925211"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何使用 Task.WhenAll （C#） 擴展非同步演練
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何使用 System.threading.tasks.task.whenall 擴充非同步逐步解說（c #）
 
 您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法，來提升[逐步解說：使用 Async 和 Await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) 中非同步方案的效能。 此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。
 

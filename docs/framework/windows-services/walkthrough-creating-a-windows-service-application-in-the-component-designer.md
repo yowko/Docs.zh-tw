@@ -1,5 +1,6 @@
 ---
 title: 教學課程：建立 Windows 服務應用程式
+description: 在本教學課程中，會在 Visual Studio 中建立 Windows 服務應用程式，以將訊息寫入事件記錄檔。 新增功能、設定狀態、新增安裝程式等。
 ms.date: 03/27/2019
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: e5ff40d8413acf64e7a8a129a7b268f58780d591
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053476"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925627"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>教學課程：建立 Windows 服務應用程式
 
@@ -162,7 +163,7 @@ ms.locfileid: "71053476"
    Private eventId As Integer = 1
    ```
 
-您可能會使用背景工作執行緒來執行工作，而不是在主執行緒上執行所有工作。 如需詳細資訊，請參閱 <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>。
+您可能會使用背景工作執行緒來執行工作，而不是在主執行緒上執行所有工作。 如需詳細資訊，請參閱 <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName> 。
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>定義服務停止時所執行的動作
 
@@ -249,7 +250,7 @@ ms.locfileid: "71053476"
     ```
 
     > [!NOTE]
-    > 服務控制管理員會使用`dwWaitHint` [SERVICE_STATUS 結構](/windows/win32/api/winsvc/ns-winsvc-service_status)的和`dwCheckpoint`成員來判斷等候 Windows 服務啟動或關閉的時間。 如果您的 `OnStart` 和 `OnStop` 方法需長時間執行，則服務可以使用遞增的 `dwCheckPoint` 值再次呼叫 `SetServiceStatus` 以要求更多時間。
+    > 服務控制管理員會使用 `dwWaitHint` `dwCheckpoint` [SERVICE_STATUS 結構](/windows/win32/api/winsvc/ns-winsvc-service_status)的和成員來判斷等候 Windows 服務啟動或關閉的時間。 如果您的 `OnStart` 和 `OnStop` 方法需長時間執行，則服務可以使用遞增的 `dwCheckPoint` 值再次呼叫 `SetServiceStatus` 以要求更多時間。
 
 3. 在 `MyNewService` 類別中，使用[平台叫用](../interop/consuming-unmanaged-dll-functions.md)宣告 [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 函式：
 
@@ -340,7 +341,7 @@ ms.locfileid: "71053476"
 
      此文字會出現在 [服務]**** 視窗的 [描述]**** 欄中，向使用者說明服務。
 
-    ![[服務] 視窗中的服務描述。](./media/windows-service-description.png "服務描述")
+    ![服務視窗中的服務描述。](./media/windows-service-description.png "服務說明")
 
 6. 將文字新增至 <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> 屬性。 例如，「MyNewService 顯示名稱」**。
 
@@ -482,7 +483,7 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
     如果服務安裝成功，則命令會報告成功。
 
-    如果系統找不到 *installutil.exe*，請確定它存在於您的電腦中。 此工具會隨 .NET Framework 安裝到資料夾 *%windir%\Microsoft.NET\Framework [64\\&lt;&gt;] Framework 版本*。 例如，64 位元版本的預設路徑是 *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*。
+    如果系統找不到 *installutil.exe*，請確定它存在於您的電腦中。 此工具會隨 .NET Framework 安裝到資料夾 *%windir%\Microsoft.NET\Framework [64] \\ &lt; Framework 版本 &gt; *。 例如，64 位元版本的預設路徑是 *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*。
 
     如果 **installutil.exe** 程序失敗，請檢查安裝記錄以找出原因。 根據預設，記錄檔與服務可執行檔位於同一資料夾。 安裝可能失敗的原因：
     - <xref:System.ComponentModel.RunInstallerAttribute> 類別不存在於 `ProjectInstaller` 類別中。
@@ -493,7 +494,7 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 ## <a name="start-and-run-the-service"></a>啟動並執行服務
 
-1. 在 Windows 中，開啟 [服務]**** 桌面應用程式。 按**Windows**+**R**以開啟 [**執行**] 方塊，輸入*services.msc*，然後按**enter**鍵或選取 **[確定]**。
+1. 在 Windows 中，開啟 [服務]**** 桌面應用程式。 按**Windows** + **R**以開啟 [**執行**] 方塊，輸入*services.msc*，然後按**enter**鍵或選取 **[確定]**。
 
      您應該會看到您的服務列在 [服務]**** 中，並以您為其設定的顯示名稱按字母順序顯示。
 
@@ -542,11 +543,11 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 - 探索 <xref:System.ServiceProcess.ServiceController> 元件，它可讓您將命令傳送至已安裝的服務。
 
-- 在安裝應用程式時使用安裝程式建立事件記錄檔，而不是在應用程式執行時建立事件記錄檔。 當您解除安裝應用程式時，安裝程式會刪除事件記錄檔。 如需詳細資訊，請參閱 <xref:System.Diagnostics.EventLogInstaller>。
+- 在安裝應用程式時使用安裝程式建立事件記錄檔，而不是在應用程式執行時建立事件記錄檔。 當您解除安裝應用程式時，安裝程式會刪除事件記錄檔。 如需詳細資訊，請參閱 <xref:System.Diagnostics.EventLogInstaller> 。
 
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式](index.md)
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
-- [操作方式：偵錯 Windows 服務應用程式](how-to-debug-windows-service-applications.md)
+- [如何： Debug Windows 服務應用程式](how-to-debug-windows-service-applications.md)
 - [服務 (Windows)](/windows/desktop/Services/services)

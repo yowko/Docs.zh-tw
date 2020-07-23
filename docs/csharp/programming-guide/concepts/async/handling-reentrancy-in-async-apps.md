@@ -1,19 +1,20 @@
 ---
 title: 處理非同步應用程式中的重新進入 (C#)
+description: '瞭解如何處理 c # 非同步應用程式中的重新進入，這是指在非同步作業完成時，將其重新進入可能會產生非預期的結果。'
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: fdd440d167b95268a5ae6de0e57a32f0fad66b7c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241808"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925237"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>處理非同步應用程式中的重新進入 (C#)
 
 當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。 如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。
 
-**本主題中的**
+**本主題內容**
 
 - [辨識重新進入](#BKMK_RecognizingReentrancy)
 

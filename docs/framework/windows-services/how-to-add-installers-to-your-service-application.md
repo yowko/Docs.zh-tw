@@ -1,5 +1,6 @@
 ---
-title: 如何：加入 Installer 至服務應用程式
+title: 作法：將安裝程式新增至服務應用程式
+description: 請參閱如何將安裝程式新增至您的服務應用程式。 Visual Studio 隨附的安裝元件，可以安裝與您的服務應用程式相關聯的資源。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 99e2376c50f0b47cc21002b2926818707188805e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f82dd6635555ccb8fcbcdf63cba2495084194731
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053643"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925640"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>如何：加入 Installer 至服務應用程式
+# <a name="how-to-add-installers-to-your-service-application"></a>作法：將安裝程式新增至服務應用程式
 Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的資源。 安裝元件會在其安裝所在的系統上註冊個別服務，並讓服務控制管理員知道服務的存在。 當您使用服務應用程式時，可以選取 [屬性] 視窗中的連結，以便自動將適當的安裝程式加入您的專案。  
   
 > [!NOTE]
@@ -63,6 +64,6 @@ Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
-- [如何：安裝和解除安裝服務](how-to-install-and-uninstall-services.md)
-- [如何：啟動服務](how-to-start-services.md)
-- [如何：指定服務的安全性內容](how-to-specify-the-security-context-for-services.md)
+- [作法：安裝和解除安裝服務](how-to-install-and-uninstall-services.md)
+- [作法：啟動服務](how-to-start-services.md)
+- [作法：指定服務的資訊安全內容](how-to-specify-the-security-context-for-services.md)

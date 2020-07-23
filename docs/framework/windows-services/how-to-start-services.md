@@ -1,19 +1,20 @@
 ---
-title: 如何：啟動服務
+title: 作法：啟動服務
+description: 瞭解幾種啟動服務的方式。 安裝服務之後，必須加以啟動。 開始在服務類別上呼叫 OnStart 方法。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 75fd3aba88bdffbe536ad5dab14996913d0a9d22
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4a2f9b291e60b12b1465fbb6bbbd1604572359a7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053576"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925718"
 ---
-# <a name="how-to-start-services"></a>如何：啟動服務
+# <a name="how-to-start-services"></a>作法：啟動服務
 
 安裝服務之後，必須加以啟動。 從呼叫服務類別上的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法開始。 通常，<xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法會定義服務將執行的有用工作。 服務啟動之後，即會保持作用中，直到您以手動方式暫停或停止它為止。
 
@@ -81,5 +82,5 @@ ms.locfileid: "71053576"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
-- [如何：建立 Windows 服務](how-to-create-windows-services.md)
-- [如何：加入 Installer 至服務應用程式](how-to-add-installers-to-your-service-application.md)
+- [作法：建立 Windows 服務](how-to-create-windows-services.md)
+- [作法：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)

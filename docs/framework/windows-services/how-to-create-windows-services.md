@@ -1,19 +1,20 @@
 ---
-title: 如何：建立 Windows 服務
+title: 作法：建立 Windows 服務
+description: 使用 [Windows 服務] 專案範本來建立服務。 設定 ServiceName 屬性、建立安裝程式，以及覆寫 OnStart 和 OnStop 方法。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 514675b3c3ce1f6701dff571361df672fb520c6a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6918225e39c15a52710fd0d56342aae869b42325
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053663"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925770"
 ---
-# <a name="how-to-create-windows-services"></a>如何：建立 Windows 服務
+# <a name="how-to-create-windows-services"></a>作法：建立 Windows 服務
 當您建立服務時，可以使用稱為 **Windows 服務**的 Visual Studio 專案範本。 這個範本會透過參考適當的類別和命名空間、設定繼承自服務的基底類別，以及覆寫您可能想要覆寫的其中幾個方法，來自動為您執行大部分的工作。  
   
 > [!WARNING]
@@ -70,10 +71,10 @@ ms.locfileid: "71053663"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
-- [如何：以程式設計方式撰寫服務](how-to-write-services-programmatically.md)
-- [如何：加入 Installer 至服務應用程式](how-to-add-installers-to-your-service-application.md)
-- [如何：記錄關於服務的資訊](how-to-log-information-about-services.md)
-- [如何：啟動服務](how-to-start-services.md)
-- [如何：指定服務的安全性內容](how-to-specify-the-security-context-for-services.md)
-- [如何：安裝和解除安裝服務](how-to-install-and-uninstall-services.md)
+- [作法：以程式設計方式撰寫服務](how-to-write-services-programmatically.md)
+- [作法：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)
+- [作法：記錄關於服務的資訊](how-to-log-information-about-services.md)
+- [作法：啟動服務](how-to-start-services.md)
+- [作法：指定服務的資訊安全內容](how-to-specify-the-security-context-for-services.md)
+- [作法：安裝和解除安裝服務](how-to-install-and-uninstall-services.md)
 - [逐步解說：在元件設計工具中建立 Windows 服務應用程式](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

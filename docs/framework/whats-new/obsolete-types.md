@@ -1,23 +1,24 @@
 ---
-title: .NET Framework 中過時的類型
+title: .NET Framework 中的過時類型
+description: 查看在 .NET Framework 4.5 和 .NET 4.6 中過時的類型清單（依元件組織）。 建議的替代方案也會列出。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: b7932a553f39e1f1da2a3946878d6224099da8da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29df80fcefc2565850b026bebd30802dc77e1896
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802683"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925809"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
 
 <a name="introduction"></a> 本文中的表格列出 .NET Framework 4.5 和 .NET Framework 4.6 中已淘汱類型 (依組件分組)。 使用下列連結查看每個組件中過時的型別和建議的替代方案。 因為這些型別已經過時，其所有成員也已經過時。 如需 .NET Framework 類別庫中其他過時成員的清單，請參閱[過時的成員](obsolete-members.md)。
 
-- [系統程式集中的過時類型](#obsolete_types_in_system_assemblies)
+- [系統元件中的過時類型](#obsolete_types_in_system_assemblies)
 
   - [mscorlib.dll](#mscorlib)
 
@@ -55,7 +56,7 @@ ms.locfileid: "74802683"
 
   - [WindowsBase.dll](#WindowsBase)
 
-- [微軟程式集中的過時類型](#obsolete_types_in_microsoft_assemblies)
+- [Microsoft 元件中的過時類型](#obsolete_types_in_microsoft_assemblies)
 
   - [IEHost.dll 和 IEExec.exe](#IEHost)
 
@@ -271,18 +272,18 @@ ms.locfileid: "74802683"
 
 |類型|訊息|
 |----------|-------------|
-|<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|這個型別已經過時。 Passport 身份驗證產品不再受支援，已被[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
+|<xref:System.Web.Configuration.PassportAuthentication?displayProperty=nameWithType>|這個型別已經過時。 已不再支援 Passport 驗證產品，且已由[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
 |<xref:System.Web.Mail.MailAttachment?displayProperty=nameWithType>|建議的替代做法是 <xref:System.Net.Mail.Attachment?displayProperty=nameWithType>。|
 |<xref:System.Web.Mail.MailEncoding?displayProperty=nameWithType>|建議的替代做法是 <xref:System.Net.Mime.TransferEncoding?displayProperty=nameWithType>。|
 |<xref:System.Web.Mail.MailFormat?displayProperty=nameWithType>|建議的替代做法是 <xref:System.Net.Mail.MailMessage.IsBodyHtml%2A?displayProperty=nameWithType>。|
 |<xref:System.Web.Mail.MailMessage?displayProperty=nameWithType>|建議的替代做法是 <xref:System.Net.Mail.MailMessage?displayProperty=nameWithType>。|
 |<xref:System.Web.Mail.MailPriority?displayProperty=nameWithType>|建議的替代做法是 <xref:System.Net.Mail.MailPriority?displayProperty=nameWithType>。|
 |<xref:System.Web.Mail.SmtpMail?displayProperty=nameWithType>|建議的替代做法是 <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>。|
-|<xref:System.Web.Security.PassportAuthenticationEventArgs?displayProperty=nameWithType>|這個型別已經過時。 Passport 身份驗證產品不再受支援，已被[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
-|<xref:System.Web.Security.PassportAuthenticationEventHandler?displayProperty=nameWithType>|這個型別已經過時。 Passport 身份驗證產品不再受支援，已被[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
-|<xref:System.Web.Security.PassportAuthenticationModule?displayProperty=nameWithType>|這個型別已經過時。 Passport 身份驗證產品不再受支援，已被[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
-|<xref:System.Web.Security.PassportIdentity?displayProperty=nameWithType>|這個型別已經過時。 Passport 身份驗證產品不再受支援，已被[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
-|<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|這個型別已經過時。 Passport 身份驗證產品不再受支援，已被[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
+|<xref:System.Web.Security.PassportAuthenticationEventArgs?displayProperty=nameWithType>|這個型別已經過時。 已不再支援 Passport 驗證產品，且已由[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
+|<xref:System.Web.Security.PassportAuthenticationEventHandler?displayProperty=nameWithType>|這個型別已經過時。 已不再支援 Passport 驗證產品，且已由[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
+|<xref:System.Web.Security.PassportAuthenticationModule?displayProperty=nameWithType>|這個型別已經過時。 已不再支援 Passport 驗證產品，且已由[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
+|<xref:System.Web.Security.PassportIdentity?displayProperty=nameWithType>|這個型別已經過時。 已不再支援 Passport 驗證產品，且已由[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
+|<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|這個型別已經過時。 已不再支援 Passport 驗證產品，且已由[Microsoft 帳戶](https://account.microsoft.com/account/Account?destrt=home-index)取代|
 |<xref:System.Web.UI.ObjectConverter?displayProperty=nameWithType>|建議的替代方案是 <xref:System.Convert?displayProperty=nameWithType> 和 <xref:System.String.Format%2A?displayProperty=nameWithType>。|
 
 [回到頁首](#introduction)
@@ -809,4 +810,4 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 ## <a name="see-also"></a>另請參閱
 
 - [類別庫中的過時功能](whats-obsolete.md)
-- [已淘汰的成員](obsolete-members.md)
+- [過時的成員](obsolete-members.md)

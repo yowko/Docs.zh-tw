@@ -1,13 +1,14 @@
 ---
 title: 非同步方法的傳回型別 (C#)
+description: '瞭解非同步方法在 c # 中可以有的傳回型別，以及每個型別和其他資源的程式碼範例。'
 ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2584f1e285a7ab76eb43f9a211a8d2a51c2c55e
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 954e449356819595a3a974a6dece5349e53ec88a
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761872"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925380"
 ---
 # <a name="async-return-types-c"></a>非同步方法的傳回型別 (C#)
 
@@ -21,7 +22,7 @@ ms.locfileid: "83761872"
 
 如需非同步方法的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計 (C#)](./index.md)。  
   
-## <a name="tasktresult-return-type"></a> Task\<TResult\> 傳回型別  
+## <a name="tasktresult-return-type"></a>工作傳回 \<TResult\> 類型  
 傳回 <xref:System.Threading.Tasks.Task%601> 型別用於非同步方法，其中包含[return](../../../language-reference/keywords/return.md) （c #）語句，其中運算元為 `TResult` 。  
   
 在下列範例中，`GetLeisureHours` 非同步方法包含一個傳回整數的 `return` 陳述式。 因此，方法宣告必須指定 `Task<int>` 傳回型別。  <xref:System.Threading.Tasks.Task.FromResult%2A> 非同步方法是傳回字串作業的預留位置。
@@ -74,7 +75,7 @@ ms.locfileid: "83761872"
   
 :::code language="csharp" source="./snippets/async-return-types/async-valuetask.cs":::
 
-## <a name="async-streams-with-iasyncenumerablet"></a>具有 IAsyncEnumerable T 的非同步資料流程 \<\>
+## <a name="async-streams-with-iasyncenumerablet"></a>使用 IAsyncEnumerable 的非同步資料流程\<T\>
 
 從 c # 8.0 開始，非同步方法可能會傳回以表示的*非同步資料流程* <xref:System.Collections.Generic.IAsyncEnumerable%601> 。 當以重複非同步呼叫的區塊產生元素時，非同步資料流程提供了一種方法來列舉從資料流程讀取的專案。 下列範例顯示會產生非同步資料流程的非同步方法：
 
@@ -88,4 +89,4 @@ ms.locfileid: "83761872"
 - [逐步解說：使用 async 和 await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [非同步程式中的控制流程（c #）](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
-- [遇到](../../../language-reference/operators/await.md)
+- [await](../../../language-reference/operators/await.md)

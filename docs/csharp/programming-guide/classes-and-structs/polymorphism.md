@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 2a1ca4c498c5885c7d34475405ac83c4cccecd6f
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 59b5f5d2d5a8f274845607aeca370c316670bd68
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864120"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925445"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多型 (C# 程式設計手冊)
 
@@ -39,7 +39,7 @@ ms.locfileid: "86864120"
 
 ### <a name="virtual-members"></a>虛擬成員
 
-當衍生類別繼承自基類時，它會取得基類的所有方法、欄位、屬性和事件。 衍生類別的設計工具可以針對虛擬方法的行為進行不同的選擇：
+當衍生類別繼承自基類時，它會取得基類的所有方法、欄位、屬性和事件。 衍生類別的設計工具針對虛擬方法的行為有不同的選擇：
 
 - 衍生的類別可能會覆寫基類中的虛擬成員，並定義新的行為。
 - 衍生的類別會繼承最接近的基類方法，而不會覆寫它、保留現有的行為，但允許進一步的衍生類別來覆寫方法。

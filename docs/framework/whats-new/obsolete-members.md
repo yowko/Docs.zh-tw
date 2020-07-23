@@ -1,5 +1,6 @@
 ---
 title: 過時的成員 - .NET Framework
+description: 請參閱 .NET 4.5 和更新版本中已過時的類型成員清單。 型別成員是依元件分組。 這裡會排除過時類型的成員。
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 64bbcd099016dd3d11fea2eaba81ae4559ba6762
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: c0e320b8499fec0c56d2e3560bf6f64194f73dad
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243072"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925822"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework 中過時的成員
 
@@ -314,11 +315,11 @@ ms.locfileid: "81243072"
 > |<xref:System.Data.Odbc.OdbcParameterCollection?displayProperty=nameWithType>|<xref:System.Data.Odbc.OdbcParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.Odbc.OdbcParameterCollection.Add%28System.String%2CSystem.Object%29> 已被取代。 使用 <xref:System.Data.Odbc.OdbcParameterCollection.AddWithValue%28System.String%2CSystem.Object%29?displayProperty=nameWithType>。|
 > |<xref:System.Data.Odbc.OdbcPermission?displayProperty=nameWithType>|<xref:System.Data.Odbc.OdbcPermission.%23ctor>|使用這個成員會產生編譯器錯誤。<br /><br /> <xref:System.Data.Odbc.OdbcPermission.%23ctor> 已被取代。 請將 <xref:System.Security.Permissions.PermissionState.None?displayProperty=nameWithType> 的值傳遞給 <xref:System.Data.Odbc.OdbcPermission.%23ctor%28System.Security.Permissions.PermissionState%29> 建構函式。|
 > |<xref:System.Data.Odbc.OdbcPermission?displayProperty=nameWithType>|<xref:System.Data.Odbc.OdbcPermission.%23ctor%28System.Security.Permissions.PermissionState%2CSystem.Boolean%29>|使用這個成員會產生編譯器錯誤。<br /><br /> <xref:System.Data.Odbc.OdbcPermission.%23ctor%28System.Security.Permissions.PermissionState%2CSystem.Boolean%29> 已被取代。 請將 <xref:System.Security.Permissions.PermissionState.None?displayProperty=nameWithType> 的值傳遞給 <xref:System.Data.Odbc.OdbcPermission.%23ctor%28System.Security.Permissions.PermissionState%29> 建構函式。|
-> |<xref:System.Data.OleDb.OleDbParameterCollection?displayProperty=nameWithType>|<xref:System.Data.OleDb.OleDbParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OleDb.OleDbParameterCollection.Add%28System.String%2CSystem.Object%29> 已被取代。 請使用 <xref:System.Data.OleDb.OleDbParameterCollection.AddWithValue%2A?displayProperty=nameWithType> 方法。|
+> |<xref:System.Data.OleDb.OleDbParameterCollection?displayProperty=nameWithType>|<xref:System.Data.OleDb.OleDbParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OleDb.OleDbParameterCollection.Add%28System.String%2CSystem.Object%29> 已被取代。 使用 <xref:System.Data.OleDb.OleDbParameterCollection.AddWithValue%2A?displayProperty=nameWithType> 方法。|
 > |<xref:System.Data.OleDb.OleDbPermission?displayProperty=nameWithType>|<xref:System.Data.OleDb.OleDbPermission.%23ctor>|使用這個成員會產生編譯器錯誤。<br /><br /> <xref:System.Data.OleDb.OleDbPermission.%23ctor> 已被取代。 請將 <xref:System.Security.Permissions.PermissionState.None?displayProperty=nameWithType> 的值傳遞給 <xref:System.Data.OleDb.OleDbPermission.%23ctor%28System.Security.Permissions.PermissionState%29>。|
 > |<xref:System.Data.OleDb.OleDbPermission?displayProperty=nameWithType>|<xref:System.Data.OleDb.OleDbPermission.%23ctor%28System.Security.Permissions.PermissionState%2CSystem.Boolean%29>|使用這個成員會產生編譯器錯誤。<br /><br /> <xref:System.Data.OleDb.OleDbPermission.%23ctor%28System.Security.Permissions.PermissionState%2CSystem.Boolean%29> 已被取代。 請將 <xref:System.Security.Permissions.PermissionState.None?displayProperty=nameWithType> 的值傳遞給 <xref:System.Data.OleDb.OleDbPermission.%23ctor%28System.Security.Permissions.PermissionState%29>。|
-> |<xref:System.Data.OleDb.OleDbPermission?displayProperty=nameWithType>|<xref:System.Data.OleDb.OleDbPermission.Provider%2A>|<xref:System.Data.OleDb.OleDbPermission.Provider?displayProperty=nameWithType> 屬性已被取代。 請使用 <xref:System.Data.Common.DBDataPermission.Add%28System.String%2CSystem.String%2CSystem.Data.KeyRestrictionBehavior%29?displayProperty=nameWithType> 方法。|
-> |<xref:System.Data.OleDb.OleDbPermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OleDb.OleDbPermissionAttribute.Provider%2A>|<xref:System.Data.OleDb.OleDbPermissionAttribute.Provider?displayProperty=nameWithType> 屬性已被取代。 請使用 <xref:System.Data.Common.DBDataPermission.Add%28System.String%2CSystem.String%2CSystem.Data.KeyRestrictionBehavior%29?displayProperty=nameWithType> 方法。|
+> |<xref:System.Data.OleDb.OleDbPermission?displayProperty=nameWithType>|<xref:System.Data.OleDb.OleDbPermission.Provider%2A>|<xref:System.Data.OleDb.OleDbPermission.Provider?displayProperty=nameWithType> 屬性已被取代。 使用 <xref:System.Data.Common.DBDataPermission.Add%28System.String%2CSystem.String%2CSystem.Data.KeyRestrictionBehavior%29?displayProperty=nameWithType> 方法。|
+> |<xref:System.Data.OleDb.OleDbPermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OleDb.OleDbPermissionAttribute.Provider%2A>|<xref:System.Data.OleDb.OleDbPermissionAttribute.Provider?displayProperty=nameWithType> 屬性已被取代。 使用 <xref:System.Data.Common.DBDataPermission.Add%28System.String%2CSystem.String%2CSystem.Data.KeyRestrictionBehavior%29?displayProperty=nameWithType> 方法。|
 > |<xref:System.Data.SqlClient.SqlClientPermission?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlClientPermission.%23ctor>|使用這個建構函式會產生編譯器錯誤。<br /><br /> <xref:System.Data.SqlClient.SqlClientPermission.%23ctor> 已被取代。 請將 <xref:System.Security.Permissions.PermissionState.None?displayProperty=nameWithType> 的值傳遞給 <xref:System.Data.SqlClient.SqlClientPermission.%23ctor%28System.Security.Permissions.PermissionState%29> 建構函式。|
 > |<xref:System.Data.SqlClient.SqlClientPermission?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlClientPermission.%23ctor%28System.Security.Permissions.PermissionState%2CSystem.Boolean%29>|使用這個建構函式會產生編譯器錯誤。<br /><br /> <xref:System.Data.SqlClient.SqlClientPermission.%23ctor%28System.Security.Permissions.PermissionState%2CSystem.Boolean%29> 已被取代。 請將 <xref:System.Security.Permissions.PermissionState.None?displayProperty=nameWithType> 的值傳遞給 <xref:System.Data.SqlClient.SqlClientPermission.%23ctor%28System.Security.Permissions.PermissionState%29> 建構函式。|
 > |<xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset%2A>|<xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectionReset%2A> 已被取代。 <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> 將會忽略 'connection reset' 關鍵字，而且一律會重設連接。|
@@ -637,7 +638,7 @@ ms.locfileid: "81243072"
 > [!div class="mx-tdBreakAll"]
 > |類型|成員|訊息|
 > |----------|------------|-------------|
-> |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType%2A>|XAML 剖析器已不使用這個項目。 請參閱＜<xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>＞。|
+> |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.ExpressionType%2A>|XAML 剖析器已不使用這個項目。 請參閱＜ <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType> ＞。|
 > |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=nameWithType>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|XAML 剖析器不再使用 `expressionType` 引數。 若要指定預期的傳回類型，請使用 <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29>。 若要指定運算式類型的自訂處理方式，請使用 <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>。|
 
 ## <a name="systemxmldll"></a>System.Xml.dll
@@ -664,7 +665,7 @@ ms.locfileid: "81243072"
 
 ## <a name="iehostdll-and-ieexecexe"></a>IEHost.dll 和 IEExec.exe
 
-已從 .NET Framework 中移除 Iehost.dll .dll 和 Ieexec.exe 元件。 其所有類型和成員都已過時，且在 .NET Framework 4.5 和更新版本中不受支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 這項技術的替代做法包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。
+IEHost.dll 和 IEExec.exe 元件已從 .NET Framework 中移除。 其所有類型和成員都已過時，且在 .NET Framework 4.5 和更新版本中不受支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 這項技術的替代做法包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。
 
 ## <a name="isymwrapperdll"></a>ISymWrapper.dll
 

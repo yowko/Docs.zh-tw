@@ -1,5 +1,6 @@
 ---
-title: 如何：指定服務的安全性內容
+title: 作法：指定服務的資訊安全內容
+description: 指定服務的安全性內容。 在預設系統帳戶內容中執行的服務，具有其他系統資源存取權限，而不是登入的使用者。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: dd2a9c4485e151d4cb1c9d5ae3a95a69fcc416d4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ed531cb520a781fd38f8bf5491da6948901a1d5
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053586"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925731"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>如何：指定服務的安全性內容
+# <a name="how-to-specify-the-security-context-for-services"></a>作法：指定服務的資訊安全內容
 根據預設，服務會在與登入使用者不同的安全性內容中執行。 服務會在稱為 `LocalSystem` 的預設系統帳戶內容中執行，授與他們與使用者不同的系統資源存取權限。 您可以變更此行為，以指定服務應在其中執行的不同使用者帳戶。  
   
  您可以藉由針對服務執行所在的處理序，操作 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性來設定安全性內容。 這個屬性可讓您將服務設定為下列其中一種帳戶類型：  
@@ -47,5 +48,5 @@ ms.locfileid: "71053586"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
-- [如何：加入 Installer 至服務應用程式](how-to-add-installers-to-your-service-application.md)
-- [如何：建立 Windows 服務](how-to-create-windows-services.md)
+- [作法：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)
+- [作法：建立 Windows 服務](how-to-create-windows-services.md)

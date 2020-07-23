@@ -1,12 +1,13 @@
 ---
 title: 屬性 (C#)
+description: '瞭解如何使用屬性，將中繼資料或宣告式資訊與 c # 中的程式碼產生關聯。 您可以在執行時間使用反映來查詢屬性。'
 ms.date: 04/26/2018
-ms.openlocfilehash: 358285a39f72ad3ddf1b265e20b443308375d074
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 5c57838b649531d8e8fe89919771adf8830e7f54
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241574"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924981"
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 
@@ -101,8 +102,8 @@ using System.Reflection;
 
 下列清單包含一些程式碼中常見的屬性用法：
 
-- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱<xref:System.Web.Services.WebMethodAttribute>。
-- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.MarshalAsAttribute>。
+- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱 <xref:System.Web.Services.WebMethodAttribute> 。
+- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 。
 - 描述適用於類別、方法和介面的 COM 屬性。
 - 使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別呼叫 Unmanaged 程式碼。
 - 針對標題、版本、描述或商標等方面來描述您的組件。
@@ -115,7 +116,7 @@ using System.Reflection;
 
 ## <a name="related-sections"></a>相關章節
 
-如需詳細資訊，請參閱
+如需詳細資訊，請參閱：
 
 - [建立自訂屬性 (C#)](creating-custom-attributes.md)  
 - [使用反映存取屬性 (C#)](accessing-attributes-by-using-reflection.md)  

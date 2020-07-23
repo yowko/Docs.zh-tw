@@ -1,5 +1,6 @@
 ---
 title: .NET Framework 協助工具的新功能
+description: 從 .NET Framework 4.7.1 開始，請參閱 .NET 協助工具的新功能。 協助工具功能可讓應用程式為輔助技術使用者提供適當的體驗。
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 593591ca340cc130a3a6d1daa015a849b8eca0f8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244149"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925835"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
@@ -22,7 +23,7 @@ ms.locfileid: "85244149"
 
 如果您的應用程式是以 .NET Framework 4.7 或較早版本為目標，但是在 .NET Framework 4.7.1 或更新版本上執行，您可以將其設定為選擇加入協助工具功能。 如果您的應用程式是以 .NET Framework 4.7.1 或更新版本為目標，您也可以將其設定為使用舊版的功能 (且不利用協助工具功能)。 包含協助工具功能的每個 .NET Framework 版本都具有特定版本的協助工具參數，您可以將其新增至 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 應用程式佈建檔區段中的專案。 以下是支援的參數：
 
-|版本|參數|
+|版本|Switch|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -472,7 +473,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **High contrast**
 
-從 .NET Framework 4.7.1 開始，已對各種 WPF 控制項進行高對比改善。 現在，設定 <xref:System.Windows.SystemParameters.HighContrast%2A> 佈景主題時，可以看到它們。 其中包括：
+從 .NET Framework 4.7.1 開始，已對各種 WPF 控制項進行高對比改善。 現在，設定 <xref:System.Windows.SystemParameters.HighContrast%2A> 佈景主題時，可以看到它們。 其中包含：
 
 - <xref:System.Windows.Controls.Expander> 控制項
 
@@ -709,4 +710,4 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 的新功能](index.md)
+- [.NET Framework 中的新功能](index.md)

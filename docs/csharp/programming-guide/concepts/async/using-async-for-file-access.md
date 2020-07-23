@@ -1,13 +1,14 @@
 ---
 title: 使用非同步方式存取檔案 (C#)
+description: '瞭解如何使用非同步功能來存取 c # 中的檔案。 您可以呼叫非同步方法，而不需要使用回呼或跨方法分割程式碼。'
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: eb67bd408fe37b99e6c5ffdc2550e8f95110d7eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396953"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925120"
 ---
 # <a name="using-async-for-file-access-c"></a>使用非同步方式存取檔案 (C#)
 您可以使用非同步功能來存取檔案。 使用非同步功能，您就可以呼叫非同步方法，而不需要使用回呼或將您的程式碼分散到多種方法或 Lambda 運算式上。 若要讓同步程式碼變成非同步，只要呼叫非同步方法 (而不是同步方法)，然後將幾個關鍵字新增至程式碼即可。  

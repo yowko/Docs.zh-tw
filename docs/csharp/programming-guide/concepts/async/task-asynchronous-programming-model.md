@@ -1,13 +1,14 @@
 ---
 title: 使用 async 和 await 進行非同步工作程式設計模型 (TAP) (C#)
+description: '瞭解何時及如何使用以工作為基礎的非同步程式設計，這是以 c # 進行非同步程式設計的簡化方法。'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: ddda97e9c77473120ed32b0e224b07d7c4d71b1e
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990074"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925133"
 ---
 # <a name="task-asynchronous-programming-model"></a>非同步工作程式設計模型
 
@@ -240,7 +241,7 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 
 ## <a name="related-topics-and-samples-visual-studio"></a><a name="BKMK_RelatedTopics"></a> 相關主題和範例 (Visual Studio)
 
-|Title|描述|範例|
+|標題|描述|範例|
 |-----------|-----------------|------------|
 |[逐步解說：使用 async 和 await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)|顯示如何將同步 WPF 方案轉換為非同步 WPF 方案。 應用程式會下載一系列的網站。|[非同步範例：存取 Web 逐步解說 (英文)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|
 |[如何使用 System.threading.tasks.task.whenall 擴充非同步逐步解說（c #）](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|將 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 加入至前一個逐步解說。 使用 `WhenAll` 會同時開始進行所有的下載。||
@@ -252,7 +253,7 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 |[WhenAny：銜接 .NET Framework 和 Windows 執行階段](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|顯示如何在 Windows 執行階段中進行 .NET Framework 與 IAsyncOperations 之工作型別之間的橋接，讓您可以搭配使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 與 Windows 執行階段方法。|[非同步範例：銜接 .NET 和 Windows 執行階段 (AsTask 和 WhenAny) (英文)](https://code.msdn.microsoft.com/Async-Sample-Bridging-d6a2f739)|
 |非同步取消作業：銜接 .NET Framework 和 Windows 執行階段|顯示如何在 Windows 執行階段中進行 .NET Framework 與 IAsyncOperations 之工作型別之間的橋接，讓您可以搭配使用 <xref:System.Threading.CancellationTokenSource> 與 Windows 執行階段方法。|[非同步範例：銜接 .NET 和 Windows 執行階段 (AsTask & Cancellation) (英文)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|
 |[使用非同步方式存取檔案 (C#)](./using-async-for-file-access.md)|列出並示範使用 async 和 await 存取檔案的優點。||
-|[工作式非同步模式 (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述 .NET Framework 中非同步的新模式。 這個模式是根據 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類型。||
+|[以工作為基礎的非同步模式 (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|描述 .NET Framework 中非同步的新模式。 這個模式是根據 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類型。||
 |[Channel 9 上的非同步影片](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|提供有關非同步程式設計的各種不同視訊連結。||
 
 ## <a name="complete-example"></a><a name="BKMK_CompleteExample"></a>完整範例

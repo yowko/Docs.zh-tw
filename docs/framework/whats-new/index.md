@@ -1,5 +1,6 @@
 ---
-title: .NET Framework 中的新功能
+title: .NET Framework 的新功能
+description: 請參閱各種 .NET Framework 版本的新功能。 閱讀每個版本的重要新功能和改進的摘要。
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ee67e6577c5ad2486a483e3593e4d0a8ecbb0407
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 42f872bba87a88fc92a37879e815ee7068407cf7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244435"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925588"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework 的新功能
 
@@ -201,7 +202,7 @@ ms.locfileid: "85244435"
 
 - [基底類別](#core-472)
 - [ASP.NET](#asp-net472)
-- [網路功能](#net472)
+- [網路](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -350,9 +351,9 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **其他集合 API**
 
-.NET Framework 4.7.2 將一些新的 API 新增至 <xref:System.Collections.Generic.SortedSet%601> 和 <xref:System.Collections.Generic.HashSet%601> 類型。 其中包括：
+.NET Framework 4.7.2 將一些新的 API 新增至 <xref:System.Collections.Generic.SortedSet%601> 和 <xref:System.Collections.Generic.HashSet%601> 類型。 其中包含：
 
-- `TryGetValue` 方法，可將其他集合類型使用的 try 模式擴充為下列兩種類型。 這兩個方法為：
+- `TryGetValue` 方法，可將其他集合類型使用的 try 模式擴充為下列兩種類型。 這些方法為：
 
   - [public bool HashSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
   - [public bool SortedSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
@@ -589,7 +590,7 @@ End Class
 
 - [基底類別](#core471)
 - [Common language runtime （CLR）](#clr)
-- [網路功能](#net471)
+- [網路](#net471)
 - [ASP.NET](#asp-net471)
 
 此外，.NET Framework 4.7.1 中的主要焦點是改善協助工具，以允許應用程式為輔助技術使用者提供適當的體驗。 如需 .NET Framework 4.7.1 中協助工具改善的資訊；請參閱 [.NET Framework 協助工具的新功能](whats-new-in-accessibility.md)。
@@ -671,7 +672,7 @@ ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET
 .NET Framework 4.7 包含下列領域的新功能：
 
 - [基底類別](#Core47)
-- [網路功能](#net47)
+- [網路](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -741,7 +742,7 @@ Windows Communication Foundation (WCF) 加入下列功能和變更：
 
 **改進 WCF 應用程式和 WCF 序列化的可靠性**
 
-WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能和序列化選項的可靠性。 其中包括：
+WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能和序列化選項的可靠性。 其中包含：
 
 - 在呼叫 **SocketConnection.BeginRead** 和 **SocketConnection.Read** 時更有效地支援混合非同步和同步程式碼。
 - 改善中止與 **SharedConnectionListener** 和 **DuplexChannelBinder** 連線時的可靠性。
@@ -841,7 +842,7 @@ End Class
 
 然後，您可以建立 DataAnnotation.Localization.fr.resx 資源檔，其索引鍵為錯誤訊息字串，而其值為當地語系化的錯誤訊息。 檔案必須位於 `App.LocalResources` 資料夾中。 例如，下列是索引鍵和其法文 (fr) 當地語系化錯誤訊息的值︰
 
-| 名稱                                 | 值                                     |
+| Name                                 | 值                                     |
 | ------------------------------------ | ----------------------------------------- |
 | The rating must be between 1 and 10. | La note doit être comprise entre 1 et 10. |
 
@@ -1308,7 +1309,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 
 Windows Presentation Foundation 包含數個改進和變更。
 
-**提升效能**
+**改善的效能**
 
 .NET Framework 4.6.1 已修正引發觸控事件的延遲。 此外，<xref:System.Windows.Controls.RichTextBox> 控制項中的輸入也不會在快速輸入期間佔用呈現執行緒。
 
@@ -1709,7 +1710,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
   預設值是 `false`。
 
-- **網路功能**
+- **網路**
 
   - **通訊端重複使用**
 
@@ -1743,7 +1744,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
 - **字碼頁編碼方式的支援**
 
-  .NET Core 主要支援 Unicode 編碼方式，並且預設會提供字碼頁編碼方式的有限支援。 您可以透過使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法註冊字碼頁編碼方式，來加入 .NET Framework 中可用但不受 .NET Core 支援之字碼頁編碼方式的支援。 如需詳細資訊，請參閱 <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>。
+  .NET Core 主要支援 Unicode 編碼方式，並且預設會提供字碼頁編碼方式的有限支援。 您可以透過使用 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> 方法註冊字碼頁編碼方式，來加入 .NET Framework 中可用但不受 .NET Core 支援之字碼頁編碼方式的支援。 如需詳細資訊，請參閱 <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType> 。
 
 - **.NET Native**
 

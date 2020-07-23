@@ -4,12 +4,12 @@ description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署�
 ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9e0b99b6706bf51adaa6e3795d1c81179e14cb7a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 66a5493f0084f5fa86c3eb928d2e4a4b4999e764
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618333"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924587"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Databricks
 
@@ -26,7 +26,7 @@ ms.locfileid: "85618333"
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 開始之前，請執行下列工作：
 
@@ -154,7 +154,7 @@ ms.locfileid: "85618333"
    ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
-   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
 2. 執行下列命令，上傳您的叢集將執行應用程式所需的其餘檔案：壓縮的 publish 資料夾、 *input.txt*和*microsoft-spark-2.4. x-0.3.1 .jar*。
@@ -164,7 +164,7 @@ ms.locfileid: "85618333"
    databricks fs cp input.txt dbfs:/input.txt
 
    cd mySparkApp\bin\Release\netcoreapp3.1\ubuntu.16.04-x64 directory
-   databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
+   databricks fs cp publish.zip dbfs:/spark-dotnet/publish.zip
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
 
@@ -196,7 +196,7 @@ ms.locfileid: "85618333"
 
 3. 選取 [**確認**] 以確認您的叢集設定。
 
-## <a name="run-your-app"></a>執行您的應用程式
+## <a name="run-your-app"></a>執行應用程式
 
 1. 流覽至您的作業，然後選取 [**立即執行**]，在新設定的 Spark 叢集上執行您的作業。
 
@@ -212,7 +212,7 @@ ms.locfileid: "85618333"
 
 ## <a name="clean-up-resources"></a>清除資源
 
-如果您不再需要 Databricks 工作區，您可以在 Azure 入口網站中刪除您的 Azure Databricks 資源。 您也可以選取資源群組名稱來開啟資源群組頁面，然後選取 [刪除資源群組]  。
+如果您不再需要 Databricks 工作區，您可以在 Azure 入口網站中刪除您的 Azure Databricks 資源。 您也可以選取資源群組名稱來開啟資源群組頁面，然後選取 [刪除資源群組]。
 
 ## <a name="next-steps"></a>後續步驟
 

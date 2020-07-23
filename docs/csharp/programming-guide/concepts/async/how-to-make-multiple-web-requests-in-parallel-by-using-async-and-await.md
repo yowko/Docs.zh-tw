@@ -1,13 +1,14 @@
 ---
 title: '如何使用 async 和 await，同時發出多個 web 要求（c #）'
+description: '瞭解如何在 c # 中使用 await 運算子分隔建立工作，而不是在工作建立時套用。'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 899dfd9165d199a67a5178bb351081ee544b231f
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241795"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925159"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何使用 async 和 await，同時發出多個 web 要求（c #）
 在非同步方法中，工作會在建立時啟動。 [Await](../../../language-reference/operators/await.md)運算子會套用至方法中的工作點，在此情況下無法繼續處理，直到工作完成為止。 通常會在建立工作時立即等待，如下列範例所示。  

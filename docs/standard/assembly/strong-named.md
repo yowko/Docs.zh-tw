@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-ms.openlocfilehash: a2db0efcb57226a757796c311309ce8f749a398b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 069e42af6f8d49363d0264c0f6167b4afa3acd61
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378604"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925653"
 ---
 # <a name="strong-named-assemblies"></a>強式名稱組件
 
@@ -30,9 +30,7 @@ ms.locfileid: "83378604"
 
 ## <a name="why-strong-name-your-assemblies"></a>為什麼需要強式命名您的組件？
 
-當您參考強式名稱的組件時，您會希望取得某些優點，例如版本控制和命名保護。 在 .NET Framework 中，可將強式名稱的元件安裝在全域組件快取中，這是啟用某些案例的必要條件。
-
-強式名稱的組件在下列情況下很實用：
+針對 .NET Framework，強式名稱的元件在下列案例中很有用：
 
 - 您想要啟用組件以供強式名稱的組件參考，或者您想要授與 `friend` 存取權，以從其他強式名稱的組件存取您的組件。
 
@@ -42,9 +40,11 @@ ms.locfileid: "83378604"
 
 - 您想要藉由套用發行者原則來為您的應用程式集中化服務，這表示元件必須安裝在全域組件快取中。
 
-如果您是開放原始碼開發人員，而且想要強名稱元件的身分識別優點，請考慮將與元件相關聯的私密金鑰簽入到您的原始檔控制系統。
+針對 .NET Core，強式名稱的元件不提供材質優勢。
 
-## <a name="see-also"></a>請參閱
+如果您是開放原始碼開發人員，而且想要強名稱元件的身分識別優點，以更符合 .NET Framework 的相容性，請考慮將與元件相關聯的私密金鑰簽入您的原始檔控制系統。
+
+## <a name="see-also"></a>另請參閱
 
 - [全域組件快取](../../framework/app-domains/gac.md)
 - [如何：使用強式名稱簽署元件](sign-strong-name.md)

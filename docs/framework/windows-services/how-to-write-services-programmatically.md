@@ -1,5 +1,6 @@
 ---
-title: 如何：以程式設計方式撰寫服務
+title: 作法：以程式設計方式撰寫服務
+description: 瞭解如何藉由自行設定繼承和其他基礎結構元素，以程式設計方式撰寫服務。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: 5637d569ad5261bff6865af4ab2ed8b7631d2d38
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9693e3d387f38319519ab04211d8219fe1e5dda1
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053552"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925705"
 ---
-# <a name="how-to-write-services-programmatically"></a>如何：以程式設計方式撰寫服務
+# <a name="how-to-write-services-programmatically"></a>作法：以程式設計方式撰寫服務
 如果您選擇不使用 Windows 服務專案範本，則可以藉由自行設定繼承和其他基礎結構元素來撰寫自己的服務。 當您以程式設計方式建立服務時，必須執行範本會為您處理的數個步驟：  
   
 - 您必須將服務類別設定為繼承自 <xref:System.ServiceProcess.ServiceBase> 類別。  
@@ -35,7 +36,7 @@ ms.locfileid: "71053552"
   
     3. 捲動到 [System.ServiceProcess.dll]****，然後按一下 [選取]****。  
   
-    4. 按一下 [確定]  。  
+    4. 按一下 [確定]。  
   
 2. 加入類別，並將它設定為繼承自 <xref:System.ServiceProcess.ServiceBase>：  
   
@@ -73,7 +74,7 @@ ms.locfileid: "71053552"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
-- [如何：建立 Windows 服務](how-to-create-windows-services.md)
-- [如何：加入 Installer 至服務應用程式](how-to-add-installers-to-your-service-application.md)
-- [如何：記錄關於服務的資訊](how-to-log-information-about-services.md)
+- [作法：建立 Windows 服務](how-to-create-windows-services.md)
+- [作法：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)
+- [作法：記錄關於服務的資訊](how-to-log-information-about-services.md)
 - [逐步解說：在元件設計工具中建立 Windows 服務應用程式](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

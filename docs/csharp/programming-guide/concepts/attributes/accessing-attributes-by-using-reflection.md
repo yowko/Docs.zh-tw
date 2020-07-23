@@ -1,16 +1,17 @@
 ---
 title: 使用反射存取屬性 (C#)
+description: '使用反映來取得使用 GetCustomAttributes 方法，以 c # 中的自訂屬性定義的資訊。'
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9425141d64fd061d0c1f628228693cce02f7bfa0
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595500"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925094"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>使用反射存取屬性 (C#)
-您可以定義自訂屬性並將它們放在原始程式碼的事實，對於擷取並處理該項資訊並沒有什麼幫助。 使用反射，即可擷取已使用自訂屬性所定義的資訊。 重要方法是 `GetCustomAttributes`，這會傳回為來源程式碼屬性的執行階段對等項目的物件陣列。 這個方法有數個多載的版本。 如需詳細資訊，請參閱 <xref:System.Attribute>。  
+您可以定義自訂屬性並將它們放在原始程式碼的事實，對於擷取並處理該項資訊並沒有什麼幫助。 使用反射，即可擷取已使用自訂屬性所定義的資訊。 重要方法是 `GetCustomAttributes`，這會傳回為來源程式碼屬性的執行階段對等項目的物件陣列。 這個方法有數個多載的版本。 如需詳細資訊，請參閱 <xref:System.Attribute> 。  
   
  屬性規格，例如︰  
   
@@ -117,7 +118,7 @@ class TestAuthorAttribute
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# 程式設計指南](../../index.md)
+- [C # 程式設計指南](../../index.md)
 - [擷取儲存於屬性中的資訊](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
 - [反映 (C#)](../reflection.md)
 - [屬性 (C#)](./index.md)

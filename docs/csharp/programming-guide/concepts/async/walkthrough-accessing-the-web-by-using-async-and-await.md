@@ -1,13 +1,14 @@
 ---
 title: 逐步解說：使用 async 和 await 存取 Web (C#)
+description: '本逐步解說會將同步應用程式轉換成 c # 中使用 async 和 await 功能的非同步方案。'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: edc45f252b75c742afe4f073ca7dd92d9784d2c4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d643793bfcdeaaeff56dd252c510d197a45442f9
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240645"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925107"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>逐步解說：使用 async 和 await 存取 Web (C#)
 
@@ -692,7 +693,7 @@ namespace AsyncExampleWPF
 
 - [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110)) (非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic))
 - [async](../../../language-reference/keywords/async.md)
-- [遇到](../../../language-reference/operators/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
 - [非同步方法的傳回型別 (C#)](./async-return-types.md)
 - [以工作為基礎的非同步程式設計 (TAP)](https://www.microsoft.com/download/details.aspx?id=19957)

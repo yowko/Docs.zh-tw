@@ -1,17 +1,18 @@
 ---
-title: 如何使用屬性 （C#） 創建 C/C++聯合
+title: '如何使用屬性建立 C/c + + 等位（c #）'
+description: '瞭解如何在 c # 中使用屬性來自訂結構在記憶體中的配置方式。 這個範例會從 C/c + + 執行等位的對等。'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 766a070105441630dfd8fecf7b9f68fa6818fe50
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141582"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925068"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>如何使用屬性 （C#） 創建 C/C++聯合
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>如何使用屬性建立 C/c + + 等位（c #）
 
-通過使用屬性，可以自訂結構在記憶體中的佈局方式。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。
+藉由使用屬性，您可以自訂結構在記憶體中的配置方式。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。
 
 ## <a name="example"></a>範例
 
@@ -73,7 +74,7 @@ struct TestExplicit
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# 程式設計指南](../../index.md)
+- [C # 程式設計指南](../../index.md)
 - [屬性](../../../../standard/attributes/index.md)
 - [反映 (C#)](../reflection.md)
 - [屬性 (C#)](index.md)

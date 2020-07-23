@@ -3,18 +3,18 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令會將套件推送至伺服器並發行。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895462"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925510"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet nuget push` - 將套件推送至伺服器並發行。
 
@@ -22,7 +22,7 @@ ms.locfileid: "82895462"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
-    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols]
+    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols true]
     [--no-service-endpoint] [-s|--source <SOURCE>] [--skip-duplicate]
     [-sk|--symbol-api-key <API_KEY>] [-ss|--symbol-source <SOURCE>]
     [-t|--timeout <TIMEOUT>]
@@ -34,7 +34,7 @@ dotnet nuget push -h|--help
 
 `dotnet nuget push` 命令會將套件推送至伺服器並發行。 推送命令會使用在系統 NuGet 組態檔案或組態檔案鏈中找到的伺服器及認證詳細資料。 如需組態檔的詳細資訊，請參閱[設定 NuGet 行為](/nuget/consume-packages/configuring-nuget-behavior)。 NuGet 預設組態的取得方式如下：載入 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS)，接著從磁碟機根目錄開始直到目前目錄，載入其中的任何 *nuget.config* 或 *.nuget\nuget.config*。
 
-命令會推送現有的封裝。 它不會建立封裝。 若要建立封裝，請[`dotnet pack`](dotnet-pack.md)使用。
+命令會推送現有的封裝。 它不會建立封裝。 若要建立封裝，請使用 [`dotnet pack`](dotnet-pack.md) 。
 
 ## <a name="arguments"></a>引數
 
@@ -42,7 +42,7 @@ dotnet nuget push -h|--help
 
   指定套件推送目標的檔案路徑。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-d|--disable-buffering`**
 
@@ -64,7 +64,7 @@ dotnet nuget push -h|--help
 
   伺服器的 API 金鑰。
 
-- **`-n|--no-symbols`**
+- **`-n|--no-symbols true`**
 
   不推送符號 (即使存在)。
 

@@ -1,5 +1,6 @@
 ---
 title: Windows 服務應用程式簡介
+description: 閱讀 Windows 服務應用程式簡介。 服務可讓您建立在自己的 Windows 會話中執行且長時間執行的可執行應用程式。
 ms.date: 03/30/2017
 f1_keywords:
 - ServiceController
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: 8ff1adaa025dc11417c3dcfdaf42ea203828be57
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 13bd1f42776ac76a43a83667465ac0ca277e3452
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053513"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925666"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服務應用程式簡介
 Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執行的應用程式，並使其在自己的 Windows 工作階段中執行。 這些服務可以在電腦開機時自動啟動、可以暫停和重新啟動，而且不會顯示任何使用者介面。 這些功能讓服務非常適合在伺服器上使用，或者，當您需要不會干擾其他在同一部電腦上工作的使用者且又長時間執行的功能時使用。 您也可以在特定使用者帳戶的安全性內容中執行服務，此使用者帳戶不同於登入的使用者帳戶或預設電腦帳戶。 如需服務和 Windows 工作階段的詳細資訊，請參閱 Windows SDK 文件。  
@@ -72,7 +73,7 @@ Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執
 ## <a name="services-and-the-servicecontroller-component"></a>服務和 ServiceController 元件  
  <xref:System.ServiceProcess.ServiceController> 元件可用來連線到已安裝的服務並操控其狀態；使用 <xref:System.ServiceProcess.ServiceController> 元件可啟動和停止服務、暫停和繼續其運作，以及將自訂命令傳送到服務。 不過，當您建立服務應用程式時，不需要使用 <xref:System.ServiceProcess.ServiceController> 元件。 事實上，在大部分情況下，<xref:System.ServiceProcess.ServiceController> 元件所存在的應用程式，應該有別於定義服務的 Windows 服務應用程式。  
   
- 如需詳細資訊，請參閱 <xref:System.ServiceProcess.ServiceController>。  
+ 如需詳細資訊，請參閱 <xref:System.ServiceProcess.ServiceController> 。  
   
 ## <a name="requirements"></a>需求  
   
@@ -84,9 +85,9 @@ Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執
 
 - [Windows 服務應用程式](index.md)
 - [服務應用程式的程式設計架構](service-application-programming-architecture.md)
-- [如何：建立 Windows 服務](how-to-create-windows-services.md)
-- [如何：安裝和解除安裝服務](how-to-install-and-uninstall-services.md)
-- [如何：啟動服務](how-to-start-services.md)
-- [如何： Debug Windows 服務應用程式](how-to-debug-windows-service-applications.md)
+- [作法：建立 Windows 服務](how-to-create-windows-services.md)
+- [作法：安裝和解除安裝服務](how-to-install-and-uninstall-services.md)
+- [作法：啟動服務](how-to-start-services.md)
+- [作法：偵錯 Windows 服務應用程式](how-to-debug-windows-service-applications.md)
 - [逐步解說：在元件設計工具中建立 Windows 服務應用程式](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [如何：加入 Installer 至服務應用程式](how-to-add-installers-to-your-service-application.md)
+- [作法：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)
