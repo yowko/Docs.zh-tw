@@ -1,5 +1,6 @@
 ---
-title: 如何：暫停 Windows 服務 (Visual Basic)
+title: 作法：暫停 Windows 服務 (Visual Basic)
+description: 閱讀如何使用 ServiceController 元件，以 Visual Basic 暫停本機電腦上的 Windows 服務（例如 IIS 管理服務）。
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,46 +11,46 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: 166eda4a9348188fa6e5048fd3ce41645cde4816
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 628cc2e896f7f8a289e52674b721c4aef605854c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053603"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925562"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a><span data-ttu-id="abd17-102">如何：暫停 Windows 服務 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="abd17-102">How to: Pause a Windows Service (Visual Basic)</span></span>
-<span data-ttu-id="abd17-103">這個範例會使用 <xref:System.ServiceProcess.ServiceController> 元件，在本機電腦上暫停 IIS 管理服務。</span><span class="sxs-lookup"><span data-stu-id="abd17-103">This example uses the <xref:System.ServiceProcess.ServiceController> component to pause the IIS Admin service on the local computer.</span></span>  
+# <a name="how-to-pause-a-windows-service-visual-basic"></a><span data-ttu-id="e5079-103">作法：暫停 Windows 服務 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5079-103">How to: Pause a Windows Service (Visual Basic)</span></span>
+<span data-ttu-id="e5079-104">這個範例會使用 <xref:System.ServiceProcess.ServiceController> 元件，在本機電腦上暫停 IIS 管理服務。</span><span class="sxs-lookup"><span data-stu-id="e5079-104">This example uses the <xref:System.ServiceProcess.ServiceController> component to pause the IIS Admin service on the local computer.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="abd17-104">範例</span><span class="sxs-lookup"><span data-stu-id="abd17-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e5079-105">範例</span><span class="sxs-lookup"><span data-stu-id="e5079-105">Example</span></span>  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
 [!code-vb[VbRadconService#12](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#12)]  
   
- <span data-ttu-id="abd17-105">這個程式碼範例也可用為 IntelliSense 程式碼片段。</span><span class="sxs-lookup"><span data-stu-id="abd17-105">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="abd17-106">在程式碼片段選擇器中，它位於 [Windows 作業系統] > [Windows 服務]\*\*\*\* 中。</span><span class="sxs-lookup"><span data-stu-id="abd17-106">In the code snippet picker, it is located in **Windows Operating System > Windows Services**.</span></span> <span data-ttu-id="abd17-107">如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。</span><span class="sxs-lookup"><span data-stu-id="abd17-107">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
+ <span data-ttu-id="e5079-106">這個程式碼範例也可用為 IntelliSense 程式碼片段。</span><span class="sxs-lookup"><span data-stu-id="e5079-106">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="e5079-107">在程式碼片段選擇器中，它位於 [Windows 作業系統] > [Windows 服務]\*\*\*\* 中。</span><span class="sxs-lookup"><span data-stu-id="e5079-107">In the code snippet picker, it is located in **Windows Operating System > Windows Services**.</span></span> <span data-ttu-id="e5079-108">如需詳細資訊，請參閱[程式碼片段](/visualstudio/ide/code-snippets)。</span><span class="sxs-lookup"><span data-stu-id="e5079-108">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="abd17-108">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="abd17-108">Compiling the Code</span></span>  
- <span data-ttu-id="abd17-109">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="abd17-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e5079-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="e5079-109">Compiling the Code</span></span>  
+ <span data-ttu-id="e5079-110">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="e5079-110">This example requires:</span></span>  
   
-- <span data-ttu-id="abd17-110">System.serviceprocess.dll 的專案參考。</span><span class="sxs-lookup"><span data-stu-id="abd17-110">A project reference to System.serviceprocess.dll.</span></span>  
+- <span data-ttu-id="e5079-111">System.serviceprocess.dll 的專案參考。</span><span class="sxs-lookup"><span data-stu-id="e5079-111">A project reference to System.serviceprocess.dll.</span></span>  
   
-- <span data-ttu-id="abd17-111"><xref:System.ServiceProcess> 命名空間成員的存取權。</span><span class="sxs-lookup"><span data-stu-id="abd17-111">Access to the members of the <xref:System.ServiceProcess> namespace.</span></span> <span data-ttu-id="abd17-112">新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。</span><span class="sxs-lookup"><span data-stu-id="abd17-112">Add an `Imports` statement if you are not fully qualifying member names in your code.</span></span> <span data-ttu-id="abd17-113">如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。</span><span class="sxs-lookup"><span data-stu-id="abd17-113">For more information, see [Imports Statement (.NET Namespace and Type)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
+- <span data-ttu-id="e5079-112"><xref:System.ServiceProcess> 命名空間成員的存取權。</span><span class="sxs-lookup"><span data-stu-id="e5079-112">Access to the members of the <xref:System.ServiceProcess> namespace.</span></span> <span data-ttu-id="e5079-113">新增 `Imports` 陳述式 (如果未在程式碼中完整限定成員名稱)。</span><span class="sxs-lookup"><span data-stu-id="e5079-113">Add an `Imports` statement if you are not fully qualifying member names in your code.</span></span> <span data-ttu-id="e5079-114">如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。</span><span class="sxs-lookup"><span data-stu-id="e5079-114">For more information, see [Imports Statement (.NET Namespace and Type)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="abd17-114">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="abd17-114">Robust Programming</span></span>  
- <span data-ttu-id="abd17-115"><xref:System.ServiceProcess.ServiceController> 類別的 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 屬性預設是本機電腦。</span><span class="sxs-lookup"><span data-stu-id="abd17-115">The <xref:System.ServiceProcess.ServiceController.MachineName%2A> property of the <xref:System.ServiceProcess.ServiceController> class is the local computer by default.</span></span> <span data-ttu-id="abd17-116">若要參考另一部電腦上的 Windows 服務，請將 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 屬性變更為該電腦的名稱。</span><span class="sxs-lookup"><span data-stu-id="abd17-116">To reference Windows services on another computer, change the <xref:System.ServiceProcess.ServiceController.MachineName%2A> property to the name of that computer.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="e5079-115">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="e5079-115">Robust Programming</span></span>  
+ <span data-ttu-id="e5079-116"><xref:System.ServiceProcess.ServiceController> 類別的 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 屬性預設是本機電腦。</span><span class="sxs-lookup"><span data-stu-id="e5079-116">The <xref:System.ServiceProcess.ServiceController.MachineName%2A> property of the <xref:System.ServiceProcess.ServiceController> class is the local computer by default.</span></span> <span data-ttu-id="e5079-117">若要參考另一部電腦上的 Windows 服務，請將 <xref:System.ServiceProcess.ServiceController.MachineName%2A> 屬性變更為該電腦的名稱。</span><span class="sxs-lookup"><span data-stu-id="e5079-117">To reference Windows services on another computer, change the <xref:System.ServiceProcess.ServiceController.MachineName%2A> property to the name of that computer.</span></span>  
   
- <span data-ttu-id="abd17-117">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="abd17-117">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="e5079-118">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="e5079-118">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="abd17-118">無法暫停服務。</span><span class="sxs-lookup"><span data-stu-id="abd17-118">The service cannot be paused.</span></span> <span data-ttu-id="abd17-119">(<xref:System.InvalidOperationException>)</span><span class="sxs-lookup"><span data-stu-id="abd17-119">(<xref:System.InvalidOperationException>)</span></span>  
+- <span data-ttu-id="e5079-119">無法暫停服務。</span><span class="sxs-lookup"><span data-stu-id="e5079-119">The service cannot be paused.</span></span> <span data-ttu-id="e5079-120">(<xref:System.InvalidOperationException>)</span><span class="sxs-lookup"><span data-stu-id="e5079-120">(<xref:System.InvalidOperationException>)</span></span>  
   
-- <span data-ttu-id="abd17-120">存取系統 API 時發生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="abd17-120">An error occurred when accessing a system API.</span></span> <span data-ttu-id="abd17-121">(<xref:System.ComponentModel.Win32Exception>)</span><span class="sxs-lookup"><span data-stu-id="abd17-121">(<xref:System.ComponentModel.Win32Exception>)</span></span>  
+- <span data-ttu-id="e5079-121">存取系統 API 時發生的錯誤。</span><span class="sxs-lookup"><span data-stu-id="e5079-121">An error occurred when accessing a system API.</span></span> <span data-ttu-id="e5079-122">(<xref:System.ComponentModel.Win32Exception>)</span><span class="sxs-lookup"><span data-stu-id="e5079-122">(<xref:System.ComponentModel.Win32Exception>)</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="abd17-122">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="abd17-122">.NET Framework Security</span></span>  
- <span data-ttu-id="abd17-123">您可能會使用 <xref:System.ServiceProcess.ServiceControllerPermissionAccess> 來設定 <xref:System.ServiceProcess.ServiceControllerPermission> 中的權限，藉以限制電腦上對服務的控制。</span><span class="sxs-lookup"><span data-stu-id="abd17-123">Control of services on the computer may be restricted by using the <xref:System.ServiceProcess.ServiceControllerPermissionAccess> to set permissions in the <xref:System.ServiceProcess.ServiceControllerPermission>.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="e5079-123">.NET Framework 安全性</span><span class="sxs-lookup"><span data-stu-id="e5079-123">.NET Framework Security</span></span>  
+ <span data-ttu-id="e5079-124">您可能會使用 <xref:System.ServiceProcess.ServiceControllerPermissionAccess> 來設定 <xref:System.ServiceProcess.ServiceControllerPermission> 中的權限，藉以限制電腦上對服務的控制。</span><span class="sxs-lookup"><span data-stu-id="e5079-124">Control of services on the computer may be restricted by using the <xref:System.ServiceProcess.ServiceControllerPermissionAccess> to set permissions in the <xref:System.ServiceProcess.ServiceControllerPermission>.</span></span>  
   
- <span data-ttu-id="abd17-124">您可能會使用 <xref:System.Security.Permissions.PermissionState> 來設定 <xref:System.Security.Permissions.SecurityPermission> 中的權限，藉以限制電腦上對服務資訊的存取。</span><span class="sxs-lookup"><span data-stu-id="abd17-124">Access to service information may be restricted by using the <xref:System.Security.Permissions.PermissionState> to set permissions in the <xref:System.Security.Permissions.SecurityPermission>.</span></span>  
+ <span data-ttu-id="e5079-125">您可能會使用 <xref:System.Security.Permissions.PermissionState> 來設定 <xref:System.Security.Permissions.SecurityPermission> 中的權限，藉以限制電腦上對服務資訊的存取。</span><span class="sxs-lookup"><span data-stu-id="e5079-125">Access to service information may be restricted by using the <xref:System.Security.Permissions.PermissionState> to set permissions in the <xref:System.Security.Permissions.SecurityPermission>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abd17-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="abd17-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5079-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e5079-126">See also</span></span>
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
-- [<span data-ttu-id="abd17-126">如何：繼續執行 Windows 服務 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="abd17-126">How to: Continue a Windows Service (Visual Basic)</span></span>](how-to-continue-a-windows-service-visual-basic.md)
+- [<span data-ttu-id="e5079-127">作法：繼續執行 Windows 服務 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5079-127">How to: Continue a Windows Service (Visual Basic)</span></span>](how-to-continue-a-windows-service-visual-basic.md)
