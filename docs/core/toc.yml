@@ -7,7 +7,7 @@ items:
     href: about.md
   - name: 安裝
     items:
-      - name: 總覽
+      - name: 概觀
         href: install/index.yml
       - name: 安裝在 Windows 上
         href: install/windows.md
@@ -15,7 +15,7 @@ items:
         href: install/macos.md
       - name: 安裝在 Linux 上
         items:
-          - name: 總覽
+          - name: 概觀
             href: install/linux.md
           - name: Ubuntu
             href: install/linux-ubuntu.md
@@ -304,6 +304,10 @@ items:
         items:
           - name: 針對記憶體流失進行偵錯
             href: diagnostics/debug-memory-leak.md
+          - name: 針對高 CPU 使用量進行偵錯
+            href: diagnostics/debug-highcpu.md
+          - name: 針對死結進行偵錯
+            href: diagnostics/debug-deadlock.md
   - name: .NET Core 其他工具
     items:
       - name: 總覽
