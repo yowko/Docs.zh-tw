@@ -1,13 +1,14 @@
 ---
 title: 在 C# 中逐一查看集合
+description: 瞭解如何使用反覆運算器來逐步執行集合，例如清單和陣列。 使用 foreach 語句或 LINQ 查詢，從用戶端程式代碼取用反覆運算器。
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 310fff68a242812620357517c212ddd5f053775c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240690"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104253"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 
@@ -354,7 +355,7 @@ public class Stack<T> : IEnumerable<T>
 
 - 在迭代器中封裝建立清單。 在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

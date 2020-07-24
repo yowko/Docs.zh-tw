@@ -1,13 +1,14 @@
 ---
 title: 共變數和反變數 (C#)
+description: 瞭解共變數和反變數，以及它們如何影響指派相容性。 請參閱示範其差異的程式碼範例。
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 23633675059b9c295dda7ddf3d78754c0223f5f8
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 65c75029c27b6c9a5ddc96f01622b520e8698f55
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241366"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105699"
 ---
 # <a name="covariance-and-contravariance-c"></a>共變數和反變數 (C#)
 在 C# 中，共變數和反變數可讓您進行陣列類型、委派類型和泛型型別引數的隱含參考轉換。 共變數會保留指派相容性，而反變數則會將它反轉。  
@@ -79,9 +80,9 @@ IEnumerable<Object> objects = strings;
   
  如果泛型介面或委派的泛型參數宣告為共變數或反變數，此泛型介面或委派稱為 *variant*。 C# 可讓您建立自己的 Variant 介面和委派。 如需詳細資訊，請參閱[建立 Variant 泛型介面 (C#)](./creating-variant-generic-interfaces.md) 和[委派中的差異 (C#)](./variance-in-delegates.md)。  
   
-## <a name="related-topics"></a>[相關主題]  
+## <a name="related-topics"></a>相關主題  
   
-|Title|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[泛型介面中的差異 (C#)](./variance-in-generic-interfaces.md)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|  
 |[建立 Variant 泛型介面 (C#)](./creating-variant-generic-interfaces.md)|示範如何建立自訂 Variant 介面。|  

@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML 中的延後執行和延遲評估 (C#)
+description: '查詢和軸作業可以在 c # 中使用延後執行。 瞭解順延強制和執行考慮的需求和優點。'
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8559505572404f895d75e0d9895f9ae2c07b795e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594561"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105465"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML 中的延後執行和延遲評估 (C#)
 若要使用延後執行，通常會實作查詢和座標軸運算。 本主題說明延後執行的條件與優點以及一些實作考量。  
@@ -33,7 +34,7 @@ ms.locfileid: "69594561"
   
 - [延後執行範例 (C#)](./deferred-execution-example.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [教學課程：將查詢鏈結在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
 - [概念和術語 (函數式轉換) (C#)](./concepts-and-terminology-functional-transformation.md)

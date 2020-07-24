@@ -1,15 +1,16 @@
 ---
-title: 如何修改 Office 打開的 XML 文檔 （C#）
+title: '如何修改 Office Open XML 檔（c #）'
+description: '瞭解如何開啟 Office Open XML 檔、加以修改並加以儲存。 這個 c # 範例會使用在 WindowsBase 元件中找到的類別。'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 620530b14513356dc9bb5d942e8db7691a03880d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1155851696a0a6ed651c5f84290a3879e73276db
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345850"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104810"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-c"></a>如何修改 Office 打開的 XML 文檔 （C#）
+# <a name="how-to-modify-an-office-open-xml-document-c"></a>如何修改 Office Open XML 檔（c #）
 這個主題顯示會開啟、修改以及儲存 Office Open XML 文件的範例。  
   
  如需 Office Open XML 的詳細資訊，請參閱 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) \(英文\) 和 [www.ericwhite.com](http://ericwhite.com/) \(英文\)。  

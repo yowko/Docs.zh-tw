@@ -1,13 +1,14 @@
 ---
 title: 泛型介面中的差異 (C#)
+description: 查看泛型介面的差異支援資訊，包括 .NET Framework 4 和4.5 中現有介面的更新資訊。
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: ea5d3d35bc9ee438263707efd16829b6217a1968
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 91218742c01eeb6e65ea26d9dc41ed7c98827377
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241327"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105635"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>泛型介面中的差異 (C#)
 
@@ -98,7 +99,7 @@ IEnumerable<int> integers = new List<int>();
 IEnumerable<Object> listObjects = new List<String>();
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [針對泛型集合使用介面中的變異數 (C#)](./using-variance-in-interfaces-for-generic-collections.md)
 - [建立 Variant 泛型介面 (C#)](./creating-variant-generic-interfaces.md)

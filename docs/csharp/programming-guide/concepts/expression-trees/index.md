@@ -1,13 +1,14 @@
 ---
 title: 運算式樹狀架構 (C#)
+description: 深入瞭解運算式樹狀架構。 請參閱如何編譯並執行這些資料結構所表示的程式碼，其中每個節點都是運算式。
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: c260e649e7bd285a6bd07b5a1cd7fc1a7f75b82a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241548"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105576"
 ---
 # <a name="expression-trees-c"></a>運算式樹狀架構 (C#)
 運算式樹狀架構代表類似樹狀目錄之資料結構中的程式碼，其中，每個節點都是一個運算式，例如，方法呼叫或二進位運算 (如 `x < y`)。  
@@ -147,7 +148,7 @@ Console.WriteLine(expr.Compile()(4));
   
  如需詳細資訊，請參閱[如何執行運算式樹狀架構（c #）](./how-to-execute-expression-trees.md)。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.Expressions>
 - [如何執行運算式樹狀架構（c #）](./how-to-execute-expression-trees.md)

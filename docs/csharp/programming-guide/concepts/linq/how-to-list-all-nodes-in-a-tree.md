@@ -1,22 +1,23 @@
 ---
-title: 如何列出樹中的所有節點 （C#）
+title: '如何列出樹狀結構中的所有節點（c #）'
+description: '瞭解如何使用 c # 中的 LINQ to XML 來執行 XPath 運算式，以列出樹狀結構中的所有節點。 您可以看到方法或屬性如何影響樹狀結構。'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28400712154138fa474665a796b77572b095fe13
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345871"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104964"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>如何列出樹中的所有節點 （C#）
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>如何列出樹狀結構中的所有節點（c #）
 
 列出樹狀中的所有節點有時候很有幫助。 這在精確了解方法或屬性如何影響樹狀結構時相當實用。 以文字格式列出所有節點的其中一個方法為產生正確而且明確識別樹狀結構中任何節點的 XPath 運算式。
 
 若是使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 執行 XPath 運算式，則不會特別有幫助。 XPath 運算式的效能比 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的效能差，而且 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的功能更為強大。 不過，若是要識別 XML 樹狀中的節點，XPath 就非常適合。
 
 ## <a name="example"></a>範例
- 此示例顯示名為 的`GetXPath`函數，該函數為 XML 樹中的任何節點生成特定的 XPath 運算式。 即使節點位於命名空間中，它也可以產生適當的 XPath 運算式。 XPath 運算式是利用命名空間前置詞產生。
+ 這個範例會顯示名為 `GetXPath` 的函式，該函式會針對 XML 樹狀結構中的任何節點產生特定的 XPath 運算式。 即使節點位於命名空間中，它也可以產生適當的 XPath 運算式。 XPath 運算式是利用命名空間前置詞產生。
 
  接著，此範例會建立包含數種節點類型之範例的小型 XML 樹狀結構。 它會逐一查看下階節點，並列印每個節點的 XPath 運算式。
 

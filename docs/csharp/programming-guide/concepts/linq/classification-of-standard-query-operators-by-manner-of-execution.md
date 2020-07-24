@@ -1,13 +1,14 @@
 ---
 title: 依據執行方式將標準查詢運算子分類 (C#)
+description: '瞭解 LINQ to Objects c # 中標準查詢運算子的執行形式：立即、延遲資料流程和延遲的非串流。'
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd496e232de2c7ed10a8aaa7cec84f8136495cce
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69924284"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105496"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>依據執行方式將標準查詢運算子分類 (C#)
 會使用兩種主要方式之一執行標準查詢運算子方法的 LINQ to Objects 實作：立即或延後。 使用延後執行的查詢運算子可以另外細分成兩個分類︰資料流和非資料流。 如果您知道如何執行不同的查詢運算子，則可以協助您了解透過給定查詢所取得的結果。 如果資料來源變更，或您所建置的查詢是根據另一個查詢，則這特別有用。 本主題會根據執行方式來分類標準查詢運算子。  
@@ -87,7 +88,7 @@ ms.locfileid: "69924284"
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Linq.Enumerable>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)

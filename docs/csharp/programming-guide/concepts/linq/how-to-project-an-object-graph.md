@@ -1,15 +1,16 @@
 ---
-title: 如何投影物件圖 （C#）
+title: '如何投影物件圖形（c #）'
+description: '瞭解如何從 c # 中的 XML 投影或填入物件圖形。 範例程式碼會在物件圖形中填入來自範例 XML 檔案的類別。'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2ea0e06d9a46a1b19236eae021a2a153fea1d4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168956"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104611"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>如何投影物件圖 （C#）
+# <a name="how-to-project-an-object-graph-c"></a>如何投影物件圖形（c #）
 本主題說明如何從 XML 規劃或填入物件圖形。  
   
 ## <a name="example"></a>範例  
@@ -214,7 +215,7 @@ class Program {
 }  
 ```  
   
- 在此示例中，LINQ 查詢的結果將作為 返回作為<xref:System.Collections.Generic.IEnumerable%601>。 `PurchaseOrderItem` `PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。 程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。  
+ 在此範例中，LINQ 查詢的結果會以的形式傳回 <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` 。 `PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。 程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。  
   
  這個範例會產生下列輸出：  
   

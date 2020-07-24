@@ -1,20 +1,21 @@
 ---
 title: 在委派中使用變異數 (C#)
+description: 瞭解如何使用所包含的共變數和反變數程式碼範例，在委派中使用變異數。
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 83e86e760edb17f6d9ae61864c154062d41416e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62b0555ee29c5e7d2ba0954a8949d61596122cc7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169762"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105682"
 ---
 # <a name="using-variance-in-delegates-c"></a>在委派中使用變異數 (C#)
 當您將方法指派給委派時，「共變數」** 和「反變數」** 可讓您彈性地比對委派類型和方法簽章。 共變數允許某個方法的傳回型別與定義於委派中的傳回型別相比，其衍生程度較大。 反變數允許某個方法的參數類型與委派類型中的參數類型相比，其衍生程度較小。  
   
 ## <a name="example-1-covariance"></a>範例 1︰共變數  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>說明  
  此範例示範如何搭配其傳回型別衍生自委派簽章中傳回型別的方法使用委派。 `DogsHandler` 所傳回的資料類型是 `Dogs` 類型，該類型衍生自定義於委派中的 `Mammals` 類型。  
   
 ### <a name="code"></a>程式碼  
@@ -50,7 +51,7 @@ class Program
   
 ## <a name="example-2-contravariance"></a>範例 2：反變數  
   
-### <a name="description"></a>描述
+### <a name="description"></a>說明
 
 此範例示範如何搭配其參數類型為委派簽章參數類型的基底類型方法來使用委派。 透過反變數，您可以使用一個事件處理常式，而不是不同的處理常式。 下列範例會使用兩個委派：
 
@@ -92,7 +93,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [委派中的差異 (C#)](./variance-in-delegates.md)
 - [針對 Func 與 Action 泛型委派使用變異數 (C#)](./using-variance-for-func-and-action-generic-delegates.md)

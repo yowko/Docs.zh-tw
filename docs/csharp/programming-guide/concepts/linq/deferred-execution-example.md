@@ -1,13 +1,14 @@
 ---
 title: 延後執行範例 (C#)
+description: '瞭解延後執行和延遲評估如何影響 c # 中 LINQ to XML 查詢的執行。'
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65ba4cc150f2fc9d8f44aee352987ea0eeaab0a5
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204129"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103952"
 ---
 # <a name="deferred-execution-example-c"></a>延後執行範例 (C#)
 本主題顯示延後執行與延遲評估如何影響您 LINQ to XML 查詢的執行。  
@@ -63,6 +64,6 @@ Main: str GHI
   
 - [鏈結查詢範例 (C#)](./chaining-queries-example.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [教學課程：將查詢鏈結在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

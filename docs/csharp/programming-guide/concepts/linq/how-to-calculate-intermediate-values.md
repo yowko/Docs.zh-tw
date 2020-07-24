@@ -1,15 +1,16 @@
 ---
-title: 如何計算中間值 （C#）
+title: '如何計算中繼值（c #）'
+description: '此 LINQ to XML c # 中的範例會示範如何計算可用於排序、篩選和選取的中繼值。'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 3ead3bfb02f7c9192db96996c1f1e01a86a4191a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc648f20550de13735a1f6da6b2f811fd0d39004
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141443"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103610"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a>如何計算中間值 （C#）
+# <a name="how-to-calculate-intermediate-values-c"></a>如何計算中繼值（c #）
 這個範例顯示如何計算可用於排序、篩選與選取的中繼值。  
   
 ## <a name="example"></a>範例  

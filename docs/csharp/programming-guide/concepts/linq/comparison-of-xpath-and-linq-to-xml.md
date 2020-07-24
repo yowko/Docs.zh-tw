@@ -1,16 +1,17 @@
 ---
 title: XPath 和 LINQ to XML 的比較
+description: '瞭解 c # 中 XPath 與 LINQ to XML 之間功能的相似性和差異。 您可以使用這兩者來查詢 XML 樹狀結構。'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-ms.openlocfilehash: e9bf192a2075653802f0c5a8b4e44ff0ceacb975
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2f34903b20a53dea6e5ff4858d4fadaebd9c37a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487538"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104000"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath 和 LINQ to XML 的比較
 XPath 和 LINQ to XML 提供一些類似的功能。 兩者都可用於查詢 XML 樹狀結構，將此類結果當做項目的集合、屬性的集合、節點的集合，以及項目或屬性的值傳回。 不過，也有一些差異。  
@@ -29,7 +30,7 @@ XPath 和 LINQ to XML 提供一些類似的功能。 兩者都可用於查詢 XM
   
  相較之下，大部分的 LINQ to XML 軸會以文件順序傳回集合，但其中兩個 (<xref:System.Xml.Linq.XNode.Ancestors%2A> 和 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>) 會以反向的文件順序傳回集合。 下表列舉座標軸，並指出每個座標軸的集合順序：  
   
-|LINQ to XML 軸|訂購|  
+|LINQ to XML 軸|排序|  
 |----------------------|--------------|  
 |XContainer.DescendantNodes|文件順序|  
 |XContainer.Descendants|文件順序|  

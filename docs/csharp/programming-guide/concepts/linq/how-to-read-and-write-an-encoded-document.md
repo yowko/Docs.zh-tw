@@ -1,15 +1,16 @@
 ---
-title: 如何讀取和寫入編碼文檔 （C#）
+title: '如何讀取和寫入編碼的檔（c #）'
+description: '瞭解如何在 c # 中建立編碼的 XML 檔，方法是將 XDeclaration 加入至 XML 樹狀結構，並將編碼方式設定為所需的字碼頁名稱。'
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed02b7467f4de71455da516a6c894070337684e7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347669"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104323"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>如何讀取和寫入編碼文檔 （C#）
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>如何讀取和寫入編碼的檔（c #）
 若要建立編碼的 XML 文件，您可以將編碼設定為所需的字碼頁名稱，以便將 <xref:System.Xml.Linq.XDeclaration> 加入到 XML 樹狀結構中。  
   
  由 <xref:System.Text.Encoding.WebName%2A> 傳回的任何值都是有效的值。  

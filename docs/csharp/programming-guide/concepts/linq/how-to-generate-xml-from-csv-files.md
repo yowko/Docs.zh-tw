@@ -1,19 +1,20 @@
 ---
-title: 如何從 CSV 檔 （C#） 生成 XML
+title: '如何從 CSV 檔案產生 XML （c #）'
+description: '瞭解如何使用 c # 中的 LINQ 和 LINQ to XML，從 .csv 檔案產生 XML。 查詢會使用 let 子句將字串分割成欄位陣列。'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9954a51fc1f2979c6cce13805ed15cdb88741
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635804"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105171"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>如何從 CSV 檔 （C#） 生成 XML
-此示例演示如何使用語言集成查詢 （LINQ） 並從[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]逗號分隔的值 （CSV） 檔生成 XML 檔。  
+# <a name="how-to-generate-xml-from-csv-files-c"></a>如何從 CSV 檔案產生 XML （c #）
+這個範例示範如何使用語言整合式查詢（LINQ），並 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 從逗號分隔值（CSV）檔案產生 XML 檔案。  
   
 ## <a name="example"></a>範例  
- 以下代碼對字串陣列執行 LINQ 查詢。  
+ 下列程式碼會在字串陣列上執行 LINQ 查詢。  
   
  此查詢使用 `let` 子句，將每個字串分割為欄位的陣列。  
   

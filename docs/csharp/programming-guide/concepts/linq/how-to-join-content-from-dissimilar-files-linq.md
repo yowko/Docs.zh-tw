@@ -1,15 +1,16 @@
 ---
-title: 如何從不同檔 （LINQ） （C#） 加入內容
+title: '如何從不同的檔案聯結內容（LINQ）（c #）'
+description: '瞭解如何在 c # 中使用 LINQ，聯結兩個逗號分隔檔案中的資料。 資料會共用用來做為相符索引鍵的通用值。'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: efe11c31873f21841c28bd393b295eea117d1e46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 136d10ff5c0bf5f4f18998b50eb7bbee218b00a9
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169086"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104980"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>如何從不同檔 （LINQ） （C#） 加入內容
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>如何從不同的檔案聯結內容（LINQ）（c #）
 
 此範例示範如何將兩個逗號分隔檔案中資料的共同值當做相符的索引鍵，聯結這兩個檔案中的資料。 如果您必須將兩個試算表中的資料，或一個試算表和一個不同格式之檔案中的資料合併為新的檔案，這個方法就很有用。 您可以修改範例，以搭配任何類型的結構化文字使用。  
   

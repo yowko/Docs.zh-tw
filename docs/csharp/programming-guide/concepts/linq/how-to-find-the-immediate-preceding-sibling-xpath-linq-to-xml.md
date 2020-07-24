@@ -1,15 +1,16 @@
 ---
-title: 如何查找前面的同級 （XPath-LINQ 到 XML） （C#）
+title: '如何尋找緊接在的先前的兄弟（XPath-LINQ to XML）（c #）'
+description: '這個 c # 範例會比較 XPath 與 LINQ to XML，以瞭解如何尋找緊接在節點前面的兄弟。'
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: 1e5aece41021642d43b7f6f7b78bb105156ee4ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eaee7f1205ce0d0b2a9c2c41d96ba532573a1384
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74140999"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105204"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>如何查找前面的同級 （XPath-LINQ 到 XML） （C#）
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>如何尋找緊接在的先前的兄弟（XPath-LINQ to XML）（c #）
 有時候您會想要尋找節點正前面的同層級。 由於前面同層級座標軸的位置性述詞語意 (Semantics) 在 XPath 中與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 相反的這個差異，這是其中一個更有趣的比較。  
   
 ## <a name="example"></a>範例  

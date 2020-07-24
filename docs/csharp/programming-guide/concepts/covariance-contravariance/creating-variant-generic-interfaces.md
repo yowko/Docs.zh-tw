@@ -1,13 +1,14 @@
 ---
 title: 建立 Variant 泛型介面 (C#)
+description: 瞭解如何使用協變數或逆變性泛型型別參數來建立 variant 泛型介面。
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: a8e3e010c0e5d5490aee35603cad4fd6c1dc29e0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 38b32784b681e748cd508c3d431fd4b18ec2c81a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990050"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105718"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>建立 Variant 泛型介面 (C#)
 
@@ -146,7 +147,7 @@ interface ICovariant<out T> { }
 
 當您實作 Variant 泛型介面時，變異數有時會導致語意模糊。 這類不明確的情況應該避免。
 
-例如，如果您在一個類別中，明確地實作相同 Variant 泛型介面與不同泛型型別參數，它可能會造成語意模糊。 在此情況下，編譯器不會產生錯誤，但不會指定在執行時間選擇哪一個介面執行。 這種不明確的可能會導致程式碼中的細微錯誤。 請參考下列程式碼範例。
+例如，如果您在一個類別中，明確地實作相同 Variant 泛型介面與不同泛型型別參數，它可能會造成語意模糊。 在此情況下，編譯器不會產生錯誤，但不會指定在執行時間選擇哪一個介面執行。 這種不明確的可能會導致程式碼中的細微錯誤。 請考慮下列程式碼範例。
 
 ```csharp
 // Simple class hierarchy.
@@ -190,7 +191,7 @@ class Program
 
 在此範例中，並未指定 `pets.GetEnumerator` 方法如何在 `Cat` 和 `Dog` 之間選擇。 這可能會在程式碼中造成問題。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [泛型介面中的差異 (C#)](./variance-in-generic-interfaces.md)
 - [針對 Func 與 Action 泛型委派使用變異數 (C#)](./using-variance-for-func-and-action-generic-delegates.md)

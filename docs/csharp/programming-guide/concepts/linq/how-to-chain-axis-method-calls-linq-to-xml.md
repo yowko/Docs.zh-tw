@@ -1,15 +1,16 @@
 ---
-title: 如何連結軸方法調用（LINQ 到 XML）（C#）
+title: '如何連鎖軸方法呼叫（LINQ to XML）（c #）'
+description: '這些 LINQ to XML c # 中的範例會示範兩個軸的呼叫，以在樹狀結構中的給定深度尋找指定名稱的所有元素。'
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 56fa5c9e8358883d838b68e99664240aa97f347f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f26efd2ca918fd36916eb4f01462af70066219a0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169463"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105389"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>如何連結軸方法調用（LINQ 到 XML）（C#）
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>如何連鎖軸方法呼叫（LINQ to XML）（c #）
 您在程式碼中使用的常見模式為呼叫座標軸方法，然後呼叫其中一個擴充方法座標軸。  
   
  有兩個座標軸可傳回項目集合而且具有 `Elements` 名稱：<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> 方法和 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> 方法。 您可以結合這兩個座標軸，在樹狀的指定深度，尋找指定之名稱的所有項目。  
@@ -116,6 +117,6 @@ foreach (XElement e in names)
 <aw:Name xmlns:aw="http://www.adventure-works.com">Jessica Arnold</aw:Name>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to XML 座標軸 (C#)](linq-to-xml-axes-overview.md)

@@ -1,13 +1,14 @@
 ---
 title: 概念和術語 (功能性轉換) (C#)
+description: '功能性程式設計功能可讓您更輕鬆地轉換 XML。 瞭解 c # 中純功能性轉換的概念與術語。'
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 3e2ecc4c2f70700ae92ee36b6f122059b922332e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70040637"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103979"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>概念和術語 (功能性轉換) (C#)
 
@@ -36,13 +37,13 @@ ms.locfileid: "70040637"
 
 根據過去的經驗，一般用途的函式程式設計語言 (例如，ML、Scheme、Haskell 與 F#) 主要受到學術團體的注意。 雖然函式程式設計一直可以使用 C# 撰寫純功能性轉換，但是其困難度始終讓大部分的程式設計人員卻步。 不過，在最近版本的 C# 中，新語言建構 (例如，Lambda 運算式和型別推斷) 讓函式程式設計更容易，產能也更高。
 
-有關函數式程式設計的詳細資訊，請參閱[函數程式設計與命令性程式設計 （C#）](./functional-programming-vs-imperative-programming.md)。
+如需功能性程式設計的詳細資訊，請參閱[功能性程式設計與命令式程式設計的比較（c #）](./functional-programming-vs-imperative-programming.md)。
 
 #### <a name="domain-specific-fp-languages"></a>網域指定的 FP 語言
 
 雖然目前尚未廣泛採用一般功能性程式設計語言，但是特定網域指定的功能性程式設計語言比較受歡迎。 例如，階層式樣式表 (CSS) 用於決定許多網頁的外觀及操作，而可延伸樣式表語言轉換 (XSLT) 樣式表則廣泛用於 XML 資料操作。 如需 XSLT 的詳細資訊，請參閱 [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)。
 
-## <a name="terminology"></a>詞彙
+## <a name="terminology"></a>術語
 
 下表定義與功能性轉換相關的一些辭彙。
 
@@ -62,7 +63,7 @@ Lambda 運算式 \
 元組 (匿名型別) \
 這是一個數學概念，一個 Tuple 表示一個有限的物件順序，每個都有特定的型別。 Tuple 也稱為排序清單。 匿名型別為此概念的語言實作，可以宣告未具名的類別型別，並同時具現化該類別的物件。
 
-有關詳細資訊，請參閱[匿名型別](../../classes-and-structs/anonymous-types.md)。
+如需詳細資訊，請參閱[匿名](../../classes-and-structs/anonymous-types.md)型別。
 
 型別推斷 (隱含型別) \
 編譯器在沒有明確的型別宣告時，判斷變數型別的能力。
@@ -76,7 +77,7 @@ Lambda 運算式 \
 
 這些語言功能將用於本節的所有程式碼範例中。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [純函數式轉換簡介 (C#)](./introduction-to-pure-functional-transformations.md)
-- [功能程式設計與命令性程式設計 （C#）](./functional-programming-vs-imperative-programming.md)
+- [功能程式設計與命令式程式設計的比較（c #）](./functional-programming-vs-imperative-programming.md)

@@ -1,15 +1,16 @@
 ---
-title: 如何查找具有特定屬性的元素（XPath-LINQ 到 XML）（C#）
+title: '如何尋找具有特定屬性的元素（XPath-LINQ to XML）（c #）'
+description: '這個 c # 範例會比較 XPath 與 LINQ to XML，以瞭解它們如何尋找具有特定屬性的元素。'
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: e79cad3ad6fb0bf88e388b552f8e39327acfb4ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb0b5c27fb3993b487c5e8d70c6562c1d0562860
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141047"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105272"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>如何查找具有特定屬性的元素（XPath-LINQ 到 XML）（C#）
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>如何尋找具有特定屬性的元素（XPath-LINQ to XML）（c #）
 有時候您會想要尋找具有特定屬性的所有項目。 您並不關心屬性的內容。 但是，您想要根據屬性的存在與否來選擇。  
   
  XPath 運算式為：  

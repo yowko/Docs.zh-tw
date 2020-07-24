@@ -1,15 +1,16 @@
 ---
-title: 如何查找相關元素（XPath-LINQ 到 XML）（C#）
+title: '如何尋找相關元素（XPath-LINQ to XML）（c #）'
+description: '這個 c # 範例會比較 XPath 與 LINQ to XML，以瞭解如何取得在另一個專案的值所參考的屬性上選取專案的元素。'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: f74c338019c0451ab5e3ac0d8da10392ae5601ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4423e7d719d39e71bcbcc9e88d052c6aff4ffb05
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169229"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105256"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>如何查找相關元素（XPath-LINQ 到 XML）（C#）
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>如何尋找相關元素（XPath-LINQ to XML）（c #）
 本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
   
  XPath 運算式為：  

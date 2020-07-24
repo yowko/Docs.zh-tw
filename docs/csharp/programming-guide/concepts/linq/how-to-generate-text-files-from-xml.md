@@ -1,15 +1,16 @@
 ---
-title: 如何從 XML （C#） 生成文字檔
+title: '如何從 XML 產生文字檔（c #）'
+description: '瞭解如何從 c # 中的 XML 檔案產生 .csv 檔案。 這個範例會使用方法語法和匯總運算子。'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 9ca76cf955e07bdcc8e095b30f6fadc74edba739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6e9ce803ddfac3f1609d60a4f51661232cbb2f4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345922"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105065"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>如何從 XML （C#） 生成文字檔
+# <a name="how-to-generate-text-files-from-xml-c"></a>如何從 XML 產生文字檔（c #）
 此範例顯示如何從 XML 檔案產生以逗號分隔的 (CSV) 檔案。  
   
 ## <a name="example"></a>範例  
@@ -53,6 +54,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [投影和轉換 (LINQ to XML) (C#)](how-to-work-with-dictionaries-using-linq-to-xml.md)

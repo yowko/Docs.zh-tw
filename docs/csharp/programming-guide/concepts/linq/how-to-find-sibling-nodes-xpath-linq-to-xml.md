@@ -1,15 +1,16 @@
 ---
-title: 如何查找同級節點（XPath-LINQ 到 XML）（C#）
+title: '如何尋找同輩節點（XPath-LINQ to XML）（c #）'
+description: '這個 c # 範例會比較 XPath 與 LINQ to XML，以瞭解如何尋找具有特定名稱之節點的所有同輩。'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: c201dcea5e6d148ae0998eb27d4e42df5b15309f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2936fc4ad088580a9644f79f1797e679fe877e00
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169203"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105219"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>如何查找同級節點（XPath-LINQ 到 XML）（C#）
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>如何尋找同輩節點（XPath-LINQ to XML）（c #）
 您可能想要尋找具有特定名稱之節點的所有同層級。 如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。  
   
  XPath 運算式為：  

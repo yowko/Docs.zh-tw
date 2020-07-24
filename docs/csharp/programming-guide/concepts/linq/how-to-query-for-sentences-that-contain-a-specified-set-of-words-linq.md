@@ -1,15 +1,16 @@
 ---
-title: 如何查詢包含指定單詞集 （LINQ） （C#） 的句子
+title: '如何查詢包含指定字組的句子（LINQ）（c #）'
+description: '瞭解如何在 c # 中使用 LINQ 來尋找文字檔中的句子，其中包含一組單字的相符專案，可以在執行時間中填入。'
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: df279f57d9965d796397cbcf7a0f3ba05bf9e5c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c334c7948f19fb857709ff04a83e1dae56fc69da
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168852"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104529"
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>如何查詢包含指定單詞集 （LINQ） （C#） 的句子
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>如何查詢包含指定字組的句子（LINQ）（c #）
 此範例示範如何在文字檔中尋找含有每個指定字組之相符項目的句子。 雖然此範例硬式編碼了搜尋字詞的陣列，但也可以在執行階段將它動態填入。 在此範例中，查詢會傳回包含 "Historically"、"data" 和 "integrated" 等字的句子。  
   
 ## <a name="example"></a>範例  
@@ -69,6 +70,6 @@ Historically, the world of data and the world of objects have not been well inte
 ## <a name="compiling-the-code"></a>編譯程式碼  
 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)

@@ -1,15 +1,16 @@
 ---
-title: 如何查找根項目（XPath-LINQ 到 XML）（C#）
+title: '如何尋找根項目（XPath-LINQ to XML）（c #）'
+description: '這個 c # 範例會比較 XPath 與 LINQ to XML，以瞭解如何取得範例 XML 檔的根項目。'
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: 1c5526f436b5b9d88ca359ef7e0fc04c5c3cf43c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 220899823210c5cd6e9834541ca87e4d8394b4ff
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345953"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105191"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>如何查找根項目（XPath-LINQ 到 XML）（C#）
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>如何尋找根項目（XPath-LINQ to XML）（c #）
 本主題顯示如何利用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 取得根項目。  
   
  XPath 運算式為：  

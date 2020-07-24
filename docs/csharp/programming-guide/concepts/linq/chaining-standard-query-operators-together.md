@@ -1,13 +1,14 @@
 ---
 title: 將標準查詢運算子鏈結在一起 (C#)
+description: '這個範例會示範如何在 c # 中將標準查詢運算子連結在一起。 查詢不會具體化中繼結果。'
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 41a7e4c7910c783d07181fe16254b0cac6902794
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70204214"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104070"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>將標準查詢運算子鏈結在一起 (C#)
 這是[教學課程：將查詢鏈結在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 教學課程中的最後一個主題。  

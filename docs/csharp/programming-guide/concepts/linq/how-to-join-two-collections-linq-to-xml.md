@@ -1,15 +1,16 @@
 ---
-title: 如何聯接兩個集合（LINQ 到 XML）（C#）
+title: '如何聯結兩個集合（LINQ to XML）（c #）'
+description: '這個 c # 範例會將 LINQ to XML 中的專案聯結至其他元素，並產生新的 XML 檔。'
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: a5044778bbfd9529faf5fe63c72076f6a973c815
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10792ed4907e778b41821c9b32574bd8fc0ab35f
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345865"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104992"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-c"></a>如何聯接兩個集合（LINQ 到 XML）（C#）
+# <a name="how-to-join-two-collections-linq-to-xml-c"></a>如何聯結兩個集合（LINQ to XML）（c #）
 
 XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如，[範例 XML 檔：客戶和訂單 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML 文件包含客戶清單與訂單清單。 每個 `Customer` 項目都包含一個 `CustomerID` 屬性。 每個 `Order` 項目都包含一個 `CustomerID` 項目。 每個訂單中的 `CustomerID` 項目都會參考客戶中的 `CustomerID` 屬性。
 
@@ -17,7 +18,7 @@ XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如
 
 利用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，您可以使用 `join` 子句來利用此關聯性。
 
-由於沒有可用的索引，因此此類聯接的運行時性能較差。
+因為沒有可用的索引，所以這類聯結將會有不佳的執行時間效能。
 
 如需 `join` 的詳細資訊，請參閱[聯結作業 (C#)](./join-operations.md)。
 
@@ -33,7 +34,7 @@ XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如
 
 此範例使用下列 XSD 結構描述︰[範例 XSD 檔：客戶和訂單](./sample-xsd-file-customers-and-orders1.md)。
 
-以這種方式加入不會很好。 聯結會透過線性搜尋執行。 沒有雜湊資料表或索引協助執行。
+以這種方式加入將無法順利執行。 聯結會透過線性搜尋執行。 沒有雜湊資料表或索引協助執行。
 
 ```csharp
 XmlSchemaSet schemas = new XmlSchemaSet();

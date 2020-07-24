@@ -1,15 +1,16 @@
 ---
-title: 如何投影新類型（LINQ 到 XML）（C#）
+title: '如何投影新類型（LINQ to XML）（c #）'
+description: '瞭解如何在 c # 的 LINQ to XML 中建立查詢，以傳回 <T> system.xml.linq.xelement>、string 或 int 以外的類型 IEnumerable，如其他範例所述。'
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 5205a0c56651271dea0181ed96518c0e9d7f95f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 013ea852a64b77c04ac583b4d9b71e8006cd4976
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168989"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104648"
 ---
-# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>如何投影新類型（LINQ 到 XML）（C#）
+# <a name="how-to-project-a-new-type-linq-to-xml-c"></a>如何投影新類型（LINQ to XML）（c #）
 
 本節中的其他範例顯示的查詢會傳回結果，當做 <xref:System.Collections.Generic.IEnumerable%601> 之 <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> 的 `string`，以及 <xref:System.Collections.Generic.IEnumerable%601> 的 `int`。 這些是常見的結果型別，但這些型別不適用於每個案例。 在許多情況下，您會希望您的查詢傳回其他型別的 <xref:System.Collections.Generic.IEnumerable%601>。
 
@@ -49,7 +50,7 @@ class Program {
 }
 ```
 
-此示例使用主題"<xref:System.Xml.Linq.XContainer.Element%2A>[如何檢索單個子項目（LINQ 到 XML）（C#）"](how-to-retrieve-a-single-child-element-linq-to-xml.md)中引入的方法。 它也會使用轉換以擷取 <xref:System.Xml.Linq.XContainer.Element%2A> 方法所傳回的元素值。  
+這個範例會使用 <xref:System.Xml.Linq.XContainer.Element%2A> [如何抓取單一子專案（LINQ to XML）（c #）](how-to-retrieve-a-single-child-element-linq-to-xml.md)主題中引進的方法。 它也會使用轉換以擷取 <xref:System.Xml.Linq.XContainer.Element%2A> 方法所傳回的元素值。  
 
 這個範例會產生下列輸出：
 

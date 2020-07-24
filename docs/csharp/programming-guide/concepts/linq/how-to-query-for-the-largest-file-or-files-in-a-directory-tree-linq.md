@@ -1,15 +1,16 @@
 ---
-title: 如何查詢目錄樹 （LINQ） （C#） 中的最大檔或檔
+title: '如何查詢樹狀目錄中的最大檔案（LINQ）（c #）'
+description: '這個 c # 範例顯示與檔案大小（以位元組為單位）相關的五個 LINQ 查詢。 您可以修改這些來查詢 FileInfo 物件的某些其他屬性。'
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: ed7d610bd292be4062db89f3c94af280e851141f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168761"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104370"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>如何查詢目錄樹 （LINQ） （C#） 中的最大檔或檔
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>如何查詢樹狀目錄中的最大檔案（LINQ）（c #）
 此範例顯示五個與檔案位元組大小相關的查詢：  
   
 - 如何擷取最大檔案的位元組大小。  
@@ -145,7 +146,7 @@ class QueryBySize
 ## <a name="compiling-the-code"></a>編譯程式碼  
 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

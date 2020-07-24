@@ -1,15 +1,16 @@
 ---
 title: 支援 LINQ 的 C# 功能
+description: '瞭解搭配 LINQ 查詢和其他內容使用的 c # 功能。 這些語言結構是在 c # 3.0 中引進。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 32ba8f5e60b3ed2efd813a8ae32e5f4009eb790d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f72b82180d794086dcea9f11a7a057dc26ab0b26
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202413"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105421"
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 
@@ -66,7 +67,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [物件和集合初始設定式](../../classes-and-structs/object-and-collection-initializers.md)
 
@@ -92,7 +93,7 @@ select new {name = cust.Name, phone = cust.Phone};
 
 Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數與函式主體，而且可以在編譯期間轉換成委派或運算式樹狀架構。 在 LINQ 程式設計中，當您對標準查詢運算子進行直接方法呼叫時，將會遇到 lambda 運算式。
 
-如需詳細資訊，請參閱：
+如需詳細資訊，請參閱
 
 - [匿名函式](../../statements-expressions-operators/anonymous-functions.md)
 
@@ -100,6 +101,6 @@ Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數
 
 - [運算式樹狀架構 (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Language-Integrated Query (LINQ) (C#)](./index.md)

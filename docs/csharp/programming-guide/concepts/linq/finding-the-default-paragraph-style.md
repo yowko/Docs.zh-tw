@@ -1,13 +1,14 @@
 ---
 title: 尋找預設段落樣式 (C#)
+description: '瞭解如何使用 c # 中的 LINQ 處理 WordprocessingML 檔。 這個範例會尋找檔中的預設段落樣式。'
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 8cc1f1b9df208b0b180e5fe4a50922b5ee46b480
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e18bbbdbd5b2627c9ff4c3c3eedd84d7cb166a62
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169528"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103830"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>尋找預設段落樣式 (C#)
 ＜管理 WordprocessingML 文件中的資訊＞教學課程中的第一個工作是，尋找文件中的預設段落樣式。  

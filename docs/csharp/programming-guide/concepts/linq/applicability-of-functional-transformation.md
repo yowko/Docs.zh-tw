@@ -1,13 +1,14 @@
 ---
 title: 功能性轉換的適用性 (C#)
+desciption: Learn about functional transformation. See how this approach to LINQ and other processes where the focus is on transforming data from one form to another.
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: bc2678354bb45f1ed0a4076f278f52d0ee7d350e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b507e0ad5c09478c3427f87d32a21d8facf1b7a0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594880"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105566"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>功能性轉換的適用性 (C#)
 純功能性轉換適用於各種情況。  
@@ -32,7 +33,7 @@ ms.locfileid: "69594880"
   
  再次提醒，C# 支援命令性與功能性方法，因此，最適合您應用程式的設計可能會納入兩者的項目。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [純函數式轉換簡介 (C#)](./introduction-to-pure-functional-transformations.md)
 - [XML 功能性轉換 (C#)](./functional-transformation-of-xml.md)

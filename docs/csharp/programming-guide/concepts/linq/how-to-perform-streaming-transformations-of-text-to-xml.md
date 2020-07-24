@@ -1,15 +1,16 @@
 ---
-title: 如何執行文本到 XML （C#） 的流式轉換
+title: '如何執行文字到 XML 的資料流程轉換（c #）'
+description: '瞭解如何在 c # 中執行文字到 XML 的資料流程轉換，您可以在其中一次以一行串流文字檔，並使用 LINQ 查詢來處理文字檔。'
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f933064be70d39b59cf7dbe51b4ee92e5226647a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345801"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104747"
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>如何執行文本到 XML （C#） 的流式轉換
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>如何執行文字到 XML 的資料流程轉換（c #）
 
 處理文字檔的其中一個方法是撰寫擴充方法，該方法會使用 `yield return` 建構將文字檔一次串流一行。 然後您可以撰寫利用延後的方式處理文字檔的 LINQ 查詢。 如果您接著使用 <xref:System.Xml.Linq.XStreamingElement> 串流輸出，您就可以使用最少量的記憶體建立文字檔到 XML 的轉換，而不必在乎來源文字檔的大小。
 

@@ -1,13 +1,14 @@
 ---
 title: 尋找 Word 文件中的文字 (C#)
+description: '瞭解如何使用 c # 中的 LINQ 處理 WordprocessingML 檔。 這個範例會在檔中尋找所有出現的字串。'
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 173472b9dbd669476c3e5529655d111b88b0dba2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1efcbef6185b718287f1222ecc086f4c675f02ab
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70205392"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105391"
 ---
 # <a name="finding-text-in-word-documents-c"></a>尋找 Word 文件中的文字 (C#)
 本主題會延伸先前的查詢以進行實用的操作：在文件中尋找出現的所有字串。  
@@ -327,7 +328,7 @@ StyleName:Code ><
   
 - [Office Open XML WordprocessingML 文件的詳細資料 (C#)](./wordprocessingml-document-with-styles.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [教學課程：管理 WordprocessingML 文件中的內容 (C#)](./shape-of-wordprocessingml-documents.md)
 - [使用純虛擬函式進行重構 (C#)](./refactoring-using-a-pure-function.md)

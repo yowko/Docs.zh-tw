@@ -1,20 +1,21 @@
 ---
-title: 如何修改運算式樹 （C#）
+title: '如何修改運算式樹狀架構（c #）'
+description: 瞭解如何藉由建立現有運算式樹狀架構的複本並進行必要的變更，來修改運算式樹狀架構。
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: e921c594497d02f5eb16cc60294e947e83636d7a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45aea18e253811d4e5c60f23f7f8496d4358f64c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969896"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105607"
 ---
-# <a name="how-to-modify-expression-trees-c"></a>如何修改運算式樹 （C#）
+# <a name="how-to-modify-expression-trees-c"></a>如何修改運算式樹狀架構（c #）
 本主題示範如何修改運算式樹狀架構。 運算式樹狀架構為不可變，這表示無法直接對其進行修改。 若要變更運算式樹狀架構，您必須建立現有運算式樹狀架構的複本，並且在建立複本時進行必要的變更。 您可以使用 <xref:System.Linq.Expressions.ExpressionVisitor> 類別周遊現有的運算式樹狀架構，並複製每個瀏覽的節點。  
   
 ### <a name="to-modify-an-expression-tree"></a>修改運算式樹狀架構  
   
-1. 創建新**的主控台應用程式**專案。  
+1. 建立新的**主控台應用程式**專案。  
   
 2. 將 `using` 指示詞新增至 `System.Linq.Expressions` 命名空間的檔案。  
   
@@ -70,7 +71,7 @@ ms.locfileid: "73969896"
   
 6. 編譯並執行應用程式。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何執行運算式樹 （C#）](./how-to-execute-expression-trees.md)
+- [如何執行運算式樹狀架構（c #）](./how-to-execute-expression-trees.md)
 - [運算式樹狀架構 (C#)](./index.md)

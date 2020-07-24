@@ -1,21 +1,22 @@
 ---
-title: 如何分析字串 （C#）
+title: '如何剖析字串（c #）'
+description: '瞭解如何剖析字串，以在 c # 中建立 XML 樹狀結構。 瞭解如何存取已剖析 XML 中的特定資料。'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4664e090b6a44c52c519e61b66ccdc5d59a71f1
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345803"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104813"
 ---
-# <a name="how-to-parse-a-string-c"></a>如何分析字串 （C#）
+# <a name="how-to-parse-a-string-c"></a>如何剖析字串（c #）
 
 本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。
 
 ## <a name="example"></a>範例
 
-以下 C# 代碼演示如何解析 XML 字串：
+下列 c # 程式碼說明如何剖析 XML 字串：
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,13 +48,13 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-根`Contacts`節點有兩個`Contact`節點。 要訪問解析的 XML 中的某些特定資料，請使用[XElement.element（）](xref:System.Xml.Linq.XContainer.Elements)方法，在這種情況下，該方法將返回根`Contacts`節點的子項目。 以下示例將第一個`Contact`節點列印到主控台：
+根 `Contacts` 節點有兩個 `Contact` 節點。 若要存取已剖析 XML 中的某些特定資料，請使用[system.xml.linq.xelement> （）](xref:System.Xml.Linq.XContainer.Elements)方法，在此情況下會傳回根節點的子項目 `Contacts` 。 下列範例會將第一個 `Contact` 節點列印到主控台：
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何查找具有特定屬性 （C#） 的元素](how-to-find-an-element-with-a-specific-attribute.md)
+- [如何尋找具有特定屬性的元素（c #）](how-to-find-an-element-with-a-specific-attribute.md)

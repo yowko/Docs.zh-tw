@@ -1,13 +1,14 @@
 ---
 title: 鏈結查詢範例 (C#)
+description: '這個範例顯示當您將兩個在 c # 中使用延後執行和延遲評估的查詢鏈在一起時，會發生什麼情況。'
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0cfcfe1c8f537778fd1ef909277d95d83991af51
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70205423"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105542"
 ---
 # <a name="chaining-queries-example-c"></a>鏈結查詢範例 (C#)
 這個範例會在先前的範例上建置，然後在將同時使用延後執行與延遲評估的兩個查詢鏈結在一起時，顯示發生什麼狀況。  
@@ -86,6 +87,6 @@ Main: str >GHI!!!<
   
 - [中繼具體化 (C#)](./intermediate-materialization.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [教學課程：將查詢鏈結在一起 (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
