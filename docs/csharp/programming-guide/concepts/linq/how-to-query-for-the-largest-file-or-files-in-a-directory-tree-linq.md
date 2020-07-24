@@ -1,29 +1,30 @@
 ---
-title: 如何查詢目錄樹 （LINQ） （C#） 中的最大檔或檔
+title: '如何查詢樹狀目錄中的最大檔案（LINQ）（c #）'
+description: '這個 c # 範例顯示與檔案大小（以位元組為單位）相關的五個 LINQ 查詢。 您可以修改這些來查詢 FileInfo 物件的某些其他屬性。'
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: ed7d610bd292be4062db89f3c94af280e851141f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168761"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104370"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="7bbcc-102">如何查詢目錄樹 （LINQ） （C#） 中的最大檔或檔</span><span class="sxs-lookup"><span data-stu-id="7bbcc-102">How to query for the largest file or files in a directory tree (LINQ) (C#)</span></span>
-<span data-ttu-id="7bbcc-103">此範例顯示五個與檔案位元組大小相關的查詢：</span><span class="sxs-lookup"><span data-stu-id="7bbcc-103">This example shows five queries related to file size in bytes:</span></span>  
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="4db35-104">如何查詢樹狀目錄中的最大檔案（LINQ）（c #）</span><span class="sxs-lookup"><span data-stu-id="4db35-104">How to query for the largest file or files in a directory tree (LINQ) (C#)</span></span>
+<span data-ttu-id="4db35-105">此範例顯示五個與檔案位元組大小相關的查詢：</span><span class="sxs-lookup"><span data-stu-id="4db35-105">This example shows five queries related to file size in bytes:</span></span>  
   
-- <span data-ttu-id="7bbcc-104">如何擷取最大檔案的位元組大小。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-104">How to retrieve the size in bytes of the largest file.</span></span>  
+- <span data-ttu-id="4db35-106">如何擷取最大檔案的位元組大小。</span><span class="sxs-lookup"><span data-stu-id="4db35-106">How to retrieve the size in bytes of the largest file.</span></span>  
   
-- <span data-ttu-id="7bbcc-105">如何擷取最小檔案的位元組大小。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-105">How to retrieve the size in bytes of the smallest file.</span></span>  
+- <span data-ttu-id="4db35-107">如何擷取最小檔案的位元組大小。</span><span class="sxs-lookup"><span data-stu-id="4db35-107">How to retrieve the size in bytes of the smallest file.</span></span>  
   
-- <span data-ttu-id="7bbcc-106">如何從所指定根資料夾下的一或多個資料夾中，擷取最大或最小檔案的 <xref:System.IO.FileInfo> 物件。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-106">How to retrieve the <xref:System.IO.FileInfo> object largest or smallest file from one or more folders under a specified root folder.</span></span>  
+- <span data-ttu-id="4db35-108">如何從所指定根資料夾下的一或多個資料夾中，擷取最大或最小檔案的 <xref:System.IO.FileInfo> 物件。</span><span class="sxs-lookup"><span data-stu-id="4db35-108">How to retrieve the <xref:System.IO.FileInfo> object largest or smallest file from one or more folders under a specified root folder.</span></span>  
   
-- <span data-ttu-id="7bbcc-107">如何擷取序列，例如 10 個最大檔案。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-107">How to retrieve a sequence such as the 10 largest files.</span></span>  
+- <span data-ttu-id="4db35-109">如何擷取序列，例如 10 個最大檔案。</span><span class="sxs-lookup"><span data-stu-id="4db35-109">How to retrieve a sequence such as the 10 largest files.</span></span>  
   
-- <span data-ttu-id="7bbcc-108">如何根據檔案位元組大小將檔案分組排序，並略過小於指定大小的檔案。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-108">How to order files into groups based on their file size in bytes, ignoring files that are less than a specified size.</span></span>  
+- <span data-ttu-id="4db35-110">如何根據檔案位元組大小將檔案分組排序，並略過小於指定大小的檔案。</span><span class="sxs-lookup"><span data-stu-id="4db35-110">How to order files into groups based on their file size in bytes, ignoring files that are less than a specified size.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7bbcc-109">範例</span><span class="sxs-lookup"><span data-stu-id="7bbcc-109">Example</span></span>  
- <span data-ttu-id="7bbcc-110">下列範例包含五個不同的查詢，以示範如何根據檔案位元組大小來查詢和分組檔案。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-110">The following example contains five separate queries that show how to query and group files, depending on their file size in bytes.</span></span> <span data-ttu-id="7bbcc-111">您可以輕鬆修改這些範例，使查詢根據 <xref:System.IO.FileInfo> 物件的其他某個屬性。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-111">You can easily modify these examples to base the query on some other property of the <xref:System.IO.FileInfo> object.</span></span>  
+## <a name="example"></a><span data-ttu-id="4db35-111">範例</span><span class="sxs-lookup"><span data-stu-id="4db35-111">Example</span></span>  
+ <span data-ttu-id="4db35-112">下列範例包含五個不同的查詢，以示範如何根據檔案位元組大小來查詢和分組檔案。</span><span class="sxs-lookup"><span data-stu-id="4db35-112">The following example contains five separate queries that show how to query and group files, depending on their file size in bytes.</span></span> <span data-ttu-id="4db35-113">您可以輕鬆修改這些範例，使查詢根據 <xref:System.IO.FileInfo> 物件的其他某個屬性。</span><span class="sxs-lookup"><span data-stu-id="4db35-113">You can easily modify these examples to base the query on some other property of the <xref:System.IO.FileInfo> object.</span></span>  
   
 ```csharp  
 class QueryBySize  
@@ -138,14 +139,14 @@ class QueryBySize
 }  
 ```  
   
- <span data-ttu-id="7bbcc-112">若要傳回一或多個完整的 <xref:System.IO.FileInfo> 物件，查詢必須先檢查資料來源中的每個物件，再根據其 Length 屬性值進行排序。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-112">To return one or more complete <xref:System.IO.FileInfo> objects, the query first must examine each one in the data source, and then sort them by the value of their Length property.</span></span> <span data-ttu-id="7bbcc-113">然後，它會傳回具有最大長度的單一物件或物件序列。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-113">Then it can return the single one or the sequence with the greatest lengths.</span></span> <span data-ttu-id="7bbcc-114">使用 <xref:System.Linq.Enumerable.First%2A> 可傳回清單中的第一個項目。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-114">Use <xref:System.Linq.Enumerable.First%2A> to return the first element in a list.</span></span> <span data-ttu-id="7bbcc-115">使用 <xref:System.Linq.Enumerable.Take%2A> 則傳回前 n 個項目。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-115">Use <xref:System.Linq.Enumerable.Take%2A> to return the first n number of elements.</span></span> <span data-ttu-id="7bbcc-116">指定遞減排序次序，則會將最小的項目放在清單的開頭。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-116">Specify a descending sort order to put the smallest elements at the start of the list.</span></span>  
+ <span data-ttu-id="4db35-114">若要傳回一或多個完整的 <xref:System.IO.FileInfo> 物件，查詢必須先檢查資料來源中的每個物件，再根據其 Length 屬性值進行排序。</span><span class="sxs-lookup"><span data-stu-id="4db35-114">To return one or more complete <xref:System.IO.FileInfo> objects, the query first must examine each one in the data source, and then sort them by the value of their Length property.</span></span> <span data-ttu-id="4db35-115">然後，它會傳回具有最大長度的單一物件或物件序列。</span><span class="sxs-lookup"><span data-stu-id="4db35-115">Then it can return the single one or the sequence with the greatest lengths.</span></span> <span data-ttu-id="4db35-116">使用 <xref:System.Linq.Enumerable.First%2A> 可傳回清單中的第一個項目。</span><span class="sxs-lookup"><span data-stu-id="4db35-116">Use <xref:System.Linq.Enumerable.First%2A> to return the first element in a list.</span></span> <span data-ttu-id="4db35-117">使用 <xref:System.Linq.Enumerable.Take%2A> 則傳回前 n 個項目。</span><span class="sxs-lookup"><span data-stu-id="4db35-117">Use <xref:System.Linq.Enumerable.Take%2A> to return the first n number of elements.</span></span> <span data-ttu-id="4db35-118">指定遞減排序次序，則會將最小的項目放在清單的開頭。</span><span class="sxs-lookup"><span data-stu-id="4db35-118">Specify a descending sort order to put the smallest elements at the start of the list.</span></span>  
   
- <span data-ttu-id="7bbcc-117">查詢會呼叫外面另一個取得檔案位元組大小的方法，以解決可能會因下列狀況引發的例外狀況：自呼叫 `GetFiles` 而建立 <xref:System.IO.FileInfo> 物件以來的這段期間，有另一個執行緒刪除了檔案。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-117">The query calls out to a separate method to obtain the file size in bytes in order to consume the possible exception that will be raised in the case where a file was deleted on another thread in the time period since the <xref:System.IO.FileInfo> object was created in the call to `GetFiles`.</span></span> <span data-ttu-id="7bbcc-118">即使已建立 <xref:System.IO.FileInfo> 物件，還是可能會發生這個例外狀況，原因是 <xref:System.IO.FileInfo> 物件會在它的 <xref:System.IO.FileInfo.Length%2A> 屬性第一次受到存取時，嘗試使用目前最新的位元組大小來重新整理這個屬性。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-118">Even through the <xref:System.IO.FileInfo> object has already been created, the exception can occur because a <xref:System.IO.FileInfo> object will try to refresh its <xref:System.IO.FileInfo.Length%2A> property by using the most current size in bytes the first time the property is accessed.</span></span> <span data-ttu-id="7bbcc-119">讓這個作業進入查詢外部的 try-catch 區塊，就會遵循規則，以避免查詢中會造成副作業的作業。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-119">By putting this operation in a try-catch block outside the query, we follow the rule of avoiding operations in queries that can cause side-effects.</span></span> <span data-ttu-id="7bbcc-120">一般而言，處理例外狀況時需要十分小心，以確定應用程式不是處於未知狀態。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-120">In general, great care must be taken when consuming exceptions, to make sure that an application is not left in an unknown state.</span></span>  
+ <span data-ttu-id="4db35-119">查詢會呼叫外面另一個取得檔案位元組大小的方法，以解決可能會因下列狀況引發的例外狀況：自呼叫 `GetFiles` 而建立 <xref:System.IO.FileInfo> 物件以來的這段期間，有另一個執行緒刪除了檔案。</span><span class="sxs-lookup"><span data-stu-id="4db35-119">The query calls out to a separate method to obtain the file size in bytes in order to consume the possible exception that will be raised in the case where a file was deleted on another thread in the time period since the <xref:System.IO.FileInfo> object was created in the call to `GetFiles`.</span></span> <span data-ttu-id="4db35-120">即使已建立 <xref:System.IO.FileInfo> 物件，還是可能會發生這個例外狀況，原因是 <xref:System.IO.FileInfo> 物件會在它的 <xref:System.IO.FileInfo.Length%2A> 屬性第一次受到存取時，嘗試使用目前最新的位元組大小來重新整理這個屬性。</span><span class="sxs-lookup"><span data-stu-id="4db35-120">Even through the <xref:System.IO.FileInfo> object has already been created, the exception can occur because a <xref:System.IO.FileInfo> object will try to refresh its <xref:System.IO.FileInfo.Length%2A> property by using the most current size in bytes the first time the property is accessed.</span></span> <span data-ttu-id="4db35-121">讓這個作業進入查詢外部的 try-catch 區塊，就會遵循規則，以避免查詢中會造成副作業的作業。</span><span class="sxs-lookup"><span data-stu-id="4db35-121">By putting this operation in a try-catch block outside the query, we follow the rule of avoiding operations in queries that can cause side-effects.</span></span> <span data-ttu-id="4db35-122">一般而言，處理例外狀況時需要十分小心，以確定應用程式不是處於未知狀態。</span><span class="sxs-lookup"><span data-stu-id="4db35-122">In general, great care must be taken when consuming exceptions, to make sure that an application is not left in an unknown state.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="7bbcc-121">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="7bbcc-121">Compiling the Code</span></span>  
-<span data-ttu-id="7bbcc-122">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="7bbcc-122">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="4db35-123">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4db35-123">Compiling the Code</span></span>  
+<span data-ttu-id="4db35-124">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="4db35-124">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7bbcc-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7bbcc-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4db35-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="4db35-125">See also</span></span>
 
-- [<span data-ttu-id="7bbcc-124">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="7bbcc-124">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
-- [<span data-ttu-id="7bbcc-125">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="7bbcc-125">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="4db35-126">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="4db35-126">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="4db35-127">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="4db35-127">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

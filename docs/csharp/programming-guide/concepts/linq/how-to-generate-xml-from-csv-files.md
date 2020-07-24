@@ -1,21 +1,22 @@
 ---
-title: 如何從 CSV 檔 （C#） 生成 XML
+title: '如何從 CSV 檔案產生 XML （c #）'
+description: '瞭解如何使用 c # 中的 LINQ 和 LINQ to XML，從 .csv 檔案產生 XML。 查詢會使用 let 子句將字串分割成欄位陣列。'
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9954a51fc1f2979c6cce13805ed15cdb88741
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635804"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105171"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="b06f5-102">如何從 CSV 檔 （C#） 生成 XML</span><span class="sxs-lookup"><span data-stu-id="b06f5-102">How to generate XML from CSV files (C#)</span></span>
-<span data-ttu-id="b06f5-103">此示例演示如何使用語言集成查詢 （LINQ） 並從[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]逗號分隔的值 （CSV） 檔生成 XML 檔。</span><span class="sxs-lookup"><span data-stu-id="b06f5-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="9c92c-104">如何從 CSV 檔案產生 XML （c #）</span><span class="sxs-lookup"><span data-stu-id="9c92c-104">How to generate XML from CSV files (C#)</span></span>
+<span data-ttu-id="9c92c-105">這個範例示範如何使用語言整合式查詢（LINQ），並 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 從逗號分隔值（CSV）檔案產生 XML 檔案。</span><span class="sxs-lookup"><span data-stu-id="9c92c-105">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b06f5-104">範例</span><span class="sxs-lookup"><span data-stu-id="b06f5-104">Example</span></span>  
- <span data-ttu-id="b06f5-105">以下代碼對字串陣列執行 LINQ 查詢。</span><span class="sxs-lookup"><span data-stu-id="b06f5-105">The following code performs a LINQ query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="9c92c-106">範例</span><span class="sxs-lookup"><span data-stu-id="9c92c-106">Example</span></span>  
+ <span data-ttu-id="9c92c-107">下列程式碼會在字串陣列上執行 LINQ 查詢。</span><span class="sxs-lookup"><span data-stu-id="9c92c-107">The following code performs a LINQ query on an array of strings.</span></span>  
   
- <span data-ttu-id="b06f5-106">此查詢使用 `let` 子句，將每個字串分割為欄位的陣列。</span><span class="sxs-lookup"><span data-stu-id="b06f5-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="9c92c-108">此查詢使用 `let` 子句，將每個字串分割為欄位的陣列。</span><span class="sxs-lookup"><span data-stu-id="9c92c-108">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +49,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="b06f5-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="b06f5-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="9c92c-109">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="9c92c-109">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

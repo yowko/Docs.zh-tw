@@ -1,18 +1,19 @@
 ---
-title: 如何查詢目錄樹 （LINQ） （C#） 中的重複檔案
+title: '如何查詢樹狀目錄中的重複檔案（LINQ）（c #）'
+description: '瞭解如何在 c # 中使用 LINQ 來查詢不同目錄中的重複檔案名，以及如何查詢大小和 LastWrite 時間也符合的檔案。'
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 0578d6c85c7d2e38c840c278c7ad2775467ac741
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72acb0e0823138821d321ed3845ff7ac137aee0c
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168878"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104570"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="a3d5d-102">如何查詢目錄樹 （LINQ） （C#） 中的重複檔案</span><span class="sxs-lookup"><span data-stu-id="a3d5d-102">How to query for duplicate files in a directory tree (LINQ) (C#)</span></span>
-<span data-ttu-id="a3d5d-103">同名的檔案有時可能位於多個資料夾中。</span><span class="sxs-lookup"><span data-stu-id="a3d5d-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="a3d5d-104">例如，在 Visual Studio 安裝資料夾下，有數個資料夾內含 readme.htm 檔案。</span><span class="sxs-lookup"><span data-stu-id="a3d5d-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="a3d5d-105">這個範例示範如何查詢所指定根資料夾下的這類重複檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="a3d5d-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="a3d5d-106">第二個示例演示如何查詢大小和上次寫入時間也匹配的檔。</span><span class="sxs-lookup"><span data-stu-id="a3d5d-106">The second example shows how to query for files whose size and LastWrite times also match.</span></span>  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="33be6-103">如何查詢樹狀目錄中的重複檔案（LINQ）（c #）</span><span class="sxs-lookup"><span data-stu-id="33be6-103">How to query for duplicate files in a directory tree (LINQ) (C#)</span></span>
+<span data-ttu-id="33be6-104">同名的檔案有時可能位於多個資料夾中。</span><span class="sxs-lookup"><span data-stu-id="33be6-104">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="33be6-105">例如，在 Visual Studio 安裝資料夾下，有數個資料夾內含 readme.htm 檔案。</span><span class="sxs-lookup"><span data-stu-id="33be6-105">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="33be6-106">這個範例示範如何查詢所指定根資料夾下的這類重複檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="33be6-106">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="33be6-107">第二個範例顯示如何查詢大小和 LastWrite 時間也相符的檔案。</span><span class="sxs-lookup"><span data-stu-id="33be6-107">The second example shows how to query for files whose size and LastWrite times also match.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a3d5d-107">範例</span><span class="sxs-lookup"><span data-stu-id="a3d5d-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="33be6-108">範例</span><span class="sxs-lookup"><span data-stu-id="33be6-108">Example</span></span>  
   
 ```csharp  
 class QueryDuplicateFileNames  
@@ -167,12 +168,12 @@ class QueryDuplicateFileNames
 }  
 ```  
   
- <span data-ttu-id="a3d5d-108">第一個查詢會使用簡單索引鍵來判斷相符項目；這會尋找同名但內容可能不同的檔案。</span><span class="sxs-lookup"><span data-stu-id="a3d5d-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="a3d5d-109">第二個查詢會使用複合索引鍵來比對 <xref:System.IO.FileInfo> 物件的三個屬性。</span><span class="sxs-lookup"><span data-stu-id="a3d5d-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="a3d5d-110">此查詢很有可能找到同名以及內容類似或相同的檔案。</span><span class="sxs-lookup"><span data-stu-id="a3d5d-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
+ <span data-ttu-id="33be6-109">第一個查詢會使用簡單索引鍵來判斷相符項目；這會尋找同名但內容可能不同的檔案。</span><span class="sxs-lookup"><span data-stu-id="33be6-109">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="33be6-110">第二個查詢會使用複合索引鍵來比對 <xref:System.IO.FileInfo> 物件的三個屬性。</span><span class="sxs-lookup"><span data-stu-id="33be6-110">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="33be6-111">此查詢很有可能找到同名以及內容類似或相同的檔案。</span><span class="sxs-lookup"><span data-stu-id="33be6-111">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a3d5d-111">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a3d5d-111">Compiling the Code</span></span>  
- <span data-ttu-id="a3d5d-112">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="a3d5d-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="33be6-112">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="33be6-112">Compiling the Code</span></span>  
+ <span data-ttu-id="33be6-113">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="33be6-113">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3d5d-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a3d5d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33be6-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="33be6-114">See also</span></span>
 
-- [<span data-ttu-id="a3d5d-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="a3d5d-114">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
-- [<span data-ttu-id="a3d5d-115">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="a3d5d-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="33be6-115">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="33be6-115">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="33be6-116">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="33be6-116">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

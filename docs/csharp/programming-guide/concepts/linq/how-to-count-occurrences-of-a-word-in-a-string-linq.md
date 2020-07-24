@@ -1,18 +1,19 @@
 ---
-title: 如何計算字串中單詞的匹配項 （LINQ） （C#）
+title: '如何計算某個單字在字串中出現的次數（LINQ）（c #）'
+description: '這個範例會使用 c # 中的 LINQ 查詢來計算字串中指定單字的出現次數。 它會使用 Split 方法來建立單字陣列。'
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 9c3ac2e0d44d52e437586a4d105a022f75c1dc54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1621e776510e366aa779f1d45468be34b3dec373
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169321"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103366"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="13d39-102">如何計算字串中單詞的匹配項 （LINQ） （C#）</span><span class="sxs-lookup"><span data-stu-id="13d39-102">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
-<span data-ttu-id="13d39-103">本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。</span><span class="sxs-lookup"><span data-stu-id="13d39-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="13d39-104">請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。</span><span class="sxs-lookup"><span data-stu-id="13d39-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="13d39-105"><xref:System.String.Split%2A> 方法有效能成本。</span><span class="sxs-lookup"><span data-stu-id="13d39-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="13d39-106">如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="13d39-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="13d39-107">不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。</span><span class="sxs-lookup"><span data-stu-id="13d39-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a><span data-ttu-id="5dbb2-104">如何計算某個單字在字串中出現的次數（LINQ）（c #）</span><span class="sxs-lookup"><span data-stu-id="5dbb2-104">How to count occurrences of a word in a string (LINQ) (C#)</span></span>
+<span data-ttu-id="5dbb2-105">本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。</span><span class="sxs-lookup"><span data-stu-id="5dbb2-105">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="5dbb2-106">請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。</span><span class="sxs-lookup"><span data-stu-id="5dbb2-106">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="5dbb2-107"><xref:System.String.Split%2A> 方法有效能成本。</span><span class="sxs-lookup"><span data-stu-id="5dbb2-107">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="5dbb2-108">如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="5dbb2-108">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="5dbb2-109">不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。</span><span class="sxs-lookup"><span data-stu-id="5dbb2-109">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="13d39-108">範例</span><span class="sxs-lookup"><span data-stu-id="13d39-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5dbb2-110">範例</span><span class="sxs-lookup"><span data-stu-id="5dbb2-110">Example</span></span>  
   
 ```csharp  
 class CountWords  
@@ -54,9 +55,9 @@ class CountWords
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="13d39-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="13d39-109">Compiling the Code</span></span>  
- <span data-ttu-id="13d39-110">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="13d39-110">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="5dbb2-111">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="5dbb2-111">Compiling the Code</span></span>  
+ <span data-ttu-id="5dbb2-112">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="5dbb2-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13d39-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13d39-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5dbb2-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="5dbb2-113">See also</span></span>
 
-- [<span data-ttu-id="13d39-112">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="13d39-112">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="5dbb2-114">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="5dbb2-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)

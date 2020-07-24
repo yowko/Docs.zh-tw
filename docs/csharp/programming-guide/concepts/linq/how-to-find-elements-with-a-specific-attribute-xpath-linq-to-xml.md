@@ -1,23 +1,24 @@
 ---
-title: 如何查找具有特定屬性的元素（XPath-LINQ 到 XML）（C#）
+title: '如何尋找具有特定屬性的元素（XPath-LINQ to XML）（c #）'
+description: '這個 c # 範例會比較 XPath 與 LINQ to XML，以瞭解它們如何尋找具有特定屬性的元素。'
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: e79cad3ad6fb0bf88e388b552f8e39327acfb4ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb0b5c27fb3993b487c5e8d70c6562c1d0562860
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141047"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105272"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="5c1a9-102">如何查找具有特定屬性的元素（XPath-LINQ 到 XML）（C#）</span><span class="sxs-lookup"><span data-stu-id="5c1a9-102">How to find elements with a specific attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="5c1a9-103">有時候您會想要尋找具有特定屬性的所有項目。</span><span class="sxs-lookup"><span data-stu-id="5c1a9-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="5c1a9-104">您並不關心屬性的內容。</span><span class="sxs-lookup"><span data-stu-id="5c1a9-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="5c1a9-105">但是，您想要根據屬性的存在與否來選擇。</span><span class="sxs-lookup"><span data-stu-id="5c1a9-105">Instead, you want to select based on the existence of the attribute.</span></span>  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="18aee-103">如何尋找具有特定屬性的元素（XPath-LINQ to XML）（c #）</span><span class="sxs-lookup"><span data-stu-id="18aee-103">How to find elements with a specific attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="18aee-104">有時候您會想要尋找具有特定屬性的所有項目。</span><span class="sxs-lookup"><span data-stu-id="18aee-104">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="18aee-105">您並不關心屬性的內容。</span><span class="sxs-lookup"><span data-stu-id="18aee-105">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="18aee-106">但是，您想要根據屬性的存在與否來選擇。</span><span class="sxs-lookup"><span data-stu-id="18aee-106">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- <span data-ttu-id="5c1a9-106">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="5c1a9-106">The XPath expression is:</span></span>  
+ <span data-ttu-id="18aee-107">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="18aee-107">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a><span data-ttu-id="5c1a9-107">範例</span><span class="sxs-lookup"><span data-stu-id="5c1a9-107">Example</span></span>  
- <span data-ttu-id="5c1a9-108">下列程式碼只會選取具有 `Select` 屬性的項目。</span><span class="sxs-lookup"><span data-stu-id="5c1a9-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="18aee-108">範例</span><span class="sxs-lookup"><span data-stu-id="18aee-108">Example</span></span>  
+ <span data-ttu-id="18aee-109">下列程式碼只會選取具有 `Select` 屬性的項目。</span><span class="sxs-lookup"><span data-stu-id="18aee-109">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -48,7 +49,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="5c1a9-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5c1a9-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="18aee-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="18aee-110">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  

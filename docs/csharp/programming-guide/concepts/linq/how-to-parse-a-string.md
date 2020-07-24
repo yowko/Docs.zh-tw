@@ -1,21 +1,22 @@
 ---
-title: 如何分析字串 （C#）
+title: '如何剖析字串（c #）'
+description: '瞭解如何剖析字串，以在 c # 中建立 XML 樹狀結構。 瞭解如何存取已剖析 XML 中的特定資料。'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4664e090b6a44c52c519e61b66ccdc5d59a71f1
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345803"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104813"
 ---
-# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="9e34f-102">如何分析字串 （C#）</span><span class="sxs-lookup"><span data-stu-id="9e34f-102">How to parse a string (C#)</span></span>
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="6674d-104">如何剖析字串（c #）</span><span class="sxs-lookup"><span data-stu-id="6674d-104">How to parse a string (C#)</span></span>
 
-<span data-ttu-id="9e34f-103">本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="9e34f-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>
+<span data-ttu-id="6674d-105">本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="6674d-105">This topic shows how to parse a string to create an XML tree in C#.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9e34f-104">範例</span><span class="sxs-lookup"><span data-stu-id="9e34f-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6674d-106">範例</span><span class="sxs-lookup"><span data-stu-id="6674d-106">Example</span></span>
 
-<span data-ttu-id="9e34f-105">以下 C# 代碼演示如何解析 XML 字串：</span><span class="sxs-lookup"><span data-stu-id="9e34f-105">The following C# code shows how to parse an XML string:</span></span>
+<span data-ttu-id="6674d-107">下列 c # 程式碼說明如何剖析 XML 字串：</span><span class="sxs-lookup"><span data-stu-id="6674d-107">The following C# code shows how to parse an XML string:</span></span>
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,13 +48,13 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-<span data-ttu-id="9e34f-106">根`Contacts`節點有兩個`Contact`節點。</span><span class="sxs-lookup"><span data-stu-id="9e34f-106">The root `Contacts` node has two `Contact` nodes.</span></span> <span data-ttu-id="9e34f-107">要訪問解析的 XML 中的某些特定資料，請使用[XElement.element（）](xref:System.Xml.Linq.XContainer.Elements)方法，在這種情況下，該方法將返回根`Contacts`節點的子項目。</span><span class="sxs-lookup"><span data-stu-id="9e34f-107">To access some specific data in your parsed XML, use the [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements) method, which in this case returns the child elements of the root `Contacts` node.</span></span> <span data-ttu-id="9e34f-108">以下示例將第一個`Contact`節點列印到主控台：</span><span class="sxs-lookup"><span data-stu-id="9e34f-108">The following example prints the first `Contact` node to the console:</span></span>
+<span data-ttu-id="6674d-108">根 `Contacts` 節點有兩個 `Contact` 節點。</span><span class="sxs-lookup"><span data-stu-id="6674d-108">The root `Contacts` node has two `Contact` nodes.</span></span> <span data-ttu-id="6674d-109">若要存取已剖析 XML 中的某些特定資料，請使用[system.xml.linq.xelement> （）](xref:System.Xml.Linq.XContainer.Elements)方法，在此情況下會傳回根節點的子項目 `Contacts` 。</span><span class="sxs-lookup"><span data-stu-id="6674d-109">To access some specific data in your parsed XML, use the [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements) method, which in this case returns the child elements of the root `Contacts` node.</span></span> <span data-ttu-id="6674d-110">下列範例會將第一個 `Contact` 節點列印到主控台：</span><span class="sxs-lookup"><span data-stu-id="6674d-110">The following example prints the first `Contact` node to the console:</span></span>
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
 
-## <a name="see-also"></a><span data-ttu-id="9e34f-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9e34f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6674d-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="6674d-111">See also</span></span>
 
-- [<span data-ttu-id="9e34f-110">如何查找具有特定屬性 （C#） 的元素</span><span class="sxs-lookup"><span data-stu-id="9e34f-110">How to find an element with a specific attribute (C#)</span></span>](how-to-find-an-element-with-a-specific-attribute.md)
+- [<span data-ttu-id="6674d-112">如何尋找具有特定屬性的元素（c #）</span><span class="sxs-lookup"><span data-stu-id="6674d-112">How to find an element with a specific attribute (C#)</span></span>](how-to-find-an-element-with-a-specific-attribute.md)

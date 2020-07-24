@@ -1,19 +1,20 @@
 ---
-title: 如何檢索屬性集合（LINQ 到 XML）（C#）
+title: '如何取出屬性的集合（LINQ to XML）（c #）'
+description: 'C # 中的 Attributes 方法會抓取元素的屬性。 這個 LINQ to XML 範例會逐一查看元素的屬性集合。'
 ms.date: 07/20/2015
 ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
-ms.openlocfilehash: 02871b38c3b1a1ed64fa6ca808e193811cd7f721
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5994086db6133530e63eb1328a7b524d30a0797d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347635"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103381"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a><span data-ttu-id="8346a-102">如何檢索屬性集合（LINQ 到 XML）（C#）</span><span class="sxs-lookup"><span data-stu-id="8346a-102">How to retrieve a collection of attributes (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="8346a-103">本主題說明 <xref:System.Xml.Linq.XElement.Attributes%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="8346a-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="8346a-104">這個方法會擷取項目的屬性。</span><span class="sxs-lookup"><span data-stu-id="8346a-104">This method retrieves the attributes of an element.</span></span>  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a><span data-ttu-id="08943-104">如何取出屬性的集合（LINQ to XML）（c #）</span><span class="sxs-lookup"><span data-stu-id="08943-104">How to retrieve a collection of attributes (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="08943-105">本主題說明 <xref:System.Xml.Linq.XElement.Attributes%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="08943-105">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="08943-106">這個方法會擷取項目的屬性。</span><span class="sxs-lookup"><span data-stu-id="08943-106">This method retrieves the attributes of an element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8346a-105">範例</span><span class="sxs-lookup"><span data-stu-id="8346a-105">Example</span></span>  
- <span data-ttu-id="8346a-106">下列範例顯示如何逐一查看項目之屬性的集合。</span><span class="sxs-lookup"><span data-stu-id="8346a-106">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
+## <a name="example"></a><span data-ttu-id="08943-107">範例</span><span class="sxs-lookup"><span data-stu-id="08943-107">Example</span></span>  
+ <span data-ttu-id="08943-108">下列範例顯示如何逐一查看項目之屬性的集合。</span><span class="sxs-lookup"><span data-stu-id="08943-108">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
   
 ```csharp  
 XElement val = new XElement("Value",  
@@ -28,7 +29,7 @@ foreach (XAttribute a in listOfAttributes)
     Console.WriteLine(a);  
 ```  
   
- <span data-ttu-id="8346a-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="8346a-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="08943-109">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="08943-109">This code produces the following output:</span></span>  
   
 ```output  
 ID="1243"  
@@ -36,6 +37,6 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8346a-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8346a-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08943-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="08943-110">See also</span></span>
 
-- [<span data-ttu-id="8346a-109">LINQ to XML 座標軸 (C#)</span><span class="sxs-lookup"><span data-stu-id="8346a-109">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)
+- [<span data-ttu-id="08943-111">LINQ to XML 座標軸 (C#)</span><span class="sxs-lookup"><span data-stu-id="08943-111">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)
