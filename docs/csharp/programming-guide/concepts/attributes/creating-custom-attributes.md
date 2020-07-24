@@ -64,7 +64,7 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Reflection>
 - [C # 程式設計指南](../../index.md)

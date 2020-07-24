@@ -67,7 +67,7 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
   
  您也可以使用名為 <xref:System.ServiceProcess.ServiceController> 的元件進行通訊，並控制現有服務的行為。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
 - [作法：建立 Windows 服務](how-to-create-windows-services.md)
