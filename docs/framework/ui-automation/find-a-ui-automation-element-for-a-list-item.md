@@ -1,5 +1,6 @@
 ---
 title: 尋找清單項目的 UI 自動化項目
+description: 請參閱範例，示範如何在已知專案的索引時，尋找清單專案的使用者介面自動化專案。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +10,27 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: 2474edf95bf598ba9284b5f6ac36a9e0af1317a1
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ec6464bc0ec504fd34ed113c9bed1a54a7d4eaec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741749"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168415"
 ---
-# <a name="find-a-ui-automation-element-for-a-list-item"></a><span data-ttu-id="0635b-102">尋找清單項目的 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="0635b-102">Find a UI Automation Element for a List Item</span></span>
+# <a name="find-a-ui-automation-element-for-a-list-item"></a><span data-ttu-id="21ce0-103">尋找清單項目的 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="21ce0-103">Find a UI Automation Element for a List Item</span></span>
 > [!NOTE]
-> <span data-ttu-id="0635b-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="0635b-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="0635b-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。</span><span class="sxs-lookup"><span data-stu-id="0635b-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="21ce0-104">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="21ce0-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="21ce0-105">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。</span><span class="sxs-lookup"><span data-stu-id="21ce0-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="0635b-105">本主題說明當已知專案的索引時，如何抓取清單中某個專案的 <xref:System.Windows.Automation.AutomationElement>。</span><span class="sxs-lookup"><span data-stu-id="0635b-105">This topic shows how to retrieve an <xref:System.Windows.Automation.AutomationElement> for an item within a list when the index of the item is known.</span></span>  
+ <span data-ttu-id="21ce0-106">本主題說明 <xref:System.Windows.Automation.AutomationElement> 當已知專案的索引時，如何在清單中的專案上取得。</span><span class="sxs-lookup"><span data-stu-id="21ce0-106">This topic shows how to retrieve an <xref:System.Windows.Automation.AutomationElement> for an item within a list when the index of the item is known.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0635b-106">範例</span><span class="sxs-lookup"><span data-stu-id="0635b-106">Example</span></span>  
- <span data-ttu-id="0635b-107">下列範例示範兩種從清單中抓取指定專案的方式，一個使用 <xref:System.Windows.Automation.TreeWalker>，另一個使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。</span><span class="sxs-lookup"><span data-stu-id="0635b-107">The following example shows two ways of retrieving a specified item from a list, one using <xref:System.Windows.Automation.TreeWalker> and the other using <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.</span></span>  
+## <a name="example"></a><span data-ttu-id="21ce0-107">範例</span><span class="sxs-lookup"><span data-stu-id="21ce0-107">Example</span></span>  
+ <span data-ttu-id="21ce0-108">下列範例示範兩種從清單中抓取指定專案的方法，其中一個是使用 <xref:System.Windows.Automation.TreeWalker> ，另一個使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 。</span><span class="sxs-lookup"><span data-stu-id="21ce0-108">The following example shows two ways of retrieving a specified item from a list, one using <xref:System.Windows.Automation.TreeWalker> and the other using <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.</span></span>  
   
- <span data-ttu-id="0635b-108">第一個技巧通常會比 Win32 控制項更快，但第二個是更快的 Windows Presentation Foundation （WPF）控制項。</span><span class="sxs-lookup"><span data-stu-id="0635b-108">The first technique tends to be faster for Win32 controls, but the second is faster for Windows Presentation Foundation (WPF) controls.</span></span>  
+ <span data-ttu-id="21ce0-109">第一個技巧通常會比 Win32 控制項更快，但第二個是更快的 Windows Presentation Foundation （WPF）控制項。</span><span class="sxs-lookup"><span data-stu-id="21ce0-109">The first technique tends to be faster for Win32 controls, but the second is faster for Windows Presentation Foundation (WPF) controls.</span></span>  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  
   
-## <a name="see-also"></a><span data-ttu-id="0635b-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="0635b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21ce0-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="21ce0-110">See also</span></span>
 
-- [<span data-ttu-id="0635b-110">取得 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="0635b-110">Obtaining UI Automation Elements</span></span>](obtaining-ui-automation-elements.md)
+- [<span data-ttu-id="21ce0-111">取得 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="21ce0-111">Obtaining UI Automation Elements</span></span>](obtaining-ui-automation-elements.md)
