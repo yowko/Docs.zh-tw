@@ -1,5 +1,6 @@
 ---
 title: 拖放概觀
+description: 瞭解 Windows Presentation Foundation 應用程式中的拖放支援，可讓使用者將物件拖曳至使用者介面中的區域。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: dd42af77300a7a93bbcbfa4c8f1fc365fc3f5da1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 63384e79d8a198e4cc9507ca3266c484c0506e2c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185995"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168066"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概觀
 本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的拖放功能支援概觀。 拖放功能一般是指資料傳送的方法，這種方法需要使用滑鼠 (或其他一些指標裝置) 選取一或多個物件，將這些物件拖曳到 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中一些想要的置放目標上，然後置放這些物件。  
@@ -28,9 +29,9 @@ ms.locfileid: "79185995"
   
  您可以透過拖放功能，操作任意類型和數目的物件。 例如，檔案、資料夾和選取的內容是一些可透過拖放作業來操作的較常見物件。  
   
- 拖放作業期間所執行的特定動作是針對應用程式的動作，而且這些動作通常會取決於內容。  例如，將檔選擇從同一存放裝置上的一個資料夾拖動到另一個資料夾，預設情況下會移動檔，而將檔從通用命名慣例 （UNC） 共用拖動到本地資料夾，預設情況下複製檔。  
+ 拖放作業期間所執行的特定動作是針對應用程式的動作，而且這些動作通常會取決於內容。  例如，將選取的檔案從某個資料夾拖曳至相同儲存裝置上的另一個資料夾時，預設會移動檔案，而從通用命名慣例（UNC）共用將檔案拖曳到本機資料夾，預設會複製檔案。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的拖放功能是為了提高彈性和可自訂性所設計，以便支援各種拖放案例。  拖放功能支援在單一應用程式中，或在不同的應用程式之間操作物件； 還完全支援在應用程式和其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows 應用程式之間進行拖放。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的拖放功能是為了提高彈性和可自訂性所設計，以便支援各種拖放案例。  拖放功能支援在單一應用程式中，或在不同的應用程式之間操作物件； [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]同時也完全支援應用程式與其他 Windows 應用程式之間的拖放。  
   
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，任何 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 都可以參與拖放。 拖放作業所需的事件和方法會在 <xref:System.Windows.DragDrop> 類別中定義。 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 類別包含 <xref:System.Windows.DragDrop> 附加事件的別名，因此當繼承 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 做為基底項目時，便會在類別成員清單中顯示這些事件。 附加至這些事件的事件處理常式會附加至基礎 <xref:System.Windows.DragDrop> 附加事件，並接收相同的事件資料執行個體。 如需詳細資訊，請參閱 <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> 事件。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "79185995"
 > 您無法在網際網路區域中執行 OLE 拖放作業。  
   
 <a name="Data_Transfer"></a>
-## <a name="data-transfer"></a>資料傳輸  
+## <a name="data-transfer"></a>資料轉送  
  拖放功能是範圍較廣之資料傳輸的一部分。 資料傳輸包括拖放以及複製和貼上作業。 拖放作業類似複製和貼上或剪下和貼上作業，後者使用系統剪貼簿，將資料從某個物件或應用程式傳送到另一個物件或應用程式。 這兩種作業類型都需要：  
   
 - 提供資料來源物件。  
@@ -219,5 +220,5 @@ ms.locfileid: "79185995"
 
 - <xref:System.Windows.Clipboard>
 - [逐步解說：在使用者控制項上啟用拖放功能](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [如何使用主題](drag-and-drop-how-to-topics.md)
-- [拖放](drag-and-drop.md)
+- [操作說明主題](drag-and-drop-how-to-topics.md)
+- [拖放功能](drag-and-drop.md)

@@ -1,17 +1,18 @@
 ---
 title: Header 控制項類型的 UI 自動化支援
+description: 取得標頭控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Header control type
 - Header control type
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-ms.openlocfilehash: be812fd9063674cc82d62a8c0207e27f3543be3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e4744ee6f8c9dbccb36c7ffac6b75561402b3a0
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179757"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167905"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Header 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179757"
   
  標題控制項可為資料列或資料行資訊的標籤提供視覺容器。  
   
- 下列章節會定義標題控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有標頭控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義標題控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求適用于所有標題控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -29,7 +30,7 @@ ms.locfileid: "79179757"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|頁首<br /><br /> - 標題專案（1 個或更多）|None|  
+|頁首<br /><br /> -HeaderItem （1個或更多）|None|  
   
  標題控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中一律會有 1 個以上的子系。  
   

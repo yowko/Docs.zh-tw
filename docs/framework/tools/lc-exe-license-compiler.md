@@ -1,5 +1,6 @@
 ---
 title: Lc.exe (授權編譯器)
+description: 使用授權編譯器 Lc.exe。 此工具會讀取具有授權資訊的文字檔，並將二進位檔案內嵌在 CLR 可執行檔中做為資源。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Lc.exe
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180403"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164254"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (授權編譯器)
 授權編譯器可以讀取包含授權資訊的文字檔，並產生可內嵌於通用語言執行平台可執行檔的二進位檔案做為資源。  
@@ -41,13 +42,13 @@ targetPE /complist:filename [-outdir:path]
 |選項|描述|  
 |------------|-----------------|  
 |**/complist: filename** **|指定要包含在 .licenses 檔案中含有授權元件清單的檔案名稱。 使用元件的完整名稱與每行只有一個元件方式參考每個元件。<br /><br /> 命令列使用者可以為專案中的每個表單指定個別的檔案。 Lc.exe 接受多個輸入檔並產生單一 .licenses 檔案。|  
-|**/h**=**埃爾普**||顯示工具的命令語法和選項。|  
+|**/h**[**elp**]|顯示工具的命令語法和選項。|  
 |**/i: module** **|指定包含列於 **/complist** 檔案中之元件的模組。 若要指定一個以上的模組，請使用多個 **/i** 旗標。|  
-|**/諾戈戈**|隱藏 Microsoft 程式啟始資訊顯示。|  
+|**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/outdir: path** **|指定要放置輸出 .licenses 檔案的目錄。|  
 |**/target: targetPE** **|指定要產生 .licenses 檔案的可執行檔。|  
 |**/v**|指定詳細資訊模式；顯示編譯程序資訊。|  
-|**@***檔*|指定回應檔 (.rsp)。|  
+|**@***file*檔案|指定回應檔 (.rsp)。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="example"></a>範例  
@@ -95,5 +96,5 @@ lc @response.rsp
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [Al.exe (組件連結器)](al-exe-assembly-linker.md)
+- [Al.exe （元件連結器）](al-exe-assembly-linker.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

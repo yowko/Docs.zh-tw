@@ -1,17 +1,18 @@
 ---
 title: ScrollBar 控制項類型的 UI 自動化支援
+description: 取得捲軸控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Scroll Bar control type
 - control types, Scroll Bar
 - Scroll Bar control type
 ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
-ms.openlocfilehash: 88a606369103e989b41ecf3569d54247cf3f83fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 05a30468c9fb292ca0ffde15e2cd7fb523c7d712
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179623"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165984"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>ScrollBar 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179623"
   
  捲軸控制項可讓使用者捲動視窗或項目容器內的內容。 此控制項由一組按鈕和一個縮圖控制項所組成。  
   
- 下列章節會定義捲軸控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有清單控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義捲軸控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]需求適用于所有清單控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -29,7 +30,7 @@ ms.locfileid: "79179623"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|ScrollBar<br /><br /> - 按鈕 （2 或 4）<br />- 拇指 （0 或 1）|不適用。 捲軸控制項不包含內容。|  
+|ScrollBar<br /><br /> -按鈕（2或4）<br />-Thumb （0 or1）|不適用。 捲軸控制項不包含內容。|  
   
  捲軸控制項一律有三到五個子系。 由於樹狀子目錄有一個以上的按鈕控制項，因此您必須將特定的 <xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty> 值設定給每個項目，以供測試自動化工具搜尋它們。  
   

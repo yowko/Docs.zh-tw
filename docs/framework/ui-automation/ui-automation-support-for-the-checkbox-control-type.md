@@ -1,17 +1,18 @@
 ---
 title: CheckBox 控制項類型的 UI 自動化支援
+description: 取得 CheckBox 控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性和控制項模式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckBox control type
 - control types, CheckBox
 - UI Automation, CheckBox control type
 ms.assetid: 9c2a0e70-3a39-4ba9-96ea-a7fe531fae9f
-ms.openlocfilehash: 6b196e0cbdbff760d64b70361dbf9031a39e89c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 787642f34ab50a08bb2f525e6ff11443bb356d27
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179817"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167957"
 ---
 # <a name="ui-automation-support-for-the-checkbox-control-type"></a>CheckBox 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179817"
   
  核取方塊是用來表示狀態的物件，使用者可與之互動以循環狀態。 對使用者來說，核取方塊會顯示成二元 (是/否) 或 (開/關) 選項或三元 (開、關、未定) 選項。  
   
- 下列章節會定義核取方塊控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有核取方塊控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義核取方塊控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]需求適用于所有核取方塊控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  

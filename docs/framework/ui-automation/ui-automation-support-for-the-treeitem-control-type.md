@@ -1,17 +1,18 @@
 ---
 title: TreeItem 控制項類型的 UI 自動化支援
+description: 取得 TreeItem 控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Tree Item
 - Tree Item control type
 - UI Automation, Tree Item control type
 ms.assetid: 229f341a-477f-434e-b877-4db9973068eb
-ms.openlocfilehash: 4dc55b4baaf42d22f0c7db1301a78672e739e757
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b20e2ee6a54ad4f59f0f7d491c019bd8db24a80
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179427"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167829"
 ---
 # <a name="ui-automation-support-for-the-treeitem-control-type"></a>TreeItem 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179427"
   
  TreeItem 控制項類型代表樹狀結構容器內的節點。 每個節點都可能包含其他節點，稱為「子節點」。 父節點或包含子節點的節點可以顯示為展開或摺疊。  
   
- 下列章節會定義 TreeItem 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有樹項控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義 TreeItem 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]需求適用于所有樹狀結構專案控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -29,7 +30,7 @@ ms.locfileid: "79179427"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|TreeItem<br /><br /> - 核取方塊 （0 或 1）<br />- 圖像 （0 或 1）<br />- 按鈕 （0 或 1）<br />- 樹專案（0 或更多）|TreeItem<br /><br /> - 樹專案（0 或更多）|  
+|TreeItem<br /><br /> -CheckBox （0或1）<br />-影像（0或1）<br />-按鈕（0或1）<br />-TreeItem （0個以上）|TreeItem<br /><br /> -TreeItem （0個以上）|  
   
  樹狀結構項目控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中可以有零個以上的樹狀結構項目子項。 如果樹狀結構項目控制項的功能超出下列控制項模式所公開的功能，則控制項應根據 Data Item 控制項類型而定。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "79179427"
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單控制項特別有關。 有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性的詳細資訊，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單控制項特別有關。 如需屬性的詳細資訊 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  

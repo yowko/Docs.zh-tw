@@ -1,17 +1,18 @@
 ---
 title: Tree 控制項類型的 UI 自動化支援
+description: 取得樹狀目錄控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Tree
 - Tree control type
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
-ms.openlocfilehash: 389506bed91d26288e9fe2ce84c00dfb27e821b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 09d4a4e344bb727187eae18dff762c79791e93d2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179444"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167843"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Tree 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -19,9 +20,9 @@ ms.locfileid: "79179444"
   
  本主題提供樹狀結構控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的特定指導方針、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式。  
   
- 樹控制項類型用於其內容與節點層次結構相關容器，如在 Microsoft Windows 資源管理器的左側窗格中顯示檔和資料夾的方式。 每個節點都可能包含其他節點，稱為子節點。 父節點或包含子節點的節點可以顯示為展開或摺疊。  
+ 樹狀目錄控制項類型是用於其內容與節點階層相關的容器，如同檔案和資料夾在 Microsoft Windows Explorer 的左窗格中顯示的方式。 每個節點都可能包含其他節點，稱為子節點。 父節點或包含子節點的節點可以顯示為展開或摺疊。  
   
- 下列章節會定義樹狀結構控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有樹控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義樹狀結構控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求適用于所有的樹狀目錄控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -52,7 +53,7 @@ ms.locfileid: "79179444"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|此樹狀結構控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|此樹狀結構控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|請參閱備註。|如果樹狀結構控制項有相關聯的標籤，則此屬性會傳回該標籤的 <xref:System.Windows.Automation.AutomationElement> 。 否則，該屬性將返回 null 引用`Nothing`（在 Microsoft Visual Basic .NET 中）。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|請參閱備註。|如果樹狀結構控制項有相關聯的標籤，則此屬性會傳回該標籤的 <xref:System.Windows.Automation.AutomationElement> 。 否則，屬性會傳回 null 參考（ `Nothing` 在 Microsoft Visual Basic .net 中）。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「樹狀結構」|對應到清單控制項類型的當地語系化字串。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|樹狀結構控制項的名稱屬性值通常取自於控制項的標籤文字。 如果沒有文字標籤，則應用程式開發人員必須提供此屬性的值。|  
   

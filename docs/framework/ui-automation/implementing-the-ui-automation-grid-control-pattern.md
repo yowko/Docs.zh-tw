@@ -1,17 +1,18 @@
 ---
 title: 實作 UI 自動化 Grid 控制項模式
+description: 瞭解在使用者介面自動化中執行 GridPattern 方格控制項模式的指導方針和慣例。 學習如何執行 IGridProvider 介面。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 04f3ee1e01054df6a13ab2391e14a6a7f7274bb9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7aae8e8070c989c4b36e0581aa5f48f51416f97
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180220"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165876"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>實作 UI 自動化 Grid 控制項模式
 > [!NOTE]
@@ -58,16 +59,16 @@ ms.locfileid: "79180220"
 ## <a name="exceptions"></a>例外狀況  
  提供者必須擲回下列例外狀況。  
   
-|例外狀況型別|條件|  
+|例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - 如果請求的行座標大於<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>或列座標大於 。 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> - 如果請求的行座標或列座標中的任何一個小於零。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果要求的資料列座標大於，或資料行 <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> 座標大於 <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A> 。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果要求的資料列或資料行座標之一小於零。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
 - [實作 UI 自動化 GridItem 控制項模式](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

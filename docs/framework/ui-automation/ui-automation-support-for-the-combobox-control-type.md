@@ -1,17 +1,18 @@
 ---
 title: ComboBox 控制項類型的 UI 自動化支援
+description: 取得 ComboBox 控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Combo Box
 - UI Automation, Combo Box control type
 - ComboBox controls
 ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
-ms.openlocfilehash: 2b1629adcc9e23294daa0512070089cc72ab5810
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c708de791056969e281ad1bc223e2a2233fa170b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179786"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166094"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>ComboBox 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179786"
   
  下拉式方塊是與靜態控制項結合的清單方塊，或是在下拉式方塊的清單方塊部分中顯示目前選取項目的編輯控制項。 控制項的清單方塊部分會隨時顯示，或是只在使用者選取下拉式箭號 (這是按鈕) 時出現在控制項旁邊。 如果選取項目欄位是編輯控制項，使用者可以輸入不在清單中的資訊，否則使用者只能選取清單中的項目。  
   
- 下列章節會定義 ComboBox 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有下拉式方塊控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義 ComboBox 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]需求適用于所有下拉式方塊控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -29,7 +30,7 @@ ms.locfileid: "79179786"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|ComboBox<br /><br /> - 編輯 （0 或 1）<br />- 清單 （1）<br />- 清單項（清單子項;0 到多個）<br />- 按鈕 （1）|ComboBox<br /><br /> - 清單項（0 到多個）|  
+|ComboBox<br /><br /> -Edit （0或1）<br />-List （1）<br />-清單專案（清單的子系，0到多個）<br />-Button （1）|ComboBox<br /><br /> -清單專案（0到多個）|  
   
  下拉式方塊控制項檢視中的編輯控制項只有在下拉式方塊是可以編輯來接受任何輸入時才需要，就如同 [執行] 對話方塊中的下拉式方塊的案例。  
   

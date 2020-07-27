@@ -1,17 +1,18 @@
 ---
 title: 實作 UI 自動化 Value 控制項模式
+description: 請參閱指導方針和慣例，在使用者介面自動化中執行實值控制項模式。 知道 IValueProvider 介面的必要成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Value
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: eb77f26bbe3546a3f90804c3648f8547fb6abad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a15c0b50996e2c0dfdc937bc9565d5f9ba20c992
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180083"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168197"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>實作 UI 自動化 Value 控制項模式
 > [!NOTE]
@@ -36,7 +37,7 @@ ms.locfileid: "79180083"
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> 不支援擷取格式設定資訊或子字串值。 在這些案例中請實作 <xref:System.Windows.Automation.Provider.ITextProvider> 。  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>必須由控制項實現，例如 Microsoft Word**中的色彩選擇器**選擇控制項（如下圖所示），該控制項支援顏色值（例如"黃色"）和等效內部 RGB 結構之間的字串映射。  
+- <xref:System.Windows.Automation.Provider.IValueProvider>必須由像是 Microsoft Word 的**色彩選擇器**選取控制項（如下列所示）的控制項來執行，這可支援色彩值（例如，"黃色"）與對等的內部 RGB 結構之間的字串對應。  
   
  ![已反白顯示黃色的色彩選擇器](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色樣字串對應範例  
@@ -57,17 +58,17 @@ ms.locfileid: "79180083"
 ## <a name="exceptions"></a>例外狀況  
  提供者必須擲回下列例外狀況。  
   
-|例外狀況型別|條件|  
+|例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 如果以不正確的格式（如格式不正確的日期）將特定于地區設定的資訊傳遞給控制項。|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 如果新值無法從字串轉換為控制項識別的格式。|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> - 嘗試操作未啟用的控制項時。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果地區設定特有的資訊以不正確的格式傳遞至控制項，例如格式不正確的日期。|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -如果新的值無法從字串轉換成控制項可辨識的格式。|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -嘗試操作未啟用的控制項時。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
-- [值模式 插入文本示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [ValuePattern 插入文字範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

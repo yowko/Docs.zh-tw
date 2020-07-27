@@ -1,16 +1,17 @@
 ---
 title: Clrver.exe (CLR 版本工具)
+description: 請參閱 CLR 版本工具 Clrver.exe。 此工具會報告電腦上所有已安裝的 common language runtime （CLR）版本。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e914034819418df00438c454e209e6c86779ba3c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715790"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167284"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR 版本工具)
 CLR 版本工具 (Clrver.exe) 會報告電腦上已安裝的所有通用語言執行平台 (CLR) 版本。  
@@ -30,7 +31,7 @@ clrver [option]
 |選項|描述|  
 |------------|-----------------|  
 |`-all`|顯示電腦上所有正在使用 CLR 的處理序。|  
-|*pid*|顯示具有指定處理序 ID (PID) 的處理序所使用的 CLR 版本。|  
+|*p&id*|顯示具有指定處理序 ID (PID) 的處理序所使用的 CLR 版本。|  
 |`-?`|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  

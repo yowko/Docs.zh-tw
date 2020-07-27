@@ -1,5 +1,6 @@
 ---
-title: HOW TO：使用 SelectedValue、SelectedValuePath 和 SelectedItem
+title: 如何：使用 SelectedValue、SelectedValuePath 和 SelectedItem
+description: 瞭解如何使用 SelectedValue 和 SelectedValuePath 屬性，為 Windows Presentation Foundation TreeView 的 SelectedItem 指定值。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], SelectedValue properties
@@ -12,28 +13,28 @@ helpviewer_keywords:
 - Control class [WPF], SelectedValuePath properties
 - SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
-ms.openlocfilehash: d9f7a8f04f53b7d38a49dfef2c947dfa1c2d263d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddac2455dee0bf69d25307340eddd5364e43e823
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699132"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166276"
 ---
-# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>HOW TO：使用 SelectedValue、SelectedValuePath 和 SelectedItem
-此範例示範如何使用<xref:System.Windows.Controls.TreeView.SelectedValue%2A>並<xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>屬性，以指定的值<xref:System.Windows.Controls.TreeView.SelectedItem%2A>的<xref:System.Windows.Controls.TreeView>。  
+# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>如何：使用 SelectedValue、SelectedValuePath 和 SelectedItem
+這個範例會示範如何使用 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 和 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 屬性來指定 <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 的值 <xref:System.Windows.Controls.TreeView> 。  
   
 ## <a name="example"></a>範例  
- <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>屬性會提供方法來指定<xref:System.Windows.Controls.TreeView.SelectedValue%2A>for<xref:System.Windows.Controls.TreeView.SelectedItem%2A>在<xref:System.Windows.Controls.TreeView>。 <xref:System.Windows.Controls.TreeView.SelectedItem%2A>表示中的物件<xref:System.Windows.Controls.ItemsControl.Items%2A>集合和<xref:System.Windows.Controls.TreeView>顯示選取項目的單一屬性的值。 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>屬性會指定用來判斷的值屬性的路徑<xref:System.Windows.Controls.TreeView.SelectedValue%2A>屬性。 本主題中的範例將說明這個概念。  
+ <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>屬性提供一種方法，可為 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 中的指定 <xref:System.Windows.Controls.TreeView.SelectedItem%2A> <xref:System.Windows.Controls.TreeView> 。 <xref:System.Windows.Controls.TreeView.SelectedItem%2A>表示集合中的物件 <xref:System.Windows.Controls.ItemsControl.Items%2A> ，而則會 <xref:System.Windows.Controls.TreeView> 顯示所選取專案的單一屬性值。 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>屬性會指定用來判斷屬性值的屬性路徑 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 。 本主題中的範例將說明此概念。  
   
- 下列範例所示<xref:System.Windows.Data.XmlDataProvider>包含員工資訊。  
+ 下列範例 <xref:System.Windows.Data.XmlDataProvider> 會顯示包含員工資訊的。  
   
  [!code-xaml[TreeViewSelectedValue#XMLDataProvider](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#xmldataprovider)]  
   
- 下列範例會定義<xref:System.Windows.HierarchicalDataTemplate>會顯示`EmployeeName`並`EmployeeWorkDay`的`Employee`。 請注意，<xref:System.Windows.HierarchicalDataTemplate>未指定`EmployeeNumber`為範本的一部分。  
+ 下列範例 <xref:System.Windows.HierarchicalDataTemplate> 會定義，其會顯示的 `EmployeeName` 和 `EmployeeWorkDay` `Employee` 。 請注意， <xref:System.Windows.HierarchicalDataTemplate> 不會將指定 `EmployeeNumber` 為範本的一部分。  
   
  [!code-xaml[TreeViewSelectedValue#HierarchicalDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#hierarchicaldatatemplate)]  
   
- 下列範例所示<xref:System.Windows.Controls.TreeView>使用先前定義<xref:System.Windows.HierarchicalDataTemplate>，並可設定<xref:System.Windows.Controls.TreeView.SelectedValue%2A>屬性設`EmployeeNumber`。 當您選取`EmployeeName`中<xref:System.Windows.Controls.TreeView>，則<xref:System.Windows.Controls.TreeView.SelectedItem%2A>屬性會傳回`EmployeeInfo`對應至所選的資料項目`EmployeeName`。 不過，因為<xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>這個<xref:System.Windows.Controls.TreeView>設為`EmployeeNumber`，則<xref:System.Windows.Controls.TreeView.SelectedValue%2A>設定為`EmployeeNumber`。  
+ 下列範例 <xref:System.Windows.Controls.TreeView> 會顯示，其使用先前定義的 <xref:System.Windows.HierarchicalDataTemplate> ，並將 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 屬性設定為 `EmployeeNumber` 。 當您選取 `EmployeeName` 中的時 <xref:System.Windows.Controls.TreeView> ， <xref:System.Windows.Controls.TreeView.SelectedItem%2A> 屬性會傳回對應于 `EmployeeInfo` 所選取的資料項目 `EmployeeName` 。 不過，由於 <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> 這個的 <xref:System.Windows.Controls.TreeView> 是設定為 `EmployeeNumber` ，因此 <xref:System.Windows.Controls.TreeView.SelectedValue%2A> 會設定為 `EmployeeNumber` 。  
   
  [!code-xaml[TreeViewSelectedValue#SelectedValuePath](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#selectedvaluepath)]  
   
@@ -42,4 +43,4 @@ ms.locfileid: "61699132"
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
 - [TreeView 概觀](treeview-overview.md)
-- [HOW-TO 主題](treeview-how-to-topics.md)
+- [操作說明主題](treeview-how-to-topics.md)

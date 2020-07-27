@@ -1,5 +1,6 @@
 ---
 title: Aximp.exe (Windows Form ActiveX 控制項匯入工具)
+description: 瞭解 Aximp.exe，Windows Forms ActiveX 控制項匯入工具。 此工具會將適用于 ActiveX 的 COM 類型程式庫中的類型定義轉換成 Windows Forms。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180432"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167337"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Form ActiveX 控制項匯入工具)
 ActiveX 控制項匯入工具可以將 ActiveX 控制項在 COM 類型程式庫中的類型定義，轉換成 Windows Form 控制項。  
@@ -36,13 +37,13 @@ aximp [options]{file.dll | file.ocx}
   
 |引數|描述|  
 |--------------|-----------------|  
-|*檔*|原始程式檔的名稱，包含要轉換的 ActiveX 控制項。 檔案引數必須有 .dll 或 .ocx 副檔名。|  
+|*file*|原始程式檔的名稱，包含要轉換的 ActiveX 控制項。 檔案引數必須有 .dll 或 .ocx 副檔名。|  
   
 |選項|描述|  
 |------------|-----------------|  
 |`/delaysign`|指定 Aximp.exe 使用延遲簽署來簽署產生的控制項。 您必須使用 `/keycontainer:`、`/keyfile:` 或 `/publickey:` 選項來指定此選項。 如需延遲簽署程序的詳細資訊，請參閱[延遲簽署組件](../../standard/assembly/delay-sign.md)。|  
 |`/help`|顯示工具的命令語法和選項。|  
-|`/keycontainer:`*容器名稱*|使用 *containerName* 所指定之金鑰容器中的公開/私密金鑰組，以強式名稱簽署產生的控制項。|  
+|`/keycontainer:`*容器*|使用 *containerName* 所指定之金鑰容器中的公開/私密金鑰組，以強式名稱簽署產生的控制項。|  
 |`/keyfile:`*檔案名*|使用 *filename* 中找到的發行者正式公開/私密金鑰組，以強式名稱簽署產生的控制項。|  
 |`/nologo`|隱藏 Microsoft 程式啟始資訊顯示。|  
 |`/out:`*檔案名*|指定要建立的組件名稱。|  
@@ -80,4 +81,4 @@ aximp c:\systemroot\system32\msdxm.ocx
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [Ildasm.exe (IL 反組譯工具)](ildasm-exe-il-disassembler.md)
+- [Ildasm.exe （IL 解譯器）](ildasm-exe-il-disassembler.md)

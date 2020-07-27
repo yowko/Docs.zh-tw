@@ -1,17 +1,18 @@
 ---
 title: 實作 UI 自動化 MultipleView 控制項模式
+description: 請參閱指導方針和慣例，在使用者介面自動化中執行 MultipleView 控制項模式。 請參閱 IMultipleViewProvider 介面的必要成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, MultipleView control pattern
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: 9decb617e30a340d3e73e911f7848110de5599e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d65d57637891fcb1307f5ee83a417941ff323fb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180162"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168233"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>實作 UI 自動化 MultipleView 控制項模式
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79180162"
   
  <xref:System.Windows.Automation.MultipleViewPattern> 控制項模式可用來支援控制項，這種控制項提供相同一組資訊或子控制項的多種不同表示，而且能夠在這些表示之間切換。  
   
- 可以顯示多個視圖的控制項示例包括清單視圖（可以將其內容顯示為縮略圖、磁貼、圖示或詳細資訊）、Microsoft Excel 圖表（圓形圖、行、橫條圖、帶公式的儲存格值）、Microsoft Word 文檔（普通、Web 佈局、列印）佈局、閱讀佈局、大綱）、微軟 Outlook 日曆（年、月、周、日）和微軟 Windows 媒體播放機外觀。 支援哪些檢視會由控制項的開發人員決定，而且是每個控制項所特有。  
+ 可以呈現多個視圖的控制項範例包括清單視圖（可將其內容顯示為縮圖）。磚、圖示或詳細資料）、Microsoft Excel 圖表（圓形圖、折線圖、橫條圖、具有公式的儲存格值）、Microsoft Word 檔（一般、Web 版面配置、列印版面配置、閱讀版面配置、大綱）、Microsoft Outlook 行事曆（年、月、周、日）和 Microsoft Windows 媒體播放機的外觀。 支援哪些檢視會由控制項的開發人員決定，而且是每個控制項所特有。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -52,14 +53,14 @@ ms.locfileid: "79180162"
 ## <a name="exceptions"></a>例外狀況  
  提供者必須擲回下列例外狀況。  
   
-|例外狀況型別|條件|  
+|例外狀況類型|條件|  
 |--------------------|---------------|  
 |<xref:System.ArgumentException>|呼叫 <xref:System.Windows.Automation.Provider.IMultipleViewProvider.SetCurrentView%2A> 或 <xref:System.Windows.Automation.Provider.IMultipleViewProvider.GetViewName%2A> 時使用的參數不是所支援檢視集合的成員。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

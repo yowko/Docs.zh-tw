@@ -1,5 +1,6 @@
 ---
 title: 命令概觀
+description: 瞭解命令，這是 Windows Presentation Foundation 中的輸入機制，可提供比裝置輸入更多的語義層級的輸入處理。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 3477e6a9eda40edeadaab9cd6d3de2f016250fc8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f7d12fbf0de9b1546f15061ab7eb1318378bbbb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186205"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168118"
 ---
 # <a name="commanding-overview"></a>命令概觀
 <a name="introduction"></a> 命令是處理比裝置輸入更接近語意層級的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的輸入機制。 命令範例包含許多應用程式中都有的 [複製]****、[剪下]**** 和 [貼上]**** 作業。  
@@ -173,9 +174,9 @@ ms.locfileid: "79186205"
 ## <a name="command-library"></a>命令程式庫  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一組預先定義的命令。  命令程式庫包含下列類別：<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Documents.EditingCommands> 和 <xref:System.Windows.Input.ComponentCommands>。  這些類別提供的命令，例如 <xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> 以及 <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>、<xref:System.Windows.Input.MediaCommands.Play%2A>、<xref:System.Windows.Input.MediaCommands.Stop%2A> 和 <xref:System.Windows.Input.MediaCommands.Pause%2A>。  
   
- 這些命令許多都包含一組預設的輸入繫結。  例如，如果指定應用程式處理複製命令，則會自動獲取鍵盤綁定"CTRL+C"，還可以獲取其他輸入裝置的綁定，例如 Tablet PC 筆手勢和語音資訊。  
+ 這些命令許多都包含一組預設的輸入繫結。  例如，如果您指定應用程式處理複製命令，則會自動取得鍵盤系結 "CTRL + C"，您也會取得其他輸入裝置的系結，例如 Tablet PC 畫筆手勢和語音資訊。  
   
- 當您參考使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的各種命令程式庫中的命令時，通常會省略公開靜態命令屬性的文件庫類別的類別名稱。 命令名稱通常像字串一樣明確，且擁有提供命令邏輯群組的類型，但不一定用於去除混淆。 例如，您可以指定 `Command="Cut"` 而不是更詳細的 `Command="ApplicationCommands.Cut"`。 這是一種為命令[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]內置到處理器中的便利機制（更確切地說，<xref:System.Windows.Input.ICommand>它是[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器在載入時引用的類型轉換器行為）。  
+ 當您參考使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的各種命令程式庫中的命令時，通常會省略公開靜態命令屬性的文件庫類別的類別名稱。 命令名稱通常像字串一樣明確，且擁有提供命令邏輯群組的類型，但不一定用於去除混淆。 例如，您可以指定 `Command="Cut"` 而不是更詳細的 `Command="ApplicationCommands.Cut"`。 這是在命令的處理器內建的便利機制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] （更精確地說，它是 <xref:System.Windows.Input.ICommand> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器在載入時參考的類型轉換子行為）。  
   
 <a name="creating_commands"></a>
 ## <a name="creating-custom-commands"></a>建立自訂命令  

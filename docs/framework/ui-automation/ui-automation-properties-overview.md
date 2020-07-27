@@ -1,16 +1,17 @@
 ---
 title: UI 自動化屬性概觀
+description: 請參閱 Microsoft 使用者介面自動化屬性的廣泛總覽。 瞭解屬性識別碼、依類別分類的屬性、當地語系化和屬性和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 8a44fd89017002ae51d9b15a22bac97668d0ff90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d780c059530be8c91890302ea4066de2d4aa73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179861"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163206"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 自動化屬性概觀
 > [!NOTE]
@@ -26,11 +27,11 @@ ms.locfileid: "79179861"
   
 <a name="Property_Identifiers"></a>
 ## <a name="property-identifiers"></a>屬性識別項  
- 每一個屬性都是由一個編號及名稱所識別。 屬性名稱僅用於偵錯及診斷作業。 提供程式使用數位 ID 來標識傳入的屬性請求。 但是，用戶端應用程式只使用 <xref:System.Windows.Automation.AutomationProperty>(會封裝編號及名稱) 以識別它們要擷取的屬性。  
+ 每一個屬性都是由一個編號及名稱所識別。 屬性名稱僅用於偵錯及診斷作業。 提供者會使用數值識別碼來識別傳入的屬性要求。 但是，用戶端應用程式只使用 <xref:System.Windows.Automation.AutomationProperty>(會封裝編號及名稱) 以識別它們要擷取的屬性。  
   
  <xref:System.Windows.Automation.AutomationProperty> 物件代表特定屬性，其在許多類別中可做為欄位使用。 基於安全性考量，使用者介面自動化提供者會從 Uiautomationtypes.dll 內含的不同類別集之中取得這些物件。  
   
- 下表按包含指示的<xref:System.Windows.Automation.AutomationProperty>類對屬性進行分類。  
+ 下表依包含識別碼的類別來分類屬性 <xref:System.Windows.Automation.AutomationProperty> 。  
   
 |屬性的種類|用戶端取得 ID 的來源|提供者取得 ID 的來源|  
 |-------------------------|--------------------------|----------------------------|  
@@ -53,7 +54,7 @@ ms.locfileid: "79179861"
   
 <a name="Properties_by_Category"></a>
 ## <a name="properties-by-category"></a>依類別列出屬性  
- 下表對 在 和<xref:System.Windows.Automation.AutomationElement><xref:System.Windows.Automation.AutomationElementIdentifiers>中找到其指示的屬性進行分類。 所有控制項都有這些屬性。 大部分動態屬性都與控制項模式相關，除了少數幾個在提供者應用程式的存留期可能是靜態的。  
+ 下表會將在和中找到其識別碼的屬性分類 <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers> 。 所有控制項都有這些屬性。 大部分動態屬性都與控制項模式相關，除了少數幾個在提供者應用程式的存留期可能是靜態的。  
   
  [屬性存取] **** 資料行中，除了 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 及 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>以外，還列出每個屬性的任何其他存取子。 如需取得用戶端應用程式屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   

@@ -1,5 +1,6 @@
 ---
 title: ListView 概觀
+description: 瞭解 Windows Presentation Foundation ListView 控制項，其可提供基礎結構，以在不同的版面配置或視圖中顯示資料項目。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,47 +9,47 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 2f336d1eb8dcdfec3c3c8059ba865147c6b6c825
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 419c6216f0af696ec71e7607c79c2db637caa785
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187511"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164555"
 ---
 # <a name="listview-overview"></a>ListView 概觀
-該<xref:System.Windows.Controls.ListView>控制項提供基礎結構以在不同的佈局或視圖中顯示一組資料項目。 例如，使用者可能會想要以表格顯示資料項目，還要排序其資料行。  
+<xref:System.Windows.Controls.ListView>控制項會提供基礎結構，以在不同的版面配置或視圖中顯示一組資料項目。 例如，使用者可能會想要以表格顯示資料項目，還要排序其資料行。  
 
 <a name="WhatisaListView"></a>
 ## <a name="what-is-a-listview"></a>什麼是 ListView？  
- 控制項<xref:System.Windows.Controls.ListView>是從<xref:System.Windows.Controls.ItemsControl>派生的<xref:System.Windows.Controls.ListBox>。 通常，其項是資料收集的成員，並表示為<xref:System.Windows.Controls.ListViewItem>物件。 a<xref:System.Windows.Controls.ListViewItem>是<xref:System.Windows.Controls.ContentControl>，只能包含單個子項目。 不過，該子元素可以是任何視覺元素。  
+ <xref:System.Windows.Controls.ListView>控制項是 <xref:System.Windows.Controls.ItemsControl> 衍生自的 <xref:System.Windows.Controls.ListBox> 。 通常，其專案為資料集合的成員，並以物件表示 <xref:System.Windows.Controls.ListViewItem> 。 <xref:System.Windows.Controls.ListViewItem>是 <xref:System.Windows.Controls.ContentControl> ，而且只能包含單一子項目。 不過，該子元素可以是任何視覺元素。  
   
 <a name="DefiningaListViewView"></a>
 ## <a name="defining-a-view-mode-for-a-listview"></a>定義 ListView 的檢視模式  
- 要為<xref:System.Windows.Controls.ListView>控制項的內容指定視圖模式，請設置 屬性<xref:System.Windows.Controls.ListView.View%2A>。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供的一種視圖模式是<xref:System.Windows.Controls.GridView>，它顯示具有可自訂列的表中的資料項目的集合。  
+ 若要指定控制項內容的視圖模式 <xref:System.Windows.Controls.ListView> ，請設定 <xref:System.Windows.Controls.ListView.View%2A> 屬性。 提供的一個 view 模式 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是 <xref:System.Windows.Controls.GridView> ，它會在具有可自訂資料行的資料表中顯示資料項目的集合。  
   
- 下面的示例演示如何為顯示員工資訊的<xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView>控制項定義 。  
+ 下列範例示範如何為 <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView> 顯示員工資訊的控制項定義。  
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  下圖顯示上一個範例的資料顯示方式。  
   
- ![顯示帶有 GridView 輸出的 ListView 的螢幕截圖。](./media/gridview-overview/listview-gridview-output.jpg)  
+ ![顯示具有 GridView 輸出之 ListView 的螢幕擷取畫面。](./media/gridview-overview/listview-gridview-output.jpg)  
   
- 可以通過定義從類繼承的<xref:System.Windows.Controls.ViewBase>類來創建自訂視圖模式。 類<xref:System.Windows.Controls.ViewBase>提供創建自訂視圖所需的基礎結構。 如需有關如何建立自訂檢視的詳細資訊，請參閱[建立 ListView 的自訂檢視模式](how-to-create-a-custom-view-mode-for-a-listview.md)。  
+ 您可以藉由定義繼承自類別的類別來建立自訂視圖模式 <xref:System.Windows.Controls.ViewBase> 。 <xref:System.Windows.Controls.ViewBase>類別會提供建立自訂視圖所需的基礎結構。 如需有關如何建立自訂檢視的詳細資訊，請參閱[建立 ListView 的自訂檢視模式](how-to-create-a-custom-view-mode-for-a-listview.md)。  
   
 <a name="BindingDatatoaListView"></a>
 ## <a name="binding-data-to-a-listview"></a>將資料繫結至 ListView  
- 使用<xref:System.Windows.Controls.ItemsControl.Items%2A>和<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性為控制項指定項<xref:System.Windows.Controls.ListView>。 下面的示例將<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性設置到稱為`EmployeeInfoDataSource`的資料收集。  
+ 您 <xref:System.Windows.Controls.ItemsControl.Items%2A> 可以使用和 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 屬性來指定控制項的專案 <xref:System.Windows.Controls.ListView> 。 下列範例 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 會將屬性設定為所呼叫的資料集合 `EmployeeInfoDataSource` 。  
   
  [!code-xaml[ListViewCode#ItemsSource](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
   
- 在<xref:System.Windows.Controls.GridView>中<xref:System.Windows.Controls.GridViewColumn>，物件綁定到指定的資料欄位。 下面的示例通過為<xref:System.Windows.Controls.GridViewColumn><xref:System.Windows.Data.Binding><xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>屬性指定 的 將物件綁定到資料欄位。  
+ 在中 <xref:System.Windows.Controls.GridView> ，物件會系結 <xref:System.Windows.Controls.GridViewColumn> 至指定的資料欄位。 下列範例會藉由指定屬性的來將物件系結 <xref:System.Windows.Controls.GridViewColumn> 至資料欄位 <xref:System.Windows.Data.Binding> <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 。  
   
  [!code-csharp[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
  [!code-vb[ListViewCode#GridViewColumnProperties](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
  [!code-xaml[ListViewCode#GridViewColumnProperties](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
   
- 還可以指定 作為<xref:System.Windows.Data.Binding>用於設置列儲存格樣式<xref:System.Windows.DataTemplate>的定義的一部分。 在下面的<xref:System.Windows.DataTemplate>示例中，使用<xref:System.Windows.ResourceKey>集<xref:System.Windows.Data.Binding>標識 的 。 <xref:System.Windows.Controls.GridViewColumn> 請注意，此示例不定義，<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>因為這樣做會覆蓋 由<xref:System.Windows.DataTemplate>指定的綁定。  
+ 您也可以將指定 <xref:System.Windows.Data.Binding> 為 <xref:System.Windows.DataTemplate> 定義的一部分，以用來將資料行中的儲存格樣式。 在下列範例中， <xref:System.Windows.DataTemplate> 使用所識別的會設定的 <xref:System.Windows.ResourceKey> <xref:System.Windows.Data.Binding> <xref:System.Windows.Controls.GridViewColumn> 。 請注意，此範例不會定義， <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 因為這樣做會覆寫所指定的系結 <xref:System.Windows.DataTemplate> 。  
   
  [!code-xaml[ListViewTemplate#GridViewCellTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
@@ -56,29 +57,29 @@ ms.locfileid: "79187511"
   
 <a name="StylingaListView"></a>
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>為實作 GridView 的 ListView 設定樣式  
- 控制項<xref:System.Windows.Controls.ListView>包含<xref:System.Windows.Controls.ListViewItem>表示顯示的資料項目的物件。 您可以使用下列屬性來定義資料項目的內容和樣式：  
+ <xref:System.Windows.Controls.ListView>控制項包含 <xref:System.Windows.Controls.ListViewItem> 物件，代表顯示的資料項目。 您可以使用下列屬性來定義資料項目的內容和樣式：  
   
-- 在控制項<xref:System.Windows.Controls.ListView>上，使用<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>、<xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>和<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>屬性。  
+- 在 <xref:System.Windows.Controls.ListView> 控制項上，使用 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 、 <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> 和 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 屬性。  
   
-- 在控制項<xref:System.Windows.Controls.ListViewItem>上，使用<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>屬性。  
+- 在 <xref:System.Windows.Controls.ListViewItem> 控制項上，使用 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 和 <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> 屬性。  
   
- 為了避免 在<xref:System.Windows.Controls.GridView>的儲存格之間對齊問題，請勿使用<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>來設置 屬性或添加影響 中項寬度的內容<xref:System.Windows.Controls.ListView>。 例如，在 中設置<xref:System.Windows.FrameworkElement.Margin%2A>屬性時，可能會出現對齊問題。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 要指定影響 中項寬度的屬性或定義內容<xref:System.Windows.Controls.GridView>，請使用<xref:System.Windows.Controls.GridView>類及其相關類的屬性，如<xref:System.Windows.Controls.GridViewColumn>。  
+ 若要避免在中的資料格之間對齊問題 <xref:System.Windows.Controls.GridView> ，請勿使用 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 來設定屬性，或加入會影響中專案寬度的內容 <xref:System.Windows.Controls.ListView> 。 例如，當您在中設定屬性時，可能會發生對齊問題 <xref:System.Windows.FrameworkElement.Margin%2A> <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 。 若要指定屬性或定義會影響中專案寬度的內容 <xref:System.Windows.Controls.GridView> ，請使用類別的屬性 <xref:System.Windows.Controls.GridView> 及其相關類別，例如 <xref:System.Windows.Controls.GridViewColumn> 。  
   
- 有關如何使用<xref:System.Windows.Controls.GridView>及其支援類的詳細資訊，請參閱[GridView 概述](gridview-overview.md)。  
+ 如需如何使用 <xref:System.Windows.Controls.GridView> 及其支援類別的詳細資訊，請參閱[GridView 總覽](gridview-overview.md)。  
   
- 如果<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>為<xref:System.Windows.Controls.ListView>控制項定義 。 ，並且還定義了<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>， 必須在樣式<xref:System.Windows.Controls.ContentPresenter><xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>中包括 。  
+ 如果您 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 為 <xref:System.Windows.Controls.ListView> 控制項定義，並同時定義 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> ，則必須在樣式中包含，才能 <xref:System.Windows.Controls.ContentPresenter> 讓正常 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 運作。  
   
- 不要對使用<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>顯示<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A><xref:System.Windows.Controls.ListView>的內容使用 和 屬性<xref:System.Windows.Controls.GridView>。 要指定 內容在 的列中的對齊方式<xref:System.Windows.Controls.GridView>，請定義<xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>。  
+ 請不要 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> 針對使用所顯示的內容使用和屬性 <xref:System.Windows.Controls.ListView> <xref:System.Windows.Controls.GridView> 。 若要指定資料行中內容的對齊方式 <xref:System.Windows.Controls.GridView> ，請定義 <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A> 。  
   
 <a name="UsingtheSameViewMoreThanOnce"></a>
 ## <a name="sharing-the-same-view-mode"></a>共用相同的檢視模式  
- 兩<xref:System.Windows.Controls.ListView>個控制項不能同時共用同一視圖模式。 如果嘗試對多個<xref:System.Windows.Controls.ListView>控制項使用相同的視圖模式，則會發生異常。  
+ 兩個 <xref:System.Windows.Controls.ListView> 控制項不能同時共用相同的視圖模式。 如果您嘗試使用與多個控制項相同的 view 模式 <xref:System.Windows.Controls.ListView> ，就會發生例外狀況。  
   
- 要指定可以由多個<xref:System.Windows.Controls.ListView>多個同時使用的視圖模式，請使用範本或樣式。
+ 若要指定可同時由多個使用的視圖模式 <xref:System.Windows.Controls.ListView> ，請使用範本或樣式。
   
 <a name="CreatingaCustomView"></a>
 ## <a name="creating-a-custom-view-mode"></a>建立自訂檢視模式  
- 自訂視圖如<xref:System.Windows.Controls.GridView>從<xref:System.Windows.Controls.ViewBase>抽象類別派生，它提供了顯示表示為<xref:System.Windows.Controls.ListViewItem>物件的資料項目的工具。
+ 之類的自訂視圖 <xref:System.Windows.Controls.GridView> 衍生自 <xref:System.Windows.Controls.ViewBase> 抽象類別，它提供工具來顯示以物件表示的資料項目 <xref:System.Windows.Controls.ListViewItem> 。
   
 ## <a name="see-also"></a>另請參閱
 
@@ -87,5 +88,5 @@ ms.locfileid: "79187511"
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
 - [GridView 概觀](gridview-overview.md)
-- [如何使用主題](listview-how-to-topics.md)
-- [控制](../advanced/optimizing-performance-controls.md)
+- [操作說明主題](listview-how-to-topics.md)
+- [控制項](../advanced/optimizing-performance-controls.md)

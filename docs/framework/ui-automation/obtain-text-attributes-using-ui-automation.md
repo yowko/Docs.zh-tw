@@ -1,5 +1,6 @@
 ---
 title: 使用 UI 自動化取得文字屬性
+description: 瞭解如何使用使用者介面自動化來取得文字屬性。 請參閱從文字範圍取得文字屬性的程式碼範例。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - UI Automation, getting text attributes
 - text attributes, getting
 ms.assetid: fdefc6c3-b836-4cfe-8dec-1484bfdc5551
-ms.openlocfilehash: c338f858f1715d23cad96919db4a21a6ba49710f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b48f773e27088ba4b33ad01b299d77a0992a9159
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446921"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168009"
 ---
 # <a name="obtain-text-attributes-using-ui-automation"></a>使用 UI 自動化取得文字屬性
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題說明如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 從文字範圍取得文字屬性。 文字範圍可以對應至文件內目前的插入號位置 (或變質選取範圍)、連續文字選取範圍、非連續文字選取範圍的集合，或文件的整個文字內容。  
   
@@ -37,8 +38,8 @@ ms.locfileid: "74446921"
 ## <a name="see-also"></a>另請參閱
 
 - [UI 自動化 TextPattern 概觀](ui-automation-textpattern-overview.md)
-- [使用 UI 自動化將內容新增至文字方塊](add-content-to-a-text-box-using-ui-automation.md)
-- [使用 UI 自動化尋找和反白顯示文字](find-and-highlight-text-using-ui-automation.md)
+- [使用 UI 自動化將內容加入至文字方塊](add-content-to-a-text-box-using-ui-automation.md)
+- [利用 UI 自動化尋找和反白顯示文字](find-and-highlight-text-using-ui-automation.md)
 - [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [使用 UI 自動化取得混合文字屬性詳細資料](obtain-mixed-text-attribute-details-using-ui-automation.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [利用 UI 自動化取得混合文字屬性的詳細資料](obtain-mixed-text-attribute-details-using-ui-automation.md)

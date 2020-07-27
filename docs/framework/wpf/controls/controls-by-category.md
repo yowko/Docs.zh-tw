@@ -1,20 +1,21 @@
 ---
 title: 按分類區隔控制項
+description: 請參閱群組為類別目錄的 Windows Presentation Foundation 控制項，這可協助您藉由比較類似的控制項來選取適當的控制項。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 226e037dc26f817b96a5aa869565f08ee6ff6574
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636207"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166295"
 ---
 # <a name="controls-by-category"></a>按分類區隔控制項
 Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數個類別。 從這些分類可看出哪些控制項有類似的使用模式或功能，方便您視情況選擇適合的控制項。  
   
-## <a name="layout"></a>配置  
+## <a name="layout"></a>版面配置  
  配置控制項可用來管理子項目的大小、維度、位置和排列。  
   
 - <xref:System.Windows.Controls.Border>  
@@ -56,7 +57,7 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>按鈕  
- 按鈕是最基本的一種使用者介面控制項。 應用程式通常會在使用者按一下時，在 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件中執行某些工作。  
+ 按鈕是最基本的一種使用者介面控制項。 當使用者按一下時，應用程式通常會在事件中執行某些工作 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 。  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -78,7 +79,7 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
   
 - <xref:System.Windows.Controls.DatePicker>  
   
-## <a name="menus"></a>Menus  
+## <a name="menus"></a>功能表  
  功能表可用來將相關動作分組或提供內容協助。  
   
 - <xref:System.Windows.Controls.ContextMenu>  
@@ -100,7 +101,7 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
   
 - <xref:System.Windows.Controls.Slider>  
   
-## <a name="navigation"></a>瀏覽  
+## <a name="navigation"></a>導覽  
  瀏覽控制項可藉由建立目標框架或索引標籤式應用程式外觀，加強或延伸應用程式瀏覽操作。  
   
 - <xref:System.Windows.Controls.Frame>  
@@ -177,6 +178,6 @@ Windows Presentation Foundation （WPF）控制項可以邏輯方式分組成數
   
 - <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [控制項程式庫](control-library.md)

@@ -1,41 +1,42 @@
 ---
-title: LINQ 和檔目錄 （C#）
+title: 'LINQ 和檔案目錄（c #）'
+description: '這些適用于檔案系統作業的 c # LINQ 資源不會用來變更檔案或資料夾的內容。'
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: fe503584e7d14e8d1dd281eb644f0723782feb4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac00e29f90ee1c04ab9978b6ada3ae5f28991a1c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714632"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165670"
 ---
-# <a name="linq-and-file-directories-c"></a>LINQ 和檔目錄 （C#）
+# <a name="linq-and-file-directories-c"></a>LINQ 和檔案目錄（c #）
 
-許多檔案系統操作本質上是查詢，因此非常適合 LINQ 方法。  
+許多檔案系統作業基本上是查詢，因此非常適合 LINQ 方法。  
   
- 本節中的查詢是非破壞性的。 這些查詢不會用來變更原始檔案或資料夾的內容。 這是依照查詢不應該造成任何副作用的規則。 一般而言，任何修改來源資料的程式碼 (包括執行 create/update/delete 運算子的查詢)，都應該與單純查詢資料的程式碼分開。  
+ 本節中的查詢是不具破壞性的。 這些查詢不會用來變更原始檔案或資料夾的內容。 這是依照查詢不應該造成任何副作用的規則。 一般而言，任何修改來源資料的程式碼 (包括執行 create/update/delete 運算子的查詢)，都應該與單純查詢資料的程式碼分開。  
   
  本節包含下列主題：  
   
- [如何查詢具有指定屬性或名稱 （C#） 的檔](./how-to-query-for-files-with-a-specified-attribute-or-name.md)\
+ [如何查詢具有指定屬性或名稱的檔案（c #）](./how-to-query-for-files-with-a-specified-attribute-or-name.md)\
  示範如何檢查檔案之 <xref:System.IO.FileInfo> 物件的一或多個屬性來搜尋檔案。  
   
- [如何按副檔名 （LINQ） （C#） 對檔進行分組](./how-to-group-files-by-extension-linq.md)\
+ [如何依副檔名將檔案分組（LINQ）（c #）](./how-to-group-files-by-extension-linq.md)\
  示範如何依據檔案的副檔名來傳回 <xref:System.IO.FileInfo> 物件的群組。  
   
- [如何查詢一組資料夾 （LINQ） （C#） 中的位元組總數](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)\
+ [如何查詢一組資料夾中的總位元組數（LINQ）（c #）](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)\
  示範如何傳回指定之樹狀目錄中所有檔案的位元組總數。  
   
- [如何比較兩個資料夾 （LINQ） （C#）](./how-to-compare-the-contents-of-two-folders-linq.md)s 的內容  
+ [如何比較兩個資料夾的內容（LINQ）（c #）](./how-to-compare-the-contents-of-two-folders-linq.md)s  
  示範如何傳回同時出現在兩個指定資料夾中的所有檔案，以及只出現在其中一個資料夾中的所有檔案。  
   
- [如何查詢目錄樹 （LINQ） （C#） 中的最大檔或檔](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)\
+ [如何查詢樹狀目錄中的最大檔案（LINQ）（c #）](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)\
  示範如何傳回樹狀目錄中的最大檔案或最小檔案，或是指定數目的檔案。  
   
- [如何查詢目錄樹 （LINQ） （C#） 中的重複檔案](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)\
+ [如何查詢樹狀目錄中的重複檔案（LINQ）（c #）](./how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)\
  示範如何將出現在指定樹狀目錄中多個位置的所有檔案名稱群組在一起。 同時示範如何根據自訂比較子，來執行更複雜的比較。  
   
- [如何查詢資料夾中的檔內容 （LINQ） （C#）](./how-to-query-the-contents-of-files-in-a-folder-lin.md)\
+ [如何查詢資料夾中的檔案內容（LINQ）（c #）](./how-to-query-the-contents-of-files-in-a-folder-lin.md)\
  示範如何逐一查看樹狀目錄中的資料夾、開啟每個檔案，並查詢檔案的內容。  
   
 ## <a name="comments"></a>註解  

@@ -1,16 +1,17 @@
 ---
 title: UI 自動化用戶端的控制項模式對應
+description: 查看使用者介面自動化用戶端的控制項模式對應表。 某些控制項類型的動作可能會受到支援、有條件地支援或不支援。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 689e649343c93d0670c6870098a09f61097f4fb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7673ce4ac88cc36a7c35e2e946a31d23b2ce6eca
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180233"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164181"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI 自動化用戶端的控制項模式對應
 > [!NOTE]
@@ -35,10 +36,10 @@ ms.locfileid: "79180233"
 |控制項類型|支援|有條件支援。|不支援|  
 |------------------|---------------|-------------------------|-------------------|  
 |按鈕|None|叫用、切換、展開摺疊|None|  
-|Calendar|方格、表格|選取、捲軸|值|  
+|行事曆|方格、表格|選取、捲軸|值|  
 |核取方塊|切換|None|None|  
 |下拉式方塊|展開摺疊|選取、值|Scroll|  
-|資料格線|方格|捲軸、選取、表格|None|  
+|資料格線|Grid|捲軸、選取、表格|None|  
 |Data Item|Selection Item|展開摺疊、方格項目、捲軸項目、表格、切換、值|None|  
 |Document|Text|捲軸、值|None|  
 |編輯|None|文字、範圍值、值|None|  
@@ -56,12 +57,12 @@ ms.locfileid: "79180233"
 |進度列|None|範圍值、值|None|  
 |選項按鈕|Selection Item|None|切換|  
 |Scroll Bar|None|Range Value|Scroll|  
-|分隔符號|None|None|None|  
+|Separator|None|None|None|  
 |滑桿|None|範圍值、選取、值|None|  
 |Spinner|None|範圍值、選取、值|None|  
 |Split Button|叫用、展開摺疊|None|None|  
-|狀態列|None|方格|None|  
-|索引標籤|選取項目|Scroll|None|  
+|狀態列|None|Grid|None|  
+|索引標籤|選取|Scroll|None|  
 |索引標籤項目|Selection Item|None|叫用|  
 |Table|方格、方格項目、表格、表格項目|None|None|  
 |Text|None|方格項目、表格項目、文字|值|  
@@ -71,7 +72,7 @@ ms.locfileid: "79180233"
 |工具提示|None|文字、視窗|None|  
 |樹狀結構|None|捲軸、選取|None|  
 |樹狀目錄項目|展開摺疊|叫用、捲軸項目、選取項目、切換|None|  
-|時間範圍|轉換、視窗|停駐|None|  
+|時間範圍|轉換、視窗|Dock|None|  
   
 > [!NOTE]
 > 如果控制項類型沒有所列的受支援控制項模式，但有一或多個有條件支援的控制項模式，就會一律支援其中一個條件式控制項模式。  

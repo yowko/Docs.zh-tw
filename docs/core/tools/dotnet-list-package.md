@@ -2,12 +2,12 @@
 title: dotnet list package 命令
 description: "'dotnet list package' 命令提供一個便利選項，可列出適用於專案或解決方案的套件參考。"
 ms.date: 02/14/2020
-ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463667"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164761"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -21,6 +21,7 @@ ms.locfileid: "81463667"
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
     [--outdated] [--source <SOURCE>]
@@ -78,6 +79,10 @@ Project 'HelloPlugin' has the following package references
 
   搜尋較新的套件時要使用的 NuGet 來源。 需要 `--outdated` 選項。
 
+- **`--deprecated`**
+
+  顯示已淘汰的封裝。
+
 - **`--framework <FRAMEWORK>`**
 
   只顯示適用於所指定[目標 Framework](../../standard/frameworks.md) 的套件。 若要指定多個架構，請多次指定該選項。 例如： `--framework netcoreapp2.2 --framework netstandard2.0` 。
@@ -88,15 +93,15 @@ Project 'HelloPlugin' has the following package references
 
 - **`--highest-minor`**
 
-  在搜尋較新的套件時，建議只搜尋主要版本號碼相符的套件。 需要 `--outdated` 選項。
+  在搜尋較新的套件時，建議只搜尋主要版本號碼相符的套件。 需要 `--outdated` 或 `--deprecated` 選項。
 
 - **`--highest-patch`**
 
-  在搜尋較新的套件時，建議只搜尋主要和次要版本號碼相符的套件。 需要 `--outdated` 選項。
+  在搜尋較新的套件時，建議只搜尋主要和次要版本號碼相符的套件。 需要 `--outdated` 或 `--deprecated` 選項。
 
 - **`--include-prerelease`**
 
-  在搜尋較新的套件時，建議搜尋具有發行前版本的套件。 需要 `--outdated` 選項。
+  在搜尋較新的套件時，建議搜尋具有發行前版本的套件。 需要 `--outdated` 或 `--deprecated` 選項。
 
 - **`--include-transitive`**
 
@@ -112,7 +117,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`-s|--source <SOURCE>`**
 
-  搜尋較新的套件時要使用的 NuGet 來源。 需要 `--outdated` 選項。
+  搜尋較新的套件時要使用的 NuGet 來源。 需要 `--outdated` 或 `--deprecated` 選項。
 
 ## <a name="examples"></a>範例
 

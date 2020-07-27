@@ -1,16 +1,17 @@
 ---
 title: UI 自動化控制項類型概觀
+description: 閱讀使用者介面自動化控制項類型的總覽，這些是已知的識別碼，可用來表示專案所代表的控制項類型。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 75159ef8-bd43-4d13-acb7-1f1fe9253160
-ms.openlocfilehash: 643c89e8f6c5e34aa1fb3c5c7c6c750c72046277
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 204e950fca74c4f7bd2c13dc8a8891152954c071
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179927"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166132"
 ---
 # <a name="ui-automation-control-types-overview"></a>UI 自動化控制項類型概觀
 > [!NOTE]

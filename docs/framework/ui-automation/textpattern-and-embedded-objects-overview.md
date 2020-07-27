@@ -1,5 +1,6 @@
 ---
 title: TextPattern 和 Embedded 物件概觀
+description: 閱讀使用者介面自動化如何使用 TextPattern 和 TextPatternRange 在文字檔或容器內公開内嵌物件或子項目的總覽。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, TextPattern class
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 7a3338a08d06320acdc2acb0647bc91541448d7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201074"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163559"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 和 Embedded 物件概觀
 > [!NOTE]
@@ -154,7 +155,7 @@ ms.locfileid: "84201074"
 - <xref:System.Windows.Automation.Text.TextPatternRange>
 - <xref:System.Windows.Automation.Provider.ITextProvider>
 - <xref:System.Windows.Automation.Provider.ITextRangeProvider>
-- [使用 UI 自動化存取內嵌物件](access-embedded-objects-using-ui-automation.md)
+- [UI 自動化存取內嵌物件](access-embedded-objects-using-ui-automation.md)
 - [利用 UI 自動化公開資料表的內容](expose-the-content-of-a-table-using-ui-automation.md)
 - [使用 UI 自動化周遊文字](traverse-text-using-ui-automation.md)
 - [TextPattern 搜尋和選取範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)

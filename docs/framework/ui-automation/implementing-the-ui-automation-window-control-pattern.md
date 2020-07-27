@@ -1,17 +1,18 @@
 ---
 title: 實作 UI 自動化 Window 控制項模式
+description: 請參閱指導方針和慣例，在使用者介面自動化中執行視窗控制項模式。 知道 IWindowProvider 介面的必要成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Window
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: dd677ca9f610d463acc7c69f99767bd7b8781589
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1d7429f86896947a10b73965caa7d771f54490b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180039"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168184"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>實作 UI 自動化 Window 控制項模式
 > [!NOTE]
@@ -19,7 +20,7 @@ ms.locfileid: "79180039"
   
  本主題簡介實作 <xref:System.Windows.Automation.Provider.IWindowProvider>的方針和慣例，包括 <xref:System.Windows.Automation.WindowPattern> 屬性、方法和事件的相關資訊。 其他參考的連結列於主題的結尾。  
   
- 控制項<xref:System.Windows.Automation.WindowPattern>模式用於支援在傳統圖形化使用者介面 （GUI） 中提供基於視窗的基本功能的控制項。 必須實現此控制模式的控制項示例包括頂級應用程式視窗、多文檔介面 （MDI） 子視窗、可調整大小的拆分窗格控制項、強制回應對話方塊和氣球説明視窗。  
+ <xref:System.Windows.Automation.WindowPattern>控制項模式是用來支援在傳統圖形化使用者介面（GUI）內提供基本以視窗為基礎之功能的控制項。 必須實作為此控制項模式的控制項範例包括最上層應用程式視窗、多重文件介面（MDI）子視窗、可調整大小的分割窗格控制項、強制回應對話方塊和氣球說明視窗。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -58,15 +59,15 @@ ms.locfileid: "79180039"
 ## <a name="exceptions"></a>例外狀況  
  提供者必須擲回下列例外狀況。  
   
-|例外狀況型別|條件|  
+|例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> - 當控制項不支援請求的行為時。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> - 當參數不是有效數字時。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -當控制項不支援要求的行為時。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -當參數不是有效的數位時。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

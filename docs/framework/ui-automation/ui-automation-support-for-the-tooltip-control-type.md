@@ -1,17 +1,18 @@
 ---
 title: ToolTip 控制項類型的 UI 自動化支援
+description: 取得工具提示控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, ToolTip control type
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-ms.openlocfilehash: 8531270efb5a7bc5896c5d2fa04dd0632547cac7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: af9c9e0c67026ab339d08876bc5133fa42d1a5b7
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179459"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163173"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>ToolTip 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179459"
   
  工具提示控制項是包含文字的快顯視窗。  
   
- 下列章節會定義工具提示控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有工具提示控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義工具提示控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]需求適用于所有工具提示控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -29,7 +30,7 @@ ms.locfileid: "79179459"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|ToolTip<br /><br /> - 文本（0 或更多）<br />- 圖像（0 或更多）|ToolTip|  
+|ToolTip<br /><br /> -Text （0或更多）<br />-影像（0個以上）|ToolTip|  
   
  如果工具提示控制項可以接收鍵盤焦點，便只會出現在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。 否則，所有的工具提示資訊都可由其參考之 `HelpTextProperty` 項目上的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 取得。  
   

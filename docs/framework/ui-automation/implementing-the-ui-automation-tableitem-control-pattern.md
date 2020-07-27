@@ -1,17 +1,18 @@
 ---
 title: 實作 UI 自動化 TableItem 控制項模式
+description: 請參閱指導方針和慣例，在使用者介面自動化中執行 TableItem 控制項模式。 知道 ITableItemProvider 介面的必要成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Table Item
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-ms.openlocfilehash: f35b491c31e8725eac0025dfd6815079d0ea9b79
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d6d31fe0e041fbba147df14d290a775188755f2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180069"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163523"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>實作 UI 自動化 TableItem 控制項模式
 > [!NOTE]
@@ -24,7 +25,7 @@ ms.locfileid: "79180069"
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
   
-- 有關相關的網格項功能，請參閱[實現 UI 自動化網格項控制模式](implementing-the-ui-automation-griditem-control-pattern.md)。  
+- 如需相關的格線專案功能，請參閱[執行 UI 自動化 GridItem 控制項模式](implementing-the-ui-automation-griditem-control-pattern.md)。  
   
 <a name="Required_Members_for_ITableItemProvider"></a>
 ## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider 的必要成員  
@@ -42,10 +43,10 @@ ms.locfileid: "79180069"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
 - [實作 UI 自動化 Table 控制項模式](implementing-the-ui-automation-table-control-pattern.md)
 - [實作 UI 自動化 GridItem 控制項模式](implementing-the-ui-automation-griditem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

@@ -1,17 +1,18 @@
 ---
 title: Group 控制項類型的 UI 自動化支援
+description: 取得群組控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Group control type
 - Group control type
 - control types, Group
 ms.assetid: 18e01bab-01f8-4567-b867-88dce9c4a435
-ms.openlocfilehash: 3044461d6d8cd157c06c48f236e1c13005774d00
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d635e33cf192a388dea65cf614b250e93f6703f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179753"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167909"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>Group 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179753"
   
  群組控制項代表階層內的節點。 群組控制項類型會在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中建立分隔界限，讓組成群組的項目在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構內以邏輯方式區分開來。  
   
- 下列章節會定義群組控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有組控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義群組控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]需求適用于所有的群組控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -29,9 +30,9 @@ ms.locfileid: "79179753"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|群組<br /><br /> - 0 或多個控制項|群組<br /><br /> - 0 或多個控制項|  
+|群組<br /><br /> -0 個或多個控制項|群組<br /><br /> -0 個或多個控制項|  
   
- 通常，組控制項具有[清單項控制項類型的 UI 自動化支援](ui-automation-support-for-the-listitem-control-type.md)、[樹專案控制項類型的 UI 自動化支援](ui-automation-support-for-the-treeitem-control-type.md)，或對子樹中位於其下方的資料[項控制項類型控制項類型的 UI 自動化支援](ui-automation-support-for-the-dataitem-control-type.md)。 由於 'Group' 是泛型容器，因此群組控制項底下的樹狀結構中可有任何類型的控制項。  
+ 群組控制項通常會有 [出現專案][控制項類型的 ui 自動化支援](ui-automation-support-for-the-listitem-control-type.md)、 [TreeItem 控制項類型的 ui 自動化支援](ui-automation-support-for-the-treeitem-control-type.md)，或子樹中所找到之[DataItem 控制項類型控制項類型的 ui 自動化支援](ui-automation-support-for-the-dataitem-control-type.md)。 由於 'Group' 是泛型容器，因此群組控制項底下的樹狀結構中可有任何類型的控制項。  
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  

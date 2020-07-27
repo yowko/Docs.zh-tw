@@ -1,17 +1,18 @@
 ---
 title: 實作 UI 自動化 Selection 控制項模式
+description: 請參閱在使用者介面自動化中執行選取控制項模式的指導方針和慣例。 請參閱 ISelectionProvider 介面的必要成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Selection control pattern
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 083a4bb56fe76c1d65015ffabf741d7e1953d2ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3854a401ae6179be4e4e75d86964108d83b0ccf
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180124"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163590"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>實作 UI 自動化 Selection 控制項模式
 > [!NOTE]
@@ -29,12 +30,12 @@ ms.locfileid: "79180124"
   
 - 有最小值、最大值和連續範圍的控制項 (如 [音量] **** 滑桿控制項)，應實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider> ，而不是實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>。  
   
-- 管理實現<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>的子控制項的單個選擇控制項，如 **"顯示內容"** 對話方塊中的 **"螢幕解析度**"滑塊或 Microsoft Word**中的"色彩選擇器**選擇"控制項（如下<xref:System.Windows.Automation.Provider.ISelectionProvider>圖所示），應實現 ;他們的孩子應該同時<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>執行和<xref:System.Windows.Automation.Provider.ISelectionItemProvider>。  
+- 單一選取控制項，可管理執行的子控制項 <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot> ，例如 [**顯示內容**] 對話方塊中的 [**螢幕解析度**] 滑杆，或 Microsoft Word 的**色彩選擇器**選取控制項（如下所示），應該會執行 <xref:System.Windows.Automation.Provider.ISelectionProvider> ; 其子系應同時執行 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> 和 <xref:System.Windows.Automation.Provider.ISelectionItemProvider> 。  
   
  ![已反白顯示黃色的色彩選擇器](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色樣字串對應範例  
   
-- 功能表不支援 <xref:System.Windows.Automation.SelectionPattern>。 如果您正在使用包含圖形和文本的功能表項目（如 Microsoft Outlook 中的 **"視圖"** 功能表中的<xref:System.Windows.Automation.Provider.IToggleProvider>**"預覽窗格**"項），並且需要傳達狀態，則應實現 。  
+- 功能表不支援 <xref:System.Windows.Automation.SelectionPattern>。 如果您使用的功能表項目同時包含圖形和文字（例如 Microsoft Outlook 的 [ **View** ] 功能表中的 [**預覽] 窗格**專案），而且需要傳達狀態，則應執行 <xref:System.Windows.Automation.Provider.IToggleProvider> 。  
   
 <a name="Required_Members_for_ISelectionProvider"></a>
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider 的必要成員  
@@ -60,9 +61,9 @@ ms.locfileid: "79180124"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
 - [實作 UI 自動化 SelectionItem 控制項模式](implementing-the-ui-automation-selectionitem-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

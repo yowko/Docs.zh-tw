@@ -1,17 +1,18 @@
 ---
 title: Table 控制項類型的 UI 自動化支援
+description: 取得 Table 控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TableControl type
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-ms.openlocfilehash: 8a6d78ce159727ddeff72ec5729c1cc645648b61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13790d601b370f60a0e9a998effcbf4744b63712
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179523"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163625"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Table 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179523"
   
  表格控制項包含文字資料列和資料行，也可能包含資料列標頭和資料行標頭。  
   
- 下列章節會定義表格控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有表控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義表格控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求適用于所有資料表控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -29,7 +30,7 @@ ms.locfileid: "79179523"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|Table<br /><br /> - 標題 （0 或 1）<br />- 文本 （0 或 1）<br />- 各種控制項（0 或更多）|Table<br /><br /> - 文本（0 或更多）<br />- 各種控制項（0 或更多）|  
+|Table<br /><br /> -Header （0或1）<br />-Text （0或1）<br />-各種控制項（0或更多）|Table<br /><br /> -Text （0或更多）<br />-各種控制項（0或更多）|  
   
  如果資料表控制項具有資料列或資料行標頭，這些標頭必須顯示於使用者介面自動化樹狀中的控制項檢視中。 內容檢視不需要公開此資訊，因為使用 TablePattern 即可加以存取。  
   

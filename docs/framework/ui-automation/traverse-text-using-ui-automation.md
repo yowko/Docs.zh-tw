@@ -1,5 +1,6 @@
 ---
 title: 使用 UI 自動化周遊文字
+description: 請參閱範例，以瞭解如何使用 Microsoft UI 自動化（以 TextUnit 遞增）來流覽檔的文字內容。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - text, traversing
 - traversing text
 ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
-ms.openlocfilehash: 71df7c8f9dde388ffc4445389e105a4ad686539f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b4269d043fd6cd0cc5da9825714aab4ead701f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441871"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168084"
 ---
 # <a name="traverse-text-using-ui-automation"></a>使用 UI 自動化周遊文字
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題說明如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ，以 <xref:System.Windows.Automation.Text.TextUnit> 遞增來周遊文件的文字內容。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "74441871"
 ## <a name="see-also"></a>另請參閱
 
 - [UI 自動化 TextPattern 概觀](ui-automation-textpattern-overview.md)
-- [使用 UI 自動化將內容新增至文字方塊](add-content-to-a-text-box-using-ui-automation.md)
-- [使用 UI 自動化尋找和反白顯示文字](find-and-highlight-text-using-ui-automation.md)
+- [使用 UI 自動化將內容加入至文字方塊](add-content-to-a-text-box-using-ui-automation.md)
+- [利用 UI 自動化尋找和反白顯示文字](find-and-highlight-text-using-ui-automation.md)
 - [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)

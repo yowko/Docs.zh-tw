@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447130"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165792"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -31,7 +31,7 @@ ms.locfileid: "84447130"
 
 如果三個元件全都存在，則是絕對路徑。 如果未指定任何磁碟區或磁碟機代號，且目錄名稱開頭為[目錄分隔符號字元](<xref:System.IO.Path.DirectorySeparatorChar>)，則路徑是相對於目前磁碟機的根目錄。 否則，路徑是相對於目前的目錄。 下表顯示一些可能的目錄和檔案路徑。
 
-|路徑  |說明  |
+|Path  |描述  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | 從磁碟機 C: 根目錄開始的絕對檔案路徑 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 從目前磁碟機根目錄開始的絕對路徑。 |
@@ -63,7 +63,7 @@ ms.locfileid: "84447130"
 
 以下是 UNC 路徑的一些範例：
 
-|路徑  |說明  |
+|Path  |描述  |
 | -- | -- |
 | `\\system07\C$\` | `system07` 上磁碟機 C: 的根目錄。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 磁碟區 Test 目錄中的 Foo.txt 檔案。|
@@ -124,7 +124,7 @@ DOS 裝置路徑由以下元件組成：
 
 這個正規化會隱含地發生，但您可以明確地呼叫 <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> 方法來執行，這個方法會包裝對 [GetFullPathName() 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)的呼叫。 您也可以直接使用 P/Invoke 呼叫 Windows [GetFullPathName() 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)。
 
-### <a name="identifying-the-path"></a>識別路徑
+### <a name="identify-the-path"></a>識別路徑
 
 路徑正規化的第一步就是識別路徑的類型。 路徑會落在一些分類的其中之一：
 
@@ -138,13 +138,13 @@ DOS 裝置路徑由以下元件組成：
 
 路徑的類型會決定是否要以某種方式套用目前目錄。 它也會判斷路徑的「根」是什麼。
 
-### <a name="handling-legacy-devices"></a>處理舊版裝置
+### <a name="handle-legacy-devices"></a>處理舊版裝置
 
 如果路徑是舊版 DOS 裝置，例如 `CON`、`COM1` 或 `LPT1`，會在它前面加上 `\\.\` 轉換為裝置路徑然後傳回。
 
 開頭為舊版裝置名稱的路徑，一律會被 <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType> 方法解譯成舊版裝置。 例如，`CON.TXT` 的 DOS 裝置路徑是 `\\.\CON`，而 `COM1.TXT\file1.txt` 的 DOS 裝置路徑是 `\\.\COM1`。
 
-### <a name="applying-the-current-directory"></a>套用目前目錄
+### <a name="apply-the-current-directory"></a>套用目前的目錄
 
 如果路徑不是完整格式，Windows 會套用目前目錄給它。 UNC 和裝置路徑沒有套用目前目錄。 具有分隔符號 C:\\ 的完整磁碟機也不會套用。
 
@@ -157,11 +157,11 @@ DOS 裝置路徑由以下元件組成：
 > [!IMPORTANT]
 > 相對路徑在多執行緒應用程式 (也就是大部分應用程式) 中是危險的，因為目前目錄是以每個處理序為基準的一項設定。 任何執行緒都可以隨時變更目前目錄。 從 .NET Core 2.1 開始，您可以呼叫 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> 方法，從相對路徑以及您想要解析針對的基底路徑 (目前的目錄)，取得絕對路徑。
 
-### <a name="canonicalizing-separators"></a>規範化分隔符號
+### <a name="canonicalize-separators"></a>正常化分隔符號
 
 所有正斜線 (`/`) 會轉換成標準的 Windows 分隔符號，也就是反斜線 (`\`)。 如果它們存在，跟隨在前兩個斜線後面的一系列斜線，會摺疊成單一斜線。
 
-### <a name="evaluating-relative-components"></a>評估相對元件
+### <a name="evaluate-relative-components"></a>評估相對元件
 
 處理路徑時，會評估由單一或雙句點 (`.` 或 `..`) 所組成的任何元件或區段：
 
@@ -171,7 +171,7 @@ DOS 裝置路徑由以下元件組成：
 
    只有在父目錄不超過路徑的根目錄時，才會移除父目錄。 路徑的根目錄取決於路徑的類型。 對於 DOS 路徑是磁碟機 (`C:\`)、對於 UNC 是伺服器/共用 (`\\Server\Share`)，以及對於裝置路徑則是裝置路徑前置詞 (`\\?\` 或 `\\.\`)。
 
-### <a name="trimming-characters"></a>修剪字元
+### <a name="trim-characters"></a>修剪字元
 
 在稍早移除分隔符號和相對區段時，正規化期間也會額外移除一些字元：
 
@@ -184,7 +184,7 @@ DOS 裝置路徑由以下元件組成：
    > [!IMPORTANT]
    > 您應該**絕不**建立具有尾端空格的目錄或檔案名稱。 尾端空格可能會導致難以存取目錄或是不可能存取目錄，而應用程式在嘗試處理名稱包含尾端空格的目錄或檔案時，通常會失敗。
 
-## <a name="skipping-normalization"></a>略過正規化
+## <a name="skip-normalization"></a>略過正規化
 
 一般而言，任何傳遞給 Windows API 的路徑 (實際上) 會傳遞給 [GetFullPathName 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)並正規化。 有一個重要的例外狀況：開頭為問號而非句號的裝置路徑。 除非路徑開頭完全為 `\\?\`(請注意我們使用了標準的反斜線)，否則它會正規化。
 
@@ -222,4 +222,4 @@ Directory.Create("TeStDiReCtOrY")
 [!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
 [!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
-不過，目錄和檔案名稱比較不區分大小寫。 如果您搜尋名為 "test.txt" 的檔案，.NET 檔案系統 API 在比較時會忽略大小寫。 Test.txt、TEST.TXT、test.TXT 和大寫和小寫字母的任何其他組合都會符合 "test.txt"。
+不過，目錄和檔案名稱比較不區分大小寫。 如果您搜尋名為 "test.txt" 的檔案，.NET 檔案系統 API 在比較時會忽略大小寫。 「Test.txt」、「TEST.TXT」、「test.TXT」，以及大寫和小寫字母的任何其他組合都會符合「test.txt」。

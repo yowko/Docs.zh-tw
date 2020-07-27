@@ -1,5 +1,6 @@
 ---
 title: 在 .NET 應用程式中封裝和部署資源
+description: 使用主要元件（中樞）和附屬元件（輪輻），在 .NET 應用程式中封裝和部署資源。 輪輻包含當地語系化的資源，但沒有任何程式碼。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243046"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166186"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>在 .NET 應用程式中封裝和部署資源
 
@@ -53,7 +54,7 @@ ms.locfileid: "81243046"
 當您封裝應用程式的資源時，必須使用 Common Language Runtime 所預期的資源命名慣例來命名它們。 執行階段會依文化特性名稱識別資源。 每個文化特性都會獲指定唯一名稱，此名稱通常是下列項目的組合：與語言建立關聯的兩個字母小寫文化特性名稱以及與國家或地區建立關聯的兩個字母大寫子文化特性名稱 (必要時)。 子文化特性名稱遵循文化特性名稱，以破折號 (-) 分隔。 範例包括 ja-JP (代表在日本日文)、en-US (美式英文)、de-DE (德國德文)，或 de-AT (奧地利德文)。 請參閱 [Windows 支援的語言/地區名稱清單](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的 [語言標記]**** 資料行。 文化名稱遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定義的標準。
 
 > [!NOTE]
-> 兩個字母的文化特性名稱有一些例外， `zh-Hans`例如中文（簡體）。
+> 兩個字母的文化特性名稱有一些例外，例如 `zh-Hans` 中文（簡體）。
 
 > [!NOTE]
 > 如需建立資源檔的資訊，請參閱[建立資源檔](creating-resource-files-for-desktop-apps.md)和[建立附屬組件](creating-satellite-assemblies-for-desktop-apps.md)。
@@ -71,7 +72,7 @@ ms.locfileid: "81243046"
 .NET Framework 資源後援處理序包含下列步驟：
 
 > [!TIP]
-> 您可以使用[ \<relativebindforresources>>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) configuration 專案來優化資源回溯程式，以及執行時間探查資源元件的進程。 如需詳細資訊，請參閱[最佳化資源後援處理序](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一節。
+> 您可以使用 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) configuration 元素來優化資源的回溯程式，以及執行時間探查資源元件的進程。 如需詳細資訊，請參閱[最佳化資源後援處理序](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一節。
 
 1. 執行階段會先檢查[全域組件快取](../app-domains/gac.md)是否有符合應用程式之所要求文化特性的組件。
 
@@ -116,7 +117,7 @@ ms.locfileid: "81243046"
 
 - 應用程式碼不會處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。
 
-您可以在應用程式佈建檔中包含[ \<relativebindforresources>>](../configure-apps/file-schema/runtime/relativebindforresources-element.md)專案，並將其`enabled`屬性設定`true`為，以優化附屬元件的探查，如下列範例所示。
+您可以藉由在 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 應用程式佈建檔中包含專案並將其屬性設定為，以優化附屬元件的探查 `enabled` `true` ，如下列範例所示。
 
 ```xml
 <configuration>
@@ -126,7 +127,7 @@ ms.locfileid: "81243046"
 </configuration>
 ```
 
-附屬組件的最佳化探查是選擇性功能。 也就是說，執行階段會遵循[資源後援處理序](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)中說明的步驟，除非應用程式組態檔中已有 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 項目，而且其 `enabled` 屬性已設定為 `true`。 如果是這種情況，附屬組件的探查程序修改如下：
+附屬組件的最佳化探查是選擇性功能。 也就是說，執行時間會遵循[資源](packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1)回溯程式中記載的步驟，除非 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 元素出現在應用程式的設定檔中，而且其 `enabled` 屬性設定為 `true` 。 如果是這種情況，附屬組件的探查程序修改如下：
 
 - 執行階段使用父程式碼組件的位置來探查附屬組件。 如果父組件安裝在全域組件快取中，則執行階段會在快取中探查，而不是在應用程式目錄中探查。 如果父組件安裝在應用程式目錄中，則執行階段會在應用程式目錄中探查，而不是在全域組件快取中探查。
 

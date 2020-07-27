@@ -1,15 +1,16 @@
 ---
-title: 記憶體中 XML 樹修改與功能構造（LINQ 到 XML）（C#）
+title: '記憶體中的 XML 樹狀結構修改與功能結構（LINQ to XML）（c #）'
+description: '這些範例會變更 XML 檔的形狀，方法是就地修改它，並使用 c # 中的 LINQ to XML 功能結構。'
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 55eb95585bdd5d2c52175cacae2e6d049bd06f69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7a2e3d2ddcd452cf6a58e9d5cc886f3e8b8dd325
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66484564"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165788"
 ---
-# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>記憶體中 XML 樹修改與功能構造（LINQ 到 XML）（C#）
+# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>記憶體中的 XML 樹狀結構修改與功能結構（LINQ to XML）（c #）
 就地修改 XML 樹狀結構是變更 XML 文件組織結構的傳統方式。 一般應用程式會將文件載入到資料存放區，例如 DOM 或 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]；使用程式設計介面插入節點、刪除節點或變更節點的內容；然後將 XML 儲存到檔案或透過網路傳輸。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 可啟用在許多案例中有用的其他方法：「函數式建構」**。 功能結構會將修改資料視為轉換的問題，而不是資料存放區的詳細管理。 如果您可以表示資料，並將其有效地從一個表單轉換到另一個表單，結果會與您取得一個資料存放區，然後以相同的方式管理該資料存放區取得其他組織結構相同。 功能結構方法的關鍵在於將查詢結果傳遞到 <xref:System.Xml.Linq.XDocument> 和 <xref:System.Xml.Linq.XElement> 建構函式。  

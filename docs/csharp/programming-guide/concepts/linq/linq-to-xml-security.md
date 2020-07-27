@@ -1,13 +1,14 @@
 ---
 title: LINQ to XML 安全性 (C#)
+description: 瞭解與 LINQ to XML 相關聯的安全性問題，包括減輕安全性風險的一些指引。
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: 5b7eb815b058cba008f1db2cf683c8934c19b743
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc9fd13f19dcf6d9cbbb2b0b7608009cc4da1108
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73423380"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165313"
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML 安全性 (C#)
 這個主題描述與 LINQ to XML 相關聯的安全性問題。 此外，還提供減少暴露安全性的部分指引。  

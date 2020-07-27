@@ -1,16 +1,17 @@
 ---
 title: 取得 UI 自動化項目
+description: 請參閱各種方法，以取得使用者介面（UI）專案的 UI 自動化元素（AutomationElement）物件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: eab4e59ee219808a4c0ae9ca5331a14928b66b5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b741dde3b30334ba8fa990d73044da7e3bdd2da
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179991"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168162"
 ---
 # <a name="obtaining-ui-automation-elements"></a>取得 UI 自動化項目
 > [!NOTE]
@@ -99,5 +100,5 @@ ms.locfileid: "79179991"
 ## <a name="see-also"></a>另請參閱
 
 - [根據屬性條件尋找 UI 自動化項目](find-a-ui-automation-element-based-on-a-property-condition.md)
-- [使用 TreeWalker 導覽 UI 自動化項目](navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [使用 TreeWalker 巡覽 UI 自動化項目](navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)

@@ -1,5 +1,6 @@
 ---
 title: Fuslogvw.exe (組件繫結記錄檔檢視器)
+description: 使用 [元件系結記錄檔檢視器] Fuslogvw.exe。 這個檢視器會顯示元件系結詳細資料，以協助診斷 .NET 在執行時間找不到元件的原因。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - failed assembly binds
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-ms.openlocfilehash: 2f0018dca6e5add2c5bc531103a4078307a8c8c6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 949f9cf98d5eb4e100be9837be120038f085cc40
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129853"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167117"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (組件繫結記錄檔檢視器)
 
@@ -40,7 +41,7 @@ fuslogvw
 2. 選取 [自訂]**** 選項按鈕，可檢視您指定之自訂目錄中的繫結失敗。 您必須透過將 [記錄檔設定]**** 對話方塊中的自訂記錄檔路徑設為有效的目錄名稱，指定要讓執行階段存放記錄檔的自訂位置。 這個目錄應該是乾淨的，只包含執行階段產生的檔案。 如果它包含會產生失敗記錄的可執行檔，則失敗將不會記錄下來，因為工具會嘗試使用與該可執行檔相同的名稱建立目錄。 此外，嘗試從記錄檔位置執行可執行檔將會失敗。
 
     > [!NOTE]
-    > 預設繫結位置要比自訂繫結位置更合適。 運行時將預設綁定位置存儲在 wininet 緩存中，因此會自動將其清理乾淨。如果指定自訂綁定位置，則負責清理它。
+    > 預設繫結位置要比自訂繫結位置更合適。 執行時間會將預設系結位置儲存在 wininet 快取中，因此會自動將其清除。如果您指定自訂系結位置，就會負責將它清除。
 
 ### <a name="to-view-details-about-a-specific-failure"></a>若要檢視特定失敗的詳細資料
 
@@ -108,7 +109,7 @@ LOG: All probing URLs attempted and failed.
 
 ### <a name="to-refresh-the-user-interface"></a>若要重新整理使用者介面
 
-- 按一下 **"刷新"** 按鈕。 檢視器在執行時不會自動偵測新的記錄項目。 您必須使用 [重新整理]**** 按鈕才能顯示新項目。
+- 按一下 [**重新**整理] 按鈕。 檢視器在執行時不會自動偵測新的記錄項目。 您必須使用 [重新整理]**** 按鈕才能顯示新項目。
 
 ### <a name="to-change-the-log-settings"></a>若要變更記錄檔設定
 
@@ -216,7 +217,7 @@ Discarding native image.
 2. 在 [自訂的記錄檔路徑]**** 文字方塊中輸入路徑。
 
 > [!NOTE]
-> [組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 快取來儲存其繫結記錄檔。 由於 IE 快取偶爾會損毀，因此[組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 有時可能會停止在檢視視窗內顯示新的繫結記錄檔。 這種損毀導致 .NET 繫結基礎結構 (融合) 無法寫入繫結記錄檔或從繫結記錄檔讀取  （如果使用自訂日誌路徑，則不會遇到此問題。 要修復損壞並允許融合再次顯示綁定日誌，請通過從 IE Internet 選項對話方塊中刪除臨時 Internet 檔來清除 IE 緩存。
+> [組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 快取來儲存其繫結記錄檔。 由於 IE 快取偶爾會損毀，因此[組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 有時可能會停止在檢視視窗內顯示新的繫結記錄檔。 這種損毀導致 .NET 繫結基礎結構 (融合) 無法寫入繫結記錄檔或從繫結記錄檔讀取  （如果您使用自訂記錄檔路徑，就不會發生此問題）。 若要修正損毀，並允許融合再次顯示系結記錄檔，請從 [IE 網際網路選項] 對話方塊中刪除 [網際網路上的暫存檔案]，以清除 IE 快取。
 >
 > 如果 Unmanaged 應用程式藉由實作 `IHostAssemblyManager` 和 `IHostAssemblyStore` 介面裝載 Common Language Runtime，則無法將記錄項目儲存在 wininet 快取中。  若要檢視實作這些介面之自訂主機的記錄項目，則必須指定替代的記錄檔路徑。
 

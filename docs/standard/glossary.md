@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287450"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163123"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -140,9 +140,7 @@ Just-in-Time 編譯器。
 
 沒有自己的程式庫，而只是一份相依性清單的 NuGet 套件。 內含的套件可以選擇性地建立目標 Framework 的 API。
 
-請參閱[套件、中繼套件和](../core/packages.md)架構
-
-## <a name="mono"></a>Mono
+## <a name="mono"></a>單聲道
 
 Mono 是開放原始碼、[跨平台](#cross-platform)的 .NET 實作，主要用於需要小型執行階段時。 它是在 Android、Mac、iOS、tvOS 和 watchOS 上提供 Xamarin 應用程式的執行時間，主要著重于需要少量使用量的應用程式。
 

@@ -1,24 +1,25 @@
 ---
 title: 實作 UI 自動化 Invoke 控制項模式
+description: 閱讀指導方針和慣例，在使用者介面自動化中執行叫用控制項模式。 請參閱 IInvokeProvider 介面的必要成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Invoke control pattern
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: 30ae83aa4b73f36afce1251387598ef9b61816d8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b464b3ab5cd2b0789798f8b865b946c5eae017eb
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435169"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166179"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>實作 UI 自動化 Invoke 控制項模式
 
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。
 
-本主題將介紹實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>的方針和慣例，包括事件和屬性的相關資訊。 其他參考的連結列於此主題的結尾部分。
+本主題將介紹實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>的方針和慣例，包括事件和屬性的相關資訊。 其他參考的連結列於主題的結尾。
 
 <xref:System.Windows.Automation.InvokePattern> 控制項模式用來支援控制項，且這些控制項在啟動時並不會維護狀態，而是會啟始或執行明確的單一動作。 維護狀態的控制項，例如核取方塊和選項按鈕，必須分別實作 <xref:System.Windows.Automation.Provider.IToggleProvider> 及 <xref:System.Windows.Automation.Provider.ISelectionItemProvider> 。 如需實作叫用控制項模式的控制項，請參閱 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。
 
@@ -51,7 +52,7 @@ ms.locfileid: "74435169"
 
 - 叫用某個項目時，此項目可能會立即從 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構中消失。 要求事件回呼所提供的項目資訊，可能會因此而失敗。 建議的解決方法是預先擷取快取的資訊。
 
-- 控制項可以實作多個控制項模式。 例如，Microsoft Excel 工具列上的 [填滿色彩] 控制項會同時執行 [<xref:System.Windows.Automation.InvokePattern>] 和 [<xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式]。 <xref:System.Windows.Automation.ExpandCollapsePattern> 會公開功能表，而 <xref:System.Windows.Automation.InvokePattern> 則會以選擇的色彩填滿作用中的選取範圍。
+- 控制項可以實作多個控制項模式。 例如，Microsoft Excel 工具列上的 [填滿色彩] 控制項會同時執行 <xref:System.Windows.Automation.InvokePattern> 和 <xref:System.Windows.Automation.ExpandCollapsePattern> 控制項模式。 <xref:System.Windows.Automation.ExpandCollapsePattern> 會公開功能表，而 <xref:System.Windows.Automation.InvokePattern> 則會以選擇的色彩填滿作用中的選取範圍。
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
@@ -59,9 +60,9 @@ ms.locfileid: "74435169"
 
 以下是實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>的必要屬性和方法。
 
-|必要成員|成員類型|附註|
+|必要成員|成員類型|注意|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|方法|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 為非同步呼叫，且必須立即返回，不可封鎖。<br /><br /> 對於叫用時直接或間接啟動強制回應對話方塊的控制項，此行為尤其重要。 任何引發事件的使用者介面自動化用戶端都會維持封鎖的狀態，直到強制回應對話方塊關閉為止。|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|method|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 為非同步呼叫，且必須立即返回，不可封鎖。<br /><br /> 對於叫用時直接或間接啟動強制回應對話方塊的控制項，此行為尤其重要。 任何引發事件的使用者介面自動化用戶端都會維持封鎖的狀態，直到強制回應對話方塊關閉為止。|
 
 <a name="Exceptions"></a>
 
@@ -73,11 +74,11 @@ ms.locfileid: "74435169"
 |--------------------|---------------|
 |<xref:System.Windows.Automation.ElementNotEnabledException>|如果未啟用此控制項。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Invoke a Control Using UI Automation](invoke-a-control-using-ui-automation.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [使用 UI 自動化叫用控制項](invoke-a-control-using-ui-automation.md)
 - [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)
+- [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

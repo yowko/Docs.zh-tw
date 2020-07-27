@@ -1,17 +1,18 @@
 ---
 title: Pane 控制項類型的 UI 自動化支援
+description: 取得窗格控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Pane control type
 - Pane control type
 - control types, Pane
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
-ms.openlocfilehash: ab888c2ecfd516ae4e7ce5dab0dca3fde1a7b98e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f7790298054fe947bfa6f7939238ffb956c6d93
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179653"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166045"
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>Pane 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179653"
   
  窗格控制項類型用來代表在框架或文件視窗中的物件。 使用者可在窗格控制項之間和目前窗格的內容之內巡覽，但無法在不同窗格內的項目之間巡覽。 因此，窗格控制項代表的群組層級低於視窗或文件，但高於個別控制項。 使用者在窗格之間巡覽的方式是依照內容而定，可按下 TAB、F6 或 CTRL+TAB 鍵。 窗格控制項類型不需要特定的鍵盤導覽。  
   
- 下列章節定義窗格控制項類型必要的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有清單控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節定義窗格控制項類型必要的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]需求適用于所有清單控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -33,7 +34,7 @@ ms.locfileid: "79179653"
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與窗格控制項特別有關。 有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性的詳細資訊，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與窗格控制項特別有關。 如需屬性的詳細資訊 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -91,7 +92,7 @@ ms.locfileid: "79179653"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 內容檢視|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>窗格</li><li>樹狀結構 (捲動模式)<br /><br /> <ul><li>TreeItem</li><li>窗格</li><li>編輯 (捲動模式</li></ul></li></ul>|- 窗格<br />- 樹（滾動圖案）<br />- 樹專案<br />- ...窗 格<br />- 編輯<br />- （滾動模式）|  
+|<ul><li>窗格</li><li>樹狀結構 (捲動模式)<br /><br /> <ul><li>TreeItem</li><li>窗格</li><li>編輯 (捲動模式</li></ul></li></ul>|-窗格<br />-Tree （捲軸模式）<br />-TreeItem<br />- ...Pane<br />-編輯<br />-（捲軸模式）|  
   
 ## <a name="see-also"></a>另請參閱
 

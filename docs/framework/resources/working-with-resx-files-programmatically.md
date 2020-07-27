@@ -1,5 +1,6 @@
 ---
 title: 以程式設計方式使用 .resx 檔案
+description: 使用 .NET 類別庫的 Resources 命名空間中的類型和成員，以程式設計方式建立或取出 XML 資源（.resx）檔案中的資料。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 519ca099b65710b6eb4251e1a9419e965ee69f93
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243033"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166161"
 ---
 # <a name="work-with-resx-files-programmatically"></a>以程式設計方式使用 .resx 檔案
 
-因為 XML 資源 (.resx) 檔必須由妥善定義的 XML 組成，而其中所包含的標頭，需遵循特定結構描述且後面接著名稱/值組的資料，可能您會認為以手動方式建立這些檔案容易出錯。 另一種方法是，您可以使用 .NET Class Library 中的型別和成員，透過程式設計的方式建立 .resx 檔案。 您也可以使用 .NET Class Library 擷取儲存在 .resx 檔案中的資源。 本文說明如何使用<xref:System.Resources>命名空間中的類型和成員，來處理 .resx 檔案。
+因為 XML 資源 (.resx) 檔必須由妥善定義的 XML 組成，而其中所包含的標頭，需遵循特定結構描述且後面接著名稱/值組的資料，可能您會認為以手動方式建立這些檔案容易出錯。 另一種方法是，您可以使用 .NET Class Library 中的型別和成員，透過程式設計的方式建立 .resx 檔案。 您也可以使用 .NET Class Library 擷取儲存在 .resx 檔案中的資源。 本文說明如何使用命名空間中的類型和成員 <xref:System.Resources> ，來處理 .resx 檔案。
 
-本文討論如何使用包含資源的 XML （.resx）檔案。 如需使用已內嵌于元件的二進位資源檔的詳細資訊，請<xref:System.Resources.ResourceManager>參閱。
+本文討論如何使用包含資源的 XML （.resx）檔案。 如需使用已內嵌于元件的二進位資源檔的詳細資訊，請參閱 <xref:System.Resources.ResourceManager> 。
 
 > [!WARNING]
 > 除了透過程式設計之外，還有其他運用 .resx 檔的方法。 當您將資源檔加入至[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)專案時，Visual Studio 提供用來建立和維護 .resx 檔案的介面，並在編譯時期自動將 .resx 檔轉換成 .resources 檔案。 您也可以使用文字編輯器直接操作 .resx 檔。 不過，為避免損毀檔案，請小心別更動任何儲存在檔案中的二進位資訊。
@@ -39,7 +40,7 @@ ms.locfileid: "81243033"
 > [!WARNING]
 > 請勿使用資源檔儲存密碼、安全機密資訊或私用資料。
 
-下列範例會建立名為 CarResources.resx 的.resx 檔，其中儲存六個字串、一個圖示和兩個應用程式定義的物件 (兩個 `Automobile` 物件)。 在`Automobile`範例中定義和具現化的類別會以<xref:System.SerializableAttribute>屬性標記。
+下列範例會建立名為 CarResources.resx 的.resx 檔，其中儲存六個字串、一個圖示和兩個應用程式定義的物件 (兩個 `Automobile` 物件)。 在 `Automobile` 範例中定義和具現化的類別會以 <xref:System.SerializableAttribute> 屬性標記。
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]

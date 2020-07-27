@@ -1,13 +1,14 @@
 ---
 title: LINQ to Objects (C#)
+description: '瞭解 c # 中的 LINQ to Objects，其搭配任何 IEnumerable 或 IEnumerable 集合使用 LINQ 查詢， <T> 但沒有中繼 LINQ 提供者或 API。'
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: f4ca6e57ffff026cb73121ecaf443ae54b25262c
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 7b67690ee13f207441bc94155acd91047b63b3df
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990027"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165555"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 

@@ -1,17 +1,18 @@
 ---
 title: StatusBar 控制項類型的 UI 自動化支援
+description: 取得狀態列控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StatusBar control type
 - UI Automation, Status Bar control type
 - control types, Status Bar
 ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
-ms.openlocfilehash: 0251eac3dff5f4b5a1ce0f7211c65fd0248b8891
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b199193ff4ee0fb9e22457cf19b15db189702e05
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179568"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163795"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>StatusBar 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179568"
   
  狀態列控制項可以顯示多項資訊：在應用程式的視窗中檢視的物件、物件的元件，或是與物件的作業相關的內容資訊。  
   
- 下列章節會定義狀態列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有狀態列控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義狀態列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]需求適用于所有狀態列控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -29,7 +30,7 @@ ms.locfileid: "79179568"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|StatusBar<br /><br /> - 編輯（0 或更多）<br />- 進度條（0 或多個）<br />- 圖像（0 或多個）<br />- 按鈕（0 或多個）|StatusBar<br /><br /> - 編輯（0 或更多）<br />- 進度條（0 或多個）<br />- 圖像（0 或多個）<br />- 按鈕（0 或多個）|  
+|StatusBar<br /><br /> -編輯（0個以上）<br />-進度列（0個或多個）<br />-影像（0個或多個）<br />-按鈕（0或多個）|StatusBar<br /><br /> -編輯（0個以上）<br />-ProgressBar （0個或多個）<br />-影像（0個或多個）<br />-按鈕（0或多個）|  
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
