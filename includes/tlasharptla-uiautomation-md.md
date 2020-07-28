@@ -6,4 +6,4 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65671139"
 ---
-<span data-ttu-id="e2426-101">Microsoft UI 自動化</span><span class="sxs-lookup"><span data-stu-id="e2426-101">Microsoft UI Automation</span></span>
+<span data-ttu-id="c5435-101">Microsoft UI 自動化</span><span class="sxs-lookup"><span data-stu-id="c5435-101">Microsoft UI Automation</span></span>
