@@ -1,17 +1,18 @@
 ---
 title: 實作 UI 自動化 ScrollItem 控制項模式
+description: 請參閱在使用者介面自動化中執行 ScrollItem 控制項模式的指導方針和慣例。 請參閱 IScrollItemProvider 介面的必要成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Scroll Item
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: 3a0647ab98dcb86306573a0e9826fa7232fa9ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a548eb25280d9a8feddc4633a1ba3e7dc022af36
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180134"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163575"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>實作 UI 自動化 ScrollItem 控制項模式
 > [!NOTE]
@@ -33,7 +34,7 @@ ms.locfileid: "79180134"
   
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|- 方法|None|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-方法|None|  
   
  此控制項模式沒有任何相關聯的屬性或事件。  
   
@@ -47,8 +48,8 @@ ms.locfileid: "79180134"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

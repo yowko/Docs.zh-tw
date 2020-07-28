@@ -1,17 +1,18 @@
 ---
 title: 實作 UI 自動化 Dock 控制項模式
+description: 瞭解如何執行使用者介面自動化 dock 控制項模式。 使用 DockPattern 控制項模式來公開控制項的 dock 屬性。 執行 IDockProvider。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: b1213791609245209fa37e3cdcb0876c963bfeb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8080d78c7bded3cb884f92948eb1259cda5544dc
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180211"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165906"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>實作 UI 自動化 Dock 控制項模式
 > [!NOTE]
@@ -51,14 +52,14 @@ Visual Studio 的停駐範例，其中「類別檢視」視窗是 DockPosition.R
 ## <a name="exceptions"></a>例外狀況  
  提供者必須擲回下列例外狀況。  
   
-|例外狀況型別|條件|  
+|例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> - 當控制項無法執行請求的停靠樣式時。|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -當控制項無法執行要求的停駐樣式時。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

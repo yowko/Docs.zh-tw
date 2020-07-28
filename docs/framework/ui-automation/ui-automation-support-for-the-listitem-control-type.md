@@ -1,17 +1,18 @@
 ---
 title: ListItem 控制項類型的 UI 自動化支援
+description: 取得 [出現] 控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, List
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 245f9030897d54a2f1c95d5ce6369b67d23cb319
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf1690b094e9d472fd4213f7fa3df545dca6ebac
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179692"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166052"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>ListItem 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179692"
   
  清單項目控制項是實作清單項目控制項類型的控制項範例。  
   
- 下列章節會定義清單項目控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有清單控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義清單項目控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]需求適用于所有清單控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -29,13 +30,13 @@ ms.locfileid: "79179692"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|ListItem<br /><br /> - 圖像（0 或更多）<br />- 文本（0 或更多）<br />- 編輯（0 或更多）|ListItem|  
+|ListItem<br /><br /> -影像（0個以上）<br />-Text （0或更多）<br />-編輯（0個以上）|ListItem|  
   
- 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中，清單項目控制項的子系必須一律為 "0"。 如果控制項的結構使其他項包含在清單項的下方，則它應遵循[樹專案控制項類型控制項類型的 UI 自動化支援](ui-automation-support-for-the-treeitem-control-type.md)要求。  
+ 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中，清單項目控制項的子系必須一律為 "0"。 如果控制項的結構是讓其他專案包含在清單專案底下，則應該遵循[TreeItem 控制項類型控制項類型的 UI 自動化支援](ui-automation-support-for-the-treeitem-control-type.md)需求。  
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單項目控制項特別有關。 有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性的詳細資訊，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與清單項目控制項特別有關。 如需屬性的詳細資訊 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
@@ -65,7 +66,7 @@ ms.locfileid: "79179692"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|相依|如果可以操作項目隱藏或顯示資訊，則必須實作此控制項模式。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|相依|如果項目可以編輯，則必須實作此控制項模式。 變更清單項目控制項時， <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>和 <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>的值也會跟著變更。|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|相依|如果支援在清單容器內進行逐項空間巡覽，而且容器是以資料列和資料行的方式排列，則必須實作方格項目控制項模式。|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|相依|如果項目有可以對其執行的命令 (選取除外)，則必須實作此模式。 這通常是與按兩下清單項目控制項相關聯的動作。 例如，從 Microsoft Windows 資源管理器啟動文件，或在 Microsoft Windows 媒體播放機中播放音樂檔。|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|相依|如果項目有可以對其執行的命令 (選取除外)，則必須實作此模式。 這通常是與按兩下清單項目控制項相關聯的動作。 範例會從 Microsoft Windows Explorer 開機檔案，或在 Microsoft Windows 媒體播放機中播放音樂檔案。|  
   
 <a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  

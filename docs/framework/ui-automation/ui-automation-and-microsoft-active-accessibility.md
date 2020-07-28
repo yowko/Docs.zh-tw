@@ -1,5 +1,6 @@
 ---
 title: UI 自動化和 Microsoft Active Accessibility
+description: 瞭解 UI 自動化和 Microsoft Active Accessibility 之間的差異，這是讓應用程式可供存取的先前解決方案。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Active Accessibility
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 9aa975cf3c6e60fbcc759adbf5a991930bff36d6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144782"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164072"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 自動化和 Microsoft Active Accessibility
 > [!NOTE]
@@ -23,7 +24,7 @@ ms.locfileid: "84144782"
  本主題包含的主要功能 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ，並說明這些功能與 Active Accessibility 有何不同。  
   
 <a name="Programming_Languages_compare"></a>
-## <a name="programming-languages"></a>程式語言  
+## <a name="programming-languages"></a>程式語言：  
 Active Accessibility 是以元件物件模型（COM）為基礎，支援雙重介面，因此可在 C/c + +、Microsoft Visual Basic 6.0 和指令碼語言中進行程式化。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]（包括適用于標準控制項的用戶端提供者程式庫）是以 managed 程式碼撰寫的，而且使用者介面自動化用戶端應用程式最容易使用 c # 或 Visual Basic .NET 進行程式設計。 使用 Managed 程式碼或 C/C++ 皆可撰寫使用者介面自動化提供者，亦即介面實作。  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>
@@ -80,7 +81,7 @@ Active Accessibility 是以元件物件模型（COM）為基礎，支援雙重�
 |ROLE_SYSTEM_DOCUMENT|Document|  
 |ROLE_SYSTEM_TEXT|編輯|  
 |ROLE_SYSTEM_GROUPING|群組|  
-|ROLE_SYSTEM_LIST|Header|  
+|ROLE_SYSTEM_LIST|頁首|  
 |ROLE_SYSTEM_COLUMNHEADER|標頭項目|  
 |ROLE_SYSTEM_LINK|Hyperlink|  
 |ROLE_SYSTEM_GRAPHIC|映像|  
@@ -101,7 +102,7 @@ Active Accessibility 是以元件物件模型（COM）為基礎，支援雙重�
 |ROLE_SYSTEM_PAGETABLIST|索引標籤|  
 |ROLE_SYSTEM_PAGETAB|索引標籤項目|  
 |ROLE_SYSTEM_TABLE|Table|  
-|ROLE_SYSTEM_STATICTEXT|文字|  
+|ROLE_SYSTEM_STATICTEXT|Text|  
 |ROLE_SYSTEM_INDICATOR|Thumb|  
 |ROLE_SYSTEM_TITLEBAR|標題列|  
 |ROLE_SYSTEM_TOOLBAR|工具列|  
@@ -251,4 +252,4 @@ Active Accessibility 是以元件物件模型（COM）為基礎，支援雙重�
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用者介面自動化基本概念](index.md)
+- [UI 自動化基礎觀念](index.md)
