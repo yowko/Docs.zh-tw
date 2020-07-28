@@ -1,5 +1,6 @@
 ---
-title: 如何：使用 DataGrid 控制項實作驗證
+title: 作法：使用 DataGrid 控制項實作驗證
+description: 瞭解 Windows Presentation Foundation DataGrid 控制項如何在儲存格和資料列層級執行驗證，並提供驗證錯誤的意見反應。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,82 +9,82 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 38b4c9cd7679f0d8da9b18fb5bd6bb729d33ed54
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: a6fe3693f94c3f554e96bc167b572cf854a1a34a
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646092"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167602"
 ---
-# <a name="how-to-implement-validation-with-the-datagrid-control"></a>如何：使用 DataGrid 控制項實作驗證
-該<xref:System.Windows.Controls.DataGrid>控制項使您能夠在儲存格和行等級執行驗證。 使用單元格級驗證,當使用者更新值時,可以驗證綁定數據對象的單個屬性。 使用行級驗證,當使用者將更改提交到行時,可以驗證整個數據物件。 您還可以為驗證錯誤提供自定義的可視反饋,或使用<xref:System.Windows.Controls.DataGrid>控制項提供的預設視覺反饋。  
+# <a name="how-to-implement-validation-with-the-datagrid-control"></a>作法：使用 DataGrid 控制項實作驗證
+<xref:System.Windows.Controls.DataGrid>控制項可讓您在資料格和資料列層級執行驗證。 使用資料格層級驗證時，您會在使用者更新值時驗證系結資料物件的個別屬性。 使用資料列層級驗證時，您會在使用者認可資料列的變更時，驗證整個資料物件。 您也可以針對驗證錯誤提供自訂的視覺效果意見反應，或使用控制項提供的預設視覺效果意見反應 <xref:System.Windows.Controls.DataGrid> 。  
   
- 以下過程介紹如何將驗證規則應用於<xref:System.Windows.Controls.DataGrid>綁定並自定義可視反饋。  
+ 下列程式說明如何將驗證規則套用至系結 <xref:System.Windows.Controls.DataGrid> ，並自訂視覺效果的意見反應。  
   
-### <a name="to-validate-individual-cell-values"></a>驗證儲存格值  
+### <a name="to-validate-individual-cell-values"></a>驗證個別的資料格值  
   
-- 在列使用的綁定上指定一個或多個驗證規則。 這類似於在簡單控件中驗證數據,如[數據綁定概述](../../../desktop-wpf/data/data-binding-overview.md)中所述。  
+- 在與資料行搭配使用的系結上，指定一或多個驗證規則。 這類似于在簡單控制項中驗證資料，如資料系結[總覽](../../../desktop-wpf/data/data-binding-overview.md)中所述。  
   
-     下面的示例顯示一個<xref:System.Windows.Controls.DataGrid>控件,該控件的四列綁定到業務物件的不同屬性。 三列<xref:System.Windows.Controls.ExceptionValidationRule>透過<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>屬性設定為`true`指定 。  
+     下列範例顯示的 <xref:System.Windows.Controls.DataGrid> 控制項有四個數據行系結至商務物件的不同屬性。 有三個數據行會藉 <xref:System.Windows.Controls.ExceptionValidationRule> 由將 <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> 屬性設定為來指定 `true` 。  
   
      [!code-xaml[DataGrid_Validation#BasicXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
   
-     當使用者輸入無效值(如課程 ID 列中的非整數)時,單元格周圍會出現紅色邊框。 您可以按照以下過程所述更改此默認驗證反饋。  
+     當使用者輸入不正確值（例如 [課程識別碼] 資料行中的非整數）時，資料格周圍會出現紅色框線。 您可以變更此預設驗證意見反應，如下列程式所述。  
   
-### <a name="to-customize-cell-validation-feedback"></a>自訂儲存格驗證回饋  
+### <a name="to-customize-cell-validation-feedback"></a>自訂資料格驗證意見反應  
   
-- 將列的屬性<xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A>設置為適合列編輯控制項的樣式。 由於編輯控制項是在執行時創建的,因此不能像使用簡單控制項那樣<xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType>使用附加屬性。  
+- 將資料行的 <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> 屬性設定為適用于資料行編輯控制項的樣式。 因為編輯控制項是在執行時間建立的，所以您無法使用 <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> 附加屬性，就像使用簡單的控制項一樣。  
   
-     下面的範例透過添加由三列共用的具有驗證規則的錯誤樣式來更新前面的範例。 當使用者輸入無效值時,樣式將更改單元格背景顏色並添加工具提示。 請注意使用觸發器來確定是否存在驗證錯誤。 這是必需的,因為當前沒有專用的單元格錯誤範本。  
+     下列範例會藉由加入具有驗證規則的三個數據行所共用的錯誤樣式，來更新上一個範例。 當使用者輸入不正確值時，樣式會變更儲存格背景色彩，並加入工具提示。 請注意，使用觸發程式來判斷是否有驗證錯誤。 這是必要的，因為目前沒有適用于資料格的專用錯誤範本。  
   
      [!code-xaml[DataGrid_Validation#CellValidationXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
   
-     您可以通過替換列使用來<xref:System.Windows.Controls.DataGridColumn.CellStyle%2A>實現 更廣泛的自定義。  
+     您可以藉由取代資料行所使用的來執行更廣泛的自訂 <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A> 。  
   
-### <a name="to-validate-multiple-values-in-a-single-row"></a>驗證一列中的多個值  
+### <a name="to-validate-multiple-values-in-a-single-row"></a>若要驗證單一資料列中的多個值  
   
-1. 實現一<xref:System.Windows.Controls.ValidationRule>個子類,該子類檢查綁定數據物件的多個屬性。 在方法<xref:System.Windows.Controls.ValidationRule.Validate%2A>實現中,`value`將參數值轉換<xref:System.Windows.Data.BindingGroup>為 實例。 然後,您可以<xref:System.Windows.Data.BindingGroup.Items%2A>通過 屬性訪問數據物件。  
+1. 執行檢查系結 <xref:System.Windows.Controls.ValidationRule> 資料物件之多個屬性的子類別。 在您的 <xref:System.Windows.Controls.ValidationRule.Validate%2A> 方法執行中，將 `value` 參數值轉換成 <xref:System.Windows.Data.BindingGroup> 實例。 接著，您可以透過屬性存取資料物件 <xref:System.Windows.Data.BindingGroup.Items%2A> 。  
   
-     下面的範例演示了此過程,以驗證`StartDate``Course`物件的屬性值是否早於`EndDate`其 屬性值。  
+     下列範例會示範此程式，以驗證 `StartDate` 物件的屬性值是否 `Course` 早于其 `EndDate` 屬性值。  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2. 將驗證規則添加到<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType>集合中。 該<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>屬性提供<xref:System.Windows.Data.BindingGroup.ValidationRules%2A><xref:System.Windows.Data.BindingGroup>對 實例屬性的直接訪問,該實例對控制項使用的所有綁定進行分組。  
+2. 將驗證規則新增至 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> 集合。 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>屬性可讓您直接存取實例的屬性，以將控制項所使用的所有系結 <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> <xref:System.Windows.Data.BindingGroup> 組成群組。  
   
-     下面的範例在 XAML<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>中設置 屬性。 屬性<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設置<xref:System.Windows.Controls.ValidationStep.UpdatedValue>為 ,以便驗證僅在更新綁定數據物件後進行。  
+     下列範例會 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> 在 XAML 中設定屬性。 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>屬性會設定為， <xref:System.Windows.Controls.ValidationStep.UpdatedValue> 因此只有在更新系結的資料物件之後，才會進行驗證。  
   
      [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
   
-     當使用者指定早於開始日期的結束日期時,行標題中將顯示一個紅色感歎號 (!)。 您可以按照以下過程所述更改此默認驗證反饋。  
+     當使用者指定早于開始日期的結束日期時，資料列標題中會出現紅色驚嘆號（！）。 您可以變更此預設驗證意見反應，如下列程式所述。  
   
-### <a name="to-customize-row-validation-feedback"></a>自訂行驗證回饋  
+### <a name="to-customize-row-validation-feedback"></a>自訂資料列驗證意見反應  
   
-- 設定 <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> 屬性。 此屬性使您能夠為各個<xref:System.Windows.Controls.DataGrid>控制件自定義行驗證回饋。 還可以通過使用隱式行樣式來設置<xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType>屬性來影響多個控制件。  
+- 設定 <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> 屬性。 這個屬性可讓您自訂個別控制項的資料列驗證意見反應 <xref:System.Windows.Controls.DataGrid> 。 您也可以使用隱含的資料列樣式來設定屬性，來影響多個控制項 <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> 。  
   
-     下面的範例將預設行驗證反饋替換為更可見的指示器。 當使用者輸入無效值時,行標題中將顯示一個帶有白色感嘆號的紅色圓圈。 對於行和單元驗證錯誤,都會發生這種情況。 關聯的錯誤消息將顯示在工具提示中。  
+     下列範例會以更可見的指標取代預設資料列驗證意見反應。 當使用者輸入不正確值時，資料列標頭中會出現含有白色驚嘆號的紅色圓圈。 這會發生于資料列和資料格驗證錯誤。 相關聯的錯誤訊息會顯示在工具提示中。  
   
      [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
   
 ## <a name="example"></a>範例  
- 下面的範例提供了儲存格和行驗證的完整演示。 類`Course`提供一個範例數據物件,<xref:System.ComponentModel.IEditableObject>該物件實現以支援事務。 該<xref:System.Windows.Controls.DataGrid>控件與<xref:System.ComponentModel.IEditableObject>這些控制者互動,使用戶能夠透過按 ESC 還原更改。  
+ 下列範例提供儲存格和資料列驗證的完整示範。 `Course`類別會提供範例資料物件， <xref:System.ComponentModel.IEditableObject> 以支援交易。 <xref:System.Windows.Controls.DataGrid>控制項會與互動， <xref:System.ComponentModel.IEditableObject> 讓使用者可以藉由按下 ESC 來還原變更。  
   
 > [!NOTE]
-> 如果使用 Visual Basic,則在 MainWindow.xaml`x:Class="DataGridValidation.MainWindow"`的第`x:Class="MainWindow"`一行中, 取代為 。  
+> 如果您使用 Visual Basic，請在 Mainwindow.xaml 的第一行中，將取代 `x:Class="DataGridValidation.MainWindow"` 為 `x:Class="MainWindow"` 。  
   
- 要測試驗證,請嘗試以下操作:  
+ 若要測試驗證，請嘗試下列動作：  
   
-- 在"課程ID"列中,輸入非整數值。  
+- 在 [課程識別碼] 資料行中，輸入非整數值。  
   
-- 在"結束日期"列中,輸入早於開始日期的日期。  
+- 在 [結束日期] 資料行中，輸入早于開始日期的日期。  
   
-- 刪除課程 ID、開始日期或結束日期中的值。  
+- 刪除 [課程識別碼]、[開始日期] 或 [結束日期] 中的值。  
   
-- 要撤銷無效的儲存格值,請將游標放回單元格中,然後按 ESC 鍵。  
+- 若要復原不正確資料格值，請將游標放回儲存格中，然後按下 ESC 鍵。  
   
-- 要在當前儲存格處於編輯模式時撤消整個行的更改,請按 ESC 鍵兩次。  
+- 若要在當前儲存格處於編輯模式時復原整個資料列的變更，請按 ESC 鍵兩次。  
   
-- 發生驗證錯誤時,將滑鼠指標移到行標題中的指示器上以查看關聯的錯誤訊息。  
+- 發生驗證錯誤時，請將滑鼠指標移到資料列行首中的指示器上方，以查看相關聯的錯誤訊息。  
   
  [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
  [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  
@@ -94,6 +95,6 @@ ms.locfileid: "81646092"
 
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
-- [資料繫結](../../../desktop-wpf/data/data-binding-overview.md)
-- [實作連結](../data/how-to-implement-binding-validation.md)
-- [在自訂物件上實現驗證邏輯](../data/how-to-implement-validation-logic-on-custom-objects.md)
+- [資料系結](../../../desktop-wpf/data/data-binding-overview.md)
+- [執行系結驗證](../data/how-to-implement-binding-validation.md)
+- [在自訂物件上執行驗證邏輯](../data/how-to-implement-validation-logic-on-custom-objects.md)

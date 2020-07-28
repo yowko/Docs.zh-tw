@@ -1,5 +1,6 @@
 ---
 title: Caspol.exe (程式碼存取安全性原則工具)
+description: 請參閱代碼啟用安全性（CAS）原則工具 Caspol.exe。 此工具可讓使用者和系統管理員修改不同原則層級的安全性原則。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - permission sets, modifying security policy
@@ -15,23 +16,23 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: a5a4068d0bf6f6f158ea9b2880785e227f96243d
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 4d29c22c09e42be5596d860d90b182e512ad3b45
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645577"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167336"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
   
 > [!IMPORTANT]
-> 從 .NET 架構 4 開始,Caspol.exe 不會`true`影響 CAS 策略,[\<除非舊 CasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)設定為 。 只有在您選擇使用 CAS 原則後，CasPol.exe 所顯示或修改的任何設定才會影響應用程式。 如需詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。  
+> 從 .NET Framework 4 開始，除非將[ \<legacyCasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)設定為，否則 Caspol.exe 不會影響 CAS 原則 `true` 。 只有在您選擇使用 CAS 原則後，CasPol.exe 所顯示或修改的任何設定才會影響應用程式。 如需詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。  
   
 > [!NOTE]
 > 64 位元電腦包含 64 位元和 32 位元版本的安全性原則。 為了確保您的原則變更同時套用至 32 位元和 64 位元應用程式，請執行 Caspol.exe 的 32 位元和 64 位元這兩種版本。  
   
- 程式碼存取安全性原則工具會自動隨 .NET Framework 和 Visual Studio 安裝。 您可以在 32 位元系統上的 %windir%\Microsoft.NET\Framework\\*版本* 或 64 位元系統上的 %windir%\Microsoft.NET\Framework64\\*版本* 找到 Caspol.exe  (例如,64 位元系統上的 .NET 框架 4 的位置為 %windir%\Microsoft.NET_Framework64_v4.030319_caspol.exe。如果您的電腦並排運行多個版本的 .NET Framework,則該工具的多個版本可能會安裝。 您可以從安裝目錄執行此工具。 不過，建議您使用[命令提示字元](developer-command-prompt-for-vs.md)，就不需要巡覽至安裝資料夾。  
+ 程式碼存取安全性原則工具會自動隨 .NET Framework 和 Visual Studio 安裝。 您可以在 32 位元系統上的 %windir%\Microsoft.NET\Framework\\*版本* 或 64 位元系統上的 %windir%\Microsoft.NET\Framework64\\*版本* 找到 Caspol.exe  （例如，在64位系統上，此位置為 .NET Framework 4 的% windir% \Microsoft.NET\Framework64\v4.030319\caspol.exe）。如果您的電腦並存執行多個版本的 .NET Framework，可能會安裝多個版本的工具。 您可以從安裝目錄執行此工具。 不過，建議您使用[命令提示字元](developer-command-prompt-for-vs.md)，就不需要巡覽至安裝資料夾。  
   
  在命令提示字元中，請輸入下列項目：  
   
@@ -49,32 +50,32 @@ caspol [options]
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> 或<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|將新的程式碼群組加入至程式碼群組階層架構。 您可以指定 *parent_label* 或 *parent_name*。 *parent_label* 引數會指定所新增程式碼群組之父代的程式碼群組標籤 (例如 1. 或 1.1.)。 *parent_name* 引數會指定要新增之程式碼群組父代的程式碼群組名稱。 由於 *parent_label* 和 *parent_name* 可以交替使用，所以 Caspol.exe 必須能夠區分這兩者。 因此，*parent_name* 不能以數字開頭。 此外，*parent_name* 只能包含 A-Z、0-9 以及底線字元。<br /><br /> *mship* 引數會指定新程式碼群組的成員資格條件。 如需詳細資訊，請參閱本節稍後的 *mship* 引數表。<br /><br /> *pset_name* 引數是權限集合的名稱，其會與新的程式碼群組產生關聯。 您也可以為新群組設定一個或多個 *flags*。 如需詳細資訊，請參閱本節稍後的 *flags* 引數表。|  
 |**-addpset** {*psfile* &#124; *psfile* p*set_name*}<br /><br /> 或<br /><br /> **-ap** {*named*_*psfile* &#124; *psfile* *pset_name*}|將新的具名權限集合加入至原則。 權限集合必須以 XML 撰寫並儲存於 .xml 檔案中。 如果 XML 檔案包含權限集合的名稱，則只會指定該檔案 (*psfile*)。 如果 XML 檔案未包含權限集合名稱，則必須同時指定 XML 檔案名稱 (*psfile*) 和權限集合名稱 (*pset_name*)。<br /><br /> 請注意，權限集合中使用的所有權限都必須在全域組件快取內含的組件中定義。|  
 |**-a**[**ll**]|指出這個選項之後的所有選項都會套用至電腦、使用者和企業原則。 **-all** 選項一律會參考目前已登入使用者的原則。 若要參考目前使用者以外的使用者原則，請參閱 **-customall** 選項。|  
-|**-chggroup** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *標誌*`}`<br /><br /> 或<br /><br /> **-cg** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *標誌*`}`|可變更程式碼群組的成員資格條件、權限集合或是 **exclusive**、**levelfinal**、**name** 或 **description** 旗標的設定。 您可以指定 *label* 或是 *name*。 *label* 引數會指定程式碼群組的標籤 (例如 1. 或 1.1.)。 *name* 引數會指定要變更的程式碼群組名稱。 由於 *label* 和 *name* 可以交替使用，所以 Caspol.exe 必須能夠區分這兩者。 因此，*name* 不能以數字開頭。 此外，*name* 只能包含 A-Z、0-9 以及底線字元。<br /><br /> *pset_name* 引數會指定要與程式碼群組產生關聯的權限集合名稱。 如需 *mship* 和 *flags* 引數的詳細資訊，請參閱本節稍後的表格。|  
+|**-chggroup** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *旗標*`}`<br /><br /> 或<br /><br /> **-cg** {*label &#124;name*} {*mship* &#124; *pset_name* &#124;<br /><br /> *旗標*`}`|可變更程式碼群組的成員資格條件、權限集合或是 **exclusive**、**levelfinal**、**name** 或 **description** 旗標的設定。 您可以指定 *label* 或是 *name*。 *label* 引數會指定程式碼群組的標籤 (例如 1. 或 1.1.)。 *name* 引數會指定要變更的程式碼群組名稱。 由於 *label* 和 *name* 可以交替使用，所以 Caspol.exe 必須能夠區分這兩者。 因此，*name* 不能以數字開頭。 此外，*name* 只能包含 A-Z、0-9 以及底線字元。<br /><br /> *pset_name* 引數會指定要與程式碼群組產生關聯的權限集合名稱。 如需 *mship* 和 *flags* 引數的詳細資訊，請參閱本節稍後的表格。|  
 |**-chgpset**  *psfile pset_name*<br /><br /> 或<br /><br /> **-cp** *psfile pset_name*|變更具名權限集合。 *psfile* 引數為權限集合提供新定義，其為 XML 格式的序列化權限集合檔案。 *pset_name* 引數會指定您想要變更的權限集合名稱。|  
 |**-customall**  *path*<br /><br /> 或<br /><br /> **-ca**  *path*|指出這個選項之後的所有選項都會套用至電腦、企業和指定的自訂使用者原則。 您必須使用 *path* 引數來指定自訂使用者的安全性組態檔位置。|  
 |**-cu**[**stomuser**] *path*|允許管理不屬於目前執行 Caspol.exe 之使用者的自訂使用者原則。 您必須使用 *path* 引數來指定自訂使用者的安全性組態檔位置。|  
-|**-企業**<br /><br /> 或<br /><br /> **-en**|指出這個選項之後的所有選項都會套用至企業層級原則。 不是企業系統管理員的使用者沒有足夠的權限可修改企業原則，但是可以檢視原則。 在非企業情節中，這個原則預設不會與電腦和使用者原則牴觸。|  
-|**-e**[**xecution**] {**on** &#124; **off**}|開啟或關閉在程式碼開始執行前檢查要執行之權限的機制。 **註:** 此開關在 .NET 框架 4 和更高版本中被刪除。 如需詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。|  
-|**-f**=**奧爾西**||抑制工具的自行解構測試，並依照使用者指定的方式變更原則。 一般來說，Caspol.exe 會檢查是否有造成 Caspol.exe 本身無法正常執行的任何原則變更，如果有的話，Caspol.exe 不會儲存該原則變更，而且會印出錯誤訊息。 若要強制 Caspol.exe 變更原則 (即使這個原則會造成 Caspol.exe 本身無法執行)，請使用 **–force** 選項。|  
-|**-h**=**埃爾普**||顯示 Caspol.exe 的命令語法和選項。|  
-|**-l**=**ist**=|列出程式碼群組階層架構以及所指定電腦、使用者、企業或所有原則層級的權限集合。 Caspol.exe 會先顯示程式碼群組的標籤，後面接著名稱 (如果不是 null 的話)。|  
+|**-enterprise**<br /><br /> 或<br /><br /> **-en**|指出這個選項之後的所有選項都會套用至企業層級原則。 不是企業系統管理員的使用者沒有足夠的權限可修改企業原則，但是可以檢視原則。 在非企業情節中，這個原則預設不會與電腦和使用者原則牴觸。|  
+|**-e**[**xecution**] {**on** &#124; **off**}|開啟或關閉在程式碼開始執行前檢查要執行之權限的機制。 **注意：** 此參數會在 .NET Framework 4 和更新版本中移除。 如需詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。|  
+|**-f**[**orce**]|抑制工具的自行解構測試，並依照使用者指定的方式變更原則。 一般來說，Caspol.exe 會檢查是否有造成 Caspol.exe 本身無法正常執行的任何原則變更，如果有的話，Caspol.exe 不會儲存該原則變更，而且會印出錯誤訊息。 若要強制 Caspol.exe 變更原則 (即使這個原則會造成 Caspol.exe 本身無法執行)，請使用 **–force** 選項。|  
+|**-h**[**elp**]|顯示 Caspol.exe 的命令語法和選項。|  
+|**-l**[**ist**]|列出程式碼群組階層架構以及所指定電腦、使用者、企業或所有原則層級的權限集合。 Caspol.exe 會先顯示程式碼群組的標籤，後面接著名稱 (如果不是 null 的話)。|  
 |**-listdescription**<br /><br /> 或<br /><br /> **-ld**|列出所指定原則層級的所有程式碼群組描述。|  
 |**-listfulltrust**<br /><br /> 或<br /><br /> **-lf**|列出所指定原則層級的完全信任組件清單內容。|  
 |**-listgroups**<br /><br /> 或<br /><br /> **-lg**|顯示所指定原則層級或所有原則層級的程式碼群組。 Caspol.exe 會先顯示程式碼群組的標籤，後面接著名稱 (如果不是 null 的話)。|  
 |**-listpset** 或 **-lp**|顯示所指定原則層級或所有原則層級的權限集合。|  
-|**-m**=**阿欽**||指出這個選項之後的所有選項都會套用至電腦層級原則。 不是系統管理員的使用者沒有足夠的權限可修改電腦原則，但是可以檢視原則。 對於系統管理員，**-machine** 是預設值。|  
+|**-m**[**achine**]|指出這個選項之後的所有選項都會套用至電腦層級原則。 不是系統管理員的使用者沒有足夠的權限可修改電腦原則，但是可以檢視原則。 對於系統管理員，**-machine** 是預設值。|  
 |**-polchgprompt** {**on** &#124; **off**}<br /><br /> 或<br /><br /> **-pp** {**on** &#124; **off**}|啟用或停用每當使用會造成原則變更的選項來執行 Caspol.exe 時所顯示的提示。|  
-|**-安靜**<br /><br /> 或<br /><br /> **-q**|暫時停用通常會對造成原則變更的選項顯示的提示。 不過，全域變更提示設定不會變更。 僅針對單一命令使用這個選項，如此才不會停用所有 Caspol.exe 命令的提示。|  
-|**-r**=**電子覆蓋**物 ||從備份檔復原原則。 每當原則變更時，Caspol.exe 都會將舊原則儲存到備份檔中。|  
+|**-quiet**<br /><br /> 或<br /><br /> **-q**|暫時停用通常會對造成原則變更的選項顯示的提示。 不過，全域變更提示設定不會變更。 僅針對單一命令使用這個選項，如此才不會停用所有 Caspol.exe 命令的提示。|  
+|**-r**[**ecover**]|從備份檔復原原則。 每當原則變更時，Caspol.exe 都會將舊原則儲存到備份檔中。|  
 |**-remfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-rf**  *assembly_file*|從原則層級的完全信任清單中移除組件。 如果原則不再使用包含自訂權限的權限集合，則應該執行這項作業。 不過，只有在組件未實作任何其他仍在使用的自訂權限時，才可以從完全信任清單中移除實作自訂權限的組件。 當您從清單中移除組件時，也應該移除該組件所依存的任何其他組件。|  
 |**-remgroup** {*label &#124;name*}<br /><br /> 或<br /><br /> **-rg** {l*abel &#124; name*}|移除以標籤或名稱指定的程式碼群組。 如果指定的程式碼群組包含子程式碼群組，Caspol.exe 也會移除所有子程式碼群組。|  
 |**-rempset** *pset_name*<br /><br /> 或<br /><br /> **-rp** *pset_name*|從原則中移除指定的權限集合。 *pset_name* 引數會指出要移除的權限集合。 只有在權限集合未與任何程式碼群組相關聯時，Caspol.exe 才會將該權限集合移除。 無法移除預設 (內建) 權限集合。|  
-|**-重置**<br /><br /> 或<br /><br /> **-rs**|將原則回復到其預設狀態並保存 (Persist) 到磁碟中。 每當變更的原則似乎無法修復，而您想要以安裝預設值重新開始時，這樣做會非常有用。 當您想要使用預設原則做為修改特定安全性設定檔的起點時，重設也會很方便。 如需詳細資訊，請參閱[手動編輯安全性組態檔](#cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1)。|  
+|**-重設**<br /><br /> 或<br /><br /> **-rs**|將原則回復到其預設狀態並保存 (Persist) 到磁碟中。 每當變更的原則似乎無法修復，而您想要以安裝預設值重新開始時，這樣做會非常有用。 當您想要使用預設原則做為修改特定安全性設定檔的起點時，重設也會很方便。 如需詳細資訊，請參閱[手動編輯安全性組態檔](#cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1)。|  
 |**-resetlockdown**<br /><br /> 或<br /><br /> **-rsld**|將原則回復為預設狀態的更嚴格版本並將它保存至磁碟，建立先前電腦原則的備份並將它保存至稱為 `security.config.bac` 的檔案。  鎖定原則類似於預設原則，差別在於鎖定原則不會授與可從 `Local Intranet`、`Trusted Sites` 和 `Internet` 區域撰寫程式碼的權限，而且對應的程式碼群組沒有子程式碼群組。|  
 |**-resolvegroup** *assembly_file*<br /><br /> 或<br /><br /> **-rsg**  *assembly_file*|顯示特定組件 (*assembly_file*) 所屬的程式碼群組。 根據預設，這個選項會顯示組件所屬的電腦、使用者和企業原則層級。 若只要檢視一個原則層級，請搭配使用這個選項與 **-machine**、**-user** 或 **-enterprise** 選項。|  
 |**-resolveperm** *assembly_file*<br /><br /> 或<br /><br /> **-rsp** *assembly_file*|在允許組件執行的情況下，顯示指定 (或預設) 的安全性原則層級會授與該組件的所有權限。 *assembly_file* 引數會指定組件。 如果指定 **-all** 選項，Caspol.exe 會根據使用者、電腦和企業原則計算組件的權限；若未指定，則會套用預設行為規則。|  
-|**-s**[**ecurity**] {**on** &#124; **off**}|開啟或關閉程式碼存取安全性。 指定 **-s off** 選項時，並不會停用以角色為基礎的安全性。 **註:** 此開關在 .NET 框架 4 和更高版本中被刪除。 如需詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。 **注意：** 停用程式碼存取安全性時，所有的程式碼存取要求都會成功。 停用程式碼存取安全性會讓系統容易受惡意程式碼的攻擊，如病毒和破壞程式。 關閉安全性可獲得額外的效能，但是只有在已採取其他安全措施來協助確保整體系統安全性沒有漏洞的情況下，才可以這樣做。 其他安全性措施的範例，包括從公用網路中斷連結、用實際方法保全電腦等等。|  
-|**-u**=**ser**||指出這個選項之後的所有選項都會套用至執行 Caspol.exe 之使用者的使用者層級原則。 對於非系統管理使用者，**-user** 是預設值。|  
+|**-s**[**ecurity**] {**on** &#124; **off**}|開啟或關閉程式碼存取安全性。 指定 **-s off** 選項時，並不會停用以角色為基礎的安全性。 **注意：** 此參數會在 .NET Framework 4 和更新版本中移除。 如需詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。 **注意：** 停用程式碼存取安全性時，所有的程式碼存取要求都會成功。 停用程式碼存取安全性會讓系統容易受惡意程式碼的攻擊，如病毒和破壞程式。 關閉安全性可獲得額外的效能，但是只有在已採取其他安全措施來協助確保整體系統安全性沒有漏洞的情況下，才可以這樣做。 其他安全性措施的範例，包括從公用網路中斷連結、用實際方法保全電腦等等。|  
+|**-u**[**ser**]|指出這個選項之後的所有選項都會套用至執行 Caspol.exe 之使用者的使用者層級原則。 對於非系統管理使用者，**-user** 是預設值。|  
 |**-?**|顯示 Caspol.exe 的命令語法和選項。|  
   
  *mship* 引數可以搭配 **-addgroup** 和 **-chggroup** 選項使用，以指定程式碼群組的成員資格條件 。 系統會以 .NET Framework 類別的形式來實作每個 *mship* 引數。 若要指定 *mship,*，請使用下列其中一種方式。  
@@ -184,7 +185,7 @@ caspol -chggroup 1.2.1. -zone Internet -exclusive on
 caspol -chgpset Mypset newpset.xml  
 ```  
   
- **-力**  
+ **-force**  
   
  下列命令會讓使用者原則的根程式碼群組 (標記為 1) 與 **Nothing** 具名權限集合產生關聯。 這樣會使 Caspol.exe 無法執行。  
   
@@ -192,7 +193,7 @@ caspol -chgpset Mypset newpset.xml
 caspol -force -user -chggroup 1 Nothing  
 ```  
   
- **-恢復**  
+ **-復原**  
   
  下列命令會復原最近儲存的電腦原則。  
   
@@ -247,4 +248,4 @@ caspol -all -resolveperm testassembly
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [指令提示](developer-command-prompt-for-vs.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

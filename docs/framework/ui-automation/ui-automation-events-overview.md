@@ -1,5 +1,6 @@
 ---
 title: UI 自動化事件概觀
+description: 請參閱 Microsoft 使用者介面自動化事件通知的總覽。 檢查事件種類、使用者介面自動化事件識別碼，以及使用者介面自動化事件引數。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, providers
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 495e7d29c814164f4235d18569477b856cb09045
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f51a31a433986822a9dba22bf8f17ade00bbb76
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179887"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168093"
 ---
 # <a name="ui-automation-events-overview"></a>UI 自動化事件概觀
 > [!NOTE]
@@ -83,6 +84,6 @@ ms.locfileid: "79179887"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [用戶端的 UI 自動化事件](ui-automation-events-for-clients.md)
 - [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)
 - [訂閱 UI 自動化事件](subscribe-to-ui-automation-events.md)

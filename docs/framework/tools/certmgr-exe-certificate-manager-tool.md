@@ -1,5 +1,6 @@
 ---
 title: Certmgr.exe (憑證管理員工具)
+description: 探索憑證管理員工具 Certmgr.exe。 此工具會管理憑證、憑證信任清單（Ctl）和憑證撤銷清單（Crl）。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129868"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167265"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (憑證管理員工具)
 憑證管理員工具 (Certmgr.exe) 可以管理憑證、憑證信任清單 (CTL) 和憑證撤銷清單 (CRL)。  
@@ -51,17 +52,17 @@ ms.locfileid: "73129868"
   
 |選項|描述|  
 |------------|-----------------|  
-|**/添加**|將憑證、CTL 和 CRL 加入憑證存放區。|  
-|**/所有**|與 **/add** 一起使用時會加入所有項目。 使用 **/del**時刪除所有條目。在沒有 **/add**或 **/del**選項的情況下使用時顯示所有條目。 **/all** 選項無法與 **/put** 一起使用。|  
-|**/c**|與 **/add** 一起使用時會加入憑證。 使用 **/del**時刪除證書。與 **/put**一起使用時保存證書。 未與 **/add**、**/del** 或 **/put** 選項一起使用時，會顯示憑證。|  
-|**/CRL**|與 **/add** 一起使用時會加入 CRL。 與 **/del**一起使用時刪除 CRL。與 **/put**一起使用時保存 CRL。 未與 **/add**、**/del** 或 **/put** 選項一起使用時，會顯示 CRL。|  
-|**/CTL**|與 **/add** 一起使用時會加入 CTL。 與 **/del**一起使用時刪除 CTL。與 **/put**一起使用時保存 CTL。 未與 **/add**、**/del** 或 **/put** 選項一起使用時，會顯示 CTL。|  
-|**/德爾**|從憑證存放區刪除憑證、CTL 和 CRL。|  
-|**/e** *encodingType*|指定憑證的編碼類型。 預設值為 `X509_ASN_ENCODING`。|  
+|**/add**|將憑證、CTL 和 CRL 加入憑證存放區。|  
+|**/all**|與 **/add** 一起使用時會加入所有項目。 當與 **/del**搭配使用時，刪除所有專案。在未使用 **/add**或 **/del**選項的情況下，顯示所有專案。 **/all** 選項無法與 **/put** 一起使用。|  
+|**/c**|與 **/add** 一起使用時會加入憑證。 與 **/del**搭配使用時，會刪除憑證。會在與 **/put**搭配使用時儲存憑證。 未與 **/add**、**/del** 或 **/put** 選項一起使用時，會顯示憑證。|  
+|**/CRL**|與 **/add** 一起使用時會加入 CRL。 與 **/del**搭配使用時，刪除 crl。與 **/put**搭配使用時，會儲存 crl。 未與 **/add**、**/del** 或 **/put** 選項一起使用時，會顯示 CRL。|  
+|**/CTL**|與 **/add** 一起使用時會加入 CTL。 與 **/del**搭配使用時，會刪除 ctl。與 **/put**搭配使用時，會儲存 ctl。 未與 **/add**、**/del** 或 **/put** 選項一起使用時，會顯示 CTL。|  
+|**/del**|從憑證存放區刪除憑證、CTL 和 CRL。|  
+|**/e** *encodingType*|指定憑證的編碼類型。 預設為 `X509_ASN_ENCODING`。|  
 |**/f** *dwFlags*|指定存放區的開放旗標。 這是傳遞到 **CertOpenStore** 的 *dwFlags* 參數。 預設值是 CERT_SYSTEM_STORE_CURRENT_USER。 只有在使用 **/y** 選項時，才會將這個選項列入考量。|  
-|**/h**=**埃爾普**||顯示工具的命令語法和選項。|  
+|**/h**[**elp**]|顯示工具的命令語法和選項。|  
 |**/n** *nam*|指定憑證的通用名稱來進行加入、刪除或儲存。 這個選項只能與憑證一起使用，無法與 CTL 或 CRL 一起使用。|  
-|**/放**|將 X.509 憑證、CTL 或 CRL 從憑證存放區儲存到檔案。 檔案是以 X.509 格式儲存。 您可以將 **/7** 選項與 **/put** 選項一起使用，以 PKCS #7 格式儲存檔案。 **/put** 選項後面必須接著 **/c**、**/CTL** 或 **/CRL** **/all** 選項無法與 **/put** 一起使用。|  
+|**/put**|將 X.509 憑證、CTL 或 CRL 從憑證存放區儲存到檔案。 檔案是以 X.509 格式儲存。 您可以將 **/7** 選項與 **/put** 選項一起使用，以 PKCS #7 格式儲存檔案。 **/put** 選項後面必須接著 **/c**、**/CTL** 或 **/CRL** **/all** 選項無法與 **/put** 一起使用。|  
 |**/r** *location*|識別系統存放區的登錄位置。 只有在指定 **/s** 選項時，才會將這個選項列入考量。 *location* 必須是下列其中一項：<br /><br /> -   `currentUser` 表示憑證存放區是在 HKEY_CURRENT_USER 機碼下方。 這是預設值。<br />-   `localMachine` 表示憑證存放區是在 HKEY_LOCAL_MACHINE 機碼下方。|  
 |**/s**|指示憑證存放區是一個系統存放區。 如果不指定此選項，會將存放區視為 **StoreFile**。|  
 |**/sha1** *sha1Hash*|指定憑證、CTL 或 CRL 的 SHA1 雜湊來進行加入、刪除或儲存。|  

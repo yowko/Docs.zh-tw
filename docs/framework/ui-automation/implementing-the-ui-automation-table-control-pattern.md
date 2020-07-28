@@ -1,17 +1,18 @@
 ---
 title: 實作 UI 自動化 Table 控制項模式
+description: 請參閱指導方針和慣例，在使用者介面自動化中執行資料表控制項模式。 知道 ITableProvider 介面的必要成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Table control pattern
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 0b3d000112060550734890ad3c4063a26c320b04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e88ddee04ba887daf1929d855526cd0d062f78d5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180109"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168236"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>實作 UI 自動化 Table 控制項模式
 > [!NOTE]
@@ -32,9 +33,9 @@ ms.locfileid: "79180109"
 - 資料行和資料列標頭可同時包含主要標頭和任何支援的標頭。  
   
 > [!NOTE]
-> 在 Microsoft Excel 試算表中，使用者定義了"名字"列，這一概念變得顯而易見。 此資料行現在有兩個標頭—使用者定義的「名字」標頭和應用程式指派給該資料行的英數字元指定。  
+> 這個概念會在使用者已定義「名字」資料行的 Microsoft Excel 試算表中明顯出現。 此資料行現在有兩個標頭—使用者定義的「名字」標頭和應用程式指派給該資料行的英數字元指定。  
   
-- 有關網格功能[，請參閱實現 UI 自動化網格控制模式](implementing-the-ui-automation-grid-control-pattern.md)。  
+- 如需相關格線功能，請參閱[執行 UI 自動化方格控制項模式](implementing-the-ui-automation-grid-control-pattern.md)。  
   
  ![包含複雜標頭項目的資料表](./media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 具有複雜資料行標頭的資料表範例  
@@ -60,10 +61,10 @@ ms.locfileid: "79180109"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
+- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
 - [實作 UI 自動化 TableItem 控制項模式](implementing-the-ui-automation-tableitem-control-pattern.md)
 - [實作 UI 自動化 Grid 控制項模式](implementing-the-ui-automation-grid-control-pattern.md)
-- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

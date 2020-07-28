@@ -1,17 +1,18 @@
 ---
 title: HeaderItem 控制項類型的 UI 自動化支援
+description: 取得 HeaderItem 控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Header Item control type
 - Header Item control type
 - control types, Header Item
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
-ms.openlocfilehash: 57faebde753f6c18d8b92b0e11f8ff17837393db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f9fca9ff8a42b94f0d66ae69a25fecccf69931b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179771"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167886"
 ---
 # <a name="ui-automation-support-for-the-headeritem-control-type"></a>HeaderItem 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179771"
   
  HeaderItem 控制項類型提供一列或一行資訊的視覺標籤。  
   
- 標題項目控制項是實作 HeaderItem 控制項類型的控制項範例。 以下[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]部分中的要求適用于所有標頭控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 標題項目控制項是實作 HeaderItem 控制項類型的控制項範例。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]下列各節中的需求適用于所有標題控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  

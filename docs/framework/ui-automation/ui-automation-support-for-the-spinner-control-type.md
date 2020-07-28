@@ -1,17 +1,18 @@
 ---
 title: Spinner 控制項類型的 UI 自動化支援
+description: 取得微調控制項類型的 UI 自動化支援的相關資訊。 瞭解必要的樹狀結構、屬性、控制項模式和事件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Spinner control type
 - Spinner control type
 - control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
-ms.openlocfilehash: d3cf972afdaaffaf1c0943c9cc11348bee23345d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d2955758a8d1da40d7ed18da1103b5d99849d03
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179587"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166969"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Spinner 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,7 +22,7 @@ ms.locfileid: "79179587"
   
  微調控制項可用來選取某個範圍的項目或數字。  
   
- 下列章節會定義微調控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有微調器控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
+ 下列章節會定義微調控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求適用于所有微調控制項，不論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 、Win32 或 Windows Forms。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
@@ -31,19 +32,19 @@ ms.locfileid: "79179587"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|Spinner<br /><br /> - 編輯 （0 或 1）<br />- 按鈕 （2）|Spinner|  
+|Spinner<br /><br /> -Edit （0或1）<br />-Button （2）|Spinner|  
   
  **Selection 控制項模式**  
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|Spinner<br /><br /> - 編輯 （0 或 1）<br />- 按鈕 （2）<br />- 清單項（0 或更多）|Spinner<br /><br /> - 清單專案（0 或更多）|  
+|Spinner<br /><br /> -Edit （0或1）<br />-Button （2）<br />-清單專案（0個以上）|Spinner<br /><br /> -用來（0個以上）|  
   
  為確保自動化測試工具可區別控制項檢視樹狀子結構中的兩個按鈕，請依適當的情況指派 `SmallIncrement` 或 `SmallDecrement` `AutomationId` 。 針對某些實作，相關的編輯控制項可以是微調控制項的對等項目。  
   
 <a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與微調控制項特別有關。 有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性的詳細資訊，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與微調控制項特別有關。 如需屬性的詳細資訊 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  

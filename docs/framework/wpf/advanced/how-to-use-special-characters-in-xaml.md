@@ -1,5 +1,6 @@
 ---
 title: 如何：在 XAML 中使用特殊字元
+description: 瞭解在 Visual Studio 中，以 Unicode UTF-8 檔案格式編碼特殊字元的語法，以便在 Windows Presentation Foundation 的 XAML 檔案中使用。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Unicode UTF-8 file format
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 59449637bb45f6b75462b6809c354af7972fc2e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ac2388fd96aa26ddd99408ac9f847ce517958568
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740838"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168351"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>如何：在 XAML 中使用特殊字元
 在 Visual Studio 中建立的標記檔會自動以 Unicode UTF-8 檔案格式儲存，這表示大部分的特殊字元（例如重音標記）都會正確編碼。 不過，有一組常用的特殊字元則採用不同的處理方式。 這些特殊字元遵循全球資訊網協會（W3C） XML 標準進行編碼。  

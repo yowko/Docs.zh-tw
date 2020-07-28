@@ -1,5 +1,6 @@
 ---
 title: 逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料
+description: 瞭解如何使用此逐步解說，從 SQL Server 資料庫取得資料，並將其顯示在 Windows Presentation Foundation DataGrid 控制項中。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cc41979c869021c9c363f3f68ce590d4702e068c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591029"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167550"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料
 
@@ -47,7 +48,7 @@ ms.locfileid: "84591029"
 
 6. 在 [選擇您的資料連線] 畫面上，提供 AdventureWorksLT2008 資料庫的連接。 如需詳細資訊，請參閱[選擇您的資料連線對話方塊](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399244(v=vs.100))。
 
-    請確定 [名稱] 是 `AdventureWorksLT2008Entities` ，而且已選取 [**將 app.config 中的實體連接設定儲存為**] 核取方塊，然後按 **[下一步]**。
+    請確定 [名稱] 是 `AdventureWorksLT2008Entities` ，而且已選取 [**將 App.Config 中的實體連接設定為**] 核取方塊，然後按 **[下一步]**。
 
 7. 在 [選擇您的資料庫物件] 畫面中，展開 [資料表] 節點，然後選取 [ **Product** ] 和 [ **ProductCategory** ] 資料表。
 
