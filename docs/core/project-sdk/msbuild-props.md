@@ -3,12 +3,12 @@ title: 適用于 .NET 的 MSBuild 屬性
 description: .NET Core SDK 所瞭解之 MSBuild 屬性和專案的參考。
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206101"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164382"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 專案的 MSBuild 參考
 
@@ -25,7 +25,7 @@ ms.locfileid: "83206101"
 
 ### <a name="targetframework"></a>TargetFramework
 
-`TargetFramework`屬性會指定應用程式的目標 framework 版本，它會隱含地參考[中繼套件](../packages.md#metapackages)。 如需有效的目標 framework 名字標記清單，請參閱[SDK 樣式專案中的目標 framework](../../standard/frameworks.md#supported-target-framework-versions)。
+`TargetFramework`屬性會指定應用程式的目標 framework 版本。 如需有效的目標 framework 名字標記清單，請參閱[SDK 樣式專案中的目標 framework](../../standard/frameworks.md#supported-target-framework-versions)。
 
 ```xml
 <PropertyGroup>
@@ -55,7 +55,7 @@ ms.locfileid: "83206101"
 > [!NOTE]
 > 這個屬性僅適用于使用 `netstandard1.x` 的專案。 它不適用於使用的專案 `netstandard2.x` 。
 
-`NetStandardImplicitPackageVersion`當您想要指定的 framework 版本低於[中繼套件](../packages.md#metapackages)版本時，請使用屬性。 下列範例中的專案檔會以為目標， `netstandard1.3` 但會使用的1.6.0 版本 `NETStandard.Library` 。
+`NetStandardImplicitPackageVersion`當您想要指定的 framework 版本低於中繼套件版本時，請使用屬性。 下列範例中的專案檔會以為目標， `netstandard1.3` 但會使用的1.6.0 版本 `NETStandard.Library` 。
 
 ```xml
 <PropertyGroup>
@@ -292,7 +292,7 @@ ms.locfileid: "83206101"
 
 ### <a name="packagereference"></a>PackageReference
 
-`PackageReference`專案會定義 NuGet 套件的參考。 例如，您可能想要參考單一封裝，而不是[中繼套件](../packages.md#metapackages)。
+`PackageReference`專案會定義 NuGet 套件的參考。
 
 `Include` 屬性會指定套件識別碼。 `Version`屬性會指定版本或版本範圍。 如需有關如何指定最小版本、最大版本、範圍或完全相符的詳細資訊，請參閱[版本範圍](/nuget/concepts/package-versioning#version-ranges)。 您也可以將下列中繼資料加入至專案參考： `IncludeAssets` 、 `ExcludeAssets` 和 `PrivateAssets` 。
 
@@ -320,7 +320,7 @@ ms.locfileid: "83206101"
 </ItemGroup>
 ```
 
-### <a name="reference"></a>參考資料
+### <a name="reference"></a>參考
 
 `Reference`專案會定義元件檔的參考。
 
@@ -344,7 +344,7 @@ ms.locfileid: "83206101"
 </PropertyGroup>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [MSBuild 架構參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [一般 MSBuild 屬性](/visualstudio/msbuild/common-msbuild-project-properties)

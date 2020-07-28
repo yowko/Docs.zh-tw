@@ -2,12 +2,12 @@
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
 ms.date: 02/14/2020
-ms.openlocfilehash: 5375df61dbf8e9b4db8772b0e2767e9bca0bb254
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 6f33b449301f40949ff5dfe4077564344a9de8ec
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840906"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251162"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -23,7 +23,7 @@ ms.locfileid: "83840906"
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [--source <SOURCE>]
     [-v|--verbosity <LEVEL>] [--version-suffix <VERSION_SUFFIX>]
 
 dotnet build -h|--help
@@ -35,8 +35,8 @@ dotnet build -h|--help
 
 - 如果專案類型是以 .NET Core 3.0 或更新版本為目標的可執行檔，則可以用來執行應用程式。
 - 用來以 *.pdb*副檔名進行偵錯工具的符號檔。
-- *.Deps.json json*檔案，其中會列出應用程式或程式庫的相依性。
-- *.Runtimeconfig.json json*檔案，指定應用程式的共用執行時間及其版本。
+- 檔案*上的.deps.js* ，其中列出應用程式或程式庫的相依性。
+- 檔案*上的.runtimeconfig.js* ，其指定應用程式的共用執行時間及其版本。
 - 專案相依的其他程式庫（透過專案參考或 NuGet 套件參考）。
 
 針對以 .NET Core 3.0 之前版本為目標的可執行檔專案，NuGet 的程式庫相依性通常不會複製到輸出檔案夾。  它們會在執行時間從 [NuGet 全域套件] 資料夾加以解析。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 若要建立可部署的應用程式版本，您必須將它發佈（例如，使用[dotnet publish](dotnet-publish.md)命令）。 如需詳細資訊，請參閱[.Net Core 應用程式部署](../deploying/index.md)。
@@ -75,7 +75,7 @@ dotnet build -h|--help
 
 要建置的專案或方案檔。 若未指定專案或解決方案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 *proj* 或 *sln* 的檔案，並使用該檔案。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -121,13 +121,13 @@ dotnet build -h|--help
 
   指定目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
 
-- **`-s|--source <SOURCE>`**
+- **`--source <SOURCE>`**
 
   要在還原作業期間使用的 NuGet 套件來源 URI。
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。
+  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `minimal`。
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

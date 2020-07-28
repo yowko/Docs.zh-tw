@@ -2,18 +2,18 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 9b1e190579902dda71547b01f31dd5adcc22fe9c
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803161"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251188"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet test` - 用來執行單元測試的 .NET 測試驅動程式。
 
@@ -21,14 +21,17 @@ ms.locfileid: "84803161"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
-    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-a|--test-adapter-path <ADAPTER_PATH>] [--blame] [--blame-crash]
+    [--blame-crash-dump-type <DUMP_TYPE>] [--blame-crash-collect-always]
+    [--blame-hang] [--blame-hang-dump-type <DUMP_TYPE>]
+    [--blame-hang-timeout <TIMESPAN>]
     [-c|--configuration <CONFIGURATION>]
-    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
-    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--collect <DATA_COLLECTOR_NAME>]
+    [-d|--diag <LOG_FILE>] [-f|--framework <FRAMEWORK>]
     [--filter <EXPRESSION>] [--interactive]
-    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [-l|--logger <LOGGER>] [--no-build]
     [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-r|--results-directory <RESULTS_DIR>] [--runtime <RUNTIME_IDENTIFIER>]
     [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
     [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
@@ -62,9 +65,9 @@ dotnet test -h|--help
 
   如果未指定，則會搜尋目前目錄中的專案或方案。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
-- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
   要搜尋其他測試介面卡之目錄的路徑。 只會檢查具有尾碼的 *.dll*檔案 `.TestAdapter.dll` 。 如果未指定，則會搜尋 test *.dll*的目錄。
 
@@ -72,11 +75,42 @@ dotnet test -h|--help
 
   在歸責模式下執行測試。 此選項有助於隔離導致測試主控制項損毀的問題測試。 當偵測到損毀時，它會在中建立一個序列檔案 `TestResults/<Guid>/<Guid>_Sequence.xml` ，以捕捉損毀前執行的測試順序。
 
+- **`--blame-crash`**（自 .NET 5.0 preview SDK 起提供）
+
+  當測試主機意外結束時，以改動模式執行測試，並收集損毀傾印。 只有在 Windows 上才支援此選項。 包含*procdump.exe*和*procdump64.exe*的目錄必須位於 PATH 或 PROCDUMP_PATH 環境變數中。 [下載工具](https://docs.microsoft.com/sysinternals/downloads/procdump)。 意指 `--blame` 。
+
+- **`--blame-crash-dump-type <DUMP_TYPE>`**（自 .NET 5.0 preview SDK 起提供）
+
+  要收集之損毀傾印的類型。 意指 `--blame-crash` 。
+
+- **`--blame-crash-collect-always`**（自 .NET 5.0 preview SDK 起提供）
+
+  收集預期的損毀傾印，以及非預期的測試主機結束。
+
+- **`--blame-hang`**（自 .NET 5.0 preview SDK 起提供）
+
+  當測試超過指定的超時時間時，以改動模式執行測試，並收集停止回應傾印。
+
+- **`--blame-hang-dump-type <DUMP_TYPE>`**（自 .NET 5.0 preview SDK 起提供）
+
+  要收集之損毀傾印的類型。 它應該是 `full` 、 `mini` 或 `none` 。 當 `none` 指定時，測試主機會在超時時結束，但不會收集任何傾印。 意指 `--blame-hang` 。
+
+- **`--blame-hang-timeout <TIMESPAN>`**（自 .NET 5.0 preview SDK 起提供）
+
+  每個測試的超時時間，在這之後會觸發停止回應傾印，並終止測試主機進程。 Timeout 值是以下列其中一種格式來指定：
+  
+  - 1.5 小時
+  - 90m
+  - 5400s
+  - 5400000ms
+
+  若未使用任何單位（例如，5400000），則會假設為以毫秒為單位的值。 與資料驅動的測試搭配使用時，超時行為取決於所使用的測試介面卡。 針對 xUnit 和 NUnit，會在每個測試案例之後更新超時。 針對 MSTest，所有 testcases.txt 都會使用 timeout。 在具有 netcoreapp 2.1 和更新版本的 Windows 上，以及使用 netcoreapp 3.1 和更新版本的 Linux 上，都支援此選項。 不支援 macOS。
+
 - **`-c|--configuration <CONFIGURATION>`**
 
   定義組建組態。 預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。
 
-- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_NAME>`**
 
   測試回合啟用資料收集器。 如需詳細資訊，請參閱[監視及分析測試回合](https://aka.ms/vstest-collect)。
   
@@ -84,7 +118,7 @@ dotnet test -h|--help
 
   在 Windows 上，您可以使用選項來收集程式碼涵蓋範圍 `--collect "Code Coverage"` 。 此選項會產生一個 *.coverage*檔案，該檔案可以在 Visual Studio 2019 Enterprise 中開啟。 如需詳細資訊，請參閱[使用程式碼涵蓋範圍](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)和[自訂程式碼涵蓋範圍分析](/visualstudio/test/customizing-code-coverage-analysis)。
 
-- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <LOG_FILE>`**
 
   啟用測試平臺的診斷模式，並將診斷訊息寫入至指定的檔案和其旁邊的檔案。 記錄訊息的程式會決定要建立哪些檔案（例如， `*.host_<date>.txt` 用於測試主機記錄檔），以及 `*.datacollector_<date>.txt` 用於資料收集器記錄檔的進程。
 
@@ -104,7 +138,7 @@ dotnet test -h|--help
 
   可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供。
 
-- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER>`**
 
   指定測試結果的記錄器。 不同于 MSBuild，dotnet 測試不接受縮寫：而不是 `-l "console;v=d"` 使用 `-l "console;verbosity=detailed"` 。
 
@@ -124,7 +158,7 @@ dotnet test -h|--help
 
   在其中尋找要執行的二進位檔的目錄。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。  針對具有多個目標 framework 的專案（透過 `TargetFrameworks` 屬性），您也需要在 `--framework` 指定此選項時定義。 `dotnet test`一律從輸出目錄執行測試。 您可以使用 <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> 來取用輸出目錄中的測試資產。
 
-- **`-r|--results-directory <PATH>`**
+- **`-r|--results-directory <RESULTS_DIR>`**
 
   要放置測試結果的目錄。 如果指定的目錄不存在，則會建立該目錄。 預設值是 `TestResults` 在包含專案檔的目錄中。
 
@@ -141,11 +175,11 @@ dotnet test -h|--help
 
 - **`-t|--list-tests`**
 
-  列出在目前專案中探索到的所有測試。
+  列出探索到的測試，而不是執行測試。
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱 <xref:Microsoft.Build.Framework.LoggerVerbosity> 。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `minimal`。 如需詳細資訊，請參閱 <xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
 - **`RunSettings`** 參量
 
@@ -209,9 +243,9 @@ dotnet test -h|--help
 
 | 測試架構 | 支援的屬性                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>優先順序</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>名稱</li><li>ClassName</li><li>優先順序</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特性</li></ul>                                   |
-| NUnit          | <ul><li>FullyQualifiedName</li><li>Name</li><li>TestCategory</li><li>優先順序</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>名稱</li><li>TestCategory</li><li>優先順序</li></ul>                                   |
 
 `<operator>` 描述屬性和值之間的關聯性：
 
@@ -220,7 +254,7 @@ dotnet test -h|--help
 | `=`      | 完全相符     |
 | `!=`     | 不完全相符 |
 | `~`      | 包含        |
-| `!~`     | 不包含    |
+| `!~`     | Not contains    |
 
 `<value>` 為字串。 所有的查閱皆不區分大小寫。
 
@@ -230,7 +264,7 @@ dotnet test -h|--help
 
 | 運算子            | 函式 |
 | ------------------- | -------- |
-| <code>&#124;</code> | 或       |
+| <code>&#124;</code> | 或者       |
 | `&`                 | AND      |
 
 使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。

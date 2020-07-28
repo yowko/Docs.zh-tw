@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: 619f6121d9d476726c3d422e50737ff3d622f444
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164925"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251201"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -74,7 +74,7 @@ ms.locfileid: "87164925"
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | 不適用                      |
 | 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | 不適用                      |
-| None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx   |
+| 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx   |
 
 > [!NOTE]
 > **排除 Glob** 一律會排除 `./bin` 和 `./obj` 資料夾，其分別由 `$(BaseOutputPath)` 和 `$(BaseIntermediateOutputPath)` MSBuild 屬性所代表。 整體而言，所有排除都是由 `$(DefaultItemExcludes)` 所代表。
@@ -180,7 +180,7 @@ ms.locfileid: "87164925"
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-請注意 `DotNetCliToolReference` ，[現在已取代](https://github.com/dotnet/announcements/issues/107) [.net Core 本機工具](https://aka.ms/local-tools)。
+請注意 `DotNetCliToolReference` ，[現在已取代](https://github.com/dotnet/announcements/issues/107) [.net Core 本機工具](./global-tools.md#install-a-local-tool)。
 
 #### <a name="version"></a>版本
 

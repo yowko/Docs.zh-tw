@@ -2,18 +2,18 @@
 title: dotnet publish 命令
 description: Dotnet publish 命令會將 .NET Core 專案或方案發行至目錄。
 ms.date: 02/24/2020
-ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365579"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251175"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet publish`-將應用程式及其相依性發佈至資料夾，以部署至主控系統。
 
@@ -54,8 +54,10 @@ dotnet publish -h|--help
 此 `dotnet publish` 命令接受 MSBuild 選項，例如 `-p` 用於設定屬性和 `-l` 定義記錄器。 例如，您可以使用下列格式來設定 MSBuild 屬性： `-p:<NAME>=<VALUE>` 。 您也可以參考 *.pubxml*檔案來設定發行相關屬性，例如：
 
 ```dotnetcli
-dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+dotnet publish -p:PublishProfile=FolderProfile
 ```
+
+上述範例會使用在* \<project_folder> /Properties/PublishProfiles*資料夾中找到的*FolderProfile .pubxml*檔案。 如果您在設定屬性時指定路徑和副檔名 `PublishProfile` ，則會忽略它們。 根據預設，MSBuild 會查看*Properties/PublishProfiles*資料夾，並假設 *.pubxml*副檔名。 若要指定包含副檔名的路徑和檔案名，請設定 `PublishProfileFullPath` 屬性，而不是 `PublishProfile` 屬性。
 
 如需詳細資訊，請參閱下列資源：
 
@@ -73,7 +75,7 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
 
   * `SOLUTION`是方案檔（*.sln*副檔名）的路徑和檔案名，或包含方案檔之目錄的路徑。 如果未指定目錄，則會預設為目前目錄。 自 .NET Core 3.0 SDK 起提供。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
