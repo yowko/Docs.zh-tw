@@ -1,5 +1,6 @@
 ---
 title: 移動 UI 自動化項目
+description: 請參閱示範如何將使用者介面自動化專案移至指定螢幕位置的範例程式碼。 它會使用 WindowPattern 和 TransformPattern 控制項模式。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +10,27 @@ helpviewer_keywords:
 - elements, moving
 - UI Automation, moving elements
 ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
-ms.openlocfilehash: 72454e355fb9b673a4adafb39ad60c8414573d0e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4c8bec4e6d7a241588a3ab261cb80ce9ac242024
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741323"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166152"
 ---
-# <a name="move-a-ui-automation-element"></a><span data-ttu-id="5795f-102">移動 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="5795f-102">Move a UI Automation Element</span></span>
+# <a name="move-a-ui-automation-element"></a><span data-ttu-id="563b0-104">移動 UI 自動化項目</span><span class="sxs-lookup"><span data-stu-id="563b0-104">Move a UI Automation Element</span></span>
 > [!NOTE]
-> <span data-ttu-id="5795f-103">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="5795f-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="5795f-104">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。</span><span class="sxs-lookup"><span data-stu-id="5795f-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="563b0-105">這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="563b0-105">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="563b0-106">如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。</span><span class="sxs-lookup"><span data-stu-id="563b0-106">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="5795f-105">此範例示範如何將 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目移動到指定的畫面位置。</span><span class="sxs-lookup"><span data-stu-id="5795f-105">This example demonstrates how to move a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element to a specified screen location.</span></span>  
+ <span data-ttu-id="563b0-107">此範例示範如何將 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目移動到指定的畫面位置。</span><span class="sxs-lookup"><span data-stu-id="563b0-107">This example demonstrates how to move a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element to a specified screen location.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5795f-106">範例</span><span class="sxs-lookup"><span data-stu-id="5795f-106">Example</span></span>  
- <span data-ttu-id="5795f-107">下列範例會使用 <xref:System.Windows.Automation.WindowPattern> 和 <xref:System.Windows.Automation.TransformPattern> 控制項模式，以程式設計方式將 Win32 目標應用程式移至不同的螢幕位置，並追蹤 <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 的 <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent>。</span><span class="sxs-lookup"><span data-stu-id="5795f-107">The following example uses the <xref:System.Windows.Automation.WindowPattern> and <xref:System.Windows.Automation.TransformPattern> control patterns to programmatically move a Win32 target application to discrete screen locations and track the <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent>.</span></span>  
+## <a name="example"></a><span data-ttu-id="563b0-108">範例</span><span class="sxs-lookup"><span data-stu-id="563b0-108">Example</span></span>  
+ <span data-ttu-id="563b0-109">下列範例會使用 <xref:System.Windows.Automation.WindowPattern> 和 <xref:System.Windows.Automation.TransformPattern> 控制項模式，以程式設計方式將 Win32 目標應用程式移至不同的螢幕位置，並追蹤 <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent> 。</span><span class="sxs-lookup"><span data-stu-id="563b0-109">The following example uses the <xref:System.Windows.Automation.WindowPattern> and <xref:System.Windows.Automation.TransformPattern> control patterns to programmatically move a Win32 target application to discrete screen locations and track the <xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> <xref:System.Windows.Automation.AutomationElement.AutomationPropertyChangedEvent>.</span></span>  
   
  [!code-csharp[WindowMove#1301](../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowMove/CSharp/WindowMove.cs#1301)]
  [!code-vb[WindowMove#1301](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1301)]  
 [!code-csharp[WindowMove#1300](../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowMove/CSharp/WindowMove.cs#1300)]
 [!code-vb[WindowMove#1300](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1300)]  
   
-## <a name="see-also"></a><span data-ttu-id="5795f-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="5795f-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="563b0-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="563b0-110">See also</span></span>
 
-- [<span data-ttu-id="5795f-109">WindowPattern 範例</span><span class="sxs-lookup"><span data-stu-id="5795f-109">WindowPattern Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/WindowMove)
+- [<span data-ttu-id="563b0-111">WindowPattern 範例</span><span class="sxs-lookup"><span data-stu-id="563b0-111">WindowPattern Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/WindowMove)
