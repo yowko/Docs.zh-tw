@@ -1,18 +1,19 @@
 ---
-title: 範例 XML 檔：命名空間中的測試組態
+title: 範例 XML 檔：測試命名空間中的組態
+description: 在 LINQ to XML 檔的各種範例中，會使用這個 XML 檔案。 檔案是測試組態檔。 XML 位於命名空間中。
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: ed25a8608977070e0db5f4cdee8a44a3c347cc8e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e08bc476eda39b6e9ff3e2958a49a0d9e5dc303a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167998"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302473"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="c5ff6-102">範例 XML 檔：命名空間中的測試組態</span><span class="sxs-lookup"><span data-stu-id="c5ff6-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="c5ff6-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="c5ff6-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c5ff6-104">這是測試組態檔案。</span><span class="sxs-lookup"><span data-stu-id="c5ff6-104">This is a test configuration file.</span></span> <span data-ttu-id="c5ff6-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="c5ff6-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="a26d5-105">範例 XML 檔：測試命名空間中的組態</span><span class="sxs-lookup"><span data-stu-id="a26d5-105">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="a26d5-106">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="a26d5-106">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a26d5-107">這是測試組態檔案。</span><span class="sxs-lookup"><span data-stu-id="a26d5-107">This is a test configuration file.</span></span> <span data-ttu-id="a26d5-108">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="a26d5-108">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="c5ff6-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="c5ff6-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="a26d5-109">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="a26d5-109">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

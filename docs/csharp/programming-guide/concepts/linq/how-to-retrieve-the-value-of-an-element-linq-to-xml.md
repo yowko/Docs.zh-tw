@@ -1,26 +1,27 @@
 ---
-title: 如何檢索元素的值(LINQ 到 XML)(C#)
+title: '如何取出元素的值（LINQ to XML）（c #）'
+description: 瞭解如何取得元素的值。 請參閱使用字串轉換、整數轉換和 Value 屬性的範例。
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: c4bb78e937fe0de08242923cdd7cd638abf571c7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: eb750927d74c3068d7ab06caba9835110bd77a09
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805828"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301537"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a><span data-ttu-id="5036c-102">如何檢索元素的值(LINQ 到 XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="5036c-102">How to retrieve the value of an element (LINQ to XML) (C#)</span></span>
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a><span data-ttu-id="3b75f-104">如何取出元素的值（LINQ to XML）（c #）</span><span class="sxs-lookup"><span data-stu-id="3b75f-104">How to retrieve the value of an element (LINQ to XML) (C#)</span></span>
 
-<span data-ttu-id="5036c-103">本文演示如何獲取元素的值。</span><span class="sxs-lookup"><span data-stu-id="5036c-103">This article shows how to get the value of elements.</span></span> <span data-ttu-id="5036c-104">有兩種主要取得值的方法:</span><span class="sxs-lookup"><span data-stu-id="5036c-104">There are two main ways to get the value:</span></span>
+<span data-ttu-id="3b75f-105">本文說明如何取得元素的值。</span><span class="sxs-lookup"><span data-stu-id="3b75f-105">This article shows how to get the value of elements.</span></span> <span data-ttu-id="3b75f-106">有兩種主要方式可取得此值：</span><span class="sxs-lookup"><span data-stu-id="3b75f-106">There are two main ways to get the value:</span></span>
 
-- <span data-ttu-id="5036c-105">將<xref:System.Xml.Linq.XElement><xref:System.Xml.Linq.XAttribute>或轉換為所需的類型。</span><span class="sxs-lookup"><span data-stu-id="5036c-105">Cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="5036c-106">然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。</span><span class="sxs-lookup"><span data-stu-id="5036c-106">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span>
+- <span data-ttu-id="3b75f-107">將 <xref:System.Xml.Linq.XElement> 或轉換 <xref:System.Xml.Linq.XAttribute> 成所需的類型。</span><span class="sxs-lookup"><span data-stu-id="3b75f-107">Cast an <xref:System.Xml.Linq.XElement> or an <xref:System.Xml.Linq.XAttribute> to the desired type.</span></span> <span data-ttu-id="3b75f-108">然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。</span><span class="sxs-lookup"><span data-stu-id="3b75f-108">The explicit conversion operator then converts the contents of the element or attribute to the specified type and assigns it to your variable.</span></span>
 
-- <span data-ttu-id="5036c-107">使用<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>或<xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>屬性。</span><span class="sxs-lookup"><span data-stu-id="5036c-107">Use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> or <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> properties.</span></span> <span data-ttu-id="5036c-108">您還可以使用這些屬性設置值。</span><span class="sxs-lookup"><span data-stu-id="5036c-108">You can also set the value using these properties.</span></span>
+- <span data-ttu-id="3b75f-109">使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="3b75f-109">Use the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> or <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> properties.</span></span> <span data-ttu-id="3b75f-110">您也可以使用這些屬性來設定值。</span><span class="sxs-lookup"><span data-stu-id="3b75f-110">You can also set the value using these properties.</span></span>
 
-<span data-ttu-id="5036c-109">使用 C# 時,鑄件通常是更好的方法。</span><span class="sxs-lookup"><span data-stu-id="5036c-109">With C#, casting is generally the better approach.</span></span> <span data-ttu-id="5036c-110">如果將元素或屬性強制轉換為可 null 值類型,則在檢索可能存在或不存在的元素(或屬性)的值時,代碼的編寫更簡單。</span><span class="sxs-lookup"><span data-stu-id="5036c-110">If you cast the element or attribute to a nullable value type, the code is simpler to write when retrieving the value of an element (or attribute) that might or might not exist.</span></span> <span data-ttu-id="5036c-111">本文[的最後一個示例](#element-might-not-exist-example)演示,在元素可能不存在的情況下,強制轉換更簡單。</span><span class="sxs-lookup"><span data-stu-id="5036c-111">The [last example](#element-might-not-exist-example) in this article demonstrates that casting is simpler in the case where the element might not exist.</span></span> <span data-ttu-id="5036c-112">不過，您無法像透過 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性般，透過轉型設定項目的內容。</span><span class="sxs-lookup"><span data-stu-id="5036c-112">However, you cannot set the contents of an element through casting, as you can through <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
+<span data-ttu-id="3b75f-111">使用 c #，轉換通常是較好的方法。</span><span class="sxs-lookup"><span data-stu-id="3b75f-111">With C#, casting is generally the better approach.</span></span> <span data-ttu-id="3b75f-112">如果您將專案或屬性轉換成可為 null 的實值型別，則在抓取可能或可能不存在的專案（或屬性）值時，程式碼會比較容易寫入。</span><span class="sxs-lookup"><span data-stu-id="3b75f-112">If you cast the element or attribute to a nullable value type, the code is simpler to write when retrieving the value of an element (or attribute) that might or might not exist.</span></span> <span data-ttu-id="3b75f-113">本文中的[最後一個範例](#element-might-not-exist-example)示範當元素可能不存在時，轉換會比較簡單。</span><span class="sxs-lookup"><span data-stu-id="3b75f-113">The [last example](#element-might-not-exist-example) in this article demonstrates that casting is simpler in the case where the element might not exist.</span></span> <span data-ttu-id="3b75f-114">不過，您無法像透過 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性般，透過轉型設定項目的內容。</span><span class="sxs-lookup"><span data-stu-id="3b75f-114">However, you cannot set the contents of an element through casting, as you can through <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="string-cast-example"></a><span data-ttu-id="5036c-113">字串強制轉換範例</span><span class="sxs-lookup"><span data-stu-id="5036c-113">String cast example</span></span>  
- <span data-ttu-id="5036c-114">要檢索元素的值,請將<xref:System.Xml.Linq.XElement>物件強制轉換為所需的類型。</span><span class="sxs-lookup"><span data-stu-id="5036c-114">To retrieve the value of an element, cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="5036c-115">可以將元素轉換為字串,如下所示:</span><span class="sxs-lookup"><span data-stu-id="5036c-115">You can cast an element to a string, as follows:</span></span>  
+## <a name="string-cast-example"></a><span data-ttu-id="3b75f-115">字串轉換範例</span><span class="sxs-lookup"><span data-stu-id="3b75f-115">String cast example</span></span>  
+ <span data-ttu-id="3b75f-116">若要取出元素的值，請將 <xref:System.Xml.Linq.XElement> 物件轉換成您想要的類型。</span><span class="sxs-lookup"><span data-stu-id="3b75f-116">To retrieve the value of an element, cast the <xref:System.Xml.Linq.XElement> object to your desired type.</span></span> <span data-ttu-id="3b75f-117">您可以將元素轉換成字串，如下所示：</span><span class="sxs-lookup"><span data-stu-id="3b75f-117">You can cast an element to a string, as follows:</span></span>  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -28,15 +29,15 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + (string)e);  
 ```  
   
- <span data-ttu-id="5036c-116">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5036c-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="3b75f-118">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="3b75f-118">This example produces the following output:</span></span>  
   
 ```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="integer-cast-example"></a><span data-ttu-id="5036c-117">整數強制轉換範例</span><span class="sxs-lookup"><span data-stu-id="5036c-117">Integer cast example</span></span>  
- <span data-ttu-id="5036c-118">您也可以將項目轉型為非字串的型別。</span><span class="sxs-lookup"><span data-stu-id="5036c-118">You can also cast elements to types other than string.</span></span> <span data-ttu-id="5036c-119">例如，如果您有包含整數的項目，您可以將其轉型為 `int`，如下列程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="5036c-119">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
+## <a name="integer-cast-example"></a><span data-ttu-id="3b75f-119">整數轉換範例</span><span class="sxs-lookup"><span data-stu-id="3b75f-119">Integer cast example</span></span>  
+ <span data-ttu-id="3b75f-120">您也可以將項目轉型為非字串的型別。</span><span class="sxs-lookup"><span data-stu-id="3b75f-120">You can also cast elements to types other than string.</span></span> <span data-ttu-id="3b75f-121">例如，如果您有包含整數的項目，您可以將其轉型為 `int`，如下列程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="3b75f-121">For example, if you have an element that contains an integer, you can cast it to `int`, as shown in the following code:</span></span>  
   
 ```csharp  
 XElement e = new XElement("Age", "44");  
@@ -44,19 +45,19 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + (int)e);  
 ```  
   
- <span data-ttu-id="5036c-120">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5036c-120">This example produces the following output:</span></span>  
+ <span data-ttu-id="3b75f-122">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="3b75f-122">This example produces the following output:</span></span>  
   
 ```output  
 <Age>44</Age>  
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="5036c-121">會針對下列資料類型提供明確轉換運算子：`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 和 `GUID?`。</span><span class="sxs-lookup"><span data-stu-id="5036c-121">provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="3b75f-123">會針對下列資料類型提供明確轉換運算子：`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID` 和 `GUID?`。</span><span class="sxs-lookup"><span data-stu-id="3b75f-123">provides explicit cast operators for the following data types: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="5036c-122">會提供 <xref:System.Xml.Linq.XAttribute> 物件相同的轉換運算子。</span><span class="sxs-lookup"><span data-stu-id="5036c-122">provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <span data-ttu-id="3b75f-124">會提供 <xref:System.Xml.Linq.XAttribute> 物件相同的轉換運算子。</span><span class="sxs-lookup"><span data-stu-id="3b75f-124">provides the same cast operators for <xref:System.Xml.Linq.XAttribute> objects.</span></span>  
   
-## <a name="value-property-example"></a><span data-ttu-id="5036c-123">值屬性範例</span><span class="sxs-lookup"><span data-stu-id="5036c-123">Value property example</span></span>  
- <span data-ttu-id="5036c-124">您可以使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性來擷取項目的內容：</span><span class="sxs-lookup"><span data-stu-id="5036c-124">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
+## <a name="value-property-example"></a><span data-ttu-id="3b75f-125">Value 屬性範例</span><span class="sxs-lookup"><span data-stu-id="3b75f-125">Value property example</span></span>  
+ <span data-ttu-id="3b75f-126">您可以使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性來擷取項目的內容：</span><span class="sxs-lookup"><span data-stu-id="3b75f-126">You can use the <xref:System.Xml.Linq.XElement.Value%2A> property to retrieve the contents of an element:</span></span>  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");
@@ -64,15 +65,15 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + e.Value);  
 ```  
   
- <span data-ttu-id="5036c-125">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5036c-125">This example produces the following output:</span></span>  
+ <span data-ttu-id="3b75f-127">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="3b75f-127">This example produces the following output:</span></span>  
   
 ```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="element-might-not-exist-example"></a><span data-ttu-id="5036c-126">元素可能不存在範例</span><span class="sxs-lookup"><span data-stu-id="5036c-126">Element might not exist example</span></span>
- <span data-ttu-id="5036c-127">有時,即使不確定元素是否存在,您也會嘗試檢索該元素的值。</span><span class="sxs-lookup"><span data-stu-id="5036c-127">Sometimes you try to retrieve the value of an element even though you're not sure if it exists.</span></span> <span data-ttu-id="5036c-128">在這種情況下,如果將強制轉換的元素分配給可 null 引用類型或空值類型時,如果該元素不存在,則分配的變數將設定`null`為 。</span><span class="sxs-lookup"><span data-stu-id="5036c-128">In this case, when you assign the casted element to a nullable reference type or nullable value type, if the element does not exist, the assigned variable is set to `null`.</span></span> <span data-ttu-id="5036c-129">下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。</span><span class="sxs-lookup"><span data-stu-id="5036c-129">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
+## <a name="element-might-not-exist-example"></a><span data-ttu-id="3b75f-128">元素可能不存在範例</span><span class="sxs-lookup"><span data-stu-id="3b75f-128">Element might not exist example</span></span>
+ <span data-ttu-id="3b75f-129">有時候您會嘗試抓取元素的值，即使您不確定它是否存在。</span><span class="sxs-lookup"><span data-stu-id="3b75f-129">Sometimes you try to retrieve the value of an element even though you're not sure if it exists.</span></span> <span data-ttu-id="3b75f-130">在此情況下，當您將轉換專案指派給可為 null 的參考型別或可為 null 的實值型別時，如果專案不存在，則指派的變數會設定為 `null` 。</span><span class="sxs-lookup"><span data-stu-id="3b75f-130">In this case, when you assign the casted element to a nullable reference type or nullable value type, if the element does not exist, the assigned variable is set to `null`.</span></span> <span data-ttu-id="3b75f-131">下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。</span><span class="sxs-lookup"><span data-stu-id="3b75f-131">The following code shows that when the element might or might not exist, it is easier to use casting than to use the <xref:System.Xml.Linq.XElement.Value%2A> property.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -134,7 +135,7 @@ else
 Console.WriteLine("v4:{0}", v4 == null ? "element does not exist" : v4.ToString());  
 ```  
   
- <span data-ttu-id="5036c-130">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5036c-130">This code produces the following output:</span></span>  
+ <span data-ttu-id="3b75f-132">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="3b75f-132">This code produces the following output:</span></span>  
   
 ```output  
 c1:child 1 content  
@@ -148,8 +149,8 @@ v3:element does not exist
 v4:element does not exist  
 ```  
   
- <span data-ttu-id="5036c-131">一般而言，使用轉換擷取元素及屬性內容時，您可以撰寫較簡易的程式碼。</span><span class="sxs-lookup"><span data-stu-id="5036c-131">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
+ <span data-ttu-id="3b75f-133">一般而言，使用轉換擷取元素及屬性內容時，您可以撰寫較簡易的程式碼。</span><span class="sxs-lookup"><span data-stu-id="3b75f-133">In general, you can write simpler code when using casting to retrieve the contents of elements and attributes.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5036c-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5036c-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b75f-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3b75f-134">See also</span></span>
 
-- [<span data-ttu-id="5036c-133">LINQ to XML 座標軸 (C#)</span><span class="sxs-lookup"><span data-stu-id="5036c-133">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)
+- [<span data-ttu-id="3b75f-135">LINQ to XML 座標軸 (C#)</span><span class="sxs-lookup"><span data-stu-id="3b75f-135">LINQ to XML Axes (C#)</span></span>](./linq-to-xml-axes-overview.md)

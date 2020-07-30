@@ -1,23 +1,24 @@
 ---
-title: 如何查找子項目（XPath-LINQ 到 XML）（C#）
+title: '如何尋找子代元素（XPath-LINQ to XML）（c #）'
+description: 瞭解如何使用 XPath 運算式來尋找具有特定名稱的子系元素。 請參閱使用範例 XML 檔案的程式碼範例。
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: c90651502629284c67cc16de8a1aa59c392ae178
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5a998a05f866203f3b684b8847a4a5647c12e5b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141110"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303266"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="94072-102">如何查找子項目（XPath-LINQ 到 XML）（C#）</span><span class="sxs-lookup"><span data-stu-id="94072-102">How to find descendant elements (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="94072-103">本主題顯示如何利用特定名稱取得子代項目。</span><span class="sxs-lookup"><span data-stu-id="94072-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="2de75-104">如何尋找子代元素（XPath-LINQ to XML）（c #）</span><span class="sxs-lookup"><span data-stu-id="2de75-104">How to find descendant elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="2de75-105">本主題顯示如何利用特定名稱取得子代項目。</span><span class="sxs-lookup"><span data-stu-id="2de75-105">This topic shows how to get the descendant elements with a particular name.</span></span>  
   
- <span data-ttu-id="94072-104">XPath 運算式為 `//Name`。</span><span class="sxs-lookup"><span data-stu-id="94072-104">The XPath expression is `//Name`.</span></span>  
+ <span data-ttu-id="2de75-106">XPath 運算式為 `//Name`。</span><span class="sxs-lookup"><span data-stu-id="2de75-106">The XPath expression is `//Name`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="94072-105">範例</span><span class="sxs-lookup"><span data-stu-id="94072-105">Example</span></span>  
- <span data-ttu-id="94072-106">此範例會尋找名稱為 `Name` 的所有子代。</span><span class="sxs-lookup"><span data-stu-id="94072-106">This example finds all descendants named `Name`.</span></span>  
+## <a name="example"></a><span data-ttu-id="2de75-107">範例</span><span class="sxs-lookup"><span data-stu-id="2de75-107">Example</span></span>  
+ <span data-ttu-id="2de75-108">此範例會尋找名稱為 `Name` 的所有子代。</span><span class="sxs-lookup"><span data-stu-id="2de75-108">This example finds all descendants named `Name`.</span></span>  
   
- <span data-ttu-id="94072-107">此範例使用下列 XML 文件︰[範例 XML 檔：多份採購訂單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="94072-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="2de75-109">此範例使用下列 XML 文件︰[範例 XML 檔：多份採購訂單 (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="2de75-109">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -37,7 +38,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="94072-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="94072-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="2de75-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="2de75-110">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  

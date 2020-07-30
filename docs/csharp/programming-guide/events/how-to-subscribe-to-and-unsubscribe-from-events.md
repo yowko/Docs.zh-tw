@@ -1,42 +1,43 @@
 ---
 title: '如何訂閱和取消訂閱事件-c # 程式設計手冊'
+description: 瞭解如何訂閱及取消訂閱事件。 使用 Visual Studio IDE、以程式設計方式或使用匿名方法來訂閱事件。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d917ea097cf9253a65c1907efdca71a640df9497
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: f228cc2e4fd719f4d79c56d65aa45b2a3031cba7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240664"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302083"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a><span data-ttu-id="2fa79-102">如何訂閱和取消訂閱事件（c # 程式設計手冊）</span><span class="sxs-lookup"><span data-stu-id="2fa79-102">How to subscribe to and unsubscribe from events (C# Programming Guide)</span></span>
-<span data-ttu-id="2fa79-103">如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-103">You subscribe to an event that is published by another class when you want to write custom code that is called when that event is raised.</span></span> <span data-ttu-id="2fa79-104">例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。</span><span class="sxs-lookup"><span data-stu-id="2fa79-104">For example, you might subscribe to a button's `click` event in order to make your application do something useful when the user clicks the button.</span></span>  
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a><span data-ttu-id="d0f6b-104">如何訂閱和取消訂閱事件（c # 程式設計手冊）</span><span class="sxs-lookup"><span data-stu-id="d0f6b-104">How to subscribe to and unsubscribe from events (C# Programming Guide)</span></span>
+<span data-ttu-id="d0f6b-105">如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-105">You subscribe to an event that is published by another class when you want to write custom code that is called when that event is raised.</span></span> <span data-ttu-id="d0f6b-106">例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-106">For example, you might subscribe to a button's `click` event in order to make your application do something useful when the user clicks the button.</span></span>  
   
-### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a><span data-ttu-id="2fa79-105">使用 Visual Studio IDE 訂閱事件</span><span class="sxs-lookup"><span data-stu-id="2fa79-105">To subscribe to events by using the Visual Studio IDE</span></span>  
+### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a><span data-ttu-id="d0f6b-107">使用 Visual Studio IDE 訂閱事件</span><span class="sxs-lookup"><span data-stu-id="d0f6b-107">To subscribe to events by using the Visual Studio IDE</span></span>  
   
-1. <span data-ttu-id="2fa79-106">如果看不到 [屬性]\*\*\*\* 視窗，請在 [設計]\*\*\*\* 檢視中，以滑鼠右鍵按一下您要建立事件處理常式的表單或控制項，然後選取 [屬性]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="2fa79-106">If you cannot see the **Properties** window, in **Design** view, right-click the form or control for which you want to create an event handler, and select **Properties**.</span></span>  
+1. <span data-ttu-id="d0f6b-108">如果看不到 [屬性]\*\*\*\* 視窗，請在 [設計]\*\*\*\* 檢視中，以滑鼠右鍵按一下您要建立事件處理常式的表單或控制項，然後選取 [屬性]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-108">If you cannot see the **Properties** window, in **Design** view, right-click the form or control for which you want to create an event handler, and select **Properties**.</span></span>  
   
-2. <span data-ttu-id="2fa79-107">在 [屬性]\*\*\*\* 視窗頂端，按一下**事件**圖示。</span><span class="sxs-lookup"><span data-stu-id="2fa79-107">On top of the **Properties** window, click the **Events** icon.</span></span>  
+2. <span data-ttu-id="d0f6b-109">在 [屬性]\*\*\*\* 視窗頂端，按一下**事件**圖示。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-109">On top of the **Properties** window, click the **Events** icon.</span></span>  
   
-3. <span data-ttu-id="2fa79-108">按兩下您要建立的事件，例如 `Load` 事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-108">Double-click the event that you want to create, for example the `Load` event.</span></span>  
+3. <span data-ttu-id="d0f6b-110">按兩下您要建立的事件，例如 `Load` 事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-110">Double-click the event that you want to create, for example the `Load` event.</span></span>  
   
-     <span data-ttu-id="2fa79-109">Visual C# 會建立空的事件處理常式方法，並將其新增至您的程式碼。</span><span class="sxs-lookup"><span data-stu-id="2fa79-109">Visual C# creates an empty event handler method and adds it to your code.</span></span> <span data-ttu-id="2fa79-110">您也可以在 [程式碼]\*\*\*\* 檢視中手動新增程式碼。</span><span class="sxs-lookup"><span data-stu-id="2fa79-110">Alternatively you can add the code manually in **Code** view.</span></span> <span data-ttu-id="2fa79-111">例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。</span><span class="sxs-lookup"><span data-stu-id="2fa79-111">For example, the following lines of code declare an event handler method that will be called when the `Form` class raises the `Load` event.</span></span>  
+     <span data-ttu-id="d0f6b-111">Visual C# 會建立空的事件處理常式方法，並將其新增至您的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-111">Visual C# creates an empty event handler method and adds it to your code.</span></span> <span data-ttu-id="d0f6b-112">您也可以在 [程式碼]\*\*\*\* 檢視中手動新增程式碼。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-112">Alternatively you can add the code manually in **Code** view.</span></span> <span data-ttu-id="d0f6b-113">例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-113">For example, the following lines of code declare an event handler method that will be called when the `Form` class raises the `Load` event.</span></span>  
   
      [!code-csharp[csProgGuideEvents#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#11)]  
   
-     <span data-ttu-id="2fa79-112">訂閱事件所需的程式碼行也會在專案之 Form1.Designer.cs 檔案的 `InitializeComponent` 方法中自動產生。</span><span class="sxs-lookup"><span data-stu-id="2fa79-112">The line of code that is required to subscribe to the event is also automatically generated in the `InitializeComponent` method in the Form1.Designer.cs file in your project.</span></span> <span data-ttu-id="2fa79-113">看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="2fa79-113">It resembles this:</span></span>  
+     <span data-ttu-id="d0f6b-114">訂閱事件所需的程式碼行也會在專案之 Form1.Designer.cs 檔案的 `InitializeComponent` 方法中自動產生。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-114">The line of code that is required to subscribe to the event is also automatically generated in the `InitializeComponent` method in the Form1.Designer.cs file in your project.</span></span> <span data-ttu-id="d0f6b-115">看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="d0f6b-115">It resembles this:</span></span>  
   
     ```csharp
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-### <a name="to-subscribe-to-events-programmatically"></a><span data-ttu-id="2fa79-114">以程式設計方式訂閱事件</span><span class="sxs-lookup"><span data-stu-id="2fa79-114">To subscribe to events programmatically</span></span>  
+### <a name="to-subscribe-to-events-programmatically"></a><span data-ttu-id="d0f6b-116">以程式設計方式訂閱事件</span><span class="sxs-lookup"><span data-stu-id="d0f6b-116">To subscribe to events programmatically</span></span>  
   
-1. <span data-ttu-id="2fa79-115">定義事件處理常式方法，其簽章與事件的委派簽章相符。</span><span class="sxs-lookup"><span data-stu-id="2fa79-115">Define an event handler method whose signature matches the delegate signature for the event.</span></span> <span data-ttu-id="2fa79-116">例如，如果事件是以 <xref:System.EventHandler> 委派類型為基礎，則下列程式碼代表方法 Stub：</span><span class="sxs-lookup"><span data-stu-id="2fa79-116">For example, if the event is based on the <xref:System.EventHandler> delegate type, the following code represents the method stub:</span></span>  
+1. <span data-ttu-id="d0f6b-117">定義事件處理常式方法，其簽章與事件的委派簽章相符。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-117">Define an event handler method whose signature matches the delegate signature for the event.</span></span> <span data-ttu-id="d0f6b-118">例如，如果事件是以 <xref:System.EventHandler> 委派類型為基礎，則下列程式碼代表方法 Stub：</span><span class="sxs-lookup"><span data-stu-id="d0f6b-118">For example, if the event is based on the <xref:System.EventHandler> delegate type, the following code represents the method stub:</span></span>  
   
     ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -45,19 +46,19 @@ ms.locfileid: "84240664"
     }  
     ```  
   
-2. <span data-ttu-id="2fa79-117">請使用加法指派運算子 (`+=`) 來將事件處理常式附加到事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-117">Use the addition assignment operator (`+=`) to attach an event handler to the event.</span></span> <span data-ttu-id="2fa79-118">在下列範例中，假設名為 `publisher` 的物件具有名為 `RaiseCustomEvent` 的事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-118">In the following example, assume that an object named `publisher` has an event named `RaiseCustomEvent`.</span></span> <span data-ttu-id="2fa79-119">請注意，subscriber 類別需要參考 publisher 類別，才能訂閱其事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-119">Note that the subscriber class needs a reference to the publisher class in order to subscribe to its events.</span></span>  
+2. <span data-ttu-id="d0f6b-119">請使用加法指派運算子 (`+=`) 來將事件處理常式附加到事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-119">Use the addition assignment operator (`+=`) to attach an event handler to the event.</span></span> <span data-ttu-id="d0f6b-120">在下列範例中，假設名為 `publisher` 的物件具有名為 `RaiseCustomEvent` 的事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-120">In the following example, assume that an object named `publisher` has an event named `RaiseCustomEvent`.</span></span> <span data-ttu-id="d0f6b-121">請注意，subscriber 類別需要參考 publisher 類別，才能訂閱其事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-121">Note that the subscriber class needs a reference to the publisher class in order to subscribe to its events.</span></span>  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
     ```  
   
-     <span data-ttu-id="2fa79-120">請注意，以上的語法是 C# 2.0 中新增的語法。</span><span class="sxs-lookup"><span data-stu-id="2fa79-120">Note that the previous syntax is new in C# 2.0.</span></span> <span data-ttu-id="2fa79-121">該語法與 C# 1.0 語法完全相同，都必須使用 `new` 關鍵字明確建立封裝委派：</span><span class="sxs-lookup"><span data-stu-id="2fa79-121">It is exactly equivalent to the C# 1.0 syntax in which the encapsulating delegate must be explicitly created by using the `new` keyword:</span></span>  
+     <span data-ttu-id="d0f6b-122">請注意，以上的語法是 C# 2.0 中新增的語法。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-122">Note that the previous syntax is new in C# 2.0.</span></span> <span data-ttu-id="d0f6b-123">該語法與 C# 1.0 語法完全相同，都必須使用 `new` 關鍵字明確建立封裝委派：</span><span class="sxs-lookup"><span data-stu-id="d0f6b-123">It is exactly equivalent to the C# 1.0 syntax in which the encapsulating delegate must be explicitly created by using the `new` keyword:</span></span>  
   
     ```csharp
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     <span data-ttu-id="2fa79-122">您也可以使用[lambda 運算式](../statements-expressions-operators/lambda-expressions.md)來指定事件處理常式：</span><span class="sxs-lookup"><span data-stu-id="2fa79-122">You can also use a [lambda expression](../statements-expressions-operators/lambda-expressions.md) to specify an event handler:</span></span>
+     <span data-ttu-id="d0f6b-124">您也可以使用[lambda 運算式](../statements-expressions-operators/lambda-expressions.md)來指定事件處理常式：</span><span class="sxs-lookup"><span data-stu-id="d0f6b-124">You can also use a [lambda expression](../statements-expressions-operators/lambda-expressions.md) to specify an event handler:</span></span>
   
     ```csharp
     public Form1()  
@@ -70,9 +71,9 @@ ms.locfileid: "84240664"
     }  
     ```  
   
-### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a><span data-ttu-id="2fa79-123">使用匿名方法訂閱事件</span><span class="sxs-lookup"><span data-stu-id="2fa79-123">To subscribe to events by using an anonymous method</span></span>  
+### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a><span data-ttu-id="d0f6b-125">使用匿名方法訂閱事件</span><span class="sxs-lookup"><span data-stu-id="d0f6b-125">To subscribe to events by using an anonymous method</span></span>  
   
-- <span data-ttu-id="2fa79-124">如果您稍後不需要取消訂閱事件，您可以使用加法指派運算子 (`+=`) 將匿名方法附加至事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-124">If you will not have to unsubscribe to an event later, you can use the addition assignment operator (`+=`) to attach an anonymous method to the event.</span></span> <span data-ttu-id="2fa79-125">在下列範例中，假設名為 `publisher` 的物件具有名為 `RaiseCustomEvent` 的事件，而且也已定義 `CustomEventArgs` 類別來包含特定類型的特製化事件資訊。</span><span class="sxs-lookup"><span data-stu-id="2fa79-125">In the following example, assume that an object named `publisher` has an event named `RaiseCustomEvent` and that a `CustomEventArgs` class has also been defined to carry some kind of specialized event information.</span></span> <span data-ttu-id="2fa79-126">請注意，subscriber 類別需要參考 `publisher`，才能訂閱其事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-126">Note that the subscriber class needs a reference to `publisher` in order to subscribe to its events.</span></span>  
+- <span data-ttu-id="d0f6b-126">如果您稍後不需要取消訂閱事件，您可以使用加法指派運算子 (`+=`) 將匿名方法附加至事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-126">If you will not have to unsubscribe to an event later, you can use the addition assignment operator (`+=`) to attach an anonymous method to the event.</span></span> <span data-ttu-id="d0f6b-127">在下列範例中，假設名為 `publisher` 的物件具有名為 `RaiseCustomEvent` 的事件，而且也已定義 `CustomEventArgs` 類別來包含特定類型的特製化事件資訊。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-127">In the following example, assume that an object named `publisher` has an event named `RaiseCustomEvent` and that a `CustomEventArgs` class has also been defined to carry some kind of specialized event information.</span></span> <span data-ttu-id="d0f6b-128">請注意，subscriber 類別需要參考 `publisher`，才能訂閱其事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-128">Note that the subscriber class needs a reference to `publisher` in order to subscribe to its events.</span></span>  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -82,25 +83,25 @@ ms.locfileid: "84240664"
     };  
     ```  
   
-     <span data-ttu-id="2fa79-127">請務必注意，如果使用了匿名函式訂閱事件，則無法輕易取消訂閱事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-127">It is important to notice that you cannot easily unsubscribe from an event if you used an anonymous function to subscribe to it.</span></span> <span data-ttu-id="2fa79-128">若要在這種情況下取消訂閱，您必須回到訂閱事件所在的程式碼，將此匿名方法儲存在委派變數中，然後將委派新增至事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-128">To unsubscribe in this scenario, it is necessary to go back to the code where you subscribe to the event, store the anonymous method in a delegate variable, and then add the delegate to the event.</span></span> <span data-ttu-id="2fa79-129">一般而言，如果您稍後必須在程式碼中取消訂閱事件，建議您不要使用匿名函式訂閱事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-129">In general, we recommend that you do not use anonymous functions to subscribe to events if you will have to unsubscribe from the event at some later point in your code.</span></span> <span data-ttu-id="2fa79-130">如需匿名函式的詳細資訊，請參閱[匿名函式](../statements-expressions-operators/anonymous-functions.md)。</span><span class="sxs-lookup"><span data-stu-id="2fa79-130">For more information about anonymous functions, see [Anonymous Functions](../statements-expressions-operators/anonymous-functions.md).</span></span>  
+     <span data-ttu-id="d0f6b-129">請務必注意，如果使用了匿名函式訂閱事件，則無法輕易取消訂閱事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-129">It is important to notice that you cannot easily unsubscribe from an event if you used an anonymous function to subscribe to it.</span></span> <span data-ttu-id="d0f6b-130">若要在這種情況下取消訂閱，您必須回到訂閱事件所在的程式碼，將此匿名方法儲存在委派變數中，然後將委派新增至事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-130">To unsubscribe in this scenario, it is necessary to go back to the code where you subscribe to the event, store the anonymous method in a delegate variable, and then add the delegate to the event.</span></span> <span data-ttu-id="d0f6b-131">一般而言，如果您稍後必須在程式碼中取消訂閱事件，建議您不要使用匿名函式訂閱事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-131">In general, we recommend that you do not use anonymous functions to subscribe to events if you will have to unsubscribe from the event at some later point in your code.</span></span> <span data-ttu-id="d0f6b-132">如需匿名函式的詳細資訊，請參閱[匿名函式](../statements-expressions-operators/anonymous-functions.md)。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-132">For more information about anonymous functions, see [Anonymous Functions](../statements-expressions-operators/anonymous-functions.md).</span></span>  
   
-## <a name="unsubscribing"></a><span data-ttu-id="2fa79-131">取消訂閱</span><span class="sxs-lookup"><span data-stu-id="2fa79-131">Unsubscribing</span></span>  
- <span data-ttu-id="2fa79-132">若要防止在引發事件時叫用事件處理常式，請取消訂閱事件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-132">To prevent your event handler from being invoked when the event is raised, unsubscribe from the event.</span></span> <span data-ttu-id="2fa79-133">為了避免資源流失，請先取消訂閱事件，再處置訂閱者物件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-133">In order to prevent resource leaks, you should unsubscribe from events before you dispose of a subscriber object.</span></span> <span data-ttu-id="2fa79-134">在取消訂閱事件之前，發行物件的事件之下的多點傳送委派都會參考封裝訂閱者事件處理常式的委派。</span><span class="sxs-lookup"><span data-stu-id="2fa79-134">Until you unsubscribe from an event, the multicast delegate that underlies the event in the publishing object has a reference to the delegate that encapsulates the subscriber's event handler.</span></span> <span data-ttu-id="2fa79-135">只要發行物件還有該參考，記憶體回收就不會刪除訂閱者物件。</span><span class="sxs-lookup"><span data-stu-id="2fa79-135">As long as the publishing object holds that reference, garbage collection will not delete your subscriber object.</span></span>  
+## <a name="unsubscribing"></a><span data-ttu-id="d0f6b-133">取消訂閱</span><span class="sxs-lookup"><span data-stu-id="d0f6b-133">Unsubscribing</span></span>  
+ <span data-ttu-id="d0f6b-134">若要防止在引發事件時叫用事件處理常式，請取消訂閱事件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-134">To prevent your event handler from being invoked when the event is raised, unsubscribe from the event.</span></span> <span data-ttu-id="d0f6b-135">為了避免資源流失，請先取消訂閱事件，再處置訂閱者物件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-135">In order to prevent resource leaks, you should unsubscribe from events before you dispose of a subscriber object.</span></span> <span data-ttu-id="d0f6b-136">在取消訂閱事件之前，發行物件的事件之下的多點傳送委派都會參考封裝訂閱者事件處理常式的委派。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-136">Until you unsubscribe from an event, the multicast delegate that underlies the event in the publishing object has a reference to the delegate that encapsulates the subscriber's event handler.</span></span> <span data-ttu-id="d0f6b-137">只要發行物件還有該參考，記憶體回收就不會刪除訂閱者物件。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-137">As long as the publishing object holds that reference, garbage collection will not delete your subscriber object.</span></span>  
   
-#### <a name="to-unsubscribe-from-an-event"></a><span data-ttu-id="2fa79-136">取消訂閱事件</span><span class="sxs-lookup"><span data-stu-id="2fa79-136">To unsubscribe from an event</span></span>  
+#### <a name="to-unsubscribe-from-an-event"></a><span data-ttu-id="d0f6b-138">取消訂閱事件</span><span class="sxs-lookup"><span data-stu-id="d0f6b-138">To unsubscribe from an event</span></span>  
   
-- <span data-ttu-id="2fa79-137">使用減法指派運算子 (`-=`) 取消訂閱事件：</span><span class="sxs-lookup"><span data-stu-id="2fa79-137">Use the subtraction assignment operator (`-=`) to unsubscribe from an event:</span></span>  
+- <span data-ttu-id="d0f6b-139">使用減法指派運算子 (`-=`) 取消訂閱事件：</span><span class="sxs-lookup"><span data-stu-id="d0f6b-139">Use the subtraction assignment operator (`-=`) to unsubscribe from an event:</span></span>  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  
     ```  
   
-     <span data-ttu-id="2fa79-138">在所有訂閱者都已取消訂閱事件之後，publisher 類別中的事件執行個體會設定為 `null`。</span><span class="sxs-lookup"><span data-stu-id="2fa79-138">When all subscribers have unsubscribed from an event, the event instance in the publisher class is set to `null`.</span></span>  
+     <span data-ttu-id="d0f6b-140">在所有訂閱者都已取消訂閱事件之後，publisher 類別中的事件執行個體會設定為 `null`。</span><span class="sxs-lookup"><span data-stu-id="d0f6b-140">When all subscribers have unsubscribed from an event, the event instance in the publisher class is set to `null`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2fa79-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2fa79-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0f6b-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d0f6b-141">See also</span></span>
 
-- [<span data-ttu-id="2fa79-140">事件</span><span class="sxs-lookup"><span data-stu-id="2fa79-140">Events</span></span>](./index.md)
-- [<span data-ttu-id="2fa79-141">event</span><span class="sxs-lookup"><span data-stu-id="2fa79-141">event</span></span>](../../language-reference/keywords/event.md)
-- [<span data-ttu-id="2fa79-142">如何發行符合 .NET 指導方針的事件</span><span class="sxs-lookup"><span data-stu-id="2fa79-142">How to publish events that conform to .NET Guidelines</span></span>](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [<span data-ttu-id="2fa79-143">- 及 = 運算子</span><span class="sxs-lookup"><span data-stu-id="2fa79-143">- and -= operators</span></span>](../../language-reference/operators/subtraction-operator.md)
-- [<span data-ttu-id="2fa79-144">+ 和 + = 運算子</span><span class="sxs-lookup"><span data-stu-id="2fa79-144">+ and += operators</span></span>](../../language-reference/operators/addition-operator.md)
+- [<span data-ttu-id="d0f6b-142">事件</span><span class="sxs-lookup"><span data-stu-id="d0f6b-142">Events</span></span>](./index.md)
+- [<span data-ttu-id="d0f6b-143">event</span><span class="sxs-lookup"><span data-stu-id="d0f6b-143">event</span></span>](../../language-reference/keywords/event.md)
+- [<span data-ttu-id="d0f6b-144">如何發行符合 .NET 指導方針的事件</span><span class="sxs-lookup"><span data-stu-id="d0f6b-144">How to publish events that conform to .NET Guidelines</span></span>](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [<span data-ttu-id="d0f6b-145">- 及 = 運算子</span><span class="sxs-lookup"><span data-stu-id="d0f6b-145">- and -= operators</span></span>](../../language-reference/operators/subtraction-operator.md)
+- [<span data-ttu-id="d0f6b-146">+ 和 + = 運算子</span><span class="sxs-lookup"><span data-stu-id="d0f6b-146">+ and += operators</span></span>](../../language-reference/operators/addition-operator.md)
