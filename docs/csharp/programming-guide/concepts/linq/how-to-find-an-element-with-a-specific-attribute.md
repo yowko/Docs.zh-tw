@@ -1,15 +1,16 @@
 ---
-title: 如何查找具有特定屬性 （C#） 的元素
+title: '如何尋找具有特定屬性的元素（c #）'
+description: 瞭解如何尋找具有特定值之屬性的元素。 請參閱程式碼範例和其他資源。
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44875ca2104e7a8f83e83da983af49ef85c89f0a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141157"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303279"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>如何查找具有特定屬性 （C#） 的元素
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>如何尋找具有特定屬性的元素（c #）
 這個主題顯示如何尋找其屬性具有特定值的項目。  
   
 ## <a name="example"></a>範例  

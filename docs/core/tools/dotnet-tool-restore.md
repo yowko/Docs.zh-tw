@@ -1,26 +1,26 @@
 ---
-title: 點網工具還原命令
-description: dotnet 工具還原命令在您的電腦上安裝當前目錄範圍內的 .NET Core 本地工具。
+title: dotnet 工具還原命令
+description: Dotnet 工具 restore 命令會在您的電腦上安裝目前目錄範圍內的 .NET Core 本機工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: a518c2d45bbe9522bddfed4bbef61b30f1ad634b
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: ceef3274ec9d337f8c51009d5a8c27e808b14035
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463336"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302668"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
-**本文適用於:✔️** .NET Core 3.0 SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
-`dotnet tool restore`- 在電腦上安裝當前目錄範圍內的 .NET Core 本地工具。
+`dotnet tool restore`-在您的電腦上安裝目前目錄範圍內的 .NET Core 本機工具。
 
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet tool restore <PACKAGE_NAME>
+dotnet tool restore
     [--configfile <FILE>] [--add-source <SOURCE>]
     [tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
     [--ignore-failed-sources] [--no-cache] [--interactive]
@@ -31,13 +31,7 @@ dotnet tool restore -h|--help
 
 ## <a name="description"></a>描述
 
-該`dotnet tool restore`命令查找目前目錄範圍內的工具清單檔,並安裝其中列出的工具。 關於清單檔案的資訊,請參考[本地端工具與](global-tools.md#install-a-local-tool)[呼叫本地端工具](global-tools.md#invoke-a-local-tool)。
-
-## <a name="arguments"></a>引數
-
-- **`PACKAGE_NAME`**
-
-包含要安裝的 .NET Core 工具的 NuGet 套件的名稱/ ID。
+`dotnet tool restore`命令會尋找位於目前目錄範圍內的工具資訊清單檔，並安裝其中列出的工具。 如需資訊清單檔的相關資訊，請參閱[安裝本機工具](global-tools.md#install-a-local-tool)和叫[用本機工具](global-tools.md#invoke-a-local-tool)。
 
 ## <a name="options"></a>選項。
 
@@ -51,19 +45,19 @@ dotnet tool restore -h|--help
 
 - **`--tool-manifest <PATH>`**
 
-  清單檔的路徑。
+  資訊清單檔案的路徑。
 
 - **`--disable-parallel`**
 
-  防止並行還原多個專案。
+  防止平行還原多個專案。
 
 - **`--ignore-failed-sources`**
 
-  將包源故障視為警告。
+  將套件來源失敗視為警告。
 
 - **`--no-cache`**
 
-  不要緩存包和 HTTP 請求。
+  不要快取套件和 HTTP 要求。
 
 - **`--interactive`**
 
@@ -81,9 +75,9 @@ dotnet tool restore -h|--help
 
 - **`dotnet tool restore`**
 
-  還原當前目錄的本地工具。
+  還原目前目錄的本機工具。
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 核心工具](global-tools.md)
-- [教學:使用 .NET 核心 CLI 安裝與使用 .NET 核心本地工具](local-tools-how-to-use.md)
+- [.NET Core 工具](global-tools.md)
+- [教學課程：使用 .NET Core CLI 安裝和使用 .NET Core 本機工具](local-tools-how-to-use.md)

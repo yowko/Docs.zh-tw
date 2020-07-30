@@ -1,15 +1,16 @@
 ---
 title: '如何使用 My 命名空間-c # 程式設計手冊'
+description: 瞭解如何「我的」命名空間。 「我的」命名空間可讓您以簡單且直覺的方式存取許多 .NET 類別。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 268543980ba891b0b30f393ee8982f2863ba9a71
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7abd5049a979d5a15d123052cba0cfdb35bf3fb7
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241938"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381706"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何使用 My 命名空間（c # 程式設計手冊）
 

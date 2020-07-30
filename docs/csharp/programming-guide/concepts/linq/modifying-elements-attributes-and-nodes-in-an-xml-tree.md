@@ -1,13 +1,14 @@
 ---
-title: 修改 XML 樹狀結構中的項目、屬性和節點
+title: 修改 XML 樹狀中的項目、屬性和節點
+description: 瞭解您可以用來修改元素、其子節點或其屬性的方法和屬性。
 ms.date: 07/20/2015
 ms.assetid: 0ed22e4e-4c6b-4eb1-b0eb-06685efd8c33
-ms.openlocfilehash: 93a4d67129e22d0bbeef464c1d4d8758439edb7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfff882dc57a4f6f4b228563ac923122097d88d0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66484228"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303162"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>修改 XML 樹狀中的項目、屬性和節點
 下表摘要說明您可以用於修改項目、其子項目或其屬性的方法和屬性。  

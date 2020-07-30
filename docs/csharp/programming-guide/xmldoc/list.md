@@ -1,5 +1,6 @@
 ---
 title: '<list> -C # 程式設計指南'
+description: 瞭解 XML <list> 的相片或視訊。 此標記用來建立資料表和定義、以點符或編號的清單，方法是使用 ' item ' 區塊。
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 78eec992671dab1aa59717a007a8e3a2662f6e87
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 361c2e6f343554a9b8519c3b2e41219b209e682d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287333"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381862"
 ---
 # <a name="list-c-programming-guide"></a>\<list>（C # 程式設計手冊）
 

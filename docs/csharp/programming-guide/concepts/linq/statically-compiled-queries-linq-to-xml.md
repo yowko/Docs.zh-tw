@@ -1,13 +1,14 @@
 ---
 title: 靜態編譯的查詢 (LINQ to XML) (C#)
+description: '瞭解 c # 中 LINQ to XML 的靜態編譯查詢，以及它們與 XPath 查詢的不同之處，必須在執行時間加以解讀。'
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 98725cece1006ba13afb64bb8ae17ae6e62c53cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd2e6a6507311d5fc17215a22c70bd0449292b6f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253036"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302304"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>靜態編譯的查詢 (LINQ to XML) (C#)
 相對於 <xref:System.Xml.XmlDocument> 而言，LINQ to XML 其中一個最重要的效能優勢在於，LINQ to XML 中的查詢是靜態編譯的查詢，而 XPath 查詢則必須在執行階段解譯。 由於這項功能是 LINQ to XML 內建的，所以您不需要進行額外步驟，即可運用此功能，但是在選擇這兩項技術時了解其差異會有所幫助。 本主題將說明兩者的差異。  
@@ -15,7 +16,7 @@ ms.locfileid: "70253036"
 ## <a name="statically-compiled-queries-vs-xpath"></a>靜態編譯查詢與 XPath 的比較  
  下列範例將顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。  
   
- 以下是等效的 XPath 運算式：`//Address[@Type='Shipping']`
+ 以下是對等的 XPath 運算式：`//Address[@Type='Shipping']`
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  

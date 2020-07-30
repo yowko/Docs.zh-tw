@@ -1,16 +1,17 @@
 ---
 title: 運算式 - C# 程式設計指南
+description: '瞭解 c # 程式設計中的運算式，例如調用、查詢、lambda、常值和簡單名稱。'
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5bcfdae27c30bd5d845f621ac4b5b20ff37612a0
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75699089"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381823"
 ---
 # <a name="expressions-c-programming-guide"></a>運算式 (C# 程式設計手冊)
 
@@ -32,7 +33,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>溢出
 
- 如果值大於實值型別的最大值，則數值運算式可能會造成溢位。 有關詳細資訊，請參閱["已選中"和"取消選中"](../../language-reference/keywords/checked-and-unchecked.md)以及[內置數位轉換](../../language-reference/builtin-types/numeric-conversions.md)文章中的[顯式數位轉換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)部分。
+ 如果值大於實值型別的最大值，則數值運算式可能會造成溢位。 如需詳細資訊，請參閱[已檢查和未核](../../language-reference/keywords/checked-and-unchecked.md)取，以及[內建數值轉換](../../language-reference/builtin-types/numeric-conversions.md)一文的[明確數值轉換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)一節。
   
 ## <a name="operator-precedence-and-associativity"></a>運算子優先順序和關聯性
 
@@ -68,7 +69,7 @@ DoWork();
   
 ## <a name="lambda-expressions"></a>Lambda 運算式
 
- Lambda 運算式代表「內嵌方法」，而這種方法沒有名稱，但可以有輸入參數和多個陳述式。 它們廣泛用於 LINQ，以將引數傳遞給方法。 根據所使用的內容，會將 Lambda 運算式編譯為委派或運算式樹狀架構。 有關詳細資訊，請參閱[Lambda 運算式](lambda-expressions.md)。  
+ Lambda 運算式代表「內嵌方法」，而這種方法沒有名稱，但可以有輸入參數和多個陳述式。 它們廣泛用於 LINQ，以將引數傳遞給方法。 根據所使用的內容，會將 Lambda 運算式編譯為委派或運算式樹狀架構。 如需詳細資訊，請參閱[Lambda 運算式](lambda-expressions.md)。  
   
 ## <a name="expression-trees"></a>運算式樹狀架構
 
@@ -88,9 +89,9 @@ C# 支援「運算式主體成員」**，可讓您提供方法、建構函式、
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [運營商](../../language-reference/operators/index.md)
+- [C # 程式設計指南](../index.md)
+- [運算子](../../language-reference/operators/index.md)
 - [方法](../classes-and-structs/methods.md)
 - [委派](../delegates/index.md)
-- [型別](../types/index.md)
+- [類型](../types/index.md)
 - [LINQ](../../linq/index.md)

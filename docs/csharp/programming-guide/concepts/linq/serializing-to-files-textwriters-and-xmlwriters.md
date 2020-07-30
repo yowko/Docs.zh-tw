@@ -1,13 +1,14 @@
 ---
 title: 序列化至 File、TextWriter 和 XmlWriter
+description: '瞭解在 c # 中使用 ToString 或 Save 方法將 XML 樹狀結構序列化為檔案、無效或 XmlWriter 的選項。'
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: 20cb84a9f79ca8de3e86a996f18c388dc53340ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43c51ae7e9bf1a7848d45fd900424d6186671e53
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68868848"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302382"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>序列化至 File、TextWriter 和 XmlWriter
 

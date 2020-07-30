@@ -1,15 +1,16 @@
 ---
-title: 如何查找兩個位置路徑（XPath-LINQ 到 XML）（C#）的聯合
+title: '如何尋找兩個位置路徑的聯集（XPath-LINQ to XML）（c #）'
+description: 瞭解如何使用 XPath 運算式來尋找兩個 XPath 位置路徑的聯集。 請參閱使用範例 XML 檔案的程式碼範例。
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: 17a3310f367cb68b3b80b1a3f30af40428f6d2c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65b20fe25a0990fd82ce3bd08c3433499e728512
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141217"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303318"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>如何查找兩個位置路徑（XPath-LINQ 到 XML）（C#）的聯合
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>如何尋找兩個位置路徑的聯集（XPath-LINQ to XML）（c #）
 XPath 可讓您尋找兩個 XPath 位置路徑結果的等位。  
   
  XPath 運算式為：  

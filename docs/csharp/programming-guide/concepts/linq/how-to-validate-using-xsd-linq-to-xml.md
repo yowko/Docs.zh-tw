@@ -1,15 +1,16 @@
 ---
-title: 如何使用 XSD（LINQ 到 XML）驗證 （C#）
+title: '如何使用 XSD 進行驗證（LINQ to XML）（c #）'
+description: 瞭解如何根據 XML 架構定義語言（XSD）檔案來驗證 XML 樹狀結構。 請參閱程式碼範例，並查看其他資源。
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4d2137d511efbe20e4d31ad27e4975d5444ec9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347245"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302629"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>如何使用 XSD（LINQ 到 XML）驗證 （C#）
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>如何使用 XSD 進行驗證（LINQ to XML）（c #）
 <xref:System.Xml.Schema> 命名空間包含的擴充方法可針對 XML 結構描述定義語言 (XSD) 檔，簡化 XML 樹狀結構的驗證。 如需詳細資訊，請參閱 <xref:System.Xml.Schema.Extensions.Validate%2A> 方法的文件。  
   
 ## <a name="example"></a>範例  

@@ -1,15 +1,16 @@
 ---
-title: 如何查找具有特定名稱的同級屬性（XPath-LINQ 到 XML）（C#）
+title: '如何尋找具有特定名稱之同級的屬性（XPath-LINQ to XML）（c #）'
+description: 瞭解如何尋找內容節點之同級的所有屬性。 請參閱使用範例 XML 檔案的程式碼範例。
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 331e1a7f432f4d06b697180b1594106ec6842c9a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12bba22c91fef92fc3383d028ff9dfb8bd3cfa3e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169255"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301693"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>如何查找具有特定名稱的同級屬性（XPath-LINQ 到 XML）（C#）
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>如何尋找具有特定名稱之同級的屬性（XPath-LINQ to XML）（c #）
 本主題顯示如何尋找內容節點之同層級的所有屬性。 在集合中，只會傳回具有特定名稱的屬性。  
   
  XPath 運算式為：  

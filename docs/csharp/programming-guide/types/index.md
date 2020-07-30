@@ -1,5 +1,6 @@
 ---
 title: 類型 - C# 程式設計手冊
+description: '瞭解 c # 程式設計中的類型，例如內建類型、自訂類型、實數值型別和參考型別。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - value types [C#]
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: fa0aa09b591f9b91a82113343a3655b2240ef490
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 5a9eb3747a6b4da316bca3f1d450c1ea0f774ada
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201205"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382044"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -119,7 +120,7 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-`System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱<xref:System.IO.FileMode?displayProperty=nameWithType>。
+`System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱 <xref:System.IO.FileMode?displayProperty=nameWithType>。
 
 所有的委派都繼承自 <xref:System.Enum?displayProperty=nameWithType>，該列舉又繼承自 <xref:System.ValueType?displayProperty=nameWithType>。 所有適用於結構的規則，也適用於列舉。 如需有關列舉的詳細資訊，請參閱[列舉類型](../../language-reference/builtin-types/enum.md)。
 
@@ -181,7 +182,7 @@ stringList.Add(4);
 
 - [轉換和類型轉換](./casting-and-type-conversions.md)
 
-- [Boxing 和 Unboxing](./boxing-and-unboxing.md)
+- [裝箱和取消裝箱](./boxing-and-unboxing.md)
 
 - [使用動態類型](./using-type-dynamic.md)
 

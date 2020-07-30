@@ -1,17 +1,18 @@
 ---
 title: '如何一次一行讀取文字檔-c # 程式設計手冊'
+description: 瞭解如何一次一行讀取文字檔。 查看程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: b54d072ce9837f9b15694f2d7100817de62e9762
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 1e29013b1008e1000c23804dc3056014cc7c104b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241769"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301953"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>如何一次一行讀取文字檔（c # 程式設計手冊）
 此範例會使用 `StreamReader` 類別的 `ReadLine` 方法，將文字檔的內容一次一行讀入字串中。 每個文字行都會儲存到字串 `line` 中並顯示在畫面上。  

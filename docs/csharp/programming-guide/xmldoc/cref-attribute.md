@@ -1,23 +1,24 @@
 ---
-title: cref 屬性 - C# 程式設計指南
+title: 'cref 屬性-c # 程式設計指南'
+description: 瞭解 cref 屬性。 Cref 屬性工作表示「程式碼參考」，而且會指定標記的內部文字是 code 元素。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31fa1a3f182d7b72a1dfbe1ce47386f87fbbff75
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157009"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381992"
 ---
-# <a name="cref-attribute-c-programming-guide"></a>cref 屬性（C# 程式設計指南）
+# <a name="cref-attribute-c-programming-guide"></a>cref 屬性（c # 程式設計手冊）
 
 `cref` 屬性在 XML 文件標記中表示「程式碼參考」。 它會指定標記的內部文字是程式碼項目，例如類型、方法或屬性。 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具使用 `cref` 屬性自動產生記錄類型或成員的頁面超連結。
 
 ## <a name="example"></a>範例
 
-下面的示例顯示了`cref`請參閱[\<>](./see.md)標記中使用的屬性。
+下列範例顯示 `cref` 標記中使用的 [\<see>](./see.md) 屬性。
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 

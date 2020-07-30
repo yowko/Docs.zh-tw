@@ -1,13 +1,14 @@
 ---
 title: C# 中的預設命名空間範圍
+description: '瞭解如何在 c # 中 LINQ to XML 的預設 XML 命名空間中查詢。 使用 XNamespace 變數和區功能變數名稱稱來建立查詢的限定名稱。'
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 912e47099f89daa9b80ac58b422d39d598509ac9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253043"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302395"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\# 中的預設命名空間範圍
 在 XML 樹狀結構中表示的預設命名空間不在查詢的範圍內。 如果您擁有的 XML 位於預設命名空間中，您仍然必須宣告 <xref:System.Xml.Linq.XNamespace> 變數，然後將它與區域名稱結合，讓限定名稱 (Qualified Name) 得以用於查詢中。  

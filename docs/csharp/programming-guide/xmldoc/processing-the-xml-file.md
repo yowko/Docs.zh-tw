@@ -1,16 +1,17 @@
 ---
 title: '處理 XML 檔案-c # 程式設計手冊'
+description: '瞭解如何在 c # 程式設計中處理 XML 檔案。 請參閱程式碼範例，並查看其他可用的資源。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 1e3d96f9398f2c08ed715111f01987e2d1948439
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6f8a278ed842cd9c4176f3efff423ee048f7e9b9
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287255"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381537"
 ---
 # <a name="process-the-xml-file-c-programming-guide"></a>處理 XML 檔案（c # 程式設計手冊）
 
@@ -26,10 +27,10 @@ XML 檔案不是程式碼的階層式標記法。 它是一個一般清單，其
 
 - 字串的第一個部分會使用單一字元並在後面加上冒號來識別成員的種類。 使用的成員類型如下：
 
-    |字元|成員類型|備忘稿|
+    |字元|成員類型|注意|
     |---------------|-----------------|-|
     |N|namespace|您無法將文件註解新增至命名空間，但可讓 cref 參考它們 (如果支援)。|
-    |T|類型|型別可以是類別、介面、結構、列舉或委派。|
+    |T|type|型別可以是類別、介面、結構、列舉或委派。|
     |F|field|
     |P|屬性|包含索引子或其他索引的屬性。|
     |M|method|包含特殊方法，例如，構造函式和運算子。|

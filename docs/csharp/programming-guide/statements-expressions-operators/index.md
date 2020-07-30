@@ -1,5 +1,6 @@
 ---
 title: 陳述式、運算式和運算子 - C# 程式設計手冊
+description: '在 c # 程式設計中，為您介紹語句、運算式和運算子的基本元素。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: b339158848dac30f8c87a372b44574f6114a6aed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08692cbe583feb534315b637492adedb1254bc38
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75698634"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381615"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>陳述式、運算式和運算子 (C# 程式設計手冊)
 
@@ -22,11 +23,11 @@ ms.locfileid: "75698634"
 
  如需詳細資訊，請參閱
 
-- [語句](statements.md)
+- [陳述式](statements.md)
 
 - [運算式](expressions.md)
 
-  - [表達體成員](expression-bodied-members.md)
+  - [運算式主體成員](expression-bodied-members.md)
 
 - [匿名函式](anonymous-functions.md)
 
@@ -38,5 +39,5 @@ ms.locfileid: "75698634"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [鑄造和類型轉換](../types/casting-and-type-conversions.md)
+- [C # 程式設計指南](../index.md)
+- [轉換和類型轉換](../types/casting-and-type-conversions.md)

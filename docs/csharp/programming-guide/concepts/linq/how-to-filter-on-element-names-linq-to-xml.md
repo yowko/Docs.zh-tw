@@ -1,15 +1,16 @@
 ---
-title: 如何篩選元素名稱（LINQ 到 XML）（C#）
+title: '如何篩選元素名稱（LINQ to XML）（c #）'
+description: 瞭解當您呼叫會傳回 System.xml.linq.xelement> 之 IEnumerable 的方法時，如何篩選元素名稱。
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 74efb19ef5ec77ca29145d27a8e5aa977530b68b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be660a69b8d860ad907661ce17002379b8842121
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141259"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301745"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>如何篩選元素名稱（LINQ 到 XML）（C#）
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>如何篩選元素名稱（LINQ to XML）（c #）
 當您呼叫可傳回 <xref:System.Collections.Generic.IEnumerable%601> 之 <xref:System.Xml.Linq.XElement> 的其中一個方法時，您可以篩選項目名稱。  
   
 ## <a name="example"></a>範例  

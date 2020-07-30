@@ -1,5 +1,6 @@
 ---
 title: '如何將字串轉換成數位-c # 程式設計手冊'
+description: '瞭解如何藉由呼叫 Parse、TryParse 或 Convert 類別方法，將字串轉換成 c # 中的數位。'
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: f1d4a0f36292acafad409bf666f861b7637cd644
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 8c46117579a5b787e5d9f3f317296d33bdd1cce1
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442198"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381966"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何將字串轉換成數位（c # 程式設計手冊）
 
@@ -56,6 +57,6 @@ ms.locfileid: "83442198"
   
 ## <a name="see-also"></a>另請參閱
 
-- [型別](./index.md)
+- [類型](./index.md)
 - [如何判斷字串是否表示數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))

@@ -3,12 +3,12 @@ title: project.json 與 csproj 比較
 description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205840"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427017"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -475,7 +475,7 @@ And it's really great!</Description>
   <!-- summary is not migrated from project.json, but you can use the <Description> property for that if needed. -->
   <PackageTags>machine learning;framework</PackageTags>
   <PackageReleaseNotes>Version 0.9.12-beta</PackageReleaseNotes>
-  <PackageIconUrl>http://numl.net/images/ico.png</PackageIconUrl>
+  <PackageIcon>ico.png</PackageIcon>
   <PackageProjectUrl>http://numl.net</PackageProjectUrl>
   <PackageLicenseUrl>https://raw.githubusercontent.com/sethjuarez/numl/master/LICENSE.md</PackageLicenseUrl>
   <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -485,7 +485,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以使用 MSBuild `<Description>` 屬性。 的值 `summary` 不會自動遷移至該屬性，因為該屬性會對應至 [`description`](#other-common-root-level-options) 元素。
+MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以使用 MSBuild `<Description>` 屬性。 的值 `summary` 不會自動遷移至該屬性，因為該屬性會對應至 [`description`](#other-common-root-level-options) 元素。  [PackageIconUrl 已被取代](/nuget/reference/msbuild-targets#packageiconurl)而改用 PackageIcon。
 
 ## <a name="scripts"></a>指令碼
 
@@ -527,7 +527,7 @@ MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以�
 }
 ```
 
-除了屬性以外，此群組中的所有設定 `System.GC.Server` 都會放入專案資料夾中名為 *.runtimeconfig.json*的檔案中，並在遷移過程中將選項提升為根物件：
+這個群組中的所有設定（屬性除外） `System.GC.Server` 都會放入專案資料夾中名為*runtimeconfig.template.js*的檔案中，而在遷移程式期間，會將選項提升至根物件：
 
 ```json
 {

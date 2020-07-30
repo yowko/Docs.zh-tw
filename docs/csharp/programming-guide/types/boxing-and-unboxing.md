@@ -1,5 +1,6 @@
 ---
 title: Boxing 和 Unboxing - C# 程式設計指南
+description: '瞭解 c # 程式設計中的裝箱和取消裝箱。 請參閱程式碼範例，並查看其他可用的資源。'
 ms.date: 07/20/2015
 f1_keywords:
 - cs.boxing
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a5bfcc79de8ba3ff66ca8aab9d86d69d89f9221
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76745421"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380692"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 和 Unboxing (C# 程式設計手冊)
 
-Boxing 是將[實值型別](../../language-reference/builtin-types/value-types.md)轉換為 `object` 類型或是由這個實值型別實作之任何介面類型的程序。 當通用語言運行時 （CLR） 為數值型別包裝時，它將值包裝在<xref:System.Object?displayProperty=nameWithType>實例中並將其存儲在託管堆中。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。 Boxing 和 unboxing 的概念是 C# 類型系統統一檢視的基礎，其中任何類型的值都可視為物件。
+Boxing 是將[實值型別](../../language-reference/builtin-types/value-types.md)轉換為 `object` 類型或是由這個實值型別實作之任何介面類型的程序。 當 common language runtime （CLR）方塊為實值型別時，它會將值包裝在實例內， <xref:System.Object?displayProperty=nameWithType> 並將其儲存在受控堆積上。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。 Boxing 和 unboxing 的概念是 C# 類型系統統一檢視的基礎，其中任何類型的值都可視為物件。
 
 在下列範例中，整數變數 `i` 會經過 *Box* 處理並且指派給 `o` 物件。
 
@@ -36,7 +37,7 @@ Boxing 是將[實值型別](../../language-reference/builtin-types/value-types.m
 
 相對於單純的指派，boxing 和 unboxing 是會耗費大量運算資源的處理序。 當實值類型經過 Box 處理時，必須配置及建構新的物件。 Unboxing 所需的轉換雖然較為簡單，但也同樣需要大量運算資源。 如需詳細資訊，請參閱[效能](../../../framework/performance/performance-tips.md)。
 
-## <a name="boxing"></a>Boxing
+## <a name="boxing"></a>Box 處理
 
 Boxing 可用來儲存記憶體回收堆積中的實值類型。 Boxing 是一種隱含轉換，可將[實值型別](../../language-reference/builtin-types/value-types.md)轉換為 `object` 類型，或是由這個實值型別實作的任何介面類型。 對實值類型進行 Boxing 處理時，會在堆積上配置物件執行個體，並將值複製到新物件中。
 
@@ -64,7 +65,7 @@ Boxing 可用來儲存記憶體回收堆積中的實值類型。 Boxing 是一�
 
 [!code-csharp[csProgGuideTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#16)]
 
-## <a name="unboxing"></a>Unboxing
+## <a name="unboxing"></a>Unbox 處理
 
 Unboxing 是將 `object` 類型明確轉換為[實值型別](../../language-reference/builtin-types/value-types.md)，或將介面類型明確轉換為實作介面之實值型別的程序。 Unboxing 作業包含：
 
@@ -98,7 +99,7 @@ Unboxing 是將 `object` 類型明確轉換為[實值型別](../../language-refe
 int j = (short) o;
 ```
 
-至：
+變更為：
 
 ```csharp
 int j = (int) o;
@@ -114,6 +115,6 @@ int j = (int) o;
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 程式設計手冊](../index.md)
 - [參考型別](../../language-reference/keywords/reference-types.md)
-- [實值型別](../../language-reference/builtin-types/value-types.md)
+- [值類型](../../language-reference/builtin-types/value-types.md)

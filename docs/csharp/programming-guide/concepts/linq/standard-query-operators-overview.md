@@ -1,13 +1,14 @@
 ---
 title: 標準查詢運算子概觀 (C#)
+description: 'LINQ 標準查詢運算子提供查詢功能，包括 c # 中的篩選、投射、匯總和排序。'
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 095a0b7a7a8265f235d28a4634ea82cdcd7a60c0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990005"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302317"
 ---
 # <a name="standard-query-operators-overview-c"></a>標準查詢運算子概觀 (C#)
 「標準查詢運算子」** 是形成 LINQ 模式的方法。 這些方法大多會在序列上運作，而序列是指其類型會實作 <xref:System.Collections.Generic.IEnumerable%601> 介面或 <xref:System.Linq.IQueryable%601> 介面的物件。 標準查詢運算子所提供的查詢功能包括篩選、投影、彙總、排序等等。  

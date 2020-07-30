@@ -1,5 +1,6 @@
 ---
 title: 索引子 - C# 程式設計手冊
+description: 'C # 中的索引子可讓類別或結構實例如陣列進行索引。 您可以設定或取得索引值，而不需指定類型或實例成員。'
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 539b2861e975c0c758c43c8a5d4cca86e3d2bb2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 07e0ae4294373817e10bb79920c73ec1e275d169
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167533"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303110"
 ---
 # <a name="indexers-c-programming-guide"></a>索引子 (C# 程式設計手冊)
 
@@ -53,7 +54,7 @@ ms.locfileid: "79167533"
   
 - 索引子可具有一個以上的型式參數，例如，存取二維陣列時。  
   
-## <a name="BKMK_RelatedSections"></a>相關部分  
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>相關章節  
   
 - [使用索引子](./using-indexers.md)  
   
@@ -61,7 +62,7 @@ ms.locfileid: "79167533"
   
 - [屬性與索引子之間的比較](./comparison-between-properties-and-indexers.md)  
   
-- [限制存取子的存取範圍](../classes-and-structs/restricting-accessor-accessibility.md)  
+- [限制存取子協助工具](../classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
@@ -69,5 +70,5 @@ ms.locfileid: "79167533"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [屬性](../classes-and-structs/properties.md)

@@ -1,13 +1,14 @@
 ---
 title: 命名空間概觀 (LINQ to XML)
+description: 為您自己介紹命名空間、XName 類別、XNamespace 類別，以及 XML 名稱的其他層面。
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-ms.openlocfilehash: 010d8661afe063c06f042084f6b320acb1235ac4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 56dca481dd5f3066fa5359fc57b3311cf2569ee0
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241431"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300159"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>命名空間概觀 (LINQ to XML)
 

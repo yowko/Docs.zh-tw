@@ -1,16 +1,17 @@
 ---
 title: 泛型型別參數 - C# 程式設計指南
+description: '瞭解 c # 中的泛型型別定義，其中型別參數是用戶端為泛型型別實例指定之型別的預留位置。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 8412980d35989c445d2e0a44c0b9f35e6087bb8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc37029378ac1e9ec194d95b561787761d69a9fd
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712178"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299249"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>泛型型別參數 (C# 程式設計手冊)
 
@@ -41,6 +42,6 @@ ms.locfileid: "75712178"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [泛型](./index.md)
 - [C++ 範本和 C# 泛型之間的差異](./differences-between-cpp-templates-and-csharp-generics.md)

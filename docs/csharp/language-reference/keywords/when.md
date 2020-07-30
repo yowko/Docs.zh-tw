@@ -7,19 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b041ca3a821f45dd63ce3f6bee7a920eb495651
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712828"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426991"
 ---
 # <a name="when-c-reference"></a>when (C# 參考)
 
-您可以使用 `when` 內容關鍵字，在兩個內容中指定篩選條件︰
+您可以使用 `when` 內容關鍵字來指定下列環境中的篩選準則：
 
 - 在 [try/catch](try-catch.md) 或 [try/catch/finally](try-catch-finally.md) 區塊的 `catch` 陳述式中。
 - 在 [switch](switch.md) 陳述式的 `case` 標籤中。
+- [ `switch` 運算式](../operators/switch-expression.md)中的。
 
 ## <a name="when-in-a-catch-statement"></a>`catch` 陳述式中的 `when`
 
@@ -51,6 +52,6 @@ case (expr) when (when-condition):
 
 ## <a name="see-also"></a>另請參閱
 
-- [Switch 陳述式](switch.md)
+- [switch 陳述式](switch.md)
 - [try/catch 陳述式](try-catch.md)
-- [嘗試/捕獲/最後陳述](try-catch-finally.md)
+- [try/catch/finally 語句](try-catch-finally.md)

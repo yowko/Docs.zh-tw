@@ -1,5 +1,6 @@
 ---
 title: 建立和擲回例外狀況 - C# 程式設計手冊
+description: 瞭解如何建立和擲回例外狀況。 例外狀況是用來表示在執行程式時發生錯誤。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - catching exceptions [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: f775a0917560a219f24329adcb1542f605d47dc2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ab10dbf686def8d169ef3239492e3b618e9d297
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712295"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302044"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>建立和擲回例外狀況 (C# 程式設計手冊)
 例外狀況是用來表示執行程式時發生錯誤。 建立描述錯誤的例外狀況物件，然後使用 [throw](../../language-reference/keywords/throw.md) 關鍵字「擲回」**。 執行階段接著會搜尋最相容的例外狀況處理常式。  
@@ -67,7 +68,7 @@ ms.locfileid: "75712295"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [例外狀況和例外狀況處理](./index.md)
 - [例外狀況階層](../../../standard/exceptions/index.md)
 - [例外狀況處理](./exception-handling.md)

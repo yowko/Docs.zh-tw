@@ -1,13 +1,14 @@
 ---
 title: XDocument 類別概觀 (C#)
+description: 'C # 中的 XDocument 類別包含有效 XML 檔所需的資訊，包括 XML 宣告、處理指示和批註。'
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: de49dc071d22dd77dddea29ca114663261e3edda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d522cef25e99e4a5ea54e644855c8dfa7a05f4a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590852"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302187"
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument 類別概觀 (C#)
 本主題說明 <xref:System.Xml.Linq.XDocument> 類別。  

@@ -1,15 +1,16 @@
 ---
 title: 相等比較 - C# 程式設計指南
+description: 瞭解相等比較。 請參閱「實值相等」和「參考相等」的描述，並查看其他資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 46d6881955252b21de6a92e25d65d1f76c8ec06c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d10d1851978ef25b7b02503f196cd2a436aab608
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241912"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381680"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等比較 (C# 程式設計指南)
 
@@ -50,7 +51,7 @@ if (b == a)
   
 ## <a name="related-topics"></a>相關主題  
   
-|Title|描述|  
+|標題|描述|  
 |-----------|-----------------|  
 |[如何測試參考是否相等（識別）](./how-to-test-for-reference-equality-identity.md)|描述如何判斷兩個變數是否具有參考相等。|  
 |[如何定義類型的實值相等性](./how-to-define-value-equality-for-a-type.md)|描述如何提供類型實值相等的自訂定義。|  

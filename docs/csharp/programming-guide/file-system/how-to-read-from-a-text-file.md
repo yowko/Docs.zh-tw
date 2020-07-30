@@ -1,5 +1,6 @@
 ---
 title: '如何從文字檔讀取-c # 程式設計手冊'
+description: 瞭解如何使用 File 類別的靜態方法，從文字檔讀取。 查看程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 f1_keywords:
 - StreamReader.ReadToEnd
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 8f79d22a86390ca931b05262e50865d852c154c7
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 80ac6f8412f456b23d05ee87882dca8e16a132c3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241743"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301654"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>如何從文字檔讀取（c # 程式設計手冊）
 這個範例會使用 <xref:System.IO.File?displayProperty=nameWithType> 類別中的靜態方法 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A>，來讀取文字檔的內容。  

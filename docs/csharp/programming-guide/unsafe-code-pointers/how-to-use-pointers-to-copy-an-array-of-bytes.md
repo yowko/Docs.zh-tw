@@ -1,16 +1,17 @@
 ---
 title: '如何使用指標來複製位元組陣列-c # 程式設計手冊'
+description: 瞭解如何使用指標來複製位元組陣列。 請參閱程式碼範例和其他可用的資源。
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 8c1afc06fb567a923d604ad53dc26f94178a8d60
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 70ab1441d25ea69afb2244bd94bd404a3e32838d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397411"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381784"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>如何使用指標來複製位元組陣列（c # 程式設計手冊）
 
@@ -27,6 +28,6 @@ ms.locfileid: "84397411"
 ## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)
-- [不安全的程式碼和指標](index.md)
+- [Unsafe 程式碼和指標](index.md)
 - [-unsafe (C# 編譯器選項)](../../language-reference/compiler-options/unsafe-compiler-option.md)
 - [記憶體回收](../../../standard/garbage-collection/index.md)

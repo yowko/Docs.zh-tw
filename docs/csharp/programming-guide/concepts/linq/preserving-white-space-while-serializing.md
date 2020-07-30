@@ -1,13 +1,14 @@
 ---
 title: 序列化時保留空白字元
+description: 瞭解如何在使用 System.xml.linq.xelement> 和 XDocument 類別中的方法序列化 XML 樹狀結構時控制空白字元。
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 6d357d40c13a66a152b3c8bb5f61e3a3374c4055
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 01e68671e2fde1a2b5b1d0bc429841077ba0205f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66484071"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303409"
 ---
 # <a name="preserving-white-space-while-serializing"></a>序列化時保留空白字元
 本主題描述如何在序列化 XML 樹狀結構時控制空白字元。  

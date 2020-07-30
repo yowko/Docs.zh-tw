@@ -1,5 +1,6 @@
 ---
-title: <typeparam> - C# 程式設計指南
+title: '<typeparam> -C # 程式設計指南'
+description: 瞭解 XML <typeparam> 的相片或視訊。 這個標記用於泛型型別或方法宣告的批註中，以描述型別參數。
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e5333e384e8c77b500f74ab7c6038146df6e2c0
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793358"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380783"
 ---
-# <a name="typeparam-c-programming-guide"></a>\<類型參數>（C# 程式設計指南）
+# <a name="typeparam-c-programming-guide"></a>\<typeparam>（C # 程式設計手冊）
 
 ## <a name="syntax"></a>語法
 
@@ -40,7 +41,7 @@ ms.locfileid: "76793358"
 
 `<typeparam>` 標記的文字將會顯示於 IntelliSense，即 [Object Browser Window](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) (物件瀏覽器視窗) 程式碼註解 Web 報告。
 
-使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)編譯，以處理檔的文檔注釋。
+使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)進行編譯，以處理檔案的檔批註。
 
 ## <a name="example"></a>範例
 
@@ -48,6 +49,6 @@ ms.locfileid: "76793358"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../language-reference/index.md)
-- [C# 程式設計指南](../index.md)
+- [C# 參考資料](../../language-reference/index.md)
+- [C# 程式設計手冊](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

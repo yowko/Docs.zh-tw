@@ -1,5 +1,6 @@
 ---
 title: 逐步解說：在 C# 中撰寫查詢 (LINQ)
+description: '本逐步解說說明如何在 LINQ 查詢運算式中使用 c # 語言功能。 本文使用 Visual Studio 做為開發環境。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d49cb725c9ce9a417f78f638795e98a75a086893
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73418059"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302213"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
 本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。  
@@ -115,7 +116,7 @@ ms.locfileid: "73418059"
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     有關詳細資訊，請參閱[訂單子句](../../../language-reference/keywords/orderby-clause.md)。  
+     如需詳細資訊，請參閱[orderby 子句](../../../language-reference/keywords/orderby-clause.md)。  
   
 #### <a name="to-group-the-results"></a>若要將結果分組  
   
@@ -129,7 +130,7 @@ ms.locfileid: "73418059"
   
 3. 執行應用程式，並在 [主控台]**** 視窗中檢視結果。  
   
-     有關詳細資訊，請參閱[組子句](../../../language-reference/keywords/group-clause.md)。  
+     如需詳細資訊，請參閱[group 子句](../../../language-reference/keywords/group-clause.md)。  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>若要將變數設為隱含類型  
   
@@ -153,7 +154,7 @@ ms.locfileid: "73418059"
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     有關詳細資訊，請參閱[讓子句](../../../language-reference/keywords/let-clause.md)。  
+     如需詳細資訊，請參閱[let 子句](../../../language-reference/keywords/let-clause.md)。  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>若要在查詢運算式中使用方法語法  
   

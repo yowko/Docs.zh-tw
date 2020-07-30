@@ -1,19 +1,20 @@
 ---
 title: XAttribute 類別概觀 (C#)
+description: '屬性是與專案相關聯的名稱/值配對。 System.xml.linq.xattribute> 代表 XML 屬性。 瞭解如何在 c # 中使用 LINQ to XML 中的屬性。'
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a19de601041bbb20241c959e909483b97bcf797
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635661"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302226"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 類別概觀 (C#)
 屬性是與項目相關聯的成對名稱/值。 <xref:System.Xml.Linq.XAttribute> 類別表示 XML 屬性。  
   
 ## <a name="overview"></a>概觀  
- 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中使用屬性的方式類似於使用項目。 其建構函式類似。 您用來擷取其集合的方法也類似。 屬性集合的 LINQ 查詢運算式與元素集合的 LINQ 查詢運算式非常相似。  
+ 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中使用屬性的方式類似於使用項目。 其建構函式類似。 您用來擷取其集合的方法也類似。 屬性集合的 LINQ 查詢運算式看起來非常類似于元素集合的 LINQ 查詢運算式。  
   
  系統會保留將屬性加入到項目的順序。 也就是說，當您逐一查看屬性時，您會看到加入這些屬性的相同順序。  
   

@@ -1,13 +1,14 @@
 ---
 title: 排序資料 (C#)
+description: '瞭解在 c # 中以 LINQ 執行排序作業的排序作業和標準查詢運算子方法。'
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 29a5e3e685bdc73536961b7783f4986796b46bdf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5feeb0e2229fc370fdcb9608817f41832bffd7cc
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167903"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302330"
 ---
 # <a name="sorting-data-c"></a>排序資料 (C#)
 排序作業會根據一個或多個屬性來排序序列的項目。 第一個排序準則會執行元素的主要排序； 您可以藉由指定第二個排序準則來排序每一個主要排序群組內的元素。  
@@ -132,4 +133,4 @@ foreach (string str in query)
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
 - [orderby 子句](../../../language-reference/keywords/orderby-clause.md)
 - [排序 join 子句的結果](../../../linq/order-the-results-of-a-join-clause.md)
-- [如何按任何單詞或欄位 （LINQ） （C#） 對文本資料進行排序或篩選](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [如何依任何字或欄位排序或篩選文字資料（LINQ）（c #）](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

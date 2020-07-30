@@ -1,5 +1,6 @@
 ---
-title: 如何在十六進位字串和數數值型別之間進行轉換 - C# 程式設計指南
+title: '如何在十六進位字串和數位類型之間轉換-c # 程式設計手冊'
+description: 瞭解如何在十六進位字串和數位類型之間轉換。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 0e1f6ad2606b367d369c1c644c947831b2aa8289
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a49c4a9ee1fc19134d434d42b1eae59376c89fa4
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75698517"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381797"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>如何在十六進位字串和數數值型別之間進行轉換（C# 程式設計指南）
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>如何在十六進位字串和數位類型之間轉換（c # 程式設計手冊）
 這些範例示範如何執行下列工作：  
   
 - 取得[字串](../../language-reference/builtin-types/reference-types.md)中每個字元的十六進位值。  
@@ -33,7 +34,7 @@ ms.locfileid: "75698517"
  [!code-csharp[csProgGuideTypes#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#30)]  
   
 ## <a name="example"></a>範例  
- 本例會剖析十六進位值的 `string`，並輸出對應至每個十六進位值的字元。 首先，它調用[Split（Char\[\]）](xref:System.String.Split(System.Char[]))方法，以在陣列中作為單個`string`獲取每個十六進位值。 然後，它<xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29>調用將十六進位值轉換為表示為[int](../../language-reference/builtin-types/integral-numeric-types.md)的十進位值。它顯示了兩種不同的方法來獲取與該字元代碼對應的字元。 第一個技巧使用 <xref:System.Char.ConvertFromUtf32%28System.Int32%29>，傳回對應於整數引數作為 `string` 的字元。 第二個技巧將 `int` 明確轉換成 [char](../../language-reference/builtin-types/char.md)。  
+ 本例會剖析十六進位值的 `string`，並輸出對應至每個十六進位值的字元。 首先，它會呼叫[Split （Char \[ \] ）](xref:System.String.Split(System.Char[]))方法，以將每個十六進位值取得為 `string` 陣列中的個人。 然後它會呼叫 <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> ，以將十六進位值轉換成以[int](../../language-reference/builtin-types/integral-numeric-types.md)表示的十進位值。它會顯示兩種不同的方式，以取得與該字元碼對應的字元。 第一個技巧使用 <xref:System.Char.ConvertFromUtf32%28System.Int32%29>，傳回對應於整數引數作為 `string` 的字元。 第二個技巧將 `int` 明確轉換成 [char](../../language-reference/builtin-types/char.md)。  
   
  [!code-csharp[csProgGuideTypes#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#31)]  
   
@@ -54,6 +55,6 @@ ms.locfileid: "75698517"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
-- [型別](./index.md)
+- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md) \(部分機器翻譯\)
+- [類型](./index.md)
 - [如何判斷字串是否表示數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

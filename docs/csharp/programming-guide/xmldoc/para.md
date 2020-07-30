@@ -1,5 +1,6 @@
 ---
 title: '<para> -C # 程式設計指南'
+description: 瞭解 XML <para> 的相片或視訊。 此標記可讓您將結構新增至另一個標記中的文字，例如 <summary>, <remarks>或 <returns>.
 ms.date: 07/20/2015
 f1_keywords:
 - <para>
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: d1fe81b1752d066c6b2e1ffe27f0c43fc4068edf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 146078bcb556b4085724ddcdac561ea868ab0481
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287294"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381849"
 ---
 # <a name="para-c-programming-guide"></a>\<para>（C # 程式設計手冊）
 

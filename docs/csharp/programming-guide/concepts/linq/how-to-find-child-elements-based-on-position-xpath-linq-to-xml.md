@@ -1,15 +1,16 @@
 ---
-title: 如何根據位置查找子項目（XPath-LINQ 到 XML）（C#）
+title: '如何尋找以位置為基礎的子項目（XPath-LINQ to XML）（c #）'
+description: 瞭解如何使用 XPath 運算式根據位置尋找子項目。 請參閱使用範例 XML 檔案的程式碼範例。
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: cc0ff5639345d36ebb0423a12b66de8f1a70ade1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2603d3ac94ace645bde1ce85a43a43af7321014e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141115"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301667"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>如何根據位置查找子項目（XPath-LINQ 到 XML）（C#）
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>如何尋找以位置為基礎的子項目（XPath-LINQ to XML）（c #）
 有時候您會想要根據項目的位置尋找這些項目。 您可能想要尋找第二個項目，或者想要尋找第三到第五個項目。  
   
  XPath 運算式為：  

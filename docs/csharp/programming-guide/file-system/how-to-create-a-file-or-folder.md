@@ -1,5 +1,6 @@
 ---
 title: '如何建立檔案或資料夾-c # 程式設計手冊'
+description: 瞭解如何以程式設計方式建立檔案或資料夾。 您可以建立資料夾、子資料夾、子資料夾中的檔案，以及將資料寫入該檔案。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 5efe3b7dc600645488816d6f931df57fc236efc9
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: f5641dc765b1a2d62adb76babe3f111730d4550b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241639"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302681"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何建立檔案或資料夾（c # 程式設計手冊）
 您可以程式設計的方式在電腦上建立資料夾、建立子資料夾、在子資料夾中建立檔案，以及將資料寫入檔案。  

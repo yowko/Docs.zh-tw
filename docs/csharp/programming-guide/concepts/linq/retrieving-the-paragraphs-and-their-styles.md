@@ -1,13 +1,14 @@
 ---
 title: 擷取段落及其樣式 (C#)
+description: 瞭解如何撰寫可抓取段落的查詢，然後識別每個段落的樣式。
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 47127b6f1d6bfaa0d8d93333882a0d0b59f1bae6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94d01a13485f70bc9d9cef55b5f390c3b30d7f14
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168293"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303396"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>擷取段落及其樣式 (C#)
 在此範例中，我們會撰寫一個從 WordprocessingML 文件擷取段落節點的查詢。 它也可以識別每個段落的樣式。  

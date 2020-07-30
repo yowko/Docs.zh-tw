@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: a0cbead27e52af3114d9c44fd19c966e665a2850
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251201"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427004"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -72,8 +72,8 @@ ms.locfileid: "87251201"
 
 | 元素           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | 不適用                      |
-| 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | 不適用                      |
+| 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
+| 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
 | 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx   |
 
 > [!NOTE]
@@ -288,7 +288,7 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 
-布林值，指定在安裝套件時，用戶端是否必須提示取用者接受套件授權。 預設為 `false`。
+布林值，指定在安裝套件時，用戶端是否必須提示取用者接受套件授權。 預設值為 `false`。
 
 ### <a name="developmentdependency"></a>DevelopmentDependency
 
@@ -342,9 +342,9 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 適用于封裝之授權的 URL。 (_自 Visual Studio 15.9.4、.NET SDK 2.1.502 及 2.2.101 起淘汰_)
 
-### <a name="packageiconurl"></a>PackageIconUrl
+### <a name="packageicon"></a>PackageIcon
 
-具有透明背景之 64x64 映像的 URL，該映像會用作套件在 UI 顯示中的圖示。
+封裝中要當做封裝圖示使用之影像的路徑。 閱讀更多[ `icon` 中繼資料](/nuget/reference/nuspec#icon)的相關資訊。 [PackageIconUrl 已被取代](/nuget/reference/msbuild-targets#packageiconurl)而改用 PackageIcon。
 
 ### <a name="packagereleasenotes"></a>PackageReleaseNotes
 
@@ -400,7 +400,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
-此布林值會指定是否有任何類型為 `Content` 的項目會自動包含於所產生的套件中。 預設為 `true`。
+此布林值會指定是否有任何類型為 `Content` 的項目會自動包含於所產生的套件中。 預設值為 `true`。
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 

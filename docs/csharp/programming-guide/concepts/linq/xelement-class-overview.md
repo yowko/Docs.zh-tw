@@ -1,13 +1,14 @@
 ---
 title: XElement 類別概觀 (C#)
+description: 'System.xml.linq.xelement> 類別代表 c # 中的 XML 元素。 這是 LINQ to XML 中的其中一個基礎類別。 瞭解 System.xml.linq.xelement> 所提供的功能。'
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: 6a93dd4bdaf16fddff800b08b0f3146ecb63f9b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f76f51703de054443f47531294777b43a9c0b004
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167890"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302174"
 ---
 # <a name="xelement-class-overview-c"></a>XElement 類別概觀 (C#)
 <xref:System.Xml.Linq.XElement> 類別是 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的其中一個基本類別。 它代表 XML 項目。 您可以使用這個類別來建立項目；變更項目的內容；加入、變更或刪除子項目；將屬性加入到項目中；或以文字格式序列化項目的內容。 您也可以與 <xref:System.Xml?displayProperty=nameWithType> 中的其他類別相互溝通，例如，<xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> 和 <xref:System.Xml.Xsl.XslCompiledTransform>。  
@@ -43,7 +44,7 @@ XElement contacts =
     );  
 ```  
   
- 創建 XML 樹的另一種非常常見的技術涉及使用 LINQ 查詢的結果來填充 XML 樹，如以下示例所示：  
+ 建立 XML 樹狀結構的另一個非常常見的技術，包括使用 LINQ 查詢的結果來填入 XML 樹狀結構，如下列範例所示：  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -81,12 +82,12 @@ Console.WriteLine(xmlTree);
  如需詳細資訊，請參閱[序列化 XML 樹狀結構 (C#)](./preserving-white-space-while-serializing.md)。  
   
 ## <a name="retrieving-xml-data-via-axis-methods"></a>透過座標軸方法擷取 XML 資料  
- 您可以使用座標軸方法來擷取屬性、子項目、子系項目以及祖系項目。 LINQ 查詢使用軸方法操作，並提供幾種靈活而強大的方法來流覽和處理 XML 樹。  
+ 您可以使用座標軸方法來擷取屬性、子項目、子系項目以及祖系項目。 LINQ 查詢會在座標軸方法上運作，並提供數個彈性且功能強大的方式來流覽和處理 XML 樹狀結構。  
   
  如需詳細資訊，請參閱 [LINQ to XML 座標軸 (C#)](./linq-to-xml-axes-overview.md)。  
   
 ## <a name="querying-xml-trees"></a>查詢 XML 樹狀  
- 您可以編寫 LINQ 查詢，從 XML 樹中提取資料。  
+ 您可以撰寫從 XML 樹狀結構中解壓縮資料的 LINQ 查詢。  
   
  如需詳細資訊，請參閱[查詢 XML 樹狀結構 (C#)](./how-to-find-an-element-with-a-specific-attribute.md)。  
   

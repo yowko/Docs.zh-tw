@@ -1,17 +1,18 @@
 ---
-title: 如何在查詢中使用 lambda 運算式 - C# 程式設計指南
+title: '如何在查詢中使用 lambda 運算式-c # 程式設計手冊'
+description: 瞭解如何在查詢中使用 lambda 運算式。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 501e67011707e2d165a3b9c1ff9f206db7f55448
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711957"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381628"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>如何在查詢中使用 lambda 運算式（C# 程式設計指南）
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>如何在查詢中使用 lambda 運算式（c # 程式設計手冊）
 您不會在查詢語法中直接使用 Lambda 運算式，而是在方法呼叫中使用它們，因此查詢運算式可以包含方法呼叫。 事實上，某些查詢作業只能以方法語法來表示。 如需查詢語法與方法語法之間差異的詳細資訊，請參閱 [LINQ 中的查詢語法及方法語法](../concepts/linq/query-syntax-and-method-syntax-in-linq.md)。  
   
 ## <a name="example"></a>範例  
@@ -27,9 +28,9 @@ ms.locfileid: "75711957"
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 要運行此代碼，請將 該方法複製並粘貼到`StudentClass`Query 中提供[的物件集合](../../linq/query-a-collection-of-objects.md)中，並從 方法`Main`調用它。
+ 若要執行此程式碼，請將方法複製並貼到 `StudentClass` [查詢物件集合](../../linq/query-a-collection-of-objects.md)中所提供的，並從方法呼叫它 `Main` 。
   
 ## <a name="see-also"></a>另請參閱
 
-- [蘭姆達運算式](./lambda-expressions.md)
+- [Lambda 運算式](./lambda-expressions.md)
 - [運算式樹狀架構 (C#)](../concepts/expression-trees/index.md)

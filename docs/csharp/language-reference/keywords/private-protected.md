@@ -1,13 +1,15 @@
 ---
 title: private protected - C# 參考
 ms.date: 11/15/2017
+f1_keywords:
+- privateprotected_CSharpKeyword
 author: sputier
-ms.openlocfilehash: 03fa90582d096919f2e6546fae2fde28e486fe41
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 94ef55d7e13841f81b036f52659b215e22a3a0d7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463047"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301797"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# 參考)
 
@@ -61,7 +63,7 @@ class DerivedClass2 : BaseClass
 
 在第二個檔案中，嘗試當作 `DerivedClass2` 的繼承成員存取 `myValue` 會產生錯誤，因為它只能由 Assembly1 中的衍生類型存取。
 
-如果`Assembly1.cs`包含<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>該`Assembly2`名稱 ,則`DerivedClass1`派生類 將有`private protected``BaseClass`權訪問 在中 聲明的成員。 `InternalsVisibleTo`使`private protected`成員對其他程式集中的派生類可見。
+如果 `Assembly1.cs` 包含 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 該名稱 `Assembly2` ，衍生的類別 `DerivedClass1` 將可存取中所宣告的 `private protected` 成員 `BaseClass` 。 `InternalsVisibleTo`讓 `private protected` 其他元件中的衍生類別可以看見成員。
 
 結構成員不可以是 `private protected`，因為無法繼承結構。
 
@@ -71,13 +73,13 @@ class DerivedClass2 : BaseClass
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 編程指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [存取修飾詞](access-modifiers.md)
 - [協助工具層級](accessibility-levels.md)
 - [修飾詞](index.md)
-- [公共](public.md)
+- [public](public.md)
 - [私人](private.md)
-- [internal](internal.md)
+- [內部](internal.md)
 - [internal virtual 關鍵字的安全性考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

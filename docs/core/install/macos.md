@@ -4,12 +4,12 @@ description: 瞭解您可以在哪些版本的 macOS 上安裝 .NET Core。
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 951e9b6a64d55274729e233b4a2d7728c75d05d4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308919"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302928"
 ---
 # <a name="install-net-core-on-macos"></a>在 macOS 上安裝 .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "86308919"
 >
 > - [安裝在 Windows 上](windows.md)
 > - [在 macOS 上安裝](macos.md)
-> - [安裝在 Linux 上](linux.md)
+> - [在 Linux 上安裝](linux.md)
 
 在本文中，您將瞭解如何在 macOS 上安裝 .NET Core。 .NET Core 是由執行時間和 SDK 所組成。 執行時間是用來執行 .NET Core 應用程式，且不一定會包含在應用程式中。 SDK 可用來建立 .NET Core 應用程式和程式庫。 .NET Core 執行時間一律會與 SDK 一起安裝。
 
@@ -200,7 +200,7 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 
 - [如何檢查是否已安裝 .Net Core](how-to-detect-installed-versions.md?pivots=os-macos)。
 - 使用[MacOS Catalina notarization](macos-notarization-issues.md)。
-- [教學課程：開始使用 macOS](../tutorials/using-on-mac-vs.md)。
+- [教學課程：開始使用 macOS](../tutorials/with-visual-studio-mac.md)。
 - [教學課程：使用 Visual Studio Code 建立新的應用程式](../tutorials/with-visual-studio-code.md)。
 - [教學課程：容器化 .Net Core 應用程式](../docker/build-container.md)。
 

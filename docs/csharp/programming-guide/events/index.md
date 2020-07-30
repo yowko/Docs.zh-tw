@@ -1,17 +1,18 @@
 ---
 title: 事件 - C# 程式設計手冊
+description: 深入瞭解事件。 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: e15c3d124b4d1c30e2f9bb9f44b40e25b6a72346
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 3160d1e381c6cb3af0f017538f9555b3fded9910
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240716"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302070"
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
 事件可讓 [類別](../../language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送（或*引發*）事件的類別稱為「*發行者*」，而接收（或*處理*）事件的類別稱為「*訂閱者*」。  

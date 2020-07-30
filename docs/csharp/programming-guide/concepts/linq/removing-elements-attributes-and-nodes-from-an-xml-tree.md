@@ -1,13 +1,14 @@
 ---
 title: 從 XML 樹狀結構移除項目、屬性和節點 (C#)
+description: 瞭解如何從 XML 樹狀結構移除專案、屬性和節點。 查看移除方法和程式碼範例的清單。
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: badaa6bab35367d62a73f56c5221cb7d6d4a45f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e753c3d96c4cbc050b08076ca8bff8c17b2e252
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591268"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300042"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>從 XML 樹狀結構移除項目、屬性和節點 (C#)
 
@@ -19,7 +20,7 @@ ms.locfileid: "69591268"
 
 下列方法會從 XML 樹狀移除節點和屬性。
 
-|方法|描述|
+|方法|說明|
 |------------|-----------------|
 |<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|從其父代移除 <xref:System.Xml.Linq.XAttribute>。|
 |<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|從 <xref:System.Xml.Linq.XContainer> 移除子節點。|

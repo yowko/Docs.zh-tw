@@ -1,15 +1,16 @@
 ---
 title: 命令列引數 - C# 程式設計指南
+description: 瞭解命令列引數。 請參閱在主控台應用程式中使用命令列引數的範例。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: c203716d9bb8298c934a999a496793c294949ddb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007750"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381914"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 
@@ -65,7 +66,7 @@ long num = Convert.ToInt64(s);
   
      `csc Factorial.cs`  
   
-     如果您的應用程式沒有任何編譯錯誤，則會建立名為*階乘*的可執行檔。
+     如果您的應用程式沒有任何編譯錯誤，則會建立名為*Factorial.exe*的可執行檔。
   
 4. 輸入下列命令以計算 3 的階乘：
   

@@ -1,13 +1,14 @@
 ---
 title: '如何從 XML 檔案讀取物件資料（c #）'
+description: '此 c # 範例會讀取先前使用 XmlSerializer 類別寫入至 XML 檔案的物件資料。'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241873"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302785"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>如何從 XML 檔案讀取物件資料（c #）
 此範例會讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來寫入 XML 檔案的物件資料。  

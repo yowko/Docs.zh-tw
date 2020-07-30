@@ -1,17 +1,18 @@
 ---
 title: '檔標記的分隔符號-c # 程式設計手冊'
+description: 瞭解檔標記的分隔符號。 分隔符號會向編譯器指出檔批註的開始和結束位置。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], delimiters
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: db8d43edc8b7cb0066fd3afcb75a1852603e86c4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3191e32b0ff2dbde004abaab0b699cd61fcbb150
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594422"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381979"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>檔標記的分隔符號（c # 程式設計手冊）
 
@@ -82,7 +83,7 @@ ms.locfileid: "84594422"
     ```
     <!-- markdownlint-enable MD010 -->
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計手冊](../index.md)
 - [XML 文件註解](./index.md)

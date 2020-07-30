@@ -1,13 +1,15 @@
 ---
 title: protected internal - C# 參考
 ms.date: 11/15/2017
+f1_keywords:
+- protectedinternal_CSharpKeyword
 author: sputier
-ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4067da93bcceba0fa3e4a14aa58b4cde812412f3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713192"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301784"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# 參考)
 
@@ -67,11 +69,11 @@ class DerivedClass : BaseClass
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [存取修飾詞](access-modifiers.md)
-- [協助工具級別](accessibility-levels.md)
+- [協助工具層級](accessibility-levels.md)
 - [修飾詞](index.md)
 - [public](public.md)
 - [私人](private.md)

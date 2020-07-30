@@ -1,16 +1,17 @@
 ---
 title: 固定大小緩衝區 - C# 程式設計指南
+description: 瞭解固定大小的緩衝區。 固定大小緩衝區是用來撰寫與其他語言的資料來源互通的方法。
 ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 932ff3d57995ce47c4b74e8e888a479f0d09d0ed
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1d4f5068121cdc98976954f2d99f4ac020c3b2a8
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397424"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381238"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小緩衝區 (C# 程式設計手冊)
 
@@ -32,7 +33,7 @@ private fixed char name[30];
 
 [!code-csharp[Struct with embedded inline array](snippets/FixedKeywordExamples.cs#7)]
 
-128 個元素的 `char` 陣列大小為 256 個位元組。 不論編碼為何，在固定大小的 [char](../../language-reference/builtin-types/char.md) 緩衝區中，每個字元一律會有兩個位元組。 即使 char 緩衝區使用 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 封送處理至 API 方法或結構也一樣。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.CharSet> 。
+128 個元素的 `char` 陣列大小為 256 個位元組。 不論編碼為何，在固定大小的 [char](../../language-reference/builtin-types/char.md) 緩衝區中，每個字元一律會有兩個位元組。 即使 char 緩衝區使用 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 封送處理至 API 方法或結構也一樣。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.CharSet>。
 
 上述範例示範如何存取 `fixed` 欄位而無需進行釘選，這是從 C# 7.3 開始可供使用的功能。
 
@@ -75,6 +76,6 @@ internal struct Buffer
 ## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)
-- [不安全的程式碼和指標](index.md)
+- [Unsafe 程式碼和指標](index.md)
 - [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)
 - [互通性](../interop/index.md)

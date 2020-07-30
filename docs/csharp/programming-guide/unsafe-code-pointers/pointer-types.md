@@ -1,15 +1,16 @@
 ---
 title: 指標類型 - C# 程式設計手冊
+description: 瞭解指標類型。 查看不同指標的範例、程式碼範例，並查看其他可用的資源。
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 492b37460c05ffbc82e020facb354be22706f8d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9c62a31f9a4a090fe56fb10ac45fe2f93f1b036e
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396255"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382031"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 
@@ -63,7 +64,7 @@ int* myVariable;
 
 下表所列出的運算子和陳述式可以用於 unsafe 內容中的指標：
 
-|運算子/陳述式|使用|
+|運算子/陳述式|用途|
 |-------------------------|---------|
 |`*`|執行指標間接取值。|
 |`->`|透過指標存取結構的成員。|
@@ -84,7 +85,7 @@ int* myVariable;
 ## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)
-- [不安全的程式碼和指標](index.md)
+- [Unsafe 程式碼和指標](index.md)
 - [指標轉換](pointer-conversions.md)
 - [參考型別](../../language-reference/keywords/reference-types.md)
 - [值類型](../../language-reference/builtin-types/value-types.md)

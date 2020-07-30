@@ -1,15 +1,16 @@
 ---
-title: 如何使用注釋在 XSLT 樣式 （C#） 中將 LINQ 轉換為 XML 樹
+title: '如何使用批註以 XSLT 樣式轉換 LINQ to XML 樹狀結構（c #）'
+description: 瞭解如何使用批註，以 XSLT 樣式轉換 LINQ to XML 樹狀結構。 請參閱使用 XForm 函數轉換樹狀結構的範例。
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 7d6d646bb9b7b344750c22cb24bc81999da5210d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 844ca08cb2c6b47f7803d388663daeacb65bdb68
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168553"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302876"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>如何使用注釋在 XSLT 樣式 （C#） 中將 LINQ 轉換為 XML 樹
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>如何使用批註以 XSLT 樣式轉換 LINQ to XML 樹狀結構（c #）
 附註可用於簡化 XML 樹狀的轉換。  
   
  有些 XML 文件為「中央具有混合內容的文件」。 使用這類文件時，您不一定要知道項目子節點的組織結構。 例如，包含文字的節點類似如下：  

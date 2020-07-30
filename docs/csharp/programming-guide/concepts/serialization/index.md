@@ -1,12 +1,13 @@
 ---
 title: 序列化 (C#)
+description: 序列化會將物件轉換成位元組資料流程，以儲存物件或將它傳送至記憶體、資料庫或檔案。
 ms.date: 01/02/2020
-ms.openlocfilehash: b2532ccf281fdfaa951d56675066f1e239f9f480
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b2b3105887ad6f000fcba895452a483881ae5a09
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241977"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302772"
 ---
 # <a name="serialization-c"></a>序列化 (C#)
 
@@ -77,7 +78,7 @@ XML 序列化會將物件的公用欄位和屬性，或是方法的參數和傳�
 
 ## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a> 相關主題和範例  
 
-[System.web. Text. Json 總覽](../../../../standard/serialization/system-text-json-overview.md)說明如何取得連結 `System.Text.Json` 庫。
+[System.Text.Js總覽](../../../../standard/serialization/system-text-json-overview.md)說明如何取得連結 `System.Text.Json` 庫。
 
 [如何在 .net 中序列化和還原序列化 JSON](../../../../standard/serialization/system-text-json-how-to.md)。
 示範如何使用類別，在 JSON 中讀取和寫入物件資料 <xref:System.Text.Json.JsonSerializer> 。

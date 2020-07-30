@@ -1,15 +1,16 @@
 ---
-title: 如何篩選屬性（XPath-LINQ 到 XML）（C#）
+title: '如何篩選屬性（XPath-LINQ to XML）（c #）'
+description: 瞭解如何使用 XPath LINQ to XML 的指定名稱和屬性值來篩選下階元素。
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: ab2cd439f4dd1454de4fa565658ef5dac14b8c22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 80c43b8485314c6a711b574b5d6c23b56533833d
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141283"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302889"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>如何篩選屬性（XPath-LINQ 到 XML）（C#）
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>如何篩選屬性（XPath-LINQ to XML）（c #）
 本主題顯示如何取得具有指定之名稱以及具有指定值之屬性的子代項目。  
   
  XPath 運算式為：  

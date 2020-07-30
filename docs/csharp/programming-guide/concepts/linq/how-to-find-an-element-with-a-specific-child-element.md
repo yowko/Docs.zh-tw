@@ -1,15 +1,16 @@
 ---
-title: 如何查找具有特定子項目 （C#） 的元素
+title: '如何尋找具有特定子專案的元素（c #）'
+description: 瞭解如何尋找具有特定子專案的元素。 請參閱程式碼範例和其他資源。
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 0536b1b92d4d7fc18b5d406bbcd24aefc6a840c6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d02f3d3af0a3711a5361941727e2e0b6c8bbdc9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141141"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301706"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>如何查找具有特定子項目 （C#） 的元素
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>如何尋找具有特定子專案的元素（c #）
 本主題顯示如何利用特定的值尋找具有子項目的特定項目。  
   
 ## <a name="example"></a>範例  

@@ -1,16 +1,17 @@
 ---
 title: 使用純虛擬函式進行重構 (C#)
+description: 瞭解如何使用純虛擬函式來重構程式碼。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3f0084d9de27f3f215cc3ba527ada93f7a3d61a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253084"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300107"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>使用純虛擬函式進行重構 (C#)
-下列範例會重構上述範例 ([使用擴充方法進行重構 (C#)](./refactoring-using-an-extension-method.md)) 來使用此範例中的純虛擬函式，而且尋找段落文字的程式碼會被移到純靜態方法 `ParagraphText`。  
+下列範例會重構先前的範例，[使用擴充方法（c #）進行重構](./refactoring-using-an-extension-method.md)，以使用純虛擬函式。 在此範例中，用來尋找段落文字的程式碼會移到純靜態方法 `ParagraphText` 。  
   
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。 它也可以識別每個段落的樣式。 此範例在這個教學課程中，會在先前的範例上建置。 重構的程式碼會在以下程式碼的註解中叫出。  

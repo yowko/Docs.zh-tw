@@ -1,16 +1,17 @@
 ---
 title: 例外狀況處理 - C# 程式設計手冊
+description: 瞭解例外狀況處理。 請參閱 try-catch、try-catch 和 try-catch 語句的範例。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705297"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302031"
 ---
 # <a name="exception-handling-c-programming-guide"></a>例外狀況處理 (C# 程式設計手冊)
 C# 程式設計人員使用 [try](../../language-reference/keywords/try-catch.md) 區塊分割可能受到例外狀況影響的程式碼。 相關聯的 [catch](../../language-reference/keywords/try-catch.md) 區塊用來處理任何產生的例外狀況。 無論 `try` 區塊是否擲回例外狀況，[finally](../../language-reference/keywords/try-finally.md) 區塊都包含執行的程式碼，例如釋放配置在 `try` 區塊中的資源。 `try` 區塊需要一或多個相關聯的 `catch` 區塊，或 `finally` 區塊，或兩種都要。  
@@ -57,10 +58,10 @@ C# 程式設計人員使用 [try](../../language-reference/keywords/try-catch.md
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../../language-reference/index.md)
-- [C# 程式設計指南](../index.md)
+- [C # 參考](../../language-reference/index.md)
+- [C # 程式設計指南](../index.md)
 - [例外狀況和例外狀況處理](./index.md)
-- [試捕](../../language-reference/keywords/try-catch.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
 - [try-finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
-- [使用語句](../../language-reference/keywords/using-statement.md)
+- [using 陳述式](../../language-reference/keywords/using-statement.md)

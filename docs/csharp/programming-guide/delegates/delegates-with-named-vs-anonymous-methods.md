@@ -1,16 +1,17 @@
 ---
-title: 具有命名方法與匿名方法的代表 - C# 程式設計指南
+title: '具有命名與匿名方法的委派-c # 程式設計手冊'
+description: 瞭解具有命名與匿名方法的委派。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 940363b87e17b34feeffaff38ed498d6fcf6850a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712373"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302746"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>使用具名和匿名方法委派的比較 (C# 程式設計手冊)
 [delegate](../../language-reference/builtin-types/reference-types.md) 可以與具名方法產生關聯。 當您使用具名方法具現化委派時，方法會當做參數傳遞，例如：  
@@ -38,7 +39,7 @@ ms.locfileid: "75712373"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [委派](./index.md)
-- [如何組合委託（多播代表）](./how-to-combine-delegates-multicast-delegates.md)
+- [如何合併委派（多播委派）](./how-to-combine-delegates-multicast-delegates.md)
 - [事件](../events/index.md)

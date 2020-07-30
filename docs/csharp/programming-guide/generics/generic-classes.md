@@ -1,16 +1,17 @@
 ---
 title: 泛型類別 - C# 程式設計指南
+description: 瞭解集合中所使用的泛型類別，例如連結的清單、雜湊表、堆疊、佇列和樹狀結構。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 308f4328540e1001018942738d931be3d8be53ed
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937511"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301914"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型類別 (C# 程式設計手冊)
 泛型類別會封裝不專屬於特定資料類型的作業。 泛型類別最常搭配類似連結清單、雜湊表、堆疊、佇列、樹狀結構等的集合。 無論儲存的資料類型為何，基本上是以相同的方式執行新增和移除集合項目等作業。  
@@ -68,7 +69,7 @@ ms.locfileid: "75937511"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [泛型](./index.md)
 - [Saving the State of Enumerators](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators) (儲存列舉程式狀態)
 - [繼承謎題，第一部](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)

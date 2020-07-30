@@ -1,13 +1,14 @@
 ---
 title: 使用擴充方法進行重構 (C#)
+description: 瞭解如何使用擴充方法來重構程式碼。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e786f0e1514156535fd6a6033e37ed8879e99709
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253089"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381940"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>使用擴充方法進行重構 (C#)
 這個範例是根據上述範例 ([擷取段落的文字 (C#)](./retrieving-the-text-of-the-paragraphs.md)) 所建置，方法是使用當成擴充方法實作的純虛擬函式來重構字串的串連。  
@@ -244,7 +245,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>後續步驟  
  下一個範例顯示如何使用純虛擬函式，以另一種方式重構此程式碼：  
   
-- [使用純虛擬函式進行重構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [使用純虛擬函式進行重構 (C#)](./refactoring-using-a-pure-function.md)
   
 ## <a name="see-also"></a>另請參閱
 

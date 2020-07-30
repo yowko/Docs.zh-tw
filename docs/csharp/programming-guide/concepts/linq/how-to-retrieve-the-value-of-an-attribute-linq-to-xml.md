@@ -1,16 +1,17 @@
 ---
-title: 如何檢索屬性的值（LINQ 到 XML）（C#）
+title: '如何取出屬性的值（LINQ to XML）（c #）'
+description: 瞭解如何取得屬性的值。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 ms.assetid: 817bbe89-5979-4234-bf0c-46f63692ac8c
-ms.openlocfilehash: 212ad3bb3097e7e2c76da8f165011b181f329d4c
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5ee6995a54829b6d992e2982e6a6effcabf76470
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249190"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301550"
 ---
-# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>如何檢索屬性的值（LINQ 到 XML）（C#）
-這個主題顯示如何取得屬性的值。 有兩個主要方式：您可以將 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別；然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別。 或者，您可以使用 <xref:System.Xml.Linq.XAttribute.Value%2A> 屬性。 不過，轉型通常是較好的方法。 如果將屬性強制轉換為可 null 數值型別，則在檢索可能存在或可能不存在的屬性的值時，代碼的編寫更簡單。 有關此技術的示例，請參閱[如何檢索元素的值（LINQ 到 XML）（C#）。](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md)  
+# <a name="how-to-retrieve-the-value-of-an-attribute-linq-to-xml-c"></a>如何取出屬性的值（LINQ to XML）（c #）
+這個主題顯示如何取得屬性的值。 有兩個主要方式：您可以將 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別；然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別。 或者，您可以使用 <xref:System.Xml.Linq.XAttribute.Value%2A> 屬性。 不過，轉型通常是較好的方法。 如果您將屬性轉換成可為 null 的實值型別，則在抓取可能或可能不存在之屬性的值時，程式碼會比較容易撰寫。 如需這項技術的範例，請參閱[如何取出元素的值（LINQ to XML）（c #）](./how-to-retrieve-the-value-of-an-element-linq-to-xml.md)。  
   
 ## <a name="example"></a>範例  
  若要擷取屬性的值，只要將 <xref:System.Xml.Linq.XAttribute> 物件轉型為您所需的型別即可。  

@@ -1,17 +1,18 @@
 ---
-title: 如何為檔操作提供進度對話方塊 - C# 程式設計指南
+title: '如何提供檔案作業的進度對話方塊-c # 程式設計手冊'
+description: 瞭解如何使用 CopyFile （String，String，UIOption）方法來提供檔案作業的進度對話方塊。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 30ab84054d26f5b32a3f042a8d35d5ef1211d928
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ea18d924b47fc10412d37479f1b09f7eef7ad3b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705128"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301966"
 ---
-# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>如何為檔操作提供進度對話方塊（C# 程式設計指南）
+# <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>如何提供檔案作業的進度對話方塊（c # 程式設計手冊）
 如果您在 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空間中使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 方法，則可以提供標準對話方塊，以在 Windows 中顯示檔案作業進度。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  

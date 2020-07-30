@@ -1,5 +1,6 @@
 ---
 title: '<permission> -C # 程式設計指南'
+description: 瞭解 XML <permission> 的相片或視訊。 此標記可讓您記錄成員的存取權，而 PermissionSet 類別可讓您指定成員的存取權。
 ms.date: 07/20/2015
 f1_keywords:
 - permission
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: bb7172042f0b472d03c3fa2d9dbd0d4d4265076b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 38c87505b8b2973875e474ffd296dc02b7fb9de6
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287268"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381719"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission>（C # 程式設計手冊）
 

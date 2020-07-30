@@ -1,5 +1,6 @@
 ---
 title: 互通性 - C# 程式設計手冊
+description: 互通性支援在 common language runtime 底下執行的程式碼旁邊的非受控碼。 使用這些資源來瞭解 interop 選項。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: e53465066cf27a5f46c66ac73ee242370be23395
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d85eb51107d50e023270fcbe1ef6e08a7788ae78
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84242003"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302967"
 ---
 # <a name="interoperability-c-programming-guide"></a>互通性 (C# 程式設計手冊)
 

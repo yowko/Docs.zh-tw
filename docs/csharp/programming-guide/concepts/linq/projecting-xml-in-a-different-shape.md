@@ -1,13 +1,14 @@
 ---
 title: 以不同的組織結構投影 XML (C#)
+description: 瞭解如何以不同于來源 XML 的圖形來投影 XML。 請參閱使用來自 WindowsBase 元件之類別的程式碼範例。
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 492c0671b6a81f7e6b8d5f93698f84b88b14bd23
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591530"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299093"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>以不同的組織結構投影 XML (C#)
 本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。  

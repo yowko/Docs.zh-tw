@@ -1,18 +1,19 @@
 ---
-title: 如何顯式實現介面成員 - C# 程式設計指南
+title: '如何明確執行介面成員-c # 程式設計手冊'
+description: '瞭解如何在此 c # 範例中明確地執行介面成員。 成員是透過介面實例來存取。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: dff094aca237ed6146bd9b52813c40549bc99b9b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35b512ff6cbee1dd942f5b3476db660481808297
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627781"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303071"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>如何顯式實現介面成員（C# 程式設計指南）
-此示例聲明[介面](../../language-reference/keywords/interface.md)`IDimensions`和 類`Box`， 顯式實現介面成員`GetLength`和`GetWidth`。 成員是透過介面執行個體 `dimensions` 存取。  
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>如何明確執行介面成員（c # 程式設計手冊）
+這個範例會宣告[介面](../../language-reference/keywords/interface.md) `IDimensions` 和類別， `Box` 其會明確地執行介面成員 `GetLength` 和 `GetWidth` 。 成員是透過介面執行個體 `dimensions` 存取。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideInheritance#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#8)]  
@@ -29,7 +30,7 @@ ms.locfileid: "77627781"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [類別和結構](../classes-and-structs/index.md)
 - [介面](./index.md)
-- [如何顯式實現兩個介面的成員](./how-to-explicitly-implement-members-of-two-interfaces.md)
+- [如何明確實作兩個介面的成員](./how-to-explicitly-implement-members-of-two-interfaces.md)

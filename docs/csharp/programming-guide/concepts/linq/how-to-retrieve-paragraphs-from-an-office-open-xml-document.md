@@ -1,15 +1,16 @@
 ---
-title: 如何從 Office 打開的 XML 文檔 （C#） 檢索段落
+title: '如何從 Office Open XML 檔取出段落（c #）'
+description: 瞭解如何從 Office Open XML 檔取出段落集合。 請參閱使用 ' StringConcatenate ' 擴充方法的範例。
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64678b39d9d0bfb23574a09998248c8e33ec01d6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347464"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301589"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何從 Office 打開的 XML 文檔 （C#） 檢索段落
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何從 Office Open XML 檔取出段落（c #）
 本主題顯示的範例可開啟 Office Open XML 文件，並在文件中擷取所有段落的集合。  
   
  如需 Office Open XML 的詳細資訊，請參閱 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) \(英文\) 和 [www.ericwhite.com](http://ericwhite.com/) \(英文\)。  

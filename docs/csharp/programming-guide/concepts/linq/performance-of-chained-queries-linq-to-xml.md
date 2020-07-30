@@ -1,13 +1,14 @@
 ---
 title: 已鏈結之查詢的效能 (LINQ to XML) (C#)
+description: 瞭解連鎖查詢的效能。 鏈結查詢是指使用其他查詢當做其來源的查詢。
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 7deff9205e6535877efabd85257baa5b3906f41a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e9173e85845dd085f4d7bf6deec7eb498acd7f3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253116"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302850"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>已鏈結之查詢的效能 (LINQ to XML) (C#)
 

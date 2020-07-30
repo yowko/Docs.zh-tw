@@ -1,5 +1,6 @@
 ---
-title: <typeparamref>- C# 程式設計指南
+title: '<typeparamref>-C # 程式設計指南'
+description: 瞭解 XML <typeparamref> 標記。 此標記可讓檔檔案的取用者以某種不同的方式來格式化單字，例如以斜體表示。
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a39e896f1242452c7bcc94faa1e7ef3086ae2149
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789664"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380718"
 ---
-# <a name="typeparamref-c-programming-guide"></a>\<類型參數>（C# 程式設計指南）
+# <a name="typeparamref-c-programming-guide"></a>\<typeparamref>（C # 程式設計手冊）
 
 ## <a name="syntax"></a>語法
 
@@ -34,7 +35,7 @@ ms.locfileid: "76789664"
 
 使用這個標記，讓文件檔案的取用者以某種明顯方式格式化單字，例如斜體。
 
-使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)編譯，以處理檔的文檔注釋。
+使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)進行編譯，以處理檔案的檔批註。
 
 ## <a name="example"></a>範例
 
@@ -42,5 +43,5 @@ ms.locfileid: "76789664"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 程式設計手冊](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

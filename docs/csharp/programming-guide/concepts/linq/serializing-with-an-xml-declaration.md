@@ -1,13 +1,14 @@
 ---
 title: 使用 XML 宣告序列化 (C#)
+description: '瞭解 c # 中的序列化會產生 XML 宣告的設定，包括序列化為檔案、不帶和 XmlWriter。'
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-ms.openlocfilehash: 4533d69f2b0bee68b4adee6e18fe28dde18078ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e91b61f037d28149f7c2355f4233dc319b54627
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483477"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302356"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>使用 XML 宣告序列化 (C#)
 這個主題描述如何控制序列化是否產生 XML 宣告。  

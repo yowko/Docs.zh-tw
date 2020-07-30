@@ -1,16 +1,17 @@
 ---
 title: '如何逐一查看目錄樹狀結構-c # 程式設計手冊'
+description: 瞭解如何逐一查看目錄樹狀結構。 存取指定根資料夾下每個嵌套子目錄中的每個檔案。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 24a6225527becb0b896017616e2661ab8247c74c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c49a9d1eaea9d4d8967b105d753f2a611d80e795
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241600"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301979"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何逐一查看目錄樹狀結構（c # 程式設計手冊）
 「逐一查看樹狀目錄」一詞，代表存取指定根資料夾下每個巢狀子目錄中任意深度的每個檔案。 您不需要開啟每個檔案。 您可以只擷取的檔案名稱或子目錄當成 `string`，或者可以擷取格式為 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 物件的其他資訊。  

@@ -1,13 +1,14 @@
 ---
 title: 擷取段落的文字 (C#)
+description: '瞭解如何使用 LINQ 查詢，以 c # 中的字串取得 WordprocessingML 檔中每個段落的文字。 這個範例會使用連鎖的查詢。'
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 7c47420045def3fe973169e01143646c0f60a8eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58a07ab848307c886927815e4e49e90806f61346
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168241"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302590"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>擷取段落的文字 (C#)
 這個範例是根據上述範例 ([擷取段落及其樣式 (C#)](./retrieving-the-paragraphs-and-their-styles.md)) 所建置。 這個新的範例會將每個段落的文字當做字串擷取。  

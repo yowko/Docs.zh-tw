@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c70fcacc6cb30969e5c69ffd0954ac52e637a915
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100934"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381589"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -235,7 +235,7 @@ private async Task<Document> MakeConstAsync(Document document,
 
 新的 `MakeConstAsync` 方法會將代表使用者來源檔案的 <xref:Microsoft.CodeAnalysis.Document> 轉換為新的 <xref:Microsoft.CodeAnalysis.Document>，此時其中包含 `const` 宣告。
 
-您可以建立要在宣告陳述式前面插入的新 `const` 關鍵字權杖。 請務必先從宣告陳述式的第一個權杖中移除任何前置邏輯，再將其附加至 `const` 權杖。 將下列程式碼新增至 `MakeConstAsync` 方法：
+您可以建立要在宣告陳述式前面插入的新 `const` 關鍵字權杖。 請務必先從宣告陳述式的第一個權杖中移除任何前置邏輯，再將其附加至 `const` 權杖。 將下列程式碼加入 `MakeConstAsync` 方法：
 
 [!code-csharp[Create a new const keyword token](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
 
@@ -504,7 +504,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 }
 ```
 
-您必須在程式碼修正提供者中撰寫更多程式碼，以將 var 的關鍵字取代為正確的類型名稱。 返回 **CodeFixProvider.cs**。 您將新增的程式碼會執行下列步驟：
+您必須在程式碼修正提供者中撰寫更多代碼，以將關鍵字取代為 `var` 正確的型別名稱。 返回 **CodeFixProvider.cs**。 您將新增的程式碼會執行下列步驟：
 
 - 檢查宣告是否為 `var` 宣告，如果是則：
 - 為推斷的類型建立新類型。
@@ -522,12 +522,12 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 using Microsoft.CodeAnalysis.Simplification;
 ```
 
-執行測試，應該全部都會通過。 請執行您完成的分析器，這值得自傲。 按下<kbd>Ctrl + F5</kbd> ，在已載入 Roslyn Preview 擴充功能的第二個 Visual Studio 實例中執行分析器專案。
+執行測試，應該全部都會通過。 請執行您完成的分析器，這值得自傲。 按下<kbd>Ctrl</kbd> + <kbd>F5</kbd> ，在已載入 Roslyn Preview 擴充功能的第二個 Visual Studio 實例中執行分析器專案。
 
 - 在第二個 Visual Studio 執行個體中建立新的 C# 主控台應用程式專案，並將 `int x = "abc";` 新增至 Main 方法。 由於有第一個 Bug 修正，系統應該不會針對此區域變數宣告發出警告 (雖然如預期發生了編譯器錯誤)。
 - 接著，將 `object s = "abc";` 新增至 Main 方法。 由於有第二個 Bug 修正，應該不會出現警告。
 - 最後，新增另一個使用 `var` 關鍵字的區域變數。 您會看到回報的警告，且左下方會出現建議。
-- 將編輯器插入號移到彎曲的底線上，然後按<kbd>Ctrl +</kbd>。 以顯示建議的程式碼修正。 選取您的程式碼修正時，請留意 var 的關鍵字現在已可正確處理。
+- 將編輯器插入號移到彎曲的底線上，然後按<kbd>Ctrl</kbd> + <kbd>.</kbd>。 以顯示建議的程式碼修正。 選取您的程式碼修正時，請注意 `var` 關鍵字現在已正確處理。
 
 最後，新增下列程式碼：
 

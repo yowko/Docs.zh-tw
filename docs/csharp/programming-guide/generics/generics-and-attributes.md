@@ -1,16 +1,17 @@
 ---
 title: 泛型和屬性 - C# 程式設計指南
+description: 瞭解如何將屬性套用至泛型型別。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 47bf4e8f07a8b6778db8fa675d745d362dc10d7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17556af2e1bc2963de953cea242d7000509acbcd
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75703022"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299873"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>泛型和屬性 (C# 程式設計手冊)
 屬性可以使用與非泛型型別相同的方式，套用至泛型型別。 如需套用屬性的詳細資訊，請參閱[屬性](../concepts/attributes/index.md)。  
@@ -45,6 +46,6 @@ ms.locfileid: "75703022"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [泛型](./index.md)
 - [屬性](../../../standard/attributes/index.md)

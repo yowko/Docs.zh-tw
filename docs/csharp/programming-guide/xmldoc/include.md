@@ -1,5 +1,6 @@
 ---
 title: '<include> -C # 程式設計指南'
+description: 瞭解 XML <include> 的相片或視訊。 此標籤可讓您參考另一個檔案中描述原始程式碼中類型和成員的批註。
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: bf41019c775fed25afe4bdb9453a8e52f44856b5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 15a99444d464594cc91a7c8805c564c703c3b608
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287346"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381901"
 ---
 # <a name="include-c-programming-guide"></a>\<include>（C # 程式設計手冊）
 
@@ -53,7 +54,7 @@ ms.locfileid: "84287346"
 
 [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]
 
-第二個檔案（ *xml_include_tag .doc*）包含下列檔批註。
+第二個檔案（ *xml_include_tag.doc*）包含下列檔批註。
 
 ```xml
 <MyDocs>
@@ -75,7 +76,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>程式輸出
 
-當您使用下列命令列編譯 Test 和 Test2 類別時，會產生下列輸出：`-doc:DocFileName.xml.`。在 Visual Studio 中，您可以在專案設計工具的 [建置] 窗格中指定 XML 文件註解選項。 當 c # 編譯器看到 `<include>` 標記時，它會搜尋*xml_include_tag .doc*中的檔批註，而不是目前的原始程式檔。 編譯器接著會產生*docfilename.xml*，而這是檔工具（例如[DocFX](https://dotnet.github.io/docfx/)和[sandcastle 這類](https://github.com/EWSoftware/SHFB)）所使用的檔案，以產生最終的檔。  
+當您使用下列命令列編譯 Test 和 Test2 類別時，會產生下列輸出：`-doc:DocFileName.xml.`。在 Visual Studio 中，您可以在專案設計工具的 [建置] 窗格中指定 XML 文件註解選項。 當 c # 編譯器看到 `<include>` 標記時，它會搜尋*xml_include_tag.doc*中的檔批註，而不是目前的原始程式檔。 然後編譯器會產生*DocFileName.xml*，而這就是檔工具（例如[sandcastle 這類](https://github.com/EWSoftware/SHFB)）用來產生最終檔的檔案。  
   
 ```xml
 <?xml version="1.0"?>

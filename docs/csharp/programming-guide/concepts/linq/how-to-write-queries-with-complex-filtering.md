@@ -1,15 +1,16 @@
 ---
-title: 如何使用複雜篩選 （C#） 編寫查詢
+title: '如何撰寫具有複雜篩選的查詢（c #）'
+description: 瞭解如何使用複雜的篩選器來撰寫 LINQ to XML 查詢。 請參閱程式碼範例，並查看其他資源。
 ms.date: 07/20/2015
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-ms.openlocfilehash: bc85d7f1e5c5305407ad22f3ada908523313d964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d2c1aafc210b35d4d6b1f1b2d74b11966d90c80
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168514"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303422"
 ---
-# <a name="how-to-write-queries-with-complex-filtering-c"></a>如何使用複雜篩選 （C#） 編寫查詢
+# <a name="how-to-write-queries-with-complex-filtering-c"></a>如何撰寫具有複雜篩選的查詢（c #）
 有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。 例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。 本主題提供利用複雜篩選撰寫查詢的範例。  
   
 ## <a name="example"></a>範例  

@@ -1,20 +1,21 @@
 ---
 title: 範例 XML 檔：客戶和訂單 (LINQ to XML)
+description: 在 LINQ to XML 檔的各種範例中，會使用這個 XML 檔案。 檔案包含客戶和訂單。
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: 01c1719bd67bbaf0d46dc6e3c23b5031afd271f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0143fa373ee1ad6acecfe99e1a786d5cc90c2eb2
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346502"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302551"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>範例 XML 檔：客戶和訂單 (LINQ to XML)
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案包含客戶和訂單。  
   
  [範例 XSD 檔：客戶和訂單](./sample-xsd-file-customers-and-orders1.md)主題包含可用於驗證此文件的 XSD。 它會使用 XSD 的 `xs:key` 和 `xs:keyref` 功能來建立 `CustomerID` 項目的 `Customer` 屬性為索引鍵，並在每個 `CustomerID` 項目中的 `Order` 項目和每個 `CustomerID` 項目中的 `Customer` 屬性之間建立關聯性。  
   
- 有關使用`Join`子句編寫利用此關係的 LINQ 查詢的示例，請參閱[如何聯接兩個集合（LINQ 到 XML）（C#）。](./how-to-join-two-collections-linq-to-xml.md)  
+ 如需撰寫使用子句來利用此關聯性之 LINQ 查詢的範例 `Join` ，請參閱[如何聯結兩個集合（LINQ to XML）（c #）](./how-to-join-two-collections-linq-to-xml.md)。  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   

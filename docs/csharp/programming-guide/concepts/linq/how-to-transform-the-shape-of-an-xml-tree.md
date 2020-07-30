@@ -1,15 +1,16 @@
 ---
-title: 如何轉換 XML 樹的形狀 （C#）
+title: '如何轉換 XML 樹狀結構的圖形（c #）'
+description: 瞭解如何轉換 XML 樹狀結構的形狀。 XML 樹狀結構的圖形會參考其元素和屬性名稱，以及其階層特性。
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fa3cc18f235d061ae1778c177c4ac9b626f4b71
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347297"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302642"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>如何轉換 XML 樹的形狀 （C#）
+# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>如何轉換 XML 樹狀結構的圖形（c #）
 XML 文件的「組織結構」** 會參考其項目名稱、屬性名稱，及其階層的特性。  
   
  有時候您必須變更 XML 文件的組織結構。 例如，您可能想要將現有的 XML 文件傳送到需要不同項目和屬性名稱的其他系統。 您可以瀏覽文件，在必要時刪除並重新命名項目，但使用功能結構會使程式碼更容易讀取與維護。 如需函數式建構的詳細資訊，請參閱[函數式建構 (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md)。  

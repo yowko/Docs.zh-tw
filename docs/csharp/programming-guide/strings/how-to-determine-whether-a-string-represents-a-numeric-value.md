@@ -1,17 +1,18 @@
 ---
 title: '如何判斷字串是否代表數值-c # 程式設計手冊'
+description: 瞭解如何判斷字串是否為指定之數數值型別的有效標記法。 請參閱程式碼範例，並查看其他資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 37437460ea4c6ca216f2844d63af3688ccc984c6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c248c6c54de493ab06a833fc525252fa812d60da
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241717"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381745"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何判斷字串是否代表數值（c # 程式設計手冊）
 若要判斷字串是否為所指定數值類型的有效呈現，請使用靜態 `TryParse` 方法，而這個方法是由所有基本數字類型以及 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 此等類型所實作。 下列範例示範如何判斷 "108" 是否為有效 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  

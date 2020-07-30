@@ -1,13 +1,14 @@
 ---
 title: 重構為純虛擬函式 (C#)
+description: 瞭解如何使用純虛擬函式重構程式碼。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cc5dd26923e2edaed34c8f1b742b3dfa1e935e68
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253104"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300224"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
 
@@ -115,4 +116,4 @@ class Program
 ## <a name="see-also"></a>另請參閱
 
 - [純函數式轉換簡介 (C#)](./introduction-to-pure-functional-transformations.md)
-- [功能程式設計與命令性程式設計 （C#）](./functional-programming-vs-imperative-programming.md)
+- [功能程式設計與命令式程式設計的比較（c #）](./functional-programming-vs-imperative-programming.md)

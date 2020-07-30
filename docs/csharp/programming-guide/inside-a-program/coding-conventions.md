@@ -1,17 +1,18 @@
 ---
 title: C# 編碼慣例 - C# 程式設計指南
+description: '瞭解 c # 中的編碼慣例。 編碼慣例會建立一致的程式碼外觀，並協助複製、變更和維護程式碼。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 772aebff0b8c7aebe7c7d5c7634cd2931f4570b1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399732"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301849"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
 
@@ -25,7 +26,7 @@ ms.locfileid: "79399732"
   
 - 示範 C# 的最佳作法。  
 
-Microsoft 使用本文中的指南來開發示例和文檔。  
+Microsoft 會使用本文中的指導方針來開發範例和檔。  
   
 ## <a name="naming-conventions"></a>命名規範  
   
@@ -97,20 +98,20 @@ Microsoft 使用本文中的指南來開發示例和文檔。
   
 - 避免使用 `var` 取代 [dynamic](../../language-reference/builtin-types/reference-types.md)。  
   
-- 使用隱式類型來確定[迴圈](../../language-reference/keywords/for.md)中的迴圈變數的類型。  
+- 在[for](../../language-reference/keywords/for.md)迴圈中，使用隱含類型來判斷迴圈變數的型別。  
   
      下列範例在 `for` 陳述式中使用隱含類型。  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
 
-- 不要使用隱式類型來確定[foreach](../../language-reference/keywords/foreach-in.md)迴圈中的迴圈變數的類型。
+- 請勿使用隱含類型來判斷[foreach](../../language-reference/keywords/foreach-in.md)迴圈中迴圈變數的類型。
 
-     下面的示例在`foreach`語句中使用顯式鍵入。
+     下列範例會在語句中使用明確類型 `foreach` 。
 
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > 請注意，不要意外更改可反覆運算集合的元素的類型。 例如，很容易在<xref:System.Linq.IQueryable?displayProperty=nameWithType><xref:System.Collections.IEnumerable?displayProperty=nameWithType>`foreach`語句中切換到 ，這將更改查詢的執行。
+     > 請小心不要不小心變更可反復執行集合的元素類型。 例如， <xref:System.Linq.IQueryable?displayProperty=nameWithType> 在語句中，從切換到會 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> `foreach` 變更查詢的執行，是很容易的。
 
 ### <a name="unsigned-data-type"></a>不帶正負號的資料類型  
   
@@ -142,11 +143,11 @@ Microsoft 使用本文中的指南來開發示例和文檔。
   
 ### <a name="-and-124124-operators"></a>&& 和 &#124;&#124; 運算子  
   
-為了避免異常，並通過跳過不必要的比較來提高性能，請在執行[&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)比較時[&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)使用而不是[&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)而不是[&#124;&#124;而不是&#124;，](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)如以下示例所示。  
+若要避免例外狀況並藉由略過不必要的比較來提升效能，請使用， [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) 而不是在 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) 執行比較時[&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) ，而不是[&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) ，如下列範例所示。  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
-### <a name="new-operator"></a>新增操作員  
+### <a name="new-operator"></a>New 運算子  
   
 - 使用物件執行個體化的簡潔形式，搭配隱含類型，如下宣告所示。  
   

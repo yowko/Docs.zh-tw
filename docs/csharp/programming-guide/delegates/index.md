@@ -1,16 +1,17 @@
 ---
 title: 委派 - C# 程式設計手冊
+description: 'C # 中的委派是一種類型，它會參考具有參數清單和傳回類型的方法。 委派可以用來將方法當做引數傳遞給其他方法。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94e7c130bd5d8e136d03ccdbaed643bc1a47d112
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75705362"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302161"
 ---
 # <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
 [委派](../../language-reference/builtin-types/reference-types.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
@@ -39,7 +40,7 @@ ms.locfileid: "75705362"
   
 - 方法不需要完全符合委派類型。 如需詳細資訊，請參閱[在委派中使用差異](../concepts/covariance-contravariance/using-variance-in-delegates.md)。  
   
-- C# 版本 2.0 引入了[匿名方法](../../language-reference/operators/delegate-operator.md)的概念，它允許將代碼塊作為參數傳遞給單獨定義的方法。 C# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 (Inline) 程式碼區塊撰寫方式。 匿名方法與 Lambda 運算式 (在特定內容中) 都會編譯為委派類型。 現在，這些功能合稱為「匿名函式」(Anonymous Function)。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)。
+- C # 版本2.0 引進了[匿名方法](../../language-reference/operators/delegate-operator.md)的概念，可讓程式碼區塊當做參數傳遞，以取代個別定義的方法。 C# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 (Inline) 程式碼區塊撰寫方式。 匿名方法與 Lambda 運算式 (在特定內容中) 都會編譯為委派類型。 現在，這些功能合稱為「匿名函式」(Anonymous Function)。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)。
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -47,11 +48,11 @@ ms.locfileid: "75705362"
   
 - [何時應使用委派，而不使用介面 (C# 程式設計指南)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
-- [使用具名和匿名方法委派的比較](./delegates-with-named-vs-anonymous-methods.md)  
+- [具名方法委派與匿名方法](./delegates-with-named-vs-anonymous-methods.md)  
   
 - [在委派中使用變異數](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [如何組合委託（多播代表）](./how-to-combine-delegates-multicast-delegates.md)  
+- [如何合併委派（多播委派）](./how-to-combine-delegates-multicast-delegates.md)  
   
 - [如何宣告、具現化和使用委派](./how-to-declare-instantiate-and-use-a-delegate.md)
 
@@ -67,5 +68,5 @@ ms.locfileid: "75705362"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Delegate>
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [事件](../events/index.md)

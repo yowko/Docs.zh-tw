@@ -1,15 +1,16 @@
 ---
-title: 如何查找命名空間 （C#） 中的所有節點
+title: '如何尋找命名空間中的所有節點（c #）'
+description: 瞭解如何篩選每個元素或屬性的命名空間，以尋找該命名空間中的所有節點。
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf739480c6b4e2c53d5c430d47ff833e8995f6a4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141191"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303305"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>如何查找命名空間 （C#） 中的所有節點
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>如何尋找命名空間中的所有節點（c #）
 您可以在每個項目或屬性的命名空間上篩選，尋找該特定命名空間中的所有節點。  
   
 ## <a name="example"></a>範例  

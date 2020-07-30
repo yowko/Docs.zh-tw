@@ -1,16 +1,17 @@
 ---
 title: 使用 dynamic 類型 - C# 程式設計指南
+description: 瞭解如何使用動態類型。 動態類型是靜態類型，但是動態物件會略過靜態類型檢查。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 24d48605e560038d70f1818611f339a94ecc2bba
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 9904f0452feca388704067b1fd5432f74d0df86b
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241964"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381576"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>使用 dynamic 類型 (C# 程式設計手冊)
 
@@ -73,7 +74,7 @@ C# 4 包含幾項功能，可改善與 COM API (例如 Office Automation API) �
 
 ## <a name="related-topics"></a>相關主題
 
-|Title|描述|
+|標題|描述|
 |-----------|-----------------|
 |[動態](../../language-reference/builtin-types/reference-types.md)|說明如何使用 `dynamic` 關鍵字。|
 |[動態語言執行時間總覽](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|提供 DLR 概觀，DLR 是在 Common Language Runtime (CLR) 中新增一組動態語言服務的執行階段環境。|

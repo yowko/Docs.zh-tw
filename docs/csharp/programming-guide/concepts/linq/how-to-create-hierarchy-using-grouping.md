@@ -1,15 +1,16 @@
 ---
-title: 如何使用分組 （C#） 創建層次結構
+title: '如何使用群組建立階層（c #）'
+description: 瞭解如何分組資料，然後產生 XML 階層反映群組的新 XML 檔案。
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9470ce9b9b7702cf9b835cb2143b6a36f3a254f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141298"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302915"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a>如何使用分組 （C#） 創建層次結構
+# <a name="how-to-create-hierarchy-using-grouping-c"></a>如何使用群組建立階層（c #）
 此範例顯示如何群組資料，然後根據該群組產生 XML。  
   
 ## <a name="example"></a>範例  

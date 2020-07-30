@@ -1,15 +1,16 @@
 ---
-title: 如何篩選可選元素 （C#）
+title: '如何篩選選擇性元素（c #）'
+description: 瞭解如何篩選選擇性元素，即使您不確定它是否存在於 XML 檔中。
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1cd93b70ea2c077437b58bd341f51f15f014871
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141249"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302863"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>如何篩選可選元素 （C#）
+# <a name="how-to-filter-on-an-optional-element-c"></a>如何篩選選擇性元素（c #）
 有時候即使您不確定項目是否存在於 XML 文件中，您都會想要針對該項目進行篩選。 搜尋應該會執行，因此，如果特定的項目沒有子項目，您就不會篩選該項目來觸發 Null 參考例外狀況。 在下列範例中，`Child5` 項目沒有 `Type` 子項目，但查詢仍會正確執行。  
   
 ## <a name="example"></a>範例  

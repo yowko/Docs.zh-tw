@@ -1,12 +1,13 @@
 ---
 title: 逐步解說：使用 C# 保存物件
+description: '這個範例會在 c # 中建立基本的 Loan 物件，並將其資料保存至檔案，然後使用檔案中的資料建立新的物件。'
 ms.date: 04/26/2018
-ms.openlocfilehash: bbe239008629d687084af7e28a75fa68560ca0ab
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 9f165addc5b9b0d056936458e8529ec1912c417b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796063"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302759"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C\# 保存物件
 

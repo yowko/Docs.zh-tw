@@ -1,13 +1,14 @@
 ---
 title: WordprocessingML 文件的組織結構 (C#)
+description: '瞭解 WordprocessingML 檔的格式。 數個 c # 範例使用 WordprocessingML 檔。'
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a7716d775a634c5ad3719714be68fce67d5cbfe
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76732682"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302343"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 文件的組織結構 (C#)
 這個主題說明 WordprocessingML 文件的 XML 組織結構。  

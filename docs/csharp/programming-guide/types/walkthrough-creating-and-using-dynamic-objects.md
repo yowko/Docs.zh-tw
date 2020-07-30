@@ -1,5 +1,6 @@
 ---
 title: 逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
+description: 瞭解如何在此逐步解說中建立和使用動態物件。 建立自訂動態物件，以及使用 ' IronPython ' 程式庫的專案。
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 3b5a92948a3e692a734f3ddee3c7238d5d27588f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 144651d3b14f6f6093ab07f1df7be10e6d05ae89
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157048"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381251"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
 
@@ -46,7 +47,7 @@ ms.locfileid: "79157048"
   
 1. 啟動 Visual Studio。  
   
-2. 在 **"檔"** 功能表上，指向 **"新建"，** 然後按一下"**專案**"。  
+2. **在 [檔案**] 功能表上，指向 [**新增**]，然後按一下 [**專案**]。  
   
 3. 在 [新增專案]**** 對話方塊的 [專案類型]**** 窗格中，確認已選取 [Windows]****。 選取 [範本]**** 窗格中的 [主控台應用程式]****。 在 [名稱]**** 方塊中，輸入 `DynamicSample` 並按一下 [確定]****。 隨即建立新專案。  
   
@@ -131,13 +132,13 @@ ms.locfileid: "79157048"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>若要建立自訂動態類別
   
-1. 在視覺化工作室中，在 **"檔"** 功能表上，指向 **"新建"，** 然後按一下"**專案**"。  
+1. **在 Visual Studio 的 [檔案**] 功能表上，指向 [**新增**]，然後按一下 [**專案**]。  
   
 2. 在 [新增專案]**** 對話方塊的 [專案類型]**** 窗格中，確認已選取 [Windows]****。 選取 [範本]**** 窗格中的 [主控台應用程式]****。 在 [名稱]**** 方塊中，輸入 `DynamicIronPythonSample` 並按一下 [確定]****。 隨即建立新專案。  
   
-3. 如果您是使用 Visual Basic，請以滑鼠右鍵按一下 DynamicIronPythonSample 專案，然後按一下 [屬性]****。 按一下 **"參考"** 選項卡。按一下"**添加**"按鈕。 如果您是使用 Visual C#，請在方案總管**** 中，以滑鼠右鍵按一下 [參考]**** 資料夾，然後按一下 [加入參考]****。  
+3. 如果您是使用 Visual Basic，請以滑鼠右鍵按一下 DynamicIronPythonSample 專案，然後按一下 [屬性]****。 按一下 [**參考**] 索引標籤。按一下 [**新增**] 按鈕。 如果您是使用 Visual C#，請在方案總管**** 中，以滑鼠右鍵按一下 [參考]**** 資料夾，然後按一下 [加入參考]****。  
   
-4. 在 [瀏覽]**** 索引標籤上，瀏覽至安裝 IronPython 程式庫的資料夾。 例如 C:\Program Files\IronPython 2.6 for .NET 4.0。 選取 **IronPython.dll**、**IronPython.Modules.dll**、**Microsoft.Scripting.dll** 和 **Microsoft.Dynamic.dll** 程式庫。 按一下 [確定]****。  
+4. 在 [瀏覽]**** 索引標籤上，瀏覽至安裝 IronPython 程式庫的資料夾。 例如 C:\Program Files\IronPython 2.6 for .NET 4.0。 選取 **IronPython.dll**、**IronPython.Modules.dll**、**Microsoft.Scripting.dll** 和 **Microsoft.Dynamic.dll** 程式庫。 按一下 [確定]。  
   
 5. 如果您是使用 Visual Basic，請編輯 Module1.vb 檔案。 如果您是使用 Visual C#，請編輯 Program.cs 檔案。  
   
@@ -162,7 +163,7 @@ ms.locfileid: "79157048"
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [使用動態型別](./using-type-dynamic.md)
+- [使用動態類型](./using-type-dynamic.md)
 - [早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
 - [動態](../../language-reference/builtin-types/reference-types.md)
 - [實作動態介面 (Microsoft TechNet 的可下載 PDF)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

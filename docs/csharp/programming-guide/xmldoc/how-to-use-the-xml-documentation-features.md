@@ -1,16 +1,17 @@
 ---
 title: '如何使用 XML 檔功能-c # 程式設計手冊'
+description: 瞭解如何使用 XML 檔功能。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: b7c5a8a895271f067505496c0d13f98b66a393d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9ad2cfe62c70174eec9020ad4c8ce11608aca36d
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287359"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380666"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>如何使用 XML 文件功能
 
@@ -112,7 +113,7 @@ ms.locfileid: "84287359"
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-此命令會建立 XML 檔案*xmlsample.xml*，您可以在瀏覽器中或使用命令來查看該檔案。 `TYPE`
+此命令會建立 XML 檔案*XMLsample.xml*，您可以在瀏覽器中或使用命令來查看該檔案 `TYPE` 。
 
 ## <a name="robust-programming"></a>穩固程式設計
 

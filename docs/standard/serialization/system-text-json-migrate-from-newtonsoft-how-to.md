@@ -11,14 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: fbd3c8062892f106ec17d0fef86d5ad7f1207d20
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865329"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303474"
 ---
-# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>如何從遷移 Newtonsoft.Json 至System.Text.Json
+# <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>如何從遷移 Newtonsoft.Json 至System.Text.Json
 
 本文說明如何從遷移 [Newtonsoft.Json](https://www.newtonsoft.com/json) 至 <xref:System.Text.Json> 。
 
@@ -34,7 +34,7 @@ ms.locfileid: "86865329"
 
 本文大部分是關於如何使用 <xref:System.Text.Json.JsonSerializer> API，但它也包含如何使用 <xref:System.Text.Json.JsonDocument> （代表檔物件模型或 DOM）、 <xref:System.Text.Json.Utf8JsonReader> 和類型的指引 <xref:System.Text.Json.Utf8JsonWriter> 。
 
-## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>和之間的差異資料表 Newtonsoft.JsonSystem.Text.Json
+## <a name="table-of-differences-between-no-locnewtonsoftjson-and-no-locsystemtextjson"></a>和之間的差異資料表 Newtonsoft.JsonSystem.Text.Json
 
 下表列出 `Newtonsoft.Json` 功能和 `System.Text.Json` 對應項。 對等專案屬於下列類別：
 
@@ -73,17 +73,17 @@ ms.locfileid: "86865329"
 | `JsonConvert.PopulateObject` 方法                   | ⚠️[不支援，](#populate-existing-objects)因應措施 |
 | `ObjectCreationHandling`全域設定               | ⚠️[不支援，](#reuse-rather-than-replace-properties)因應措施 |
 | 新增至不含 setter 的集合                    | ⚠️[不支援，](#add-to-collections-without-setters)因應措施 |
-| `PreserveReferencesHandling`全域設定           | ❌[不受支援](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling`全域設定                | ❌[不受支援](#preserve-object-references-and-handle-loops) |
-| 屬性的支援 `System.Runtime.Serialization` | ❌[不受支援](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling`全域設定                | ❌[不受支援](#missingmemberhandling) |
-| 允許沒有引號的屬性名稱                   | ❌[不受支援](#json-strings-property-names-and-string-values) |
-| 允許字串值前後加上單引號              | ❌[不受支援](#json-strings-property-names-and-string-values) |
-| 允許字串屬性的非字串 JSON 值    | ❌[不受支援](#non-string-values-for-string-properties) |
+| `PreserveReferencesHandling`全域設定           | ❌ [不支援](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling`全域設定                | ❌ [不支援](#preserve-object-references-and-handle-loops) |
+| 屬性的支援 `System.Runtime.Serialization` | ❌ [不支援](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling`全域設定                | ❌ [不支援](#missingmemberhandling) |
+| 允許沒有引號的屬性名稱                   | ❌ [不支援](#json-strings-property-names-and-string-values) |
+| 允許字串值前後加上單引號              | ❌ [不支援](#json-strings-property-names-and-string-values) |
+| 允許字串屬性的非字串 JSON 值    | ❌ [不支援](#non-string-values-for-string-properties) |
 
 這不是完整的功能清單 `Newtonsoft.Json` 。 此清單包含[GitHub 問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)或[StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json)文章中所要求的許多案例。 如果您針對此處所列的其中一個案例執行因應措施，但目前沒有範例程式碼，而且您想要共用您的方案，請在此頁面底部的 [**意見**反應] 區段中選取**此頁面**。 這會在本檔的 GitHub 存放庫中建立問題，並將其列在此頁面的**意見**反應區段中。
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>相較于，預設 JsonSerializer 行為的差異Newtonsoft.Json
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>相較于，預設 JsonSerializer 行為的差異Newtonsoft.Json
 
 <xref:System.Text.Json>預設為嚴格，並可避免代表呼叫端的任何猜測或解讀，強調決定性的行為。 此程式庫是故意以這種方式設計來實現效能和安全性。 `Newtonsoft.Json`預設為彈性。 這項設計的基本差異在於預設行為的下列許多特定差異背後。
 
@@ -402,12 +402,14 @@ The JSON value could not be converted to System.String.
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastCallbacksConverter.cs)]
 
-藉由[使用類別上的屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至集合，來註冊此自訂轉換子 <xref:System.Text.Json.JsonSerializerOptions.Converters> 。
+藉由[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)集合中，來註冊此自訂的轉換器 <xref:System.Text.Json.JsonSerializerOptions.Converters> 。
 
 如果您使用遵循上述範例的自訂轉換器：
 
 * 程式 `OnDeserializing` 代碼沒有新 POCO 實例的存取權。 若要在還原序列化開始時操作新的 POCO 實例，請將該程式碼放在 POCO 函式中。
-* 在 options 物件中註冊轉換器，而不在遞迴呼叫或時傳遞 options 物件，以避免無限迴圈 `Serialize` `Deserialize` 。 如需詳細資訊，請參閱本文稍早的[必要屬性](#required-properties)一節。
+* 在 options 物件中註冊轉換器，而不在遞迴呼叫或時傳遞 options 物件，以避免無限迴圈 `Serialize` `Deserialize` 。
+
+如需遞迴呼叫或之自訂轉換器的詳細資訊 `Serialize` `Deserialize` ，請參閱本文稍早的[必要屬性](#required-properties)一節。
 
 ### <a name="public-and-non-public-fields"></a>公用和非公用欄位
 

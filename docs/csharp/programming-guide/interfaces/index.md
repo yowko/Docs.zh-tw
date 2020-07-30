@@ -1,16 +1,17 @@
 ---
 title: 介面 - C# 程式設計手冊
+description: 'C # 中的介面包含非抽象類別或結構必須執行的一組相關功能的定義。'
 ms.date: 02/20/2020
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 50f2c5fc3570b6d66ed83206660caf4bd02f1f5b
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 4485a9f8e3581aa80ed65221258dc40310b3a695
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441332"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303045"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 
@@ -63,13 +64,13 @@ ms.locfileid: "86441332"
 - [繼承](../classes-and-structs/inheritance.md)  
 - [介面](../../language-reference/keywords/interface.md)
 - [方法](../classes-and-structs/methods.md)  
-- [多型](../classes-and-structs/polymorphism.md)  
+- [Polymorphism](../classes-and-structs/polymorphism.md)  
 - [抽象和密封類別以及類別成員](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [屬性](../classes-and-structs/properties.md)  
 - [事件](../events/index.md)  
 - [索引子](../indexers/index.md)
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)
 - [繼承](../classes-and-structs/inheritance.md)

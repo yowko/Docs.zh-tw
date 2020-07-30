@@ -1,5 +1,6 @@
 ---
 title: 互通性概觀 - C# 程式設計指南
+description: '瞭解 c # 和非受控碼之間的互通性，包括平台叫用、c + + interop、將 COM 元件公開至 c #，以及如何將 c # 公開至 COM。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241730"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302954"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -36,7 +37,7 @@ ms.locfileid: "84241730"
   
 2. 將 COM 元件或型別程式庫的參考新增至專案。  
   
-     當您新增參考時，Visual Studio 會使用[tlbimp.exe （類型程式庫匯入工具）](../../../framework/tools/tlbimp-exe-type-library-importer.md)，其採用型別程式庫做為輸入，以輸出 .net interop 元件。 此組件 (也稱為執行階段可呼叫包裝函式 (RCW)) 包含 Managed 類別和介面，以包裝型別程式庫中的 COM 類別和介面。 Visual Studio 會將產生的組件參考新增至專案。  
+     當您新增參考時，Visual Studio 會使用[Tlbimp.exe （類型程式庫匯入工具）](../../../framework/tools/tlbimp-exe-type-library-importer.md)，其採用型別程式庫做為輸入，以輸出 .net interop 元件。 此組件 (也稱為執行階段可呼叫包裝函式 (RCW)) 包含 Managed 類別和介面，以包裝型別程式庫中的 COM 類別和介面。 Visual Studio 會將產生的組件參考新增至專案。  
   
 3. 建立定義於 RCW 之類別的執行個體。 這會接著建立 COM 物件的執行個體。  
   

@@ -1,13 +1,14 @@
 ---
 title: 投影作業 (C#)
+description: 瞭解投射作業。 這些作業會將物件轉換成新的表單，通常只包含稍後將使用的屬性。
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: f76eeeb779ab08a575e758a9d974573b700ae652
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 289100ac9afcfc0d5b93b5f963adc0a123e0a5af
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168332"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299158"
 ---
 # <a name="projection-operations-c"></a>投影作業 (C#)
 投影是指將物件轉換成新形式的作業，而這個形式通常僅包含後續即將使用的屬性。 透過使用投影，您可以建構根據每個物件所建立的新型別。 您可以投影屬性並對其執行數學函式。 您也可以投影原始物件，而不進行任何變更。  
@@ -163,6 +164,6 @@ static void SelectVsSelectMany()
 
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
-- [選擇子句](../../../language-reference/keywords/select-clause.md)
-- [如何從多個源 （LINQ） （C#） 填充物件集合](./how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [如何使用組 （LINQ） （C#） 將檔拆分為多個檔](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [select 子句](../../../language-reference/keywords/select-clause.md)
+- [如何從多個來源填入物件集合（LINQ）（c #）](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [如何使用群組將檔案分割成許多檔案（LINQ）（c #）](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
