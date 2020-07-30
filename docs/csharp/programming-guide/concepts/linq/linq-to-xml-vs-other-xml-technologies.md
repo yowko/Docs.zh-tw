@@ -1,18 +1,19 @@
 ---
-title: LINQ 到 XML 與其他 XML 技術3
+title: LINQ to XML 與其他 XML Technologies3 的比較
+description: 本文會比較多個 XML 技術的 LINQ to XML，包括 XmlReader、XSLT、MSXML 和 XmlLite，以協助您決定要使用的技術。
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0abe6021dae83df0db0d4116eb3c2919d024a62d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635674"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165333"
 ---
-# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 和其他 XML 技術的比較
+# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 比較其他 XML 技術之比較
 這個主題會比較 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與下列 XML 技術：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 這個資訊可以協助您決定要使用的技術。  
   
- 有關[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]與文件物件模型 （DOM） 的比較，請參閱[LINQ 到 XML 與 DOM （C#）](./linq-to-xml-vs-dom.md)。  
+ 如需 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與檔物件模型（DOM）的比較，請參閱[LINQ TO XML 與 Dom （c #）](./linq-to-xml-vs-dom.md)。  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML 與 XmlReader 之比較  
  <xref:System.Xml.XmlReader> 是一個快速、順向、非快取的剖析器。  
@@ -50,7 +51,7 @@ ms.locfileid: "75635674"
   
  XmlLite 的主要優點在於它是一個快速的輕量型 XML 剖析器，在大部分的案例中是安全的。 其威脅表面區域非常小。 如果您必須剖析不受信任的文件，而且您想要防止諸如阻絕服務或洩漏資料等攻擊，XmlLite 可能是一個相當好的選擇。  
   
- XmlLite 未與語言集成查詢 （LINQ） 集成。 它不會帶來程式師工作效率的提高，這是LINQ背後的激勵力量。  
+ XmlLite 未與語言整合式查詢（LINQ）整合。 它不會產生程式設計人員產能改進，這是 LINQ 背後的動機。  
   
 ## <a name="see-also"></a>另請參閱
 

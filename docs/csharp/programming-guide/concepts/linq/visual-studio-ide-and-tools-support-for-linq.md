@@ -1,13 +1,14 @@
 ---
 title: LINQ 的 Visual Studio IDE 和工具支援 (C#)
+description: 瞭解支援 LINQ 開發的 Visual Studio 功能，例如物件關聯式設計工具、SQLMetal 工具、LINQ 感知程式碼編輯器和偵錯工具。
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-ms.openlocfilehash: a42d6711e34564f03aaf07c295bc682965513619
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd0c936624b4d5329cb2eb0f1cdd5215bbc96f23
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69590914"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302239"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>LINQ 的 Visual Studio IDE 和工具支援 (C#)
 Visual Studio 整合式開發環境 (IDE) 提供支援 LINQ 應用程式開發的下列功能：  

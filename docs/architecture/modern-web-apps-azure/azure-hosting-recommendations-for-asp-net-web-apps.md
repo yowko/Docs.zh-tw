@@ -4,17 +4,17 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | AS
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73416719"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164430"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Web Core 應用程式的 Azure 裝載建議
 
 > 「企業營運領導者都繞過 IT 部門，從雲端中取得應用程式 (亦稱為 SaaS) 並為其付費，就像訂閱雜誌一樣。 當不再需要服務的時候，他們可以取消訂閱，且不會有任何設備在角落裡閒置。」  
-> _\-達里爾·普盧默，Gartner分析師_
+> _\-Daryl Plummer，Gartner 分析師_
 
 無論您的應用程式需求和架構是什麼，Microsoft Azure 都可以支援。 您的裝載需求可以像靜態網站一樣簡單，也可以像由數十種服務組成的應用程式一樣複雜。 針對 ASP.NET Core 整合型 Web 應用程式和支援的服務，建議幾種眾所周知的組態。 本文中的建議根據裝載資源的類型分組，不論是完整應用程式、個別處理程序或是資料。
 
@@ -116,21 +116,21 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
 
 針對交易式的關聯式資料，Azure SQL Database 是最佳選項。 對於高性能的唯讀資料，由 Azure SQL Database 支援之 Redis 快取是很好的解決方案。
 
-非結構化 JSON 資料可以以各種方式存儲，從 SQL 資料庫列到 Azure 存儲中的 Blob 或表，到 Azure Cosmos DB。 其中，Azure Cosmos DB 提供了最佳的查詢功能，是支援查詢的大量基於 JSON 的文檔的建議選項。
+非結構化 JSON 資料可以多種方式儲存，從 SQL Database 資料行到 Azure 儲存體中的 Blob 或資料表，到 Azure Cosmos DB。 在這些情況下，Azure Cosmos DB 提供最佳查詢功能，而且對於必須支援查詢的大量 JSON 檔而言，這是建議的選項。
 
-用於協調應用程式行為的暫時性命令或事件型資料，可以使用 Azure 服務匯流排或 Azure 儲存體佇列。 Azure 儲存體匯流排提供更大的靈活性，並且是應用程式內部和之間非一般訊息的建議服務。
+用於協調應用程式行為的暫時性命令或事件型資料，可以使用 Azure 服務匯流排或 Azure 儲存體佇列。 Azure 服務匯流排提供更大的彈性，並且是應用程式內部和之間非一般訊息的建議服務。
 
 ## <a name="architecture-recommendations"></a>架構建議
 
 您的應用程式需求應指定其架構。 有許多不同的 Azure 服務可供選擇。 選擇正確的服務是一項重要決策。 Microsoft 提供參考架構資源庫，以協助識別針對常見案例最佳化的常見架構。 您可以尋找緊密對應至應用程式需求的參考架構，或至少提供一個起點。
 
-圖 11-1 顯示了一個示例參考體系結構。 此圖描述針對市場行銷進行最佳化的 Sitecore 內容管理系統網站之建議的架構方法。
+圖11-1 顯示範例參考架構。 此圖描述針對市場行銷進行最佳化的 Sitecore 內容管理系統網站之建議的架構方法。
 
-![圖 11-1](./media/image11-2.png)
+![圖11-1](./media/image11-2.png)
 
-**圖 11-1。** Sitecore 行銷網站參考架構。
+**圖11-1。** Sitecore 行銷網站參考架構。
 
-**參考 = Azure 託管建議**
+**參考– Azure 裝載建議**
 
 - Azure 解決方案架構\
   <https://azure.microsoft.com/solutions/architecture/>

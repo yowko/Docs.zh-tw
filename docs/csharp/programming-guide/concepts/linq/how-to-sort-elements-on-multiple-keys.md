@@ -1,15 +1,16 @@
 ---
-title: 如何對多個鍵 （C#） 上的元素進行排序
+title: '如何排序多個索引鍵上的元素（c #）'
+description: 瞭解如何排序多個索引鍵上的元素。 請參閱使用範例 XML 檔排序元素的範例。
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 486aac38a27cf064553894a548722a54c58c21b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347387"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301498"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>如何對多個鍵 （C#） 上的元素進行排序
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a>如何排序多個索引鍵上的元素（c #）
 
 這個主題顯示如何在多個索引鍵上排序。
 

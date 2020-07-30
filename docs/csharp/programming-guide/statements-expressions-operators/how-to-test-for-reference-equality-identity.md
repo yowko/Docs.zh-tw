@@ -1,18 +1,19 @@
 ---
-title: 如何測試參考相等性（身份） - C# 程式設計指南
+title: '如何測試參考是否相等（識別）-c # 程式設計指南'
+description: 瞭解如何測試參考是否相等（身分識別）。 查看程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 77ce2ef0ccf47d619134c120101ba2aa04f485e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fece0fbc0179f5707e7f3fcd62371b8dde84eb6a
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75699050"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381381"
 ---
-# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>如何測試參考相等性（身份）（C# 程式設計指南）
+# <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>如何測試參考是否相等（識別）（c # 程式設計手冊）
 不必實作任何自訂邏輯，就能支援您類型中的參考相等比較。 此功能是透過靜態 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法提供給所有類型。  
   
  下列範例示範如何判斷兩個變數是否具有「參考相等」**，這表示它們會參考記憶體中的相同物件。  

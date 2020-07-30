@@ -1,15 +1,16 @@
 ---
-title: 如何編寫基於上下文 （C#） 查找元素的查詢
+title: '如何撰寫可根據內容尋找專案的查詢（c #）'
+description: 瞭解如何撰寫查詢，以根據內容來尋找元素。 請參閱程式碼範例，並查看其他資源。
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64f09a41c2c1d01b0be8f776461f9be9df9ecb5f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75348371"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303188"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>如何編寫基於上下文 （C#） 查找元素的查詢
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>如何撰寫可根據內容尋找專案的查詢（c #）
 有時候您可能必須撰寫會依其內容選取項目的查詢。 您可能想要依據前面或後面的同層級項目進行篩選。 您可能想要依據子系或祖系項目進行篩選。  
   
  您僅能撰寫查詢並使用 `where` 子句中的查詢結果來達到這個目的。 如果您必須先依據 Null 進行測試，然後再測試值，在 `let` 子句中進行查詢，然後使用 `where` 子句中的結果會比較方便。  

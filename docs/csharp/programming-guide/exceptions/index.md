@@ -1,17 +1,18 @@
 ---
 title: 例外狀況與例外狀況處理 - C# 程式設計手冊
+description: '瞭解例外狀況和例外狀況處理。 這些 c # 功能有助於處理常式正在執行時所發生的非預期或例外狀況。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 0ba123fa9f9aacd0876f07bdf3ae7bb9159a6834
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 4be327be4e183d60e440358254aeb9c68fcf25ca
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241704"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303383"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外狀況和例外處理 (C# 程式設計手冊)
 

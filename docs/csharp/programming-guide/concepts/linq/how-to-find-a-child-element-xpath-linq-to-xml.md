@@ -1,16 +1,17 @@
 ---
-title: 如何查找子項目（XPath-LINQ 到 XML）（C#）
+title: '如何尋找子項目（XPath-LINQ to XML）（c #）'
+description: 瞭解如何藉由比較 XPath 子專案座標軸與 LINQ to XML 元素方法來尋找子專案。
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 37ce6c9d91d4edf2576ccddabd1d7f14a96b0a33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d1a4e636e3443512020129a76cc2de7bb3f244
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141232"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301732"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>如何查找子項目（XPath-LINQ 到 XML）（C#）
-本主題將 XPath 子項目軸與[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XContainer.Element%2A>方法進行比較。  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>如何尋找子項目（XPath-LINQ to XML）（c #）
+本主題會比較 XPath 子專案座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 方法。  
   
  XPath 運算式為 `DeliveryNotes`。  
   

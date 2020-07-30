@@ -1,16 +1,17 @@
 ---
 title: 泛型委派 - C# 程式設計指南
+description: '瞭解如何在 c # 中使用泛型委派。 請參閱程式碼範例，並查看其他可用的資源。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 4e57256328fc81a485670b47fcf8fd1c38e26fac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d99271ca9f12e95743d633caac16aaa4151e9c41
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712217"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301901"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>泛型委派 (C# 程式設計手冊)
 [委派](../../language-reference/builtin-types/reference-types.md)可以定義自己的型別參數。 參考泛型委派的程式碼，可以指定型別引數建立封閉式建構類型，就像在具現化泛型類別或呼叫泛型方法時一樣，如下列範例所示：  
@@ -36,10 +37,10 @@ ms.locfileid: "75712217"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 - [泛型簡介](./index.md)
-- [通用方法](./generic-methods.md)
-- [通用類](./generic-classes.md)
+- [泛型方法](./generic-methods.md)
+- [泛型類別](./generic-classes.md)
 - [泛型介面](./generic-interfaces.md)
 - [委派](../delegates/index.md)
 - [泛型](../../../standard/generics/index.md)

@@ -1,5 +1,6 @@
 ---
-title: 如何訪問 Office 交互操作物件 - C# 程式設計指南
+title: '如何存取 Office interop 物件-c # 程式設計手冊'
+description: '深入瞭解可簡化 Office API 物件存取的 c # 功能。 使用新功能來撰寫程式碼，以建立及顯示 Excel 工作表。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc4b5755bf56a013a0deb4efdb821df18db5a18e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700831"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303019"
 ---
-# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>如何訪問 Office 交互操作物件（C# 程式設計指南）
+# <a name="how-to-access-office-interop-objects-c-programming-guide"></a>如何存取 Office interop 物件（c # 程式設計手冊）
 
-C# 具有簡化對 Office API 物件訪問的功能。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。
+C # 具有可簡化 Office API 物件存取的功能。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。
 
 在本主題中，您將使用新的功能撰寫可建立及顯示 Microsoft Office Excel 工作表的程式碼。 接著，您將要撰寫可加入 Office Word 文件的程式碼，而該文件包含連結至 Excel 工作表的圖示。
 
@@ -30,7 +31,7 @@ C# 具有簡化對 Office API 物件訪問的功能。 新功能包括具名引�
 
 1. 啟動 Visual Studio。
 
-2. 在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。 此時會出現 [新增專案]**** 對話方塊。
+2. 在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。 [新增專案]  對話方塊隨即出現。
 
 3. 在 [已安裝的範本]**** 窗格中，展開 [Visual C#]****，然後按一下 [Windows]****。
 
@@ -40,7 +41,7 @@ C# 具有簡化對 Office API 物件訪問的功能。 新功能包括具名引�
 
 6. 在 [名稱]**** 欄位中鍵入專案的名稱。
 
-7. 按一下 [確定]****。
+7. 按一下 [確定]。
 
      新的專案隨即會出現在方案總管**** 中。
 
@@ -48,15 +49,15 @@ C# 具有簡化對 Office API 物件訪問的功能。 新功能包括具名引�
 
 1. 在方案總管**** 中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]****。 [新增參考]**** 對話方塊隨即出現。
 
-2. 在 [組件]**** 頁面的 [元件名稱]**** 清單中，選取 [Microsoft.Office.Interop.Word]****，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]****。  如果看不到程式集，則可能需要確保安裝並顯示這些程式集。 請參閱[操作操作操作元件安裝操作操作。](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)
+2. 在 [組件]**** 頁面的 [元件名稱]**** 清單中，選取 [Microsoft.Office.Interop.Word]****，然後按住 CTRL 鍵並選取 [Microsoft.Office.Interop.Excel]****。  如果您看不到元件，則可能需要確定它們已安裝並顯示。 請參閱[如何：安裝 Office 主要 Interop 元件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)。
 
-3. 按一下 [確定]****。
+3. 按一下 [確定]。
 
 ## <a name="to-add-necessary-using-directives"></a>加入必要的 using 指示詞
 
 1. 在方案總管**** 中，以滑鼠右鍵按一下 *Program.cs* 檔案，然後按一下 [檢視程式碼]****。
 
-2. 將以下`using`指令添加到代碼檔的頂部：
+2. 將下列指示詞新增 `using` 至程式碼檔案的頂端：
 
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]
 
@@ -94,7 +95,7 @@ C# 具有簡化對 Office API 物件訪問的功能。 新功能包括具名引�
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C# 4 和更高版本，如果[-link](../../language-reference/compiler-options/link-compiler-option.md)編譯器選項引用程式集，或者等效地將返回**Embed Interop Types**`Object`的轉換為`dynamic`true。 這個屬性的預設值為 True。
+     C # 4 和更新版本會將傳回的轉換 `Object` 為， `dynamic` 如果元件是由[-link](../../language-reference/compiler-options/link-compiler-option.md)編譯器選項所參考，或者如果 [Excel**內嵌 Interop 類型**] 屬性設定為 true，則會使用同等的方式。 這個屬性的預設值為 True。
 
 ## <a name="to-run-the-project"></a>執行專案
 
@@ -148,7 +149,7 @@ C# 具有簡化對 Office API 物件訪問的功能。 新功能包括具名引�
 
 3. 如果看不到 [屬性]**** 視窗，請按 **F4** 鍵。
 
-4. 在屬性清單中尋找 [內嵌 Interop 類型]****，並將其值變更為 **False**。 等效地，您可以使用[-參考](../../language-reference/compiler-options/reference-compiler-option.md)編譯器選項而不是命令提示符的[-link](../../language-reference/compiler-options/link-compiler-option.md)進行編譯。
+4. 在屬性清單中尋找 [內嵌 Interop 類型]****，並將其值變更為 **False**。 同樣地，您可以在命令提示字元中使用[-reference](../../language-reference/compiler-options/reference-compiler-option.md)編譯器選項，而不是[-link](../../language-reference/compiler-options/link-compiler-option.md)來進行編譯。
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>加入表格的其他格式
 
@@ -176,6 +177,6 @@ C# 具有簡化對 Office API 物件訪問的功能。 新功能包括具名引�
 
 - <xref:System.Type.Missing?displayProperty=nameWithType>
 - [動態](../../language-reference/builtin-types/reference-types.md)
-- [使用動態型別](../types/using-type-dynamic.md)
+- [使用動態類型](../types/using-type-dynamic.md)
 - [具名和選擇性引數](../classes-and-structs/named-and-optional-arguments.md)
 - [如何在 Office 程式設計中使用具名和選擇性引數](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

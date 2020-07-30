@@ -1,15 +1,16 @@
 ---
 title: '如何取得檔案、資料夾和磁片磁碟機的相關資訊-c # 程式設計手冊'
+description: 瞭解如何取得檔案、資料夾和磁片磁碟機的相關資訊。 請參閱程式碼範例和其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 32aced17634a1406e2fce0af9c2a92f7a5eb9b40
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: f696cd90f197bede1a64949d211a563ce9a18376
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241613"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299925"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何取得有關檔案、資料夾和磁片磁碟機的資訊（c # 程式設計手冊）
 在 .NET 中，您可以使用下列類別來存取檔案系統資訊：  

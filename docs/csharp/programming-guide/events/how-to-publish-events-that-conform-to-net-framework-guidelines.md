@@ -1,15 +1,16 @@
 ---
 title: '發行符合 .NET 指導方針的事件-c # 程式設計手冊'
+description: 瞭解如何發佈符合 .NET 指導方針的事件。 .NET Framework Class Library 中的所有事件都是以 EventHandler 委派為基礎。
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: df2f643f867b93b74d04d8fbd673df545c28938e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 1b802e236026911b55bafcb3f48d487c43bba174
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240742"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302109"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>如何發行符合 .NET 指導方針的事件（c # 程式設計手冊）
 

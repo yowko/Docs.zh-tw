@@ -1,16 +1,17 @@
 ---
 title: C# 程式深入解析
+description: '使用這些資源來瞭解 c # 程式的一般結構，包括標準範例： Hello，World！'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: a180dc30c7fab11e5b939682244dbb90eb7615eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ecf526d77fcf9df83fa832c57de0e1921d27e3f3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "69589262"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303344"
 ---
 # <a name="inside-a-c-program"></a>C# 程式深入解析
 
@@ -30,11 +31,11 @@ ms.locfileid: "69589262"
 
 - [C# 使用者入門](../../getting-started/index.md)
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)
 
-- [C# 參考](../../language-reference/index.md)
+- [C # 參考](../../language-reference/index.md)
 
-- [示例和教程](../../../samples-and-tutorials/index.md)
+- [範例和教學課程](../../../samples-and-tutorials/index.md)
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -42,4 +43,4 @@ ms.locfileid: "69589262"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C # 程式設計指南](../index.md)

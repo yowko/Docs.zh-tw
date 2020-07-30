@@ -1,15 +1,16 @@
 ---
-title: 查詢 XDocument 與查詢 XElement （C#）
+title: '查詢 XDocument 與查詢 System.xml.linq.xelement> （c #）'
+description: 瞭解查詢 XDocument 與查詢 System.xml.linq.xelement> 之間的差異。 查看示範這些差異的程式碼範例。
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c81768f06148308a639f96f4041e464b24edd33
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253132"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300302"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>查詢 XDocument 與查詢 XElement （C#）
+# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>查詢 XDocument 與查詢 System.xml.linq.xelement> （c #）
 當您透過 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 載入文件時，您將會注意到您必須撰寫的查詢與透過 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 載入時撰寫的查詢稍有不同。  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument.Load 和 XElement.Load 之比較  

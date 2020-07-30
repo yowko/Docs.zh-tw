@@ -1,13 +1,14 @@
 ---
 title: 混合的宣告式程式碼-命令式程式碼 Bug (LINQ to XML) (C#)
+description: LINQ to XML 方法可以直接修改 XML 樹狀結構。 在修改 XML 樹狀結構時，逐一查看其中一個軸，可能會導致異常的 bug。
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4eaed10f0a2e64abeb7725dcd70816d75d8a0423
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168345"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165285"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>混合的宣告式程式碼/命令式程式碼 Bug (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含各種方法，可讓您直接修改 XML 樹狀結構。 您可以加入項目、刪除項目、變更項目的內容、加入屬性等等。 [修改 XML 樹狀結構 (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md) 會說明這個程式發展介面。 如果您要逐一查看其中一個座標軸 (例如，<xref:System.Xml.Linq.XContainer.Elements%2A>)，而且您要在逐一查看座標軸時修改 XML 樹狀結構，您可以解決一些奇怪的 Bug。  
@@ -17,7 +18,7 @@ ms.locfileid: "79168345"
 ## <a name="definition-of-the-problem"></a>問題的定義  
  當您使用可逐一查看集合的 LINQ 撰寫特定程式碼時，您要以宣告式方法撰寫程式碼。 這比較類似於描述您要的是「什麼」**，而不是您要「如何」** 完成。 如果您撰寫的程式碼可 1) 取得第一個項目、2) 針對某些條件進行測試、3) 加以修改，以及 4) 將其放回清單中，則這會是命令性程式碼。 您是在告訴電腦「如何」** 進行您要完成的動作。  
   
- 在相同的運算中混用這些程式碼樣式就是導致問題發生的原因。 請考慮下列：  
+ 在相同的運算中混用這些程式碼樣式就是導致問題發生的原因。 請考慮下列事項：  
   
  假設您有一個連結的清單，其中包含三個項目 (a、b 和 c)：  
   
@@ -146,7 +147,7 @@ var z =
   
  您可以選擇避免這些問題。  
   
-## <a name="guidance"></a>指引  
+## <a name="guidance"></a>指導方針  
  首先，請勿混用宣告式與命令性程式碼。  
   
  即使您完全了解集合的語意以及修改 XML 樹狀結構之方法的語意，如果您要撰寫可避免這些類別之問題的聰明程式碼，您的程式碼未來將需要由其他開發人員維護，而且他們對於這些問題可能不是那麼清楚。 如果您混用宣告式與命令性編碼方式，您的程式碼將更不可靠。  
