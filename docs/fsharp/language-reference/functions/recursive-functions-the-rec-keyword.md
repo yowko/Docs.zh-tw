@@ -2,12 +2,12 @@
 title: 遞迴函式：rec 關鍵字
 description: "瞭解 F # ' rec ' 關鍵字如何與 ' let ' 關鍵字搭配使用，以定義遞迴函數。"
 ms.date: 05/16/2016
-ms.openlocfilehash: c9a3b7dc27f4ed86948a08b7783d7e8e8b60e57f
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426972"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455659"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>遞迴函式：rec 關鍵字
 
@@ -43,7 +43,7 @@ function2-body
 
 ## <a name="tail-recursion"></a>尾遞迴
 
-針對某些遞迴函式，必須將更多的「純」定義重構為[尾遞迴](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)。 這可防止不必要 recomputations。 例如，先前的斐數列數位產生器可以重寫如下：
+針對某些遞迴函式，必須將更多的「純」定義重構為[尾遞迴](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)。 這可避免不必要的 recomputations。 例如，先前的斐數列數位產生器可以重寫如下：
 
 ```fsharp
 let fib n =
@@ -76,6 +76,6 @@ let fib n =
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [函式](index.md)

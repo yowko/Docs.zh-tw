@@ -2,13 +2,13 @@
 title: 在 Azure 上使用 F#
 description: 使用 Azure 服務搭配 F 的指南#
 author: sylvanc
-ms.date: 09/22/2016
-ms.openlocfilehash: f074ac192f6dedbadf8132430cf27dc5865e6371
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.date: 07/29/2020
+ms.openlocfilehash: ebf94d724db2c503f27581bf1352bf4fa90f5e2a
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501816"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455715"
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -55,12 +55,14 @@ Azure 儲存體也可以透過宣告式組態 (而不是明確的 API 呼叫) �
 * [F# Azure Web API example](https://github.com/fsprojects/azure-webapi-example) (F# Azure Web API 範例)
 * [Hosting F# in a web application on Azure](https://github.com/isaacabraham/fsharp-demonstrator) (在 Azure 的 Web 應用程式中裝載 F#)
 
-## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>在 Azure HDInsight 上使用 Apache Spark 搭配 F#
+## <a name="using-apache-spark-with-f-on-azure-hdinsight-or-azure-databricks"></a>在 Azure HDInsight 或 Azure Databricks 上使用 Apache Spark 搭配 F #
 
-[Apache Spark for Azure HDInsight](https://azure.microsoft.com/services/hdinsight/apache-spark/) 是一種開放原始碼處理架構，可執行大規模的資料分析應用程式。 Azure 可讓 Apache Spark 部署變得輕鬆又具成本效益。 請使用 [Mobius](https://github.com/Microsoft/Mobius)其為適用於 Spark 的 .NET API 來開發您的 F# Spark 應用程式。
+[Apache Spark for Azure HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) 是一種開放原始碼處理架構，可執行大規模的資料分析應用程式。 [Azure Databricks](https://docs.microsoft.com/azure/databricks/scenarios/what-is-azure-databricks) 是一個針對 Microsoft Azure 雲端服務平台進行最佳化的 Apache Spark 分析平台。 Azure 可讓 Apache Spark 部署變得輕鬆又具成本效益。 使用[適用于 Apache Spark 的 .net](../../spark/what-is-apache-spark-dotnet.md)（一組適用于 Apache Spark 的 .net 系結），以 F # 開發您的 Spark 應用程式。
 
-* [Implementing Spark Apps in F# using Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md) (使用 Mobius 實作 F# Spark 應用程式)
-* [Example F# Spark Apps using Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp) (使用 Mobius 的 F# Spark 應用程式範例)
+* [適用于 Apache Spark F # 範例的 .NET](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.FSharp.Examples)
+* [在 Azure HDInsight 中安裝 .NET 互動式 Jupyter 筆記本](../../spark/how-to-guides/hdinsight-notebook-installation.md)
+* [將 Apache Spark 作業提交至 Azure HDInsight](../../spark/how-to-guides/hdinsight-deploy-methods.md)
+* [將 Apache Spark 作業提交至 Azure Databricks](../../spark/how-to-guides/databricks-deploy-methods.md)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>搭配 F 使用 Azure Cosmos DB\#
 

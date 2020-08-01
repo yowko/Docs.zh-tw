@@ -20,7 +20,7 @@ ms.locfileid: "87301628"
 
 ## <a name="in-this-section"></a>本節內容
 
-|**標題**|**說明**|
+|**標題**|**描述**|
 |---------------|---------------------|
 |[如何逐一查看目錄樹狀結構](how-to-iterate-through-a-directory-tree.md)|示範如何手動逐一查看樹狀目錄。|
 |[如何取得有關檔案、資料夾和磁碟機的資訊](how-to-get-information-about-files-folders-and-drives.md)|示範如何擷取有關檔案、資料夾和磁碟機的資訊，例如建立時間和大小。|

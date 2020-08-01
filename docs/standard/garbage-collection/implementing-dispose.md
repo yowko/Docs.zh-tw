@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447169"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455734"
 ---
 # <a name="implement-a-dispose-method"></a>實作 Dispose 方法
 
-執行 <xref:System.IDisposable.Dispose%2A> 方法主要是用來釋放程式碼所使用的非受控資源。 使用實作為實作為實例成員時 <xref:System.IDisposable> ，通常會使用 cascade <xref:System.IDisposable.Dispose%2A> 呼叫。 有其他的原因需要執行 <xref:System.IDisposable.Dispose%2A> ，例如復原先前完成的專案。 例如，釋放已配置的記憶體、從已新增的集合中移除專案、發出已取得鎖定的釋放信號等等。
+執行 <xref:System.IDisposable.Dispose%2A> 方法主要是用來釋放非受控資源。 使用實作為實作為實例成員時 <xref:System.IDisposable> ，通常會使用 cascade <xref:System.IDisposable.Dispose%2A> 呼叫。 還有其他的原因，例如 <xref:System.IDisposable.Dispose%2A> ，若要釋放已配置的記憶體，請移除已新增至集合的專案，或發出已取得之鎖定的釋放。
 
 [.Net 垃圾收集](index.md)行程不會配置或釋放非受控記憶體。 處置物件的模式稱為處置模式，會在物件的存留期加上順序。 處置模式用於實作為介面的物件 <xref:System.IDisposable> ，而且與檔案和管道控制碼、登錄控制碼、等候控制碼或非受控記憶體區塊的指標互動時很常見。 這是因為垃圾收集行程無法回收未受管理的物件。
 

@@ -2,12 +2,12 @@
 title: 序列化 (C#)
 description: 序列化會將物件轉換成位元組資料流程，以儲存物件或將它傳送至記憶體、資料庫或檔案。
 ms.date: 01/02/2020
-ms.openlocfilehash: b2b3105887ad6f000fcba895452a483881ae5a09
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 29625648b19c97556c107997ef9ecd3f0f971cbf
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302772"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455751"
 ---
 # <a name="serialization-c"></a>序列化 (C#)
 
@@ -45,6 +45,8 @@ JSON 序列化會將物件的公用屬性序列化為符合[RFC 8259 JSON 規格
 <xref:System.Runtime.Serialization>命名空間包含二進位和 XML 序列化和還原序列化的類別。
 
 二進位序列化使用二進位編碼來產生精簡的序列化，適用於儲存或通訊端型網路資料流。 在二進位序列化中，系統會序列化所有成員 (即使是唯讀的成員)，且效能會增強。
+
+[!INCLUDE [binary-serialization-warning](~/includes/binary-serialization-warning.md)]
 
 XML 序列化會將物件的公用欄位和屬性，或是方法的參數和傳回值，序列化為與特定 XML 結構描述定義語言 (XSD) 文件相符的 XML 資料流。 XML 序列化會產生強型別的類別，其中包含的公用屬性和欄位都會轉換成 XML。 <xref:System.Xml.Serialization>包含用來序列化和還原序列化 XML 的類別。 您可以將屬性套用至類別和類別成員，以便控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或還原序列化類別執行個體的方式。
 

@@ -2,12 +2,12 @@
 title: 基類庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: d34cd2e7ba1122b11921eefaee2ed55ba0c8df8d
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: c80270eab723d922734431ed2087dc8c17e706f7
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302993"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455764"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,7 @@ ms.locfileid: "87302993"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [UTF-7 程式碼路徑已過時](#utf-7-code-paths-are-obsolete) | 5.0 |
 | [Vector 一律會擲回 \<T> 不支援之類型的 NotSupportedException](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
 | [預設 ActivityIdFormat 為 W3C](#default-activityidformat-is-w3c) | 5.0 |
 | [Vector2 的行為變更。 Lerp 和 Vector4. Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
@@ -46,6 +47,10 @@ ms.locfileid: "87302993"
 | [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [utf-7-code-paths-obsolete](../../../includes/core-changes/corefx/5.0/utf-7-code-paths-obsolete.md)]
+
+***
 
 [!INCLUDE [vectort-throws-notsupportedexception](../../../includes/core-changes/corefx/5.0/vectort-throws-notsupportedexception.md)]
 
