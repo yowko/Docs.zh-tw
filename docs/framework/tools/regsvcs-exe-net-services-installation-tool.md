@@ -1,5 +1,6 @@
 ---
 title: Regsvcs.exe (.NET 服務安裝工具)
+description: 使用 .NET 服務安裝工具 Regsvcs.exe。 載入並註冊元件、設定您已以程式設計方式新增至類別的服務等等。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Regsvcs.exe
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: aecd2f6894558b45898c7f22dd333617d9e2e327
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d0090eda764113407e35a3bcec139f1c7cfb050
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180367"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517239"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
@@ -39,11 +40,11 @@ ms.locfileid: "79180367"
   
 ## <a name="parameters"></a>參數  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|來源組件檔。 這個組件必須以強式名稱簽署。 如需詳細資訊，請參閱[以強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)。|  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/appdir:<路徑>** **|指定應用程式的根目錄。|  
 |**/appname:<應用程式名稱>** **|指定要尋找或建立之 COM+ 應用程式的名稱。|  
@@ -52,14 +53,14 @@ ms.locfileid: "79180367"
 |**/exapp**|指定需要現有應用程式的工具。|  
 |**/extlb**|使用現有的類型程式庫。|  
 |**/fc**|尋找或建立目標應用程式。|  
-|**/説明**|顯示工具的命令語法和選項。|  
+|**/help**|顯示工具的命令語法和選項。|  
 |**/noreconfig**|不要重新設定現有的目標應用程式。|  
-|**/諾戈戈**|隱藏 Microsoft 程式啟始資訊顯示。|  
+|**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/parname:** *name*|指定要尋找或建立之 COM+ 應用程式的名稱或 ID。|  
 |**/reconfig**|重新設定現有的目標應用程式。 這是預設值。|  
 |**/tlb:<型別程式庫檔案>** **|指定要安裝的類型程式庫檔案。|  
-|**/u**|解除安裝目標應用程式。|  
-|**/安靜**|指定安靜模式，隱藏標誌或成功訊息顯示。|  
+|**u**|解除安裝目標應用程式。|  
+|**/quiet**|指定安靜模式，隱藏標誌或成功訊息顯示。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  

@@ -2,12 +2,12 @@
 title: 基類庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: c80270eab723d922734431ed2087dc8c17e706f7
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.openlocfilehash: 558aa1d76831cd15e2028c17d2b0b2e82f64ef9a
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455764"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517319"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,7 @@ ms.locfileid: "87455764"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [ASP.NET 應用程式中的 BinaryFormatter 序列化方法已過時且禁止](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
 | [UTF-7 程式碼路徑已過時](#utf-7-code-paths-are-obsolete) | 5.0 |
 | [Vector 一律會擲回 \<T> 不支援之類型的 NotSupportedException](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
 | [預設 ActivityIdFormat 為 W3C](#default-activityidformat-is-w3c) | 5.0 |
@@ -32,7 +33,6 @@ ms.locfileid: "87455764"
 | [取代格式不正確的 UTF-8 位元組序列遵循 Unicode 方針](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [TypeDescriptionProviderAttribute 已移至另一個元件](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [Ziparchiveentry 中不再處理具有不一致專案大小的封存](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
-| [JSON 序列化程式例外狀況類型已從 JsonException 變更為 NotSupportedException](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
 | [在 Utf8JsonWriter 中變更（string） null 的語義](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
 | [JsonEncodedText 方法有額外的 JavaScriptEncoder 引數](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
 | [JsonFactoryConverter. CreateConverter 簽章已變更](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
@@ -47,6 +47,10 @@ ms.locfileid: "87455764"
 | [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
+
+***
 
 [!INCLUDE [utf-7-code-paths-obsolete](../../../includes/core-changes/corefx/5.0/utf-7-code-paths-obsolete.md)]
 
@@ -107,10 +111,6 @@ ms.locfileid: "87455764"
 ***
 
 [!INCLUDE[ZipArchiveEntry no longer handles archives with inconsistent entry sizes](~/includes/core-changes/corefx/3.0/ziparchiveentry-and-inconsistent-entry-sizes.md)]
-
-***
-
-[!INCLUDE[JSON serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/3.0/serializer-throws-notsupportedexception.md)]
 
 ***
 

@@ -1,5 +1,6 @@
 ---
 title: Resgen.exe (資源檔產生器)
+description: 使用資源檔產生器 Resgen.exe。 將文字（.txt、.restext）和 XML 資源格式（.resx）檔案轉換為可內嵌 CLR 執行時間二進位檔（.resources）。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resource files, .resources files
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: b9be030689ecf78b3482743e486e32012e9ca5d4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: f51ee6c8537abafc82017f3cc29d734e939a254f
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201110"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517226"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (資源檔產生器)
 資源檔產生器 (Resgen.exe) 可以將文字檔 (.txt 或 .restext) 及 XML 架構資源格式檔 (.resx)，轉換成通用語言執行平台二進位檔 (.resources)，這種檔案可以嵌入至執行階段二進位可執行檔或附屬組件  (請參閱[建立資源檔](../resources/creating-resource-files-for-desktop-apps.md))。  
@@ -39,7 +40,7 @@ ms.locfileid: "84201110"
   
  如果 Resgen.exe 因任何理由而失敗，則傳回值將會是 –1。  
   
- 若要取得 Resgen.exe 的說明，您可以使用下列命令（未指定任何選項）來顯示 Resgen.exe 的命令語法和選項：  
+ 若要取得 Resgen.exe 的協助，您可以使用下列命令（未指定任何選項）來顯示 Resgen.exe 的命令語法和選項：  
   
 ```console  
 resgen  
@@ -51,7 +52,7 @@ resgen
 resgen /?  
 ```  
   
- 如果您使用 Resgen.exe 產生二進位 .resources 檔案，您可以使用語言編譯器將二進位檔案內嵌至可執行檔元件，或者您可以使用[元件連結器（al.exe）](al-exe-assembly-linker.md)將它們編譯成附屬元件。  
+ 如果您使用 Resgen.exe 產生二進位 .resources 檔，您可以使用語言編譯器將二進位檔案內嵌至可執行檔元件，或使用[元件連結器（Al.exe）](al-exe-assembly-linker.md)將它們編譯成附屬元件。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
@@ -69,7 +70,7 @@ resgen filename.extension [outputDirectory]
   
 ## <a name="parameters"></a>參數  
   
-|參數|描述|  
+|參數|說明|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|從 .NET Framework 4.5 開始，支援文字資源檔 (.txt 或 .restext) 的條件式編譯。 如果 *symbol* 對應至在 `#ifdef` 建構內輸入文字檔中的符號，關聯字串資源會包含在 .resources 檔案中。 如果輸入文字檔包含有不是 `#if !` 參數所定義之符號的 `/define` 陳述式，關聯的字串資源會包含在資源檔中。<br /><br /> 使用非文字檔案則會忽略 `/define`。 符號會區分大小寫。<br /><br /> 如需這個選項的詳細資訊，請參閱本主題稍後的[條件式編譯資源](#Conditional)。|  
 |`useSourcePath`|具體指明輸入檔的目前目錄是用來解析相對檔案路徑。|  
@@ -178,7 +179,7 @@ resgen Resources.resx Resources.resources
   
  語法與上一節顯示的內容相同。  
   
- 此外，您可以使用 Resgen.exe，將 .NET Framework 元件中的內嵌資源轉換成 tor Windows 8.x 存放區應用程式的 .resw 檔案。  
+ 此外，您可以使用 Resgen.exe 將 .NET Framework 元件中的內嵌資源轉換為 .resw 檔案 tor Windows 8.x 存放區應用程式。  
   
  下列命令會讀取名為 Resources.resources 的二進位 .resources 檔案，並寫入名為 Resources.resx 的 XML 架構輸出檔案。  
   
@@ -215,10 +216,10 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
   
 <a name="Exporting"></a>
 ### <a name="exporting-resources-to-a-resw-file"></a>將資源匯出至 .resw 檔案  
- 如果您正在開發 Windows 8.x 存放區應用程式，您可能會想要使用現有桌面應用程式的資源。 然而，這兩種應用程式支援不同的檔案格式。 在桌面應用程式中，文字檔 (.txt 或 .restext) 或 .resx 檔案的資源會編譯為二進位 .resources 檔案。 在 Windows 8.x 存放區應用程式中，.resw 檔案會編譯成二進位封裝資源索引（PRI）檔案。 您可以使用 Resgen.exe 將資源從可執行檔或附屬元件解壓縮，並將其寫入一個或多個可在開發 Windows 8.x 存放區應用程式時使用的 .resw 檔案，以彌補此間隙。  
+ 如果您正在開發 Windows 8.x 存放區應用程式，您可能會想要使用現有桌面應用程式的資源。 然而，這兩種應用程式支援不同的檔案格式。 在桌面應用程式中，文字檔 (.txt 或 .restext) 或 .resx 檔案的資源會編譯為二進位 .resources 檔案。 在 Windows 8.x 存放區應用程式中，.resw 檔案會編譯成二進位封裝資源索引（PRI）檔案。 您可以使用 Resgen.exe 將資源從可執行檔或附屬元件解壓縮，並將其寫入一個或多個可在開發 Windows 8.x 存放區應用程式時使用的 .resw 檔案，以填補此間隙。  
   
 > [!IMPORTANT]
-> Visual Studio 會自動處理將便攜媒體櫃中的資源併入 Windows 8.x 存放區應用程式所需的所有轉換。 直接使用 Resgen.exe 將元件中的資源轉換為 .resw 檔案格式，僅適用于想要在 Visual Studio 外部開發 Windows 8.x 存放應用程式的開發人員。  
+> Visual Studio 會自動處理將便攜媒體櫃中的資源併入 Windows 8.x 存放區應用程式所需的所有轉換。 直接使用 Resgen.exe 將元件中的資源轉換為 .resw 檔案格式，僅適用于想要在 Visual Studio 以外開發 Windows 8.x 存放區應用程式的開發人員。  
   
  從組件產生 .resw 檔案的語法是：  
   
@@ -291,7 +292,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  如果 `inputFilename` 為 .resources 檔案且 `outputFilename` 也是 .resources 檔，則 Resgen.exe 會複製 .resources 檔案。 如果省略 `outputFilename`，Resgen.exe 會覆寫具有相同 .resources 檔案的 `inputFilename`。  
   
- *語言*  
+ *language*  
  要在其中產生強型別資源類別之原始程式碼的語言。 針對 C# 程式碼，可能的值為 `cs`、`C#` 和 `csharp`；針對 Visual Basic 程式碼，為 `vb` 和 `visualbasic`；針對 VBScript 程式碼，為 `vbs` 和 `vbscript`；針對 C++ 程式碼，為 `c++`、`mc` 和 `cpp`。  
   
  *命名空間*  

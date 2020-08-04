@@ -2,12 +2,12 @@
 title: dotnet-追蹤工具-.NET Core
 description: 安裝和使用 dotnet 追蹤命令列工具。
 ms.date: 11/21/2019
-ms.openlocfilehash: 6dd968dc49522229dca02c0dc6f3de898026dd82
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924847"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517304"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
@@ -27,7 +27,7 @@ dotnet tool install --global dotnet-trace
 dotnet-trace [-h, --help] [--version] <command>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet-trace`工具：
 
@@ -36,19 +36,19 @@ dotnet-trace [-h, --help] [--version] <command>
 * 是圍繞 .NET Core 執行時間的跨平臺技術所建立 `EventPipe` 。
 * 在 Windows、Linux 或 macOS 上提供相同的體驗。
 
-## <a name="options"></a>選項。
-
-- **`--version`**
-
-  顯示 dotnet 追蹤公用程式的版本。
+## <a name="options"></a>選項
 
 - **`-h|--help`**
 
   顯示命令列說明。
 
+- **`--version`**
+
+  顯示 dotnet 追蹤公用程式的版本。
+
 ## <a name="commands"></a>命令
 
-| Command                                                   |
+| 命令                                                   |
 |-----------------------------------------------------------|
 | [dotnet-追蹤收集](#dotnet-trace-collect)             |
 | [dotnet-追蹤轉換](#dotnet-trace-convert)             |
@@ -62,23 +62,45 @@ dotnet-trace [-h, --help] [--version] <command>
 ### <a name="synopsis"></a>概要
 
 ```console
-dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--output]
-    [--providers] [--profile <profile-name>] [--format]
+dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--clrevents <clrevents>]
+    [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
+    [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
+    [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
 ```
 
-### <a name="options"></a>選項。
-
-- **`-p|--process-id <PID>`**
-
-  要從中收集追蹤的進程。
+### <a name="options"></a>選項
 
 - **`--buffersize <size>`**
 
   設定記憶體中迴圈緩衝區的大小（以 mb 為單位）。 預設值： 256 MB。
 
+- **`--clreventlevel <clreventlevel>`**
+
+  要發出之 CLR 事件的詳細資訊。
+
+- **`--clrevents <clrevents>`**
+
+  要發出的 CLR 運行時間事件清單。
+
+- **`--format {Chromium|NetTrace|Speedscope}`**
+
+  設定追蹤檔案轉換的輸出格式。 預設值為 `NetTrace`。
+
+- **`-n, --name <name>`**
+
+  要從中收集追蹤的進程名稱。
+
 - **`-o|--output <trace-file-path>`**
 
-  所收集追蹤資料的輸出路徑。 如果未指定，則預設為 `trace.nettrace` 。
+  所收集追蹤資料的輸出路徑。 如果未指定，則會預設為 `trace.nettrace` 。
+
+- **`-p|--process-id <PID>`**
+
+  要從中收集追蹤的處理序識別碼。
+
+- **`--profile <profile-name>`**
+
+  一組命名的預先定義提供者設定，可讓您簡潔地指定一般追蹤案例。
 
 - **`--providers <list-of-comma-separated-providers>`**
 
@@ -90,14 +112,6 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
   - `Provider`的格式為： `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` 。
   - `KeyValueArgs`的格式為： `[key1=value1][;key2=value2]` 。
 
-- **`--profile <profile-name>`**
-
-  一組命名的預先定義提供者設定，可讓您簡潔地指定一般追蹤案例。
-
-- **`--format {NetTrace|Speedscope}`**
-
-  設定追蹤檔案轉換的輸出格式。 預設為 `NetTrace`。
-
 ## <a name="dotnet-trace-convert"></a>dotnet-追蹤轉換
 
 將 `nettrace` 追蹤轉換為替代的格式，以搭配替代的追蹤分析工具使用。
@@ -105,7 +119,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 ### <a name="synopsis"></a>概要
 
 ```console
-dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
+dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>] [-h|--help] [-o|--output <output-filename>]
 ```
 
 ### <a name="arguments"></a>引數
@@ -114,9 +128,9 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
   要轉換的輸入追蹤檔案。 預設為*nettrace*。
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
-- **`--format <NetTrace|Speedscope>`**
+- **`--format <Chromium|NetTrace|Speedscope>`**
 
   設定追蹤檔案轉換的輸出格式。
 
@@ -126,7 +140,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 ## <a name="dotnet-trace-ps"></a>dotnet-追蹤 ps
 
-列出可以附加至的 dotnet 進程。
+ 列出可從中收集追蹤的 dotnet 進程。
 
 ### <a name="synopsis"></a>概要
 
@@ -154,7 +168,7 @@ dotnet-trace list-profiles [-h|--help]
   - 例如，在 Linux 上為 `ps` 命令。
   - [dotnet-追蹤 ps](#dotnet-trace-ps)
 
-- 執行下列命令：
+- 執行以下命令：
 
   ```console
   dotnet-trace collect --process-id <PID>

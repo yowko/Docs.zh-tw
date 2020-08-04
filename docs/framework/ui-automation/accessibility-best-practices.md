@@ -1,22 +1,23 @@
 ---
 title: 協助工具最佳作法
+description: 瞭解 .NET 中的協助工具最佳作法。 探索程式設計存取、使用者設定、視覺化 UI 設計、導覽和無樣式介面。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: c6f0f31260ffae43e59703ef53dd7ef30a73320b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 725bb0c60972e2d0dc6089b4370dd7e3e436e444
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180290"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517057"
 ---
 # <a name="accessibility-best-practices"></a>協助工具最佳作法
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- 在控制項或應用程式中實現以下最佳實踐將提高使用輔助技術設備的使用者的可訪問性。 這些最佳做法有許多是著眼於良好的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 設計。 每個最佳做法包含 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控制項或應用程式的實作資訊。 在許多情況下，符合這些最佳做法的工作已經包含在 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控制項中。  
+ 在控制項或應用程式中執行下列最佳作法，將可改善使用輔助技術裝置之人員的協助工具。 這些最佳做法有許多是著眼於良好的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 設計。 每個最佳做法包含 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控制項或應用程式的實作資訊。 在許多情況下，符合這些最佳做法的工作已經包含在 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控制項中。  
   
 <a name="Programmatic_Access"></a>
 ## <a name="programmatic-access"></a>程式設計存取  
@@ -24,19 +25,19 @@ ms.locfileid: "79180290"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>啟用以程式設計方式存取所有 UI 項目和文字  
- 使用者介面 （UI） 元素應啟用程式設計訪問。 如果 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 是一種標準的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控制項，則在控制項中包含以程式設計方式存取的支援。 如果此控制項為自訂的控制項 (已從通用控制項子類別化或已從控制項子類別化)，則您必須檢查可能需要修改的區域之 <xref:System.Windows.Automation.Peers.AutomationPeer> 實作。  
+ 使用者介面（UI）元素應該啟用程式設計存取。 如果 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 是一種標準的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控制項，則在控制項中包含以程式設計方式存取的支援。 如果此控制項為自訂的控制項 (已從通用控制項子類別化或已從控制項子類別化)，則您必須檢查可能需要修改的區域之 <xref:System.Windows.Automation.Peers.AutomationPeer> 實作。  
   
- 遵循此最佳實踐，輔助技術供應商可以識別和操作產品的 元素[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]。  
+ 遵循此最佳做法可讓輔助技術廠商識別並操作產品的元素 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 。  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>在 UI 物件、框架和頁面上放置名稱、標題和描述  
- 輔助技術，尤其是螢幕助讀程式，會在巡覽配置中使用標題來了解框架、物件或頁面的位置。 因此，此標題必須具備相當的描述性。 例如若使用者已深入巡覽至某些特定的區域，則「Microsoft 網頁」的網頁標題毫無用處。 描述性的標題對於視力喪失而且依賴螢幕助讀程式的使用者相當重要。 同樣，對於[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]控制項，<xref:System.Windows.Automation.AutomationProperties.NameProperty><xref:System.Windows.Automation.AutomationProperties.HelpTextProperty>對於輔助技術設備也很重要。  
+ 輔助技術，尤其是螢幕助讀程式，會在巡覽配置中使用標題來了解框架、物件或頁面的位置。 因此，此標題必須具備相當的描述性。 例如若使用者已深入巡覽至某些特定的區域，則「Microsoft 網頁」的網頁標題毫無用處。 描述性的標題對於視力喪失而且依賴螢幕助讀程式的使用者相當重要。 同樣地，針對 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控制項， <xref:System.Windows.Automation.AutomationProperties.NameProperty> 和對於 <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> 輔助技術裝置而言很重要。  
   
- 遵循此最佳實踐，輔助技術可以在示例控制項和應用程式中識別和操作[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]。  
+ 遵循此最佳做法可讓輔助探討技術 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 在範例控制項和應用程式中識別和操作。  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>
 ### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>確定所有 UI 活動都會觸發程式設計事件  
- 遵循此最佳實踐，輔助技術可以偵聽 中的[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]更改，並通知使用者這些更改。  
+ 遵循此最佳做法可讓輔助探討技術接聽中的變更 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ，並通知使用者這些變更。  
   
 <a name="User_Settings"></a>
 ## <a name="user-settings"></a>使用者設定  
@@ -50,7 +51,7 @@ ms.locfileid: "79180290"
   
 <a name="Visual_UI_Design"></a>
 ## <a name="visual-ui-design"></a>視覺 UI 設計  
- 本節中的最佳實踐可確保控制項或應用程式有效地使用顏色和圖像，並且能夠由輔助技術使用。  
+ 本節中的最佳做法可確保控制項或應用程式會有效地使用色彩和影像，並可供輔助技術使用。  
   
 <a name="Don_t_Hard_Code_Colors"></a>
 ### <a name="dont-hard-code-colors"></a>請勿對色彩硬式編碼  
@@ -66,7 +67,7 @@ ms.locfileid: "79180290"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>確定所有 UI 正確地依 DPI 設定值縮放比例  
- 確保所有功能[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]都可以按每英寸 （DPI） 設置的任何點正確縮放。 此外，確保[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]元素適合螢幕 1024 x 768 與 120 點每英寸 （DPI）.  
+ 確定所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可以正確地依任何的每英寸（DPI）設定來調整。 此外，請確定 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素符合 1024 x 768 的畫面，並具有120個點（DPI）。  
   
 <a name="Navigation"></a>
 ## <a name="navigation"></a>導覽  
@@ -128,7 +129,7 @@ ms.locfileid: "79180290"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>藉由與裝置無關的呼叫使用標準輸入的 API  
- 與設備無關的呼叫可確保鍵盤和滑鼠功能相等，同時為輔助技術提供有關[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]所需的資訊。  
+ 與裝置無關的呼叫會確保鍵盤和滑鼠功能是否相等，同時提供輔助技術與所需的相關資訊 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 。  
   
 ## <a name="see-also"></a>另請參閱
 

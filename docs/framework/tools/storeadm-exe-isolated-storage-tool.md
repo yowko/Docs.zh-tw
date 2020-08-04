@@ -1,5 +1,6 @@
 ---
 title: Storeadm.exe (隔離儲存區工具)
+description: 請參閱隔離儲存區工具 Storeadm.exe 的相關資訊。 此工具會列出或移除目前使用者的所有現有存放區。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storeadm.exe
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 153fc2b4b5a955fd5ed768d1492f053595363e6e
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715720"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517005"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (隔離儲存區工具)
 隔離儲存區 (Isolated Storage) 工具可以列出或移除目前使用者的所有現有存放區。  
@@ -30,14 +31,14 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>參數  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
-|**/h**=**埃爾普**||顯示工具的命令語法和選項。|  
-|**/清單**|顯示目前使用者的所有現有存放區。 包括這個使用者所執行的所有應用程式或組件的存放區。|  
-|**/機器**|選取電腦存放區。 使用這個選項搭配 **/list** 或 **/remove** 選項，可指定動作應該套用至電腦存放區。<br /><br /> .NET Framework 2.0 的新功能|  
-|**/安靜**|指定無訊息模式，隱藏資訊輸出，以便僅顯示錯誤訊息。|  
-|**/刪除**|永久移除目前使用者的所有現有存放區。|  
-|**/漫遊**|選取漫遊存放區。 使用這個選項搭配 **/list** 或 **/remove** 選項，可指定動作應該套用至漫遊存放區。|  
+|**/h**[**elp**]|顯示工具的命令語法和選項。|  
+|**/list**|顯示目前使用者的所有現有存放區。 包括這個使用者所執行的所有應用程式或組件的存放區。|  
+|**/machine**|選取電腦存放區。 使用這個選項搭配 **/list** 或 **/remove** 選項，可指定動作應該套用至電腦存放區。<br /><br /> .NET Framework 2.0 的新功能|  
+|**/quiet**|指定無訊息模式，隱藏資訊輸出，以便僅顯示錯誤訊息。|  
+|**/remove**|永久移除目前使用者的所有現有存放區。|  
+|**/roaming**|選取漫遊存放區。 使用這個選項搭配 **/list** 或 **/remove** 選項，可指定動作應該套用至漫遊存放區。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
@@ -61,5 +62,5 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [隔離存儲](../../standard/io/isolated-storage.md)
+- [隔離儲存區](../../standard/io/isolated-storage.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

@@ -1,5 +1,6 @@
 ---
 title: Mgmtclassgen.exe (管理強類型類別產生器)
+description: 瞭解管理強型別類別產生器 Mgmtclassgen.exe。 此工具可讓您快速產生 WMI 類別的早期繫結 managed 類別。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,28 +12,28 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: d6de28694a1fdcd22cc2baa8cff66387c601414c
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 89facd4369dad6168e46febd3e34d7f7c235faf0
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201855"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517291"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (管理強類型類別產生器)
 [管理強類型類別產生器] 工具可快速地為指定的 Windows Management Instrumentation (WMI) 類別產生早期繫結 Managed 類別。 產生的類別會將為存取 WMI 類別之執行個體所撰寫的程式碼加以簡化。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 mgmtclassgen
 WMIClass [options]
 ```  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |*WMIClass*|要產生早期繫結 Managed 類別的 Windows Management Instrumentation 類別。|  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/l**  *language*|指定要用來產生早期繫結 Managed 類別的語言。 您可以指定 **CS** (C#，預設)、**VB** (Visual Basic)、**MC** (C++) 或 **JS** (JScript) 作為語言引數。|  
 |**/m  <電腦>**  **|指定要連接的電腦，其中內含 WMI 類別。 預設是本機電腦。|  
@@ -62,8 +63,8 @@ WMIClass [options]
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Single**|  
 |CIM_REAL64|**Double**|  
-|CIM_BOOLEAN|**True**|  
-|CIM_String|**字串**|  
+|CIM_BOOLEAN|**布林值**|  
+|CIM_String|**String**|  
 |CIM_DATETIME|**DateTime** 或 **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  

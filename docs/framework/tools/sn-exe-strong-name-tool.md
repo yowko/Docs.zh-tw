@@ -1,5 +1,6 @@
 ---
 title: Sn.exe (強式名稱工具)
+description: 開始使用 Sn.exe，即強式名稱工具。 以強式名稱簽署元件。 管理金鑰，並產生並驗證簽章。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - public keys, signing files
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: b5eee15a08dcae42263e06939c197ec0848816a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f10dab9b395640e46cb9bf3ca468b8f6bb2bc1b
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180309"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517187"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (強式名稱工具)
 強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../standard/assembly/strong-named.md)簽署組件。 Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。  
@@ -40,7 +41,7 @@ sn [-quiet][option [parameter(s)]]
   
 ## <a name="parameters"></a>參數  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |`-a identityKeyPairFile signaturePublicKeyFile`|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從檔案移轉到簽章金鑰。|  
 |`-ac identityPublicKeyFile identityKeyPairContainer signaturePublicKeyFile`|產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 資料，將識別金鑰從金鑰容器移轉到簽章金鑰。|  
@@ -60,10 +61,10 @@ sn [-quiet][option [parameter(s)]]
 |`-R[a] assembly infile`|以 *infile* 中的金鑰組重新簽署先前已簽署或延遲簽署的組件。<br /><br /> 如果使用了 **-Ra**，則會針對組件中的所有檔案重新計算雜湊。|  
 |`-Rc[a] assembly container`|以 *container* 中的金鑰組重新簽署先前已簽署或延遲簽署的組件。<br /><br /> 如果使用了 **-Rca**，則會針對組件中的所有檔案重新計算雜湊。|  
 |`-Rh assembly`|針對組件中的所有檔案重新計算雜湊。|  
-|`-t[p] infile`|顯示存放在 *infile* 中公開金鑰的語彙基元。 *infile* 的內容必須是先前使用 **-p** 從金鑰組檔案中產生的公開金鑰。  請不要使用 **-t[p]** 選項，直接從金鑰組檔案中擷取語彙基元。<br /><br /> Sn.exe 是使用公開金鑰中的雜湊函式來計算語彙基元。 為了節省空間，通用語言執行平台在將相依性記錄到具有強式名稱的組件時，會將公開金鑰語彙基元存放到資訊清單中，做為其他組件參考的一部分。 **-tp**選項除了權杖外，還顯示公開金鑰。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性已套用至組件，則語彙基元代表識別金鑰，然後會顯示雜湊演算法和識別金鑰的名稱。<br /><br /> 請注意，此選項不會驗證組件簽章，且不應該用來進行信任決策。  此選項只會顯示未經處理的公開金鑰語彙基元資料。|  
+|`-t[p] infile`|顯示存放在 *infile* 中公開金鑰的語彙基元。 *infile* 的內容必須是先前使用 **-p** 從金鑰組檔案中產生的公開金鑰。  請不要使用 **-t[p]** 選項，直接從金鑰組檔案中擷取語彙基元。<br /><br /> Sn.exe 是使用公開金鑰中的雜湊函式來計算語彙基元。 為了節省空間，通用語言執行平台在將相依性記錄到具有強式名稱的組件時，會將公開金鑰語彙基元存放到資訊清單中，做為其他組件參考的一部分。 除了權杖之外， **-tp**選項還會顯示公開金鑰。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性已套用至組件，則語彙基元代表識別金鑰，然後會顯示雜湊演算法和識別金鑰的名稱。<br /><br /> 請注意，此選項不會驗證組件簽章，且不應該用來進行信任決策。  此選項只會顯示未經處理的公開金鑰語彙基元資料。|  
 |`-T[p] assembly`|顯示 *assembly.* 的公開金鑰語彙基元。 *assembly* 必須是含有組件資訊清單的檔案名稱。<br /><br /> Sn.exe 是使用公開金鑰中的雜湊函式來計算語彙基元。 為了節省空間，執行階段在將相依性記錄到具有強式名稱的組件時，會將公開金鑰語彙基元存放到資訊清單中，做為其他組件參考的一部分。 除了語彙基元之外，**-Tp** 選項還會顯示公開金鑰。 如果 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性已套用至組件，則語彙基元代表識別金鑰，然後會顯示雜湊演算法和識別金鑰的名稱。<br /><br /> 請注意，此選項不會驗證組件簽章，且不應該用來進行信任決策。  此選項只會顯示未經處理的公開金鑰語彙基元資料。|  
-|`-TS assembly infile`|用 in*檔中*的金鑰組對對對對對簽名或部分簽名*程式集*進行測試簽名。|  
-|`-TSc assembly container`|用金鑰組在金鑰*容器中*測試簽名或部分簽名*程式集*。|
+|`-TS assembly infile`|使用*infile*中的金鑰組，對已簽署或部分簽署的*元件*進行簽署測試。|  
+|`-TSc assembly container`|以金鑰容器*容器*中的金鑰組，對已簽署或部分簽署的*元件*進行測試簽署。|
 |`-v assembly`|驗證 *assembly* 中的強式名稱，此處的 *assembly* 是含有組件資訊清單的檔案名稱。|  
 |`-vf assembly`|驗證 *assembly.* 中的強式名稱。 與 **-v** 選項不同的是，即使使用 **-Vr** 選項停用 **-vf**，它還是會強制執行驗證。|  
 |`-Vk regfile.reg assembly [userlist] [infile]`|建立註冊項目 (.reg) 檔案，您可以使用該檔案註冊要略過驗證的指定組件。 適用於 **-Vr** 選項的組件命名規則同樣適用於 **–Vk**。 如需 *userlist* 和 *infile* 選項的詳細資訊，請參閱 **–Vr** 選項。|  
@@ -125,6 +126,6 @@ sn -d MyContainer
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [Al.exe (組件連結器)](al-exe-assembly-linker.md)
-- [強式名稱的組件](../../standard/assembly/strong-named.md)
+- [Al.exe （元件連結器）](al-exe-assembly-linker.md)
+- [強式名稱的元件](../../standard/assembly/strong-named.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

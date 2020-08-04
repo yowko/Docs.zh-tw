@@ -1,5 +1,6 @@
 ---
 title: SqlMetal.exe (程式碼產生工具)
+description: 瞭解程式碼產生工具 SqlMetal.exe。 使用工具來產生 .NET LINQ to SQL 元件的程式碼和對應。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84cad85a7a9fc4b420b57543b7f258607be4ab52
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71044083"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517044"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
 SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 元件產生程式碼及對應。 藉由套用本主題稍後出現的選項，您就可以指示 SqlMetal 執行數個不同的動作，包括以下各項：  
@@ -32,37 +33,37 @@ SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../..
   
  若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。在命令提示字元中，鍵入下列命令：  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 sqlmetal [options] [<input file>]  
 ```  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
  若要檢視最新的選項清單，請進入安裝位置，並在命令提示字元輸入 `sqlmetal /?` 。  
   
  **連線選項**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
-|**/伺服器：***\<名稱>*|指定資料庫伺服器名稱。|  
-|**/資料庫：***\<名稱>*|指定伺服器上的資料庫目錄。|  
-|**/使用者：***\<名稱>*|指定登錄使用者 ID。預設值：使用 Windows 身份驗證。|  
-|**/密碼：***\<密碼>*|指定登入密碼。 預設值：使用 Windows 驗證。|  
-|**/conn：***\<連接字串>*|指定資料庫連接字串。 不可配合 **/server**、 **/database**、 **/user**或 **/password** 選項使用。<br /><br /> 不要在連接字串中包含檔案名稱。 而是在命令列中加入檔名來做為輸入檔案。 例如，下行指定 "c:\northwnd.mdf" 作為輸入檔案： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。|  
-|**/超時：***\<秒>*|指定 SqlMetal 存取資料庫時的逾時值。 預設值：0 (也就是沒有時間限制)。|  
+|**/server：***\<name>*|指定資料庫伺服器名稱。|  
+|**/database：***\<name>*|指定伺服器上的資料庫目錄。|  
+|**/user：***\<name>*|指定登入使用者識別碼。預設值：使用 Windows 驗證。|  
+|**/password：***\<password>*|指定登入密碼。 預設值：使用 Windows 驗證。|  
+|**/conn：***\<connection string>*|指定資料庫連接字串。 不可配合 **/server**、 **/database**、 **/user**或 **/password** 選項使用。<br /><br /> 不要在連接字串中包含檔案名稱。 而是在命令列中加入檔名來做為輸入檔案。 例如，下行指定 "c:\northwnd.mdf" 作為輸入檔案： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。|  
+|**/timeout：***\<seconds>*|指定 SqlMetal 存取資料庫時的逾時值。 預設值：0 (也就是沒有時間限制)。|  
   
  **擷取選項**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
-|**/視圖**|擷取資料庫檢視。|  
-|**/功能**|擷取資料庫函式。|  
+|**/views**|擷取資料庫檢視。|  
+|**/functions**|擷取資料庫函式。|  
 |**/sprocs**|擷取預存程序。|  
   
  **輸出選項**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|以 .dbml 傳送輸出。 無法搭配 **/map** 選項使用。|  
 |**/code** *[:file]*|以原始程式碼傳送輸出。 無法搭配 **/dbml** 選項使用。|  
@@ -70,20 +71,20 @@ sqlmetal [options] [<input file>]
   
  **其他**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
-|**/語言：***\<語言>*|指定原始程式碼語言。<br /><br /> 有效*\<語言*>：vb，csharp。<br /><br /> 預設值：衍生自程式碼檔案名稱的副檔名。|  
-|**/命名空間：***\<名稱>*|指定所產生程式碼的命名空間。 預設值：沒有命名空間。|  
-|**/上下文：***\<鍵入>*|指定資料庫內容類別的名稱。 預設值：衍生自資料庫名稱。|  
-|**/實體庫：***\<鍵入>*|指定所產生程式碼中實體類別的基底類別。 預設值：實體沒有基底類別。|  
+|**/language：***\<language>*|指定原始程式碼語言。<br /><br /> 有效 *\<language>* ： vb、csharp。<br /><br /> 預設值：衍生自程式碼檔案名稱的副檔名。|  
+|**/namespace：***\<name>*|指定所產生程式碼的命名空間。 預設值：沒有命名空間。|  
+|**/coNtext：***\<type>*|指定資料庫內容類別的名稱。 預設值：衍生自資料庫名稱。|  
+|**/entitybase：***\<type>*|指定所產生程式碼中實體類別的基底類別。 預設值：實體沒有基底類別。|  
 |**/pluralize**|自動複數化或單數化類別和成員名稱。<br /><br /> 這個選項功能僅適用於美國英文版本。|  
-|**/序列化：***\<選項>*|產生可序列化的類別。<br /><br /> 有效*\<選項>*：無，單向。 預設值：None。<br /><br /> 如需詳細資訊，請參閱[序列化](../data/adonet/sql/linq/serialization.md)。|  
+|**/serialization：***\<option>*|產生可序列化的類別。<br /><br /> 有效 *\<option>* ：無、單向。 預設值：無。<br /><br /> 如需詳細資訊，請參閱[序列化](../data/adonet/sql/linq/serialization.md)。|  
   
  **輸入檔**  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
-|**\<輸入檔>**|指定 SQL Server Express .mdf 檔、SQL Server Compact 3.5 .sdf 檔或 .dbml 中繼檔。|  
+|**\<input file>**|指定 SQL Server Express .mdf 檔、SQL Server Compact 3.5 .sdf 檔或 .dbml 中繼檔。|  
   
 ## <a name="remarks"></a>備註  
  SqlMetal 功能實際上包含兩個步驟：  
@@ -134,6 +135,6 @@ sqlmetal [options] [<input file>]
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：以 Visual Basic 或 C# 產生物件模型](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [作法：以 Visual Basic 或 C# 產生物件模型](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [LINQ to SQL 中的程式碼產生](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [外部對應](../data/adonet/sql/linq/external-mapping.md)

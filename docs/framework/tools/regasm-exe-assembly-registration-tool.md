@@ -1,5 +1,6 @@
 ---
 title: Regasm.exe (組件登錄工具)
+description: 使用元件註冊工具 Regasm.exe。 讀取元件中繼資料，並將所需的專案新增至登錄，讓 COM 用戶端能夠建立 .NET 類別。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Assembly Registration tool
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 5eeed43f3d60bd5e443226a16963557546d81e7c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: a3af6a0fbc7c9c695e18448da285977f04fd72ef
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635409"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517252"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (組件登錄工具)
 
@@ -32,19 +33,19 @@ regasm assemblyFile [options]
 
 |參數|描述|
 |---------------|-----------------|
-|*程式集檔案*|要向 COM 註冊的組件。|
+|*assemblyFile*|要向 COM 註冊的組件。|
 
-|選項|描述|
+|選項|說明|
 |------------|-----------------|
-|**/代碼庫**|在登錄中建立一個程式碼基底項目。 Codebase 項目指定未安裝在全域程式集快取中的程式集的檔案路徑。 如果隨後將安裝要註冊到全域程式集緩存的程式集,請不要指定此選項。 您使用 **/codebase** 選項指定的 *assemblyFile* 引數必須是[強式名稱組件](../../standard/assembly/strong-named.md)。|
-|**/註冊**|指定這個工具只會參考已註冊的類型程式庫。|
+|**/codebase**|在登錄中建立一個程式碼基底項目。 程式碼基底專案會指定未安裝在全域組件快取中之元件的檔案路徑。 如果您接著將安裝您要註冊到全域組件快取中的元件，請不要指定此選項。 您使用 **/codebase** 選項指定的 *assemblyFile* 引數必須是[強式名稱組件](../../standard/assembly/strong-named.md)。|
+|**/registered**|指定這個工具只會參考已註冊的類型程式庫。|
 |**/asmpath:directory**|指定包含組件參考的目錄。 必須與 **/regfile** 選項一起使用。|
-|**/諾戈戈**|隱藏 Microsoft 程式啟始資訊顯示。|
-|**/註冊檔*****:** *正月檔案*||產生組件的指定 .reg 檔，其中包含所需的登錄項目。 指定這個選項並不會變更登錄。 這個選項不可與 **/u** 或 **/tlb** 選項一起使用。|
+|**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|
+|**/regfile** [**：** *regfile.reg assembly*]|產生組件的指定 .reg 檔，其中包含所需的登錄項目。 指定這個選項並不會變更登錄。 這個選項不可與 **/u** 或 **/tlb** 選項一起使用。|
 |**/silent** 或 **/s**|隱藏顯示成功訊息。|
-|**/tlb** =**:** *類型 LibFile*||從指定的組件中產生類型程式庫，其中包含組件內所定義之可存取類型的定義。|
+|**/tlb** [**：** *typeLibFile*]|從指定的組件中產生類型程式庫，其中包含組件內所定義之可存取類型的定義。|
 |**/unregister** 或 **/u**|移除註冊 *assemblyFile* 中所找到的可建立類別。 省略這個選項會造成 Regasm.exe 註冊組件中可建立的類別。|
-|**/詳細**|指定詳細資訊模式，與 **/tlb** 選項一起指定時，顯示需要產生型別程式庫之任何參考組件的清單。|
+|**/verbose**|指定詳細資訊模式，與 **/tlb** 選項一起指定時，顯示需要產生型別程式庫之任何參考組件的清單。|
 |**/?** 或 **/help**|顯示工具的命令語法和選項。|
 
 > [!NOTE]
@@ -52,11 +53,11 @@ regasm assemblyFile [options]
 
 ## <a name="remarks"></a>備註
 
-您可以使用 **/regfile** 選項產生包含登錄項目的 .reg 檔，而不是直接變更登錄。 您可以使用登錄編輯程式工具 (Regedit.exe) 匯入 .reg 檔，藉此更新電腦上的登錄。 .reg 檔不包含使用者定義的寄存器函數可以進行的任何註冊表更新。 **/regfile**選項僅發出託管類的註冊表項。 這個選項不會發出 `TypeLibID` 或 `InterfaceID` 的項目。
+您可以使用 **/regfile** 選項產生包含登錄項目的 .reg 檔，而不是直接變更登錄。 您可以使用登錄編輯程式工具 (Regedit.exe) 匯入 .reg 檔，藉此更新電腦上的登錄。 .Reg 檔案不包含任何可由使用者定義的暫存器功能進行的登錄更新。 **/Regfile**選項只會發出 managed 類別的登錄專案。 這個選項不會發出 `TypeLibID` 或 `InterfaceID` 的項目。
 
-當您指定 **/tlb** 選項時，Regasm.exe 會產生及註冊型別程式庫，描述組件中找到的類型。 Regasm.exe 會將產生的類型程式庫放入目前的工作目錄中，或是為輸出檔指定的目錄中。 為參考其他組件的組件產生類型程式庫可能導致一次產生多個類型程式庫。 您可以使用型別程式庫提供型別資訊給 Visual Studio 這類開發工具。 如果正在註冊的程式集是由類型庫導入器[(Tlb.exe)](tlbimp-exe-type-library-importer.md)生成的,則不要使用 **/tlb**選項。 您無法從原本自類型程式庫匯入的組件匯出類型程式庫。 使用 **/tlb** 選項與使用類型程式庫匯出工具 ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) 和 Regasm.exe 的效果相同，但是有一點除外，就是 Tlbexp.exe 不會註冊本身所產生的類型資料庫。  如果使用 **/tlb**選項註冊類型庫,則可以使用 **/tlb**選項與 **/un寄存器**選項取消註冊類型庫。 這兩個選項一起使用時，將會移除類型程式庫和介面項目的註冊，因而大幅清除登錄。
+當您指定 **/tlb** 選項時，Regasm.exe 會產生及註冊型別程式庫，描述組件中找到的類型。 Regasm.exe 會將產生的類型程式庫放入目前的工作目錄中，或是為輸出檔指定的目錄中。 為參考其他組件的組件產生類型程式庫可能導致一次產生多個類型程式庫。 您可以使用型別程式庫提供型別資訊給 Visual Studio 這類開發工具。 如果您要註冊的元件是由類型程式庫匯入工具（[Tlbimp.exe](tlbimp-exe-type-library-importer.md)）所產生，請勿使用 **/tlb**選項。 您無法從原本自類型程式庫匯入的組件匯出類型程式庫。 使用 **/tlb** 選項與使用類型程式庫匯出工具 ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) 和 Regasm.exe 的效果相同，但是有一點除外，就是 Tlbexp.exe 不會註冊本身所產生的類型資料庫。  如果您使用 **/tlb**選項註冊類型程式庫，您可以使用 **/tlb**選項搭配 **/unregister**選項來取消註冊類型程式庫。 這兩個選項一起使用時，將會移除類型程式庫和介面項目的註冊，因而大幅清除登錄。
 
-當您註冊 COM 要使用的組件時，Regasm.exe 會將項目加入至本機電腦上的登錄。 更精確地說，它會建立與版本相關的登錄機碼，允許相同組件的多個版本在電腦上並存執行。 首次註冊程式集時,會為程式集創建一個頂級鍵,併為特定版本創建唯一的子鍵。 每次您註冊新的組件版本時，Regasm.exe 就會為這個新的版本建立一個子機碼。
+當您註冊 COM 要使用的組件時，Regasm.exe 會將項目加入至本機電腦上的登錄。 更精確地說，它會建立與版本相關的登錄機碼，允許相同組件的多個版本在電腦上並存執行。 第一次註冊元件時，會為元件建立一個最上層的索引鍵，並為特定版本建立唯一的子機碼。 每次您註冊新的組件版本時，Regasm.exe 就會為這個新的版本建立一個子機碼。
 
 例如，假設您註冊 Managed 元件 myComp.dll 1.0.0.0 版以供 COM 使用。 稍後您又註冊 myComp.dll 2.0.0.0 版。 您決定讓電腦上的所有 COM 用戶端應用程式都使用 myComp.dll 2.0.0.0 版，並決定移除 myComponent.dll 1.0.0.0 版的註冊。 這項登錄配置可讓您移除 myComp.dll 1.0.0.0 版的註冊，因為只會移除 1.0.0.0 版的子機碼。
 
@@ -85,7 +86,7 @@ regasm myTest.dll /tlb:myTest.tlb
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [Tlbexp.exe(類型庫匯出器)](tlbexp-exe-type-library-exporter.md)
-- [Tlbimp.exe(類型函式庫匯入器)](tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe （類型程式庫匯出工具）](tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe （類型程式庫匯入工具）](tlbimp-exe-type-library-importer.md)
 - [向 COM 註冊組件](../interop/registering-assemblies-with-com.md)
-- [指令提示](developer-command-prompt-for-vs.md)
+- [命令提示字元](developer-command-prompt-for-vs.md)

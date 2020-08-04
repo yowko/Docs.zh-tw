@@ -1,16 +1,17 @@
 ---
 title: SignTool.exe (簽署工具)
+description: 瞭解 SignTool.exe，簽署工具。 此命令列工具會以數位方式簽署檔案、驗證檔案中的簽章，並將時間戳記套用至檔案。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: 8ce31b1399700906d6d6e2a369dcfc4b61fe9646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1254f345a8b3bb796217442cbad36d2e942b403
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180316"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517200"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (簽署工具)
 簽署工具是一項命令列工具，會以數位方式簽署檔案、驗證檔案中的簽章以及為檔案加上時間戳記。  
@@ -27,7 +28,7 @@ signtool [command] [options] [file_name | ...]
   
 ## <a name="parameters"></a>參數  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |`command`|四個命令之一 (`catdb`、`sign`、`Timestamp` 或 `Verify`)，指定要對檔案執行的操作。 如需每個命令的描述，請參閱下一個表格。|  
 |`options`|修改命令的選項。 除了全域 `/q` 和 `/v` 選項外，每個命令支援一組唯一的選項。|  
@@ -44,17 +45,17 @@ signtool [command] [options] [file_name | ...]
   
  下列選項適用於所有簽署工具命令。  
   
-|Global 選項|描述|  
+|Global 選項|說明|  
 |-------------------|-----------------|  
 |**/q**|如果命令成功執行則不顯示任何輸出，如果命令失敗則顯示最少的輸出。|  
 |**/v**|不論命令執行成功或失敗，都顯示詳細資訊輸出，並顯示警告訊息。|  
-|**/調試**|顯示偵錯資訊。|  
+|**/debug**|顯示偵錯資訊。|  
   
 <a name="catdb"></a>
 ## <a name="catdb-command-options"></a>catdb 命令選項  
  下表列出可以搭配 `catdb` 命令使用的選項。  
   
-|Catdb 選項|描述|  
+|Catdb 選項|說明|  
 |------------------|-----------------|  
 |`/d`|指示預設目錄資料庫已經更新。 如果未使用 `/d` 和 `/g` 選項，簽署工具就會更新系統元件和驅動程式資料庫。|  
 |`/g`*GUID*|指定由全域唯一識別項 *GUID* 所識別的目錄資料庫已更新。|  
@@ -65,34 +66,34 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>Sign 命令選項  
  下表列出可以搭配 `sign` 命令使用的選項。  
   
-|Sign 命令選項|描述|  
+|Sign 命令選項|說明|  
 |-------------------------|-----------------|  
 |`/a`|自動選取最佳的簽署憑證。 簽署工具會找到滿足所有指定條件的所有有效憑證，並且選取有效時間最長的一個。 如果沒有這個選項，簽署工具只需要找出一個有效的簽署憑證。|  
-|`/ac`  *檔*|從 *file* 將其他憑證加入至簽章區塊。|  
+|`/ac`  *文字檔*|從 *file* 將其他憑證加入至簽章區塊。|  
 |`/as`|附加這個簽章。 如果主要簽章不存在，則會設定這個簽章做為主要簽章。|  
 |`/c`  *CertTemplateName*|指定適用於簽署憑證的「憑證範本名稱」(Certificate Template Name)，這是一個 Microsoft 擴充功能。|  
 |`/csp`  *CSPName*|指定包含私密金鑰容器的密碼編譯服務提供者 (Cryptographic Service Provider，CSP)。|  
-|`/d`  *德茨*|指定簽署內容的描述。|  
-|`/du`  *Url*|為已簽署的內容之擴充描述指定統一資源定位器 (Uniform Resource Locator，URL)。|  
+|`/d`  *降冪*|指定簽署內容的描述。|  
+|`/du`  *URL*|為已簽署的內容之擴充描述指定統一資源定位器 (Uniform Resource Locator，URL)。|  
 |`/f`  *SignCertFile*|指定檔案中的簽署憑證。 如果檔案為「個人資訊交換」(PFX) 格式並且受密碼保護，請使用 `/p` 選項指定密碼。 如果檔案不包含私密金鑰，請使用 `/csp` 和 `/kc` 選項，以指定 CSP 和私密金鑰容器的名稱。|  
 |`/fd`|指定要用於建立檔案簽章的檔案摘要演算法。 預設為 SHA1。|  
-|`/i`  *頒發者名稱*|指定簽署憑證的簽發者名稱。 這個值可以是完整簽發者名稱的子字串。|  
+|`/i`  *IssuerName*|指定簽署憑證的簽發者名稱。 這個值可以是完整簽發者名稱的子字串。|  
 |`/kc`  *PrivKeyContainerName*|指定私密金鑰容器名稱。|  
 |`/n`  *SubjectName*|指定簽署憑證的主體名稱。 這個值可以是完整主體名稱的子字串。|  
 |`/nph`|如果支援，則隱藏可執行檔的頁面雜湊。 預設取決於 SIGNTOOL_PAGE_HASHES 環境變數和 wintrust.dll 版本。 若為非 PE 檔案，則會忽略這個選項。|  
 |`/p`  *密碼*|指定用來開啟 PFX 檔案的密碼  (使用 `/f` 選項指定 PFX 檔)。|  
-|`/p7` *路徑*|指定為每個指定內容檔產生公開金鑰加密標準 (PKCS) #7 檔案。 PKCS#7檔被命名為*路徑*\\*檔案名*.p7。|  
-|`/p7ce`*值*|指定已簽署的 PKCS #7 內容的選項。 將 *Value* 設定為 "Embedded" 會將簽署內容內嵌在 PKCS #7 檔案中，設定為 "DetachedSignedData" 會產生已中斷連結的 PKCS #7 檔案的簽署資料部分。 如果未使用 `/p7ce` 選項，則預設會內嵌簽署的內容。|  
-|`/p7co`* \<OID>*|指定識別已簽署 PKCS #7 內容的物件識別項 (OID)。|  
+|`/p7` *路徑*|指定為每個指定內容檔產生公開金鑰加密標準 (PKCS) #7 檔案。 PKCS #7 檔案的名稱為*path* \\ *filename*. p7。|  
+|`/p7ce` *值*|指定已簽署的 PKCS #7 內容的選項。 將 *Value* 設定為 "Embedded" 會將簽署內容內嵌在 PKCS #7 檔案中，設定為 "DetachedSignedData" 會產生已中斷連結的 PKCS #7 檔案的簽署資料部分。 如果未使用 `/p7ce` 選項，則預設會內嵌簽署的內容。|  
+|`/p7co` *\<OID>*|指定識別已簽署 PKCS #7 內容的物件識別項 (OID)。|  
 |`/ph`|如果支援，則產生可執行檔的頁面雜湊。|  
 |`/r`  *RootSubjectName*|指定簽署憑證必須鏈結之根憑證的主體名稱。 這個值可以是完整根憑證主體名稱的子字串。|  
-|`/s`  *商店名稱*|指定搜尋憑證時要開啟的存放區。 如果沒有指定這個選項，則會開啟 `My` 存放區。|  
-|`/sha1`  *散 列*|指定簽署憑證的 SHA1 雜湊。 在多重憑證符合其餘參數指定的準則時，SHA1 雜湊最常被指定。|  
+|`/s`  *StoreName*|指定搜尋憑證時要開啟的存放區。 如果沒有指定這個選項，則會開啟 `My` 存放區。|  
+|`/sha1`  *散列*|指定簽署憑證的 SHA1 雜湊。 在多重憑證符合其餘參數指定的準則時，SHA1 雜湊最常被指定。|  
 |`/sm`|指定使用電腦存放區，而非使用者存放區。|  
-|`/t`  *Url*|指定時間戳記伺服器的 URL。 如果沒有這個選項 (或 `/tr`)，簽署的檔案就不會加上時間戳記。 如果加上時間戳記失敗，便會產生警告。 這個選項無法與 `/tr` 選項搭配使用。|  
+|`/t`  *URL*|指定時間戳記伺服器的 URL。 如果沒有這個選項 (或 `/tr`)，簽署的檔案就不會加上時間戳記。 如果加上時間戳記失敗，便會產生警告。 這個選項無法與 `/tr` 選項搭配使用。|  
 |`/td`  *alg*|與 `/tr` 選項一起使用以要求 RFC 3161 時間戳記伺服器使用的摘要演算法。|  
-|`/tr`  *Url*|指定 RFC 3161 時間戳記伺服器的 URL。 如果沒有這個選項 (或 `/t`)，簽署的檔案就不會加上時間戳記。 如果加上時間戳記失敗，便會產生警告。 這個選項無法與 `/t` 選項搭配使用。|  
-|`/u`  *使用*|指定在簽署憑證時必須存在的增強金鑰使用方法 (Enhanced Key Usage，EKU)。 使用方法的值可以利用 OID 或字串指定。 預設的使用方法為 "Code Signing" (1.3.6.1.5.5.7.3.3)。|  
+|`/tr`  *URL*|指定 RFC 3161 時間戳記伺服器的 URL。 如果沒有這個選項 (或 `/t`)，簽署的檔案就不會加上時間戳記。 如果加上時間戳記失敗，便會產生警告。 這個選項無法與 `/t` 選項搭配使用。|  
+|`/u`  *使用量*|指定在簽署憑證時必須存在的增強金鑰使用方法 (Enhanced Key Usage，EKU)。 使用方法的值可以利用 OID 或字串指定。 預設的使用方法為 "Code Signing" (1.3.6.1.5.5.7.3.3)。|  
 |`/uw`|指定「Windows 系統元件驗證」(1.3.6.1.4.1.311.10.3.6) 的使用方式。|  
   
  如需使用方式範例，請參閱[使用 SignTool 簽署檔案](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file)。  
@@ -101,20 +102,20 @@ signtool [command] [options] [file_name | ...]
 ## <a name="timestamp-command-options"></a>TimeStamp 命令選項  
  下表列出可以搭配 `TimeStamp` 命令使用的選項。  
   
-|TimeStamp 選項|描述|  
+|TimeStamp 選項|說明|  
 |----------------------|-----------------|  
 |`/p7`|為 PKCS #7 檔案加上時間戳記。|  
-|`/t`  *Url*|指定時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/t` 或 `/tr` 任一選項。|  
+|`/t`  *URL*|指定時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/t` 或 `/tr` 任一選項。|  
 |`/td`  *alg*|要求 RFC 3161 時間戳記伺服器使用的摘要演算法。 `/td` 可搭配 `/tr` 選項使用。|  
 |`/tp`*索引*|在 *index* 的簽章加上時間戳記。|  
-|`/tr`  *Url*|指定 RFC 3161 時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/tr` 或 `/t` 任一選項。|  
+|`/tr`  *URL*|指定 RFC 3161 時間戳記伺服器的 URL。 要加上時間戳記的檔案必須先經過簽署。 必須有 `/tr` 或 `/t` 任一選項。|  
   
  如需使用範例，請參閱[新增時間戳記至先前已簽署的檔案](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files)。  
   
 <a name="Verify"></a>
 ## <a name="verify-command-options"></a>驗證命令選項  
   
-|Verify 選項|描述|  
+|Verify 選項|說明|  
 |-------------------|-----------------|  
 |`/a`|指定所有方法都可以用來驗證檔案。 首先會搜尋目錄資料庫，判斷檔案是否已在目錄中簽署。 如果檔案未在任何目錄中簽署，簽署工具便會嘗試驗證檔案的內嵌簽署。 驗證不一定已在目錄中簽署的檔案時，建議您採用這個選項。 這些檔案的範例包括 Windows 檔案或驅動程式。|  
 |`/ad`|使用預設目錄資料庫尋找目錄。|  
@@ -126,7 +127,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *索引*|驗證位於指定位置的簽章。|  
 |`/hash` (`SHA1`&#124;`SHA256`)|指定在目錄中搜尋檔案時，要使用的選擇性雜湊演算法。|  
 |`/kp`|指定應以核心模式驅動程式簽署原則執行驗證。|  
-|`/ms`|使用多個驗證語意。 這是 Windows 8 及以上版本的[WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust)調用的預設行為。|  
+|`/ms`|使用多個驗證語意。 這是 Windows 8 和更新版本上[WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust)呼叫的預設行為。|  
 |`/o`*版本*|根據作業系統版本驗證檔案。 *Version* 的格式如下：*PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*。 *PlatformID* 代表 <xref:System.PlatformID> 列舉成員的基礎值。 **重要事項：** 建議使用 `/o` 參數。 如果未指定 `/o`，SignTool.exe 可能會傳回未預期的結果。 例如，如果您未包含 `/o` 參數，在舊版作業系統上正確驗證的系統目錄，可能無法在較新版作業系統正確驗證。|  
 |`/p7`|驗證 PKCS #7 檔案。 PKCS #7 驗證沒有使用任何現有的原則。 檢查簽章，並建置簽署憑證鏈結。|  
 |`/pa`|指定使用預設 Authenticode 驗證原則。 如果未指定 `/pa` 選項，簽署工具便會使用「Windows 驅動程式驗證原則」(Windows Driver Verification Policy)。 這個選項無法與 `catdb` 選項搭配使用。|  
@@ -140,7 +141,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>傳回值  
  簽署工具終止時會傳回下列其中一個結束代碼。  
   
-|結束代碼|描述|  
+|結束碼|說明|  
 |---------------|-----------------|  
 |0|執行成功。|  
 |1|執行失敗。|  

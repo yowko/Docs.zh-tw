@@ -1,5 +1,6 @@
 ---
 title: Winres.exe (Windows 資源當地語系化編輯器)
+description: 使用 Windows 資源當地語系化編輯器 Winres.exe。 此視覺化版面組態工具可協助當地語系化專家將表單所使用的 Windows Forms UI 資源當地語系化。
 ms.date: 08/15/2018
 helpviewer_keywords:
 - Winres.exe
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715699"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87516901"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows 資源當地語系化編輯器)
 
@@ -33,7 +34,7 @@ winres /?
 
 ## <a name="arguments"></a>引數
 
-|引數|描述|
+|引數|說明|
 |--------------|-----------------|
 |`resourceFile`|要當地語系化的資源檔。 這個檔案必須是 Visual Studio 設計工具所產生的 Windows Form 表單 .resx 或 .resources 檔案。 Winres.exe 無法開啟泛型 .resx 或 .resources 檔案。|
 
