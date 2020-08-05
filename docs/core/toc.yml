@@ -180,7 +180,7 @@ items:
     href: sdk.md
   - name: .NET Core CLI
     items:
-      - name: 總覽
+      - name: 概觀
         href: tools/index.md
       - name: 參考資料
         items:
@@ -479,7 +479,5 @@ items:
     href: native-interop/expose-components-to-com.md
   - name: 從機器碼裝載 .NET Core
     href: tutorials/netcore-hosting.md
-  - name: 套件、中繼套件和架構
-    href: packages.md
   - name: 持續整合
     href: tools/using-ci-with-cli.md
