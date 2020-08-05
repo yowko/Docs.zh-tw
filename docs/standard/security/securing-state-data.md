@@ -4,19 +4,20 @@ description: 將狀態資料宣告為私用或內部變數，以限制其存取�
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- security [.NET Framework], state data
+- security [.NET], state data
 - code security, state data
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: b7fcb520fe6fa28cc098c4e1cbb56ce7da759c11
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 73bd0ace28e5b9661cc86d6749ceef9aa4c9ac92
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291041"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557121"
 ---
 # <a name="securing-state-data"></a>設定狀態資料的安全性
+
 處理機密資料或執行任何種類安全性決策的應用程式需要保持該資料在自己的控制之下，而且不能允許其他潛在惡意程式碼直接存取資料。 保護記憶體中資料的最佳方式是將資料宣告為私用或內部 (具有限制為相同組件的範圍) 變數。 不過，即使此資料受限於存取權，您應該要注意︰  
   
 - 使用反映機制，可以參考您物件的高度信任程式碼可以取得和設定私用成員。  
@@ -30,3 +31,4 @@ ms.locfileid: "84291041"
 ## <a name="see-also"></a>另請參閱
 
 - [安全程式碼撰寫方針](secure-coding-guidelines.md)
+- [ASP.NET Core 安全性](/aspnet/core/security/)

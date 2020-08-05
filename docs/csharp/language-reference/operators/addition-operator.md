@@ -13,22 +13,22 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 18364d80b8117fd4074c2c4231eac07c76829bb3
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: dac13e9e92a0fffa4aeba1053d07f832e245ca95
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135733"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555483"
 ---
 # <a name="-and--operators-c-reference"></a>+ 及 += 運算子 (C# 參考)
 
-內`+`建`+=` [整數](../builtin-types/integral-numeric-types.md)和[浮點數](../builtin-types/floating-point-numeric-types.md)類型、[字串](../builtin-types/reference-types.md#the-string-type)類型和[委派](../builtin-types/reference-types.md#the-delegate-type)類型都支援和運算子。
+`+` `+=` 內建[整數](../builtin-types/integral-numeric-types.md)和[浮點數](../builtin-types/floating-point-numeric-types.md)類型、[字串](../builtin-types/reference-types.md#the-string-type)類型和[委派](../builtin-types/reference-types.md#the-delegate-type)類型都支援和運算子。
 
 如需算術 `+` 運算子的資訊，請參閱[算術運算子](arithmetic-operators.md)一文中的[一元加號和減號運算子](arithmetic-operators.md#unary-plus-and-minus-operators)與[加法運算子 +](arithmetic-operators.md#addition-operator-) 章節。
 
 ## <a name="string-concatenation"></a>字串串連
 
-當其中一個或兩個運算元的[string](../builtin-types/reference-types.md#the-string-type)類型為 string `+`時，運算子會串連其運算元的字串表示（的字串`null`表示為空字串）：
+當其中一個或兩個運算元的類型為[string](../builtin-types/reference-types.md#the-string-type)時， `+` 運算子會串連其運算元的字串表示， (的字串表示 `null` 是空字串) ：
 
 [!code-csharp-interactive[string concatenation](snippets/AdditionOperator.cs#AddStrings)]
 
@@ -42,7 +42,7 @@ ms.locfileid: "82135733"
 
 [!code-csharp-interactive[delegate combination](snippets/AdditionOperator.cs#AddDelegates)]
 
-若要執行委派移除，請使用[ `-`運算子](subtraction-operator.md#delegate-removal)。
+若要執行委派移除，請使用[ `-` 運算子](subtraction-operator.md#delegate-removal)。
 
 如需委派型別的詳細資訊，請參閱[委派](../../programming-guide/delegates/index.md)。
 
@@ -78,8 +78,8 @@ x = x + y
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C # 運算子](index.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)
 - [如何串連多個字串](../../how-to/concatenate-multiple-strings.md)
 - [事件](../../programming-guide/events/index.md)
 - [算術運算子](arithmetic-operators.md)

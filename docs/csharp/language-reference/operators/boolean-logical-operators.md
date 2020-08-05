@@ -32,20 +32,20 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: a19c804c624153ef608885bc6493537302275765
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: cdabae0a4dbdcc3b1289bca7f1c42cb0a26b440f
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618190"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555405"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>布林值邏輯運算子 (C# 參考)
 
 下列運算子會使用[bool](../builtin-types/bool.md)運算元執行邏輯作業：
 
-- 一元[ `!` （邏輯否定）](#logical-negation-operator-)運算子。
-- Binary [ `&` （邏輯 AND）](#logical-and-operator-)、 [ `|` （邏輯 OR）](#logical-or-operator-)和[ `^` （邏輯互斥 OR）](#logical-exclusive-or-operator-)運算子。 那些運算子一律會評估兩個運算元。
-- Binary [ `&&` （條件邏輯 AND）](#conditional-logical-and-operator-)和[ `||` （條件式邏輯 OR）](#conditional-logical-or-operator-)運算子。 那些運算子只會在必要時才評估右邊的運算元。
+- 一元[ `!` (邏輯否定) ](#logical-negation-operator-)運算子。
+- Binary [ `&` (邏輯 AND) ](#logical-and-operator-)、 [ `|` (邏輯 OR) ](#logical-or-operator-)，以及[ `^` (邏輯互斥 OR) ](#logical-exclusive-or-operator-)運算子。 那些運算子一律會評估兩個運算元。
+- 二元[ `&&` (條件邏輯 AND) ](#conditional-logical-and-operator-)和[ `||` (條件式邏輯 OR) ](#conditional-logical-or-operator-)運算子。 那些運算子只會在必要時才評估右邊的運算元。
 
 對於[整數數數值型別](../builtin-types/integral-numeric-types.md)的運算元， `&` 、 `|` 和 `^` 運算子會執行位邏輯運算。 如需詳細資訊，請參閱[位元與移位運算子](bitwise-and-shift-operators.md)。
 
@@ -115,11 +115,11 @@ ms.locfileid: "85618190"
 
 ## <a name="nullable-boolean-logical-operators"></a>可為 Null 的布林值邏輯運算子
 
-針對 `bool?` 運算元， [ `&` （邏輯 AND）](#logical-and-operator-)和[ `|` （邏輯 OR）](#logical-or-operator-)運算子支援三值邏輯，如下所示：
+針對 `bool?` 運算元， [ `&` (邏輯 AND) ](#logical-and-operator-)和[ `|` (邏輯 OR) ](#logical-or-operator-)運算子支援三值邏輯，如下所示：
 
-- `&` `true` 只有當運算子的兩個運算元都評估為時，才會產生 `true` 。 如果 `x` 或 `y` 評估為，則會 `false` `x & y` 產生 `false` （即使是另一個運算元評估為 `null` ）。 否則，的結果 `x & y` 會是 `null` 。
+- `&` `true` 只有當運算子的兩個運算元都評估為時，才會產生 `true` 。 如果 `x` 或 `y` 評估為 `false` ， `x & y` `false` 即使另一個運算元評估為) ，也會產生 (`null` 。 否則，的結果 `x & y` 會是 `null` 。
 
-- `|` `false` 只有當運算子的兩個運算元都評估為時，才會產生 `false` 。 如果 `x` 或 `y` 評估為，則會 `true` `x | y` 產生 `true` （即使是另一個運算元評估為 `null` ）。 否則，的結果 `x | y` 會是 `null` 。
+- `|` `false` 只有當運算子的兩個運算元都評估為時，才會產生 `false` 。 如果 `x` 或 `y` 評估為 `true` ， `x | y` `true` 即使另一個運算元評估為) ，也會產生 (`null` 。 否則，的結果 `x | y` 會是 `null` 。
 
 下表顯示該語義：
 
@@ -201,5 +201,5 @@ x = x op y
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考資料](../index.md)
-- [C # 運算子](index.md)
+- [C# 運算子與運算式](index.md)
 - [位元與移位運算子](bitwise-and-shift-operators.md)

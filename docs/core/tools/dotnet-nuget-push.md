@@ -3,12 +3,12 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令會將套件推送至伺服器並發行。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 50a4a542c2d192bfbd927845489d04fd1b6c6cf3
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925510"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555119"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -42,7 +42,7 @@ dotnet nuget push -h|--help
 
   指定套件推送目標的檔案路徑。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`-d|--disable-buffering`**
 
@@ -78,7 +78,7 @@ dotnet nuget push -h|--help
 
 - **`--skip-duplicate`**
 
-  將多個封裝推送至 HTTP （S）伺服器時，會將任何409衝突回應視為警告，讓推送可以繼續進行。 自 .NET Core 3.1 SDK 起提供。
+  將多個封裝推送至 HTTP (S) 伺服器時，會將任何409衝突回應視為警告，讓推送可以繼續進行。 自 .NET Core 3.1 SDK 起提供。
 
 - **`-sk|--symbol-api-key <API_KEY>`**
 
@@ -133,23 +133,26 @@ dotnet nuget push -h|--help
 - 將目前目錄中的所有*nupkg*檔案推送至預設推送來源：
 
   ```dotnetcli
-  dotnet nuget push *.nupkg
+  dotnet nuget push "*.nupkg"
   ```
 
   > [!NOTE]
   > 如果此命令無法運作，可能是舊版 SDK (.NET Core 2.1 SDK 及更舊版本) 中有 Bug 所致。
-  > 若要修正此問題，請升級您的 SDK 版本，或改為執行下列命令：`dotnet nuget push **/*.nupkg`
+  > 若要修正此問題，請升級您的 SDK 版本，或改為執行下列命令：`dotnet nuget push "**/*.nupkg"`
+  
+  > [!NOTE]
+  > 像是執行檔案萬用字元的 bash 這類 shell 需要括住的引號。 如需詳細資訊，請參閱[NuGet/Home # 4393](https://github.com/NuGet/Home/issues/4393#issuecomment-667618120)。
 
-- 推送所有*的 nupkg*檔案，即使 HTTP （S）伺服器傳回409衝突回應也一樣：
+- 推送所有*的 nupkg*檔案，即使 HTTP (S) 伺服器傳回409衝突回應：
 
   ```dotnetcli
-  dotnet nuget push *.nupkg --skip-duplicate
+  dotnet nuget push "*.nupkg" --skip-duplicate
   ```
 
 - 將目前目錄中的所有*nupkg*檔案推送至本機摘要目錄：
 
   ```dotnetcli
-  dotnet nuget push *.nupkg -s c:\mydir
+  dotnet nuget push "*.nupkg" -s c:\mydir
   ```
 
   此命令不會將封裝儲存在階層式資料夾結構中，這是建議用來優化效能的方式。 如需詳細資訊，請參閱[本機](/nuget/hosting-packages/local-feeds)摘要。  

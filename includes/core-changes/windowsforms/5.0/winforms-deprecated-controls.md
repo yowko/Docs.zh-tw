@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: c9720f51e40ada4cd2cf6997ba7006a232893553
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d3bfeda8309af83d8e4199999ed91263a17caeea
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702510"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556150"
 ---
 ### <a name="removed-status-bar-controls"></a>已移除狀態列控制項
 
-從 .NET 5.0 Preview 1 開始，部分 Windows Forms 控制項已無法再使用。
+從 .NET 5.0 開始，部分 Windows Forms 控制項已無法再使用。
 
 #### <a name="change-description"></a>變更描述
 
-從 .NET 5.0 Preview 1 開始，部分與狀態列相關的 Windows Forms 控制項已無法再使用。 在 .NET Framework 2.0 中引進了更佳設計和支援的取代控制項。 已淘汰的控制項先前已從設計工具工具箱中移除，但仍可供使用。 現在，它們已完全移除。
+從 .NET 5.0 開始，部分與狀態列相關的 Windows Forms 控制項已無法再使用。 在 .NET Framework 2.0 中引進了更佳設計和支援的取代控制項。 已淘汰的控制項先前已從設計工具工具箱中移除，但仍可供使用。 現在，它們已完全移除。
 
 下列類型已無法再使用：
 
@@ -34,7 +34,7 @@ ms.locfileid: "83702510"
 
 移至這些控制項及其案例的取代 Api：
 
-| 舊的控制項（API） | 建議取代                          |
+|  (API) 的舊控制項 | 建議取代                          |
 |-------------------|--------------------------------------------------|
 | StatusBar         | <xref:System.Windows.Forms.StatusStrip>          |
 | StatusBarPanel    | <xref:System.Windows.Forms.ToolStripStatusLabel> |

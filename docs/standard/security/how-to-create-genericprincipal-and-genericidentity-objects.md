@@ -1,6 +1,6 @@
 ---
-title: 如何：建立 GenericPrincipal 和 GenericIdentity 物件
-ms.date: 03/30/2017
+title: 作法：建立 GenericPrincipal 和 GenericIdentity 物件
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,14 +11,19 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 10a71185db3359cda1c3bf7a12f5698929c98296
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 903d636938c47850951330d7936d95470441607e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290859"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557212"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：建立 GenericPrincipal 和 GenericIdentity 物件
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>作法：建立 GenericPrincipal 和 GenericIdentity 物件
+
+> [!NOTE]
+> 本文適用于 Windows。
+>
+> 如需 ASP.NET Core 的詳細資訊，請參閱[ASP.NET Core 安全性的總覽](https://docs.microsoft.com/aspnet/core/security/)。
 
 您可以 <xref:System.Security.Principal.GenericIdentity> 搭配類別使用類別 <xref:System.Security.Principal.GenericPrincipal> ，以建立獨立于 Windows 網域的授權配置。
 

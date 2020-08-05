@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d23c6cc9f8ee9c912ce5c9509d157692d1a18f90
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: e0cdcce9b8c7d591925b08635e3354dadaf22b7b
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721761"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556019"
 ---
 ### <a name="envelopedcms-defaults-to-aes-256-encryption"></a>EnvelopedCms 預設為 AES-256 加密
 
@@ -12,11 +12,11 @@ ms.locfileid: "83721761"
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core Preview 7 和舊版中，當 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 用來加密資料而不透過函式多載指定對稱式加密演算法時，會使用 TripleDES/3des/3DEA/DES3-EDE 演算法來加密資料。
+在舊版中，當 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> 用來加密資料，而不透過函式多載指定對稱式加密演算法時，資料會使用 TripleDES/3des/3DEA/DES3-EDE 演算法來加密。
 
-從 .NET Core 3.0 Preview 8 開始（透過[4.6.0 的版本](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/)），預設演算法已變更為 AES-256 以進行演算法現代化，並改善預設選項的安全性。 如果訊息收件者憑證具有（非 EC） Diffie-hellman 公開金鑰，加密作業可能會因基礎平臺的限制而失敗 <xref:System.Security.Cryptography.CryptographicException> 。
+從 .NET Core 3.0 開始 (透過4.6.0 的[System.](https://www.nuget.org/packages/System.Security.Cryptography.Pkcs/)) 的版本，預設演算法已變更為 AES-256 以進行演算法現代化，並改善預設選項的安全性。 如果訊息收件者憑證具有 (非 EC) Diffie-hellman 公開金鑰，則加密作業可能會因 <xref:System.Security.Cryptography.CryptographicException> 基礎平臺的限制而失敗。
 
-在下列範例程式碼中，如果在 .NET Core 3.0 Preview 7 或更早版本上執行，則會使用 TripleDES 來加密資料。 如果在 .NET Core 3.0 Preview 8 或更新版本上執行，則會使用 AES-256 進行加密。
+在下列範例程式碼中，如果在 .NET Core 2.2 或更早版本上執行，則會使用 TripleDES 來加密資料。 如果在 .NET Core 3.0 或更新版本上執行，則會使用 AES-256 進行加密。
 
 ```csharp
 EnvelopedCms cms = new EnvelopedCms(content);
@@ -26,7 +26,7 @@ return cms.Encode();
 
 #### <a name="version-introduced"></a>引進的版本
 
-3.0 Preview 8
+3.0
 
 #### <a name="recommended-action"></a>建議的動作
 

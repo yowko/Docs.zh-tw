@@ -19,16 +19,16 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: eda039d950e4be13d9c041c8bb95b6ea773b83f6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d57f96b9c80bdc5f40169180b40326ffed91cf10
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207219"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555365"
 ---
 # <a name="comparison-operators-c-reference"></a>比較運算子 (C#參考)
 
-[ `<` （小於）](#less-than-operator-)、 [ `>` （大於）](#greater-than-operator-)、 [ `<=` （小於或等於）](#less-than-or-equal-operator-)和[ `>=` （大於或等於）](#greater-than-or-equal-operator-)比較（也稱為關聯式）運算子會比較其運算元。 所有[整數](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數數值型別都支援這些運算子。
+[ `<` (小於) ](#less-than-operator-)、 [ `>` (大於) ](#greater-than-operator-)、 [ `<=` (小於或等於) ](#less-than-or-equal-operator-)，而且[ `>=` (大於或等於) ](#greater-than-or-equal-operator-)比較（也稱為關聯式），運算子會比較其運算元。 所有[整數](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數數值型別都支援這些運算子。
 
 > [!NOTE]
 > 針對 `==`、`<`、`>`、`<=` 和 `>=` 運算子，如果任何運算元不是數字 (<xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType>)，則作業的結果是 `false`。 這代表 `NaN` 的值皆不會大於、小於或等於任何其他 `double` (或 `float`) 的值，包括 `NaN`。 如需詳細資訊和範例，請參閱 <xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType> 參考文章。
@@ -76,6 +76,6 @@ ms.locfileid: "83207219"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考資料](../index.md)
-- [C # 運算子](index.md)
+- [C# 運算子與運算式](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [等號比較運算子](equality-operators.md)

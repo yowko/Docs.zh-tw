@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - nameof expression [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: d71acf0cf7d5cdcfa5310455af2120fa1f82d567
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 1bd8800a553eb9b3363da8a3b5f230caecddf223
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135915"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556406"
 ---
-# <a name="nameof-expression-c-reference"></a>nameof 運算式（c # 參考）
+# <a name="nameof-expression-c-reference"></a>nameof expression (c # 參考) 
 
 `nameof`運算式會產生變數、類型或成員的名稱做為字串常數：
 
@@ -22,13 +22,13 @@ ms.locfileid: "82135915"
 
 如上述範例所示，在型別與命名空間的情況下，產生的名稱通常不是[完整](~/_csharplang/spec/basic-concepts.md#fully-qualified-names)的。
 
-在[逐字識別碼](../tokens/verbatim.md)的情況下， `@`字元不是名稱的一部分，如下列範例所示：
+在[逐字識別碼](../tokens/verbatim.md)的情況下， `@` 字元不是名稱的一部分，如下列範例所示：
 
 [!code-csharp-interactive[nameof verbatim](snippets/NameOfOperator.cs#Verbatim)]
 
 `nameof`運算式會在編譯時期評估，而且在執行時間不會有任何作用。
 
-您可以使用`nameof`運算式，讓引數檢查程式碼更容易維護：
+您可以使用 `nameof` 運算式，讓引數檢查程式碼更容易維護：
 
 [!code-csharp[nameof and argument check](snippets/NameOfOperator.cs#ExceptionMessage)]
 
@@ -40,5 +40,5 @@ ms.locfileid: "82135915"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C # 運算子](index.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 08692cbe583feb534315b637492adedb1254bc38
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 5cbebe1c7f56604b1b058452bdf2126b87bd3f97
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381615"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556783"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>陳述式、運算式和運算子 (C# 程式設計手冊)
 
@@ -25,9 +25,9 @@ ms.locfileid: "87381615"
 
 - [陳述式](statements.md)
 
-- [運算式](expressions.md)
+- [運算子和運算式](../../language-reference/operators/index.md)
 
-  - [運算式主體成員](expression-bodied-members.md)
+- [運算式主體成員](expression-bodied-members.md)
 
 - [匿名函式](anonymous-functions.md)
 

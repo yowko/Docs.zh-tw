@@ -1,6 +1,6 @@
 ---
 title: 重要的安全性概念
-ms.date: 03/30/2017
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,30 +8,38 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - unauthorized access
-- permissions [.NET Framework]
-- security [.NET Framework], about security
+- permissions [.NET]
+- security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 1ec811430056b7db575d6db229a3afe618850e49
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 259723b903377f7e79731e1ff79b3d512581102f
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291236"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555263"
 ---
 # <a name="key-security-concepts"></a>重要的安全性概念
-Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除對行動程式碼安全性的相關疑慮，並提供支援，讓元件能夠判斷哪些使用者有權執行。  
+
+> [!NOTE]
+> 本文適用于 Windows。
+>
+> 如需 ASP.NET Core 的詳細資訊，請參閱[ASP.NET Core 安全性的總覽](https://docs.microsoft.com/aspnet/core/security/)。
+
+.NET 提供以角色為基礎的安全性，以協助解決行動程式碼的安全性疑慮，並提供支援，讓元件能夠判斷哪些使用者有權執行。  
   
 ## <a name="type-safety-and-security"></a>類型安全和安全性  
- 類型安全程式碼只會存取經授權存取的記憶體位置。 （在此討論中，型別安全特別指的是記憶體型別安全，不應與更廣泛的型別安全混淆）。例如，型別安全程式碼無法讀取來自另一個物件之私用欄位的值。 它只會以妥善定義、可允許的方式來存取類型。  
+
+類型安全程式碼只會存取經授權存取的記憶體位置。  (在此討論中，型別安全特別指的是記憶體型別安全性，而且不應該與更廣泛的型別安全混淆。 ) 例如，型別安全的程式碼無法從另一個物件的私用欄位讀取值。 它只會以妥善定義、可允許的方式來存取類型。  
   
- 在 Just-In-Time (JIT) 編譯期間，選擇性的驗證程序會檢查中繼資料，以及要以 JIT 編譯成原生機器程式碼之方法的 Microsoft Intermediate Language (MSIL)，以驗證其類型安全。 如果程式碼具有略過驗證的權限，則會略過此程序。 如需有關驗證的詳細資訊，請參閱 [Managed 執行程序](../managed-execution-process.md)。  
+在 Just-In-Time (JIT) 編譯期間，選擇性的驗證程序會檢查中繼資料，以及要以 JIT 編譯成原生機器程式碼之方法的 Microsoft Intermediate Language (MSIL)，以驗證其類型安全。 如果程式碼具有略過驗證的權限，則會略過此程序。 如需有關驗證的詳細資訊，請參閱 [Managed 執行程序](../managed-execution-process.md)。  
   
- 雖然沒有強制要驗證類型安全才能執行 Managed 程式碼，但是在組件隔離和強制執行安全性的作業中，類型安全扮演相當重要的角色。 當程式碼類型安全時，Common Language Runtime 可以將組件彼此完全隔離。 此隔離有助於確保組件無法對彼此產生不利的影響，而且也會增加應用程式的可靠性。 類型安全元件即使受信任的層級不同，還是可以在相同的處理序中安全地執行。 當程式碼不是類型安全時，可能會發生不必要的副作用。 例如，執行階段無法防止 Managed 程式碼呼叫機器碼 (Unmanaged) 及執行惡意的作業。 當程式碼為類型安全時，執行階段的安全性強制機制可確保它不會存取原生程式碼，除非它有這樣的權限。 所有不是類型安全的程式碼，都必須被授與具有通過之列舉成員 <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> 的 <xref:System.Security.Permissions.SecurityPermission>，才能執行。  
+雖然沒有強制要驗證類型安全才能執行 Managed 程式碼，但是在組件隔離和強制執行安全性的作業中，類型安全扮演相當重要的角色。 當程式碼類型安全時，Common Language Runtime 可以將組件彼此完全隔離。 此隔離有助於確保組件無法對彼此產生不利的影響，而且也會增加應用程式的可靠性。 類型安全元件即使受信任的層級不同，還是可以在相同的處理序中安全地執行。 當程式碼不是類型安全時，可能會發生不必要的副作用。 例如，執行階段無法防止 Managed 程式碼呼叫機器碼 (Unmanaged) 及執行惡意的作業。 當程式碼為類型安全時，執行階段的安全性強制機制可確保它不會存取原生程式碼，除非它有這樣的權限。 所有不是類型安全的程式碼，都必須被授與具有通過之列舉成員 <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> 的 <xref:System.Security.Permissions.SecurityPermission>，才能執行。  
   
- 如需詳細資訊，請參閱 [Code Access Security Basics](../../framework/misc/code-access-security-basics.md)。  
+如需詳細資訊，請參閱 [Code Access Security Basics](../../framework/misc/code-access-security-basics.md)。  
   
 ## <a name="principal"></a>主體  
- 主體代表使用者的身分識別與角色，並且會代表使用者採取行動。 在 .NET Framework 中，以角色為基礎的安全性可支援三種主體：  
+
+主體代表使用者的身分識別與角色，並且會代表使用者採取行動。 .NET 中以角色為基礎的安全性支援三種主體：  
   
 - 泛型主體代表獨立於 Windows 使用者和角色而存在的使用者和角色。  
   
@@ -39,15 +47,16 @@ Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除�
   
 - 自訂主體可以由應用程式以該特定應用程式所需的任何方式來定義。 其可擴充主體身分識別和角色的基本概念。  
   
- 如需詳細資訊，請參閱[主體和身分識別物件](principal-and-identity-objects.md)。  
+如需詳細資訊，請參閱[主體和身分識別物件](principal-and-identity-objects.md)。  
   
 ## <a name="authentication"></a>驗證  
- 驗證是探索並確認主體身分識別的程序，它會檢查使用者的認證，並針對某授權單位來驗證那些認證。 在驗證期間取得的資訊可直接供是由您的程式碼使用。 您也可以使用 .NET Framework 以角色為基礎的安全性來驗證目前使用者，以及判斷是否允許該主體存取您的程式碼。 請參閱 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 方法的多載，以取得如何針對特定角色來驗證主體的範例。 例如，您可以使用 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 多載來判斷目前使用者是否為系統管理員群組的成員。  
+驗證是探索並確認主體身分識別的程序，它會檢查使用者的認證，並針對某授權單位來驗證那些認證。 在驗證期間取得的資訊可直接供是由您的程式碼使用。 您也可以使用 .NET 以角色為基礎的安全性來驗證目前的使用者，以及判斷是否允許該主體存取您的程式碼。 請參閱 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 方法的多載，以取得如何針對特定角色來驗證主體的範例。 例如，您可以使用 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 多載來判斷目前使用者是否為系統管理員群組的成員。  
   
- 當今所使用的驗證機制非常多樣化，其中有許多可以搭配 .NET Framework 以角色為基礎的安全性。 部分最常用的機制有基本、摘要式、Passport、作業系統 (例如 NTLM 或 Kerberos) 或應用程式定義的機制。  
+現今會使用各種不同的驗證機制，其中有許多都可以搭配 .NET 角色型安全性使用。 部分最常用的機制有基本、摘要式、Passport、作業系統 (例如 NTLM 或 Kerberos) 或應用程式定義的機制。  
   
 ### <a name="example"></a>範例  
- 下列範例需要由作用中的主體做為系統管理員。 `name` 參數為 `null`，可讓做為系統管理員的任何使用者傳遞要求。  
+
+下列範例需要由作用中的主體做為系統管理員。 `name` 參數為 `null`，可讓做為系統管理員的任何使用者傳遞要求。  
   
 > [!NOTE]
 > 在 Windows Vista 中，使用者帳戶控制 (UAC) 會判斷使用者的權限。 如果您是內建 Administrators 群組的成員，系統會將兩個執行階段存取語彙基元 (Token) 指派給您：標準使用者存取語彙基元及管理員存取語彙基元。 根據預設，您會屬於標準使用者角色。 若要執行需要您是系統管理員的程式碼，您必須先將權限從標準使用者提高為系統管理員。 您可以在啟動應用程式時，以滑鼠右鍵按一下應用程式圖示，並指出您想要以系統管理員身分執行，藉此提高為系統管理員權限。  
@@ -63,4 +72,9 @@ Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除�
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
 ## <a name="authorization"></a>授權  
- 授權是決定是否允許主體執行所要求動作的程序。 授權會在驗證之後進行，它會使用主體的身分識別和角色相關資訊來判斷主體可以存取哪些資源。 您可以使用 .NET Framework 以角色為基礎的安全性來實作授權。
+
+授權是決定是否允許主體執行所要求動作的程序。 授權會在驗證之後進行，它會使用主體的身分識別和角色相關資訊來判斷主體可以存取哪些資源。 您可以使用 .NET 以角色為基礎的安全性來執行授權。
+
+## <a name="see-also"></a>另請參閱
+
+- [ASP.NET Core 安全性](/aspnet/core/security/)

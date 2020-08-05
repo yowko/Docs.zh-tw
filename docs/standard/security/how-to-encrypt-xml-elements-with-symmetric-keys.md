@@ -1,30 +1,30 @@
 ---
-title: 如何：使用對稱金鑰加密 XML 項目
-ms.date: 03/30/2017
+title: 作法：使用對稱金鑰加密 XML 元素
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - AES algorithm
-- cryptography [.NET Framework], symmetric keys
-- encryption [.NET Framework], symmetric keys
+- cryptography [.NET], symmetric keys
+- encryption [.NET], symmetric keys
 - symmetric keys
 - System.Security.Cryptography.EncryptedXml class
-- System.Security.Cryptography.RijndaelManaged class
+- System.Security.Cryptography.Aes class
 - XML encryption
 - Advanced Encryption Standard algorithm
-- Rijndael
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: 1ad75b7f36130a9f3acad97f724406650a7fdb68
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: dd69ec6a5317f7f6f800cd225d920a1934c77a0c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277319"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555809"
 ---
-# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>如何：使用對稱金鑰加密 XML 項目
-您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。  此程式會使用進階加密標準（AES）演算法（也稱為 Rijndael）來加密 XML 元素。  
+# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>作法：使用對稱金鑰加密 XML 元素
+
+您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。  此程式會使用進階加密標準 (AES) 演算法來加密 XML 元素。  
   
  如需如何解密使用此程式加密之 XML 元素的詳細資訊，請參閱[如何：使用對稱金鑰解密 Xml 元素](how-to-decrypt-xml-elements-with-symmetric-keys.md)。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "84277319"
   
 ### <a name="to-encrypt-an-xml-element-with-a-symmetric-key"></a>使用對稱金鑰加密 XML 項目  
   
-1. 使用 <xref:System.Security.Cryptography.RijndaelManaged> 類別產生對稱金鑰。  此金鑰會用來加密 XML 項目。  
+1. 使用 <xref:System.Security.Cryptography.Aes> 類別產生對稱金鑰。  此金鑰會用來加密 XML 項目。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementSymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#2)]  
@@ -90,16 +90,23 @@ ms.locfileid: "84277319"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
-- 若要編譯此範例，您需要包含 `System.Security.dll` 的參考。  
+- 在以 .NET Framework 為目標的專案中，包含的參考 `System.Security.dll` 。
+
+- 在以 .NET Core 或 .NET 5 為目標的專案中，安裝 NuGet 封裝[System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)。
   
 - 包含下列命名空間：<xref:System.Xml>、<xref:System.Security.Cryptography> 和 <xref:System.Security.Cryptography.Xml>。  
   
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 絕對不要以純文字儲存密碼編譯金鑰，或以純文字格式在電腦之間傳輸金鑰。  請改用安全的金鑰容器來儲存密碼編譯金鑰。  
+## <a name="net-security"></a>.NET 安全性
+
+絕對不要以純文字儲存密碼編譯金鑰，或以純文字格式在電腦之間傳輸金鑰。  請改用安全的金鑰容器來儲存密碼編譯金鑰。  
   
- 當您使用完密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。  
+當您使用完密碼編譯金鑰，請從記憶體清除它，方法是將每個位元組設定為零，或呼叫 Managed 密碼編譯類別的 <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> 方法。  
   
 ## <a name="see-also"></a>另請參閱
 
+- [密碼編譯模型](cryptography-model.md)-說明如何在基類庫中執行密碼編譯。
+- [密碼編譯服務](cryptographic-services.md)
+- [跨平臺密碼編譯](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
-- [操作說明：使用對稱金鑰解密 XML 元素](how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- [作法：使用對稱金鑰解密 XML 元素](how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- [ASP.NET Core 資料保護](/aspnet/core/security/data-protection/introduction)

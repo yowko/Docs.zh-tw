@@ -7,31 +7,34 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- cryptography [.NET Framework], asymmetric keys
+- cryptography [.NET], asymmetric keys
 - storing asymmetric keys
 - keys, asymmetric
 - encryption keys
 - keys, storing in key containers
-- asymmetric keys [.NET Framework]
-- encryption [.NET Framework], asymmetric keys
+- asymmetric keys [.NET]
+- encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: a0fbde37491043cc1aab71e9733087bf410b997d
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: aa6fad815338cbd6316deca7be0a23286630fa56
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769024"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556289"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>將非對稱金鑰儲存在金鑰容器中
 
 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，請使用金鑰容器。 如需金鑰容器的詳細資訊，請參閱[瞭解電腦層級和使用者層級的 RSA 金鑰容器](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))。
 
+> [!NOTE]
+> 本文中的程式碼適用于 Windows。
+
 ## <a name="create-an-asymmetric-key-and-save-it-in-a-key-container"></a>建立非對稱金鑰，並將它儲存在金鑰容器中
 
 1. 建立類別的新實例 <xref:System.Security.Cryptography.CspParameters> ，並將您想要呼叫金鑰容器的名稱傳遞至 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> 欄位。
 
-1. 建立衍生自類別之類別的新實例 <xref:System.Security.Cryptography.AsymmetricAlgorithm> （通常是 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 或 <xref:System.Security.Cryptography.DSACryptoServiceProvider> ），並將先前建立的 `CspParameters` 物件傳遞至其函式。
+1. 建立衍生自類別的類別的新實例 <xref:System.Security.Cryptography.AsymmetricAlgorithm> (通常 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 或 <xref:System.Security.Cryptography.DSACryptoServiceProvider>) ，並將先前建立的物件傳遞 `CspParameters` 至其函式。
 
 > [!NOTE]
 > 建立和抓取非對稱金鑰是一項作業。 如果容器中尚未有索引鍵，則會在傳回之前先建立它。
@@ -43,9 +46,9 @@ ms.locfileid: "84769024"
 
 1. 建立類別的新實例 `CspParameters` ，並將您想要呼叫金鑰容器的名稱傳遞至 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> 欄位。
 
-1. 建立衍生自類別之類別的新實例 <xref:System.Security.Cryptography.AsymmetricAlgorithm> （通常是 `RSACryptoServiceProvider` 或 `DSACryptoServiceProvider` ），並將先前建立的 `CspParameters` 物件傳遞至其函式。
+1. 建立衍生自類別的類別的新實例 <xref:System.Security.Cryptography.AsymmetricAlgorithm> (通常 `RSACryptoServiceProvider` 或 `DSACryptoServiceProvider`) ，並將先前建立的物件傳遞 `CspParameters` 至其函式。
 
-1. 將 <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp?displayProperty=nameWithType> <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp?displayProperty=nameWithType> 衍生自之類別的或屬性設定 `AsymmetricAlgorithm` 為 `false` （ `False` 在 Visual Basic 中）。
+1. 設定 <xref:System.Security.Cryptography.RSACryptoServiceProvider.PersistKeyInCsp?displayProperty=nameWithType> <xref:System.Security.Cryptography.DSACryptoServiceProvider.PersistKeyInCsp?displayProperty=nameWithType> 衍生自之類別的或屬性， `AsymmetricAlgorithm` 以 `false` `False` 在 Visual Basic) 中 (。
 
 1. 呼叫 `Clear` 衍生自之類別的方法 `AsymmetricAlgorithm` 。 這個方法會釋放該類別的所有資源，並清除金鑰容器。
 
@@ -244,7 +247,10 @@ Key deleted.
 
 ## <a name="see-also"></a>另請參閱
 
+- [密碼編譯模型](cryptography-model.md)
+- [密碼編譯服務](cryptographic-services.md)
+- [跨平臺密碼編譯](cross-platform-cryptography.md)
 - [產生加密和解密的金鑰](generating-keys-for-encryption-and-decryption.md)
 - [加密資料](encrypting-data.md)
 - [解密資料](decrypting-data.md)
-- [密碼編譯服務](cryptographic-services.md)
+- [ASP.NET Core 資料保護](/aspnet/core/security/data-protection/introduction)

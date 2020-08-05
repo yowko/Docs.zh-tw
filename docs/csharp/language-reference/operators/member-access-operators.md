@@ -32,23 +32,23 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 59e01b17d78032714803629d503a92ba86a20fdc
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 242442e9b0ad41a4945c66421bb537cb6cb9b6c0
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394646"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556471"
 ---
-# <a name="member-access-operators-and-expressions-c-reference"></a>成員存取運算子和運算式（c # 參考）
+# <a name="member-access-operators-and-expressions-c-reference"></a> (c # 參考) 的成員存取運算子和運算式
 
 當您存取類型成員時，可以使用下列運算子和運算式：
 
-- [ `.` （成員存取）](#member-access-expression-)：若要存取命名空間或類型的成員
-- [ `[]` （陣列元素或索引子存取）](#indexer-operator-)：用來存取陣列專案或類型索引子
-- [ `?.` 和 `?[]` （null 條件運算子）](#null-conditional-operators--and-)：只有在運算元不是 null 時，才會執行成員或元素存取作業。
-- [ `()` （調用）](#invocation-expression-)：呼叫存取的方法或叫用委派
-- [ `^` （從 end 開始的索引）](#index-from-end-operator-)：表示元素位置是從序列結尾
-- [ `..` （範圍）](#range-operator-)：指定可用於取得序列元素範圍的索引範圍
+- [ `.` (成員存取) ](#member-access-expression-)：存取命名空間或類型的成員
+- [ `[]` (陣列元素或索引子存取) ](#indexer-operator-)：存取陣列元素或類型索引子
+- [ `?.` 和 `?[]` (null 條件運算子) ](#null-conditional-operators--and-)：只有在運算元不是 null 時，才執行成員或元素存取作業
+- [ `()` (調用) ](#invocation-expression-)：呼叫存取的方法或叫用委派
+- [ `^` 從 end)  (索引](#index-from-end-operator-)：表示元素位置是從序列結尾
+- [ `..` (範圍) ](#range-operator-)：指定可用於取得序列元素範圍的索引範圍
 
 ## <a name="member-access-expression-"></a>成員存取運算式。
 
@@ -161,7 +161,7 @@ if (handler != null)
 
 這是一個安全線程的方法，可確保只會叫用非 null 的 `handler` 。 由於委派實例是不可變的，因此沒有任何執行緒可以變更區域變數所參考的物件 `handler` 。 特別是，如果由另一個執行緒執行的程式碼取消訂閱事件，並在叫用 `PropertyChanged` `PropertyChanged` `null` 之前變成 `handler` ，則所參考的物件將不會 `handler` 受到影響。 `?.`運算子不會多次評估其左邊的運算元，確保在 `null` 驗證為非 null 之後無法將它變更為。
 
-## <a name="invocation-expression-"></a>調用運算式（）
+## <a name="invocation-expression-"></a>調用運算式 ( # A1
 
 使用括弧 `()` 來呼叫[方法](../../programming-guide/classes-and-structs/methods.md)或叫用[委派](../../programming-guide/delegates/index.md)。
 
@@ -220,9 +220,9 @@ if (handler != null)
 
 如需索引和範圍的詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-8.0/ranges.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C # 運算子](index.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)
 - [?? (Null 聯合運算子)](null-coalescing-operator.md)
 - [:: 運算子](namespace-alias-qualifier.md)

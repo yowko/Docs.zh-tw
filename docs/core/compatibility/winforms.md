@@ -2,16 +2,16 @@
 title: Windows Forms 的重大變更
 description: 列出 .NET Core Windows Forms 中的重大變更。
 ms.date: 01/08/2020
-ms.openlocfilehash: bd87e438ecf9930bfcd5377f9a3799d5f3693f49
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: beb9a42e4b5007f03480cd74f57bbfbbfc3f48b1
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702464"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556149"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 中的重大變更
 
-版本3.0 中的 .NET Core 已加入 Windows Forms 支援。 本文列出其引進的 .NET Core 版本 Windows Forms 的重大變更。 如果您要從 .NET Framework 或舊版 .NET Core （3.0 或更新版本）升級 Windows Forms 應用程式，本文適用于您。
+版本3.0 中的 .NET Core 已加入 Windows Forms 支援。 本文列出其引進的 .NET Core 版本 Windows Forms 的重大變更。 如果您要從 .NET Framework 或舊版 .NET Core (3.0 或更新版本) 升級 Windows Forms 應用程式，本文適用于您。
 
 下列重大變更記載于此頁面：
 
@@ -34,8 +34,6 @@ ms.locfileid: "84702464"
 | [不支援 EnableVisualStyleValidation 相容性切換](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
 | [不支援 UseLegacyCoNtextMenuStripSourceControlValue 相容性切換](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
 | [不支援 UseLegacyImages 相容性切換](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
-| [變更 AccessibleObject 的存取權。 RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3.0 |
-| [已從 Windows Forms 移除重複的 Api](#duplicated-apis-removed-from-windows-forms) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5。0
 
@@ -108,14 +106,6 @@ ms.locfileid: "84702464"
 ***
 
 [!INCLUDE[Switch.System.Windows.Forms.UseLegacyImages compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyimages.md)]
-
-***
-
-[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/3.0/changed-access-for-runtimeidfirstitem.md)]
-
-***
-
-[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
 
 ***
 

@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: 535a73c6b748166a1e4a4661a6bab0671c653278
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 072ed716910e2e1f1f98dbddc56d5bd097b75acc
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721305"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555902"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>VbNewLine 已過時。
 
-<xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>從 .Net Core 3.0 Preview 8 開始，常數會標示為[ \[ 過時 \] ](xref:System.ObsoleteAttribute) 。
+<xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName>從 .Net Core 3.0 開始，常數會標示為[ \[ 過時 \] ](xref:System.ObsoleteAttribute) 。
 
 #### <a name="version-introduced"></a>引進的版本
 
-3.0 Preview 8
+3.0
 
 #### <a name="change-description"></a>變更描述
 
-從 .NET Core 3.0 Preview 8 開始，已將[過時](xref:System.ObsoleteAttribute)屬性套用至 <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 常數。 使用常數會產生編譯器警告。 在 .NET Framework 和舊版的 .NET Core 中，它未標示為已淘汰。
+從 .NET Core 3.0 開始，已將[過時](xref:System.ObsoleteAttribute)屬性套用至 <xref:Microsoft.VisualBasic.Constants.vbNewLine?displayProperty=fullName> 常數。 使用常數會產生編譯器警告。 在 .NET Framework 和舊版的 .NET Core 中，它未標示為已淘汰。
 
 這是為了支援 Visual Basic 做為多平臺開發的語言而進行的變更。 <xref:Microsoft.VisualBasic.Constants.vbNewLine>常數相當於，也就是 `\r\n` Windows 上的分行符號序列。 在以 Unix 為基礎的系統上，換行字元是 `\n` 。
 

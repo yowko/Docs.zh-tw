@@ -1,5 +1,5 @@
 ---
-title: 類型測試運算子與強制轉換表示式 - C# 參考
+title: '類型測試運算子和轉換運算式-c # 參考'
 description: 了解可用來檢查運算式結果型別的 C# 運算子，並視需要將它轉換成其他型別。
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: bc293c359af5744eebc63c0d0f94b4cebe3d450a
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 7c1c65c61a2214792dcd26efd4be1a9d7f2c07ca
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021246"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555496"
 ---
-# <a name="type-testing-operators-and-cast-expression-c-reference"></a>類型測試運算子和強制轉換表示式(C# 引用)
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>類型測試運算子和轉換運算式 (c # 參考) 
 
-您可以使用以下運算子與表示式執行類型檢查或類型轉換:
+您可以使用下列運算子和運算式來執行類型檢查或類型轉換：
 
 - [is 運算子](#is-operator)：檢查運算式的執行階段型別是否與給定型別相容
 - [as 運算子](#as-operator)：如果運算式的執行階段型別與給定型別相容，就將它明確地轉換成該型別
-- [強制轉換表示式](#cast-expression):以執行明確式轉換
+- [cast 運算式](#cast-expression)：執行明確轉換
 - [typeof 運算子](#typeof-operator)：取得型別的 <xref:System.Type?displayProperty=nameWithType> 執行個體
 
 ## <a name="is-operator"></a>is 運算子
 
-`is` 運算子會檢查運算式結果的執行階段型別是否與給定型別相容。 從 C# 7.0`is`開始,運算元還會根據模式測試表達式結果。
+`is` 運算子會檢查運算式結果的執行階段型別是否與給定型別相容。 從 c # 7.0 開始， `is` 運算子也會針對模式測試運算式結果。
 
 使用型別測試 `is` 運算子運算式有下列格式
 
@@ -52,7 +52,7 @@ E is T
 
 [!code-csharp[is with reference conversion](snippets/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
-下一個範例顯示運算子`is`考慮裝箱與取消裝箱轉換,但不考慮[數位轉換](../builtin-types/numeric-conversions.md):
+下一個範例顯示 `is` 運算子會將裝箱和取消裝箱轉換納入考慮，但不會考慮[數值轉換](../builtin-types/numeric-conversions.md)：
 
 [!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
@@ -60,7 +60,7 @@ E is T
 
 ### <a name="type-testing-with-pattern-matching"></a>包含模式比對的型別測試
 
-從 C# 7.0`is`開始,運算元還會根據模式測試表達式結果。 尤其是，它支援下列格式的型別模式：
+從 c # 7.0 開始， `is` 運算子也會針對模式測試運算式結果。 尤其是，它支援下列格式的型別模式：
 
 ```csharp
 E is T v
@@ -76,7 +76,7 @@ E is T v
 
 ## <a name="as-operator"></a>as 運算子
 
-`as` 運算子將運算式的結果明確地轉換成給定參考或可為 Null 的實值型別。 如果無法轉換，則 `as` 運算子會傳回 `null`。 與[強制轉換表示式](#cast-expression)不同`as`, 運算子從不引發異常。
+`as` 運算子將運算式的結果明確地轉換成給定參考或可為 Null 的實值型別。 如果無法轉換，則 `as` 運算子會傳回 `null`。 不同于[cast 運算式](#cast-expression)， `as` 運算子絕對不會擲回例外狀況。
 
 以下格式的運算式
 
@@ -92,14 +92,14 @@ E is T ? (T)(E) : (T)null
 
 但只會評估 `E` 一次。
 
-`as` 運算子只考慮參考、可為 Null、Boxing 和 Unboxing 轉換。 您無法使用 `as` 運算子來執行使用者定義轉換。 此,請使用[強制轉換表示式](#cast-expression)。
+`as` 運算子只考慮參考、可為 Null、Boxing 和 Unboxing 轉換。 您無法使用 `as` 運算子來執行使用者定義轉換。 若要這麼做，請使用[cast 運算式](#cast-expression)。
 
 下列範例示範 `as` 運算子的用法：
 
 [!code-csharp-interactive[as operator](snippets/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
-> 如上述範例所示，您需要將 `as` 陳述式的結果與 `null` 比較，以檢查轉換是否成功。 從 C# 7.0 開始,可以使用[is 運算元](#type-testing-with-pattern-matching)來測試轉換是否成功,如果轉換成功,則將其結果分配給新變數。
+> 如上述範例所示，您需要將 `as` 陳述式的結果與 `null` 比較，以檢查轉換是否成功。 從 c # 7.0 開始，您可以使用[is 運算子](#type-testing-with-pattern-matching)來測試轉換是否成功，如果成功，請將其結果指派給新的變數。
 
 ## <a name="cast-expression"></a>轉換運算式
 
@@ -123,11 +123,11 @@ E is T ? (T)(E) : (T)null
 
 [!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
 
-您還可以使用運算子`typeof`與未綁定的泛型類型。 未繫結泛型型別的名稱必須包含適當數目的逗號，也就是比型別參數數目少一。 下列範例顯示搭配使用 `typeof` 運算子和未繫結泛型型別的用法：
+您也可以使用運算子搭配未系結 `typeof` 的泛型型別。 未繫結泛型型別的名稱必須包含適當數目的逗號，也就是比型別參數數目少一。 下列範例顯示搭配使用 `typeof` 運算子和未繫結泛型型別的用法：
 
 [!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
-運算式不能作為 `typeof` 運算子的引數。 要取得表示式<xref:System.Type?displayProperty=nameWithType>結果的執行時類型的實體,請使用方法<xref:System.Object.GetType%2A?displayProperty=nameWithType>。
+運算式不能作為 `typeof` 運算子的引數。 若要取得 <xref:System.Type?displayProperty=nameWithType> 運算式結果之執行時間類型的實例，請使用 <xref:System.Object.GetType%2A?displayProperty=nameWithType> 方法。
 
 ### <a name="type-testing-with-the-typeof-operator"></a>使用 `typeof` 運算子的型別測試
 
@@ -137,7 +137,7 @@ E is T ? (T)(E) : (T)null
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-不能`is``as`重`typeof`載、 和運算子。
+`is`、 `as` 和 `typeof` 運算子無法多載。
 
 使用者定義型別不可多載 `()` 運算子，但可定義可由轉換運算式執行的自訂型別轉換。 如需詳細資訊，請參閱[使用者定義轉換運算子](user-defined-conversion-operators.md)。
 
@@ -148,11 +148,11 @@ E is T ? (T)(E) : (T)null
 - [is 運算子](~/_csharplang/spec/expressions.md#the-is-operator)
 - [as 運算子](~/_csharplang/spec/expressions.md#the-as-operator)
 - [轉換運算式](~/_csharplang/spec/expressions.md#cast-expressions)
-- [typeof 運算子](~/_csharplang/spec/expressions.md#the-typeof-operator)
+- [Typeof 運算子](~/_csharplang/spec/expressions.md#the-typeof-operator)
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 運算子](index.md)
-- [如何使用模式符合和作為運算子安全地強制轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)
+- [如何使用模式比對和 is 和 as 運算子，安全地轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [.NET 的泛型](../../../standard/generics/index.md)

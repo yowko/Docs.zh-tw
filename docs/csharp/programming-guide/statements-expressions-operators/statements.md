@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: b941e46f959167f78f1366a3863aca4240810013
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3f8ac88525c44f9572f4f647145ad251537aba57
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381758"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556744"
 ---
 # <a name="statements-c-programming-guide"></a>陳述式 (C# 程式設計手冊)
 
@@ -28,10 +28,10 @@ ms.locfileid: "87381758"
 |類別|C# 關鍵字/附註|
 |--------------|---------------------------|
 |[宣告陳述式](#declaration-statements)|宣告陳述式引進新的變數或常數。 變數宣告可以將值選擇性指派給變數。 在常數宣告中，需要進行指派。|
-|[運算式陳述式](expressions.md)|計算值的運算式陳述式必須將值儲存在變數中。 如需詳細資訊，請參閱[運算式陳述式](#expression-statements)。|
+|[運算式陳述式](#expression-statements)|計算值的運算式陳述式必須將值儲存在變數中。|
 |選取範圍陳述式|選取範圍陳述式可讓您根據一或多個指定的條件，分支到不同的程式碼區段。 如需詳細資訊，請參閱下列主題： <ul><li>[if](../../language-reference/keywords/if-else.md)</li><li>[else](../../language-reference/keywords/if-else.md)</li><li>[switch](../../language-reference/keywords/switch.md)</li><li>[例圖](../../language-reference/keywords/switch.md)</li></ul>|
-|反覆運算陳述式|反覆運算陳述式可讓您循環執行如陣列這類集合，或重複執行同一組陳述式，直到符合指定的條件為止。 如需詳細資訊，請參閱下列主題： <ul><li>[do](../../language-reference/keywords/do.md)</li><li>[for](../../language-reference/keywords/for.md)</li><li>[foreach](../../language-reference/keywords/foreach-in.md)</li><li>[in](../../language-reference/keywords/foreach-in.md)</li><li>[等待](../../language-reference/keywords/while.md)</li></ul>|
-|跳躍陳述式|跳躍陳述式會將控制權轉移給另一個程式碼區段。 如需詳細資訊，請參閱下列主題： <ul><li>[break](../../language-reference/keywords/break.md)</li><li>[持續](../../language-reference/keywords/continue.md)</li><li>[預設值](../../language-reference/keywords/switch.md)</li><li>[goto](../../language-reference/keywords/goto.md)</li><li>[return](../../language-reference/keywords/return.md)</li><li>[yield](../../language-reference/keywords/yield.md)</li></ul>|
+|反覆運算陳述式|反覆運算陳述式可讓您循環執行如陣列這類集合，或重複執行同一組陳述式，直到符合指定的條件為止。 如需詳細資訊，請參閱下列主題： <ul><li>[do](../../language-reference/keywords/do.md)</li><li>[for](../../language-reference/keywords/for.md)</li><li>[foreach](../../language-reference/keywords/foreach-in.md)</li><li>[在](../../language-reference/keywords/foreach-in.md)</li><li>[等待](../../language-reference/keywords/while.md)</li></ul>|
+|跳躍陳述式|跳躍陳述式會將控制權轉移給另一個程式碼區段。 如需詳細資訊，請參閱下列主題： <ul><li>[break](../../language-reference/keywords/break.md)</li><li>[持續](../../language-reference/keywords/continue.md)</li><li>[預設值](../../language-reference/keywords/switch.md)</li><li>[goto](../../language-reference/keywords/goto.md)</li><li>[退貨](../../language-reference/keywords/return.md)</li><li>[yield](../../language-reference/keywords/yield.md)</li></ul>|
 |例外狀況處理陳述式|例外狀況處理陳述式可讓您順利復原在執行階段發生的例外狀況。 如需詳細資訊，請參閱下列主題： <ul><li>[throw](../../language-reference/keywords/throw.md)</li><li>[try-catch](../../language-reference/keywords/try-catch.md)</li><li>[try-finally](../../language-reference/keywords/try-finally.md)</li><li>[try-catch-finally](../../language-reference/keywords/try-catch-finally.md)</li></ul>|
 |[Checked 和 unchecked](../../language-reference/keywords/checked-and-unchecked.md)|checked 和 unchecked 陳述式可讓您指定，在將結果儲存在太小無法保存所產生值的變數中時，是否允許數值作業導致溢位。 如需詳細資訊，請參閱 [checked](../../language-reference/keywords/checked.md) 和 [unchecked](../../language-reference/keywords/unchecked.md)。|
 |`await` 陳述式|如果您使用 [async](../../language-reference/keywords/async.md) 修飾詞來標示方法，可以在方法中使用 [await](../../language-reference/operators/await.md) 運算子。 當控制權到達 async 方法中的 `await` 運算式時，控制權會傳回給呼叫端，並暫止方法中的進度，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。<br /><br /> 如需簡單範例，請參閱[方法](../classes-and-structs/methods.md)的＜非同步方法＞一節。 如需詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../concepts/async/index.md)。|
@@ -92,5 +92,5 @@ ms.locfileid: "87381758"
 ## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)
-- [語句關鍵字](../../language-reference/keywords/statement-keywords.md)  
-- [運算式](expressions.md)  
+- [語句關鍵字](../../language-reference/keywords/statement-keywords.md)
+- [C# 運算子與運算式](../../language-reference/operators/index.md)

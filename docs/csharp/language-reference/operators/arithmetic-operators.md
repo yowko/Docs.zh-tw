@@ -27,23 +27,23 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: d004ab466bc053ed286d85bcbee2766d8a087286
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 03bf7f246884fc8cd0095f0dd1375389a95e1ef0
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207232"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555470"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
 下列運算子會使用數數值型別的運算元來執行算數運算：
 
-- 一元[ `++` （遞增）](#increment-operator-)、 [ `--` （遞減）](#decrement-operator---)、 [ `+` （加號）](#unary-plus-and-minus-operators)和[ `-` （減號）](#unary-plus-and-minus-operators)運算子
-- 二元[ `*` （乘）](#multiplication-operator-)、（ [ `/` 除](#division-operator-)）、 [ `%` （餘數）](#remainder-operator-)、 [ `+` （加法）](#addition-operator-)和[ `-` （減號）](#subtraction-operator--)運算子
+- 一元[ `++` (遞增) ](#increment-operator-)、 [ `--` (遞減) ](#decrement-operator---)、 [ `+` (加) ](#unary-plus-and-minus-operators)和[ `-` (減去) ](#unary-plus-and-minus-operators)運算子
+- 二元[ `*` (乘法) ](#multiplication-operator-)、 [ `/` (除法) ](#division-operator-)、 [ `%` (餘數) ](#remainder-operator-)、 [ `+` (加法) ](#addition-operator-)和[ `-` (減法) ](#subtraction-operator--)運算子
 
 所有[整數](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數數值型別都支援這些運算子。
 
-如果是整數類資料類型，則 `++` `--` 會為 `int` 、 `uint` 、 `long` 和類型定義這些運算子（和運算子除外） `ulong` 。 當運算元屬於其他整數類型（ `sbyte` 、 `byte` 、、 `short` `ushort` 或）時 `char` ，它們的值會轉換成 `int` 類型，也就是運算的結果類型。 當運算元的整數或浮點數類型不同時，如果類型存在，它們的值會轉換成最接近的包含類型。 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)一節。 `++`和 `--` 運算子是針對所有整數和浮點數類型和[char](../builtin-types/char.md)類型所定義。
+在整數類資料類型的情況下，這些運算子 (除了 `++` 和 `--` 運算子之外，) 是針對 `int` 、 `uint` 、 `long` 和 `ulong` 類型而定義的。 當運算元屬於其他整數類型 (`sbyte` 、 `byte` 、 `short` 、 `ushort` 或) 時 `char` ，其值會轉換成 `int` 類型，也就是運算的結果類型。 當運算元的整數或浮點數類型不同時，如果類型存在，它們的值會轉換成最接近的包含類型。 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)一節。 `++`和 `--` 運算子是針對所有整數和浮點數類型和[char](../builtin-types/char.md)類型所定義。
 
 ## <a name="increment-operator-"></a>遞增運算子 ++
 
@@ -245,7 +245,7 @@ x = x op y
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義型[別可以多](operator-overloading.md)載一元（ `++` 、 `--` 、 `+` 和 `-` ）和二元（ `*` 、、、 `/` `%` `+` 和 `-` ）算術運算子。 當二元運算子多載時，對應的複合指派運算子也會隱含地多載。 使用者定義型別無法明確地多載複合指派運算子。
+使用者定義型[別可以多](operator-overloading.md)載一元 (`++` 、 `--` 、 `+` 和 `-`) 和 binary (、、 `*` 、 `/` `%` `+` 和 `-`) 算術運算子。 當二元運算子多載時，對應的複合指派運算子也會隱含地多載。 使用者定義型別無法明確地多載複合指派運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -264,10 +264,10 @@ x = x op y
 - [checked 和 unchecked 運算子](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
 - [數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C # 運算子](index.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
 - [.NET 中的數值](../../../standard/numerics.md)

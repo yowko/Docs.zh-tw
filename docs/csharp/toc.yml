@@ -2,7 +2,7 @@
   href: index.yml
 - name: 開始使用
   items:
-    - name: 總覽
+    - name: 概觀
       displayName: get started
       href: getting-started/index.md
     - name: C# 語言和 .NET Framework 簡介
@@ -876,8 +876,6 @@
           href: programming-guide/statements-expressions-operators/index.md
         - name: 陳述式
           href: programming-guide/statements-expressions-operators/statements.md
-        - name: 運算式
-          href: programming-guide/statements-expressions-operators/expressions.md
         - name: 運算式主體成員
           href: programming-guide/statements-expressions-operators/expression-bodied-members.md
         - name: 匿名函式
@@ -1561,7 +1559,7 @@
       items:
         - name: 總覽
           href: language-reference/operators/index.md
-          displayName: 'operator precedence, operator associativity'
+          displayName: 'operator precedence, operator associativity, expressions'
         - name: 算術運算子
           href: language-reference/operators/arithmetic-operators.md
           displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'

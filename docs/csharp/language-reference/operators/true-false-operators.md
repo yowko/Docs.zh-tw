@@ -5,19 +5,19 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 5ccd08a348478902bbbac36e99acf7ffc1fc814b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efba2c1c921d867725db90a1879cc9dee1a22b4e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846210"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555517"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 和 false 運算子 (C# 參考)
 
-運算子`true`返回[bool](../builtin-types/bool.md)值`true`以指示其運算元絕對正確。 運算子`false`返回該`bool`值`true`以指示其運算元絕對為 false。 `true` 和 `false` 運算子並不保證會彼此互補。 也就是說，`true` 和 `false` 運算子可能會針對相同的運算元傳回 `bool` 值 `false`。 如果某個型別會定義這兩個運算子之一，它也必須定義另一個運算子。
+`true`運算子會傳回[bool](../builtin-types/bool.md)值， `true` 以指出其運算元肯定為 true。 `false`運算子 `bool` 會傳回值， `true` 表示其運算元肯定為 false。 `true` 和 `false` 運算子並不保證會彼此互補。 也就是說，`true` 和 `false` 運算子可能會針對相同的運算元傳回 `bool` 值 `false`。 如果某個型別會定義這兩個運算子之一，它也必須定義另一個運算子。
 
 > [!TIP]
-> 如果需要支援`bool?`三值邏輯（例如，當您使用支援三值布林類型的資料庫時），請使用類型。 C# 能提供搭配 `bool?` 運算元來支援三值邏輯的 `&` 和 `|` 運算子。 如需詳細資訊，請參閱[布林邏輯運算子](boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
+> `bool?`如果您需要支援三值邏輯 (例如，當您使用支援三值布林值類型的資料庫時，請使用型別) 。 C# 能提供搭配 `bool?` 運算元來支援三值邏輯的 `&` 和 `|` 運算子。 如需詳細資訊，請參閱[布林邏輯運算子](boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
 
 ## <a name="boolean-expressions"></a>布林運算式
 
@@ -29,7 +29,7 @@ ms.locfileid: "78846210"
 
 ## <a name="example"></a>範例
 
-下列範例顯示同時定義了 `true` 和 `false` 運算子的型別。 類型還重載邏輯 AND 運算子`&`，以便也可以計算`&&`該類型的運算元。
+下列範例顯示同時定義了 `true` 和 `false` 運算子的型別。 類型也會多載邏輯 AND 運算子 `&` ，如此一來， `&&` 運算子也可以針對該類型的運算元進行評估。
 
 [!code-csharp[true and false operators example](snippets/TrueFalseOperators.cs)]
 
@@ -42,5 +42,5 @@ Wait!
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 運算子](index.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)

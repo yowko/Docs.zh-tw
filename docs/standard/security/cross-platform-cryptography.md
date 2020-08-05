@@ -6,16 +6,16 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 793a9bc55e5bd660374abd2ae81899e63ce3f36a
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854005"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557147"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>.NET Core 和 .NET 5 中的跨平臺密碼編譯
 
-.NET Core 和 .NET 5 中的密碼編譯作業是由作業系統（OS）程式庫所完成。 這項相依性有下列優點：
+.NET Core 和 .NET 5 中的密碼編譯作業是由作業系統 (作業系統) 程式庫來完成。 這項相依性有下列優點：
 
 * .NET 應用程式受益于作業系統可靠性。 將密碼編譯程式庫保持安全不受弱點影響，是作業系統廠商的高優先順序。 若要這麼做，他們會提供系統管理員應該套用的更新。
 * 如果作業系統程式庫經過 FIPS 驗證，則 .NET 應用程式可以存取 FIPS 驗證演算法。
@@ -26,7 +26,7 @@ ms.locfileid: "85854005"
 
 ## <a name="hash-algorithms"></a>雜湊演算法
 
-所有雜湊演算法和雜湊式消息驗證（HMAC）類別（包括 `*Managed` 類別）都會延遲到 OS 程式庫。 雖然各種作業系統程式庫的效能各有不同，但它們應該是相容的。
+所有雜湊演算法和雜湊型訊息驗證 (HMAC) 類別，包括 `*Managed` 類別，會延後至 OS 程式庫。 雖然各種作業系統程式庫的效能各有不同，但它們應該是相容的。
 
 ## <a name="symmetric-encryption"></a>對稱式加密
 
@@ -43,13 +43,13 @@ ms.locfileid: "85854005"
 
 ## <a name="authenticated-encryption"></a>已驗證的加密
 
-透過和類別提供 AES-CCM 和 AES GCM 的驗證加密（AE）支援 <xref:System.Security.Cryptography.AesCcm?displayProperty=fullName> <xref:System.Security.Cryptography.AesGcm?displayProperty=fullName> 。
+已驗證的加密 (AE) 支援透過和類別提供給 AES-CCM 和 AES <xref:System.Security.Cryptography.AesCcm?displayProperty=fullName> GCM <xref:System.Security.Cryptography.AesGcm?displayProperty=fullName> 。
 
 在 Windows 和 Linux 上，AES-CCM 和 AES GCM 的執行是由作業系統程式庫所提供。
 
 ### <a name="aes-ccm-and-aes-gcm-on-macos"></a>MacOS 上的 AES-CCM 和 AES GCM
 
-在 macOS 上，系統程式庫不支援以 AES-CCM 或 AES-GCM 進行協力廠商程式碼，因此 <xref:System.Security.Cryptography.AesCcm> 和 <xref:System.Security.Cryptography.AesGcm> 類別會使用 OpenSSL 來支援。 MacOS 上的使用者需要取得適當的 OpenSSL （libcrypto）複本，才能讓這些類型運作，而且它必須位於系統預設載入程式庫的路徑中。 我們建議您從套件管理員（例如 Homebrew）安裝 OpenSSL。
+在 macOS 上，系統程式庫不支援以 AES-CCM 或 AES-GCM 進行協力廠商程式碼，因此 <xref:System.Security.Cryptography.AesCcm> 和 <xref:System.Security.Cryptography.AesGcm> 類別會使用 OpenSSL 來支援。 MacOS 上的使用者必須取得適當的 OpenSSL 複本， (libcrypto) ，才能讓這些類型運作，而且它必須位於系統預設載入程式庫的路徑中。 我們建議您從套件管理員（例如 Homebrew）安裝 OpenSSL。
 
 `libcrypto.0.9.7.dylib` `libcrypto.0.9.8.dylib` 包含在 macOS 中的和程式庫是來自舊版的 OpenSSL，且不會使用。 `libcrypto.35.dylib`、 `libcrypto.41.dylib` 和連結 `libcrypto.42.dylib` 庫來自 LibreSSL，而且不會使用。
 
@@ -61,11 +61,11 @@ ms.locfileid: "85854005"
 
 * Nonce 大小
 
-  <xref:System.Security.Cryptography.AesCcm>類別支援56、64、72、80、88、96和104位（7、8、9、10、11、12和13個位元組） nonce。
+  <xref:System.Security.Cryptography.AesCcm>類別支援56、64、72、80、88、96和 104-bit (7、8、9、10、11、12和13個位元組) nonce。
 
 * 標記大小
 
-  <xref:System.Security.Cryptography.AesCcm>類別支援建立或處理32、48、64、80、96、112和128位（4、8、10、12、14和16位元組）標記。
+  <xref:System.Security.Cryptography.AesCcm>類別支援建立或處理32、48、64、80、96、112和 128-bit (4、8、10、12、14和16位元組) 標記。
 
 ### <a name="aes-gcm-keys-nonces-and-tags"></a>AES-GCM 金鑰、nonce 和標記
 
@@ -75,11 +75,11 @@ ms.locfileid: "85854005"
 
 * Nonce 大小
 
-  <xref:System.Security.Cryptography.AesGcm>類別僅支援96位（12位元組）的 nonce。
+  <xref:System.Security.Cryptography.AesGcm>類別僅支援96位 (12 位元組) nonce。
 
 * 標記大小
 
-  <xref:System.Security.Cryptography.AesGcm>類別支援建立或處理96、104、112、120和128位（12、13、14、15和16位元組）標記。
+  <xref:System.Security.Cryptography.AesGcm>類別支援建立或處理96、104、112、120和 128-bit (12、13、14、15和16個位元組的) 標記。
 
 ## <a name="asymmetric-cryptography"></a>非對稱式密碼編譯
 
@@ -92,29 +92,29 @@ ms.locfileid: "85854005"
 
 ### <a name="rsa"></a>RSA
 
-RSA （Rivest – Shamir – Adleman）金鑰產生是由作業系統程式庫所執行，並受限於其大小限制和效能特性。
+RSA (Rivest – Shamir – Adleman) 金鑰產生是由作業系統程式庫所執行，並受限於其大小限制和效能特性。
 
 RSA 金鑰作業是由 OS 程式庫執行，而且可以載入的金鑰類型受限於 OS 需求。
 
-.NET 不會公開「原始」（未填補之） RSA 作業。
+.NET 不會公開「原始」 (未填補之) RSA 作業。
 
 OS 程式庫會用於加密和解密填補。 並非所有平臺都支援相同的填補選項：
 
-| 填補模式                          | Windows （CNG） | Linux （OpenSSL） | macOS | Windows （CAPI） |
+| 填補模式                          | Windows (CNG)  | Linux (OpenSSL)  | macOS | Windows (CAPI)  |
 |---------------------------------------|---------------|-----------------|-------|----------------|
 | PKCS1 加密                      | ✔️           | ✔️              | ✔️   | ✔️             |
 | OAEP-SHA-1                          | ✔️           | ✔️              | ✔️   | ✔️             |
-| OAEP-SHA-1 （SHA256、SHA384、SHA512） | ✔️           | ✔️              | ✔️   | ❌             |
-| PKCS1 簽章（MD5、SHA-1）          | ✔️           | ✔️              | ✔️   | ✔️             |
-| PKCS1 簽章（SHA-1）               | ✔️           | ✔️              | ✔️   | ⚠️\*           |
+| OAEP-SHA-2 (SHA256、SHA384、SHA512)  | ✔️           | ✔️              | ✔️   | ❌             |
+| PKCS1 Signature (MD5，SHA-1)           | ✔️           | ✔️              | ✔️   | ✔️             |
+| PKCS1 Signature (SHA-1)                | ✔️           | ✔️              | ✔️   | ⚠️\*           |
 | PSS                                   | ✔️           | ✔️              | ✔️   | ❌             |
 
-\*Windows CryptoAPI （CAPI）能夠 PKCS1 具有 SHA-1 演算法的簽章。 但是，個別的 RSA 物件可能會載入不支援的密碼編譯服務提供者（CSP）中。
+\*Windows CryptoAPI (CAPI) 能夠 PKCS1 具有 SHA-1 演算法的簽章。 但是，您可以將個別的 RSA 物件載入密碼編譯服務提供者中， (不支援的 CSP) 。
 
 #### <a name="rsa-on-windows"></a>Windows 上的 RSA
 
-* 使用時，會使用 Windows CryptoAPI （CAPI） [`new RSACryptoServiceProvider()`](xref:System.Security.Cryptography.RSACryptoServiceProvider) 。
-* 每次使用時，都會使用 Windows 密碼編譯 API 新一代（CNG） [`new RSACng()`](xref:System.Security.Cryptography.RSACng) 。
+* 每次使用時，都會使用 Windows CryptoAPI (CAPI) [`new RSACryptoServiceProvider()`](xref:System.Security.Cryptography.RSACryptoServiceProvider) 。
+* Windows 密碼編譯 API 新一代 (CNG) 會在使用時使用 [`new RSACng()`](xref:System.Security.Cryptography.RSACng) 。
 * 傳回的物件 <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> 是由 WINDOWS CNG 內部提供技術支援。 這種 Windows CNG 的使用方式是一個執行詳細資料，而且可能隨時變更。
 * 的 <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey%2A> 擴充方法會傳回 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> <xref:System.Security.Cryptography.RSACng> 實例。 這項使用 <xref:System.Security.Cryptography.RSACng> 是一個執行詳細資料，而且可能隨時變更。
 * <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey%2A>目前偏好實例的擴充方法 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> <xref:System.Security.Cryptography.RSACng> ，但如果 <xref:System.Security.Cryptography.RSACng> 無法開啟此索引鍵， <xref:System.Security.Cryptography.RSACryptoServiceProvider> 則會嘗試。 慣用的提供者是一個執行詳細資料，而且可能會變更。
@@ -135,16 +135,16 @@ OS 程式庫會用於加密和解密填補。 並非所有平臺都支援相同�
 
 ### <a name="ecdsa"></a>ECDSA
 
-ECDSA （橢圓曲線數位簽章演算法）金鑰產生是由作業系統程式庫所完成，並且受限於其大小限制和效能特性。
+ECDSA (橢圓曲線數位簽章演算法) 金鑰產生是由作業系統程式庫所完成，並受限於其大小限制和效能特性。
 
 ECDSA 主要曲線是由作業系統程式庫所定義，並受限於其限制。
 
 | 橢圓曲線                     | Windows 10    | Windows 7-8。1 | Linux         | macOS         |
 |------------------------------------|---------------|-----------------|---------------|---------------|
-| NIST P-256 （secp256r1）             | ✔️           | ✔️              | ✔️           | ✔️            |
-| NIST P-384 （secp384r1）             | ✔️           | ✔️              | ✔️           | ✔️            |
-| NIST P-521 （secp521r1）             | ✔️           | ✔️              | ✔️           | ✔️            |
-| Brainpool 曲線（如命名曲線） | ✔️           | ❌              | ⚠️<sup>1</sup>| ❌           |
+| NIST P-256 (secp256r1)              | ✔️           | ✔️              | ✔️           | ✔️            |
+| NIST P-384 (secp384r1)              | ✔️           | ✔️              | ✔️           | ✔️            |
+| NIST P-521 (secp521r1)              | ✔️           | ✔️              | ✔️           | ✔️            |
+| Brainpool 曲線 (為命名曲線)  | ✔️           | ❌              | ⚠️<sup>1</sup>| ❌           |
 | 其他命名曲線                 | ⚠️<sup>2</sup>| ❌             | ⚠️<sup>1</sup>| ❌           |
 | 明確曲線                    | ✔️           | ❌              | ✔️           | ❌            |
 | 匯出或匯入為明確       | ✔️           | ❌<sup>第</sup>  | ✔️           | ❌<sup>第</sup>|
@@ -168,26 +168,26 @@ ECDSA 主要曲線是由作業系統程式庫所定義，並受限於其限制�
 
 ### <a name="ecdh"></a>ECDH
 
-ECDH （橢圓曲線 Diffie-hellman）金鑰產生是由作業系統程式庫所完成，並且受限於其大小限制和效能特性。
+ECDH (橢圓曲線 Diffie-hellman) 金鑰產生是由作業系統程式庫所完成，並且受限於其大小限制和效能特性。
 
 <xref:System.Security.Cryptography.ECDiffieHellman>類別不會傳回 ECDH 計算的「原始」值。 所有傳回的資料都是索引鍵衍生函式：
 
-* 雜湊（Z）
-* 雜湊（前置 | |Z | |追加
-* HMAC （索引鍵，Z）
-* HMAC （索引鍵，前面加上 | |Z | |追加
-* HMAC （Z，Z）
-* HMAC （Z，前面加上 | |Z | |追加
-* Tls11Prf （標籤、種子）
+* 雜湊 (Z) 
+* 雜湊 (前面加上 | |Z | |附加) 
+* HMAC (鍵，Z) 
+* HMAC (金鑰，前面加上 | |Z | |附加) 
+* HMAC (Z，Z) 
+* HMAC (Z，前面加上 | |Z | |附加) 
+* Tls11Prf (標籤、種子) 
 
 ECDH 主要曲線是由作業系統程式庫所定義，並受限於其限制。
 
 | 橢圓曲線                     | Windows 10    | Windows 7-8。1 | Linux         | macOS         |
 |------------------------------------|---------------|-----------------|---------------|---------------|
-| NIST P-256 （secp256r1）             | ✔️           | ✔️              | ✔️           | ✔️            |
-| NIST P-384 （secp384r1）             | ✔️           | ✔️              | ✔️           | ✔️            |
-| NIST P-521 （secp521r1）             | ✔️           | ✔️              | ✔️           | ✔️            |
-| brainpool 曲線（如命名曲線） | ✔️           | ❌              | ⚠️<sup>1</sup>| ❌           |
+| NIST P-256 (secp256r1)              | ✔️           | ✔️              | ✔️           | ✔️            |
+| NIST P-384 (secp384r1)              | ✔️           | ✔️              | ✔️           | ✔️            |
+| NIST P-521 (secp521r1)              | ✔️           | ✔️              | ✔️           | ✔️            |
+| brainpool 曲線 (為命名曲線)  | ✔️           | ❌              | ⚠️<sup>1</sup>| ❌           |
 | 其他命名曲線                 | ⚠️<sup>2</sup>| ❌             | ⚠️<sup>1</sup>| ❌           |
 | 明確曲線                    | ✔️           | ❌              | ✔️           | ❌            |
 | 匯出或匯入為明確       | ✔️           | ❌<sup>第</sup>  | ✔️           | ❌<sup>第</sup>|
@@ -211,23 +211,23 @@ ECDH 主要曲線是由作業系統程式庫所定義，並受限於其限制。
 
 ### <a name="dsa"></a>DSA
 
-DSA （數位簽章演算法）金鑰產生是由系統程式庫所執行，並受限於其大小限制和效能特性。
+DSA (數位簽章演算法) 金鑰產生是由系統程式庫所執行，並受限於其大小限制和效能特性。
 
 | 函式                      | Windows CNG | Linux | macOS         | Windows CAPI |
 |-------------------------------|-------------|-------|---------------|--------------|
-| 金鑰建立（<= 1024 位）   | ✔️         | ✔️    | ❌            | ✔️           |
-| 金鑰建立（> 1024 位）    | ✔️         | ✔️    | ❌            | ❌            |
-| 載入金鑰（<= 1024 位）   | ✔️         | ✔️    | ✔️            | ✔️           |
-| 載入金鑰（> 1024 位）    | ✔️         | ✔️    | ⚠️\*          | ❌            |
+| 金鑰建立 ( # B0 = 1024 bits)    | ✔️         | ✔️    | ❌            | ✔️           |
+| 金鑰建立 ( # A0 1024 bits)     | ✔️         | ✔️    | ❌            | ❌            |
+| 載入金鑰 ( # B0 = 1024 bits)    | ✔️         | ✔️    | ✔️            | ✔️           |
+| 載入金鑰 ( # A0 1024 bits)     | ✔️         | ✔️    | ⚠️\*          | ❌            |
 | FIPS 186-2                    | ✔️         | ✔️    | ✔️            | ✔️           |
-| FIPS 186-3 （SHA-2 簽章） | ✔️         | ✔️    | ❌            | ❌            |
+| FIPS 186-3 (SHA-1 簽名)  | ✔️         | ✔️    | ❌            | ❌            |
 
 \*macOS 會載入大於1024位的 DSA 金鑰，但不會定義這些金鑰的行為。 它們不會根據 FIPS 186-3 的行為。
 
 #### <a name="dsa-on-windows"></a>Windows 上的 DSA
 
-* 使用時，會使用 Windows CryptoAPI （CAPI） [`new DSACryptoServiceProvider()`](xref:System.Security.Cryptography.DSACryptoServiceProvider) 。
-* 每次使用時，都會使用 Windows 密碼編譯 API 新一代（CNG） [`new DSACng()`](xref:System.Security.Cryptography.DSACng) 。
+* 每次使用時，都會使用 Windows CryptoAPI (CAPI) [`new DSACryptoServiceProvider()`](xref:System.Security.Cryptography.DSACryptoServiceProvider) 。
+* Windows 密碼編譯 API 新一代 (CNG) 會在使用時使用 [`new DSACng()`](xref:System.Security.Cryptography.DSACng) 。
 * 傳回的物件 <xref:System.Security.Cryptography.DSA.Create%2A?displayProperty=nameWithType> 是由 WINDOWS CNG 內部提供技術支援。 這種 Windows CNG 的使用方式是一個執行詳細資料，而且可能隨時變更。
 * 的 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A> 擴充方法會傳回 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> <xref:System.Security.Cryptography.DSACng> 實例。 這項使用 <xref:System.Security.Cryptography.DSACng> 是一個執行詳細資料，而且可能隨時變更。
 * 偏好 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A> 實例的擴充方法 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> <xref:System.Security.Cryptography.DSACng> ，但如果 <xref:System.Security.Cryptography.DSACng> 無法開啟索引鍵， <xref:System.Security.Cryptography.DSACryptoServiceProvider> 則會嘗試。  慣用的提供者是一個執行詳細資料，而且可能會變更。
@@ -287,19 +287,19 @@ Windows 和 Linux 都會發出 DER 編碼的 PKCS7 blob。 macOS 會發出不限
 
 在 Windows 上， <xref:System.Security.Cryptography.X509Certificates.X509Store> 類別是 Windows 憑證存放區 api 的標記法。 這些 Api 在 .NET Core 和 .NET 5 中的作用都相同，如同在 .NET Framework 中所做的一樣。
 
-在 Linux 上， <xref:System.Security.Cryptography.X509Certificates.X509Store> 類別是系統信任決策（唯讀）、使用者信任決策（讀寫）和使用者金鑰儲存（讀寫）的投影。
+在 Linux 上， <xref:System.Security.Cryptography.X509Certificates.X509Store> 類別是系統信任決策 (唯讀) 、使用者信任決策 (讀寫) 和使用者金鑰儲存 (讀寫) 的預測。
 
-在 macOS 上， <xref:System.Security.Cryptography.X509Certificates.X509Store> 類別是系統信任決策（唯讀）、使用者信任決策（唯讀）和使用者金鑰儲存（讀寫）的投影。
+在 macOS 上， <xref:System.Security.Cryptography.X509Certificates.X509Store> 類別是系統信任決策 (唯讀) 、使用者信任決策 (唯讀) 和使用者金鑰儲存 (讀寫) 的預測。
 
-下表顯示每個平臺支援的案例。 針對不支援的案例（ ❌ 在資料表中），會擲回 <xref:System.Security.Cryptography.CryptographicException> 。
+下表顯示每個平臺支援的案例。 針對不支援的案例 (❌ 在) 的資料表中，會擲回 <xref:System.Security.Cryptography.CryptographicException> 。
 
 #### <a name="the-my-store"></a>我的存放區
 
 | 狀況                                         | Windows | Linux | macOS |
 |--------------------------------------------------|---------|-------|-------|
-| Open CurrentUser\My （ReadOnly）                   | ✔️     | ✔️    | ✔️   |
-| 開啟 CurrentUser\My （ReadWrite）                  | ✔️     | ✔️    | ✔️   |
-| 開啟 CurrentUser\My （ExistingOnly）               | ✔️     | ⚠️    | ✔️   |
+| 開啟 CurrentUser\My (ReadOnly)                    | ✔️     | ✔️    | ✔️   |
+| 開啟 CurrentUser\My (ReadWrite)                   | ✔️     | ✔️    | ✔️   |
+| 開啟 CurrentUser\My (ExistingOnly)                | ✔️     | ⚠️    | ✔️   |
 | 開啟 LocalMachine\My                             | ✔️     | ❌    | ✔️   |
 
 在 Linux 上，存放區會在第一次寫入時建立，而且預設不會有任何使用者存放區，因此開啟 `CurrentUser\My` `ExistingOnly` 可能會失敗。
@@ -310,12 +310,12 @@ Windows 和 Linux 都會發出 DER 編碼的 PKCS7 blob。 macOS 會發出不限
 
 | 狀況                              | Windows | Linux | macOS           |
 |---------------------------------------|---------|-------|-----------------|
-| Open CurrentUser\Root （ReadOnly）      | ✔️     | ✔️    | ✔️             |
-| 開啟 CurrentUser\Root （ReadWrite）     | ✔️     | ✔️    | ❌              |
-| 開啟 CurrentUser\Root （ExistingOnly）  | ✔️     | ⚠️    | ✔️（若為 ReadOnly） |
-| Open LocalMachine\Root （ReadOnly）     | ✔️     | ✔️    | ✔️             |
-| 開啟 LocalMachine\Root （ReadWrite）    | ✔️     | ❌    | ❌              |
-| 開啟 LocalMachine\Root （ExistingOnly） | ✔️     | ⚠️    | ✔️（若為 ReadOnly） |
+| 開啟 CurrentUser\Root (ReadOnly)       | ✔️     | ✔️    | ✔️             |
+| 開啟 CurrentUser\Root (ReadWrite)      | ✔️     | ✔️    | ❌              |
+| 開啟 CurrentUser\Root (ExistingOnly)   | ✔️     | ⚠️    | 如果 ReadOnly) ，則✔️ ( |
+| 開啟 LocalMachine\Root (ReadOnly)      | ✔️     | ✔️    | ✔️             |
+| 開啟 LocalMachine\Root (ReadWrite)     | ✔️     | ❌    | ❌              |
+| 開啟 LocalMachine\Root (ExistingOnly)  | ✔️     | ⚠️    | 如果 ReadOnly) ，則✔️ ( |
 
 在 Linux 上， `LocalMachine\Root` 存放區是 OpenSSL 預設路徑中 CA 配套的轉譯。
 
@@ -325,12 +325,12 @@ Windows 和 Linux 都會發出 DER 編碼的 PKCS7 blob。 macOS 會發出不限
 
 | 狀況                                      | Windows | Linux | macOS           |
 |-----------------------------------------------|---------|-------|-----------------|
-| Open CurrentUser\Intermediate （ReadOnly）      | ✔️     | ✔️    | ✔️             |
-| 開啟 CurrentUser\Intermediate （ReadWrite）     | ✔️     | ✔️    | ❌              |
-| 開啟 CurrentUser\Intermediate （ExistingOnly）  | ✔️     | ⚠️    | ✔️（若為 ReadOnly） |
-| Open LocalMachine\Intermediate （ReadOnly）     | ✔️     | ✔️    | ✔️             |
-| 開啟 LocalMachine\Intermediate （ReadWrite）    | ✔️     | ❌    | ❌              |
-| 開啟 LocalMachine\Intermediate （ExistingOnly） | ✔️     | ⚠️    | ✔️（若為 ReadOnly） |
+| 開啟 CurrentUser\Intermediate (ReadOnly)       | ✔️     | ✔️    | ✔️             |
+| 開啟 CurrentUser\Intermediate (ReadWrite)      | ✔️     | ✔️    | ❌              |
+| 開啟 CurrentUser\Intermediate (ExistingOnly)   | ✔️     | ⚠️    | 如果 ReadOnly) ，則✔️ ( |
+| 開啟 LocalMachine\Intermediate (ReadOnly)      | ✔️     | ✔️    | ✔️             |
+| 開啟 LocalMachine\Intermediate (ReadWrite)     | ✔️     | ❌    | ❌              |
+| 開啟 LocalMachine\Intermediate (ExistingOnly)  | ✔️     | ⚠️    | 如果 ReadOnly) ，則✔️ ( |
 
 在 Linux 上， `CurrentUser\Intermediate` 當 X509Chain 組建上的授權資訊存取記錄下載中繼 ca 時，會使用此存放區作為快取。 此 `LocalMachine\Intermediate` 存放區是 OpenSSL 預設路徑中的 CA 配套的轉譯。
 
@@ -338,12 +338,12 @@ Windows 和 Linux 都會發出 DER 編碼的 PKCS7 blob。 macOS 會發出不限
 
 | 狀況                                    | Windows | Linux | macOS           |
 |---------------------------------------------|---------|-------|-----------------|
-| Open CurrentUser\Disallowed （ReadOnly）      | ✔️     | ⚠️    | ✔️             |
-| 開啟 CurrentUser\Disallowed （ReadWrite）     | ✔️     | ⚠️    | ❌              |
-| 開啟 CurrentUser\Disallowed （ExistingOnly）  | ✔️     | ⚠️    | ✔️（若為 ReadOnly） |
-| Open LocalMachine\Disallowed （ReadOnly）     | ✔️     | ❌    | ✔️             |
-| 開啟 LocalMachine\Disallowed （ReadWrite）    | ✔️     | ❌    | ❌              |
-| 開啟 LocalMachine\Disallowed （ExistingOnly） | ✔️     | ❌    | ✔️（若為 ReadOnly） |
+| 開啟 CurrentUser\Disallowed (ReadOnly)       | ✔️     | ⚠️    | ✔️             |
+| 開啟 CurrentUser\Disallowed (ReadWrite)      | ✔️     | ⚠️    | ❌              |
+| 開啟 CurrentUser\Disallowed (ExistingOnly)   | ✔️     | ⚠️    | 如果 ReadOnly) ，則✔️ ( |
+| 開啟 LocalMachine\Disallowed (ReadOnly)      | ✔️     | ❌    | ✔️             |
+| 開啟 LocalMachine\Disallowed (ReadWrite)     | ✔️     | ❌    | ❌              |
+| 開啟 LocalMachine\Disallowed (ExistingOnly)  | ✔️     | ❌    | 如果 ReadOnly) ，則✔️ ( |
 
 在 Linux 上， `Disallowed` 存放區不會用於鏈建築物中，而嘗試在其中新增內容會導致 <xref:System.Security.Cryptography.CryptographicException> 。 <xref:System.Security.Cryptography.CryptographicException>如果已取得內容，則在開啟存放區時，會擲回 `Disallowed` 。
 
@@ -353,19 +353,21 @@ Windows 和 Linux 都會發出 DER 編碼的 PKCS7 blob。 macOS 會發出不限
 
 | 狀況                                         | Windows | Linux | macOS |
 |--------------------------------------------------|---------|-------|-------|
-| 開啟不存在的存放區（ExistingOnly）           | ❌     | ❌     | ❌    |
-| 開啟 CurrentUser 不存在的存放區（ReadWrite）  | ✔️     | ✔️     | ⚠️   |
-| 開啟 LocalMachine 不存在的存放區（ReadWrite） | ✔️     | ❌     | ❌    |
+| 開啟不存在的存放區 (ExistingOnly)            | ❌     | ❌     | ❌    |
+| 開啟 CurrentUser 不存在的存放區 (ReadWrite)   | ✔️     | ✔️     | ⚠️   |
+| 開啟 LocalMachine 不存在的存放區 (ReadWrite)  | ✔️     | ❌     | ❌    |
 
-在 macOS 上，只有 location 才支援使用 System.security.cryptography.x509certificates.x509store API 建立自訂存放區 `CurrentUser` 。 它會在使用者的 keychain 目錄（*~/Library/Keychains*）中建立不含密碼的新 keychain。 若要建立具有密碼的 keychain，可以使用 P/Invoke `SecKeychainCreate` 。 同樣地， `SecKeychainOpen` 也可以用來開啟不同位置中的金鑰鏈]。 產生的 `IntPtr` 可以傳遞至， [`new X509Store(IntPtr)`](xref:System.Security.Cryptography.X509Certificates.X509Store.%23ctor(System.IntPtr)) 以取得具備讀取/寫入功能的存放區，受限於目前使用者的許可權。
+在 macOS 上，只有 location 才支援使用 System.security.cryptography.x509certificates.x509store API 建立自訂存放區 `CurrentUser` 。 它會在使用者的 keychain 目錄中建立不含密碼的新 keychain， (*~/Library/Keychains*) 。 若要建立具有密碼的 keychain，可以使用 P/Invoke `SecKeychainCreate` 。 同樣地， `SecKeychainOpen` 也可以用來開啟不同位置中的金鑰鏈]。 產生的 `IntPtr` 可以傳遞至， [`new X509Store(IntPtr)`](xref:System.Security.Cryptography.X509Certificates.X509Store.%23ctor(System.IntPtr)) 以取得具備讀取/寫入功能的存放區，受限於目前使用者的許可權。
 
 ### <a name="x509chain"></a>X509Chain
 
 macOS 不支援離線 CRL 使用率，因此 `X509RevocationMode.Offline` 會被視為 `X509RevocationMode.Online` 。
 
-macOS 不支援在 CRL （憑證撤銷清單）/OCSP （線上憑證狀態通訊協定）/AIA （授權資訊存取）下載時，使用者起始的超時時間，因此 `X509ChainPolicy.UrlRetrievalTimeout` 會予以忽略。
+macOS 不支援在 CRL (憑證撤銷清單上啟動使用者起始的超時) /OCSP (線上憑證狀態通訊協定) /AIA (授權單位資訊存取) 下載，因此 `X509ChainPolicy.UrlRetrievalTimeout` 會被忽略。
 
 ## <a name="additional-resources"></a>其他資源
 
 * [.NET 密碼編譯模型](cryptography-model.md)
 * [.NET 密碼編譯服務](cryptographic-services.md)
+* [使用填補進行 CBC 模式對稱解密的時間弱點](vulnerabilities-cbc-mode.md)
+* [ASP.NET Core 資料保護](/aspnet/core/security/data-protection/introduction)

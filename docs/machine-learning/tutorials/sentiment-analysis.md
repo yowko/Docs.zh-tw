@@ -4,12 +4,12 @@ description: 本教學課程示範如何建立 .NET Core 主控台應用程式�
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: de8ea511b3d421e391b182a6de079b854d3f2390
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: da972d793570a8dd6b906762640bd6bfe5531a5b
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281746"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557160"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>教學課程：使用 ML.NET 中的二進位分類來分析網站批註的情感
 
@@ -46,7 +46,7 @@ ms.locfileid: "86281746"
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇 "nuget.org" 作為套件來源，然後選取 [**流覽**] 索引標籤。搜尋**Microsoft.ML**，選取您想要的套件，然後選取 [**安裝**] 按鈕。 同意您所選套件的授權條款，以繼續進行安裝。
 
-## <a name="prepare-your-data"></a>準備您的資料
+## <a name="prepare-your-data"></a>準備資料
 
 > [!NOTE]
 > 此教學課程的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人 al， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. (2017) 。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 Irvine, CA:University of California, School of Information and Computer Science。
@@ -179,7 +179,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
     上述程式碼中的 `FeaturizeText()` 方法會將文字資料行 (`SentimentText`) 轉換成機器學習演算法所使用的數值索引鍵類型 `Features` 資料行，並將它新增為新的資料集資料行：
 
-    |SentimentText                         |情感 |功能              |
+    |SentimentText                         |情感 |特性              |
     |--------------------------------------|----------|----------------------|
     |女服務生的服務速度有點慢。|    0     |[0.76, 0.65, 0.44, …] |
     |不夠酥脆。                    |    0     |[0.98, 0.43, 0.54, …] |
@@ -212,7 +212,7 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 ## <a name="evaluate-the-model"></a>評估模型
 
-定型模型之後，使用您的測試資料來驗證模型效能。
+在您的模型定型之後，請使用您的測試資料來驗證模型的效能。
 
 1. 在 `BuildAndTrainModel()` 之後，使用下列程式碼建立 `Evaluate()` 方法：
 

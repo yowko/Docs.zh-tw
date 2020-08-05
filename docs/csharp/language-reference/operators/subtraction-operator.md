@@ -12,16 +12,16 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 2017aade92e8d7ad2af7101a107122fa8d7b9e27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0475e1be74af0b367785443224cd2e737d2f7301
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847647"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555589"
 ---
 # <a name="--and---operators-c-reference"></a>- 及 -= 運算子 (C# 參考)
 
-和`-``-=`運算子由內置[積分](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數位類型和[委託](../builtin-types/reference-types.md#the-delegate-type)類型支援。
+`-` `-=` 內建[整數](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數數值型別和[委派](../builtin-types/reference-types.md#the-delegate-type)類型都支援和運算子。
 
 如需算術 `-` 運算子的資訊，請參閱[算術運算子](arithmetic-operators.md)一文中的[一元加號和減號運算子](arithmetic-operators.md#unary-plus-and-minus-operators)與[減法運算子 -](arithmetic-operators.md#subtraction-operator--) 章節。
 
@@ -43,7 +43,7 @@ ms.locfileid: "78847647"
 
   [!code-csharp-interactive[delegate removal and null](snippets/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-要合併委託，請使用[`+`運算子](addition-operator.md#delegate-combination)。
+若要合併委派，請使用[ `+` 運算子](addition-operator.md#delegate-combination)。
 
 如需委派型別的詳細資訊，請參閱[委派](../../programming-guide/delegates/index.md)。
 
@@ -67,7 +67,7 @@ x = x - y
 
 [!code-csharp-interactive[-= examples](snippets/SubtractionOperator.cs#SubtractAndAssign)]
 
-當您取消訂閱[事件](../keywords/event.md)時，您也會使用 `-=` 來指定要移除的事件處理常式方法。 有關詳細資訊，請參閱[如何訂閱和取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+當您取消訂閱[事件](../keywords/event.md)時，您也會使用 `-=` 來指定要移除的事件處理常式方法。 如需詳細資訊，請參閱[如何訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
@@ -79,8 +79,8 @@ x = x - y
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 運算子](index.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)
 - [事件](../../programming-guide/events/index.md)
 - [算術運算子](arithmetic-operators.md)
-- [* 和 + 運算子](addition-operator.md)
+- [+ 和 + = 運算子](addition-operator.md)

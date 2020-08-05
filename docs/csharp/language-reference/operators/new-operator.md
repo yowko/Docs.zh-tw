@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: ed18c42cd28412a967c94a65c2a92b0b75097b52
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 1e1abb95d8b0b956e391b05ddc5a0a8a20d01a63
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199725"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555301"
 ---
 # <a name="new-operator-c-reference"></a>new 運算子 (C# 參考)
 
@@ -59,8 +59,8 @@ ms.locfileid: "82199725"
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [new 運算子](~/_csharplang/spec/expressions.md#the-new-operator)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C # 運算子](index.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)
 - [物件和集合初始化運算式](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)

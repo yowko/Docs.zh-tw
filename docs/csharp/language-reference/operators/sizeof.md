@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84dc67be95fa65f6c46dab02af2ee7bc08d2ec31
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847283"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555223"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 運算子 (C# 參考)
 
@@ -50,9 +50,9 @@ ms.locfileid: "78847283"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 運算子](index.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)
 - [指標相關運算子](pointer-related-operators.md)
 - [指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [記憶體和跨距相關類型](../../../standard/memory-and-spans/index.md)
+- [記憶體與延伸相關類型](../../../standard/memory-and-spans/index.md)
 - [.NET 的泛型](../../../standard/generics/index.md)

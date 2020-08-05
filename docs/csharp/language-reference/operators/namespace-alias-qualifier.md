@@ -10,18 +10,18 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 84c418627462f83630fe5072a0b0e2089f6588f6
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 305c05f3ea8e56a72ecdfa796f0c048ab5fbd132
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507122"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556354"
 ---
 # <a name="-operator-c-reference"></a>:: 運算子 (C# 參考)
 
-使用命名空間別名限定詞`::`訪問別名命名空間的成員。 只能在兩個`::`識別碼之間使用限定詞。 左邊的識別碼可以是下列任何別名：
+使用命名空間別名限定詞 `::` 來存取別名命名空間的成員。 您只能在 `::` 兩個識別碼之間使用限定詞。 左邊的識別碼可以是下列任何別名：
 
-- 使用[使用別名指令](../keywords/using-directive.md)創建的命名空間別名 ：
+- 使用[alias](../keywords/using-directive.md)指示詞建立的命名空間別名：
 
   ```csharp
   using forwinforms = System.Drawing;
@@ -56,7 +56,7 @@ ms.locfileid: "79507122"
   > [!NOTE]
   > `global` 關鍵字只有在它是 `::` 限定詞的左邊識別碼時，才是全域命名空間別名。
 
-您還可以使用[`.`權杖](member-access-operators.md#member-access-expression-)訪問別名命名空間的成員。 但是，權杖`.`也用於訪問類型成員。 `::` 限定詞可確保其左邊的識別碼一律會參考命名空間別名，即使存在具有相同名稱的型別或命名空間也一樣。
+您也可以使用[ `.` 權杖](member-access-operators.md#member-access-expression-)來存取別名命名空間的成員。 不過，此 `.` 標記也會用來存取類型成員。 `::` 限定詞可確保其左邊的識別碼一律會參考命名空間別名，即使存在具有相同名稱的型別或命名空間也一樣。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -64,6 +64,6 @@ ms.locfileid: "79507122"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 運算子](index.md)
+- [C# 參考資料](../index.md)
+- [C# 運算子與運算式](index.md)
 - [使用命名空間](../../programming-guide/namespaces/using-namespaces.md)
