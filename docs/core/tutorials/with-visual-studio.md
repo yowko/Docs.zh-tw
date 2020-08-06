@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 3c8fc7c4702b786c05e14397dc36d994c77e114d
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: fbe0b3491260e787c08b98b320b19408f2c897eb
+ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811660"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87795381"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET Core 主控台應用程式
 
 本教學課程說明如何在 Visual Studio 2019 中建立及執行 .NET Core 主控台應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 已安裝 **.Net Core 跨平臺開發**工作負載的[Visual Studio 2019 16.6 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 當您選取此工作負載時，會自動安裝 .NET Core 3.1 SDK。
 
@@ -33,7 +33,7 @@ ms.locfileid: "84811660"
 
    ![在 Visual Studio 起始頁上選取 [建立新專案] 按鈕](./media/with-visual-studio/start-window.png)
 
-1. 在 [**建立新專案**] 頁面的 [搜尋] 方塊中，輸入**主控台**。 接著，從 [語言] 清單中選擇 [ **c #** ] 或 [ **Visual Basic** ]，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [**主控台應用程式（.Net Core）** ] 範本，然後選擇 [**下一步]**。
+1. 在 [**建立新專案**] 頁面的 [搜尋] 方塊中，輸入**主控台**。 接著，從 [語言] 清單中選擇 [ **c #** ] 或 [ **Visual Basic** ]，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [ ** ( .Net Core) ] 範本的主控台應用程式**，然後選擇 [**下一步]**。
 
    ![建立已選取篩選的新專案視窗](./media/with-visual-studio/create-new-project.png)
 
@@ -79,7 +79,7 @@ End Module
 
 ## <a name="run-the-app"></a>執行應用程式
 
-1. 按<kbd>Shift</kbd> + <kbd>F5</kbd>以執行程式而不進行偵測。
+1. 按<kbd>Ctrl</kbd> + <kbd>F5</kbd>以執行程式，而不進行偵測。
 
    主控台視窗隨即開啟，並出現 "Hello World！" 文字 列印在畫面上，而部分 Visual Studio 的調試資訊。
 
@@ -96,13 +96,13 @@ End Module
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
    :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="MainMethod":::
 
-   此程式碼會在主控台中顯示「What is your name?」， 在主控台視窗中，等候使用者輸入後面接著<kbd>Enter</kbd>鍵的字串。 它會將此字串儲存在名為的變數中 `name` 。 它也會抓取屬性的值 <xref:System.DateTime.Now?displayProperty=nameWithType> ，其中包含目前的本地時間，並將它指派給名為的變數 `date` （ `currentDate` 在 Visual Basic 中）。 最後，它會在主控台視窗中顯示這些值。
+   此程式碼會在主控台中顯示「What is your name?」， 在主控台視窗中，等候使用者輸入後面接著<kbd>Enter</kbd>鍵的字串。 它會將此字串儲存在名為的變數中 `name` 。 它也會抓取屬性的值 <xref:System.DateTime.Now?displayProperty=nameWithType> （其中包含目前的本地時間），並將它指派給 `date` Visual Basic) 中名為 (的變數 `currentDate` 。 最後，它會在主控台視窗中顯示這些值。
 
-   `\n`（ `vbCrLf` 在 Visual Basic 中）代表分行符號。
+   `\n` `vbCrLf` Visual Basic) 中的 (表示分行符號。
 
-   字串前面的貨幣符號（ `$` ）可讓您在字串中的大括弧內放置運算式，例如變數名稱。 運算式值會插入字串中，以取代運算式。 此語法稱為「插入[字串](../../csharp/language-reference/tokens/interpolated.md)」。
+   字串前方的貨幣符號 (`$`) 可讓您在字串中的大括弧內放置運算式，例如變數名稱。 運算式值會插入字串中，以取代運算式。 此語法稱為「插入[字串](../../csharp/language-reference/tokens/interpolated.md)」。
 
-1. 按<kbd>Shift</kbd> + <kbd>F5</kbd>以執行程式而不進行偵測。
+1. 按<kbd>Ctrl</kbd> + <kbd>F5</kbd>以執行程式，而不進行偵測。
 
 1. 輸入名稱並按<kbd>enter</kbd>鍵，以回應提示。
 
