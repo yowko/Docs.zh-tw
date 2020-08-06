@@ -4,7 +4,7 @@
   href: get-started/overview.md
 - name: 開始使用
   items:
-    - name: 總覽
+    - name: 概觀
       href: get-started/index.md
     - name: .NET Framework 與不定期發行
       href: get-started/the-net-framework-and-out-of-band-releases.md
@@ -46,7 +46,7 @@
       href: install/run-net-framework-1-1-apps.md
 - name: 移轉指南
   items:
-    - name: 總覽
+    - name: 概觀
       href: migration-guide/index.md
     - name: 相容性
       items:
@@ -386,7 +386,7 @@
       href: ../desktop-wpf/xaml-services/
 - name: 工具
   items:
-    - name: 總覽
+    - name: 概觀
       href: tools/index.md
     - name: Al.exe (組件連接器)
       href: tools/al-exe-assembly-linker.md
@@ -678,3 +678,39 @@
           href: whats-new/obsolete-types.md
         - name: 淘汰的成員
           href: whats-new/obsolete-members.md
+- name: 程式碼存取安全性
+  items:
+    - name: 總覽
+      href: misc/code-access-security.md
+    - name: 程式碼存取安全性的基本概念
+      href: misc/code-access-security-basics.md
+    - name: 程式碼存取安全性原則相容性和移轉
+      href: misc/code-access-security-policy-compatibility-and-migration.md
+    - name: 危險使用權限和原則管理
+      href: misc/dangerous-permissions-and-policy-administration.md
+    - name: 如何在沙箱中執行部分信任的程式碼
+      href: misc/how-to-run-partially-trusted-code-in-a-sandbox.md
+    - name: 連結要求
+      href: misc/link-demands.md
+    - name: 設定例外狀況處理的安全性
+      href: misc/securing-exception-handling.md
+    - name: 設定方法存取的安全性
+      href: misc/securing-method-access.md
+    - name: 設定包裝函式程式碼的安全性
+      href: misc/securing-wrapper-code.md
+    - name: 安全及公開唯讀陣列欄位
+      href: misc/security-and-public-read-only-array-fields.md
+    - name: 安全性和遠端處理考量
+      href: misc/security-and-remoting-considerations.md
+    - name: 安全性和序列化
+      href: misc/security-and-serialization.md
+    - name: 安全性透明的程式碼，層級 1
+      href: misc/security-transparent-code-level-1.md
+    - name: 安全性透明的程式碼，層級 2
+      href: misc/security-transparent-code-level-2.md
+    - name: 安全性透明的程式碼
+      href: misc/security-transparent-code.md
+    - name: 從部分受信任程式碼使用程式庫
+      href: misc/using-libraries-from-partially-trusted-code.md
+    - name: 使用 Assert 方法
+      href: misc/using-the-assert-method.md
