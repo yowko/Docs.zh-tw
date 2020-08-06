@@ -1,45 +1,45 @@
 ### YamlMime:Landing
 title: C# 文件
-summary: 瞭解如何使用 .NET 平臺上的 C# 程式設計語言編寫任何應用程式。
+summary: 了解如何在 .NET 平台上使用 C# 程式設計語言來撰寫任何應用程式。
 metadata:
-  title: C# 文檔 - 入門,教程,參考。
-  description: 學習 C# 編程 - 面向初級開發人員、不熟悉 C# 的開發人員以及經驗豐富的 C# / .NET 開發人員
+  title: C# 文件 - 入門、教學課程、參考。
+  description: 學習 C# 程式設計 - 適用於新手開發人員、剛接觸 C# 的開發人員，以及經驗豐富的 C# / .Net 開發人員
   ms.topic: landing-page
   ms.date: 11/19/2019
   ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
-  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
-  ms.translationtype: MT
+  ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+  ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/23/2020
+  ms.lasthandoff: 08/05/2020
   ms.locfileid: "82102719"
 landingContent:
-- title: 學習在 C 中程式設計#
+- title: 學習如何在 C# 中撰寫程式
   linkLists:
   - linkListType: get-started
     links:
-    - text: 在線,互動你好世界
+    - text: 線上互動式 Hello world
       url: tutorials/intro-to-csharp/hello-world.yml
-    - text: 數學和數字(C)#
+    - text: C# 中的數學與數字
       url: tutorials/intro-to-csharp/numbers-in-csharp.yml
-    - text: 入門教程
+    - text: 入門教學課程
       url: tutorials/intro-to-csharp/index.md
-    - text: 使用視覺化工作室建立 C# 應用
+    - text: 使用 Visual Studio 建立 C# 應用程式
       url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
   - linkListType: video
     links:
     - text: 什麼是 C#?
       url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
-    - text: C# 101 影片
+    - text: C# 入門影片系列
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
     - text: 下載 .NET Core SDK
       url: https://dotnet.microsoft.com/download
-- title: C# 基礎知識
+- title: C# 基礎
   linkLists:
   - linkListType: overview
     links:
-    - text: C 之旅#
+    - text: C# 導覽
       url: tour-of-csharp/index.md
     - text: C# 程式深入解析
       url: programming-guide/inside-a-program/index.md
@@ -47,23 +47,23 @@ landingContent:
       url: programming-guide/main-and-command-args/index.md
   - linkListType: concept
     links:
-    - text: C# 與 .NET 型態系統
+    - text: C# 與 .NET 型別系統
       url: programming-guide/types/index.md
     - text: Language Integrated Query (LINQ)
       url: linq/index.md
-    - text: 非同步與等待
+    - text: async 與 await
       url: programming-guide/concepts/async/index.md
   - linkListType: tutorial
     links:
-    - text: 對物件繼承
+    - text: 物件導向繼承
       url: tutorials/inheritance.md
-    - text: 使用 LINQ 查詢資料
+    - text: 使用 LINQ 來查詢資料
       url: tutorials/working-with-linq.md
-    - text: 使用字串插值格式化文字
+    - text: 使用字串插補來設定文字格式
       url: tutorials/string-interpolation.md
-    - text: 瀏覽所有教學
+    - text: 瀏覽所有教學課程
       url: tutorials/index.md
-- title: C# 8.0 中的新功能
+- title: C# 8.0 的新功能
   linkLists:
   - linkListType: whats-new
     links:
@@ -77,27 +77,27 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: 選擇空移原則
+    - text: 選擇可為 Null 的移轉策略
       url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
-    - text: 使用並產生非同步串流
+    - text: 取用及產生非同步資料流
       url: tutorials/generate-consume-asynchronous-stream.md
-    - text: 使用可無參考型態進行開發
+    - text: 使用可為 Null 的參考型別來開發
       url: tutorials/nullable-reference-types.md
-    - text: 升級現有代碼以使用空引言類型
+    - text: 使用可為 Null 的參考型別來移轉現有程式碼
       url: tutorials/upgrade-to-nullable-references.md
-    - text: 使用模式符合進行更具表現力的演演算法
+    - text: 針對更具表達性的演算法使用模式比對
       url: tutorials/pattern-matching.md
-    - text: 具有預設介面成員的安全版本介面
+    - text: 使用預設介面成員安全地進行介面版本設定
       url: tutorials/default-interface-methods-versions.md
-    - text: 將功能與預設介面成員混合
+    - text: 使用預設介面方法混合使用功能
       url: tutorials/mixins-with-default-interface-methods.md
-    - text: 使用範圍與索引處理子集
+    - text: 使用範圍與索引來處理子集
       url: tutorials/ranges-indexes.md
   - linkListType: reference
     links:
-    - text: C# 編譯器中斷變更
+    - text: C# 編譯器的中斷性變更
       url: whats-new/breaking-changes.md
 - title: C# 語言參考
   linkLists:
