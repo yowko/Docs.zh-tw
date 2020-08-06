@@ -1,6 +1,6 @@
 ---
 title: 使用 Assert 方法
-description: 瞭解您可以如何使用 Assert 方法，讓您的程式碼（和下游呼叫端程式碼）執行您的程式碼具有許可權，但不是其呼叫端的專案。
+description: 請參閱如何使用 Assert 方法，讓您的程式碼 (和下游呼叫端的程式碼) 執行您的程式碼具有的許可權，但不是其呼叫端的專案。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,17 +17,18 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-ms.openlocfilehash: 096e0375a94c92a835cccb4d1b3297783b4120e9
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 573b84f991e795c2513f213ddb52999fef51c454
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309803"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855659"
 ---
 # <a name="using-the-assert-method"></a>使用 Assert 方法
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A> 是一種方法，可以在程式碼存取權限類別以及 <xref:System.Security.PermissionSet> 類別上呼叫。 您可以使用**Assert**讓程式碼（和下游呼叫端）執行您的程式碼有權執行的動作，但其呼叫端可能沒有許可權。 安全性判斷提示會變更執行階段在安全性檢查期間執行的一般程序。 當您判斷提示權限時，它會告訴安全性系統不要檢查已判斷提示權限的程式碼呼叫端。  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> 是一種方法，可以在程式碼存取權限類別以及 <xref:System.Security.PermissionSet> 類別上呼叫。 您可以使用**Assert**讓程式碼 (和下游呼叫端) 執行您的程式碼有權執行的動作，但其呼叫端可能沒有執行的許可權。 安全性判斷提示會變更執行階段在安全性檢查期間執行的一般程序。 當您判斷提示權限時，它會告訴安全性系統不要檢查已判斷提示權限的程式碼呼叫端。  
   
 > [!CAUTION]
 > 請小心使用判斷提示，因為它們可能會開啟安全性漏洞，破壞的執行階段強制執行安全性限制的機制。  
@@ -58,11 +59,11 @@ ms.locfileid: "86309803"
   
  ![顯示 Assert 方法元件的圖表。](./media/using-the-assert-method/assert-method-assemblies.gif)
   
- 在此案例中，方法 A 會呼叫 B，B 呼叫 C，C 呼叫 E，而 E 呼叫 F。方法 C 會在 c 磁片磁碟機上讀取檔案的許可權（許可權 P1），而方法 E 會要求許可權以讀取 C 磁片磁碟機上的 .txt 檔案（許可權 P1A）。 在執行時間遇到 F 中的需求時，會執行堆疊逐步解說，以檢查 F 的所有呼叫端的許可權，從 E. E 開始已被授與 P1A 許可權，因此堆疊逐步解說會繼續檢查 C 的許可權，其中會探索 C 的判斷提示。 因為需要的權限 (P1A) 是判斷提示權限 (P1) 的子集，堆疊查核行程會停止，且安全性檢查會自動成功。 組件 A 和 B 未被授與權限 P1A 並不重要。 藉由判斷提示 P1，C 方法可確保其呼叫者可以存取 P1 保護的資源，即使呼叫端未獲得存取該資源的權限亦然。  
+ 在此案例中，方法 A 會呼叫 B，B 呼叫 C，C 呼叫 E，而 E 呼叫 F。方法 C 會判斷提示讀取 C 磁片磁碟機上檔案的許可權 (許可權 P1) ，而方法 E 則會要求許可權以讀取 C 磁片磁碟機上的 .txt 檔案 (許可權 P1A) 。 在執行時間遇到 F 中的需求時，會執行堆疊逐步解說，以檢查 F 的所有呼叫端的許可權，從 E. E 開始已被授與 P1A 許可權，因此堆疊逐步解說會繼續檢查 C 的許可權，其中會探索 C 的判斷提示。 因為需要的權限 (P1A) 是判斷提示權限 (P1) 的子集，堆疊查核行程會停止，且安全性檢查會自動成功。 組件 A 和 B 未被授與權限 P1A 並不重要。 藉由判斷提示 P1，C 方法可確保其呼叫者可以存取 P1 保護的資源，即使呼叫端未獲得存取該資源的權限亦然。  
   
  如果您設計類別程式庫，而類別會存取受保護的資源，在大部分情況下，您應該提出安全性需求，要求類別的呼叫端具有適當的權限。 如果類別接著執行您知道大部分呼叫端都沒有許可權的作業，而且您願意負責讓這些呼叫端呼叫您的程式碼，您可以在代表程式碼正在執行之作業的權限物件上呼叫**assert**方法，來判斷提示許可權。 以這種方式使用**Assert** ，可讓通常無法執行此動作的呼叫端呼叫您的程式碼。 因此，如果您判斷提示權限，便務必要先執行適當的安全性檢查，以防止您的元件遭到誤用。  
   
- 例如，假設您受高度信任的程式庫類別具有刪除檔案的方法。 它會藉由呼叫 Unmanaged 的 Win32 函式來存取檔案。 呼叫者叫用您程式碼的**Delete**方法，並傳入要刪除的檔案名，C:\Test.txt。 在**Delete**方法中，您的程式碼會建立 <xref:System.Security.Permissions.FileIOPermission> 代表 C:\Test.txt 之寫入存取的物件。 （需要有寫入權限才能刪除檔案）。您的程式碼接著會藉由呼叫**FileIOPermission**物件的**Demand**方法，叫用命令式安全性檢查。 如果呼叫堆疊中的其中一個呼叫端沒有這個權限，就會擲回 <xref:System.Security.SecurityException>。 如果未擲回任何例外狀況，您便知道所有呼叫端都擁有存取 C:\Test.txt 的權限。 因為您相信大部分的呼叫端都沒有存取非受控碼的許可權，您的程式碼接著會建立 <xref:System.Security.Permissions.SecurityPermission> 物件，代表呼叫非受控碼的許可權，並呼叫物件的**Assert**方法。 最後，它會呼叫 Unmanaged 的 Win32 函式，刪除 C:\Text.txt，並將控制權傳回給呼叫端。  
+ 例如，假設您受高度信任的程式庫類別具有刪除檔案的方法。 它會藉由呼叫 Unmanaged 的 Win32 函式來存取檔案。 呼叫者叫用您程式碼的**Delete**方法，並傳入要刪除的檔案名，C:\Test.txt。 在**Delete**方法中，您的程式碼會建立 <xref:System.Security.Permissions.FileIOPermission> 代表 C:\Test.txt 之寫入存取的物件。 需要 (寫入權限才能刪除檔案。 ) 您的程式碼，請呼叫**FileIOPermission**物件的**需求**方法，叫用命令式安全性檢查。 如果呼叫堆疊中的其中一個呼叫端沒有這個權限，就會擲回 <xref:System.Security.SecurityException>。 如果未擲回任何例外狀況，您便知道所有呼叫端都擁有存取 C:\Test.txt 的權限。 因為您相信大部分的呼叫端都沒有存取非受控碼的許可權，您的程式碼接著會建立 <xref:System.Security.Permissions.SecurityPermission> 物件，代表呼叫非受控碼的許可權，並呼叫物件的**Assert**方法。 最後，它會呼叫 Unmanaged 的 Win32 函式，刪除 C:\Text.txt，並將控制權傳回給呼叫端。  
   
 > [!CAUTION]
 > 您必須確定您的程式碼使用判斷提示時，不會是程式碼可以供其他程式碼用來存取由您正在判斷提示之權限所保護的資源的情況。 例如，在寫入檔案的程式碼中，呼叫者將其名稱指定為參數時，您不會判斷提示**FileIOPermission**寫入檔案，因為您的程式碼會開放給協力廠商誤用。  

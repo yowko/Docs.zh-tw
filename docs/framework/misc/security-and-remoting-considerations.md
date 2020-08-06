@@ -8,14 +8,17 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309361"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855708"
 ---
 # <a name="security-and-remoting-considerations"></a>安全性和遠端處理考量
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 遠端處理可讓您設定應用程式定義域、處理序或電腦之間的透明呼叫。 不過，程式碼存取安全性堆疊查核行程無法跨處理序或電腦界限 (只會在同一個處理序的不同應用程式定義域之間套用)。  
   
  所有可遠端處理的類別 (衍生自 <xref:System.MarshalByRefObject> 類別) 都必須確保安全。 程式碼應該只在可隱含信任呼叫端程式碼的封閉式環境中使用，或者遠端處理呼叫的設計方式，應該使受保護的程式碼不容易遭到惡意使用之外部項目的攻擊。  

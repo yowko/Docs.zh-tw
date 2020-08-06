@@ -1,5 +1,5 @@
 ---
-title: 安全性透明的程式碼，層級1
+title: 安全性透明的程式碼，層級 1
 description: 請參閱層級1透明度程式碼模型、透明度屬性和安全性透明度範例。
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -10,14 +10,15 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: c44fe3339f3bf24d266fa97487868ce090d51bb1
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 75cf38412f3ba21832c5e63898b10bcf681f5904
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309090"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855695"
 ---
-# <a name="security-transparent-code-level-1"></a>安全性透明的程式碼，層級1
+# <a name="security-transparent-code-level-1"></a>安全性透明的程式碼，層級 1
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  透明度可協助開發人員撰寫更安全的 .NET Framework 程式庫，該程式庫會向部分信任的程式碼公開功能。 層級 1 透明度是在 .NET Framework 2.0 版中所引入的，而且主要只在 Microsoft 中使用。 從 .NET Framework 4 開始，您可以使用[層級2透明度](security-transparent-code-level-2.md)。 不過，仍然保留層級 1 透明度，讓您可以識別必須以舊版安全性規則來執行的舊版程式碼。  

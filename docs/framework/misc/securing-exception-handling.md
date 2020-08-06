@@ -10,14 +10,17 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: c7643bb34da0cbcbd267fc90e6294bc0b565985e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309036"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855773"
 ---
 # <a name="securing-exception-handling"></a>設定例外狀況處理的安全性
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 在 Visual C++ 和 Visual Basic 中，堆疊進一步的篩選運算式會在任何語句之前執行 `finally` 。 與該篩選相關聯的**catch**區塊會在 `finally` 語句之後執行。 如需詳細資訊，請參閱[使用使用者篩選的例外](../../standard/exceptions/using-user-filtered-exception-handlers.md)狀況。 本節將探討此順序的安全性含意。 請考慮下列可說明篩選語句和語句執行順序的虛擬程式碼範例 `finally` 。  
   
 ```cpp  

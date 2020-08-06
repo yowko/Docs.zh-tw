@@ -8,14 +8,15 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: f448cbf55f3ad992ba9dcc53d5be70b364038744
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309374"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855747"
 ---
 # <a name="securing-wrapper-code"></a>設定包裝函式程式碼的安全性
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  包裝函式程式碼可能會導致出現一組獨特的安全性弱點，特別是當包裝函式的信任層級高於使用該包裝函式的程式碼時。 代表呼叫端執行任何作業時，由於適當的安全性檢查中不會包含呼叫端的限制權限，因此任何作業都有可能成為被惡意探索的弱點。  
@@ -72,7 +73,7 @@ ms.locfileid: "86309374"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand> 指定程式碼存取安全性堆疊查核行程。 堆疊上的所有呼叫端都必須具有指定的權限或識別，才能通過。 每次呼叫都會發生**需求**，因為堆疊可能包含不同的呼叫端。 如果您重複呼叫一個方法，則每呼叫一次就會執行這個安全性檢查一次。 **需求**是對引誘攻擊的良好保護;偵測到未經授權的程式碼，將會偵測到它的嘗試。  
   
-- [LinkDemand](link-demands.md)會在即時（JIT）編譯時期進行，並且只會檢查立即呼叫端。 這項安全性檢查不會檢查呼叫端的呼叫端。 一旦通過這項檢查，不論呼叫端可能呼叫的次數為何，都不會再增加額外的安全性負荷。 不過，這也無法防止引誘攻擊。 透過**LinkDemand**，通過測試並可以參考您程式碼的任何程式碼，都可以藉由允許惡意程式碼使用授權的程式碼呼叫來中斷安全性。 因此，除非可以徹底避免所有可能的弱點，否則請勿使用**LinkDemand** 。  
+- [LinkDemand](link-demands.md)會在即時 (JIT) 編譯時間進行，並且只會檢查立即呼叫端。 這項安全性檢查不會檢查呼叫端的呼叫端。 一旦通過這項檢查，不論呼叫端可能呼叫的次數為何，都不會再增加額外的安全性負荷。 不過，這也無法防止引誘攻擊。 透過**LinkDemand**，通過測試並可以參考您程式碼的任何程式碼，都可以藉由允許惡意程式碼使用授權的程式碼呼叫來中斷安全性。 因此，除非可以徹底避免所有可能的弱點，否則請勿使用**LinkDemand** 。  
   
     > [!NOTE]
     > 在 .NET Framework 4 中，連結要求已由 <xref:System.Security.SecurityCriticalAttribute> 元件中的屬性所取代 <xref:System.Security.SecurityRuleSet.Level2> 。 <xref:System.Security.SecurityCriticalAttribute>相當於完全信任的連結要求; 不過，它也會影響繼承規則。 如需這種變更的詳細資訊，請參閱[安全性透明程式碼，層級 2](security-transparent-code-level-2.md)。  
@@ -81,7 +82,7 @@ ms.locfileid: "86309374"
   
 - 限制呼叫的程式碼對類別或組件的存取。  
   
-- 對呼叫的程式碼，套用出現在所呼叫之程式碼上的相同安全性檢查，並強制其呼叫端執行這項作業。 例如，如果您撰寫的程式碼會呼叫以的**LinkDemand**保護的方法， <xref:System.Security.Permissions.SecurityPermission> 並使用指定的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 旗標，則您的方法也應該為此許可權建立**linkdemand** （或更強的**需求**）。 例外狀況是，如果您的程式碼以有限的方式使用受**LinkDemand**保護的方法，但您在程式碼中指定了其他安全性保護機制（例如要求），則會發生這種情況。 在這種例外狀況下，呼叫端會導致基礎程式碼的安全性保護變弱。  
+- 對呼叫的程式碼，套用出現在所呼叫之程式碼上的相同安全性檢查，並強制其呼叫端執行這項作業。 例如，如果您撰寫的程式碼會呼叫以的**linkdemand**來保護的方法， <xref:System.Security.Permissions.SecurityPermission> 並以指定的旗標，則您的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> 方法也應該 (或**需求**來建立一個**linkdemand** ，這對此許可權而言較強) 。 例外狀況是，如果您的程式碼以有限的方式使用受**LinkDemand**保護的方法，而您決定安全，則會提供其他安全性保護機制， (例如程式碼中) 的需求。 在這種例外狀況下，呼叫端會導致基礎程式碼的安全性保護變弱。  
   
 - 確保您程式碼的呼叫端無法引誘您的程式碼代表呼叫端呼叫受保護的程式碼。 換句話說，呼叫端無法強制授權程式碼將特定參數傳遞給受保護的程式碼，或從中傳回結果。  
   

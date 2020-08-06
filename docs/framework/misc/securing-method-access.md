@@ -11,25 +11,26 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: a7ef419cf3959cf7a3ffde874353dacd3815c81a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 88868ab29fc37854959a044b9c0fed5bd8c82d77
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309387"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855760"
 ---
 # <a name="securing-method-access"></a>設定方法存取的安全性
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  有些方法可能不適合讓未受信任的任意程式碼呼叫。 這類方法會造成一些風險：方法可能會提供一些受限制的資訊；它可能會認定傳遞給它的任何資訊；它可能不會對參數執行錯誤檢查；它可能會因錯誤的參數發生問題或執行有害的動作。 您應該留意這些情況，並採取動作來協助保護方法。  
   
- 在某些情況下，您可能需要限制不提供公用用途但仍必須是公用的方法。 例如，您可能會需要有跨您自己的 Dll 呼叫的介面，因此它必須是公用的，但為了防止客戶使用它，或惡意程式碼利用進入點進入您的元件，所以您不想將它公開。 另一個常見的原因是限制不適合公開使用的方法（但必須是公用的），以避免必須記載並支援可能是內部介面的方式。  
+ 在某些情況下，您可能需要限制不提供公用用途但仍必須是公用的方法。 例如，您可能會需要有跨您自己的 Dll 呼叫的介面，因此它必須是公用的，但為了防止客戶使用它，或惡意程式碼利用進入點進入您的元件，所以您不想將它公開。 另一個常見的原因是限制不適合公開使用的方法 (但必須是公用) ，以免需要記載並支援可能是內部介面的功能。  
   
  Managed 程式碼提供數種方式以限制方法存取：  
   
 - 限制類別、 組件、 或衍生類別的存取範圍，如果其可以信任。 這是最簡單限制方法存取權的方式。 一般來說，衍生類別可能會比它們衍生自的類別更值得信任，不過在某些情況下，它們會共用父類別的身分識別。 特別的是，請勿從關鍵字推斷信任 `protected` ，這不一定會用於安全性內容中。  
   
-- 限制方法存取指定身分識別的呼叫者，基本上是您選擇的任何[特定辨識](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)項（強式名稱、發行者、區域等等）。  
+- 限制方法存取指定身分識別的呼叫端--基本上，[任何特定辨識](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)項 (強式名稱、發行者、區域等等，) 您選擇的。  
   
 - 限制具有您選取權限之呼叫端的方法存取權。  
   
@@ -233,9 +234,9 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Virtual Internal 覆寫或 Overloads Overridable Friend  
   
 > [!NOTE]
-> 這一節會在將方法同時宣告為和時發出安全性問題 `virtual` `internal` （ `Overloads` `Overridable` `Friend` Visual Basic）。 此警告僅適用于 .NET Framework 版本1.0 和1.1，不適用於較新的版本。  
+> 本節會在 `virtual` `internal` `Overloads` `Overridable` `Friend` Visual Basic) 中同時將方法宣告為和 (時，提出安全性問題的警告。 此警告僅適用于 .NET Framework 版本1.0 和1.1，不適用於較新的版本。  
   
- 在 .NET Framework 版本1.0 和1.1 中，當您確認程式碼無法供其他元件使用時，您必須留意類型系統協助工具的細微之處。 宣告為**虛擬**和**內部**的方法（Visual Basic 中的多載可覆**寫 Friend** ）可以覆寫父類別的 vtable 專案，而且只能從相同的元件內使用，因為它是內部的。 不過，覆寫的存取範圍是由**virtual**關鍵字決定，而且只要該程式碼可存取類別本身，就可以從另一個元件覆寫。 如果覆寫的可能性出現問題，請使用宣告式安全性來加以修正，或移除不是絕對必要的**虛擬**關鍵字。  
+ 在 .NET Framework 版本1.0 和1.1 中，當您確認程式碼無法供其他元件使用時，您必須留意類型系統協助工具的細微之處。 在 Visual Basic 中宣告為**虛擬**和**內部** (多載可覆**寫 Friend**的方法) 可以覆寫父類別的 vtable 專案，而且只能從相同的元件內使用，因為它是內部的。 不過，覆寫的存取範圍是由**virtual**關鍵字決定，而且只要該程式碼可存取類別本身，就可以從另一個元件覆寫。 如果覆寫的可能性出現問題，請使用宣告式安全性來加以修正，或移除不是絕對必要的**虛擬**關鍵字。  
   
  即使語言編譯器會防止這些覆寫發生編譯錯誤，但使用其他編譯器撰寫的程式碼也可能會覆寫。  
   
