@@ -1,23 +1,23 @@
 ### YamlMime:Landing
 title: ML.NET 文件
-summary: 瞭解如何使用開源ML.NET構建自訂機器學習模型並將其集成到應用中。 教程、代碼示例等將向您展示如何。
+summary: 瞭解如何使用開放原始碼 ML.NET 來建立自訂機器學習模型，並將其整合到應用程式中。 教學課程、程式碼範例和其他說明如何操作。
 metadata:
   title: ML.NET 文件 - 教學課程、API 參考
-  description: 瞭解如何使用開源ML.NET構建自訂機器學習模型並將其集成到應用中。 教程、代碼示例等將向您展示如何。
+  description: 瞭解如何使用開放原始碼 ML.NET 來建立自訂機器學習模型，並將其整合到應用程式中。 教學課程、程式碼範例和其他說明如何操作。
   ms.prod: dotnet-ml
   ms.topic: landing-page
   ms.collection: collection
   author: natke
   ms.author: nakersha
   ms.date: 10/30/2019
-  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: da93d48dc36123f8821be37c8c0546b84ab29712
+  ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "73423945"
+  ms.lasthandoff: 08/05/2020
+  ms.locfileid: "87795485"
 landingContent:
-- title: ML.NET 基礎知識
+- title: ML.NET 基本概念
   linkLists:
   - linkListType: overview
     links:
@@ -29,7 +29,7 @@ landingContent:
       url: https://channel9.msdn.com/Series/MLNET/MLNET-Machine-Learning-Introduction-1-of-8
   - linkListType: concept
     links:
-    - text: 機器學習任務&演算法
+    - text: 機器學習工作 & 演算法
       url: resources/tasks.md
     - text: 如何選擇演算法
       url: how-to-choose-an-ml-net-algorithm.md
@@ -37,49 +37,49 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: 在視覺化工作室中設置模型產生器
-      url: how-to-guides/install-model-builder.md
-    - text: 開始使用ML.NET API
+    - text: '開始使用 ML.NET API (程式碼優先) '
       url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
-    - text: 在 Mac 作業系統、Windows 或 Linux 上安裝 CLI
+    - text: '在 Visual Studio 中設定模型產生器 (低程式碼) '
+      url: how-to-guides/install-model-builder.md
+    - text: '在 macOS、Windows 或 Linux 上安裝 CLI (低程式碼) '
       url: how-to-guides/install-ml-net-cli.md
 - title: 教學課程
   linkLists:
   - linkListType: tutorial
     links:
-    - text: 分析網站評論情緒（模型構建者）
+    - text: '分析網站批註情感 (模型產生器) '
       url: tutorials/sentiment-analysis-model-builder.md
-    - text: 預測價格（模型產生器）
+    - text: 預測 (模型產生器) 的價格
       url: tutorials/predict-prices-with-model-builder.md
-    - text: 對運行狀況違規進行分類（模型產生器& SQL 伺服器）
+    - text: '將健全狀況違規分類 (模型產生器 & SQL Server) '
       url: tutorials/health-violation-classification-model-builder.md
-    - text: 分類支援問題 （API）
+    - text: " (API) 將支援問題分類"
       url: tutorials/github-issue-classification.md
-    - text: 使用圖像分類 API （API） 對圖像進行分類
+    - text: '使用影像分類 API 將影像分類 (API) '
       url: tutorials/image-classification-api-transfer-learning.md
-    - text: 使用模型合成 （API） 對圖像進行分類
+    - text: 使用模型組合 (API) 分類影像
       url: tutorials/image-classification.md
-    - text: 檢測圖像中的物件 （API）
+    - text: '偵測影像中的物件 (API) '
       url: tutorials/object-detection-onnx.md
-    - text: 檢測產品銷售異常 （API）
+    - text: 偵測產品銷售 (API) 中的異常
       url: tutorials/sales-anomaly-detection.md
-    - text: 預測自行車租賃需求（API & SQL 伺服器）
+    - text: " (API & SQL Server) 的預測自行車出租需求"
       url: tutorials/time-series-demand-forecasting.md
-    - text: 構建電影推薦人 （API）
+    - text: " (API 建立電影推薦) "
       url: tutorials/movie-recommendation.md
 - title: 操作指南
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 載入來自不同源的資料
+    - text: 從各種來源載入資料
       url: how-to-guides/load-data-ml-net.md
     - text: 準備資料以建置模型
       url: how-to-guides/prepare-data-ml-net.md
-    - text: 培訓&評估模型
+    - text: 訓練 & 評估模型
       url: how-to-guides/train-machine-learning-model-ml-net.md
     - text: 使用定型的模型預測
       url: how-to-guides/machine-learning-model-predictions-ml-net.md
-    - text: 保存&載入經過訓練的模型
+    - text: 儲存 & 載入定型的模型
       url: how-to-guides/save-load-machine-learning-models-ml-net.md
     - text: 重新定型模型
       url: how-to-guides/retrain-model-ml-net.md
@@ -89,5 +89,5 @@ landingContent:
     links:
     - text: ML.NET API 參考
       url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
-    - text: ML.NET樣品
+    - text: ML.NET 範例
       url: https://github.com/dotnet/machinelearning-samples
