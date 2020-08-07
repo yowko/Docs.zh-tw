@@ -1,20 +1,20 @@
 ---
 title: 事件
-description: 瞭解事件F#如何讓函式呼叫與使用者動作產生關聯，這在 GUI 程式設計中很重要。
+description: '瞭解 F # 事件如何讓函式呼叫與使用者動作產生關聯，這在 GUI 程式設計中很重要。'
 ms.date: 05/16/2016
-ms.openlocfilehash: ad60aff318832ab3ba5e9f7c43928898e171cea8
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 682686ba58d0f7a56e7da2585e6507ccd0156a44
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543621"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854928"
 ---
 # <a name="events"></a>事件
 
-> [!NOTE]
-> 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
-
 事件可讓您產生函式呼叫與使用者動作的關聯，而且對 GUI 程式設計而言十分重要。 事件也可以由應用程式或作業系統觸發。
+
+> [!NOTE]
+> F # 的 docs.microsoft.com API 參考不完整。 如果您遇到任何中斷的連結，請改為參考[F # 核心程式庫檔](https://fsharp.github.io/fsharp-core-docs/)。
 
 ## <a name="handling-events"></a>處理事件
 
@@ -28,7 +28,7 @@ ms.locfileid: "77543621"
 
 ## <a name="creating-custom-events"></a>建立自訂事件
 
-F#事件是由F# [事件](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)類別表示，而此類別會執行[IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)介面。 `IEvent` 本身是結合兩個其他介面（`System.IObservable<'T>` 和[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)）功能的介面。 因此，`Event` 具有相當於其他語言中委派的功能，加上來自 `IObservable` 的額外功能，這表示 F# 事件支援事件篩選，以及使用 F# 第一級函式和 Lambda 運算式做為事件處理常式。 此功能是在[事件模組](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)中提供。
+F # 事件是以 F #[事件](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)類別表示，它會執行[IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)介面。 `IEvent`本身就是結合兩個其他介面和 IDelegateEvent 之功能的 `System.IObservable<'T>` 介面[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)。 因此，`Event` 具有相當於其他語言中委派的功能，加上來自 `IObservable` 的額外功能，這表示 F# 事件支援事件篩選，以及使用 F# 第一級函式和 Lambda 運算式做為事件處理常式。 此功能是在[事件模組](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)中提供。
 
 若要在類別上建立其運作方式與任何其他 .NET Framework 事件類似的事件，請將 `let` 繫結 (將 `Event` 定義為類別中的欄位) 加入至類別。 您可以指定所需的事件引數類型做為型別引數，或是空過，讓編譯器推斷適當類型。 您也必須定義將事件公開為 CLI 事件的事件成員。 這個成員應具有[CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333)屬性。 其宣告方式就像屬性，而其實作為呼叫事件的[Publish](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e)屬性。 您類別的使用者可以使用已發行事件的 `Add` 方法加入處理常式。 `Add` 方法的引數可以是 Lambda 運算式。 您可以使用事件的 `Trigger` 屬性引發事件，將引數傳遞至處理函式。 下列程式碼範例會說明這點。 在此範例中，推斷的事件類型引數是 Tuple，代表 Lambda 運算式的引數。
 
@@ -53,7 +53,7 @@ Given a value: Event occurred.
 
 ## <a name="processing-event-streams"></a>處理事件資料流
 
-您可以使用 `Event` 模組中的函數，以高度自訂的方式來處理事件的資料流程，而不只是使用[add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd)函式來新增事件的事件處理常式。 若要這麼做，請使用正向管道 (`|>`) 與事件做為一連串函式呼叫中的第一個值，並且使用 `Event` 模組函式做為後續函式呼叫。
+您可以使用模組中的函數， [Event.add](https://msdn.microsoft.com/library/10670d3b-8d47-4f6e-b8df-ebc6f64ef4fd) `Event` 以高度自訂的方式來處理事件的資料流程，而不只是使用 add 函式來新增事件的事件處理常式。 若要這麼做，請使用正向管道 (`|>`) 與事件做為一連串函式呼叫中的第一個值，並且使用 `Event` 模組函式做為後續函式呼叫。
 
 下列程式碼範例顯示如何設定只在特定條件下才會呼叫其處理常式的事件。
 
@@ -180,5 +180,5 @@ Application.Run(appForm)
 - [處理和引發事件](../../../standard/events/index.md)
 - [Lambda 運算式： `fun` 關鍵字](../functions/lambda-expressions-the-fun-keyword.md)
 - [控制事件模組](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
-- [Control。事件&#60;t&#62;類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
-- [控制項。事件&#60;' Delegate，' Args&#62;類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+- [控制項。事件&#60; 不&#62; 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
+- [控制項。事件&#60; ' Delegate，' Args&#62; 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

@@ -2,19 +2,18 @@
 title: 查詢運算式
 description: '瞭解 F # 程式設計語言中的 LINQ 查詢運算式支援。'
 ms.date: 05/16/2016
-ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419183"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855032"
 ---
 # <a name="query-expressions"></a>查詢運算式
 
-> [!NOTE]
-> 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
-
 查詢運算式可讓您查詢資料來源，並將資料放入所需的表單中。 查詢運算式會在 F # 中提供 LINQ 的支援。
+> [!NOTE]
+> F # 的 docs.microsoft.com API 參考不完整。 如果您遇到任何中斷的連結，請改為參考[F # 核心程式庫檔](https://fsharp.github.io/fsharp-core-docs/)。
 
 ## <a name="syntax"></a>語法
 
@@ -56,7 +55,7 @@ query1
 
 查詢運算式中只允許可轉譯為 SQL 的運算式。 例如，當您使用查詢運算子時，運算式中不允許有函式呼叫 `where` 。
 
-[表 1] 顯示可用的查詢運算子。 此外，請參閱 Table2，這會比較 SQL 查詢和本主題稍後的對等 F # 查詢運算式。 某些類型提供者不支援某些查詢運算子。 特別的是，OData 型別提供者在支援的查詢運算子中受到限制，因為 OData 的限制。 如需詳細資訊，請參閱[Odataservice 型類型提供者（F #）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
+[表 1] 顯示可用的查詢運算子。 此外，請參閱 Table2，這會比較 SQL 查詢和本主題稍後的對等 F # 查詢運算式。 某些類型提供者不支援某些查詢運算子。 特別的是，OData 型別提供者在支援的查詢運算子中受到限制，因為 OData 的限制。 如需詳細資訊，請參閱[Odataservice 型 Type Provider (F # ) ](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
 
 下表假設資料庫的格式如下：
 
@@ -84,7 +83,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 <table style="width:100%">
   <tr>
     <th>運算子</th>
-    <th>說明</th>
+    <th>描述</th>
   </tr>
   <tr>
   <td><code>contains</code></td>
@@ -506,8 +505,8 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 <table style="width:100%">
   <tr>
-    <th>Transact-sql （不區分大小寫）</th>
-    <th>F # 查詢運算式（區分大小寫）</th>
+    <th>Transact-sql (不區分大小寫) </th>
+    <th>F # 查詢運算式 (區分大小寫) </th>
   </tr>
 <tr><td>
 選取資料表中的所有欄位。<br>

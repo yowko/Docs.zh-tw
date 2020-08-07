@@ -2,12 +2,12 @@
 title: 互動式選項
 description: '瞭解 F # Interactive 支援的命令列選項 fsi.exe。'
 ms.date: 07/22/2020
-ms.openlocfilehash: f9932cac24fad187c332306968fb13981912e80a
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795459"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855344"
 ---
 # <a name="f-interactive-options"></a>F # Interactive 選項
 
@@ -25,13 +25,13 @@ F # 指令檔的副檔名為 `.fsx` 。
 
 ## <a name="table-of-f-interactive-options"></a>F # Interactive 選項的表格
 
-下表摘要說明 F # Interactive 支援的選項。 您可以在命令列上或透過 Visual Studio IDE 來設定這些選項。 若要在 Visual Studio IDE 中設定這些選項，請開啟 [**工具**] 功能表，選取 [**選項 ...**]，然後展開 [ **f # 工具**] 節點並選取 [ **f # Interactive**]。
+下表摘要說明 F # Interactive 支援的選項。 您可以在命令列上或透過 Visual Studio IDE 來設定這些選項。 若要在 Visual Studio IDE 中設定這些選項，請開啟 [**工具**] 功能表，選取 [**選項**]，展開 [ **f # 工具**] 節點，然後選取 [ **F # Interactive**]。
 
 其中清單會出現在 F # Interactive 選項引數中，list 元素會以分號分隔 (`;`) 。
 
 |選項|描述|
 |------|-----------|
-|**--**|用來指示 F # Interactive 將其餘引數視為 F # 程式或腳本的命令列引數，您可以使用清單**fsi.exe. my.application.commandlineargs**，在程式碼中存取此參數。|
+|**--**|用來指示 F # Interactive 將其餘引數視為 F # 程式或腳本的命令列引數，您可以使用清單**fsi.exe. my.application.commandlineargs**，在程式碼中存取。|
 |**--已**核取 [ **+**&#124;**-** ]|與**fsc.exe**編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--字碼頁： &lt; int&gt;**|與**fsc.exe**編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--consolecolors**[ **+**&#124;**-** ]|以色彩輸出警告和錯誤訊息。|
@@ -56,7 +56,7 @@ F # 指令檔的副檔名為 `.fsx` 。
 |**--readline**[ **+**&#124;**-** ]|在互動模式中啟用或停用 tab 鍵自動完成。|
 |**--reference： &lt; filename&gt;**<br /><br />**-r： &lt; filename&gt;**|與**fsc.exe**編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--tailcalls**[ **+**&#124;**-** ]|啟用或停用 tail IL 指令，這會使堆疊框架重複用於尾遞迴函式。 這個選項預設為啟用。|
-|**--targetprofile： &lt; 字串&gt;**|指定這個元件的目標 framework 設定檔。 有效值為 mscorlib、netcore 或 netstandard。  預設值為 mscorlib。|
+|**--targetprofile： &lt; 字串&gt;**|指定這個元件的目標 framework 設定檔。 有效值為 `mscorlib`、`netcore` 或 `netstandard`。 預設為 `mscorlib`。|
 |**--使用： &lt; filename&gt;**|指示解譯器在啟動時使用指定的檔案做為初始輸入。|
 |**--utf8output**|與 fsc.exe 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--警告： &lt; 警告層級&gt;**|與**fsc.exe**編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|

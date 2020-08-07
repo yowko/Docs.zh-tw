@@ -2,12 +2,12 @@
 title: 純文字格式
 description: '瞭解如何在 F # 應用程式和腳本中使用 printf 和其他純文字格式。'
 ms.date: 07/22/2020
-ms.openlocfilehash: a0f2c52431be894c4f74dd2940345a518f620589
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795743"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854915"
 ---
 # <a name="plain-text-formatting"></a>純文字格式
 
@@ -81,15 +81,15 @@ stdin(3,25): error FS0001: The type 'string' does not match the type 'int'
 | `%f`               | 基本浮點類型 | 格式化為具有格式的帶正負號值 `[-]dddd.dddd` ，其中 `dddd` 是一或多個十進位數。 小數點前面的位數取決於數字的大小，小數點後面的位數則取決於要求的精確度。 |
 | `%g`, `%G` | 基本浮點類型 |  使用當做以或格式列印的帶正負號值進行格式化，以較 `%f` `%e` 精簡的指定值和有效位數為准。 |
 | `%M` | `System.Decimal`值  |    使用的 `"G"` 格式標準格式化`System.Decimal.ToString(format)` |
-| `%O` | 任何值  |   藉由將物件裝箱並 valling 其方法來進行格式化 `System.Object.ToString()` |
+| `%O` | 任何值  |   藉由將物件裝箱並呼叫其方法來進行格式化 `System.Object.ToString()` |
 | `%A` | 任何值  |   使用預設版面配置設定，以[結構化純文字格式](plaintext-formatting.md)格式化 |
-| `%a` | 任何值  |   需要兩個引數-格式函數接受內容參數和值，以及要列印的特定值 |
-| `%t` | 任何值  |   需要一個引數，格式函式會接受內容參數，以輸出或傳回適當的文字。 |
+| `%a` | 任何值  |   需要兩個引數：格式函數接受內容參數和值，以及要列印的特定值 |
+| `%t` | 任何值  |   需要一個引數：格式化函數接受內容參數，以輸出或傳回適當的文字 |
 
 基本整數類型 `byte` (`System.Byte`) 、 `sbyte` (`System.SByte`) 、 `int16` (`System.Int16`) 、 `uint16` (`System.UInt16`) 、 `int32` (`System.Int32`) 、 `uint32` (`System.UInt32`) 、 `int64` (`System.Int64`) 、 `uint64` (`System.UInt64`) 、 `nativeint` (`System.IntPtr`) 和 () `unativeint` `System.UIntPtr` 。
 基本浮點類型 `float` (`System.Double`) 和 `float32` (`System.Single`) 。
 
-選擇性寬度是一個整數，表示結果的最小寬度。 例如， `%6d` 會列印一個整數，並在前面加上空格，以填補至少6個字元。 如果 width 為 `*` ，則會採用額外的整數引數來指定對應的寬度。
+選擇性寬度是一個整數，表示結果的最小寬度。 例如， `%6d` 會列印一個整數，並在前面加上空格，以填滿至少六個字元。 如果 width 為 `*` ，則會採用額外的整數引數來指定對應的寬度。
 
 有效的旗標如下：
 
@@ -161,7 +161,7 @@ Culture 2: 12/31/1999 12:00:00 AM
 
 ### <a name="structured-values"></a>結構化值
 
-使用規範來格式化純文字時 `%A` ，區塊縮排會用於 F # 清單和元組。 如上一個範例所示。
+使用規範來格式化純文字時 `%A` ，區塊縮排會用於 F # 清單和元組。 如先前範例所示。
 陣列的結構也會使用，包括多維度陣列。  一維陣列會以語法顯示 `[| ... |]` 。 例如
 
 ```fsharp
@@ -200,12 +200,12 @@ printfn "%50A" [| for i in 1 .. 5 -> (i, i*i) |]
 [|(1, 1); (2, 4); (3, 9); (4, 16); (5, 25)|]
 ```
 
-將列印寬度指定為0會導致不使用列印寬度。 會產生單行文字，但輸出中的內嵌字串本身會包含分行符號。  例如：
+將列印寬度指定為0會導致不使用列印寬度。 除了輸出中的內嵌字串包含分行符號以外，會產生一行文字。  例如：
 
 ```fsharp
 printfn "%0A" [| for i in 1 .. 5 -> (i, i*i) |]
 
-printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef |]
+printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef" |]
 ```
 
 塊
@@ -318,7 +318,7 @@ printfn "%A" r
 
 當尚未評估值時，延遲值會列印成 `Value is not created` 或對等的文字。
 
-Null 值會列印成， `null` 除非將值的靜態類型判斷為可允許表示的聯集類型 `null` 。
+Null 值會列印成， `null` 除非將值的靜態類型判斷為 `null` 允許標記法的聯集類型。
 
 F # 函式值會列印為其內部產生的關閉名稱，例如 `<fun:it@43-7>` 。
 
