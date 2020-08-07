@@ -16,19 +16,19 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: aa6fad815338cbd6316deca7be0a23286630fa56
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9c04d1ea4d7e7ee46d875b3fa791f3eee2059e52
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556289"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854720"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>將非對稱金鑰儲存在金鑰容器中
 
 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，請使用金鑰容器。 如需金鑰容器的詳細資訊，請參閱[瞭解電腦層級和使用者層級的 RSA 金鑰容器](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))。
 
 > [!NOTE]
-> 本文中的程式碼適用于 Windows。
+> 本文中的程式碼適用于 Windows，並使用 .NET Core 2.2 和更早版本中未提供的功能。 如需詳細資訊，請參閱[dotnet/runtime # 23391](https://github.com/dotnet/runtime/issues/23391)。
 
 ## <a name="create-an-asymmetric-key-and-save-it-in-a-key-container"></a>建立非對稱金鑰，並將它儲存在金鑰容器中
 
