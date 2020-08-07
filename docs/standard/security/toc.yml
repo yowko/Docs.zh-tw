@@ -38,8 +38,6 @@
           href: cryptographic-signatures.md
         - name: 使用雜湊程式碼確定資料完整性
           href: ensuring-data-integrity-with-hash-codes.md
-        - name: 建立密碼編譯配置
-          href: creating-a-cryptographic-scheme.md
         - name: 作法：使用對稱金鑰加密 XML 元素
           href: how-to-encrypt-xml-elements-with-symmetric-keys.md
         - name: 作法：使用對稱金鑰解密 XML 元素
