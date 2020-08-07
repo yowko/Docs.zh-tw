@@ -1,227 +1,434 @@
 ---
-title: 建置以 Linux 容器部署到 AKS/Kubernetes 叢集的 ASP.NET Core 2.2 應用程式
+title: 將部署為 Linux 容器 ASP.NET Core 應用程式組建到 AKS/Kubernetes 叢集
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
-ms.date: 02/25/2019
-ms.openlocfilehash: 83d4d0a60db4bdc112bb35bfbf61c0396646ad31
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/06/2020
+ms.openlocfilehash: 4b04e5d56c73918c665ad6e2825205870aac9606
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989021"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916301"
 ---
-# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a><span data-ttu-id="406bf-103">建置以 Linux 容器部署到 AKS/Kubernetes 協調器的 ASP.NET Core 2.2 應用程式</span><span class="sxs-lookup"><span data-stu-id="406bf-103">Build ASP.NET Core 2.2 applications deployed as Linux containers into an AKS/Kubernetes orchestrator</span></span>
+# <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a><span data-ttu-id="5ea45-103">將部署為 Linux 容器 ASP.NET Core 應用程式組建到 AKS/Kubernetes orchestrator</span><span class="sxs-lookup"><span data-stu-id="5ea45-103">Build ASP.NET Core applications deployed as Linux containers into an AKS/Kubernetes orchestrator</span></span>
 
-<span data-ttu-id="406bf-104">Azure Kubernetes Service (AKS) 是 Azure 的受控 Kubernetes 協調流程服務，可簡化容器部署和管理。</span><span class="sxs-lookup"><span data-stu-id="406bf-104">Azure Kubernetes Services (AKS) is Azure's managed Kubernetes orchestrations services that simplify container deployment and management.</span></span>
+<span data-ttu-id="5ea45-104">Azure Kubernetes Service (AKS) 是 Azure 的受控 Kubernetes 協調流程服務，可簡化容器部署和管理。</span><span class="sxs-lookup"><span data-stu-id="5ea45-104">Azure Kubernetes Services (AKS) is Azure's managed Kubernetes orchestrations services that simplify container deployment and management.</span></span>
 
-<span data-ttu-id="406bf-105">AKS 的主要功能包括：</span><span class="sxs-lookup"><span data-stu-id="406bf-105">AKS main features are:</span></span>
+<span data-ttu-id="5ea45-105">AKS 的主要功能包括：</span><span class="sxs-lookup"><span data-stu-id="5ea45-105">AKS main features are:</span></span>
 
-- <span data-ttu-id="406bf-106">Azure 裝載的控制平面</span><span class="sxs-lookup"><span data-stu-id="406bf-106">An Azure-hosted control plane</span></span>
-- <span data-ttu-id="406bf-107">自動升級</span><span class="sxs-lookup"><span data-stu-id="406bf-107">Automated upgrades</span></span>
-- <span data-ttu-id="406bf-108">自我修復</span><span class="sxs-lookup"><span data-stu-id="406bf-108">Self-healing</span></span>
-- <span data-ttu-id="406bf-109">可由使用者設定的調整大小功能</span><span class="sxs-lookup"><span data-stu-id="406bf-109">User configurable scaling</span></span>
-- <span data-ttu-id="406bf-110">對開發人員和叢集操作員更簡單的使用者體驗。</span><span class="sxs-lookup"><span data-stu-id="406bf-110">A simpler user experience for both developers and cluster operators.</span></span>
+- <span data-ttu-id="5ea45-106">Azure 裝載的控制平面</span><span class="sxs-lookup"><span data-stu-id="5ea45-106">An Azure-hosted control plane</span></span>
+- <span data-ttu-id="5ea45-107">自動升級</span><span class="sxs-lookup"><span data-stu-id="5ea45-107">Automated upgrades</span></span>
+- <span data-ttu-id="5ea45-108">自我修復</span><span class="sxs-lookup"><span data-stu-id="5ea45-108">Self-healing</span></span>
+- <span data-ttu-id="5ea45-109">使用者可設定的調整</span><span class="sxs-lookup"><span data-stu-id="5ea45-109">User-configurable scaling</span></span>
+- <span data-ttu-id="5ea45-110">為開發人員和叢集操作員提供更簡單的使用者體驗。</span><span class="sxs-lookup"><span data-stu-id="5ea45-110">Simpler user experience for both developers and cluster operators.</span></span>
 
-<span data-ttu-id="406bf-111">下列範例探索如何建立在 Linux 上執行並部署到 Azure 中 AKS 叢集的 ASP.NET Core 2.2 應用程式，同時使用 Visual Studio 2017 進行開發。</span><span class="sxs-lookup"><span data-stu-id="406bf-111">The following examples explore the creation of an ASP.NET Core 2.2 application that runs on Linux and deploys to an AKS Cluster in Azure, while development is done using Visual Studio 2017.</span></span>
+<span data-ttu-id="5ea45-111">下列範例會探索如何建立在 Linux 上執行的 ASP.NET Core 3.1 應用程式，並部署至 Azure 中的 AKS 叢集，而使用 Visual Studio 2019 進行開發。</span><span class="sxs-lookup"><span data-stu-id="5ea45-111">The following examples explore the creation of an ASP.NET Core 3.1 application that runs on Linux and deploys to an AKS Cluster in Azure, while development is done using Visual Studio 2019.</span></span>
 
-## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a><span data-ttu-id="406bf-112">使用 Visual Studio 2017 建立 ASP.NET Core 2.2 專案</span><span class="sxs-lookup"><span data-stu-id="406bf-112">Creating the ASP.NET Core 2.2 Project using Visual Studio 2017</span></span>
+## <a name="creating-the-aspnet-core-project-using-visual-studio-2019"></a><span data-ttu-id="5ea45-112">使用 Visual Studio 2019 建立 ASP.NET Core 專案</span><span class="sxs-lookup"><span data-stu-id="5ea45-112">Creating the ASP.NET Core Project using Visual Studio 2019</span></span>
 
-<span data-ttu-id="406bf-113">ASP.NET Core 是一般用途的開發平台，由 Microsoft 和 GitHub 上的 .NET 社群共同維護。</span><span class="sxs-lookup"><span data-stu-id="406bf-113">ASP.NET Core is a general-purpose development platform maintained by Microsoft and the .NET community on GitHub.</span></span> <span data-ttu-id="406bf-114">它可以跨平台支援 Windows、macOS 及 Linux，並可用於裝置、雲端和內嵌式系統/IoT 等應用情節。</span><span class="sxs-lookup"><span data-stu-id="406bf-114">It's cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.</span></span>
+<span data-ttu-id="5ea45-113">ASP.NET Core 是一般用途的開發平台，由 Microsoft 和 GitHub 上的 .NET 社群共同維護。</span><span class="sxs-lookup"><span data-stu-id="5ea45-113">ASP.NET Core is a general-purpose development platform maintained by Microsoft and the .NET community on GitHub.</span></span> <span data-ttu-id="5ea45-114">它可以跨平台支援 Windows、macOS 及 Linux，並可用於裝置、雲端和內嵌式系統/IoT 等應用情節。</span><span class="sxs-lookup"><span data-stu-id="5ea45-114">It's cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.</span></span>
 
-<span data-ttu-id="406bf-115">此範例使用以 Visual Studio Web API 範本為基礎的簡單專案，因此您不需要任何額外的知識來建立範例。</span><span class="sxs-lookup"><span data-stu-id="406bf-115">This example uses a simple project that's based on a Visual Studio Web API template, so you don't need any additional knowledge to create the sample.</span></span> <span data-ttu-id="406bf-116">您只需要使用一個標準範本來建立專案，該範本採用 ASP.NET Core 2.2 技術，內含可透過 REST API 執行小型專案的所有項目。</span><span class="sxs-lookup"><span data-stu-id="406bf-116">You only have to create the project using a standard template that includes all the elements to run a small project with a REST API, using ASP.NET Core 2.2 technology.</span></span>
+<span data-ttu-id="5ea45-115">這個範例會使用以 Visual Studio 範本為基礎的幾個簡單專案，因此您不需要額外的知識來建立範例。</span><span class="sxs-lookup"><span data-stu-id="5ea45-115">This example uses a couple of simple projects based on Visual Studio templates, so you don't need much additional knowledge to create the sample.</span></span> <span data-ttu-id="5ea45-116">您只需要使用包含所有元素的標準範本來建立專案，即可使用 REST API 和使用 Razor 頁面的 Web 應用程式來執行小型專案，並使用 ASP.NET Core 3.1 技術。</span><span class="sxs-lookup"><span data-stu-id="5ea45-116">You only have to create the project using a standard template that includes all the elements to run a small project with a REST API and a Web App with Razor pages, using ASP.NET Core 3.1 technology.</span></span>
 
-![在 Visual Studio 中新增專案視窗，並選取 ASP.NET Core Web 應用程式。](media/create-aspnet-core-application.png)
+![在 Visual Studio 中新增專案視窗，並選取 ASP.NET Core Web 應用程式。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-aspnet-core-application.png)
 
-<span data-ttu-id="406bf-118">**圖 4-36**.</span><span class="sxs-lookup"><span data-stu-id="406bf-118">**Figure 4-36**.</span></span> <span data-ttu-id="406bf-119">建立 ASP.NET Core 應用程式</span><span class="sxs-lookup"><span data-stu-id="406bf-119">Creating ASP.NET Core Application</span></span>
+<span data-ttu-id="5ea45-118">**圖 4-35**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-118">**Figure 4-35**.</span></span> <span data-ttu-id="5ea45-119">在 Visual Studio 2019 中建立 ASP.NET Core Web 應用程式。</span><span class="sxs-lookup"><span data-stu-id="5ea45-119">Creating an ASP.NET Core Web Application in Visual Studio 2019.</span></span>
 
-<span data-ttu-id="406bf-120">您可以在 Visual Studio 建立範例**專案**,請選擇 **「檔案** > **新專案** > 」,在左邊窗格中選擇**Web**專案類型,然後**選擇 ASP.NET 核心 Web 應用程式**。</span><span class="sxs-lookup"><span data-stu-id="406bf-120">To create the sample project in Visual Studio, select **File** > **New** > **Project**, select the **Web** project types in the left pane, followed by **ASP.NET Core Web Application**.</span></span>
+<span data-ttu-id="5ea45-120">若要在 Visual Studio 中建立範例專案，**請選取**  >  [檔案] [**新增**  >  **專案**]，選取 [ **web** ] 專案類型，然後選取 [ **ASP.NET Core web 應用程式**] 範本。</span><span class="sxs-lookup"><span data-stu-id="5ea45-120">To create the sample project in Visual Studio, select **File** > **New** > **Project**, select the **Web** project type and then the **ASP.NET Core Web Application** template.</span></span> <span data-ttu-id="5ea45-121">您也可以在需要時搜尋範本。</span><span class="sxs-lookup"><span data-stu-id="5ea45-121">You can also search for the template if you need it.</span></span>
 
-<span data-ttu-id="406bf-121">Visual Studio 會列出適用於 Web 專案的範本。</span><span class="sxs-lookup"><span data-stu-id="406bf-121">Visual Studio lists templates for web projects.</span></span> <span data-ttu-id="406bf-122">在我們的範例中，選取 [API]\*\*\*\* 以建立 ASP.NET Web API 應用程式。</span><span class="sxs-lookup"><span data-stu-id="406bf-122">For our example, select **API** to create an ASP.NET Web API Application.</span></span>
+<span data-ttu-id="5ea45-122">然後輸入 [應用程式名稱] 和 [位置]，如下圖所示。</span><span class="sxs-lookup"><span data-stu-id="5ea45-122">Then enter the application name and location as shown in the next image.</span></span>
 
-<span data-ttu-id="406bf-123">確認您已選取 ASP.NET Core 2.2 作為架構。</span><span class="sxs-lookup"><span data-stu-id="406bf-123">Verify that you've selected ASP.NET Core 2.2 as the framework.</span></span> <span data-ttu-id="406bf-124">.NET Core 2.2 隨附於上一版的 Visual Studio 2017，並會在您安裝 Visual Studio 2017 時自動為您安裝和設定。</span><span class="sxs-lookup"><span data-stu-id="406bf-124">.NET Core 2.2 is included in the last version of Visual Studio 2017 and is automatically installed and configured for you when you install Visual Studio 2017.</span></span>
+![輸入專案名稱和位置。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/enter-project-name-and-location.png)
 
-![用於選取 ASP.NET Core Web 應用程式類型並已選取 API 選項的 Visual Studio 對話方塊。](media/create-web-api-application.png)
+<span data-ttu-id="5ea45-124">**圖 4-36**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-124">**Figure 4-36**.</span></span> <span data-ttu-id="5ea45-125">輸入 Visual Studio 2019 中的專案名稱和位置。</span><span class="sxs-lookup"><span data-stu-id="5ea45-125">Enter the project name and location in Visual Studio 2019.</span></span>
 
-<span data-ttu-id="406bf-126">**圖 4-37**.</span><span class="sxs-lookup"><span data-stu-id="406bf-126">**Figure 4-37**.</span></span> <span data-ttu-id="406bf-127">選取 ASP.NET CORE 2.2 和 Web API 專案類型</span><span class="sxs-lookup"><span data-stu-id="406bf-127">Selecting ASP.NET CORE 2.2 and Web API project type</span></span>
+<span data-ttu-id="5ea45-126">確認您已選取 ASP.NET Core 3.1 做為架構。</span><span class="sxs-lookup"><span data-stu-id="5ea45-126">Verify that you've selected ASP.NET Core 3.1 as the framework.</span></span> <span data-ttu-id="5ea45-127">.NET Core 3.1 隨附于最新版的 Visual Studio 2019，當您安裝 Visual Studio 時，系統會自動為您安裝並設定此版本。</span><span class="sxs-lookup"><span data-stu-id="5ea45-127">.NET Core 3.1 is included in the latest release of Visual Studio 2019 and is automatically installed and configured for you when you install Visual Studio.</span></span>
 
-<span data-ttu-id="406bf-128">如果您有任何舊版 .NET Core，您可以從 <https://dotnet.microsoft.com/download> 下載並安裝 2.2 版。</span><span class="sxs-lookup"><span data-stu-id="406bf-128">If you have any previous version of .NET Core, you can download and install the 2.2 version from <https://dotnet.microsoft.com/download>.</span></span>
+![用於選取 ASP.NET Core Web 應用程式類型並已選取 API 選項的 Visual Studio 對話方塊。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-web-api-application.png)
 
-<span data-ttu-id="406bf-129">您可以在建立專案期間或之後新增 Docker 支援，以便可隨時將您的專案「Docker 化」。</span><span class="sxs-lookup"><span data-stu-id="406bf-129">You can add Docker support when creating the project or afterwards, so you can "Dockerize" your project at any time.</span></span> <span data-ttu-id="406bf-130">要在項目創建後添加 Docker 支援,請右鍵單擊解決方案資源管理器中的專案節點,並在上下文菜單上選擇 **「添加** > **Docker 支援**」。</span><span class="sxs-lookup"><span data-stu-id="406bf-130">To add Docker support after project creation, right-click on the project node in Solution Explorer and select **Add** > **Docker support** on the context menu.</span></span>
+<span data-ttu-id="5ea45-129">**圖 4-37**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-129">**Figure 4-37**.</span></span> <span data-ttu-id="5ea45-130">選取 ASP.NET CORE 3.1 和 Web API 專案類型</span><span class="sxs-lookup"><span data-stu-id="5ea45-130">Selecting ASP.NET CORE 3.1 and Web API project type</span></span>
 
-![將 Docker 支援添加到現有專案的上下文選單選項:右鍵單擊(在專案上)>添加> Docker 支援。](media/add-docker-support-to-project.png)
+<span data-ttu-id="5ea45-131">請注意，目前未啟用 Docker 支援，只是為了顯示它可以在專案建立之後完成。</span><span class="sxs-lookup"><span data-stu-id="5ea45-131">Notice Docker support is not enabled now, just to show it can be done after project creation.</span></span>
 
-<span data-ttu-id="406bf-132">**圖 4-38**.</span><span class="sxs-lookup"><span data-stu-id="406bf-132">**Figure 4-38**.</span></span> <span data-ttu-id="406bf-133">將 Docker 支援新增至現有的專案</span><span class="sxs-lookup"><span data-stu-id="406bf-133">Adding Docker support to existing project</span></span>
+<span data-ttu-id="5ea45-132">如果您有任何舊版的 .NET Core，您可以從下載並安裝3.1 版 <https://dotnet.microsoft.com/download> 。</span><span class="sxs-lookup"><span data-stu-id="5ea45-132">If you have any previous version of .NET Core, you can download and install the 3.1 version from <https://dotnet.microsoft.com/download>.</span></span>
 
-<span data-ttu-id="406bf-134">若要完成新增 Docker 支援，您可以選擇 [Windows] 或 [Linux]。</span><span class="sxs-lookup"><span data-stu-id="406bf-134">To complete adding Docker support, you can choose Windows or Linux.</span></span> <span data-ttu-id="406bf-135">在這種情況下,選擇**Linux**,因為 AKS 不支援 Windows 容器(截至 2018 年末)。</span><span class="sxs-lookup"><span data-stu-id="406bf-135">In this case, select **Linux**, because AKS doesn't support Windows Containers (as of late 2018).</span></span>
+<span data-ttu-id="5ea45-133">若要顯示您可以隨時「Docker 化」您的專案，請立即新增 Docker 支援。</span><span class="sxs-lookup"><span data-stu-id="5ea45-133">To show you can "Dockerize" your project at any time, you'll add Docker support now.</span></span> <span data-ttu-id="5ea45-134">因此，以滑鼠右鍵按一下方案總管中的專案節點， **Add**然後選取  >  內容功能表上的 [新增**Docker 支援**]。</span><span class="sxs-lookup"><span data-stu-id="5ea45-134">So right-click on the project node in Solution Explorer and select **Add** > **Docker support** on the context menu.</span></span>
 
-![用於選取 Dockerfile 目標 OS 的選項對話方塊。](media/select-linux-docker-support.png)
+![將 Docker 支援新增至現有專案的內容功能表選項：以滑鼠右鍵按一下專案) 上的 [ (] > 新增 > Docker 支援]。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-docker-support-to-project.png)
 
-<span data-ttu-id="406bf-137">**圖 4-39**.</span><span class="sxs-lookup"><span data-stu-id="406bf-137">**Figure 4-39**.</span></span> <span data-ttu-id="406bf-138">選取 Linux 容器。</span><span class="sxs-lookup"><span data-stu-id="406bf-138">Selecting Linux containers.</span></span>
+<span data-ttu-id="5ea45-136">**圖 4-38**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-136">**Figure 4-38**.</span></span> <span data-ttu-id="5ea45-137">將 Docker 支援新增至現有的專案</span><span class="sxs-lookup"><span data-stu-id="5ea45-137">Adding Docker support to an existing project</span></span>
 
-<span data-ttu-id="406bf-139">透過這些簡單的步驟，您就會有在 Linux 容器上執行的 ASP.NET Core 2.2 應用程式。</span><span class="sxs-lookup"><span data-stu-id="406bf-139">With these simple steps, you have your ASP.NET Core 2.2 application running on a Linux container.</span></span>
+<span data-ttu-id="5ea45-138">若要完成新增 Docker 支援，您可以選擇 [Windows] 或 [Linux]。</span><span class="sxs-lookup"><span data-stu-id="5ea45-138">To complete adding Docker support, you can choose Windows or Linux.</span></span> <span data-ttu-id="5ea45-139">在此情況下，請選取 [ **Linux**]。</span><span class="sxs-lookup"><span data-stu-id="5ea45-139">In this case, select **Linux**.</span></span>
 
-<span data-ttu-id="406bf-140">正如您所看到的,Visual Studio 2017 和 Docker 之間的整合完全面向開發人員的工作效率。</span><span class="sxs-lookup"><span data-stu-id="406bf-140">As you can see, the integration between Visual Studio 2017 and Docker is totally oriented to the developer's productivity.</span></span>
+![用於選取 Dockerfile 目標 OS 的選項對話方塊。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-linux-docker-support.png)
 
-<span data-ttu-id="406bf-141">現在，您可以按 **F5** 鍵或使用 [播放]\*\*\*\* 按鈕來執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="406bf-141">Now you can run your application with the **F5** key or by using the **Play** button.</span></span>
+<span data-ttu-id="5ea45-141">**圖 4-39**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-141">**Figure 4-39**.</span></span> <span data-ttu-id="5ea45-142">選取 Linux 容器。</span><span class="sxs-lookup"><span data-stu-id="5ea45-142">Selecting Linux containers.</span></span>
 
-<span data-ttu-id="406bf-142">執行專案之後，您可以使用 `docker images` 命令列出映像。</span><span class="sxs-lookup"><span data-stu-id="406bf-142">After running the project, you can list the images using the `docker images` command.</span></span> <span data-ttu-id="406bf-143">您應該會看到使用 Visual Studio 2017 自動部署專案所建立的 `mssampleapplication` 映像。</span><span class="sxs-lookup"><span data-stu-id="406bf-143">You should see the `mssampleapplication` image created by the automatic deployment of our project with Visual Studio 2017.</span></span>
+<span data-ttu-id="5ea45-143">有了這些簡單的步驟，您就可以在 Linux 容器上執行 ASP.NET Core 3.1 應用程式。</span><span class="sxs-lookup"><span data-stu-id="5ea45-143">With these simple steps, you have your ASP.NET Core 3.1 application running on a Linux container.</span></span>
+
+<span data-ttu-id="5ea45-144">同樣地，您也可以將非常簡單的**WebApp**專案加入 (圖 4-40) 以取用 Web API 端點，不過這裡不會討論詳細資料。</span><span class="sxs-lookup"><span data-stu-id="5ea45-144">In a similar way, you can also add a very simple **WebApp** project (Figure 4-40) to consume the web API endpoint, although the details are not discussed here.</span></span>
+
+<span data-ttu-id="5ea45-145">之後，您可以為**WebApi**專案新增協調器支援，如下圖4-40 所示。</span><span class="sxs-lookup"><span data-stu-id="5ea45-145">After that, you add orchestrator support for your **WebApi** project as shown next, in image 4-40.</span></span>
+
+![將協調器支援新增至 WebApi 專案](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-orchestrator-support.png)
+
+<span data-ttu-id="5ea45-147">**圖 4-40**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-147">**Figure 4-40**.</span></span> <span data-ttu-id="5ea45-148">將協調器支援新增至*WebApi*專案。</span><span class="sxs-lookup"><span data-stu-id="5ea45-148">Adding orchestrator support to *WebApi* project.</span></span>
+
+<span data-ttu-id="5ea45-149">當您選擇 `Docker Compose` 適用于本機開發的選項時，Visual Studio 會新增 docker 撰寫專案，並以 docker 撰寫檔案的形式顯示，如映射4-41 所示。</span><span class="sxs-lookup"><span data-stu-id="5ea45-149">When you choose the `Docker Compose` option, which is fine for local development, Visual Studio adds the docker-compose project, with the docker-compose files as shown in image 4-41.</span></span>
+
+![Docker 撰寫已新增至解決方案](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/docker-compose-project-in-visual-studio.png)
+
+<span data-ttu-id="5ea45-151">**圖 4-41**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-151">**Figure 4-41**.</span></span> <span data-ttu-id="5ea45-152">將協調器支援新增至*WebApi*專案。</span><span class="sxs-lookup"><span data-stu-id="5ea45-152">Adding orchestrator support to *WebApi* project.</span></span>
+
+<span data-ttu-id="5ea45-153">新增的初始檔案如下所示：</span><span class="sxs-lookup"><span data-stu-id="5ea45-153">The initial files added are similar to these ones:</span></span>
+
+`docker-compose.yml`
+
+```yml
+version: "3.4"
+
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+
+  webapp:
+    image: ${DOCKER_REGISTRY-}webapp
+    build:
+      context: .
+      dockerfile: WebApp/Dockerfile
+```
+
+`docker-compose.override.yml`
+
+```yml
+version: "3.4"
+
+services:
+  webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  webapp:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+```
+
+<span data-ttu-id="5ea45-154">若要讓應用程式以 Docker Compose 執行，您只需要對`docker-compose.override.yml`</span><span class="sxs-lookup"><span data-stu-id="5ea45-154">To have you app running with Docker Compose you just have to make a few tweaks to `docker-compose.override.yml`</span></span>
+
+```yml
+services:
+  webapi:
+    #...
+    ports:
+      - "51080:80"
+      - "51443:443"
+    #...
+  webapp:
+    environment:
+      #...
+      - WebApiBaseAddress=http://webapi
+    ports:
+      - "50080:80"
+      - "50443:443"
+    #...
+```
+
+<span data-ttu-id="5ea45-155">現在您可以使用**F5**鍵來執行應用程式，或使用 [**播放**] 按鈕，或按**Ctrl + F5**鍵，選取 [docker 撰寫] 專案，如影像4-42 所示。</span><span class="sxs-lookup"><span data-stu-id="5ea45-155">Now you can run your application with **F5** key, or by using the **Play** button, or the **Ctrl+F5** key, selecting the docker-compose project, as shown in image 4-42.</span></span>
+
+![使用 Visual Studio 執行 docker 撰寫專案](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/running-docker-compose-with-visual-studio.png)
+
+<span data-ttu-id="5ea45-157">**圖 4-42**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-157">**Figure 4-42**.</span></span> <span data-ttu-id="5ea45-158">將協調器支援新增至*WebApi*專案。</span><span class="sxs-lookup"><span data-stu-id="5ea45-158">Adding orchestrator support to *WebApi* project.</span></span>
+
+<span data-ttu-id="5ea45-159">如所述，執行 docker 撰寫應用程式時，您會得到：</span><span class="sxs-lookup"><span data-stu-id="5ea45-159">When running the docker-compose application as explained, you get:</span></span>
+
+1. <span data-ttu-id="5ea45-160">建立映射和根據 docker 撰寫檔案建立的容器。</span><span class="sxs-lookup"><span data-stu-id="5ea45-160">The images built and containers created as per the docker-compose file.</span></span>
+2. <span data-ttu-id="5ea45-161">瀏覽器會在專案的 [屬性] 對話方塊中設定的位址中開啟 `docker-compose` 。</span><span class="sxs-lookup"><span data-stu-id="5ea45-161">The browser open in the address configured in the "Properties" dialog for the `docker-compose` project.</span></span>
+3. <span data-ttu-id="5ea45-162">[**容器**] 視窗會在 Visual Studio 2019 16.4 版和更新版本的) 中開啟 (。</span><span class="sxs-lookup"><span data-stu-id="5ea45-162">The **Container** window open (in Visual Studio 2019 version 16.4 and later).</span></span>
+4. <span data-ttu-id="5ea45-163">方案中所有專案的偵錯工具支援，如下列影像所示。</span><span class="sxs-lookup"><span data-stu-id="5ea45-163">Debugger support for all projects in the solution, as shown in the following images.</span></span>
+
+<span data-ttu-id="5ea45-164">瀏覽器已開啟：</span><span class="sxs-lookup"><span data-stu-id="5ea45-164">Browser opened:</span></span>
+
+![Web 應用程式正在執行的瀏覽器視圖](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/browser-opened.png)
+
+<span data-ttu-id="5ea45-166">**圖 4-43**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-166">**Figure 4-43**.</span></span> <span data-ttu-id="5ea45-167">具有在多個容器上執行之應用程式的瀏覽器視窗。</span><span class="sxs-lookup"><span data-stu-id="5ea45-167">Browser window with an application running on multiple containers.</span></span>
+
+<span data-ttu-id="5ea45-168">[容器] 視窗：</span><span class="sxs-lookup"><span data-stu-id="5ea45-168">Containers window:</span></span>
+
+![Visual Studio [容器] 視窗](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/visual-studio-containers-window.png)
+
+<span data-ttu-id="5ea45-170">**圖 4-44**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-170">**Figure 4-44**.</span></span> <span data-ttu-id="5ea45-171">Visual Studio [容器] 視窗</span><span class="sxs-lookup"><span data-stu-id="5ea45-171">Visual Studio "Containers" window</span></span>
+
+<span data-ttu-id="5ea45-172">[**容器**] 視窗可讓您查看執行中的容器、流覽可用的映射、查看環境變數、記錄和埠對應、檢查檔案系統、附加偵錯工具，或在容器環境中開啟終端機視窗。</span><span class="sxs-lookup"><span data-stu-id="5ea45-172">The **Containers** window lets you view running containers, browse available images, view environment variables, logs, and port mappings, inspect the filesystem, attach a debugger, or open a terminal window inside the container environment.</span></span>
+
+<span data-ttu-id="5ea45-173">如您所見，Visual Studio 2019 與 Docker 之間的整合，完全是以開發人員的生產力為導向。</span><span class="sxs-lookup"><span data-stu-id="5ea45-173">As you can see, the integration between Visual Studio 2019 and Docker is completely oriented to the developer's productivity.</span></span>
+
+<span data-ttu-id="5ea45-174">當然，您也可以使用命令來列出映射 `docker images` 。</span><span class="sxs-lookup"><span data-stu-id="5ea45-174">Of course, you can also list the images using the `docker images` command.</span></span> <span data-ttu-id="5ea45-175">您應該會看到 `webapi` 和 `webapp` 影像，其中包含 `dev` 自動部署具有 Visual Studio 2019 之專案的標記所建立的標籤。</span><span class="sxs-lookup"><span data-stu-id="5ea45-175">You should see the `webapi` and `webapp` images with the `dev` tags created by the automatic deployment of our project with Visual Studio 2019.</span></span>
 
 ```console
 docker images
 ```
 
-![來自 Docker 映像命令的主控台輸出顯示具有:儲存庫、標記、圖像 ID、已創建(日期)和大小的清單。](media/docker-images-command.png)
+![來自 docker images 命令的主控台輸出會顯示包含下列清單：存放庫、標記、映射識別碼、建立 (日期) 和大小。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/docker-images-command.png)
 
-<span data-ttu-id="406bf-145">**圖 4-40**.</span><span class="sxs-lookup"><span data-stu-id="406bf-145">**Figure 4-40**.</span></span> <span data-ttu-id="406bf-146">Docker 映像檢視</span><span class="sxs-lookup"><span data-stu-id="406bf-146">View of Docker images</span></span>
+<span data-ttu-id="5ea45-177">**圖 4-45**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-177">**Figure 4-45**.</span></span> <span data-ttu-id="5ea45-178">Docker 映像檢視</span><span class="sxs-lookup"><span data-stu-id="5ea45-178">View of Docker images</span></span>
 
-## <a name="register-the-solution-in-the-azure-container-registry"></a><span data-ttu-id="406bf-147">在 Azure Container Registry 中註冊方案</span><span class="sxs-lookup"><span data-stu-id="406bf-147">Register the Solution in the Azure Container Registry</span></span>
+## <a name="register-the-solution-in-an-azure-container-registry-acr"></a><span data-ttu-id="5ea45-179">在 Azure Container Registry (ACR 中註冊解決方案) </span><span class="sxs-lookup"><span data-stu-id="5ea45-179">Register the Solution in an Azure Container Registry (ACR)</span></span>
 
-<span data-ttu-id="406bf-148">將映像上傳到任何 Docker 登錄 (例如 [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) 或 Docker Hub)，以便將映像從該登錄部署到 AKS 叢集。</span><span class="sxs-lookup"><span data-stu-id="406bf-148">Upload the image to any Docker registry, like [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) or Docker Hub, so the images can be deployed to the AKS cluster from that registry.</span></span> <span data-ttu-id="406bf-149">在這種情況下,我們將映射上載到 Azure 容器註冊表。</span><span class="sxs-lookup"><span data-stu-id="406bf-149">In this case, we're uploading the image to Azure Container Registry.</span></span>
+<span data-ttu-id="5ea45-180">您可以將映射上傳至[Azure Container Registry (ACR) ](https://azure.microsoft.com/services/container-registry/)，但您也可以使用 Docker Hub 或任何其他登錄，讓映射可以從該登錄部署到 AKS 叢集。</span><span class="sxs-lookup"><span data-stu-id="5ea45-180">You can upload the images to the [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/), but you could also use Docker Hub or any other registry, so the images can be deployed to the AKS cluster from that registry.</span></span>
 
-### <a name="create-the-image-in-release-mode"></a><span data-ttu-id="406bf-150">在 [發行] 模式中建立映像</span><span class="sxs-lookup"><span data-stu-id="406bf-150">Create the image in Release mode</span></span>
+### <a name="create-an-acr-instance"></a><span data-ttu-id="5ea45-181">建立 ACR 實例</span><span class="sxs-lookup"><span data-stu-id="5ea45-181">Create an ACR instance</span></span>
 
-<span data-ttu-id="406bf-151">我們現在要在 [發行]\*\*\*\* 模式中建立映像 (用於生產環境)，做法是變更為 [發行]\*\*\*\* (如圖 4-41 所示)，然後如往常般執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="406bf-151">We'll now create the image in **Release** mode (ready for production) by changing to **Release**, as shown in Figure 4-41, and running the application as we did before.</span></span>
+<span data-ttu-id="5ea45-182">從**az cli**執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="5ea45-182">Run the following command from the **az cli**:</span></span>
 
-![在 [發行] 模式中建置的 VS 工具列選項。](media/select-release-mode.png)
-
-<span data-ttu-id="406bf-153">**圖 4-41**.</span><span class="sxs-lookup"><span data-stu-id="406bf-153">**Figure 4-41**.</span></span> <span data-ttu-id="406bf-154">選取 [發行] 模式</span><span class="sxs-lookup"><span data-stu-id="406bf-154">Selecting Release Mode</span></span>
-
-<span data-ttu-id="406bf-155">如果您執行 `docker image` 命令，您會看到建立兩個映像，一個用於 `debug` 模式，另一個用於 `release` 模式。</span><span class="sxs-lookup"><span data-stu-id="406bf-155">If you execute the `docker image` command, you'll see both images created, one for `debug` and the other for `release` mode.</span></span>
-
-### <a name="create-a-new-tag-for-the-image"></a><span data-ttu-id="406bf-156">為映像建立新的標記</span><span class="sxs-lookup"><span data-stu-id="406bf-156">Create a new Tag for the Image</span></span>
-
-<span data-ttu-id="406bf-157">每個容器映像都必須標記登錄的 `loginServer` 名稱。</span><span class="sxs-lookup"><span data-stu-id="406bf-157">Each container image needs to be tagged with the `loginServer` name of the registry.</span></span> <span data-ttu-id="406bf-158">將容器映像推送到映像登錄時，此標籤可用於路由傳送。</span><span class="sxs-lookup"><span data-stu-id="406bf-158">This tag is used for routing when pushing container images to an image registry.</span></span>
-
-<span data-ttu-id="406bf-159">您可以從 Azure 入口網站檢視 `loginServer` 名稱，然後從 Azure Container Registry 擷取資訊</span><span class="sxs-lookup"><span data-stu-id="406bf-159">You can view the `loginServer` name from the Azure portal, taking the information from the Azure Container Registry</span></span>
-
-![Azure Container Registry 名稱的瀏覽器檢視，位於右上方。](media/loginServer-name.png)
-
-<span data-ttu-id="406bf-161">**圖 4-42**.</span><span class="sxs-lookup"><span data-stu-id="406bf-161">**Figure 4-42**.</span></span> <span data-ttu-id="406bf-162">Registry 名稱檢視</span><span class="sxs-lookup"><span data-stu-id="406bf-162">View of the name of the Registry</span></span>
-
-<span data-ttu-id="406bf-163">或執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="406bf-163">Or by running the following command:</span></span>
-
-```console
-az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
+```powershell
+az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
 
-![上述命令的主控台輸出。](media/az-cli-loginServer-name.png)
+### <a name="create-the-image-in-release-mode"></a><span data-ttu-id="5ea45-183">在 [發行] 模式中建立映像</span><span class="sxs-lookup"><span data-stu-id="5ea45-183">Create the image in Release mode</span></span>
 
-<span data-ttu-id="406bf-165">**圖 4-43**.</span><span class="sxs-lookup"><span data-stu-id="406bf-165">**Figure 4-43**.</span></span> <span data-ttu-id="406bf-166">使用 PowerShell 取得登錄名稱</span><span class="sxs-lookup"><span data-stu-id="406bf-166">Get the name of the registry using PowerShell</span></span>
+<span data-ttu-id="5ea45-184">您現在會藉由變更為 [**發行**]，在 [**發行**] 模式中建立映射 (準備好用於生產) ，如圖4-46 所示，然後像之前一樣執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="5ea45-184">You'll now create the image in **Release** mode (ready for production) by changing to **Release**, as shown in Figure 4-46, and running the application as you did before.</span></span>
 
-<span data-ttu-id="406bf-167">在這兩種情況下，您都會取得名稱。</span><span class="sxs-lookup"><span data-stu-id="406bf-167">In both cases, you'll obtain the name.</span></span> <span data-ttu-id="406bf-168">在我們的範例中為 `mssampleacr.azurecr.io`。</span><span class="sxs-lookup"><span data-stu-id="406bf-168">In our example, `mssampleacr.azurecr.io`.</span></span>
+![在 [發行] 模式中建置的 VS 工具列選項。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-release-mode.png)
 
-<span data-ttu-id="406bf-169">現在您可以使用命令來標記映像，然後擷取最新的映像 (發行映像)：</span><span class="sxs-lookup"><span data-stu-id="406bf-169">Now you can tag the image, taking the latest image (the Release image), with the command:</span></span>
+<span data-ttu-id="5ea45-186">**圖 4-46**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-186">**Figure 4-46**.</span></span> <span data-ttu-id="5ea45-187">選取 [發行] 模式</span><span class="sxs-lookup"><span data-stu-id="5ea45-187">Selecting Release Mode</span></span>
 
-```console
-docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
-```
+<span data-ttu-id="5ea45-188">如果您執行 `docker images` 命令，您會看到兩個映射建立，一個用於 `debug` (**dev**) ，另一個用於 `release` (**最新**的) 模式。</span><span class="sxs-lookup"><span data-stu-id="5ea45-188">If you execute the `docker images` command, you'll see both images created, one for `debug` (**dev**) and the other for `release` (**latest**) mode.</span></span>
 
-<span data-ttu-id="406bf-170">執行 `docker tag` 命令之後，請使用 `docker images` 命令列出映像，您應該會看到具有新標記的映像。</span><span class="sxs-lookup"><span data-stu-id="406bf-170">After running the `docker tag` command, list the images with the `docker images` command, and you should see the image with the new tag.</span></span>
+### <a name="create-a-new-tag-for-the-image"></a><span data-ttu-id="5ea45-189">為映像建立新的標記</span><span class="sxs-lookup"><span data-stu-id="5ea45-189">Create a new Tag for the Image</span></span>
 
-![docker images 命令的主控台輸出。](media/tagged-docker-images-list.png)
+<span data-ttu-id="5ea45-190">每個容器映像都必須標記登錄的 `loginServer` 名稱。</span><span class="sxs-lookup"><span data-stu-id="5ea45-190">Each container image needs to be tagged with the `loginServer` name of the registry.</span></span> <span data-ttu-id="5ea45-191">將容器映像推送到映像登錄時，此標籤可用於路由傳送。</span><span class="sxs-lookup"><span data-stu-id="5ea45-191">This tag is used for routing when pushing container images to an image registry.</span></span>
 
-<span data-ttu-id="406bf-172">**圖 4-44**.</span><span class="sxs-lookup"><span data-stu-id="406bf-172">**Figure 4-44**.</span></span> <span data-ttu-id="406bf-173">已標記的映像檢視</span><span class="sxs-lookup"><span data-stu-id="406bf-173">View of tagged images</span></span>
+<span data-ttu-id="5ea45-192">您可以從 Azure 入口網站檢視 `loginServer` 名稱，然後從 Azure Container Registry 擷取資訊</span><span class="sxs-lookup"><span data-stu-id="5ea45-192">You can view the `loginServer` name from the Azure portal, taking the information from the Azure Container Registry</span></span>
 
-### <a name="push-the-image-into-the-azure-acr"></a><span data-ttu-id="406bf-174">將映像推送到 Azure ACR</span><span class="sxs-lookup"><span data-stu-id="406bf-174">Push the image into the Azure ACR</span></span>
+![Azure Container Registry 名稱的瀏覽器檢視，位於右上方。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/loginServer-name.png)
 
-<span data-ttu-id="406bf-175">登入 Azure Container Registry</span><span class="sxs-lookup"><span data-stu-id="406bf-175">Log in to the Azure Container Registry</span></span>
+<span data-ttu-id="5ea45-194">**圖 4-47**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-194">**Figure 4-47**.</span></span> <span data-ttu-id="5ea45-195">Registry 名稱檢視</span><span class="sxs-lookup"><span data-stu-id="5ea45-195">View of the name of the Registry</span></span>
 
-```console
-az acr login --name mssampleacr
-```
-
-<span data-ttu-id="406bf-176">使用下列命令將映像推送到 Azure ACR：</span><span class="sxs-lookup"><span data-stu-id="406bf-176">Push the image into the Azure ACR, using the following command:</span></span>
+<span data-ttu-id="5ea45-196">或執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="5ea45-196">Or by running the following command:</span></span>
 
 ```console
-docker push mssampleacr.azurecr.io/mssampleaksapplication:v1
+az acr list --resource-group <resource-group-name> --query "[].{acrLoginServer:loginServer}" --output table
 ```
 
-<span data-ttu-id="406bf-177">此命令需要一些時間上傳映像，但會在程序中提供回饋給您。</span><span class="sxs-lookup"><span data-stu-id="406bf-177">This command takes a while uploading the images but gives you feedback in the process.</span></span>
+![上述命令的主控台輸出。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/az-cli-loginServer-name.png)
 
-![docker push 命令的主控台輸出：顯示以字元為主的進度列來表示每個圖層。](media/uploading-image-to-acr.png)
+<span data-ttu-id="5ea45-198">**圖 4-48**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-198">**Figure 4-48**.</span></span> <span data-ttu-id="5ea45-199">使用**az cli**取得登錄的名稱</span><span class="sxs-lookup"><span data-stu-id="5ea45-199">Get the name of the registry using **az cli**</span></span>
 
-<span data-ttu-id="406bf-179">**圖 4-45**.</span><span class="sxs-lookup"><span data-stu-id="406bf-179">**Figure 4-45**.</span></span> <span data-ttu-id="406bf-180">將映像上傳到 ACR</span><span class="sxs-lookup"><span data-stu-id="406bf-180">Uploading the image to the ACR</span></span>
+<span data-ttu-id="5ea45-200">在這兩種情況下，您都會取得名稱。</span><span class="sxs-lookup"><span data-stu-id="5ea45-200">In both cases, you'll obtain the name.</span></span> <span data-ttu-id="5ea45-201">在我們的範例中為 `exploredocker.azurecr.io`。</span><span class="sxs-lookup"><span data-stu-id="5ea45-201">In our example, `exploredocker.azurecr.io`.</span></span>
 
-<span data-ttu-id="406bf-181">當程序完成時，您應該會收到如下所示的結果：</span><span class="sxs-lookup"><span data-stu-id="406bf-181">You can see below the result you should get when the process completes:</span></span>
+<span data-ttu-id="5ea45-202">現在您可以使用命令來標記映像，然後擷取最新的映像 (發行映像)：</span><span class="sxs-lookup"><span data-stu-id="5ea45-202">Now you can tag the image, taking the latest image (the Release image), with the command:</span></span>
 
-![docker push 命令的主控台輸出，已完成，並顯示所有圖層或節點。](media/uploading-docker-images-complete.png)
+```console
+docker tag <image-name>:latest <login-server-name>/<image-name>:v1
+```
 
-<span data-ttu-id="406bf-183">**圖 4-46**.</span><span class="sxs-lookup"><span data-stu-id="406bf-183">**Figure 4-46**.</span></span> <span data-ttu-id="406bf-184">節點檢視</span><span class="sxs-lookup"><span data-stu-id="406bf-184">View of nodes</span></span>
+<span data-ttu-id="5ea45-203">執行 `docker tag` 命令之後，請使用 `docker images` 命令列出映像，您應該會看到具有新標記的映像。</span><span class="sxs-lookup"><span data-stu-id="5ea45-203">After running the `docker tag` command, list the images with the `docker images` command, and you should see the image with the new tag.</span></span>
 
-<span data-ttu-id="406bf-185">下一個步驟是將您的容器部署到 AKS Kubernetess 叢集。</span><span class="sxs-lookup"><span data-stu-id="406bf-185">The next step is to deploy your container into your AKS Kubernetes cluster.</span></span> <span data-ttu-id="406bf-186">為此，您需要包含下列內容的檔案 (**.yml 部署檔案**)：</span><span class="sxs-lookup"><span data-stu-id="406bf-186">For that, you need a file (**.yml deploy file**) that contains the following:</span></span>
+![docker images 命令的主控台輸出。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/tagged-docker-images-list.png)
+
+<span data-ttu-id="5ea45-205">**圖 4-49**.</span><span class="sxs-lookup"><span data-stu-id="5ea45-205">**Figure 4-49**.</span></span> <span data-ttu-id="5ea45-206">已標記的映像檢視</span><span class="sxs-lookup"><span data-stu-id="5ea45-206">View of tagged images</span></span>
+
+### <a name="push-the-image-into-the-azure-acr"></a><span data-ttu-id="5ea45-207">將映像推送到 Azure ACR</span><span class="sxs-lookup"><span data-stu-id="5ea45-207">Push the image into the Azure ACR</span></span>
+
+<span data-ttu-id="5ea45-208">登入 Azure Container Registry</span><span class="sxs-lookup"><span data-stu-id="5ea45-208">Log in to the Azure Container Registry</span></span>
+
+```console
+az acr login --name exploredocker
+```
+
+<span data-ttu-id="5ea45-209">使用下列命令將映像推送到 Azure ACR：</span><span class="sxs-lookup"><span data-stu-id="5ea45-209">Push the image into the Azure ACR, using the following command:</span></span>
+
+```console
+docker push <login-server-name>/<image-name>:v1
+```
+
+<span data-ttu-id="5ea45-210">此命令需要一些時間上傳映像，但會在程序中提供回饋給您。</span><span class="sxs-lookup"><span data-stu-id="5ea45-210">This command takes a while uploading the images but gives you feedback in the process.</span></span> <span data-ttu-id="5ea45-211">在下圖中，您可以看到已完成的一個映射的輸出，另一個則是進行中。</span><span class="sxs-lookup"><span data-stu-id="5ea45-211">In the following image you can see the output from one image completed and another in progress.</span></span>
+
+![來自 docker push 命令的主控台輸出。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/uploading-docker-images-complete.png)
+
+<span data-ttu-id="5ea45-213">**圖 4-50**。</span><span class="sxs-lookup"><span data-stu-id="5ea45-213">**Figure 4-50**.</span></span> <span data-ttu-id="5ea45-214">推播命令的主控台輸出。</span><span class="sxs-lookup"><span data-stu-id="5ea45-214">Console output from the push command.</span></span>
+
+<span data-ttu-id="5ea45-215">若要將多容器應用程式部署到 AKS 叢集中，您需要一些具有的資訊清單檔案 `.yaml` ，這些都是從和檔案取得的屬性 `docker-compose.yml` `docker-compose.override.yml` 。</span><span class="sxs-lookup"><span data-stu-id="5ea45-215">To deploy your multi-container app into your AKS cluster you need some manifest `.yaml` files that have, most of the properties taken from the `docker-compose.yml` and `docker-compose.override.yml` files.</span></span>
+
+#### `deploy-webapi.yml`
 
 ```yml
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mssamplesbook
+  name: webapi
+  labels:
+    app: weather-forecast
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      service: webapi
   template:
     metadata:
       labels:
-        app: mssample-kub-app
+        app: weather-forecast
+        service: webapi
     spec:
       containers:
-        - name: mssample-services-app
-          image: mssampleacr.azurecr.io/mssampleaksapplication:v1
+        - name: webapi
+          image: exploredocker.azurecr.io/webapi:v1
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-    name: mssample-kub-app
+  name: webapi
+  labels:
+    app: weather-forecast
+    service: webapi
 spec:
   ports:
-    - name: http-port
-      port: 80
+    - port: 80
       targetPort: 80
+      protocol: TCP
   selector:
-    app: mssample-kub-app
+    service: webapi
+```
+
+#### `deploy-webapp.yml`
+
+```yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels:
+    app: weather-forecast
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: webapp
+  template:
+    metadata:
+      labels:
+        app: weather-forecast
+        service: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: exploredocker.azurecr.io/webapp:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
+            - name: WebApiBaseAddress
+              value: http://webapi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp
+  labels:
+    app: weather-forecast
+    service: webapp
+spec:
   type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    service: webapp
 ```
 
 > [!NOTE]
-> <span data-ttu-id="406bf-187">如需使用 Kubernetes 部署的詳細資訊，請參閱：<https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span><span class="sxs-lookup"><span data-stu-id="406bf-187">For more information on deployment with Kubernetes see: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span></span>
+> <span data-ttu-id="5ea45-216">先前的檔案 `.yml` 只會 `HTTP` 使用參數來啟用埠， `ASPNETCORE_URLS` 以避免範例應用程式中遺失的憑證發生問題。</span><span class="sxs-lookup"><span data-stu-id="5ea45-216">The previous `.yml` files only enable the `HTTP` ports, using the `ASPNETCORE_URLS` parameter, to avoid issues with the missing certificate in the sample app.</span></span>
 
-<span data-ttu-id="406bf-188">現在，您幾乎準備好使用 **Kubectl** 進行部署，但首先，您必須使用下列命令將認證擷取到 AKS 叢集：</span><span class="sxs-lookup"><span data-stu-id="406bf-188">Now you're almost ready to deploy using **Kubectl**, but first you must get the credentials to the AKS Cluster with this command:</span></span>
+> [!TIP]
+> <span data-ttu-id="5ea45-217">您可以在本指南的[**部署到 Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) 一節中，了解如何為此範例建立 AKS 叢集。</span><span class="sxs-lookup"><span data-stu-id="5ea45-217">You can see how to create the AKS Cluster for this sample in section [**Deploy to Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) on this guide.</span></span>
 
-```console
-az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
-```
-
-![來自上述指令的主控台輸出:合併的「MSSampleK8Cluster」為 /root/.kube/config 中的目前上下文](media/getting-aks-credentials.png)
-
-<span data-ttu-id="406bf-190">**圖 4-47**.</span><span class="sxs-lookup"><span data-stu-id="406bf-190">**Figure 4-47**.</span></span> <span data-ttu-id="406bf-191">取得認證</span><span class="sxs-lookup"><span data-stu-id="406bf-191">getting credentials</span></span>
-
-<span data-ttu-id="406bf-192">然後，使用 `kubectl create` 命令啟動部署。</span><span class="sxs-lookup"><span data-stu-id="406bf-192">Then, use the `kubectl create` command to launch the deployment.</span></span>
+<span data-ttu-id="5ea45-218">現在您已經準備好使用**kubectl**進行部署，但您必須先使用下列命令從 AKS 叢集取得認證：</span><span class="sxs-lookup"><span data-stu-id="5ea45-218">Now you're almost ready to deploy using **kubectl**, but first you must get the credentials from the AKS Cluster with this command:</span></span>
 
 ```console
-kubectl create -f mssample-deploy.yml
+az aks get-credentials --resource-group explore-docker-aks-rg --name explore-docker-aks
 ```
 
-![上述命令的主控台輸出：已建立部署 "mssamplesbook"。](media/kubectl-create-command.png)
+![上述命令的主控台輸出：合併「探索-docker-aks」作為 C:\Users\Miguel.kube\config 中的目前內容](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/getting-aks-credentials.png)
 
-<span data-ttu-id="406bf-195">**圖 4-48**.</span><span class="sxs-lookup"><span data-stu-id="406bf-195">**Figure 4-48**.</span></span> <span data-ttu-id="406bf-196">部署至 Kubernetes</span><span class="sxs-lookup"><span data-stu-id="406bf-196">Deploy to Kubernetes</span></span>
+<span data-ttu-id="5ea45-220">**圖 4-51**。</span><span class="sxs-lookup"><span data-stu-id="5ea45-220">**Figure 4-51**.</span></span> <span data-ttu-id="5ea45-221">將認證從 AKS 取得至 kubectl 環境。</span><span class="sxs-lookup"><span data-stu-id="5ea45-221">Getting credentials from AKS into the kubectl environment.</span></span>
 
-<span data-ttu-id="406bf-197">部署完成時，您可以使用可透過下列命令暫時存取的本機 Proxy 來存取 Kubernetes 主控台：</span><span class="sxs-lookup"><span data-stu-id="406bf-197">When the deployment completes, you can access the Kubernetes console with a local proxy that you can temporally access with this command:</span></span>
+<span data-ttu-id="5ea45-222">您也必須允許 AKS 叢集使用下列命令，從 ACR 提取映射：</span><span class="sxs-lookup"><span data-stu-id="5ea45-222">You also have to allow the AKS cluster to pull images from the ACR, using this command:</span></span>
 
 ```console
-az aks browse --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
+az aks update --name explore-docker-aks --resource-group explore-docker-aks-rg --attach-acr exploredocker
 ```
 
-<span data-ttu-id="406bf-198">然後存取 URL `http://127.0.0.1:8001`。</span><span class="sxs-lookup"><span data-stu-id="406bf-198">And accessing the url `http://127.0.0.1:8001`.</span></span>
+<span data-ttu-id="5ea45-223">上一個命令可能需要幾分鐘的時間才能完成。</span><span class="sxs-lookup"><span data-stu-id="5ea45-223">The previous command might take a couple of minutes to complete.</span></span> <span data-ttu-id="5ea45-224">然後，使用 `kubectl apply` 命令來啟動部署，然後 `kubectl get all` 取得叢集物件清單。</span><span class="sxs-lookup"><span data-stu-id="5ea45-224">Then, use the `kubectl apply` command to launch the deployments, and then `kubectl get all` get list the cluster objects.</span></span>
 
-![Kubernetes 儀表板的瀏覽器檢視，其中顯示 [部署]、[Pod]、[複本集] 和 [服務]。](media/kubernetes-cluster-information.png)
+```console
+kubectl apply -f deploy-webapi.yml
+kubectl apply -f deploy-webapp.yml
 
-<span data-ttu-id="406bf-200">**圖 4-49**.</span><span class="sxs-lookup"><span data-stu-id="406bf-200">**Figure 4-49**.</span></span> <span data-ttu-id="406bf-201">檢視 Kubernetes 叢集資訊</span><span class="sxs-lookup"><span data-stu-id="406bf-201">View Kubernetes cluster information</span></span>
+kubectl get all
+```
 
-<span data-ttu-id="406bf-202">現在您已使用 Linux 容器和 AKS Kubernetes 叢集在 Azure 上部署應用程式。</span><span class="sxs-lookup"><span data-stu-id="406bf-202">Now you have your application deployed on Azure, using a Linux Container, and an AKS Kubernetes Cluster.</span></span> <span data-ttu-id="406bf-203">您可以存取瀏覽至您服務公用 IP 的應用程式，並可從 Azure 入口網站取得此服務。</span><span class="sxs-lookup"><span data-stu-id="406bf-203">You can access your app browsing to the public IP of your service, which you can get from the Azure portal.</span></span>
+![上述命令的主控台輸出：已套用部署。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/kubectl-apply-command.png)
+
+<span data-ttu-id="5ea45-227">**圖 4-52**。</span><span class="sxs-lookup"><span data-stu-id="5ea45-227">**Figure 4-52**.</span></span> <span data-ttu-id="5ea45-228">部署至 Kubernetes</span><span class="sxs-lookup"><span data-stu-id="5ea45-228">Deployment to Kubernetes</span></span>
+
+<span data-ttu-id="5ea45-229">您必須等候一段時間，直到負載平衡器取得外部 IP，檢查 `kubectl get services` ，然後應用程式應該可在該位址上使用，如下圖所示：</span><span class="sxs-lookup"><span data-stu-id="5ea45-229">You'll have to wait a while until the load balancer gets the external IP, checking with `kubectl get services`, and then the application should be available at that address, as shown in the next image:</span></span>
+
+![已部署至 AKS 之應用程式的瀏覽器視圖](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/aks-deployed-application.png)
+
+<span data-ttu-id="5ea45-231">**圖 4-53**。</span><span class="sxs-lookup"><span data-stu-id="5ea45-231">**Figure 4-53**.</span></span> <span data-ttu-id="5ea45-232">部署至 Kubernetes</span><span class="sxs-lookup"><span data-stu-id="5ea45-232">Deployment to Kubernetes</span></span>
+
+<span data-ttu-id="5ea45-233">當部署完成時，您可以使用 ssh 通道，透過本機 proxy 來存取[Kubernetes WEB UI](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) 。</span><span class="sxs-lookup"><span data-stu-id="5ea45-233">When the deployment completes, you can access the [Kubernetes Web UI](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) with a local proxy, using an ssh tunnel.</span></span>
+
+<span data-ttu-id="5ea45-234">首先，您必須使用下列命令建立 ClusterRoleBinding：</span><span class="sxs-lookup"><span data-stu-id="5ea45-234">First you must create a ClusterRoleBinding with the following command:</span></span>
+
+```console
+kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
+```
+
+<span data-ttu-id="5ea45-235">然後，執行下列命令以啟動 proxy：</span><span class="sxs-lookup"><span data-stu-id="5ea45-235">And then this command to start the proxy:</span></span>
+
+```console
+az aks browse --resource-group exploredocker-aks-rg --name explore-docker-aks
+```
+
+<span data-ttu-id="5ea45-236">瀏覽器視窗應該會在 `http://127.0.0.1:8001` 與下列類似的視圖中開啟：</span><span class="sxs-lookup"><span data-stu-id="5ea45-236">A browser window should open at `http://127.0.0.1:8001` with a view similar to this one:</span></span>
+
+![Kubernetes 儀表板的瀏覽器檢視，其中顯示 [部署]、[Pod]、[複本集] 和 [服務]。](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/kubernetes-cluster-information.png)
+
+<span data-ttu-id="5ea45-238">**圖 4-54**。</span><span class="sxs-lookup"><span data-stu-id="5ea45-238">**Figure 4-54**.</span></span> <span data-ttu-id="5ea45-239">檢視 Kubernetes 叢集資訊</span><span class="sxs-lookup"><span data-stu-id="5ea45-239">View Kubernetes cluster information</span></span>
+
+<span data-ttu-id="5ea45-240">現在您已有 ASP.NET Core 應用程式，在 Linux 容器中執行，並已部署至 Azure 上的 AKS 叢集。</span><span class="sxs-lookup"><span data-stu-id="5ea45-240">Now you have your ASP.NET Core application, running in Linux containers, and deployed to an AKS cluster on Azure.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="406bf-204">您可以在本指南的[**部署到 Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) 一節中，了解如何為此範例建立 AKS 叢集。</span><span class="sxs-lookup"><span data-stu-id="406bf-204">You can see how to create the AKS Cluster for this sample in section [**Deploy to Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) on this guide.</span></span>
+> <span data-ttu-id="5ea45-241">如需使用 Kubernetes 部署的詳細資訊，請參閱：<https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span><span class="sxs-lookup"><span data-stu-id="5ea45-241">For more information on deployment with Kubernetes see: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span></span>
 
->[!div class="step-by-step"]
-><span data-ttu-id="406bf-205">[前一個](set-up-windows-containers-with-powershell.md)
->[下一個](../docker-devops-workflow/index.md)</span><span class="sxs-lookup"><span data-stu-id="406bf-205">[Previous](set-up-windows-containers-with-powershell.md)
+> [!div class="step-by-step"]
+> <span data-ttu-id="5ea45-242">[上一個](set-up-windows-containers-with-powershell.md) 
+> [下一步](../docker-devops-workflow/index.md)</span><span class="sxs-lookup"><span data-stu-id="5ea45-242">[Previous](set-up-windows-containers-with-powershell.md)
 [Next](../docker-devops-workflow/index.md)</span></span>
