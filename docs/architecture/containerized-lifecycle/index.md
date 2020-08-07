@@ -1,31 +1,89 @@
 ---
-title: 容器和 Docker 簡介
-description: 取得使用 Docker 主要優點的高階概觀。
-ms.date: 02/15/2019
-ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+description: 取得使用 Docker 和 Microsoft 平臺和工具開發和部署容器化應用程式的開發和部署流程概要。
+ms.date: 07/30/2020
+ms.openlocfilehash: d8055315b25f73d7b0b355026ab6b2c4767f9d89
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73738125"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915167"
 ---
-# <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
+# <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 
-*容器化是一種軟體發展方法，其中應用程式或服務、其依賴項及其配置（抽象為部署清單檔）打包為容器映射。然後，您可以將容器化應用程式作為一個單元進行測試，並將其作為容器映射實例部署到主機作業系統 （OS）。*
+![書籍封面](./media/devops-book-cover-large-we.png)
 
-就像是貨櫃允許利用船隻、火車或貨車運輸貨物，而不論內含哪種貨物，軟體容器是軟體部署的標準單位，可包含不同的程式碼和相依性。 以此方式容器化軟體可讓開發人員和 IT 專業人員只需要一點修改或不需要任何修改，就能跨環境進行部署。
+**版本 3.1** -更新為 ASP.NET Core 3。1
 
-容器也可讓不同的應用程式在共用 OS 上彼此隔離。 容器化應用程式會在容器主機上執行，再於 OS (Linux 或 Windows) 上執行。 因此，容器所需磁碟使用量小於虛擬機器 (VM) 映像。
+本指南是使用 Microsoft 平臺和工具，透過 Docker 開發和部署容器化 ASP.NET Core 應用程式的一般總覽。 本指南包含 Azure DevOps 的高階簡介，用於執行 CI/CD 管線，以及 Azure Container Registry (ACR) 和 Azure Kubernetes Services AKS 進行部署。
 
-每個容器可以執行整個 Web 應用程式或服務，如圖 1-1 所示。 在此範例中，Docker 主機是容器主機，而 App1、App2、Svc1 及 Svc2 是容器化應用程式或服務。
+如需低層級、開發相關的詳細資料，您可以參閱[.Net 微服務：容器化 .Net 應用程式的架構](https://docs.microsoft.com/dotnet/architecture/microservices/)指南和 it 相關參考應用程式[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)。
 
-![顯示在 VM 或伺服器中運行的四個容器的圖表。](./media/index/multiple-containers-single-host.png)
+## <a name="send-us-your-feedback"></a>將您的意見反應傳送給我們！
 
-**圖 1-1**. 在容器主機上執行的多個容器
+本指南的撰寫目的是為了協助您了解 .NET 中的容器化應用程式和微服務架構。 本指南和相關參考應用程式會不斷改進，因此歡迎您提供寶貴的意見反應！ 如果您有關于如何改進本指南的意見，請在中提交意見反應 <https://aka.ms/ebookfeedback> 。
 
-您可以從容器化衍生的另一個優點是延展性。 您可以針對短期工作建立新的容器，以更快擴充。 從應用程式的觀點來看，具現化映像 (建立容器) 類似於具現化處理序 (例如服務或 Web 應用程式)。 不過，為了可靠起見，當您在多部主機伺服器之間執行相同映像的多個執行個體時，您通常需要在不同的主機伺服器或 VM 中，或是不同的容錯網域中，執行各個容器 (映像執行個體)。
+## <a name="credits"></a>學分
 
-簡單來說，容器在整個應用程式生命週期工作流程中，提供隔離、可攜性、彈性、延展性和控制能力等優點。 最重要的優點是可為開發與作業提供環境隔離。
+作者︰
+
+> **Cesar de la Torre**，Sr. Microsoft Corp. .NET 產品小組 PM
+
+收購的編輯器：
+
+> **Janine 的派翠克**
+
+開發編輯器：
+
+> Microsoft 的解決方案專業人員**Bob Russell**
+>
+> [**八進位發行，Inc。**](http://www.octalpub.com/)
+
+編輯生產：
+
+> [Dianne Russell](http://www.octalpub.com/)
+>
+> **八進位發行，Inc。**
+
+Copyeditor:
+
+> Microsoft 的解決方案專業人員**Bob Russell**
+
+參與者和檢閱者：
+
+> **Nish Anil**，Microsoft NET 小組資深方案經理
+>
+> 以一般概念**Miguel veloso turing challenge**軟體發展工程師
+>
+> **Sumit Ghosh**，neudesic 提供的首席顧問
+
+## <a name="copyright"></a>著作權
+
+發行者
+
+Microsoft 開發人員部門 .NET 和 Visual Studio 產品小組
+
+Microsoft Corporation 部門
+
+One Microsoft Way
+
+Redmond, Washington 98052-6399
+
+&copy;Microsoft Corporation 的著作權2020
+
+著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
+
+本書依照「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路網站參考) 可能會隨時變更，恕不另行通知。
+
+此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
+
+Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Microsoft 集團的商標。
+
+Mac 與 macOS 是 Apple Inc. 的商標。
+
+Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
+
+所有其他商標和標誌屬於其各自擁有者的財產。
 
 >[!div class="step-by-step"]
->[下一步](what-is-docker.md)
+>[下一個](introduction-to-containers-and-docker.md)

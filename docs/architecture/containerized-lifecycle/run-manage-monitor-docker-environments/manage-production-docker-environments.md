@@ -1,13 +1,13 @@
 ---
 title: 管理生產 Docker 環境
 description: 了解管理容器型生產環境的關鍵點。
-ms.date: 02/15/2019
-ms.openlocfilehash: 26e7a3319afe593d75e2384d023c901a389245dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 11880a523d6ff79c9646fd1e174f380779d00dcc
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71834511"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914929"
 ---
 # <a name="manage-production-docker-environments"></a>管理生產 Docker 環境
 
@@ -25,8 +25,8 @@ ms.locfileid: "71834511"
 
 | 管理工具 | 描述 | 相關協調器 |
 |------------------|-------------|-----------------------|
-| [容器的 Azure 監視器](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure 專用的 Kubernetes 管理工具 | Azure Kubernetes Services (AKS) |
-| [庫伯內斯 Web UI（儀表板）](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes 管理工具，可以監視及管理本機的 Kubernetes 叢集 | Azure Kubernetes Service (AKS)<br/>本機 Kubernetes |
+| [適用於容器的 Azure 監視器](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure 專用的 Kubernetes 管理工具 | Azure Kubernetes Services (AKS) |
+| [Kubernetes Web UI (儀表板) ](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes 管理工具，可以監視及管理本機的 Kubernetes 叢集 | Azure Kubernetes Service (AKS)<br/>本機 Kubernetes |
 | [適用於 Service Fabric 的 Azure 入口網站](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure、內部部署、本機開發及其他雲端中用來管理 Service Fabric 叢集的線上和桌面版本 | Azure Service Fabric |
 | [容器監視 (Azure 監視器)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的容器管理與監視解決方案。 可以透過[適用於容器的 Azure 監視器](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)管理 Kubernetes 叢集。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS 及其他項目。 |
 
@@ -34,12 +34,12 @@ ms.locfileid: "71834511"
 
 叢集部署和管理的另一個選擇是 Azure Service Fabric。 [Service Fabric](https://azure.microsoft.com/services/service-fabric/) 是　Microsoft 微服務平台，其中包含容器協調流程以及開發人員程式設計模型，用來建置可高度擴充的微服務應用程式。 Service Fabric 支援 Linux 和 Windows 容器中的 Docker，且可以在 Windows 和 Linux 伺服器中執行。
 
-以下是服務交換矩陣管理工具：
+以下是 Service Fabric 管理工具：
 
 - [適用於 Service Fabric 的 Azure 入口網站](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)可對叢集進行叢集相關作業 (建立/更新/刪除)，或設定其基礎結構 (VM、負載平衡器、網路功能等)。
 
 - [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) 是一種特製化的 Web UI 和桌面多平台工具，可從節點/VM 觀點以及從應用程式和服務觀點，提供對 Service Fabric 叢集的見解及作業。
 
 >[!div class="step-by-step"]
->[上一個](run-microservices-based-applications-in-production.md)
->[下一個](monitor-containerized-application-services.md)
+>[上一個](run-microservices-based-applications-in-production.md) 
+>[下一步](monitor-containerized-application-services.md)

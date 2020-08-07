@@ -11,18 +11,18 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fbd3c8062892f106ec17d0fef86d5ad7f1207d20
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4390f46492ada4b15d187be4c43a4f7865f64a80
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303474"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916978"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>如何從遷移 Newtonsoft.Json 至System.Text.Json
 
 本文說明如何從遷移 [Newtonsoft.Json](https://www.newtonsoft.com/json) 至 <xref:System.Text.Json> 。
 
-`System.Text.Json`命名空間提供從 JavaScript 物件標記法（JSON）序列化及還原序列化的功能。 連結 `System.Text.Json` 庫包含在[.net Core 3.0](https://aka.ms/netcore3download)共用架構中。 若為其他目標 framework，請安裝 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 套件。 封裝支援：
+`System.Text.Json`命名空間提供從 JavaScript 物件標記法 (JSON) 序列化和還原序列化的功能。 連結 `System.Text.Json` 庫包含在[.net Core 3.0](https://aka.ms/netcore3download)共用架構中。 若為其他目標 framework，請安裝 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 套件。 封裝支援：
 
 * .NET Standard 2.0 和更新版本
 * .NET Framework 4.7.2 和更新版本
@@ -32,7 +32,7 @@ ms.locfileid: "87303474"
 
 <!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md). [Restore this when the roadmap is updated.]-->
 
-本文大部分是關於如何使用 <xref:System.Text.Json.JsonSerializer> API，但它也包含如何使用 <xref:System.Text.Json.JsonDocument> （代表檔物件模型或 DOM）、 <xref:System.Text.Json.Utf8JsonReader> 和類型的指引 <xref:System.Text.Json.Utf8JsonWriter> 。
+本文大部分是關於如何使用 <xref:System.Text.Json.JsonSerializer> API，但它也包含如何使用 <xref:System.Text.Json.JsonDocument> (的指引，其代表檔物件模型或 DOM) 、 <xref:System.Text.Json.Utf8JsonReader> 和 <xref:System.Text.Json.Utf8JsonWriter> 類型。
 
 ## <a name="table-of-differences-between-no-locnewtonsoftjson-and-no-locsystemtextjson"></a>和之間的差異資料表 Newtonsoft.JsonSystem.Text.Json
 
@@ -91,11 +91,11 @@ ms.locfileid: "87303474"
 
 在還原序列化期間， `Newtonsoft.Json` 預設會執行不區分大小寫的屬性名稱比對。 <xref:System.Text.Json>預設值會區分大小寫，這可提供較佳的效能，因為它會執行完全相符的作業。 如需如何執行不區分大小寫比對的相關資訊，請參閱不[區分大小寫的屬性](system-text-json-how-to.md#case-insensitive-property-matching)比對。
 
-如果您使用 `System.Text.Json` ASP.NET Core 間接地使用，則不需要執行任何動作來取得之類的行為 `Newtonsoft.Json` 。 ASP.NET Core 指定使用時， [camel 大小寫屬性名稱](system-text-json-how-to.md#use-camel-case-for-all-json-property-names)和不區分大小寫比對的設定 `System.Text.Json` 。
+如果您使用 `System.Text.Json` ASP.NET Core 間接地使用，則不需要執行任何動作來取得之類的行為 `Newtonsoft.Json` 。 ASP.NET Core 指定使用時， [camel 大小寫屬性名稱](system-text-json-how-to.md#use-camel-case-for-all-json-property-names)和不區分大小寫比對的設定 `System.Text.Json` 。 預設值是在[JsonOptions 類別](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L22-L28)中設定。
 
 ### <a name="minimal-character-escaping"></a>最少字元的轉義
 
-在序列化期間， `Newtonsoft.Json` 相對於讓字元通過，而不將它們進行轉義，相當寬鬆。 也就是說，它不會以 `\uxxxx` `xxxx` 字元的程式碼點取代它們。 當它將其轉義時，會在 `\` 字元前面發出（例如， `"` 變成 `\"` ）。 <xref:System.Text.Json>根據預設，會將更多字元轉義以提供跨網站腳本（XSS）或資訊洩漏攻擊的深層防禦保護，並藉由使用六個字元的順序來執行此動作。 `System.Text.Json`預設會將所有非 ASCII 字元加上轉義，因此如果您在中使用，就不需要執行任何動作 `StringEscapeHandling.EscapeNonAscii` `Newtonsoft.Json` 。 `System.Text.Json`根據預設，也會對 HTML 敏感字元進行轉義。 如需如何覆寫預設行為的相關資訊 `System.Text.Json` ，請參閱[自訂字元編碼](system-text-json-how-to.md#customize-character-encoding)。
+在序列化期間， `Newtonsoft.Json` 相對於讓字元通過，而不將它們進行轉義，相當寬鬆。 也就是說，它不會以 `\uxxxx` `xxxx` 字元的程式碼點取代它們。 當它將其轉義時，會在 `\` 字元前面發出 (例如，會 `"` 變成 `\"`) 。 <xref:System.Text.Json>根據預設，將更多字元加上轉義，以針對跨網站腳本 (XSS) 或資訊洩漏攻擊提供深度防禦保護，並使用六個字元的順序來執行此動作。 `System.Text.Json`預設會將所有非 ASCII 字元加上轉義，因此如果您在中使用，就不需要執行任何動作 `StringEscapeHandling.EscapeNonAscii` `Newtonsoft.Json` 。 `System.Text.Json`根據預設，也會對 HTML 敏感字元進行轉義。 如需如何覆寫預設行為的相關資訊 `System.Text.Json` ，請參閱[自訂字元編碼](system-text-json-how-to.md#customize-character-encoding)。
 
 ### <a name="comments"></a>註解
 
@@ -103,7 +103,7 @@ ms.locfileid: "87303474"
 
 ### <a name="trailing-commas"></a>尾端逗號
 
-在還原序列化期間， `Newtonsoft.Json` 預設會忽略尾端逗號。 它也會忽略多個尾端逗號（例如 `[{"Color":"Red"},{"Color":"Green"},,]` ）。 <xref:System.Text.Json>預設值是擲回尾端逗號的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不允許它們。 如需如何接受這些專案的相關資訊 `System.Text.Json` ，請參閱[允許批註和尾端逗號](system-text-json-how-to.md#allow-comments-and-trailing-commas)。 沒有任何方法可以允許多個尾端逗號。
+在還原序列化期間， `Newtonsoft.Json` 預設會忽略尾端逗號。 它也會忽略多個尾端逗號 (例如， `[{"Color":"Red"},{"Color":"Green"},,]`) 。 <xref:System.Text.Json>預設值是擲回尾端逗號的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不允許它們。 如需如何接受這些專案的相關資訊 `System.Text.Json` ，請參閱[允許批註和尾端逗號](system-text-json-how-to.md#allow-comments-and-trailing-commas)。 沒有任何方法可以允許多個尾端逗號。
 
 ### <a name="converter-registration-precedence"></a>轉換器註冊優先順序
 
@@ -129,7 +129,9 @@ ms.locfileid: "87303474"
 
 `Newtonsoft.Json`預設不具有最大深度限制。 <xref:System.Text.Json>預設限制為64，且可透過設定來進行設定 <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType> 。
 
-### <a name="json-strings-property-names-and-string-values"></a>JSON 字串（屬性名稱和字串值）
+如果您是 `System.Text.Json` 使用 ASP.NET Core 間接地使用，則預設的最大深度限制為32。 預設值與模型系結相同，而且是在[JsonOptions 類別](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L17-L20)中設定。
+
+### <a name="json-strings-property-names-and-string-values"></a> (屬性名稱和字串值的 JSON 字串) 
 
 在還原序列化期間， `Newtonsoft.Json` 接受以雙引號、單引號或不含引號括住的屬性名稱。 它接受以雙引號或單引號括住的字串值。 例如， `Newtonsoft.Json` 接受下列 JSON：
 
@@ -198,7 +200,7 @@ The JSON value could not be converted to System.String.
 
 ### <a name="quoted-numbers"></a>加上引號的數位
 
-`Newtonsoft.Json`可以序列化或還原序列化 JSON 字串所代表的數位（以引號括住）。 例如，它可以接受： `{"DegreesCelsius":"23"}` 而不是 `{"DegreesCelsius":23}` 。 若要在中啟用該行為 <xref:System.Text.Json> ，請執行如下列範例所示的自訂轉換子。 轉換器會處理定義為的屬性 `long` ：
+`Newtonsoft.Json`可以序列化或還原序列化 JSON 字串所代表的數位， (以引號括住) 。 例如，它可以接受： `{"DegreesCelsius":"23"}` 而不是 `{"DegreesCelsius":23}` 。 若要在中啟用該行為 <xref:System.Text.Json> ，請執行如下列範例所示的自訂轉換子。 轉換器會處理定義為的屬性 `long` ：
 
 * 它會將它們序列化為 JSON 字串。
 * 它會在還原序列化時，接受引號內的 JSON 數位和數位。
@@ -229,8 +231,8 @@ The JSON value could not be converted to System.String.
 
 當還原序列化 `Newtonsoft.Json` 為時 <xref:System.Object> ，它會：
 
-* 推斷 JSON 裝載中基本值的類型（不是 `null` ），並以已裝箱的物件傳回預存 `string` 、 `long` 、 `double` 、 `boolean` 或 `DateTime` 。 *基本值*是單一 json 值，例如 json 數位、字串、、 `true` `false` 或 `null` 。
-* `JObject` `JArray` 針對 JSON 承載中的複雜值，傳回或。 *複雜值*是以括弧（）括住的 JSON 索引鍵/值組集合， `{}` 或括弧內的值清單（ `[]` ）。 大括弧或括弧內的屬性和值可以有額外的屬性或值。
+* 推斷 JSON 承載中的基本數值型別 (不是 `null`) ，並以已封裝的物件傳回預存 `string` 、 `long` 、 `double` 、 `boolean` 或 `DateTime` 。 *基本值*是單一 json 值，例如 json 數位、字串、、 `true` `false` 或 `null` 。
+* `JObject` `JArray` 針對 JSON 承載中的複雜值，傳回或。 *複雜值*是以大括弧括住的 JSON 索引鍵/值組集合， (`{}`) 或方括弧 () 中的值清單 `[]` 。 大括弧或括弧內的屬性和值可以有額外的屬性或值。
 * 當裝載具有 JSON 常值時，會傳回 null 參考 `null` 。
 
 <xref:System.Text.Json>會在還原 `JsonElement` 序列化為時，儲存基本和複雜值的已裝箱 <xref:System.Object> ，例如：
@@ -251,9 +253,9 @@ The JSON value could not be converted to System.String.
 * `NullValueHandling`設定為 `Ignore` ，而
 * 在還原序列化期間，JSON 會針對不可為 null 的實數值型別包含 null 值。
 
-在相同的案例中， <xref:System.Text.Json> 會擲回例外狀況。 （對應的 null 處理設定為 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> 。）
+在相同的案例中， <xref:System.Text.Json> 會擲回例外狀況。  (對應的 null 處理設定為 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> 。 ) 
 
-如果您擁有目標型別，最佳的解決方法是讓屬性成為可為 null （例如，變更 `int` 為 `int?` ）。
+如果您擁有目標型別，最佳的解決方法是將屬性設為可為 null (例如，變更 `int` 為 `int?`) 。
 
 另一個因應措施是建立類型的轉換器，例如下列範例，其會處理類型的 null 值 `DateTimeOffset` ：
 
@@ -275,7 +277,7 @@ The JSON value could not be converted to System.String.
 }
 ```
 
-在還原序列化之後， `Date` 屬性具有1/1/0001 （ `default(DateTimeOffset)` ），也就是會覆寫在此函式中設定的值。 假設有相同的 POCO 和 JSON，還原序列化 `Newtonsoft.Json` 會在屬性中留下 1/1/2001 `Date` 。
+在還原序列化之後， `Date` 屬性具有 1/1/0001 (`default(DateTimeOffset)`) ，也就是會覆寫在此函式中設定的值。 假設有相同的 POCO 和 JSON，還原序列化 `Newtonsoft.Json` 會在屬性中留下 1/1/2001 `Date` 。
 
 ### <a name="deserialize-to-immutable-classes-and-structs"></a>還原序列化為不可變的類別和結構
 
@@ -393,10 +395,10 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json`可讓您在序列化或還原序列化程式的數個點執行自訂程式碼：
 
-* OnDeserializing （開始還原序列化物件時）
-* OnDeserialized （完成還原序列化物件時）
-* OnSerializing （開始序列化物件時）
-* OnSerialized （完成序列化物件時）
+* 開始還原序列化物件時，OnDeserializing () 
+* 完成將物件還原序列化時，OnDeserialized () 
+* 開始序列化物件時，OnSerializing () 
+* 完成序列化物件的 OnSerialized () 
 
 在中 <xref:System.Text.Json> ，您可以藉由撰寫自訂的轉換器來模擬回呼。 下列範例顯示 POCO 的自訂轉換子。 轉換器包含的程式碼會在每個對應至回呼的點上顯示訊息 `Newtonsoft.Json` 。
 
@@ -464,9 +466,9 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json`可讓您使用 `TraceWriter` 來查看由序列化或還原序列化所產生的記錄，以進行 debug。 <xref:System.Text.Json>不會進行記錄。
 
-## <a name="jsondocument-and-jsonelement-compared-to-jtoken-like-jobject-jarray"></a>相較于 JToken 的 JsonDocument 和 JsonElement （例如 JObject、JArray）
+## <a name="jsondocument-and-jsonelement-compared-to-jtoken-like-jobject-jarray"></a>JsonDocument 和 JsonElement 相較于 JToken (，例如 JObject、JArray) 
 
-<xref:System.Text.Json.JsonDocument?displayProperty=fullName>提供從現有 JSON 承載剖析和建立**唯讀**檔物件模型（DOM）的功能。 DOM 提供 JSON 承載中資料的隨機存取。 組成裝載的 JSON 元素可以透過類型來存取 <xref:System.Text.Json.JsonElement> 。 `JsonElement`類型會提供 api，將 JSON 文字轉換成常見的 .net 類型。 `JsonDocument`公開 <xref:System.Text.Json.JsonDocument.RootElement> 屬性。
+<xref:System.Text.Json.JsonDocument?displayProperty=fullName>提供從現有 JSON 承載 (DOM) 剖析和建立**唯讀**檔物件模型的功能。 DOM 提供 JSON 承載中資料的隨機存取。 組成裝載的 JSON 元素可以透過類型來存取 <xref:System.Text.Json.JsonElement> 。 `JsonElement`類型會提供 api，將 JSON 文字轉換成常見的 .net 類型。 `JsonDocument`公開 <xref:System.Text.Json.JsonDocument.RootElement> 屬性。
 
 ### <a name="jsondocument-is-idisposable"></a>JsonDocument 是 IDisposable
 
@@ -501,9 +503,9 @@ public JsonElement ReturnFileName(JsonElement source)
 
 ### <a name="jsondocument-is-read-only"></a>JsonDocument 是唯讀的
 
-<xref:System.Text.Json>DOM 無法加入、移除或修改 JSON 元素。 其設計是以這種方式來進行效能，並減少剖析一般 JSON 承載大小的配置（也就是 < 1 MB）。 如果您的案例目前使用可修改的 DOM，下列其中一個因應措施可能是可行的：
+<xref:System.Text.Json>DOM 無法加入、移除或修改 JSON 元素。 其設計是以這種方式來執行效能，並減少剖析一般 JSON 承載大小的配置 (也就是 < 1 MB) 。 如果您的案例目前使用可修改的 DOM，下列其中一個因應措施可能是可行的：
 
-* 若要 `JsonDocument` 從頭開始建立（也就是不會將現有的 JSON 承載傳遞至 `Parse` 方法），請使用寫入 JSON 文字， `Utf8JsonWriter` 並剖析該輸出，使其成為新的 `JsonDocument` 。
+* 若要 `JsonDocument` 從頭建立 (也就是，不需將現有的 JSON 承載傳遞至 `Parse` 方法) ，請使用寫入 json 文字， `Utf8JsonWriter` 並剖析該輸出，使其成為新的 `JsonDocument` 。
 * 若要修改現有的 `JsonDocument` ，請使用它來寫入 JSON 文字，並在您撰寫時進行變更，並剖析該輸出以建立新的 `JsonDocument` 。
 * 若要合併現有的 JSON 檔，相當 `JObject.Merge` 于 `JContainer.Merge` 來自的或 api `Newtonsoft.Json` ，請參閱[此 GitHub 問題](https://github.com/dotnet/corefx/issues/42466#issuecomment-570475853)。
 
@@ -513,9 +515,9 @@ public JsonElement ReturnFileName(JsonElement source)
 
 ### <a name="how-to-search-a-jsondocument-and-jsonelement-for-sub-elements"></a>如何搜尋子項目的 JsonDocument 和 JsonElement
 
-使用或從搜尋 JSON `JObject` 權杖 `JArray` `Newtonsoft.Json` 通常會相對快速，因為它們是在某個字典中的查閱。 相較之下，搜尋 `JsonElement` 需要順序搜尋屬性，因此速度相對緩慢（例如使用時 `TryGetProperty` ）。 <xref:System.Text.Json>的設計目的是要將初始剖析時間減至最少，而不是查閱時間。 因此，在搜尋物件時，請使用下列方法來優化效能 `JsonDocument` ：
+使用或從搜尋 JSON `JObject` 權杖 `JArray` `Newtonsoft.Json` 通常會相對快速，因為它們是在某個字典中的查閱。 相較之下，搜尋 `JsonElement` 需要順序搜尋屬性，因此速度會相對緩慢 (例如使用 `TryGetProperty`) 時。 <xref:System.Text.Json>的設計目的是要將初始剖析時間減至最少，而不是查閱時間。 因此，在搜尋物件時，請使用下列方法來優化效能 `JsonDocument` ：
 
-* 使用內建的列舉值（ <xref:System.Text.Json.JsonElement.EnumerateArray%2A> 和 <xref:System.Text.Json.JsonElement.EnumerateObject%2A> ），而不是執行您自己的索引或迴圈。
+* 使用內建的列舉值 (<xref:System.Text.Json.JsonElement.EnumerateArray%2A> 和 <xref:System.Text.Json.JsonElement.EnumerateObject%2A>) ，而不是執行您自己的索引或迴圈。
 * 請不要 `JsonDocument` 透過每個屬性，使用來執行順序搜尋 `RootElement` 。 相反地，請根據 JSON 資料的已知結構來搜尋嵌套的 JSON 物件。 例如，如果您要尋找 `Grade` 物件中的屬性 `Student` ，請對物件執行迴圈， `Student` 並取得 `Grade` 每一個的值，而不是搜尋所有 `JsonElement` 尋找屬性的物件 `Grade` 。 執行後者會導致相同資料的不必要傳遞。
 
 如需程式碼範例，請參閱[使用 JsonDocument 來存取資料](system-text-json-how-to.md#use-jsondocument-for-access-to-data)。
@@ -536,17 +538,17 @@ public JsonElement ReturnFileName(JsonElement source)
 
 ### <a name="read-with-a-stream-or-pipereader"></a>讀取資料流程或 PipeReader
 
-`Utf8JsonReader`支援從 utf-8 編碼的[ReadOnlySpan \<byte> ](xref:System.ReadOnlySpan%601)或[ \<byte> ReadOnlySequence](xref:System.Buffers.ReadOnlySequence%601)讀取（這是從讀取的結果 <xref:System.IO.Pipelines.PipeReader> ）。
+`Utf8JsonReader`支援從 utf-8 編碼的[ \<byte> ReadOnlySpan](xref:System.ReadOnlySpan%601)或[ \<byte> ReadOnlySequence](xref:System.Buffers.ReadOnlySequence%601)讀取 (這是從) 讀取的結果 <xref:System.IO.Pipelines.PipeReader> 。
 
-對於同步讀取，您可以讀取 JSON 承載，直到資料流程結尾到位元組陣列，然後將它傳遞到讀取器。 若要從字串讀取（編碼為 UTF-16），請呼叫 <xref:System.Text.Encoding.UTF8> 。<xref:System.Text.Encoding.GetBytes%2A> 首先，將字串轉碼為 UTF-8 編碼的位元組陣列。 然後將它傳遞給 `Utf8JsonReader` 。
+對於同步讀取，您可以讀取 JSON 承載，直到資料流程結尾到位元組陣列，然後將它傳遞到讀取器。 若要從編碼為 UTF-16) 的字串讀取 (，請呼叫 <xref:System.Text.Encoding.UTF8> 。<xref:System.Text.Encoding.GetBytes%2A> 首先，將字串轉碼為 UTF-8 編碼的位元組陣列。 然後將它傳遞給 `Utf8JsonReader` 。
 
-因為 `Utf8JsonReader` 會將輸入視為 JSON 文字，所以會將 utf-8 位元組順序標記（BOM）視為不正確 json。 呼叫端必須先篩選掉，再將資料傳遞給讀取器。
+因為 `Utf8JsonReader` 會將輸入視為 JSON 文字，所以 (BOM) 的 utf-8 位元組順序標記會視為不正確 json。 呼叫端必須先篩選掉，再將資料傳遞給讀取器。
 
 如需程式碼範例，請參閱[使用 Utf8JsonReader](system-text-json-how-to.md#use-utf8jsonreader)。
 
 ### <a name="read-with-multi-segment-readonlysequence"></a>閱讀多區段 ReadOnlySequence
 
-如果您的 JSON 輸入是[ReadOnlySpan \<byte> ](xref:System.ReadOnlySpan%601)， `ValueSpan` 則當您執行讀取迴圈時，可以從讀取器上的屬性存取每個 json 元素。 不過，如果您的輸入是[ReadOnlySequence \<byte> ](xref:System.Buffers.ReadOnlySequence%601) （這是從讀取的結果 <xref:System.IO.Pipelines.PipeReader> ），某些 JSON 元素可能會跨物件的多個區段 `ReadOnlySequence<byte>` 。 <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A>在連續記憶體區塊中無法存取這些元素。 相反地，每當您有多個區段做 `ReadOnlySequence<byte>` 為輸入時，請輪詢 <xref:System.Text.Json.Utf8JsonReader.HasValueSequence%2A> 讀取器上的屬性，以瞭解如何存取目前的 JSON 元素。 以下是建議的模式：
+如果您的 JSON 輸入是[ReadOnlySpan \<byte> ](xref:System.ReadOnlySpan%601)， `ValueSpan` 則當您執行讀取迴圈時，可以從讀取器上的屬性存取每個 json 元素。 不過，如果您的輸入是[ReadOnlySequence \<byte> ](xref:System.Buffers.ReadOnlySequence%601) (這是從) 讀取的結果 <xref:System.IO.Pipelines.PipeReader> ，某些 JSON 元素可能會跨物件的多個區段 `ReadOnlySequence<byte>` 。 <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A>在連續記憶體區塊中無法存取這些元素。 相反地，每當您有多個區段做 `ReadOnlySequence<byte>` 為輸入時，請輪詢 <xref:System.Text.Json.Utf8JsonReader.HasValueSequence%2A> 讀取器上的屬性，以瞭解如何存取目前的 JSON 元素。 以下是建議的模式：
 
 ```csharp
 while (reader.Read())
@@ -660,7 +662,7 @@ doc.WriteTo(writer);
 
 ### <a name="write-timespan-uri-or-char-values"></a>寫入 Timespan、Uri 或 char 值
 
-`JsonTextWriter`提供 `WriteValue` [TimeSpan](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_18.htm)、 [Uri](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_22.htm)和[char](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_3.htm)值的方法。 `Utf8JsonWriter`沒有對等的方法。 相反地，請將這些值格式化為字串（例如，藉由呼叫 `ToString()` ）並呼叫 <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A> 。
+`JsonTextWriter`提供 `WriteValue` [TimeSpan](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_18.htm)、 [Uri](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_22.htm)和[char](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_3.htm)值的方法。 `Utf8JsonWriter`沒有對等的方法。 相反地，您可以呼叫將這些值格式化為字串 (`ToString()` ，例如) 並呼叫 <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A> 。
 
 ### <a name="multi-targeting"></a>多目標
 

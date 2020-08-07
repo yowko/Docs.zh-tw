@@ -6,12 +6,12 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 6b41363008405032f4233448f134a8a602dbd26a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 4a0c88472d2b19efb2ff0f58395003b1b6409131
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173155"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914888"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -31,10 +31,11 @@ gRPC 在最熱門的開發堆疊中提供全方位的支援，包括 JAVA、Java
 
 gRPC 會使用 HTTP/2 作為其傳輸通訊協定。 與 HTTP 1.1 相容，HTTP/2 具備許多先進的功能：
 
-- 用於資料傳輸的二進位通訊協定-與 HTTP 1.1 不同，後者會以純文字傳送資料。
+- 用於資料傳輸的二進位框架通訊協定-與 HTTP 1.1 不同，這是以文字為基礎。
 - 多工支援透過相同的連接傳送多個平行要求-HTTP 1.1 限制一次處理一個要求/回應訊息。
 - 雙向的全雙工通訊，可同時傳送用戶端要求和伺服器回應。
 - 內建串流功能，可讓要求和回應以非同步方式串流處理大型資料集。
+- 可減少網路使用量的標頭壓縮。
 
 gRPC 是輕量且高效能。 其最高可比 JSON 序列化更快，且訊息60-80% 較小。 在 Microsoft [Windows Communication Foundation 中 (WCF) ](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf)用語中，gRPC 效能超過高度優化[NetTCP](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)系結的速度和效率。 不同于 NetTCP，這是 Microsoft stack 的優先，gRPC 是跨平臺。
 
@@ -84,7 +85,7 @@ SDK 包含端點路由、內建 IoC 和記錄的工具。 開放原始碼 Kestre
 - 點對點即時通訊-gRPC 可以即時推播訊息，而不需輪詢，而且具有雙向串流的絕佳支援。
 - 網路限制環境–二進位 gRPC 訊息一律會小於對等的以文字為基礎的 JSON 訊息。
 
-在撰寫本文時，gRPC 主要是與後端服務搭配使用。 大部分的新式瀏覽器無法提供支援前端 gRPC 用戶端所需的 HTTP/2 控制層級。 話雖如此，還有一個[早期的計畫](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/)，可以讓以 JavaScript 或技術建立的瀏覽器型應用程式進行 gRPC 通訊 Blazor WebAssembly 。 [適用于 .net 的 GRPC Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md)可讓 ASP.NET Core gRPC 應用程式支援瀏覽器應用程式中的 gRPC 功能：
+在撰寫本文時，gRPC 主要是與後端服務搭配使用。 現代化的瀏覽器無法提供支援前端 gRPC 用戶端所需的 HTTP/2 控制層級。 話雖如此，支援[使用 .net 的 GRPC Web](https://devblogs.microsoft.com/aspnet/grpc-web-for-net-now-available/) ，讓您能夠從以 JavaScript 或技術為基礎的瀏覽器應用程式進行 gRPC 通訊 Blazor WebAssembly 。 [gRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md)可讓 ASP.NET Core gRPC 應用程式支援瀏覽器應用程式中的 gRPC 功能：
 
 - 強型別、程式碼產生的用戶端
 - Compact Protobuf 訊息

@@ -3,12 +3,12 @@ title: 適用于 .NET 的 MSBuild 屬性
 description: .NET Core SDK 所瞭解之 MSBuild 屬性和專案的參考。
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164382"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916254"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 專案的 MSBuild 參考
 
@@ -40,7 +40,7 @@ ms.locfileid: "87164382"
 `TargetFrameworks`當您想要讓應用程式以多個平臺為目標時，請使用屬性。 如需有效的目標 framework 名字標記清單，請參閱[SDK 樣式專案中的目標 framework](../../standard/frameworks.md#supported-target-framework-versions)。
 
 > [!NOTE]
-> 如果 `TargetFramework` 指定了（單數），則會忽略這個屬性。
+> 如果 `TargetFramework` 指定 (單數) ，則會忽略這個屬性。
 
 ```xml
 <PropertyGroup>
@@ -87,7 +87,7 @@ ms.locfileid: "87164382"
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 
-`RuntimeIdentifier`屬性可讓您指定專案的單一[執行時間識別碼（RID）](../rid-catalog.md) 。 RID 允許發佈獨立式部署。
+`RuntimeIdentifier`屬性可讓您為專案指定[ (RID) ](../rid-catalog.md)的單一執行時間識別碼。 RID 允許發佈獨立式部署。
 
 ```xml
 <PropertyGroup>
@@ -97,10 +97,10 @@ ms.locfileid: "87164382"
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 
-`RuntimeIdentifiers`屬性可讓您指定專案的[執行時間識別碼（rid）清單（](../rid-catalog.md)以分號分隔）。 如果您需要針對多個執行時間發行，請使用這個屬性。 `RuntimeIdentifiers`會在還原時使用，以確保正確的資產在圖形中。
+`RuntimeIdentifiers`屬性可讓您指定專案的[rid)  (的執行時間識別碼](../rid-catalog.md)清單（以分號分隔）。 如果您需要針對多個執行時間發行，請使用這個屬性。 `RuntimeIdentifiers`會在還原時使用，以確保正確的資產在圖形中。
 
 > [!TIP]
-> `RuntimeIdentifier`（單數）可以在只需要單一執行時間時提供更快速的組建。
+> `RuntimeIdentifier`當只需要單一執行時間時， (單數) 可以提供更快速的組建。
 
 ```xml
 <PropertyGroup>
@@ -182,7 +182,7 @@ ms.locfileid: "87164382"
 
 ### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
 
-`ConcurrentGarbageCollection`屬性會設定是否啟用[背景（並行）垃圾收集](../../standard/garbage-collection/background-gc.md)。 將值設定為 `false` ，以停用背景垃圾收集。 如需詳細資訊，請參閱 system.string [. [並行/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent)]。
+`ConcurrentGarbageCollection`屬性會設定是否啟用[背景 (並行) 垃圾收集](../../standard/garbage-collection/background-gc.md)。 將值設定為 `false` ，以停用背景垃圾收集。 如需詳細資訊，請參閱[背景 GC](../run-time-config/garbage-collector.md#background-gc)。
 
 ```xml
 <PropertyGroup>
@@ -202,7 +202,7 @@ ms.locfileid: "87164382"
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
 
-屬性會將 `RetainVMGarbageCollection` 垃圾收集行程設定為將已刪除的記憶體區段放在待命清單上以供日後使用或釋放它們。 將值設定為，會 `true` 指示垃圾收集行程將區段放在待命清單上。 如需詳細資訊，請參閱[RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm)。
+屬性會將 `RetainVMGarbageCollection` 垃圾收集行程設定為將已刪除的記憶體區段放在待命清單上以供日後使用或釋放它們。 將值設定為，會 `true` 指示垃圾收集行程將區段放在待命清單上。 如需詳細資訊，請參閱[保留 VM](../run-time-config/garbage-collector.md#retain-vm)。
 
 ```xml
 <PropertyGroup>
@@ -212,7 +212,7 @@ ms.locfileid: "87164382"
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
 
-屬性會設定 `ServerGarbageCollection` 應用程式是否使用[工作站垃圾收集或伺服器垃圾收集](../../standard/garbage-collection/workstation-server-gc.md)。 將值設定為 `true` ，以使用伺服器垃圾收集。 如需詳細資訊，請參閱[system.object/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)。
+屬性會設定 `ServerGarbageCollection` 應用程式是否使用[工作站垃圾收集或伺服器垃圾收集](../../standard/garbage-collection/workstation-server-gc.md)。 將值設定為 `true` ，以使用伺服器垃圾收集。 如需詳細資訊，請參閱[工作站與伺服器](../run-time-config/garbage-collector.md#workstation-vs-server)。
 
 ```xml
 <PropertyGroup>
@@ -242,7 +242,7 @@ ms.locfileid: "87164382"
 
 ### <a name="tieredcompilation"></a>TieredCompilation
 
-屬性會設定 `TieredCompilation` 即時（JIT）編譯器是否使用[分層式編譯](../whats-new/dotnet-core-3-0.md#tiered-compilation)。 將值設定為 `false` ，以停用階層式編譯。 如需詳細資訊，請參閱[分層式編譯](../run-time-config/compilation.md#tiered-compilation)。
+屬性會設定 `TieredCompilation` 即時 (JIT) 編譯器是否使用階層式[編譯](../whats-new/dotnet-core-3-0.md#tiered-compilation)。 將值設定為 `false` ，以停用階層式編譯。 如需詳細資訊，請參閱[分層式編譯](../run-time-config/compilation.md#tiered-compilation)。
 
 ```xml
 <PropertyGroup>
@@ -320,7 +320,7 @@ ms.locfileid: "87164382"
 </ItemGroup>
 ```
 
-### <a name="reference"></a>參考
+### <a name="reference"></a>參考資料
 
 `Reference`專案會定義元件檔的參考。
 

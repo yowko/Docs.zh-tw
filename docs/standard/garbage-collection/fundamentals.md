@@ -11,16 +11,16 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 438188b6d694bdeab772c43ef92e5621c68facff
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990213"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917026"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 
-在 common language runtime （CLR）中，垃圾收集行程（GC）可作為自動記憶體管理員。 垃圾收集行程會管理應用程式的記憶體配置和釋放。 對於使用 managed 程式碼的開發人員，這表示您不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可以排除常見的問題，例如忘記釋放物件，並導致記憶體流失，或嘗試存取已釋放之物件的記憶體。
+在 common language runtime (CLR) 中，垃圾收集行程 (GC) 會作為自動記憶體管理員。 垃圾收集行程會管理應用程式的記憶體配置和釋放。 對於使用 managed 程式碼的開發人員，這表示您不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可以排除常見的問題，例如忘記釋放物件，並導致記憶體流失，或嘗試存取已釋放之物件的記憶體。
 
 本文描述垃圾收集的核心概念。
 
@@ -50,17 +50,17 @@ ms.locfileid: "84990213"
 
 - 虛擬記憶體可以有三種狀態：
 
-  | State | 描述 |
+  | 州 | 描述 |
   |---------|---------|
   | 免費 | 記憶體區塊沒有任何參考，可進行配置。 |
-  | Reserved | 記憶體區塊可供您使用，但是無法用於任何其他配置要求。 不過，在此記憶體區塊認可之前，您無法將資料儲存到其中。 |
+  | 保留 | 記憶體區塊可供您使用，但是無法用於任何其他配置要求。 不過，在此記憶體區塊認可之前，您無法將資料儲存到其中。 |
   | 認可 | 記憶體區塊會指派給實體儲存區。 |
 
 - 虛擬位址空間可能會分成片段。 這表示，位址空間中有可用的區塊，也稱為可用的洞 (Hole)。 要求虛擬記憶體配置時，虛擬記憶體管理程式必須找到大小可滿足配置要求的單一可用區塊。 即使您有 2 GB 的可用空間，需要 2 GB 的配置也不會成功，除非該可用空間全都在單一位址區塊中。
 
 - 如果沒有足夠的虛擬位址空間可供保留或實體空間認可，您可以用完記憶體。
 
-  即使實體記憶體壓力（也就是實體記憶體的需求）偏低，也會使用分頁檔案。 第一次實體記憶體壓力很高時，作業系統必須在實體記憶體中騰出空間來儲存資料，而且會將實體記憶體中的一些資料備份至分頁檔。 該資料在需要之前不會分頁，因此可能會在實體記憶體不足壓力的情況下遇到分頁。
+  即使實體記憶體壓力 (也會使用分頁檔案，) 的實體記憶體需求較低。 第一次實體記憶體壓力很高時，作業系統必須在實體記憶體中騰出空間來儲存資料，而且會將實體記憶體中的一些資料備份至分頁檔。 該資料在需要之前不會分頁，因此可能會在實體記憶體不足壓力的情況下遇到分頁。
   
 ### <a name="memory-allocation"></a>記憶體配置
 
@@ -94,7 +94,7 @@ CLR 初始化記憶體回收行程之後，記憶體回收行程就會配置用�
 
 每個 Managed 處理序都有一個 Managed 堆積。 處理序中的所有執行緒都會對相同堆積上的物件配置記憶體。
 
-為了保留記憶體，垃圾收集行程會呼叫 Windows [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)函式，並針對 managed 應用程式一次保留一個記憶體區段。 垃圾收集行程也會視需要保留區段，並藉由呼叫 Windows [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)函數，將區段釋放回作業系統（在清除任何物件之後）。
+為了保留記憶體，垃圾收集行程會呼叫 Windows [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)函式，並針對 managed 應用程式一次保留一個記憶體區段。 垃圾收集行程也會視需要保留區段，並將區段釋放回作業系統 (在藉由呼叫 Windows [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)函數來) 清除任何物件之後。
 
 > [!IMPORTANT]
 > 記憶體回收行程所配置的區段大小是依實作而定，有可能在任何時間，包括在定期更新時做變更。 您的應用程式永遠都不應該對相關或根據特定區段的大小做出假設，也不應嘗試設定區段配置的可用記憶體數量。
@@ -122,7 +122,7 @@ GC 演算法是以數個考慮為基礎：
 
 - 層**代 0**。 這是最新的層代而且包含存留較短的物件。 存留較短的物件範例是暫存變數。 記憶體回收最常在這個層代中進行。
 
-  新配置的物件會形成新一代的物件，而且是隱含的層代0集合。 不過，如果它們是大型物件，則會移至大型物件堆積（LOH），這有時稱為「層*代 3*」。 第3代是以邏輯方式在層代2中收集的實體世代。
+  新配置的物件會形成新一代的物件，而且是隱含的層代0集合。 不過，如果它們是大型物件，則會移至大型物件堆積 (LOH) ，有時稱為「層*代 3*」。 第3代是以邏輯方式在層代2中收集的實體世代。
 
   大部分物件都會在層代0回收以進行垃圾收集，而不會存留到下一代。
   
@@ -138,9 +138,9 @@ GC 演算法是以數個考慮為基礎：
 
   第2代中的物件在回收後仍會保留在層代2中，直到判斷未來的集合無法連線為止。
   
-  在「層代2」中也會收集大型物件堆積上的物件（有時也稱為「層*代 3*」）。
+  大型物件堆積上的物件 (，有時也稱為層*代 3*) 也會在層代2中收集。
 
-當條件許可時，記憶體回收會針對特定層代進行。 回收層代是指回收該層代中的物件及其所有較新的層代。 層代2垃圾收集也稱為完整垃圾收集，因為它會回收所有層代中的物件（也就是 managed 堆積中的所有物件）。
+當條件許可時，記憶體回收會針對特定層代進行。 回收層代是指回收該層代中的物件及其所有較新的層代。 層代2垃圾收集也稱為完整垃圾收集，因為它會回收所有層代中的物件 (也就是說，managed 堆積中的所有物件都) 。
 
 ### <a name="survival-and-promotions"></a>未回收和提升
 
@@ -158,7 +158,7 @@ GC 演算法是以數個考慮為基礎：
 
 暫時層代會配置在稱為暫時區段的記憶體區段中。 記憶體回收行程所取得的每個新區段都會成為新的暫時區段，而且包含在層代 0 記憶體回收中未被回收的物件。 舊的暫時區段會成為新的層代 2 區段。
 
-暫時區段的大小會根據系統是32位還是64位，以及它正在執行的垃圾收集行程類型而有所不同（[工作站或伺服器 GC](workstation-server-gc.md)）。 下表顯示暫時區段的預設大小。
+暫時區段的大小會根據系統是32位還是64位，以及它正在執行 ([工作站或伺服器 GC](workstation-server-gc.md)) 的垃圾收集行程類型而有所不同。 下表顯示暫時區段的預設大小。
 
 |工作站/伺服器 GC|32 位元|64 位元|
 |-|-------------|-------------|
@@ -183,10 +183,10 @@ GC 演算法是以數個考慮為基礎：
 
   因為層代 2 回收可能會佔據多個區段，所以提升至層代 2 的物件可能會移至較舊區段。 層代 1 和層代 2 的未回收物件都可能會移至不同的區段，因為它們都會被提升至層代 2。
 
-  一般來說，大型物件堆積（LOH）不會壓縮，因為複製大型物件會造成效能上的負面影響。 不過，在 .NET Core 和 .NET Framework 4.5.1 和更新版本中，您可以使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性，視需要壓縮大型物件堆積。 此外，藉由指定下列任一項來設定固定限制時，會自動壓縮 LOH：
+  一般來說，大型物件堆積 (LOH) 不會壓縮，因為複製大型物件會造成效能上的負面影響。 不過，在 .NET Core 和 .NET Framework 4.5.1 和更新版本中，您可以使用 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性，視需要壓縮大型物件堆積。 此外，藉由指定下列任一項來設定固定限制時，會自動壓縮 LOH：
 
   - 容器的記憶體限制。
-  - [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit)或[GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent)執行時間設定選項。
+  - [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#heap-limit)或[GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#heap-limit-percent)執行時間設定選項。
 
 記憶體回收行程會使用下列資訊來判斷物件是否使用中：
 

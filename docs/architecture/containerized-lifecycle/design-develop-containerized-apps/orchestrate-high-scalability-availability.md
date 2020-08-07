@@ -1,13 +1,13 @@
 ---
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 您必須使用協調器來部署和管理實際生產應用程式，以便處理所有容器的健康狀態、工作負載和生命週期。
-ms.date: 02/15/2019
-ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.date: 08/06/2020
+ms.openlocfilehash: 61c66e1f3835df543cbc9ba23d9c098ad52c90cd
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374477"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915470"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -38,7 +38,7 @@ Docker CLI 符合在一部主機上管理一個容器的需求，但在管理多
 | 平台 | 註解 |
 |:---:|:---|
 | **Kubernetes** <br/> ![Kubernetes 標誌的影像。](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) 是開放原始碼產品，可提供叢集基礎結構、容器排程到容器協調等功能。 它可讓您跨主機叢集自動化部署、規模調整及應用程式容器的作業。 <br/> <br/> *Kubernetes* 提供以容器為中心的基礎結構，讓您將應用程式容器分組為邏輯單元，以便於管理及探索。 <br/> <br/> 比起 Windows，*Kubernetes* 在 Linux 中相對成熟穩定。 |
-| **Azure Kubernetes Service (AKS)** <br/> ![Azure Kubernetes Service 標誌的影像。](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [Azure Kubernetes Service （AKS）](https://azure.microsoft.com/services/kubernetes-service/)是 Azure 中的受控 Kubernetes 容器協調流程服務，可簡化 Kubernetes 叢集的管理、部署和作業。 |
+| **Azure Kubernetes Service (AKS)** <br/> ![Azure Kubernetes Service 標誌的影像。](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [Azure Kubernetes Service (AKS) ](https://azure.microsoft.com/services/kubernetes-service/)是 Azure 中的受控 Kubernetes 容器協調流程服務，可簡化 Kubernetes 叢集的管理、部署和作業。 |
 | **Azure Service Fabric** <br/> ![Azure Service Fabric 標誌的影像。](./media/orchestrate-high-scalability-availability/azure-service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 是一種 Microsoft 微服務平台，可用來建置應用程式。 它是一種服務的[協調器](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)，並可建立電腦叢集。 Service Fabric 可以將服務部署為容器或一般處理序。 它甚至可以將處理序中的服務與相同應用程式和叢集內容器中的服務混合。 <br/> <br/> *Service Fabric* 叢集可以在 Azure 中部署、內部部署或部署到任何雲端。 不過，Azure 中的部署會透過受控方法簡化。 <br/> <br/> *Service Fabric* 也提供其他選用的規範 [Service Fabric 程式設計模型](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/)，例如[具狀態的服務](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/)和 [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)。 <br/> <br/> 比起 Linux，*Service Fabric* 在 Windows 中相對成熟 (但仍在持續演進中)。 <br/> <br/> 自 2017 年起，Service Fabric 即可支援 Linux 和 Windows 容器。 |
 | **Azure Service Fabric 網格** <br/> ![Azure Service Fabric 網格標誌的影像。](./media/orchestrate-high-scalability-availability/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) 提供與 Service Fabric 相同的可靠性、任務關鍵性效能和規模，但還提供完全受控且無伺服器的平台。 您不需要管理叢集、VM、儲存體或網路組態。 只要專注於您的應用程式開發即可。 <br/> <br/> *Service Fabric 網狀*架構支援 Windows 和 Linux 容器，可讓您使用您選擇的任何程式設計語言和架構進行開發。
 
@@ -62,7 +62,7 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes 的開發環境
 
-在 [Docker 於 2018 年 7 月宣告](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)的開發環境中，Kubernetes 也可以在單一開發電腦 (Windows 10 或 macOS) 上執行，只要安裝 [Docker Desktop](https://www.docker.com/community-edition) 即可。 您稍後可以部署到雲端 (AKS) 來進一步執行整合測試，如圖 4-8 所示。
+在 [Docker 於 2018 年 7 月宣告](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)的開發環境中，Kubernetes 也可以在單一開發電腦 (Windows 10 或 macOS) 上執行，只要安裝 [Docker Desktop](https://www.docker.com/products/docker-desktop) 即可。 您稍後可以部署到雲端 (AKS) 來進一步執行整合測試，如圖 4-8 所示。
 
 ![此圖顯示開發電腦上的 Kubernetes，然後部署至 AKS。](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 
@@ -74,7 +74,7 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 隨附於 AKS 預設安裝的軟體均不會收取任何費用。 所有預設選項都是使用開放原始碼軟體來實作。 AKS 可供 Azure 中的多部虛擬機器使用。 您僅需支付所選計算執行個體的費用，以及其他已使用的基礎結構資源費用，例如儲存體和網路功能。 AKS 本身沒有任何累加的費用。
 
-如需根據和原始檔案部署至 Kubernetes 的進一步執行資訊 `kubectl` `.yaml` ，請參閱[部署至 Azure Kubernetes Service （AKS）](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS))。
+如需根據和原始檔案部署至 Kubernetes 的進一步執行資訊 `kubectl` `.yaml` ，請參閱[Deploy TO Azure Kubernetes Service (AKS) ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS))。
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>使用 Helm 圖表部署到 Kubernetes 叢集中
 
@@ -112,7 +112,7 @@ Azure Dev Spaces 提供空間概念，讓您能夠在隔離的狀況下工作，
 
 ## <a name="additional-resources"></a>其他資源
 
-- **開始使用 Azure Kubernetes Service （AKS）** \
+- **開始使用 Azure Kubernetes Service (AKS) ** \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \

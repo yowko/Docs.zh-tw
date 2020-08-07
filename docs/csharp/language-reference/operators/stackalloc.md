@@ -5,12 +5,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc expression [C#]
-ms.openlocfilehash: 32ac85f678912cb7e5f506244265b1bf57d0b4aa
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 4f20f3262b77cc2fe16480e53d13960e68d230b5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916675"
 ---
 # <a name="stackalloc-expression-c-reference"></a>stackalloc expression (c # 參考) 
 
@@ -20,24 +20,24 @@ ms.locfileid: "87555602"
 
 - 從 c # 7.2、 <xref:System.Span%601?displayProperty=nameWithType> 或開始， <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 如下列範例所示：
 
-  [!code-csharp[stackalloc span](snippets/StackallocOperator.cs#AssignToSpan)]
+  [!code-csharp[stackalloc span](snippets/shared/StackallocOperator.cs#AssignToSpan)]
 
   當您將堆疊配置的記憶體區塊指派至 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 變數時，您不需要使用 [unsafe](../keywords/unsafe.md) 內容。
 
   當您處理那些類型時，您可以使用[條件式](conditional-operator.md)或指派運算式中的 `stackalloc` 運算式，如下列範例所示：
 
-  [!code-csharp[stackalloc expression](snippets/StackallocOperator.cs#AsExpression)]
+  [!code-csharp[stackalloc expression](snippets/shared/StackallocOperator.cs#AsExpression)]
 
   從 c # 8.0 開始， `stackalloc` 只要允許或變數，您就可以在其他運算式內使用運算式 <xref:System.Span%601> <xref:System.ReadOnlySpan%601> ，如下列範例所示：
 
-  [!code-csharp[stackalloc in nested expressions](snippets/StackallocOperator.cs#Nested)]
+  [!code-csharp[stackalloc in nested expressions](snippets/shared/StackallocOperator.cs#Nested)]
 
   > [!NOTE]
   > 我們建議盡可能使用 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601> 類型來處理堆疊配置的記憶體。
 
 - [指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)，如下列範例所示：
 
-  [!code-csharp[stackalloc pointer](snippets/StackallocOperator.cs#AssignToPointer)]
+  [!code-csharp[stackalloc pointer](snippets/shared/StackallocOperator.cs#AssignToPointer)]
 
   如先前的範例所示，您在使用指標類型時必須使用 `unsafe` 內容。
 
@@ -47,7 +47,7 @@ ms.locfileid: "87555602"
 
 - 限制您配置的記憶體數量 `stackalloc` ：
 
-  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+  [!code-csharp[limit stackalloc](snippets/shared/StackallocOperator.cs#LimitStackalloc)]
 
   因為堆疊上可用的記憶體數量取決於執行程式碼的環境，所以當您定義實際的限制值時請保守。
 
@@ -57,7 +57,7 @@ ms.locfileid: "87555602"
 
 從 c # 7.3 開始，您可以使用陣列初始化運算式語法來定義新配置之記憶體的內容。 下列範例示範進行該操作的數種方法：
 
-[!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
+[!code-csharp[stackalloc initialization](snippets/shared/StackallocOperator.cs#StackallocInit)]
 
 在 [運算式] 中 `stackalloc T[E]` ， `T` 必須是[非受控型](../builtin-types/unmanaged-types.md)別，而且 `E` 必須評估為非負[整數](../builtin-types/integral-numeric-types.md)值。
 

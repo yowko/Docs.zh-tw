@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 05bc6ce00adc8c874b88ccc8da5afbcfc702585b
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 3728778b31a4b4adc51933e8fdc6287f28e03d83
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555286"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916709"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指標相關運算子 (C# 參考)
 
@@ -46,11 +46,11 @@ ms.locfileid: "87555286"
 
 一元 `&` 運算子會傳回其運算元的位址：
 
-[!code-csharp[address of local](snippets/PointerOperators.cs#AddressOf)]
+[!code-csharp[address of local](snippets/shared/PointerOperators.cs#AddressOf)]
 
 `&` 運算子的運算元必須是固定的變數。 「固定」** 變數是位在不受[記憶體回收行程](../../../standard/garbage-collection/index.md)作業影響之儲存位置的變數。 在前述範例中，區域變數 `number` 是固定的變數，因為它位於堆疊上。 會受到記憶體回收行程影響且位在儲存位置的變數 (例如重新配置)，稱為「可移動」** 變數。 物件欄位和陣列元素是可移動變數的範例。 如果您使用[ `fixed` 語句](../keywords/fixed-statement.md)來 [修正] 或 [釘選]，可以取得可移動變數的位址。 取得的位址只在語句區塊內有效 `fixed` 。 下列範例顯示如何使用 `fixed` 語句和 `&` 運算子：
 
-[!code-csharp[address of fixed](snippets/PointerOperators.cs#AddressOfFixed)]
+[!code-csharp[address of fixed](snippets/shared/PointerOperators.cs#AddressOfFixed)]
 
 您無法取得常數或值的位址。
 
@@ -62,7 +62,7 @@ ms.locfileid: "87555286"
 
 一元指標間接運算子 `*` 取得其運算元指向的變數。 它也稱之為取值運算子。 `*` 運算子的運算元必須是指標型別。
 
-[!code-csharp[pointer indirection](snippets/PointerOperators.cs#PointerIndirection)]
+[!code-csharp[pointer indirection](snippets/shared/PointerOperators.cs#PointerIndirection)]
 
 您不能將 `*` 運算子套用至 `void*` 型別的運算式。
 
@@ -84,7 +84,7 @@ x->y
 
 下列範例示範 `->` 運算子的用法：
 
-[!code-csharp[pointer member access](snippets/PointerOperators.cs#MemberAccess)]
+[!code-csharp[pointer member access](snippets/shared/PointerOperators.cs#MemberAccess)]
 
 您不能將 `->` 運算子套用至 `void*` 型別的運算式。
 
@@ -94,7 +94,7 @@ x->y
 
 下例示範如何使用指標和 `[]` 運算子存取陣列元素：
 
-[!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
+[!code-csharp[pointer element access](snippets/shared/PointerOperators.cs#ElementAccess)]
 
 在上述範例中， [ `stackalloc` 運算式](stackalloc.md)會配置堆疊上的記憶體區塊。
 
@@ -128,7 +128,7 @@ x->y
 
 下例示範 `+` 運算子加指標的用法：
 
-[!code-csharp[pointer addition](snippets/PointerOperators.cs#AddNumber)]
+[!code-csharp[pointer addition](snippets/shared/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>指標減法
 
@@ -136,7 +136,7 @@ x->y
 
 下例示範指標減法：
 
-[!code-csharp[pointer subtraction](snippets/PointerOperators.cs#SubtractPointers)]
+[!code-csharp[pointer subtraction](snippets/shared/PointerOperators.cs#SubtractPointers)]
 
 ### <a name="pointer-increment-and-decrement"></a>指標遞增和遞減
 
@@ -146,7 +146,7 @@ x->y
 
 下例示範前置和後置遞增運算子的行為：
 
-[!code-csharp[pointer increment](snippets/PointerOperators.cs#Increment)]
+[!code-csharp[pointer increment](snippets/shared/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>指標比較運算子
 

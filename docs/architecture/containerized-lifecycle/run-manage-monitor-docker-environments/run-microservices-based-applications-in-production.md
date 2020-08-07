@@ -1,13 +1,13 @@
 ---
 title: 在生產環境中執行已撰寫和以微服務為基礎的應用程式
 description: 了解在生產環境中執行容器型應用程式的主要元件
-ms.date: 02/15/2019
-ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: a045804e2e40dcf401a697d3e58b13f05ca61b94
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68672915"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915055"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生產環境中執行已撰寫和以微服務為基礎的應用程式
 
@@ -19,7 +19,7 @@ ms.locfileid: "68672915"
 
 當應用程式跨多個主機系統相應放大時，管理每個主機系統和抽離基礎平台複雜性的能力會具有吸引力。 這正是協調器和排程器可提供的功能。 讓我們看看簡要介紹：
 
-- **計畫程式**。「排程」是指系統管理員將服務檔案載入主機系統的能力，該主機系統會確定如何執行特定容器。 在 Docker 叢集中啟動容器通常稱為排程。 雖然排程意指載入服務定義的特定動作，但以更一般的意義而言，排程器負責連結到主機的 init 系統，以所需的容量來管理服務。
+- 排程**器。**「排程」是指系統管理員將服務檔案載入主機系統的能力，該主機系統會確定如何執行特定容器。 在 Docker 叢集中啟動容器通常稱為排程。 雖然排程意指載入服務定義的特定動作，但以更一般的意義而言，排程器負責連結到主機的 init 系統，以所需的容量來管理服務。
 
    叢集排程器有多個目標：有效率地使用叢集資源、使用使用者提供的放置條件約束、快速排程應用程式以使其不處於擱置狀態、具有某種程度的「公平性」、較能承受錯誤，以及一律可用。
 
@@ -32,5 +32,5 @@ ms.locfileid: "68672915"
 協調器和排程器所提供的功能很難從頭開發與建立，因此您通常希望使用廠商提供的協調流程解決方案。
 
 >[!div class="step-by-step"]
->[上一個](index.md)
->[下一個](manage-production-docker-environments.md)
+>[上一個](index.md) 
+>[下一步](manage-production-docker-environments.md)

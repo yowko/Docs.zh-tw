@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 242442e9b0ad41a4945c66421bb537cb6cb9b6c0
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 688a1fcff84a6e8f2fa31533a2bc459bf8c8717a
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556471"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916789"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a> (c # 參考) 的成員存取運算子和運算式
 
@@ -56,17 +56,17 @@ ms.locfileid: "87556471"
 
 - 使用 `.` 來存取命名空間內的嵌套命名空間，如下列指示詞範例[ `using` ](../keywords/using-directive.md)所示：
 
-  [!code-csharp[nested namespaces](snippets/MemberAccessOperators.cs#NestedNamespace)]
+  [!code-csharp[nested namespaces](snippets/shared/MemberAccessOperators.cs#NestedNamespace)]
 
 - 使用 `.` 來形成「限定名稱」** 以存取命名空間內的類型，如下列程式碼所示：
 
-  [!code-csharp[qualified name](snippets/MemberAccessOperators.cs#QualifiedName)]
+  [!code-csharp[qualified name](snippets/shared/MemberAccessOperators.cs#QualifiedName)]
 
   使用指示詞[，以選擇性 `using` ](../keywords/using-directive.md)地使用限定名稱。
 
 - 使用 `.` 來存取[類型成員](../../programming-guide/classes-and-structs/index.md#members) (靜態及非靜態)，如下列程式碼所示：
 
-  [!code-csharp-interactive[type members](snippets/MemberAccessOperators.cs#TypeMemberAccess)]
+  [!code-csharp-interactive[type members](snippets/shared/MemberAccessOperators.cs#TypeMemberAccess)]
 
 您也可以使用 `.` 來存取[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "87556471"
 
 以下範例將示範如何存取陣列元素：
 
-[!code-csharp-interactive[array access](snippets/MemberAccessOperators.cs#Arrays)]
+[!code-csharp-interactive[array access](snippets/shared/MemberAccessOperators.cs#Arrays)]
 
 如果陣列索引超出陣列的對應維度界限，就會擲回 <xref:System.IndexOutOfRangeException>。
 
@@ -90,7 +90,7 @@ ms.locfileid: "87556471"
 
 下列範例會使用 .NET <xref:System.Collections.Generic.Dictionary%602> 類型來示範索引子存取：
 
-[!code-csharp-interactive[indexer access](snippets/MemberAccessOperators.cs#Indexers)]
+[!code-csharp-interactive[indexer access](snippets/shared/MemberAccessOperators.cs#Indexers)]
 
 索引子可讓您透過與陣列編製索引類似的方式，為使用者定義型別的執行個體編製索引。 不同于陣列索引（必須是整數），索引子參數可以宣告為任何類型。
 
@@ -126,13 +126,13 @@ A?.B?[C];
 
 下列範例示範 `?.` 和 `?[]` 運算子的用法：
 
-[!code-csharp-interactive[null-conditional operators](snippets/MemberAccessOperators.cs#NullConditional)]
+[!code-csharp-interactive[null-conditional operators](snippets/shared/MemberAccessOperators.cs#NullConditional)]
 
 上述範例也會使用[null 聯合運算子 `??` ](null-coalescing-operator.md)來指定要評估的替代運算式，以防 null 條件運算的結果為 `null` 。
 
 如果 `a.x` 或 `a[x]` 屬於不可為 null 的實值型別 `T` ， `a?.x` 或 `a?[x]` 為對應的[可為 null 實值型](../builtin-types/nullable-value-types.md)別 `T?` 。 如果您需要類型為的運算式 `T` ，請將 null 聯合運算子套用 `??` 至 null 條件運算式，如下列範例所示：
 
-[!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
+[!code-csharp-interactive[null-conditional with null-coalescing](snippets/shared/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
 
 在上述範例中，如果您不使用 `??` 運算子，則 `numbers?.Length < 2` 會在 `false` 為時評估為 `numbers` `null` 。
 
@@ -167,7 +167,7 @@ if (handler != null)
 
 下列範例示範如何呼叫方法 (使用或不使用引數)，以及叫用委派：
 
-[!code-csharp-interactive[invocation with ()](snippets/MemberAccessOperators.cs#Invocation)]
+[!code-csharp-interactive[invocation with ()](snippets/shared/MemberAccessOperators.cs#Invocation)]
 
 當您使用 [`new`](new-operator.md) 運算子叫用[建構函式](../../programming-guide/classes-and-structs/constructors.md)時，您也會使用括號。
 
@@ -181,7 +181,7 @@ if (handler != null)
 
 在 c # 8.0 和更新版本中提供， `^` 運算子表示從序列結尾的元素位置。 針對長度的序列 `length` ，會 `^n` 指向具有 `length - n` 從序列開頭位移的元素。 例如， `^1` 指向序列的最後一個專案，並 `^length` 指向序列的第一個元素。
 
-[!code-csharp[index from end](snippets/MemberAccessOperators.cs#IndexFromEnd)]
+[!code-csharp[index from end](snippets/shared/MemberAccessOperators.cs#IndexFromEnd)]
 
 如上述範例所示，expression 的 `^e` 類型為 <xref:System.Index?displayProperty=nameWithType> 。 在 expression 中 `^e` ，的結果 `e` 必須可以隱含地轉換為 `int` 。
 
@@ -191,7 +191,7 @@ if (handler != null)
 
 在 c # 8.0 和更新版本中提供，運算子會將 `..` 索引範圍的開始和結束指定為其運算元。 左側運算元是範圍的*內含*開頭。 右運算元是範圍的*獨佔*結束。 其中一個運算元可以是從序列開頭或結尾的索引，如下列範例所示：
 
-[!code-csharp[range examples](snippets/MemberAccessOperators.cs#Ranges)]
+[!code-csharp[range examples](snippets/shared/MemberAccessOperators.cs#Ranges)]
 
 如上述範例所示，expression 的 `a..b` 類型為 <xref:System.Range?displayProperty=nameWithType> 。 在 expression 中 `a..b` ，和的 `a` 結果 `b` 必須可以隱含地轉換為 `int` 或 <xref:System.Index> 。
 
@@ -201,7 +201,7 @@ if (handler != null)
 - `..b`相當於`0..b`
 - `..`相當於`0..^0`
 
-[!code-csharp[ranges with omitted operands](snippets/MemberAccessOperators.cs#RangesOptional)]
+[!code-csharp[ranges with omitted operands](snippets/shared/MemberAccessOperators.cs#RangesOptional)]
 
 如需詳細資訊，請參閱[索引和範圍](../../tutorials/ranges-indexes.md)。
 

@@ -1,13 +1,13 @@
 ---
 title: Docker 應用程式中的狀態和資料
 description: 了解將狀態儲存在容器化應用程式的可用選項。
-ms.date: 02/15/2019
-ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: dc9a1a3eccb77e9fd67e69fd3295f3db1edf5e66
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394649"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915330"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
 
@@ -43,13 +43,13 @@ ms.locfileid: "72394649"
 
 **繫結裝載**已持續提供很長時間，允許將任何資料夾對應到容器中的掛接點。 繫結裝載的限制比磁碟區更多，且具有某些重要的安全性問題，因此磁碟區是建議的選項。
 
-裝載是僅駐留在主機記憶體中的虛擬資料夾，永遠不會寫入檔案系統。 ** `tmpfs` ** 它們既快速又安全，但會使用記憶體，且僅適用於非持續性資料。
+** `tmpfs` 裝載**是虛擬資料夾，只會存留在主機的記憶體中，而且永遠不會寫入檔案系統。 它們既快速又安全，但會使用記憶體，且僅適用於非持續性資料。
 
 如圖 4-5 所示，一般 Docker 磁碟區可儲存在容器本身之外，但必須在主機伺服器或 VM 的實體界限內。 不過，Docker 容器無法從一部主機伺服器或 VM 存取另一部主機伺服器或 VM 的磁碟區。 換句話說，使用這些磁碟區，將無法管理在不同 Docker 主機上執行容器間所共用的資料，雖然仍可透過支援遠端主機的磁碟區驅動程式來達到此目的。
 
-![顯示存儲在容器外部的 Docker 卷的圖表。](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
+![顯示儲存在容器外部之 Docker 磁片區的圖表。](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
-**圖4-5**。 容器式應用程式的磁碟區和外部資料來源
+**圖 4-5**。 容器式應用程式的磁碟區和外部資料來源
 
 此外，當 Docker 容器是由協調器所管理時，容器可能會根據叢集所執行的最佳化，在主機之間「移動」。 因此，不建議您使用資料磁碟區來儲存商務資料。 但對於處理追蹤檔案、時態性檔案或不影響商務資料一致性的類似檔案而言，這會是不錯的機制。
 
@@ -63,8 +63,8 @@ ms.locfileid: "72394649"
 
 - 資料表儲存體可儲存結構化的資料集。 表格儲存體是 NoSQL 索引鍵屬性資料存放區，可快速開發及存取大量資料。
 
-**關聯式資料庫和 NoSQL 資料庫。** 外部資料庫有許多選擇，從關係資料庫（如 SQL Server、PostgreSQL、Oracle）或 NoSQL 資料庫（如 Azure Cosmos DB、MongoDB 等）進行。這些資料庫不會作為本指南的一部分進行解釋，因為它們完全是一個不同的主題。
+**關聯式資料庫和 NoSQL 資料庫。** 外部資料庫有許多選擇，包括 SQL Server、于 postgresql、Oracle 之類的關係資料庫，或如 Azure Cosmos DB、MongoDB 等的 NoSQL 資料庫。這些資料庫不會在本指南中說明，因為它們是完全不同的主題。
 
 >[!div class="step-by-step"]
->[上一個](monolithic-applications.md)
->[下一個](soa-applications.md)
+>[上一個](monolithic-applications.md) 
+>[下一步](soa-applications.md)

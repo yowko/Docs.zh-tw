@@ -10,12 +10,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: d3d6a5032a5b4fb7059eb93b0024fd292b74fb70
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 58c60dad3badc62f850f737a3d210ec486809272
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555236"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916732"
 ---
 # <a name="-and--operators-c-reference"></a>?? 還有？= 運算子 (c # 參考) 
 
@@ -23,13 +23,13 @@ ms.locfileid: "87555236"
 
 在 c # 8.0 和更新版本中提供，如果左運算元評估為，則 null 聯合指派運算子只會將 `??=` 其右運算元的值指派給其左邊的運算元 `null` 。 如果左側運算元評估為非 Null，則 `??=` 運算子不會評估右側運算元。
 
-[!code-csharp[null-coalescing assignment](snippets/NullCoalescingOperator.cs#Assignment)]
+[!code-csharp[null-coalescing assignment](snippets/shared/NullCoalescingOperator.cs#Assignment)]
 
 運算子的左邊運算元 `??=` 必須是變數、[屬性](../../programming-guide/classes-and-structs/properties.md)或[索引子](../../programming-guide/indexers/index.md)元素。
 
 在 c # 7.3 和更早版本中，運算子的左邊運算元類型 `??` 必須是[參考型別](../keywords/reference-types.md)或[可為 null 的實數值型別](../builtin-types/nullable-value-types.md)。 從 c # 8.0 開始，這項需求會取代為下列內容：和運算子左邊運算元的類型 `??` `??=` 不可以是不可為 null 的實數值型別。 特別是，從 c # 8.0 開始，您可以使用 null 聯合運算子搭配不受限制的類型參數：
 
-[!code-csharp[unconstrained type parameter](snippets/NullCoalescingOperator.cs#UnconstrainedType)]
+[!code-csharp[unconstrained type parameter](snippets/shared/NullCoalescingOperator.cs#UnconstrainedType)]
 
 Null 聯合運算子是右向關聯。 也就是表單的運算式
 
@@ -51,17 +51,17 @@ d ??= (e ??= f)
 
 - 在具有[null 條件運算子？. 和？ []](member-access-operators.md#null-conditional-operators--and-)的運算式中，您可以使用 `??` 運算子來提供另一個運算式，以便在具有 null 條件運算的運算式結果為時進行評估 `null` ：
 
-  [!code-csharp-interactive[with null-conditional](snippets/NullCoalescingOperator.cs#WithNullConditional)]
+  [!code-csharp-interactive[with null-conditional](snippets/shared/NullCoalescingOperator.cs#WithNullConditional)]
 
 - 當您使用[可為 null 的實數值型別](../builtin-types/nullable-value-types.md)，而且需要提供基礎實數值型別的值時，請使用 `??` 運算子來指定要提供的值，以防可為 null 的類型值為 `null` ：
 
-  [!code-csharp-interactive[with nullable types](snippets/NullCoalescingOperator.cs#WithNullableTypes)]
+  [!code-csharp-interactive[with nullable types](snippets/shared/NullCoalescingOperator.cs#WithNullableTypes)]
 
   如果可為 Null 型別的值為 `null` 時要使用的值為基礎實值型別的預設值，請使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
 
 - 從 c # 7.0 開始，您可以使用[ `throw` 運算式](../keywords/throw.md#the-throw-expression)做為運算子的右手運算元， `??` 讓引數檢查程式碼更簡潔：
 
-  [!code-csharp[with throw expression](snippets/NullCoalescingOperator.cs#WithThrowExpression)]
+  [!code-csharp[with throw expression](snippets/shared/NullCoalescingOperator.cs#WithThrowExpression)]
 
   上述範例中也會示範如何使用[運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)定義屬性。
 

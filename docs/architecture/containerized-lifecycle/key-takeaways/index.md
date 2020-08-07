@@ -1,13 +1,13 @@
 ---
 title: 金鑰附帶
 description: 檢閱本指南的重點。
-ms.date: 04/20/2020
-ms.openlocfilehash: 51662c52ce0917aa89b86151cf7cab5f13f846e6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.date: 08/06/2020
+ms.openlocfilehash: 7f582e7cdc8cab2753189ed4cf4d88ce14d77da9
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502778"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914956"
 ---
 # <a name="key-takeaways"></a>金鑰附帶
 
@@ -19,7 +19,7 @@ ms.locfileid: "84502778"
 
 - 對於具有大量複雜度和延展性需求之任何以微服務為基礎的應用程式或多容器應用程式，Docker 協調器 (例如 AAzure Kubernetes Service (AKS) 和 Azure Service Fabric 中所提供的協調器) 是基本且不可或缺的。
 
-- 支援持續整合/持續部署（CI/CD）並聯機至實際執行 Docker 環境的端對端 DevOps 環境，可以提供靈活性，並最終改善應用程式上市時間。
+- 一種端對端的 DevOps 環境，支援 (CI/CD) 的持續整合/持續部署，並聯機到生產環境 Docker 環境，可以提供靈活性，並最終改善應用程式上市時間。
 
 - Azure DevOps Services 可藉由從 CI/CD 管線部署到 Docker 環境，以大幅簡化您的 DevOps 環境。 此陳述式適用於簡單的 Docker 環境，以及進階微服務和以 Azure 為基礎的容器協調器。
 

@@ -1,33 +1,33 @@
 ---
 title: 什麼是 Docker？
 description: 進一步增進您對 Docker 的理解，以下提供的簡單比喻或許能幫上您。
-ms.date: 02/15/2019
-ms.openlocfilehash: e3b3685f2fc6d5a9d33bb176d04ca910f0289344
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 73b6032465583861169a8ac2bed81585027f42ec
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76919883"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915066"
 ---
 # <a name="what-is-docker"></a>什麼是 Docker？
 
 [Docker](https://www.docker.com/) 是[開放原始碼專案](https://github.com/docker/docker)，將應用程式自動化部署為可攜式且可自足的容器，在雲端或內部部署上執行。 Docker 也是一家升級及發展這項技術的[公司](https://www.docker.com/)，並且與雲端、Linux 和 Windows 廠商 (包括 Microsoft) 合作。
 
-![顯示 Docker 容器可以運行的位置的圖表。](./media/what-is-docker/docker-containers-run-anywhere.png)
+![此圖顯示 Docker 容器可執行檔位置。](./media/what-is-docker/docker-containers-run-anywhere.png)
 
-**圖1-2**. Docker 將容器部署在混合式雲端的所有圖層
+**圖 1-2**。 Docker 將容器部署在混合式雲端的所有圖層
 
-如上圖所示，Docker 容器可以在客戶資料中心的本地、外部服務提供者或雲中、Azure 上運行。 Docker 映射容器也可以在 Linux 和 Windows 上本機運行。 不過，Windows 映像只能在 Windows 主機上執行，而 Linux 映像可以在 Linux 主機和 Windows 主機上執行 (目前是使用 Hyper-V Linux VM)，其中主機是指伺服器或 VM。
+如上圖所示，在 Azure 上的外部服務提供者或雲端中，Docker 容器可以在任何位置執行，不論是在內部部署的客戶資料中心內。 Docker 映射容器也可以在 Linux 和 Windows 上以原生方式執行。 不過，Windows 映像只能在 Windows 主機上執行，而 Linux 映像可以在 Linux 主機和 Windows 主機上執行 (目前是使用 Hyper-V Linux VM)，其中主機是指伺服器或 VM。
 
-開發人員可以使用 Windows、Linux 或 macOS 上的開發環境。 在開發電腦上，開發人員執行的 Docker 主機是 Docker 映像部署所在，包括應用程式及其相依性。 在 Linux 或 Mac 上工作的開發人員會使用 Linux 型的 Docker 主機，他們只能建立適用於 Linux 容器的映像。 （在 Mac 上工作的開發人員可以從 macOS 編輯代碼或運行 Docker CLI，但截至本文編寫時，容器不會直接在 macOS 上運行。在 Windows 上工作的開發人員可以為 Linux 或 Windows 容器創建映射。
+開發人員可以使用 Windows、Linux 或 macOS 上的開發環境。 在開發電腦上，開發人員執行的 Docker 主機是 Docker 映像部署所在，包括應用程式及其相依性。 在 Linux 或 Mac 上工作的開發人員會使用 Linux 型的 Docker 主機，他們只能建立適用於 Linux 容器的映像。  (在 Mac 上工作的開發人員可以從 macOS 編輯程式碼或執行 Docker 命令列介面 (CLI) ，但在撰寫本文時，容器不會直接在 macOS 上執行。 ) 在 Windows 上工作的開發人員可以建立 Linux 或 Windows 容器的映射。
 
 為了在開發環境中裝載容器並且提供其他開發人員工具，Docker 提供適用於 Windows 或 macOS 的 [Docker Community Edition (CE)](https://www.docker.com/community-edition)。 這些產品都會安裝必要的 VM (Docker 主機) 以裝載容器。 Docker 也提供 [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition)，這是專為企業開發所設計的，由在生產環境中建置、交付及執行大型商務關鍵性應用程式的 IT 小組來使用。
 
 若要執行 [Windows 容器](/virtualization/windowscontainers/about/)，有兩種執行階段：
 
-- **Windows Server 容器**透過程序和命名空間隔離技術，提供應用程式隔離。 與 Windows Server 容器共用核心的對象為容器主機以及在此主機上執行的所有容器。
+- **Windows Server 容器**可透過程序和命名空間隔離技術，提供應用程式隔離功能。 與 Windows Server 容器共用核心的對象為容器主機以及在此主機上執行的所有容器。
 
-- **Hyper-V 容器**可在 Windows Server 容器提供的隔離上展開，方法是在高度最佳化的虛擬機器中執行每個容器。 在此組態中，容器主機的核心不會與 Hyper-V 容器共用，以提供更好的隔離。
+- **Hyper-V 容器**可藉由在高度最佳化的虛擬機器中執行每個容器，擴充 Windows Server 容器所提供的隔離能力。 在此組態中，容器主機的核心不會與 Hyper-V 容器共用，以提供更好的隔離。
 
 這些容器映像的建立及運作方式都相同。 不同之處在於從執行 Hyper-V 容器的映像建立容器需要額外參數。 如需詳細資料，請參閱 [Hyper-V 容器](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container)。
 
@@ -37,9 +37,9 @@ ms.locfileid: "76919883"
 
 ![顯示 VM 和容器環境比較的圖表。](./media/what-is-docker/comparison-vms-docker-conatiners.png)
 
-**圖1-3**。 傳統虛擬機器與 Docker 容器的比較
+**圖 1-3**。 傳統虛擬機器與 Docker 容器的比較
 
-如上圖所示，對於 VM，主機伺服器中有三個基層。 自下而上：基礎結構、主機作業系統和虛擬機器管理程式。 最重要的是，每個 VM 都有自己的作業系統和所有必要的庫。 另一方面，對於 Docker，主機伺服器僅具有基礎結構和作業系統。 最重要的是，容器引擎使容器隔離，但允許它們共用單個基礎作業系統的服務。
+如上圖所示，針對 Vm，主機伺服器中有三個基本層。 從底部：基礎結構、主機作業系統和虛擬程式。 除此之外，每個 VM 都有自己的 OS 和所有必要的程式庫。 另一方面，針對 Docker，主機伺服器只有基礎結構和作業系統。 除此之外，容器引擎會讓容器保持隔離，但可讓它們共用單一基礎作業系統的服務。
 
 因為容器只需要很少的資源 (例如，它們不需要完整的作業系統)，所以容易部署且會快速啟動。 這可讓您擁有更高的密度，這表示可讓您在相同硬體單位上執行更多服務，藉此降低成本。
 
@@ -80,5 +80,5 @@ Docker 中的每一層都是在執行命令 (例如安裝程式) 之後，檔案
 同樣地，您可以將容器當作是已安裝映像硬碟的「電腦」。 容器，就像電腦一樣，可以開啟或關閉。
 
 >[!div class="step-by-step"]
->[上一個](index.md)
->[下一個](docker-terminology.md)
+>[上一個](introduction-to-containers-and-docker.md) 
+>[下一步](docker-terminology.md)

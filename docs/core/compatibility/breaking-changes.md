@@ -2,12 +2,12 @@
 title: 重大變更
 description: 瞭解每個 .NET Core 版本中的重大變更。
 ms.date: 11/27/2019
-ms.openlocfilehash: bc7faae3b00d412aa8d50fe181a26873232a0939
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 550553ef14cd0635fbe4a5346c457a41264a4b82
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415728"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916263"
 ---
 # <a name="breaking-change-selectors"></a>重大變更選取器
 
@@ -17,13 +17,31 @@ ms.locfileid: "85415728"
 
 選取您目前設為目標的 .NET 版本，然後選取您想要遷移至的 .NET Core 版本：
 
-[!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
+> [!div class="op_multi_selector" title1="從目標版本" title2="到遷移的版本"]
+>
+> - [ (3.1 |5.0) ](3.1-5.0.md)
+> - [ (3.0 |3.1) ](3.0-3.1.md)
+> - [ (2.2 |3.1) ](2.2-3.1.md)
+> - [ (2.2 |3.0) ](2.2-3.0.md)
+> - [ (2.0 |2.1) ](2.0-2.1.md)
+> - [ ( .NET Framework | .NET Core) ](fx-core.md)
 
-## <a name="by-technology-area"></a>依技術領域
+## <a name="by-technology-area"></a>依技術範圍
 
 選取您感興趣的 [.NET Core 技術] 區域。 個別變更會依 .NET Core 版本排序。
 
-[!INCLUDE[categoryselector](~/includes/core-changes/categoryselector.md)]
+> [!div class="op_single_selector"]
+>
+> - [ASP.NET Core](aspnetcore.md)
+> - [Core .NET 程式庫](corefx.md)
+> - [碼編譯](cryptography.md)
+> - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
+> - [全球化](globalization.md)
+> - [Interop](interop.md)
+> - [網路功能](networking.md)
+> - [序列化](serialization.md)
+> - [Visual Basic](visualbasic.md)
+> - [Windows Forms](winforms.md)
 
 ## <a name="github-issues-and-announcements"></a>GitHub 問題和公告
 

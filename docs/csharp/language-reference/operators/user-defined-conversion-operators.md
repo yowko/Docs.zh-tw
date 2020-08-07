@@ -12,12 +12,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 70f553b129d5ef8a0f9077c16656a17d8e88fed4
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: a0eb11d55ad9e9cccde1704ba4c5ae8acb609989
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855838"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916632"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>使用者定義轉換運算子 (C# 參考)
 
@@ -31,7 +31,7 @@ ms.locfileid: "87855838"
 
 下面範例說明如何定義隱含和明確轉換：
 
-[!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](snippets/shared/UserDefinedConversions.cs)]
 
 您也可以使用 `operator` 關鍵字來多載預先定義的 C# 運算子。 如需詳細資訊，請參閱[運算子多載](operator-overloading.md)。
 

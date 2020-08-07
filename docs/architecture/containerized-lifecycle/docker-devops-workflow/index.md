@@ -1,13 +1,13 @@
 ---
 title: 使用 Microsoft 工具的 Docker 應用程式 DevOps 工作流程
 description: 使用 Microsoft 工具之 Microsoft 平台及工具 DevOps 工作流程的容器化 Docker 應用程式生命週期
-ms.date: 02/15/2019
-ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295739"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915209"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>使用 Microsoft 工具的 Docker 應用程式 DevOps 工作流程
 
@@ -23,7 +23,7 @@ Microsoft 工具可以自動化特定容器化應用程式實作的管線 (Docke
 
 - Azure DevOps Services/Team Foundation Server 原始程式碼管理 (根據 Git 或 Team Foundation 版本控制)、Agile 規劃 (支援 Agile、Scrum 和 CMMI)、CI、發行管理，以及 Agile 小組的其他工具。
 
-- Azure DevOps Services 和 Team Foundation Server 包含功能強大且不斷成長的第一方和第三方延伸模組生態系統，而您可以使用它輕鬆地建構微服務的 CI、建置、測試、傳遞和發行微服務的管理管線。
+- Azure DevOps Services 和 Team Foundation Server 包含第一個和協力廠商擴充功能的強大且成長的生態系統，可讓您輕鬆地為微服務建立 CI、組建、測試、傳遞和發行管理管線。
 
 - 在 Azure DevOps Services 中，於組建管線期間執行自動化測試。
 
@@ -32,5 +32,5 @@ Microsoft 工具可以自動化特定容器化應用程式實作的管線 (Docke
 - 組織可以將 Azure Resource Manager 範本與他們已熟悉的工具搭配使用，從儲存在 Azure Container Registry 中私人映像和與 Azure 元件 (Data、PaaS 等) 的任何相依性來輕鬆地佈建 Docker 容器。
 
 >[!div class="step-by-step"]
->[上一個](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
->[下一個](docker-application-outer-loop-devops-workflow.md)
+>[上一個](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md) 
+>[下一步](docker-application-outer-loop-devops-workflow.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556549"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916810"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C # 運算子和運算式 (c # 參考) 
 
@@ -33,7 +33,7 @@ C # 提供一些運算子。 [內建類型](../builtin-types/built-in-types.md)�
 
 在下列程式碼中，運算式的範例位於指派的右手邊：
 
-[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+[!code-csharp[expression examples](snippets/shared/Overview.cs#Expressions)]
 
 通常，運算式會產生結果，而且可以包含在另一個運算式中。 [`void`](../builtin-types/void.md)方法呼叫是不會產生結果之運算式的範例。 它只能當做[語句](../../programming-guide/statements-expressions-operators/statements.md)使用，如下列範例所示：
 
@@ -45,15 +45,15 @@ Console.WriteLine("Hello, world!");
 
 - [插補字串運算式](../tokens/interpolated.md)，提供方便的語法來建立格式化的字串：
 
-  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+  [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
 - 可讓您建立匿名函數的[Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)：
 
-  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+  [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
 - [查詢運算式](../keywords/query-keywords.md)可讓您直接在 c # 中使用查詢功能：
 
-  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+  [!code-csharp-interactive[query expression](snippets/shared/Overview.cs#Query)]
 
 您可以使用[運算式主體定義](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)來提供方法、函式、屬性、索引子或完成項的簡潔定義。
 

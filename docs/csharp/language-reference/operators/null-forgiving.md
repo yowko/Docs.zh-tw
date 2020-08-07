@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: b21b8a1f3c182fdc58d297424e0e70885e209e94
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5d8dcba5eb794d4d64f58e23a3ad952ef8055aeb
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555145"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916754"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>!  (null-容許) 運算子 (c # 參考) 
 
@@ -28,23 +28,23 @@ Null 容許運算子在執行時間沒有任何作用。 它只會影響編譯�
 
 Null 容許運算子的其中一個使用案例是測試引數驗證邏輯。 例如，請參考下列類別：
 
-[!code-csharp[Person class](snippets/NullForgivingOperator.cs#PersonClass)]
+[!code-csharp[Person class](snippets/shared/NullForgivingOperator.cs#PersonClass)]
 
 使用[MSTest 測試架構](../../../core/testing/unit-testing-with-mstest.md)，您可以在函式中針對驗證邏輯建立下列測試：
 
-[!code-csharp[Person test](snippets/NullForgivingOperator.cs#TestPerson)]
+[!code-csharp[Person test](snippets/shared/NullForgivingOperator.cs#TestPerson)]
 
 如果沒有 null 容許運算子，編譯器會針對上述程式碼產生下列警告： `Warning CS8625: Cannot convert null literal to non-nullable reference type` 。 藉由使用 null 容許運算子，您可以通知編譯器 `null` 預期傳遞，而不應該收到關於的警告。
 
 當您肯定知道運算式不能是， `null` 但編譯器不會管理來辨識這種情況時，也可以使用 null 容許運算子。 在下列範例中，如果 `IsValid` 方法傳回 `true` ，則其引數不是， `null` 而且您可以安全地進行取值：
 
-[!code-csharp[Use null-forgiving operator](snippets/NullForgivingOperator.cs#UseNullForgiving)]
+[!code-csharp[Use null-forgiving operator](snippets/shared/NullForgivingOperator.cs#UseNullForgiving)]
 
 如果沒有 null 容許運算子，編譯器會為程式碼產生下列警告 `p.Name` ： `Warning CS8602: Dereference of a possibly null reference` 。
 
 如果您可以修改 `IsValid` 方法，您可以使用[NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute)屬性來通知編譯器，當方法傳回時，方法的引數 `IsValid` 不能是 `null` `true` ：
 
-[!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
+[!code-csharp[Use an attribute](snippets/shared/NullForgivingOperator.cs#UseAttribute)]
 
 在上述範例中，您不需要使用 null 容許運算子，因為編譯器有足夠的資訊可以找出 `p` 不在 `null` 語句內的 `if` 。 如需可讓您提供變數 null 狀態之其他相關資訊的屬性詳細資訊，請參閱[使用屬性升級 api 以定義 null 預期](../attributes/nullable-analysis.md)。
 

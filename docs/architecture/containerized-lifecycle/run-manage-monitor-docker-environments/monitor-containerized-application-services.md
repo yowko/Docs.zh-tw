@@ -1,13 +1,13 @@
 ---
 title: 監視容器化應用程式服務
 description: 了解監視容器架構的一些重要層面
-ms.date: 02/15/2019
-ms.openlocfilehash: e41df53ad94784436442c3cf7defed3fab510455
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.date: 08/06/2020
+ms.openlocfilehash: 5fcb5065d02018ab3c2d3ad71cf507bd43b53446
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374438"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914947"
 ---
 # <a name="monitor-containerized-application-services"></a>監視容器化應用程式服務
 

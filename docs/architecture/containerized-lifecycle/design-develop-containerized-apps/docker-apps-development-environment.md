@@ -1,13 +1,13 @@
 ---
 title: Docker 應用程式的開發環境
 description: 了解可支援 Docker 開發生命週期的最重要開發工具選項。
-ms.date: 04/16/2020
-ms.openlocfilehash: b1df16db88fa85f794407c989f5428030c4cddf7
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 08/06/2020
+ms.openlocfilehash: 07b42b2bd05ab16ba0fbf61863b050ee2c9e242b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394892"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916031"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 應用程式的開發環境
 
@@ -36,7 +36,7 @@ ms.locfileid: "83394892"
 
 您可以使用 Microsoft 工具　搭配大部分的現代語言來開發 Docker 應用程式。 下列是初始清單，但不僅限於此：
 
-- .NET Core 和 ASP.NET Core
+- .NET Core 與 ASP.NET Core
 - Node.js
 - Go
 - Java

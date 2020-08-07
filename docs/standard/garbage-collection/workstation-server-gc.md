@@ -1,5 +1,5 @@
 ---
-title: 工作站與伺服器垃圾收集（GC）的比較
+title: '工作站與伺服器垃圾收集 (GC) '
 description: 瞭解 .NET 中的工作站和伺服器垃圾收集。
 ms.date: 04/21/2020
 helpviewer_keywords:
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 640b5f42c1f841c2537284e4721e827248e3d300
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306691"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917005"
 ---
 # <a name="workstation-and-server-garbage-collection"></a>工作站和伺服器記憶體回收
 
 記憶體回收行程會自行調整而且可在各種案例中運作。 不過，您可以根據工作負載的特性來[設定垃圾收集的類型](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection)。 CLR 會提供下列記憶體回收類型：
 
-- 工作站垃圾收集（GC），專為用戶端應用程式所設計。 這是獨立應用程式的預設 GC 類別。 例如，針對裝載的應用程式（由 ASP.NET 所主控），主機會決定預設的 GC 類別。
+- 工作站垃圾收集 (GC) ，這是針對用戶端應用程式所設計。 這是獨立應用程式的預設 GC 類別。 例如，針對裝載的應用程式（由 ASP.NET 所主控），主機會決定預設的 GC 類別。
 
-  工作站記憶體回收可能是並行或非並行的。 同時（或*背景*）垃圾收集可讓受控執行緒在垃圾收集期間繼續作業。 [背景垃圾收集](background-gc.md)會取代 .NET Framework 4 和更新版本中的[並行垃圾收集](background-gc.md#concurrent-garbage-collection)。
+  工作站記憶體回收可能是並行或非並行的。 並行 (或*背景*) 垃圾收集可讓受控執行緒在垃圾收集期間繼續作業。 [背景垃圾收集](background-gc.md)會取代 .NET Framework 4 和更新版本中的[並行垃圾收集](background-gc.md#concurrent-garbage-collection)。
 
 - 伺服器記憶體回收，適用於需要高輸送量和延展性的伺服器應用程式。
 
@@ -38,9 +38,9 @@ ms.locfileid: "84306691"
 
 以下是工作站記憶體回收的執行緒和效能考量：
 
-- 此回收會針對觸發記憶體回收的使用者執行緒進行，而且維持相同的優先權。 因為使用者執行緒通常會以一般優先權執行，所以記憶體回收行程 (在一般優先權執行緒上執行) 必須與其他執行緒爭用 CPU 時間。 （執行機器碼的執行緒在伺服器或工作站垃圾收集上不會暫停）。
+- 此回收會針對觸發記憶體回收的使用者執行緒進行，而且維持相同的優先權。 因為使用者執行緒通常會以一般優先權執行，所以記憶體回收行程 (在一般優先權執行緒上執行) 必須與其他執行緒爭用 CPU 時間。 在伺服器或工作站垃圾收集上，不會暫停執行機器碼的 (執行緒。 ) 
 
-- 工作站垃圾收集一律會在只有一個處理器的電腦上使用，不論[設定](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)為何。
+- 工作站垃圾收集一律會在只有一個處理器的電腦上使用，不論[設定](../../core/run-time-config/garbage-collector.md#workstation-vs-server)為何。
 
 ### <a name="server-gc"></a>伺服器 GC
 

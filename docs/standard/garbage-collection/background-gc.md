@@ -5,18 +5,18 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: bf88c14b2aeed94a548b6116749fa8669576afe1
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990228"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917003"
 ---
 # <a name="background-garbage-collection"></a>背景垃圾收集
 
-在背景垃圾收集（GC）中，當層代2的集合正在進行時，會視需要收集暫時層代（0和1）。 背景垃圾收集會在一或多個專用線程上執行，視其為背景或伺服器 GC 而定，而且只適用于層代2回收。
+在背景垃圾收集 (GC) 中，當第2代的集合正在進行時，會視需要收集暫時層代 (0 和 1) 。 背景垃圾收集會在一或多個專用線程上執行，視其為背景或伺服器 GC 而定，而且只適用于層代2回收。
 
-預設會啟用背景垃圾收集。 您可以使用 .NET Framework apps 中的[gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)設定，或 .net Core 應用程式中的[system.object](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent)設定來啟用或停用它。
+預設會啟用背景垃圾收集。 您可以使用 .NET Framework apps 中的[gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)設定，或 .net Core 和 .net 5 和更新版本應用程式中的[system.object](../../core/run-time-config/garbage-collector.md#background-gc)設定來啟用或停用它。
 
 > [!NOTE]
 > 背景垃圾收集會取代[並行垃圾收集](#concurrent-garbage-collection)，並在 .NET Framework 4 和更新版本中提供。 在 .NET Framework 4 中，只有*工作站*垃圾收集才支援此功能。 從 .NET Framework 4.5 開始，背景垃圾收集適用于*工作站*和*伺服器*垃圾收集。

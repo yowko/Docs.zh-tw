@@ -1,19 +1,19 @@
 ---
 title: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
-ms.date: 02/15/2019
-ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 1a973407d59484899f99fb6e326b8d7c8e97079b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673775"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915221"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>在 Azure DevOps Services 中為容器上的 .NET Core 2.0 應用程式建立 CI/CD 管線並部署到 Kubernetes 叢集
+# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>在適用于容器上的 .NET Core 應用程式並部署至 Kubernetes 叢集的 Azure DevOps Services 中建立 CI/CD 管線
 
 在圖 5-12 中，您可以看到端對端 DevOps 案例，涵蓋程式碼管理、程式碼編譯、Docker 映像建置、Docker 映像推送至 Docker 登錄，最後部署至 Azure 中的 Kubernetes 叢集。
 
-![工作流：從開發電腦開始。 推送至存放庫會使用自訂映像開始建置/CI 工作，該映像會推送至 Docker 登錄，最後由 CD/部署工作用於推送至 AKS。](media/docker-workflow-ci-cd-aks.png)
+![工作流程：在開發電腦中啟動。 推送至存放庫會使用自訂映像開始建置/CI 工作，該映像會推送至 Docker 登錄，最後由 CD/部署工作用於推送至 AKS。](media/docker-workflow-ci-cd-aks.png)
 
 **圖 5-12**。 CI/CD 案例建立 Docker 映像並部署至 Azure 中的 Kubernetes 叢集
 
@@ -37,5 +37,5 @@ ms.locfileid: "68673775"
 ><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
->[上一個](docker-application-outer-loop-devops-workflow.md)
->[下一個](../run-manage-monitor-docker-environments/index.md)
+>[上一個](docker-application-outer-loop-devops-workflow.md) 
+>[下一步](../run-manage-monitor-docker-environments/index.md)

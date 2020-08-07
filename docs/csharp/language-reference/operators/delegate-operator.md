@@ -4,29 +4,29 @@ ms.date: 07/18/2019
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 85f960d236e35379180ec1d7f7dcc49e1ccddf55
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: f7cd7caf11d9f076a5d6e82aae696c914bd60e44
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556673"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916841"
 ---
 # <a name="delegate-operator-c-reference"></a>delegate 運算子 (C# 參考)
 
 `delegate` 運算子會建立可轉換成委派型別的匿名方法：
 
-[!code-csharp-interactive[anonymous method](snippets/DelegateOperator.cs#AnonymousMethod)]
+[!code-csharp-interactive[anonymous method](snippets/shared/DelegateOperator.cs#AnonymousMethod)]
 
 > [!NOTE]
 > 從 C# 3 開始，Lambda 運算式提供更精簡且更具表達性的方式來建立匿名函式。 使用 [=> 運算子](lambda-operator.md)來建構 Lambda 運算式：
 >
-> [!code-csharp-interactive[lambda expression](snippets/DelegateOperator.cs#Lambda)]
+> [!code-csharp-interactive[lambda expression](snippets/shared/DelegateOperator.cs#Lambda)]
 >
 > 如需 Lambda 運算式功能的詳細資訊 (例如，捕捉外部變數)，請參閱 [Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)。
 
 當您使用 `delegate` 運算子時，您可以省略參數清單。 如果您這樣做，則可以將建立的匿名方法轉換成含任何參數清單的委派型別，如下列範例所示：
 
-[!code-csharp-interactive[no parameter list](snippets/DelegateOperator.cs#WithoutParameterList)]
+[!code-csharp-interactive[no parameter list](snippets/shared/DelegateOperator.cs#WithoutParameterList)]
 
 那是 Lambda 運算式不支援的唯一匿名方法功能。 在所有其他情況下，建議您以 Lambda 運算式的方式來撰寫內嵌程式碼。
 

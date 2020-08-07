@@ -1,13 +1,13 @@
 ---
 title: 執行、管理和監視 Docker 生產環境
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
-ms.date: 02/15/2019
-ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 013918a5b3f0b9dc6c60416af186dc3e51a29a98
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295626"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914921"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>執行、管理和監視 Docker 生產環境
 
@@ -20,5 +20,5 @@ ms.locfileid: "70295626"
 本章檢查來自 Microsoft 和其他廠商的特定產品及技術，讓您有效地執行可延展的 HA 分散式應用程式，以及從 IT 觀點管理和監視它們的方式。
 
 >[!div class="step-by-step"]
->[上一個](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
->[下一個](run-microservices-based-applications-in-production.md)
+>[上一個](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md) 
+>[下一步](run-microservices-based-applications-in-production.md)
