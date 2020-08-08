@@ -9,16 +9,16 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 53457f7f99d96c288b002f58c9db36f431ba863a
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381303"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024585"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>使用接續工作來連結工作
 
-在非同步程式設計中，一個非同步作業在完成時通常會叫用第二個作業。 接續可讓 decedent 作業耗用第一項操作的結果。 傳統上，會使用回呼方法完成接續。 在工作平行程式庫中，由 _「接續工作」_(continuation task) 提供相同的功能。 接續工作（也就是接續）是另一項工作（也就是_antecedent_）在上一次完成時叫用的非同步工作。
+在非同步程式設計中，一個非同步作業在完成時通常會叫用第二個作業。 接續可讓 decedent 作業耗用第一項操作的結果。 傳統上，會使用回呼方法完成接續。 在工作平行程式庫中，由 _「接續工作」_(continuation task) 提供相同的功能。 接續工作 (也稱為接續) 是由另一個工作所叫用的非同步工作，也就是在上一項工作完成時，稱為「 _antecedent_」。
 
 接續相對容易使用，但卻非常強大且有彈性。 例如，您可以：
 
@@ -140,12 +140,12 @@ ms.locfileid: "87381303"
 
 ## <a name="continuations-that-return-task-types"></a>傳回工作類型的接續
 
-有時候，您可能需要連結傳回類型的接續 <xref:System.Threading.Tasks.Task> 。 這些稱為「嵌套工作」，它們是常見的。 當父工作呼叫 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> ，並提供工作 `continuationFunction` 時，您會呼叫 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 來建立 proxy 工作，以代表或的非同步作業 `<Task<Task<T>>>` `Task(Of Task(Of T))` （Visual Basic）。
+有時候，您可能需要連結傳回類型的接續 <xref:System.Threading.Tasks.Task> 。 這些稱為「嵌套工作」，它們是常見的。 當父工作呼叫 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> ，並提供工作 `continuationFunction` 時，您會呼叫 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 來建立 proxy 工作，以代表 `<Task<Task<T>>>` 或 `Task(Of Task(Of T))` (Visual Basic) 的非同步作業。
 
 下列範例示範如何使用接續，以包裝額外的工作傳回函式。 每個接續都可以解除包裝，並公開已包裝的內部工作。
 
 :::code language="csharp" source="snippets/cs/unwrap.cs":::
-:::code language="csharp" source="snippets/vb/unwrap.vb":::
+:::code language="vb" source="snippets/vb/unwrap.vb":::
 
 如需使用的詳細資訊 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> ，請參閱[如何：解除包裝嵌套的工作](how-to-unwrap-a-nested-task.md)。
 

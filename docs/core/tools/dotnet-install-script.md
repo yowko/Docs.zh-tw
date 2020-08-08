@@ -2,16 +2,16 @@
 title: dotnet-install 指令碼
 description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet-安裝腳本。
 ms.date: 04/30/2020
-ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415930"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024650"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet-install.ps1` | `dotnet-install.sh`-用來安裝 .NET Core SDK 和共用執行時間的腳本。
 
@@ -23,7 +23,7 @@ Windows：
 dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-Channel <CHANNEL>] [-DryRun] [-FeedCredential]
     [-InstallDir <DIRECTORY>] [-JSonFile <JSONFILE>]
-    [-NoCdn] [-NoPath] [-ProxyAddress]
+    [-NoCdn] [-NoPath] [-ProxyAddress] [-ProxyBypassList <LIST_OF_URLS>]
     [-ProxyUseDefaultCredentials] [-Runtime <RUNTIME>]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
@@ -55,7 +55,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 ### <a name="purpose"></a>目的
 
- 使用腳本的目的是持續整合（CI）案例，其中：
+ 使用腳本的目的是為了持續整合 (CI) 案例，其中：
 
 * SDK 需要在沒有使用者互動的情況下安裝，而且沒有系統管理員許可權。
 * SDK 安裝不需要跨多個 CI 執行保存。
@@ -71,8 +71,8 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 建議您使用穩定版本的腳本：
 
-- Bash （Linux/macOS）：<https://dot.net/v1/dotnet-install.sh>
-- PowerShell （Windows）：<https://dot.net/v1/dotnet-install.ps1>
+- Bash (Linux/macOS) ：<https://dot.net/v1/dotnet-install.sh>
+- PowerShell (Windows) ：<https://dot.net/v1/dotnet-install.ps1>
 
 ### <a name="script-behavior"></a>腳本行為
 
@@ -88,7 +88,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 安裝腳本不會更新 Windows 上的登錄。 他們只需要下載壓縮的二進位檔，並將它們複製到資料夾即可。 如果您想要更新登錄機碼值，請使用 .NET Core 安裝程式。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
@@ -96,7 +96,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`-AzureFeed|--azure-feed`**
 
-  指定給安裝程式的 Azure 摘要 URL。 建議您不要變更這個值。 預設值為 `https://dotnetcli.azureedge.net/dotnet`。
+  指定給安裝程式的 Azure 摘要 URL。 建議您不要變更這個值。 預設值是 `https://dotnetcli.azureedge.net/dotnet`。
 
 - **`-Channel|--channel <CHANNEL>`**
 
@@ -105,9 +105,9 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   - `Current` - 最新版本。
   - `LTS` - 長期支援通道 (最新的支援版本)。
   - 代表特定版本的 X.Y 格式兩段式版本 (例如 `2.1` 或 `3.0`)。
-  - 分支名稱：例如， `release/3.1.1xx` 或 `master` （針對夜間版本）。 使用此選項可從預覽頻道安裝版本。 使用[安裝程式和二進位](https://github.com/dotnet/core-sdk#installers-and-binaries)檔中列出的通道名稱。
+  - 分支名稱：例如， `release/3.1.1xx` 或 `master`) 的夜間版本 (。 使用此選項可從預覽頻道安裝版本。 使用[安裝程式和二進位](https://github.com/dotnet/core-sdk#installers-and-binaries)檔中列出的通道名稱。
 
-  預設值為 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。
+  預設值是 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。
 
 - **`-DryRun|--dry-run`**
 
@@ -139,11 +139,15 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`-ProxyAddress`**
 
-  如果設定，安裝程式會使用此 Proxy 進行 Web 要求。 （僅適用于 Windows。）
+  如果設定，安裝程式會使用此 Proxy 進行 Web 要求。  (僅適用于 Windows。 ) 
+
+- **`-ProxyBypassList <LIST_OF_URLS>`**
+
+  如果以設定 `ProxyAddress` ，會提供以逗號分隔的 url 清單，以略過 proxy。  (僅適用于 Windows。 ) 
 
 - **`ProxyUseDefaultCredentials`**
 
-  如果設定，當使用 Proxy 位址時，安裝程式會使用目前使用者的認證。 （僅適用于 Windows。）
+  如果設定，當使用 Proxy 位址時，安裝程式會使用目前使用者的認證。  (僅適用于 Windows。 ) 
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
@@ -155,7 +159,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`--runtime-id <RID>`**
 
-  指定要安裝工具的[執行時間識別碼](../rid-catalog.md)。 用於 `linux-x64` 可移植的 Linux。 （僅適用于 Linux/macOS）。
+  指定要安裝工具的[執行時間識別碼](../rid-catalog.md)。 用於 `linux-x64` 可移植的 Linux。  (僅適用于 Linux/macOS。 ) 
 
 - **`-SharedRuntime|--shared-runtime`**
 
@@ -182,7 +186,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
   - `latest` - 通道上的最新組建 (與 `-Channel` 選項搭配使用)。
   - `coherent` - 通道上的最新一致性組建；使用最新的穩定套件組合 (與分支名稱 `-Channel` 選項搭配使用)。
-  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如： `2.0.0-preview2-006120` 。
+  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如：`2.0.0-preview2-006120`。
 
   如果未指定，`-Version` 會預設為 `latest`。
 
@@ -252,7 +256,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 版本](https://github.com/dotnet/core/releases)
 - [.NET Core 執行階段和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

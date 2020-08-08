@@ -2,17 +2,17 @@
 title: 保護 .NET 微服務和 Web 應用程式
 description: .NET 微服務和 Web 應用程式中的安全性 - 了解 ASP.NET Core Web 應用程式中的驗證選項。
 author: mjrousos
-ms.date: 01/30/2020
-ms.openlocfilehash: 2b503b326d1869ae095f9b177c04389bda9fe46c
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.date: 08/07/2020
+ms.openlocfilehash: 9ce62039374f2256cd9adbddbb850aa4135af9f4
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100778"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024611"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>製作安全的 .NET 微服務和 Web 應用程式
 
-微服務和 Web 應用程式有許多層面，使得主題可能參考到如圖本書的多本書籍，因此我們在本節會將重點放在驗證、授權和應用程式祕密。
+在微服務和 web 應用程式中，有許多關於安全性的層面，主題可能會輕易地接受這類書籍，因此在本節中，您會將焦點放在驗證、授權和應用程式秘密。
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>在 .NET 微服務和 Web 應用程式中實作驗證
 
@@ -24,7 +24,7 @@ ms.locfileid: "86100778"
 
 **圖 9-1**. 使用 API 閘道的集中式驗證
 
-當 API 閘道將驗證集中時，會在將要求轉送給微服務時新增使用者資訊。 如果可以直接存取服務，則驗證服務 (例如 Azure Active Directory 或專用驗證微服務) 會作為安全性權杖服務 (STS)，可用來驗證使用者。 信任決策會在服務與安全性權杖或 Cookie 之間共用。 （如有需要，可以在 ASP.NET Core 應用程式之間共用這些權杖，方法是執行[cookie 共用](/aspnet/core/security/cookie-sharing)）。此模式如圖9-2 所示。
+當 API 閘道將驗證集中時，會在將要求轉送給微服務時新增使用者資訊。 如果可以直接存取服務，則驗證服務 (例如 Azure Active Directory 或專用驗證微服務) 會作為安全性權杖服務 (STS)，可用來驗證使用者。 信任決策會在服務與安全性權杖或 Cookie 之間共用。  (這些權杖可在 ASP.NET Core 應用程式之間（如有需要）進行共用，方法是執行[cookie 共用](/aspnet/core/security/cookie-sharing)。 ) 此模式如圖9-2 所示。
 
 ![此圖顯示透過後端微服務的驗證。](./media/index/identity-microservice-authentication.png)
 
@@ -85,7 +85,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 - 使用 SignInManager 類型驗證使用者。 您可以使用 `signInManager.SignInAsync` 直接登入，或 `signInManager.PasswordSignInAsync` 確認使用者的密碼正確，然後登入。
 
-- 根據儲存在 cookie 中的資訊（由 ASP.NET Core 身分識別中介軟體讀取）來識別使用者，讓來自瀏覽器的後續要求會包含登入使用者的身分識別和宣告。
+- 根據儲存在 cookie 中的資訊識別使用者 (由 ASP.NET Core 身分識別中介軟體所讀取) ，讓來自瀏覽器的後續要求會包含登入使用者的身分識別和宣告。
 
 ASP.NET Core Identity 也支援[雙因素驗證](/aspnet/core/security/authentication/2fa)。
 
@@ -119,7 +119,7 @@ public void ConfigureServices(IServiceCollection services)
 
 下表顯示熱門的外部驗證提供者及其關聯的 NuGet 套件：
 
-| **提供者**  | **套件** \(英文\)                                          |
+| **提供者**  | **套件**                                          |
 | ------------- | ---------------------------------------------------- |
 | **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
 | **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |
@@ -131,9 +131,9 @@ public void ConfigureServices(IServiceCollection services)
 1. 取得用戶端應用程式識別碼。
 2. 取得用戶端應用程式密碼。
 3. 設定重新導向 URL，由授權中介軟體和已註冊的提供者處理
-4. （選擇性）設定 [登出 URL]，以在單一登入（SSO）案例中正確地處理登出。
+4. （選擇性）設定登出 URL，以適當地處理單一登入 (SSO) 案例中的登出。
 
-如需為外部提供者設定應用程式的詳細資訊，請參閱[ASP.NET Core 檔中的外部提供者驗證](/aspnet/core/security/authentication/social/)。
+如需為外部提供者設定應用程式的詳細資訊，請參閱[ASP.NET Core 檔) 中的外部提供者驗證](/aspnet/core/security/authentication/social/)。
 
 >[!TIP]
 >所有詳細資料都是由先前所述的授權中介軟體和服務所處理。 因此，當您在 Visual Studio 建立 ASP.NET 程式碼 web 應用程式專案時，只需要選擇 [**個別使用者帳戶**] 驗證選項，如圖9-3 所示，除了註冊先前所述的驗證提供者之外。
@@ -174,7 +174,7 @@ public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
-    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
+    var sessionCookieLifetime = Configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 
