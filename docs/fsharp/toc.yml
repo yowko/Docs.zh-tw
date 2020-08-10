@@ -1,21 +1,21 @@
-- name: 'F# 文件'
+- name: F# 文件
   href: index.yml
-- name: '什麼是 F#'
+- name: 什麼是 F#
   href: what-is-fsharp.md
 - name: 開始使用
   href: get-started/index.md
   items:
-    - name: '安裝 F#'
+    - name: 安裝 F#
       href: get-started/install-fsharp.md
-    - name: 'Visual Studio 中的 F#'
+    - name: Visual Studio 中的 F#
       href: get-started/get-started-visual-studio.md
-    - name: 'Visual Studio Code 中的 F#'
+    - name: Visual Studio Code 中的 F#
       href: get-started/get-started-vscode.md
-    - name: '使用 .NET Core CLI 的 F#'
+    - name: 使用 .NET Core CLI 的 F#
       href: get-started/get-started-command-line.md
-    - name: 'Visual Studio for Mac 中的 F#'
+    - name: Visual Studio for Mac 中的 F#
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: 'F# 的教學課程'
+- name: F# 的教學課程
   href: tour.md
 - name: 教學課程
   items:
@@ -37,17 +37,17 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: 型別提供者疑難排解
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: 'F# 互動'
+    - name: F# 互動
       href: tutorials/fsharp-interactive/index.md
-- name: 'F# 的新功能'
+- name: F# 的新功能
   items:
-    - name: 'F# 4.7'
+    - name: F# 4.7
       href: whats-new/fsharp-47.md
-    - name: 'F# 4.6'
+    - name: F# 4.6
       href: whats-new/fsharp-46.md
-    - name: 'F# 4.5'
+    - name: F# 4.5
       href: whats-new/fsharp-45.md
-- name: 'F# 語言參考'
+- name: F# 語言參考
   href: language-reference/index.md
   items:
     - name: 關鍵字參考
@@ -63,7 +63,7 @@
           href: language-reference/symbol-and-operator-reference/bitwise-operators.md
         - name: 可為 Null 的運算子
           href: language-reference/symbol-and-operator-reference/nullable-operators.md
-    - name: Functions
+    - name: 函數
       href: language-reference/functions/index.md
       items:
         - name: let 繫結
@@ -87,7 +87,7 @@
           href: language-reference/values/null-values.md
     - name: 常值
       href: language-reference/literals.md
-    - name: 'F# 類型'
+    - name: F# 類型
       href: language-reference/fsharp-types.md
     - name: 類型推斷
       href: language-reference/type-inference.md
@@ -97,9 +97,9 @@
       href: language-reference/unit-type.md
     - name: 字串
       href: language-reference/strings.md
-    - name: Tuples
+    - name: Tuple
       href: language-reference/tuples.md
-    - name: 'F# 集合類型'
+    - name: F# 集合類型
       href: language-reference/fsharp-collection-types.md
     - name: 清單
       href: language-reference/lists.md
@@ -226,6 +226,8 @@
       href: language-reference/signature-files.md
     - name: 測量單位
       href: language-reference/units-of-measure.md
+    - name: 純文字格式
+      href: language-reference/plaintext-formatting.md
     - name: XML 文件
       href: language-reference/xml-documentation.md
     - name: 延遲運算式
@@ -248,7 +250,7 @@
       href: language-reference/compiler-directives.md
     - name: 編譯器選項
       href: language-reference/compiler-options.md
-    - name: 'F# Interactive 選項'
+    - name: F# Interactive 選項
       href: language-reference/fsharp-interactive-options.md
     - name: 原始碼程式行、檔案與路徑識別項
       href: language-reference/source-line-file-path-identifiers.md
@@ -258,25 +260,25 @@
       href: language-reference/verbose-syntax.md
     - name: 編譯器錯誤與警告
       href: language-reference/compiler-messages/index.md
-- name: 'F# 樣式指南'
+- name: F# 樣式指南
   href: style-guide/index.md
   items:
-    - name: 'F# 程式碼格式方針'
+    - name: F# 程式碼格式方針
       href: style-guide/formatting.md
-    - name: 'F# 編碼慣例'
+    - name: F# 編碼慣例
       href: style-guide/conventions.md
-    - name: 'F# 元件設計指導'
+    - name: F# 元件設計指導
       href: style-guide/component-design-guidelines.md
-- name: '在 Azure 上使用 F#'
+- name: 在 Azure 上使用 F#
   href: using-fsharp-on-azure/index.md
   items:
-    - name: '使用 F# 開始使用 Azure Blob 儲存體'
+    - name: 使用 F# 開始使用 Azure Blob 儲存體
       href: using-fsharp-on-azure/blob-storage.md
-    - name: '使用 F# 開始使用 Azure 檔案儲存體'
+    - name: 使用 F# 開始使用 Azure 檔案儲存體
       href: using-fsharp-on-azure/file-storage.md
-    - name: '使用 F# 開始使用 Azure 佇列儲存體'
+    - name: 使用 F# 開始使用 Azure 佇列儲存體
       href: using-fsharp-on-azure/queue-storage.md
-    - name: '使用 F# 開始使用 Azure 資料表儲存體'
+    - name: 使用 F# 開始使用 Azure 資料表儲存體
       href: using-fsharp-on-azure/table-storage.md
-    - name: 'F# Azure 相依性的套件管理'
+    - name: F# Azure 相依性的套件管理
       href: using-fsharp-on-azure/package-management.md
