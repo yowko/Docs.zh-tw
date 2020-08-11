@@ -290,6 +290,8 @@ items:
         href: diagnostics/index.md
       - name: 受控偵錯工具
         href: diagnostics/managed-debuggers.md
+      - name: EventCounters
+        href: diagnostics/event-counters.md
       - name: 記錄和追蹤
         href: diagnostics/logging-tracing.md
       - name: .NET Core CLI 全域工具
@@ -302,6 +304,8 @@ items:
             href: diagnostics/dotnet-trace.md
       - name: .NET Core 診斷教學課程
         items:
+          - name: 使用 EventCounters 取得效能計量
+            href: diagnostics/event-counter-perf.md
           - name: 針對記憶體流失進行偵錯
             href: diagnostics/debug-memory-leak.md
           - name: 針對高 CPU 使用量進行偵錯
