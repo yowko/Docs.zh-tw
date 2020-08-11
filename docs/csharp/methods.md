@@ -4,12 +4,12 @@ description: 方法、方法參數和方法傳回值的概觀
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399445"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063350"
 ---
 # <a name="methods"></a>方法
 
@@ -24,7 +24,7 @@ ms.locfileid: "79399445"
 
 指定下列項目以 `class` 或 `struct` 宣告方法：
 
-- 選擇性的存取層級，例如 `public` 或 `private`。 預設值為 `private`。
+- 選擇性的存取層級，例如 `public` 或 `private`。 預設為 `private`。
 - 選擇性修飾詞，例如 `abstract` 或 `sealed`。
 - 傳回值，或如果方法為無，則為 `void`。
 - 方法名稱。
@@ -81,7 +81,7 @@ ms.locfileid: "79399445"
 
 ## <a name="passing-parameters"></a>傳遞參數
 
-C# 中的類型為「實值型別」**「參考型別」**。 如需內建實值型別的清單，請參閱[類型與變數](./tour-of-csharp/types-and-variables.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
+C# 中的類型為「實值型別」**「參考型別」**。 如需內建實數值型別的清單，請參閱[類型](./tour-of-csharp/types.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
 
 <a name="byval"></a>
 
@@ -103,7 +103,7 @@ C# 中的類型為「實值型別」**「參考型別」**。 如需內建實值
 
 ### <a name="passing-parameters-by-reference"></a>以傳址方式傳遞參數
 
-當您想要變更方法中的引數值，且想要在控制回到呼叫方法時反映該變更時，您必須以傳址方式傳遞參數。 要通過引用傳遞參數，請使用 或[`ref`](language-reference/keywords/ref.md)[`out`](language-reference/keywords/out-parameter-modifier.md)關鍵字。 還可以通過引用傳遞值以避免複製，但仍會阻止使用 關鍵字[`in`](language-reference/keywords/in-parameter-modifier.md)進行修改。
+當您想要變更方法中的引數值，且想要在控制回到呼叫方法時反映該變更時，您必須以傳址方式傳遞參數。 若要以傳址方式傳遞參數，請使用 [`ref`](language-reference/keywords/ref.md) 或 [`out`](language-reference/keywords/out-parameter-modifier.md) 關鍵字。 您也可以透過傳址方式傳遞值，以避免複製，但仍會使用關鍵字避免修改 [`in`](language-reference/keywords/in-parameter-modifier.md) 。
 
 下例與前例相同，唯一差異是值以傳址方式傳遞至 `ModifyValue` 方法。 在 `ModifyValue` 方法中修改參數值時，當控制回到呼叫端時會反映值的變更。
 
@@ -274,13 +274,13 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 <a name="iterators"></a>
 
-## <a name="iterators"></a>Iterator
+## <a name="iterators"></a>迭代器
 
 迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](language-reference/keywords/yield.md) 陳述式來一次傳回一個項目。 達到 `yield return` 陳述式時，即會記住目前的位置，讓呼叫端可以要求序列中的下一個項目。
 
 迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-有關詳細資訊，請參閱[反覆運算器](programming-guide/concepts/iterators.md)。
+如需詳細資訊，請參閱[反覆運算](programming-guide/concepts/iterators.md)器。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -288,8 +288,8 @@ public Customer this[long id] => store.LookupCustomer(id);
 - [靜態類別和靜態類別成員](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [繼承](programming-guide/classes-and-structs/inheritance.md)
 - [抽象和密封類別以及類別成員](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-- [Params](language-reference/keywords/params.md)
-- [出](language-reference/keywords/out-parameter-modifier.md)
+- [params](language-reference/keywords/params.md)
+- [脫銷](language-reference/keywords/out-parameter-modifier.md)
 - [ref](language-reference/keywords/ref.md)
 - [在](language-reference/keywords/in-parameter-modifier.md)
 - [傳遞參數](programming-guide/classes-and-structs/passing-parameters.md)

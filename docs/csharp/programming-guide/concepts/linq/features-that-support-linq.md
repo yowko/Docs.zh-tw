@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: f72b82180d794086dcea9f11a7a057dc26ab0b26
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 13254c69193e04ffcf11e3e23f1deb460063a6c1
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105421"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063688"
 ---
 # <a name="c-features-that-support-linq"></a>支援 LINQ 的 C# 功能
 
@@ -97,10 +97,10 @@ Lambda 運算式是一種內嵌函式，其使用 => 運算子分隔輸入參數
 
 - [匿名函式](../../statements-expressions-operators/anonymous-functions.md)
 
-- [Lambda 運算式](../../statements-expressions-operators/lambda-expressions.md)
+- [Lambda 運算式](../../../language-reference/operators/lambda-expressions.md)
 
 - [運算式樹狀架構 (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Language-Integrated Query (LINQ) (C#)](./index.md)

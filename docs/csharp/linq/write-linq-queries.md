@@ -3,12 +3,12 @@ title: 在 C# 中撰寫 LINQ 查詢
 description: 了解如何在 C# 中撰寫 LINQ 查詢。
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd7da81f2873c6a25570cab32fafecc66fd98be4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "65632883"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063441"
 ---
 # <a name="write-linq-queries-in-c"></a>在 C\# 中撰寫 LINQ 查詢
 
@@ -43,7 +43,7 @@ ms.locfileid: "65632883"
 
 [!code-csharp[csProgGuideLINQ#6](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]
 
-如果方法具有 Action 或 Func 參數，則這些項目是以 [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md) 運算式形式提供，如下列範例所示：
+如果方法具有 Action 或 Func 參數，則這些項目是以 [lambda](../language-reference/operators/lambda-expressions.md) 運算式形式提供，如下列範例所示：
 
 [!code-csharp[csProgGuideLINQ#7](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]
 
@@ -82,5 +82,5 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 ## <a name="see-also"></a>另請參閱
 
 - [逐步解說：在 C# 中撰寫查詢](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-- [語言綜合查詢（LINQ）](index.md)
-- [其中條款](../language-reference/keywords/where-clause.md)
+- [Language Integrated Query (LINQ)](index.md)
+- [where 子句](../language-reference/keywords/where-clause.md)

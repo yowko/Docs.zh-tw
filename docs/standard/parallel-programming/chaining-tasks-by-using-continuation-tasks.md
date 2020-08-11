@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024585"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063831"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>使用接續工作來連結工作
 
@@ -52,7 +52,7 @@ ms.locfileid: "88024585"
 
 您也可以建立會在任何或所有群組工作完成時執行的接續。 當所有前項工作都完成後，若要執行接續，您可以呼叫靜態`Shared` 方法 (在 Visual Basic 中為 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> ) 或執行個體 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法。 當任何前項工作完成後，若要執行接續，您可以呼叫靜態`Shared` 方法 (在 Visual Basic 中為 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> ) 或執行個體 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> 方法。
 
-請注意，呼叫 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 多載並不會封鎖呼叫執行緒。 不過，您通常會呼叫除了和方法以外的所有， <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> 以取出傳回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性，而這會封鎖呼叫執行緒。
+和多載的呼叫 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 不會封鎖呼叫執行緒。 不過，您通常會呼叫除了和方法以外的所有， <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> 以取出傳回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性，而這會封鎖呼叫執行緒。
 
 下列範例會呼叫 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 方法來建立接續工作，這會反映其 10 個前項工作的結果。 每個前項工作計算介於 1 到 10 之間的索引值平方。 如果順利完成前項 (其 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性是 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>)，則接續的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性是每個前項所傳回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 值之陣列。 此範例會加入它們，以計算介於 1 到 10 之間所有數字的平方和。
 
@@ -88,7 +88,7 @@ ms.locfileid: "88024585"
 
 在下列情況中，接續的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 屬性會被設定為 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> ：
 
-- 它會擲回 <xref:System.OperationCanceledException> 例外狀況以回應取消要求。 如同任何工作，如果例外狀況包含傳遞給接續的相同語彙基元，則會把它視為合作式取消的認可。
+- 它會擲回 <xref:System.OperationCanceledException> 例外狀況以回應取消要求。 如同任何工作，如果例外狀況包含傳遞給接續的相同標記，則會將它視為合作式取消的認可。
 - 接續傳遞 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> ，其 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性是 `true`。 在此案例中，接續未啟動，而且會轉換為 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 狀態。
 - 此接續絕不會執行，因為不符合 <xref:System.Threading.Tasks.TaskContinuationOptions> 引數設定的條件。 例如，如果前項進入 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 狀態，則不會執行其已傳遞 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> 選項的接續，但會轉換成 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態。
 

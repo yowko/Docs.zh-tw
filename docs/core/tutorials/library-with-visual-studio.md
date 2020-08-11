@@ -1,29 +1,29 @@
 ---
 title: 使用 Visual Studio 建立 .NET Standard 類別庫
 description: 瞭解如何使用 Visual Studio 建立 .NET Standard 類別庫。
-ms.date: 06/08/2020
+ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 69259b1d47a8e30945c578db10c6d697c81fa261
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 07cc1bd7b9892f7cbee7a82998093718cd311b92
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164399"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062661"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET Standard 程式庫
 
-在本教學課程中，您會建立包含單一字串處理方法的簡單公用程式程式庫。 您可以將它實作為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
+在本教學課程中，您會建立包含單一字串處理方法的簡單類別庫。
 
-「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 部署呼叫您的程式庫。 當您完成類別庫時，您可以將它散發為協力廠商元件，或作為一或多個應用程式的配套元件。
+「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 部署呼叫您的程式庫。
 
-## <a name="prerequisites"></a>必要條件
+當您完成類別庫時，您可以將它散發為 NuGet 套件，或做為使用它的應用程式所配套的元件。
+
+## <a name="prerequisites"></a>Prerequisites
 
 - 已安裝 **.Net Core 跨平臺開發**工作負載的[Visual Studio 2019 16.6 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 當您選取此工作負載時，會自動安裝 .NET Core 3.1 SDK。
-
-  如需詳細資訊，請參閱[安裝 .NET Core SDK](../install/sdk.md?pivots=os-windows)一文中的[install with Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio)一節。
 
 ## <a name="create-a-solution"></a>建立方案
 
@@ -47,7 +47,7 @@ ms.locfileid: "87164399"
 
    1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入**  >  **新專案**]。
 
-   1. 在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入 [連結**庫**]。 選擇 [語言] 清單中的 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [**類別庫（.NET Standard）** ] 範本，然後選擇 **[下一步]**。
+   1. 在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入 [連結**庫**]。 選擇 [語言] 清單中的 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [**類別庫] ( .NET Standard) ** ] 範本，然後選擇 **[下一步]**。
 
    1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibrary** 。 然後選擇 [**建立**]。
 
@@ -68,6 +68,8 @@ ms.locfileid: "87164399"
 
    類別庫 `UtilityLibraries.StringLibrary` 包含名為的方法 `StartsWithUpper` 。 這個方法會傳回 <xref:System.Boolean> 值，指出目前的字串實例是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
 
+   `StartsWithUpper`會實作為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
+
 1. 在功能表列上，選取 [**組建**] [組建  >  **方案**] 以確認專案編譯無誤。
 
 ## <a name="add-a-console-app-to-the-solution"></a>將主控台應用程式新增至解決方案
@@ -80,7 +82,7 @@ ms.locfileid: "87164399"
 
    1. 在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入**主控台**。 選擇 [語言] 清單中的 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [**所有平臺**]。
 
-   1. 選擇 [**主控台應用程式（.Net Core）** ] 範本，然後選擇 [**下一步]**。
+   1. 選擇 [ ** ( .Net Core) ] 範本的主控台應用程式**，然後選擇 [**下一步]**。
 
    1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**展示**。 接著，選擇 [建立]  。
 
@@ -126,7 +128,17 @@ ms.locfileid: "87164399"
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已建立解決方案、新增程式庫專案，以及加入使用該程式庫的主控台應用程式專案。 在下一個教學課程中，您會將單元測試專案加入至方案。
+在本教學課程中，您已建立類別庫。 在下一個教學課程中，您將瞭解如何對類別庫進行單元測試。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio 測試具有 .NET Core 的 .NET Standard 程式庫](testing-library-with-visual-studio.md)
+> [使用 Visual Studio 對 .NET Standard 程式庫進行單元測試](testing-library-with-visual-studio.md)
+
+或者，您可以略過自動化單元測試，並瞭解如何藉由建立 NuGet 套件來共用程式庫：
+
+> [!div class="nextstepaction"]
+> [使用 Visual Studio 建立及發行套件](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
+
+或瞭解如何發佈主控台應用程式。 如果您從在本教學課程中建立的解決方案發佈主控台應用程式，類別庫會將它當做 *.dll*檔案。
+
+> [!div class="nextstepaction"]
+> [使用 Visual Studio 發行 .NET Core 主控台應用程式](publishing-with-visual-studio.md)

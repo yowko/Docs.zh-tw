@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 184c9f61fd8456b22e8ecb262c131793160b49b0
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1307599a3832be5f48cd62a7b8c1be7f76a3d4a5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244006"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063740"
 ---
 # <a name="delegates-and-lambdas"></a>委派和 Lambda
 
@@ -108,7 +108,7 @@ public class Program
 
 如您所見，委派的主體只是一組運算式，與任何其他委派相同。 但它不是個別的定義，而是在我們的方法_呼叫中特別_介紹 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 。
 
-不過，即使使用此方法，還是有許多程式碼可以捨棄。 此時就需要 *Lambda 運算式*。 Lambda 運算式（簡稱 "lambda"）是以 c # 3.0 引進，做為語言整合式查詢（LINQ）的其中一個核心建立區塊。 這是更方便使用委派的語法。 它們會宣告簽章和方法主體，但除非指派給委派，否則不會有自己的正式身分識別。 不同于委派，它們可以直接指派為事件註冊的右手邊，或在各種 LINQ 子句和方法中。
+不過，即使使用此方法，還是有許多程式碼可以捨棄。 此時就需要 *Lambda 運算式*。 Lambda 運算式（簡稱 "lambda"）是以 c # 3.0 引進，做為語言整合式查詢 (LINQ) 的其中一個核心建立區塊。 這是更方便使用委派的語法。 它們會宣告簽章和方法主體，但除非指派給委派，否則不會有自己的正式身分識別。 不同于委派，它們可以直接指派為事件註冊的右手邊，或在各種 LINQ 子句和方法中。
 
 因為 Lambda 運算式不過是指定委派的另一種方式，所以我們應該能夠重寫上述範例，使用 Lambda 運算式取代匿名委派。
 
@@ -159,4 +159,4 @@ public MainWindow()
 
 * [委派](../csharp/programming-guide/delegates/index.md)
 * [匿名函式](../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-* [Lambda 運算式](../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [Lambda 運算式](../csharp/language-reference/operators/lambda-expressions.md)

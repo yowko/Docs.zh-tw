@@ -15,17 +15,17 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 2fc47a834f8f5b18021aa4f321345b8d7e4e8459
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 3ffdd481ac001b4e1bd229c6f5fa0bf285b508b2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662884"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063805"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>規則運算式中的數量詞
 數量詞指定輸入中要有多少字元、群組或字元類別的執行個體，才能找到相符項目。  下表列出 .NET 支援的數量詞。  
   
-|Greedy (窮盡) 數量詞|Lazy (最少) 數量詞|說明|  
+|Greedy (窮盡) 數量詞|Lazy (最少) 數量詞|描述|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|比對零或多次。|  
 |`+`|`+?`|比對一或多次。|  
@@ -48,7 +48,7 @@ ms.locfileid: "84662884"
 ### <a name="match-zero-or-more-times-"></a>比對零或多次：*  
  `*` 數量詞會比對前置元素零次或多次。 它相當於 `{0,}` 數量詞。 `*` 是 Greedy (窮盡) 數量詞，其 Lazy (最少) 對等項目是 `*?`。  
   
- 下例會示範此規則運算式。 在輸入字串的九個數字中，有五個符合模式，四個 (`95`、`929`、`9219` 和 `9919`) 不符合。  
+ 下例會示範此規則運算式。 在輸入字串中的九個數字群組中，有五個符合模式，而四個 (`95` 、、 `929` `9219` 和 `9919`) 不會。  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  

@@ -2,12 +2,12 @@
 title: dotnet-計數器-.NET Core
 description: 瞭解如何安裝和使用 dotnet-counter 命令列工具。
 ms.date: 02/26/2020
-ms.openlocfilehash: 71e3c4f0a60960c4e672b95000bc0d67bd427514
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 6a4fd92540dbc16173dfa3a10ff9dfaa1f31f7d0
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024624"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062895"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -31,7 +31,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 `dotnet-counters`是一種效能監視工具，可用於臨機操作健全狀況監視和第一層效能調查。 它可以觀察透過 API 發佈的效能計數器值 <xref:System.Diagnostics.Tracing.EventCounter> 。 例如，您可以快速監視 CPU 使用量，或 .NET Core 應用程式中擲回之例外狀況的速率，以在使用或進行更嚴重的效能調查之前，查看是否有任何可疑的專案 `PerfView` `dotnet-trace` 。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`--version`**
 
@@ -60,7 +60,7 @@ dotnet-counters [-h|--help] [--version] <command>
 dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
 ```
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 - **`-p|--process-id <PID>`**
 
@@ -150,7 +150,7 @@ Microsoft.AspNetCore.Hosting
 dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
 ```
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 - **`-p|--process-id <PID>`**
 

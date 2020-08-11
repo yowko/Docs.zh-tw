@@ -13,16 +13,16 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 5597043bb1c5af05f5f3633cba6ee6e6de1c52c1
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 883b587a7ef60bc686d6f453c775f6651f0ccb7f
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925601"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063818"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>如何：安裝和卸載 Windows 服務
 
-如果您要使用 .NET Framework 開發 Windows 服務，您可以使用[*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md)命令列公用程式或[PowerShell](/powershell/scripting/overview)，快速安裝服務應用程式。 開發人員若想發行使用者可安裝及解除安裝的 Windows 服務，則應該使用 InstallShield。 如需詳細資訊，請參閱[建立安裝程式套件（Windows 桌面）](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。
+如果您要使用 .NET Framework 開發 Windows 服務，您可以使用[*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md)命令列公用程式或[PowerShell](/powershell/scripting/overview)，快速安裝服務應用程式。 想要發行使用者可以安裝和卸載之 Windows 服務的開發人員，可以使用免費的[WiX 工具](https://wixtoolset.org/)組或商業工具（例如[Advanced Installer](https://www.advancedinstaller.com/)、 [InstallShield](https://www.revenera.com/install/products/installshield.html)或其他專案）。 如需詳細資訊，請參閱[ (Windows 桌面) 建立安裝程式套件](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)。
 
 > [!WARNING]
 > 如果您想要從電腦解除安裝服務，則不要遵循本文中的步驟。 請改為找出安裝服務的程式或軟體套件，然後在 [設定] 中選擇 [應用程式]**** 以解除安裝該程式。 請注意，許多服務都是 Windows 不可或缺的一部分；如果移除這些服務，可能會導致系統不穩定。

@@ -3,12 +3,12 @@ title: 概念和術語 (功能性轉換) (C#)
 description: '功能性程式設計功能可讓您更輕鬆地轉換 XML。 瞭解 c # 中純功能性轉換的概念與術語。'
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ca05a914f6156730e773d1effebfc72626b16507
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103979"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063272"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>概念和術語 (功能性轉換) (C#)
 
@@ -37,13 +37,13 @@ ms.locfileid: "87103979"
 
 根據過去的經驗，一般用途的函式程式設計語言 (例如，ML、Scheme、Haskell 與 F#) 主要受到學術團體的注意。 雖然函式程式設計一直可以使用 C# 撰寫純功能性轉換，但是其困難度始終讓大部分的程式設計人員卻步。 不過，在最近版本的 C# 中，新語言建構 (例如，Lambda 運算式和型別推斷) 讓函式程式設計更容易，產能也更高。
 
-如需功能性程式設計的詳細資訊，請參閱[功能性程式設計與命令式程式設計的比較（c #）](./functional-programming-vs-imperative-programming.md)。
+如需功能性程式設計的詳細資訊，請參閱功能性程式設計[與命令式程式設計 (c # ) ](./functional-programming-vs-imperative-programming.md)。
 
 #### <a name="domain-specific-fp-languages"></a>網域指定的 FP 語言
 
 雖然目前尚未廣泛採用一般功能性程式設計語言，但是特定網域指定的功能性程式設計語言比較受歡迎。 例如，階層式樣式表 (CSS) 用於決定許多網頁的外觀及操作，而可延伸樣式表語言轉換 (XSLT) 樣式表則廣泛用於 XML 資料操作。 如需 XSLT 的詳細資訊，請參閱 [XSLT 轉換](../../../../standard/data/xml/xslt-transformations.md)。
 
-## <a name="terminology"></a>術語
+## <a name="terminology"></a>詞彙
 
 下表定義與功能性轉換相關的一些辭彙。
 
@@ -55,7 +55,7 @@ ms.locfileid: "87103979"
 Lambda 運算式 \
 基本上，這是可用於任何需要委派型別之處的內嵌匿名函式。 這是 Lambda 運算式的簡化定義，但這適用於此教學課程的用途。
 
-如需詳細資訊，請參閱 [Lambda 運算式](../../statements-expressions-operators/lambda-expressions.md)。
+如需詳細資訊，請參閱 [Lambda 運算式](../../../language-reference/operators/lambda-expressions.md)。
 
 集合 \
 一組結構化的資料，通常屬於統一的型別。 為與 LINQ 相容，集合必須實作 <xref:System.Collections.IEnumerable> 介面或 <xref:System.Linq.IQueryable> 介面 (或以下其中一個泛型對應項目：<xref:System.Collections.Generic.IEnumerator%601> 或 <xref:System.Linq.IQueryable%601>)。
@@ -77,7 +77,7 @@ Lambda 運算式 \
 
 這些語言功能將用於本節的所有程式碼範例中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [純函數式轉換簡介 (C#)](./introduction-to-pure-functional-transformations.md)
-- [功能程式設計與命令式程式設計的比較（c #）](./functional-programming-vs-imperative-programming.md)
+- [功能程式設計與命令式程式設計的比較 (c # ) ](./functional-programming-vs-imperative-programming.md)

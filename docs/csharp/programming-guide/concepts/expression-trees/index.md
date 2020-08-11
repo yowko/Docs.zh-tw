@@ -3,26 +3,26 @@ title: 運算式樹狀架構 (C#)
 description: 深入瞭解運算式樹狀架構。 請參閱如何編譯並執行這些資料結構所表示的程式碼，其中每個節點都是運算式。
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a5c84673f0b45b92be18b955a6d1e7268bb73c26
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105576"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063311"
 ---
 # <a name="expression-trees-c"></a>運算式樹狀架構 (C#)
 運算式樹狀架構代表類似樹狀目錄之資料結構中的程式碼，其中，每個節點都是一個運算式，例如，方法呼叫或二進位運算 (如 `x < y`)。  
   
- 您可以編譯和執行運算式樹狀架構所代表的程式碼。 這會啟用動態修改可執行程式碼、在各種資料庫中執行 LINQ 查詢，以及建立動態查詢。 如需 LINQ 中運算式樹狀架構的詳細資訊，請參閱[如何使用運算式樹狀架構建立動態查詢（c #）](./how-to-use-expression-trees-to-build-dynamic-queries.md)。
+ 您可以編譯和執行運算式樹狀架構所代表的程式碼。 這會啟用動態修改可執行程式碼、在各種資料庫中執行 LINQ 查詢，以及建立動態查詢。 如需 LINQ 中運算式樹狀架構的詳細資訊，請參閱[如何使用運算式樹狀架構建立動態查詢 (c # ) ](./how-to-use-expression-trees-to-build-dynamic-queries.md)。
   
- 「運算式樹狀架構」也用於動態語言執行時間（DLR），以提供動態語言與 .NET 之間的互通性，以及讓編譯器寫入器發出運算式樹狀架構，而不是 Microsoft 中繼語言（MSIL）。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
+ 運算式樹狀架構也會用於動態語言執行時間 (DLR) ，以提供動態語言與 .NET 之間的互通性，以及讓編譯器撰寫者發出運算式樹狀架構，而不是使用 Microsoft 中繼語言 (MSIL) 。 如需 DLR 的詳細資訊，請參閱 [Dynamic Language Runtime 概觀](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
   
  您可以根據匿名 Lambda 運算式讓 C# 或 Visual Basic 編譯器建立運算式樹狀架構，也可以使用 <xref:System.Linq.Expressions> 命名空間以手動建立運算式樹狀架構。  
   
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>從 Lambda 運算式建立運算式樹狀架構  
  將 Lambda 運算式指派給類型為 <xref:System.Linq.Expressions.Expression%601> 的變數時，編譯器會發出程式碼，以建置代表 Lambda 運算式的運算式樹狀架構。  
   
- C# 編譯器只能從運算式 Lambda (或單行 Lambda) 產生運算式樹狀架構。 它無法剖析陳述式 Lambda (或多行 Lambda)。 如需 C# 中之 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../statements-expressions-operators/lambda-expressions.md)。  
+ C# 編譯器只能從運算式 Lambda (或單行 Lambda) 產生運算式樹狀架構。 它無法剖析陳述式 Lambda (或多行 Lambda)。 如需 C# 中之 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../../language-reference/operators/lambda-expressions.md)。  
   
  下列程式碼範例示範如何讓 C# 編譯器建立代表 Lambda 運算式 `num => num < 5` 的運算式樹狀架構。  
   
@@ -119,7 +119,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>運算式樹狀架構的不變性  
- 運算式樹狀架構應該是不變的。 這表示，如果您要修改運算式樹狀架構，則必須複製現有運算式樹狀架構，並取代其中的節點，以建構新的運算式樹狀架構。 您可以使用運算式樹狀架構訪問項來周遊現有運算式樹狀架構。 如需詳細資訊，請參閱[如何修改運算式樹狀架構（c #）](./how-to-modify-expression-trees.md)。
+ 運算式樹狀架構應該是不變的。 這表示，如果您要修改運算式樹狀架構，則必須複製現有運算式樹狀架構，並取代其中的節點，以建構新的運算式樹狀架構。 您可以使用運算式樹狀架構訪問項來周遊現有運算式樹狀架構。 如需詳細資訊，請參閱[如何 (c # ) 修改運算式樹狀](./how-to-modify-expression-trees.md)架構。
   
 ## <a name="compiling-expression-trees"></a>編譯運算式樹狀架構  
  <xref:System.Linq.Expressions.Expression%601> 類型提供 <xref:System.Linq.Expressions.Expression%601.Compile%2A> 方法，以將運算式樹狀架構所代表的程式碼編譯為可執行委派。  
@@ -146,13 +146,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- 如需詳細資訊，請參閱[如何執行運算式樹狀架構（c #）](./how-to-execute-expression-trees.md)。
+ 如需詳細資訊，請參閱[如何 (c # ) 執行運算式樹狀](./how-to-execute-expression-trees.md)架構。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.Expressions>
-- [如何執行運算式樹狀架構（c #）](./how-to-execute-expression-trees.md)
-- [如何修改運算式樹狀架構（c #）](./how-to-modify-expression-trees.md)
-- [Lambda 運算式](../../statements-expressions-operators/lambda-expressions.md)
+- [如何 (c # ) 執行運算式樹狀架構](./how-to-execute-expression-trees.md)
+- [如何修改運算式樹狀架構 (c # ) ](./how-to-modify-expression-trees.md)
+- [Lambda 運算式](../../../language-reference/operators/lambda-expressions.md)
 - [動態語言執行時間總覽](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [程式設計概念 (C#)](../index.md)

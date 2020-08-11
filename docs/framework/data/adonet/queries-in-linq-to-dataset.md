@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 829e7dce4801508a8311f7bcbfeccbc36184cffc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eee04959493914018904b61b0e5a289f172f2f18
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286633"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063714"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet 中的查詢
 查詢是指從資料來源中擷取資料的運算式。 查詢通常會以特定的查詢語言來表示，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 因此，開發人員必須針對他們所查詢的每種資料來源或資料格式，學習新的查詢語言。 Language-Integrated Query (LINQ) 提供了一種較簡單且一致的模型，可處理各種資料來源和格式的資料。 在 LINQ 查詢中，您一定會使用程式設計物件。  
@@ -30,9 +30,9 @@ ms.locfileid: "84286633"
  LINQ to DataSet 查詢可以用兩種不同的語法來撰寫：查詢運算式語法和以方法為基礎的查詢語法。  
   
 ### <a name="query-expression-syntax"></a>查詢運算式語法  
- 查詢運算式是宣告式查詢語法。 這種語法可讓開發人員使用類似 SQL 的格式，在 C# 或 Visual Basic 中撰寫查詢。 透過使用查詢運算式語法，您就可以利用最少的程式碼，針對資料來源執行同樣複雜的篩選、排序和分組作業。 如需詳細資訊，請參閱[LINQ 查詢運算式](../../../csharp/linq/index.md#query-expression-overview)和[基本查詢作業（Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。
+ 查詢運算式是宣告式查詢語法。 這種語法可讓開發人員使用類似 SQL 的格式，在 C# 或 Visual Basic 中撰寫查詢。 透過使用查詢運算式語法，您就可以利用最少的程式碼，針對資料來源執行同樣複雜的篩選、排序和分組作業。 如需詳細資訊，請參閱[LINQ 查詢運算式](../../../csharp/linq/index.md#query-expression-overview)和[基本查詢作業 (Visual Basic) ](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。
   
- .NET Framework common language runtime （CLR）無法讀取查詢運算式語法本身。 因此，在編譯期間，查詢運算式會轉譯為 CLR 可以了解的項目：即方法呼叫。 這些方法稱為*標準查詢運算子*。 身為開發人員，您可以選擇使用方法語法來直接呼叫它們，而非使用查詢語法。 如需詳細資訊，請參閱 [LINQ 中的查詢語法及方法語法](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。 如需標準查詢運算子的詳細資訊，請參閱[標準查詢運算子總覽](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+ .NET Framework common language runtime (CLR) 無法讀取查詢運算式語法本身。 因此，在編譯期間，查詢運算式會轉譯為 CLR 可以了解的項目：即方法呼叫。 這些方法稱為*標準查詢運算子*。 身為開發人員，您可以選擇使用方法語法來直接呼叫它們，而非使用查詢語法。 如需詳細資訊，請參閱 [LINQ 中的查詢語法及方法語法](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)。 如需標準查詢運算子的詳細資訊，請參閱[標準查詢運算子總覽](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
  下列範例會使用 <xref:System.Linq.Enumerable.Select%2A> 來傳回 `Product` 資料表中的所有資料列，並顯示產品名稱。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "84286633"
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>以方法為基礎的查詢語法  
- 制訂 LINQ to DataSet 查詢的另一種方式是使用以方法為基礎的查詢。 以方法為基礎的查詢語法是對 LINQ 運算子方法之直接方法呼叫的序列，並傳遞 Lambda 運算式當做參數。 如需詳細資訊，請參閱[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)。  
+ 制訂 LINQ to DataSet 查詢的另一種方式是使用以方法為基礎的查詢。 以方法為基礎的查詢語法是對 LINQ 運算子方法之直接方法呼叫的序列，並傳遞 Lambda 運算式當做參數。 如需詳細資訊，請參閱[Lambda 運算式](../../../csharp/language-reference/operators/lambda-expressions.md)。  
   
  這則範例會使用 <xref:System.Linq.Enumerable.Select%2A> 來傳回 `Product` 資料表中的所有資料列，並顯示產品名稱。  
   

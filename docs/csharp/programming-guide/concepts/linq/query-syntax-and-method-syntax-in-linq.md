@@ -6,15 +6,15 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1765a15347aeedb9cc5fa6784abdfad6fafe4016
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 46b0e44182d22158aa5fa54a0f44bae70aa8ddd9
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87300757"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063038"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ 中的查詢語法及方法語法 (C#)
-簡介語言整合式查詢（LINQ）檔中的大部分查詢都會使用 LINQ 宣告式查詢語法來撰寫。 不過，編譯程式碼時，必須將查詢語法轉譯成 .NET Common Language Runtime (CLR) 的方法呼叫。 這些方法呼叫會叫用標準查詢運算子，而其具有 `Where`、`Select`、`GroupBy`、`Join`、`Max` 和 `Average` 這類名稱。 您可以使用方法語法來直接呼叫它們，而不是使用查詢語法。  
+簡介語言整合式查詢 (LINQ) 檔中的大部分查詢，都是使用 LINQ 宣告式查詢語法來撰寫。 不過，編譯程式碼時，必須將查詢語法轉譯成 .NET Common Language Runtime (CLR) 的方法呼叫。 這些方法呼叫會叫用標準查詢運算子，而其具有 `Where`、`Select`、`GroupBy`、`Join`、`Max` 和 `Average` 這類名稱。 您可以使用方法語法來直接呼叫它們，而不是使用查詢語法。  
   
  查詢語法和方法語法的語意相同，但許多人都發現查詢語法較為簡單且更容易閱讀。 某些查詢必須以方法呼叫形式表示。 例如，您必須使用方法呼叫，來表示可擷取符合所指定條件的項目數的查詢。 您也必須針對擷取來源序列中具有最大值的項目的查詢，使用方法呼叫。 <xref:System.Linq> 命名空間中標準查詢運算子的參考文件一般會使用方法語法。 因此，即使在開始撰寫 LINQ 查詢時，也很熟悉如何在查詢和查詢運算式本身中使用方法語法。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "87300757"
 ## <a name="lambda-expressions"></a>Lambda 運算式  
  在上述範例中，請注意，條件運算式 (`num % 2 == 0`) 會傳遞為 `Where` 方法的內嵌引數︰`Where(num => num % 2 == 0).` 這個內嵌運算式稱為 Lambda 運算式。 它方便您撰寫程式碼，而這些程式碼之前必須以更難處理的形式撰寫為匿名方法、泛型委派或運算式樹狀結構。 在 C# 中，`=>` 是 Lambda 運算子，視為「到」。 運算子左側的 `num` 是對應到查詢運算式中 `num` 的輸入變數。 編譯器可以推斷 `num` 類型，因為它知道 `numbers` 是泛型 <xref:System.Collections.Generic.IEnumerable%601> 類型。 Lambda 的主體就與查詢語法或任何 C# 運算式或陳述式中的運算式相同，它可以包含方法呼叫和其他複雜邏輯。 「傳回值」就是運算式結果。  
   
- 若要開始使用 LINQ，您不必廣泛使用 lambda。 不過，只能在方法語法中表示特定查詢，而其中有一部分需要 Lambda 運算式。 當您更熟悉 lambda 之後，您會發現它們在 LINQ 工具箱中是一個功能強大且靈活的工具。 如需詳細資訊，請參閱[Lambda 運算式](../../statements-expressions-operators/lambda-expressions.md)。  
+ 若要開始使用 LINQ，您不必廣泛使用 lambda。 不過，只能在方法語法中表示特定查詢，而其中有一部分需要 Lambda 運算式。 當您更熟悉 lambda 之後，您會發現它們在 LINQ 工具箱中是一個功能強大且靈活的工具。 如需詳細資訊，請參閱[Lambda 運算式](../../../language-reference/operators/lambda-expressions.md)。  
   
 ## <a name="composability-of-queries"></a>查詢的編寫性  
  在上述程式碼範例，請注意，在 `Where` 呼叫上使用點運算子來叫用 `OrderBy` 方法。 `Where` 會產生已篩選的序列，而 `Orderby` 接著會透過排序來運作於該序列。 因為查詢會傳回 `IEnumerable`，所以您可以將方法呼叫鏈結在一起，以在方法語法中撰寫它們。 當您使用查詢語法來撰寫查詢時，這是編譯器在幕後執行的作業。 因為查詢變數不會儲存查詢的結果，所以您隨時都可以修改它，或使用它作為新查詢的基礎，即使已經執行之後也是一樣。  

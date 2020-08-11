@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 94e7c130bd5d8e136d03ccdbaed643bc1a47d112
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 2c1be56b67528c17a6cf1d8d8517817ff93b2aa5
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302161"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063634"
 ---
 # <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
 [委派](../../language-reference/builtin-types/reference-types.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
@@ -40,7 +40,7 @@ ms.locfileid: "87302161"
   
 - 方法不需要完全符合委派類型。 如需詳細資訊，請參閱[在委派中使用差異](../concepts/covariance-contravariance/using-variance-in-delegates.md)。  
   
-- C # 版本2.0 引進了[匿名方法](../../language-reference/operators/delegate-operator.md)的概念，可讓程式碼區塊當做參數傳遞，以取代個別定義的方法。 C# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 (Inline) 程式碼區塊撰寫方式。 匿名方法與 Lambda 運算式 (在特定內容中) 都會編譯為委派類型。 現在，這些功能合稱為「匿名函式」(Anonymous Function)。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)。
+- C # 版本2.0 引進了[匿名方法](../../language-reference/operators/delegate-operator.md)的概念，可讓程式碼區塊當做參數傳遞，以取代個別定義的方法。 C# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 (Inline) 程式碼區塊撰寫方式。 匿名方法與 Lambda 運算式 (在特定內容中) 都會編譯為委派類型。 現在，這些功能合稱為「匿名函式」(Anonymous Function)。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../language-reference/operators/lambda-expressions.md)。
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -52,7 +52,7 @@ ms.locfileid: "87302161"
   
 - [在委派中使用變異數](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [如何合併委派（多播委派）](./how-to-combine-delegates-multicast-delegates.md)  
+- [如何將委派結合 (多播委派) ](./how-to-combine-delegates-multicast-delegates.md)  
   
 - [如何宣告、具現化和使用委派](./how-to-declare-instantiate-and-use-a-delegate.md)
 

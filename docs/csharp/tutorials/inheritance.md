@@ -4,18 +4,18 @@ description: 了解如何使用 C# 程式庫和應用程式中的繼承。
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 8e24ad3e93dcd11f39ae979a3acda4c4ada13dc5
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007724"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063506"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
 本教學課程將介紹 C# 中的繼承。 繼承是一種物件導向程式設計語言的功能，可讓您定義基底類別，提供特定功能 (資料和行為)，以及定義繼承或覆寫該功能的衍生類別。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 本教學課程假設您已安裝 .NET Core SDK。 請造訪[.Net Core 下載](https://dotnet.microsoft.com/download)頁面下載。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
 
@@ -297,5 +297,4 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="see-also"></a>另請參閱
 
-- [類別與物件](../tour-of-csharp/classes-and-objects.md)
 - [繼承 (C# 程式設計手冊)](../programming-guide/classes-and-structs/inheritance.md)

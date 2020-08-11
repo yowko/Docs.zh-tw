@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: e57447c89749451862bbb80047ed74135a0eb752
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 116087ac1aab57f2869b05f436801c7861c56eca
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474809"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063701"
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 
@@ -22,7 +22,7 @@ ms.locfileid: "86474809"
 
 ### <a name="orderby-example"></a>OrderBy 範例
 
-下列範例將示範如何在整數陣列上呼叫標準查詢運算子 `OrderBy` 方法。 括號括住的運算式就是 Lambda 運算式。 許多標準查詢運算子會採用 lambda 運算式做為參數，但這不是擴充方法的需求。 如需詳細資訊，請參閱[Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)。
+下列範例將示範如何在整數陣列上呼叫標準查詢運算子 `OrderBy` 方法。 括號括住的運算式就是 Lambda 運算式。 許多標準查詢運算子會採用 lambda 運算式做為參數，但這不是擴充方法的需求。 如需詳細資訊，請參閱[Lambda 運算式](../../language-reference/operators/lambda-expressions.md)。
 
 [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]
 
@@ -45,7 +45,7 @@ string s = "Hello Extension Methods";
 int i = s.WordCount();
 ```
 
-您可以使用實例方法語法，在程式碼中叫用擴充方法。 編譯器所產生的中繼語言（IL）會將您的程式碼轉譯為靜態方法的呼叫。 封裝的原則並不是真的違反了。 擴充方法無法存取所擴充之類型中的私用變數。
+您可以使用實例方法語法，在程式碼中叫用擴充方法。 編譯器所產生的中繼語言 (IL) 會將您的程式碼轉譯為靜態方法的呼叫。 封裝的原則並不是真的違反了。 擴充方法無法存取所擴充之類型中的私用變數。
 
 如需詳細資訊，請參閱[如何執行和呼叫自訂擴充方法](./how-to-implement-and-call-a-custom-extension-method.md)。
 
@@ -55,7 +55,7 @@ int i = s.WordCount();
 using System.Linq;
 ```
 
-（您可能也必須加入 System.Core.dll 的參考）。您會注意到，標準查詢運算子現在會出現在 IntelliSense 中，做為大部分類型可用的其他方法 <xref:System.Collections.Generic.IEnumerable%601> 。
+ (您可能也必須加入 System.Core.dll 的參考。 ) 您會注意到，標準查詢運算子現在會出現在 IntelliSense 中，做為大部分類型可用的其他方法 <xref:System.Collections.Generic.IEnumerable%601> 。
 
 ## <a name="binding-extension-methods-at-compile-time"></a>在編譯時期繫結擴充方法
 
@@ -121,7 +121,7 @@ static class DomainEntityExtensions
 
 - [C # 程式設計指南](../index.md)
 - [平行程式設計範例 (包括許多範例擴充方法)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
-- [Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)
+- [Lambda 運算式](../../language-reference/operators/lambda-expressions.md)
 - [標準查詢運算子概觀](../concepts/linq/standard-query-operators-overview.md)
 - [Conversion rules for Instance parameters and their impact](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact) (執行個體參數的轉換規則與其影響)
 - [Extension methods Interoperability between languages](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages) (語言之間擴充方法的互通性)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 89133339a75c70e3ac86d627065e78d555bff71d
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 279ea2f9875681401c9c7acab922d9e4424e6827
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507200"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062531"
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
 
-使用 `async` 修飾詞可將方法、[Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../operators/delegate-operator.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」**。 下例定義名為 `ExampleMethodAsync` 的非同步方法：
+使用 `async` 修飾詞可將方法、[Lambda 運算式](../operators/lambda-expressions.md)或[匿名方法](../operators/delegate-operator.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」**。 下例定義名為 `ExampleMethodAsync` 的非同步方法：
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -26,7 +26,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
 
-如果您對非同步程式設計很新，或者不了解非同步方法如何使用[`await`運算子](../operators/await.md)在不阻塞調用方執行緒的情況下執行潛在的長時間運行工作，請[用非同步程式設計](../../programming-guide/concepts/async/index.md)閱讀引言並等待 。 下列程式碼位於非同步方法中，會呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 方法：
+如果您不熟悉非同步程式設計或不了解非同步方法如何使用[ `await` 運算子](../operators/await.md)來執行可能長時間執行的工作，而不封鎖呼叫端的執行緒，請閱讀[使用 Async 和 Await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)中的簡介。 下列程式碼位於非同步方法中，會呼叫 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 方法：
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -71,7 +71,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [虛空](../builtin-types/void.md)。 除了用於事件處理常式以外的程式碼，通常不鼓勵使用 `async void` 方法，因為呼叫者無法 `await` 這些方法，且必須實作不同的機制來報告成功完成或錯誤狀況。
+- [void](../builtin-types/void.md)。 除了用於事件處理常式以外的程式碼，通常不鼓勵使用 `async void` 方法，因為呼叫者無法 `await` 這些方法，且必須實作不同的機制來報告成功完成或錯誤狀況。
 - 自 C# 7.0 開始，任何具有可存取 `GetAwaiter` 方法的型別。 `System.Threading.Tasks.ValueTask<TResult>` 類型就是一個這種實作。 新增 NuGet 套件 `System.Threading.Tasks.Extensions` 即可使用。
 
 非同步方法不可宣告任何 [in](./in-parameter-modifier.md)、[ref](./ref.md) 或 [out](./out-parameter-modifier.md) 參數，也不可以有 [參考傳回值](../../programming-guide/classes-and-structs/ref-returns.md)，但可以呼叫有這類參數的方法。  
@@ -87,6 +87,6 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
-- [等待](../operators/await.md)
+- [await](../operators/await.md)
 - [逐步解說：使用 Async 和 Await 存取 Web](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)

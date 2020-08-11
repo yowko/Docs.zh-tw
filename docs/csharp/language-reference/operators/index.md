@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 854d7c1278319869104e1758ba91eb3594741126
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916810"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063181"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C # 運算子和運算式 (c # 參考) 
 
@@ -47,7 +47,7 @@ Console.WriteLine("Hello, world!");
 
   [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
-- 可讓您建立匿名函數的[Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)：
+- 可讓您建立匿名函數的[Lambda 運算式](lambda-expressions.md)：
 
   [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
@@ -75,7 +75,7 @@ Console.WriteLine(a); //  output: 8
 
 下表列出 C# 運算子，從最高優先順序開始到最低優先順序。 每個資料列中的運算子都具有相同的優先順序。
 
-| 操作員 | 類別或名稱 |
+| 運算子 | 類別或名稱 |
 | --------- | ---------------- |
 | [x-y](member-access-operators.md#member-access-expression-)、 [f (x) ](member-access-operators.md#invocation-expression-)、 [&#91;i&#93;](member-access-operators.md#indexer-operator-)、 [`x?.y`](member-access-operators.md#null-conditional-operators--and-) 、 [`x?[y]`](member-access-operators.md#null-conditional-operators--and-) 、 [x + +](arithmetic-operators.md#increment-operator-)、 [x--](arithmetic-operators.md#decrement-operator---)、 [x！](null-forgiving.md)、 [new](new-operator.md)、 [typeof](type-testing-and-cast.md#typeof-operator)、 [checked](../keywords/checked.md)、 [unchecked](../keywords/unchecked.md)、 [default](default.md)、 [nameof](nameof.md)、 [delegate](delegate-operator.md)、 [sizeof](sizeof.md)、 [stackalloc](stackalloc.md)、 [x->y](pointer-related-operators.md#pointer-member-access-operator--) | 主要 |
 | [+ x](arithmetic-operators.md#unary-plus-and-minus-operators)， [-x](arithmetic-operators.md#unary-plus-and-minus-operators)， [ \! x](boolean-logical-operators.md#logical-negation-operator-)， [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-)， [+ + x](arithmetic-operators.md#increment-operator-)， [--x](arithmetic-operators.md#decrement-operator---)， [^ x](member-access-operators.md#index-from-end-operator-)， [ (T) x](type-testing-and-cast.md#cast-expression)， [await](await.md)， [&x](pointer-related-operators.md#address-of-operator-)， [* x](pointer-related-operators.md#pointer-indirection-operator-)， [true 和 false](true-false-operators.md) | 一元 (Unary) |
@@ -114,7 +114,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 與運算子優先順序和關聯性無關，運算式中的運算元會由左至右評估。 下列範例示範了運算子和運算元的評估順序：
 
-| 運算是 | 評估順序 |
+| 運算式 | 評估順序 |
 | ---------- | ------------------- |
 |`a + b`|a，b，+|
 |`a + b * c`|a，b，c，*，+|

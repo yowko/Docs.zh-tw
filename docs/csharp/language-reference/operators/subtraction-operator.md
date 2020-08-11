@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: a00957c8d36a96b5ee23b9e5a309b6139b33fd36
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c126837309b5fe3495a5e9e6af589892670b62c3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916680"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063077"
 ---
 # <a name="--and---operators-c-reference"></a>- 及 -= 運算子 (C# 參考)
 
@@ -37,7 +37,7 @@ ms.locfileid: "87916680"
 
   [!code-csharp-interactive[delegate removal with no effect](snippets/shared/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  上述範例也會示範在委派移除期間，系統會比較委派執行個體。 例如，從評估相同 [lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)所產生的委派不相等。 如需有關委派等號比較的詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[委派等號比較運算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)一節。
+  上述範例也會示範在委派移除期間，系統會比較委派執行個體。 例如，從評估相同 [lambda 運算式](lambda-expressions.md)所產生的委派不相等。 如需有關委派等號比較的詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[委派等號比較運算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)一節。
 
 - 如果左邊運算元是 `null`，則作業的結果是 `null`。 如果右邊運算元是 `null`，則作業的結果是左邊運算元。
 

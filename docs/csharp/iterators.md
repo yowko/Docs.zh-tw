@@ -4,18 +4,18 @@ description: 了解如何使用內建 C# 迭代器，以及如何建立您自己
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: c2a1dfe38b6a65e382e140541c71e94bb0fc76aa
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507373"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062479"
 ---
 # <a name="iterators"></a>迭代器
 
 您撰寫的幾乎所有程式或多或少都需要逐一查看集合。 您將會撰寫程式碼，以查看集合中的每個項目。
 
-您也會建立反覆運算器方法，這是可產生 iterator 的方法（也就是會針對該類別的元素來進行容器的物件，特別是清單）。 這些方法可用於：
+您也會建立反覆運算器方法，這是會產生 iterator (的方法，這是可遍歷容器的物件，特別是針對該類別的元素) 的清單。 這些方法可用於：
 
 + 在集合中的每個項目上執行動作。
 + 列舉自訂集合。
@@ -37,7 +37,7 @@ foreach (var item in collection)
 }
 ```
 
-這樣就全部完成了。 若要逐一查看集合的所有內容，只需要 `foreach` 陳述式即可。 不過，`foreach` 陳述式不是魔法。 它需要在 .NET Core 程式庫中定義下列兩個泛型介面，才能產生逐一查看集合所需的程式碼︰`IEnumerable<T>` 和 `IEnumerator<T>`。 以下會更詳細說明這個機制。
+就是這麼簡單。 若要逐一查看集合的所有內容，只需要 `foreach` 陳述式即可。 不過，`foreach` 陳述式不是魔法。 它需要在 .NET Core 程式庫中定義下列兩個泛型介面，才能產生逐一查看集合所需的程式碼︰`IEnumerable<T>` 和 `IEnumerator<T>`。 以下會更詳細說明這個機制。
 
 這兩種介面也有非泛型對應項目︰`IEnumerable` 和 `IEnumerator`。 新式程式碼適合使用[泛型](programming-guide/generics/index.md)版本。
 
@@ -195,7 +195,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-因為舊版行為可能會導致很難診斷涉及 Lambda 運算式的 Bug ，所以已變更此行為。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](./programming-guide/statements-expressions-operators/lambda-expressions.md)。
+因為舊版行為可能會導致很難診斷涉及 Lambda 運算式的 Bug ，所以已變更此行為。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](language-reference/operators/lambda-expressions.md)。
 
 編譯器所產生的實際程式碼稍微複雜一點，而且會處理 `GetEnumerator()` 所傳回的物件實作 `IDisposable` 介面的情況。 完全展開會產生類似如下的程式碼：
 

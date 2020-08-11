@@ -3,13 +3,14 @@ title: 啟用 TAB 鍵自動完成
 description: 本文描述如何為適用於 PowerShell、Bash 和 zsh 的 .NET Core CLI 啟用 tab 鍵自動完成。
 author: adegeo
 ms.author: adegeo
+ms.topic: how-to
 ms.date: 11/03/2019
-ms.openlocfilehash: 491e1ca34c20c3994a571fc2deff7392c6bdb3f2
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: cd46305b8cd82825671a3a1568e8b93de1bbab26
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324388"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062804"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>如何為 .NET Core CLI 啟用 TAB 鍵自動完成
 

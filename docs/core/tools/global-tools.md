@@ -2,13 +2,14 @@
 title: " .NET Core 工具"
 description: 如何安裝、使用、更新和移除 .NET Core 工具。 涵蓋通用工具、工具路徑工具和本機工具。
 author: KathleenDollard
+ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 75bdedcbc3ebe9c23477795415076d160ab9a642
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.openlocfilehash: 00c0317fcfc4da0e7205c23faa7b355c20882ec9
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455723"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062726"
 ---
 # <a name="how-to-manage-net-core-tools"></a>如何管理 .NET Core 工具
 
@@ -20,11 +21,11 @@ ms.locfileid: "87455723"
 
   工具二進位檔會安裝在新增至 PATH 環境變數的預設目錄中。 您可以從電腦上的任何目錄叫用此工具，而不需要指定其位置。 其中一個工具版本會用於電腦上的所有目錄。
 
-* 做為自訂位置（也稱為工具路徑工具）中的通用工具。
+* 做為自訂位置中的全域工具 (也稱為工具路徑工具) 。
 
   工具二進位檔會安裝在您指定的位置。 您可以從安裝目錄叫用此工具，或使用命令名稱提供目錄，或將目錄加入 PATH 環境變數中。 其中一個工具版本會用於電腦上的所有目錄。
 
-* 作為本機工具（適用于 .NET Core SDK 3.0 和更新版本）。
+* 作為本機工具 (適用于 .NET Core SDK 3.0 和更新版本) 。
 
   工具二進位檔會安裝在預設目錄中。 您可以從安裝目錄或其任何子目錄叫用此工具。 不同的目錄可以使用相同工具的不同版本。
   
@@ -66,7 +67,7 @@ Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 
 工具二進位檔的預設位置取決於作業系統：
 
-| OS          | Path                          |
+| OS          | 路徑                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -101,7 +102,7 @@ dotnet tool install dotnetsay --tool-path ~/bin
 
 **適用于 .NET Core 3.0 SDK 和更新版本。**
 
-若要安裝僅限本機存取的工具（針對目前的目錄和子目錄），必須將它新增至工具資訊清單檔。 若要建立工具資訊清單檔，請執行 `dotnet new tool-manifest` 命令：
+若要針對目前目錄和) 子目錄安裝僅限本機存取的工具 (，必須將它新增至工具資訊清單檔。 若要建立工具資訊清單檔，請執行 `dotnet new tool-manifest` 命令：
 
 ```dotnetcli
 dotnet new tool-manifest
@@ -218,7 +219,7 @@ dotnet-doc
 
 ### <a name="invoke-a-local-tool"></a>叫用本機工具
 
-若要叫用本機工具，您必須 `dotnet` 從安裝目錄中使用命令。 您可以使用完整格式（ `dotnet tool run <COMMAND_NAME>` ）或簡短形式（ `dotnet <COMMAND_NAME>` ），如下列範例所示：
+若要叫用本機工具，您必須 `dotnet` 從安裝目錄中使用命令。 您可以使用完整格式的 (`dotnet tool run <COMMAND_NAME>`) 或簡短形式的 (`dotnet <COMMAND_NAME>`) ，如下列範例所示：
 
 ```dotnetcli
 dotnet tool run dotnetsay
@@ -274,7 +275,7 @@ dotnet <command> --help
 
 如果工具無法安裝或執行，請參閱針對[.Net Core 工具使用問題進行疑難排解](troubleshoot-usage-issues.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [教學課程：使用 .NET Core CLI 建立 .NET Core 工具](global-tools-how-to-create.md)
 - [教學課程：使用 .NET Core CLI 安裝和使用 .NET Core 通用工具](global-tools-how-to-use.md)

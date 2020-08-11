@@ -2,19 +2,20 @@
 title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI 及其功能的總覽。
+ms.topic: overview
 ms.date: 02/13/2020
-ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 18dde384058206f437b53572b2f8331d65324482
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415969"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062687"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI 概觀
 
 **本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-.NET Core 命令列介面（CLI）是用於開發、建立、執行和發佈 .NET Core 應用程式的跨平臺工具鏈。
+ (CLI) 的 .NET Core 命令列介面，是用於開發、建立、執行和發佈 .NET Core 應用程式的跨平臺工具鏈。
 
 .NET Core CLI 包含在[.NET Core SDK](../sdk.md)中。 若要瞭解如何安裝 .NET Core SDK，請參閱[安裝 .Net Core](../install/windows.md)。
 
@@ -89,7 +90,7 @@ dotnet build
 
 首先，驅動器會決定要使用的 SDK 版本。 如果檔案中沒有[global.js](global-json.md) ，就會使用可用的最新 SDK 版本。 這可能是預覽版或穩定的版本，視兩者中何者版本最新。  確定 SDK 版本之後，就會開始執行命令。
 
-### <a name="command"></a>命令
+### <a name="command"></a>Command
 
 此命令會執行動作。 例如，`dotnet build` 會建置程式碼。 `dotnet publish` 會發佈程式碼。 命令是使用 `dotnet {command}` 慣例實作為主控台應用程式。
 
@@ -101,7 +102,7 @@ dotnet build
 
 您在命令列上傳遞的選項即為叫用命令的選項。 例如，當您執行時 `dotnet publish --output /build_output` ， `--output` 選項和其值會傳遞至 `publish` 命令。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [dotnet/sdk GitHub 存放庫](https://github.com/dotnet/sdk/)
 - [.NET core 安裝指南 (英文)](../install/windows.md)

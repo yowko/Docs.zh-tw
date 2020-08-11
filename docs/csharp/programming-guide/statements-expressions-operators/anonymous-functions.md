@@ -7,18 +7,18 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: ae8bda3c68542637b1430587ca4a537980c028bc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1fde7d535054f09d55018a010468776622ebfba7
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381667"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063259"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>匿名函式 (C# 程式設計指南)
 
 匿名函式是可用於任何需要委派類型之處的「內嵌」陳述式或運算式。 您可以使用它來初始化具名委派，或改將它傳遞給具名委派類型作為方法參數。
 
-您可以使用 [Lambda 運算式](lambda-expressions.md)或[匿名方法](../../language-reference/operators/delegate-operator.md)來建立匿名函式。 我們建議使用 Lambda 運算式，因為它們提供更簡潔且更具表達性的方式來撰寫內嵌程式碼。 不同於匿名方法，某些型別的 Lambda 運算式可以轉換成運算式樹狀架構型別。
+您可以使用 [Lambda 運算式](../../language-reference/operators/lambda-expressions.md)或[匿名方法](../../language-reference/operators/delegate-operator.md)來建立匿名函式。 我們建議使用 Lambda 運算式，因為它們提供更簡潔且更具表達性的方式來撰寫內嵌程式碼。 不同於匿名方法，某些型別的 Lambda 運算式可以轉換成運算式樹狀架構型別。
 
 ## <a name="the-evolution-of-delegates-in-c"></a>C\# 中的委派演進
 
@@ -35,6 +35,6 @@ ms.locfileid: "87381667"
 ## <a name="see-also"></a>另請參閱
 
 - [語句、運算式和運算子](./index.md)
-- [Lambda 運算式](./lambda-expressions.md)
+- [Lambda 運算式](../../language-reference/operators/lambda-expressions.md)
 - [委派](../delegates/index.md)
 - [運算式樹狀架構 (C#)](../concepts/expression-trees/index.md)

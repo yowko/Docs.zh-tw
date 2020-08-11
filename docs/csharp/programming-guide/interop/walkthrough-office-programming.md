@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: bf4725f3f636bb208450cb9b5c58766d84947f86
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 76f0e2eccb5d1a59d9aaa3eed11b25dd2dd9cac3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302941"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062999"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>逐步解說：Office 程式設計 (C# 與 Visual Basic)
 
@@ -25,7 +25,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 
 這個逐步解說會示範 Office 程式設計內容中的這些功能，但其中大部分也適用於一般的程式設計。 在這個逐步解說中，您會使用 Excel 增益集應用程式來建立 Excel 活頁簿。 接著，建立含有活頁簿連結的 Word 文件。 最後，了解如何啟用和停用 PIA 相依性。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 電腦上必須安裝 Microsoft Office Excel 和 Microsoft Office Word 才能完成此逐步解說。
 
@@ -53,7 +53,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 
 1. 在方案總管**** 中，於專案名稱上按一下滑鼠右鍵，然後按一下 [新增參考]****。 [新增參考]**** 對話方塊隨即出現。
 
-2. 在 [組件]**** 索引標籤上，選取 **Microsoft.Office.Interop.Excel**`<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱]**** 清單中，按住 CTRL 鍵，然後選取 **Microsoft.Office.Interop.Word**`version <version>.0.0.0`。 如果您看不到元件，則可能需要確定它們已安裝和顯示（請參閱[如何：安裝 Office 主要 Interop 元件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)）。
+2. 在 [組件]**** 索引標籤上，選取 **Microsoft.Office.Interop.Excel**`<version>.0.0.0` 版 (如需 Office 產品版本號碼的金鑰，請參閱 [Microsoft 版本](https://en.wikipedia.org/wiki/Microsoft_Office#Versions))，並在 [元件名稱]**** 清單中，按住 CTRL 鍵，然後選取 **Microsoft.Office.Interop.Word**`version <version>.0.0.0`。 如果您看不到元件，則可能需要確定它們已安裝並顯示 (請參閱[如何：) 安裝 Office 主要 Interop 元件](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)。
 
 3. 按一下 [確定]。
 
@@ -69,7 +69,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 
 ### <a name="to-create-a-list-of-bank-accounts"></a>建立銀行帳戶清單
 
-1. 在方案總管**** 中，以滑鼠右鍵按一下您的專案名稱，再按一下 [新增]****，然後按一下 [類別]****。 如果您使用 Visual Basic，請將類別命名為 Account.vb；如果您使用 C#，則請將類別命名為 Account.cs。 按一下 [新增]  。
+1. 在方案總管**** 中，以滑鼠右鍵按一下您的專案名稱，再按一下 [新增]****，然後按一下 [類別]****。 如果您使用 Visual Basic，請將類別命名為 Account.vb；如果您使用 C#，則請將類別命名為 Account.cs。 按一下 [新增] 。
 
 2. 將 `Account` 類別的定義取代為下列程式碼。 類別定義使用「自動實作屬性」**。 如需詳細資訊，請參閱[自動實作的屬性](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)。
 
@@ -125,7 +125,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 
 ### <a name="to-invoke-displayinexcel"></a>叫用 DisplayInExcel
 
-1. 在 `ThisAddIn_StartUp` 方法的結尾，加入下列程式碼。 `DisplayInExcel` 呼叫包含兩個引數。 第一個引數是要處理的帳戶清單名稱。 第二個引數則是多行的 Lambda 運算式，定義如何處理資料。 每個帳戶的 `ID` 和 `balance` 值都會顯示在相鄰的儲存格中，而且如果餘額小於零，則會以紅色顯示資料列。 如需詳細資訊，請參閱[Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。
+1. 在 `ThisAddIn_StartUp` 方法的結尾，加入下列程式碼。 `DisplayInExcel` 呼叫包含兩個引數。 第一個引數是要處理的帳戶清單名稱。 第二個引數則是多行的 Lambda 運算式，定義如何處理資料。 每個帳戶的 `ID` 和 `balance` 值都會顯示在相鄰的儲存格中，而且如果餘額小於零，則會以紅色顯示資料列。 如需詳細資訊，請參閱[Lambda 運算式](../../language-reference/operators/lambda-expressions.md)。
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -203,7 +203,7 @@ Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式
 - [動態](../../language-reference/builtin-types/reference-types.md)
 - [使用動態類型](../types/using-type-dynamic.md)
 - [Lambda 運算式 (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Lambda 運算式 (C#)](../statements-expressions-operators/lambda-expressions.md)
+- [Lambda 運算式 (C#)](../../language-reference/operators/lambda-expressions.md)
 - [如何在 COM Interop 程式設計中使用已編製索引的屬性](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [逐步解說：在 Visual Studio 中內嵌來自 Microsoft Office 組件的型別資訊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [Walkthrough: Embedding Types from Managed Assemblies (逐步解說：從 Managed 組件內嵌類型)](../../../standard/assembly/embed-types-visual-studio.md)

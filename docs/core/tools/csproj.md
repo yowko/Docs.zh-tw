@@ -1,13 +1,14 @@
 ---
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
+ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: a0cbead27e52af3114d9c44fd19c966e665a2850
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 4f45362fbb3df053b95156b8e633903f011a85ad
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427004"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062869"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -70,7 +71,7 @@ ms.locfileid: "87427004"
 
 下表顯示 SDK 中會同時包含及排除的元素與 [Glob (英文)](https://en.wikipedia.org/wiki/Glob_(programming))：
 
-| 元素           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob              |
+| 項目           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
 | 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
@@ -130,8 +131,8 @@ ms.locfileid: "87427004"
 1. 識別碼為 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. 識別碼為 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
 3. 識別碼為 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 類別庫 SDK
-4. 識別碼為的 .NET Core 背景工作角色服務 `Microsoft.NET.Sdk.Worker` （自 .Net core 3.0 起）
-5. 具有識別碼的 .NET Core WinForms 和 WPF `Microsoft.NET.Sdk.WindowsDesktop` （自 .Net core 3.0 起）
+4. 自 .NET Core 3.0 起，具有 (識別碼的 .NET Core 背景工作角色服務 `Microsoft.NET.Sdk.Worker`) 
+5. 自 .NET Core 3.0 之後，具有 (識別碼的 .NET Core WinForms 和 WPF `Microsoft.NET.Sdk.WindowsDesktop`) 
 
 您必須在 `<Project>` 項目中將 `Sdk` 屬性設定為上述其中一個識別碼，才能使用 .NET Core 工具並建置您的程式碼。
 
@@ -227,7 +228,7 @@ RID 允許發行獨立部署。
 
 ## <a name="build-events"></a>建置事件
 
-在專案檔中指定預先建立和後置組建事件的方式已經變更。 在 SDK 樣式的專案格式中不建議使用 PreBuildEvent 和 Postbuildevent.bat 屬性，因為不會解析如 $ （ProjectDir）之類的宏。 例如，已不再支援下列程式碼：
+在專案檔中指定預先建立和後置組建事件的方式已經變更。 SDK 樣式的專案格式不建議使用 PreBuildEvent 和 Postbuildevent.bat 屬性，因為) 不會解析如 $ (ProjectDir 的宏。 例如，已不再支援下列程式碼：
 
 ```xml
 <PropertyGroup>
@@ -288,11 +289,11 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 
-布林值，指定在安裝套件時，用戶端是否必須提示取用者接受套件授權。 預設值為 `false`。
+布林值，指定在安裝套件時，用戶端是否必須提示取用者接受套件授權。 預設為 `false`。
 
 ### <a name="developmentdependency"></a>DevelopmentDependency
 
-布林值，指定封裝是否標示為僅限開發的相依性，這可防止封裝當做其他封裝的相依性來包含。 使用 PackageReference （NuGet 4.8 +）時，此旗標也表示編譯時期資產會從編譯中排除。 如需詳細資訊，請參閱 [PackageReference 的 DevelopmentDependency 支援](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference) \(英文\)。
+布林值，指定封裝是否標示為僅限開發的相依性，這可防止封裝當做其他封裝的相依性來包含。 使用 PackageReference (NuGet 4.8 +) ，此旗標也表示編譯時期資產會從編譯中排除。 如需詳細資訊，請參閱 [PackageReference 的 DevelopmentDependency 支援](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference) \(英文\)。
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
@@ -356,7 +357,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="packageoutputpath"></a>PackageOutputPath
 
-決定要置放所封裝之套件的輸出路徑。 預設為 `$(OutputPath)`。
+決定要置放所封裝之套件的輸出路徑。 預設值為 `$(OutputPath)`。
 
 ### <a name="includesymbols"></a>IncludeSymbols
 此布林值會指出在封裝專案時，套件是否應該建立額外的符號套件。 符號套件的格式由 `SymbolPackageFormat` 屬性控制。
@@ -400,7 +401,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
-此布林值會指定是否有任何類型為 `Content` 的項目會自動包含於所產生的套件中。 預設值為 `true`。
+此布林值會指定是否有任何類型為 `Content` 的項目會自動包含於所產生的套件中。 預設為 `true`。
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 

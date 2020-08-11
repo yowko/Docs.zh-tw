@@ -3,12 +3,12 @@ title: 使用命令式程式碼撰寫工作流程、活動和運算式
 description: Workflow Foundation 工作流程定義是已設定之活動物件的樹狀結構。 使用程式碼建立工作流程定義、活動和運算式。
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: d8b4cb8b85d3ea3759d58e15df823a72146772e8
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d169049c47c154858a2e653b5f286fa6b66ba44d
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421549"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063792"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>使用命令式程式碼撰寫工作流程、活動和運算式
 工作流程定義是配置之活動物件的樹狀。 有很多方式可定義這個活動的樹狀結構，包含手動編輯 XAML 或使用工作流程設計工具來產生 XAML。 不過，XAML 並非必要條件。 您也可以程式設計的方式建立工作流程定義。 本主題提供使用程式碼來建立工作流程定義、活動和運算式的概觀。 如需使用程式碼來使用 XAML 工作流程的範例，請參閱[將工作流程和活動序列化為 xaml](serializing-workflows-and-activities-to-and-from-xaml.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "83421549"
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- 如需物件初始化運算式的詳細資訊，請參閱[如何：在不呼叫函式的情況下初始化物件（c # 程式設計手冊）](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)和[如何：使用物件初始化運算式宣告物件](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)。  
+ 如需物件初始化運算式的詳細資訊，請參閱[如何：將物件初始化而不呼叫函式 (c # 程式設計手冊) ](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)和[如何：使用物件初始化運算式宣告物件](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)。  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>處理變數、常值和運算式  
  使用程式碼建立工作流程定義時，請注意哪個程式碼是做為建立工作流程定義的一部分，以及哪個程式碼是做為該工作流程執行個體的一部分執行。 例如，下列工作流程目的是要產生隨機號碼，並將它寫入主控台。  
@@ -62,7 +62,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- 如需 lambda 運算式的詳細資訊，請參閱[Lambda 運算式（c # 程式設計手冊）](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[lambda 運算式（Visual Basic）](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
+ 如需 lambda 運算式的詳細資訊，請參閱[Lambda 運算式 (c # 參考) ](../../csharp/language-reference/operators/lambda-expressions.md)或[ (Visual Basic) 的 lambda 運算式](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
  Lambda 運算式不可序列化為 XAML 格式。 如果嘗試序列化內含 Lambda 運算式的工作流程，會擲回 <xref:System.Activities.Expressions.LambdaSerializationException> 和下列訊息：「此工作流程包含程式碼中指定的 Lambda 運算式。 這些運算式並非 XAML 可序列化。 若要讓您的工作流程成為 XAML 可序列化，請使用 VisualBasicValue/VisualBasicReference 或 ExpressionServices.Convert(lambda)。 這會將您的 Lambda 運算式轉換成運算式活動。」 若要讓此運算式相容於 XAML，請使用 <xref:System.Activities.Expressions.ExpressionServices> 與 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>，如下列範例所示。  
   

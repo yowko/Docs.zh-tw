@@ -1,19 +1,19 @@
 ---
-title: Expression Trees
+title: 運算式樹狀架構
 description: 了解 .NET Core 中的運算式樹狀架構，以及如何使用它們來表示您可以檢查、修改和執行的程式碼結構。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: e1026ef70860da519b688a9d67181b88d03f6f0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62f5b93097ee8ad2177fc0bb484c656408f91f30
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79145835"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062505"
 ---
-# <a name="expression-trees"></a>Expression Trees
+# <a name="expression-trees"></a>運算式樹狀架構
 
-如果您使用過 LINQ，您會有豐富的程式庫使用經驗，其中 `Func` 類型是 API 集合的一部分 （如果您不熟悉 LINQ，則可能需要在此教程之前閱讀[LINQ 教程](linq/index.md)和有關[lambda 運算式](./programming-guide/statements-expressions-operators/lambda-expressions.md)的文章。*運算式樹*與函數的參數提供了更豐富的交互。
+如果您使用過 LINQ，您會有豐富的程式庫使用經驗，其中 `Func` 類型是 API 集合的一部分  (如果您不熟悉 LINQ，您可能會想要閱讀[linq 教學](linq/index.md)課程和此專案前面有關[lambda 運算式](language-reference/operators/lambda-expressions.md)的文章。 ) *運算式樹狀*結構提供與函式的引數更豐富的互動。
 
 當您建立 LINQ 查詢時，通常會使用 Lambda 運算式來撰寫函式引數。 在一般 LINQ 查詢中，這些函式引數會轉換成編譯器所建立的委派。
 

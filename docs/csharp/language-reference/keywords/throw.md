@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ed84e04dae54283e4b5f03be0600c4dbf95b4b4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399333"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063116"
 ---
 # <a name="throw-c-reference"></a>throw (C# 參考)
 
@@ -47,7 +47,7 @@ throw [e];
 
 ## <a name="the-throw-expression"></a>`throw` 運算式
 
-從 C# 7.0 開始，`throw` 可以用作運算式和陳述式。 這可在先前不支援的內容中擲回例外狀況。 其中包括：
+從 C# 7.0 開始，`throw` 可以用作運算式和陳述式。 這可在先前不支援的內容中擲回例外狀況。 這些包括：
 
 - [條件運算子](../operators/conditional-operator.md)。 如果將空字串陣列傳遞給方法，則下列範例會使用 `throw` 運算式來擲回 <xref:System.ArgumentException>。 在 C# 7.0 之前，這個邏輯必須出現在 `if`/`else` 陳述式中。
 
@@ -57,7 +57,7 @@ throw [e];
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- 運算式主體 [ambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) 或方法。 下列範例說明因不支援轉換為 <xref:System.DateTime> 值而擲回 <xref:System.InvalidCastException> 的運算式主體方法。
+- 運算式主體 [ambda](../operators/lambda-expressions.md) 或方法。 下列範例說明因不支援轉換為 <xref:System.DateTime> 值而擲回 <xref:System.InvalidCastException> 的運算式主體方法。
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
@@ -67,8 +67,8 @@ throw [e];
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [試捕](try-catch.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [try-catch](try-catch.md)
+- [C # 關鍵字](index.md)
 - [如何：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6db16a86e949fb50254c301f5e5ac0904a6072a4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473873"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063595"
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 
@@ -29,7 +29,7 @@ ms.locfileid: "86473873"
 
 [在 c # 程式中](./inside-a-program/index.md)  
   
-[Main （）和命令列引數](./main-and-command-args/index.md)  
+[主要 ( # A1 和命令列引數](./main-and-command-args/index.md)  
 
 ## <a name="language-sections"></a>語言章節
 
@@ -59,11 +59,9 @@ ms.locfileid: "86473873"
   
  [LINQ 查詢運算式](../linq/index.md)  
   
- [Lambda 運算式](./statements-expressions-operators/lambda-expressions.md)  
-  
  [命名空間](./namespaces/index.md)  
   
- [Unsafe 程式碼和指標](./unsafe-code-pointers/index.md)  
+ [不安全的程式碼和指標](./unsafe-code-pointers/index.md)  
   
  [XML 檔批註](./xmldoc/index.md)  
   

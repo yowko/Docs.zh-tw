@@ -5,14 +5,14 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 501e67011707e2d165a3b9c1ff9f206db7f55448
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: ef8a7e3b4cd5302d6c928ad7ad81811797777b4a
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381628"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063246"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>如何在查詢中使用 lambda 運算式（c # 程式設計手冊）
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>如何在查詢中使用 lambda 運算式 (c # 程式設計手冊) 
 您不會在查詢語法中直接使用 Lambda 運算式，而是在方法呼叫中使用它們，因此查詢運算式可以包含方法呼叫。 事實上，某些查詢作業只能以方法語法來表示。 如需查詢語法與方法語法之間差異的詳細資訊，請參閱 [LINQ 中的查詢語法及方法語法](../concepts/linq/query-syntax-and-method-syntax-in-linq.md)。  
   
 ## <a name="example"></a>範例  
@@ -32,5 +32,5 @@ ms.locfileid: "87381628"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Lambda 運算式](./lambda-expressions.md)
+- [Lambda 運算式](../../language-reference/operators/lambda-expressions.md)
 - [運算式樹狀架構 (C#)](../concepts/expression-trees/index.md)
