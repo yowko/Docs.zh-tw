@@ -82,3 +82,35 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
         - name: 巢狀 stackalloc
           href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md
+    - name: C# 9.0 規格提案
+      items:
+        - name: 記錄
+          href: ../../../../_csharplang/proposals/csharp-9.0/records.md
+        - name: 最上層陳述式
+          href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: 模式比對增強功能
+          href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
+        - name: 僅供初始化的 Setter
+          href: ../../../../_csharplang/proposals/csharp-9.0/init.md
+        - name: 目標型別新運算式
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-new.md
+        - name: 模組初始設定式
+          href: ../../../../_csharplang/proposals/csharp-9.0/module-initializers.md
+        - name: 擴充部分方法
+          href: ../../../../_csharplang/proposals/csharp-9.0/extending-partial-methods.md
+        - name: 靜態匿名函式
+          href: ../../../../_csharplang/proposals/csharp-9.0/static-anonymous-functions.md
+        - name: 目標型別條件運算式
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
+        - name: Covariant 傳回類型
+          href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: Lambda 捨棄參數
+          href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
+        - name: 區域函式上的屬性
+          href: ../../../../_csharplang/proposals/csharp-9.0/local-function-attributes.md
+        - name: 原生大小的整數
+          href: ../../../../_csharplang/proposals/csharp-9.0/native-integers.md
+        - name: 函式指標
+          href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
+        - name: 隱藏發出 localsinit 旗標
+          href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md
