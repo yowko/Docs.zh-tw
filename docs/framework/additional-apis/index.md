@@ -1,7 +1,7 @@
 ---
 title: 其他類別庫和 API
-description: 探索 .NET 中的其他類別庫和 Api，包括頻外（OOB）專案、平臺特定程式庫和私用 Api。
-ms.date: 06/12/2020
+description: 探索 .NET 中的其他類別庫和 Api，包括頻外 (OOB) 專案、平臺特定程式庫，以及私用 Api。
+ms.date: 08/11/2020
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 ms.topic: conceptual
-ms.openlocfilehash: 0b888d2f0e80685ba993682b2f3067cf8aee15bc
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: c6404df5d4f0be381bc0a9c1924fcf82cf078306
+ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989740"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88075471"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他類別庫和 API
 
@@ -22,9 +22,9 @@ ms.locfileid: "84989740"
 
 ## <a name="oob-projects"></a>OOB 專案
 
-為了改善跨平臺開發並及早引進新功能，有些 .NET Framework 功能已發行頻外（OOB）。
+為了改善跨平臺開發並及早引進新功能，部分 .NET Framework 功能已發行頻外 (OOB) 。
 
-| Project | 描述 |  
+| 專案 | 描述 |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | 提供具備執行緒安全且保證不會再變更其內容的集合。 |
 | <xref:System.Net.Http.WinHttpHandler> | 提供以 Windows 的 WinHTTP 介面為基礎之 <xref:System.Net.Http.HttpClient> 的訊息處理常式。 |
@@ -35,7 +35,7 @@ ms.locfileid: "84989740"
 
 某些程式庫是以特定平臺為目標。 例如， <xref:System.Text.CodePagesEncodingProvider> 類別會讓使用 .NET Framework 開發的 UWP 應用程式可以使用字碼頁編碼。
   
-| Project | 描述 |  
+| 專案 | 描述 |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | 擴充 <xref:System.Text.EncodingProvider> 類別，讓以通用 Windows 平臺為目標的應用程式可以使用字碼頁編碼。 |  
   
@@ -87,6 +87,7 @@ ms.locfileid: "84989740"
 * [WebHeaderCollection. AddInternal 方法](system.net.webheadercollection.addinternal.md)
 * [System.servicemodel. BodyToString 方法](system.servicemodel.channels.message.bodytostring.md)
 * [System.servicemodel. WriteStartHeaders 方法](system.servicemodel.channels.message.writestartheaders.md)
+* [System.web. ControlBuilderInterceptor 類別](controlbuilderinterceptor-class.md)
 * [VisualDiagnostics. s \_ isDebuggerCheckDisabledForTestPurposes 欄位](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System.web. DataMemberFieldEditor 類別](datamemberfieldeditor-class.md)
 * [System.web. DataMemberListEditor 類別](datamemberlisteditor-class.md)
