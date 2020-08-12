@@ -2,12 +2,12 @@
 title: 純文字格式
 description: '瞭解如何在 F # 應用程式和腳本中使用 printf 和其他純文字格式。'
 ms.date: 07/22/2020
-ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 90a861736dae69dfbc199a19e24f587c42404737
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854915"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063779"
 ---
 # <a name="plain-text-formatting"></a>純文字格式
 
@@ -85,6 +85,7 @@ stdin(3,25): error FS0001: The type 'string' does not match the type 'int'
 | `%A` | 任何值  |   使用預設版面配置設定，以[結構化純文字格式](plaintext-formatting.md)格式化 |
 | `%a` | 任何值  |   需要兩個引數：格式函數接受內容參數和值，以及要列印的特定值 |
 | `%t` | 任何值  |   需要一個引數：格式化函數接受內容參數，以輸出或傳回適當的文字 |
+| `%%` | (無)  |   不需要任何引數，而且會列印純量的字元：`%` |
 
 基本整數類型 `byte` (`System.Byte`) 、 `sbyte` (`System.SByte`) 、 `int16` (`System.Int16`) 、 `uint16` (`System.UInt16`) 、 `int32` (`System.Int32`) 、 `uint32` (`System.UInt32`) 、 `int64` (`System.Int64`) 、 `uint64` (`System.UInt64`) 、 `nativeint` (`System.IntPtr`) 和 () `unativeint` `System.UIntPtr` 。
 基本浮點類型 `float` (`System.Double`) 和 `float32` (`System.Single`) 。
@@ -418,5 +419,5 @@ F # 純文字格式會忽略這些屬性，但在進行 F # 型別的調試時�
 
 - [字串](strings.md)
 - [記錄](records.md)
-- [差別聯集](discriminated-unions.md)
+- [已區分的聯集](discriminated-unions.md)
 - [F# 互動](fsharp-interactive-options.md)

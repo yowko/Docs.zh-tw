@@ -104,6 +104,6 @@ ms.locfileid: "88075471"
 * [stdole.StdFont 介面](stdole.stdfont.md)
 * [stdole.StdPicture 介面](stdole.stdpicture.md)
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [.NET Framework 和頻外發行](../get-started/the-net-framework-and-out-of-band-releases.md)
