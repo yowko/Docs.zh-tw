@@ -6,16 +6,16 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: df7acc788943e9655dbbb03ffaaa88ff22b81ad2
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475472"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187909"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 
-.NET Framework 的每個版本都包含 common language runtime （CLR）、基類庫和其他 managed 程式庫。 本文說明依版本 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統（OS）所安裝的版本。
+.NET Framework 的每個版本都包含 common language runtime (CLR) 、基類庫和其他 managed 程式庫。 本文說明依版本 .NET Framework 的主要功能、提供有關基礎 CLR 版本和相關聯開發環境的資訊，以及識別 Windows 作業系統 (OS) 所安裝的版本。
 
 .NET Framework 的每個新版本都會新增新功能，但會保留舊版的功能。
 
@@ -23,16 +23,17 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 
 > [!TIP]
 >
-> - 如需所支援作業系統的完整清單，請參閱[系統需求](../get-started/system-requirements.md)。
+> - 如需所支援作業系統的完整清單，請參閱 [系統需求](../get-started/system-requirements.md)。
 > - 如需下載，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。
-> - 如需判斷電腦上已安裝哪些 .NET Framework 版本的相關資訊，請參閱[如何判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。
+> - 如需判斷電腦上已安裝哪些 .NET Framework 版本的相關資訊，請參閱 [如何判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="version-information"></a>版本資訊
 
 下表摘要說明 .NET Framework 版本歷程記錄，並將每個版本與 Visual Studio、Windows 和 Windows Server 相互關聯。 Visual Studio 支援多目標，因此您不限於列出的 .NET Framework 版本。
 
-- 核取記號圖示✔️代表安裝 .NET Framework 的作業系統版本，但必須[在控制台中](../install/dotnet-35-windows-10.md)啟用（適用于 windows）或透過伺服器管理員（適用于 windows Server）。
+- 核取記號圖示✔️代表預設安裝 .NET Framework 的作業系統版本。
 - 加號圖示➕表示未安裝 .NET Framework 但可以安裝的作業系統版本。
+- 星號 **\*** 代表 .NET Framework (預先安裝或不) 必須 [在 [控制台](../install/dotnet-35-windows-10.md) ] 或 Windows Server 的 [伺服器管理員] 中啟用的作業系統版本。
 
 | | |
 | - | - |
@@ -50,9 +51,9 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |||
 |-|-|
 |**CLR 版本**|4|
-|**Windows 版本**|✔️ 10 5 月2019更新<br/>➕ 10 2018 年10月更新（版本1809）<br/>➕2018年4月更新（版本1803）<br/>➕10秋季建立者更新（版本1709）<br/>➕10建立者更新（版本1703）<br/>➕10周年更新（版本1607）<br/>➕8。1<br/>➕7|
+|**Windows 版本**|✔️ 10 5 月2019更新<br/>➕2018年10月10日更新 (版本 1809) <br/>➕2018年4月10日更新 (版本 1803) <br/>➕10秋季建立者更新 (1709 版) <br/>➕10建立者更新 (1703 版) <br/>➕10年度更新 (1607 版) <br/>➕8。1<br/>➕7|
 |**Windows Server 版本**|➕ Windows Server 2019<br/>➕ Windows Server，版本1809<br/>➕ Windows Server，版本1803<br/>➕2016<br/>➕ 2012 R2<br/>➕2012<br/>➕ 2008 R2 SP1|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br/>- 528040 (Windows 10 2019 年 5 月更新)<br/>- 528049 (所有其他作業系統版本)<br/>（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br/>- 528040 (Windows 10 2019 年 5 月更新)<br/>- 528049 (所有其他作業系統版本)<br/> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
 ### <a name="net-framework-472"></a>.NET Framework 4.7.2
 
@@ -64,11 +65,11 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |-|-|
 |**CLR 版本**|4|
 |**隨附於 Visual Studio 版本**|2019<sup>1</sup>|
-|**Windows 版本**|✔️ 10 2018 年10月更新（版本1809）<br/>✔️2018年4月更新（版本1803）<br/>➕10秋季建立者更新（版本1709）<br/>➕10建立者更新（版本1703）<br/>➕10周年更新（版本1607）<br/>➕8。1<br/>➕7|
+|**Windows 版本**|✔️2018年10月10日更新 (版本 1809) <br/>✔️2018年4月10日更新 (版本 1803) <br/>➕10秋季建立者更新 (1709 版) <br/>➕10建立者更新 (1703 版) <br/>➕10年度更新 (1607 版) <br/>➕8。1<br/>➕7|
 |**Windows Server 版本**|✔️ Windows Server 2019<br/>✔️ Windows Server，版本1809<br/>✔️ Windows Server，版本1803<br/>➕ Windows Server，版本1709<br/>➕2016<br/>➕ 2012 R2<br/>➕2012<br/>➕ 2008 R2 SP1|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br/>- 461814 (Windows 10 2018 年 10 月更新)<br/>- 461808 (Windows 10 2018 年 4 月更新及 Windows Server，版本 1803)<br/>- 461814 (所有其他作業系統版本)<br/>（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br/>- 461814 (Windows 10 2018 年 10 月更新)<br/>- 461808 (Windows 10 2018 年 4 月更新及 Windows Server，版本 1803)<br/>- 461814 (所有其他作業系統版本)<br/> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
-<sup>1</sup>需要安裝 **.net 桌面開發**、 **ASP.NET 和網頁開發**、 **Azure 開發**、 **Office/SharePoint 開發**、**使用 .net 的**行動裝置開發，或 **.net Core 跨平臺開發**工作負載。
+<sup>1</sup> 需要安裝 **.net 桌面開發**、 **ASP.NET 和網頁開發**、 **Azure 開發**、 **Office/SharePoint 開發**、 **使用 .net 的**行動裝置開發，或 **.net Core 跨平臺開發** 工作負載。
 
 ### <a name="net-framework-471"></a>.NET Framework 4.7.1
 
@@ -79,9 +80,9 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |||
 |-|-|
 |**CLR 版本**|4|
-|**Windows 版本**|✔️10秋季建立者更新（版本1709）<br/>➕10建立者更新（版本1703）<br/>➕10周年更新（版本1607）<br/>➕8。1<br/>➕7|
+|**Windows 版本**|✔️10秋季建立者更新 (1709 版) <br/>➕10建立者更新 (1703 版) <br/>➕10年度更新 (1607 版) <br/>➕8。1<br/>➕7|
 |**Windows Server 版本**|➕ Windows Server，版本1803<br/>✔️ Windows Server，版本1709<br/>➕2016<br/>➕ 2012 R2<br/>➕2012<br/>➕ 2008 R2 SP1|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br/>- 461308 (Windows 10 Creators Update 及 Windows Server，版本 1709)<br/>- 461310 (所有其他 OS 版本)<br/>（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br/>- 461308 (Windows 10 Creators Update 及 Windows Server，版本 1709)<br/>- 461310 (所有其他 OS 版本)<br/> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
 ### <a name="net-framework-47"></a>.NET Framework 4.7
 
@@ -91,9 +92,9 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |||
 |-|-|
 |**CLR 版本**|4|
-|**Windows 版本**|✔️10建立者更新（版本1703）<br/>➕10周年更新（版本1607）<br/>➕8。1<br/>➕7|
+|**Windows 版本**|✔️10建立者更新 (1703 版) <br/>➕10年度更新 (1607 版) <br/>➕8。1<br/>➕7|
 |**Windows Server 版本**|➕2016<br/>➕ 2012 R2<br/>➕2012<br/>➕ 2008 R2 SP1|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br/>- 460798 (Windows 10 Creators Update)<br/>- 460805 (所有其他作業系統版本)<br/>（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br/>- 460798 (Windows 10 Creators Update)<br/>- 460805 (所有其他作業系統版本)<br/> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
 ### <a name="net-framework-462"></a>.NET Framework 4.6.2
 
@@ -103,9 +104,9 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |||
 |-|-|
 |**CLR 版本**|4|
-|**Windows 版本**|✔️10周年更新（版本1607）<br/>➕10年11月更新（版本1511）<br/>➕10<br/>➕8。1<br />➕7|
+|**Windows 版本**|✔️10年度更新 (1607 版) <br/>➕10年11月更新 (1511 版) <br/>➕10<br/>➕8。1<br />➕7|
 |**Windows Server 版本**|✔️2016<br /><br/>➕ 2012 R2<br />➕2012<br />➕ 2008 R2 SP1|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br /><br/>- 394802 (Windows 10 年度更新版及 Windows Server 2016)<br/>- 394806 (所有其他作業系統版本)<br /><br/>（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br /><br/>- 394802 (Windows 10 年度更新版及 Windows Server 2016)<br/>- 394806 (所有其他作業系統版本)<br /><br/> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
 ### <a name="net-framework-461"></a>.NET Framework 4.6.1
 
@@ -116,11 +117,11 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |-|-|
 |**CLR 版本**|4|
 |**隨附於 Visual Studio 版本**|2017<sup>1</sup>|
-|**Windows 版本**|✔️10年11月更新（版本1511）<br/>➕10<br />➕8。1<br />➕8<br />➕7|
+|**Windows 版本**|✔️10年11月更新 (1511 版) <br/>➕10<br />➕8。1<br />➕8<br />➕7|
 |**Windows Server 版本**|➕ 2012 R2<br />➕2012<br />➕ 2008 R2 SP1|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br /><br/>- 394254 (Windows 10 11 月更新)<br />- 394271 (所有其他作業系統版本)<br /><br/>（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br /><br/>- 394254 (Windows 10 11 月更新)<br />- 394271 (所有其他作業系統版本)<br /><br/> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
-<sup>1</sup>需要安裝 **.net 桌面開發**、 **ASP.NET 和網頁開發**、 **Azure 開發**、 **Office/SharePoint 開發**、**使用 .net 的**行動裝置開發，或 **.net Core 跨平臺開發**工作負載。
+<sup>1</sup> 需要安裝 **.net 桌面開發**、 **ASP.NET 和網頁開發**、 **Azure 開發**、 **Office/SharePoint 開發**、 **使用 .net 的**行動裝置開發，或 **.net Core 跨平臺開發** 工作負載。
 
 ### <a name="net-framework-46"></a>.NET Framework 4.6
 
@@ -133,7 +134,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**隨附於 Visual Studio 版本**|2015|
 |**Windows 版本**|✔️10<br /><br />➕8。1<br />➕8<br />➕7<br />➕ Vista|
 |**Windows Server 版本**|➕ 2012 R2<br />➕2012<br />➕ 2008 R2 SP1<br />➕ 2008 SP2|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br /><br />- 393295 (Windows 10)<br />- 393297 (所有其他作業系統版本)<br /><br />（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br /><br />- 393295 (Windows 10)<br />- 393297 (所有其他作業系統版本)<br /><br /> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
 ### <a name="net-framework-452"></a>.NET Framework 4.5.2
 
@@ -145,7 +146,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**CLR 版本**|4|
 |**Windows 版本**|➕8。1<br />➕8<br />➕7<br />➕ Vista|
 |**Windows Server 版本**|➕ 2012 R2<br />➕2012<br />➕ 2008 R2 SP1<br />➕ 2008 SP2|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD 379893<br /><br />（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD 379893<br /><br /> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
 ### <a name="net-framework-451"></a>.NET Framework 4.5.1
 
@@ -158,7 +159,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**隨附於 Visual Studio 版本**|2013|
 |**Windows 版本**|✔️8。1<br /><br />➕8<br />➕7<br />➕ Vista|
 |**Windows Server 版本**|✔️ 2012 R2<br /><br />➕2012<br />➕ 2008 R2 SP1<br />➕ 2008 SP2|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br /><br />- 378675 (Windows 8.1)<br />- 378758 (其他所有版本)<br /><br />（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br /><br />- 378675 (Windows 8.1)<br />- 378758 (其他所有版本)<br /><br /> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
 ### <a name="net-framework-45"></a>.NET Framework 4.5
 
@@ -171,7 +172,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**隨附於 Visual Studio 版本**|2012|
 |**Windows 版本**|✔️8<br />➕7<br />➕ Vista|
 |**Windows Server 版本**|✔️2012<br />➕ 2008 R2 SP1<br />➕ 2008 SP2|
-|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD 378389<br /><br />（請參閱[指示](how-to-determine-which-versions-are-installed.md)）|
+|**判斷已安裝的 .NET 版本**|使用 `Release` DWORD 378389<br /><br /> (參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
 
 ### <a name="net-framework-4"></a>.NET Framework 4
 
@@ -183,7 +184,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**隨附於 Visual Studio 版本**|2010|
 |**Windows 版本**|➕7<br />➕ Vista|
 |**Windows Server 版本**|➕ 2008 R2 SP1<br />➕ 2008 SP2<br />➕2003|
-|**判斷已安裝的 .NET 版本**|請參閱[指示](how-to-determine-which-versions-are-installed.md)|
+|**判斷已安裝的 .NET 版本**|請參閱 [指示](how-to-determine-which-versions-are-installed.md)|
 
 ### <a name="net-framework-35"></a>.NET Framework 3.5
 
@@ -204,7 +205,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**隨附於 Visual Studio 版本**|2008|
 |**Windows 版本**|✔️10\*<br/>✔️8。1\*<br />✔️8\*<br />✔️7<br /><br />➕ Vista|
 |**Windows Server 版本**|➕ Windows Server，版本1803\*<br/>➕ Windows Server，版本1709\*<br/>➕2016\*<br/>➕ 2012 R2\*<br />➕2012\*<br /><br />✔️ 2008 R2 SP1\*<br /><br/>➕ 2008 SP2<br />➕2003|
-|**判斷已安裝的 .NET 版本**|請參閱[指示](how-to-determine-which-versions-are-installed.md)|
+|**判斷已安裝的 .NET 版本**|請參閱 [指示](how-to-determine-which-versions-are-installed.md)|
 
 ### <a name="net-framework-30"></a>.NET Framework 3.0
 
@@ -220,7 +221,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**CLR 版本**|2.0|
 |**Windows 版本**|✔️ Vista|
 |**Windows Server 版本**|✔️ 2008 R2 SP1 *<br />✔️ 2008 SP2\*<br /><br />➕2003|
-|**判斷已安裝的 .NET 版本**|請參閱[指示](how-to-determine-which-versions-are-installed.md)。|
+|**判斷已安裝的 .NET 版本**|請參閱 [指示](how-to-determine-which-versions-are-installed.md)。|
 
 ### <a name="net-framework-20"></a>.NET Framework 2.0
 
@@ -239,7 +240,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**隨附於 Visual Studio 版本**|2005|
 |**Windows 版本**|N/A|
 |**Windows Server 版本**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️2003|
-|**判斷已安裝的 .NET 版本**|請參閱[指示](how-to-determine-which-versions-are-installed.md)|
+|**判斷已安裝的 .NET 版本**|請參閱 [指示](how-to-determine-which-versions-are-installed.md)|
 
 ### <a name="net-framework-11"></a>.NET Framework 1.1
 
@@ -255,7 +256,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**隨附於 Visual Studio 版本**|2003|
 |**Windows 版本**|N/A|
 |**Windows Server 版本**|✔️2003|
-|**判斷已安裝的 .NET 版本**|請參閱[指示](how-to-determine-which-versions-are-installed.md)|
+|**判斷已安裝的 .NET 版本**|請參閱 [指示](how-to-determine-which-versions-are-installed.md)|
 
 ### <a name="net-framework-10"></a>.NET Framework 1.0
 
@@ -265,12 +266,12 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**隨附於 Visual Studio 版本**|Visual Studio .NET|
 |**Windows 版本**|N/A|
 |**Windows Server 版本**|N/A|
-|**判斷已安裝的 .NET 版本**|請參閱[指示](how-to-determine-which-versions-are-installed.md)|
+|**判斷已安裝的 .NET 版本**|請參閱 [指示](how-to-determine-which-versions-are-installed.md)|
 
 > [!NOTE]
 >
-> - 必須透過[控制台（適用于 windows）或伺服器管理員（適用于 Windows Server）](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel)，在此作業系統上啟用 .NET Framework。
-> - 一般來說，您不應該卸載電腦上已安裝的任何 .NET Framework 版本，因為您使用的應用程式可能相依于特定版本，如果移除該版本，可能會中斷。 您可以同時在單一電腦上載入多個版本的 .NET Framework。 這表示您可以安裝 .NET Framework，而不需要卸載舊版本。 如需詳細資訊，請參閱[消費者入門](../get-started/index.md)。
+> - 在此作業系統上，必須透過適用于 [windows) 的控制台 (或 Windows Server (的伺服器管理員) ](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel)來啟用 .NET Framework。
+> - 一般來說，您不應該卸載電腦上已安裝的任何 .NET Framework 版本，因為您使用的應用程式可能相依于特定版本，如果移除該版本，可能會中斷。 您可以同時在單一電腦上載入多個版本的 .NET Framework。 這表示您可以安裝 .NET Framework，而不需要卸載舊版本。 如需詳細資訊，請參閱 [消費者入門](../get-started/index.md)。
 
 ## <a name="remarks-for-version-45-and-later"></a>4.5 版和更新版本的備註
 
@@ -285,7 +286,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
   > [!NOTE]
   > .NET framework 4.5.1 及 .NET Framework 4.5 在此處僅用於示範。 所述的原則適用于以較新版本為目標的任何應用程式，而其執行所在之系統上所安裝的 .NET Framework。
 
-.NET Framework 中的某些變更可能需要變更您的應用程式程式碼;請先參閱[應用程式相容性](application-compatibility.md)，再使用 .NET Framework 4.5 或更新版本執行現有的應用程式。 如需安裝目前版本的詳細資訊，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。 如需 .NET Framework 支援的相關資訊，請參閱 .NET 網站上的[.NET Framework 官方支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)。
+.NET Framework 中的某些變更可能需要變更您的應用程式程式碼;請先參閱 [應用程式相容性](application-compatibility.md) ，再使用 .NET Framework 4.5 或更新版本執行現有的應用程式。 如需安裝目前版本的詳細資訊，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。 如需 .NET Framework 支援的相關資訊，請參閱 .NET 網站上的 [.NET Framework 官方支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) 。
 
 ## <a name="remarks-for-older-versions"></a>較舊版本的備註
 
@@ -297,13 +298,13 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 
 - 如果您還不熟悉 .NET Framework，請參閱[概觀](../get-started/overview.md)中有關重要概念和功能的簡介。
 
-- 如需 .NET Framework 4.5 及其點發行版的新功能和改進，請參閱[.NET Framework 的新](../whats-new/index.md)功能。
+- 如需 .NET Framework 4.5 及其點發行版的新功能和改進，請參閱 [.NET Framework 的新](../whats-new/index.md)功能。
 
-- 如需將您的應用程式遷移至較新版本的 .NET Framework 的詳細資訊，請參閱[遷移指南](index.md)。
+- 如需將您的應用程式遷移至較新版本的 .NET Framework 的詳細資訊，請參閱 [遷移指南](index.md)。
 
 - 如需判斷電腦上已安裝哪些版本或更新的資訊，請參閱 [如何：判斷安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)和[如何：判斷安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [版本相容性](version-compatibility.md) 
 | [.NET Framework 官方支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)

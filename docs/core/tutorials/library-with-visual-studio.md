@@ -5,13 +5,13 @@ ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: contperfq1
-ms.openlocfilehash: 5bd853c62a44d2160bd222d76adcd2dc34d42efc
-ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
+ms.custom: vs-dotnet,contperfq1
+ms.openlocfilehash: 595e93d8d8d22478c6770ddd4f70a0214653f5b9
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88075484"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187955"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET Standard 程式庫
 
@@ -21,7 +21,7 @@ ms.locfileid: "88075484"
 
 當您完成類別庫時，您可以將它散發為 NuGet 套件，或做為使用它的應用程式所配套的元件。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 已安裝 **.Net Core 跨平臺開發**工作負載的[Visual Studio 2019 16.6 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 當您選取此工作負載時，會自動安裝 .NET Core 3.1 SDK。
 
@@ -33,9 +33,9 @@ ms.locfileid: "88075484"
 
 1. 啟動 Visual Studio。
 
-2. 在 [開始] 視窗中，選擇 [**建立新專案**]。
+2. 在 [開始] 視窗中，選擇 [ **建立新專案**]。
 
-3. 在 [**建立新專案**] 頁面的 [搜尋] 方塊中，輸入 [**方案**]。 選擇 [**空白解決方案**] 範本，然後選擇 [**下一步]**。
+3. 在 [ **建立新專案** ] 頁面的 [搜尋] 方塊中，輸入 [ **方案** ]。 選擇 [ **空白解決方案** ] 範本，然後選擇 [ **下一步]**。
 
    ![Visual Studio 中的空白方案範本](media/library-with-visual-studio/blank-solution.png)
 
@@ -47,28 +47,28 @@ ms.locfileid: "88075484"
 
    1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入**  >  **新專案**]。
 
-   1. 在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入 [連結**庫**]。 選擇 [語言] 清單中的 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [**類別庫] ( .NET Standard) ** ] 範本，然後選擇 **[下一步]**。
+   1. 在 [ **加入新專案** ] 頁面的 [搜尋] 方塊中，輸入 [連結 **庫** ]。 選擇 [語言] 清單中的 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [ **所有平臺** ]。 選擇 [ **類別庫] ( .NET Standard) ** ] 範本，然後選擇 **[下一步]**。
 
-   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibrary** 。 然後選擇 [**建立**]。
+   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibrary** 。 然後選擇 [ **建立**]。
 
-1. 請檢查並確定程式庫的目標是正確的 .NET Standard 版本。 以滑鼠右鍵按一下**方案總管**中的 [程式庫] 專案，然後選取 [**屬性**]。 [**目標 Framework** ] 文字方塊會顯示專案的目標為 .NET Standard 2.0。
+1. 請檢查並確定程式庫的目標是正確的 .NET Standard 版本。 以滑鼠右鍵按一下 **方案總管**中的 [程式庫] 專案，然後選取 [ **屬性**]。 [ **目標 Framework** ] 文字方塊會顯示專案的目標為 .NET Standard 2.0。
 
    ![類別庫的專案屬性](./media/library-with-visual-studio/library-project-properties.png)
 
-1. 如果您使用的是 Visual Basic，請清除 [**根命名空間**] 文字方塊中的文字。
+1. 如果您使用的是 Visual Basic，請清除 [ **根命名空間** ] 文字方塊中的文字。
 
    ![類別庫的專案屬性](./media/library-with-visual-studio/vb/library-project-properties.png)
 
    針對每個專案，Visual Basic 會自動建立對應至專案名稱的命名空間。 在本教學課程中，您會使用程式碼檔案中的關鍵字來定義最上層命名空間 [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) 。
 
-1. 使用下列程式碼取代*Class1.cs*或*Class1*的程式碼視窗中的程式碼，並儲存檔案。 如果未顯示您想要使用的語言，請變更頁面頂端的 [語言選取器]。
+1. 使用下列程式碼取代 *Class1.cs*  或 *Class1* 的程式碼視窗中的程式碼，並儲存檔案。 如果未顯示您想要使用的語言，請變更頁面頂端的 [語言選取器]。
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibrary/Class1.cs":::
    :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibrary/Class1.vb":::
 
    類別庫 `UtilityLibraries.StringLibrary` 包含名為的方法 `StartsWithUpper` 。 這個方法會傳回 <xref:System.Boolean> 值，指出目前的字串實例是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
 
-   `StartsWithUpper`會實作為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
+   `StartsWithUpper` 會實作為 [擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md) ，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
 
 1. 在功能表列上，選取 [**組建**] [組建  >  **方案**] 以確認專案編譯無誤。
 
@@ -80,20 +80,20 @@ ms.locfileid: "88075484"
 
    1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入**  >  **新專案**]。
 
-   1. 在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入**主控台**。 選擇 [語言] 清單中的 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [**所有平臺**]。
+   1. 在 [ **加入新專案** ] 頁面的 [搜尋] 方塊中，輸入 **主控台** 。 選擇 [語言] 清單中的 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [ **所有平臺** ]。
 
-   1. 選擇 [ ** ( .Net Core) ] 範本的主控台應用程式**，然後選擇 [**下一步]**。
+   1. 選擇 [ ** ( .Net Core) ] 範本的主控台應用程式 ** ，然後選擇 [ **下一步]**。
 
    1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**展示**。 接著，選擇 [建立]  。
 
-1. 在*Program.cs*或*Program .Vb*檔案的程式碼視窗中，將所有程式碼取代為下列程式碼。
+1. 在 *Program.cs* 或 *Program .Vb* 檔案的程式碼視窗中，將所有程式碼取代為下列程式碼。
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
    :::code language="vb" source="./snippets/library-with-visual-studio/vb/ShowCase/Program.vb":::
 
    該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。 當它大於或等於25時，程式碼就會清除主控台視窗，並向使用者顯示訊息。
 
-   此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者在未輸入字串的情況下按<kbd>Enter</kbd>鍵，應用程式就會結束，而且主控台視窗會關閉。
+   此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者在未輸入字串的情況下按 <kbd>Enter</kbd> 鍵，應用程式就會結束，而且主控台視窗會關閉。
 
 ## <a name="add-a-project-reference"></a>新增專案參考
 
@@ -103,7 +103,7 @@ ms.locfileid: "88075484"
 
    ![Visual Studio 中的 [新增參考] 內容功能表](media/library-with-visual-studio/add-reference-context-menu.png)
 
-1. 在 [**參考管理員**] 對話方塊中，選取 [ **StringLibrary** ] 專案，然後選取 **[確定]**。
+1. 在 [ **參考管理員** ] 對話方塊中，選取 [ **StringLibrary** ] 專案，然後選取 **[確定]**。
 
    ![已選取 StringLibrary 的參考管理員對話方塊](media/library-with-visual-studio/manage-project-references.png)
 
@@ -117,7 +117,7 @@ ms.locfileid: "88075484"
 
    ![顯示調試按鈕的 Visual Studio 專案工具列](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 
-1. 輸入字串並按<kbd>enter</kbd>鍵以嘗試程式，然後按<kbd>enter</kbd>結束。
+1. 輸入字串並按 <kbd>enter</kbd>鍵以嘗試程式，然後按 <kbd>enter</kbd> 結束。
 
    :::image type="content" source="media/library-with-visual-studio/run-showcase.png" alt-text="展示執行中的主控台視窗":::
 
@@ -138,7 +138,7 @@ ms.locfileid: "88075484"
 > [!div class="nextstepaction"]
 > [使用 Visual Studio 建立及發行套件](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-或瞭解如何發佈主控台應用程式。 如果您從在本教學課程中建立的解決方案發佈主控台應用程式，類別庫會將它當做 *.dll*檔案。
+或瞭解如何發佈主控台應用程式。 如果您從在本教學課程中建立的解決方案發佈主控台應用程式，類別庫會將它當做 *.dll* 檔案。
 
 > [!div class="nextstepaction"]
 > [使用 Visual Studio 發行 .NET Core 主控台應用程式](publishing-with-visual-studio.md)

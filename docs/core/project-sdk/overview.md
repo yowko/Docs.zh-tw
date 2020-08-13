@@ -4,16 +4,16 @@ titleSuffix: ''
 description: 深入瞭解 .NET Core 專案 Sdk。
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 9db62ab7774e3dd71412fa346d78ae0c62a2f81f
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 873c06007307c5892c4828f987486b4dd98dc9ae
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803037"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187921"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core 專案 Sdk
 
-.NET Core 專案與軟體發展工具組（SDK）相關聯。 每個*專案 SDK*都是一組 MSBuild[目標](/visualstudio/msbuild/msbuild-targets)和相關聯的工作，負責編譯、封裝和[發行程式碼](/visualstudio/msbuild/msbuild-tasks)。 參考專案 SDK 的專案有時也稱為「 *SDK 樣式專案*」。
+.NET Core 專案與軟體發展工具組 (SDK) 相關聯。 每個 *專案 SDK* 都是一組 MSBuild [目標](/visualstudio/msbuild/msbuild-targets) 和相關聯的工作，負責編譯、封裝和 [發行程式碼](/visualstudio/msbuild/msbuild-tasks) 。 參考專案 SDK 的專案有時也稱為「 *SDK 樣式專案*」。
 
 ## <a name="available-sdks"></a>可用的 Sdk
 
@@ -22,7 +22,7 @@ ms.locfileid: "85803037"
 | ID | 描述 | 存放庫|
 | - | - | - |
 | `Microsoft.NET.Sdk` | .NET Core SDK | <https://github.com/dotnet/sdk> |
-| `Microsoft.NET.Sdk.Web` | .NET Core [WEB SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/aspnet/websdk> |
+| `Microsoft.NET.Sdk.Web` | .NET Core [WEB SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
 | `Microsoft.NET.Sdk.Razor` | .NET Core [RAZOR SDK](/aspnet/core/razor-pages/sdk) |
 | `Microsoft.NET.Sdk.Worker` | .NET Core 背景工作角色服務 SDK |
 | `Microsoft.NET.Sdk.WindowsDesktop` | .NET Core WinForms 和 WPF SDK |
@@ -33,7 +33,7 @@ ms.locfileid: "85803037"
 
 ## <a name="project-files"></a>專案檔
 
-.NET Core 專案是以[MSBuild](/visualstudio/msbuild/msbuild)格式為基礎。 專案檔，其副檔名如 *.csproj* （適用于 c # 專案）和 *.fsproj* （適用于 F # 專案）都是 XML 格式。 MSBuild 專案檔的根項目是[專案](/visualstudio/msbuild/project-element-msbuild)元素。 `Project`元素具有選擇性 `Sdk` 屬性，可指定要使用的 SDK （和版本）。 若要使用 .NET Core 工具並建立您的程式碼，請將 `Sdk` 屬性設定為[可用 sdk](#available-sdks)資料表中的其中一個識別碼。
+.NET Core 專案是以 [MSBuild](/visualstudio/msbuild/msbuild) 格式為基礎。 專案檔，其副檔名如 *.csproj* （適用于 c # 專案）和 *.fsproj* （適用于 F # 專案）都是 XML 格式。 MSBuild 專案檔的根項目是 [專案](/visualstudio/msbuild/project-element-msbuild) 元素。 `Project`元素具有選擇性 `Sdk` 屬性，可指定要使用哪個 SDK (和版本) 。 若要使用 .NET Core 工具並建立您的程式碼，請將 `Sdk` 屬性設定為 [可用 sdk](#available-sdks) 資料表中的其中一個識別碼。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -41,7 +41,7 @@ ms.locfileid: "85803037"
 </Project>
 ```
 
-若要指定來自 NuGet 的 SDK，請在名稱結尾包含版本，或在檔案的*global.js*中指定名稱和版本。
+若要指定來自 NuGet 的 SDK，請在名稱結尾包含版本，或在檔案的 *global.js* 中指定名稱和版本。
 
 ```xml
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
@@ -49,7 +49,7 @@ ms.locfileid: "85803037"
 </Project>
 ```
 
-另一個指定 SDK 的方法是使用最上層[SDK](/visualstudio/msbuild/sdk-element-msbuild)元素：
+另一個指定 SDK 的方法是使用最上層 [SDK](/visualstudio/msbuild/sdk-element-msbuild) 元素：
 
 ```xml
 <Project>
@@ -85,13 +85,13 @@ ms.locfileid: "85803037"
 
 在 SDK 中定義了編譯專案、內嵌資源和專案的預設值 [包含] 和 [排除] `None` 。 不同于非 SDK .NET Framework 專案，您不需要在專案檔中指定這些專案，因為預設值會涵蓋最常見的使用案例。 這可讓專案檔變得更小且更容易瞭解，並視需要手動進行編輯。
 
-下表顯示 .NET Core SDK 中包含和排除哪些元素和哪些[glob](https://en.wikipedia.org/wiki/Glob_(programming)) ：
+下表顯示 .NET Core SDK 中包含和排除哪些元素和哪些 [glob](https://en.wikipedia.org/wiki/Glob_(programming)) ：
 
 | 元素           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
 | 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
 | 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
-| None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx |
+| 無              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs、\*\*/\*.resx |
 
 > [!NOTE]
 > 和 `./bin` `./obj` MSBuild 屬性所表示的和資料夾 `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` 預設會從 glob 中排除。 排除會以屬性工作表示 `$(DefaultItemExcludes)` 。
@@ -132,7 +132,7 @@ ms.locfileid: "85803037"
 
 ## <a name="customize-the-build"></a>自訂群組建
 
-有各種方式可[自訂群組建](/visualstudio/msbuild/customize-your-build)。 您可能想要覆寫屬性，方法是將它當做引數傳遞給[msbuild](/visualstudio/msbuild/msbuild-command-line-reference)或[dotnet](../tools/index.md)命令。 您也可以將屬性加入至專案檔或 *.props*檔案。 如需 .NET Core 專案的實用屬性清單，請參閱[.NET Core SDK 專案的 MSBuild 參考](msbuild-props.md)。
+有各種方式可 [自訂群組建](/visualstudio/msbuild/customize-your-build)。 您可能想要覆寫屬性，方法是將它當做引數傳遞給 [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) 或 [dotnet](../tools/index.md) 命令。 您也可以將屬性加入至專案檔或 *.props* 檔案。 如需 .NET Core 專案的實用屬性清單，請參閱 [.NET Core SDK 專案的 MSBuild 參考](msbuild-props.md)。
 
 ### <a name="custom-targets"></a>自訂目標
 
@@ -142,9 +142,9 @@ ms.locfileid: "85803037"
 - 存取組建進程的構件，例如產生的檔案。
 - 檢查用來叫用組建的設定。
 
-您可以新增自訂群組建目標或屬性，方法是將檔案放在 `<package_id>.targets` `<package_id>.props` `Contoso.Utility.UsefulStuff.targets` 專案的 [*組建*] 資料夾中，或將檔案（例如，）放置在此。
+您可以新增自訂群組建目標或屬性，方法是將檔案放在表單 `<package_id>.targets` 或 `<package_id>.props` (中，例如， `Contoso.Utility.UsefulStuff.targets`) 在專案的 [ *組建* ] 資料夾中。
 
-下列 XML 是來自 *.csproj*檔案的程式碼片段，可指示 [`dotnet pack`](../tools/dotnet-pack.md) 命令要封裝的內容。 元素會將 `<ItemGroup Label="dotnet pack instructions">` 目標檔案放入封裝內的*build*資料夾中。 元素會將 `<Target Name="CollectRuntimeOutputs" BeforeTargets="_GetPackageFiles">` 元件和*json*檔案放入*build*資料夾中。
+下列 XML 是來自 *.csproj* 檔案的程式碼片段，可指示 [`dotnet pack`](../tools/dotnet-pack.md) 命令要封裝的內容。 元素會將 `<ItemGroup Label="dotnet pack instructions">` 目標檔案放入封裝內的 *build* 資料夾中。 元素會將 `<Target Name="CollectRuntimeOutputs" BeforeTargets="_GetPackageFiles">` 元件和 *json* 檔案放入 *build* 資料夾中。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -174,7 +174,7 @@ ms.locfileid: "85803037"
 
 您可以設定如何使用自訂目標。 由於它是 MSBuild 目標，它可以相依于指定的目標，在另一個目標之後執行，或使用命令以手動方式叫用 `dotnet msbuild -t:<target-name>` 。 不過，為了提供更好的使用者體驗，您可以結合每個專案工具和自訂目標。 在此案例中，每個專案工具會接受所需的任何參數，並將它轉譯成 [`dotnet msbuild`](../tools/dotnet-msbuild.md) 執行目標的必要調用。 您可以在 [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) 專案中的 [MVP Summit 2016 Hackathon 範例](https://github.com/dotnet/MVPSummitHackathon2016)儲存機制，查看此類協同作用範例。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安裝 .NET Core](../install/index.yml)
 - [如何使用 MSBuild 專案 Sdk](/visualstudio/msbuild/how-to-use-project-sdk)
