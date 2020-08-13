@@ -46,7 +46,7 @@
       href: install/run-net-framework-1-1-apps.md
 - name: 移轉指南
   items:
-    - name: 概觀
+    - name: 總覽
       href: migration-guide/index.md
     - name: 相容性
       items:
@@ -595,6 +595,10 @@
               href: additional-apis/system.servicemodel.channels.message.bodytostring.md
             - name: WriteStartHeaders 方法
               href: additional-apis/system.servicemodel.channels.message.writestartheaders.md
+    - name: System.Web.Compilation
+      items:
+        - name: ControlBuilderInterceptor 類別
+          href: additional-apis/controlbuilderinterceptor-class.md
     - name: System.Windows.Diagnostics
       items:
         - name: VisualDiagnostics 類別

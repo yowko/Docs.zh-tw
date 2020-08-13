@@ -72,24 +72,12 @@
   items:
     - name: 簡介
       href: tour-of-csharp/index.md
-    - name: 程式結構
-      href: tour-of-csharp/program-structure.md
-    - name: 類型與變數
-      href: tour-of-csharp/types-and-variables.md
-    - name: 運算式
-      href: tour-of-csharp/expressions.md
-    - name: 陳述式
-      href: tour-of-csharp/statements.md
-    - name: 類別與物件
-      href: tour-of-csharp/classes-and-objects.md
-    - name: 陣列
-      href: tour-of-csharp/arrays.md
-    - name: 介面
-      href: tour-of-csharp/interfaces.md
-    - name: 委派
-      href: tour-of-csharp/delegates.md
-    - name: 屬性
-      href: tour-of-csharp/attributes.md
+    - name: 類型
+      href: tour-of-csharp/types.md
+    - name: 程式建置區塊
+      href: tour-of-csharp/program-building-blocks.md
+    - name: 主要語言區域
+      href: tour-of-csharp/features.md
 - name: C# 的新功能
   items:
     - name: C# 8.0
@@ -133,8 +121,6 @@
       href: programming-guide/interfaces/index.md
     - name: 方法
       href: methods.md
-    - name: Lambda 運算式
-      href: programming-guide/statements-expressions-operators/lambda-expressions.md
     - name: 屬性
       href: properties.md
     - name: 索引子
@@ -882,8 +868,6 @@
           items:
             - name: 總覽
               href: programming-guide/statements-expressions-operators/anonymous-functions.md
-            - name: Lambda 運算式
-              href: programming-guide/statements-expressions-operators/lambda-expressions.md
             - name: 如何在查詢中使用 Lambda 運算式
               href: programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md
         - name: 相等及相等比較
@@ -1590,6 +1574,9 @@
         - name: 指派運算子
           href: language-reference/operators/assignment-operator.md
           displayName: '=, ref, compound'
+        - name: Lambda 運算式
+          href: language-reference/operators/lambda-expressions.md
+          displayName: anonymous functions
         - name: + 及 += 運算子
           href: language-reference/operators/addition-operator.md
           displayName: 'string concatenation, delegate combination, event subscription'
