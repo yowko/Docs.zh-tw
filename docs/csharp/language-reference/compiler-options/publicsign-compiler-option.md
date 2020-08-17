@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2655e0216a412053e052ab2ec2fcc8c68ea4f968
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61662526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88268045"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (C# 編譯器選項)
 
@@ -36,15 +36,18 @@ ms.locfileid: "61662526"
 
 有時稱為「假簽署」或「OSS 簽署」，公開簽署會在輸出組件中包含公開金鑰並設定「已簽署」的旗標，但實際上不會使用私密金鑰來簽署組件。 這對開放原始碼專案非常實用。在這類專案中，人員想要建置可與已發行「完整簽署」組件相容的組件，但該組件無法存取可用來簽署組件的私密金鑰。 由於實際上幾乎沒有任何取用者需要檢查組件是否已完整簽署，因此，這些公開建置的組件幾乎適用於每個要使用完整簽署組件的案例。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
+### <a name="to-set-this-compiler-option-in-a-csproj-file"></a>若要在 .csproj 檔案中設定這個編譯器選項
 
-1. 開啟專案的 [屬性] **** 頁面。
-1. 修改 [僅延遲簽署]**** 屬性。
+開啟專案的 .csproj 檔案，然後加入下列元素：
+
+```xml
+<PublicSign>true</PublicSign>
+```
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 編譯器 -delaysign 選項](delaysign-compiler-option.md)
 - [C# 編譯器 -keyfile 選項](keyfile-compiler-option.md)
 - [C# 編譯器 -keycontainer 選項](keycontainer-compiler-option.md)
-- [C# 編譯器選項](index.md)
+- [C # 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

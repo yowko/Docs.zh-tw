@@ -1,39 +1,39 @@
 ---
 title: 在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解在微服務 .NET Core 使用 IHostedService 和 BackgroundService 實作背景工作的新選項。
-ms.date: 01/30/2020
-ms.openlocfilehash: fd26d0444312d3525ad95b2273f28a6ceaa27911
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/14/2020
+ms.openlocfilehash: 4ab215f2196cd2e66b116465c3a582a9846c8066
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267993"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 
-在微服務應用程式或任何類型的應用程式中，背景工作和已排定工作最後是您可能需要實作的工作。 使用微服務架構的差異在於您可以實作單一微服務程序/容器來裝載這些背景工作，讓您可以視需要進行相應減少/相應增加，或者甚至可以確定它執行該微服務程序/容器的單一執行個體。
+背景工作和排程工作是您可能需要在任何應用程式中使用的內容，不論它是否遵循微服務架構模式。 使用微服務架構的差異在於，您可以在個別的進程/容器中執行背景工作來進行裝載，讓您可以根據您的需求相應減少/相應減少。
 
 從一般觀點而言，在 .NET Core 中，我們將這些類型的工作稱為「託管服務」**，因為它們是您在主機/應用程式/微服務內裝載的服務/邏輯。 請注意，在此情況下，託管服務就只是具有背景工作邏輯的類別。
 
-自 .NET Core 2.0 開始，此架構提供名為 <xref:Microsoft.Extensions.Hosting.IHostedService> 的新介面，協助您輕鬆地實作託管服務。 基本思想是,您可以註冊多個後台任務(託管服務),這些任務在 Web 主機或主機運行時在後台運行,如圖 6-26 所示。
+自 .NET Core 2.0 開始，此架構提供名為 <xref:Microsoft.Extensions.Hosting.IHostedService> 的新介面，協助您輕鬆地實作託管服務。 基本概念是，您可以將多個背景工作註冊 (裝載的服務) 在您的 web 主機或主機正在執行時于背景中執行，如映射6-26 所示。
 
-![比較ASP.NET核心 IWebHost 和 .NET 核心 IHost 的圖表。](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
+![比較 ASP.NET Core IWebHost 和 .NET Core IHost 的圖表。](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
 
 **圖 6-26**。 在 WebHost 與主機中使用 IHostedService
 
-ASP.NET酷睿 1.x`IWebHost`和 2.x 支援 Web 應用中的背景進程。 .NET Core 2.1 和`IHost`更高版本支援使用普通控制台應用進行後台進程。 請注意 `WebHost` 與 `Host` 之間的差異。
+ASP.NET Core 1.x 和2.x 支援 `IWebHost` web 應用程式中的背景進程。 .NET Core 2.1 和更新版本支援 `IHost` 具有一般主控台應用程式的背景處理常式。 請注意 `WebHost` 與 `Host` 之間的差異。
 
-ASP.NET `WebHost` Core 2.0 中的(`IWebHost`基類實現 )是用於向行程提供 HTTP 伺服器功能的基礎結構專案,例如實現 MVC Web 應用或 Web API 服務時。 它提供了ASP.NET酷中的所有新基礎結構優劣,使您能夠使用依賴項注入、在請求管道中插入中間件等。 對這些`WebHost`後台任務使用非常`IHostedServices`相同。
+在 `WebHost` `IWebHost` ASP.NET Core 2.0 中執行) 的 (基類是您用來提供 HTTP 伺服器功能給程式的基礎結構成品，例如當您在執行 MVC web 應用程式或 web API 服務時。 它提供 ASP.NET Core 中的所有新基礎結構，讓您可以使用相依性插入、在要求管線中插入中介軟體，以及類似的。 對於背景工作而言，會 `WebHost` 使用這些非常相同的 `IHostedServices` 。
 
 .NET Core 2.1 中引進了 `Host` (實作 `IHost` 的基底類別)。 基本上，`Host` 可讓您擁有與 `WebHost` 類似的基礎結構 (相依性插入、託管服務等等)，但在此情況下，您只想要有主機的簡單且輕量程序，而不想要有與 MVC、Web API 或 HTTP 伺服器功能有關的程序。
 
-因此,您可以選擇並創建專用主機進程`IHost`來處理託管服務,而沒有其他的微服務,例如專為託管 而創建的微服務`IHostedServices`,或者您也可以擴展現有的ASP.NET酷`WebHost`睿 ,例如現有的ASP.NET酷 Web API 或 MVC 應用。
+因此，您可以選擇建立特製化的主機程式，並使用 `IHost` 來處理裝載的服務，而不需要任何其他專案（例如微服務）， `IHostedServices` 或者您也可以擴充現有的 ASP.NET Core `WebHost` ，例如現有的 ASP.NET Core WEB API 或 MVC 應用程式。
 
-根據您的商務和延展性需求，每種方法都有其優缺點。 底線基本上是,如果你的背景任務與HTTP ()`IWebHost`無關,你`IHost`應該使用 。
+根據您的商務和延展性需求，每種方法都有其優缺點。 重點是，如果您的背景工作與 HTTP (無關， `IWebHost` 您應該使用的) `IHost` 。
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>在 WebHost 或主機中註冊託管服務
 
-讓我們進一步深入探討介面,`IHostedService`因為它的使用在`WebHost`或 中`Host`非常相似。
+讓我們進一步向下切入 `IHostedService` 介面，因為在或中，其使用方式相當類似 `WebHost` `Host` 。
 
 SignalR 是使用託管服務之成品的一個範例，但您也可以將它用於下列更簡單的事項：
 
@@ -43,9 +43,9 @@ SignalR 是使用託管服務之成品的一個範例，但您也可以將它用
 - 在共用 `ILogger` 這類通用服務時，於 Web 應用程式背景處理來自佇列的訊息。
 - 使用 `Task.Run()` 啟動的背景工作。
 
-基本上可以將其中任何操作卸載到實現`IHostedService`的背景任務。
+基本上，您可以將任何這些動作卸載至執行的背景工作 `IHostedService` 。
 
-`IHostedServices`通過將一個或多個添加到`WebHost``Host`或<xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> 中通過 擴充方法`WebHost`在ASP.NET`Host`Core 中(或在 .NET Core 2.1 及以上)中註冊,方法是添加一個或多個。 基本上，您必須在 `Startup` 類別的熟悉 `ConfigureServices()` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。
+您將一或多個加入 `IHostedServices` 至或中的方法 `WebHost` `Host` 是透過 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>   ASP.NET Core (中的擴充方法， `WebHost` 或在 `Host` .net Core 2.1 和更新版本) 中的擴充方法來註冊它們。 基本上，您必須在 `Startup` 類別的熟悉 `ConfigureServices()` 方法內註冊託管服務，如典型 ASP.NET WebHost 中的下列程式碼所示。
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -64,33 +64,11 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 `IHostedService` 背景工作執行會與應用程式 (就此而言，是主機或微服務) 存留期一致。 您在應用程式啟動時註冊工作，並且在關閉應用程式時，有機會依正常程序進行某個動作或清除。
 
-不使用 `IHostedService`，您還是一律可以啟動背景執行緒來執行任何工作。 區別恰恰在於應用的關閉時間,此時該線程將簡單地被殺死,而沒有機會運行優雅的清理操作。
+不使用 `IHostedService`，您還是一律可以啟動背景執行緒來執行任何工作。 當應用程式關閉時，該執行緒只會在沒有機會執行正常清除動作的情況下結束時，就會有很大的差異。
 
 ## <a name="the-ihostedservice-interface"></a>IHostedService 介面
 
-註冊 `IHostedService` 時，.NET Core 將會在應用程式啟動和停止期間分別呼叫 `IHostedService` 型別的 `StartAsync()` 和 `StopAsync()` 方法。 具體而言，在啟動伺服器之後會呼叫啟動，並觸發 `IApplicationLifetime.ApplicationStarted`。
-
-.NET Core 中所定義的 `IHostedService` 如下。
-
-```csharp
-namespace Microsoft.Extensions.Hosting
-{
-    //
-    // Summary:
-    //     Defines methods for objects that are managed by the host.
-    public interface IHostedService
-    {
-        //
-        // Summary:
-        // Triggered when the application host is ready to start the service.
-        Task StartAsync(CancellationToken cancellationToken);
-        //
-        // Summary:
-        // Triggered when the application host is performing a graceful shutdown.
-        Task StopAsync(CancellationToken cancellationToken);
-    }
-}
-```
+註冊 `IHostedService` 時，.NET Core 將會在應用程式啟動和停止期間分別呼叫 `IHostedService` 型別的 `StartAsync()` 和 `StopAsync()` 方法。 如需詳細資訊，請參閱 [IHostedService 介面](https://docs.microsoft.com/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&tabs=visual-studio#ihostedservice-interface)
 
 假設您可以建立多個 IHostedService 實作，並在 `ConfigureService()` 方法中將它們註冊至 DI 容器，如前所示。 將會啟動與停止所有這些託管服務以及應用程式/微服務。
 
@@ -210,7 +188,7 @@ public class GracePeriodManagerService : BackgroundService
 
 當然，您可以改為執行任何其他商務背景工作。
 
-取消權杖預設會設定 5 秒的逾時，但您可以在使用 `IWebHostBuilder` 的 `UseShutdownTimeout` 延伸模組建置 `WebHost` 時變更該值。 這表示，我們的服務應該在 5 秒內取消，否則就會更突然地終止。
+根據預設，解除標記會設定為5秒的超時時間，不過您可以在使用的擴充功能建立時變更該值 `WebHost` `UseShutdownTimeout` `IWebHostBuilder` 。 這表示，我們的服務應該在 5 秒內取消，否則就會更突然地終止。
 
 下列程式碼會將該時間變更為 10 秒。
 
@@ -222,9 +200,9 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="summary-class-diagram"></a>摘要類別圖表
 
-下圖顯示了實現 I託管服務時所涉及的類和介面的可視摘要。
+下圖顯示在執行 IHostedServices 時所牽涉到的類別和介面的視覺化摘要。
 
-![顯示 IWebHost 和 IHost 可以承載許多服務的圖表。](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
+![此圖顯示 IWebHost 和 IHost 可以裝載許多服務。](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
 
 **圖 6-27**。 類別圖表，顯示多個與 IHostedService 相關的類別和介面
 
@@ -232,23 +210,23 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="deployment-considerations-and-takeaways"></a>部署考量和心得
 
-請務必注意 ASP.NET Core `WebHost` 或 .NET Core `Host` 的部署方式可能會影響最後的解決方案。 例如，如果您在 IIS 上部署 `WebHost` 或一般 Azure App Service，則可能會因應用程式集區回收而關閉主機。 但是,如果要將主機作為容器部署到像 Kubernetes 這樣的協調器中,則可以控制主機的即時實例的保證數。 此外，您可以考慮在雲端中使用其他方法，特別是針對這些案例 (例如 Azure Functions)。 最後，如果您需要服務持續持行，並準備部署到 Windows Server 上，您可以使用 Windows 服務。
+請務必注意 ASP.NET Core `WebHost` 或 .NET Core `Host` 的部署方式可能會影響最後的解決方案。 例如，如果您在 IIS 上部署 `WebHost` 或一般 Azure App Service，則可能會因應用程式集區回收而關閉主機。 但是，如果您將主機作為容器部署到 Kubernetes 之類的協調器，您就可以控制主機的即時實例數目。 此外，您可以考慮在雲端中使用其他方法，特別是針對這些案例 (例如 Azure Functions)。 最後，如果您需要服務持續持行，並準備部署到 Windows Server 上，您可以使用 Windows 服務。
 
-但是,`WebHost`即使對於部署到應用池中,也會有一些方案,如重新填充或刷新應用程式的記憶體緩存,這些緩存仍然適用。
+但即使是 `WebHost` 部署到應用程式集區的，還是會有一些案例，例如重新填入或清除應用程式的記憶體內部快取，但仍適用。
 
-該`IHostedService`介面提供了一種在ASP.NET核心 Web 應用程式(在 .NET Core 2.0 和更高版本中)或任何進程/主機(從`IHost`.NET Core 2.1 開始)中啟動後台任務的便捷方法。 它的主要優點是，在主機本身正在關機時，您可以依正常程序取消清除背景工作的程式碼。
+`IHostedService`介面提供一種便利的方式，可讓您在 .Net core 2.0 和更新) 版本中 (的 ASP.NET Core web 應用程式中啟動背景工作，或在任何程式/主機 (以) 啟動 .Net core 2.1 `IHost` 。 它的主要優點是您可以在主機本身關閉時，透過正常取消來清除背景工作程式碼的機會。
 
 ## <a name="additional-resources"></a>其他資源
 
-- **在 ASP.NET核心/標準 2.0 中建構計劃任務** \
+- **在 ASP.NET Core/標準2.0 中建立排程工作** \
   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **在 ASP.NET 核心 2.0 中實現 I託管服務** \
+- **在 ASP.NET Core 2.0 中執行 IHostedService** \
   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **使用 ASP.NET核心 2.1 的通用主機範例** \
+- **使用 ASP.NET Core 2.1 的 GenericHost 範例** \
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 > [!div class="step-by-step"]
-> [前一個](test-aspnet-core-services-web-apps.md)
-> [下一個](implement-api-gateways-with-ocelot.md)
+> [上一個](test-aspnet-core-services-web-apps.md) 
+> [下一步](implement-api-gateways-with-ocelot.md)

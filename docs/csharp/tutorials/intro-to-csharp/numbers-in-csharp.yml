@@ -6,25 +6,26 @@ metadata:
   audience: Developer
   ms.custom: mvc
   ms.date: 08/24/2018
+  ms.topic: interactive-tutorial
   level: Beginner
   nextTutorialHref: branches-and-loops.yml
   nextTutorialTitle: C# 中的分支與迴圈
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 87ffc9668191a52774f21470dbc415bba3579a49
-  ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+  ms.openlocfilehash: f9cfdf852546c30307f818418d7ff610b210d6f4
+  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85853920"
+  ms.lasthandoff: 08/17/2020
+  ms.locfileid: "88267927"
 items:
 - durationInMinutes: 1
   content: >
-    本教學課程會使用您的瀏覽器，以互動方式將 c # 中的數數值型別告訴您。 您將會撰寫 c #，並查看編譯和執行程式碼的結果。 內容包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。
+    本教學課程會使用您的瀏覽器，以互動方式教您有關 c # 中的數數值型別。 您將會撰寫 c #，並查看編譯和執行程式碼的結果。 內容包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。
 - title: 探索整數運算
   durationInMinutes: 4
   content: >
-    在互動式視窗中執行下列程式碼。 選取 [**進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊，然後選取 [**執行**]：
+    在互動式視窗中執行下列程式碼。 選取 [ **進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊，然後選取 [ **執行**]：
 
 
     ```csharp
@@ -40,10 +41,10 @@ items:
     ```
 
 
-    如果您使用的是環境，您應該改為遵循[本機版本](numbers-in-csharp-local.md)的指示。
+    如果您是在環境中工作，您應該改為遵循 [本機版本](numbers-in-csharp-local.md) 的指示。
 
 
-    您已經看過其中一個具有整數的基本數學運算。 `int` 型別代表**整數**，也就是正整數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
+    您已看過一個整數的基本數學運算。 `int` 型別代表**整數**，也就是正整數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
 
 
     - `-` 用於減法
@@ -58,7 +59,7 @@ items:
     > 在整個互動式教學課程中，您可以修改在互動式視窗中撰寫的程式碼，以自行探索各種變化。 本教學課程在每個步驟都有供您嘗試的範例。
 
 
-    讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 在每次編輯之後，選取 [**執行**] 按鈕。
+    讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 在每次編輯之後，請選取 [ **執行** ] 按鈕。
 
 
     減法：
@@ -158,7 +159,7 @@ items:
     您可能已注意到整數某個有趣的行為。 整數的除法一律會產生整數結果，即使您認為結果應有小數或分數部分也一樣。
 
 
-    如果您沒有看到此行為，請嘗試下列程式碼：
+    如果您還沒看過這種行為，請嘗試下列程式碼：
 
 
     ```csharp
@@ -176,13 +177,13 @@ items:
     ```
 
 
-    再次選取 [**執行**] 以查看結果。
+    選取 [再次 **執行** ] 以查看結果。
 - title: 探索整數的精確度與限制
   durationInMinutes: 5
   content: >
     上一個範例示範了整數除法運算會將結果截斷。
 
-    您可以使用**餘數**運算子（字元）來取得**餘數** `%` ：
+    您可以使用**餘數**運算子來取得**餘數**，也就是 `%` 字元：
 
 
     ```csharp
@@ -240,11 +241,11 @@ items:
     當 `int` 型別不符合您的需求時，還有其他具有不同限制和精確度的數字型別可供使用。 接下來讓我們來探索這些類型的數位。
 - title: 使用 Double 型別
   durationInMinutes: 5
-  content: "`double` 數字型別代表雙精確度浮點數。 您可能不熟悉這些字詞。 **浮點**數位非常適合用來代表可能非常大或非常小的非整數數位。 **雙精確度**是一個相對詞彙，描述用來儲存值的二進位數位數目。 **雙精確度**數位有兩倍的二進位數作為**單精確度**。 在現代的電腦上，比較常使用雙精確度而非單精確度數字。 使用關鍵字來宣告**單精確度**數位 `float` 。\n讓我們開始探索吧。 在互動式視窗中嘗試下列程式碼並查看結果：\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\n請注意答案包括商數的小數部分。 請嘗試略為複雜的雙精確度浮點數運算式：\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\n雙精確度浮點數值的範圍遠大於整數值。 在互動式視窗中嘗試下列程式碼：\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\n這些值會以科學記號標記法呈現。 `E` 左邊的數字是有效數字。 右邊的數字則為指數，亦即 10 的次方。\n\n就像數學上的小數數字，C# 中的雙精確度浮點數會發生捨入誤差。 請嘗試此程式碼：\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\n您知道 `0.3` 是 `3/10` ，而不是與完全相同 `1/3` 。 同樣地， `0.33` 為 `33/100` 。 這比較接近 `1/3` ，但還是不精確。 \n\n***挑戰***\n\n嘗試使用類型的大量、小型數位、乘法和除法的其他計算 `double` 。  嘗試更複雜的計算。\n"
-- title: 使用十進位類型
+  content: "`double` 數字型別代表雙精確度浮點數。 您可能不熟悉這些字詞。 **浮點數**適合用來表示可能非常大或較小的非整數數位。 **雙精確度** 是描述用來儲存值之二進位數位數目的相對詞彙。 **雙精確度** 數位具有兩倍的二進位位數做為 **單精確度**浮點數。 在現代的電腦上，比較常使用雙精確度而非單精確度數字。 **單一** 有效位數是使用關鍵字宣告的 `float` 。\n讓我們開始探索吧。 在互動式視窗中嘗試下列程式碼並查看結果：\n\n```csharp\ndouble a = 5;\ndouble b = 4;\ndouble c = 2;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\n請注意答案包括商數的小數部分。 請嘗試略為複雜的雙精確度浮點數運算式：\n\n```csharp\ndouble a = 19;\ndouble b = 23;\ndouble c = 8;\ndouble d = (a + b) / c;\nConsole.WriteLine(d);\n```\n\n雙精確度浮點數值的範圍遠大於整數值。 在互動式視窗中嘗試下列程式碼：\n\n```csharp\ndouble max = double.MaxValue;\ndouble min = double.MinValue;\nConsole.WriteLine($\"The range of double is {min} to {max}\");\n```\n\n這些值會以科學記號標記法呈現。 `E` 左邊的數字是有效數字。 右邊的數字則為指數，亦即 10 的次方。\n\n就像數學上的小數數字，C# 中的雙精確度浮點數會發生捨入誤差。 請嘗試此程式碼：\n\n```csharp\ndouble third = 1.0 / 3.0;\nConsole.WriteLine(third);\n```\n\n您知道 `0.3` `3/10` 和不完全相同 `1/3` 。 同樣地， `0.33` 是 `33/100` 。 這是較接近的 `1/3` ，但仍不精確。 \n\n***挑戰***\n\n使用類型嘗試其他具有大量數位、小型數位、乘法和除法的計算 `double` 。  嘗試更複雜的計算。\n"
+- title: 使用 decimal 類型
   durationInMinutes: 8
   content: >
-    您已經看過 C# 中的基本數字型別：整數和雙精確度浮點數。  還有另一個要瞭解的型別： `decimal` 型別。 `decimal` 類型的範圍較小，但精確度較 `double` 來得高。 讓我們來看一下：
+    您已經看過 C# 中的基本數字型別：整數和雙精確度浮點數。  還有另一個要學習的型別： `decimal` 型別。 `decimal` 類型的範圍較小，但精確度較 `double` 來得高。 讓我們來看看：
 
 
     ```csharp
@@ -290,13 +291,13 @@ items:
 
     > [!NOTE]
 
-    > 在 `M` 和關鍵字之間，選擇了字母做為最具視覺效果的相異字母 `double` `decimal` 。
+    > 在 `M` 和關鍵字之間，選擇字母做為最具視覺效果的字母 `double` `decimal` 。
 
 
     ***挑戰***
 
 
-    您已經了解不同的數字型別，接著請撰寫程式碼，以計算半徑 2.50 公分的圓形面積。 提醒您圓形面積是 PI 乘以半徑的平方。 提示：.NET 包含 PI 的常數：<xref:System.Math.PI?displayProperty=nameWithType>，可用來作為該值。 <xref:System.Math.PI?displayProperty=nameWithType>與命名空間中宣告的所有常數一樣， `System.Math` 都是一個 `double` 值。 基於這個理由，您應該使用 `double` 而不是 `decimal` 這項挑戰的值。
+    您已經了解不同的數字型別，接著請撰寫程式碼，以計算半徑 2.50 公分的圓形面積。 提醒您圓形面積是 PI 乘以半徑的平方。 提示：.NET 包含 PI 的常數：<xref:System.Math.PI?displayProperty=nameWithType>，可用來作為該值。 <xref:System.Math.PI?displayProperty=nameWithType>和命名空間中宣告的所有常數一樣， `System.Math` 都是一個 `double` 值。 基於這個理由，您應該 `double` 針對這項挑戰使用而不是 `decimal` 值。
 
 
     您應該會取得介於 19 和 20 的答案。
@@ -319,7 +320,7 @@ items:
 
     如果您想要的話，可以嘗試其他公式。
 - content: >-
-    您已經完成＜C# 中的數字＞互動式教學課程。 您可以選取下方的 [**分支和迴圈**] 連結來啟動下一個互動式教學課程，或者您可以流覽[.net 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)來下載 .NET Core SDK、在您的電腦上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
+    您已經完成＜C# 中的數字＞互動式教學課程。 您可以選取下方的 **分支和迴圈** 連結來開始下一個互動式教學課程，或者您可以造訪 [.net 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) 下載 .NET Core SDK、在電腦上建立專案，並繼續撰寫程式碼。 接下來的「後續步驟」一節將帶您回到這些教學課程。
 
 
     您可以在下列文章中深入瞭解 c # 中的數位：
