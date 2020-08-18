@@ -5,22 +5,19 @@
   items:
     - name: 使用 ASP.NET Core 和 Microsoft Azure 來架構現代化 Web 應用程式
       href: modern-web-apps-azure/
+    - name: 建構適用於 Azure 的雲端原生 .NET 應用程式
+      href: cloud-native/
     - name: 適用於 WCF 開發人員的 ASP.NET Core gRPC
       href: grpc-for-wcf-developers/
-    - name: 使用 Azure 雲端及 Windows 容器將現有 .NET 應用程式現代化
-      href: modernize-with-azure-containers/
+    - name: 適用於 ASP.NET Web Forms 的 Blazor 開發人員
+      href: blazor-for-web-forms-developers/
     - name: 採用 Microsoft 平台與工具容器化之 Docker 應用程式的生命週期
       href: containerized-lifecycle/
+    - name: 使用 Azure 雲端及 Windows 容器將現有 .NET 應用程式現代化
+      href: modernize-with-azure-containers/
+    - name: 使用 .NET Core 3.1 在 Windows 10 上將傳統型應用程式現代化
+      href: modernize-desktop/
     - name: .NET 微服務：容器化之 .NET 應用程式的架構
       href: microservices/
     - name: 無伺服器應用程式：架構、模式和 Azure 實作
       href: serverless/
-    - name: 建構適用於 Azure 的雲端原生 .NET 應用程式
-      href: cloud-native/
-    - name: 使用 .NET Core 3.1 在 Windows 10 上將傳統型應用程式現代化
-      href: modernize-desktop/
-- name: 預覽電子書
-  expanded: true
-  items:
-    - name: 適用於 ASP.NET Web Forms 的 Blazor 開發人員
-      href: blazor-for-web-forms-developers/
