@@ -6,48 +6,48 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 2373b21e92c6ca68aac33684a9bd0912a2e642b3
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 42d4f7e8800bf2d13d584084f8a41bad2ada534f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324278"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608129"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 的新功能
 
-本文說明 .NET Core 3.1 中的新功能。 此版本包含 .NET Core 3.0 的次要改良功能，著重于小型但重要的修正程式。 .NET Core 3.1 最重要的功能是，它是[長期支援（LTS）](#long-term-support)版本。
+本文說明 .NET Core 3.1 中的新功能。 此版本包含 .NET Core 3.0 的微小改進，著重于小型但重要的修正程式。 .NET Core 3.1 最重要的功能是 [ (LTS) 版本的長期支援 ](#long-term-support) 。
 
-如果您使用 Visual Studio 2019，您必須更新為[Visual Studio 2019 16.4 版或更新版本](https://visualstudio.microsoft.com/downloads/)，才能使用 .net Core 3.1 專案。 如需 Visual Studio 版本16.4 中新功能的詳細資訊，請參閱[Visual Studio 2019 版本16.4 中的新功能](/visualstudio/releases/2019/release-notes-v16.4#whats-new-in-visual-studio-2019-version-164)。
+如果您使用 Visual Studio 2019，則必須更新至 [Visual Studio 2019 16.4 版或更新版本](https://visualstudio.microsoft.com/downloads/) ，才能使用 .net Core 3.1 專案。 如需 Visual Studio 16.4 版新功能的詳細資訊，請參閱 [Visual Studio 2019 16.4 版中的新功能](/visualstudio/releases/2019/release-notes-v16.4#whats-new-in-visual-studio-2019-version-164)。
 
 Visual Studio for Mac 也支援並包含 Visual Studio for Mac 8.4 中的 .NET Core 3.1。
 
-如需版本的詳細資訊，請參閱[.Net Core 3.1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/)。
+如需版本的詳細資訊，請參閱 [.Net Core 3.1 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/)。
 
-- 下載 Windows、macOS 或 Linux 上[的 .Net Core 3.1 並開始使用](https://dotnet.microsoft.com/download/dotnet-core/3.1)。
+- 在 Windows、macOS 或 Linux 上[下載並開始使用 .Net Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) 。
 
 ## <a name="long-term-support"></a>長期支援
 
-.NET Core 3.1 是 LTS 版本，在接下來的三年來提供 Microsoft 支援。 強烈建議您將應用程式移至 .NET Core 3.1。 其他主要版本的目前生命週期如下所示：
+.NET Core 3.1 是 LTS 版本，可在未來三年提供 Microsoft 的支援。 強烈建議您將應用程式移至 .NET Core 3.1。 其他主要版本的目前生命週期如下所示：
 
-| 版本 | 注意 |
+| 版本 | 附註 |
 | ------- | ---- |
 | .NET Core 3.0 | 2020年3月3日結束生命週期。     |
 | .NET Core 2.2 | 2019年12月23日結束生命週期。 |
 | .NET Core 2.1 | 2021年8月21日結束生命週期。    |
 
-如需詳細資訊，請參閱[.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
+如需詳細資訊，請參閱 [.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
 
-## <a name="macos-apphost-and-notarization"></a>macOS appHost 和 notarization
+## <a name="macos-apphost-and-notarization"></a>macOS appHost 和公證
 
 *僅限 macOS*
 
-從適用于 macOS 的公證 .NET Core SDK 3.1 開始，appHost 設定預設為停用。 如需詳細資訊，請參閱[MacOS Catalina Notarization 和對 .Net Core 下載和專案的影響](../install/macos-notarization-issues.md)。
+從適用于 macOS 的公證 .NET Core SDK 3.1 開始，預設會停用 appHost 設定。 如需詳細資訊，請參閱 [MacOS Catalina 公證和 .Net Core 下載和專案的影響](../install/macos-notarization-issues.md)。
 
-當 appHost 設定啟用時，.NET Core 會在您建立或發行時產生原生符合-O 可執行檔。 當您的應用程式是從使用命令的原始程式碼執行 `dotnet run` ，或直接啟動符合-O 可執行檔時，就會在 appHost 的內容中執行。
+當 appHost 設定啟用時，.NET Core 會在您建立或發行時產生原生的符合-O 可執行檔。 當您的應用程式從使用命令的原始程式碼執行 `dotnet run` ，或直接啟動符合-O 可執行檔時，您的應用程式會在 appHost 的環境中執行。
 
-如果沒有 appHost，使用者唯一可以啟動[執行時間相依](../deploying/index.md#publish-runtime-dependent)應用程式的方式是使用 `dotnet <filename.dll>` 命令。 當您發佈[獨立](../deploying/index.md#publish-self-contained)應用程式時，一律會建立 appHost。
+如果沒有 appHost，使用者就可以使用命令來啟動與 [framework 相依](../deploying/index.md#publish-framework-dependent) 的應用程式 `dotnet <filename.dll>` 。 當您發行 [獨立](../deploying/index.md#publish-self-contained)應用程式時，一律會建立 appHost。
 
-您可以在專案層級設定 appHost，或使用參數來切換特定命令的 appHost `dotnet` `-p:UseAppHost` ：
+您可以在專案層級設定 appHost，或使用參數切換特定命令的 appHost `dotnet` `-p:UseAppHost` ：
 
 - 專案檔
 
@@ -63,7 +63,7 @@ Visual Studio for Mac 也支援並包含 Visual Studio for Mac 8.4 中的 .NET C
   dotnet run -p:UseAppHost=true
   ```
 
-如需設定的詳細資訊 `UseAppHost` ，請參閱[適用于 Microsoft .Net 的 MSBuild 屬性](../project-sdk/msbuild-props.md#useapphost)。
+如需有關此設定的詳細資訊 `UseAppHost` ，請參閱 [適用于 Microsoft .Net 的 MSBuild 屬性](../project-sdk/msbuild-props.md#useapphost)。
 
 ## <a name="windows-forms"></a>Windows Forms
 
@@ -72,7 +72,7 @@ Visual Studio for Mac 也支援並包含 Visual Studio for Mac 8.4 中的 .NET C
 > [!WARNING]
 > Windows Forms 中有重大變更。
 
-舊版控制項已包含在 Visual Studio 設計工具工具箱中無法使用的 Windows Forms 中。 這些已取代為 .NET Framework 2.0 中的新控制項。 這些已從適用于 .NET Core 3.1 的桌面 SDK 移除。
+舊版控制項已包含在 Visual Studio 設計工具工具箱中無法使用的 Windows Forms。 這些已取代為 .NET Framework 2.0 中的新控制項。 這些已從適用于 .NET Core 3.1 的桌面 SDK 移除。
 
 | 已移除控制項 | 建議取代 | 已移除相關聯的 Api |
 | --------------- | ----------------------- | ----------------------- |
@@ -84,20 +84,20 @@ Visual Studio for Mac 也支援並包含 Visual Studio for Mac 8.4 中的 .NET C
 | MainMenu        | <xref:System.Windows.Forms.MenuStrip>         |  |
 | MenuItem        | <xref:System.Windows.Forms.ToolStripMenuItem> |  |
 
-我們建議您將應用程式更新為 .NET Core 3.1，並移至取代控制項。 取代控制項是直接的程式，基本上是「尋找和取代」類型。
+建議您將應用程式更新為 .NET Core 3.1，並移至取代控制項。 取代控制項是一個簡單的程式，基本上是「尋找和取代」型別。
 
 ## <a name="ccli"></a>C++/CLI
 
 *僅限 Windows*
 
-已新增建立 c + +/CLI （也稱為「managed c + +」）專案的支援。 從這些專案產生的二進位檔與 .NET Core 3.0 和更新版本相容。
+已加入支援，以建立 c + +/CLI (也稱為「managed c + +」 ) 專案。 這些專案所產生的二進位檔會與 .NET Core 3.0 和更新版本相容。
 
-若要在 Visual Studio 2019 16.4 版中新增 c + +/CLI 支援，請安裝[使用 c + + 的桌面開發工作負載](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)。 此工作負載會在 Visual Studio 中新增兩個範本：
+若要在 Visual Studio 2019 16.4 版中加入 c + +/CLI 的支援，請安裝 [使用 c + + 的桌面開發工作負載](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)。 此工作負載會將兩個範本新增至 Visual Studio：
 
-- CLR 類別庫（.NET Core）
-- CLR 空專案（.NET Core）
+- CLR 類別庫 ( .NET Core) 
+- CLR 空專案 ( .NET Core) 
 
 ## <a name="next-steps"></a>後續步驟
 
-- [檢查 .NET Core 3.0 和3.1 之間的重大變更。](../compatibility/3.0-3.1.md)
-- [請參閱 .NET Core 3.1 中適用于 Windows Forms 應用程式的重大變更。](../compatibility/winforms.md#net-core-31)
+- [查看 .NET Core 3.0 和3.1 之間的重大變更。](../compatibility/3.0-3.1.md)
+- [查看 .NET Core 3.1 中 Windows Forms 應用程式的重大變更。](../compatibility/winforms.md#net-core-31)

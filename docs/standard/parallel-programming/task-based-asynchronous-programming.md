@@ -1,6 +1,6 @@
 ---
 title: 工作型非同步程式設計 - .NET
-description: 在本文中，透過 .NET 中的工作平行程式庫（TPL）瞭解以工作為基礎的非同步程式設計。
+description: 在本文中，透過工作平行程式庫 (TPL) 在 .NET 中瞭解以工作為基礎的非同步程式設計。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 57261602c456a6dcf90c03aa044e7d1c0c8c1c6a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446375"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608021"
 ---
 # <a name="task-based-asynchronous-programming"></a>工作型非同步程式設計
 
@@ -96,7 +96,7 @@ ms.locfileid: "84446375"
 
 大多數建立工作的 API 都會提供用來接受 <xref:System.Threading.Tasks.TaskCreationOptions> 參數的多載。 您可以指定其中一個選項，指示工作排程器要如何在執行緒集區上排定工作。 下表列出各種工作建立選項。
 
-|<xref:System.Threading.Tasks.TaskCreationOptions> 參數值|說明|
+|<xref:System.Threading.Tasks.TaskCreationOptions> 參數值|描述|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|未指定選項時的預設值。 排程器會使用其預設的啟發式來排定工作。|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|指定排定工作時，應該讓較早建立的工作較早執行，並讓較晚建立的工作較晚執行。|
@@ -159,7 +159,7 @@ ms.locfileid: "84446375"
 
 ## <a name="creating-child-tasks"></a>建立子工作
 
-當在工作內執行的使用者程式碼以 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項建立新工作時，新的工作即稱為父工作的「附加的子工作」(Attached Child Task)**。 您可以使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項來呈現結構化工作平行處理原則，因為父工作會隱含等候所有附加的子工作都完成。 下面範例會示範一個父工作如何建立十個附加的子工作。 請注意，雖然此範例會呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法等候父工作完成，但不一定會明確等候附加的子工作完成。
+當工作中執行的使用者程式碼以選項建立工作時 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> ，新的工作即稱為父工作的「 *附加子* 工作」（task）。 您可以使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項來呈現結構化工作平行處理原則，因為父工作會隱含等候所有附加的子工作都完成。 下面範例會示範一個父工作如何建立十個附加的子工作。 請注意，雖然此範例會呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法等候父工作完成，但不一定會明確等候附加的子工作完成。
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]
@@ -255,11 +255,11 @@ ms.locfileid: "84446375"
 
 ## <a name="tasks-without-delegates"></a>不含委派的工作
 
-在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskCompletionSource%601> 。
+在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskCompletionSource%601>。
 
 ## <a name="custom-schedulers"></a>自訂排程器
 
-大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskScheduler> 。
+大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskScheduler>。
 
 ## <a name="related-data-structures"></a>相關資料結構
 
@@ -269,7 +269,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 
 建議您不要繼承自 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>， 建議您改用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 屬性，建立其他資料或狀態與 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件的關聯。 您也可以使用擴充方法，擴充 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類別的功能。 如需擴充方法的詳細資訊，請參閱[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)和[擴充方法](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
 
-如果您必須繼承自 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> ，您就無法使用 <xref:System.Threading.Tasks.Task.Run%2A> 、或 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> 、或 <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 類別來建立自訂工作類型的實例，因為這些機制只會建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
+如果您必須繼承 <xref:System.Threading.Tasks.Task> 自或 <xref:System.Threading.Tasks.Task%601> ，就不能使用 <xref:System.Threading.Tasks.Task.Run%2A> 、、 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 類別來建立自訂工作類型的實例，因為這些機制只會建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
 
 ## <a name="related-topics"></a>相關主題
 
@@ -288,7 +288,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 |[資料平行處理](data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|
 |[平行程式設計](index.md)|.NET Framework 平行程式設計的最上層節點。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [平行程式設計](index.md)
 - [使用 .NET Core & 進行平行程式設計的範例 .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

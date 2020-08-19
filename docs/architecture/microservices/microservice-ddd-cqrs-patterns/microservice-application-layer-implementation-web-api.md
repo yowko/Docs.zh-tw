@@ -1,13 +1,13 @@
 ---
 title: 使用 Web API 實作微服務應用程式層
-description: 瞭解相依性插入和中繼程式模式，以及其在 Web API 應用層中的執行詳細資料。
-ms.date: 01/30/2020
-ms.openlocfilehash: c6e82b610a528b688cb4334bdec01700abbd2a62
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+description: 瞭解相依性插入和中繼程式模式，以及其在 Web API 應用層中的實作為詳細資料。
+ms.date: 08/17/2020
+ms.openlocfilehash: 72395acafb403a4e34858eb2b982ec83b9f3cee1
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306925"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608109"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -17,8 +17,8 @@ ms.locfileid: "84306925"
 
 例如，訂購微服務的應用程式層程式碼可直接實作為 **Ordering.API** 專案 (ASP.NET Core Web API 專案) 的一部分，如圖 7-23 所示。
 
-:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="方案總管中的 [訂購. API] 微服務螢幕擷取畫面。":::
-[微服務] 的 [方案總管] 視圖，顯示應用程式資料夾下的子資料夾： [行為]、[命令]、[DomainEventHandlers]、[IntegrationEvents]、[模型]、[查詢] 和 [驗證]。
+:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="方案總管中 [排序] 微服務的螢幕擷取畫面。":::
+微服務的 [排序 API] 方案總管視圖，顯示應用程式資料夾下的子資料夾：行為、命令、DomainEventHandlers、IntegrationEvents、模型、查詢和驗證。
 :::image-end:::
 
 **圖 7-23**。 Ordering.API ASP.NET Core Web API 專案中的應用程式層
@@ -27,53 +27,59 @@ ASP.NET Core 包含簡單[內建 IoC 容器](https://docs.microsoft.com/aspnet/c
 
 一般而言，您會想要插入可實作基礎結構物件的相依性。 要插入的一般相依性是存放庫。 但是，您可以插入可能會有的任何其他基礎結構相依性。 為求更簡單的實作，您可以直接插入工作單元模式物件 (EF DbContext 物件)，因為 DBContext 也是您基礎結構持續性物件的實作。
 
-在下列範例中，您可以查看 .NET Core 如何透過建構函式插入所需的存放庫物件。 此類別是命令處理常式，我們將在下節中討論。
+在下列範例中，您可以查看 .NET Core 如何透過建構函式插入所需的存放庫物件。 類別是命令處理常式，將在下一節中討論。
 
 ```csharp
 public class CreateOrderCommandHandler
-    : IAsyncRequestHandler<CreateOrderCommand, bool>
+        : IRequestHandler<CreateOrderCommand, bool>
 {
     private readonly IOrderRepository _orderRepository;
     private readonly IIdentityService _identityService;
     private readonly IMediator _mediator;
+    private readonly IOrderingIntegrationEventService _orderingIntegrationEventService;
+    private readonly ILogger<CreateOrderCommandHandler> _logger;
 
     // Using DI to inject infrastructure persistence Repositories
     public CreateOrderCommandHandler(IMediator mediator,
-                                     IOrderRepository orderRepository,
-                                     IIdentityService identityService)
+        IOrderingIntegrationEventService orderingIntegrationEventService,
+        IOrderRepository orderRepository,
+        IIdentityService identityService,
+        ILogger<CreateOrderCommandHandler> logger)
     {
-        _orderRepository = orderRepository ??
-                          throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ??
-                          throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ??
-                                 throw new ArgumentNullException(nameof(mediator));
+        _orderRepository = orderRepository ?? throw new ArgumentNullException(nameof(orderRepository));
+        _identityService = identityService ?? throw new ArgumentNullException(nameof(identityService));
+        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+        _orderingIntegrationEventService = orderingIntegrationEventService ?? throw new ArgumentNullException(nameof(orderingIntegrationEventService));
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<bool> Handle(CreateOrderCommand message)
+    public async Task<bool> Handle(CreateOrderCommand message, CancellationToken cancellationToken)
     {
-        // Create the Order AggregateRoot
-        // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic
+        // Add Integration event to clean the basket
+        var orderStartedIntegrationEvent = new OrderStartedIntegrationEvent(message.UserId);
+        await _orderingIntegrationEventService.AddAndSaveEventAsync(orderStartedIntegrationEvent);
+
+        // Add/Update the Buyer AggregateRoot
+        // DDD patterns comment: Add child entities and value-objects through the Order Aggregate-Root
+        // methods and constructor so validations, invariants and business logic
         // make sure that consistency is preserved across the whole aggregate
-        var address = new Address(message.Street, message.City, message.State,
-                                  message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId,
-                              message.CardNumber, message.CardSecurityNumber,
-                              message.CardHolderName, message.CardExpiration);
+        var address = new Address(message.Street, message.City, message.State, message.Country, message.ZipCode);
+        var order = new Order(message.UserId, message.UserName, address, message.CardTypeId, message.CardNumber, message.CardSecurityNumber, message.CardHolderName, message.CardExpiration);
 
         foreach (var item in message.OrderItems)
         {
-            order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
-                               item.Discount, item.PictureUrl, item.Units);
+            order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice, item.Discount, item.PictureUrl, item.Units);
         }
+
+        _logger.LogInformation("----- Creating Order - Order: {@Order}", order);
 
         _orderRepository.Add(order);
 
         return await _orderRepository.UnitOfWork
-            .SaveEntitiesAsync();
+            .SaveEntitiesAsync(cancellationToken);
     }
 }
+
 ```
 
 此類別會使用已插入的存放庫來執行交易，並持續保存狀態變更。 不論該類別是命令處理常式、ASP.NET Core Web API 控制器方法還是 [DDD 應用程式服務](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)。 它最終會是使用存放庫、領域實體和其他應用程式協調的簡單類別，其形式與命令處理常式類似。 所有提及類別的相依性插入運作方式都相同，如根據建構函式使用 DI 的範例所示。
@@ -109,7 +115,7 @@ public void ConfigureServices(IServiceCollection services)
 
 #### <a name="additional-resources"></a>其他資源
 
-- **Matthew k。向 Scrutor 註冊服務** \
+- **Matthew 王。使用 Scrutor 註冊服務** \
   <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang。Scrutor.** GitHub 存放庫。 \
@@ -175,17 +181,17 @@ Autofac 也有功能可[掃描組件以及按命名慣例註冊類型](https://a
 
 ## <a name="implement-the-command-and-command-handler-patterns"></a>實作命令和命令處理常式模式
 
-在上節所顯示的透過建構函式的 DI 範例中，IoC 容器將會透過類別中的建構函式來插入存放庫。 但，其確切插入位置為何？ 在簡單的 Web API 中（例如，eShopOnContainers 中的目錄微服務），您可以將它們插入至控制器的 MVC 控制器層級，以作為 ASP.NET Core 要求管線的一部分。 不過，在此區段的初始程式碼中 (eShopOnContainers 的 Ordering.API 服務中的 [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) 類別)，是透過特定命令處理常式的建構函式來插入相依性。 讓我們說明什麼是命令處理常式以及您想要使用它的原因。
+在上節所顯示的透過建構函式的 DI 範例中，IoC 容器將會透過類別中的建構函式來插入存放庫。 但，其確切插入位置為何？ 例如，在簡單的 Web API (例如，在 eShopOnContainers) 中的目錄微服務，您會將它們插入至控制器的中的 MVC 控制器層級，作為 ASP.NET Core 要求管線的一部分。 不過，在此區段的初始程式碼中 (eShopOnContainers 的 Ordering.API 服務中的 [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) 類別)，是透過特定命令處理常式的建構函式來插入相依性。 讓我們說明什麼是命令處理常式以及您想要使用它的原因。
 
 命令模式本質上與本指南稍早介紹的 CQRS 模式有關。 CQRS 有兩端。 第一個區域是搭配使用簡化查詢與 [Dapper](https://github.com/StackExchange/dapper-dot-net) 微 ORM (先前已說明過) 的查詢。 第二個區域是命令，這是交易的起點以及服務外部的輸入通道。
 
-如圖 7-24 所示，模式的基礎是接受來自用戶端的命令，然後根據領域模型規則處理它們，最後保持交易狀態。
+如圖7-24 所示，模式是以從用戶端接受命令為基礎，根據領域模型規則處理它們，最後保存交易的狀態。
 
-![此圖顯示從用戶端到資料庫的高層級資料流程。](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
+![顯示從用戶端到資料庫之高階資料流程的圖表。](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
 **圖 7-24**. CQRS 模式中命令或「交易式端」的高階觀點
 
-[圖 7-24] 顯示 UI 應用程式會透過取得的 API 來傳送命令 `CommandHandler` ，這取決於網域模型和基礎結構，以更新資料庫。
+圖7-24 顯示 UI 應用程式透過 API 傳送命令，該 API 會 `CommandHandler` 根據領域模型和基礎結構來更新資料庫。
 
 ### <a name="the-command-class"></a>命令類別
 
@@ -199,51 +205,67 @@ Autofac 也有功能可[掃描組件以及按命名慣例註冊類型](https://a
 
 此外，如果命令不是等冪，則命令務必只處理一次。 如果基於命令本質或系統處理命令的方式，命令可以執行多次，而不變更結果，則命令為等冪。
 
-在您的網域的商務規則和非變異性之下，讓您的命令和更新為等冪是不錯的作法。 例如，若要使用相同的範例，如果基於任何原因 (重試邏輯、駭客等等) 相同的 CreateOrder 命令到達您的系統多次，則您應該可以識別它，並確保未建立多個訂單。 若要這樣做，您需要在作業中附加某種類型的身分識別，並識別是否已處理命令或更新。
+最好的作法是在您的網域商務規則和非變異下，讓命令和更新等冪成為有利的。 例如，若要使用相同的範例，如果基於任何原因 (重試邏輯、駭客等等) 相同的 CreateOrder 命令到達您的系統多次，則您應該可以識別它，並確保未建立多個訂單。 若要這樣做，您需要在作業中附加某種類型的身分識別，並識別是否已處理命令或更新。
 
 您將命令傳送給單一接收者；請不要發行命令。 發佈適用於指出事實的事件：發生了某事，而事件接收者可能對此感興趣。 如果是事件，則發行者不會關心哪些接收器收到事件或其處理方式。 但是先前各節中已介紹過的網域或整合事件則不同。
 
 命令是使用類別進行實作，而類別包含資料欄位或具有執行該命令所需之所有資訊的集合。 命令是一種特殊的資料轉送物件 (DTO)，專門用來要求變更或交易。 命令本身只根據處理命令所需的資訊，而不需要其他資訊。
 
-下列範例會顯示簡化的 `CreateOrderCommand` 類別。 這是 eShopOnContainers 訂購微服務中所使用的不可變命令。
+下列範例顯示簡化的 `CreateOrderCommand` 類別。 這是 eShopOnContainers 訂購微服務中所使用的不可變命令。
 
 ```csharp
-// DDD and CQRS patterns comment
-// Note that we recommend that you implement immutable commands
-// In this case, immutability is achieved by having all the setters as private
-// plus being able to update the data just once, when creating the object
-// through the constructor.
-// References on immutable commands:
-// https://cqrs.nu/Faq
+// DDD and CQRS patterns comment: Note that it is recommended to implement immutable Commands
+// In this case, its immutability is achieved by having all the setters as private
+// plus only being able to update the data just once, when creating the object through its constructor.
+// References on Immutable Commands:
+// http://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
 // https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
+
 [DataContract]
 public class CreateOrderCommand
-    :IAsyncRequest<bool>
+    : IRequest<bool>
 {
     [DataMember]
     private readonly List<OrderItemDTO> _orderItems;
+
+    [DataMember]
+    public string UserId { get; private set; }
+
+    [DataMember]
+    public string UserName { get; private set; }
+
     [DataMember]
     public string City { get; private set; }
+
     [DataMember]
     public string Street { get; private set; }
+
     [DataMember]
     public string State { get; private set; }
+
     [DataMember]
     public string Country { get; private set; }
+
     [DataMember]
     public string ZipCode { get; private set; }
+
     [DataMember]
     public string CardNumber { get; private set; }
+
     [DataMember]
     public string CardHolderName { get; private set; }
+
     [DataMember]
     public DateTime CardExpiration { get; private set; }
+
     [DataMember]
     public string CardSecurityNumber { get; private set; }
+
     [DataMember]
     public int CardTypeId { get; private set; }
+
     [DataMember]
     public IEnumerable<OrderItemDTO> OrderItems => _orderItems;
 
@@ -252,13 +274,13 @@ public class CreateOrderCommand
         _orderItems = new List<OrderItemDTO>();
     }
 
-    public CreateOrderCommand(List<BasketItem> basketItems, string city,
-        string street,
-        string state, string country, string zipcode,
+    public CreateOrderCommand(List<BasketItem> basketItems, string userId, string userName, string city, string street, string state, string country, string zipcode,
         string cardNumber, string cardHolderName, DateTime cardExpiration,
         string cardSecurityNumber, int cardTypeId) : this()
     {
-        _orderItems = MapToOrderItems(basketItems);
+        _orderItems = basketItems.ToOrderItemsDTO().ToList();
+        UserId = userId;
+        UserName = userName;
         City = city;
         Street = street;
         State = state;
@@ -266,37 +288,44 @@ public class CreateOrderCommand
         ZipCode = zipcode;
         CardNumber = cardNumber;
         CardHolderName = cardHolderName;
+        CardExpiration = cardExpiration;
         CardSecurityNumber = cardSecurityNumber;
         CardTypeId = cardTypeId;
         CardExpiration = cardExpiration;
     }
 
+
     public class OrderItemDTO
     {
         public int ProductId { get; set; }
+
         public string ProductName { get; set; }
+
         public decimal UnitPrice { get; set; }
+
         public decimal Discount { get; set; }
+
         public int Units { get; set; }
+
         public string PictureUrl { get; set; }
     }
 }
 ```
 
-基本上，此命令類別包含您使用領域模型物件來執行商務交易所需的所有資料。 因此，命令只是包含唯讀資料但沒有行為的資料結構。 命令的名稱會指出其用途。 在許多 C# 這類語言中，命令會呈現為類別，但就實際物件導向意義而言，它們不是真正的類別。
+基本上，此命令類別包含您使用領域模型物件來執行商務交易所需的所有資料。 因此，命令只是包含唯讀資料而沒有行為的資料結構。 命令的名稱表示其用途。 在許多 C# 這類語言中，命令會呈現為類別，但就實際物件導向意義而言，它們不是真正的類別。
 
-作為其他特性，命令是不可變的，因為預期的用法是領域模型會直接處理它們。 它們在其預測存留期間不需要變更。 在 C# 類別中，沒有任何 setter 或變更內部狀態的其他方法，可以達到不變性。
+作為其他特性，命令是不可變的，因為預期的用法是領域模型會直接處理它們。 它們在其預測存留期間不需要變更。 在 c # 類別中，沒有任何 setter 或變更內部狀態的其他方法，可以達到永久性。
 
-請記住，如果您想要或預期命令會通過序列化/還原序列化程式，則屬性必須具有私用 setter 和 `[DataMember]` （或 `[JsonProperty]` ）屬性。 否則，還原序列化將無法在目的地以必要的值重建物件。 如果類別有一個具有所有屬性參數的函式，而且具有一般的 camelCase 命名慣例，則您也可以使用真正的唯讀屬性，並將此函式標注為 `[JsonConstructor]` 。 不過，此選項需要更多程式碼。
+請記住，如果您想要或預期命令會通過序列化/還原序列化程式，則屬性必須有私用 setter，以及 `[DataMember]` (或 `[JsonProperty]`) 屬性。 否則，還原序列化無法在目的地使用必要的值來重建物件。 如果類別有一個具有所有屬性參數的函式，且具有一般 camelCase 命名慣例，並將其標注為，則您也可以使用真正的唯讀屬性 `[JsonConstructor]` 。 不過，此選項需要更多程式碼。
 
 例如，建立訂單的命令類別可能類似您想要建立之訂單的資料，但您可能不需要相同的屬性。 例如，沒有 `CreateOrderCommand` 訂單識別碼，因為尚未建立訂單。
 
-許多命令類別都可以簡單，只需要某個需要變更之狀態的幾個欄位。 如果您只是使用類似以下的命令，將訂單的狀態從「處理中」變更為「已付款」或「已運送」，就會發生這種情況：
+許多命令類別都可以簡單，只需要某個需要變更之狀態的幾個欄位。 如果您只是使用類似下列的命令，將訂單的狀態從「處理中」變更為「已付款」或「已出貨」，就會發生這種情況：
 
 ```csharp
 [DataContract]
 public class UpdateOrderStatusCommand
-    :IAsyncRequest<bool>
+    :IRequest<bool>
 {
     [DataMember]
     public string Status { get; private set; }
@@ -309,11 +338,11 @@ public class UpdateOrderStatusCommand
 }
 ```
 
-有些開發人員會區隔其 UI 要求物件與其命令 DTO，但這只是喜好設定。 這是沒有附加價值的冗長區隔，而且物件的形狀幾乎完全相同。 例如，在 eShopOnContainers 中，有些命令直接來自用戶端。
+有些開發人員會區隔其 UI 要求物件與其命令 DTO，但這只是喜好設定。 它是一種繁瑣的區隔，而且沒有額外的價值，而物件幾乎完全相同。 例如，在 eShopOnContainers 中，有些命令會直接來自用戶端。
 
 ### <a name="the-command-handler-class"></a>命令處理常式類別
 
-您應該為每個命令實作特定命令處理常式類別。 這就是模式的運作方式，而且您將使用命令物件、網域物件和基礎結構存放庫物件。 命令處理常式實際上是 CQRS 和 DDD 的應用程式層中心。 不過，所有領域邏輯都應該包含在網域類別中，包括在匯總根（根實體）、子實體或[網域服務](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)中，而不是在命令處理常式內，這是來自應用層的類別。
+您應該為每個命令實作特定命令處理常式類別。 這就是模式的運作方式，而您將使用命令物件、網域物件和基礎結構存放庫物件。 命令處理常式實際上是 CQRS 和 DDD 的應用程式層中心。 不過，所有領域邏輯都應該包含在網域類別中， (根實體) 、子實體或 [網域服務](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)，但不在命令處理常式中，這是應用層的類別。
 
 命令處理常式類別提供強式的墊腳石來達成前節中所述的單一職責原則 (SRP)。
 
@@ -337,66 +366,71 @@ public class UpdateOrderStatusCommand
 
 命令處理常式因太多邏輯而變得複雜時，就會像程式碼。 檢閱其內容，而且，如果您發現領域邏輯，請重構程式碼，以將該領域行為移至領域物件 (彙總根和子實體) 的方法。
 
-做為命令處理常式類別的範例，下列程式碼顯示您在 `CreateOrderCommandHandler` 本章開頭看到的相同類別。 在此情況下，我們想要反白顯示 Handle 方法以及具有領域模型物件/彙總的作業。
+下列程式碼是命令處理常式類別的範例，會顯示 `CreateOrderCommandHandler` 您在本章節開頭看到的相同類別。 在這種情況下，它也會反白顯示使用領域模型物件/匯總的控制碼方法和作業。
 
 ```csharp
 public class CreateOrderCommandHandler
-    : IAsyncRequestHandler<CreateOrderCommand, bool>
+        : IRequestHandler<CreateOrderCommand, bool>
 {
     private readonly IOrderRepository _orderRepository;
     private readonly IIdentityService _identityService;
     private readonly IMediator _mediator;
+    private readonly IOrderingIntegrationEventService _orderingIntegrationEventService;
+    private readonly ILogger<CreateOrderCommandHandler> _logger;
 
     // Using DI to inject infrastructure persistence Repositories
     public CreateOrderCommandHandler(IMediator mediator,
-                                     IOrderRepository orderRepository,
-                                     IIdentityService identityService)
+        IOrderingIntegrationEventService orderingIntegrationEventService,
+        IOrderRepository orderRepository,
+        IIdentityService identityService,
+        ILogger<CreateOrderCommandHandler> logger)
     {
-        _orderRepository = orderRepository ??
-                          throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ??
-                          throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ??
-                                 throw new ArgumentNullException(nameof(mediator));
+        _orderRepository = orderRepository ?? throw new ArgumentNullException(nameof(orderRepository));
+        _identityService = identityService ?? throw new ArgumentNullException(nameof(identityService));
+        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+        _orderingIntegrationEventService = orderingIntegrationEventService ?? throw new ArgumentNullException(nameof(orderingIntegrationEventService));
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<bool> Handle(CreateOrderCommand message)
+    public async Task<bool> Handle(CreateOrderCommand message, CancellationToken cancellationToken)
     {
-        // Create the Order AggregateRoot
-        // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic
+        // Add Integration event to clean the basket
+        var orderStartedIntegrationEvent = new OrderStartedIntegrationEvent(message.UserId);
+        await _orderingIntegrationEventService.AddAndSaveEventAsync(orderStartedIntegrationEvent);
+
+        // Add/Update the Buyer AggregateRoot
+        // DDD patterns comment: Add child entities and value-objects through the Order Aggregate-Root
+        // methods and constructor so validations, invariants and business logic
         // make sure that consistency is preserved across the whole aggregate
-        var address = new Address(message.Street, message.City, message.State,
-                                  message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId,
-                              message.CardNumber, message.CardSecurityNumber,
-                              message.CardHolderName, message.CardExpiration);
+        var address = new Address(message.Street, message.City, message.State, message.Country, message.ZipCode);
+        var order = new Order(message.UserId, message.UserName, address, message.CardTypeId, message.CardNumber, message.CardSecurityNumber, message.CardHolderName, message.CardExpiration);
 
         foreach (var item in message.OrderItems)
         {
-            order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
-                               item.Discount, item.PictureUrl, item.Units);
+            order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice, item.Discount, item.PictureUrl, item.Units);
         }
+
+        _logger.LogInformation("----- Creating Order - Order: {@Order}", order);
 
         _orderRepository.Add(order);
 
         return await _orderRepository.UnitOfWork
-            .SaveEntitiesAsync();
+            .SaveEntitiesAsync(cancellationToken);
     }
 }
 ```
 
 下列是命令處理常式應該採取的額外步驟：
 
-- 使用命令的資料來操作匯總根目錄的方法和行為。
+- 使用命令的資料來操作匯總根的方法和行為。
 
 - 在領域物件內部，於執行交易時引發領域事件，但這從命令處理常式觀點是透明的。
 
-- 如果匯總的作業結果成功，且在交易完成之後，請引發整合事件。 (這些可能也是由存放庫這類基礎結構類別所引發)。
+- 如果匯總的作業結果成功，而且在交易完成之後，請引發整合事件。 (這些可能也是由存放庫這類基礎結構類別所引發)。
 
 #### <a name="additional-resources"></a>其他資源
 
-- **Mark Seemann。就界限而言，應用程式並不是物件導向** \
+- **Mark Seemann。在界限中，應用程式不是物件導向** \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **命令和事件** \
@@ -425,45 +459,45 @@ public class CreateOrderCommandHandler
 
 如圖 7-25 所示，在 CQRS 方法中，您使用與記憶體內部匯流排類似的智慧型中繼程序，而它聰明到可以根據所收到的命令或 DTO 類型，重新導向至正確的命令處理常式。 元件之間的單一黑色箭號代表物件 (在許多情況下，是透過 DI 插入) 與其相關互動之間的相依性。
 
-![此圖顯示從用戶端到資料庫的更詳細資料流程。](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
+![顯示從用戶端到資料庫之更詳細資料流程的圖表。](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 
 **圖 7-25**。 在單一 CQRS 微服務過程中使用中繼程序模式
 
-上圖顯示影像7-24 中的放大： ASP.NET Core 控制器會將命令傳送至 MediatR 的命令管線，讓它們取得適當的處理常式。
+上圖顯示影像7-24 的放大： ASP.NET Core 控制器會將命令傳送至 MediatR 的命令管線，使其到達適當的處理常式。
 
 使用中繼程序模式的合理原因是，在企業應用程式中，處理要求會變得複雜。 您想要可以新增已開啟數目的跨領域關注，例如記錄、驗證、稽核和安全性。 在這些情況下，您可以依賴中繼程序管道 (請參閱[中繼程序模式](https://en.wikipedia.org/wiki/Mediator_pattern)) 提供這些額外行為或跨領域關注的方法。
 
-中繼程式是封裝此程式之「如何」的物件：它會根據狀態、命令處理常式叫用的方式，或您提供給處理常式的承載來協調執行。 使用中繼程式元件時，您可以套用裝飾專案（或自[MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)之後的[管線行為](https://github.com/jbogard/MediatR/wiki/Behaviors)），以集中且透明的方式套用跨領域考慮。 如需詳細資訊，請參閱[裝飾項目模式](https://en.wikipedia.org/wiki/Decorator_pattern)。
+中繼程式是封裝此進程「如何」的物件：它會根據狀態、叫用命令處理常式的方式，或您提供給處理常式的承載來協調執行。 有了中繼程式元件，您就可以在[MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)) 之後套用裝飾專案 (或[管線行為](https://github.com/jbogard/MediatR/wiki/Behaviors)，以集中且透明的方式套用跨領域考慮。 如需詳細資訊，請參閱[裝飾項目模式](https://en.wikipedia.org/wiki/Decorator_pattern)。
 
 裝飾項目和行為類似[層面導向程式設計 (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)，僅套用至中繼程序元件所管理的特定處理序管線。 根據在編譯期間插入的「層面編織程序」** 或根據物件呼叫攔截，套用 AOP 中實作跨領域關注的層面。 這兩種典型 AOP 方法的運作有時稱為「就像變魔術一樣」，因為不容易看到 AOP 的運作工作。 處理嚴重問題或 Bug 時，AOP 很難進行偵錯。 另一方面，這些裝飾項目/行為十分明確，而且只會套用至中繼程序內容，因此，偵錯更容易預測且更為輕鬆。
 
-例如，在 eShopOnContainers 訂購微服務中，我們已實作兩個範例行為：[LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) 類別和 [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) 類別。 下節示範 eShopOnContainers 如何使用 [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) [行為](https://github.com/jbogard/MediatR/wiki/Behaviors)來說明行為的實作。
+例如，在 eShopOnContainers 順序微服務中，有兩個範例行為的實作為 [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) 類別和 [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) 類別。 下一節會說明 eShopOnContainers 如何使用 [MediatR](https://www.nuget.org/packages/MediatR) [行為](https://github.com/jbogard/MediatR/wiki/Behaviors)，來說明行為的實。
 
-### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>在命令管線中使用訊息佇列（跨進程）
+### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>在命令的管線中使用訊息佇列 (跨進程) 
 
 另一個選擇是根據訊息代理程式或訊息佇列來使用非同步訊息，如圖 7-26 所示。 該選項也可以與命令處理常式正前方的中繼程序一起使用。
 
-![此圖顯示使用 HA 訊息佇列的資料流程。](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
+![顯示使用 HA 訊息佇列之資料流程的圖表。](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
 
-**圖 7-26**。 搭配使用訊息佇列 (跨處理序和處理序間通訊) 與 CQRS 命令
+**圖 7-26**。 使用訊息佇列 (進程外的程式，以及使用 CQRS 命令的處理序間通訊) 
 
-命令的管線也可以由高可用性訊息佇列處理，將命令傳遞給適當的處理常式。 使用訊息佇列接受命令會進一步使命令的管線變得複雜，因為您可能需要將管線分割成透過外部訊息佇列所連接的兩個進程。 儘管如此，如果您需要擁有根據非同步訊息的已改善延展性和效能，則應該使用它。 請考慮在圖 7-26 的情況下，控制器只會將命令訊息公佈至佇列並傳回。 命令處理常式接著會依自己的步調來處理訊息。 這是佇列的最大好處：訊息佇列可以作為需要超級延展性時的緩衝區，例如針對股票或任何其他具有大量輸入資料的案例。
+命令的管線也可以由高可用性訊息佇列處理，將命令傳遞給適當的處理常式。 使用訊息佇列來接受命令可能會讓命令的管線變得更複雜，因為您可能需要將管線分割成透過外部訊息佇列連接的兩個處理常式。 儘管如此，如果您需要擁有根據非同步訊息的已改善延展性和效能，則應該使用它。 請考慮在圖 7-26 的情況下，控制器只會將命令訊息公佈至佇列並傳回。 命令處理常式接著會依自己的步調來處理訊息。 這是佇列的最大好處：訊息佇列可以作為需要超級延展性時的緩衝區，例如針對股票或任何其他具有大量輸入資料的案例。
 
-不過，由於訊息佇列的非同步本質，您必須瞭解如何與用戶端應用程式通訊，以瞭解命令的進程成功或失敗。 作為規則，您絕對不應該使用「引發並忘」命令。 每個商務應用程式都需要知道是否已成功處理命令，或至少已驗證和接受命令。
+不過，由於訊息佇列的非同步本質，您必須瞭解如何與用戶端應用程式通訊，以瞭解命令程式的成功或失敗。 作為規則，您永遠都不應該使用「引發並忘記」命令。 每個商務應用程式都需要知道是否已成功處理命令，或至少已驗證和接受命令。
 
 因此，在驗證提交至非同步佇列的命令訊息之後，能夠回應用戶端會增加系統的複雜度，相較于在執行交易之後傳回作業結果的同進程命令進程。 使用佇列，您可能需要透過其他作業結果訊息來傳回命令處理序結果，而這需要系統中的額外元件和自訂通訊。
 
 此外，非同步命令是單向命令，而這在許多情況下可能不需要，如 Burtsev Alexey 與 Greg Young 在[線上對話](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ)中的下列有趣交流所述：
 
-> \[Burtsev Alexey\] 我發現人員在許多程式碼中沒有任何原因地使用非同步命令處理或單向命令訊息 (他們不會執行某個長時間作業、不會執行外部非同步程式碼，甚至不會跨應用程式界限使用訊息匯流排)。 為什麼它們會造成這種不必要的複雜性？ 實際上，我到目前為止還沒有看過具有封鎖命令處理常式的 CQRS 程式碼範例，雖然它只會在大部分情況下正常運作。
+> \[Burtsev Alexey \] 我發現很多程式碼，讓人們使用非同步命令處理或單向命令訊息，而不需要這麼做， (它們不會執行一些長時間的作業，它們並不會執行外部非同步程式碼，甚至不會跨應用程式界限使用訊息匯流排) 。 為什麼它們會造成這種不必要的複雜性？ 實際上，我到目前為止還沒有看過具有封鎖命令處理常式的 CQRS 程式碼範例，雖然它只會在大部分情況下正常運作。
 >
-> \[Greg 年輕 \] \[ ... \] 非同步命令不存在; 其實是另一個事件。 如果我必須接受您傳送給我的內容，並在我不同意時引發事件，就不會再告訴我執行某個動作 \[ ，而不是命令 \] 。 而是告訴我已完成哪項作業。 這在一開始略為不同，但有許多影響。
+> \[Greg 年輕 \] \[ ... \] 非同步命令不存在，其實是另一個事件。 如果我必須接受您傳送給我的內容，並在我不同意時引發事件，則您不會再告訴我要做的事 \[ ，而不是命令 \] 。 而是告訴我已完成哪項作業。 這在一開始略為不同，但有許多影響。
 
 非同步命令可大幅增加系統複雜性，因為沒有任何簡單的方式可以指出失敗。 因此，不建議使用非同步命令，除非需要調整需求時，或在特殊情況下，透過訊息溝通內部微服務時。 在這些情況下，您必須針對失敗設計不同的報告和復原系統。
 
-在 eShopOnContainers 初始版本中，我們決定使用從 HTTP 要求啟動並由中繼程序模式所驅動的同步命令處理。 這可輕鬆地讓您傳回處理序的成功或失敗，如同 [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) 實作一樣。
+在 eShopOnContainers 的初始版本中，已決定使用同步命令處理、從 HTTP 要求啟動，並由中繼程式模式驅動。 這可輕鬆地讓您傳回處理序的成功或失敗，如同 [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/netcore1.1/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) 實作一樣。
 
-在任何情況下，這應該是以您的應用程式或微服務的商務需求為基礎的決策。
+在任何情況下，這應該是根據您的應用程式或微服務的商務需求進行決策。
 
 ## <a name="implement-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>使用中繼程序模式 (MediatR) 實作命令處理序管線
 
@@ -475,9 +509,9 @@ public class CreateOrderCommandHandler
 
 檢閱本指南時，Jimmy Bogard 會說明另一個使用中繼程序模式的好理由：
 
-> 我認為您可能需要注意這裡的測試 - 它提供不錯的一致窗口，讓您查看系統的行為。 要求傳入，回應輸出。我們發現在建立一致運作的測試方面相當有價值。
+> 我認為您可能需要注意這裡的測試 - 它提供不錯的一致窗口，讓您查看系統的行為。 要求-傳入，回應。我們發現這一點非常適合用來建立一致的行為測試。
 
-首先，讓我們來看一個範例 WebAPI 控制器，您可以在其中實際使用中繼程式物件。 如果您未使用中繼程式物件，則需要插入該控制器的所有相依性，例如記錄器物件和其他專案。 因此，此函數會很複雜。 另一方面，如果您使用中繼程序物件，則控制器的建構函式可能會較為簡單，即只有一些相依性而不是許多相依性 (如果一個跨領域作業有一個相依性)，如下列範例所示：
+首先，讓我們看看一個範例 WebAPI 控制器，您實際上會使用中繼程式物件。 如果您未使用中繼程式物件，則必須插入該控制器的所有相依性，例如記錄器物件和其他專案。 因此，此函式會很複雜。 另一方面，如果您使用中繼程序物件，則控制器的建構函式可能會較為簡單，即只有一些相依性而不是許多相依性 (如果一個跨領域作業有一個相依性)，如下列範例所示：
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -506,7 +540,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>實作等冪命令
 
-在 **eShopOnContainers** 中，比上述更進階的範例是從訂購微服務提交 CreateOrderCommand 物件。 但是因為訂購商務程式比較複雜，而且在我們的案例中，它實際上是從購物籃微服務開始，所以提交 CreateOrderCommand 物件的這項動作是從名為[UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)的整合事件處理常式，而不是從用戶端應用程式呼叫的簡單 WebAPI 控制器來執行，如同先前的簡單範例所示。
+在 **eShopOnContainers** 中，比上述更進階的範例是從訂購微服務提交 CreateOrderCommand 物件。 但由於訂購商務程式有點複雜，而且在我們的案例中，實際上是從購物籃微服務中開始，所以提交 CreateOrderCommand 物件的動作是從名為 [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) 的整合事件處理常式，而不是從用戶端應用程式呼叫的簡單 WebAPI 控制器來執行，如同先前的簡單範例。
 
 不過，將命令提交給 MediatR 的動作相當類似，如下列程式碼所示。
 
@@ -528,7 +562,7 @@ result = await _mediator.Send(requestCreateOrder);
 
 不過，這種情況也稍微先進一點，因為我們也會執行等冪命令。 CreateOrderCommand 處理序應該是等冪，因此，如果相同的訊息因任何原因 (例如重試) 而透過網路進行複製，則相同的商務訂單只會處理一次。
 
-這是藉由包裝商務命令（在此案例中為 CreateOrderCommand），並將它內嵌至泛型 IdentifiedCommand 中，這是由每個訊息的識別碼追蹤，而每個訊息都必須具有等冪性。
+這是藉由包裝商務命令 (來執行，在此案例中，CreateOrderCommand) 並將其內嵌至一般 Identifiedcommand 而中，而每個訊息的識別碼都會透過具有等冪性的網路進行追蹤。
 
 在下列程式碼中，您可以看到 IdentifiedCommand 就只是具有識別碼和已包裝商務命令物件的 DTO。
 
@@ -546,30 +580,43 @@ public class IdentifiedCommand<T, R> : IRequest<R>
 }
 ```
 
-然後，IdentifiedCommand 的 CommandHandler (名為 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)) 基本上會檢查資料表中是否已有為訊息一部分的識別碼。 如果已存在，則不會再次處理該命令，因此它的行為會是等冪命令。 該基礎結構程式碼是透過下面所呼叫的 `_requestManager.ExistAsync` 方法來執行。
+然後，IdentifiedCommand 的 CommandHandler (名為 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)) 基本上會檢查資料表中是否已有為訊息一部分的識別碼。 如果已經存在，則不會再次處理該命令，因此它的行為會是等冪的命令。 該基礎結構程式碼是透過下面所呼叫的 `_requestManager.ExistAsync` 方法來執行。
 
 ```csharp
 // IdentifiedCommandHandler.cs
-public class IdentifiedCommandHandler<T, R> :
-                                   IAsyncRequestHandler<IdentifiedCommand<T, R>, R>
-                                   where T : IRequest<R>
+public class IdentifiedCommandHandler<T, R> : IRequestHandler<IdentifiedCommand<T, R>, R>
+        where T : IRequest<R>
 {
     private readonly IMediator _mediator;
     private readonly IRequestManager _requestManager;
+    private readonly ILogger<IdentifiedCommandHandler<T, R>> _logger;
 
-    public IdentifiedCommandHandler(IMediator mediator,
-                                    IRequestManager requestManager)
+    public IdentifiedCommandHandler(
+        IMediator mediator,
+        IRequestManager requestManager,
+        ILogger<IdentifiedCommandHandler<T, R>> logger)
     {
         _mediator = mediator;
         _requestManager = requestManager;
+        _logger = logger ?? throw new System.ArgumentNullException(nameof(logger));
     }
 
+    /// <summary>
+    /// Creates the result value to return if a previous request was found
+    /// </summary>
+    /// <returns></returns>
     protected virtual R CreateResultForDuplicateRequest()
     {
         return default(R);
     }
 
-    public async Task<R> Handle(IdentifiedCommand<T, R> message)
+    /// <summary>
+    /// This method handles the command. It just ensures that no other request exists with the same ID, and if this is the case
+    /// just enqueues the original inner command.
+    /// </summary>
+    /// <param name="message">IdentifiedCommand which contains both original command & request ID</param>
+    /// <returns>Return value of inner command or default value if request same ID was found</returns>
+    public async Task<R> Handle(IdentifiedCommand<T, R> message, CancellationToken cancellationToken)
     {
         var alreadyExists = await _requestManager.ExistAsync(message.Id);
         if (alreadyExists)
@@ -579,62 +626,118 @@ public class IdentifiedCommandHandler<T, R> :
         else
         {
             await _requestManager.CreateRequestForCommandAsync<T>(message.Id);
+            try
+            {
+                var command = message.Command;
+                var commandName = command.GetGenericTypeName();
+                var idProperty = string.Empty;
+                var commandId = string.Empty;
 
-            // Send the embedded business command to mediator
-            // so it runs its related CommandHandler
-            var result = await _mediator.Send(message.Command);
+                switch (command)
+                {
+                    case CreateOrderCommand createOrderCommand:
+                        idProperty = nameof(createOrderCommand.UserId);
+                        commandId = createOrderCommand.UserId;
+                        break;
 
-            return result;
+                    case CancelOrderCommand cancelOrderCommand:
+                        idProperty = nameof(cancelOrderCommand.OrderNumber);
+                        commandId = $"{cancelOrderCommand.OrderNumber}";
+                        break;
+
+                    case ShipOrderCommand shipOrderCommand:
+                        idProperty = nameof(shipOrderCommand.OrderNumber);
+                        commandId = $"{shipOrderCommand.OrderNumber}";
+                        break;
+
+                    default:
+                        idProperty = "Id?";
+                        commandId = "n/a";
+                        break;
+                }
+
+                _logger.LogInformation(
+                    "----- Sending command: {CommandName} - {IdProperty}: {CommandId} ({@Command})",
+                    commandName,
+                    idProperty,
+                    commandId,
+                    command);
+
+                // Send the embeded business command to mediator so it runs its related CommandHandler
+                var result = await _mediator.Send(command, cancellationToken);
+
+                _logger.LogInformation(
+                    "----- Command result: {@Result} - {CommandName} - {IdProperty}: {CommandId} ({@Command})",
+                    result,
+                    commandName,
+                    idProperty,
+                    commandId,
+                    command);
+
+                return result;
+            }
+            catch
+            {
+                return default(R);
+            }
         }
     }
 }
 ```
 
-由於 IdentifiedCommand 的作用就像是商務命令的信封，因此當商務命令因為不是重複的識別碼而需要處理時，它會接受該內部商務命令，並將它重新提交至中繼程式，如同在上述程式碼從 IdentifiedCommandHandler.cs 執行時所顯示的最後部分一樣 `_mediator.Send(message.Command)` 。 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)
+由於 Identifiedcommand 而的作用就像是商務命令的信封，因此當商務命令不是重複的識別碼時，需要處理商務命令，然後它會採用該內部商務命令，並將其重新提交至中繼程式，如同執行時從上方顯示的程式碼最後一個部分（ `_mediator.Send(message.Command)` 從 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs)）。
 
-這麼做時，它會連結並執行商務命令處理常式（在此案例中為[CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)），這是針對排序資料庫執行交易的作業，如下列程式碼所示。
+這麼做時，它會連結並執行商務命令處理常式，在此案例中， [會對排序](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)資料庫執行交易，如下列程式碼所示。
 
 ```csharp
 // CreateOrderCommandHandler.cs
 public class CreateOrderCommandHandler
-                                   : IAsyncRequestHandler<CreateOrderCommand, bool>
+        : IRequestHandler<CreateOrderCommand, bool>
 {
     private readonly IOrderRepository _orderRepository;
     private readonly IIdentityService _identityService;
     private readonly IMediator _mediator;
+    private readonly IOrderingIntegrationEventService _orderingIntegrationEventService;
+    private readonly ILogger<CreateOrderCommandHandler> _logger;
 
     // Using DI to inject infrastructure persistence Repositories
     public CreateOrderCommandHandler(IMediator mediator,
-                                     IOrderRepository orderRepository,
-                                     IIdentityService identityService)
+        IOrderingIntegrationEventService orderingIntegrationEventService,
+        IOrderRepository orderRepository,
+        IIdentityService identityService,
+        ILogger<CreateOrderCommandHandler> logger)
     {
-        _orderRepository = orderRepository ??
-                          throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ??
-                          throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ??
-                                 throw new ArgumentNullException(nameof(mediator));
+        _orderRepository = orderRepository ?? throw new ArgumentNullException(nameof(orderRepository));
+        _identityService = identityService ?? throw new ArgumentNullException(nameof(identityService));
+        _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+        _orderingIntegrationEventService = orderingIntegrationEventService ?? throw new ArgumentNullException(nameof(orderingIntegrationEventService));
+        _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public async Task<bool> Handle(CreateOrderCommand message)
+    public async Task<bool> Handle(CreateOrderCommand message, CancellationToken cancellationToken)
     {
+        // Add Integration event to clean the basket
+        var orderStartedIntegrationEvent = new OrderStartedIntegrationEvent(message.UserId);
+        await _orderingIntegrationEventService.AddAndSaveEventAsync(orderStartedIntegrationEvent);
+
         // Add/Update the Buyer AggregateRoot
-        var address = new Address(message.Street, message.City, message.State,
-                                  message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId,
-                              message.CardNumber, message.CardSecurityNumber,
-                              message.CardHolderName, message.CardExpiration);
+        // DDD patterns comment: Add child entities and value-objects through the Order Aggregate-Root
+        // methods and constructor so validations, invariants and business logic
+        // make sure that consistency is preserved across the whole aggregate
+        var address = new Address(message.Street, message.City, message.State, message.Country, message.ZipCode);
+        var order = new Order(message.UserId, message.UserName, address, message.CardTypeId, message.CardNumber, message.CardSecurityNumber, message.CardHolderName, message.CardExpiration);
 
         foreach (var item in message.OrderItems)
         {
-            order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
-                               item.Discount, item.PictureUrl, item.Units);
+            order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice, item.Discount, item.PictureUrl, item.Units);
         }
+
+        _logger.LogInformation("----- Creating Order - Order: {@Order}", order);
 
         _orderRepository.Add(order);
 
         return await _orderRepository.UnitOfWork
-            .SaveEntitiesAsync();
+            .SaveEntitiesAsync(cancellationToken);
     }
 }
 ```
@@ -653,24 +756,23 @@ public class MediatorModule : Autofac.Module
         builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly)
             .AsImplementedInterfaces();
 
-        // Register all the Command classes (they implement IAsyncRequestHandler)
+        // Register all the Command classes (they implement IRequestHandler)
         // in assembly holding the Commands
-        builder.RegisterAssemblyTypes(
-                              typeof(CreateOrderCommand).GetTypeInfo().Assembly).
-                                   AsClosedTypesOf(typeof(IAsyncRequestHandler<,>));
+        builder.RegisterAssemblyTypes(typeof(CreateOrderCommand).GetTypeInfo().Assembly)
+                .AsClosedTypesOf(typeof(IRequestHandler<,>));
         // Other types registration
         //...
     }
 }
 ```
 
-這就是「MediatR 的神奇情形」的地方。
+這就是 MediatR 的「魔術」。
 
-因為每個命令處理常式都會實作泛型 `IAsyncRequestHandler<T>` 介面，所以註冊組件時，程式碼會使用 `RegisteredAssemblyTypes` 註冊所有標記為 `IAsyncRequestHandler` 的類型，同時基於 `CommandHandler` 類別所指出的關聯性而建立 `CommandHandlers` 與其 `Commands` 的關聯，如下列範例所示：
+當每個命令處理常式都實作為泛型 `IRequestHandler<T>` 介面時，當您使用方法註冊元件時， `RegisteredAssemblyTypes` 所有標記為的 `IRequestHandler` 型別也會向其註冊 `Commands` 。 例如：
 
 ```csharp
 public class CreateOrderCommandHandler
-  : IAsyncRequestHandler<CreateOrderCommand, bool>
+  : IRequestHandler<CreateOrderCommand, bool>
 {
 ```
 
@@ -688,11 +790,11 @@ public class MediatorModule : Autofac.Module
         builder.RegisterAssemblyTypes(typeof(IMediator).GetTypeInfo().Assembly)
             .AsImplementedInterfaces();
 
-        // Register all the Command classes (they implement IAsyncRequestHandler)
+        // Register all the Command classes (they implement IRequestHandler)
         // in assembly holding the Commands
         builder.RegisterAssemblyTypes(
                               typeof(CreateOrderCommand).GetTypeInfo().Assembly).
-                                   AsClosedTypesOf(typeof(IAsyncRequestHandler<,>));
+                                   AsClosedTypesOf(typeof(IRequestHandler<,>));
         // Other types registration
         //...
         builder.RegisterGeneric(typeof(LoggingBehavior<,>)).
@@ -758,9 +860,9 @@ public class ValidatorBehavior<TRequest, TResponse>
 }
 ```
 
-此處的行為會在驗證失敗時引發例外狀況，但您也可以傳回結果物件，其中包含命令結果（如果成功）或驗證訊息（如果沒有的話）。 這樣可能更容易向使用者顯示驗證結果。
+在此行為會在驗證失敗時引發例外狀況，但您也可以傳回結果物件，其中包含命令結果（如果成功的話）或驗證訊息（如果沒有的話）。 這樣可能更容易向使用者顯示驗證結果。
 
-然後，根據[FluentValidation](https://github.com/JeremySkinner/FluentValidation)程式庫，我們為使用 CreateOrderCommand 所傳遞的資料建立驗證，如下列程式碼所示：
+然後，根據 [FluentValidation](https://github.com/JeremySkinner/FluentValidation) 程式庫，您會針對以 CreateOrderCommand 傳遞的資料建立驗證，如下列程式碼所示：
 
 ```csharp
 public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
@@ -814,22 +916,22 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 - **MediatR.** GitHub 存放庫。 \
   <https://github.com/jbogard/MediatR>
 
-- **使用 MediatR 和 AutoMapper 的 CQRS** \
+- **CQRS 搭配 MediatR 和 AutoMapper** \
   <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **讓您的控制項瘦身：POST 和命令。** \
   <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
-- **處理中繼程式管線的跨領域考慮** \
+- **使用中繼程式管線處理跨領域關注** \
   <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
-- **CQRS 和 REST：完美符合** \
+- **CQRS 和 REST：完美相符** \
   <https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/>
 
 - **MediatR 管線範例** \
   <https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/>
 
-- **適用于 MediatR 和 ASP.NET Core 的垂直配量測試裝置** \
+- **MediatR 和 ASP.NET Core 的垂直配量測試裝置** \
   <https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
 
 - **已發行適用于 Microsoft 相依性插入的 MediatR 延伸模組** \

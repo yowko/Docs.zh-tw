@@ -4,12 +4,12 @@ description: 本文說明 BinaryFormatter 類型的固有安全性風險，以�
 ms.date: 07/11/2020
 ms.author: levib
 author: GrabYourPitchforks
-ms.openlocfilehash: ac01fe78c9577563641a8b06a232ed614ed8520a
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 2c76a81650e5b83677f6c4df64770bd1ef5f775e
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558838"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88607938"
 ---
 # <a name="binaryformatter-security-guide"></a>BinaryFormatter 安全性指南
 
@@ -22,7 +22,7 @@ ms.locfileid: "88558838"
 ## <a name="background"></a>背景
 
 > [!WARNING]
-> 此 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 類型是危險的， ***不*** 建議用於資料處理。 應用程式應該儘快停止使用 `BinaryFormatter` ，即使它們認為所要處理的資料值得信任。 `BinaryFormatter` 不安全。
+> 此 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 類型是危險的， ***不*** 建議用於資料處理。 應用程式應該儘快停止使用 `BinaryFormatter` ，即使它們認為所要處理的資料值得信任。 `BinaryFormatter` 是不安全的，且無法進行安全。
 
 本文也適用于下列類型：
 
