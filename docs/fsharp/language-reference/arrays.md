@@ -1,49 +1,46 @@
 ---
 title: 陣列
-description: '瞭解如何在 F # 程式設計語言中建立和使用陣列。'
-ms.date: 05/16/2016
-ms.openlocfilehash: f95ca3274e098fda044973a48205cb591ec30b27
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+description: '瞭解如何以 F # 程式設計語言建立和使用陣列。'
+ms.date: 08/13/2020
+ms.openlocfilehash: 93d524046ff93a7f1b04e72d580d9d0e1360ba0b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855604"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558877"
 ---
 # <a name="arrays"></a>陣列
 
-陣列是固定大小、以零為基底、可變動的連續資料元素集合，這些專案全都屬於相同的類型。
-
-> [!NOTE]
-> F # 的 docs.microsoft.com API 參考不完整。 如果您遇到任何中斷的連結，請改為參考[F # 核心程式庫檔](https://fsharp.github.io/fsharp-core-docs/)。
+陣列是固定大小、以零為基礎且可變動的連續資料元素集合，這些專案全都屬於相同類型。
 
 ## <a name="create-arrays"></a>建立陣列
 
-您可以透過數種方式來建立陣列。 您可以藉由列出介於和之間的連續值，並以分號分隔，來建立小型陣列 `[|` `|]` ，如下列範例所示。
+您可以用數種方式建立陣列。 您可以藉由列出介於和之間的連續值 `[|` `|]` ，並以分號分隔來建立小型陣列，如下列範例所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet1.fs)]
 
-您也可以將每個元素放在不同的行上，在此情況下，分號分隔符號是選擇性的。
+您也可以將每個專案放在個別的行上，在這種情況下，分號分隔符號是選擇性的。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet2.fs)]
 
-陣列元素的類型是從使用的常值推斷而來，且必須一致。 下列程式碼會造成錯誤，因為1.0 是 float，而2和3是整數。
+陣列元素的型別是從使用的常值推斷而來，而且必須是一致的。 下列程式碼會造成錯誤，因為1.0 是 float，而2和3是整數。
 
 ```fsharp
 // Causes an error.
 // let array2 = [| 1.0; 2; 3 |]
 ```
 
-您也可以使用順序運算式來建立陣列。 以下範例會建立從1到10的整數的平方陣列。
+您也可以使用順序運算式來建立陣列。 以下範例會建立從1到10的整數平方陣列。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet3.fs)]
 
-若要建立陣列，其中所有元素都初始化為零，請使用 `Array.zeroCreate` 。
+若要建立陣列，其中所有元素都會初始化為零，請使用 `Array.zeroCreate` 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet4.fs)]
 
-## <a name="access-elements"></a>Access 元素
+## <a name="access-elements"></a>存取元素
 
-您可以使用點運算子 (`.`) 和方括弧 (和) 來存取陣列 `[` 元素 `]` 。
+您可以使用點運算子來存取陣列元素 (`.`) 和方括弧 (`[` 和 `]`) 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet5.fs)]
 
@@ -53,17 +50,17 @@ ms.locfileid: "87855604"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet51.fs)]
 
-當使用配量標記法時，會建立陣列的新複本。
+使用配量標記法時，會建立陣列的新複本。
 
 ## <a name="array-types-and-modules"></a>陣列類型和模組
 
-所有 F # 陣列的類型都是 .NET Framework 類型 <xref:System.Array?displayProperty=nameWithType> 。 因此，F # 陣列支援中提供的所有功能 <xref:System.Array?displayProperty=nameWithType> 。
+所有 F # 陣列的型別都是 .NET Framework 型別 <xref:System.Array?displayProperty=nameWithType> 。 因此，F # 陣列支援中所有可用的功能 <xref:System.Array?displayProperty=nameWithType> 。
 
-Library 模組 [`Microsoft.FSharp.Collections.Array`](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) 支援一維陣列上的作業。 模組 `Array2D` 、 `Array3D` 和包含的函式， `Array4D` 分別支援兩個、三個和四個維度之陣列的作業。 您可以使用，建立大於四的次序陣列 <xref:System.Array?displayProperty=nameWithType> 。
+此[ `Array` 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)支援一維陣列上的作業。 模組 `Array2D` 、 `Array3D` 和包含的函式 `Array4D` 分別支援兩個、三個和四個維度的陣列作業。 您可以使用來建立順位大於四的陣列 <xref:System.Array?displayProperty=nameWithType> 。
 
-### <a name="simple-functions"></a>簡單函式
+### <a name="simple-functions"></a>簡單函數
 
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)取得元素。 [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)提供陣列的長度。 [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)將元素設定為指定的值。 下列程式碼範例說明如何使用這些函數。
+[`Array.get`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#get) 取得專案。 [`Array.length`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#length) 提供陣列的長度。 [`Array.set`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#set) 將元素設定為指定的值。 下列程式碼範例說明這些函數的用法。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -75,7 +72,7 @@ Library 模組 [`Microsoft.FSharp.Collections.Array`](https://msdn.microsoft.com
 
 ### <a name="functions-that-create-arrays"></a>建立陣列的函式
 
-有數個函式會建立陣列，而不需要現有的陣列。 [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)建立不包含任何元素的新陣列。 [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)建立指定大小的陣列，並將所有元素設定為提供的值。 [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)建立陣列，並指定要產生元素的維度和函式。 [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)建立陣列，其中所有的元素都會初始化為數組類型的零值。 下列程式碼會示範這些函數。
+有幾個函式會建立陣列，而不需要現有的陣列。 [`Array.empty`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#empty) 建立不包含任何專案的新陣列。 [`Array.create`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#create) 建立指定大小的陣列，並將所有元素設定為提供的值。 [`Array.init`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#init) 建立陣列，並指定維度和函式來產生元素。 [`Array.zeroCreate`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#zeroCreate) 建立陣列，其中所有元素都會初始化為數組類型的零值。 下列程式碼示範這些函數。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -87,7 +84,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)建立新的陣列，其中包含從現有陣列複製的元素。 請注意，複製是淺層複製，這表示如果元素類型是參考型別，則只會複製參考，而不會複製基礎物件。 下列程式碼範例會說明這點。
+[`Array.copy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#copy) 建立新的陣列，其中包含從現有陣列複製的元素。 請注意，複製是淺層複製，這表示如果元素類型是參考型別，則只會複製參考，而不會複製基礎物件。 下列程式碼範例會說明這點。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -98,21 +95,21 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|; Test2; |]
 ```
 
-此字串 `Test1` 只會出現在第一個陣列中，因為建立新專案的作業會覆寫中的參考， `firstArray` 但不會影響仍然存在於中之空字串的原始參考 `secondArray` 。 此字串 `Test2` 會出現在這兩個數組中，因為類型的作業 `Insert` <xref:System.Text.StringBuilder?displayProperty=nameWithType> 會影響 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 在這兩個數組中所參考的基礎物件。
+字串 `Test1` 只會出現在第一個陣列中，因為建立新專案的作業會覆寫中的參考， `firstArray` 但不會影響仍然存在於中之空字串的原始參考 `secondArray` 。 字串 `Test2` 會出現在這兩個數組中 `Insert` ，因為類型上的作業 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 會影響在 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 這兩個數組中所參考的基礎物件。
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)從陣列的子範圍產生新的陣列。 您可以藉由提供起始索引和長度來指定子範圍。 下列程式碼示範 `Array.sub` 的用法。
+[`Array.sub`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sub) 從陣列的子範圍產生新的陣列。 您可以藉由提供開始索引和長度來指定子範圍。 下列程式碼示範 `Array.sub` 的用法。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet12.fs)]
 
-輸出顯示子陣列從專案5開始，且包含10個元素。
+輸出顯示子陣列在元素5開始，且包含10個元素。
 
 ```console
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
 
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)結合兩個現有的陣列，以建立新的陣列。
+[`Array.append`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#append) 藉由結合兩個現有的陣列，建立新的陣列。
 
-下列程式碼示範**陣列. append**。
+下列程式碼示範 **陣列. append**。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet13.fs)]
 
@@ -122,7 +119,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)選取要包含在新陣列中之陣列的元素。 下列程式碼示範 `Array.choose` 。 請注意，陣列的元素類型不一定要符合選項類型中所傳回值的類型。 在此範例中，專案類型為， `int` 而選項是多項式函式的結果（ `elem*elem - 1` 做為浮點數）。
+[`Array.choose`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#choose) 選取要包含在新陣列中的陣列元素。 下列程式碼示範 `Array.choose` 。 請注意，陣列的元素類型不需要符合選項類型中所傳回值的類型。 在此範例中，元素類型為， `int` 而選項是多項式函式的結果， `elem*elem - 1` 做為浮點數。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -132,7 +129,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)在現有陣列的每個陣列元素上執行指定的函式，然後收集函數所產生的專案，並將它們結合到新的陣列中。 下列程式碼示範 `Array.collect` 。
+[`Array.collect`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#collect) 在現有陣列的每個陣列元素上執行指定的函式，然後收集函式所產生的元素，並將它們合併成新的陣列。 下列程式碼示範 `Array.collect` 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -142,7 +139,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)採用一連串的陣列，並將它們結合成單一陣列。 下列程式碼示範 `Array.concat` 。
+[`Array.concat`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#concat) 接受一連串的陣列，並將它們結合成單一陣列。 下列程式碼示範 `Array.concat` 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -153,7 +150,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)採用布林條件函式，並產生新的陣列，其中只包含來自輸入陣列的條件為 true 的元素。 下列程式碼示範 `Array.filter` 。
+[`Array.filter`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#filter) 採用布林條件函式，並產生新的陣列，其中只包含輸入陣列中條件為 true 的元素。 下列程式碼示範 `Array.filter` 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -163,7 +160,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)藉由反轉現有陣列的順序，產生新的陣列。 下列程式碼示範 `Array.rev` 。
+[`Array.rev`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#rev) 藉由反轉現有陣列的順序來產生新的陣列。 下列程式碼示範 `Array.rev` 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet18.fs)]
 
@@ -173,7 +170,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 "Hello world!"
 ```
 
-您可以使用管線運算子 () ，輕鬆地結合陣列模組中的函數，以轉換陣列 `|>` ，如下列範例所示。
+您可以輕鬆地結合陣列模組中的函式，使用管線運算子 () 來轉換陣列 `|>` ，如下列範例所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet19.fs)]
 
@@ -185,25 +182,25 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 ### <a name="multidimensional-arrays"></a>多維陣列
 
-多維陣列可以建立，但是沒有寫入多維陣列常值的語法。 使用運算子 [`array2D`](https://msdn.microsoft.com/library/1d52503d-2990-49fc-8fd3-6b0e508aa236) ，從陣列元素的序列順序建立陣列。 序列可以是陣列或清單常值。 例如，下列程式碼會建立二維陣列。
+您可以建立多維度陣列，但是沒有寫入多維陣列常值的語法。 使用運算子 [`array2D`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html) ，從陣列元素序列的序列中建立陣列。 序列可以是陣列或清單常值。 例如，下列程式碼會建立二維陣列。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet20.fs)]
 
-您也可以使用函式 [`Array2D.init`](https://msdn.microsoft.com/library/9de07e95-bc21-4927-b5b4-08fdec882c7b) 來初始化兩個維度的陣列，而類似的函數適用于三和四個維度的陣列。 這些函式會採用用來建立元素的函式。 若要建立二維陣列，其中包含設定為初始值的專案，而不是指定函式，請使用函式 [`Array2D.create`](https://msdn.microsoft.com/library/36c9d980-b241-4a20-bc64-bcfa0205d804) ，此函數也適用于最多四個維度的陣列。 下列程式碼範例會先示範如何建立陣列陣列，其中包含所需的元素，然後使用 `Array2D.init` 來產生所需的二維陣列。
+您也可以使用函式 [`Array2D.init`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html#init) 來初始化兩個維度的陣列，而類似的函式可用於三和四個維度的陣列。 這些函式會取得用來建立元素的函式。 若要建立包含設定為初始值之專案的二維陣列，而不是指定函式，請使用函式 [`Array2D.create`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html#create) ，此函式也適用于最多四個維度的陣列。 下列程式碼範例會先示範如何建立包含所需元素的陣列陣列，然後使用 `Array2D.init` 來產生所需的二維陣列。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet21.fs)]
 
-陣列的索引和配量語法支援最高至等級4的陣列。 當您指定多個維度中的索引時，您可以使用逗號來分隔索引，如下列程式碼範例所示。
+陣列索引和切割語法支援最高排名4的陣列。 當您指定多個維度中的索引時，您可以使用逗號來分隔索引，如下列程式碼範例所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet22.fs)]
 
-二維陣列的類型會寫出為 (例如，、 `<type>[,]` `int[,]` `double[,]`) ，而三維陣列的類型則會寫入為 `<type>[,,]` ，而對於較高維度的陣列則為。
+二維陣列的型別會寫出做為 (例如， `<type>[,]` `int[,]` `double[,]`) ，而三維陣列的型別則是撰寫為 `<type>[,,]` ，依此類推，針對較高維度的陣列。
 
-只有一維陣列可用的函數子集也適用于多維陣列。 如需詳細資訊，請參閱 [`Collections.Array Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array-module-%5bfsharp%5d) 、、 [`Collections.Array2D Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array2d-module-%5bfsharp%5d) [`Collections.Array3D Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array3d-module-%5bfsharp%5d) 和 [`Collections.Array4D Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array4d-module-%5bfsharp%5d) 。
+只有一維陣列的可用函式子集也適用于多維度陣列。
 
 ### <a name="array-slicing-and-multidimensional-arrays"></a>陣列切割和多維陣列
 
-在 (矩陣) 的二維陣列中，您可以藉由指定範圍，並使用萬用字元 (`*`) 字元來指定整個資料列或資料行，來將子矩陣解壓縮。
+在二維陣列 (矩陣) 中，您可以指定範圍，並使用萬用字元 (`*`) 字元來指定整個資料列或資料行，藉以解壓縮子矩陣。
 
 ```fsharp
 // Get rows 1 to N from an NxM matrix (returns a matrix):
@@ -219,7 +216,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-從 F # 3.1，您可以將多維陣列分解成相同或較低維度的 subarrays。 例如，您可以藉由指定單一資料列或資料行，從矩陣取得向量。
+您可以將多維陣列分解成相同或較低維度的 subarrays。 例如，您可以藉由指定單一資料列或資料行，從矩陣取得向量。
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -229,7 +226,7 @@ matrix.[3, *]
 matrix.[*, 3]
 ```
 
-您可以針對實作為元素存取運算子和多載方法的類型使用此切割語法 `GetSlice` 。 例如，下列程式碼會建立包裝 F # 2D 陣列的矩陣類型、執行專案屬性以提供陣列索引編制的支援，以及執行的三個版本 `GetSlice` 。 如果您可以使用此程式碼當做矩陣類型的範本，則可以使用本節所述的所有切割作業。
+您可以針對實際引數素存取運算子和多載方法的型別使用此切割語法 `GetSlice` 。 例如，下列程式碼會建立包裝 F # 2D 陣列的矩陣類型、執行專案屬性以提供陣列索引編制的支援，以及執行三個版本的 `GetSlice` 。 如果您可以使用此程式碼作為矩陣類型的範本，您可以使用本節描述的所有配量作業。
 
 ```fsharp
 type Matrix<'T>(N: int, M: int) =
@@ -300,9 +297,9 @@ module test =
 
 ### <a name="boolean-functions-on-arrays"></a>陣列上的布耳函數
 
-[`Array.exists`](https://msdn.microsoft.com/library/8e47ad6c-c065-4876-8cb4-ec960ec3e5c9) [`Array.exists2`](https://msdn.microsoft.com/library/2e384a6a-f99d-4e23-b677-250ffbc1dd8e) 一或兩個數組中的函式和測試專案分別為。 `true`如果符合條件的) 有元素 (或元素組，則這些函式會接受測試函數並傳回 `Array.exists2` 。
+[`Array.exists`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#exists) [`Array.exists2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#exists2) 一或兩個數組中的函式和測試專案，分別為。 `true`如果符合條件的) 有元素 (或元素組，則這些函式會採用測試函式，並傳回 `Array.exists2` 。
 
-下列程式碼示範和的用法 `Array.exists` `Array.exists2` 。 在這些範例中，會藉由只套用其中一個引數（在這些情況下為函數引數）來建立新的函式。
+下列程式碼示範如何使用 `Array.exists` 和 `Array.exists2` 。 在這些範例中，會藉由只套用其中一個引數（在這些情況下為函式引數）來建立新的函式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet23.fs)]
 
@@ -315,7 +312,7 @@ false
 true
 ```
 
-同樣地，函 [`Array.forall`](https://msdn.microsoft.com/library/d88f2cd0-fa7f-45cf-ac15-31eae9086cc4) 式會測試陣列，以判斷每個元素是否符合布林條件。 此變化 [`Array.forall2`](https://msdn.microsoft.com/library/c68f61a1-030c-4024-b705-c4768b6c96b9) 會使用包含兩個相等長度陣列之元素的布林函式，來執行相同的工作。 下列程式碼說明這些函式的用法。
+同樣地，函 [`Array.forall`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#forall) 式會測試陣列，以判斷每個專案是否符合布林值條件。 變異 [`Array.forall2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#forall2) 會使用布耳函數來執行相同的動作，此函式牽涉到兩個相等長度陣列的元素。 下列程式碼說明如何使用這些函數。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet24.fs)]
 
@@ -330,9 +327,9 @@ false
 
 ### <a name="search-arrays"></a>搜尋陣列
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)採用布耳函數，並傳回函式傳回的第一個專案 `true` ， <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> 如果找不到符合條件的專案，則會引發。 [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)類似，但它會傳回專案的 `Array.find` 索引，而不是元素本身。
+[`Array.find`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#find) 採用布林函式，並傳回函式傳回的第一個專案 `true` ， <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> 如果找不到符合條件的專案，則會引發。 [`Array.findIndex`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#findIndex) 類似，不同的是它會傳回專案的 `Array.find` 索引，而不是元素本身。
 
-下列 `Array.find` 程式碼會使用和 `Array.findIndex` 來尋找同時為完美方形和完美 cube 的數位。
+下列 `Array.find` 程式碼會使用和 `Array.findIndex` 來找出同時為完美方形和完美 cube 的數位。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet25.fs)]
 
@@ -342,9 +339,9 @@ false
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9)類似于 `Array.find` ，但它的結果是選項類型， `None` 如果找不到任何元素，則會傳回。 `Array.tryFind``Array.find`當您不知道相符的元素是否在陣列中時，應該使用而不是。 同樣地， [`Array.tryFindIndex`](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) 類似于 [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) 選項類型為傳回值的例外。 如果找不到任何元素，則選項為 `None` 。
+[`Array.tryFind`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#tryFind) 類似 `Array.find` ，不同之處在于它的結果是選項類型， `None` 如果找不到任何元素，則會傳回。 `Array.tryFind``Array.find`如果您不知道相符的專案是否在陣列中，則應該使用而不是。 同樣地，它 [`Array.tryFindIndex`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#tryFindIndex) 也是一樣， `Array.findIndex` 但選項類型是傳回值。 如果找不到任何元素，則選項為 `None` 。
 
-下列程式碼示範 `Array.tryFind` 的用法。 此程式碼視先前的程式碼而定。
+下列程式碼示範 `Array.tryFind` 的用法。 此程式碼相依于先前的程式碼。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet26.fs)]
 
@@ -356,9 +353,9 @@ Found an element: 729
 Failed to find a matching element.
 ```
 
-[`Array.tryPick`](https://msdn.microsoft.com/library/72d45f85-037b-43a9-97fd-17239f72713e)當您需要轉換專案，以及找出元素時，請使用。 結果是第一個專案，函式會將轉換的元素當做選項值傳回， `None` 如果找不到這類元素，則為。
+[`Array.tryPick`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#tryPick)當您需要轉換元素，並加以尋找時，請使用。 結果為函式傳回已轉換元素做為選項值的第一個專案， `None` 如果找不到這類元素，則為。
 
-下列程式碼示範 `Array.tryPick` 的用法。 在此情況下，會定義數個本機 helper 函式來簡化程式碼，而不是 lambda 運算式。
+下列程式碼示範 `Array.tryPick` 的用法。 在此情況下，不會使用 lambda 運算式，而是定義數個本機 helper 函數來簡化程式碼。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet27.fs)]
 
@@ -374,23 +371,23 @@ Did not find an element that is both a perfect square and a perfect cube.
 
 ### <a name="perform-computations-on-arrays"></a>在陣列上執行計算
 
-函 [`Array.average`](https://msdn.microsoft.com/library/7029f2b9-91ea-41cb-be1b-466a5a0db20e) 式會傳回陣列中每個元素的平均值。 它受限於支援精確除以整數的元素類型，其中包括浮點類型，而不是整數類型。 函式會傳回 [`Array.averageBy`](https://msdn.microsoft.com/library/e9d64609-06a3-48f0-bc07-226ab0f85c54) 每個元素上呼叫函式的結果平均值。 針對整數類型的陣列，您可以使用 `Array.averageBy` ，並讓函式將每個專案轉換成浮點類型以進行計算。
+函數會傳回 [`Array.average`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#average) 陣列中每個元素的平均值。 它受限於支援整數除以整數的專案類型，其中包含浮點數類型，但不包括整數類資料類型。 函數會傳回在 [`Array.averageBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#averageBy) 每個專案上呼叫函式的結果平均值。 若為整數類資料類型的陣列，您可以使用 `Array.averageBy` ，並讓函式將每個元素轉換成浮點數類型以進行計算。
 
-[`Array.max`](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) [`Array.min`](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) 如果元素類型支援，請使用或來取得最大或最小專案。 同樣地， [`Array.maxBy`](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) 和 [`Array.minBy`](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) 允許先執行函式，可能會轉換成支援比較的類型。
+[`Array.max`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#max)如果專案 [`Array.min`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#min) 類型支援，請使用或來取得最大或最小元素。 同樣地，也可讓函式 [`Array.maxBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#maxBy) [`Array.minBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#minBy) 先執行，也許可以轉換成支援比較的型別。
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)加入陣列的元素，並 [`Array.sumBy`](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) 在每個專案上呼叫函式，並將結果加在一起。
+[`Array.sum`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sum) 加入陣列的元素，並 [`Array.sumBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sumBy) 在每個專案上呼叫函式，並將結果加在一起。
 
-若要在陣列中的每個元素上執行函式，而不儲存傳回值，請使用 [`Array.iter`](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516) 。 對於涉及兩個相等長度陣列的函數，請使用 [`Array.iter2`](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc) 。 如果您也需要保留函數結果的陣列，請使用 [`Array.map`](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) 或，這會在 [`Array.map2`](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c) 兩個數組上一次操作。
+若要在陣列中的每個元素上執行函式，而不儲存傳回值，請使用 [`Array.iter`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iter) 。 若為涉及兩個相等長度陣列的函式，請使用 [`Array.iter2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iter2) 。 如果您也需要保留函式結果的陣列，請使用 [`Array.map`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#map) 或 [`Array.map2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#map2) ，它會一次在兩個數組上運作。
 
-變數的變化 [`Array.iteri`](https://msdn.microsoft.com/library/8bbe2ed4-ada7-4906-ac3e-cb09f9db6486) 和允許專案的 [`Array.iteri2`](https://msdn.microsoft.com/library/c041b91f-6080-45b7-867b-2ed983a90405) 索引會包含在計算中， [`Array.mapi`](https://msdn.microsoft.com/library/f7e45994-b0a1-49e6-8fb5-5641cea8fde4) 而和則相同 [`Array.mapi2`](https://msdn.microsoft.com/library/5edb33d2-47da-44e1-9290-40c00c47d5b0) 。
+變數 [`Array.iteri`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iteri) 和可 [`Array.iteri2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iteri2) 讓元素的索引參與計算; 和相同的情況也是如此 [`Array.mapi`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#mapi) [`Array.mapi2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#mapi2) 。
 
-函式、、、、 [`Array.fold`](https://msdn.microsoft.com/library/5ed9dd3b-3694-4567-94d0-fd9a24474e09) [`Array.foldBack`](https://msdn.microsoft.com/library/1121a453-dead-4711-a0ca-cc147752989c) [`Array.reduce`](https://msdn.microsoft.com/library/fd62a985-89fe-4f49-a9d4-0c808ac6749d) [`Array.reduceBack`](https://msdn.microsoft.com/library/4fdd4cbe-2238-4c5c-b286-597a7e9036f9) [`Array.scan`](https://msdn.microsoft.com/library/f6893608-9146-450d-9ebb-a0016803fbb0) 和 [`Array.scanBack`](https://msdn.microsoft.com/library/7610f406-7a5c-41db-a0ca-8e2a2a4826ad) 包含陣列所有元素的執行演算法。 同樣地，變數 [`Array.fold2`](https://msdn.microsoft.com/library/5c845087-d041-476e-8cc4-53ae6849ef79) 和會 [`Array.foldBack2`](https://msdn.microsoft.com/library/aa51b405-df20-4c51-9998-a6530f7db862) 在兩個數組上執行計算。
+[`Array.fold`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold)包含陣列所有元素的函式、、、、 [`Array.foldBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#foldBack) [`Array.reduce`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduce) [`Array.reduceBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduceBack) [`Array.scan`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scan) 和 [`Array.scanBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scanBack) 執行演算法。 同樣地，變化 [`Array.fold2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold2) 和 [`Array.foldBack2`](foldBack2) 在兩個數組上執行計算。
 
-這些用來執行計算的函式會對應至[清單模組](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)中相同名稱的函式。 如需使用範例，請參閱[清單](lists.md)。
+這些執行計算的函式會對應到 [清單模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)中相同名稱的函式。 如需使用範例，請參閱 [清單](lists.md)。
 
 ### <a name="modify-arrays"></a>修改陣列
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)將元素設定為指定的值。 [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)將陣列中的元素範圍設定為指定的值。 下列程式碼提供的範例 `Array.fill` 。
+[`Array.set`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#set) 將元素設定為指定的值。 [`Array.fill`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fill) 將陣列中的元素範圍設定為指定的值。 下列程式碼提供的範例 `Array.fill` 。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -400,23 +397,23 @@ Did not find an element that is both a perfect square and a perfect cube.
 [|1; 2; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 23; 24; 25|]
 ```
 
-您可以使用 [`Array.blit`](https://msdn.microsoft.com/library/675e13e4-7fb9-4e0d-a5be-a112830de667) ，將一個陣列的子區段複製到另一個陣列。
+您可以使用將 [`Array.blit`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#blit) 某個陣列的子區段複製到另一個陣列。
 
-### <a name="convert-to-and-from-other-types"></a>與其他類型相互轉換
+### <a name="convert-to-and-from-other-types"></a>從其他類型轉換
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)從清單建立陣列。 [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)從序列建立陣列。 [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)和會 [`Array.toSeq`](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) 從陣列類型轉換成這些其他集合類型。
+[`Array.ofList`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#ofList) 從清單建立陣列。 [`Array.ofSeq`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#ofSeq) 從序列建立陣列。 [`Array.toList`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#toList) 並 [`Array.toSeq`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#toSeq) 從陣列型別轉換為這些其他集合類型。
 
 ### <a name="sort-arrays"></a>排序陣列
 
-使用 [`Array.sort`](https://msdn.microsoft.com/library/c6679075-e7eb-463c-9be5-c89be140c312) 來排序陣列，方法是使用泛型比較函數。 使用 [`Array.sortBy`](https://msdn.microsoft.com/library/144498dc-091d-4575-a229-c0bcbd61426b) 來指定產生值（稱為索引*鍵*）的函式，以使用索引鍵上的泛型比較函數進行排序。 [`Array.sortWith`](https://msdn.microsoft.com/library/699d3638-4244-4f42-8496-45f53d43ce95)如果您想要提供自訂比較函數，請使用。 `Array.sort`、 `Array.sortBy` 和 `Array.sortWith` 全都會以新陣列的形式傳回已排序的陣列。 變體 [`Array.sortInPlace`](https://msdn.microsoft.com/library/36f39947-8a88-4823-9e9b-e9d838d292e0) 、 [`Array.sortInPlaceBy`](https://msdn.microsoft.com/library/7fb9d2dd-d461-4c67-8b43-b5c59fc12c3f) 和會 [`Array.sortInPlaceWith`](https://msdn.microsoft.com/library/454f9e11-972d-47a6-a854-8031cb0c7b0b) 修改現有的陣列，而不是傳回新的陣列。
+使用 [`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort) 來排序陣列，方法是使用泛型比較函數。 使用指定一個函式，此函式 [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) 會產生值（稱為索引 *鍵*），以在索引鍵上使用泛型比較函數進行排序。 [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith)如果您想要提供自訂比較函數，請使用。 `Array.sort`、 `Array.sortBy` 和 `Array.sortWith` 全都會以新陣列的形式傳回已排序的陣列。 變化 [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace) 、 [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) 和會 [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) 修改現有的陣列，而不是傳回新的陣列。
 
 ### <a name="arrays-and-tuples"></a>陣列和元組
 
-函式會將 [`Array.zip`](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) [`Array.unzip`](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) 元組配對的陣列轉換成陣列的元組，反之亦然。 [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)和 [`Array.unzip3`](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) 很相似，不同之處在于它們會與三個數組的三個元素或元組的元組搭配使用。
+函數 [`Array.zip`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#zip) 和會 [`Array.unzip`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#unzip) 將元組的陣列轉換成陣列的元組，反之亦然。 [`Array.zip3`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#zip3) 和 [`Array.unzip3`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#unzip3) 很類似，不同之處在于它們會使用三個元素的元組或三個數組的元組。
 
-## <a name="parallel-computations-on-arrays"></a>陣列上的平行計算
+## <a name="parallel-computations-on-arrays"></a>針對陣列進行平行計算
 
-模組 [`Array.Parallel`](https://msdn.microsoft.com/library/60f30b77-5af4-4050-9a5c-bcdb3f5cbb09) 包含在陣列上執行平行計算的函數。 在版本4之前以 .NET Framework 版本為目標的應用程式中，無法使用此模組。
+模組 [`Array.Parallel`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule-parallel.html) 包含在陣列上執行平行計算的函數。 在版本4之前，以 .NET Framework 版本為目標的應用程式無法使用此模組。
 
 ## <a name="see-also"></a>另請參閱
 

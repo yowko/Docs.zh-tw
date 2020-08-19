@@ -1,17 +1,17 @@
 ---
 title: 介面
-description: 瞭解介面F#如何指定其他類別所要執行的相關成員集合。
-ms.date: 05/16/2016
-ms.openlocfilehash: 8f054a668ad0fbc2453a45883e8052471280eca3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+description: '瞭解 F # 介面如何指定其他類別所執行的相關成員集合。'
+ms.date: 08/15/2020
+ms.openlocfilehash: 36272b52fcff83e8e8a54ccc4e6ecd1252a91819
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627644"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558123"
 ---
 # <a name="interfaces"></a>介面
 
-*介面*會指定其他類別所要執行的相關成員集合。
+*介面* 會指定其他類別所執行的相關成員集合。
 
 ## <a name="syntax"></a>語法
 
@@ -43,45 +43,55 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>備註
 
-介面宣告類似于類別宣告, 不同之處在于不會執行任何成員。 相反地, 所有成員都是抽象的, 如關鍵字`abstract`所指示。 您未提供抽象方法的方法主體。 不過, 您也可以提供預設的執行方式, 方法是同時包含成員的個別定義做為方法, `default`並搭配關鍵字。 這麼做相當於在其他 .NET 語言的基類中建立虛擬方法。 這類虛擬方法可以在實介面的類別中覆寫。
+介面宣告類似類別宣告，但不會執行任何成員。 相反地，所有成員都是抽象的，如關鍵字所指示 `abstract` 。 您未提供抽象方法的方法主體。 不過，您也可以提供預設的執行方式，也就是將個別的成員定義做為方法與 `default` 關鍵字一起使用。 這麼做相當於在其他 .NET 語言的基類中建立虛擬方法。 這類虛擬方法可以在執行介面的類別中覆寫。
 
-介面的預設存取範圍是`public`。
+介面的預設存取範圍是 `public` 。
 
-您可以使用一般F#語法, 選擇性地提供每個方法參數的名稱:
+您可以使用一般 F # 語法，選擇性地為每個方法參數指定名稱：
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 
-在上述`ISprintable`範例中`Print` , 方法具有名稱`format`為之類型`string`的單一參數。
+在上述 `ISprintable` 範例中， `Print` 方法具有類型的單一參數，其名稱為 `string` `format` 。
 
-有兩種方式可以執行介面: 藉由使用物件運算式, 以及使用類別類型。 在任一情況下, 類別類型或物件運算式都會針對介面的抽象方法提供方法主體。 針對每個實作為介面的型別, 都是專用的。 因此, 不同類型上的介面方法可能會彼此不同。
+有兩種方式可以執行介面：使用物件運算式，以及使用類別類型。 在任一種情況下，類別類型或物件運算式都會提供介面之抽象方法的方法主體。 實作為每個實作為介面的型別。 因此，不同類型的介面方法可能會彼此不同。
 
-當您`interface`使用`end`輕量語法時, 關鍵字和 (用來標示定義的開始和結束) 是選擇性的。 如果您未使用這些關鍵字, 編譯器會藉由分析您所使用的結構, 嘗試推斷該類型是類別或介面。 如果您定義成員或使用其他類別語法, 則會將類型視為類別。
+`interface` `end` 當您使用輕量語法時，關鍵字和（標示定義的開頭和結尾）是選擇性的。 如果您未使用這些關鍵字，編譯器會藉由分析您所使用的結構，嘗試推斷型別為類別或介面。 如果您定義成員或使用其他類別語法，則會將型別解釋為類別。
 
-.NET 程式碼樣式是用來開始所有具有資本`I`的介面。
+.NET 程式碼撰寫樣式是以大寫來開始所有的介面 `I` 。
+
+您可以用兩種方式指定多個參數： F # 樣式和。NET 樣式。 這兩種方法都會針對 .NET 取用者進行編譯，但 F # 樣式會強制 F # 呼叫端使用 F # 樣式參數應用程式和。NET 樣式會強制 F # 呼叫端使用元組引數應用程式。
+
+```fsharp
+type INumeric1 =
+    abstract Add: x: int -> y: int -> int
+
+type INumeric2 =
+    abstract Add: x: int * y: int -> int
+```
 
 ## <a name="implementing-interfaces-by-using-class-types"></a>使用類別類型來執行介面
 
-您可以使用`interface`關鍵字、介面的名稱`with`和關鍵字 (後面接著介面成員定義) 來執行類別類型中的一或多個介面, 如下列程式碼所示。
+您可以使用 `interface` 關鍵字、介面名稱和關鍵字，然後使用介面成員定義，在類別型別中執行一個或多個介面， `with` 如下列程式碼所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2801.fs)]
 
-系統會繼承介面實作為, 因此任何衍生的類別都不需要加以重新執行。
+介面會被繼承，因此任何衍生的類別都不需要重新執行它們。
 
 ## <a name="calling-interface-methods"></a>呼叫介面方法
 
-介面方法只能透過介面呼叫, 而不能透過實作為介面之型別的任何物件。 因此, 您可能必須使用`:>`運算子`upcast`或運算子來向上轉換成介面類別型, 才能呼叫這些方法。
+介面方法只能透過介面呼叫，而不能透過任何實介面型別的物件來呼叫。 因此，您可能必須使用運算子或運算子來向上轉型為介面型別，才能 `:>` `upcast` 呼叫這些方法。
 
-若要在具有類型`SomeClass`的物件時呼叫介面方法, 您必須將物件向上轉型為介面類別型, 如下列程式碼所示。
+當您擁有類型的物件時，若要呼叫介面方法 `SomeClass` ，您必須將物件向上轉型為介面類別型，如下列程式碼所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2802.fs)]
 
-另一個替代方式是在 upcasts 和呼叫介面方法的物件上宣告方法, 如下列範例所示。
+替代方法是在將和呼叫介面方法的物件上宣告方法，如下列範例所示。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2803.fs)]
 
 ## <a name="implementing-interfaces-by-using-object-expressions"></a>使用物件運算式來執行介面
 
-物件運算式提供了簡單的方法來執行介面。 當您不需要建立命名類型, 而且只想要支援介面方法的物件, 而不需要任何其他方法時, 它們會很有用。 下列程式碼說明物件運算式。
+物件運算式提供簡單的方法來執行介面。 當您不需要建立已命名的型別，而且您只想要支援介面方法的物件，而不需要任何其他方法時，它們就很有用。 下列程式碼說明物件運算式。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2804.fs)]
 
@@ -93,6 +103,6 @@ let class-name (argument-list) =
 
 ## <a name="see-also"></a>另請參閱
 
-- [F# 語言參考](index.md)
+- [F # 語言參考](index.md)
 - [物件運算式](object-expressions.md)
 - [類別](classes.md)

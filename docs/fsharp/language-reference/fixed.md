@@ -1,17 +1,17 @@
 ---
-title: Fixed 的關鍵字
-description: 了解如何 [pin] 以防止具有集合至堆疊上的本機F#'fixed' 關鍵字。
-ms.date: 04/24/2017
-ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+title: Fixed 關鍵字
+description: "瞭解如何「釘選」到堆疊上的本機，以防止使用 F # ' fixed ' 關鍵字進行收集。"
+ms.date: 08/15/2020
+ms.openlocfilehash: 786ffd706c243fc83f8fb3afc2201d2a34536372
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772654"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559176"
 ---
-# <a name="the-fixed-keyword"></a>Fixed 的關鍵字
+# <a name="the-fixed-keyword"></a>Fixed 關鍵字
 
-F#4.1 導入了`fixed`關鍵字，可讓您 「 釘選 」 到堆疊上的本機可防止它們所收集或在記憶體回收期間移動。  它用於低層級的程式設計案例。
+`fixed`關鍵字可讓您將本機的「釘選」至堆疊，以防止在垃圾收集期間收集或移動它。  它是用於低層級的程式設計案例。
 
 ## <a name="syntax"></a>語法
 
@@ -21,13 +21,13 @@ use ptr = fixed expression
 
 ## <a name="remarks"></a>備註
 
-這會擴充語法的運算式，以允許擷取指標和繫結至從所收集或在記憶體回收期間移動使得的名稱。  
+這會擴充運算式的語法，以允許將指標解壓縮，並將其系結至無法在垃圾收集期間收集或移動的名稱。  
 
-從運算式的指標透過固定`fixed`關鍵字會繫結至透過識別碼`use`關鍵字。  資源管理，透過這樣的語意如下`use`關鍵字。  固定在範圍內，而一旦超出範圍時，它不再被固定的指標。  `fixed` 不能使用的內容之外`use`繫結。  您必須將指標繫結至名稱與`use`。
+運算式的指標是透過關鍵詞系結至識別碼，藉此修正 `fixed` `use` 。  這種方式的語法類似于透過關鍵詞的資源管理 `use` 。  指標在範圍內是固定的，而且一旦超出範圍，就不會再修正。  `fixed` 無法在系結的內容之外使用 `use` 。  您必須使用來系結名稱的指標 `use` 。
 
-使用`fixed`必須發生在函式或方法中的運算式。  它不能在指令碼層級或模組層級的範圍。
+使用 `fixed` 必須發生在函式或方法的運算式內。  它不能用在腳本層級或模組層級的範圍。
 
-類似所有指標的程式碼，這是不安全的功能，而且會發出警告時使用。
+就像所有指標程式碼一樣，這是一項不安全的功能，會在使用時發出警告。
 
 ## <a name="example"></a>範例
 
@@ -63,4 +63,4 @@ doPointerWork()
 
 ## <a name="see-also"></a>另請參閱
 
-- [NativePtr 模組](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [NativePtr 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-nativeinterop-nativeptrmodule.html)
