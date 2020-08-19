@@ -2,24 +2,31 @@
 title: 密碼編譯的重大變更
 description: 列出 .NET Core 中的密碼編譯相關的重大變更。
 ms.date: 04/22/2020
-ms.openlocfilehash: 34098027c4cbe5e5fb31a22d981af706e07cb7da
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: f7d580938fb7620728b8ff7f67412c9f5bbbb6c3
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556018"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557995"
 ---
 # <a name="cryptography-breaking-changes"></a>密碼編譯的重大變更
 
-下列重大變更記載于此頁面：
+此頁面記載了下列重大變更：
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
-| [Linux 上不再支援開始信任的憑證語法](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
+| [在功能上，加密功能僅限初始化](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
+| [Linux 上不再支援開始受信任的憑證語法](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
 | [EnvelopedCms 預設為 AES-256 加密](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
 | [RSAOpenSsl 金鑰產生的大小下限已增加](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
-| [.NET Core 3.0 傾向于將 OpenSSL 1.1. x OpenSSL 1.0. x](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
-| [遵守 SignedCms 的布林值參數。 ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
+| [.NET Core 3.0 偏好將 OpenSSL 1.1. x OpenSSL 1.0. x](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
+| [已遵守 SignedCms 的布林值參數。 ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
+
+## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [cryptography-oid-init-only](../../../includes/core-changes/cryptography/5.0/cryptography-oid-init-only.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

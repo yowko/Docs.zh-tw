@@ -1,6 +1,6 @@
 ---
 title: 'Lambda 運算式-c # 參考'
-description: 瞭解 lambda 運算式。 有一個運算式 lambda 具有當做其主體的運算式，或具有語句區塊做為其主體的語句 lambda。
+description: 瞭解 lambda 運算式。 有運算式 lambda 有運算式做為其主體，或具有語句區塊做為主體的語句 lambda。
 ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: e2eae276d644413dcfff10c109ad10291fbb1386
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 3dd793ec000999935bff6b54b1b00e49211bd5ec
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068509"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558357"
 ---
-# <a name="lambda-expressions-c-reference"></a> (c # 參考的 Lambda 運算式) 
+# <a name="lambda-expressions-c-reference"></a>Lambda 運算式 (c # 參考) 
 
 「Lambda 運算式」** 是下列兩種形式之一的運算式：
 
@@ -34,23 +34,23 @@ ms.locfileid: "88068509"
 
 請使用 [Lambda 宣告運算子 `=>`](lambda-operator.md) 來分隔 Lambda 的參數清單及其主體。 若要建立 Lambda 運算式，請在 Lambda 運算子 的左邊指定輸入參數 (如果有的話)，並在另一邊指定運算式或陳述式區塊。
 
-任何 Lambda 運算式可轉換成[委派](../builtin-types/reference-types.md#the-delegate-type)型別。 Lambda 運算式可以轉換成的委派型別，是由其參數和傳回值的型別所定義。 如果 Lambda 運算式不會傳回值，則其可轉換成其中一個 `Action` 委派型別；否則可轉換成其中一個 `Func` 委派型別。 例如，具有兩個參數且不會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Action%602> 委派。 具有一個參數且會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Func%602> 委派。 在下列範例中，lambda 運算式 `x => x * x` 會指定名為的參數，並傳回 `x` 平方的值，並 `x` 指派給委派類型的變數：
+任何 Lambda 運算式可轉換成[委派](../builtin-types/reference-types.md#the-delegate-type)型別。 Lambda 運算式可以轉換成的委派型別，是由其參數和傳回值的型別所定義。 如果 Lambda 運算式不會傳回值，則其可轉換成其中一個 `Action` 委派型別；否則可轉換成其中一個 `Func` 委派型別。 例如，具有兩個參數且不會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Action%602> 委派。 具有一個參數且會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Func%602> 委派。 在下列範例中，lambda 運算式 `x => x * x` 會指定名為的參數，並傳回 `x` `x` 平方值，並指派給委派類型的變數：
 
 [!code-csharp-interactive[lambda is delegate](snippets/lambda-expressions/Introduction.cs#Delegate)]
 
-運算式 lambda 也可以轉換成[運算式樹狀](../../programming-guide/concepts/expression-trees/index.md)架構類型，如下列範例所示：
+運算式 lambda 也可以轉換成 [運算式樹狀](../../programming-guide/concepts/expression-trees/index.md) 架構類型，如下列範例所示：
 
 [!code-csharp-interactive[lambda is expression tree](snippets/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-您可以在任何需要委派型別或運算式樹狀架構執行個體的程式碼中使用 Lambda 運算式，例如作為 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 方法的引數，以傳遞應該在背景中執行的程式碼。 當您[在 c # 中撰寫 LINQ](../../linq/index.md)時，您也可以使用 lambda 運算式，如下列範例所示：
+您可以在任何需要委派型別或運算式樹狀架構執行個體的程式碼中使用 Lambda 運算式，例如作為 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 方法的引數，以傳遞應該在背景中執行的程式碼。 當您 [在 c # 中撰寫 LINQ](../../linq/index.md)時，您也可以使用 lambda 運算式，如下列範例所示：
 
 [!code-csharp-interactive[lambda is argument in LINQ](snippets/lambda-expressions/Introduction.cs#Argument)]
 
-當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 類別中的 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法時 (例如在 LINQ to Objects 和 LINQ to XML中所執行)，此參數會是委派型別 <xref:System.Func%602?displayProperty=nameWithType>。 當您在類別中呼叫 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 方法時 <xref:System.Linq.Queryable?displayProperty=nameWithType> （例如在 LINQ to SQL 中），參數類型是運算式樹狀架構類型 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>) 。 在這兩種情況下，您都可以使用相同的 Lambda 運算式來指定參數值。 那會讓兩個 `Select` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件型別並不相同。
+當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 類別中的 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法時 (例如在 LINQ to Objects 和 LINQ to XML中所執行)，此參數會是委派型別 <xref:System.Func%602?displayProperty=nameWithType>。 當您在類別中呼叫 <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> 方法時 <xref:System.Linq.Queryable?displayProperty=nameWithType> （例如在 LINQ to SQL 中），參數類型為運算式樹狀架構類型 [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>) 。 在這兩種情況下，您都可以使用相同的 Lambda 運算式來指定參數值。 那會讓兩個 `Select` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件型別並不相同。
   
 ## <a name="expression-lambdas"></a>運算式 Lambda
 
-在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」**。 運算式 lambda 會廣泛用於[運算式樹狀](../../programming-guide/concepts/expression-trees/index.md)架構的結構。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
+在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」**。 運算式 lambda 可廣泛用於 [運算式樹狀](../../programming-guide/concepts/expression-trees/index.md)架構的結構中。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
 
 ```csharp
 (input-parameters) => expression
@@ -142,17 +142,17 @@ public partial class Form1 : Form
 
 ## <a name="lambda-expressions-and-tuples"></a>Lambda 運算式和元組
 
-從 c # 7.0 開始，c # 語言提供[元組](../builtin-types/value-tuples.md)的內建支援。 您可以將元組當做引數提供給 Lambda 運算式，而您的 Lambda 運算式也可以傳回元組。 在某些情況下，C# 編譯器會使用型別推斷來判斷元組元件的類型。
+從 c # 7.0 開始，c # 語言提供 [元組](../builtin-types/value-tuples.md)的內建支援。 您可以將元組當做引數提供給 Lambda 運算式，而您的 Lambda 運算式也可以傳回元組。 在某些情況下，C# 編譯器會使用型別推斷來判斷元組元件的類型。
 
 若要定義元組，請以括號括住其元件的逗號分隔清單。 下列範例使用具有 3 個元件的元組將一連串數字傳遞至 Lambda 運算式，這會使每個值加倍，並傳回具有三個元件的元組，其中包含乘法運算的結果。
 
 [!code-csharp-interactive[lambda and tuples](snippets/lambda-expressions/LambdasAndTuples.cs#WithoutComponentName)]
 
-一般來說，元組的欄位會命名為 `Item1` 、等等 `Item2` 。不過，您可以使用命名元件來定義元組，如下列範例所示。
+一般來說，元組的欄位會命名為 `Item1` 、等等 `Item2` 。不過，您可以定義具有命名元件的元組，如下列範例所示。
 
 [!code-csharp-interactive[lambda and named tuples](snippets/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
-如需 c # 元組的詳細資訊，請參閱[元組類型](../../language-reference/builtin-types/value-tuples.md)。
+如需 c # 元組的詳細資訊，請參閱 [元組類型](../../language-reference/builtin-types/value-tuples.md)。
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>具有標準查詢運算子的 Lambda
 
@@ -226,7 +226,7 @@ Lambda 可以參考「外部變數」**。 這些是在定義 Lambda 運算式�
 
 [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考資料](../index.md)
 - [C# 運算子與運算式](index.md)
@@ -234,4 +234,3 @@ Lambda 可以參考「外部變數」**。 這些是在定義 Lambda 運算式�
 - [運算式樹狀架構](../../programming-guide/concepts/expression-trees/index.md)
 - [區域函式與 Lambda 運算式的比較](../../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
 - [Visual Studio 2008 C# 範例 (請參閱 LINQ 範例查詢檔案和 XQuery 程式)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
-- [Recursive lambda expressions (遞迴的 Lambda 運算式)](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

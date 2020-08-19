@@ -1,22 +1,29 @@
 ---
 title: 網路中斷性變更
-description: 列出 .NET Core 中網路功能的重大變更。
+description: 列出 .NET Core 網路功能的重大變更。
 ms.date: 05/05/2020
-ms.openlocfilehash: 07e0b2e062ce244cd6312bbe08bcc63db4c74347
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 5d27f9663a2c1b79610ab002a03beeafa8b2818e
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859635"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557956"
 ---
 # <a name="networking-breaking-changes"></a>網路中斷性變更
 
-下列重大變更記載于此頁面：
+此頁面記載了下列重大變更：
 
 | 重大變更 | 引進的版本 |
 | - | - |
-| [HttpRequestMessage 的預設值。版本已變更為1。1](#default-value-of-httprequestmessageversion-changed-to-11) | 3.0 |
-| [WebClient 地說 cancelasync 不一定會立即取消](#webclientcancelasync-doesnt-always-cancel-immediately) | 2.0 |
+| [MulticastOption。群組不接受 null 值](#multicastoptiongroup-doesnt-accept-a-null-value) | 5.0 |
+| [HttpRequestMessage 的預設值已變更為1。1](#default-value-of-httprequestmessageversion-changed-to-11) | 3.0 |
+| [WebClient >cancelasync 不一定會立即取消](#webclientcancelasync-doesnt-always-cancel-immediately) | 2.0 |
+
+## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [multicastoption-group-doesnt-accept-null](../../../includes/core-changes/networking/5.0/multicastoption-group-doesnt-accept-null.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

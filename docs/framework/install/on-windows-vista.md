@@ -1,14 +1,13 @@
 ---
 title: 在 Windows Vista 上安裝 .NET Framework
 description: 了解如何在 Windows Vista 上安裝 .NET Framework。
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 9b8470f4cdfcc6ec85fb6677f5518203c0de5de1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54f1b9f66ce43352d2f5122c0e0e1c9bcd158b54
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181550"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558487"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>在 Windows Vista 和 Windows Server 2008 上安裝 .NET Framework
 
@@ -30,8 +29,8 @@ ms.locfileid: "79181550"
 
 .NET Framework 3.5 支援針對 .NET Framework 1.0 到 3.5 建置的應用程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [下載 .NET 框架](https://dotnet.microsoft.com/download)
+- [下載 .NET Framework](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)
 - [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)

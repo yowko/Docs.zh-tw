@@ -1,14 +1,13 @@
 ---
 title: 在 Windows 8 上安裝 .NET Framework
-ms.custom: updateeachrelease
 description: 了解如何在 Windows 8 上安裝 .NET Framework
 ms.date: 04/18/2019
-ms.openlocfilehash: 1db8ac9837821eb7111b9d0015787509bc27b398
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf95a670055008b61930657c066a5dd6650452ee
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965993"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558578"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>在 Windows 8 和 Windows Server 2012 上安裝 .NET Framework
 
@@ -43,8 +42,8 @@ Windows Server 2012 支援 .NET Framework 4.8。 Windows 8 不予支援。
 
 如果您無法安裝正確的 .NET Framework 版本，可以[連絡 Microsoft 以取得協助](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [下載 .NET 框架](https://dotnet.microsoft.com/download)
+- [下載 .NET Framework](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)
 - [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)

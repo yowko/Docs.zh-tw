@@ -1,14 +1,13 @@
 ---
 title: 在 Windows XP 上安裝 .NET Framework
 description: 了解如何在 Windows XP 上安裝 .NET Framework。
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 8d05c8c9cf961d3902b1d1287be5b1c2c73d349e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b39e47327672031e21cd560cddd65b2544a079fa
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716292"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558513"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>在 Windows XP 和 Windows Server 2003 上安裝 .NET Framework
 
@@ -35,8 +34,8 @@ ms.locfileid: "75716292"
 
 .NET Framework 3.5 可用來執行針對 .NET Framework 1.0 到 3.5 建置的應用程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [下載 .NET 框架](https://dotnet.microsoft.com/download)
+- [下載 .NET Framework](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)
 - [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)
