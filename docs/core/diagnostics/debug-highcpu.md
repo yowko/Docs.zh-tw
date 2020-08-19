@@ -26,7 +26,7 @@ ms.locfileid: "88557798"
 > - PerfView 中的設定檔效能
 > - 診斷和解決過度的 CPU 使用率
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 教學課程會使用：
 
@@ -166,7 +166,7 @@ dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler
 
 ---
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [dotnet-列出進程的追蹤](dotnet-trace.md)
 - [dotnet-](dotnet-counters.md) 檢查 managed 記憶體使用量的計數器

@@ -81,6 +81,6 @@ ms.locfileid: "88558864"
 - [.NET Framework 3.5 的過時清單](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
 - [.NET Framework 2.0 的過時清單](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [\<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)

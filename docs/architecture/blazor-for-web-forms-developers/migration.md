@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267798"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557538"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>從 ASP.NET Web Forms 遷移至 Blazor
 
@@ -559,10 +559,6 @@ namespace eShopLegacyWebForms.Catalog
 ```
 
 `EditForm`內容包含驗證支援，而且可以包裝在輸入周圍。 資料批註是新增驗證的常見方式。 這類驗證支援可透過元件加入 `DataAnnotationsValidator` 。 如需此機制的詳細資訊，請參閱 [ASP.NET Core Blazor 表單和驗證](/aspnet/core/blazor/forms-validation)。
-
-## <a name="migrate-built-in-web-forms-controls"></a>遷移內建的 Web Form 控制項
-
-*此內容即將推出。*
 
 ## <a name="migrate-configuration"></a>移轉組態
 

@@ -324,7 +324,7 @@ gacutil -i:StringLibrary.resources.dll
 
 14. 執行 *Example.exe*。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)
 - [延遲簽署組件](../../standard/assembly/delay-sign.md)

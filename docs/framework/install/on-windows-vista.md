@@ -29,7 +29,7 @@ ms.locfileid: "88558487"
 
 .NET Framework 3.5 支援針對 .NET Framework 1.0 到 3.5 建置的應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [下載 .NET Framework](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)

@@ -1,51 +1,56 @@
 ---
-title: 基類庫的重大變更
+title: 基礎類別庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: c8eb5ec7d2bb1879a38a18337463230c7b731d29
-ms.sourcegitcommit: d3c09791297f0edc468a4849a5f11ef62e0e90fd
+ms.openlocfilehash: 9190fc2fc8dddc4fb4be8409915cf24c92a97daf
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88137484"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558168"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
-核心 .NET 程式庫提供 .NET Core 所使用的基本類型和其他一般型別。
+核心 .NET 程式庫提供 .NET Core 所使用的基本類型和其他一般類型。
 
-下列重大變更記載于此頁面：
+此頁面記載了下列重大變更：
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
-| [LINQ OrderBy 的複雜性。第一個 {OrDefault} 已增加](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
-| [IntPtr 和 UIntPtr 執行 IFormattable](#intptr-and-uintptr-implement-iformattable) | 5.0 |
+| [環境。 OSVersion 傳回正確的作業系統版本](#environmentosversion-returns-the-correct-operating-system-version) | 5.0 |
+| [LINQ OrderBy 的複雜度。前 {OrDefault} 增加了](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
+| [IntPtr 和 UIntPtr 實 >iformattable](#intptr-and-uintptr-implement-iformattable) | 5.0 |
 | [PrincipalPermissionAttribute 已淘汰為錯誤](#principalpermissionattribute-is-obsolete-as-error) | 5.0 |
-| [ASP.NET 應用程式中的 BinaryFormatter 序列化方法已過時且禁止](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
-| [UTF-7 程式碼路徑已過時](#utf-7-code-paths-are-obsolete) | 5.0 |
-| [Vector 一律會擲回 \<T> 不支援之類型的 NotSupportedException](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
-| [預設 ActivityIdFormat 為 W3C](#default-activityidformat-is-w3c) | 5.0 |
-| [Vector2 的行為變更。 Lerp 和 Vector4. Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
-| [SSE 和 SSE2 CompareGreaterThan 方法會適當地處理 NaN 輸入](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
-| [如果實例已經存在，CreateCounterSetInstance 現在會擲回 InvalidOperationException](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
+| [ASP.NET apps 已淘汰且禁止 BinaryFormatter 序列化方法](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps) | 5.0 |
+| [UTF-7 程式碼路徑已淘汰](#utf-7-code-paths-are-obsolete) | 5.0 |
+| [Vector \<T> 一律會針對不支援的類型擲回 NotSupportedException](#vectort-always-throws-notsupportedexception-for-unsupported-types) | 5.0 |
+| [預設 ActivityIdFormat 是 W3C](#default-activityidformat-is-w3c) | 5.0 |
+| [Vector2. Lerp 和 Vector4 的行為變更。 Lerp](#behavior-change-for-vector2lerp-and-vector4lerp) | 5.0 |
+| [SSE 和 SSE2 CompareGreaterThan 方法會正確處理 NaN 輸入](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
+| [如果實例已經存在，則 CreateCounterSetInstance 現在會擲回 InvalidOperationException](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
 | [已移除 DotNet PlatformAbstractions 套件](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
-| [報告版本的 Api 現在會報告產品，而不是檔案版本](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
-| [自訂 EncoderFallbackBuffer 實例無法遞迴切換](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
-| [浮點格式設定和剖析行為變更](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
-| [浮點剖析作業不再失敗或擲回 OverflowException](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
-| [System.componentmodel.invalidasynchronousstateexception 已移至另一個元件](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
-| [取代格式不正確的 UTF-8 位元組序列遵循 Unicode 方針](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
-| [TypeDescriptionProviderAttribute 已移至另一個元件](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
-| [Ziparchiveentry 中不再處理具有不一致專案大小的封存](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
-| [FieldInfo。 SetValue 會擲回靜態、僅限初始欄位的例外狀況](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
+| [報表版本現在會回報產品而非檔案版本的 Api](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
+| [自訂 >encoderfallbackbuffer 實例無法遞迴地切換](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
+| [浮點數格式化和剖析行為變更](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
+| [浮點數剖析作業不再失敗或擲回 >overflowexception](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
+| [System.componentmodel.invalidasynchronousstateexception 移至另一個元件](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
+| [取代格式不正確的 UTF-8 位元組序列遵循 Unicode 指導方針](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
+| [TypeDescriptionProviderAttribute 移至另一個元件](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
+| [ZipArchiveEntry 不再以不一致的專案大小處理封存](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
+| [FieldInfo 會針對靜態、僅限初始欄位擲回例外狀況](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
 | [加入至內建結構類型的私用欄位](#private-fields-added-to-built-in-struct-types) | 2.1 |
-| [預設值為 UseShellExecute 的變更](#change-in-default-value-of-useshellexecute) | 2.1 |
+| [UseShellExecute 預設值的變更](#change-in-default-value-of-useshellexecute) | 2.1 |
 | [MacOS 上的 OpenSSL 版本](#openssl-versions-on-macos) | 2.1 |
-| [FileSystemInfo 擲回的 System.unauthorizedaccessexception](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
+| [FileSystemInfo 擲回的 System.unauthorizedaccessexception。屬性](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 | [不支援處理損毀的進程狀態例外狀況](#handling-corrupted-state-exceptions-is-not-supported) | 1.0 |
-| [UriBuilder 屬性不再前面加上前置字元](#uribuilder-properties-no-longer-prepend-leading-characters) | 1.0 |
+| [UriBuilder 屬性不再加上前置字元](#uribuilder-properties-no-longer-prepend-leading-characters) | 1.0 |
 | [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [environment-osversion-returns-correct-version](../../../includes/core-changes/corefx/5.0/environment-osversion-returns-correct-version.md)]
+
+***
 
 [!INCLUDE [orderby-firstordefault-complexity-increase](../../../includes/core-changes/corefx/5.0/orderby-firstordefault-complexity-increase.md)]
 

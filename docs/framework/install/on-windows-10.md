@@ -2,13 +2,12 @@
 title: 在 Windows 10 上安裝 .NET Framework
 description: 了解如何在 Windows 10 或 Windows Server 2016 上安裝 .NET Framework。
 ms.date: 04/18/2019
-ms.custom: updateeachrelease
-ms.openlocfilehash: 1443ae8f8d4e61b0561f4827fafc9ecedd80fccc
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 8bd54133f67395d0f110dd24e9e77521bbfe2bab
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144730"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558773"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>在 Windows 10 和 Windows Server 2016 以及更新版本上安裝 .NET Framework
 

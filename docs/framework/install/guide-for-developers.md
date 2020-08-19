@@ -207,7 +207,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - 請參閱 [.NET Framework 參考來源](https://referencesource.microsoft.com/)在線上瀏覽 .NET Framework 原始程式碼。 [Github](https://github.com/Microsoft/referencesource) 亦提供該參考來源。 您可以[下載參考來源](https://referencesource.microsoft.com/download.html)供離線檢視，以及在偵錯期間逐步執行原始檔 (包含修補程式和更新) 之用。 如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [開發人員部署手冊](../deployment/deployment-guide-for-developers.md)
 - [系統管理員部署手冊](../deployment/guide-for-administrators.md)

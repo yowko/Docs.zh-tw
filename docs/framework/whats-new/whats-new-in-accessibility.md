@@ -707,6 +707,6 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 選擇高對比佈景主題的使用者會看到工作流程設計工具和其控制項在可見性方面的許多改善，例如項目之間的更佳對比比例以及用於焦點項目的更明顯選取方塊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 中的新功能](index.md)

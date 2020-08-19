@@ -261,7 +261,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 | | |
 |-|-|
 | Key | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| 名稱 | 版本 |
+| Name | 版本 |
 | 類型 | DWORD |
 
 若要判斷是否已針對 .NET Framework 從 4.5 到 4.7.2 的特定版本安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
@@ -390,7 +390,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |2070|葡萄牙文 (葡萄牙)|pt-PT|
 |3082|西班牙文 - 西班牙 (現代排序)|es|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [系統管理員部署手冊](guide-for-administrators.md)
 - [系統需求](../get-started/system-requirements.md)

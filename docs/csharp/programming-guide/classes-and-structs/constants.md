@@ -46,7 +46,7 @@ ms.locfileid: "88558422"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 程式設計指南](../index.md)
 - [類別和結構](./index.md)

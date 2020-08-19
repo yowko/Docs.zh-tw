@@ -42,7 +42,7 @@ Windows Server 2012 支援 .NET Framework 4.8。 Windows 8 不予支援。
 
 如果您無法安裝正確的 .NET Framework 版本，可以[連絡 Microsoft 以取得協助](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [下載 .NET Framework](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)

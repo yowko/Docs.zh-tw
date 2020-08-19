@@ -31,7 +31,7 @@ ms.locfileid: "88558500"
 
 - 如需想要新增至應用程式之新功能的描述，請參閱[新功能](../whats-new/index.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [應用程式相容性](application-compatibility.md)
 - [從 .NET Framework 1.1 移轉](migrating-from-the-net-framework-1-1.md)

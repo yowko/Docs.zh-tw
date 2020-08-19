@@ -26,7 +26,7 @@ ms.locfileid: "88557876"
 > - 分析呼叫堆疊和同步區塊
 > - 診斷和解決鎖死
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 教學課程會使用：
 
@@ -262,7 +262,7 @@ OS Thread Id: 0x5634 (28)
 
 第二個執行緒很類似。 它也會嘗試取得已擁有的鎖定。 剩下的300個以上的執行緒全都在等候，最可能也會等待造成鎖死的其中一個鎖定。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [dotnet-列出進程的追蹤](dotnet-trace.md)
 - [dotnet-](dotnet-counters.md) 檢查 managed 記憶體使用量的計數器
