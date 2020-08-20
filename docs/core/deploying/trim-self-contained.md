@@ -1,32 +1,32 @@
 ---
-title: 修剪自包含應用程式
-description: 瞭解如何修剪自包含應用以減小其大小。 .NET Core 將運行時與自包含發佈的應用捆綁在一起,並且通常包含更多運行時,因此有必要這樣做。
+title: 修剪獨立的應用程式
+description: 瞭解如何修剪獨立的應用程式，以縮減其大小。 .NET Core 會將執行時間與獨立發行的應用程式組合，而且通常會包含更多執行時間，因此是必要的。
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: bb8ac88c5e16b7fd20a7670e4ad76dbe4b44da1b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 2bb0f03994468bbad3096ebf0b141bc1f47b867e
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242896"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656712"
 ---
-# <a name="trim-self-contained-deployments-and-executables"></a><span data-ttu-id="0f880-104">修剪獨立式部署及可執行檔</span><span class="sxs-lookup"><span data-stu-id="0f880-104">Trim self-contained deployments and executables</span></span>
+# <a name="trim-self-contained-deployments-and-executables"></a><span data-ttu-id="609db-104">修剪獨立式部署及可執行檔</span><span class="sxs-lookup"><span data-stu-id="609db-104">Trim self-contained deployments and executables</span></span>
 
-<span data-ttu-id="0f880-105">發佈應用程式自包含時,.NET Core 運行時與應用程式捆綁在一起。</span><span class="sxs-lookup"><span data-stu-id="0f880-105">When publishing an application self-contained, the .NET Core runtime is bundled together with the application.</span></span> <span data-ttu-id="0f880-106">這種捆綁為打包的應用程式增加了大量內容。</span><span class="sxs-lookup"><span data-stu-id="0f880-106">This bundling adds a significant amount of content to your packaged application.</span></span> <span data-ttu-id="0f880-107">在部署應用程式時,大小通常是一個重要因素。</span><span class="sxs-lookup"><span data-stu-id="0f880-107">When it comes to deploying your application, size is often an important factor.</span></span> <span data-ttu-id="0f880-108">保持包應用程式的大小盡可能小通常是應用程式開發人員的目標。</span><span class="sxs-lookup"><span data-stu-id="0f880-108">Keeping the size of the package application as small as possible is typically a goal for application developers.</span></span>
+<span data-ttu-id="609db-105">從 .NET 開始， [framework 相依的部署模型](index.md#publish-framework-dependent) 是最成功的部署模型。</span><span class="sxs-lookup"><span data-stu-id="609db-105">The [framework-dependent deployment model](index.md#publish-framework-dependent) has been the most successful deployment model since the inception of .NET.</span></span> <span data-ttu-id="609db-106">在此案例中，應用程式開發人員只會將應用程式和協力廠商元件組合在一起，並預期在用戶端電腦上可以使用 .NET 執行時間和架構程式庫。</span><span class="sxs-lookup"><span data-stu-id="609db-106">In this scenario, the application developer bundles only the application and third-party assemblies with the expectation that the .NET runtime and framework libraries will be available in the client machine.</span></span> <span data-ttu-id="609db-107">此部署模型也會繼續成為 .NET Core 中的主應用程式，但在某些情況下，framework 相依的模型不是最佳的。</span><span class="sxs-lookup"><span data-stu-id="609db-107">This deployment model continues to be the dominant one in .NET Core as well but there are some scenarios where the framework-dependent model is not optimal.</span></span> <span data-ttu-id="609db-108">替代方式是發佈獨立式 [應用程式](index.md#publish-self-contained)，其中 .net Core 執行時間和架構會與應用程式和協力廠商元件一起配套。</span><span class="sxs-lookup"><span data-stu-id="609db-108">The alternative is to publish a [self-contained application](index.md#publish-self-contained), where the .NET Core runtime and framework are bundled together with the application and third-party assemblies.</span></span>
 
-<span data-ttu-id="0f880-109">根據應用程式的複雜性,運行應用程式只需要運行時的子集。</span><span class="sxs-lookup"><span data-stu-id="0f880-109">Depending on the complexity of the application, only a subset of the runtime is required to run the application.</span></span> <span data-ttu-id="0f880-110">這些未使用的運行時部分是不必要的,可以從打包的應用程式修剪。</span><span class="sxs-lookup"><span data-stu-id="0f880-110">These unused parts of the runtime are unnecessary and can be trimmed from the packaged application.</span></span>
+<span data-ttu-id="609db-109">Trim 獨立部署模型是獨立部署模型的特製化版本，已優化以減少部署大小。</span><span class="sxs-lookup"><span data-stu-id="609db-109">The trim-self-contained deployment model is a specialized version of the self-contained deployment model that is optimized to reduce deployment size.</span></span> <span data-ttu-id="609db-110">將部署大小降至最低是某些用戶端案例的重要需求，例如 Blazor 應用程式。</span><span class="sxs-lookup"><span data-stu-id="609db-110">Minimizing deployment size is a critical requirement for some client-side scenarios like Blazor applications.</span></span> <span data-ttu-id="609db-111">視應用程式的複雜度而定，執行應用程式只需要一部分的架構元件。</span><span class="sxs-lookup"><span data-stu-id="609db-111">Depending on the complexity of the application, only a subset of the framework assemblies are required to run the application.</span></span> <span data-ttu-id="609db-112">這些未使用的程式庫部分是不必要的，而且可以從封裝的應用程式中修剪。</span><span class="sxs-lookup"><span data-stu-id="609db-112">These unused parts of the library are unnecessary and can be trimmed from the packaged application.</span></span> <span data-ttu-id="609db-113">但是，應用程式的組建時間分析可能會在執行時間造成失敗，因為無法可靠地分析各種有問題的程式碼模式 (主要是以反映使用) 為中心。</span><span class="sxs-lookup"><span data-stu-id="609db-113">However, there is a risk that the build time analysis of the application can cause failures at runtime, due to not being able to reliably analyze various problematic code patterns (largely centered on reflection use).</span></span> <span data-ttu-id="609db-114">因為無法保證可靠性，所以會以預覽功能的形式提供此部署模型。</span><span class="sxs-lookup"><span data-stu-id="609db-114">Because reliability can't be guaranteed, this deployment model is offered as a preview feature.</span></span> <span data-ttu-id="609db-115">組建時間分析引擎會針對有問題的程式碼模式開發人員提供警告，並預期會修正這些程式碼模式。</span><span class="sxs-lookup"><span data-stu-id="609db-115">The build time analysis engine provides warnings to the developer of code patterns that are problematic, with the expectation that these code patterns will be fixed.</span></span> <span data-ttu-id="609db-116">若有可能，建議您使用符合相同需求的程式碼，將應用程式中的任何執行時間反映相依性移至組建時間。</span><span class="sxs-lookup"><span data-stu-id="609db-116">Where possible, we recommend that you move any runtime reflection dependencies in your application to build time by using code that meets the same requirements.</span></span>
 
-<span data-ttu-id="0f880-111">修剪功能的工作原理是檢查應用程式二進位檔,以發現和生成所需運行時程式集的圖形。</span><span class="sxs-lookup"><span data-stu-id="0f880-111">The trimming feature works by examining the application binaries to discover and build a graph of the required runtime assemblies.</span></span> <span data-ttu-id="0f880-112">排除未引用的剩餘運行時程式集。</span><span class="sxs-lookup"><span data-stu-id="0f880-112">The remaining runtime assemblies that aren't referenced are excluded.</span></span>
+<span data-ttu-id="609db-117">您可以透過 TrimMode 設定應用程式的修剪模式，預設 (`copyused`) 將應用程式中使用的元件組合。</span><span class="sxs-lookup"><span data-stu-id="609db-117">The trim mode for the applications can be configured via the TrimMode and will default (`copyused`) to bundle assemblies that are used in the application.</span></span> <span data-ttu-id="609db-118">Blazor WebAssembly 應用程式會使用更積極的模式 (`link`) ，以在元件中修剪未使用的程式碼。</span><span class="sxs-lookup"><span data-stu-id="609db-118">Blazor WebAssembly applications will use a more aggressive mode (`link`) that will trim unused code within assemblies.</span></span> <span data-ttu-id="609db-119">Trim 分析警告會提供無法進行完整相依性分析的程式碼模式相關資訊。</span><span class="sxs-lookup"><span data-stu-id="609db-119">Trim analysis warnings give information on code patterns where a full dependency analysis was not possible.</span></span> <span data-ttu-id="609db-120">預設會隱藏這些警告，並可將旗標設定 `SuppressTrimAnalysisWarnings` 為 false 來開啟這些警告。</span><span class="sxs-lookup"><span data-stu-id="609db-120">These warnings are suppressed by default and can be turned on by setting the flag, `SuppressTrimAnalysisWarnings`, to false.</span></span> <span data-ttu-id="609db-121">您可以在 [ [ILLinker] 頁面](https://github.com/mono/linker/blob/master/docs/illink-options.md)上找到有關可用之修剪選項的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="609db-121">More information on the trim options available can be found at the [ILLinker page](https://github.com/mono/linker/blob/master/docs/illink-options.md).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="0f880-113">修剪是 .NET Core 3.1 中的實驗功能,_僅適用於_自包含發布的應用程式。</span><span class="sxs-lookup"><span data-stu-id="0f880-113">Trimming is an experimental feature in .NET Core 3.1 and is _only_ available to applications that are published self-contained.</span></span>
+> <span data-ttu-id="609db-122">修剪是 .NET Core 3.1、5.0 中的實驗性功能， _僅_ 適用于獨立發行的應用程式。</span><span class="sxs-lookup"><span data-stu-id="609db-122">Trimming is an experimental feature in .NET Core 3.1, 5.0 and is _only_ available to applications that are published self-contained.</span></span>
 
-## <a name="prevent-assemblies-from-being-trimmed"></a><span data-ttu-id="0f880-114">防止修剪裝配體</span><span class="sxs-lookup"><span data-stu-id="0f880-114">Prevent assemblies from being trimmed</span></span>
+## <a name="prevent-assemblies-from-being-trimmed"></a><span data-ttu-id="609db-123">防止元件遭到修剪</span><span class="sxs-lookup"><span data-stu-id="609db-123">Prevent assemblies from being trimmed</span></span>
 
-<span data-ttu-id="0f880-115">在某些情況下,修剪功能將無法檢測引用。</span><span class="sxs-lookup"><span data-stu-id="0f880-115">There are scenarios in which the trimming functionality will fail to detect references.</span></span> <span data-ttu-id="0f880-116">例如,當應用程式或應用程式引用的庫在運行時程式集上使用反射時,不會直接引用該程式集。</span><span class="sxs-lookup"><span data-stu-id="0f880-116">For example, when reflection is used on a runtime assembly, either by your application or a library that is referenced by your application, the assembly isn't directly referenced.</span></span> <span data-ttu-id="0f880-117">修剪不知道這些間接引用,並且會將庫從已發佈的資料夾中排除。</span><span class="sxs-lookup"><span data-stu-id="0f880-117">Trimming is unaware of these indirect references and would exclude the library from the published folder.</span></span>
+<span data-ttu-id="609db-124">有些情況下，修剪功能將無法偵測到參考。</span><span class="sxs-lookup"><span data-stu-id="609db-124">There are scenarios in which the trimming functionality will fail to detect references.</span></span> <span data-ttu-id="609db-125">例如，當您的應用程式或應用程式所參考的程式庫在執行時間元件上使用反映時，不會直接參考該元件。</span><span class="sxs-lookup"><span data-stu-id="609db-125">For example, when reflection is used on a runtime assembly, either by your application or a library that is referenced by your application, the assembly isn't directly referenced.</span></span> <span data-ttu-id="609db-126">修剪不知道這些間接參考，而會將程式庫從已發行的資料夾中排除。</span><span class="sxs-lookup"><span data-stu-id="609db-126">Trimming is unaware of these indirect references and would exclude the library from the published folder.</span></span>
 
-<span data-ttu-id="0f880-118">當代碼通過反射間接引用程式集時,可以防止使用`<TrimmerRootAssembly>`設置修剪程式集。</span><span class="sxs-lookup"><span data-stu-id="0f880-118">When the code is indirectly referencing an assembly through reflection, you can prevent the assembly from being trimmed with the `<TrimmerRootAssembly>` setting.</span></span> <span data-ttu-id="0f880-119">下面的範例簡報如何防止修剪`System.Security`稱為 程式集的程式集:</span><span class="sxs-lookup"><span data-stu-id="0f880-119">The following example shows how to prevent an assembly called `System.Security` assembly from being trimmed:</span></span>
+<span data-ttu-id="609db-127">當程式碼透過反映間接參考元件時，您可以防止元件使用設定進行修剪 `<TrimmerRootAssembly>` 。</span><span class="sxs-lookup"><span data-stu-id="609db-127">When the code is indirectly referencing an assembly through reflection, you can prevent the assembly from being trimmed with the `<TrimmerRootAssembly>` setting.</span></span> <span data-ttu-id="609db-128">下列範例示範如何防止元件稱為「元件」進行 `System.Security` 修剪：</span><span class="sxs-lookup"><span data-stu-id="609db-128">The following example shows how to prevent an assembly called `System.Security` assembly from being trimmed:</span></span>
 
 ```xml
 <ItemGroup>
@@ -34,57 +34,69 @@ ms.locfileid: "81242896"
 </ItemGroup>
 ```
 
-## <a name="trim-your-app---cli"></a><span data-ttu-id="0f880-120">修剪你的應用程式 - CLI</span><span class="sxs-lookup"><span data-stu-id="0f880-120">Trim your app - CLI</span></span>
+## <a name="trim-your-app---cli"></a><span data-ttu-id="609db-129">修剪您的應用程式-CLI</span><span class="sxs-lookup"><span data-stu-id="609db-129">Trim your app - CLI</span></span>
 
-<span data-ttu-id="0f880-121">使用[dotnet 發佈](../tools/dotnet-publish.md)命令修剪應用程式。</span><span class="sxs-lookup"><span data-stu-id="0f880-121">Trim your application using the [dotnet publish](../tools/dotnet-publish.md) command.</span></span> <span data-ttu-id="0f880-122">發佈應用時,請設置以下三個設置:</span><span class="sxs-lookup"><span data-stu-id="0f880-122">When you publish your app, set the following three settings:</span></span>
+<span data-ttu-id="609db-130">使用 [dotnet publish](../tools/dotnet-publish.md) 命令修剪您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="609db-130">Trim your application using the [dotnet publish](../tools/dotnet-publish.md) command.</span></span> <span data-ttu-id="609db-131">當您發佈應用程式時，請設定下列三個設定：</span><span class="sxs-lookup"><span data-stu-id="609db-131">When you publish your app, set the following three settings:</span></span>
 
-- <span data-ttu-id="0f880-123">以自包含身份發佈:`--self-contained true`</span><span class="sxs-lookup"><span data-stu-id="0f880-123">Publish as self-contained: `--self-contained true`</span></span>
-- <span data-ttu-id="0f880-124">關閉單檔:`-p:PublishSingleFile=false`</span><span class="sxs-lookup"><span data-stu-id="0f880-124">Disable single-file publishing: `-p:PublishSingleFile=false`</span></span>
-- <span data-ttu-id="0f880-125">開啟修剪:`p:PublishTrimmed=true`</span><span class="sxs-lookup"><span data-stu-id="0f880-125">Enable trimming: `p:PublishTrimmed=true`</span></span>
+- <span data-ttu-id="609db-132">發佈為獨立： `--self-contained true`</span><span class="sxs-lookup"><span data-stu-id="609db-132">Publish as self-contained: `--self-contained true`</span></span>
+- <span data-ttu-id="609db-133">啟用修剪： `p:PublishTrimmed=true`</span><span class="sxs-lookup"><span data-stu-id="609db-133">Enable trimming: `p:PublishTrimmed=true`</span></span>
 
-<span data-ttu-id="0f880-126">下面的範例將 Windows 10 的應用發佈為自包含並修剪輸出。</span><span class="sxs-lookup"><span data-stu-id="0f880-126">The following example publishes an app for Windows 10 as self-contained and trims the output.</span></span>
+<span data-ttu-id="609db-134">下列範例會將適用于 Windows 的應用程式發佈為獨立的應用程式，並修剪輸出。</span><span class="sxs-lookup"><span data-stu-id="609db-134">The following example publishes an app for Windows as self-contained and trims the output.</span></span>
 
-```dotnetcli
-dotnet publish -c Release -r win10-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=true
+```xml
+<ItemGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>true</PublishTrimmed>
+</ItemGroup>
 ```
 
-<span data-ttu-id="0f880-127">有關詳細資訊,請參閱發佈[.NET 核心應用 ,以及 .NET 核心 CLI](deploy-with-cli.md)。</span><span class="sxs-lookup"><span data-stu-id="0f880-127">For more information, see [Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
+<span data-ttu-id="609db-135">下列範例會在積極的修剪模式下發布應用程式，而未使用的程式碼遷移元件將會被修剪，並啟用修剪器警告。</span><span class="sxs-lookup"><span data-stu-id="609db-135">The following example publishes an app in the aggressive trim mode where unused code withing assemblies will be trimmed and  trimmer warnings enabled.</span></span>
 
-## <a name="trim-your-app---visual-studio"></a><span data-ttu-id="0f880-128">修剪你的應用程式 - 視覺工作室</span><span class="sxs-lookup"><span data-stu-id="0f880-128">Trim your app - Visual Studio</span></span>
+```xml
+<ItemGroup>
+    <TrimMode>link</TrimMode>
+    <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+</ItemGroup>
+```
 
-<span data-ttu-id="0f880-129">Visual Studio 創建可重用的發佈配置檔,以控制應用程式的發佈方式。</span><span class="sxs-lookup"><span data-stu-id="0f880-129">Visual Studio creates reusable publishing profiles that control how your application is published.</span></span>
+<span data-ttu-id="609db-136">如需詳細資訊，請參閱 [使用 .NET Core CLI 發佈 .Net Core 應用程式](deploy-with-cli.md)。</span><span class="sxs-lookup"><span data-stu-id="609db-136">For more information, see [Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
 
-01. <span data-ttu-id="0f880-130">在 **「解決方案資源管理員」** 窗格中,右鍵單擊要發布的專案。</span><span class="sxs-lookup"><span data-stu-id="0f880-130">On the **Solution Explorer** pane, right-click on the project you want to publish.</span></span> <span data-ttu-id="0f880-131">選擇 **"發佈..."**</span><span class="sxs-lookup"><span data-stu-id="0f880-131">Select **Publish...**.</span></span>
+## <a name="trim-your-app---visual-studio"></a><span data-ttu-id="609db-137">修剪您的應用程式-Visual Studio</span><span class="sxs-lookup"><span data-stu-id="609db-137">Trim your app - Visual Studio</span></span>
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="解決方案資源管理器,右鍵單擊功能表突出顯示發佈選項。":::
+<span data-ttu-id="609db-138">Visual Studio 會建立可重複使用的發行設定檔，以控制您的應用程式發佈方式。</span><span class="sxs-lookup"><span data-stu-id="609db-138">Visual Studio creates reusable publishing profiles that control how your application is published.</span></span>
 
-    <span data-ttu-id="0f880-133">如果還沒有發佈設定檔,請按照說明創建一個設定檔,然後選擇 **「資料夾**目標類型」。</span><span class="sxs-lookup"><span data-stu-id="0f880-133">If you don't already have a publishing profile, follow the instructions to create one and choose the **Folder** target-type.</span></span>
+01. <span data-ttu-id="609db-139">在 [ **方案總管** ] 窗格中，以滑鼠右鍵按一下您要發行的專案。</span><span class="sxs-lookup"><span data-stu-id="609db-139">On the **Solution Explorer** pane, right-click on the project you want to publish.</span></span> <span data-ttu-id="609db-140">選取 [ **發佈 ...**]。</span><span class="sxs-lookup"><span data-stu-id="609db-140">Select **Publish...**.</span></span>
 
-01. <span data-ttu-id="0f880-134">選擇 [編輯]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="0f880-134">Choose **Edit**.</span></span>
+    :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="使用醒目提示 [發佈] 選項的右鍵功能表方案總管。":::
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="可視化工作室發佈配置檔與編輯按鈕。":::
+    <span data-ttu-id="609db-142">如果您還沒有發行設定檔，請遵循指示來建立一個設定檔，並選擇 [ **資料夾** 目標] 類型。</span><span class="sxs-lookup"><span data-stu-id="609db-142">If you don't already have a publishing profile, follow the instructions to create one and choose the **Folder** target-type.</span></span>
 
-01. <span data-ttu-id="0f880-136">在 **「設定檔設定」對話框**中,設定以下選項:</span><span class="sxs-lookup"><span data-stu-id="0f880-136">In the **Profile settings** dialog, set the following options:</span></span>
+01. <span data-ttu-id="609db-143">選擇 [編輯]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="609db-143">Choose **Edit**.</span></span>
 
-    - <span data-ttu-id="0f880-137">將**部署模式**設定為**自包含**。</span><span class="sxs-lookup"><span data-stu-id="0f880-137">Set **Deployment mode** to **Self-contained**.</span></span>
-    - <span data-ttu-id="0f880-138">將**目標運行時**設置為要發佈到的平臺。</span><span class="sxs-lookup"><span data-stu-id="0f880-138">Set **Target runtime** to the platform you want to publish to.</span></span>
-    - <span data-ttu-id="0f880-139">選擇 **「修剪未使用的裝配體(在預覽中)**</span><span class="sxs-lookup"><span data-stu-id="0f880-139">Select **Trim unused assemblies (in preview)**.</span></span>
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Visual studio 以編輯按鈕發行設定檔。":::
 
-    <span data-ttu-id="0f880-140">選擇 **「儲存**」以儲存設定並傳回到 **「發布」** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="0f880-140">Choose **Save** to save the settings and return to the **Publish** dialog.</span></span>
+01. <span data-ttu-id="609db-145">在 [ **設定檔設定** ] 對話方塊中，設定下列選項：</span><span class="sxs-lookup"><span data-stu-id="609db-145">In the **Profile settings** dialog, set the following options:</span></span>
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="設定檔設定對話框,突出顯示了部署模式、目標運行時和修剪未使用的程式集選項。":::
+    - <span data-ttu-id="609db-146">設定**獨立**的**部署模式**。</span><span class="sxs-lookup"><span data-stu-id="609db-146">Set **Deployment mode** to **Self-contained**.</span></span>
+    - <span data-ttu-id="609db-147">將 **目標運行** 時間設定為您想要發佈的目標平臺。</span><span class="sxs-lookup"><span data-stu-id="609db-147">Set **Target runtime** to the platform you want to publish to.</span></span>
+    - <span data-ttu-id="609db-148">**在 [預覽]) 中選取 [修剪未使用的元件 (**]。</span><span class="sxs-lookup"><span data-stu-id="609db-148">Select **Trim unused assemblies (in preview)**.</span></span>
 
-01. <span data-ttu-id="0f880-142">選擇 **「發布」** 以發佈已修剪的應用。</span><span class="sxs-lookup"><span data-stu-id="0f880-142">Choose **Publish** to publish your app trimmed.</span></span>
+    <span data-ttu-id="609db-149">選擇 [ **儲存** ] 以儲存設定，並返回 [ **發佈** ] 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="609db-149">Choose **Save** to save the settings and return to the **Publish** dialog.</span></span>
 
-<span data-ttu-id="0f880-143">有關詳細資訊,請參閱發佈[.NET 核心應用與可視化工作室](deploy-with-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="0f880-143">For more information, see [Publish .NET Core apps with Visual Studio](deploy-with-vs.md).</span></span>
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="醒目提示具有部署模式、目標執行時間和修剪未使用元件選項的 [設定檔設定] 對話方塊。":::
 
-## <a name="trim-your-app---visual-studio-for-mac"></a><span data-ttu-id="0f880-144">修剪你的應用程式 - Mac 的視覺化工作室</span><span class="sxs-lookup"><span data-stu-id="0f880-144">Trim your app - Visual Studio for Mac</span></span>
+01. <span data-ttu-id="609db-151">選擇 [ **發行** ] 以發行已修剪的應用程式。</span><span class="sxs-lookup"><span data-stu-id="609db-151">Choose **Publish** to publish your app trimmed.</span></span>
 
-<span data-ttu-id="0f880-145">適用於 Mac 的可視化工作室不提供在發表期間修剪應用的選項。</span><span class="sxs-lookup"><span data-stu-id="0f880-145">Visual Studio for Mac doesn't provide options to trim your app during publish.</span></span> <span data-ttu-id="0f880-146">您需要按照[「修剪應用 - CLI」](#trim-your-app---cli)部分的說明手動發佈。</span><span class="sxs-lookup"><span data-stu-id="0f880-146">You'll need to publish manually by following the instructions from the [Trim your app - CLI](#trim-your-app---cli) section.</span></span> <span data-ttu-id="0f880-147">有關詳細資訊,請參閱發佈[.NET 核心應用 ,以及 .NET 核心 CLI](deploy-with-cli.md)。</span><span class="sxs-lookup"><span data-stu-id="0f880-147">For more information, see [Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
+<span data-ttu-id="609db-152">如需詳細資訊，請參閱 [使用 Visual Studio 發佈 .Net Core 應用程式](deploy-with-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="609db-152">For more information, see [Publish .NET Core apps with Visual Studio](deploy-with-vs.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0f880-148">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0f880-148">See also</span></span>
+## <a name="trim-your-app---visual-studio-for-mac"></a><span data-ttu-id="609db-153">修剪您的應用程式-Visual Studio for Mac</span><span class="sxs-lookup"><span data-stu-id="609db-153">Trim your app - Visual Studio for Mac</span></span>
 
-- <span data-ttu-id="0f880-149">[.NET 核心應用程式部署](index.md)。</span><span class="sxs-lookup"><span data-stu-id="0f880-149">[.NET Core application deployment](index.md).</span></span>
-- <span data-ttu-id="0f880-150">[使用 .NET 核心 CLI 發佈 .NET 核心應用程式](deploy-with-cli.md)。</span><span class="sxs-lookup"><span data-stu-id="0f880-150">[Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
-- <span data-ttu-id="0f880-151">[發布 .NET 核心應用程式與視覺化工作室](deploy-with-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="0f880-151">[Publish .NET Core apps with Visual Studio](deploy-with-vs.md).</span></span>
-- <span data-ttu-id="0f880-152">[點網發佈命令](../tools/dotnet-publish.md).</span><span class="sxs-lookup"><span data-stu-id="0f880-152">[dotnet publish command](../tools/dotnet-publish.md).</span></span>
+<span data-ttu-id="609db-154">Visual Studio for Mac 不會提供在發佈期間修剪應用程式的選項。</span><span class="sxs-lookup"><span data-stu-id="609db-154">Visual Studio for Mac doesn't provide options to trim your app during publish.</span></span> <span data-ttu-id="609db-155">您必須遵循 [ [修剪您的應用程式-CLI](#trim-your-app---cli) ] 區段中的指示，手動發佈。</span><span class="sxs-lookup"><span data-stu-id="609db-155">You'll need to publish manually by following the instructions from the [Trim your app - CLI](#trim-your-app---cli) section.</span></span> <span data-ttu-id="609db-156">如需詳細資訊，請參閱 [使用 .NET Core CLI 發佈 .Net Core 應用程式](deploy-with-cli.md)。</span><span class="sxs-lookup"><span data-stu-id="609db-156">For more information, see [Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="609db-157">請參閱</span><span class="sxs-lookup"><span data-stu-id="609db-157">See also</span></span>
+
+- <span data-ttu-id="609db-158">[.Net Core 應用程式部署](index.md)。</span><span class="sxs-lookup"><span data-stu-id="609db-158">[.NET Core application deployment](index.md).</span></span>
+- <span data-ttu-id="609db-159">[使用 .NET Core CLI 發佈 .Net Core 應用程式](deploy-with-cli.md)。</span><span class="sxs-lookup"><span data-stu-id="609db-159">[Publish .NET Core apps with .NET Core CLI](deploy-with-cli.md).</span></span>
+- <span data-ttu-id="609db-160">[使用 Visual Studio 發佈 .Net Core 應用程式](deploy-with-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="609db-160">[Publish .NET Core apps with Visual Studio](deploy-with-vs.md).</span></span>
+- <span data-ttu-id="609db-161">[dotnet publish 命令](../tools/dotnet-publish.md)。</span><span class="sxs-lookup"><span data-stu-id="609db-161">[dotnet publish command](../tools/dotnet-publish.md).</span></span>
