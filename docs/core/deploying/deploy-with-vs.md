@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23d67761838f17e833a4a478e2355e908a2e35ca
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 73eee58a3d11f2f898a6d57cb282ccf4e802cdca
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557902"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656595"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -120,7 +120,7 @@ ms.locfileid: "88557902"
 
    1. 以滑鼠右鍵按一下 [方案總管]**** 中的專案 (而非解決方案)，然後選取 [編輯 SCD.csproj]****。
 
-   1. 在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 您也需要新增分號來分隔 Rid。 如需執行階段識別碼清單，請參閱 [.NET Core RID 類別目錄](../rid-catalog.md)。
+   1. 在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 您也需要新增分號來分隔 Rid。 如需執行時間識別碼清單，請參閱 [執行時間識別碼目錄](../rid-catalog.md) 。
 
    例如，下列範例指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
@@ -150,7 +150,7 @@ ms.locfileid: "88557902"
 
          1. 選取 [建立新設定檔]**** 中的 [發行]**** 對話方塊。
 
-         1. 在 [挑選發行目標]**** 對話方塊中，將 [選擇資料夾]**** 位置變更為 *bin\Release\PublishOutput\win10 x64*。 選取 [確定]  。
+         1. 在 [挑選發行目標]**** 對話方塊中，將 [選擇資料夾]**** 位置變更為 *bin\Release\PublishOutput\win10 x64*。 選取 [確定]。
 
          1. 選取設定檔清單中的新設定檔 (**FolderProfile1**)，並確定 [目標執行階段]**** 是 `win10-x64`。 如果不是，請選取 [設定]****。 在 [設定檔設定]**** 對話方塊中，將 [目標執行階段]**** 變更為 `win10-x64`，然後選取 [儲存]****。 否則，請選取 [取消]****。
 
@@ -309,7 +309,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 您只能將具有協力廠商程式庫的獨立部署部署到該程式庫所支援的平臺。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性不會存在於目標平台上，除非先前已在該處安裝這些相依性。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Core 應用程式部署](index.md)
 - [.NET Core 執行時間識別碼 (RID) 目錄](../rid-catalog.md)

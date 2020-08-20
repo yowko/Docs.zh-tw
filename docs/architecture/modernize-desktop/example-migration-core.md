@@ -2,74 +2,74 @@
 title: 移轉至 .NET Core 3.1 的範例
 description: 顯示如何將以 .NET Framework 為目標的範例應用程式遷移至 .NET Core 3.1。
 ms.date: 05/12/2020
-ms.openlocfilehash: 5e8b1219cf4bd89ada5b71a60ef27eaabb94997c
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6a0311e9aaeb25ac39f3394d3a62e17046fe03d8
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144267"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656763"
 ---
 # <a name="example-of-migrating-to-net-core-31"></a>移轉至 .NET Core 3.1 的範例
 
-在本章中，我們會提供實用的指導方針，協助您將現有的應用程式從 .NET Framework 遷移至 .NET Core。
+在本章中，我們會提供實用的指導方針，以協助您將現有的應用程式從 .NET Framework 遷移至 .NET Core。
 
-我們提供了結構良好的程式，您可以遵循並在每個步驟上考慮最重要的事項。
+我們會提供您可以遵循的結構完善程式，以及每個步驟應考慮的最重要事項。
 
-接著，我們會記錄範例傳統型應用程式的逐步執行步驟，從 WinForms 和 WPF 版本皆適用。
+接著，我們會記載範例傳統型應用程式（從 WinForms 和 WPF 版本）的逐步遷移程式。
 
-## <a name="migration-process-overview"></a>移轉程序概觀
+## <a name="migration-process-overview"></a>移轉處理序概觀
 
 遷移套裝程式含四個順序步驟：
 
-1. **準備**：瞭解專案必須具備哪些相依性，才能掌握未來的概念。 在此步驟中，您會將目前的專案變成可簡化遷移啟動點的狀態。
+1. **準備**：瞭解專案必須先瞭解的相依性。 在此步驟中，您會將目前的專案納入可簡化遷移啟動點的狀態。
 
-2. **遷移專案檔案：** .net Core 專案使用新的 SDK 樣式專案格式。 請使用此格式建立新的專案檔，或更新您必須使用 SDK 樣式的專案檔。
+2. **遷移專案檔：** .net Core 專案使用新的 SDK 樣式專案格式。 以這種格式建立新的專案檔，或更新您必須使用 SDK 樣式的專案檔。
 
-3. **修正程式碼和組建：** 在 .NET Core 中建立程式碼，以解決 .NET Framework 和 .NET Core 之間的 API 層級差異。 如有需要，請將協力廠商套件更新為支援 .NET Core 的封裝。
+3. **修正程式碼和組建：** 在 .NET Core 中建立程式碼，以解決 .NET Framework 和 .NET Core 之間的 API 層級差異。 如有需要，請將協力廠商套件更新為支援 .NET Core 的套件。
 
-4. **執行和測試：** 在執行時間之前，可能會有不會顯示的差異。 因此，別忘了執行應用程式，並測試所有專案是否如預期般運作。
+4. **執行和測試：** 在執行時間之前可能不會顯示任何差異。 因此，請別忘了執行應用程式，並測試所有專案是否都能如預期般運作。
 
 ### <a name="preparation"></a>準備
 
-#### <a name="migrate-packagesconfig-file"></a>遷移封裝 .config 檔案
+#### <a name="migrate-packagesconfig-file"></a>遷移 packages.config 檔案
 
-在 .NET Framework 應用程式中，所有對外部封裝的參考都會在*封裝 .config*檔案中宣告。 在 .NET Core 中，不再需要使用*封裝 .config*檔案。 相反地，請使用專案檔中的[PackageReference](../../core/project-sdk/msbuild-props.md#packagereference)屬性，來指定應用程式的 NuGet 套件。
+在 .NET Framework 應用程式中，會在 *packages.config* 檔案中宣告外部封裝的所有參考。 在 .NET Core 中，不再需要使用 *packages.config* 檔案。 相反地，請使用專案檔內的 [PackageReference](../../core/project-sdk/msbuild-props.md#packagereference) 屬性來指定您應用程式的 NuGet 套件。
 
-因此，您必須從一種格式轉換成另一種格式。 您可以手動進行更新，取得包含在*封裝 .config*檔案中的相依性，並將其遷移至具有格式的專案檔 `PackageReference` 。 或者，您可以讓 Visual Studio 為您執行工作：以滑鼠右鍵按一下*封裝 .config*檔案，然後選取 [將**PackageReference 遷移至**] 選項。
+因此，您需要從一種格式轉換成另一種格式。 您可以手動進行更新，取得 *packages.config* 檔中所包含的相依性，並將其遷移至具有格式的專案檔 `PackageReference` 。 或者，您可以讓 Visual Studio 為您執行工作：以滑鼠右鍵按一下 *packages.config* 檔案，然後選取 [ **遷移 packages.config 至 PackageReference** 選項。
 
-#### <a name="verify-every-dependency-compatibility-in-net-core"></a>確認 .NET Core 中的每項相依性相容性
+#### <a name="verify-every-dependency-compatibility-in-net-core"></a>確認 .NET Core 中的每個相依性相容性
 
-遷移套件參考之後，您必須檢查每個參考的相容性。 您可以探索應用程式在[nuget.org](https://www.nuget.org/)上使用的每個 NuGet 套件的相依性。如果封裝有 .NET Standard 相依性，則它會在 .NET Core 上使用，因為 .NET Core 3.1[支援](../../standard/net-standard.md#net-implementation-support)所有版本的 .NET Standard。 下圖顯示封裝的相依性 `Castle.Windsor` ：
+遷移封裝參考之後，您必須檢查每個參考的相容性。 您可以探索應用程式在 [nuget.org](https://www.nuget.org/)上使用的每個 NuGet 套件的相依性。如果封裝有 .NET Standard 相依性，則它將會在 .NET Core 上運作，因為 .NET Core 3.1 [支援](../../standard/net-standard.md#net-implementation-support) 所有版本的 .NET Standard。 下圖顯示套件的相依性 `Castle.Windsor` ：
 
-![Castle Windsor 套件的 NuGet 相依性螢幕擷取畫面](./media/example-migration-core/nuget-dependencies.png)
+![Castle. Windsor 套件之 NuGet 相依性的螢幕擷取畫面](./media/example-migration-core/nuget-dependencies.png)
 
-若要檢查套件相容性，您可以使用工具 <https://fuget.org> 來提供版本和相依性的更詳細資訊。
+若要檢查套件相容性，您可以使用 <https://fuget.org> 提供更詳細的版本和相依性相關資訊的工具。
 
-可能是因為專案參考了不支援 .NET Core 的舊版套件，但您可能會發現支援它的較新版本。 因此，將套件更新為較新版本通常是很好的建議。 不過，您應該考慮更新封裝版本可能會引進一些重大變更，強制您更新程式碼。
+可能是專案參考了不支援 .NET Core 的較舊套件版本，但您可能會發現支援它的較新版本。 因此，將套件更新為較新版本通常是很好的建議。 不過，您應該考慮更新套件版本可能會導致某些可能會強制您更新程式碼的重大變更。
 
-如果找不到相容的版本，會發生什麼事？ 如果您因為這些重大變更而不想更新套件的版本，該怎麼做？ 別擔心，因為可能會相依于 .NET Core 應用程式中 .NET Framework 的封裝。 別忘了測試，因為如果外部封裝呼叫的 API 無法在 .NET Core 上使用，它可能會造成執行階段錯誤。 當您使用的舊套件不會更新，而且您可以直接將其重新置放至 .NET Core 上的工作時，這非常適合。
+如果找不到相容的版本，會發生什麼事？ 如果您因為這些重大變更而不想更新套件的版本，該怎麼辦？ 別擔心，因為可以依賴 .NET Core 應用程式中 .NET Framework 套件。 別忘了大量測試，因為如果外部封裝呼叫的 API 無法在 .NET Core 上使用，它可能會造成執行階段錯誤。 當您使用的舊套件不會更新，而且您可以直接將它重定為在 .NET Core 上運作時，這就很好用。
 
-#### <a name="check-for-api-compatibility"></a>檢查 API 相容性
+#### <a name="check-for-api-compatibility"></a>檢查是否有 API 相容性
 
-由於 .NET Framework 和 .NET Core 中的 API 介面很類似，但並不完全相同，因此您必須檢查哪些 Api 可在 .NET Core 上使用，哪些則不是。 您可以使用 .NET 可攜性分析器工具來呈現 .NET Core 上不存在的 Api。 它會查看您應用程式的二進位層級、解壓縮所有呼叫的 Api，然後列出您的目標 framework 無法使用的 Api （在此案例中為 .NET Core 3.1）。
+由於 .NET Framework 和 .NET Core 中的 API 介面類別似但不完全相同，因此您必須檢查哪些 Api 可在 .NET Core 上使用，而不是。 您可以使用 .NET 可攜性分析器工具來呈現 .NET Core 上所使用的 Api。 它會查看您應用程式的二進位層級，並解壓縮所有呼叫的 Api，然後列出在此案例中 ( .NET Core 3.1 的目標 framework 上無法使用的 Api) 。
 
-您可以在下列位置找到有關此工具的詳細資訊：
+您可以在下列位置找到此工具的詳細資訊：
 
 <https://docs.microsoft.com/dotnet/standard/analyzers/portability-analyzer>
 
-這項工具有一個有趣的地方，那就是它只會從您自己的程式碼中呈現差異，而不是從外部套件（無法變更）的程式碼來呈現。 請記住，您應該已更新大部分的封裝，使其可與 .NET Core 搭配使用。
+這項工具的有趣之處在于，它只會顯示來自您自己程式碼的差異，而不是來自外部套件的程式碼，您無法變更這些差異。 請記住，您應該已更新大部分的封裝，才能讓它們與 .NET Core 搭配使用。
 
-### <a name="migrate-project-file"></a>遷移專案檔案
+### <a name="migrate-project-file"></a>遷移專案檔
 
 #### <a name="create-the-new-net-core-project"></a>建立新的 .NET Core 專案
 
-在大部分的情況下，您會想要將現有的專案更新為新的 .NET Core 格式。 不過，您也可以建立新的專案，同時維護舊的專案。 更新舊專案的主要缺點是您遺失了設計工具支援，這對您而言可能很重要。 如果您想要繼續使用設計工具，您必須同時建立新的 .NET Core 專案與舊的，並共用資產。 如果您需要修改設計工具中的 UI 專案，可以切換到舊的專案來執行這項操作。 而且，由於資產已連結，因此也會在 .NET Core 專案中更新。
+在大部分的情況下，您會想要將現有的專案更新為新的 .NET Core 格式。 不過，您也可以建立新的專案，同時保留舊專案。 更新舊專案的主要缺點是您遺失了設計工具支援，這對您來說可能很重要。 如果您想要繼續使用設計工具，您必須同時建立新的 .NET Core 專案與舊專案，並共用資產。 如果您需要修改設計工具中的 UI 元素，您可以切換到舊的專案來進行這項作業。 而且，因為資產已連結，所以它們也會在 .NET Core 專案中更新。
 
-.NET Core 的[SDK 樣式專案](../../core/project-sdk/msbuild-props.md)比 .NET Framework 的專案格式簡單許多。 除了先前提到的專案以外 `PackageReference` ，您不需要執行其他動作。 新的專案格式[預設](../../core/tools/csproj.md#default-compilation-includes-in-net-core-projects)會包含特定的副檔名（例如 `.cs` 和檔案 `.xaml` ），而不需要將它們明確包含在專案檔中。
+適用于 .NET Core 的 [SDK 樣式專案](../../core/project-sdk/msbuild-props.md) 比 .NET Framework 的專案格式來得簡單許多。 除了先前提及的專案之外 `PackageReference` ，您不需要再做更多工作。 新的專案格式 [預設](../../core/tools/csproj.md#default-compilation-includes-in-net-core-projects)包含特定的副檔名，例如和檔案 `.cs` `.xaml` ，而不需要將它們明確包含在專案檔中。
 
 #### <a name="assemblyinfo-considerations"></a>Assembly.info 考慮
 
-屬性會在 .NET Core 專案上自動產生。 如果專案包含*AssemblyInfo.cs*檔案，定義將會重複，這會導致編譯衝突。 您可以將下列專案新增至 .NET Core 專案檔，以刪除較舊的*AssemblyInfo.cs*檔案或停用自動產生：
+屬性是在 .NET Core 專案上自動產生的。 如果專案包含 *AssemblyInfo.cs* 檔案，將會複製定義，而這會導致編譯衝突。 您可以在 .NET Core 專案檔中新增下列專案，以刪除較舊的 *AssemblyInfo.cs* 檔案或停用自動產生：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -81,77 +81,77 @@ ms.locfileid: "84144267"
 
 #### <a name="resources"></a>資源
 
-內嵌資源會自動包含，但資源並不會，因此您需要將資源遷移至新的專案檔。
+內嵌的資源會自動包含，但是資源不是，因此您需要將資源遷移至新的專案檔。
 
 #### <a name="package-references"></a>套件參考
 
-使用 [將**PackageReference 遷移至**] 選項，您可以輕鬆地將外部套件參考移至先前所述的新格式。
+您可以使用 [將 **packages.config 遷移至 PackageReference** ] 選項，輕鬆地將外部套件參考移至新的格式，如先前所述。
 
 #### <a name="update-package-references"></a>更新套件參考
 
-更新您發現相容的套件版本，如上一節所示。
+將您找到的套件版本更新為相容，如上一節所示。
 
 ### <a name="fix-the-code-and-build"></a>修正程式碼和組建
 
-#### <a name="microsoftwindowscompatibility"></a>Microsoft。相容性
+#### <a name="microsoftwindowscompatibility"></a>Microsoft 的相容性
 
-如果您的應用程式相依于無法在 .NET Core 上使用的 Api （例如登錄、Acl 或 WCF），您就必須包含該套件的參考， `Microsoft.Windows.Compatibility` 才能新增這些 Windows 特定的 api。 它們適用于 .NET Core，但不包含在跨平臺的情況。
+如果您的應用程式相依于 .NET Core 上無法使用的 Api （例如登錄、Acl 或 WCF），則您必須包含套件的參考， `Microsoft.Windows.Compatibility` 以新增這些 Windows 特定的 api。 它們適用于 .NET Core，但不會包含，因為它們不是跨平臺。
 
-有一個稱為 API 分析器（）的工具 <https://docs.microsoft.com/dotnet/standard/analyzers/api-analyzer> ，可協助您識別與您的程式碼不相容的 api。
+有一個稱為 API 分析器的工具 (<https://docs.microsoft.com/dotnet/standard/analyzers/api-analyzer>) ，可協助您識別與您的程式碼不相容的 api。
 
 #### <a name="use-if-directives"></a>使用 \# if 指示詞
 
-如果以 .NET Framework 和 .NET Core 為目標時，您需要不同的執行路徑，您應該使用編譯常數。 將一些 if 指示詞新增 \# 至您的程式碼，以針對兩個目標保留相同的程式碼基底。
+如果您在以 .NET Framework 和 .NET Core 為目標時需要不同的執行路徑，您應該使用編譯常數。 將某些 if 指示詞新增 \# 至您的程式碼，以保持兩個目標的相同程式碼基底。
 
-#### <a name="technologies-not-available-on-net-core"></a>無法在 .NET Core 上使用的技術
+#### <a name="technologies-not-available-on-net-core"></a>.NET Core 上無法使用的技術
 
-某些技術無法在 .NET Core 上使用，例如：
+有些技術無法在 .NET Core 上使用，例如：
 
 * AppDomain
 * 遠端
 * 程式碼存取安全性
 * WCF 伺服器
-* Windows 工作流程
+* Windows Workflow
 
-這就是為什麼當您在應用程式中使用這些技術時，您需要找出其更換的原因。 如需詳細資訊，請參閱[.Net Core 上無法使用的 .NET Framework 技術](../../core/porting/net-framework-tech-unavailable.md)文章。
+這就是為什麼當您在應用程式中使用這些技術時，需要找出這些技術的取代。 如需詳細資訊，請參閱 [.Net Core 上無法使用的 .NET Framework 技術](../../core/porting/net-framework-tech-unavailable.md) 文章。
 
 #### <a name="regenerate-autogenerated-clients"></a>重新產生自動產生的用戶端
 
-如果您的應用程式使用自動產生的程式碼（例如 WCF 用戶端），您可能需要重新產生此程式碼，以 .NET Core 為目標。 有時候，您可以找到一些遺漏的參考，因為它們可能不會包含為預設 .NET Core 元件集的一部分。 使用之類的工具 <https://apisof.net/> ，您可以輕鬆地找出遺漏參考所在的元件，並從 NuGet 新增。
+如果您的應用程式使用自動產生的程式碼（例如 WCF 用戶端），您可能需要重新產生此程式碼，以 .NET Core 為目標。 有時候，您可以找到一些遺漏的參考，因為它們可能不會包含在預設的 .NET Core 元件集內。 您可以使用類似的工具 <https://apisof.net/> ，輕鬆地找出遺漏參考所在的元件，並從 NuGet 新增該元件。
 
-#### <a name="rolling-back-package-versions"></a>回復封裝版本
+#### <a name="rolling-back-package-versions"></a>正在回復套件版本
 
-一般的規則是，我們先前已指出您會更有效地更新每個套件版本，以與 .NET Core 相容。 不過，您可以發現，目標為更新且相容的元件版本，只是不會付費。 如果無法接受變更的成本，您可以考慮將封裝版本保留在 .NET Framework 上。 雖然它們可能不是以 .NET Core 為目標，但除非呼叫一些不支援的 Api，否則它們應該會正常運作。
+一般來說，我們先前已指出您可以更妥善地更新每個單一套件版本，使其與 .NET Core 相容。 不過，您可以找到以更新版本與相容版本為目標的元件，而不需要支付任何費用。 如果無法接受變更的成本，您可以考慮將封裝版本保留在 .NET Framework 上的版本。 雖然它們可能不是以 .NET Core 為目標，但它們應該會正常運作，除非它們呼叫一些不支援的 Api。
 
 ### <a name="run-and-test"></a>執行和測試
 
-一旦您的應用程式建立時未發生任何錯誤，您可以藉由測試每項功能來開始進行遷移的最後一個步驟。
+當您的應用程式在建立時沒有錯誤，您可以藉由測試每項功能來開始進行遷移的最後一個步驟。
 
-在最後一個步驟中，您可以根據應用程式的複雜性和您所使用的相依性和 Api，找到幾個不同的問題。
+在最後一個步驟中，您可以根據應用程式的複雜度，以及您所使用的相依性和 Api，找到幾個不同的問題。
 
-例如，如果您使用設定檔（*app.config*），您可能會在執行時間發現一些錯誤，例如不存在的設定區段。 使用 `Microsoft.Extensions.Configuration` NuGet 套件應該會修正該錯誤。
+例如，如果您使用設定檔 (*app.config*) ，您可能會在執行時間發現某些錯誤，例如不存在的設定區段。 使用 `Microsoft.Extensions.Configuration` NuGet 套件應該可修正該錯誤。
 
-錯誤的另一個原因是使用 `BeginInvoke` 和方法， `EndInvoke` 因為 .net Core 不支援它們。 它們在 .NET Core 上不受支援，因為它們相依于不存在於 .NET Core 上的遠端處理。 若要解決此問題，請嘗試使用 `await` 關鍵字（如果有的話）或 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法。
+錯誤的另一個原因是使用 `BeginInvoke` 和方法， `EndInvoke` 因為它們不受 .net Core 支援。 .NET Core 不支援它們，因為它們相依于不存在於 .NET Core 的遠端處理。 若要解決此問題，請嘗試使用 `await` 關鍵字 (（如果有) 或 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法）。
 
-您可以使用相容性分析器，讓您識別程式碼中的 Api 和程式碼模式，這可能會在執行時間使用 .NET Core 造成問題。 移至 <https://github.com/dotnet/platform-compat> 並在您的專案上使用 .NET API 分析器。
+您可以使用相容性分析器，來識別程式碼中的 Api 和程式碼模式，其可能會在執行時間使用 .NET Core 造成問題。 移至 <https://github.com/dotnet/platform-compat> 並在您的專案上使用 .NET API 分析器。
 
 ## <a name="migrating-a-windows-forms-application"></a>遷移 Windows Forms 應用程式
 
-為了展示 Windows Forms 應用程式的完整整合程式，我們選擇遷移提供的 eShop 範例應用程式 <https://github.com/dotnet-architecture/eShopModernizing/tree/master/eShopLegacyNTier/src/eShopWinForms> 。 您可以在找到完整的遷移結果 <https://github.com/dotnet-architecture/eShopModernizing/tree/master/eShopModernizedNTier/src/eShopWinForms> 。
+為了展示 Windows Forms 應用程式的完整遷移程式，我們選擇遷移中提供的 eShop 範例應用程式 <https://github.com/dotnet-architecture/eShopModernizing/tree/master/eShopLegacyNTier/src/eShopWinForms> 。 您可以在中找到遷移的完整結果 <https://github.com/dotnet-architecture/eShopModernizing/tree/master/eShopModernizedNTier/src/eShopWinForms> 。
 
-此應用程式會顯示產品目錄，並可讓使用者流覽、篩選及搜尋產品。 從架構的觀點來看，應用程式依賴外部 WCF 服務，做為後端資料庫的外觀。
+此應用程式會顯示產品目錄，並可讓使用者流覽、篩選和搜尋產品。 從架構的觀點來看，應用程式依賴作為後端資料庫外觀的外部 WCF 服務。
 
-您可以在下圖中看到主要應用程式視窗：
+您可以在下圖中看到主要的應用程式視窗：
 
 ![主應用程式視窗](./media/example-migration-core/main-application-window.png)
 
-如果您開啟 *.csproj*專案檔，您會看到類似如下的內容：
+如果您開啟 *.csproj* 專案檔，則會看到如下的內容：
 
 ![.Csproj 檔案內容的螢幕擷取畫面](./media/example-migration-core/csproj-file.png)
 
-如先前所述，.NET Core 專案有更精簡的樣式，而且您需要將專案結構遷移至新的 .NET Core SDK 樣式。
+如先前所述，.NET Core 專案有更精簡的樣式，而您需要將專案結構遷移至新的 .NET Core SDK 樣式。
 
-在 [方案總管中，以滑鼠右鍵按一下 [Windows Forms] 專案，然後選取 **[卸載專案**  >  **編輯**]。
+在 [方案總管中，以滑鼠右鍵按一下 Windows Forms 專案，然後選取 **[卸載專案**  >  **編輯**]。
 
 現在您可以更新 .csproj 檔案。 您將刪除整個內容，並將它取代為下列程式碼：
 
@@ -166,84 +166,84 @@ ms.locfileid: "84144267"
 </Project>
 ```
 
-儲存並重載專案。 您現在已完成更新專案檔，且專案是以 .NET Core 為目標。
+儲存並重載專案。 您現在已完成更新專案檔案，且專案的目標為 .NET Core。
 
-如果您在此時編譯專案，您會發現一些與 WCF 用戶端參考相關的錯誤。 由於這段程式碼會自動產生，因此您必須將它重新產生為目標 .NET Core。
+如果您在此時編譯專案，您會發現一些與 WCF 用戶端參考相關的錯誤。 因為此程式碼會自動產生，所以您必須將它重新產生為以 .NET Core 為目標。
 
 ![Visual Studio 上編譯錯誤的螢幕擷取畫面](./media/example-migration-core/winforms-compilation-errors.png)
 
-刪除*Reference.cs*檔案，並產生新的服務用戶端。
+刪除 *Reference.cs* 檔案並產生新的服務用戶端。
 
-在**已連線的服務**上按一下滑鼠右鍵，然後選取 [**加入已連接服務**] 選項。
+以滑鼠右鍵按一下 **已連線的服務** ，然後選取 [ **加入已連接服務** ] 選項。
 
 ![已選取 [加入已連接服務] 選項之 [已連線的服務] 功能表的螢幕擷取畫面](./media/example-migration-core/add-connected-service.png)
 
-[已連線的服務] 視窗隨即開啟。 選取 [ **MICROSOFT WCF Web 服務**] 選項。
+已連線的服務] 視窗隨即開啟。 選取 [ **MICROSOFT WCF Web 服務** ] 選項。
 
-![[已連線的服務] 視窗的螢幕擷取畫面](./media/example-migration-core/connected-services-window.png)
+![已連線的服務視窗的螢幕擷取畫面](./media/example-migration-core/connected-services-window.png)
 
-如果您的 WCF 服務與本範例中的相同，則您可以選取 [**探索**] 選項，而不是指定 [服務 URL]。
+如果您在此範例中的相同方案中有 WCF 服務，您可以選取 [ **探索** ] 選項，而不是指定服務 URL。
 
-![[設定 WCF Web 服務參考] 視窗的螢幕擷取畫面](./media/example-migration-core/configure-wcf-reference.png)
+![[設定 WCF Web Service Reference] 視窗的螢幕擷取畫面](./media/example-migration-core/configure-wcf-reference.png)
 
-一旦找到服務，此工具就會反映服務所執行的 API 合約。 將命名空間的名稱變更為，如下 `eShopServiceReference` 圖所示：
+一旦找到服務之後，此工具就會反映服務所執行的 API 合約。 將命名空間的名稱變更如下 `eShopServiceReference` 圖所示：
 
-![螢幕擷取畫面 API 合約和命名空間已變更](./media/example-migration-core/api-contract-namespace.png)
+![API 合約和命名空間已變更的螢幕擷取畫面](./media/example-migration-core/api-contract-namespace.png)
 
-選取 [**完成]** 按鈕。 一段時間後，您會看到產生的程式碼。
+選取 [ **完成]** 按鈕。 經過一段時間之後，您會看到產生的程式碼。
 
 您應該會看到三個自動產生的檔案：
 
-1. *消費者入門*： GitHub 的連結，可提供 WCF 的一些相關資訊。
-2. *ConnectedService*：用來連接到服務的設定參數。
+1. *消費者入門*： GitHub 的連結，可提供 WCF 的一些資訊。
+2. *ConnectedService.json*：用來連接到服務的設定參數。
 3. *Reference.cs*：實際的 WCF 用戶端程式代碼。
 
-![[方案總管] 視窗的螢幕擷取畫面，其中包含三個自動產生的檔案](./media/example-migration-core/autogenerated-files.png)
+![包含三個自動產生檔案之方案總管視窗的螢幕擷取畫面](./media/example-migration-core/autogenerated-files.png)
 
-如果您重新編譯，您會在*Helper*資料夾內看到許多來自 *.cs*檔案的錯誤。 此資料夾存在於 .NET Framework 版本中，但不包含在舊的 *.csproj*中。 但使用新的 SDK 樣式專案時，預設會包含專案檔位置底下的每個程式碼檔案。 也就是說，新的 .NET Core 專案會嘗試編譯*Helper*資料夾內的檔案。 因為不需要該資料夾，所以您可以放心地將它刪除。
+如果您再次編譯，您將會看到來自協助*程式資料夾內* *.cs*檔案的許多錯誤。 此資料夾存在於 .NET Framework 版本中，但不包含在舊的 *.csproj*中。 但在新的 SDK 樣式專案中，預設會包含專案檔位置底下的每個程式碼檔案。 也就是說，新的 .NET Core 專案會嘗試編譯 *Helper* 資料夾內的檔案。 因為不需要該資料夾，所以您可以安全地將其刪除。
 
-如果您再次編譯專案並加以執行，您就不會看到產品映射。 問題在於，檔案的路徑已稍微變更。 若要修正此問題，您需要在路徑中新增另一個深度層級，並在檔案中更新 `CatalogView.cs` 該行：
+如果您重新編譯專案並加以執行，您將不會看到產品影像。 問題在於現在檔案的路徑稍有變更。 若要修正此問題，您必須在路徑中新增另一個深度層級，並在檔案中更新 `CatalogView.cs` ：
 
 ```csharp
 string image_name = Environment.CurrentDirectory + "\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;
 ```
 
-to
+至
 
 ```csharp
 string image_name = Environment.CurrentDirectory + "\\..\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;
 ```
 
-在這種變更之後，您可以檢查應用程式是否會如預期般在 .NET Core 上啟動並執行。
+在此變更之後，您可以檢查應用程式在 .NET Core 上啟動並如預期般執行。
 
 ## <a name="migrating-a-wpf-application"></a>遷移 WPF 應用程式
 
-我們將使用 `Shop.ClassicWPF` 範例應用程式來執行遷移。 下圖顯示應用程式在遷移前的螢幕擷取畫面：
+我們將使用 `Shop.ClassicWPF` 範例應用程式來執行遷移。 下圖顯示在遷移之前的應用程式螢幕擷取畫面：
 
-![遷移前的範例應用程式](./media/example-migration-core/app-before-migration.png)
+![遷移之前的範例應用程式](./media/example-migration-core/app-before-migration.png)
 
-此應用程式會使用本機 SQL Server Express 資料庫來保存產品目錄資訊。 這個資料庫是直接從 WPF 應用程式存取。
+此應用程式會使用本機 SQL Server Express 資料庫來保存產品目錄資訊。 您可以直接從 WPF 應用程式存取此資料庫。
 
-首先，您必須將 *.csproj*檔案更新為 .net Core 應用程式所使用的新 SDK 樣式。 您將遵循 Windows Forms 遷移中所述的相同步驟：您將會卸載專案、開啟 *.csproj*檔案、更新其內容，然後重載專案。
+首先，您必須將 *.csproj* 檔案更新為 .net Core 應用程式所使用的新 SDK 樣式。 您將遵循 Windows Forms 遷移中所述的相同步驟：您將卸載專案、開啟 *.csproj* 檔案、更新其內容，然後重載專案。
 
-在此情況下，請刪除 *.csproj*檔案的所有內容，並取代為下列程式碼：
+在此情況下，請刪除 *.csproj* 檔案的所有內容，並將它取代為下列程式碼：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <UseWPF>true</UseWPF>
+        <UseWpf>true</UseWpf>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     </PropertyGroup>
 </Project>
 ```
 
-如果您重載專案並加以編譯，您會收到下列錯誤：
+如果您重載專案並加以編譯，您將會收到下列錯誤：
 
 ![Visual Studio 上編譯錯誤的螢幕擷取畫面](./media/example-migration-core/wpf-compilation-error.png)
 
-由於您已刪除所有 *.csproj*內容，因此您遺失了舊專案中的專案參考規格。 您只需要將這一行新增到 *.csproj*檔案，就可以包含專案參考回來：
+由於您已刪除所有 *.csproj* 內容，因此您已遺失存在於舊專案中的專案參考規格。 您只需要將這一行新增至 *.csproj* 檔案，就可以包含專案參考：
 
 ```xml
 <ItemGroup>
@@ -251,11 +251,11 @@ string image_name = Environment.CurrentDirectory + "\\..\\..\\..\\Assets\\Images
 <ItemGroup>
 ```
 
-您也可以在 [相依性] 節點上按一下滑鼠右鍵，然後選取 [**加入專案參考** **]** ，讓 Visual Studio 協助您。 選取方案中的專案，然後按一下 **[確定]**：
+您也可以在 [相依性] 節點上按一下滑鼠右鍵，然後選取 [**加入專案參考** **]** ，讓 Visual Studio 協助您。 從方案中選取專案，然後按一下 **[確定]**：
 
-![[參考管理員] 對話方塊的螢幕擷取畫面，其中已選取 eShop SqlProvider 專案](./media/example-migration-core/reference-manager.png)
+![已選取 eShop SqlProvider 專案的 [參考管理員] 對話方塊螢幕擷取畫面](./media/example-migration-core/reference-manager.png)
 
-一旦您加入遺漏的專案參考，應用程式就會如預期般在 .NET Core 上進行編譯和執行。
+當您新增遺漏的專案參考之後，應用程式會在 .NET Core 上以預期的方式編譯和執行。
 
 >[!div class="step-by-step"]
 >[上一個](windows-migration.md) 

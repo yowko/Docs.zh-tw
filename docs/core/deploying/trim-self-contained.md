@@ -1,32 +1,32 @@
 ---
-title: 修剪自包含應用程式
-description: 瞭解如何修剪自包含應用以減小其大小。 .NET Core 將運行時與自包含發佈的應用捆綁在一起,並且通常包含更多運行時,因此有必要這樣做。
+title: 修剪獨立的應用程式
+description: 瞭解如何修剪獨立的應用程式，以縮減其大小。 .NET Core 會將執行時間與獨立發行的應用程式組合，而且通常會包含更多執行時間，因此是必要的。
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: bb8ac88c5e16b7fd20a7670e4ad76dbe4b44da1b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 2bb0f03994468bbad3096ebf0b141bc1f47b867e
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242896"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656712"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>修剪獨立式部署及可執行檔
 
-發佈應用程式自包含時,.NET Core 運行時與應用程式捆綁在一起。 這種捆綁為打包的應用程式增加了大量內容。 在部署應用程式時,大小通常是一個重要因素。 保持包應用程式的大小盡可能小通常是應用程式開發人員的目標。
+從 .NET 開始， [framework 相依的部署模型](index.md#publish-framework-dependent) 是最成功的部署模型。 在此案例中，應用程式開發人員只會將應用程式和協力廠商元件組合在一起，並預期在用戶端電腦上可以使用 .NET 執行時間和架構程式庫。 此部署模型也會繼續成為 .NET Core 中的主應用程式，但在某些情況下，framework 相依的模型不是最佳的。 替代方式是發佈獨立式 [應用程式](index.md#publish-self-contained)，其中 .net Core 執行時間和架構會與應用程式和協力廠商元件一起配套。
 
-根據應用程式的複雜性,運行應用程式只需要運行時的子集。 這些未使用的運行時部分是不必要的,可以從打包的應用程式修剪。
+Trim 獨立部署模型是獨立部署模型的特製化版本，已優化以減少部署大小。 將部署大小降至最低是某些用戶端案例的重要需求，例如 Blazor 應用程式。 視應用程式的複雜度而定，執行應用程式只需要一部分的架構元件。 這些未使用的程式庫部分是不必要的，而且可以從封裝的應用程式中修剪。 但是，應用程式的組建時間分析可能會在執行時間造成失敗，因為無法可靠地分析各種有問題的程式碼模式 (主要是以反映使用) 為中心。 因為無法保證可靠性，所以會以預覽功能的形式提供此部署模型。 組建時間分析引擎會針對有問題的程式碼模式開發人員提供警告，並預期會修正這些程式碼模式。 若有可能，建議您使用符合相同需求的程式碼，將應用程式中的任何執行時間反映相依性移至組建時間。
 
-修剪功能的工作原理是檢查應用程式二進位檔,以發現和生成所需運行時程式集的圖形。 排除未引用的剩餘運行時程式集。
+您可以透過 TrimMode 設定應用程式的修剪模式，預設 (`copyused`) 將應用程式中使用的元件組合。 Blazor WebAssembly 應用程式會使用更積極的模式 (`link`) ，以在元件中修剪未使用的程式碼。 Trim 分析警告會提供無法進行完整相依性分析的程式碼模式相關資訊。 預設會隱藏這些警告，並可將旗標設定 `SuppressTrimAnalysisWarnings` 為 false 來開啟這些警告。 您可以在 [ [ILLinker] 頁面](https://github.com/mono/linker/blob/master/docs/illink-options.md)上找到有關可用之修剪選項的詳細資訊。
 
 > [!NOTE]
-> 修剪是 .NET Core 3.1 中的實驗功能,_僅適用於_自包含發布的應用程式。
+> 修剪是 .NET Core 3.1、5.0 中的實驗性功能， _僅_ 適用于獨立發行的應用程式。
 
-## <a name="prevent-assemblies-from-being-trimmed"></a>防止修剪裝配體
+## <a name="prevent-assemblies-from-being-trimmed"></a>防止元件遭到修剪
 
-在某些情況下,修剪功能將無法檢測引用。 例如,當應用程式或應用程式引用的庫在運行時程式集上使用反射時,不會直接引用該程式集。 修剪不知道這些間接引用,並且會將庫從已發佈的資料夾中排除。
+有些情況下，修剪功能將無法偵測到參考。 例如，當您的應用程式或應用程式所參考的程式庫在執行時間元件上使用反映時，不會直接參考該元件。 修剪不知道這些間接參考，而會將程式庫從已發行的資料夾中排除。
 
-當代碼通過反射間接引用程式集時,可以防止使用`<TrimmerRootAssembly>`設置修剪程式集。 下面的範例簡報如何防止修剪`System.Security`稱為 程式集的程式集:
+當程式碼透過反映間接參考元件時，您可以防止元件使用設定進行修剪 `<TrimmerRootAssembly>` 。 下列範例示範如何防止元件稱為「元件」進行 `System.Security` 修剪：
 
 ```xml
 <ItemGroup>
@@ -34,57 +34,69 @@ ms.locfileid: "81242896"
 </ItemGroup>
 ```
 
-## <a name="trim-your-app---cli"></a>修剪你的應用程式 - CLI
+## <a name="trim-your-app---cli"></a>修剪您的應用程式-CLI
 
-使用[dotnet 發佈](../tools/dotnet-publish.md)命令修剪應用程式。 發佈應用時,請設置以下三個設置:
+使用 [dotnet publish](../tools/dotnet-publish.md) 命令修剪您的應用程式。 當您發佈應用程式時，請設定下列三個設定：
 
-- 以自包含身份發佈:`--self-contained true`
-- 關閉單檔:`-p:PublishSingleFile=false`
-- 開啟修剪:`p:PublishTrimmed=true`
+- 發佈為獨立： `--self-contained true`
+- 啟用修剪： `p:PublishTrimmed=true`
 
-下面的範例將 Windows 10 的應用發佈為自包含並修剪輸出。
+下列範例會將適用于 Windows 的應用程式發佈為獨立的應用程式，並修剪輸出。
 
-```dotnetcli
-dotnet publish -c Release -r win10-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=true
+```xml
+<ItemGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>true</PublishTrimmed>
+</ItemGroup>
 ```
 
-有關詳細資訊,請參閱發佈[.NET 核心應用 ,以及 .NET 核心 CLI](deploy-with-cli.md)。
+下列範例會在積極的修剪模式下發布應用程式，而未使用的程式碼遷移元件將會被修剪，並啟用修剪器警告。
 
-## <a name="trim-your-app---visual-studio"></a>修剪你的應用程式 - 視覺工作室
+```xml
+<ItemGroup>
+    <TrimMode>link</TrimMode>
+    <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+</ItemGroup>
+```
 
-Visual Studio 創建可重用的發佈配置檔,以控制應用程式的發佈方式。
+如需詳細資訊，請參閱 [使用 .NET Core CLI 發佈 .Net Core 應用程式](deploy-with-cli.md)。
 
-01. 在 **「解決方案資源管理員」** 窗格中,右鍵單擊要發布的專案。 選擇 **"發佈..."**
+## <a name="trim-your-app---visual-studio"></a>修剪您的應用程式-Visual Studio
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="解決方案資源管理器,右鍵單擊功能表突出顯示"發佈"選項。":::
+Visual Studio 會建立可重複使用的發行設定檔，以控制您的應用程式發佈方式。
 
-    如果還沒有發佈設定檔,請按照說明創建一個設定檔,然後選擇 **「資料夾**目標類型」。
+01. 在 [ **方案總管** ] 窗格中，以滑鼠右鍵按一下您要發行的專案。 選取 [ **發佈 ...**]。
+
+    :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="使用醒目提示 [發佈] 選項的右鍵功能表方案總管。":::
+
+    如果您還沒有發行設定檔，請遵循指示來建立一個設定檔，並選擇 [ **資料夾** 目標] 類型。
 
 01. 選擇 [編輯]****。
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="可視化工作室發佈配置檔與編輯按鈕。":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Visual studio 以編輯按鈕發行設定檔。":::
 
-01. 在 **「設定檔設定」對話框**中,設定以下選項:
+01. 在 [ **設定檔設定** ] 對話方塊中，設定下列選項：
 
-    - 將**部署模式**設定為**自包含**。
-    - 將**目標運行時**設置為要發佈到的平臺。
-    - 選擇 **「修剪未使用的裝配體(在預覽中)**
+    - 設定**獨立**的**部署模式**。
+    - 將 **目標運行** 時間設定為您想要發佈的目標平臺。
+    - **在 [預覽]) 中選取 [修剪未使用的元件 (**]。
 
-    選擇 **「儲存**」以儲存設定並傳回到 **「發布」** 對話方塊。
+    選擇 [ **儲存** ] 以儲存設定，並返回 [ **發佈** ] 對話方塊。
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="設定檔設定對話框,突出顯示了部署模式、目標運行時和修剪未使用的程式集選項。":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="醒目提示具有部署模式、目標執行時間和修剪未使用元件選項的 [設定檔設定] 對話方塊。":::
 
-01. 選擇 **「發布」** 以發佈已修剪的應用。
+01. 選擇 [ **發行** ] 以發行已修剪的應用程式。
 
-有關詳細資訊,請參閱發佈[.NET 核心應用與可視化工作室](deploy-with-vs.md)。
+如需詳細資訊，請參閱 [使用 Visual Studio 發佈 .Net Core 應用程式](deploy-with-vs.md)。
 
-## <a name="trim-your-app---visual-studio-for-mac"></a>修剪你的應用程式 - Mac 的視覺化工作室
+## <a name="trim-your-app---visual-studio-for-mac"></a>修剪您的應用程式-Visual Studio for Mac
 
-適用於 Mac 的可視化工作室不提供在發表期間修剪應用的選項。 您需要按照[「修剪應用 - CLI」](#trim-your-app---cli)部分的說明手動發佈。 有關詳細資訊,請參閱發佈[.NET 核心應用 ,以及 .NET 核心 CLI](deploy-with-cli.md)。
+Visual Studio for Mac 不會提供在發佈期間修剪應用程式的選項。 您必須遵循 [ [修剪您的應用程式-CLI](#trim-your-app---cli) ] 區段中的指示，手動發佈。 如需詳細資訊，請參閱 [使用 .NET Core CLI 發佈 .Net Core 應用程式](deploy-with-cli.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [.NET 核心應用程式部署](index.md)。
-- [使用 .NET 核心 CLI 發佈 .NET 核心應用程式](deploy-with-cli.md)。
-- [發布 .NET 核心應用程式與視覺化工作室](deploy-with-vs.md)。
-- [點網發佈命令](../tools/dotnet-publish.md).
+- [.Net Core 應用程式部署](index.md)。
+- [使用 .NET Core CLI 發佈 .Net Core 應用程式](deploy-with-cli.md)。
+- [使用 Visual Studio 發佈 .Net Core 應用程式](deploy-with-vs.md)。
+- [dotnet publish 命令](../tools/dotnet-publish.md)。

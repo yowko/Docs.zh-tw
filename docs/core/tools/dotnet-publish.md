@@ -2,18 +2,18 @@
 title: dotnet publish 命令
 description: Dotnet publish 命令會將 .NET Core 專案或方案發佈至目錄。
 ms.date: 02/24/2020
-ms.openlocfilehash: 64a68c97e01bbf962616b31210889eb23d3734f1
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608285"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656661"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 本文**適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet publish` -將應用程式及其相依性發行至資料夾，以部署至主控系統。
 
@@ -32,7 +32,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 `dotnet publish` 會編譯應用程式，讀取在其專案檔中指定的相依性，然後將產生的一組檔案發行到目錄中。 此輸出包含下列資產：
 
@@ -77,7 +77,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
   * `SOLUTION` 這是方案檔的路徑和檔案名 (*.sln* 副檔名) ，或包含方案檔之目錄的路徑。 如果未指定目錄，則會預設為目前的目錄。 自 .NET Core 3.0 SDK 起提供。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -159,7 +159,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
 - **`-p:PublishTrimmed=true`**
 
-  在發佈獨立可執行檔時，修剪未使用的程式庫，以減少應用程式的部署大小。 如需詳細資訊，請參閱 [修剪獨立部署和可執行檔](../deploying/trim-self-contained.md)。 自 .NET Core 3.0 SDK 起提供。
+  在發佈獨立可執行檔時，修剪未使用的程式庫，以減少應用程式的部署大小。 如需詳細資訊，請參閱 [修剪獨立部署和可執行檔](../deploying/trim-self-contained.md)。 自 .NET Core 3.0 SDK 起提供預覽功能。
 
   建議您在發行設定檔中，而不是在命令列上指定此選項。 如需詳細資訊，請參閱 [MSBuild](#msbuild)。
 
@@ -229,12 +229,12 @@ dotnet publish -p:PublishProfile=FolderProfile
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Core 應用程式發行總覽](../deploying/index.md)
 - [使用 .NET Core CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)
 - [目標架構](../../standard/frameworks.md)
-- [ (RID) 目錄中的執行時間識別碼](../rid-catalog.md)
+- [執行階段識別碼 (RID) 目錄](../rid-catalog.md)
 - [使用 macOS Catalina 公證](../install/macos-notarization-issues.md)
 - [已發佈應用程式的目錄結構](/aspnet/core/hosting/directory-structure)
 - [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)

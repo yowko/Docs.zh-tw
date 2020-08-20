@@ -4,12 +4,12 @@ description: 了解 C# 索引子，以及其如何實作索引的屬性，而索
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 1369740404c500d8b44b4706959bf4640c26aa2d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394690"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656107"
 ---
 # <a name="indexers"></a>索引子
 
@@ -46,7 +46,7 @@ public int this[string key]
 當您的類型 API 建立一些集合的模型，以供您在其中定義該集合的引數時，您會在此類型中定義「索引子」**。 您的索引子不一定會直接對應至屬於 .NET Core Framework 的集合類型。 您的類型除了建立集合的模型之外，可能還有其他職責。
 索引子可讓您提供符合類型抽象概念的 API，而不會公開有關該抽象概念的值如何儲存或計算的內部詳細資料。
 
-讓我們逐步解說使用「索引子」** 的一些常見案例。 您可以存取[索引子的範例資料夾](https://github.com/dotnet/samples/tree/master/csharp/indexers)。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+讓我們逐步解說使用「索引子」** 的一些常見案例。 您可以存取[索引子的範例資料夾](https://github.com/dotnet/samples/tree/master/csharp/indexers)。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#view-and-download-samples)。
 
 ### <a name="arrays-and-vectors"></a>陣列和向量
 
@@ -329,4 +329,4 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 ## <a name="summing-up"></a>總結
 
 每當您的類別中有屬性類元素，且該屬性不代表單一值，而代表數值集合 (其中每個項目是由一組引數所識別) 時，就應該建立索引子。 這些引數可唯一識別應參考集合中的哪個項目。
-索引子會擴充[屬性](properties.md)的概念，其中成員的處理方式就像是類別外部的資料項目，但是就像內部的方法一樣。 索引子允許引數在代表一組項目的屬性中尋找單一項目。
+索引子會擴充 [屬性](properties.md)的概念，其中的成員會被視為來自類別外部的資料項目，但就像內部的方法一樣。 索引子允許引數在代表一組項目的屬性中尋找單一項目。

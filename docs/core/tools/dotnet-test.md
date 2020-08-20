@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: e5c0ec3423cf98895b49596633c81861bbcf4878
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557837"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656751"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -38,7 +38,7 @@ dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
 dotnet test -h|--help
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 此 `dotnet test` 命令可用來在指定的解決方案中執行單元測試。 此 `dotnet test` 命令會建立方案，並針對方案中的每個測試專案執行測試主機應用程式。 測試主機會使用測試架構在指定的專案中執行測試，例如： MSTest、NUnit 或 xUnit，並報告每項測試的成功或失敗。 如果所有測試都成功，則測試執行器會傳回 0 作為結束代碼；如果有任何測試失敗，則會傳回 1。
 
@@ -65,7 +65,7 @@ dotnet test -h|--help
 
   如果未指定，則會在目前的目錄中搜尋專案或方案。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
@@ -104,7 +104,7 @@ dotnet test -h|--help
   - 5400s
   - 5400000ms
 
-  如果未使用任何單位 (例如 5400000) ，則會假設值為毫秒。 搭配資料驅動的測試使用時，超時行為取決於所使用的測試介面卡。 若為 xUnit 和 NUnit，則會在每個測試案例之後更新 timeout。 針對 MSTest，會使用 timeout 進行所有 testcases.txt。 使用 netcoreapp 2.1 和更新版本的 Windows，以及 Linux 上的 netcoreapp 3.1 和更新版本都支援此選項。 不支援 macOS。
+  如果未使用任何單位 (例如 5400000) ，則會假設值為毫秒。 搭配資料驅動的測試使用時，超時行為取決於所使用的測試介面卡。 若為 xUnit 和 NUnit，則會在每個測試案例之後更新 timeout。 針對 MSTest，所有測試案例都會使用此超時時間。 使用 netcoreapp 2.1 和更新版本的 Windows，以及 Linux 上的 netcoreapp 3.1 和更新版本都支援此選項。 不支援 macOS。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -179,13 +179,13 @@ dotnet test -h|--help
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱 <xref:Microsoft.Build.Framework.LoggerVerbosity>。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱<xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
 - **`RunSettings`** 參數
 
  在 `RunSettings` "--" 之後，命令列上的最後一個引數會以內嵌的形式傳遞， (記下的空格--) 。 內嵌 `RunSettings` 是指定 `[name]=[value]` 成對的。 空格適用來分隔多個 `[name]=[value]` 組。
 
-  範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
+  範例：`dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
   如需詳細資訊，請參閱 [透過命令列傳遞 .runsettings 引數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
@@ -264,14 +264,14 @@ dotnet test -h|--help
 
 | 運算子            | 函式 |
 | ------------------- | -------- |
-| <code>&#124;</code> | 或者       |
+| <code>&#124;</code> | OR       |
 | `&`                 | AND      |
 
 使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。
 
 如需如何使用選擇性單元測試篩選的詳細資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [架構與目標](../../standard/frameworks.md)
 - [.NET Core 執行時間識別碼 (RID) 目錄](../rid-catalog.md)

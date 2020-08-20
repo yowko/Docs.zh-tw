@@ -4,12 +4,12 @@ description: 了解建置運算式樹狀架構的技術。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c93eb16ebf2ff66dc0162afb6841f2cadfce174e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c153ca2c75738571c81057364390f489d2decb05
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146043"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656146"
 ---
 # <a name="building-expression-trees"></a>組建運算式樹狀架構
 
@@ -164,7 +164,7 @@ BlockExpression body = Expression.Block(
 
 組建階乘函式運算式樹狀結構的程式碼相當長，也更複雜，滿是標籤和 break 陳述式及其他項目，是日常編碼工作想要避免的坑。
 
-我在本節中也更新了訪客程式碼，可瀏覽此運算式樹狀結構中的每個節點，並寫出此範例所建立之節點的相關資訊。 您可以在 dotnet/docs GitHub 存放庫[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)。 建置並執行範例來親自試驗。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+我在本節中也更新了訪客程式碼，可瀏覽此運算式樹狀結構中的每個節點，並寫出此範例所建立之節點的相關資訊。 您可以在 dotnet/docs GitHub 存放庫[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)。 建置並執行範例來親自試驗。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#view-and-download-samples)。
 
 ## <a name="examining-the-apis"></a>檢查 API
 

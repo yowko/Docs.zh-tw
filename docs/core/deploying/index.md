@@ -2,12 +2,12 @@
 title: 應用程式發佈
 description: 瞭解發佈 .NET Core 應用程式的方式。 .NET Core 可以發佈平臺特定或跨平臺應用程式。 您可以將應用程式發佈為獨立或與 framework 相依的應用程式。 每個模式都會影響使用者執行您應用程式的方式。
 ms.date: 04/01/2020
-ms.openlocfilehash: 57889271ce2f210c0838a54bb793aeb3be5c7272
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: f343e184a7ccca66aaf94533b2d0262478f873f4
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608410"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656582"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 應用程式發行總覽
 
@@ -131,8 +131,11 @@ dotnet publish -r linux-x64 --self-contained false
   > [!TIP]
   > 您可以使用 .NET Core [*全球化*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)非變異模式，將 Linux 系統上的部署大小減少約 28 MB。 這會強制您的應用程式將所有文化特性視為不因 [文化](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)特性而異。
 
+  > [!TIP]
+  > 有一 [項預覽修剪功能](trim-self-contained.md) 可進一步減少部署的大小。
+
 - **較難更新 .NET Core 版本**\
-.NET Core 執行時間 (隨您的應用程式散發) 只能透過發行新版的應用程式來進行升級。 您必須負責提供應用程式的更新版本，以取得 .NET Core 執行時間的安全性修補程式。
+.NET Core 執行時間 (隨您的應用程式散發) 只能透過發行新版的應用程式來進行升級。 不過，.NET Core 會在應用程式執行所在的電腦中，視需要更新架構程式庫所需的重大安全性修補程式。 您必須負責進行此安全性修補程式案例的端對端驗證。
 
 ### <a name="examples"></a>範例
 
@@ -148,7 +151,7 @@ dotnet publish -r osx-x64
 dotnet publish -r win-x64
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 .NET Core CLI 部署 .NET Core 應用程式。](deploy-with-cli.md)
 - [使用 Visual Studio 部署 .NET Core 應用程式。](deploy-with-vs.md)

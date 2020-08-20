@@ -4,14 +4,14 @@ description: 遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: c26d3e2e55723fed98f2013fe7131d2b06f910d2
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 4bba8d48b3da7acb643ffa6a08468f40f1b1b415
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415936"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656725"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>藉由探索這些教學課程來瞭解 .NET Core 和 .NET Core SDK 工具
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>探索這些教學課程，以瞭解 .NET Core 和 .NET Core SDK 工具
 
 下列教學課程可用於了解 .NET Core。
 
@@ -28,7 +28,7 @@ ms.locfileid: "86415936"
 
 ## <a name="use-visual-studio-code"></a>使用 Visual Studio Code
 
-如果您想要使用 Visual Studio Code 或其他程式碼編輯器，請選擇這些教學課程。 全部都會使用 CLI 進行 .NET Core 開發工作，因此除了偵錯工具教學課程以外，所有程式碼編輯器都可以使用。
+如果您想要使用 Visual Studio Code 或其他程式碼編輯器，請選擇這些教學課程。 全都使用 CLI 進行 .NET Core 開發工作，因此除了偵錯工具教學課程之外，所有的程式碼編輯器都可以使用。
 
 - [建立主控台應用程式](with-visual-studio-code.md)
 - [對應用程式進行偵錯](debugging-with-visual-studio-code.md)
@@ -41,7 +41,7 @@ ms.locfileid: "86415936"
 
 ## <a name="use-visual-studio-for-mac"></a>使用 Visual Studio for Mac
 
-- [建立主控台應用程式](using-on-mac-vs.md)
+- [建立主控台應用程式](with-visual-studio-mac.md)
 - [建立程式庫，並對其進行單元測試](library-with-visual-studio-mac.md)
 - [安裝並使用套件](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
@@ -49,10 +49,10 @@ ms.locfileid: "86415936"
 
 - [如何建立程式庫](libraries.md)
 - [使用 xUnit 對應用程式進行單元測試](testing-with-cli.md)
-- [使用 c #/VB/F # 搭配 NUnit/xUnit/MSTest 進行單元測試](../testing/index.md)
+- [使用 c #/VB/F # 搭配 NUnit/xUnit/MSTest 的單元測試](../testing/index.md)
 - [使用 Visual Studio 的即時單元測試](/visualstudio/test/live-unit-testing-start)
 - [建立 CLI 的範本](cli-templates-create-item-template.md)
-- [建立和使用適用于 CLI 的工具](../tools/global-tools-how-to-create.md)
+- [建立和使用 CLI 的工具](../tools/global-tools-how-to-create.md)
 - [使用外掛程式建立應用程式](creating-app-with-plugin-support.md)
 
 ## <a name="create-web-apps"></a>建立 Web 應用程式

@@ -7,13 +7,14 @@ helpviewer_keywords:
 - /langversion compiler option [C#]
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
+ms.custom: updateeachrelease
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 408b2fb1f19f872db675321601ebc1b0c921044b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: fd05802008a20267fea54f14bae4c8deb0e21c65
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802936"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656201"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# 編譯器選項)
 
@@ -33,7 +34,7 @@ ms.locfileid: "83802936"
 
 [!INCLUDE [lang-versions-table](../includes/langversion-table.md)]
 
-預設語言版本取決於您應用程式的目標 Framework，以及安裝的 SDK 或 Visual Studio 版本。 這些規則定義于設定[語言版本](../configure-language-version.md#defaults)一文。
+預設語言版本取決於您應用程式的目標 Framework，以及安裝的 SDK 或 Visual Studio 版本。 這些規則會在設定 [語言版本](../configure-language-version.md#defaults) 一文中定義。
 
 ## <a name="remarks"></a>備註
 
@@ -43,9 +44,9 @@ C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選�
 
 此外，雖然 C# 版本更新通常會與主要 .NET Framework 版本一致，但是新語法和功能不需要繫結至該特定架構版本。 雖然新功能一定需要也要與 C# 修訂一起發行的新編譯器更新，但是每個特定功能都有自己的最低 .NET API 或通用語言執行平台需求，可讓它包含 NuGet 套件或其他程式庫以在舊版架構上執行。
 
-不論您使用的是哪一種**langversion**設定，請使用目前版本的 common language runtime 來建立 .exe 或 .dll。 其中一個例外狀況是 Friend 組件和 [-moduleassemblyname (C# 編譯器選項)](./moduleassemblyname-compiler-option.md)，這些都是在 **-langversion:ISO-1** 下運作。
+無論您使用哪一種 **langversion** 設定，請使用目前版本的 common language runtime 來建立 .exe 或 .dll。 其中一個例外狀況是 Friend 組件和 [-moduleassemblyname (C# 編譯器選項)](./moduleassemblyname-compiler-option.md)，這些都是在 **-langversion:ISO-1** 下運作。
 
-如需指定 c # 語言版本的其他方式，請參閱[選取 c # 語言版本](../configure-language-version.md)一文。
+如需其他指定 c # 語言版本的方法，請參閱 [選取 c # 語言版本](../configure-language-version.md) 一文。
 
 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>。
 
@@ -70,7 +71,7 @@ C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選�
 
 ## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>支援所有語言功能所需的最低 SDK 版本
 
-下表列出 SDK 的最低版本，以及支援對應語言版本的 c # 編譯器：
+下表列出 SDK 的最小版本，以及支援對應語言版本的 c # 編譯器：
 
 | C # 版本 | 最低 SDK 版本                                                                  |
 |------------|--------------------------------------------------------------------------------------|
@@ -84,9 +85,9 @@ C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選�
 | C# 4       | Microsoft Visual Studio/Build Tools 2010 或配套的 .NET Framework 4.0 編譯器      |
 | C # 3       | Microsoft Visual Studio/Build Tools 2008 或配套的 .NET Framework 3.5 編譯器      |
 | C # 2       | Microsoft Visual Studio/Build Tools 2005 或配套的 .NET Framework 2.0 編譯器      |
-| C # 1.0/1。2 | Microsoft Visual Studio/Build Tools .NET 2002 或配套的 .NET Framework 1.0 編譯器 |
+| C # 1.0/1。2 | Microsoft Visual Studio/Build Tools .NET 2002 或配套 .NET Framework 1.0 編譯器 |
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

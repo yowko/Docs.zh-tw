@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: 9e78914d8afe5bb55b8a535f3f93ab1cae353a94
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.custom: updateeachrelease
+ms.openlocfilehash: d30d6ee2dae332895697b2fd1b931b7ec47d14bc
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802956"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656200"
 ---
 | 值                     | 意義                                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------------------|
@@ -20,5 +21,5 @@ ms.locfileid: "83802956"
 | `5`                       | 編譯器只會接受 C# 5.0 或更低版本中所含的語法。                                   |
 | `4`                       | 編譯器只會接受 C# 4.0 或更低版本中所含的語法。                                   |
 | `3`                       | 編譯器只會接受 C# 3.0 或更低版本中所含的語法。                                   |
-| `ISO-2` (或 `2`)          | 編譯器只會接受 ISO/IEC 23270:2006 c # （2.0）中包含的語法。                       |
-| `ISO-1` (或 `1`)          | 編譯器只會接受 ISO/IEC 23270:2003 c # （1.0/1.2）中所包含的語法。                   |
+| `ISO-2` (或 `2`)          | 編譯器只會接受 ISO/IEC 23270:2006 c # (2.0) 中所含的語法。                       |
+| `ISO-1` (或 `1`)          | 編譯器只會接受 ISO/IEC 23270:2003 c # (1.0/1.2) 中所含的語法。                   |

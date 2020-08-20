@@ -4,18 +4,18 @@ description: 了解如何使用內建 C# 迭代器，以及如何建立您自己
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: c2a1dfe38b6a65e382e140541c71e94bb0fc76aa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: ee72331cb85ba1a03d48e2f58526ad432c7fe6d4
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062479"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656094"
 ---
 # <a name="iterators"></a>迭代器
 
 您撰寫的幾乎所有程式或多或少都需要逐一查看集合。 您將會撰寫程式碼，以查看集合中的每個項目。
 
-您也會建立反覆運算器方法，這是會產生 iterator (的方法，這是可遍歷容器的物件，特別是針對該類別的元素) 的清單。 這些方法可用於：
+您也會建立反覆運算器方法，這是產生反覆運算器的方法 (也就是可遍歷容器的物件，特別是針對該類別的元素列出) 。 這些方法可用於：
 
 + 在集合中的每個項目上執行動作。
 + 列舉自訂集合。
@@ -24,7 +24,7 @@ ms.locfileid: "88062479"
 
 C# 語言會為上述兩個案例提供功能。 本文將概述這些功能。
 
-本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以[檢視或下載完整的範例](https://github.com/dotnet/samples/blob/master/csharp/iterators)以了解此主題。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以[檢視或下載完整的範例](https://github.com/dotnet/samples/blob/master/csharp/iterators)以了解此主題。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#view-and-download-samples)。
 
 ## <a name="iterating-with-foreach"></a>使用 foreach 逐一查看
 

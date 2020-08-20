@@ -4,16 +4,16 @@ description: 透過逐步使用 dotnet test 和 xUnit 建置範例方案的互�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 5fe4a8faddd87334439513368f24d808abc58e65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e0f2b6f88a650f412148f51cc0236fa46ed8c618
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157306"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656549"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 F# 程式庫進行單元測試
 
-本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "78157306"
     /MathService
 ```
 
-使*MathService 成為*目前的目錄，`dotnet new classlib -lang "F#"`並運行以創建源專案。 您建立會失敗的數學服務實作：
+將 *>mathservice.tests* 設為目前的目錄，然後執行 `dotnet new classlib -lang "F#"` 以建立來源專案。 您建立會失敗的數學服務實作：
 
 ```fsharp
 module MyMath =
@@ -166,9 +166,9 @@ let squaresOfOdds xs =
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [dotnet new](../tools/dotnet-new.md)
 - [dotnet sln](../tools/dotnet-new.md)
 - [dotnet add reference](../tools/dotnet-add-reference.md)
-- [點網測試](../tools/dotnet-test.md)
+- [dotnet test](../tools/dotnet-test.md)
