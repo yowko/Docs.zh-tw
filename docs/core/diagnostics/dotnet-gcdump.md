@@ -2,12 +2,12 @@
 title: dotnet-gcdump-.NET Core
 description: 安裝和使用 dotnet-gcdump 命令列工具。
 ms.date: 07/26/2020
-ms.openlocfilehash: 10e4c7e9e3a1df5d0eb58e68d38c0af091aeedc1
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a7b19f4d7487677b975621e7267a17894dae2e3a
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88575678"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656647"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>堆積分析工具 (dotnet-gcdump) 
 
@@ -27,9 +27,9 @@ dotnet tool install -g dotnet-gcdump
 dotnet-gcdump [-h|--help] [--version] <command>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
-`dotnet-gcdump`全域工具是一種方式，可收集 GC (垃圾收集行程，) 即時 .net 進程的傾印。 它會使用 EventPipe 技術，這是 Windows 上的 ETW 的跨平臺替代方案。 GC 傾印的建立方式，是在目標進程中觸發 GC、開啟特殊事件，以及從事件資料流程重新產生物件根目錄的圖形。 這可讓您在進程執行時收集 GC 傾印，並提供最少量的額外負荷。 這些傾印適用于數種案例：
+`dotnet-gcdump`全域工具是一種方式，可收集 GC (垃圾收集行程，) 即時 .net 進程的傾印。 它會使用 EventPipe 技術，這是 Windows 上的 ETW 的跨平臺替代方案。 GC 傾印的建立方式，是在目標進程中觸發 GC、開啟特殊事件，以及從事件資料流程重新產生物件根目錄的圖形。 此程式可讓您在進程執行時收集 GC 傾印，並以最少量的額外負荷進行收集。 這些傾印適用于數種案例：
 
 - 比較堆積上數個時間點的物件數目。
 - 分析物件的根目錄 (回答問題，例如「仍有此類型的參考？」。) 。
@@ -41,7 +41,7 @@ dotnet-gcdump [-h|--help] [--version] <command>
 
 您可以收集多個 `.gcdump` ，並同時在 Visual Studio 中開啟，以取得比較體驗。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`--version`**
 
@@ -61,7 +61,7 @@ dotnet-gcdump [-h|--help] [--version] <command>
 dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-file-path>] [-v|--verbose] [-t|--timeout <timeout>] [-n|--name <name>]
 ```
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 - **`-h|--help`**
 
@@ -107,7 +107,7 @@ dotnet-gcdump ps
 dotnet-gcdump report [-h|--help] [-p|--process-id <pid>] [-t|--report-type <HeapStat>]
 ```
 
-### <a name="options"></a>選項。
+### <a name="options"></a>選項
 
 - **`-h|--help`**
 

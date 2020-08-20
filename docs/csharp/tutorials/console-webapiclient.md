@@ -3,12 +3,12 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8db87440bb6e0995b1cc2c97b0d28995170ada8c
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004851"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656940"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -25,12 +25,12 @@ ms.locfileid: "84004851"
 
 本教學課程中有許多功能。 讓我們來逐一建置它們。
 
-如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-您將必須設定電腦以執行 .NET Core。 您可以在[.Net Core 下載](https://dotnet.microsoft.com/download)頁面上找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
-您將必須安裝慣用的程式碼編輯器。 下列說明使用[Visual Studio Code](https://code.visualstudio.com/)，這是一個開放原始碼的跨平臺編輯器。 不過，您可以使用您熟悉的任何工具。
+您將必須設定電腦以執行 .NET Core。 您可以在 [.Net Core 下載](https://dotnet.microsoft.com/download) 頁面中找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
+您將必須安裝慣用的程式碼編輯器。 下列說明使用 [Visual Studio Code](https://code.visualstudio.com/)，也就是開放原始碼的跨平臺編輯器。 不過，您可以使用您熟悉的任何工具。
 
 ## <a name="create-the-application"></a>建立應用程式
 
@@ -40,7 +40,7 @@ ms.locfileid: "84004851"
 dotnet new console --name WebAPIClient
 ```
 
-這會建立基本 "Hello World" 應用程式的起始檔案。 專案名稱為 "WebAPIClient"。 因為這是新的專案，所以沒有任何相依性。 第一次執行時，會下載 .NET Core framework、安裝開發憑證，以及執行 NuGet 套件管理員，以還原遺失的相依性。
+這會建立基本 "Hello World" 應用程式的起始檔案。 專案名稱為 "WebAPIClient"。 因為這是新的專案，所以沒有任何相依性已就緒。 第一次執行會下載 .NET Core framework、安裝開發憑證，然後執行 NuGet 套件管理員來還原遺失的相依性。
 
 在您開始建立修改前，請先在命令提示字元中鍵入 `dotnet run` ([請參閱附註](#dotnet-restore-note))，執行您的應用程式。 如果您的環境缺少相依性，`dotnet run` 會自動執行 `dotnet restore`。 如果您的應用程式需要重建，它也會執行 `dotnet build`。
 在初始安裝之後，當它對您的專案有意義時，您只需要執行 `dotnet restore` 或 `dotnet build`。
@@ -49,7 +49,7 @@ dotnet new console --name WebAPIClient
 
 .NET Core 的其中一個主要設計目標就是將 .NET 安裝大小縮減到最小。 如果應用程式的某些功能需要額外的程式庫，您可以將這些相依性新增到 C# 專案檔 (\*.csproj) 中。 在我們的範例中，您必須新增 `System.Runtime.Serialization.Json` 套件，讓您的應用程式可以處理 JSON 回應。
 
-您將需要 `System.Runtime.Serialization.Json` 此應用程式的套件。 執行下列[.NET CLI](../../core/tools/dotnet-add-package.md)命令，將它新增至您的專案：
+您將需要 `System.Runtime.Serialization.Json` 此應用程式的套件。 執行下列 [.NET CLI](../../core/tools/dotnet-add-package.md) 命令，將它新增至您的專案：
 
 ```dotnetcli
 dotnet add package System.Text.Json
@@ -69,7 +69,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-您必須 `using` 在方法的頂端加入指示詞， `Main` 讓 c # 編譯器能夠辨識 <xref:System.Threading.Tasks.Task> 類型：
+您將需要 `using` 在方法的頂端加入指示詞， `Main` 讓 c # 編譯器能夠辨識 <xref:System.Threading.Tasks.Task> 類型：
 
 ```csharp
 using System.Threading.Tasks;
@@ -77,7 +77,7 @@ using System.Threading.Tasks;
 
 如果您在此時建置專案，您將會收到針對此方法產生的警告，因為它不包含任何 `await` 運算子，所以將會以同步方式執行。 目前請先忽略該警告；您將在填入方法時新增 `await` 運算子。
 
-接下來，更新 `Main` 方法以呼叫 `ProcessRepositories` 方法。 `ProcessRepositories`方法會傳回工作，而且您不應該在該工作完成之前結束程式。 因此，您必須變更的簽章 `Main` 。 新增 `async` 修飾詞，並將傳回類型變更為 `Task` 。 然後，在方法的主體中，新增對的呼叫 `ProcessRepositories` 。 將 `await` 關鍵字新增至該方法呼叫：
+接下來，更新 `Main` 方法以呼叫 `ProcessRepositories` 方法。 方法會傳回 `ProcessRepositories` 工作，而且您不應該在該工作完成之前結束程式。 因此，您必須變更的簽章 `Main` 。 新增 `async` 修飾詞，並將傳回類型變更為 `Task` 。 然後，在方法的主體中，加入的呼叫 `ProcessRepositories` 。 將 `await` 關鍵字加入至該方法呼叫：
 
 ```csharp
 static async Task Main(string[] args)
@@ -88,7 +88,7 @@ static async Task Main(string[] args)
 
 現在，您擁有一個不會執行任何動作但會以非同步方式執行的程式。 來加以改善吧。
 
-首先，您需要一個能夠從網路擷取資料的物件；使用 <xref:System.Net.Http.HttpClient> 即可達成。 此物件會處理要求和回應。 在 Program.cs 檔案內，將類別中該類型的單一實例具現化 `Program` 。 *Program.cs*
+首先，您需要一個能夠從網路擷取資料的物件；使用 <xref:System.Net.Http.HttpClient> 即可達成。 此物件會處理要求和回應。 在 Program.cs 檔案內的類別中具現化該類型的單一實例 `Program` 。 *Program.cs*
 
 ```csharp
 namespace WebAPIClient
@@ -122,7 +122,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-您也必須在檔案頂端加入兩個新的指示詞，以 `using` 進行編譯：
+您也必須在檔案頂端新增兩個新的指示詞， `using` 以進行編譯：
 
 ```csharp
 using System.Net.Http;
@@ -141,7 +141,7 @@ using System.Net.Http.Headers;
 
 此時，您已撰寫程式碼來從 Web 伺服器擷取回應，並顯示包含在該回應中的文字。 接著，讓我們將該 JSON 回應轉換成 C# 物件。
 
-類別會將 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 物件序列化為 json，並將 json 還原序列化為物件。 一開始請先定義類別，以代表 `repo` 從 GITHUB API 傳回的 JSON 物件：
+類別會將 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> 物件序列化為 json，並將 JSON 還原序列化為物件。 首先，定義類別以代表 `repo` 從 GITHUB API 傳回的 JSON 物件：
 
 ```csharp
 using System;
@@ -161,7 +161,7 @@ JSON 序列化程式將會忽略未包含在所要使用之類別型別中的資
 
 現在您已經建立型別，讓我們來將它還原序列化。
 
-接著，您將使用序列化程式將 JSON 轉換成 C# 物件。 將您方法中的呼叫取代為 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> `ProcessRepositories` 下列幾行：
+接著，您將使用序列化程式將 JSON 轉換成 C# 物件。 以 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> 下列幾行取代在您的方法中的呼叫 `ProcessRepositories` ：
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -175,7 +175,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 ```
 
-請注意，您現在使用的是 <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> 而不是 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>。 序列化程式會使用資料流 (而不是字串) 作為其來源。 讓我們來說明上述程式碼片段第二行中所使用的一些 c # 語言功能。 的第一個引數 <xref:System.Text.Json.JsonSerializer.DeserializeAsync%60%601(System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> 是 `await` 運算式。 （其他兩個參數是選擇性的，而且會在程式碼片段中省略）。Await 運算式可以出現在您程式碼中的任何位置，雖然目前為止，您只會看到它們是指派語句的一部分。 `Deserialize`方法是*泛型*，這表示您必須提供類型引數，以供應從 JSON 文字建立的物件種類。 在此範例中，您要還原序列化至 `List<Repository>` ，也就是另一個泛型物件，也就是 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 。 `List<>`類別會儲存物件的集合。 型別引數會宣告儲存在中的物件類型 `List<>` 。 JSON 文字代表存放庫物件的集合，因此類型引數為 `Repository` 。
+請注意，您現在使用的是 <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> 而不是 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>。 序列化程式會使用資料流 (而不是字串) 作為其來源。 讓我們來說明 c # 語言的幾項功能，這些功能是在先前的程式碼片段的第二行中使用。 的第一個引數 <xref:System.Text.Json.JsonSerializer.DeserializeAsync%60%601(System.IO.Stream,System.Text.Json.JsonSerializerOptions,System.Threading.CancellationToken)?displayProperty=nameWithType> 是 `await` 運算式。  (其他兩個參數都是選擇性的，且在程式碼片段中會省略。 ) Await 運算式幾乎可以出現在程式碼中的任何位置，但現在，您只會看到它們是指派語句的一部分。 `Deserialize`方法是*泛型*，這表示您必須提供類型引數，以便從 JSON 文字建立哪種類型的物件。 在此範例中，您會還原序列化為 `List<Repository>` 另一個泛型物件，也就是另一個泛型物件 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 。 `List<>`類別會儲存物件的集合。 型別引數會宣告儲存在中的物件類型 `List<>` 。 JSON 文字代表存放庫物件的集合，因此類型引數為 `Repository` 。
 
 您差不多已經完成這個部分。 現在您已將 JSON 轉換成 C# 物件，讓我們來顯示每個儲存機制的名稱。 將下列幾行：
 
@@ -195,14 +195,14 @@ foreach (var repo in repositories)
 
 ## <a name="controlling-serialization"></a>控制序列化
 
-在您新增更多功能之前，讓我們 `name` 使用屬性來定址屬性 `[JsonPropertyName]` 。 請對 repo.cs 中 `name` 欄位的宣告進行下列變更：
+在您新增更多功能之前，讓我們 `name` 使用屬性來處理屬性 `[JsonPropertyName]` 。 請對 repo.cs 中 `name` 欄位的宣告進行下列變更：
 
 ```csharp
 [JsonPropertyName("name")]
 public string Name { get; set; }
 ```
 
-若要使用 `[JsonPropertyName]` 屬性，您必須將 <xref:System.Text.Json.Serialization> 命名空間新增至指示詞 `using` ：
+若要使用 `[JsonPropertyName]` 屬性，您必須將 <xref:System.Text.Json.Serialization> 命名空間加入至指示詞 `using` ：
 
 ```csharp
 using System.Text.Json.Serialization;
@@ -214,7 +214,7 @@ using System.Text.Json.Serialization;
 Console.WriteLine(repo.Name);
 ```
 
-執行 `dotnet run` 以確定您的對應正確。 您應該會看到與之前相同的輸出。
+執行 `dotnet run` 以確定對應正確無誤。 您應該會看到與之前相同的輸出。
 
 讓我們在新增新功能之前，再多進行一項變更。 `ProcessRepositories` 方法可以執行非同步工作，然後傳回儲存機制的集合。 讓我們從該方法傳回 `List<Repository>`，並將寫入資訊的程式碼移到 `Main` 方法中。
 
@@ -287,7 +287,7 @@ foreach (var repo in repositories)
 2016-02-08T21:27:00Z
 ```
 
-該格式為國際標準時間（UTC），因此您將取得 <xref:System.DateTime> 其 <xref:System.DateTime.Kind%2A> 屬性為的值 <xref:System.DateTimeKind.Utc> 。 如果您偏好以時區表示的日期，則需要撰寫自訂轉換方法。 首先，定義 `public` 屬性，以保存類別中日期和時間的 UTC 標記法 `Repository` ，以及傳回轉換成 `LastPush` `readonly` 當地時間之日期的屬性：
+該格式是國際標準時間 (UTC) 因此，您將取得 <xref:System.DateTime> <xref:System.DateTime.Kind%2A> 屬性為的值 <xref:System.DateTimeKind.Utc> 。 如果您偏好以時區表示的日期，則必須撰寫自訂的轉換方法。 首先，定義 `public` 屬性以保存您類別中日期和時間的 UTC 標記法 `Repository` ，以及傳回 `LastPush` `readonly` 轉換為當地時間之日期的屬性：
 
 ```csharp
 [JsonPropertyName("pushed_at")]
@@ -296,7 +296,7 @@ public DateTime LastPushUtc { get; set; }
 public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-讓我們來看一下我們剛才定義的新結構。 `LastPush`屬性是使用存取子的*運算式主體成員*所定義 `get` 。 沒有 `set` 存取子。 省略 `set` 存取子是您在 c # 中定義*唯讀*屬性的方式。 (是的，您可以用 C# 來建立「唯寫」** 屬性，但其值會受到限制)。
+讓我們來看看剛定義的新結構。 `LastPush`屬性是使用存取子的*運算式主體成員*所定義 `get` 。 沒有 `set` 存取子。 省略 `set` 存取子是您如何在 c # 中定義 *唯讀* 屬性的方式。 (是的，您可以用 C# 來建立「唯寫」** 屬性，但其值會受到限制)。
 
 最後，請在主控台中再多新增一個輸出陳述式，這樣您便已準備好來重新建置及執行此應用程式：
 

@@ -5,34 +5,34 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: 8b54aea1409f2b4c0a3d39d215922ba62c2a3563
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86441813"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656966"
 ---
 # <a name="security-considerations-for-data"></a>資料的安全性考量
 
-處理 Windows Communication Foundation （WCF）中的資料時，您必須考慮一些威脅類別。 下表列出與資料處理有關的最重要威脅類別。 WCF 提供工具來減輕這些威脅。
+在 Windows Communication Foundation (WCF) 中處理資料時，您必須考慮一些威脅類別。 下表列出與資料處理有關的最重要威脅類別。 WCF 提供可減輕這些威脅的工具。
 
-阻絕服務當接收不受信任的資料時，資料可能會導致接收端存取不相稱數量的各種資源，例如記憶體、執行緒、可用的連接，或藉由導致冗長的計算來處理處理器迴圈。 針對伺服器的阻絕服務攻擊可能會造成伺服器當機，或無法處理來自其他合法用戶端的訊息。
+在接收不受信任的資料時拒絕服務，資料可能會導致接收端存取不相稱數量的各種資源，例如記憶體、執行緒、可用的連接，或藉由造成冗長計算的處理器迴圈。 針對伺服器的阻絕服務攻擊可能會造成伺服器當機，或無法處理來自其他合法用戶端的訊息。
 
-惡意程式碼執行傳入不受信任的資料，會導致接收端執行其不想要的程式碼。
+惡意程式碼執行傳入未受信任的資料，會導致接收端執行其不打算執行的程式碼。
 
-資訊洩漏遠端攻擊者會強制接收方回應其要求，使其能夠公開比預期更多的資訊。
+資訊洩漏：遠端攻擊者強制接收的合作物件回應其要求，以洩漏超過預期的資訊。
 
 ## <a name="user-provided-code-and-code-access-security"></a>使用者提供的程式碼和程式碼存取安全性
 
-Windows Communication Foundation （WCF）基礎結構中的幾個地方，會執行使用者所提供的程式碼。 例如， <xref:System.Runtime.Serialization.DataContractSerializer> 序列化引擎可能會呼叫使用者提供的屬性 `set` 存取子和 `get` 存取子。 WCF 通道基礎結構也可以呼叫類別的使用者提供的衍生類別 <xref:System.ServiceModel.Channels.Message> 。
+Windows Communication Foundation (WCF) 基礎結構中有許多地方會執行使用者所提供的程式碼。 例如， <xref:System.Runtime.Serialization.DataContractSerializer> 序列化引擎可能會呼叫使用者提供的屬性 `set` 存取子和 `get` 存取子。 WCF 通道基礎結構也可能會呼叫類別的使用者提供的衍生類別 <xref:System.ServiceModel.Channels.Message> 。
 
 程式碼作者有責任要確保沒有安全性弱點的存在。 例如，如果您以型別整數的資料成員屬性來建立資料合約類型，並在 `set` 存取子實作中根據屬性值來配置陣列，如果惡意訊息包含此資料成員的極大值，您便有可能會遭到阻絕服務攻擊。 一般來說，請避免以傳入資料為基礎所做的任何配置，或是使用者提供之程式碼中的漫長處理 (特別是如果小量的傳入資料可能會造成的漫長處理)。 當執行使用者提供之程式碼的安全性分析時，請確定同時考慮所有的失敗情況 (也就是擲回例外狀況的所有程式碼分支)。
 
-使用者提供之程式碼的最終範例為您在各個作業之服務實作內的程式碼。 您服務實作的安全性是您的責任。 很容易就會不小心建立可能會造成阻絕服務弱點的不安全作業實作。 例如，採用字串並從名稱以該字串開頭的資料庫傳回客戶清單的作業。 如果您是使用大型資料庫，且傳遞的字串只是單一字母，您的程式碼可能會嘗試建立大於所有可用記憶體的訊息，而造成整個服務失敗 （ <xref:System.OutOfMemoryException> 在 .NET Framework 中無法復原，而且一律會導致應用程式終止）。
+使用者提供之程式碼的最終範例為您在各個作業之服務實作內的程式碼。 您服務實作的安全性是您的責任。 很容易就會不小心建立可能會造成阻絕服務弱點的不安全作業實作。 例如，採用字串並從名稱以該字串開頭的資料庫傳回客戶清單的作業。 如果您是使用大型資料庫，且傳遞的字串只是單一字母，您的程式碼可能會嘗試建立大於所有可用記憶體的訊息，而造成整個服務失敗  (<xref:System.OutOfMemoryException> 在 .NET Framework 中無法復原，而且一律會導致應用程式終止。 ) 
 
 您應該要確保各種擴充點中均未插入惡意程式碼。 這對於在部分信任下執行、從部分信任組件處理類型，或是建立無法由部分信任程式碼使用的元件時，特別有關係。 如需詳細資訊，請參閱本主題稍後的「部分信任威脅」。
 
-請注意，在部分信任中執行時，資料合約序列化基礎結構只支援資料合約程式設計模型的有限子集 - 例如，使用不支援 <xref:System.SerializableAttribute> 屬性的私用資料成員或型別。 如需詳細資訊，請參閱[部分信任](partial-trust.md)。
+請注意，在部分信任中執行時，資料合約序列化基礎結構只支援資料合約程式設計模型的有限子集 - 例如，使用不支援 <xref:System.SerializableAttribute> 屬性的私用資料成員或型別。 如需詳細資訊，請參閱 [部分信任](partial-trust.md)。
 
 ## <a name="avoiding-unintentional-information-disclosure"></a>避免意外的資訊洩漏
 
@@ -54,9 +54,9 @@ Windows Communication Foundation （WCF）基礎結構中的幾個地方，會�
 
 通常是使用配額來降低阻絕服務攻擊。 當超過配額時，通常會擲回 <xref:System.ServiceModel.QuotaExceededException> 例外狀況。 如果沒有配額，惡意訊息可能會導致存取所有的可用記憶體，造成 <xref:System.OutOfMemoryException> 例外狀況，或存取所有的可用堆疊，造成 <xref:System.StackOverflowException>。
 
-超過配額的情況是可復原的；如果是在執行中的服務中遇到，會捨棄目前正在處理的訊息，而服務會繼續執行並處理之後的訊息。 不過，記憶體不足和堆疊溢位的情況無法在 .NET Framework 中的任何位置復原;服務會在遇到這類例外狀況時終止。
+超過配額的情況是可復原的；如果是在執行中的服務中遇到，會捨棄目前正在處理的訊息，而服務會繼續執行並處理之後的訊息。 不過，記憶體不足和堆疊溢位案例無法在 .NET Framework 的任何地方復原;如果發生這類例外狀況，服務就會終止。
 
-WCF 中的配額不牽涉到任何預先配置。 例如，如果 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> 配額 (在各種不同類別上) 設定為 128 KB，不表示會為各個訊息自動配置 128 KB。 實際的配置量要視實際的傳入訊息大小而定。
+WCF 中的配額不涉及任何預先配置。 例如，如果 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> 配額 (在各種不同類別上) 設定為 128 KB，不表示會為各個訊息自動配置 128 KB。 實際的配置量要視實際的傳入訊息大小而定。
 
 傳輸層有許多的配額。 這些是由使用中的特定傳輸通道 (HTTP、TCP 等等) 所強制執行的配額。 這些配額在 [Transport Quotas](transport-quotas.md)中有詳細的說明，而本主題只討論其中一部分。
 
@@ -68,7 +68,7 @@ WCF 中的配額不牽涉到任何預先配置。 例如，如果 <xref:System.S
 
 大型訊息的安全性模型要視是否正在使用資料流而定。 在基本、未經資料流處理的情況中，訊息會進入緩衝記憶體中。 在這種情況中，請在 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> 上或系統提供的繫結上使用 <xref:System.ServiceModel.Channels.TransportBindingElement> 配額，藉由限制存取的訊息大小上限來防止大型訊息。 請注意，服務可能會同時處理多個訊息，此時它們都將會在記憶體中。 請使用節流功能來降低這個威脅。
 
-同時也請注意，雖然 `MaxReceivedMessageSize` 不會對每個訊息的記憶體消耗設定上限，但會限制在常數係數之內。 例如，如果 `MaxReceivedMessageSize` 是 1 MB，且收到 1-MB 的訊息後還原序列化，則會需要額外的記憶體來包含已還原序列化物件圖形，而造成總記憶體消耗超過 1 MB。 因此，請避免建立可序列化的型別，防止沒有太多傳入資料，卻造成大量的記憶體消耗。 例如，具有50選擇性資料成員欄位和額外100私用欄位的資料合約 "MyContract" 可能會以 XML 結構 "" 具現化 \<MyContract/> 。 此 XML 會造成存取的記憶體用在 150 個欄位上。 請注意，根據預設，資料成員是選擇性的。 當此類型別是陣列的一部分時，問題是複合性的。
+同時也請注意，雖然 `MaxReceivedMessageSize` 不會對每個訊息的記憶體消耗設定上限，但會限制在常數係數之內。 例如，如果 `MaxReceivedMessageSize` 是 1 MB，且收到 1-MB 的訊息後還原序列化，則會需要額外的記憶體來包含已還原序列化物件圖形，而造成總記憶體消耗超過 1 MB。 因此，請避免建立可序列化的型別，防止沒有太多傳入資料，卻造成大量的記憶體消耗。 例如，資料合約 "MyContract" 與50選擇性資料成員欄位以及額外的100私用欄位，都可以使用 XML 結構 "" 來具現化 \<MyContract/> 。 此 XML 會造成存取的記憶體用在 150 個欄位上。 請注意，根據預設，資料成員是選擇性的。 當此類型別是陣列的一部分時，問題是複合性的。
 
 只有`MaxReceivedMessageSize` 不足以防止所有的阻絕服務攻擊。 例如，傳入的訊息可能會強制還原序列化程式要還原序列化深度巢狀的物件圖形 (包含的物件中還包含另一個物件的物件)。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 都會以巢狀方式呼叫方法，以還原序列化此類圖形。 深度巢狀的方法呼叫可能會造成無法復原的 <xref:System.StackOverflowException>。 這項威脅可以藉由設定 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement.MaxDepth%2A> 配額以限制 XML 巢狀的層級來降低，如同本主題中稍後的＜安全使用 XML＞一節中所述。
 
@@ -76,21 +76,21 @@ WCF 中的配額不牽涉到任何預先配置。 例如，如果 <xref:System.S
 
 ## <a name="limiting-memory-consumption-with-streaming"></a>使用資料流來限制記憶體消耗
 
-當進行資料流處理時，您可能會使用小的 `MaxReceivedMessageSize` 設定來防止阻絕服務攻擊。 然而，使用資料流可能會有更複雜的情況。 例如，檔案上載服務會接受大於所有可用記憶體的檔案。 在這種情況中，請將 `MaxReceivedMessageSize` 設定為極大值，如此應該幾乎不會有資料進入緩衝記憶體，且訊息會直接串流至磁碟。 如果惡意訊息可以某種方式強制 WCF 緩衝處理資料，而不是在此情況下串流，則 `MaxReceivedMessageSize` 無法再針對存取所有可用記憶體的訊息進行保護。
+當進行資料流處理時，您可能會使用小的 `MaxReceivedMessageSize` 設定來防止阻絕服務攻擊。 然而，使用資料流可能會有更複雜的情況。 例如，檔案上載服務會接受大於所有可用記憶體的檔案。 在這種情況中，請將 `MaxReceivedMessageSize` 設定為極大值，如此應該幾乎不會有資料進入緩衝記憶體，且訊息會直接串流至磁碟。 如果惡意訊息可能會強制 WCF 緩衝處理資料，而不是在此情況下進行串流處理，則 `MaxReceivedMessageSize` 無法再防止存取所有可用記憶體的訊息。
 
-若要降低此威脅，特定的配額設定會存在於限制緩衝處理的各種 WCF 資料處理元件上。 其中最重要的是各種傳輸繫結項目和標準繫結上的 `MaxBufferSize` 屬性。 當進行資料流處理時，應在設定此配額時考慮您願意配置給每個訊息的最大記憶體量。 如同 `MaxReceivedMessageSize`，此設定不會設定記憶體消耗的絕對上限，而只會將其限制在常數係數之內。 同時，如同 `MaxReceivedMessageSize`，請注意同時處理多個訊息的可能性。
+若要降低此威脅，特定配額設定存在於限制緩衝處理的各種 WCF 資料處理元件上。 其中最重要的是各種傳輸繫結項目和標準繫結上的 `MaxBufferSize` 屬性。 當進行資料流處理時，應在設定此配額時考慮您願意配置給每個訊息的最大記憶體量。 如同 `MaxReceivedMessageSize`，此設定不會設定記憶體消耗的絕對上限，而只會將其限制在常數係數之內。 同時，如同 `MaxReceivedMessageSize`，請注意同時處理多個訊息的可能性。
 
 ### <a name="maxbuffersize-details"></a>MaxBufferSize 詳細資料
 
-`MaxBufferSize`屬性會限制任何大量緩衝 WCF 執行的工作。 例如，WCF 一律會緩衝 SOAP 標頭和 SOAP 錯誤，以及在訊息傳輸優化機制（MTOM）訊息中找不到自然讀取順序的任何 MIME 部分。 這個設定會限制上述所有情況中的緩衝處理量。
+`MaxBufferSize`屬性會限制任何大量緩衝的 WCF。 例如，WCF 一律會緩衝 SOAP 標頭和 SOAP 錯誤，以及在訊息傳輸優化機制中找不到自然讀取順序的任何 MIME 部分 (MTOM) 訊息。 這個設定會限制上述所有情況中的緩衝處理量。
 
-WCF 會藉由將 `MaxBufferSize` 值傳遞給可能緩衝的各種元件來完成這項工作。 例如， <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> 類別的一些 <xref:System.ServiceModel.Channels.Message> 多載會接受 `maxSizeOfHeaders` 參數。 WCF 會將 `MaxBufferSize` 值傳遞給這個參數，以限制 SOAP 標頭緩衝處理的數量。 當直接使用 <xref:System.ServiceModel.Channels.Message> 類別時，設定這個參數是很重要的。 一般來說，在 WCF 中使用接受配額參數的元件時，請務必瞭解這些參數的安全性含意，並正確設定它們。
+WCF `MaxBufferSize` 會將值傳遞給可能緩衝的各種元件來完成這項工作。 例如， <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> 類別的一些 <xref:System.ServiceModel.Channels.Message> 多載會接受 `maxSizeOfHeaders` 參數。 WCF 會將 `MaxBufferSize` 值傳遞給這個參數，以限制 SOAP 標頭緩衝處理的數量。 當直接使用 <xref:System.ServiceModel.Channels.Message> 類別時，設定這個參數是很重要的。 一般來說，在使用接受配額參數的 WCF 中使用元件時，請務必瞭解這些參數的安全性含意，並正確地加以設定。
 
 MTOM 訊息編碼器也有 `MaxBufferSize` 設定。 當使用標準繫結時，這會自動設定為傳輸層的 `MaxBufferSize` 值。 然而，如果使用 MTOM 訊息編碼器繫結項目來建構自訂繫結，在使用資料流時將 `MaxBufferSize` 屬性設定為安全值是很重要的。
 
 ## <a name="xml-based-streaming-attacks"></a>XML 資料流攻擊
 
-`MaxBufferSize`單獨的不足以確保在預期資料流程時，無法強制 WCF 能夠緩衝處理。 例如，WCF XML 讀取器在開始讀取新專案時，一律會緩衝整個 XML 元素的開始標記。 完成這項操作才能正確處理命名空間和屬性。 如果 `MaxReceivedMessageSize` 設定為大型 (例如，如果要啟用直接到磁碟的大型檔案資料流案例)，可能會建構惡意訊息，其中整個訊息本文為大型 XML 項目開始標記。 嘗試讀取會造成 <xref:System.OutOfMemoryException>。 這是許多可能以 XML 為基礎的阻絕服務攻擊之一，可以使用 XML 讀取器配額來緩和，本主題稍後的「安全地使用 XML」一節中所述。 當進行資料流處理時，設定所有這些配額特別重要。
+`MaxBufferSize` 單獨的並不足以確保在預期串流時，無法強制 WCF 進行緩衝處理。 例如，在開始讀取新的專案時，WCF XML 讀取器一律會緩衝整個 XML 專案開始標記。 完成這項操作才能正確處理命名空間和屬性。 如果 `MaxReceivedMessageSize` 設定為大型 (例如，如果要啟用直接到磁碟的大型檔案資料流案例)，可能會建構惡意訊息，其中整個訊息本文為大型 XML 項目開始標記。 嘗試讀取會造成 <xref:System.OutOfMemoryException>。 這是許多可能以 XML 為基礎的拒絕服務攻擊的其中一種，可以使用 XML 讀取器配額來降低，本主題稍後的「使用 XML 安全」一節中將討論這些攻擊。 當進行資料流處理時，設定所有這些配額特別重要。
 
 ### <a name="mixing-streaming-and-buffering-programming-models"></a>混合資料流及緩衝程式撰寫模型
 
@@ -118,7 +118,7 @@ MTOM 訊息編碼器也有 `MaxBufferSize` 設定。 當使用標準繫結時，
 
 資料流阻絕服務攻擊的類別不包含記憶體消耗。 相反地，攻擊包含資料的慢速傳送者或接收者。 在等候傳送或接收資料時，如執行緒和可用連線等資源會用盡。 這種情況可能是由於惡意攻擊或慢速網路連線上的合法傳送者/接收者所引起。
 
-如果要降低這些攻擊，請正確設定傳輸逾時。 如需詳細資訊，請參閱[傳輸配額](transport-quotas.md)。 其次，在使用 `Read` `Write` WCF 中的資料流程時，絕對不要使用同步或作業。
+如果要降低這些攻擊，請正確設定傳輸逾時。 如需詳細資訊，請參閱 [傳輸配額](transport-quotas.md)。 其次，在 WCF 中使用資料流程時，請勿使用同步 `Read` 或 `Write` 作業。
 
 ## <a name="using-xml-safely"></a>安全使用 XML
 
@@ -127,11 +127,11 @@ MTOM 訊息編碼器也有 `MaxBufferSize` 設定。 當使用標準繫結時，
 
 ### <a name="secure-xml-readers"></a>安全的 XML 讀取器
 
-XML 資訊集形成 WCF 中所有訊息處理的基礎。 接受來自不受信任來源的 XML 資料時，會有許多必須降低之拒絕服務攻擊的可能性。 WCF 提供特殊、安全的 XML 讀取器。 當使用 WCF 中的其中一個標準編碼（文字、二進位或 MTOM）時，就會自動建立這些讀取器。
+XML 資訊集會形成 WCF 中所有訊息處理的基礎。 接受來自不受信任來源的 XML 資料時，會有許多必須降低之拒絕服務攻擊的可能性。 WCF 提供特殊、安全的 XML 讀取器。 使用 WCF 中的其中一個標準編碼時，會自動建立這些讀取器 (文字、二進位或 MTOM) 。
 
 這些讀取器上有些安全性功能永遠在使用中。 例如，讀取器絕對不會處理文件類型定義 (DTD)，它是阻絕服務攻擊的潛在來源，絕對不得出現在合法的 SOAP 訊息中。 其他的安全性功能包括必須設定的讀取器配額，在下節中將加以說明。
 
-直接使用 XML 讀取器時（例如在撰寫自己的自訂編碼器時，或直接使用 <xref:System.ServiceModel.Channels.Message> 類別時），如果有機會使用不受信任的資料，請一律使用 WCF 安全的讀取器。 請呼叫 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>類別上 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 或 <xref:System.Xml.XmlDictionaryReader> 的其中一個靜態處理站方法多載，以建立安全的讀取器。 當建立讀取器時，請傳入安全的配額值。 請勿呼叫 `Create` 方法多載。 這些不會建立 WCF 讀取器。 相反地，它們會建立不受本節所述之安全性功能保護的讀取器。
+直接使用 XML 讀取器時 (例如撰寫您自己的自訂編碼器，或直接使用 <xref:System.ServiceModel.Channels.Message> 類別) 時，當有可能使用不受信任的資料時，請一律使用 WCF 安全的讀取器。 請呼叫 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>類別上 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 或 <xref:System.Xml.XmlDictionaryReader> 的其中一個靜態處理站方法多載，以建立安全的讀取器。 當建立讀取器時，請傳入安全的配額值。 請勿呼叫 `Create` 方法多載。 這些不會建立 WCF 讀取器。 相反地，它們會建立不受本節所述之安全性功能保護的讀取器。
 
 ### <a name="reader-quotas"></a>讀取器配額
 
@@ -147,7 +147,7 @@ XML 資訊集形成 WCF 中所有訊息處理的基礎。 接受來自不受信�
 
 #### <a name="maxdepth"></a>MaxDepth
 
-這個配額會限制 XML 項目的最大巢狀結構深度。 例如，檔 " \<A> \<B> \<C/> \</B> \</A> " 的嵌套深度為三。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 十分重要的原因如下：
+這個配額會限制 XML 項目的最大巢狀結構深度。 例如，檔 "" 的 \<A> \<B> \<C/> \</B> \</A> 嵌套深度為三。 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> 十分重要的原因如下：
 
 - `MaxDepth` 會與 `MaxBytesPerRead`互動：由於讀取器永遠會為目前項目和其所有祖系將資料保存在記憶體中，因此讀取器的最大記憶體消耗與這兩個設定的產品是成比例的。
 
@@ -167,9 +167,9 @@ XML 資訊集形成 WCF 中所有訊息處理的基礎。 接受來自不受信�
 
 ## <a name="threats-specific-to-the-binary-encoding"></a>二進位編碼特定的威脅
 
-WCF 支援的二進位 XML 編碼包含*字典字串*功能。 只要使用幾個位元組就可以編碼大型字串。 這雖然可以獲得可觀的效能，但也會引入必須降低的新阻絕服務威脅。
+WCF 支援的二進位 XML 編碼包含 *字典字串* 功能。 只要使用幾個位元組就可以編碼大型字串。 這雖然可以獲得可觀的效能，但也會引入必須降低的新阻絕服務威脅。
 
-字典有兩種：「 *靜態* 」(Static) 和「 *動態*」(Dynamic)。 靜態字典是內建的長字串清單，可使用二進位編碼中的簡短程式碼來表示。 當讀取器建立且無法修改時，這份字串清單是固定的。 根據預設，WCF 使用之靜態字典中的字串都不會有足夠的大小來造成嚴重的阻絕服務威脅，雖然它們仍然可以在字典擴充攻擊中使用。 在您提供自己的靜態字典之進階狀況中，在引入大型字典字串時請小心。
+字典有兩種：「 *靜態* 」(Static) 和「 *動態*」(Dynamic)。 靜態字典是內建的長字串清單，可使用二進位編碼中的簡短程式碼來表示。 當讀取器建立且無法修改時，這份字串清單是固定的。 在預設的情況下，WCF 使用的靜態字典中沒有任何字串足以造成嚴重的拒絕服務威脅，雖然它們仍會用於字典擴充攻擊中。 在您提供自己的靜態字典之進階狀況中，在引入大型字典字串時請小心。
 
 動態字典功能可讓訊息定義自己的字串，並與簡短程式碼建立關聯。 在整個通訊工作階段期間，這些字串與程式碼的對應會保存在記憶體中，讓後續的訊息不必重新傳送字串，並且可以使用已經定義的程式碼。 這些字串可能有任意長度，因而引起比靜態字典中更嚴重的威脅。
 
@@ -212,7 +212,7 @@ WCF 支援的二進位 XML 編碼包含*字典字串*功能。 只要使用幾�
 
 ## <a name="datacontractserializer"></a>DataContractSerializer
 
-（如需有關的安全性資訊 <xref:System.Xml.Serialization.XmlSerializer> ，請參閱相關檔。）的安全性模型與的 <xref:System.Xml.Serialization.XmlSerializer> 類似 <xref:System.Runtime.Serialization.DataContractSerializer> ，而且大部分的細節都不同。 例如， <xref:System.Xml.Serialization.XmlIncludeAttribute> 屬性是用於型別內含而不是 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。 然而，本主題稍後將說明 <xref:System.Xml.Serialization.XmlSerializer> 的一些專有威脅。
+ (如需的安全性資訊 <xref:System.Xml.Serialization.XmlSerializer> ，請參閱相關檔。 ) 的安全性模型與的 <xref:System.Xml.Serialization.XmlSerializer> 類似 <xref:System.Runtime.Serialization.DataContractSerializer> ，而且大部分的細節都有差異。 例如， <xref:System.Xml.Serialization.XmlIncludeAttribute> 屬性是用於型別內含而不是 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。 然而，本主題稍後將說明 <xref:System.Xml.Serialization.XmlSerializer> 的一些專有威脅。
 
 ### <a name="preventing-unintended-types-from-being-loaded"></a>防止載入非預期的型別
 
@@ -270,21 +270,21 @@ WCF 支援的二進位 XML 編碼包含*字典字串*功能。 只要使用幾�
 
 - 當 <xref:System.Runtime.Serialization.DataContractSerializer> 還原序列化大部分的類別時，建構函式不會執行。 因此，請勿依賴在建構函式中完成的任何狀態管理。
 
-- 請使用回呼來確保物件處於有效狀態中。 以 <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性標示的回呼特別有用，因為它是在還原序列化完成之後執行，並有機會檢查和更正整體狀態。 如需詳細資訊，請參閱[版本相容序列化回呼](version-tolerant-serialization-callbacks.md)。
+- 請使用回呼來確保物件處於有效狀態中。 以 <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性標示的回呼特別有用，因為它是在還原序列化完成之後執行，並有機會檢查和更正整體狀態。 如需詳細資訊，請參閱 [版本容錯序列化回呼](version-tolerant-serialization-callbacks.md)。
 
 - 請勿將資料合約類型設計為依賴呼叫 setter 屬性必須遵守的特定順序。
 
-- 請小心使用以 <xref:System.SerializableAttribute> 屬性標示的舊版型別。 其中有許多是設計來搭配使用 .NET Framework 遠端處理，僅用於受信任的資料。 以此屬性標示之現有型別的設計可能尚未考慮到狀態安全性。
+- 請小心使用以 <xref:System.SerializableAttribute> 屬性標示的舊版型別。 其中許多都是設計來搭配使用 .NET Framework 遠端處理，僅供受信任的資料使用。 以此屬性標示之現有型別的設計可能尚未考慮到狀態安全性。
 
 - 就狀態安全性而言，請勿依賴 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性 (Attribute) 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Property) 來保證資料的存在。 資料可能永遠是 `null`、 `zero`或 `invalid`。
 
-- 在沒有先驗證之前，絕對不要信任從不受信任的資料來源還原序列化的物件圖形。 每個個別物件可能處於一致性狀態，但是整個物件圖形可能不是。 此外，即使物件圖形保留模式已停用，已還原序列化圖形仍可能有相同物件的多個參照，或是有循環參照。 如需詳細資訊，請參閱[序列化和還原序列化](serialization-and-deserialization.md)。
+- 在沒有先驗證之前，絕對不要信任從不受信任的資料來源還原序列化的物件圖形。 每個個別物件可能處於一致性狀態，但是整個物件圖形可能不是。 此外，即使物件圖形保留模式已停用，已還原序列化圖形仍可能有相同物件的多個參照，或是有循環參照。 如需詳細資訊，請參閱 [序列化和還原序列化](serialization-and-deserialization.md)。
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>安全使用 NetDataContractSerializer
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> 是對型別使用緊密結合的序列化引擎。 這與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>很類似。 也就是說，它會從傳入資料讀取 .NET Framework 元件和類型名稱，以判斷要具現化的類型。 雖然它是 WCF 的一部分，但並沒有提供方法來插入此序列化引擎。必須撰寫自訂程式碼。 的 `NetDataContractSerializer` 主要目的是為了簡化從 .NET Framework 遠端處理到 WCF 的作業。 如需詳細資訊，請參閱[序列化和還原序列化](serialization-and-deserialization.md)中的相關章節。
+<xref:System.Runtime.Serialization.NetDataContractSerializer> 是對型別使用緊密結合的序列化引擎。 這與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>很類似。 也就是說，它會藉由讀取傳入資料的 .NET Framework 元件和型別名稱，來決定要具現化的型別。 雖然它是 WCF 的一部分，但是沒有任何提供的方法可插入此序列化引擎;必須撰寫自訂程式碼。 `NetDataContractSerializer`主要是為了簡化從 .NET Framework 遠端處理至 WCF 的工作而提供。 如需詳細資訊，請參閱 [序列化和還原序列化](serialization-and-deserialization.md)中的相關章節。
 
-由於訊息本身可能會指出可以載入的任何型別，因此 <xref:System.Runtime.Serialization.NetDataContractSerializer> 機制原本就是不安全的，且只應搭配受信任的資料使用。 如需詳細資訊，請參閱[BinaryFormatter 安全性指南](/dotnet/standard/serialization/binaryformatter-security-guide)。
+由於訊息本身可能會指出可以載入的任何型別，因此 <xref:System.Runtime.Serialization.NetDataContractSerializer> 機制原本就是不安全的，且只應搭配受信任的資料使用。 如需詳細資訊，請參閱 [BinaryFormatter 安全性指南](../../../standard/serialization/binaryformatter-security-guide.md)。
 
 即使和受信任的資料一起使用，傳入資料仍可能不足以指定要載入的型別，特別是如果 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> 屬性設定為 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple>時。 任何可以存取應用程式目錄或全域組件快取的人，都可以使用應載入的型別來取代惡意型別。 請正確設定權限，永遠確保應用程式目錄和全域組件快取的安全性。
 
@@ -310,7 +310,7 @@ WCF 支援的二進位 XML 編碼包含*字典字串*功能。 只要使用幾�
 
 - 當部分信任的程式碼已控制序列化處理，無論是透過擴充點 (Surrogate)、序列化的型別，或透過其他方式，部分信任的程式碼會造成序列化程式將大量的資料輸出到序列化資料流，而對這個資料流的接收者造成阻絕服務 (DoS)。 如果您所序列化的資料是提供給對 DoS 威脅敏感的目標使用，則請勿序列化部分信任的類型，或者讓部分信任的程式碼控制序列化。
 
-- 如果您允許部分信任的程式碼存取您的 <xref:System.Runtime.Serialization.DataContractSerializer> 實例，或控制[資料合約的代理](../extending/data-contract-surrogates.md)，它可能會對序列化/還原序列化程式執行很大的控制。 例如，它會插入任意型別、導致資訊洩漏、竄改結果物件圖形或序列化資料，或溢位結果序列化資料流。 在「安全使用 NetDataContractSerializer Securely」一節中會說明等同的 <xref:System.Runtime.Serialization.NetDataContractSerializer> 威脅。
+- 如果您允許部分信任的程式碼存取您 <xref:System.Runtime.Serialization.DataContractSerializer> 的實例，或控制 [資料合約的代理](../extending/data-contract-surrogates.md)程式，則可能會對序列化/還原序列化程式進行大量控制。 例如，它會插入任意型別、導致資訊洩漏、竄改結果物件圖形或序列化資料，或溢位結果序列化資料流。 在「安全使用 NetDataContractSerializer Securely」一節中會說明等同的 <xref:System.Runtime.Serialization.NetDataContractSerializer> 威脅。
 
 - 如果 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至型別 (或標示為 <xref:System.SerializableAttribute> 但不是 <xref:System.Runtime.Serialization.ISerializable>的型別)，即使所有的建構函式都是非公用或依要求受到保護的，還原序列化程式仍然可以建立此型別的執行個體。
 
@@ -358,7 +358,7 @@ WCF 支援的二進位 XML 編碼包含*字典字串*功能。 只要使用幾�
 
 ## <a name="threats-specific-to-aspnet-ajax-integration"></a>ASP.NET AJAX 整合特定的威脅
 
-當使用者執行 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 或時 <xref:System.ServiceModel.Description.WebHttpBehavior> ，WCF 會公開可同時接受 XML 和 JSON 訊息的端點。 但是，只有一組讀取器配額是由 XML 讀取器和 JSON 讀取器使用。 有些配額設定可能適用一個讀取器，但對於其他讀取器而言過大。
+當使用者實行 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 或時 <xref:System.ServiceModel.Description.WebHttpBehavior> ，WCF 會公開可接受 XML 和 JSON 訊息的端點。 但是，只有一組讀取器配額是由 XML 讀取器和 JSON 讀取器使用。 有些配額設定可能適用一個讀取器，但對於其他讀取器而言過大。
 
 實作 `WebScriptEnablingBehavior`時，使用者可以選擇在端點公開 JavaScript Proxy。 必須考量下列安全問題：
 
@@ -368,9 +368,9 @@ WCF 支援的二進位 XML 編碼包含*字典字串*功能。 只要使用幾�
 
 ## <a name="a-note-on-components"></a>元件注意事項
 
-WCF 是彈性且可自訂的系統。 本主題的大部分內容都著重在最常見的 WCF 使用案例。 不過，您可以用許多不同的方式撰寫 WCF 提供的元件。 了解使用各個元件的安全性含意是很重要的。 尤其是：
+WCF 是有彈性且可自訂的系統。 本主題的大部分內容都是以最常見的 WCF 使用案例為重點。 不過，您可以用許多不同的方式來撰寫 WCF 提供的元件。 了解使用各個元件的安全性含意是很重要的。 尤其是：
 
-- 當您必須使用 XML 讀取器時，請使用 <xref:System.Xml.XmlDictionaryReader> 類別提供的讀取器，而非其他的讀取器。 安全的讀取器是使用 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>或 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 方法建立的。 請勿使用 <xref:System.Xml.XmlReader.Create%2A> 方法。 請永遠使用安全的配額來設定讀取器。 WCF 中的序列化引擎只有在與 WCF 的安全 XML 讀取器搭配使用時才是安全的。
+- 當您必須使用 XML 讀取器時，請使用 <xref:System.Xml.XmlDictionaryReader> 類別提供的讀取器，而非其他的讀取器。 安全的讀取器是使用 <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>、 <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>或 <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> 方法建立的。 請勿使用 <xref:System.Xml.XmlReader.Create%2A> 方法。 請永遠使用安全的配額來設定讀取器。 WCF 中的序列化引擎只有在搭配 WCF 的安全 XML 讀取器使用時才是安全的。
 
 - 當使用 <xref:System.Runtime.Serialization.DataContractSerializer> 來還原序列化可能不受信任的資料時，請永遠設定 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> 屬性。
 

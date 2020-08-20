@@ -4,22 +4,22 @@ description: 透過逐步使用 dotnet test 和 MSTest 建置範例方案的互�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: bd7891243d84277a7578089f8b4629ff5bada577
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 765b57dce323c10dc5fcbf395cb7d52be76046c2
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240905"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656354"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 與 .NET Core 為 C# 進行單元測試
 
-本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程會引導您逐步進行建置範例方案的互動式體驗，以了解單元測試概念。 如果您想要使用預先建置的方案進行教學課程，請在開始之前[檢視或下載範例程式碼](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-mstest/)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="create-the-source-project"></a>建立來源專案
 
-開啟 Shell 視窗。 建立名稱為 *unit-testing-using-mstest* 的目錄來放置解決方案。 在此新目錄中，運行[`dotnet new sln`](../tools/dotnet-new.md)以為類庫和測試專案創建新的解決方案檔。 接著，建立 *PrimeService* 目錄。 下列大綱顯示到目前為止的目錄與檔案結構：
+開啟 Shell 視窗。 建立名稱為 *unit-testing-using-mstest* 的目錄來放置解決方案。 在這個新目錄中，執行 [`dotnet new sln`](../tools/dotnet-new.md) 以建立類別庫和測試專案的新方案檔。 接著，建立 *PrimeService* 目錄。 下列大綱顯示到目前為止的目錄與檔案結構：
 
 ```console
 /unit-testing-using-mstest
@@ -27,7 +27,7 @@ ms.locfileid: "78240905"
     /PrimeService
 ```
 
-使*PrimeService*成為目前的目錄[`dotnet new classlib`](../tools/dotnet-new.md)並運行以創建源專案。 將 *Class1.cs* 重新命名為 *PrimeService.cs*。 建立會失敗的 `PrimeService` 類別實作：
+使 *>primeservice* 成為目前的目錄並執行， [`dotnet new classlib`](../tools/dotnet-new.md) 以建立來源專案。 將 *Class1.cs* 重新命名為 *PrimeService.cs*。 建立會失敗的 `PrimeService` 類別實作：
 
 ```csharp
 using System;
@@ -44,7 +44,7 @@ namespace Prime.Services
 }
 ```
 
-將目錄變更回 *unit-testing-using-mstest* 目錄。 運行[`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md)以將類庫專案添加到解決方案。
+將目錄變更回 *unit-testing-using-mstest* 目錄。 執行 [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) 以將類別庫專案加入至方案。
 
 ## <a name="create-the-test-project"></a>建立測試專案
 
@@ -59,7 +59,7 @@ namespace Prime.Services
     /PrimeService.Tests
 ```
 
-使*PrimeService.測試*目錄成為目前的目錄，並使用 創建新專案[`dotnet new mstest`](../tools/dotnet-new.md)。 dotnet new 命令會建立將 MSTest 作為測試程式庫使用的測試專案。 生成的範本在*PrimeServiceTest.csproj*檔中配置測試回合程式：
+使 *>primeservice* 成為目前的目錄的目錄， [`dotnet new mstest`](../tools/dotnet-new.md) 並使用建立新專案。 dotnet new 命令會建立將 MSTest 作為測試程式庫使用的測試專案。 產生的範本會在 *>primeservicetests.csproj .csproj* 檔案中設定測試執行器：
 
 ```xml
 <ItemGroup>
@@ -69,7 +69,7 @@ namespace Prime.Services
 </ItemGroup>
 ```
 
-測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 已新增 MSTest SDK、MSTest 測試架構和 MSTest 執行器。 現在，將 `PrimeService` 類別庫新增為專案的另一個相依性。 使用以下[`dotnet add reference`](../tools/dotnet-add-reference.md)命令：
+測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new` 已新增 MSTest SDK、MSTest 測試架構和 MSTest 執行器。 現在，將 `PrimeService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
@@ -90,11 +90,11 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeServiceTests.csproj
 ```
 
-在[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)*單元測試使用-mstest*目錄中執行。
+[`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)在*單元測試-使用-mstest*目錄中執行。
 
 ## <a name="create-the-first-test"></a>建立第一個測試
 
-撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 從*PrimeService.測試*目錄中刪除*UnitTest1.cs，* 並創建名為*PrimeService_IsPrimeShould.cs*的新 C# 檔，內容如下：
+撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 從 *>primeservice*中移除*UnitTest1.cs* ，然後使用下列內容建立名為*PrimeService_IsPrimeShould*的新 c # 檔案：
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -125,7 +125,7 @@ namespace Prime.UnitTests.Services
 
 [TestClass 屬性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)代表包含單元測試的類別。 [TestMethod 屬性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)表示方法是測試方法。
 
-保存此檔並執行[`dotnet test`](../tools/dotnet-test.md)以生成測試和類庫，然後運行測試。 MSTest 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
+儲存此檔案，然後執行 [`dotnet test`](../tools/dotnet-test.md) 以建立測試和類別庫，然後執行測試。 MSTest 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
 
 您的測試失敗。 您尚未建立實作。 在可運作的 `PrimeService` 類別中撰寫最簡單的程式碼以讓此測試成功：
 
@@ -160,7 +160,7 @@ if (candidate < 2)
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
 - [在單元測試中使用 MSTest 架構](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)

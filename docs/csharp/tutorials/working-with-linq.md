@@ -4,34 +4,34 @@ description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bc17700e22ea29b1861945a220e397a90b9a7c1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240011"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656992"
 ---
-# <a name="work-with-language-integrated-query-linq"></a>使用語言集成查詢 （LINQ）
+# <a name="work-with-language-integrated-query-linq"></a>使用 (LINQ) 的語言整合式查詢
 
 ## <a name="introduction"></a>簡介
 
 此教學課程會教導您 .NET Core 和 C# 語言中的功能。 您將了解如何：
 
-- 使用 LINQ 生成序列。
-- 編寫可在 LINQ 查詢中輕鬆使用的方法。
-- 區分渴望和懶惰的評價。
+- 使用 LINQ 產生序列。
+- 撰寫可以在 LINQ 查詢中輕鬆使用的方法。
+- 區分積極和延遲評估。
 
 您將建置一個應用程式來學習這些技術，其中將示範任何魔術師都會的基礎技巧：[完美洗牌 (英文)](https://en.wikipedia.org/wiki/Faro_shuffle)。 簡單地說，完美洗牌是將牌組確實分成兩半，然後互相交錯每一張紙牌來重建原始牌堆的技術。
 
 魔術師使用這項技術的原因，是因為在每次洗牌後，每張紙牌都會在已知的位置，其順序會遵循重複性的模式。
 
-基於您的目的，這是以較輕鬆的方式來了解對資料序列的操作。 您將構建的應用程式將構造一個卡片組，然後執行一系列洗牌，每次將序列寫出來。 您也會比較原始的順序與更新過的順序。
+基於您的目的，這是以較輕鬆的方式來了解對資料序列的操作。 您將建立的應用程式會結構化卡片，然後執行一連串的洗牌，每次都會寫出序列。 您也會比較原始的順序與更新過的順序。
 
-本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/samples GitHub 存放機制中查看[完整範例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/samples GitHub 存放機制中查看[完整範例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#view-and-download-samples)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-您將必須設定電腦以執行 .NET Core。 您可以在[.NET 核心下載](https://dotnet.microsoft.com/download)頁面上找到安裝說明。 您可以在 Windows、Ubuntu Linux 或 OS X 上運行此應用程式，也可以在 Docker 容器中運行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用[Visual Studio 代碼](https://code.visualstudio.com/)，這是一個開源的跨平臺編輯器。 不過，您可以使用您熟悉的任何工具。
+您將必須設定電腦以執行 .NET Core。 您可以在 [.Net Core 下載](https://dotnet.microsoft.com/download) 頁面中找到安裝指示。 您可以在 Windows、Ubuntu Linux 或 OS X 上執行此應用程式，或在 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 下列說明使用 [Visual Studio Code](https://code.visualstudio.com/) 是開放原始碼的跨平臺編輯器。 不過，您可以使用您熟悉的任何工具。
 
 ## <a name="create-the-application"></a>建立應用程式
 
@@ -39,7 +39,7 @@ ms.locfileid: "78240011"
 
 如果您從未使用過 C#，[此教學課程](console-teleprompter.md)會說明 C# 程式的結構。 您可以閱讀該教學課程，然後再回到這裡以深入了解 LINQ。
 
-## <a name="create-the-data-set"></a>創建資料集
+## <a name="create-the-data-set"></a>建立資料集
 
 開始之前，請確定下列程式碼行位於 `dotnet new console` 所產生的`Program.cs` 檔案最上方：
 
@@ -173,7 +173,7 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 您可以方法的第一個引數上看到加入的 `this` 修飾詞。 這表示您會將方法當作第一個引數之型別的成員方法來呼叫。 此方法宣告也遵循標準慣用語，其中輸入和輸出型別為 `IEnumerable<T>`。 該作法可使 LINQ 方法鏈結在一起，以執行更複雜的查詢。
 
-當然，因為您將這副牌分成數堆，所以必須將這幾堆聯結在一起。 在代碼中，這意味著您將枚舉通過元素和<xref:System.Linq.Enumerable.Take%2A><xref:System.Linq.Enumerable.Skip%2A>一次*`interleaving`* 元素獲取的兩個序列，並創建一個序列：現在洗牌的卡片組。 若要撰寫可搭配兩個序列使用的 LINQ 方法，您必須先了解 <xref:System.Collections.Generic.IEnumerable%601> 的運作方式。
+當然，因為您將這副牌分成數堆，所以必須將這幾堆聯結在一起。 在程式碼中，這表示您將會列舉您透過和一次取得的兩個序列 <xref:System.Linq.Enumerable.Take%2A> <xref:System.Linq.Enumerable.Skip%2A> 、 *`interleaving`* 元素，以及建立一個序列：您現在已隨機的卡片組。 若要撰寫可搭配兩個序列使用的 LINQ 方法，您必須先了解 <xref:System.Collections.Generic.IEnumerable%601> 的運作方式。
 
 <xref:System.Collections.Generic.IEnumerable%601> 介面具有單一方法：<xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>。 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 傳回的物件具有可移動到下一個元素的方法，以及可擷取目前序列中元素的屬性。 您將會使用那兩個成員來列舉集合並傳回元素。 此交錯方法將會是迭代器方法，因此您將使用上述的 `yield return` 語法，而不是建置集合並傳回集合。
 
@@ -350,9 +350,9 @@ public static void Main(string[] args)
 
 如需有關 LINQ 的詳細資訊，請參閱：
 
-- [語言綜合查詢（LINQ）](../programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
 - [LINQ 簡介](../programming-guide/concepts/linq/index.md)
 - [基本 LINQ 查詢作業 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-- [使用 LINQ （C#） 的資料轉換](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [使用 LINQ (c # ) 的資料轉換 ](../programming-guide/concepts/linq/data-transformations-with-linq.md)
 - [LINQ 中的查詢語法及方法語法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
 - [支援 LINQ 的 C# 功能](../programming-guide/concepts/linq/features-that-support-linq.md)
