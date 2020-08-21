@@ -2,12 +2,12 @@
 title: 基礎類別庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: 9190fc2fc8dddc4fb4be8409915cf24c92a97daf
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: e0ebc054e0abccfe934b505a727060653fe313cd
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558168"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720181"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,9 @@ ms.locfileid: "88558168"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [參考元件中的參數名稱變更](#parameter-names-changed-in-reference-assemblies) | 5.0 |
+| [在 Unix 上正確剖析非 ASCII 字元的 URI 路徑](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
+| [Unix 上 UNC 路徑的 Uri 識別](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
 | [環境。 OSVersion 傳回正確的作業系統版本](#environmentosversion-returns-the-correct-operating-system-version) | 5.0 |
 | [LINQ OrderBy 的複雜度。前 {OrDefault} 增加了](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
 | [IntPtr 和 UIntPtr 實 >iformattable](#intptr-and-uintptr-implement-iformattable) | 5.0 |
@@ -47,6 +50,18 @@ ms.locfileid: "88558168"
 | [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
+
+***
+
+[!INCLUDE [non-ascii-chars-in-uri-parsed-correctly](../../../includes/core-changes/corefx/5.0/non-ascii-chars-in-uri-parsed-correctly.md)]
+
+***
+
+[!INCLUDE [unc-path-recognition-unix](../../../includes/core-changes/corefx/5.0/unc-path-recognition-unix.md)]
+
+***
 
 [!INCLUDE [environment-osversion-returns-correct-version](../../../includes/core-changes/corefx/5.0/environment-osversion-returns-correct-version.md)]
 

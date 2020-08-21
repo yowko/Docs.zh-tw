@@ -4,12 +4,12 @@ description: 瞭解如何修剪獨立的應用程式，以縮減其大小。 .NE
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 2bb0f03994468bbad3096ebf0b141bc1f47b867e
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656712"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720120"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>修剪獨立式部署及可執行檔
 
@@ -51,7 +51,7 @@ Trim 獨立部署模型是獨立部署模型的特製化版本，已優化以減
 </ItemGroup>
 ```
 
-下列範例會在積極的修剪模式下發布應用程式，而未使用的程式碼遷移元件將會被修剪，並啟用修剪器警告。
+下列範例會在積極的修剪模式中發佈應用程式，而元件中未使用的程式碼將會被修剪，並啟用修剪器警告。
 
 ```xml
 <ItemGroup>

@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 57261602c456a6dcf90c03aa044e7d1c0c8c1c6a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 968da880fc7e0e811f5e8712ccb43726426a019e
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608021"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720159"
 ---
 # <a name="task-based-asynchronous-programming"></a>工作型非同步程式設計
 
@@ -255,11 +255,11 @@ ms.locfileid: "88608021"
 
 ## <a name="tasks-without-delegates"></a>不含委派的工作
 
-在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskCompletionSource%601>。
+在某些情況下，您可能需要使用 <xref:System.Threading.Tasks.Task> 來封裝由外部元件 (而非您自己的使用者委派) 所執行的一些非同步作業。 如果作業是根據非同步程式設計模型 Begin/End 模式，您可以使用 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 方法。 如果不是根據這個模式，您可以使用 <xref:System.Threading.Tasks.TaskCompletionSource%601> 物件將作業包裝在工作中，進而享有利用 <xref:System.Threading.Tasks.Task> 撰寫程式的一些優點，例如支援例外狀況傳播和接續。 如需詳細資訊，請參閱<xref:System.Threading.Tasks.TaskCompletionSource%601>。
 
 ## <a name="custom-schedulers"></a>自訂排程器
 
-大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱 <xref:System.Threading.Tasks.TaskScheduler>。
+大部分的應用程式或程式庫開發人員並不在意工作會在哪一個處理器上執行、工作會如何將自己的成品與其他工作同步，或是工作會如何排定在 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 上。 他們只要求工作能夠在主機電腦上盡可能有效率地執行。 如果您需要進一步控制排程細節，工作平行程式庫可讓您設定預設工作排程器上的某些設定，甚至可讓您提供自訂的排程器。 如需詳細資訊，請參閱<xref:System.Threading.Tasks.TaskScheduler>。
 
 ## <a name="related-data-structures"></a>相關資料結構
 
@@ -288,7 +288,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 |[資料平行處理](data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|
 |[平行程式設計](index.md)|.NET Framework 平行程式設計的最上層節點。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行程式設計](index.md)
 - [使用 .NET Core & 進行平行程式設計的範例 .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
