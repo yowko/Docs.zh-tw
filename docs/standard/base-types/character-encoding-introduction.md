@@ -124,7 +124,7 @@ s[1] = '�' ('\udc02')
 
 <span data-ttu-id="5b1b1-160">下圖說明 BMP 與補充程式碼點之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="5b1b1-160">The following diagram illustrates the relationship between the BMP and the supplementary code points.</span></span>
 
-:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-supplementary。 svg "alt-text =" BMP 和補充程式碼點 "：：：
+:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-supplementary。 svg" "alt-text =" BMP 和補充程式碼點 "：：：
 
 ## <a name="utf-16-code-units"></a><span data-ttu-id="5b1b1-162">UTF-16 程式碼單位</span><span class="sxs-lookup"><span data-stu-id="5b1b1-162">UTF-16 code units</span></span>
 
@@ -138,7 +138,7 @@ s[1] = '�' ('\udc02')
 
 <span data-ttu-id="5b1b1-170">下圖說明 BMP 與代理程式碼點之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="5b1b1-170">The following diagram illustrates the relationship between the BMP and the surrogate code points.</span></span>
 
-:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-surrogate。 svg "alt-text =" BMP 和代理程式碼點 "：：：
+:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-surrogate。 svg" "alt-text =" BMP 和代理程式碼點 "：：：
 
 <span data-ttu-id="5b1b1-172">當 *高代理* 程式碼點 (`U+D800..U+DBFF`) 後面緊接著 *低代理* 程式碼點 () 時 `U+DC00..U+DFFF` ，會使用下列公式將配對解釋為補充程式碼點：</span><span class="sxs-lookup"><span data-stu-id="5b1b1-172">When a *high surrogate* code point (`U+D800..U+DBFF`) is immediately followed by a *low surrogate* code point (`U+DC00..U+DFFF`), the pair is interpreted as a supplementary code point by using the following formula:</span></span>
 
@@ -184,7 +184,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 <span data-ttu-id="5b1b1-184">下圖說明純量值的程式碼點。</span><span class="sxs-lookup"><span data-stu-id="5b1b1-184">The following diagram illustrates the scalar value code points.</span></span>
 
-:::image type="content" source="media/:::無 loc (char) ：：： acter-encoding-introduction/scalar-values svg "alt-text =" 純量值 "：：：
+:::image type="content" source="media/:::無 loc (char) ：：： acter-encoding-introduction/scalar-values svg" "alt-text =" 純量值 "：：：
 
 ### <a name="the-no-locrune-type-as-a-scalar-value"></a><span data-ttu-id="5b1b1-186">以純量 Rune 值的類型</span><span class="sxs-lookup"><span data-stu-id="5b1b1-186">The Rune type as a scalar value</span></span>
 
