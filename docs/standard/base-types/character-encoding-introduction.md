@@ -124,7 +124,7 @@ Unicode 標準定義1100000以上的程式 [代碼點](https://www.unicode.org/g
 
 下圖說明 BMP 與補充程式碼點之間的關聯性。
 
-:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-supplementary。 svg "alt-text =" BMP 和補充程式碼點 "：：：
+:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-supplementary。 svg" "alt-text =" BMP 和補充程式碼點 "：：：
 
 ## <a name="utf-16-code-units"></a>UTF-16 程式碼單位
 
@@ -138,7 +138,7 @@ Unicode 標準定義1100000以上的程式 [代碼點](https://www.unicode.org/g
 
 下圖說明 BMP 與代理程式碼點之間的關聯性。
 
-:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-surrogate。 svg "alt-text =" BMP 和代理程式碼點 "：：：
+:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-surrogate。 svg" "alt-text =" BMP 和代理程式碼點 "：：：
 
 當 *高代理* 程式碼點 (`U+D800..U+DBFF`) 後面緊接著 *低代理* 程式碼點 () 時 `U+DC00..U+DFFF` ，會使用下列公式將配對解釋為補充程式碼點：
 
@@ -184,7 +184,7 @@ Unicode 純量 [值](https://www.unicode.org/glossary/#unicode_scalar_value) 一
 
 下圖說明純量值的程式碼點。
 
-:::image type="content" source="media/:::無 loc (char) ：：： acter-encoding-introduction/scalar-values svg "alt-text =" 純量值 "：：：
+:::image type="content" source="media/:::無 loc (char) ：：： acter-encoding-introduction/scalar-values svg" "alt-text =" 純量值 "：：：
 
 ### <a name="the-no-locrune-type-as-a-scalar-value"></a>以純量 Rune 值的類型
 
