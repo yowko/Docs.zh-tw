@@ -2,12 +2,12 @@
 title: 集合型別
 description: '瞭解 F # 集合類型，以及它們與 .NET 集合類型之間的差異。'
 ms.date: 08/14/2020
-ms.openlocfilehash: 197ba754d632051b5a0bf9c8364d45a1fb932f48
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267278"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656901"
 ---
 # <a name="f-collection-types"></a>F# 集合類型
 
@@ -21,11 +21,11 @@ ms.locfileid: "88267278"
 
 |類型|描述|相關連結|
 |----|-----------|-------------|
-|[清單](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|相同類型的已排序且不可變的元素系列。 實作為連結清單。|[清單](lists.md)<br /><br />[List 模組](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[陣列](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|以零為基底的固定資料元素集合，這些專案全都屬於相同類型。|[陣列](arrays.md)<br /><br />[Array 模組](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 模組](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 模組](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[序列](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|全部為一種類型之元素的邏輯序列。 當您有大量的資料收集，但不一定會預期使用所有專案時，序列特別有用。 個別順序元素只會在必要時計算，因此如果未使用所有元素，序列的執行效能會優於清單。 順序是以類型表示 `seq<'T>` ，這是的別名 `IEnumerable<T>` 。 因此，任何執行的 .NET Framework 型別都 `System.Collections.Generic.IEnumerable<'T>` 可以當做序列使用。|[序列](sequences.md)<br /><br />[Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[地圖](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|元素的不可變字典。 專案是由索引鍵存取。|[Map 模組](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[設定](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|以二進位樹狀結構為基礎的不可變集合，其中的比較是 F # 結構比較函式，其可能會 `System.IComparable` 在索引鍵值上使用介面的實值。|[設定模組](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[清單](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|相同類型的已排序且不可變的元素系列。 實作為連結清單。|[清單](lists.md)<br /><br />[List 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
+|[陣列](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|以零為基底的固定資料元素集合，這些專案全都屬於相同類型。|[陣列](arrays.md)<br /><br />[Array 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
+|[序列](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seq-1.html)|全部為一種類型之元素的邏輯序列。 當您有大量的資料收集，但不一定會預期使用所有專案時，序列特別有用。 個別順序元素只會在必要時計算，因此如果未使用所有元素，序列的執行效能會優於清單。 順序是以類型表示 `seq<'T>` ，這是的別名 `IEnumerable<T>` 。 因此，任何執行的 .NET Framework 型別都 `System.Collections.Generic.IEnumerable<'T>` 可以當做序列使用。|[序列](sequences.md)<br /><br />[Seq 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html)|
+|[地圖](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpmap-2.html)|元素的不可變字典。 專案是由索引鍵存取。|[Map 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-mapmodule.html)|
+|[設定](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpset-1.html)|以二進位樹狀結構為基礎的不可變集合，其中的比較是 F # 結構比較函式，其可能會 `System.IComparable` 在索引鍵值上使用介面的實值。|[設定模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-setmodule.html)|
 
 ### <a name="table-of-functions"></a>函數的資料表
 
@@ -44,7 +44,7 @@ ms.locfileid: "88267278"
 |收集|O (N) |O (N) |O (N) |-|-|將指定的函式套用至集合中的每個元素、串連所有結果，並傳回合並的清單。|
 |Seq.comparewith|-|-|O (N) |-|-|使用指定的比較函式、element by 專案來比較兩個序列。|
 |concat|O (N) |O (N) |O (N) |-|-|將指定列舉列舉型別合併為單一串連列舉。|
-|contains|-|-|-|-|O (記錄 (N) # A3|如果集合包含指定的元素，則傳回 true。|
+|包含|-|-|-|-|O (記錄 (N) # A3|如果集合包含指定的元素，則傳回 true。|
 |containsKey|-|-|-|O (記錄 (N) # A3|-|測試專案是否在對應的定義域中。|
 |count|-|-|-|-|O (N) |傳回集合中項目的數目。|
 |Seq.countby|-|-|O (N) |-|-|將索引鍵產生函式套用至序列的每個專案，並傳回會產生唯一索引鍵的序列，以及其在原始序列中的發生次數。|
@@ -90,10 +90,10 @@ ms.locfileid: "88267278"
 |list.map3|-|O (N) |-|-|-|建立集合，其專案是將指定函式同時套用至三個集合之對應元素的結果。|
 |Mapi|O (N) |O (N) |O (N) |-|-|建立陣列，其專案為將指定函式套用至陣列的每個元素的結果。 傳遞至函式的整數索引，表示要轉換之元素的索引。|
 |list.mapi2|O (N) |O (N) |-|-|-|建立集合，其專案為將指定函式套用至兩個集合的對應元素的結果，也會傳遞元素的索引。 這兩個輸入陣列的長度必須相同。|
-|max|O (N) |O (N) |O (N) |-|-|傳回集合中最大的專案，並使用 [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 運算子進行比較。|
+|最大值|O (N) |O (N) |O (N) |-|-|傳回集合中最大的專案，並使用 [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 運算子進行比較。|
 |maxBy|O (N) |O (N) |O (N) |-|-|傳回集合中最大的專案，相較于在函數結果上使用 [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 。|
 |Set.maxelement|-|-|-|-|O (記錄 (N) # A3|根據用於集合的順序，傳回集合中最大的元素。|
-|Min|O (N) |O (N) |O (N) |-|-|傳回集合中最小的專案，使用 [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 運算子進行比較。|
+|最小值|O (N) |O (N) |O (N) |-|-|傳回集合中最小的專案，使用 [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 運算子進行比較。|
 |minBy|O (N) |O (N) |O (N) |-|-|傳回集合中最小的專案，並使用函數結果上的 [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 運算子來比較。|
 |Set.minelement|-|-|-|-|O (記錄 (N) # A3|根據用於集合的順序，傳回集合中的最小元素。|
 |List.ofarray|-|O (N) |O (1) |O (N) |O (N) |建立集合，其中包含與指定陣列相同的元素。|
@@ -144,7 +144,7 @@ ms.locfileid: "88267278"
 |zip|O (N) |O (N) |O (N) |-|-|將兩個集合合併成成對的清單。 這兩個清單必須有相等的長度。|
 |array.zip3|O (N) |O (N) |O (N) |-|-|將三個集合合併成三個清單。 清單必須有相等的長度。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F# 類型](fsharp-types.md)
 - [F # 語言參考](index.md)
