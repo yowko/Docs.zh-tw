@@ -12,12 +12,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 17d33b25867f75419a0e65ab0d75950bad13af57
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: 72198287028c73f0e518d7bcfd0b694bb267e132
+  ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88267395"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88812272"
 items:
 - durationInMinutes: 1
   content: >
@@ -52,7 +52,7 @@ items:
     > 該練習將有助於您了解 C# 程式碼的結構。
 
 
-    您的第一個程式僅能列印一則訊息。 您可以使用**變數**來撰寫更有用的程式。 **變數**是一種符號，可以使用不同的值來執行相同的程式碼。 讓我們來試試看！ 使用下列程式碼取代您在互動式視窗中所撰寫的程式碼：
+    您的第一個程式僅能列印一則訊息。 您可以使用*變數*來撰寫更有用的程式。 *變數*是一種符號，可以使用不同的值來執行相同的程式碼。 讓我們來試試看！ 使用下列程式碼取代您在互動式視窗中所撰寫的程式碼：
 
 
     ```csharp
@@ -64,7 +64,7 @@ items:
     ```
 
 
-    第一行會宣告一個變數 `aFriend`，並為其指派一個值 "Bill"。 第二行會列印出名稱。
+    第一行會宣告一個變數， `aFriend` 並為它指派一個值 "Bill"。 第二行會列印出名稱。
 
 
     您可以將不同的值指派給任何您宣告的變數。 您可以將名稱變更為您的任何一位朋友。 在互動式視窗中，在您已新增的程式碼之後加入這兩行：
@@ -149,11 +149,11 @@ items:
 
     > [!TIP]
 
-    > 這是您自行探索的好時機。 您已學到 `Console.WriteLine()` 將文字寫至螢幕。 您已學到如何宣告變數，以及將字串串連在一起。 在互動式視窗中實驗。 視窗具有稱為 **IntelliSense** 的功能，這個功能會提供可執行的動作建議給您。 在 `firstFriend` 中的 `d` 後面輸入 `.`。 您會看到您可以使用的屬性和方法建議清單。
+    > 這是您自行探索的好時機。 您已學到 `Console.WriteLine()` 將文字寫至螢幕。 您已學到如何宣告變數，以及將字串串連在一起。 在互動式視窗中實驗。 視窗具有稱為 *IntelliSense* 的功能，這個功能會提供可執行的動作建議給您。 在 `firstFriend` 中的 `d` 後面輸入 `.`。 您會看到您可以使用的屬性和方法建議清單。
 - title: 使用字串完成更多工作
   durationInMinutes: 5
   content: >
-    您已經使用 **方法**， <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 來列印訊息。 **方法**是實作某些動作的程式碼區塊。 它具有名稱，以便於您可以存取。
+    您已經使用 *方法*， <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 來列印訊息。 *方法*是實作某些動作的程式碼區塊。 它具有名稱，以便於您可以存取。
 
 
     假設您的字串有您不想要顯示的開頭或尾端空格。 您想要**修剪**字串的空格。
@@ -234,7 +234,7 @@ items:
     ```
 
 
-    <xref:System.String.Contains%2A> 方法會傳回一個**布林**值，告訴您是否已找到您要搜尋的字串。 **布林值**會儲存 `true` 或 `false` 值。 當顯示為文字輸出時，它們會以大寫： `True` 和 `False` 分別顯示。 您將在稍後的課程中深入了解**布林值**。
+    <xref:System.String.Contains%2A> 方法會傳回一個*布林*值，告訴您是否已找到您要搜尋的字串。 *布林值*會儲存 `true` 或 `false` 值。 當顯示為文字輸出時，它們會以大寫： `True` 和 `False` 分別顯示。 您將在稍後的課程中深入了解*布林值*。
 
 
     ***挑戰***
