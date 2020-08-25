@@ -2,12 +2,12 @@
 title: F# 程式碼格式方針
 description: '瞭解格式化 F # 程式碼的指導方針。'
 ms.date: 11/04/2019
-ms.openlocfilehash: fe8da6070e1c92bb5205e9cb408b8ac75372b061
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc871b0a8461ed93550ab02cc2c66b143285a3e3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558305"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720146"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 程式碼格式方針
 
@@ -936,3 +936,47 @@ let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 避免將屬性放在與值相同的行上。
+
+## <a name="formatting-computation-expression-operations"></a>格式化計算運算式作業
+
+建立 [計算運算式](../language-reference/computation-expressions.md) 的自訂作業時，建議使用 camelCase 命名：
+
+```fsharp
+type MathBuilder () =
+    member _.Yield _ = 0
+
+    [<CustomOperation("addOne")>]
+    member _.AddOne (state: int) =
+        state + 1
+
+    [<CustomOperation("subtractOne")>]
+    member _.SubtractOne (state: int) =
+        state - 1
+
+    [<CustomOperation("divideBy")>]
+    member _.DivideBy (state: int, divisor: int) =
+        state / divisor
+
+    [<CustomOperation("multiplyBy")>]
+    member _.MultiplyBy (state: int, factor: int) =
+        state * factor
+
+let math = MathBuilder()
+
+// 10
+let myNumber =
+    math {
+        addOne
+        addOne
+        addOne
+
+        subtractOne
+
+        divideBy 2
+
+        multiplyBy 10
+    }
+```
+
+使用的命名慣例最後應由正在模型化的網域所驅動。
+如果慣用為使用不同的慣例，則應改用該慣例。
