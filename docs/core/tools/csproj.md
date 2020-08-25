@@ -3,12 +3,12 @@ title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 82174b2976abda2337a4a9b5a5a5e1f60a1094fb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608334"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810881"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -20,13 +20,13 @@ ms.locfileid: "88608334"
 
 ```xml
  <PropertyGroup>
-   <TargetFramework>netcoreapp2.1</TargetFramework>
+   <TargetFramework>netcoreapp3.1</TargetFramework>
  </PropertyGroup>
  ```
 
  ```xml
  <PropertyGroup>
-   <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
+   <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
  </PropertyGroup>
  ```
 
@@ -71,7 +71,7 @@ ms.locfileid: "88608334"
 
 下表顯示 SDK 中會同時包含及排除的元素與 [Glob (英文)](https://en.wikipedia.org/wiki/Glob_(programming))：
 
-| 元素           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob              |
+| 項目           | 包含 Glob                              | 排除 Glob                                                  | 移除 Glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | 編譯           | \*\*/\*.cs (或其他語言副檔名) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
 | 內嵌資源  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
@@ -116,11 +116,15 @@ ms.locfileid: "88608334"
 
 雖然那些 csproj 變更可大幅簡化專案檔，在包括 SDK 和其目標之後，您可能會想要以 MSBuild 查看專案的方式查看完全展開的專案。 使用 [`dotnet msbuild`](dotnet-msbuild.md) 命令的 [`/pp` 切換](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) 對專案進行前置處理，它可以在不需要實際建置專案的情況下，顯示匯入的檔案、檔案的來源，以及該檔案對組建的貢獻：
 
-`dotnet msbuild -pp:fullproject.xml`
+```dotnetcli
+dotnet msbuild -pp:fullproject.xml
+```
 
 如果專案具有多個目標架構，系統應該會透過將它們的其中之一指定為 MSBuild 屬性，來使命令的結果專注於該目標架構：
 
-`dotnet msbuild -p:TargetFramework=netcoreapp2.0 -pp:fullproject.xml`
+```dotnetcli
+dotnet msbuild -p:TargetFramework=netcoreapp3.1 -pp:fullproject.xml
+```
 
 ## <a name="additions"></a>新增項目
 
@@ -218,10 +222,10 @@ RID 允許發行獨立部署。
 </PackageTargetFallback >
 ```
 
-下列範例只會為 `netcoreapp2.1` 目標指定後援︰
+下列範例只會為 `netcoreapp3.1` 目標指定後援︰
 
 ```xml
-<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp2.1'">
+<PackageTargetFallback Condition="'$(TargetFramework)'=='netcoreapp3.1'">
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
@@ -267,7 +271,7 @@ RID 允許發行獨立部署。
 
 指定所產生之套件的名稱。 如果未指定，`pack` 作業會預設為使用 `AssemblyName` 或目錄名稱作為套件的名稱。
 
-### <a name="title"></a>Title
+### <a name="title"></a>標題
 
 套件的易記標題，通常會用於 UI 顯示，以及 nuget.org 和 Visual Studio 套件管理員中。 如果未指定，則會改用套件識別碼。
 
@@ -289,7 +293,7 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 
-布林值，指定在安裝套件時，用戶端是否必須提示取用者接受套件授權。 預設值為 `false`。
+布林值，指定在安裝套件時，用戶端是否必須提示取用者接受套件授權。 預設為 `false`。
 
 ### <a name="developmentdependency"></a>DevelopmentDependency
 
@@ -401,7 +405,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
-此布林值會指定是否有任何類型為 `Content` 的項目會自動包含於所產生的套件中。 預設值為 `true`。
+此布林值會指定是否有任何類型為 `Content` 的項目會自動包含於所產生的套件中。 預設為 `true`。
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 

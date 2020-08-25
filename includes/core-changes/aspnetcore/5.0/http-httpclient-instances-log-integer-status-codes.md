@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 44d33fb28e66e590e4604c6dd2c73616e4c5e943
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 47f42305f4106f5e05e555a859f13c41bb950519
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728277"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811254"
 ---
 ### <a name="http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes"></a>HTTP： IHttpClientFactory 記錄整數狀態碼所建立的 HttpClient 實例
 
-<xref:System.Net.Http.HttpClient>以 <xref:System.Net.Http.IHttpClientFactory> 整數而不是狀態碼名稱所建立的實例。
+<xref:System.Net.Http.HttpClient><xref:System.Net.Http.IHttpClientFactory>記錄 HTTP 狀態碼做為整數而非狀態碼名稱所建立的實例。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -16,35 +16,35 @@ ms.locfileid: "82728277"
 
 #### <a name="old-behavior"></a>舊的行為
 
-記錄會使用 HTTP 狀態碼的文字描述。 請考慮下列記錄檔訊息：
+記錄會使用 HTTP 狀態碼的文字描述。 請考慮下列記錄訊息：
 
-```
+```output
 Received HTTP response after 56.0044ms - OK
 End processing HTTP request after 70.0862ms - OK
 ```
 
 #### <a name="new-behavior"></a>新的行為
 
-記錄會使用 HTTP 狀態碼的整數值。 請考慮下列記錄檔訊息：
+記錄會使用 HTTP 狀態碼的整數值。 請考慮下列記錄訊息：
 
-```
+```output
 Received HTTP response after 56.0044ms - 200
 End processing HTTP request after 70.0862ms - 200
 ```
 
 #### <a name="reason-for-change"></a>變更的原因
 
-這項記錄的原始行為與具有一律使用之整數值的 ASP.NET Core 的其他部分不一致。 不一致會使記錄檔難以透過結構化記錄系統（例如[Elasticsearch](https://www.elastic.co/elasticsearch/)）進行查詢。 如需詳細內容，請參閱[dotnet/extensions # 1549](https://github.com/dotnet/extensions/issues/1549)。
+此記錄的原始行為與具有永遠使用之整數值的 ASP.NET Core 的其他部分不一致。 不一致會讓記錄難以透過結構化記錄系統（例如 [Elasticsearch](https://www.elastic.co/elasticsearch/)）進行查詢。 如需詳細資訊，請參閱 [dotnet/extensions # 1549](https://github.com/dotnet/extensions/issues/1549)。
 
 使用整數值比文字更有彈性，因為它允許對值範圍進行查詢。
 
-已考慮加入另一個記錄值來捕捉整數狀態碼。 可惜的是，這樣做會導致其他 ASP.NET Core 的其他不一致。 HttpClient 記錄和 HTTP 伺服器/裝載記錄使用相同的索引 `StatusCode` 鍵名稱。
+已考慮新增另一個記錄值來捕捉整數狀態碼。 可惜的是，這麼做會導致其他 ASP.NET Core 的不一致。 HttpClient 記錄和 HTTP 伺服器/裝載記錄已使用相同的 `StatusCode` 金鑰名稱。
 
 #### <a name="recommended-action"></a>建議的動作
 
-最佳選項是更新記錄查詢，以使用狀態碼的整數值。 此選項可能會導致在多個 ASP.NET Core 版本中撰寫查詢時遇到一些困難。 不過，針對此用途使用整數，對於查詢記錄會有更大的彈性。
+最佳選項是更新記錄查詢，以使用狀態碼的整數值。 此選項可能會在多個 ASP.NET Core 版本之間撰寫查詢時遇到困難。 不過，針對此用途使用整數，對於查詢記錄會有更大的彈性。
 
-如果您需要強制相容于舊的行為，並使用文字狀態碼，請將 `IHttpClientFactory` 記錄取代成您自己的：
+如果您需要強制與舊有行為的相容性，並使用文字狀態碼，請 `IHttpClientFactory` 使用您自己的記錄來取代記錄：
 
 1. 將下列類別的 .NET Core 3.1 版本複製到您的專案中：
 
@@ -53,9 +53,9 @@ End processing HTTP request after 70.0862ms - 200
     * [LoggingScopeHttpMessageHandler](https://github.com/dotnet/extensions/blob/release/3.1/src/HttpClientFactory/Http/src/Logging/LoggingScopeHttpMessageHandler.cs)
     * [HttpHeadersLogValue](https://github.com/dotnet/extensions/blob/release/3.1/src/HttpClientFactory/Http/src/Logging/HttpHeadersLogValue.cs)
 
-1. 將類別重新命名，以避免與[Microsoft Extensions. Http](https://www.nuget.org/packages/Microsoft.Extensions.Http) NuGet 封裝中的公用類型發生衝突。
+1. 將類別重新命名，以避免與位於 [Http.sys](https://www.nuget.org/packages/Microsoft.Extensions.Http) NuGet 套件中的公用類型發生衝突。
 
-1. `LoggingHttpMessageHandlerBuilderFilter`在專案的方法中，將內建的實取代為您自己的 `Startup.ConfigureServices` 。 例如：
+1. 以 `LoggingHttpMessageHandlerBuilderFilter` 您自己在專案的方法中取代內建的實作為 `Startup.ConfigureServices` 。 例如：
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)

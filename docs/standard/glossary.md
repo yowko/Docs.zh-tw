@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: c984a29208d8680de3c04f6b4d16c6f41afedc71
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163123"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812337"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -18,7 +18,7 @@ ms.locfileid: "87163123"
 
 預先編譯器。
 
-此編譯器類似於 [JIT](#jit)，也會將 [IL](#il) 轉譯成機器碼。 相較於 JIT 編譯，AOT 編譯會在執行應用程式之前發生，而且通常會在不同的電腦上執行。 因為 AOT 工具鏈不會在執行時間編譯，所以不需要將花費在編譯的時間降到最低。 這表示它們可以花更多的時間在最佳化。 由於 AOT 的內容是整個應用程式，因此 AOT 編譯器也會執行跨模組連結和整個程式分析，這表示會追蹤所有參考並產生單一可執行檔。
+此編譯器類似於 [JIT](#jit)，也會將 [IL](#il) 轉譯成機器碼。 相較於 JIT 編譯，AOT 編譯會在執行應用程式之前發生，而且通常會在不同的電腦上執行。 因為 AOT 工具鏈不會在執行時間編譯，所以不需要將編譯花費的時間降到最低。 這表示它們可以花更多的時間在最佳化。 由於 AOT 的內容是整個應用程式，因此 AOT 編譯器也會執行跨模組連結和整個程式分析，這表示會追蹤所有參考並產生單一可執行檔。
 
 請參閱 [CoreRT](#corert) 及 [.NET Native](#net-native)。
 
@@ -26,54 +26,59 @@ ms.locfileid: "87163123"
 
 隨附於 .NET Framework 的原始 ASP.NET 實作。
 
-有時 ASP.NET 是指包括 ASP.NET Core 在內之兩個 ASP.NET 實作的籠統名詞。 該詞彙在任何指定的執行個體中所代表的意義取決於內容。 當您想要清楚指出您不是使用 ASP.NET 來表示這兩個實作為時，請參閱 ASP.NET 4.x。
+有時 ASP.NET 是指包括 ASP.NET Core 在內之兩個 ASP.NET 實作的籠統名詞。 該詞彙在任何指定的執行個體中所代表的意義取決於內容。 如果您想要清楚說您不是使用 ASP.NET 來表示這兩個執行，請參閱 ASP.NET 4.x。
 
 請參閱 [ASP.NET 文件](/aspnet/#pivot=aspnet)。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-以 .NET Core 為基礎之 ASP.NET 的跨平臺、高效能、開放原始碼的執行。
+ASP.NET 的跨平臺、高效能、開放原始碼的實作為。
 
 請參閱 [ASP.NET Core 文件](/aspnet/#pivot=core)。
 
 ## <a name="assembly"></a>組件 (assembly)
 
-*.Dll* / *.exe*檔案，其中包含可由應用程式或其他元件呼叫的 api 集合。
+*.Dll* / *.exe*檔，可包含可由應用程式或其他元件呼叫的 api 集合。
 
 一個組件可以包含介面、類別、結構、列舉和委派等類型。 專案的 *bin* 資料夾中的組件有時稱為「二進位檔」**。 另請參閱[程式庫](#library)。
+
+## <a name="bcl"></a>B c l
+
+基類庫。 也稱為 *架構程式庫*。
+
+組成系統的一組程式庫。 \* (以及 Microsoft 的範圍有限。 \*) 命名空間。 BCL 是 ASP.NET Core 等較高層級的應用程式架構建置所在之較低層級的一般目的架構。
+
+.Net [5 和更新版本的 BCL 原始程式碼 (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions) 包含在 [.net 運行](https://github.com/dotnet/runtime)時間存放庫中。 這項較新的 .NET 執行的 BCL Api 大部分也都可在 .NET Framework 中使用，因此您可以將此原始程式碼視為 .NET Framework BCL 原始程式碼的分支。
 
 ## <a name="clr"></a>CLR
 
 Common Language Runtime。
 
-確切意義取決於內容，但通用語言執行時間通常是指 .NET Framework 的執行時間。 CLR 會處理記憶體配置和管理。 CLR 也是虛擬機器，不僅會執行應用程式，也會使用[JIT](#jit)編譯器即時產生和編譯器代碼。 目前的 Microsoft CLR 實作僅限 Windows。
+確切的意義取決於內容。 Common Language Runtime 通常是指 [.NET Framework](#net-framework) 的執行時間或 [.net 5 和更新版本的執行時間 (包括 .net Core 2.1-3.1) ](#net-5-and-later-versions)。
 
-## <a name="coreclr"></a>CoreCLR
+CLR 會處理記憶體配置和管理。 CLR 也是虛擬機器，不僅可執行應用程式，也會使用 [JIT](#jit) 編譯器來即時產生和編譯器代碼。
 
-.NET Core Common Language Runtime。
+.NET Framework 的 CLR 實作為僅限 Windows。
 
-此 CLR 是從與 CLR 相同的程式碼基底所建置。 一開始，CoreCLR 是 Silverlight 的執行階段，其設計目的是為了在多個平台上執行，特別是 Windows 和 OS X。CoreCLR 現在是 .NET Core 的一部分，代表 CLR 的簡化版本。 它仍然是[跨平台](#cross-platform)執行階段，現在支援許多 Linux 發行版本。 CoreCLR 也是具有 JIT 和程式碼執行功能的虛擬機器。
+適用于 .NET 5 和更新版本的 CLR 實 (也稱為核心 CLR) 是從與 .NET Framework CLR 相同的程式碼基底所建立。 核心 CLR 原本是 Silverlight 的執行時間，其設計目的是要在多個平臺上執行，特別是 Windows 和 OS X。它仍然是一種 [跨平臺](#cross-platform) 的執行時間，現在包含許多 Linux 發行版本的支援。
 
-## <a name="corefx"></a>CoreFx
+另請參閱 [運行](#runtime)時間。
 
-.NET Core 基底類別庫 (BCL)
+## <a name="core-clr"></a>核心 CLR
 
-> [!TIP]
-> *Fx*代表*架構*。
+適用于 [.net 5 和更新版本的 Common Language Runtime (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions)。
 
-組成系統的一組程式庫。 \*（以及 Microsoft 的有限範圍）。 \*命名空間. BCL 是 ASP.NET Core 等較高層級的應用程式架構建置所在之較低層級的一般目的架構。 .Net Core BCL 的原始程式碼包含在[.Net core 運行](https://github.com/dotnet/runtime)時間存放庫中。 不過，大多數的 .NET Core API 也適用於 .NET Framework；因此您可以將 CoreFX 視為 .NET Framework BCL 的分支。
+請參閱 [CLR](#clr)
 
 ## <a name="corert"></a>CoreRT
 
-.NET Core 執行階段。
+相較于 [CLR](#clr)，CoreRT 不是虛擬機器，這表示它不包含可即時產生和執行程式碼的功能，因為它不包含 [JIT](#jit)。 不過，它確實包含 [GC](#gc) ，以及執行時間類型識別 (RTTI) 和反映的能力。 不過，其型別系統已設計成不需要反映的中繼資料。 不需要中繼資料可讓 [AOT](#aot) 工具鏈連結到多餘的中繼資料， (更重要的是) 識別應用程式未使用的程式碼。 CoreRT 正在開發中。
 
-相較於 CLR/CoreCLR，CoreRT 不是虛擬機器，這表示它不會包含即時產生和執行程式碼的功能，因為它不包含 [JIT](#jit)。 不過，它會包含[GC](#gc)以及執行時間類型識別（RTTI）和反映的功能。 不過，其型別系統已設計成不需要反映的中繼資料。 不需要中繼資料，可讓[AOT](#aot)工具鏈連結掉不必要的中繼資料，而且更重要的是識別應用程式不會使用的程式碼。 CoreRT 正在開發中。
-
-請參閱[.NET Native 和 CoreRT 的簡介](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)。
+請參閱 [.NET Native 和 CoreRT 簡介](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)。
 
 ## <a name="cross-platform"></a>跨平台
 
-能夠開發和執行可在多個不同的作業系統（例如 Linux、Windows 和 iOS）上使用的應用程式，而不需要特別針對每一種作業系統進行重寫。 這可讓程式碼重複使用，以及不同平臺上的應用程式之間的一致性。
+開發和執行應用程式的能力，可用於多個不同的作業系統（例如 Linux、Windows 和 iOS），而不需要特別針對每個作業系統進行重寫。 這可讓您在不同平臺上的應用程式之間重複使用程式碼和一致性。
 
 ## <a name="ecosystem"></a>生態系統
 
@@ -87,13 +92,14 @@ Common Language Runtime。
 
 一般而言，一組功能齊全的 API 可加快開發和部署以特定技術為基礎的應用程式。 ASP.NET Core 和 Windows Forms 即為此一般意義的應用程式架構範例。 另請參閱[程式庫](#library)。
 
-「架構」一字在下列詞彙中有更特定的技術意義：
+"Framework" 這個字在下列詞彙中有不同的意義：
 
 - [.NET Framework](#net-framework)
 - [目標 framework](#target-framework)
 - [TFM (目標 Framework Moniker)](#tfm)
+- [與 framework 相依的應用程式](../core/deploying/index.md#publish-framework-dependent)
 
-在現有的文件中，「架構」有時是指 [.NET 實作](#implementation-of-net)。 例如，某篇文章可能會將 .NET Core 稱為架構。 我們計劃從文件中排除這個令人混淆的用法。
+在舊版 .NET 檔中，「架構」有時是指 [.net 的實](#implementation-of-net)。 例如，文章可能會呼叫 .NET 5 架構。
 
 ## <a name="gc"></a>GC
 
@@ -119,16 +125,17 @@ Just-in-Time 編譯器。
 
 .NET 的執行包括：
 
-- 一或多個執行階段。 範例：CLR、CoreCLR、CoreRT。
-- 實作 .NET Standard 版本並可能包含其他 API 的類別庫。 範例：.NET Framework 基底類別庫、.NET Core 基底類別庫。
-- (選擇性) 一或多個應用程式架構。 範例：ASP.NET、Windows Forms 和 WPF 會包含在 .NET Framework 中。
+- 一或多個執行階段。 範例： [CLR](#clr)、 [CoreRT](#corert)。
+- 實作 .NET Standard 版本並可能包含其他 API 的類別庫。 範例：適用于[.NET Framework](#net-framework)的[BCLs](#bcl)和[.net 5 和更新版本 (包括 .net Core 2.1-3.1) ](#net-5-and-later-versions)。
+- (選擇性) 一或多個應用程式架構。 範例： [ASP.NET](#aspnet)、WINDOWS FORMS 和 WPF 包含在 .NET FRAMEWORK 和 .net 5 中。
 - (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
 .NET 實作的範例：
 
 - [.NET Framework](#net-framework)
-- [.NET Core](#net-core)
+- [.NET 5 和更新版本 (包括 .NET Core 2.1-3。1](#net-5-and-later-versions)
 - [通用 Windows 平台 (UWP)](#uwp)
+- [Mono](#mono)
 
 ## <a name="library"></a>圖書館
 
@@ -136,55 +143,53 @@ Just-in-Time 編譯器。
 
 程式庫和[架構](#framework)等字在使用時通常同義。
 
-## <a name="metapackage"></a>中繼套件
+## <a name="mono"></a>Mono
 
-沒有自己的程式庫，而只是一份相依性清單的 NuGet 套件。 內含的套件可以選擇性地建立目標 Framework 的 API。
-
-## <a name="mono"></a>單聲道
-
-Mono 是開放原始碼、[跨平台](#cross-platform)的 .NET 實作，主要用於需要小型執行階段時。 它是在 Android、Mac、iOS、tvOS 和 watchOS 上提供 Xamarin 應用程式的執行時間，主要著重于需要少量使用量的應用程式。
+Mono 是開放原始碼、[跨平台](#cross-platform)的 .NET 實作，主要用於需要小型執行階段時。 它是在 Android、Mac、iOS、tvOS 和 watchOS 上提供 Xamarin 應用程式的執行時間，主要著重于需要少量資源的應用程式。
 
 它支援目前發行的所有 .NET Standard 版本。
 
 在過去，Mono 實作較大型的 .NET Framework API，並模擬 UNIX 上最熱門的其中一些功能。 它有時可用來執行依賴這些 UNIX 功能的 .NET 應用程式。
 
-Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS 等平台的完整靜態編譯器 (預先編譯)。
+Mono 通常與 [即時編譯器](#jit)搭配使用，但也提供完整的 [靜態編譯器 (預先編譯) ](#aot) ，可在 iOS 等平臺上使用。
 
-若要深入了解 Mono，請參閱 [Mono 文件](https://www.mono-project.com/docs/)。
+請參閱 [Mono 檔](https://www.mono-project.com/docs/)。
 
 ## <a name="net"></a>.NET
 
-[.NET Standard](#net-standard) 以及所有 [.NET 實作](#implementation-of-net)和工作負載的籠統詞彙。 一律全大寫，永不「.Net」。
+[.NET Standard](#net-standard) 以及所有 [.NET 實作](#implementation-of-net)和工作負載的籠統詞彙。 一律為完全大寫，絕對不會是 ".Net"。
 
-請參閱[.net 指南](index.yml)
+當 [.net 5](#net-5-and-later-versions) (目前處於) 預覽狀態時，系統會針對所有新的 .net 開發建議使用 .net，因此在某些內容中，".net" 將表示「.net 5 和更新版本」。
+
+請參閱 [.net 指南](index.yml)
+
+## <a name="net-5-and-later-versions"></a>.NET 5 和更新版本
+
+.NET 的跨平臺、高效能、開放原始碼的實作為。 包括 Common Language Runtime ([CLR](#clr)) 、 ([CoreRT](#corert)的[AOT](#aot)執行時間、開發) 、基類庫 ([BCL](#bcl)) 和[.net SDK](#net-sdk)。
+
+此 .NET 實作為較早的版本，稱為 .NET Core。 .NET 5.0 是 .NET Core 3.1 之後的下一版。 已略過第4版，以避免使用較舊的實作為（稱為 [.NET Framework](#net-framework)）來混淆這項較新的 .net 執行。 .NET Framework 目前的版本為4.8。
+
+請參閱 [.net](../core/index.yml)。
+
+## <a name="net-cli"></a>.NET CLI
+
+適用于開發 .Net 5 和更新版本之應用程式和程式庫的跨平臺工具鏈， [ (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions)。 也稱為 .NET Core CLI。
+
+請參閱 [.NET CLI](../core/tools/index.md)。
 
 ## <a name="net-core"></a>.NET Core
 
-.NET 的跨平臺、高效能、開放原始碼的執行。 包括 Core Common Language Runtime (CoreCLR)、Core AOT 執行階段 (CoreRT 開發中)、Core 基底類別庫，以及 Core SDK。
-
-請參閱 [.NET Core](../core/index.yml)。
-
-## <a name="net-core-cli"></a>.NET Core CLI
-
-用於開發 .NET Core 應用程式的跨平台工具鏈。
-
-請參閱[.NET Core CLI](../core/tools/index.md)。
-
-## <a name="net-core-sdk"></a>.NET Core SDK
-
-可讓開發人員建立 .NET Core 應用程式和程式庫的一組程式庫和工具。 包括用於建置應用程式的 [.NET Core CLI](#net-core-cli)、用於建置及執行應用程式的 .NET Core 程式庫和執行階段，以及執行 CLI 命令及執行應用程式的 dotnet 可執行檔 (*dotnet.exe*)。
-
-請參閱 [.NET Core SDK 概觀](../core/sdk.md)。
+請參閱 [.net 5 和更新版本](#net-5-and-later-versions)。
 
 ## <a name="net-framework"></a>.NET Framework
 
-只會在 Windows 上執行的 .NET 實作。 包括 Common Language Runtime (CLR)、基底類別庫，以及 ASP.NET、Windows Forms 和 WPF 等應用程式架構程式庫。
+只會在 Windows 上執行的 .NET 實作。 包括 Common Language Runtime ([CLR](#clr)) 、基類庫 ([BCL](#bcl)) 和應用程式架構程式庫（例如 [ASP.NET](#aspnet)、Windows Forms 和 WPF）。
 
 請參閱 [.NET Framework 指南](../framework/index.yml)。
 
 ## <a name="net-native"></a>.NET Native
 
-產生機器碼預先編譯 (AOT) 而不是 Just-In-Time (JIT) 的編譯器工具鏈。
+產生原生程式碼提前 ([AOT](#aot)) 的編譯器工具鏈，而非即時 ([JIT](#jit)) 。
 
 編譯會在開發人員的電腦上發生，其運作方式類似於 C++ 編譯器和連結器。 它會移除未使用的程式碼，並花更多時間在最佳化。 它會從程式庫擷取程式碼，並將其合併成可執行檔。 結果會是代表整個應用程式的單一模組。
 
@@ -192,11 +197,19 @@ UWP 是 .NET Native 第一個支援的應用程式架構。 現在，我們支�
 
 請參閱 [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (.NET Native 和 CoreRT 簡介)
 
+## <a name="net-sdk"></a>.NET SDK
+
+一組程式庫和工具，可讓開發人員建立 .net 5 和更新版本的 .NET 應用程式和程式庫 [ (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions)。 也稱為 .NET Core SDK。
+
+包含用來建立應用程式的 [.NET CLI](#net-cli) 、用來建立和執行應用程式的 .net 程式庫和執行時間，以及 dotnet 可執行檔 (*dotnet.exe* 執行 CLI 命令和執行應用程式的) 。
+
+請參閱 [.NET SDK 總覽](../core/sdk.md)。
+
 ## <a name="net-standard"></a>.NET Standard
 
 可用於每個 .NET 實作之 .NET API 的型式規格。
 
-.NET Standard 規格在文件中有時稱為程式庫。 由於程式庫不只包含規格 (介面)，還包含 API 實作，因此將 .NET Standard 稱為「程式庫」會造成誤導。 我們計劃從文件中排除該用法，只有參考 .NET Standard 中繼套件的名稱 (`NETStandard.Library`) 時除外。
+.NET Standard 規格在文件中有時稱為程式庫。 由於程式庫不只包含規格 (介面)，還包含 API 實作，因此將 .NET Standard 稱為「程式庫」會造成誤導。
 
 請參閱 [.NET Standard](net-standard.md)。
 
@@ -204,7 +217,7 @@ UWP 是 .NET Native 第一個支援的應用程式架構。 現在，我們支�
 
 原生 (映像) 產生。
 
-您可以將這項技術視為永續性 JIT 編譯器。 它通常會在執行程式碼的電腦上編譯程式碼，但編譯通常會發生在安裝期間。
+您可以將這項技術視為持續性 [JIT](#jit) 編譯器。 它通常會在執行程式碼的電腦上編譯程式碼，但編譯通常會發生在安裝期間。
 
 ## <a name="package"></a>套件
 
@@ -221,26 +234,33 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 - 「.NET Core 是 .NET 的跨平台實作。」
 - 「PCL 設定檔代表 Microsoft 平台，而 .NET Standard 則無從驗證平台。」
 
-.NET 文件經常使用「.NET 平台」來表示 .NET 實作或包含所有實作的 .NET 堆疊。 這兩種用法通常會與主要 (OS/硬體) 意義混淆，因此我們計劃從文件中排除這些用法。
+舊版 .NET 檔有時會使用 ".NET platform" 來表示 .NET 或 .NET [stack](#stack)的執行，包括所有[的實](#implementation-of-net)作為。 這兩種使用方式通常會與主要 (作業系統/硬體) 含意混淆，因此我們會嘗試避免這些使用方式。
+
+「平臺」在「開發人員平臺」一詞中有不同的意義，這是指提供建立和執行應用程式之工具和程式庫的軟體。 .NET 是一種跨平臺的開放原始碼開發人員平臺，可用於建立許多不同類型的應用程式。
 
 ## <a name="runtime"></a>執行階段
 
-受管理程式的執行環境。
+一般情況下，受管理程式的執行環境。 OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分。 以下是 .NET 執行時間的一些範例：
 
-OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分。 以下是 .NET 執行階段的一些範例：
-
-- Common Language Runtime (CLR)
-- Core Common Language Runtime (CoreCLR)
+- Common Language Runtime ([CLR](#clr)) 
 - .NET Native (適用於 UWP)
 - Mono 執行階段
 
-.NET 文件有時會使用「執行階段」來表示 .NET 實作。 例如，在下列句子中，「執行階段」應該取代成「實作」：
+"Runtime" 這個字在下列內容中有不同的意義：
+
+* [.Net 下載頁面](https://dotnet.microsoft.com/download)。
+
+  此處的「執行時間」表示 [CLR](#clr) 與 [BCL](#bcl) (framework 程式庫) ，您可以在電腦上下載並安裝該程式庫，讓您可以在電腦上執行與 [framework 相依](../core/deploying/index.md#publish-framework-dependent) 的應用程式。
+
+* [.Net 5 和更新版本 (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions) [ (RID) 的執行時間識別碼](../core/rid-catalog.md)。
+
+  此處的「執行時間」表示 .NET 應用程式執行所在的作業系統平臺和 CPU 架構，例如： `linux-x64` 。
+
+舊版 .NET 檔有時候會使用「執行時間」，以 [實現 .net](#implementation-of-net)的意義，如下列範例所示：
 
 - 「不同的 .NET 執行階段會實作特定版本的 .NET Standard。」
 - 「要在多個執行階段上執行的程式庫應以此架構為目標。」 (指的是 .NET Standard)
 - 「不同的 .NET 執行階段會實作特定版本的 .NET Standard。 … 每個 .NET 執行階段版本會宣佈它所支援的最高 .NET Standard 版本...」
-
-我們計劃排除這個不一致的用法。
 
 ## <a name="stack"></a>堆疊
 
@@ -252,9 +272,9 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 .NET 應用程式或程式庫依賴的 API 集合。
 
-應用程式或程式庫可以將目標設為某個版本的 .NET Standard (例如 .NET Standard 2.0)，這會是跨所有 .NET 實作之一組標準化 API 的規格。 應用程式或程式庫也可以將目標設為某個版本的特定 .NET 實作；在此情況下，它可以存取實作特定的 API。 例如，以 Xamarin.iOS 為目標的應用程式可以存取 Xamarin 提供的 iOS API 包裝函式。
+應用程式或程式庫可以將目標設為某個版本的 .NET Standard (例如 .NET Standard 2.0) ，這是一組標準化的 Api，適用于所有 .NET 執行。 應用程式或程式庫也可以將目標設為某個版本的特定 .NET 實作；在此情況下，它可以存取實作特定的 API。 例如，以 Xamarin.iOS 為目標的應用程式可以存取 Xamarin 提供的 iOS API 包裝函式。
 
-針對某些目標 Framework (例如 .NET Framework)，可用的 API 是由 .NET 實作安裝在系統上的組件所定義，這可能包含應用程式架構 API (例如 ASP.NET、WinForms)。 針對以套件為基礎的目標 Framework (例如 .NET Standard 和 .NET Core)，架構 API 是由安裝在應用程式或程式庫中的套件所定義。 在此情況下，目標 Framework 會隱含指定一個中繼套件，該套件會參考組成架構的所有套件。
+針對某些目標 Framework (例如 .NET Framework)，可用的 API 是由 .NET 實作安裝在系統上的組件所定義，這可能包含應用程式架構 API (例如 ASP.NET、WinForms)。 針對以套件為基礎的目標 Framework (例如 .NET Standard 和 .NET Core)，架構 API 是由安裝在應用程式或程式庫中的套件所定義。 在此情況下，目標架構會隱含地指定參考所有封裝的封裝，這些封裝會組成架構。
 
 請參閱[目標 Framework](frameworks.md)。
 
@@ -270,7 +290,7 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 通用 Windows 平台。
 
-用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是要整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 應用程式可以用 c + +、c #、Visual Basic 和 JavaScript 撰寫。 使用 c # 和 Visual Basic 時，.net Api 是由 .NET Core 提供。
+用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 它是設計來統一您可能想要鎖定的不同裝置類型，包括電腦、平板電腦、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 您可以用 c + +、c #、Visual Basic 和 JavaScript 來撰寫應用程式。 使用 c # 和 Visual Basic 時，.net Api 是由 .NET 5 和更新版本所提供， (包括 .NET Core 2.1-3.1) 。
 
 ## <a name="see-also"></a>另請參閱
 

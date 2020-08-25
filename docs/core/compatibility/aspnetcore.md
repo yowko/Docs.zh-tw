@@ -2,15 +2,15 @@
 title: ASP.NET Core 重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 07/17/2020
+ms.date: 08/20/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 4f37bf73c13379bce006c9a3b51302c09562cc44
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720237"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811252"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 重大變更
 
@@ -69,6 +69,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [當地語系化：在要求當地語系化中介軟體中移除過時的函式](#localization-obsolete-constructor-removed-in-request-localization-middleware)
 - [當地語系化：已移除 ResourceManagerWithCultureStringLocalizer 類別和 WithCulture 介面成員](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [記錄： DebugLogger 類別設為內部](#logging-debuglogger-class-made-internal)
+- [中介軟體：資料庫錯誤頁面標示為已淘汰](#middleware-database-error-page-marked-as-obsolete)
 - [MVC：已移除控制器動作非同步尾碼](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC： JsonResult 已移至 AspNetCore](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
 - [MVC：先行編譯工具已淘汰](#mvc-precompilation-tool-deprecated)
@@ -159,6 +160,10 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 ***
 
 [!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
+[!INCLUDE[Middleware: Database error page marked as obsolete](~/includes/core-changes/aspnetcore/5.0/middleware-database-error-page-obsolete.md)]
 
 ***
 

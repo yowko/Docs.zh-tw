@@ -1,19 +1,19 @@
 ---
 title: 使用 Docker 教學課程將應用程式容器化
-description: 在本教學課程中，您將瞭解如何使用 Docker 容器化 .NET Core 應用程式。
+description: 在本教學課程中，您將瞭解如何使用 Docker 來將 .NET Core 應用程式。
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c5e6648539af45f3ce615bfc183e6f95a62b085a
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 99bbc67096d98622ca5c0dc83d8b1be44a9995e5
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200024"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810543"
 ---
-# <a name="tutorial-containerize-a-net-core-app"></a>教學課程：容器化 .NET Core 應用程式
+# <a name="tutorial-containerize-a-net-core-app"></a>教學課程：將 .NET Core 應用程式
 
-在本教學課程中，您將瞭解如何使用 Docker 容器化 .NET Core 應用程式。 容器有許多功能和優點，例如成為不可變的基礎結構、提供可移植的架構，以及啟用擴充性。 映像可用來為您的本機開發環境、私人雲端，或公用雲端建立容器。
+在本教學課程中，您將瞭解如何使用 Docker 來將 .NET Core 應用程式。 容器有許多功能和優點，例如成為不可變的基礎結構、提供可攜的架構，以及啟用擴充性。 映像可用來為您的本機開發環境、私人雲端，或公用雲端建立容器。
 
 在本教學課程中，您：
 
@@ -24,23 +24,23 @@ ms.locfileid: "82200024"
 > - 建置 Docker 映像
 > - 建立及執行 Docker 容器
 
-您將了解 .NET Core 應用程式的 Docker 容器建置及部署工作。 *Docker 平臺*會使用*docker 引擎*來快速建立應用程式，並將其封裝為*Docker 映射*。 這些映像是以 *Dockerfile* 格式所撰寫，可在分層式容器中部署及執行。
+您將了解 .NET Core 應用程式的 Docker 容器建置及部署工作。 *Docker 平臺*會使用*docker 引擎*，快速建立應用程式並將其封裝為*Docker 映射*。 這些映像是以 *Dockerfile* 格式所撰寫，可在分層式容器中部署及執行。
 
 > [!NOTE]
-> 本教學課程**不適**用於 ASP.NET Core 應用程式。 如果您使用 ASP.NET Core，請參閱[瞭解如何容器化 ASP.NET Core 應用程式](/aspnet/core/host-and-deploy/docker/building-net-docker-images)教學課程。
+> 本教學課程 **不適** 用於 ASP.NET Core 應用程式。 如果您是使用 ASP.NET Core，請參閱 [瞭解如何將 ASP.NET Core 應用程式](/aspnet/core/host-and-deploy/docker/building-net-docker-images) 教學課程。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 安裝下列先決條件：
 
 - [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)\
 如果您已安裝 .NET Core，請使用 `dotnet --info` 命令來判斷您使用的 SDK。
-- [Docker Community Edition](https://www.docker.com/products/docker-desktop)
-- *Dockerfile* 和 .NET Core 範例應用程式的暫存工作資料夾。 在本教學課程中，會使用*docker-作用*中的名稱做為工作資料夾。
+- [Docker 社區版本](https://www.docker.com/products/docker-desktop)
+- *Dockerfile* 和 .NET Core 範例應用程式的暫存工作資料夾。 在本教學課程中，會使用 *docker 工作* 的名稱做為工作資料夾。
 
 ## <a name="create-net-core-app"></a>建立 .NET Core 應用程式
 
-您需要 Docker 容器將執行的 .NET Core 應用程式。 開啟您的終端機，建立工作資料夾 (如果沒有)，並進入該資料夾。 在工作資料夾中，執行下列命令以在名為*app*的子目錄中建立新的專案：
+您需要 Docker 容器將執行的 .NET Core 應用程式。 開啟您的終端機，建立工作資料夾 (如果沒有)，並進入該資料夾。 在工作資料夾中，執行下列命令，在名為 *app*的子目錄中建立新的專案：
 
 ```dotnetcli
 dotnet new console -o App -n NetCore.Docker
@@ -61,25 +61,25 @@ docker-working
             └──project.nuget.cache
 ```
 
-此`dotnet new`命令會建立名為*App*的新資料夾，並產生 "Hello World" 主控台應用程式。 從您的終端機會話變更目錄，並流覽至*應用程式*資料夾。 使用`dotnet run`命令來啟動應用程式。 應用程式將會執行，並`Hello World!`在命令下方列印：
+此 `dotnet new` 命令會建立名為 *App* 的新資料夾，並產生 "Hello World" 主控台應用程式。 從您的終端機會話，變更目錄並流覽至 *應用程式* 資料夾。 使用 `dotnet run` 命令來啟動應用程式。 應用程式將會執行，並 `Hello World!` 在命令下方列印：
 
 ```dotnetcli
 dotnet run
 Hello World!
 ```
 
-預設範本會建立會列印到終端機的應用程式，然後立即終止。 針對此教學課程，您將使用無限期執行迴圈的應用程式。 在文字編輯器中開啟 *Program.cs* 檔案。
+預設範本會建立會列印到終端機，然後立即終止的應用程式。 針對此教學課程，您將使用無限期執行迴圈的應用程式。 在文字編輯器中開啟 *Program.cs* 檔案。
 
 > [!TIP]
-> 如果您使用的是 Visual Studio Code，請從先前的終端機會話輸入下列命令：
+> 如果您是使用 Visual Studio Code，請從先前的終端機會話中輸入下列命令：
 >
-> ```
+> ```console
 > code .
 > ```
 >
-> 這會在 Visual Studio Code 中開啟包含專案的*應用程式*資料夾。
+> 這會開啟 *應用程式* 資料夾，其中包含 Visual Studio Code 中的專案。
 
-*Program.cs*看起來應該像下列 c # 程式碼：
+*Program.cs*看起來應該如下列 c # 程式碼：
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ namespace NetCore.Docker
 }
 ```
 
-儲存檔案，然後使用 `dotnet run` 再次測試程式。 請記住此應用程式會無限期執行。 使用 [取消] 命令<kbd>Ctrl + C</kbd>來停止它。 以下是範例輸出：
+儲存檔案，然後使用 `dotnet run` 再次測試程式。 請記住此應用程式會無限期執行。 使用 [取消] 命令 <kbd>Ctrl + C</kbd> 來停止。 以下是範例輸出：
 
 ```dotnetcli
 dotnet run
@@ -148,7 +148,7 @@ dotnet publish -c Release
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
-從*應用程式*資料夾中，取得 [發行] 資料夾的目錄清單，以確認已建立*NetCore*檔案。
+從 *應用程式* 資料夾取得 [發佈] 資料夾的目錄清單，以確認已建立 *NetCore.Docker.dll* 檔案。
 
 ```powershell
 dir .\bin\Release\netcoreapp3.1\publish\
@@ -166,7 +166,7 @@ Mode                LastWriteTime         Length Name
 
 #### <a name="linux"></a>[Linux](#tab/linux)
 
-使用`ls`命令來取得目錄清單，並確認已建立*NetCore*檔案。
+使用 `ls` 命令取得目錄清單，並確認已建立 *NetCore.Docker.dll* 檔案。
 
 ```bash
 me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp3.1/publish
@@ -177,20 +177,20 @@ NetCore.Docker.deps.json  NetCore.Docker.dll  NetCore.Docker.pdb  NetCore.Docker
 
 ## <a name="create-the-dockerfile"></a>建立 Dockerfile
 
-`docker build` 命令會使用 *Dockerfile* 檔案來建立容器映像。 此檔案是名為*Dockerfile*的文字檔，沒有副檔名。
+`docker build` 命令會使用 *Dockerfile* 檔案來建立容器映像。 這個檔案是名為 *Dockerfile* 的文字檔，不含副檔名。
 
-在包含 *.csproj*的目錄中建立名為*Dockerfile*的檔案，並在文字編輯器中開啟它。 本教學課程將使用 ASP.NET Core 執行時間映射（其中包含 .NET Core 執行時間映射），並對應至 .NET Core 主控台應用程式。
+在包含 *.csproj*的目錄中建立名為*Dockerfile*的檔案，並在文字編輯器中開啟該檔案。 本教學課程將使用 ASP.NET Core 執行時間映射 (，其中包含 .NET Core 執行時間映射) 並且對應于 .NET Core 主控台應用程式。
 
 ```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```
 
 > [!NOTE]
-> 這裡會刻意使用 ASP.NET Core 執行時間映射，雖然`mcr.microsoft.com/dotnet/core/runtime:3.1`映射可能已經使用過了。
+> 雖然可能已經使用了映射，但在這裡刻意使用 ASP.NET Core 執行時間映射 `mcr.microsoft.com/dotnet/core/runtime:3.1` 。
 
-`FROM`關鍵字需要完整的 Docker 容器映射名稱。 Microsoft Container Registry （MCR，mcr.microsoft.com）是 Docker Hub 的聯合，可裝載可公開存取的容器。 `dotnet/core`區段是容器存放庫，其中的`aspnet`區段是容器映射名稱。 影像會標記為`3.1`，用於版本控制。 因此， `mcr.microsoft.com/dotnet/core/aspnet:3.1`是 .net Core 3.1 執行時間。 請確定您已提取符合 SDK 目標執行時間的執行階段版本。 例如，在上一節中建立的應用程式會使用 .NET Core 3.1 SDK，而*Dockerfile*中所參考的基底映射會加上**3.1**。
+`FROM`關鍵字需要完整的 Docker 容器映射名稱。 Microsoft Container Registry (MCR，mcr.microsoft.com) 是 Docker Hub 的整合，可裝載可公開存取的容器。 `dotnet/core`區段是容器存放庫，其中 `aspnet` 區段是容器映射名稱。 影像會標記為 `3.1` ，以用於版本控制。 因此， `mcr.microsoft.com/dotnet/core/aspnet:3.1` 是 .Net Core 3.1 執行時間。 請確定您提取的執行階段版本符合您 SDK 的目標執行時間。 例如，在上一節中建立的應用程式使用 .NET Core 3.1 SDK，而 *Dockerfile* 中所參考的基底映射會標記為 **3.1**。
 
-儲存 *Dockerfile* 檔案。 工作資料夾的目錄結構應如下所示。 已省略一些較深層的檔案和資料夾，以節省文章中的空間：
+儲存 *Dockerfile* 檔案。 工作資料夾的目錄結構應如下所示。 有些較深層的檔案和資料夾已被省略，以節省文章中的空間：
 
 ```
 docker-working
@@ -217,7 +217,7 @@ docker-working
 docker build -t counter-image -f Dockerfile .
 ```
 
-Docker 將會處理 *Dockerfile* 中的每一行。 命令中的`.`會指示 Docker 使用目前的資料夾來尋找 Dockerfile。 *Dockerfile* `docker build` 此命令會建立映射，並建立名為**counter 映射**的本機存放庫，以指向該映射。 當此命令完成之後，執行 `docker images` 以查看已安裝的映像清單：
+Docker 將會處理 *Dockerfile* 中的每一行。 `.`命令中的會 `docker build` 指示 Docker 使用目前的資料夾來尋找*Dockerfile*。 此命令會建立映射，並建立名為 **counter** 的本機存放庫，指向該映射。 當此命令完成之後，執行 `docker images` 以查看已安裝的映像清單：
 
 ```Docker
 docker images
@@ -226,7 +226,7 @@ counter-image                           latest              e6780479db63        
 mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
 ```
 
-請注意，這兩個映像會共用相同的**映像識別碼**值。 此值在這兩個映像之間是一樣的，因為 *Dockerfile* 中的唯一命令會以現有映像上的新映像為依據。 讓我們在*Dockerfile*中新增三個命令。 每個命令都會使用最後一個命令來建立新的映射圖層，其代表**計數器映射**存放庫進入點。
+請注意，這兩個映像會共用相同的**映像識別碼**值。 此值在這兩個映像之間是一樣的，因為 *Dockerfile* 中的唯一命令會以現有映像上的新映像為依據。 讓我們將三個命令新增至 *Dockerfile*。 每個命令都會使用最後一個命令來建立新的映射圖層，以代表的 **計數器映射** 存放庫進入點。
 
 ```dockerfile
 COPY bin/Release/netcoreapp3.1/publish/ App/
@@ -234,9 +234,9 @@ WORKDIR /App
 ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 ```
 
-`COPY` 命令會指示 Docker，將您電腦上指定的資料夾複製到容器中的資料夾。 在此範例中，會將*publish*資料夾複製到容器中名為*App*的資料夾。
+`COPY` 命令會指示 Docker，將您電腦上指定的資料夾複製到容器中的資料夾。 在此範例中，會將 *發行* 資料夾複製到容器中名為 *App* 的資料夾。
 
-`WORKDIR`命令會將容器內的**目前目錄**變更為*應用程式*。
+此 `WORKDIR` 命令會將容器內的 **目前目錄** 變更為 *應用程式*。
 
 下一個命令 `ENTRYPOINT` 會指示 Docker 將容器設定為以可執行檔的形式執行。 當容器啟動時，`ENTRYPOINT` 命令就會執行。 當此命令結束時，容器將會自動停止。
 
@@ -266,7 +266,7 @@ counter-image                           latest              cd11c3df9b19        
 mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
 ```
 
-*Dockerfile* 中的每個命令都會產生一個圖層，並建立**映像識別碼**。 最終的**映射識別碼**（您的會不同）是**cd11c3df9b19** ，接下來您將根據此映射建立容器。
+*Dockerfile* 中的每個命令都會產生一個圖層，並建立**映像識別碼**。  (您的 **映射識別碼** 將會不同) **cd11c3df9b19** ，接下來您將根據此映射建立容器。
 
 ## <a name="create-a-container"></a>建立容器
 
@@ -277,7 +277,7 @@ docker create --name core-counter counter-image
 0f281cb3af994fba5d962cc7d482828484ea14ead6bfe386a35e5088c0058851
 ```
 
-上述`docker create`命令會根據**計數器映射**映射來建立容器。 該命令的輸出會顯示已建立容器的**容器識別碼** (您的映像識別碼將會不同)。 若要查看「所有」** 容器的清單，請使用 `docker ps -a` 命令：
+`docker create`上述命令會根據**計數器**影像映射建立容器。 該命令的輸出會顯示已建立容器的**容器識別碼** (您的映像識別碼將會不同)。 若要查看「所有」** 容器的清單，請使用 `docker ps -a` 命令：
 
 ```Docker
 docker ps -a
@@ -287,7 +287,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED           STA
 
 ### <a name="manage-the-container"></a>管理容器
 
-容器是使用特定名稱`core-counter`建立的，此名稱可用來管理容器。 下列範例會使用 `docker start` 命令來啟動容器，然後使用 `docker ps` 命令只顯示正在執行的容器：
+容器是使用特定名稱所建立 `core-counter` ，此名稱是用來管理容器。 下列範例會使用 `docker start` 命令來啟動容器，然後使用 `docker ps` 命令只顯示正在執行的容器：
 
 ```Docker
 docker start core-counter
@@ -298,7 +298,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED          STAT
 2f6424a7ddce    counter-image    "dotnet NetCore.Dock…"    2 minutes ago    Up 11 seconds            core-counter
 ```
 
-同樣地，`docker stop` 命令將會停止容器。 下列範例會使用`docker stop`命令來停止容器，然後使用`docker ps`命令來顯示沒有容器正在執行：
+同樣地，`docker stop` 命令將會停止容器。 下列範例 `docker stop` 會使用命令停止容器，然後使用 `docker ps` 命令顯示沒有任何容器正在執行：
 
 ```Docker
 docker stop core-counter
@@ -310,7 +310,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 ### <a name="connect-to-a-container"></a>連線到容器
 
-當容器正在執行之後，您可以連線到它以查看輸出。 使用 `docker start` 和 `docker attach` 命令來啟動容器，並查看輸出資料流。 在此範例中，會使用<kbd>Ctrl + C</kbd>鍵，從執行中的容器卸離。 除非另有指定，否則此按鍵會結束容器中的進程，這會停止容器。 `--sig-proxy=false`參數可確保<kbd>Ctrl + C</kbd>不會停止容器中的進程。
+當容器正在執行之後，您可以連線到它以查看輸出。 使用 `docker start` 和 `docker attach` 命令來啟動容器，並查看輸出資料流。 在此範例中，會使用 <kbd>Ctrl + C</kbd> 按鍵來卸離執行中的容器。 除非另有指定，否則此按鍵會結束容器中的進程，這會停止容器。 `--sig-proxy=false`參數可確保<kbd>Ctrl + C</kbd>不會停止容器中的進程。
 
 當您從容器中斷連結之後，請重新連結以確認它仍在執行且正在進行計算。
 
@@ -367,7 +367,7 @@ Counter: 5
 ^C
 ```
 
-容器也會將參數傳遞至 .NET Core 應用程式的執行。 指示 .NET Core 應用程式只計算3個階段。
+容器也會將參數傳遞至 .NET Core 應用程式的執行。 指示 .NET Core 應用程式只計算3次的3個。
 
 ```Docker
 docker run -it --rm counter-image 3
@@ -376,7 +376,7 @@ Counter: 2
 Counter: 3
 ```
 
-使用`docker run -it`， <kbd>Ctrl + C</kbd>命令會停止在容器中執行的進程，進而停止容器。 由於已提供 `--rm` 參數，因此會在程序停止時自動刪除容器。 確認它不存在：
+使用時 `docker run -it` ， <kbd>Ctrl + C</kbd> 命令會停止在容器中執行的進程，進而停止容器。 由於已提供 `--rm` 參數，因此會在程序停止時自動刪除容器。 確認它不存在：
 
 ```Docker
 docker ps -a
@@ -389,7 +389,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 #### <a name="windows"></a>[Windows](#tab/windows)
 
-在此範例中，`ENTRYPOINT` 會變更為 `cmd.exe`。 <kbd>Ctrl + C</kbd>已按下以結束進程並停止容器。
+在此範例中，`ENTRYPOINT` 會變更為 `cmd.exe`。 按下<kbd>Ctrl + C</kbd>以結束進程並停止容器。
 
 ```Docker
 docker run -it --rm --entrypoint "cmd.exe" counter-image
@@ -434,7 +434,7 @@ exit
 
 ## <a name="essential-commands"></a>基本命令
 
-Docker 有許多不同的命令，可建立、管理及與容器和映射進行互動。 這些 Docker 命令對於管理容器而言非常重要：
+Docker 有許多不同的命令，可建立、管理及與容器和映射互動。 這些 Docker 命令對於管理容器而言非常重要：
 
 - [docker build](https://docs.docker.com/engine/reference/commandline/build/)
 - [docker run](https://docs.docker.com/engine/reference/commandline/run/)
@@ -454,7 +454,7 @@ Docker 有許多不同的命令，可建立、管理及與容器和映射進行�
     docker ps -a
     ```
 
-02. 停止依其名稱執行的容器。
+02. 停止依名稱執行的容器。
 
     ```Docker
     docker stop counter-image

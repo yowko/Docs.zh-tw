@@ -4,14 +4,14 @@ description: 方法、方法參數和方法傳回值的概觀
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063350"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810569"
 ---
-# <a name="methods"></a>方法
+# <a name="methods-in-c"></a> (c # 中的方法 ) 
 
 方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 `Main` 方法是每個 C# 應用程式的進入點，而且它是由通用語言執行平台 (CLR) 啟動程式時呼叫。
 
@@ -32,7 +32,7 @@ ms.locfileid: "88063350"
 
 這些組件一起構成方法簽章。
 
-> [!NOTE]
+> [!IMPORTANT]
 > 方法的傳回類型不是方法多載用途的方法簽章的一部分。 不過，在判斷委派與所指向的方法之間的相容性時，它是方法簽章的一部分。
 
 下例定義名為 `Motorcycle` 的類別，包含五個方法：
@@ -81,7 +81,7 @@ ms.locfileid: "88063350"
 
 ## <a name="passing-parameters"></a>傳遞參數
 
-C# 中的類型為「實值型別」**「參考型別」**。 如需內建實數值型別的清單，請參閱[類型](./tour-of-csharp/types.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
+C# 中的類型為「實值型別」**「參考型別」**。 如需內建實數值型別的清單，請參閱 [類型](./tour-of-csharp/types.md)。 根據預設，實值型別和參考型別都會以傳值方式傳遞至方法。
 
 <a name="byval"></a>
 
@@ -103,7 +103,7 @@ C# 中的類型為「實值型別」**「參考型別」**。 如需內建實數
 
 ### <a name="passing-parameters-by-reference"></a>以傳址方式傳遞參數
 
-當您想要變更方法中的引數值，且想要在控制回到呼叫方法時反映該變更時，您必須以傳址方式傳遞參數。 若要以傳址方式傳遞參數，請使用 [`ref`](language-reference/keywords/ref.md) 或 [`out`](language-reference/keywords/out-parameter-modifier.md) 關鍵字。 您也可以透過傳址方式傳遞值，以避免複製，但仍會使用關鍵字避免修改 [`in`](language-reference/keywords/in-parameter-modifier.md) 。
+當您想要變更方法中的引數值，且想要在控制回到呼叫方法時反映該變更時，您必須以傳址方式傳遞參數。 若要以傳址方式傳遞參數，請使用 [`ref`](language-reference/keywords/ref.md) 或 [`out`](language-reference/keywords/out-parameter-modifier.md) 關鍵字。 您也可以使用傳址方式傳遞值，以避免複製但仍使用關鍵字防止修改 [`in`](language-reference/keywords/in-parameter-modifier.md) 。
 
 下例與前例相同，唯一差異是值以傳址方式傳遞至 `ModifyValue` 方法。 在 `ModifyValue` 方法中修改參數值時，當控制回到呼叫端時會反映值的變更。
 
@@ -243,17 +243,17 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 如果您使用 [async](language-reference/keywords/async.md) 修飾詞來標示方法，可以在方法中使用 [await](language-reference/operators/await.md) 運算子。 當控制項到達 async 方法的 `await` 運算式時，如果等候的工作未完成，控制會回到呼叫端，而有 `await` 關鍵字之方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。
 
 > [!NOTE]
-> 非同步方法會在遇到第一個未完成的等候物件或是到達非同步方法的結尾時 (以先發生者為準)，傳回呼叫者
+> 非同步方法會在遇到第一個尚未完成的等候物件，或到達非同步方法的結尾（以先發生者為准）時，傳回給呼叫端。
 
 非同步方法可以有 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 或 `void` 的傳回類型。 `void` 傳回型別主要用於定義需要 `void` 傳回型別的事件處理常式。 傳回 `void` 的非同步方法無法等候，而且 void 傳回方法的呼叫端無法攔截方法擲回的例外狀況。 從 C# 7.0 開始，非同步方法可具備[任何類似工作的傳回類型](./whats-new/csharp-7.md#generalized-async-return-types)。
 
 在下例中，`DelayAsync` 是包含會傳回整數之 return 陳述式的非同步方法。 因為它是非同步方法，所以其方法宣告必須有傳回型別 `Task<int>`。 因為傳回型別是 `Task<int>`，所以 `DoSomethingAsync` 中 `await` 運算式的評估會產生整數，如下列 `int result = await delayTask` 陳述式所示。
 
-[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
+:::code language="csharp" source="programming-guide/classes-and-structs/snippets/classes-and-structs/methods/Program.cs":::
 
 非同步方法不可以宣告任何 [in](language-reference/keywords/in-parameter-modifier.md)、[ref](language-reference/keywords/ref.md) 或 [out](language-reference/keywords/out-parameter-modifier.md) 參數，但是可以呼叫具有這類參數的方法。
 
- 如需非同步方法的詳細資訊，請參閱 [Asynchronous Programming with async and await (C#)](async.md) (使用 Async 和 Await 進行非同步程式設計 (C#))、[Control Flow in Async Programs (C#)](programming-guide/concepts/async/control-flow-in-async-programs.md) (非同步程式中的控制流程 (C#)) 和 [Async Return Types (C#)](programming-guide/concepts/async/async-return-types.md) (非同步傳回型別 (C#))。
+ 如需非同步方法的詳細資訊，請參閱 [使用 async 和 await 進行非同步程式設計](async.md) 和非同步傳回 [類型](programming-guide/concepts/async/async-return-types.md)。
 
 <a name="expr"></a>
 
@@ -280,7 +280,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-如需詳細資訊，請參閱[反覆運算](programming-guide/concepts/iterators.md)器。
+如需詳細資訊，請參閱 [反覆運算](programming-guide/concepts/iterators.md)器。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -289,7 +289,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 - [繼承](programming-guide/classes-and-structs/inheritance.md)
 - [抽象和密封類別以及類別成員](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [params](language-reference/keywords/params.md)
-- [脫銷](language-reference/keywords/out-parameter-modifier.md)
-- [ref](language-reference/keywords/ref.md)
-- [在](language-reference/keywords/in-parameter-modifier.md)
+- [擴展](language-reference/keywords/out-parameter-modifier.md)
+- [裁判](language-reference/keywords/ref.md)
+- [in](language-reference/keywords/in-parameter-modifier.md)
 - [傳遞參數](programming-guide/classes-and-structs/passing-parameters.md)

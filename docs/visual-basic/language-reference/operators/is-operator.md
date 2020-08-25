@@ -1,5 +1,5 @@
 ---
-title: Is 運算子
+title: 為運算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.is
@@ -9,23 +9,25 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: 3cc0ae5f04358fbe6b2aabc50498f39ca7225164
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c2d87ef0a8202332c87af552f488d652c400213
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84370800"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812259"
 ---
-# <a name="is-operator-visual-basic"></a>Is 運算子 (Visual Basic)
-比較兩個物件參考變數。  
-  
-## <a name="syntax"></a>語法  
-  
-```vb  
-result = object1 Is object2  
-```  
-  
-## <a name="parts"></a>組件  
+# <a name="is-operator-visual-basic"></a>是運算子 (Visual Basic) 
+
+比較兩個物件參考變數。
+
+## <a name="syntax"></a>Syntax
+
+```vb
+result = object1 Is object2
+```
+
+## <a name="parts"></a>組件
+
  `result`  
  必要。 任何 `Boolean` 值。  
   
@@ -35,21 +37,29 @@ result = object1 Is object2
  `object2`  
  必要。 任何 `Object` 名稱。  
   
-## <a name="remarks"></a>備註  
- `Is`運算子會判斷兩個物件參考是否參考相同的物件。 不過，它不會執行值比較。 如果 `object1` 和 `object2` 兩者都參考完全相同的物件實例，則為 `result` ; 如果不是，則為 `True` `result` `False` 。  
-  
- `Is`也可以與關鍵字搭配使用 `TypeOf` 來建立 `TypeOf` ... `Is` 運算式，以測試物件變數是否與資料類型相容。  
-  
+## <a name="remarks"></a>備註
+
+`Is`運算子會判斷兩個物件參考是否參考相同的物件。 但是，它不會執行值比較。 如果 `object1` 和 `object2` 兩者都參考完全相同的物件實例，則為 `result` `True` ; 如果沒有，則 `result` 為 `False` 。
+
 > [!NOTE]
-> `Is`關鍵字也用於 [[選取 ...]Case 語句](../statements/select-case-statement.md)。  
+> `Is`關鍵字也可用於[Select .。。Case 語句](../statements/select-case-statement.md)。
   
-## <a name="example"></a>範例  
- 下列範例會使用 `Is` 運算子來比較物件參考的配對。 結果會指派給一個 `Boolean` 值，表示兩個物件是否相同。  
-  
- [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
-  
- 如上述範例所示，您可以使用 `Is` 運算子來測試早期繫結和晚期繫結物件。  
-  
+## <a name="example"></a>範例
+
+下列範例會使用 `Is` 運算子來比較物件參考的配對。 結果會指派給一個 `Boolean` 值，表示兩個物件是否相同。
+
+[!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]
+
+如先前的範例所示，您可以使用 `Is` 運算子來測試早期繫結和晚期繫結的物件。
+
+## <a name="use-typeof-operator-with-is-operator"></a>使用 TypeOf 運算子搭配 Is 運算子
+
+`Is` 運算子也可以搭配 `TypeOf` 關鍵字使用，以建立一個 `TypeOf` ... `Is` 運算式，以測試物件變數是否與資料類型相容。 例如：
+
+```vb
+If TypeOf sender Is Button Then
+```
+
 ## <a name="see-also"></a>另請參閱
 
 - [TypeOf 運算子](typeof-operator.md)

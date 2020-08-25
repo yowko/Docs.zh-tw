@@ -3,12 +3,12 @@ title: C# 語言版本控制 - C# 指南
 description: '瞭解如何根據您的專案以及該選項背後的原因來決定 c # 語言版本。 瞭解如何手動覆寫預設值。'
 ms.custom: updateeachrelease
 ms.date: 05/20/2020
-ms.openlocfilehash: a27f3210f399f1bed190c18d778cf3824772d576
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 24797c564890b034683d2989010bc694aabc423c
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656846"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811947"
 ---
 # <a name="c-language-versioning"></a>C# 語言版本控制
 
@@ -37,6 +37,9 @@ ms.locfileid: "88656846"
 | .NET Framework   | all     | C# 7.3                      |
 
 當您的專案是以具有對應預覽語言版本為目標的預覽架構時，所使用的語言版本將會是預覽語言版本。 您可以在任何環境中使用該預覽版的最新功能，而不會影響以發行之 .NET Core 版本為目標的專案。
+
+> [!TIP]
+> 若要瞭解您目前使用的語言版本，請 `#error version` 在您的程式碼中放 (區分大小寫) 。 這會讓編譯器產生診斷（CS8304），其中包含所使用之編譯器版本和目前所選語言版本的訊息。
 
 ## <a name="override-a-default"></a>覆寫預設
 

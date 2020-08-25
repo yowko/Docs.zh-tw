@@ -3,12 +3,12 @@ title: DataSet 和 DataTable 安全性指引
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608530"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812233"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 和 DataTable 安全性指引
 
@@ -34,7 +34,14 @@ ms.locfileid: "88608530"
 
 如果傳入的 XML 資料包含的物件類型不在此清單中：
 
-* 隨即擲回例外狀況。
+* 擲回例外狀況，並顯示下列訊息和堆疊追蹤。  
+錯誤訊息：  
+這裡不允許 InvalidOperationException： Type ' \<Type Name\> 、Version = \<n.n.n.n\> 、Culture = \<culture\> 、PublicKeyToken = \<token value\> '。 如需詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) 。  
+堆疊追蹤：  
+在 TypeLimiter. EnsureTypeIsAllowed (類型 type、TypeLimiter capturedLimiter)   
+UpdateColumnType (Type type，StorageType typeCode)   
+在 set_DataType (類型值)   
+
 * 還原序列化作業失敗。
 
 將 XML 載入至現有的 `DataSet` 或 `DataTable` 實例時，也會將現有的資料行定義列入考慮。 如果資料表已經包含自訂類型的資料行定義，則該類型會暫時加入至 XML 還原序列化作業期間的允許清單中。

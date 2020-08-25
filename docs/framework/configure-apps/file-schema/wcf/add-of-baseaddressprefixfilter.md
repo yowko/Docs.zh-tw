@@ -2,15 +2,15 @@
 title: <add> 的 <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 8fdae02b558708a9b3f4535123752dce12dd5cf5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2572a6ee6763ae26fe5c56669e10f8c9aef8a280
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153136"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811791"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> 的 \<baseAddressPrefixFilter>
-表示指定傳遞篩選準則的 configuration 專案，這會提供在 IIS 中裝載 Windows Communication Foundation （WCF）應用程式時，挑選適當的 Internet Information Services （IIS）系結的機制。  
+表示指定傳遞篩選準則的設定專案，此篩選器會在 IIS 中裝載 Windows Communication Foundation (WCF) 應用程式時，提供一種機制來挑選適當的 Internet Information Services (IIS) 系結。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -18,7 +18,7 @@ ms.locfileid: "79153136"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<baseAddressPrefixFilters>**](baseaddressprefixfilters.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceHostingEnvironment>
@@ -42,9 +42,9 @@ ms.locfileid: "79153136"
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|設定專案的集合，這些專案會指定傳遞篩選準則，在 IIS 中裝載 Windows Communication Foundation （WCF）應用程式時，提供一種機制來挑選適當的 IIS 系結。|  
+|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|設定專案的集合，這些專案會指定傳遞篩選準則，以提供在 IIS 中裝載 Windows Communication Foundation (WCF) 應用程式時挑選適當 IIS 系結的機制。|  
   
 ## <a name="remarks"></a>備註  
  前置詞篩選條件為共用裝載提供者提供一種方式，使其可指定服務所要使用的 URI。 它可讓共用主機在同一個網站上裝載多個應用程式，而且同一個配置中可以有不同的基底位址。  
@@ -55,7 +55,7 @@ ms.locfileid: "79153136"
   
  例如，您的網站可以包含下列基底位址：
   
-```
+```http
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  

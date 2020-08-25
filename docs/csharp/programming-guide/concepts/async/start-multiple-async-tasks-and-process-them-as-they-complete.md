@@ -1,234 +1,176 @@
 ---
 title: 在非同步工作完成時進行處理
-description: '這個範例示範如何使用 c # 中的 System.threading.tasks.task.whenany 來啟動多個工作，並在其完成時處理其結果，而不是依照開始順序來處理它們。'
-ms.date: 09/12/2018
+description: '這個範例會示範如何使用 c # 中的 System.threading.tasks.task.whenany 來啟動多個工作，並在其完成時處理其結果，而不是在開始順序中處理它們。'
+ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: a7cfa0bdf783fe9bb735241ca398fde7895f1493
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: c2fe66e865a2c88f4cae50b816f9326614fcbb89
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925146"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812025"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>啟動多項非同步工作並在它們完成時進行處理 (C#)
+# <a name="process-asynchronous-tasks-as-they-complete-c"></a>在非同步工作完成時加以處理 (c # ) 
 
-使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。
+藉由使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> ，您可以同時啟動多個工作，並在完成時逐一處理這些工作，而不是依照啟動的順序進行處理。
 
-下列範例使用查詢來建立工作集合。 每項工作都會下載所指定網站的內容。 在 while 迴圈的的每個反覆運算中，等候的 `WhenAny` 呼叫會先傳回完成其下載的工作集合中的工作。 該工作會從集合中予以移除，並進行處理。 迴圈會重複進行，直到集合未包含其他工作為止。
+下列範例使用查詢來建立工作集合。 每項工作都會下載所指定網站的內容。 在 while 迴圈的的每個反覆運算中，等候的 <xref:System.Threading.Tasks.Task.WhenAny%2A> 呼叫會先傳回完成其下載的工作集合中的工作。 該工作會從集合中予以移除，並進行處理。 迴圈會重複進行，直到集合未包含其他工作為止。
 
-> [!NOTE]
-> 若要執行範例，您必須在電腦上安裝 Visual Studio (2012 或更新版本) 以及 .NET Framework 4.5 或更新版本。
+## <a name="create-example-application"></a>建立範例應用程式
 
-## <a name="download-an-example-solution"></a>下載範例解決方案
+建立新的 .NET Core 主控台應用程式。 您可以使用 [ [dotnet 新主控台](../../../../core/tools/dotnet-new.md#console) ] 命令或從 [Visual Studio](/visualstudio/install/install-visual-studio)建立一個。 在您最愛的程式碼編輯器中開啟 *Program.cs* 檔案。
 
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
+### <a name="replace-using-statements"></a>取代 using 語句
 
-> [!TIP]
-> 如果您不想要下載專案，您可以改為參閱本主題結尾的*MainWindow.xaml.cs*檔案。
-
-1. 將您從 *.zip*檔案下載的檔案解壓縮，然後啟動 Visual Studio。
-
-2. 在功能表列上 **，選擇 [** 檔案] [  >  **開啟**  >  **專案/方案**]。
-
-3. 在 [**開啟專案**] 對話方塊中，開啟包含您所下載之範例程式碼的資料夾，然後開啟*AsyncFineTuningCS*AsyncFineTuningVB 的方案（*.sln*）檔案 / * *。
-
-4. 在方案總管**** 中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。
-
-5. 選擇<kbd>F5</kbd>鍵以執行程式，或按下<kbd>Ctrl</kbd> + <kbd>F5</kbd>鍵以執行程式，而不進行任何偵錯工具。
-
-6. 執行專案數次，確認所下載的長度不一定會以相同的順序出現。
-
-## <a name="create-the-program-yourself"></a>自行建立程式
-
-此範例會新增至在[當其中一項工作完成時，取消剩餘的非同步工作 (C#)](cancel-remaining-async-tasks-after-one-is-complete.md) 中開發的程式碼，並使用相同的 UI。
-
-若要自行逐步建置範例，請遵循[下載範例](cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example)一節中的指示，但將 [CancelAfterOneTask]**** 設定為啟始專案。 將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。 變更會標上星號。
-
-**CancelAfterOneTask** 專案已經包含一個查詢，這個查詢在執行時，會建立一組工作。 下列程式碼中的每個 `ProcessURLAsync` 呼叫都會傳回 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>：
-
-```csharp
-IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
-```
-
-在專案的*MainWindow.xaml.cs*檔案中，對方法進行下列變更 `AccessTheWebAsync` ：
-
-- 套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。
-
-    ```csharp
-    List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
-    ```
-
-- 新增 `while` 迴圈，以對集合中的每個工作執行下列步驟：
-
-    1. 等候 `WhenAny` 呼叫，識別集合中的第一個工作以完成其下載。
-
-        ```csharp
-        Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
-        ```
-
-    2. 從集合中移除該工作。
-
-        ```csharp
-        downloadTasks.Remove(firstFinishedTask);
-        ```
-
-    3. 等候 `ProcessURLAsync` 呼叫所傳回的 `firstFinishedTask`。 `firstFinishedTask` 變數是 <xref:System.Threading.Tasks.Task%601>，其中 `TReturn` 是整數。 工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。 如果工作發生錯誤， `await` 將會擲回儲存在中的第一個子例外狀況 `AggregateException` ，不同于讀取 `Result` 會擲回的屬性 `AggregateException` 。
-
-        ```csharp
-        int length = await firstFinishedTask;
-        resultsTextBox.Text += $"\r\nLength of the download:  {length}";
-        ```
-
-執行程式數次，確認所下載的長度不一定會以相同的順序出現。
-
-> [!CAUTION]
-> 您可以如這個範例所述在迴圈中使用 `WhenAny`，以解決牽涉到少量工作的問題。 不過，如果您有大量的工作要處理，其他方法會更有效率。 如需詳細資訊和範例，請參閱 [Processing tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/) (在工作完成時加以處理)。
-
-## <a name="complete-example"></a>完整範例
-
-下列程式碼是範例的*MainWindow.xaml.cs*檔案的完整文字。 星號會標記已針對此範例新增的項目。 同時請注意，您必須新增 <xref:System.Net.Http> 的參考。
-
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
+將現有的 using 語句取代為這些宣告：
 
 ```csharp
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// Add a using directive and a reference for System.Net.Http.
 using System.Net.Http;
-
-// Add the following using directive.
-using System.Threading;
-
-namespace ProcessTasksAsTheyFinish
-{
-    public partial class MainWindow : Window
-    {
-        // Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
-
-        private async void startButton_Click(object sender, RoutedEventArgs e)
-        {
-            resultsTextBox.Clear();
-
-            // Instantiate the CancellationTokenSource.
-            cts = new CancellationTokenSource();
-
-            try
-            {
-                await AccessTheWebAsync(cts.Token);
-                resultsTextBox.Text += "\r\nDownloads complete.";
-            }
-            catch (OperationCanceledException)
-            {
-                resultsTextBox.Text += "\r\nDownloads canceled.\r\n";
-            }
-            catch (Exception)
-            {
-                resultsTextBox.Text += "\r\nDownloads failed.\r\n";
-            }
-
-            cts = null;
-        }
-
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (cts != null)
-            {
-                cts.Cancel();
-            }
-        }
-
-        async Task AccessTheWebAsync(CancellationToken ct)
-        {
-            HttpClient client = new HttpClient();
-
-            // Make a list of web addresses.
-            List<string> urlList = SetUpURLList();
-
-            // ***Create a query that, when executed, returns a collection of tasks.
-            IEnumerable<Task<int>> downloadTasksQuery =
-                from url in urlList select ProcessURL(url, client, ct);
-
-            // ***Use ToList to execute the query and start the tasks.
-            List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
-
-            // ***Add a loop to process the tasks one at a time until none remain.
-            while (downloadTasks.Count > 0)
-            {
-                    // Identify the first task that completes.
-                    Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
-
-                    // ***Remove the selected task from the list so that you don't
-                    // process it more than once.
-                    downloadTasks.Remove(firstFinishedTask);
-
-                    // Await the completed task.
-                    int length = await firstFinishedTask;
-                    resultsTextBox.Text += $"\r\nLength of the download:  {length}";
-            }
-        }
-
-        private List<string> SetUpURLList()
-        {
-            List<string> urls = new List<string>
-            {
-                "https://msdn.microsoft.com",
-                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-                "https://msdn.microsoft.com/library/hh290136.aspx",
-                "https://msdn.microsoft.com/library/dd470362.aspx",
-                "https://msdn.microsoft.com/library/aa578028.aspx",
-                "https://msdn.microsoft.com/library/ms404677.aspx",
-                "https://msdn.microsoft.com/library/ff730837.aspx"
-            };
-            return urls;
-        }
-
-        async Task<int> ProcessURL(string url, HttpClient client, CancellationToken ct)
-        {
-            // GetAsync returns a Task<HttpResponseMessage>.
-            HttpResponseMessage response = await client.GetAsync(url, ct);
-
-            // Retrieve the website contents from the HttpResponseMessage.
-            byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-            return urlContents.Length;
-        }
-    }
-}
-
-// Sample Output:
-
-// Length of the download:  226093
-// Length of the download:  412588
-// Length of the download:  175490
-// Length of the download:  204890
-// Length of the download:  158855
-// Length of the download:  145790
-// Length of the download:  44908
-// Downloads complete.
+using System.Threading.Tasks;
 ```
+
+## <a name="add-fields"></a>新增欄位
+
+在 `Program` 類別定義中，新增下列兩個欄位：
+
+```csharp
+static readonly HttpClient s_client = new HttpClient
+{
+    MaxResponseContentBufferSize = 1_000_000
+};
+
+static readonly IEnumerable<string> s_urlList = new string[]
+{
+    "https://docs.microsoft.com",
+    "https://docs.microsoft.com/aspnet/core",
+    "https://docs.microsoft.com/azure",
+    "https://docs.microsoft.com/azure/devops",
+    "https://docs.microsoft.com/dotnet",
+    "https://docs.microsoft.com/dynamics365",
+    "https://docs.microsoft.com/education",
+    "https://docs.microsoft.com/enterprise-mobility-security",
+    "https://docs.microsoft.com/gaming",
+    "https://docs.microsoft.com/graph",
+    "https://docs.microsoft.com/microsoft-365",
+    "https://docs.microsoft.com/office",
+    "https://docs.microsoft.com/powershell",
+    "https://docs.microsoft.com/sql",
+    "https://docs.microsoft.com/surface",
+    "https://docs.microsoft.com/system-center",
+    "https://docs.microsoft.com/visualstudio",
+    "https://docs.microsoft.com/windows",
+    "https://docs.microsoft.com/xamarin"
+};
+```
+
+`HttpClient`會公開傳送 HTTP 要求和接收 HTTP 回應的能力。 `s_urlList`會保存應用程式計畫處理的所有 url。
+
+## <a name="update-application-entry-point"></a>更新應用程式進入點
+
+主控台應用程式的主要進入點是 `Main` 方法。 以下列內容取代現有的方法：
+
+```csharp
+static Task Main() => SumPageSizesAsync();
+```
+
+更新後的 `Main` 方法現在會被視為 [非同步 main](../../../whats-new/csharp-7-1.md#async-main)，以允許進入可執行檔的非同步進入點。 它是以的呼叫表示 `SumPageSizesAsync` 。
+
+## <a name="create-the-asynchronous-sum-page-sizes-method"></a>建立異步總和頁面大小方法
+
+在 `Main` 方法下方，新增 `SumPageSizesAsync` 方法：
+
+```csharp
+static async Task SumPageSizesAsync()
+{
+    var stopwatch = Stopwatch.StartNew();
+
+    IEnumerable<Task<int>> downloadTasksQuery =
+        from url in s_urlList
+        select ProcessUrlAsync(url, s_client);
+
+    List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
+
+    int total = 0;
+    while (downloadTasks.Any())
+    {
+        Task<int> finishedTask = await Task.WhenAny(downloadTasks);
+        downloadTasks.Remove(finishedTask);
+        total += await finishedTask;
+    }
+
+    stopwatch.Stop();
+
+    Console.WriteLine($"\nTotal bytes returned:  {total:#,#}");
+    Console.WriteLine($"Elapsed time:          {stopwatch.Elapsed}\n");
+}
+```
+
+方法會從具現化和啟動開始 <xref:System.Diagnostics.Stopwatch> 。 然後，它會包含一個查詢，該查詢會在執行時建立一組工作。 下列程式碼中的每個 `ProcessUrlAsync` 呼叫都會傳回 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>：
+
+```csharp
+IEnumerable<Task<int>> downloadTasksQuery =
+    from url in s_urlList
+    select ProcessUrlAsync(url, s_client);
+```
+
+由於使用 LINQ [延後執行](../linq/deferred-execution-example.md) ，因此您會呼叫 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 以啟動每項工作。
+
+```csharp
+List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
+```
+
+`while`迴圈會針對集合中的每個工作執行下列步驟：
+
+1. 等候的呼叫， `WhenAny` 以識別集合中已完成其下載的第一個工作。
+
+    ```csharp
+    Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
+    ```
+
+1. 從集合中移除該工作。
+
+    ```csharp
+    downloadTasks.Remove(firstFinishedTask);
+    ```
+
+1. 等候 `ProcessUrlAsync` 呼叫所傳回的 `finishedTask`。 `finishedTask` 變數是 <xref:System.Threading.Tasks.Task%601>，其中 `TResult` 是整數。 工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。 如果工作發生錯誤， `await` 將會擲回儲存在中的第一個子例外狀況，而不 `AggregateException` 像讀取 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 屬性，它會擲回 `AggregateException` 。
+
+    ```csharp
+    total += await finishedTask;
+    ```
+
+## <a name="add-process-method"></a>新增處理方法
+
+`ProcessUrlAsync`在方法下方新增下列方法 `SumPageSizesAsync` ：
+
+```csharp
+static async Task<int> ProcessUrlAsync(string url, HttpClient client)
+{
+    byte[] content = await client.GetByteArrayAsync(url);
+    Console.WriteLine($"{url,-60} {content.Length,10:#,#}");
+
+    return content.Length;
+}
+```
+
+針對任何指定的 URL，方法會使用提供的實例，將 `client` 回應取得為 `byte[]` 。 將 URL 和長度寫入主控台之後，會傳回長度。
+
+執行程式數次，確認所下載的長度不一定會以相同的順序出現。
+
+> [!CAUTION]
+> 您可以如這個範例所述在迴圈中使用 `WhenAny`，以解決牽涉到少量工作的問題。 不過，如果您有大量的工作要處理，其他方法會更有效率。 如需詳細資訊和範例，請參閱 [Processing tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete) (在工作完成時加以處理)。
+
+## <a name="complete-example"></a>完整範例
+
+下列程式碼是範例 *Program.cs* 檔的完整文字。
+
+:::code language="csharp" source="snippets/multiple-tasks/Program.cs":::
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [微調非同步應用程式 (C#)](fine-tuning-your-async-application.md)
-- [使用 Async 和 Await 進行非同步程式設計 (C#)](index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式)
+- [使用 async 和 await 進行非同步程式設計 (c # ) ](index.md)

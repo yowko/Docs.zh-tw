@@ -4,12 +4,12 @@ description: 瞭解如何修剪獨立的應用程式，以縮減其大小。 .NE
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: e3eb161b14f206723ad034af0a4a6ba8cd575578
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720120"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810608"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>修剪獨立式部署及可執行檔
 
@@ -36,28 +36,29 @@ Trim 獨立部署模型是獨立部署模型的特製化版本，已優化以減
 
 ## <a name="trim-your-app---cli"></a>修剪您的應用程式-CLI
 
-使用 [dotnet publish](../tools/dotnet-publish.md) 命令修剪您的應用程式。 當您發佈應用程式時，請設定下列三個設定：
+使用 [dotnet publish](../tools/dotnet-publish.md) 命令修剪您的應用程式。 當您發佈應用程式時，請設定下列屬性：
 
-- 發佈為獨立： `--self-contained true`
-- 啟用修剪： `p:PublishTrimmed=true`
+- 發佈為特定執行時間的獨立應用程式： `-r win-x64`
+- 啟用修剪： `/p:PublishTrimmed=true`
 
 下列範例會將適用于 Windows 的應用程式發佈為獨立的應用程式，並修剪輸出。
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <SelfContained>true</SelfContained>
     <PublishTrimmed>true</PublishTrimmed>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 下列範例會在積極的修剪模式中發佈應用程式，而元件中未使用的程式碼將會被修剪，並啟用修剪器警告。
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
     <TrimMode>link</TrimMode>
     <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 如需詳細資訊，請參閱 [使用 .NET Core CLI 發佈 .Net Core 應用程式](deploy-with-cli.md)。
@@ -94,7 +95,7 @@ Visual Studio 會建立可重複使用的發行設定檔，以控制您的應用
 
 Visual Studio for Mac 不會提供在發佈期間修剪應用程式的選項。 您必須遵循 [ [修剪您的應用程式-CLI](#trim-your-app---cli) ] 區段中的指示，手動發佈。 如需詳細資訊，請參閱 [使用 .NET Core CLI 發佈 .Net Core 應用程式](deploy-with-cli.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.Net Core 應用程式部署](index.md)。
 - [使用 .NET Core CLI 發佈 .Net Core 應用程式](deploy-with-cli.md)。

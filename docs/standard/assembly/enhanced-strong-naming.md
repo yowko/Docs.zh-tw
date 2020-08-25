@@ -1,17 +1,17 @@
 ---
 title: 增強的強式命名
-description: .NET Framework 中元件的傳統強式名稱簽章有限制。 瞭解增強型強式命名。
+description: .NET Framework 中元件的傳統強式名稱簽章有一些限制。 深入瞭解增強型強式命名。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-ms.openlocfilehash: 720eda86ef0555127da422b2f44a414e8bbfb1b7
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: f0160f033760582c914a0d64c21415e5e921d907
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378959"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811076"
 ---
 # <a name="enhanced-strong-naming"></a>增強的強式命名
 強式名稱簽章是 .NET Framework 中的身分識別機制，用來識別組件。 它是公開金鑰數位簽章，通常用來驗證從建立者 (簽署者) 傳遞給收件者 (驗證者) 的資料完整性。 此簽章用來當作組件的唯一身分識別，並可確保對組件的參考不會模稜兩可。 組件在建置程序的一部分簽署，然後在載入時加以驗證。  
@@ -32,13 +32,13 @@ ms.locfileid: "83378959"
   
 - 建立新組件而且不在意預先存在的強式名稱簽章的開發人員，可以使用更安全的 SHA-2 演算法，並如往常般簽署組件。  
   
-## <a name="use-enhanced-strong-names"></a>使用增強的強式名稱  
+## <a name="use-enhanced-strong-names"></a>使用增強型強式名稱  
  強式名稱金鑰包含簽章金鑰和身分識別金鑰。 組件以簽章金鑰簽署，而以身分識別金鑰識別。 在 .NET Framework 4.5 之前，這兩個金鑰完全相同。 從 .NET Framework 4.5 開始，身分識別金鑰保留與較早 .NET Framework 版本中的相同，但簽章金鑰已經使用更強的雜湊演算法增強。 此外，簽章金鑰以身分識別金鑰簽署，以便建立副署。  
   
  <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性讓組件中繼資料能使用預先存在的公開金鑰處理組件身分識別，如此能讓舊組件參考繼續運作。  <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性使用副署來確保新簽章金鑰的擁有者也是舊身分識別金鑰的擁有者。  
   
 ### <a name="sign-with-sha-2-without-key-migration"></a>使用 SHA-1 進行簽署，而不需要金鑰遷移  
- 從命令提示字元執行下列命令來簽署元件，而不需遷移強式名稱簽章：  
+ 從命令提示字元執行下列命令以簽署元件，而不需要遷移強式名稱簽章：  
   
 1. (如有必要) 產生新的身分識別金鑰。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "83378959"
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
-### <a name="sign-with-sha-2-with-key-migration"></a>以 SHA-2 簽署，並使用金鑰遷移  
+### <a name="sign-with-sha-2-with-key-migration"></a>使用 SHA-1 進行簽署，並使用金鑰遷移  
  從命令提示字元執行下列命令，以使用已遷移的強式名稱簽章來簽署元件。  
   
 1. (如有必要) 產生身分識別與簽章金鑰組。  
@@ -113,7 +113,7 @@ ms.locfileid: "83378959"
 
     此輸出即會轉換成 AssemblySignatureKeyAttribute。
 
-    ```
+    ```csharp
     [assembly:System.Reflection.AssemblySignatureKeyAttribute(
     "002400000c80000094000000060200000024000052534131000400000100010005a3a81ac0a519d96244a9c589fc147c7d403e40ccf184fc290bdd06c7339389a76b738e255a2bce1d56c3e7e936e4fc87d45adc82ca94c716b50a65d39d373eea033919a613e4341c66863cb2dc622bcb541762b43893434d219d1c43f07e9c83fada2aed400b9f6e44ff05e3ecde6c2827830b8f43f7ac8e3270a34d153cdd",
     "e3cf7c211678c4d1a7b8fb20276c894ab74c29f0b5a34de4d61e63d4a997222f78cdcbfe4c91ebe1ddf9f3505a32edcb2a76f34df0450c4f61e376b70fa3cdeb7374b1b8e2078b121e2ee6e8c6a8ed661cc35621b4af53ac29c9e41738f199a81240e8fd478c887d1a30729d34e954a97cddce66e3ae5fec2c682e57b7442738"
@@ -132,6 +132,6 @@ ms.locfileid: "83378959"
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立和使用強式名稱的組件](create-use-strong-named.md)

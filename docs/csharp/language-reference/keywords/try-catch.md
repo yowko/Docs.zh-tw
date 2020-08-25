@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bb81ddbe631fedfcfe247c6e62580de679ad972f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619698"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812298"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# 參考)
 
@@ -131,9 +131,9 @@ static void Main()
 
 非同步方法會標記 [async](async.md) 修飾詞，而且通常包含一或多個 await 運算式或陳述式。 await 運算式會將 [await](../operators/await.md) 運算子套用至 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。
 
-當控制項到達 `await` 方法時，方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。 如需詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)和[非同步程式中的控制流程](../../programming-guide/concepts/async/control-flow-in-async-programs.md)。
+當控制項到達 `await` 方法時，方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。 如需詳細資訊，請參閱 [使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)。
 
-套用 `await` 完成的工作可能因為傳回工作的方法中未處理的例外狀況而處於錯誤的狀態。 等候工作擲回例外狀況。 如果傳回工作的非同步程序被取消，工作也可能以取消的狀態結束。 等候已取消的工作會擲回 `OperationCanceledException`。 如需如何取消非同步處理序的詳細資訊，請參閱[微調非同步應用程式](../../programming-guide/concepts/async/fine-tuning-your-async-application.md)。
+套用 `await` 完成的工作可能因為傳回工作的方法中未處理的例外狀況而處於錯誤的狀態。 等候工作擲回例外狀況。 如果傳回工作的非同步程序被取消，工作也可能以取消的狀態結束。 等候已取消的工作會擲回 `OperationCanceledException` 。
 
 若要攔截例外狀況，請在 `try` 區塊中等候工作，並在關聯的 `catch` 區塊中攔截例外狀況。 如需範例，請參閱[非同步方法範例](#async-method-example)一節。
 
@@ -183,6 +183,6 @@ static void Main()
 - [C # 程式設計指南](../../programming-guide/index.md)
 - [C # 關鍵字](index.md)
 - [try、throw 和 catch 陳述式 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [放棄](throw.md)
-- [try-最後](try-finally.md)
+- [扔](throw.md)
+- [try-finally](try-finally.md)
 - [如何：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

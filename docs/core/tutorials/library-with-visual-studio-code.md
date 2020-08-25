@@ -2,39 +2,39 @@
 title: 使用 Visual Studio Code 建立 .NET Standard 類別庫
 description: 瞭解如何使用 Visual Studio Code 建立 .NET Standard 類別庫。
 ms.date: 06/08/2020
-ms.openlocfilehash: 714b5cf2125f1d296adc4a4dc7d1b6c9420417ed
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 146dfd49e448494cce0c844282bc0394a8739ac9
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308880"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810855"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET Standard 程式庫
 
-在本教學課程中，您會建立包含單一字串處理方法的簡單公用程式程式庫。 您可以將它實作為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
+在本教學課程中，您會建立包含單一字串處理方法的簡單公用程式程式庫。 您可以將它實作為 [擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md) ，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
 
-「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 部署呼叫您的程式庫。 當您完成類別庫時，您可以將它散發為協力廠商元件，或作為一或多個應用程式的配套元件。
+「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 執行呼叫您的程式庫。 當您完成類別庫時，可以將它散發為協力廠商元件，或做為配套的元件，以及一或多個應用程式。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-1. 已安裝[c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能的[Visual Studio Code](https://code.visualstudio.com/) 。 如需有關如何在 Visual Studio Code 上安裝延伸模組的詳細資訊，請參閱[VS Code 延伸模組 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)。
+1. 已安裝[c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能的[Visual Studio Code](https://code.visualstudio.com/) 。 如需有關如何在 Visual Studio Code 上安裝擴充功能的詳細資訊，請參閱 [VS Code 擴充功能 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)。
 2. [.Net Core 3.1 SDK 或更新版本](https://dotnet.microsoft.com/download)
 
 ## <a name="create-a-solution"></a>建立方案
 
-一開始先建立一個空白的方案，將類別庫專案放入中。 解決方案會當做一個或多個專案的容器。 您會在相同的方案中加入其他相關的專案。
+首先，建立空白的方案，將類別庫專案放置在中。 方案可作為一或多個專案的容器。 您會將其他相關的專案新增至相同的方案。
 
 1. 啟動 Visual Studio Code。
 
-1. 從**File**主功能表選取 [檔案] [  >  **開啟資料夾**] （**開啟**macOS）
+1. **File**  >  從主功能表選取 [macOS) 上的 [開啟**資料夾**] (**開啟 ...**
 
-1. 在 [**開啟資料夾**] 對話方塊中，建立*ClassLibraryProjects*資料夾，然後按一下 [**選取資料夾**] （在 macOS 上**開啟**）。
+1. 在 [ **開啟資料夾** ] 對話方塊中，建立 *>classlibraryprojects* 資料夾，然後按一下 [ **選取資料夾** (在 macOS) **開啟** ]。
 
-1. 從主功能表選取 [**查看**終端機]，以在 Visual Studio Code 中開啟**終端**機  >  **Terminal** 。
+1. 從主功能表中選取 [ **View**terminal]，以在 Visual Studio Code 中開啟**終端**機  >  **Terminal** 。
 
-   **終端**機會在*ClassLibraryProjects*資料夾中以命令提示字元開啟。
+   **終端**機會在 *>classlibraryprojects*資料夾中使用命令提示字元開啟。
 
-1. 在**終端**機中，輸入下列命令：
+1. 在 **終端**機中，輸入下列命令：
 
    ```dotnetcli
    dotnet new sln
@@ -42,7 +42,7 @@ ms.locfileid: "86308880"
 
    終端機輸出如下列範例所示：
 
-   ```
+   ```output
    The template "Solution File" was created successfully.
    ```
 
@@ -50,7 +50,7 @@ ms.locfileid: "86308880"
 
 將名為 "StringLibrary" 的新 .NET Standard 類別庫專案加入至方案。
 
-1. 在終端機中，執行下列命令以建立程式庫專案：
+1. 在終端機中執行下列命令，以建立程式庫專案：
 
    ```dotnetcli
    dotnet new classlib -o StringLibrary
@@ -58,7 +58,7 @@ ms.locfileid: "86308880"
 
    終端機輸出如下列範例所示：
 
-   ```
+   ```output
    The template "Class library" was created successfully.
    Processing post-creation actions...
    Running 'dotnet restore' on StringLibrary\StringLibrary.csproj...
@@ -67,7 +67,7 @@ ms.locfileid: "86308880"
    Restore succeeded.
    ```
 
-1. 執行下列命令，將程式庫專案新增至方案：
+1. 執行下列命令，以將程式庫專案新增至方案：
 
    ```dotnetcli
    dotnet sln add StringLibrary/StringLibrary.csproj
@@ -75,11 +75,11 @@ ms.locfileid: "86308880"
 
    終端機輸出如下列範例所示：
 
-   ```
+   ```output
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
-1. 請檢查並確定程式庫的目標是正確的 .NET Standard 版本。 在**Explorer**中，開啟*StringLibrary/StringLibrary*。
+1. 請檢查以確定程式庫的目標是正確的 .NET Standard 版本。 在 [ **Explorer**] 中，開啟 [ *StringLibrary]/[StringLibrary*]。
 
    `TargetFramework`元素會顯示專案的目標為 .NET Standard 2.0。
 
@@ -93,15 +93,15 @@ ms.locfileid: "86308880"
    </Project>
    ```
 
-1. 開啟*Class1.cs* ，並將程式碼取代為下列程式碼。
+1. 開啟 *Class1.cs* ，並將程式碼取代為下列程式碼。
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibrary/Class1.cs":::
 
-   類別庫 `UtilityLibraries.StringLibrary` 包含名為的方法 `StartsWithUpper` 。 這個方法會傳回 <xref:System.Boolean> 值，指出目前的字串實例是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
+   類別庫（class library） `UtilityLibraries.StringLibrary` 包含名為的方法 `StartsWithUpper` 。 這個方法會傳回 <xref:System.Boolean> 值，指出目前字串實例的開頭是否為大寫字元。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
 
 1. 儲存檔案。
 
-1. 執行下列命令來建立方案，並確認專案編譯無誤。
+1. 執行下列命令以建立方案，並確認專案編譯時沒有錯誤。
 
    ```dotnetcli
    dotnet build
@@ -109,7 +109,7 @@ ms.locfileid: "86308880"
 
    終端機輸出如下列範例所示：
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0 for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
@@ -124,9 +124,9 @@ ms.locfileid: "86308880"
 
 ## <a name="add-a-console-app-to-the-solution"></a>將主控台應用程式新增至解決方案
 
-新增使用類別庫的主控台應用程式。 應用程式會提示使用者輸入字串，並報告字串是否以大寫字元開頭。
+加入使用類別庫的主控台應用程式。 應用程式會提示使用者輸入字串，並報告字串是否以大寫字元開頭。
 
-1. 在終端機中，執行下列命令來建立主控台應用程式專案：
+1. 在終端機中執行下列命令，以建立主控台應用程式專案：
 
    ```dotnetcli
    dotnet new console -o ShowCase
@@ -134,7 +134,7 @@ ms.locfileid: "86308880"
 
    終端機輸出如下列範例所示：
 
-   ```
+   ```output
    The template "Console Application" was created successfully.
    Processing post-creation actions...
    Running 'dotnet restore' on ShowCase\ShowCase.csproj...  
@@ -143,7 +143,7 @@ ms.locfileid: "86308880"
    Restore succeeded.
    ```
 
-1. 執行下列命令，將主控台應用程式專案新增至方案：
+1. 執行下列命令，以將主控台應用程式專案新增至方案：
 
    ```dotnetcli
    dotnet sln add ShowCase/ShowCase.csproj
@@ -151,25 +151,25 @@ ms.locfileid: "86308880"
 
    終端機輸出如下列範例所示：
 
-   ```
+   ```output
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
-1. 開啟 [*展示/程式 .cs* ]，並將所有程式碼取代為下列程式碼。
+1. 開啟 [ *展示]/[Program* ]，並將所有程式碼取代為下列程式碼。
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
 
-   該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。 當它大於或等於25時，程式碼就會清除主控台視窗，並向使用者顯示訊息。
+   該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。 只要超過或等於25，程式碼就會清除主控台視窗，並向使用者顯示訊息。
 
-   此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者在未輸入字串的情況下按<kbd>Enter</kbd>鍵，應用程式就會結束，而且主控台視窗會關閉。
+   此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者按下 <kbd>Enter</kbd> 鍵但未輸入字串，則應用程式會結束，且主控台視窗會關閉。
 
 1. 儲存您的變更。
 
 ## <a name="add-a-project-reference"></a>新增專案參考
 
-一開始，新的主控台應用程式專案無法存取類別庫。 若要讓它能夠呼叫類別庫中的方法，請建立類別庫專案的專案參考。
+一開始，新的主控台應用程式專案沒有類別庫的存取權。 若要允許它呼叫類別庫中的方法，請建立類別庫專案的專案參考。
 
-1. 執行以下命令：
+1. 執行下列命令：
 
    ```dotnetcli
    dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
@@ -177,23 +177,23 @@ ms.locfileid: "86308880"
 
    終端機輸出如下列範例所示：
 
-   ```
+   ```output
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
 ## <a name="run-the-app"></a>執行應用程式
 
-1. 在終端機中執行下列命令：
+1. 在終端中執行下列命令：
 
    ```dotnetcli
    dotnet run --project ShowCase/ShowCase.csproj
    ```
 
-1. 輸入字串並按<kbd>enter</kbd>鍵以嘗試程式，然後按<kbd>enter</kbd>結束。
+1. 輸入字串並按 <kbd>enter</kbd>鍵以嘗試程式，然後按 <kbd>enter</kbd> 鍵結束。
 
    終端機輸出如下列範例所示：
 
-   ```
+   ```output
    Press <Enter> only to exit; otherwise, enter a string and press <Enter>:
 
    A string that starts with an uppercase letter
@@ -208,11 +208,11 @@ ms.locfileid: "86308880"
 ## <a name="additional-resources"></a>其他資源
 
 * [使用 .NET Core CLI 開發程式庫](libraries.md)
-* [.NET Standard 版本和支援的平臺](../../standard/net-standard.md)。
+* [.NET Standard 支援的版本和平臺](../../standard/net-standard.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您已建立解決方案、新增程式庫專案，以及加入使用該程式庫的主控台應用程式專案。 在下一個教學課程中，您會將單元測試專案加入至方案。
+在本教學課程中，您已建立解決方案、新增程式庫專案，並加入使用該程式庫的主控台應用程式專案。 在下一個教學課程中，您會將單元測試專案加入至方案。
 
 > [!div class="nextstepaction"]
 > [使用 Visual Studio Code 測試具有 .NET Core 的 .NET Standard 程式庫](testing-library-with-visual-studio-code.md)

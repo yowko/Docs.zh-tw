@@ -1,30 +1,30 @@
 ---
 title: 方法 - C# 程式設計手冊
-description: 'C # 中的方法是包含一系列語句的程式碼區塊。 程式會藉由呼叫方法並指定引數來執行語句。'
+description: 'C # 中的方法是包含一連串語句的程式碼區塊。 程式會藉由呼叫方法並指定引數來執行語句。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: db35b48d4d7e70a54b38342e79fa2881b3857bd7
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7b411283822360f3057b0d4f4e60ebade4fe45bc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864146"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810933"
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
 
-方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 `Main`方法是每個 c # 應用程式的進入點，而且會在程式啟動時由 common language runtime （CLR）呼叫。
+方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 `Main`方法是每個 c # 應用程式的進入點，並會在程式啟動時由 common language runtime (CLR) 呼叫。
 
 > [!NOTE]
-> 本文討論命名的方法。 如需匿名函式的資訊，請參閱[匿名函式](../statements-expressions-operators/anonymous-functions.md)。
+> 本文討論命名方法。 如需匿名函式的資訊，請參閱[匿名函式](../statements-expressions-operators/anonymous-functions.md)。
 
 ## <a name="method-signatures"></a>方法簽章
 
-方法是在[類別](../../language-reference/keywords/class.md)、[結構](../../language-reference/builtin-types/struct.md)或[介面](../interfaces/index.md)中宣告，藉由指定存取層級（例如 `public` 或 `private` ）、選擇性修飾詞（例如 `abstract` 或）、傳回 `sealed` 值、方法的名稱，以及任何方法參數。 這些部份放在一起即為方法的簽章。
+方法是在 [類別](../../language-reference/keywords/class.md)、 [結構](../../language-reference/builtin-types/struct.md)或 [介面](../interfaces/index.md) 中宣告，方法是指定存取層級（例如 `public` 或 `private` ）、選擇性修飾詞（例如或）、傳回 `abstract` `sealed` 值、方法的名稱，以及任何方法參數。 這些部份放在一起即為方法的簽章。
 
-> [!NOTE]
+> [!IMPORTANT]
 > 方法的傳回類型不是方法多載用途的方法簽章的一部分。 不過，在判斷委派與所指向的方法之間的相容性時，它是方法簽章的一部分。
 
 方法參數會放在括號中，並以逗號分隔。 空括號表示方法不需要任何參數。 這個類別包含四個方法：
@@ -37,23 +37,23 @@ ms.locfileid: "86864146"
 
 [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]
 
-## <a name="method-parameters-vs-arguments"></a>方法參數與引數的比較
+## <a name="method-parameters-vs-arguments"></a>方法參數與引數
 
-方法定義會指定所需的任何參數的名稱和類型。 在呼叫程式碼呼叫此方法時，它會提供對每個參數呼叫的引數的具體值。 引數必須與參數類型相容，但是在呼叫程式碼中使用的引數名稱（如果有的話）不需要與方法中所定義的參數相同。 例如：
+方法定義會指定所需的任何參數的名稱和類型。 在呼叫程式碼呼叫此方法時，它會提供對每個參數呼叫的引數的具體值。 引數必須與參數類型相容，但如果呼叫程式碼中使用的任何) 不需要與方法中所定義的參數相同，則引數名稱 (。 例如：
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>以傳址方式傳遞與以傳值方式傳遞
 
-根據預設，當實[數值型別](../../language-reference/builtin-types/value-types.md)的實例傳遞至方法時，會傳遞其複本，而不是實例本身。 因此，對引數所做的變更不會影響呼叫方法中的原始實例。 若要以傳址方式傳遞實數值型別的實例，請使用 `ref` 關鍵字。 如需詳細資訊，請參閱[傳遞實值型別參數](./passing-value-type-parameters.md)。
+根據預設，當實 [值型](../../language-reference/builtin-types/value-types.md) 別的實例傳遞給方法時，會傳遞其複本，而不是實例本身。 因此，對引數所做的變更不會影響呼叫方法中的原始實例。 若要以傳址方式傳遞實數值型別的實例，請使用 `ref` 關鍵字。 如需詳細資訊，請參閱[傳遞實值型別參數](./passing-value-type-parameters.md)。
 
 傳遞參考類型的物件至方法時，會傳遞物件的參考。 也就是說，此方法接收的不是物件本身，而是指出物件位置的引數。 如果您使用此參考變更物件的成員，變更會反映在呼叫方法的引數中，即使以傳值方式傳遞物件。
 
-您可以使用關鍵字建立參考型別 `class` ，如下列範例所示：
+您可以使用關鍵字來建立參考型別 `class` ，如下列範例所示：
 
 [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]
 
-現在，如果您將此類型為基礎的物件傳遞至方法，即會傳遞物件的參考。 下列範例會將類型的物件傳遞 `SampleRefType` 給方法 `ModifyObject` ：
+現在，如果您將此類型為基礎的物件傳遞至方法，即會傳遞物件的參考。 下列範例會將型別的物件傳遞 `SampleRefType` 給方法 `ModifyObject` ：
 
 [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]
 
@@ -123,19 +123,19 @@ public static void FillMatrix(int[,] matrix)
 如果您使用 [async](../../language-reference/keywords/async.md) 修飾詞來標示方法，可以在方法中使用 [await](../../language-reference/operators/await.md) 運算子。 當控制項到達 async 方法的 await 運算式時，控制項會傳回給呼叫者，方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。
 
 > [!NOTE]
-> 非同步方法會在遇到第一個未完成的等候物件或是到達非同步方法的結尾時 (以先發生者為準)，傳回呼叫者
+> 非同步方法會在遇到第一個尚未完成的等候物件，或到達非同步方法的結尾（以先發生者為准）時，傳回給呼叫端。
 
 非同步方法的傳回類型可以是 <xref:System.Threading.Tasks.Task%601>、 <xref:System.Threading.Tasks.Task>或 void。 void 傳回類型主要用於定義需要 void 傳回類型的事件處理常式。 傳回 void 類型的非同步方法無法等候，而且 void 傳回方法的呼叫者無法攔截方法擲回的例外狀況。
 
 在下列範例中， `DelayAsync` 是會傳回類型 <xref:System.Threading.Tasks.Task%601>的非同步方法。 `DelayAsync` 具有傳回整數的 `return` 陳述式。 因此 `DelayAsync` 的方法宣告必須具有傳回類型 `Task<int>`。 因為傳回類型是 `Task<int>`， `await` 中 `DoSomethingAsync` 運算式的評估會產生整數，如下列陳述式所示範： `int result = await delayTask`。
 
-`startButton_Click` 方法是傳回類型為 void 的非同步方法的範例。 因為 `DoSomethingAsync` 是非同步方法，對 `DoSomethingAsync` 的呼叫工作必須等候，如下列陳述式所示： `await DoSomethingAsync();`。 `startButton_Click` 方法都必須定義 `async` 修飾詞，因為方法有 `await` 運算式。
+`Main`方法是具有傳回類型的非同步方法的範例 <xref:System.Threading.Tasks.Task> 。 它會移至 `DoSomethingAsync` 方法，因為它是以單一行表示，它可以省略 `async` 和 `await` 關鍵字。 因為 `DoSomethingAsync` 是非同步方法，對 `DoSomethingAsync` 的呼叫工作必須等候，如下列陳述式所示： `await DoSomethingAsync();`。
 
-[!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
+:::code language="csharp" source="snippets/classes-and-structs/methods/Program.cs":::
 
 非同步方法不可以宣告任何 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 參數，但是可以呼叫具有這類參數的方法。
 
-如需非同步方法的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../concepts/async/index.md)、[非同步程式中的控制流程](../concepts/async/control-flow-in-async-programs.md)和[非同步傳回類型](../concepts/async/async-return-types.md)。
+如需非同步方法的詳細資訊，請參閱 [使用 async 和 await 進行非同步程式設計](../concepts/async/index.md) 和非同步傳回 [類型](../concepts/async/async-return-types.md)。
 
 ## <a name="expression-body-definitions"></a>運算式主體定義
 
@@ -160,7 +160,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-如需詳細資訊，請參閱[反覆運算](../concepts/iterators.md)器。
+如需詳細資訊，請參閱 [反覆運算](../concepts/iterators.md)器。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -175,7 +175,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 - [繼承](inheritance.md)
 - [抽象和密封類別以及類別成員](abstract-and-sealed-classes-and-class-members.md)
 - [params](../../language-reference/keywords/params.md)
-- [return](../../language-reference/keywords/return.md)
-- [脫銷](../../language-reference/keywords/out.md)
-- [ref](../../language-reference/keywords/ref.md)
+- [返回](../../language-reference/keywords/return.md)
+- [擴展](../../language-reference/keywords/out.md)
+- [裁判](../../language-reference/keywords/ref.md)
 - [傳遞參數](passing-parameters.md)

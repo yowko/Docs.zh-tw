@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '@ keyword'
 ms.custom: updateeachrelease
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 51e3802ba7b78dab4c3f96365c51af83098c05c7
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 3392b92cbd77e5b3f895af99a71f33d2ab43fa15
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656120"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812311"
 ---
 # <a name="c-keywords"></a>C# 關鍵字
 
@@ -57,13 +57,13 @@ ms.locfileid: "88656120"
 |[descending](descending.md)|[動態](../builtin-types/reference-types.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[全球](../operators/namespace-alias-qualifier.md)|
 |[群組](group-clause.md)|[into](into.md)|[join](join-clause.md)|
-|[讓](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
-|[orderby](orderby-clause.md)|[部分 (類型) ](partial-type.md)|[部分 (方法) ](partial-method.md)|
-|[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[非受控 (泛型型別條件約束) ](where-generic-type-constraint.md)|[value](value.md)|[無 功](var.md)|
-|[when (篩選條件)](when.md)|[where (泛型型別條件約束)](where-generic-type-constraint.md)|[where (查詢子句)](where-clause.md)|
-|[yield](yield.md)| | |
+|[讓](let-clause.md)|[nameof](../operators/nameof.md)|[notnull](../../programming-guide/generics/constraints-on-type-parameters.md#notnull-constraint)|
+|[on](on.md)|[orderby](orderby-clause.md)|[部分 (類型) ](partial-type.md)|
+|[部分 (方法) ](partial-method.md)|[remove](remove.md)|[select](select-clause.md)|
+|[set](set.md)|[非受控 (泛型型別條件約束) ](where-generic-type-constraint.md)|[value](value.md)|
+|[無 功](var.md)|[when (篩選條件)](when.md)|[where (泛型型別條件約束)](where-generic-type-constraint.md)|
+|[where (查詢子句)](where-clause.md)|[yield](yield.md)| |
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考資料](../index.md)

@@ -1,527 +1,205 @@
 ---
-title: 取消一項非同步工作或工作清單 (C#)
-description: '使用這些範例來新增按鈕，以在非同步應用程式完成前取消它。 這個 c # 應用程式會下載一或多個網站的內容。'
-ms.date: 07/20/2015
+title: '取消 (c # ) 的工作清單'
+description: 瞭解如何使用解除標記將取消要求告知工作清單。
+ms.date: 08/19/2020
+ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 21bdbc3bc7c3b752fab160429d71356fb87d9976
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 000b6a89a9240344508a5ae6b248572c8a2177dc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925342"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811479"
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>取消一項非同步工作或工作清單 (C#)
+# <a name="cancel-a-list-of-tasks-c"></a>取消 (c # ) 的工作清單
 
-如果您不想要等候非同步應用程式完成，則可以設定可用來取消非同步應用程式的按鈕。 遵循本主題中的範例，即可將取消按鈕新增至下載某個網站內容或網站清單的應用程式。
+如果您不想等候它完成，您可以取消非同步主控台應用程式。 依照本主題中的範例，您可以將取消新增至下載網站清單內容的應用程式。 您可以藉由將實例與每項工作產生關聯，來取消許多工 <xref:System.Threading.CancellationTokenSource> 具。 如果您選取 <kbd>Enter</kbd> 鍵，則會取消尚未完成的所有工作。
 
-這些範例會使用[微調非同步應用程式 (C#)](./fine-tuning-your-async-application.md) 所描述的 UI。
+本教學課程涵蓋下列項目：
 
-> [!NOTE]
-> 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
+> [!div class="checklist"]
+>
+> - 建立 .NET 主控台應用程式
+> - 撰寫支援取消的非同步應用程式
+> - 示範信號取消
 
-## <a name="cancel-a-task"></a>取消工作
+## <a name="prerequisites"></a>必要條件
 
-第一個範例會建立 [取消]**** 按鈕與單一下載工作的關聯。 如果您在應用程式下載內容時選擇該按鈕，則會取消下載。
+本教學課程需要下列各項：
 
-### <a name="download-the-example"></a>下載範例
+- [.NET 5.0 或更新版本的 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+- 整合式開發環境 (IDE) 
+  - [建議 Visual Studio、Visual Studio Code 或 Visual Studio for Mac](https://visualstudio.microsoft.com)
 
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
+### <a name="create-example-application"></a>建立範例應用程式
 
-1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
+建立新的 .NET Core 主控台應用程式。 您可以使用 [ [dotnet 新主控台](../../../../core/tools/dotnet-new.md#console) ] 命令或從 [Visual Studio](/visualstudio/install/install-visual-studio)建立一個。 在您最愛的程式碼編輯器中開啟 *Program.cs* 檔案。
 
-2. 在功能表列上 **，選擇 [** 檔案] [  >  **開啟**  >  **專案/方案**]。
+### <a name="replace-using-statements"></a>取代 using 語句
 
-3. 在 [開啟專案]**** 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
-
-4. 在方案總管**** 中，開啟 **CancelATask** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。
-
-5. 選擇 **F5** 鍵以執行專案 (或按 **Ctrl**+**F5** 以執行專案但不進行偵錯)。
-
-> [!TIP]
-> 如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。
-
-### <a name="build-the-example"></a>建置範例
- 下列變更會將 [取消]**** 按鈕新增至下載網站的應用程式。 如果您不想要下載或建置範例，則可以檢閱本主題結尾處的＜完整範例＞一節中的最終產品。 星號會標記程式碼中的變更。
-
- 若要自行逐步建置範例，請遵循＜下載範例＞一節中的指示，但選擇 [StarterCode]**** 作為 [啟始專案]****，而非 [CancelATask]****。
-
- 然後將下列變更新增至該專案的 MainWindow.xaml.cs 檔案。
-
-1. 宣告 `CancellationTokenSource` 變數 `cts`，這是在存取它之所有方法的範圍內。
-
-    ```csharp
-    public partial class MainWindow : Window
-    {
-        // ***Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-    ```
-
-2. 針對 [取消]**** 按鈕新增下列事件處理常式。 事件處理常式會使用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，以在使用者要求取消時通知 `cts`。
-
-    ```csharp
-    // ***Add an event handler for the Cancel button.
-    private void cancelButton_Click(object sender, RoutedEventArgs e)
-    {
-        if (cts != null)
-        {
-            cts.Cancel();
-        }
-    }
-    ```
-
-3. 在 [開始]**** 按鈕 `startButton_Click` 的事件處理常式中進行下列變更。
-
-    - 具現化 `CancellationTokenSource`、`cts`。
-
-        ```csharp
-        // ***Instantiate the CancellationTokenSource.
-        cts = new CancellationTokenSource();
-        ```
-
-    - 在下載所指定網站內容的 `AccessTheWebAsync` 呼叫中，傳送 `cts` 的 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 屬性作為引數。 如果要求取消，則 `Token` 屬性會傳播訊息。 新增 catch 區塊，以在使用者選擇取消下載作業時顯示訊息。 下列程式碼示範這些變更。
-
-        ```csharp
-        try
-        {
-            // ***Send a token to carry the message if cancellation is requested.
-            int contentLength = await AccessTheWebAsync(cts.Token);
-            resultsTextBox.Text += $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-        }
-        // *** If cancellation is requested, an OperationCanceledException results.
-        catch (OperationCanceledException)
-        {
-            resultsTextBox.Text += "\r\nDownload canceled.\r\n";
-        }
-        catch (Exception)
-        {
-            resultsTextBox.Text += "\r\nDownload failed.\r\n";
-        }
-        ```
-
-4. 在 `AccessTheWebAsync` 中，使用 <xref:System.Net.Http.HttpClient> 型別中 `GetAsync` 方法的 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 多載來下載網站的內容。 將 `ct` (`AccessTheWebAsync` 的 <xref:System.Threading.CancellationToken> 參數) 傳遞為第二個引數。 如果使用者選擇 [取消]**** 按鈕，則權杖會夾帶訊息。
-
-     下列程式碼示範 `AccessTheWebAsync` 中的變更。
-
-    ```csharp
-    // ***Provide a parameter for the CancellationToken.
-    async Task<int> AccessTheWebAsync(CancellationToken ct)
-    {
-        HttpClient client = new HttpClient();
-
-        resultsTextBox.Text += "\r\nReady to download.\r\n";
-
-        // You might need to slow things down to have a chance to cancel.
-        await Task.Delay(250);
-
-        // GetAsync returns a Task<HttpResponseMessage>.
-        // ***The ct argument carries the message if the Cancel button is chosen.
-        HttpResponseMessage response = await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct);
-
-        // Retrieve the website contents from the HttpResponseMessage.
-        byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-        // The result of the method is the length of the downloaded website.
-        return urlContents.Length;
-    }
-    ```
-
-5. 如果您未取消程式，則會產生下列輸出。
-
-    ```text
-    Ready to download.
-    Length of the downloaded string: 158125.
-    ```
-
-     如果您在程式完成下載內容之前選擇 [取消]**** 按鈕，程式會產生下列輸出。
-
-    ```text
-    Ready to download.
-    Download canceled.
-    ```
-
-## <a name="cancel-a-list-of-tasks"></a>取消工作清單
-
-您可以將相同 `CancellationTokenSource` 執行個體與每項工作建立關聯，以擴充先前的範例來取消許多工作。 如果您選擇 [取消]**** 按鈕，即會取消所有尚未完成的工作。
-
-### <a name="download-the-example"></a>下載範例
-
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
-
-1. 解壓縮您下載的檔案，然後啟動 Visual Studio。
-
-2. 在功能表列上 **，選擇 [** 檔案] [  >  **開啟**  >  **專案/方案**]。
-
-3. 在 [開啟專案]**** 對話方塊中，開啟保存已解壓縮之範例程式碼的資料夾，然後開啟 AsyncFineTuningCS 的方案 (.sln) 檔案。
-
-4. 在方案總管**** 中，開啟 **CancelAListOfTasks** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。
-
-5. 選擇 **F5** 鍵以執行專案。
-
-     選擇**Ctrl** + **F5**鍵以執行專案，而不進行調試。
-
-如果您不想要下載專案，則可以檢閱本主題結尾的 MainWindow.xaml.cs 檔案。
-
-### <a name="build-the-example"></a>建置範例
-
-若要自行逐步擴充範例，請遵循＜下載範例＞一節中的指示，但選擇 [CancelATask]**** 作為 [啟始專案]****。 將下列變更新增至該專案。 星號會標記程式中的變更。
-
-1. 新增方法以建立網址清單。
-
-    ```csharp
-    // ***Add a method that creates a list of web addresses.
-    private List<string> SetUpURLList()
-    {
-        List<string> urls = new List<string>
-        {
-            "https://msdn.microsoft.com",
-            "https://msdn.microsoft.com/library/hh290138.aspx",
-            "https://msdn.microsoft.com/library/hh290140.aspx",
-            "https://msdn.microsoft.com/library/dd470362.aspx",
-            "https://msdn.microsoft.com/library/aa578028.aspx",
-            "https://msdn.microsoft.com/library/ms404677.aspx",
-            "https://msdn.microsoft.com/library/ff730837.aspx"
-        };
-        return urls;
-    }
-    ```
-
-2. 在 `AccessTheWebAsync` 中呼叫方法。
-
-    ```csharp
-    // ***Call SetUpURLList to make a list of web addresses.
-    List<string> urlList = SetUpURLList();
-    ```
-
-3. 在 `AccessTheWebAsync` 中新增下列迴圈，以處理清單中的每個網址。
-
-    ```csharp
-    // ***Add a loop to process the list of web addresses.
-    foreach (var url in urlList)
-    {
-        // GetAsync returns a Task<HttpResponseMessage>.
-        // Argument ct carries the message if the Cancel button is chosen.
-        // ***Note that the Cancel button can cancel all remaining downloads.
-        HttpResponseMessage response = await client.GetAsync(url, ct);
-
-        // Retrieve the website contents from the HttpResponseMessage.
-        byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-        resultsTextBox.Text +=
-            $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
-    }
-    ```
-
-4. 因為 `AccessTheWebAsync` 顯示長度，所以此方法不需要傳回任何項目。 請移除 return 陳述式，並將方法的傳回型別變更為 <xref:System.Threading.Tasks.Task>，而非 <xref:System.Threading.Tasks.Task%601>。
-
-    ```csharp
-    async Task AccessTheWebAsync(CancellationToken ct)
-    ```
-
-     使用陳述式，從 `startButton_Click` 呼叫方法，而不是使用運算式。
-
-    ```csharp
-    await AccessTheWebAsync(cts.Token);
-    ```
-
-5. 如果您未取消程式，則會產生下列輸出。
-
-    ```text
-    Length of the downloaded string: 35939.
-
-    Length of the downloaded string: 237682.
-
-    Length of the downloaded string: 128607.
-
-    Length of the downloaded string: 158124.
-
-    Length of the downloaded string: 204890.
-
-    Length of the downloaded string: 175488.
-
-    Length of the downloaded string: 145790.
-
-    Downloads complete.
-    ```
-
-     如果您在下載完成之前選擇 [取消]**** 按鈕，則輸出會包含在取消之前完成之下載的長度。
-
-    ```text
-    Length of the downloaded string: 35939.
-
-    Length of the downloaded string: 237682.
-
-    Length of the downloaded string: 128607.
-
-    Downloads canceled.
-    ```
-
-## <a name="complete-examples"></a>完整範例
-
-下列各節包含每個先前範例的程式碼。 請注意，您必須新增 <xref:System.Net.Http> 的參考。
-
-您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
-
-### <a name="example---cancel-a-task"></a>範例 - 取消工作
-
-下列程式碼是取消單一工作之範例的完整 MainWindow.xaml.cs 檔案。
+將現有的 using 語句取代為這些宣告：
 
 ```csharp
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// Add a using directive and a reference for System.Net.Http.
+using System.Diagnostics;
 using System.Net.Http;
-
-// Add the following using directive for System.Threading.
-
 using System.Threading;
-namespace CancelATask
-{
-    public partial class MainWindow : Window
-    {
-        // ***Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
-
-        private async void startButton_Click(object sender, RoutedEventArgs e)
-        {
-            // ***Instantiate the CancellationTokenSource.
-            cts = new CancellationTokenSource();
-
-            resultsTextBox.Clear();
-
-            try
-            {
-                // ***Send a token to carry the message if cancellation is requested.
-                int contentLength = await AccessTheWebAsync(cts.Token);
-                resultsTextBox.Text +=
-                    $"\r\nLength of the downloaded string: {contentLength}.\r\n";
-            }
-            // *** If cancellation is requested, an OperationCanceledException results.
-            catch (OperationCanceledException)
-            {
-                resultsTextBox.Text += "\r\nDownload canceled.\r\n";
-            }
-            catch (Exception)
-            {
-                resultsTextBox.Text += "\r\nDownload failed.\r\n";
-            }
-
-            // ***Set the CancellationTokenSource to null when the download is complete.
-            cts = null;
-        }
-
-        // ***Add an event handler for the Cancel button.
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (cts != null)
-            {
-                cts.Cancel();
-            }
-        }
-
-        // ***Provide a parameter for the CancellationToken.
-        async Task<int> AccessTheWebAsync(CancellationToken ct)
-        {
-            HttpClient client = new HttpClient();
-
-            resultsTextBox.Text += "\r\nReady to download.\r\n";
-
-            // You might need to slow things down to have a chance to cancel.
-            await Task.Delay(250);
-
-            // GetAsync returns a Task<HttpResponseMessage>.
-            // ***The ct argument carries the message if the Cancel button is chosen.
-            HttpResponseMessage response = await client.GetAsync("https://msdn.microsoft.com/library/dd470362.aspx", ct);
-
-            // Retrieve the website contents from the HttpResponseMessage.
-            byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-            // The result of the method is the length of the downloaded website.
-            return urlContents.Length;
-        }
-    }
-
-    // Output for a successful download:
-
-    // Ready to download.
-
-    // Length of the downloaded string: 158125.
-
-    // Or, if you cancel:
-
-    // Ready to download.
-
-    // Download canceled.
-}
+using System.Threading.Tasks;
 ```
 
-### <a name="example---cancel-a-list-of-tasks"></a>範例 - 取消工作清單
+## <a name="add-fields"></a>新增欄位
 
-下列程式碼是取消工作清單之範例的完整 MainWindow.xaml.cs 檔案。
+在 `Program` 類別定義中，加入下列三個欄位：
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+static readonly CancellationTokenSource s_cts = new CancellationTokenSource();
 
-// Add a using directive and a reference for System.Net.Http.
-using System.Net.Http;
-
-// Add the following using directive for System.Threading.
-using System.Threading;
-
-namespace CancelAListOfTasks
+static readonly HttpClient s_client = new HttpClient
 {
-    public partial class MainWindow : Window
+    MaxResponseContentBufferSize = 1_000_000
+};
+
+static readonly IEnumerable<string> s_urlList = new string[]
+{
+    "https://docs.microsoft.com",
+    "https://docs.microsoft.com/aspnet/core",
+    "https://docs.microsoft.com/azure",
+    "https://docs.microsoft.com/azure/devops",
+    "https://docs.microsoft.com/dotnet",
+    "https://docs.microsoft.com/dynamics365",
+    "https://docs.microsoft.com/education",
+    "https://docs.microsoft.com/enterprise-mobility-security",
+    "https://docs.microsoft.com/gaming",
+    "https://docs.microsoft.com/graph",
+    "https://docs.microsoft.com/microsoft-365",
+    "https://docs.microsoft.com/office",
+    "https://docs.microsoft.com/powershell",
+    "https://docs.microsoft.com/sql",
+    "https://docs.microsoft.com/surface",
+    "https://docs.microsoft.com/system-center",
+    "https://docs.microsoft.com/visualstudio",
+    "https://docs.microsoft.com/windows",
+    "https://docs.microsoft.com/xamarin"
+};
+```
+
+<xref:System.Threading.CancellationTokenSource>用來向要求的取消發出信號 <xref:System.Threading.CancellationToken> 。 `HttpClient`會公開傳送 HTTP 要求和接收 HTTP 回應的能力。 `s_urlList`會保存應用程式計畫處理的所有 url。
+
+## <a name="update-application-entry-point"></a>更新應用程式進入點
+
+主控台應用程式的主要進入點是 `Main` 方法。 以下列內容取代現有的方法：
+
+```csharp
+static async Task Main()
+{
+    Console.WriteLine("Application started.");
+    Console.WriteLine("Press the ENTER key to cancel...\n");
+
+    Task cancelTask = Task.Run(() =>
     {
-        // Declare a System.Threading.CancellationTokenSource.
-        CancellationTokenSource cts;
-
-        public MainWindow()
+        while (Console.ReadKey().Key != ConsoleKey.Enter)
         {
-            InitializeComponent();
+            Console.WriteLine("Press the ENTER key to cancel...");
         }
 
-        private async void startButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Instantiate the CancellationTokenSource.
-            cts = new CancellationTokenSource();
+        Console.WriteLine("\nENTER key pressed: cancelling downloads.\n");
+        s_cts.Cancel();
+    });
 
-            resultsTextBox.Clear();
+    Task sumPageSizesTask = SumPageSizesAsync();
 
-            try
-            {
-                await AccessTheWebAsync(cts.Token);
-                // ***Small change in the display lines.
-                resultsTextBox.Text += "\r\nDownloads complete.";
-            }
-            catch (OperationCanceledException)
-            {
-                resultsTextBox.Text += "\r\nDownloads canceled.";
-            }
-            catch (Exception)
-            {
-                resultsTextBox.Text += "\r\nDownloads failed.";
-            }
+    await Task.WhenAny(new[] { cancelTask, sumPageSizesTask });
 
-            // Set the CancellationTokenSource to null when the download is complete.
-            cts = null;
-        }
-
-        // Add an event handler for the Cancel button.
-        private void cancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (cts != null)
-            {
-                cts.Cancel();
-            }
-        }
-
-        // Provide a parameter for the CancellationToken.
-        // ***Change the return type to Task because the method has no return statement.
-        async Task AccessTheWebAsync(CancellationToken ct)
-        {
-            // Declare an HttpClient object.
-            HttpClient client = new HttpClient();
-
-            // ***Call SetUpURLList to make a list of web addresses.
-            List<string> urlList = SetUpURLList();
-
-            // ***Add a loop to process the list of web addresses.
-            foreach (var url in urlList)
-            {
-                // GetAsync returns a Task<HttpResponseMessage>.
-                // Argument ct carries the message if the Cancel button is chosen.
-                // ***Note that the Cancel button can cancel all remaining downloads.
-                HttpResponseMessage response = await client.GetAsync(url, ct);
-
-                // Retrieve the website contents from the HttpResponseMessage.
-                byte[] urlContents = await response.Content.ReadAsByteArrayAsync();
-
-                resultsTextBox.Text +=
-                    $"\r\nLength of the downloaded string: {urlContents.Length}.\r\n";
-            }
-        }
-
-        // ***Add a method that creates a list of web addresses.
-        private List<string> SetUpURLList()
-        {
-            List<string> urls = new List<string>
-            {
-                "https://msdn.microsoft.com",
-                "https://msdn.microsoft.com/library/hh290138.aspx",
-                "https://msdn.microsoft.com/library/hh290140.aspx",
-                "https://msdn.microsoft.com/library/dd470362.aspx",
-                "https://msdn.microsoft.com/library/aa578028.aspx",
-                "https://msdn.microsoft.com/library/ms404677.aspx",
-                "https://msdn.microsoft.com/library/ff730837.aspx"
-            };
-            return urls;
-        }
-    }
-
-    // Output if you do not choose to cancel:
-
-    //Length of the downloaded string: 35939.
-
-    //Length of the downloaded string: 237682.
-
-    //Length of the downloaded string: 128607.
-
-    //Length of the downloaded string: 158124.
-
-    //Length of the downloaded string: 204890.
-
-    //Length of the downloaded string: 175488.
-
-    //Length of the downloaded string: 145790.
-
-    //Downloads complete.
-
-    // Sample output if you choose to cancel:
-
-    //Length of the downloaded string: 35939.
-
-    //Length of the downloaded string: 237682.
-
-    //Length of the downloaded string: 128607.
-
-    //Downloads canceled.
+    Console.WriteLine("Application ending.");
 }
 ```
+
+更新後的 `Main` 方法現在會被視為 [非同步 main](../../../whats-new/csharp-7-1.md#async-main)，以允許進入可執行檔的非同步進入點。 它會將幾個教學訊息寫入主控台，然後宣告 <xref:System.Threading.Tasks.Task> 名為的實例 `cancelTask` ，以讀取主控台按鍵筆劃。 如果按下 <kbd>Enter</kbd> 鍵， <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> 則會進行呼叫。 這會通知取消。 接下來， `sumPageSizesTask` 會從方法指派變數 `SumPageSizesAsync` 。 這兩項工作都會傳遞至 <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> ，這兩項工作都已完成時，將會繼續進行。
+
+## <a name="create-the-asynchronous-sum-page-sizes-method"></a>建立異步總和頁面大小方法
+
+在 `Main` 方法下方，新增 `SumPageSizesAsync` 方法：
+
+```csharp
+static async Task SumPageSizesAsync()
+{
+    var stopwatch = Stopwatch.StartNew();
+
+    int total = 0;
+    foreach (string url in s_urlList)
+    {
+        int contentLength = await ProcessUrlAsync(url, s_client, s_cts.Token);
+        total += contentLength;
+    }
+
+    stopwatch.Stop();
+
+    Console.WriteLine($"\nTotal bytes returned:  {total:#,#}");
+    Console.WriteLine($"Elapsed time:          {stopwatch.Elapsed}\n");
+}
+```
+
+方法會從具現化和啟動開始 <xref:System.Diagnostics.Stopwatch> 。 然後，它會在中的每個 URL 執行迴圈 `s_urlList` ，並呼叫 `ProcessUrlAsync` 。 在每個反復專案中， `s_cts.Token` 都會傳遞至方法，而程式碼會傳回 `ProcessUrlAsync` <xref:System.Threading.Tasks.Task%601> ，其中 `TResult` 是整數：
+
+```csharp
+int total = 0;
+foreach (string url in s_urlList)
+{
+    int contentLength = await ProcessUrlAsync(url, s_client, s_cts.Token);
+    total += contentLength;
+}
+```
+
+## <a name="add-process-method"></a>新增處理方法
+
+`ProcessUrlAsync`在方法下方新增下列方法 `SumPageSizesAsync` ：
+
+```csharp
+static async Task<int> ProcessUrlAsync(string url, HttpClient client, CancellationToken token)
+{
+    HttpResponseMessage response = await client.GetAsync(url, token);
+    byte[] content = await response.Content.ReadAsByteArrayAsync(token);
+    Console.WriteLine($"{url,-60} {content.Length,10:#,#}");
+
+    return content.Length;
+}
+```
+
+針對任何指定的 URL，方法會使用提供的實例，將 `client` 回應取得為 `byte[]` 。 <xref:System.Threading.CancellationToken>實例會傳遞至 <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> 方法。 `token`用來註冊要求的取消。 將 URL 和長度寫入主控台之後，會傳回長度。
+
+### <a name="example-application-output"></a>範例應用程式輸出
+
+```console
+Application started.
+Press the ENTER key to cancel...
+
+https://docs.microsoft.com                                       37,357
+https://docs.microsoft.com/aspnet/core                           85,589
+https://docs.microsoft.com/azure                                398,939
+https://docs.microsoft.com/azure/devops                          73,663
+https://docs.microsoft.com/dotnet                                67,452
+https://docs.microsoft.com/dynamics365                           48,582
+https://docs.microsoft.com/education                             22,924
+
+ENTER key pressed: cancelling downloads.
+
+Application ending.
+```
+
+## <a name="complete-example"></a>完整範例
+
+下列程式碼是範例 *Program.cs* 檔的完整文字。
+
+:::code language="csharp" source="snippets/cancel-tasks/cancel-tasks/Program.cs":::
 
 ## <a name="see-also"></a>另請參閱
 
-- <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
-- [微調非同步應用程式 (C#)](./fine-tuning-your-async-application.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式)
+- <xref:System.Threading.CancellationTokenSource>
+- [使用 async 和 await 進行非同步程式設計 (c # ) ](index.md)
+
+## <a name="next-steps"></a>後續步驟
+
+> [!div class="nextstepaction"]
+> [在一段時間後取消非同步工作 (C#)](cancel-async-tasks-after-a-period-of-time.md)

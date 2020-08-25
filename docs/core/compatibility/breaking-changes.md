@@ -2,22 +2,22 @@
 title: 重大變更
 description: 瞭解每個 .NET Core 版本中的重大變更。
 ms.date: 11/27/2019
-ms.openlocfilehash: 550553ef14cd0635fbe4a5346c457a41264a4b82
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916263"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810894"
 ---
-# <a name="breaking-change-selectors"></a>重大變更選取器
+# <a name="breaking-change-selectors"></a>中斷性變更選取器
 
-下列版本和區域選取器會在不同版本的 .NET Core、ASP.NET Core 和 EF Core 之間，提供適用的重大變更的已篩選清單。 您也可以流覽目錄中的版本到版本或技術領域文章。
+下列版本和區域選取器提供在不同版本的 .NET Core、ASP.NET Core 和 EF Core 之間的適用重大變更的篩選清單。 您也可以流覽目錄中的版本對版本或技術區域文章。
 
 ## <a name="by-version"></a>依版本
 
-選取您目前設為目標的 .NET 版本，然後選取您想要遷移至的 .NET Core 版本：
+選取您目前的目標 .NET 版本，然後選取您想要遷移的目標 .NET Core 版本：
 
-> [!div class="op_multi_selector" title1="從目標版本" title2="到遷移的版本"]
+> [!div class="op_multi_selector" title1="從目標版本" title2="遷移至的版本"]
 >
 > - [ (3.1 |5.0) ](3.1-5.0.md)
 > - [ (3.0 |3.1) ](3.0-3.1.md)
@@ -28,11 +28,12 @@ ms.locfileid: "87916263"
 
 ## <a name="by-technology-area"></a>依技術範圍
 
-選取您感興趣的 [.NET Core 技術] 區域。 個別變更會依 .NET Core 版本排序。
+選取您感興趣的 .NET Core 技術領域。 個別變更會依 .NET Core 版本排序。
 
 > [!div class="op_single_selector"]
 >
 > - [ASP.NET Core](aspnetcore.md)
+> - [程式碼分析](code-analysis.md)
 > - [Core .NET 程式庫](corefx.md)
 > - [碼編譯](cryptography.md)
 > - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)
@@ -45,11 +46,11 @@ ms.locfileid: "87916263"
 
 ## <a name="github-issues-and-announcements"></a>GitHub 問題和公告
 
-您也可以查看在下列 GitHub 存放庫中詳細說明 .NET Core 中所引進之重大變更的個別問題：
+您也可以在下列 GitHub 存放庫中，查看詳細說明 .NET Core 中所引進之重大變更的個別問題：
 
-- 針對 .NET Core，則為[dotnet/](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change)檔存放庫。
-- 若為 ASP.NET Core，則為[aspnet/公告](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)存放庫。
-- 若為 Entity Framework Core，則為[dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change)存放庫。
+- 適用于 .NET Core 的 [dotnet/](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) 檔存放庫。
+- 若為 ASP.NET Core，則為 [aspnet/公告](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) 存放庫。
+- 針對 Entity Framework Core， [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) 存放庫。
 
 ## <a name="see-also"></a>另請參閱
 

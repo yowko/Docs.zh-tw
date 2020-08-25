@@ -2,25 +2,25 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 0673507b72690c3a5c7dcc35442c05e378dba43c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 635e4f02f4d286b63c4f4845563ba1953d23592a
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153031"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811895"
 ---
 # \<baseAddressPrefixFilters>
-代表設定專案的集合，這些專案會指定 [傳遞篩選準則]，以在 IIS 中裝載 Windows Communication Foundation （WCF）應用程式時，提供挑選適當 Internet Information Services （IIS）系結的機制。  
+代表設定專案的集合，這些專案會指定傳遞篩選準則，以提供在 IIS 中裝載 Windows Communication Foundation (WCF) 應用程式時，將適當的 Internet Information Services (IIS) 系結的機制。  
   
 > [!WARNING]
-> \<baseAddressPrefixFilters>無法辨識 "localhost";請改用完整的電腦名稱稱。  
+> \<baseAddressPrefixFilters> 無法辨識 "localhost";請改用完整的電腦名稱稱。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceHostingEnvironment>**](servicehostingenvironment.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<baseAddressPrefixFilters>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceHostingEnvironment>
@@ -38,13 +38,13 @@ ms.locfileid: "79153031"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<add>](add-of-baseaddressprefixfilter.md)|新增組態項目，這個項目會指定由服務主機使用之基底位址的前置詞篩選條件。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<serviceHostingEnvironment>](servicehostingenvironment.md)|定義服務裝載環境為特定傳輸產生的類型。|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "79153031"
   
  例如，您的網站可以包含下列基底位址：
   
-```
+```http
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  
