@@ -2,12 +2,12 @@
 title: 編譯器選項
 description: '使用 F # 編譯器命令列選項來控制 F # 應用程式和程式庫的編譯。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 7f7b7dac2060213cd7d783669cb4de2b96a88968
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c10808e97d31bd3bdb469fc2a8e57a4650170dec
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557356"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812142"
 ---
 # <a name="compiler-options"></a>編譯器選項
 
@@ -52,7 +52,7 @@ ms.locfileid: "88557356"
 |`--pdb:pdb-filename`|將輸出偵錯工具的 (命名為程式資料庫) 檔。 此選項只適用于 `--debug` 也啟用時。<br /><br />這個編譯器選項相當於相同名稱的 c # 編譯器選項。 如需詳細資訊，請參閱 [&#47;pdb &#40;C&#35; 編譯器選項&#41;](../../csharp/language-reference/compiler-options/pdb-compiler-option.md)。|
 |`--platform:platform-name`|指定產生的程式碼只會在指定的平臺上執行 (`x86` 、 `Itanium` 或 `x64`) ，或者，如果選擇了平臺名稱 `anycpu` ，則會指定產生的程式碼可以在任何平臺上執行。<br /><br />這個編譯器選項相當於相同名稱的 c # 編譯器選項。 如需詳細資訊，請參閱 [&#47;平臺 &#40;C&#35; 編譯器選項&#41;](../../csharp/language-reference/compiler-options/platform-compiler-option.md)。|
 |`--preferreduilang:lang`| 指定慣用的輸出語言文化特性名稱 (例如，  `es-ES` `ja-JP`) 。 |
-|`--quotations-debug`|指定應針對衍生自 F # 引號常值和反映定義的運算式發出額外的偵錯工具資訊。 偵錯工具資訊會加入至 F # 運算式樹狀結構節點的自訂屬性。 請參閱程式 [代碼引號](code-quotations.md) 和 [CustomAttributes](https://msdn.microsoft.com/visualfsharpdocs/conceptual/expr.customattributes-property-%5bfsharp%5d)。|
+|`--quotations-debug`|指定應針對衍生自 F # 引號常值和反映定義的運算式發出額外的偵錯工具資訊。 偵錯工具資訊會加入至 F # 運算式樹狀結構節點的自訂屬性。 請參閱程式 [代碼引號](code-quotations.md) 和 [CustomAttributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes)。|
 |`--reference:assembly-filename`<br /><br />`-r:assembly-filename`|讓 F # 或 .NET Framework 元件中的程式碼可供所要編譯的程式碼使用。<br /><br />這個編譯器選項相當於相同名稱的 c # 編譯器選項。 如需詳細資訊，請參閱 [&#47;參考 &#40;C&#35; 編譯器選項&#41;](../../csharp/language-reference/compiler-options/reference-compiler-option.md)。|
 |`--resource:resource-filename`|將 managed 資源檔內嵌到產生的元件中。<br /><br />這個編譯器選項相當於相同名稱的 c # 編譯器選項。 如需詳細資訊，請參閱 [&#47;資源 &#40;C&#35; 編譯器選項&#41;](../../csharp/language-reference/compiler-options/resource-compiler-option.md)。|
 |`--sig:signature-filename`|根據產生的元件產生簽名檔。 如需有關簽名檔的詳細資訊， [請參閱簽](signature-files.md)章。|
@@ -72,7 +72,7 @@ ms.locfileid: "88557356"
 
 ## <a name="related-articles"></a>相關文章
 
-|Title|描述|
+|標題|描述|
 |-----|-----------|
 |[F# Interactive 選項](fsharp-interactive-options.md)|描述 F # 解譯器支援的命令列選項 fsi.exe。|
 |[專案屬性參考](/visualstudio/ide/reference/project-properties-reference)|描述專案的 UI，包括提供組建選項的專案屬性頁。|

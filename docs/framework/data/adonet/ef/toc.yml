@@ -77,38 +77,17 @@
               href: sqlclient-for-ef-types.md
             - name: 適用於 Entity Framework 的 SqlClient 已知問題
               href: known-issues-in-sqlclient-for-entity-framework.md
-    - name: 撰寫 Entity Framework 資料提供者
-      href: writing-an-ef-data-provider.md
+    - name: 開發及部署考量因素
+      href: development-and-deployment-considerations.md
       items:
-        - name: SQL 產生
-          href: sql-generation.md
-          items:
-            - name: 命令樹的形狀
-              href: the-shape-of-the-command-trees.md
-            - name: 從命令樹產生 SQL - 最佳作法
-              href: generating-sql-from-command-trees-best-practices.md
-            - name: 範例提供者中的 SQL 產生
-              href: sql-generation-in-the-sample-provider.md
-              items:
-                - name: 架構與設計
-                  href: architecture-and-design.md
-                - name: 逐步解說：SQL 產生
-                  href: walkthrough-sql-generation.md
-        - name: 修改 SQL 產生
-          href: modification-sql-generation.md
-        - name: 提供者資訊清單規格
-          href: provider-manifest-specification.md
-- name: 開發及部署考量因素
-  href: development-and-deployment-considerations.md
-  items:
-    - name: 安全性考量
-      href: security-considerations.md
-    - name: 效能考量
-      href: performance-considerations.md
-    - name: 移轉考量
-      href: migration-considerations.md
-    - name: 部署考量
-      href: deployment-considerations.md
+        - name: 安全性考量
+          href: security-considerations.md
+        - name: 效能考量
+          href: performance-considerations.md
+        - name: 移轉考量
+          href: migration-considerations.md
+        - name: 部署考量
+          href: deployment-considerations.md
 - name: Entity Framework 資源
   href: resources.md
 - name: Entity Framework 詞彙

@@ -2,12 +2,12 @@
 title: 互動式選項
 description: 瞭解 F# 互動、fsi.exe 所支援的命令列選項。
 ms.date: 08/15/2020
-ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: adc8dc86f14366720e1acbf35115d4e318a76aef
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558604"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810527"
 ---
 # <a name="f-interactive-options"></a>F# 互動選項
 
@@ -52,11 +52,11 @@ F # 腳本檔案的副檔名為 `.fsx` 。
 |**--optimize**[ **+**&#124;**-** ]|與 **fsc.exe** 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--preferreduilang： &lt; lang&gt;**| 指定慣用的輸出語言文化特性名稱 (例如，es、ja-jp) 。 |
 |**--quiet**|隱藏 F# 互動的輸出至 **stdout** 資料流程。|
-|**--引號-debug**|指定應針對衍生自 F # 引號常值和反映定義的運算式發出額外的偵錯工具資訊。 偵錯工具資訊會加入至 F # 運算式樹狀結構節點的自訂屬性。 請參閱程式 [代碼引號](code-quotations.md) 和 [CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
+|**--引號-debug**|指定應針對衍生自 F # 引號常值和反映定義的運算式發出額外的偵錯工具資訊。 偵錯工具資訊會加入至 F # 運算式樹狀結構節點的自訂屬性。 請參閱程式 [代碼引號](code-quotations.md) 和 [CustomAttributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes)。|
 |**--readline**[ **+**&#124;**-** ]|啟用或停用互動式模式的 tab 鍵自動完成。|
 |**--reference： &lt; filename&gt;**<br /><br />**-r： &lt; filename&gt;**|與 **fsc.exe** 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--tailcalls**[ **+**&#124;**-** ]|啟用或停用 tail IL 指令，這會導致堆疊框架重複用於 tail 遞迴函式。 這個選項預設為啟用。|
-|**--targetprofile： &lt; 字串&gt;**|指定此元件的目標 framework 設定檔。 有效值為 `mscorlib`、`netcore` 或 `netstandard`。 預設值為 `mscorlib`。|
+|**--targetprofile： &lt; 字串&gt;**|指定此元件的目標 framework 設定檔。 有效值為 `mscorlib`、`netcore` 或 `netstandard`。 預設為 `mscorlib`。|
 |**--use： &lt; filename&gt;**|告知解譯器在啟動時使用指定的檔案做為初始輸入。|
 |**--utf8output**|與 fsc.exe 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--警告： &lt; 警告層級&gt;**|與 **fsc.exe** 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
@@ -163,6 +163,6 @@ val y : string = ["quack"; "quack"; "quack"]
 
 ## <a name="related-topics"></a>相關主題
 
-|Title|描述|
+|標題|描述|
 |-----|-----------|
 |[編譯器選項](compiler-options.md)|描述 F # 編譯器可用的命令列選項， **fsc.exe**。|

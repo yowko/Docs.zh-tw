@@ -2,12 +2,12 @@
 title: 記錄
 description: '瞭解 F # 記錄如何代表簡單的命名值匯總，並選擇性地包含成員。'
 ms.date: 08/15/2020
-ms.openlocfilehash: 182b2e83c3940c866197052af102787a96e49c54
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559046"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812350"
 ---
 # <a name="records"></a>記錄
 
@@ -184,5 +184,5 @@ The records are equal.
 - [F# 類型](fsharp-types.md)
 - [類別](classes.md)
 - [F # 語言參考](index.md)
-- [參考相等](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [參考相等](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
 - [模式比對](pattern-matching.md)
