@@ -368,6 +368,13 @@ items:
         href: run-time-config/networking.md
       - name: 執行緒設定
         href: run-time-config/threading.md
+  - name: 程式碼分析
+    items:
+      - name: 概觀
+        href: ../fundamentals/productivity/code-analysis.md
+        displayName: 'code analysis, analyzers'
+      - name: 設定規則
+        href: ../fundamentals/productivity/configure-code-analysis-rules.md
   - name: 移轉
     items:
       - name: .NET Core 2.0 至 2.1
