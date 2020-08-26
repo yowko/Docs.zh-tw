@@ -5,18 +5,24 @@ description: 列出 ASP.NET Core 中的重大變更。
 ms.date: 08/20/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 4f37bf73c13379bce006c9a3b51302c09562cc44
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 8b37ae5c5eea9e192a269092fccf435ab4877e61
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811252"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867668"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 重大變更
 
 ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 
-此頁面記載了下列重大變更：
+針對特定版本中的重大變更，請選取下列其中一個連結：
+
+* [ASP.NET Core 5。0](#aspnet-core-50)
+* [ASP.NET Core 3。1](#aspnet-core-31)
+* [ASP.NET Core 3。0](#aspnet-core-30)
+
+下列 ASP.NET Core 3.0、3.1 和5.0 的重大變更記載于此頁面：
 
 - [已移除過時的 Antiforgery、CORS、診斷、MVC 和路由 Api](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [驗證： Google + 淘汰](#authentication-google-deprecated-and-replaced)

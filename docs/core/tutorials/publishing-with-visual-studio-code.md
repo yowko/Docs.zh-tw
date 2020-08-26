@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 發佈 .NET Core 主控台應用程式
 description: 發行會建立一組執行 .NET Core 應用程式所需的檔案。
 ms.date: 07/04/2020
-ms.openlocfilehash: 04dfbae85f196ca4c8f8eb593637a801aa9773f2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: a84e66126806e2ab45c14527df1b931fa9980468
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811388"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867642"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 發佈 .NET Core 主控台應用程式
 
@@ -15,15 +15,15 @@ ms.locfileid: "88811388"
 
 .NET Core CLI 用來發佈應用程式，因此您可以在此教學課程中，使用除了 Visual Studio Code 的程式碼編輯器。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-- 本教學課程適用于您在 Visual Studio Code 中建立 [.Net Core 主控台應用程式](with-visual-studio-code.md)時所建立的主控台應用程式。
+- 本教學課程適用于您 [使用 Visual Studio Code 建立 .Net Core 主控台應用程式](with-visual-studio-code.md)中所建立的主控台應用程式。
 
 ## <a name="publish-the-app"></a>發佈應用程式
 
 1. 啟動 Visual Studio Code。
 
-1. 開啟您在 Visual Studio Code 中建立[.Net Core 主控台應用程式](with-visual-studio-code.md)所建立的*HelloWorld*專案資料夾。
+1. 開啟您在[使用 Visual Studio Code 建立 .Net Core 主控台應用程式](with-visual-studio-code.md)中建立的*HelloWorld*專案資料夾。
 
 1. 從主功能表選擇 [ **View**  >  **Terminal** ]。
 
@@ -112,4 +112,4 @@ ms.locfileid: "88811388"
 在本教學課程中，您已發佈主控台應用程式。 在下一個教學課程中，您將建立類別庫。
 
 > [!div class="nextstepaction"]
-> [在 Visual Studio Code 中建立 .NET Standard 程式庫](library-with-visual-studio-code.md)
+> [使用 Visual Studio Code 建立 .NET Standard 程式庫](library-with-visual-studio-code.md)

@@ -2,20 +2,20 @@
 title: 使用 Visual Studio Code 來對 .NET Core 主控台應用程式進行偵錯工具
 description: 瞭解如何使用 Visual Studio Code 來進行 .NET Core 主控台應用程式的偵錯工具。
 ms.date: 05/26/2020
-ms.openlocfilehash: 84c7b64ad7708cf2def084593cd7f96eb0ad82e5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: e2be9324a77d0360247a225bbd93224d379bda0d
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810660"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867577"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 對 .NET Core 主控台應用程式進行偵錯工具
 
 本教學課程介紹可在 Visual Studio Code 中使用的偵錯工具，以使用 .NET Core 應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-- 本教學課程適用于您在 Visual Studio Code 中建立 [.Net Core 主控台應用程式](with-visual-studio-code.md)時所建立的主控台應用程式。
+- 本教學課程適用于您 [使用 Visual Studio Code 建立 .Net Core 主控台應用程式](with-visual-studio-code.md)中所建立的主控台應用程式。
 
 ## <a name="use-debug-build-configuration"></a>使用 Debug build configuration
 
@@ -27,7 +27,7 @@ ms.locfileid: "88810660"
 
 1. 啟動 Visual Studio Code。
 
-1. 開啟您在 Visual Studio Code 中建立 [.Net Core 主控台應用程式](with-visual-studio-code.md)時所建立的專案資料夾。
+1. 開啟您在 [使用 Visual Studio Code 建立 .Net Core 主控台應用程式](with-visual-studio-code.md)中建立的專案資料夾。
 
 ## <a name="set-a-breakpoint"></a>設定中斷點
 

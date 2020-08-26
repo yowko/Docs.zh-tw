@@ -2,26 +2,26 @@
 title: 使用 Visual Studio for Mac 發佈 .NET Core 主控台應用程式
 description: 發行會建立一組執行 .NET Core 應用程式所需的檔案。
 ms.date: 06/08/2020
-ms.openlocfilehash: 38b656ac919dfb8b710a97c5d7fc63479e3fa367
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ec6b867f145ffdea491187de3745149f2cebd8dd
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811401"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867538"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 發佈 .NET Core 主控台應用程式
 
 本教學課程說明如何發佈主控台應用程式，讓其他使用者可以執行它。 發行會建立一組執行您的應用程式所需的檔案。 若要部署檔案，請將檔案複製到目的電腦。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-- 本教學課程適用于您在 Visual Studio for Mac 中建立 [.Net Core 主控台應用程式](with-visual-studio-mac.md)時所建立的主控台應用程式。
+- 本教學課程適用于您 [使用 Visual Studio for Mac 建立 .Net Core 主控台應用程式](with-visual-studio-mac.md)中所建立的主控台應用程式。
 
 ## <a name="publish-the-app"></a>發佈應用程式
 
 1. 開始 Visual Studio for Mac。
 
-1. 開啟您在 Visual Studio for Mac 中建立 [.Net Core 主控台應用程式](with-visual-studio-mac.md)所建立的 HelloWorld 專案。
+1. 開啟您在 [使用 Visual Studio for Mac 建立 .Net Core 主控台應用程式](with-visual-studio-mac.md)中建立的 HelloWorld 專案。
 
 1. 請確定 Visual Studio 正在組置您應用程式的發行版本。 如有必要，請將工具列上的組建組態設定從 **[偵錯]** 變更為 **[發行]**。
 
@@ -88,4 +88,4 @@ ms.locfileid: "88811401"
 在本教學課程中，您已發佈主控台應用程式。 在下一個教學課程中，您將建立類別庫。
 
 > [!div class="nextstepaction"]
-> [在 Visual Studio for mac 中建立 .NET Standard 程式庫](library-with-visual-studio-mac.md)
+> [使用 Visual Studio for Mac 建立 .NET Standard 程式庫](library-with-visual-studio-mac.md)

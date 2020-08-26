@@ -1,17 +1,17 @@
 ---
-title: 清單和陣列的重複欄位 - 適用于 WCF 開發人員的 gRPC
-description: 瞭解 Protobuf 如何處理集合以及它們與 .NET 集合的關係。
+title: 清單和陣列的重複欄位-適用于 WCF 開發人員的 gRPC
+description: 瞭解 Protobuf 如何處理集合，以及它們與 .NET 集合之間的關聯性。
 ms.date: 09/09/2019
-ms.openlocfilehash: 63d99532d14deea7800673dd5a6350dd9362ad54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7320c76ddc58bcf5cd81150923e8cb635e510047
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147967"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867499"
 ---
 # <a name="repeated-fields-for-lists-and-arrays"></a>清單和陣列的重複欄位
 
-通過使用`repeated`首碼關鍵字在協定緩衝區（Protobuf）中指定清單。 下面的示例演示如何創建清單：
+您可以使用 prefix 關鍵字 (Protobuf) 指定通訊協定緩衝區中的清單 `repeated` 。 下列範例顯示如何建立清單：
 
 ```protobuf
 message Person {
@@ -20,10 +20,12 @@ message Person {
 }
 ```
 
-在生成的代碼中，`repeated`欄位由泛型型別`Google.Protobuf.Collections.RepeatedField<T>`表示，而不是任何內置 .NET 集合類型。
+在產生的程式碼中， `repeated` 欄位是以類型的唯讀屬性 [`Google.Protobuf.Collections.RepeatedField<T>`][repeated-field] （而非任何內建的 .net 集合類型）表示。 此類型會執行所有標準的 .NET 集合介面，例如 <xref:System.Collections.Generic.IList%601> 和 <xref:System.Collections.Generic.IEnumerable%601> 。 因此，您可以使用 LINQ 查詢，或輕鬆地將它轉換成陣列或清單。
 
-該`RepeatedField<T>`類型包括將清單序列化並將序列化為二進位導線格式所需的代碼。 它實現所有標準 .NET 集合介面，如<xref:System.Collections.Generic.IList%601><xref:System.Collections.Generic.IEnumerable%601>和 。 因此，您可以使用 LINQ 查詢或輕鬆將其轉換為數組或清單。
+此 `RepeatedField<T>` 類型包含將清單序列化和還原序列化為二進位電傳格式所需的程式碼。
+
+[repeated-field]: https://developers.google.cn/protocol-buffers/docs/reference/csharp/class/google/protobuf/collections/repeated-field-t-
 
 >[!div class="step-by-step"]
->[上一個](protobuf-nested-types.md)
->[下一個](protobuf-reserved.md)
+>[上一個](protobuf-nested-types.md) 
+>[下一步](protobuf-reserved.md)

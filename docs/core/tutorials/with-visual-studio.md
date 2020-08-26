@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: c732728a98eb993762e4fbb9e4b0f5229fdde181
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4cd18aca4396f902268d59867760424d65ddcf6d
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811840"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867629"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET Core 主控台應用程式
 
 本教學課程說明如何在 Visual Studio 2019 中建立和執行 .NET Core 主控台應用程式。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - 已安裝 **.Net Core 跨平臺開發**工作負載的[Visual Studio 2019 16.6 版或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 當您選取此工作負載時，會自動安裝 .NET Core 3.1 SDK。
 
@@ -115,4 +115,4 @@ End Module
 在本教學課程中，您已建立 .NET Core 主控台應用程式。 在下一個教學課程中，您將會對應用程式進行偵錯工具。
 
 > [!div class="nextstepaction"]
-> [在 Visual Studio 中偵錯工具 .NET Core 主控台應用程式](debugging-with-visual-studio.md)
+> [使用 Visual Studio 來對 .NET Core 主控台應用程式進行偵錯工具](debugging-with-visual-studio.md)

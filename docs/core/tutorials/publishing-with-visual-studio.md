@@ -6,26 +6,26 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: afbffa5dc8a620836ec1433a095face46c32df90
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: e0033d52ab54259ce5e4ccf2a25bf4e3d4f244de
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811311"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867551"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>教學課程：使用 Visual Studio 發佈 .NET Core 主控台應用程式
 
 本教學課程說明如何發佈主控台應用程式，讓其他使用者可以執行它。 發行會建立一組執行您的應用程式所需的檔案。 若要部署檔案，請將檔案複製到目的電腦。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-- 本教學課程適用于您在 Visual Studio 2019 中建立 [.Net Core 主控台應用程式](with-visual-studio.md)時所建立的主控台應用程式。
+- 本教學課程適用于您 [使用 Visual Studio 建立 .Net Core 主控台應用程式](with-visual-studio.md)中所建立的主控台應用程式。
 
 ## <a name="publish-the-app"></a>發佈應用程式
 
 1. 啟動 Visual Studio。
 
-1. 開啟您在 Visual Studio 中建立[.Net Core 主控台應用程式](with-visual-studio.md)所建立的*HelloWorld*專案。
+1. 開啟您在[使用 Visual Studio 建立 .Net Core 主控台應用程式](with-visual-studio.md)中建立的*HelloWorld*專案。
 
 1. 請確定 Visual Studio 使用發行組建設定。 如有必要，請將工具列上的組建組態設定從 **[偵錯]** 變更為 **[發行]**。
 
@@ -112,4 +112,4 @@ ms.locfileid: "88811311"
 在本教學課程中，您已發佈主控台應用程式。 在下一個教學課程中，您將建立類別庫。
 
 > [!div class="nextstepaction"]
-> [在 Visual Studio 中建立 .NET Standard 程式庫](library-with-visual-studio.md)
+> [使用 Visual Studio 建立 .NET Standard 程式庫](library-with-visual-studio.md)
