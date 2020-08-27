@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0555c6b4185da088333503c1e744da2dd7b4f2e4
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867590"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957221"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>教學課程：使用 Visual Studio 對 .NET Core 主控台應用程式進行偵錯工具
 
 本教學課程介紹 Visual Studio 中提供的調試工具。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 本教學課程適用于您 [使用 Visual Studio 建立 .Net Core 主控台應用程式](with-visual-studio.md)中所建立的主控台應用程式。
 
@@ -27,7 +27,7 @@ ms.locfileid: "88867590"
 
 在「偵錯工具」設定中，程式會使用完整符號的 Debug 資訊進行編譯，而不會進行優化。 最佳化會使偵錯變得複雜，因為原始程式碼與產生的指令之間關係較為複雜。 程式的發行設定沒有符號的 debug 資訊，而且已完全優化。
 
- 根據預設，Visual Studio Code 會使用 Debug 組建設定，因此您不需要在進行偵錯工具之前進行變更。
+ 根據預設，Visual Studio 會使用 Debug 組建設定，因此您不需要在進行偵錯工具之前進行變更。
 
 1. 啟動 Visual Studio。
 
@@ -41,7 +41,7 @@ ms.locfileid: "88867590"
 
 「中斷點」** 會在含有中斷點的行執行「之前」，暫時中斷應用程式的執行。
 
-1. 在顯示名稱、日期和時間的行上設定 *中斷點* ，方法是按一下該行程式碼視窗的左邊界。 左邊界是行號的左邊。  設定中斷點的另一種方式是將游標放在程式程式碼中，然後從功能表列選擇 [ **Debug**  >  **切換中斷點**]。
+1. 在顯示名稱、日期和時間的行上設定 *中斷點* ，方法是按一下該行程式碼視窗的左邊界。 左邊界是行號的左邊。  設定中斷點的其他方式是將游標放在程式程式碼，然後按<kbd>F9</kbd> ，或從功能表列選擇 [ **Debug**  >  **切換中斷點**]。
 
    如下圖所示，Visual Studio 表示藉由反白顯示中斷點，並在左邊界中顯示紅點，來設定中斷點的行。
 
@@ -127,7 +127,7 @@ ms.locfileid: "88867590"
 
 1. 按任意鍵以關閉主控台視窗並停止調試。
 
-1. 按一下程式碼視窗左邊界中的點，以清除中斷點。 清除中斷點的另一種方式是在選取程式程式碼時，選擇 **Debug > 切換中斷點** 。
+1. 按一下程式碼視窗左邊界中的點，以清除中斷點。 清除中斷點的其他方式是按 <kbd>F9</kbd> ，或在選取程式程式碼時，選擇 [ **Debug] > 切換中斷點** 。
 
 ## <a name="step-through-a-program"></a>逐步執行程式
 

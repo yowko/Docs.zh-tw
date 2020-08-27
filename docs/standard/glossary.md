@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: c984a29208d8680de3c04f6b4d16c6f41afedc71
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812337"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957569"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -48,13 +48,13 @@ ASP.NET 的跨平臺、高效能、開放原始碼的實作為。
 
 組成系統的一組程式庫。 \* (以及 Microsoft 的範圍有限。 \*) 命名空間。 BCL 是 ASP.NET Core 等較高層級的應用程式架構建置所在之較低層級的一般目的架構。
 
-.Net [5 和更新版本的 BCL 原始程式碼 (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions) 包含在 [.net 運行](https://github.com/dotnet/runtime)時間存放庫中。 這項較新的 .NET 執行的 BCL Api 大部分也都可在 .NET Framework 中使用，因此您可以將此原始程式碼視為 .NET Framework BCL 原始程式碼的分支。
+.Net 5 (的 BCL 原始程式碼 [和 .Net Core) 和更新版本](#net-5-and-later-versions) 都包含在 [.net 運行](https://github.com/dotnet/runtime)時間存放庫中。 這項較新的 .NET 執行的 BCL Api 大部分也都可在 .NET Framework 中使用，因此您可以將此原始程式碼視為 .NET Framework BCL 原始程式碼的分支。
 
 ## <a name="clr"></a>CLR
 
 Common Language Runtime。
 
-確切的意義取決於內容。 Common Language Runtime 通常是指 [.NET Framework](#net-framework) 的執行時間或 [.net 5 和更新版本的執行時間 (包括 .net Core 2.1-3.1) ](#net-5-and-later-versions)。
+確切的意義取決於內容。 Common Language Runtime 通常是指 [.NET Framework](#net-framework) 的執行時間，或是 [.net 5 (和 .net Core) 和更新版本](#net-5-and-later-versions)的執行時間。
 
 CLR 會處理記憶體配置和管理。 CLR 也是虛擬機器，不僅可執行應用程式，也會使用 [JIT](#jit) 編譯器來即時產生和編譯器代碼。
 
@@ -66,7 +66,7 @@ CLR 會處理記憶體配置和管理。 CLR 也是虛擬機器，不僅可執�
 
 ## <a name="core-clr"></a>核心 CLR
 
-適用于 [.net 5 和更新版本的 Common Language Runtime (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions)。
+適用于 [.net 5 (和 .Net Core) 和更新版本](#net-5-and-later-versions)的 Common Language Runtime。
 
 請參閱 [CLR](#clr)
 
@@ -126,7 +126,7 @@ Just-in-Time 編譯器。
 .NET 的執行包括：
 
 - 一或多個執行階段。 範例： [CLR](#clr)、 [CoreRT](#corert)。
-- 實作 .NET Standard 版本並可能包含其他 API 的類別庫。 範例：適用于[.NET Framework](#net-framework)的[BCLs](#bcl)和[.net 5 和更新版本 (包括 .net Core 2.1-3.1) ](#net-5-and-later-versions)。
+- 實作 .NET Standard 版本並可能包含其他 API 的類別庫。 範例： [.NET Framework](#net-framework)和 .net 5 的[BCLs](#bcl) [ (和 .net Core) 和更新版本](#net-5-and-later-versions)。
 - (選擇性) 一或多個應用程式架構。 範例： [ASP.NET](#aspnet)、WINDOWS FORMS 和 WPF 包含在 .NET FRAMEWORK 和 .net 5 中。
 - (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
@@ -173,7 +173,7 @@ Mono 通常與 [即時編譯器](#jit)搭配使用，但也提供完整的 [靜�
 
 ## <a name="net-cli"></a>.NET CLI
 
-適用于開發 .Net 5 和更新版本之應用程式和程式庫的跨平臺工具鏈， [ (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions)。 也稱為 .NET Core CLI。
+適用于開發 [.net 5 (和 .Net Core) 和更新版本](#net-5-and-later-versions)之應用程式和程式庫的跨平臺工具鏈。 也稱為 .NET Core CLI。
 
 請參閱 [.NET CLI](../core/tools/index.md)。
 
@@ -199,7 +199,7 @@ UWP 是 .NET Native 第一個支援的應用程式架構。 現在，我們支�
 
 ## <a name="net-sdk"></a>.NET SDK
 
-一組程式庫和工具，可讓開發人員建立 .net 5 和更新版本的 .NET 應用程式和程式庫 [ (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions)。 也稱為 .NET Core SDK。
+一組程式庫和工具，可讓開發人員建立 .net [5 (和 .Net Core) 和更新版本](#net-5-and-later-versions)的 .net 應用程式和程式庫。 也稱為 .NET Core SDK。
 
 包含用來建立應用程式的 [.NET CLI](#net-cli) 、用來建立和執行應用程式的 .net 程式庫和執行時間，以及 dotnet 可執行檔 (*dotnet.exe* 執行 CLI 命令和執行應用程式的) 。
 
@@ -252,7 +252,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
   此處的「執行時間」表示 [CLR](#clr) 與 [BCL](#bcl) (framework 程式庫) ，您可以在電腦上下載並安裝該程式庫，讓您可以在電腦上執行與 [framework 相依](../core/deploying/index.md#publish-framework-dependent) 的應用程式。
 
-* [.Net 5 和更新版本 (包括 .Net Core 2.1-3.1) ](#net-5-and-later-versions) [ (RID) 的執行時間識別碼](../core/rid-catalog.md)。
+* [.Net 5 (和 .Net Core) 和更新版本](#net-5-and-later-versions) [ (RID) 的執行時間識別碼](../core/rid-catalog.md)。
 
   此處的「執行時間」表示 .NET 應用程式執行所在的作業系統平臺和 CPU 架構，例如： `linux-x64` 。
 
@@ -290,7 +290,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
 通用 Windows 平台。
 
-用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 它是設計來統一您可能想要鎖定的不同裝置類型，包括電腦、平板電腦、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 您可以用 c + +、c #、Visual Basic 和 JavaScript 來撰寫應用程式。 使用 c # 和 Visual Basic 時，.net Api 是由 .NET 5 和更新版本所提供， (包括 .NET Core 2.1-3.1) 。
+用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 它是設計來統一您可能想要鎖定的不同裝置類型，包括電腦、平板電腦、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 您可以用 c + +、c #、Visual Basic 和 JavaScript 來撰寫應用程式。 使用 c # 和 Visual Basic 時，.net Api 是由 .NET 5 (和 .NET Core) 和更新版本所提供。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -2,18 +2,18 @@
 title: 使用 Visual Studio for Mac 來對 .NET Core 主控台應用程式進行偵錯工具
 description: 瞭解如何使用 Visual Studio Mac 來對 .NET Core 主控台應用程式進行 debug 錯。
 ms.date: 06/08/2020
-ms.openlocfilehash: 79936fb99d0bc37c1234eb8f227eb5415ae48b93
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 011647a6e3e676909880befa3b770205eb9616d6
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867564"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957521"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 對 .NET Core 主控台應用程式進行偵錯工具
 
 本教學課程介紹 Visual Studio for Mac 中提供的調試工具。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 本教學課程適用于您 [使用 Visual Studio for Mac 建立 .Net Core 主控台應用程式](with-visual-studio-mac.md)中所建立的主控台應用程式。
 
@@ -23,7 +23,7 @@ ms.locfileid: "88867564"
 
 在「偵錯工具」設定中，程式會使用完整符號的 Debug 資訊進行編譯，而不會進行優化。 最佳化會使偵錯變得複雜，因為原始程式碼與產生的指令之間關係較為複雜。 程式的發行設定沒有符號的 debug 資訊，而且已完全優化。
 
-根據預設，Visual Studio 會使用 Debug 組建設定，因此您不需要在進行偵錯工具之前進行變更。
+根據預設，Visual Studio for Mac 會使用 Debug 組建設定，因此您不需要在進行偵錯工具之前進行變更。
 
 1. 開始 Visual Studio for Mac。
 

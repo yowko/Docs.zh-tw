@@ -2,15 +2,15 @@
 title: ASP.NET Core 重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 08/20/2020
+ms.date: 08/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 8b37ae5c5eea9e192a269092fccf435ab4877e61
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 443494291f4ec58aecd7c8d8ed42cb4086e64095
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867668"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957726"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 重大變更
 
@@ -81,6 +81,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [MVC：先行編譯工具已淘汰](#mvc-precompilation-tool-deprecated)
 - [MVC：類型已變更為內部](#mvc-pubternal-types-changed-to-internal)
 - [MVC：已移除 Web API 相容性填充碼](#mvc-web-api-compatibility-shim-removed)
+- [Razor：已移除 RazorTemplateEngine API](#razor-razortemplateengine-api-removed)
 - [Razor：執行時間編譯已移至封裝](#razor-runtime-compilation-moved-to-a-package)
 - [安全性：已移除 Cookie 名稱編碼](#security-cookie-name-encoding-removed)
 - [安全性：已更新 Microsoft.identitymodel NuGet 套件版本](#security-identitymodel-nuget-package-versions-updated)
@@ -354,6 +355,10 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 ***
 
 [!INCLUDE[MVC: Web API compatibility shim removed](~/includes/core-changes/aspnetcore/3.0/mvc-webapi-compat-shim-removed.md)]
+
+***
+
+[!INCLUDE[Razor: RazorTemplatEengine API removed](~/includes/core-changes/aspnetcore/3.0/razor-razortemplateengine-api-removed.md)]
 
 ***
 
