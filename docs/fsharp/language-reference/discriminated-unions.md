@@ -205,6 +205,6 @@ type Shape =
 - `[<NoComparison>]`
 - `[<Struct>]`
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F # 語言參考](index.md)

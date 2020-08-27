@@ -179,7 +179,7 @@ The records are equal.
 
 如果您需要記錄的參考相等，請在 `[<ReferenceEquality>]` 記錄上方加入屬性。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [F# 類型](fsharp-types.md)
 - [類別](classes.md)
