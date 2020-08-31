@@ -4,40 +4,40 @@ description: 瞭解如何使用解除標記將取消要求告知工作清單。
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 000b6a89a9240344508a5ae6b248572c8a2177dc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811479"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053089"
 ---
-# <a name="cancel-a-list-of-tasks-c"></a><span data-ttu-id="56afc-103">取消 (c # ) 的工作清單</span><span class="sxs-lookup"><span data-stu-id="56afc-103">Cancel a list of tasks (C#)</span></span>
+# <a name="cancel-a-list-of-tasks-c"></a><span data-ttu-id="1b8fd-103">取消 (c # ) 的工作清單</span><span class="sxs-lookup"><span data-stu-id="1b8fd-103">Cancel a list of tasks (C#)</span></span>
 
-<span data-ttu-id="56afc-104">如果您不想等候它完成，您可以取消非同步主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="56afc-104">You can cancel an async console application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="56afc-105">依照本主題中的範例，您可以將取消新增至下載網站清單內容的應用程式。</span><span class="sxs-lookup"><span data-stu-id="56afc-105">By following the example in this topic, you can add a cancellation to an application that downloads the contents of a list of websites.</span></span> <span data-ttu-id="56afc-106">您可以藉由將實例與每項工作產生關聯，來取消許多工 <xref:System.Threading.CancellationTokenSource> 具。</span><span class="sxs-lookup"><span data-stu-id="56afc-106">You can cancel many tasks by associating the <xref:System.Threading.CancellationTokenSource> instance with each task.</span></span> <span data-ttu-id="56afc-107">如果您選取 <kbd>Enter</kbd> 鍵，則會取消尚未完成的所有工作。</span><span class="sxs-lookup"><span data-stu-id="56afc-107">If you select the <kbd>Enter</kbd> key, you cancel all tasks that aren't yet complete.</span></span>
+<span data-ttu-id="1b8fd-104">如果您不想等候它完成，您可以取消非同步主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-104">You can cancel an async console application if you don't want to wait for it to finish.</span></span> <span data-ttu-id="1b8fd-105">依照本主題中的範例，您可以將取消新增至下載網站清單內容的應用程式。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-105">By following the example in this topic, you can add a cancellation to an application that downloads the contents of a list of websites.</span></span> <span data-ttu-id="1b8fd-106">您可以藉由將實例與每項工作產生關聯，來取消許多工 <xref:System.Threading.CancellationTokenSource> 具。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-106">You can cancel many tasks by associating the <xref:System.Threading.CancellationTokenSource> instance with each task.</span></span> <span data-ttu-id="1b8fd-107">如果您選取 <kbd>Enter</kbd> 鍵，則會取消尚未完成的所有工作。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-107">If you select the <kbd>Enter</kbd> key, you cancel all tasks that aren't yet complete.</span></span>
 
-<span data-ttu-id="56afc-108">本教學課程涵蓋下列項目：</span><span class="sxs-lookup"><span data-stu-id="56afc-108">This tutorial covers:</span></span>
+<span data-ttu-id="1b8fd-108">本教學課程涵蓋下列項目：</span><span class="sxs-lookup"><span data-stu-id="1b8fd-108">This tutorial covers:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="56afc-109">建立 .NET 主控台應用程式</span><span class="sxs-lookup"><span data-stu-id="56afc-109">Creating a .NET console application</span></span>
-> - <span data-ttu-id="56afc-110">撰寫支援取消的非同步應用程式</span><span class="sxs-lookup"><span data-stu-id="56afc-110">Writing an async application that supports cancellation</span></span>
-> - <span data-ttu-id="56afc-111">示範信號取消</span><span class="sxs-lookup"><span data-stu-id="56afc-111">Demonstrating signaling cancellation</span></span>
+> - <span data-ttu-id="1b8fd-109">建立 .NET 主控台應用程式</span><span class="sxs-lookup"><span data-stu-id="1b8fd-109">Creating a .NET console application</span></span>
+> - <span data-ttu-id="1b8fd-110">撰寫支援取消的非同步應用程式</span><span class="sxs-lookup"><span data-stu-id="1b8fd-110">Writing an async application that supports cancellation</span></span>
+> - <span data-ttu-id="1b8fd-111">示範信號取消</span><span class="sxs-lookup"><span data-stu-id="1b8fd-111">Demonstrating signaling cancellation</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="56afc-112">必要條件</span><span class="sxs-lookup"><span data-stu-id="56afc-112">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="1b8fd-112">必要條件</span><span class="sxs-lookup"><span data-stu-id="1b8fd-112">Prerequisites</span></span>
 
-<span data-ttu-id="56afc-113">本教學課程需要下列各項：</span><span class="sxs-lookup"><span data-stu-id="56afc-113">This tutorial requires the following:</span></span>
+<span data-ttu-id="1b8fd-113">本教學課程需要下列各項：</span><span class="sxs-lookup"><span data-stu-id="1b8fd-113">This tutorial requires the following:</span></span>
 
-- [<span data-ttu-id="56afc-114">.NET 5.0 或更新版本的 SDK</span><span class="sxs-lookup"><span data-stu-id="56afc-114">.NET 5.0 or later SDK</span></span>](https://dotnet.microsoft.com/download/dotnet/5.0)
-- <span data-ttu-id="56afc-115">整合式開發環境 (IDE) </span><span class="sxs-lookup"><span data-stu-id="56afc-115">Integrated development environment (IDE)</span></span>
-  - [<span data-ttu-id="56afc-116">建議 Visual Studio、Visual Studio Code 或 Visual Studio for Mac</span><span class="sxs-lookup"><span data-stu-id="56afc-116">We recommend Visual Studio, Visual Studio Code, or Visual Studio for Mac</span></span>](https://visualstudio.microsoft.com)
+- [<span data-ttu-id="1b8fd-114">.NET 5.0 或更新版本的 SDK</span><span class="sxs-lookup"><span data-stu-id="1b8fd-114">.NET 5.0 or later SDK</span></span>](https://dotnet.microsoft.com/download/dotnet/5.0)
+- <span data-ttu-id="1b8fd-115">整合式開發環境 (IDE) </span><span class="sxs-lookup"><span data-stu-id="1b8fd-115">Integrated development environment (IDE)</span></span>
+  - [<span data-ttu-id="1b8fd-116">建議 Visual Studio、Visual Studio Code 或 Visual Studio for Mac</span><span class="sxs-lookup"><span data-stu-id="1b8fd-116">We recommend Visual Studio, Visual Studio Code, or Visual Studio for Mac</span></span>](https://visualstudio.microsoft.com)
 
-### <a name="create-example-application"></a><span data-ttu-id="56afc-117">建立範例應用程式</span><span class="sxs-lookup"><span data-stu-id="56afc-117">Create example application</span></span>
+### <a name="create-example-application"></a><span data-ttu-id="1b8fd-117">建立範例應用程式</span><span class="sxs-lookup"><span data-stu-id="1b8fd-117">Create example application</span></span>
 
-<span data-ttu-id="56afc-118">建立新的 .NET Core 主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="56afc-118">Create a new .NET Core console application.</span></span> <span data-ttu-id="56afc-119">您可以使用 [ [dotnet 新主控台](../../../../core/tools/dotnet-new.md#console) ] 命令或從 [Visual Studio](/visualstudio/install/install-visual-studio)建立一個。</span><span class="sxs-lookup"><span data-stu-id="56afc-119">You can create one by using the [dotnet new console](../../../../core/tools/dotnet-new.md#console) command or from [Visual Studio](/visualstudio/install/install-visual-studio).</span></span> <span data-ttu-id="56afc-120">在您最愛的程式碼編輯器中開啟 *Program.cs* 檔案。</span><span class="sxs-lookup"><span data-stu-id="56afc-120">Open the *Program.cs* file in your favorite code editor.</span></span>
+<span data-ttu-id="1b8fd-118">建立新的 .NET Core 主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-118">Create a new .NET Core console application.</span></span> <span data-ttu-id="1b8fd-119">您可以使用 [`dotnet new console`](../../../../core/tools/dotnet-new.md#console) 命令或從 [Visual Studio](/visualstudio/install/install-visual-studio)建立一個。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-119">You can create one by using the [`dotnet new console`](../../../../core/tools/dotnet-new.md#console) command or from [Visual Studio](/visualstudio/install/install-visual-studio).</span></span> <span data-ttu-id="1b8fd-120">在您最愛的程式碼編輯器中開啟 *Program.cs* 檔案。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-120">Open the *Program.cs* file in your favorite code editor.</span></span>
 
-### <a name="replace-using-statements"></a><span data-ttu-id="56afc-121">取代 using 語句</span><span class="sxs-lookup"><span data-stu-id="56afc-121">Replace using statements</span></span>
+### <a name="replace-using-statements"></a><span data-ttu-id="1b8fd-121">取代 using 語句</span><span class="sxs-lookup"><span data-stu-id="1b8fd-121">Replace using statements</span></span>
 
-<span data-ttu-id="56afc-122">將現有的 using 語句取代為這些宣告：</span><span class="sxs-lookup"><span data-stu-id="56afc-122">Replace the existing using statements with these declarations:</span></span>
+<span data-ttu-id="1b8fd-122">將現有的 using 語句取代為這些宣告：</span><span class="sxs-lookup"><span data-stu-id="1b8fd-122">Replace the existing using statements with these declarations:</span></span>
 
 ```csharp
 using System;
@@ -48,9 +48,9 @@ using System.Threading;
 using System.Threading.Tasks;
 ```
 
-## <a name="add-fields"></a><span data-ttu-id="56afc-123">新增欄位</span><span class="sxs-lookup"><span data-stu-id="56afc-123">Add fields</span></span>
+## <a name="add-fields"></a><span data-ttu-id="1b8fd-123">新增欄位</span><span class="sxs-lookup"><span data-stu-id="1b8fd-123">Add fields</span></span>
 
-<span data-ttu-id="56afc-124">在 `Program` 類別定義中，加入下列三個欄位：</span><span class="sxs-lookup"><span data-stu-id="56afc-124">In the `Program` class definition, add these three fields:</span></span>
+<span data-ttu-id="1b8fd-124">在 `Program` 類別定義中，加入下列三個欄位：</span><span class="sxs-lookup"><span data-stu-id="1b8fd-124">In the `Program` class definition, add these three fields:</span></span>
 
 ```csharp
 static readonly CancellationTokenSource s_cts = new CancellationTokenSource();
@@ -84,11 +84,11 @@ static readonly IEnumerable<string> s_urlList = new string[]
 };
 ```
 
-<span data-ttu-id="56afc-125"><xref:System.Threading.CancellationTokenSource>用來向要求的取消發出信號 <xref:System.Threading.CancellationToken> 。</span><span class="sxs-lookup"><span data-stu-id="56afc-125">The <xref:System.Threading.CancellationTokenSource> is used to signal a requested cancellation to a <xref:System.Threading.CancellationToken>.</span></span> <span data-ttu-id="56afc-126">`HttpClient`會公開傳送 HTTP 要求和接收 HTTP 回應的能力。</span><span class="sxs-lookup"><span data-stu-id="56afc-126">The `HttpClient` exposes the ability to send HTTP requests and receive HTTP responses.</span></span> <span data-ttu-id="56afc-127">`s_urlList`會保存應用程式計畫處理的所有 url。</span><span class="sxs-lookup"><span data-stu-id="56afc-127">The `s_urlList` holds all of the URLs that the application plans to process.</span></span>
+<span data-ttu-id="1b8fd-125"><xref:System.Threading.CancellationTokenSource>用來向要求的取消發出信號 <xref:System.Threading.CancellationToken> 。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-125">The <xref:System.Threading.CancellationTokenSource> is used to signal a requested cancellation to a <xref:System.Threading.CancellationToken>.</span></span> <span data-ttu-id="1b8fd-126">`HttpClient`會公開傳送 HTTP 要求和接收 HTTP 回應的能力。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-126">The `HttpClient` exposes the ability to send HTTP requests and receive HTTP responses.</span></span> <span data-ttu-id="1b8fd-127">`s_urlList`會保存應用程式計畫處理的所有 url。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-127">The `s_urlList` holds all of the URLs that the application plans to process.</span></span>
 
-## <a name="update-application-entry-point"></a><span data-ttu-id="56afc-128">更新應用程式進入點</span><span class="sxs-lookup"><span data-stu-id="56afc-128">Update application entry point</span></span>
+## <a name="update-application-entry-point"></a><span data-ttu-id="1b8fd-128">更新應用程式進入點</span><span class="sxs-lookup"><span data-stu-id="1b8fd-128">Update application entry point</span></span>
 
-<span data-ttu-id="56afc-129">主控台應用程式的主要進入點是 `Main` 方法。</span><span class="sxs-lookup"><span data-stu-id="56afc-129">The main entry point into the console application is the `Main` method.</span></span> <span data-ttu-id="56afc-130">以下列內容取代現有的方法：</span><span class="sxs-lookup"><span data-stu-id="56afc-130">Replace the existing method with the following:</span></span>
+<span data-ttu-id="1b8fd-129">主控台應用程式的主要進入點是 `Main` 方法。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-129">The main entry point into the console application is the `Main` method.</span></span> <span data-ttu-id="1b8fd-130">以下列內容取代現有的方法：</span><span class="sxs-lookup"><span data-stu-id="1b8fd-130">Replace the existing method with the following:</span></span>
 
 ```csharp
 static async Task Main()
@@ -115,11 +115,11 @@ static async Task Main()
 }
 ```
 
-<span data-ttu-id="56afc-131">更新後的 `Main` 方法現在會被視為 [非同步 main](../../../whats-new/csharp-7-1.md#async-main)，以允許進入可執行檔的非同步進入點。</span><span class="sxs-lookup"><span data-stu-id="56afc-131">The updated `Main` method is now considered an [Async main](../../../whats-new/csharp-7-1.md#async-main), which allows for an asynchronous entry point into the executable.</span></span> <span data-ttu-id="56afc-132">它會將幾個教學訊息寫入主控台，然後宣告 <xref:System.Threading.Tasks.Task> 名為的實例 `cancelTask` ，以讀取主控台按鍵筆劃。</span><span class="sxs-lookup"><span data-stu-id="56afc-132">It writes a few instructional messages to the console, then declares a <xref:System.Threading.Tasks.Task> instance named `cancelTask`, which will read console key strokes.</span></span> <span data-ttu-id="56afc-133">如果按下 <kbd>Enter</kbd> 鍵， <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> 則會進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="56afc-133">If the <kbd>Enter</kbd> key is pressed, a call to <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> is made.</span></span> <span data-ttu-id="56afc-134">這會通知取消。</span><span class="sxs-lookup"><span data-stu-id="56afc-134">This will signal cancellation.</span></span> <span data-ttu-id="56afc-135">接下來， `sumPageSizesTask` 會從方法指派變數 `SumPageSizesAsync` 。</span><span class="sxs-lookup"><span data-stu-id="56afc-135">Next, the `sumPageSizesTask` variable is assigned from the `SumPageSizesAsync` method.</span></span> <span data-ttu-id="56afc-136">這兩項工作都會傳遞至 <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> ，這兩項工作都已完成時，將會繼續進行。</span><span class="sxs-lookup"><span data-stu-id="56afc-136">Both tasks are then passed to <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType>, which will continue when any of the two tasks have completed.</span></span>
+<span data-ttu-id="1b8fd-131">更新後的 `Main` 方法現在會被視為 [非同步 main](../../../whats-new/csharp-7-1.md#async-main)，以允許進入可執行檔的非同步進入點。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-131">The updated `Main` method is now considered an [Async main](../../../whats-new/csharp-7-1.md#async-main), which allows for an asynchronous entry point into the executable.</span></span> <span data-ttu-id="1b8fd-132">它會將幾個教學訊息寫入主控台，然後宣告 <xref:System.Threading.Tasks.Task> 名為的實例 `cancelTask` ，以讀取主控台按鍵筆劃。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-132">It writes a few instructional messages to the console, then declares a <xref:System.Threading.Tasks.Task> instance named `cancelTask`, which will read console key strokes.</span></span> <span data-ttu-id="1b8fd-133">如果按下 <kbd>Enter</kbd> 鍵， <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> 則會進行呼叫。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-133">If the <kbd>Enter</kbd> key is pressed, a call to <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> is made.</span></span> <span data-ttu-id="1b8fd-134">這會通知取消。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-134">This will signal cancellation.</span></span> <span data-ttu-id="1b8fd-135">接下來， `sumPageSizesTask` 會從方法指派變數 `SumPageSizesAsync` 。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-135">Next, the `sumPageSizesTask` variable is assigned from the `SumPageSizesAsync` method.</span></span> <span data-ttu-id="1b8fd-136">這兩項工作都會傳遞至 <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> ，這兩項工作都已完成時，將會繼續進行。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-136">Both tasks are then passed to <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType>, which will continue when any of the two tasks have completed.</span></span>
 
-## <a name="create-the-asynchronous-sum-page-sizes-method"></a><span data-ttu-id="56afc-137">建立異步總和頁面大小方法</span><span class="sxs-lookup"><span data-stu-id="56afc-137">Create the asynchronous sum page sizes method</span></span>
+## <a name="create-the-asynchronous-sum-page-sizes-method"></a><span data-ttu-id="1b8fd-137">建立異步總和頁面大小方法</span><span class="sxs-lookup"><span data-stu-id="1b8fd-137">Create the asynchronous sum page sizes method</span></span>
 
-<span data-ttu-id="56afc-138">在 `Main` 方法下方，新增 `SumPageSizesAsync` 方法：</span><span class="sxs-lookup"><span data-stu-id="56afc-138">Below the `Main` method, add the `SumPageSizesAsync` method:</span></span>
+<span data-ttu-id="1b8fd-138">在 `Main` 方法下方，新增 `SumPageSizesAsync` 方法：</span><span class="sxs-lookup"><span data-stu-id="1b8fd-138">Below the `Main` method, add the `SumPageSizesAsync` method:</span></span>
 
 ```csharp
 static async Task SumPageSizesAsync()
@@ -140,7 +140,7 @@ static async Task SumPageSizesAsync()
 }
 ```
 
-<span data-ttu-id="56afc-139">方法會從具現化和啟動開始 <xref:System.Diagnostics.Stopwatch> 。</span><span class="sxs-lookup"><span data-stu-id="56afc-139">The method starts by instantiating and starting a <xref:System.Diagnostics.Stopwatch>.</span></span> <span data-ttu-id="56afc-140">然後，它會在中的每個 URL 執行迴圈 `s_urlList` ，並呼叫 `ProcessUrlAsync` 。</span><span class="sxs-lookup"><span data-stu-id="56afc-140">It then loops through each URL in the `s_urlList` and calls `ProcessUrlAsync`.</span></span> <span data-ttu-id="56afc-141">在每個反復專案中， `s_cts.Token` 都會傳遞至方法，而程式碼會傳回 `ProcessUrlAsync` <xref:System.Threading.Tasks.Task%601> ，其中 `TResult` 是整數：</span><span class="sxs-lookup"><span data-stu-id="56afc-141">With each iteration, the `s_cts.Token` is passed into the `ProcessUrlAsync` method and the code returns a <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer:</span></span>
+<span data-ttu-id="1b8fd-139">方法會從具現化和啟動開始 <xref:System.Diagnostics.Stopwatch> 。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-139">The method starts by instantiating and starting a <xref:System.Diagnostics.Stopwatch>.</span></span> <span data-ttu-id="1b8fd-140">然後，它會在中的每個 URL 執行迴圈 `s_urlList` ，並呼叫 `ProcessUrlAsync` 。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-140">It then loops through each URL in the `s_urlList` and calls `ProcessUrlAsync`.</span></span> <span data-ttu-id="1b8fd-141">在每個反復專案中， `s_cts.Token` 都會傳遞至方法，而程式碼會傳回 `ProcessUrlAsync` <xref:System.Threading.Tasks.Task%601> ，其中 `TResult` 是整數：</span><span class="sxs-lookup"><span data-stu-id="1b8fd-141">With each iteration, the `s_cts.Token` is passed into the `ProcessUrlAsync` method and the code returns a <xref:System.Threading.Tasks.Task%601>, where `TResult` is an integer:</span></span>
 
 ```csharp
 int total = 0;
@@ -151,9 +151,9 @@ foreach (string url in s_urlList)
 }
 ```
 
-## <a name="add-process-method"></a><span data-ttu-id="56afc-142">新增處理方法</span><span class="sxs-lookup"><span data-stu-id="56afc-142">Add process method</span></span>
+## <a name="add-process-method"></a><span data-ttu-id="1b8fd-142">新增處理方法</span><span class="sxs-lookup"><span data-stu-id="1b8fd-142">Add process method</span></span>
 
-<span data-ttu-id="56afc-143">`ProcessUrlAsync`在方法下方新增下列方法 `SumPageSizesAsync` ：</span><span class="sxs-lookup"><span data-stu-id="56afc-143">Add the following `ProcessUrlAsync` method below the `SumPageSizesAsync` method:</span></span>
+<span data-ttu-id="1b8fd-143">`ProcessUrlAsync`在方法下方新增下列方法 `SumPageSizesAsync` ：</span><span class="sxs-lookup"><span data-stu-id="1b8fd-143">Add the following `ProcessUrlAsync` method below the `SumPageSizesAsync` method:</span></span>
 
 ```csharp
 static async Task<int> ProcessUrlAsync(string url, HttpClient client, CancellationToken token)
@@ -166,9 +166,9 @@ static async Task<int> ProcessUrlAsync(string url, HttpClient client, Cancellati
 }
 ```
 
-<span data-ttu-id="56afc-144">針對任何指定的 URL，方法會使用提供的實例，將 `client` 回應取得為 `byte[]` 。</span><span class="sxs-lookup"><span data-stu-id="56afc-144">For any given URL, the method will use the `client` instance provided to get the response as a `byte[]`.</span></span> <span data-ttu-id="56afc-145"><xref:System.Threading.CancellationToken>實例會傳遞至 <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="56afc-145">The <xref:System.Threading.CancellationToken> instance is passed into the <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> and <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="56afc-146">`token`用來註冊要求的取消。</span><span class="sxs-lookup"><span data-stu-id="56afc-146">The `token` is used to register for requested cancellation.</span></span> <span data-ttu-id="56afc-147">將 URL 和長度寫入主控台之後，會傳回長度。</span><span class="sxs-lookup"><span data-stu-id="56afc-147">The length is returned after the URL and length is written to the console.</span></span>
+<span data-ttu-id="1b8fd-144">針對任何指定的 URL，方法會使用提供的實例，將 `client` 回應取得為 `byte[]` 。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-144">For any given URL, the method will use the `client` instance provided to get the response as a `byte[]`.</span></span> <span data-ttu-id="1b8fd-145"><xref:System.Threading.CancellationToken>實例會傳遞至 <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-145">The <xref:System.Threading.CancellationToken> instance is passed into the <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> and <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="1b8fd-146">`token`用來註冊要求的取消。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-146">The `token` is used to register for requested cancellation.</span></span> <span data-ttu-id="1b8fd-147">將 URL 和長度寫入主控台之後，會傳回長度。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-147">The length is returned after the URL and length is written to the console.</span></span>
 
-### <a name="example-application-output"></a><span data-ttu-id="56afc-148">範例應用程式輸出</span><span class="sxs-lookup"><span data-stu-id="56afc-148">Example application output</span></span>
+### <a name="example-application-output"></a><span data-ttu-id="1b8fd-148">範例應用程式輸出</span><span class="sxs-lookup"><span data-stu-id="1b8fd-148">Example application output</span></span>
 
 ```console
 Application started.
@@ -187,19 +187,19 @@ ENTER key pressed: cancelling downloads.
 Application ending.
 ```
 
-## <a name="complete-example"></a><span data-ttu-id="56afc-149">完整範例</span><span class="sxs-lookup"><span data-stu-id="56afc-149">Complete example</span></span>
+## <a name="complete-example"></a><span data-ttu-id="1b8fd-149">完整範例</span><span class="sxs-lookup"><span data-stu-id="1b8fd-149">Complete example</span></span>
 
-<span data-ttu-id="56afc-150">下列程式碼是範例 *Program.cs* 檔的完整文字。</span><span class="sxs-lookup"><span data-stu-id="56afc-150">The following code is the complete text of the *Program.cs* file for the example.</span></span>
+<span data-ttu-id="1b8fd-150">下列程式碼是範例 *Program.cs* 檔的完整文字。</span><span class="sxs-lookup"><span data-stu-id="1b8fd-150">The following code is the complete text of the *Program.cs* file for the example.</span></span>
 
 :::code language="csharp" source="snippets/cancel-tasks/cancel-tasks/Program.cs":::
 
-## <a name="see-also"></a><span data-ttu-id="56afc-151">另請參閱</span><span class="sxs-lookup"><span data-stu-id="56afc-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b8fd-151">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1b8fd-151">See also</span></span>
 
 - <xref:System.Threading.CancellationToken>
 - <xref:System.Threading.CancellationTokenSource>
-- [<span data-ttu-id="56afc-152">使用 async 和 await 進行非同步程式設計 (c # ) </span><span class="sxs-lookup"><span data-stu-id="56afc-152">Asynchronous programming with async and await (C#)</span></span>](index.md)
+- [<span data-ttu-id="1b8fd-152">使用 async 和 await 進行非同步程式設計 (c # ) </span><span class="sxs-lookup"><span data-stu-id="1b8fd-152">Asynchronous programming with async and await (C#)</span></span>](index.md)
 
-## <a name="next-steps"></a><span data-ttu-id="56afc-153">後續步驟</span><span class="sxs-lookup"><span data-stu-id="56afc-153">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="1b8fd-153">後續步驟</span><span class="sxs-lookup"><span data-stu-id="1b8fd-153">Next steps</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="56afc-154">在一段時間後取消非同步工作 (C#)</span><span class="sxs-lookup"><span data-stu-id="56afc-154">Cancel async tasks after a period of time (C#)</span></span>](cancel-async-tasks-after-a-period-of-time.md)
+> [<span data-ttu-id="1b8fd-154">在一段時間後取消非同步工作 (C#)</span><span class="sxs-lookup"><span data-stu-id="1b8fd-154">Cancel async tasks after a period of time (C#)</span></span>](cancel-async-tasks-after-a-period-of-time.md)

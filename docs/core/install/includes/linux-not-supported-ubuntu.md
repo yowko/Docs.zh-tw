@@ -7,4 +7,4 @@ ms.lasthandoff: 06/09/2020
 ms.locfileid: "84602933"
 ---
 
-<span data-ttu-id="e7322-101">❌請注意，已不再支援此版本的 Ubuntu。</span><span class="sxs-lookup"><span data-stu-id="e7322-101">❌ Please note that this version of Ubuntu is no longer supported.</span></span>
+<span data-ttu-id="4699a-101">❌ 請注意，已不再支援此版本的 Ubuntu。</span><span class="sxs-lookup"><span data-stu-id="4699a-101">❌ Please note that this version of Ubuntu is no longer supported.</span></span>

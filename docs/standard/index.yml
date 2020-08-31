@@ -1,19 +1,19 @@
 ### YamlMime:Landing
 title: .NET 文件
-summary: 深入瞭解 .NET，這是一種開放原始碼開發人員平臺，可用於建立許多不同類型的應用程式。
+summary: 深入瞭解 .NET，這是一個開放原始碼開發人員平臺，可用於建立許多不同類型的應用程式。
 metadata:
   title: .NET 文件
-  description: 深入瞭解 .NET，這是一種開放原始碼開發人員平臺，可用於建立許多不同類型的應用程式。
+  description: 深入瞭解 .NET，這是一個開放原始碼開發人員平臺，可用於建立許多不同類型的應用程式。
   ms.topic: landing-page
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 37908d252d6dfcef92ce642f6f7c6f7e12f551f1
+  ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135811"
+  ms.lasthandoff: 08/28/2020
+  ms.locfileid: "89053208"
 landingContent:
-- title: 瞭解 .NET
+- title: 深入瞭解 .NET
   linkLists:
   - linkListType: download
     links:
@@ -53,13 +53,13 @@ landingContent:
     links:
     - text: 使用 C 序列化和還原序列化 JSON#
       url: serialization/system-text-json-how-to.md
-    - text: 從 Newtonsoft 遷移至 System.web. Json
+    - text: 從 Newtonsoft.Js遷移至 System.Text.Js開啟
       url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
     - text: 撰寫 JSON 序列化的自訂轉換器
       url: serialization/system-text-json-converters-how-to.md
   - linkListType: sample
     links:
-    - text: XML 序列化的範例
+    - text: XML 序列化範例
       url: serialization/examples-of-xml-serialization.md
 - title: 格式化和轉換日期、數位和字串
   linkLists:
@@ -73,13 +73,13 @@ landingContent:
       url: base-types/composite-formatting.md
     - text: 在各時區之間轉換時間
       url: datetime/converting-between-time-zones.md
-    - text: 修剪和移除字串中的字元
+    - text: 從字串中修剪和移除字元
       url: base-types/trimming.md
     - text: .NET 中的規則運算式
       url: base-types/regular-expressions.md
   - linkListType: how-to-guide
     links:
-    - text: 將字串轉換成 DateTime
+    - text: 將字串轉換為 DateTime
       url: base-types/parsing-datetime.md
     - text: 在數字開頭填補多個零
       url: base-types/how-to-pad-a-number-with-leading-zeros.md
@@ -97,7 +97,7 @@ landingContent:
       url: design-guidelines/index.md
   - linkListType: concept
     links:
-    - text: 命名慣例
+    - text: 命名規範
       url: design-guidelines/general-naming-conventions.md
     - text: 大小寫慣例
       url: design-guidelines/capitalization-conventions.md
@@ -125,9 +125,9 @@ landingContent:
       url: io/file-path-formats.md
   - linkListType: how-to-guide
     links:
-    - text: 將文字寫入檔案中
+    - text: 將文字寫入檔案
       url: io/how-to-write-text-to-a-file.md
-    - text: 讀取檔案中的文字
+    - text: 從檔案讀取文字
       url: io/how-to-read-text-from-a-file.md
     - text: 壓縮與解壓縮檔案
       url: io/how-to-compress-and-extract-files.md
@@ -141,6 +141,8 @@ landingContent:
       url: garbage-collection/fundamentals.md
     - text: 實作 Dispose 方法
       url: garbage-collection/implementing-dispose.md
+    - text: 實作 DisposeAsync 方法
+      url: garbage-collection/implementing-disposeasync.md
 - title: 深入瞭解平行程式設計
   linkLists:
   - linkListType: overview
@@ -159,5 +161,5 @@ landingContent:
     links:
     - text: 使用 Parallel.ForEach 寫入一個簡單的平行程式
       url: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
-    - text: 傳回工作的值
+    - text: 從工作傳回值
       url: parallel-programming/how-to-return-a-value-from-a-task.md

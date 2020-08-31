@@ -7,4 +7,4 @@ ms.lasthandoff: 06/09/2020
 ms.locfileid: "84603080"
 ---
 
-<span data-ttu-id="e0921-101">❌請注意，已不再支援這個版本的 Debian。</span><span class="sxs-lookup"><span data-stu-id="e0921-101">❌ Please note that this version of Debian is no longer supported.</span></span>
+<span data-ttu-id="9ec68-101">❌ 請注意，不再支援此版本的 Debian。</span><span class="sxs-lookup"><span data-stu-id="9ec68-101">❌ Please note that this version of Debian is no longer supported.</span></span>
