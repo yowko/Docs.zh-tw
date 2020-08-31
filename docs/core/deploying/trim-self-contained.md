@@ -4,12 +4,12 @@ description: 瞭解如何修剪獨立的應用程式，以縮減其大小。 .NE
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 47bccf25b6f6a1b65742bb5e3f5f299932659c3c
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 7a4731e2cbaa3835e6aa6ba558dfa8cd03828e01
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957549"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053103"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>修剪獨立式部署及可執行檔
 
@@ -21,7 +21,7 @@ Trim 獨立部署模型是獨立部署模型的特製化版本，已優化以減
 
 組建時間分析引擎會提供警告給程式碼模式的開發人員，這些模式是 problemmatic 來偵測需要的其他程式碼。 您可以使用屬性來標注程式碼，以告訴修剪器要包含的其他內容。 您可以使用 [來源](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md)產生器，將許多反映模式取代為組建階段程式碼。
 
-應用程式的修剪模式是使用設定進行設定 `TrimMode` 。 預設值為 `copyused` ，並將參考的元件與應用程式配套。 此 `link` 值會與 Blazor WebAssembly 應用程式搭配使用，並在元件中修剪未使用的程式碼。 Trim 分析警告會提供無法進行完整相依性分析的程式碼模式相關資訊。 預設會隱藏這些警告，並可將旗標設為來開啟這些警告 `SuppressTrimAnalysisWarnings` `false` 。 如需可用之修剪選項的詳細資訊，請參閱 [ILLinker 頁面](https://github.com/mono/linker/blob/master/docs/illink-options.md)。
+應用程式的修剪模式是使用設定進行設定 `TrimMode` 。 預設值為 `copyused` ，並將參考的元件與應用程式配套。 此 `link` 值會與 Blazor WebAssembly 應用程式搭配使用，並在元件中修剪未使用的程式碼。 Trim 分析警告會提供無法進行完整相依性分析的程式碼模式相關資訊。 預設會隱藏這些警告，並可將旗標設為來開啟這些警告 `SuppressTrimAnalysisWarnings` `false` 。 如需可用之修剪選項的詳細資訊，請參閱 [修剪選項](trimming-options.md)。
 
 > [!NOTE]
 > 修剪是 .NET Core 3.1、5.0 中的實驗性功能， _僅_ 適用于獨立發行的應用程式。

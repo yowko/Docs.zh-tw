@@ -19,11 +19,11 @@ sudo apt-get update; \
 ```
 
 > [!IMPORTANT]
-> 如果您收到類似 [**找不到封裝 dotnet-sdk-2.1**] 的錯誤訊息，請參閱[APT 疑難排解](#apt-troubleshooting)一節。
+> 如果您收到類似「 **找不到套件 dotnet-sdk-2.1**」的錯誤訊息，請參閱 [APT 疑難排解](#apt-troubleshooting) 一節。
 
 ### <a name="install-the-runtime"></a>安裝執行階段
 
-.NET Core 執行時間可讓您執行使用 .NET Core 所建立且未包含執行時間的應用程式。 下列命令會安裝 ASP.NET Core 執行時間，這是適用于 .NET Core 的最相容執行時間。 在您的終端機中，執行下列命令。
+.NET Core 執行時間可讓您執行未包含執行時間的 .NET Core 所建立的應用程式。 下列命令會安裝 ASP.NET Core 執行時間，這是 .NET Core 最相容的執行時間。 在您的終端機中執行下列命令。
 
 ```bash
 sudo apt-get update; \
@@ -33,9 +33,9 @@ sudo apt-get update; \
 ```
 
 > [!IMPORTANT]
-> 如果您收到類似 [**找不到套件 aspnetcore-執行時間-2.1**] 的錯誤訊息，請參閱[APT 疑難排解](#apt-troubleshooting)一節。
+> 如果您收到類似「 **找不到封裝 aspnetcore-runtime-2.1**」的錯誤訊息，請參閱 [APT 疑難排解](#apt-troubleshooting) 一節。
 
-除了 ASP.NET Core 執行時間之外，您還可以安裝不包含 ASP.NET Core 支援的 .NET Core 執行時間：在 `aspnetcore-runtime-2.1` 上述命令中以取代 `dotnet-runtime-2.1` 。
+除了 ASP.NET Core 執行時間之外，您還可以安裝不包含 ASP.NET Core 支援的 .NET Core 執行時間： `aspnetcore-runtime-2.1` 在上述命令中將取代為 `dotnet-runtime-2.1` 。
 
 ```bash
 sudo apt-get install -y dotnet-runtime-2.1

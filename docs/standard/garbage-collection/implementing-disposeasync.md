@@ -1,27 +1,27 @@
 ---
 title: 實作 DisposeAsync 方法
-description: ''
+description: 瞭解如何執行 DisposeAsync 和 DisposeAsyncCore 方法，以執行非同步資源清除。
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/02/2020
+ms.date: 08/25/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 0f6370d37703509681dd9fb818af8e7e2f3a1085
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 268cea7584040ad92e2da75e5e03112480cda93c
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608079"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053174"
 ---
 # <a name="implement-a-disposeasync-method"></a>實作 DisposeAsync 方法
 
 <xref:System.IAsyncDisposable?displayProperty=nameWithType>介面是在 c # 8.0 中引進。 <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>當您需要執行資源清除時，請執行方法，就像您在執行[Dispose 方法](implementing-dispose.md)時所做的一樣。 但是，其中一個主要差異在於，這項實行可進行非同步清除作業。 <xref:System.IAsyncDisposable.DisposeAsync> <xref:System.Threading.Tasks.ValueTask> 會傳回代表非同步處置作業的。
 
-一般來說，在實 <xref:System.IAsyncDisposable> 介面時，類別也會執行 <xref:System.IDisposable> 介面。 介面的良好執行模式 <xref:System.IAsyncDisposable> 是針對同步或非同步處置做好準備。 所有執行處置模式的指導方針都適用于非同步執行。 本文假設您已經熟悉如何 [執行 Dispose 方法](implementing-dispose.md)。
+典型的情況是在實 <xref:System.IAsyncDisposable> 介面時，類別也會執行 <xref:System.IDisposable> 介面。 介面的良好執行模式 <xref:System.IAsyncDisposable> 是針對同步或非同步處置做好準備。 所有執行處置模式的指導方針也適用于非同步執行。 本文假設您已經熟悉如何 [執行 Dispose 方法](implementing-dispose.md)。
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync ( # A1 和 DisposeAsyncCore ( # A3
 
@@ -30,17 +30,15 @@ ms.locfileid: "88608079"
 - 沒有 `public` <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> 參數的實作為。
 - 其簽章 `protected virtual ValueTask DisposeAsyncCore()` 為的方法：
 
-```csharp
-protected virtual ValueTask DisposeAsyncCore()
-{
-}
-```
-
-`DisposeAsyncCore()`方法 `virtual` 可讓衍生類別在其覆寫中定義額外的清除。
+  ```csharp
+  protected virtual ValueTask DisposeAsyncCore()
+  {
+  }
+  ```
 
 ### <a name="the-disposeasync-method"></a>DisposeAsync ( # A1 方法
 
-`public`無參數 `DisposeAsync()` 方法會以隱含方式在 `await using` 語句中呼叫，其用途是釋放未受管理的資源、執行一般清除，以及指出完成項（如果有的話）不需要執行。 釋放與受管理物件相關聯的記憶體一律是 [垃圾收集](index.md)行程的網域。 因此，它擁有標準實作：
+`public`無參數 `DisposeAsync()` 方法會以隱含方式在 `await using` 語句中呼叫，而其用途是釋放未受管理的資源、執行一般清除，以及指出完成項（如果有的話）不需要執行。 釋放與受管理物件相關聯的記憶體一律是 [垃圾收集](index.md)行程的網域。 因此，它擁有標準實作：
 
 ```csharp
 public async ValueTask DisposeAsync()
@@ -57,6 +55,13 @@ public async ValueTask DisposeAsync()
 
 > [!NOTE]
 > 相較于處置模式，非同步處置模式中的一個主要差異是，從多載 <xref:System.IAsyncDisposable.DisposeAsync> 方法的呼叫 `Dispose(bool)` 會被指定 `false` 為引數。 <xref:System.IDisposable.Dispose?displayProperty=nameWithType>不過，在執行方法時， `true` 會改為傳遞。 這有助於確保與同步處置模式的功能性相等，並進一步確保仍會叫用完成項程式碼路徑。 換句話說，此 `DisposeAsyncCore()` 方法會以非同步方式處置受控資源，因此您也不想要以同步方式處置它們。 因此，請呼叫， `Dispose(false)` 而不是 `Dispose(true)` 。
+
+### <a name="the-disposeasynccore-method"></a>DisposeAsyncCore ( # A1 方法
+
+`DisposeAsyncCore()`方法的目的是要執行 managed 資源的非同步清除，或對的串聯呼叫 `DisposeAsync()` 。 當子類別繼承實作為的基類時，它會封裝常見的非同步清除作業 <xref:System.IAsyncDisposable> 。 `DisposeAsyncCore()`方法 `virtual` 可讓衍生類別在其覆寫中定義額外的清除。
+
+> [!TIP]
+> 如果的實作為 <xref:System.IAsyncDisposable> `sealed` ，就 `DisposeAsyncCore()` 不需要方法，而非同步清除可以直接在方法中執行 <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> 。
 
 ## <a name="implement-the-async-dispose-pattern"></a>執行非同步處置模式
 

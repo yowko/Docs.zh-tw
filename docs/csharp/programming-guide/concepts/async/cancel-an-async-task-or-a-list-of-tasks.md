@@ -4,12 +4,12 @@ description: 瞭解如何使用解除標記將取消要求告知工作清單。
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 000b6a89a9240344508a5ae6b248572c8a2177dc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811479"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053089"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>取消 (c # ) 的工作清單
 
@@ -33,7 +33,7 @@ ms.locfileid: "88811479"
 
 ### <a name="create-example-application"></a>建立範例應用程式
 
-建立新的 .NET Core 主控台應用程式。 您可以使用 [ [dotnet 新主控台](../../../../core/tools/dotnet-new.md#console) ] 命令或從 [Visual Studio](/visualstudio/install/install-visual-studio)建立一個。 在您最愛的程式碼編輯器中開啟 *Program.cs* 檔案。
+建立新的 .NET Core 主控台應用程式。 您可以使用 [`dotnet new console`](../../../../core/tools/dotnet-new.md#console) 命令或從 [Visual Studio](/visualstudio/install/install-visual-studio)建立一個。 在您最愛的程式碼編輯器中開啟 *Program.cs* 檔案。
 
 ### <a name="replace-using-statements"></a>取代 using 語句
 

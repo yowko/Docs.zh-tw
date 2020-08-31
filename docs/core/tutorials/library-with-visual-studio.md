@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 595e93d8d8d22478c6770ddd4f70a0214653f5b9
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 45a44dcd73e1abcc8dfd75cd54da5a2310f027c4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187955"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118256"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>教學課程：使用 Visual Studio 建立 .NET Standard 程式庫
 
-在本教學課程中，您會建立包含單一字串處理方法的簡單類別庫。
+在本教學課程中，您會建立簡單的類別庫，其中包含單一字串處理方法。
 
-「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 部署呼叫您的程式庫。
+「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 執行呼叫您的程式庫。
 
-當您完成類別庫時，您可以將它散發為 NuGet 套件，或做為使用它的應用程式所配套的元件。
+當您完成類別庫時，可以將它發佈為 NuGet 套件，或作為與使用它之應用程式配套的元件。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -27,19 +27,19 @@ ms.locfileid: "88187955"
 
 ## <a name="create-a-solution"></a>建立方案
 
-一開始先建立一個空白的方案，將類別庫專案放入中。 Visual Studio 方案會當做一個或多個專案的容器。 您會在相同的方案中加入其他相關的專案。
+首先，建立空白的方案，將類別庫專案放置在中。 Visual Studio 方案可作為一或多個專案的容器。 您會將其他相關的專案新增至相同的方案。
 
-若要建立空白解決方案：
+若要建立空白的方案：
 
 1. 啟動 Visual Studio。
 
 2. 在 [開始] 視窗中，選擇 [ **建立新專案**]。
 
-3. 在 [ **建立新專案** ] 頁面的 [搜尋] 方塊中，輸入 [ **方案** ]。 選擇 [ **空白解決方案** ] 範本，然後選擇 [ **下一步]**。
+3. 在 [ **建立新專案** ] 頁面的 [搜尋] 方塊中，輸入 [ **方案** ]。 選擇 [ **空白方案** ] 範本，然後選擇 [ **下一步]**。
 
    ![Visual Studio 中的空白方案範本](media/library-with-visual-studio/blank-solution.png)
 
-4. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**ClassLibraryProjects** 。 接著，選擇 [建立]  。
+4. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入 **>classlibraryprojects** 。 接著，選擇 [建立]  。
 
 ## <a name="create-a-class-library-project"></a>建立類別庫專案
 
@@ -47,84 +47,84 @@ ms.locfileid: "88187955"
 
    1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入**  >  **新專案**]。
 
-   1. 在 [ **加入新專案** ] 頁面的 [搜尋] 方塊中，輸入 [連結 **庫** ]。 選擇 [語言] 清單中的 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [ **所有平臺** ]。 選擇 [ **類別庫] ( .NET Standard) ** ] 範本，然後選擇 **[下一步]**。
+   1. 在 [ **加入新的專案** ] 頁面上，于 [搜尋] 方塊中輸入 **library** 。 從 [語言] 清單中選擇 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [ **所有平臺** ]。 選擇 [ **類別庫] ( .NET Standard) ** 範本，然後選擇 **[下一步]**。
 
-   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibrary** 。 然後選擇 [ **建立**]。
+   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibrary** 。 然後，選擇 [ **建立**]。
 
-1. 請檢查並確定程式庫的目標是正確的 .NET Standard 版本。 以滑鼠右鍵按一下 **方案總管**中的 [程式庫] 專案，然後選取 [ **屬性**]。 [ **目標 Framework** ] 文字方塊會顯示專案的目標為 .NET Standard 2.0。
+1. 請檢查以確定程式庫的目標是正確的 .NET Standard 版本。 以滑鼠右鍵按一下 **方案總管**中的程式庫專案，然後選取 [ **屬性**]。 [ **目標 Framework** ] 文字方塊會顯示專案的目標為 .NET Standard 2.0。
 
    ![類別庫的專案屬性](./media/library-with-visual-studio/library-project-properties.png)
 
-1. 如果您使用的是 Visual Basic，請清除 [ **根命名空間** ] 文字方塊中的文字。
+1. 如果您是使用 Visual Basic，請清除 [ **根命名空間** ] 文字方塊中的文字。
 
    ![類別庫的專案屬性](./media/library-with-visual-studio/vb/library-project-properties.png)
 
-   針對每個專案，Visual Basic 會自動建立對應至專案名稱的命名空間。 在本教學課程中，您會使用程式碼檔案中的關鍵字來定義最上層命名空間 [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) 。
+   Visual Basic 會針對每個專案自動建立對應至專案名稱的命名空間。 在本教學課程中，您會使用程式碼檔案中的關鍵字來定義最上層命名空間 [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) 。
 
-1. 使用下列程式碼取代 *Class1.cs*  或 *Class1* 的程式碼視窗中的程式碼，並儲存檔案。 如果未顯示您想要使用的語言，請變更頁面頂端的 [語言選取器]。
+1. 以下列程式碼取代 *Class1.cs*  或 *Class1* 程式碼視窗中的程式碼，然後儲存檔案。 如果未顯示您想要使用的語言，請變更頁面頂端的語言選取器。
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibrary/Class1.cs":::
    :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibrary/Class1.vb":::
 
-   類別庫 `UtilityLibraries.StringLibrary` 包含名為的方法 `StartsWithUpper` 。 這個方法會傳回 <xref:System.Boolean> 值，指出目前的字串實例是否以大寫字元開頭。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
+   類別庫（class library） `UtilityLibraries.StringLibrary` 包含名為的方法 `StartsWithUpper` 。 這個方法會傳回 <xref:System.Boolean> 值，指出目前字串實例的開頭是否為大寫字元。 Unicode 標準會區別大寫和小寫字元。 如果是大寫字元，<xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 方法會傳回 `true`。
 
-   `StartsWithUpper` 會實作為 [擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md) ，讓您可以如同類別的成員一樣呼叫它 <xref:System.String> 。
+   `StartsWithUpper` 會實作為 [擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md) ，如此您就可以呼叫它，就如同它是類別的成員一樣 <xref:System.String> 。
 
-1. 在功能表列上，選取 [**組建**] [組建  >  **方案**] 以確認專案編譯無誤。
+1. 在功能表列上，選取 [**組建**  >  **組建方案**] 或按<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> ，確認專案編譯時沒有發生錯誤。
 
 ## <a name="add-a-console-app-to-the-solution"></a>將主控台應用程式新增至解決方案
 
-新增使用類別庫的主控台應用程式。 應用程式會提示使用者輸入字串，並報告字串是否以大寫字元開頭。
+加入使用類別庫的主控台應用程式。 應用程式會提示使用者輸入字串，並報告字串是否以大寫字元開頭。
 
 1. 將名為 "展示" 的新 .NET Core 主控台應用程式加入至方案。
 
    1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入**  >  **新專案**]。
 
-   1. 在 [ **加入新專案** ] 頁面的 [搜尋] 方塊中，輸入 **主控台** 。 選擇 [語言] 清單中的 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [ **所有平臺** ]。
+   1. 在 [ **新增專案** ] 頁面的 [搜尋] 方塊中，輸入 **主控台** 。 從 [語言] 清單中選擇 [ **c #** ] 或 [ **Visual Basic** ，然後從 [平臺] 清單中選擇 [ **所有平臺** ]。
 
-   1. 選擇 [ ** ( .Net Core) ] 範本的主控台應用程式 ** ，然後選擇 [ **下一步]**。
+   1. 選擇 ** ( .Net Core) 範本的主控台應用程式 ** ，然後選擇 [ **下一步]**。
 
-   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**展示**。 接著，選擇 [建立]  。
+   1. 在 [**設定您的新專案**] 頁面上，于 [**專案名稱**] 方塊中輸入**展示**。 接著，選擇 [建立]  。
 
-1. 在 *Program.cs* 或 *Program .Vb* 檔案的程式碼視窗中，將所有程式碼取代為下列程式碼。
+1. 在 *Program.cs* 或 .vb 檔案的 *程式* 代碼視窗中，以下列程式碼取代所有程式碼。
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
    :::code language="vb" source="./snippets/library-with-visual-studio/vb/ShowCase/Program.vb":::
 
-   該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。 當它大於或等於25時，程式碼就會清除主控台視窗，並向使用者顯示訊息。
+   該程式碼會使用 `row` 變數來維護寫入至主控台視窗的資料列數目計數。 只要超過或等於25，程式碼就會清除主控台視窗，並向使用者顯示訊息。
 
-   此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者在未輸入字串的情況下按 <kbd>Enter</kbd> 鍵，應用程式就會結束，而且主控台視窗會關閉。
+   此程式會提示使用者輸入字串。 它會指出該字串開頭是否為大寫字元。 如果使用者按下 <kbd>Enter</kbd> 鍵但未輸入字串，則應用程式會結束，且主控台視窗會關閉。
 
 ## <a name="add-a-project-reference"></a>新增專案參考
 
-一開始，新的主控台應用程式專案無法存取類別庫。 若要讓它能夠呼叫類別庫中的方法，請建立類別庫專案的專案參考。
+一開始，新的主控台應用程式專案沒有類別庫的存取權。 若要允許它呼叫類別庫中的方法，請建立類別庫專案的專案參考。
 
 1. 在**方案總管**中，以滑鼠右鍵按一下專案的 [相依性 `ShowCase` ] 節點，然後選取 [**加入專案參考** **]** 。
 
-   ![Visual Studio 中的 [新增參考] 內容功能表](media/library-with-visual-studio/add-reference-context-menu.png)
+   ![在 Visual Studio 中新增參考內容功能表](media/library-with-visual-studio/add-reference-context-menu.png)
 
 1. 在 [ **參考管理員** ] 對話方塊中，選取 [ **StringLibrary** ] 專案，然後選取 **[確定]**。
 
-   ![已選取 StringLibrary 的參考管理員對話方塊](media/library-with-visual-studio/manage-project-references.png)
+   ![已選取 StringLibrary 的 [參考管理員] 對話方塊](media/library-with-visual-studio/manage-project-references.png)
 
 ## <a name="run-the-app"></a>執行應用程式
 
 1. 在方案總管**** 中，以滑鼠右鍵按一下 **ShowCase** 專案，然後在內容功能表中選取 [設定為啟始專案]****。
 
-   ![Visual Studio 專案操作功能表來設定啟始專案](media/library-with-visual-studio/set-startup-project-context-menu.png)
+   ![用來設定啟始專案的 Visual Studio 專案內容功能表](media/library-with-visual-studio/set-startup-project-context-menu.png)
 
-1. 按<kbd>Ctrl</kbd> + <kbd>F5</kbd>以編譯並執行程式，而不進行任何調試。
+1. 按下<kbd>Ctrl</kbd> + <kbd>F5</kbd>以編譯並執行程式，而不需進行任何偵錯工具。
 
-   ![顯示調試按鈕的 Visual Studio 專案工具列](media/library-with-visual-studio/visual-studio-project-toolbar.png)
+   ![顯示 [調試] 按鈕 Visual Studio 專案工具列](media/library-with-visual-studio/visual-studio-project-toolbar.png)
 
-1. 輸入字串並按 <kbd>enter</kbd>鍵以嘗試程式，然後按 <kbd>enter</kbd> 結束。
+1. 輸入字串並按 <kbd>enter</kbd>鍵以嘗試程式，然後按 <kbd>enter</kbd> 鍵結束。
 
-   :::image type="content" source="media/library-with-visual-studio/run-showcase.png" alt-text="展示執行中的主控台視窗":::
+   :::image type="content" source="media/library-with-visual-studio/run-showcase.png" alt-text="具有正在執行展示的主控台視窗":::
 
 ## <a name="additional-resources"></a>其他資源
 
 * [使用 .NET Core CLI 開發程式庫](libraries.md)
-* [.NET Standard 版本和支援的平臺](../../standard/net-standard.md)。
+* [.NET Standard 支援的版本和平臺](../../standard/net-standard.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -138,7 +138,7 @@ ms.locfileid: "88187955"
 > [!div class="nextstepaction"]
 > [使用 Visual Studio 建立及發行套件](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
 
-或瞭解如何發佈主控台應用程式。 如果您從在本教學課程中建立的解決方案發佈主控台應用程式，類別庫會將它當做 *.dll* 檔案。
+或瞭解如何發佈主控台應用程式。 如果您從本教學課程所建立的方案發佈主控台應用程式，類別庫會將它當作 *.dll* 檔來使用。
 
 > [!div class="nextstepaction"]
-> [使用 Visual Studio 發行 .NET Core 主控台應用程式](publishing-with-visual-studio.md)
+> [使用 Visual Studio 發佈 .NET Core 主控台應用程式](publishing-with-visual-studio.md)

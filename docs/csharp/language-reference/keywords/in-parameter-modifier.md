@@ -1,15 +1,16 @@
 ---
+description: in 參數修飾詞 - C# 參考
 title: in 參數修飾詞 - C# 參考
 ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 20956f9e25b6830a8876824a4c9dad1dbc4c4f3e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 613be9248e6ce9b974bcab1b59abd30469e9e180
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249366"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118400"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 
@@ -116,16 +117,16 @@ Method(in i); // passed by readonly reference, explicitly using `in`
   
 - 使用 [async](async.md) 修飾詞定義的 async 方法。  
 - 迭代器方法，其包括 [yield return](yield.md) 或 `yield break` 陳述式。
-- 擴充方法的第一個參數不能具有修飾符`in`，除非該參數是結構。
-- 擴充方法的第一個參數，其中該參數是泛型型別（即使該類型被約束為結構）。
+- 擴充方法的第一個引數不能有 `in` 修飾詞，除非該引數是結構。
+- 擴充方法的第一個引數，也就是該引數是泛型型別 (即使該型別限制為結構時也一樣 ) 
 
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [方法參數](method-parameters.md)
-- [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)
+- [撰寫安全有效率的程式碼](../../write-safe-efficient-code.md)

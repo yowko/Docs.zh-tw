@@ -2,18 +2,18 @@
 title: 使用 Visual Studio Code 來對 .NET Core 主控台應用程式進行偵錯工具
 description: 瞭解如何使用 Visual Studio Code 來進行 .NET Core 主控台應用程式的偵錯工具。
 ms.date: 05/26/2020
-ms.openlocfilehash: e2be9324a77d0360247a225bbd93224d379bda0d
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867577"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118295"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 對 .NET Core 主控台應用程式進行偵錯工具
 
 本教學課程介紹可在 Visual Studio Code 中使用的偵錯工具，以使用 .NET Core 應用程式。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 本教學課程適用于您 [使用 Visual Studio Code 建立 .Net Core 主控台應用程式](with-visual-studio-code.md)中所建立的主控台應用程式。
 
@@ -35,7 +35,7 @@ ms.locfileid: "88867577"
 
 1. 開啟 *Program.cs* 檔案。
 
-1. 在程式碼視窗的左邊界中按一下，在顯示名稱、日期和時間的行上設定 *中斷點* 。 左邊界是行號的左邊。 設定中斷點的其他方式是按<kbd>F9</kbd> ，或在**Run**  >  選取程式程式碼時，從功能表中選取 [執行**切換中斷點**]。
+1. 在程式碼視窗的左邊界中按一下，在顯示名稱、日期和時間的行上設定 *中斷點* 。 左邊界是行號的左邊。 設定中斷點的其他方式是按<kbd>F9</kbd> ，或在**Run**  >  選取程式程式碼時，從功能表中選擇 [執行**切換中斷點**]。
 
    Visual Studio Code 表示在左邊界中顯示紅點來設定中斷點的行。
 
@@ -69,7 +69,7 @@ ms.locfileid: "88867577"
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="在 Visual Studio Code 中開啟 [偵錯] 索引標籤":::
 
-1. 選取窗格頂端的綠色箭號，在 [ **.Net Core 啟動] (主控台) **旁。 在「偵測模式」中啟動程式的另一種方式是從功能表中選擇 [**執行**  >  **開始調試**程式]。
+1. 選取窗格頂端的綠色箭號，在 [ **.Net Core 啟動] (主控台) **旁。 在偵測模式下啟動程式的其他方式是按<kbd>F5</kbd> ，或從功能表中選擇 [**執行**  >  **開始調試**程式]。
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="開始調試":::
 
@@ -133,7 +133,7 @@ ms.locfileid: "88867577"
 
 1. 在 [ **終端** 機] 索引標籤中，當系統提示您輸入名稱時，請按 <kbd>enter</kbd> 鍵。
 
-   因為您 (指定的條件 `name` 是 `null` 或已 <xref:System.String.Empty?displayProperty=nameWithType> 滿足) ，所以程式執行會在到達中斷點時，以及 `Console.WriteLine` 方法執行之前停止。
+   因為您 (指定的條件 `name` 是 `null` 或 <xref:System.String.Empty?displayProperty=nameWithType>) 已滿足，所以程式執行會在到達中斷點時，以及 `Console.WriteLine` 方法執行之前停止。
 
    [ **變數** ] 視窗會顯示變數的值 `name` 為 `""` 、或 <xref:System.String.Empty?displayProperty=nameWithType> 。
 

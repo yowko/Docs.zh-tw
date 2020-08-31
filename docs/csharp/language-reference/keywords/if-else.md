@@ -1,4 +1,5 @@
 ---
+description: if-else - C# 參考
 title: if-else - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 61b60674d3b5de4649a52d2a165265ae0a27e0be
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: e2de84807a049bd47ea277db9fb010d0c2e4857d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738856"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118503"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# 參考)
 
@@ -71,7 +72,7 @@ if (condition)
 
 ## <a name="example"></a>範例
 
-也可以將`if`語句嵌套在 else 塊中,如下部分代碼所示。 此範例將 `if` 以巢狀方式置於兩個 else 區塊和一個 then 區塊內部。 在每個區塊中，註解指定哪些條件為 true 或 false。
+您也可以在 `if` else 區塊內嵌套語句，如下列部分程式碼所示。 此範例將 `if` 以巢狀方式置於兩個 else 區塊和一個 then 區塊內部。 在每個區塊中，註解指定哪些條件為 true 或 false。
 
 [!code-csharp[csrefKeywordsSelection#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#5)]
 
@@ -81,7 +82,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-就像在 else 區塊或 then 區塊中的陳述式可以是任何有效的陳述式一樣，您可以為這個條件使用任何有效的布林運算式。 可以使用[邏輯運算符](../operators/boolean-logical-operators.md)(`!``&&`如`&``|``^``||`、、、、 和 )來制定複合條件。 下列程式碼顯示範例。
+就像在 else 區塊或 then 區塊中的陳述式可以是任何有效的陳述式一樣，您可以為這個條件使用任何有效的布林運算式。 您可以使用 [邏輯運算子](../operators/boolean-logical-operators.md) （例如 `!` 、 `&&` 、 `||` 、 `&` 、 `|` 和） `^` 來產生複合條件。 下列程式碼顯示範例。
 
 ```csharp
 // NOT
@@ -136,9 +137,9 @@ if (!(m >= n || m >= p))
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 編程指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
-- [?: 管理員](../operators/conditional-operator.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
+- [？：運算子](../operators/conditional-operator.md)
 - [if-else 陳述式 (C++)](/cpp/cpp/if-else-statement-cpp)
 - [switch](switch.md)

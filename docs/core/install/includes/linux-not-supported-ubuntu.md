@@ -7,4 +7,4 @@ ms.lasthandoff: 06/09/2020
 ms.locfileid: "84602933"
 ---
 
-❌請注意，已不再支援此版本的 Ubuntu。
+❌ 請注意，已不再支援此版本的 Ubuntu。

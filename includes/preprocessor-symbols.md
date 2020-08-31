@@ -7,7 +7,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74838206"
 ---
-| 目標 Framework | Symbols |
+| 目標 Framework | 符號 |
 | ------------------| ------- |
 | .NET Framework    | `NETFRAMEWORK`, `NET20`, `NET35`, `NET40`, `NET45`, `NET451`, `NET452`, `NET46`, `NET461`, `NET462`, `NET47`, `NET471`, `NET472`, `NET48` |
 | .NET Standard     | `NETSTANDARD`, `NETSTANDARD1_0`, `NETSTANDARD1_1`, `NETSTANDARD1_2`, `NETSTANDARD1_3`, `NETSTANDARD1_4`, `NETSTANDARD1_5`, `NETSTANDARD1_6`, `NETSTANDARD2_0`, `NETSTANDARD2_1` |

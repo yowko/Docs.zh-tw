@@ -1,4 +1,5 @@
 ---
+description: new 運算子 - C# 參考
 title: new 運算子 - C# 參考
 ms.date: 06/25/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 42128cf23fe2410bf33bb40131843325939646de
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 88ec929317d4e6c6651233c1a1aa0ce8a8cce611
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916766"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118269"
 ---
 # <a name="new-operator-c-reference"></a>new 運算子 (C# 參考)
 
@@ -49,9 +50,9 @@ ms.locfileid: "87916766"
 
 ## <a name="destruction-of-type-instances"></a>型別執行個體的解構
 
-您不需要終結先前建立的型別執行個體。 參考和實值型別的執行個體都會自動終結。 實值型別的執行個體會在內容包含它們時立即終結。 在移除最後一個參考之後，[垃圾收集](../../../standard/garbage-collection/index.md)行程會在未指定的時間內終結參考型別的實例。
+您不需要終結先前建立的型別執行個體。 參考和實值型別的執行個體都會自動終結。 實值型別的執行個體會在內容包含它們時立即終結。 在移除參考型別的最後一個參考之後，垃圾收集行程會將這些實例被 [垃圾收集](../../../standard/garbage-collection/index.md) 行程終結。
 
-對於包含非受控資源的類型實例（例如，檔案控制代碼），建議使用具決定性的清除，以確保其所包含的資源能儘快釋放。 如需詳細資訊，請參閱 <xref:System.IDisposable?displayProperty=nameWithType> API 參考和 [using 陳述式](../keywords/using-statement.md)一文。
+針對包含非受控資源的類型實例（例如，檔案控制代碼），建議採用具決定性的清除，以確保其所包含的資源會儘快釋出。 如需詳細資訊，請參閱 <xref:System.IDisposable?displayProperty=nameWithType> API 參考和 [using 陳述式](../keywords/using-statement.md)一文。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
