@@ -1,4 +1,5 @@
 ---
+description: -unsafe (C# 編譯器選項)
 title: -unsafe (C# 編譯器選項)
 ms.date: 04/25/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f6d94dd25a020d96430746c4b5e7aefd0f679da
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "65877984"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140837"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (C# 編譯器選項)
 
@@ -58,5 +59,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](index.md)
+- [C # 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

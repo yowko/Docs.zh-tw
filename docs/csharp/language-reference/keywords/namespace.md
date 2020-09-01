@@ -1,4 +1,5 @@
 ---
+description: namespace 關鍵字 - C# 參考
 title: namespace 關鍵字 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6cfd1c3d37cbdef1f0dd72ddca85ce91f2e183b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625796"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139576"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# 參考)
 
@@ -29,13 +30,13 @@ ms.locfileid: "77625796"
 
 - [class](class.md)
 
-- [介面](interface.md)
+- [interface](interface.md)
 
-- [struct](../builtin-types/struct.md)
+- [結構](../builtin-types/struct.md)
 
 - [枚舉](../builtin-types/enum.md)
 
-- [委託](../builtin-types/reference-types.md#the-delegate-type)
+- [delegate](../builtin-types/reference-types.md#the-delegate-type)
 
 無論是否在 C# 來源檔案中明確宣告命名空間，編譯器都會加入預設的命名空間。 這個未命名的命名空間，有時候是指全域命名空間，會出現在每個檔案中。 全域命名空間中的任何識別項都可用於具名命名空間中。
 
@@ -57,7 +58,7 @@ ms.locfileid: "77625796"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
+- [C# 參考資料](../index.md)
 - [C# 關鍵字](index.md)
 - [使用](using-directive.md)
 - [使用靜態](using-static.md)

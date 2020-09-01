@@ -1,4 +1,5 @@
 ---
+description: let 子句 - C# 參考
 title: let 子句 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: a6eee9a23fa28b78343e6479106eaa24ecf4caa6
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 3767b9745cccd9802374a8100de19f286c9b55ea
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795361"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139589"
 ---
 # <a name="let-clause-c-reference"></a>let 子句 (C# 參考)
 
@@ -32,7 +33,7 @@ ms.locfileid: "82795361"
 ## <a name="see-also"></a>另請參閱
 
 - [C # 參考](../index.md)
-- [查詢關鍵字（LINQ）](query-keywords.md)
+- [LINQ)  (查詢關鍵字 ](query-keywords.md)
 - [C# 中的 LINQ](../../linq/index.md)
-- [語言整合式查詢（LINQ）](../../programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)
 - [處理查詢運算式中的例外狀況](../../linq/handle-exceptions-in-query-expressions.md)

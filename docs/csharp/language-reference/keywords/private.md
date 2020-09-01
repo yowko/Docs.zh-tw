@@ -1,4 +1,5 @@
 ---
+description: private 關鍵字 - C# 參考
 title: private 關鍵字 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-ms.openlocfilehash: a13e9ef18b0f6452c3ff1497dc97110bc21c433d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6f40712fd2cca6d7b1f64760f1c6c5dd5c71370
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715204"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139394"
 ---
 # <a name="private-c-reference"></a>private (C# 參考)
 
 `private` 關鍵字是成員存取修飾詞。
 
-> 此頁面涵蓋 `private` 存取。 關鍵字`private`也是訪問修改器的一[`private protected`](./private-protected.md)部分。
+> 此頁面涵蓋 `private` 存取。 `private`關鍵字也是存取修飾詞的一部分 [`private protected`](./private-protected.md) 。
 
 私用存取是最嚴格的存取層級。 私用成員只能在宣告它們的類別主體或結構主體內存取，如本範例所示：
 
@@ -48,12 +49,12 @@ class Employee
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [存取修飾詞](access-modifiers.md)
-- [協助工具級別](accessibility-levels.md)
+- [協助工具層級](accessibility-levels.md)
 - [修飾詞](index.md)
 - [public](public.md)
-- [保護](protected.md)
-- [內部](internal.md)
+- [protected](protected.md)
+- [internal](internal.md)

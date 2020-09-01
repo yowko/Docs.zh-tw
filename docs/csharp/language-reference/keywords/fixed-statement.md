@@ -1,4 +1,5 @@
 ---
+description: fixed 陳述式 - C# 參考
 title: fixed 陳述式 - C# 參考
 ms.date: 05/10/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: d743daca2fa779e300c7e8ab430b1ffff10b434c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 05505916ab3837d2c433ec420d7928a8ee883fa8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401910"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139719"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 陳述式 (C# 參考)
 
@@ -62,7 +63,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-您可以配置堆疊上的記憶體，此處不受記憶體回收限制，因此不需要釘選。 若要這麼做，請使用[ `stackalloc` 運算式](../operators/stackalloc.md)。
+您可以配置堆疊上的記憶體，此處不受記憶體回收限制，因此不需要釘選。 若要這樣做，請使用[ `stackalloc` 運算式](../operators/stackalloc.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -73,6 +74,6 @@ fixed (byte* ps = srcarray, pd = dstarray)
 - [C # 參考](../index.md)
 - [C # 程式設計指南](../../programming-guide/index.md)
 - [C # 關鍵字](index.md)
-- [不安全](unsafe.md)
+- [安全](unsafe.md)
 - [指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [固定大小緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
