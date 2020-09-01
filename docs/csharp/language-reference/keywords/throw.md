@@ -1,4 +1,5 @@
 ---
+description: throw - C# 參考
 title: throw - C# 參考
 ms.date: 03/02/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: 7ed84e04dae54283e4b5f03be0600c4dbf95b4b4
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 4cad4810b89f976f92ce576917feb2398acce636
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063116"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142033"
 ---
 # <a name="throw-c-reference"></a>throw (C# 參考)
 
@@ -47,7 +48,7 @@ throw [e];
 
 ## <a name="the-throw-expression"></a>`throw` 運算式
 
-從 C# 7.0 開始，`throw` 可以用作運算式和陳述式。 這可在先前不支援的內容中擲回例外狀況。 這些包括：
+從 C# 7.0 開始，`throw` 可以用作運算式和陳述式。 這可在先前不支援的內容中擲回例外狀況。 其中包含：
 
 - [條件運算子](../operators/conditional-operator.md)。 如果將空字串陣列傳遞給方法，則下列範例會使用 `throw` 運算式來擲回 <xref:System.ArgumentException>。 在 C# 7.0 之前，這個邏輯必須出現在 `if`/`else` 陳述式中。
 

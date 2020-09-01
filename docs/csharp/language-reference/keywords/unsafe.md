@@ -1,4 +1,5 @@
 ---
+description: unsafe 關鍵字 - C# 參考
 title: unsafe 關鍵字 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: ef98809eae0329c028dfb318c4a437aae4736db1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e047a4cff77877862c5cbbb5e49eb1a75b42499
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712984"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141955"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (C# 參考)
 
@@ -42,7 +43,7 @@ unsafe
 }
 ```
 
-要編譯不安全的代碼，必須指定[`-unsafe`](../compiler-options/unsafe-compiler-option.md)編譯器選項。 Common Language Runtime 不會驗證不安全的程式碼。
+若要編譯不安全的程式碼，您必須指定 [`-unsafe`](../compiler-options/unsafe-compiler-option.md) 編譯器選項。 Common Language Runtime 不會驗證不安全的程式碼。
 
 ## <a name="example"></a>範例
 
@@ -54,9 +55,9 @@ unsafe
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [fixed 陳述式](fixed-statement.md)
-- [Unsafe 程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)
+- [不安全的程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)
 - [固定大小緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

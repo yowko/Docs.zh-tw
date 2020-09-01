@@ -1,48 +1,48 @@
 ---
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
-description: 瞭解如何使用 .NET Core 2.1 之後提供的 IHttpClientFactory 來建立`HttpClient`實例，讓您輕鬆地在應用程式中使用它。
-ms.date: 03/03/2020
-ms.openlocfilehash: ade26208a931faa456c8e267def2caef7a3f32de
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+description: 瞭解如何使用 .NET Core 2.1 之後提供的 IHttpClientFactory 來建立 `HttpClient` 實例，讓您輕鬆地在應用程式中使用。
+ms.date: 08/31/2020
+ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507295"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271824"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
-<xref:System.Net.Http.IHttpClientFactory>是由`DefaultHttpClientFactory`.net Core 2.1 開始提供的合約，可用於建立<xref:System.Net.Http.HttpClient>要在您的應用程式中使用的實例。
+<xref:System.Net.Http.IHttpClientFactory> 是 `DefaultHttpClientFactory` 實作為固定 factory （自 .Net Core 2.1 起提供）的合約，可用來建立 <xref:System.Net.Http.HttpClient> 要在應用程式中使用的實例。
 
 ## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>.NET Core 中原始 HttpClient 類別的問題
 
-您可以輕鬆地使用原始<xref:System.Net.Http.HttpClient>和知名的類別，但是在某些情況下，許多開發人員並不會正確地使用它。
+您 <xref:System.Net.Http.HttpClient> 可以輕鬆地使用原始和知名的類別，但在某些情況下，許多開發人員都沒有正確使用它。
 
-雖然這個類別會`IDisposable`執行`using` ，但不建議在語句內宣告並具現化， `HttpClient`因為當物件被處置時，不會立即釋放基礎通訊端，這可能會導致_通訊端耗盡_的問題。 如需有關此問題的詳細資訊，請參閱[使用 HttpClient 錯誤](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)的 blog 文章，並不穩定您的軟體。
+雖然此類別 `IDisposable` 會在語句中執行、宣告和具現化，但不建議您這樣做， `using` 因為當 `HttpClient` 物件被處置時，不會立即釋放基礎通訊端，這可能會導致 _通訊端耗盡_ 問題。 如需有關此問題的詳細資訊，請參閱 [使用 HttpClient 錯誤的 blog 文章，並不穩定您的軟體](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/)。
 
-因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](../../../csharp/tutorials/console-webapiclient.md)中所述。 對於短期的主控台應用程式而言，這可能是很好的解決方案，或一天執行幾次的類似。
+因此，您應該將 `HttpClient` 具現化一次，然後在整個應用程式生命週期中重複使用。 為每個要求具現化 `HttpClient` 類別將會在負載過重時耗盡可用的通訊端數目。 該問題會導致 `SocketException` 錯誤。 解決該問題的可能方法為建立 `HttpClient` 物件做為單一物件或靜態物件，如 [Microsoft 關於 HttpClient 用法的文章](../../../csharp/tutorials/console-webapiclient.md)中所述。 這是適用于短期的主控台應用程式或類似的解決方案，其會在一天內執行數次。
 
-開發人員執行的另一個問題是`HttpClient`在長時間執行的進程中使用的共用實例。 在 HttpClient 具現化為單一或靜態物件的情況下，它無法處理 DNS 變更，如此 dotnet/執行時間 GitHub 存放庫[問題](https://github.com/dotnet/runtime/issues/18348)中所述。
+開發人員遇到的另一個問題，就是在長時間執行的進程中使用的共用實例 `HttpClient` 。 在 HttpClient 具現化為單一或靜態物件的情況下，它無法處理 DNS 變更，如此 dotnet/runtime GitHub 存放庫的 [問題](https://github.com/dotnet/runtime/issues/18348) 所述。
 
-不過，此問題並不是`HttpClient`因為每個 se，而是使用[HttpClient 的預設](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)函式，因為它會建立的<xref:System.Net.Http.HttpMessageHandler>新實體實例，這是具有*通訊端耗盡*和 DNS 變更的問題。
+不過，這個問題並不是 `HttpClient` 每個 se 都有問題，而是使用 [預設的 HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)函式，因為它會建立一個新的具體實例 <xref:System.Net.Http.HttpMessageHandler> ，也就是有 *通訊端耗盡* 和 DNS 變更上述問題的實例。
 
-為了解決上述問題並讓`HttpClient`實例可供管理，.net Core 2.1 引進了<xref:System.Net.Http.IHttpClientFactory>介面，可用來透過相依性插入（DI `HttpClient` ）在應用程式中設定和建立實例。 它也提供 Polly 為基礎中介軟體的延伸模組，以利用 HttpClient 中的委派處理常式。
+為了解決上述問題，並讓實例可供 `HttpClient` 管理，.Net Core 2.1 引進了 <xref:System.Net.Http.IHttpClientFactory> 介面，可透過相依性 `HttpClient` 插入 (DI) ，在應用程式中設定和建立實例。 它也提供 Polly 型中介軟體的延伸模組，以利用 HttpClient 中委派的處理常式。
 
-[Polly](http://www.thepollyproject.org/)是暫時性錯誤處理程式庫，可協助開發人員以流暢且安全線程的方式使用一些預先定義的原則，來為應用程式新增復原功能。
+[Polly](http://www.thepollyproject.org/) 是暫時性錯誤處理程式庫，可協助開發人員以流暢且安全線程的方式使用一些預先定義的原則，來為應用程式新增復原功能。
 
 ## <a name="benefits-of-using-ihttpclientfactory"></a>使用 IHttpClientFactory 的優點
 
-目前的執行<xref:System.Net.Http.IHttpClientFactory>（也就是<xref:System.Net.Http.IHttpMessageHandlerFactory>）會提供下列優點：
+目前執行的 <xref:System.Net.Http.IHttpClientFactory> 也會 <xref:System.Net.Http.IHttpMessageHandlerFactory> 提供下列優點：
 
-- 提供用來命名和設定邏輯`HttpClient`物件的中央位置。 例如，您可以設定一個已預先設定為存取特定微服務的用戶端 (服務代理程式)。
-- 藉由委派中`HttpClient`的處理常式並執行以 Polly 為基礎的中介軟體，來編寫外寄中介軟體的概念，以利用 Polly 的復原原則。
-- `HttpClient` 已經有委派可針對傳出 HTTP 要求連結在一起之處理常式的概念。 您可以將 HTTP 用戶端註冊到處理站，而且您可以使用 Polly 處理常式，將 Polly 原則用於重試、斷路器等等。
-- 管理的存留期<xref:System.Net.Http.HttpMessageHandler> ，以避免所提及的問題/在自行管理`HttpClient`生命週期時可能發生的問題。
+- 提供命名和設定邏輯物件的集中位置 `HttpClient` 。 例如，您可以設定一個已預先設定為存取特定微服務的用戶端 (服務代理程式)。
+- 透過在中委派處理常式 `HttpClient` ，並執行以 Polly 為基礎的中介軟體，以利用 Polly 的原則來復原，以編寫傳出中介軟體的概念。
+- `HttpClient` 已經有委派可針對傳出 HTTP 要求連結在一起之處理常式的概念。 您可以將 HTTP 用戶端註冊至 factory，而且可以使用 Polly 處理常式來使用 Polly 原則來重試、CircuitBreakers 等等。
+- 管理的存留期， <xref:System.Net.Http.HttpMessageHandler> 以避免在自行管理存留期時可能發生的問題/問題 `HttpClient` 。
 
 > [!TIP]
-> DI `HttpClient`所插入的實例可以安全地處置，因為相關聯`HttpMessageHandler`的是由處理站所管理。 事實上，插入`HttpClient`的實例的*範圍*是從 DI 觀點來看。
+> `HttpClient`DI 插入的實例可以安全地處置，因為相關聯的 `HttpMessageHandler` 是由 factory 管理。 事實上，插入 `HttpClient` 的實例的 *範圍* 是從 DI 的觀點來看。
 
 > [!NOTE]
-> （）的執行會緊密地系結至`Microsoft.Extensions.DependencyInjection` NuGet 套件中的 DI 實作為關聯。`DefaultHttpClientFactory` `IHttpClientFactory` 如需使用其他 DI 容器的詳細資訊，請參閱此[GitHub 討論](https://github.com/dotnet/extensions/issues/1345)。
+> `IHttpClientFactory` () 的執行 `DefaultHttpClientFactory` 會緊密地系結至 NuGet 套件中的 DI 實作為 `Microsoft.Extensions.DependencyInjection` 。 如需使用其他 DI 容器的詳細資訊，請參閱此 [GitHub 討論](https://github.com/dotnet/extensions/issues/1345)。
 
 ## <a name="multiple-ways-to-use-ihttpclientfactory"></a>使用 IHttpClientFactory 的多種方式
 
@@ -53,21 +53,21 @@ ms.locfileid: "82507295"
 - 使用具型別用戶端
 - 使用產生的用戶端
 
-為了簡潔起見，本指南說明最具結構化的使用`IHttpClientFactory`方式，也就是使用型別用戶端（服務代理程式模式）。 不過，所有選項都已記載，而且目前已列在本文中，[涵蓋`IHttpClientFactory`使用](/aspnet/core/fundamentals/http-requests#consumption-patterns)方式。
+為了簡潔起見，本指南說明最具結構化的使用方式 `IHttpClientFactory` ，也就是使用具型別用戶端 (Service Agent 模式) 。 不過，所有選項都記載于本文中，並且目前列在 [涵蓋 `IHttpClientFactory` 使用](/aspnet/core/fundamentals/http-requests#consumption-patterns)方式的本文中。
 
-## <a name="how-to-use-typed-clients-with-ihttpclientfactory"></a>如何搭配 IHttpClientFactory 使用具類型的用戶端
+## <a name="how-to-use-typed-clients-with-ihttpclientfactory"></a>如何搭配使用具類型的用戶端與 IHttpClientFactory
 
-那麼，什麼是「具型別用戶端」？ 這只`HttpClient`是針對某些特定用途預先設定的。 此設定可以包含特定的值，例如基礎伺服器、HTTP 標頭或時間輸出。
+那麼，什麼是「具型別用戶端」？ 這只是 `HttpClient` 針對某些特定用途預先設定的。 這種設定可以包含特定值，例如基礎伺服器、HTTP 標頭或超時時間。
 
 下圖顯示具型別用戶端如何搭配 `IHttpClientFactory` 使用：
 
-![顯示型別用戶端如何搭配 IHttpClientFactory 使用的圖表。](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
+![顯示如何搭配使用具型別用戶端與 IHttpClientFactory 的圖表。](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
-**圖 8-4**。 搭配`IHttpClientFactory`具型別用戶端類別使用。
+**圖 8-4**。 搭配 `IHttpClientFactory` 具型別用戶端類別使用。
 
-在上圖中， `ClientService` （由控制器或用戶端程式代碼使用）會使用`HttpClient`已註冊`IHttpClientFactory`的所建立的。 這個 factory 會將`HttpMessageHandler`從集區指派至`HttpClient`。 使用`HttpClient`擴充方法`IHttpClientFactory` <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*>在 DI 容器中註冊時，可以使用 Polly 的原則來設定。
+在上圖中， `ClientService` 控制器或用戶端程式代碼所使用的 () 使用 `HttpClient` 已註冊的所建立的 `IHttpClientFactory` 。 此 factory 會將 `HttpMessageHandler` 從集區指派給 `HttpClient` 。 `HttpClient` `IHttpClientFactory` 使用擴充方法在 DI 容器中註冊時，可以使用 Polly 的原則來設定 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> 。
 
-若要設定上述結構，請<xref:System.Net.Http.IHttpClientFactory>安裝包含之`Microsoft.Extensions.Http` <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*>擴充方法的 NuGet 套件，以在您的應用<xref:Microsoft.Extensions.DependencyInjection.IServiceCollection>程式中新增。 這個擴充方法會註冊內部`DefaultHttpClientFactory`類別，以作為介面`IHttpClientFactory`的 singleton 使用。 它為 <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> 定義暫時性設定。 此訊息處理常式 (<xref:System.Net.Http.HttpMessageHandler> 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
+若要設定上述結構，請 <xref:System.Net.Http.IHttpClientFactory> 安裝 `Microsoft.Extensions.Http` 包含擴充方法的 NuGet 套件，以新增您的應用程式 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> 。 這個擴充方法會註冊內部 `DefaultHttpClientFactory` 類別，作為介面的 singleton `IHttpClientFactory` 。 它為 <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> 定義暫時性設定。 此訊息處理常式 (<xref:System.Net.Http.HttpMessageHandler> 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
 
 在下一個程式碼中，您可以看到如何使用 `AddHttpClient()` 來註冊需要使用 `HttpClient` 的具型別用戶端 (服務代理程式)。
 
@@ -79,9 +79,9 @@ services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
 ```
 
-如先前的程式碼所示註冊用戶端服務，會`DefaultClientFactory`使每個`HttpClient`服務的建立一個標準。
+如先前的程式碼所示，註冊用戶端服務會讓 `DefaultClientFactory` 建立 `HttpClient` 每個服務的標準。
 
-您也可以在註冊中新增實例特定設定，例如設定基底位址，然後新增一些復原原則，如下列程式碼所示：
+您也可以在註冊中新增實例專屬設定（例如，設定基底位址），並新增一些復原原則，如下列程式碼所示：
 
 ```csharp
 services.AddHttpClient<ICatalogService, CatalogService>(client =>
@@ -104,7 +104,7 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-您可以在[下一篇文章](implement-http-call-retries-exponential-backoff-polly.md)中找到更多有關使用 Polly 的詳細資料。
+您可以在 [下一篇文章](implement-http-call-retries-exponential-backoff-polly.md)中找到更多有關使用 Polly 的詳細資料。
 
 ### <a name="httpclient-lifetimes"></a>HttpClient 存留期
 
@@ -124,7 +124,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>實作使用已插入和已設定之 HttpClient 的具型別用戶端類別
 
-在上一個步驟中，您必須定義具型別用戶端類別，例如範例程式碼中的類別，像是 ' BasketService '、' CatalogService '、' Orderingservice 等等 ' 等等。–具型別用戶端是接受`HttpClient`物件的類別（透過其函式插入），並使用它來呼叫一些遠端 HTTP 服務。 例如：
+在上一個步驟中，您必須定義您的型別用戶端類別，例如範例程式碼中的類別，例如 ' BasketService '、' CatalogService '、' Orderingservice 等等 ' 等等。-具型別用戶端是可接受 `HttpClient` 透過) 其函式插入之物件 (的類別，並使用它來呼叫某些遠端 HTTP 服務。 例如：
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -151,13 +151,13 @@ public class CatalogService : ICatalogService
 }
 ```
 
-型別用戶端`CatalogService` （在此範例中為）會由 DI （相依性插入）啟動，這表示除了之外，它也可以接受其所有`HttpClient`在其函式中的已註冊服務。
+範例) 中的具型別用戶端 (`CatalogService` 是由 DI (相依性插入) 所啟動，這表示除了之外，它也可以接受其函式中任何已註冊的服務 `HttpClient` 。
 
-具型別用戶端實際上是暫時性物件，也就是說只要需要就會建立新的執行個體，而且每次建構它時都會收到一個新的 `HttpClient` 執行個體。 不過，集`HttpMessageHandler`區中的物件是由多個`HttpClient`實例重複使用的物件。
+具型別用戶端實際上是暫時性物件，這表示每次需要一個新的實例時，就會建立一個新的實例。 它會在每次建立新的實例時收到新的 `HttpClient` 實例。 不過， `HttpMessageHandler` 集區中的物件是由多個實例重複使用的物件 `HttpClient` 。
 
 ### <a name="use-your-typed-client-classes"></a>使用具型別用戶端類別
 
-最後，一旦您將具型`AddHttpClient()`別類別實作為，並使用進行登錄和設定之後，您就可以在任何可透過 DI 插入服務的地方使用它們。 例如，在 Razor 頁面程式碼或 MVC web 應用程式的控制器中，如下列 eShopOnContainers 程式碼所示：
+最後，一旦實作為型別類別之後，您就可以將它們註冊並設定為 `AddHttpClient()` 。 之後，您可以使用它們，無論是透過 DI 插入服務。 例如，在 Razor 頁面程式碼或 MVC web 應用程式的控制器中，如下列 eShopOnContainers 程式碼所示：
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -186,22 +186,22 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-到目前為止，顯示的程式碼只是執行一般的 Http 要求，但 ' 魔術 ' 出現在下列各節中，您只需新增原則並將處理常式委派給您已註冊的型別用戶端，完成`HttpClient`的所有 Http 要求都會進入復原原則，例如使用指數輪詢、斷路器重試，或任何其他自訂委派處理常式來執行額外的安全性功能，例如使用驗證權杖或任何其他自訂功能。
+到目前為止，上述程式碼片段僅顯示執行一般 HTTP 要求的範例。 但是，在下列各節中，「魔術」會顯示所有由提出的 HTTP 要求如何 `HttpClient` 具有復原性原則，例如以指數輪詢、斷路器、使用驗證權杖的安全性功能，甚至是其他任何自訂功能的重試。 而且所有這些都可以藉由新增原則，並將處理常式委派給已註冊的型別用戶端來完成。
 
 ## <a name="additional-resources"></a>其他資源
 
 - **使用 .NET Core 中的 HttpClientFactory**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **GitHub 存放庫中的`dotnet/extensions` HttpClientFactory 原始程式碼**  
+- **HttpClientFactory GitHub 存放庫中的原始程式碼 `dotnet/extensions`**  
   <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly (.NET 復原和暫時性錯誤處理程式庫)**  
   <http://www.thepollyproject.org/>
   
-- **使用不具相依性插入的 IHttpClientFactory （GitHub 問題）**  
+- **使用 IHttpClientFactory 而不使用相依性插入 (GitHub 問題) **  
   <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
->[上一頁](implement-resilient-entity-framework-core-sql-connections.md)
->[下一頁](implement-http-call-retries-exponential-backoff-polly.md)
+>[上一個](implement-resilient-entity-framework-core-sql-connections.md) 
+>[下一步](implement-http-call-retries-exponential-backoff-polly.md)

@@ -1,15 +1,16 @@
 ---
+description: using 指示詞 - C# 參考
 title: using 指示詞 - C# 參考
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f22a67348b19b8c97513ca685b2b10b34b1fd6fd
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093145"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141942"
 ---
 # <a name="using-directive-c-reference"></a>using 指示詞 (C# 參考)
 
@@ -95,9 +96,9 @@ using alias 指示詞的右邊不能有開放式的泛型類型。 例如，您�
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
 - [使用命名空間](../../programming-guide/namespaces/using-namespaces.md)
-- [C# 關鍵字](index.md)
+- [C # 關鍵字](index.md)
 - [命名空間](../../programming-guide/namespaces/index.md)
-- [使用語句](using-statement.md)
+- [using 陳述式](using-statement.md)

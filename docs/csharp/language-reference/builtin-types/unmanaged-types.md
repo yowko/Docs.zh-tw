@@ -1,31 +1,32 @@
 ---
+description: 瞭解 C 中的非受控類型#
 title: Unmanaged 型別 - C# 參考
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 9dd2ab4e044b8a86bfe72a6fcf2481b8e1e80bf4
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: b5a689ca3ade36ef77da958549894f76e074986e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507226"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89143528"
 ---
 # <a name="unmanaged-types-c-reference"></a>Unmanaged 型別 (C# 參考)
 
-類型是**非託管類型**（如果是以下任何類型）：
+如果類型為下列任何一種類型，則類型為 **非受控型** 別：
 
 - `sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float`、`double`、`decimal` 或 `bool`
 - 任何 [enum](enum.md) 型別
 - 任何[指標](../../programming-guide/unsafe-code-pointers/pointer-types.md)型別
-- 任何使用者定義的[結構](struct.md)類型，僅包含非託管類型的欄位，並且在 C# 7.3 和更早版本中，不是構造類型（至少包含一個類型參數的類型）
+- 只有包含一個型別引數的型別 (類型的任何使用者定義 [結構](struct.md) 類型，其中只包含非受控類型的欄位，而在 c # 7.3 和更早版本中，則不是結構化類型) 
 
-從 C# 7.3 開始，可以使用[`unmanaged`約束](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)指定類型參數是非指標、不可空的不可託管類型。
+從 c # 7.3 開始，您可以使用[ `unmanaged` 條件約束](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)指定型別參數為非指標、不可為 null 的非 null 非受控型別。
 
-從 C# 8.0 開始，僅包含非託管類型的欄位的*構造*結構類型也是非託管的，如下例所示：
+從 c # 8.0 開始，包含非受控型別之欄位 *的結構化結構類型* 也不受管理，如下列範例所示：
 
 [!code-csharp[unmanaged constructed types](snippets/UnmanagedTypes.cs#ProgramExample)]
 
-泛型結構可能是非託管類型和非非託管構造類型的源。 前面的示例定義了泛型結構，`Coords<T>`並介紹了非託管構造類型的示例。 非託管類型的示例為`Coords<object>`。 它不是非託管的，因為它具有`object`類型的欄位，該欄位不是非託管的。 如果希望*所有*構造類型都是非託管類型，請使用泛型結構`unmanaged`定義中的約束：
+泛型結構可能是非受控和非受控結構類型的來源。 上述範例會定義泛型結構 `Coords<T>` ，並提供非受控結構類型的範例。 非受控類型的範例為 `Coords<object>` 。 它不是未受管理的，因為它具有 `object` 不受管理的類型欄位。 如果您想要讓 *所有* 的結構化型別都是非受控型別，請 `unmanaged` 在泛型結構的定義中使用條件約束：
 
 [!code-csharp[unmanaged constraint in type definition](snippets/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
@@ -35,7 +36,7 @@ ms.locfileid: "79507226"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
+- [C# 參考資料](../index.md)
 - [指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [記憶體與延伸相關類型](../../../standard/memory-and-spans/index.md)
 - [sizeof 運算子](../operators/sizeof.md)

@@ -1,4 +1,5 @@
 ---
+description: volatile - C# 參考
 title: volatile - C# 參考
 ms.date: 10/24/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: c7a6c442c33ac2b41f652805837f455a957819de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb89e99e8e28ff1e263817f498619dbfae700a50
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712841"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141695"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# 參考)
 
@@ -27,7 +28,7 @@ ms.locfileid: "75712841"
 - 已知為參考型別的泛型型別參數。
 - <xref:System.IntPtr> 和 <xref:System.UIntPtr>。
 
-其他型別，包括 `double` 與 `long`，不能標示為 `volatile`，因為對這些型別之欄位的讀取和寫入不保證是不可部分完成。 要保護對這些類型的欄位的多執行緒訪問，請使用<xref:System.Threading.Interlocked>類成員或使用 語句[`lock`](lock-statement.md)保護訪問。
+其他型別，包括 `double` 與 `long`，不能標示為 `volatile`，因為對這些型別之欄位的讀取和寫入不保證是不可部分完成。 若要保護對這些欄位類型的多執行緒存取，請使用 <xref:System.Threading.Interlocked> 類別成員或使用語句來保護存取 [`lock`](lock-statement.md) 。
 
 `volatile` 關鍵字只能套用至 `class` 或 `struct` 的欄位。 區域變數不可以宣告為 `volatile`。
 
@@ -50,9 +51,9 @@ ms.locfileid: "75712841"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 語言規格：volatile 關鍵字](../../../../_csharplang/spec/classes.md#volatile-fields)
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [修飾詞](index.md)
-- [鎖語句](lock-statement.md)
+- [lock 語句](lock-statement.md)
 - <xref:System.Threading.Interlocked>

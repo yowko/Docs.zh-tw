@@ -1,4 +1,5 @@
 ---
+description: try-catch - C# 參考
 title: try-catch - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: bb81ddbe631fedfcfe247c6e62580de679ad972f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: e3154da2103029f704abd6873d16d372f1ae19ac
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812298"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141994"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# 參考)
 
@@ -183,6 +184,6 @@ static void Main()
 - [C # 程式設計指南](../../programming-guide/index.md)
 - [C # 關鍵字](index.md)
 - [try、throw 和 catch 陳述式 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [扔](throw.md)
+- [throw](throw.md)
 - [try-finally](try-finally.md)
 - [如何：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

@@ -1,4 +1,5 @@
 ---
+description: switch (C# 參考)
 title: C# switch 陳述式
 ms.date: 04/09/2019
 f1_keywords:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 9335399be2d4909a02fecbf2959c6f5608664732
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 20c1d9786eaa184088500cf1b37d33afc421b5e7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493665"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142020"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
-本文涵蓋 `switch` 語句。 如需 `switch` 運算式（在 c # 8.0 中引進）的詳細資訊，請參閱[運算式和運算子](../operators/index.md)一節中有關[ `switch` 運算式](../operators/switch-expression.md)的文章。
+本文涵蓋 `switch` 語句。 如需 `switch` c # 8.0) 中所引進運算式 (的詳細資訊，請參閱「[運算式和運算子](../operators/index.md)」一節中有關[ `switch` 運算式](../operators/switch-expression.md)的文章。
 
-`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」** 的模式比對，從候選項清單中選擇要執行的單一「參數區段」**。
+`switch`這是選取範圍語句，可根據符合*運算式*的模式比對，從候選項清單中選擇要執行的單一*參數區段*。
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
@@ -55,7 +56,7 @@ ms.locfileid: "84493665"
 
 ## <a name="the-switch-section"></a>參數區段
 
-`switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個「case 標籤」** (case 或預設標籤)，後面接著一或多個陳述式。 `switch` 陳述式在任何參數區段中最多只能放置一個預設標籤。 下列範例示範擁有三個參數區段的簡單 `switch` 陳述式，每個區段包含兩個陳述式。 第二個參數區段包含 `case 2:` 和 `case 3:` 標籤。
+`switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個 *case 標籤* (案例或預設標籤，) 後面接著一個或多個語句。 `switch` 陳述式在任何參數區段中最多只能放置一個預設標籤。 下列範例示範擁有三個參數區段的簡單 `switch` 陳述式，每個區段包含兩個陳述式。 第二個參數區段包含 `case 2:` 和 `case 3:` 標籤。
 
 `switch` 陳述式可包含任意數目的參數區段，而每個區段都可以擁有一或多個 case 標籤，如下列範例所示。 不過，不可以有兩個 case 標籤包含相同的運算式。
 
@@ -123,7 +124,7 @@ switch (caseSwitch)
 其中，*constant* 是用來測試的值。 *constant* 可以是下列任何常數運算式：
 
 - [Bool](../builtin-types/bool.md)常值： `true` 或 `false` 。
-- 任何[整數](../builtin-types/integral-numeric-types.md)常數，例如 `int` 、 `long` 或 `byte` 。
+- 任何 [整數](../builtin-types/integral-numeric-types.md) 常數，例如 `int` 、 `long` 或 `byte` 。
 - 所宣告之 `const` 變數的名稱。
 - 列舉常數。
 - [char](../builtin-types/char.md) 常值。

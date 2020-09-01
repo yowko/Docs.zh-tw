@@ -1,4 +1,5 @@
 ---
+description: try-finally - C# 參考
 title: try-finally - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 2c4c69b1e104aed968bc24bac690de83026643a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 621c5bf1607136361b72f978681607ec2aec150f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713010"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141968"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# 參考)
 
@@ -43,10 +44,10 @@ C# 也會包含 [using 陳述式](using-statement.md)，以透過方便使用的
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [try、throw 和 catch 陳述式 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [扔](throw.md)
-- [試捕](try-catch.md)
+- [throw](throw.md)
+- [try-catch](try-catch.md)
 - [如何：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

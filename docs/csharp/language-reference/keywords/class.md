@@ -1,4 +1,5 @@
 ---
+description: class 關鍵字 - C# 參考
 title: class 關鍵字 - C# 參考
 ms.date: 07/18/2017
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67c9c4be55cce25edf9ecb84b257a8523f193bec
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673091"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142111"
 ---
 # <a name="class-c-reference"></a>類別 (C# 參考)
 
@@ -32,8 +33,8 @@ class TestClass
 
 |繼承|範例|
 |-----------------|-------------|
-|None|`class ClassA { }`|
-|Single|`class DerivedClass : BaseClass { }`|
+|無|`class ClassA { }`|
+|單一|`class DerivedClass : BaseClass { }`|
 |無，實作兩個介面|`class ImplClass : IFace1, IFace2 { }`|
 |單一，實作一個介面|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
@@ -51,7 +52,7 @@ class TestClass
 
 - [常數](../../programming-guide/classes-and-structs/constants.md)
 
-- [領域](../../programming-guide/classes-and-structs/fields.md)
+- [欄位](../../programming-guide/classes-and-structs/fields.md)
 
 - [完成項](../../programming-guide/classes-and-structs/destructors.md)
 
@@ -61,19 +62,19 @@ class TestClass
 
 - [索引子](../../programming-guide/indexers/index.md)
 
-- [運營商](../operators/index.md)
+- [運算子](../operators/index.md)
 
 - [事件](../../programming-guide/events/index.md)
 
 - [委派](../../programming-guide/delegates/index.md)
 
-- [類](../../programming-guide/classes-and-structs/classes.md)
+- [類別](../../programming-guide/classes-and-structs/classes.md)
 
 - [介面](../../programming-guide/interfaces/index.md)
 
 - [結構類型](../builtin-types/struct.md)
 
-- [枚舉類型](../builtin-types/enum.md)
+- [列舉類型](../builtin-types/enum.md)
 
 ## <a name="example"></a>範例
 
@@ -101,7 +102,7 @@ Console.Write(child1.name);   // Error
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](./index.md)
-- [參考類型](./reference-types.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](./index.md)
+- [參考型別](./reference-types.md)

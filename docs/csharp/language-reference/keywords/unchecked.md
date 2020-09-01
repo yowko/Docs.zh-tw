@@ -1,4 +1,5 @@
 ---
+description: unchecked 關鍵字 - C# 參考
 title: unchecked 關鍵字 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb66639e3657b247b9ebcad1594daf1f57a5c76b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712997"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141981"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C# 參考)
 
@@ -40,8 +41,8 @@ ms.locfileid: "75712997"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
-- [已選中和未選中](checked-and-unchecked.md)
-- [已選取](checked.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
+- [Checked 與 Unchecked](checked-and-unchecked.md)
+- [檢查](checked.md)

@@ -1,4 +1,5 @@
 ---
+description: while - C# 參考
 title: while - C# 參考
 ms.date: 05/28/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: af616c2381b993f86296cbfa43a01ba2f9e000c2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 97299f9ac6f2cdd6bbddf831b3ee2ad711935fbe
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401858"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141864"
 ---
 # <a name="while-c-reference"></a>while (C# 參考)
 
@@ -22,7 +23,7 @@ ms.locfileid: "84401858"
 
 您可以使用 [continue](continue.md) 陳述式直接逐步執行 `while` 運算式評估。 如果運算式評估為 `true`，即繼續執行迴圈中的第一個陳述式。 否則會在迴圈之後的第一個陳述式繼續執行。
 
-您也可以使用 `while` [goto](goto.md)、 [return](return.md)或[throw](throw.md)語句來結束迴圈。
+您也可以使用 `while` [goto](goto.md)、 [return](return.md)或 [throw](throw.md) 語句來結束迴圈。
 
 ## <a name="example"></a>範例
 
