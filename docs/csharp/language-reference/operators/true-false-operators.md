@@ -1,23 +1,24 @@
 ---
+description: true 和 false 運算子 - C# 參考
 title: true 和 false 運算子 - C# 參考
 ms.date: 12/10/2018
 helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 15342c3d9cd66195639e38265875a7ed4008dd51
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: f20f71e31c77c035c48702f01208c5b29c90109c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916620"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132374"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true 和 false 運算子 (C# 參考)
 
-`true`運算子會傳回[bool](../builtin-types/bool.md)值， `true` 以指出其運算元肯定為 true。 `false`運算子 `bool` 會傳回值， `true` 表示其運算元肯定為 false。 `true` 和 `false` 運算子並不保證會彼此互補。 也就是說，`true` 和 `false` 運算子可能會針對相同的運算元傳回 `bool` 值 `false`。 如果某個型別會定義這兩個運算子之一，它也必須定義另一個運算子。
+`true`運算子會傳回[布林](../builtin-types/bool.md)值， `true` 以指出其運算元絕對為 true。 `false`運算子 `bool` 會傳回值， `true` 以指出其運算元絕對為 false。 `true` 和 `false` 運算子並不保證會彼此互補。 也就是說，`true` 和 `false` 運算子可能會針對相同的運算元傳回 `bool` 值 `false`。 如果某個型別會定義這兩個運算子之一，它也必須定義另一個運算子。
 
 > [!TIP]
-> `bool?`如果您需要支援三值邏輯 (例如，當您使用支援三值布林值類型的資料庫時，請使用型別) 。 C# 能提供搭配 `bool?` 運算元來支援三值邏輯的 `&` 和 `|` 運算子。 如需詳細資訊，請參閱[布林邏輯運算子](boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
+> `bool?`如果您需要支援三值邏輯 (例如，當您使用支援三值布林值類型的資料庫時，請使用類型) 。 C# 能提供搭配 `bool?` 運算元來支援三值邏輯的 `&` 和 `|` 運算子。 如需詳細資訊，請參閱[布林邏輯運算子](boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
 
 ## <a name="boolean-expressions"></a>布林運算式
 
@@ -29,7 +30,7 @@ ms.locfileid: "87916620"
 
 ## <a name="example"></a>範例
 
-下列範例顯示同時定義了 `true` 和 `false` 運算子的型別。 類型也會多載邏輯 AND 運算子 `&` ，如此一來， `&&` 運算子也可以針對該類型的運算元進行評估。
+下列範例顯示同時定義了 `true` 和 `false` 運算子的型別。 此類型也會多載邏輯 AND 運算子， `&` 如此一來， `&&` 也可以針對該型別的運算元評估運算子。
 
 [!code-csharp[true and false operators example](snippets/shared/TrueFalseOperators.cs)]
 

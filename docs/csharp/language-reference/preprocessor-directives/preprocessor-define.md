@@ -1,4 +1,5 @@
 ---
+description: '#define - C# 參考'
 title: '#define - C# 參考'
 ms.date: 06/30/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: c08d6f42c11184a4d14aa6712f9f0f8706a72cab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a37f883a249ec74b66769ee40b84b20e8568c451
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173428"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132335"
 ---
 # <a name="define-c-reference"></a>#define (C# 參考)
 您可以使用 `#define` 來定義符號。 當您將符號作為運算式傳遞給 [#if](./preprocessor-if.md) 指示詞時，運算式會判斷值為 `true`，如下列範例所示：  
@@ -29,7 +30,7 @@ ms.locfileid: "79173428"
   
  您可以定義符號，但不能將值指派給符號。 如果您要使用的任何指示並不是前置處理器指示詞，則檔案中必須先出現 `#define` 指示詞才行。  
   
- 還可以使用[-define](../compiler-options/define-compiler-option.md)編譯器選項定義符號。 您可以使用 [#undef](./preprocessor-undef.md) 來取消定義符號。  
+ 您也可以使用 [-define](../compiler-options/define-compiler-option.md) 編譯器選項來定義符號。 您可以使用 [#undef](./preprocessor-undef.md) 來取消定義符號。  
   
  透過 `-define` 或 `#define` 所定義的符號不會與相同名稱的變數發生衝突。 也就是，不應將變數名稱傳遞給前置處理器指示詞，而符號僅能由前置處理器指示詞評估。  
   
@@ -65,10 +66,10 @@ public class TestDefine
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 預處理器指令](./index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 預處理器指示詞](./index.md)
 - [const](../keywords/const.md)
-- [如何：使用追蹤和偵錯進行條件式編譯](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [作法：使用追蹤和偵錯進行條件式編譯](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [#undef](./preprocessor-undef.md)
 - [#if](./preprocessor-if.md)
