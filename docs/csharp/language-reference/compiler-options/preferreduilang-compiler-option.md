@@ -1,4 +1,5 @@
 ---
+description: -preferreduilang (C# 編譯器選項)
 title: -preferreduilang (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: 7ebafcf446c9033c93e0c5fa5e11ea2930bd2e1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f68652e910651ab5c4184376d9eb7729303382d9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602554"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124847"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang (C# 編譯器選項)
 使用 `-preferreduilang` 編譯器選項，您就可以指定 C# 編譯器顯示輸出的語言，例如錯誤訊息。  
@@ -35,8 +36,8 @@ ms.locfileid: "69602554"
 csc.exe -preferreduilang:ja-JP  
 ```  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>規格需求  
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)

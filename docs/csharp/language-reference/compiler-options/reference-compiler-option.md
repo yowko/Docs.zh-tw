@@ -1,4 +1,5 @@
 ---
+description: -reference (C# 編譯器選項)
 title: -reference (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b84953f85545c0400c7136c258849f259e8b48a
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173662"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124795"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# 編譯器選項)
 **-reference** 選項可讓編譯器將指定檔案的 [public](../keywords/public.md) 類型資訊匯入至目前的專案，以讓您透過指定的組件檔案來參考中繼資料。  
@@ -94,5 +95,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

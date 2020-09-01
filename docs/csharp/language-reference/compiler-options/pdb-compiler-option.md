@@ -1,4 +1,5 @@
 ---
+description: -pdb (C# 編譯器選項)
 title: -pdb (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-ms.openlocfilehash: 3081f4716e8cd858d789db6050e635af941aa05c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0dcafd0fd260488922c74a2330b312e80467e779
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602573"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124912"
 ---
 # <a name="-pdb-c-compiler-options"></a>-pdb (C# 編譯器選項)
 **-pdb** 編譯器選項指定偵錯符號檔的名稱和位置。  
@@ -44,5 +45,5 @@ csc -debug -pdb:tt t.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

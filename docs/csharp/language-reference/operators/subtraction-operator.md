@@ -1,4 +1,5 @@
 ---
+description: '- 及 -= 運算子 - C# 參考'
 title: '- 及 -= 運算子 - C# 參考'
 ms.date: 05/27/2019
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: c126837309b5fe3495a5e9e6af589892670b62c3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 871067d8049c66f2b8d863987b668e5287b36911
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063077"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124691"
 ---
 # <a name="--and---operators-c-reference"></a>- 及 -= 運算子 (C# 參考)
 
-`-` `-=` 內建[整數](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數數值型別和[委派](../builtin-types/reference-types.md#the-delegate-type)類型都支援和運算子。
+`-` `-=` 內建的[整數](../builtin-types/integral-numeric-types.md)和[浮點數](../builtin-types/floating-point-numeric-types.md)類型和[委派](../builtin-types/reference-types.md#the-delegate-type)類型都支援 and 運算子。
 
 如需算術 `-` 運算子的資訊，請參閱[算術運算子](arithmetic-operators.md)一文中的[一元加號和減號運算子](arithmetic-operators.md#unary-plus-and-minus-operators)與[減法運算子 -](arithmetic-operators.md#subtraction-operator--) 章節。
 
@@ -67,7 +68,7 @@ x = x - y
 
 [!code-csharp-interactive[-= examples](snippets/shared/SubtractionOperator.cs#SubtractAndAssign)]
 
-當您取消訂閱[事件](../keywords/event.md)時，您也會使用 `-=` 來指定要移除的事件處理常式方法。 如需詳細資訊，請參閱[如何訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+當您取消訂閱[事件](../keywords/event.md)時，您也會使用 `-=` 來指定要移除的事件處理常式方法。 如需詳細資訊，請參閱 [如何訂閱和取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
@@ -83,4 +84,4 @@ x = x - y
 - [C# 運算子與運算式](index.md)
 - [事件](../../programming-guide/events/index.md)
 - [算術運算子](arithmetic-operators.md)
-- [+ 和 + = 運算子](addition-operator.md)
+- [+ 及 + = 運算子](addition-operator.md)

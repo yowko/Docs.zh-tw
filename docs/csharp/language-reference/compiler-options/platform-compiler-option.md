@@ -1,4 +1,5 @@
 ---
+description: -platform (C# 編譯器選項)
 title: -platform (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 5150e871d75c3c34dab10f10cdac3d8322d7a834
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2e4fc37418243ff6998d19165250b895c0a4fa1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70849875"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124860"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# 編譯器選項)
 
@@ -69,7 +70,7 @@ anycpu (預設值)、anycpu32bitpreferred、ARM、x64、x86 或 Itanium。
 3. 修改**平台目標**屬性，並且針對以 .NET Framework 4.5 為目標的專案選取或清除 [建議使用 32 位元]**** 核取方塊。
 
 > [!NOTE]
-> `-platform`在 Visual C# Express 的開發環境中不可用。
+> `-platform` 無法在 Visual c # Express 的開發環境中使用。
 
 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>。
 
@@ -83,5 +84,5 @@ csc -platform:anycpu filename.cs
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](index.md)
+- [C # 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

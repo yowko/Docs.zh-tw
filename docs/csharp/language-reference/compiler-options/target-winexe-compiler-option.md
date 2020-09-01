@@ -1,4 +1,5 @@
 ---
+description: -target:winexe (C# 編譯器選項)
 title: -target:winexe (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 981f1b0b6ca9f708bb022a3662ab181a4f472040
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a1be07455b54b375106fef1fb480d7abd2f1ca4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606387"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89124717"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C# 編譯器選項)
 **-target:winexe** 選項可讓編譯器建立可執行檔 (EXE)，其為一個 Windows 程式。  
@@ -54,5 +55,5 @@ csc -target:winexe in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [-目標（C# 編譯器選項）](./target-compiler-option.md)
-- [C# 編譯器選項](./index.md)
+- [-目標 (c # 編譯器選項) ](./target-compiler-option.md)
+- [C # 編譯器選項](./index.md)
