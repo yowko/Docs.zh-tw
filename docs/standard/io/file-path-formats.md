@@ -1,6 +1,6 @@
 ---
 title: Windows 系統上的檔案路徑格式
-description: 在本文中，您將瞭解 Windows 系統上的檔案路徑格式，例如傳統 DOS 路徑、DOS 裝置路徑和通用命名慣例（UNC）路徑。
+description: 在本文中，您將瞭解 Windows 系統上的檔案路徑格式，例如傳統 DOS 路徑、DOS 裝置路徑，以及通用命名慣例 (UNC) 路徑。
 ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165792"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271785"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -33,19 +33,19 @@ ms.locfileid: "87165792"
 
 |Path  |描述  |
 | -- | -- |
-| `C:\Documents\Newsletters\Summer2018.pdf` | 從磁碟機 C: 根目錄開始的絕對檔案路徑 |
+| `C:\Documents\Newsletters\Summer2018.pdf` | 磁片磁碟機根目錄的絕對檔案路徑 `C:` 。 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 從目前磁碟機根目錄開始的絕對路徑。 |
 | `2018\January.xlsx` | 到目前目錄之子目錄中檔案的相對路徑。 |
 | `..\Publications\TravelBrochure.pdf` | 到目前目錄之同級目錄中檔案的相對路徑。 |
-| `C:\Projects\apilibrary\apilibrary.sln` | 從磁碟機 C: 根目錄開始的絕對檔案路徑 |
-| `C:Projects\apilibrary\apilibrary.sln` | 從磁碟機 C: 目前目錄開始的相對路徑。 |
+| `C:\Projects\apilibrary\apilibrary.sln` | 磁片磁碟機根目錄中檔案的絕對路徑 `C:` 。 |
+| `C:Projects\apilibrary\apilibrary.sln` | 從磁片磁碟機的目前的目錄開始的相對路徑 `C:` 。 |
 
 > [!IMPORTANT]
-> 請注意最後兩個路徑之間的差異。 同時指定選用的磁碟區規範 (在兩個案例中都是 C:)，但第一個的開頭是指定磁碟區的根目錄，而第二個則否。 因此，第一個是從磁碟機 C: 根目錄開始的絕對路徑，而第二個則是從磁碟機 C: 目前目錄開始的相對路徑。 當想要第一種格式時使用第二種格式，是在牽涉到 Windows 檔案路徑時常見的錯誤來源。
+> 請注意最後兩個路徑之間的差異。 兩者都會在兩個案例中都指定選用的磁片區規範 (`C:`) ，但是第一個是從指定磁片區的根目錄開始，而第二個則不是。 因此，第一個是磁片磁碟機根目錄的絕對路徑 `C:` ，而第二個則是磁片磁碟機目前目錄的相對路徑 `C:` 。 當想要第一種格式時使用第二種格式，是在牽涉到 Windows 檔案路徑時常見的錯誤來源。
 
 您可以呼叫 <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> 方法來判斷檔案路徑是否完整 (也就是路徑獨立於目前的目錄，目前目錄變更時它不會變更)。 請注意，這類路徑可以包含相對目錄區段 (`.` 和 `..`)，而且如果解析的路徑永遠指向相同位置便仍然完整。
 
-下例會說明絕對和相對路徑之間的差異。 它假設目錄 D:\FY2018\ 存在，而且您尚未設定任何目前目錄來進行 D:\在執行範例之前，從命令提示字元。
+下例會說明絕對和相對路徑之間的差異。 它會假設目錄 `D:\FY2018\` 存在，而且您沒有在執行 `D:\` 此範例之前，從命令提示字元設定任何的目前的目錄。
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -56,8 +56,8 @@ ms.locfileid: "87165792"
 
 通用命名慣例 (UNC) 路徑，用來存取網路資源，具有下列格式：
 
-- 伺服器或主機名稱，前面加上 \\\\。 伺服器名稱可以是 NetBIOS 電腦名稱或 IP/FQDN 位址 (支援 IPv4 以及 v6)。
-- 共用名稱，它藉由 \\ 與主機名稱分隔。 伺服器和共用名稱會共同組成磁碟區。
+- 伺服器或主機名稱，前面加上 `\\`。 伺服器名稱可以是 NetBIOS 電腦名稱或 IP/FQDN 位址 (支援 IPv4 以及 v6)。
+- 共用名稱，它藉由 `\` 與主機名稱分隔。 伺服器和共用名稱會共同組成磁碟區。
 - 目錄名稱。 [目錄分隔符號字元](<xref:System.IO.Path.DirectorySeparatorChar>)會分隔巢狀目錄階層內的子目錄。
 - 選擇性的檔名。 [目錄分隔符號字元](<xref:System.IO.Path.DirectorySeparatorChar>)會分隔檔案路徑和檔案名稱。
 
@@ -65,8 +65,8 @@ ms.locfileid: "87165792"
 
 |Path  |描述  |
 | -- | -- |
-| `\\system07\C$\` | `system07` 上磁碟機 C: 的根目錄。 |
-| `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 磁碟區 Test 目錄中的 Foo.txt 檔案。|
+| `\\system07\C$\` | `C:`磁片磁碟機的根目錄 `system07` 。 |
+| `\\Server2\Share\Test\Foo.txt` | `Foo.txt`磁片區之測試目錄中的檔案 `\\Server2\Share` 。|
 
 UNC 路徑必須一律完整。 它們可以包含相對目錄區段 (`.` 和 `..`)，但這些必須是完整路徑的一部分。 您只能藉由將 UNC 路徑對應至磁碟機代號來使用相對路徑。
 
@@ -101,7 +101,7 @@ DOS 裝置路徑由以下元件組成：
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    針對裝置 UNC，「伺服器/共用」部分會形成磁碟區。 例如，在 `\\?\server1\e:\utilities\\filecomparer\`，「伺服器/共用」部分是 server1\utilities。 這一點在呼叫具有相對目錄區段的方法 (例如 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType>) 時很重要；無法瀏覽過磁碟區。
+    針對裝置 UNC，「伺服器/共用」部分會形成磁碟區。 例如，在中 `\\?\server1\e:\utilities\\filecomparer\` ，伺服器/共用部分是 `server1\utilities` 。 這一點在呼叫具有相對目錄區段的方法 (例如 <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType>) 時很重要；無法瀏覽過磁碟區。
 
 根據定義，DOS 裝置路徑是完整的。 不允許相對目錄區段 (`.` 和 `..`)。 目前目錄絕對不會進入其使用方式。
 
@@ -146,7 +146,7 @@ DOS 裝置路徑由以下元件組成：
 
 ### <a name="apply-the-current-directory"></a>套用目前的目錄
 
-如果路徑不是完整格式，Windows 會套用目前目錄給它。 UNC 和裝置路徑沒有套用目前目錄。 具有分隔符號 C:\\ 的完整磁碟機也不會套用。
+如果路徑不是完整格式，Windows 會套用目前目錄給它。 UNC 和裝置路徑沒有套用目前目錄。 兩者都不會執行具有分隔符號的完整磁片磁碟機 `C:\` 。
 
 如果路徑開頭為單一元件分隔符號，則會套用目前目錄的磁碟機。 例如，如果檔案路徑是 `\utilities`，而目前目錄是 `C:\temp\`，則正規化會產生 `C:\utilities`。
 
@@ -203,7 +203,7 @@ DOS 裝置路徑由以下元件組成：
 
 開頭為 `\\?\` 的路徑，在您明確地將其傳遞給 [GetFullPathName 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)時，仍會正規化。
 
-您可以在沒有的情況下，傳遞超過個字元的路徑 `MAX_PATH` 給[GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) `\\?\` 。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
+您可以將多個字元的路徑傳遞 `MAX_PATH` 至 [>getfullpathname](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) ，而不需要 `\\?\` 。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
 
 ## <a name="case-and-the-windows-file-system"></a>大小寫與 Windows 檔案系統
 
@@ -222,4 +222,4 @@ Directory.Create("TeStDiReCtOrY")
 [!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
 [!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
-不過，目錄和檔案名稱比較不區分大小寫。 如果您搜尋名為 "test.txt" 的檔案，.NET 檔案系統 API 在比較時會忽略大小寫。 「Test.txt」、「TEST.TXT」、「test.TXT」，以及大寫和小寫字母的任何其他組合都會符合「test.txt」。
+不過，目錄和檔案名稱比較不區分大小寫。 如果您搜尋名為 "test.txt" 的檔案，.NET 檔案系統 API 在比較時會忽略大小寫。 "Test.txt"、"TEST.TXT"、"test.TXT" 和任何其他大寫和小寫字母的組合都會與 "test.txt" 相符。

@@ -2,12 +2,12 @@
 title: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 description: 了解 DevOps 工作流程的「外部迴圈」步驟
 ms.date: 08/06/2020
-ms.openlocfilehash: 5515c204b09cecba323540572c6769c65c6c93ab
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 82a45c8669812580623811e18cc55f55f45cb6d3
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915264"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271903"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 
@@ -31,9 +31,9 @@ ms.locfileid: "87915264"
 
 開發人員所產生的本機映像，只能供他們用來在自己的電腦內進行測試。 這就是為什麼必須從 SCC 程式碼啟用 DevOps 管線。
 
-Azure DevOps Services 和 Team Foundation Server 支援 Git 和 Team Foundation 版本控制。 您可以在兩者之間進行選擇，並用於端對端 Microsoft 體驗。 不過，您也可以在外部存放庫中管理您的程式碼， (例如 GitHub、內部部署 Git 存放庫或 Subversion) 而且仍然能夠連線到它，並取得程式碼作為 DevOps CI 管線的起點。
+Azure DevOps Services 和 Team Foundation Server 支援 Git 和 Team Foundation 版本控制。 您可以在兩者之間進行選擇，並用於端對端 Microsoft 體驗。 不過，您也可以在外部存放庫中管理您的程式碼 (例如 GitHub、內部部署 Git 存放庫或 Subversion) ，而且仍然能夠與其連線，並取得程式碼作為 DevOps CI 管線的起點。
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>步驟3：使用 Azure DevOps Services 和 Docker 建立、CI、整合和測試
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>步驟3：使用 Azure DevOps Services 和 Docker 建立、CI、整合及測試
 
 CI 已脫穎而出成為現代軟體測試和傳遞的標準。 Docker 解決方案會在開發小組與作業小組之間維持清楚的關注點分離。 Docker 映像的不變性確保在已開發、已透過 CI 測試並在生產環境中執行的項目之間可重複部署。 跨開發人員膝上型電腦與測試基礎結構部署的 Docker 引擎，可讓容器移植到不同的環境。
 
@@ -45,7 +45,7 @@ CI 已脫穎而出成為現代軟體測試和傳遞的標準。 Docker 解決方
 
 使用 Docker 進行部署時，所要部署的「最終成品」是 Docker 映像，其中內嵌您的應用程式或服務。 這些映像會推送或發佈到「Docker 登錄」**(例如您可以在 Azure Container Registry 中擁有的私人存放庫，或 Docker Hub Registry 之類的公用存放庫，後者通常會用於官方基底映像)。
 
-以下是基本概念： CI 管線將會藉由認可至 SCC 存放庫（例如 Git）來啟動。 認可會使 Azure DevOps Services 在 Docker 容器中執行組建作業，並在該作業成功完成時，將 Docker 映像推送到 Docker 登錄，如圖 5-2 示。 外部迴圈的第一個部分牽涉到步驟1到3，從程式碼、執行、debug 和 validate，然後再到組建和測試 CI 步驟為止的程式碼存放庫。
+以下是基本概念： CI 管線將會藉由認可至 SCC 儲存機制（例如 Git）來開始進行。 認可會使 Azure DevOps Services 在 Docker 容器中執行組建作業，並在該作業成功完成時，將 Docker 映像推送到 Docker 登錄，如圖 5-2 示。 外部迴圈的第一個部分牽涉到步驟1到3，從程式碼、執行、偵測和驗證，然後將程式碼存放庫移至組建和測試 CI 步驟。
 
 ![此圖顯示 CI 工作流程中涉及的三個步驟。](./media/docker-application-outer-loop-devops-workflow/continuous-integration-steps.png)
 
@@ -94,7 +94,7 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 >   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - 透過 Docker 支援建置 Linux 型 Visual Studio Team Service 組建電腦：\
->   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+>   <https://www.donovanbrown.com/post/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>整合、測試及驗證多容器 Docker 應用程式
 
@@ -104,7 +104,7 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 
 如果您使用單一主機，您可以使用 Docker 命令 (例如 docker-compose) 來建置及部署相關容器，以測試及驗證單一 VM 中的 Docker 環境。 但如果您使用協調器叢集 (例如 DC/OS、Kubernetes 或 Docker Swarm)，則需要根據您所選取的叢集/排程器，透過不同機制或協調器來部署您的容器。
 
-以下是您可以針對 Docker 容器執行的幾種測試類型：
+以下是您可以針對 Docker 容器執行的數種測試類型：
 
 - Docker 容器的單元測試
 
@@ -132,7 +132,7 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 
 使用 Docker 工作，您可以將 `docker-compose.yml` 檔案所定義並具有多個標記的一組服務映像，推送到已驗證的 Docker 登錄 (例如 Azure Container Registry)，如圖 5-5 所示。
 
-![螢幕擷取畫面：顯示將映射發佈至登錄的步驟。](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
+![顯示將映射發佈至登錄的步驟螢幕擷取畫面。](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
 
 **圖 5-5**。 使用 Azure DevOps Services 將自訂映像發佈到 Docker 登錄
 
@@ -154,7 +154,7 @@ Docker 映像的不變性確保可重複部署已開發、已透過 CI 測試並
 
 圖 5-7 顯示您如何按一下 [新增工作] 對話方塊中的 [Docker Compose]，透過 Azure DevOps Services 將您的組建 CI 連線到 QA/測試環境。 不過，部署到預備環境或生產環境時，您通常會使用 Release Management 功能來處理多個環境 (例如 QA、預備環境和生產環境)。 如果您要部署到單一 Docker 主機，它會使用 Azure DevOps Services "Docker Compose" 工作 (這會在幕後叫用 `docker-compose up` 命令)。 如果您要部署到 Azure Kubernetes Service (AKS)，它會使用 Docker 部署工作，如下一節中所述。
 
-![顯示 Docker Compose 工作之 [新增工作] 對話方塊的螢幕擷取畫面。](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
+![顯示 Docker Compose 工作的 [新增工作] 對話方塊的螢幕擷取畫面。](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
 
 **圖 5-7**。 在 Azure DevOps Services 管線中新增 Docker Compose 工作
 
@@ -180,11 +180,11 @@ Azure DevOps Services 範本可讓您產生包含特定登錄映像摘要的組�
 
 從 CD 觀點來看，特別是 Azure DevOps Services，您可以從 Azure DevOps Services Release Management 環境執行特別建立的部署工作，這會將容器化應用程式部署到 Container Service 中的分散式叢集，如圖 5-9 所示。
 
-![此圖顯示部署至協調器的 CD 部署步驟。](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
+![顯示部署至協調器之 CD 部署步驟的圖表。](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
 
 **圖 5-9**。 將分散式應用程式部署到 Container Service
 
-一開始，當部署到特定叢集或協調器時，傳統上會使用每個協調器的特定部署指令碼和機制 (亦即，Kubernetes 與 Service Fabric 會有不同的部署機制)，而不是更簡單且便於使用的 `docker-compose` 工具 (以 `docker-compose.yml` 定義檔為基礎)。 不過，由於 [圖 5-10] 所示的 [Azure DevOps Services Docker 部署] 工作，您現在也可以使用您熟悉的檔案來部署至支援的協調器， `docker-compose.yml` 因為此工具會執行「轉譯」，讓您從檔案 (`docker-compose.yml` 到 orchestrator) 所需的格式。
+一開始，當部署到特定叢集或協調器時，傳統上會使用每個協調器的特定部署指令碼和機制 (亦即，Kubernetes 與 Service Fabric 會有不同的部署機制)，而不是更簡單且便於使用的 `docker-compose` 工具 (以 `docker-compose.yml` 定義檔為基礎)。 不過，由於 Azure DevOps Services Docker 部署工作（如圖5-10 所示），現在您也可以只使用您熟悉的檔案來部署至支援的協調器， `docker-compose.yml` 因為此工具會針對您從檔案 (， `docker-compose.yml` 以協調器) 所需的格式來執行「轉譯」。
 
 ![顯示 [部署至 Kubernetes] 工作的螢幕擷取畫面。](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 

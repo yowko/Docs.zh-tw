@@ -1,7 +1,7 @@
 ---
 description: C# 編譯器選項
 title: C# 編譯器選項
-ms.date: 07/20/2015
+ms.date: 08/28/2020
 f1_keywords:
 - cs.build.options
 helpviewer_keywords:
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: bcb246055ecb553bbefad2a0d5c95bf6a083ee6f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 502bd83ae52be9ae2f914847bb6bf7c7f2a0c411
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125523"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271811"
 ---
 # <a name="c-compiler-options"></a>C# 編譯器選項
 
@@ -30,7 +30,7 @@ ms.locfileid: "89125523"
 
 - [使用 csc.exe的命令列建立 ](command-line-building-with-csc-exe.md) 從命令列建立 Visual c # 應用程式的相關資訊。
 
-- [如何設定 Visual Studio 命令列的環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md) 提供執行 *vsvars32.bat* 以啟用命令列組建的步驟。
+- [如何設定 Visual Studio 命令列的環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md) 提供執行 *VsDevCmd.bat* 以啟用命令列組建的步驟。
 
 - [依分類列出的 c # 編譯器選項](listed-by-category.md) 編譯器選項的類別清單。
 

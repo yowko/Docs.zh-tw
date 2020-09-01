@@ -1,42 +1,42 @@
 ---
-title: 操作說明：為實作 GridView 之 ListView 中的資料列設定樣式
+title: 如何：在使用 GridView 的 ListView 中為數據列建立樣式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GridView controls [WPF], styling rows
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: ce79899d5c8e825ecb39e14ae8af4e0c33f13db3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4b8b8e2f1b2d7207a37205d981bf2dab3f65122e
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733549"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271941"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>操作說明：為實作 GridView 之 ListView 中的資料列設定樣式
-這個範例示範如何在 <xref:System.Windows.Controls.ListView> 控制項中，將執行 <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> 模式的資料列樣式。  
+這個範例示範如何在使用模式的控制項中為數據列建立樣式 <xref:System.Windows.Controls.ListView> <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> 。  
   
 ## <a name="example"></a>範例  
- 您可以藉由在 [<xref:System.Windows.Controls.ListView>] 控制項上設定 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>，將 <xref:System.Windows.Controls.ListView> 控制項中的資料列樣式。 針對以 <xref:System.Windows.Controls.ListViewItem> 物件表示的專案，設定其樣式。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 會參考用來顯示資料列內容的 <xref:System.Windows.Controls.ControlTemplate> 物件。  
+ 您可以設定控制項的來設定控制項的資料列樣式 <xref:System.Windows.Controls.ListView> <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> <xref:System.Windows.Controls.ListView> 。 針對以物件表示的專案設定樣式 <xref:System.Windows.Controls.ListViewItem> 。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> <xref:System.Windows.Controls.ControlTemplate> 會參考用來顯示資料列內容的物件。  
   
- 下列範例會從中解壓縮的完整範例會顯示儲存在 XML 資料庫中的歌曲資訊集合。 資料庫中的每一首歌都有一個評等欄位，而此欄位的值會指定歌曲資訊資料列的顯示方式。  
+ 從下列範例解壓縮的完整範例，會顯示儲存在 XML 資料庫中的一組歌曲資訊。 資料庫中的每一首歌都有一個評等欄位，而此欄位的值會指定歌曲資訊資料列的顯示方式。  
   
- 下列範例示範如何定義代表歌曲集合中歌曲的 <xref:System.Windows.Controls.ListViewItem> 物件 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 會參考 <xref:System.Windows.Controls.ControlTemplate> 物件，以指定如何顯示歌曲資訊的資料列。  
+ 下列範例示範如何定義 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> <xref:System.Windows.Controls.ListViewItem> 代表 song 集合中之歌曲的物件。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>參考 <xref:System.Windows.Controls.ControlTemplate> 物件，這些物件會指定如何顯示歌曲資訊的資料列。  
   
  [!code-xaml[ListViewItemStyleSnippet#ItemContainerStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#itemcontainerstyle)]  
   
- 下列範例顯示將文字字串 `"Strongly Recommended"` 加入資料列的 <xref:System.Windows.Controls.ControlTemplate>。 此範本會在 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> 中參照，並會在歌曲的評等值為5（5）時顯示。 <xref:System.Windows.Controls.ControlTemplate> 包含 <xref:System.Windows.Controls.GridViewRowPresenter> 物件，它會在資料行中配置資料列的內容，如 <xref:System.Windows.Controls.GridView> 視圖模式所定義。  
+ 下列範例顯示 <xref:System.Windows.Controls.ControlTemplate> 將文字字串加入 `"Strongly Recommended"` 至資料列的。 此範本會在中參考 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> ，並且會在歌曲的評等值為 5 (五) 時顯示。 <xref:System.Windows.Controls.ControlTemplate>包含 <xref:System.Windows.Controls.GridViewRowPresenter> 物件，該物件會根據 view 模式所定義，在資料行中配置資料列的內容 <xref:System.Windows.Controls.GridView> 。  
   
  [!code-xaml[ListViewItemStyleSnippet#ControlTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#controltemplate)]  
   
- 下列範例會定義 <xref:System.Windows.Controls.GridView>。  
+ 下列範例會定義 <xref:System.Windows.Controls.GridView> 。  
   
  [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [「如何」主題](listview-how-to-topics.md)
+- [操作說明主題](listview-how-to-topics.md)
 - [ListView 概觀](listview-overview.md)
-- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [樣式設定和範本化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

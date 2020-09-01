@@ -4,12 +4,12 @@ description: 瞭解如何控制獨立應用程式的修剪。
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 5597d4cdb9e8e96dcec6545e039d43295ca991bd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d6081a24cc18e424b55d40e152f519c680f11aa0
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142254"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271876"
 ---
 # <a name="trimming-options"></a>修剪選項
 
@@ -25,7 +25,7 @@ ms.locfileid: "89142254"
 
 ## <a name="trimming-granularity"></a>修剪細微性
 
-下列資料細微性設定可控制如何捨棄未使用的 IL。 這可以設定為屬性，或做為 [個別元件](#Trimmed-assemblies)上的中繼資料。
+下列資料細微性設定可控制如何捨棄未使用的 IL。 這可以設定為屬性，或做為 [個別元件](#trimmed-assemblies)上的中繼資料。
 
 - `<TrimMode>copyused</TrimMode>`
 
@@ -60,7 +60,7 @@ ms.locfileid: "89142254"
 
 - `<TrimMode>copyused</TrimMode>` 或 `<TrimMode>link</TrimMode>`
 
-  控制這個元件的 [修剪資料細微性](#Trimming-granularity) 。 這優先于全域 `TrimMode` 。 `TrimMode`元件上的設定暗示 `<IsTrimmable>true</IsTrimmable>` 。
+  控制這個元件的 [修剪資料細微性](#trimming-granularity) 。 這優先于全域 `TrimMode` 。 `TrimMode`元件上的設定暗示 `<IsTrimmable>true</IsTrimmable>` 。
 
 ## <a name="root-assemblies"></a>根元件
 
@@ -106,7 +106,7 @@ ms.locfileid: "89142254"
 
 ## <a name="warning-versions"></a>警告版本
 
-Trim 分析採用 [`AnalysisLevel`](../project-sdk/msbuild-props.md#AnalysisLevel) 控制 SDK 之間分析警告版本的屬性。 另外還有另一個屬性，可控制個別的 trim 分析警告版本， (類似于 `WarningLevel` 編譯器) ：
+Trim 分析採用 [`AnalysisLevel`](../project-sdk/msbuild-props.md#analysislevel) 控制 SDK 之間分析警告版本的屬性。 另外還有另一個屬性，可控制個別的 trim 分析警告版本， (類似于 `WarningLevel` 編譯器) ：
 
 - `<ILLinkWarningLevel>5</ILLinkWarningLevel>`
 
