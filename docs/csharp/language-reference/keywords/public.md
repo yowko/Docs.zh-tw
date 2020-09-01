@@ -1,4 +1,5 @@
 ---
+description: public 關鍵字 - C# 參考
 title: public 關鍵字 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 19906d7fd0f7d41ef9e4cdaf951c77825e0bbead
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26edaf7538d11d082a4b8863228213c3ebc46937
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713166"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122338"
 ---
 # <a name="public-c-reference"></a>public (C# 參考)
 
@@ -43,13 +44,13 @@ class SampleClass
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
 - [存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [C# 關鍵字](index.md)
+- [C # 關鍵字](index.md)
 - [存取修飾詞](access-modifiers.md)
-- [協助工具級別](accessibility-levels.md)
+- [協助工具層級](accessibility-levels.md)
 - [修飾詞](index.md)
 - [私人](private.md)
-- [保護](protected.md)
-- [內部](internal.md)
+- [protected](protected.md)
+- [internal](internal.md)

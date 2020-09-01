@@ -1,15 +1,16 @@
 ---
+description: out 參數修飾詞 - C# 參考
 title: out 參數修飾詞 - C# 參考
 ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 30946c85d2b64ead3f42e03da61108fa5b367779
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 23bf841c002f9be5fdd4e8d8da48e68e9f6e5fcc
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174805"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122416"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 參數修飾詞 (C# 參考)
 
@@ -48,15 +49,15 @@ class CS0663_Example
   
 - 迭代器方法，其包括 [yield return](./yield.md) 或 `yield break` 陳述式。  
 
-此外，[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)的限制如下：
+此外， [擴充方法](../../programming-guide/classes-and-structs/extension-methods.md) 具有下列限制：
 
-- `out`關鍵字不能用於擴充方法的第一個引數。
-- `ref`當引數不是結構或不受限於結構的泛型型別時，不能在擴充方法的第一個引數上使用關鍵字。
-- `in`除非第一個引數是結構，否則無法使用關鍵字。 `in`關鍵字不能用於任何泛型型別，即使限制為結構也一樣。
+- `out`關鍵字不能用在擴充方法的第一個引數上。
+- `ref`當引數不是結構，或是不受限於不是結構的泛型型別時，無法在擴充方法的第一個引數上使用關鍵字。
+- `in`除非第一個引數是結構，否則無法使用關鍵字。 `in`關鍵字不能用於任何泛型型別，即使當條件約束為結構時也一樣。
 
 ## <a name="declaring-out-parameters"></a>宣告 `out` 參數
 
-使用 `out` 引數來宣告方法是傳回多個值的傳統因應措施。 從 c # 7.0 開始，請考慮類似案例的[值元組](../builtin-types/value-tuples.md)。 下列範例使用 `out`，在單一方法呼叫中，傳回三個變數。 第三個引數會指派給 null。 這可讓方法能選擇性地傳回值。  
+使用 `out` 引數來宣告方法是傳回多個值的傳統因應措施。 從 c # 7.0 開始，請考慮類似案例的 [值元組](../builtin-types/value-tuples.md) 。 下列範例使用 `out`，在單一方法呼叫中，傳回三個變數。 第三個引數會指派給 null。 這可讓方法能選擇性地傳回值。  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 

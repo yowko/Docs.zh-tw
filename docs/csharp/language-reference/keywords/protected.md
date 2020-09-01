@@ -1,4 +1,5 @@
 ---
+description: protected 關鍵字 - C# 參考
 title: protected 關鍵字 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: bec619d4f49bd26daa742c18c830909c14948adf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c18d1f2f45a0a154dccd42736a01874dd1af853
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713179"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122377"
 ---
 # <a name="protected-c-reference"></a>protected (C# 參考)
 
 `protected` 關鍵字是成員存取修飾詞。
 
- > 此頁面涵蓋 `protected` 存取。 關鍵字`protected`也是[`protected internal`](protected-internal.md)和[`private protected`](private-protected.md)訪問修飾符的一部分。
+ > 此頁面涵蓋 `protected` 存取。 `protected`關鍵字也是和存取修飾詞的一部分 [`protected internal`](protected-internal.md) [`private protected`](private-protected.md) 。
 
 受保護的成員可在其類別內由衍生類別執行個體存取。
 
@@ -52,13 +53,13 @@ ms.locfileid: "75713179"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [存取修飾詞](access-modifiers.md)
-- [協助工具級別](accessibility-levels.md)
+- [協助工具層級](accessibility-levels.md)
 - [修飾詞](index.md)
 - [public](public.md)
 - [私人](private.md)
-- [內部](internal.md)
+- [internal](internal.md)
 - [internal virtual 關鍵字的安全性考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

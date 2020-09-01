@@ -1,78 +1,34 @@
 ---
-title: '如何新增 LINQ 查詢的自訂方法（c #）'
-description: '瞭解如何 <T> 在 c # 中將擴充方法加入至 IEnumerable 介面，以擴充您可以用於 LINQ 查詢的方法集合。'
-ms.date: 07/20/2015
+title: '如何新增 LINQ 查詢的自訂方法 (c # ) '
+description: '瞭解如何 <T> 在 c # 中將擴充方法加入至 IEnumerable 介面，以擴充 LINQ 查詢的語法。'
+ms.date: 08/26/2020
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: fac0eb4e14eb3bb36313232a7d7fa3060c0ac171
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 768882fce40a2fc6e018f24c8928341e7c65bc4b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103598"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122421"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何新增 LINQ 查詢的自訂方法（c #）
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>如何新增 LINQ 查詢的自訂方法 (c # ) 
 
-您可以將擴充方法新增至 <xref:System.Collections.Generic.IEnumerable%601> 介面，來延伸您可以用於 LINQ 查詢的方法組。 例如，除了標準平均值或最多作業，您可以建立自訂的彙總方法，計算一系列值的單一值。 您也可以建立一個方法，用為自訂篩選器或一系列值的特定資料轉換，並傳回新的序列。 這類方法的範例包括 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A>。
+您可以藉由將擴充方法加入至介面，來擴充您用於 LINQ 查詢的方法集合 <xref:System.Collections.Generic.IEnumerable%601> 。 例如，除了標準平均或最大作業之外，您還可以建立自訂匯總方法來計算值序列中的單一值。 您也會建立一個方法，以做為自訂篩選或一系列值的特定資料轉換，並傳回新的序列。 這類方法的範例包括 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A>。
 
 當您延伸 <xref:System.Collections.Generic.IEnumerable%601> 介面時，可將自訂方法套用至任何可列舉的集合。 如需詳細資訊，請參閱[擴充方法](../../classes-and-structs/extension-methods.md)。
 
-## <a name="adding-an-aggregate-method"></a>新增彙總方法
+## <a name="adding-an-aggregate-method"></a>新增匯總方法
 
 彙總方法會計算一組值的單一值。 LINQ 提供數種彙總方法，包括 <xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Min%2A> 和 <xref:System.Linq.Enumerable.Max%2A>。 您可將擴充方法新增至 <xref:System.Collections.Generic.IEnumerable%601> 介面，建立自己的彙總方法。
 
 下列程式碼範例示範如何建立呼叫 `Median` 的擴充方法，來計算一系列類型為 `double` 的中位數。
 
-```csharp
-public static class LINQExtension
-{
-    public static double Median(this IEnumerable<double> source)
-    {
-        var countOfElementsInTheSet = source?.Count() ?? 0;
-
-        if (countOfElementsInTheSet == 0)
-        {
-            throw new InvalidOperationException("Cannot compute median for a null or empty set.");
-        }
-
-        var sortedList = (from number in source
-                         orderby number
-                         select number).ToList();
-
-        int itemIndex = countOfElementsInTheSet / 2;
-
-        if (countOfElementsInTheSet % 2 == 0)
-        {
-            // Even number of items.
-            return (sortedList[itemIndex] + sortedList[itemIndex - 1]) / 2;
-        }
-        else
-        {
-            // Odd number of items.
-            return sortedList[itemIndex];
-        }
-    }
-}
-```
+:::code language="csharp" source="./snippets/LinqExtensions.cs" ID="LinqExtensionClass":::
 
 您可以使用從 <xref:System.Collections.Generic.IEnumerable%601> 介面呼叫其他彙總方法同樣的方式，為任何可列舉集合呼叫此擴充方法。
 
 下列程式碼範例示範如何使用 `Median` 方法處理 `double` 類型的陣列。
 
-```csharp
-double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
-
-var query1 = numbers1.Median();
-
-Console.WriteLine("double: Median = " + query1);
-```
-
-```csharp
-/*
- This code produces the following output:
-
- Double: Median = 4.85
-*/
-```
+:::code language="csharp" source="./snippets/Program.cs" ID="MedianUsage":::
 
 ### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>多載彙總方法以接受各種類型
 
@@ -80,43 +36,13 @@ Console.WriteLine("double: Median = " + query1);
 
 #### <a name="to-create-an-overload-for-each-type"></a>為每種類型建立多載
 
-您可以為想要支援的每種類型建立特定的多載。 下列程式碼範例示範適合 `integer` 類型之 `Median` 方法的多載。
+您可以為想要支援的每種類型建立特定的多載。 下列程式碼範例示範適合 `int` 類型之 `Median` 方法的多載。
 
-```csharp
-//int overload
-
-public static double Median(this IEnumerable<int> source)
-{
-    return (from num in source select (double)num).Median();
-}
-```
+:::code language="csharp" source="./snippets/LinqExtensions.cs" ID="IntOverload":::
 
 您現在可以呼叫 `integer` 和 `double` 類型的 `Median` 多載，如下列程式碼所示︰
 
-```csharp
-double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
-
-var query1 = numbers1.Median();
-
-Console.WriteLine("double: Median = " + query1);
-```
-
-```csharp
-int[] numbers2 = { 1, 2, 3, 4, 5 };
-
-var query2 = numbers2.Median();
-
-Console.WriteLine("int: Median = " + query2);
-```
-
-```csharp
-/*
- This code produces the following output:
-
- Double: Median = 4.85
- Integer: Median = 3
-*/
-```
+:::code language="csharp" source="./snippets/Program.cs" ID="OverloadUsage":::
 
 #### <a name="to-create-a-generic-overload"></a>建立一般多載
 
@@ -124,100 +50,27 @@ Console.WriteLine("int: Median = " + query2);
 
 下列程式碼顯示 `Median` 方法的多載，接受 <xref:System.Func%602> 委派為參數。 這個委派會接受泛型型別 T 的物件，並傳回 `double` 類型的物件。
 
-```csharp
-// Generic overload.
+:::code language="csharp" source="./snippets/LinqExtensions.cs" ID="GenericOverload":::
 
-public static double Median<T>(this IEnumerable<T> numbers,
-                       Func<T, double> selector)
-{
-    return (from num in numbers select selector(num)).Median();
-}
-```
-
-您現在可以針對一系列的類型物件呼叫 `Median` 方法。 如果類型沒有自己的方法多載，您就必須傳遞委派參數。 在 C# 中，您可以針對此目的使用 Lambda 運算式。 另僅限 Visual Basic，如果您使用 `Aggregate` 或 `Group By` 子句而不是方法呼叫，您可以傳遞此子句範圍內的任何值或運算式。
+您現在可以針對一系列的類型物件呼叫 `Median` 方法。 如果類型沒有自己的方法多載，則您必須傳遞委派參數。 在 C# 中，您可以針對此目的使用 Lambda 運算式。 另僅限 Visual Basic，如果您使用 `Aggregate` 或 `Group By` 子句而不是方法呼叫，您可以傳遞此子句範圍內的任何值或運算式。
 
 下列程式碼範例示範如何呼叫 `Median` 方法，處理整數陣列及字串陣列。 針對字串，會計算陣列字串長度的中間值。 此範例會示範如何將 <xref:System.Func%602> 委派參數傳遞至每個案例的 `Median` 方法。
 
-```csharp
-int[] numbers3 = { 1, 2, 3, 4, 5 };
+:::code language="csharp" source="./snippets/Program.cs" ID="GenericUsage":::
 
-/*
-  You can use the num=>num lambda expression as a parameter for the Median method
-  so that the compiler will implicitly convert its value to double.
-  If there is no implicit conversion, the compiler will display an error message.
-*/
-
-var query3 = numbers3.Median(num => num);
-
-Console.WriteLine("int: Median = " + query3);
-
-string[] numbers4 = { "one", "two", "three", "four", "five" };
-
-// With the generic overload, you can also use numeric properties of objects.
-
-var query4 = numbers4.Median(str => str.Length);
-
-Console.WriteLine("String: Median = " + query4);
-
-/*
- This code produces the following output:
-
- Integer: Median = 3
- String: Median = 4
-*/
-```
-
-## <a name="adding-a-method-that-returns-a-collection"></a>新增傳回集合的方法
+## <a name="adding-a-method-that-returns-a-sequence"></a>加入傳回序列的方法
 
 您可以使用傳回一系列值的自訂查詢方法來延伸 <xref:System.Collections.Generic.IEnumerable%601> 介面。 在此情況下，方法必須傳回型別 <xref:System.Collections.Generic.IEnumerable%601> 的集合。 此等方法可用來將篩選條件或資料轉換套用至一系列的值。
 
 下例示範如何建立名為 `AlternateElements` 的擴充方法，傳回集合中的每隔個項目，從第一個項目開始。
 
-```csharp
-// Extension method for the IEnumerable<T> interface.
-// The method returns every other element of a sequence.
-
-public static IEnumerable<T> AlternateElements<T>(this IEnumerable<T> source)
-{
-    List<T> list = new List<T>();
-
-    int i = 0;
-
-    foreach (var element in source)
-    {
-        if (i % 2 == 0)
-        {
-            list.Add(element);
-        }
-
-        i++;
-    }
-
-    return list;
-}
-```
+:::code language="csharp" source="./snippets/LinqExtensions.cs" ID="SequenceElement":::
 
 您可為任何可列舉集合呼叫此擴充方法，就和您從 <xref:System.Collections.Generic.IEnumerable%601> 介面呼叫其他方法一樣，如下列程式碼所示：
 
-```csharp
-string[] strings = { "a", "b", "c", "d", "e" };
+:::code language="csharp" source="./snippets/Program.cs" ID="SequenceUsage":::
 
-var query = strings.AlternateElements();
-
-foreach (var element in query)
-{
-    Console.WriteLine(element);
-}
-/*
- This code produces the following output:
-
- a
- c
- e
-*/
-```
-
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [擴充方法](../../classes-and-structs/extension-methods.md)
