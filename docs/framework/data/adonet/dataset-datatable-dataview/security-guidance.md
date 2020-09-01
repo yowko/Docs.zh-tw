@@ -3,12 +3,12 @@ title: DataSet 和 DataTable 安全性指引
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812233"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137613"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 和 DataTable 安全性指引
 
@@ -40,11 +40,14 @@ ms.locfileid: "88812233"
 堆疊追蹤：  
 在 TypeLimiter. EnsureTypeIsAllowed (類型 type、TypeLimiter capturedLimiter)   
 UpdateColumnType (Type type，StorageType typeCode)   
-在 set_DataType (類型值)   
+在 System.Data.DataColumn.set_DataType (類型值)   
 
 * 還原序列化作業失敗。
 
 將 XML 載入至現有的 `DataSet` 或 `DataTable` 實例時，也會將現有的資料行定義列入考慮。 如果資料表已經包含自訂類型的資料行定義，則該類型會暫時加入至 XML 還原序列化作業期間的允許清單中。
+
+> [!NOTE]
+> 當您將資料行加入至之後 `DataTable` ， `ReadXml` 將不會從 XML 讀取架構，如果架構不符合，就不會讀取記錄，因此您必須自行加入所有資料行，才能使用這個方法。
 
 ```cs
 XmlReader xmlReader = GetXmlReader();

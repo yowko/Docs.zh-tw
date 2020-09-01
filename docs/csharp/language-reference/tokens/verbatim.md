@@ -1,4 +1,5 @@
 ---
+description: '@ - C# 參考'
 title: '@ - C# 參考'
 ms.date: 02/09/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - '@ special character [C#]'
 - '@ language element [C#]'
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
-ms.openlocfilehash: b37f77273e767a5e5292e7707933892f57811d2a
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 7d78b28479ed6128321207073dc94976710f10b6
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291767"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138900"
 ---
 # <a name="-c-reference"></a>@ (C# 參考)
 
@@ -23,7 +24,7 @@ ms.locfileid: "80291767"
 
    [!code-csharp[verbatim1](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#1)]
 
-1. 表示要逐字解譯字串常值。 這個執行個體中的 `@` 字元會定義「逐字字串常值」**。 簡單逸出序列 (例如 `"\\"` 用於反斜線)、十六進位逸出序列 (例如 `"\x0041"` 用於大寫 A)，以及 Unicode 逸出序列 (例如 `"\u0041"` 用於大寫 A) 都是照字面解譯。 只有引號逸出序列`""`（ ） 不會從字面上解釋;它生成一個雙引號。 此外，如果是逐字[插入字串](interpolated.md)，大括弧逸出序列 (`{{` 和 `}}`) 不會照字面意義解譯，它們會產生一個大括弧字元。 下例會定義兩個相同的檔案路徑，一個使用規則字串常值，另一個使用逐字字串常值。 這是逐字字串常值較常見的用法之一。
+1. 表示要逐字解譯字串常值。 這個執行個體中的 `@` 字元會定義「逐字字串常值」**。 簡單逸出序列 (例如 `"\\"` 用於反斜線)、十六進位逸出序列 (例如 `"\x0041"` 用於大寫 A)，以及 Unicode 逸出序列 (例如 `"\u0041"` 用於大寫 A) 都是照字面解譯。 只有引號 escape 序列 (的 `""`) 並不會以字面方式解讀; 它會產生一個雙引號。 此外，如果是逐字[插入字串](interpolated.md)，大括弧逸出序列 (`{{` 和 `}}`) 不會照字面意義解譯，它們會產生一個大括弧字元。 下例會定義兩個相同的檔案路徑，一個使用規則字串常值，另一個使用逐字字串常值。 這是逐字字串常值較常見的用法之一。
 
    [!code-csharp[verbatim2](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#2)]
 
@@ -37,6 +38,6 @@ ms.locfileid: "80291767"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 特殊字元](./index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 特殊字元](./index.md)

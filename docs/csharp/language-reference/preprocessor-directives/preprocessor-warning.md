@@ -1,4 +1,5 @@
 ---
+description: '#warning - C# 參考'
 title: '#warning - C# 參考'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 38c3807a696599390667060d3bf374c68845fed0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab2cc5120492fc2a4b94296eb85e563c0a1d5ad3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715062"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137834"
 ---
 # <a name="warning-c-reference"></a>#warning (C# 參考)
 `#warning` 可讓您從程式碼中的特定位置產生 [CS1030](../../misc/cs1030.md) 層級一的編譯器警告。 例如：  
@@ -42,6 +43,6 @@ class MainClass
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 預處理器指令](./index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 預處理器指示詞](./index.md)

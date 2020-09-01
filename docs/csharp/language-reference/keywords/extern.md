@@ -1,4 +1,5 @@
 ---
+description: extern 修飾詞 - C# 參考
 title: extern 修飾詞 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: c121d810e64b5fa27f105f814253c0752e028a95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25eb5e6642d8b608bedcb4e9adadde4d84c2bae9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713532"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138965"
 ---
 # <a name="extern-c-reference"></a>extern (C# 參考)
 
@@ -90,7 +91,7 @@ extern 關鍵字在 C# 中的使用方式比在 C++ 中受到更多限制。 若
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [修飾詞](index.md)

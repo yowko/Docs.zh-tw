@@ -1,4 +1,5 @@
 ---
+description: '#endif - C# 參考'
 title: '#endif - C# 參考'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-ms.openlocfilehash: cc344a224e2308e843328b228dd5e2466d02069f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8068a6e437145178fd5c88763c86692a8700c349
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712542"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138159"
 ---
 # <a name="endif-c-reference"></a>#endif (C# 參考)
 `#endif` 指定條件指示詞的結尾，而其開始於 [#if](./preprocessor-if.md) 指示詞。 例如，  
@@ -29,6 +30,6 @@ ms.locfileid: "75712542"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 預處理器指令](./index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 預處理器指示詞](./index.md)

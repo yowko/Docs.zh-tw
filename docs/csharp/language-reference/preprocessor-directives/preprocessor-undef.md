@@ -1,4 +1,5 @@
 ---
+description: '#undef - C# 參考'
 title: '#undef - C# 參考'
 ms.date: 06/30/2018
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: 21923412aa178c3b86e94a54bd911130e48e4deb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97f99ab4230585e61fed0e057552b78c7a4c2bb5
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712438"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137860"
 ---
 # <a name="undef-c-reference"></a>#undef (C# 參考)
 `#undef` 可讓您取消定義符號，如此一來，在 [#if](./preprocessor-if.md) 指示詞中使用符號作為運算式，運算式就會評估為 `false`。  
   
- 符號可以使用[#define](./preprocessor-define.md)指令或[-define](../compiler-options/define-compiler-option.md)編譯器選項進行定義。 `#undef` 指示詞必須先出現在檔案中，才能使用亦非指示詞的任何陳述式。  
+ 您可以使用 [#define](./preprocessor-define.md) 指示詞或 [-define](../compiler-options/define-compiler-option.md) 編譯器選項來定義符號。 `#undef` 指示詞必須先出現在檔案中，才能使用亦非指示詞的任何陳述式。  
   
 ## <a name="example"></a>範例  
 
@@ -42,6 +43,6 @@ class MyClass
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 預處理器指令](./index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 預處理器指示詞](./index.md)

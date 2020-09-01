@@ -1,4 +1,5 @@
 ---
+description: -warn (C# 編譯器選項)
 title: -warn (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.custom: updateeachrelease
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: d495ef76dc390d8dd2a361d5530f9e39d7128b3e
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 55e80d0bd05e2119154210503bb277d743050e18
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867603"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139069"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# 編譯器選項)
 **-warn** 選項指定要針對編譯器顯示的警告層級。  
@@ -67,7 +68,7 @@ ms.locfileid: "88867603"
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

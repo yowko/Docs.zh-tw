@@ -1,4 +1,5 @@
 ---
+description: Checked 與 Unchecked - C# 參考
 title: Checked 與 Unchecked - C# 參考
 ms.date: 05/15/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 8ee4c481a30dce30029fbe8cc26f4798b523a7ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8d6a26e28062da682689bf64a9e38ea5fd158b2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173636"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138263"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked 與 Unchecked (C# 參考)
 C# 陳述式可在 checked 或 unchecked 內容中執行。 在 checked 內容中，算術溢位會引發例外狀況。 在未經檢查的內容中，會忽略算術溢位，並捨棄目的型別不適用的高序位位元，以便將結果截斷。  
@@ -37,7 +38,7 @@ C# 陳述式可在 checked 或 unchecked 內容中執行。 在 checked 內容�
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
-- [語句關鍵字](statement-keywords.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
+- [陳述式關鍵字](statement-keywords.md)

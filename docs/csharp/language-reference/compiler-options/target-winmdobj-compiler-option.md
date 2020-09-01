@@ -1,13 +1,14 @@
 ---
+description: -target:winmdobj (C# 編譯器選項)
 title: -target:winmdobj (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 85ae9a3f5e9b038c0c56935ec5af2b9b09d19f20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 66a4bddb34832705ad4779829e561afd9442be8f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204484"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139082"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# 編譯器選項)
 如果您使用 **-target:winmdobj** 編譯器選項，編譯器會建立一個可轉換成 Windows 執行階段二進位檔案 (.winmd) 的中繼 .winmdobj 檔案。 除了 Managed 語言程式之外，JavaScript 和 C++ 程式也可以使用 .winmd 檔案。  
@@ -35,7 +36,7 @@ ms.locfileid: "74204484"
   
 3. 在 [輸出類型]**** 清單中，選擇 [WinMD 檔案]****。  
   
-     **WinMD 檔**選項僅適用于 Windows 8.x 應用商店應用範本。  
+     **WinMD**檔案選項僅適用于 Windows 8. x Store 應用程式範本。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
@@ -48,5 +49,5 @@ csc -target:winmdobj filename.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [-目標（C# 編譯器選項）](./target-compiler-option.md)
-- [C# 編譯器選項](./index.md)
+- [-目標 (c # 編譯器選項) ](./target-compiler-option.md)
+- [C # 編譯器選項](./index.md)

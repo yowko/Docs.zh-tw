@@ -1,4 +1,5 @@
 ---
+description: '#pragma 總和檢查碼 - C# 參考'
 title: '#pragma 總和檢查碼 - C# 參考'
 ms.date: 07/20/2015
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60c491000337fd50da217e97054e86faccb2e7d7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712477"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137977"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)
 產生原始程式檔的總和檢查碼，協助偵錯 ASP.NET 頁面。  
@@ -55,6 +56,6 @@ class TestClass
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 預處理器指令](./index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 預處理器指示詞](./index.md)
