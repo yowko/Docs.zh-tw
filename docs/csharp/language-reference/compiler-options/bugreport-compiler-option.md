@@ -1,4 +1,5 @@
 ---
+description: -bugreport (C# 編譯器選項)
 title: -bugreport (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,53 +9,53 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c358b2dda400f6077ffb5ba1dfc8e6e1127fa52
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69603077"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125991"
 ---
-# <a name="-bugreport-c-compiler-options"></a><span data-ttu-id="9ce26-102">-bugreport (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="9ce26-102">-bugreport (C# Compiler Options)</span></span>
-<span data-ttu-id="9ce26-103">指定偵錯資訊應該置於檔案以供稍後分析。</span><span class="sxs-lookup"><span data-stu-id="9ce26-103">Specifies that debug information should be placed in a file for later analysis.</span></span>  
+# <a name="-bugreport-c-compiler-options"></a><span data-ttu-id="0cb52-103">-bugreport (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="0cb52-103">-bugreport (C# Compiler Options)</span></span>
+<span data-ttu-id="0cb52-104">指定偵錯資訊應該置於檔案以供稍後分析。</span><span class="sxs-lookup"><span data-stu-id="0cb52-104">Specifies that debug information should be placed in a file for later analysis.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ce26-104">語法</span><span class="sxs-lookup"><span data-stu-id="9ce26-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0cb52-105">語法</span><span class="sxs-lookup"><span data-stu-id="0cb52-105">Syntax</span></span>  
   
 ```console  
 -bugreport:file  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="9ce26-105">引數</span><span class="sxs-lookup"><span data-stu-id="9ce26-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="0cb52-106">引數</span><span class="sxs-lookup"><span data-stu-id="0cb52-106">Arguments</span></span>  
  `file`  
- <span data-ttu-id="9ce26-106">您要包含錯誤報告的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="9ce26-106">The name of the file that you want to contain your bug report.</span></span>  
+ <span data-ttu-id="0cb52-107">您要包含錯誤報告的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="0cb52-107">The name of the file that you want to contain your bug report.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9ce26-107">備註</span><span class="sxs-lookup"><span data-stu-id="9ce26-107">Remarks</span></span>  
- <span data-ttu-id="9ce26-108">**-bugreport** 選項會指定下列資訊應該置於 `file`：</span><span class="sxs-lookup"><span data-stu-id="9ce26-108">The **-bugreport** option specifies that the following information should be placed in `file`:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0cb52-108">備註</span><span class="sxs-lookup"><span data-stu-id="0cb52-108">Remarks</span></span>  
+ <span data-ttu-id="0cb52-109">**-bugreport** 選項會指定下列資訊應該置於 `file`：</span><span class="sxs-lookup"><span data-stu-id="0cb52-109">The **-bugreport** option specifies that the following information should be placed in `file`:</span></span>  
   
-- <span data-ttu-id="9ce26-109">編譯中所有原始程式碼檔的複本。</span><span class="sxs-lookup"><span data-stu-id="9ce26-109">A copy of all source code files in the compilation.</span></span>  
+- <span data-ttu-id="0cb52-110">編譯中所有原始程式碼檔的複本。</span><span class="sxs-lookup"><span data-stu-id="0cb52-110">A copy of all source code files in the compilation.</span></span>  
   
-- <span data-ttu-id="9ce26-110">編譯中使用的編譯器選項清單。</span><span class="sxs-lookup"><span data-stu-id="9ce26-110">A listing of the compiler options used in the compilation.</span></span>  
+- <span data-ttu-id="0cb52-111">編譯中使用的編譯器選項清單。</span><span class="sxs-lookup"><span data-stu-id="0cb52-111">A listing of the compiler options used in the compilation.</span></span>  
   
-- <span data-ttu-id="9ce26-111">您的編譯器、執行階段和作業系統的版本資訊。</span><span class="sxs-lookup"><span data-stu-id="9ce26-111">Version information about your compiler, run time, and operating system.</span></span>  
+- <span data-ttu-id="0cb52-112">您的編譯器、執行階段和作業系統的版本資訊。</span><span class="sxs-lookup"><span data-stu-id="0cb52-112">Version information about your compiler, run time, and operating system.</span></span>  
   
-- <span data-ttu-id="9ce26-112">除了隨附於 .NET Framework 和 SDK 的組件之外，還包括參考組件和模組 (儲存為十六進位數字)。</span><span class="sxs-lookup"><span data-stu-id="9ce26-112">Referenced assemblies and modules, saved as hexadecimal digits, except assemblies that ship with the .NET Framework and SDK.</span></span>  
+- <span data-ttu-id="0cb52-113">除了隨附於 .NET Framework 和 SDK 的組件之外，還包括參考組件和模組 (儲存為十六進位數字)。</span><span class="sxs-lookup"><span data-stu-id="0cb52-113">Referenced assemblies and modules, saved as hexadecimal digits, except assemblies that ship with the .NET Framework and SDK.</span></span>  
   
-- <span data-ttu-id="9ce26-113">編譯器輸出 (如果有的話)。</span><span class="sxs-lookup"><span data-stu-id="9ce26-113">Compiler output, if any.</span></span>  
+- <span data-ttu-id="0cb52-114">編譯器輸出 (如果有的話)。</span><span class="sxs-lookup"><span data-stu-id="0cb52-114">Compiler output, if any.</span></span>  
   
-- <span data-ttu-id="9ce26-114">問題的描述，會提示您操作指示。</span><span class="sxs-lookup"><span data-stu-id="9ce26-114">A description of the problem, which you will be prompted for.</span></span>  
+- <span data-ttu-id="0cb52-115">問題的描述，會提示您操作指示。</span><span class="sxs-lookup"><span data-stu-id="0cb52-115">A description of the problem, which you will be prompted for.</span></span>  
   
-- <span data-ttu-id="9ce26-115">您認為問題該如何解決的描述，會提示您操作指示。</span><span class="sxs-lookup"><span data-stu-id="9ce26-115">A description of how you think the problem should be fixed, which you will be prompted for.</span></span>  
+- <span data-ttu-id="0cb52-116">您認為問題該如何解決的描述，會提示您操作指示。</span><span class="sxs-lookup"><span data-stu-id="0cb52-116">A description of how you think the problem should be fixed, which you will be prompted for.</span></span>  
   
- <span data-ttu-id="9ce26-116">如果這個選項與 **-errorreport:prompt** 或 **-errorreport:send** 搭配使用，則會將檔案中的資訊傳送給 Microsoft Corporation。</span><span class="sxs-lookup"><span data-stu-id="9ce26-116">If this option is used with **-errorreport:prompt** or **-errorreport:send**, the information in the file will be sent to Microsoft Corporation.</span></span>  
+ <span data-ttu-id="0cb52-117">如果這個選項與 **-errorreport:prompt** 或 **-errorreport:send** 搭配使用，則會將檔案中的資訊傳送給 Microsoft Corporation。</span><span class="sxs-lookup"><span data-stu-id="0cb52-117">If this option is used with **-errorreport:prompt** or **-errorreport:send**, the information in the file will be sent to Microsoft Corporation.</span></span>  
   
- <span data-ttu-id="9ce26-117">由於 `file`中放置所有原始程式碼檔的複本，您可能想要以最短的可能程式重現 (可疑的) 程式碼缺失。</span><span class="sxs-lookup"><span data-stu-id="9ce26-117">Because a copy of all source code files will be placed in `file`, you might want to reproduce the suspected code defect in the shortest possible program.</span></span>  
+ <span data-ttu-id="0cb52-118">由於 `file`中放置所有原始程式碼檔的複本，您可能想要以最短的可能程式重現 (可疑的) 程式碼缺失。</span><span class="sxs-lookup"><span data-stu-id="0cb52-118">Because a copy of all source code files will be placed in `file`, you might want to reproduce the suspected code defect in the shortest possible program.</span></span>  
   
- <span data-ttu-id="9ce26-118">Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。</span><span class="sxs-lookup"><span data-stu-id="9ce26-118">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="0cb52-119">Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。</span><span class="sxs-lookup"><span data-stu-id="0cb52-119">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
- <span data-ttu-id="9ce26-119">請注意，所產生檔案的內容會公開原始程式碼，而這可能會不慎洩漏資訊。</span><span class="sxs-lookup"><span data-stu-id="9ce26-119">Notice that contents of the generated file expose source code that could result in inadvertent information disclosure.</span></span>  
+ <span data-ttu-id="0cb52-120">請注意，所產生檔案的內容會公開原始程式碼，而這可能會不慎洩漏資訊。</span><span class="sxs-lookup"><span data-stu-id="0cb52-120">Notice that contents of the generated file expose source code that could result in inadvertent information disclosure.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ce26-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9ce26-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0cb52-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0cb52-121">See also</span></span>
 
-- [<span data-ttu-id="9ce26-121">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="9ce26-121">C# Compiler Options</span></span>](./index.md)
-- [<span data-ttu-id="9ce26-122">-錯誤報表（C# 編譯器選項）</span><span class="sxs-lookup"><span data-stu-id="9ce26-122">-errorreport (C# Compiler Options)</span></span>](./errorreport-compiler-option.md)
-- [<span data-ttu-id="9ce26-123">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="9ce26-123">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="0cb52-122">C # 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="0cb52-122">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="0cb52-123">-errorreport (c # 編譯器選項) </span><span class="sxs-lookup"><span data-stu-id="0cb52-123">-errorreport (C# Compiler Options)</span></span>](./errorreport-compiler-option.md)
+- [<span data-ttu-id="0cb52-124">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="0cb52-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

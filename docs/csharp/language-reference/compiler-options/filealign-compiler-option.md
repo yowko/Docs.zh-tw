@@ -1,4 +1,5 @@
 ---
+description: -filealign (C# 編譯器選項)
 title: -filealign (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,46 +17,46 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: aed8b412ea1580f7dfa4f87333598d76a85b5e64
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4abe6c3825de211d737f402a745c8953adca4b8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69603017"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125705"
 ---
-# <a name="-filealign-c-compiler-options"></a><span data-ttu-id="d37f3-102">-filealign (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="d37f3-102">-filealign (C# Compiler Options)</span></span>
-<span data-ttu-id="d37f3-103">**-filealign** 選項可讓您指定輸出檔案中的區段大小。</span><span class="sxs-lookup"><span data-stu-id="d37f3-103">The **-filealign** option lets you specify the size of sections in your output file.</span></span>  
+# <a name="-filealign-c-compiler-options"></a><span data-ttu-id="8599d-103">-filealign (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="8599d-103">-filealign (C# Compiler Options)</span></span>
+<span data-ttu-id="8599d-104">**-filealign** 選項可讓您指定輸出檔案中的區段大小。</span><span class="sxs-lookup"><span data-stu-id="8599d-104">The **-filealign** option lets you specify the size of sections in your output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d37f3-104">語法</span><span class="sxs-lookup"><span data-stu-id="d37f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8599d-105">語法</span><span class="sxs-lookup"><span data-stu-id="8599d-105">Syntax</span></span>  
   
 ```console  
 -filealign:number  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="d37f3-105">引數</span><span class="sxs-lookup"><span data-stu-id="d37f3-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="8599d-106">引數</span><span class="sxs-lookup"><span data-stu-id="8599d-106">Arguments</span></span>  
  `number`  
- <span data-ttu-id="d37f3-106">指定輸出檔案中區段大小的值。</span><span class="sxs-lookup"><span data-stu-id="d37f3-106">A value that specifies the size of sections in the output file.</span></span> <span data-ttu-id="d37f3-107">有效值為 512、1024、2048、4096 和 8192。</span><span class="sxs-lookup"><span data-stu-id="d37f3-107">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="d37f3-108">這些值是以位元組為單位。</span><span class="sxs-lookup"><span data-stu-id="d37f3-108">These values are in bytes.</span></span>  
+ <span data-ttu-id="8599d-107">指定輸出檔案中區段大小的值。</span><span class="sxs-lookup"><span data-stu-id="8599d-107">A value that specifies the size of sections in the output file.</span></span> <span data-ttu-id="8599d-108">有效值為 512、1024、2048、4096 和 8192。</span><span class="sxs-lookup"><span data-stu-id="8599d-108">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="8599d-109">這些值是以位元組為單位。</span><span class="sxs-lookup"><span data-stu-id="8599d-109">These values are in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d37f3-109">備註</span><span class="sxs-lookup"><span data-stu-id="d37f3-109">Remarks</span></span>  
- <span data-ttu-id="d37f3-110">每個區段都會對齊界限，而這個界限是 **-filealign** 值的倍數。</span><span class="sxs-lookup"><span data-stu-id="d37f3-110">Each section will be aligned on a boundary that is a multiple of the **-filealign** value.</span></span> <span data-ttu-id="d37f3-111">沒有固定預設值。</span><span class="sxs-lookup"><span data-stu-id="d37f3-111">There is no fixed default.</span></span> <span data-ttu-id="d37f3-112">如果未指定 **-filealign**，通用語言執行平台會在編譯時期選取預設值。</span><span class="sxs-lookup"><span data-stu-id="d37f3-112">If **-filealign** is not specified, the common language runtime picks a default at compile time.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8599d-110">備註</span><span class="sxs-lookup"><span data-stu-id="8599d-110">Remarks</span></span>  
+ <span data-ttu-id="8599d-111">每個區段都會對齊界限，而這個界限是 **-filealign** 值的倍數。</span><span class="sxs-lookup"><span data-stu-id="8599d-111">Each section will be aligned on a boundary that is a multiple of the **-filealign** value.</span></span> <span data-ttu-id="8599d-112">沒有固定預設值。</span><span class="sxs-lookup"><span data-stu-id="8599d-112">There is no fixed default.</span></span> <span data-ttu-id="8599d-113">如果未指定 **-filealign**，通用語言執行平台會在編譯時期選取預設值。</span><span class="sxs-lookup"><span data-stu-id="8599d-113">If **-filealign** is not specified, the common language runtime picks a default at compile time.</span></span>  
   
- <span data-ttu-id="d37f3-113">您可以藉由指定區段大小，來影響輸出檔案的大小。</span><span class="sxs-lookup"><span data-stu-id="d37f3-113">By specifying the section size, you affect the size of the output file.</span></span> <span data-ttu-id="d37f3-114">修改區段大小對執行於較小裝置上的程式而言可能很有用。</span><span class="sxs-lookup"><span data-stu-id="d37f3-114">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
+ <span data-ttu-id="8599d-114">您可以藉由指定區段大小，來影響輸出檔案的大小。</span><span class="sxs-lookup"><span data-stu-id="8599d-114">By specifying the section size, you affect the size of the output file.</span></span> <span data-ttu-id="8599d-115">修改區段大小對執行於較小裝置上的程式而言可能很有用。</span><span class="sxs-lookup"><span data-stu-id="8599d-115">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
   
- <span data-ttu-id="d37f3-115">請使用 [DUMPBIN](/cpp/build/reference/dumpbin-options) 來查看輸出檔案中區段的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="d37f3-115">Use [DUMPBIN](/cpp/build/reference/dumpbin-options) to see information about sections in your output file.</span></span>  
+ <span data-ttu-id="8599d-116">請使用 [DUMPBIN](/cpp/build/reference/dumpbin-options) 來查看輸出檔案中區段的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="8599d-116">Use [DUMPBIN](/cpp/build/reference/dumpbin-options) to see information about sections in your output file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d37f3-116">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="d37f3-116">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="8599d-117">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="8599d-117">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1. <span data-ttu-id="d37f3-117">開啟專案的 [屬性]\*\*\*\* 頁面。</span><span class="sxs-lookup"><span data-stu-id="d37f3-117">Open the project's **Properties** page.</span></span>  
+1. <span data-ttu-id="8599d-118">開啟專案的 [屬性]\*\*\*\* 頁面。</span><span class="sxs-lookup"><span data-stu-id="8599d-118">Open the project's **Properties** page.</span></span>  
   
-2. <span data-ttu-id="d37f3-118">按一下 [建置]\*\*\*\* 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="d37f3-118">Click the **Build** property page.</span></span>  
+2. <span data-ttu-id="8599d-119">按一下 [建置]\*\*\*\* 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="8599d-119">Click the **Build** property page.</span></span>  
   
-3. <span data-ttu-id="d37f3-119">按一下 [進階]\*\*\*\* 按鈕。</span><span class="sxs-lookup"><span data-stu-id="d37f3-119">Click the **Advanced** button.</span></span>  
+3. <span data-ttu-id="8599d-120">按一下 [進階]  按鈕。</span><span class="sxs-lookup"><span data-stu-id="8599d-120">Click the **Advanced** button.</span></span>  
   
-4. <span data-ttu-id="d37f3-120">修改 [檔案對齊]\*\*\*\* 屬性。</span><span class="sxs-lookup"><span data-stu-id="d37f3-120">Modify the **File Alignment** property.</span></span>  
+4. <span data-ttu-id="8599d-121">修改 [檔案對齊]\*\*\*\* 屬性。</span><span class="sxs-lookup"><span data-stu-id="8599d-121">Modify the **File Alignment** property.</span></span>  
   
- <span data-ttu-id="d37f3-121">如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。</span><span class="sxs-lookup"><span data-stu-id="d37f3-121">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span></span>  
+ <span data-ttu-id="8599d-122">如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。</span><span class="sxs-lookup"><span data-stu-id="8599d-122">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d37f3-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d37f3-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8599d-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8599d-123">See also</span></span>
 
-- [<span data-ttu-id="d37f3-123">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="d37f3-123">C# Compiler Options</span></span>](./index.md)
-- [<span data-ttu-id="d37f3-124">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="d37f3-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="8599d-124">C # 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="8599d-124">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="8599d-125">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="8599d-125">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
