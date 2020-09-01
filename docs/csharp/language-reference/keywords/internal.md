@@ -1,4 +1,5 @@
 ---
+description: internal - C# 參考
 title: internal - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,17 +8,17 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: e5a5ca18828b689241abbb6d80c5adc51efb073c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14722d66a65eb5f96118acf017dc877e657b2dd9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173597"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134571"
 ---
 # <a name="internal-c-reference"></a>internal (C# 參考)
 `internal` 關鍵字是類型和類型成員的[存取修飾詞](./access-modifiers.md)。
   
- > 此頁面涵蓋 `internal` 存取。 關鍵字`internal`也是訪問修改器的一[`protected internal`](./protected-internal.md)部分。
+ > 此頁面涵蓋 `internal` 存取。 `internal`關鍵字也是存取修飾詞的一部分 [`protected internal`](./protected-internal.md) 。
   
 內部類型或成員只能在相同組件的檔案內存取，如下列範例所示：  
   
@@ -92,12 +93,12 @@ public class TestAccess
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](./index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](./index.md)
 - [存取修飾詞](./access-modifiers.md)
-- [協助工具級別](./accessibility-levels.md)
+- [協助工具層級](./accessibility-levels.md)
 - [修飾詞](index.md)
 - [public](./public.md)
 - [私人](./private.md)
-- [保護](./protected.md)
+- [protected](./protected.md)

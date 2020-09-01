@@ -1,4 +1,5 @@
 ---
+description: C# 關鍵字
 title: C# 關鍵字
 ms.date: 03/07/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - '@ keyword'
 ms.custom: updateeachrelease
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 3392b92cbd77e5b3f895af99a71f33d2ab43fa15
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: a6658fe7bb97309d35ca2a9177a90a2443f1a3ca
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812311"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134610"
 ---
 # <a name="c-keywords"></a>C# 關鍵字
 
@@ -34,13 +35,13 @@ ms.locfileid: "88812311"
 |[最後](try-finally.md)|[固定](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
 |[foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[隱 式](../operators/user-defined-conversion-operators.md)|  
 |[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[interface](interface.md)|[internal](internal.md)|
-|[是](is.md)|[鎖](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[命名 空間](namespace.md)|
+|[is](is.md)|[鎖](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[命名 空間](namespace.md)|
 |[新增功能](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[operator](../operators/operator-overloading.md)|
 |[擴展](out.md)|[override](override.md)|[params](params.md)|[私人](private.md)|
-|[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[裁判](ref.md)|
-|[返回](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
+|[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
+|[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
 [sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](../builtin-types/reference-types.md)|
-|[結構](../builtin-types/struct.md)|[switch](switch.md)|[this](this.md)|[扔](throw.md)|
+|[結構](../builtin-types/struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
 |[true](../builtin-types/bool.md)|[嘗試](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
 |[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[安全](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
 |[使用](using.md)|[virtual](virtual.md)|[void](../builtin-types/void.md)|[volatile](volatile.md)|
@@ -52,12 +53,12 @@ ms.locfileid: "88812311"
   
 ||||  
 |---|---|---|  
-|[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
-|[async](async.md)|[await](../operators/await.md)|[逐](by.md)|
+|[新增](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
+|[async](async.md)|[await](../operators/await.md)|[by](by.md)|
 |[descending](descending.md)|[動態](../builtin-types/reference-types.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[全球](../operators/namespace-alias-qualifier.md)|
 |[群組](group-clause.md)|[into](into.md)|[join](join-clause.md)|
-|[讓](let-clause.md)|[nameof](../operators/nameof.md)|[notnull](../../programming-guide/generics/constraints-on-type-parameters.md#notnull-constraint)|
+|[let](let-clause.md)|[nameof](../operators/nameof.md)|[notnull](../../programming-guide/generics/constraints-on-type-parameters.md#notnull-constraint)|
 |[on](on.md)|[orderby](orderby-clause.md)|[部分 (類型) ](partial-type.md)|
 |[部分 (方法) ](partial-method.md)|[remove](remove.md)|[select](select-clause.md)|
 |[set](set.md)|[非受控 (泛型型別條件約束) ](where-generic-type-constraint.md)|[value](value.md)|

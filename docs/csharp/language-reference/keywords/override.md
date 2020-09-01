@@ -1,4 +1,5 @@
 ---
+description: override 修飾詞 - C# 參考
 title: override 修飾詞 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: acad3aa3b196c184132ad1acdf52b18a799b0896
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51ca806310214981b7ff24a796fe078d902dca4d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713244"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134454"
 ---
 # <a name="override-c-reference"></a>override (C# 參考)
 
@@ -20,7 +21,7 @@ ms.locfileid: "75713244"
 
 ## <a name="example"></a>範例
 
-在此示例中，`Square`類必須提供重寫的實現，`GetArea`因為`GetArea`是從抽象`Shape`類繼承的：
+在此範例中， `Square` 類別必須提供覆寫的實作為， `GetArea` 因為 `GetArea` 是繼承自抽象 `Shape` 類：
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 
@@ -34,7 +35,7 @@ ms.locfileid: "75713244"
 
 要覆寫的屬性宣告必須指定和繼承屬性完全相同的存取修飾詞、型別和名稱，而覆寫的屬性必須是 `virtual`、`abstract` 或 `override`。
 
-有關如何使用`override`關鍵字的詳細資訊，請參閱[使用覆蓋和新關鍵字的版本化](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)以及[知道何時使用覆蓋關鍵字和新關鍵字](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。
+如需如何使用關鍵字的詳細資訊 `override` ，請參閱使用 [Override 和 new 關鍵字進行版本控制](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) ，以及 [瞭解使用 override 和 new 關鍵字](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)的時機。
 
 ## <a name="example"></a>範例
 
@@ -48,12 +49,12 @@ ms.locfileid: "75713244"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
 - [繼承](../../programming-guide/classes-and-structs/inheritance.md)
-- [C# 關鍵字](index.md)
+- [C # 關鍵字](index.md)
 - [修飾詞](index.md)
 - [抽象](abstract.md)
-- [虛擬](virtual.md)
-- [新建（修飾符）](new-modifier.md)
-- [Polymorphism](../../programming-guide/classes-and-structs/polymorphism.md)
+- [virtual](virtual.md)
+- [新的 (修飾詞) ](new-modifier.md)
+- [多型](../../programming-guide/classes-and-structs/polymorphism.md)

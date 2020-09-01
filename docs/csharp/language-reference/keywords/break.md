@@ -1,4 +1,5 @@
 ---
+description: break 陳述式 - C# 參考
 title: break 陳述式 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: ef276fd9e8da0ea25695c5afdf06a300bbd2a123
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fd05889f684f7a2282de8222e1195898dead5b9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713757"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134740"
 ---
 # <a name="break-c-reference"></a>break (C# 參考)
 
@@ -39,13 +40,13 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>範例
 
-在此範例中，`break` 陳述式是用來破壞內部巢狀迴圈，並將控制權返回外部迴圈。 控制項_僅在_嵌套迴圈中返回一個級別。
+在此範例中，`break` 陳述式是用來破壞內部巢狀迴圈，並將控制權返回外部迴圈。 在嵌套的迴圈中， _只_ 會傳回一個層級給控制項。
 
 [!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
 
 ## <a name="example"></a>範例
 
-在此示例中，`break`語句僅用於在迴圈的每次反覆運算期間從當前分支中斷開。 迴圈本身不受屬於嵌套`break`[交換器](./switch.md)語句的實例的影響。
+在此範例中， `break` 語句只會在迴圈的每次反覆運算期間用來中斷目前的分支。 迴圈本身不會受到 `break` 屬於 nested [switch](./switch.md) 語句之實例的影響。
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
@@ -55,7 +56,7 @@ Sorry, invalid selection.
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](./index.md)
-- [開關](./switch.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](./index.md)
+- [switch](./switch.md)

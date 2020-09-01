@@ -1,5 +1,6 @@
 ---
-title: '實數值型別-c # 參考'
+description: 深入瞭解 C 中的實值型別、類型和內建的型別#
+title: '實值型別-c # 參考'
 ms.date: 01/22/2020
 f1_keywords:
 - cs.valuetypes
@@ -8,61 +9,61 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 0a05b2b0f3f2a8377fdba6144b8aeb12bdee1086
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 7826e71fee235d32655ccfbc9060c3bbb48d76c5
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86172947"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134766"
 ---
 # <a name="value-types-c-reference"></a>數值型別 (c # 參考) 
 
-實*數值型別*和[參考型別](../keywords/reference-types.md)是 c # 類型的兩個主要類別。 實值型別的變數包含型別的實例。 這與參考型別的變數不同，後者包含型別之實例的參考。 根據預設，在[指派](../operators/assignment-operator.md)時，將引數傳遞至方法，並傳回方法結果，會複製變數值。 在實數值型別變數的情況下，會複製對應的類型實例。 下列範例示範了該行為：
+實*數值型別*和[參考型別](../keywords/reference-types.md)是 c # 型別的兩個主要類別。 實值型別的變數包含型別的實例。 這與參考型別的變數不同，後者包含型別實例的參考。 根據預設，在 [指派](../operators/assignment-operator.md)時，將引數傳遞至方法，並傳回方法結果，會複製變數值。 在實數值型別變數的情況下，會複製對應的型別實例。 下列範例示範了該行為：
 
 [!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
 
-如上述範例所示，實數值型別變數上的作業只會影響實數值型別的實例，並儲存在變數中。
+如先前的範例所示，實數值型別變數的作業只會影響儲存在變數中的實值型別實例。
 
-如果實值型別包含引用型別的資料成員，則在複製實值型別實例時，只會複製參考型別的實例參考。 複製和原始實數值型別實例都具有相同的參考類型實例的存取權。 下列範例示範了該行為：
+如果實值型別包含參考型別的資料成員，則在複製值型別實例時，只會複製參考型別的實例參考。 複製和原始實數值型別實例都可以存取相同的參考型別實例。 下列範例示範了該行為：
 
 [!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
-> 若要讓您的程式碼較不容易出錯且更健全，請定義和使用不可變的實數值型別。 本文只會針對示範用途使用可變的實值型別。
+> 若要讓您的程式碼較不容易出錯且更健全，請定義和使用不可變的實數值型別。 本文僅針對示範目的使用可變的實數值型別。
 
 ## <a name="kinds-of-value-types"></a>實數值型別的種類
 
-實值型別可以是下列兩種類型的其中一種：
+實值型別可以是下列兩種類型之一：
 
 - 封裝資料和相關功能的[結構類型](struct.md)
-- [列舉類型](enum.md)，這是由一組已命名的常數所定義，代表選擇或選擇的組合
+- [列舉型](enum.md)別，它是由一組命名常數所定義，代表一個選擇或一個選擇組合。
 
-[可為 null 的實數值型別](nullable-value-types.md) `T?` 代表其基礎數值型別的所有值 `T` ，以及額外的[null](../keywords/null.md)值。 您無法指派 `null` 給實數值型別的變數，除非它是可為 null 的實數值型別。
+[可為 null](nullable-value-types.md)的實值型別 `T?` 代表其基礎實值型別的所有值 `T` ，以及一個額外的[null](../keywords/null.md)值。 您無法指派 `null` 給實值型別的變數，除非它是可為 null 的實值型別。
 
 ## <a name="built-in-value-types"></a>內建實數值型別
 
-C # 提供下列內建實數值型別，也稱為*簡單類型*：
+C # 提供下列內建實數值型別，也稱為 *簡單類型*：
 
 - [整數數值類型](integral-numeric-types.md)
 - [浮點數值類型](floating-point-numeric-types.md)
 - 表示布林值的[bool](bool.md)
 - 代表 Unicode UTF-16 字元的[char](char.md)
 
-所有簡單型別都是結構型別，而且與其他結構型別不同，因為它們允許特定的其他作業：
+所有簡單類型都是結構類型，而且與其他結構類型不同，因為它們允許某些額外的作業：
 
-- 您可以使用常值來提供簡單類型的值。 例如，`'A'` 是 `char` 型別的常值，而 `2001` 則是 `int` 型別的常值。
+- 您可以使用常值提供簡單類型的值。 例如，`'A'` 是 `char` 型別的常值，而 `2001` 則是 `int` 型別的常值。
 
 - 您可以使用 [const](../keywords/const.md) 關鍵字來宣告簡單型別的常數。 不可能有其他結構類型的常數。
 
-- 常數運算式（其運算元為簡單類型的所有常數）會在編譯時期進行評估。
+- 常數運算式（其運算元都是簡單類型的常數）會在編譯時期評估。
 
-從 c # 7.0 開始，c # 支援[值元組](value-tuples.md)。 值元組是實數值型別，但不是簡單類型。
+從 c # 7.0 開始，c # 支援 [值元組](value-tuples.md)。 值元組是實數值型別，但不是簡單類型。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的下列幾節：
 
-- [實值型別](~/_csharplang/spec/types.md#value-types)
+- [值類型](~/_csharplang/spec/types.md#value-types)
 - [簡單型別](~/_csharplang/spec/types.md#simple-types)
 - [變數](~/_csharplang/spec/variables.md)
 

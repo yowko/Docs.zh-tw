@@ -1,4 +1,5 @@
 ---
+description: is - C# 參考
 title: is - C# 參考
 ms.date: 06/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399634"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134506"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
@@ -36,7 +37,7 @@ ms.locfileid: "79399634"
    expr is type varname
 ```
 
-其中*expr*是計算到某個類型的實例的運算式，*類型*是要轉換*expr*結果的類型的名稱，並且*varname*是如果`is`測試是`true`，則*expr*結果轉換為的物件。
+其中 *expr* 是評估為某個型別實例的運算式， *type* 是要轉換 *expr* 結果的型別名稱，而 *varname* 則是當測試為時，會將 *expr* 的結果轉換成的物件 `is` `true` 。
 
 如果 *expr* 不是 `null`，且下列任何一個條件成立，則 `is` 運算式為 `true`：
 
@@ -106,21 +107,21 @@ ms.locfileid: "79399634"
 
 ### <a name="var-pattern"></a>var 模式
 
-與模式匹配的模式`var`始終成功。 其語法如下：
+模式的模式比對 `var` 一律會成功。 其語法如下：
 
 ```csharp
    expr is var varname
 ```
 
-其中*expr*的值始終分配給名為*varname*的區域變數。 *varname*是同類型的變數，與*expr*的編譯時間類型相同。
+其中 *expr* 的值一律會指派給名為 *varname*的本機變數。 *varname* 是與 *運算式*編譯時間類型相同類型的變數。
 
-如果*expr*計算`null`到`is`，`true`運算式將`null`生成並分配給*varname*。 var 模式是生成`is``true`值的少數用途之一。 `null`
+如果 *expr* 評估為 `null` ，則 `is` 運算式會產生 `true` 並指派 `null` 給 *varname*。 Var 模式是 `is` `true` 針對某個值產生的幾個用途之一 `null` 。
 
-可以使用 模式`var`在布林運算式中創建臨時變數，如下例所示：
+您可以使用 `var` 模式在布林運算式內建立暫存變數，如下列範例所示：
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-在前面的示例中，臨時變數用於存儲昂貴操作的結果。 然後，變數可以多次使用。
+在上述範例中，暫存變數是用來儲存昂貴作業的結果。 然後，您可以多次使用此變數。
 
 ## <a name="c-language-specification"></a>C# 語言規格
   
@@ -131,6 +132,6 @@ ms.locfileid: "79399634"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
+- [C# 參考資料](../index.md)
 - [C# 關鍵字](index.md)
 - [型別測試和轉換運算子](../operators/type-testing-and-cast.md)
