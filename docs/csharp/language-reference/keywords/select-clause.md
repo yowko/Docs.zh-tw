@@ -1,4 +1,5 @@
 ---
+description: select 子句 - C# 參考
 title: select 子句 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d67c99cc841c08a63cc83843a07a46e80199b9d1
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173506"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136898"
 ---
 # <a name="select-clause-c-reference"></a>select 子句 (C# 參考)
 
@@ -27,7 +28,7 @@ ms.locfileid: "79173506"
 
 ## <a name="example"></a>範例
 
-下列範例示範 `select` 子句可接受的所有不同形式。 在每個查詢中`select`，請注意子句與*查詢變數*類型 （、`studentQuery1``studentQuery2`等）之間的關係。
+下列範例示範 `select` 子句可接受的所有不同形式。 在每個查詢中，請注意子句之間的關聯性， `select` 以及 *查詢變數* 的類型 (`studentQuery1` 、 `studentQuery2` 和等) 。
 
 [!code-csharp[cscsrefQueryKeywords#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#9)]
 
@@ -39,10 +40,10 @@ ms.locfileid: "79173506"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [查詢關鍵字 （LINQ）](query-keywords.md)
-- [從 條款](from-clause.md)
+- [C # 參考](../index.md)
+- [LINQ)  (查詢關鍵字 ](query-keywords.md)
+- [from 子句](from-clause.md)
 - [partial (方法) (C# 參考)](partial-method.md)
-- [匿名型別](../../programming-guide/classes-and-structs/anonymous-types.md)
+- [匿名類型](../../programming-guide/classes-and-structs/anonymous-types.md)
 - [C# 中的 LINQ](../../linq/index.md)
-- [語言綜合查詢（LINQ）](../../programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ)](../../programming-guide/concepts/linq/index.md)

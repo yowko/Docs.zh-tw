@@ -1,4 +1,5 @@
 ---
+description: 參考型別 - C# 參考
 title: 參考型別 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: b2d6cc94c11ca6305a75e9ee489af53ad957201e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a9df3c95d6f5052821be8db5ecf5a8ed99a8ba7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76744524"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137054"
 ---
 # <a name="reference-types-c-reference"></a>參考類型 (C# 參考)
 
@@ -23,21 +24,21 @@ C# 中有兩種類型：參考類型和實值類型。 參考類型的變數會�
 
 - [class](class.md)
 
-- [介面](interface.md)
+- [interface](interface.md)
 
-- [委託](../builtin-types/reference-types.md)
+- [delegate](../builtin-types/reference-types.md)
 
  C# 還提供下列內建參考類型：
 
 - [動態](../builtin-types/reference-types.md)
 
-- [物件](../builtin-types/reference-types.md)
+- [object](../builtin-types/reference-types.md)
 
-- [字串](../builtin-types/reference-types.md)
+- [string](../builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 關鍵字](index.md)
 - [指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [實值型別](../builtin-types/value-types.md)
+- [值類型](../builtin-types/value-types.md)

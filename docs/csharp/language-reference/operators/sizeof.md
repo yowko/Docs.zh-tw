@@ -1,4 +1,5 @@
 ---
+description: sizeof 運算子 - C# 參考
 title: sizeof 運算子 - C# 參考
 ms.date: 07/25/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 327183ccdf79cb8e15cd15aa3cffb044120808f8
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: f1358cbfb6cbc2942cef12e650f7bd362ba37a78
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916693"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136872"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 運算子 (C# 參考)
 
@@ -20,7 +21,7 @@ ms.locfileid: "87916693"
 
 `sizeof` 運算子需要 [unsafe](../keywords/unsafe.md) 內容。 但是，下表顯示的運算式會在編譯時評估至對應的常數值，因此不需要 unsafe 內容：
 
-|運算是|常數值|
+|運算式|常數值|
 |---------|---------------|
 |`sizeof(sbyte)`|1|
 |`sizeof(byte)`|1|

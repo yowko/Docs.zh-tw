@@ -1,4 +1,5 @@
 ---
+description: sealed 修飾詞 - C# 參考
 title: sealed 修飾詞 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 686afd5d9d0394bb1a802551b65083732599f384
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5b945503c6f6546f571a2422ae77760da0363b08
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713101"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89136963"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# 參考)
 
@@ -69,12 +70,12 @@ sealed class B : A {}
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
 - [靜態類別和靜態類別成員](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [抽象和密封類別以及類別成員](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [修飾詞](index.md)
-- [覆蓋](override.md)
-- [虛擬](virtual.md)
+- [override](override.md)
+- [virtual](virtual.md)

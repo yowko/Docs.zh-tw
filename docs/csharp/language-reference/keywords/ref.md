@@ -1,4 +1,5 @@
 ---
+description: ref 關鍵字 - C# 參考
 title: ref 關鍵字 - C# 參考
 ms.date: 04/21/2020
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 58a4ce30e11ca023b50e5e53b1f1554a30d44390
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102069"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137080"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -21,11 +22,11 @@ ms.locfileid: "82102069"
 - 在方法簽章和方法呼叫中，以傳址方式將引數傳遞給方法。 如需詳細資訊，請參閱[以傳址方式傳遞引數](#passing-an-argument-by-reference)。
 - 在方法簽章中，以傳參考方式將值傳回給呼叫者。 如需詳細資訊，請參閱[參考傳回值](#reference-return-values)。
 - 在成員主體中，指出參考傳回值儲存在本機作為呼叫者想要修改的參考，或是一般而言，以參考存取另一個值的區域變數。 如需詳細資訊，請參閱 [ref 區域變數](#ref-locals)。
-- 在 `struct` 宣告中來宣告 `ref struct` 或 `readonly ref struct`。 有關詳細資訊,請參閱[`ref`](../builtin-types/struct.md#ref-struct)[結構類型](../builtin-types/struct.md)文章的結構部分。
+- 在 `struct` 宣告中來宣告 `ref struct` 或 `readonly ref struct`。 如需詳細資訊，請參閱[結構類型](../builtin-types/struct.md)一文的[ `ref` 結構](../builtin-types/struct.md#ref-struct)一節。
 
 ## <a name="passing-an-argument-by-reference"></a>以傳址方式傳遞引數
 
-用於方法的參數清單時，`ref` 關鍵字指出以傳參考方式傳遞引數，而不是以傳值方式。 `ref` 關鍵字會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 例如,如果調用方傳遞局部變數運算式或陣列元素訪問表達式,並且被調用的方法替換ref參數引用的物件,則調用方的局部變數或數位元素現在在方法返回時引用新物件。
+用於方法的參數清單時，`ref` 關鍵字指出以傳參考方式傳遞引數，而不是以傳值方式。 `ref` 關鍵字會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 例如，如果呼叫端傳遞區域變數運算式或陣列元素存取運算式，而且被呼叫的方法取代 ref 參數所參考的物件，則呼叫端的區域變數或陣列元素現在會在方法傳回時參考新的物件。
 
 > [!NOTE]
 > 請勿將參考傳遞的概念與參考類型的概念相混淆。 兩個概念並不相同。 方法參數可以由 `ref` 修改，而不論其是否為實值類型或參考類型。 當實值類型由參考傳遞時，沒有 boxing。  
@@ -61,11 +62,11 @@ class CS0663_Example
 - 使用 [async](async.md) 修飾詞定義的 async 方法。  
 - 迭代器方法，其包括 [yield return](yield.md) 或 `yield break` 陳述式。
 
-此外,[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)具有以下限制:
+此外， [擴充方法](../../programming-guide/classes-and-structs/extension-methods.md) 具有下列限制：
 
-- 關鍵字`out`不能用於擴充方法的第一個參數。
-- `ref`當參數不是結構,或者泛型類型不受約束為結構時,關鍵字不能用於擴展方法的第一個參數。
-- 除非`in`第一個參數是結構,否則無法使用關鍵字。 `in`關鍵字不能在任何泛型類型上使用,即使約束為結構。
+- `out`關鍵字不能用在擴充方法的第一個引數上。
+- `ref`當引數不是結構，或是不受限於不是結構的泛型型別時，無法在擴充方法的第一個引數上使用關鍵字。
+- `in`除非第一個引數是結構，否則無法使用關鍵字。 `in`關鍵字不能用於任何泛型型別，即使當條件約束為結構時也一樣。
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>以傳址方式傳遞引數：範例
 
@@ -77,7 +78,7 @@ class CS0663_Example
   
 ## <a name="reference-return-values"></a>參考傳回值
 
-參考傳回值 (或 ref 傳回值) 是方法以傳參考方式傳回給呼叫者的值。 也就是說,調用方可以修改方法返回的值,並且該更改反映在調用方法中物件的狀態中。
+參考傳回值 (或 ref 傳回值) 是方法以傳參考方式傳回給呼叫者的值。 也就是說，呼叫者可以修改方法所傳回的值，而且該變更會反映在呼叫方法中物件的狀態。
 
 參考傳回值是使用 `ref` 關鍵字所定義：
 
@@ -95,7 +96,7 @@ return ref DecimalArray[0];
 
 為了讓呼叫者修改物件的狀態，參考傳回值必須儲存至明確定義為 [ref 區域變數](#ref-locals)的變數。
 
-下面是一個更完整的 ref 返回示例,顯示了方法簽名和方法正文。
+以下是更完整的 ref 傳回範例，同時顯示方法簽章和方法主體。
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
@@ -105,7 +106,7 @@ return ref DecimalArray[0];
 
 ## <a name="ref-locals"></a>ref 區域變數
 
-ref 區域變數用來參考使用 `return ref` 所傳回的值。 ref 區域變數無法初始化至非 ref 傳回值。 換句話說,初始化的右側必須是引用。 任何對 ref 區域變數值進行的修改，都會反映在其方法以傳址方式傳回值之物件的狀態。
+ref 區域變數用來參考使用 `return ref` 所傳回的值。 ref 區域變數無法初始化至非 ref 傳回值。 換句話說，初始化的右手邊必須是參考。 任何對 ref 區域變數值進行的修改，都會反映在其方法以傳址方式傳回值之物件的狀態。
 
 定義 ref 區域變數的方式是在變數宣告前面使用 `ref` 關鍵字，並且緊接在以傳參考方式傳回值的方法呼叫前面。
 
@@ -121,11 +122,11 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-在這兩個示例中`ref`,關鍵字必須在兩個位置使用,或者編譯器生成錯誤 CS8172,"無法用值初始化引用變數"。
+在這兩個範例中 `ref` ，關鍵字都必須用於這兩個位置，否則編譯器會產生錯誤 CS8172 「無法使用值將傳址變數初始化」。
 
 從 C# 7.3 開始，`foreach` 陳述式的反覆運算變數可以是 ref 區域變數或 ref readonly 區域變數。 如需詳細資訊，請參閱 [foreach 陳述式](foreach-in.md)一文。
 
-此外,從 C# 7.3 開始,可以使用[ref 賦值運算符](../operators/assignment-operator.md#ref-assignment-operator)重新分配 ref 局部變數或 ref 只讀局部變數。
+此外，從 c # 7.3 開始，您可以使用 [ref 指派運算子](../operators/assignment-operator.md#ref-assignment-operator)重新指派 ref 區域變數或 ref readonly 區域變數。
 
 ## <a name="ref-readonly-locals"></a>ref readonly 區域變數
 
@@ -147,11 +148,11 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
   
 ## <a name="see-also"></a>另請參閱
 
-- [編寫安全高效的代碼](../../write-safe-efficient-code.md)
+- [撰寫安全有效率的程式碼](../../write-safe-efficient-code.md)
 - [ref 傳回值和 ref 區域變數](../../programming-guide/classes-and-structs/ref-returns.md)
 - [條件 ref 運算式](../operators/conditional-operator.md#conditional-ref-expression)
 - [傳遞參數](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [方法參數](method-parameters.md)
-- [C# 參考](../index.md)
-- [C# 編程指南](../../programming-guide/index.md)
-- [C# 關鍵字](index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
