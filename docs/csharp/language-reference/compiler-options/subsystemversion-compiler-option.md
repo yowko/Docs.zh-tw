@@ -1,13 +1,14 @@
 ---
+description: -subsystemversion (C# 編譯器選項)
 title: -subsystemversion (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: d76c9424340b4b6f3c211c849b466be55eb79d1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8001d8db214123e75fec4e1d1117ef90a9df606
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74802040"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128591"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C# 編譯器選項)
 
@@ -50,7 +51,7 @@ ms.locfileid: "74802040"
 
 - 如果設定下列清單中的任何編譯器選項，則預設值為 6.02：
 
-  - [-目標：應用容器exe](./target-appcontainerexe-compiler-option.md)
+  - [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
 
   - [-target:winmdobj](./target-winmdobj-compiler-option.md)
 
@@ -66,4 +67,4 @@ ms.locfileid: "74802040"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)

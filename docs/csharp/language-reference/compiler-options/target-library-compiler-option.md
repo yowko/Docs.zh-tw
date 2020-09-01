@@ -1,4 +1,5 @@
 ---
+description: -target:library (C# 編譯器選項)
 title: -target:library (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: c947b2015c19d0809cab4535e989ee83ebf17fd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 953249c4d0168ed3d279d03a0b2fb63d8ff6d5f5
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606388"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128474"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (C# 編譯器選項)
-**-目標：庫**選項使編譯器創建動態連結程式庫 （DLL）， 而不是可執行檔 （EXE）。  
+**-Target： library**選項會讓編譯器建立動態連結程式庫 (DLL) ，而不是 (EXE) 的可執行檔。  
   
 ## <a name="syntax"></a>語法  
   
@@ -27,9 +28,9 @@ ms.locfileid: "69606388"
 ## <a name="remarks"></a>備註  
  將建立副檔名為 .dll 的 DLL。  
   
- 除非使用[-out](./out-compiler-option.md)選項另行指定，否則輸出檔案名將採用第一個輸入檔的名稱。  
+ 除非另行指定，否則[-out](./out-compiler-option.md)輸出檔名稱會採用第一個輸入檔的名稱。  
   
- 在命令列指定時，所有檔都用於創建 .DLL 檔案，以創建下一**個-出出**或 **-目標：模組**選項。  
+ 當您在命令列指定時，會使用下一個或 **-target： module**選項**之前的所有**檔案來建立 .dll 檔案。  
   
  建置 .dll 檔案時，不需要 [Main](../../programming-guide/main-and-command-args/index.md) 方法。  
   
@@ -52,5 +53,5 @@ csc -target:library in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [-目標（C# 編譯器選項）](./target-compiler-option.md)
-- [C# 編譯器選項](./index.md)
+- [-目標 (c # 編譯器選項) ](./target-compiler-option.md)
+- [C # 編譯器選項](./index.md)

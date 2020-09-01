@@ -1,4 +1,5 @@
 ---
+description: -target:module (C# 編譯器選項)
 title: -target:module (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c592d2fe001bb0908a06a6eb3287a39040b8715
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602437"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128448"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (C# 編譯器選項)
 這個選項可讓編譯器不要產生組件資訊清單。  
@@ -44,5 +45,5 @@ csc -target:module in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [-目標（C# 編譯器選項）](./target-compiler-option.md)
-- [C# 編譯器選項](./index.md)
+- [-目標 (c # 編譯器選項) ](./target-compiler-option.md)
+- [C # 編譯器選項](./index.md)

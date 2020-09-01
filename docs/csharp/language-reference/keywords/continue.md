@@ -1,4 +1,5 @@
 ---
+description: continue 陳述式 - C# 參考
 title: continue 陳述式 - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C#]
 ms.assetid: 8a5ac96f-f98a-4519-b32d-345847ed7be0
-ms.openlocfilehash: 83b43b31eacf0ed835ee3d7a919538eb9f1dd1e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76578b0ad7e2b969609fbf50df1f9ab7de6e5097
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713666"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128435"
 ---
 # <a name="continue-c-reference"></a>continue (C# 參考)
 
@@ -30,7 +31,7 @@ ms.locfileid: "75713666"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](./index.md)
-- [中斷語句](/cpp/cpp/break-statement-cpp)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](./index.md)
+- [break 語句](/cpp/cpp/break-statement-cpp)

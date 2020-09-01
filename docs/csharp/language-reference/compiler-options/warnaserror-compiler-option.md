@@ -1,4 +1,5 @@
 ---
+description: -warnaserror (C# 編譯器選項)
 title: -warnaserror (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ccd4546402dbc8e5d9245af6411ba2d831d4959
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503485"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127239"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# 編譯器選項)
 **-warnaserror+** 選項會將所有警告都視為錯誤  
@@ -29,7 +30,7 @@ ms.locfileid: "77503485"
   
  根據預設，**-warnaserror-** 會生效，這會導致無法產生輸出檔案的警告。 **-warnaserror** 與 **-warnaserror+** 相同，都會將警告視為錯誤。  
   
- 選擇性，如果您只想要將少數特定警告視為錯誤，則可以指定將以逗號分隔的警告編號清單視為錯誤。 可以使用**可無速**記指定所有空空警告集。
+ 選擇性，如果您只想要將少數特定警告視為錯誤，則可以指定將以逗號分隔的警告編號清單視為錯誤。 您可以使用 **可為 null** 的速記來指定所有可 null 性警告的集合。
   
  使用 [-warn](./warn-compiler-option.md) 指定您想要編譯器顯示的警告層級。 使用 [-nowarn](./nowarn-compiler-option.md) 停用特定警告。  
   
@@ -53,5 +54,5 @@ csc -warnaserror:642,649,652,nullable in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
