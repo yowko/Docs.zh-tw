@@ -1,4 +1,5 @@
 ---
+description: -debug (C# 編譯器選項)
 title: -debug (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 164530a5ec99e7d5b9f34dbcdfb18d80f3102308
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69922504"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125913"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# 編譯器選項)
 **-debug** 選項可讓編譯器產生偵錯資訊，並將它放在一或多個輸出檔案中。  
@@ -42,7 +43,7 @@ ms.locfileid: "69922504"
   
  如需如何設定應用程式偵錯效能的詳細資訊，請參閱[使映像偵錯更容易](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)。  
   
- 要更改 .pdb 檔的位置，請參閱[-pdb （C# 編譯器選項）。](./pdb-compiler-option.md)  
+ 若要變更 .pdb 檔案的位置，請參閱 [-pdb (c # 編譯器選項) ](./pdb-compiler-option.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -50,7 +51,7 @@ ms.locfileid: "69922504"
   
 2. 按一下 [建置]**** 屬性頁面。  
   
-3. 按一下 [進階]**** 按鈕。  
+3. 按一下 [進階]  按鈕。  
   
 4. 修改 [偵錯資訊]**** 屬性。  
   
@@ -65,5 +66,5 @@ csc -debug -pdb:app.pdb test.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

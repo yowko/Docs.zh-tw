@@ -1,4 +1,5 @@
 ---
+description: 依分類列出的 C# 編譯器選項
 title: 依分類列出的 C# 編譯器選項
 ms.date: 06/04/2020
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: f216534140b6e207ac110bb54b3e4f93a8ac6b70
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 27445b6685f48f7acf646c16de3201e68767da69
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474016"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125289"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>依分類列出的 C# 編譯器選項
 
@@ -19,68 +20,68 @@ ms.locfileid: "86474016"
 
 ## <a name="optimization"></a>Optimization
 
-|選項|目的|
+|選項|用途|
 |------------|-------------|
 |[-filealign](filealign-compiler-option.md)|指定輸出檔案中區段的大小。|
-|[-optimize](optimize-compiler-option.md)|啟用/停用最佳化。|
+|[-優化](optimize-compiler-option.md)|啟用/停用最佳化。|
 
 ## <a name="output-files"></a>輸出檔
 
-|選項|目的|
+|選項|用途|
 |------------|-------------|
-|[-具決定性](deterministic-compiler-option.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
+|[-deterministic](deterministic-compiler-option.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
 |[-doc](doc-compiler-option.md)|指定要寫入已處理文件註解的 XML 檔案。|
 |[-out](out-compiler-option.md)|指定輸出檔。|
 |[-pathmap](pathmap-compiler-option.md)|指定編譯器所輸出來源路徑名稱的對應。|
 |[-pdb](pdb-compiler-option.md)|指定 .pdb 檔案的檔案名稱和位置。|
-|[-平臺](platform-compiler-option.md)|指定輸出平台。|
+|[-platform](platform-compiler-option.md)|指定輸出平台。|
 |[-preferreduilang](preferreduilang-compiler-option.md)|指定編譯器輸出的語言。|
 |[-refout](refout-compiler-option.md)|除了主要組件，再另外產生參考組件。|
 |[-refonly](refonly-compiler-option.md)|產生參考組件，而非主要組件。|
-|[-目標](target-compiler-option.md)|使用下列其中一個選項來指定輸出檔的格式： [-target： appcontainerexe](target-appcontainerexe-compiler-option.md)、 [-target： exe](target-exe-compiler-option.md)、 [-target： library](target-library-compiler-option.md)、 [-target： module](target-module-compiler-option.md)、 [-target： winexe](target-winexe-compiler-option.md)或[-target： winmdobj](target-winmdobj-compiler-option.md)。|
+|[-target](target-compiler-option.md)|使用下列其中一個選項指定輸出檔的格式： [-target： appcontainerexe](target-appcontainerexe-compiler-option.md)、 [-target： exe](target-exe-compiler-option.md)、 [-target： library](target-library-compiler-option.md)、 [-target： module](target-module-compiler-option.md)、 [-target： winexe](target-winexe-compiler-option.md)或 [-target： winmdobj](target-winmdobj-compiler-option.md)。|
 |modulename\<string>|指定來源模組的名稱|
 
 ## <a name="net-framework-assemblies"></a>.NET Framework 組件
 
-|選項|目的|
+|選項|用途|
 |------------|-------------|
 |[-addmodule](addmodule-compiler-option.md)|指定要成為此組件一部分的一或多個模組。|
 |[-delaysign](delaysign-compiler-option.md)|指示編譯器新增公開金鑰，但是讓組件不帶正負號。|
 |[-keycontainer](keycontainer-compiler-option.md)|指定密碼編譯金鑰容器的名稱。|
 |[-keyfile](keyfile-compiler-option.md)|指定包含密碼編譯金鑰的檔名。|
-|[-lib](lib-compiler-option.md)|指定以[-reference](reference-compiler-option.md)參考之元件的位置。|
+|[-lib](lib-compiler-option.md)|指定[參考的元件位置。](reference-compiler-option.md)|
 |[-nostdlib](nostdlib-compiler-option.md)|指示編譯器不要匯入標準程式庫 (mscorlib.dll)。|
 |[-publicsign](publicsign-compiler-option.md)|套用公開金鑰而不簽署組件，但會在組件中設定此位元以表示該組件已經過簽署。|
-|[-參考](reference-compiler-option.md)|從包含組件的檔案匯入中繼資料。|
+|[-reference](reference-compiler-option.md)|從包含組件的檔案匯入中繼資料。|
 |-analyzer|從這個組件執行分析器 (簡短形式：/a)|
 |-additionalfile|命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。|
 |-embed|在 PDB 中內嵌所有來源檔案。|
-|內嵌\<file list>|在 PDB 中內嵌特定檔案。|
+|嵌入式\<file list>|在 PDB 中內嵌特定檔案。|
 
 ## <a name="debuggingerror-checking"></a>偵錯/錯誤檢查
 
-|選項|目的|
+|選項|用途|
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|建立檔案，其中包含可簡化錯誤回報的資訊。|
-|[-已核取](checked-compiler-option.md)|指定超出資料類型範圍的整數算術，是否會導致在執行階段發生例外狀況。|
+|[-checked](checked-compiler-option.md)|指定超出資料類型範圍的整數算術，是否會導致在執行階段發生例外狀況。|
 |[-debug](debug-compiler-option.md)|指示編譯器發出偵錯資訊。|
 |[-errorreport](errorreport-compiler-option.md)|設定錯誤報告行為。|
 |[-fullpaths](fullpaths-compiler-option.md)|在編譯器輸出中指定檔案的絕對路徑。|
 |[-nowarn](nowarn-compiler-option.md)|抑制編譯器產生指定的警告。|
-|[-nullable](nullable-compiler-option.md)|指定可為 null 的內容選項。|
+|[-nullable](nullable-compiler-option.md)|指定 nullable coNtext 選項。|
 |[-warn](warn-compiler-option.md)|設定警告層級。|
 |[-warnaserror](warnaserror-compiler-option.md)|將警告提升為錯誤。|
-|ruleset\<file>|指定停用特定診斷的規則集檔案。|
+|集\<file>|指定停用特定診斷的規則集檔案。|
 
 ## <a name="preprocessor"></a>前置處理器
 
-|選項|目的|
+|選項|用途|
 |------------|-------------|
 |[-define](define-compiler-option.md)|定義前置處理器符號。|
 
 ## <a name="resources"></a>資源
 
-|選項|目的|
+|選項|用途|
 |------------|-------------|
 |[-連結](link-compiler-option.md)|將指定組件中的 COM 類型資訊提供給專案使用。|
 |[-linkresource](linkresource-compiler-option.md)|建立與 Managed 資源的連結。|
@@ -90,12 +91,12 @@ ms.locfileid: "86474016"
 
 ## <a name="miscellaneous"></a>其他
 
-|選項|目的|
+|選項|用途|
 |------------|-------------|
 |[@](response-file-compiler-option.md)|指定回應檔。|
 |[-?](help-compiler-option.md)|將編譯器選項列出至 stdout。|
 |[-baseaddress](baseaddress-compiler-option.md)|指定載入 DLL 時慣用的基底位址。|
-|[-字碼頁](codepage-compiler-option.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|
+|[-codepage](codepage-compiler-option.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|
 |[-help](help-compiler-option.md)|將編譯器選項列出至 stdout。|
 |[-highentropyva](highentropyva-compiler-option.md)|指定可執行檔支援位址空間配置隨機載入 (ASLR)。|
 |[-langversion](langversion-compiler-option.md)|指定語言版本：Default、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或 Latest |
@@ -107,11 +108,11 @@ ms.locfileid: "86474016"
 |[-unsafe](unsafe-compiler-option.md)|啟用使用 [unsafe](../keywords/unsafe.md) 關鍵字的程式碼編譯。|
 |[-utf8output](utf8output-compiler-option.md)|使用 UTF-8 編碼顯示編譯器輸出。|
 |-parallel[+&#124;-]|指定是否要使用並行組建 (+)。|
-|checksumalgorithm\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為： SHA256 （預設值）或 SHA1。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|
+|-checksumalgorithm:\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為： SHA256 (預設) 或 SHA1。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|
 
 ## <a name="obsolete-options"></a>過時的選項
 
-|選項|目的|
+|選項|用途|
 |---|---|
 |-incremental|啟用累加編譯。|
 

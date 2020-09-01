@@ -1,4 +1,5 @@
 ---
+description: abstract - C# 參考
 title: abstract - C# 參考
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 095c4dea838aff4f14833d78fb10a2f831cf5173
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713857"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127200"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# 參考)
 `abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。 抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。 在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別，不是自行具現化。 標記為抽象的成員，必須由衍生自抽象類別的非抽象類別實作。
@@ -82,9 +83,9 @@ BaseClass bc = new BaseClass();   // Error
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
 - [修飾詞](index.md)
-- [虛擬](./virtual.md)
-- [覆蓋](./override.md)
-- [C# 關鍵字](./index.md)
+- [virtual](./virtual.md)
+- [override](./override.md)
+- [C # 關鍵字](./index.md)

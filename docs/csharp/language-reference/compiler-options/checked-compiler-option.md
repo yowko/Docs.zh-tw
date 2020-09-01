@@ -1,4 +1,5 @@
 ---
+description: -checked (C# 編譯器選項)
 title: -checked (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: cb4dbadfa4efd0750ffd3dea88a3f661e2f85a8e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c90696edd3031271e16cd2c1a332da5b605f81f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173766"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125939"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (C# 編譯器選項)
 **-checked** 選項會指定產生超出該資料類型範圍之值且不在 [checked](../keywords/checked.md) 或 [unchecked](../keywords/unchecked.md) 關鍵字範圍內的整數算術陳述式是否導致執行階段例外狀況。  
@@ -39,9 +40,9 @@ ms.locfileid: "79173766"
   
 2. 按一下 [建置]**** 屬性頁面。  
   
-3. 按一下 [進階]**** 按鈕。  
+3. 按一下 [進階]  按鈕。  
   
-4. 修改 **"檢查算術溢出**"屬性。  
+4. 修改 [ **算術溢** 位] 屬性的 [檢查]。  
   
  若要以程式設計方式存取這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。  
   
@@ -54,5 +55,5 @@ csc t2.cs -checked
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

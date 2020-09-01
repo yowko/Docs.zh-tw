@@ -1,4 +1,5 @@
 ---
+description: -link (C# 編譯器選項)
 title: -link (C# 編譯器選項)
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: d5684298bbd736cae2d9c13381431036806aab17
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0f6927fd240f3f8535478d163be615fc74dad8d2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144457"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125393"
 ---
 # <a name="-link-c-compiler-options"></a>-link (C# 編譯器選項)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。
@@ -83,7 +84,7 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
 
 - [C # 編譯器選項](./index.md)
 - [Walkthrough: Embedding Types from Managed Assemblies (逐步解說：從 Managed 組件內嵌類型)](../../../standard/assembly/embed-types-visual-studio.md)
-- [-reference （c # 編譯器選項）](./reference-compiler-option.md)
-- [-noconfig （c # 編譯器選項）](./noconfig-compiler-option.md)
+- [- (c # 編譯器選項的參考) ](./reference-compiler-option.md)
+- [-noconfig (c # 編譯器選項) ](./noconfig-compiler-option.md)
 - [使用 csc.exe 建置命令列](./command-line-building-with-csc-exe.md)
 - [互通性概觀](../../programming-guide/interop/interoperability-overview.md)

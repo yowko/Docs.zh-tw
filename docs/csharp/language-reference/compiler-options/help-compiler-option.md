@@ -1,4 +1,5 @@
 ---
+description: -help、-? (C# 編譯器選項)
 title: -help、-? (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - /help compiler option [C#]
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
-ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e51f8848bbd0b57ac083dccb6813e3f39fd9a74
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69602916"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125679"
 ---
 # <a name="-help---c-compiler-options"></a>-help、-? (C# 編譯器選項)
 這個選項會將編譯器選項清單和每個選項的簡短描述傳送至 stdout。  
@@ -36,5 +37,5 @@ ms.locfileid: "69602916"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

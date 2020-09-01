@@ -1,4 +1,5 @@
 ---
+description: -lib (C# 編譯器選項)
 title: -lib (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,15 +9,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606828"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125445"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# 編譯器選項)
-**-lib**選項指定通過[-參考 （C# 編譯器選項） 選項](./reference-compiler-option.md)引用的程式集的位置。  
+**-Lib**選項會指定由[-Reference (c # 編譯器選項) ](./reference-compiler-option.md)選項參考之元件的位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,5 +70,5 @@ csc -lib:c:\ -reference:t2.dll t2.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

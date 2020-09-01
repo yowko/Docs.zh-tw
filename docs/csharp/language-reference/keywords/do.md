@@ -1,4 +1,5 @@
 ---
+description: do - C# 參考
 title: do - C# 參考
 ms.date: 05/28/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: d75dd816278a876fa05d133e5eb189d606300a5c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 601231f23a58e8af8339a733677f0bbd92bb4ffc
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401923"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126953"
 ---
 # <a name="do-c-reference"></a>do (C# 參考)
 
@@ -22,7 +23,7 @@ ms.locfileid: "84401923"
 
 您可以使用 [continue](continue.md) 陳述式直接逐步執行 `while` 運算式評估。 如果運算式評估為 `true`，即繼續執行迴圈中的第一個陳述式。 否則會在迴圈之後的第一個陳述式繼續執行。
 
-您也可以使用 `do-while` [goto](goto.md)、 [return](return.md)或[throw](throw.md)語句來結束迴圈。
+您也可以使用 `do-while` [goto](goto.md)、 [return](return.md)或 [throw](throw.md) 語句來結束迴圈。
 
 ## <a name="example"></a>範例
 

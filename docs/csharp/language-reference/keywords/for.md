@@ -1,4 +1,5 @@
 ---
+description: 'for 語句-c # 參考'
 title: 'for 語句-c # 參考'
 ms.date: 06/13/2018
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: db7cecc697a9cc9e5ff6b94b78747b799ed7e505
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: be9ecdc08d54c9cde1c49656a16e0d85a6d7084d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401897"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126927"
 ---
 # <a name="for-c-reference"></a>for (C# 參考)
 
 當指定的布林運算式評估為 `true` 時，`for` 陳述式會執行某個陳述式或陳述式區塊。
 
-您可以在 `for` 陳述式區塊內的任何位置，使用 [break](break.md) 陳述式跳出迴圈，或使用 [continue](continue.md) 陳述式逐步執行到迴圈中的下一個反覆運算。 您也可以使用 `for` [goto](goto.md)、 [return](return.md)或[throw](throw.md)語句來結束迴圈。
+您可以在 `for` 陳述式區塊內的任何位置，使用 [break](break.md) 陳述式跳出迴圈，或使用 [continue](continue.md) 陳述式逐步執行到迴圈中的下一個反覆運算。 您也可以使用 `for` [goto](goto.md)、 [return](return.md)或 [throw](throw.md) 語句來結束迴圈。
 
 ## <a name="structure-of-the-for-statement"></a>`for` 陳述式的結構
 

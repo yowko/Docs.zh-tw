@@ -1,4 +1,5 @@
 ---
+description: C# 參考資料
 title: C# 參考資料
 ms.date: 02/14/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: bed8f430793a8d8544cf0bbb5ea765490945bfc0
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 317f375c46eee3bb9c719afb68993cd4720e54fe
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855331"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127187"
 ---
 # <a name="c-reference"></a>C# 參考資料
 
@@ -42,9 +43,9 @@ ms.locfileid: "87855331"
  包含示範 C# 編譯器錯誤和警告之原因和修正的程式碼片段。  
   
  [C # 語言規格](../../../_csharplang/spec/introduction.md)  
- C# 6.0 語言規格。 這是 C# 6.0 語言的草稿提案。 本檔將透過使用 ECMA c # 標準委員會的方式進行精簡。 版本 5.0 已在 2017年 12 月發行為[標準 ECMA-334 第 5 版](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) \(英文\) 文件。
+ C# 6.0 語言規格。 這是 C# 6.0 語言的草稿提案。 這份檔將透過 ECMA c # 標準委員會的工作來進行調整。 版本 5.0 已在 2017年 12 月發行為[標準 ECMA-334 第 5 版](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) \(英文\) 文件。
 
-語言規格提案中會說明已在 C# 6.0 之後版本中實作的功能。 這些文件會描述為了新增這些功能，而產生的語言規格差異。 這些都是草稿提案表單。 這些規格將會調整並提交給 ECMA 標準委員會，以進行正式審查，並將其合併至未來的 c # 標準版本。
+語言規格提案中會說明已在 C# 6.0 之後版本中實作的功能。 這些文件會描述為了新增這些功能，而產生的語言規格差異。 這些都是草稿提案的表單。 這些規格將會經過精簡並提交給 ECMA 標準委員會，以進行正式評論併合並至未來的 c # 標準版本。
 
  [C # 7.0 規格提案](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
  C# 7.0 中實作了一些新功能。 它們包括模式比對、區域函式、out 變數宣告、擲回例外狀況、二進位常值，以及數字分隔符號。 此資料夾包含這些功能中每個功能的規格。
@@ -56,10 +57,10 @@ ms.locfileid: "87855331"
  C# 7.2 新增了數個次要功能。 您可以使用 `in` 關鍵字隨機參考，以此方式傳遞引數。 為了支援 `Span` 及相關類型的編譯時間安全性，而進行了數項細微的變更。 在某些情況下，您可在後續引數為位置引數的地方使用具名引數。 `private protected` 存取修飾詞可讓您指定呼叫者僅限於相同組件中實作的衍生類型。 `?:` 運算子可以解析成變數的參考。 您也可以使用前置的數字分隔符號來設定十六進位與二進位數字的格式。
 
  [C # 7.3 規格提案](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
- C# 7.3 是另一個包含數項次要更新的小數點版本。 您可以在泛型型別參數使用新的限制式。 其他變更可讓您更輕鬆地處理 `fixed` 欄位，包括使用配置 [`stackalloc`](./operators/stackalloc.md) 。 使用關鍵字宣告的本機變數 `ref` 可能會重新指派以參考新的儲存體。 您可以將屬性放在自動實作的屬性，該屬性以編譯器產生的支援欄位為目標。 運算式變數可用於初始設定式。 Tuple 可用於比較是否相等 (或不相等)。 多載解析也有幾項功能改進。
+ C# 7.3 是另一個包含數項次要更新的小數點版本。 您可以在泛型型別參數使用新的限制式。 其他變更可讓您更輕鬆地使用 `fixed` 欄位，包括使用配置 [`stackalloc`](./operators/stackalloc.md) 。 使用關鍵字宣告的本機變數 `ref` 可能會重新指派以參考新的儲存體。 您可以將屬性放在自動實作的屬性，該屬性以編譯器產生的支援欄位為目標。 運算式變數可用於初始設定式。 Tuple 可用於比較是否相等 (或不相等)。 多載解析也有幾項功能改進。
   
  [C # 8.0 規格提案](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- .NET Core 3.0 提供 c # 8.0。 這些功能包括可為 null 的參考型別、遞迴模式比對、預設介面方法、非同步資料流程、範圍和索引、使用和 using 宣告的模式、null 聯合指派，以及 readonly 實例成員。
+ C # 8.0 適用于 .NET Core 3.0。 這些功能包含可為 null 的參考型別、遞迴模式比對、預設介面方法、非同步資料流程、範圍和索引、使用和使用宣告的模式、null 聯合指派，以及唯讀實例成員。
   
 ## <a name="related-sections"></a>相關章節  
 

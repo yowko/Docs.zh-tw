@@ -1,4 +1,5 @@
 ---
+description: -delaysign (C# 編譯器選項)
 title: -delaysign (C# 編譯器選項)
 ms.date: 05/15/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 9fdc02c22d9d8c8a709155e43a17ebf0d86dfd69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5512ebeca4672f5d69852ab07c3f3fa40c305327
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970436"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125835"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C# 編譯器選項)
 
@@ -33,7 +34,7 @@ ms.locfileid: "70970436"
 
 ## <a name="remarks"></a>備註
 
-**-delaysign**選項沒有效果，除非與[-鍵檔](./keyfile-compiler-option.md)或[-key 容器](./keycontainer-compiler-option.md)一起使用。
+除非搭配[-keyfile](./keyfile-compiler-option.md)或[-keycontainer](./keycontainer-compiler-option.md)使用，否則 **-delaysign**選項不會有任何作用。
 
 **-delaysign** 和 **-publicsign** 選項是互斥的。
 
@@ -53,5 +54,5 @@ ms.locfileid: "70970436"
 ## <a name="see-also"></a>另請參閱
 
 - [C# -publicsign 選項](publicsign-compiler-option.md)
-- [C# 編譯器選項](index.md)
+- [C # 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

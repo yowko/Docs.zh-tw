@@ -1,4 +1,5 @@
 ---
+description: -filealign (C# 編譯器選項)
 title: -filealign (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: aed8b412ea1580f7dfa4f87333598d76a85b5e64
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4abe6c3825de211d737f402a745c8953adca4b8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69603017"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125705"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# 編譯器選項)
 **-filealign** 選項可讓您指定輸出檔案中的區段大小。  
@@ -49,7 +50,7 @@ ms.locfileid: "69603017"
   
 2. 按一下 [建置]**** 屬性頁面。  
   
-3. 按一下 [進階]**** 按鈕。  
+3. 按一下 [進階]  按鈕。  
   
 4. 修改 [檔案對齊]**** 屬性。  
   
@@ -57,5 +58,5 @@ ms.locfileid: "69603017"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

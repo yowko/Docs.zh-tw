@@ -1,16 +1,17 @@
 ---
+description: 使用 csc.exe 建置命令列
 title: 使用 csc.exe 建置命令列
 ms.date: 04/19/2017
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9ffd164602862fce7f5e4f0982d3eda7cb403e60
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789863"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125926"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 建置命令列
 
@@ -18,22 +19,22 @@ ms.locfileid: "76789863"
 
 如果您使用 [Visual Studio 的開發人員命令提示字元]**** 視窗，所有必要的環境變數都會自動完成設定。 如需如何存取此工具的資訊，請參閱 [Visual Studio 的開發人員命令提示字元](../../../framework/tools/developer-command-prompt-for-vs.md)主題。
 
-如果您使用標準 [命令提示字元] 視窗，則必須先調整路徑，才能在電腦上的任何子目錄中叫用 *csc.exe*。 您也必須執行 *vsvars32.bat* 來設定適當的環境變數，以便支援命令列組建。 有關*vsvars32.bat*的詳細資訊，包括有關如何查找和運行它的說明，請參閱[如何為 Visual Studio 命令列設置環境變數](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
+如果您使用標準 [命令提示字元] 視窗，則必須先調整路徑，才能在電腦上的任何子目錄中叫用 *csc.exe*。 您也必須執行 *VsDevCmd.bat* 來設定適當的環境變數，以支援命令列組建。 如需有關 *VsDevCmd.bat*的詳細資訊，包括如何尋找和執行的指示，請參閱 [如何設定 Visual Studio 命令列的環境變數](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
 
 如果您是在只有 Windows 軟體開發套件 (SDK) 的電腦上工作，則可以在 [SDK 命令提示字元]**** (其可從 [Microsoft .NET Framework SDK]**** 功能表選項開啟) 中使用 C# 編譯器。
 
-您也可以使用 MSBuild 以程式設計的方式建置 C# 程式。 有關詳細資訊，請參閱[MSBuild](/visualstudio/msbuild/msbuild)。
+您也可以使用 MSBuild 以程式設計的方式建置 C# 程式。 如需詳細資訊，請參閱 [MSBuild](/visualstudio/msbuild/msbuild)。
 
-*csc.exe*可執行檔通常位於*Windows*目錄下的 Microsoft.NET_Framework\\*\<版本>* 資料夾中。 它的位置可能依據特定電腦的實際組態而有所不同。 如果您的電腦上安裝了多個版本的 .NET Framework，您將看到這個檔案的多個版本。 如需這類安裝的詳細資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+*csc.exe*可執行檔通常位於 \\ *\<Version>* *Windows*目錄下的 NET\Framework 資料夾中。 它的位置可能依據特定電腦的實際組態而有所不同。 如果您的電腦上安裝了多個版本的 .NET Framework，您將看到這個檔案的多個版本。 如需這類安裝的詳細資訊，請參閱[如何：判斷安裝的 .NET Framework 版本](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 > [!TIP]
 > 當您使用 Visual Studio IDE 建置專案時，可以在 [輸出]**** 視窗中顯示 **csc** 命令和其關聯的編譯器選項。 若要顯示這項資訊，請遵循[如何：檢視、儲存和設定組建記錄檔](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)中的指示，將記錄資料的詳細等級變更為 [一般]**** 或 [詳細]****。 在您重新建置專案之後，請在 [輸出]**** 視窗中搜尋 **csc**，尋找 C# 編譯器的引動過程。
 
- **在本主題中**
+ **本主題內容**
 
 - [命令列語法規則](#rules-for-command-line-syntax-for-the-c-compiler)
 
-- [示例命令列](#sample-command-lines-for-the-c-compiler)
+- [範例命令列](#sample-command-lines-for-the-c-compiler)
 
 - [C# 編譯器與 C++ 編譯器輸出的差異](#differences-between-c-compiler-and-c-compiler-output)
 
@@ -99,10 +100,10 @@ C# 編譯器會在解譯作業系統命令列所指定的引數時使用下列�
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [依字母順序列出 C# 編譯器選項](./listed-alphabetically.md)
 - [依分類列出的 C# 編譯器選項](./listed-by-category.md)
-- [Main() 和命令列引數](../../programming-guide/main-and-command-args/index.md)
-- [命令列參數](../../programming-guide/main-and-command-args/command-line-arguments.md)
-- [如何顯示命令列參數](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [主要 ( # A1 和命令列引數](../../programming-guide/main-and-command-args/index.md)
+- [命令列引數](../../programming-guide/main-and-command-args/command-line-arguments.md)
+- [如何顯示命令列引數](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Main() 傳回值](../../programming-guide/main-and-command-args/main-return-values.md)

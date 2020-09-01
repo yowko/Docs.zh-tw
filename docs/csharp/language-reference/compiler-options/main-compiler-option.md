@@ -1,4 +1,5 @@
 ---
+description: -main (C# 編譯器選項)
 title: -main (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 1de3d51953b632e3881db76202b63d3f287b39fe
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 61e63de8082a335b448ffee1ae35170d3a1cf6b4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051866"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125263"
 ---
 # <a name="-main-c-compiler-options"></a>-main (C# 編譯器選項)
 
@@ -34,7 +35,7 @@ ms.locfileid: "86051866"
 
 如果編譯的 [Main](../../programming-guide/main-and-command-args/index.md) 方法中包含一個以上的型別，您可以指定哪個型別含有要作為程式進入點的 **Main** 方法。
 
-此選項是在編譯 *.exe*檔案時使用。
+此選項適用于編譯 *.exe* 檔時。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
@@ -46,9 +47,9 @@ ms.locfileid: "86051866"
 
     若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>。
 
-### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>手動編輯 *.csproj*檔案以設定這個編譯器選項
+### <a name="to-set-this-compiler-option-by-manually-editing-the-csproj-file"></a>手動編輯 *.csproj* 檔案以設定這個編譯器選項
 
-您可以藉由編輯 .csproj 檔案，並在區段內加入元素，來設定此選項 `StartupObject` `PropertyGroup` 。 例如：
+您可以藉由編輯 .csproj 檔案並在區段內加入專案來設定此選項 `StartupObject` `PropertyGroup` 。 例如：
 
 ```xml
   <PropertyGroup>

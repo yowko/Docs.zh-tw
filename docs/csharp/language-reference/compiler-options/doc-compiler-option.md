@@ -1,4 +1,5 @@
 ---
+description: -doc (C# 編譯器選項)
 title: -doc (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 366bad1029904b3571be0a76d827ff0213d776bb
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73422966"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125744"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# 編譯器選項)
 **-doc** 選項可讓您在 XML 檔案中放入文件註解。  
@@ -43,7 +44,7 @@ ms.locfileid: "73422966"
   
  若要以產生的 .xml 檔案搭配 [IntelliSense](/visualstudio/ide/using-intellisense) 功能使用，.xml 檔案的檔案名稱要和您想支援的組件同名，然後確定 .xml 檔案和組件位於相同的目錄。 如此，在 Visual Studio 專案中參考組件時，也會找到 .xml 檔案。 如需詳細資訊，請參閱[提供程式碼註解](/visualstudio/ide/reference/generate-xml-documentation-comments)。  
   
- 除非使用[-target：module](./target-module-compiler-option.md)編譯`file`，\<否則將\<包含程式集>/assembly>標記，指定包含編譯輸出檔案的組件資訊清單的檔的名稱。  
+ 除非您使用[-target： module](./target-module-compiler-option.md)編譯，否則 `file` 將會包含 \<assembly> \</assembly> 標記，指定包含編譯輸出檔之組件資訊清單的檔案名。  
   
 > [!NOTE]
 > -doc 選項適用於所有輸入檔案，或者，如果設定於 [專案設定]，則適用於專案中的所有檔案。 若要停用與特定檔案或程式碼區段文件註解相關的警告，請使用[#pragma 警告](../preprocessor-directives/preprocessor-pragma-warning.md)。  
@@ -62,5 +63,5 @@ ms.locfileid: "73422966"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,4 +1,5 @@
 ---
+description: -keycontainer (C# 編譯器選項)
 title: -keycontainer (C# 編譯器選項)
 ms.date: 05/16/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: fead2d4296cfa6fb0195cb4b43f6448c0fc7e6a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b11380683159b7792149558a5dd432707ba3818
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70970141"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125497"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (C# 編譯器選項)
 指定密碼編譯金鑰容器的名稱。  
@@ -48,5 +49,5 @@ ms.locfileid: "70970141"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 編譯器 -keyfile 選項](keyfile-compiler-option.md)
-- [C# 編譯器選項](index.md)
+- [C # 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

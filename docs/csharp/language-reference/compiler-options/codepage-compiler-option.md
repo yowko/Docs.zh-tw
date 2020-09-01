@@ -1,4 +1,5 @@
 ---
+description: -codepage (C# 編譯器選項)
 title: -codepage (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 3352e7fc446ace391540360a3b6b36d604ca5f13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c812314ed9c1abcd7d2f34b2281140175621312
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173753"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125952"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (C# 編譯器選項)
 如果所需的頁面不是系統目前預設的字碼頁，這個選項可指定編譯期間使用的字碼頁。  
@@ -37,5 +38,5 @@ ms.locfileid: "79173753"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

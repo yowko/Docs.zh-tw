@@ -1,4 +1,5 @@
 ---
+description: -bugreport (C# 編譯器選項)
 title: -bugreport (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c358b2dda400f6077ffb5ba1dfc8e6e1127fa52
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69603077"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125991"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C# 編譯器選項)
 指定偵錯資訊應該置於檔案以供稍後分析。  
@@ -55,6 +56,6 @@ ms.locfileid: "69603077"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
-- [-錯誤報表（C# 編譯器選項）](./errorreport-compiler-option.md)
+- [C # 編譯器選項](./index.md)
+- [-errorreport (c # 編譯器選項) ](./errorreport-compiler-option.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

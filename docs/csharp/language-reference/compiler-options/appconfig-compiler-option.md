@@ -1,4 +1,5 @@
 ---
+description: -appconfig (C# 編譯器選項)
 title: -appconfig (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 287d41105199057add1dad78d480b083adb745b2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69922526"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126108"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C# 編譯器選項)
 **-appconfig** 編譯器選項可讓 C# 應用程式將組件應用程式組態檔 (app.config) 的位置指定到組件繫結時間的通用語言執行平台 (CLR)。  
@@ -56,5 +57,5 @@ ms.locfileid: "69922526"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<支援可攜性>元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
+- [\<supportPortability> 元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
 - [依字母順序列出 C# 編譯器選項](./listed-alphabetically.md)

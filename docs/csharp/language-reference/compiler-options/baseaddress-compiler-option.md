@@ -1,4 +1,5 @@
 ---
+description: -baseaddress (C# 編譯器選項)
 title: -baseaddress (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: f138f445b8a335c7505e25b34f560c4da40ab2dd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 42b1891c29457745689542a4c9e0482ec5e918fa
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937205"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126004"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (C# 編譯器選項)
 **-baseaddress** 選項讓您指定要載入 DLL 的慣用基底位址。 如需此選項的使用時機與使用原因之詳細資訊，請參閱 [Larry Osterman 的部落格](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system)。  
@@ -41,7 +42,7 @@ ms.locfileid: "75937205"
   
 2. 按一下 [建置]**** 屬性頁面。  
   
-3. 按一下 [進階]**** 按鈕。  
+3. 按一下 [進階]  按鈕。  
   
 4. 修改 **DLL 基底位址**屬性。  
   
@@ -50,5 +51,5 @@ ms.locfileid: "75937205"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

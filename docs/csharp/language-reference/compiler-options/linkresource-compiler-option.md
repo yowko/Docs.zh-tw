@@ -1,4 +1,5 @@
 ---
+description: -linkresource (C# 編譯器選項)
 title: -linkresource (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 41af8e0ba8ffebd07d3cb1d2bc5fbc04b8cd595d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 162baad57397b6d992dcf8f03f0b3661e0105cb8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173727"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125341"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# 編譯器選項)
 在輸出檔中建立 .NET Framework 資源連結。 資源檔不會新增至輸出檔。 這點與 [-resource](./resource-compiler-option.md) 選項不同；後者會將資源檔內嵌在輸出檔案中。  
@@ -42,7 +43,7 @@ ms.locfileid: "79173727"
   
  **-linkresource** 必須使用其中一個 [-target](./target-compiler-option.md) 選項 (**-target:module** 除外)。  
   
- 例如，如果 `filename` 是由 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。 對於其他所有資源，請使用 <xref:System.Reflection.Assembly> 類別中的 `GetManifestResource` 方法，以在執行階段存取資源。  
+ 例如，如果 `filename` 是由 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱<xref:System.Resources.ResourceManager?displayProperty=nameWithType>。 對於其他所有資源，請使用 <xref:System.Reflection.Assembly> 類別中的 `GetManifestResource` 方法，以在執行階段存取資源。  
   
  `filename` 中指定的檔案可以為任何格式。 例如，您可能需要產生組件的原生 DLL 部分，以便安裝到全域組件快取中，並從組件的 Managed 程式碼存取。 下方第二個範例顯示如何執行此操作。 您可以在組件連結器中執行相同的動作。 下方第三個範例顯示如何執行此操作。 如需詳細資訊，請參閱 [Al.exe (組件連結器)](../../../framework/tools/al-exe-assembly-linker.md) 和[使用組件和全域組件快取](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)。  
   
@@ -76,7 +77,7 @@ gacutil -i A.dll
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
-- [Al.exe (組件連結器)](../../../framework/tools/al-exe-assembly-linker.md)
+- [C # 編譯器選項](./index.md)
+- [Al.exe (元件連結器) ](../../../framework/tools/al-exe-assembly-linker.md)
 - [使用組件和全域組件快取](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

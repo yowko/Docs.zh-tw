@@ -1,4 +1,5 @@
 ---
+description: -langversion (C# 編譯器選項)
 title: -langversion (C# 編譯器選項)
 ms.date: 05/20/2020
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - langversion compiler option [C#]
 ms.custom: updateeachrelease
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: fd05802008a20267fea54f14bae4c8deb0e21c65
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: b0e966bcc87303c0a7c2199fbfac743b22481424
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656201"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125471"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# 編譯器選項)
 
@@ -87,7 +88,7 @@ C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選�
 | C # 2       | Microsoft Visual Studio/Build Tools 2005 或配套的 .NET Framework 2.0 編譯器      |
 | C # 1.0/1。2 | Microsoft Visual Studio/Build Tools .NET 2002 或配套 .NET Framework 1.0 編譯器 |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C # 編譯器選項](index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

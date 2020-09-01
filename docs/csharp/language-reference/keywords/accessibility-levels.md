@@ -1,16 +1,17 @@
 ---
+description: 存取範圍層級 - C# 參考
 title: 存取範圍層級 - C# 參考
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26b8f78595b1406deb371113cf491b80ad7c1474
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713822"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127018"
 ---
 # <a name="accessibility-levels-c-reference"></a>存取範圍層級 (C# 參考)
 
@@ -37,26 +38,26 @@ ms.locfileid: "75713822"
   
 |成員|預設成員存取範圍|允許的成員已宣告存取範圍|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|None|  
+|`enum`|`public`|無|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|None|  
+|`interface`|`public`|無|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
- 巢狀型別的可訪問性取決於其[可訪問性域](./accessibility-domain.md)，該域由成員聲明的可訪問性以及立即包含類型的可訪問域決定。 但是，巢狀型別的存取範圍領域不能超過包含型別 (Containing Type) 的存取範圍領域。  
+ 巢狀型別的存取範圍取決於其 [存取範圍網域](./accessibility-domain.md)，這取決於成員的宣告存取範圍和立即包含類型的存取範圍定義域。 但是，巢狀型別的存取範圍領域不能超過包含型別 (Containing Type) 的存取範圍領域。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](./index.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](./index.md)
 - [存取修飾詞](./access-modifiers.md)
-- [存取範圍定義域](./accessibility-domain.md)
-- [使用協助工具級別的限制](./restrictions-on-using-accessibility-levels.md)
+- [協助工具定義域](./accessibility-domain.md)
+- [使用協助工具層級的限制](./restrictions-on-using-accessibility-levels.md)
 - [存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [public](./public.md)
 - [私人](./private.md)
-- [保護](./protected.md)
-- [內部](./internal.md)
+- [protected](./protected.md)
+- [internal](./internal.md)

@@ -1,4 +1,5 @@
 ---
+description: -errorreport (C# 編譯器選項)
 title: -errorreport (C# 編譯器選項)
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 52b58aac5e82d4228dfda9c4d77c1d1c5de3e0cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5b3143f4da81ac693626778263c277e3a484c45e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253885"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125718"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# 編譯器選項)
 此選項提供將 C# 編譯器內部錯誤回報給 Microsoft 的便利方式。
@@ -28,14 +29,14 @@ ms.locfileid: "70253885"
 ```
 
 ## <a name="arguments"></a>引數
- **無**  
+ 無  
  將不會收集有關內部編譯器錯誤的報告，也不會將報告傳送給 Microsoft。
 
- **提示**提示您收到內部編譯器錯誤時發送報告。 **提示**是您在開發環境中編譯應用程式的預設值。
+ **提示** 提示您在收到內部編譯器錯誤時傳送報告。 **提示**是您在開發環境中編譯應用程式的預設值。
 
- **佇列**對錯誤報表進行排隊。 當您使用系統管理認證登入時，您可以報告自上次登入後的任何失敗。 系統提示您傳送錯誤報告的頻率，最多三天一次。 **佇列**是您在命令列編譯應用程式的預設值。
+ **佇列** 將錯誤報表排在佇列中。 當您使用系統管理認證登入時，您可以報告自上次登入後的任何失敗。 系統提示您傳送錯誤報告的頻率，最多三天一次。 **佇列**是您在命令列編譯應用程式的預設值。
 
- **發送**自動向 Microsoft 發送內部編譯器錯誤報表。 若要啟用此選項，您必須先同意 Microsoft 資料收集原則。 第一次在電腦上指定 **-errorreport:send** 時，編譯器訊息會請您參考包含 Microsoft 資料收集原則的網站。
+ **傳送** 自動將內部編譯器錯誤的報告傳送給 Microsoft。 若要啟用此選項，您必須先同意 Microsoft 資料收集原則。 第一次在電腦上指定 **-errorreport:send** 時，編譯器訊息會請您參考包含 Microsoft 資料收集原則的網站。
 
 ## <a name="remarks"></a>備註
  編譯器無法處理原始程式碼檔案時，就會出現編譯器內部錯誤 (ICE)。 發生 ICE 時，編譯器不會產生輸出檔或任何有用的診斷，無法讓您修正程式碼。
@@ -50,7 +51,7 @@ ms.locfileid: "70253885"
 
 2. 按一下 [建置]**** 屬性頁面。
 
-3. 按一下 [進階]**** 按鈕。
+3. 按一下 [進階]  按鈕。
 
 4. 修改**報告編譯器內部錯誤**屬性。
 
@@ -58,4 +59,4 @@ ms.locfileid: "70253885"
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
