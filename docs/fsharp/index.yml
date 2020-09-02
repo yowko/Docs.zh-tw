@@ -1,37 +1,37 @@
 ### YamlMime:Landing
-title: F#附帶
-summary: 瞭解如何在 .NET 上使用程式F#設計語言撰寫任何應用程式。
+title: F# 文件
+summary: '瞭解如何在 .NET 上使用 F # 程式設計語言撰寫任何應用程式。'
 metadata:
-  title: F#檔-開始使用、教學課程、參考。
-  description: 學習F#程式設計-適用于新F#的開發人員F# ，以及經驗豐富的 .net 開發人員
+  title: 'F # 檔-快速入門、教學課程和參考。'
+  description: '學習 F # 程式設計-適用于 F # 新手和經驗豐富的 F #/.NET 開發人員'
   ms.topic: landing-page
   author: cartermp
   ms.author: phcart
-  ms.date: 11/25/2019
-  ms.openlocfilehash: 113a99d75f77cba56639abf485bf646155f0ff36
-  ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+  ms.date: 08/29/2020
+  ms.openlocfilehash: 7d7f9492bcd41975616ddd4d8f552aea5217b2d7
+  ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/28/2019
-  ms.locfileid: "74569492"
+  ms.lasthandoff: 09/01/2020
+  ms.locfileid: "89271850"
 landingContent:
-- title: 學習程式F#
+- title: 瞭解如何在 F 中進行程式設計#
   linkLists:
   - linkListType: get-started
     links:
-    - text: 什麼是F#？
+    - text: '什麼是 F #？'
       url: what-is-fsharp.md
     - text: 安裝 F#
       url: get-started/install-fsharp.md
-    - text: 開始使用F# Visual Studio
+    - text: Visual Studio 中的 F# 使用者入門
       url: get-started/get-started-visual-studio.md
-    - text: 開始使用F# Visual Studio Code
+    - text: '開始使用 Visual Studio Code 中的 F #'
       url: get-started/get-started-vscode.md
   - linkListType: download
     links:
     - text: 下載 .NET Core SDK
       url: https://dotnet.microsoft.com/download
-- title: F#説明中心
+- title: 'F # 基本概念'
   linkLists:
   - linkListType: overview
     links:
@@ -51,19 +51,19 @@ landingContent:
       url: style-guide/conventions.md
   - linkListType: tutorial
     links:
-    - text: 中的非同步程式設計F#
+    - text: F 中的非同步程式設計#
       url: tutorials/asynchronous-and-concurrent-programming/async.md
-- title: 中的新功能F#
+- title: F 中的新功能#
   linkLists:
   - linkListType: whats-new
     links:
-    - text: 4.7 中F#的新功能
+    - text: 'F # 4.7 的新功能'
       url: whats-new/fsharp-47.md
-    - text: 4.6 中F#的新功能
+    - text: 'F # 4.6 的新功能'
       url: whats-new/fsharp-46.md
-    - text: 4.5 中F#的新功能
+    - text: 'F # 4.5 的新功能'
       url: whats-new/fsharp-45.md
-- title: F#語言參考
+- title: F# 語言參考
   linkLists:
   - linkListType: reference
     links:
@@ -73,7 +73,13 @@ landingContent:
       url: language-reference/keyword-reference.md
     - text: 符號和運算子參考
       url: language-reference/symbol-and-operator-reference/index.md
-    - text: 功能
+    - text: 函式
       url: language-reference/functions/index.md
-    - text: F#各種
+    - text: 'F # 類型'
       url: language-reference/fsharp-types.md
+- title: 'F # 核心程式庫參考'
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Fsharp.core Core API 參考
+      url: https://fsharp.github.io/fsharp-core-docs/
