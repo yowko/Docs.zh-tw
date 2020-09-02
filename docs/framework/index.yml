@@ -11,14 +11,14 @@ metadata:
   helpviewer_keywords:
   - .NET Framework guide
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67e1549395ab5657a5d609b186fc1816211c5af3
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 47781bbc5b1b1a2f4c0bc44929c5bb29fe3e7978
+  ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135902"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89379170"
 landingContent:
-- title: 深入瞭解 .NET Framework
+- title: 瞭解 .NET Framework
   linkLists:
   - linkListType: overview
     links:
@@ -74,24 +74,16 @@ landingContent:
     links:
     - text: 安裝和解除安裝 Windows 服務
       url: windows-services/how-to-install-and-uninstall-services.md
-- title: 建立 Windows Forms 應用程式
+- title: 建立桌面應用程式
   linkLists:
   - linkListType: overview
     links:
-    - text: Windows Forms 總覽
-      url: winforms/index.md
-  - linkListType: tutorial
-    links:
-    - text: 開始使用 Windows Form 設計工具
-      url: /visualstudio/designers/walkthrough-windows-forms-designer
-    - text: 從命令列建立 Windows Forms 應用程式
-      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
-  - linkListType: how-to-guide
-    links:
-    - text: 從 ComboBox、ListBox 和 CheckedListBox 控制項新增和移除專案
-      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
-    - text: 對控制項進行安全線程呼叫
-      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+    - text: 桌面指南簡介
+      url: /dotnet/desktop/
+    - text: .NET Framework WPF
+      url: wpf/index.md
+    - text: .NET Framework Windows Forms
+      url: /dotnet/desktop/winforms/?view=netframework-4-8
 - title: 建立 WPF 應用程式
   linkLists:
   - linkListType: overview

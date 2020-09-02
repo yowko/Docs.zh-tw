@@ -1,17 +1,17 @@
 ---
-title: .NET Core 執行時間識別碼（RID）目錄
+title: .NET Core 執行時間識別碼 (RID) 目錄
 description: 了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的使用方式。
 ms.date: 02/22/2019
-ms.openlocfilehash: 903dd9c619008c9e3c6149a471ba814bdc9c97cc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: da8c73ef50a8933b93528e4424dff6e5ed95938d
+ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903281"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89379066"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
-RID 是執行時間*識別碼*的縮寫。 RID 值是用來識別應用程式執行所在的目標平台。
+RID 是執行時間 *識別碼*的縮寫。 RID 值是用來識別應用程式執行所在的目標平台。
 .NET 套件會使用它們來代表 NuGet 套件中的平台特定資產。 下列值是 RID 的範例：`linux-x64`、`ubuntu.14.04-x64`、`win7-x64` 或 `osx.10.12-x64`。
 針對具有原生相依性的套件，RID 也可指定能在哪些平台上還原套件。
 
@@ -27,19 +27,19 @@ RID 是執行時間*識別碼*的縮寫。 RID 值是用來識別應用程式執
 
 代表具體作業系統的 RID 通常遵循 `[os].[version]-[architecture]-[additional qualifiers]` 這個模式，其中：
 
-- `[os]` 是作業/平台系統 Moniker。 例如： `ubuntu` 。
+- `[os]` 是作業/平台系統 Moniker。 例如 `ubuntu`。
 
-- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如： `15.10` 。
+- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如 `15.10`。
 
   - 版本**不應為**行銷版本，因為行銷版本通常代表作業系統的多個個別版本，且具有不同平台 API 介面區。
 
 - `[architecture]` 處理器架構。 例如：`x86`、`x64`、`arm` 或 `arm64`。
 
-- `[additional qualifiers]` 進一步區分不同平台。 例如： `aot` 。
+- `[additional qualifiers]` 進一步區分不同平台。 例如：`aot`。
 
 ## <a name="rid-graph"></a>RID 圖表
 
-RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。 您可以在位於存放庫之檔案的[*runtime.js*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)中，看到支援的 RID 和 rid 圖表清單 `dotnet/runtime` 。 在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。 這些陳述式指出相容的 RID。
+RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。 您可以在存放庫中的 [*runtime.js*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案中，看到支援的 RID 和 RID 圖形清單 `dotnet/runtime` 。 在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。 這些陳述式指出相容的 RID。
 
 當 NuGet 還原套件時，它會嘗試尋找與所指定執行階段完全相符的項目。
 若找不到完全相符的項目，NuGet 會返回到圖形，直到它根據 RID 圖形找到最接近的相容系統。
@@ -72,7 +72,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 處理 RID 時，您必須謹記一些考量：
 
-- RID 是**隱晦字串**，因此必須以黑箱視之。
+- 請勿嘗試剖析 Rid 以取出元件部分。
 - 不要以程式設計方式建置 RID。
 - 使用已針對平台定義的 RID。
 - RID 必須是特定的，因此不要假設實際 RID 值會怎樣。
@@ -80,7 +80,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 ## <a name="using-rids"></a>使用 RID
 
 若要使用 RID，必須先了解有哪些 RID 存在。 新的值會定期新增至平台。
-如需最新和完整的版本，請參閱存放庫上的檔案[runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。
+如需最新的完整版本，請[runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。
 
 .NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值，適用於 .NET Core 2.0 和更新版本。 由於大部分發行版本的 RID 都會對應至可攜式 RID，因此在處理多個 Linux 發行版本時特別有用。
 
@@ -88,7 +88,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="windows-rids"></a>Windows RID
 
-僅列出常見值。 如需最新和完整的版本，請參閱儲存機制上的檔案[runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。
+僅列出常見值。 如需最新的完整版本，請參閱存放庫上的檔案 [runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
   - `win-x64`
@@ -108,17 +108,17 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `win10-arm`
   - `win10-arm64`
 
-如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-windows)。
+如需詳細資訊，請參閱 [.Net Core 相依性和需求](install/dependencies.md?pivots=os-windows)。
 
 ## <a name="linux-rids"></a>Linux RID
 
-僅列出常見值。 如需最新和完整的版本，請參閱存放庫上的檔案[runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
+僅列出常見值。 如需最新的完整版本，請[runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
-  - `linux-x64`（大部分的桌面散發套件，例如 CentOS、Debian、Fedora、Ubuntu 和衍生版本）
+  - `linux-x64` (大部分的桌面散發套件，例如 CentOS、Debian、Fedora、Ubuntu 和衍生) 
   - `linux-musl-x64` (使用 [musl](https://wiki.musl-libc.org/projects-using-musl.html) 的輕量發行版本，如 Alpine Linux)
-  - `linux-arm`（在 ARM 上執行的 Linux 散發套件，例如 Raspberry Pi 模型 2 + 上的 Raspbian）
-  - `linux-arm64`（在64位 ARM 上執行的 Linux 散發套件，例如 Ubuntu Server 64 位 on Raspberry Pi 模型 3 +）
+  - `linux-arm` 在 ARM 上執行的 (Linux 散發套件，例如 Raspberry Pi 模型 2 +) 上的 Raspbian
+  - `linux-arm64` 在 Raspberry Pi 模型 3 +) 上執行于64位 ARM 上的 (Linux 散發套件（如 Ubuntu Server 64 位）
 - Red Hat Enterprise Linux
   - `rhel-x64` (RHEL 6 版以上已由 `linux-x64` 取代)
   - `rhel.6-x64` (.NET Core 2.0 或更新版本)
@@ -127,11 +127,11 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-linux)。
+如需詳細資訊，請參閱 [.Net Core 相依性和需求](install/dependencies.md?pivots=os-linux)。
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新和完整的版本，請參閱存放庫上的檔案[runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) `dotnet/runtime` 。
+macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的完整版本，請[runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)參閱存放庫上的 `dotnet/runtime` 檔案runtime.js。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
   - `osx-x64` (最低 OS 版本為 macOS 10.12 Sierra)
@@ -146,7 +146,7 @@ macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新和�
 - macOS 10.14 Mojave (.NET Core 1.1 或更新版本)
   - `osx.10.14-x64`
 
-如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-macos)。
+如需詳細資訊，請參閱 [.Net Core 相依性和需求](install/dependencies.md?pivots=os-macos)。
 
 ## <a name="see-also"></a>另請參閱
 

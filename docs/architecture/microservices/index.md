@@ -1,19 +1,19 @@
 ---
 title: .NET 微服務。 容器化 .NET 應用程式的架構
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是模組化的獨立可部署服務。 適用於 Linux 與 Windows 的 Docker 容器，可統合服務及其相依性到單一個單位，簡化部署及測試，然後即可於隔離的環境中執行。
-ms.date: 01/30/2020
-ms.openlocfilehash: 9cdd5556f92e1acde540b647e7b68628a3ecf67f
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 09/02/2020
+ms.openlocfilehash: aea5012fee102f388827d146043e69592e14f22b
+ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988787"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89379131"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
 ![書籍封面](./media/cover-small.png)
 
-**編輯 v3.1** - 更新至ASP.NET核心 3.1
+**版本 v 3.1.2** -更新為 ASP.NET Core 3。1
 
 本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。
 
@@ -21,7 +21,7 @@ ms.locfileid: "80988787"
 
 ## <a name="action-links"></a>動作連結
 
-- 此電子書還提供 PDF 格式(僅限英文版本)[下載](https://aka.ms/microservicesebook)
+- 這本電子書也提供 PDF 格式 (英文版僅) [下載](https://aka.ms/microservicesebook)
 
 - 複製/派生 [GitHub 上的 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 參考應用程式
 
@@ -33,7 +33,7 @@ ms.locfileid: "80988787"
 
 企業透過容器，逐漸實現成本節約、解決部署問題，以及改善 DevOps 和生產環境作業。 Microsoft 藉由建立 Azure Kubernetes Service 和 Azure Service Fabric 等產品，以及藉由與 Docker、Mesosphere 和 Kubernetes 等業界領導者合作，不斷為 Windows 和 Linux 創新容器。 這些產品提供容器解決方案，可協助公司以雲端速度和規模建置及部署應用程式，而不論其選擇的平台或工具為何。
 
-Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系統中最重要廠商的支援 (Microsoft 是支援 Docker 的主要雲供應商之一。將來,Docker 可能在雲中的任何資料中心或本地資料中心中無處不在。
+Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系統中最重要廠商的支援  (Microsoft 是支援 Docker 的主要雲端廠商之一。未來 ) ，Docker 可能會在雲端或內部部署的任何資料中心內普遍存在。
 
 此外，[微服務](https://martinfowler.com/articles/microservices.html)架構已躍升為分散式關鍵任務應用程式的重要方法。 在微服務架構中，應用程式會建置在一組可獨立開發、測試、部署及設定版本的服務之上。
 
@@ -47,7 +47,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 ## <a name="version"></a>版本
 
-本指南已修訂為涵蓋 **.NET Core 3.1**版本,以及與與 .NET Core 3.1 版本同時發生的相同"波"技術(即 Azure 和其他第三方技術)相關的許多其他更新。 這就是為什麼書籍版本也已更新到版本**3.1。**
+本指南已經過修訂，涵蓋了 **.Net core 3.1** 版本，以及許多與相同「wave」技術相關的其他更新 (也就是，Azure 和其他協力廠商技術) 導致及時使用 .net Core 3.1 版本。 這就是為什麼書籍版本也更新為 **3.1**版。
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵蓋的內容
 
@@ -68,17 +68,17 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 本指南的第一部分介紹 Docker 容器、討論如何在 .NET Core 和 .NET Framework 之間選擇開發架構，並提供微服務概觀。 此內容適用於需要概觀但重點不在程式碼實作詳細資料的架構師和技術決策者。
 
-本指南的第二部分以 [Docker 應用程式的開發程序](./docker-application-development-process/index.md)一節開頭， 並將重點放在使用 .NET Core 和 Docker 實作應用程式的開發和微服務模式。 本節對於想要專注於程式碼、模式和實作詳細資料的開發人員和架構師最為重要。
+本指南的第二部分以 [Docker 應用程式的開發程序](./docker-application-development-process/index.md)一節開頭， 它著重于使用 .NET Core 和 Docker 來執行應用程式的開發和微服務模式。 本節對於想要專注於程式碼、模式和實作詳細資料的開發人員和架構師最為重要。
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>相關微服務和容器參考應用程式：eShopOnContainers
 
-eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考應用程式，專為使用 Docker 容器進行部署所設計。 此應用程式是由多個子系統所組成，包括數個電子商店 UI 前端 (Web MVC 應用程式、Web SPA 和原生行動應用程式)。 它也包含用來執行所有必要伺服器端作業的後端微服務和容器。
+eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考應用程式，專為使用 Docker 容器進行部署所設計。 應用程式是由多個子系統所組成，包括數個電子商店 UI 前端 (Web MVC 應用程式、Web SPA 和原生行動應用程式) 。 它也包含用來執行所有必要伺服器端作業的後端微服務和容器。
 
-應用程式的目的是要展示架構模式。 **這不是用於生產環境的範本**，無法用來啟動真實世界應用程式。 事實上,該應用程式處於永久的 Beta 狀態,因為它還用於測試新的潛在有趣的技術,因為它們出現。
+應用程式的目的是要展示架構模式。 **這不是用於生產環境的範本**，無法用來啟動真實世界應用程式。 事實上，應用程式會處於永久的 Beta 狀態，因為它也可用來測試出現的新可能有趣技術。
 
 ## <a name="send-us-your-feedback"></a>將您的意見反應傳送給我們！
 
-本指南的撰寫目的是為了協助您了解 .NET 中的容器化應用程式和微服務架構。 本指南和相關參考應用程式會不斷改進，因此歡迎您提供寶貴的意見反應！ 如果您對如何改進本指南有意見,請將反饋提交。 <https://aka.ms/ebookfeedback>
+本指南的撰寫目的是為了協助您了解 .NET 中的容器化應用程式和微服務架構。 本指南和相關參考應用程式會不斷改進，因此歡迎您提供寶貴的意見反應！ 如果您有關于如何改進本指南的意見，請在中提交意見反應 <https://aka.ms/ebookfeedback> 。
 
 ## <a name="credits"></a>學分
 
@@ -144,7 +144,9 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 >
 > **Charles Lowell**，Microsoft VS CAT 小組軟體工程師
 >
-> **米格爾·韋洛索**,普通概念軟體開發工程師
+> 以簡單的概念**Miguel Veloso**軟體發展工程師
+>
+> Neudesic 提供的首席顧問**Sumit Ghosh**
 
 ## <a name="copyright"></a>著作權
 
@@ -158,7 +160,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-版權© 2020 年由微軟公司
+Microsoft Corporation 的著作權©2020
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
@@ -170,9 +172,9 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
-Docker 鯨魚標誌是 Docker, Inc. 經許可使用的註冊商標。
+Docker whale 標誌是 Docker，Inc. 所用的注冊商標。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
 >[!div class="step-by-step"]
->[下一步](container-docker-introduction/index.md)
+>[下一個](container-docker-introduction/index.md)
