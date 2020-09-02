@@ -3,12 +3,12 @@ title: .NET Core SDK 遙測
 description: 探索收集使用方式資訊以進行分析的 .NET Core SDK 遙測功能，它會收集哪些資料以及如何停用。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226565"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359229"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
@@ -46,13 +46,13 @@ The .NET Core tools collect usage data in order to help us improve your experien
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-若要停用此訊息和 .NET Core 歡迎訊息，請將 `DOTNET_NOLOGO` 環境變數設定為 `true` 。 請注意，此變數對遙測選擇不會有任何影響。
+若要停用此訊息和 .NET Core 歡迎訊息，請將 `DOTNET_NOLOGO` 環境變數設為 `true` 。 請注意，此變數不會影響已退出的遙測。
 
 ## <a name="data-points"></a>資料點
 
 遙測功能不會收集個人資料，例如使用者名稱或電子郵件地址。 它不會掃描您的程式碼，也不會擷取專案層級資料，例如名稱、存放庫或作者。 資料使用 [Azure 監視器](https://azure.microsoft.com/services/monitor/)技術安全地傳送至 Microsoft 伺服器、在限制存取下保留，並在嚴格安全性控制下從安全的 [Azure 儲存體](https://azure.microsoft.com/services/storage/)系統發佈。
 
-保護您的隱私權對我們而言很重要。 如果您懷疑遙測正在收集敏感性資料，或資料被, 或不當處理，請在[dotnet/sdk](https://github.com/dotnet/sdk/issues)存放庫中提出問題，或傳送電子郵件給 [dotnet@microsoft.com](mailto:dotnet@microsoft.com) 進行調查。
+保護您的隱私權對我們而言很重要。 如果您懷疑遙測收集敏感性資料或資料正在, 或不當處理，請在 [dotnet/sdk](https://github.com/dotnet/sdk/issues) 存放庫中提出問題，或傳送電子郵件以 [dotnet@microsoft.com](mailto:dotnet@microsoft.com) 供調查。
 
 遙測功能會收集下列資料：
 
@@ -138,5 +138,5 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Core CLI Telemetry - 2019 Q2 Data](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2) (.NET Core CLI 遙測 - 2019 年第 2 季資料)
+- [.NET Core CLI 遙測資料](https://dotnet.microsoft.com/platform/telemetry)
 - [遙測參考來源 (dotnet/sdk 存放庫) ](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

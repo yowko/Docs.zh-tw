@@ -2,20 +2,20 @@
 title: 使用 Visual Studio Code 測試具有 .NET Core 的 .NET Standard 類別庫
 description: 建立 .NET Core 類別庫的單元測試專案。 確認 .NET Core 類別庫可在單元測試中正確運作。
 ms.date: 06/08/2020
-ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811713"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359164"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 以 .NET Core 測試 .NET Standard 類別庫
 
 本教學課程示範如何將測試專案加入至方案，以自動化單元測試。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-- 本教學課程適用于您在 [Visual Studio Code 建立 .NET Standard 程式庫](library-with-visual-studio-code.md)中所建立的解決方案。
+- 本教學課程適用于 [使用 Visual Studio Code 建立 .NET Standard 程式庫](library-with-visual-studio-code.md)中所建立的解決方案。
 
 ## <a name="create-a-unit-test-project"></a>建立單元測試專案
 
@@ -23,7 +23,7 @@ ms.locfileid: "88811713"
 
 1. 啟動 Visual Studio Code。
 
-1. 開啟 `ClassLibraryProjects` 您在 [Visual Studio 中建立 .NET Standard 程式庫](library-with-visual-studio.md)所建立的方案。
+1. 開啟 `ClassLibraryProjects` 您在 [使用 Visual Studio Code 建立 .NET Standard 程式庫](library-with-visual-studio-code.md)中建立的方案。
 
 1. 建立名為 "StringLibraryTest" 的單元測試專案。
 

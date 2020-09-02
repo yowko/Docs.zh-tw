@@ -2,12 +2,12 @@
 title: 適用于雲端原生應用程式的 Azure 安全性
 description: 設計適用于 Azure 的雲端原生 .NET 應用程式 |適用于雲端原生應用程式的 Azure 安全性
 ms.date: 05/13/2020
-ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 7780b005d84124f202049deeb5be876364e6c5fa
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557642"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358969"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>適用于雲端原生應用程式的 Azure 安全性
 
@@ -139,7 +139,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 當測試安全性主體是否有特定許可權時，角色和範圍的組合將會列入考慮。 此組合提供強大的授權機制。
 
-## <a name="deny"></a>拒絕
+## <a name="deny"></a>Deny
 
 之前，RBAC 只允許「允許」規則。 這種行為使某些範圍變得複雜。 例如，允許安全性主體存取所有的儲存體帳戶，但其中一個需要授與明確許可權給可能無止盡的儲存體帳戶清單。 每次建立新的儲存體帳戶時，都必須將其新增至此帳戶清單。 這種新增的管理額外負荷當然不太理想。
 
@@ -147,7 +147,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 ## <a name="checking-access"></a>檢查存取權
 
-您可以想像，擁有大量的角色和範圍，可讓您找出服務主體的有效許可權相當困難。 堆積拒絕規則的基礎，只是為了提高複雜性。 幸運的是，有一個許可權計算機可顯示任何服務主體的有效許可權。 它通常會在入口網站的 [IAM] 索引標籤下找到，如圖10-3 所示。
+您可以想像，擁有大量的角色和範圍，可讓您找出服務主體的有效許可權相當困難。 堆積拒絕規則的基礎，只是為了提高複雜性。 幸運的是，有一個 [許可權計算機](https://docs.microsoft.com/azure/role-based-access-control/check-access) 可顯示任何服務主體的有效許可權。 它通常會在入口網站的 [IAM] 索引標籤下找到，如圖10-3 所示。
 
 ![圖 9-4 app service 的許可權計算機](./media/check-rbac.png)
 

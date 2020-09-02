@@ -1,32 +1,32 @@
 ---
 title: .NET Standard
-description: 瞭解 .NET Standard、其版本，以及支援它的 .NET 部署。
+description: 瞭解 .NET Standard、其版本，以及支援它的 .NET 支援。
 ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e96a03ca55682d3e30bc13fb20a8e443105301fc
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167407"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359307"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard)是一種正式的 .net api 規格，其預定適用于所有的 .net 部署。 .NET Standard 背後的動機是在 .NET 生態系統中建立更高的一致性。 [Ecma 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)會繼續建立 .net 執行行為的一致性，而當 ECMA 335 指定一小組標準程式庫時，.NET Standard 規格會包含更多的 .net api 範圍。
+[.NET Standard](https://github.com/dotnet/standard) 是適用于所有 .net 執行的正式 .net api 規格。 .NET Standard 背後的動機是在 .NET 生態系統中建立更高的一致性。 [Ecma 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) 會繼續建立 .net 執行行為的一致性，而 ecma 335 會指定一組小型的標準程式庫，.NET Standard 規格則包含更廣泛的 .net api。
 
-.NET Standard 會啟用下列主要案例：
+.NET Standard 可提供下列主要案例：
 
 - 定義一致的 BCL API 集合，以供所有 .NET 實作來實作，而不論工作負載為何。
 - 可讓開發人員使用這組相同的 API，產生可跨 .NET 實作使用的可攜式程式庫。
 - 減少或甚至排除因 .NET API 而必須對共用原始檔進行的條件式編譯，僅適用於 OS API。
 
-不同的 .NET 實作會以特定版本的 .NET Standard 為目標。 每個 .NET 實作版本會宣佈它所支援的最高 .NET Standard 版本，此聲明表示它也會支援舊版。 例如，.NET Framework 4.6 會實 .NET Standard 1.3，這表示它會公開 .NET Standard 版本1.0 到1.3 中定義的所有 Api。 同樣地，.NET Framework 4.6.1 會實 .NET Standard 1.4，而 .NET Core 1.0 則會執行 .NET Standard 1.6。
+不同的 .NET 實作會以特定版本的 .NET Standard 為目標。 每個 .NET 實作版本會宣佈它所支援的最高 .NET Standard 版本，此聲明表示它也會支援舊版。 例如，.NET Framework 4.6 會實 .NET Standard 1.3，這表示它會公開 .NET Standard 版1.0 至1.3 所定義的所有 Api。 同樣地，.NET Framework 4.6.1 會實 .NET Standard 1.4，而 .NET Core 1.0 則會執行 .NET Standard 1.6。
 
 ## <a name="net-implementation-support"></a>.NET 實作支援
 
-下表列出支援每個 .NET Standard 版本的**最低**平臺版本。 這表示所列出平台的更新版本也支援所對應 .NET Standard 版本。 例如，.NET Core 2.2 支援 .NET Standard 2.0 及更早版本。
+下表列出支援每個 .NET Standard 版本的 **最低** 平臺版本。 這表示所列出平台的更新版本也支援所對應 .NET Standard 版本。 例如，.NET Core 2.2 支援 .NET Standard 2.0 及更早版本。
 
 [!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
@@ -82,7 +82,7 @@ ms.locfileid: "87167407"
 
 .NET Standard 參考組件的主要散發工具是 NuGet 套件。 傳遞實作的方法有許多種，各自適合每種 .NET 實作。
 
-NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standard 套件是以 ".NET Standard" 架構為目標。 您可以使用 `netstandard` [compact TFM](frameworks.md) （例如），以 .NET Standard 架構為目標 `netstandard1.4` 。 要在多個執行階段上執行的程式庫應以此架構為目標。 對大多數的 API 來說，會以 `netstandard2.0` 為目標，因為提供的 API 數目，超過 .NET Standard 1.6 與 2.0 之間的一倍。
+NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standard 套件是以 ".NET Standard" 架構為目標。 您可以使用 `netstandard` [compact TFM](frameworks.md) (以 .NET Standard framework 為目標，例如 `netstandard1.4`) 。 要在多個執行階段上執行的程式庫應以此架構為目標。 對大多數的 API 來說，會以 `netstandard2.0` 為目標，因為提供的 API 數目，超過 .NET Standard 1.6 與 2.0 之間的一倍。
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/)中繼套件會參考定義 .NET Standard 的一組完整 NuGet 套件。  若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 它描述大約 40 種定義 .NET Standard 的 .NET 程式庫和相關 API，並提供其存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。
 
@@ -92,7 +92,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 .NET Standard 並非專屬於任何一個 .NET 實作，也不符合任何這些執行階段的版本配置。
 
-新增至任何實作 (例如 .NET Framework、.NET Core 和 Mono) 的 API 都可視為要新增至規格的候選項目，尤其是如果本質上要作為基礎的 API。 新的 [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)是根據 .NET 實作版本所建立，可讓您以來自 .NET Standard PCL 的新 API 為目標。 如需版本控制機制的詳細資訊，請參閱 [.NET Core 版本控制](../core/versions/index.md)。
+新增至任何 .NET 執行的 Api (例如，.NET Framework、.NET Core 和 Mono) 可視為要加入至規格的候選項目，尤其是當它們被視為本質上的基本時。 新 [版本的 .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) 是根據 .net 執行版本所建立，可讓您從 .NET Standard 的便攜類別庫 (PCL) 的新 api。 如需版本控制機制的詳細資訊，請參閱 [.NET Core 版本控制](../core/versions/index.md)。
 
 .NET Standard 版本控制對於使用至關重要。 指定 .NET Standard 版本之後，您可以使用以相同版本或更舊版本為目標的程式庫。 下列方法描述使用 .NET Standard PCL (專門用於 .NET Standard 目標設定) 的工作流程。
 
@@ -112,13 +112,13 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard 程式庫與 Visual Studio
 
-若要在 Visual Studio 中建立 .NET Standard 程式庫，請確定您已在 Windows 上安裝[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或 Visual Studio 2017 15.3 版或更新版本，或在 macOS 上安裝[Visual Studio for Mac 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)或更新版本。
+若要在 Visual Studio 中建立 .NET Standard 程式庫，請確定您已在 Windows 上安裝 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 Visual Studio 2017 15.3 版或更新版本，或在 macOS 上安裝 [Visual Studio for Mac 7.1 版](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 或更新版本。
 
 若在您專案中只需要使用 .NET Standard 2.0 程式庫，也可於 Visual Studio 2015 中執行。 但需要安裝 NuGet 用戶端 3.6 或更新版本。 您可從 [NuGet下載](https://www.nuget.org/downloads)頁面，下載 Visual Studio 2015 的 NuGet 用戶端。
 
 ## <a name="comparison-to-portable-class-libraries"></a>與可攜式類別庫的比較
 
-.NET Standard 會取代[可攜式類別庫 (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md)。 .NET Standard 藉由策劃標準 BCL 並在整個 .NET 部署中建立更高的一致性，來改善建立便攜程式庫的體驗。 以 .NET Standard 為目標的程式庫是 PCL 或「.NET Standard 型 PCL」。 現有的 PCL 是「設定檔型 PCL」。
+.NET Standard 會取代[可攜式類別庫 (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md)。 .NET Standard 改善了建立便攜程式庫的體驗，方法是策劃標準 BCL，並為其產生更高的跨 .NET 實施一致性。 以 .NET Standard 為目標的程式庫是 PCL 或「.NET Standard 型 PCL」。 現有的 PCL 是「設定檔型 PCL」。
 
 .NET Standard 和 PCL 設定檔是為了類似的目的而建立，但也有幾點重要的不同之處。
 
@@ -130,7 +130,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 - .NET Standard 是一組經過策劃的 API，而 PCL 設定檔則是由現有平台的交集所定義。
 - .NET Standard 是以線性方式控制版本，而 PCL 設定檔則不是。
-- PCL 設定檔代表 Microsoft 平臺，而 .NET Standard 與平臺無關。
+- PCL 設定檔代表 Microsoft 平臺，而 .NET Standard 的平臺無關。
 
 ### <a name="pcl-compatibility"></a>PCL 相容性
 

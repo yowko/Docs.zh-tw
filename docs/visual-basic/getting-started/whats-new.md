@@ -1,5 +1,5 @@
 ---
-title: Visual Basic 的新功能
+title: 新功能
 ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: a9bac04a7839796229a2e1c61771ca32573f8fcd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e9ab745a60cd9eb646bee57a9a6838c30add77c5
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374508"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359203"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -22,27 +22,27 @@ ms.locfileid: "84374508"
 ## <a name="current-version"></a>目前版本
 
 Visual Basic 16.0/Visual Studio 2019 版本 16.0 \
-如需新功能，請參閱[Visual Basic 16.0](#visual-basic-160)。
+如需新功能，請參閱 [Visual Basic 16.0](#visual-basic-160)。
 
 ## <a name="previous-versions"></a>舊版
 
 Visual Basic 15.8/Visual Studio 2017 版本 15.8 \
-如需新功能，請參閱[Visual Basic 15.8](#visual-basic-158)。
+如需新功能，請參閱 [Visual Basic 15.8](#visual-basic-158)。
 
 Visual Basic 15.5/Visual Studio 2017 版本 15.5 \
-如需新功能，請參閱[Visual Basic 15.5](#visual-basic-155)。
+如需新功能，請參閱 [Visual Basic 15.5](#visual-basic-155)。
 
 Visual Basic 15.3/Visual Studio 2017 版本 15.3 \
-如需新功能，請參閱[Visual Basic 15.3](#visual-basic-153)。
+如需新功能，請參閱 [Visual Basic 15.3](#visual-basic-153)。
 
 Visual Basic 2017/Visual Studio 2017 \
-如需新功能，請參閱[Visual Basic 2017](#visual-basic-2017)。
+如需新功能，請參閱 [Visual Basic 2017](#visual-basic-2017)。
 
 Visual Basic/Visual Studio 2015 \
-如需新功能，請參閱[Visual Basic 14](#visual-basic-14)。
+如需新功能，請參閱 [Visual Basic 14](#visual-basic-14)。
 
 Visual Basic/Visual Studio 2013 \
-.NET Compiler Platform （"Roslyn"）的技術預覽
+.NET Compiler Platform ( "Roslyn" ) 的技術預覽
 
 Visual Basic/Visual Studio 2012 \
 `Async` 和 `await` 關鍵字、迭代器、呼叫端資訊屬性
@@ -64,11 +64,11 @@ Visual Basic/Visual Studio .NET 2002 \
 
 ## <a name="visual-basic-160"></a>Visual Basic 16。0
 
-Visual Basic 16.0 著重于為 .NET Core 提供 Visual Basic 執行時間（microsoft）的更多功能，而且是著重于 .NET Core Visual Basic 的第一個版本。 Visual Basic 執行時間的許多部分都取決於 WinForms，而這些會在較新版本的 Visual Basic 中新增。
+Visual Basic 16.0 的重點在於提供更多 Visual Basic 執行時間的功能 ( # A0) .NET Core，而且是以 .NET Core 為焦點的第一版 Visual Basic。 Visual Basic 執行時間的許多部分相依于 WinForms，而這些部分將會新增至較新版本的 Visual Basic。
 
 **語句中的多個位置允許的批註**
 
-在 Visual Basic 15.8 和更早版本中，只允許在空白行、語句結尾，或在允許隱含行接續的語句中的特定位置使用批註。 從 Visual Basic 16.0 開始，在明確的行接續之後，以及在行首加上底線的空格後面的語句內，也允許批註。
+在 Visual Basic 15.8 及更早版本中，只允許在空白行、語句結尾或語句內的特定位置（允許隱含的行接續）使用批註。 從 Visual Basic 16.0 開始，也允許在明確的行接續之後，以及在行首以空格開頭的語句中的語句內，進行批註。
 
 ```vb
 Public Sub Main()
@@ -124,7 +124,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-[`Private Protected`成員存取修飾詞](../language-reference/modifiers/private-protected.md)
+[`Private Protected` 成員存取修飾詞](../language-reference/modifiers/private-protected.md)
 
 這個新的關鍵字組合能定義可由其包含類別中的所有成員，以及由衍生自該包含類別的類型 (但僅限於也能在包含組件中找到它們的情況下) 進行存取的成員。 由於結構無法被繼承，因此 `Private Protected` 只能套用至類別的成員。
 
@@ -158,7 +158,7 @@ Visual Basic 命令列編譯器現在支援 [**-refout**](../reference/command-l
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[**Tuples**](../programming-guide/language-features/data-types/tuples.md)
+[**元組**](../programming-guide/language-features/data-types/tuples.md)
 
 Tuple 是輕量的資料結構，最常用於從單一方法呼叫傳回多個值。 通常要從方法傳回多個值，您必須執行下列其中一項︰
 
@@ -186,7 +186,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 從 C# 7.0 開始，C# 支援參考傳回值。 也就是說，當呼叫方法收到參考傳回的值時，它可以變更參考的值。 Visual Basic 不允許您撰寫使用參考傳回值的方法，但允許您使用和修改參考傳回值。
 
-例如，以 C# 撰寫的下列 `Sentence` 類別包含 `FindNext` 方法，它可以在句子中尋找以指定子字串開頭的下一個文字。 字串會以參考傳回值傳回，而參考所傳遞至方法的 `Boolean` 變數會指出搜尋是否成功。 這表示除了讀取傳回的值之外，呼叫者也可以修改它，而且該修改會反映在 `Sentence` 類別中。
+例如，以 C# 撰寫的下列 `Sentence` 類別包含 `FindNext` 方法，它可以在句子中尋找以指定子字串開頭的下一個文字。 字串會以參考傳回值傳回，而參考所傳遞至方法的 `Boolean` 變數會指出搜尋是否成功。 這表示除了讀取傳回的值之外，呼叫端也可以修改它，而該修改會反映在 `Sentence` 類別中。
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
@@ -202,7 +202,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
-如需詳細資訊，請參閱[參考傳回值](../programming-guide/language-features/procedures/ref-return-values.md)。
+如需詳細資訊，請參閱 [參考傳回值](../programming-guide/language-features/procedures/ref-return-values.md)。
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
@@ -214,7 +214,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 您可以使用字串插值運算式來建構字串。  字串插值運算式類似包含運算式的範本字串。  對於引數而言，字串插值比[複合格式](../../standard/base-types/composite-formatting.md)更容易了解。
 
-[Null-條件式成員存取和索引](../language-reference/operators/null-conditional-operators.md)
+[Null 條件式成員存取和索引](../language-reference/operators/null-conditional-operators.md)
 
 您可以在執行成員存取 (`?.`) 或對 (`?[]`) 作業編製索引之前，透過非常精簡的語法來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  如果左運算元或物件參考為 Null，則作業會傳回 Null。
 
@@ -230,19 +230,19 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 以程式碼 `Threading.Thread.Sleep(1000)` 為例，Visual Basic 之前會查詢命名空間 "Threading"，發現它在 System.Threading 和 System.Windows.Threading 之間模稜兩可，然後回報錯誤。  Visual Basic 現在會同時考慮這兩種可能的命名空間。  如果您顯示完成清單，Visual Studio 編輯器會在完成清單中列出這兩種類型的成員。
 
-**以年為優先的日期常值**
+**年度優先日期常值**
 
 您可以有 yyyy-mm-dd 格式的日期常值 (`#2015-03-17 16:10 PM#`)。
 
-**Readonly 介面屬性**
+**唯讀介面屬性**
 
 您可以使用讀寫屬性來實作唯讀介面屬性。 這個介面可確保提供基本功能，並且不會防止實作類別允許設定屬性。
 
-[TypeOf \<expr> IsNot\<type>](../language-reference/operators/typeof-operator.md)
+[TypeOf \<expr> IsNot \<type>](../language-reference/operators/typeof-operator.md)
 
 為了增加程式碼的可讀性，您現在可以搭配使用 `TypeOf` 和 `IsNot`。
 
-[#Disable 警告 \<ID> 和 #Enable 警告\<ID>](../language-reference/directives/index.md)
+[#Disable 警告 \<ID> 和 #Enable 警告 \<ID>](../language-reference/directives/index.md)
 
 您可以停用及啟用原始程式檔中區域的特定警告。
 
@@ -258,7 +258,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 您可以將 #Region…#End Region 分隔符號放到檔案的任何位置及函式內，甚至是橫跨不同的函式主體。
 
-[覆寫定義是隱含的多載](../language-reference/modifiers/overrides.md)
+[覆寫定義是隱含多載](../language-reference/modifiers/overrides.md)
 
 如果您將 `Overrides` 修飾詞加入定義，編譯器會隱含加入 `Overloads`，讓您可以在一般情況下輸入較少的程式碼。
 
@@ -291,5 +291,5 @@ End Interface
 
 ## <a name="see-also"></a>另請參閱
 
-- [2017 Visual Studio 的新功能](/visualstudio/ide/whats-new-visual-studio-2017)
-- [2019 Visual Studio 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)
+- [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-visual-studio-2017)
+- [Visual Studio 2019 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)

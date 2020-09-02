@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 593897b31c86e79db2376dde94f3e5c87fdf8289
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: a2ebad329f583d35f110c5db053eebfa80ace6e2
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89052819"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359320"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教學課程：透過 ML.NET 影像分類 API 使用傳輸學習進行自動視覺化檢查
 
@@ -26,13 +26,13 @@ ms.locfileid: "89052819"
 > - 使用轉移學習將自訂 TensorFlow 影像分類模型定型
 > - 使用自訂模型分類影像
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - 已安裝「.NET Core 跨平臺開發」工作負載， [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本或 Visual Studio 2017 15.6 版或更新版本。
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>影像分類傳輸學習範例總覽
 
-此範例是 c # .NET Core 主控台應用程式，可使用預先定型深度學習 TensorFlow 模型來分類影像。 您可以在 GitHub 的 [dotnet/machinelearning-samples repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary) 找到此範例的程式碼。
+此範例是 c # .NET Core 主控台應用程式，可使用預先定型深度學習 TensorFlow 模型來分類影像。 您可以在 [範例瀏覽器](/samples/dotnet/machinelearning-samples/mlnet-image-classification-transfer-learning/)中找到此範例的程式碼。
 
 ## <a name="understand-the-problem"></a>了解問題
 
