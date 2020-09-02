@@ -3,12 +3,12 @@ title: 屬性
 description: 了解 C# 屬性，其中包含驗證、計算值、延遲評估和屬性變更通知的功能。
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399410"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358904"
 ---
 # <a name="properties"></a>屬性
 
@@ -59,7 +59,7 @@ ms.locfileid: "79399410"
 
 [!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#6)]
 
-使用 `throw` 運算式作為屬性 setter 驗證的一部分，即可簡化上述範例：
+您可以使用 `throw` 運算式做為屬性 setter 驗證的一部分，以簡化上述範例：
 
 [!code-csharp[Validating property setters](../../samples/snippets/csharp/properties/Person.cs#7)]
 
@@ -141,7 +141,7 @@ public class Measurements
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` 運算子稱為「null 條件運算子」**。 它會檢查是否有 null 參考，再評估運算子的右邊。 最後結果是，如果沒有 `PropertyChanged` 事件的訂閱者，則不會執行引發事件的程式碼。 在此情況下，它會擲回 `NullReferenceException` 而不進行這項檢查。 有關詳細資訊，請參閱[`events`](events-overview.md)。 此範例也會使用新的 `nameof` 運算子，從屬性名稱符號轉換成其文字表示。
+`?.` 運算子稱為「null 條件運算子」**。 它會檢查是否有 null 參考，再評估運算子的右邊。 最後結果是，如果沒有 `PropertyChanged` 事件的訂閱者，則不會執行引發事件的程式碼。 在此情況下，它會擲回 `NullReferenceException` 而不進行這項檢查。 如需詳細資訊，請參閱 [`events`](events-overview.md)。 此範例也會使用新的 `nameof` 運算子，從屬性名稱符號轉換成其文字表示。
 使用 `nameof` 可減少鍵入錯誤屬性名稱時所發生的錯誤。
 
 同樣地，實作 <xref:System.ComponentModel.INotifyPropertyChanged> 是您可以在存取子中撰寫程式碼來支援所需案例的範例。

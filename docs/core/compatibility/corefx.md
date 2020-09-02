@@ -2,12 +2,12 @@
 title: 基礎類別庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: e0ebc054e0abccfe934b505a727060653fe313cd
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 8b8fb9b88edf4f1e5f83ef7c21f1712af40479fd
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720181"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359128"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,7 @@ ms.locfileid: "88720181"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [巢狀型別的硬體內部 IsSupported 檢查可能不同](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
 | [參考元件中的參數名稱變更](#parameter-names-changed-in-reference-assemblies) | 5.0 |
 | [在 Unix 上正確剖析非 ASCII 字元的 URI 路徑](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
 | [Unix 上 UNC 路徑的 Uri 識別](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
@@ -50,6 +51,10 @@ ms.locfileid: "88720181"
 | [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [hardware-instrinsics-issupported-checks](../../../includes/core-changes/corefx/5.0/hardware-instrinsics-issupported-checks.md)]
+
+***
 
 [!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
 
