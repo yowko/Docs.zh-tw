@@ -46,7 +46,7 @@
       href: install/run-net-framework-1-1-apps.md
 - name: 移轉指南
   items:
-    - name: 總覽
+    - name: 概觀
       href: migration-guide/index.md
     - name: 相容性
       items:
@@ -351,7 +351,7 @@
         - name: Windows Presentation Foundation
           href: wpf/
         - name: Windows Forms
-          href: winforms/
+          href: /dotnet/desktop/winforms/?view=netframeworkdesktop-4.8
     - name: 採用 WCF 的服務導向應用程式
       href: wcf/
     - name: Windows Workflow Foundation

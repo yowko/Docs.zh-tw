@@ -1,26 +1,23 @@
 ---
 title: 符號和運算子參考
-description: '瞭解 F # 程式設計語言中使用的符號和運算子。'
-ms.date: 02/11/2019
+description: '瞭解 F # 程式設計語言中所使用的符號和運算子。'
+ms.date: 08/15/2020
 fl_keywords:
 - '|>_FS'
-ms.openlocfilehash: 4c3af80e8f5a686535b7c09579d29bb3da8591a3
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 5943352f0a1710ba7a666a79b7871b7269c75a6b
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855384"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359086"
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
 本文包含 F # 語言中使用的符號和運算子的表格。
 
-> [!NOTE]
-> F # 的 docs.microsoft.com API 參考不完整。 如果您遇到任何中斷的連結，請改為參考[F # 核心程式庫檔](https://fsharp.github.io/fsharp-core-docs/)。
-
 ## <a name="table-of-symbols-and-operators"></a>符號和運算子的資料表
 
-下表描述 F # 語言中使用的符號，並提供一些符號和連結用法的簡短描述，以取得詳細資訊。 符號會依據 ASCII 字元集的順序加以排序。
+下表描述 F # 語言中使用的符號，並提供符號和連結的一些用法的簡短描述，以取得詳細資訊。 符號會依據 ASCII 字元集的順序加以排序。
 
 |符號或運算子|連結|描述|
 |------------------|-----|-----------|
@@ -32,22 +29,22 @@ ms.locfileid: "87855384"
 |`$`||<ul><li>使用於內部，用於特定編譯器產生的變數與函式名稱。<br /></li></ul>|
 |`%`|[算術運算子](arithmetic-operators.md)<br /><br />[程式碼引號](../code-quotations.md)|<ul><li>計算整數餘數。<br /></li><li>用於將運算式接合成具類型的程式碼引號。<br /></li></ul>|
 |`%%`|[程式碼引號](../code-quotations.md)|<ul><li>用於將運算式接合成不具類型的程式碼引號。<br /></li></ul>|
-|`%?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算整數餘數。<br /></li></ul>|
+|`%?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的型別時，計算整數餘數。<br /></li></ul>|
 |`&`|[比對運算式](../match-expressions.md)|<ul><li>計算可變動值的位址，以在與其他語言相互操作時使用。<br /></li><li>用於 AND 模式中。<br /></li></ul>|
 |`&&`|[布林運算子](boolean-operators.md)|<ul><li>計算布林值 AND 運算。<br /></li></ul>|
 |`&&&`|[位元運算子](bitwise-operators.md)|<ul><li>計算位元 AND 運算。<br /></li></ul>|
 |`'`|[常值](../literals.md)<br /><br />[自動一般化](../generics/automatic-generalization.md)|<ul><li>分隔單一字元常值。<br /></li><li>表示泛型類型參數。<br /></li></ul>|
 |<code>&#96;&#96;...&#96;&#96;</code>||<ul><li>分隔若在其他狀況下不會是合法識別項的識別項，例如語言關鍵字。<br /></li></ul>|
 |`( )`|[單位類型](../unit-type.md)|<ul><li>代表單位類型的單一值。<br /></li></ul>|
-|`(...)`|[得到](../tuples.md)<br /><br />[運算子多載](../operator-overloading.md)|<ul><li>表示運算式的評估順序。<br /></li><li>分隔 Tuple。<br /></li><li>用於運算子定義中。<br /></li></ul>|
+|`(...)`|[元組](../tuples.md)<br /><br />[運算子多載](../operator-overloading.md)|<ul><li>表示運算式的評估順序。<br /></li><li>分隔 Tuple。<br /></li><li>用於運算子定義中。<br /></li></ul>|
 |`(*...*)`||<ul><li>分隔無法跨越多行的註解。<br /></li></ul>|
-|<code>(&#124;...&#124;)</code>|[使用中模式](../active-patterns.md)|<ul><li>分隔使用中的模式。 也稱為「香蕉夾」**。<br /></li></ul>|
-|`*`|[算術運算子](arithmetic-operators.md)<br /><br />[得到](../tuples.md)<br /><br />[測量單位](../units-of-measure.md)|<ul><li>當做二元運算子使用時，將左側與右側相乘。<br /></li><li>在類型中，表示在 Tuple 中配對。<br /></li><li>用於測量單位類型中。<br /></li></ul>|
+|<code>(&#124;...&#124;)</code>|[現用模式](../active-patterns.md)|<ul><li>分隔使用中的模式。 也稱為「香蕉夾」**。<br /></li></ul>|
+|`*`|[算術運算子](arithmetic-operators.md)<br /><br />[元組](../tuples.md)<br /><br />[測量單位](../units-of-measure.md)|<ul><li>當做二元運算子使用時，將左側與右側相乘。<br /></li><li>在類型中，表示在 Tuple 中配對。<br /></li><li>用於測量單位類型中。<br /></li></ul>|
 |`*?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 類型時，將左側與右側相乘。<br /></li></ul>|
 |`**`|[算術運算子](arithmetic-operators.md)|<ul><li>計算乘冪運算 (`x ** y` 表示 `x` 的 `y` 次方)。<br /></li></ul>|
 |`+`|[算術運算子](arithmetic-operators.md)|<ul><li>當做二元運算子使用時，將左側與右側相加。<br /></li><li>當做一元運算子使用時，表示正數量。 (正式地說，它會產生正負號維持不變的相同值。)<br /></li></ul>|
 |`+?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，將左側與右側相加。<br /></li></ul>|
-|`,`|[得到](../tuples.md)|<ul><li>分隔 Tuple 的項目或型別參數。<br /></li></ul>|
+|`,`|[元組](../tuples.md)|<ul><li>分隔 Tuple 的項目或型別參數。<br /></li></ul>|
 |`-`|[算術運算子](arithmetic-operators.md)|<ul><li>當做二元運算子使用時，從左側減去右側。<br /></li><li>當做一元運算子使用時，執行負運算。<br /></li></ul>|
 |`-?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，從左側減去右側。<br /></li></ul>|
 |`->`|[函式](../functions/index.md)<br /><br />[比對運算式](../match-expressions.md)|<ul><li>在函式類型中，分隔引數並傳回值。<br /></li><li>產生運算式 (在循序項運算式中)；相當於 `yield` 關鍵字。<br /></li><li>用於比對運算式中<br /></li></ul>|
@@ -58,12 +55,12 @@ ms.locfileid: "87855384"
 |`/`|[算術運算子](arithmetic-operators.md)<br /><br />[測量單位](../units-of-measure.md)|<ul><li>左側 (分子) 除以右側 (分母)。<br /></li><li>用於測量單位類型中。<br /></li></ul>|
 |`/?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，左側除以右側。<br /></li></ul>|
 |`//`||<ul><li>表示單行註解的開頭。<br /></li></ul>|
-|`///`|[XML 檔](../xml-documentation.md)|<ul><li>表示 XML 註解。<br /></li></ul>|
+|`///`|[XML 文件](../xml-documentation.md)|<ul><li>表示 XML 註解。<br /></li></ul>|
 |`:`|[函式](../functions/index.md)|<ul><li>在類型註釋中，將參數或成員名稱與其類型分隔。<br /></li></ul>|
 |`::`|[清單](../lists.md)<br /><br />[比對運算式](../match-expressions.md)|<ul><li>建立清單。 左側的項目會附加到右側清單的前面。<br /></li><li>用於模式比對中以分隔清單的組件。<br /></li></ul>|
 |`:=`|[參考儲存格](../reference-cells.md)|<ul><li>將值指派給參考儲存格。<br /></li></ul>|
 |`:>`|[轉型和轉換](../casting-and-conversions.md)|<ul><li>將類型轉換成階層中較高階的類型。<br /></li></ul>|
-|`:?`|[比對運算式](../match-expressions.md)|<ul><li>`true`如果值符合指定的類型 (，則傳回，如果它是) 的子類型，則傳回，否則傳回 `false` (類型測試運算子) 。<br /></li></ul>|
+|`:?`|[比對運算式](../match-expressions.md)|<ul><li>`true`如果值符合指定的型別 (（如果它是) 的子類型，則傳回，否則傳回 `false` (型別測試運算子) 。<br /></li></ul>|
 |`:?>`|[轉型和轉換](../casting-and-conversions.md)|<ul><li>將類型轉換成階層中較低階的類型。<br /></li></ul>|
 |`;`|[詳細語法](../verbose-syntax.md)<br /><br />[清單](../lists.md)<br /><br />[記錄](../records.md)|<ul><li>分隔運算式 (大部分用於詳細語法中)。<br /></li><li>分隔清單的元素。<br /></li><li>分隔記錄的欄位。<br /></li></ul>|
 |`<`|[算術運算子](arithmetic-operators.md)|<ul><li>計算小於運算。<br /></li></ul>|
@@ -76,9 +73,12 @@ ms.locfileid: "87855384"
 |`<>?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算「不等於」運算。<br /></li></ul>|
 |`<=`|[算術運算子](arithmetic-operators.md)|<ul><li>如果左側小於或等於右側，即傳回 `true`；否則傳回 `false`。<br /></li></ul>|
 |`<=?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算「小於或等於」運算。<br /></li></ul>|
+|<code>&#124;></code>|[函式](../functions/index.md)|<ul><li>將左側的結果傳遞至右側的函式 (正向管道運算子)。<br /></li></ul>|
+|<code>&#124;&#124;></code>|[&#40; &#124;&#124;&#62; &#41;&#60; t 1，t 2，' U&#62; 函數](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%3E%20))|<ul><li>將左側兩個引數的 Tuple 傳遞至右側的函式。<br /></li></ul>|
+|<code>&#124;&#124;&#124;></code>|[&#40; &#124;&#124;&#124;&#62; &#41;&#60; t 1，t 2，t 3，' U&#62; 函數](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%7C%7C%7C%3E%20))|<ul><li>將左側三個引數的 Tuple 傳遞至右側的函式。<br /></li></ul>|
 |<code>&lt;&#124;</code>|[函式](../functions/index.md)|<ul><li>將右側的運算結果傳遞至左側的函式 (反向管道運算子)。<br /></li></ul>|
-|<code>&lt;&#124;&#124;</code>|[Operators.&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; 函式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>將右側兩個引數的 Tuple 傳遞至左側的函式。<br /></li></ul>|
-|<code>&lt;&#124;&#124;&#124;</code>|[Operators.&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; 函式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>將右側三個引數的 Tuple 傳遞至左側的函式。<br /></li></ul>|
+|<code>&lt;&#124;&#124;</code>|[&#40; &#60;&#124;&#124; &#41;&#60; t 1，t 2，' U&#62; 函數](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%20))|<ul><li>將右側兩個引數的 Tuple 傳遞至左側的函式。<br /></li></ul>|
+|<code>&lt;&#124;&#124;&#124;</code>|[&#40; &#60;&#124;&#124;&#124; &#41;&#60; t 1，t 2，t 3，' U&#62; 函數](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#(%20%3C%7C%7C%7C%20))|<ul><li>將右側三個引數的 Tuple 傳遞至左側的函式。<br /></li></ul>|
 |`<@...@>`|[程式碼引號](../code-quotations.md)|<ul><li>分隔具類型的程式碼引號。<br /></li></ul>|
 |`<@@...@@>`|[程式碼引號](../code-quotations.md)|<ul><li>分隔不具類型的程式碼引號。<br /></li></ul>|
 |`=`|[算術運算子](arithmetic-operators.md)|<ul><li>如果左側等於右側，即傳回 `true`；否則傳回 `false`。<br /></li></ul>|
@@ -88,7 +88,7 @@ ms.locfileid: "87855384"
 |`>?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算「大於」運算。<br /></li></ul>|
 |`>>`|[函式](../functions/index.md)|<ul><li>撰寫兩個函式 (正向撰寫運算子)。<br /></li></ul>|
 |`>>>`|[位元運算子](bitwise-operators.md)|<ul><li>將左側數量中的位元，向右移位右側指定的位數。<br /></li></ul>|
-|`>=`|[算術運算子](arithmetic-operators.md)|<ul><li>`true`如果左邊大於或等於右邊，則傳回; 否則傳回 `false` 。<br /></li></ul>|
+|`>=`|[算術運算子](arithmetic-operators.md)|<ul><li>`true`如果左邊大於或等於右邊，則傳回，否則傳回 `false` 。<br /></li></ul>|
 |`>=?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算「大於或等於」運算。<br /></li></ul>|
 |`?`|[參數和引數](../parameters-and-arguments.md)|<ul><li>指定選擇性引數。<br /></li><li>用做為動態方法及屬性呼叫的運算子。 您必須提供自己的實作。<br /></li></ul>|
 |`? ... <- ...`||<ul><li>用來做為設定動態屬性的運算子。 您必須提供自己的實作。<br /></li></ul>|
@@ -108,9 +108,6 @@ ms.locfileid: "87855384"
 |<code>&#124;</code>|[比對運算式](../match-expressions.md)|<ul><li>分隔各個相符的情況、個別差別聯集宣告和列舉值。<br /></li></ul>|
 |<code>&#124;&#124;</code>|[布林運算子](boolean-operators.md)|<ul><li>計算布林值 OR 運算。<br /></li></ul>|
 |<code>&#124;&#124;&#124;</code>|[位元運算子](bitwise-operators.md)|<ul><li>計算位元 OR 運算。<br /></li></ul>|
-|<code>&#124;></code>|[函式](../functions/index.md)|<ul><li>將左側的結果傳遞至右側的函式 (正向管道運算子)。<br /></li></ul>|
-|<code>&#124;&#124;></code>|[Operators.&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; 函式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>將左側兩個引數的 Tuple 傳遞至右側的函式。<br /></li></ul>|
-|<code>&#124;&#124;&#124;></code>|[Operators.&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; 函式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>將左側三個引數的 Tuple 傳遞至右側的函式。<br /></li></ul>|
 |`~~`|[運算子多載](../operator-overloading.md)|<ul><li>用以宣告一元負運算子的多載。<br /></li></ul>|
 |`~~~`|[位元運算子](bitwise-operators.md)|<ul><li>計算位元 NOT 運算。<br /></li></ul>|
 |`~-`|[運算子多載](../operator-overloading.md)|<ul><li>用以宣告一元相減運算子的多載。<br /></li></ul>|
@@ -137,18 +134,18 @@ ms.locfileid: "87855384"
 |`&`, `&&`|Left|
 |`:>`, `:?>`|Right|
 |`<`*op*、 `>` *op*、 `=` 、 <code>&#124;</code> *op*、 `&` *op*、`&`<br /><br />(包括 `<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&`)|Left|
-|`^`*op*<br /><br />(包括 `^^^`)|Right|
+|`^`*主管*<br /><br />(包括 `^^^`)|Right|
 |`::`|Right|
 |`:?`|未關聯|
 |`-`*op*、 `+` *op*|適用於這些符號的中置用法|
 |`*`*op*、 `/` *op*、 `%` *op*|Left|
-|`**`*op*|Right|
+|`**`*主管*|Right|
 |`f x` (函式應用程式)|Left|
 |<code>&#124;</code> (模式比對)|Right|
-|前置運算子 (`+` *op*、 `-` *op*、 `%` 、 `%%` 、 `&` 、 `&&` 、 `!` *op*、 `~` *op*) |Left|
+|前置運算子 (`+` *op*、 `-` *op*、 `%` 、、、 `%%` `&` `&&` 、 `!` *op*、 `~` *op*) |Left|
 |`.`|Left|
 |`f(x)`|Left|
-|`f<`*各種*`>`|Left|
+|`f<`*類型*`>`|Left|
 
 F# 支援自訂運算子多載。 這表示您可以定義自己的運算子。 在上表中，*op* 可以是任何有效的 (可能是空的) 運算子字元序列，即內建或使用者定義的序列。 因此，您可以使用此表格來判斷要對自訂運算子使用什麼字元序列，以達到您想要的優先順序等級。 前置 `.` 字元在編譯器判斷優先順序時，會予以忽略。
 
