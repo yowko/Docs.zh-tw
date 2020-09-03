@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957569"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415004"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -161,7 +161,7 @@ Mono 通常與 [即時編譯器](#jit)搭配使用，但也提供完整的 [靜�
 
 當 [.net 5](#net-5-and-later-versions) (目前處於) 預覽狀態時，系統會針對所有新的 .net 開發建議使用 .net，因此在某些內容中，".net" 將表示「.net 5 和更新版本」。
 
-請參閱 [.net 指南](index.yml)
+查看 [.net 基礎](../fundamentals/index.yml)
 
 ## <a name="net-5-and-later-versions"></a>.NET 5 和更新版本
 
@@ -169,7 +169,7 @@ Mono 通常與 [即時編譯器](#jit)搭配使用，但也提供完整的 [靜�
 
 此 .NET 實作為較早的版本，稱為 .NET Core。 .NET 5.0 是 .NET Core 3.1 之後的下一版。 已略過第4版，以避免使用較舊的實作為（稱為 [.NET Framework](#net-framework)）來混淆這項較新的 .net 執行。 .NET Framework 目前的版本為4.8。
 
-請參閱 [.net](../core/index.yml)。
+請參閱 [.net 基本](../fundamentals/index.yml)概念。
 
 ## <a name="net-cli"></a>.NET CLI
 
@@ -294,8 +294,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 指南](index.yml)
+- [.NET 基礎](../fundamentals/index.yml)
 - [.NET Framework 指南](../framework/index.yml)
-- [.NET Core](../core/index.yml)
 - [ASP.NET 總覽](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core 總覽](/aspnet/index#pivot=core)

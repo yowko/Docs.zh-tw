@@ -1,16 +1,16 @@
 ---
 title: Main() 傳回值 - C# 程式設計指南
-description: 瞭解 Main （）傳回值。 請參閱程式碼範例、編譯器產生的程式碼，以及查看其他可用的資源。
+description: '瞭解主要 ( # A1 傳回值。 請參閱程式碼範例、編譯器產生的程式碼，並查看其他可用的資源。'
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 4458f3cd7c8259c5725cfe5e853f826fe2ef61cc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 469ed872c1c8c4eb41eecd04277d4fc53fb3d112
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382057"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414639"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
 
@@ -22,11 +22,11 @@ ms.locfileid: "87382057"
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-如果未使用來自 `Main` 的傳回值，則傳回 `void` 可允許使用比較簡單的程式碼。 不過，若是傳回一個整數，可讓程式將狀態資訊傳達給其他會叫用可執行檔的程式或指令碼。 從 `Main` 傳回的值會視為處理序的結束代碼。 如果 `void` 從傳回 `Main` ，結束代碼將會隱含地結束 `0` 。 下列範例示範如何存取來自 `Main` 的傳回值。
+如果未使用來自 `Main` 的傳回值，則傳回 `void` 可允許使用比較簡單的程式碼。 不過，若是傳回一個整數，可讓程式將狀態資訊傳達給其他會叫用可執行檔的程式或指令碼。 從 `Main` 傳回的值會視為處理序的結束代碼。 如果 `void` 從傳回 `Main` ，則結束代碼將會隱含 `0` 。 下列範例示範如何存取來自 `Main` 的傳回值。
 
 ## <a name="example"></a>範例
 
-此範例使用[.Net Core](../../../core/index.yml)命令列工具。 如果您不熟悉 .NET Core 命令列工具，您可以在這[篇入門文章](../../../core/tutorials/with-visual-studio-code.md)中瞭解它們。
+此範例使用 [.Net Core](../../../core/introduction.md) 命令列工具。 如果您不熟悉 .NET Core 命令列工具，您可以在這 [篇入門文章](../../../core/tutorials/with-visual-studio-code.md)中瞭解這些工具。
 
 修改 *program.cs* 中的 `Main` 方法，如下所示：
 
@@ -38,7 +38,7 @@ ms.locfileid: "87382057"
 
 接下來，建立 PowerShell 指令碼以執行此應用程式，並顯示結果。 將下列程式碼貼入文字檔，將它儲存為 `test.ps1`，並放到包含專案的資料夾中。 在 PowerShell 命令提示字元中鍵入 `test.ps1`，以執行 PowerShell 指令碼。
 
-由於程式碼會傳回零，因為批次檔會報告成功。 不過，如果您將 MainReturnValTest.cs 變更為傳回非零值，然後重新編譯程式，則後續執行 powershell 腳本將會報告失敗。
+由於程式碼會傳回零，因為批次檔會報告成功。 但是，如果您將 MainReturnValTest.cs 變更為傳回非零值，然後重新編譯程式，則 powershell 腳本的後續執行將會報告失敗。
 
 ```dotnetcli
 dotnet run
@@ -100,5 +100,5 @@ private static async Task<int> AsyncConsoleWork()
 
 - [C # 程式設計指南](../index.md)
 - [C # 參考](../index.md)
-- [Main （）和命令列引數](index.md)
+- [主要 ( # A1 和命令列引數](index.md)
 - [如何顯示命令列引數](./how-to-display-command-line-arguments.md)

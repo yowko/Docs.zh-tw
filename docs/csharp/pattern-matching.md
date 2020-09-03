@@ -4,12 +4,12 @@ description: 了解 C# 中的模式比對運算式
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: bb6baf3771024d02b2027f81fd35b8be4872cf6e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 2dd1401e3ef22a02f327e44ff884182ee3e22278
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249229"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414990"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -47,7 +47,7 @@ ms.locfileid: "80249229"
 
 模式比對運算式的語言規則可協助您避免誤用比對運算式的結果。 在上例中，當個別的模式比對運算式有 `true` 結果時，變數 `s`、`c` 和 `r` 只能在範圍內且要確實指派。 如果您嘗試在另一個位置使用任一變數，您的程式碼就會產生編譯器錯誤。
 
-讓我們仔細檢查這兩項規則，就從範圍開始。 變數 `c` 只有在第一個 `if` 陳述式的 `else` 分支中時才在範圍內。 `s` 變數位於 `ComputeAreaModernIs` 方法的範圍中。 這是因為 `if` 陳述式的每個分支都會建立變數的個別範圍。 不過，`if` 陳述式本身並不會。 這意味著語句中聲明的`if`變數與`if`語句（本例中的方法）的範圍相同。此行為不特定于模式匹配，而是變數作用域和`if`和語句`else`的已定義行為。
+讓我們仔細檢查這兩項規則，就從範圍開始。 變數 `c` 只有在第一個 `if` 陳述式的 `else` 分支中時才在範圍內。 `s` 變數位於 `ComputeAreaModernIs` 方法的範圍中。 這是因為 `if` 陳述式的每個分支都會建立變數的個別範圍。 不過，`if` 陳述式本身並不會。 這表示在語句中宣告的變數會與在 `if` `if` 此案例中 (方法的語句位於相同範圍中) 。 此行為並非特定於模式比對，不過是變數範圍以及 `if` 和 `else` 陳述式的定義行為。
 
 當個別的 `if` 陳述式為 true 時會指派變數 `c` 和 `s`，因為 true 機制時會明確指派。
 
@@ -106,7 +106,7 @@ ms.locfileid: "80249229"
 
 [!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-`null`模式的特殊行為很有趣，因為模式中的常量`null`沒有類型，但可以轉換為任何參考型別或空數值型別。 不論變數的編譯時間類型為何，語言都會將 `null` 值定義為不會符合任何類型模式，而不是將 `null` 轉換為任何類型。 此行為可讓以 `switch` 為基礎的新類型模式與 `is` 陳述式一致：要檢查的值是 `null` 時，`is` 陳述式一律會傳回 `false`。 它也較為簡單：在您檢查類型之後，就不需要進行額外的 Null 檢查。 您可以從上述範例的任何案例區塊中不會進行任何 Null 檢查的事實得知：因為比對類型模式保證非 Null 值，所以它們不是必要的。
+模式的特殊行為 `null` 很有趣，因為 `null` 模式中的常數沒有類型，但可以轉換成任何參考型別或可為 null 的實值型別。 不論變數的編譯時間類型為何，語言都會將 `null` 值定義為不會符合任何類型模式，而不是將 `null` 轉換為任何類型。 此行為可讓以 `switch` 為基礎的新類型模式與 `is` 陳述式一致：要檢查的值是 `null` 時，`is` 陳述式一律會傳回 `false`。 它也較為簡單：在您檢查類型之後，就不需要進行額外的 Null 檢查。 您可以從上述範例的任何案例區塊中不會進行任何 Null 檢查的事實得知：因為比對類型模式保證非 Null 值，所以它們不是必要的。
 
 ## <a name="var-declarations-in-case-expressions"></a>`case` 運算式中的 `var` 宣告
 
@@ -139,4 +139,4 @@ ms.locfileid: "80249229"
 
 ## <a name="see-also"></a>另請參閱
 
-- [教程：使用模式匹配功能擴展資料類型](tutorials/pattern-matching.md)
+- [教學課程：使用模式比對功能來擴充資料類型](tutorials/pattern-matching.md)

@@ -3,12 +3,12 @@ title: 歡迎使用 .NET
 description: 開始使用 .NET 系列的技術。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 1933714263b98b4a503ced3868570c35feafe8f0
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646285"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415055"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -27,14 +27,14 @@ ms.locfileid: "81646285"
 
 此外，也請追蹤最新的 .NET 活動：
 
-- [微軟點火](https://www.microsoft.com/ignite)
-- [微軟構建](https://www.microsoft.com/build)
+- [Microsoft Ignite](https://www.microsoft.com/ignite)
+- [Microsoft Build](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
 
 如需新增至 .NET 實作的最新功能與支援語言的相關資訊，請參閱以下文章：
 
 - [.NET Core 3.1 的新功能](core/whats-new/dotnet-core-3-1.md)
-- [.NET Framework 中的新功能](framework/whats-new/index.md)
+- [.NET Framework 的新功能](framework/whats-new/index.md)
 - [C# 的新功能](csharp/whats-new/index.md)
 - [Visual Basic 的新功能](visual-basic/getting-started/whats-new.md)
 
@@ -42,13 +42,12 @@ ms.locfileid: "81646285"
 
 這份文件涵蓋各種平台和語言的 .NET 範圍。 您可以在下列任何各節中開始使用 .NET 和其語言：
 
-- [.NET 指南](standard/index.yml)
-- [.NET 核心指南](core/index.yml)
-- [.NET 框架指南](framework/index.yml)
-- [C# 指南](csharp/index.yml)
-- [F# 指南](fsharp/index.yml)
-- [視覺基本指南](visual-basic/index.yml)
-- [ML.NET指南](machine-learning/index.yml)
+- [.NET 基礎](fundamentals/index.yml)
+- [.NET Framework 指南](framework/index.yml)
+- [C # 指南](csharp/index.yml)
+- [F # 指南](fsharp/index.yml)
+- [Visual Basic 指南](visual-basic/index.yml)
+- [ML.NET 指南](machine-learning/index.yml)
 - [適用於 Apache Spark 的 .NET](spark/index.yml)
 - [.NET 應用程式架構](architecture/index.yml)
 
@@ -56,7 +55,7 @@ ms.locfileid: "81646285"
 
 ## <a name="videos"></a>影片
 
-瀏覽 Web、移動、桌面、C#、機器學習、容器/Docker、資料存取等視頻:
+探索 web、行動、桌面、c #、機器學習、容器/Docker、資料存取等的影片：
 
 [.NET 101 影片系列](https://dotnet.microsoft.com/learn/videos)
 
@@ -65,11 +64,11 @@ ms.locfileid: "81646285"
 這份文件是完全[開放原始檔](https://github.com/dotnet/docs)。 您可以透過任何想要的方式參與，包括建立文件撰寫問題。 此外，.NET 的大多部分本身也是開放原始碼。 下列清單顯示主要的 .NET GitHub 存放庫：
 
 - [.NET Core Home](https://github.com/dotnet/core) (.NET Core 首頁)
-- [.NET 核心執行時](https://github.com/dotnet/runtime)
+- [.NET Core 執行階段](https://github.com/dotnet/runtime)
 - [.NET Core SDK](https://github.com/dotnet/sdk)
 - [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
 - [F# Compiler and IDE Tools](https://github.com/dotnet/fsharp) (F# 編譯器和 IDE 工具)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
-您可以加入已在[.NET 社群中](https://dotnet.microsoft.com/platform/community)活動的其他人,瞭解新增功能或尋求説明。
+您可以加入已在 [.net](https://dotnet.microsoft.com/platform/community) 中使用的其他人，以找出新功能或尋求協助。

@@ -2,18 +2,18 @@
 title: C# 中的非同步程式設計
 description: 使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀
 ms.date: 06/04/2020
-ms.openlocfilehash: 992ccd3a015653ea9ee13dfc309d47711ad0fca4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619711"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414977"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>使用 async 和 await 進行非同步程式設計
 
-[非同步程式設計模型（](task-asynchronous-programming-model.md)點按）工作會提供非同步程式碼的抽象概念。 您可以和往常一樣，將程式碼撰寫成一連串的陳述式。 您可以將該程式碼讀成每個陳述式會先完成，再開始下一個陳述式。 編譯器會執行一些轉換，因為部分陳述式可能會開始工作，並傳回表示進行工作的 <xref:System.Threading.Tasks.Task>。
+工作 [非同步程式設計模型 (點) ](task-asynchronous-programming-model.md) 提供非同步程式碼的抽象概念。 您可以和往常一樣，將程式碼撰寫成一連串的陳述式。 您可以將該程式碼讀成每個陳述式會先完成，再開始下一個陳述式。 編譯器會執行一些轉換，因為部分陳述式可能會開始工作，並傳回表示進行工作的 <xref:System.Threading.Tasks.Task>。
 
-這是此語法的目標：讓程式碼讀起來就像是一連串的陳述式，但會根據外部資源配置和工作完成時間，以比較複雜的順序來執行。 這類似於人員為包含非同步工作之程序提供指示的方式。 在本文中，您將使用一段指示來進行早餐，以瞭解 `async` 和 `await` 關鍵字如何讓程式碼更容易理解，包括一系列的非同步指令。 您撰寫了類似下列清單的指示，來說明如何準備早餐：
+這是此語法的目標：讓程式碼讀起來就像是一連串的陳述式，但會根據外部資源配置和工作完成時間，以比較複雜的順序來執行。 這類似於人員為包含非同步工作之程序提供指示的方式。 在本文中，您將使用可進行早餐的指示範例來查看 `async` 和 `await` 關鍵字如何讓程式碼的相關原因更容易，包括一系列的非同步指示。 您撰寫了類似下列清單的指示，來說明如何準備早餐：
 
 1. 倒杯咖啡。
 1. 熱鍋，然後煎兩顆蛋。
@@ -34,10 +34,10 @@ ms.locfileid: "85619711"
 
 :::image type="content" source="media/synchronous-breakfast.png" alt-text="同步早餐":::
 
-同步準備的早餐大約需要30分鐘的時間，因為總計是每個個別工作的總和。
+同步備妥的早餐會花費大約30分鐘的時間，因為總計是每個個別工作的總和。
 
 > [!NOTE]
-> `Coffee`、 `Egg` 、 `Bacon` 、 `Toast` 和 `Juice` 類別是空的。 它們只是用來示範的標記類別，不包含任何屬性，也不提供其他用途。
+> `Coffee`、、 `Egg` `Bacon` 、和等 `Toast` `Juice` 類別都是空的。 它們只是標記類別，目的是示範、不包含任何屬性，而且不提供其他用途。
 
 電腦解譯這些指示的方式與人類不同。 電腦會封鎖每個陳述式，直到工作完成為止，再繼續下一個陳述式。 這會導致早餐無法令人滿意。 後續工作必須等到先前工作完成才會開始。 這會花更長的時間來準備早餐，且在上菜前，有些菜可能會變涼。
 
@@ -45,7 +45,7 @@ ms.locfileid: "85619711"
 
 這些考量對您現今撰寫的程式很重要。 當您撰寫用戶端程式時，您想要 UI 可以回應使用者輸入。 您的應用程式不應該讓手機在從網路下載資料時呈現凍結。 當您撰寫伺服器程式時，您不想要執行緒被封鎖。 這些執行緒可能會服務其他要求。 在存在替代的非同步程式碼時使用同步程式碼，會導致您無法以較不耗費成本的方式擴充。 這些封鎖的執行緒會耗費成本。
 
-現代化應用程式需要非同步程式碼才能成功。 由於沒有語言支援，撰寫非同步程式碼需要回呼、完成事件，或隱藏程式碼原本意圖的其他方式。 同步程式碼的優點是容易了解。 逐步動作讓您可以輕鬆地瀏覽與了解。 傳統非同步模型迫使您將重點放在程式碼的非同步本質，而不是程式碼的基本動作。
+現代化應用程式需要非同步程式碼才能成功。 由於沒有語言支援，撰寫非同步程式碼需要回呼、完成事件，或隱藏程式碼原本意圖的其他方式。 同步程式碼的優點是，它是逐步執行的動作，可讓您輕鬆地進行掃描與瞭解。 傳統非同步模型迫使您將重點放在程式碼的非同步本質，而不是程式碼的基本動作。
 
 ## <a name="dont-block-await-instead"></a>不要封鎖，而是等候
 
@@ -56,10 +56,10 @@ ms.locfileid: "85619711"
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
 
 > [!IMPORTANT]
-> 總經過時間大致上與初始 synchonous 版本相同。 程式碼尚未利用非同步程式設計的一些主要功能。
+> 總經過時間大約與初始 synchonous 版本相同。 程式碼尚未充分利用非同步程式設計的一些主要功能。
 
 > [!TIP]
-> 、和的方法主體 `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` 全都已更新為 `Task<Egg>` 分別傳回、 `Task<Bacon>` 和 `Task<Toast>` 。 方法會從其原始版本重新命名，以包含 "Async" 尾碼。 其執行方式會顯示為本文稍後的[最終版本](#final-version)的一部分。
+> 、和的方法主體都已 `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` 更新為 `Task<Egg>` 分別傳回、 `Task<Bacon>` 和 `Task<Toast>` 。 方法會從其原始版本重新命名為包含 "Async" 尾碼。 在本文稍後的 [最終版本](#final-version) 中，將會顯示其實作為的部分。
 
 此程式碼不會在煎蛋或煎培根時封鎖其他工作。 但此程式碼也不會開始任何其他工作。 您仍會將吐司放入烤麵包機，並在彈出前直盯著它瞧。 但至少，您會回應任何需要您注意的人。 在點了多份早餐的餐廳中，廚師可能會在第一份早餐還在準備時，就開始準備另一份早餐。
 
@@ -125,7 +125,7 @@ Console.WriteLine("Breakfast is ready!");
 
 :::image type="content" source="media/asynchronous-breakfast.png" alt-text="非同步早餐":::
 
-非同步備妥的早餐大約需要20分鐘的時間，這是因為某些工作可以同時執行。
+以非同步方式備妥的早餐大約需要20分鐘的時間，這是因為某些工作可以同時執行。
 
 上述程式碼的效果更好。 您會同時開始所有非同步工作。 只有需要結果時，才會等候每個工作。 上述程式碼可能會類似於提出不同微服務要求，然後將結果合併成單一頁面的 Web 應用程式程式碼。 您會立即提出所有要求，然後 `await` 所有這些工作並撰寫網頁。
 
@@ -181,16 +181,16 @@ while (breakfastTasks.Count > 0)
 }
 ```
 
-在所有這些變更之後，最終的程式碼版本看起來像這樣：<a id="final-version"></a>
+所有這些變更之後，程式碼的最終版本看起來像這樣： <a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
-:::image type="content" source="media/whenany-async-breakfast.png" alt-text="任何非同步早餐時":::
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="當任何非同步早餐時":::
 
-非同步準備的早餐最終版本大約需要15分鐘的時間，這是因為某些工作可以並存執行，而且程式碼可以同時監視多個工作，並且只在需要時才採取動作。
+非同步準備的早餐的最終版本大約需要15分鐘的時間，這是因為某些工作能夠同時執行，而且程式碼可以同時監視多個工作，並且只在需要時採取動作。
 
 此最終程式碼為非同步。 它會更精確地反映人員準備早餐的方式。 將上述程式碼與本文中的第一個程式碼範例做比較。 閱讀程式碼仍會清楚了解核心動作。 閱讀此程式碼的方式，如同閱讀本文開頭準備早餐的指示。 `async` 和 `await` 之語言功能為所有遵循下列書面指示的人員提供轉譯：盡可能開始多個工作且不要防止等候工作完成。
 
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [瞭解非同步程式設計模型工作](task-asynchronous-programming-model.md)
+> [瞭解工作非同步程式設計模型](task-asynchronous-programming-model.md)

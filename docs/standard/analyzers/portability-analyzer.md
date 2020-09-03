@@ -4,12 +4,12 @@ description: 了解如何使用.NET Portability Analyzer 工具來評估程式�
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: d8b5fcf8b6c3230e41585261de747edb9105aa31
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: d61dd9ebe744686885dad41ef700caaea9853f85
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811804"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414795"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -19,7 +19,7 @@ ms.locfileid: "88811804"
 
 ## <a name="common-targets"></a>常見目標
 
-- [.Net Core](../../core/index.yml)：具有模組化設計、支援並存安裝，並以跨平臺案例為目標。 並存安裝可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標是要將應用程式移植到 .NET Core，並支援多個平臺，這是建議的目標。
+- [.Net Core](../../core/introduction.md)：具有模組化設計、支援並存安裝，並以跨平臺案例為目標。 並存安裝可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標是要將應用程式移植到 .NET Core，並支援多個平臺，這是建議的目標。
 - .[NET Standard](../net-standard.md)：包含所有 .net 執行所提供的 .NET Standard api。 如果您的目標是要讓您的程式庫在所有 .NET 支援的平臺上執行，這是建議的目標。
 - [ASP.NET Core](/aspnet/core)：以 .Net Core 為基礎的新式 web 架構。 如果您的目標，是要將 Web 應用程式移植到 .NET Core 來支援多平台，這是建議的目標。
 - .NET Core + [平臺延伸](../../core/porting/windows-compat-pack.md)模組：除了 Windows 相容性套件之外，還包括 .Net core api，提供許多 .NET Framework 的可用技術。 如需將您的應用程式從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。

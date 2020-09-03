@@ -3,25 +3,25 @@ title: .NET Core 上不支援的 Api
 titleSuffix: ''
 description: 瞭解 .NET Framework 中一律會在 .NET Core 上擲回例外狀況的 Api。
 ms.date: 12/23/2019
-ms.openlocfilehash: 941e9149c7679afe4a888149108d0a9a28e5e7ab
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 94f334d7e4b7daf407f489ba274172ced9eefa81
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794594"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414431"
 ---
-# <a name="apis-that-always-throw-exceptions-on-net-core"></a>在 .NET Core 上一律會擲回例外狀況的 Api
+# <a name="apis-that-always-throw-exceptions-on-net-core"></a>一律會在 .NET Core 上擲回例外狀況的 Api
 
-下列 Api 一律會在 .NET Core <xref:System.PlatformNotSupportedException>上的所有或部分平臺上擲回。
+下列 Api 一律會在 <xref:System.PlatformNotSupportedException> 所有或部分平臺上的 .Net Core 上擲回。
 
-本文會依照命名空間來組織受影響的 API 成員。
+本文會依命名空間來組織受影響的 API 成員。
 
 > [!NOTE]
 >
-> - 這篇文章是一個進行中的工作。 這不是在 .NET Core 上擲回例外狀況的完整 Api 清單。
-> - 本文不包含在 .NET Core 上擲回之二進位序列化的明確介面執行。 如需詳細資訊，請參閱[.Net Core 中的二進位序列化](../../standard/serialization/binary-serialization.md#net-core)。
+> - 本文是進行中的工作。 它不是在 .NET Core 上擲回例外狀況的完整 Api 清單。
+> - 本文不包含在 .NET Core 上擲回之二進位序列化的明確介面執行。 如需詳細資訊，請參閱 [.Net Core 中的二進位序列化](../../standard/serialization/binary-serialization.md#net-core)。
 
-## <a name="system"></a>System (系統)
+## <a name="system"></a>系統
 
 | member | 擲回的平臺 |
 | - | - |
@@ -56,38 +56,38 @@ ms.locfileid: "82794594"
 
 | member | 擲回的平臺 |
 | - | - |
-| <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType>（所有成員） | 全部 |
+| <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType> (所有成員)  | 全部 |
 
 ## <a name="systemconsole"></a>System.Console
 
 | member | 擲回的平臺 |
 | - | - |
 | <xref:System.Console.Beep?displayProperty=nameWithType> | Linux 與 macOS |
-| <xref:System.Console.BufferHeight?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
-| <xref:System.Console.BufferWidth?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
-| <xref:System.Console.CursorSize?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
-| <xref:System.Console.CursorVisible?displayProperty=nameWithType>（僅取得） | Linux 與 macOS |
+| <xref:System.Console.BufferHeight?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
+| <xref:System.Console.BufferWidth?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
+| <xref:System.Console.CursorSize?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
+| <xref:System.Console.CursorVisible?displayProperty=nameWithType> (只取得)  | Linux 與 macOS |
 | <xref:System.Console.MoveBufferArea%2A?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Console.SetWindowPosition%2A?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Console.SetWindowSize%2A?displayProperty=nameWithType> | Linux 與 macOS |
-| <xref:System.Console.Title?displayProperty=nameWithType>（僅取得） | Linux 與 macOS |
-| <xref:System.Console.WindowHeight?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
-| <xref:System.Console.WindowLeft?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
-| <xref:System.Console.WindowTop?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
-| <xref:System.Console.WindowWidth?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
+| <xref:System.Console.Title?displayProperty=nameWithType> (只取得)  | Linux 與 macOS |
+| <xref:System.Console.WindowHeight?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
+| <xref:System.Console.WindowLeft?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
+| <xref:System.Console.WindowTop?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
+| <xref:System.Console.WindowWidth?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
 
 ## <a name="systemdatacommon"></a>System.Data.Common
 
 | member | 擲回的平臺 |
 | - | - |
-| <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType>（擲<xref:System.NotSupportedException>回） | 全部 |
+| <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType> (擲回 <xref:System.NotSupportedException>)  | 全部 |
 
 ## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process
 
 | member | 擲回的平臺 |
 | - | - |
-| <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType>（僅限設定） | Linux |
-| <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType>（僅限設定） | Linux |
+| <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType> 僅 (設定)  | Linux |
+| <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType> 僅 (設定)  | Linux |
 | <xref:System.Diagnostics.Process.ProcessorAffinity?displayProperty=nameWithType> | macOS |
 | <xref:System.Diagnostics.Process.MainWindowHandle?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> | Linux 與 macOS |
@@ -95,9 +95,9 @@ ms.locfileid: "82794594"
 | <xref:System.Diagnostics.ProcessStartInfo.PasswordInClearText?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.Domain?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.LoadUserProfile?displayProperty=nameWithType> | Linux 與 macOS |
-| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
-| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>（僅取得） | macOS |
-| <xref:System.Diagnostics.ProcessThread.ProcessorAffinity?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
+| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
+| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType> (只取得)  | macOS |
+| <xref:System.Diagnostics.ProcessThread.ProcessorAffinity?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
 
 ## <a name="systemio"></a>System.IO
 
@@ -114,7 +114,7 @@ ms.locfileid: "82794594"
 | <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.IO.Pipes.PipeStream.InBufferSize?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.IO.Pipes.PipeStream.OutBufferSize?displayProperty=nameWithType> | Linux 與 macOS |
-| <xref:System.IO.Pipes.PipeStream.ReadMode?displayProperty=nameWithType>（僅限設定） | Linux 與 macOS |
+| <xref:System.IO.Pipes.PipeStream.ReadMode?displayProperty=nameWithType> 僅 (設定)  | Linux 與 macOS |
 | <xref:System.IO.Pipes.PipeStream.WaitForPipeDrain?displayProperty=nameWithType> | Linux 與 macOS |
 
 ## <a name="systemmedia"></a>System. Media
@@ -149,7 +149,7 @@ ms.locfileid: "82794594"
 
 | member | 擲回的平臺 |
 | - | - |
-| <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | Windows （UWP） |
+| <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | Windows (UWP)  |
 
 ## <a name="systemnetsockets"></a>System.Net.Sockets
 
@@ -267,7 +267,6 @@ ms.locfileid: "82794594"
 | member | 擲回的平臺 |
 | - | - |
 | <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)> | 全部 |
-| <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | 全部 |
 | <xref:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature?displayProperty=nameWithType> | 全部 |
 
 ## <a name="systemsecuritycryptographyx509certificates"></a>System.Security.Cryptography.X509Certificates
@@ -277,7 +276,7 @@ ms.locfileid: "82794594"
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | 全部 |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
-| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType>（僅限設定） | 全部 |
+| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType> 僅 (設定)  | 全部 |
 
 ## <a name="systemsecurityauthenticationextendedprotection"></a>System.Security.Authentication.ExtendedProtection
 
@@ -322,8 +321,8 @@ ms.locfileid: "82794594"
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | 全部 |
 | <xref:System.Xml.XmlDictionaryWriter.CreateMtomWriter(System.IO.Stream,System.Text.Encoding,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType> | 全部 |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [從 .NET Framework 遷移至 .NET Core 的突破性變更](fx-core.md)
+- [從 .NET Framework 遷移至 .NET Core 的重大變更](fx-core.md)
 - [.NET Core 中的二進位序列化](../../standard/serialization/binary-serialization.md#net-core)
 - [.NET 可攜性分析器](../../standard/analyzers/portability-analyzer.md)

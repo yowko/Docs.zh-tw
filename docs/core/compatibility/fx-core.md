@@ -1,28 +1,28 @@
 ---
-title: 重大變更-.NET Framework 至 .NET Core
+title: 重大變更-.NET Framework .NET Core
 titleSuffix: ''
 description: 列出從 .NET Framework 到 .NET Core 的重大變更。
 ms.date: 05/05/2020
-ms.openlocfilehash: 5f7424fdd959044b729dfb04f4f0147fbc946bfd
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: e9fa37dba89bbd6c4829614c27cb66206069fa9b
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556302"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414447"
 ---
-# <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>從 .NET Framework 遷移至 .NET Core 的突破性變更
+# <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>從 .NET Framework 遷移至 .NET Core 的重大變更
 
-如果您要將應用程式從 .NET Framework 遷移至 .NET Core，本文中所列的重大變更可能會對您造成影響。 中斷性變更會依類別目錄，以及在這些類別中所引進的 .NET Core 版本進行分組。
+如果您要將應用程式從 .NET Framework 遷移至 .NET Core，本文所列的重大變更可能會對您造成影響。 中斷性變更是依類別目錄分組，而在這些類別中，則是以引入這些變更的 .NET Core 版本為依據。
 
 > [!NOTE]
-> 本文不是 .NET Framework 和 .NET Core 之間的重大變更完整清單。 最重要的重大變更會在這裡新增，因為我們會注意到它們。
+> 本文不是 .NET Framework 和 .NET Core 之間的重大變更完整清單。 在這裡新增最重要的中斷性變更，因為我們會注意到這些變更。
 
 ## <a name="core-net-libraries"></a>Core .NET 程式庫
 
-- [預設值為 UseShellExecute 的變更](#change-in-default-value-of-useshellexecute)
-- [FileSystemInfo 擲回的 System.unauthorizedaccessexception](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
+- [UseShellExecute 預設值的變更](#change-in-default-value-of-useshellexecute)
+- [FileSystemInfo 擲回的 System.unauthorizedaccessexception。屬性](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 - [不支援處理損毀的進程狀態例外狀況](#handling-corrupted-state-exceptions-is-not-supported)
-- [UriBuilder 屬性不再前面加上前置字元](#uribuilder-properties-no-longer-prepend-leading-characters)
+- [UriBuilder 屬性不再加上前置字元](#uribuilder-properties-no-longer-prepend-leading-characters)
 - [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
@@ -51,7 +51,7 @@ ms.locfileid: "87556302"
 
 ## <a name="cryptography"></a>密碼編譯
 
-- [遵守 SignedCms 的布林值參數。 ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected)
+- [已遵守 SignedCms 的布林值參數。 ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -71,7 +71,8 @@ ms.locfileid: "87556302"
 
 ## <a name="networking"></a>網路功能
 
-- [WebClient 地說 cancelasync 不一定會立即取消](#webclientcancelasync-doesnt-always-cancel-immediately)
+- [WebClient >cancelasync 不一定會立即取消](#webclientcancelasync-doesnt-always-cancel-immediately)
+- [Cookie 路徑處理現在符合 RFC 6265](#cookie-path-handling-now-conforms-to-rfc-6265)
 
 ### <a name="net-core-20"></a>.NET Core 2.0
 
@@ -79,23 +80,29 @@ ms.locfileid: "87556302"
 
 ***
 
+### <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [cookie-path-conforms-to-rfc6265](../../../includes/core-changes/networking/5.0/cookie-path-conforms-to-rfc6265.md)]
+
+***
+
 ## <a name="windows-forms"></a>Windows Forms
 
-版本3.0 中的 .NET Core 已加入 Windows Forms 支援。 如果您要將 Windows Forms 應用程式從 .NET Framework 遷移至 .NET Core，此處所列的重大變更可能會影響您的應用程式。
+版本3.0 中的 .NET Core 已新增 Windows Forms 支援。 如果您要將 Windows Forms 應用程式從 .NET Framework 遷移至 .NET Core，此處所列的重大變更可能會影響您的應用程式。
 
-- [移除的控制項](#removed-controls)
+- [已移除控制項](#removed-controls)
 - [如果顯示工具提示，則不會引發 CellFormatting 事件](#cellformatting-event-not-raised-if-tooltip-is-shown)
-- [DefaultFont 已變更為 Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt)
+- [DefaultFont 變更為 Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt)
 - [FolderBrowserDialog 的現代化](#modernization-of-the-folderbrowserdialog)
-- [已從某些 Windows Forms 類型中移除 SerializableAttribute](#serializableattribute-removed-from-some-windows-forms-types)
-- [不支援 AllowUpdateChildControlIndexForTabControls 相容性切換](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [不支援 DomainUpDown. UseLegacyScrolling 相容性參數](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
-- [不支援 DoNotLoadLatestRichEditControl 相容性切換](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
-- [不支援 DoNotSupportSelectAllShortcutInMultilineTextBox 相容性切換](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
-- [不支援 DontSupportReentrantFilterMessage 相容性切換](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
-- [不支援 EnableVisualStyleValidation 相容性切換](#enablevisualstylevalidation-compatibility-switch-not-supported)
-- [不支援 UseLegacyCoNtextMenuStripSourceControlValue 相容性切換](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
-- [不支援 UseLegacyImages 相容性切換](#uselegacyimages-compatibility-switch-not-supported)
+- [SerializableAttribute 已從部分 Windows Forms 類型中移除](#serializableattribute-removed-from-some-windows-forms-types)
+- [不支援 AllowUpdateChildControlIndexForTabControls 相容性參數](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [不支援 DomainUpDown UseLegacyScrolling 相容性參數](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [不支援 DoNotLoadLatestRichEditControl 相容性參數](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [不支援 DoNotSupportSelectAllShortcutInMultilineTextBox 相容性參數](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [不支援 >dontsupportreentrantfiltermessage 相容性參數](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [不支援 EnableVisualStyleValidation 相容性參數](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [不支援 UseLegacyCoNtextMenuStripSourceControlValue 相容性參數](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [不支援 UseLegacyImages 相容性參數](#uselegacyimages-compatibility-switch-not-supported)
 
 ### <a name="net-core-31"></a>.NET Core 3.1
 
@@ -155,5 +162,5 @@ ms.locfileid: "87556302"
 
 ## <a name="see-also"></a>另請參閱
 
-- [在 .NET Core 上一律會擲回例外狀況的 Api](unsupported-apis.md)
+- [一律會在 .NET Core 上擲回例外狀況的 Api](unsupported-apis.md)
 - [.NET Core 上無法使用的 .NET Framework 技術](../porting/net-framework-tech-unavailable.md)
