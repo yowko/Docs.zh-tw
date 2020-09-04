@@ -1,35 +1,35 @@
 ---
-title: '發行符合 .NET 指導方針的事件-c # 程式設計手冊'
-description: 瞭解如何發佈符合 .NET 指導方針的事件。 .NET Framework Class Library 中的所有事件都是以 EventHandler 委派為基礎。
+title: '發佈符合 .NET 方針的事件-c # 程式設計指南'
+description: 瞭解如何發行符合 .NET 指導方針的事件。 .NET 類別庫中的所有事件都是以 EventHandler 委派為基礎。
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 1b802e236026911b55bafcb3f48d487c43bba174
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8cc8b0a9fdaeeb6ab6290630c5d78044c2696b9a
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302109"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466166"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>如何發行符合 .NET 指導方針的事件（c # 程式設計手冊）
+# <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>如何發行符合 .NET 指導方針的事件 (c # 程式設計手冊) 
 
-下列程式示範如何將遵循標準 .NET 模式的事件新增至您的類別和結構。 .NET Framework 類別庫中的所有事件都是以 <xref:System.EventHandler> 委派為基礎，其定義如下：
+下列程式示範如何將遵循標準 .NET 模式的事件加入至您的類別和結構。 .NET 類別庫中的所有事件都是以委派為基礎 <xref:System.EventHandler> ，其定義如下：
 
 ```csharp
 public delegate void EventHandler(object sender, EventArgs e);
 ```
 
 > [!NOTE]
-> .NET Framework 2.0 引進此委派的泛型版本 <xref:System.EventHandler%601> 。 下列範例示範如何使用這兩種版本。
+> .NET Framework 2.0 引進了此委派的泛型版本 <xref:System.EventHandler%601> 。 下列範例示範如何使用這兩種版本。
 
-雖然您定義之類別中的事件可以根據任何有效的委派類型，甚至是傳回值的委派，但通常建議您使用來根據 .NET 模式來建立事件的基礎 <xref:System.EventHandler> ，如下列範例所示。
+雖然您所定義之類別中的事件可以是以任何有效的委派類型為基礎，甚至是傳回值的委派，但通常建議您使用，以 .NET 模式作為事件的基礎 <xref:System.EventHandler> ，如下列範例所示。
 
-名稱 `EventHandler` 可能會造成一些混淆，因為它實際上不會處理事件。 <xref:System.EventHandler>、和泛型 <xref:System.EventHandler%601> 是委派類型。 其簽章符合委派定義的方法或 lambda 運算式是*事件處理常式*，而且會在引發事件時叫用。
+名稱 `EventHandler` 可能會造成一些混淆，因為它實際上不會處理事件。 <xref:System.EventHandler>和泛型 <xref:System.EventHandler%601> 是委派類型。 方法或 lambda 運算式，其簽章與委派定義相符，就是 *事件處理常式* ，而且會在引發事件時叫用。
 
 ## <a name="publish-events-based-on-the-eventhandler-pattern"></a>根據 EventHandler 模式發佈事件
 
-1. （如果您不需要隨事件傳送自訂資料，請略過此步驟並移至步驟3a）。針對您的「發行者」和「訂閱者」類別顯示的範圍，宣告自訂資料的類別。 然後新增必要的成員來保存自訂事件資料。 在此範例中，會傳回一個簡單的字串。
+1. 如果您不需要與事件一起傳送自訂資料， (略過此步驟，並移至步驟3a。 ) 在發行者和訂閱者類別都可見的範圍宣告自訂資料的類別。 然後新增必要的成員來保存自訂事件資料。 在此範例中，會傳回一個簡單的字串。
 
     ```csharp
     public class CustomEventArgs : EventArgs
@@ -43,7 +43,7 @@ public delegate void EventHandler(object sender, EventArgs e);
     }
     ```
 
-2. （如果您使用的是泛型版本，請略過此步驟 <xref:System.EventHandler%601> ）。在發行類別中宣告委派。 提供結尾為的名稱 `EventHandler` 。 第二個參數指定您的自訂 `EventArgs` 類型。
+2. 如果您使用的是的泛型版本， (略過此步驟 <xref:System.EventHandler%601> 。 ) 在發行類別中宣告委派。 提供結尾為的名稱 `EventHandler` 。 第二個參數指定您的自訂 `EventArgs` 類型。
 
     ```csharp
     public delegate void CustomEventHandler(object sender, CustomEventArgs args);

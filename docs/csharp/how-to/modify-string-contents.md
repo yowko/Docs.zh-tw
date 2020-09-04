@@ -1,19 +1,19 @@
 ---
 title: '如何修改字串內容-c # 指南'
-description: '請參閱數個方法的範例，以使用 c # 修改現有的字串內容，這會傳回新的字串物件。'
+description: '請參閱幾項技術的範例，以 c # 修改現有的字串內容，這會傳回新的字串物件。'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: bae54757fdb6f02cdc0dc8fc15ad3f7583c230a7
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473964"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465048"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>如何在 C 中修改字串內容\#
+# <a name="how-to-modify-string-contents-in-c"></a>如何以 C 修改字串內容\#
 
-本文示範多種技術，會藉由修改現有的 `string`來產生 `string`。 所有示範的技術均會傳回修改結果，作為新的 `string` 物件。 為了示範原始和修改過的字串是相異的實例，這些範例會將結果儲存在新的變數中。 `string` `string` 當您執行每個範例時，您可以檢查原始的和新的。
+本文示範多種技術，會藉由修改現有的 `string`來產生 `string`。 所有示範的技術均會傳回修改結果，作為新的 `string` 物件。 為了示範原始和修改過的字串是不同的實例，範例會將結果儲存在新的變數中。 `string` `string` 當您執行每個範例時，您可以檢查原始和新的和修改的。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -49,7 +49,7 @@ ms.locfileid: "86473964"
 
 您可使用[規則運算式](../../standard/base-types/regular-expressions.md)以新文字取代文字相符模式，可由模式定義。 下列範例使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別在來源字串中尋找模式，並以適當的大小寫加以取代。 <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> 方法會以提供取代項目邏輯的函式作為其引數之一。 在此範例中，該函式 `LocalReplaceMatchCase` 是在範例方法中宣告的**區域函式**。 `LocalReplaceMatchCase` 會使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別以適當的大小寫來建置取代字串。
 
-規則運算式在搜尋及取代遵循模式的文字時相當實用，但對於已知文字則否。 如需詳細資訊，請參閱[如何搜尋字串](search-strings.md)。 搜尋模式 "the\s" 會搜尋後面接著空白字元的字組 "the"。 模式的該部分會確認其不會對應來源字串中的 "there"。 如需規則運算式語言元素的詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
+規則運算式在搜尋及取代遵循模式的文字時相當實用，但對於已知文字則否。 如需詳細資訊，請參閱 [如何搜尋字串](search-strings.md)。 搜尋模式 "the\s" 會搜尋後面接著空白字元的字組 "the"。 模式的該部分會確認其不會對應來源字串中的 "there"。 如需規則運算式語言元素的詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet5":::
 
@@ -65,13 +65,13 @@ ms.locfileid: "86473964"
 
 ## <a name="programmatically-build-up-string-content"></a>以程式設計方式建立字串內容
 
-由於字串是不可變的，因此先前的範例全都會建立暫存字串或字元陣列。 在高效能案例中，可能需要避免這些堆積配置。 .NET Core 提供了一 <xref:System.String.Create%2A?displayProperty=nameWithType> 種方法，可讓您透過回呼以程式設計方式填滿字串的字元內容，同時避免中繼暫存字串配置。
+因為字串是不可變的，上述範例全都會建立暫存字串或字元陣列。 在高效能案例中，您可能會想要避免這些堆積配置。 .NET Core 提供一 <xref:System.String.Create%2A?displayProperty=nameWithType> 種方法，可讓您以程式設計方式透過回呼填滿字串的字元內容，同時避免中繼暫存字串的配置。
 
 :::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
-您可以使用 unsafe 程式碼修改固定區塊中的字串，但**強烈**建議您在建立字串之後修改字串內容。 這麼做會以無法預期的方式來中斷專案。 例如，如果有人實習一個具有與您相同內容的字串，他們會取得您的複本，而且不會預期您要修改其字串。
+您可以使用不安全的程式碼修改固定區塊中的字串，但 **強烈** 建議您在建立字串之後修改字串內容。 這樣做將會以無法預期的方式中斷專案。 比方說，如果有人實習的字串與您的內容相同，則會取得您的副本，而且不會預期您會修改其字串。
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 正則運算式](../../standard/base-types/regular-expressions.md)
+- [.NET 正則運算式](../../standard/base-types/regular-expressions.md)
 - [正則運算式語言-快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)

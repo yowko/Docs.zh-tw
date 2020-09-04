@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 0f6927fd240f3f8535478d163be615fc74dad8d2
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6fd291c49c282713ea56ca20d8d58616d38ec752
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125393"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465711"
 ---
 # <a name="-link-c-compiler-options"></a>-link (C# 編譯器選項)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。
@@ -52,7 +52,7 @@ ms.locfileid: "89125393"
 
 - 所叫用的欄位、屬性、事件或方法具有組件 B 的傳回型別或參數類型。
 
- 如同 [-reference](./reference-compiler-option.md) 編譯器選項，`-link` 編譯器選項會使用 Csc.rsp 回應檔，參考常用的 .NET Framework 組件。 如果您不想要讓編譯器使用 Csc.rsp 檔，請使用 [-noconfig](./noconfig-compiler-option.md) 編譯器選項。
+ 如同 [參考](./reference-compiler-option.md) 編譯器選項， `-link` 編譯器選項會使用 Csc 回應檔，其會參考常用的 .net 元件。 如果您不想要讓編譯器使用 Csc.rsp 檔，請使用 [-noconfig](./noconfig-compiler-option.md) 編譯器選項。
 
  `-link` 的簡短形式為 `-l`。
 

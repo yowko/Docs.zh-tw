@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 27445b6685f48f7acf646c16de3201e68767da69
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: a1b65db6efb60d27ab82ab47854c0399b9476729
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125289"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466075"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>依分類列出的 C# 編譯器選項
 
@@ -20,14 +20,14 @@ ms.locfileid: "89125289"
 
 ## <a name="optimization"></a>Optimization
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[-filealign](filealign-compiler-option.md)|指定輸出檔案中區段的大小。|
 |[-優化](optimize-compiler-option.md)|啟用/停用最佳化。|
 
 ## <a name="output-files"></a>輸出檔
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[-deterministic](deterministic-compiler-option.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
 |[-doc](doc-compiler-option.md)|指定要寫入已處理文件註解的 XML 檔案。|
@@ -41,9 +41,9 @@ ms.locfileid: "89125289"
 |[-target](target-compiler-option.md)|使用下列其中一個選項指定輸出檔的格式： [-target： appcontainerexe](target-appcontainerexe-compiler-option.md)、 [-target： exe](target-exe-compiler-option.md)、 [-target： library](target-library-compiler-option.md)、 [-target： module](target-module-compiler-option.md)、 [-target： winexe](target-winexe-compiler-option.md)或 [-target： winmdobj](target-winmdobj-compiler-option.md)。|
 |modulename\<string>|指定來源模組的名稱|
 
-## <a name="net-framework-assemblies"></a>.NET Framework 組件
+## <a name="net-assemblies"></a>.NET 組件
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[-addmodule](addmodule-compiler-option.md)|指定要成為此組件一部分的一或多個模組。|
 |[-delaysign](delaysign-compiler-option.md)|指示編譯器新增公開金鑰，但是讓組件不帶正負號。|
@@ -60,7 +60,7 @@ ms.locfileid: "89125289"
 
 ## <a name="debuggingerror-checking"></a>偵錯/錯誤檢查
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|建立檔案，其中包含可簡化錯誤回報的資訊。|
 |[-checked](checked-compiler-option.md)|指定超出資料類型範圍的整數算術，是否會導致在執行階段發生例外狀況。|
@@ -75,23 +75,23 @@ ms.locfileid: "89125289"
 
 ## <a name="preprocessor"></a>前置處理器
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[-define](define-compiler-option.md)|定義前置處理器符號。|
 
 ## <a name="resources"></a>資源
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[-連結](link-compiler-option.md)|將指定組件中的 COM 類型資訊提供給專案使用。|
 |[-linkresource](linkresource-compiler-option.md)|建立與 Managed 資源的連結。|
-|[-資源](resource-compiler-option.md)|將 .NET Framework 資源內嵌到輸出檔中。|
+|[-資源](resource-compiler-option.md)|將 .NET 資源內嵌到輸出檔中。|
 |[-win32icon](win32icon-compiler-option.md)|指定要插入輸出檔中的 .ico 檔案。|
 |[-win32res](win32res-compiler-option.md)|指定要插入輸出檔中的 Win32 資源。|
 
 ## <a name="miscellaneous"></a>其他
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[@](response-file-compiler-option.md)|指定回應檔。|
 |[-?](help-compiler-option.md)|將編譯器選項列出至 stdout。|
@@ -112,7 +112,7 @@ ms.locfileid: "89125289"
 
 ## <a name="obsolete-options"></a>過時的選項
 
-|選項|用途|
+|選項|目的|
 |---|---|
 |-incremental|啟用累加編譯。|
 

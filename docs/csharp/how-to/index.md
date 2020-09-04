@@ -2,12 +2,12 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: 81ef8106add757cf3c83aa7dc130f5474b936461
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794698"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465152"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -15,13 +15,13 @@ ms.locfileid: "82794698"
 
 ## <a name="general-c-concepts"></a>一般 C# 概念
 
-有幾個秘訣和訣竅是常見的 c # 開發人員作法：
+常見的 c # 開發人員作法有幾個秘訣和訣竅：
 
 - [使用物件初始設定式將物件初始化](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [了解向方法傳遞結構及類別的不同](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [使用運算子多載](../language-reference/operators/operator-overloading.md)。
-- [執行並呼叫自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
-- 甚至 c # 程式設計人員可能會想要[使用來自 Visual Basic 的`My`命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
+- [執行和呼叫自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
+- 即使是 c # 程式設計人員也可能想要 [使用 `My` Visual Basic 的命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [使用擴充方法建立 `enum` 類型的新方法](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ### <a name="class-and-struct-members"></a>類別和結構成員
@@ -94,7 +94,7 @@ ms.locfileid: "82794698"
 
 - [訂閱及取消訂閱事件](../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 - [實作介面中宣告的事件](../programming-guide/events/how-to-implement-interface-events.md)。
-- [在程式碼發佈事件時符合 .NET Framework 方針](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。
+- [當您的程式碼發佈事件時，符合 .net 指導方針](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。
 - [從衍生類別引發在基底類別中定義的事件](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)。
 - [實作自訂事件存取子](../programming-guide/events/how-to-implement-custom-event-accessors.md)。
 

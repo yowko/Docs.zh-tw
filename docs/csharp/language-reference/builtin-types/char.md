@@ -1,5 +1,5 @@
 ---
-description: 瞭解 C 中的內建字元類型 abouot#
+description: 瞭解 C 中的內建字元類型#
 title: 'char 型別-c # 參考'
 ms.date: 05/11/2020
 f1_keywords:
@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 5c15cfb8050bc93e055dbde53308f9460ff90bc8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 636e032ac22b48ebc471780ffa85148bf952cdd2
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126381"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465087"
 ---
 # <a name="char-c-reference"></a>char (c # 參考) 
 
 `char`Type 關鍵字是 <xref:System.Char?displayProperty=nameWithType> 代表 Unicode utf-16 字元之 .net 結構類型的別名。
 
-|類型|範圍|大小|.NET 類型|
+|類型|範圍|Size|.NET 類型|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 到 U+FFFF|16位|<xref:System.Char?displayProperty=nameWithType>|
 

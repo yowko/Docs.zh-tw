@@ -1,14 +1,14 @@
 ---
 title: 委派中的差異 (C#)
-description: 瞭解 .NET Framework 中的變異數支援，如何讓您比對方法簽章與所有委派中的委派類型。
+description: 瞭解 .NET 中的變異數支援如何讓您將方法簽章與所有委派中的委派類型進行比對。
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: ef57a7fa7feaef98a47822e3f1c9242d0205932d
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 02b59dd97cedc6ab35c3122912ee528f7ca29238
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105656"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466127"
 ---
 # <a name="variance-in-delegates-c"></a>委派中的差異 (C#)
 .NET framework 3.5 推出差異支援，在 C# 中比對方法簽章和所有委派的委派型別。 這表示您可以指派給委派的不只是具有相符簽章的方法，也可以是會傳回更多衍生型別 (共變數) 的方法，或接受衍生型別 (反變數) 比委派型別指定少的參數的方法。 這包括泛型和非泛型委派。  
@@ -110,7 +110,7 @@ public static void Test()
 }  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-net"></a>.NET 中具有 Variant 類型參數的泛型委派
+### <a name="generic-delegates-that-have-variant-type-parameters-in-net"></a>在 .NET 中具有 Variant 型別參數的泛型委派
 
 .NET Framework 4 推出差異支援，適用於數個現有泛型委派中的泛型型別參數：  
   
@@ -160,7 +160,7 @@ dvariant("test");
   
 ### <a name="combining-variant-generic-delegates"></a>結合 Variant 泛型委派  
 
-不要合併變異數委派。 <xref:System.Delegate.Combine%2A> 方法不支援 Variant 委派轉換，且委派的類型必須完全一致。 當您使用 <xref:System.Delegate.Combine%2A> 方法或使用 `+` 運算子合併委派時，這會導致執行階段例外狀況，如下列程式碼範例所示。  
+請勿合併 variant 委派。 <xref:System.Delegate.Combine%2A> 方法不支援 Variant 委派轉換，且委派的類型必須完全一致。 當您使用 <xref:System.Delegate.Combine%2A> 方法或使用 `+` 運算子合併委派時，這會導致執行階段例外狀況，如下列程式碼範例所示。  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
@@ -199,8 +199,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [泛型](../../../../standard/generics/index.md)
 - [針對 Func 與 Action 泛型委派使用變異數 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
-- [如何合併委派（多播委派）](../../delegates/how-to-combine-delegates-multicast-delegates.md)
+- [如何將委派合併 (多播委派) ](../../delegates/how-to-combine-delegates-multicast-delegates.md)

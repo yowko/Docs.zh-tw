@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: fdbe8ca9b6dbf24c08a2d041c5c7f2e869995f69
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 7140f6d4cac063088b3663ab98d292104218b542
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414446"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465505"
 ---
 ### <a name="cookie-path-handling-now-conforms-to-rfc-6265"></a>Cookie 路徑處理現在符合 RFC 6265
 
-[RFC 6265](https://tools.ietf.org/html/rfc6265)中定義的路徑處理演算法已針對 `Cookie` 和 `CookieContainer` 類別實作為。
+[RFC 6265](https://tools.ietf.org/html/rfc6265)中定義的路徑處理演算法是針對 <xref:System.Net.Cookie> 和類別所執行 <xref:System.Net.CookieContainer> 。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -16,12 +16,12 @@ ms.locfileid: "89414446"
 
 #### <a name="change-description"></a>變更描述
 
-- 將 `Path` 會移除此屬性的限制， (不會再是要求路徑) 的前置詞。
-- 的預設值和路徑比對演算法的計算 `Path` 是依照 RFC 6265 的 [5.1.4 一節](https://tools.ietf.org/html/rfc6265#section-5.1.4) 中的定義來執行。
+- <xref:System.Net.Cookie.Path>屬性不再需要是要求路徑的前置詞。
+- 的預設值和路徑比對 <xref:System.Net.Cookie.Path> 演算法的計算是依照 RFC 6265 的 [5.1.4 一節](https://tools.ietf.org/html/rfc6265#section-5.1.4) 中的定義來執行。
 
 #### <a name="recommended-action"></a>建議的動作
 
-在大多數情況下，您不需要採取任何動作。 但是，如果您的程式碼相依于 `Path` 驗證，則您必須在程式碼中執行必要的驗證; 或者，如果您的程式碼相依于 `Path` 的預設值計算，您可能會想要 `Path` 手動提供值，而不是使用預設值。
+在大多數情況下，您不需要採取任何動作。 但是，如果您的程式碼相依于 <xref:System.Net.Cookie.Path> 驗證，則您必須在程式碼中執行必要的驗證。 如果您的程式碼相依于的預設值計算 <xref:System.Net.Cookie.Path> ，請考慮以手動方式提供值， <xref:System.Net.Cookie.Path> 而不是使用預設值。
 
 #### <a name="category"></a>類別
 

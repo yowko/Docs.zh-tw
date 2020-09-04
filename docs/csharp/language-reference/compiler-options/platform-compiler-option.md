@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: e2e4fc37418243ff6998d19165250b895c0a4fa1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3fdb030dfc141b011f5faa827a4e4bb45ae38d19
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124860"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466010"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# 編譯器選項)
 
@@ -35,7 +35,7 @@ anycpu (預設值)、anycpu32bitpreferred、ARM、x64、x86 或 Itanium。
 
 - **anycpu** (預設值) 會將組件編譯為可在所有平台上執行。 您的應用程式會盡可能做為 64 位元處理序執行，而且只有在 32 位元模式可用時才會回到該模式。
 
-- **anycpu32bitpreferred** 會將組件編譯為可在所有平台上執行。 您的應用程式在同時支援 64 位元和 32 位元應用程式的系統上會以 32 位元模式執行。 您只能針對以 .NET Framework 4.5 為目標的專案指定此選項。
+- **anycpu32bitpreferred** 會將組件編譯為可在所有平台上執行。 您的應用程式在同時支援 64 位元和 32 位元應用程式的系統上會以 32 位元模式執行。 您只能針對以 .NET Framework 4.5 或更新版本為目標的專案指定此選項。
 
 - **ARM** 會將您的組件編譯為可在採用 Advanced RISC Machine (ARM) 處理器的電腦上執行。
 
@@ -57,7 +57,7 @@ anycpu (預設值)、anycpu32bitpreferred、ARM、x64、x86 或 Itanium。
 
 - 使用 **-platform:anycpu32bitpreferred** 所編譯的可執行檔會在 32 位元 CLR 上執行。
 
-**anycpu32bitpreferred** 設定只對可執行檔 (.EXE) 有效，而且需要 .NET Framework 4.5。
+**Anycpu32bitpreferred**設定只對可執行檔 ( 有效。EXE) 檔案，且需要 .NET Framework 4.5 或更新版本。
 
 如需開發要在 Windows 64 位元作業系統上執行之應用程式的詳細資訊，請參閱 [64 位元應用程式](../../../framework/64-bit-apps.md)。
 
@@ -67,7 +67,7 @@ anycpu (預設值)、anycpu32bitpreferred、ARM、x64、x86 或 Itanium。
 
 2. 按一下 [建置]**** 屬性頁面。
 
-3. 修改**平台目標**屬性，並且針對以 .NET Framework 4.5 為目標的專案選取或清除 [建議使用 32 位元]**** 核取方塊。
+3. 修改 [ **平臺目標** ] 屬性，並針對以 .NET Framework 4.5 或更新版本為目標的專案，選取或清除 [ **偏好 32** 位] 核取方塊。
 
 > [!NOTE]
 > `-platform` 無法在 Visual c # Express 的開發環境中使用。

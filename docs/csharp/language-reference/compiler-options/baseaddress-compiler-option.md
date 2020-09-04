@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 42b1891c29457745689542a4c9e0482ec5e918fa
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f79ee449eafd04906dab49700a1af6441d54cece
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126004"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89464879"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (C# 編譯器選項)
 **-baseaddress** 選項讓您指定要載入 DLL 的慣用基底位址。 如需此選項的使用時機與使用原因之詳細資訊，請參閱 [Larry Osterman 的部落格](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system)。  
@@ -30,7 +30,7 @@ ms.locfileid: "89126004"
  DLL 的基底位址。 這個位址可以指定十進位、十六進位或八進位數字。  
   
 ## <a name="remarks"></a>備註  
- DLL 的預設基底位址是由 .NET Framework Common Language Runtime 所設定。  
+ DLL 的預設基底位址是由 .NET common language runtime 所設定。  
   
  請注意，這個位址會去掉低位字。 例如，如果您指定的是 0x11110001，它會去掉尾數變成 0x11110000。  
   

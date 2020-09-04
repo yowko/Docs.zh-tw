@@ -1,23 +1,23 @@
 ---
 title: 事件 - C# 程式設計手冊
-description: 深入瞭解事件。 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。
+description: 瞭解事件。 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [C#], events
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 3160d1e381c6cb3af0f017538f9555b3fded9910
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: f56de15dd2c7b0a10e40a886dbd82a4147a03014
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302070"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466153"
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
-事件可讓 [類別](../../language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送（或*引發*）事件的類別稱為「*發行者*」，而接收（或*處理*）事件的類別稱為「*訂閱者*」。  
+事件可讓 [類別](../../language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *引發*) 事件的類別稱為「 *發行者* 」，以及接收 (或 *處理*) 事件的類別，稱為「 *訂閱者*」。  
   
-在典型的 C# Windows Forms 或 Web 應用程式中，您可訂閱由控制項 (如按鈕和清單方塊) 引發的事件。 您可以使用 Visual C# 整合式開發環境 (IDE) 來瀏覽控制項發行的事件，並選擇您想要處理的事件。 IDE 提供一種簡單的方式來自動新增空的事件處理常式方法，及用來訂閱該事件的程式碼。 如需詳細資訊，請參閱[如何訂閱及取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)。
+在典型的 C# Windows Forms 或 Web 應用程式中，您可訂閱由控制項 (如按鈕和清單方塊) 引發的事件。 您可以使用 Visual C# 整合式開發環境 (IDE) 來瀏覽控制項發行的事件，並選擇您想要處理的事件。 IDE 提供一種簡單的方式來自動新增空的事件處理常式方法，及用來訂閱該事件的程式碼。 如需詳細資訊，請參閱 [如何訂閱和取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)。
   
 ## <a name="events-overview"></a>事件概觀  
  事件有下列屬性：  
@@ -32,14 +32,14 @@ ms.locfileid: "87302070"
   
 - 當某事件擁有多個訂閱者時，便會在事件引發的同時叫用事件處理常式。 若要以非同步方式叫用事件，請參閱 [Calling Synchronous Methods Asynchronously](../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)。  
   
-- 在 .NET Framework 類別庫中，事件取決於 <xref:System.EventHandler> 委派以及 <xref:System.EventArgs> 基底類別。  
+- 在 .NET 類別庫中，事件是以 <xref:System.EventHandler> 委派和基類為基礎 <xref:System.EventArgs> 。  
   
 ## <a name="related-sections"></a>相關章節  
- 如需詳細資訊，請參閱  
+ 如需詳細資訊，請參閱：  
   
 - [如何訂閱及取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)
 
-- [如何發行符合 .NET 指導方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [如何發佈符合 .NET 指導方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 
 - [如何在衍生類別中引發基底類別事件](./how-to-raise-base-class-events-in-derived-classes.md)
 

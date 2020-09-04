@@ -1,18 +1,18 @@
 ---
-title: '如何搜尋字串（c # 指南）'
-description: '瞭解在 c # 中以字串搜尋文字的兩個策略。 字串類別方法會搜尋特定文字。 規則運算式會搜尋文字中的模式。'
+title: '如何搜尋字串 (c # 指南) '
+description: '瞭解如何在 c # 中以字串搜尋文字的兩個策略。 字串類別方法會搜尋特定文字。 規則運算式會搜尋文字中的模式。'
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 17bf6e080542242d30791b70ffbf00b05f03a7b0
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: b6a2ab25efa64b2bbf33ea234dba07cdf9582e66
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473990"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465126"
 ---
 # <a name="how-to-search-strings"></a>如何搜尋字串
 
@@ -24,7 +24,7 @@ ms.locfileid: "86473990"
 
 ## <a name="does-a-string-contain-text"></a>字串是否包含文字？
 
-<xref:System.String.Contains%2A?displayProperty=nameWithType>、 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 和方法會 <xref:System.String.EndsWith%2A?displayProperty=nameWithType> 搜尋字串中的特定文字。 下列範例顯示每個方法，以及使用不區分大小寫搜尋的變化：
+<xref:System.String.Contains%2A?displayProperty=nameWithType>、 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 和方法會 <xref:System.String.EndsWith%2A?displayProperty=nameWithType> 搜尋字串中的特定文字。 下列範例顯示每個方法，以及使用不區分大小寫搜尋的變異：
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
@@ -40,9 +40,9 @@ ms.locfileid: "86473990"
 
 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別可以用來搜尋字串。 這些搜尋的複雜性範圍可以從簡單到複雜文字模式。
 
-下列程式碼範例會搜尋句子中的 "the" 或 "their" 單字，但忽略大小寫。 靜態方法 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 會執行搜尋。 您為其指定要搜尋的字串和搜尋模式。 在此情況下，第三個引數指定不區分大小寫的搜尋。 如需詳細資訊，請參閱 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 。
+下列程式碼範例會搜尋句子中的 "the" 或 "their" 單字，但忽略大小寫。 靜態方法 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 會執行搜尋。 您為其指定要搜尋的字串和搜尋模式。 在此情況下，第三個引數指定不區分大小寫的搜尋。 如需詳細資訊，請參閱<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>。
 
-搜尋模式描述您搜尋的文字。 下表描述搜尋模式的每個項目  （下表使用單一 `\` ，必須 `\\` 在 c # 字串中將其轉義為）。
+搜尋模式描述您搜尋的文字。 下表描述搜尋模式的每個項目   (下表使用單一 `\` ，必須以 `\\` c # 字串) 來進行轉義。
 
 | 模式  | 意義                          |
 |----------|----------------------------------|
@@ -53,7 +53,7 @@ ms.locfileid: "86473990"
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet3":::
 
 > [!TIP]
-> 當您搜尋完全相符的字串時，`string` 方法通常是較好的選擇。 當您在來源字串中搜尋某個模式時，正則運算式會更好。
+> 當您搜尋完全相符的字串時，`string` 方法通常是較好的選擇。 當您在來源字串中搜尋某個模式時，正則運算式比較好。
 
 ## <a name="does-a-string-follow-a-pattern"></a>字串遵循模式嗎？
 
@@ -79,6 +79,6 @@ ms.locfileid: "86473990"
 - [字串](../programming-guide/strings/index.md)
 - [LINQ 和字串](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
-- [.NET Framework 正則運算式](../../standard/base-types/regular-expressions.md)
+- [.NET 正則運算式](../../standard/base-types/regular-expressions.md)
 - [正則運算式語言-快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)
 - [在 .NET 中使用字串的最佳作法](../../standard/base-types/best-practices-strings.md)

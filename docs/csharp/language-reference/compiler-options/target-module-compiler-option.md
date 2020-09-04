@@ -9,12 +9,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 2c592d2fe001bb0908a06a6eb3287a39040b8715
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 2074e170ab177c39fdf3954fa93ae4b666bf853d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128448"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466049"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (C# 編譯器選項)
 這個選項可讓編譯器不要產生組件資訊清單。  
@@ -28,7 +28,7 @@ ms.locfileid: "89128448"
 ## <a name="remarks"></a>備註  
  根據預設，使用這個選項編譯時，所建立的輸出檔副檔名會是 .netmodule。  
   
- .NET Framework Common Language Runtime 無法載入沒有組件資訊清單的檔案。 不過，這類檔案可以透過 [-addmodule](./addmodule-compiler-option.md) 併入組件的組件資訊清單。  
+ .NET 執行時間無法載入沒有組件資訊清單的檔案。 不過，這類檔案可以透過 [-addmodule](./addmodule-compiler-option.md) 併入組件的組件資訊清單。  
   
  如果在單一編譯中建立多個模組，則編譯中的其他模組可以使用某個模組中的 [internal](../keywords/internal.md) 類型。 某個模組中的程式碼參考另一個模組中的 `internal` 類型時，必須透過 **-addmodule** 將這兩個模組併入組件資訊清單。  
   

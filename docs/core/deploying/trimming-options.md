@@ -4,12 +4,12 @@ description: 瞭解如何控制獨立應用程式的修剪。
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: d6081a24cc18e424b55d40e152f519c680f11aa0
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271876"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465412"
 ---
 # <a name="trimming-options"></a>修剪選項
 
@@ -39,7 +39,7 @@ ms.locfileid: "89271876"
 
 ## <a name="trimmed-assemblies"></a>修剪的元件
 
-發佈已修剪的應用程式時，SDK `ItemGroup` 會計算呼叫 `ManagedAssemblyToLink` ，以代表要處理的一組檔案進行修剪。 `ManagedAssemblyToLink` 可能有可控制每個元件之修剪行為的中繼資料。 若要設定此中繼資料，請建立在內建目標之前執行的目標 `PrepareForILLink` 。 這個範例示範如何啟用的修剪 `MyAssembly` ：
+發佈已修剪的應用程式時，SDK `ItemGroup` 會計算呼叫 `ManagedAssemblyToLink` ，以代表要處理的一組檔案進行修剪。 `ManagedAssemblyToLink` 可能有可控制每個元件之修剪行為的中繼資料。 若要設定此中繼資料，請建立在內建目標之前執行的目標 `PrepareForILLink` 。 下列範例顯示如何啟用的修剪 `MyAssembly` 。
 
 ```xml
 <Target Name="ConfigureTrimming"
@@ -64,7 +64,7 @@ ms.locfileid: "89271876"
 
 ## <a name="root-assemblies"></a>根元件
 
-所有沒有的元件都會被 `<IsTrimmable>true</IsTrimmable>` 視為分析的根目錄，這表示會保留它們及其所有靜態瞭解的相依性。 其他元件可能會以名稱「根目錄」 (沒有 `.dll` 副檔名) ：
+所有不具有的元件 `<IsTrimmable>true</IsTrimmable>` 都會被視為分析的根目錄，這表示會保留它們及其所有靜態瞭解的相依性。 其他元件可能會以名稱「根目錄」 (沒有 `.dll` 副檔名) ：
 
 ```xml
 <ItemGroup>
