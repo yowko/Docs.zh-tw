@@ -230,8 +230,6 @@
       href: how-to/parse-strings-using-split.md
     - name: 串連字串
       href: how-to/concatenate-multiple-strings.md
-    - name: 將字串轉換成 DateTime
-      href: ../standard/base-types/parsing-datetime.md
     - name: 搜尋字串
       href: how-to/search-strings.md
     - name: 修改字串內容
