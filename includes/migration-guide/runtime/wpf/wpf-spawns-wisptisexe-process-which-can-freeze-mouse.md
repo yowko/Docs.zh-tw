@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e0f72d19a884087b1f0f6ebd1b6baea75bc37af4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c3114277445daaae988b41782721c443c1e780d1
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620104"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496158"
 ---
 ### <a name="wpf-spawns-a-wisptisexe-process-which-can-freeze-the-mouse"></a>WPF 會繁衍可以凍結滑鼠的 wisptis.exe 處理序
 
@@ -18,6 +18,18 @@ ms.locfileid: "85620104"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |主要|
+| 範圍   |主要|
 |版本|4.5.2|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

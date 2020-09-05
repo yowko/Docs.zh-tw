@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a5c6dda0c1d68468cd95f67716709dd059948c80
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 6a79f04af44f78313c4d5bb5c37dfad252d3024b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621149"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497079"
 ---
 ### <a name="product-versioning-changes-in-the-net-framework-46-and-later-versions"></a>.NET Framework 4.6 和更新版本中的產品版本變更
 
@@ -18,6 +18,18 @@ ms.locfileid: "85621149"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.6|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

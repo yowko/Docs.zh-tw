@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a007022bf32ffe76861f6f9016a7edace17b0f61
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 19be8a7755d9b238ab6507eaa73319bddf39faa3
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620043"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497678"
 ---
 ### <a name="data-written-to-printsystemjobinfojobstream-must-be-in-xps-format"></a>寫入 PrintSystemJobInfo.JobStream 的資料必須是 XPS 格式
 
@@ -18,10 +18,18 @@ ms.locfileid: "85620043"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.5|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Printing.PrintSystemJobInfo.JobStream?displayProperty=nameWithType></li></ul>|
+- <xref:System.Printing.PrintSystemJobInfo.JobStream?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.Printing.PrintSystemJobInfo.JobStream`
+
+-->

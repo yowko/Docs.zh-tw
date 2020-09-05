@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 483902ff2ec54d58bfb00dd8ee7fd78868f70ab4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ccba3cf98a1ca9e199d9a48f00e254bf34b93f72
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620048"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497006"
 ---
 ### <a name="binaryformatter-can-fail-to-find-type-from-loadfrom-context"></a>BinaryFormatter 可能無法從 LoadFrom 內容尋找類型
 
@@ -18,10 +18,22 @@ ms.locfileid: "85620048"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Edge|
+| 範圍   |Edge|
 |版本|4.5|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType>
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType>
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter`
+- `M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream)`
+- `M:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)`
+
+-->

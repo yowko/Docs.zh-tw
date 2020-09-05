@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 809ca85b347fabc44573e2e0c5a43261d68590d3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: cb9305f623044233082286863d2f2d2c7e9d665a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621102"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497358"
 ---
 ### <a name="workflow-sql-persistence-adds-primary-key-clusters-and-disallows-null-values-in-some-columns"></a>工作流程 SQL 持續性會新增叢集主索引鍵，且在某些資料行中不允許有 Null 值
 
@@ -18,6 +18,18 @@ ms.locfileid: "85621102"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Edge|
+| 範圍   |Edge|
 |版本|4.7|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

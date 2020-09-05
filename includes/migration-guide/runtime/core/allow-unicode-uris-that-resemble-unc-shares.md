@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3e8601ba76dfb05e3d70b3af7440bd7e228768d0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1047f4028697a73741470d1aac8b3aeed37be217
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621065"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497830"
 ---
 ### <a name="allow-unicode-in-uris-that-resemble-unc-shares"></a>允許在與 UNC 共用相似的 URI 中使用 Unicode
 
@@ -18,10 +18,18 @@ ms.locfileid: "85621065"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Edge|
+| 範圍   |Edge|
 |版本|4.7.2|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Uri?displayProperty=nameWithType></li></ul>|
+- <xref:System.Uri?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Uri`
+
+-->

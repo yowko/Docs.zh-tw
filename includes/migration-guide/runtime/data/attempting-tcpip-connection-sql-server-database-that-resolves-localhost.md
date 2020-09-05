@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 87cb2570d3d47a2acb85b5557141c0fef885516a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bbeca87b3f498213b91d942cc4f197c9d80457a8
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621776"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497531"
 ---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>嘗試建立 TCP/IP 連線至解析為 `localhost` 的 SQL Server 資料庫會失敗
 
@@ -18,6 +18,18 @@ ms.locfileid: "85621776"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.6|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

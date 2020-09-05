@@ -1,6 +1,6 @@
 ---
 title: 索引子 - C# 程式設計手冊
-description: 'C # 中的索引子可讓類別或結構實例如陣列進行索引。 您可以設定或取得索引值，而不需指定類型或實例成員。'
+description: 'C # 中的索引子可讓類別或結構實例以像陣列的方式編制索引。 您可以設定或取得索引值，而不需要指定類型或實例成員。'
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 07e0ae4294373817e10bb79920c73ec1e275d169
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: ea95eef7bb9ba232e4d59e3f833b82e98398fc33
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303110"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495300"
 ---
 # <a name="indexers-c-programming-guide"></a>索引子 (C# 程式設計手冊)
 
@@ -46,7 +46,7 @@ ms.locfileid: "87303110"
   
 - [this](../../language-reference/keywords/this.md) 關鍵字是用來定義索引子。  
   
-- [value`set` 關鍵字是用來定義 ](../../language-reference/keywords/value.md) 索引子要指派的值。  
+- [value`set` 關鍵字是用來定義 ](../../language-reference/keywords/value.md) 存取子要指派的值。  
   
 - 索引子不一定要由整數值編製索引。您可自行決定如何定義特定的查詢機制。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "87303110"
   
 - 索引子可具有一個以上的型式參數，例如，存取二維陣列時。  
   
-## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>相關章節  
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> 相關章節  
   
 - [使用索引子](./using-indexers.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "87303110"
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的[索引子](~/_csharplang/spec/classes.md#indexers)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 程式設計指南](../index.md)
 - [屬性](../classes-and-structs/properties.md)

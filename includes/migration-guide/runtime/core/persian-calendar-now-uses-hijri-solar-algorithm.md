@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e4d9efe7d2a06a1e501b070c23184dcd913dba71
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 14581b193fc000c7f805a0602e191cad688c014a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621120"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496941"
 ---
 ### <a name="persian-calendar-now-uses-the-hijri-solar-algorithm"></a>波斯曆現在會使用回教陽曆演算法
 
@@ -18,10 +18,18 @@ ms.locfileid: "85621120"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.6|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Globalization.PersianCalendar?displayProperty=nameWithType></li></ul>|
+- <xref:System.Globalization.PersianCalendar?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Globalization.PersianCalendar`
+
+-->

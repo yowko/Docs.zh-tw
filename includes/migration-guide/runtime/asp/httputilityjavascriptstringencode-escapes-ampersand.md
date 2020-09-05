@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d587e542a72d584502ac3ac892619cc38b88ef77
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12fb72d5ee9fc0d6c57899589cb2b0da7db41f4a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619923"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496404"
 ---
 ### <a name="httputilityjavascriptstringencode-escapes-ampersand"></a>HttpUtility.JavaScriptStringEncode 會逸出 & 符號
 
@@ -18,10 +18,20 @@ ms.locfileid: "85619923"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.5|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=nameWithType>
+- <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Web.HttpUtility.JavaScriptStringEncode(System.String)`
+- `M:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)`
+
+-->

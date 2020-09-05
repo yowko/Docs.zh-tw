@@ -2,26 +2,28 @@
 title: C# 語言版本控制 - C# 指南
 description: '瞭解如何根據您的專案以及該選項背後的原因來決定 c # 語言版本。 瞭解如何手動覆寫預設值。'
 ms.custom: updateeachrelease
-ms.date: 05/20/2020
-ms.openlocfilehash: 24797c564890b034683d2989010bc694aabc423c
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.date: 08/11/2020
+ms.openlocfilehash: 327a98da37b97830ac7f752a3621a92d8cb161e0
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811947"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495456"
 ---
 # <a name="c-language-versioning"></a>C# 語言版本控制
 
 最新 C# 編譯器會根據您專案的目標 Framework 判斷預設語言版本。 Visual Studio 不會提供 UI 來變更值，但您可以編輯 *.csproj* 檔案來變更該值。 選擇預設值可確保您使用與目標 framework 相容的最新語言版本。 您可以從與專案目標相容的最新語言功能存取中獲益。 此預設選項也可確保您不會使用需要類型或執行時間行為的語言，而無法在您的目標 framework 中使用。 選擇比預設版本新的語言版本，可能會導致難以診斷編譯時期和執行階段錯誤。
 
-本文中的規則適用于使用 Visual Studio 2019 或 .NET Core 3.0 SDK 提供的編譯器。 屬於 Visual Studio 2017 安裝或舊版 .NET Core SDK 一部分的 C# 編譯器預設會以 C# 7.0 為目標。
+本文中的規則適用于使用 Visual Studio 2019 或 .NET SDK 提供的編譯器。 屬於 Visual Studio 2017 安裝或舊版 .NET Core SDK 一部分的 C# 編譯器預設會以 C# 7.0 為目標。
 
-只有 .NET Core 3.x 和更新版本才支援 c # 8.0 (和更高版本的) 。 許多最新功能都需要 .NET Core 3.x 所引進的程式庫和執行時間功能：
+只有 .NET Core 3.x 和更新版本才支援 c # 8.0。 許多最新功能都需要 .NET Core 3.x 所引進的程式庫和執行時間功能：
 
 - [預設介面執行](../whats-new/csharp-8.md#default-interface-methods) 需要 .net CORE 3.0 CLR 中的新功能。
 - [非同步資料流程](../whats-new/csharp-8.md#asynchronous-streams) 需要新的類型 <xref:System.IAsyncDisposable?displayProperty=nameWithType> 、 <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType> 。
 - [索引和範圍](../whats-new/csharp-8.md#indices-and-ranges) 需要新的類型 <xref:System.Index?displayProperty=nameWithType> 和 <xref:System.Range?displayProperty=nameWithType> 。
 - [可為 null 的參考型別](../whats-new/csharp-8.md#nullable-reference-types) 會使用數個 [屬性](attributes/nullable-analysis.md) ，以提供更好的警告。 這些屬性已在 .NET Core 3.0 中新增。 其他目標 framework 尚未以上述任何屬性標注。 這表示可為 null 的警告可能無法精確反映潛在問題。
+
+只有在 .NET 5 和更新版本上才支援 c # 9.0。
 
 ## <a name="defaults"></a>Defaults
 
@@ -29,6 +31,7 @@ ms.locfileid: "88811947"
 
 | 目標架構 | version | C# 語言版本預設值 |
 |------------------|---------|-----------------------------|
+| .NET             | 版     | C # 9。0                      |
 | .NET Core        | 3.x     | C# 8.0                      |
 | .NET Core        | 2.x     | C# 7.3                      |
 | .NET Standard    | 2.1     | C# 8.0                      |

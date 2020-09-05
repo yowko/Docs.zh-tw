@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 83d3f24680531d1e447f047151a28c98ce0da04b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 26539011f0650c7a3bac9e1c41847561905fff58
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620072"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496714"
 ---
 ### <a name="managed-browser-hosting-controls-from-the-net-framework-11-and-20-are-blocked"></a>.NET Framework 1.1 和 2.0 的受控瀏覽器裝載控制項已封鎖
 
@@ -18,6 +18,18 @@ Internet Explorer 將無法啟動使用 Managed 瀏覽器裝載控制項的應�
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.5|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

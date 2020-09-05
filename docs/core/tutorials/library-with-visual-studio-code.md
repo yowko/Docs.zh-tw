@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 建立 .NET Standard 類別庫
 description: 瞭解如何使用 Visual Studio Code 建立 .NET Standard 類別庫。
 ms.date: 06/08/2020
-ms.openlocfilehash: d37e3c663146c90f4ae4188b25ea7e501501c93b
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 966b9b0b48f67809e82d9133c523995cd97b6015
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465282"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495508"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 建立 .NET Standard 程式庫
 
@@ -15,7 +15,7 @@ ms.locfileid: "89465282"
 
 「類別庫」** 會定義應用程式所呼叫的類型和方法。 以 .NET Standard 2.0 為目標的類別庫，可讓任何支援該版本 .NET Standard 的 .NET 執行呼叫您的程式庫。 當您完成類別庫時，可以將它散發為協力廠商元件，或做為配套的元件，以及一或多個應用程式。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 1. 已安裝[c # 擴充](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)功能的[Visual Studio Code](https://code.visualstudio.com/) 。 如需有關如何在 Visual Studio Code 上安裝擴充功能的詳細資訊，請參閱 [VS Code 擴充功能 Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery)。
 2. [.Net Core 3.1 SDK 或更新版本](https://dotnet.microsoft.com/download)
@@ -65,7 +65,7 @@ ms.locfileid: "89465282"
    Processing post-creation actions...
    Running 'dotnet restore' on StringLibrary\StringLibrary.csproj...
      Determining projects to restore...
-     Restore completed in 328.13 ms for C:\Projects\ClassLibraryProjects\StringLibrary\StringLibrary.csproj.
+     Restored C:\Projects\ClassLibraryProjects\StringLibrary\StringLibrary.csproj (in 328 ms).
    Restore succeeded.
    ```
 
@@ -112,11 +112,10 @@ ms.locfileid: "89465282"
    終端機輸出如下列範例所示：
 
    ```output
-   Microsoft (R) Build Engine version 16.6.0 for .NET Core
+   Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
      All projects are up-to-date for restore.
-     You are using a preview version of .NET Core. See: https://aka.ms/dotnet-core-preview
      StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\netstandard2.0\StringLibrary.dll
    Build succeeded.
        0 Warning(s)
@@ -141,7 +140,7 @@ ms.locfileid: "89465282"
    Processing post-creation actions...
    Running 'dotnet restore' on ShowCase\ShowCase.csproj...  
      Determining projects to restore...
-     Restore completed in 210.78 ms for C:\Projects\ClassLibraryProjects\ShowCase\ShowCase.csproj.
+     Restored C:\Projects\ClassLibraryProjects\ShowCase\ShowCase.csproj (in 210 ms).
    Restore succeeded.
    ```
 

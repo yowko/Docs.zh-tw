@@ -5,12 +5,12 @@ ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: f9fd0d09dbb65c2367ac268ea4a7055a299a7586
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: c9ac93c152d39bd06875f82ee5f34c1540236038
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89471984"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495227"
 ---
 # <a name="the-evolution-of-net-core-to-net-5"></a>.NET Core 到 .NET 5 的演進
 
@@ -42,7 +42,7 @@ ms.locfileid: "89471984"
 - [應用程式修剪](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
 - [C # 編譯器增強功能](https://devblogs.microsoft.com/dotnet/automatically-find-latent-bugs-in-your-code-with-net-5)
 - 傾印偵錯工具的工具支援
-- 平臺是以[可為 null 的參考](csharp/nullable-references.md)型別標注的80%
+- 平臺是以[可為 null 的參考](../csharp/nullable-references.md)型別標注的80%
 
 ### <a name="what-net-5-is-not"></a>什麼是 .NET 5
 
@@ -58,7 +58,7 @@ ms.locfileid: "89471984"
 
 新的應用程式開發可以 `net5.0` 針對所有專案類型（包括類別庫）指定目標 framework 標記 (TFM) 。 在 .NET 5 工作負載之間共用程式碼已經過簡化，您只需要 `net5.0` TFM。
 
-`net5.0`TFM 結合和取代 `netcoreapp` 和 `netstandard` 名稱。 這種 TFM 通常只包含可跨平臺運作的技術，例如使用 .NET Standard 完成。 但是，如果您打算在 .NET Framework、.NET Core 和 .NET 5 工作負載之間共用程式碼，您可以藉由指定 TFM 來進行 `netstandard2.0` 。 如需詳細資訊，請參閱 [如何指定目標 framework](standard/frameworks.md#how-to-specify-target-frameworks)。
+`net5.0`TFM 結合和取代 `netcoreapp` 和 `netstandard` 名稱。 這種 TFM 通常只包含可跨平臺運作的技術，例如使用 .NET Standard 完成。 但是，如果您打算在 .NET Framework、.NET Core 和 .NET 5 工作負載之間共用程式碼，您可以藉由指定 TFM 來進行 `netstandard2.0` 。 如需詳細資訊，請參閱 [如何指定目標 framework](../standard/frameworks.md#how-to-specify-target-frameworks)。
 
 ## <a name="language-updates"></a>語言更新
 
@@ -76,9 +76,9 @@ ms.locfileid: "89471984"
    System.Console.Write("Hello world!");
    ```
 
-- 功能指標：公開中繼語言 (IL) 下列操作碼和的語言 `ldftn` 結構 `calli` 。
+- 函式指標：語言結構會公開下列中繼語言 (IL) 碼碼： `ldftn` 和 `calli` 。
 
-如需可用 c # 9 功能的詳細資訊，請參閱 [c # 9 的新](csharp/whats-new/csharp-9.md)功能。
+<!-- For more information on the available C# 9 features, see [What's new in C# 9](csharp/whats-new/csharp-9.md). -->
 
 #### <a name="source-generators"></a>來源產生器
 
@@ -108,7 +108,7 @@ let age = 36
 let message = $"%s{name} is %d{age} years old."
 ```
 
-這類似于 [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-printfmodule.html#sprintf) 根據型別安全輸入來格式化字串的函式。 如需詳細資訊，請參閱 [F # 5 的新功能](fsharp/whats-new/fsharp-50.md)
+這類似于 [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-printfmodule.html#sprintf) 根據型別安全輸入來格式化字串的函式。 <!-- For more information, see [What's new in F# 5](fsharp/whats-new/fsharp-50.md). -->
 
 ### <a name="visual-basic-updates"></a>Visual Basic 更新
 
@@ -129,7 +129,7 @@ let message = $"%s{name} is %d{age} years old."
 | NUnit 3 測試項目                      | `nunit-test`           |
 | xUnit 測試專案                     | `xunit`                |
 
-如需 .NET CLI 專案範本的詳細資訊，請參閱 [`dotnet new`](core/tools/dotnet-new.md) 。
+如需 .NET CLI 專案範本的詳細資訊，請參閱 [`dotnet new`](tools/dotnet-new.md) 。
 
 ## <a name="net-maui"></a>.NET MAUI
 
@@ -160,7 +160,7 @@ View body() => new StackLayout
 
 如需詳細資訊，請參閱 [.NET MAUI 藍圖](https://github.com/dotnet/maui/wiki/Roadmap)和 [.net MAUI 簡介](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) 文章。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [一個 .NET 的旅程](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [.NET 5 的效能改進](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)

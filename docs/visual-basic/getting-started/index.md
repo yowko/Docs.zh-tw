@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: f52432bde84ab7c1ec30ff4033ce95c80606636e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a56532a33bc0ef0aae73de7f80e533038212c5ec
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243189"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495482"
 ---
 # <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
 
@@ -18,19 +18,19 @@ ms.locfileid: "81243189"
 
 ## <a name="get-started-with-visual-basic-and-net-core"></a>開始使用 Visual Basic 和.NET Core
 
-[在視覺工作室中使用 .NET 核心構建 Hello World 應用程式](../../core/tutorials/with-visual-studio.md)
+[在 Visual Studio 中建立使用 .NET Core 的 Hello World 應用程式](../../core/tutorials/with-visual-studio.md)
 
-[在可視化工作室中使用 .NET 標準建構類庫](../../core/tutorials/library-with-visual-studio.md)
+[在 Visual Studio 中建立具有 .NET Standard 的類別庫](../../core/tutorials/library-with-visual-studio.md)
 
 ## <a name="additional-information"></a>其他資訊
 
-- [視覺基礎知識的新增功能](whats-new.md)在每個版本的 Visual Basic .NET 中列出新功能。
+- [Visual Basic 的新功能](../whats-new/index.md) 列出 Visual Basic .NET 的每個版本中的新功能。
 
-- [視覺基礎程式師的其他資源](additional-resources.md)提供可説明您找到常見問題解答的網站和新聞組的清單。
+- [Visual Basic 程式設計人員的其他資源](additional-resources.md) 提供網站和新聞群組清單，可協助您尋找常見問題的解答。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [取得視覺基礎知識](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)為 Visual Studio 版本提供下載連結,這些版本附帶了 Visual Basic 支援,包括免費版本。
+- [取得 Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 提供 Visual Basic 支援（包括免費版本）隨附 Visual Studio 版本的下載連結。
 
 - [物件導向程式設計](../programming-guide/concepts/object-oriented-programming.md) 提供介紹物件導向程式設計，並且描述如何建立自己的物件，以及如何使用物件簡化程式碼撰寫之頁面的連結。
 
@@ -38,7 +38,7 @@ ms.locfileid: "81243189"
 
 - [逐步解說](../walkthroughs.md) 提供示範 Visual Basic 語言相關層面的 [說明] 頁面清單。
 
-- [視覺工作室的回饋選項](/visualstudio/ide/feedback-options)介紹如何獲得支援和提供反饋。
+- [Visual Studio 的意見反應選項](/visualstudio/ide/feedback-options) 涵蓋如何接收支援並提供意見反應。
 
 - [Visual Studio](/visualstudio/) 提供 Visual Studio 文件的連結。
 

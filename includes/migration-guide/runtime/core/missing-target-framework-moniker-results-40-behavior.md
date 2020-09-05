@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 26a001ec2009a1a66dd9038b9bd3a42d7bcefb73
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 49740d3b1890d72935e6e329a4f4be836ed70b25
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619983"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497771"
 ---
 ### <a name="missing-target-framework-moniker-results-in-40-behavior"></a>在 4.0 行為中遺漏目標 Framework Moniker 結果
 
@@ -18,6 +18,18 @@ ms.locfileid: "85619983"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |主要|
+| 範圍   |主要|
 |版本|4.5|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

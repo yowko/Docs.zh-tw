@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9659068304eb208fd6a0a753273453bc669fbc56
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1487b5f47966cfcae0e47848dae99b39b42db18d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621114"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496234"
 ---
 ### <a name="keytips-behavior-improved-in-wpf"></a>已改進 WPF 中的按鍵提示行為
 
@@ -18,6 +18,18 @@ N/A
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Edge|
+| 範圍   |Edge|
 |版本|4.7.2|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

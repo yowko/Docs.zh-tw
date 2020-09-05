@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a1db9916c69c5974191eb6108fb54a0d9ff060d2
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9ab1686f60bcdbfef5f18576be17aee8c931f9aa
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622036"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497462"
 ---
 ### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection.Open 在有非 IFS Winsock BSP 或 LSP 的 Windows 7 上會失敗
 
@@ -18,10 +18,20 @@ ms.locfileid: "85622036"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.5|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType>
+- <xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Data.SqlClient.SqlConnection.Open`
+- `M:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)`
+
+-->

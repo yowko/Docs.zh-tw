@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bae6d7c0f8843211c721c68ce6f16000b35b4401
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 61749f59f9379a6d18bb013b2612a07cb7822b3a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620095"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496895"
 ---
 ### <a name="new-enum-values-in-wpfs-pagerangeselection"></a>WPF PageRangeSelection 中的新列舉值
 
@@ -18,10 +18,18 @@ ms.locfileid: "85620095"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Edge|
+| 範圍   |Edge|
 |版本|4.5|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.PageRangeSelection`
+
+-->

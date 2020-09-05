@@ -4,12 +4,12 @@ description: 方法、方法參數和方法傳回值的概觀
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810569"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495534"
 ---
 # <a name="methods-in-c"></a> (c # 中的方法 ) 
 
@@ -61,7 +61,7 @@ ms.locfileid: "88810569"
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
-您可以使用位置引數和具名引數來叫用方法。 但位置引數不能接在具名引數後面。 下例會使用一個位置引數和一個具名引數，從前一個範例叫用 `TestMotorcycle.Drive` 方法。
+您可以使用位置引數和具名引數來叫用方法。 不過，當命名的引數位於正確位置時，位置引數只能跟在具名引數的後面。 下例會使用一個位置引數和一個具名引數，從前一個範例叫用 `TestMotorcycle.Drive` 方法。
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
@@ -282,7 +282,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 如需詳細資訊，請參閱 [反覆運算](programming-guide/concepts/iterators.md)器。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [存取修飾詞](language-reference/keywords/access-modifiers.md)
 - [靜態類別和靜態類別成員](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
@@ -290,6 +290,6 @@ public Customer this[long id] => store.LookupCustomer(id);
 - [抽象和密封類別以及類別成員](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [params](language-reference/keywords/params.md)
 - [擴展](language-reference/keywords/out-parameter-modifier.md)
-- [裁判](language-reference/keywords/ref.md)
+- [ref](language-reference/keywords/ref.md)
 - [in](language-reference/keywords/in-parameter-modifier.md)
 - [傳遞參數](programming-guide/classes-and-structs/passing-parameters.md)

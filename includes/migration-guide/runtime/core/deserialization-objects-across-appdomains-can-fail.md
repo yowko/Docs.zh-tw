@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5c949b79eefa68ea6f8d4ad27c716c438e24f170
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3f82a4daac3b5d8981532f0c82e9a76f13c68b6e
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619959"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497778"
 ---
 ### <a name="deserialization-of-objects-across-appdomains-can-fail"></a>還原序列化跨應用程式網域的物件會失敗
 
@@ -18,6 +18,18 @@ ms.locfileid: "85619959"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Edge|
+| 範圍   |Edge|
 |版本|4.5.1|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

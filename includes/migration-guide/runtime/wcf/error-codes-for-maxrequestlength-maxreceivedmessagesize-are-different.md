@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3aafb14b65f7c0f9e5d77927809547f9d4b96e1c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 26facb645de175d7ef0432394fc2b84f59e8437d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620054"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497549"
 ---
 ### <a name="error-codes-for-maxrequestlength-or-maxreceivedmessagesize-are-different"></a>maxRequestLength 或 maxReceivedMessageSize 的錯誤碼不同
 
@@ -18,6 +18,18 @@ Internet Information Services (IIS) 或 ASP.NET 程式開發伺服器裝載的 W
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Edge|
+| 範圍   |Edge|
 |版本|4.5|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c462c7b4ec8423ce8fd331d3cd31154283cf1f1d
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 086dac69d085d070511fcfd5820bd2644ee4598e
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619988"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497689"
 ---
 ### <a name="marshalsizeof-and-marshalptrtostructure-overloads-break-dynamic-code"></a>Marshal.SizeOf 和 Marshal.PtrToStructure 多載會中斷動態程式碼
 
@@ -18,6 +18,18 @@ ms.locfileid: "85619988"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.5.1|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

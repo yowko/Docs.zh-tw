@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4396ff43a48a23df29c5938b6bd2137d527b4ef5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4416a7c09f2d163961fe2fe3d6dfaa8bd5e66f93
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620012"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497002"
 ---
 ### <a name="change-in-behavior-in-data-definition-language-ddl-apis"></a>資料定義語言 (DDL) API 的行為變更
 
@@ -18,6 +18,18 @@ ms.locfileid: "85620012"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.5|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

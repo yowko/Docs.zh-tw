@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cecb7b2abd4f57fdaacb0ea373cc19dc3cd9b24a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c1793bb51f7da9169e912078fde202d0d62a4183
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619935"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497488"
 ---
 ### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>無法再將 EnableViewStateMac 設定為 false
 
@@ -14,10 +14,22 @@ ASP.NET 不再允許開發人員指定 <code>&lt;pages enableViewStateMac=&quot;
 
 #### <a name="suggestion"></a>建議
 
-EnableViewStateMac 必須假設為 true，而且必須解決任何產生的 MAC 錯誤（如[本指南](https://support.microsoft.com/kb/2915218)中所述，其中包含多個解決方法，視造成 MAC 錯誤的細節而定）。
+EnableViewStateMac 必須假設為 true，而且必須解決任何產生的 MAC 錯誤 (如 [本指南](https://support.microsoft.com/kb/2915218)所述，其中包含多個解決方法，視造成 MAC 錯誤的特定原因而定) 。
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |主要|
+| 範圍   |主要|
 |版本|4.5.2|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

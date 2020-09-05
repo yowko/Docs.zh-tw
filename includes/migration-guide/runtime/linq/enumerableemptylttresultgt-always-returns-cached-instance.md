@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9131c91b34f4c24653dea37ea39af6be6e072287
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 05f60978f5380c406c43aa98ded0c812b1d50694
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620031"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496819"
 ---
 ### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a>Enumerable.Empty&lt;TResult&gt; 一律會傳回快取的執行個體
 
@@ -18,10 +18,18 @@ ms.locfileid: "85620031"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Edge|
+| 範圍   |Edge|
 |版本|4.5|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
+- <xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- ``M:System.Linq.Enumerable.Empty``1``
+
+-->

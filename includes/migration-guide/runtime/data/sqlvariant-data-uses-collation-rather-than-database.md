@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d606fbc4048421bc572cfe3db2e06bbcd4529e25
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fb339fb35cdcbba4f1c860fae9c17162c4cff596
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620006"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497429"
 ---
 ### <a name="sql_variant-data-uses-sql_variant-collation-rather-than-database-collation"></a>Sql_variant 資料使用的是 sql_variant 定序，而不是資料庫定序
 
@@ -18,6 +18,18 @@ ms.locfileid: "85620006"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |透明|
+| 範圍   |透明|
 |版本|4.5|
 |類型|執行階段|
+
+#### <a name="affected-apis"></a>受影響的 API
+
+無法透過 API 分析偵測。
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

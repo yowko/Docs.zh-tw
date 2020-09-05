@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/01/2020
-ms.openlocfilehash: 8e05f4dc7a03ae8ae68acc6a57f6fa0e1c6b2ce4
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465425"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495469"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -62,12 +62,12 @@ dotnet new -h|--help
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | 主控台應用程式                          | [安慰](#console)             | [C#], F#, VB | 通用/主控台                        | 1.0        |
 | 類別庫                                | [classlib](#classlib)           | [C#], F#, VB | 通用/程式庫                        | 1.0        |
-| WPF 應用程式                              | [Wpf](#wpf)                     | [C #]，VB     | Common/WPF                            | 3.0        |
-| WPF 類別庫                            | [wpflib](#wpf)                  | [C #]，VB     | Common/WPF                            | 3.0        |
-| WPF 自訂控制項程式庫                   | [wpfcustomcontrollib](#wpf)     | [C #]，VB     | Common/WPF                            | 3.0        |
-| WPF 使用者控制項程式庫                     | [wpfusercontrollib](#wpf)       | [C #]，VB     | Common/WPF                            | 3.0        |
-| Windows Forms (WinForms) 應用程式         | [winforms](#winforms)           | [C #]，VB     | Common/WinForms                       | 3.0        |
-| Windows Forms (WinForms) 類別庫       | [winformslib](#winforms)        | [C #]，VB     | Common/WinForms                       | 3.0        |
+| WPF 應用程式                              | [Wpf](#wpf)                     | [C #]，VB     | Common/WPF                            | 適用于 VB 的 3.0 (5.0) |
+| WPF 類別庫                            | [wpflib](#wpf)                  | [C #]，VB     | Common/WPF                            | 適用于 VB 的 3.0 (5.0) |
+| WPF 自訂控制項程式庫                   | [wpfcustomcontrollib](#wpf)     | [C #]，VB     | Common/WPF                            | 適用于 VB 的 3.0 (5.0) |
+| WPF 使用者控制項程式庫                     | [wpfusercontrollib](#wpf)       | [C #]，VB     | Common/WPF                            | 適用于 VB 的 3.0 (5.0) |
+| Windows Forms (WinForms) 應用程式         | [winforms](#winforms)           | [C #]，VB     | Common/WinForms                       | 適用于 VB 的 3.0 (5.0) |
+| Windows Forms (WinForms) 類別庫       | [winformslib](#winforms)        | [C #]，VB     | Common/WinForms                       | 適用于 VB 的 3.0 (5.0) |
 | 背景工作服務                               | [工人](#web-others)           | [C#]         | Common/Worker/Web                     | 3.0        |
 | 單元測試專案                            | [mstest](#test)                 | [C#], F#, VB | 測試/MSTest                           | 1.0        |
 | NUnit 3 測試專案                         | [Nunit](#nunit)                 | [C#], F#, VB | 測試/NUnit                            | 2.1.400    |
@@ -741,7 +741,7 @@ dotnet new -h|--help
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [dotnet new 的自訂範本](custom-templates.md)
 - [建立適用於 dotnet new 的自訂範本](../tutorials/cli-templates-create-item-template.md)

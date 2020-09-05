@@ -2,12 +2,12 @@
 title: 使用 Visual Studio Code 發佈 .NET Core 主控台應用程式
 description: 發行會建立一組執行 .NET Core 應用程式所需的檔案。
 ms.date: 07/04/2020
-ms.openlocfilehash: a84e66126806e2ab45c14527df1b931fa9980468
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 79c69546b79de3d702fb4bb6550e615d8d59fa74
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867642"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495521"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 發佈 .NET Core 主控台應用程式
 
@@ -40,13 +40,12 @@ ms.locfileid: "88867642"
    命令輸出會類似下列範例：
 
    ```output
-   Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
+   Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET
    Copyright (C) Microsoft Corporation. All rights reserved.
-
-   Determining projects to restore...
-   All projects are up-to-date for restore.
-   HelloWorld -> C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\HelloWorld.dll
-   HelloWorld -> C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
+     Determining projects to restore...
+     All projects are up-to-date for restore.
+     HelloWorld -> C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\HelloWorld.dll
+     HelloWorld -> C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
    ```
 
 ## <a name="inspect-the-files"></a>檢查檔案

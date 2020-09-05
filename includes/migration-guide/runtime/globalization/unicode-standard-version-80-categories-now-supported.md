@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a20fad5f9c95e59c14ffd91f4921cf8bfab443cd
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: f389a9e9bcf4ac1777db66731a085d74889c4a98
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621072"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496926"
 ---
 ### <a name="unicode-standard-version-80-categories-now-supported"></a>現在支援 Unicode 標準 8.0 版分類
 
@@ -18,10 +18,22 @@ ms.locfileid: "85621072"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Minor|
+| 範圍   |Minor|
 |版本|4.6.2|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType>
+- <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType>
+- <xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Char.GetUnicodeCategory(System.Char)`
+- `M:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)`
+- `M:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)`
+
+-->

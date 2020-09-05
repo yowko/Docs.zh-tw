@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1be68c2968d0eaa9024007bcf37abf9e44c36f1c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 31ada197db36be192317e32a37a353d375d9cc65
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622057"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497042"
 ---
 ### <a name="scrolling-a-wpf-treeview-or-grouped-listbox-in-a-virtualizingstackpanel-can-cause-a-hang"></a>在 VirtualizingStackPanel 中捲動 WPF TreeView 或群組 ListBox 可能會造成停止回應
 
@@ -18,10 +18,18 @@ ms.locfileid: "85622057"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |主要|
+| 範圍   |主要|
 |版本|4.5|
-|類型|執行階段
+|類型|執行階段|
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)`
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ed526095459a48aa37b585dfed79cc12b9fb9e56
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 6431f3b4d0983c44629e4fe760c75adcc277ddd4
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622045"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496685"
 ---
 ### <a name="some-net-apis-cause-first-chance-handled-entrypointnotfoundexceptions"></a>某些 .NET API 會造成第一個可能發生 (已處理) 的 EntryPointNotFoundException
 
@@ -18,10 +18,26 @@ ms.locfileid: "85622045"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   |Edge|
+| 範圍   |Edge|
 |版本|4.5|
 |類型|執行階段
 
 #### <a name="affected-apis"></a>受影響的 API
 
--<xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String,System.Object[])?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.%23ctor(System.Type)></li></ul>|
+- <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=nameWithType>
+- <xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String)?displayProperty=nameWithType>
+- <xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String)?displayProperty=nameWithType>
+- <xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String,System.Object[])?displayProperty=nameWithType>
+- <xref:System.Xml.Serialization.XmlSerializer.%23ctor(System.Type)>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Diagnostics.Debug.Assert(System.Boolean)`
+- `M:System.Diagnostics.Debug.Assert(System.Boolean,System.String)`
+- `M:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String)`
+- `M:System.Diagnostics.Debug.Assert(System.Boolean,System.String,System.String,System.Object[])`
+- `M:System.Xml.Serialization.XmlSerializer.#ctor(System.Type)`
+
+-->

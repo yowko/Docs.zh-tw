@@ -3,12 +3,12 @@ title: 歡迎使用 .NET
 description: 開始使用 .NET 系列的技術。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1933714263b98b4a503ced3868570c35feafe8f0
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 7b1c5eceefd1e108eabf17d5cb6f7552af00e0d5
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89415055"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495143"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -36,7 +36,7 @@ ms.locfileid: "89415055"
 - [.NET Core 3.1 的新功能](core/whats-new/dotnet-core-3-1.md)
 - [.NET Framework 的新功能](framework/whats-new/index.md)
 - [C# 的新功能](csharp/whats-new/index.md)
-- [Visual Basic 的新功能](visual-basic/getting-started/whats-new.md)
+- [Visual Basic 的新功能](visual-basic/whats-new/index.md)
 
 ## <a name="documentation"></a>文件
 

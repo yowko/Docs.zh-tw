@@ -6,18 +6,18 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], runtime settings
 - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
-ms.openlocfilehash: d5af9f3299b48d431b43566c11610d745167b60b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1797afe3e6347da1aef916d13be7678b7b8d4acf
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74431055"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495169"
 ---
 # <a name="run-time-settings-schema"></a>執行階段設定結構描述
 
 Common language runtime 會使用執行時間設定來設定以 .NET Framework 為目標的應用程式。
 
-## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>\<runtime>區段及其父元素和子專案
+## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>\<runtime>區段及其父元素和子項目
 
 [\<configuration>](../configuration-element.md)\
 &nbsp;&nbsp;[\<runtime>](runtime-element.md)\
@@ -45,7 +45,7 @@ Common language runtime 會使用執行時間設定來設定以 .NET Framework �
 &nbsp;&nbsp;&nbsp;&nbsp;[\<enforceFIPSPolicy>](enforcefipspolicy-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<etwEnable>](etwenable-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<forcePerformanceCounterUniqueSharedMemoryReads>](forceperformancecounteruniquesharedmemoryreads-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[\<gcAllowVeryLargeObjects>](gcconcurrent-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<gcConcurrent>](gcconcurrent-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<GCCpuGroup>](gccpugroup-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)\
@@ -78,7 +78,7 @@ Common language runtime 會使用執行時間設定來設定以 .NET Framework �
 
 ## <a name="alphabetical-list-of-runtime-elements"></a>依字母順序排列的 \<runtime> 元素清單
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |[\<add>](add-element-for-namedcaches.md)|將具名快取新增到記憶體快取的 `namedCaches` 集合。|
 |[\<alwaysFlowImpersonationPolicy>](alwaysflowimpersonationpolicy-element.md)|指定 Windows 識別一律流經非同步點，而不論模擬的執行方式為何。|
@@ -105,10 +105,10 @@ Common language runtime 會使用執行時間設定來設定以 .NET Framework �
 |[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)|在 64 位元平台上，啟用總大小大於 2 GB 的陣列。|
 |[\<gcConcurrent>](gcconcurrent-element.md)|指定執行階段是否同時執行記憶體回收。|
 |[\<GCCpuGroup>](gccpugroup-element.md)|指定記憶體回收是否支援多個 CPU 群組。|
-|[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)|定義 GC 堆積與個別處理器之間的親和性。|
+|[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)|定義 GC 堆積和個別處理器之間的親和性。|
 |[\<GCHeapCount>](gcheapcount-element.md)|指定要用於伺服器垃圾收集的堆積/執行緒數目。  |
-|[\<GCLOHThreshold>](gclohthreshold-element.md)|指定導致物件在大型物件堆積（LOH）上執行的臨界值大小。|
-|[\<GCNoAffinitize>](gcnoaffinitize-element.md)|指定是否要使用 Cpu 將相似化為伺服器 GC 執行緒。|
+|[\<GCLOHThreshold>](gclohthreshold-element.md)|指定讓物件移至大型物件堆積 (LOH) 的閾值大小。|
+|[\<GCNoAffinitize>](gcnoaffinitize-element.md)|指定是否要將相似化為具有 Cpu 的伺服器 GC 執行緒。|
 |[\<gcServer>](gcserver-element.md)|指定 Common Language Runtime 是否執行伺服器記憶體回收。|
 |[\<generatePublisherEvidence>](generatepublisherevidence-element.md)|指定執行階段是否使用程式碼存取安全性 (CAS) 發行者原則。|
 |[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)|指定執行階段是否允許 Managed 程式碼攔截存取違規和其他損毀狀態例外狀況。|
@@ -136,8 +136,8 @@ Common language runtime 會使用執行時間設定來設定以 .NET Framework �
 |[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)|指定執行階段是否依照應用程式網域來計算字串的雜湊碼。|
 |[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)|要求執行階段在建立內部使用的特定執行緒時，使用明確的堆疊大小，而不是預設的堆疊大小。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [設定檔架構](../index.md)
+- [組態檔結構描述](../index.md)
 - [停用並行垃圾收集](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [重新導向組件版本](../../redirect-assembly-versions.md)
