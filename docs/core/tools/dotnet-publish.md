@@ -2,18 +2,18 @@
 title: dotnet publish 命令
 description: Dotnet publish 命令會將 .NET Core 專案或方案發佈至目錄。
 ms.date: 02/24/2020
-ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: f171baaa0dbc070b6389ec0fa9895b2c5dcfafff
+ms.sourcegitcommit: f279a4488c48236793c04bf825ae6f9128790849
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656661"
+ms.lasthandoff: 09/06/2020
+ms.locfileid: "89501905"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 本文**適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet publish` -將應用程式及其相依性發行至資料夾，以部署至主控系統。
 
@@ -32,7 +32,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet publish` 會編譯應用程式，讀取在其專案檔中指定的相依性，然後將產生的一組檔案發行到目錄中。 此輸出包含下列資產：
 
@@ -123,7 +123,7 @@ dotnet publish -p:PublishProfile=FolderProfile
 
   指定輸出目錄的路徑。
   
-  如果未指定，它會預設為架構相依可執行檔和跨平臺二進位檔的 *[project_file_folder]./bin/[configuration]/[framework]/publish/* 。 它預設為獨立可執行檔的 *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* 。
+  如果未指定，它會預設為 framework 相依可執行檔和跨平臺二進位檔的 *[project_file_folder]/bin/[configuration]/[framework]/publish/* 。 它預設為獨立可執行檔的 *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* 。
 
   在 Web 專案中，如果輸出檔案夾位於專案資料夾中，後續的 `dotnet publish` 命令會產生嵌套的輸出檔案夾。 例如，如果專案資料夾是*myproject*，而 [發行輸出] 資料夾是 [ *myproject]/[發佈*]，而您執行了 `dotnet publish` 兩次，則第二次執行會在*myproject/publish/publish*中放入 *.config*和檔案等內容*檔案。* 若要避免嵌套發行資料夾，請指定不在專案資料夾 **下的** 發行資料夾，或從專案中排除 [發行] 資料夾。 若要排除名為 *publishoutput*的發行資料夾，請將下列元素新增至 `PropertyGroup` *.csproj* 檔案中的專案：
 
