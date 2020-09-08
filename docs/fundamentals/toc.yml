@@ -1,0 +1,1323 @@
+items:
+  - name: .NET 文件
+    href: index.yml
+  - name: 開始使用 (第 1 天)
+    items:
+      - name: Hello World
+        href: ../core/get-started.md
+      - name: 快速入門教學課程
+        href: ../standard/get-started.md
+      - name: .NET 101 影片
+        href: 'https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80'
+      - name: 安裝方式
+        items:
+          - name: 概觀
+            href: ../core/install/index.yml
+          - name: 安裝在 Windows 上
+            href: ../core/install/windows.md
+          - name: 在 macOS 上安裝
+            href: ../core/install/macos.md
+          - name: 安裝在 Linux 上
+            items:
+              - name: 概觀
+                href: ../core/install/linux.md
+              - name: Ubuntu
+                href: ../core/install/linux-ubuntu.md
+              - name: Alpine
+                href: ../core/install/linux-alpine.md
+              - name: CentOS
+                href: ../core/install/linux-centos.md
+              - name: Debian
+                href: ../core/install/linux-debian.md
+              - name: Fedora
+                href: ../core/install/linux-fedora.md
+              - name: OpenSUSE
+                href: ../core/install/linux-opensuse.md
+              - name: Redhat Enterprise Linux
+                href: ../core/install/linux-rhel.md
+              - name: SLES
+                href: ../core/install/linux-sles.md
+          - name: 移除過時的執行階段及 SDK
+            href: ../core/install/remove-runtime-sdk-versions.md
+          - name: 管理 .NET 範本
+            href: ../core/install/templates.md
+          - name: macOS Notarization 問題
+            href: ../core/install/macos-notarization-issues.md
+          - name: 如何檢查 .NET Core 版本
+            href: ../core/install/how-to-detect-installed-versions.md
+          - name: 安裝當地語系化的 IntelliSense
+            href: ../core/install/localized-intellisense.md
+  - name: 概觀 (第 1 週)
+    items:
+      - name: .NET 教學課程
+        href: ../standard/tour.md
+      - name: .NET 架構元件
+        href: ../standard/components.md
+      - name: .NET 類別庫
+        href: ../standard/class-libraries.md
+      - name: .NET Core 概觀
+        href: ../core/introduction.md
+      - name: .NET Standard 概觀
+        href: ../standard/net-standard.md
+      - name: .NET 詞彙
+        href: ../standard/glossary.md
+      - name: 教學課程
+        items:
+          - name: 使用 Visual Studio
+            items:
+              - name: 建立主控台應用程式
+                href: ../core/tutorials/with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 對應用程式進行偵錯
+                href: ../core/tutorials/debugging-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 發佈應用程式
+                href: ../core/tutorials/publishing-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 建立程式庫
+                href: ../core/tutorials/library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 對程式庫進行單元測試
+                href: ../core/tutorials/testing-library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: 安裝並使用套件
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+              - name: 建立及發行套件
+                href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+          - name: 使用 Visual Studio Code
+            items:
+              - name: 建立主控台應用程式
+                href: ../core/tutorials/with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code, cli'
+              - name: 對應用程式進行偵錯
+                href: ../core/tutorials/debugging-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: 發佈應用程式
+                href: ../core/tutorials/publishing-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: 建立程式庫
+                href: ../core/tutorials/library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: 對程式庫進行單元測試
+                href: ../core/tutorials/testing-library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: 安裝並使用套件
+                href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+                displayName: 'tutorials, cli'
+              - name: 建立及發行套件
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: 使用 Visual Studio for Mac
+            items:
+              - name: 建立主控台應用程式
+                href: ../core/tutorials/with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+              - name: 對應用程式進行偵錯
+                href: ../core/tutorials/debugging-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 發佈應用程式
+                href: ../core/tutorials/publishing-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 建立程式庫
+                href: ../core/tutorials/library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 對程式庫進行單元測試
+                href: ../core/tutorials/testing-library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 安裝並使用套件
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: 建立及發行套件
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: 更多教學課程
+            href: ../core/tutorials/index.md
+  - name: 新功能
+    items:
+      - name: .NET Core 3.1 的新功能
+        href: ../core/whats-new/dotnet-core-3-1.md
+      - name: .NET Core 3.0 的新功能
+        href: ../core/whats-new/dotnet-core-3-0.md
+      - name: .NET Core 2.2 的新功能
+        href: ../core/whats-new/dotnet-core-2-2.md
+      - name: .NET Core 2.1 的新功能
+        href: ../core/whats-new/dotnet-core-2-1.md
+      - name: .NET Core 2.0 的新功能
+        href: ../core/whats-new/dotnet-core-2-0.md
+      - name: .NET Standard 的新功能
+        href: ../standard/whats-new/whats-new-in-dotnet-standard.md
+  - name: 環境和執行階段元件
+    items:
+      - name: 工具和生產力
+        items:
+          - name: .NET Core SDK 概觀
+            href: ../core/sdk.md
+          - name: .NET Core CLI
+            items:
+              - name: 概觀
+                href: ../core/tools/index.md
+              - name: 參考資料
+                items:
+                  - name: dotnet
+                    href: ../core/tools/dotnet.md
+                  - name: dotnet build
+                    href: ../core/tools/dotnet-build.md
+                  - name: dotnet build-server
+                    href: ../core/tools/dotnet-build-server.md
+                  - name: dotnet clean
+                    href: ../core/tools/dotnet-clean.md
+                  - name: dotnet help
+                    href: ../core/tools/dotnet-help.md
+                  - name: dotnet migrate
+                    href: ../core/tools/dotnet-migrate.md
+                  - name: dotnet msbuild
+                    href: ../core/tools/dotnet-msbuild.md
+                  - name: dotnet new
+                    href: ../core/tools/dotnet-new.md
+                  - name: dotnet nuget
+                    items:
+                      - name: dotnet nuget delete
+                        href: ../core/tools/dotnet-nuget-delete.md
+                      - name: dotnet nuget locals
+                        href: ../core/tools/dotnet-nuget-locals.md
+                      - name: dotnet nuget push
+                        href: ../core/tools/dotnet-nuget-push.md
+                      - name: dotnet nuget add source
+                        href: ../core/tools/dotnet-nuget-add-source.md
+                      - name: dotnet nuget disable source
+                        href: ../core/tools/dotnet-nuget-disable-source.md
+                      - name: dotnet nuget enable source
+                        href: ../core/tools/dotnet-nuget-enable-source.md
+                      - name: dotnet nuget list source
+                        href: ../core/tools/dotnet-nuget-list-source.md
+                      - name: dotnet nuget remove source
+                        href: ../core/tools/dotnet-nuget-remove-source.md
+                      - name: dotnet nuget update source
+                        href: ../core/tools/dotnet-nuget-update-source.md
+                  - name: dotnet pack
+                    href: ../core/tools/dotnet-pack.md
+                  - name: dotnet publish
+                    href: ../core/tools/dotnet-publish.md
+                  - name: dotnet restore
+                    href: ../core/tools/dotnet-restore.md
+                  - name: dotnet run
+                    href: ../core/tools/dotnet-run.md
+                  - name: dotnet sln
+                    href: ../core/tools/dotnet-sln.md
+                  - name: dotnet store
+                    href: ../core/tools/dotnet-store.md
+                  - name: dotnet test
+                    href: ../core/tools/dotnet-test.md
+                  - name: dotnet tool
+                    items:
+                      - name: dotnet tool install
+                        href: ../core/tools/dotnet-tool-install.md
+                      - name: dotnet tool list
+                        href: ../core/tools/dotnet-tool-list.md
+                      - name: dotnet tool restore
+                        href: ../core/tools/dotnet-tool-restore.md
+                      - name: dotnet tool run
+                        href: ../core/tools/dotnet-tool-run.md
+                      - name: dotnet tool uninstall
+                        href: ../core/tools/dotnet-tool-uninstall.md
+                      - name: dotnet tool update
+                        href: ../core/tools/dotnet-tool-update.md
+                  - name: dotnet vstest
+                    href: ../core/tools/dotnet-vstest.md
+                  - name: dotnet-install 指令碼
+                    href: ../core/tools/dotnet-install-script.md
+                  - name: 專案參考命令
+                    items:
+                      - name: dotnet add reference
+                        href: ../core/tools/dotnet-add-reference.md
+                      - name: dotnet list reference
+                        href: ../core/tools/dotnet-list-reference.md
+                      - name: dotnet remove reference
+                        href: ../core/tools/dotnet-remove-reference.md
+                  - name: 專案套件命令
+                    items:
+                      - name: dotnet add package
+                        href: ../core/tools/dotnet-add-package.md
+                      - name: dotnet list package
+                        href: ../core/tools/dotnet-list-package.md
+                      - name: dotnet remove package
+                        href: ../core/tools/dotnet-remove-package.md
+              - name: 全域和本機工具
+                items:
+                  - name: 管理工具
+                    href: ../core/tools/global-tools.md
+                  - name: 疑難排解工具
+                    href: ../core/tools/troubleshoot-usage-issues.md
+                  - name: 建立適用於 CLI 的工具
+                    items:
+                      - name: 1 - 建立工具
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-create.md
+                      - name: 2 - 使用全域工具
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-use.md
+                      - name: 3 - 使用本機工具
+                        href: ../core/tools/local-tools-how-to-use.md
+                        displayName: 'tools, tutorials, cli'
+              - name: global.json 概觀
+                href: ../core/tools/global-json.md
+              - name: 遙測
+                href: ../core/tools/telemetry.md
+              - name: 較高的存取權
+                href: ../core/tools/elevated-access.md
+              - name: 啟用 TAB 鍵自動完成
+                href: ../core/tools/enable-tab-autocomplete.md
+          - name: 使用 CLI 進行持續整合
+            href: ../core/tools/using-ci-with-cli.md
+          - name: 使用 CLI 開發程式庫
+            href: ../core/tutorials/libraries.md
+          - name: 建立 CLI 的範本
+            items:
+              - name: 自訂範本
+                href: ../core/tools/custom-templates.md
+              - name: 1 - 建立項目範本
+                href: ../core/tutorials/cli-templates-create-item-template.md
+                displayName: 'tutorials, cli'
+              - name: 2 - 建立專案範本
+                href: ../core/tutorials/cli-templates-create-project-template.md
+                displayName: 'tutorials, cli'
+              - name: 3 - 建立範本套件
+                href: ../core/tutorials/cli-templates-create-template-pack.md
+                displayName: 'tutorials, cli'
+          - name: .NET Core 其他工具
+            items:
+              - name: 總覽
+                href: ../core/additional-tools/index.md
+              - name: .NET Core 解除安裝工具
+                href: ../core/additional-tools/uninstall-tool.md
+              - name: WCF Web Service Reference Provider
+                href: ../core/additional-tools/wcf-web-service-reference-guide.md
+              - name: dotnet-svcutil
+                href: ../core/additional-tools/dotnet-svcutil-guide.md
+              - name: dotnet-svcutil.xmlserializer
+                href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+              - name: XML 序列化程式產生器
+                href: ../core/additional-tools/xml-serializer-generator.md
+          - name: 診斷工具
+            items:
+              - name: 總覽
+                href: ../core/diagnostics/index.md
+              - name: 受控偵錯工具
+                href: ../core/diagnostics/managed-debuggers.md
+              - name: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: 記錄和追蹤
+                href: ../core/diagnostics/logging-tracing.md
+              - name: .NET Core CLI 全域工具
+                items:
+                  - name: dotnet-counters
+                    href: ../core/diagnostics/dotnet-counters.md
+                  - name: dotnet-dump
+                    href: ../core/diagnostics/dotnet-dump.md
+                  - name: dotnet-gcdump
+                    href: ../core/diagnostics/dotnet-gcdump.md
+                  - name: dotnet-trace
+                    href: ../core/diagnostics/dotnet-trace.md
+              - name: .NET Core 診斷教學課程
+                items:
+                  - name: 使用 EventCounters 取得效能計量
+                    href: ../core/diagnostics/event-counter-perf.md
+                  - name: 針對記憶體流失進行偵錯
+                    href: ../core/diagnostics/debug-memory-leak.md
+                  - name: 針對高 CPU 使用量進行偵錯
+                    href: ../core/diagnostics/debug-highcpu.md
+                  - name: 針對死結進行偵錯
+                    href: ../core/diagnostics/debug-deadlock.md
+          - name: 程式碼分析
+            items:
+              - name: 概觀
+                href: productivity/code-analysis.md
+                displayName: 'code analysis, analyzers'
+              - name: 設定規則
+                href: productivity/configure-code-analysis-rules.md
+              - name: API 分析器
+                href: ../standard/analyzers/api-analyzer.md
+              - name: 可攜性分析器
+                href: ../standard/analyzers/portability-analyzer.md
+      - name: 執行模型
+        items:
+          - name: Common Language Runtime (CLR)
+            href: ../standard/clr.md
+          - name: 受控執行程序
+            href: ../standard/managed-execution-process.md
+          - name: .NET 中的組件
+            href: ../standard/assembly/
+          - name: 中繼資料與自我描述元件
+            href: ../standard/metadata-and-self-describing-components.md
+          - name: 相依性載入
+            items:
+              - name: 相依性載入
+                href: ../core/dependency-loading/overview.md
+              - name: 了解 AssemblyLoadContext
+                href: ../core/dependency-loading/understanding-assemblyloadcontext.md
+              - name: 相依性載入詳細資料
+                items:
+                  - name: 預設相依性探查
+                    href: ../core/dependency-loading/default-probing.md
+                  - name: 載入受控組件
+                    href: ../core/dependency-loading/loading-managed.md
+                  - name: 載入附屬組件
+                    href: ../core/dependency-loading/loading-resources.md
+                  - name: 載入非受控組件
+                    href: ../core/dependency-loading/loading-unmanaged.md
+              - name: 教學課程
+                items:
+                  - name: 建立具有外掛程式的 .NET Core 應用程式
+                    href: ../core/tutorials/creating-app-with-plugin-support.md
+                  - name: 如何使用 .NET Core 中的組件卸載功能及對其進行偵錯
+                    href: ../core/../standard/assembly/unloadability.md
+          - name: 版本控制
+            items:
+              - name: 總覽
+                href: ../core/versions/index.md
+              - name: .NET Core 版本選取
+                href: ../core/versions/selection.md
+          - name: 執行階段設定
+            items:
+              - name: 設定
+                href: ../core/run-time-config/index.md
+              - name: 編譯設定
+                href: ../core/run-time-config/compilation.md
+              - name: 偵錯與分析設定
+                href: ../core/run-time-config/debugging-profiling.md
+              - name: 記憶體回收行程設定
+                href: ../core/run-time-config/garbage-collector.md
+              - name: 全球化設定
+                href: ../core/run-time-config/globalization.md
+              - name: 網路設定
+                href: ../core/run-time-config/networking.md
+              - name: 執行緒設定
+                href: ../core/run-time-config/threading.md
+      - name: 部署模型
+        items:
+          - name: 概觀
+            href: ../core/deploying/index.md
+          - name: 使用 Visual Studio 部署應用程式
+            href: ../core/deploying/deploy-with-vs.md
+          - name: 使用 CLI 來發行應用程式
+            href: ../core/deploying/deploy-with-cli.md
+          - name: 使用 CLI 來建立 NuGet 套件
+            href: ../core/deploying/creating-nuget-packages.md
+          - name: 獨立式部署執行階段向前復原
+            href: ../core/deploying/runtime-patch-selection.md
+          - name: 修剪獨立式部署及可執行檔
+            href: ../core/deploying/trim-self-contained.md
+          - name: 執行階段套件存放區
+            href: ../core/deploying/runtime-store.md
+          - name: 執行階段識別碼 (RID) 目錄
+            href: ../core/rid-catalog.md
+          - name: 資源資訊清單名稱
+            href: ../core/resources/manifest-file-names.md
+          - name: Docker
+            items:
+              - name: .NET 和 Docker 簡介
+                href: ../core/docker/introduction.md
+              - name: 將 .NET Core 應用程式容器化
+                href: ../core/docker/build-container.md
+              - name: Visual Studio 中的容器工具
+                href: /visualstudio/containers/overview
+      - name: MSBuild 和專案檔
+        items:
+          - name: 專案 SDK
+            items:
+              - name: 總覽
+                href: ../core/project-sdk/overview.md
+              - name: 參考資料
+                items:
+                  - name: Microsoft.NET.Sdk
+                    href: ../core/project-sdk/msbuild-props.md
+                  - name: Microsoft.NET.Sdk.Web
+                    href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+                  - name: Microsoft.NET.Sdk.Razor
+                    href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+          - name: 目標 Framework
+            href: ../standard/frameworks.md
+          - name: csproj 格式的新增項目
+            href: ../core/tools/csproj.md
+          - name: 相依性管理
+            href: ../core/tools/dependencies.md
+  - name: 基礎程式碼元件
+    items:
+      - name: 基底類型概觀
+        items:
+          - name: 一般型別系統與 Common Language Specification
+            href: ../standard/common-type-system.md
+          - name: 一般型別系統
+            href: ../standard/base-types/common-type-system.md
+          - name: 語言無關
+            href: ../standard/language-independence.md
+          - name: 與語言無關的元件
+            href: ../standard/language-independence-and-language-independent-components.md
+          - name: .NET 中的類型轉換
+            href: ../standard/base-types/type-conversion.md
+          - name: 類型轉換表
+            href: ../standard/base-types/conversion-tables.md
+          - name: Framework 程式庫
+            href: ../standard/framework-libraries.md
+          - name: 類別庫概觀
+            href: ../standard/class-library-overview.md
+      - name: 泛型類型
+        items:
+          - name: 總覽
+            href: ../standard/generics/index.md
+          - name: 泛型型別簡介
+            href: ../standard/generics.md
+          - name: .NET 中的泛型集合
+            href: ../standard/generics/collections.md
+          - name: 操作陣列和清單的泛型委派
+            href: ../standard/generics/delegates-for-manipulating-arrays-and-lists.md
+          - name: 泛型介面
+            href: ../standard/generics/interfaces.md
+          - name: 共變數和反變數
+            href: ../standard/generics/covariance-and-contravariance.md
+      - name: 集合和資料結構
+        items:
+          - name: 總覽
+            href: ../standard/collections/index.md
+            displayName: 'collections, data structures'
+          - name: 選取集合類別
+            href: ../standard/collections/selecting-a-collection-class.md
+          - name: 常用的集合類型
+            href: ../standard/collections/commonly-used-collection-types.md
+          - name: 何時使用泛型集合
+            href: ../standard/collections/when-to-use-generic-collections.md
+          - name: 集合內的比較和排序
+            href: ../standard/collections/comparisons-and-sorts-within-collections.md
+          - name: 排序集合類型
+            href: ../standard/collections/sorted-collection-types.md
+          - name: Hashtable 和 Dictionary 類型
+            href: ../standard/collections/hashtable-and-dictionary-collection-types.md
+          - name: 安全執行緒集合
+            href: ../standard/collections/thread-safe/
+      - name: 委派和 Lambda
+        href: ../standard/delegates-lambdas.md
+      - name: 事件
+        items:
+          - name: 總覽
+            href: ../standard/events/index.md
+            displayName: events
+          - name: 引發和使用事件
+            href: ../standard/events/how-to-raise-and-consume-events.md
+          - name: 使用事件屬性處理多個事件
+            href: ../standard/events/how-to-handle-multiple-events-using-event-properties.md
+          - name: 觀察者設計模式
+            items:
+              - name: 總覽
+                href: ../standard/events/observer-design-pattern.md
+                displayName: Observer design pattern
+              - name: 最佳作法
+                href: ../standard/events/observer-design-pattern-best-practices.md
+              - name: 作法：實作提供者
+                href: ../standard/events/how-to-implement-a-provider.md
+              - name: 作法：實作觀察者
+                href: ../standard/events/how-to-implement-an-observer.md
+      - name: 例外狀況
+        items:
+          - name: 總覽
+            href: ../standard/exceptions/index.md
+            displayName: exceptions
+          - name: Exception 類別和屬性
+            href: ../standard/exceptions/exception-class-and-properties.md
+          - name: 做法
+            items:
+              - name: 使用 try-catch 區塊攔截例外狀況
+                href: ../standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+              - name: 在 catch 區塊中使用特定例外狀況
+                href: ../standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md
+              - name: 明確擲回例外狀況
+                href: ../standard/exceptions/how-to-explicitly-throw-exceptions.md
+              - name: 建立使用者定義的例外狀況
+                href: ../standard/exceptions/how-to-create-user-defined-exceptions.md
+              - name: 使用當地語系化例外狀況訊息來建立使用者定義的例外狀況
+                href: ../standard/exceptions/how-to-create-localized-exception-messages.md
+              - name: 使用 finally 區塊
+                href: ../standard/exceptions/how-to-use-finally-blocks.md
+          - name: 使用使用者篩選的例外處理常式
+            href: ../standard/exceptions/using-user-filtered-exception-handlers.md
+          - name: 處理 COM Interop 例外狀況
+            href: ../standard/exceptions/handling-com-interop-exceptions.md
+          - name: 最佳作法
+            href: ../standard/exceptions/best-practices-for-exceptions.md
+      - name: 數值類型
+        href: ../standard/numerics.md
+      - name: 日期、時間和時區
+        href: ../standard/datetime/
+      - name: 將數字、日期、其他類型格式化
+        items:
+          - name: 總覽
+            href: ../standard/base-types/formatting-types.md
+          - name: 標準數值格式字串
+            href: ../standard/base-types/standard-numeric-format-strings.md
+          - name: 自訂數值格式字串
+            href: ../standard/base-types/custom-numeric-format-strings.md
+          - name: 標準日期和時間格式字串
+            href: ../standard/base-types/standard-date-and-time-format-strings.md
+          - name: 自訂日期與時間格式字串
+            href: ../standard/base-types/custom-date-and-time-format-strings.md
+          - name: 標準 TimeSpan 格式字串
+            href: ../standard/base-types/standard-timespan-format-strings.md
+          - name: 自訂 TimeSpan 格式字串
+            href: ../standard/base-types/custom-timespan-format-strings.md
+          - name: 列舉格式字串
+            href: ../standard/base-types/enumeration-format-strings.md
+          - name: 複合格式
+            href: ../standard/base-types/composite-formatting.md
+          - name: 做法
+            items:
+              - name: 在數字開頭填補多個零
+                href: ../standard/base-types/how-to-pad-a-number-with-leading-zeros.md
+              - name: 從日期擷取星期幾
+                href: ../standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md
+              - name: 使用自訂數值格式提供者
+                href: ../standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md
+              - name: 來回轉換日期和時間值
+                href: ../standard/base-types/how-to-round-trip-date-and-time-values.md
+              - name: 在日期與時間值中顯示毫秒
+                href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
+              - name: 使用非西曆顯示日期
+                href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
+      - name: 操作字串
+        items:
+          - name: .NET 中的字元編碼
+            href: ../standard/base-types/character-encoding-introduction.md
+          - name: 如何使用字元編碼類別
+            href: ../standard/base-types/character-encoding.md
+          - name: 使用字串的最佳做法
+            href: ../standard/base-types/best-practices-strings.md
+          - name: 基本字串作業
+            items:
+              - name: 總覽
+                href: ../standard/base-types/basic-string-operations.md
+                displayName: string operations
+              - name: 建立新字串
+                href: ../standard/base-types/creating-new.md
+              - name: 修剪與移除字元
+                href: ../standard/base-types/trimming.md
+              - name: 填補字串
+                href: ../standard/base-types/padding.md
+              - name: 比較字串
+                href: ../standard/base-types/comparing.md
+              - name: 變更大小寫
+                href: ../standard/base-types/changing-case.md
+              - name: 使用 StringBuilder 類別
+                href: ../standard/base-types/stringbuilder.md
+              - name: 作法：執行基本字串操作
+                href: ../standard/base-types/basic-manipulations.md
+          - name: .NET 中的規則運算式
+            items:
+              - name: 總覽
+                href: ../standard/base-types/regular-expressions.md
+                displayName: regular expressions
+              - name: 語言參考
+                items:
+                  - name: 總覽
+                    href: ../standard/base-types/regular-expression-language-quick-reference.md
+                  - name: 逸出字元
+                    href: ../standard/base-types/character-escapes-in-regular-expressions.md
+                  - name: 字元類別
+                    href: ../standard/base-types/character-classes-in-regular-expressions.md
+                  - name: 錨點
+                    href: ../standard/base-types/anchors-in-regular-expressions.md
+                  - name: 分組建構
+                    href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
+                  - name: 數量詞
+                    href: ../standard/base-types/quantifiers-in-regular-expressions.md
+                  - name: 反向參考建構
+                    href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
+                  - name: 替代建構
+                    href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
+                  - name: 替代
+                    href: ../standard/base-types/substitutions-in-regular-expressions.md
+                  - name: 規則運算式選項
+                    href: ../standard/base-types/regular-expression-options.md
+                  - name: 其他建構
+                    href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
+              - name: 規則運算式的最佳做法
+                href: ../standard/base-types/best-practices.md
+              - name: 規則運算式物件模型
+                href: ../standard/base-types/the-regular-expression-object-model.md
+              - name: 規則運算式行為
+                items:
+                  - name: 總覽
+                    href: ../standard/base-types/details-of-regular-expression-behavior.md
+                  - name: 回溯
+                    href: ../standard/base-types/backtracking-in-regular-expressions.md
+                  - name: 編譯和重複使用
+                    href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
+                  - name: 執行緒安全
+                    href: ../standard/base-types/thread-safety-in-regular-expressions.md
+              - name: 範例
+                items:
+                  - name: 掃描 HREF
+                    href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
+                  - name: 變更日期格式
+                    href: ../standard/base-types/regular-expression-example-changing-date-formats.md
+                  - name: 從 URL 擷取通訊協定和連接埠號碼
+                    href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+                  - name: 從字串中刪除無效的字元
+                    href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
+                  - name: 確認字串採用有效的電子郵件格式
+                    href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
+      - name: 剖析字串
+        items:
+          - name: 總覽
+            href: ../standard/base-types/parsing-strings.md
+          - name: 剖析數值字串
+            href: ../standard/base-types/parsing-numeric.md
+          - name: 剖析日期和時間字串
+            href: ../standard/base-types/parsing-datetime.md
+          - name: 剖析其他字串
+            href: ../standard/base-types/parsing-other.md
+      - name: 屬性
+        items:
+          - name: 總覽
+            href: ../standard/attributes/index.md
+            displayName: attributes
+          - name: 套用屬性
+            href: ../standard/attributes/applying-attributes.md
+          - name: 寫入自訂屬性
+            href: ../standard/attributes/writing-custom-attributes.md
+          - name: 擷取儲存於屬性中的資訊
+            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
+      - name: 在匿名和元組型別之間選擇
+        href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+  - name: Microsoft 擴充功能
+    items:
+      - name: 設定
+        href: /aspnet/core/fundamentals/configuration/
+      - name: 相依性插入
+        href: /aspnet/core/fundamentals/dependency-injection/
+      - name: 記錄
+        href: /aspnet/core/fundamentals/logging/
+  - name: 資料存取
+    items:
+      - name: LINQ
+        href: ../standard/using-linq.md
+      - name: XML 文件和資料
+        href: ../standard/data/xml/
+      - name: Microsoft.Data.Sqlite
+        href: ../standard/data/sqlite/
+  - name: 平行處理、並行與非同步
+    items:
+      - name: 總覽
+        href: ../standard/parallel-processing-and-concurrency.md
+        displayName: 'Parallel processing, concurrency, async'
+      - name: 非同步程式設計
+        items:
+          - name: 總覽
+            href: ../standard/async.md
+          - name: 深入了解非同步程式設計
+            href: ../standard/async-in-depth.md
+          - name: 非同步程式設計模式
+            href: ../standard/asynchronous-programming-patterns/
+      - name: 平行程式設計
+        items:
+          - name: 總覽
+            href: ../standard/parallel-programming/index.md
+          - name: 工作平行程式庫 (TPL)
+            href: ../standard/parallel-programming/task-parallel-library-tpl.md
+            items:
+              - name: 資料平行處理原則
+                href: ../standard/parallel-programming/data-parallelism-task-parallel-library.md
+                items:
+                  - name: 作法：撰寫簡單的 Parallel.For 迴圈
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md
+                  - name: 作法：撰寫簡單的 Parallel.ForEach 迴圈
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+                  - name: 作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+                  - name: 作法：撰寫含有磁碟分割區域變數的 Parallel.ForEach 迴圈
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+                  - name: 作法：取消 Parallel.For 或 ForEach 迴圈
+                    href: ../standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md
+                  - name: 作法：處理平行迴圈中的例外狀況
+                    href: ../standard/parallel-programming/how-to-handle-exceptions-in-parallel-loops.md
+                  - name: 作法：加速小型迴圈主體
+                    href: ../standard/parallel-programming/how-to-speed-up-small-loop-bodies.md
+                  - name: 作法：使用平行類別逐一查看檔案目錄
+                    href: ../standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md
+              - name: 工作型非同步程式設計
+                href: ../standard/parallel-programming/task-based-asynchronous-programming.md
+                items:
+                  - name: 使用接續工作鏈結工作
+                    href: ../standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md
+                  - name: 附加與中斷連結的子工作
+                    href: ../standard/parallel-programming/attached-and-detached-child-tasks.md
+                  - name: 工作取消
+                    href: ../standard/parallel-programming/task-cancellation.md
+                  - name: 例外狀況處理
+                    href: ../standard/parallel-programming/exception-handling-task-parallel-library.md
+                  - name: 作法：使用 Parallel.Invoke 執行平行作業
+                    href: ../standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+                  - name: 作法：從工作傳回值
+                    href: ../standard/parallel-programming/how-to-return-a-value-from-a-task.md
+                  - name: 作法：取消工作及其子系
+                    href: ../standard/parallel-programming/how-to-cancel-a-task-and-its-children.md
+                  - name: 作法：建立經過預先計算的工作
+                    href: ../standard/parallel-programming/how-to-create-pre-computed-tasks.md
+                  - name: 作法：使用平行工作周遊二進位樹狀目錄
+                    href: ../standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md
+                  - name: 作法：解除包裝巢狀工作
+                    href: ../standard/parallel-programming/how-to-unwrap-a-nested-task.md
+                  - name: 作法：防止子工作附加到其父代
+                    href: ../standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+              - name: 資料流程
+                href: ../standard/parallel-programming/dataflow-task-parallel-library.md
+                items:
+                  - name: 作法：對資料流程區塊寫入訊息和讀取訊息
+                    href: ../standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+                  - name: 作法：實作產生者/取用者資料流程模式
+                    href: ../standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md
+                  - name: 作法：在資料流程區塊收到資料時執行動作
+                    href: ../standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md
+                  - name: 逐步解說：建立資料流程管線
+                    href: ../standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md
+                  - name: 作法：取消連結資料流程區塊
+                    href: ../standard/parallel-programming/how-to-unlink-dataflow-blocks.md
+                  - name: 逐步解說：在 Windows Forms 應用程式中使用資料流程
+                    href: ../standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md
+                  - name: 作法：取消資料流程區塊
+                    href: ../standard/parallel-programming/how-to-cancel-a-dataflow-block.md
+                  - name: 逐步解說：建立自訂資料流程區塊類型
+                    href: ../standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md
+                  - name: 作法：使用 JoinBlock 從多個來源讀取資料
+                    href: ../standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md
+                  - name: 作法：在資料流程區塊中指定平行處理原則程度
+                    href: ../standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+                  - name: 作法：在資料流程區塊中指定工作排程器
+                    href: ../standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+                  - name: 逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
+                    href: ../standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+              - name: 使用具有其他非同步模式的 TPL
+                href: ../standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md
+                items:
+                  - name: TPL 和傳統 .NET Framework 非同步程式設計
+                    href: ../standard/parallel-programming/tpl-and-traditional-async-programming.md
+                  - name: 作法：將 EAP 模式包裝在工作中
+                    href: ../standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md
+              - name: 資料和工作平行處理原則中可能出現的錯誤
+                href: ../standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md
+          - name: 平行 LINQ (PLINQ)
+            items:
+              - name: PLINQ 簡介
+                href: ../standard/parallel-programming/introduction-to-plinq.md
+              - name: 認識 PLINQ 中的加速
+                href: ../standard/parallel-programming/understanding-speedup-in-plinq.md
+              - name: PLINQ 中的順序保留
+                href: ../standard/parallel-programming/order-preservation-in-plinq.md
+              - name: PLINQ 中的合併選項
+                href: ../standard/parallel-programming/merge-options-in-plinq.md
+              - name: 使用 PLINQ 時可能出現的錯誤
+                href: ../standard/parallel-programming/potential-pitfalls-with-plinq.md
+              - name: 作法：建立並執行簡單的 PLINQ 查詢
+                href: ../standard/parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md
+              - name: 作法：控制 PLINQ 查詢中的順序
+                href: ../standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md
+              - name: 作法：結合平行和循序 LINQ 查詢
+                href: ../standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md
+              - name: 作法：處理 PLINQ 查詢中的例外狀況
+                href: ../standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md
+              - name: 作法：取消 PLINQ 查詢
+                href: ../standard/parallel-programming/how-to-cancel-a-plinq-query.md
+              - name: 作法：撰寫自訂 PLINQ 彙總函式
+                href: ../standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md
+              - name: 作法：在 PLINQ 中指定執行模式
+                href: ../standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md
+              - name: 作法：在 PLINQ 中指定合併選項
+                href: ../standard/parallel-programming/how-to-specify-merge-options-in-plinq.md
+              - name: 作法：使用 PLINQ 逐一查看檔案目錄
+                href: ../standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md
+              - name: 作法：測量 PLINQ 查詢效能
+                href: ../standard/parallel-programming/how-to-measure-plinq-query-performance.md
+              - name: PLINQ 資料範例
+                href: ../standard/parallel-programming/plinq-data-sample.md
+          - name: 適用於平行程式設計的資料結構
+            href: ../standard/parallel-programming/data-structures-for-parallel-programming.md
+          - name: 平行診斷工具
+            href: ../standard/parallel-programming/parallel-diagnostic-tools.md
+          - name: PLINQ 和 TPL 的自訂分割程式
+            items:
+              - name: 總覽
+                href: ../standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md
+                displayName: custom partitioners
+              - name: 作法：實作動態分割
+                href: ../standard/parallel-programming/how-to-implement-dynamic-partitions.md
+              - name: 作法：為靜態分割實作 Partitioner
+                href: ../standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md
+          - name: PLINQ 和 TPL 中的 Lambda 運算式
+            href: ../standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md
+          - name: 進一步閱讀
+            href: ../standard/parallel-programming/for-further-reading-parallel-programming.md
+      - name: 執行緒
+        href: ../standard/threading/
+  - name: 序列化
+    items:
+      - name: 總覽
+        href: ../standard/serialization/index.md
+      - name: JSON 序列化
+        items:
+          - name: 總覽
+            href: ../standard/serialization/system-text-json-overview.md
+            displayName: json serialization
+          - name: 如何將 JSON 序列化及還原序列化
+            href: ../standard/serialization/system-text-json-how-to.md
+          - name: 如何撰寫自訂轉換器
+            href: ../standard/serialization/system-text-json-converters-how-to.md
+          - name: 如何從 Newtonsoft.Json 移轉
+            href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+      - name: 二進位序列化
+        items:
+          - name: 總覽
+            href: ../standard/serialization/binary-serialization.md
+            displayName: binary serialization
+          - name: BinaryFormatter 安全性指南
+            href: ../standard/serialization/binaryformatter-security-guide.md
+          - name: 序列化概念
+            href: ../standard/serialization/serialization-concepts.md
+          - name: 基本序列化
+            href: ../standard/serialization/basic-serialization.md
+          - name: 選擇式序列化
+            href: ../standard/serialization/selective-serialization.md
+          - name: 自訂序列化
+            href: ../standard/serialization/custom-serialization.md
+          - name: 序列化程序中的步驟
+            href: ../standard/serialization/steps-in-the-serialization-process.md
+          - name: 版本相容序列化
+            href: ../standard/serialization/version-tolerant-serialization.md
+          - name: 序列化方針
+            href: ../standard/serialization/serialization-guidelines.md
+          - name: 作法：區塊序列化資料
+            href: ../standard/serialization/how-to-chunk-serialized-data.md
+          - name: 作法：判斷是否可序列化 .NET Standard 物件
+            href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
+          - name: 範例
+            href: ../standard/serialization/basic-serialization-technology-sample.md
+      - name: XML 和 SOAP 序列化
+        items:
+          - name: 總覽
+            href: ../standard/serialization/xml-and-soap-serialization.md
+          - name: 深度 XML 序列化
+            href: ../standard/serialization/introducing-xml-serialization.md
+          - name: 範例
+            href: ../standard/serialization/examples-of-xml-serialization.md
+          - name: XML 結構描述定義工具
+            href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+          - name: 使用屬性控制 XML 序列化
+            href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
+          - name: 控制 XML 序列化的屬性
+            href: ../standard/serialization/attributes-that-control-xml-serialization.md
+          - name: 以 XML Web 服務進行 XML 序列化
+            href: ../standard/serialization/xml-serialization-with-xml-web-services.md
+          - name: 控制編碼 SOAP 序列化的屬性
+            href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
+          - name: 做法
+            items:
+              - name: 將物件序列化
+                href: ../standard/serialization/how-to-serialize-an-object.md
+              - name: 將物件還原序列化
+                href: ../standard/serialization/how-to-deserialize-an-object.md
+              - name: 使用 XML 結構描述定義工具產生類別和 XML 結構描述文件
+                href: ../standard/serialization/xml-schema-def-tool-gen.md
+              - name: 控制衍生類別的序列化
+                href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
+              - name: 指定 XML 資料流的替代元素名稱
+                href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+              - name: 限定 XML 元素和 XML 屬性名稱
+                href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+              - name: 將物件序列化為 SOAP 編碼的 XML 資料流
+                href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+              - name: 覆寫已編碼的 SOAP XML 序列化
+                href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
+          - name: XML 序列化元素
+            items:
+              - name: system.xml.serialization
+                href: ../standard/serialization/system-xml-serialization-element.md
+              - name: dateTimeSerialization
+                href: ../standard/serialization/datetimeserialization-element.md
+              - name: schemaImporterExtensions
+                href: ../standard/serialization/schemaimporterextensions-element.md
+              - name: schemaImporterExtensions 的 add 元素
+                href: ../standard/serialization/add-element-for-schemaimporterextensions.md
+              - name: xmlSerializer
+                href: ../standard/serialization/xmlserializer-element.md
+          - name: 工具
+            items:
+              - name: XML 序列化程式產生器工具 (Sgen.exe)
+                href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
+              - name: XML 結構描述定義工具 (Xsd.exe)
+                href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
+  - name: 檔案和資料流 I/O
+    items:
+      - name: 總覽
+        href: ../standard/io/index.md
+      - name: Windows 系統上的檔案路徑格式
+        href: ../standard/io/file-path-formats.md
+      - name: 一般 I/O 工作
+        href: ../standard/io/common-i-o-tasks.md
+        items:
+          - name: 作法：複製目錄
+            href: ../standard/io/how-to-copy-directories.md
+          - name: 作法：列舉目錄和檔案
+            href: ../standard/io/how-to-enumerate-directories-and-files.md
+          - name: 作法：讀取和寫入新建立的資料檔案
+            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+          - name: 作法：開啟並附加至記錄檔
+            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+          - name: 作法：將文字寫入檔案
+            href: ../standard/io/how-to-write-text-to-a-file.md
+          - name: 作法：讀取檔案中的文字
+            href: ../standard/io/how-to-read-text-from-a-file.md
+          - name: 作法：讀取字串中的字元
+            href: ../standard/io/how-to-read-characters-from-a-string.md
+          - name: 作法：將字元寫入字串
+            href: ../standard/io/how-to-write-characters-to-a-string.md
+          - name: 作法：新增或移除存取控制清單項目
+            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+          - name: 作法：壓縮與解壓縮檔案
+            href: ../standard/io/how-to-compress-and-extract-files.md
+          - name: 撰寫資料流
+            href: ../standard/io/composing-streams.md
+          - name: 作法：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
+            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+      - name: 非同步檔案 I/O
+        href: ../standard/io/asynchronous-file-i-o.md
+      - name: 處理 I/O 錯誤
+        href: ../standard/io/handling-io-errors.md
+      - name: 隔離儲存區 (Isolated Storage)
+        href: ../standard/io/isolated-storage.md
+        items:
+          - name: 隔離的類型
+            href: ../standard/io/types-of-isolation.md
+          - name: 作法：取得隔離儲存區的存放區
+            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+          - name: 作法：列舉隔離儲存區的存放區
+            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+          - name: 作法：刪除隔離儲存區中的存放區
+            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+          - name: 作法：預期隔離儲存區發生空間不足的情況
+            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+          - name: 作法：在隔離儲存區中建立檔案和目錄
+            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+          - name: 作法：尋找隔離儲存區中的現有檔案和目錄
+            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+          - name: 作法：讀取和寫入隔離儲存區中的檔案
+            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+          - name: 作法：刪除隔離儲存區中的檔案和目錄
+            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+      - name: 管道
+        href: ../standard/io/pipe-operations.md
+        items:
+          - name: 作法：使用匿名管道進行本機處理序間通訊
+            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+          - name: 作法：使用具名管道進行網路處理序間通訊
+            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+      - name: 管線
+        href: ../standard/io/pipelines.md
+      - name: 使用緩衝區
+        href: ../standard/io/buffers.md
+      - name: 記憶體對應檔案
+        href: ../standard/io/memory-mapped-files.md
+  - name: 單元測試
+    displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
+    items:
+      - name: 總覽
+        href: ../core/testing/index.md
+      - name: 單元測試最佳做法
+        href: ../core/testing/unit-testing-best-practices.md
+      - name: xUnit
+        items:
+          - name: C# 單元測試
+            href: ../core/testing/unit-testing-with-dotnet-test.md
+          - name: F# 單元測試
+            href: ../core/testing/unit-testing-fsharp-with-dotnet-test.md
+          - name: VB 單元測試
+            href: ../core/testing/unit-testing-visual-basic-with-dotnet-test.md
+          - name: 使用 xUnit 組織專案和測試
+            href: ../core/tutorials/testing-with-cli.md
+            displayName: 'tutorials, cli'
+      - name: NUnit
+        items:
+          - name: C# 單元測試
+            href: ../core/testing/unit-testing-with-nunit.md
+          - name: F# 單元測試
+            href: ../core/testing/unit-testing-fsharp-with-nunit.md
+          - name: VB 單元測試
+            href: ../core/testing/unit-testing-visual-basic-with-nunit.md
+      - name: MSTest
+        items:
+          - name: C# 單元測試
+            href: ../core/testing/unit-testing-with-mstest.md
+          - name: F# 單元測試
+            href: ../core/testing/unit-testing-fsharp-with-mstest.md
+          - name: VB 單元測試
+            href: ../core/testing/unit-testing-visual-basic-with-mstest.md
+      - name: 執行選擇性單元測試
+        href: ../core/testing/selective-unit-tests.md
+      - name: 排序單元測試
+        href: ../core/testing/order-unit-tests.md
+      - name: 單元測試程式碼涵蓋範圍
+        href: ../core/testing/unit-testing-code-coverage.md
+      - name: 單元測試發佈的輸出
+        href: ../core/testing/unit-testing-published-output.md
+      - name: Visual Studio 的即時單元測試 .NET Core 專案
+        href: /visualstudio/test/live-unit-testing-start
+  - name: 安全性
+    href: ../standard/security/
+  - name: 進階主題
+    items:
+      - name: 效能
+        items:
+          - name: 記憶體管理
+            items:
+              - name: 什麼是 Managed 程式碼？
+                href: ../standard/managed-code.md
+              - name: 自動記憶體管理
+                href: ../standard/automatic-memory-management.md
+              - name: 清除非受控資源
+                items:
+                  - name: 總覽
+                    href: ../standard/garbage-collection/unmanaged.md
+                    displayName: 'unmanaged resources, memory management'
+                  - name: 實作 Dispose 方法
+                    href: ../standard/garbage-collection/implementing-dispose.md
+                    displayName: 'using, Dispose, dispose pattern, IDisposable'
+                  - name: 實作 DisposeAsync 方法
+                    href: ../standard/garbage-collection/implementing-disposeasync.md
+                    displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
+                  - name: 使用實作 IDisposable 的物件
+                    href: ../standard/garbage-collection/using-objects.md
+              - name: 記憶體回收
+                items:
+                  - name: 總覽
+                    href: ../standard/garbage-collection/index.md
+                    displayName: garbage collection
+                  - name: 基礎
+                    href: ../standard/garbage-collection/fundamentals.md
+                  - name: 工作站與伺服器 GC
+                    href: ../standard/garbage-collection/workstation-server-gc.md
+                  - name: 背景 GC
+                    href: ../standard/garbage-collection/background-gc.md
+                  - name: 大型物件堆積
+                    href: ../standard/garbage-collection/large-object-heap.md
+                  - name: 記憶體回收和效能
+                    href: ../standard/garbage-collection/performance.md
+                  - name: 引發的回收
+                    href: ../standard/garbage-collection/induced.md
+                  - name: 延遲模式
+                    href: ../standard/garbage-collection/latency.md
+                  - name: 共用 Web 裝載的最佳化
+                    href: ../standard/garbage-collection/optimization-for-shared-web-hosting.md
+                  - name: 記憶體回收通知
+                    href: ../standard/garbage-collection/notifications.md
+                  - name: 應用程式定義域資源監視
+                    href: ../standard/garbage-collection/app-domain-resource-monitoring.md
+                  - name: 弱式參考
+                    href: ../standard/garbage-collection/weak-references.md
+          - name: 記憶體與延伸相關類型
+            items:
+              - name: 總覽
+                href: ../standard/memory-and-spans/index.md
+              - name: Memory<T> 與 Span<T> 使用指導方針
+                href: ../standard/memory-and-spans/memory-t-usage-guidelines.md
+          - name: 啟用 SIMD 的類型
+            href: ../standard/simd.md
+      - name: 原生互通性
+        items:
+          - name: 總覽
+            href: ../standard/native-interop/index.md
+            displayName: Native interop
+          - name: P/Invoke
+            href: ../standard/native-interop/pinvoke.md
+          - name: 類型封送處理
+            href: ../standard/native-interop/type-marshaling.md
+          - name: 自訂結構封送處理
+            href: ../standard/native-interop/customize-struct-marshaling.md
+          - name: 自訂參數封送處理
+            href: ../standard/native-interop/customize-parameter-marshaling.md
+          - name: Interop 指導
+            href: ../standard/native-interop/best-practices.md
+          - name: 字元集與封送處理
+            href: ../standard/native-interop/charset.md
+          - name: 將 .NET Core 元件公開給 COM
+            href: ../core/native-interop/expose-components-to-com.md
+          - name: 從機器碼裝載 .NET Core
+            href: ../core/tutorials/netcore-hosting.md
+          - name: COM Interop
+            items:
+              - name: 總覽
+                href: ../standard/native-interop/cominterop.md
+                displayName: COM interop
+              - name: COM 包裝函式
+                items:
+                  - name: 總覽
+                    href: ../standard/native-interop/com-wrappers.md
+                    displayName: COM wrappers
+                  - name: 執行階段可呼叫包裝函式
+                    href: ../standard/native-interop/runtime-callable-wrapper.md
+                  - name: COM 可呼叫包裝函式
+                    href: ../standard/native-interop/com-callable-wrapper.md
+              - name: 限定 COM Interop 的 .NET 型別
+                href: ../standard/native-interop/qualify-net-types-for-interoperation.md
+          - name: 套用 Interop 屬性
+            href: ../standard/native-interop/apply-interop-attributes.md
+          - name: 例外狀況
+            href: ../standard/native-interop/exceptions-interoperability.md
+      - name: .NET Core 發佈封裝
+        href: ../core/distribution-packaging.md
+      - name: 全球化和當地語系化
+        href: ../standard/globalization-localization/
+      - name: 開放原始碼程式庫指導
+        href: ../standard/library-guidance/
+      - name: Framework 設計方針
+        items:
+          - name: 總覽
+            href: ../standard/design-guidelines/index.md
+          - name: 命名方針
+            href: ../standard/design-guidelines/naming-guidelines.md
+            items:
+              - name: 大小寫慣例
+                href: ../standard/design-guidelines/capitalization-conventions.md
+              - name: 一般命名慣例
+                href: ../standard/design-guidelines/general-naming-conventions.md
+              - name: 組件和 DLL 的名稱
+                href: ../standard/design-guidelines/names-of-assemblies-and-dlls.md
+              - name: 命名空間的名稱
+                href: ../standard/design-guidelines/names-of-namespaces.md
+              - name: 類別、結構和介面的名稱
+                href: ../standard/design-guidelines/names-of-classes-structs-and-interfaces.md
+              - name: 類型成員名稱
+                href: ../standard/design-guidelines/names-of-type-members.md
+              - name: 命名參數
+                href: ../standard/design-guidelines/naming-parameters.md
+              - name: 命名資源
+                href: ../standard/design-guidelines/naming-resources.md
+          - name: 類型設計方針
+            href: ../standard/design-guidelines/type.md
+            items:
+              - name: 在類別和結構之間選擇
+                href: ../standard/design-guidelines/choosing-between-class-and-struct.md
+              - name: 抽象類別設計
+                href: ../standard/design-guidelines/abstract-class.md
+              - name: 靜態類別設計
+                href: ../standard/design-guidelines/static-class.md
+              - name: 介面設計
+                href: ../standard/design-guidelines/interface.md
+              - name: 結構設計
+                href: ../standard/design-guidelines/struct.md
+              - name: 列舉設計
+                href: ../standard/design-guidelines/enum.md
+              - name: 巢狀型別
+                href: ../standard/design-guidelines/nested-types.md
+          - name: 成員設計方針
+            href: ../standard/design-guidelines/member.md
+            items:
+              - name: 成員多載
+                href: ../standard/design-guidelines/member-overloading.md
+              - name: 屬性設計
+                href: ../standard/design-guidelines/property.md
+              - name: 建構函式設計
+                href: ../standard/design-guidelines/constructor.md
+              - name: 事件設計
+                href: ../standard/design-guidelines/event.md
+              - name: 欄位設計
+                href: ../standard/design-guidelines/field.md
+              - name: 擴充方法
+                href: ../standard/design-guidelines/extension-methods.md
+              - name: 運算子多載
+                href: ../standard/design-guidelines/operator-overloads.md
+              - name: 參數設計
+                href: ../standard/design-guidelines/parameter-design.md
+          - name: 擴充性設計
+            href: ../standard/design-guidelines/designing-for-extensibility.md
+            items:
+              - name: 非密封類別
+                href: ../standard/design-guidelines/unsealed-classes.md
+              - name: Protected 成員
+                href: ../standard/design-guidelines/protected-members.md
+              - name: 事件和回呼
+                href: ../standard/design-guidelines/events-and-callbacks.md
+              - name: 虛擬成員
+                href: ../standard/design-guidelines/virtual-members.md
+              - name: 抽象 (抽象類型和介面)
+                href: ../standard/design-guidelines/abstractions-abstract-types-and-interfaces.md
+              - name: 實作抽象的基底類別
+                href: ../standard/design-guidelines/base-classes-for-implementing-abstractions.md
+              - name: 密封
+                href: ../standard/design-guidelines/sealing.md
+          - name: 例外狀況設計方針
+            href: ../standard/design-guidelines/exceptions.md
+            items:
+              - name: 擲回例外狀況
+                href: ../standard/design-guidelines/exception-throwing.md
+              - name: 使用標準例外狀況類型
+                href: ../standard/design-guidelines/using-standard-exception-types.md
+              - name: 例外狀況和效能
+                href: ../standard/design-guidelines/exceptions-and-performance.md
+          - name: 使用指導方針
+            href: ../standard/design-guidelines/usage-guidelines.md
+            items:
+              - name: 陣列
+                href: ../standard/design-guidelines/arrays.md
+              - name: 屬性
+                href: ../standard/design-guidelines/attributes.md
+              - name: 集合
+                href: ../standard/design-guidelines/guidelines-for-collections.md
+              - name: 序列化
+                href: ../standard/design-guidelines/serialization.md
+              - name: System.Xml 使用方式
+                href: ../standard/design-guidelines/system-xml-usage.md
+              - name: 等號比較運算子
+                href: ../standard/design-guidelines/equality-operators.md
+          - name: 通用設計模式
+            href: ../standard/design-guidelines/common-design-patterns.md
+            items:
+              - name: 相依性屬性
+                href: ../standard/design-guidelines/dependency-properties.md
+  - name: 移轉指南
+    items:
+      - name: 重大變更
+        displayName: app compatibility
+        href: ../core/compatibility/
+      - name: 移轉
+        items:
+          - name: .NET Core 2.0 至 2.1
+            href: ../core/migration/20-21.md
+          - name: 從 project.json 移轉
+            href: ../core/migration/index.md
+          - name: project.json 與 csproj 的對應
+            href: ../core/tools/project-json-to-csproj.md
+          - name: CLI 的變更概觀
+            href: ../core/tools/cli-msbuild-architecture.md
+          - name: 從 DNX 移轉
+            href: ../core/migration/from-dnx.md
+      - name: 從 .NET Framework 移植
+        items:
+          - name: 總覽
+            href: ../core/porting/index.md
+          - name: 分析第三方的相依性
+            href: ../core/porting/third-party-deps.md
+          - name: 移植程式庫
+            href: ../core/porting/libraries.md
+          - name: 整理專案在 .NET Core 中使用
+            href: ../core/porting/project-structure.md
+          - name: 無法使用的技術
+            href: ../core/porting/net-framework-tech-unavailable.md
+          - name: 工具
+            href: ../core/porting/tools.md
+          - name: 使用 Windows 相容性套件
+            href: ../core/porting/windows-compat-pack.md
+          - name: 移植 Windows Form 專案
+            href: ../core/porting/winforms.md
+          - name: 移植 WPF 專案
+            href: ../core/../desktop-wpf/migration/convert-project-from-net-framework.md
+          - name: 移植 C++/CLI 專案
+            href: ../core/porting/cpp-cli.md
+      - name: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
+        href: ../standard/choosing-core-framework-server.md
