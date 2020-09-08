@@ -1,0 +1,26 @@
+---
+title: Visual Basic LINQ to XML 中的語言整合軸
+description: LINQ to XML 可讓您使用整合至 Visual Basic 的座標軸輕鬆存取 XML
+ms.date: 07/20/2015
+ms.assetid: d450a556-a134-4261-b011-44e399660894
+ms.openlocfilehash: 75c3063806e7e3dc1633e78ca25f1f6afc3e7ae3
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89552241"
+---
+# <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a><span data-ttu-id="bf87d-103">Visual Basic (LINQ to XML 中的語言整合軸) </span><span class="sxs-lookup"><span data-stu-id="bf87d-103">Language-integrated axes in Visual Basic (LINQ to XML)</span></span>
+
+<span data-ttu-id="bf87d-104">軸功能已整合至 Visual Basic，可讓您輕鬆地存取 XML。</span><span class="sxs-lookup"><span data-stu-id="bf87d-104">Axis features are integrated into Visual Basic, making it easy to access XML.</span></span> <span data-ttu-id="bf87d-105">LINQ to XML 檔中的許多範例都會使用這些功能，如下清單格中所列的文章所述：</span><span class="sxs-lookup"><span data-stu-id="bf87d-105">Many of the examples in the LINQ to XML documentation use these features, which are described in the articles listed in this table:</span></span>
+
+|<span data-ttu-id="bf87d-106">發行項</span><span class="sxs-lookup"><span data-stu-id="bf87d-106">Article</span></span>|<span data-ttu-id="bf87d-107">描述</span><span class="sxs-lookup"><span data-stu-id="bf87d-107">Description</span></span>|
+|-----------|-----------------|
+|[<span data-ttu-id="bf87d-108">XML Child Axis Property</span><span class="sxs-lookup"><span data-stu-id="bf87d-108">XML Child Axis Property</span></span>](../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)|<span data-ttu-id="bf87d-109">提供下列任一項目之子系的存取：<xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件的集合，或是 <xref:System.Xml.Linq.XDocument> 物件的集合。</span><span class="sxs-lookup"><span data-stu-id="bf87d-109">Provides access to the children of one of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span> <span data-ttu-id="bf87d-110">這個座標軸等同於 <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。</span><span class="sxs-lookup"><span data-stu-id="bf87d-110">This axis is equivalent to the <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>|
+|[<span data-ttu-id="bf87d-111">XML Descendant Axis Property</span><span class="sxs-lookup"><span data-stu-id="bf87d-111">XML Descendant Axis Property</span></span>](../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)|<span data-ttu-id="bf87d-112">提供下列任一項目之子系的存取：<xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件的集合。</span><span class="sxs-lookup"><span data-stu-id="bf87d-112">Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, or a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="bf87d-113">這個座標軸等同於 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸。</span><span class="sxs-lookup"><span data-stu-id="bf87d-113">This axis is equivalent to the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>|
+|[<span data-ttu-id="bf87d-114">XML Attribute Axis Property</span><span class="sxs-lookup"><span data-stu-id="bf87d-114">XML Attribute Axis Property</span></span>](../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)|<span data-ttu-id="bf87d-115">提供 <xref:System.Xml.Linq.XElement> 物件之屬性的存取。</span><span class="sxs-lookup"><span data-stu-id="bf87d-115">Provides access to an attribute of an <xref:System.Xml.Linq.XElement> object.</span></span> <span data-ttu-id="bf87d-116">這個座標軸大致等同於 <xref:System.Xml.Linq.XElement.Attribute%2A> 座標軸。</span><span class="sxs-lookup"><span data-stu-id="bf87d-116">This axis is roughly equivalent to the <xref:System.Xml.Linq.XElement.Attribute%2A> axis.</span></span> <span data-ttu-id="bf87d-117">這個座標軸與 <xref:System.Xml.Linq.XElement.Attribute%2A> 座標軸不同之處在於，前者會傳回屬性的值，而非 <xref:System.Xml.Linq.XAttribute> 物件的值。</span><span class="sxs-lookup"><span data-stu-id="bf87d-117">This axis differs from the <xref:System.Xml.Linq.XElement.Attribute%2A> axis in that it returns the value of the attribute, not an <xref:System.Xml.Linq.XAttribute> object.</span></span>|
+|[<span data-ttu-id="bf87d-118">擴充索引子屬性</span><span class="sxs-lookup"><span data-stu-id="bf87d-118">Extension Indexer Property</span></span>](../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|<span data-ttu-id="bf87d-119">提供集合中個別項目的存取。</span><span class="sxs-lookup"><span data-stu-id="bf87d-119">Provides access to individual elements in a collection.</span></span>|
+
+## <a name="see-also"></a><span data-ttu-id="bf87d-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bf87d-120">See also</span></span>
+
+- [<span data-ttu-id="bf87d-121">LINQ to XML 軸總覽</span><span class="sxs-lookup"><span data-stu-id="bf87d-121">LINQ to XML axes overview</span></span>](linq-xml-axes-overview.md)
