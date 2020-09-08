@@ -314,28 +314,6 @@ items:
                   - name: Windows Forms 控制項
                     tocHref: /dotnet/framework/winforms/controls/
                     topicHref: /dotnet/framework/winforms/controls/index
-              - name: Windows Presentation Foundation
-                tocHref: /dotnet/framework/wpf/
-                topicHref: /dotnet/framework/wpf/index
-                items:
-                  - name: 進階
-                    tocHref: /dotnet/framework/wpf/advanced/
-                    topicHref: /dotnet/framework/wpf/advanced/index
-                  - name: 應用程式開發
-                    tocHref: /dotnet/framework/wpf/app-development/
-                    topicHref: /dotnet/framework/wpf/app-development/index
-                  - name: 控制項
-                    tocHref: /dotnet/framework/wpf/controls/
-                    topicHref: /dotnet/framework/wpf/controls/index
-                  - name: 資料
-                    tocHref: /dotnet/framework/wpf/data/
-                    topicHref: /dotnet/framework/wpf/data/index
-                  - name: 開始使用 (WPF)
-                    tocHref: /dotnet/framework/wpf/getting-started/
-                    topicHref: /dotnet/framework/wpf/getting-started/index
-                  - name: 圖形與多媒體
-                    tocHref: /dotnet/framework/wpf/graphics-multimedia/
-                    topicHref: /dotnet/framework/wpf/graphics-multimedia/index
               - name: XAML 服務
                 tocHref: /dotnet/framework/xaml-services/
                 topicHref: /dotnet/framework/xaml-services/index

@@ -282,7 +282,7 @@ items:
                     href: migration-guide/retargeting/4.7.2-4.8.md
           - name: 行為風險降低
             items:
-              - name: 概觀
+              - name: 總覽
                 href: migration-guide/mitigations.md
               - name: 自訂 IMessageFilter.PreFilterMessage 實作
                 href: migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md
@@ -350,9 +350,9 @@ items:
           - name: 總覽
             href: develop-client-apps.md
           - name: Windows Presentation Foundation
-            href: wpf/
+            href: /dotnet/desktop/wpf/?view=netframeworkdesktop-4.8&preserve-view=true
           - name: Windows Forms
-            href: /dotnet/desktop/winforms/?view=netframeworkdesktop-4.8
+            href: /dotnet/desktop/winforms/?view=netframeworkdesktop-4.8&preserve-view=true
       - name: 採用 WCF 的服務導向應用程式
         href: wcf/
       - name: Windows Workflow Foundation
