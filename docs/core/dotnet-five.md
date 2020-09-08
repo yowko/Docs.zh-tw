@@ -5,16 +5,16 @@ ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: c9ac93c152d39bd06875f82ee5f34c1540236038
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 5e8ed371173ff8b81909ceb071ed93c6b0e1eea5
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495227"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515840"
 ---
 # <a name="the-evolution-of-net-core-to-net-5"></a>.NET Core 到 .NET 5 的演進
 
-本文將詳細說明 .NET 5 中包含的專案，這是下一個 .NET Core 3.1 版。 版本號碼是5.0，以避免與 .NET Framework 4.x 混淆。 和 "Core" 會從名稱中卸載，因為它是持續進行的 .NET 主要執行。 .NET 5 支援的應用程式類型和平臺比 .NET Core 或 .NET Framework 更多。
+本文將詳細說明 .NET 5 中包含的專案，這是下一個 .NET Core 3.1 版。 版本號碼是5.0，以避免與 .NET Framework 4.x 混淆。 和 "Core" 會從名稱中卸載，因為它是持續進行的 .NET 主要執行。 ASP.NET Core 保留 "Core" 的名稱，以避免與 ASP.NET MVC 5 混淆。 此外，Entity Framework Core 會保留 "Core" 的名稱，以避免與 Entity Framework 5 和6混淆。 .NET 5 支援的應用程式類型和平臺比 .NET Core 或 .NET Framework 更多。
 
 .NET Core 的問世以吸引人的方式發展 .NET 生態系統。 它已在 GitHub 上以開放原始碼專案的形式成熟，並可在一段時間後，慶祝誠懇改進。
 
@@ -78,7 +78,7 @@ ms.locfileid: "89495227"
 
 - 函式指標：語言結構會公開下列中繼語言 (IL) 碼碼： `ldftn` 和 `calli` 。
 
-<!-- For more information on the available C# 9 features, see [What's new in C# 9](csharp/whats-new/csharp-9.md). -->
+如需可用 c # 9 功能的詳細資訊，請參閱 [c # 9 的新](../csharp/whats-new/csharp-9.md)功能。
 
 #### <a name="source-generators"></a>來源產生器
 
@@ -160,7 +160,7 @@ View body() => new StackLayout
 
 如需詳細資訊，請參閱 [.NET MAUI 藍圖](https://github.com/dotnet/maui/wiki/Roadmap)和 [.net MAUI 簡介](https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui) 文章。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [一個 .NET 的旅程](https://channel9.msdn.com/Events/Build/2020/BOD106)
 - [.NET 5 的效能改進](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)

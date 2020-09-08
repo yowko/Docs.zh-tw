@@ -4,16 +4,16 @@ description: 瞭解如何控制獨立應用程式的修剪。
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465412"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515828"
 ---
 # <a name="trimming-options"></a>修剪選項
 
-下列 MSBuild 屬性和專案會影響已修剪的 [獨立部署](trim-self-contained.md)行為。 有些選項 `ILLink` 會提及，也就是執行修剪的基礎工具名稱。 如 `ILLink` 需命令列工具的詳細資訊，請參閱 [illink 選項](https://github.com/mono/linker/blob/master/docs/illink-options.md)。
+下列 MSBuild 屬性和專案會影響已修剪的 [獨立部署](trim-self-contained.md)行為。 有些選項 `ILLink` 會提及，也就是執行修剪的基礎工具名稱。 如需基礎工具的詳細資訊，請參閱 [連結器檔](https://github.com/mono/linker/tree/master/docs)。
 
 ## <a name="enable-trimming"></a>啟用修剪
 
@@ -129,3 +129,37 @@ Trim 分析採用 [`AnalysisLevel`](../project-sdk/msbuild-props.md#analysisleve
     從修剪的應用程式中移除符號，包括內嵌的 Pdb 和個別的 PDB 檔案。 這同時適用于應用程式程式碼和符號隨附的任何相依性。
 
 SDK 也可以使用屬性來停用偵錯工具支援 `DebuggerSupport` 。 停用偵錯工具支援時，修剪會自動移除符號 (`TrimmerRemoveSymbols` 預設為 true) 。
+
+## <a name="trimming-framework-library-features"></a>修剪架構程式庫功能
+
+架構程式庫的數個功能區域隨附連結器指示詞，可讓您移除停用功能的程式碼。
+
+- `<DebuggerSupport>false</DebuggerSupport>`
+
+    移除可進行更佳的偵錯工具的程式碼。 這也會 [移除符號](#removing-symbols)。
+
+- `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
+
+    移除 BinaryFormatter 序列化支援。 如需詳細資訊，請參閱 [BinaryFormatter 序列化方法已過時](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)。
+
+- `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
+
+    移除不安全的 UTF-7 編碼程式碼。 如需詳細資訊，請參閱 [utf-7 程式碼路徑已淘汰](../compatibility/corefx.md#utf-7-code-paths-are-obsolete)。
+
+- `<EventSourceSupport>false</EventSourceSupport>`
+
+    移除 EventSource 相關的程式碼或邏輯。
+
+- `<HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>`
+
+    移除與系統 .Net 的診斷支援相關的程式碼。
+
+- `<InvariantGlobalization>true</InvariantGlobalization>`
+
+    移除全球化的特定程式碼和資料。 如需詳細資訊，請參閱不 [變模式](../run-time-config/globalization.md#invariant-mode)。
+
+- `<UseSystemResourceKeys>true</UseSystemResourceKeys>`
+
+    去除元件的例外狀況訊息 `System.*` 。 從元件擲回例外狀況時 `System.*` ，訊息會是簡化的資源識別碼，而不是完整的訊息。
+
+ 這些屬性會造成相關的程式碼遭到修剪，也會透過 [>.runtimeconfig.json](../run-time-config/index.md) 檔停用功能。 如需這些屬性的詳細資訊，包括對應的 >.runtimeconfig.json 選項，請參閱 [功能參數](https://github.com/dotnet/runtime/blob/master/docs/workflow/trimming/feature-switches.md)。 某些 Sdk 可能會有這些屬性的預設值。

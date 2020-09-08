@@ -3,13 +3,16 @@ title: 使用 ASP.NET Core 應用程式中的資料
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 使用 ASP.NET Core 應用程式中的資料
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/12/2020
+no-loc:
+- Blazor
+- WebAssembly
+ms.openlocfilehash: f2f2a4706ea4deba39465d8697f78be58506a09c
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987838"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515863"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -55,7 +58,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-您的 DbContext 必須具備可接受 DbContextOptions 的建構函式，並將此引數傳遞給基底 DbContext 建構函式。 如果應用程式中只有一個 DbContext,則可以傳遞 DbContextOptions 的實例,但如果有多個實例,則必須使用泛型 DbContextOptions\<T>类型,將 DbContext 類型作為泛型參數傳遞。
+您的 DbContext 必須具備可接受 DbContextOptions 的建構函式，並將此引數傳遞給基底 DbContext 建構函式。 如果您的應用程式中只有一個 DbCoNtext，您可以傳遞 DbCoNtextOptions 的實例，但如果您有一個以上的實例，就必須使用泛型 DbCoNtextOptions \<T> 類型，並傳入 DbCoNtext 型別做為泛型參數。
 
 ### <a name="configuring-ef-core"></a>設定 EF Core
 
@@ -76,9 +79,9 @@ services.AddDbContext<CatalogContext>(options =>
 
 EF Core 會設定記錄器，並確保其層級至少設定為「資訊」以執行查詢，如圖 8-1 所示。
 
-![將 EF 核心查詢記錄到主控台](./media/image8-1.png)
+![記錄 EF Core 對主控台的查詢](./media/image8-1.png)
 
-**圖 8-1**： 將 EF 核心查詢記錄到主控台
+**圖 8-1**： 記錄 EF Core 對主控台的查詢
 
 ### <a name="fetching-and-storing-data"></a>擷取與儲存資料
 
@@ -127,7 +130,7 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-您可以包含多個關係,也可以使用"ThenInclude"包括子關係。 EF Core 會執行單一查詢來擷取產生的實體集。 或者您可以藉由將以 '.' 分隔的字串傳遞至 `.Include()` 擴充方法，來包含導覽屬性的導覽屬性，如下所示：
+您可以包含多個關聯性，也可以使用 >theninclude 包含 subrelationships。 EF Core 會執行單一查詢來擷取產生的實體集。 或者您可以藉由將以 '.' 分隔的字串傳遞至 `.Include()` 擴充方法，來包含導覽屬性的導覽屬性，如下所示：
 
 ```csharp
     .Include("Items.Products")
@@ -180,7 +183,7 @@ public class Basket : BaseEntity
 }
 ```
 
-此實體類型不公開公共`List``ICollection`或 屬性,而是公開包裝`IReadOnlyCollection`基礎清單 類型的類型。 在使用這個模式時，您可以透過 Entity Framework Core 來使用支援欄位，如下所示：
+此實體類型不會公開公用 `List` 或 `ICollection` 屬性，而是會公開 `IReadOnlyCollection` 包裝基礎清單類型的類型。 在使用這個模式時，您可以透過 Entity Framework Core 來使用支援欄位，如下所示：
 
 ```csharp
 private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
@@ -200,9 +203,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-在此範例中，`ShipToAddress` 屬性的類型為 `Address`。 `Address` 是擁有多個屬性 (例如 `Street` 及 `City`) 的值物件。 EF Core 以每個 `Order` 屬性一個資料行來將 `Address` 物件對應到其資料表，並以屬性名稱作為每個資料行名稱的開頭。 在這個範例中，`Order` 資料表會包含像是 `ShipToAddress_Street` 及 `ShipToAddress_City` 的資料行。 如果需要,還可以將擁有的類型存儲在單獨的表中。
+在此範例中，`ShipToAddress` 屬性的類型為 `Address`。 `Address` 是擁有多個屬性 (例如 `Street` 及 `City`) 的值物件。 EF Core 以每個 `Order` 屬性一個資料行來將 `Address` 物件對應到其資料表，並以屬性名稱作為每個資料行名稱的開頭。 在這個範例中，`Order` 資料表會包含像是 `ShipToAddress_Street` 及 `ShipToAddress_City` 的資料行。 您也可以視需要將擁有的類型儲存在個別的資料表中。
 
-瞭解有關 EF [Core 中擁有的實體支援的詳細資訊](/ef/core/modeling/owned-entities)。
+[在 EF Core 中深入瞭解擁有的實體支援](/ef/core/modeling/owned-entities)。
 
 ### <a name="resilient-connections"></a>具復原功能的連接
 
@@ -240,7 +243,7 @@ public class Startup
 
 不過，如果您的程式碼使用 BeginTransaction 來起始異動，您將定義需視為一個單位的專屬作業群組；如果失敗，則必須復原異動內的所有項目。 如果您在使用 EF 執行策略 (重試原則) 時嘗試執行該交易，並在交易中包含來自多個 DbContext 的數個 SaveChanges，則會看到類似如下的例外狀況。
 
-System.InvalidOperationException：已設定的執行策略 'SqlServerRetryingExecutionStrategy' 不支援使用者起始的異動。 使用"DbContext.Database.Create 執行策略"傳回的執行策略作為可重試單元執行事務中的所有操作。
+System.InvalidOperationException：已設定的執行策略 'SqlServerRetryingExecutionStrategy' 不支援使用者起始的異動。 使用 ' DbCoNtext. CreateExecutionStrategy ( # A1 ' 所傳回的執行策略，將交易中的所有作業以可重試的單位來執行。
 
 解決方法是使用代表必須執行之所有項目的委派，來手動叫用 EF 執行策略。 如果發生暫時性失敗，執行策略會再次叫用委派。 下列程式碼會示範如何實作這個方法：
 
@@ -271,16 +274,16 @@ await strategy.ExecuteAsync(async () =>
 
 > ### <a name="references--entity-framework-core"></a>參考資料 – Entity Framework Core
 >
-> - **EF 核心文件**
+> - **EF Core 檔**
 >   <https://docs.microsoft.com/ef/>
-> - **EF 核心:相關資料**
+> - **EF Core：相關資料**
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **避免在 ASPNET 應用程式中延遲載入實體**
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>該使用 EF Core 或微型 ORM？
 
-雖然 EF Core 是管理持久性的絕佳選擇,並且在大多數情況下封裝了應用程式開發人員的資料庫詳細資訊,但它不是唯一的選擇。 另一種流行的開源替代品是[Dapper,](https://github.com/StackExchange/Dapper)一種所謂的微型ORM。 微型 ORM 是一種功能較簡單的輕量型工具，可將物件對應至資料結構。 舉 Dapper 為例，其設計目標著重在效能，而非完整封裝用來擷取和更新資料的基礎查詢。 因為 Dapper 不需要開發人員完全抽離 SQL，所以是比較單純的「試用版」，可讓開發人員撰寫想用於指定資料存取作業的確切查詢。
+雖然 EF Core 是管理持續性的絕佳選擇，但在大部分的情況下，封裝應用程式開發人員的資料庫詳細資料並不是唯一的選擇。 另一個常用的開放原始碼替代方案是 [Dapper](https://github.com/StackExchange/Dapper)，也就是所謂的微型 ORM。 微型 ORM 是一種功能較簡單的輕量型工具，可將物件對應至資料結構。 舉 Dapper 為例，其設計目標著重在效能，而非完整封裝用來擷取和更新資料的基礎查詢。 因為 Dapper 不需要開發人員完全抽離 SQL，所以是比較單純的「試用版」，可讓開發人員撰寫想用於指定資料存取作業的確切查詢。
 
 EF Core 與 Dapper 的主要差異是前者提供下列兩個重要的功能，但這也會對效能產生額外負荷。 第一個是它會將 LINQ 運算式轉譯為 SQL。 雖然系統會快取這些轉譯，第一次執行時仍會產生額外負荷。 第二個是追蹤實體的變更 (以便產生有效的 UPDATE 陳述式)。 您可以使用 AsNotTracking 延伸模組，將特定查詢的這項行為關閉。 EF Core 也會產生非常有效率的 SQL 查詢，而且在任何情況下，效能都是完全可以接受的等級；但如果您需要妥善控制要執行的精確查詢，您也可以使用 EF Core 傳入自訂的 SQL (或執行預存程序)。 在這種情況下，Dapper 就略勝於 EF Core。 Julie Lerman 在 2016 年 5 月的 [Dapper, Entity Framework, and Hybrid Apps](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps) (Dapper、Entity Framework 和混合式應用程式) MSDN 文章中提供了一些效能資料。 如需各種不同資料存取方法的其他效能基準測試資料，請參閱 [Dapper 網站](https://github.com/StackExchange/Dapper)。
 
@@ -326,13 +329,13 @@ var data = connection.Query<Post, User, Post>(sql,
 (post, user) => { post.Owner = user; return post;});
 ```
 
-因為 Dapper 提供較少的封裝，所以開發人員必須進一步了解如何儲存資料、如何有效率地查詢資料，並撰寫更多程式碼來擷取資料。 當模型變更時，您不只要建立新的移轉 (另一個 EF Core 功能)，及/或逐一更新 DbContext 中每個位置的對應資訊，還要更新會受到影響的每一個查詢。 這些查詢沒有編譯時間保證,因此它們可能會在運行時中斷以回應對模型或資料庫的更改,從而使錯誤更難快速檢測。 Dapper 折衷了上述情況，以提供極快速的效能。
+因為 Dapper 提供較少的封裝，所以開發人員必須進一步了解如何儲存資料、如何有效率地查詢資料，並撰寫更多程式碼來擷取資料。 當模型變更時，您不只要建立新的移轉 (另一個 EF Core 功能)，及/或逐一更新 DbContext 中每個位置的對應資訊，還要更新會受到影響的每一個查詢。 這些查詢沒有任何編譯時期的保證，因此它們可能會在執行時間中斷以回應模型或資料庫的變更，讓錯誤更難快速偵測。 Dapper 折衷了上述情況，以提供極快速的效能。
 
 對於大部分應用程式以及幾乎所有主要的應用程式來說，EF Core 可提供還不錯的效能。 因此，其開發人員的生產力優勢可能遠大於它的效能負擔。 如果查詢可受益於快取，實際的查詢可能只會執行很短的時間，這時查詢效能之間的微小差異就無傷大雅了。
 
 ## <a name="sql-or-nosql"></a>SQL 或 NoSQL
 
-傳統上來看，SQL Server 這類關聯式資料庫主導了永續性資料儲存的市場，但它們並不是唯一可用的解決方案。 [MongoDB](https://www.mongodb.com/what-is-mongodb) 這類 NoSQL 資料庫提供儲存物件的不同方式。 這個選項不會將物件對應至資料表和資料列，而是序列化整個物件圖形，並且將結果儲存。 初步來講，這個方法的優點是簡潔和效能。 使用鍵儲存單個序列化物件比將物件分解到具有關係和更新的多個表中更簡單,以及自上次從資料庫檢索物件以來可能已更改的行。 同樣地，相較於從關聯式資料庫完整撰寫相同物件所需的複雜聯結或多個資料庫查詢，從以索引鍵為基礎的存放區中擷取和還原序列化單一物件通常更為快速、簡單。 缺少鎖或事務或固定架構也使 NoSQL 資料庫能夠跨許多電腦進行縮放,從而支援非常大的數據集。
+傳統上來看，SQL Server 這類關聯式資料庫主導了永續性資料儲存的市場，但它們並不是唯一可用的解決方案。 [MongoDB](https://www.mongodb.com/what-is-mongodb) 這類 NoSQL 資料庫提供儲存物件的不同方式。 這個選項不會將物件對應至資料表和資料列，而是序列化整個物件圖形，並且將結果儲存。 初步來講，這個方法的優點是簡潔和效能。 使用索引鍵來儲存單一序列化物件會比將物件分解為許多資料表更簡單，而這些資料表具有關聯性和更新，以及自從上次從資料庫抓取物件之後可能已經變更的資料列。 同樣地，相較於從關聯式資料庫完整撰寫相同物件所需的複雜聯結或多個資料庫查詢，從以索引鍵為基礎的存放區中擷取和還原序列化單一物件通常更為快速、簡單。 缺少鎖定或交易或固定的架構也會讓 NoSQL 資料庫適合在多部電腦上進行調整，以支援非常大型的資料集。
 
 另一方面來看，NoSQL 資料庫 (如字面通稱) 也有其缺點。 關聯式資料庫使用正規化功能，強制執行一致性並避免出現重複的資料。 這可減少資料庫的大小總計，並確保對共用資料所做的更新可在整個資料庫中立即生效。 在關聯式資料庫中，假設「地址」資料表參考「國家/地區」資料表中的識別碼，則當國家/地區的名稱變更時，地址記錄也會隨之更新，因此您不需要另行更新地址記錄。 不過，在 NoSQL 資料庫中，「地址」和其相關聯的「國家/地區」可能會序列化為許多預存物件的一部分。 更新國家/地區名稱時，也必須更新所有相關物件，而不是單一資料列。 關聯式資料庫也可以強制執行規則 (例如外部索引鍵)，以確保關聯的完整性。 NoSQL 資料庫通常不會對其資料提供這類條件約束。
 
@@ -340,21 +343,21 @@ NoSQL 資料庫還有一個必須處理的複雜問題是版本設定。 當物�
 
 您可以在 NoSQL 資料庫中儲存物件的多個版本，而固定結構描述的關聯式資料庫通常不支援這項功能。 不過，在這種情況下，應用程式的程式碼必須找出存在的舊版本物件，這增加了其額外的複雜性。
 
-NoSQL 資料庫通常不會強制執行 [ACID](https://en.wikipedia.org/wiki/ACID)，因此在效能和延展性方面比關聯式資料庫更有優勢。 它們非常適合在規範化的表結構中不太適合存儲的超大數據集和物件。 單一應用程式也可以同時利用關聯式和 NoSQL 資料庫，只要依據最適合的情況來選擇即可。
+NoSQL 資料庫通常不會強制執行 [ACID](https://en.wikipedia.org/wiki/ACID)，因此在效能和延展性方面比關聯式資料庫更有優勢。 它們非常適合非常大型的資料集和物件，而不適合儲存在正規化資料表結構中。 單一應用程式也可以同時利用關聯式和 NoSQL 資料庫，只要依據最適合的情況來選擇即可。
 
 ## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure Cosmos DB 是一個完全託管的 NoSQL 資料庫服務,提供基於雲端的無架構資料儲存。 Azure Cosmos DB 專為快速、可預測的性能、高可用性、彈性擴展和全域分發而構建。 即使在 NoSQL 資料庫中，開發人員仍可以對 JSON 資料使用豐富且熟悉的 SQL 查詢功能。 Azure Cosmos DB 中的所有資源都存儲為 JSON 文檔。 系統會以「項目」__ 形式來管理資源；也就是說，資源是包含中繼資料和「摘要」__ 的文件，也是項目的集合。 圖 8-2 顯示了不同 Azure Cosmos DB 資源之間的關係。
+Azure Cosmos DB 是完全受控的 NoSQL 資料庫服務，可提供雲端架構的無架構資料儲存。 Azure Cosmos DB 是專為快速且可預測的效能、高可用性、彈性調整和全球散發所建立。 即使在 NoSQL 資料庫中，開發人員仍可以對 JSON 資料使用豐富且熟悉的 SQL 查詢功能。 Azure Cosmos DB 中的所有資源都會儲存為 JSON 檔。 系統會以「項目」__ 形式來管理資源；也就是說，資源是包含中繼資料和「摘要」__ 的文件，也是項目的集合。 圖8-2 顯示不同 Azure Cosmos DB 資源之間的關聯性。
 
-![Azure Cosmos DB 中資源(NoSQL JSON 資料庫)中的分層關係](./media/image8-2.png)
+![Azure Cosmos DB 中的資源之間的階層式關聯性，即 NoSQL JSON 資料庫](./media/image8-2.png)
 
-**圖 8-2**： Azure 宇宙資料庫資源組織。
+**圖 8-2**： Azure Cosmos DB 資源組織。
 
-Azure Cosmos DB 查詢語言是一個簡單但功能強大的用於查詢 JSON 文檔的介面。 此語言支援 ANSI SQL 文法的子集，並新增 JavaScript 物件、陣列、物件建構和函式叫用的深入整合。
+Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於查詢 JSON 檔。 此語言支援 ANSI SQL 文法的子集，並新增 JavaScript 物件、陣列、物件建構和函式叫用的深入整合。
 
-**參考 = Azure 宇宙資料庫**
+**參考– Azure Cosmos DB**
 
-- Azure 宇宙 DB 簡介<https://docs.microsoft.com/azure/cosmos-db/introduction>
+- Azure Cosmos DB 簡介 <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>其他持續性選項
 
@@ -370,7 +373,7 @@ Azure Cosmos DB 查詢語言是一個簡單但功能強大的用於查詢 JSON �
 
 **參考資料 – Azure 儲存體**
 
-- Azure 儲存簡介<https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure 儲存體簡介 <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Caching
 
@@ -482,9 +485,9 @@ services.AddScoped<ICatalogService, CachedCatalogService>();
 services.AddScoped<CatalogService>();
 ```
 
-完成上述作業時，系統只會每分鐘呼叫一次資料庫以擷取目錄資料，而不會在每次要求時都呼叫。 根據網站的流量,這可能對向資料庫進行的查詢數以及當前取決於此服務公開的所有三個查詢的主頁的平均頁面載入時間產生重大影響。
+完成上述作業時，系統只會每分鐘呼叫一次資料庫以擷取目錄資料，而不會在每次要求時都呼叫。 視網站的流量而定，這可能會對資料庫的查詢數目產生顯著的影響，而首頁的平均頁面載入時間則取決於此服務所公開的三個查詢。
 
-實現緩存時出現的一個問題是_陳舊的數據_,即源中已更改但過期版本的數據仍保留在緩存中。 若要緩和這個問題，一個簡單的方式是將快取持續時間縮短，因為對忙碌的應用程式來說，延長快取資料的時間長度意義不大。 例如，假設某個頁面會進行單一資料庫查詢，且每秒要求 10 次。 如果將這個頁面快取一分鐘，則資料庫每分鐘查詢的數目可從 600 降到 1，減少了 99.8%。 如果快取持續時間設為一小時，整體可以減少 99.997%；不過，這樣一來，過時資料的可能性和存在時間都會大幅增加。
+執行快取時所發生的問題是 _過時的資料_ ，也就是在來源變更但過期版本仍在快取中的資料。 若要緩和這個問題，一個簡單的方式是將快取持續時間縮短，因為對忙碌的應用程式來說，延長快取資料的時間長度意義不大。 例如，假設某個頁面會進行單一資料庫查詢，且每秒要求 10 次。 如果將這個頁面快取一分鐘，則資料庫每分鐘查詢的數目可從 600 降到 1，減少了 99.8%。 如果快取持續時間設為一小時，整體可以減少 99.997%；不過，這樣一來，過時資料的可能性和存在時間都會大幅增加。
 
 另一個方法是當快取項目包含的資料有所更新時，就主動移除快取項目。 只要知道索引鍵，就可以移除任何個別的項目：
 
@@ -492,7 +495,7 @@ services.AddScoped<CatalogService>();
 _cache.Remove(cacheKey);
 ```
 
-如果應用程式會公開功能以更新它的快取項目，您可以在執行更新的程式碼中移除對應的快取項目。 有時候，可能會有許多不同的項目相依於特定的資料集。 在此情況下，您可以使用 CancellationChangeToken 來建立快取項目之間的相依性。 使用取消更改權杖,您可以通過取消權杖一次使多個緩存條目過期。
+如果應用程式會公開功能以更新它的快取項目，您可以在執行更新的程式碼中移除對應的快取項目。 有時候，可能會有許多不同的項目相依於特定的資料集。 在此情況下，您可以使用 CancellationChangeToken 來建立快取項目之間的相依性。 透過 CancellationChangeToken，您可以藉由取消權杖，一次將多個快取專案過期。
 
 ```csharp
 // configure CancellationToken and add entry to cache
@@ -506,8 +509,54 @@ new CancellationChangeToken(cts.Token));
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
-快取可大幅提升從資料庫反覆要求相同值的網頁效能。 請務必測量資料存取和頁面效能，再套用快取，並僅在看到有改進的需求時才套用快取。 緩存會消耗 Web 伺服器記憶體資源並增加應用程式的複雜性,因此不要過早使用此技術進行優化非常重要。
+快取可大幅提升從資料庫反覆要求相同值的網頁效能。 請務必測量資料存取和頁面效能，再套用快取，並僅在看到有改進的需求時才套用快取。 快取會取用 web 伺服器記憶體資源並增加應用程式的複雜度，因此請務必不要使用這項技術來更早地優化。
+
+## <a name="getting-data-to-no-locblazor-no-locwebassembly-apps"></a>將資料取得 Blazor WebAssembly 應用程式
+
+如果您要建立使用伺服器的應用程式 Blazor ，您可以使用 Entity Framework 和其他直接資料存取技術，就像在本章中討論到目前為止所討論的一樣。 但是，當您建立應用程式時，就 Blazor WebAssembly 像其他 SPA 架構一樣，您需要不同的資料存取策略。 這些應用程式通常會透過 web API 端點來存取資料，並與伺服器互動。
+
+如果要執行的資料或作業是機密的，請務必參閱上 [一章](develop-asp-net-core-mvc-apps.md) 中的安全性章節，並保護您的 api 不會遭到未經授權的存取。
+
+您可以在 Blazor WebAssembly 管理專案的 [eShopOnWeb 參考應用程式](https://github.com/dotnet-architecture/eShopOnWeb)中找到應用程式的範例 Blazor 。 此專案裝載于 eShopOnWeb Web 專案內，可讓 Administrators 群組中的使用者管理存放區中的專案。 您可以在圖8-3 中看到應用程式的螢幕擷取畫面。
+
+![eShopOnWeb 目錄系統管理員螢幕擷取畫面](./media/image8-3.jpg)
+
+**圖8-3。** eShopOnWeb 目錄系統管理員螢幕擷取畫面。
+
+從應用程式中的 web Api 提取資料時 Blazor WebAssembly ，您只要使用的實例就 `HttpClient` 如同在任何 .net 應用程式中一樣。 相關的基本步驟是建立要求，以便在必要時傳送 (，通常是針對 POST 或 PUT 要求) 、等待要求本身、確認狀態碼，以及將回應還原序列化。 如果您要對一組指定的 Api 提出許多要求，最好是封裝您的 Api 並 `HttpClient` 集中設定基底位址。 如此一來，如果您需要在環境之間調整任何這些設定，您可以只在一個位置進行變更。 您應該在中新增此服務的支援 `Program.Main` ：
+
+```csharp
+builder.Services.AddScoped(sp =>
+    new HttpClient
+    {
+        BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+    });
+```
+
+如果您需要安全地存取服務，您應該存取安全權杖，並設定， `HttpClient` 以便在每個要求時將此權杖作為驗證標頭傳遞：
+
+```csharp
+_httpClient.DefaultRequestHeaders.Authorization =
+    new AuthenticationHeaderValue("Bearer", token);
+```
+
+這可以從任何已插入它的元件來完成 `HttpClient` ，但前提是未 `HttpClient` 新增至存留期為應用程式的服務 `Transient` 。 應用程式中的每個參考都會 `HttpClient` 參考相同的實例，因此在一個元件中對它進行的變更會流經整個應用程式。 執行這項驗證檢查的好地方 (接著指定權杖) 在共用元件中，例如網站的主要導覽。 若要深入瞭解這種方法，請參閱 `BlazorAdmin` [eShopOnWeb 參考應用程式](https://github.com/dotnet-architecture/eShopOnWeb)的專案。
+
+Blazor WebAssembly 超越傳統 JavaScript spa 的其中一個優點是，您不需要保留資料傳輸物件的複本 (dto) 同步處理。 您的 Blazor WebAssembly 專案和您的 web API 專案都可以共用相同的 dto 在共同的共用專案中。 這消除了開發 Spa 所牽涉到的一些取捨。
+
+若要快速從 API 端點取得資料，您可以使用內建的 helper 方法 `GetFromJsonAsync` 。 POST、PUT 等有類似的方法。以下顯示如何使用 `HttpClient` 在應用程式中設定的 API 端點來取得 CatalogItem Blazor WebAssembly ：
+
+```csharp
+var item = await _httpClient.GetFromJsonAsync<CatalogItem>($"catalog-items/{id}");
+```
+
+當您擁有所需的資料之後，您通常會在本機追蹤變更。 當您想要對後端資料存放區進行更新時，您將會針對此目的呼叫其他 web Api。
+
+**參考 Blazor 資料-資料**
+
+- 從 ASP.NET Core 呼叫 web API Blazor
+  <https://docs.microsoft.com/aspnet/core/blazor/call-web-api>
 
 >[!div class="step-by-step"]
->[前一個](develop-asp-net-core-mvc-apps.md)
->[下一個](test-asp-net-core-mvc-apps.md)
+>[上一個](develop-asp-net-core-mvc-apps.md) 
+>[下一步](test-asp-net-core-mvc-apps.md)

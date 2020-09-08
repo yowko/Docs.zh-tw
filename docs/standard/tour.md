@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a44c3692dc9ed9b3de37955191edfb279403f152
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241139"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516017"
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -23,17 +23,17 @@ ms.locfileid: "78241139"
 
 若要了解如何設定開發環境以執行程式碼範例，請參閱[入門](get-started.md)主題。 請從此頁面將程式碼複製並貼入您的環境中來執行它們。
 
-## <a name="programming-languages"></a>程式設計語言
+## <a name="programming-languages"></a>程式語言
 
 .NET 支援多種程式設計語言。 .NET 實作會實作[通用語言基礎結構 (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)，它的其中一個功能是指定與語言無關的執行階段和語言互通性。 這表示您可以選擇任何 .NET 語言，在 .NET 上建置應用程式與服務。
 
-Microsoft 積極開發和支援三種 .NET 語言：C#、F# 和視覺化基礎。
+Microsoft 主動開發並支援三種 .NET 語言： c #、F # 及 Visual Basic。
 
 * C# 既簡單、強大、型別安全且為物件導向，同時保留 C 樣式語言的易讀性與簡潔性。 熟悉 C 和類似語言的任何人在適應 C# 方面很少有問題。 若要深入了解 C#，請參閱 [C# 指南](../csharp/index.yml)。
 
 * F# 是跨平台、功能優先的程式語言，也支援傳統物件導向和命令式程式設計。 若要深入了解 F#，請參閱 [F# 指南](../fsharp/index.yml)。
 
-* Visual Basic 是容易學習的語言，您可以使用該語言建置 .NET 上所執行的各種應用程式。 在 .NET 語言中，Visual Basic 的語法最接近普通人類語言，通常讓新到軟體發展的人更容易使用。
+* Visual Basic 是容易學習的語言，您可以使用該語言建置 .NET 上所執行的各種應用程式。 在 .NET 語言中，Visual Basic 的語法是最接近一般人類語言的語法，通常可讓使用者更輕鬆地進行軟體發展。
 
 ## <a name="automatic-memory-management"></a>自動記憶體管理
 
@@ -55,7 +55,7 @@ Microsoft 積極開發和支援三種 .NET 語言：C#、F# 和視覺化基礎�
 
 有一些物件會參考 *Unmanaged 資源*。 Unmanaged 資源是指 .NET 執行階段不會自動維護的資源。 例如檔案控制程式碼就是 Unmanaged 資源。 <xref:System.IO.FileStream> 物件是Managed 物件，但會 Unmanaged 檔案控制代碼。 當您完成使用 <xref:System.IO.FileStream> 時，您必須釋放檔案控制代碼。
 
-在.NET 中，參考 Unmanaged 資源的物件會實作 <xref:System.IDisposable> 介面。 當您完成使用此物件時，您可以呼叫物件的 <xref:System.IDisposable.Dispose> 方法來釋放任何 Unmanaged 資源。 .NET 語言為此類物件提供了方便的[`using`語句](../csharp/language-reference/keywords/using.md)，如以下示例所示：
+在.NET 中，參考 Unmanaged 資源的物件會實作 <xref:System.IDisposable> 介面。 當您完成使用此物件時，您可以呼叫物件的 <xref:System.IDisposable.Dispose> 方法來釋放任何 Unmanaged 資源。 .NET 語言為這類物件提供了方便的[ `using` 語句](../csharp/language-reference/keywords/using.md)，如下列範例所示：
 
 [!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
@@ -65,7 +65,7 @@ Microsoft 積極開發和支援三種 .NET 語言：C#、F# 和視覺化基礎�
 
 * 若是 C#，請參閱 [using 陳述式 (C# 參考)](../csharp/language-reference/keywords/using-statement.md) 主題。
 * 若是 F#，請參閱[資源管理：use 關鍵字](../fsharp/language-reference/resource-management-the-use-keyword.md)。
-* 有關視覺化基本，請參閱[使用語句（可視基本）](../visual-basic/language-reference/statements/using-statement.md)主題。
+* 如 Visual Basic，請參閱 [ (Visual Basic) 主題的 Using 語句 ](../visual-basic/language-reference/statements/using-statement.md) 。
 
 ## <a name="type-safety"></a>型別安全
 
@@ -83,7 +83,7 @@ C#、Visual Basic 與 F# 支援本機*型別推斷*。 型別推斷表示編譯�
 
 [!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F# 具有比 C# 和 Visual Basic 中找到的方法局部型別推斷更多的型別推斷功能。 如需詳細資訊，請參閱[型別推斷](../fsharp/language-reference/type-inference.md)。
+F # 的型別推斷功能比在 c # 和 Visual Basic 中找到的方法區欄位型別推斷更進一步。 如需詳細資訊，請參閱[型別推斷](../fsharp/language-reference/type-inference.md)。
 
 ## <a name="delegates-and-lambdas"></a>委派和 Lambda
 
@@ -97,7 +97,7 @@ F# 具有比 C# 和 Visual Basic 中找到的方法局部型別推斷更多的�
 
 泛型可讓程式設計師在設計其類別時引入「型別參數」**，如此即可讓用戶端程式碼 (類型的使用者) 指定正確類型來取代型別參數。
 
-新增泛型功能是為了協助程式設計師實作泛型資料結構。 在他們到達之前，為了使類型（如類型）是泛`List`型的，它必須處理類型`object`的元素。 這存在各種性能和語義問題，以及可能的細微執行階段錯誤。 常見的執行階段錯誤是資料結構包含整數和字串，在處理清單成員時引發 。 <xref:System.InvalidCastException>
+新增泛型功能是為了協助程式設計師實作泛型資料結構。 在抵達之前，為了讓型別（例如型別） `List` 成為泛型，您必須使用型別為的元素 `object` 。 這有各種效能和語義問題，以及可能的微妙執行階段錯誤。 當資料結構包含整數和字串，以及在 <xref:System.InvalidCastException> 處理清單的成員時擲回，就會發生常見的執行階段錯誤。
 
 下列範例顯示使用 <xref:System.Collections.Generic.List%601> 類型執行個體的基本程式正在執行：
 
@@ -113,9 +113,9 @@ F# 具有比 C# 和 Visual Basic 中找到的方法局部型別推斷更多的�
 
 ## <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
-LINQ 是 C# 和 Visual Basic 的強大功能集，允許您編寫用於運算元據的簡單聲明性代碼。 資料可以是許多形式 (例如記憶體內部物件、SQL 資料庫或 XML 文件)，但您撰寫的 LINQ 程式碼在資料來源方面通常大同小異。
+LINQ 是一組功能強大的 c # 和 Visual Basic 功能，可讓您撰寫簡單、宣告式的程式碼來運算元據。 資料可以是許多形式 (例如記憶體內部物件、SQL 資料庫或 XML 文件)，但您撰寫的 LINQ 程式碼在資料來源方面通常大同小異。
 
-若要深入了解及查看一些範例，請參閱 [LINQ (Language Integrated Query)](using-linq.md) 主題。
+若要深入瞭解並查看一些範例，請參閱 [LINQ (語言整合式查詢) 總覽](./linq/index.md) 文章。
 
 ## <a name="native-interoperability"></a>原生互通性
 

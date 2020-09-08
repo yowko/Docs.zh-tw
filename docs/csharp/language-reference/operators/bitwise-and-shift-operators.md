@@ -31,24 +31,24 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 99181855fdf8e937676e44e8b347510f9405aa3d
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 061abc8bc37d166a3683be1d2ad920a083a8ea3b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916912"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515939"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位元與移位運算子 (C# 參考)
 
-下列運算子會使用[整數數數值型別](../builtin-types/integral-numeric-types.md)或[char](../builtin-types/char.md)類型的運算元來執行位 or shift 運算：
+下列運算子會使用 [整數數數值型別](../builtin-types/integral-numeric-types.md) 或 [char](../builtin-types/char.md) 類型的運算元來執行位 or 移位運算：
 
 - 一元[ `~` (位補數) ](#bitwise-complement-operator-)運算子
-- 二進位[ `<<` (左移位) ](#left-shift-operator-)和[ `>>` (右移運算子) ](#right-shift-operator-)移位運算子
-- Binary [ `&` (邏輯 AND) ](#logical-and-operator-)、 [ `|` (邏輯 OR) ](#logical-or-operator-)，以及[ `^` (邏輯互斥 OR) ](#logical-exclusive-or-operator-)運算子
+- 二元[ `<<` (左移) ](#left-shift-operator-)和[ `>>` (右移運算子) ](#right-shift-operator-)移位運算子
+- 二元[ `&` (邏輯 AND) ](#logical-and-operator-)、 [ `|` (邏輯 OR) ](#logical-or-operator-)，以及[ `^` (邏輯專有或) ](#logical-exclusive-or-operator-)運算子
 
 這些運算子已針對 `int`、`uint`、`long` 和 `ulong` 型別進行定義。 當兩個運算元都是其他整數型別 (`sbyte`、`byte`、`short`、`ushort` 或 `char`) 時，它們的值會轉換成 `int` 型別，而這也是作業的結果型別。 當運算元屬於不同的整數型別時，它們的值都會轉換成範圍最接近的整數型別。 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)一節。
 
-`&`、 `|` 和 `^` 運算子也會針對類型的運算元定義 `bool` 。 如需詳細資訊，請參閱[布林邏輯運算子](boolean-logical-operators.md)。
+`&`、 `|` 和 `^` 運算子也會針對類型的運算元而定義 `bool` 。 如需詳細資訊，請參閱[布林邏輯運算子](boolean-logical-operators.md)。
 
 位元和移位運算子一律不會導致溢位，並會在[受檢查內容及未受檢查](../keywords/checked-and-unchecked.md)內容中產生相同的結果。
 
@@ -62,7 +62,7 @@ ms.locfileid: "87916912"
 
 ## <a name="left-shift-operator-"></a>左移運算子 \<\<
 
-運算子會將 `<<` 其左邊的運算元向[右運算元所定義的位數](#shift-count-of-the-shift-operators)左移。
+運算子會將 `<<` 其左邊的運算元向左移，並向 [右運算元所定義的位數](#shift-count-of-the-shift-operators)。
 
 左移作業會捨棄位於結果型別範圍外的高位位元，並將低位的空位元位置設為零，如下列範例所示：
 
@@ -76,7 +76,7 @@ ms.locfileid: "87916912"
 
 ## <a name="right-shift-operator-"></a>右移運算子 >>
 
-運算子會將 `>>` 其左邊的運算元右移到[其右邊運算元所定義的位數](#shift-count-of-the-shift-operators)。
+運算子會將 `>>` 其左邊運算元右移 [右邊運算元所定義的位數](#shift-count-of-the-shift-operators)。
 
 右移作業會捨棄低位位元，如下列範例所示：
 
@@ -84,39 +84,39 @@ ms.locfileid: "87916912"
 
 會根據左邊運算元的類型來設定高位空位元位置，如下所示：
 
-- 如果左運算元的類型為 `int` 或 `long` ，則右移運算子會執行*算術*移位：左邊運算元 (正負號位) 最有效位的值會傳播到高序位的空白位位置。 也就是說，若左邊運算元不是負值且在為負值時被設定為一，則高位空位元位置會被設定為零。
+- 如果左邊運算元的類型是 `int` 或 `long` ，則右移運算子會執行 *算術* 移位：左邊運算元 (正負號位) 的最大位值會傳播到高序位的空白位位置。 也就是說，若左邊運算元不是負值且在為負值時被設定為一，則高位空位元位置會被設定為零。
 
   [!code-csharp-interactive[arithmetic right shift](snippets/shared/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- 如果左運算元的類型為 `uint` 或 `ulong` ，則右移運算子會執行*邏輯*移位：高序位空白位位置一律會設定為零。
+- 如果左邊運算元的類型是 `uint` 或 `ulong` ，則右移運算子會執行 *邏輯* 移位：高序位空白位位置一律設定為零。
 
   [!code-csharp-interactive[logical right shift](snippets/shared/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
 如需 `>>` 運算子右邊運算元如何定義移位計數的資訊，請參閱[移位運算子的移位計數](#shift-count-of-the-shift-operators)一節。
 
-## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a>邏輯 AND 運算子&amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> 邏輯 AND 運算子 &amp;
 
-`&` 運算子會計算其運算元的位元邏輯 AND：
+`&`運算子會計算其整數運算元的位邏輯 and：
 
 [!code-csharp-interactive[bitwise AND](snippets/shared/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-針對 `bool` 運算元， `&` 運算子會計算其運算元的[邏輯 AND](boolean-logical-operators.md#logical-and-operator-) 。 一元的 `&` 運算子是 [address-of 運算子](pointer-related-operators.md#address-of-operator-)。
+針對 `bool` 運算元， `&` 運算子會計算其運算元的 [邏輯 AND](boolean-logical-operators.md#logical-and-operator-) 。 一元的 `&` 運算子是 [address-of 運算子](pointer-related-operators.md#address-of-operator-)。
 
 ## <a name="logical-exclusive-or-operator-"></a>邏輯互斥 OR 運算子 ^
 
-`^` 運算子會計算其運算元的位元邏輯互斥 OR，也稱為位元邏輯 XOR：
+`^`運算子會計算其整數運算元的位邏輯互斥 or （也稱為位邏輯 XOR）：
 
 [!code-csharp-interactive[bitwise XOR](snippets/shared/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-針對 `bool` 運算元， `^` 運算子會計算其運算元的[邏輯互斥 OR](boolean-logical-operators.md#logical-exclusive-or-operator-) 。
+針對 `bool` 運算元， `^` 運算子會計算其運算元的 [邏輯互斥 OR](boolean-logical-operators.md#logical-exclusive-or-operator-) 。
 
 ## <a name="logical-or-operator-"></a>邏輯 OR 運算子 |
 
-`|` 運算子會計算其運算元的位元邏輯 OR：
+`|`運算子會計算其整數運算元的位邏輯 or：
 
 [!code-csharp-interactive[bitwise OR](snippets/shared/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-針對 `bool` 運算元， `|` 運算子會計算其運算元的[邏輯 OR](boolean-logical-operators.md#logical-or-operator-) 。
+針對 `bool` 運算元， `|` 運算子會計算其運算元的 [邏輯 OR](boolean-logical-operators.md#logical-or-operator-) 。
 
 ## <a name="compound-assignment"></a>複合指派
 
@@ -156,34 +156,34 @@ x = x op y
 
 [!code-csharp-interactive[operator precedence](snippets/shared/BitwiseAndShiftOperators.cs#Precedence)]
 
-如需依優先順序層級排序之 c # 運算子的完整清單，請參閱[c # 運算子](index.md)一文的[運算子優先順序](index.md#operator-precedence)一節。
+如需依優先順序層級排序的 c # 運算子完整清單，請參閱[c # 運算子](index.md)文章的[運算子優先順序](index.md#operator-precedence)一節。
 
 ## <a name="shift-count-of-the-shift-operators"></a>移位運算子的移位計數
 
-對於移位運算子 `<<` 和 `>>` ，右運算元的類型必須是 `int` 或具有[預先定義的隱含數值轉換](../builtin-types/numeric-conversions.md#implicit-numeric-conversions)的類型 `int` 。
+對於移位運算子 `<<` 和 `>>` ，右邊運算元的型別必須是 `int` 或具有 [預先定義之隱含數值轉換](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) 的型別 `int` 。
 
 針對 `x << count` 和 `x >> count` 運算式，實際的移位計數取決於 `x` 的型別，如下所示：
 
-- 如果的型別 `x` 是 `int` 或 `uint` ，則移位元數目是由右邊運算元的低序位*五*位所定義。 也就是說，位移計數是從 `count & 0x1F` (或 `count & 0b_1_1111`) 所計算。
+- 如果的類型 `x` 是 `int` 或 `uint` ，則移位元數目會由右邊運算元的低序位 *五* 位來定義。 也就是說，位移計數是從 `count & 0x1F` (或 `count & 0b_1_1111`) 所計算。
 
-- 如果的類型 `x` 是 `long` 或 `ulong` ，則移位元數目是由右邊運算元的低序位*六*位所定義。 也就是說，位移計數是從 `count & 0x3F` (或 `count & 0b_11_1111`) 所計算。
+- 如果的類型 `x` 是 `long` 或 `ulong` ，則移位元數目會由右邊運算元的低序位 *六* 位定義。 也就是說，位移計數是從 `count & 0x3F` (或 `count & 0b_11_1111`) 所計算。
 
 下列範例示範了該行為：
 
 [!code-csharp-interactive[shift count example](snippets/shared/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 > [!NOTE]
-> 如上述範例所示，即使右邊運算元的值大於左邊運算元中的位數，移位作業的結果也可以是非零，而是。
+> 如先前的範例所示，即使右邊運算元的值大於左運算元中的位數，移位作業的結果也可能為非零。
 
 ## <a name="enumeration-logical-operators"></a>列舉邏輯運算子
 
-`~` `&` `|` `^` 任何[列舉](../builtin-types/enum.md)類型也支援、、和運算子。 對於相同列舉類型的運算元，會在基礎整數類型的對應值上執行邏輯運算。 例如，針對任何基礎型別為 `U` 列舉型別 `T` 的 `x` 和 `y`，`x & y` 運算式會產生與 `(T)((U)x & (U)y)` 運算式相同結果。
+`~` `&` `|` `^` 任何[列舉](../builtin-types/enum.md)型別也都支援、、和運算子。 針對相同列舉型別的運算元，會對基礎整數型別的對應值執行邏輯運算。 例如，針對任何基礎型別為 `U` 列舉型別 `T` 的 `x` 和 `y`，`x & y` 運算式會產生與 `(T)((U)x & (U)y)` 運算式相同結果。
 
-您通常會使用位邏輯運算子搭配使用[Flags](xref:System.FlagsAttribute)屬性所定義的列舉類型。 如需詳細資訊，請參閱[列舉型別](../builtin-types/enum.md)文章中的[作為位元旗標的列舉型別](../builtin-types/enum.md#enumeration-types-as-bit-flags)一節。
+您通常會使用位邏輯運算子搭配使用 [Flags](xref:System.FlagsAttribute) 屬性定義的列舉型別。 如需詳細資訊，請參閱[列舉型別](../builtin-types/enum.md)文章中的[作為位元旗標的列舉型別](../builtin-types/enum.md#enumeration-types-as-bit-flags)一節。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義型[別可以多](operator-overloading.md)載 `~` 、 `<<` 、、 `>>` 、 `&` `|` 和 `^` 運算子。 當二元運算子多載時，對應的複合指派運算子也會隱含地多載。 使用者定義型別無法明確地多載複合指派運算子。
+使用者定義型 [別可以多](operator-overloading.md) 載 `~` 、、 `<<` `>>` 、 `&` 、 `|` 和 `^` 運算子。 當二元運算子多載時，對應的複合指派運算子也會隱含地多載。 使用者定義型別無法明確地多載複合指派運算子。
 
 若使用者定義型別 `T` 多載了 `<<` 或 `>>` 運算子，則左邊運算元的型別必須是 `T`，右邊運算元的型別必須是 `int`。
 
