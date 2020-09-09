@@ -2,12 +2,12 @@
 title: dotnet-傾印-.NET Core
 description: 安裝和使用 dotnet-傾印命令列工具。
 ms.date: 10/14/2019
-ms.openlocfilehash: 5489011538a4a11d60b333f0230a718c88722c97
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140928"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598110"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>傾印收集和分析公用程式 (dotnet-傾印) 
 
@@ -34,7 +34,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 `dotnet-dump`全域工具可收集和分析 Windows 和 linux 傾印，而不需要任何與 Linux 相關的原生偵錯工具 `lldb` 。 這項工具在 Alpine Linux 等平臺上很重要，因為無法使用完整的工作 `lldb` 。 此 `dotnet-dump` 工具可讓您執行 SOS 命令來分析損毀和垃圾收集行程 (GC) ，但它不是原生偵錯工具，因此不支援顯示原生堆疊框架之類的動作。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`--version`**
 
@@ -61,7 +61,7 @@ dotnet-dump [-h|--help] [--version] <command>
 dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
 ```
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 - **`-h|--help`**
 
@@ -71,14 +71,15 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   指定要從中收集記憶體傾印的處理序識別碼。
 
-- **`--type <Heap|Mini>`**
+- **`--type <Full|Heap|Mini>`**
 
-  指定傾印類型，以決定從進程收集的資訊類型。 有兩種類型：
+  指定傾印類型，以決定從進程收集的資訊類型。 有三種類型：
 
+  - `Full` -最大傾印，包含模組映射在內的所有記憶體。
   - `Heap` -包含模組清單、執行緒清單、所有堆疊、例外狀況資訊、處理資訊，以及所有記憶體（除了對應的影像以外）的大型較完整傾印。
   - `Mini` -包含模組清單、執行緒清單、例外狀況資訊和所有堆疊的小型傾印。
 
-  如果未指定， `Heap` 則為預設值。
+  如果未指定， `Full` 則為預設值。
 
 - **`-o|--output <output_dump_path>`**
 
@@ -111,7 +112,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
   指定要分析之傾印檔案的路徑。
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 - **`-c|--command <debug_command>`**
 
@@ -119,7 +120,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ### <a name="analyze-sos-commands"></a>分析 SOS 命令
 
-| 命令                             | 函式                                                                                      |
+| Command                             | 函式                                                                                      |
 | ----------------------------------- | --------------------------------------------------------------------------------------------- |
 | `soshelp`                           | 顯示所有可用的命令                                                               |
 | `soshelp|help <command>`            | 顯示指定的命令。                                                               |

@@ -5,16 +5,16 @@ ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 5e8ed371173ff8b81909ceb071ed93c6b0e1eea5
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 9318b1afbe22c97f056bd38732306c6a6b60ad00
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515840"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598122"
 ---
 # <a name="the-evolution-of-net-core-to-net-5"></a>.NET Core 到 .NET 5 的演進
 
-本文將詳細說明 .NET 5 中包含的專案，這是下一個 .NET Core 3.1 版。 版本號碼是5.0，以避免與 .NET Framework 4.x 混淆。 和 "Core" 會從名稱中卸載，因為它是持續進行的 .NET 主要執行。 ASP.NET Core 保留 "Core" 的名稱，以避免與 ASP.NET MVC 5 混淆。 此外，Entity Framework Core 會保留 "Core" 的名稱，以避免與 Entity Framework 5 和6混淆。 .NET 5 支援的應用程式類型和平臺比 .NET Core 或 .NET Framework 更多。
+本文將詳細說明 .NET 5 中包含的內容，這是下一個 .NET Core 3.1 版。 版本號碼是5.0，以避免與 .NET Framework 4.x 混淆。 和 "Core" 會從名稱中卸載，因為它是持續進行的 .NET 主要執行。 ASP.NET Core 保留 "Core" 的名稱，以避免與 ASP.NET MVC 5 混淆。 此外，Entity Framework Core 會保留 "Core" 的名稱，以避免與 Entity Framework 5 和6混淆。 .NET 5 支援的應用程式類型和平臺比 .NET Core 或 .NET Framework 更多。
 
 .NET Core 的問世以吸引人的方式發展 .NET 生態系統。 它已在 GitHub 上以開放原始碼專案的形式成熟，並可在一段時間後，慶祝誠懇改進。
 
@@ -58,7 +58,7 @@ ms.locfileid: "89515840"
 
 新的應用程式開發可以 `net5.0` 針對所有專案類型（包括類別庫）指定目標 framework 標記 (TFM) 。 在 .NET 5 工作負載之間共用程式碼已經過簡化，您只需要 `net5.0` TFM。
 
-`net5.0`TFM 結合和取代 `netcoreapp` 和 `netstandard` 名稱。 這種 TFM 通常只包含可跨平臺運作的技術，例如使用 .NET Standard 完成。 但是，如果您打算在 .NET Framework、.NET Core 和 .NET 5 工作負載之間共用程式碼，您可以藉由指定 TFM 來進行 `netstandard2.0` 。 如需詳細資訊，請參閱 [如何指定目標 framework](../standard/frameworks.md#how-to-specify-target-frameworks)。
+`net5.0`TFM 會結合和取代 `netcoreapp` 和 `netstandard` 名稱。 這種 TFM 通常只包含可跨平臺運作的技術，例如使用 .NET Standard 完成。 但是，如果您打算在 .NET Framework、.NET Core 和 .NET 5 工作負載之間共用程式碼，您可以指定 `netstandard2.0` 為 TFM。 如需詳細資訊，請參閱 [如何指定目標 framework](../standard/frameworks.md#how-to-specify-a-target-framework)。
 
 ## <a name="language-updates"></a>語言更新
 
@@ -66,7 +66,7 @@ ms.locfileid: "89515840"
 
 ### <a name="c-updates"></a>C # 更新
 
-撰寫 .NET 5 應用程式的開發人員可以存取最新的 c # 版本和功能。 .NET 5 與 c # 9 配對。 C # 9 將許多新功能帶入語言，以下提供一些重點：
+撰寫 .NET 5 應用程式的開發人員可以存取最新的 c # 版本和功能。 .NET 5 與 c # 9 配對，這對語言有許多新功能。 以下是一些重點：
 
 - 記錄：行為類似實值型別的不可變引用型別，並且會在語言中引入新的 `with` 關鍵字。
 - 關聯式模式比對：將模式比對功能延伸至關聯評估和運算式的關係運算子，包括邏輯模式-新的關鍵字 `and` 、 `or` 和 `not` 。
@@ -92,7 +92,7 @@ F # 是 .NET 功能性程式設計語言，而在 .NET 5 中，開發人員可�
 
 #### <a name="interpolated-strings"></a>插入字串
 
-類似于 c # 中的字串插值，甚至 JavaScript-F # 都支援基本的字串插補。
+類似于 c # 中的字串插值，甚至 JavaScript，F # 都支援基本的字串插補。
 
 ```fsharp
 let name = "David"

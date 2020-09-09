@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 87f9cc03f334233ef286abd11e6f5ff82d7988c2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4e937f56f6315ce2abf76dd56989f4d2c4059f22
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811339"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598065"
 ---
-### <a name="ca1831-use-asspan-or-asmemory-instead-of-range-based-indexer"></a>CA1831 使用 AsSpan 或 AsMemory，而非以範圍為基礎的索引子
+### <a name="ca1831-use-asspan-instead-of-range-based-indexers-for-string"></a>CA1831：針對字串使用 AsSpan 而非以範圍為基礎的索引子
 
 預設會啟用 .NET 程式碼分析器規則 [CA1831](/visualstudio/code-quality/ca1831) ，從 .net 5.0 開始。 它會產生任何程式碼的組建警告 <xref:System.Range> ，其中使用以字串為基礎的索引子，但未預期複製。
 

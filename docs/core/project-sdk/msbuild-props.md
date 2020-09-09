@@ -4,12 +4,12 @@ description: .NET Core SDK 所瞭解的 MSBuild 屬性和專案的參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 866253a0526741f5554971a5202c179106503951
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810517"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598016"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 專案的 MSBuild 參考
 
@@ -26,7 +26,7 @@ ms.locfileid: "88810517"
 
 ### <a name="targetframework"></a>TargetFramework
 
-`TargetFramework`屬性會指定應用程式的目標 framework 版本。 如需有效的目標 framework 名字標記清單，請參閱 [SDK 樣式專案中的目標](../../standard/frameworks.md#supported-target-framework-versions)framework。
+`TargetFramework`屬性會指定應用程式的目標 framework 版本。 如需有效的目標 framework 名字標記清單，請參閱 [SDK 樣式專案中的目標](../../standard/frameworks.md#supported-target-frameworks)framework。
 
 ```xml
 <PropertyGroup>
@@ -38,7 +38,7 @@ ms.locfileid: "88810517"
 
 ### <a name="targetframeworks"></a>TargetFrameworks
 
-`TargetFrameworks`當您想要讓應用程式以多個平臺為目標時，請使用屬性。 如需有效的目標 framework 名字標記清單，請參閱 [SDK 樣式專案中的目標](../../standard/frameworks.md#supported-target-framework-versions)framework。
+`TargetFrameworks`當您想要讓應用程式以多個平臺為目標時，請使用屬性。 如需有效的目標 framework 名字標記清單，請參閱 [SDK 樣式專案中的目標](../../standard/frameworks.md#supported-target-frameworks)framework。
 
 > [!NOTE]
 > 如果 `TargetFramework` 指定了 (單數) ，就會忽略這個屬性。
@@ -183,7 +183,7 @@ ms.locfileid: "88810517"
 
 | 值 | 意義 |
 |-|-|
-| `latest` | 使用已發行的最新程式碼分析器。 這是預設值。 |
+| `latest` | 使用已發行的最新程式碼分析器。 此為預設值。 |
 | `preview` | 使用最新的程式碼分析器，即使它們處於預覽狀態也一樣。 |
 | `5.0` | 即使有較新的規則，也會使用針對 .NET 5.0 版本啟用的規則集。 |
 | `5` | 即使有較新的規則，也會使用針對 .NET 5.0 版本啟用的規則集。 |
@@ -327,7 +327,7 @@ ms.locfileid: "88810517"
 
 `AssetTargetFallback`屬性可讓您為專案參考和 NuGet 套件指定其他相容的架構版本。 例如，如果您使用指定套件相依性， `PackageReference` 但該套件未包含與您的專案相容的資產 `TargetFramework` ，則此 `AssetTargetFallback` 屬性會進入 play。 參考封裝的相容性是使用中所指定的每一個目標架構來間隔 `AssetTargetFallback` 。
 
-您可以將 `AssetTargetFallback` 屬性設定為一或多個 [目標 framework 版本](../../standard/frameworks.md#supported-target-framework-versions)。
+您可以將 `AssetTargetFallback` 屬性設定為一或多個 [目標 framework 版本](../../standard/frameworks.md#supported-target-frameworks)。
 
 ```xml
 <PropertyGroup>
@@ -365,7 +365,7 @@ ms.locfileid: "88810517"
 </ItemGroup>
 ```
 
-### <a name="reference"></a>參考
+### <a name="reference"></a>參考資料
 
 `Reference`專案會定義元件檔的參考。
 

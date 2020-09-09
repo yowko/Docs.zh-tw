@@ -2,14 +2,14 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: a863e544c0fcc8682994f49a464acccafc5ce92f
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: ddffe4aaaed6c9079999b2ab29ca61ab5753f15a
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495821"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598145"
 ---
-# <a name="whats-new-in-c-90"></a>C # 9.0 的新功能
+# <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
 C # 9.0 將下列功能和增強功能新增至 c # 語言：
 
@@ -24,6 +24,7 @@ C # 9.0 將下列功能和增強功能新增至 c # 語言：
 - 靜態匿名函數
 - 目標型別條件運算式
 - Covariant 傳回類型
+- `GetEnumerator`迴圈的延伸模組支援 `foreach`
 - Lambda 捨棄參數
 - 區域函式上的屬性
 - 模組初始設定式
@@ -217,7 +218,7 @@ if (e is not null)
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="TargetTypeNewArgument":::
 
-這項功能的另一個不錯用途是將它與 init only 屬性結合，以初始化新的物件。 上的括弧 `new` 是選擇性的：
+這項功能的另一個不錯用途是將它與 init only 屬性結合，以初始化新的物件：
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
@@ -228,6 +229,8 @@ if (e is not null)
 從 c # 9.0 開始，您可以將 `static` 修飾詞加入至 lambda 運算式或匿名方法。 靜態 lambda 運算式類似于 `static` 區域函數：靜態 lambda 或匿名函式無法捕捉區域變數或實例狀態。 `static`修飾詞可避免意外地捕捉其他變數。
 
 協變數傳回型別提供覆寫函式之傳回類型的彈性。 覆寫的虛擬函式可以傳回衍生自基類方法中宣告之傳回型別的型別。 這有助於記錄，以及支援虛擬複製品或 factory 方法的其他類型。
+
+此外， `foreach` 迴圈也會辨識並使用擴充方法 `GetEnumerator` ，以其他方式滿足 `foreach` 模式。 這項變更表示 `foreach` 與其他以模式為基礎的結構（例如非同步模式和以模式為基礎的解構）一致。 在實務上，這項變更表示您可以將 `foreach` 支援新增至任何類型。 列舉物件在設計方面有意義時，您應該限制其使用方式。
 
 接下來，您可以使用捨棄作為 lambda 運算式的參數。 這種便利性可讓您避免將引數命名，而編譯器可能會避免使用它。 您可以使用 `_` 做為任何引數。
 

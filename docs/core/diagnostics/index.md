@@ -3,12 +3,12 @@ title: 診斷工具概觀 - .NET Core
 description: 可用來診斷 .NET Core 應用程式之工具與技術的概觀。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: ae3b9a1961f331c9cdea786bd5fe06b7bfa10927
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 568f237e131cde18dad7c87ddff2fdd3d4bc5b8b
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558110"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89597973"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中有哪些診斷工具可供使用？
 
@@ -28,7 +28,11 @@ ms.locfileid: "88558110"
 
 [單元測試](../testing/index.md) 是持續整合和部署高品質軟體的重要元件。 單元測試的設計是要在您中斷某個項目時提前警告您。
 
-## <a name="net-core-dotnet-diagnostic-global-tools"></a>.NET Core dotnet 診斷通用工具
+## <a name="debug-linux-dumps"></a>Debug Linux 傾印
+
+[Debug linux](debug-linux-dumps.md) 傾印說明如何收集和分析 linux 上的傾印。
+
+## <a name="net-core-diagnostic-global-tools"></a>.NET Core 診斷通用工具
 
 ### <a name="dotnet-counters"></a>dotnet-counters
 
@@ -45,6 +49,14 @@ ms.locfileid: "88558110"
 ### <a name="dotnet-trace"></a>dotnet-trace
 
 .NET Core 包含 `EventPipe` 用來公開診斷資料的呼叫。 [Dotnet 追蹤](dotnet-trace.md)工具可讓您從應用程式取用有趣的分析資料，在需要根本原因的應用程式執行速度變慢的情況下，可能會有所説明。
+
+### <a name="dotnet-symbol"></a>dotnet-符號
+
+[dotnet-符號](dotnet-symbol.md) 會下載檔案 (符號、DAC/DBI、主機檔案等 ) 需要開啟核心傾印或小型傾印。 如果您需要符號和模組，以針對在不同電腦上所捕捉的傾印檔案進行調試，請使用此工具。
+
+### <a name="dotnet-sos"></a>dotnet-sos
+
+[dotnet-sos](dotnet-sos.md) 可用來將 [sos 偵錯工具擴充](https://docs.microsoft.com/dotnet/framework/tools/sos-dll-sos-debugging-extension) 功能安裝在 Linux 或 MacOS (或 Windows 上（如果使用舊版偵錯工具) ）。
 
 ## <a name="net-core-diagnostics-tutorials"></a>.NET Core 診斷教學課程
 

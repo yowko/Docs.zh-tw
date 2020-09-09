@@ -2,12 +2,12 @@
 title: 基礎類別庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: d8d886785ff71f22a3b2da65e973d899cf0371f6
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: c73909514bc738387a21f5ea68defe49c6a2c839
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465877"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598187"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,7 @@ ms.locfileid: "89465877"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [執行緒。中止已淘汰](#threadabort-is-obsolete) | 5.0 |
 | [ConsoleLoggerOptions 上的過時屬性](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
 | [巢狀型別的硬體內部 IsSupported 檢查可能不同](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
 | [參考元件中的參數名稱變更](#parameter-names-changed-in-reference-assemblies) | 5.0 |
@@ -52,6 +53,10 @@ ms.locfileid: "89465877"
 | [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [thread-abort-obsolete](../../../includes/core-changes/corefx/5.0/thread-abort-obsolete.md)]
+
+***
 
 [!INCLUDE [obsolete-consoleloggeroptions-properties](../../../includes/core-changes/corefx/5.0/obsolete-consoleloggeroptions-properties.md)]
 
