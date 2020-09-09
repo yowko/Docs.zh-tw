@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 6639cdb4696efc319e1d9b9182f339793352c3af
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: fd222aee23bf474330c27cb0c477d41cca5e3215
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497704"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89570257"
 ---
 | 名稱 | Package | Docs | 來源 |
 | ---- | ------- | ---- | ------ |
 | 應用程式組態 | NuGet [1.0.1](https://www.nuget.org/packages/Azure.Data.AppConfiguration/1.0.1) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Data.AppConfiguration-readme/) | github [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Data.AppConfiguration_1.0.1/sdk/appconfiguration/Azure.Data.AppConfiguration/) |
 | ASP.NET 延伸模組-設定秘密 | NuGet [1.0.0](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets/1.0.0) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Extensions.AspNetCore.Configuration.Secrets-readme/) | github [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.Configuration.Secrets_1.0.0/sdk/extensions/Azure.Extensions.AspNetCore.Configuration.Secrets/) |
 | ASP.NET 延伸模組-DataProtection Blob | NuGet [1.0.1](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs/1.0.1) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Blobs-readme/) | github [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Blobs_1.0.1/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Blobs/) |
-| ASP.NET 延伸模組-DataProtection 金鑰 | NuGet [1.0.1](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys/1.0.1) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Keys-readme/) | github [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Keys_1.0.1/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Keys/) |
-| Azure Core。實驗性 | NuGet [0.1.0-preview 4](https://www.nuget.org/packages/Azure.Core.Experimental/0.1.0-preview.4) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Core.Experimental-readme/) |  |
+| ASP.NET 延伸模組-DataProtection 金鑰 | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys/1.0.2) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Keys-readme/) | github [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Keys_1.0.2/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Keys/) |
+| Azure Core。實驗性 | NuGet [0.1.0-preview。 5](https://www.nuget.org/packages/Azure.Core.Experimental/0.1.0-preview.5) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Core.Experimental-readme/) |  |
 | 認知搜尋  | NuGet [11.1.1](https://www.nuget.org/packages/Azure.Search.Documents/11.1.1) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Search.Documents-readme/) | github [11.1.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.1.1/sdk/search/Azure.Search.Documents/) |
-| 核心 | NuGet [1.4.1](https://www.nuget.org/packages/Azure.Core/1.4.1) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Core-readme/) | github [1.4.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.4.1/sdk/core/Azure.Core/) |
+| 核心 | NuGet [1.5.0](https://www.nuget.org/packages/Azure.Core/1.5.0) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Core-readme/) | github [1.5.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.5.0/sdk/core/Azure.Core/) |
 | Cosmos | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [docs](https://docs.microsoft.com/dotnet/api/azure.cosmos?view=azure-dotnet-preview) | github [4.0.0-preview3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Cosmos_4.0.0-preview3/sdk/https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3/Azure.Cosmos/) |
 | 事件中樞 | NuGet [5.1.0](https://www.nuget.org/packages/Azure.Messaging.EventHubs/5.1.0)<br>NuGet [5.2.0-preview 3](https://www.nuget.org/packages/Azure.Messaging.EventHubs/5.2.0-preview.3) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Messaging.EventHubs-readme/) | github [5.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs_5.1.0/sdk/eventhub/Azure.Messaging.EventHubs/)<br>github [5.2.0-preview 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs_5.2.0-preview.3/sdk/eventhub/Azure.Messaging.EventHubs/) |
 | 事件中樞-事件處理器 | NuGet [5.1.0](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.1.0)<br>NuGet [5.2.0-preview 3](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.2.0-preview.3) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Messaging.EventHubs.Processor-readme/) | github [5.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.1.0/sdk/eventhub/Azure.Messaging.EventHubs.Processor/)<br>github [5.2.0-preview 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.2.0-preview.3/sdk/eventhub/Azure.Messaging.EventHubs.Processor/) |
