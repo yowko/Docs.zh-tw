@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5ca429a6d818ac856ac1f44672d350d59ecfc4e8
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 9e337e7274fa99d7c38a2a839fa344cbef8e1df1
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89570008"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89644185"
 ---
 | 名稱 | Package | Docs | 來源 |
 | ---- | ------- | ---- | ------ |
@@ -16,8 +16,8 @@ ms.locfileid: "89570008"
 | 認知搜尋  | NuGet [11.1.1](https://www.nuget.org/packages/Azure.Search.Documents/11.1.1) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Search.Documents-readme/) | github [11.1.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.1.1/sdk/search/Azure.Search.Documents/) |
 | 核心 | NuGet [1.5.0](https://www.nuget.org/packages/Azure.Core/1.5.0) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Core-readme/) | github [1.5.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.5.0/sdk/core/Azure.Core/) |
 | Cosmos | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [docs](https://docs.microsoft.com/dotnet/api/azure.cosmos?view=azure-dotnet-preview) | github [4.0.0-preview3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Cosmos_4.0.0-preview3/sdk/https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3/Azure.Cosmos/) |
-| 事件中樞 | NuGet [5.1.0](https://www.nuget.org/packages/Azure.Messaging.EventHubs/5.1.0)<br>NuGet [5.2.0-preview 3](https://www.nuget.org/packages/Azure.Messaging.EventHubs/5.2.0-preview.3) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Messaging.EventHubs-readme/) | github [5.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs_5.1.0/sdk/eventhub/Azure.Messaging.EventHubs/)<br>github [5.2.0-preview 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs_5.2.0-preview.3/sdk/eventhub/Azure.Messaging.EventHubs/) |
-| 事件中樞-事件處理器 | NuGet [5.1.0](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.1.0)<br>NuGet [5.2.0-preview 3](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.2.0-preview.3) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Messaging.EventHubs.Processor-readme/) | github [5.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.1.0/sdk/eventhub/Azure.Messaging.EventHubs.Processor/)<br>github [5.2.0-preview 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.2.0-preview.3/sdk/eventhub/Azure.Messaging.EventHubs.Processor/) |
+| 事件中樞 | NuGet [5.2.0](https://www.nuget.org/packages/Azure.Messaging.EventHubs/5.2.0) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Messaging.EventHubs-readme/) | github [5.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs_5.2.0/sdk/eventhub/Azure.Messaging.EventHubs/) |
+| 事件中樞-事件處理器 | NuGet [5.2.0](https://www.nuget.org/packages/Azure.Messaging.EventHubs.Processor/5.2.0) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Messaging.EventHubs.Processor-readme/) | github [5.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Messaging.EventHubs.Processor_5.2.0/sdk/eventhub/Azure.Messaging.EventHubs.Processor/) |
 | 表單辨識器 | NuGet [3.0.0](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.0.0) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/AI.FormRecognizer-readme/) | github [3.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.0.0/sdk/formrecognizer/Azure.AI.FormRecognizer/) |
 | 身分識別 | NuGet [1.2.2](https://www.nuget.org/packages/Azure.Identity/1.2.2) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Identity-readme/) | github [1.2.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Identity_1.2.2/sdk/identity/Azure.Identity/) |
 | KeyVault-憑證 | NuGet [4.1.0](https://www.nuget.org/packages/Azure.Security.KeyVault.Certificates/4.1.0) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/Security.KeyVault.Certificates-readme/) | github [4.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Security.KeyVault.Certificates_4.1.0/sdk/keyvault/Azure.Security.KeyVault.Certificates/) |
@@ -49,6 +49,7 @@ ms.locfileid: "89570008"
 | Azure 基礎 | NuGet [1.0.0-preview 3](https://www.nuget.org/packages/Azure.Base/1.0.0-preview.3) |  |  |
 | Azure.Batch。FileStaging | NuGet [8.0.1](https://www.nuget.org/packages/Azure.Batch.FileStaging/8.0.1) |  |  |
 | Azure Core. 延伸模組 | NuGet [1.0.0-preview。 6](https://www.nuget.org/packages/Azure.Core.Extensions/1.0.0-preview.6) |  |  |
+| Azure. 資料表 | NuGet [3.0.0-Beta. 1](https://www.nuget.org/packages/Azure.Data.Tables/3.0.0-beta.1) |  |  |
 | Azure. DCAP | NuGet [1.2.0](https://www.nuget.org/packages/Azure.DCAP.Windows/1.2.0) |  |  |
 | DigitalTwins 核心 | NuGet [1.0.0-preview 3](https://www.nuget.org/packages/Azure.DigitalTwins.Core/1.0.0-preview.3) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/DigitalTwins.Core-readme/) | github [1.0.0-preview。 3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.DigitalTwins.Core_1.0.0-preview.3/sdk/digitaltwins/Azure.DigitalTwins.Core/) |
 | Azure.Extensions.Configuration。秘密 | NuGet [1.0.0-preview。 1](https://www.nuget.org/packages/Azure.Extensions.Configuration.Secrets/1.0.0-preview.1) |  |  |
@@ -67,7 +68,7 @@ ms.locfileid: "89570008"
 | AppService. ApiApps. Common | NuGet [0.9.36](https://www.nuget.org/packages/Microsoft.Azure.AppService.ApiApps.Common/0.9.36) |  |  |
 | AppService. ApiApps 服務 | NuGet [0.9.64](https://www.nuget.org/packages/Microsoft.Azure.AppService.ApiApps.Service/0.9.64) |  |  |
 | Microsoft Azure 證明 | NuGet [0.10.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Attestation/0.10.0-preview) |  | github [0.10.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Attestation_0.10.0-preview/sdk/attestation/Microsoft.Azure.Attestation/) |
-| Microsoft.Azure.Batch | NuGet [13.0.0](https://www.nuget.org/packages/Microsoft.Azure.Batch/13.0.0) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/batch?view=azure-dotnet) | github [13.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch_13.0.0/sdk/batch/Microsoft.Azure.Batch/) |
+| Microsoft.Azure.Batch | NuGet [13.0.0](https://www.nuget.org/packages/Microsoft.Azure.Batch/13.0.0) | [docs](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/batch?view=azure-dotnet) | github [13.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch_13.0.0/sdk/batch/Microsoft.Azure.Batch/) |
 | Microsoft.Azure.Batch。應用程式。密碼編譯 | NuGet [1.1.1.4](https://www.nuget.org/packages/Microsoft.Azure.Batch.Apps.Cryptography/1.1.1.4) |  |  |
 | Microsoft.Azure.Batch。慣例。檔案 | NuGet [3.5.1](https://www.nuget.org/packages/Microsoft.Azure.Batch.Conventions.Files/3.5.1) |  | github [3.5.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch.Conventions.Files_3.5.1/sdk/batch/Microsoft.Azure.Batch.Conventions.Files/) |
 | Microsoft.Azure.Batch。FileStaging | NuGet [8.3.0](https://www.nuget.org/packages/Microsoft.Azure.Batch.FileStaging/8.3.0) |  | github [8.3.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch.FileStaging_8.3.0/sdk/https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/batch/Microsoft.Azure.Batch.FileStaging/Microsoft.Azure.Batch.FileStaging/) |
@@ -270,8 +271,8 @@ ms.locfileid: "89570008"
 | Hybrid_2019_03_01 儲存裝置的資訊 | NuGet [0.9.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2019_03_01.Storage/0.9.0-preview) |  |  |
 | Hybrid_2019_03_01 的訂用帳戶 | NuGet [0.9.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2019_03_01.Subscription/0.9.0-preview) |  |  |
 | Hybrid_2019_03_01，網站的資訊 | NuGet [0.9.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2019_03_01.Websites/0.9.0-preview) |  |  |
-| Microsoft.Azure.Management.RecoveryServices | NuGet [4.3.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices/4.3.0-preview) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/recovery-services?view=azure-dotnet-preview) | github [4.3.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices_4.3.0-preview/sdk/recoveryservices/Microsoft.Azure.Management.RecoveryServices/) |
-| Microsoft.Azure.Management.RecoveryServices.Backup | NuGet [4.1.2-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices.Backup/4.1.2-preview) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/recovery-services?view=azure-dotnet-preview) | github [4.1.2-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices.Backup_4.1.2-preview/sdk/recoveryservices-backup/Microsoft.Azure.Management.RecoveryServices.Backup/) |
+| Microsoft.Azure.Management.RecoveryServices | NuGet [4.3.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices/4.3.0-preview) | [docs](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/recovery-services?view=azure-dotnet-preview) | github [4.3.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices_4.3.0-preview/sdk/recoveryservices/Microsoft.Azure.Management.RecoveryServices/) |
+| Microsoft.Azure.Management.RecoveryServices.Backup | NuGet [4.1.2-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices.Backup/4.1.2-preview) | [docs](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/recovery-services?view=azure-dotnet-preview) | github [4.1.2-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices.Backup_4.1.2-preview/sdk/recoveryservices-backup/Microsoft.Azure.Management.RecoveryServices.Backup/) |
 | Az.recoveryservices. Azurerm.recoveryservices.siterecovery （管理） | NuGet [2.1.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices.SiteRecovery/2.1.0-preview) |  | github [2.1.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices.SiteRecovery_2.1.0-preview/sdk/recoveryservices-siterecovery/Microsoft.Azure.Management.RecoveryServices.SiteRecovery/) |
 | RecoveryServicesVaultUpgrade。 | NuGet [1.0.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServicesVaultUpgrade/1.0.0-preview) |  |  |
 | Microsoft.Azure.Management.Redis | NuGet [6.0.0-preview。 2](https://www.nuget.org/packages/Microsoft.Azure.Management.Redis/6.0.0-preview.2) |  |  |
