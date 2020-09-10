@@ -1,18 +1,18 @@
 ---
 title: 重大變更-.NET Framework .NET Core
 titleSuffix: ''
-description: 列出從 .NET Framework 到 .NET Core 的重大變更。
+description: 列出從 .NET Framework 到 .NET Core 1.0-3.1 的重大變更。
 ms.date: 05/05/2020
-ms.openlocfilehash: e9fa37dba89bbd6c4829614c27cb66206069fa9b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 5904a359813b6d07bd2a27d882ade4395efe3256
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414447"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656362"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>從 .NET Framework 遷移至 .NET Core 的重大變更
 
-如果您要將應用程式從 .NET Framework 遷移至 .NET Core，本文所列的重大變更可能會對您造成影響。 中斷性變更是依類別目錄分組，而在這些類別中，則是以引入這些變更的 .NET Core 版本為依據。
+如果您要將應用程式從 .NET Framework 遷移至 .NET Core 1.0 至3.1 版，本文所列的重大變更可能會對您造成影響。 中斷性變更是依類別目錄分組，而在這些類別中，則是以引入這些變更的 .NET Core 版本為依據。
 
 > [!NOTE]
 > 本文不是 .NET Framework 和 .NET Core 之間的重大變更完整清單。 在這裡新增最重要的中斷性變更，因為我們會注意到這些變更。
@@ -69,20 +69,13 @@ ms.locfileid: "89414447"
 
 ***
 
-## <a name="networking"></a>網路功能
+## <a name="networking"></a>網路
 
 - [WebClient >cancelasync 不一定會立即取消](#webclientcancelasync-doesnt-always-cancel-immediately)
-- [Cookie 路徑處理現在符合 RFC 6265](#cookie-path-handling-now-conforms-to-rfc-6265)
 
 ### <a name="net-core-20"></a>.NET Core 2.0
 
 [!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
-
-***
-
-### <a name="net-50"></a>.NET 5。0
-
-[!INCLUDE [cookie-path-conforms-to-rfc6265](../../../includes/core-changes/networking/5.0/cookie-path-conforms-to-rfc6265.md)]
 
 ***
 

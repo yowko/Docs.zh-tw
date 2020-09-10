@@ -1,6 +1,6 @@
 ---
 title: 組件載入的最佳作法
-description: 探索 .NET 中元件載入的最佳作法。 避免類型身分識別的問題，可能會導致不正確轉換、遺漏方法和其他例外狀況。
+description: 探索 .NET 中元件載入的最佳做法。 避免可能導致轉換無效、遺失方法和其他例外狀況的類型身分識別問題。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies,binding
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803492"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656141"
 ---
 # <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
 本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
@@ -29,7 +29,7 @@ ms.locfileid: "85803492"
   
 - [避免將組件載入多個內容](#avoid_loading_into_multiple_contexts)  
   
-- [避免將多個版本的元件載入相同的內容中](#avoid_loading_multiple_versions)  
+- [避免將元件的多個版本載入相同的內容](#avoid_loading_multiple_versions)  
   
 - [考慮切換成預設載入內容](#switch_to_default)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "85803492"
   
  使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法或依路徑載入的其他一個方法來載入組件，其缺點如下：  
   
-- 如果已載入具有相同身分識別的組件，<xref:System.Reflection.Assembly.LoadFrom%2A> 會傳回載入的組件，即使指定不同的路徑也是一樣。  
+- 如果已在載入來源內容中載入具有相同識別的元件，則 <xref:System.Reflection.Assembly.LoadFrom%2A> 即使指定了不同的路徑，也會傳回載入的元件。  
   
 - 如果使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 載入組件，之後預設載入內容中的組件卻嘗試依顯示名稱載入相同組件，則載入嘗試會失敗。 還原序列化組件時，也可能發生這種情況。  
   

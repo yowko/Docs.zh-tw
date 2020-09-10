@@ -2,14 +2,14 @@
 title: .NET Core 教學課程
 description: 遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux 和 Windows 上建置應用程式和程式庫。
 author: richlander
-ms.date: 03/16/2017
+ms.date: 09/09/2020
 titleSuffix: ''
-ms.openlocfilehash: 4bba8d48b3da7acb643ffa6a08468f40f1b1b415
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 84c8daa735df0255b0e383244f1abd8db4fe21fe
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656725"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656154"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>探索這些教學課程，以瞭解 .NET Core 和 .NET Core SDK 工具
 
@@ -42,8 +42,12 @@ ms.locfileid: "88656725"
 ## <a name="use-visual-studio-for-mac"></a>使用 Visual Studio for Mac
 
 - [建立主控台應用程式](with-visual-studio-mac.md)
-- [建立程式庫，並對其進行單元測試](library-with-visual-studio-mac.md)
+- [對應用程式進行偵錯](debugging-with-visual-studio-mac.md)
+- [發佈應用程式](publishing-with-visual-studio-mac.md)
+- [建立類別庫](library-with-visual-studio-mac.md)
+- [對類別庫進行單元測試](testing-library-with-visual-studio-mac.md)
 - [安裝並使用套件](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
+- [建立 F # 主控台應用程式](../../fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 
 ## <a name="advanced-topics"></a>進階主題
 

@@ -4,12 +4,12 @@ description: .NET Core SDK 所瞭解的 MSBuild 屬性和專案的參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 866253a0526741f5554971a5202c179106503951
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598016"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656258"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 專案的 MSBuild 參考
 
@@ -188,9 +188,27 @@ ms.locfileid: "89598016"
 | `5.0` | 即使有較新的規則，也會使用針對 .NET 5.0 版本啟用的規則集。 |
 | `5` | 即使有較新的規則，也會使用針對 .NET 5.0 版本啟用的規則集。 |
 
+### <a name="analysismode"></a>AnalysisMode
+
+從 .NET 5.0 RC2 開始，.NET SDK 隨附所有「CA」程式 [代碼品質規則](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)。 依預設，只 [會啟用部分規則](../../fundamentals/productivity/code-analysis.md#enabled-rules) 做為組建警告。 `AnalysisMode`屬性可讓您自訂預設啟用的規則集。 您可以切換至更積極的 (退出) 分析模式或更保守的 (加入) 分析模式。 例如，如果您想要預設啟用所有規則作為組建警告，請將值設定為 `AllEnabledByDefault` 。
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+</PropertyGroup>
+```
+
+下表顯示可用的選項。
+
+| 值 | 意義 |
+|-|-|
+| `Default` | 預設模式，其中某些規則會啟用為組建警告，某些規則會啟用為 Visual Studio IDE 建議，並停用其餘部分。 |
+| `AllEnabledByDefault` | 積極或退出模式，預設會啟用所有規則作為組建警告。 您可以選擇性地 [退出宣告](../../fundamentals/productivity/configure-code-analysis-rules.md) 個別規則來停用它們。 |
+| `AllDisabledByDefault` | 保守或加入宣告模式，預設會停用所有規則。 您可以選擇性地 [選擇](../../fundamentals/productivity/configure-code-analysis-rules.md) 加入個別規則來啟用它們。 |
+
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-`CodeAnalysisTreatWarningsAsErrors`屬性可讓您設定是否應將程式碼分析警告視為警告並中斷組建。 如果您在 `-warnaserror` 建立專案時使用旗標，也會將 [.net 程式碼分析](../../fundamentals/productivity/code-analysis.md) 警告視為錯誤。 如果您只想要將編譯器警告視為錯誤，您可以 `CodeAnalysisTreatWarningsAsErrors` 在專案檔中將 MSBuild 屬性設定為 `false` 。
+`CodeAnalysisTreatWarningsAsErrors`屬性可讓您設定是否要將程式碼品質分析警告 (CAxxxx) 應該視為警告並中斷組建。 如果您在 `-warnaserror` 建立專案時使用旗標，則也會將 [.net 程式碼品質分析](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) 警告視為錯誤。 如果您不想將程式碼品質分析警告視為錯誤，您可以 `CodeAnalysisTreatWarningsAsErrors` 在專案檔中將 MSBuild 屬性設定為 `false` 。
 
 ```xml
 <PropertyGroup>
@@ -200,7 +218,7 @@ ms.locfileid: "89598016"
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-針對以 .NET 5.0 或更新版本為目標的專案，預設會啟用[.net 程式碼分析](../../fundamentals/productivity/code-analysis.md)。 您可以藉由將屬性設定為 true，為以舊版 .NET 為目標的專案啟用 .NET 程式碼分析 `EnableNETAnalyzers` 。 若要在任何專案中停用程式碼分析，請將這個屬性設定為 `false` 。
+針對以 .NET 5.0 或更新版本為目標的專案，預設會啟用[.net 程式碼品質分析](../../fundamentals/productivity/code-analysis.md#code-quality-analysis)。 您可以藉由將屬性設定為，為以舊版 .NET 為目標的專案啟用 .NET 程式碼分析 `EnableNETAnalyzers` `true` 。 若要在任何專案中停用程式碼分析，請將這個屬性設定為 `false` 。
 
 ```xml
 <PropertyGroup>
@@ -210,6 +228,18 @@ ms.locfileid: "89598016"
 
 > [!TIP]
 > 針對以 .net 5.0 之前的 .NET 版本為目標的專案啟用 .NET 程式碼分析的另一種方式，是將 [AnalysisLevel](#analysislevel) 屬性設定為 `latest` 。
+
+### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
+
+根據預設， [.net 程式碼樣式分析](../../fundamentals/productivity/code-analysis.md#code-style-analysis)會在所有 .net 專案的組建上停用。 您可以藉由將屬性設定為，啟用 .NET 專案的程式碼樣式分析 `EnforceCodeStyleInBuild` `true` 。
+
+```xml
+<PropertyGroup>
+  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+</PropertyGroup>
+```
+
+所有 [設定](../../fundamentals/productivity/code-analysis.md#code-style-analysis) 為警告或錯誤的程式碼樣式規則，都會在組建和報告違規時執行。
 
 ## <a name="run-time-configuration-properties"></a>執行時間設定屬性
 
@@ -365,7 +395,7 @@ ms.locfileid: "89598016"
 </ItemGroup>
 ```
 
-### <a name="reference"></a>參考資料
+### <a name="reference"></a>參考
 
 `Reference`專案會定義元件檔的參考。
 

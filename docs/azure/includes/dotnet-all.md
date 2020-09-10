@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9e337e7274fa99d7c38a2a839fa344cbef8e1df1
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 06bc8d39c52d297fc64f800b2c9cc279ad9990a4
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89644185"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89662744"
 ---
 | 名稱 | Package | Docs | 來源 |
 | ---- | ------- | ---- | ------ |
@@ -68,7 +68,7 @@ ms.locfileid: "89644185"
 | AppService. ApiApps. Common | NuGet [0.9.36](https://www.nuget.org/packages/Microsoft.Azure.AppService.ApiApps.Common/0.9.36) |  |  |
 | AppService. ApiApps 服務 | NuGet [0.9.64](https://www.nuget.org/packages/Microsoft.Azure.AppService.ApiApps.Service/0.9.64) |  |  |
 | Microsoft Azure 證明 | NuGet [0.10.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Attestation/0.10.0-preview) |  | github [0.10.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Attestation_0.10.0-preview/sdk/attestation/Microsoft.Azure.Attestation/) |
-| Microsoft.Azure.Batch | NuGet [13.0.0](https://www.nuget.org/packages/Microsoft.Azure.Batch/13.0.0) | [docs](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/batch?view=azure-dotnet) | github [13.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch_13.0.0/sdk/batch/Microsoft.Azure.Batch/) |
+| Microsoft.Azure.Batch | NuGet [13.0.0](https://www.nuget.org/packages/Microsoft.Azure.Batch/13.0.0) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/batch?view=azure-dotnet) | github [13.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch_13.0.0/sdk/batch/Microsoft.Azure.Batch/) |
 | Microsoft.Azure.Batch。應用程式。密碼編譯 | NuGet [1.1.1.4](https://www.nuget.org/packages/Microsoft.Azure.Batch.Apps.Cryptography/1.1.1.4) |  |  |
 | Microsoft.Azure.Batch。慣例。檔案 | NuGet [3.5.1](https://www.nuget.org/packages/Microsoft.Azure.Batch.Conventions.Files/3.5.1) |  | github [3.5.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch.Conventions.Files_3.5.1/sdk/batch/Microsoft.Azure.Batch.Conventions.Files/) |
 | Microsoft.Azure.Batch。FileStaging | NuGet [8.3.0](https://www.nuget.org/packages/Microsoft.Azure.Batch.FileStaging/8.3.0) |  | github [8.3.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch.FileStaging_8.3.0/sdk/https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/batch/Microsoft.Azure.Batch.FileStaging/Microsoft.Azure.Batch.FileStaging/) |
@@ -271,8 +271,8 @@ ms.locfileid: "89644185"
 | Hybrid_2019_03_01 儲存裝置的資訊 | NuGet [0.9.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2019_03_01.Storage/0.9.0-preview) |  |  |
 | Hybrid_2019_03_01 的訂用帳戶 | NuGet [0.9.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2019_03_01.Subscription/0.9.0-preview) |  |  |
 | Hybrid_2019_03_01，網站的資訊 | NuGet [0.9.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2019_03_01.Websites/0.9.0-preview) |  |  |
-| Microsoft.Azure.Management.RecoveryServices | NuGet [4.3.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices/4.3.0-preview) | [docs](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/recovery-services?view=azure-dotnet-preview) | github [4.3.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices_4.3.0-preview/sdk/recoveryservices/Microsoft.Azure.Management.RecoveryServices/) |
-| Microsoft.Azure.Management.RecoveryServices.Backup | NuGet [4.1.2-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices.Backup/4.1.2-preview) | [docs](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/recovery-services?view=azure-dotnet-preview) | github [4.1.2-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices.Backup_4.1.2-preview/sdk/recoveryservices-backup/Microsoft.Azure.Management.RecoveryServices.Backup/) |
+| Microsoft.Azure.Management.RecoveryServices | NuGet [4.3.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices/4.3.0-preview) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/recovery-services?view=azure-dotnet-preview) | github [4.3.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices_4.3.0-preview/sdk/recoveryservices/Microsoft.Azure.Management.RecoveryServices/) |
+| Microsoft.Azure.Management.RecoveryServices.Backup | NuGet [4.1.2-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices.Backup/4.1.2-preview) | [docs](https://docs.microsoft.com/dotnet/api/overview/azure/recovery-services?view=azure-dotnet-preview) | github [4.1.2-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices.Backup_4.1.2-preview/sdk/recoveryservices-backup/Microsoft.Azure.Management.RecoveryServices.Backup/) |
 | Az.recoveryservices. Azurerm.recoveryservices.siterecovery （管理） | NuGet [2.1.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServices.SiteRecovery/2.1.0-preview) |  | github [2.1.0-預覽](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.RecoveryServices.SiteRecovery_2.1.0-preview/sdk/recoveryservices-siterecovery/Microsoft.Azure.Management.RecoveryServices.SiteRecovery/) |
 | RecoveryServicesVaultUpgrade。 | NuGet [1.0.0-預覽](https://www.nuget.org/packages/Microsoft.Azure.Management.RecoveryServicesVaultUpgrade/1.0.0-preview) |  |  |
 | Microsoft.Azure.Management.Redis | NuGet [6.0.0-preview。 2](https://www.nuget.org/packages/Microsoft.Azure.Management.Redis/6.0.0-preview.2) |  |  |

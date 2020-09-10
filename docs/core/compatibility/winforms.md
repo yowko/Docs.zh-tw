@@ -1,41 +1,51 @@
 ---
-title: Windows Forms 的重大變更
-description: 列出 .NET Core Windows Forms 中的重大變更。
-ms.date: 01/08/2020
-ms.openlocfilehash: beb9a42e4b5007f03480cd74f57bbfbbfc3f48b1
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+title: Windows Forms 重大變更
+description: 列出適用于 .NET Core 和 .NET 5 的 Windows Forms 中的重大變更。
+ms.date: 09/08/2020
+ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556149"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656327"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 中的重大變更
 
-版本3.0 中的 .NET Core 已加入 Windows Forms 支援。 本文列出其引進的 .NET Core 版本 Windows Forms 的重大變更。 如果您要從 .NET Framework 或舊版 .NET Core (3.0 或更新版本) 升級 Windows Forms 應用程式，本文適用于您。
+版本3.0 中的 .NET Core 已新增 Windows Forms 支援。 本文列出所引進之 .NET 版本 Windows Forms 的重大變更。 如果您要從 .NET Framework 或舊版 .NET Core (3.0 或更新版本的) 升級 Windows Forms 應用程式，本文適用于您。
 
-下列重大變更記載于此頁面：
+此頁面記載了下列重大變更：
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [DataGridView 相關的 Api 現在會擲回 InvalidOperationException](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
+| [WinForms 和 WPF 應用程式使用 Microsoft .NET Sdk](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
 | [已移除狀態列控制項](#removed-status-bar-controls) | 5.0 |
 | [WinForms 方法現在會擲回 ArgumentException](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [WinForms 方法現在會擲回 System.argumentnullexception](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
 | [WinForms 屬性現在會擲回 ArgumentOutOfRangeException](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
-| [移除的控制項](#removed-controls) | 3.1 |
+| [已移除控制項](#removed-controls) | 3.1 |
 | [如果顯示工具提示，則不會引發 CellFormatting 事件](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
-| [DefaultFont 已變更為 Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
+| [DefaultFont 變更為 Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
 | [FolderBrowserDialog 的現代化](#modernization-of-the-folderbrowserdialog) | 3.0 |
-| [已從某些 Windows Forms 類型中移除 SerializableAttribute](#serializableattribute-removed-from-some-windows-forms-types) | 3.0 |
-| [不支援 AllowUpdateChildControlIndexForTabControls 相容性切換](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3.0 |
-| [不支援 DomainUpDown. UseLegacyScrolling 相容性參數](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3.0 |
-| [不支援 DoNotLoadLatestRichEditControl 相容性切換](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3.0 |
-| [不支援 DoNotSupportSelectAllShortcutInMultilineTextBox 相容性切換](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3.0 |
-| [不支援 DontSupportReentrantFilterMessage 相容性切換](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3.0 |
-| [不支援 EnableVisualStyleValidation 相容性切換](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
-| [不支援 UseLegacyCoNtextMenuStripSourceControlValue 相容性切換](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
-| [不支援 UseLegacyImages 相容性切換](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
+| [SerializableAttribute 已從部分 Windows Forms 類型中移除](#serializableattribute-removed-from-some-windows-forms-types) | 3.0 |
+| [不支援 AllowUpdateChildControlIndexForTabControls 相容性參數](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3.0 |
+| [不支援 DomainUpDown UseLegacyScrolling 相容性參數](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3.0 |
+| [不支援 DoNotLoadLatestRichEditControl 相容性參數](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3.0 |
+| [不支援 DoNotSupportSelectAllShortcutInMultilineTextBox 相容性參數](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3.0 |
+| [不支援 >dontsupportreentrantfiltermessage 相容性參數](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3.0 |
+| [不支援 EnableVisualStyleValidation 相容性參數](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
+| [不支援 UseLegacyCoNtextMenuStripSourceControlValue 相容性參數](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
+| [不支援 UseLegacyImages 相容性參數](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
+
+***
+
+[!INCLUDE [sdk-and-target-framework-change](../../../includes/core-changes/windowsforms/5.0/sdk-and-target-framework-change.md)]
+
+***
 
 [!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
 
