@@ -703,7 +703,7 @@ items:
   - name: 資料存取
     items:
       - name: LINQ
-        href: ../standard/using-linq.md
+        href: ../standard/linq/
       - name: XML 文件和資料
         href: ../standard/data/xml/
       - name: Microsoft.Data.Sqlite
