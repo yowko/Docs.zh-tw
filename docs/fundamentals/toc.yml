@@ -136,6 +136,8 @@ items:
             href: ../core/tutorials/index.md
   - name: 新功能
     items:
+      - name: .NET Core 到 .NET 5 的演進
+        href: ../core/dotnet-five.md
       - name: .NET Core 3.1 的新功能
         href: ../core/whats-new/dotnet-core-3-1.md
       - name: .NET Core 3.0 的新功能
@@ -407,6 +409,8 @@ items:
             href: ../core/deploying/creating-nuget-packages.md
           - name: 獨立式部署執行階段向前復原
             href: ../core/deploying/runtime-patch-selection.md
+          - name: 單一檔案部署與可執行檔
+            href: ../core/deploying/single-file.md
           - name: 修剪獨立式部署及可執行檔
             href: ../core/deploying/trim-self-contained.md
           - name: 執行階段套件存放區
