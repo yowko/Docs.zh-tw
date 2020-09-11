@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
 ms.date: 01/30/2020
-ms.openlocfilehash: 421b1aaf3965bd3aa80c6e09da963404d2a46c09
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 98dc931e10d5e1a3265ebd6f4e1919a6416e9b27
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359071"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022931"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -252,7 +252,7 @@ COPY . .
 
 1. 複製程序只會在第一次執行 (以及因檔案變更而重建時執行)，並針對所有其他服務使用快取
 
-2. 由於較大的映像出現在中間階段，因此不會影響最終映像大小。
+2. 由於較大的影像會在中繼階段中發生，因此不會影響最終的影像大小。
 
 下一個重要的最佳化涉及第 17 行所執行的 `restore` 命令，這也會因 eShopOnContainers 的每個服務而異。 如果您將該行變更為：
 
@@ -431,7 +431,7 @@ docker-compose.yml 檔案指定的不只是使用何種容器，還會指定它�
 
 ![步驟5的影像。](./media/docker-app-development-workflow/step-5-run-containers-compose-app.png)
 
-## <a name="step-5-build-and-run-your-docker-application"></a>步驟 5。 組建並執行您的 Docker 應用程式
+## <a name="step-5-build-and-run-your-docker-application"></a>步驟 5： 組建並執行您的 Docker 應用程式
 
 如果您的應用程式只有單一容器，您可以將它部署至您的 Docker 主機 (VM 或實體伺服器) 來執行。 但是，如果您的應用程式包含多項服務，您可以使用單一 CLI 命令 (`docker-compose up)` 或 Visual Studio （將在幕後使用該命令），將其部署為組成的應用程式。 讓我們看看不同的選項。
 
