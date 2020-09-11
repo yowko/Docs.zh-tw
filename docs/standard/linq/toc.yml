@@ -1,0 +1,350 @@
+- name: LINQ
+  items:
+    - name: LINQ 概觀
+      href: index.md
+    - name: LINQ to XML
+      items:
+        - name: 開始使用
+          items:
+            - name: LINQ to XML 概觀
+              href: linq-xml-overview.md
+            - name: LINQ to XML 比較DOM
+              href: linq-xml-vs-dom.md
+            - name: LINQ to XML 與其他 XML 技術的比較
+              href: linq-xml-vs-xml-technologies.md
+        - name: 程式設計手冊
+          items:
+            - name: LINQ to XML 程式設計概觀
+              items:
+                - name: 函式與程序式程式設計的比較
+                  href: functional-vs-procedural-programming.md
+                - name: LINQ to XML 類別概觀
+                  href: linq-xml-classes-overview.md
+                - name: XElement 類別概觀
+                  href: xelement-class-overview.md
+                - name: XAttribute 類別概觀
+                  href: xattribute-class-overview.md
+                - name: XDocument 類別概觀
+                  href: xdocument-class-overview.md
+                - name: 如何建置 LINQ to XML 範例
+                  href: build-linq-xml-examples.md
+            - name: XML 樹狀結構
+              items:
+                - name: 功能建構
+                  href: functional-construction.md
+                - name: 在 C# 中建立 XML 樹狀結構
+                  href: create-xml-trees.md
+                - name: Visual Basic 中的 XML 常值
+                  href: xml-literals.md
+                - name: 剖析 XML
+                  items:
+                    - name: 如何剖析字串
+                      href: parse-string.md
+                    - name: 如何從檔案載入 XML
+                      href: load-xml-file.md
+                    - name: 載入或剖析 XML 時保留空白字元
+                      href: preserve-white-space-loading-parsing-xml.md
+                    - name: 如何攔截剖析錯誤
+                      href: catch-parsing-errors.md
+                    - name: 如何從 XmlReader 建立樹狀結構
+                      href: create-tree-xmlreader.md
+                    - name: 如何從 XmlReader 串流 XML 片段
+                      href: stream-xml-fragments-xmlreader.md
+                - name: 如何使用 XmlWriter 填入 XML 樹狀結構
+                  href: populate-xml-tree-xmlwriter.md
+                - name: 如何使用 XSD 進行驗證
+                  href: validate-xsd.md
+                - name: XElement 與 XDocument 物件的有效內容
+                  href: valid-content-xelement-xdocument-objects.md
+            - name: 使用 XML 命名空間
+              items:
+                - name: 命名空間概觀
+                  href: namespaces-overview.md
+                - name: 如何在 C# 中建立具有命名空間的文件
+                  href: create-document-namespaces-csharp.md
+                - name: 如何在 Visual Basic 中建立具有命名空間的文件
+                  href: create-document-namespaces-visual-basic.md
+                - name: 如何控制命名空間前置詞
+                  href: control-namespace-prefixes.md
+                - name: 預設命名空間的範圍
+                  href: scope-default-namespaces.md
+                - name: 使用 Visual Basic 中的全域命名空間
+                  href: work-global-namespaces.md
+                - name: 如何針對命名空間中的 XML 撰寫查詢
+                  href: write-queries-xml-namespaces.md
+            - name: 序列化 XML 樹狀結構
+              items:
+                - name: 序列化時保留空白字元
+                  href: preserve-white-space-serializing.md
+                - name: 使用 XML 宣告進行序列化
+                  href: serialize-xml-declaration.md
+                - name: 序列化至檔案、TextWriter 與 XmlWriter
+                  href: serialize-files-textwriters-xmlwriters.md
+                - name: 序列化至 XmlReader (叫用 XSLT)
+                  href: serialize-xmlreader-invoke-xslt.md
+            - name: LINQ to XML 軸
+              items:
+                - name: LINQ to XML 軸概觀
+                  href: linq-xml-axes-overview.md
+                - name: 如何擷取項目的集合
+                  href: retrieve-collection-elements.md
+                - name: 如何擷取項目的值
+                  href: retrieve-value-element.md
+                - name: 如何篩選項目名稱
+                  href: filter-element-names.md
+                - name: 如何鏈結軸方法呼叫
+                  href: chain-axis-method-calls.md
+                - name: 如何擷取單一子項目
+                  href: retrieve-single-child-element.md
+                - name: 如何擷取屬性的集合
+                  href: retrieve-collection-attributes.md
+                - name: 如何擷取單一屬性
+                  href: retrieve-single-attribute.md
+                - name: 如何擷取屬性的值
+                  href: retrieve-value-attribute.md
+                - name: 如何擷取元素的淺層值
+                  href: retrieve-shallow-value-element.md
+                - name: Visual Basic 中已整合語言的軸
+                  href: language-integrated-axes.md
+            - name: 查詢 XML 樹狀結構
+              items:
+                - name: 查詢 XML 樹狀結構概觀
+                  href: query-xml-trees-overview.md
+                - name: 基本查詢
+                  items:
+                    - name: 如何尋找具有特定屬性的項目
+                      href: find-element-specific-attribute.md
+                    - name: 如何尋找具有特定子項目的項目
+                      href: find-element-specific-child-element.md
+                    - name: 查詢 XDocument 與查詢 XElement 的比較
+                      href: query-xdocument-vs-query-xelement.md
+                    - name: 如何尋找具有特定元素名稱的子系
+                      href: find-descendants-specific-element-name.md
+                    - name: 如何使用子系方法尋找單一子系
+                      href: find-single-descendant-descendants-method.md
+                    - name: 如何撰寫具有複雜篩選功能的查詢
+                      href: write-queries-complex-filtering.md
+                    - name: 如何篩選選擇性項目
+                      href: filter-optional-element.md
+                    - name: 如何在命名空間中尋找所有節點
+                      href: find-all-nodes-namespace.md
+                    - name: 如何排序元素
+                      href: sort-elements.md
+                    - name: 如何根據多個索引鍵排序項目
+                      href: sort-elements-multiple-keys.md
+                    - name: 如何計算中繼值
+                      href: calculate-intermediate-values.md
+                    - name: 如何撰寫根據內容尋找元素的查詢
+                      href: write-query-finds-elements-based-context.md
+                    - name: 如何偵錯空白查詢結果集
+                      href: debug-empty-query-results-sets.md
+                - name: 投影與轉換
+                  items:
+                    - name: 如何使用 LINQ to XML 利用字典
+                      href: work-dictionaries-linq-xml.md
+                    - name: 如何轉換 XML 樹狀結構的型態
+                      href: transform-shape-xml-tree.md
+                    - name: 如何控制投影的類型
+                      href: control-type-projection.md
+                    - name: 如何投影新類型
+                      href: project-new-type.md
+                    - name: 如何投影物件圖形
+                      href: project-object-graph.md
+                    - name: 如何投影匿名類型
+                      href: project-anonymous-type.md
+                    - name: 如何從 XML 產生文字檔
+                      href: generate-text-files-xml.md
+                    - name: 如何從 CSV 檔案產生 XML
+                      href: generate-xml-csv-files.md
+                - name: 進階查詢技術
+                  items:
+                    - name: 如何聯結兩個集合
+                      href: join-two-collections.md
+                    - name: 如何使用群組建立階層
+                      href: create-hierarchy-grouping.md
+                    - name: 如何使用 XPath 查詢 LINQ to XML
+                      href: query-linq-xml-xpath.md
+                    - name: 如何撰寫 LINQ to XML 軸心方法
+                      href: write-linq-xml-axis-method.md
+                    - name: 如何在 C# 中執行文字到 XML 的資料流轉換
+                      href: perform-streaming-transformations-text-xml.md
+                    - name: 如何列出樹狀結構中的所有節點
+                      href: list-all-nodes-tree.md
+                    - name: 如何從 Office Open XML 文件中擷取段落
+                      href: retrieve-paragraphs-office-open-xml-document.md
+                    - name: 如何修改 Office Open XML 文件
+                      href: modify-office-open-xml-document.md
+                    - name: 如何從檔案系統填入 XML 樹狀結構
+                      href: populate-xml-tree-file-system.md
+                - name: XPath 使用者適用的 LINQ to XML
+                  items:
+                    - name: XPath 和 LINQ to XML 的比較
+                      href: comparison-xpath-linq-xml.md
+                    - name: 如何尋找子項目
+                      href: find-child-element.md
+                    - name: 如何尋找子項目的清單
+                      href: find-list-child-elements.md
+                    - name: 如何尋找根項目
+                      href: find-root-element.md
+                    - name: 如何尋找子系項目
+                      href: find-descendant-elements.md
+                    - name: 如何篩選屬性
+                      href: filter-attribute.md
+                    - name: 如何尋找相關項目
+                      href: find-related-elements.md
+                    - name: 如何尋找命名空間中的項目
+                      href: find-elements-namespace.md
+                    - name: 如何尋找前面同層級項目
+                      href: find-preceding-siblings.md
+                    - name: 如何尋找子項目的子系
+                      href: find-descendants-child-element.md
+                    - name: 如何尋找兩個位置路徑的聯集
+                      href: find-union-two-location-paths.md
+                    - name: 如何尋找同層級節點
+                      href: find-sibling-nodes.md
+                    - name: 如何尋找父代的屬性
+                      href: find-attribute-parent.md
+                    - name: 如何在同層級項目中尋找具有特定名稱的屬性
+                      href: find-attributes-siblings-specific-name.md
+                    - name: 如何尋找具有特定屬性的項目
+                      href: find-elements-specific-attribute.md
+                    - name: 如何依據位置尋找子項目
+                      href: find-child-elements-based-position.md
+                    - name: 如何尋找立即的前面同層級項目
+                      href: find-immediate-preceding-sibling.md
+                - name: XML 的純功能轉換
+                  items:
+                    - name: 純功能轉換簡介
+                      href: introduction-pure-functional-transformations.md
+                    - name: 概念與術語 (功能轉換)
+                      href: concepts-terminology-functional-transformation.md
+                    - name: 功能程式設計與命令式程式設計的比較
+                      href: functional-vs-imperative-programming.md
+                    - name: 重構為純功能
+                      href: refactor-pure-functions.md
+                    - name: 功能轉換的適用性
+                      href: applicability-functional-transformation.md
+                    - name: XML 的功能轉換
+                      href: functional-transformation-xml.md
+                    - name: 延後執行與延遲評估
+                      href: deferred-execution-lazy-evaluation.md
+                    - name: 延後執行範例
+                      href: deferred-execution-example.md
+                    - name: 教學課程：將查詢鏈結在一起 (C#)
+                      items:
+                        - name: 鏈結查詢範例 (C#)
+                          href: chain-queries-example.md
+                        - name: 中繼具體化 (C#)
+                          href: intermediate-materialization.md
+                        - name: 將標準查詢運算子鏈結在一起 (C#)
+                          href: chain-standard-query-operators-together.md
+                    - name: 教學課程：管理 WordprocessingML 文件中的內容
+                      items:
+                        - name: WordprocessingML 文件的 XML 圖形
+                          href: xml-shape-wordprocessingml-documents.md
+                        - name: 建立來源 Office Open XML 文件
+                          href: create-source-office-open-xml-document.md
+                        - name: 尋找預設的段落樣式
+                          href: find-default-paragraph-style.md
+                        - name: 擷取段落及其樣式
+                          href: retrieve-paragraphs-styles.md
+                        - name: 擷取段落的文字
+                          href: retrieve-text-paragraphs.md
+                        - name: 使用擴充方法進行重構
+                          href: refactor-extension-method.md
+                        - name: 使用純功能進行重構
+                          href: refactor-pure-function.md
+                        - name: 以不同的圖形投影 XML
+                          href: project-xml-different-shape.md
+                        - name: 尋找 Word 文件中的文字
+                          href: find-text-word-documents.md
+                        - name: Office Open XML WordprocessingML 文件的詳細資料
+                          items:
+                            - name: WordprocessingML 文件及樣式
+                              href: wordprocessingml-document-styles.md
+                            - name: WordprocessingML 文件的樣式部分
+                              href: style-part-wordprocessingml-document.md
+                            - name: 輸出 Office Open XML 文件組件的範例
+                              href: example-outputs-office-open-xml-document-parts.md
+            - name: 修改 XML 樹狀結構
+              items:
+                - name: 記憶體內 XML 樹狀結構修改與功能建構的比較
+                  href: in-memory-xml-tree-modification-vs-functional-construction.md
+                - name: 將項目、屬性與節點新增至 XML 樹狀結構
+                  href: add-elements-attributes-nodes-xml-tree.md
+                - name: 在 XML 樹狀結構中修改項目、屬性與節點
+                  href: modify-elements-attributes-nodes-xml-tree.md
+                - name: 從 XML 樹狀結構中移除項目、屬性與節點
+                  href: remove-elements-attributes-nodes-xml-tree.md
+                - name: 維持成對的名稱和數值
+                  href: maintain-name-value-pairs.md
+                - name: 如何變更整個 XML 樹狀結構的命名空間
+                  href: change-namespace-entire-xml-tree.md
+            - name: 效能
+              items:
+                - name: 已鏈結查詢的效能
+                  href: performance-chained-queries.md
+                - name: 不可部分完成的 XName 與 XNamespace 物件
+                  href: atomized-xname-xnamespace-objects.md
+                - name: 預先不可部分完成 XName 物件
+                  href: pre-atomization-xname-objects.md
+                - name: 靜態編譯的查詢
+                  href: statically-compiled-queries.md
+            - name: 進階 LINQ to XML 程式設計
+              items:
+                - name: LINQ to XML 註釋
+                  href: linq-xml-annotations.md
+                - name: LINQ to XML 事件
+                  href: linq-xml-events.md
+                - name: 具有節點的程式
+                  href: program-nodes.md
+                - name: 混合的宣告式/命令式程式碼 Bug
+                  href: mixed-declarative-imperative-code-bugs.md
+                - name: 如何串流可存取標頭資訊的 XML 片段
+                  href: stream-xml-fragments-access-header-information.md
+                - name: 如何執行大型 XML 文件的資料流轉換
+                  href: perform-streaming-transform-large-xml-documents.md
+                - name: 如何讀取和寫入編碼文件
+                  href: read-write-encoded-document.md
+                - name: 使用 XSLT 轉換 XML 樹狀結構
+                  href: use-xslt-transform-xml-tree.md
+                - name: 如何使用註釋將 LINQ to XML 樹狀結構轉換為 XSLT 樣式
+                  href: use-annotations-transform-linq-xml-trees-xslt-style.md
+                - name: 序列化包含 XElement 物件的物件圖
+                  items:
+                    - name: 如何使用 XmlSerializer 進行序列化
+                      href: serialize-xmlserializer.md
+                    - name: 如何使用 DataContractSerializer 進行序列化
+                      href: serialize-datacontractserializer.md
+            - name: LINQ to XML 安全性
+              href: linq-xml-security.md
+            - name: XML 文件範例
+              items:
+                - name: XML 檔j案範例：一般訂購單
+                  href: sample-xml-file-typical-purchase-order.md
+                - name: XML 檔j案範例：命名空間中的一般訂購單
+                  href: sample-xml-file-typical-purchase-order-namespace.md
+                - name: XML 檔j案範例：多個訂購單
+                  href: sample-xml-file-multiple-purchase-orders.md
+                - name: XML 檔j案範例：命名空間中的多個訂購單
+                  href: sample-xml-file-multiple-purchase-orders-namespace.md
+                - name: XML 檔j案範例：測試組態
+                  href: sample-xml-file-test-configuration.md
+                - name: XML 檔j案範例：測試命名空間中的組態
+                  href: sample-xml-file-test-configuration-namespace.md
+                - name: XML 檔j案範例：客戶與訂單
+                  href: sample-xml-file-customers-orders.md
+                - name: XSD 範例檔案：客戶與訂單
+                  href: sample-xsd-file-customers-orders.md
+                - name: XML 檔j案範例：命名空間中的客戶與訂單
+                  href: sample-xml-file-customers-orders-namespace.md
+                - name: XML 檔j案範例：數值資料
+                  href: sample-xml-file-numerical-data.md
+                - name: XML 檔j案範例：命名空間中的數值資料
+                  href: sample-xml-file-numerical-data-namespace.md
+                - name: XML 檔j案範例：書籍
+                  href: sample-xml-file-books.md
+                - name: XML 檔j案範例：合併的訂購單
+                  href: sample-xml-file-consolidated-purchase-orders.md
+        - name: 參考
+          href: reference.md
