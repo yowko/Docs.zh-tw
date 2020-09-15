@@ -2,48 +2,53 @@
 title: 程式碼分析的重大變更
 description: 列出 .NET 來源程式碼分析器中的重大變更。
 ms.date: 09/02/2020
-ms.openlocfilehash: f1e89c90e6d91b9b3555542a0c7adf2607a76a01
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 20badd69b316e1d87700b3c5061a71d648b71c64
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598061"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065138"
 ---
-# <a name="code-analysis-breaking-changes"></a><span data-ttu-id="e3a49-103">程式碼分析的重大變更</span><span class="sxs-lookup"><span data-stu-id="e3a49-103">Code analysis breaking changes</span></span>
+# <a name="code-analysis-breaking-changes"></a><span data-ttu-id="9c2cf-103">程式碼分析的重大變更</span><span class="sxs-lookup"><span data-stu-id="9c2cf-103">Code analysis breaking changes</span></span>
 
-<span data-ttu-id="e3a49-104">此頁面記載了下列重大變更：</span><span class="sxs-lookup"><span data-stu-id="e3a49-104">The following breaking changes are documented on this page:</span></span>
+<span data-ttu-id="9c2cf-104">此頁面記載了下列重大變更：</span><span class="sxs-lookup"><span data-stu-id="9c2cf-104">The following breaking changes are documented on this page:</span></span>
 
-| <span data-ttu-id="e3a49-105">重大變更</span><span class="sxs-lookup"><span data-stu-id="e3a49-105">Breaking change</span></span> | <span data-ttu-id="e3a49-106">引進的版本</span><span class="sxs-lookup"><span data-stu-id="e3a49-106">Version introduced</span></span> |
+| <span data-ttu-id="9c2cf-105">重大變更</span><span class="sxs-lookup"><span data-stu-id="9c2cf-105">Breaking change</span></span> | <span data-ttu-id="9c2cf-106">引進的版本</span><span class="sxs-lookup"><span data-stu-id="9c2cf-106">Version introduced</span></span> |
 | - | :-: |
-| [<span data-ttu-id="e3a49-107">CA1417： P/Invoke 的字串參數上的 OutAttribute</span><span class="sxs-lookup"><span data-stu-id="e3a49-107">CA1417: OutAttribute on string parameter for P/Invoke</span></span>](#ca1417-outattribute-on-string-parameter-for-pinvoke) | <span data-ttu-id="e3a49-108">5.0</span><span class="sxs-lookup"><span data-stu-id="e3a49-108">5.0</span></span> |
-| [<span data-ttu-id="e3a49-109">CA1831：針對字串使用 AsSpan 而非以範圍為基礎的索引子</span><span class="sxs-lookup"><span data-stu-id="e3a49-109">CA1831: Use AsSpan instead of Range-based indexers for string</span></span>](#ca1831-use-asspan-instead-of-range-based-indexers-for-string) | <span data-ttu-id="e3a49-110">5.0</span><span class="sxs-lookup"><span data-stu-id="e3a49-110">5.0</span></span> |
-| [<span data-ttu-id="e3a49-111">CA2013：請勿使用具有值類型的 ReferenceEquals</span><span class="sxs-lookup"><span data-stu-id="e3a49-111">CA2013: Do not use ReferenceEquals with value types</span></span>](#ca2013-do-not-use-referenceequals-with-value-types) | <span data-ttu-id="e3a49-112">5.0</span><span class="sxs-lookup"><span data-stu-id="e3a49-112">5.0</span></span> |
-| [<span data-ttu-id="e3a49-113">CA2014：請勿在迴圈中使用 stackalloc</span><span class="sxs-lookup"><span data-stu-id="e3a49-113">CA2014: Do not use stackalloc in loops</span></span>](#ca2014-do-not-use-stackalloc-in-loops) | <span data-ttu-id="e3a49-114">5.0</span><span class="sxs-lookup"><span data-stu-id="e3a49-114">5.0</span></span> |
-| [<span data-ttu-id="e3a49-115">CA2015：請勿定義衍生自 MemoryManager 之類型的完成項\<T></span><span class="sxs-lookup"><span data-stu-id="e3a49-115">CA2015: Do not define finalizers for types derived from MemoryManager\<T></span></span>](#ca2015-do-not-define-finalizers-for-types-derived-from-memorymanagert) | <span data-ttu-id="e3a49-116">5.0</span><span class="sxs-lookup"><span data-stu-id="e3a49-116">5.0</span></span> |
-| [<span data-ttu-id="e3a49-117">CA2247： >taskcompletionsource 的引數應為 TaskCreationOptions 值</span><span class="sxs-lookup"><span data-stu-id="e3a49-117">CA2247: Argument to TaskCompletionSource constructor should be TaskCreationOptions value</span></span>](#ca2247-argument-to-taskcompletionsource-constructor-should-be-taskcreationoptions-value) | <span data-ttu-id="e3a49-118">5.0</span><span class="sxs-lookup"><span data-stu-id="e3a49-118">5.0</span></span> |
+| [<span data-ttu-id="9c2cf-107">CA1416：平臺相容性</span><span class="sxs-lookup"><span data-stu-id="9c2cf-107">CA1416: Platform compatibility</span></span>](#ca1416-platform-compatibility) | <span data-ttu-id="9c2cf-108">5.0</span><span class="sxs-lookup"><span data-stu-id="9c2cf-108">5.0</span></span> |
+| [<span data-ttu-id="9c2cf-109">CA1417： P/Invoke 的字串參數上的 OutAttribute</span><span class="sxs-lookup"><span data-stu-id="9c2cf-109">CA1417: OutAttribute on string parameter for P/Invoke</span></span>](#ca1417-outattribute-on-string-parameter-for-pinvoke) | <span data-ttu-id="9c2cf-110">5.0</span><span class="sxs-lookup"><span data-stu-id="9c2cf-110">5.0</span></span> |
+| [<span data-ttu-id="9c2cf-111">CA1831：針對字串使用 AsSpan 而非以範圍為基礎的索引子</span><span class="sxs-lookup"><span data-stu-id="9c2cf-111">CA1831: Use AsSpan instead of Range-based indexers for string</span></span>](#ca1831-use-asspan-instead-of-range-based-indexers-for-string) | <span data-ttu-id="9c2cf-112">5.0</span><span class="sxs-lookup"><span data-stu-id="9c2cf-112">5.0</span></span> |
+| [<span data-ttu-id="9c2cf-113">CA2013：請勿使用具有值類型的 ReferenceEquals</span><span class="sxs-lookup"><span data-stu-id="9c2cf-113">CA2013: Do not use ReferenceEquals with value types</span></span>](#ca2013-do-not-use-referenceequals-with-value-types) | <span data-ttu-id="9c2cf-114">5.0</span><span class="sxs-lookup"><span data-stu-id="9c2cf-114">5.0</span></span> |
+| [<span data-ttu-id="9c2cf-115">CA2014：請勿在迴圈中使用 stackalloc</span><span class="sxs-lookup"><span data-stu-id="9c2cf-115">CA2014: Do not use stackalloc in loops</span></span>](#ca2014-do-not-use-stackalloc-in-loops) | <span data-ttu-id="9c2cf-116">5.0</span><span class="sxs-lookup"><span data-stu-id="9c2cf-116">5.0</span></span> |
+| [<span data-ttu-id="9c2cf-117">CA2015：請勿定義衍生自 MemoryManager 之類型的完成項\<T></span><span class="sxs-lookup"><span data-stu-id="9c2cf-117">CA2015: Do not define finalizers for types derived from MemoryManager\<T></span></span>](#ca2015-do-not-define-finalizers-for-types-derived-from-memorymanagert) | <span data-ttu-id="9c2cf-118">5.0</span><span class="sxs-lookup"><span data-stu-id="9c2cf-118">5.0</span></span> |
+| [<span data-ttu-id="9c2cf-119">CA2247： >taskcompletionsource 的引數應為 TaskCreationOptions 值</span><span class="sxs-lookup"><span data-stu-id="9c2cf-119">CA2247: Argument to TaskCompletionSource constructor should be TaskCreationOptions value</span></span>](#ca2247-argument-to-taskcompletionsource-constructor-should-be-taskcreationoptions-value) | <span data-ttu-id="9c2cf-120">5.0</span><span class="sxs-lookup"><span data-stu-id="9c2cf-120">5.0</span></span> |
 
-## <a name="net-50"></a><span data-ttu-id="e3a49-119">.NET 5。0</span><span class="sxs-lookup"><span data-stu-id="e3a49-119">.NET 5.0</span></span>
+## <a name="net-50"></a><span data-ttu-id="9c2cf-121">.NET 5。0</span><span class="sxs-lookup"><span data-stu-id="9c2cf-121">.NET 5.0</span></span>
 
-[!INCLUDE [outattributes-on-pinvoke-string-parameters](../../../includes/core-changes/codeanalysis/5.0/outattributes-on-pinvoke-string-parameters.md)]
-
-***
-
-[!INCLUDE [range-based-indexer-on-string](../../../includes/core-changes/codeanalysis/5.0/range-based-indexer-on-string.md)]
+[!INCLUDE [ca1416-platform-compatibility-analyzer](../../../includes/core-changes/codeanalysis/5.0/ca1416-platform-compatibility-analyzer.md)]
 
 ***
 
-[!INCLUDE [referenceequals-on-value-types](../../../includes/core-changes/codeanalysis/5.0/referenceequals-on-value-types.md)]
+[!INCLUDE [outattributes-on-pinvoke-string-parameters](../../../includes/core-changes/codeanalysis/5.0/ca1417-outattributes-on-pinvoke-string-parameters.md)]
 
 ***
 
-[!INCLUDE [stackalloc-in-loops](../../../includes/core-changes/codeanalysis/5.0/stackalloc-in-loops.md)]
+[!INCLUDE [range-based-indexer-on-string](../../../includes/core-changes/codeanalysis/5.0/ca1831-range-based-indexer-on-string.md)]
 
 ***
 
-[!INCLUDE [finalizers-for-memorymanager-types](../../../includes/core-changes/codeanalysis/5.0/finalizers-for-memorymanager-types.md)]
+[!INCLUDE [referenceequals-on-value-types](../../../includes/core-changes/codeanalysis/5.0/ca2013-referenceequals-on-value-types.md)]
 
 ***
 
-[!INCLUDE [ctor-arg-should-be-taskcreationoptions](../../../includes/core-changes/codeanalysis/5.0/ctor-arg-should-be-taskcreationoptions.md)]
+[!INCLUDE [stackalloc-in-loops](../../../includes/core-changes/codeanalysis/5.0/ca2014-stackalloc-in-loops.md)]
+
+***
+
+[!INCLUDE [finalizers-for-memorymanager-types](../../../includes/core-changes/codeanalysis/5.0/ca2015-finalizers-for-memorymanager-types.md)]
+
+***
+
+[!INCLUDE [ctor-arg-should-be-taskcreationoptions](../../../includes/core-changes/codeanalysis/5.0/ca2247-ctor-arg-should-be-taskcreationoptions.md)]
 
 ***
