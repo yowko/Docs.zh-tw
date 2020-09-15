@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: ddffe4aaaed6c9079999b2ab29ca61ab5753f15a
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598145"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065028"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -108,7 +108,7 @@ C # 9.0 引進了 ***記錄類型***，這是一種參考型別，可提供合�
 
 ## <a name="init-only-setters"></a>僅供初始化的 Setter
 
-***Init only setter*** 提供一致的語法來初始化物件的成員。 屬性初始化運算式可讓它清除哪個值正在設定哪個屬性。 缺點是這些屬性必須是可設定的。 從 c # 9.0 開始，您可以建立存取子， `init` 而不是 `set` 屬性和索引子的存取子。 呼叫端可以使用屬性初始化運算式語法來設定建立運算式中的這些值，但在結構完成之後，這些屬性是唯讀的。 僅限 Init 的 setter 提供視窗來變更狀態。 當建築階段結束時，該視窗就會關閉。 在所有初始化後（包括屬性初始化運算式和 with-expression），都能有效地結束結構階段。
+***Init only setter*** 提供一致的語法來初始化物件的成員。 屬性初始化運算式可讓它清楚哪個值會設定哪個屬性。 缺點是這些屬性必須是可設定的。 從 c # 9.0 開始，您可以建立存取子， `init` 而不是 `set` 屬性和索引子的存取子。 呼叫端可以使用屬性初始化運算式語法來設定建立運算式中的這些值，但在結構完成之後，這些屬性是唯讀的。 僅限 Init 的 setter 提供視窗來變更狀態。 當建築階段結束時，該視窗就會關閉。 在所有初始化後（包括屬性初始化運算式和 with-expression），都能有效地結束結構階段。
 
 上述的位置記錄範例示範如何使用初始化 setter，以使用 with 運算式來設定屬性。 您可以在任何您撰寫的型別中宣告 init only setter。 例如，下列結構會定義氣象觀察結構：
 
@@ -122,7 +122,7 @@ C # 9.0 引進了 ***記錄類型***，這是一種參考型別，可提供合�
 
 ```csharp
 // Error! CS8852.
-now.TempetureInCelsius = 18;
+now.TemperatureInCelsius = 18;
 ```
 
 僅初始化 setter 有助於從衍生類別設定基類屬性。 它們也可以透過基類中的協助程式來設定衍生屬性。 位置記錄會使用僅初始化 setter 來宣告屬性。 這些 setter 會在 with 運算式中使用。 您可以針對任何或定義，宣告 init only 的 setter `class` `struct` 。
