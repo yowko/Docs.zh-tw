@@ -129,9 +129,6 @@ items:
               - name: 安裝並使用套件
                 href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
                 displayName: 'tutorials, visual studio for mac, vs for mac'
-              - name: 建立及發行套件
-                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
-                displayName: tutorials
           - name: 更多教學課程
             href: ../core/tutorials/index.md
   - name: 新功能
@@ -308,6 +305,8 @@ items:
                 href: ../core/diagnostics/index.md
               - name: 受控偵錯工具
                 href: ../core/diagnostics/managed-debuggers.md
+              - name: 對 Linux 傾印進行偵錯
+                href: ../core/diagnostics/debug-linux-dumps.md
               - name: EventCounters
                 href: ../core/diagnostics/event-counters.md
               - name: 記錄和追蹤
@@ -322,6 +321,10 @@ items:
                     href: ../core/diagnostics/dotnet-gcdump.md
                   - name: dotnet-trace
                     href: ../core/diagnostics/dotnet-trace.md
+                  - name: dotnet-symbol
+                    href: ../core/diagnostics/dotnet-symbol.md
+                  - name: dotnet-sos
+                    href: ../core/diagnostics/dotnet-sos.md
               - name: .NET Core 診斷教學課程
                 items:
                   - name: 使用 EventCounters 取得效能計量
