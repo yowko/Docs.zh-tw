@@ -4,12 +4,12 @@ description: 瞭解 .NET 應用程式和程式庫的目標 framework。
 ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9c5d3605f893072b2a5e84751e3657152ac0213e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598151"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065249"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 樣式專案中的目標 framework
 
@@ -125,9 +125,9 @@ public class MyClass
 }
 ```
 
-當您使用 SDK 樣式專案時，組建系統會注意代表支援的 [目標 framework 版本](#supported-target-frameworks) 資料表中所顯示之目標 framework 的預處理器符號。 使用代表 .NET Standard 或 .NET Core TFM 的符號時，請以底線取代點，並將小寫字母變更為大寫 (例如 `netstandard1.4` 的符號是 `NETSTANDARD1_4`)。
+當您使用 SDK 樣式專案時，組建系統會注意代表支援的 [目標 framework 版本](#supported-target-frameworks) 資料表中所顯示之目標 framework 的預處理器符號。 使用代表 .NET Standard、.NET Core 或 .NET 5 TFM 的符號時，以底線取代點和連字號，並將小寫字母變更為大寫 (例如，的符號 `netstandard1.4` 會 `NETSTANDARD1_4`) 。
 
-.NET Core 目標 Framework 之前置處理器符號的完整清單如下：
+.NET 目標 framework 的預處理器符號完整清單如下：
 
 [!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 

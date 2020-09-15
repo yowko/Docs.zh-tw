@@ -104,6 +104,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
         - name: Covariant 傳回類型
           href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: foreach 迴圈中的延伸模組 GetEnumerator
+          href: ../../../../_csharplang/proposals/csharp-9.0/extension-getenumerator.md
         - name: Lambda 捨棄參數
           href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
         - name: 區域函式上的屬性

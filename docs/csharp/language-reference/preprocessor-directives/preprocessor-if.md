@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: f01db9d7801d4b6f4c273a9cf82806acbb4828bb
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: dc3e235db49279691203a0db4d124239fb972c69
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89138133"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065226"
 ---
 # <a name="if-c-reference"></a>#if (c # 參考) 
 
@@ -40,12 +40,12 @@ ms.locfileid: "89138133"
 
 使用 `#define` 建立的符號範圍是定義它的檔案。
 
-組建系統也會留意表示 SDK 樣式專案中不同 [目標 framework](../../../standard/frameworks.md) 的預先定義預處理器符號。 若要建立能以多個 .NET 實作或版本為目標的應用程式，這些符號就很實用。
+組建系統也會留意表示 SDK 樣式專案中不同 [目標 framework](../../../standard/frameworks.md) 的預先定義預處理器符號。 當您建立的應用程式可能會以多個 .NET 版本為目標時，它們會很有用。
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
 > [!NOTE]
-> 針對傳統的 .NET Framework 專案，您必須透過專案的 [屬性] 頁面，手動設定 Visual Studio 中不同目標 framework 的條件式編譯符號。
+> 針對傳統的非 SDK 樣式專案，您必須透過專案的 [屬性] 頁面，在 Visual Studio 中手動設定不同目標 framework 的條件式編譯符號。
 
 其他預先定義符號包括 DEBUG 和 TRACE 常數。 您可以使用 `#define` 來覆寫為專案所設定的值。 例如，DEBUG 符號會根據您的組建組態屬性 ("Debug" 或 "Release" 模式) 而自動設定。
 
