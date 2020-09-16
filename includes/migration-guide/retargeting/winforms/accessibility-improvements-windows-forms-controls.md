@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c8e1c91f4fee8aa896b6617c815fe2a4b6d22f2a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fa24c664e9f7cf6da78d0703c7ebb52c8ebbec20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614401"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606944"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls"></a>Windows Forms 控制項的協助工具改善
 
@@ -22,7 +22,7 @@ Windows Forms 正在使用協助工具技術改善其運作方式，以便為 Wi
 
 #### <a name="suggestion"></a>建議
 
-**如何加入宣告或退出這些變更**為了讓應用程式受益于這些變更，它必須在 .NET Framework 4.7.1 或更新版本上執行。 應用程式可以用下列任一種方式受益於這些變更：
+**如何加入宣告或退出這些變更** 為了讓應用程式受益于這些變更，它必須在 .NET Framework 4.7.1 或更新版本上執行。 應用程式可以用下列任一種方式受益於這些變更：
 
 - 它已重新編譯為以 .NET Framework 4.7.1 為目標。 在以 .NET Framework 4.7.1 或更新版本為目標的 Windows Forms 應用程式上，預設會啟用這些協助工具變更。
 - 藉由在 app config 檔案的 `<runtime>` 區段中新增下列 [AppContext 參數](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)，並將它設定為 `false`，選擇退出舊版協助工具行為，如下列範例所示。
@@ -40,7 +40,7 @@ Windows Forms 正在使用協助工具技術改善其運作方式，以便為 Wi
 </configuration>
 ```
 
-以 .NET Framework 4.7.1 或更新版本為目標，並且想要保留舊版協助工具行為的應用程式，可以藉由明確將此 AppContext 參數設為 `true`，選擇加入舊版的協助工具功能。<p/>如需 UI 自動化的概觀，請參閱 [UI 自動化概觀](~/docs/framework/ui-automation/ui-automation-overview.md)。<p/>**為 UI 自動化模式和屬性新增的支援**<br/>協助工具用戶端可以使用通用的公開描述叫用模式，利用新的 WinForms 協助工具功能。 這些不是 WinForms 特有模式。 例如，協助工具用戶端可以在 IAccessible 介面 (MAAS) 上呼叫 QueryInterface 方法，以取得 IServiceProvider 介面。 如果此介面可供使用，用戶端可以使用其 QueryService 方法來要求 IAccessibleEx 介面。 如需詳細資訊，請參閱[從用戶端使用 IAccessibleEx](https://docs.microsoft.com/windows/desktop/WinAuto/using-iaccessibleex-from-a-client)。 從 .NET Framework 4.7.1 開始，IServiceProvider 和 [IAccessibleEx](https://docs.microsoft.com/windows/desktop/WinAuto/iaccessibleex) (若適用) 可供 WinForms 協助工具物件使用。<p/>.NET Framework 4.7.1 為下列 UI 自動化模式和屬性新增支援：
+以 .NET Framework 4.7.1 或更新版本為目標，並且想要保留舊版協助工具行為的應用程式，可以藉由明確將此 AppContext 參數設為 `true`，選擇加入舊版的協助工具功能。<p/>如需 UI 自動化的概觀，請參閱 [UI 自動化概觀](~/docs/framework/ui-automation/ui-automation-overview.md)。<p/>**為 UI 自動化模式和屬性新增的支援**<br/>協助工具用戶端可以使用通用的公開描述叫用模式，利用新的 WinForms 協助工具功能。 這些不是 WinForms 特有模式。 例如，協助工具用戶端可以在 IAccessible 介面 (MAAS) 上呼叫 QueryInterface 方法，以取得 IServiceProvider 介面。 如果此介面可供使用，用戶端可以使用其 QueryService 方法來要求 IAccessibleEx 介面。 如需詳細資訊，請參閱[從用戶端使用 IAccessibleEx](/windows/desktop/WinAuto/using-iaccessibleex-from-a-client)。 從 .NET Framework 4.7.1 開始，IServiceProvider 和 [IAccessibleEx](/windows/desktop/WinAuto/iaccessibleex) (若適用) 可供 WinForms 協助工具物件使用。<p/>.NET Framework 4.7.1 為下列 UI 自動化模式和屬性新增支援：
 
 - <xref:System.Windows.Forms.ToolStripSplitButton> 和 <xref:System.Windows.Forms.ComboBox> 控制項支援[展開/摺疊模式](~/docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)。
 - <xref:System.Windows.Forms.ToolStripMenuItem> 控制項有 [ControlType](~/docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md) 屬性值 <xref:System.Windows.Automation.ControlType.MenuItem?displayProperty=nameWithType>。
@@ -49,7 +49,7 @@ Windows Forms 正在使用協助工具技術改善其運作方式，以便為 Wi
 - <xref:System.Windows.Forms.ToolStripDropDownButton> 控制項具有 [ControlType](~/docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md) 屬性值 <xref:System.Windows.Automation.ControlType.MenuItem?displayProperty=nameWithType>。
 - <xref:System.Windows.Forms.DataGridViewCheckBoxCell> 控制項支援 <xref:System.Windows.Automation.TogglePattern>。
 - <xref:System.Windows.Forms.NumericUpDown> 和 <xref:System.Windows.Forms.DomainUpDown> 控制項支援 <xref:System.Windows.Automation.AutomationElement.NameProperty> 屬性，而且具有 <xref:System.Windows.Automation.ControlType.Spinner?displayProperty=nameWithType> 的 [ControlType](~/docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)。</p>
-**PropertyGrid 控制項的改進**.NET Framework 4.7.1 會在 PropertyBrowser 控制項中加入下列改良功能：
+**PropertyGrid 控制項的改進** .NET Framework 4.7.1 會將下列改良功能新增至 PropertyBrowser 控制項：
 
 - 使用者在 <xref:System.Windows.Forms.PropertyGrid> 控制項中輸入不正確的值時所顯示之 [錯誤] 對話方塊中的 [詳細資料]**** 按鈕，支援[展開/摺疊模式](~/docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)、狀態與名稱變更通知，以及值為 <xref:System.Windows.Automation.ControlType.MenuItem?displayProperty=nameWithType> 的 [ControlType](~/docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md) 屬性。
 - 展開 [錯誤] 對話方塊的 [詳細資料]**** 按鈕時所顯示的 [訊息] 窗格，現在可透過鍵盤存取，並可讓朗讀程式宣告錯誤訊息的內容。
@@ -69,9 +69,9 @@ Windows Forms 正在使用協助工具技術改善其運作方式，以便為 Wi
 - <xref:System.Windows.Forms.ButtonBase.FlatStyle> 屬性設定為 <xref:System.Windows.Forms.FlatStyle.System?displayProperty=nameWithType> (這是預設樣式) 的 <xref:System.Windows.Forms.Button> 和 <xref:System.Windows.Forms.CheckBox> 控制項，現在使用選取的高對比佈景主題中作業系統定義的色彩。 以往，文字和背景色彩不會呈現對比，因此難以閱讀。
 - <xref:System.Windows.Forms.Control.Enabled> 屬性設定為 **false** 的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.CheckBox>、<xref:System.Windows.Forms.RadioButton>、<xref:System.Windows.Forms.Label>、<xref:System.Windows.Forms.LinkLabel> 和 <xref:System.Windows.Forms.GroupBox> 控制項，使用陰影色彩呈現高對比佈景主題中的文字，導致與背景的對比過低。 現在，這些控制項使用作業系統所定義的「已停用文字」色彩。 此修正套用至 `FlatStyle` 屬性設定為非 <xref:System.Windows.Forms.FlatStyle.System?displayProperty=nameWithType> 值的控制項。 後者的控制項是由作業系統呈現。
 - <xref:System.Windows.Forms.DataGridView> 現在會於目前焦點所在的儲存格內容周圍呈現可見的矩形。 之前，這不會顯示在特定的高對比佈景主題中。
-- <xref:System.Windows.Forms.ToolStripMenuItem>其 <xref:System.Windows.Forms.ToolStripMenuItem.Enabled> 屬性設定為**false**的控制項現在會使用 &quot; 作業系統所定義的已停用文字 &quot; 色彩。
+- <xref:System.Windows.Forms.ToolStripMenuItem><xref:System.Windows.Forms.ToolStripMenuItem.Enabled>屬性設為**false**的控制項現在會使用 &quot; 作業系統所定義的停用文字 &quot; 色彩。
 - <xref:System.Windows.Forms.ToolStripMenuItem.Checked> 屬性設定為 **true** 的 <xref:System.Windows.Forms.ToolStripMenuItem> 控制項，現在以對比的系統色彩呈現相關聯的核取記號。  先前的核取記號色彩對比不足，無法在高對比佈景主題中顯示。
-注意：Windows 10 已變更某些高對比系統色彩的值。 Windows Forms 架構是以 Win32 架構為基礎。 若要獲得最佳體驗，請在最新版本的 Windows 上執行，並在測試應用程式中新增 app.config 檔案並取消批註下列程式碼，以加入宣告最新的 OS 變更：
+注意：Windows 10 已變更某些高對比系統色彩的值。 Windows Forms 架構是以 Win32 架構為基礎。 為了獲得最佳體驗，請在最新版本的 Windows 上執行，並藉由在測試應用程式中新增 app.config 檔案並取消批註下列程式碼，加入宣告最新的 OS 變更：
 
 ```xml
 <!-- Windows 10 -->
@@ -94,7 +94,7 @@ Windows Forms 正在使用協助工具技術改善其運作方式，以便為 Wi
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   | 主要       |
+| 範圍   | 主要       |
 | 版本 | 4.8         |
 | 類型    | 正在重定目標 |
 

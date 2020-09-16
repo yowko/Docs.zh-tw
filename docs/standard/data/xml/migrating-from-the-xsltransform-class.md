@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 32fac1b5ab339dd4c71d761cf07fcde99ce1f2fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282385"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550159"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>從 XslTransform 類別移轉
 
@@ -26,7 +26,7 @@ XSLT 架構已在 Visual Studio 2005 版本中重新設計。 <xref:System.Xml.X
 <xref:System.Xml.Xsl.XslCompiledTransform> 類別還包括其他最佳化功能，讓其速度要比 <xref:System.Xml.Xsl.XslTransform> 類別快很多。
 
 > [!NOTE]
-> 雖然 <xref:System.Xml.Xsl.XslCompiledTransform> 類別的整體效能優於 <xref:System.Xml.Xsl.XslTransform> 類別，但是在轉換時第一次呼叫 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 類別的 <xref:System.Xml.Xsl.XslCompiledTransform> 方法之執行速度可能會比 <xref:System.Xml.Xsl.XslTransform.Load%2A> 類別的 <xref:System.Xml.Xsl.XslTransform> 方法慢許多。 這是因為在載入之前必須先編譯 XSLT 檔案。 如需詳細資訊，請參閱下列部落格文章：[XslCompiledTransform 比 XslTransform 還慢嗎？](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform) (英文)
+> 雖然 <xref:System.Xml.Xsl.XslCompiledTransform> 類別的整體效能優於 <xref:System.Xml.Xsl.XslTransform> 類別，但是在轉換時第一次呼叫 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 類別的 <xref:System.Xml.Xsl.XslCompiledTransform> 方法之執行速度可能會比 <xref:System.Xml.Xsl.XslTransform.Load%2A> 類別的 <xref:System.Xml.Xsl.XslTransform> 方法慢許多。 這是因為在載入之前必須先編譯 XSLT 檔案。 如需詳細資訊，請參閱下列部落格文章：[XslCompiledTransform 比 XslTransform 還慢嗎？](/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform) (英文)
 
 ## <a name="security"></a>安全性
 
@@ -67,7 +67,7 @@ writer.Close();
 
 ### <a name="debug-option"></a>偵錯選項
 
-<xref:System.Xml.Xsl.XslCompiledTransform> 類別可以產生偵錯資訊，此資訊可讓您使用 Microsoft Visual Studio 偵錯工具來偵錯樣式表。 如需相關資訊，請參閱 <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>。
+<xref:System.Xml.Xsl.XslCompiledTransform> 類別可以產生偵錯資訊，此資訊可讓您使用 Microsoft Visual Studio 偵錯工具來偵錯樣式表。 如需相關資訊，請參閱 <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29> 。
 
 ## <a name="behavioral-differences"></a>行為的差異
 
@@ -117,11 +117,11 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 其他 MSXML 函式的支援已加入到 <xref:System.Xml.Xsl.XslCompiledTransform> 類別中。 下列清單說明新的或改良的功能：
 
-- msxsl:node-set：<xref:System.Xml.Xsl.XslTransform> 要求 [node-set Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) 函式的引數為 result tree fragment。 <xref:System.Xml.Xsl.XslCompiledTransform> 類別並沒有這項需求。
+- msxsl:node-set：<xref:System.Xml.Xsl.XslTransform> 要求 [node-set Function](/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) 函式的引數為 result tree fragment。 <xref:System.Xml.Xsl.XslCompiledTransform> 類別並沒有這項需求。
 
 - msxsl:version：在 <xref:System.Xml.Xsl.XslCompiledTransform> 中支援此函式。
 
-- XPath 擴充函式：現在支援 [ms:string-compare Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100))、[ms:utc Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100))、[ms:local-name Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100))、[ms:number Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100))、[ms:format-date Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) 和 [ms:format-time Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) 函式。
+- XPath 擴充函式：現在支援 [ms:string-compare Function](/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100))、[ms:utc Function](/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri Function](/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100))、[ms:local-name Function](/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100))、[ms:number Function](/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100))、[ms:format-date Function](/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) 和 [ms:format-time Function](/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) 函式。
 
 - 與結構描述相關的 XPath 擴充函式：<xref:System.Xml.Xsl.XslCompiledTransform> 原本就不支援這些函式。 不過，它們可以實作為擴充函式。
 

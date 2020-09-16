@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b2fd5ac6f03c0c66c05117a882d53af37e3f8665
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291964"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555929"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用  加入 XSLT 樣式表指令碼\<msxsl:script>
 <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
@@ -29,7 +29,7 @@ ms.locfileid: "84291964"
   
  其中 `msxsl` 是繫結至命名空間 `urn:schemas-microsoft-com:xslt` 的前置詞。  
   
- `language`屬性不是強制性的，但若指定，其值必須為下列其中一項： `C#` 、 `VB` 、 `JScript` 、 `JavaScript` 、 `VisualBasic` 或 `CSharp` 。 如果沒有指定的話，語言預設為 JScript。 `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
+ `language`屬性不是強制性的，但如果已指定，則其值必須是下列其中一項： `C#` 、 `VB` 、 `JScript` 、 `JavaScript` 、 `VisualBasic` 或 `CSharp` 。 如果沒有指定的話，語言預設為 JScript。 `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
   
  `implements-prefix` 屬性是必要的。 這個屬性用來宣告命名空間，並把它與指令碼區塊產生關聯。 這個屬性的值是表示命名空間的前置詞。 這個命名空間可以被定義在樣式表內的某處。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "84291964"
   
  若要從組件中取得辨識項，請使用 `this.GetType().Assembly.Evidence`。 若要從統一資源識別元 (URI) 取得辨識項，請使用 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`。  
   
- 如果使用的是採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但不含 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，則組件的安全性區域會預設為「完全信任」。 如需詳細資訊，請參閱 <xref:System.Security.SecurityZone> 和[具名使用權限集合](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))。  
+ 如果使用的是採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但不含 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，則組件的安全性區域會預設為「完全信任」。 如需詳細資訊，請參閱 <xref:System.Security.SecurityZone> 和[具名使用權限集合](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))。  
   
  函式可在 `msxsl:script` 項目內進行宣告。 下表顯示根據預設所支援的命名空間。 您可以使用所列之命名空間以外的類別。 不過這些類別必須是完整限定。  
   
 |預設的命名空間|描述|  
 |------------------------|-----------------|  
-|System|系統類別。|  
+|系統|系統類別。|  
 |System.Collection|集合類別。|  
 |System.Text|文字類別。|  
 |System.Text.RegularExpressions|規則運算式類別。|  
@@ -65,7 +65,7 @@ ms.locfileid: "84291964"
 |類型|對等的 .NET Framework 類別 (型別)|XPath 型別或 XSLT 型別|  
 |----------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
+|布林值|System.Boolean|XPath|  
 |Number|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  

@@ -2,19 +2,19 @@
 title: 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: acdb820206dee83ff44152a5562642a5c685d648
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 442371d211fe55cab33a87a5cf1b660679d7f94a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584073"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548549"
 ---
 # <a name="token-provider"></a>權杖提供者
-這個範例會示範如何實作自訂權杖提供者。 Windows Communication Foundation （WCF）中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 也隨附于 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：
+這個範例會示範如何實作自訂權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 也隨附于 CardSpace 權杖提供者。 自訂權杖提供者適用於下列情況：
 
 - 如果您有這些權杖提供者無法使用的認證存放區。
 
-- 如果您想要提供自己的自訂機制，讓使用者在 WCF 用戶端架構使用認證時，將詳細資料提供給該時間點時，可以將認證轉換成。
+- 如果您想要提供自己的自訂機制，以便在使用者提供詳細資料給 WCF 用戶端架構使用認證時，將認證從點轉換。
 
 - 如果您要建置自訂權杖。
 
@@ -107,7 +107,7 @@ ms.locfileid: "84584073"
 </system.serviceModel>
 ```
 
- 下列步驟示範如何開發自訂權杖提供者，並將它與 WCF 安全性架構整合：
+ 下列步驟說明如何開發自訂權杖提供者，並將它與 WCF 安全性架構整合：
 
 1. 撰寫自訂權杖提供者。
 
@@ -246,16 +246,16 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。
+2. 若要建立方案，請依照 [建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1. 在以系統管理員許可權開啟的 Visual Studio 2012 命令提示字元內，從範例安裝資料夾中執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
+1. 從使用系統管理員許可權開啟的 Visual Studio 2012 命令提示字元內，執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    > 安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。  
+    > Setup.bat 批次檔是設計來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數，會指向包含 Setup.bat 腳本所需之可執行檔的目錄。  
   
 2. 從 service\bin 啟動 service.exe。  
   
@@ -265,7 +265,7 @@ static void DisplayIdentityInformation()
   
 5. 在密碼提示中，使用在使用者名稱提示中輸入的相同字串。  
   
-6. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+6. 如果用戶端和服務無法通訊，請參閱 [WCF 範例的疑難排解提示](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -273,7 +273,7 @@ static void DisplayIdentityInformation()
   
 2. 將服務程式檔複製到服務電腦上的服務目錄。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。  
   
-3. 您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 此 Service.exe.config 檔必須更新以反映這個新憑證名稱。 您可以修改 Setup.bat 批次檔來建立伺服器憑證。 請注意，您必須從開發人員命令提示字元執行安裝 .bat 檔案，才能以系統管理員許可權開啟 Visual Studio。 您必須將 `%SERVER_NAME%` 變數設定為用來裝載服務之電腦的完整主機名稱。  
+3. 您伺服器憑證的主體名稱必須包含電腦的完整網域名稱。 此 Service.exe.config 檔必須更新以反映這個新憑證名稱。 您可以修改 Setup.bat 批次檔來建立伺服器憑證。 請注意，setup.bat 檔案必須從開發人員命令提示字元中執行，才能使用系統管理員許可權開啟 Visual Studio。 您必須將 `%SERVER_NAME%` 變數設定為用來裝載服務之電腦的完整主機名稱。  
   
 4. 將伺服器憑證複製到用戶端的 CurrentUser-TrustedPeople 存放區中。 當伺服器憑證是由用戶端信任的簽發者發行時，您就不需要這麼做。  
   
@@ -287,8 +287,8 @@ static void DisplayIdentityInformation()
   
 9. 在用戶端電腦上，從命令提示字元視窗啟動 `Client.exe`。  
   
-10. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 如果用戶端和服務無法通訊，請參閱 [WCF 範例的疑難排解提示](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
-1. 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
+1. 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。

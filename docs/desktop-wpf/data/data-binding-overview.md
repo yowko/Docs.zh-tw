@@ -7,12 +7,12 @@ ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 3c9615d7d79b5da1c180bb505f5f37b99aeae775
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: b187b8a274ab770c28d2c2bc2a9be621b501e842
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271993"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555766"
 ---
 # <a name="data-binding-overview-in-wpf"></a>WPF 中的資料系結總覽
 
@@ -75,7 +75,7 @@ WPF 中的資料系結功能有幾項優點，而不是傳統的模型，包括�
 
 - 目標屬性必須是相依性屬性。 大部分的 <xref:System.Windows.UIElement> 屬性是相依性屬性，而大部分的相依性屬性（唯讀除外）預設都支援資料系結。  (衍生自的型別只能定義相依性 <xref:System.Windows.DependencyObject> 屬性，而且所有型別都是 <xref:System.Windows.UIElement> 衍生自 `DependencyObject` 。 ) 
 
-- 雖然圖中未顯示，但請注意，系結來源物件不會限制為自訂的 .NET 物件。 WPF 資料系結支援 .NET 物件和 XML 格式的資料。 為了提供一些範例，您的系結來源可能是 <xref:System.Windows.UIElement> 、任何清單物件、ADO.NET 或 Web 服務物件，或是包含 XML 資料的 XmlNode。 如需詳細資訊，請參閱系結 [來源總覽](../../framework/wpf/data/binding-sources-overview.md)。
+- 雖然圖中未顯示，但請注意，系結來源物件不會限制為自訂的 .NET 物件。 WPF 資料系結支援 .NET 物件和 XML 格式的資料。 為了提供一些範例，您的系結來源可能是 <xref:System.Windows.UIElement> 、任何清單物件、ADO.NET 或 Web 服務物件，或是包含 XML 資料的 XmlNode。 如需詳細資訊，請參閱系結 [來源總覽](/dotnet/desktop/wpf/data/binding-sources-overview)。
 
 請務必記住，當您建立系結時，會將系結目標系結 *至* 系結來源。 例如，如果您使用資料系結在中顯示一些基礎 XML 資料 <xref:System.Windows.Controls.ListBox> ，則會將系結 `ListBox` 至 XML 資料。
 
@@ -99,7 +99,7 @@ WPF 中的資料系結功能有幾項優點，而不是傳統的模型，包括�
 
 - 圖中未說明的是系結 <xref:System.Windows.Data.BindingMode.OneTime> ，這會導致來源屬性初始化目標屬性，但不會傳播後續的變更。 如果資料內容變更或資料內容中的物件有所變更，則 *不* 會在目標屬性中反映變更。 如果目前狀態的快照集是適當的，或是資料是真正靜態的，則這種類型的系結是適當的。 如果您想要以來源屬性的某些值初始化目標屬性，但無法預先得知資料內容，則此類型的繫結也很有用。 這種模式基本上是較簡單的系結形式 <xref:System.Windows.Data.BindingMode.OneWay> ，可在來源值未變更的情況下提供較佳的效能。
 
-若要偵測來源變更 (適用于和系結 <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay>) ，來源必須執行適當的屬性變更通知機制，例如 <xref:System.ComponentModel.INotifyPropertyChanged> 。 請參閱如何：實作為執行範例的 [屬性變更通知](../../framework/wpf/data/how-to-implement-property-change-notification.md) <xref:System.ComponentModel.INotifyPropertyChanged> 。
+若要偵測來源變更 (適用于和系結 <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay>) ，來源必須執行適當的屬性變更通知機制，例如 <xref:System.ComponentModel.INotifyPropertyChanged> 。 請參閱如何：實作為執行範例的 [屬性變更通知](/dotnet/desktop/wpf/data/how-to-implement-property-change-notification) <xref:System.ComponentModel.INotifyPropertyChanged> 。
 
 <xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType>屬性提供有關系結模式的詳細資訊，以及如何指定系結方向的範例。
 
@@ -125,7 +125,7 @@ WPF 中的資料系結功能有幾項優點，而不是傳統的模型，包括�
 | `PropertyChanged` | 當您在中輸入時 <xref:System.Windows.Controls.TextBox> 。 | 聊天室視窗中的 TextBox 控制項。 |
 | `Explicit` | 當應用程式呼叫時 <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> 。 | 編輯表單中的 TextBox 控制項 (只有當使用者按一下 [提交] 按鈕時，才會更新來源值) 。 |
 
-如需範例，請參閱 how [to：控制 TextBox 文字更新來源](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)的時機。
+如需範例，請參閱 how [to：控制 TextBox 文字更新來源](/dotnet/desktop/wpf/data/how-to-control-when-the-textbox-text-updates-the-source)的時機。
 
 ## <a name="creating-a-binding"></a>建立系結
 
@@ -135,7 +135,7 @@ WPF 中的資料系結功能有幾項優點，而不是傳統的模型，包括�
 
 [!code-xaml[BindNonTextProperty](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/AutoConvertPropertyToColor.xaml#BindAutoConvertColor)]
 
-如需系結宣告語法的詳細資訊，以及如何在程式碼中設定系結的範例，請參閱系結宣告 [總覽](../../framework/wpf/data/binding-declarations-overview.md)。
+如需系結宣告語法的詳細資訊，以及如何在程式碼中設定系結的範例，請參閱系結宣告 [總覽](/dotnet/desktop/wpf/data/binding-declarations-overview)。
 
 如果將這個範例套用到我們的基本圖表，結果會類似下圖。 此圖描述系結， <xref:System.Windows.Data.BindingMode.OneWay> 因為 Background 屬性預設支援系結 <xref:System.Windows.Data.BindingMode.OneWay> 。
 
@@ -151,7 +151,7 @@ WPF 中的資料系結功能有幾項優點，而不是傳統的模型，包括�
 
 [!code-xaml[BindNonTextPropertyCompactBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/AutoConvertPropertyToColor.xaml#BindAutoConvertColorCompactBinding)]
 
-除了 <xref:System.Windows.FrameworkElement.DataContext%2A> 直接在專案上設定屬性之外， <xref:System.Windows.FrameworkElement.DataContext%2A> 也會繼承上階 (的值（例如第一個範例) 中的按鈕），並藉由設定系結的 <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> 屬性（例如最後一個範例) 的按鈕）來明確指定系結來源 (例如，您也可以使用 <xref:System.Windows.Data.Binding.ElementName?displayProperty=nameWithType> 屬性或 <xref:System.Windows.Data.Binding.RelativeSource?displayProperty=nameWithType> 屬性來指定系結來源。 當您要系 <xref:System.Windows.Data.Binding.ElementName%2A> 結至應用程式中的其他專案（例如，當您使用滑杆來調整按鈕的寬度）時，屬性會很有用。 <xref:System.Windows.Data.Binding.RelativeSource%2A>當在或中指定系結時，屬性會很有用 <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Style> 。 如需詳細資訊，請參閱 [如何：指定](../../framework/wpf/data/how-to-specify-the-binding-source.md)系結來源。
+除了 <xref:System.Windows.FrameworkElement.DataContext%2A> 直接在專案上設定屬性之外， <xref:System.Windows.FrameworkElement.DataContext%2A> 也會繼承上階 (的值（例如第一個範例) 中的按鈕），並藉由設定系結的 <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> 屬性（例如最後一個範例) 的按鈕）來明確指定系結來源 (例如，您也可以使用 <xref:System.Windows.Data.Binding.ElementName?displayProperty=nameWithType> 屬性或 <xref:System.Windows.Data.Binding.RelativeSource?displayProperty=nameWithType> 屬性來指定系結來源。 當您要系 <xref:System.Windows.Data.Binding.ElementName%2A> 結至應用程式中的其他專案（例如，當您使用滑杆來調整按鈕的寬度）時，屬性會很有用。 <xref:System.Windows.Data.Binding.RelativeSource%2A>當在或中指定系結時，屬性會很有用 <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Style> 。 如需詳細資訊，請參閱 [如何：指定](/dotnet/desktop/wpf/data/how-to-specify-the-binding-source)系結來源。
 
 ### <a name="specifying-the-path-to-the-value"></a>指定值的路徑
 
@@ -182,9 +182,9 @@ WPF 中的資料系結功能有幾項優點，而不是傳統的模型，包括�
 
 藉 <xref:System.Windows.Data.BindingExpression> 由 <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> 在資料繫結物件上呼叫來傳回物件。 下列文章示範類別的一些使用方式 <xref:System.Windows.Data.BindingExpression> ：
 
-- [從繫結的目標屬性取得繫結物件](../../framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)
+- [從繫結的目標屬性取得繫結物件](/dotnet/desktop/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property)
 
-- [控制 TextBox 文字更新來源的時機](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)
+- [控制 TextBox 文字更新來源的時機](/dotnet/desktop/wpf/data/how-to-control-when-the-textbox-text-updates-the-source)
 
 ## <a name="data-conversion"></a>資料轉換
 
@@ -231,7 +231,7 @@ WPF 中的資料系結功能有幾項優點，而不是傳統的模型，包括�
 
 您可以列舉任何實作為介面的集合 <xref:System.Collections.IEnumerable> 。 不過，若要設定動態系結，讓集合中的插入或刪除自動更新 UI，則集合必須執行 <xref:System.Collections.Specialized.INotifyCollectionChanged> 介面。 這個介面會公開每次基礎集合變更時必須引發的事件。
 
-WPF 提供 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別，這是公開介面之資料集合的內建實作為 <xref:System.Collections.Specialized.INotifyCollectionChanged> 。 若要完全支援將資料值從源物件傳送到目標，您集合中支援可系結屬性的每個物件也必須執行 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 如需詳細資訊，請參閱系結 [來源總覽](../../framework/wpf/data/binding-sources-overview.md)。
+WPF 提供 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別，這是公開介面之資料集合的內建實作為 <xref:System.Collections.Specialized.INotifyCollectionChanged> 。 若要完全支援將資料值從源物件傳送到目標，您集合中支援可系結屬性的每個物件也必須執行 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 如需詳細資訊，請參閱系結 [來源總覽](/dotnet/desktop/wpf/data/binding-sources-overview)。
 
 在執行您自己的集合之前，請考慮使用 <xref:System.Collections.ObjectModel.ObservableCollection%601> 或其中一個現有的集合類別，例如 <xref:System.Collections.Generic.List%601> 、 <xref:System.Collections.ObjectModel.Collection%601> 和等等 <xref:System.ComponentModel.BindingList%601> 。 如果您有 advanced 案例，而且想要執行自己的集合，請考慮使用 <xref:System.Collections.IList> ，它會提供可由索引個別存取的非泛型物件集合，進而提供最佳效能。
 
@@ -259,7 +259,7 @@ WPF 提供 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別
 
 下表顯示建立為預設收集視圖的視圖資料類型，或 <xref:System.Windows.Data.CollectionViewSource> 根據來源集合類型而建立的視圖資料類型。
 
-| 來源集合型別                    | 集合檢視型別 | 備註 |
+| 來源集合型別                    | 集合檢視型別 | 注意 |
 | ----------------------------------------- | -------------------- | ----- |
 | <xref:System.Collections.IEnumerable>     | 內部型別依據 <xref:System.Windows.Data.CollectionView> | 無法群組項目。 |
 | <xref:System.Collections.IList>           | <xref:System.Windows.Data.ListCollectionView> | 最快。 |
@@ -269,7 +269,7 @@ WPF 提供 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別
 
 指定集合檢視做為繫結來源是建立和使用集合檢視的方式之一。 WPF 也會為做為繫結來源使用的每個集合建立預設集合檢視。 如果您直接繫結至集合，WPF 會繫結至它的預設檢視。 此預設視圖是由相同集合的所有系結所共用，因此，) 稍後所討論的預設視圖會變更為一個繫結控制項或程式碼 (例如排序或變更目前的專案指標，並反映在相同集合的所有其他系結中。
 
-若要取得預設視圖，請使用 <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> 方法。 如需範例，請參閱 [取得資料集合的預設視圖](../../framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)。
+若要取得預設視圖，請使用 <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> 方法。 如需範例，請參閱 [取得資料集合的預設視圖](/dotnet/desktop/wpf/data/how-to-get-the-default-view-of-a-data-collection)。
 
 #### <a name="collection-views-with-adonet-datatables"></a>使用 ADO.NET Datatable 的集合視圖
 
@@ -277,7 +277,7 @@ WPF 提供 <xref:System.Collections.ObjectModel.ObservableCollection%601> 類別
 
 #### <a name="sorting"></a>排序
 
-如先前所述，檢視可以將排序順序套用到集合上。 當資料存在於基礎集合中時，資料本身可能有也可能沒有相關的順序。 對集合的檢視可以讓您依據所提供的比較準則，安排順序或變更預設順序。 因為是資料的用戶端檢視，常見的案例是使用者會想要針對資料行對應的值，而排序表格式資料的資料行。 藉由使用檢視，就可以套用這個使用者驅動的排序，同樣不需要對基礎集合進行任何變更，或甚至不需要重新查詢集合內容。 如需範例，請參閱 [在按一下標頭時排序 GridView 資料行](../../framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)。
+如先前所述，檢視可以將排序順序套用到集合上。 當資料存在於基礎集合中時，資料本身可能有也可能沒有相關的順序。 對集合的檢視可以讓您依據所提供的比較準則，安排順序或變更預設順序。 因為是資料的用戶端檢視，常見的案例是使用者會想要針對資料行對應的值，而排序表格式資料的資料行。 藉由使用檢視，就可以套用這個使用者驅動的排序，同樣不需要對基礎集合進行任何變更，或甚至不需要重新查詢集合內容。 如需範例，請參閱 [在按一下標頭時排序 GridView 資料行](/dotnet/desktop/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked)。
 
 下列範例顯示「 <xref:System.Windows.Controls.CheckBox> [何謂資料](#what-is-data-binding) 系結」一節中應用程式 UI 的「依分類和日期排序」的排序邏輯。
 
@@ -296,7 +296,7 @@ Views 也可以將篩選套用至集合，讓視圖只顯示完整集合的特�
 [!code-csharp[FilterEvent](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#FilterEvent)]
 [!code-vb[FilterEvent](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#FilterEvent)]
 
-如果您直接使用其中一個 <xref:System.Windows.Data.CollectionView> 類別，而不是 <xref:System.Windows.Data.CollectionViewSource> ，則會使用 <xref:System.Windows.Data.CollectionView.Filter%2A> 屬性來指定回呼。 如需範例，請參閱[篩選檢視中的資料](../../framework/wpf/data/how-to-filter-data-in-a-view.md)。
+如果您直接使用其中一個 <xref:System.Windows.Data.CollectionView> 類別，而不是 <xref:System.Windows.Data.CollectionViewSource> ，則會使用 <xref:System.Windows.Data.CollectionView.Filter%2A> 屬性來指定回呼。 如需範例，請參閱[篩選檢視中的資料](/dotnet/desktop/wpf/data/how-to-filter-data-in-a-view)。
 
 #### <a name="grouping"></a>群組
 
@@ -307,11 +307,11 @@ Views 也可以將篩選套用至集合，讓視圖只顯示完整集合的特�
 [!code-csharp[ListingGroupCheck](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#ListingGroupCheck)]
 [!code-vb[ListingGroupCheck](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#ListingGroupCheck)]
 
-如需另一個群組範例，請參閱[實作 GridView 的 ListView 中的群組項目](../../framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)。
+如需另一個群組範例，請參閱[實作 GridView 的 ListView 中的群組項目](/dotnet/desktop/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview)。
 
 #### <a name="current-item-pointers"></a>目前專案指標
 
-檢視也支援目前項目的概念。 您可以在集合檢視中逐一巡覽物件。 當您巡覽時，移動項目指標可以讓您擷取集合中存在該特定位置的物件。 如需範例，請參閱 [流覽資料 CollectionView 中的物件](../../framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)。
+檢視也支援目前項目的概念。 您可以在集合檢視中逐一巡覽物件。 當您巡覽時，移動項目指標可以讓您擷取集合中存在該特定位置的物件。 如需範例，請參閱 [流覽資料 CollectionView 中的物件](/dotnet/desktop/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview)。
 
 由於 WPF 只使用檢視 (可能是您指定的檢視或集合的預設檢視) 繫結至集合，因此集合的所有繫結都有目前項目指標。 當繫結至檢視時，`Path` 值中的斜線 ("/") 字元會指定檢視的目前項目。 在下列範例中，資料內容是集合檢視。 第一行繫結至集合。 第二行繫結至集合中的目前項目。 第三行繫結至集合中目前項目的 `Description` 屬性。
 
@@ -339,7 +339,7 @@ Views 也可以將篩選套用至集合，讓視圖只顯示完整集合的特�
 
 請注意，這兩個控制項都系結至相同的來源， *>listingdataview* 靜態資源 (在 [ [如何建立視圖] 區段](#how-to-create-a-view) 中看到此資源的定義) 。 這個系結的運作方式是因為在此案例中 (的 singleton 物件) 系結 <xref:System.Windows.Controls.ContentControl> 至集合視圖時，它會自動系結至 <xref:System.Windows.Data.CollectionView.CurrentItem%2A> 視圖的。 <xref:System.Windows.Data.CollectionViewSource>物件會自動同步處理貨幣和選取專案。 如果您的清單控制項未 <xref:System.Windows.Data.CollectionViewSource> 如這個範例所示系結至物件，則您必須將其屬性設定為，才能 <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> `true` 讓它運作。
 
-如需其他範例，請參閱系結 [至集合並根據選取專案顯示資訊](../../framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md) ，並 [以階層式資料使用主版詳細資料模式](../../framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。
+如需其他範例，請參閱系結 [至集合並根據選取專案顯示資訊](/dotnet/desktop/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection) ，並 [以階層式資料使用主版詳細資料模式](/dotnet/desktop/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data)。
 
 您可能已經注意到上述範例有使用範本。 事實上，資料不會以我們想要的方式顯示，而不使用範本 (明確使用的範本 <xref:System.Windows.Controls.ContentControl> ，以及) 隱含使用的範本 <xref:System.Windows.Controls.ListBox> 。 現在，下節中要說明資料範本化。
 
@@ -357,7 +357,7 @@ Views 也可以將篩選套用至集合，讓視圖只顯示完整集合的特�
 
 使用這兩個 DataTemplates 時，產生的 UI 就是 [ [什麼是資料](#what-is-data-binding) 系結] 區段中所顯示的 UI。 您可以從該螢幕擷取畫面看到，除了讓您將資料放在控制項中之外，DataTemplates 還可讓您為資料定義引人注目的視覺效果。 例如， <xref:System.Windows.DataTrigger> 在上述範例中，會 <xref:System.Windows.DataTemplate> 顯示具有*反白顯示* *>auctionitem*值的 *>auctionitem*，並顯示橙色框線和星號。
 
-如需資料範本的詳細資訊，請參閱 [資料範本化總覽](../../framework/wpf/data/data-templating-overview.md)。
+如需資料範本的詳細資訊，請參閱 [資料範本化總覽](/dotnet/desktop/wpf/data/data-templating-overview)。
 
 ## <a name="data-validation"></a>資料驗證
 
@@ -406,7 +406,7 @@ WPF 資料系結模型可讓您 <xref:System.Windows.Data.Binding.ValidationRule
 
 ![資料繫結驗證錯誤](./media/data-binding-overview/demo-validation-price.png "DataBindingDemo_ValidationDefault")
 
-如需如何提供邏輯來驗證對話方塊中所有控制項的範例，請參閱 [對話方塊](../../framework/wpf/app-development/dialog-boxes-overview.md)中的自訂對話方塊一節。
+如需如何提供邏輯來驗證對話方塊中所有控制項的範例，請參閱 [對話方塊](/dotnet/desktop/wpf/app-development/dialog-boxes-overview)中的自訂對話方塊一節。
 
 ### <a name="validation-process"></a>驗證程序
 
@@ -441,10 +441,10 @@ WPF 資料系結模型可讓您 <xref:System.Windows.Data.Binding.ValidationRule
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [系結至 LINQ 查詢的結果](../../framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
-- [資料繫結](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [系結至 LINQ 查詢的結果](/dotnet/desktop/wpf/data/how-to-bind-to-the-results-of-a-linq-query)
+- [資料繫結](/dotnet/desktop/wpf/advanced/optimizing-performance-data-binding)
 - [資料系結示範][data-binding-demo]
-- [操作說明文章](../../framework/wpf/data/data-binding-how-to-topics.md)
-- [繫結至 ADO.NET 資料來源](../../framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+- [操作說明文章](/dotnet/desktop/wpf/data/data-binding-how-to-topics)
+- [繫結至 ADO.NET 資料來源](/dotnet/desktop/wpf/data/how-to-bind-to-an-ado-net-data-source)
 
 [data-binding-demo]: https://github.com/microsoft/WPF-Samples/tree/master/Sample%20Applications/DataBindingDemo "資料系結示範應用程式"

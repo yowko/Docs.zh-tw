@@ -10,15 +10,15 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: db63c15357b0670c55b1174b91b02e2f49a0c4c1
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 74d821aff8308618f7c0efeb1b453db8214b877e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661975"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555942"
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
-記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 .NET Framework 4 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用受控程式碼來存取記憶體對應檔案，如[管理記憶體對應檔案](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) \(英文\) 所述。  
+記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 .NET Framework 4 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用受控程式碼來存取記憶體對應檔案，如[管理記憶體對應檔案](/previous-versions/ms810613(v=msdn.10)) \(英文\) 所述。  
   
  記憶體對應檔案的類型有兩種：  
   

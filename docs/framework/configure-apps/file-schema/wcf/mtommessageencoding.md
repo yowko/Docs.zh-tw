@@ -2,12 +2,12 @@
 title: <mtomMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: bd38bf812e6d8d9e57d99bf1a5b77ebb776193a5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cffde19c8fd06836eaaedb5c4fc8687b97ae0afe
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738846"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556176"
 ---
 # \<mtomMessageEncoding>
 指定編碼和訊息版本處理，用於 SOAP 訊息傳輸最佳化機制 (Message Transmission Optimization Mechanism，MTOM) 的訊息。  
@@ -44,13 +44,13 @@ ms.locfileid: "73738846"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|定義自訂繫結的所有繫結功能。|  
   

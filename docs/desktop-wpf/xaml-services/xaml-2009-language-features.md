@@ -5,21 +5,21 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: e58e6757b88958bf8a3547c8a272c2e6298dcecb
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: dfa2841d8bc1ed1429372908f0dda97d178c4ac3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071595"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556703"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 語言功能
-XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語言規格。 XAML 2009 引進了數個新的指示詞和建構。 其中包括[x:參數指令](xarguments-directive.md);[x:工廠方法指令](xfactorymethod-directive.md);[x:參考標記擴展](xreference-markup-extension.md);[x:類型參數指令](xtypearguments-directive.md);和通用語言基元(例如`x:Char`)的內置類型。
+XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語言規格。 XAML 2009 引進了數個新的指示詞和建構。 這些包含 [x:Arguments](xarguments-directive.md)指示詞; [x:FactoryMethod](xfactorymethod-directive.md)指示詞; [X:Reference 標記延伸](xreference-markup-extension.md); [x:TypeArguments](xtypearguments-directive.md)指示詞;以及通用語言基本類型的內建類型 (例如 `x:Char`) 。
 
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>WPF 和 Visual Studio 中的 XAML 2009 支援
 
 在 WPF 中，您可以使用 XAML 2009 功能，但只能針對未編譯 WPF 標記的 XAML。 編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 語言關鍵字和功能。
 
-請注意，對於 CLR 類型和類型系統，在 WPF 中載入鬆散 XAML 的現有技術，可能也會有比編譯標記的 XAML 更嚴格的安全性和存取限制。 如需詳細資訊，請參閱 [安全性 (WPF)](../../framework/wpf/security-wpf.md) 或 [WPF 安全性策略 - 平台安全性](../../framework/wpf/wpf-security-strategy-platform-security.md)。
+請注意，對於 CLR 類型和類型系統，在 WPF 中載入鬆散 XAML 的現有技術，可能也會有比編譯標記的 XAML 更嚴格的安全性和存取限制。 如需詳細資訊，請參閱 [安全性 (WPF)](/dotnet/desktop/wpf/security-wpf) 或 [WPF 安全性策略 - 平台安全性](/dotnet/desktop/wpf/wpf-security-strategy-platform-security)。
 
 XAML 2009 也引進了額外的功能，可修改先前的 XAML 2006 建構或修改基本標記形式。
 

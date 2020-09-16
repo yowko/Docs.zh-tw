@@ -1,21 +1,21 @@
 ---
 title: 在 Windows Process Activation Service 中裝載
-description: 瞭解 WAS 如何管理背景工作進程（包含裝載 WCF 服務的應用程式）的啟用和存留期。
+description: 瞭解 WAS 如何管理工作者進程的啟用和存留期，包含裝載 WCF 服務的應用程式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 6b0b23c21762009341fd62c029431824dd26d6c3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 860806fb6406b8ada075b449616f84a360e9ef3a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247256"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555818"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
-當工作者處理序包含裝載 Windows Communication Foundation (WCF) 服務的應用程式時，Windows 處理序啟用服務 (WAS) 會管理這些工作者處理序的啟用和存留期。 WAS 處理序模型會透過移除對 HTTP 的相依性，將 HTTP 伺服器的 IIS 6.0 處理序模型一般化。 這可讓 WCF 服務在支援以訊息為基礎之啟用的主控環境中，同時使用 HTTP 和非 HTTP 通訊協定（例如 Net.tcp），並提供在指定的電腦上裝載大量應用程式的功能。  
+當工作者處理序包含裝載 Windows Communication Foundation (WCF) 服務的應用程式時，Windows 處理序啟用服務 (WAS) 會管理這些工作者處理序的啟用和存留期。 WAS 處理序模型會透過移除對 HTTP 的相依性，將 HTTP 伺服器的 IIS 6.0 處理序模型一般化。 這可讓 WCF 服務在支援訊息型啟用的裝載環境中同時使用 HTTP 和非 HTTP 通訊協定（例如 Net.tcp），並提供在指定電腦上裝載大量應用程式的能力。  
   
- 如需建立在 WAS 裝載環境中執行之 WCF 服務的詳細資訊，請參閱[如何：在 was 中裝載 Wcf 服務](how-to-host-a-wcf-service-in-was.md)。  
+ 如需建立在 WAS 主控環境中執行之 WCF 服務的詳細資訊，請參閱 [如何：在 was 中裝載 Wcf 服務](how-to-host-a-wcf-service-in-was.md)。  
   
  WAS 處理序模型提供的幾項功能，可將應用程式裝載得更為穩固、容易管理，而且能夠更有效率地運用資源：  
   
@@ -26,12 +26,12 @@ ms.locfileid: "85247256"
 - 集中式應用程式組態和管理。  
   
 - 可讓應用程式善用 IIS 處理序模型的優勢，而不需要部署完整的 IIS 安裝項目。  
-[Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))適用于 IIS 7.0 和 Windows 進程啟用服務（WAS），以提供豐富的應用程式裝載環境來 NET4 WCF 和 WF 服務。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱[Appfabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))和[appfabric 裝載概念](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10))。  
+[Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)) 適用于 IIS 7.0 和 Windows Process Activation Service () 為 NET4 WCF 和 WF 服務提供豐富的應用程式裝載環境。 這些優點包括處理序生命週期管理、處理序回收、共用裝載、快速失敗保護、處理序損壞、隨選啟動和健康監視。 如需詳細資訊，請參閱 [Appfabric 裝載功能](/previous-versions/appfabric/ee677189(v=azure.10)) 和 [appfabric 裝載概念](/previous-versions/appfabric/ee677371(v=azure.10))。  
   
 ## <a name="elements-of-the-was-addressing-model"></a>WAS 定址模型項目  
- 包含統一資源識別元 (URI) 位址的應用程式，這些程式碼單元會經由伺服器來管理自身的存留期和執行環境。 單一 WAS 伺服器執行個體可以裝載許多不同的應用程式。 伺服器會將應用程式組織成稱為「*網站*」的群組。 同一個網站中的應用程式會依階層架構順序加以排列，以反映做為應用程式外部位址使用的 URI 結構。  
+ 包含統一資源識別元 (URI) 位址的應用程式，這些程式碼單元會經由伺服器來管理自身的存留期和執行環境。 單一 WAS 伺服器執行個體可以裝載許多不同的應用程式。 伺服器會將應用程式組織成稱為「 *網站*」的群組。 同一個網站中的應用程式會依階層架構順序加以排列，以反映做為應用程式外部位址使用的 URI 結構。  
   
- 應用程式位址包含兩個部分：基底 URI 前置詞和應用程式專屬的相對位址 (路徑)，兩者混合使用時，可以提供應用程式的外部位址。 基底 URI 前置詞是根據網站繫結所建構，並且用於該網站中的所有應用程式。 接著會藉由取得應用程式特定的路徑片段（例如 "/applicationOne"），並將它們附加至基底 URI 前置詞（例如 "net.tcp：//localhost"）來建立應用程式位址，以抵達完整的應用程式 URI。  
+ 應用程式位址包含兩個部分：基底 URI 前置詞和應用程式專屬的相對位址 (路徑)，兩者混合使用時，可以提供應用程式的外部位址。 基底 URI 前置詞是根據網站繫結所建構，並且用於該網站中的所有應用程式。 然後，應用程式位址會藉由取得應用程式特定的路徑片段 (例如，"/applicationOne" ) 並將它們附加至基底 URI 首碼 (例如 "net.tcp：//localhost" ) 到達完整應用程式 URI。  
   
  下表針對 WAS 網站 (包含 HTTP 和非 HTTP 網站繫結) 說明幾個可能的定址案例。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "85247256"
 
 - [WAS 啟動架構](was-activation-architecture.md)
 - [設定用於 WCF 的 WAS](configuring-the-wpa--service-for-use-with-wcf.md)
-- [如何：安裝和設定 WCF 啟用元件](how-to-install-and-configure-wcf-activation-components.md)
-- [How to: Host a WCF Service in WAS](how-to-host-a-wcf-service-in-was.md)
-- [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [作法：安裝和設定 WCF 啟用元件](how-to-install-and-configure-wcf-activation-components.md)
+- [作法：在 WAS 中裝載 WCF 服務](how-to-host-a-wcf-service-in-was.md)
+- [Windows Server AppFabric 裝載功能](/previous-versions/appfabric/ee677189(v=azure.10))

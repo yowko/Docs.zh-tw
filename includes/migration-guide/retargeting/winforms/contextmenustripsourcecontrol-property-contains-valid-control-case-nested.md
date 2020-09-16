@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 97299ddb9bee89c792ddb3d2b9c37516180996f7
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5529b8379c5cb9f1bc525e0c2340f6b885e35822
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614400"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606707"
 ---
 ### <a name="contextmenustripsourcecontrol-property-contains-a-valid-control-in-the-case-of-nested-toolstripmenuitems"></a>在巢狀 ToolStripMenuItems 的情況下，ContextMenuStrip.SourceControl 屬性包含有效的控制項
 
@@ -14,10 +14,10 @@ ms.locfileid: "85614400"
 
 #### <a name="suggestion"></a>建議
 
-**如何加入宣告或退出這些變更**為了讓應用程式受益于這些變更，它必須在 .NET Framework 4.7.2 或更新版本上執行。 應用程式可以用下列任一種方式受益於這些變更：
+**如何加入宣告或退出這些變更** 為了讓應用程式受益于這些變更，它必須在 .NET Framework 4.7.2 或更新版本上執行。 應用程式可以用下列任一種方式受益於這些變更：
 
 - 以 .NET Framework 4.7.2 為目標。 在以 .NET Framework 4.7.2 或更新版本為目標的 Windows Forms 應用程式上，預設會啟用這項變更。
-- 以 .NET Framework 4.7.1 或舊版為目標，並選擇不使用舊版協助工具行為；方法為在 app.config 檔的 `<runtime>` 區段中新增下列 [AppContext 參數](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element)，並將其設定為 `false`，如下範例所示。
+- 以 .NET Framework 4.7.1 或舊版為目標，並選擇不使用舊版協助工具行為；方法為在 app.config 檔的 `<runtime>` 區段中新增下列 [AppContext 參數](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)，並將其設定為 `false`，如下範例所示。
 
 ```xml
 <runtime>
@@ -29,7 +29,7 @@ ms.locfileid: "85614400"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   | Edge        |
+| 範圍   | Edge        |
 | 版本 | 4.7.2       |
 | 類型    | 正在重定目標 |
 

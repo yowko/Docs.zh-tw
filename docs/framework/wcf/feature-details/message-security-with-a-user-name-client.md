@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 9447487012cae370d35880e5b780465f9434051b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9bcac0e45d44270d27a4cf04677e967a80e94b90
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602618"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550198"
 ---
 # <a name="message-security-with-a-user-name-client"></a>使用者名稱用戶端的訊息安全性
-下圖顯示使用訊息層級安全性保護的 Windows Communication Foundation （WCF）服務和用戶端。 服務會使用 X.509 憑證來進行驗證。 用戶端會使用使用者名稱與密碼來進行驗證。  
+下圖顯示 Windows Communication Foundation 使用訊息層級安全性來保護 WCF) 服務和用戶端 (。 服務會使用 X.509 憑證來進行驗證。 用戶端會使用使用者名稱與密碼來進行驗證。  
   
- 如需範例應用程式，請參閱[訊息安全性使用者名稱](../samples/message-security-user-name.md)。  
+ 如需範例應用程式，請參閱 [訊息安全性使用者名稱](../samples/message-security-user-name.md)。  
   
  ![使用使用者名稱驗證的訊息安全性](media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|訊息|  
-|互通性|僅 Windows Communication Foundation （WCF）|  
+|互通性|Windows Communication Foundation 只 (WCF) |  
 |驗證 (伺服器)|初始交涉需要伺服器驗證|  
 |驗證 (用戶端)|使用者名稱/密碼|  
 |完整性|是，使用共用安全性內容|  
-|保密|是，使用共用安全性內容|  
+|機密性|是，使用共用安全性內容|  
 |傳輸|HTTP|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -125,10 +125,10 @@ ms.locfileid: "84602618"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [安全性總覽](security-overview.md)
+- [安全性概觀](security-overview.md)
 - [訊息安全性使用者名稱](../samples/message-security-user-name.md)
 - [服務身分識別和驗證](service-identity-and-authentication.md)
 - [\<identity>](../../configure-apps/file-schema/wcf/identity.md)
-- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 的資訊安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

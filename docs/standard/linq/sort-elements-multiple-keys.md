@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 81bfc1d19723377b9b2134c13b58f4e4d682c06f
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 161f354192b3bc5cecec7e7e1b457b23c415c073
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552256"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550125"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-linq-to-xml"></a>如何排序多個索引鍵上的元素 (LINQ to XML) 
 
@@ -159,4 +159,4 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 ## <a name="see-also"></a>另請參閱
 
-- [基本查詢 (LINQ to XML)  (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查詢 (LINQ to XML)  (Visual Basic) ](./find-element-specific-attribute.md)

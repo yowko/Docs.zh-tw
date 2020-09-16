@@ -2,12 +2,12 @@
 title: 自訂繫結安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: eb575594cec9ea714578bc104344acc14b00e9df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ce4cd76a053b9b3611751fe081d0ca710240049d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592459"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555701"
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
 
@@ -24,7 +24,7 @@ ms.locfileid: "84592459"
 
 - Windows 訊息安全性。
 
-自訂繫結組態會同時啟用訊息層級安全性以啟用安全傳輸。 繫結項目的順序對於定義自訂系結很重要，因為每個都代表通道堆疊中的一層（請參閱[自訂](../extending/custom-bindings.md)系結）。 自訂繫結會定義在服務與用戶端組態檔中，如下列範例組態所示。
+自訂繫結組態會同時啟用訊息層級安全性以啟用安全傳輸。 繫結項目的順序在定義自訂系結時很重要，因為每個專案都代表通道堆疊中的一層， (查看 [自訂](../extending/custom-bindings.md) 系結) 。 自訂繫結會定義在服務與用戶端組態檔中，如下列範例組態所示。
 
 ```xml
 <bindings>
@@ -106,24 +106,24 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
+3. 若要在單一或跨電腦的設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1. 以系統管理員許可權開啟 Visual Studio 視窗的開發人員命令提示字元，然後從範例安裝資料夾中執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
+1. 以系統管理員許可權開啟 Visual Studio 視窗的開發人員命令提示字元，然後從範例安裝資料夾執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    > 安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。
+    > Setup.bat 批次檔是設計來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數，會指向包含 Setup.bat 腳本所需之可執行檔的目錄。
 
 2. 從 \service\bin 啟動 Service.exe。
 
 3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。
 
-4. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
+4. 如果用戶端和服務無法通訊，請參閱 [WCF 範例的疑難排解提示](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。
 
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例
 
@@ -135,12 +135,12 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     3. 將 Setup.bat 和 Cleanup.bat 檔案複製到服務電腦中。
 
-    4. 在開發人員命令提示字元中，針對以系統管理員許可權開啟的 Visual Studio 執行下列命令： `Setup.bat service` 。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。
+    4. 在開發人員命令提示字元中執行下列命令，以使用系統管理員許可權開啟 Visual Studio： `Setup.bat service` 。 這會建立服務憑證，其主體名稱與批次檔執行於其中之電腦的名稱相符。
 
         > [!NOTE]
         > Setup.bat 批次檔是設計用來從 Visual Studio 2010 命令提示字元執行。 它要求 path 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Visual Studio 2010 命令提示字元中設定。
 
-    5. 變更 machine.config 檔案內的， [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 以反映在上一個步驟中產生之憑證的主體名稱。
+    5. 變更 Service.exe.config 檔案內的， [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 以反映上一個步驟所產生之憑證的主體名稱。
 
     6. 從命令提示字元執行 Service.exe。
 
@@ -150,7 +150,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2. 執行 Cleanup.bat，移除先前範例的任何舊憑證。
 
-    3. 若要匯出服務的憑證，請使用系統管理許可權開啟 Visual Studio 的開發人員命令提示字元，然後在服務電腦上執行下列命令（將取代為 `%SERVER_NAME%` 執行此服務之電腦的完整名稱）：
+    3. 以系統管理許可權開啟 Visual Studio 的開發人員命令提示字元，然後在服務電腦上執行下列命令，以匯出服務的憑證 (`%SERVER_NAME%` 以執行服務的電腦完整名稱取代) ：
 
         ```console
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -158,7 +158,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4. 將 %SERVER_NAME%.cer 複製到用戶端電腦 (將 %SERVER_NAME% 取代成執行此服務之電腦的完整名稱)。
 
-    5. 使用系統管理許可權開啟 Visual Studio 的開發人員命令提示字元，然後在用戶端電腦上執行下列命令，以匯入服務的憑證（請將% SERVER_NAME% 取代為執行此服務之電腦的完整名稱）：
+    5. 開啟具有系統管理許可權之 Visual Studio 的開發人員命令提示字元，然後在用戶端電腦上執行下列命令，以匯入服務的憑證 (以執行服務的電腦完整名稱來取代% SERVER_NAME%) ：
 
         ```console
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -179,7 +179,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7. 如果用於執行服務的帳戶有別於網域環境中的 NetworkService 或 LocalSystem 帳戶，您可能需要修改用戶端 App.config 檔中服務端點的端點身分識別，以根據用來執行服務之帳戶設定適當的 UPN 或 SPN。 如需有關端點身分識別的詳細資訊，請參閱[服務身分識別和驗證](../feature-details/service-identity-and-authentication.md)主題。
+    7. 如果用於執行服務的帳戶有別於網域環境中的 NetworkService 或 LocalSystem 帳戶，您可能需要修改用戶端 App.config 檔中服務端點的端點身分識別，以根據用來執行服務之帳戶設定適當的 UPN 或 SPN。 如需端點身分識別的詳細資訊，請參閱 [服務身分識別和驗證](../feature-details/service-identity-and-authentication.md) 主題。
 
     8. 從命令提示字元執行 Client.exe。
 

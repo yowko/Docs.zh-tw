@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 2fc74990b15caaa9b58e6eea5b0212ea22505674
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ceb027938b6d4313babbe02949e0b6dd5ee85589
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "82071826"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556690"
 ---
 # <a name="xamlname-grammar"></a>XamlName 文法
 
-XamlName 語法是在 XAML 語言規範 [MS-XAML] 中定義的一種特定語法,為了方便起見,此處進行了複製。
+XamlName 文法是在 XAML 語言規格 [MS-CHAP] 中定義的特定文法，為了方便起見，我們會在這裡重現。
 
-## <a name="from-the-xaml-specification"></a>從 XAML 規範
+## <a name="from-the-xaml-specification"></a>從 XAML 規格
 
-[MS-XAML] 規範定義語法 XamlName 來識別用於類型和屬性的法律符號識別符集。
+[MS-CHAP] 規格會定義文法 XamlName，以識別用於類型和屬性的一組合法符號識別碼。
 
-XamlName 類型的字串值必須符合以下語法:
+XamlName 型別的字串值必須符合下列文法：
 
 ```xaml
 XamlName ::= NameStartChar ( NameChar )*
@@ -34,7 +34,7 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc
 ```
 
-它假定 Unicode 字元資料庫中定義的一般類別值
+這會假設 Unicode 字元資料庫中定義的下列一般分類值
 
 | Unicode 類別   | 描述                   |
 |--------------------|-------------------------------|
@@ -43,14 +43,14 @@ CombiningCharacter ::= UnicodeMn | UnicodeMc
 | Lt                 | 字母、字首大寫             |
 | Lm                 | 字母、修飾詞              |
 | Lo                 | 字母、其他                 |
-| Mn                 | 標記,非間距             |
+| Mn                 | 標記、非間距             |
 | Mc                 | 記號，間距組合       |
-| Nd                 | 數位,十進位               |
+| Nd                 | 數位、十進位               |
 | Nl                 | 數字，字母                |
 
-XAML 定義了第二個語法,即 DottedXamlName,用於屬性和事件限定引用,也用於附加成員。 有關詳細資訊,請參閱<xref:System.Windows.DependencyProperty>和[XAML 概述 (WPF)。](../fundamentals/xaml.md)
+XAML 會定義第二個文法 DottedXamlName，它是用於屬性和事件限定參考，也會用於附加的成員。 如需詳細資訊，請參閱 <xref:System.Windows.DependencyProperty> 和 [XAML 總覽 (WPF) ](../fundamentals/xaml.md)。
 
-類型為 DottedXamlName 的字串值必須符合以下語法:
+DottedXamlName 型別的字串值必須符合下列文法：
 
 ```xaml
 DottedXamlName ::= XamlName '.' XamlName
@@ -58,4 +58,4 @@ DottedXamlName ::= XamlName '.' XamlName
 
 ## <a name="remarks"></a>備註
 
-有關完整的規範,請參閱[\[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))。
+如需完整的規格，請參閱[ \[ MS \] XAML](/previous-versions/msp-n-p/ff650760(v=pandp.10))。

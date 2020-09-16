@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8964cd2f69e95e4078001997ad5a5d126ce42d7b
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 9cd1d0955b8b77cb77d5c6938b37d9042d8144f6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497723"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606480"
 ---
 ### <a name="data-binding-improvement-for-keyedcollection"></a>KeyedCollection 的資料繫結改進
 
@@ -14,7 +14,7 @@ ms.locfileid: "89497723"
 
 #### <a name="suggestion"></a>建議
 
-為了讓以較舊版本為目標的應用程式受益于這項變更，它必須在 .NET Framework 4.8 或更新版本上執行，而且必須在應用程式佈建檔的區段中新增下列 [AppCoNtext 參數](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) ， <code>&lt;runtime&gt;</code> 並將其設定為，以加入宣告變更 <code>false</code> ：<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;startup&gt;&#13;&#10;&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.7&quot;/&gt;&#13;&#10;&lt;/startup&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Data.Binding.IListIndexerHidesCustomIndexer=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+為了讓以較舊版本為目標的應用程式受益于這項變更，它必須在 .NET Framework 4.8 或更新版本上執行，而且必須在應用程式佈建檔的區段中新增下列 [AppCoNtext 參數](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) ， <code>&lt;runtime&gt;</code> 並將其設定為，以加入宣告變更 <code>false</code> ：<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;startup&gt;&#13;&#10;&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.7&quot;/&gt;&#13;&#10;&lt;/startup&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Data.Binding.IListIndexerHidesCustomIndexer=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
 
 | 名稱    | 值       |
 |:--------|:------------|

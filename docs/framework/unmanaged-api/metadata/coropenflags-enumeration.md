@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: 7318a7ea3eb1ddb047a799e58ebdfd9ce6cd76d1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e474cac6437413565a1ebddfa88c3e228fe59d41
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007581"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556345"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 列舉
 包含在開啟資訊清單檔案時控制中繼資料行為的旗標值。  
@@ -48,7 +48,7 @@ typedef enum CorOpenFlags
   
 ## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
 |`ofRead`|指出應將檔案開啟為僅供讀取。|  
 |`ofWrite`|指出應將檔案開啟為可供寫入。<br /><br /> 若您在開啟 .winmd 檔案時使用 `ofWrite` 旗標，也應該傳遞 `ofNoTransform` 旗標。|  
@@ -56,10 +56,10 @@ typedef enum CorOpenFlags
 |`ofCopyMemory`|指出應將檔案讀取至記憶體。 中繼資料應保留其自己的複本。|  
 |`ofCacheImage`|已過時。 會忽略此旗標。|  
 |`ofManifestMetadata`|已過時。 會忽略此旗標。|  
-|`ofReadOnly`|指出應該開啟檔案進行讀取，而且 `QueryInterface` 無法對[IMetaDataEmit](imetadataemit-interface.md)呼叫。|  
-|`ofTakeOwnership`|表示已使用[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)的呼叫來配置記憶體，並將由中繼資料釋放。|  
+|`ofReadOnly`|指出應該開啟檔案以供讀取，而且 `QueryInterface` 無法對 [IMetaDataEmit](imetadataemit-interface.md) 進行呼叫。|  
+|`ofTakeOwnership`|指出記憶體是使用 [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) 呼叫所配置，且將由中繼資料釋放。|  
 |`ofNoTypeLib`|已過時。 會忽略此旗標。|  
-|`ofNoTransform`|指出應停用 .winmd 檔案的自動轉換。 換言之，應停用 Windows 執行階段類型對 .NET Framework 類型的投影。 如需詳細資訊，請參閱[.net 和 Windows 執行階段背後的 Windows 執行階段和 CLR](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)。|  
+|`ofNoTransform`|指出應停用 .winmd 檔案的自動轉換。 換言之，應停用 Windows 執行階段類型對 .NET Framework 類型的投影。 如需詳細資訊，請參閱 [以 .net 和 Windows 執行階段為基礎的 Windows 執行階段和 CLR](/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime)。|  
 |`ofReserved1`|保留供內部使用。|  
 |`ofReserved2`|保留供內部使用。|  
 |`ofReserved`|保留供內部使用。|  

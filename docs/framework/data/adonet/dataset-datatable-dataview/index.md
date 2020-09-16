@@ -1,14 +1,14 @@
 ---
 title: DataSet、DataTable 和 DataView
-description: 瞭解使用 ADO.NET 資料集的數種方式，此為記憶體常駐的資料表示，可提供一致的關聯式程式設計模型。
+description: 瞭解許多使用 ADO.NET 資料集的方法，這是可提供一致關聯式程式設計模型之資料的記憶體常駐表示。
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 53e12f701b9be1938d62f46bbeb6e63d95c03386
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: 4e1c0ea5f1de1715ad8e862e6a3ed7370b53c6ce
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374503"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555860"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable 和 DataView
 
@@ -22,7 +22,7 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
   
 - 使用 XML 載入並保存 <xref:System.Data.DataSet> 內容。 如需詳細資訊，請參閱[在 DataSet 中使用 XML](using-xml-in-a-dataset.md)。  
   
-也可以使用 XML Web Service 傳輸強型別的 <xref:System.Data.DataSet>。 <xref:System.Data.DataSet> 的設計非常適合使用 XML Web Service 來傳輸資料。 如需 XML Web Service 的概觀，請參閱 [XML Web Service 概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100))。 如需使用來自 XML Web Service 之 <xref:System.Data.DataSet> 的範例，請參閱[從 XML Web Service 使用 DataSet](consuming-a-dataset-from-an-xml-web-service.md)。  
+也可以使用 XML Web Service 傳輸強型別的 <xref:System.Data.DataSet>。 <xref:System.Data.DataSet> 的設計非常適合使用 XML Web Service 來傳輸資料。 如需 XML Web Service 的概觀，請參閱 [XML Web Service 概觀](/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100))。 如需使用來自 XML Web Service 之 <xref:System.Data.DataSet> 的範例，請參閱[從 XML Web Service 使用 DataSet](consuming-a-dataset-from-an-xml-web-service.md)。  
   
 ## <a name="in-this-section"></a>本節內容
 
@@ -41,7 +41,7 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
  [導覽 DataRelation](navigating-datarelations.md)  
  說明如何使用 <xref:System.Data.DataSet> 之資料表間的關聯性，傳回父子關係的子資料列或父資料列。  
   
- [合併 DataSet 內容](merging-dataset-contents.md)  
+ [合併資料集內容](merging-dataset-contents.md)  
  說明如何將一個 <xref:System.Data.DataSet>、<xref:System.Data.DataTable> 或 <xref:System.Data.DataRow> 陣列的內容合併到另一個 <xref:System.Data.DataSet>。  
   
  [複製資料集內容](copying-dataset-contents.md)  
@@ -53,7 +53,7 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
  [具類型資料集](typed-datasets.md)  
  說明何謂具型別的 <xref:System.Data.DataSet> 以及它們的建立和使用方式。  
   
- [DataTable](datatables.md)  
+ [DataTables](datatables.md)  
  說明如何建立 <xref:System.Data.DataTable>、定義結構描述，以及管理資料。  
   
  [DataTableReader](datatablereaders.md)  

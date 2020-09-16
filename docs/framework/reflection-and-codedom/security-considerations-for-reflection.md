@@ -11,12 +11,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 0465cbd5ceb7d4f44bb6d10865fcbd17b8ed7af6
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9ef2ac4897b3f8c48a0b0f402ab06eb073a5c1fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865251"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556332"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 
@@ -60,7 +60,7 @@ ms.locfileid: "86865251"
 
 從命令列執行的應用程式程式碼會以完全信任來執行。 只要不是標示為透明，就可以使用反映來存取安全性關鍵成員。 以部分信任來執行相同的程式碼時 (例如，在沙箱化應用程式定義域中)，組件的信任層級可決定它是否能夠存取安全性關鍵程式碼：如果組件有強式名稱，並安裝在全域組件快取中，則其為受信任的組件，可以呼叫安全性關鍵成員。 如果不受信任，則會變成透明 (即使它不是標示為透明)，而且不能存取安全性關鍵成員。
 
-如需 .NET Framework 4 的安全模型詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。
+如需 .NET Framework 4 的安全模型詳細資訊，請參閱[安全性變更](/previous-versions/dotnet/framework/security/security-changes)。
 
 ## <a name="reflection-and-transparency"></a>反映和透明度
 
@@ -68,7 +68,7 @@ ms.locfileid: "86865251"
 
 |安全性層級|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|重要|`true`|`false`|`false`|
+|重大|`true`|`false`|`false`|
 |安全關鍵|`true`|`true`|`false`|
 |透明|`false`|`false`|`true`|
 
@@ -116,7 +116,7 @@ ms.locfileid: "86865251"
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [安全性變更](/previous-versions/dotnet/framework/security/security-changes)
 - [代碼啟用安全性](../misc/code-access-security.md)
 - [反映發出中的安全性問題](security-issues-in-reflection-emit.md)
 - [檢視類型資訊](viewing-type-information.md)

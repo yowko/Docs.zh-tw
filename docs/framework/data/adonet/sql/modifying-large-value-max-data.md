@@ -1,16 +1,16 @@
 ---
-title: 修改大值（最大）資料
+title: 修改大數值 (最大) 資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 00a4ae83270bb74e9703faebfc93e26b5c069478
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a077c56f4de5a88e9c2a6f932c9a8b5ffc6b974
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174273"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556963"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大量數值 (max) 資料
 大型物件 (LOB) 資料類型是指資料列大小上限超過 8 KB 的資料類型。 SQL Server 提供 `varchar`、`nvarchar` 和 `varbinary` 資料類型的 `max` 規範，允許儲存最大達 2^32 位元組的值。 資料表資料行和 Transact-SQL 變數可能會指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料類型。 在 ADO.NET 中，`max` 資料型別可透過 `DataReader` 來擷取，也可指定為輸入及輸出參數值，並且不需要任何特殊處理。 對於大型 `varchar` 資料類型，可以使用累加方式來擷取和更新資料。  
@@ -19,9 +19,9 @@ ms.locfileid: "79174273"
   
  下表將提供《SQL Server 線上叢書》中相關文件的連結。  
   
- **SQL Server 文件集**  
+ **SQL Server 文件**  
   
-1. [使用大數值資料類型](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
+1. [使用大數值資料類型](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
   
 ## <a name="large-value-type-restrictions"></a>大數值型別限制  
  下列限制適用於 `max` 資料類型，較小的資料類型則不存在這些限制：  
@@ -57,11 +57,11 @@ FROM OPENROWSET
   
  UPDATE  
   
- [*\<物件>* ]  
+ { *\<object>* }  
   
  SET  
   
- [ *column_name* ]寫入*expression*（運算式@Offset @Length ， ， ） *  
+ { *column_name* = {。寫入 ( *運算式* ， @Offset @Length ) }  
   
  WRITE 方法指定將對 *column_name* 值的某個區段進行修改。 其中，expression 是要複製到 *column_name* 的值；`@Offset` 是要寫入運算式的起點；`@Length` 引數是資料行中區段的長度。  
   
@@ -251,7 +251,7 @@ WHERE   DocumentID=@DocumentID
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL 伺服器二進位和大值資料](sql-server-binary-and-large-value-data.md)
+- [SQL Server 二進位和大數值資料](sql-server-binary-and-large-value-data.md)
 - [SQL Server 資料類型對應](../sql-server-data-type-mappings.md)
-- [ADO.NET中的 SQL 伺服器資料操作](sql-server-data-operations.md)
+- [ADO.NET 中的 SQL Server 資料作業](sql-server-data-operations.md)
 - [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

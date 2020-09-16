@@ -3,15 +3,15 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: a0db10ceb75a470dbf799d717b2059355dd104bb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4169fe307e9ef7c391500a2292fcc247f435caa9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646072"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555883"
 ---
 # \<sessionSecurityTokenCache>
-向服務或安全性權杖處理常式集合註冊會話權杖的快取。  
+使用服務或安全性權杖處理常式集合來註冊會話權杖的快取。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
@@ -39,19 +39,19 @@ ms.locfileid: "81646072"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|type|衍生自類別的類型 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 。|  
+|type|衍生自類別的型別 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<caches>](caches.md)|註冊服務或安全性權杖處理常式集合所使用的快取。|  
   
 ## <a name="example"></a>範例  
- 下列 XML 顯示用來保存會話安全性權杖（）的自訂快取設定 <xref:System.IdentityModel.Tokens.SessionSecurityToken> 。 此設定取自 `ClaimsAwareWebFarm` 範例。 如需此範例的詳細資訊，請參閱[WIF 程式碼範例索引](https://docs.microsoft.com/previous-versions/dotnet/framework/security/wif-code-sample-index)。  
+ 下列 XML 會顯示 () 保存會話安全性權杖的自訂快取設定 <xref:System.IdentityModel.Tokens.SessionSecurityToken> 。 設定取自 `ClaimsAwareWebFarm` 範例。 如需此範例的詳細資訊，請參閱 [WIF 程式碼範例索引](/previous-versions/dotnet/framework/security/wif-code-sample-index)。  
   
 ```xml  
 <caches>  

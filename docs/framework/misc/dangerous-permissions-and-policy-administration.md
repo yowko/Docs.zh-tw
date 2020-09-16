@@ -1,6 +1,6 @@
 ---
 title: 危險使用權限和原則管理
-description: 請參閱 .NET 中各種危險許可權的連結。 這些許可權應該只提供給值得信任的程式碼，而且只有在必要時才會授與。
+description: 請參閱 .NET 中各種危險許可權的連結。 只有在必要時，才應該將這些許可權提供給值得信賴的程式碼。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - permissions [.NET Framework], policy administration
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-ms.openlocfilehash: 1d3fb53775a4d88f9372b582189a38e18376761a
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: a2f4469590fea38924430b07eaf20d49f4dc46e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855812"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556937"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>危險使用權限和原則管理
 
@@ -23,7 +23,7 @@ ms.locfileid: "87855812"
 .NET Framework 為幾個受保護作業提供了使用權限，這些受保護作業也可能會讓安全性系統受到危害。 您只能在必要時將這些危險的使用權限授與給可靠的程式碼。 如果將這些使用權限授與給惡意程式碼，通常就沒有任何方法可以抵禦這些惡意程式碼。  
   
 > [!NOTE]
-> 在 .NET Framework 4 中，.NET Framework 安全性模型和術語的重大變更。 如需這些變更的詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。  
+> 在 .NET Framework 4 中，.NET Framework 的安全性模型和術語已經有重要的變更。 如需這些變更的詳細資訊，請參閱 [安全性變更](/previous-versions/dotnet/framework/security/security-changes)。  
   
  下表說明危險的使用權限。  
   

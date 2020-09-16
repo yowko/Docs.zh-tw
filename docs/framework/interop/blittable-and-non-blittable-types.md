@@ -1,17 +1,17 @@
 ---
 title: Blittable 和非 Blittable 類型
-description: 深入瞭解全像一層和非直接的類型。 可直接上建的資料類型通常會在受控和非受控記憶體中表示，不需要特殊處理。
+description: 深入瞭解可全像全像是我的型別。 在受控和非受控記憶體中，可集中管理的資料類型通常會以不需要特殊的處理方式呈現。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 68f4197a2710b6825c83bbc51daaf8f6b5a2c81f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8bbf9c72143033cec22b38cc26cbe8ceb44f790b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621531"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556267"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 和非 Blittable 類型
 大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」**，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
@@ -61,13 +61,13 @@ ms.locfileid: "85621531"
 |非 Blittable 類型|描述|  
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
-|[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|轉換成 `true` 為 1 或 -1 的 1、2 或 4 位元組值。|  
-|[System.object](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|轉換成 Unicode 或 ANSI 字元。|  
-|[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|轉換成類別介面。|  
-|[System.object](default-marshaling-for-objects.md)|轉換成變異值或介面。|  
+|[System.Boolean](/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|轉換成 `true` 為 1 或 -1 的 1、2 或 4 位元組值。|  
+|[System.string](/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|轉換成 Unicode 或 ANSI 字元。|  
+|[System.Class](/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|轉換成類別介面。|  
+|[System.Object](default-marshaling-for-objects.md)|轉換成變異值或介面。|  
 |[System.Mdarray](default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
-|[System.string](default-marshaling-for-strings.md)|轉換成 Null 參考中的字串終止，或轉換成 BSTR。|  
-|[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|轉換成具有固定記憶體配置的結構。|  
+|[System.String](default-marshaling-for-strings.md)|轉換成 Null 參考中的字串終止，或轉換成 BSTR。|  
+|[System.Valuetype](/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|轉換成具有固定記憶體配置的結構。|  
 |[System.Szarray](default-marshaling-for-arrays.md)|轉換成 C 樣式陣列或 `SAFEARRAY`。|  
   
  COM Interop 只能支援類別和物件類型。 如需 Visual Basic、C# 和 C++ 中的對應類型，請參閱[類別庫概觀](../../standard/class-library-overview.md)。  

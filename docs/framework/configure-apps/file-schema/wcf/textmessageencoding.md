@@ -2,12 +2,12 @@
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: d67d623736f3cbf50568356132a74d2b234fdfd9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c5cd8e9e2002f44fd9feebdc6bb7ede023de459a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736213"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556443"
 ---
 # \<textMessageEncoding>
 指定字元編碼和訊息版本處理，用於文字 XML 訊息。  
@@ -42,13 +42,13 @@ ms.locfileid: "73736213"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|定義自訂繫結的所有繫結功能。|  
   

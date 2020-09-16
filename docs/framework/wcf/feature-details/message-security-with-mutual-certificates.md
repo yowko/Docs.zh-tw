@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 44d06762bf66950ea0cc06986c61ecd548ae2e0c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bbe99b133e7edda191d17e9fe8a1dea89d3f0eb7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576404"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556521"
 ---
 # <a name="message-security-with-mutual-certificates"></a>相互憑證的訊息安全性
-下列案例顯示使用訊息安全性模式保護的 Windows Communication Foundation （WCF）服務和用戶端。 用戶端與服務以憑證加以驗證。  
+下列案例顯示 Windows Communication Foundation 使用訊息安全性模式來保護 WCF) 服務和用戶端 (。 用戶端與服務以憑證加以驗證。  
   
  因為案例使用具有 X.509 憑證權杖設定檔的 WS-Security，所以這個案例是互通的。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "84576404"
 |互通性|是的，採用 WS-Security 及 X.509 憑證權杖設定檔相容的用戶端及服務。|  
 |驗證|伺服器和用戶端的交互驗證。|  
 |完整性|是|  
-|保密|是|  
+|機密性|是|  
 |傳輸|HTTP|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -158,8 +158,8 @@ ms.locfileid: "84576404"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [安全性總覽](security-overview.md)
-- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
-- [如何：在 WCF 中建立和安裝用於開發期間傳輸安全性的暫時憑證](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))
+- [安全性概觀](security-overview.md)
+- [Windows Server AppFabric 的資訊安全模型](/previous-versions/appfabric/ee677202(v=azure.10))
+- [如何：在 WCF 中建立並安裝暫時憑證，以在開發期間進行傳輸安全性](/previous-versions/msp-n-p/ff648498(v=pandp.10))

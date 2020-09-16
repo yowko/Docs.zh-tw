@@ -1,25 +1,25 @@
 ---
-title: 匿名用戶端的傳輸安全性
-description: 請參閱此 WCF 案例，其使用傳輸安全性來驗證服務器，方法是使用用戶端所信任的憑證。 用戶端未經過驗證。
+title: 使用匿名用戶端的傳輸安全性
+description: 請參閱此 WCF 案例，此案例會使用傳輸安全性，利用用戶端所信任的憑證來驗證服務器。 用戶端未通過驗證。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: 08cfb8c1a5581f17a251224430018764bed80b0f
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 5e8bcab4cdd8f27e9ea27e66fe4c848ccd35e99c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245007"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556807"
 ---
-# <a name="transport-security-with-an-anonymous-client"></a>匿名用戶端的傳輸安全性
+# <a name="transport-security-with-an-anonymous-client"></a>使用匿名用戶端的傳輸安全性
 
-此 Windows Communication Foundation （WCF）案例會使用傳輸安全性（HTTPS）來確保機密性和完整性。 伺服器必須使用安全通訊端層 (SSL) 憑證進行驗證，而且用戶端必須信任該伺服器的憑證。 此用戶端不會透過任何機制進行驗證，因此屬於匿名。
+這 Windows Communication Foundation (WCF) 案例會使用傳輸安全性 (HTTPS) ，以確保機密性和完整性。 伺服器必須使用安全通訊端層 (SSL) 憑證進行驗證，而且用戶端必須信任該伺服器的憑證。 此用戶端不會透過任何機制進行驗證，因此屬於匿名。
 
-如需範例應用程式，請參閱[WS Transport Security](../samples/ws-transport-security.md)。 如需有關傳輸安全性的詳細資訊，請參閱[傳輸安全性總覽](transport-security-overview.md)。
+如需範例應用程式，請參閱 [WS 傳輸安全性](../samples/ws-transport-security.md)。 如需傳輸安全性的詳細資訊，請參閱 [傳輸安全性概觀](transport-security-overview.md)。
 
-如需搭配服務使用憑證的詳細資訊，請參閱使用[憑證](working-with-certificates.md)和[如何：使用 SSL 憑證設定埠](how-to-configure-a-port-with-an-ssl-certificate.md)。
+如需有關使用憑證搭配服務的詳細資訊，請參閱使用 [憑證](working-with-certificates.md) 和 [如何：使用 SSL 憑證設定埠](how-to-configure-a-port-with-an-ssl-certificate.md)。
 
 ![搭配匿名用戶端使用傳輸安全性](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
@@ -27,9 +27,9 @@ ms.locfileid: "85245007"
 |--------------------|-----------------|
 |安全性模式|傳輸|
 |互通性|與現有的 Web 服務和用戶端|
-|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|Yes<br /><br /> 應用層級（沒有 WCF 支援）|
-|完整性|Yes|
-|保密|Yes|
+|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是<br /><br /> 應用層級 (沒有 WCF 支援) |
+|完整性|是|
+|機密性|是|
 |傳輸|HTTPS|
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|
 
@@ -48,7 +48,7 @@ ms.locfileid: "85245007"
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
-### <a name="configuration"></a>設定
+### <a name="configuration"></a>組態
 
 下列程式碼會使用組態設定相同端點。 此用戶端不會透過任何機制進行驗證，因此屬於匿名。
 
@@ -79,7 +79,7 @@ ms.locfileid: "85245007"
 </configuration>
 ```
 
-## <a name="client"></a>Client
+## <a name="client"></a>用戶端
 
 下列程式碼和組態要獨立執行。 執行下列其中一個動作：
 
@@ -95,7 +95,7 @@ ms.locfileid: "85245007"
 [!code-csharp[c_SecurityScenarios#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
 [!code-vb[c_SecurityScenarios#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]
 
-### <a name="configuration"></a>設定
+### <a name="configuration"></a>組態
 
 可以使用下列組態來取代程式碼，進行設定服務。
 
@@ -124,7 +124,7 @@ ms.locfileid: "85245007"
 
 ## <a name="see-also"></a>另請參閱
 
-- [安全性總覽](security-overview.md)
+- [安全性概觀](security-overview.md)
 - [WS 傳輸安全性](../samples/ws-transport-security.md)
 - [傳輸安全性概觀](transport-security-overview.md)
-- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 的資訊安全模型](/previous-versions/appfabric/ee677202(v=azure.10))
