@@ -3,12 +3,12 @@ title: 適用於 C# 開發人員的版本和更新考量
 description: 在您的程式庫中引進新的語言功能，會影響使用該程式庫的程式碼。
 ms.topic: reference
 ms.date: 09/19/2018
-ms.openlocfilehash: f7db7c79792d04bcf592bc1858e1f0f05cb34402
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 6de0e3ba33af34edba73819dcb9268f40f8a5ea4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268123"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552423"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>適用於 C# 開發人員的版本和更新考量
 
@@ -63,4 +63,4 @@ public double CalculateSquare(double value) => value * value;
 public double CalculateSquare(in double value) => value * value;
 ```
 
-[最新功能](index.md)文章中會註明影響公用宣告的引進功能是來源相容或二進位相容。
+[最新功能](./csharp-9.md)文章中會註明影響公用宣告的引進功能是來源相容或二進位相容。

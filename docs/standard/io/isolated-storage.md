@@ -1,6 +1,6 @@
 ---
 title: 隔離儲存區
-description: 探索隔離儲存區，這是一種資料儲存機制，藉由定義將程式碼與儲存的資料產生關聯的標準化方式，來提供隔離 & 安全。
+description: 探索隔離儲存區，這是一種資料儲存機制，透過定義將程式碼與儲存的資料產生關聯的標準化方式，來提供隔離 & 的安全。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416384"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555916"
 ---
 # <a name="isolated-storage"></a>隔離儲存區 (Isolated Storage)
 
  對於傳統型應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。
 
 > [!IMPORTANT]
-> Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
+> 隔離儲存區不適用於 Windows 8. x 儲存區應用程式。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](/previous-versions/windows/apps/hh464917(v=win.10))。
 
 <a name="data_compartments_and_stores"></a>
 
@@ -87,96 +87,96 @@ ms.locfileid: "86416384"
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|依據使用者的隔離。 基本上，只有管理的或偵錯的工具使用這個等級的使用權限。|這個使用權限的存取允許程式碼檢視或刪除使用者的任何隔離儲存區檔案或目錄 (不管組件隔離)。 風險包括資訊洩漏和資料遺失 (但不僅限於此)。|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|依據所有使用者、定義域和組件的隔離。 基本上，只有管理的或偵錯的工具使用這個等級的使用權限。|這個使用權限將產生完全洩露所有使用者的全部隔離存放區的可能性。|
 
-## <a name="safety-of-isolated-storage-components-with-regard-to-untrusted-data"></a>隔離儲存區元件與不受信任資料的安全性
+## <a name="safety-of-isolated-storage-components-with-regard-to-untrusted-data"></a>隔離儲存區元件與不信任資料的安全性
 
 __本節適用于下列架構：__
 
-- .NET Framework （所有版本）
+- .NET Framework (所有版本) 
 - .NET Core 2.1 +
 - .NET 5.0 +
 
-.NET Framework 和 .NET Core 提供隔離儲存區，做為保存使用者、應用程式或元件資料的機制。 這是舊版元件，主要是針對現在已過時的代碼啟用安全性案例所設計。
+.NET Framework 和 .NET Core 提供隔離儲存區，作為保存使用者、應用程式或元件資料的機制。 這是一項舊版元件，主要是針對現已淘汰的代碼啟用安全性案例而設計。
 
-各種隔離儲存區 Api 和工具可以用來跨信任界限讀取資料。 例如，從全電腦範圍讀取資料，可以從電腦上其他可能較不受信任的使用者帳戶匯總資料。 從電腦範圍隔離儲存區中讀取的元件或應用程式，應該要知道讀取此資料的結果。
+您可以使用各種隔離儲存 Api 和工具，在信任界限之間讀取資料。 例如，從全電腦範圍讀取資料可以匯總電腦上其他可能較不受信任的使用者帳戶的資料。 從整個電腦隔離儲存區中讀取的元件或應用程式，應該要知道讀取此資料的後果。
 
 ### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>可從全電腦範圍讀取的安全性敏感 Api
 
-呼叫下列任何 Api 的元件或應用程式會從整部電腦範圍讀取：
+呼叫下列任何 Api 的元件或應用程式會從整個電腦範圍中讀取：
 
-* [Remove-isolatedstoragefile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator)，傳遞包含 IsolatedStorageScope 旗標的範圍
+* [Remove-isolatedstoragefile GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator)，傳遞包含 IsolatedStorageScope 的範圍旗標
 * [Remove-isolatedstoragefile. GetMachineStoreForApplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
 * [Remove-isolatedstoragefile. GetMachineStoreForAssembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
 * [Remove-isolatedstoragefile. GetMachineStoreForDomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
-* [Remove-isolatedstoragefile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore)，傳遞包含 IsolatedStorageScope 旗標的範圍
+* [Remove-isolatedstoragefile GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore)，傳遞包含 IsolatedStorageScope 的範圍旗標
 * [Remove-isolatedstoragefile](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove)，傳遞包含旗標的範圍 `IsolatedStorageScope.Machine`
 
-如果使用參數呼叫[隔離儲存區工具](../../framework/tools/storeadm-exe-isolated-storage-tool.md) `storeadm.exe` ，則會受到影響 `/machine` ，如下列程式碼所示：
+如果使用參數呼叫 [隔離儲存區工具](../../framework/tools/storeadm-exe-isolated-storage-tool.md) `storeadm.exe` ，則會受到影響 `/machine` ，如下列程式碼所示：
 
 ```txt
 storeadm.exe /machine [any-other-switches]
 ```
 
-隔離儲存區工具是 Visual Studio 和 .NET Framework SDK 的一部分提供。
+隔離儲存區工具是 Visual Studio 和 .NET Framework SDK 的一部分來提供。
 
-如果應用程式未牽涉到對先前 Api 的呼叫，或工作流程未牽涉到 `storeadm.exe` 以這種方式呼叫，則不適用此檔。
+如果應用程式不需要呼叫上述 Api，或工作流程不需要 `storeadm.exe` 以這種方式呼叫，則不適用此檔。
 
-### <a name="impact-in-multi-user-environments"></a>多使用者環境的影響
+### <a name="impact-in-multi-user-environments"></a>對多使用者環境的影響
 
-如先前所述，從一個信任環境寫入的資料，這些 Api 所產生的安全性影響是從不同的信任環境中讀取。 隔離儲存區通常會使用下列三個位置的其中一個來讀取和寫入資料：
+如先前所述，從某個信任環境寫入的資料，會從不同的信任環境讀取這些 Api 所產生的安全性影響。 隔離儲存區通常會使用三個位置的其中一個來讀取和寫入資料：
 
-1. `%LOCALAPPDATA%\IsolatedStorage\`：例如， `C:\Users\<username>\AppData\Local\IsolatedStorage\` 用於範圍的 `User` 。
-2. `%APPDATA%\IsolatedStorage\`：例如， `C:\Users\<username>\AppData\Roaming\IsolatedStorage\` 用於範圍的 `User|Roaming` 。
-3. `%PROGRAMDATA%\IsolatedStorage\`：例如， `C:\ProgramData\IsolatedStorage\` 用於範圍的 `Machine` 。
+1. `%LOCALAPPDATA%\IsolatedStorage\`：例如， `C:\Users\<username>\AppData\Local\IsolatedStorage\` 針對 `User` 範圍。
+2. `%APPDATA%\IsolatedStorage\`：例如， `C:\Users\<username>\AppData\Roaming\IsolatedStorage\` 針對 `User|Roaming` 範圍。
+3. `%PROGRAMDATA%\IsolatedStorage\`：例如， `C:\ProgramData\IsolatedStorage\` 針對 `Machine` 範圍。
 
-前兩個位置會針對每位使用者隔離。 Windows 可確保同一部電腦上的不同使用者帳戶無法存取彼此的使用者設定檔資料夾。 使用或存放區的兩個不同使用者帳戶 `User` `User|Roaming` 不會看到彼此的資料，也不能幹擾彼此的資料。
+前兩個位置是依每個使用者隔離。 Windows 可確保同一部電腦上不同的使用者帳戶無法存取彼此的使用者設定檔資料夾。 使用或存放區的兩個不同使用者帳戶 `User` `User|Roaming` 不會看到彼此的資料，也不會干擾彼此的資料。
 
-第三個位置會在電腦上的所有使用者帳戶之間共用。 不同的帳戶可以讀取和寫入此位置，而且能夠查看彼此的資料。
+第三個位置會在電腦上的所有使用者帳戶之間共用。 不同的帳戶可以讀取和寫入這個位置，而且可以看到彼此的資料。
 
 上述路徑可能會根據使用中的 Windows 版本而有所不同。
 
-現在請考慮有兩個已註冊的使用者_Mallory_和_Bob_的多使用者系統。 Mallory 能夠存取其使用者設定檔目錄 `C:\Users\Mallory\` ，而她可以存取共用的全電腦儲存位置 `C:\ProgramData\IsolatedStorage\` 。 她無法存取 Bob 的使用者設定檔目錄 `C:\Users\Bob\` 。
+現在請考慮具有兩個已註冊的使用者 _Mallory_ 和 _Bob_的多使用者系統。 Mallory 具有存取其使用者設定檔目錄的能力 `C:\Users\Mallory\` ，而她可以存取共用的整個電腦儲存位置 `C:\ProgramData\IsolatedStorage\` 。 她無法存取 Bob 的使用者設定檔目錄 `C:\Users\Bob\` 。
 
-如果 Mallory 希望攻擊 Bob，她可能會將資料寫入整部電腦的儲存位置，然後嘗試影響 Bob 從整部電腦的存放區讀取。 當 Bob 執行從這個存放區讀取的應用程式時，該應用程式將會在 Mallory 放置的資料上運作，但從 Bob 的使用者帳戶內容中操作。 本檔的其餘部分會策劃各種攻擊媒介，以及應用程式可以執行哪些步驟，將其風險降到最低。
+如果 Mallory 想要攻擊 Bob，她可能會將資料寫入整個電腦的儲存位置，然後嘗試影響 Bob 從全電腦的存放區讀取。 當 Bob 執行從這個存放區讀取的應用程式時，該應用程式將會在 Mallory 的資料上運作，但從 Bob 的使用者帳戶內容中執行。 本檔的其餘部分會策劃各種攻擊媒介，以及應用程式可以執行哪些步驟來將這些攻擊的風險降至最低。
 
 __注意：__ 為了讓這類攻擊發生，Mallory 需要：
 
 * 電腦上的使用者帳戶。
 * 將檔案放入檔案系統上已知位置的功能。
-* Bob 在某個時間點執行的應用程式，會嘗試讀取此資料。
+* Bob 將在某個時間點執行的應用程式嘗試讀取此資料的知識。
 
-這些不是適用于標準單一使用者桌面環境（例如家用電腦或單一員工企業工作站）的威脅向量。
+這些不是威脅向量，適用于標準的單一使用者桌面環境，例如家用電腦或單一員工的企業工作站。
 
-#### <a name="elevation-of-privilege"></a>權限提高
+#### <a name="elevation-of-privilege"></a>提高權限
 
-當 Bob 的應用程式讀取 Mallory 的檔案，並根據該承載的內容自動嘗試採取某種動作時，就會發生特權__提升__攻擊。 假設有一個應用程式從整部電腦的存放區讀取啟動腳本的內容，並將這些內容傳遞給 `Process.Start` 。 如果 Mallory 可以將惡意腳本放在全電腦存放區中，當 Bob 啟動他的應用程式時：
+當 Bob 的應用程式讀取 Mallory 的檔案時，會發生特權 __提升__ 攻擊，並會根據該承載的內容自動嘗試採取一些動作。 假設有一個應用程式會從整部電腦的存放區讀取啟動腳本的內容，並將這些內容傳遞至 `Process.Start` 。 如果 Mallory 可以將惡意腳本放在全電腦存放區中，當 Bob 啟動其應用程式時：
 
-* 他的應用程式會_在 Bob 的使用者設定檔內容_底下，剖析並啟動 Mallory 的惡意腳本。
+* 他的應用程式會 _在 Bob 的使用者設定檔內容下_剖析並啟動 Mallory 的惡意腳本。
 * Mallory gaines 在本機電腦上存取 Bob 的帳戶。
 
 #### <a name="denial-of-service"></a>拒絕服務
 
-當 Bob 的應用程式讀取 Mallory 的檔案、當機或以其他方式停止正常運作時，就會發生阻絕__服務__攻擊。 再次考慮先前所述的應用程式，它會嘗試從整部電腦的存放區剖析啟動腳本。 如果 Mallory 可以將格式不正確的檔案放在整部電腦的存放區內，她可能會：
+當 Bob 的應用程式讀取 Mallory 的檔案並當機或停止正常運作時，就會發生阻絕 __服務__ 攻擊。 再次考慮先前提到的應用程式，它會嘗試從整台電腦的存放區剖析啟動腳本。 如果 Mallory 可以將具有格式錯誤內容的檔案放在全電腦存放區內，她可能會：
 
-* 導致 Bob 的應用程式及早在啟動路徑中擲回例外狀況。
-* 導致應用程式無法順利啟動，因為發生例外狀況。
+* 使 Bob 的應用程式儘早在啟動路徑中擲回例外狀況。
+* 因為例外狀況，導致應用程式無法成功啟動。
 
 她接著拒絕 Bob 在自己的使用者帳戶下啟動應用程式的能力。
 
 #### <a name="information-disclosure"></a>資訊洩漏
 
-當 Mallory 可以誘騙 Bob 洩漏 Mallory 通常無法存取的檔案內容時，就會發生__資訊洩漏__攻擊。 請考慮 Bob 有一個*C:\Users\Bob\secret.txt* Mallory 想要讀取的秘密檔。 她知道這個檔案的路徑，但她無法讀取它，因為 Windows 禁止她取得 Bob 的使用者設定檔目錄的存取權。
+當 Mallory 可以誘騙 Bob 洩漏 Mallory 通常無法存取的檔案內容時，就會發生 __資訊洩漏__ 攻擊。 請考慮 Bob 的秘密檔案 *C:\Users\Bob\secret.txt* Mallory 要讀取的檔案。 她知道這個檔案的路徑，但無法讀取，因為 Windows 會禁止她取得 Bob 的使用者設定檔目錄的存取權。
 
-相反地，Mallory 會將硬式連結放入全電腦存放區。 這是一種特殊的檔案，本身並不包含任何內容，而是指向磁片上的另一個檔案。 嘗試讀取永久連結檔案，會改為讀取連結的目標檔案內容。 建立永久連結之後，Mallory 仍無法讀取檔案內容，因為她無法存取連結的目標（ `C:\Users\Bob\secret.txt` ）。 不過 _，Bob 可以_存取此檔案。
+相反地，Mallory 會將永久連結放入整個電腦的存放區中。 這是一種特殊的檔案，它本身不包含任何內容，而是指向磁片上的另一個檔案。 嘗試讀取永久連結檔案時，將會改為讀取連結的目的檔案內容。 建立永久連結之後，Mallory 仍無法讀取檔案內容，因為她無法存取連結的目標 (`C:\Users\Bob\secret.txt`) 。 但是，Bob _確實_ 可以存取這個檔案。
 
-當 Bob 的應用程式從整部電腦的存放區讀取時，它現在會不小心讀取檔案的內容 `secret.txt` ，就像檔案本身已經存在於整部電腦的存放區一樣。 當 Bob 的應用程式結束時，如果嘗試將檔案重新儲存到整部電腦的存放區，最後會將檔案的實際複本放在 * C:\ProgramData\IsolatedStorage 目錄中 \* 。 由於此目錄可由電腦上的任何使用者讀取，因此 Mallory 現在可以讀取檔案的內容。
+當 Bob 的應用程式從整部電腦的存放區讀取時，它現在會不慎讀取檔案的內容 `secret.txt` ，就像是檔案本身存在於全電腦存放區一樣。 當 Bob 的應用程式結束時，如果它嘗試將檔案重新儲存至全電腦存放區，它最後會將檔案的實際複本放在 * C:\ProgramData\IsolatedStorage 目錄中 \* 。 因為電腦上的任何使用者都可以讀取此目錄，所以 Mallory 現在可以讀取檔案的內容。
 
 ### <a name="best-practices-to-defend-against-these-attacks"></a>防禦這些攻擊的最佳作法
 
-__重要事項：__ 如果您的環境有多個相互不受信任的使用者，__請勿__呼叫 API 或叫用 `IsolatedStorageFile.GetEnumerator(IsolatedStorageScope.Machine)` 工具 `storeadm.exe /machine /list` 。 這兩個都假設它們是在受信任的資料上運作。 如果攻擊者可以植入整部電腦存放區中的惡意承載，該承載可能會在執行這些命令的使用者內容下導致權限提高攻擊。
+__重要事項：__ 如果您的環境具有多個互相不受信任的使用者， __請勿__ 呼叫 API 或叫用 `IsolatedStorageFile.GetEnumerator(IsolatedStorageScope.Machine)` 工具 `storeadm.exe /machine /list` 。 這兩個假設它們都是在受信任的資料上運作。 如果攻擊者可以植入全電腦存放區中的惡意承載，該承載可能會在執行這些命令的使用者內容下導致權限提高攻擊。
 
-如果是在多使用者環境中操作，請重新考慮使用以_電腦_範圍為目標的隔離儲存功能。 如果應用程式必須從電腦範圍的位置讀取資料，則偏好從只能由系統管理員帳戶寫入的位置讀取資料。 `%PROGRAMFILES%`目錄和登錄區 `HKLM` 是只有系統管理員可寫入，而且每個人都可讀取的位置範例。 因此，從這些位置讀取的資料會被視為值得信任。
+如果在多使用者環境中操作，請重新考慮使用以 _機器_ 範圍為目標的隔離儲存區功能。 如果應用程式必須從整部電腦的位置讀取資料，則最好從僅由系統管理員帳戶寫入的位置讀取資料。 `%PROGRAMFILES%`目錄和登錄區 `HKLM` 都是位置的範例，這些位置只能由系統管理員進行寫入，並且可供所有人讀取。 因此，從這些位置讀取的資料會被視為值得信任。
 
-如果應用程式必須在多使用者環境中使用_電腦_範圍，請驗證您從整部電腦存放區讀取之任何檔案的內容。 如果應用程式從這些檔案還原序列化物件圖形，請考慮使用更安全的序列化程式，例如， `XmlSerializer` 而不是危險的序列化程式，例如 `BinaryFormatter` 或 `NetDataContractSerializer` 請小心使用深度嵌套物件圖形或物件圖形，以根據檔案內容執行資源分配。
+如果應用程式必須在多使用者環境中使用 _電腦_ 範圍，請驗證您從整部電腦存放區讀取的任何檔案的內容。 如果應用程式從這些檔案還原序列化物件圖形，請考慮使用更安全的序列化程式，例如， `XmlSerializer` 或之類的危險序列化程式 `BinaryFormatter` `NetDataContractSerializer` 。 請小心使用深度嵌套的物件圖形或物件圖形，以根據檔案內容執行資源分配。
 
 <a name="isolated_storage_locations"></a>
 
@@ -235,7 +235,7 @@ __重要事項：__ 如果您的環境有多個相互不受信任的使用者，
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|Title|說明|
 |-----------|-----------------|
 |[隔離的類型](types-of-isolation.md)|描述各種類型的隔離。|
 |[作法：取得隔離儲存區的存放區](how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|
@@ -246,11 +246,11 @@ __重要事項：__ 如果您的環境有多個相互不受信任的使用者，
 |[作法：尋找隔離儲存區中的現有檔案和目錄](how-to-find-existing-files-and-directories-in-isolated-storage.md)|示範如何在隔離儲存區中讀取目錄結構和檔案。|
 |[作法：讀取和寫入隔離儲存區中的檔案](how-to-read-and-write-to-files-in-isolated-storage.md)|提供將字串寫入至隔離儲存區檔案並將它讀回的範例。|
 |[作法：刪除隔離儲存區中的檔案和目錄](how-to-delete-files-and-directories-in-isolated-storage.md)|示範如何刪除隔離儲存區的檔案和目錄。|
-|[檔案和資料流程 i/o](index.md)|說明如何執行同步和非同步檔案及資料流存取。|
+|[檔案和資料流 I/O](index.md)|說明如何執行同步和非同步檔案及資料流存取。|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

@@ -2,12 +2,12 @@
 title: 使用者名稱密碼驗證程式
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 5fbca30ef2dff0aebc13bda12c06adfd1989ea20
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ad365061e6a0f3178650699febd6c18cdd14205
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596509"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553109"
 ---
 # <a name="user-name-password-validator"></a>使用者名稱密碼驗證程式
 這個範例會示範如何實作自訂的 UserNamePassword 驗證程式。 當內建 UserNamePassword 驗證模式都不符合應用程式需求時，這個驗證程式就很有用；例如，當使用者名稱/密碼組儲存在某些外部存放區時，例如資料庫中。 這個範例示範的服務具有可檢查兩組特定使用者名稱/密碼組的自訂驗證程式。 用戶端會使用這些使用者名稱/密碼組來向服務驗證。
@@ -17,7 +17,7 @@ ms.locfileid: "84596509"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
@@ -32,7 +32,7 @@ ms.locfileid: "84596509"
 
 - 伺服器是使用該伺服器的 X.509 憑證來驗證的。
 
- 服務會公開單一端點，以便與使用設定檔 App.config 定義的服務進行通訊。端點是由位址、系結和合約所組成。 系結會使用 `wsHttpBinding` 預設為使用 WS-Security 和使用者名稱驗證的標準來設定。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 伺服器憑證必須包含與中相同的值 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 。
+ 服務會公開單一端點，以便與服務進行通訊，使用設定檔 App.config 定義。端點是由位址、系結和合約所組成。 系結會使用 `wsHttpBinding` 預設為使用 ws-management 和使用者名稱驗證的標準進行設定。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 在中，伺服器憑證必須包含與相同的值 `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) 。
 
 ```xml
 <system.serviceModel>
@@ -279,22 +279,22 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。
+1. 若要建立方案，請依照 [建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示進行。
 
 2. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例
 
-1. 在 Visual Studio 2012 命令提示字元中，從範例安裝資料夾執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
+1. 從 Visual Studio 2012 命令提示字元內的範例安裝資料夾中執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    > 安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。  
+    > Setup.bat 批次檔是設計來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數，會指向包含 Setup.bat 腳本所需之可執行檔的目錄。  
   
 2. 從 service\bin 啟動 Service.exe。  
   
 3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務無法通訊，請參閱 [WCF 範例的疑難排解提示](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
@@ -316,8 +316,8 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 9. 在用戶端機器上，從命令提示字元視窗啟動 Client.exe。  
   
-10. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 如果用戶端和服務無法通訊，請參閱 [WCF 範例的疑難排解提示](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
-1. 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。 這樣會從憑證存放區中移除伺服器憑證。  
+1. 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。 這樣會從憑證存放區中移除伺服器憑證。

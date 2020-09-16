@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 1c891ad1d5b4c1160ca41c43eff6eea444f7224f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 50f35e3511acc344339b1e150b47d7ce6de94254
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544995"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679556"
 ---
 # <a name="re-train-a-model"></a>重新定型模型
 
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>擷取預先定型的模型參數
 
-載入模型之後，藉由存取預先定型模型的屬性，將學習到的模型參數解壓縮 [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) 。 預先定型的模型是使用線性回歸模型來定型 [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) ，此模型 [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) 會建立輸出 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 。 這些線性迴歸模型參數包含學習到的偏差和權重，或是模型的相關係數。 這些值將會用來作為新重新定型模型的起點。
+載入模型之後，藉由存取預先定型模型的屬性，將學習到的模型參數解壓縮 [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase%601.Model%2A) 。 預先定型的模型是使用線性回歸模型來定型 [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) ，此模型 [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) 會建立輸出 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 。 這些線性迴歸模型參數包含學習到的偏差和權重，或是模型的相關係數。 這些值將會用來作為新重新定型模型的起點。
 
 ```csharp
 // Extract trained model parameters
@@ -61,7 +61,7 @@ LinearRegressionModelParameters originalModelParameters =
 
 ## <a name="re-train-model"></a>重新定型模型
 
-重新定型模型的流程與定型模型的流程沒什麼不同。 唯一的差別在於， [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) 除了資料以外，方法也會將原始學習模型參數視為輸入，並使用它們做為重新定型程式的起點。
+重新定型模型的流程與定型模型的流程沒什麼不同。 唯一的差別在於， [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer%602.Fit%2A) 除了資料以外，方法也會將原始學習模型參數視為輸入，並使用它們做為重新定型程式的起點。
 
 ```csharp
 // New Data

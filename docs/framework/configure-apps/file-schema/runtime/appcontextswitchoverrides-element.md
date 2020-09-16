@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 394523e81da96d596a00010a393b9a034c0d552f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558747"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552280"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 項目
 
@@ -48,7 +48,7 @@ ms.locfileid: "88558747"
 
 ### <a name="parent-elements"></a>父項目
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關執行階段初始化選項的資訊。|
@@ -70,7 +70,7 @@ ms.locfileid: "88558747"
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|控制使用可移植 Pdb 時是否取得堆疊追蹤，可以包含原始程式檔和行資訊。 `false` 包含原始程式檔和行資訊;否則為 `true` 。|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|控制 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> 當 <xref:System.Drawing.Icon> 物件具有 PNG 框架時，方法是否擲回例外狀況。 如需詳細資訊，請參閱[風險降低：Icon 物件中的 PNG 畫面格](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)。|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|判斷 <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> 當方法將物件加入至集合時，是否已適當處置物件 <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> 。 `true` 若要維護舊版行為， `false` 處置所有私用字型物件。 |.NET Framework 4.7.2|
-|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|控制的效能是否 <xref:System.Windows.Forms.PrintPreviewDialog> 已針對網路印表機進行優化。 如需詳細資訊，請參閱 [PrintPreviewDialog 控制項總覽](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)。|.NET Framework 4.6|
+|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|控制的效能是否 <xref:System.Windows.Forms.PrintPreviewDialog> 已針對網路印表機進行優化。 如需詳細資訊，請參閱 [PrintPreviewDialog 控制項總覽](/dotnet/desktop/winforms/controls/printpreviewdialog-control-overview-windows-forms)。|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|控制是否強制執行日文日曆紀元的年份範圍檢查。 `true` 若要強制執行年份範圍檢查，並 `false` 將其停用 (預設行為) 。 如需詳細資訊，請參閱 [使用行事曆](../../../../standard/datetime/working-with-calendars.md)。|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|控制是否在剖析作業中，只將 "1" 辨識為日本日曆紀元的第一年。 `true` 僅辨識 "1"; `false` 若要辨識 "1" 或 Gannen (預設行為) 。 如需詳細資訊，請參閱 [使用行事曆](../../../../standard/datetime/working-with-calendars.md)。|.NET Framework 4.6|
 |`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|控制日文日曆紀元的第一年是以 "1" 表示，或在格式化作業中 Gannen。 `true` 將紀元的第一年格式化為 "1"; `false` 若要將它格式化為 Gannen (預設行為) 。 如需詳細資訊，請參閱 [使用行事曆](../../../../standard/datetime/working-with-calendars.md)。|.NET Framework 4.6|

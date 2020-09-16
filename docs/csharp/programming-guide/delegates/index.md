@@ -1,17 +1,17 @@
 ---
 title: 委派 - C# 程式設計手冊
-description: 'C # 中的委派是一種類型，它會參考具有參數清單和傳回類型的方法。 委派可以用來將方法當做引數傳遞給其他方法。'
+description: 'C # 中的委派是參考具有參數清單和傳回型別之方法的型別。 委派可以用來將方法當做引數傳遞給其他方法。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 2c1be56b67528c17a6cf1d8d8517817ff93b2aa5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: cf6b90a606d13e3196e3114e84971451a9a322c9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063634"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553567"
 ---
 # <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
 [委派](../../language-reference/builtin-types/reference-types.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
@@ -40,19 +40,19 @@ ms.locfileid: "88063634"
   
 - 方法不需要完全符合委派類型。 如需詳細資訊，請參閱[在委派中使用差異](../concepts/covariance-contravariance/using-variance-in-delegates.md)。  
   
-- C # 版本2.0 引進了[匿名方法](../../language-reference/operators/delegate-operator.md)的概念，可讓程式碼區塊當做參數傳遞，以取代個別定義的方法。 C# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 (Inline) 程式碼區塊撰寫方式。 匿名方法與 Lambda 運算式 (在特定內容中) 都會編譯為委派類型。 現在，這些功能合稱為「匿名函式」(Anonymous Function)。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../language-reference/operators/lambda-expressions.md)。
+- C # 2.0 版引進了 [匿名方法](../../language-reference/operators/delegate-operator.md)的概念，可讓程式碼區塊以參數的形式傳遞，以取代個別定義的方法。 C# 3.0 引進了 Lambda 運算式，做為更簡潔的內嵌 (Inline) 程式碼區塊撰寫方式。 匿名方法與 Lambda 運算式 (在特定內容中) 都會編譯為委派類型。 現在，這些功能合稱為「匿名函式」(Anonymous Function)。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../language-reference/operators/lambda-expressions.md)。
   
 ## <a name="in-this-section"></a>本節內容  
   
 - [使用委派](./using-delegates.md)  
   
-- [何時應使用委派，而不使用介面 (C# 程式設計指南)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
+- [何時應使用委派，而不使用介面 (C# 程式設計指南)](/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
 - [具名方法委派與匿名方法](./delegates-with-named-vs-anonymous-methods.md)  
   
 - [在委派中使用變異數](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [如何將委派結合 (多播委派) ](./how-to-combine-delegates-multicast-delegates.md)  
+- [如何將委派合併 (多播委派) ](./how-to-combine-delegates-multicast-delegates.md)  
   
 - [如何宣告、具現化和使用委派](./how-to-declare-instantiate-and-use-a-delegate.md)
 
@@ -61,9 +61,9 @@ ms.locfileid: "88063634"
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的[委派](~/_csharplang/spec/delegates.md)。 語言規格是 C# 語法及用法的限定來源。
   
 ## <a name="featured-book-chapters"></a>精選書籍章節  
- [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
+ [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10)) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10))  
   
- [Delegates and Events](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) in [Learning C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
+ [Delegates and Events](/previous-versions/visualstudio/visual-studio-2008/ff652490(v=orm.10)) in [Learning C# 3.0: Master the fundamentals of C# 3.0](/previous-versions/visualstudio/visual-studio-2008/ff652493(v=orm.10))  
   
 ## <a name="see-also"></a>另請參閱
 

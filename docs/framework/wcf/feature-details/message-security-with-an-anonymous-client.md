@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 058163c96bba036c3183695bf986b4d0424271ac
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aed56be359f094db483ab1d012bd77a1096433b6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595215"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553762"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名用戶端的訊息安全性
 
-下列案例顯示 Windows Communication Foundation （WCF）訊息安全性所保護的用戶端和服務。 這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。 如需有關使用豐富宣告進行授權的詳細資訊，請參閱使用身分[識別模型來管理宣告與授權](managing-claims-and-authorization-with-the-identity-model.md)。
+下列案例顯示 Windows Communication Foundation (WCF) 訊息安全性所保護的用戶端和服務。 這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。 如需有關使用豐富宣告進行授權的詳細資訊，請參閱使用身分 [識別模型來管理宣告與授權](managing-claims-and-authorization-with-the-identity-model.md)。
 
-如需範例應用程式，請參閱[訊息安全性匿名](../samples/message-security-anonymous.md)。
+如需範例應用程式，請參閱 [訊息安全性匿名](../samples/message-security-anonymous.md)。
 
 ![匿名用戶端的訊息安全性](media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 
@@ -25,9 +25,9 @@ ms.locfileid: "84595215"
 |安全性模式|訊息|
 |互通性|僅限 WCF|
 |驗證 (伺服器)|初始交涉需要伺服器驗證，而不需要用戶端驗證|
-|驗證 (用戶端)|無|
+|驗證 (用戶端)|None|
 |完整性|是，使用共用安全性內容|
-|保密|是，使用共用安全性內容|
+|機密性|是，使用共用安全性內容|
 |傳輸|HTTP|
 
 ## <a name="service"></a>服務
@@ -138,10 +138,10 @@ ms.locfileid: "84595215"
 </configuration>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [安全性總覽](security-overview.md)
+- [安全性概觀](security-overview.md)
 - [分散式應用程式安全性](distributed-application-security.md)
 - [訊息安全性匿名](../samples/message-security-anonymous.md)
 - [服務身分識別和驗證](service-identity-and-authentication.md)
-- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 的資訊安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

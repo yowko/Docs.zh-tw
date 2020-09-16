@@ -12,7 +12,7 @@ ms.locfileid: "90556007"
 # <a name="service-calls-faulted-per-second"></a>服務：每秒發生錯誤的呼叫數
 計數器名稱：每秒發生錯誤的呼叫數  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>說明  
  每秒傳回至此服務的錯誤呼叫數。  
   
  此計數器是效能計數器類型 [PERF_COUNTER_COUNTER](/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))，其值是使用下列公式來計算。  

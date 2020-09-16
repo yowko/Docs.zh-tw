@@ -5,25 +5,25 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: c0ca8e7d0d68d4730173385540cbcec66c7bf03a
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: efb41f31a3baa895b5739021af5fa36e32aefeea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071714"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556989"
 ---
-# <a name="overview-of-markup-extensions-for-xaml"></a>XAML 標籤延伸概述
+# <a name="overview-of-markup-extensions-for-xaml"></a>XAML 標記延伸的總覽
 
-標記延伸是一種 XAML 技術,用於獲取不是基元或特定 XAML 類型的值。 對於屬性使用方式，標記延伸使用左大括號 `{` 的已知字元序列進入標記延伸範圍，並使用右大括號 `}` 結束。 使用 .NET XAML 服務時,可以使用 System.Xaml 程式集中一些預定義的 XAML 語言標記擴展。 您也可以從 <xref:System.Windows.Markup.MarkupExtension> 類別產生子類別 (定義於 System.Xaml 中)，以及定義您自己的標記延伸。 或者,如果您已經引用該框架,則可以使用由特定框架定義的標記擴展。
+標記延伸是一種 XAML 技巧，可取得不是基本或特定 XAML 類型的值。 對於屬性使用方式，標記延伸使用左大括號 `{` 的已知字元序列進入標記延伸範圍，並使用右大括號 `}` 結束。 使用 .NET XAML 服務時，您可以使用來自 system.string 元件的部分預先定義 XAML 語言標記延伸。 您也可以從 <xref:System.Windows.Markup.MarkupExtension> 類別產生子類別 (定義於 System.Xaml 中)，以及定義您自己的標記延伸。 或者，如果您已參考該架構，您可以使用特定架構所定義的標記延伸。
 
 存取標記延伸使用方式時，XAML 物件寫入器可以透過 <xref:System.Windows.Markup.MarkupExtension> 覆寫中的服務連接點，將服務提供給自訂 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> 類別。 服務可以用來取得有關使用方式、物件寫入器之特定功能、XAML 結構描述內容等的內容。
 
-## <a name="xaml-defined-markup-extensions"></a>XAML 定義的標記延伸
+## <a name="xaml-defined-markup-extensions"></a>XAML 定義標記延伸
 
-.NET XAML 服務為 XAML 語言支援實現了多個標記擴展。 這些標記延伸對應至 XAML 規格的各部分，做為語言。 這些通常可透過常見使用方式中所見語法的 `x:` 前置詞予以識別。 .NET XAML 服務對這些 XAML 語言元素<xref:System.Windows.Markup.MarkupExtension>的實現都來自 基類。
+.NET XAML 服務會針對 XAML 語言支援來執行數個標記延伸。 這些標記延伸對應至 XAML 規格的各部分，做為語言。 這些通常可透過常見使用方式中所見語法的 `x:` 前置詞予以識別。 這些 XAML 語言專案的 .NET XAML 服務實現全都衍生自  <xref:System.Windows.Markup.MarkupExtension> 基類。
 
 > [!NOTE]
-> `x:` 前置詞用於 XAML 生產的根項目中 XAML 語言命名空間的一般 XAML 命名空間對應。 例如,各種特定框架的 Visual Studio 專案和頁面範`x:`本使用此 映射啟動 XAML 檔。 您可以選擇專屬 XAML 命名空間對應中的不同前置詞語彙基元，但是這份文件將假設使用預設 `x:` 對應來識別這些是 XAML 語言 XAML 命名空間之定義部分的實體，而非特定 Framework 的預設 XAML 命名空間或其他任意 CLR 或 XML 命名空間。
+> `x:` 前置詞用於 XAML 生產的根項目中 XAML 語言命名空間的一般 XAML 命名空間對應。 例如，各種特定架構的 Visual Studio 專案和頁面範本，會使用此對應來起始 XAML 檔案 `x:` 。 您可以選擇專屬 XAML 命名空間對應中的不同前置詞語彙基元，但是這份文件將假設使用預設 `x:` 對應來識別這些是 XAML 語言 XAML 命名空間之定義部分的實體，而非特定 Framework 的預設 XAML 命名空間或其他任意 CLR 或 XML 命名空間。
 
 ### <a name="xtype"></a>x:Type
 
@@ -53,13 +53,13 @@ ms.locfileid: "82071714"
 
 若要定義自訂標記延伸模組，以與 System.Xaml 中的預設 XAML 讀取器和 XAML 寫入器實作互動，請從抽象 <xref:System.Windows.Markup.MarkupExtension> 類別衍生類別。 該類別有一個覆寫的方法 (即 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>)。 您可能也需要定義其他建構函式來支援標記延伸使用方式的引數，以及相符的可設定屬性。
 
-通過<xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>,自定義標記擴展可以訪問服務上下文,該上下文報告 XAML 處理器調用標記擴展的環境。 在負載路徑中,這通常是<xref:System.Xaml.XamlObjectWriter>。 在儲存路徑中，這通常是 <xref:System.Xaml.XamlXmlWriter>。 每個都會將服務內容報告為內部 XAML 服務提供者內容類別，以實作服務提供者模式。 如需可用服務和其代表項目的詳細資訊，請參閱 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions.md)。
+透過 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> ，自訂標記延伸可以存取服務內容，此內容會報告 XAML 處理器叫用標記延伸的環境。 在載入路徑中，這通常是 <xref:System.Xaml.XamlObjectWriter> 。 在儲存路徑中，這通常是 <xref:System.Xaml.XamlXmlWriter>。 每個都會將服務內容報告為內部 XAML 服務提供者內容類別，以實作服務提供者模式。 如需可用服務和其代表項目的詳細資訊，請參閱 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions.md)。
 
 您的標記延伸類別必須使用公用存取層級；XAML 處理器必須一律可以具現化標記延伸的支援類別，才能使用其服務。
 
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>定義自訂標記延伸的支援類型
 
-當您使用 .NET XAML 服務或基於 .NET XAML 服務的框架時,對於如何命名標記擴展支援類型,有兩種選擇。 類型名稱是與下列方式有關：XAML 物件寫入器在 XAML 中發現標記延伸使用方式時，嘗試存取和叫用標記延伸支援類型的方式。 使用下列其中一種命名策略：
+當您使用 .NET XAML 服務或以 .NET XAML 服務為建立的架構時，您有兩種方式可以選擇如何命名標記延伸支援類型。 類型名稱是與下列方式有關：XAML 物件寫入器在 XAML 中發現標記延伸使用方式時，嘗試存取和叫用標記延伸支援類型的方式。 使用下列其中一種命名策略：
 
 - 將類型名稱命名為與 XAML 標記使用方式語彙基元完全相符的名稱。 例如，若要支援 `{Collate ...}` 延伸使用方式，請將支援類型命名為 `Collate`。
 - 將類型名稱命名為使用方式字串語彙基元加上後置詞 `Extension`。 例如，若要支援 `{Collate ...}` 延伸使用方式，請將支援類型命名為 `CollateExtension`。
@@ -68,11 +68,11 @@ ms.locfileid: "82071714"
 
 從標記使用方式觀點來看，將 `Extension` 後置詞包括為使用方式的一部分是有效的。 不過，其行為就像 `Extension` 是類別名稱的真正部分，如果支援類別沒有 `Extension` 後置詞，則 XAML 物件寫入器無法解析這種使用方式的標記延伸支援類別。
 
-### <a name="the-parameterless-constructor"></a>沒有參數建構函式
+### <a name="the-parameterless-constructor"></a>無參數的函式
 
-對於所有標記擴展支援類型,應公開公共無參數構造函數。 對於 XAML 物件編寫器實例化物件元素用法的標記擴展的任何情況,都需要無參數構造函數。 支援物件項目使用方式是標記延伸的合理預期，特別是針對序列化。 不過，如果您只想要支援標記延伸的屬性使用方式，則可以實作沒有公用建構函式的標記延伸。
+針對所有標記延伸支援類型，您應該公開公用無參數的函式。 XAML 物件寫入器從物件專案使用方式具現化標記延伸的任何情況下，都需要無參數的函式。 支援物件項目使用方式是標記延伸的合理預期，特別是針對序列化。 不過，如果您只想要支援標記延伸的屬性使用方式，則可以實作沒有公用建構函式的標記延伸。
 
-如果標記擴展用法沒有參數,則需要無參數構造函數來支援用法。
+如果您的標記延伸使用方式沒有引數，則需要無參數的函式來支援使用方式。
 
 ## <a name="constructor-patterns-and-positional-arguments-for-a-custom-markup-extension"></a>自訂標記延伸的建構函式模式和位置引數
 
@@ -88,10 +88,10 @@ public Collate(CollationMode collationMode) {...}
 
 處理的運作在概念上如同標記延伸是要建立的物件，然後設定其成員值。 每個要設定之指定屬性的評估方式，類似剖析 XAML 時，如何在已建立物件上設定指定成員。 有兩個重大差異：
 
-- 如前所述,標記擴展支援類型不需要具有無參數構造函數,以便在 XAML 中實例化。 除非它在文字語法中的可能引數語彙基元化並評估為位置或具名引數，以及在該時間呼叫適當的建構函式，否則會延後其物件建構。
+- 如先前所述，標記延伸支援型別不需要有無參數的函式，就可以在 XAML 中具現化。 除非它在文字語法中的可能引數語彙基元化並評估為位置或具名引數，以及在該時間呼叫適當的建構函式，否則會延後其物件建構。
 - 標記延伸使用方式可以是巢狀的。 會先評估最內層的標記延伸。 因此，您可以假設使用這類使用方式，並將一個建構參數宣告為需要值轉換器 (例如標記延伸) 的類型。
 
-在先前範例中，顯示與這類處理的依賴性。 .NET XAML 服務 XAML 物件編寫器在本機級別將枚舉常量名稱處理到枚舉值中。
+在先前範例中，顯示與這類處理的依賴性。 .NET XAML 服務 XAML 物件寫入器會將列舉常數名稱處理為原生層級的列舉值。
 
 處理標記延伸位置參數的文字語法也可以仰賴與建構引數中類型相關聯的類型轉換器。
 
@@ -105,13 +105,13 @@ XAML 處理器預期此標記延伸會有兩個位置引數。 如果有使用�
 
 在標記延伸語法和處理的 XAML 指定規則中，不論引數是位置引數還是具名引數，逗號都是這些引數之間的分隔符號。
 
-### <a name="duplicate-arity-of-positional-arguments"></a>位置參數的重複性
+### <a name="duplicate-arity-of-positional-arguments"></a>位置引數的重複 arity
 
 如果 XAML 物件寫入器遇到具有位置引數的標記延伸使用方式，而且有接受該數目之引數 (重複 Arity) 的多個建構函式引數，則這不一定是錯誤。 行為取決於可自訂 XAML 結構描述內容設定 ( <xref:System.Xaml.XamlSchemaContextSettings.SupportMarkupExtensionsWithDuplicateArity%2A>)。 如果 <xref:System.Xaml.XamlSchemaContextSettings.SupportMarkupExtensionsWithDuplicateArity%2A> 是 `true`，XAML 物件寫入器應該不會僅針對重複 Arity 原因擲回例外狀況。 該點的行為並未嚴格進行定義。 基本設計假設是結構描述內容具有可用於特定參數的類型資訊，而且可以嘗試比對重複候選項的明確轉換，以查看哪些簽章可能是最佳相符項。 如果沒有簽章可以通過 XAML 物件寫入器上執行的特定結構描述內容所進行的測試，則可能還是會擲回例外狀況。
 
-預設情況下,<xref:System.Xaml.XamlSchemaContextSettings.SupportMarkupExtensionsWithDuplicateArity%2A>`false`位於<xref:System.Xaml.XamlSchemaContext>基於 CLR 的 .NET XAML 服務中。 因此，如果遇到支援類型建構函式中有重複 Arity 的標記延伸使用方式，則預設 <xref:System.Xaml.XamlObjectWriter> 會擲回例外狀況。
+根據預設， <xref:System.Xaml.XamlSchemaContextSettings.SupportMarkupExtensionsWithDuplicateArity%2A> 會 `false` 在以 CLR 為基礎 <xref:System.Xaml.XamlSchemaContext> 的 .net XAML 服務中。 因此，如果遇到支援類型建構函式中有重複 Arity 的標記延伸使用方式，則預設 <xref:System.Xaml.XamlObjectWriter> 會擲回例外狀況。
 
-## <a name="named-arguments-for-a-custom-markup-extension"></a>自訂標記延伸的命名參數
+## <a name="named-arguments-for-a-custom-markup-extension"></a>自訂標記延伸的具名引數
 
 XAML 所指定的標記延伸也可以使用使用方式的具名引數形式。 在第一個語彙基元化層級，文字語法會分成數個引數。 任何引數內有等號 (=) 會將引數識別為具名引數。 這類引數也會語彙基元化成名稱/值組。 在此情況下，名稱會指定標記延伸支援類型的公用可設定屬性。 如果您想要支援具名引數使用方式，則應該提供這些公用可設定屬性。 屬性只要保持公用，就可以是繼承屬性。
 
@@ -119,13 +119,13 @@ XAML 所指定的標記延伸也可以使用使用方式的具名引數形式。
 
 任何值轉換器的可用服務都相同。 差異在於每個值轉換器如何接收服務內容。 存取服務和可用服務記載於 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions.md)主題中。
 
-## <a name="property-element-usage-of-a-markup-extension"></a>標記延伸的屬性元素使用
+## <a name="property-element-usage-of-a-markup-extension"></a>標記延伸的屬性專案使用方式
 
 通常是在屬性使用方式中使用標記延伸來設定標記延伸使用方式的案例。 不過，也可能可以定義支援類別，以支援屬性項目使用方式。
 
-要支援標記擴展的屬性元素使用,請定義公共無參數構造函數。 這應該是執行個體建構函式，而不是靜態建構函式。 這是必需的,因為 XAML 處理器通常必須調用從標記處理的任何物件元素上的無參數構造函數,並且這包括標記擴展類作為物件元素。 在進階案例中，您可以定義類別的非預設建構路徑。 (有關詳細資訊,請參閱[x:工廠方法指令](xfactorymethod-directive.md)。但是,不應將這些模式用於標記擴展目的,因為這樣對於設計器和原始標記用戶來說,發現使用模式變得更加困難。
+若要支援標記延伸的屬性專案使用方式，請定義公用無參數的函式。 這應該是執行個體建構函式，而不是靜態建構函式。 這是必要的，因為 XAML 處理器通常必須在它從標記處理的任何物件元素上叫用無參數的函式，而這會將標記延伸類別包含為物件元素。 在進階案例中，您可以定義類別的非預設建構路徑。  (如需詳細資訊，請參閱 [x:FactoryMethod](xfactorymethod-directive.md)指示詞。 ) 不過，您不應該將這些模式用於標記延伸用途，因為這會讓設計人員和原始標記使用者的使用模式探索變得更困難。
 
-## <a name="attributing-for-a-custom-markup-extension"></a>為自訂標記延伸配置
+## <a name="attributing-for-a-custom-markup-extension"></a>自訂標記延伸的特性化
 
 為了支援設計環境和特定 XAML 物件寫入器案例，您應該設定具有數個 CLR 屬性之標記延伸支援類型的屬性。 這些屬性會報告預定標記延伸使用方式。
 
@@ -134,11 +134,11 @@ XAML 所指定的標記延伸也可以使用使用方式的具名引數形式。
 - 設計人員和 IDE，可能可以提供標記延伸使用方式的類型感知支援。
 - 目標類別上 `SetMarkupExtension` 處理常式的進階實作，可能依賴反映來判斷標記延伸的傳回類型，而不是依名稱對特定已知 <xref:System.Windows.Markup.MarkupExtension> 實作進行分支處理。
 
-## <a name="serialization-of-markup-extension-usages"></a>標記延伸用法的序列化
+## <a name="serialization-of-markup-extension-usages"></a>標記延伸使用方式的序列化
 
 XAML 物件寫入器處理標記延伸使用方式並呼叫 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>時，先前為標記延伸使用方式的內容存在於 XAML 節點資料流中，但不在物件圖形中。 在物件圖形中，只會保留值。 如果您有設計案例或將原始標記延伸使用方式持續保存至序列化輸出的其他原因，則必須設計您自己的基礎結構，以從載入路徑 XAML 節點資料流追蹤標記延伸使用方式。 您可以實作行為以從載入路徑重新建立節點資料流的項目，並將它們播放回 XAML 寫入器以在儲存路徑中進行序列化，但需替換節點資料流適當位置中的值。
 
-## <a name="markup-extensions-in-the-xaml-node-stream"></a>XAML 節點串流的標記延伸
+## <a name="markup-extensions-in-the-xaml-node-stream"></a>XAML 節點資料流程中的標記延伸
 
 如果您是在載入路徑上使用 XAML 節點資料流，則標記延伸使用方式會以物件形式出現在節點資料流中。
 
@@ -156,7 +156,7 @@ XAML 物件寫入器處理標記延伸使用方式並呼叫 <xref:System.Windows
 
 具有具名引數的標記延伸使用方式會呈現為具有相關名稱之成員的物件，且成員各設定文字字串值。
 
-實際叫用標記延伸的 `ProvideValue` 實作需要 XAML 結構描述內容，因為這需要類型對應以及建立標記延伸支援類型執行個體。 這是標記擴展用法在預設 .NET XAML 服務節點流中以這種方式保留的原因之一 - 載入路徑的讀者部分通常不具備必要的 XAML 架構上下文可用。
+實際叫用標記延伸的 `ProvideValue` 實作需要 XAML 結構描述內容，因為這需要類型對應以及建立標記延伸支援類型執行個體。 這是在預設的 .NET XAML 服務節點資料流程中以這種方式保留標記延伸使用方式的其中一個原因-載入路徑的讀取器部分通常不會有必要的 XAML 架構內容可用。
 
 如果您是在儲存路徑上使用 XAML 節點資料流，則物件圖形呈現中通常不會有任何項目可通知您：要序列化的物件一開始是由標記延伸使用方式和 `ProvideValue` 結果所提供。 如果案例需要針對來回處理保存標記延伸使用方式，同時擷取物件圖形中的其他變更，則必須設計自己的技術來保留原始 XAML 輸入中的標記延伸使用方式知識。 例如，若要還原標記延伸使用方式，您可能需要在儲存路徑上使用節點資料流才能還原標記延伸使用方式，或在原始 XAML 與往返 XAML 之間執行某種類型的合併。 一些實作 XAML 的架構 (例如 WPF) 使用中繼類型 (運算式)，協助代表標記延伸使用方式提供值的情況。
 
@@ -164,4 +164,4 @@ XAML 物件寫入器處理標記延伸使用方式並呼叫 <xref:System.Windows
 
 - <xref:System.Windows.Markup.MarkupExtension>
 - [XAML 的類型轉換子和標記延伸](type-converters-and-markup-extensions.md)
-- [標記延伸和 WPF XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [標記延伸和 WPF XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml)

@@ -46,7 +46,7 @@
 - name: 參考資料
   items:
     - name: 應用程式開發介面參考
-      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+      href: ../../api/index.md?view=spark-dotnet
 - name: 資源
   items:
     - name: 資源概觀

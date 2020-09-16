@@ -6,22 +6,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7312de7d812aa714447a60f5aa04cb48890e40e8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475264"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553723"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>從 .NET Framework 1.1 遷移
 
-Windows 7 和更新版本的 Windows 作業系統不支援 .NET Framework 1.1。 因此，以 .NET Framework 1.1 為目標的應用程式不需要在 Windows 7 或更新版本的作業系統版本上進行修改，就不會執行。 本主題討論在 Windows 7 和更新版本的 Windows 作業系統下執行以 .NET Framework 1.1 為目標的應用程式所需的步驟。 如需 .NET Framework 1.1 和 Windows 8 的詳細資訊，請參閱[在 Windows 8 和更新版本上執行 .NET Framework 1.1 應用程式](../install/run-net-framework-1-1-apps.md)。
+Windows 7 和更新版本的 Windows 作業系統不支援 .NET Framework 1.1。 因此，以 .NET Framework 1.1 為目標的應用程式將不會在 Windows 7 或更新版本的作業系統版本上執行，而不需修改。 本主題討論在 Windows 7 和更新版本的 Windows 作業系統下執行以 .NET Framework 1.1 為目標的應用程式所需的步驟。 如需 .NET Framework 1.1 和 Windows 8 的詳細資訊，請參閱 [在 Windows 8 和更新版本上執行 .NET Framework 1.1 應用程式](../install/run-net-framework-1-1-apps.md)。
 
 ## <a name="retarget-or-recompile"></a>重定目標或重新編譯
 
-有兩種方式可取得使用 .NET Framework 1.1 編譯的應用程式，以在 Windows 7 或更新版本的 Windows 作業系統上執行：
+有兩種方式可取得使用 .NET Framework 1.1 編譯的應用程式，以便在 Windows 7 或更新版本的 Windows 作業系統上執行：
 
-- 將應用程式的目標重定為在 .NET Framework 4 和更新版本下執行。 重定會要求您將專案新增 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 至應用程式的設定檔，使其能夠在 .NET Framework 4 和更新版本下執行。 這類組態檔的形式如下：
+- 將應用程式的目標重定為在 .NET Framework 4 和更新版本下執行。 重定目標需要您將專案加入 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 至應用程式的設定檔，以允許它在 .NET Framework 4 和更新版本下執行。 這類組態檔的形式如下：
 
     ```xml
     <configuration>
@@ -43,7 +43,7 @@ Windows 7 和更新版本的 Windows 作業系統不支援 .NET Framework 1.1。
 
 ## <a name="breaking-changes"></a>重大變更
 
-當發生重大變更時，重新設定目標及重新編譯的應用程式可能會有替代解決辦法可用 (視特定變更而定)。 在某些情況下，您可以將子專案新增至 [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 應用程式佈建檔的元素，以還原先前的行為。 例如，下列組態檔會還原 .NET Framework 1.1 中使用的字串排序和比較行為，而且可以搭配重新設定目標或重新編譯的應用程式使用。
+當發生重大變更時，重新設定目標及重新編譯的應用程式可能會有替代解決辦法可用 (視特定變更而定)。 在某些情況下，您可以將子專案加入至 [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 應用程式佈建檔的元素，以還原先前的行為。 例如，下列組態檔會還原 .NET Framework 1.1 中使用的字串排序和比較行為，而且可以搭配重新設定目標或重新編譯的應用程式使用。
 
 ```xml
 <configuration>
@@ -57,9 +57,9 @@ Windows 7 和更新版本的 Windows 作業系統不支援 .NET Framework 1.1。
 
 若要評估可能的重大變更對您的應用程式的影響，您必須檢閱以下變更清單：
 
-- [.NET Framework 2.0 中的重大變更](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))記錄可能會影響以 .NET Framework 1.1 為目標之應用程式的 .NET Framework 2.0 SP1 變更。
+- [.NET Framework 2.0 中的重大變更](/previous-versions/aa570326(v=msdn.10))記錄可能會影響以 .NET Framework 1.1 為目標之應用程式的 .NET Framework 2.0 SP1 變更。
 
-- [.NET Framework 3.5 SP1 中的變更](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))記錄在 .NET Framework 3.5 和 .NET Framework 3.5 SP1 之間的變更。
+- [.NET Framework 3.5 SP1 中的變更](/previous-versions/dotnet/articles/dd310284(v=msdn.10))記錄在 .NET Framework 3.5 和 .NET Framework 3.5 SP1 之間的變更。
 
 - [.NET Framework 4 移轉問題](net-framework-4-migration-issues.md)中記載 .NET Framework 3.5 SP1 和 .NET Framework 4 之間的變更。
 

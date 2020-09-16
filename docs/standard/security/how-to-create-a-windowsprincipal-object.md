@@ -11,19 +11,19 @@ helpviewer_keywords:
 - security [.NET], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: d99d63dc766f37e7cc30888d2e77657595f909af
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 6cf7153250d2574783515ea53cf99709499d36f9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557030"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556202"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>作法：建立 WindowsPrincipal 物件
 
 > [!NOTE]
 > 本文適用于 Windows。
 >
-> 如需 ASP.NET Core 的詳細資訊，請參閱[ASP.NET Core 安全性](/aspnet/core/security/)。
+> 如需 ASP.NET Core 的詳細資訊，請參閱 [ASP.NET Core 安全性](/aspnet/core/security/)。
 
 有兩種方式來建立 <xref:System.Security.Principal.WindowsPrincipal> 物件，視程式碼是否必須重複執行以角色為基礎的驗證，還是它只必須執行一次而定。  
   
@@ -84,4 +84,4 @@ ms.locfileid: "87557030"
 ## <a name="see-also"></a>另請參閱
 
 - [Principal 和 Identity 物件](principal-and-identity-objects.md)
-- [ASP.NET Core 安全性](https://docs.microsoft.com/aspnet/core/security/)
+- [ASP.NET Core 安全性](/aspnet/core/security/)

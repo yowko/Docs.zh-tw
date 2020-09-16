@@ -42,11 +42,11 @@ ms.locfileid: "90555883"
 |type|衍生自類別的型別 <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> 。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<caches>](caches.md)|註冊服務或安全性權杖處理常式集合所使用的快取。|  
   

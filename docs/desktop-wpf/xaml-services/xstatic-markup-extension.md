@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: fb9ee6807135f17fd9e0c799533bba28b369ebe2
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 634a480b4d7446ed09708f6c91276d1c2f61d4a9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "82072022"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551607"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 標記延伸
 
-引用以通用語言規範 (CLS) 相容方式定義的任何靜態按值代碼實體。 引用的靜態屬性可用於在 XAML 中提供屬性的值。
+參考 Common Language Specification 中定義的任何靜態傳值程式碼實體， (符合 CLS) 規範的方式。 所參考的靜態屬性可以用來提供 XAML 中的屬性值。
 
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage
 
@@ -31,30 +31,30 @@ ms.locfileid: "82072022"
 
 | | |
 |-|-|
-|`prefix`|選擇性。 指映射的非預設 XAML 命名空間的前置碼。 `prefix`在用法中顯式顯示,因為很少引用來自預設 XAML 命名空間的靜態屬性。 請參閱＜備註＞。|
-|`typeName`|必要。 定義所需靜態成員的類型的名稱。|
-|`staticMemberName`|必要。 所需靜態值成員(常量、靜態屬性、欄位或枚舉值)的名稱。|
+|`prefix`|選擇性。 參考對應的非預設 XAML 命名空間的前置詞。 `prefix` 因為您很少參考來自預設 XAML 命名空間的靜態屬性，所以會明確顯示在使用方式中。 請參閱＜備註＞。|
+|`typeName`|必要。 定義所需靜態成員的類型名稱。|
+|`staticMemberName`|必要。 所需的靜態值成員名稱 (常數、靜態屬性、欄位或列舉值) 。|
 
 ## <a name="remarks"></a>備註
 
-參考的代碼實體必須是以下類型之一:
+參考的程式碼實體必須是下列其中一項：
 
-- 常量
+- 常數
 - 靜態屬性
 - 欄位
-- Enlt
+- 列舉值
 
-如果編譯了 XAML,或者 XAML 載入時間分析異常,則指定任何其他代碼實體(如非靜態屬性)會導致編譯時錯誤。
+指定任何其他程式碼實體（例如非靜態屬性）時，如果 XAML 經過標記編譯，或 XAML 載入時間剖析例外狀況，則會導致編譯時期錯誤。
 
-您可以`x:Static`參考目前 XAML 文件的預設 XAML 命名空間中未包含的靜態欄位或屬性;但是,這需要首碼映射。 XAML 命名空間幾乎總是在 XAML 文件的根元素上定義。
+您可以 `x:Static` 參考不在目前 xaml 檔之預設 xaml 命名空間中的靜態欄位或屬性; 不過，這需要前置詞對應。 XAML 命名空間幾乎一律定義在 XAML 檔的根項目上。
 
-靜態屬性的尋找操作可以由 .NET XAML 服務及其 XAML 讀取器和 XAML 編寫器執行,當它們使用預設的 XAML 架構上下文運行時。 此 XAML 架構上下文可以使用 CLR 反射為物件圖形建構提供必要的靜態值。 `typeName`您指定的實際上是一個 XAML 類型名稱,而不是 CLR 類型名稱,儘管在使用預設 XAML 架構上下文或使用所有基於 CLR 的 XAML 實現框架時,這些名稱本質上是相同的名稱。
+當使用預設的 XAML 架構內容執行時，.NET XAML 服務及其 XAML 讀取器和 XAML 寫入器可執行靜態屬性的查閱作業。 這個 XAML 架構內容可以使用 CLR 反映來提供物件圖形結構的必要靜態值。 `typeName`您指定的實際上是 xaml 型別名稱，而不是 CLR 型別名稱，但在使用預設的 XAML 架構內容或使用所有現有的 CLR 型 XAML 實架構時，這些基本上是相同的名稱。
 
-當您進行`x:Static`不是屬性值類型的引用時,應小心謹慎。 在 XAML 處理序列中,從標記擴展提供的值不會調用附加值轉換。 即使引用`x:Static`創建了文本字串,也是如此,並且通常針對該特定成員或返回類型的任何成員值對基於文本字串的屬性值進行值轉換。
+當您建立的 `x:Static` 參考不是屬性值的型別時，請特別小心。 在 XAML 處理順序中，提供的標記延伸值不會叫用額外的值轉換。 即使您的 `x:Static` 參考會建立文字字串，且以文字字串為基礎之屬性值的值轉換通常是針對該特定成員或傳回型別的任何成員值來轉換，也是如此。
 
 屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `x:Static` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.Markup.StaticExtension.Member%2A> 延伸類別的 <xref:System.Windows.Markup.StaticExtension> 值。
 
-技術上可能還有其他兩個 XAML 用法。 但是,這些用法不太常見,因為它們是不必要的冗長:
+在技術上，有兩個其他的 XAML 用法。 不過，這些使用方式較不常見，因為它們是不必要的詳細資訊：
 
 01. 物件元素語法。
 
@@ -62,29 +62,29 @@ ms.locfileid: "82072022"
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-02. 具有顯式成員屬性的屬性語法,用於初始化字串。
+02. 具有初始化字串之明確成員屬性的屬性語法。
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />
     ```
 
-在 .NET XAML 服務實現中,此標記擴展<xref:System.Windows.Markup.StaticExtension>的處理由 類定義。
+在 .NET XAML 服務執行中，這個標記延伸的處理是由類別所定義 <xref:System.Windows.Markup.StaticExtension> 。
 
-`x:Static` 是一種標記延伸。 XAML 中的所有標記擴展在其屬性語法中`{``}`使用和字元,這是 XAML 處理器識別標記擴展必須提供值的約定。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-overview.md)。
+`x:Static` 是一種標記延伸。 XAML 中的所有標記延伸 `{` `}` 都會在其屬性語法中使用和字元，這是 xaml 處理器辨識標記延伸必須提供值的慣例。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-overview.md)。
 
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項
 
-用於 WPF 程式設計的預設 XAML 命名空間不包含許多有用的靜態屬性,並且大多數有用的靜態屬性都支援,例如類型轉換`{x:Static}`器,無需即可 方便使用。 對於靜態屬性,如果以下原因之一為 true,則必須映射 XAML 命名空間的前置字串:
+您用於 WPF 程式設計的預設 XAML 命名空間不包含許多有用的靜態屬性，而且大部分有用的靜態屬性都有支援，例如可在不需要的情況下，協助使用的類型轉換器 `{x:Static}` 。 若為靜態屬性，如果下列其中一個條件成立，您就必須對應 XAML 命名空間的前置詞：
 
-- 您引用的類型存在於 WPF 中,但不是 WPF ( 的`http://schemas.microsoft.com/winfx/2006/xaml/presentation`預設 XAML 命名空間的一部分)。 這是使用`x:Static`的相當常見的方案。 例如,可以使用具有`x:Static`XAML 命名空間映<xref:System>射到 CLR 命名空間和 mscorlib 程式集的<xref:System.Environment>引用,以便引用類的靜態屬性。
+- 您參考的類型存在於 WPF 中，但不是 WPF () 的預設 XAML 命名空間的一部分 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 。 這是相當常見的使用案例 `x:Static` 。 例如，您可以使用 `x:Static` 具有 XAML 命名空間對應的參考，以對應到 <xref:System> CLR 命名空間和 mscorlib.dll 元件，以便參考類別的靜態屬性 <xref:System.Environment> 。
 
-- 您正在引用自訂程式集中的類型。
+- 您正在從自訂群組件參考型別。
 
-- 您引用的類型存在於 WPF 程式集中,但該類型位於未映射到 WPF 預設 XAML 命名空間的 CLR 命名空間中。 CLR 命名空間映射到 WPF 的預設 XAML 命名空間由各種 WPF 程式集中的定義執行(有關此概念的詳細資訊,請參閱[WPF XAML 的 XAML 命名空間和命名空間映射](../../framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 如果 CLR 命名空間主要由通常不用於 XAML 的類別定義組成,則存在非映射 CLR 命名空間,例如<xref:System.Windows.Threading>。
+- 您參考的類型存在於 WPF 元件中，但該類型在 CLR 命名空間中，而該命名空間未對應為 WPF 預設 XAML 命名空間的一部分。 CLR 命名空間與 WPF 的預設 XAML 命名空間的對應是由各種 WPF 元件中的定義所執行 (如需此概念的詳細資訊，請參閱 [WPF xaml 的 Xaml 命名空間和命名空間對應](/dotnet/desktop/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml)) 。 如果該 CLR 命名空間大部分是由通常不適合 XAML 的類別定義所組成（例如），則可能會存在非對應的 CLR 命名空間 <xref:System.Windows.Threading> 。
 
-有關如何為 WPF 使用前置碼與 XAML 命名空間的詳細資訊,請參考[WPF XAML 的 XAML 命名空間與命名空間映射](../../framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。
+如需如何使用 WPF 的前置詞和 XAML 命名空間的詳細資訊，請參閱 [WPF xaml 的 Xaml 命名空間和命名空間對應](/dotnet/desktop/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [x:Type 標記延伸](xtype-markup-extension.md)
-- [從 WPF 移轉至 System.Xaml 的類型](../../framework/wpf/advanced/types-migrated-from-wpf-to-system.md)
+- [從 WPF 移轉至 System.Xaml 的類型](/dotnet/desktop/wpf/advanced/types-migrated-from-wpf-to-system)

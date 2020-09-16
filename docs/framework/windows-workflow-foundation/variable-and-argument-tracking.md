@@ -2,12 +2,12 @@
 title: 變數及引數追蹤
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: c5d3fe6626c22184edd83de6aedad8589ab2ef35
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: af5c21b75f3238546acac0755ec4e6149ee50d95
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837541"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552488"
 ---
 # <a name="variable-and-argument-tracking"></a>變數及引數追蹤
 追蹤工作流程的執行時，擷取資料通常很實用。 它可在存取追蹤記錄後期執行時，提供額外的內容。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以在使用追蹤的工作流程中的任何活動範圍內擷取任何可見的變數或引數。 追蹤設定檔讓擷取資料變得非常容易。  
@@ -17,7 +17,7 @@ ms.locfileid: "74837541"
   
 - 如果以變數名稱指定變數，則追蹤會在目前所追蹤的活動及父活動內尋找該變數。 追蹤會在目前活動範圍及父範圍中搜尋變數。  
   
-- 如果要解壓縮的變數是使用 name = "\*" 所指定，則會解壓縮目前正在追蹤之活動內的所有變數。 在此情況下，則不會擷取在範圍內但未在父活動中定義的變數。  
+- 如果要解壓縮的變數是使用 name = "" 來指定 \* ，則會解壓縮目前正在追蹤之活動內的所有變數。 在此情況下，則不會擷取在範圍內但未在父活動中定義的變數。  
   
  擷取引數時，會根據活動的狀態擷取引數。 當活動的狀態是 Executing 時，則只有 `InArguments` 可供擷取。 若為其他任何活動狀態 (Closed、Faulted、Canceled)，則 InArgument 和 OutArgument 皆可供擷取。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74837541"
   
 3. 若為自訂追蹤參與者，請確定 WF 程式碼不會公開儲存在變數或引數中的機密資訊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Windows Server App Fabric 監視](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
-- [使用 App Fabric 監視應用程式](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))
+- [Windows Server App Fabric 監視](/previous-versions/appfabric/ee677251(v=azure.10))
+- [使用 App Fabric 監視應用程式](/previous-versions/appfabric/ee677276(v=azure.10))

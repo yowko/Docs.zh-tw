@@ -1,6 +1,6 @@
 ---
 title: 應用程式網域
-description: 閱讀應用程式域的相關資訊，以在 .NET 中提供安全性、可靠性、版本控制、& 卸載元件之間的隔離界限。
+description: 閱讀關於應用程式域的資訊，以提供應用程式之間的隔離界限，以提供安全性、可靠性、版本控制、& 在 .NET 中卸載元件。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - process boundaries for isolation
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-ms.openlocfilehash: d6accd11e33c0556fdd7596b2790f4787dce7ae1
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 246566265d55a3289ef37a2987ed9c40f051e3c8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903476"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553365"
 ---
 # <a name="application-domains"></a>應用程式網域
 
@@ -47,7 +47,7 @@ ms.locfileid: "84903476"
     > [!NOTE]
     > 您不能卸載個別組件或型別。 只有完整的定義域可以卸載。  
   
-- 在某一應用程式中執行的程式碼不能直接從其他應用程式存取程式碼或資源。 Common Language Runtime 是藉由防止不同應用程式定義域中物件之間的呼叫來強制執行這種隔離。 在不同定義域之間傳遞的物件必須用複製方式傳遞或由 Proxy 存取。 如果物件是複製的，那麼對該物件的呼叫就是區域呼叫。 也就是說，呼叫端和被參考的物件是在同一個應用程式定義域中。 如果物件是透過 Proxy 存取，那麼對物件的呼叫便是遠端呼叫。 在這種情況下，呼叫端和被參考的物件是在不同的應用程式定義域中。 跨定義域呼叫是使用與兩個處理序或兩部電腦之間呼叫相同的遠端呼叫基礎結構。 因此，所參考之物件的中繼資料 (Metadata) 必須在這兩個應用程式定義域中都能使用，才能讓該方法呼叫被 JIT 適當地編譯。 如果呼叫定義域無權存取所呼叫物件的中繼資料，則編譯可能會失敗，並擲回 <xref:System.IO.FileNotFoundException> 類型的例外狀況。 如需詳細資訊，請參閱 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 決定如何跨定義域存取物件的機制是由該物件決定。 如需詳細資訊，請參閱 <xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
+- 在某一應用程式中執行的程式碼不能直接從其他應用程式存取程式碼或資源。 Common Language Runtime 是藉由防止不同應用程式定義域中物件之間的呼叫來強制執行這種隔離。 在不同定義域之間傳遞的物件必須用複製方式傳遞或由 Proxy 存取。 如果物件是複製的，那麼對該物件的呼叫就是區域呼叫。 也就是說，呼叫端和被參考的物件是在同一個應用程式定義域中。 如果物件是透過 Proxy 存取，那麼對物件的呼叫便是遠端呼叫。 在這種情況下，呼叫端和被參考的物件是在不同的應用程式定義域中。 跨定義域呼叫是使用與兩個處理序或兩部電腦之間呼叫相同的遠端呼叫基礎結構。 因此，所參考之物件的中繼資料 (Metadata) 必須在這兩個應用程式定義域中都能使用，才能讓該方法呼叫被 JIT 適當地編譯。 如果呼叫定義域無權存取所呼叫物件的中繼資料，則編譯可能會失敗，並擲回 <xref:System.IO.FileNotFoundException> 類型的例外狀況。 如需詳細資訊，請參閱 [Remote Objects](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 決定如何跨定義域存取物件的機制是由該物件決定。 如需詳細資訊，請參閱<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
   
 - 程式碼的行為範圍是由執行該程式碼的應用程式決定。 換言之，應用程式定義域會提供應用程式版本原則、它所取之任何遠端組件的位置，以及有關在哪裡尋找載入定義域中之組件等組態設定。  
   

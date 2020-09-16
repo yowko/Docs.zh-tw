@@ -2,16 +2,16 @@
 title: Windows Communication Foundation 至訊息佇列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 872632dc7d0a8a94f8829ffb3fe8eea2607697c8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a6e322936740f7d88d30b9a205ac937a807bedc1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602333"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552923"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 至訊息佇列
 
-這個範例會示範 Windows Communication Foundation （WCF）應用程式如何將訊息傳送至訊息佇列（MSMQ）應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。
+這個範例會示範 Windows Communication Foundation (WCF) 應用程式如何將訊息傳送至訊息佇列 (MSMQ) 應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。
 
  服務會接收佇列訊息，然後處理訂單。 服務會建立交易式佇列，然後設定已接收訊息的訊息處理常式，如下列範例程式碼所示。
 
@@ -97,9 +97,9 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();
 ```
 
- 用戶端會依序使用自訂用戶端，將 MSMQ 訊息傳送至佇列。 因為接收和處理訊息的應用程式是 MSMQ 應用程式，而不是 WCF 應用程式，所以這兩個應用程式之間不會有隱含的服務合約。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。
+ 用戶端會依序使用自訂用戶端，將 MSMQ 訊息傳送至佇列。 因為接收和處理訊息的應用程式是 MSMQ 應用程式，而不是 WCF 應用程式，所以這兩個應用程式之間並沒有隱含的服務合約。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。
 
- 針對使用系結來傳送訊息的所有 WCF 應用程式，自訂用戶端基本上都相同 `MsmqIntegration` 。 與其他用戶端不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。
+ 所有使用系結傳送訊息的 WCF 應用程式，自訂用戶端基本上都相同 `MsmqIntegration` 。 與其他用戶端不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -131,27 +131,27 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 例如，您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。
 
 > [!NOTE]
-> 這個範例需要安裝訊息佇列。 請參閱[訊息佇列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))中的安裝指示。
+> 這個範例需要安裝訊息佇列。 請參閱 [訊息佇列](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))中的安裝指示。
 
-## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例
+## <a name="set-up-build-and-run-the-sample"></a>設定、建立及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
     1. 在 Visual Studio 2012 中開啟伺服器管理員。
 
-    2. 展開 [**功能**] 索引標籤。
+    2. 展開 [ **功能** ] 索引標籤。
 
-    3. 以滑鼠右鍵按一下 [**私人訊息佇列**]，然後選取 [**新增**  >  **私用佇列**]。
+    3. 在 [**私用訊息佇列**] 上按一下滑鼠右鍵，然後選取 [**新增**  >  **私用佇列**]。
 
-    4. 選取 [**交易**式] 方塊。
+    4. 檢查 **交易** 式方塊。
 
     5. 輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。
 
-3. 若要建立方案的 c # 或 Visual Basic 版，請遵循[建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示。
+3. 若要建立方案的 c # 或 Visual Basic 版本，請遵循 [建立 Windows Communication Foundation 範例](building-the-samples.md)中的指示。
 
-4. 若要在單一電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
+4. 若要在單一電腦設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
 ## <a name="run-the-sample-across-computers"></a>跨電腦執行範例
 
@@ -170,11 +170,11 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [訊息佇列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
+- [作法：與 WCF 端點和訊息佇列應用程式交換訊息](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [訊息佇列](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
