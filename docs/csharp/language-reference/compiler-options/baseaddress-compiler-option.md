@@ -9,47 +9,47 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: f79ee449eafd04906dab49700a1af6441d54cece
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 17bca4f03c75f7d617e4e99ebab4d1602bb3214e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89464879"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537244"
 ---
-# <a name="-baseaddress-c-compiler-options"></a><span data-ttu-id="19638-103">-baseaddress (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="19638-103">-baseaddress (C# Compiler Options)</span></span>
-<span data-ttu-id="19638-104">**-baseaddress** 選項讓您指定要載入 DLL 的慣用基底位址。</span><span class="sxs-lookup"><span data-stu-id="19638-104">The **-baseaddress** option lets you specify the preferred base address at which to load a DLL.</span></span> <span data-ttu-id="19638-105">如需此選項的使用時機與使用原因之詳細資訊，請參閱 [Larry Osterman 的部落格](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system)。</span><span class="sxs-lookup"><span data-stu-id="19638-105">For more information about when and why to use this option, see [Larry Osterman's WebLog](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system).</span></span>  
+# <a name="-baseaddress-c-compiler-options"></a><span data-ttu-id="8042e-103">-baseaddress (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="8042e-103">-baseaddress (C# Compiler Options)</span></span>
+<span data-ttu-id="8042e-104">**-baseaddress** 選項讓您指定要載入 DLL 的慣用基底位址。</span><span class="sxs-lookup"><span data-stu-id="8042e-104">The **-baseaddress** option lets you specify the preferred base address at which to load a DLL.</span></span> <span data-ttu-id="8042e-105">如需此選項的使用時機與使用原因之詳細資訊，請參閱 [Larry Osterman 的部落格](/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system)。</span><span class="sxs-lookup"><span data-stu-id="8042e-105">For more information about when and why to use this option, see [Larry Osterman's WebLog](/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="19638-106">語法</span><span class="sxs-lookup"><span data-stu-id="19638-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8042e-106">語法</span><span class="sxs-lookup"><span data-stu-id="8042e-106">Syntax</span></span>  
   
 ```console  
 -baseaddress:address  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="19638-107">引數</span><span class="sxs-lookup"><span data-stu-id="19638-107">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="8042e-107">引數</span><span class="sxs-lookup"><span data-stu-id="8042e-107">Arguments</span></span>  
  `address`  
- <span data-ttu-id="19638-108">DLL 的基底位址。</span><span class="sxs-lookup"><span data-stu-id="19638-108">The base address for the DLL.</span></span> <span data-ttu-id="19638-109">這個位址可以指定十進位、十六進位或八進位數字。</span><span class="sxs-lookup"><span data-stu-id="19638-109">This address can be specified as a decimal, hexadecimal, or octal number.</span></span>  
+ <span data-ttu-id="8042e-108">DLL 的基底位址。</span><span class="sxs-lookup"><span data-stu-id="8042e-108">The base address for the DLL.</span></span> <span data-ttu-id="8042e-109">這個位址可以指定十進位、十六進位或八進位數字。</span><span class="sxs-lookup"><span data-stu-id="8042e-109">This address can be specified as a decimal, hexadecimal, or octal number.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="19638-110">備註</span><span class="sxs-lookup"><span data-stu-id="19638-110">Remarks</span></span>  
- <span data-ttu-id="19638-111">DLL 的預設基底位址是由 .NET common language runtime 所設定。</span><span class="sxs-lookup"><span data-stu-id="19638-111">The default base address for a DLL is set by the .NET common language runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8042e-110">備註</span><span class="sxs-lookup"><span data-stu-id="8042e-110">Remarks</span></span>  
+ <span data-ttu-id="8042e-111">DLL 的預設基底位址是由 .NET common language runtime 所設定。</span><span class="sxs-lookup"><span data-stu-id="8042e-111">The default base address for a DLL is set by the .NET common language runtime.</span></span>  
   
- <span data-ttu-id="19638-112">請注意，這個位址會去掉低位字。</span><span class="sxs-lookup"><span data-stu-id="19638-112">Be aware that the lower-order word in this address will be rounded.</span></span> <span data-ttu-id="19638-113">例如，如果您指定的是 0x11110001，它會去掉尾數變成 0x11110000。</span><span class="sxs-lookup"><span data-stu-id="19638-113">For example, if you specify 0x11110001, it will be rounded to 0x11110000.</span></span>  
+ <span data-ttu-id="8042e-112">請注意，這個位址會去掉低位字。</span><span class="sxs-lookup"><span data-stu-id="8042e-112">Be aware that the lower-order word in this address will be rounded.</span></span> <span data-ttu-id="8042e-113">例如，如果您指定的是 0x11110001，它會去掉尾數變成 0x11110000。</span><span class="sxs-lookup"><span data-stu-id="8042e-113">For example, if you specify 0x11110001, it will be rounded to 0x11110000.</span></span>  
   
- <span data-ttu-id="19638-114">若要完成 DLL 的簽章程序，請使用 SN.EXE 和 -R 選項。</span><span class="sxs-lookup"><span data-stu-id="19638-114">To complete the signing process for a DLL, use SN.EXE with the -R option.</span></span>  
+ <span data-ttu-id="8042e-114">若要完成 DLL 的簽章程序，請使用 SN.EXE 和 -R 選項。</span><span class="sxs-lookup"><span data-stu-id="8042e-114">To complete the signing process for a DLL, use SN.EXE with the -R option.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="19638-115">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="19638-115">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="8042e-115">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="8042e-115">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1. <span data-ttu-id="19638-116">開啟專案的 [屬性]\*\*\*\* 頁面。</span><span class="sxs-lookup"><span data-stu-id="19638-116">Open the project's **Properties** page.</span></span>  
+1. <span data-ttu-id="8042e-116">開啟專案的 [屬性]\*\*\*\* 頁面。</span><span class="sxs-lookup"><span data-stu-id="8042e-116">Open the project's **Properties** page.</span></span>  
   
-2. <span data-ttu-id="19638-117">按一下 [建置]\*\*\*\* 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="19638-117">Click the **Build** property page.</span></span>  
+2. <span data-ttu-id="8042e-117">按一下 [建置]\*\*\*\* 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="8042e-117">Click the **Build** property page.</span></span>  
   
-3. <span data-ttu-id="19638-118">按一下 [進階]  按鈕。</span><span class="sxs-lookup"><span data-stu-id="19638-118">Click the **Advanced** button.</span></span>  
+3. <span data-ttu-id="8042e-118">按一下 [進階]  按鈕。</span><span class="sxs-lookup"><span data-stu-id="8042e-118">Click the **Advanced** button.</span></span>  
   
-4. <span data-ttu-id="19638-119">修改 **DLL 基底位址**屬性。</span><span class="sxs-lookup"><span data-stu-id="19638-119">Modify the **DLL Base Address** property.</span></span>  
+4. <span data-ttu-id="8042e-119">修改 **DLL 基底位址**屬性。</span><span class="sxs-lookup"><span data-stu-id="8042e-119">Modify the **DLL Base Address** property.</span></span>  
   
-     <span data-ttu-id="19638-120">若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>。</span><span class="sxs-lookup"><span data-stu-id="19638-120">To set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.</span></span>  
+     <span data-ttu-id="8042e-120">若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>。</span><span class="sxs-lookup"><span data-stu-id="8042e-120">To set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19638-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19638-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8042e-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8042e-121">See also</span></span>
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="19638-122">C # 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="19638-122">C# Compiler Options</span></span>](./index.md)
-- [<span data-ttu-id="19638-123">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="19638-123">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="8042e-122">C # 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="8042e-122">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="8042e-123">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="8042e-123">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
