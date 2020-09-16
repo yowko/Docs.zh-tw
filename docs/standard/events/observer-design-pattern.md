@@ -1,6 +1,6 @@
 ---
 title: 觀察器設計模式
-description: 瞭解 .NET 中的觀察者設計模式。 此模式可讓訂閱者向提供者註冊並接收通知。
+description: 瞭解 .NET 中的觀察者設計模式。 這種模式可讓訂閱者向提供者註冊和接收通知。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662728"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559157"
 ---
 # <a name="observer-design-pattern"></a>觀察器設計模式
 
@@ -47,7 +47,7 @@ ms.locfileid: "84662728"
 - 包含提供者傳送給觀察者之資料的物件。 這個物件的類型對應至 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 介面的泛型類型參數。 雖然這個物件可以與 <xref:System.IObservable%601> 實作相同，但它常是不同的類型。
 
 > [!NOTE]
-> 除了實作觀察者設計模式之外，您可能對探索使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 介面建置的程式庫有興趣。 例如，[Reactive Extensions for .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) 是由一組擴充方法和 LINQ 標準序列運算子所組成，可支援非同步程式設計。
+> 除了實作觀察者設計模式之外，您可能對探索使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 介面建置的程式庫有興趣。 例如，[Reactive Extensions for .NET (Rx)](/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) 是由一組擴充方法和 LINQ 標準序列運算子所組成，可支援非同步程式設計。
 
 ## <a name="implementing-the-pattern"></a>實作模式
 
@@ -92,7 +92,7 @@ ms.locfileid: "84662728"
 
 ## <a name="related-topics"></a>[相關主題]
 
-|Title|描述|
+|標題|描述|
 |-----------|-----------------|
 |[觀察者設計模式最佳做法](observer-design-pattern-best-practices.md)|描述開發實作觀察者設計模式的應用程式時，所採用的最佳做法。|
 |[如何：執行提供者](how-to-implement-a-provider.md)|提供溫度監控應用程式的提供者逐步實作。|

@@ -1,15 +1,15 @@
 ---
-title: 驗證擴充保護概觀 (英文)
+title: 驗證的延伸保護概觀
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 400bf7987b5fcd4ec75628d19a30739dd5f23b08
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: fdc42228077bbc703e2e7557c8d7fdb3ff57a150
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964605"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559261"
 ---
-# <a name="extended-protection-for-authentication-overview"></a>驗證擴充保護概觀 (英文)
+# <a name="extended-protection-for-authentication-overview"></a>驗證的延伸保護概觀
 驗證的延伸保護有助於防範中間人 (MITM) 攻擊，以免用戶端的認證遭攻擊者攔截後再轉送至伺服器。  
   
  試想此一涉及三方的案例：用戶端、伺服器和攻擊者。 伺服器的 URL 為 `https://server`，而攻擊者的 URL 為 `https://attacker`。 攻擊者計誘用戶端誤以為存取了伺服器，但其實是進入攻擊者網站。 接著攻擊者傳送要求至伺服器。 如果攻擊者試圖存取受保護的資源，伺服器將以 WWW-Authenticate 標頭回覆予攻擊者。 由於攻擊者沒有驗證資訊，便將 WWW-Authenticate 標頭傳送給用戶端。 用戶端隨即傳送 Authorization 標頭給攻擊者，而攻擊者再將此標頭傳送至伺服器，致使其得以利用用戶端的認證存取受保護的資源。  
@@ -32,6 +32,6 @@ ms.locfileid: "75964605"
   
  如需詳細資訊，請參閱「Win7 CBT/延伸保護」範例。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 的資訊安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

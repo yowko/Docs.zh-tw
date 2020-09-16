@@ -1,6 +1,6 @@
 ---
 title: 反映發出中的安全性問題
-description: 瞭解反映發出中的安全性問題，這會透過動態元件或與現有元件連線或匿名裝載的動態方法來完成。
+description: 知道反映發出中的安全性問題，這是透過動態元件來完成，或是與現有元件連線或匿名裝載的動態方法。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: d0ca26a1d0964c935137b0a30a5d7c78f93c597b
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865238"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558793"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 .NET Framework 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
@@ -35,7 +35,7 @@ ms.locfileid: "86865238"
   
 <a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>動態組件  
- 使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，因此這個方法的大部分多載已在 .NET Framework 4 中遭取代。 （請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。）無論信任層級為何，其餘的多載都可以由任何程式碼執行。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
+ 使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，因此這個方法的大部分多載已在 .NET Framework 4 中遭取代。  (查看 [安全性變更](/previous-versions/dotnet/framework/security/security-changes)。 ) 任何程式碼都可以執行其餘的多載，而不考慮信任層級。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
   
 > [!NOTE]
 > 動態組件建立後，使用 <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> 方法套用至動態組件的屬性並不會生效，直到組件已儲存至磁碟並再次載入記憶體中。  
@@ -138,7 +138,7 @@ ms.locfileid: "86865238"
   
 <a name="Version_Information"></a>
 ## <a name="version-information"></a>版本資訊  
- 從 .NET Framework 4 開始，已消除全機器的安全性原則，且安全性透明度變成預設強制機制。 請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。  
+ 從 .NET Framework 4 開始，已消除全機器的安全性原則，且安全性透明度變成預設強制機制。 請參閱[安全性變更](/previous-versions/dotnet/framework/security/security-changes)。  
   
  從 .NET Framework 2.0 Service Pack 1 開始，當發出動態組件和動態方法時，不再需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 此旗標在所有先前版本的 .NET Framework 中都是必要項目。  
   

@@ -1,20 +1,20 @@
 ---
 title: SQL Server 中的擁有權和使用者結構描述分離
-description: 瞭解使用者架構分隔如何讓管理 SQL Server 資料庫物件許可權更有彈性。 架構會將物件分組到不同的命名空間。
+description: 瞭解使用者架構分隔如何讓您在管理 SQL Server 資料庫物件許可權方面有彈性。 將架構群組物件分成不同的命名空間。
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 97e742979785fedd922dc887295b63e2d93bd147
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27c37816353ca47c3f96867adc6186b0162feb20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286258"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558832"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的擁有權和使用者結構描述分離
 SQL Server 安全性的核心概念是物件的擁有者具有不可撤銷的物件管理權限。 您無法移除物件擁有者的權限，而使用者只要擁有資料庫中的物件，就無法將其從資料庫卸除。  
   
 ## <a name="user-schema-separation"></a>使用者結構描述分隔  
- 使用者結構描述分隔可讓資料庫物件權限的管理更有彈性。 「*架構*」（schema）是資料庫物件的命名容器，可讓您將物件分組成不同的命名空間。 例如，AdventureWorks 範例資料庫包含 Production、Sales 和 HumanResources 的結構描述。  
+ 使用者結構描述分隔可讓資料庫物件權限的管理更有彈性。 *架構*是資料庫物件的命名容器，可讓您將物件群組至不同的命名空間。 例如，AdventureWorks 範例資料庫包含 Production、Sales 和 HumanResources 的結構描述。  
   
  參考物件的四部分命名語法會指定結構描述名稱。  
   
@@ -56,7 +56,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |資源|描述|  
 |--------------|-----------------|  
-|[使用者結構描述分隔](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|說明由使用者結構描述分隔引入的變更。 包括新增行為、對擁有權的影響、目錄檢視和權限。|  
+|[使用者結構描述分隔](/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|說明由使用者結構描述分隔引入的變更。 包括新增行為、對擁有權的影響、目錄檢視和權限。|  
   
 ## <a name="see-also"></a>另請參閱
 

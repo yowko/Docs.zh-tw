@@ -1,18 +1,18 @@
 ---
 title: .NET Framework 中的過時類型
-description: 查看在 .NET Framework 4.5 和 .NET 4.6 中過時的類型清單（依元件組織）。 建議的替代方案也會列出。
+description: 查看 .NET Framework 4.5 和 .NET 4.6 中已過時的類型清單，並依元件進行組織。 也會列出建議的替代方案。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: 29df80fcefc2565850b026bebd30802dc77e1896
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 795735b66c7568dada0196a6426a0a9aaf52398a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925809"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558533"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
 
@@ -658,7 +658,7 @@ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有�
 
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>組件：Microsoft.VisualBasic.Compatibility.dll
 
-如需從 Visual Basic 6 移轉的資訊，請參閱 [Visual Basic 6.0 資源中心](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)。
+如需從 Visual Basic 6 移轉的資訊，請參閱 [Visual Basic 6.0 資源中心](/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)。
 
 |類型|訊息|
 |----------|-------------|

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 444d3700f36a2928b79f40dd5265d6166de762da
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105362"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559287"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  
@@ -53,9 +53,9 @@ ms.locfileid: "85105362"
 ```  
   
 ## <a name="machine-configuration-files"></a>電腦組態檔  
- 電腦組態檔 Machine.config 包含套用於整個電腦的設定值。 這個檔案位於 %*runtime install path*%\Config 目錄中。 Machine.config 包含全電腦的組件繫結、內建[遠端通道](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))和 ASP.NET 的組態設定。  
+ 電腦組態檔 Machine.config 包含套用於整個電腦的設定值。 這個檔案位於 %*runtime install path*%\Config 目錄中。 Machine.config 包含全電腦的組件繫結、內建[遠端通道](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))和 ASP.NET 的組態設定。  
   
- 設定系統會先在電腦設定檔中尋找專案， [ **\<appSettings>** 以及開發](./file-schema/appsettings/index.md)人員可能定義的其他設定區段。 接著會查看應用程式組態檔。 若要讓電腦組態檔易於管理，最好將這些設定值放在應用程式組態檔中。 然而，將設定值置於電腦組態檔可讓您的系統更容易維護。 例如，如果您有用戶端和伺服器應用程式都使用到的協力廠商元件，將那元件的設定值放在一個地方會比較容易。 在這個情況中，電腦組態檔是設定值的適當位置，所以您在兩個不同檔案中沒有相同的設定值。  
+ 設定系統會先查看電腦設定檔中的[ **\<appSettings>** 元素](./file-schema/appsettings/index.md)，以及開發人員可能定義的其他設定區段。 接著會查看應用程式組態檔。 若要讓電腦組態檔易於管理，最好將這些設定值放在應用程式組態檔中。 然而，將設定值置於電腦組態檔可讓您的系統更容易維護。 例如，如果您有用戶端和伺服器應用程式都使用到的協力廠商元件，將那元件的設定值放在一個地方會比較容易。 在這個情況中，電腦組態檔是設定值的適當位置，所以您在兩個不同檔案中沒有相同的設定值。  
   
 > [!NOTE]
 > 使用 XCOPY 部署應用程式將不會複製電腦組態檔中的設定值。  
@@ -77,7 +77,7 @@ ms.locfileid: "85105362"
   
 - ASP.NET 裝載的應用程式。  
   
-     如需 ASP.NET 設定檔的詳細資訊，請參閱[ASP.NET Configuration Settings](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))。
+     如需有關 ASP.NET 設定檔的詳細資訊，請參閱 [ASP.NET Configuration Settings](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))。
   
 - Internet Explorer 裝載的應用程式。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "85105362"
  安全組態檔包含程式碼群組階層架構和與原則層級相關聯的使用權限集合的資訊。 強烈建議您使用[程式碼存取安全性原則工具 (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) 修改安全性原則，確保原則變更不會造成安全性組態檔損毀。  
   
 > [!NOTE]
-> 從 .NET Framework 4 開始，只有在安全性原則已變更時，才會顯示安全性設定檔。  
+> 從 .NET Framework 4 開始，只有在已變更安全性原則時，才會顯示安全性設定檔案。  
   
  安全性組態檔位於下列位置：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "85105362"
 - [設定檔架構](./file-schema/index.md)
 - [指定組件的位置](specify-assembly-location.md)
 - [重新導向組件版本](redirect-assembly-versions.md)
-- [管理 ASP.NET 網站](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
-- [安全性原則管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe （代碼啟用安全性原則工具）](../tools/caspol-exe-code-access-security-policy-tool.md)
+- [管理 ASP.NET 網站](/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [安全性原則管理](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
+- [Caspol.exe (代碼啟用安全性原則工具) ](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [.NET 中的組件](../../standard/assembly/index.md)

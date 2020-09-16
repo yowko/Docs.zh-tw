@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中保存物件
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: e4eaf87c99ea1577d7f3ca40e628c00cc2700511
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3febd3f74510d11a7103edbd52bcae8043a5edc0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413125"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558598"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio 中保存物件 (Visual Basic)
 雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。  
@@ -24,14 +24,14 @@ ms.locfileid: "84413125"
 > 這個範例會將資料儲存在二進位檔中。 這些格式不適用於敏感性資料，例如密碼或信用卡資訊。  
   
 > [!NOTE]
-> 您看到的對話方塊與功能表命令，可能會因您所使用的設定或版本，而與說明中所述不同。 若要變更設定，請在 [工具] **** 功能表上按一下 [匯入和匯出設定] **** 。 如需詳細資訊，請參閱[個人化 VISUAL STUDIO IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
+> 您看到的對話方塊與功能表命令，可能會因您所使用的設定或版本，而與說明中所述不同。 若要變更設定，請在 [工具] **** 功能表上按一下 [匯入和匯出設定] **** 。 如需詳細資訊，請參閱 [個人化 VISUAL STUDIO IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-loan-object"></a>建立 Loan 物件  
  第一個步驟是建立 `Loan` 類別，以及使用該類別的測試應用程式。  
   
 ### <a name="to-create-the-loan-class"></a>若要建立 Loan 類別  
   
-1. 建立新的類別庫專案，並將它命名為 "LoanClass"。 如需詳細資訊，請參閱[建立方案與專案](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
+1. 建立新的類別庫專案，並將它命名為 "LoanClass"。 如需詳細資訊，請參閱[建立方案與專案](/visualstudio/ide/creating-solutions-and-projects)。  
   
 2. 在方案總管**** 中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名] ****。 將檔案重新命名為 `Loan`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `Loan`。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "84413125"
   
 4. 在 [專案]**** 功能表上，選擇 [設定為啟始專案]****。  
   
-5. 在 [**專案**] 功能表上，選擇 [**加入參考**]。  
+5. 在 [ **專案** ] 功能表上，選擇 [ **加入參考**]。  
   
 6. 在 [新增參考]**** 對話方塊中，依序選擇 [專案]**** 索引標籤和 LoanClass 專案。  
   

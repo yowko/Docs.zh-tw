@@ -1,6 +1,6 @@
 ---
 title: Regsvcs.exe (.NET 服務安裝工具)
-description: 使用 .NET 服務安裝工具 Regsvcs.exe。 載入並註冊元件、設定您已以程式設計方式新增至類別的服務等等。
+description: 使用 Regsvcs.exe （.NET 服務安裝工具）。 載入並註冊元件、設定您以程式設計方式新增至類別的服務等等。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Regsvcs.exe
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 6d0090eda764113407e35a3bcec139f1c7cfb050
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 474018b8bc39e4d5c36bd4bc6481072b218d6270
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517239"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558390"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
@@ -40,11 +40,11 @@ ms.locfileid: "87517239"
   
 ## <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|來源組件檔。 這個組件必須以強式名稱簽署。 如需詳細資訊，請參閱[以強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/appdir:<路徑>** **|指定應用程式的根目錄。|  
 |**/appname:<應用程式名稱>** **|指定要尋找或建立之 COM+ 應用程式的名稱。|  
@@ -57,7 +57,7 @@ ms.locfileid: "87517239"
 |**/noreconfig**|不要重新設定現有的目標應用程式。|  
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/parname:** *name*|指定要尋找或建立之 COM+ 應用程式的名稱或 ID。|  
-|**/reconfig**|重新設定現有的目標應用程式。 這是預設值。|  
+|**/reconfig**|重新設定現有的目標應用程式。 此為預設值。|  
 |**/tlb:<型別程式庫檔案>** **|指定要安裝的類型程式庫檔案。|  
 |**u**|解除安裝目標應用程式。|  
 |**/quiet**|指定安靜模式，隱藏標誌或成功訊息顯示。|  
@@ -66,7 +66,7 @@ ms.locfileid: "87517239"
 ## <a name="remarks"></a>備註  
  Regsvcs.exe 需要由 *assemblyFile.dll* 所指定的來源組件檔。 這個組件必須使用強式名稱簽署。 如需強式名稱簽署的詳細資訊，請參閱[以強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)。 目標應用程式和類型程式庫檔案的名稱是選擇項。 如果 *applicationName* 引數已經不存在，則可以從來源組件檔中產生，並且將會由 Regsvcs.exe 建立。 *typelibraryfile* 引數可以指定型別程式庫名稱。 如果您沒有指定類型程式庫名稱，Regsvcs.exe 會使用組件名稱做為預設值。  
   
- 當 Regsvcs.exe 註冊元件的方法時，它會受制於這些方法上的[要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100))和[連結要求](../misc/link-demands.md)。 因為這個工具是在完全信任的環境中執行，所以大部分的使用權限需求都會成功。 不過，Regsvcs.exe 無法註冊方法受到 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的需求或連結要求保護的元件。  
+ 當 Regsvcs.exe 註冊元件的方法時，它會受制於這些方法上的[要求](/previous-versions/dotnet/netframework-4.0/9kc0c6st(v=vs.100))和[連結要求](../misc/link-demands.md)。 因為這個工具是在完全信任的環境中執行，所以大部分的使用權限需求都會成功。 不過，Regsvcs.exe 無法註冊方法受到 <xref:System.Security.Permissions.StrongNameIdentityPermission> 或 <xref:System.Security.Permissions.PublisherIdentityPermission> 的需求或連結要求保護的元件。  
   
  您必須擁有本機電腦上的系統管理員權限，才能使用 Regsvcs.exe。  
   

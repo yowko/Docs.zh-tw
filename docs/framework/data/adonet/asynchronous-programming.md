@@ -1,18 +1,18 @@
 ---
 title: 非同步程式設計
-description: 深入瞭解 SQL Server 的 .NET Framework Data Provider 中的非同步程式設計，包括 .NET Framework 4.5 中引進的增強功能。
+description: 瞭解 SQL Server 的 .NET Framework Data Provider 中的非同步程式設計，包括 .NET Framework 4.5 中引進的增強功能。
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287099"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558468"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
-本主題討論 SQL Server 的 .NET Framework Data Provider 中非同步程式設計的支援（SqlClient），包括支援 .NET Framework 4.5 中引進的非同步程式設計功能所做的增強。
+本主題討論 SQL Server (SqlClient 的 .NET Framework Data Provider 中的非同步程式設計支援，包括支援) 4.5 所引進之非同步程式設計功能的增強功能。
 
 ## <a name="legacy-asynchronous-programming"></a>傳統非同步程式設計
 
@@ -24,10 +24,10 @@ ms.locfileid: "84287099"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-.NET Framework 4.5 中的這項功能仍會保留在 SqlClient 中。
+這項功能仍在 .NET Framework 4.5 的 SqlClient 中。
 
 > [!TIP]
-> 從 .NET Framework 4.5 開始，這些舊版方法不再需要 `Asynchronous Processing=true` 連接字串。
+> 從 .NET Framework 4.5 開始，這些舊版方法 `Asynchronous Processing=true` 在連接字串中不再需要。
 
 ## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>.NET Framework 4.5 中新增的非同步程式設計功能
 
@@ -39,9 +39,9 @@ ms.locfileid: "84287099"
 
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [在 .NET 4.5 中使用 SqlDataReader 的新異步方法（第1部分）](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [在 .NET 4.5 中使用 SqlDataReader 的新異步方法 (第1部) ](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [在 .NET 4.5 中使用 SqlDataReader 的新異步方法（第2部分）](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [在 .NET 4.5 中使用 SqlDataReader 的新異步方法 (第2部分) ](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 當您的使用者介面沒有回應或不能擴充伺服器時，您可能就需要使程式碼更加非同步。 傳統的非同步程式碼編寫涉及安裝回呼 (也稱為接續)，以表示非同步作業完成後發生的邏輯。 這會使非同步程式碼的結構比同步程式碼更複雜。
 
@@ -54,7 +54,7 @@ ms.locfileid: "84287099"
 
 呼叫 `async` 方法不會配置任何額外的執行緒。 它可能會在結尾處簡短地使用現有的 I/O 完成執行緒。
 
-已在 .NET Framework 4.5 中新增下列方法，以支援非同步程式設計：
+在 .NET Framework 4.5 中新增下列方法以支援非同步程式設計：
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 
@@ -90,10 +90,10 @@ ms.locfileid: "84287099"
 
 - <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>
 
- 已加入其他非同步成員，以支援[SqlClient 串流支援](sqlclient-streaming-support.md)。
+ 已加入其他非同步成員，以支援 [SqlClient 串流支援](sqlclient-streaming-support.md)。
 
 > [!TIP]
-> 新的非同步方法不需要 `Asynchronous Processing=true` 在連接字串中。
+> 在連接字串中不需要新的非同步方法 `Asynchronous Processing=true` 。
 
 ### <a name="synchronous-to-asynchronous-connection-open"></a>開啟同步與非同步的連接
 
@@ -182,7 +182,7 @@ class A {
 
 您可能需要建立能夠連接到不同的資料庫並執行查詢的工具。 您可以使用基礎提供者模型和新的非同步功能。
 
-您必須啟用伺服器上的「Microsoft 分散式異動控制器」(MSDTC)，才能使用分散式異動。 如需如何啟用 MSDTC 的詳細資訊，請參閱[如何在 Web 服務器上啟用 msdtc](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90))。
+您必須啟用伺服器上的「Microsoft 分散式異動控制器」(MSDTC)，才能使用分散式異動。 如需有關如何啟用 MSDTC 的詳細資訊，請參閱 [如何在 Web 服務器上啟用 msdtc](/previous-versions/commerce-server/dd327979(v=cs.90))。
 
 ```csharp
 using System;
@@ -829,4 +829,4 @@ class Program {
 
 ## <a name="see-also"></a>另請參閱
 
-- [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)
+- [在 ADO.NET 中傳送和修改資料](retrieving-and-modifying-data.md)

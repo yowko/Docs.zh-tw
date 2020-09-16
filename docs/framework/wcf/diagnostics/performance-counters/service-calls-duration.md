@@ -2,12 +2,12 @@
 title: 服務：呼叫持續時間
 ms.date: 03/30/2017
 ms.assetid: dfe42a97-daf8-42c3-ba34-4bb8230cdebb
-ms.openlocfilehash: 4c6232047de04838d0241c44f935e43841a0800c
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: 4aae05791bcc0fc16ddedffff17ffcce211e9c35
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78674872"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559118"
 ---
 # <a name="service-calls-duration"></a>服務：呼叫持續時間
 計數器名稱：呼叫持續時間  
@@ -17,4 +17,4 @@ ms.locfileid: "78674872"
   
 ## <a name="see-also"></a>另請參閱
 
-- [PERF_AVERAGE_TIMER](https://docs.microsoft.com/previous-versions/windows/embedded/ms938538(v%3dmsdn.10))
+- [PERF_AVERAGE_TIMER](/previous-versions/windows/embedded/ms938538(v=msdn.10))

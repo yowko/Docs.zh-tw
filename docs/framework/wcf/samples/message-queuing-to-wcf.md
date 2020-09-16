@@ -2,16 +2,16 @@
 title: 訊息佇列至 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 82e71afc911bff2504be15f7f9f2e736d943972b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5132e0380aebd595e79429fab9df8a7fb94574a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584957"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558689"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>訊息佇列至 Windows Communication Foundation
 
-這個範例會示範訊息佇列（MSMQ）應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation （WCF）服務。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
+這個範例會示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
 
  服務合約為 `IOrderProcessor`，這會定義適合與佇列搭配使用的單向服務。 MSMQ 訊息沒有 Action 標頭，所以不可能自動將不同 MSMQ 訊息對應到作業合約。 因此，這時只能有一個作業合約。 如果您想要為服務定義一個以上的作業合約，應用程式就必須提供資訊，說明 MSMQ 訊息中的哪個標頭 (例如，標籤或 correlationID) 可以用來決定分派哪個作業合約。
 
@@ -61,7 +61,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中，如下面的範例組態所示。
 
 > [!NOTE]
-> 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定 msmq.formatname 配置，並使用 localhost 作為本機電腦。 每個 MSMQ 格式名稱定址方針的佇列位址會遵循 msmq.formatname 配置。
+> 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定 msmq.formatname 配置，並使用本機電腦的 localhost。 每個 MSMQ 格式名稱定址方針的佇列位址會遵循 msmq.formatname 配置。
 
 ```xml
 <appSettings>
@@ -113,25 +113,25 @@ Console.ReadLine();
 
  當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 例如，您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。
 
-## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例
+## <a name="set-up-build-and-run-the-sample"></a>設定、建立及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
     1. 在 Visual Studio 2012 中開啟伺服器管理員。
 
-    2. 展開 [**功能**] 索引標籤。
+    2. 展開 [ **功能** ] 索引標籤。
 
-    3. 以滑鼠右鍵按一下 [**私人訊息佇列**]，然後選取 [**新增**]、[**私用佇列**]。
+    3. 以滑鼠右鍵按一下 [ **私用訊息佇列**]，然後選取 [ **新增**]、[ **私用佇列**]。
 
-    4. 選取 [**交易**式] 方塊。
+    4. 檢查 **交易** 式方塊。
 
     5. 輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
-4. 若要在單一電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
+4. 若要在單一電腦設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。
 
 ## <a name="run-the-sample-across-computers"></a>跨電腦執行範例
 
@@ -150,12 +150,12 @@ Console.ReadLine();
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF 中的佇列](../feature-details/queues-in-wcf.md)
-- [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [訊息佇列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
+- [作法：與 WCF 端點和訊息佇列應用程式交換訊息](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [訊息佇列](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
