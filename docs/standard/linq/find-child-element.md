@@ -6,22 +6,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 908cf230027b3092e6e7bbaffb1d7e6af8c061ec
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 34ddfd78489927a40128196a6fc80e822302428b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552837"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557125"
 ---
-# <a name="how-to-find-a-child-element-linq-to-xml"></a><span data-ttu-id="65e9b-103">如何尋找 (LINQ to XML 的子項目) </span><span class="sxs-lookup"><span data-stu-id="65e9b-103">How to find a child element (LINQ to XML)</span></span>
+# <a name="how-to-find-a-child-element-linq-to-xml"></a><span data-ttu-id="aa7d1-103">如何尋找 (LINQ to XML 的子項目) </span><span class="sxs-lookup"><span data-stu-id="aa7d1-103">How to find a child element (LINQ to XML)</span></span>
 
-<span data-ttu-id="65e9b-104">本文會比較 XPath 子項目軸與 LINQ to XML <xref:System.Xml.Linq.XContainer.Element%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="65e9b-104">This article compares the XPath child element axis to the LINQ to XML <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>
+<span data-ttu-id="aa7d1-104">本文會比較 XPath 子項目軸與 LINQ to XML <xref:System.Xml.Linq.XContainer.Element%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="aa7d1-104">This article compares the XPath child element axis to the LINQ to XML <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>
 
-## <a name="example-find-a-child-element-in-an-xml-document"></a><span data-ttu-id="65e9b-105">範例：尋找 XML 檔中的子項目</span><span class="sxs-lookup"><span data-stu-id="65e9b-105">Example: Find a child element in an XML document</span></span>
+## <a name="example-find-a-child-element-in-an-xml-document"></a><span data-ttu-id="aa7d1-105">範例：尋找 XML 檔中的子項目</span><span class="sxs-lookup"><span data-stu-id="aa7d1-105">Example: Find a child element in an XML document</span></span>
 
-<span data-ttu-id="65e9b-106">此範例會尋找 `DeliveryNotes` xml 檔範例 xml 檔中的子專案 [：多個採購訂單](sample-xml-file-multiple-purchase-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="65e9b-106">This example finds the child element `DeliveryNotes` in XML document [Sample XML file: Multiple purchase orders](sample-xml-file-multiple-purchase-orders.md).</span></span>
+<span data-ttu-id="aa7d1-106">此範例會尋找 `DeliveryNotes` xml 檔範例 xml 檔中的子專案 [：多個採購訂單](sample-xml-file-multiple-purchase-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="aa7d1-106">This example finds the child element `DeliveryNotes` in XML document [Sample XML file: Multiple purchase orders](sample-xml-file-multiple-purchase-orders.md).</span></span>
 
-<span data-ttu-id="65e9b-107">XPath 運算式為 `DeliveryNotes`。</span><span class="sxs-lookup"><span data-stu-id="65e9b-107">The XPath expression is `DeliveryNotes`.</span></span>
+<span data-ttu-id="aa7d1-107">XPath 運算式為 `DeliveryNotes`。</span><span class="sxs-lookup"><span data-stu-id="aa7d1-107">The XPath expression is `DeliveryNotes`.</span></span>
 
 ```csharp
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");
@@ -62,13 +62,13 @@ End If
 Console.WriteLine(el1)
 ```
 
-<span data-ttu-id="65e9b-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="65e9b-108">This example produces the following output:</span></span>
+<span data-ttu-id="aa7d1-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="aa7d1-108">This example produces the following output:</span></span>
 
 ```output
 Results are identical
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="65e9b-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="65e9b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa7d1-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aa7d1-109">See also</span></span>
 
-- [<span data-ttu-id="65e9b-110">XPath 使用者的 LINQ to XML (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="65e9b-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="aa7d1-110">XPath 使用者的 LINQ to XML (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="aa7d1-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](./comparison-xpath-linq-xml.md)
