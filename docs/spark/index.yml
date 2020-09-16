@@ -1,9 +1,9 @@
 ### YamlMime:Landing
 title: 適用於 Apache Spark 的 .NET 文件
-summary: 瞭解如何在您撰寫 .NET 程式碼的任何地方，使用 .NET for Apache Spark 來處理資料的批次、即時串流、機器學習和臨機操作 Apache Spark 查詢。
+summary: 瞭解如何使用 .NET 進行 Apache Spark，利用您撰寫 .NET 程式碼的任何地方 Apache Spark 來處理資料批次、即時串流、機器學習和臨機操作查詢。
 metadata:
   title: 適用於 Apache Spark 的 .NET 文件
-  description: 瞭解如何在您撰寫 .NET 程式碼的任何地方，使用 .NET for Apache Spark 來處理資料的批次、即時串流、機器學習和臨機操作 Apache Spark 查詢。
+  description: 瞭解如何使用 .NET 進行 Apache Spark，利用您撰寫 .NET 程式碼的任何地方 Apache Spark 來處理資料批次、即時串流、機器學習和臨機操作查詢。
   services: service
   ms.prod: dotnet-spark
   ms.topic: landing-page
@@ -11,27 +11,27 @@ metadata:
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
-  ms.openlocfilehash: 5b477daf0f52d48a6f068fa8eafeb1b787d19c39
-  ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+  ms.openlocfilehash: 7be10c2f3f07f8caa4f180a0a21f20a7f20f7312
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/12/2020
-  ms.locfileid: "83212223"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90552176"
 landingContent:
 - title: 適用于 Apache Spark 基本概念的 .NET
   linkLists:
   - linkListType: whats-new
     links:
     - text: .NET 文件中的新功能
-      url: /dotnet/whats-new/index
+      url: ../whats-new/index.yml
   - linkListType: overview
     links:
     - text: 什麼是 .NET for Apache Spark？
       url: what-is-apache-spark-dotnet.md
   - linkListType: reference
     links:
-    - text: API 參考
-      url: /dotnet/api/?view=spark-dotnet
+    - text: 應用程式開發介面參考
+      url: ../../api/index.md?view=spark-dotnet
     - text: GitHub
       url: https://github.com/dotnet/spark
 - title: 10 分鐘快速入門
@@ -42,9 +42,9 @@ landingContent:
       url: tutorials/get-started.md
   - linkListType: learn
     links:
-    - text: 在 Windows 或 Linux 上的10分鐘內開始使用
+    - text: 在 Windows 或 Linux 上10分鐘內開始使用
       url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
-- title: 部署適用于 Apache Spark 應用程式的 .NET
+- title: 部署 Apache Spark 應用程式的 .NET
   linkLists:
   - linkListType: deploy
     links:
@@ -60,7 +60,7 @@ landingContent:
       url: how-to-guides/debug.md
     - text: 部署背景工作角色和 UDF 二進位檔
       url: how-to-guides/deploy-worker-udf-binaries.md
-- title: 海量資料處理
+- title: 大型資料處理
   linkLists:
   - linkListType: tutorial
     links:

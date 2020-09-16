@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: c4be649a5f35f7e9cbe65332a60b1c8aeb2a66ea
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: c92258fa9501aeeee46fe664cc4436f9349ff232
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552281"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558122"
 ---
-# <a name="how-to-control-the-type-of-a-projection-linq-to-xml"></a><span data-ttu-id="cc290-103">如何控制投影的類型 (LINQ to XML) </span><span class="sxs-lookup"><span data-stu-id="cc290-103">How to control the type of a projection (LINQ to XML)</span></span>
+# <a name="how-to-control-the-type-of-a-projection-linq-to-xml"></a><span data-ttu-id="23185-103">如何控制投影的類型 (LINQ to XML) </span><span class="sxs-lookup"><span data-stu-id="23185-103">How to control the type of a projection (LINQ to XML)</span></span>
 
-<span data-ttu-id="cc290-104">*投射* 是篩選一組資料、變更其圖形（可能為其類型）的程式。</span><span class="sxs-lookup"><span data-stu-id="cc290-104">*Projection* is the process of filtering a set of data, changing its shape and perhaps its type.</span></span> <span data-ttu-id="cc290-105">大部分的查詢運算式都會進行投影。</span><span class="sxs-lookup"><span data-stu-id="cc290-105">Most query expressions do projections.</span></span> <span data-ttu-id="cc290-106">此區段中的大部分查詢運算式會評估為 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> ，但您可以建立其他類型的集合。</span><span class="sxs-lookup"><span data-stu-id="cc290-106">Most of the query expressions in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can create collections of other types.</span></span> <span data-ttu-id="cc290-107">本文說明如何進行這項操作。</span><span class="sxs-lookup"><span data-stu-id="cc290-107">This article shows how to do this.</span></span>
+<span data-ttu-id="23185-104">*投射* 是篩選一組資料、變更其圖形（可能為其類型）的程式。</span><span class="sxs-lookup"><span data-stu-id="23185-104">*Projection* is the process of filtering a set of data, changing its shape and perhaps its type.</span></span> <span data-ttu-id="23185-105">大部分的查詢運算式都會進行投影。</span><span class="sxs-lookup"><span data-stu-id="23185-105">Most query expressions do projections.</span></span> <span data-ttu-id="23185-106">此區段中的大部分查詢運算式會評估為 <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> ，但您可以建立其他類型的集合。</span><span class="sxs-lookup"><span data-stu-id="23185-106">Most of the query expressions in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can create collections of other types.</span></span> <span data-ttu-id="23185-107">本文說明如何進行這項操作。</span><span class="sxs-lookup"><span data-stu-id="23185-107">This article shows how to do this.</span></span>
 
-## <a name="example-define-a-new-type-and-create-a-query-that-creates-an-ienumerable-of-that-type"></a><span data-ttu-id="cc290-108">範例：定義新的型別，並建立可建立該型別之 IEnumerable 的查詢</span><span class="sxs-lookup"><span data-stu-id="cc290-108">Example: Define a new type and create a query that creates an IEnumerable of that type</span></span>
+## <a name="example-define-a-new-type-and-create-a-query-that-creates-an-ienumerable-of-that-type"></a><span data-ttu-id="23185-108">範例：定義新的型別，並建立可建立該型別之 IEnumerable 的查詢</span><span class="sxs-lookup"><span data-stu-id="23185-108">Example: Define a new type and create a query that creates an IEnumerable of that type</span></span>
 
-<span data-ttu-id="cc290-109">下列範例會定義新的型別， `Customer` 而且查詢運算式會在子句中具現化新 `Customer` 的物件 `Select` 。</span><span class="sxs-lookup"><span data-stu-id="cc290-109">The following example defines a new type, `Customer`, and the query expression instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="cc290-110">這會造成查詢運算式的型別變成 <xref:System.Collections.Generic.IEnumerable%601> 的 `Customer`。</span><span class="sxs-lookup"><span data-stu-id="cc290-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span> <span data-ttu-id="cc290-111">此範例會使用 XML [檔範例 xml 檔：客戶和訂單](sample-xml-file-customers-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="cc290-111">The example uses XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md).</span></span>
+<span data-ttu-id="23185-109">下列範例會定義新的型別， `Customer` 而且查詢運算式會在子句中具現化新 `Customer` 的物件 `Select` 。</span><span class="sxs-lookup"><span data-stu-id="23185-109">The following example defines a new type, `Customer`, and the query expression instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="23185-110">這會造成查詢運算式的型別變成 <xref:System.Collections.Generic.IEnumerable%601> 的 `Customer`。</span><span class="sxs-lookup"><span data-stu-id="23185-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span> <span data-ttu-id="23185-111">此範例會使用 XML [檔範例 xml 檔：客戶和訂單](sample-xml-file-customers-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="23185-111">The example uses XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md).</span></span>
 
 ```csharp
 public class Customer
@@ -126,7 +126,7 @@ Sub Main()
 End Sub
 ```
 
-<span data-ttu-id="cc290-112">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="cc290-112">This example produces the following output:</span></span>
+<span data-ttu-id="23185-112">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="23185-112">This example produces the following output:</span></span>
 
 ```output
 GREAL:Great Lakes Food Market:Howard Snyder
@@ -135,7 +135,7 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres
 ```
 
-## <a name="see-also"></a><span data-ttu-id="cc290-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc290-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23185-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="23185-113">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [<span data-ttu-id="cc290-114">投影和轉換 (LINQ to XML)  (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="cc290-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="23185-114">投影和轉換 (LINQ to XML)  (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="23185-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](./work-dictionaries-linq-xml.md)
