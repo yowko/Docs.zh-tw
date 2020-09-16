@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: 242bc179be86e14daab4acb66596207f3272bfea
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 889e3dbac3acf229fd49422285d650fc13792521
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552836"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557118"
 ---
 # <a name="how-to-find-child-elements-based-on-position-linq-to-xml"></a>如何根據位置 (LINQ to XML 尋找子項目) 
 
@@ -113,4 +113,4 @@ Results are identical
 
 ## <a name="see-also"></a>另請參閱
 
-- [XPath 使用者的 LINQ to XML (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML (Visual Basic) ](./comparison-xpath-linq-xml.md)

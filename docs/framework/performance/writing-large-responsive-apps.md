@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a9f5d50ad78b2b0bef0ece3c4fce47d2925aca5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: d74c7b8d80f02283cd681ed0118257ed926bdc83
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063753"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555246"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 
@@ -25,7 +25,7 @@ ms.locfileid: "88063753"
   
  當您的終端使用者與您的應用程式互動時，他們期望應用程式會有回應。 因此，請不要封鎖輸入或命令處理等動作。 說明應該迅速快顯，或在使用者繼續輸入時放棄顯示。 您的應用程式應該避免冗長的運算使得應用程式緩慢，而導致封鎖 UI 執行緒。
   
- 如需 Roslyn 編譯器的詳細資訊，請參閱[.NET COMPILER PLATFORM SDK](../../csharp/roslyn-sdk/index.md)。
+ 如需 Roslyn 編譯器的詳細資訊，請參閱 [.NET COMPILER PLATFORM SDK](../../csharp/roslyn-sdk/index.md)。
   
 ## <a name="just-the-facts"></a>認清事實  
  調整效能和建立回應能力佳的 .NET Framework 應用程式時，請考慮下列幾點事實。
@@ -39,7 +39,7 @@ ms.locfileid: "88063753"
  您應該為應用程式中的關鍵客戶體驗或案例設定效能目標，並撰寫測試以測量效能。 應用科學方法來調查失敗的測試：使用程式碼剖析來引導您、假設可能的問題，以及透過實驗或變更程式碼來測試您的假設。 透過定期測試建立一段時間的基準效能測量資料，以便您隔離出導致效能降低的變更。 當您以嚴謹的方式來處理效能工作時，便可避免浪費時間在不必要的程式碼更新。
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>事實 3：使用良好工具的成果大不相同  
- 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。 Microsoft 隨附各種效能工具，例如[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)和[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。
+ 良好工具可讓您快速鑽研最大的效能問題 (CPU、記憶體或磁碟)，並協助您找出導致這些瓶頸的程式碼。 Microsoft 提供各種效能工具，例如 [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) 和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。
   
  PerfView 是非常強大的免費工具，可協助您專注於深入的問題，例如磁碟 I/O、GC 事件和記憶體。 您可以擷取與效能相關的 [Windows 事件追蹤](../wcf/samples/etw-tracing.md) (ETW) 事件，並輕鬆檢視每種應用程式、處理序、堆疊和執行緒的資訊。 PerfView 顯示您的應用程式配置的記憶體數量和類型，以及哪些函式或呼叫堆疊佔用了多少記憶體配置。 如需詳細資訊，請參閱工具隨附的豐富說明主題、示範和影片 (例如 Channel 9 上的 [PerfView Tutorial](https://channel9.msdn.com/Series/PerfView-Tutorial) (PerfView 教學課程)。
   
@@ -197,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...
 ```  
   
- `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。 它也會檢查是否有 "///"。 修訂過的程式碼只會使用索引，而不會進行任何配置。 它會尋找不是空白字元的第一個字元，然後依字元檢查字元，以查看字串是否以 "///" 開頭。 新的程式碼 `IndexOfFirstNonWhiteSpaceChar` 會使用，而不是傳回在 <xref:System.String.TrimStart%2A> 指定的起始索引之後 (的第一個索引，) 在非空白字元發生的位置。 此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。 您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。
+ `WriteFormattedDocComment()` 的第一個版本已配置一個陣列、數個子字串、經修剪的子字串，以及空的 `params` 陣列。 它也會檢查 "///"。 修訂過的程式碼只會使用索引，而不會進行任何配置。 它會尋找非空白字元的第一個字元，然後依字元檢查字元，以查看字串是否以 "///" 開頭。 新的程式碼 `IndexOfFirstNonWhiteSpaceChar` 會使用而不是 <xref:System.String.TrimStart%2A> ，在指定的起始索引之後傳回第一個索引 (，) 不會出現空白字元。 此修正並不完整，不過您可以查看如何套用類似的修正以取得完整的解決方法。 您可以在整個程式碼中應用此方法，來移除 `WriteFormattedDocComment()` 中的所有配置。
   
  **範例 4：StringBuilder**  
   
@@ -278,11 +278,11 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  此簡單的快取策略遵守良好的快取設計，因為該策略具有大小限制。 但是，現在的程式碼比原始程式碼更多，這表示維護成本會更高。 您應該僅在發現效能問題時才採用快取策略，而 PerfView 顯示 <xref:System.Text.StringBuilder> 配置是影響效能的主要因素。
   
 ### <a name="linq-and-lambdas"></a>LINQ 和 Lambdas  
-以語言整合的查詢 (LINQ) 與 lambda 運算式搭配使用，是生產力功能的範例。 不過，其使用可能會對效能有重大影響，而且您可能會發現需要重寫程式碼。
+與 lambda 運算式搭配使用的語言整合查詢 (LINQ) ，是產能功能的範例。 不過，其使用可能會對效能造成重大影響，而您可能會發現需要重寫程式碼。
   
  **範例5： Lambda、List \<T> 和 IEnumerable\<T>**  
   
- 這個範例會使用 [LINQ 和功能樣式程式碼](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)來找出編譯器模型中的符號，並指定名稱字串：  
+ 這個範例會使用 [LINQ 和功能樣式程式碼](/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)來找出編譯器模型中的符號，並指定名稱字串：  
   
 ```csharp  
 class Symbol {  
@@ -306,7 +306,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 在第一行中，[Lambda 運算式 會](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [覆蓋](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures)區域變數 `name`。 這表示除了配置 `predicate` 保存的[委派](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。 此編譯器產生類似如下的程式碼：  
+ 在第一行中，[Lambda 運算式 會](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` [覆蓋](/archive/blogs/ericlippert/what-are-closures)區域變數 `name`。 這表示除了配置 `predicate` 保存的[委派](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。 此編譯器產生類似如下的程式碼：  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -414,7 +414,7 @@ class Compilation { /*...*/
   
  **範例 6 的修正**  
   
- 若要移除完成的 <xref:System.Threading.Tasks.Task> 配置，您可以使用已完成的結果來快取工作物件：  
+ 若要移除已完成的 <xref:System.Threading.Tasks.Task> 配置，您可以使用已完成的結果來快取 Task 物件：  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -441,7 +441,7 @@ class Compilation { /*...*/
 ### <a name="additional-considerations"></a>其他考量  
  以下是有關大型應用程式或處理大量資料的應用程式可能發生之問題的一些重點。
   
- **詞典**  
+ **字典**  
   
  許多程式普遍都會用到字典，雖然字典很方便且本來就很有效率， 但經常遭到不當使用。 在 Visual Studio 和新編譯器中，分析顯示許多字典含有單一項目或為空的。 空的 <xref:System.Collections.Generic.Dictionary%602> 會含有十個欄位，並在 x86 電腦上佔用 48 個位元組的堆積。 當您需要透過定時查閱對應或關聯資料結構時，字典會很實用。 不過，當您只有幾個項目時，使用字典會浪費許多空間。 相反地，您可以反覆查看 `List<KeyValuePair\<K,V>>`，速度會一樣快。 如果使用字典只是為了下載並讀取資料 (很常見的模式)，根據您使用的項目數，搭配 N(log(N)) 查閱使用排序陣列可能幾乎會一樣快。
   
@@ -449,7 +449,7 @@ class Compilation { /*...*/
   
  類別和結構在調整應用程式時，一般或多或少都會耗費空間/時間。 類別在 x86 電腦上會產生 12 位元組的額外負荷，即使沒有欄位亦然，但是由於只會以一個指標來參考類別執行個體，因此傳遞時並不會耗費大量資源。 結構若未 Boxed，則不會造成堆積配置，但是當您將大型結構當做函式引數或傳回值傳遞時，需要 CPU 時間以自動複製結構的所有資料成員。 請留意對傳回結構之屬性的重複呼叫，並快取區域變數中的屬性值，以避免過多的資料複製。
   
- **緩衝區**  
+ **快取**  
   
  常用的效能訣竅是快取結果。 不過，沒有大小限制或處置原則的快取可能會造成記憶體流失。 處理大量資料時，如果您在快取中佔用大量記憶體，可能會導致記憶體回收，而使得快取查閱的優點無效。
   
@@ -468,7 +468,7 @@ class Compilation { /*...*/
 - [本主題的簡報影片](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [效能分析的初級開發人員指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [效能](index.md)
-- [.NET Performance Tips](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10)) (.NET 效能祕訣)
+- [.NET Performance Tips](/previous-versions/dotnet/articles/ms973839(v=msdn.10)) (.NET 效能祕訣)
 - [Channel 9 PerfView Tutorial](https://channel9.msdn.com/Series/PerfView-Tutorial) (Channel 9 PerfView 教學課程)
 - [.NET 編譯器平台 SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub 上的 dotnet/roslyn 存放庫](https://github.com/dotnet/roslyn)

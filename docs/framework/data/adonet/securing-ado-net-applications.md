@@ -2,12 +2,12 @@
 title: 設定應用程式的安全性
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 1e08bb2386dff5d824d46aba652609ec5a373008
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: af184f64b43c2d3dc39f8c0add08940d3b002c24
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374516"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550751"
 ---
 # <a name="securing-adonet-applications"></a>保護 ADO.NET 應用程式
 
@@ -19,7 +19,7 @@ ms.locfileid: "86374516"
   
 ## <a name="in-this-section"></a>本節內容
 
- [安全性總覽](security-overview.md)  
+ [安全性概觀](security-overview.md)  
  針對設計安全的 ADO. NET 應用程式提供建議。  
   
  [安全存取資料](secure-data-access.md)  
@@ -36,7 +36,7 @@ ms.locfileid: "86374516"
   
 ## <a name="related-sections"></a>相關章節
 
- [資料集和 DataTable 安全性指引](dataset-datatable-dataview/security-guidance.md)  
+ [DataSet 和 DataTable 安全性指引](dataset-datatable-dataview/security-guidance.md)  
  提供和的安全性 <xref:System.Data.DataSet> 指引 <xref:System.Data.DataTable> 。
 
  [SQL Server 安全性](./sql/sql-server-security.md)  
@@ -46,12 +46,12 @@ ms.locfileid: "86374516"
  描述 Entity Framework 應用程式的安全性。  
   
  [安全性](../../../standard/security/index.md)  
- 包含說明 .NET 中所有安全性層面之文章的連結。  
+ 包含說明 .NET 中所有安全性層面的文章連結。  
   
- [安全性工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
+ [安全性工具](/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  保護及管理安全性原則的 .NET Framework 工具。  
   
- [建立安全應用程式的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
+ [建立安全應用程式的資源](/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  提供建立安全應用程式之文章的連結。  
   
  [安全性參考書目](/visualstudio/ide/securing-applications)  

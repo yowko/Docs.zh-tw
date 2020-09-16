@@ -1,6 +1,6 @@
 ---
 title: 複製和 Pin
-description: 請參閱 interop 封送處理器如何複製或釘選要封送處理的資料。 複製資料會將一個記憶體位置的資料複本放到另一個位置。
+description: 檢查 interop 封送處理器如何複製或釘選正在封送處理的資料。 複製資料時，會將資料從一個記憶體位置複製到另一個位置。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-ms.openlocfilehash: b7931813cd5254375eda81515f388c85c78fa284
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1f748da740ce76024495d6fe7968df3be3891e80
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618775"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557080"
 ---
 # <a name="copying-and-pinning"></a>複製和 Pin
 
@@ -32,7 +32,7 @@ ms.locfileid: "85618775"
 格式化 [Blittable](blittable-and-non-blittable-types.md) 類別具有固定配置 (格式化) 以及 Managed 和 Unmanaged 記憶體中的常見資料呈現。 這些類型需要封送處理時，會將堆積中物件的指標直接傳遞給被呼叫者。 被呼叫者可以變更指標所參考記憶體位置的內容。
 
 > [!NOTE]
-> 如果參數標示為 Out 或 In/Out，則被呼叫者可以變更記憶體內容。相反地，當參數設定為 [封送處理為] 時，被呼叫端應避免變更內容，這是格式化的可型別類型的預設值。 修改 In 物件時會在將相同類別匯出至型別程式庫時產生問題，並且用來進行跨 Apartment 呼叫。
+> 如果參數標示為 Out 或 In/Out，則被呼叫者可以變更記憶體內容。相反地，當參數設定為封送處理時，被呼叫者應該避免變更內容，這是格式化的可設定型別的型別預設值。 修改 In 物件時會在將相同類別匯出至型別程式庫時產生問題，並且用來進行跨 Apartment 呼叫。
 
 ## <a name="formatted-non-blittable-classes"></a>格式化非 Blittable 類別
 
@@ -82,5 +82,5 @@ ms.locfileid: "85618775"
 ## <a name="see-also"></a>另請參閱
 
 - [預設的封送處理行為](default-marshaling-behavior.md)
-- [方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [方向屬性](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Interop 封送處理](interop-marshaling.md)

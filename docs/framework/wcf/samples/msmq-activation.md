@@ -2,16 +2,16 @@
 title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0dbd24a612d56c0fe88066f625be2a8369b7df5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 349eadb8f517993c343e81656204ad25e62ed931
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602531"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555233"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 
-這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用 `netMsmqBinding` ，而且是以[雙向通訊](two-way-communication.md)範例為基礎。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。
+這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用 `netMsmqBinding` 和以 [雙向通訊](two-way-communication.md) 範例為基礎。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。
 
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
@@ -21,11 +21,11 @@ ms.locfileid: "84602531"
 >
 > \<InstallDrive>： \ WF_WCF_Samples
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （WCF）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WCF 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WCF 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
 >
 > \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
-Windows 進程啟用服務（WAS）是適用于 Windows Server 2008 的新進程啟用機制，提供先前僅供 HTTP 應用程式使用非 HTTP 通訊協定之應用程式的類似 IIS 功能。 Windows Communication Foundation （WCF）會使用接聽程式介面卡介面，來傳達透過 WCF 支援的非 HTTP 通訊協定（例如 TCP、具名管道和 MSMQ）接收的啟用要求。 SMSvcHost.exe 中執行的 Managed Windows 服務會裝載可透過非 HTTP 通訊協定接收要求的功能。
+Windows 處理常式啟用服務 (是) 的，這是 Windows Server 2008 的新進程啟動機制，提供先前僅提供給使用非 HTTP 通訊協定之應用程式的 HTTP 型應用程式使用的類似 IIS 功能。 Windows Communication Foundation (WCF) 會使用接聽程式介面卡介面，來傳達透過 WCF 支援的非 HTTP 通訊協定（例如 TCP、具名管道和 MSMQ）所接收的啟用要求。 SMSvcHost.exe 中執行的 Managed Windows 服務會裝載可透過非 HTTP 通訊協定接收要求的功能。
 
 Net.Msmq 接聽程式配接器服務 (NetMsmqActivator) 會根據佇列中的訊息啟動佇列應用程式。
 
@@ -86,7 +86,7 @@ public class OrderProcessorService : IOrderProcessor
 MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中。 服務端點會定義在組態檔的 System.serviceModel 區段中。
 
 > [!NOTE]
-> MSMQ 佇列名稱與端點位址會使用稍微不同的定址慣例。 MSMQ 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定一個 net.tcp：配置、使用 "localhost" 代表本機電腦，並在其路徑中使用正斜線。 若要讀取裝載於遠端電腦的佇列，請將 "." 和 "localhost" 取代成遠端電腦名稱。
+> MSMQ 佇列名稱與端點位址會使用稍微不同的定址慣例。 MSMQ 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址指定了 net.tcp：配置、使用 "localhost" 代表本機電腦，並在其路徑中使用正斜線。 若要讀取裝載於遠端電腦的佇列，請將 "." 和 "localhost" 取代成遠端電腦名稱。
 
 帶有類別名稱的 .svc 檔案會用來裝載 WAS 中的服務程式碼。
 
@@ -212,19 +212,19 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定已安裝 IIS 7.0，因為 WAS 啟用時需要它。
+1. 確定已安裝 IIS 7.0，因為 WAS 必須啟用。
 
-2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。 此外，您必須安裝 WCF 非 HTTP 啟用元件：
+2. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。 此外，您必須安裝 WCF 非 HTTP 啟動元件：
 
     1. 在 [開始]**** 功能表內選擇 [控制台]****。
 
-    2. 選取 [**程式和功能**]。
+    2. 選取 [ **程式和功能**]。
 
-    3. 按一下 [**開啟或關閉 Windows 功能**]。
+    3. 按一下 [ **開啟或關閉 Windows 功能**]。
 
-    4. 在 [**功能摘要**] 下，按一下 [**新增功能**]。
+    4. 在 [ **功能摘要**] 底下，按一下 [ **新增功能**]。
 
-    5. 展開 [ **Microsoft .NET Framework 3.0** ] 節點，並檢查 [ **Windows Communication Foundation 非 HTTP 啟用**] 功能。
+    5. 展開 [ **Microsoft .NET Framework 3.0** ] 節點，並檢查 **Windows Communication Foundation 非 HTTP** 啟動功能。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
@@ -232,15 +232,15 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 5. 根據預設，MSMQ 啟動服務會以網路服務的身分執行。 因此，用來啟動應用程式的佇列必須讓「網路服務」擁有接收和查看其中訊息的權限。 您可以使用訊息佇列 MMC 來新增此權限：
 
-    1. 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Compmgmt.msc` ，再按 enter 鍵。
+    1. 在 [ **開始** ] 功能表中，按一下 [ **執行**]，然後輸入 `Compmgmt.msc` ，然後按 enter 鍵。
 
-    2. 在 [**服務和應用程式**] 底下，展開 [**訊息佇列**]。
+    2. 在 [ **服務和應用程式**] 底下，展開 [ **訊息佇列**]。
 
-    3. 按一下 [**私用佇列**]。
+    3. 按一下 [ **私用佇列**]。
 
-    4. 以滑鼠右鍵按一下佇列（servicemodelsamples/Service .svc），然後選擇 [**屬性**]。
+    4. 以滑鼠右鍵按一下 (servicemodelsamples/Service .svc) 的佇列，然後選擇 [ **屬性**]。
 
-    5. 在 [**安全性**] 索引標籤上，按一下 [**新增**]，並提供網路服務的查看和接收許可權。
+    5. 在 [ **安全性** ] 索引標籤上，按一下 [新增]，並 **將** [查看和接收] 許可權授與 Network Service
 
 6. 設定 Windows Process Activation Service (WAS) 以支援 MSMQ 啟動。
 
@@ -269,9 +269,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         此命令可讓您使用和來存取/servicemodelsamples 應用程式 `http://localhost/servicemodelsamples` `net.msmq://localhost/servicemodelsamples` 。
 
-7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Services.msc` 。 搜尋 [Net.tcp 接聽程式**介面卡]** 的服務清單。 按一下滑鼠右鍵並選取 [內容]****。 將 [**啟動類型**] 設定為 [**自動**]，按一下 [套用] **，然後按一下**[**開始**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
+7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [ **開始** ] 功能表中，按一下 [ **執行**]，然後輸入 `Services.msc` 。 在 [ **網路 Msmq 接聽程式介面卡]** 的服務清單中搜尋。 按一下滑鼠右鍵並選取 [內容]****。 將 [ **啟動類型** ] 設定為 [ **自動**]，按一下 [套用] **，然後按一下** [ **開始** ] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
 
-8. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 使用下列程式碼：
+8. 若要在單一或跨電腦的設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 使用下列程式碼：
 
     ```csharp
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");
@@ -329,7 +329,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. 執行 Inetmgr.exe。
 
-    2. 在 [**應用程式**集區] 下，以滑鼠右鍵按一下**AppPool** （通常是**DefaultAppPool**），然後選擇 [**設定應用程式集區預設值**]。
+    2. 在 [ **應用程式**集區] 下，以滑鼠右鍵按一下 **AppPool** (通常會 **DefaultAppPool**) ，然後選擇 [ **設定應用程式集區預設值**]。
 
     3. 變更 Identity 屬性以使用特定的使用者帳戶。
 
@@ -337,9 +337,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. 執行 Services.msc。
 
-    2. 在**MsmqListener 介面卡**上按一下滑鼠右鍵，然後選擇 [**屬性**]。
+    2. 以滑鼠右鍵按一下 **MsmqListener 介面卡**，然後選擇 [ **屬性**]。
 
-4. 在 [**登**入] 索引標籤中變更帳戶。
+4. 在 [ **登** 入] 索引標籤中變更帳戶。
 
 5. 在工作群組中，服務還必須使用不受限制的權杖來執行。 若要這麼做，請在命令視窗中執行下列命令：
 
@@ -347,6 +347,6 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 主控與持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric 主控與持續性範例](/previous-versions/appfabric/ff383418(v=azure.10))

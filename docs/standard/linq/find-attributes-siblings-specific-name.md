@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: ca332f013fe8aea90b6203f5b602ab219362f5d3
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 869c63f26c14bedc8d9911915b8974aa530685fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552840"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557132"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-linq-to-xml"></a>如何尋找具有特定名稱的同級屬性 (LINQ to XML) 
 
@@ -84,4 +84,4 @@ id="bk102"
 
 ## <a name="see-also"></a>另請參閱
 
-- [XPath 使用者的 LINQ to XML (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML (Visual Basic) ](./comparison-xpath-linq-xml.md)

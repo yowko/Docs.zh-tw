@@ -3,12 +3,12 @@ title: 在非同步工作完成時進行處理
 description: '這個範例會示範如何使用 c # 中的 System.threading.tasks.task.whenany 來啟動多個工作，並在其完成時處理其結果，而不是在開始順序中處理它們。'
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: c2fe66e865a2c88f4cae50b816f9326614fcbb89
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812025"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557303"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>在非同步工作完成時加以處理 (c # ) 
 
@@ -117,7 +117,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
     select ProcessUrlAsync(url, s_client);
 ```
 
-由於使用 LINQ [延後執行](../linq/deferred-execution-example.md) ，因此您會呼叫 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 以啟動每項工作。
+由於使用 LINQ [延後執行](../../../../standard/linq/deferred-execution-example.md) ，因此您會呼叫 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 以啟動每項工作。
 
 ```csharp
 List<Task<int>> downloadTasks = downloadTasksQuery.ToList();

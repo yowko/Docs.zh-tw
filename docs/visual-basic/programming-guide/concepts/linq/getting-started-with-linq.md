@@ -8,15 +8,15 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: 97db059c33e8c5603c2bf54bbcf128612a0d028f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cea6a5973104d34c058a51c404c13d26dd1aab14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398392"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554380"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>使用 Visual Basic 撰寫 LINQ 入門
-本節包含可協助您瞭解及使用 Visual Basic 和語言整合式查詢（LINQ）的總覽、範例和背景資訊。  
+本章節包含的總覽、範例和背景資訊，可協助您瞭解及使用 Visual Basic 和與語言整合的查詢 (LINQ) 。  
   
 ## <a name="in-this-section"></a>本節內容  
  [撰寫第一個 LINQ 查詢](writing-your-first-linq-query.md)  
@@ -26,13 +26,13 @@ ms.locfileid: "84398392"
  描述最常見的查詢作業類型，以及它們在 Visual Basic 中的表示方式。  
   
  [支援 LINQ 的 Visual Basic 功能](features-that-support-linq.md)  
- 描述支援 LINQ 的 Visual Basic 語言功能，例如匿名型別和類型推斷。  
+ 描述支援 LINQ 的 Visual Basic 語言功能，例如匿名型別和型別推斷。  
   
  [查詢作業中的類型關聯性 (Visual Basic)](type-relationships-in-query-operations.md)  
  描述在撰寫和執行查詢時，如何保留或轉換資料類型。  
   
  [逐步解說：在 Visual Basic 中撰寫查詢](walkthrough-writing-queries.md)  
- 建立 Visual Basic 的 LINQ 專案、加入簡單的資料來源，以及執行一些基本查詢作業的逐步指示。  
+ 建立 Visual Basic LINQ 專案、新增簡單資料來源，以及執行一些基本查詢作業的逐步指示。  
   
 ## <a name="related-sections"></a>相關章節  
  [Visual Basic 中的 LINQ 簡介](../../language-features/linq/introduction-to-linq.md)  
@@ -48,16 +48,16 @@ ms.locfileid: "84398392"
  說明 LINQ to SQL 技術，並提供可協助您使用 LINQ to SQL 的主題連結。  
   
  [LINQ 的 Visual Studio IDE 和工具支援 (Visual Basic)](visual-studio-ide-and-tools-support-for-linq.md)  
- 描述可在 Visual Studio 環境中使用的工具，以設計、編寫程式碼及進行啟用 LINQ 的應用程式。  
+ 描述可在 Visual Studio 環境中使用的工具，以設計、編碼和偵測啟用 LINQ 的應用程式。  
   
  [LINQ to Objects (Visual Basic)](linq-to-objects.md)  
- 包含在記憶體中的集合中使用 LINQ 的「如何」主題選擇。  
+ 包含在記憶體內部集合中使用 LINQ 的 how to 主題選項。  
   
- [LINQ to XML (Visual Basic)](linq-to-xml.md)  
+ [LINQ to XML (Visual Basic)](../../../../standard/linq/linq-xml-overview.md)  
  包含主題連結，說明如何使用 LINQ to XML，以提供「文件物件模型」(DOM) 的記憶體中文件修改功能，並支援 LINQ 查詢運算式。  
   
  [Language-Integrated Query (LINQ) (Visual Basic)](index.md)  
  提供說明 LINQ 技術的主題連結。  
   
  [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/index.md)  
- 提供有關在 c # 中使用 LINQ 的主題連結。
+ 提供如何在 c # 中使用 LINQ 的相關主題連結。

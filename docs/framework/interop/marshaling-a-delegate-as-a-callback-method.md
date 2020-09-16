@@ -10,18 +10,18 @@ helpviewer_keywords:
 - data marshaling, Callback sample
 - marshaling, Callback sample
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
-ms.openlocfilehash: bf9ef3b9d48c0869dcc96820c3a2fb6fb608479e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5e63dc9b7142934c56fb70bce7b878a37a540faa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618944"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556020"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>做為回呼方法，委派封送處理
 此範例示範如何將委派傳遞至需要函式指標的 Unmanaged 函式。 委派是可保留方法參考的類別，並且相當於型別安全函式指標或回呼函式。
 
 > [!NOTE]
-> 當您在呼叫內使用委派時，Common Language Runtime 會在該呼叫的期間防止對委派進行記憶體回收。 不過，如果 Unmanaged 函式儲存要在呼叫完成之後使用的委派，您必須手動防止記憶體回收，直到 Unmanaged 函式與委派一起完成之前。 如需詳細資訊，請參閱 [HandleRef 範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hc662t8k(v=vs.100))和 [GCHandle 範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/44ey4b32(v=vs.100))。
+> 當您在呼叫內使用委派時，Common Language Runtime 會在該呼叫的期間防止對委派進行記憶體回收。 不過，如果 Unmanaged 函式儲存要在呼叫完成之後使用的委派，您必須手動防止記憶體回收，直到 Unmanaged 函式與委派一起完成之前。 如需詳細資訊，請參閱 [HandleRef 範例](/previous-versions/dotnet/netframework-4.0/hc662t8k(v=vs.100))和 [GCHandle 範例](/previous-versions/dotnet/netframework-4.0/44ey4b32(v=vs.100))。
 
 Callback 範例會使用下列 Unmanaged 函式和其原始函式宣告，如下所示：
 
@@ -53,6 +53,6 @@ Callback 範例會使用下列 Unmanaged 函式和其原始函式宣告，如下
 
 ## <a name="see-also"></a>另請參閱
 
-- [其他封送處理範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
+- [其他封送處理範例](/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [平台叫用資料類型](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)

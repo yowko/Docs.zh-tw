@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: c2d7915aacf0c41e99581fa8b5cc397bcaf5c612
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 0e93add12e39c71c7312036917d42dd53450b712
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552253"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550066"
 ---
 # <a name="how-to-sort-elements-linq-to-xml"></a>如何排序元素 (LINQ to XML) 
 
@@ -108,4 +108,4 @@ End Module
 
 - [排序資料 (C#)](../../csharp/programming-guide/concepts/linq/sorting-data.md)
 - [排序資料 (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
-- [基本查詢 (LINQ to XML)  (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查詢 (LINQ to XML)  (Visual Basic) ](./find-element-specific-attribute.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b5c886ad35afbbf0a68e03b3174ab9ea1f5524f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12ba3bd3c9e9e00b88cab0e568a1ce0f4f8bbb05
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614365"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606439"
 ---
 ### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a>CspParameters.ParentWindowHandle 現在預期有 HWND 值
 
@@ -16,7 +16,7 @@ ms.locfileid: "85614365"
 cspParameters.ParentWindowHandle = form.Handle;
 ```
 
-在舊版 .NET Framework 中，值必須為 <xref:System.IntPtr?displayProperty=fullName>，代表存放 [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) 值之記憶體中的位置。 在 Windows 7 和舊版中，將屬性設為 form.Handle 不會有任何作用，但在 Windows 8 和更新的版本中，則會導致 &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>：參數不正確。&quot;
+在舊版 .NET Framework 中，值必須為 <xref:System.IntPtr?displayProperty=fullName>，代表存放 [HWND](/windows/desktop/WinProg/windows-data-types#HWND) 值之記憶體中的位置。 在 Windows 7 和舊版中，將屬性設為 form.Handle 不會有任何作用，但在 Windows 8 和更新的版本中，則會導致 &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>：參數不正確。&quot;
 
 #### <a name="suggestion"></a>建議
 
@@ -41,7 +41,7 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   | Minor       |
+| 範圍   | Minor       |
 | 版本 | 4.7         |
 | 類型    | 正在重定目標 |
 

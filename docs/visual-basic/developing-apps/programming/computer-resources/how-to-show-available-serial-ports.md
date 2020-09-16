@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: e7a9166f1879ed0850ca893bed307a0318298bbb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b19bdd56311ab7029fb224256d138a0dc0dd8ddc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401819"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557342"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中顯示可用的序列埠
 
@@ -24,7 +24,7 @@ ms.locfileid: "84401819"
 
  此範例會針對 `My.Computer.Ports.SerialPortNames` 屬性傳回的所有字串執行迴圈。 這些字串是電腦上可用序列埠的名稱。  
   
- 一般而言，使用者會從可用的序列埠清單中，選取應用程式應該使用的序列埠。 在這個範例中，序列埠名稱會儲存在 <xref:System.Windows.Forms.ListBox> 控制項中。 如需詳細資訊，請參閱 [ListBox 控制項](../../../../framework/winforms/controls/listbox-control-windows-forms.md)。  
+ 一般而言，使用者會從可用的序列埠清單中，選取應用程式應該使用的序列埠。 在這個範例中，序列埠名稱會儲存在 <xref:System.Windows.Forms.ListBox> 控制項中。 如需詳細資訊，請參閱 [ListBox 控制項](/dotnet/desktop/winforms/controls/listbox-control-windows-forms)。  
   
  [!code-vb[VbVbalrMyComputer#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#45)]  
   

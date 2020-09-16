@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 1252e214be03f8a180fadb7667ee59f36a862040
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: e4d7c96cdcfd7751e80703fe4c5a56e66f4c18c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558422"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555350"
 ---
 # <a name="constants-c-programming-guide"></a>常數 (C# 程式設計手冊)
 常數是在編譯時期已知且不會在程式存留期變更的不可變值。 常數是使用 [const](../../language-reference/keywords/const.md) 修飾詞所宣告。 只有 c # [內建類型](../../language-reference/builtin-types/built-in-types.md) (排除 <xref:System.Object?displayProperty=nameWithType>) 可能會宣告為 `const` 。 使用者定義型別 (包括類別、結構和陣列) 不能是 `const`。 使用 [readonly](../../language-reference/keywords/readonly.md) 修飾詞來建立在執行階段一次初始化的類別、結構或陣列 (例如在建構函式中)，因而無法進行變更。  
@@ -53,4 +53,4 @@ ms.locfileid: "88558422"
 - [屬性](./properties.md)
 - [類型](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [Immutability in C# Part One: Kinds of Immutability](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability) (C# 中不變性第一部分：不變性類型)
+- [Immutability in C# Part One: Kinds of Immutability](/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability) (C# 中不變性第一部分：不變性類型)

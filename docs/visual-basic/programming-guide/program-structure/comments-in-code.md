@@ -14,15 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f9174896181e427c73936a1bb91fa13235e70be
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403313"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550985"
 ---
 # <a name="comments-in-code-visual-basic"></a>程式碼中的註解 (Visual Basic)
-當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 此符號會指示 Visual Basic 編譯器忽略其後面的文字或*批註*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  
+當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 此符號會告知 Visual Basic 編譯器忽略其後面的文字或 *批註*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  
   
  以簡短註解做為所有程序開頭是良好的程式設計作法，此註解會描述程序的基本特性 (作用為何)。 這對於您自己以及對於其他檢查程式碼的人都有好處。 您應該將描述功能特性的註解，與實作 (Implementation) 細節 (程序是如何運作) 分開。 當您將實作細節包含在描述中，請記得在更新函式時，將實作細節一同更新。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "84403313"
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>註解方針  
- 下表提供哪些註解類型可以出現在一段程式碼之前的一般方針。 這些是建議事項;Visual Basic 不會強制執行新增批註的規則。 撰寫對您自己與其他閱讀程式碼的人而言最有效的註解。  
+ 下表提供哪些註解類型可以出現在一段程式碼之前的一般方針。 這些都是建議事項;Visual Basic 不會強制新增批註的規則。 撰寫對您自己與其他閱讀程式碼的人而言最有效的註解。  
   
 |||  
 |---|---|  
@@ -54,14 +54,14 @@ ms.locfileid: "84403313"
   
 - 註解不可以跟隨在同一行的行接續序列之後。  
   
- 您可以藉由選取一或多行程式碼，然後選擇 [**批註**] （ ![ Visual Studio 中的 [Visual Basic 批註] 按鈕）和 [取消批註] ](./media/comments-in-code/visual-basic-comment-button.gif) （在**Uncomment** [ ![ 編輯] 工具列上的 [Visual Studio] 中的 [Visual Basic 取消批註 ](./media/comments-in-code/visual-basic-uncomment-button.gif) **Edit** ] 按鈕）來新增或移除程式碼區塊的批註符號。  
+ 您可以藉由選取一或多行程式碼，然後選擇 [Visual Studio 中的 [Visual Basic 批註] 按鈕 (**批註** ，來新增或移除程式碼區塊的批註符號 ![ 。 ](./media/comments-in-code/visual-basic-comment-button.gif)) 並 **取消** 批註 ([ ![ ](./media/comments-in-code/visual-basic-uncomment-button.gif) **編輯** ] 工具列上 Visual Basic 按鈕中的 [Visual Studio 取消批註] 按鈕。  
   
 > [!NOTE]
-> 您也可以藉由在文字前方置入 `REM` 關鍵字，將註解加入至您的程式碼中。 不過， `'` 符號和**批註** / **取消**批註按鈕較容易使用，而且需要較少的空間和記憶體。  
+> 您也可以藉由在文字前方置入 `REM` 關鍵字，將註解加入至您的程式碼中。 不過， `'` 符號和**批註批註** / **Uncomment**按鈕比較容易使用，而且需要較少的空間和記憶體。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [基本技術-使用 XML 批註記錄您的程式碼](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
+- [基本技術-使用 XML 批註記錄您的程式碼](/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [如何：建立 XML 文件](how-to-create-xml-documentation.md)
 - [XML 註解標籤](../../language-reference/xmldoc/index.md)
 - [程式結構和程式碼慣例](program-structure-and-code-conventions.md)

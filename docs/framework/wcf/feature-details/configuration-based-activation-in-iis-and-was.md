@@ -2,20 +2,20 @@
 title: 在 IIS 與 WAS 中以組態為基礎的啟動
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 5e1672f4dd67950178c95d3e043e16072fcd0ef4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f947a64acdf602d12fcd2319a1b994912ecb331e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593577"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556625"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>在 IIS 與 WAS 中以組態為基礎的啟動
 
-通常，在 Internet Information Services （IIS）或 Windows 進程啟用服務（WAS）下裝載 Windows Communication Foundation （WCF）服務時，您必須提供 .svc 檔案。 .svc 檔案包含服務名稱和選擇性自訂服務主機處理站。 此額外的檔案會增加管理能力的負荷。 以組態為基礎的啟動功能可免除 .svc 檔案的需求以及關聯的負荷。
+一般來說，裝載 Windows Communication Foundation (Internet Information Services (IIS) 或 Windows Process Activation Service (下的 WCF) 服務時，您必須提供 .svc 檔案。 .svc 檔案包含服務名稱和選擇性自訂服務主機處理站。 此額外的檔案會增加管理能力的負荷。 以組態為基礎的啟動功能可免除 .svc 檔案的需求以及關聯的負荷。
 
 ## <a name="configuration-based-activation"></a>以組態為基礎的啟用
 
-以組態為基礎的啟動會使用放置於 .svc 檔案中的中繼資料，並將中繼資料放置於 Web.config 檔案中。 在<`serviceHostingEnvironment`> 元素中，有一個 <`serviceActivations`> 元素。 在 <中 `serviceActivations`> 元素是一或多個 <`add` 的> 專案，每個託管服務各一個元素。 <`add`> 元素包含屬性，可讓您設定服務的相對位址，以及服務類型或服務主機 factory。 下列組態範例程式碼會示範此區段的使用方式。
+以組態為基礎的啟動會使用放置於 .svc 檔案中的中繼資料，並將中繼資料放置於 Web.config 檔案中。 在<的 `serviceHostingEnvironment`> 專案中，有一個 <`serviceActivations`> 元素。 在 <中 `serviceActivations`> 元素是一或多個 <`add`> 元素，每個託管服務各一個。 <的 `add`> 專案包含屬性，可讓您設定服務的相對位址，以及服務類型或服務主機 factory。 下列組態範例程式碼會示範此區段的使用方式。
 
 > [!NOTE]
 > 每個 <`add`> 元素都必須指定服務或 factory 屬性。 系統允許同時指定服務和處理站屬性。
@@ -46,4 +46,4 @@ ms.locfileid: "84593577"
 - [裝載服務](../hosting-services.md)
 - [裝載工作流程服務概觀](hosting-workflow-services-overview.md)
 - [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md)
-- [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric 裝載功能](/previous-versions/appfabric/ee677189(v=azure.10))

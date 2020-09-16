@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6221f253746ac304115fe844966e2cf552263d04
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602631"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551141"
 ---
 # <a name="message-security-with-a-certificate-client"></a>憑證用戶端的訊息安全性
-下列案例顯示使用訊息安全性模式保護的 Windows Communication Foundation （WCF）用戶端和服務。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱[分散式應用程式安全性](distributed-application-security.md)。
+下列案例顯示 Windows Communication Foundation (使用訊息安全性模式保護的 WCF) 用戶端和服務。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱 [分散式應用程式安全性](distributed-application-security.md)。
 
  ![顯示具有憑證之用戶端的螢幕擷取畫面。](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- 如需範例應用程式，請參閱[訊息安全性憑證](../samples/message-security-certificate.md)。  
+ 如需範例應用程式，請參閱 [訊息安全性憑證](../samples/message-security-certificate.md)。  
 
 |特性|描述|  
 |--------------------|-----------------|  
@@ -26,7 +26,7 @@ ms.locfileid: "84602631"
 |驗證 (伺服器)|使用服務憑證|  
 |驗證 (用戶端)|使用用戶端憑證|  
 |完整性|是|  
-|保密|是|  
+|機密性|是|  
 |傳輸|HTTP|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -101,7 +101,7 @@ ms.locfileid: "84602631"
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>組態  
- 下列組態指定使用端點行為的用戶端憑證。 如需憑證的詳細資訊，請參閱[使用憑證](working-with-certificates.md)。 程式碼也會使用 <`identity`> 元素，來指定預期伺服器識別的網域名稱系統（DNS）。 如需有關身分識別的詳細資訊，請參閱[服務身分識別和驗證](service-identity-and-authentication.md)。  
+ 下列組態指定使用端點行為的用戶端憑證。 如需憑證的詳細資訊，請參閱[使用憑證](working-with-certificates.md)。 程式碼也會使用 <`identity`> 專案來指定網域名稱系統 (DNS) 的預期伺服器身分識別。 如需有關身分識別的詳細資訊，請參閱 [服務身分識別和驗證](service-identity-and-authentication.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -143,9 +143,9 @@ ms.locfileid: "84602631"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [安全性總覽](security-overview.md)
+- [安全性概觀](security-overview.md)
 - [服務身分識別和驗證](service-identity-and-authentication.md)
-- [Working with Certificates](working-with-certificates.md)
-- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [使用憑證](working-with-certificates.md)
+- [Windows Server AppFabric 的資訊安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

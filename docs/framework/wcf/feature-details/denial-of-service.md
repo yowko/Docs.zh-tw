@@ -1,17 +1,17 @@
 ---
-title: 阻斷服務
+title: 拒絕服務
 ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29798a73ec69b7f695068343d9c7b5593eeba4fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599265"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557576"
 ---
-# <a name="denial-of-service"></a>阻斷服務
+# <a name="denial-of-service"></a>拒絕服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
   
 ## <a name="excess-memory-consumption"></a>過多記憶體耗用  
@@ -44,46 +44,46 @@ ms.locfileid: "84599265"
 ## <a name="auditing-event-log-can-be-filled"></a>稽核事件記錄檔已滿  
  如果惡意使用者發現已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。 如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。  
   
- 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需使用事件檢視器來查看和管理事件記錄檔的詳細資訊，請參閱[事件檢視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))。 如需詳細資訊，請參閱「[審核](auditing-security-events.md)」。  
+ 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需使用事件檢視器來查看和管理事件記錄檔的詳細資訊，請參閱 [事件檢視器](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))。 如需詳細資訊，請參閱「 [審核](auditing-security-events.md)」。  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>不正確 IAuthorizationPolicy 的執行可能導致服務變成沒有回應  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>在發生錯誤的介面執行上呼叫方法， <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 可能會導致服務沒有回應。  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>不正確 IAuthorizationPolicy 執行可能會導致服務沒有回應  
+ <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>在介面的錯誤執行上呼叫方法， <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 可能會導致服務沒有回應。  
   
- 避免方法：僅使用信任的程式碼。 也就是說，僅使用您所撰寫並測試過的程式碼，或使用來自可信任提供者的程式碼。 在沒有謹慎的考慮之前，請勿將不受信任的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 延伸項目外掛至您的程式碼。 這個做法適用於服務實作中使用的所有延伸項目。 WCF 不會區分使用擴充點插入的應用程式代碼和外部程式碼。  
+ 避免方法：僅使用信任的程式碼。 也就是說，僅使用您所撰寫並測試過的程式碼，或使用來自可信任提供者的程式碼。 在沒有謹慎的考慮之前，請勿將不受信任的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 延伸項目外掛至您的程式碼。 這個做法適用於服務實作中使用的所有延伸項目。 WCF 不會在應用程式程式碼和使用擴充點插入的外部程式碼之間產生任何差異。  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>可能需要調整 Kerberos 權杖的大小上限  
- 如果用戶端是許多群組的成員 (大約 900 個群組，不過實際數目會因群組而有所不同)，當訊息標頭的區塊超過 64 KB 時，可能會發生問題。 在此情況下，您可以增加 Kerberos 權杖大小的上限。 您也可能需要增加 WCF 訊息大小上限，以容納較大的 Kerberos 權杖。  
+ 如果用戶端是許多群組的成員 (大約 900 個群組，不過實際數目會因群組而有所不同)，當訊息標頭的區塊超過 64 KB 時，可能會發生問題。 在此情況下，您可以增加 Kerberos 權杖大小上限。 您可能也需要增加最大的 WCF 訊息大小，以容納較大的 Kerberos 權杖。  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>自動註冊將使電腦中的多個憑證具有相同的主體名稱  
- 自動*註冊*是 Windows Server 2003 自動為憑證註冊使用者和電腦的功能。 當電腦在需要啟用功能的需求上開啟時，就會自動建立具有預期用戶端驗證用途的 X.509 憑證，而每當新電腦加入網路時，也會將此憑證插入本機電腦的「個人」憑證存放區。 不過，自動註冊會對在快取中建立的所有憑證，都使用同樣的主體名稱。  
+ 自動*註冊*是 Windows Server 2003 自動註冊憑證之使用者和電腦的功能。 當電腦在需要啟用功能的需求上開啟時，就會自動建立具有預期用戶端驗證用途的 X.509 憑證，而每當新電腦加入網路時，也會將此憑證插入本機電腦的「個人」憑證存放區。 不過，自動註冊會對在快取中建立的所有憑證，都使用同樣的主體名稱。  
   
  影響是 WCF 服務可能無法在具有自動註冊的網域上開啟。 這是因為預設服務 X.509 認證搜尋準則可能不明確，起因則為存在多個具有電腦完整網域名稱系統 (DNS) 名稱的憑證。 某個憑證可能源自自動註冊，而其他憑證可能為自行發行的憑證。  
   
- 若要減輕此問題，請在上使用更精確的搜尋條件，以參考要使用的確切憑證 [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) 。 例如，請使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 選項，並依照其唯一指紋 (雜湊) 指定憑證。  
+ 若要減輕這個問題，請在上使用更精確的搜尋條件，以參考要使用的確切憑證 [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) 。 例如，請使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 選項，並依照其唯一指紋 (雜湊) 指定憑證。  
   
- 如需自動註冊功能的詳細資訊，請參閱[Windows Server 2003 中的憑證自動註冊](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10))。  
+ 如需有關自動註冊功能的詳細資訊，請參閱 [Windows Server 2003 中的憑證自動註冊](/previous-versions/windows/it-pro/windows-server-2003/cc778954(v=ws.10))。  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>最後幾個用於授權的多個替代主體名稱  
  在少數情況下，當 X.509 憑證包含多個替代主體名稱，而且您使用替代主體名稱進行授權時，授權可能會失敗。  
   
 ## <a name="protect-configuration-files-with-acls"></a>使用 ACL 保護組態檔  
- 您可以針對 CardSpace 發行的權杖，指定程式碼和設定檔案中的必要和選擇性宣告。 這樣會造成在傳送至安全性權杖服務的 `RequestSecurityToken` 訊息中發出相對應的項目。 攻擊者可以修改程式碼或組態以移除必要或選用的宣告，這樣便有可能取得安全性權杖服務，而發出不允許存取目標服務的權杖。  
+ 您可以在程式碼和設定檔中指定 CardSpace 發行權杖的必要和選擇性宣告。 這樣會造成在傳送至安全性權杖服務的 `RequestSecurityToken` 訊息中發出相對應的項目。 攻擊者可以修改程式碼或組態以移除必要或選用的宣告，這樣便有可能取得安全性權杖服務，而發出不允許存取目標服務的權杖。  
   
- 避免方法：需要存取電腦以修改組態檔。 使用檔案存取控制清單 (ACL) 以保護組態檔。 WCF 需要在應用程式目錄或全域組件快取中，才會允許從設定載入這類程式碼。 使用目錄 ACL 以保護目錄。  
+ 避免方法：需要存取電腦以修改組態檔。 使用檔案存取控制清單 (ACL) 以保護組態檔。 WCF 要求程式碼必須在應用程式目錄或全域組件快取中，才能允許從設定載入這類程式碼。 使用目錄 ACL 以保護目錄。  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>達到服務之安全工作階段數上限  
  當服務順利驗證用戶端而且是藉由服務建立安全工作階段時，服務會持續追蹤工作階段，直到用戶端取消服務或工作階段到期為止。 每個建立的工作階段都不利於服務之同時作用中工作階段的數量上限。 達到這個限制時，將會拒絕嘗試以該服務建立新工作階段的用戶端，直到一或多個作用中工作階段到期或由用戶端所取消為止。 用戶端在服務中可以擁有多個工作階段，而且會對該限制計數每個工作階段。  
   
 > [!NOTE]
-> 當您使用具狀態的工作階段時，之前的段落就沒有作用。 如需可設定狀態會話的詳細資訊，請參閱[如何：為安全會話建立安全性內容權杖](how-to-create-a-security-context-token-for-a-secure-session.md)。  
+> 當您使用具狀態的工作階段時，之前的段落就沒有作用。 如需具狀態會話的詳細資訊，請參閱 [如何：建立安全會話的安全性內容權杖](how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
  若要避免這個情況，請設定 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性，以設定作用中工作階段數的上限和工作階段的最長存留時間。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性考量](security-considerations-in-wcf.md)
-- [資訊洩漏](information-disclosure.md)
-- [權限提高](elevation-of-privilege.md)
+- [洩露資訊](information-disclosure.md)
+- [提高權限](elevation-of-privilege.md)
 - [拒絕服務](denial-of-service.md)
 - [重新執行攻擊](replay-attacks.md)
 - [竄改](tampering.md)

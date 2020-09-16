@@ -1,15 +1,15 @@
 ---
 title: 編譯器指示詞
-description: '瞭解 F # 語言預處理器指示詞、條件式編譯指示詞、程式列指示詞和編譯器指示詞。'
+description: '瞭解 F # 語言預處理器指示詞、條件式編譯指示詞、行指示詞和編譯器指示詞。'
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: aee307eb7bccc8d91b5162f3f43db3b806b761d0
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855370"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557316"
 ---
 # <a name="compiler-directives"></a>編譯器指示詞
 
@@ -23,24 +23,24 @@ ms.locfileid: "87855370"
 
 |指示詞|描述|
 |---------|-----------|
-|`#if`*符號*|支援條件式編譯。 如果已定義符號，則會在後面的區段中 `#if` 包含程式碼。 *symbol* 符號也可以與相反 `!` 。|
+|`#if`*符號*|支援條件式編譯。 如果已定義符號，則 `#if` 會包含後面區段*symbol*中的程式碼。 符號也可以使用否定 `!` 。|
 |`#else`|支援條件式編譯。 若未定義與先前的 `#if` 搭配使用的符號，則標記要包含的程式碼區段。|
 |`#endif`|支援條件式編譯。 標示程式碼的條件式區段結尾。|
-|`#`連線*int*、<br/>`#`連線*int* *字串*、<br/>`#`連線*int* *逐字-字串*|表示原始的原始程式碼行和檔案名稱 (適用於偵錯)。 這項功能提供用於產生 F# 原始程式碼的工具。|
+|`#`行 *int*、<br/>`#`行 *int* *字串*，<br/>`#`行 *int* *逐字字串*|表示原始的原始程式碼行和檔案名稱 (適用於偵錯)。 這項功能提供用於產生 F# 原始程式碼的工具。|
 |`#nowarn`*warningcode*|停用編譯器警告。 若要停用警告，請從編譯器輸出中找出其號碼並包含在引號中。 略過 "FS" 前置詞。 若要停用同一行的多個警告號碼，請以引號括住每個號碼，並以一個空格分隔每個字串。 例如：
 
 `#nowarn "9" "40"`
 
-停用警告的效果適用于整個檔案，包括指示詞前面的部分檔案。 |
+停用警告的效果會套用到整個檔案，包括指示詞前面的檔案部分。 |
 
 ## <a name="conditional-compilation-directives"></a>條件式編譯指示詞
 
-這其中一個指示詞停用的程式碼在 [Visual Studio Code 編輯器] 中會呈現暗灰色。
+其中一個指示詞停用的程式碼在 Visual Studio Code 編輯器中會呈現暗灰色。
 
 > [!NOTE]
 > 條件式編譯指示詞的行為與其在其他語言的行為不同。 例如，您無法使用包含符號的布林運算式，且 `true` 和 `false` 沒有特殊意義。 在 `if` 指示詞中使用的符號必須透過命令列定義，或在專案設定中定義；沒有任何 `define` 前置處理器指示詞。
 
-下列程式碼說明如何使用 `#if`、`#else` 和 `#endif` 指示詞。 在此範例中，程式碼包含兩個版本的 `function1` 定義。 `VERSION1`使用[-define 編譯器選項](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)定義時，會啟動指示詞與指示詞之間的 `#if` 程式碼 `#else` 。 否則會啟動 `#else` 與 `#endif` 之間的程式碼。
+下列程式碼說明如何使用 `#if`、`#else` 和 `#endif` 指示詞。 在此範例中，程式碼包含兩個版本的 `function1` 定義。 當 `VERSION1` 使用 [-define 編譯器選項](./compiler-options.md)定義時，會啟動指示詞與指示詞之間的程式碼 `#if` `#else` 。 否則會啟動 `#else` 與 `#endif` 之間的程式碼。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
@@ -48,7 +48,7 @@ F# 中沒有 `#define` 前置處理器指示詞。 您必須使用編譯器選�
 
 條件式編譯指示詞可以巢狀化。 縮排對於前置處理器指示詞而言不重要。
 
-您也可以使用來否定符號 `!` 。 在此範例中，只有在_未_進行偵錯工具時，字串的值才會是什麼：
+您也可以使用來對符號進行否定 `!` 。 在此範例中，只有在 _不_ 進行偵錯工具時，才會有字串的值：
 
 ```fsharp
 #if !DEBUG
@@ -76,9 +76,9 @@ let str = "Debugging!"
 
 |指示詞|描述|
 |---------|-----------|
-|`#light`["on" &#124; "off"]|啟用或停用輕量型語法，與其他 ML 版本相容。 根據預設，會啟用輕量型語法。 一律會啟用詳細語法。 因此，您可以使用輕量型語法和詳細語法。 指示詞 `#light` 本身就相當於 `#light "on"`。 如果您指定 `#light "off"`，您必須針對所有語言建構使用詳細語法。 會假設您使用輕量型語法，在文件中顯示 F# 語法。 如需詳細資訊，請參閱[Verbose 語法](verbose-syntax.md)。|
+|`#light` [on "&#124;" off "]|啟用或停用輕量型語法，與其他 ML 版本相容。 根據預設，會啟用輕量型語法。 一律會啟用詳細語法。 因此，您可以使用輕量型語法和詳細語法。 指示詞 `#light` 本身就相當於 `#light "on"`。 如果您指定 `#light "off"`，您必須針對所有語言建構使用詳細語法。 會假設您使用輕量型語法，在文件中顯示 F# 語法。 如需詳細資訊，請參閱 [詳細資訊語法](verbose-syntax.md)。|
 
-如需解譯器 ( # A0) 指示詞，請參閱[使用 F # 進行互動式程式設計](../tutorials/fsharp-interactive/index.md)。
+如 ( # A0) 指示詞的解譯器，請參閱 [使用 F # 的互動式程式設計](../tutorials/fsharp-interactive/index.md)。
 
 ## <a name="see-also"></a>另請參閱
 

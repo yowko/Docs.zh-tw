@@ -2,12 +2,12 @@
 title: 安全性概觀
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 8a036a40d2b1728f39037018c3672551b8b67bd9
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545033"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550686"
 ---
 # <a name="security-overview"></a>安全性概觀
 
@@ -16,10 +16,10 @@ ms.locfileid: "75545033"
 ## <a name="design-for-security"></a>安全性設計
  開發安全的應用程式時，必須面臨的其中一個最大的問題，就是安全性通常是後續補充動作，也就是在完成專案程式碼後才會實際列入考量。 未在一開始就將安全性納入應用程式會導致應用程式變得不安全，因為對應用程式安全性所做的考量太少。
 
- 最後一分鐘的安全性執行會導致更多的錯誤，因為軟體會在新的限制下中斷，或必須改寫以配合非預期的功能。 每行修改的程式碼都可能會引進新的錯誤。 因此，您應該在開發過程中儘早考慮安全性，以便在開發新功能時一併處理。
+ 最後一分鐘的安全性實行會導致更多錯誤，因為軟體會在新的限制下中斷，或必須重寫以容納無法預期的功能。 每行修改的程式碼都可能會引進新的錯誤。 因此，您應該在開發過程中儘早考慮安全性，以便在開發新功能時一併處理。
 
 ### <a name="threat-modeling"></a>威脅模型
- 除非您了解系統可能遭受的所有潛伏攻擊，否則就無法保護系統。 評估安全性威脅（稱為*威脅模型*化）的程式是必要的，以判斷 ADO.NET 應用程式中安全性缺口的可能性和後果。
+ 除非您了解系統可能遭受的所有潛伏攻擊，否則就無法保護系統。 評估安全性威脅的程式（稱為 *威脅分析模型*），是判斷 ADO.NET 應用程式中安全性缺口的可能性和後果的必要程式。
 
  威脅模型是由三個高階步驟所組成：了解敵人的觀點、描繪系統安全性的特徵，以及判斷威脅來源。
 
@@ -29,7 +29,7 @@ ms.locfileid: "75545033"
 
 |資源|描述|
 |--------------|-----------------|
-|安全性工程入口網站上的[威脅分析模型](https://www.microsoft.com/securityengineering/sdl/threatmodeling)|此網頁上的資源可協助您了解威脅模型程序，並建立可用來確保應用程式安全性的威脅模型。|
+|安全性工程入口網站上的 [威脅模型](https://www.microsoft.com/securityengineering/sdl/threatmodeling) 化網站|此網頁上的資源可協助您了解威脅模型程序，並建立可用來確保應用程式安全性的威脅模型。|
 
 ## <a name="the-principle-of-least-privilege"></a>最小權限的原則
  在設計、建立及部署應用程式時，必須假設應用程式將遭受攻擊。 這些攻擊往往來自惡意程式碼，而這些程式碼常藉由執行程式碼的使用者權限而執行。 其他攻擊則可能源自本意良好，但遭到攻擊者利用的程式碼。 在規劃安全性時，請務必假設會發生最糟的狀況。
@@ -42,7 +42,7 @@ ms.locfileid: "75545033"
 
 |資源|描述|
 |--------------|-----------------|
-|[設定應用程式的安全性](/visualstudio/ide/securing-applications)|包含一般安全性主題的連結， 也包含保護分散式應用程式、Web 應用程式、行動應用程式和桌面應用程式等主題的連結。|
+|[保護應用程式](/visualstudio/ide/securing-applications)|包含一般安全性主題的連結， 也包含保護分散式應用程式、Web 應用程式、行動應用程式和桌面應用程式等主題的連結。|
 
 ## <a name="code-access-security-cas"></a>程式碼存取安全性 (CAS)
 
@@ -69,7 +69,7 @@ ms.locfileid: "75545033"
 |資源|描述|
 |--------------|-----------------|
 |[程式碼存取安全性和 ADO.NET](code-access-security.md)|從 ADO.NET 應用程式的角度，描述在程式碼存取安全性、以角色為基礎的安全性與部分信任環境之間的互動。|
-|[程式碼存取安全性](../../misc/code-access-security.md)|包含說明 .NET Framework 中的 CAS 的其他主題連結。|
+|[代碼啟用安全性](../../misc/code-access-security.md)|包含說明 .NET Framework 中的 CAS 的其他主題連結。|
 
 ## <a name="database-security"></a>資料庫安全性
 
@@ -92,7 +92,7 @@ ms.locfileid: "75545033"
 |資源|描述|
 |--------------|-----------------|
 |[SQL Server 安全性](./sql/sql-server-security.md)|使用應用程式案例提供 SQL Server 安全性概觀，可針對建立以 SQL Server 為目標的安全 ADO.NET 應用程式提供指引。|
-|[資料存取策略的建議](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供存取資料及執行資料庫作業的建議。|
+|[資料存取策略的建議](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供存取資料及執行資料庫作業的建議。|
 
 ## <a name="security-policy-and-administration"></a>安全性原則和管理
 
@@ -102,12 +102,12 @@ ms.locfileid: "75545033"
 
 |資源|描述|
 |--------------|-----------------|
-|[安全性原則管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|提供建立和管理安全性原則的資訊。|
-|[安全性原則最佳做法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|提供說明如何管理安全性原則的連結。|
+|[安全性原則管理](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|提供建立和管理安全性原則的資訊。|
+|[安全性原則的最佳作法](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|提供說明如何管理安全性原則的連結。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定 ADO.NET 應用程式的安全性](securing-ado-net-applications.md)
-- [.NET 中的安全性](../../../standard/security/index.md)
+- [.NET 的安全性](../../../standard/security/index.md)
 - [SQL Server 安全性](./sql/sql-server-security.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

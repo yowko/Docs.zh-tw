@@ -1,6 +1,6 @@
 ---
 title: 撰寫自訂屬性
-description: 在 .NET 中設計您自己的自訂屬性。 自訂屬性基本上是直接或間接從 System.object 衍生的類別。
+description: 在 .NET 中設計您自己的自訂屬性。 自訂屬性基本上是直接或間接衍生自 System.object 的類別。
 ms.date: 07/17/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 3cae8de9b76aa9953b21ad2e23ad003e97555aa9
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768478"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550921"
 ---
 # <a name="writing-custom-attributes"></a>撰寫自訂屬性
 若要設計您自己的自訂屬性，並不需要精通很多新概念。 假如您擅長物件導向的程式設計，且瞭解如何設計類別，那麼您就已經擁有大部分所需的知識。 自訂屬性基本上是一種直接或間接衍生自 <xref:System.Attribute?displayProperty=nameWithType>的傳統類別。 自訂屬性就像傳統類別一樣，含有儲存和擷取資料的方法。  
@@ -117,7 +117,7 @@ ms.locfileid: "84768478"
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- 您可以多載建構函式以容納不同的值組合。 如果您也為自訂的屬性類別定義 [屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) ，您可以在初始化屬性時使用具名和位置參數的組合。 通常您會將所有必要的參數定義為位置，而所有選擇性參數則定義為名稱。 在此情況下，屬性沒有必要的參數就無法初始化。 所有其他參數都是選擇性的。 請注意在 Visual Basic 中，屬性類別的建構函式不應使用 ParamArray 引數。  
+ 您可以多載建構函式以容納不同的值組合。 如果您也為自訂的屬性類別定義 [屬性](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) ，您可以在初始化屬性時使用具名和位置參數的組合。 通常您會將所有必要的參數定義為位置，而所有選擇性參數則定義為名稱。 在此情況下，屬性沒有必要的參數就無法初始化。 所有其他參數都是選擇性的。 請注意在 Visual Basic 中，屬性類別的建構函式不應使用 ParamArray 引數。  
   
  下列程式碼範例示範如何使用選擇性和必要的參數，來套用使用先前建構函示的屬性。 這項作業會假設屬性有一個必要的布林值和一個選擇性的字串屬性。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "84768478"
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>宣告屬性  
- 如果您想要定義具名的參數或提供簡單的方式，來傳回屬性所儲存的值，請宣告 [屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))。 屬性的屬性應該宣告為公用實體，並具有將傳回之資料類型的描述。 定義會保存您屬性值的變數，並將其與 **get** 和 **set** 方法建立關聯。 下列程式碼範例示範如何在您的屬性中實作簡單的屬性。  
+ 如果您想要定義具名的參數或提供簡單的方式，來傳回屬性所儲存的值，請宣告 [屬性](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))。 屬性的屬性應該宣告為公用實體，並具有將傳回之資料類型的描述。 定義會保存您屬性值的變數，並將其與 **get** 和 **set** 方法建立關聯。 下列程式碼範例示範如何在您的屬性中實作簡單的屬性。  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]

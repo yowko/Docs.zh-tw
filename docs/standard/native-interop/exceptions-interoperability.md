@@ -7,24 +7,24 @@ helpviewer_keywords:
 - exceptions, unmanaged code
 - interop, exceptions
 - exceptions, interop
-ms.openlocfilehash: 2aff71e97e1be0dbb584f4fe43c322cea86d2480
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 90774b5d1b64feb34e01f48708d94f8f841a7c9d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76795172"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550868"
 ---
-# <a name="working-with-interop-exceptions-in-unmanaged-code"></a>在非受控程式碼中使用 Interop 例外狀況
+# <a name="working-with-interop-exceptions-in-unmanaged-code"></a>使用非受控碼中的 Interop 例外狀況
 
-只有在 Windows 平臺上才支援非受控碼例外狀況 interop。 非 Windows 平臺上發生可攜性問題。 因為 Unix ABI 沒有例外狀況處理的定義，所以 managed 程式碼無法得知例外狀況機制在幕後的工作方式。 因此，例外狀況最後可能會導致無法預期的行為，並當機。
+僅 Windows 平臺支援非受控碼例外狀況 interop。 非 Windows 平臺會產生可攜性問題。 由於 Unix ABI 沒有例外狀況處理的定義，因此 managed 程式碼無法得知例外狀況機制在幕後的運作方式。 因此，例外狀況最終可能會導致無法預期的行為和當機。
 
 ## <a name="setjmplongjmp-behaviors"></a>Setjmp/Longjmp 行為
 
-不支援`setjmp`與`longjmp`和 C 函式的 Interop。 您不能`longjmp`使用略過 managed 框架。
+不支援 Interop 與與 `setjmp` `longjmp` C 函數。 您無法使用 `longjmp` 略過 managed 框架。
 
-如需詳細資訊，請參閱[longjmp 檔](https://docs.microsoft.com/cpp/c-runtime-library/reference/longjmp)。
+如需詳細資訊，請參閱 [longjmp 檔](/cpp/c-runtime-library/reference/longjmp)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [例外狀況](index.md)
-- [使用原生程式庫的 Interop](https://www.mono-project.com/docs/advanced/pinvoke/#runtime-exception-propagation)
+- [使用原生程式庫進行 Interop](https://www.mono-project.com/docs/advanced/pinvoke/#runtime-exception-propagation)

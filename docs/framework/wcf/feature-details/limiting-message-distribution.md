@@ -2,16 +2,16 @@
 title: 限制訊息散發
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e736aba60d7d2b39d1b8eb958a8c72e6e8d55e13
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586308"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555012"
 ---
 # <a name="limiting-message-distribution"></a>限制訊息散發
 
-對等通道在設計上即是廣播 mesh。 其基本流動模型牽涉到將 mesh 的任何成員所傳送的每個訊息，散發給該 mesh 的所有其他成員。 當成員產生的每個訊息對所有其他成員而言，是相關的且有用的訊息的情況下 (例如聊天室的案例)，這就是理想的方式。 然而，許多應用程式偶爾會需要限制訊息的散發。 例如，在新成員加入 mesh 並想要擷取透過 mesh 傳送的上一個訊息時，這個要求並不需要流向 mesh 的每個成員。 要求可能會限制為近端鄰近，或本機產生的訊息可以篩選掉。訊息也可以傳送到網格上的個別節點。 本主題討論使用躍點計數、訊息傳播篩選條件、本機篩選條件或直接連接，控制訊息在整個 mesh 間的轉送方式，並提供用於選擇適當方法的一般方針。
+對等通道在設計上即是廣播 mesh。 其基本流動模型牽涉到將 mesh 的任何成員所傳送的每個訊息，散發給該 mesh 的所有其他成員。 當成員產生的每個訊息對所有其他成員而言，是相關的且有用的訊息的情況下 (例如聊天室的案例)，這就是理想的方式。 然而，許多應用程式偶爾會需要限制訊息的散發。 例如，在新成員加入 mesh 並想要擷取透過 mesh 傳送的上一個訊息時，這個要求並不需要流向 mesh 的每個成員。 要求可能會限制在接近鄰近的範圍，或是可以篩選出本機產生的訊息。也可以將訊息傳送至網格上的個別節點。 本主題討論使用躍點計數、訊息傳播篩選條件、本機篩選條件或直接連接，控制訊息在整個 mesh 間的轉送方式，並提供用於選擇適當方法的一般方針。
 
 ## <a name="hop-counts"></a>躍點計數
 
@@ -19,7 +19,7 @@ ms.locfileid: "84586308"
 
 只要將 `PeerHopCount` 當做屬性 (Attribute) 加入至訊息類別實作中適當的屬性 (Property) 或欄位中，即可將躍點計數加入至訊息。 您可以在傳送訊息至網狀結構之前，先將此屬性設定為特定值。 因此，必要時您可以使用躍點計數來限制訊息在 mesh 間的散發，或許可以避免不必要的重複訊息。 當 mesh 包含大量的多餘資料，或者要傳送訊息給最近的鄰居或少許躍點內的鄰居時，這個方法會特別有用。
 
-- 如需程式碼片段和相關資訊，請參閱[PeerHopCount 屬性：控制](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution)對等通道 blog 上的訊息發佈文章。
+- 如需程式碼片段和相關資訊，請參閱 PeerHopCount 屬性：在對等通道 blog 上 [控制訊息發佈](/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) 貼文。
 
 ## <a name="message-propagation-filter"></a>訊息傳播篩選條件
 
@@ -27,7 +27,7 @@ ms.locfileid: "84586308"
 
 <xref:System.ServiceModel.PeerMessagePropagationFilter> 是基底抽象類別，具有單一函式 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>。 方法呼叫的第一個引數會傳入訊息的完整複本。 對該訊息所進行的任何變更，並不會影響到實際的訊息。 方法呼叫的最後一個引數會識別訊息的來源 (`PeerMessageOrigination.Local` 或 `PeerMessageOrigination.Remote`)。 這個方法的具體實作必須從 <xref:System.ServiceModel.PeerMessagePropagation> 列舉型別傳回常數，此常數表示要將訊息轉送至本機應用程式 (`Local`)、轉送至遠端用戶端 (`Remote`)，或者兩個都要 (`LocalAndRemote`) 或都不要 (`None`)。 您可以存取對應的 `PeerNode` 物件，並在 `PeerNode.MessagePropagationFilter` 屬性中指定衍生傳播篩選條件類別的執行個體，藉此套用這個篩選條件。 請確定您已在開啟對等通道前附加傳播篩選條件。
 
-- 如需程式碼片段和相關資訊，請參閱對等通道 blog 上的[對等通道和 MessagePropagationFilter](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter)文章。
+- 如需程式碼片段和相關資訊，請參閱對等通道 blog 上的 [對等通道和 MessagePropagationFilter](/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) 文章。
 
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>聯繫 Mesh 中的個別節點
 
@@ -41,34 +41,34 @@ ms.locfileid: "84586308"
 
 在探索您需要限制訊息散發的案例時，請詢問您自己下列問題：
 
-- **誰**需要接收訊息？ 只是一個鄰近節點？ mesh 中其他位置的節點？ 或是 mesh 中一半的節點？
+- **誰** 需要接收訊息？ 只是一個鄰近節點？ mesh 中其他位置的節點？ 或是 mesh 中一半的節點？
 
 - 傳送此訊息的**頻率為何**？
 
-- 此訊息會使用何種**頻寬**？
+- 這則訊息會使用何種 **頻寬** ？
 
 這些問題的答案能夠協助您決定該使用躍點計數、訊息傳播篩選條件、本機篩選條件或直接連接。 請考慮下列一般方針：
 
-- **操作員**
+- **誰**
 
   - *個別節點*：本機篩選準則或直接連接。
 
-  - *特定鄰近範圍內的鄰近*專案： PeerHopCount。
+  - *特定區域內的鄰近*專案： PeerHopCount。
 
   - *網格的複雜子集*： MessagePropagationFilter。
 
 - **頻率**
 
-  - *非常頻繁*：直接連接、PeerHopCount、MessagePropagationFilter。
+  - *非常頻繁*： Direct Connection、PeerHopCount、MessagePropagationFilter。
 
-  - *偶爾*：本機篩選準則。
+  - *偶然*：本機篩選準則。
 
 - **頻寬使用**
 
-  - *高*：直接連接，較不建議使用 MessagePropagationFilter 或本機篩選準則。
+  - *高*：直接連接，較不建議使用 MessagePropagationFilter 或本機篩選。
 
-  - *低*：可能不需要任何的直接連接。
+  - *低*：可能不需要任何直接連接。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建置對等通道應用程式](building-a-peer-channel-application.md)

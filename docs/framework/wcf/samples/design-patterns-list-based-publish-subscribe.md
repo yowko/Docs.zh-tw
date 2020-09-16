@@ -2,20 +2,20 @@
 title: 設計模式：以清單為基礎的發行訂閱
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 5aaea5b0def544f8b3e963d71e269592b9b40784
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 02668962afff5f760fc02692a92e72e765089545
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592342"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545575"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
-這個範例說明實作為 Windows Communication Foundation （WCF）程式之以清單為基礎的發行訂閱模式。  
+此範例說明如何將以清單為基礎的發佈-訂閱模式實作為 Windows Communication Foundation (WCF) 程式。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 以清單為基礎的發行訂閱設計模式在 Microsoft 模式 & 實務發行集、[整合模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10))中有所描述。 發行訂閱模式會傳遞資訊給已訂閱某個資訊主題的收件者集合。 以清單為基礎的發行訂閱會維護訂閱者的清單。 當有要分享的資訊時，清單上的每個訂閱者都會接獲一份複本。 這個範例示範動態的清單架構發行訂閱模式，用戶端可以視需要在這裡訂閱或取消訂閱。  
+ 以清單為基礎的發佈-訂閱設計模式將在 Microsoft 模式中說明 & 實務的發行集、 [整合模式](/previous-versions/msp-n-p/ff647309(v=pandp.10))。 發行訂閱模式會傳遞資訊給已訂閱某個資訊主題的收件者集合。 以清單為基礎的發行訂閱會維護訂閱者的清單。 當有要分享的資訊時，清單上的每個訂閱者都會接獲一份複本。 這個範例示範動態的清單架構發行訂閱模式，用戶端可以視需要在這裡訂閱或取消訂閱。  
   
  以清單為基礎的發行訂閱範例是由用戶端、服務和資料來源程式所組成。 可以有一個以上的用戶端和一個以上的資料來源程式在其中執行。 用戶端會訂閱服務、接收通知和取消訂閱。 資料來源程式會將資訊傳送至服務，以供目前所有訂閱者分享。  
   
@@ -112,25 +112,25 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1. 輸入下列位址，測試您是否可以使用瀏覽器存取服務： `http://localhost/servicemodelsamples/service.svc` 。 確認頁面應該會顯示在回應中。  
+1. 藉由輸入下列位址，測試您是否可以使用瀏覽器來存取服務： `http://localhost/servicemodelsamples/service.svc` 。 確認頁面應該會顯示在回應中。  
   
-2. \\從語言特定資料夾下的 \client\bin 執行 Client .exe。 用戶端活動會顯示在用戶端主控台視窗上。 啟動數個用戶端。  
+2. 從 \client\bin 執行 Client.exe \\ ，從語言特定資料夾下。 用戶端活動會顯示在用戶端主控台視窗上。 啟動數個用戶端。  
   
-3. \\從語言特定資料夾下的 \datasource\bin 執行 Datasource .exe。 資料來源活動會顯示在主控台視窗上。 一旦資料來源將資訊傳送至服務，服務就必須將它傳遞給每個用戶端。  
+3. 從 \datasource\bin 執行 Datasource.exe \\ ，從語言特定資料夾下。 資料來源活動會顯示在主控台視窗上。 一旦資料來源將資訊傳送至服務，服務就必須將它傳遞給每個用戶端。  
   
-4. 如果用戶端、資料來源和服務程式無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端、資料來源和服務程式無法通訊，請參閱 [WCF 範例的疑難排解提示](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
 1. 設定服務機器：  
   
-    1. 在服務機器上，建立一個名稱為 ServiceModelSamples 的虛擬目錄。 [Windows Communication Foundation 範例的一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)中的批次檔 setupvroot.bat 可以用來建立磁碟目錄和虛擬目錄。  
+    1. 在服務機器上，建立一個名稱為 ServiceModelSamples 的虛擬目錄。 批次檔 Setupvroot.bat 從 [Windows Communication Foundation 範例的單次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md) 中，可以用來建立磁碟目錄與虛擬目錄。  
   
     2. 將服務程式檔案從 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 複製到服務機器上的 ServiceModelSamples 虛擬目錄。 請務必將檔案放在 \bin 目錄中。  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`

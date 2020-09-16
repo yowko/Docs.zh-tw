@@ -2,12 +2,12 @@
 title: 在 SQL Server 中授與資料列層級權限
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: df5fcb4a6c73e12bec2ab17501fdfb02cf672324
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b34eaee4b66a2be82049816f0a98b9f53012303
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782361"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554849"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>在 SQL Server 中授與資料列層級權限
 
@@ -23,7 +23,7 @@ ms.locfileid: "70782361"
 
 - 啟用資料列層級篩選：
 
-  - 如果您使用 SQL Server 2016 (含) 以上版本或 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)，請建立一個安全性原則將述詞加入資料表中，以限制傳回的資料列必須符合目前的資料庫使用者 (使用 CURRENT_USER() 內建函式) 或目前的登入名稱 (使用 SUSER_SNAME() 內建函式)：
+  - 如果您使用 SQL Server 2016 (含) 以上版本或 [Azure SQL Database](/azure/sql-database/)，請建立一個安全性原則將述詞加入資料表中，以限制傳回的資料列必須符合目前的資料庫使用者 (使用 CURRENT_USER() 內建函式) 或目前的登入名稱 (使用 SUSER_SNAME() 內建函式)：
 
       ```sql
       CREATE SCHEMA Security
@@ -67,6 +67,6 @@ ms.locfileid: "70782361"
 - [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
 - [SQL Server 安全性概觀](overview-of-sql-server-security.md)
 - [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中使用預存程序來管理權限](managing-permissions-with-stored-procedures-in-sql-server.md)
-- [在 SQL Server 中撰寫安全的動態 SQL](writing-secure-dynamic-sql-in-sql-server.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [使用預存程序管理 SQL Server 中的權限](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [在 SQL Server 撰寫安全動態 SQL](writing-secure-dynamic-sql-in-sql-server.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

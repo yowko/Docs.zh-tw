@@ -8,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: f0e5ccf999b6aa96b6317b88e25f3cd9d9fbc899
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d9f6b3540bb04dd4af154fce2f91a3a7b6395ba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279876"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555532"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>開發世界性應用程式的最佳做法
 
@@ -91,7 +91,7 @@ ms.locfileid: "84279876"
 
 4. 指定 ASP.NET 應用程式中，下列三個位置的 requestEncoding、responseEncoding、fileEncoding、culture 和 uiCulture 屬性值：
 
-    - 在 Web.config 檔案的全球化區段中。 這個程式位於 ASP.NET 應用程式外部。 如需詳細資訊，請參閱[ \<globalization> 元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))。
+    - 在 Web.config 檔案的全球化區段中。 這個程式位於 ASP.NET 應用程式外部。 如需詳細資訊，請參閱[ \<globalization> 元素](/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))。
 
     - 在網頁指示詞中。 請注意，當應用程式位於網頁中，表示這個檔案已被讀取。 因此，此時要指定 fileEncoding 和 requestEncoding 已經太遲了。 您只能在網頁指示詞中指定 uiCulture、Culture 和 responseEncoding。
 

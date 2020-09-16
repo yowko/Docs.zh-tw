@@ -13,12 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 11ac4277081392b1e7ac79147f621ff67d699fe5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656141"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555298"
 ---
 # <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
 本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
@@ -153,7 +153,7 @@ ms.locfileid: "89656141"
  如果不可能將您的所有組件放在探查路徑中，請考慮使用替代項目，例如使用 .NET Framework 增益集模型、將組件放入全域組件快取中，或建立應用程式定義域。  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>考慮使用 .NET Framework 增益集模型  
- 如果您使用載入來源內容來實作通常不會安裝在應用程式基底中的增益集，請使用 .NET Framework 增益集模型。 此模型會提供應用程式定義域或處理序層級的隔離，而不需要您自行管理應用程式定義域。 如需增益集模型的資訊，請參閱[增益集和擴充性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
+ 如果您使用載入來源內容來實作通常不會安裝在應用程式基底中的增益集，請使用 .NET Framework 增益集模型。 此模型會提供應用程式定義域或處理序層級的隔離，而不需要您自行管理應用程式定義域。 如需增益集模型的資訊，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v=vs.100))。  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>考慮使用全域組件快取  
  將組件放入全域組件快取以受益於應用程式基底外部的共用組件路徑，而不會遺失預設載入內容的優點或造成其他內容的缺點。  
