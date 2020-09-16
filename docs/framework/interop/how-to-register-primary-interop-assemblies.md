@@ -1,17 +1,17 @@
 ---
 title: 作法：登錄主要 Interop 組件
-description: 使用元件註冊工具（Regasm.exe）來註冊主要 interop 元件，並閱讀 interop 元件的其他相關問題。
+description: '使用元件註冊工具 ( # A0) 註冊主要 interop 元件，並閱讀與 interop 元件相關的其他問題。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: a15bda7b40f160b31028c62cf7c73bdedd9541fa
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 09b283712a66805669154c720dff5c2c5f910bf4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622740"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547176"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>作法：登錄主要 Interop 組件
 
@@ -50,6 +50,6 @@ regasm CompanyA.UtilLib.dll
 
 ## <a name="see-also"></a>另請參閱
 
-- [使用主要 Interop 組件設計程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
-- [找出主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
-- [轉散發主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))
+- [使用主要 Interop 組件設計程式](/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [找出主要 Interop 組件](/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
+- [轉散發主要 Interop 組件](/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

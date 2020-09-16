@@ -8,20 +8,20 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7601a6d5e7f49b6d8fc434ef772e2e69740f02cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128381"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543929"
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 編譯應用程式
 
-.NET Native 是用來建立和部署 Windows 應用程式的先行編譯技術，隨附于 Visual Studio 2015 和更新版本中。 此工具可將以 Managed 程式碼 (C# 或 Visual Basic) 撰寫且目標為 .NET Framework 和 Windows 10 的應用程式發行版本自動編譯為機器碼。
+.NET Native 是一種先行編譯技術，可用於建立及部署 Visual Studio 2015 和更新版本隨附的 Windows 應用程式。 此工具可將以 Managed 程式碼 (C# 或 Visual Basic) 撰寫且目標為 .NET Framework 和 Windows 10 的應用程式發行版本自動編譯為機器碼。
 
 一般而言，以 .NET Framework 為目標的應用程式會編譯成中繼語言 (IL)。 在執行階段，just-in-time (JIT) 編譯器會將 IL 轉譯成機器碼。 相反地，.NET Native 會將 Windows 應用程式直接編譯成機器碼。 對開發人員而言，這表示：
 
-- 您的應用程式會功能機器碼的效能。 通常，效能會比第一次編譯到 IL，然後由 JIT 編譯程式編譯成機器碼的程式碼更上層。
+- 您的應用程式會以原生程式碼的效能為特色。 通常，效能會優於第一個編譯為 IL 的程式碼，然後由 JIT 編譯程式編譯成機器碼。
 
 - 您可以繼續以 C# 或 Visual Basic 進行程式設計。
 
@@ -29,26 +29,26 @@ ms.locfileid: "73128381"
 
 對於您應用程式的使用者，.NET Native 提供下列優點：
 
-- 針對大部分的應用程式和案例，更快速地執行執行時間。
+- 針對大部分的應用程式和案例加快執行時間。
 
-- 針對大部分的應用程式和案例，啟動時間更快。
+- 讓大部分應用程式和案例的啟動時間更快。
 
 - 低部署和更新成本。
 
 - 優化的應用程式記憶體使用量。
 
 > [!IMPORTANT]
-> 在大部分的應用程式和案例中，相較于編譯為 IL 或 NGEN 影像的應用程式，.NET Native 提供明顯更快的啟動時間和更佳的效能。 不過，您的結果可能會有所不同。 為確保您的應用程式已受益于 .NET Native 的效能增強功能，您應該比較其效能與應用程式的 non-.NET 原生版本。 如需詳細資訊，請參閱[效能會話總覽](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview)。
+> 在大部分的應用程式和案例中，相較于編譯為 IL 或 NGEN 影像的應用程式，.NET Native 提供明顯更快速的啟動時間和優異的效能。 不過，您的結果可能會有所不同。 為了確保您的應用程式已受益于 .NET Native 的效能增強功能，您應該比較其效能與應用程式的 non-.NET 原生版本。 如需詳細資訊，請參閱 [效能會話總覽](/visualstudio/profiling/performance-session-overview)。
 
-但是 .NET Native 牽涉到一個以上的程式碼編譯。 它會將轉換 .NET Framework 應用程式建置和執行的方式。 尤其是：
+但 .NET Native 牽涉到一個以上的程式碼編譯。 它會將轉換 .NET Framework 應用程式建置和執行的方式。 尤其是：
 
 - 在預先編譯期間，.NET Framework 的必要部分會以靜態方式連結到您的應用程式。 這樣可以讓應用程式以 .NET Framework 的 app-local 程式庫來執行，並且讓編譯器執行全域分析，以提供優異的效能。 如此一來，即使 .NET Framework 更新之後，應用程式還是一貫地會以更快的速度啟動。
 
-- .NET Native 執行時間已針對靜態先行編譯進行優化，而在大部分的情況下，可提供優異的效能。 同時，它還保留了開發人員會覺得生產力極佳的核心反映功能。
+- .NET Native 執行時間已針對靜態先行編譯進行優化，而在大部分的情況下都提供優異的效能。 同時，它還保留了開發人員會覺得生產力極佳的核心反映功能。
 
 - .NET Native 使用與 c + + 編譯器相同的後端，其已針對靜態先行編譯案例進行優化。
 
-.NET Native 能夠將 c + + 的效能優勢帶給 managed 程式碼開發人員，因為它會在幕後使用與 c + + 相同或類似的工具，如下表所示。
+.NET Native 能夠為 managed 程式碼開發人員帶來 c + + 的效能優勢，因為它在幕後使用與 c + + 相同或類似的工具，如下表所示。
 
 ||.NET Native|C++|
 |-|----------------------------------------------------------------|-----------|

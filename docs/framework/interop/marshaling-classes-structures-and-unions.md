@@ -1,6 +1,6 @@
 ---
 title: 封送處理類別、結構和等位
-description: 請參閱如何封送處理類別、結構和等位。 查看封送處理類別的範例、具有嵌套結構的結構、結構的陣列，以及等位。
+description: 請參閱如何封送處理類別、結構和等位。 查看封送處理類別的範例、具有嵌套結構的結構、結構陣列，以及等位。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 25de633faabb1424bcf5e618cc5ca129e61c5fca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621518"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547866"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
 
@@ -36,7 +36,7 @@ ms.locfileid: "85621518"
 |----------|-----------------|------------|
 |傳值呼叫|做為 In/Out 參數，如 Managed 案例，會傳遞具有整數成員的類別。|[SysTime 範例](#systime-sample)|
 |結構傳值。|傳遞結構做為 In 參數。|[結構範例](#structures-sample)|
-|結構傳址。|傳遞結構做為 In/Out 參數。|[OSInfo 範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
+|結構傳址。|傳遞結構做為 In/Out 參數。|[OSInfo 範例](/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
 |具有巢狀結構 (扁平化) 的結構。|傳遞類別，表示具有 Unmanaged 函式中巢狀結構的結構。 在 Managed 原型中，結構被扁平化為一個大的結構。|[FindFile 範例](#findfile-sample)|
 |指標指向另一個結構的結構。|傳遞一個結構，其包含的指標指向第二個做為成員的結構。|[結構範例](#structures-sample)|
 |整數傳值的結構陣列。|將僅包含整數的結構陣列做為 In/Out 參數傳遞。 可變更陣列的成員。|[陣列範例](marshaling-different-types-of-arrays.md)|
@@ -44,7 +44,7 @@ ms.locfileid: "85621518"
 |具有實值類型的等位。|傳遞具有實值類型的等位 (整數和雙精度浮點數)。|[等位範例](#unions-sample)|
 |具有混合類型的等位。|傳遞具有混合類型的等位 (整數和字串)。|[等位範例](#unions-sample)|
 |具有平臺特定版面配置的結構。|傳遞具有原生封裝定義的類型。|[平臺範例](#platform-sample)|
-|在結構中的 null 值。|傳遞 Null 參考 (在 Visual Basic 中為 **Nothing**)，而非實值型別的參考。|[HandleRef 範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
+|在結構中的 null 值。|傳遞 Null 參考 (在 Visual Basic 中為 **Nothing**)，而非實值型別的參考。|[HandleRef 範例](/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>結構範例
 
@@ -134,7 +134,7 @@ Managed `MyPerson`、`MyPerson2`、`MyPerson3` 和 `MyArrayStruct` 結構的特�
 
 ## <a name="findfile-sample"></a>FindFile 範例
 
-這個範例示範如何傳遞包含第二個內嵌結構的結構給 Unmanaged 函式。 它也會示範如何使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性在結構內宣告固定長度的陣列。 在此範例中，會加入內嵌結構項目至其父結構。 如需未扁平化內嵌結構的範例，請參閱[結構範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))。
+這個範例示範如何傳遞包含第二個內嵌結構的結構給 Unmanaged 函式。 它也會示範如何使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性在結構內宣告固定長度的陣列。 在此範例中，會加入內嵌結構項目至其父結構。 如需未扁平化內嵌結構的範例，請參閱[結構範例](/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))。
 
 FindFile 範例會使用下列 Unmanaged 函式，和其原始函式宣告，如下所示：
 
@@ -226,7 +226,7 @@ union MYUNION2
 
 ## <a name="platform-sample"></a>平臺範例
 
-在某些情況下， `struct` 和 `union` 版面配置可能會根據目標平臺而有所不同。 例如，在 [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) COM 案例中定義時，請考慮類型：
+在某些情況下， `struct` 和 `union` 版面配置會根據目標平臺而有所不同。 例如，在 [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) COM 案例中定義時，請考慮類型：
 
 ```c++
 #include <pshpack8.h> /* Defines the packing of the struct */
@@ -243,7 +243,7 @@ typedef struct _STRRET
 #include <poppack.h>
 ```
 
-上述的 `struct` 會以 Windows 標頭宣告，而這些標頭會影響類型的記憶體配置。 在受管理的環境中定義時，需要這些版面配置詳細資料，才能正確地與機器碼互通。
+上述的宣告 `struct` 會使用 Windows 的標頭來影響類型的記憶體配置。 在受控環境中定義時，需要這些配置詳細資料，才能與機器碼適當地交互操作。
 
 在32位進程中，此類型的正確 managed 定義如下：
 
@@ -265,7 +265,7 @@ public struct STRRET_32
 }
 ```
 
-在64位進程上，大小*和*欄位位移會不同。 正確的版面配置如下：
+在64位的進程上，大小 *和* 欄位位移都不相同。 正確的版面配置如下：
 
 ``` CSharp
 [StructLayout(LayoutKind.Explicit, Size = 272)]
@@ -285,13 +285,13 @@ public struct STRRET_64
 }
 ```
 
-如果無法在 interop 案例中正確考慮原生配置，可能會導致隨機損毀或更糟，計算不正確。
+若無法在 interop 案例中正確考慮原生配置，可能會導致隨機損毀或更糟的計算不正確。
 
 根據預設，.NET 元件可以在32位和64位版本的 .NET 執行時間中執行。 應用程式必須等到執行時間，才能決定要使用哪些先前的定義。
 
 下列程式碼片段顯示如何在執行時間于32位和64位定義之間進行選擇的範例。
 
-```CSharp
+```csharp
 if (IntPtr.Size == 8)
 {
     // Use the STRRET_64 definition
@@ -332,7 +332,7 @@ typedef struct _SYSTEMTIME {
 
 在此範例中，`SystemTime` 類別包含表示為類別成員原始結構的項目。 已設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。
 
-`NativeMethods` 類別包含 `GetSystemTime` 方法的 Managed 原型，根據預設會傳遞 `SystemTime` 類別做為 In/Out 參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。 若要讓呼叫端接收結果，則必須明確地套用這些[方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))。 `App` 類別建立 `SystemTime` 類別的新執行個體，並存取其資料欄位。
+`NativeMethods` 類別包含 `GetSystemTime` 方法的 Managed 原型，根據預設會傳遞 `SystemTime` 類別做為 In/Out 參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。 若要讓呼叫端接收結果，則必須明確地套用這些[方向屬性](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))。 `App` 類別建立 `SystemTime` 類別的新執行個體，並存取其資料欄位。
 
 ### <a name="code-samples"></a>程式碼範例
 

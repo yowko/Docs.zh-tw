@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 2fefdff9dc27915066e3d92efd8439adffed9fc5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e4d4fa092363a5e76658f2770c0d655bb225f3f3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330302"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544579"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>在 Visual Basic 中建立和使用元件
 
 「元件」** 是實作 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 介面的類別，或直接或間接衍生自可實作 <xref:System.ComponentModel.IComponent> 類別的類別。 .NET Framework 元件是可重複使用的物件，可以與其他物件互動，並提供外部資源和設計階段支援的控制權。  
   
- 元件的一項重要功能是可以進行設計，這表示類別如果是元件，則可用於 Visual Studio 整合式開發環境。 元件可以新增至工具箱、拖曳並放至表單上，以及在設計介面上操作。 請注意，元件的基本設計階段支援已內建于 .NET Framework;元件開發人員不需要執行任何額外的工作，就能利用基本設計階段功能。  
+ 元件的一項重要功能是可以進行設計，這表示類別如果是元件，則可用於 Visual Studio 整合式開發環境。 元件可以新增至工具箱、拖曳並放至表單上，以及在設計介面上操作。 請注意，元件的基底設計階段支援內建于 .NET Framework;元件開發人員不需要執行任何額外的工作，即可利用基本設計階段功能。  
   
  「控制項」類似於元件，都是可以設計的。** 不過，控制項提供使用者介面，而元件則不提供。 控制項必須衍生自基底控制項類別其中之一︰<xref:System.Windows.Forms.Control> 或 <xref:System.Web.UI.Control>。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74330302"
   
 ## <a name="related-sections"></a>相關章節  
 
- [針對控制項和元件撰寫進行疑難排解](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
+ [針對控制項和元件撰寫進行疑難排解](/dotnet/desktop/winforms/controls/troubleshooting-control-and-component-authoring)  
  說明如何修正常見問題。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：在 Windows Forms 中存取設計階段支援](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [如何：在 Windows Forms 中存取設計階段支援](/dotnet/desktop/winforms/controls/developing-windows-forms-controls-at-design-time)

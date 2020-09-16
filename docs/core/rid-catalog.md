@@ -2,12 +2,12 @@
 title: .NET Core 執行時間識別碼 (RID) 目錄
 description: 深入瞭解執行時間識別碼 (RID) 以及如何在 .NET Core 中使用 Rid。
 ms.date: 02/22/2019
-ms.openlocfilehash: 719c84248b955ec05d7cd9b361c7e5ebea6aa37b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 096ce8e33a82df3b9de682ed16e10fbe9f07fd03
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414561"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538220"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
@@ -27,15 +27,15 @@ RID 是執行時間 *識別碼*的縮寫。 RID 值是用來識別應用程式�
 
 代表具體作業系統的 RID 通常遵循 `[os].[version]-[architecture]-[additional qualifiers]` 這個模式，其中：
 
-- `[os]` 是作業/平台系統 Moniker。 例如 `ubuntu`。
+- `[os]` 是作業/平台系統 Moniker。 例如： `ubuntu` 。
 
-- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如 `15.10`。
+- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如： `15.10` 。
 
   - 版本**不應為**行銷版本，因為行銷版本通常代表作業系統的多個個別版本，且具有不同平台 API 介面區。
 
 - `[architecture]` 處理器架構。 例如：`x86`、`x64`、`arm` 或 `arm64`。
 
-- `[additional qualifiers]` 進一步區分不同平台。 例如：`aot`。
+- `[additional qualifiers]` 進一步區分不同平台。 例如： `aot` 。
 
 ## <a name="rid-graph"></a>RID 圖表
 
@@ -108,7 +108,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `win10-arm`
   - `win10-arm64`
 
-如需詳細資訊，請參閱 [.Net Core 相依性和需求](install/dependencies.md?pivots=os-windows)。
+如需詳細資訊，請參閱 [.Net Core 相依性和需求](./install/windows.md#dependencies)。
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -127,7 +127,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-如需詳細資訊，請參閱 [.Net Core 相依性和需求](install/dependencies.md?pivots=os-linux)。
+如需詳細資訊，請參閱 [.Net Core 相依性和需求](./install/linux.md)。
 
 ## <a name="macos-rids"></a>macOS RID
 
@@ -146,7 +146,7 @@ macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的�
 - macOS 10.14 Mojave (.NET Core 1.1 或更新版本)
   - `osx.10.14-x64`
 
-如需詳細資訊，請參閱 [.Net Core 相依性和需求](install/dependencies.md?pivots=os-macos)。
+如需詳細資訊，請參閱 [.Net Core 相依性和需求](./install/macos.md#dependencies)。
 
 ## <a name="see-also"></a>另請參閱
 

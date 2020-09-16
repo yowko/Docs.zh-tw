@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reading text from files [Visual Basic]
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-ms.openlocfilehash: 6d05dac9b612659a74e25c0ce87c7524316d31a5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ec161f5146d5bea7f34d4a5b6c154f6c45b1cf4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411599"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546493"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>如何：以 StreamReader 從檔案讀取文字 (Visual Basic)
 
@@ -34,7 +34,7 @@ ms.locfileid: "84411599"
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
 
- 若要讀取檔案，您的組件需要 <xref:System.Security.Permissions.FileIOPermission> 類別所授與的權限等級。 如果要在部分信任內容中執行，則程式碼可能會因權限不足而擲回例外狀況。 如需詳細資訊，請參閱 [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md)。 使用者也需要存取檔案。 如需詳細資訊，請參閱 [ACL 技術概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))。  
+ 若要讀取檔案，您的組件需要 <xref:System.Security.Permissions.FileIOPermission> 類別所授與的權限等級。 如果要在部分信任內容中執行，則程式碼可能會因權限不足而擲回例外狀況。 如需詳細資訊，請參閱 [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md)。 使用者也需要存取檔案。 如需詳細資訊，請參閱 [ACL 技術概觀](/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -42,5 +42,5 @@ ms.locfileid: "84411599"
 - <xref:System.Windows.Forms.OpenFileDialog>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>
-- [SaveFileDialog 元件](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [SaveFileDialog 元件](/dotnet/desktop/winforms/controls/savefiledialog-component-windows-forms)
 - [從檔案讀取](reading-from-files.md)

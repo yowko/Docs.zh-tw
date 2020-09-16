@@ -1,19 +1,19 @@
 ---
 title: 在 LINQ to Entities 查詢中呼叫函式
-description: 使用這些文章來瞭解 EntityFunctions 和 SqlFunctions 類別如何提供標準和資料庫函式的存取權，做為 Entity Framework 的一部分。
+description: 使用這些文章來查看 EntityFunctions 和 SqlFunctions 類別如何提供標準和資料庫函式的存取權，做為 Entity Framework 的一部分。
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: faa6406713592f10e5e7371cd73f29bec4b03b7b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eb206e9b331da1ae442c1f310e78fec5c6b57e82
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286853"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546044"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>在 LINQ to Entities 查詢中呼叫函式
 本章節的主題描述如何使用呼叫 LINQ to Entities 查詢中的函式。  
   
- <xref:System.Data.Objects.EntityFunctions> 與 <xref:System.Data.Objects.SqlClient.SqlFunctions> 類別可讓您存取標準函式與資料庫函式，這些函式是 Entity Framework 的一部分。 如需詳細資訊，請參閱[如何：呼叫標準函數](how-to-call-canonical-functions.md)和[如何：呼叫資料庫](how-to-call-database-functions.md)函式。  
+ <xref:System.Data.Objects.EntityFunctions> 與 <xref:System.Data.Objects.SqlClient.SqlFunctions> 類別可讓您存取標準函式與資料庫函式，這些函式是 Entity Framework 的一部分。 如需詳細資訊，請參閱 [如何：呼叫標準](how-to-call-canonical-functions.md) 函式和 [如何：呼叫資料庫](how-to-call-database-functions.md)函式。  
   
  呼叫自訂函式的程序需要三個基本步驟：  
   
@@ -40,5 +40,5 @@ ms.locfileid: "84286853"
 
 - [LINQ to Entities 中的查詢](queries-in-linq-to-entities.md)
 - [標準函式](canonical-functions.md)
-- [.edmx 檔概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [HOW TO：在概念模型中定義自訂函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))
+- [.edmx 檔概觀](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [HOW TO：在概念模型中定義自訂函式](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))

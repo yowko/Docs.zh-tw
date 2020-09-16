@@ -1,6 +1,6 @@
 ---
 title: 作法：參考 COM 的 .NET 類型
-description: 參考 COM 的 .NET 類型。 VB 用戶端可以在物件瀏覽器中查看 .NET 物件，但 c + + 用戶端必須使用 import 指示詞來參考 TLB 檔案 \# 。
+description: 參考 COM 的 .NET 類型。 VB 用戶端可以在物件瀏覽器中查看 .NET 物件，但是 c + + 用戶端必須使用 import 指示詞來參考 .TLB 檔案 \# 。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-ms.openlocfilehash: f8d052c7b9bac9c4bab61ab1950e9e89a7c73912
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fad0a8163bd3d023911fd8554a77f740ac010ee6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618957"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547241"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>作法：參考 COM 的 .NET 類型
 從用戶端和伺服器程式碼的觀點來看，COM 和 .NET Framework 之間的差異大部分是無形的。 Microsoft Visual Basic 用戶端可以在物件瀏覽器中檢視 .NET 物件，這會公開物件方法和語法、屬性及欄位，完全如同它是任何其他 COM 物件一樣。  
@@ -46,5 +46,5 @@ ms.locfileid: "85618957"
 
 - [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)
 - [向 COM 註冊組件](registering-assemblies-with-com.md)
-- [呼叫 .NET 物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [部署供 COM 存取的應用程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [呼叫 .NET 物件](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [部署供 COM 存取的應用程式](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 92cfdc1a2a530f9790a693d0aa1ca5f65ff1af9f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558760"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550380"
 ---
 # <a name="version-compatibility"></a>版本相容性
 
@@ -53,9 +53,9 @@ ms.locfileid: "88558760"
 
 - 如果您有 .NET Framework 3.5 應用程式，另請參閱 [.NET Framework 4 移轉問題](net-framework-4-migration-issues.md)。
 
-- 如果您有 .NET Framework 2.0 應用程式，另請參閱 [.NET Framework 3.5 SP1 中的變更](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))。
+- 如果您有 .NET Framework 2.0 應用程式，另請參閱 [.NET Framework 3.5 SP1 中的變更](/previous-versions/dotnet/articles/dd310284(v=msdn.10))。
 
-- 如果您有 .NET Framework 1.1 應用程式，另請參閱 [.NET Framework 2.0 中的變更](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))。
+- 如果您有 .NET Framework 1.1 應用程式，另請參閱 [.NET Framework 2.0 中的變更](/previous-versions/aa570326(v=msdn.10))。
 
 - 如果您正在重新編譯現有原始程式碼以便在 .NET Framework 4.5 或其點版本執行，或如果您正在開發的新版本應用程式或元件針對 .NET Framework 4.5，或針對來自其現有原始程式碼基底的點版本，請檢查 [.NET Framework 類別庫中已淘汰的功能](../whats-new/whats-obsolete.md)中已淘汰類型和成員，並套用所述的因應措施。 (之前編譯的程式碼將會針對已標示為過時的型別和成員繼續執行)。
 

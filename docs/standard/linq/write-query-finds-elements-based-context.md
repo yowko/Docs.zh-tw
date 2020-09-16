@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: df4f6bcd52331a7b6c81cf816260df4355ebf987
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 2c51a790a2a8adef565f186992a6a3faa5f102ad
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552124"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550457"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-linq-to-xml"></a>如何撰寫可根據內容 (LINQ to XML 尋找元素的查詢) 
 
@@ -181,4 +181,4 @@ id = 6
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [基本查詢 (LINQ to XML)  (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查詢 (LINQ to XML)  (Visual Basic) ](./find-element-specific-attribute.md)

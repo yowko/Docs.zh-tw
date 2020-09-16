@@ -2,12 +2,12 @@
 title: 服務：每秒的安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-ms.openlocfilehash: f3f27100afb7390a68d99421cad6f43d9abaccd5
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: f6dbf7f6da208bde3a9a380d50fd6caf68576f25
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163861"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535907"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>服務：每秒的安全性驗證和驗證失敗數
 計數器名稱：每秒的安全性驗證和驗證失敗。  
@@ -29,6 +29,6 @@ ms.locfileid: "76163861"
   
 - 在 TLSNEGO/SPNEGO 交換期間發生錯誤。  
   
- 此計數器是效能計數器類型[PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))，其值是使用下列公式來計算的：  
+ 此計數器是效能計數器類型 [PERF_COUNTER_COUNTER](/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))，其值是使用下列公式計算的：  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

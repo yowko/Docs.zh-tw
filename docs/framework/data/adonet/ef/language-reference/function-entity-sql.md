@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: fd7f484733e7135d2d6c8094b6527d672a988088
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3cc843c7f16f667508aeaea65879de6842478bc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150294"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544488"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 定義 Entity SQL 查詢命令範圍內的函式。  
@@ -41,13 +41,13 @@ FUNCTION function-name
  `data_type`  
  支援的型別名稱。  
   
- 收藏 （`>` <type_definition ）  
+ 集合 ( <type_definition `>` )   
  傳回支援的型別、資料列或參考等集合的運算式。  
   
- 參考 **（**`data_type`**）**  
+ 參考** (** `data_type` **) **  
  傳回實體類型之參考的運算式。  
   
- 行 **（**`row_expression`**）**  
+ 資料列** (** `row_expression` **) **  
  從一或多個值傳回匿名、結構式型別記錄的運算式。 如需詳細資訊，請參閱 [ROW](row-entity-sql.md)。  
   
 ## <a name="remarks"></a>備註  
@@ -61,9 +61,9 @@ FUNCTION function-name
   
  `A()`  
   
- 如需詳細資訊，請參閱 [How to: Call a User-Defined Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))。  
+ 如需詳細資訊，請參閱 [How to: Call a User-Defined Function](/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))。  
   
- 函式也可以在模型本身進行宣告。 在模型中宣告的函式，會與在命令中宣告為內嵌的函式一樣，以相同的方式執行。 有關詳細資訊，請參閱[使用者定義的函數](user-defined-functions-entity-sql.md)。  
+ 函式也可以在模型本身進行宣告。 在模型中宣告的函式，會與在命令中宣告為內嵌的函式一樣，以相同的方式執行。 如需詳細資訊，請參閱 [使用者定義函數](user-defined-functions-entity-sql.md)。  
   
 ## <a name="example"></a>範例  
  以下 Entity SQL 命令定義函式 `Products` ，使用整數值篩選傳回的產品。  

@@ -3,23 +3,23 @@ title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324505"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538091"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
-[.NET Core SDK](https://dotnet.microsoft.com/download) \(英文\) 具有許多已經安裝並可供您使用的範本。 [ `dotnet new` 命令](dotnet-new.md)不僅是使用範本的方式，也會說明如何安裝和卸載範本。 從 .NET Core 2.0 開始，您可以建立任何專案類型的自訂範本，例如應用程式、服務、工具或類別庫。 您甚至可以建立會輸出一或多個獨立檔案的範本，例如組態檔。
+[.NET Core SDK](https://dotnet.microsoft.com/download) \(英文\) 具有許多已經安裝並可供您使用的範本。 此[ `dotnet new` 命令](dotnet-new.md)不是使用範本的方式，也是如何安裝和卸載範本的方式。 從 .NET Core 2.0 開始，您可以建立任何專案類型的自訂範本，例如應用程式、服務、工具或類別庫。 您甚至可以建立會輸出一或多個獨立檔案的範本，例如組態檔。
 
-您可以直接參考*nupkg*檔案，或指定包含範本的檔案系統目錄，從任何 nuget 摘要的 nuget 套件安裝自訂範本。 範本引擎提供可讓您取代值、包含與排除檔案，以及在範本被使用時執行自訂處理作業的功能。
+您可以直接參考 *nupkg* 檔案，或指定包含範本的檔案系統目錄，從任何 nuget 摘要的 nuget 套件安裝自訂範本。 範本引擎提供可讓您取代值、包含與排除檔案，以及在範本被使用時執行自訂處理作業的功能。
 
 範本引擎是開放原始碼，而線上程式碼存放庫位於 GitHub 的 [dotnet/templating](https://github.com/dotnet/templating/)。 GitHub 的 [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (dotnet new 的可用範本) 中，有包括協力廠商範本在內的更多範本。 如需建立與使用自訂範本的詳細資訊，請參閱[如何建立您自己的 dotnet new 範本](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)以及 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)。
 
 > [!NOTE]
-> 範本範例可在[dotnet/dotnet 範本-範例](https://github.com/dotnet/dotnet-template-samples)GitHub 存放庫中取得。 不過，雖然這些範例是瞭解範本如何工作的絕佳資源，但存放庫已封存且不再保留。 這些範例可能已過期，因此無法再運作。
+> 範本範例可在 [dotnet/dotnet 範本](https://github.com/dotnet/dotnet-template-samples) 範例 GitHub 存放庫中取得。 不過，雖然這些範例是瞭解範本運作方式的良好資源，但存放庫已封存且不再保留。 這些範例可能已過期，且無法再運作。
 
 若要遵循逐步解說並建立範本，請參閱[建立 dotnet new 的自訂範本](../tutorials/cli-templates-create-item-template.md)教學課程。
 
@@ -31,12 +31,12 @@ ms.locfileid: "85324505"
 dotnet new --list
 ```
 
-## <a name="configuration"></a>設定
+## <a name="configuration"></a>組態
 
 範本是由下列部分組成：
 
 - 來源檔案和資料夾。
-- 設定檔（*template.js*）。
+- ) * 上 (template.js* 的設定檔。
 
 ### <a name="source-files-and-folders"></a>來源檔案和資料夾
 
@@ -55,7 +55,7 @@ dotnet new --list
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| member            | 類型          | 說明 |
+| member            | 類型          | 描述 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |
@@ -96,7 +96,7 @@ dotnet new --list
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>將範本封裝在 NuGet 套件中 (nupkg 檔案)
 
-自訂範本會搭配 [dotnet pack](dotnet-pack.md) 命令和 *.csproj* 檔案進行封裝。 或者，[NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) \(部分機器翻譯\) 可以搭配 [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) \(部分機器翻譯\) 命令和 *.nuspec* 檔案使用。 不過，NuGet 需要在 Windows 上的 .NET Framework，以及在 Linux 和 macOS 上的[Mono](https://www.mono-project.com/) 。
+自訂範本會搭配 [dotnet pack](dotnet-pack.md) 命令和 *.csproj* 檔案進行封裝。 或者，[NuGet](/nuget/tools/nuget-exe-cli-reference) \(部分機器翻譯\) 可以搭配 [nuget pack](/nuget/tools/cli-ref-pack) \(部分機器翻譯\) 命令和 *.nuspec* 檔案使用。 不過，NuGet 需要 Windows 上的 .NET Framework 以及 Linux 和 macOS 上的 [Mono](https://www.mono-project.com/) 。
 
 *.csproj* 檔案與傳統的程式碼專案 *.csproj* 檔案具有些微的不同。 請注意下列設定︰
 

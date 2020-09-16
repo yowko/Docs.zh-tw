@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 4c015d77deb4e6ed3d43074f2903e26b687de84f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9c5d83b5f2ffb06c9fb14f715a3ea7ff12319086
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493561"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547810"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 函式
-使用儲存在 XML 檔案中的版本資訊，將 common language runtime （CLR）載入進程中。 XML 檔案的格式會在標準應用程式佈建檔案之後進行模型化。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../configure-apps/file-schema/index.md)。  
+使用儲存在 XML 檔案中的版本資訊，將 common language runtime (CLR) 載入至進程。 XML 檔案的格式是在標準應用程式佈建檔之後進行模型化。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../configure-apps/file-schema/index.md)。  
   
- 此函式在 .NET Framework 4 中已被取代。 請參閱將[Common Language Runtime 載入進程中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))。  
+ 此函式已在 .NET Framework 4 中被取代。 請參閱將 [Common Language Runtime 載入至進程](/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100))。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,27 +40,27 @@ HRESULT CorBindToCurrentRuntime (
   
 ## <a name="parameters"></a>參數  
  `pwszFileName`  
- 在應用程式佈建檔的名稱，指定要載入的 CLR 版本。 如果檔案名不是完整名稱，則會假設為與呼叫相同的目錄。  
+ 在應用程式佈建檔的名稱，指定要載入的 CLR 版本。 如果檔案名不是完整名稱，則會假設該名稱與可執行檔的可執行檔位於相同的目錄中。  
   
- 要載入的執行階段版本，會由設定檔的元素中的 version 屬性描述 [\<requiredRuntime>](../../configure-apps/file-schema/startup/requiredruntime-element.md) 。  
+ 設定檔元素中的 version 屬性會描述要載入的執行階段版本 [\<requiredRuntime>](../../configure-apps/file-schema/startup/requiredruntime-element.md) 。  
   
- 如果未指定任何版本，或找不到該專案，則會 `<requiredRuntime>` 載入電腦上所安裝的最新 CLR 版本。  
+ 如果未指定任何版本，或如果找不到專案，則會 `<requiredRuntime>` 載入電腦上所安裝之最新版本的 CLR。  
   
  `rclsid`  
- 在Coclass 的，其 `CLSID` 會執行[ICorRuntimeHost](icorruntimehost-interface.md)或[ICLRRuntimeHost](iclrruntimehost-interface.md)介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
+ 在Coclass 的， `CLSID` 可執行 [ICorRuntimeHost](icorruntimehost-interface.md) 或 [ICLRRuntimeHost](iclrruntimehost-interface.md) 介面。 支援的值為 CLSID_CorRuntimeHost 或 CLSID_CLRRuntimeHost。  
   
  `riid`  
- 在`IID`您所要求之介面的。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
+ 在 `IID` 您所要求之介面的。 支援的值為 IID_ICorRuntimeHost 或 IID_ICLRRuntimeHost。  
   
  `ppv`  
- 脫銷傳回的介面指標。  
+ 擴展傳回的介面指標。  
   
-## <a name="requirements"></a>規格需求  
+## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標頭：** Mscoree.dll  
   
- 連結**庫：** Mscoree.dll .dll  
+ 連結**庫：** MSCorEE.dll  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

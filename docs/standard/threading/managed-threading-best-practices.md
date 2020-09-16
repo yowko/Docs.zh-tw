@@ -1,6 +1,6 @@
 ---
 title: Managed 執行緒處理的最佳實施方針
-description: 瞭解 .NET 中受控執行緒的最佳作法。 使用難以協調多個執行緒或處理封鎖執行緒的棘手情況。
+description: 瞭解 .NET 中的 managed 執行緒最佳做法。 使用很困難的狀況，例如協調許多執行緒或處理封鎖的執行緒。
 ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: fa0af1461ba568583127316934b9d55577dd4c5a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8d5c37bf2ed80e9b6ea071fcd2080c43be8f6247
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662819"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546363"
 ---
 # <a name="managed-threading-best-practices"></a>受控執行緒處理最佳做法
 在為多執行緒功能設計程式時需要非常小心。 您可以藉由將要求排入佇列以供執行緒集區的執行緒執行，來降低大部分工作的複雜性。 本主題要解決的是更困難的情況，例如協調多個執行緒的工作，或處理封鎖起來的執行緒。  
@@ -78,9 +78,9 @@ else {
 
 ## <a name="number-of-processors"></a>處理器數目
 
-系統上無論有多個處理器或只有一個處理器，都會影響多執行緒的架構。 如需詳細資訊，請參閱 [Number of Processors](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors) (處理器數目)。
+系統上無論有多個處理器或只有一個處理器，都會影響多執行緒的架構。 如需詳細資訊，請參閱 [Number of Processors](/previous-versions/dotnet/netframework-1.1/1c9txz50(v=vs.71)#number-of-processors) (處理器數目)。
 
-使用 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 屬性，即可判斷在執行時間可用的處理器數目。
+您 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 可以使用屬性來判斷執行時間可用的處理器數目。
   
 ## <a name="general-recommendations"></a>一般建議  
  在使用多執行緒時，請考慮下列指導方針︰  

@@ -2,12 +2,12 @@
 title: Language-Integrated Query (LINQ)
 ms.date: 07/20/2015
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-ms.openlocfilehash: 62b07043bd6148d8ec9aeaaf45ee1adb108d2c6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 53c4033c4626fd34c3cd8752e74af3f8e9b481c3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397593"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549938"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>Language-Integrated Query (LINQ) (Visual Basic)
 LINQ 是可將強大查詢功能擴充至 Visual Basic 語言語法的一組功能。 LINQ 推出標準且容易學習的資料查詢與更新模式，而且這項技術可擴充為支援幾乎所有類型的資料存放區。  .NET Framework 包括 LINQ 提供者組件，可讓您使用 LINQ 搭配 .NET Framework 集合、SQL Server 資料庫、ADO.NET 資料集和 XML 文件。  
@@ -28,7 +28,7 @@ LINQ 是可將強大查詢功能擴充至 Visual Basic 語言語法的一組功�
  [LINQ to Objects (Visual Basic)](linq-to-objects.md)  
  包含主題連結，說明如何使用 LINQ to Object 來存取記憶體中的資料結構。  
   
- [LINQ to XML (Visual Basic)](linq-to-xml.md)  
+ [LINQ to XML (Visual Basic)](../../../../standard/linq/linq-xml-overview.md)  
  包含主題連結，說明如何使用 LINQ to XML，以提供「文件物件模型」(DOM) 的記憶體中文件修改功能，並支援 LINQ 查詢運算式。  
   
  [LINQ to ADO.NET (入口網站頁面)](linq-to-adonet-portal-page.md)  

@@ -1,19 +1,19 @@
 ---
 title: dotnet-install 指令碼
-description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet-安裝腳本。
+description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet 安裝腳本。
 ms.date: 04/30/2020
-ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024650"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538038"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
 ## <a name="name"></a>名稱
 
-`dotnet-install.ps1` | `dotnet-install.sh`-用來安裝 .NET Core SDK 和共用執行時間的腳本。
+`dotnet-install.ps1` | `dotnet-install.sh` -用來安裝 .NET Core SDK 和共用執行時間的腳本。
 
 ## <a name="synopsis"></a>概要
 
@@ -48,22 +48,22 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 ## <a name="description"></a>描述
 
-`dotnet-install`腳本會執行 .NET Core SDK 的非系統管理員安裝，其中包括 .NET Core CLI 和共用執行時間。 有兩個腳本：
+`dotnet-install`腳本會執行 .NET Core SDK 的非系統管理員安裝，其中包含 .NET Core CLI 和共用執行時間。 有兩個腳本：
 
 * 適用于 Windows 的 PowerShell 腳本。
-* 可在 Linux/macOS 上運作的 bash 腳本。
+* 在 Linux/macOS 上運作的 bash 腳本。
 
 ### <a name="purpose"></a>目的
 
- 使用腳本的目的是為了持續整合 (CI) 案例，其中：
+ 腳本的預期用途是持續整合 (CI) 案例，其中：
 
-* SDK 需要在沒有使用者互動的情況下安裝，而且沒有系統管理員許可權。
-* SDK 安裝不需要跨多個 CI 執行保存。
+* 您必須在不需使用者互動的情況下安裝 SDK，而且不需要系統管理員許可權。
+* SDK 安裝不需要跨多個 CI 執行來保存。
 
   一般的事件順序：
-  * CI 已觸發。
+  * 觸發 CI。
   * CI 會使用其中一個腳本來安裝 SDK。
-  * CI 會完成其工作，並清除包含 SDK 安裝的暫存資料。
+  * CI 完成其工作，並清除包含 SDK 安裝的暫存資料。
 
 若要設定開發環境或執行應用程式，請使用安裝程式，而不是這些腳本。
 
@@ -71,12 +71,12 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 建議您使用穩定版本的腳本：
 
-- Bash (Linux/macOS) ：<https://dot.net/v1/dotnet-install.sh>
-- PowerShell (Windows) ：<https://dot.net/v1/dotnet-install.ps1>
+- Bash (Linux/macOS) ： <https://dot.net/v1/dotnet-install.sh>
+- PowerShell (Windows)：<https://dot.net/v1/dotnet-install.ps1>
 
 ### <a name="script-behavior"></a>腳本行為
 
-這兩個指令碼有相同的行為。 他們會從 CLI 組建中下載 ZIP/tarball 檔案，並繼續將它安裝在預設位置或所指定的位置 `-InstallDir|--install-dir` 。
+這兩個指令碼有相同的行為。 他們會從 CLI 組建放置下載 ZIP/tarball 檔案，並繼續將它安裝在預設位置或指定的位置 `-InstallDir|--install-dir` 。
 
 根據預設，安裝指令碼會下載並安裝 SDK。 如果您想要只取得共用執行階段，請指定 `-Runtime|--runtime` 引數。
 
@@ -84,11 +84,11 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 執行指令碼之前，請安裝所有必要的[相依性 (英文)](../install/windows.md#dependencies)。
 
-您可以使用 `-Version|--version` 引數安裝特定版本。 版本必須指定為三部分版本號碼，例如 `2.1.0` 。 如果未指定版本，腳本會安裝 `latest` 版本。
+您可以使用 `-Version|--version` 引數安裝特定版本。 版本必須指定為三部分的版本號碼，例如 `2.1.0` 。 如果未指定版本，腳本會安裝 `latest` 版本。
 
-安裝腳本不會更新 Windows 上的登錄。 他們只需要下載壓縮的二進位檔，並將它們複製到資料夾即可。 如果您想要更新登錄機碼值，請使用 .NET Core 安裝程式。
+安裝腳本不會更新 Windows 上的登錄。 他們只會下載壓縮的二進位檔，並將其複製到資料夾。 如果您想要更新登錄機碼值，請使用 .NET Core 安裝程式。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
@@ -105,7 +105,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   - `Current` - 最新版本。
   - `LTS` - 長期支援通道 (最新的支援版本)。
   - 代表特定版本的 X.Y 格式兩段式版本 (例如 `2.1` 或 `3.0`)。
-  - 分支名稱：例如， `release/3.1.1xx` 或 `master`) 的夜間版本 (。 使用此選項可從預覽頻道安裝版本。 使用[安裝程式和二進位](https://github.com/dotnet/core-sdk#installers-and-binaries)檔中列出的通道名稱。
+  - 分支名稱：例如， `release/3.1.1xx` 或 `master` (用於夜間發行) 。 使用這個選項可從預覽通道安裝版本。 使用 [安裝程式和二進位](https://github.com/dotnet/core-sdk#installers-and-binaries)檔中所列的通道名稱。
 
   預設值是 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。
 
@@ -119,23 +119,23 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`--help`**
 
-  印出指令碼的說明。 僅適用于 bash 腳本。 針對 PowerShell，請使用 `Get-Help ./dotnet-install.ps1` 。
+  印出指令碼的說明。 只適用于 bash 腳本。 針對 PowerShell，請使用 `Get-Help ./dotnet-install.ps1` 。
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  指定安裝路徑。 如果目錄不存在，則會建立它。 預設值是在 Windows 上 *%LocalAppData%\Microsoft\dotnet* ，而在 Linux/macOS 上則是 */usr/share/dotnet* 。 二進位檔會直接放在此目錄中。
+  指定安裝路徑。 如果目錄不存在，則會建立它。 預設值為 Windows 上的 *%LocalAppData%\Microsoft\dotnet* ，以及 Linux/macOS 上的 */usr/share/dotnet* 。 二進位檔會直接放在此目錄中。
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  指定將用來判斷 SDK 版本之檔案的[global.js](global-json.md)路徑。 檔案*上的global.js*必須有的值 `sdk:version` 。
+  指定將用來判斷 SDK 版本之檔案 [global.js](global-json.md) 的路徑。 檔案 * 上的global.js* 必須有的值 `sdk:version` 。
 
 - **`-NoCdn|--no-cdn`**
 
-  不允許從 [Azure 內容傳遞網路 (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) 下載，而直接使用未快取的摘要。
+  不允許從 [Azure 內容傳遞網路 (CDN)](/azure/cdn/cdn-overview) 下載，而直接使用未快取的摘要。
 
 - **`-NoPath|--no-path`**
 
-  如果設定，就不會將安裝資料夾匯出至目前工作階段的路徑。 根據預設，腳本會修改路徑，使 .NET Core CLI 在安裝後立即可供使用。
+  如果設定，就不會將安裝資料夾匯出至目前工作階段的路徑。 根據預設，腳本會修改路徑，使 .NET Core CLI 在安裝後立即可用。
 
 - **`-ProxyAddress`**
 
@@ -143,7 +143,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`-ProxyBypassList <LIST_OF_URLS>`**
 
-  如果以設定 `ProxyAddress` ，會提供以逗號分隔的 url 清單，以略過 proxy。  (僅適用于 Windows。 ) 
+  如果設定為 `ProxyAddress` ，則會提供略過 proxy 的逗點分隔 url 清單。  (僅適用于 Windows。 ) 
 
 - **`ProxyUseDefaultCredentials`**
 
@@ -159,7 +159,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
 - **`--runtime-id <RID>`**
 
-  指定要安裝工具的[執行時間識別碼](../rid-catalog.md)。 用於 `linux-x64` 可移植的 Linux。  (僅適用于 Linux/macOS。 ) 
+  指定要安裝工具的 [執行時間識別碼](../rid-catalog.md) 。 用於 `linux-x64` 可移植的 Linux。  (僅適用于 Linux/macOS。 ) 
 
 - **`-SharedRuntime|--shared-runtime`**
 
@@ -186,7 +186,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
 
   - `latest` - 通道上的最新組建 (與 `-Channel` 選項搭配使用)。
   - `coherent` - 通道上的最新一致性組建；使用最新的穩定套件組合 (與分支名稱 `-Channel` 選項搭配使用)。
-  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如：`2.0.0-preview2-006120`。
+  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如： `2.0.0-preview2-006120` 。
 
   如果未指定，`-Version` 會預設為 `latest`。
 
@@ -206,7 +206,7 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   ./dotnet-install.sh --channel LTS
   ```
 
-- 將3.1 通道的最新版本安裝至指定的位置：
+- 將最新版本從3.1 通道安裝至指定的位置：
 
   Windows：
 

@@ -4,12 +4,12 @@ description: 瞭解如何管理 XML 檔中的命名空間。 XML 命名空間會
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 3a3abd2e932b1afecab85e285b0e2c42eb1eb20f
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 500c477eaa98b2858573e1012c62db4bc6c68137
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769258"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548087"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文件中的命名空間
 XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和預定的 URI。 若要建立這些關聯，請為命名空間 URI 定義前置詞，並使用這些前置詞來限定 XML 資料中的元素與屬性名稱。 命名空間可用來避免元素和屬性名稱發生衝突，並讓相同名稱的元素和屬性以不同方式處理和驗證。  
@@ -65,11 +65,11 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
  命名空間管理員不會在命名空間上執行任何驗證，而是會假設前置詞和命名空間已經過驗證並且符合 [W3C 命名空間](https://www.w3.org/TR/REC-xml-names/)規格。  
   
 > [!NOTE]
-> [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 和 [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) 中的 LINQ TO XML 不會使用 <xref:System.Xml.XmlNamespaceManager> 管理命名空間。 如需在使用 LINQ to XML 時管理命名空間的資訊，請參閱 LINQ 文件中的[處理 XML 命名空間 (C#)](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) 和[處理 XML 命名空間 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
+> [C#](../../linq/linq-xml-overview.md) 和 [Visual Basic](../../linq/linq-xml-overview.md) 中的 LINQ TO XML 不會使用 <xref:System.Xml.XmlNamespaceManager> 管理命名空間。 如需在使用 LINQ to XML 時管理命名空間的資訊，請參閱 LINQ 文件中的[處理 XML 命名空間 (C#)](../../linq/namespaces-overview.md) 和[處理 XML 命名空間 (Visual Basic)](../../linq/namespaces-overview.md)。  
   
  以下是您可以使用 <xref:System.Xml.XmlNamespaceManager> 類別執行的一些管理和查詢工作。 如需詳細資訊和範例，請追蹤每個方法或屬性的參考頁面連結。  
   
-|至|使用|  
+|收件者|用途|  
 |--------|---------|  
 |加入命名空間|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 方法|  
 |移除命名空間|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 方法|  

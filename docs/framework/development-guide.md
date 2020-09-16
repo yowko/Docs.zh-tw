@@ -1,16 +1,16 @@
 ---
 title: .NET Framework 開發指南
-description: 探索 .NET 開發指南，其中說明如何建立、設定、分析、保護和部署您的 .NET 應用程式。
+description: 探索 .NET 開發指南，其中說明如何建立、設定、偵測、保護和部署您的 .NET 應用程式。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 6e0051e3181e03070436b8d53d30326e8d71d096
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622571"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547880"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 開發指南
 
@@ -27,10 +27,10 @@ ms.locfileid: "85622571"
  [使用 ASP.NET 的 Web 應用程式](develop-web-apps-with-aspnet.md)  
  提供有關使用 ASP.NET，以最少程式碼建置企業級 Web 應用程式之資訊的連結。  
   
- [使用 WCF 的服務導向應用程式](./wcf/index.md)  
+ [使用 WCF 以服務為導向的應用程式](./wcf/index.md)  
  說明如何使用 Windows Communication Foundation (WCF) 建立安全、可靠的服務導向應用程式。  
   
- [使用 Windows Workflow Foundation 建立工作流程](windows-workflow-foundation/index.md)提供使用 Windows Workflow Foundation （WF）之程式設計模型、範例和工具的相關資訊。  
+ [使用 Windows Workflow Foundation 建立工作流程](windows-workflow-foundation/index.md) 提供使用 Windows Workflow Foundation (WF) 之程式設計模型、範例和工具的相關資訊。  
 
  [Windows 服務應用程式](./windows-services/index.md)  
  說明如何使用 Visual Studio 及 .NET Framework 建立要安裝為服務的應用程式，以及啟動、停止及控制其行為。  
@@ -62,7 +62,7 @@ ms.locfileid: "85622571"
  提供有關快取、延遲初始設定、可靠性和 ETW 事件的資訊。  
 
 ## <a name="reference"></a>參考  
- [.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7)  
+ [.NET Framework 類別庫](../../api/index.md?view=netframework-4.7)  
  為每個包含在 .NET Framework 命名空間中的類別，提供語法、程式碼範例及使用方式資訊。  
   
 ## <a name="related-sections"></a>相關章節  

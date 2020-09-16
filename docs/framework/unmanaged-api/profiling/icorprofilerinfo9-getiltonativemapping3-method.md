@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 22fe5608b0a3f86baf80abb3810a512077954ac3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 14391a0fe046b44aedca1da2bc42c7d962e1a5e7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449747"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541274"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9：： GetILToNativeMapping3 方法
 
-假設機器碼的起始位址，會傳回這個程式碼編譯版本的原生到 IL 對應資訊。
+在指定機器碼起始位址的情況下，傳回此程式碼的程式碼的原生對應資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -35,33 +35,33 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 - `pNativeCodeStartAddress`
 
-  中的 \[]：原生函式開頭的指標。
+  \[in] 原生函數開頭的指標。
 
 - `cMap`
 
-  \[in] `map` 陣列的大小上限。
+  \[in] 陣列的大小上限 `map` 。
 
 - `pcMap`
 
-  \[out] 可用 COR_DEBUG_IL_TO_NATIVE_MAP 結構的總數。
+  \[out）可用 COR_DEBUG_IL_TO_NATIVE_MAP 結構的總數。
 
 - `map`
 
-  \[out] [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md)結構的陣列，其中每一個都會指定位移。 `GetILToNativeMapping3` 方法傳回之後，`map` 將會包含部分或所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。
+  \[out] [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md) 結構的陣列，其中每個結構都指定位移。 `GetILToNativeMapping3` 方法傳回之後，`map` 將會包含部分或所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。
 
 ## <a name="remarks"></a>備註
 
-啟用階層式編譯時，方法可能會有一個以上的機器碼主體。 [ICorProfilerInfo9：： GetNativeCodeStartAddresses](icorprofilerinfo9-getnativecodestartaddresses-method.md)會傳回所有機器碼主體的起始位址。
+啟用分層式編譯時，方法可能會有一個以上的機器碼主體。 [ICorProfilerInfo9：： GetNativeCodeStartAddresses](icorprofilerinfo9-getnativecodestartaddresses-method.md) 會傳回所有原生程式碼主體的起始位址。
 
 ## <a name="requirements"></a>需求
 
-**平臺：** 請參閱[.Net Core 支援的作業系統](../../../core/install/dependencies.md?pivots=os-windows)。
+**平臺：** 請參閱 [.Net Core 支援的作業系統](../../../core/install/windows.md?pivots=os-windows)。
 
 **標頭：** CorProf.idl、CorProf.h
 
 **程式庫：** CorGuids.lib
 
-**.NET Framework 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 

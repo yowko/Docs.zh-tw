@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7a0f6f6bea5bc919ebfe9c9acc3b02a31eaa7cd0
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 280f0a401f87f81e1ef9d4a2c85c06599442b5ec
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452210"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543942"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10：： GetLOHObjectSizeThreshold 方法
 
-取得已設定的大型物件堆積（LOH）閾值的值。
+取得已設定之大型物件堆積 (LOH) 臨界值的值。
 
 ## <a name="syntax"></a>語法
 
@@ -32,21 +32,21 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
 - `pThreshold`
 
-  \[out] 大型物件堆積閾值（以位元組為單位）。
+  \[out）大型物件堆積閾值（以位元組為單位）。
 
 ## <a name="remarks"></a>備註
 
-大於大型物件堆積閾值的物件將會配置在大型物件堆積上。 從 .NET Core 3.0 開始，可設定大型物件堆積閾值，`pThreshold` 將包含作用中的大型物件堆積閾值大小（以位元組為單位）。
+大於大型物件堆積閾值的物件將會配置在大型物件堆積上。 從 .NET Core 3.0 開始，可以設定大型物件堆積閾值，其中 `pThreshold` 將包含使用中的大型物件堆積閾值大小（以位元組為單位）。
 
 ## <a name="requirements"></a>需求
 
-**平臺：** 請參閱[.Net Core 支援的作業系統](../../../core/install/dependencies.md?pivots=os-windows)。
+**平臺：** 請參閱 [.Net Core 支援的作業系統](../../../core/install/windows.md?pivots=os-windows)。
 
 **標頭：** CorProf.idl、CorProf.h
 
 **程式庫：** CorGuids.lib
 
-**.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.Net 版本：**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: b4594932b6ed21de98faab57d80404a7b763067d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f3270147f0cf38a646efac603f058173daa78547
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207908"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541131"
 ---
-# <a name="compiled-queries--linq-to-entities"></a>編譯的查詢（LINQ to Entities）
+# <a name="compiled-queries--linq-to-entities"></a>編譯的查詢 (LINQ to Entities) 
 
 當您的應用程式執行了 Entity Framework 中結構類似的查詢多次時，您可經常增加效能，其方式是編譯查詢一次，然後使用不同的參數執行查詢多次。 例如，應用程式可能必須擷取特定城市中的所有客戶；此城市是使用者在執行階段於表單中所指定。 LINQ to Entities 支援針對這個用途所編譯的查詢。  
   
- 從 .NET Framework 4.5 開始，會自動快取 LINQ 查詢。 不過，之後執行時您仍可以使用已編譯的 LINQ 查詢減少這種成本，且已編譯查詢可能比自動快取的 LINQ 查詢更有效率。 `Enumerable.Contains`不會自動快取將運算子套用至記憶體中集合的 LINQ to Entities 查詢。 此外，不允許在編譯的 LINQ 查詢中參數化記憶體中的集合。  
+ 從 .NET Framework 4.5 開始，會自動快取 LINQ 查詢。 不過，之後執行時您仍可以使用已編譯的 LINQ 查詢減少這種成本，且已編譯查詢可能比自動快取的 LINQ 查詢更有效率。 `Enumerable.Contains`不會自動快取將運算子套用至記憶體中集合的 LINQ to Entities 查詢。 此外，也不允許在編譯的 LINQ 查詢中，將記憶體中的集合參數化。  
   
- <xref:System.Data.Objects.CompiledQuery> 類別提供查詢的編譯和快取以供重複使用。 就概念而言，這個類別包含數個多載之 <xref:System.Data.Objects.CompiledQuery> 的 `Compile` 方法。 呼叫 `Compile` 方法可建立新委派來代表已編譯的查詢。 `Compile` 所提供的 <xref:System.Data.Objects.ObjectContext> 方法和參數值會傳回一個產生某個結果 (例如 <xref:System.Linq.IQueryable%601> 執行個體) 的委派。 此查詢只會在第一次執行期間編譯一次。 不過，您之後無法變更在編譯階段中，針對查詢所設定的合併選項。 編譯查詢之後，您只可以提供基本類型的參數，但無法取代查詢中會變更所產生 SQL 的部分。 如需詳細資訊，請參閱[EF Merge 選項和已編譯的查詢](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)。
+ <xref:System.Data.Objects.CompiledQuery> 類別提供查詢的編譯和快取以供重複使用。 就概念而言，這個類別包含數個多載之 <xref:System.Data.Objects.CompiledQuery> 的 `Compile` 方法。 呼叫 `Compile` 方法可建立新委派來代表已編譯的查詢。 `Compile` 所提供的 <xref:System.Data.Objects.ObjectContext> 方法和參數值會傳回一個產生某個結果 (例如 <xref:System.Linq.IQueryable%601> 執行個體) 的委派。 此查詢只會在第一次執行期間編譯一次。 不過，您之後無法變更在編譯階段中，針對查詢所設定的合併選項。 一旦編譯查詢之後，您就只能提供基本類型的參數，但您無法取代會變更產生之 SQL 的查詢部分。 如需詳細資訊，請參閱 [EF Merge 選項和編譯的查詢](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)。
   
- 的方法所編譯的 LINQ to Entities 查詢運算式 <xref:System.Data.Objects.CompiledQuery> `Compile` 是由其中一個泛型委派所表示 `Func` ，例如 <xref:System.Func%605> 。 查詢運算式最多只能封裝一個 `ObjectContext` 參數、一個傳回參數和十六個查詢參數。 如果需要使用十六個以上的查詢參數，您可以建立其屬性代表查詢參數的結構。 然後，當您設定這些參數之後，就可以將此結構的屬性用於查詢運算式中。  
+ 的方法所編譯的 LINQ to Entities 查詢運算式 <xref:System.Data.Objects.CompiledQuery> `Compile` 是由其中一個泛型 `Func` 委派（例如）表示 <xref:System.Func%605> 。 查詢運算式最多只能封裝一個 `ObjectContext` 參數、一個傳回參數和十六個查詢參數。 如果需要使用十六個以上的查詢參數，您可以建立其屬性代表查詢參數的結構。 然後，當您設定這些參數之後，就可以將此結構的屬性用於查詢運算式中。  
   
 ## <a name="example-1"></a>範例 1  
  下列範例會先編譯然後再叫用接受 <xref:System.Decimal> 輸入參數的查詢，並且傳回訂單序列，其中的總到期金額大於或等於 $200.00：  
@@ -69,8 +69,8 @@ ms.locfileid: "83207908"
  [!code-csharp[DP L2E Conceptual Examples - MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples - MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ADO.NET Entity Framework](../index.md)
 - [LINQ to Entities](linq-to-entities.md)
-- [EF Merge 選項和已編譯的查詢](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)
+- [EF 合併選項和編譯的查詢](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

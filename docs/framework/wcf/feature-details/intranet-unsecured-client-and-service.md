@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 591f7db0f6b4e928a991961d3bc7c404f41028bf
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1edbfe2d0d25ea9f2145f879673fc9f0a6ee7f96
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579276"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547189"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>沒有安全保障的內部網路用戶端與服務
-下圖說明一個簡單的 Windows Communication Foundation （WCF）服務，其開發目的是要將安全的私人網路資訊提供給 WCF 應用程式。 安全性不是必要的，因為資料的重要性較低、網路應原本就安全，或由 WCF 基礎結構底下的一層提供安全性。  
+下圖說明一個簡單 Windows Communication Foundation (WCF) 服務，其開發目的是要將安全私人網路的資訊提供給 WCF 應用程式。 不需要安全性，因為資料的重要性很低、網路預期會是安全的，或是由 WCF 基礎結構底下的層級提供安全性。  
   
  ![內部網路不安全的用戶端和服務案例。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |特性|描述|  
 |--------------------|-----------------|  
-|安全性模式|無|  
+|安全性模式|None|  
 |傳輸|TCP|  
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
 |互通性|僅限 WCF|  
-|驗證|無|  
-|完整性|無|  
-|保密|無|  
+|驗證|None|  
+|完整性|None|  
+|機密性|None|  
   
 ## <a name="service"></a>服務  
  下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
@@ -112,8 +112,8 @@ ms.locfileid: "84579276"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.NetTcpBinding>
-- [安全性總覽](security-overview.md)
-- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [安全性概觀](security-overview.md)
+- [Windows Server AppFabric 的資訊安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

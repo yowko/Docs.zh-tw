@@ -2,12 +2,12 @@
 title: 訊息記錄的安全性考量
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: bb1a6ab84ceba27b398d397b4407a55aa02c4cae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df8a1b4382ce4bce60e3214def10c816ced0f13c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185766"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550543"
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
@@ -15,7 +15,7 @@ ms.locfileid: "79185766"
 ## <a name="security-concerns"></a>安全性考量  
   
 ### <a name="logging-sensitive-information"></a>記錄敏感資訊  
- Windows 通信基礎 （WCF） 不會修改特定于應用程式的標頭和正文中的任何資料。 WCF 也不跟蹤特定于應用程式標頭或正文資料中的個人資訊。  
+ Windows Communication Foundation (WCF) 不會修改應用程式特定標頭和主體中的任何資料。 WCF 也不會追蹤應用程式特定標頭或主體資料中的個人資訊。  
   
  啟用訊息記錄時，應用程式特定標頭中的個人資訊 (例如查詢字串) 和本文資訊 (例如信用卡號碼) 會在記錄檔中變得可見。 應用程式部署者負責強制針對組態和記錄檔採取存取控制。 如果不要讓這類資訊變得可見，您應該停用記錄，如果要共用記錄檔，則應該篩選掉部分資料。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "79185766"
 </system.diagnostics>  
 ```  
   
- 如果`<machineSettings enableLoggingKnownPii="Boolean"/>`元素存在於 Machine.config 檔之外，系統將引發<xref:System.Configuration.ConfigurationErrorsException>一個 。  
+ 如果 `<machineSettings enableLoggingKnownPii="Boolean"/>` 元素存在於 Machine.config 檔案之外，系統會擲回 <xref:System.Configuration.ConfigurationErrorsException> 。  
   
  只有在應用程式啟動或重新啟動時，才能讓變更生效。 當這兩個屬性都設定為 `true` 時，啟動時會記錄事件。 如果 `logKnownPii` 設定為 `true`，但 `enableLoggingKnownPii` 設定為 `false`，也會記錄事件。  
   
- 電腦的系統管理員和應用程式部署人員在使用這兩個參數時，應該特別小心謹慎。 如果啟用 PII 記錄，則會記錄安全性金鑰和 PII。 如果停用，敏感資料和應用程式特定資料仍然會記錄在訊息標頭和本文中。 有關隱私和保護 PII 不暴露的更徹底的討論，請參閱[使用者隱私](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10))。  
+ 電腦的系統管理員和應用程式部署人員在使用這兩個參數時，應該特別小心謹慎。 如果啟用 PII 記錄，則會記錄安全性金鑰和 PII。 如果停用，敏感資料和應用程式特定資料仍然會記錄在訊息標頭和本文中。 如需隱私權和保護 PII 免于公開的更詳盡討論，請參閱 [使用者隱私權](/previous-versions/dotnet/articles/aa480490(v=msdn.10))。  
   
 > [!CAUTION]
 > 格式錯誤的訊息中不會隱藏 PII。 這類訊息會依現狀記錄，不做任何修改。 上述的屬性在此不會有任何作用。  
@@ -103,11 +103,11 @@ ms.locfileid: "79185766"
   
 - Message logging off：在組態中或透過 WMI 停用訊息記錄時，會發出這個事件。 事件內容為「已關閉訊息記錄」。  
   
-- Log Known PII On：啟用已知 PII 記錄時，會發出這個事件。 當 Machine.config `enableLoggingKnownPii` `machineSettings`檔元素中的屬性`true`設置為 時，將發生這種情況，並且`logKnownPii`App.config 或 Web.config 檔中`source`的元素的屬性設置為`true`。  
+- Log Known PII On：啟用已知 PII 記錄時，會發出這個事件。 當 `enableLoggingKnownPii` Machine.config 檔之元素中的屬性 `machineSettings` 設定為 `true` ，且 `logKnownPii` `source` App.config 或 Web.config 檔中的專案屬性設定為時， `true` 就會發生這種情況。  
   
-- Log Known PII Not Allowed：不允許記錄已知 PII 時，會發出這個事件。 當 App.config`source`或 Web.config 檔中的元素`true``logKnownPii`的屬性設置為 時，將發生這種情況，但`enableLoggingKnownPii`Machine.config 檔`machineSettings`元素中的屬性設置為`false`。 不會有例外狀況擲回。  
+- Log Known PII Not Allowed：不允許記錄已知 PII 時，會發出這個事件。 當 `logKnownPii` `source` App.config 或 Web.config 檔案中專案的屬性設定為 `true` ，但 `enableLoggingKnownPii` Machine.config 檔之元素中的屬性設定為時， `machineSettings` 就 `false` 會發生這種情況。 不會擲回任何例外狀況。  
   
- 您可以在 Windows 的 [事件檢視器] 工具中檢視這些事件。 有關此的詳細資訊，請參閱[事件日誌記錄](./event-logging/index.md)。  
+ 您可以在 Windows 的 [事件檢視器] 工具中檢視這些事件。 如需此功能的詳細資訊，請參閱 [事件記錄](./event-logging/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
