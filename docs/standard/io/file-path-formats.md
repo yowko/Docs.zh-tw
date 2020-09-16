@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271785"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679595"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -43,7 +43,7 @@ ms.locfileid: "89271785"
 > [!IMPORTANT]
 > 請注意最後兩個路徑之間的差異。 兩者都會在兩個案例中都指定選用的磁片區規範 (`C:`) ，但是第一個是從指定磁片區的根目錄開始，而第二個則不是。 因此，第一個是磁片磁碟機根目錄的絕對路徑 `C:` ，而第二個則是磁片磁碟機目前目錄的相對路徑 `C:` 。 當想要第一種格式時使用第二種格式，是在牽涉到 Windows 檔案路徑時常見的錯誤來源。
 
-您可以呼叫 <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> 方法來判斷檔案路徑是否完整 (也就是路徑獨立於目前的目錄，目前目錄變更時它不會變更)。 請注意，這類路徑可以包含相對目錄區段 (`.` 和 `..`)，而且如果解析的路徑永遠指向相同位置便仍然完整。
+您可以呼叫 <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWithType> 方法來判斷檔案路徑是否完整 (也就是路徑獨立於目前的目錄，目前目錄變更時它不會變更)。 請注意，這類路徑可以包含相對目錄區段 (`.` 和 `..`)，而且如果解析的路徑永遠指向相同位置便仍然完整。
 
 下例會說明絕對和相對路徑之間的差異。 它會假設目錄 `D:\FY2018\` 存在，而且您沒有在執行 `D:\` 此範例之前，從命令提示字元設定任何的目前的目錄。
 

@@ -3,18 +3,18 @@ title: 功能性程式設計與命令式程式設計-LINQ to XML
 description: 瞭解功能性程式設計，以及它與傳統命令式 (程式性) 程式設計有何不同。
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: d6dddab9b288cfa820aa4ed9d800c29136edf772
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: c7d16d61f9865cda7c625f91c2c822be1a327fd6
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552136"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679365"
 ---
 # <a name="functional-programming-vs-imperative-programming-linq-to-xml"></a>功能性程式設計與命令式程式設計 (LINQ to XML) 
 
 本文使用更傳統的命令式 (程式性) 程式設計，比較和對照功能性程式設計。
 
-## <a name="functional-programming-vs-imperative-programming"></a>功能性程式設計與命令式程式設計
+## <a name="functional-programming-vs-imperative-programming"></a>功能程式設計與命令式程式設計的比較
 
 明確建立「功能性程式設計」** 開發架構時，可支援解決問題的純功能性方法。 功能性程式設計是一種「宣告式程式設計」**。 相較之下，多數主流語言 (包括物件導向程式設計 (OOP) 語言，例如 C#、Visual Basic、C++ 與 Java) 的設計主要支援「命令性」**(程序性) 程式設計。
 
@@ -32,7 +32,7 @@ ms.locfileid: "89552136"
 
 ## <a name="functional-programming-using-xslt"></a>使用 XSLT 的功能性程式設計
 
-許多 XSLT 開發人員都很熟悉純功能性方法。 開發 XSLT 樣式表最有效的方式，就是將每個範本都視為可組合的隔離轉換。 執行順序完全不重視。 XSLT 不允許副作用 (但例外狀況是，用來執行程式程式碼的轉義機制可能會導致產生功能 impurity) 的副作用。 不過，雖然 XSLT 是一項有效的工具，但其部分特性並不理想。 例如，在 XML 中表示程式設計建構會使程式碼相當詳細，因此難以維護。 此外，流量控制的遞迴遞迴可能會導致難以閱讀的程式碼。 如需 XSLT 的詳細資訊，請參閱 [XSLT 轉換](../../standard/data/xml/xslt-transformations.md)。
+許多 XSLT 開發人員都很熟悉純功能性方法。 開發 XSLT 樣式表最有效的方式，就是將每個範本都視為可組合的隔離轉換。 執行順序完全不重視。 XSLT 不允許副作用 (但例外狀況是，用來執行程式程式碼的轉義機制可能會導致產生功能 impurity) 的副作用。 不過，雖然 XSLT 是一項有效的工具，但其部分特性並不理想。 例如，在 XML 中表示程式設計建構會使程式碼相當詳細，因此難以維護。 此外，流量控制的遞迴遞迴可能會導致難以閱讀的程式碼。 如需 XSLT 的詳細資訊，請參閱 [XSLT 轉換](../data/xml/xslt-transformations.md)。
 
 不過，XSLT 已經證明使用純功能性方法將 XML 從一個組織結構轉換為另一個組織結構的值。 包含 LINQ to XML 的純功能性程式設計類似於 XSLT 的許多方法。 不過，LINQ to XML、c # 和 Visual Basic 所引進的程式設計結構，可讓您撰寫比 XSLT 更容易讀取和維護的純功能性轉換。
 
@@ -56,6 +56,6 @@ ms.locfileid: "89552136"
 
 ## <a name="see-also"></a>另請參閱
 
-- [純功能性轉換簡介](introduction-pure-functional-transformations.md)
+- [純功能轉換簡介](introduction-pure-functional-transformations.md)
 - [XSLT 轉換](/../../standard/data/xml/xslt-transformations.md)
-- [重構為純虛擬函式](refactor-pure-functions.md)
+- [重構為純功能](refactor-pure-functions.md)

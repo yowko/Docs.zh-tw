@@ -7,4 +7,4 @@ ms.lasthandoff: 05/15/2019
 ms.locfileid: "65641440"
 ---
 > [!IMPORTANT]
-> 因為可攜式類別庫專案的目標只有非常特定部分的.NET 實作，我們強烈建議在開發新應用程式中的使用。 建議的替代方案是以所有.NET 實作支援特定版本的.NET Standard 為都目標的.NET Standard 程式庫。 如需詳細資訊，請參閱 [.NET Standard](~/docs/standard/net-standard.md)。
+> 因為便攜類別庫專案只以非常特定的 .NET 執行子集為目標，所以強烈建議在新的應用程式開發中使用它們。 建議的取代是 .NET Standard 程式庫，以支援特定版本 .NET Standard 的所有 .NET 執行為目標。 如需詳細資訊，請參閱 [.NET Standard](~/docs/standard/net-standard.md)。

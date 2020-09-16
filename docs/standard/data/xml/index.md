@@ -3,12 +3,12 @@ title: XML 文件和資料
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: a752d634141a56df1caa61eb5d375dd2a402832f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6d2a52567a1fc8bdbbb1d039ac583c889d77d4af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287684"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540130"
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 
@@ -24,7 +24,7 @@ ms.locfileid: "84287684"
 
 - <xref:System.Xml.Linq>
 
-如需完整清單，請在 [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api/?term=system.xml)搜尋 "System.Xml"。
+如需完整清單，請在 [.NET API 瀏覽器](../../../../api/index.md?term=system.xml)搜尋 "System.Xml"。
 
 這些命名空間中的類別支援全球資訊網協會 (W3C) 的建議。 例如：
 
@@ -38,9 +38,9 @@ ms.locfileid: "84287684"
 
 .NET Framework 中的 XML 類別提供以下優點：
 
-- **生產力.** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) 可輕鬆地透過 XML 編寫程式，並提供類似於 SQL 的查詢體驗。
+- **生產力。** [LINQ to XML (C#)](../../linq/linq-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md) 可輕鬆地透過 XML 編寫程式，並提供類似於 SQL 的查詢體驗。
 
-- **擴充性.** .NET Framework 中的 XML 類別可利用抽象基底類別和虛擬方法進行擴充。 例如，您可以建立將快取資料流儲存在本機磁碟之 <xref:System.Xml.XmlUrlResolver> 類別的衍生類別。
+- **擴展。** .NET Framework 中的 XML 類別可利用抽象基底類別和虛擬方法進行擴充。 例如，您可以建立將快取資料流儲存在本機磁碟之 <xref:System.Xml.XmlUrlResolver> 類別的衍生類別。
 
 - **可外掛式架構。** .NET Framework 提供的架構可讓元件在其中彼此互相利用，而且資料也可以在不同的元件之間進行資料流處理。 例如，類似 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 的資料存放區可透過 <xref:System.Xml.Xsl.XslCompiledTransform> 類別進行轉換，接著輸出可以資料流方式傳輸至另一個存放區，或當做 Web 服務的資料流傳回。
 
@@ -60,12 +60,12 @@ ms.locfileid: "84287684"
 
 [XML 處理選項](xml-processing-options.md) 討論用來處理 XML 資料的選項。
 
-[處理記憶體中的 XML 資料](processing-xml-data-in-memory.md)討論用來處理記憶體中 XML 資料的三個模型： [LINQ to XML （c #）](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)和[LINQ to XML （Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、 <xref:System.Xml.XmlDocument> 類別（根據 W3C 檔物件模型）和 <xref:System.Xml.XPath.XPathDocument> 類別（根據 XPath 資料模型）。
+[處理記憶體中的 XML 資料](processing-xml-data-in-memory.md) 討論用來處理記憶體中 XML 資料的三個模型： [LINQ to XML (c # ) ](../../linq/linq-xml-overview.md) 和 [LINQ to XML (](../../linq/linq-xml-overview.md)VISUAL BASIC) 、 <xref:System.Xml.XmlDocument> 根據 W3C (檔物件模型的類別) ，以及 <xref:System.Xml.XPath.XPathDocument> 根據 XPath 資料模型 (的類別) 。
 
 [XSLT 轉換](xslt-transformations.md)\
 說明如何使用 XSLT 處理器。
 
-[XML 架構物件模型（SOM）](xml-schema-object-model-som.md)\
+[XML 架構物件模型 (SOM) ](xml-schema-object-model-som.md)\
 說明藉由提供 <xref:System.Xml.Schema.XmlSchema> 類別來載入和編輯結構描述，用以建置及管理 XML 結構描述 (XSD) 的類別。
 
 [XML 與關聯式資料和 ADO.NET 的整合](xml-integration-with-relational-data-and-adonet.md)\
@@ -74,7 +74,7 @@ ms.locfileid: "84287684"
 [管理 XML 檔中的命名空間](managing-namespaces-in-an-xml-document.md)\
 說明 <xref:System.Xml.XmlNamespaceManager> 類別如何用來儲存及維護命名空間資訊。
 
-[在 system.string 類別中的類型支援](type-support-in-the-system-xml-classes.md)\
+[System.Xml 類別中的類型支援](type-support-in-the-system-xml-classes.md)\
 說明 XML 資料類型如何對應到 CLR 類型、如何轉換 XML 資料類型，以及 <xref:System.Xml> 類別中的其他類型支援功能。
 
 ## <a name="related-sections"></a>相關章節
@@ -82,5 +82,5 @@ ms.locfileid: "84287684"
 [ADO.NET](../../../framework/data/adonet/index.md)\
 提供如何使用 ADO.NET 來存取資料的相關資訊。
 
-[安全級](../../security/index.md)\
+[安全](../../security/index.md)\
 提供 .NET Framework 安全性系統的概觀。

@@ -6,17 +6,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81275062"
 ---
-### <a name="signalr-hubconnectioncontext-constructors-changed"></a>信號R:中心連接上下文建構函數已更改
+### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR： HubConnectionCoNtext 的函式已變更
 
-SignalR`HubConnectionContext`的建構函數更改為接受選項類型(而不是多個參數)為面向未來的添加選項。 此更改將兩個建構函數替換為接受選項類型的單個建構函數。
+SignalR 的函 `HubConnectionContext` 式已變更為接受選項類型，而不是多個參數，可用於未來的新增選項。 這種變更會以接受選項類型的單一函式來取代兩個函式。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-`HubConnectionContext`有兩個建構函數:
+`HubConnectionContext` 有兩個函數：
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAliveInterval, ILoggerFactory loggerFactory);
@@ -25,19 +25,19 @@ public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAl
 
 #### <a name="new-behavior"></a>新的行為
 
-兩個建構函數被刪除,並取代為一個建構函數:
+這兩個函式已移除，並以一個函式取代：
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, HubConnectionContextOptions contextOptions, ILoggerFactory loggerFactory)
 ```
 
-#### <a name="reason-for-change"></a>變更原因
+#### <a name="reason-for-change"></a>變更的原因
 
-新的構造函數使用新的選項物件。 因此,將來可以擴展`HubConnectionContext`其特徵,而無需進行更多的構造函數和重大更改。
+新的函式會使用新的選項物件。 因此，您 `HubConnectionContext` 可以在未來擴充的功能，而不需要進行更多的程式和重大變更。
 
 #### <a name="recommended-action"></a>建議的動作
 
-而不是使用以下建構函數:
+而不是使用下列的函式：
 
 ```csharp
 HubConnectionContext connectionContext = new HubConnectionContext(
@@ -47,7 +47,7 @@ HubConnectionContext connectionContext = new HubConnectionContext(
     clientTimeoutInterval: TimeSpan.FromSeconds(15));
 ```
 
-使用以下建構函數:
+使用下列的函式：
 
 ```csharp
 HubConnectionContextOptions contextOptions = new HubConnectionContextOptions()

@@ -6,33 +6,33 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "78290767"
 ---
-### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP： 預設 HttpCoNtext 擴充性已被刪除
+### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP：已移除 DefaultHttpCoNtext 擴充性
 
-作為 ASP.NET Core 3.0 性能改進的一部分，`DefaultHttpContext`已刪除 的擴充性。 該類現在是`sealed`。 有關詳細資訊，請參閱[點網/阿斯平核心#6504](https://github.com/dotnet/aspnetcore/pull/6504)。
+在 ASP.NET Core 3.0 效能改進的過程中，已移除的擴充性 `DefaultHttpContext` 。 類別現在是 `sealed` 。 如需詳細資訊，請參閱 [dotnet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504)。
 
-如果您的單元測試使用`Mock<DefaultHttpContext>`、使用`Mock<HttpContext>`或`new DefaultHttpContext()`代替。
+如果您的單元測試使用 `Mock<DefaultHttpContext>` ，請改用 `Mock<HttpContext>` 或 `new DefaultHttpContext()` 。
 
-有關討論，請參閱[點網/阿斯平核心#6534](https://github.com/dotnet/aspnetcore/issues/6534)。
+如需討論，請參閱 [dotnet/aspnetcore # 6534](https://github.com/dotnet/aspnetcore/issues/6534)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-類可以從`DefaultHttpContext`派生。
+類別可以衍生自 `DefaultHttpContext` 。
 
 #### <a name="new-behavior"></a>新的行為
 
-類無法派生自`DefaultHttpContext`。
+類別無法衍生自 `DefaultHttpContext` 。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-擴充性最初是為了允許池化，`HttpContext`但它引入了不必要的複雜性並阻礙了其他優化。
+最初提供的擴充性是為了允許共用 `HttpContext` ，但它引進了不必要的複雜度，並阻礙其他優化。
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果您在單元測試中使用`Mock<DefaultHttpContext>`，`Mock<HttpContext>`請改用。
+如果您要 `Mock<DefaultHttpContext>` 在單元測試中使用，請改為開始使用 `Mock<HttpContext>` 。
 
 #### <a name="category"></a>類別
 

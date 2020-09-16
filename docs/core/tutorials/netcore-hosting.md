@@ -19,7 +19,7 @@ ms.locfileid: "90537544"
 
 本文概述從機器碼啟動 .NET Core 執行階段及在其中執行受控碼的必要步驟。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 因為主機是原生應用程式，所以本教學課程說明如何建立 c + + 應用程式來裝載 .NET Core。 您將需要 C++ 開發環境 (例如 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 所提供的環境)。
 

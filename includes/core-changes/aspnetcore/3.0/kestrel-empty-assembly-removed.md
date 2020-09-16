@@ -6,22 +6,22 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393932"
 ---
-### <a name="kestrel-empty-https-assembly-removed"></a>Kestrel： 空 HTTPS 程式集已刪除
+### <a name="kestrel-empty-https-assembly-removed"></a>Kestrel：已移除空白的 HTTPS 元件
 
-程式集<xref:Microsoft.AspNetCore.Server.Kestrel.Https?displayProperty=fullName>已被刪除。
+元件 <xref:Microsoft.AspNetCore.Server.Kestrel.Https?displayProperty=fullName> 已被移除。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-在 ASP.NET 核心 2.1`Microsoft.AspNetCore.Server.Kestrel.Https`中，的內容<xref:Microsoft.AspNetCore.Server.Kestrel.Core?displayProperty=fullName>被移動到 。 此更改使用`[TypeForwardedTo]`屬性以非中斷的方式完成。
+在 ASP.NET Core 2.1 中，的內容 `Microsoft.AspNetCore.Server.Kestrel.Https` 已移至 <xref:Microsoft.AspNetCore.Server.Kestrel.Core?displayProperty=fullName> 。 這項變更是以使用屬性的非中斷方式進行 `[TypeForwardedTo]` 。
 
 #### <a name="recommended-action"></a>建議的動作
 
-- 引用 2.0 的`Microsoft.AspNetCore.Server.Kestrel.Https`庫應將所有ASP.NET核心依賴項更新為 2.1 或更高版本。 否則，它們可能會在載入到 ASP.NET 酷睿 3.0 應用中時中斷。
-- 面向ASP.NET Core 2.1 和更高版本的應用和庫應刪除對`Microsoft.AspNetCore.Server.Kestrel.Https`NuGet 包的任何直接引用。
+- 參考2.0 的程式庫 `Microsoft.AspNetCore.Server.Kestrel.Https` 應該將所有 ASP.NET Core 相依性更新至2.1 或更新版本。 否則，它們可能會在載入至 ASP.NET Core 3.0 應用程式時中斷。
+- 以 ASP.NET Core 2.1 和更新版本為目標的應用程式和程式庫應移除 NuGet 套件的任何直接參考 `Microsoft.AspNetCore.Server.Kestrel.Https` 。
 
 #### <a name="category"></a>類別
 
@@ -29,7 +29,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-None
+無
 
 <!-- 
 

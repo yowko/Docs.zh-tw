@@ -1,6 +1,6 @@
 ---
 title: Managed Extensibility Framework (MEF)
-description: 探索 Managed Extensibility Framework (MEF) ，讓應用程式開發人員在 .NET 4 或更新版本中不需要設定即可探索及使用延伸模組。
+description: 探索 Managed Extensibility Framework (MEF) ，讓應用程式開發人員在 .NET 4 或更新版本中探索及使用擴充功能，而不需要設定。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Managed Extensibility Framework, overview
 - MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-ms.openlocfilehash: 00ed48f2202d4c04039ac264b1fe71474a02432e
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: b743a26dd401e7015c588be2a197551aa891a687
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281247"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555571"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -22,7 +22,7 @@ ms.locfileid: "86281247"
 
 ## <a name="what-is-mef"></a>什麼是 MEF？
 
-Managed Extensibility Framework 或 MEF 是用來建立輕量且可擴充之應用程式的程式庫。 它可讓應用程式開發人員探索和使用擴充功能，而不需要任何組態。 它也可以讓擴充功能開發人員輕鬆地封裝程式碼，並避免易損壞的硬式相依性。 MEF 不只允許在應用程式內重複使用擴充功能，也允許跨應用程式重複使用擴充功能。
+Managed Extensibility Framework 或 MEF 是一個程式庫，可用於建立輕量且可擴充的應用程式。 它可讓應用程式開發人員探索和使用擴充功能，而不需要任何組態。 它也可以讓擴充功能開發人員輕鬆地封裝程式碼，並避免易損壞的硬式相依性。 MEF 不只允許在應用程式內重複使用擴充功能，也允許跨應用程式重複使用擴充功能。
 
 ## <a name="the-problem-of-extensibility"></a>擴充性的問題
 
@@ -50,7 +50,7 @@ MEF 提供方法以透過「組合」** 隱含地探索可用元件，而不是�
 
 使用 MEF 所撰寫的可延伸應用程式會宣告可填入擴充功能元件的匯入，也可以宣告匯出以向擴充功能公開應用程式服務。 每個擴充功能元件都會宣告匯出，也可能會宣告匯入。 如此一來，擴充功能元件本身是可自動擴充的。
 
-## <a name="where-mef-is-available"></a>MEF 的可用位置
+## <a name="where-mef-is-available"></a>其中有 MEF 可用
 
 MEF 是 .NET Framework 4 不可或缺的部分，而且只要使用.NET Framework 就可以使用 MEF。 在使用 Windows Forms、WPF 或任何其他技術的用戶端應用程式中，還是在使用 ASP.NET 的伺服器應用程式中，您都可以使用 MEF。
 
@@ -62,7 +62,7 @@ MEF 是 .NET Framework 4 不可或缺的部分，而且只要使用.NET Framewor
 
 了解 MEF 用途的最簡單方式是建置一個簡單的 MEF 應用程式。 在這個範例中，您建置一個十分簡單的計算機 (名稱為 SimpleCalculator)。 SimpleCalculator 的目標是建立一個接受基本算術命令 (格式為 "5+3" 或 "6-2") 的主控台應用程式，並傳回正確的答案。 使用 MEF，您可以新增運算子，而不需要變更應用程式程式碼。
 
-若要下載此範例的完整程式碼，請參閱[SimpleCalculator 範例 (Visual Basic) ](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/)。
+若要下載此範例的完整程式碼，請參閱 [SimpleCalculator 範例 (Visual Basic) ](/samples/dotnet/samples/simple-calculator-vb/)。
 
 > [!NOTE]
 > SimpleCalculator 的目的是示範 MEF 的概念和語法，不一定會提供其實際使用案例。 許多從 MEF 功能獲得最多益處的應用程式，比 SimpleCalculator 更為複雜。 如需更多範例，請參閱 GitHub 上的 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) \(英文\)。
@@ -71,17 +71,17 @@ MEF 是 .NET Framework 4 不可或缺的部分，而且只要使用.NET Framewor
 
 - 將參考加入至 `System.ComponentModel.Composition` MEF 所在的元件。
 
-- 開啟 [ *Module1* ] 或 [ *Program.cs* ]，並 `Imports` 針對和加入或 `using` 語句 `System.ComponentModel.Composition` `System.ComponentModel.Composition.Hosting` 。 這兩個命名空間都包含開發可延伸應用程式所需的 MEF 類型。
+- 開啟 [ *Module1* ] 或 [ *Program.cs* ]，然後 `Imports` 針對和加入或 `using` 語句 `System.ComponentModel.Composition` `System.ComponentModel.Composition.Hosting` 。 這兩個命名空間都包含開發可延伸應用程式所需的 MEF 類型。
 
 - 如果您使用 Visual Basic，請將 `Public` 關鍵字新增至宣告 `Module1` 模組的行。
 
-## <a name="composition-container-and-catalogs"></a>撰寫容器和目錄
+## <a name="composition-container-and-catalogs"></a>組合容器和目錄
 
 MEF 組合模型的核心是「組合容器」**，其中包含所有可用的組件並執行組合。 組合會將匯入往上對應至匯出。 最常見的組合容器類型是 <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>，而且您會將它用於 SimpleCalculator。
 
-如果您使用的是 Visual Basic，請在 [Module1] 中新增名為的公用類別 `Program` 。 *Module1.vb*
+如果您使用 Visual Basic，請在 [Module1] 中加入名為的公用類別 `Program` 。 *Module1.vb*
 
-將下列程式程式碼新增至 `Program` *Module1*或*Program.cs*中的類別：
+將以下這一行新增至 `Program` *Program.cs*中*Module1.vb*的類別：
 
 ```vb
 Dim _container As CompositionContainer
@@ -273,7 +273,7 @@ public interface IOperationData
 }
 ```
 
- 在此情況下，每個作業的中繼資料都是代表該作業的符號，例如 +、-、等等 \* 。 若要使用加法運算，請將下列類別加入模組或 `SimpleCalculator` 命名空間：
+ 在此情況下，每個作業的中繼資料都是代表該作業的符號，例如 +、-、 \* 等等。 若要使用加法運算，請將下列類別加入模組或 `SimpleCalculator` 命名空間：
 
 ```vb
 <Export(GetType(IOperation))>
@@ -390,7 +390,7 @@ private int FindFirstNonDigit(string s)
 
 您現在應該可以編譯和執行專案。 在 Visual Basic 中，請確定您已將 `Public` 關鍵字加入 `Module1`。 在主控台視窗中輸入加法運算 (例如 "5+3")，而計算機將會傳回結果。 任何其他運算子都會導致「找不到運算！」 回應。
 
-## <a name="extending-simplecalculator-using-a-new-class"></a>使用新的類別擴充 SimpleCalculator
+## <a name="extending-simplecalculator-using-a-new-class"></a>使用新類別擴充 SimpleCalculator
 
 計算機作用之後，要加入新的運算十分簡單。 將下列類別加入模組或 `SimpleCalculator` 命名空間：
 
@@ -420,15 +420,15 @@ class Subtract : IOperation
 
 編譯並執行專案。 輸入減法運算 (例如 "5-3")。 計算機現在支援減法和加法。
 
-## <a name="extending-simplecalculator-using-a-new-assembly"></a>使用新的元件擴充 SimpleCalculator
+## <a name="extending-simplecalculator-using-a-new-assembly"></a>使用新元件擴充 SimpleCalculator
 
 將類別加入原始程式碼相當簡單，但是 MEF 可讓您搜尋應用程式專屬組件來源的外部。 若要示範此情況，您需要修改 SimpleCalculator 來搜尋目錄 (和其專屬組件 (assembly)) 中的組件 (part)，方法是加入 <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>。
 
 將名為 `Extensions` 的新目錄加入至 SimpleCalculator 專案。 請務必在專案層級加入它，而非方案層級。 然後將新的類別庫專案加入至名為 `ExtendedOperations` 的方案。 新的專案將會編譯成不同的組件。
 
-開啟 ExtendedOperations 專案的 [專案屬性設計工具]，然後按一下 [**編譯**] 或 [**組建**] 索引標籤。將**組建輸出路徑**或**輸出路徑**變更為指向 SimpleCalculator 專案目錄中的 Extensions 目錄 (*.。\SimpleCalculator\Extensions \\ *) 。
+開啟 ExtendedOperations 專案的專案屬性設計工具，然後按一下 [**編譯**] 或 [**建立**] 索引標籤。變更**組建輸出路徑**或**輸出路徑**，以指向 SimpleCalculator 專案目錄中的延伸模組目錄 (*。\SimpleCalculator\Extensions \\ *) 。
 
- 在 [ *Module1* ] 或 [ *Program.cs*] 中，將下列程式程式碼新增至函式 `Program` ：
+ 在*Module1.vb* *Program.cs*中，將下列程式程式碼加入至函式 `Program` ：
 
 ```vb
 catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\Extensions"))
@@ -438,7 +438,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
-請將範例路徑取代為 Extensions 目錄的路徑 。 (這個絕對路徑僅供偵錯用途。 在生產應用程式中，您會使用相對路徑。 ) <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 現在會將 Extensions 目錄的任何元件中找到的任何元件新增至組合容器。
+請將範例路徑取代為 Extensions 目錄的路徑 。 (這個絕對路徑僅供偵錯用途。 在生產應用程式中，您可以使用相對路徑。 ) <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> 現在將會將擴充功能目錄中任何元件的任何元件新增至組合容器。
 
 在 ExtendedOperations 專案中，加入 SimpleCalculator 和 System.ComponentModel.Composition 的參考。 在 ExtendedOperations 類別檔案中，針對 System.ComponentModel.Composition 加入 `Imports` 或 `using` 陳述式。 在 Visual Basic 中，也會針對 SimpleCalculator 加入 `Imports` 陳述式。 然後將下列類別加入 ExtendedOperations 類別檔案：
 
@@ -484,6 +484,6 @@ public class Mod : SimpleCalculator.IOperation
 
 ## <a name="next-steps"></a>後續步驟
 
-若要下載此範例的完整程式碼，請參閱[SimpleCalculator 範例 (Visual Basic) ](https://docs.microsoft.com/samples/dotnet/samples/simple-calculator-vb/)。
+若要下載此範例的完整程式碼，請參閱 [SimpleCalculator 範例 (Visual Basic) ](/samples/dotnet/samples/simple-calculator-vb/)。
 
  如需詳細資訊和更多程式碼範例，請參閱 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) \(英文\)。 如需 MEF 類型的清單，請參閱 <xref:System.ComponentModel.Composition?displayProperty=nameWithType> 命名空間。

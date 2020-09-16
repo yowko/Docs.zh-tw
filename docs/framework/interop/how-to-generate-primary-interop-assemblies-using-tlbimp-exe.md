@@ -1,18 +1,18 @@
 ---
 title: 作法：使用 Tlbimp.exe 產生主要 Interop 組件
-description: 瞭解如何使用 Windows SDK 提供的型別程式庫匯入工具（Tlbimp.exe），產生主要 interop 元件。
+description: '瞭解如何使用 Windows SDK 提供的類型程式庫匯入工具 ( # A0) 來產生主要 interop 元件。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-ms.openlocfilehash: 779b4863b6f1513f3566d4ab31660d88cda1039b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 56ce10e0b6f9be988a06d44550cd3b9dc2efd188
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619126"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554152"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>作法：使用 Tlbimp.exe 產生主要 Interop 組件
 
@@ -46,7 +46,7 @@ ms.locfileid: "85619126"
 
 安裝在目前的目錄時，無法探索與原始類型程式庫版本號碼不同的相依主要 Interop 組件。 您必須在 Windows 登錄中登錄相依的主要 Interop 組件，或使用 **/reference** 選項，以確定 Tlbimp.exe 能找到相依的 DLL。
 
-您也可以包裝類型程式庫的多個版本。 如需相關指示，請參閱[如何：包裝型別程式庫的多個版本](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))。
+您也可以包裝類型程式庫的多個版本。 如需相關指示，請參閱[如何：包裝型別程式庫的多個版本](/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))。
 
 ## <a name="example"></a>範例
 

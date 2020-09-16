@@ -1,6 +1,6 @@
 ---
 title: 轉型和類型轉換 - C# 程式設計指南
-description: 瞭解轉換和類型轉換，例如隱含、明確（轉換）和使用者定義的轉換。
+description: 瞭解轉換和類型轉換，例如隱含、明確 (轉換) ，以及使用者定義的轉換。
 ms.date: 07/06/2020
 helpviewer_keywords:
 - type conversion [C#]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 040b5679b1e6666a7f0308e5990781a2ef86c530
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: cfe5376675808559f4bf9c9cd8b21180dcd0cc49
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381953"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555324"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>轉型和類型轉換 (C# 程式設計指南)
 
@@ -32,11 +32,11 @@ i = "Hello";
 
 - **隱含轉換**：不需要特殊語法，因為轉換一律會成功，而且不會遺失任何資料。 範例包括從較小到較大整數型別的轉換，以及從衍生類別到基底類別的轉換。
 
-- **明確轉換（轉換）**：明確轉換需要[cast 運算式](../../language-reference/operators/type-testing-and-cast.md#cast-expression)。 如果資訊可能會在轉換時遺失，或轉換因其他原因而失敗，則需要轉換。 一般範例包括將數字轉換為較少有效位數或較小範圍的類型，以及將基底類別執行個體轉換為衍生類別。
+- **明確轉換 (轉換) **：明確的轉換需要 [轉換運算式](../../language-reference/operators/type-testing-and-cast.md#cast-expression)。 如果資訊可能會在轉換時遺失，或轉換因其他原因而失敗，則需要轉換。 一般範例包括將數字轉換為較少有效位數或較小範圍的類型，以及將基底類別執行個體轉換為衍生類別。
 
 - **使用者定義的轉換**：使用者定義的轉換是透過特殊方法所執行，而您可以定義特殊方法來啟用沒有基底類別/衍生類別關聯性之自訂類型間的明確和隱含轉換。 如需詳細資訊，請參閱[使用者定義轉換運算子](../../language-reference/operators/user-defined-conversion-operators.md)。
 
-- **使用協助程式類別轉換**：若要轉換不相容類型 (例如，整數和 <xref:System.DateTime?displayProperty=nameWithType> 物件，或十六進位字串和位元組陣列)，您可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別、<xref:System.Convert?displayProperty=nameWithType> 類別，以及內建數字類型的 `Parse` 方法 (例如，<xref:System.Int32.Parse%2A?displayProperty=nameWithType>)。 如需詳細資訊，請參閱[如何將位元組陣列轉換成](./how-to-convert-a-byte-array-to-an-int.md)整數、[如何將字串轉換成數位](./how-to-convert-a-string-to-a-number.md)，以及[如何在十六進位字串和數位類型之間進行轉換](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。
+- **使用協助程式類別轉換**：若要轉換不相容類型 (例如，整數和 <xref:System.DateTime?displayProperty=nameWithType> 物件，或十六進位字串和位元組陣列)，您可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別、<xref:System.Convert?displayProperty=nameWithType> 類別，以及內建數字類型的 `Parse` 方法 (例如，<xref:System.Int32.Parse%2A?displayProperty=nameWithType>)。 如需詳細資訊，請參閱 [如何將位元組陣列轉換為 int](./how-to-convert-a-byte-array-to-an-int.md)、 [如何將字串轉換成數位](./how-to-convert-a-string-to-a-number.md)，以及如何在 [十六進位字串和數位類型之間轉換](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。
 
 ## <a name="implicit-conversions"></a>隱含的轉換
 
@@ -57,11 +57,11 @@ Base b = d;
 
 ## <a name="explicit-conversions"></a>明確轉換
 
-不過，如果進行轉換，而有遺失資訊的風險，則編譯器需要您執行稱為「轉換」** 的明確轉換。 轉換是一種方法，可明確通知編譯器您想要進行轉換，而且您知道可能會遺失資料，或轉換可能會在執行時間失敗。 若要執行轉換，請在要轉換的值或變數前面的括弧中指定要轉換為的類型。 下列程式會將[double](../../language-reference/builtin-types/floating-point-numeric-types.md)轉換成[int](../../language-reference/builtin-types/integral-numeric-types.md)。程式不會進行編譯，而不會進行轉換。
+不過，如果進行轉換，而有遺失資訊的風險，則編譯器需要您執行稱為「轉換」** 的明確轉換。 轉換是一種明確通知編譯器您想要進行轉換的方式，而且您知道可能會遺失資料，或是在執行時間時轉換可能會失敗。 若要執行轉換，請在要轉換的值或變數前面的括弧中指定要轉換為的類型。 下列程式會將 [double](../../language-reference/builtin-types/floating-point-numeric-types.md) 轉換成整數 [。](../../language-reference/builtin-types/integral-numeric-types.md)程式不會進行編譯，而不會進行轉換。
 
 [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]
 
-如需支援的明確數值轉換的完整清單，請參閱[內建數值轉換](../../language-reference/builtin-types/numeric-conversions.md)一文的[明確數值轉換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)一節。
+如需支援的明確數值轉換完整清單，請參閱[內建數值轉換](../../language-reference/builtin-types/numeric-conversions.md)一文的[明確數值轉換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)一節。
 
 針對參考型別，如果您需要將基底類型轉換為衍生類型，則需要明確轉換︰
 
@@ -87,7 +87,7 @@ Giraffe g2 = (Giraffe)a;
 
 [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]
 
-`Test`方法具有 `Animal` 參數，因此將引數明確轉換 `a` 為會造成 `Reptile` 危險的假設。 不進行假設，而是檢查類型是比較安全的作法。 C# 提供 [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) 運算子，可讓您先測試相容性，再實際執行轉換。 如需詳細資訊，請參閱[如何使用模式比對來安全地轉換和 as 和 is 運算子](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
+`Test`方法有一個 `Animal` 參數，因此明確地將引數轉換 `a` 為，會造成 `Reptile` 危險的假設。 比較安全的做法是不要進行假設，而是檢查型別。 C# 提供 [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) 運算子，可讓您先測試相容性，再實際執行轉換。 如需詳細資訊，請參閱 [如何使用模式比對、as 和 as 運算子，安全地進行轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -99,5 +99,5 @@ Giraffe g2 = (Giraffe)a;
 - [類型](./index.md)
 - [轉換運算式](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [使用者定義轉換運算子](../../language-reference/operators/user-defined-conversion-operators.md)
-- [產生的類型轉換](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
+- [產生的類型轉換](/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [如何將字串轉換為數值](./how-to-convert-a-string-to-a-number.md)

@@ -21,7 +21,7 @@ ms.locfileid: "90537635"
 > - 在 Visual Studio for Mac 中， **Help**  >  **Report a Problem**從功能表中選取 [說明]，或從歡迎畫面回報**問題**，這會開啟用來提出錯誤報表的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/41/index.html)入口網站追蹤您的意見反應。
 > - 若要提出建議，請從功能表中**選取 [** 說明]  >  **提供建議**，或從歡迎畫面**提供**建議，這會帶您前往[Visual Studio for Mac 開發人員社群網頁](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * [安裝 Visual Studio for Mac 8.6 版或更新版本](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 選取安裝 .NET Core 的選項。 安裝 Xamarin 是 .NET Core 開發的選擇性選項。 如需詳細資訊，請參閱下列資源：
 

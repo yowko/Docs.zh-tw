@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c891ad1d5b4c1160ca41c43eff6eea444f7224f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976970"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544995"
 ---
 # <a name="re-train-a-model"></a>重新定型模型
 
@@ -33,7 +33,7 @@ ms.locfileid: "73976970"
 
 ## <a name="load-pre-trained-model"></a>載入預先定型的模型
 
-首先，將預先定型的模型載入應用程式。 要瞭解有關載入訓練管道和模型的更多情況，請參閱[保存並載入經過訓練的模型](save-load-machine-learning-models-ml-net.md)。
+首先，將預先定型的模型載入應用程式。 若要深入瞭解如何載入定型管線和模型，請參閱 [儲存和載入定型的模型](save-load-machine-learning-models-ml-net.md)。
 
 ```csharp
 // Create MLContext
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>擷取預先定型的模型參數
 
-載入模型後，通過訪問預訓練的模型[`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*)的屬性來提取學習的模型參數。 預先訓練的模型是使用線性回歸模型訓練的，該模型[`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer)創建一個[`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601)輸出[`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters)的模型。 這些線性迴歸模型參數包含學習到的偏差和權重，或是模型的相關係數。 這些值將會用來作為新重新定型模型的起點。
+載入模型之後，藉由存取預先定型模型的屬性，將學習到的模型參數解壓縮 [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) 。 預先定型的模型是使用線性回歸模型來定型 [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) ，此模型 [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) 會建立輸出 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 。 這些線性迴歸模型參數包含學習到的偏差和權重，或是模型的相關係數。 這些值將會用來作為新重新定型模型的起點。
 
 ```csharp
 // Extract trained model parameters
@@ -61,7 +61,7 @@ LinearRegressionModelParameters originalModelParameters =
 
 ## <a name="re-train-model"></a>重新定型模型
 
-重新定型模型的流程與定型模型的流程沒什麼不同。 唯一的區別是，[`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*)該方法除了資料外，還把原始學習的模型參數作為輸入，並將其用作重新訓練過程中的起點。
+重新定型模型的流程與定型模型的流程沒什麼不同。 唯一的差別在於， [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) 除了資料以外，方法也會將原始學習模型參數視為輸入，並使用它們做為重新定型程式的起點。
 
 ```csharp
 // New Data
@@ -121,7 +121,7 @@ for(int i=0;i < weightDiffs.Count();i++)
 
 下表顯示輸出可能呈現的結果。
 
-|原始 | 重新定型 | 差異 |
+|原始 | 重新定型 | 差數 |
 |---|---|---|
 | 33039.86 | 56293.76 | -23253.9 |
 | 29099.14 | 49586.03 | -20486.89 |

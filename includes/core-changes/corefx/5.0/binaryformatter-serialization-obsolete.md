@@ -6,9 +6,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/13/2020
 ms.locfileid: "88203891"
 ---
-### <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>ASP.NET 應用程式中的 BinaryFormatter 序列化方法已過時且禁止
+### <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>ASP.NET apps 已淘汰且禁止 BinaryFormatter 序列化方法
 
-`Serialize` 、和上的和 `Deserialize` 方法 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatter> <xref:System.Runtime.Serialization.IFormatter> 現在已過時。 此外， <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ASP.NET 應用程式預設會禁止序列化。
+`Serialize``Deserialize`、和上的方法 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatter> <xref:System.Runtime.Serialization.IFormatter> 現在已過時。 此外， <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ASP.NET apps 預設會禁止序列化。
 
 #### <a name="change-description"></a>變更描述
 
@@ -17,9 +17,9 @@ ms.locfileid: "88203891"
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>
 
-在 .NET 生態系統中，這些方法會被標示為過時，做為停止使用的一部分 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 。
+這些方法會標示為過時，以在 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> .net 生態系統內使用。
 
-下列序列化方法現在也已經過時，但沒有任何行為變更：
+下列序列化方法現在也已過時，但沒有任何行為變更：
 
 - <xref:System.Runtime.Serialization.Formatter.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType>
@@ -34,7 +34,7 @@ ms.locfileid: "88203891"
 
 - 停止 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 在您的程式碼中使用。 相反地，請考慮使用 <xref:System.Text.Json.JsonSerializer> 或 <xref:System.Xml.Serialization.XmlSerializer> 。 如需詳細資訊，請參閱 [BinaryFormatter 安全性指南](../../../../docs/standard/serialization/binaryformatter-security-guide.md)。
 
-- 您可以暫時隱藏 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 編譯時期警告，也就是 `SYSLIB0011` 。 我們建議您在選擇此選項之前，先徹底評估您的程式碼是否有風險。 抑制警告最簡單的方式，就是使用指示詞來括住個別的呼叫位置 `#pragma` 。
+- 您可以暫時隱藏 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 編譯時期警告，也就是 `SYSLIB0011` 。 在選擇此選項之前，建議您先徹底評估程式碼的風險。 隱藏警告的最簡單方式，就是將個別的呼叫位置括在個別的呼叫位置 `#pragma` 。
 
   ```csharp
   // Now read the purchase order back from disk
@@ -47,7 +47,7 @@ ms.locfileid: "88203891"
   }
   ```
 
-  您也可以在專案檔中隱藏警告。
+  您也可以隱藏專案檔中的警告。
 
   ```xml
   <PropertyGroup>
@@ -58,9 +58,9 @@ ms.locfileid: "88203891"
   </PropertyGroup>
   ```
 
-  如果您在專案檔中隱藏警告，則會針對專案中的所有程式碼檔案隱藏警告。 隱藏 SYSLIB0011 並不會隱藏使用其他已淘汰的 Api 所造成的警告。
+  如果您隱藏專案檔中的警告，則會針對專案中的所有程式碼檔案隱藏警告。 隱藏 SYSLIB0011 並不會隱藏使用其他過時 Api 所造成的警告。
 
-- 若要繼續 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 在 ASP.NET apps 中使用，您可以在專案檔中重新啟用它。 不過，強烈建議不要這麼做。 如需詳細資訊，請參閱 [BinaryFormatter 安全性指南](../../../../docs/standard/serialization/binaryformatter-security-guide.md)。
+- 若要繼續 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 在 ASP.NET apps 中使用，您可以在專案檔中重新啟用它。 不過，強烈建議您不要這麼做。 如需詳細資訊，請參閱 [BinaryFormatter 安全性指南](../../../../docs/standard/serialization/binaryformatter-security-guide.md)。
 
   ```xml
   <PropertyGroup>

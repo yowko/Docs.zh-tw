@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: f2f2a4706ea4deba39465d8697f78be58506a09c
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 826f9003852e47c093193bbbb717fd9e1f2e61c6
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515863"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678936"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -373,7 +373,7 @@ Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於�
 
 **參考資料 – Azure 儲存體**
 
-- Azure 儲存體簡介 <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure 儲存體簡介 <https://docs.microsoft.com/azure/storage/common/storage-introduction>
 
 ## <a name="caching"></a>Caching
 

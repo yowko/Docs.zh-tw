@@ -1,18 +1,18 @@
 ---
 title: 建構函式 - C# 程式設計手冊
-description: '建立類別或結構時，會呼叫 c # 中的函式。 使用函式來設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。'
+description: '建立類別或結構時，會呼叫 c # 中的函式。 使用函式來設定預設值、限制具現化，以及撰寫有彈性且容易閱讀的程式碼。'
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 4a731e648143f5e0ecf8860625962d8baa29fe26
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: e8758d7322d7fde45ccbd9eaf9248a3168980bd3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474900"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555337"
 ---
 # <a name="constructors-c-programming-guide"></a>建構函式 (C# 程式設計手冊)
 
@@ -20,7 +20,7 @@ ms.locfileid: "86474900"
 
 ## <a name="parameterless-constructors"></a>無參數建構函式
   
-如果您未提供類別的函式，則 c # 預設會建立一個函式，以具現化物件，並將成員變數設定為預設值，如[c # 類型的預設值一](../../language-reference/builtin-types/default-values.md)文所列。 如果您未提供結構的函式，則 c # 會依賴*隱含的無參數的函數*，將每個欄位自動初始化為其預設值。 如需詳細資訊和範例，請參閱[實例構造](instance-constructors.md)函式。  
+如果您未提供類別的函式，c # 會根據預設建立一個函式，以具現化物件，並將成員變數設定為預設值，如 [c # 類型的預設值](../../language-reference/builtin-types/default-values.md) 一文所列。 如果您未提供結構的函式，c # 會依賴 *隱含無參數* 的函式，將每個欄位自動初始化為其預設值。 如需詳細資訊和範例，請參閱 [實例](instance-constructors.md)的函式。  
 
 ## <a name="constructor-syntax"></a>建構函式語法
 
@@ -34,7 +34,7 @@ ms.locfileid: "86474900"
 
 ## <a name="static-constructors"></a>靜態建構函式
 
-前例都已顯示建立新物件的執行個體建構函式。 類別或結構也可以有靜態建構函式，用來初始化類型的靜態成員。  靜態建構函式無參數。 如果您未提供靜態的函式來初始化靜態欄位，c # 編譯器會將靜態欄位初始化為其預設值，如[c # 類型的預設值一](../../language-reference/builtin-types/default-values.md)文所列。
+前例都已顯示建立新物件的執行個體建構函式。 類別或結構也可以有靜態建構函式，用來初始化類型的靜態成員。  靜態建構函式無參數。 如果您未提供靜態的函式來初始化靜態欄位，c # 編譯器會將靜態欄位初始化為其預設值，如 [c # 類型的預設值一](../../language-reference/builtin-types/default-values.md) 文所列。
 
 下列範例會使用靜態建構函式來初始化靜態欄位。
 
@@ -63,4 +63,4 @@ ms.locfileid: "86474900"
 - [類別和結構](./index.md)
 - [完成項](./destructors.md)
 - [static](../../language-reference/keywords/static.md)
-- [為什麼初始化運算式是以相反的循序執行，做為構造函式？第一部](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [為什麼初始化運算式的執行順序與處理函式相反？第一部](/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

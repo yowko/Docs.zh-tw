@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: f589fa70c2ee1c56544fa0f0152990478aa3761f
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8f7ca5fdb170411aba24d34b8bf4d6c4f5776cc4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "82072036"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555142"
 ---
 # <a name="xclass-directive"></a>x:Class 指示詞
-配置 XAML 標籤編譯以在標記和代碼後面之間聯接部分類。 代碼部分類以通用語言規範 (CLS) 語言在單獨的代碼檔中定義,而標記部分類通常在 XAML 編譯期間由代碼生成創建。
+設定 XAML 標記編譯以聯結標記和程式碼後端之間的部分類別。 程式碼部分類別是在 Common Language Specification (CLS) 語言中的不同程式碼檔案中定義，而標記部分類別通常是在 XAML 編譯期間由程式碼產生所建立。
 
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage
 
@@ -32,41 +32,41 @@ ms.locfileid: "82072036"
 
 |||
 |-|-|
-|`namespace`|選擇性。 指定包含 由`classname`識別的部分類的 CLR 命名空間。 如果`namespace`指定,點 (.) 會`namespace`分`classname`隔與 。 請參閱＜備註＞。|
-|`classname`|必要。 指定連接載入的 XAML 和該 XAML 的代碼後面的部分類的 CLR 名稱。|
+|`namespace`|選擇性。 指定包含所識別之部分類別的 CLR 命名空間 `classname` 。 如果 `namespace` 指定了，就會以點 (。 ) 分隔 `namespace` 和 `classname` 。 請參閱＜備註＞。|
+|`classname`|必要。 指定部分類別的 CLR 名稱，以連接載入的 XAML 和該 XAML 的程式碼後端。|
 
 ## <a name="dependencies"></a>相依性
 
-`x:Class`只能在 XAML 生產的根元素上指定。 `x:Class`在 XAML 生產中具有父物件的任何對象上無效。 有關詳細資訊,請參閱[\[MS-XAML\]部分 4.3.1.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))。
+`x:Class` 只能在 XAML 生產的根項目上指定。 `x:Class` 在 XAML 生產中具有父系的任何物件上無效。 如需詳細資訊，請參閱[ \[ MS-XAML \] 區段 4.3.1.6](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ## <a name="remarks"></a>備註
 
-該`namespace`值可能包含其他點,用於將相關命名空間組織到名稱層次結構中,這是 .NET 程式設計中的一種常見技術。 只有`x:Class`值字串中的最後一個點被解釋為分隔`namespace`,`classname.`用作類的`x:Class`類 不能是嵌套類。 不允許嵌套類,因為如果允許嵌套類,則確定字串`x:Class`的點含義不明確。
+此 `namespace` 值可能包含額外的點，以便將相關的命名空間組織成名稱階層，這是 .net 程式設計中的常見技術。 只有值字串中的最後一個點 `x:Class` 會被解釋為分開 `namespace` ，而且 `classname.` 用來做為的類別 `x:Class` 不能是嵌套類別。 不允許使用嵌套類別，因為 `x:Class` 如果允許嵌套類別，判斷字串的點意義就不明確。
 
-在使用`x:Class`的現有程式設計模型中,`x:Class`是可選的,因為 XAML 頁沒有代碼背後,是完全有效的。 但是,該功能與使用 XAML 的框架實現的生成操作進行交互。 `x:Class`功能還受 XAML 指定內容的各種分類在應用程式模型和相應的生成操作中的角色的影響。 如果 XAML 聲明事件處理屬性值或實例化定義類位於代碼後面類中的自定義元素,則必須向相應的`x:Class`類提供 指令引用(或[x:sub 類](xsubclass-directive.md))以進行代碼後面。
+在使用的現有程式設計模型中 `x:Class` ， `x:Class` 是選擇性的，因為它完全有效，讓沒有程式碼後端的 XAML 頁面。 不過，這項功能與使用 XAML 的架構所執行的組建動作互動。 `x:Class` 功能也會受到 XAML 指定內容的各種分類在應用程式模型和對應的組建動作中的角色所影響。 如果您的 XAML 宣告事件處理屬性值，或是具現化定義類別位於程式碼後端類別中的自訂專案，您就必須為程式碼後端提供適當類別的指示詞 `x:Class` 參考 (或 [x:Subclass](xsubclass-directive.md)) 。
 
-`x:Class`指令的值必須是指定類完全限定名稱但沒有任何程式集資訊(等效於<xref:System.Type.FullName%2A?displayProperty=nameWithType>) 的字串。 對於簡單應用程式,如果代碼後面也以這種方式構造(代碼定義從類級別開始),則可以省略 CLR 命名空間資訊。
+指示詞的值 `x:Class` 必須是字串，這個字串會指定類別的完整名稱，但不含任何元件資訊 (相當於 <xref:System.Type.FullName%2A?displayProperty=nameWithType>) 。 針對簡單的應用程式，如果程式碼後端也是以這種方式結構化，則您可以省略 CLR 命名空間資訊， (程式碼定義會從類別層級開始) 。
 
-頁面或應用程式定義的代碼背後的文件必須位於代碼檔中,該檔包含在生成已編譯的應用程式並涉及標記編譯的專案的一部分中。 您必須遵循 CLR 類的名稱規則。 有關詳細資訊,請參閱[框架設計指南](../../../api/index.md)。 預設情況下,代碼後面類必須為`public`;但是,您可以使用[x:Class 修改器指令](xclassmodifier-directive.md)在不同的存取級別定義它。
+頁面或應用程式定義的程式碼後端檔案必須位於程式碼檔案中，該檔案包含做為產生已編譯應用程式之專案的一部分，並且牽涉到標記編譯。 您必須遵循 CLR 類別的名稱規則。 如需詳細資訊，請參閱 [架構設計指導方針](../../../api/index.md)。 根據預設，程式碼後端類別必須是 `public` ; 不過，您可以使用 [x:ClassModifier](xclassmodifier-directive.md)指示詞，在不同的存取層級定義它。
 
-該屬性的`x:Class`此解釋僅適用於基於 CLR 的 XAML 實現,尤其是 .NET XAML 服務。 其他不基於 CLR 且不使用 .NET XAML 服務的其他 XAML 實現可能使用不同的解析公式來連接 XAML 標記和備份執行時代碼。 有關 有關的更多一般解釋的詳細`x:Class`資訊 ,請參閱[\[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))。
+這項屬性的解讀 `x:Class` 只適用于以 CLR 為基礎的 xaml 實作為 .NET Xaml 服務。 其他不是以 CLR 為基礎且不使用 .NET XAML 服務的 XAML 執行，可能會使用不同的解析公式來連接 XAML 標記和支援執行時間程式碼。 如需更多一般解釋的詳細資訊 `x:Class` ，請參閱[ \[ MS \] XAML](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
-在一定的體系結構等級中,在 .NET XAML 服務中`x:Class`未定義 。 這是因為 .NET XAML 服務沒有指定連接 XAML 標記和備份代碼的程式設計模型。 `x:Class`該指令的其他用途可能由使用程式設計模型或應用程式模型來定義如何連接 XAML 標記和基於 CLR 的代碼背後的特定框架實現。 每個框架都可以有自己的生成操作,這些操作啟用生成環境中必須包括的某些行為或特定元件。 在框架中,生成操作也可能因用於代碼後面的特定 CLR 語言而異。
+在特定的架構層級上，的意義 `x:Class` 在 .NET XAML 服務中是未定義的。 這是因為 .NET XAML 服務不會指定 XAML 標記和支援的程式碼所連接的程式設計模型。 指示詞的其他用法 `x:Class` 可能會由使用程式設計模型或應用程式模型的特定架構來執行，以定義如何連接 XAML 標記和 CLR 程式碼後端。 每個架構都可以有自己的組建動作，以啟用必須包含在組建環境中的某些行為或特定元件。 在架構中，組建動作也會根據程式碼後端所使用的特定 CLR 語言而有所不同。
 
-## <a name="xclass-in-the-wpf-programming-model"></a>x:WPF 程式設計模型
+## <a name="xclass-in-the-wpf-programming-model"></a>WPF 程式設計模型中的 X：Class
 
-在 WPF 應用程式和`x:Class`WPF 應用程式模型中,可以聲明為作為 XAML 檔根並正在編譯的任何元素的屬性(其中`Page`XAML 包含在具有生成操作的 WPF 應用程式<xref:System.Windows.Application>專案中),也可以聲明為已編譯 WPF 應用程式的應用程式定義中的根元素。 在`x:Class`頁面根或應用程式根以外的元素上聲明,或在未編譯的 WPF XAML 檔中進行聲明,在 .NET 框架 3.0 和 .NET 框架 3.5 WPF XAML 編譯器下會導致編譯時錯誤。 有關 WPF`x:Class`中 處理的其他方面的資訊,請參閱[WPF 中的代碼背後和 XAML。](../../framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
+在 WPF 應用程式和 WPF 應用程式模型中， `x:Class` 可以將任何專案的屬性（也就是 xaml 檔案的根）宣告為屬性，並將其編譯 (其中 xaml 包含在具有組建動作) 的 WPF 應用程式專案中 `Page` ，或在 <xref:System.Windows.Application> 已編譯之 WPF 應用程式的應用程式定義中包含根項目。 在 `x:Class` 頁面根或應用程式根目錄以外的專案上宣告，或在未編譯的 WPF XAML 檔案上宣告，會導致 .NET Framework 3.0 和 .NET Framework 3.5 WPF XAML 編譯器下發生編譯時期錯誤。 如需有關在 WPF 中處理其他方面的詳細資訊 `x:Class` ，請參閱 [wpf 中的程式碼後端和 XAML](/dotnet/desktop/wpf/advanced/code-behind-and-xaml-in-wpf)。
 
-## <a name="xclass-for-windows-workflow-foundation"></a>x:Windows 工作流基礎類
-對於 Windows`x:Class`工作流 基礎,請命名完全在 XAML 中組成的自訂活動的類,或者為具有代碼後面的活動設計器命名 XAML 頁的部分類。
+## <a name="xclass-for-windows-workflow-foundation"></a>Windows Workflow Foundation 的 X：Class
+針對 Windows Workflow Foundation，會 `x:Class` 命名完全以 XAML 撰寫的自訂活動類別，或為具有程式碼後端的活動設計工具命名 XAML 頁面的部分類別。
 
-## <a name="silverlight-usage-notes"></a>銀光使用說明
+## <a name="silverlight-usage-notes"></a>Silverlight 使用注意事項
 
-`x:Class`銀光單獨記錄。 有關詳細資訊,請參閱[XAML 命名空間 (x:)語言功能(銀光)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc188995(v=vs.95)).
+`x:Class` Silverlight 會另外記載。 如需詳細資訊，請參閱 [XAML 命名空間 (x： ) 語言功能 (Silverlight) ](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc188995(v=vs.95))。
 
 ## <a name="see-also"></a>另請參閱
 
 - [x:Subclass 指示詞](xsubclass-directive.md)
-- [WPF 的 XAML 和自訂類別](../../framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [WPF 的 XAML 和自訂類別](/dotnet/desktop/wpf/advanced/xaml-and-custom-classes-for-wpf)
 - [x:ClassModifier 指示詞](xclassmodifier-directive.md)
-- [從 WPF 移轉至 System.Xaml 的類型](../../framework/wpf/advanced/types-migrated-from-wpf-to-system.md)
+- [從 WPF 移轉至 System.Xaml 的類型](/dotnet/desktop/wpf/advanced/types-migrated-from-wpf-to-system)

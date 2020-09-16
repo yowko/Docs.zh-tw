@@ -1,6 +1,6 @@
 ---
 title: 在 Managed 程式碼中建立原型
-description: 在 .NET managed 程式碼中建立原型，讓您可以存取非受控函式，並使用在 managed 程式碼中標注方法定義的屬性欄位。
+description: 在 .NET managed 程式碼中建立原型，讓您可以存取未受管理的函式，並使用在 managed 程式碼中標注方法定義的屬性欄位。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-ms.openlocfilehash: 76b1a87c4513fdee21c5c3d5eba533b11e022e3a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: e83979e5843c52fc3a446a5b669ae8822b32ddad
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622155"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555584"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在 Managed 程式碼中建立原型
 本主題描述如何存取 Unmanaged 函式，並介紹數個以 Managed 程式碼來註解方法定義的屬性欄位。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
@@ -88,11 +88,11 @@ extern "C" int MessageBox(
   
  下表列出一組平台叫用的完整屬性欄位。 在每個欄位裡，資料表包含預設值以及連結，關於如何使用這些欄位來定義 Unmanaged DLL 函式的詳細資訊。  
   
-|欄位|描述|  
+|欄位|說明|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|啟用或停用自動調整對應。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|指定用來傳遞方法引數的呼叫慣例。 預設值是 `WinAPI` ，它對應至適用於 32 位元 Intel 平台的 `__stdcall` 。|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|控制項名稱的損害以及字串引數的方式應該封送處理至函式。 預設值為 `CharSet.Ansi`。|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|控制項名稱的損害以及字串引數的方式應該封送處理至函式。 預設為 `CharSet.Ansi`。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|指定要呼叫 DLL 進入點。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|控制是否應修改進入點以對應至字元集。 預設值依程式語言而異。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|控制是否應將 Managed 方法簽章轉換成 Unmanaged 簽章，其會傳回 HRESULT 且傳回值會有額外的 [out, retval] 引數。<br /><br /> 預設值是 `true` (簽章不應該轉換)。|  
@@ -236,7 +236,7 @@ interface IDemandStubsItf
 - [指定進入點](specifying-an-entry-point.md)
 - [指定字元集](specifying-a-character-set.md)
 - [平台叫用範例](platform-invoke-examples.md)
-- [平台叫用安全性考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [平台叫用安全性考量](/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [識別 DLL 中的函式](identifying-functions-in-dlls.md)
 - [建立類別以包裝 DLL 函式](creating-a-class-to-hold-dll-functions.md)
 - [呼叫 DLL 函式](calling-a-dll-function.md)

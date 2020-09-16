@@ -1,6 +1,6 @@
 ---
 title: 一般類型系統
-description: 探索 .NET 中的型別系統。 閱讀 .NET 中的類型（實數值型別或參考型別）、類型定義、類型成員和類型成員特性。
+description: 探索 .NET 中的型別系統。 深入瞭解 .NET 中的型別 (值型別或參考型別) 、類型定義、類型成員和類型成員特性。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: db0ecd59f122228d33b74be6dec51371413d68b3
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4e3fc4cb03a0b8fd63b41bd912374c29eef3a29a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767828"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555155"
 ---
 # <a name="common-type-system"></a>一般型別系統
 
@@ -70,7 +70,7 @@ ms.locfileid: "84767828"
 |exported 或 not exported|指出是否可在定義類別的組件中看見類別。 這項特性僅適用於最上層類別，並不適用於巢狀類別。|  
   
 > [!NOTE]
-> 類別也可以透過巢狀方式置於父類別或結構中。 巢狀類別也具有成員特性。 如需詳細資訊，請參閱[巢狀型別](#nested-types)。  
+> 類別也可以透過巢狀方式置於父類別或結構中。 巢狀類別也具有成員特性。 如需詳細資訊，請參閱 [巢狀型別](#nested-types)。  
   
  沒有實作的類別成員是抽象成員。 有一個或多個抽象成員的類別本身就是抽象的；所以無法建立它的新執行個體。 有些以執行階段為目標的語言即使沒有任何抽象的成員，也允許您將類別標記為抽象。 當您需要封裝一組衍生類別在適當時可繼承或覆寫的基本功能時，可以使用抽象類別 (Abstract Class)。 非抽象的類別即稱為實體類別 (Concrete Class)。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "84767828"
   
 ### <a name="structures"></a>結構
 
- 結構是自 <xref:System.ValueType?displayProperty=nameWithType> (衍生自 <xref:System.Object?displayProperty=nameWithType>) 隱含繼承的實質型別。 結構適用于表示記憶體需求較小的值，以及將值當做傳值參數傳遞給具有強型別參數的方法。 在 .NET 中，會將所有基本資料類型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32> 及 <xref:System.UInt64>) 定義為結構。  
+ 結構是自 <xref:System.ValueType?displayProperty=nameWithType> (衍生自 <xref:System.Object?displayProperty=nameWithType>) 隱含繼承的實質型別。 結構適合用來表示記憶體需求很小的值，以及將值以傳值參數的方式傳遞給具有強型別參數的方法。 在 .NET 中，會將所有基本資料類型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32> 及 <xref:System.UInt64>) 定義為結構。  
   
  與類別一樣，結構會定義資料 (結構的欄位) 以及可以在該資料上定義的作業 (結構的方法)。 這表示您可以在結構上呼叫方法，包括在 <xref:System.Object?displayProperty=nameWithType> 和 <xref:System.ValueType?displayProperty=nameWithType> 類別上定義的虛擬方法，以及在實值型別本身定義的任何方法。 換言之，除了靜態與非靜態方法之外，結構還可以具有欄位、屬性和事件。 您可以建立結構的執行個體，將它們當做參數傳遞，並將它們當做區域變數儲存或將它們儲存到其他實值型別或參考型別的欄位中。 結構也可以實作介面。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "84767828"
   
 ### <a name="enumerations"></a>列舉
 
- 列舉是直接繼承自的實值型別，它會為基礎基本型別的 <xref:System.Enum?displayProperty=nameWithType> 值提供替代名稱。 列舉型別具有名稱、必須為內建帶正負號或不帶正負號之整數型別 (例如 <xref:System.Byte>、<xref:System.Int32> 或 <xref:System.UInt64>) 的基礎型別，以及一組欄位。 欄位為靜態的常值欄位，每一個欄位各代表一個常數。 相同的數值可指定給多個欄位。 發生這種情況時，必須將其中一個數值標記為反映和字串轉換的主要列舉值。  
+ 列舉型別（enumeration）是直接繼承自和的實值型別， <xref:System.Enum?displayProperty=nameWithType> 可提供基礎基本類型值的替代名稱。 列舉型別具有名稱、必須為內建帶正負號或不帶正負號之整數型別 (例如 <xref:System.Byte>、<xref:System.Int32> 或 <xref:System.UInt64>) 的基礎型別，以及一組欄位。 欄位為靜態的常值欄位，每一個欄位各代表一個常數。 相同的數值可指定給多個欄位。 發生這種情況時，必須將其中一個數值標記為反映和字串轉換的主要列舉值。  
   
  您可以將基礎型別的值指定給列舉型別，反之亦然 (Runtime 不需要轉型)。 您可以建立列舉的執行個體，然後呼叫 <xref:System.Enum?displayProperty=nameWithType> 的方法以及在列舉的基礎型別上定義的任何方法。 但是，在需要基礎型別的執行個體時，有些語言可能不允許您將列舉型別當成參數傳遞，反之亦然。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "84767828"
   
 |Accessibility|描述|  
 |-------------------|-----------------|  
-|public|型別可供所有組件存取|  
+|公開|型別可供所有組件存取|  
 |組件 (assembly)|型別只能在本身的組件中存取|  
   
  巢狀型別的存取範圍是依據其存取範圍定義域，由成員的宣告存取範圍和立即包含型別的存取範圍定義域來決定。 但是，巢狀型別的存取範圍領域不能超過包含型別 (Containing Type) 的存取範圍領域。  
@@ -206,7 +206,7 @@ ms.locfileid: "84767828"
   
  然而，大部分語言會對型別名稱強制執行其他限制。 所有比較都是以位元組為基礎，因此會區分大小寫，而且與地區設定無關 (Locale-Independent)。  
   
- 雖然型別可能會參考其他模組和組件中的型別，但是型別必須在一個 .NET 模組中完整定義 （不過，視編譯器支援而定，它可以分割成多個原始程式碼檔案）。類型名稱在命名空間中必須是唯一的。 若要能完整辨認型別，必須以包含型別實作的命名空間來限定型別名稱。  
+ 雖然型別可能會參考其他模組和組件中的型別，但是型別必須在一個 .NET 模組中完整定義 不過 (根據編譯器支援，它可以分割成多個原始程式碼檔。只有在命名空間中，) 類型名稱必須是唯一的。 若要能完整辨認型別，必須以包含型別實作的命名空間來限定型別名稱。  
   
 ### <a name="base-types-and-interfaces"></a>基底類型及介面  
  型別可繼承其他型別的數值和行為。 一般型別系統不允許型別繼承一個以上的基底型別。  
@@ -282,7 +282,7 @@ ms.locfileid: "84767828"
 |特性|適用於|描述|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、屬性和事件|型別不提供方法的實作。 繼承或實作抽象方法的型別必須提供方法的實作。 唯一的例外狀況 (Exception) 是當衍生型別本身也是抽象型別時。 所有抽象方法都是虛擬的。|  
-|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件 (assembly)<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
+|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件 (assembly)<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> 公開<br /> 可從任何型別中存取。|  
 |final|方法、屬性和事件|在衍生型別中無法覆寫虛擬方法。|  
 |initialize-only|欄位|只能初始化數值，在初始化之後即無法寫入。|  
 |instance|欄位、方法、屬性和事件|如果成員未標記為 `static` (C# 和 C++)、`Shared` (Visual Basic)、`virtual` (C# 和 C++) 或 `Overridable` (Visual Basic)，則為執行個體成員 (沒有 instance 關鍵字)。 在記憶體中，這類成員的複本數與使用它的物件數一樣。|  
@@ -297,7 +297,7 @@ ms.locfileid: "84767828"
 > [!NOTE]
 > 傳回型別並不會視為方法簽章的一部分。 換言之，如果這些方法的差異只在於傳回型別，就不能多載這些方法。  
   
-### <a name="inherit-override-and-hide-members"></a>繼承、覆寫和隱藏成員  
+### <a name="inherit-override-and-hide-members"></a>繼承、覆寫及隱藏成員  
  衍生型別會繼承其基底型別的所有成員；也就是說，在衍生型別上會定義這些成員，並供衍生型別使用。 繼承成員的行為或品質可用下列兩種方式來修改：  
   
 - 衍生型別可用相同的簽章定義新的成員，如此便可隱藏繼承的成員。 您可以將原先為 public 的成員設為 private 成員，或是為標記為 `final` 的繼承方法定義新的行為。  
@@ -306,6 +306,6 @@ ms.locfileid: "84767828"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.NET API 瀏覽器](/dotnet/api)
+- [.NET API 瀏覽器](../../../api/index.md)
 - [Common Language Runtime](../clr.md)
 - [.NET 中的類型轉換](type-conversion.md)

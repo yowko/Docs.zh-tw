@@ -175,7 +175,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 ##### <a name="ui-layer-types"></a>UI 層類型
 
 - 控制器
-- 篩選器
+- 篩選條件
 - 檢視
 - ViewModels
 - 啟動

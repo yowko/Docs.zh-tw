@@ -1,18 +1,18 @@
 ---
 title: Interop 封送處理
-description: 開始使用 interop 封送處理，這會控制如何在方法引數中傳遞資料，並在呼叫期間于 managed 和非受控記憶體之間傳回值。
+description: 開始使用 interop 封送處理，此封送處理會控制在呼叫期間如何在 managed 和非受控記憶體之間傳遞資料，以及如何傳回值。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: ca733d59abc4ca3d9d470b054ee9e34b5084ae38
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bd618714a9bd27bc309b7933b656de6bd139cfe7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618970"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554888"
 ---
 # <a name="interop-marshaling"></a>Interop 封送處理
 
@@ -43,7 +43,7 @@ COM 也有一個封送處理器，可在不同的 COM Apartment 或不同的 COM
 
 ### <a name="com-clients-and-managed-servers"></a>COM 用戶端和 Managed 伺服器
 
-具有 [Regasm.exe (組件註冊工具)](../tools/regasm-exe-assembly-registration-tool.md) 所註冊之類型程式庫的已匯出 Managed 伺服器，會將 `ThreadingModel` 登錄項目設定為 `Both`。 這個值表示伺服器可在單一執行緒 Apartment (STA) 或多執行緒 Apartment (MTA) 中啟動。 伺服器物件會建立在與其呼叫者相同的單元中，如下表所示：
+具有 [Regasm.exe (組件註冊工具)](../tools/regasm-exe-assembly-registration-tool.md) 所註冊之類型程式庫的已匯出 Managed 伺服器，會將 `ThreadingModel` 登錄項目設定為 `Both`。 這個值表示伺服器可在單一執行緒 Apartment (STA) 或多執行緒 Apartment (MTA) 中啟動。 伺服器物件會建立在與其呼叫端相同的單元中，如下表所示：
 
 |COM 用戶端|.NET 伺服器|封送處理需求|
 |----------------|-----------------|-----------------------------|
@@ -79,7 +79,7 @@ Managed 用戶端 Apartment 的預設值為 MTA；不過，.NET 用戶端的應�
     > [!NOTE]
     > 將 C# 用戶端的執行緒設定為 STA 之後，對 MTA COM 元件的呼叫會需要跨 Apartment 封送處理。
 
-如需明確選取 Apartment 模型的指示，請參閱 [Managed 和 Unmanaged 執行緒處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))。
+如需明確選取 Apartment 模型的指示，請參閱 [Managed 和 Unmanaged 執行緒處理](/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))。
 
 ## <a name="marshaling-remote-calls"></a>封送處理遠端呼叫
 
@@ -88,7 +88,7 @@ Managed 用戶端 Apartment 的預設值為 MTA；不過，.NET 用戶端的應�
 - 在遠端主機上叫用 Managed 伺服器的 COM 用戶端會使用分散式 COM (DCOM)。
 - 在遠端主機上叫用 COM 伺服器的 Managed 用戶端會使用 DCOM。
 
-下圖顯示 interop 封送處理和 COM 封送處理如何提供跨進程和主機界限的通道：
+下圖顯示 interop 封送處理和 COM 封送處理如何跨進程和主機界限提供通道：
 
 ![COM 封送處理](./media/interop-marshaling/interop-and-com-marshaling.gif "跨處理序封送處理")
 
@@ -110,25 +110,25 @@ Common Language Runtime 會保留 Managed 和 Unmanaged 參考的識別。 下�
 
 ### <a name="managed-remoting"></a>Managed 遠端處理
 
-執行階段也會提供 Managed 遠端處理，可供您用來建立跨處理序和主機界限的 Managed 物件之間的通訊通道。 受控遠端處理可以在通訊元件之間容納防火牆，如下圖所示：
+執行階段也會提供 Managed 遠端處理，可供您用來建立跨處理序和主機界限的 Managed 物件之間的通訊通道。 Managed 遠端處理可以容納通訊元件之間的防火牆，如下圖所示：
 
-![SOAP 或 TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "使用 SOAP 或 TcpChannel 類別跨防火牆進行遠端呼叫")使用 SOAP 或 TcpChannel 類別跨防火牆進行遠端呼叫
+![SOAP 或 TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "使用 SOAP 或 TcpChannel 類別跨防火牆進行遠端呼叫") 使用 SOAP 或 TcpChannel 類別跨防火牆進行遠端呼叫
 
 某些非受控的呼叫可經由 SOAP 導引，例如 Serviced 元件和 COM 之間的呼叫。
 
-## <a name="related-topics"></a>相關主題
+## <a name="related-topics"></a>[相關主題]
 
-|Title|描述|
+|標題|描述|
 |-----------|-----------------|
 |[預設的封送處理行為](default-marshaling-behavior.md)|描述 Interop 封送處理服務用來封送處理資料的規則。|
 |[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)|描述如何宣告方法參數，以及將引數傳遞給 Unmanaged 程式庫所匯出的函式。|
 |[使用 COM Interop 封送處理資料](marshaling-data-with-com-interop.md)|描述如何自訂 COM 包裝函式來變更封送處理行為。|
 |[作法：將受控碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何從 DCOM 移轉至 WCF。|
 |[作法：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)|描述如何將自訂例外狀況對應到 HRESULT，並提供每一個 HRESULT 與其在 .NET Framework 中可比較的例外狀況類別之完整對應。|
-|[使用泛型型別交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|描述使用泛型類型來取得 COM 互通性時所支援的動作。|
+|[使用泛型型別交互操作](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|描述使用泛型類型來取得 COM 互通性時所支援的動作。|
 |[與 Unmanaged 程式碼互通](index.md)|描述 Common Language Runtime 提供的互通性服務。|
-|[進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。|
-|[交互操作的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|提供撰寫整合式 COM 元件的秘訣。|
+|[進階 COM 互通性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。|
+|[交互操作的設計考量](/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|提供撰寫整合式 COM 元件的秘訣。|
 
 ## <a name="reference"></a>參考
 

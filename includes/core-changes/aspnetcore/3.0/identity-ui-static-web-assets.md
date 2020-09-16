@@ -6,36 +6,36 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "73041655"
 ---
-### <a name="identity-ui-uses-static-web-assets-feature"></a>標識：UI 使用靜態 Web 資產功能
+### <a name="identity-ui-uses-static-web-assets-feature"></a>身分識別： UI 使用靜態 web 資產功能
 
-ASP.NET Core 3.0 引入了靜態 Web 資產功能，而標識 UI 已採用此功能。
+ASP.NET Core 3.0 引進了靜態 web 資產功能，而身分識別 UI 已採用。
 
 #### <a name="change-description"></a>變更描述
 
-由於標識 UI 採用了靜態 Web 資產功能：
+由於身分識別 UI 採用靜態 web 資產功能，因此：
 
-- 框架選擇通過使用專案檔案中的屬性`IdentityUIFrameworkVersion`來完成。
-- 引導 4 是標識 UI 的預設 UI 框架。 引導 3 已達到生命週期結束，應考慮遷移到受支援的版本。
+- 您可以使用專案檔中的屬性來完成架構選擇 `IdentityUIFrameworkVersion` 。
+- 啟動程式4是身分識別 UI 的預設 UI 架構。 啟動程式3已達生命週期結束，您應該考慮遷移至支援的版本。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-標識 UI 的預設 UI 框架為**引導 3**。 可以使用 參數對 中的`AddDefaultUI``Startup.ConfigureServices`方法調用配置 UI 框架。
+身分識別 UI 的預設 UI 架構是 **啟動程式 3**。 UI 架構可以使用參數 `AddDefaultUI` 在中的方法呼叫來設定 `Startup.ConfigureServices` 。
 
 #### <a name="new-behavior"></a>新的行為
 
-標識 UI 的預設 UI 框架是**引導 4**。 必須在專案檔案中而不是`AddDefaultUI`方法調用中配置 UI 框架。
+身分識別 UI 的預設 UI 架構是 **啟動程式 4**。 您必須在專案檔中設定 UI 架構，而不是在 `AddDefaultUI` 方法呼叫中設定。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-採用靜態 Web 資產功能要求 UI 框架配置遷移到 MSBuild。 要嵌入哪個框架的決定是生成時間決策，而不是運行時決策。
+採用靜態 web 資產功能需要將 UI 架構設定移至 MSBuild。 決定要內嵌的架構是組建階段決策，而不是執行時間決策。
 
 #### <a name="recommended-action"></a>建議的動作
 
-查看網站 UI 以確保新的 Bootstrap 4 元件相容。 如有必要，`IdentityUIFrameworkVersion`請使用 MSBuild 屬性還原到引導 3。 將屬性添加到專案檔案中`<PropertyGroup>`的元素：
+請檢查您的網站 UI，以確保新的啟動載入器4元件相容。 如有必要，請使用 `IdentityUIFrameworkVersion` MSBuild 屬性還原為啟動程式3。 將屬性新增至 `<PropertyGroup>` 專案檔中的元素：
 
 ```xml
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>

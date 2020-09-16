@@ -1,6 +1,6 @@
 ---
 title: 動態原始程式碼的產生和編譯
-description: 使用程式碼檔物件模型（CodeDOM）在 .NET 中編譯和產生動態原始程式碼。 CodeDOM 元素會連結以形成 CodeDOM 圖表。
+description: 使用程式碼檔物件模型 (CodeDOM) ，在 .NET 中編譯和產生動態原始程式碼。 CodeDOM 元素會連結至 CodeDOM 圖形。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Code Document Object Model
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-ms.openlocfilehash: 3cdd89ac9745f6af133ca683afff64283f2727d1
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7871c27400cf5a7604e509274d5ef3f866070576
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475095"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555208"
 ---
-# <a name="compile-and-generate-dynamic-source-code"></a>編譯並產生動態原始程式碼
+# <a name="compile-and-generate-dynamic-source-code"></a>編譯和產生動態原始程式碼
 
 .NET Framework 包含稱為程式碼文件物件模型 (CodeDOM) 的機制，它可讓發出原始程式碼的程式開發人員在執行階段，根據代表要呈現之程式碼的單一模型，產生多種程式語言的原始程式碼。  
   
@@ -60,4 +60,4 @@ ms.locfileid: "86475095"
   
 ## <a name="related-sections"></a>相關章節  
 
-- [Codedom 快速參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))提供了一種快速的方法，讓開發人員尋找代表原始程式碼元素的 CodeDOM 元素。
+- [CodeDOM 快速參考](/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)) 提供快速的方法，讓開發人員尋找代表原始程式碼專案的 CodeDOM 元素。

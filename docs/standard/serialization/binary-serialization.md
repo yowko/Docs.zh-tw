@@ -1,6 +1,6 @@
 ---
 title: 二進位序列化
-description: 本文說明二進位序列化和 .NET Core 支援的類型。 請留意二進位序列化的危險，以及它的替代專案。
+description: 本文說明 .NET Core 支援的二進位序列化和類型。 請留意二進位序列化的風險，以及它的替代方案。
 ms.date: 01/02/2018
 helpviewer_keywords:
 - binary serialization
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: c735d30920fd3c8cd13243b4a5a29489ce05b262
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289690"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554491"
 ---
 # <a name="binary-serialization"></a>二進位序列化
 
@@ -29,11 +29,11 @@ ms.locfileid: "84289690"
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-二進位序列化允許修改物件內的私用成員，因此變更它的狀態。 因此， <xref:System.Text.Json?displayProperty=fullName> 建議您在公用 API 介面上操作的其他序列化架構（例如）。
+二進位序列化允許修改物件內的私用成員，因此會變更它的狀態。 基於這個原因， <xref:System.Text.Json?displayProperty=fullName> 建議您在公用 API 介面上操作的其他序列化架構（例如）。
 
 ## <a name="net-core"></a>.NET Core
 
-.NET Core 支援類型子集的二進位序列化。 您可以在下面的可序列化[類型](#serializable-types)一節中，看到支援的類型清單。 列出的類型保證可在 .NET Framework 4.5.1 和更新版本之間，以及 .NET Core 2.0 和更新版本之間進行可序列化。 其他 .NET 的實作為（例如 Mono）並未正式支援，但應該也可以使用。
+.NET Core 支援類型子集的二進位序列化。 您可以在下面的 [ [可序列化類型](#serializable-types) ] 區段中，看到支援的類型清單。 列出的類型保證可在 .NET Framework 4.5.1 和更新版本之間，以及在 .NET Core 2.0 和更新版本之間進行序列化。 其他 .NET 實作為（例如 Mono）也不會正式支援，但也應該可以運作。
 
 ### <a name="serializable-types"></a>可序列化類型
 
@@ -97,7 +97,7 @@ ms.locfileid: "84289690"
 > | <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.ComponentModel.InvalidAsynchronousStateException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
-> | <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。<br/>不支援從 .NET Framework 到 .NET Core 的序列化。 |
+> | <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。<br/>不支援從 .NET Framework 序列化為 .NET Core。 |
 > | <xref:System.ComponentModel.WarningException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.ComponentModel.Win32Exception?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
@@ -113,7 +113,7 @@ ms.locfileid: "84289690"
 > | <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.DataException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.DataSet?displayProperty=nameWithType> | |
-> | <xref:System.Data.DataTable?displayProperty=nameWithType> | 如果您將設定 `RemotingFormat` 為 `SerializationFormat.Binary` ，它只能與 .net Core 2.1 和更新版本交換。 |
+> | <xref:System.Data.DataTable?displayProperty=nameWithType> | 如果您將設定 `RemotingFormat` 為 `SerializationFormat.Binary` ，則只能使用 .net Core 2.1 和更新版本進行交換。 |
 > | <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.EvaluateException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
@@ -127,7 +127,7 @@ ms.locfileid: "84289690"
 > | <xref:System.Data.PropertyCollection?displayProperty=nameWithType> | |
 > | <xref:System.Data.ReadOnlyException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.RowNotInTableException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
-> | <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。<br/>不支援從 .NET Framework 到 .NET Core 的序列化 |
+> | <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。<br/>不支援從 .NET Framework 序列化為 .NET Core |
 > | <xref:System.Data.SqlTypes.SqlAlreadyFilledException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType> | |
 > | <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType> | |
@@ -252,7 +252,7 @@ ms.locfileid: "84289690"
 > | <xref:System.Reflection.AmbiguousMatchException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Reflection.CustomAttributeFormatException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Reflection.InvalidFilterCriteriaException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
-> | <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。<br/>不支援從 .NET Framework 到 .NET Core 的序列化。 |
+> | <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。<br/>不支援從 .NET Framework 序列化為 .NET Core。 |
 > | <xref:System.Reflection.TargetException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Reflection.TargetInvocationException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Reflection.TargetParameterCountException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
@@ -279,7 +279,7 @@ ms.locfileid: "84289690"
 > | <xref:System.Security.HostProtectionException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
-> | <xref:System.Security.SecurityException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。<br/>限制的序列化資料。 |
+> | <xref:System.Security.SecurityException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。<br/>有限的序列化資料。 |
 > | <xref:System.Security.VerificationException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Security.XmlSyntaxException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.ServiceProcess.TimeoutException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
@@ -326,7 +326,7 @@ ms.locfileid: "84289690"
 > | <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
 > | <xref:System.Uri?displayProperty=nameWithType> | |
 > | <xref:System.UriFormatException?displayProperty=nameWithType> | 從 .NET Core 2.0.4 版開始。 |
-> | <xref:System.ValueTuple?displayProperty=nameWithType> | 無法在 .NET Framework 4.7 和更早版本中序列化。 |
+> | <xref:System.ValueTuple?displayProperty=nameWithType> | 無法在 .NET Framework 4.7 及更早版本中序列化。 |
 > | <xref:System.ValueType?displayProperty=nameWithType> | |
 > | <xref:System.Version?displayProperty=nameWithType> | |
 > | <xref:System.WeakReference%601?displayProperty=nameWithType> | |
@@ -350,8 +350,8 @@ ms.locfileid: "84289690"
 - [安全性和序列化](../../framework/misc/security-and-serialization.md)\
 說明在撰寫執行序列化的程式碼時要遵循的安全程式碼撰寫方針。
 
-- [.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
-說明從遠端通訊的 .NET Framework 開始的各種方法。
+- [.NET 遠端處理](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+描述從 .NET Framework 開始遠端通訊的各種方法。
 
-- [使用 ASP.NET 和 XML Web Service 用戶端所建立的 XML Web 服務](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
-描述並說明如何使用 ASP.NET 建立 XML Web Service 程式設計的文章。
+- [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+描述及解釋如何使用 ASP.NET 建立 XML Web Service 的程式文章。

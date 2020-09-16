@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 214a368ba269103093a90431cdf9e77ab5989c07
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 51041f5a9076ad360a84cc39704aedb50b77d40a
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557212"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679386"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>教學課程：使用時間序列分析和 ML.NET 預測自行車出租服務需求
 
@@ -27,7 +27,7 @@ ms.locfileid: "90557212"
 > * 儲存預測模型
 > * 使用預測模型
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 已安裝「.NET Core 跨平臺開發」工作負載， [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本或 Visual Studio 2017 15.6 版或更新版本。
 
@@ -149,7 +149,7 @@ CREATE TABLE [Rentals] (
 
     [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L31)]
 
-1. 資料集包含兩年的資料。 只有第一年的資料會用於定型，第二年則是為了比較實際值與模型所產生的預測。 使用轉換來篩選資料 [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) 。
+1. 資料集包含兩年的資料。 只有第一年的資料會用於定型，第二年則是為了比較實際值與模型所產生的預測。 使用轉換來篩選資料 [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn%2A) 。
 
     [!code-csharp [SplitData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L33-L34)]
 
@@ -163,7 +163,7 @@ CREATE TABLE [Rentals] (
 
     `forecastingPipeline`第一年採用365個資料點，並取樣或將時間序列資料集分割為30天 (每月) 間隔，如參數所指定 `seriesLength` 。 每個範例都是在每週或7天的時間範圍內進行分析。 判斷下一個期間的預測值 (s) 是時，前七天的值會用來進行預測。 模型會設定為根據參數所定義，在未來預測七個週期 `horizon` 。 因為預測是明智的猜測，所以其精確度不一定是100%。 因此，在最大和最糟的情況下，最好是以上限和下限來瞭解值的範圍。 在此情況下，下限和上限的信賴等級會設定為95%。 信賴等級可以據此增加或減少。 值愈高，範圍的範圍越多，就能達到所需的信賴程度。
 
-1. 您 [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*) 可以使用方法來定型模型，並將資料與先前定義的資料放在一起 `forecastingPipeline` 。
+1. 您 [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit%2A) 可以使用方法來定型模型，並將資料與先前定義的資料放在一起 `forecastingPipeline` 。
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L47)]
 
@@ -180,15 +180,15 @@ CREATE TABLE [Rentals] (
     }
     ```
 
-1. 在 `Evaluate` 方法中，使用方法搭配定型的模型來預測第二年的資料 [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) 。
+1. 在 `Evaluate` 方法中，使用方法搭配定型的模型來預測第二年的資料 [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) 。
 
     [!code-csharp [EvaluateForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L62)]
 
-1. 使用方法從資料取得實際的值 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 。
+1. 使用方法從資料取得實際的值 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 。
 
     [!code-csharp [GetActualRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L65-L67)]
 
-1. 使用方法取得預測值 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 。
+1. 使用方法取得預測值 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 。
 
     [!code-csharp [GetForecastRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L70-L72)]
 
@@ -221,7 +221,7 @@ CREATE TABLE [Rentals] (
 
     [!code-csharp [CreateTimeSeriesEngine](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L51)]
 
-1. 將模型儲存至 `MLModel.zip` 先前定義之變數所指定的檔案 `modelPath` 。 使用 [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint*) 方法來儲存模型。
+1. 將模型儲存至 `MLModel.zip` 先前定義之變數所指定的檔案 `modelPath` 。 使用 [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint%2A) 方法來儲存模型。
 
     [!code-csharp [SaveModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L52)]
 
@@ -236,7 +236,7 @@ CREATE TABLE [Rentals] (
     }
     ```
 
-1. 在 `Forecast` 方法中，使用 [`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict*) 方法來預測接下來七天的租用。
+1. 在 `Forecast` 方法中，使用 [`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict%2A) 方法來預測接下來七天的租用。
 
     [!code-csharp [SingleForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L91)]
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 69da9329f140121b66c71d4cf2e99e9d14a1b207
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 430ab65af52282ccb1d429cd2523efe213f13609
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071350"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543547"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指示詞
 
-將泛型的約束類型參數傳遞給泛型類型的構造函數。
+將泛型的條件約束類型引數傳遞至泛型型別的函式。
 
 ## <a name="xaml-attribute-usage"></a>XAML Attribute Usage
 
@@ -31,63 +31,63 @@ ms.locfileid: "82071350"
 
 |||
 |-|-|
-|`object`|XAML 類型的物件元素聲明,由CLR泛型類型支援。 如果`object`引用的 XAML 類型不是來自預設的 XAML 命名空間`object`,則需要一個前`object`綴來指示存在存在的 XAML 命名空間。|
-|`typeString`|將一個或多個 XAML 類型名稱聲明為字串的字串,該字串提供 CLR 泛型類型的類型參數。 有關其他語法註釋,請參閱備註。|
+|`object`|XAML 型別的物件元素宣告，由 CLR 泛型型別支援。 如果 `object` 參考不是來自預設 xaml 命名空間的 xaml 型別，則 `object` 需要前置詞來表示 xaml 命名空間（如果 `object` 有的話）。|
+|`typeString`|將一或多個 XAML 型別名稱宣告為字串的字串，它會提供 CLR 泛型型別的型別引數。 如需其他語法注意事項，請參閱備註。|
 
 ## <a name="remarks"></a>備註
 
-在大多數情況下,用作字串中的資訊項目的 XAML 型態是預`typeString`固定的 。 CLR 泛型約束的典型類型(<xref:System.Int32>例如<xref:System.String>和 ) 來自CLR基類庫。 這些庫不映射到典型的特定於框架的預設 XAML 命名空間,因此需要 XAML 用法的前置碼映射。
+在大部分的情況下，當做字串中的資訊專案使用的 XAML 型別會加上前置詞 `typeString` 。 例如，CLR 泛型條件約束的一般類型 (， <xref:System.Int32> 而 <xref:System.String>) 來自 CLR 基類庫。 這些程式庫不會對應至一般架構特定的預設 XAML 命名空間，因此需要 XAML 使用的前置詞對應。
 
-可以使用逗號分隔符指定多個 XAML 類型名稱。
+您可以使用逗號分隔符號指定一個以上的 XAML 類型名稱。
 
-如果泛型約束本身使用泛型類型,則嵌套約束類型參數可以由括弧 () 包含。
+如果泛型條件約束本身使用泛型型別，則可以使用括弧 ( # A1 來包含嵌套的條件約束型別引數。
 
-請注意,此`x:TypeArguments`定義特定於 .NET XAML 服務並使用 CLR 支援。 可在[\[MS-XAML\]第 5.3.11 節中](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))找到語言級別的定義。
+請注意，這個定義 `x:TypeArguments` 是 .NET XAML 服務和使用 CLR 支援的特定。 您可以在[ \[ 5.3.11 的 MS XAML \] 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))中找到語言層級定義。
 
 ## <a name="usage-examples"></a>使用方式範例
 
-對於這些範例,假定聲明了以下 XAML 命名空間定義:
+在這些範例中，假設已宣告下列 XAML 命名空間定義：
 
 ```xaml
 xmlns:sys="clr-namespace:System;assembly=mscorlib"
 xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```
 
-### <a name="liststring"></a>清單\<字串>
+### <a name="liststring"></a>清單\<String>
 
-`<scg:List x:TypeArguments="sys:String" ...>`實體化具有類型參數的新<xref:System.Collections.Generic.List%601><xref:System.String>。
+`<scg:List x:TypeArguments="sys:String" ...>`<xref:System.Collections.Generic.List%601>使用型別引數具現化新的 <xref:System.String> 。
 
-### <a name="dictionarystringstring"></a>字典\<字串,字串>
+### <a name="dictionarystringstring"></a>字典\<String,String>
 
-`<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`實例化具有兩<xref:System.Collections.Generic.Dictionary%602><xref:System.String>個類型參數的新參數。
+`<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`<xref:System.Collections.Generic.Dictionary%602>以兩個型別引數具現化新的 <xref:System.String> 。
 
-### <a name="queuekeyvaluepairstringstring"></a>佇列<鍵值字串\<,字串>>
+### <a name="queuekeyvaluepairstringstring"></a>佇列<KeyValuePair\<String,String>>
 
-`<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`實例化具有 內部<xref:System.Collections.Generic.Queue%601>約束<xref:System.String>類型<xref:System.String><xref:System.Collections.Generic.KeyValuePair%602>參數和約束的新。
+`<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`<xref:System.Collections.Generic.Queue%601>具現化具有 <xref:System.Collections.Generic.KeyValuePair%602> 具有內部條件約束類型引數和之條件約束的新 <xref:System.String> <xref:System.String> 。
 
-## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 與 WPF 通用 XAML 用法
+## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 和 WPF 泛型 XAML 用法
 
-對於用於 WPF 應用程式的 XAML 2006 用法和`x:TypeArguments`XAML,一般 對 XAML 和泛型類型用法存在以下限制:
+針對 WPF 應用程式使用的 XAML 2006 使用方式和 XAML，通常會對 `x:TypeArguments` xaml 和泛型型別用法有下列限制：
 
-- 只有 XAML 檔的根元素才能支援引用泛型類型的泛型 XAML 用法。
+- 只有 XAML 檔案的根項目可以支援參考泛型型別的一般 XAML 用法。
 
-- 根元素必須映射到具有至少一個類型參數的泛型類型。 例如 <xref:System.Windows.Navigation.PageFunction%601>。 頁面函數是 WPF 中 XAML 通用使用支援的主要方案。
+- 根項目必須對應至具有至少一個型別引數的泛型型別。 例如 <xref:System.Windows.Navigation.PageFunction%601>。 頁面函式是 WPF 中 XAML 一般使用方式支援的主要案例。
 
-- 泛型的根元素 XAML 物件元素還`x:Class`必須使用 聲明部分類。 即使定義 WPF 生成操作也是如此。
+- 泛型的根項目 XAML 物件元素也必須使用宣告部分類別 `x:Class` 。 即使定義 WPF 組建動作也是如此。
 
-- `x:TypeArguments`不能引用嵌套的泛型約束。
+- `x:TypeArguments` 無法參考嵌套泛型條件約束。
 
-## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 或 XAML 2006,沒有 WPF 3.0 或 WPF 3.5 依賴項
+## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 或 XAML 2006，沒有 WPF 3.0 或 WPF 3.5 的相依性
 
-在 .NET XAML 服務中,XAML 2006 或 XAML 2009 中,放寬了與 WPF 相關的通用 XAML 使用限制。 您可以在支援類型系統和物件模型可以支援的任何位置實例化 XAML 標記中的任何位置的泛型物件元素。
+在 XAML 2006 或 XAML 2009 的 .NET XAML 服務中，會放寬對泛型 XAML 用法的 WPF 相關限制。 您可以在支援型別系統和物件模型可支援的 XAML 標記中，于任何位置具現化泛型物件元素。
 
-如果使用 XAML 2009 而不是映射 CLR 基類型以獲取通用語言基元中的 XAML 類型,則可以[將通用 XAML 語言基元的內置類型](types-for-primitives.md)用作 中的`typeString`資訊項。 例如,您可以聲明以下內容(未顯示前置碼映射,但 x 是 XAML 2009 的 XAML 語言 XAML 命名空間):
+如果您使用 XAML 2009，而不是對應 CLR 基底型別來取得通用語言基本類型的 XAML 型別，您可以使用 [通用 XAML 語言基本類型的內建類型](types-for-primitives.md) 作為中的資訊專案 `typeString` 。 例如，您可以宣告下列未顯示的 (前置詞對應，但 x 是 xaml 2009) 的 XAML 語言 XAML 命名空間：
 
 ```xaml
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>
 ```
 
-在 WPF 中,當定位 .NET 框架 4 或 .NET Core 3.0(或更高版本)時,`x:TypeArguments`您可以將 XAML 2009 功能與鬆散的 XAML(未標記編譯的 XAML)一起使用,但僅限於這些功能。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。 如果需要標記編譯 XAML,則必須在[XAML 2006 和 WPF 通用 XAML 用法](#xaml-2006-and-wpf-generic-xaml-usages)部分中所述的限制下操作。 BAML 僅在 .NET 框架中受支援。
+在 WPF 中，以 .NET Framework 4 或 .NET Core 3.0 (或更新版本的) 為目標時，您可以搭配使用 XAML 2009 功能與， `x:TypeArguments` 但僅適用于不是標記編譯) 的鬆散 xaml (xaml。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。 如果您需要標記編譯 XAML，您必須依照 [xaml 2006 和 WPF 泛型 XAML 使用](#xaml-2006-and-wpf-generic-xaml-usages) 方式一節中所述的限制來操作。 只有 .NET Framework 才支援 BAML。
 
 ## <a name="see-also"></a>另請參閱
 

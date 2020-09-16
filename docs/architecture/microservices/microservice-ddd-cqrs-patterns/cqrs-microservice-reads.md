@@ -2,12 +2,12 @@
 title: 在 CQRS 微服務中實作讀取/查詢
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 查詢端使用 Dapper 在 eShopOnContainers 訂購微服務上的實作。
 ms.date: 10/08/2018
-ms.openlocfilehash: 41932122326cf4c49b9c9e2c344d2ac17da7466b
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: e6ea7b4b7b37df9ee972319f597ab045bf3bd215
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358891"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678799"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服務中實作讀取/查詢
 
@@ -173,7 +173,7 @@ public class OrderSummary
 }
 ```
 
-這是就長期而言，明確的傳回型別優於動態類型的另一個原因。 使用 `ProducesResponseType` 屬性時，您也可以可能的 HTTP 錯誤/程式碼來指定預期結果的內容，例如 200、400 等等。
+這是就長期而言，明確的傳回型別優於動態類型的另一個原因。 使用屬性時 `ProducesResponseType` ，您也可以指定預期的 HTTP 錯誤/代碼可能結果，例如200、400等等。
 
 在下圖中，您會看到 Swagger UI 如何顯示 ResponseType 資訊。
 

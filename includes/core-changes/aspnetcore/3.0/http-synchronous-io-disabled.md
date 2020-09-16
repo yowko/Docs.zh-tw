@@ -6,30 +6,30 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901776"
 ---
-### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP：在所有伺服器上禁用同步 IO
+### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP：所有伺服器中的同步 IO 已停用
 
-從 ASP.NET 酷 3.0 開始，預設情況下禁用同步伺服器操作。
+從 ASP.NET Core 3.0 開始，預設會停用同步伺服器作業。
 
 #### <a name="change-description"></a>變更描述
 
-`AllowSynchronousIO`是每個伺服器中啟用或禁用同步 IO API 的選項，如`HttpRequest.Body.Read` `HttpResponse.Body.Write`。`Stream.Flush`和 。 長期以來，這些 API 一直是執行緒不足和應用程式掛起的來源。 從 ASP.NET 酷 3.0 預覽 3 中開始，預設情況下將禁用這些同步操作。
+`AllowSynchronousIO` 是每部伺服器中的選項，可啟用或停用同步 IO Api `HttpRequest.Body.Read` ，例如、 `HttpResponse.Body.Write` 和 `Stream.Flush` 。 這些 Api 很久就是執行緒耗盡的來源，而應用程式會停止回應。 從 ASP.NET Core 3.0 Preview 3 開始，預設會停用這些同步作業。
 
 受影響的伺服器：
 
 - Kestrel
 - HttpSys
-- IIS 在流程中
-- 測試伺服器
+- IIS 同進程
+- TestServer
 
-預期錯誤類似于：
+預期的錯誤如下：
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-每個伺服器都有一`AllowSynchronousIO`個選項，用於控制此行為，並且所有伺服器的預設值現在`false`為 。
+每一部伺服器都有一個 `AllowSynchronousIO` 選項，可控制這個行為，而所有的預設值都是 `false` 。
 
-也可以根據請求重寫該行為作為臨時緩解。 例如：
+也可以根據每個要求覆寫此行為，以暫時降低風險。 例如：
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();
@@ -39,35 +39,35 @@ if (syncIOFeature != null)
 }
 ```
 
-如果在 中調用同步`TextWriter`API 的或其他流時遇到問題`Dispose`，請改為調用`DisposeAsync`新的 API。
+如果您 `TextWriter` 在中有或另一個呼叫同步 API 的資料流程遇到問題 `Dispose` ，請改為呼叫新的 `DisposeAsync` api。
 
-有關討論，請參閱[點網/阿斯平核心#7644](https://github.com/dotnet/aspnetcore/issues/7644)。
+如需討論，請參閱 [dotnet/aspnetcore # 7644](https://github.com/dotnet/aspnetcore/issues/7644)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-`HttpRequest.Body.Read`，`HttpResponse.Body.Write`預設情況下`Stream.Flush`允許。
+`HttpRequest.Body.Read``HttpResponse.Body.Write` `Stream.Flush` 預設允許、和。
 
 #### <a name="new-behavior"></a>新的行為
 
-預設情況下不允許這些同步 API：
+預設不允許這些同步的 Api：
 
-預期錯誤類似于：
+預期的錯誤如下：
 
 - `Synchronous operations are disallowed. Call ReadAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call WriteAsync or set AllowSynchronousIO to true instead.`
 - `Synchronous operations are disallowed. Call FlushAsync or set AllowSynchronousIO to true instead.`
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-這些同步 API 長期以來一直是執行緒不足和應用程式掛起的來源。 從 ASP.NET 酷 3.0 預覽 3 中開始，預設情況下將禁用同步操作。
+這些同步 Api 很久就是執行緒耗盡的來源，而應用程式會停止回應。 從 ASP.NET Core 3.0 Preview 3 開始，同步作業預設為停用。
 
 #### <a name="recommended-action"></a>建議的動作
 
-使用方法的非同步版本。 也可以根據請求重寫該行為作為臨時緩解。
+使用方法的非同步版本。 也可以根據每個要求覆寫此行為，以暫時降低風險。
 
 ```csharp
 var syncIOFeature = HttpContext.Features.Get<IHttpBodyControlFeature>();

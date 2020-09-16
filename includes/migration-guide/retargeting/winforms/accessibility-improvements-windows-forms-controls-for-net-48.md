@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e528a41748d9353c96d443f68e15e7a98ee7f4ae
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 882c4c0455b7df538079ffe1b7d1d7ca8af1904a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617797"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606547"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-48"></a>已改進 .NET 4.8 之 Windows Forms 控制項的協助工具
 
@@ -18,10 +18,10 @@ Windows Forms Framework 利用協助工具技術，持續改善運作方式，�
 
 #### <a name="suggestion"></a>建議
 
-**如何加入宣告或退出這些變更**為了讓應用程式受益于這些變更，它必須在 .NET Framework 4.8 上執行。 應用程式可以用下列任一種方式選擇使用這些變更：
+**如何加入宣告或退出這些變更** 為了讓應用程式受益于這些變更，它必須在 .NET Framework 4.8 上執行。 應用程式可以用下列任一種方式選擇使用這些變更：
 
 - 將其重新編譯為以 .NET Framework 4.8 為目標。 在以 .NET Framework 4.8 為目標的 Windows Forms 應用程式上，預設會啟用這些協助工具的變更。
-- 其以 .NET Framework 4.7.2 或更早版本為目標，且藉由在應用程式組態檔的 `<runtime>` 區段中新增下列 [AppContext 參數](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element)，並設定為 `false`，選擇不使用舊版協助工具行為，如下範例所示。
+- 其以 .NET Framework 4.7.2 或更早版本為目標，且藉由在應用程式組態檔的 `<runtime>` 區段中新增下列 [AppContext 參數](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)，並設定為 `false`，選擇不使用舊版協助工具行為，如下範例所示。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -42,7 +42,7 @@ Windows Forms Framework 利用協助工具技術，持續改善運作方式，�
 <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.System.Windows.Forms.UseLegacyToolTipDisplay=false" />
 ```
 
-請注意，啟用這項功能需要選擇使用上述 .NET Framework 4.7.1 - 4.8 的協助工具功能。 此外，如果未選擇使用任何協助工具，但選擇使用了工具提示顯示功能，則在第一次存取這些功能時將擲回執行階段 <xref:System.NotSupportedException>。 例外狀況訊息指出鍵盤工具提示需要啟用層級3的協助工具改善。
+請注意，啟用這項功能需要選擇使用上述 .NET Framework 4.7.1 - 4.8 的協助工具功能。 此外，如果未選擇使用任何協助工具，但選擇使用了工具提示顯示功能，則在第一次存取這些功能時將擲回執行階段 <xref:System.NotSupportedException>。 例外狀況訊息指出鍵盤工具提示需要啟用層級3的協助工具改進。
 
 **使用高對比佈景主題中作業系統定義的色彩**
 
@@ -67,14 +67,14 @@ Windows Forms Framework 利用協助工具技術，持續改善運作方式，�
 
 **改善的 LinkLabel 協助工具支援**
 
-- 改良 <xref:System.Windows.Forms.LinkLabel> 的控制項協助工具：如果停用對應的控制項，朗讀程式會宣佈已停用的連結狀態 <xref:System.Windows.Forms.LinkLabel> 。
+- 改良 <xref:System.Windows.Forms.LinkLabel> 的控制項協助工具：當對應的 <xref:System.Windows.Forms.LinkLabel> 控制項已停用時，朗讀程式會宣佈連結的停用狀態。
 
 **改善的進度列協助工具支援**
 
 - 已啟用 <xref:System.Windows.Forms.ProgressBar> 控制項的 UI 自動化支援，並可使用 UI 自動化通知和其他 UI 自動化功能。 開發人員現在可以使用 UI 自動化通知，朗讀程式可以透過這些通知顯示進度。
-如需 UI 自動化事件總覽（包括 UI 自動化通知事件）的總覽，請參閱[Ui 自動化事件總覽](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-eventsoverview)。
+如需使用者介面自動化事件總覽（包括 UI 自動化通知事件）的總覽，請參閱 [消費者介面自動化事件總覽](/windows/desktop/WinAuto/uiauto-eventsoverview)。
 
-**改良的 PropertyGrid 協助工具支援**
+**改善的 PropertyGrid 協助工具支援**
 
 - 已啟用 <xref:System.Windows.Forms.PropertyGrid> 控制項的 UI 自動化支援，並可使用 UI 自動化通知和其他 UI 自動化功能。
 - 與當前已編輯屬性對應的 UI 自動化項目，現為對應屬性項目 UI 自動化項目的子項目。
@@ -89,14 +89,14 @@ Windows Forms Framework 利用協助工具技術，持續改善運作方式，�
 **已改進視覺提示**
 
 - 空白 <xref:System.Windows.Forms.CheckedListBox> 控制項現會在收到焦點時顯示焦點指標。
-注意：在執行時間中，控制項的 UI 自動化支援已啟用，但不會在設計階段中使用。 如需 UI 自動化的概觀，請參閱 [UI 自動化概觀](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview)。
+注意：在執行時間中，控制項的 UI 自動化支援已啟用，但不會在設計階段中使用。 如需 UI 自動化的概觀，請參閱 [UI 自動化概觀](../../../../docs/framework/ui-automation/ui-automation-overview.md)。
 
 **使用鍵盤叫用控制項的工具提示**
 
-- 現在可以把焦點放在使用鍵盤控制，叫用控制項工具提示。 應用程式必須明確啟用此功能（請參閱** &quot; 如何加入宣告或退出這些變更 &quot; **一節）
+- 現在可以把焦點放在使用鍵盤控制，叫用控制項工具提示。 您必須為應用程式明確啟用這項功能 (請參閱一節** &quot; 如何加入宣告或退出這些變更 &quot; **) 
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   | 主要       |
+| 範圍   | 主要       |
 | 版本 | 4.8         |
 | 類型    | 正在重定目標 |

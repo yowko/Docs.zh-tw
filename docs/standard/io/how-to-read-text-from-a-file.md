@@ -1,6 +1,6 @@
 ---
 title: 如何：從檔案讀取文字
-description: 在本文中，請參閱如何在 .NET 中使用桌面應用程式的 StreamReader 類別，以同步或非同步方式從文字檔讀取文字的範例。
+description: 在本文中，您可以使用適用于傳統型應用程式的 .NET 中的 StreamReader 類別，查看如何以同步或非同步方式從文字檔讀取文字的範例。
 ms.date: 01/03/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 0d8dfae67ede779a611204fb333a19defcaee8e6
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: fafd1cda13b46e56183489aa15d3c4df9051ae06
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382122"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553931"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：從檔案讀取文字
 下列範例將示範如何以同步和非同步方式，從使用適用於桌面應用程式的 .NET 之文字檔讀取文字。 在這兩個範例中，當您建立 <xref:System.IO.StreamReader> 類別的執行個體時，會提供檔案的相對路徑或絕對路徑。
   
 > [!NOTE]
-> 由於 Windows 執行階段提供不同的資料流類型來讀取和寫入檔案，因此這些程式碼不適用於 Universal Windows (UWP) 應用程式的開發工作。 如需說明如何從 UWP 應用程式中的檔案讀取文字的範例，請參閱[快速入門：讀取和寫入](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10))檔案。 如需示範如何在 .NET Framework 資料流程和 Windows 執行階段資料流程之間進行轉換的範例，請參閱[如何：在 .NET Framework 資料流程和 Windows 執行階段資料流程之間進行轉換](how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
+> 由於 Windows 執行階段提供不同的資料流類型來讀取和寫入檔案，因此這些程式碼不適用於 Universal Windows (UWP) 應用程式的開發工作。 如需顯示如何在 UWP 應用程式中從檔案讀取文字的範例，請參閱 [快速入門：讀取和寫入](/previous-versions/windows/apps/hh758325(v=win.10))檔案。 如需示範如何在 .NET Framework 資料流程和 Windows 執行階段資料流程之間轉換的範例，請參閱 [如何：在 .NET Framework 資料流程和 Windows 執行階段資料流程之間進行轉換](how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
   
-## <a name="example-synchronous-read-in-a-console-app"></a>範例：主控台應用程式中的同步讀取  
+## <a name="example-synchronous-read-in-a-console-app"></a>範例：在主控台應用程式中同步讀取  
 下列範例將示範在主控台應用程式內的同步讀取作業。 此範例會使用資料流讀取器開啟文字檔、將內容複製到字串，並將字串輸出至主控台。  
   
 > [!IMPORTANT]
@@ -50,8 +50,8 @@ ms.locfileid: "87382122"
 - <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
 - <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
 - [非同步檔案 I/O](asynchronous-file-i-o.md)  
-- [How to：建立目錄清單](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
-- [快速入門：讀取和寫入檔案](https://docs.microsoft.com/previous-versions/windows/apps/hh758325%28v=win.10%29)  
+- [如何：建立目錄清單](/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
+- [快速入門：讀取和寫入檔案](/previous-versions/windows/apps/hh758325(v=win.10))  
 - [如何：在 .NET Framework 資料流程和 Windows 執行階段資料流程之間轉換](how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
 - [如何：讀取和寫入新建立的資料檔案](how-to-read-and-write-to-a-newly-created-data-file.md)  
 - [如何：開啟並附加至記錄檔](how-to-open-and-append-to-a-log-file.md)  

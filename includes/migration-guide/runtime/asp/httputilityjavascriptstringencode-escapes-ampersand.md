@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 12fb72d5ee9fc0d6c57899589cb2b0da7db41f4a
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: b648aee35ff44730f545f0fa06f4e0a86615dece
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496404"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606204"
 ---
 ### <a name="httputilityjavascriptstringencode-escapes-ampersand"></a>HttpUtility.JavaScriptStringEncode 會逸出 & 符號
 
@@ -14,7 +14,7 @@ ms.locfileid: "89496404"
 
 #### <a name="suggestion"></a>建議
 
-如果您的應用程式相依於此方法的舊版行為，您可以將 aspnet:JavaScriptDoNotEncodeAmpersand 設定新增至組態檔中的 [ASP.NET appSettings 項目](https://docs.microsoft.com/previous-versions/aspnet/hh975440(v=vs.120))。
+如果您的應用程式相依於此方法的舊版行為，您可以將 aspnet:JavaScriptDoNotEncodeAmpersand 設定新增至組態檔中的 [ASP.NET appSettings 項目](/previous-versions/aspnet/hh975440(v=vs.120))。
 
 | 名稱    | 值       |
 |:--------|:------------|

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a2ebad329f583d35f110c5db053eebfa80ace6e2
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 8f0a9e7f2cc55ed649ee9569e945ed99671295fc
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359320"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679438"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教學課程：透過 ML.NET 影像分類 API 使用傳輸學習進行自動視覺化檢查
 
@@ -26,7 +26,7 @@ ms.locfileid: "89359320"
 > - 使用轉移學習將自訂 TensorFlow 影像分類模型定型
 > - 使用自訂模型分類影像
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 已安裝「.NET Core 跨平臺開發」工作負載， [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本或 Visual Studio 2017 15.6 版或更新版本。
 
@@ -116,7 +116,7 @@ SDNET2018 是影像資料集，其中包含已破解和未破解的實體結構 
 
 在本教學課程中，只會使用 bridge 組映射。
 
-1. 下載 [資料集](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/assets.zip) 並解壓縮。
+1. 下載 [資料集](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/assets.zip) 並解壓縮。
 1. 在專案中建立名為「資產」的目錄，以儲存資料集檔案。
 1. 將 *CD* 和 *UD* 子目錄從最近解壓縮的目錄複寫到 *資產* 目錄。
 
@@ -224,19 +224,19 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L22)]
 
-1. 然後，使用方法將影像載入中 [`IDataView`](xref:Microsoft.ML.IDataView) [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) 。
+1. 然後，使用方法將影像載入中 [`IDataView`](xref:Microsoft.ML.IDataView) [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable%2A) 。
 
     [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L24)]
 
-1. 資料會以從目錄中讀取的順序載入。 若要平衡資料，請使用方法來將資料隨機播放 [`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows*) 。
+1. 資料會以從目錄中讀取的順序載入。 若要平衡資料，請使用方法來將資料隨機播放 [`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows%2A) 。
 
     [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L26)]
 
-1. 機器學習模型會預期輸入為數字格式。 因此，必須在定型之前對資料進行一些前置處理。 建立 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 和轉換所組成的 [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) `LoadRawImageBytes` 。 `MapValueToKey`轉換會採用資料行中的類別值 `Label` ，將其轉換為數值， `KeyType` 並將其儲存在名為的新資料行中 `LabelAsKey` 。 `LoadImages`會採用資料行中的值 `ImagePath` 以及 `imageFolder` 參數來載入要定型的影像。
+1. 機器學習模型會預期輸入為數字格式。 因此，必須在定型之前對資料進行一些前置處理。 建立 [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) 和轉換所組成的 [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) `LoadRawImageBytes` 。 `MapValueToKey`轉換會採用資料行中的類別值 `Label` ，將其轉換為數值， `KeyType` 並將其儲存在名為的新資料行中 `LabelAsKey` 。 `LoadImages`會採用資料行中的值 `ImagePath` 以及 `imageFolder` 參數來載入要定型的影像。
 
     [!code-csharp [PreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L28-L34)]
 
-1. 您 [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) 可以使用方法，將資料套用至，然後使用方法來傳回 `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*) [`IDataView`](xref:Microsoft.ML.IDataView) 包含預先處理資料的。
+1. 您 [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A) 可以使用方法，將資料套用至，然後使用方法來傳回 `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) [`Transform`](xref:Microsoft.ML.Data.TransformerChain%601.Transform%2A) [`IDataView`](xref:Microsoft.ML.IDataView) 包含預先處理資料的。
 
     [!code-csharp [PreprocessData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L36-L38)]
 
@@ -276,7 +276,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [TrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L60-L61)]
 
-1. 使用 [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) 方法來定型您的模型。
+1. 使用 [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A) 方法來定型您的模型。
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L63)]
 
@@ -303,11 +303,11 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L74)]
 
-1. 若要存取單一 `ModelInput` 實例，請使用方法將轉換成，然後 `data` [`IDataView`](xref:Microsoft.ML.IDataView) [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 取得第一次觀察。
+1. 若要存取單一 `ModelInput` 實例，請使用方法將轉換成，然後 `data` [`IDataView`](xref:Microsoft.ML.IDataView) [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 取得第一次觀察。
 
     [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L76)]
 
-1. 使用 [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict*) 方法來分類影像。
+1. 使用 [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) 方法來分類影像。
 
     [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L78)]
 
@@ -330,11 +330,11 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
     }
     ```
 
-1. [`IDataView`](xref:Microsoft.ML.IDataView)使用方法建立包含預測的 [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) 。 將下列程式碼新增至 `ClassifyImages` 方法內。
+1. [`IDataView`](xref:Microsoft.ML.IDataView)使用方法建立包含預測的 [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) 。 將下列程式碼新增至 `ClassifyImages` 方法內。
 
     [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L86)]
 
-1. 為了反復查看預測，請使用方法將轉換 `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView) 成， [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 然後取得前10個觀察值。
+1. 為了反復查看預測，請使用方法將轉換 `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView) 成， [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) 然後取得前10個觀察值。
 
     [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L88)]
 

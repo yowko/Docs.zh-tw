@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: dcb311523c6ec41b62f6e69fe6bc7635b9d49708
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c87583bec908c3465dedf7c542e30ce264cd7b47
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595228"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553775"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
-此案例顯示由訊息安全性模式保護的 Windows Communication Foundation （WCF）用戶端和伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
+此案例顯示 Windows Communication Foundation (WCF) 用戶端，以及由訊息安全性模式保護的伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
   
  ![Windows 用戶端的訊息安全性](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
@@ -24,7 +24,7 @@ ms.locfileid: "84595228"
 |驗證 (伺服器)|交互驗證伺服器和用戶端|  
 |驗證 (用戶端)|交互驗證伺服器和用戶端|  
 |完整性|是，使用共用安全性內容|  
-|保密|是，使用共用安全性內容|  
+|機密性|是，使用共用安全性內容|  
 |傳輸|NET.TCP|  
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
   
@@ -116,7 +116,7 @@ ms.locfileid: "84595228"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [安全性總覽](security-overview.md)
-- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [安全性概觀](security-overview.md)
+- [Windows Server AppFabric 的資訊安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -4,12 +4,12 @@ description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 761be4001c1a7e6be8e6aeb32b1d44f0100d0bd1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d9a218e57756ad8b95248193325e902c1798cc37
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540819"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679660"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
@@ -262,7 +262,7 @@ ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) �
 
 您可以在[機器學習工作](resources/tasks.md)指南中深入了解不同機器學習工作的輸出資料行。
 
-DataView 物件的重要屬性是它們都**延遲**評估。 資料檢視只會在模型定型和評估期間以及資料預測期間載入及操作。 當您撰寫和測試 ML.NET 應用程式時，您可以呼叫 [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*) 方法，使用 Visual Studio 偵錯工具看一下任何資料檢視物件。
+DataView 物件的重要屬性是它們都**延遲**評估。 資料檢視只會在模型定型和評估期間以及資料預測期間載入及操作。 當您撰寫和測試 ML.NET 應用程式時，您可以呼叫 [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview%2A) 方法，使用 Visual Studio 偵錯工具看一下任何資料檢視物件。
 
 ```csharp
     var debug = testPriceDataView.Preview();

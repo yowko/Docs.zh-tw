@@ -26,7 +26,7 @@ ms.locfileid: "90538692"
 > - 分析呼叫堆疊和同步區塊
 > - 診斷和解決鎖死
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 教學課程會使用：
 

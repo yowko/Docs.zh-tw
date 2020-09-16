@@ -6,15 +6,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/20/2020
 ms.locfileid: "86474370"
 ---
-### <a name="kestrel-libuv-transport-marked-as-obsolete"></a>Kestrel：已標記為過時的 Libuv 傳輸
+### <a name="kestrel-libuv-transport-marked-as-obsolete"></a>Kestrel： Libuv 傳輸標示為已淘汰
 
-舊版的 ASP.NET Core 使用 Libuv 作為非同步輸入和輸出執行方式的實作為詳細資料。 在 ASP.NET Core 2.0 中，開發了以替代為 <xref:System.Net.Sockets.Socket> 基礎的傳輸。 在 ASP.NET Core 2.1 中，Kestrel 預設會切換為使用以為 `Socket` 基礎的傳輸。 基於相容性考慮，已維護 Libuv 支援。
+舊版 ASP.NET Core 使用 Libuv 作為非同步輸入和輸出執行方式的執行詳細資料。 在 ASP.NET Core 2.0 中，開發了替代的 <xref:System.Net.Sockets.Socket> 型傳輸。 在 ASP.NET Core 2.1 中，Kestrel 預設會切換為使用以 `Socket` 傳輸為基礎的傳輸。 基於相容性考慮，已維持 Libuv 支援。
 
-此時，使用以為基礎的 `Socket` 傳輸遠比 Libuv 傳輸更常見。 因此，Libuv 支援在 .NET 5.0 中標示為已淘汰，將完全在 .NET 6.0 中移除。
+到目前為止，使用以 `Socket` 傳輸為基礎的傳輸比 Libuv 傳輸更為普遍。 因此，Libuv 支援在 .NET 5.0 中會標示為已淘汰，而且將完全在 .NET 6.0 中移除。
 
-做為這項變更的一部分，將不會在 .NET 5.0 時間範圍內新增作業系統平臺（例如 Windows ARM64）的 Libuv 支援。
+作為這項變更的一部分，Libuv 支援新的作業系統平臺 (例如 Windows ARM64) 不會加入 .NET 5.0 時間範圍中。
 
-如需有關封鎖需要使用 Libuv 傳輸之問題的討論，請參閱 GitHub 問題： [dotnet/aspnetcore # 23409](https://github.com/dotnet/aspnetcore/issues/23409)。
+如需封鎖需要使用 Libuv 傳輸之問題的討論，請參閱 GitHub 在 [dotnet/aspnetcore # 23409](https://github.com/dotnet/aspnetcore/issues/23409)的問題。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -22,7 +22,7 @@ ms.locfileid: "86474370"
 
 #### <a name="old-behavior"></a>舊的行為
 
-Libuv Api 不會標示為已淘汰。
+Libuv Api 未標示為已淘汰。
 
 #### <a name="new-behavior"></a>新的行為
 
@@ -30,11 +30,11 @@ Libuv Api 會標示為已淘汰。
 
 #### <a name="reason-for-change"></a>變更的原因
 
-以為 `Socket` 基礎的傳輸是預設值。 繼續使用 Libuv 傳輸沒有任何說服力的理由。
+以 `Socket` 傳輸為基礎的預設值。 繼續使用 Libuv 傳輸沒有任何吸引人的理由。
 
 #### <a name="recommended-action"></a>建議的動作
 
-停止使用[Libuv 封裝](https://www.nuget.org/packages/Libuv)和擴充方法。
+不再使用 [Libuv 封裝](https://www.nuget.org/packages/Libuv) 和擴充方法。
 
 #### <a name="category"></a>類別
 
@@ -42,8 +42,8 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-- [Webhostbuilderlibuvextensions.uselibuv](/dotnet/api/microsoft.aspnetcore.hosting.webhostbuilderlibuvextensions?view=aspnetcore-3.0)
-- [Webhostbuilderlibuvextensions.uselibuv. Webhostbuilderlibuvextensions.uselibuv](/dotnet/api/microsoft.aspnetcore.hosting.webhostbuilderlibuvextensions.uselibuv?view=aspnetcore-3.0)
+- [>webhostbuilderlibuvextensions.uselibuv](/dotnet/api/microsoft.aspnetcore.hosting.webhostbuilderlibuvextensions?view=aspnetcore-3.0)
+- [>webhostbuilderlibuvextensions.uselibuv. >webhostbuilderlibuvextensions.uselibuv](/dotnet/api/microsoft.aspnetcore.hosting.webhostbuilderlibuvextensions.uselibuv?view=aspnetcore-3.0)
 - [AspNetCore. Kestrel. Libuv. LibuvTransportOptions](/dotnet/api/microsoft.aspnetcore.server.kestrel.transport.libuv.libuvtransportoptions?view=aspnetcore-3.0)
 - [AspNetCore. Kestrel. Libuv. LibuvTransportOptions. ThreadCount](/dotnet/api/microsoft.aspnetcore.server.kestrel.transport.libuv.libuvtransportoptions.threadcount?view=aspnetcore-3.0)
 - [AspNetCore. Kestrel. Libuv. LibuvTransportOptions. NoDelay](/dotnet/api/microsoft.aspnetcore.server.kestrel.transport.libuv.libuvtransportoptions.nodelay?view=aspnetcore-3.0)

@@ -8,13 +8,13 @@ ms.locfileid: "86281330"
 ---
 ### <a name="winforms-methods-now-throw-argumentnullexception"></a>WinForms 方法現在會擲回 System.argumentnullexception
 
-有些 Windows Forms 方法現在 <xref:System.ArgumentNullException> 會針對 null 引數擲回，而先前會在其擲回 <xref:System.NullReferenceException> 。
+某些 Windows Forms 方法現在會擲回 <xref:System.ArgumentNullException> null 引數，其中先前會擲回 <xref:System.NullReferenceException> 。
 
 #### <a name="change-description"></a>變更描述
 
-先前，如果傳遞的引數為 null，某些 Windows Forms 方法會擲回 <xref:System.NullReferenceException> 。 從 .NET 5.0 開始，這些方法現在會 <xref:System.ArgumentNullException> 改為擲回 null 引數的。
+先前，如果傳遞的引數為 null，則某些 Windows Forms 方法會擲回 <xref:System.NullReferenceException> 。 從 .NET 5.0 開始，這些方法現在會擲回 <xref:System.ArgumentNullException> null 引數的。
 
-擲回會 <xref:System.ArgumentNullException> 符合 .net 執行時間的行為。 它也會藉由清楚地傳達引數為 null 和哪一個引數，來改善偵錯工具體驗。
+擲回會 <xref:System.ArgumentNullException> 符合 .net 執行時間的行為。 它也可清楚地傳達引數為 null，以及哪個引數，藉此改善偵錯工具的體驗。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -22,7 +22,7 @@ ms.locfileid: "86281330"
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果您呼叫其中任何一種方法，而且您的程式碼目前會 <xref:System.NullReferenceException> 攔截 null 引數的，請改為捕捉 <xref:System.ArgumentNullException> 。 此外，請考慮更新程式碼，以避免將 null 引數傳遞給列出的方法。
+如果您呼叫任何方法，而您的程式碼目前會 <xref:System.NullReferenceException> 攔截的是 null 引數，請改為攔截 <xref:System.ArgumentNullException> 。 此外，請考慮更新程式碼，以防止將 null 引數傳遞至列出的方法。
 
 #### <a name="category"></a>類別
 
@@ -57,7 +57,7 @@ Windows Forms
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.CopyTo(System.Object[],System.Int32)?displayProperty=nameWithType> | `destination` | Preview 6 |
 > | <xref:System.Windows.Forms.ListBox.ObjectCollection.System%23Collections%23ICollection%23CopyTo(System.Array,System.Int32)?displayProperty=nameWithType> | `destination` | Preview 6 |
 > | <xref:System.Windows.Forms.ListView.SelectedIndexCollection.%23ctor(System.Windows.Forms.ListView)> | `owner` | Preview 7 |
-> | <xref:System.Windows.Forms.TreeNodeCollection.Find(System.String,System.Boolean)?displayProperty=nameWithType> | `key`為 `null` 或空白 | Preview 8 |
+> | <xref:System.Windows.Forms.TreeNodeCollection.Find(System.String,System.Boolean)?displayProperty=nameWithType> | `key` 是 `null` 或空白 | Preview 8 |
 
 <!-- 
 

@@ -6,29 +6,29 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394177"
 ---
-### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>共用框架：刪除微軟.AspNetCore.所有
+### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>共用架構：已移除 AspNetCore
 
-從 ASP.NET 酷 3.0`Microsoft.AspNetCore.All`開始，不再生成`Microsoft.AspNetCore.All`元包和匹配的共用框架。 此包在 ASP.NET 酷 2.2 中可用，並將繼續在 ASP.NET 酷 2.1 中接收服務更新。
+從 ASP.NET Core 3.0 開始， `Microsoft.AspNetCore.All` `Microsoft.AspNetCore.All` 就不會再產生中繼套件和相符的共用架構。 此封裝可在 ASP.NET Core 2.2 中取得，並將繼續在 ASP.NET Core 2.1 中接收服務更新。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-應用可以使用`Microsoft.AspNetCore.All`元包在 .NET `Microsoft.AspNetCore.All` Core 上定位共用框架。
+應用程式可以使用 `Microsoft.AspNetCore.All` 中繼套件將目標設為 `Microsoft.AspNetCore.All` .net Core 上的共用架構。
 
 #### <a name="new-behavior"></a>新的行為
 
-.NET Core 3.0 不包括`Microsoft.AspNetCore.All`共用框架。
+.NET Core 3.0 不包含 `Microsoft.AspNetCore.All` 共用架構。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-元`Microsoft.AspNetCore.All`包包含大量外部依賴項。
+`Microsoft.AspNetCore.All`中繼套件包含許多外部相依性。
 
 #### <a name="recommended-action"></a>建議的動作
 
-遷移專案以使用`Microsoft.AspNetCore.App`框架。 以前可用的元件`Microsoft.AspNetCore.All`在 NuGet 上仍然可用。 這些元件現在隨應用一起部署，而不是包含在共用框架中。
+遷移您的專案以使用 `Microsoft.AspNetCore.App` 架構。 先前可用的元件 `Microsoft.AspNetCore.All` 仍可在 NuGet 上取得。 這些元件現在會與您的應用程式一起部署，而不會包含在共用架構中。
 
 #### <a name="category"></a>類別
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-None
+無
 
 <!-- 
 

@@ -6,9 +6,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394070"
 ---
-### <a name="authentication-oauthhandler-exchangecodeasync-signature-changed"></a>身份驗證：OAuthHandler 交換代碼同步簽名已更改
+### <a name="authentication-oauthhandler-exchangecodeasync-signature-changed"></a>驗證： OAuthHandler ExchangeCodeAsync 簽章已變更
 
-在 ASP.NET Core 3.0`OAuthHandler.ExchangeCodeAsync`中，的簽名從以下更改為：
+在 ASP.NET Core 3.0 中，的簽章 `OAuthHandler.ExchangeCodeAsync` 已變更為：
 
 ```csharp
 protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse> ExchangeCodeAsync(string code, string redirectUri) { throw null; }
@@ -20,25 +20,25 @@ protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authenticatio
 protected virtual System.Threading.Tasks.Task<Microsoft.AspNetCore.Authentication.OAuth.OAuthTokenResponse> ExchangeCodeAsync(Microsoft.AspNetCore.Authentication.OAuth.OAuthCodeExchangeContext context) { throw null; }
 ```
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-和`code``redirectUri`字串作為單獨的參數傳遞。
+`code`和 `redirectUri` 字串以個別的引數傳遞。
 
 #### <a name="new-behavior"></a>新的行為
 
-`Code`和`RedirectUri`屬性`OAuthCodeExchangeContext`可以通過`OAuthCodeExchangeContext`建構函式設置。 新`OAuthCodeExchangeContext`類型是傳遞給`OAuthHandler.ExchangeCodeAsync`的唯一參數。
+`Code` 和 `RedirectUri` 都是上的屬性，可以透過函式來 `OAuthCodeExchangeContext` 設定 `OAuthCodeExchangeContext` 。 新 `OAuthCodeExchangeContext` 類型是唯一傳遞給的引數 `OAuthHandler.ExchangeCodeAsync` 。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-此更改允許以非中斷方式提供其他參數。 無需創建新`ExchangeCodeAsync`的重載。
+這項變更可讓您以非中斷的方式提供額外的參數。 不需要建立新的多載 `ExchangeCodeAsync` 。
 
 #### <a name="recommended-action"></a>建議的動作
 
-構造`OAuthCodeExchangeContext`具有適當`code`和`redirectUri`值的 。 必須<xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties>提供實例。 此單個`OAuthCodeExchangeContext`實例可以傳遞給`OAuthHandler.ExchangeCodeAsync`多個參數，而不是多個參數。
+`OAuthCodeExchangeContext`使用適當的 `code` 和值來建立 `redirectUri` 。 <xref:Microsoft.AspNetCore.Authentication.AuthenticationProperties>必須提供實例。 此單一 `OAuthCodeExchangeContext` 實例可以傳遞給， `OAuthHandler.ExchangeCodeAsync` 而不是多個引數。
 
 #### <a name="category"></a>類別
 

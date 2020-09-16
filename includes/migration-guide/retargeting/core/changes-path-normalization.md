@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04c4fb4c8e9da8c58a5e26f78a7b13aa6a0df4a0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7c4b9faf25853c1c7a546f06c329f6f153eef904
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614340"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606943"
 ---
 ### <a name="changes-in-path-normalization"></a>路徑正規化的變更
 
@@ -17,7 +17,7 @@ ms.locfileid: "85614340"
 - 評估路徑中的相對目錄 (.) 或上層目錄 (..)。
 - 修剪指定的字元。
 從以 .NET Framework 4.6.2 為目標的應用程式開始，預設會啟用路徑正規化的下列變更：
-  - 執行階段會延後至作業系統的 [GetFullPathName](https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) 函式再進行路徑正規化。
+  - 執行階段會延後至作業系統的 [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) 函式再進行路徑正規化。
 - 正規化不再涉及修剪目錄區段的結尾 (例如目錄名稱結尾的空格)。
 - 支援完全信任的裝置路徑語法，包括 `\\.\` 以及適用於 mscorlib.dll 中之檔案 I/O API 的 `\\?\`。
 - 執行階段不會驗證裝置語法路徑。
@@ -44,6 +44,6 @@ ms.locfileid: "85614340"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   | Minor       |
+| 範圍   | Minor       |
 | 版本 | 4.6.2       |
 | 類型    | 正在重定目標 |
