@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: 87eae789478752423f3e682d4db6cead0391aa6e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 02cec3d22588d8f10d36216422bc19faafffe94b
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976919"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679517"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation"></a>使用交叉驗證定型機器學習模型
 
@@ -30,7 +30,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1120.00, 47504.98, 45129.73, 43775.84, 46792.41
 ```
 
-資料可以按類（如`HousingData`）建模並載入到 中[`IDataView`](xref:Microsoft.ML.IDataView)。
+您可以使用類似的類別模型化資料 `HousingData` ，並將其載入至 [`IDataView`](xref:Microsoft.ML.IDataView) 。
 
 ```csharp
 public class HousingData
@@ -50,9 +50,9 @@ public class HousingData
 
 ## <a name="prepare-the-data"></a>準備資料
 
-先前置處理資料，再用它建置機器學習模型。 在此示例中，`Size`和`HistoricalPrices`列合併到單個要素向量中，該向量是使用 方法輸出到稱為`Features`新列的[`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*)。 除了將資料變成 ML.NET 演算法預期的格式，串連資料行最佳化管線中的後續作業，方法是將作業一次套用到串連資料行，而不是各個資料行分別套用。
+先前置處理資料，再用它建置機器學習模型。 在此範例中， `Size` 和資料行會 `HistoricalPrices` 合併成單一特徵向量，輸出到使用方法呼叫的新資料行 `Features` [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 。 除了將資料變成 ML.NET 演算法預期的格式，串連資料行最佳化管線中的後續作業，方法是將作業一次套用到串連資料行，而不是各個資料行分別套用。
 
-將列組合到單個向量中後，[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*)將應用於要獲取`Features``Size`的列，並在`HistoricalPrices`0-1 之間的相同範圍內。
+一旦將資料行合併成單一向量， [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A) 就會套用至資料 `Features` 行，以取得 `Size` 和 `HistoricalPrices` 在0-1 之間的相同範圍內。
 
 ```csharp
 // Define data prep estimator
@@ -69,7 +69,7 @@ IDataView transformedData = dataPrepTransformer.Transform(data);
 
 ## <a name="train-model-with-cross-validation"></a>使用交叉驗證定型模型
 
-一旦資料經過預先處理，就可以定型模型。 首先，選取最能配合機器學習工作執行的演算法。 因為預測的值是數值連續值，所以工作為迴歸。 ML.NET實現的回歸演算法之一是該[`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)演算法。 要使用 方法使用交叉驗證[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*)訓練模型。
+一旦資料經過預先處理，就可以定型模型。 首先，選取最能配合機器學習工作執行的演算法。 因為預測的值是數值連續值，所以工作為迴歸。 ML.NET 所執行的其中一個回歸演算法是 [`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 演算法。 若要使用交叉驗證來定型模型，請使用 [`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate%2A) 方法。
 
 > [!NOTE]
 > 雖然這個範例使用線性迴歸模型，但除異常偵測外，CrossValidate 適用於 ML.NET 中的所有其他機器學習工作。
@@ -82,18 +82,18 @@ IEstimator<ITransformer> sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimator, numberOfFolds: 5);
 ```
 
-[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*)執行以下操作：
+[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate%2A) 會執行下列作業：
 
-1. 將資料分割成 `numberOfFolds` 參數指定值的數目。 每個分區的結果都是一個[`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData)物件。
+1. 將資料分割成 `numberOfFolds` 參數指定值的數目。 每個分割的結果都是 [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 物件。
 1. 對定型資料集使用指定的機器學習演算法評估工具，在每個分割上定型模型。
-1. 使用測試資料集上[`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*)的方法評估每個模型的性能。
+1. 每個模型的效能都是使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) 測試資料集上的方法來評估。
 1. 針對每個模型傳回模型及其計量。
 
-存儲的結果`cvResults`是[`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601)物件的集合。 此物件包括已訓練的模型以及分別可從 和[`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model)[`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics)屬性訪問的指標。 在此示例中，`Model`屬性為 類型[`ITransformer`](xref:Microsoft.ML.ITransformer)，`Metrics`屬性為 類型。 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)
+中儲存的結果 `cvResults` 是物件的集合 [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 。 此物件包含已定型的模型，以及可分別從和屬性存取的 [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) 度量 [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) 。 在此範例中， `Model` 屬性的型別是 [`ITransformer`](xref:Microsoft.ML.ITransformer) ，而且 `Metrics` 屬性的型別為 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 。
 
 ## <a name="evaluate-the-model"></a>評估模型
 
-可以通過單個`Metrics`[`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601)物件的屬性訪問不同訓練模型的指標。 在本例中，[R 平方計量](https://en.wikipedia.org/wiki/Coefficient_of_determination)是在變數 `rSquared` 中存取儲存。
+您可以透過個別物件的屬性來存取不同定型模型的計量 `Metrics` [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) 。 在本例中，[R 平方計量](https://en.wikipedia.org/wiki/Coefficient_of_determination)是在變數 `rSquared` 中存取儲存。
 
 ```csharp
 IEnumerable<double> rSquared =

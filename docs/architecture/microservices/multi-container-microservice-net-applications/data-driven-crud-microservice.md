@@ -2,12 +2,12 @@
 title: 建立簡單資料驅動 CRUD 微服務
 description: 容器化 .NET 應用程式的 .NET 微服務架構 |瞭解如何在微服務應用程式的內容中建立簡單的 CRUD (資料驅動) 微服務。
 ms.date: 08/14/2020
-ms.openlocfilehash: 4d475ba42cb0f86b57b2467549635556cab1136d
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 46654b9e6283d913910b62621d056e034c18870e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267954"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679145"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -288,7 +288,7 @@ Azure Key Vault 提供非常細微的應用程式祕密使用控制層級，且�
 
 - 標頭版本控制
 
-查詢字串及 URI 版本控制是實作最為簡單的方式。 標頭版本控制是一種不錯的方法。 然而，相較於 URI 版本控制，標頭版本控制沒有那麼明確及直接。 因為 URL 版本控制是最簡單也最為明確的，eShopOnContainers 應用程式範例便使用了 URI 版本控制。
+查詢字串及 URI 版本控制是實作最為簡單的方式。 標頭版本控制是一種不錯的方法。 不過，標頭版本設定不像 URI 版本控制一樣明確且直接。 因為 URL 版本控制是最簡單也最為明確的，eShopOnContainers 應用程式範例便使用了 URI 版本控制。
 
 如 eShopOnContainers 應用程式範例中使用 URI 版本控制，每次您修改 Web API 或變更資源的結構描述時，您便會將版本號碼新增至每個資源的 URI。 現有的 URI 會跟之前一樣繼續作業，傳回符合與請求版本相符之資料結構的資源。
 

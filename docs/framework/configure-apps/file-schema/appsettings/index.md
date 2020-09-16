@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a67689bd9757f7586881fd910ef6103b1dffeab8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77215420"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550445"
 ---
 # <a name="app-settings-schema"></a>應用程式設定結構描述
 
@@ -33,7 +33,7 @@ ms.locfileid: "77215420"
 
 ## <a name="appsettings-element"></a>\<appSettings> 項目
 
-此元素包含 **\<add>** 、 **\<clear>** 和 **\<remove>** 標記，以控制應用程式設定。 它會定義 **file** 的選擇性屬性。
+這個元素包含 **\<add>** 、 **\<clear>** 和 **\<remove>** 標記，以控制應用程式設定。 它會定義 **file** 的選擇性屬性。
 
 ## <a name="add-element"></a>\<add> 項目
 
@@ -41,7 +41,7 @@ ms.locfileid: "77215420"
 
 ## <a name="clear-element"></a>\<clear> 項目
 
-移除繼承自訂應用程式設定的所有參考，並僅允許元素後面的專案所新增的參考 **\<add>** **\<clear>** 。 它不會定義任何屬性。
+移除所有繼承自訂應用程式設定的參考，並且只允許專案後面由元素所加入的參考 **\<add>** **\<clear>** 。 它不會定義任何屬性。
 
 ## <a name="remove-element"></a>\<remove> 項目
 
@@ -70,5 +70,5 @@ ms.locfileid: "77215420"
 
 ## <a name="see-also"></a>另請參閱
 
-- [應用程式設定總覽](../../../winforms/advanced/application-settings-overview.md)
-- [Application Settings Architecture](../../../winforms/advanced/application-settings-architecture.md)
+- [應用程式設定概觀](/dotnet/desktop/winforms/advanced/application-settings-overview)
+- [應用程式設定架構](/dotnet/desktop/winforms/advanced/application-settings-architecture)

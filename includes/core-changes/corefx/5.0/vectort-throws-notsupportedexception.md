@@ -6,19 +6,19 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/28/2020
 ms.locfileid: "87302700"
 ---
-### <a name="vectort-always-throws-notsupportedexception-for-unsupported-types"></a>Vector 一律會擲回 \<T> 不支援之類型的 NotSupportedException
+### <a name="vectort-always-throws-notsupportedexception-for-unsupported-types"></a>Vector \<T> 一律會針對不支援的類型擲回 NotSupportedException
 
-<xref:System.Numerics.Vector%601?displayProperty=nameWithType><xref:System.NotSupportedException>針對不支援的型別參數，現在一律會擲回。
+<xref:System.Numerics.Vector%601?displayProperty=nameWithType> 現在一律會 <xref:System.NotSupportedException> 針對不支援的類型參數擲回。
 
 #### <a name="change-description"></a>變更描述
 
-先前，的成員 <xref:System.Numerics.Vector%601> 不一定會在不 <xref:System.NotSupportedException> 支援的型別時擲回 `T` 。 [unsupported type](#unsupported-types) 不一定會擲回例外狀況，因為支援硬體加速的程式碼路徑。 例如， `Vector<bool> + Vector<bool>` 會傳回， `default` 而不是在沒有硬體加速的平臺上擲回例外狀況，例如 ARM32。 對於不支援的類型， <xref:System.Numerics.Vector%601> 成員會在不同的平臺和硬體設定中呈現不一致的行為。
+先前的成員 <xref:System.Numerics.Vector%601> <xref:System.NotSupportedException> 在不 `T` [受支援的類型](#unsupported-types)時，不一定會擲回。 由於支援硬體加速的程式碼路徑，因此不一定會擲回例外狀況。 例如， `Vector<bool> + Vector<bool>` 會傳回， `default` 而不是在沒有硬體加速的平臺上擲回例外狀況，例如 ARM32。 針對不支援的類型， <xref:System.Numerics.Vector%601> 成員會在不同的平臺和硬體設定之間呈現不一致的行為。
 
-從 .NET 5.0 開始， <xref:System.Numerics.Vector%601> 當不是 <xref:System.NotSupportedException> `T` 受支援的類型時，成員一律會在所有硬體設定上擲回。
+從 .NET 5.0 開始， <xref:System.Numerics.Vector%601> 當不是支援的類型時，成員一律 <xref:System.NotSupportedException> 會在所有硬體設定上擲回 `T` 。
 
 ##### <a name="unsupported-types"></a>不支援的類型
 
-的類型參數支援的類型為 <xref:System.Numerics.Vector%601> ：
+的類型參數支援的類型 <xref:System.Numerics.Vector%601> 為：
 
 - `byte`
 - `sbyte`
@@ -39,7 +39,7 @@ ms.locfileid: "87302700"
 
 #### <a name="recommended-action"></a>建議的動作
 
-請勿針對的類型參數使用不支援的類型 <xref:System.Numerics.Vector%601> 。
+請勿針對的型別參數使用不支援的類型 <xref:System.Numerics.Vector%601> 。
 
 #### <a name="category"></a>類別
 
@@ -47,7 +47,7 @@ Core .NET 程式庫
 
 #### <a name="affected-apis"></a>受影響的 API
 
-- <xref:System.Numerics.Vector%601?displayProperty=fullName>及其所有成員
+- <xref:System.Numerics.Vector%601?displayProperty=fullName> 及其所有成員
 
 <!--
 

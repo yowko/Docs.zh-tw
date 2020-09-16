@@ -3,12 +3,12 @@ title: 使用 Azure Key Vault 以在生產階段保護密碼
 description: .NET 微服務和 Web 應用程式中的安全性 - Azure Key Vault 是可讓系統管理員完全掌控應用程式祕密處理的絕佳方式。 系統管理員甚至可以指派和撤銷開發值，而不需要開發人員來處理它們。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2683b215633df719dc1ecf4d1710665865c9df2
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501759"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679106"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>使用 Azure Key Vault 在生產階段保護祕密
 
@@ -16,7 +16,7 @@ ms.locfileid: "77501759"
 
 **Microsoft.Extensions.Configuration.AzureKeyVault** 套件允許 ASP.NET Core 應用程式從 Azure Key Vault 中讀取設定資訊。 若要開始使用 Azure Key Vault 中的密碼，您可以遵循下列步驟：
 
-1. 將應用程式註冊為 Azure AD 應用程式。 （對金鑰保存庫的訪問由 Azure AD 管理。這可以通過 Azure 監管中心完成。
+1. 將應用程式註冊為 Azure AD 應用程式。  (金鑰保存庫的存取權是由 Azure AD 管理。 ) 這可透過 Azure 入口網站來完成。
 
    或者，如果您想要應用程式使用憑證進行驗證，而不是使用密碼或用戶端密碼，則可以使用 [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) PowerShell Cmdlet。 您向 Azure Key Vault 註冊的憑證只需要公開金鑰  您的應用程式將會使用私密金鑰。
 
@@ -32,25 +32,25 @@ ms.locfileid: "77501759"
    您也可以藉由包含 [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) 套件的參考，使用採用憑證來取代用戶端祕密的 `AddAzureKeyVault` 多載。
 
 > [!IMPORTANT]
-> 我們建議您將 Azure 金鑰保存庫註冊為最後一個配置提供程式，以便它可以覆蓋以前提供程式的配置值。
+> 建議您將 Azure Key Vault 註冊為最後一個設定提供者，讓它可以覆寫先前提供者的設定值。
 
 ## <a name="additional-resources"></a>其他資源
 
-- **使用 Azure 金鑰保存庫保護應用程式機密** \
+- **使用 Azure Key Vault 保護應用程式秘密** \
   [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](/azure/guidance/guidance-multitenant-identity-keyvault)
 
-- **開發期間安全存儲應用機密** \
+- **在開發期間安全儲存應用程式秘密** \
   [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)
 
-- **配置資料保護** \
+- **設定資料保護** \
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview](/aspnet/core/security/data-protection/configuration/overview)
 
-- **資料保護金鑰管理和ASP.NET核心的生命週期** \
+- **ASP.NET Core 中的資料保護金鑰管理和存留期** \
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
-- **Microsoft.Extensions.Configuration.KeyPerFile** GitHub 存放庫。 \
-  <https://github.com/dotnet/extensions/tree/master/src/Configuration/Config.KeyPerFile>
+- **Microsoft.Extensions.Configuration** GitHub 存放庫。 \
+  <https://github.com/dotnet/extensions/tree/master/src/Configuration>
 
 >[!div class="step-by-step"]
->[上一個](developer-app-secrets-storage.md)
->[下一個](../key-takeaways.md)
+>[上一個](developer-app-secrets-storage.md) 
+>[下一步](../key-takeaways.md)

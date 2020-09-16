@@ -6,29 +6,29 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394344"
 ---
-### <a name="identity-default-bootstrap-version-of-ui-changed"></a>標識：更改了 UI 的預設引導版本
+### <a name="identity-default-bootstrap-version-of-ui-changed"></a>身分識別： UI 的預設啟動程式版本已變更
 
-從 ASP.NET 酷 3.0 開始，標識 UI 預設使用 Bootstrap 的版本 4。
+從 ASP.NET Core 3.0 開始，身分識別 UI 預設為使用第4版的啟動程式。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-方法`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();`調用與`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap3);`
+`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();`方法呼叫與`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap3);`
 
 #### <a name="new-behavior"></a>新的行為
 
-方法`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();`調用與`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap4);`
+`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();`方法呼叫與`services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap4);`
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-引導 4 在 ASP.NET 核心 3.0 時間幀期間發佈。
+啟動程式4是在 ASP.NET Core 3.0 時間範圍內發行。
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果您使用預設標識 UI 並在 中`Startup.ConfigureServices`添加了此更改，則您受到此更改的影響，如以下示例所示：
+如果您使用預設身分識別 UI 並將其加入，則會受到這項變更的影響， `Startup.ConfigureServices` 如下列範例所示：
 
 ```csharp
 services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();
@@ -36,8 +36,8 @@ services.AddDefaultIdentity<IdentityUser>().AddDefaultUI();
 
 請採取下列其中一個動作：
 
-- 使用其[遷移指南](https://getbootstrap.com/docs/4.0/migration)遷移應用以使用引導 4。
-- 更新`Startup.ConfigureServices`以強制使用引導 3。 例如：
+- 將您的應用程式遷移至使用啟動程式4，並使用其 [遷移指南](https://getbootstrap.com/docs/4.0/migration)。
+- 更新 `Startup.ConfigureServices` 以強制使用啟動程式3。 例如：
 
     ```csharp
     services.AddDefaultIdentity<IdentityUser>().AddDefaultUI(UIFramework.Bootstrap3);
@@ -49,7 +49,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-None
+無
 
 <!-- 
 

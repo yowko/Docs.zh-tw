@@ -6,31 +6,31 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901915"
 ---
-### <a name="kestrel-connection-adapters-removed"></a>Kestrel：連接配接器已移除
+### <a name="kestrel-connection-adapters-removed"></a>Kestrel：已移除連接配接器
 
-作為將"公共"API 移動到移動的一部分`public`，從 Kestrel 中刪除`IConnectionAdapter`了 a 的概念。 連接配接器正在被連接中介軟體替換（類似于 ASP.NET核心管道中的 HTTP 中介軟體，但對於較低級別的連接）。 HTTPS 和連接日誌記錄已經從連接配接器移動到連接中介軟體。 這些擴充方法應繼續無縫工作，但實現細節已更改。
+在移動 "pubternal" Api 至的過程中 `public` ， `IConnectionAdapter` 已從 Kestrel 移除的概念。 連接卡將取代為連接中介軟體 (類似 ASP.NET Core 管線中的 HTTP 中介軟體，但較低層級的連線) 。 HTTPS 和連線記錄已從連接配接器移至連接中介軟體。 這些擴充方法應該會繼續順暢地運作，但是執行的詳細資料已變更。
 
-有關詳細資訊，請參閱[點網/阿斯平核心#11412](https://github.com/dotnet/aspnetcore/pull/11412)。 有關討論，請參閱[點網/阿斯平核心#11475](https://github.com/dotnet/aspnetcore/issues/11475)。
+如需詳細資訊，請參閱 [dotnet/aspnetcore # 11412](https://github.com/dotnet/aspnetcore/pull/11412)。 如需討論，請參閱 [dotnet/aspnetcore # 11475](https://github.com/dotnet/aspnetcore/issues/11475)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-Kestrel 擴充性元件是使用`IConnectionAdapter`創建的。
+Kestrel 擴充性元件是使用建立 `IConnectionAdapter` 的。
 
 #### <a name="new-behavior"></a>新的行為
 
-Kestrel 擴充性元件創建為[中介軟體](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)。
+Kestrel 擴充性元件會建立為 [中介軟體](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-此更改旨在提供更靈活的擴充性體系結構。
+這項變更的目的是要提供更具彈性的擴充性架構。
 
 #### <a name="recommended-action"></a>建議的動作
 
-轉換的任何`IConnectionAdapter`實現，以使用新的中介軟體模式，[如下所示](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)。
+將的任何執行轉換為 `IConnectionAdapter` 使用新的中介軟體模式[here](https://github.com/dotnet/aspnetcore/pull/11412/files#diff-89acc06acf1b2e96bbdb811ce523619f)，如下所示。
 
 #### <a name="category"></a>類別
 

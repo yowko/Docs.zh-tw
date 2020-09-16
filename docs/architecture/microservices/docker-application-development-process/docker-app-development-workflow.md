@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
 ms.date: 01/30/2020
-ms.openlocfilehash: 489f44a2742900d6ce5f77e24dd3d719ec9cda2b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d32134a10fb9b56e874bbc6218ca2c4d822adb90
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539723"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678845"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -496,7 +496,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ### <a name="additional-resources"></a>其他資源
 
 - **將 ASP.NET 容器部署到遠端 Docker 主機** \
-  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
+  <https://docs.microsoft.com/visualstudio/containers/hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>測試與部署協調器的注意事項
 

@@ -2,12 +2,12 @@
 title: Windows Forms 重大變更
 description: 列出適用于 .NET Core 和 .NET 5 的 Windows Forms 中的重大變更。
 ms.date: 09/08/2020
-ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656327"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678992"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 中的重大變更
 
@@ -17,6 +17,7 @@ ms.locfileid: "89656327"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [適用于 WPF 和 WinForms 應用程式的 OutputType 設定為 WinExe](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [DataGridView 相關的 Api 現在會擲回 InvalidOperationException](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [WinForms 和 WPF 應用程式使用 Microsoft .NET Sdk](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
 | [已移除狀態列控制項](#removed-status-bar-controls) | 5.0 |
@@ -38,6 +39,10 @@ ms.locfileid: "89656327"
 | [不支援 UseLegacyImages 相容性參數](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
+
+***
 
 [!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
 

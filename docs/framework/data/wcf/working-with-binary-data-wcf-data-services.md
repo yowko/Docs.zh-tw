@@ -8,40 +8,40 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: aa3e58d559121aaca401e7b851a4b4fd8e7753cd
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 3c391e641df52d9143630406a40e17c6bc853865
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900835"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551747"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>使用二進位資料 (WCF 資料服務)
 
-WCF Data Services 用戶端程式庫可讓您使用下列其中一種方式，從開放式資料通訊協定（OData）摘要中取出和更新二進位資料：
+WCF Data Services 用戶端程式庫可讓您使用下列其中一種方式，從開放式資料通訊協定 (OData) 摘要中取出和更新二進位資料：
 
 - 當做實體的基本型別屬性。 如果要處理可以輕鬆載入記憶體的小型二進位資料物件，建議使用這個方法。 在此情況下，二進位屬性是資料模型所公開的實體屬性，而資料服務會將二進位資料序列化成為回應訊息中的 base-64 二進位編碼 XML。
 
 - 當做個別的二進位資源資料流。 如果要存取及變更可能代表相片、影片或是其他任何類型之二進位編碼資料的二進位大型物件 (BLOB) 資料，建議使用這個方法。
 
-WCF Data Services 使用 OData 中定義的 HTTP 來執行二進位資料的資料流程處理。 在此機制中，二進位資料會被視為與實體（稱為媒體連結專案）不同的媒體資源。 如需詳細資訊，請參閱[串流處理提供者](streaming-provider-wcf-data-services.md)。
+WCF Data Services 使用 OData 中定義的 HTTP 來執行二進位資料的資料流程處理。 在這個機制中，二進位資料會視為媒體資源，它與實體分開但還是與實體有關，稱為媒體連結項目。 如需詳細資訊，請參閱 [資料流程提供者](streaming-provider-wcf-data-services.md)。
 
 > [!TIP]
-> 如需如何建立可從儲存相片的 OData 服務下載二進位影像檔的 Windows Presentation Foundation （WPF）用戶端應用程式的逐步範例，請參閱文章[資料服務串流提供者系列-第2部分：從用戶端存取媒體資源串流](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)。 若要下載 blog 文章中精選的串流相片資料服務範例程式碼，請參閱 GitHub 中的[串流處理相片資料服務範例](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)。
+> 如需如何建立 Windows Presentation Foundation (WPF) 用戶端應用程式，以從儲存相片的 OData 服務下載二進位影像檔的逐步範例，請參閱 post [資料服務串流處理提供者系列-第2部分：從用戶端存取媒體資源資料流程](/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)。 若要下載 blog 文章中精選的串流相片資料服務範例程式碼，請參閱 GitHub 中的 [串流處理相片資料服務範例](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) 。
 
 ## <a name="entity-metadata"></a>實體中繼資料
 
-在資料服務中繼資料中，套用到屬於媒體連結項目之實體類型的 `HasStream` 屬性會指出擁有相關媒體資源資料流的實體。 在下列範例中，`PhotoInfo` 實體是具有相關媒體資源的媒體連結專案，以 `HasStream` 屬性工作表示。
+在資料服務中繼資料中，套用到屬於媒體連結項目之實體類型的 `HasStream` 屬性會指出擁有相關媒體資源資料流的實體。 在下列範例中， `PhotoInfo` 實體是具有相關媒體資源的媒體連結專案，以 `HasStream` 屬性工作表示。
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-本主題的其餘範例會示範如何存取及變更媒體資源資料流。 如需如何使用 WCF Data Services 用戶端程式庫在 .NET Framework 用戶端應用程式中取用媒體資源串流的完整範例，請參閱[從用戶端存取媒體資源串流](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)文章。
+本主題的其餘範例會示範如何存取及變更媒體資源資料流。 如需如何使用 WCF Data Services 用戶端程式庫在 .NET Framework 用戶端應用程式中取用媒體資源串流的完整範例，請參閱 [從用戶端存取媒體資源串流](/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)的文章。
 
 ## <a name="accessing-the-binary-resource-stream"></a>存取二進位資源資料流
 
-WCF Data Services 用戶端程式庫提供從 OData 資料服務存取二進位資源資料流的方法。 下載媒體資源時，您可以使用媒體資源的 URI，或者您可以取得包含媒體資源資料本身的二進位資料流。 您也可以上載媒體資源資料做為二進位資料流。
+WCF Data Services 用戶端程式庫提供從 OData 型資料服務存取二進位資源資料流的方法。 下載媒體資源時，您可以使用媒體資源的 URI，或者您可以取得包含媒體資源資料本身的二進位資料流。 您也可以上載媒體資源資料做為二進位資料流。
 
 > [!TIP]
-> 如需如何建立可從儲存相片的 OData 服務下載二進位影像檔的 Windows Presentation Foundation （WPF）用戶端應用程式的逐步範例，請參閱文章[資料服務串流提供者系列-第2部分：從用戶端存取媒體資源串流](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)。 若要下載 blog 文章中精選的串流相片資料服務範例程式碼，請參閱 GitHub 中的[串流處理相片資料服務範例](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)。
+> 如需如何建立 Windows Presentation Foundation (WPF) 用戶端應用程式，以從儲存相片的 OData 服務下載二進位影像檔的逐步範例，請參閱 post [資料服務串流處理提供者系列-第2部分：從用戶端存取媒體資源資料流程](/archive/blogs/astoriateam/data-services-streaming-provider-series-part-2-accessing-a-media-resource-stream-from-the-client)。 若要下載 blog 文章中精選的串流相片資料服務範例程式碼，請參閱 GitHub 中的 [串流處理相片資料服務範例](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample) 。
 
 ### <a name="getting-the-uri-of-the-binary-stream"></a>取得二進位資料流的 URI
 
@@ -72,7 +72,7 @@ WCF Data Services 用戶端程式庫提供從 OData 資料服務存取二進位�
 > [!NOTE]
 > 當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 時，並不會將資料流傳送到資料服務，直到呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 為止。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
+- [WCF 資料服務用戶端程式庫](wcf-data-services-client-library.md)
 - [將資料繫結至控制項](binding-data-to-controls-wcf-data-services.md)

@@ -1,6 +1,6 @@
 ---
 title: 序列化方針
-description: 本檔提供設計要序列化的 API 時應考慮的指導方針，以及 .NET 所提供的三種主要序列化技術的摘要。
+description: 本檔提供在設計要序列化的 API 時應考慮的指導方針，以及 .NET 提供的三種主要序列化技術的摘要。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a8fd644e6f9132bf93277ae9928788f236a7bd1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84287489"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558195"
 ---
 # <a name="serialization-guidelines"></a>序列化方針
 本文件列出在設計要序列化的 API 時所要考量的指導方針。  
@@ -79,7 +79,7 @@ ms.locfileid: "84287489"
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
-     如果已知型別的清單無法以靜態方式得知（編譯**Person**類別時）， **KnownTypeAttribute**也可以指向方法，以在執行時間傳回已知型別的清單。  
+     在) 編譯 **Person** 類別的情況下，如果已知型別清單不是靜態的 (，則 **KnownTypeAttribute** 也可以指向在執行時間傳回已知型別清單的方法。  
   
 5. 當建立或變更可序列化的型別時，請務必考慮回溯相容性與向前相容性。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "84287489"
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. 如果您希望對序列化 XML 的形狀有更大的控制權，而不是套用 XML 序列化屬性來使用提供的控制權，請考慮實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面。 介面的兩個方法（ <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> ）可讓您完全控制已序列化的 XML 資料流程。 您也可以藉由套用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性來控制為此型別產生的 XML 結構描述。  
+2. 如果您希望對序列化 XML 的形狀有更大的控制權，而不是套用 XML 序列化屬性來使用提供的控制權，請考慮實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面。 介面的兩個方法 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 可讓您完全控制序列化的 XML 資料流程。 您也可以藉由套用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性來控制為此型別產生的 XML 結構描述。  
   
 #### <a name="supporting-runtime-serialization"></a>支援執行階段序列化  
  「執行階段序列化」** 是 .NET 遠端處理所使用的技術。 如果您認為您的型別將會使用 .NET 遠端處理來傳輸，則需要確定型別有支援執行階段序列化。  
@@ -144,6 +144,6 @@ ms.locfileid: "84287489"
 - [資料合約序列化程式](../../framework/wcf/feature-details/data-contract-serializer.md)
 - [資料合約序列化程式支援的型別](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [二進位序列化](binary-serialization.md)
-- [.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+- [.NET 遠端處理](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
 - [安全性和序列化](../../framework/misc/security-and-serialization.md)

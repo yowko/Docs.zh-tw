@@ -2,12 +2,12 @@
 title: 設定工作流程的追蹤
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 5ec94d6b8e58012d0c5c8ca8593c3cef81cd9ec3
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 098b295be00b1b8283e26e79ea14e78634fdb504
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248208"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557550"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>設定工作流程服務追蹤
 
-當託管在服務主機中時，<xref:System.ServiceModel.Activities.WorkflowServiceHost>可以將工作流公開為 WCF 服務。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是用於工作流程服務的特殊 .NET ServiceHost 實作。 本節說明如何為在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中執行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流程服務設定追蹤。 此追蹤是透過 Web.config 檔案 (適用於 Web 裝載服務) 或 App.config 檔案 (適用於裝載於獨立應用程式中的服務，例如主控台應用程式) 指定服務行為而設定的，或是透過程式碼將追蹤特定行為加入至服務主機的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合而設定的。
+工作流程裝載于服務主機時，可以公開為 WCF 服務 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 是用於工作流程服務的特殊 .NET ServiceHost 實作。 本節說明如何為在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中執行的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流程服務設定追蹤。 此追蹤是透過 Web.config 檔案 (適用於 Web 裝載服務) 或 App.config 檔案 (適用於裝載於獨立應用程式中的服務，例如主控台應用程式) 指定服務行為而設定的，或是透過程式碼將追蹤特定行為加入至服務主機的 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合而設定的。
 
-對於 託管在 中的<xref:System.ServiceModel.WorkflowServiceHost>工作流服務，可以在設定檔<xref:System.Activities.Tracking.EtwTrackingParticipant>中添加使用`behavior`<>元素，如以下示例所示。
+若為裝載于的工作流程服務， <xref:System.ServiceModel.WorkflowServiceHost> 您可以 <xref:System.Activities.Tracking.EtwTrackingParticipant> 使用設定檔中的 <> 專案來新增， `behavior` 如下列範例所示。
 
 ```xml
 <behaviors>
@@ -67,7 +67,7 @@ instance.Extensions.Add(trackingParticipant);
 此外，對於裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 中的工作流程服務，您可以透過程式碼加入 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行為擴充。 若要加入自訂的追蹤參與者，請建立一個新的行為擴充，並將它加入至 <xref:System.ServiceModel.ServiceHost>，如下列範例程式碼所示。
 
 > [!NOTE]
-> 如果要查看演示如何創建添加自訂追蹤參與者的自訂行為元素的示例代碼，請參閱[跟蹤](./samples/tracking.md)示例。
+> 如果您想要查看示範如何建立加入自訂追蹤參與者之自訂行為專案的範例程式碼，請參閱 [追蹤](./samples/tracking.md) 範例。
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -134,11 +134,11 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> 有關跟蹤設定檔的詳細資訊，請參閱[跟蹤設定檔](tracking-profiles.md)。
+> 如需追蹤設定檔的詳細資訊，請參閱 [追蹤設定檔](tracking-profiles.md)。
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>使用 WorkflowInvoker 設定追蹤
 
-若要為使用 <xref:System.Activities.WorkflowInvoker> 執行的工作流程設定追蹤，請加入追蹤提供者做為 <xref:System.Activities.WorkflowInvoker> 執行個體的延伸。 以下代碼示例來自[自訂跟蹤](./samples/custom-tracking.md)示例。
+若要為使用 <xref:System.Activities.WorkflowInvoker> 執行的工作流程設定追蹤，請加入追蹤提供者做為 <xref:System.Activities.WorkflowInvoker> 執行個體的延伸。 下列程式碼範例取自 [自訂追蹤](./samples/custom-tracking.md) 範例。
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -148,41 +148,41 @@ invoker.Invoke();
 
 ### <a name="viewing-tracking-records-in-event-viewer"></a>在事件檢視器中檢視追蹤記錄
 
-追蹤 WF 執行時，可以檢視兩個相關性特別大的事件檢視器記錄：分析記錄和偵錯記錄。 兩者都駐留在 Microsoft&#124;Windows&#124;應用程式應用程式節點下。 這個區段中的記錄包含單一應用程式的事件，而不包含對整個系統有影響的事件。
+追蹤 WF 執行時，可以檢視兩個相關性特別大的事件檢視器記錄：分析記錄和偵錯記錄。 兩者都位於 Microsoft&#124;Windows&#124;應用程式伺服器-應用程式] 節點底下。 這個區段中的記錄包含單一應用程式的事件，而不包含對整個系統有影響的事件。
 
 偵錯追蹤事件會寫入到偵錯記錄中。 若要收集事件檢視器中的 WF 偵錯追蹤事件，請啟用偵錯記錄。
 
-1. 要打開事件檢視器，請按一下"**開始"，** 然後按一下"**運行"。** 在"運行"對話方塊中`eventvwr`，鍵入 。
+1. 若要開啟事件檢視器，請按一下 [ **開始**]，然後按一下 [ **執行]。** 在 [執行] 對話方塊中，輸入 `eventvwr` 。
 
-2. 在"事件檢視器"對話方塊中，展開**應用程式和服務日誌**節點。
+2. 在 [事件檢視器] 對話方塊中，展開 [ **應用程式及服務記錄** 檔] 節點。
 
-3. 展開**微軟****、Windows**和**應用程式應用程式**節點。
+3. 展開 [ **Microsoft**]、[ **Windows**] 和 [ **應用程式伺服器-應用程式** ] 節點。
 
-4. 按右鍵**應用程式伺服器應用程式**節點下的**調試**節點，然後選擇**啟用日誌**。
+4. 以滑鼠右鍵按一下 [**應用程式伺服器-應用程式**] 節點底下的 [**調試**程式] 節點，然後選取 [**啟用記錄**]。
 
 5. 執行可啟用追蹤的應用程式，以產生追蹤事件。
 
-6. 按右鍵**調試**節點並選擇 **"刷新"。** 追蹤事件應該會顯示在中央窗格中。
+6. 以滑鼠右鍵按一下 [ **Debug** ] 節點，然後選取 [重新整理] **。** 追蹤事件應該會顯示在中央窗格中。
 
 WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的追蹤參與者。 ETW 追蹤參與者會設定追蹤設定檔來訂閱追蹤記錄。 當啟用追蹤時，會向 ETW 發出錯誤追蹤記錄。 對應至由 ETW 追蹤參與者所發出之追蹤事件的 ETW 追蹤事件 (範圍在 100-113 之間) 會寫入到分析記錄中。
 
 若要檢視追蹤記錄，請遵循下列步驟。
 
-1. 要打開事件檢視器，請按一下"**開始"，** 然後按一下"**運行"。** 在"運行"對話方塊中`eventvwr`，鍵入 。
+1. 若要開啟事件檢視器，請按一下 [ **開始**]，然後按一下 [ **執行]。** 在 [執行] 對話方塊中，輸入 `eventvwr` 。
 
-2. 在"事件檢視器"對話方塊中，展開**應用程式和服務日誌**節點。
+2. 在 [事件檢視器] 對話方塊中，展開 [ **應用程式及服務記錄** 檔] 節點。
 
-3. 展開**微軟****、Windows**和**應用程式應用程式**節點。
+3. 展開 [ **Microsoft**]、[ **Windows**] 和 [ **應用程式伺服器-應用程式** ] 節點。
 
-4. 按右鍵**應用程式伺服器應用程式**節點下的**分析**節點，然後選擇**啟用日誌**。
+4. 以滑鼠右鍵按一下 [**應用程式伺服器-應用程式**] 節點底下的 [**分析**] 節點，然後選取 [**啟用記錄**]。
 
 5. 執行您的啟用追蹤的應用程式，以產生追蹤記錄。
 
-6. 按右鍵**分析**節點並選擇 **"刷新"。** 追蹤記錄應該會顯示在中央窗格中。
+6. 以滑鼠右鍵按一下 [ **分析** ] 節點，然後選取 [重新整理] **。** 追蹤記錄應該會顯示在中央窗格中。
 
-下圖顯示了事件檢視器中的跟蹤事件：
+下圖顯示事件檢視器中的追蹤事件：
 
-![顯示追蹤記錄的事件檢視器的螢幕截圖。](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
+![顯示追蹤記錄之事件檢視器的螢幕擷取畫面。](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>註冊應用程式特定的提供者識別碼
 
@@ -196,7 +196,7 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
     </system.serviceModel>
     ```
 
-2. 從 %windir%_Microsoft.NET_Framework\\\<最新版本的[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]>_Microsoft.Windows.應用程式伺服器.應用程式.man 複製到臨時位置，並將其重命名為 Microsoft.Windows.應用程式伺服器.Applications_Provider1.man
+2. 將資訊清單檔從%windir%\Microsoft.NET\Framework \\ \<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 複製到暫存位置，然後將它重新命名為 ApplicationServer. Applications_Provider1
 
 3. 將資訊清單檔中的 GUID 變更為新的 GUID。
 
@@ -222,7 +222,7 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
 
 6. 遵循下列步驟產生資源 DLL。
 
-    1. 安裝 Windows SDK。 Windows SDK 包括消息編譯器[（mc.exe](/windows/win32/wes/message-compiler--mc-exe-)） 和資源編譯器 （[rc.exe](/windows/win32/menurc/using-rc-the-rc-command-line-)）.
+    1. 安裝 Windows SDK。 Windows SDK 包含 ([mc.exe](/windows/win32/wes/message-compiler--mc-exe-)) 和資源 [ 編譯器 (rc.exe) 的 ](/windows/win32/menurc/using-rc-the-rc-command-line-) 訊息編譯器。
 
     2. 在 Windows SDK 命令提示字元中，對新的資訊清單檔執行 mc.exe。
 
@@ -244,13 +244,13 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. 將清單檔中的資源和消息 dll 名稱從`Microsoft.Windows.ApplicationServer.Applications.Provider1.man`更改為新的 dll 名稱。
+    6. 將資訊清單檔中的資源和訊息 dll 名稱變更 `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` 為新的 dll 名稱。
 
         ```xml
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" />
         ```
 
-    7. 使用[wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10))註冊清單。
+    7. 使用 [wevtutil](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) 註冊資訊清單。
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
 
 ## <a name="see-also"></a>另請參閱
 
-- [Windows 伺服器應用結構監視](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
-- [使用應用交換矩陣監視應用程式](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))
+- [Windows Server App Fabric 監視](/previous-versions/appfabric/ee677251(v=azure.10))
+- [使用 App Fabric 監視應用程式](/previous-versions/appfabric/ee677276(v=azure.10))

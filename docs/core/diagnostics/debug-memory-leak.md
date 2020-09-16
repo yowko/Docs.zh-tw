@@ -26,7 +26,7 @@ ms.locfileid: "90538588"
 > - 產生傾印檔案。
 > - 使用傾印檔案分析記憶體使用量。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 教學課程會使用：
 

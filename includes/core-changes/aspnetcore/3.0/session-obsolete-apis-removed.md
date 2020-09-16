@@ -6,21 +6,21 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198380"
 ---
-### <a name="session-state-obsolete-apis-removed"></a>會話狀態：已刪除的已過期 API
+### <a name="session-state-obsolete-apis-removed"></a>會話狀態：已移除淘汰的 Api
 
-用於配置會話 Cookie 的過時 API 已被刪除。 有關詳細資訊，請參閱[aspnet/公告#257](https://github.com/aspnet/Announcements/issues/257)。
+已移除用來設定會話 cookie 的過時 Api。 如需詳細資訊，請參閱 [aspnet/公告 # 257](https://github.com/aspnet/Announcements/issues/257)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-此更改強制跨 API 配置使用 Cookie 的功能的一致性。
+這種變更會在 Api 之間強制執行一致性，以設定使用 cookie 的功能。
 
 #### <a name="recommended-action"></a>建議的動作
 
-將已刪除 API 的使用遷移到其較新的替換。 請考慮 `Startup.ConfigureServices` 中的下列範例：
+將已移除的 Api 使用方式遷移至其較新的取代。 請考慮 `Startup.ConfigureServices` 中的下列範例：
 
 ```csharp
 public void ConfigureServices(ServiceCollection services)

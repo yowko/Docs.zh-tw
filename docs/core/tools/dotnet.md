@@ -48,7 +48,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 `--roll-forward` 自 .NET Core 3.x 起提供。 用於 `--roll-forward-on-no-candidate-fx` .Net Core 2.x。
 
-## <a name="description"></a>描述
+## <a name="description"></a>說明
 
 此 `dotnet` 命令有兩個功能：
 

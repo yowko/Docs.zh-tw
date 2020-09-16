@@ -7,12 +7,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: d7e367f3b4e9a6d88d2a13ca8727d2e2884bb97c
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 5d181f5bc9f7e16051f16ca68490744e9c0d3abd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810595"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557914"
 ---
 # <a name="c-walkthroughs"></a>C # 逐步解說
 
@@ -34,19 +34,19 @@ ms.locfileid: "88810595"
 - [建立和使用動態物件 (c # 和 Visual Basic) ](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)\
   顯示如何建立可動態公開文字檔內容的自訂物件，以及如何建立使用 `IronPython` 程式庫的專案。
 
-- [使用 Visual C 撰寫複合控制項#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
+- [使用 Visual C 撰寫複合控制項#](/dotnet/desktop/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp)\
   示範如何建立簡單的複合控制項，以及透過繼承來擴充其功能。
 
-- [建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)\
+- [建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](/dotnet/desktop/winforms/controls/creating-a-wf-control-design-time-features)\
   說明如何建立自訂控制項的自訂設計工具。
 
-- [使用 Visual C 從 Windows Forms 控制項繼承#](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
+- [使用 Visual C 從 Windows Forms 控制項繼承#](/dotnet/desktop/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp)\
   示範如何建立簡單的繼承按鈕控制項。 此按鈕繼承標準 Windows Form 按鈕的功能，並公開自訂成員。
 
-- [在設計階段時對自訂 Windows Forms 控制項進行調試](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
+- [在設計階段時對自訂 Windows Forms 控制項進行調試](/dotnet/desktop/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)\
   說明如何偵錯自訂控制項的設計階段行為。
 
-- [逐步解說：使用設計工具動作執行一般工作](../framework/winforms/controls/perform-common-tasks-design-actions.md)\
+- [逐步解說：使用設計工具動作執行一般工作](/dotnet/desktop/winforms/controls/perform-common-tasks-design-actions)\
   示範一些經常執行的工作，例如，在 `TabControl` 上加入或移除索引標籤、將控制項固定到其父系，以及變更 `SplitContainer` 控制項的方向。
 
 - [以 c # 撰寫查詢 (LINQ) ](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)\

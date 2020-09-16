@@ -6,24 +6,24 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/31/2020
 ms.locfileid: "87455780"
 ---
-### <a name="utf-7-code-paths-are-obsolete"></a>UTF-7 程式碼路徑已過時
+### <a name="utf-7-code-paths-are-obsolete"></a>UTF-7 程式碼路徑已淘汰
 
-在應用程式之間已不再使用 UTF-7 編碼，而許多規格現在[禁止其](https://security.stackexchange.com/a/68609/3573)在交換中使用。 它偶爾也會[用來做為](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=utf-7)應用程式中的攻擊向量，而不預期會遇到以 utf-7 編碼的資料。 Microsoft 會警告您使用， <xref:System.Text.UTF7Encoding?displayProperty=nameWithType> 因為它不會提供錯誤偵測。
+UTF-7 編碼不再廣泛使用於應用程式，而許多規格現在禁止在交換中 [使用](https://security.stackexchange.com/a/68609/3573) 。 有時也會在不預期遇到 UTF-7 編碼資料的應用程式中， [用來做為攻擊向量](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=utf-7) 。 Microsoft 會警告您使用， <xref:System.Text.UTF7Encoding?displayProperty=nameWithType> 因為它不會提供錯誤偵測。
 
-因此， <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 屬性和構造函式 <xref:System.Text.UTF7Encoding.%23ctor%2A> 現在已過時。 此外， <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 和不再 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 允許您指定 `UTF-7` 。
+因此， <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 屬性和函式 <xref:System.Text.UTF7Encoding.%23ctor%2A> 現在已過時。 此外， <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 也 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 不再允許您指定 `UTF-7` 。
 
 #### <a name="change-description"></a>變更描述
 
-之前，您可以使用 api 來建立 UTF-7 編碼的實例 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 。 例如：
+先前，您可以使用 api 建立 UTF-7 編碼的實例 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 。 例如：
 
 ```csharp
 Encoding enc1 = Encoding.GetEncoding("utf-7"); // By name.
 Encoding enc2 = Encoding.GetEncoding(65000); // By code page.
 ```
 
-此外，表示 UTF-7 編碼的實例是由方法所列舉 <xref:System.Text.Encoding.GetEncodings?displayProperty=nameWithType> ，這會列舉 <xref:System.Text.Encoding> 系統上註冊的所有實例。
+此外，方法會列舉表示 UTF-7 編碼的實例 <xref:System.Text.Encoding.GetEncodings?displayProperty=nameWithType> ，此方法會列舉 <xref:System.Text.Encoding> 系統上已註冊的所有實例。
 
-從 .NET 5.0 開始， <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 屬性和構造函式 <xref:System.Text.UTF7Encoding.%23ctor%2A> 已過時， `SYSLIB0001` (或 `MSLIB0001` 預覽版本) 中產生警告。 不過，若要減少呼叫端在使用類別時所收到的警告數目 <xref:System.Text.UTF7Encoding> ， <xref:System.Text.UTF7Encoding> 類型本身不會標示為已過時。
+從 .NET 5.0 開始， <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 屬性和函式 <xref:System.Text.UTF7Encoding.%23ctor%2A> 已淘汰，並產生警告 `SYSLIB0001` (或 `MSLIB0001` 預覽版本) 。 不過，若要減少呼叫端在使用類別時所收到的警告數目 <xref:System.Text.UTF7Encoding> ， <xref:System.Text.UTF7Encoding> 類型本身不會標示為過時。
 
 ```csharp
 // The next line generates warning SYSLIB0001.
@@ -32,14 +32,14 @@ UTF7Encoding enc = new UTF7Encoding();
 byte[] bytes = enc.GetBytes("Hello world!");
 ```
 
-此外，方法會將 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 編碼名稱 `utf-7` 和字碼頁視為 `65000` `unknown` 。 將編碼方式視為 `unknown` 會導致方法擲回 <xref:System.ArgumentException> 。
+此外， <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法會將編碼名稱 `utf-7` 和字碼頁視為 `65000` `unknown` 。 將編碼視為 `unknown` 會導致方法擲回 <xref:System.ArgumentException> 。
 
 ```csharp
 // Throws ArgumentException, same as calling Encoding.GetEncoding("unknown").
 Encoding enc = Encoding.GetEncoding("utf-7");
 ```
 
-最後， <xref:System.Text.Encoding.GetEncodings?displayProperty=nameWithType> 方法不會在它所傳回的陣列中包含 utf-7 編碼 <xref:System.Text.EncodingInfo> 。 已排除編碼，因為它無法具現化。
+最後， <xref:System.Text.Encoding.GetEncodings?displayProperty=nameWithType> 方法不會在它所傳回的陣列中包含 utf-7 編碼 <xref:System.Text.EncodingInfo> 。 因為無法具現化，所以會排除編碼。
 
 ```csharp
 foreach (EncodingInfo encInfo in Encoding.GetEncodings())
@@ -51,9 +51,9 @@ foreach (EncodingInfo encInfo in Encoding.GetEncodings())
 
 #### <a name="reason-for-change"></a>變更的原因
 
-許多應用程式 `Encoding.GetEncoding("encoding-name")` 會使用不受信任來源所提供的編碼名稱值來呼叫。 例如，web 用戶端或伺服器可能會取得 `charset` 標頭的部分 `Content-Type` ，並直接將值傳遞給， `Encoding.GetEncoding` 而不進行驗證。 這可能會讓惡意端點指定 `Content-Type: ...; charset=utf-7` ，這可能會導致接收應用程式行為失常。
+許多應用程式 `Encoding.GetEncoding("encoding-name")` 都使用不受信任的來源所提供的編碼名稱值來呼叫。 例如，網頁用戶端或伺服器可能會採用 `charset` 標頭的部分 `Content-Type` ，並直接將值傳遞給 `Encoding.GetEncoding` 而不需要驗證。 這可能會讓惡意端點指定 `Content-Type: ...; charset=utf-7` ，這可能會導致接收應用程式行為失常。
 
-此外，停用 UTF-7 程式碼路徑，可以優化編譯器（例如 Blazor 所使用的編譯器），以從產生的應用程式中完全移除這些程式碼路徑。 因此，已編譯的應用程式執行效率較高，而且佔用的磁碟空間較少。
+此外，停用 UTF-7 程式碼路徑可讓編譯器優化，例如 Blazor 所使用的編譯器，以完全從產生的應用程式中移除這些程式碼路徑。 如此一來，經過編譯的應用程式就能以更有效率的方式執行，並減少磁碟空間。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -61,21 +61,21 @@ foreach (EncodingInfo encInfo in Encoding.GetEncodings())
 
 #### <a name="recommended-action"></a>建議的動作
 
-在大部分的情況下，您不需要採取任何動作。 不過，如果應用程式先前已啟用與 UTF-7 相關的程式碼路徑，請考慮下列指引。
+在大多數情況下，您不需要採取任何動作。 不過，對於先前已啟用與 UTF-7 相關的程式碼路徑的應用程式，請考慮下列指導方針。
 
-- 如果您的應用程式 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 使用不受信任的來源所提供的未知編碼名稱進行呼叫：
+- 如果您的應用程式 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 使用不受信任的來源所提供的未知編碼名稱來呼叫：
 
-  相反地，請將編碼名稱與可設定的允許清單進行比較。 可設定的允許清單至少須包含業界標準的 "utf-8"。 視您的用戶端和法規需求而定，您可能也需要允許特定區域的編碼，例如「GB18030」。
+  相反地，請將編碼名稱與可設定的允許清單進行比較。 可設定的允許清單至少應包含產業標準 "utf-8"。 視您的用戶端和法規需求而定，您可能也需要允許特定區域的編碼方式，例如「GB18030」。
 
-  如果您未執行允許清單， <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 將會傳回系統內建的任何， <xref:System.Text.Encoding> 或透過自訂註冊的 <xref:System.Text.EncodingProvider> 。 請審核您的服務需求，以驗證這是否為所需的行為。 除非您的應用程式重新啟用本文章稍後所述的相容性參數，否則，預設會繼續停用 UTF-7。
+  如果您未執行允許清單， <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 將會傳回 <xref:System.Text.Encoding> 系統內建或透過自訂註冊的任何 <xref:System.Text.EncodingProvider> 。 請審核您服務的需求，以驗證這是所需的行為。 除非您的應用程式重新啟用本文稍後所述的相容性參數，否則會繼續預設為停用 UTF-7。
 
-- 如果您在 <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 自己的 <xref:System.Text.UTF7Encoding> 通訊協定或檔案格式中使用或：
+- 如果您使用 <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 的是或 <xref:System.Text.UTF7Encoding> 在自己的通訊協定或檔案格式內：
 
-  切換至使用 <xref:System.Text.Encoding.UTF8?displayProperty=nameWithType> 或 <xref:System.Text.UTF8Encoding> 。 UTF-8 是一種業界標準，在語言、作業系統和執行時間之間廣泛支援。 使用 UTF-8 可簡化程式碼的未來維護，使其更能與生態系統的其餘部分互通。
+  切換為使用 <xref:System.Text.Encoding.UTF8?displayProperty=nameWithType> 或 <xref:System.Text.UTF8Encoding> 。 UTF-8 是業界標準，可廣泛地跨語言、作業系統和執行時間支援。 使用 UTF-8 可簡化未來的程式碼維護，讓它能夠與其余的生態系統更互通。
 
 - 如果您要比較 <xref:System.Text.Encoding> 實例與 <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> ：
 
-  相反地，請考慮對已知的 UTF-7 字碼頁執行檢查，也就是 `65000` 。 藉由比較字碼頁，您可以避免警告，也會處理一些邊緣案例，例如，如果有人呼叫 `new UTF7Encoding()` 或子類別化型別。
+  相反地，請考慮針對已知的 UTF-7 字碼頁執行檢查，也就是 `65000` 。 藉由與字碼頁比較，您可以避免出現警告，也會處理一些邊緣案例，例如，如果有人呼叫 `new UTF7Encoding()` 或子類別化型別。
 
   ```csharp
   void DoSomething(Encoding enc)
@@ -97,7 +97,7 @@ foreach (EncodingInfo encInfo in Encoding.GetEncodings())
 
 - 如果您必須使用 <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 或 <xref:System.Text.UTF7Encoding> ：
 
-  您可以 `SYSLIB0001` 在程式碼或專案的 *.csproj*檔案中隱藏警告。
+  您可以隱藏 `SYSLIB0001` 程式碼或專案 *.csproj* 檔案內的警告。
 
   ```csharp
   #pragma warning disable SYSLIB0001 // Disable the warning.
@@ -116,13 +116,13 @@ foreach (EncodingInfo encInfo in Encoding.GetEncodings())
   ```
 
   > [!NOTE]
-  > 隱藏 `SYSLIB0001` 只會停用 <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 和 <xref:System.Text.UTF7Encoding> obsoletion 警告。 它不會停用任何其他警告，也不會變更 Api 的行為，例如 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 。
+  > 隱藏 `SYSLIB0001` 只會停用 <xref:System.Text.Encoding.UTF7?displayProperty=nameWithType> 和 <xref:System.Text.UTF7Encoding> obsoletion 警告。 它不會停用任何其他警告，也不會變更 Api 的行為 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 。
 
 - 如果您必須支援 `Encoding.GetEncoding("utf-7", ...)` ：
 
-  您可以透過相容性參數重新啟用此功能的支援。 此相容性參數可以在應用程式的 *.csproj*檔案或[執行時間設定檔](../../../../docs/core/run-time-config/index.md)中指定，如下列範例所示。
+  您可以透過相容性參數重新啟用此功能的支援。 此相容性參數可以在應用程式的 *.csproj* 檔案或 [執行時間設定檔](../../../../docs/core/run-time-config/index.md)中指定，如下列範例所示。
 
-  在應用程式的 *.csproj*檔案中：
+  在應用程式的 *.csproj* 檔案中：
 
   ```xml
   <Project Sdk="Microsoft.NET.Sdk">
@@ -134,7 +134,7 @@ foreach (EncodingInfo encInfo in Encoding.GetEncodings())
   </Project>
   ```
 
-  在應用程式的*runtimeconfig.template.json* file：
+  在應用程式的 *runtimeconfig.template.json* file：
 
   ```json
   {
@@ -145,7 +145,7 @@ foreach (EncodingInfo encInfo in Encoding.GetEncodings())
   ```
 
   > [!TIP]
-  > 如果您重新啟用 UTF-7 的支援，您應該執行呼叫之程式碼的安全性審查 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 。
+  > 如果您重新啟用對 UTF-7 的支援，您應該對呼叫的程式碼執行安全性檢查 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 。
 
 #### <a name="category"></a>類別
 

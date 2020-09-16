@@ -2,12 +2,12 @@
 title: <add> 的 <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: d682acd7fff6bab2c66660a028f8a75b780e21d2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8328b6d08c1b57ad7a899c8cb489e07037e5af09
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400672"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558157"
 ---
 # <a name="add-of-commonparameters"></a>\<add> 的 \<commonParameters>
 指定跨多項服務全域使用之名稱/值組的參數。 這個參數通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。  
@@ -39,14 +39,14 @@ ms.locfileid: "70400672"
 |屬性|描述|  
 |---------------|-----------------|  
 |NAME|為服務指定的參數名稱。|  
-|value|為服務指定的參數值。|  
+|值|為服務指定的參數值。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<commonParameters>](commonparameters.md)|服務所使用的一般參數集合。 這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。|  
   
@@ -71,9 +71,9 @@ ms.locfileid: "70400672"
 </workflowRuntime>
 ```  
   
- 請注意，您 `EnableRetries` 可以在全域層級（如*CommonParameters*一節所示），或針對支援的個別服務 `EnableRetries` （如 [*服務*] 區段中所示）設定參數。  
+ 請注意，您 `EnableRetries` 可以在全域層級設定參數 (如 *CommonParameters* 一節所示) 或個別支援 (的服務， `EnableRetries` 如 [ *服務* ] 區段) 所示。  
   
- 如需使用設定檔控制 <xref:System.Workflow.Runtime.WorkflowRuntime> Windows Workflow Foundation 主應用程式之物件行為的詳細資訊，請參閱[工作流程設定檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
+ 如需使用設定檔來控制 <xref:System.Workflow.Runtime.WorkflowRuntime> Windows Workflow Foundation 主應用程式之物件行為的詳細資訊，請參閱 [工作流程設定檔](/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
   
 ## <a name="example"></a>範例  
   
@@ -93,5 +93,5 @@ ms.locfileid: "70400672"
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
-- [工作流程組態檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [工作流程組態檔](/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
 - [\<commonParameters>](commonparameters.md)

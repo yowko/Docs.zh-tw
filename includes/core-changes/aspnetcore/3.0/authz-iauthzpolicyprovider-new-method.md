@@ -6,31 +6,31 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901605"
 ---
-### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>授權：I授權策略提供程式實現需要新方法
+### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>授權： IAuthorizationPolicyProvider 執行需要新的方法
 
-在 ASP.NET Core 3.0`GetFallbackPolicyAsync`中，將`IAuthorizationPolicyProvider`一種新方法添加到 中。 當未指定策略時，授權中介軟體會使用此回退策略。
+在 ASP.NET Core 3.0 中，已將新 `GetFallbackPolicyAsync` 方法加入至 `IAuthorizationPolicyProvider` 。 當未指定任何原則時，授權中介軟體會使用此回退原則。
 
-有關詳細資訊，請參閱[點網/阿斯平核心#9759](https://github.com/dotnet/aspnetcore/pull/9759)。
+如需詳細資訊，請參閱 [dotnet/aspnetcore # 9759](https://github.com/dotnet/aspnetcore/pull/9759)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-的`IAuthorizationPolicyProvider`實現不需要方法`GetFallbackPolicyAsync`。
+的實現不 `IAuthorizationPolicyProvider` 需要 `GetFallbackPolicyAsync` 方法。
 
 #### <a name="new-behavior"></a>新的行為
 
-的`IAuthorizationPolicyProvider`實現需要一種方法`GetFallbackPolicyAsync`。
+的執行 `IAuthorizationPolicyProvider` 需要 `GetFallbackPolicyAsync` 方法。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-當未指定策略時，新方法`AuthorizationMiddleware`需要一個新的方法才能使用。
+如果未指定任何原則，則需要新的方法 `AuthorizationMiddleware` 才能使用新的。
 
 #### <a name="recommended-action"></a>建議的動作
 
-將`GetFallbackPolicyAsync`方法添加到 的`IAuthorizationPolicyProvider`實現中。
+將 `GetFallbackPolicyAsync` 方法新增至的您的執行 `IAuthorizationPolicyProvider` 。
 
 #### <a name="category"></a>類別
 

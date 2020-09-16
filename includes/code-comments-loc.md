@@ -6,4 +6,4 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "77627385"
 ---
-如果您想要查看翻譯成英文以外語言的程式碼批註，請在[此 GitHub 討論問題](https://github.com/MicrosoftDocs/feedback/issues/2515)中讓我們知道。
+如果您想要查看翻譯成英文以外語言的程式碼批註，請在 [此 GitHub 討論問題](https://github.com/MicrosoftDocs/feedback/issues/2515)中讓我們知道。

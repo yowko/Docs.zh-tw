@@ -2,12 +2,12 @@
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
 description: 瞭解如何使用 .NET Core 2.1 之後提供的 IHttpClientFactory 來建立 `HttpClient` 實例，讓您輕鬆地在應用程式中使用。
 ms.date: 08/31/2020
-ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271824"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678812"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -65,9 +65,9 @@ ms.locfileid: "89271824"
 
 **圖 8-4**。 搭配 `IHttpClientFactory` 具型別用戶端類別使用。
 
-在上圖中， `ClientService` 控制器或用戶端程式代碼所使用的 () 使用 `HttpClient` 已註冊的所建立的 `IHttpClientFactory` 。 此 factory 會將 `HttpMessageHandler` 從集區指派給 `HttpClient` 。 `HttpClient` `IHttpClientFactory` 使用擴充方法在 DI 容器中註冊時，可以使用 Polly 的原則來設定 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> 。
+在上圖中， `ClientService` 控制器或用戶端程式代碼所使用的 () 使用 `HttpClient` 已註冊的所建立的 `IHttpClientFactory` 。 此 factory 會將 `HttpMessageHandler` 從集區指派給 `HttpClient` 。 `HttpClient` `IHttpClientFactory` 使用擴充方法在 DI 容器中註冊時，可以使用 Polly 的原則來設定 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A> 。
 
-若要設定上述結構，請 <xref:System.Net.Http.IHttpClientFactory> 安裝 `Microsoft.Extensions.Http` 包含擴充方法的 NuGet 套件，以新增您的應用程式 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> 。 這個擴充方法會註冊內部 `DefaultHttpClientFactory` 類別，作為介面的 singleton `IHttpClientFactory` 。 它為 <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> 定義暫時性設定。 此訊息處理常式 (<xref:System.Net.Http.HttpMessageHandler> 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
+若要設定上述結構，請 <xref:System.Net.Http.IHttpClientFactory> 安裝 `Microsoft.Extensions.Http` 包含擴充方法的 NuGet 套件，以新增您的應用程式 <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A> <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> 。 這個擴充方法會註冊內部 `DefaultHttpClientFactory` 類別，作為介面的 singleton `IHttpClientFactory` 。 它為 <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> 定義暫時性設定。 此訊息處理常式 (<xref:System.Net.Http.HttpMessageHandler> 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
 
 在下一個程式碼中，您可以看到如何使用 `AddHttpClient()` 來註冊需要使用 `HttpClient` 的具型別用戶端 (服務代理程式)。
 

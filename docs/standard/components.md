@@ -4,12 +4,12 @@ description: 描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NE
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2fc8bcea59cd2ba652b88644677f077d62994ca4
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: fc34cf35e82e3a401f32561aa239996c7697aa03
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414730"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547671"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
@@ -29,14 +29,14 @@ ms.locfileid: "89414730"
 
 - 一或多個執行階段。 範例：適用於 .NET Framework 的 CLR、適用於 .NET Core 的 CoreCLR 和 CoreRT。
 - 實作 .NET Standard 並可能實作其他 API 的類別庫。 範例：.NET Framework 基底類別庫、.NET Core 基底類別庫。
-- (選擇性) 一或多個應用程式架構。 範例： [ASP.NET](https://www.asp.net/)、 [Windows Forms](../framework/winforms/windows-forms-overview.md)和 [Windows Presentation Foundation (WPF) ](../framework/wpf/index.md) 包含在 .NET Framework 和 .net Core 中。
+- (選擇性) 一或多個應用程式架構。 範例： [ASP.NET](https://www.asp.net/)、 [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview)和 [Windows Presentation Foundation (WPF) ](/dotnet/desktop/wpf/) 包含在 .NET Framework 和 .net Core 中。
 - (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
 Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.NET Framework、Mono 和 UWP。
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 它會在 Windows、macOS 和 Linux 上執行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 都是在 .NET Core 上執行。
+.NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 它會在 Windows、macOS 和 Linux 上執行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) 和 [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) 都是在 .NET Core 上執行。
 
 若要深入瞭解 .NET Core，請參閱 .net core [簡介](../core/introduction.md) ，以及 [針對伺服器應用程式在 .net core 和 .NET Framework 之間進行選擇](choosing-core-framework-server.md)。
 
@@ -109,6 +109,6 @@ ISO/IEC [公開可用的標準](https://standards.iso.org/ittf/PubliclyAvailable
 - [.NET Standard 簡介](net-standard.md)
 - [.NET Core 簡介](../core/introduction.md)
 - [.NET Framework 指南](../framework/index.yml)
-- [C # 指南](../csharp/index.yml)
-- [F # 指南](../fsharp/index.yml)
+- [C# 指南](../csharp/index.yml)
+- [F# 指南](../fsharp/index.yml)
 - [Visual Basic 指南](../visual-basic/index.yml)

@@ -6,17 +6,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198379"
 ---
-### <a name="http-response-body-infrastructure-changes"></a>HTTP：回應正文基礎結構更改
+### <a name="http-response-body-infrastructure-changes"></a>HTTP：回應主體基礎結構變更
 
-支援 HTTP 回應正文的基礎結構已更改。 如果您直接使用`HttpResponse`，則不需要進行任何代碼更改。 如果要包裝、替換`HttpResponse.Body`或訪問`HttpContext.Features`，請進一步閱讀。
+支援 HTTP 回應主體的基礎結構已變更。 如果您是 `HttpResponse` 直接使用，就不需要進行任何程式碼變更。 如果您要換行或取代 `HttpResponse.Body` 或存取，請進一步閱讀 `HttpContext.Features` 。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-有三個 API 與 HTTP 回應正文相關聯：
+HTTP 回應主體有三個相關聯的 Api：
 
 - `IHttpResponseFeature.Body`
 - `IHttpSendFileFeature.SendFileAsync`
@@ -24,15 +24,15 @@ ms.locfileid: "73198379"
 
 #### <a name="new-behavior"></a>新的行為
 
-如果替換`HttpResponse.Body`，它將用給定流周圍的`IHttpResponseBodyFeature`包裝器替換整個物件，用於`StreamResponseBodyFeature`為所有預期的 API 提供預設實現。 設置回原始流將恢復此更改。
+如果您取代 `HttpResponse.Body` 了，則會使用指定的資料流程周圍的包裝函式來取代整個， `IHttpResponseBodyFeature` `StreamResponseBodyFeature` 以提供所有預期 api 的預設執行。 設定回原始資料流程會還原此變更。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-動機是將回應體 API 合併到單個新功能介面中。
+動機是將回應內文 Api 合併成單一的新功能介面。
 
 #### <a name="recommended-action"></a>建議的動作
 
-使用`IHttpResponseBodyFeature`以前使用`IHttpResponseFeature.Body`或`IHttpSendFileFeature``IHttpBufferingFeature`的位置。
+使用 `IHttpResponseBodyFeature` 您先前使用 `IHttpResponseFeature.Body` 、或的位置 `IHttpSendFileFeature` `IHttpBufferingFeature` 。
 
 #### <a name="category"></a>類別
 

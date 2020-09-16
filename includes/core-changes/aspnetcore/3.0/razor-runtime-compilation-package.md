@@ -6,39 +6,39 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344287"
 ---
-### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor：運行時編譯移動到包
+### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor：執行時間編譯已移至封裝
 
-對 Razor 視圖和 Razor 頁面的運行時編譯的支援已移動到單獨的包中。
+Razor views 和 Razor Pages 的執行時間編譯支援已移至不同的封裝。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-運行時編譯可用，無需其他包。
+可以使用執行時間編譯，而不需要額外的封裝。
 
 #### <a name="new-behavior"></a>新的行為
 
-該功能已移動到[Microsoft.AspNetCore.Mvc.Razor.運行時編譯](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/)包。
+此功能已移至 AspNetCore 的 [>microsoft.aspnetcore.mvc.razor.runtimecompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/) 套件。
 
-以下 API 以前可用於`Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions`支援運行時編譯。 API 現在可通過`Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions`提供 。
+下列 Api 先前已可 `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions` 用於，以支援執行時間編譯。 現在可透過使用 Api `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions` 。
 
 - `RazorViewEngineOptions.FileProviders` 現在為 `MvcRazorRuntimeCompilationOptions.FileProviders`
 - `RazorViewEngineOptions.AdditionalCompilationReferences` 現在為 `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
 
-此外，`Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange`已被刪除。 預設情況下，通過引用包啟用檔更改的`Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`重新編譯。
+此外，已 `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange` 移除。 藉由參考封裝，預設會啟用檔案變更的重新編譯 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-此更改對於刪除 ASP.NET核心共用框架對 Roslyn 的依賴是必要的。
+必須進行這項變更，才能移除 Roslyn 上的 ASP.NET Core 共用架構相依性。
 
 #### <a name="recommended-action"></a>建議的動作
 
-需要運行時編譯或重新編譯 Razor 檔的應用應採取以下步驟：
+需要執行時間編譯或重新編譯 Razor 檔案的應用程式應該採取下列步驟：
 
-1. 添加對包的`Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`引用。
-1. 更新專案`Startup.ConfigureServices`的方法以包括對`AddRazorRuntimeCompilation`的調用。 例如：
+1. 加入封裝的參考 `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation` 。
+1. 更新專案的 `Startup.ConfigureServices` 方法以包含的呼叫 `AddRazorRuntimeCompilation` 。 例如：
 
     ```csharp
     services.AddMvc()

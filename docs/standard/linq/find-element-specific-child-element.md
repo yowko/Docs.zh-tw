@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 947983ea1ea9d50528a9cb0beaa9c86b545e5ea6
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 2f97f920ce09222858a0a51eb52ffe0d58dba960
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552088"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678635"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-linq-to-xml"></a>如何尋找具有特定子專案的元素， (LINQ to XML) 
 
@@ -96,6 +96,5 @@ End Module
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [標準查詢運算子概觀 (C#)](../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [投射作業 (C#)](../../csharp/programming-guide/concepts/linq/projection-operations.md)
-- [標準查詢運算子概觀 (Visual Basic)](/../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [標準查詢運算子概觀](../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [投影作業](../../csharp/programming-guide/concepts/linq/projection-operations.md)

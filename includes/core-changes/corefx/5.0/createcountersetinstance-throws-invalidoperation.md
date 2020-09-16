@@ -6,15 +6,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 05/28/2020
 ms.locfileid: "84144473"
 ---
-### <a name="countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists"></a>如果實例已經存在，CreateCounterSetInstance 現在會擲回 InvalidOperationException
+### <a name="countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists"></a>如果實例已經存在，則 CreateCounterSetInstance 現在會擲回 InvalidOperationException
 
 從 .NET 5.0 開始， <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance(System.String)?displayProperty=nameWithType> <xref:System.InvalidOperationException> <xref:System.ArgumentException> 如果計數器集合已經存在，則會擲回，而不是。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Framework 和 .NET Core 1.0 到3.1 中，您可以藉由呼叫來建立計數器集合的實例 <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance%2A> 。 不過，如果計數器集合已經存在，方法就會擲回 <xref:System.ArgumentException> 例外狀況。
+在 .NET Framework 和 .NET Core 1.0 至3.1，您可以藉由呼叫來建立計數器集合的實例 <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance%2A> 。 但是，如果計數器集合已經存在，則方法會擲回 <xref:System.ArgumentException> 例外狀況。
 
-在 .NET 5.0 和更新版本中，當您呼叫 <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance%2A> 且計數器集合存在時， <xref:System.InvalidOperationException> 就會擲回例外狀況。
+在 .NET 5.0 和更新版本中，當您呼叫， <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance%2A> 且計數器集合存在時， <xref:System.InvalidOperationException> 就會擲回例外狀況。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -22,10 +22,10 @@ ms.locfileid: "84144473"
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果您在 <xref:System.ArgumentException> 呼叫時攔截應用程式中的例外狀況 <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance%2A> ，請考慮同時捕捉 <xref:System.InvalidOperationException> 例外狀況。
+如果您在 <xref:System.ArgumentException> 呼叫時捕捉到應用程式中的例外狀況 <xref:System.Diagnostics.PerformanceData.CounterSet.CreateCounterSetInstance%2A> ，請考慮同時攔截 <xref:System.InvalidOperationException> 例外狀況。
 
 > [!NOTE]
-> <xref:System.ArgumentException>不建議捕捉例外狀況。
+> <xref:System.ArgumentException>不建議攔截例外狀況。
 
 #### <a name="category"></a>類別
 

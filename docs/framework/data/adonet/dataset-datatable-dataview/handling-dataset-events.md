@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: b2b71dac58838a826933af570934bf4bbb35e025
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f79b97b486bbc3e1150cd6aff8162d37134f62e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784603"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557992"
 ---
 # <a name="handling-dataset-events"></a>處理 DataSet 的事件
 <xref:System.Data.DataSet> 物件提供三個事件： <xref:System.ComponentModel.MarshalByValueComponent.Disposed>、 <xref:System.Data.DataSet.Initialized>和 <xref:System.Data.DataSet.MergeFailed>。  
@@ -45,19 +45,19 @@ private static void DataSetMergeFailed(
 ## <a name="the-initialized-event"></a>初始化的事件  
  <xref:System.Data.DataSet.Initialized> 事件發生在 `DataSet` 建構函式 (Constructor) 初始化 `DataSet`的新執行個體 (Instance) 之後。  
   
- 如果 <xref:System.Data.DataSet.IsInitialized%2A> 已完成初始化， `true` 屬性會傳回 `DataSet` ，否則會傳回 `false`。 開始 <xref:System.Data.DataSet.BeginInit%2A> 初始化作業的 `DataSet`方法會將 <xref:System.Data.DataSet.IsInitialized%2A> 設為 `false`。 <xref:System.Data.DataSet.EndInit%2A> 方法 (結束 `DataSet`的初始化) 會將其設定為 `true`。 Visual Studio 設計環境會使用這些方法來初始化`DataSet`另一個元件所使用的。 您通常不會在程式碼中使用這些方法。  
+ 如果 <xref:System.Data.DataSet.IsInitialized%2A> 已完成初始化， `true` 屬性會傳回 `DataSet` ，否則會傳回 `false`。 開始 <xref:System.Data.DataSet.BeginInit%2A> 初始化作業的 `DataSet`方法會將 <xref:System.Data.DataSet.IsInitialized%2A> 設為 `false`。 <xref:System.Data.DataSet.EndInit%2A> 方法 (結束 `DataSet`的初始化) 會將其設定為 `true`。 Visual Studio 的設計環境會使用這些方法來初始化另一個 `DataSet` 元件所使用的。 您通常不會在程式碼中使用這些方法。  
   
 ## <a name="the-disposed-event"></a>已處置的事件  
- `DataSet` 是衍生自 <xref:System.ComponentModel.MarshalByValueComponent> 類別 (Class)，此類別會公開 (Expose) <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 方法和 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> 事件。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>事件會新增事件處理常式，以接聽元件上的已處置事件。 `DataSet`如果您想要在<xref:System.ComponentModel.MarshalByValueComponent.Disposed>呼叫方法時執行程式碼，可以<xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>使用的事件。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>釋放所<xref:System.ComponentModel.MarshalByValueComponent>使用的資源。  
+ `DataSet` 是衍生自 <xref:System.ComponentModel.MarshalByValueComponent> 類別 (Class)，此類別會公開 (Expose) <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 方法和 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> 事件。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>事件會新增事件處理常式，以接聽元件上處置的事件。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed> `DataSet` 如果您想要在呼叫方法時執行程式碼，可以使用的事件 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 釋放使用的資源 <xref:System.ComponentModel.MarshalByValueComponent> 。  
   
 > [!NOTE]
-> 和物件繼承自<xref:System.ComponentModel.MarshalByValueComponent> ，並且支援遠端的介面。<xref:System.Runtime.Serialization.ISerializable> `DataTable` `DataSet` 這些是唯一可以進行遠端通訊的 ADO.NET 物件。 如需詳細資訊，請參閱[.Net 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。  
+> `DataSet`和 `DataTable` 物件會繼承自 <xref:System.ComponentModel.MarshalByValueComponent> ，並支援 <xref:System.Runtime.Serialization.ISerializable> 遠端的介面。 這些是唯一可以進行遠端通訊的 ADO.NET 物件。 如需詳細資訊，請參閱 [.Net 遠端處理](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。  
   
- 如需使用`DataSet`時其他可用事件的詳細資訊，請參閱[處理 DataTable 事件](handling-datatable-events.md)和[處理 DataAdapter 事件](../handling-dataadapter-events.md)。  
+ 如需使用時可用之其他事件的詳細資訊 `DataSet` ，請參閱 [處理 DataTable 事件](handling-datatable-events.md) 和 [處理 DataAdapter 事件](../handling-dataadapter-events.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [DataSet、DataTable 和 DataView](index.md)
-- [驗證資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120)) \(機器翻譯\)
-- [在 ADO.NET 中擷取和修改資料](../retrieving-and-modifying-data.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [驗證資料](/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
+- [在 ADO.NET 中傳送和修改資料](../retrieving-and-modifying-data.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

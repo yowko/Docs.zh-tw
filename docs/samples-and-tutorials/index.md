@@ -4,12 +4,12 @@ description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656953"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557186"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
 
@@ -107,7 +107,7 @@ ms.locfileid: "88656953"
 
 1. 透過執行下列其中一項程序，來下載包含範例程式碼的存放庫：
    * 將存放庫的 ZIP 檔案下載至本機系統。 將壓縮的封存解壓縮。
-   * 將存放庫[分岔 (英文)](https://help.github.com/articles/fork-a-repo/)，並將該分岔[複製 (英文)](https://help.github.com/articles/cloning-a-repository/) 到您的本機系統。 分岔和複製可讓您將變更認可至您的分岔，並針對官方文件存放庫建立提取要求，來為文件做出貢獻。 如需詳細資訊，請參閱 [.Net 檔參與指南](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) 和 [ASP.NET Core 檔參與指南](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)。
+   * 將存放庫[分岔 (英文)](https://help.github.com/articles/fork-a-repo/)，並將該分岔[複製 (英文)](https://help.github.com/articles/cloning-a-repository/) 到您的本機系統。 分岔和複製可讓您將變更認可至您的分岔，並針對官方文件存放庫建立提取要求，來為文件做出貢獻。 如需詳細資訊，請參閱 [.Net 檔參與指南](/contribute/dotnet/dotnet-contribute) 和 [ASP.NET Core 檔參與指南](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)。
    * 於本機複製存放庫。 如果您將文件存放庫直接複製到本機系統，您將無法直接對官方存放庫做出認可，也因此無法於稍後為文件做出貢獻。 如果您想要保留於稍後參與文件的機會，請使用先前描述的分岔和複製程序。
 1. 於存放庫的資料夾內瀏覽至範例的位置。 範例位置的相對路徑會在您依循範例連結時，顯示於瀏覽器的網址列中。
 1. 您有數個選項可以執行範例：

@@ -6,17 +6,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901853"
 ---
-### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC：從控制器操作名稱修剪的非同步尾碼
+### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC：從控制器動作名稱中修剪的非同步尾碼
 
-作為尋[址點網/aspnetcore_4849](https://github.com/dotnet/aspnetcore/issues/4849)的一部分，ASP.NET核心 MVC 預設`Async`從操作名稱中修剪尾碼。 從 ASP.NET 酷 3.0 開始，此更改會影響路由和鏈路生成。
+在定址 [dotnet/aspnetcore # 4849](https://github.com/dotnet/aspnetcore/issues/4849)的過程中，ASP.NET Core MVC 預設會修剪 `Async` 動作名稱的尾碼。 從 ASP.NET Core 3.0 開始，這項變更會影響路由和連結產生。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-請考慮以下ASP.NET核心 MVC 控制器：
+請考慮下列 ASP.NET Core MVC 控制器：
 
 ```csharp
 public class ProductController : Controller
@@ -29,7 +29,7 @@ public class ProductController : Controller
 }
 ```
 
-該操作可通過`Product/ListAsync`進行路由。 連結生成需要指定`Async`尾碼。 例如：
+動作可透過路由傳送 `Product/ListAsync` 。 連結產生需要指定 `Async` 尾碼。 例如：
 
 ```cshtml
 <a asp-controller="Product" asp-action="ListAsync">List</a>
@@ -37,13 +37,13 @@ public class ProductController : Controller
 
 #### <a name="new-behavior"></a>新的行為
 
-在 ASP.NET 核心 3.0 中，操作`Product/List`可通過 進行路由。 連結生成代碼應省略`Async`尾碼。 例如：
+在 ASP.NET Core 3.0 中，動作可透過進行路由傳送 `Product/List` 。 連結產生程式碼應該省略 `Async` 尾碼。 例如：
 
 ```cshtml
 <a asp-controller="Product" asp-action="List">List</a>
 ```
 
-此更改不會影響使用 屬性`[ActionName]`指定的名稱。 可以通過`MvcOptions.SuppressAsyncSuffixInActionNames``false`在 中`Startup.ConfigureServices`設置為 來禁用新行為：
+此變更不會影響使用屬性指定的名稱 `[ActionName]` 。 您可以在中將設定為，以停用新的行為 `MvcOptions.SuppressAsyncSuffixInActionNames` `false` `Startup.ConfigureServices` ：
 
 ```csharp
 services.AddMvc(options =>
@@ -52,16 +52,16 @@ services.AddMvc(options =>
 });
 ```
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-按照慣例，非同步 .NET 方法尾碼與`Async`。 但是，當方法定義 MVC 操作時，不宜使用`Async`尾碼。
+依照慣例，非同步 .NET 方法的尾碼為 `Async` 。 不過，當方法定義 MVC 動作時，不需要使用 `Async` 尾碼。
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果應用依賴于保留名稱尾碼的`Async`MVC 操作，請選擇以下緩解措施之一：
+如果您的應用程式相依于保留名稱尾碼的 MVC 動作 `Async` ，請選擇下列其中一個緩和措施：
 
-- 使用`[ActionName]`屬性保留原始名稱。
-- 通過在`MvcOptions.SuppressAsyncSuffixInActionNames``false`中`Startup.ConfigureServices`設置為 完全禁用重命名：
+- 您 `[ActionName]` 可以使用屬性來保留原始名稱。
+- 將設定為，以完全停用重新命名 `MvcOptions.SuppressAsyncSuffixInActionNames` `false` `Startup.ConfigureServices` ：
 
 ```csharp
 services.AddMvc(options =>
@@ -76,7 +76,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-None
+無
 
 <!-- 
 

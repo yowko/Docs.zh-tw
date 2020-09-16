@@ -26,7 +26,7 @@ ms.locfileid: "90538705"
 > - PerfView 中的設定檔效能
 > - 診斷和解決過度的 CPU 使用率
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 教學課程會使用：
 

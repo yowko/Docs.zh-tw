@@ -4,12 +4,12 @@ description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitH
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 48f5f213802b09168cbc21da1b22e84ec53756fe
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: fa00306e80046097c1269533d3a3ca1e85f10288
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282069"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679491"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>教學課程：使用多元分類搭配 ML.NET 來分類支援問題
 
@@ -18,7 +18,7 @@ ms.locfileid: "86282069"
 在本教學課程中，您會了解如何：
 > [!div class="checklist"]
 >
-> * 準備您的資料
+> * 準備資料
 > * 轉換資料
 > * 將模型定型
 > * 評估模型
@@ -29,15 +29,15 @@ ms.locfileid: "86282069"
 
 ## <a name="prerequisites"></a>必要條件
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本，或是已安裝「.net Core 跨平臺開發」工作負載的 Visual Studio 2017 15.6 或更新版本。
-* [GitHub 問題 tab 鍵分隔的檔案 (issues_train tsv) ](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv)。
-* GitHub 會發出測試索引標籤分隔的檔案[ (issues_test tsv) ](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv)。
+* 已安裝「.NET Core 跨平臺開發」工作負載， [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新版本或 Visual Studio 2017 15.6 版或更新版本。
+* [GitHub 會以定位字元分隔檔案 (issues_train tsv) ](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv)。
+* GitHub 會將 [ [測試] 索引標籤分隔的檔案 (issues_test tsv) ](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv)。
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
 ### <a name="create-a-project"></a>建立專案
 
-1. 開啟 Visual Studio 2017。 **File**  >  **New**  >  從功能表列選取 [檔案] [新增**專案**]。 在 [新增專案]**** 對話方塊中，選取 [Visual C#]**** 節點，然後選取 [.NET Core]**** 節點。 然後選取 [主控台應用程式 (.NET Core)]**** 專案範本。 在 [名稱]**** 文字方塊中，鍵入 "GitHubIssueClassification"，然後選取 [確定]**** 按鈕。
+1. 開啟 Visual Studio 2017。 **File**  >  **New**  >  從功能表列選取 [檔案新**專案**]。 在 [新增專案]**** 對話方塊中，選取 [Visual C#]**** 節點，然後選取 [.NET Core]**** 節點。 然後選取 [主控台應用程式 (.NET Core)]**** 專案範本。 在 [名稱]**** 文字方塊中，鍵入 "GitHubIssueClassification"，然後選取 [確定]**** 按鈕。
 
 2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集檔案：
 
@@ -51,13 +51,13 @@ ms.locfileid: "86282069"
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇 [nuget.org] 作為 [套件來源]，選取 [流覽] 索引標籤，搜尋**Microsoft.ML** ，然後選取 [**安裝**] 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇 "nuget.org" 作為 [套件來源]，選取 [流覽] 索引標籤，搜尋 **Microsoft.ML** ，然後選取 [ **安裝** ] 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
 
-### <a name="prepare-your-data"></a>準備您的資料
+### <a name="prepare-your-data"></a>準備資料
 
 1. 下載 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 資料集，並將它們儲存至先前建立的 *Data* 資料夾。 第一個資料集會將機器學習模型定型，第二個資料集則可用來評估您模型的準確率。
 
-2. 在 [方案總管] 中，於每個 \*.tsv 檔案上按一下滑鼠右鍵，然後選取 [屬性]****。 在 [ **Advanced**] 底下，將 [**複製到輸出目錄**] 的值變更為 [**更新時複製**]。
+2. 在 [方案總管] 中，於每個 \*.tsv 檔案上按一下滑鼠右鍵，然後選取 [屬性]****。 在 [ **Advanced**] 底下，將 [ **複製到輸出目錄** ] 的值變更為 [ **更新時複製**]。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -74,7 +74,7 @@ ms.locfileid: "86282069"
 * `_trainingDataView` 是用來處理定型資料集的 <xref:Microsoft.ML.IDataView>。
 * `_predEngine` 是用於單一預測的 <xref:Microsoft.ML.PredictionEngine%602>。
 
-將下列程式碼新增至方法正上方的 `Main` 那一行，以指定這些路徑和其他變數：
+將下列程式碼加入至方法正上方的行， `Main` 以指定這些路徑和其他變數：
 
 [!code-csharp[DeclareGlobalVariables](./snippets/github-issue-classification/csharp/Program.cs#DeclareGlobalVariables)]
 
@@ -105,7 +105,7 @@ ms.locfileid: "86282069"
 
 `IssuePrediction` 是在模型定型後，用來進行預測的類別。 它具有單一 `string` (`Area`) 和 `PredictedLabel` `ColumnName` 屬性。  `PredictedLabel` 的使用時機是在進行預測和評估的期間。 就評估而言，會使用含有定型資料、預設值及模型的輸入。
 
-所有 ML.NET 作業會在[MLCoNtext](xref:Microsoft.ML.MLContext)類別中啟動。 將 `mlContext` 初始化會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，它與 `Entity Framework` 中的 `DBContext` 相似。
+所有 ML.NET 作業都是在 [MLCoNtext](xref:Microsoft.ML.MLContext) 類別中開始。 將 `mlContext` 初始化會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，它與 `Entity Framework` 中的 `DBContext` 相似。
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
@@ -147,7 +147,7 @@ public static IEstimator<ITransformer> ProcessData()
 
 [!code-csharp[MapValueToKey](./snippets/github-issue-classification/csharp/Program.cs#MapValueToKey)]
 
-接下來，呼叫 `mlContext.Transforms.Text.FeaturizeText` ，將 (的文字 `Title` 和 `Description`) 的資料行轉換成每個呼叫和的數值向量 `TitleFeaturized` `DescriptionFeaturized` 。 將這兩個資料行的特徵轉換附加至管線，使用的程式碼如下：
+接下來，呼叫 `mlContext.Transforms.Text.FeaturizeText` ，這會將文字 (`Title` ，並 `Description`) 資料行轉換為每個呼叫和的數位向量 `TitleFeaturized` `DescriptionFeaturized` 。 將這兩個資料行的特徵轉換附加至管線，使用的程式碼如下：
 
 [!code-csharp[FeaturizeText](./snippets/github-issue-classification/csharp/Program.cs#FeaturizeText)]
 
@@ -273,13 +273,13 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 針對多類別分類評估的計量如下：
 
-* 微精確度 - 每個範例類別組同樣都會對精確度計量提出貢獻。  您希望微精確度盡可能接近一。
+* 微精確度 - 每個範例類別組同樣都會對精確度計量提出貢獻。  您希望微精確度盡可能接近一個。
 
-* 大精確度 - 每個類別同樣都會對精確度計量提出貢獻。 少數類別會加上與較大類別相同的權重。 您想要讓宏精確度盡可能接近一個。
+* 大精確度 - 每個類別同樣都會對精確度計量提出貢獻。 少數類別會加上與較大類別相同的權重。 您希望宏精確度盡可能接近一個。
 
 * 記錄檔遺失 - 請參閱[記錄檔遺失](../resources/glossary.md#log-loss)。 建議讓記錄檔遺失盡量接近零。
 
-* 記錄檔遺失減少-範圍從 [-inf，1.00]，其中1.00 是完美的預測，而0則表示平均值的預測。 您想要儘量減少記錄檔遺失，使其盡可能接近一。
+* 記錄檔遺失減少-範圍從 [-inf，1.00]，其中1.00 是完美的預測，而0表示平均預測。 您希望盡可能減少記錄檔遺失。
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>顯示模型驗證的計量
 
@@ -302,7 +302,7 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 }
 ```
 
-將下列程式碼新增至 `SaveModelAsFile` 方法。 這段程式碼會使用 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法，將定型的模型序列化並儲存為 zip 檔案。
+將下列程式碼新增至 `SaveModelAsFile` 方法。 此程式碼會使用 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) 方法來序列化定型的模型，並將其儲存為 zip 檔案。
 
 [!code-csharp[SnippetSaveModel](./snippets/github-issue-classification/csharp/Program.cs#SnippetSaveModel)]
 
@@ -341,7 +341,7 @@ private static void PredictIssue()
 
 [!code-csharp[CreatePredictionEngine](./snippets/github-issue-classification/csharp/Program.cs#CreatePredictionEngine)]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是安全線程。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立物件的， [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 以便在 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 整個應用程式中使用。 請參閱本指南，以瞭解如何[ `PredictionEnginePool` 在 ASP.NET CORE Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是便利的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全線程。 可以在單一執行緒或原型環境中使用。 為了改進生產環境中的效能和執行緒安全性，請使用 `PredictionEnginePool` 服務來建立物件的， [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) 以便在 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 整個應用程式中使用。 請參閱本指南，以瞭解如何 [ `PredictionEnginePool` 在 ASP.NET CORE Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
 
 > [!NOTE]
 > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
@@ -380,7 +380,7 @@ private static void PredictIssue()
 在本教學課程中，您已了解如何：
 > [!div class="checklist"]
 >
-> * 準備您的資料
+> * 準備資料
 > * 轉換資料
 > * 將模型定型
 > * 評估模型

@@ -2,18 +2,18 @@
 title: 機器學習工作
 description: 探索 ML.NET 中支援的各種不同機器學習工作與相關的工作。
 ms.date: 12/23/2019
-ms.openlocfilehash: e6e36bd65dbadb8cb7b8edbf9e2e82071c208378
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 56cdb5f3162614d0bf2fb1e5bd9e774b5548b238
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144444"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679478"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的機器學習工作
 
-機器學習工作是根據所詢問的問題或問題，以及可用的資料，進行預測或推斷的類型。 例如，分類工作會將資料指派給類別目錄，而叢集工作會根據相似性將資料分組。
+機器學習工作是根據所詢問的問題和可用的資料，所進行的預測或推斷類型。 例如，「分類」工作會將資料指派給類別目錄，而「群集」工作會根據相似性將資料分組。
 
-機器學習工作會依賴資料中的模式，而不是明確地進行設計。
+機器學習工作依賴資料中的模式，而不是明確的設計。
 
 本文說明您可以在 ML.NET 中選擇的不同機器學習工作，以及一些常見的使用案例。
 
@@ -54,7 +54,7 @@ ms.locfileid: "84144444"
 輸入標籤資料行資料必須是 <xref:System.Boolean>。
 輸入特徵資料行資料必須是 <xref:System.Single> 的固定大小向量。
 
-這些訓練人員會輸出下列資料行：
+這些定型器會輸出下列資料行：
 
 | 輸出資料行名稱 | 資料行類型 | 描述|
 | -- | -- | -- |
@@ -72,7 +72,7 @@ ms.locfileid: "84144444"
 如需詳細資訊，請參閱維基百科上的[多元分類](https://en.wikipedia.org/wiki/Multiclass_classification) \(英文\) 一文。
 
 >[!NOTE]
->One-Vs-All 將任何[二元分類學習工具](#binary-classification)升級，以在多元分類資料集上運作。 有關[維琪百科](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)的詳細資訊。
+>One-Vs-All 將任何[二元分類學習工具](#binary-classification)升級，以在多元分類資料集上運作。 [維琪百科](https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)的詳細資訊。
 
 ### <a name="multiclass-classification-trainers"></a>多類別分類學習工具
 
@@ -94,10 +94,10 @@ ms.locfileid: "84144444"
 
 訓練工具輸出下列內容：
 
-| 輸出名稱 | 類型 | 說明|
+| 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 所有類別的分數。 較高值表示落入相關聯類別的機率較高。 若第 i 個項目具有最大值，則預測標籤索引將會是 i。 請注意，i 是以零為基礎的索引。 |
-| `PredictedLabel` | [金鑰](xref:Microsoft.ML.Data.KeyDataViewType)類型 | 預測標籤的索引。 若其值是 i，則實際標籤可能會是索引鍵/值輸入標籤類型中的第 i 個類別。 |
+| `PredictedLabel` | [金鑰](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 預測標籤的索引。 若其值是 i，則實際標籤可能會是索引鍵/值輸入標籤類型中的第 i 個類別。 |
 
 ## <a name="regression"></a>迴歸
 
@@ -127,7 +127,7 @@ ms.locfileid: "84144444"
 
 這項工作的訓練工具會輸出下列內容：
 
-| 輸出名稱 | 類型 | 說明|
+| 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型預測的原始分數 |
 
@@ -154,7 +154,7 @@ ms.locfileid: "84144444"
 | 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 指定資料點到所有叢集幾何中心的距離 |
-| `PredictedLabel` | [金鑰](xref:Microsoft.ML.Data.KeyDataViewType)類型 | 由模型所預測最接近的叢集索引。 |
+| `PredictedLabel` | [金鑰](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 由模型所預測最接近的叢集索引。 |
 
 ## <a name="anomaly-detection"></a>異常偵測
 
@@ -186,7 +186,7 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 | 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由異常偵測模型所計算之非負數且沒有限制的分數 |
-| `PredictedLabel` | <xref:System.Boolean> | True/false 值，表示輸入是否為異常（PredictedLabel = true）或不是（PredictedLabel = false） |
+| `PredictedLabel` | <xref:System.Boolean> | True/false 值，表示輸入是否為異常 (PredictedLabel = true) 或不 (PredictedLabel = false)  |
 
 ## <a name="ranking"></a>次序
 
@@ -223,10 +223,10 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 
 ## <a name="forecasting"></a>預測
 
-預測工作會使用過去的時間序列資料來預測未來的行為。 適用于預測的案例包括氣象預測、季節性銷售預測和預測性維護。
+預測工作會使用過去的時間序列資料來進行未來行為的預測。 適用于預測的案例包括氣象預測、季節性銷售預測，以及預測性維護
 
 ### <a name="forecasting-trainers"></a>預測講師
 
-您可以使用下列演算法來定型預測模型：
+您可以使用下列演算法來訓練預測模型：
 
-<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa%2A>

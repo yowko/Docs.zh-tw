@@ -4,136 +4,136 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: ff7e4229450e801a6d618c5141efde8cdcbef03d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c0578b5397172814c708706173c69ef69f91b2a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "82071854"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551774"
 ---
-# <a name="define-custom-types-for-use-with-net-xaml-services"></a>定義為 .NET XAML 服務的自訂類型
+# <a name="define-custom-types-for-use-with-net-xaml-services"></a>定義搭配 .NET XAML 服務使用的自訂類型
 
-當您定義業務物件或對特定框架不依賴的類型時,您可以遵循 XAML 的某些最佳做法。 如果您遵循這些實踐,.NET XAML 服務及其 XAML 讀取器和 XAML 編寫器可以發現您類型的 XAML 特徵,並使用 XAML 類型系統在 XAML 節點流中為其提供適當的表示形式。 本主題介紹類型定義、成員定義和類型或成員的 CLR 歸因的最佳做法。
+當您定義屬於商務物件的自訂類型，或是沒有相依于特定架構的類型時，可以遵循 XAML 的一些最佳作法。 如果您遵循這些做法，.NET XAML 服務及其 XAML 讀取器和 XAML 寫入器可以探索您類型的 XAML 特性，並使用 XAML 型別系統在 XAML 節點資料流程中提供適當的標記法。 本主題說明型別定義、成員定義以及型別或成員的 CLR 類型的最佳作法。
 
-## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>XAML 的建構函式模式和類型定義
+## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>XAML 的函式模式和類型定義
 
-要在 XAML 中實體化為物件元素,自訂類必須滿足以下要求:
+若要在 XAML 中具現化為物件元素，自訂類別必須符合下列需求：
 
-- 自定義類必須是公共的,並且必須公開無參數的公共構造函數。 (如需結構相關附註，請參閱下節)。
+- 自訂類別必須是公用的，而且必須公開無參數公用的函式。 (如需結構相關附註，請參閱下節)。
 
-- 自定義類不能是嵌套類。 全名路徑中的額外"點"使類命名空間劃分不明確,並干擾其他 XAML 功能(如附加屬性)。
-如果物件可以實例化為物件元素,則創建的物件可以填充將對象作為其基礎類型的任何屬性的屬性元素形式。
+- 自訂類別不得為嵌套類別。 在完整名稱路徑中的額外「點」讓類別命名空間的除法不明確，並干擾其他 XAML 功能，例如附加屬性。
+如果物件可以具現化為物件專案，則建立的物件可以填滿將物件做為其基礎型別的任何屬性（property element）形式的屬性（property element）。
 
-如果啟用值轉換器,仍可以為不符合這些標準的類型提供物件值。 有關詳細資訊,請參閱[XAML 的類型轉換器和標記延伸](type-converters-and-markup-extensions.md)。
+如果您啟用值轉換器，您仍然可以針對不符合這些準則的類型提供物件值。 如需詳細資訊，請參閱 [XAML 的類型轉換器和標記延伸](type-converters-and-markup-extensions.md)。
 
 ### <a name="structures"></a>結構
 
-結構始終能夠在 XAML 中透過 CLR 定義構造。 這是因為 CLR 編譯器隱式為結構創建了無參數構造函數。 此建構函數將所有屬性值初始化到其預設值。
+結構一律可以透過 CLR 定義在 XAML 中進行。 這是因為 CLR 編譯器會隱含地為結構建立無參數的函式。 這個函式會將所有屬性值初始化為其預設值。
 
-在某些情況下,結構的預設構造行為是不需要的。 這可能是因為結構旨在填充值,並在概念上作為聯合進行函數。 作為聯合,包含的值可能具有互斥的解釋,因此,其屬性都不是可設置的。 WPF 字彙中這種結構的範例是<xref:System.Windows.GridLength>。 此類結構應實現類型轉換器,以便透過使用創建結構值的不同解釋或模式的字串約定,以屬性形式表示值。 結構還應通過非參數構造函數公開代碼構造的類似行為。
+在某些情況下，不需要結構的預設結構行為。 這可能是因為結構的目的是要將值填滿，並且在概念上以聯集的方式運作。 以聯集的形式，包含的值可能會有互斥的解讀，因此不會設定其任何屬性。 WPF 詞彙中的這類結構範例為 <xref:System.Windows.GridLength> 。 這類結構應該採用型別轉換子，藉由使用可建立結構值之不同解讀或模式的字串慣例，以屬性形式表示值。 此結構也應該透過非參數的函式來公開程式碼結構的類似行為。
 
 ### <a name="interfaces"></a>介面
 
-介面可用作成員的基礎類型。 XAML 類型系統檢查可分配清單,並期望作為值提供的物件可以分配給介面。 只要相關的可分配類型支援 XAML 建構要求,則對於介面必須作為 XAML 類型呈現的概念是沒有概念的。
+介面可以用來做為成員的基礎類型。 XAML 類型系統會檢查可指派的清單，並預期以值形式提供的物件可以指派給介面。 如果有相關的可指派型別支援 XAML 結構需求，就不需要將介面呈現為 XAML 型別。
 
-### <a name="factory-methods"></a>工廠方法
+### <a name="factory-methods"></a>Factory 方法
 
-工廠方法是 XAML 2009 功能。 它們修改了 XAML 原則,即物件必須具有無參數構造函數。 本文沒有記錄工廠方法。 請參考[x:工廠方法指令](xfactorymethod-directive.md)。
+Factory 方法是 XAML 2009 功能。 它們會修改物件必須具有無參數的函式的 XAML 原則。 本文中未記載 Factory 方法。 請參閱 [x:FactoryMethod](xfactorymethod-directive.md)指示詞。
 
 ## <a name="enumerations"></a>列舉
 
-枚舉具有 XAML 本機類型轉換行為。 根據基礎枚舉類型解析 XAML 中指定的枚舉常量名稱,並將枚舉值返回給 XAML 物件編寫器。
+列舉具有 XAML 原生類型轉換行為。 XAML 中指定的列舉常數名稱是根據基礎列舉型別來解析，並且將列舉值傳回給 XAML 物件寫入器。
 
-XAML<xref:System.FlagsAttribute>支援 應用的枚舉標記樣式用法。 有關詳細資訊,請參閱[XAML 語法詳細資訊](../../framework/wpf/advanced/xaml-syntax-in-detail.md)。 [(XAML 語法詳細](../../framework/wpf/advanced/xaml-syntax-in-detail.md)為 WPF 受眾編寫,但該主題中的大多數資訊與不特定於特定實現框架的 XAML 相關。
+XAML 針對已套用的列舉支援旗標樣式用法 <xref:System.FlagsAttribute> 。 如需詳細資訊，請參閱 [XAML 語法的詳細](/dotnet/desktop/wpf/advanced/xaml-syntax-in-detail)資訊。  ([Xaml 語法的詳細](/dotnet/desktop/wpf/advanced/xaml-syntax-in-detail) 資訊是針對 WPF 物件撰寫的，但該主題中大部分的資訊都與特定執行架構無關的 xaml 有關。 ) 
 
 ## <a name="member-definitions"></a>成員定義
 
-類型可以為 XAML 使用定義成員。 類型可以定義 XAML 可用的成員,即使該特定類型不可用於 XAML。 這是可能的,因為CLR繼承。 只要繼承該成員的某些類型支援 XAML 使用作為類型,並且該成員支援其基礎類型的 XAML 用法或具有本機 XAML 語法可用,該成員即可用於 XAML。
+類型可以定義 XAML 用法的成員。 類型可以定義可供 XAML 使用的成員，即使該特定型別不是 XAML 可用也是一樣。 這是可能的，因為 CLR 繼承。 只要有一些繼承成員的型別支援 XAML 使用方式做為型別，而成員支援其基礎類型的 XAML 使用方式，或有原生 XAML 語法可用，該成員就可以使用 XAML。
 
 ### <a name="properties"></a>屬性
 
-如果使用典型的`get`CLR 和訪問`set`模式以及 語言適當的關鍵字將屬性定義為公共 CLR 屬性,則 XAML 類型系統可以將該屬性<xref:System.Xaml.XamlMember>報告為成員<xref:System.Xaml.XamlMember.IsReadPublic%2A>,<xref:System.Xaml.XamlMember.IsWritePublic%2A>並提供有關 屬性(如和 )等屬性的適當資訊。
+如果您使用一般 CLR 和存取子模式和語言適當的 keywording，將屬性定義為公用 CLR 屬性， `get` `set` XAML 型別系統可以將屬性報告為具有提供給屬性之適當資訊的成員 <xref:System.Xaml.XamlMember> ，例如 <xref:System.Xaml.XamlMember.IsReadPublic%2A> 和 <xref:System.Xaml.XamlMember.IsWritePublic%2A> 。
 
-特定屬性可以透過<xref:System.ComponentModel.TypeConverterAttribute>應用 啟用文本語法來啟用文本語法。 有關詳細資訊,請參閱[XAML 的類型轉換器和標記延伸](type-converters-and-markup-extensions.md)。
+特定屬性可以藉由套用來啟用文字語法 <xref:System.ComponentModel.TypeConverterAttribute> 。 如需詳細資訊，請參閱 [XAML 的類型轉換器和標記延伸](type-converters-and-markup-extensions.md)。
 
-在沒有文字語法或本機 XAML 轉換的情況下,在沒有進一步間接(如標記擴展用法)的情況下,屬性的<xref:System.Xaml.XamlMember.TargetType%2A>類型( 在 XAML 類型系統中)必須能夠將實例視為 CLR 類型,將實例返回到 XAML 物件編寫器。
+如果沒有文字語法或原生 XAML 轉換，而且沒有進一步的間接取值（例如標記延伸使用方式），則在 XAML 型別系統中 (的屬性型別， <xref:System.Xaml.XamlMember.TargetType%2A>) 必須能夠將目標型別視為 CLR 型別，以將實例傳回 xaml 物件寫入器。
 
-如果使用 XAML 2009,則如果未滿足以前的注意事項,可以使用[x:參考標記擴展](xreference-markup-extension.md)提供值;但是,這更多的是使用問題,而不是類型定義問題。
+如果使用 XAML 2009，如果不符合先前的考慮， [X:Reference 標記延伸](xreference-markup-extension.md) 可以用來提供值;不過，這比型別定義問題更是使用問題。
 
 ### <a name="events"></a>事件
 
-如果將事件定義為公共 CLR 事件,XAML 類型系統可以將事件<xref:System.Xaml.XamlMember.IsEvent%2A>報告為具有`true`的成員。 連接事件處理程式不在 .NET XAML 服務功能範圍內;因此,在 .NET XAML 服務功能範圍內,則對事件處理程序進行佈線。線路留給特定的框架和實現。
+如果您將事件定義為公用 CLR 事件，XAML 型別系統可以將附隨報告為具有 as 的 <xref:System.Xaml.XamlMember.IsEvent%2A> 成員 `true` 。 連接事件處理常式不在 .NET XAML 服務功能的範圍內;線路會留給特定的架構和實施。
 
 ### <a name="methods"></a>方法
 
-方法的內聯代碼不是預設的 XAML 功能。 在大多數情況下,您不會直接引用 XAML 中的方法成員,並且方法在 XAML 中的角色只是為特定的 XAML 模式提供支援。 [x:工廠方法指令](xfactorymethod-directive.md)是一個例外。
+方法的內嵌程式碼不是預設的 XAML 功能。 在大多數情況下，您不會直接從 XAML 參考方法成員，而 XAML 中方法的角色只是提供對特定 XAML 模式的支援。 [x:FactoryMethod](xfactorymethod-directive.md) 指示詞是例外狀況。
 
 ### <a name="fields"></a>欄位
 
-CLR 設計指南阻止非靜態欄位。 對於靜態欄位,只能通過[x:靜態標記擴展](xstatic-markup-extension.md)訪問靜態欄位值。在這種情況下,您沒有在 CLR 定義中執行任何特殊操作來公開[x:靜態](xstatic-markup-extension.md)用法的欄位。
+CLR 設計方針不鼓勵非靜態欄位。 針對靜態欄位，您只能透過 [X:Static 標記延伸](xstatic-markup-extension.md)來存取靜態域值;在此情況下，您不會在 CLR 定義中執行任何特殊作業來公開 [x:Static](xstatic-markup-extension.md) 使用的欄位。
 
 ## <a name="attachable-members"></a>可附加成員
 
-可附加成員通過定義類型上的訪問器方法模式向 XAML 公開。 定義類型本身不需要 XAML 作為物件可用。 實際上,一種常見模式是聲明服務類,其作用是擁有可附加成員並實現相關行為,但不提供其他函數,如 UI 表示形式。 對於以下部分,占位符*屬性名稱*表示可附加成員的名稱。 該名稱必須在[XamlName 語法](xamlname-grammar.md)中有效。
+可附加的成員會透過定義型別的存取子方法模式，對 XAML 公開。 定義型別本身不需要當做物件使用 XAML。 事實上，常見的模式是宣告服務類別，其角色是擁有可附加的成員並執行相關的行為，但不提供任何其他功能（例如 UI 標記法）。 在下列各節中，預留位置 *屬性* 名稱代表可附加成員的名稱。 該名稱在 [XamlName 文法](xamlname-grammar.md)中必須是有效的。
 
-小心這些模式和類型的其他方法之間的名稱衝突。 如果存在與其中一種模式匹配的成員,則 XAML 處理器可以將其解釋為可附加成員使用路徑,即使這不是您的意圖。
+請注意這些模式與類型的其他方法之間的名稱衝突。 如果有符合其中一個模式的成員存在，則它可以被 XAML 處理器視為可附加的成員使用路徑，即使這不是您的目的。
 
-#### <a name="the-getpropertyname-accessor"></a>取得屬性名稱存取器
+#### <a name="the-getpropertyname-accessor"></a>GetPropertyName 存取子
 
-存取器的`GetPropertyName`簽章 必須為:
+存取子的簽章 `GetPropertyName` 必須是：
 
 `public static object GetPropertyName(object target)`
 
-- `target` 物件可以指定為實作中的更特定類型。 您可以使用它來限定可附加成員的使用範圍;預期範圍以外的用法將引發無效強制轉換異常,然後由 XAML 分析錯誤顯示。 參數名稱`target`不是要求,但在大多數實現中按`target`約定 命名。
+- `target` 物件可以指定為實作中的更特定類型。 您可以使用此值來限定可附加成員的使用方式;預期範圍之外的使用方式將會擲回不正確轉換例外狀況，然後由 XAML 剖析錯誤呈現。 參數名稱不是必要的 `target` ，但 `target` 在大部分的執行中依慣例命名。
 
 - 傳回值可以指定為實作中的更特定類型。
 
-要支援<xref:System.ComponentModel.TypeConverter>啟用的文本語法,以便附加成員的屬性使用,請應用<xref:System.ComponentModel.TypeConverterAttribute>`GetPropertyName`於訪問器。 申請`get`,`set`而不是 可能看起來不直觀;但是,此約定可以支援可序列化的唯讀可附加成員的概念,這在設計器方案中很有用。
+若要 <xref:System.ComponentModel.TypeConverter> 針對可附加成員的屬性用法支援啟用的文字語法，請套用 <xref:System.ComponentModel.TypeConverterAttribute> 至存取子 `GetPropertyName` 。 套用至 `get` 而不是 `set` 直覺化; 不過，這個慣例可支援可序列化之唯讀可附加成員的概念，在設計工具案例中很有用。
 
-#### <a name="the-setpropertyname-accessor"></a>設定屬性名稱存取器
+#### <a name="the-setpropertyname-accessor"></a>SetPropertyName 存取子
 
-存取器的`SetPropertyName`簽章 必須為:
+存取子的簽章 `SetPropertyName` 必須是：
 
 `public static void SetPropertyName(object target, object value)`
 
-- 該`target`物件可以指定為實現中更具體的類型,其邏輯和後果與上一節所述相同。
+- `target`您可以將物件指定為您的實作為中的更特定類型，具有與上一節所述相同的邏輯和結果。
 
 - `value` 物件可以指定為實作中的更特定類型。
 
-請記住,此方法的值是來自 XAML 用法的輸入,通常以屬性形式提供。 從屬性表單中,必須支援文字語法的值轉換器,並且對`GetPropertyName`s 訪問器的屬性。
+請記住，這個方法的值是來自 XAML 使用方式的輸入，通常是在屬性表單中。 在屬性表單中，必須有 text 語法的值轉換器支援，而且您可以在 s 存取子上進行屬性 `GetPropertyName` 。
 
-### <a name="attachable-member-stores"></a>可附加會員商店
+### <a name="attachable-member-stores"></a>可附加的成員存放區
 
-訪問器方法通常不足以提供將可附加成員值放入物件圖形的方法,或從物件圖中檢索值並正確序列化它們。 要提供此功能,`target`以前存取器簽名中的物件必須能夠儲存值。 儲存機制應符合可附加成員原則,即成員可附加到可附加成員不在成員清單中的目標。 .NET XAML 服務通過<xref:System.Xaml.IAttachedPropertyStore><xref:System.Xaml.AttachablePropertyServices>API 和 為可附加成員存儲提供了一種實現技術。 <xref:System.Xaml.IAttachedPropertyStore>XAML 編寫器用於發現存儲實現,並且應在訪問`target`器的類型上實現。 靜態<xref:System.Xaml.AttachablePropertyServices>API 在訪問器的正文中使用,並<xref:System.Xaml.AttachableMemberIdentifier>透過其引用可連接成員。
+存取子方法通常不足以提供方法，將可附加的成員值放入物件圖形中，或從物件圖形取出值並正確地加以序列化。 若要提供這項功能，先前存取子簽章 `target` 中的物件必須能夠儲存值。 儲存機制應該與可附加的成員主體一致，該成員可附加至可附加成員不在成員清單中的目標。 .NET XAML 服務透過 Api 和提供可附加的成員存放區的實作為方法 <xref:System.Xaml.IAttachedPropertyStore> <xref:System.Xaml.AttachablePropertyServices> 。 <xref:System.Xaml.IAttachedPropertyStore> XAML 寫入器會使用來探索存放區的執行，而且應該在存取子的類型上執行 `target` 。 靜態 <xref:System.Xaml.AttachablePropertyServices> api 用於存取子的主體內，並由其參考可附加的成員 <xref:System.Xaml.AttachableMemberIdentifier> 。
 
-## <a name="xaml-related-clr-attributes"></a>與 XAML 相關的 CLR 屬性
+## <a name="xaml-related-clr-attributes"></a>XAML 相關 CLR 屬性
 
-正確配置類型、成員和程式集對於向 .NET XAML 服務報告 XAML 類型系統資訊非常重要。 如果適用以下任一情況,報告 XAML 類型系統資訊是相關的:
+正確地將型別、成員和元件的特性化，是為了將 XAML 類型系統資訊回報給 .NET XAML 服務的重要。 如果適用下列其中一種情況，則報告 XAML 類型系統資訊是相關的：
 
-- 您希望類型與直接基於 .NET XAML 服務 XAML 服務讀取器和 XAML 寫入器的 XAML 系統一起使用。
-- 您定義或使用基於這些 XAML 讀取器和 XAML 編寫器的 XAML 利用框架。
+- 您想要搭配直接以 .NET XAML 服務 XAML 讀取器和 XAML 寫入器為基礎的 XAML 系統使用類型。
+- 您可以根據 xaml 讀取器和 XAML 寫入器，定義或使用以 XAML 為基礎的架構。
 
-有關與自訂類型的 XAML 支援相關的每個 XAML 相關屬性的清單,請參閱[自訂類型和函式庫的 XAML 相關 CLR 屬性](clr-attributes-with-custom-types-and-libraries.md)。
+如需與自訂類型的 XAML 支援相關之每個 XAML 相關屬性的清單，請參閱 [自訂類型和程式庫的 Xaml 相關 CLR 屬性](clr-attributes-with-custom-types-and-libraries.md)。
 
-## <a name="usage"></a>使用量
+## <a name="usage"></a>使用方式
 
-自訂類型的使用要求標記作者必須映射包含自訂類型的程式集和 CLR 命名空間的前置碼。 本主題中未記錄此過程。
+使用自訂類型時，標記作者必須針對包含自訂類型的元件和 CLR 命名空間對應前置詞。 本主題未記載此程式。
 
 ## <a name="access-level"></a>存取層級
 
-XAML 提供了一種載入和實例化`internal`具有 存取等級的類型的方法。 提供此功能,以便用戶代碼可以定義自己的類型,然後從也是同一用戶代碼作用域的標記實例化這些類。
+XAML 提供載入和具現化具有存取層級之類型的方法 `internal` 。 提供這項功能的目的是讓使用者程式碼可以定義自己的型別，然後從同時也屬於相同使用者程式碼範圍的標記將這些類別具現化。
 
-WPF 的一個範例是,每當用戶代碼<xref:System.Windows.Controls.UserControl>定義旨在重構 UI 行為的方法時,而不是作為任何可能的擴展機制的一部分,這些擴展機制可能`public`通過聲明具有 訪問級別的支援類來暗示。 如果支援<xref:System.Windows.Controls.UserControl>程式碼編譯到`internal`引用 XAML 類型的同一程式集中,則可以透過權限宣告此類 。
+WPF 中的一個範例，就是當使用者程式碼定義了，其 <xref:System.Windows.Controls.UserControl> 目的是要做為重構 UI 行為的方式，但不是任何可能的擴充機制的一部分，因為宣告支援的類別具有 `public` 存取層級。 <xref:System.Windows.Controls.UserControl> `internal` 如果支援的程式碼編譯成相同的元件，而這些程式碼會被視為 XAML 型別，則可以使用存取權來宣告這類。
 
-對於在完全信任下載入 XAML<xref:System.Xaml.XamlObjectWriter>並使用的應用程式,始終`internal`啟用具有 訪問級別的載入類。
+對於在完全信任和使用下載入 XAML 的應用程式 <xref:System.Xaml.XamlObjectWriter> ， `internal` 一律會啟用以存取層級載入類別的功能。
 
-對於在部分信任下載入 XAML 的應用程式,<xref:System.Xaml.Permissions.XamlAccessLevel>可以使用 API 來控制存取等級特徵。 此外,延遲機制(如 WPF 範本系統)必須能夠傳播任何訪問級別許可權,並將其保留為最終的運行時評估;這通過傳遞資訊在<xref:System.Xaml.Permissions.XamlAccessLevel>內部處理。
+針對在部分信任下載入 XAML 的應用程式，您可以使用 API 來控制存取層級的特性 <xref:System.Xaml.Permissions.XamlAccessLevel> 。 此外，延遲機制 (例如 WPF 範本系統) 必須能夠傳播任何存取層級許可權，並保留這些許可權以進行最終的執行時間評估;這會藉由傳遞資訊在內部處理 <xref:System.Xaml.Permissions.XamlAccessLevel> 。
 
-### <a name="wpf-implementation"></a>WPF 實施
+### <a name="wpf-implementation"></a>WPF 執行
 
-WPF XAML 使用部分信任訪問模型,其中如果BAML在部分信任下載入<xref:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo%2A>,則訪問僅限於作為BAML源的程式集。 對於延遲,WPF 用<xref:System.Xaml.IXamlObjectWriterFactory.GetParentSettings%2A?displayProperty=nameWithType>作 傳遞訪問級別資訊的機制。
+WPF XAML 使用部分信任存取模型，其中如果 BAML 是在部分信任下載入，則會限制為 <xref:System.Xaml.Permissions.XamlAccessLevel.AssemblyAccessTo%2A> baml 來源元件的存取權。 針對延遲，WPF 會使用 <xref:System.Xaml.IXamlObjectWriterFactory.GetParentSettings%2A?displayProperty=nameWithType> 做為傳遞存取層級資訊的機制。
 
-在 WPF XAML 術語中,*內部類型*是由同一程式集定義的類型,該程式集還包括引用 XAML。 此類類型可以透過 XAML 命名空間映射,該命名空間有意省略映射的程式`xmlns:local="clr-namespace:WPFApplication1"`集部分, 例如 。 如果 BAML 引用內部類型,`internal`並且該 類型具有訪問級別`GeneratedInternalTypeHelper`,這將為程式集生成一個類。 如果要避免`GeneratedInternalTypeHelper`,則必須`public`使用 訪問級別,或者必須將相關類考慮到單獨的程式集中,並使該程式集與程式集相關。
+在 WPF XAML 術語中， *內部型* 別是由相同元件所定義的型別，也包括參考的 XAML。 這類型別可透過 XAML 命名空間進行對應，該命名空間會刻意省略對應的元件 = 部分，例如 `xmlns:local="clr-namespace:WPFApplication1"` 。 如果 BAML 參考內部型別，而該型別具有 `internal` 存取層級， `GeneratedInternalTypeHelper` 則會產生元件的類別。 如果您想要避免 `GeneratedInternalTypeHelper` ，您必須使用 `public` 存取層級，或必須將相關的類別納入不同的元件，並使該元件相依。
 
 ## <a name="see-also"></a>另請參閱
 

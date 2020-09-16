@@ -6,31 +6,31 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394056"
 ---
-### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>託管：IHosting 環境和 IApplicationLifetime 類型標記為過時並被替換
+### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>裝載：標示為已淘汰和已取代的 IHostingEnvironment 和 IApplicationLifetime 類型
 
-引入了新的類型來替換現有`IHostingEnvironment`類型和`IApplicationLifetime`類型。
+引進了新的類型來取代現有 `IHostingEnvironment` 的和 `IApplicationLifetime` 類型。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-`IHostingEnvironment`有兩種不同的`IApplicationLifetime`類型和類型從`Microsoft.Extensions.Hosting``Microsoft.AspNetCore.Hosting`和 。
+和中有兩種不同的 `IHostingEnvironment` 和 `IApplicationLifetime` 類型 `Microsoft.Extensions.Hosting` `Microsoft.AspNetCore.Hosting` 。
 
 #### <a name="new-behavior"></a>新的行為
 
-舊類型已標記為過時，並替換為新類型。
+舊型別已標示為已淘汰，並取代為新的類型。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-在`Microsoft.Extensions.Hosting`ASP.NET Core 2.1 中引入時`IHostingEnvironment`，`IApplicationLifetime`某些類型（`Microsoft.AspNetCore.Hosting`如 和）是從 中複製的。 某些ASP.NET Core 3.0 更改會導致應用同時`Microsoft.Extensions.Hosting`包含`Microsoft.AspNetCore.Hosting`和 命名空間。 引用兩個命名空間時，對這些重複類型的任何使用都會導致"模糊引用"編譯器錯誤。
+當 `Microsoft.Extensions.Hosting` ASP.NET Core 2.1 引進時，會從複製一些類型，例如 `IHostingEnvironment` 和 `IApplicationLifetime` `Microsoft.AspNetCore.Hosting` 。 部分 ASP.NET Core 3.0 變更會導致應用程式同時包含 `Microsoft.Extensions.Hosting` 和 `Microsoft.AspNetCore.Hosting` 命名空間。 當參考兩個命名空間時，使用這些重複的類型會導致「不明確參考」編譯器錯誤。
 
 #### <a name="recommended-action"></a>建議的動作
 
-將舊類型的任何用法替換為新引入的類型，如下所示：
+以新引進的類型取代舊型別的任何使用方式，如下所示：
 
-**過時類型（警告）：**
+**過時的類型 (警告) ：**
 
 - <xref:Microsoft.Extensions.Hosting.IHostingEnvironment?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Hosting.IHostingEnvironment?displayProperty=nameWithType>
@@ -46,7 +46,7 @@ ms.locfileid: "72394056"
 - <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Hosting.Environments?displayProperty=nameWithType>
 
-新的`IHostEnvironment``IsDevelopment`和`IsProduction`擴充方法在`Microsoft.Extensions.Hosting`命名空間中。 可能需要將命名空間添加到專案中。
+新的 `IHostEnvironment` `IsDevelopment` 和 `IsProduction` 擴充方法位於 `Microsoft.Extensions.Hosting` 命名空間中。 可能需要將該命名空間新增至您的專案。
 
 #### <a name="category"></a>類別
 

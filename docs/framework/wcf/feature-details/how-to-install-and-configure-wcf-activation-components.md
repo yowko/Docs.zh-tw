@@ -1,26 +1,26 @@
 ---
-title: HOW TO：安裝和設定 WCF 啟用元件
-description: 瞭解如何在 Windows Vista 上設定 Windows 進程啟用服務（WAS），以裝載不透過 HTTP 進行通訊的 WCF 服務。
+title: 作法：安裝和設定 WCF 啟用元件
+description: 瞭解如何在 Windows Vista 上設定 Windows Process Activation Service () ，以裝載不透過 HTTP 通訊的 WCF 服務。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 84a0dcc4fed28ebd7a536bdabfcdc389be6072d8
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 085a69421f0aa7b763bd2222820ced4b4a7e1c81
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246879"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557862"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝和設定 WCF 啟用元件
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>作法：安裝和設定 WCF 啟用元件
 
-本主題說明在 Windows Vista 上設定 Windows 進程啟用服務（也稱為 WAS）來裝載無法透過 HTTP 網路通訊協定進行通訊的 Windows Communication Foundation （WCF）服務時，所需執行的步驟。 下列各節將概述此組態的各項步驟：
+本主題說明設定 Windows 處理常式啟動服務所需的步驟 (也稱為 Windows Vista) ，以裝載不是透過 HTTP 網路通訊協定進行通訊的 Windows Communication Foundation (WCF) 服務。 下列各節將概述此組態的各項步驟：
 
-- 安裝（或確認安裝） WCF 啟用元件。
+- 安裝 (或確認) WCF 啟用元件的安裝。
 
 - 設定 WAS 支援非 HTTP 通訊協定。 下列程式會設定 Windows Vista 以進行 TCP 啟用。
 
-安裝和設定 WAS 之後，請參閱[如何：在 WAS 中裝載 Wcf 服務](how-to-host-a-wcf-service-in-was.md)，以取得建立 wcf 服務的程式，以公開採用 WAS 的非 HTTP 端點。
+安裝和設定 WAS 之後，請參閱 [如何：在 was 中裝載 WCF 服務](how-to-host-a-wcf-service-in-was.md) ，以取得建立 wcf 服務的程式，此服務會公開採用 WAS 的非 HTTP 端點。
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>若要安裝 WCF 非 HTTP 啟動元件
 
@@ -30,13 +30,13 @@ ms.locfileid: "85246879"
 
 3. **在 [工作**] 功能表上，按一下 [**開啟或關閉 Windows 功能**]。
 
-4. 尋找 WinFX 節點，選取，然後將它展開。
+4. 尋找 WinFX 節點，選取然後展開它。
 
-5. 選取 [ **WCF 非 Http 啟用元件**] 方塊，然後儲存設定。
+5. 選取 [ **WCF 非 Http 啟動元件** ] 方塊，然後儲存設定。
 
 ## <a name="to-configure-the-was-to-support-tcp-activation"></a>若要設定 WAS 來支援 TCP 啟動
 
-1. 若要支援 net.tcp 啟動，預設的網站必須先繫結至 net.tcp 連接埠。 您可以使用與 IIS 7.0 管理工具組一起安裝的 Appcmd.exe 來執行這項操作。 從系統管理員層級的 [命令提示字元] 視窗中，執行下列命令。
+1. 若要支援 net.tcp 啟動，預設的網站必須先繫結至 net.tcp 連接埠。 您可以使用與 IIS 7.0 管理工具組一起安裝的 Appcmd.exe 來完成這項作業。 從系統管理員層級的 [命令提示字元] 視窗中，執行下列命令。
 
     ```console
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']
@@ -53,7 +53,7 @@ ms.locfileid: "85246879"
     ```
 
     > [!NOTE]
-    > 這個命令是單行文字。 此命令可讓/ \<*WCF Application*> 應用程式使用和來存取 `http://localhost/<WCF Application>` `net.tcp://localhost/<WCF Application>` 。
+    > 這個命令是單行文字。 此命令可讓/ \<*WCF Application*> 應用程式使用和進行存取 `http://localhost/<WCF Application>` `net.tcp://localhost/<WCF Application>` 。
 
      移除您為此範例新增的 net.tcp 網站繫結。
 
@@ -107,4 +107,4 @@ ms.locfileid: "85246879"
 - [TCP 啟用](../samples/tcp-activation.md)
 - [MSMQ 啟用](../samples/msmq-activation.md)
 - [NamedPipe 啟用](../samples/namedpipe-activation.md)
-- [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server AppFabric 裝載功能](/previous-versions/appfabric/ee677189(v=azure.10))

@@ -1,18 +1,18 @@
 ---
 title: 實作 UI 自動化 SelectionItem 控制項模式
-description: 請參閱指導方針和慣例，在使用者介面自動化中執行 SelectionItem 控制項模式。 知道 ISelectionItemProvider 介面的必要成員。
+description: 請參閱指導方針和慣例，以在消費者介面自動化中執行 SelectionItem 控制項模式。 瞭解 ISelectionItemProvider 介面所需的成員。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Selection Item control pattern
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: 441417aa370563a9ce8b513be6ca4507b21e1e4a
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 671a18d43a297026e4264cc35412fb9d233b2f33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163553"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551500"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>實作 UI 自動化 SelectionItem 控制項模式
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "87163553"
   
  本主題簡介實作 <xref:System.Windows.Automation.Provider.ISelectionItemProvider>的方針和慣例，包括屬性、方法和事件的相關資訊。 其他參考的連結會在概觀的結尾列出。  
   
- <xref:System.Windows.Automation.SelectionItemPattern> 控制項模式用來支援控制項，其支援的控制項作用如同實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>之容器控制項的個別可選取子項目。 如需執行 SelectionItem 控制項模式的控制項範例，請參閱[UI 自動化用戶端的控制項模式對應](control-pattern-mapping-for-ui-automation-clients.md)  
+ <xref:System.Windows.Automation.SelectionItemPattern> 控制項模式用來支援控制項，其支援的控制項作用如同實作 <xref:System.Windows.Automation.Provider.ISelectionProvider>之容器控制項的個別可選取子項目。 如需執行 SelectionItem 控制項模式的控制項範例，請參閱 [消費者介面自動化用戶端的控制項模式對應](control-pattern-mapping-for-ui-automation-clients.md)  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -57,4 +57,4 @@ ms.locfileid: "87163553"
 - [實作 UI 自動化 Selection 控制項模式](implementing-the-ui-automation-selection-control-pattern.md)
 - [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)
-- [片段提供者範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))
+- [片段提供者範例](/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

@@ -8,13 +8,13 @@ ms.locfileid: "84702430"
 ---
 ### <a name="winforms-properties-now-throw-argumentoutofrangeexception"></a>WinForms 屬性現在會擲回 ArgumentOutOfRangeException
 
-某些 Windows Forms 屬性現在 <xref:System.ArgumentOutOfRangeException> 會針對不正確引數擲回，而先前不會對其執行。
+某些 Windows Forms 屬性現在會 <xref:System.ArgumentOutOfRangeException> 針對不正確引數擲回，但先前未提供這些引數。
 
 #### <a name="change-description"></a>變更描述
 
-先前 <xref:System.NullReferenceException> <xref:System.IndexOutOfRangeException> <xref:System.ArgumentException> 在傳遞超出範圍的引數時，這些屬性會擲回各種例外狀況，例如、或。 從 .NET 5.0 開始，這些屬性現在 <xref:System.ArgumentOutOfRangeException> 會在傳遞的引數超出範圍時擲回。
+先前，這些屬性 <xref:System.NullReferenceException> <xref:System.IndexOutOfRangeException> <xref:System.ArgumentException> 在傳遞超出範圍的引數時，會擲回不同的例外狀況，例如、或。 從 .NET 5.0 開始，這些屬性現在 <xref:System.ArgumentOutOfRangeException> 會在傳遞的引數超出範圍時擲回。
 
-擲回會 <xref:System.ArgumentOutOfRangeException> 符合 .net 執行時間的行為。 它也會藉由清楚地傳達哪個引數無效，來改善偵錯工具的經驗。
+擲回會 <xref:System.ArgumentOutOfRangeException> 符合 .net 執行時間的行為。 它也可清楚地傳達不正確引數，以改善偵錯工具的體驗。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -22,7 +22,7 @@ ms.locfileid: "84702430"
 
 #### <a name="recommended-action"></a>建議的動作
 
-- 更新程式碼以避免傳遞不正確引數。
+- 更新程式碼以防止傳遞不正確引數。
 - 如有必要，請 <xref:System.ArgumentOutOfRangeException> 在設定屬性時處理。
 
 #### <a name="category"></a>類別

@@ -8,13 +8,13 @@ ms.locfileid: "87556150"
 ---
 ### <a name="removed-status-bar-controls"></a>已移除狀態列控制項
 
-從 .NET 5.0 開始，部分 Windows Forms 控制項已無法再使用。
+從 .NET 5.0 開始，某些 Windows Forms 控制項已不再可用。
 
 #### <a name="change-description"></a>變更描述
 
-從 .NET 5.0 開始，部分與狀態列相關的 Windows Forms 控制項已無法再使用。 在 .NET Framework 2.0 中引進了更佳設計和支援的取代控制項。 已淘汰的控制項先前已從設計工具工具箱中移除，但仍可供使用。 現在，它們已完全移除。
+從 .NET 5.0 開始，某些狀態列相關的 Windows Forms 控制項已不再可用。 在 .NET Framework 2.0 中引進了具有更佳設計和支援的取代控制項。 已被取代的控制項先前已從設計師工具箱移除，但仍可供使用。 現在已完全移除它們。
 
-下列類型已無法再使用：
+以下是無法再使用的類型：
 
 * `StatusBar`
 * `StatusBarDrawItemEventArgs`

@@ -2,15 +2,15 @@
 title: 安全性驗證
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 70408976469b1cbcf9c4679bd91d81872ec74ae1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ec7b7f96c1f6489f677970164f74c176b301f55b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599967"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557381"
 ---
 # <a name="security-validation"></a>安全性驗證
-這個範例示範如何使用自訂行為驗證電腦上的服務，以確定服務符合特定條件。 在這個範例中，服務會經過驗證，其方式是自訂行為掃描服務上的每個端點，並檢查這些端點是否包含安全繫結項目。 這個範例是以[消費者入門](getting-started-sample.md)為基礎。  
+這個範例示範如何使用自訂行為驗證電腦上的服務，以確定服務符合特定條件。 在這個範例中，服務會經過驗證，其方式是自訂行為掃描服務上的每個端點，並檢查這些端點是否包含安全繫結項目。 這個範例是以 [消費者入門](getting-started-sample.md)為基礎。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -78,35 +78,35 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 > 將行為新增至所有服務時，建議您最好在進行任何變更前先備份 Machine.config 檔案。  
   
- 現在，請執行本範例 client\bin 目錄中提供的用戶端。 系統會擲回例外狀況，並出現下列訊息：「無法啟動要求的服務 ' http://localhost/servicemodelsamples/service.svc '。」 這是預料中的事，因為端點驗證行為認為該端點不安全，所以不讓服務啟動。 這個行為還會擲回內部例外狀況，以描述哪個端點不安全，並且在系統「事件檢視器」中的 [System.ServiceModel 4.0.0.0] 來源與 [WebHost] 類別下方寫入訊息。 此外，您也可以在這個範例中的服務上開啟追蹤功能。 這將允許使用者使用「服務追蹤檢視器」工具開啟產生的服務追蹤，以檢視端點驗證行為擲回的例外狀況。  
+ 現在，請執行本範例 client\bin 目錄中提供的用戶端。 擲回例外狀況，並出現下列訊息：「無法啟動要求的服務 ' http://localhost/servicemodelsamples/service.svc '。」 這是預料中的事，因為端點驗證行為認為該端點不安全，所以不讓服務啟動。 這個行為還會擲回內部例外狀況，以描述哪個端點不安全，並且在系統「事件檢視器」中的 [System.ServiceModel 4.0.0.0] 來源與 [WebHost] 類別下方寫入訊息。 此外，您也可以在這個範例中的服務上開啟追蹤功能。 這將允許使用者使用「服務追蹤檢視器」工具開啟產生的服務追蹤，以檢視端點驗證行為擲回的例外狀況。  
   
-### <a name="view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>在事件檢視器中，查看失敗的端點驗證例外狀況訊息  
+### <a name="view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>在事件檢視器中查看失敗的端點驗證例外狀況訊息  
   
-1. 按一下 [**開始**] 功能表，然後選取 [**執行 ...**]。  
+1. 按一下 [ **開始** ] 功能表，然後選取 [ **執行 ...**]。  
   
-2. 輸入 `eventvwr` ，然後按一下 **[確定]**。  
+2. 輸入 `eventvwr` ，然後按一下 **[確定]** 。  
   
-3. 在 [事件檢視器] 視窗中，按一下 [**應用程式**]。  
+3. 在 [事件檢視器] 視窗中，按一下 [ **應用程式**]。  
   
-4. 按兩下 [**應用程式**] 視窗中 [WebHost] 類別底下最近新增的 [system.servicemodel 4.0.0.0] 事件，以查看不安全的端點訊息。  
+4. 在 [ **應用程式** ] 視窗中，按兩下 [WebHost] 類別下最近新增的 [system.servicemodel 4.0.0.0] 事件，以查看不安全的端點訊息。  
   
-## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例  
+## <a name="set-up-build-and-run-the-sample"></a>設定、建立及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確定您已 [針對 Windows Communication Foundation 範例執行一次性安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
+3. 若要在單一或跨電腦的設定中執行範例，請遵循執行 [Windows Communication Foundation 範例](running-the-samples.md)中的指示。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 監控範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric 監控範例](/previous-versions/appfabric/ff383407(v=azure.10))

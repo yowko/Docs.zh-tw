@@ -43,7 +43,7 @@ export PATH=$PATH:$HOME/dotnet
 >
 > 您可以編輯 shell 設定檔，以永久新增命令。 Linux 有一些不同的 shell 可用，而且每個都有不同的設定檔。 例如：
 >
-> - **Bash Shell**： *~/.bash_profile*， *~/.bashrc*
+> - **Bash Shell**： *~/. bash_profile*， *~/.bashrc*
 > - **Korn Shell**： *~/.kshrc* 或 *. profile*
 > - **Z Shell**： *~/.zshrc* 或 *. zprofile*
 >

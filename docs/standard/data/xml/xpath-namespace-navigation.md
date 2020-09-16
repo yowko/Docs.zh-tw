@@ -3,17 +3,17 @@ title: XPath 命名空間巡覽
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: dce7d81d4249cb40c3be6dee4b8bd25951ccb10a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bad5e1245c7f48c114bd2a1809822cc131dad75a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283204"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551955"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 命名空間巡覽
 若要使用 XPath 查詢搭配 XML 文件，您必須正確定址 XML 命名空間以及命名空間所包含的項目。 命名空間會避免在多個內容中使用名稱時可能發生的模稜兩可。例如，`ID` 名稱可能會參考多個與不同 XML 文件項目相關聯的識別碼。 命名空間語法會指定 URI、名稱和前置詞，以便區別 XML 文件的項目。  
   
- 本主題中的範例將示範如何在透過 <xref:System.Xml.XPath.XPathNavigator> 巡覽 XML 文件時使用前置詞。 如需命名空間和語法的詳細資訊，請參閱[xml 檔案：瞭解 Xml 命名空間](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10))。  
+ 本主題中的範例將示範如何在透過 <xref:System.Xml.XPath.XPathNavigator> 巡覽 XML 文件時使用前置詞。 如需命名空間和語法的詳細資訊，請參閱 [xml 檔案：瞭解 Xml 命名空間](/previous-versions/dotnet/articles/bb986013(v=msdn.10))。  
   
 ## <a name="namespace-declarations"></a>命名空間宣告  
  使用 <xref:System.Xml.XPath.XPathNavigator> 的執行個體時，命名空間宣告會讓 XML 文件的項目成為可區別和可定址的項目。 命名空間前置詞會提供簡短語法來定址命名空間。  

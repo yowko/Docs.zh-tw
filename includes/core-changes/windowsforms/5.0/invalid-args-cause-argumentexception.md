@@ -8,13 +8,13 @@ ms.locfileid: "86309133"
 ---
 ### <a name="winforms-methods-now-throw-argumentexception"></a>WinForms 方法現在會擲回 ArgumentException
 
-有些 Windows Forms 方法現在 <xref:System.ArgumentException> 會針對不正確引數擲回，而先前並未提供。
+某些 Windows Forms 方法現在會 <xref:System.ArgumentException> 針對不正確引數擲回，但先前未提供這些引數。
 
 #### <a name="change-description"></a>變更描述
 
-先前，將非預期或不正確類型的引數傳遞至特定 Windows Forms 方法會導致不定狀態。 從 .NET 5.0 開始，這些方法現在會 <xref:System.ArgumentException> 在傳遞的無效引數時擲回。
+先前，將非預期或不正確類型的引數傳遞至特定的 Windows Forms 方法會導致不定的狀態。 從 .NET 5.0 開始，這些方法現在會 <xref:System.ArgumentException> 在傳遞無效引數時擲回。
 
-擲回會 <xref:System.ArgumentException> 符合 .net 執行時間的行為。 它也會藉由清楚地傳達哪個引數無效，來改善偵錯工具的經驗。
+擲回會 <xref:System.ArgumentException> 符合 .net 執行時間的行為。 它也可清楚地傳達不正確引數，以改善偵錯工具的體驗。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -22,7 +22,7 @@ ms.locfileid: "86309133"
 
 #### <a name="recommended-action"></a>建議的動作
 
-- 更新程式碼以避免傳遞不正確引數。
+- 更新程式碼以防止傳遞不正確引數。
 - 如有必要，請 <xref:System.ArgumentException> 在呼叫方法時處理。
 
 #### <a name="category"></a>類別

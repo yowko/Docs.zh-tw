@@ -6,28 +6,28 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "74100760"
 ---
-### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>授權：將授權重載移動到不同的程式集
+### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>授權： AddAuthorization 多載移至不同的元件
 
-過去駐`AddAuthorization`留在 中`Microsoft.AspNetCore.Authorization`的核心方法重命名為`AddAuthorizationCore`。 舊`AddAuthorization`方法仍然存在，但位於程式集中`Microsoft.AspNetCore.Authorization.Policy`。 使用這兩種方法的應用不應看到任何影響。 請注意，`Microsoft.AspNetCore.Authorization.Policy`現在在共用框架中發貨，而不是共用框架中討論的獨立包[：從 Microsoft 中刪除的程式集](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)。
+`AddAuthorization`用來存放的核心方法已重新 `Microsoft.AspNetCore.Authorization` 命名為 `AddAuthorizationCore` 。 舊 `AddAuthorization` 方法仍存在，但仍在元件中 `Microsoft.AspNetCore.Authorization.Policy` 。 使用這兩種方法的應用程式應該看不到任何影響。 請注意， `Microsoft.AspNetCore.Authorization.Policy` 現在會隨附于共用架構，而不是獨立套件，如共用架構中所討論 [：從 AspNetCore 移除的元件](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
-`AddAuthorization`方法存在於`Microsoft.AspNetCore.Authorization`中。
+`AddAuthorization` 方法存在於中 `Microsoft.AspNetCore.Authorization` 。
 
 #### <a name="new-behavior"></a>新的行為
 
-`AddAuthorization`方法存在於`Microsoft.AspNetCore.Authorization.Policy`中。 `AddAuthorizationCore`是舊方法的新名稱。
+`AddAuthorization` 方法存在於中 `Microsoft.AspNetCore.Authorization.Policy` 。 `AddAuthorizationCore` 這是舊方法的新名稱。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-`AddAuthorization`是添加授權所需的所有公共服務的更好方法名稱。
+`AddAuthorization` 是更好的方法名稱，可新增授權所需的所有一般服務。
 
 #### <a name="recommended-action"></a>建議的動作
 
-增加參考`Microsoft.AspNetCore.Authorization.Policy`或改用引用`AddAuthorizationCore`。
+請改為加入 `Microsoft.AspNetCore.Authorization.Policy` 或使用的參考 `AddAuthorizationCore` 。
 
 #### <a name="category"></a>類別
 

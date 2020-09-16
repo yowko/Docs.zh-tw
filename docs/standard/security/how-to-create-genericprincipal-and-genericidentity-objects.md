@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 903d636938c47850951330d7936d95470441607e
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 57ffe3fd2d446b4a7364aa531e785bfb79520a0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557212"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558208"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>作法：建立 GenericPrincipal 和 GenericIdentity 物件
 
 > [!NOTE]
 > 本文適用于 Windows。
 >
-> 如需 ASP.NET Core 的詳細資訊，請參閱[ASP.NET Core 安全性的總覽](https://docs.microsoft.com/aspnet/core/security/)。
+> 如需 ASP.NET Core 的詳細資訊，請參閱 [ASP.NET Core 安全性的總覽](/aspnet/core/security/)。
 
-您可以 <xref:System.Security.Principal.GenericIdentity> 搭配類別使用類別 <xref:System.Security.Principal.GenericPrincipal> ，以建立獨立于 Windows 網域的授權配置。
+您可以 <xref:System.Security.Principal.GenericIdentity> 搭配類別使用類別 <xref:System.Security.Principal.GenericPrincipal> ，建立與 Windows 網域無關的授權配置。
 
 ### <a name="to-create-a-genericprincipal-object"></a>建立 GenericPrincipal 物件
 
@@ -51,7 +51,7 @@ ms.locfileid: "87557212"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. 使用下列程式碼將主體附加至目前的執行緒。 這在主體必須經過多次驗證的情況下很有用，必須由應用程式中執行的其他程式碼進行驗證，或者必須由 <xref:System.Security.Permissions.PrincipalPermission> 物件驗證。 您仍然可以在主體物件上執行角色型驗證，而不需將它附加至執行緒。 如需詳細資訊，請參閱[取代 Principal 物件](replacing-a-principal-object.md)。
+3. 使用下列程式碼將主體附加至目前的執行緒。 如果必須驗證主體數次，則必須由應用程式中執行的其他程式碼驗證，或必須由物件驗證，這項功能就很有用 <xref:System.Security.Permissions.PrincipalPermission> 。 您仍然可以在主體物件上執行角色型驗證，而不需將它附加至執行緒。 如需詳細資訊，請參閱[取代 Principal 物件](replacing-a-principal-object.md)。
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal

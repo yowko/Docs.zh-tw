@@ -7,4 +7,4 @@ ms.lasthandoff: 07/01/2020
 ms.locfileid: "85617573"
 ---
 > [!NOTE]
-> 本主題參考適用于 Apache Spark 的 .NET，此功能目前為預覽狀態。
+> 本主題是指 Apache Spark 的 .NET，目前為預覽狀態。

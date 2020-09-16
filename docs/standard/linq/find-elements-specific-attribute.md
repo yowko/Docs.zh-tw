@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: fc9f5acdda457eea1790f76695a71afe5fefa070
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 2a747e7609e2b130249a7635d8448577d035f939
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552085"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545646"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-linq-to-xml"></a>如何尋找具有特定屬性 (LINQ to XML) 的元素
 
@@ -94,4 +94,4 @@ Results are identical
 
 ## <a name="see-also"></a>另請參閱
 
-- [XPath 使用者的 LINQ to XML (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath 使用者的 LINQ to XML (Visual Basic) ](./comparison-xpath-linq-xml.md)

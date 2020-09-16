@@ -6,29 +6,29 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393976"
 ---
-### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>標識：SignInAsync 為未身份驗證的標識引發異常
+### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Identity： SignInAsync 會針對未驗證的身分識別擲回例外狀況
 
-預設情況下，`SignInAsync`為 主體/標識（其中`IsAuthenticated`為`false`）引發異常。
+根據預設，會擲回主體/身分識別的 `SignInAsync` 例外狀況 `IsAuthenticated` `false` 。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-`SignInAsync`接受任何主體/身份，包括`IsAuthenticated`中`false`的身份。
+`SignInAsync` 接受任何主體/身分識別，包括中的身分識別 `IsAuthenticated` `false` 。
 
 #### <a name="new-behavior"></a>新的行為
 
-預設情況下，`SignInAsync`為 主體/標識（其中`IsAuthenticated`為`false`）引發異常。 有一個新的標誌來禁止此行為，但預設行為已更改。
+根據預設，會擲回主體/身分識別的 `SignInAsync` 例外狀況 `IsAuthenticated` `false` 。 有一個新的旗標可抑制此行為，但預設行為已經變更。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-舊行為存在問題，因為預設情況下，這些主體被`[Authorize]` / `RequireAuthenticatedUser()`拒絕。
+舊的行為有問題，因為依預設會拒絕這些主體 `[Authorize]`  /  `RequireAuthenticatedUser()` 。
 
 #### <a name="recommended-action"></a>建議的動作
 
-在ASP.NET酷睿 3.0 預覽 6`RequireAuthenticatedSignIn`中`AuthenticationOptions`，預設情況下有`true`一個標誌。 將此標誌設置為`false`還原舊行為。
+在 ASP.NET Core 3.0 Preview 6 中， `RequireAuthenticatedSignIn` 預設會有旗標 `AuthenticationOptions` `true` 。 將此旗標設定為， `false` 以還原舊的行為。
 
 #### <a name="category"></a>類別
 
@@ -36,7 +36,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-None
+無
 
 <!-- 
 

@@ -2,12 +2,12 @@
 title: 使用 Windows 市集用戶端應用程式存取 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: ed13a88e3a534cd586d9386396802d7457de56e7
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d575907feea3d831b7e6f69410c8d4647e6ac95d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558968"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557953"
 ---
 # <a name="access-wcf-services-with-a-windows-store-client-app"></a>使用 Windows Store 用戶端應用程式存取 WCF 服務
 
@@ -56,7 +56,7 @@ Windows 8 引入新的應用程式型別，稱為 Windows 市集應用程式。 
  同時支援二進位和文字編碼方式。 支援所有 WCF 傳輸模式。 如需詳細資訊，請參閱 [Streaming Message Transfer](streaming-message-transfer.md)。  
   
 ### <a name="add-service-reference"></a>中的 [  
- 若要從 Windows 市集應用程式呼叫 WCF 服務，請使用 Visual Studio 2012 的 [加入服務參考] 功能。 在 Windows 市集應用程式中執行時，您會發現 [加入服務參考] 的功能有一些變更。 首先是沒有產生組態檔。 Windows 市集應用程式不使用組態檔，因此必須在程式碼中進行設定。 您可以在 [加入服務參考] 產生的 References.cs 檔案中找到這個組態程式碼。 若要查看這個檔案，請務必選取 [方案瀏覽器] 中的 [顯示所有檔案]。 檔案位於 [服務參考] 底下，專案內的 Reference.svcmap 節點中。 在 Windows 市集應用程式中，針對 WCF 服務產生的所有作業都會使用以工作為基礎的非同步模式，且都是非同步。 如需詳細資訊，請參閱 [非同步工作-使用工作簡化非同步程式設計](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)。  
+ 若要從 Windows 市集應用程式呼叫 WCF 服務，請使用 Visual Studio 2012 的 [加入服務參考] 功能。 在 Windows 市集應用程式中執行時，您會發現 [加入服務參考] 的功能有一些變更。 首先是沒有產生組態檔。 Windows 市集應用程式不使用組態檔，因此必須在程式碼中進行設定。 您可以在 [加入服務參考] 產生的 References.cs 檔案中找到這個組態程式碼。 若要查看這個檔案，請務必選取 [方案瀏覽器] 中的 [顯示所有檔案]。 檔案位於 [服務參考] 底下，專案內的 Reference.svcmap 節點中。 在 Windows 市集應用程式中，針對 WCF 服務產生的所有作業都會使用以工作為基礎的非同步模式，且都是非同步。 如需詳細資訊，請參閱 [非同步工作-使用工作簡化非同步程式設計](/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)。  
   
  由於組態現在是以程式碼來產生，因此每次服務參考更新時，在 Reference.cs 檔案中所做的任何變更都會被覆寫。 若要補救這種情況，您可以在用戶端 Proxy 類別中實作部分方法，讓組態程式碼由部分方法來產生。 部分方法的宣告如下：  
   

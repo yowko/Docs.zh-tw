@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 92cc95f80d18251314db8d953520732841b0274c
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 6c14c94c0a2f88f28ec327a3463a6b525ef80ff6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557330"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557745"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系統需求
 
@@ -63,7 +63,7 @@ ms.locfileid: "88557330"
 | Windows 10 年度更新<br/>  (1607 版)  | 32 位元與 64 位元 | .NET Framework 4.6.2 |.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
 | Windows 10 11 月更新<br/>  (1511 版)  | 32 位元與 64 位元 | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
 | Windows 10<br/>  (1507 版)  | 32 位元與 64 位元 | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
-| Windows 8.1 | 32 位元、64 位元和 ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 8。1 | 32 位元、64 位元和 ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows 8 | 32 位元、64 位元和 ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
 | Windows 7 SP1|32 位元與 64 位元 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows Vista SP2|32 位元與 64 位元 | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
@@ -99,7 +99,7 @@ ms.locfileid: "88557330"
 
 - Windows Server 2012 包含 .NET Framework 4.5，因此您不需要另外安裝。 同樣地，Windows Server 2012 R2 包含 .NET Framework 4.5.1。
 
-- .NET Framework 對於具有 Windows Server 2008 R2 SP1 或更新版本的 Server Core 角色的支援有限。 請參閱[伺服器核心 .NET 功能](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85))，以取得不受支援的 API 清單。
+- .NET Framework 對於具有 Windows Server 2008 R2 SP1 或更新版本的 Server Core 角色的支援有限。 請參閱[伺服器核心 .NET 功能](/previous-versions//dd745015(v=vs.85))，以取得不受支援的 API 清單。
 
 - 適用于 Itanium 型系統的 Windows Server 2008 R2 不支援 .NET Framework。
 
@@ -109,7 +109,7 @@ ms.locfileid: "88557330"
 
 - 在64位作業系統上，.NET Framework 在64位的電腦上支援 WOW64 (32 位處理) 和原生64位處理。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安裝指南](../install/index.md)
 - [快速入門](index.md)

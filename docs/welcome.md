@@ -3,12 +3,12 @@ title: 歡迎使用 .NET
 description: 開始使用 .NET 系列的技術。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7b1c5eceefd1e108eabf17d5cb6f7552af00e0d5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 707f83e912b6bd6999423949412cffba852093a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495143"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558070"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -34,24 +34,24 @@ ms.locfileid: "89495143"
 如需新增至 .NET 實作的最新功能與支援語言的相關資訊，請參閱以下文章：
 
 - [.NET Core 3.1 的新功能](core/whats-new/dotnet-core-3-1.md)
-- [.NET Framework 的新功能](framework/whats-new/index.md)
-- [C# 的新功能](csharp/whats-new/index.md)
+- [.NET Framework 中的新功能](framework/whats-new/index.md)
+- [C# 的新功能](./csharp/whats-new/csharp-9.md)
 - [Visual Basic 的新功能](visual-basic/whats-new/index.md)
 
 ## <a name="documentation"></a>文件
 
 這份文件涵蓋各種平台和語言的 .NET 範圍。 您可以在下列任何各節中開始使用 .NET 和其語言：
 
-- [.NET 基礎](fundamentals/index.yml)
+- [.NET 基本概念](fundamentals/index.yml)
 - [.NET Framework 指南](framework/index.yml)
-- [C # 指南](csharp/index.yml)
-- [F # 指南](fsharp/index.yml)
+- [C# 指南](csharp/index.yml)
+- [F# 指南](fsharp/index.yml)
 - [Visual Basic 指南](visual-basic/index.yml)
 - [ML.NET 指南](machine-learning/index.yml)
 - [適用於 Apache Spark 的 .NET](spark/index.yml)
 - [.NET 應用程式架構](architecture/index.yml)
 
-此外，您可以瀏覽 [.NET API 參考](/dotnet/api)。
+此外，您可以瀏覽 [.NET API 參考](../api/index.md)。
 
 ## <a name="videos"></a>影片
 

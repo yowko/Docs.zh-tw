@@ -12,7 +12,7 @@ ms.locfileid: "90545777"
 # <a name="calls-duration"></a>呼叫持續時間
 計數器名稱：呼叫持續時間  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>說明  
  這個作業呼叫的平均持續時間。 平均持續時間是根據此方程式計算而來：(N1-N0)/(D1-D0)。  
   
 > [!WARNING]

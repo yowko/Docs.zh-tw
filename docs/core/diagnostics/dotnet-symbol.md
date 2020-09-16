@@ -2,12 +2,12 @@
 title: dotnet-符號-.NET Core
 description: 安裝和使用 dotnet 符號命令列工具。
 ms.date: 08/26/2020
-ms.openlocfilehash: feaa64ad756878f85b829ab0cecf6ea2736014ba
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 5a96306fc96525b00e57eda089a45b730a7e3e8c
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598331"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679184"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>符號下載程式 (dotnet-符號) 
 
@@ -31,7 +31,7 @@ dotnet-symbol [-h|--help] [options] <FILES>
 
 全域工具會將檔案 `dotnet-symbol` 下載 (符號、DAC、模組等，) 調試核心傾印和小型傾印所需的檔案。 當您在另一部電腦上捕獲到的傾印時，這會很有用。 `dotnet-symbol` 可以下載分析傾印所需的模組和符號。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`--microsoft-symbol-server`**
 
@@ -97,4 +97,4 @@ dotnet-symbol --host-only --debugging <dump file path>
 
 - 下載符號時，找不到404。
 
-   只有透過官方通道取得的官方 .NET Core 執行階段版本才支援符號下載，例如 [官方網站](https://dotnet.microsoft.com/download/dotnet-core) 和 [dotnet 安裝腳本中的預設來源](https://docs.microsoft.com/dotnet/core/tools/dotnet-install-scripts)。 下載偵錯工具檔時發生404錯誤，可能表示已從另一個來源以 .NET Core 執行時間建立傾印，例如在本機或針對特定的 Linux 發行版本，或從 archlinux 之類的社區網站建立的轉儲。 在這種情況下，必須從這些來源或從建立傾印檔案的環境複製 (dotnet、libcoreclr.so 和 libmscordaccore.so) 所需的檔案。
+   只有透過官方通道取得的官方 .NET Core 執行階段版本才支援符號下載，例如 [官方網站](https://dotnet.microsoft.com/download/dotnet-core) 和 [dotnet 安裝腳本中的預設來源](../tools/dotnet-install-script.md)。 下載偵錯工具檔時發生404錯誤，可能表示已從另一個來源以 .NET Core 執行時間建立傾印，例如在本機或針對特定的 Linux 發行版本，或從 archlinux 之類的社區網站建立的轉儲。 在這種情況下，必須從這些來源或從建立傾印檔案的環境複製 (dotnet、libcoreclr.so 和 libmscordaccore.so) 所需的檔案。

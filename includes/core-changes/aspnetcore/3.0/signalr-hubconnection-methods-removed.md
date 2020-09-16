@@ -6,29 +6,29 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901918"
 ---
-### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>信號R：已刪除集線器連接重置發送和重置超時方法
+### <a name="signalr-hubconnection-resetsendping-and-resettimeout-methods-removed"></a>SignalR：已移除 HubConnection ResetSendPing 和 ResetTimeout 方法
 
-和`ResetSendPing``ResetTimeout`方法從 SignalR `HubConnection` API 中刪除。 這些方法最初隻供內部使用，但在ASP.NET核心2.2中公開。 這些方法在ASP.NET酷睿 3.0 預覽版 4 版中不可用。 有關討論，請參閱[點網/阿斯平核心#8543](https://github.com/dotnet/aspnetcore/issues/8543)。
+`ResetSendPing`和 `ResetTimeout` 方法已從 SignalR API 中移除 `HubConnection` 。 這些方法原本僅供內部使用，但在 ASP.NET Core 2.2 中已公開。 從 ASP.NET Core 3.0 Preview 4 版開始，將無法使用這些方法。 如需討論，請參閱 [dotnet/aspnetcore # 8543](https://github.com/dotnet/aspnetcore/issues/8543)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-API 可用。
+Api 已可供使用。
 
 #### <a name="new-behavior"></a>新的行為
 
-將刪除 API。
+Api 已移除。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-這些方法最初隻供內部使用，但在ASP.NET核心2.2中公開。
+這些方法原本僅供內部使用，但在 ASP.NET Core 2.2 中已公開。
 
 #### <a name="recommended-action"></a>建議的動作
 
-不要使用這些方法。
+請勿使用這些方法。
 
 #### <a name="category"></a>類別
 

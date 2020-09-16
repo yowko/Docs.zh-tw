@@ -6,33 +6,33 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901632"
 ---
-### <a name="caching-compactonmemorypressure-property-removed"></a>緩存：已刪除 CompactOn 記憶體壓力屬性
+### <a name="caching-compactonmemorypressure-property-removed"></a>快取：已移除 CompactOnMemoryPressure 屬性
 
-ASP.NET核心 3.0 版本刪除了[過時的記憶體緩存選項 API](https://github.com/dotnet/extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18)。
+ASP.NET Core 3.0 版移除淘汰的 [MemoryCacheOptions api](https://github.com/dotnet/extensions/blob/dc5c593da7b72c82e6fe85abb91d03818f9b700c/src/Caching/Memory/src/MemoryCacheOptions.cs#L17-L18)。
 
 #### <a name="change-description"></a>變更描述
 
-此更改是[aspnet/Caching_221 的](https://github.com/aspnet/Caching/issues/221)後續操作。 有關討論，請參閱[點網/擴展\1062](https://github.com/dotnet/extensions/issues/1062)。
+這項變更是 [aspnet/Caching # 221](https://github.com/aspnet/Caching/issues/221)的後續變更。 如需討論，請參閱 [dotnet/extensions # 1062](https://github.com/dotnet/extensions/issues/1062)。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-`MemoryCacheOptions.CompactOnMemoryPressure`屬性可用。
+`MemoryCacheOptions.CompactOnMemoryPressure` 屬性可用。
 
 #### <a name="new-behavior"></a>新的行為
 
-屬性`MemoryCacheOptions.CompactOnMemoryPressure`已被刪除。
+已 `MemoryCacheOptions.CompactOnMemoryPressure` 移除屬性。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-自動壓縮緩存會導致問題。 為了避免意外行為，僅在需要時才壓縮緩存。
+自動壓縮快取造成問題。 為了避免非預期的行為，應該只在需要時壓縮快取。
 
 #### <a name="recommended-action"></a>建議的動作
 
-要壓縮緩存，請向下轉換到`MemoryCache`並在需要時`Compact`調用。
+若要壓縮快取，請 `MemoryCache` 在需要時向下轉換並呼叫 `Compact` 。
 
 #### <a name="category"></a>類別
 

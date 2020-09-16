@@ -19,13 +19,13 @@ ms.locfileid: "90535354"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|安全性模式|None|  
+|安全性模式|無|  
 |傳輸|HTTP|  
 |繫結|<xref:System.ServiceModel.BasicHttpBinding> 在程式碼中，或設定中的 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 元素。|  
 |互通性|使用現有的 Web 服務用戶端和服務|  
-|驗證|None|  
-|完整性|None|  
-|機密性|None|  
+|驗證|無|  
+|完整性|無|  
+|機密性|無|  
   
 ## <a name="service"></a>服務  
  下列程式碼和組態要獨立執行。 執行下列其中一個動作：  

@@ -6,31 +6,31 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394465"
 ---
-### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>信號R：使用信號R和使用連接方法標記為過時
+### <a name="signalr-usesignalr-and-useconnections-methods-marked-obsolete"></a>SignalR： UseSignalR 和 UseConnections 方法已標記為過時
 
-方法和`UseConnections``UseSignalR`類`ConnectionsRouteBuilder`，並在`HubRouteBuilder`ASP.NET Core 3.0 中標記為過時。
+`UseConnections` `UseSignalR` 在 ASP.NET Core 3.0 中，方法和類別和類別 `ConnectionsRouteBuilder` `HubRouteBuilder` 會標示為已淘汰。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-SignalR 中心路由已使用`UseSignalR``UseConnections`或 配置。
+已使用或設定 SignalR 中樞 `UseSignalR` 路由 `UseConnections` 。
 
 #### <a name="new-behavior"></a>新的行為
 
-配置路由的舊方法已過時，並替換為終結點路由。
+設定路由的舊方式已過時，並以端點路由取代。
 
-#### <a name="reason-for-change"></a>更改原因
+#### <a name="reason-for-change"></a>變更的原因
 
-中介軟體正在移動到新的端點路由系統。 添加中介軟體的舊方法已經過時了。
+中介軟體正在移至新的端點路由系統。 新增中介軟體的舊方法是已過時。
 
 #### <a name="recommended-action"></a>建議的動作
 
 以 `UseEndpoints` 取代 `UseSignalR`：
 
-**舊代碼：**
+**舊版程式碼：**
 
 ```csharp
 app.UseSignalR(routes =>

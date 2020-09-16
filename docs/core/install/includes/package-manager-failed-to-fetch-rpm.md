@@ -7,4 +7,4 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920724"
 ---
 
-安裝 .NET Core 包時，您可能會看到類似于`signature verification failed for file 'repomd.xml' from repository 'packages-microsoft-com-prod'`的錯誤。 通常，此錯誤意味著 .NET Core 的包源正在使用較新的包版本進行升級，以後應重試。 在升級期間，包源不應在 2 小時內不可用。 如果您連續收到此錯誤超過 2 小時，請在 上<https://github.com/dotnet/core/issues>提交問題。
+安裝 .NET Core 封裝時，您可能會看到類似的錯誤 `signature verification failed for file 'repomd.xml' from repository 'packages-microsoft-com-prod'` 。 一般來說，此錯誤表示 .NET Core 的套件摘要正以較新的套件版本進行升級，您應該稍後再試一次。 在升級期間，套件摘要不能使用超過2小時。 如果您持續收到超過2小時的錯誤，請在中提出問題 <https://github.com/dotnet/core/issues> 。

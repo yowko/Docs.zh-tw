@@ -6,15 +6,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/13/2020
 ms.locfileid: "86281290"
 ---
-### <a name="default-activityidformat-is-w3c"></a>預設 ActivityIdFormat 為 W3C
+### <a name="default-activityidformat-is-w3c"></a>預設 ActivityIdFormat 是 W3C
 
-活動 () 的預設識別碼格式 <xref:System.Diagnostics.Activity.DefaultIdFormat?displayProperty=nameWithType> 現在為 <xref:System.Diagnostics.ActivityIdFormat.W3C?displayProperty=nameWithType> 。
+活動 () 的預設識別碼格式 <xref:System.Diagnostics.Activity.DefaultIdFormat?displayProperty=nameWithType> 現在是 <xref:System.Diagnostics.ActivityIdFormat.W3C?displayProperty=nameWithType> 。
 
 #### <a name="change-description"></a>變更描述
 
-W3C 活動識別碼格式是在 .NET Core 3.0 中引進，做為階層式識別碼格式的替代方式。 不過，若要保留相容性，W3C 格式不會在 .NET 5.0 之前設為預設值。 .NET 5.0 中的預設值已變更，因為[W3C 格式已經過](https://www.w3.org/TR/trace-context/)核准，並在多個語言的實現方面獲得吸引力。
+W3C 活動識別碼格式是在 .NET Core 3.0 中引進，作為階層式識別碼格式的替代方案。 不過，為了保留相容性，W3C 格式不是預設值，除非是 .NET 5.0。 .NET 5.0 中的預設值已變更，因為 [W3C 格式已經過](https://www.w3.org/TR/trace-context/) 核准，並且在多個語言執行方面獲得了吸引。
 
-如果您的應用程式以非 .NET 5.0 或更新版本的平臺為目標，則會遇到舊的行為，其中 <xref:System.Diagnostics.ActivityIdFormat.Hierarchical> 是預設格式。 這個預設適用于平臺 net45 +、netstandard 1.1 + 和 netcoreapp (1.x、2.x 和 3.x) 。 在 .NET 5.0 和更新版本中， <xref:System.Diagnostics.Activity.DefaultIdFormat?displayProperty=nameWithType> 會設為 <xref:System.Diagnostics.ActivityIdFormat.W3C?displayProperty=nameWithType> 。
+如果您的應用程式是以 .NET 5.0 或更新版本以外的平臺為目標，則會遇到舊的行為，其中 <xref:System.Diagnostics.ActivityIdFormat.Hierarchical> 是預設格式。 此預設值適用于平臺 net45 +、netstandard 1.1 + 和 netcoreapp (1.x、2.x 和 3.x) 。 在 .NET 5.0 和更新版本中， <xref:System.Diagnostics.Activity.DefaultIdFormat?displayProperty=nameWithType> 會設定為 <xref:System.Diagnostics.ActivityIdFormat.W3C?displayProperty=nameWithType> 。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -22,9 +22,9 @@ W3C 活動識別碼格式是在 .NET Core 3.0 中引進，做為階層式識別�
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果您的應用程式與用於分散式追蹤的識別碼無關，則不需要採取任何動作。 程式庫（例如 ASP.NET Core 和） <xref:System.Net.Http.HttpClient> 可以使用或傳播的兩個版本 <xref:System.Diagnostics.ActivityIdFormat> 。
+如果您的應用程式與用於分散式追蹤的識別碼無關，就不需要採取任何動作。 程式庫（例如 ASP.NET Core） <xref:System.Net.Http.HttpClient> 可以取用或傳播的兩個版本 <xref:System.Diagnostics.ActivityIdFormat> 。
 
-如果您需要與現有系統的互通性，或目前的系統依賴識別碼的格式，您可以將設定為來保留舊的行為 <xref:System.Diagnostics.Activity.DefaultIdFormat> <xref:System.Diagnostics.ActivityIdFormat.Hierarchical?displayProperty=nameWithType> 。 或者，您可以使用下列三種方式之一來設定 AppCoNtext 參數：
+如果您需要與現有系統之間的互通性，或是目前的系統依賴識別碼的格式，您可以將設定為，以保留舊的行為 <xref:System.Diagnostics.Activity.DefaultIdFormat> <xref:System.Diagnostics.ActivityIdFormat.Hierarchical?displayProperty=nameWithType> 。 或者，您可以使用下列三種方式之一來設定 AppCoNtext 交換器：
 
 - 在專案檔中。
 
@@ -34,7 +34,7 @@ W3C 活動識別碼格式是在 .NET Core 3.0 中引進，做為階層式識別�
   </ItemGroup>
   ```
 
-- 在 [ *runtimeconfig.js*檔案] 中。
+- 在檔案的 *runtimeconfig.js* 。
 
   ```json
   {
