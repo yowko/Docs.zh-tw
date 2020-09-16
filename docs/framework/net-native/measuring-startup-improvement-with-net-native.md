@@ -2,15 +2,15 @@
 title: 評估使用 .NET Native 的啟動改善
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d20fa77ee299065ced406bf8cd531b8c54b6c33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181003"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540884"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>評估使用 .NET Native 的啟動改善
-.NET Native 大幅改善了應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
+.NET Native 可大幅改善應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
   
  為加速效能調查，.NET Framework 和 Windows 使用一個名為 Windows 事件追蹤 (ETW) 的事件架構，可讓您的應用程式在事件發生時通知工具。 然後您可以使用名為 PerfView 的工具，輕鬆檢視及分析 ETW 事件。 本主題將說明如何：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "79181003"
  PerfView 會使用 ETW 事件來協助您在應用程式上進行各種效能調查。 它也有包含組態 GUI，可讓您針對不同類型的事件開啟或關閉記錄功能。 PerfView 是一種免費工具，可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=28567)下載。 如需詳細資訊，請觀看 [PerfView 教學課程影片](https://channel9.msdn.com/Series/PerfView-Tutorial)。  
   
 > [!NOTE]
-> PerfView 不能用來在 ARM 系統上收集事件。 若要在 ARM 系統上收集事件，請使用 Windows 效能記錄程式 (WPR)。 如需詳細資訊，請參閱 [Vance Morrison 的部落格文章](https://docs.microsoft.com/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device)。  
+> PerfView 不能用來在 ARM 系統上收集事件。 若要在 ARM 系統上收集事件，請使用 Windows 效能記錄程式 (WPR)。 如需詳細資訊，請參閱 [Vance Morrison 的部落格文章](/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device)。  
   
  您也可以從命令列叫用 PerfView。 如果只要從您的提供者記錄事件，請開啟 [命令提示字元] 視窗，並輸入命令：  
   
@@ -93,7 +93,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  選取左窗格中列出的所有事件 (Ctrl-A)，然後選擇 **Enter** 鍵。 現在，您應該可以看到每個事件的時間戳記。 這些時間戳記相對於追蹤的開始，所以您必須處理序的開始時間減去每個事件的時間，以識別自啟動後所耗用的時間。 如果您使用 Ctrl+按一下的方式來選取兩個時間戳記，您會看到其之間的差異顯示在頁面底部的狀態列中。 這樣可以讓您很容易在顯示器中查看任何兩個事件之間的經歷時間 (包括處理開始)。 您可以開啟檢視的快顯功能表，並從一些有用的選項中選取，像是匯出至 CSV 檔案，或是開啟 Microsoft Excel 來儲存或處理資料。  
   
- 藉由針對您的原始應用程式和使用 .NET Native 工具鏈所建立的版本來重複此程式，您可以比較效能差異。   .NET Native 應用程式的啟動速度通常比 non-.NET 原生應用程式更快。 如果您有挖掘更深入的資料，PerfView 也可以識別出程式碼中最耗時間的部分。 如需詳細資訊，請觀看 [PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)或閱讀 [Vance Morrison 的部落格文章](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)。  
+ 針對您的原始應用程式和您使用 .NET Native 工具鏈所建立的版本重複此程式，您可以比較效能差異。   .NET Native 應用程式的啟動速度通常比 non-.NET 原生應用程式更快。 如果您有挖掘更深入的資料，PerfView 也可以識別出程式碼中最耗時間的部分。 如需詳細資訊，請觀看 [PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)或閱讀 [Vance Morrison 的部落格文章](/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)。  
   
 ## <a name="see-also"></a>另請參閱
 

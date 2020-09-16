@@ -1,23 +1,23 @@
 ---
-title: 使用作為容器運行的資料庫伺服器
-description: 瞭解使用僅作為容器運行的資料庫伺服器進行開發的重要性。 從不用於生產。
+title: 使用以容器形式執行的資料庫伺服器
+description: 瞭解使用以容器形式執行的資料庫伺服器，只用于開發的重要性。 絕不適用於生產環境。
 ms.date: 01/30/2020
-ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 38f77e195b184d57dcad5904674a0025ef6c2bd8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628523"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539395"
 ---
-# <a name="use-a-database-server-running-as-a-container"></a>使用作為容器運行的資料庫伺服器
+# <a name="use-a-database-server-running-as-a-container"></a>使用以容器形式執行的資料庫伺服器
 
-您可將資料庫 (SQL Server、PostgreSQL、MySQL 等等) 放在一般的獨立伺服器、內部部署叢集，或如 Azure SQL DB 等雲端 PaaS 服務上。 但是，對於開發和測試環境，將資料庫作為容器運行很方便，因為您沒有任何外部依賴關係，只需運行`docker-compose up`該命令即可啟動整個應用程式。 將這些資料庫當作容器也非常適合整合測試，因為資料庫是在容器中啟動，而且一律填入相同的範例資料，所以測試會更容易預測。
+您可將資料庫 (SQL Server、PostgreSQL、MySQL 等等) 放在一般的獨立伺服器、內部部署叢集，或如 Azure SQL DB 等雲端 PaaS 服務上。 不過，針對開發和測試環境，讓您的資料庫以容器的形式執行是很方便的，因為您沒有任何外部相依性，而且只是執行 `docker-compose up` 命令來啟動整個應用程式。 將這些資料庫當作容器也非常適合整合測試，因為資料庫是在容器中啟動，而且一律填入相同的範例資料，所以測試會更容易預測。
 
 ## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server 執行為附微服務相關資料庫的容器
 
-在 eShopOn 容器中，有一個名為`sqldata`的容器，如[docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml)檔中定義的，該容器運行 Linux 實例的 SQL Server，該容器具有需要的所有微服務的 SQL 資料庫。
+在 eShopOnContainers 中，有一個名為的容器 `sqldata` （如 [>docker-compose.yml yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) 檔案中所定義），它會針對所有需要的微服務，使用 SQL 資料庫執行 Linux 實例的 SQL Server。
 
-微服務的一個關鍵點是每個微服務都擁有其相關資料，因此它應該有自己的資料庫。 但是，資料庫可以在任何地方。 在這種情況下，它們都位於同一容器中，以保持 Docker 記憶體要求盡可能低。 請記住，這是一個足夠好的開發解決方案，也許，測試，但不是生產。
+微服務中的一個重點是，每個微服務擁有其相關資料，因此它應該有自己的資料庫。 但是，資料庫可以位於任何位置。 在此情況下，它們全都在相同的容器中，以盡可能減少 Docker 記憶體需求。 請記住，這是一個好用的解決方案，適用于開發，也可能是測試，但不適用於生產環境。
 
 範例應用程式中的 SQL Server 容器，是在 docker-compose.yml 檔案中使用下列 YAML 程式碼設定，它會在您執行 `docker-compose up` 時執行。 請注意 YAML 程式碼已合併來自泛型 docker-compose.yml 檔案和 docker-compose.override.yml 檔案的組態資訊。 (通常您會將環境設定從 SQL Server 映像相關的基底或靜態資訊中分離出來。)
 
@@ -47,15 +47,15 @@ eShopOnContainers 應用程式會在啟動時，將範例資料與資料一起�
 
 ### <a name="additional-resources"></a>其他資源
 
-- **在 Linux、Mac 或 Windows 上運行 SQL 伺服器 Docker 映射** \
+- **在 Linux、Mac 或 Windows 上執行 SQL Server Docker 映射** \
   <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
-- **使用 sqlcmd 在 Linux 上連接和查詢 SQL Server** \
+- **使用 sqlcmd 連接和查詢 Linux 上的 SQL Server** \
   <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>在 Web 應用程式啟動時植入測試資料
 
-要在應用程式啟動時將資料添加到資料庫，可以將如下所示的代碼添加到 Web API 專案`Main``Program`類中的方法：
+若要在應用程式啟動時將資料新增至資料庫，您可以將類似下列的程式碼加入至 `Main` `Program` Web API 專案類別中的方法：
 
 ```csharp
 public static int Main(string[] args)
@@ -99,9 +99,9 @@ public static int Main(string[] args)
 }
 ```
 
-在容器啟動期間應用遷移和種子資料庫時，有一個重要的注意事項。 由於資料庫伺服器可能由於任何原因不可用，因此在等待伺服器可用時必須處理重試。 此重試邏輯由`MigrateDbContext()`擴充方法處理，如以下代碼所示：
+在容器啟動期間套用遷移和植入資料庫時，有一個重要的警告。 由於資料庫伺服器可能會因為任何原因而無法使用，因此您必須在等候伺服器可供使用時，處理重試。 此重試邏輯是由 `MigrateDbContext()` 擴充方法處理，如下列程式碼所示：
 
-```cs
+```csharp
 public static IWebHost MigrateDbContext<TContext>(
     this IWebHost host,
     Action<TContext,
@@ -259,7 +259,7 @@ docker run --name some-redis -d redis
 
 Redis 映像包括 expose:6379 (Redis 使用的連接埠)，因此標準容器連結會自動將它提供給已連結的容器。
 
-在 eShopOn 容器`basket-api`中，微服務使用作為容器運行的 Redis 緩存。 該`basketdata`容器被定義為多容器*docker-compose.yml*檔的一部分，如以下示例所示：
+在 eShopOnContainers 中， `basket-api` 微服務會使用以容器形式執行的 Redis 快取。 該 `basketdata` 容器會定義為多容器 *>docker-compose.yml. yml* 檔案的一部分，如下列範例所示：
 
 ```yml
 #docker-compose.yml file
@@ -270,9 +270,9 @@ Redis 映像包括 expose:6379 (Redis 使用的連接埠)，因此標準容器�
       - "6379"
 ```
 
-docker-compose.yml 中的此代碼定義基於 redis`basketdata`映射命名的容器，並在內部發佈埠 6379。 這意味著它只能從 Docker 主機內運行的其他容器訪問。
+這個 >docker-compose.yml 中的程式碼會根據 redis 映射定義名為的容器 `basketdata` ，並在內部發佈埠6379。 這表示只有在 Docker 主機內執行的其他容器才能存取它。
 
-最後，在*docker-compose.override.yml*檔中，eShopOnContainers 示例的`basket-api`微服務定義了用於該 Redis 容器的連接字串：
+最後，在 *>docker-compose.yml. yml* 檔案中， `basket-api` eShopOnContainers 範例的微服務會定義要用於該 Redis 容器的連接字串：
 
 ```yml
   basket-api:
@@ -282,8 +282,8 @@ docker-compose.yml 中的此代碼定義基於 redis`basketdata`映射命名的�
       - EventBusConnection=rabbitmq
 ```
 
-如前所述，微服務`basketdata`的名稱由 Docker 的內部網路 DNS 解析。
+如先前所述，微服務的名稱 `basketdata` 是由 Docker 的內部網路 DNS 解析。
 
 >[!div class="step-by-step"]
->[上一個](multi-container-applications-docker-compose.md)
->[下一個](integration-event-based-microservice-communications.md)
+>[上一個](multi-container-applications-docker-compose.md) 
+>[下一步](integration-event-based-microservice-communications.md)

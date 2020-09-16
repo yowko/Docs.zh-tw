@@ -15,14 +15,14 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: 3bd486ee66c5f9a32621416638bb7575025f7dee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec0e2a29a191d5057ce66a5f3272d00e92b01bd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "82071833"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540025"
 ---
-# <a name="built-in-types-for-common-xaml-language-primitives"></a>常見 XAML 語言基元的內建型態
+# <a name="built-in-types-for-common-xaml-language-primitives"></a>通用 XAML 語言基本類型的內建類型
 
 XAML 2009 引進數種資料類型的 XAML 語言層級支援，而這些資料類型是 Common Language Runtime (CLR) 和其他程式設計語言中的常用基本類型。 XAML 2009 新增下列基本類型的支援： `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`和 `x:Array`。
 
@@ -54,27 +54,27 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
 對於 CLR 支援， `x:Boolean` 基本類型對應至 <xref:System.Boolean>。
 
-XAML 將 `x:Boolean` 的值剖析為不區分大小寫。 請注意， `x:Bool` 不是可接受的替代方案。 有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.17 節和 5.4.11](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+XAML 將 `x:Boolean` 的值剖析為不區分大小寫。 請注意， `x:Bool` 不是可接受的替代方案。 如需 XAML 語言規格定義，請參閱[ \[ \] 第5.2.17 和5.4.11 節的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xchar"></a>x:Char
 
 對於 CLR 支援， `x:Char` 基本類型對應至 <xref:System.Char>。
 
-字串和 char 類型會與 XML 層級之檔案的整體編碼間互動。 有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.7 節和 5.4.1](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+字串和 char 類型會與 XML 層級之檔案的整體編碼間互動。 如需 XAML 語言規格定義，請參閱[ \[ \] 5.2.7 和5.4.1 版的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xstring"></a>x:String
 
 對於 CLR 支援， `x:String` 基本類型對應至 <xref:System.String>。
 
-字串和 char 類型會與 XML 層級之檔案的整體編碼間互動。 有關 XAML 語言規範定義,請參閱[\[MS-XAML\]第 5.2.6 節](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))。
+字串和 char 類型會與 XML 層級之檔案的整體編碼間互動。 如需 XAML 語言規格定義，請參閱[ \[ >microsoft.aspnet.webapi 5.2.6 的 MS XAML \] 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xdecimal"></a>x:Decimal
 
 對於 CLR 支援， `x:Decimal` 基本類型對應至 <xref:System.Decimal>。
 
-XAML 解析本質上是在區域性`en-US`下 完成的。 在 `en-US` 文化特性下，小數點之元件的正確分隔符號一律是句號 (`.`)，不論開發環境的文化特性設定為何，或在執行階段載入 XAML 之最終用戶端目標的文化特性設定為何。
+XAML 剖析本質上是在文化特性下進行 `en-US` 。 在 `en-US` 文化特性下，小數點之元件的正確分隔符號一律是句號 (`.`)，不論開發環境的文化特性設定為何，或在執行階段載入 XAML 之最終用戶端目標的文化特性設定為何。
 
-有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.14 節和 5.4.8](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+如需 XAML 語言規格定義，請參閱[ \[ \] 第5.2.14 和5.4.8 節的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xsingle"></a>x:Single
 
@@ -84,7 +84,7 @@ XAML 解析本質上是在區域性`en-US`下 完成的。 在 `en-US` 文化特
 
 如果文字語法中的第一個字元是`x:Single` 或 `e` ， `E`可以支援科學標記法格式的值。
 
-有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.8 節和 5.4.2](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+如需 XAML 語言規格定義，請參閱[ \[ \] 第5.2.8 和5.4.2 的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xdouble"></a>x:Double
 
@@ -94,33 +94,33 @@ XAML 解析本質上是在區域性`en-US`下 完成的。 在 `en-US` 文化特
 
 `x:Double` 可以支援科學標記法格式的值。 使用字元 `e` 或 `E` 導入指數部分。
 
-有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.9 節和 5.4.3](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+如需 XAML 語言規格定義，請參閱[ \[ \] 5.2.9 和5.4.3 的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xint16"></a>x:Int16
 
 對於 CLR 支援， `x:Int16` 基本類型對應至 <xref:System.Int16> ，並將 `x:Int16` 視為帶正負號。 在 XAML 中，文字語法中沒有加號 (`+`) 隱含為正數的帶正負號值。
 
-有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.11 節和 5.4.5](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+如需 XAML 語言規格定義，請參閱[ \[ \] 第5.2.11 和5.4.5 節的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xint32"></a>x:Int32
 
 對於 CLR 支援， `x:Int32` 基本類型對應至 <xref:System.Int32>。 `x:Int32` 視為帶正負號。 在 XAML 中，文字語法中沒有加號 (`+`) 隱含為正數的帶正負號值。
 
-有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.12 節和 5.4.6](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+如需 XAML 語言規格定義，請參閱[ \[ \] 第5.2.12 和5.4.6 的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xint64"></a>x:Int64
 
 對於 CLR 支援， `x:Int64` 基本類型對應至 <xref:System.Int64>。 `x:Int64` 視為帶正負號。 在 XAML 中，文字語法中沒有加號 (`+`) 隱含為正數的帶正負號值。
 
-有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.13 節和 5.4.7](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+如需 XAML 語言規格定義，請參閱[ \[ \] 第5.2.13 和5.4.7 節的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xtimespan"></a>x:TimeSpan
 
 對於 CLR 支援， `x:TimeSpan` 基本類型對應至 <xref:System.TimeSpan>。
 
-時間日期格式的 XAML 解析本質上是在區域`en-US`性下 完成的。
+時間日期格式的 XAML 剖析本質上是在文化特性下進行 `en-US` 。
 
-有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.16 節和 5.4.10](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+如需 XAML 語言規格定義，請參閱[ \[ \] 5.2.16 和5.4.10 的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xuri"></a>x:Uri
 
@@ -128,13 +128,13 @@ XAML 解析本質上是在區域性`en-US`下 完成的。 在 `en-US` 文化特
 
 檢查通訊協定是否為 `x:Uri`之 XAML 定義的一部分。
 
-有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.15 節和 5.4.9](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+如需 XAML 語言規格定義，請參閱[ \[ \] 第5.2.15 和5.4.9 節的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xbyte"></a>x:Byte
 
-對於 CLR 支援， `x:Byte` 基本類型對應至 <xref:System.Byte>。 <xref:System.Byte> A`x:Byte`  / 
+對於 CLR 支援， `x:Byte` 基本類型對應至 <xref:System.Byte>。 <xref:System.Byte>  /  `x:Byte` 會被視為未簽署。
 
-有關 XAML 語言規範定義,請參閱[\[\]MS-XAML 第 5.2.10 節和 5.4.4](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))節 。
+如需 XAML 語言規格定義，請參閱[ \[ \] 第5.2.10 和5.4.4 的 MS XAML 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ### <a name="xarray"></a>x:Array
 
@@ -142,7 +142,7 @@ XAML 解析本質上是在區域性`en-US`下 完成的。 在 `en-US` 文化特
 
 使用標記延伸語法，即可在 XAML 2006 中定義陣列；不過，XAML 2009 語法是不需要存取標記延伸的語言定義基本類型。 如需 XAML 2006 支援的詳細資訊，請參閱 [x:Array Markup Extension](xarray-markup-extension.md)。
 
-有關 XAML 語言規範定義,請參閱[\[MS-XAML\]第 5.2.18 節](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))。
+如需 XAML 語言規格定義，請參閱[ \[ 5.2.18 的 MS XAML \] 區段](/previous-versions/msp-n-p/ff650760(v=pandp.10))。
 
 ## <a name="wpf-support"></a>WPF 支援
 

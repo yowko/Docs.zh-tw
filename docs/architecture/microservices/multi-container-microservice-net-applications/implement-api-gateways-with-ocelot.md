@@ -2,12 +2,12 @@
 title: 使用 Ocelot 實作 API 閘道
 description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以容器為基礎的環境中使用 Ocelot。
 ms.date: 03/02/2020
-ms.openlocfilehash: 3611ffa7a163ff632ca854fafb910fcd3e228306
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: cd776b2fa31a630d9b58530605966ed2431912a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358982"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539550"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -87,7 +87,7 @@ HTTP 要求最終會執行該類型的 C# 程式碼來存取微服務資料庫�
 
 關於微服務 URL，當容器部署在您的本機開發電腦 (本機 Docker 主機) 時，每個微服務的容器一律會有內部埠 (通常會在其 dockerfile 中指定埠 80) ，如下列 dockerfile 所示：
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80

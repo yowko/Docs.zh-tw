@@ -4,24 +4,24 @@ description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 761be4001c1a7e6be8e6aeb32b1d44f0100d0bd1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607767"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540819"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
-不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用這項功能，您可以使用應用程式可用的資料來建立自動預測。 機器學習應用程式利用數據中的模式進行預測,而不需要顯式程式設計。
+不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用這項功能，您可以使用應用程式可用的資料來建立自動預測。 機器學習應用程式會使用資料中的模式來進行預測，而不需要明確進行程式設計。
 
-ML.NET的中心是機器學習**模型**。 該模型指定將輸入數據轉換為預測所需的步驟。 使用ML.NET,您可以通過指定演算法來訓練自定義模型,也可以導入預先訓練的 TensorFlow 和 ONNX 模型。
+ML.NET 的核心是機器學習 **模型**。 此模型會指定將輸入資料轉換成預測所需的步驟。 透過 ML.NET，您可以藉由指定演算法來定型自訂模型，也可以匯入預先定型的 TensorFlow 和 ONNX 模型。
 
-獲得模型后,可以將其添加到應用程式中以進行預測。
+一旦有模型之後，您就可以將它新增至您的應用程式以進行預測。
 
-ML.NET使用 .NET 核心在 Windows、Linux 和 macOS 上運行,或者使用 .NET 框架在 Windows 上運行。 所有平臺上都支援 64 位。 Windows 上支援 32 位,但 TensorFlow、LightGBM 和 ONNX 相關功能除外。
+ML.NET 會使用 .NET Core 或使用 .NET Framework 在 windows、Linux 和 macOS 上執行。 所有平臺都支援64位。 Windows 支援32位，但 TensorFlow、LightGBM 和 ONNX 相關的功能除外。
 
-可以使用ML.NET進行的預測類型的範例:
+您可以使用 ML.NET 進行的預測類型範例：
 
 |||
 |-|-|
@@ -29,8 +29,8 @@ ML.NET使用 .NET 核心在 Windows、Linux 和 macOS 上運行,或者使用 .NE
 |迴歸/預測連續數值|根據大小和位置來預測房屋價格|
 |異常偵測|偵測詐騙銀行交易 |
 |建議|根據線上顧客先前的購買，來建議他們可能想要購買的產品|
-|時間序列/順序資料|預測天氣/產品銷售|
-|影像分類|在醫療影像中分類病理學|
+|時間序列/順序資料|預測氣象/產品銷售|
+|影像分類|將醫療影像中的 pathologies 分類|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
@@ -125,11 +125,11 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 ## <a name="data-preparation"></a>資料準備
 
-在大部分的情況下，您所用的資料不適合直接用來定型機器學習模型。 原始數據需要準備或預處理,然後才能用於查找模型的參數。 您的資料可能需要從字串值轉換成數值表示。 您的輸入資料中可能有多餘資訊。 您可能需要縮小或擴充您輸入資料的維度。 您的資料可能需要標準化或調整。
+在大部分的情況下，您所用的資料不適合直接用來定型機器學習模型。 原始資料必須做好準備或預先處理，才能用來尋找模型的參數。 您的資料可能需要從字串值轉換成數值表示。 您的輸入資料中可能有多餘資訊。 您可能需要縮小或擴充您輸入資料的維度。 您的資料可能需要標準化或調整。
 
 [ML.NET 教學課程](./tutorials/index.md)會教導您用於特定機器學習工作之文字、影像、數值和時間序列資料的不同資料處理管線。
 
-[如何準備數據](./how-to-guides/prepare-data-ml-net.md)演示如何更普遍地應用數據準備。
+[如何準備您的資料](./how-to-guides/prepare-data-ml-net.md) 會顯示如何更一般地套用資料準備。
 
 您可以在＜資源＞一節中找到所有[可用轉換](./resources/transforms.md)的附錄。
 
@@ -162,7 +162,7 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
         // RMS error: 0.19
 ```
 
-評估計量會告訴您錯誤有點低，且預測輸出和測試輸出之間的關聯性很高。 很簡單！ 在實際範例中，需要更多微調才能達到良好的模型計量。
+評估計量會告訴您錯誤有點低，且預測輸出和測試輸出之間的關聯性很高。 這很簡單！ 在實際範例中，需要更多微調才能達到良好的模型計量。
 
 ## <a name="mlnet-architecture"></a>ML.NET 架構
 
@@ -212,7 +212,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 
 呼叫 `Fit()` 會使用輸入定型資料來評估模型的參數。 這就是定型模型。 請記住，上述的線性迴歸模型有兩個模型參數：**偏差**和**權數**。 呼叫 `Fit()` 之後，即已知參數值。 大部分模型的參數都比這個模型多。
 
-你可以瞭解更多關於模型培訓如何[訓練你的模型](./how-to-guides/train-machine-learning-model-ml-net.md)。
+您可以深入瞭解 [如何訓練模型](./how-to-guides/train-machine-learning-model-ml-net.md)的模型定型。
 
 產生的模型物件會實作 <xref:Microsoft.ML.ITransformer> 介面。 亦即，模型會將輸入資料轉換成預測。
 
@@ -230,7 +230,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
     var price = predEngine.Predict(size);
 ```
 
-`CreatePredictionEngine()` 方法接受輸入類別和輸出類別。 欄位名稱及/或程式碼屬性決定模型定型和預測期間所用的資料行名稱。 有關詳細資訊,請參閱[使用經過訓練的模型進行預測](how-to-guides/machine-learning-model-predictions-ml-net.md)。
+`CreatePredictionEngine()` 方法接受輸入類別和輸出類別。 欄位名稱及/或程式碼屬性決定模型定型和預測期間所用的資料行名稱。 如需詳細資訊，請參閱 [使用定型的模型進行預測](how-to-guides/machine-learning-model-predictions-ml-net.md)。
 
 ### <a name="data-models-and-schema"></a>資料模型和結構描述
 
@@ -240,7 +240,7 @@ ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) �
 
 如果管線中來自轉換之輸出結構描述不符合下一個轉換的輸入結構描述，則 ML.NET 會擲回例外狀況。
 
-資料檢視物件具有資料行和資料列。 每個資料行都有名稱和類型以及長度。 例如,房價示例中的輸入列是 **「大小**」和 **「價格**」。 它們都是類型,它們是標量,而不是向量量。
+資料檢視物件具有資料行和資料列。 每個資料行都有名稱和類型以及長度。 例如，房屋價格範例中的輸入資料行是 **大小** 和 **價格**。 它們都是型別，而是純量數量，而不是向量。
 
    ![具有房價預測資料的 ML.NET 資料檢視範例](./media/ml-net-dataview.png)
 
@@ -280,8 +280,8 @@ DataView 物件的重要屬性是它們都**延遲**評估。 資料檢視只會
 
 ## <a name="next-steps"></a>後續步驟
 
-* 瞭解如何使用不同的機器學習任務構建應用程式,並在[教程](./tutorials/index.md)中使用更真實的數據集。
+* 瞭解如何使用不同的機器學習工作，在 [教學](./tutorials/index.md)課程中使用更實際的資料集來建立應用程式。
 
-* 在[「如何指南](./how-to-guides/index.md)」中更深入地瞭解特定主題。
+* 深入瞭解操作 [指南](./how-to-guides/index.md)中的特定主題。
 
-* 如果你超級熱心,你可以直接進入[API參考文檔](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)。
+* 如果您非常熟悉，可以直接深入探討 [API 參考檔](../../api/index.md?view=ml-dotnet)。

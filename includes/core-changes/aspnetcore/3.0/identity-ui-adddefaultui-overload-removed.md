@@ -1,26 +1,26 @@
 ---
-ms.openlocfilehash: 474f039cf00cb48761bfe7b7c4a0a9c6300cd820
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: e77312605ee367c159171e305d8f69429f9ac58b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81637193"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539573"
 ---
-### <a name="identity-adddefaultui-method-overload-removed"></a>識別:移除新增 DefaultUI 方法重載
+### <a name="identity-adddefaultui-method-overload-removed"></a>Identity： AddDefaultUI 方法多載已移除
 
-從ASP.NET核心3.0開始,[標識產生器UI擴展.AddDefaultUI(身份生成器、UIFramework)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_)方法重載不再存在。
+從 ASP.NET Core 3.0 開始， [IdentityBuilderUIExtensions. AddDefaultUI (IdentityBuilder、UIFramework) ](/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_) 方法多載已不存在。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
-#### <a name="reason-for-change"></a>變更原因
+#### <a name="reason-for-change"></a>變更的原因
 
-此更改是採用靜態 Web 資產功能的結果。
+這項變更是採用靜態 web 資產功能的結果。
 
 #### <a name="recommended-action"></a>建議的動作
 
-調用<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType>而不是需要兩個參數的重載。 如果使用 Bootstrap 3,請向專案`<PropertyGroup>`檔中 的元素新增以下行:
+呼叫 <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType> ，而不是採用兩個引數的多載。 如果您使用的是啟動程式3，也請將下列這一行新增至 `<PropertyGroup>` 專案檔中的元素：
 
 ```xml
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>
@@ -32,7 +32,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-[識別產生器 UI 延伸.新增預設 UI(識別產生器,UIFramework)](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_)
+[IdentityBuilderUIExtensions. AddDefaultUI (IdentityBuilder，UIFramework) ](/dotnet/api/microsoft.aspnetcore.identity.identitybuilderuiextensions.adddefaultui?view=aspnetcore-2.2#Microsoft_AspNetCore_Identity_IdentityBuilderUIExtensions_AddDefaultUI_Microsoft_AspNetCore_Identity_IdentityBuilder_Microsoft_AspNetCore_Identity_UI_UIFramework_)
 
 <!--
 

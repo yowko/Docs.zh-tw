@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 395d5f63eef12570c07f1f601de7f9e480d62905
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935553"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540501"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
-載入類型程式庫，並使用提供的[ITypeLibResolver 介面](itypelibresolver-interface.md)來解析任何內部參考的類型程式庫。  
+載入類型程式庫，並使用提供的 [ITypeLibResolver 介面](itypelibresolver-interface.md) 來解析任何內部參考的類型程式庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,19 +39,19 @@ HRESULT LoadTypeLibWithResolver(
  在類型程式庫的檔案路徑。  
   
  `regkind`  
- 在[REGKIND 列舉](/windows/win32/api/oleauto/ne-oleauto-regkind)旗標，可控制類型程式庫的註冊方式。 其可能的值為：  
+ 在 [REGKIND 列舉](/windows/win32/api/oleauto/ne-oleauto-regkind) 旗標，可控制如何註冊類型程式庫。 可能的值為：  
   
-- `REGKIND_DEFAULT`：使用預設的註冊行為。  
+- `REGKIND_DEFAULT`：使用預設註冊行為。  
   
 - `REGKIND_REGISTER`：註冊此類型程式庫。  
   
-- `REGKIND_NONE`：不要註冊此類型程式庫。  
+- `REGKIND_NONE`：請勿註冊此型別程式庫。  
   
  `pTlbResolver`  
- 在[ITypeLibResolver 介面](itypelibresolver-interface.md)之執行的指標。  
+ 在 [ITypeLibResolver 介面](itypelibresolver-interface.md)之執行的指標。  
   
  `pptlib`  
- 脫銷正在載入之類型程式庫的參考。  
+ 擴展正在載入之類型程式庫的參考。  
   
 ## <a name="return-value"></a>傳回值  
  下表所列的其中一個 HRESULT 值。  
@@ -68,19 +68,19 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|無法載入類型程式庫或 DLL。|  
   
 ## <a name="remarks"></a>備註  
- [Tlbexp.exe （類型程式庫匯出工具）](../../tools/tlbexp-exe-type-library-exporter.md)會在元件對類型程式庫轉換過程中呼叫 `LoadTypeLibWithResolver` 函式。  
+ [Tlbexp.exe (型別程式庫匯出工具) ](../../tools/tlbexp-exe-type-library-exporter.md)在 `LoadTypeLibWithResolver` 元件對類型程式庫轉換程式期間呼叫函數。  
   
- 此函式會以最少的登錄存取權來載入指定的類型程式庫。 接著，函式會檢查類型程式庫中是否有內部參考的類型程式庫，其中每一個都必須載入並加入至父類型程式庫。  
+ 此函式會以最基本的登錄存取權載入指定的類型程式庫。 然後，此函式會檢查內部參考類型程式庫的類型程式庫，而且每個類型程式庫都必須載入並新增至父型別程式庫。  
   
- 在可以載入參考的類型程式庫之前，必須先將其參考檔案路徑解析成完整的檔案路徑。 這項作業是透過[ITypeLibResolver 介面](itypelibresolver-interface.md)所提供的[ResolveTypeLib 方法](resolvetypelib-method.md)來完成，這會在 `pTlbResolver` 參數中傳遞。  
+ 在可以載入參考的類型程式庫之前，必須先將其參考檔案路徑解析為完整檔案路徑。 這是透過在參數中傳遞的[ITypeLibResolver 介面](itypelibresolver-interface.md)所提供的[ResolveTypeLib 方法](resolvetypelib-method.md)來完成 `pTlbResolver` 。  
   
- 已知參考類型程式庫的完整檔案路徑時，`LoadTypeLibWithResolver` 函式會載入參考的類型程式庫，並將其加入至父類型程式庫，並建立組合的主要類型程式庫。  
+ 已知所參考類型程式庫的完整檔案路徑時，函式會 `LoadTypeLibWithResolver` 載入參考的類型程式庫，並將其加入至父類型程式庫，以建立組合的主要類型程式庫。  
   
- 在函式解析並載入所有內部參考的類型程式庫之後，它會傳回 `pptlib` 參數中主要已解析之類型程式庫的參考。  
+ 在函式解析並載入所有內部參考的類型程式庫之後，它會在參數中傳回主要解析類型程式庫的參考 `pptlib` 。  
   
- `LoadTypeLibWithResolver` 函式通常是由[tlbexp.exe （類型程式庫匯出工具）](../../tools/tlbexp-exe-type-library-exporter.md)所呼叫，這會在 `pTlbResolver` 參數中提供自己的內部[ITypeLibResolver 介面](itypelibresolver-interface.md)實作為。  
+ 函式 `LoadTypeLibWithResolver` 通常是由 [Tlbexp.exe (型別程式庫匯出工具) ](../../tools/tlbexp-exe-type-library-exporter.md)，它會在參數中提供自己的內部 [ITypeLibResolver 介面](itypelibresolver-interface.md) 實作為 `pTlbResolver` 。  
   
- 如果您直接呼叫 `LoadTypeLibWithResolver`，就必須提供自己的[ITypeLibResolver 介面](itypelibresolver-interface.md)執行。  
+ 如果您 `LoadTypeLibWithResolver` 直接呼叫，則必須提供自己的 [ITypeLibResolver 介面](itypelibresolver-interface.md) 執行。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
@@ -89,9 +89,9 @@ HRESULT LoadTypeLibWithResolver(
   
  連結**庫：** TlbRef .lib  
   
- **.NET Framework 版本：** 3.5、3.0、2.0  
+ **.NET Framework 版本：** 3.5、3.0、2。0  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Tlbexp Helper 函式](index.md)
-- [LoadTypeLibEx 函式](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx 函式](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

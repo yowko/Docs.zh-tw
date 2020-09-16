@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 0b02d1efc98f02390555861871d280f9800ced1e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 017744d692d6fd4183fde3c21e71fcee2f35844e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598875"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535354"
 ---
 # <a name="internet-unsecured-client-and-service"></a>沒有安全保障的網際網路用戶端與服務
-下圖顯示公用、不安全的 Windows Communication Foundation （WCF）用戶端和服務的範例：  
+下圖顯示公開、不安全的 Windows Communication Foundation (WCF) 用戶端和服務的範例：  
   
- ![顯示不安全的網際網路案例的螢幕擷取畫面](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
+ ![顯示不安全網際網路案例的螢幕擷取畫面](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |特性|描述|  
 |--------------------|-----------------|  
-|安全性模式|無|  
+|安全性模式|None|  
 |傳輸|HTTP|  
-|繫結|<xref:System.ServiceModel.BasicHttpBinding>在程式碼中，或設定 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 中的元素。|  
+|繫結|<xref:System.ServiceModel.BasicHttpBinding> 在程式碼中，或設定中的 [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 元素。|  
 |互通性|使用現有的 Web 服務用戶端和服務|  
-|驗證|無|  
-|完整性|無|  
-|保密|無|  
+|驗證|None|  
+|完整性|None|  
+|機密性|None|  
   
 ## <a name="service"></a>服務  
  下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
@@ -109,8 +109,8 @@ ms.locfileid: "84598875"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [常見的安全性案例](common-security-scenarios.md)
-- [安全性總覽](security-overview.md)
-- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [安全性概觀](security-overview.md)
+- [Windows Server AppFabric 的資訊安全模型](/previous-versions/appfabric/ee677202(v=azure.10))

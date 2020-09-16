@@ -2,12 +2,12 @@
 title: 在 DockerFile 中使用 Windows PowerShell 命令來設定 Windows 容器 (以 Docker 標準為基礎)
 description: 了解如何在 Windows 容器中使用 Docker 時利用 PowerShell
 ms.date: 08/06/2020
-ms.openlocfilehash: 4e7b9e7fedf11b97b3f468aef541bf72a4e88ebc
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: be30fd4092f51acd4972c05b3c3ccc936aebd884
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915382"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539784"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>在 DockerFile 中使用 Windows PowerShell 命令來設定 Windows 容器 (以 Docker 標準為基礎)
 
@@ -15,7 +15,7 @@ ms.locfileid: "87915382"
 
 若要使用 Windows 容器，您只需要在 Dockerfile 中撰寫 Windows PowerShell 命令，如下列範例所示：
 
-```Dockerfile
+```dockerfile
 FROM microsoft/windowsservercore
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
 RUN powershell -Command Add-WindowsFeature Web-Server
@@ -26,7 +26,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 使用類似的方式，您也可以使用 Windows PowerShell 命令來安裝其他元件，例如傳統的 ASP.NET 4.x 和 .NET 4.6 或任何其他 Windows 軟體，如下所示：
 
-```Dockerfile
+```dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

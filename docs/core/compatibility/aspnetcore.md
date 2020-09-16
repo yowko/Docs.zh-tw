@@ -2,15 +2,15 @@
 title: ASP.NET Core 重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 09/09/2020
+ms.date: 09/11/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2af0cc6721b66b1d07b196e4ba330f8425c14752
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 4c3167e9cad193b6a5a11be399e8be529df3be55
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022983"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539571"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 重大變更
 
@@ -25,6 +25,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 下列 ASP.NET Core 3.0、3.1 和5.0 的重大變更記載于此頁面：
 
 - [已移除過時的 Antiforgery、CORS、診斷、MVC 和路由 Api](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [驗證： AzureAD UI 和 AzureADB2C。 UI Api 和標記為過時的封裝](#authentication-azureadui-and-azureadb2cui-apis-and-packages-marked-obsolete)
 - [驗證： Google + 淘汰](#authentication-google-deprecated-and-replaced)
 - [驗證：已移除 HttpCoNtext 驗證屬性](#authentication-httpcontextauthentication-property-removed)
 - [驗證：已取代類型上的 Newtonsoft.Js](#authentication-newtonsoftjson-types-replaced)
@@ -36,6 +37,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [Azure：已移除的 Microsoft 首碼 Azure 整合套件](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [ASP.NET apps 已淘汰且禁止 BinaryFormatter 序列化方法](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Blazor：在編譯時期從元件中修剪的無意義空白](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor： RenderTreeFrame readonly public fields 已成為屬性](#blazor-rendertreeframe-readonly-public-fields-have-become-properties)
 - [Blazor： NuGet 套件的目標 framework 已變更](#blazor-target-framework-of-nuget-packages-changed)
 - [快取：已移除 CompactOnMemoryPressure 屬性](#caching-compactonmemorypressure-property-removed)
 - [Caching： SqlClient 使用新的套件](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
@@ -104,6 +106,10 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5。0
 
+[!INCLUDE[Authentication: AzureAD.UI and AzureADB2C.UI APIs and packages marked obsolete](~/includes/core-changes/aspnetcore/5.0/authentication-aad-packages-obsolete.md)]
+
+***
+
 [!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
 
 ***
@@ -117,6 +123,10 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: RenderTreeFrame readonly public fields have become properties](~/includes/core-changes/aspnetcore/5.0/blazor-rendertreeframe-fields-become-properties.md)]
 
 ***
 

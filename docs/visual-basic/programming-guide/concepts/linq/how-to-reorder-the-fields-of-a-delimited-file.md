@@ -2,14 +2,14 @@
 title: 作法：重新排列分隔檔的欄位 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 6f87374978425e0d51542c6eceda23697d7a3a67
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 62c21dfb67ef35591a8ffe214bc132e63a2433bd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397891"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535380"
 ---
-# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>如何：重新排列分隔檔的欄位（LINQ）（Visual Basic）
+# <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>如何：將分隔檔的欄位重新排列 (LINQ)  (Visual Basic) 
 
 逗號分隔值 (CSV) 檔案是一種文字檔，常用來儲存試算表資料或其他以資料列和資料行呈現的表格式資料。 使用 <xref:System.String.Split%2A> 方法隔開欄位後，就可以利用 LINQ 輕鬆地查詢和管理 CSV 檔案。 事實上，您可以使用此相同的方法來重新排列任何結構化文字行中的其中幾部分，而不限於 CSV 檔案。
 
@@ -79,4 +79,4 @@ End Class
 
 - [LINQ 與字串 (Visual Basic)](linq-and-strings.md)
 - [LINQ 與檔案目錄 (Visual Basic)](linq-and-file-directories.md)
-- [如何：從 CSV 檔案產生 XML](how-to-generate-xml-from-csv-files.md)
+- [如何：從 CSV 檔案產生 XML](../../../../standard/linq/generate-xml-csv-files.md)

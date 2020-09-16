@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 062aba26227fedeea3e5f462ebf5d55cf0cba56c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797232"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539993"
 ---
 # <a name="custom-bindings"></a>自訂繫結
 
-當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用範例，請參閱[自訂](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))系結範例。 如需詳細資訊，請參閱[ \<customBinding >](../../configure-apps/file-schema/wcf/custombinding.md)。
+當系統提供的其中一個繫結不符合服務的需求時，您可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 類別。 所有繫結都是根據已排序的繫結項目組所建構。 自訂的繫結可以從系統提供的繫結項目建置，或是可以包含使用者定義的自訂繫結項目。 例如，您可以使用自訂繫結項目，以便在服務端點使用新的傳輸或編碼器。 如需實用的範例，請參閱 [自訂](/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))系結範例。 如需詳細資訊，請參閱 [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)。
 
 ## <a name="construction-of-a-custom-binding"></a>建構自訂繫結
 
@@ -44,7 +44,7 @@ ms.locfileid: "70797232"
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-最下方是必要的傳輸項目。 您可以使用自己的傳輸或下列其中一個傳輸繫結項目，Windows Communication Foundation （WCF）提供：
+最下方是必要的傳輸項目。 您可以使用自己的傳輸，或是下列其中一個 Windows Communication Foundation (WCF) 提供的傳輸繫結項目：
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -64,21 +64,21 @@ ms.locfileid: "70797232"
 
 下表摘要列出每一層的選項。
 
-|圖層|選項|必要|
+|層|選項。|必要|
 |-----------|-------------|--------------|
-|異動|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|否|
+|交易|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|否|
 |可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|否|
 |安全性|<xref:System.ServiceModel.Channels.SecurityBindingElement>|否|
 |編碼|文字、二進位、訊息傳輸最佳化機制 (MTOM)、自訂|是|
-|Transport|TCP、HTTP、HTTPS、具名管道 (也稱為 IPC)、對等式 (P2P)、訊息佇列 (也稱為 MSMQ)、自訂|是|
+|傳輸|TCP、HTTP、HTTPS、具名管道 (也稱為 IPC)、對等式 (P2P)、訊息佇列 (也稱為 MSMQ)、自訂|是|
 
 此外，您也可以定義自己的繫結項目，並將其插入上述任何定義層之間。
 
 ## <a name="see-also"></a>另請參閱
 
-- [建立端點概觀](../endpoint-creation-overview.md)
-- [使用繫結設定服務與用戶端](../using-bindings-to-configure-services-and-clients.md)
+- [端點建立概觀](../endpoint-creation-overview.md)
+- [使用繫結來設定服務和用戶端](../using-bindings-to-configure-services-and-clients.md)
 - [系統提供的繫結](../system-provided-bindings.md)
-- [如何：自訂系統提供的系結](how-to-customize-a-system-provided-binding.md)
+- [作法：自訂系統提供的繫結](how-to-customize-a-system-provided-binding.md)
 - [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)
 - [自訂繫結](../samples/custom-binding.md)

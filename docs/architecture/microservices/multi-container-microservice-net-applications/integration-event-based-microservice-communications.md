@@ -2,20 +2,20 @@
 title: 實作微服務之間的事件通訊 (整合事件)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解整合事件以實作微服務之間的事件通訊。
 ms.date: 10/02/2018
-ms.openlocfilehash: 8a1d4950247d63e5684c85c029efccf8269e7435
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: cbc9d28f9fbcaea528eabc4930476545cb919bb4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988319"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539342"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>實作微服務之間的事件通訊 (整合事件)
 
 如前所述，當您使用事件通訊時，微服務會在發生值得注意的事件時發行事件，例如當它更新商務實體時。 其他微服務會訂閱這些事件。 當微服務收到事件時，它可以更新自己的商務實體，這可能會導致發行更多的事件。 這是最終一致性概念的本質。 此發行/訂閱系統通常藉由使用事件匯流排實作來執行。 事件匯流排可設計為介面，並具備訂閱及取消訂閱事件以及發行事件所需的 API。 它也可以有一或多個實作以任何處理序間或傳訊通訊為基礎，例如支援非同步通訊和發行/訂閱模型的傳訊佇列或服務匯流排。
 
-您可以使用事件來實作橫跨多個服務的商務交易，這樣將提供這些服務之間的最終一致性。 最終一致的交易是由一系列的分散式動作所組成。 在每個動作中，微服務會更新商務實體，並發行觸發下一個動作的事件。 圖 6-18 顯示了通過事件總線發佈的 PriceUpdate 事件,因此價格更新將傳播到購物籃和其他微服務。
+您可以使用事件來實作橫跨多個服務的商務交易，這樣將提供這些服務之間的最終一致性。 最終一致的交易是由一系列的分散式動作所組成。 在每個動作中，微服務會更新商務實體，並發行觸發下一個動作的事件。 圖6-18 顯示透過事件匯流排發佈的 PriceUpdated 事件，因此價格更新會傳播到購物籃和其他微服務。
 
-![與事件總線的異步事件驅動通信圖。](./media/integration-event-based-microservice-communications/event-driven-communication.png)
+![與事件匯流排進行非同步事件驅動通訊的圖表。](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
 **圖 6-18**。 以事件匯流排為基礎的事件驅動通訊
 
@@ -27,9 +27,9 @@ ms.locfileid: "80988319"
 
 針對只為您的開發環境實作事件匯流排的概念證明，如同 eShopOnContainers 範例，在執行作為容器的 RabbitMQ 上進行簡單實作可能就足夠了。 但對於需要高延展性的關鍵任務和生產系統，您可能想要評估，並使用 Azure 服務匯流排。
 
-如果您的長時間執行處理序需要高階抽象，以及更豐富的功能，例如 [Sagas](https://docs.particular.net/nservicebus/sagas/)，以便讓分散式開發更容易，則其他商業和開放原始碼的服務匯流排，例如 NServiceBus、MassTransit 和 Brighter 都值得評估。 在此案例中，要使用的抽象和 API 通常會直接由這些高階服務匯流排提供，而不是您自己的抽象 (例如 [eShopOnContainers 所提供的簡單事件匯流排抽象](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs))。 此選項,您可以使用 NServiceBus(由特定軟體實現的其他派生範例)來研究[分叉的 eShopOn 容器](https://go.particular.net/eShopOnContainers)。
+如果您的長時間執行處理序需要高階抽象，以及更豐富的功能，例如 [Sagas](https://docs.particular.net/nservicebus/sagas/)，以便讓分散式開發更容易，則其他商業和開放原始碼的服務匯流排，例如 NServiceBus、MassTransit 和 Brighter 都值得評估。 在此案例中，要使用的抽象和 API 通常會直接由這些高階服務匯流排提供，而不是您自己的抽象 (例如 [eShopOnContainers 所提供的簡單事件匯流排抽象](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs))。 就這一點而言，您可以 [使用 NServiceBus](https://go.particular.net/eShopOnContainers) (特定軟體所執行的其他衍生範例) 來研究分支 eShopOnContainers。
 
-當然,您始終可以在兔子MQ和 Docker等較低級別的技術之上構建自己的服務總線功能,但對於自定義企業應用程式來說,"重新發明輪子"所需的工作可能成本太高。
+當然，您永遠可以在較低層級的技術（例如 RabbitMQ 和 Docker）上建立自己的服務匯流排功能，但是「重寫輪子」所需的工作可能太過自訂企業應用程式的成本。
 
 再重申一次：在 eShopOnContainers 範例中所展示的範例事件匯流排抽象概念與實作僅作為概念證明使用。 一旦您決定要進行非同步和事件驅動通訊，如目前這一節中所述，您應該選擇最適合生產環境需求的服務匯流排產品。
 
@@ -68,7 +68,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 **圖 6-19**。 事件匯流排的發行/訂閱基本概念
 
-上圖顯示微服務 A 發佈到事件總線,該總線分發到訂閱微服務 B 和 C,而發行者無需瞭解訂閱者。 事件匯流排與觀察者模式及發行-訂閱模式有關。
+上圖顯示微服務 A 發佈至事件匯流排，這會散發到訂閱微服務 B 和 C，而不需要發行者知道訂閱者。 事件匯流排與觀察者模式及發行-訂閱模式有關。
 
 ### <a name="observer-pattern"></a>觀察者模式
 
@@ -76,7 +76,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>發佈/訂閱 (Pub/Sub) 模式
 
-[發佈/訂閱模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一項重要的差異。 在觀察者模式中,廣播直接從可觀察的觀察者進行,因此它們彼此"知道"。 但在使用 Pub/Sub 模式時，有一個稱為代理程式或訊息代理程式或事件匯流排的第三個元件，發行者和訂閱者都知道它。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
+[發佈/訂閱模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一項重要的差異。 在觀察者模式中，廣播會直接從可觀察到觀察者執行，因此它們彼此「知道」。 但在使用 Pub/Sub 模式時，有一個稱為代理程式或訊息代理程式或事件匯流排的第三個元件，發行者和訂閱者都知道它。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
 
 ### <a name="the-middleman-or-event-bus"></a>中間人或事件匯流排
 
@@ -92,7 +92,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 在圖 6-20 中，您可以看到事件匯流排的抽象概念，其中具有根據基礎結構傳訊技術 (例如 RabbitMQ、Azure 服務匯流排或其他事件/訊息代理程式) 的多個實作。
 
-![顯示事件總線抽象層添加的圖表。](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
+![顯示新增事件匯流排抽象層的圖表。](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 
 **圖 6-20**。 事件匯流排的多個實作
 
@@ -100,7 +100,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 ### <a name="defining-an-event-bus-interface"></a>定義事件匯流排介面
 
-讓我們從事件總線介面的一些實現代碼和可能的實現開始,以便進行探索。 介面應該是泛型且簡單，如同下列介面。
+讓我們從事件匯流排界面的一些程式碼，以及探索用途的可能的實作為著手。 介面應該是泛型且簡單，如同下列介面。
 
 ```csharp
 public interface IEventBus
@@ -129,17 +129,17 @@ public interface IEventBus
 
 ## <a name="additional-resources"></a>其他資源
 
-一些生產就緒訊息傳遞解決方案:
+一些生產環境就緒的訊息解決方案：
 
 - **Azure 服務匯流排** \
   <https://docs.microsoft.com/azure/service-bus-messaging/>
   
-- **N服務匯流排** \
+- **NServiceBus** \
   <https://particular.net/nservicebus>
   
-- **公共交通** \
+- **MassTransit** \
   <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
-> [前一個](database-server-container.md)
-> [下一個](rabbitmq-event-bus-development-test-environment.md)
+> [上一個](database-server-container.md) 
+> [下一步](rabbitmq-event-bus-development-test-environment.md)

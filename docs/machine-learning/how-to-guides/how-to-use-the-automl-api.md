@@ -3,12 +3,12 @@ title: 如何使用 ML.NET 自動化的 ML API
 description: ML.NET 自動化的 ML API 會自動化模型建置程序，並產生隨時可供部署的模型。 了解您可用來設定自動化機器學習工作的選項。
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b1ef526301e01e1e75e71e0646f4d11e68215d69
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75636558"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540728"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自動化的機器學習 API
 
@@ -70,7 +70,7 @@ using Microsoft.ML.AutoML;
 
 ## <a name="configure-experiment-settings"></a>設定實驗設定
 
-實驗的可設定程度很高。 如需組態設定的完整清單，請參閱 [AutoML API 文件](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)。
+實驗的可設定程度很高。 如需組態設定的完整清單，請參閱 [AutoML API 文件](/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)。
 
 部分範例包括：
 
@@ -123,7 +123,7 @@ using Microsoft.ML.AutoML;
 
 最佳化度量，如上例所示，決定要在模型定型期間最佳化的計量。 您可以選取的最佳化計量由您所選工作類型決定。 以下為可用計量的清單。
 
-|[二進位分類](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多類分類](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回歸&建議](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[二元分類](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多元分類](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回歸 & 建議](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |精確度| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -137,7 +137,7 @@ using Microsoft.ML.AutoML;
 ## <a name="data-pre-processing-and-featurization"></a>資料預先處理與特徵化
 
 > [!NOTE]
-> 要素列僅支援<xref:System.Boolean>的類型<xref:System.Single>。 <xref:System.String>
+> Feature 資料行僅支援 <xref:System.Boolean> 、和的類型 <xref:System.Single> <xref:System.String> 。
 
 根據預設，資料予以前置處理，並為您自動執行下列步驟：
 
@@ -151,9 +151,9 @@ using Microsoft.ML.AutoML;
 
 1. 產生其他特徵
 
-    對於文本功能：使用一克和三字元克的字袋功能。
+    針對文字功能：使用 unigrams 和三字元字元的全字組功能。
 
-    對於分類要素：低基數要素的一熱編碼，以及高基數分類要素的一熱雜湊編碼。
+    針對類別功能：適用于低基數功能的一種經常性編碼，以及高基數類別功能的一次熱雜湊編碼。
 
 1. 轉換與編碼
 
@@ -227,7 +227,7 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 
 * [二元分類計量](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [多元分類計量](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [回歸&建議指標](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [回歸 & 建議計量](xref:Microsoft.ML.AutoML.RegressionMetric)
 
 ## <a name="see-also"></a>另請參閱
 
