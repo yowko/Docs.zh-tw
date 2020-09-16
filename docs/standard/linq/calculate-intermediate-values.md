@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: aa5b83e9bf359481773db673fd3de9c4dcff6af2
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: c37926b93e0dc11255fd27c312679f6286fa7e5d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552141"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558115"
 ---
 # <a name="how-to-calculate-intermediate-values-linq-to-xml"></a>如何計算 (LINQ to XML) 的中繼值
 
@@ -106,4 +106,4 @@ End Module
 
 ## <a name="see-also"></a>另請參閱
 
-- [基本查詢 (LINQ to XML)  (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [基本查詢 (LINQ to XML)  (Visual Basic) ](./find-element-specific-attribute.md)

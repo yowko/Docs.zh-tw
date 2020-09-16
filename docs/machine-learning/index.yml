@@ -1,21 +1,21 @@
 ### YamlMime:Landing
 title: ML.NET 文件
-summary: 瞭解如何使用開放原始碼 ML.NET 來建立自訂機器學習模型，並將其整合到應用程式中。 教學課程、程式碼範例和其他說明如何操作。
+summary: 瞭解如何使用開放原始碼 ML.NET 來建立自訂的機器學習模型，並將其整合至應用程式。 教學課程、程式碼範例及更多說明。
 metadata:
   title: ML.NET 文件 - 教學課程、API 參考
-  description: 瞭解如何使用開放原始碼 ML.NET 來建立自訂機器學習模型，並將其整合到應用程式中。 教學課程、程式碼範例和其他說明如何操作。
+  description: 瞭解如何使用開放原始碼 ML.NET 來建立自訂的機器學習模型，並將其整合至應用程式。 教學課程、程式碼範例及更多說明。
   ms.prod: dotnet-ml
   ms.topic: landing-page
   ms.collection: collection
   author: natke
   ms.author: nakersha
   ms.date: 10/30/2019
-  ms.openlocfilehash: da93d48dc36123f8821be37c8c0546b84ab29712
-  ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+  ms.openlocfilehash: 0e2b6370de5cd40f8cca5176fe1ecef1b6556a39
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/05/2020
-  ms.locfileid: "87795485"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90551695"
 landingContent:
 - title: ML.NET 基本概念
   linkLists:
@@ -41,7 +41,7 @@ landingContent:
       url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
     - text: '在 Visual Studio 中設定模型產生器 (低程式碼) '
       url: how-to-guides/install-model-builder.md
-    - text: '在 macOS、Windows 或 Linux 上安裝 CLI (低程式碼) '
+    - text: '在 macOS、Windows 或 Linux 上安裝 CLI (的低程式碼) '
       url: how-to-guides/install-ml-net-cli.md
 - title: 教學課程
   linkLists:
@@ -49,25 +49,25 @@ landingContent:
     links:
     - text: '分析網站批註情感 (模型產生器) '
       url: tutorials/sentiment-analysis-model-builder.md
-    - text: 預測 (模型產生器) 的價格
+    - text: '預測 (模型產生器的價格) '
       url: tutorials/predict-prices-with-model-builder.md
     - text: '將健全狀況違規分類 (模型產生器 & SQL Server) '
       url: tutorials/health-violation-classification-model-builder.md
-    - text: " (API) 將支援問題分類"
+    - text: " (API) 分類支援問題"
       url: tutorials/github-issue-classification.md
     - text: '使用影像分類 API 將影像分類 (API) '
       url: tutorials/image-classification-api-transfer-learning.md
-    - text: 使用模型組合 (API) 分類影像
+    - text: 使用 (API) 的模型組合來分類影像
       url: tutorials/image-classification.md
     - text: '偵測影像中的物件 (API) '
       url: tutorials/object-detection-onnx.md
-    - text: 偵測產品銷售 (API) 中的異常
+    - text: 偵測產品銷售 (API) 中的異常狀況
       url: tutorials/sales-anomaly-detection.md
-    - text: " (API & SQL Server) 的預測自行車出租需求"
+    - text: '預測自行車出租需求 (API & SQL Server) '
       url: tutorials/time-series-demand-forecasting.md
-    - text: " (API 建立電影推薦) "
+    - text: '建立 movie 推薦 (API) '
       url: tutorials/movie-recommendation.md
-- title: 操作指南
+- title: 作法指南
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -88,6 +88,6 @@ landingContent:
   - linkListType: reference
     links:
     - text: ML.NET API 參考
-      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+      url: ../../api/index.md?view=ml-dotnet
     - text: ML.NET 範例
       url: https://github.com/dotnet/machinelearning-samples

@@ -2,12 +2,12 @@
 title: 'C # 主要語言區域教學課程'
 description: 第一次接觸 C#？ 了解該語言的基本概念。
 ms.date: 08/06/2020
-ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414899"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558171"
 ---
 # <a name="major-language-areas"></a>主要語言區域
 
@@ -86,7 +86,7 @@ C # 語言提供 [***模式***](../pattern-matching.md) 比對運算式來查詢
 
 ## <a name="async--await"></a>async/await
 
-C # 支援具有兩個關鍵字的非同步程式： `async` 和 `await` 。 您將修飾詞加入 `async` 至方法宣告，以宣告方法是非同步。 `await`運算子會指示編譯器以非同步方式等待結果完成。 控制權會傳回給呼叫端，而此方法會傳回結構來管理非同步工作的狀態。 結構通常是 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> ，但可以是任何支援 awaiter 模式的型別。 這些功能可讓您撰寫程式碼，以讀取為其同步對應，但以非同步方式執行。 例如，下列程式碼會下載 [Microsoft](https://docs.microsoft.com)檔的首頁：
+C # 支援具有兩個關鍵字的非同步程式： `async` 和 `await` 。 您將修飾詞加入 `async` 至方法宣告，以宣告方法是非同步。 `await`運算子會指示編譯器以非同步方式等待結果完成。 控制權會傳回給呼叫端，而此方法會傳回結構來管理非同步工作的狀態。 結構通常是 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> ，但可以是任何支援 awaiter 模式的型別。 這些功能可讓您撰寫程式碼，以讀取為其同步對應，但以非同步方式執行。 例如，下列程式碼會下載 [Microsoft](/)檔的首頁：
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="AsyncExample":::
 

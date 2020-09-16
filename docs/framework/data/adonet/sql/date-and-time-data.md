@@ -1,17 +1,17 @@
 ---
 title: 日期和時間資料
-description: 深入瞭解資料類型，以便在 SQL Server 的 .NET Framework Data Provider 中處理日期和時間資訊。
+description: 瞭解 SQL Server 的 .NET Framework Data Provider 中處理日期和時間資訊的資料類型。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 9345e995dcb1179e7d0a86f62737f9fda5889f42
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43b3349b2a35385dcc49d0866e0695b08eac2d2e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286490"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551487"
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 SQL Server 2008 引進了新的資料類型來處理日期和時間資訊。 新的資料類型包含適用於日期和時間的個別類型，以及具有更大範圍、精確度和時區感知的已擴充資料類型。 從 .NET Framework 3.5 版 Service Pack (SP) 1 開始，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 就會針對 SQL Server 2008 Database Engine 的所有新功能提供完整支援。 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用這些新功能搭配 SqlClient。  
@@ -20,9 +20,9 @@ SQL Server 2008 引進了新的資料類型來處理日期和時間資訊。 新
   
  《SQL Server 線上叢書》提供 SQL Server 資料類型的完整文件。 下表將列出日期和時間資料的版本特有入門級主題。  
   
- **SQL Server 檔**  
+ **SQL Server 文件**  
   
-1. [使用日期和時間資料](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
+1. [使用日期和時間資料](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 所導入的日期/時間資料型別  
  下表描述新的日期和時間資料類型。  
@@ -42,12 +42,12 @@ SQL Server 2008 引進了新的資料類型來處理日期和時間資訊。 新
   
  Transact-SQL SET LANGUAGE 陳述式會隱含地設定 DATEFORMAT，以決定日期部分的順序。 您可以利用 MDY、DMY、YMD、YDM、MYD 或 DYM 順序來排序日期部分，以在連線上使用 SET DATEFORMAT Transact-SQL 陳述式來釐清日期值。  
   
- 如果您未針對連線指定任何 DATEFORMAT，SQL Server 就會使用與連線相關聯的預設語言。 例如，在語言設定為「美式英文」的伺服器上，會將 '01/02/03' 的日期字串解讀為 MDY (2003 年 1 月 2 日)，而在語言設定為「英式英文」的伺服器上則會解譯為 DMY (2003 年 2 月 1 日)。 年份會使用 SQL Server 的截止年份規則來決定，這會定義用來指派世紀值的截止日期。 如需詳細資訊，請參閱[兩位數年份的截止選項](/sql/database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option)。  
+ 如果您未針對連線指定任何 DATEFORMAT，SQL Server 就會使用與連線相關聯的預設語言。 例如，在語言設定為「美式英文」的伺服器上，會將 '01/02/03' 的日期字串解讀為 MDY (2003 年 1 月 2 日)，而在語言設定為「英式英文」的伺服器上則會解譯為 DMY (2003 年 2 月 1 日)。 年份會使用 SQL Server 的截止年份規則來決定，這會定義用來指派世紀值的截止日期。 如需詳細資訊，請參閱 [兩位數年份截止選項](/sql/database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option)。  
   
 > [!NOTE]
 > 從字串格式轉換為 `date`、`time`、`datetime2` 或 `datetimeoffset` 時，不支援 YDM 日期格式。  
   
- 如需 SQL Server 如何解讀日期和時間資料的詳細資訊，請參閱[使用日期和時間資料](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))。  
+ 如需 SQL Server 如何解讀日期和時間資料的詳細資訊，請參閱 [使用日期和時間資料](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))。  
   
 ## <a name="datetime-data-types-and-parameters"></a>日期/時間資料型別和參數  
  <xref:System.Data.SqlDbType> 中新增了以下列舉來支援新的日期和時間資料類型。  
@@ -77,7 +77,7 @@ SQL Server 2008 引進了新的資料類型來處理日期和時間資訊。 新
   
 |SQL Server 資料類型|.NET Framework 類型|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
-|date|System.DateTime|日期|日期|  
+|日期|System.DateTime|Date|Date|  
 |time|System.TimeSpan|時間|時間|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
@@ -89,7 +89,7 @@ SQL Server 2008 引進了新的資料類型來處理日期和時間資訊。 新
   
 |屬性|描述|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|取得或設定值是否可為 Null。 當您將 Null 參數值傳送到伺服器時，必須指定 <xref:System.DBNull>，而不是 `null` (在 Visual Basic 中為 `Nothing`)。 如需資料庫 null 的詳細資訊，請參閱[處理 Null 值](handling-null-values.md)。|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|取得或設定值是否可為 Null。 當您將 Null 參數值傳送到伺服器時，必須指定 <xref:System.DBNull>，而不是 `null` (在 Visual Basic 中為 `Nothing`)。 如需資料庫 null 的詳細資訊，請參閱 [處理 Null 值](handling-null-values.md)。|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|取得或設定用來表示值的最大位數。 系統會針對日期和時間資料類型忽略此設定。|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|取得或設定針對 `Time`、`DateTime2` 和 `DateTimeOffset` 解析之值時間部分的小數點位數。 預設值為 0，表示會從值推斷實際的小數值，並傳送到伺服器。|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|已針對日期和時間資料類型加以忽略。|  
@@ -102,7 +102,7 @@ SQL Server 2008 引進了新的資料類型來處理日期和時間資訊。 新
 ### <a name="creating-parameters"></a>建立參數  
  您可以使用 <xref:System.Data.SqlClient.SqlParameter> 物件的建構函式 (Constructor)，或將它加入至 <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合 (透過呼叫 `Add` 的 <xref:System.Data.SqlClient.SqlParameterCollection> 方法)，藉以建立此物件。 `Add` 方法將會取得建構函式引數或現有參數物件作為輸入。  
   
- 此主題的後續小節將提供如何指定日期和時間參數的範例。 如需使用參數的其他範例，請參閱設定[參數和參數資料類型](../configuring-parameters-and-parameter-data-types.md)和[DataAdapter 參數](../dataadapter-parameters.md)。  
+ 此主題的後續小節將提供如何指定日期和時間參數的範例。 如需使用參數的其他範例，請參閱設定 [參數和參數資料類型](../configuring-parameters-and-parameter-data-types.md) 和 [DataAdapter 參數](../dataadapter-parameters.md)。  
   
 ### <a name="date-example"></a>Date 範例  
  下列程式碼片段將示範如何指定 `date` 參數。  
@@ -237,8 +237,8 @@ command.Parameters.AddWithValue( _
 |主題|描述|  
 |-----------|-----------------|  
 |[日期和時間資料類型與函數 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|提供所有 Transact-SQL 日期和間資料類型與函式的概觀。|  
-|[使用日期和時間資料](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|提供日期和時間資料類型與函式的詳細資訊，以及使用範例。|  
-|[資料類型（Transact-sql）](/sql/t-sql/data-types/data-types-transact-sql)|描述 SQL Server 中的系統資料類型。|  
+|[使用日期和時間資料](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|提供日期和時間資料類型與函式的詳細資訊，以及使用範例。|  
+|[ (Transact-sql) 的資料類型 ](/sql/t-sql/data-types/data-types-transact-sql)|描述 SQL Server 中的系統資料類型。|  
   
 ## <a name="see-also"></a>另請參閱
 

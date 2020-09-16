@@ -1,17 +1,17 @@
 ---
 title: 效能計數器
-description: 使用 ADO.NET 效能計數器來監視您的應用程式狀態及其連線資源，方法是使用 Windows 效能監視器或以程式設計方式。
+description: 使用 ADO.NET 效能計數器，以使用 Windows 效能監視器或以程式設計的方式監視您的應用程式狀態及其連接資源。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286672"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557901"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的效能計數器
 ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支援。 舊版 ADO.NET 中提供的 <xref:System.Data.SqlClient> 效能計數器已被本主題中討論的新效能計數器取代。 您可以使用 ADO.NET 效能計數器來監控應用程式的狀態及其使用的連接資源。 效能計數器可藉由「Windows 效能監視器」來進行監視，或可藉由 <xref:System.Diagnostics.PerformanceCounter> 命名空間 (Namespace) 中的 <xref:System.Diagnostics> 類別以程式設計的方式存取。  
@@ -25,19 +25,19 @@ ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:S
 |`HardDisconnectsPerSecond`|每秒鐘對資料庫伺服器所進行的中斷連接數目。|  
 |`NumberOfActiveConnectionPoolGroups`|使用中的唯一連接集區群組的數目。 這個計數器是由 AppDomain 中找到的唯一連接字串數目所控制。|  
 |`NumberOfActiveConnectionPools`|連接集區的總數。|  
-|`NumberOfActiveConnections`|目前使用中的現用連接的數目。 **注意：** 預設不會啟用此效能計數器。 若要啟用此效能計數器，請參閱啟動[依預設關閉的計數器](#ActivatingOffByDefault)。|  
-|`NumberOfFreeConnections`|連接集區中可用的連接數目。 **注意：** 預設不會啟用此效能計數器。 若要啟用此效能計數器，請參閱啟動[依預設關閉的計數器](#ActivatingOffByDefault)。|  
+|`NumberOfActiveConnections`|目前使用中的現用連接的數目。 **注意：**  預設不會啟用此效能計數器。 若要啟用此效能計數器，請參閱啟用 [預設為預設的計數器](#ActivatingOffByDefault)。|  
+|`NumberOfFreeConnections`|連接集區中可用的連接數目。 **注意：**  預設不會啟用此效能計數器。 若要啟用此效能計數器，請參閱啟用 [預設為預設的計數器](#ActivatingOffByDefault)。|  
 |`NumberOfInactiveConnectionPoolGroups`|標示為清除的唯一連接集區群組的數目。 這個計數器是由 AppDomain 中找到的唯一連接字串數目所控制。|  
 |`NumberOfInactiveConnectionPools`|最近未有任何活動且正等候處置 (Dispose) 的非現用連接集區數目。|  
 |`NumberOfNonPooledConnections`|尚未共用的現用連接的數目。|  
 |`NumberOfPooledConnections`|正由連接共用基礎結構所管理的現用連接的數目。|  
 |`NumberOfReclaimedConnections`|已透過記憶體回收作業回收的連接數目，其中 `Close` 或 `Dispose` 並非由應用程式呼叫。 未明確關閉或處置連接都會損及效能。|  
 |`NumberOfStasisConnections`|目前正等候動作完成因此無法提供應用程式使用的連接數目。|  
-|`SoftConnectsPerSecond`|正從連接集區提取的現用連接的數目。 **注意：** 預設不會啟用此效能計數器。 若要啟用此效能計數器，請參閱啟動[依預設關閉的計數器](#ActivatingOffByDefault)。|  
-|`SoftDisconnectsPerSecond`|正傳回至連接集區的現用連接的數目。 **注意：** 預設不會啟用此效能計數器。 若要啟用此效能計數器，請參閱啟動[依預設關閉的計數器](#ActivatingOffByDefault)。|  
+|`SoftConnectsPerSecond`|正從連接集區提取的現用連接的數目。 **注意：**  預設不會啟用此效能計數器。 若要啟用此效能計數器，請參閱啟用 [預設為預設的計數器](#ActivatingOffByDefault)。|  
+|`SoftDisconnectsPerSecond`|正傳回至連接集區的現用連接的數目。 **注意：**  預設不會啟用此效能計數器。 若要啟用此效能計數器，請參閱啟用 [預設為預設的計數器](#ActivatingOffByDefault)。|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>連接集區群組和連接集區  
- 在使用「Windows 驗證」(整合式安全性) 時，必須同時監控 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 效能計數器。 原因是連接集區群組會對應至唯一的連接字串。 使用整合式安全性時，連接集區會對應至連接字串，並針對個別的 Windows 識別 (Identity) 額外建立獨立的集區。 例如，如果 Fred 和 Julie 位於相同的 AppDomain 內，且兩者都使用連接字串 `"Data Source=MySqlServer;Integrated Security=true"`，則會針對連接字串建立連接集區群組，並針對 Fred 和 Julie 建立兩個額外的集區。 如果 John 和 Martha 使用具有相同 SQL Server 登入的連接字串，則 `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` 只會針對**lowPrivUser**身分識別建立單一集區。  
+ 在使用「Windows 驗證」(整合式安全性) 時，必須同時監控 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 效能計數器。 原因是連接集區群組會對應至唯一的連接字串。 使用整合式安全性時，連接集區會對應至連接字串，並針對個別的 Windows 識別 (Identity) 額外建立獨立的集區。 例如，如果 Fred 和 Julie 位於相同的 AppDomain 內，且兩者都使用連接字串 `"Data Source=MySqlServer;Integrated Security=true"`，則會針對連接字串建立連接集區群組，並針對 Fred 和 Julie 建立兩個額外的集區。 如果 John 和 Martha 使用的連接字串具有相同的 SQL Server 登入， `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` 則只會針對 **lowPrivUser** 身分識別建立單一集區。  
   
 <a name="ActivatingOffByDefault"></a>
 ### <a name="activating-off-by-default-counters"></a>啟動依預設關閉的計數器  
@@ -56,7 +56,7 @@ ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:S
  下列主控台應用程式顯示如何在應用程式中擷取效能計數器值。 連接必須為開啟及使用中，才能傳回所有 ADO.NET 效能計數器的資訊。  
   
 > [!NOTE]
-> 這個範例會使用 SQL Server 隨附的**AdventureWorks**範例資料庫。 範例程式碼中提供的連接字串假設該資料庫已安裝且可用於具有 SqlExpress 執行個體名稱的本機電腦上，而且您已建立符合連接字串中所提供登入的 SQL Server 登入。 如果伺服器是使用僅允許「Windows 驗證」的預設安全性設定而設定，則可能需要啟用 SQL Server 登入。 請視環境需要修改連接字串。  
+> 此範例會使用 SQL Server 隨附的範例 **AdventureWorks** 資料庫。 範例程式碼中提供的連接字串假設該資料庫已安裝且可用於具有 SqlExpress 執行個體名稱的本機電腦上，而且您已建立符合連接字串中所提供登入的 SQL Server 登入。 如果伺服器是使用僅允許「Windows 驗證」的預設安全性設定而設定，則可能需要啟用 SQL Server 登入。 請視環境需要修改連接字串。  
   
 ### <a name="example"></a>範例  
   
@@ -399,7 +399,7 @@ class Program
 
 - [連接到資料來源](connecting-to-a-data-source.md)
 - [OLE DB、ODBC 和 Oracle 連接共用](ole-db-odbc-and-oracle-connection-pooling.md)
-- [ASP.NET 的效能計數器](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [ASP.NET 的效能計數器](/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [執行時間分析](../../debug-trace-profile/runtime-profiling.md)
-- [監視效能閾值的簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [監視效能閾值簡介](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

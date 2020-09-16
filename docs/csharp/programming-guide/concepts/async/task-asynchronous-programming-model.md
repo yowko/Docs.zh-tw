@@ -3,12 +3,12 @@ title: '工作非同步程式設計 (利用 async 和 await (c # ) 」來利用)
 description: '瞭解何時及如何使用以工作為基礎的非同步程式設計，這是以 c # 進行非同步程式設計的簡化方法。'
 ms.date: 08/19/2020
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 5e85b99025b31e205c66468d4bd886701cbaea17
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 1014e38dcb3e2c4f56c8b3f3dade9bdbff3abd27
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812080"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556033"
 ---
 # <a name="task-asynchronous-programming-model"></a>非同步工作程式設計模型
 
@@ -43,7 +43,7 @@ C# 中的 [async](../../../language-reference/keywords/async.md) 和 [await](../
 
 下列範例將示範非同步方法。 程式碼中幾乎所有的東西都應該看起來很熟悉。
 
-您可以 [使用 c # 中的 async 和 await](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs)，找到可從非同步程式設計下載的完整 WINDOWS PRESENTATION FOUNDATION (WPF) 範例。
+您可以 [使用 c # 中的 async 和 await](/samples/dotnet/samples/async-and-await-cs)，找到可從非同步程式設計下載的完整 WINDOWS PRESENTATION FOUNDATION (WPF) 範例。
 
 :::code language="csharp" source="snippets/access-web/Program.cs" id="ControlFlow":::
 
@@ -121,7 +121,7 @@ string contents = await client.GetStringAsync("https://docs.microsoft.com/dotnet
 
 您可能會想知道哪裡可以找到支援非同步程式設計的方法，例如 `GetStringAsync`。 .NET Framework 4.5 或更高版本，且 .NET Core 包含許多可搭配和使用的成員 `async` `await` 。 您可以透過附加至成員名稱的 "Async" 尾碼，以及其對或的傳回型別來辨識它們 <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> 。 例如，相對於同步方法 <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> 和 <xref:System.IO.Stream.Write%2A>，`System.IO.Stream` 類別也包含一些方法，例如 <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> 和 <xref:System.IO.Stream.WriteAsync%2A>。
 
-Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `async` 和 `await` 搭配使用的方法。 如需詳細資訊，請參閱適用於 UWP 開發的[執行緒和非同步程式設計](/windows/uwp/threading-async/)，如果您使用舊版的 Windows 執行階段，則請參閱[非同步程式設計 (Microsoft Store 應用程式)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) 和[快速入門：在 C# 或 Visual Basic 中呼叫非同步 API](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10))。
+Windows 執行階段也包含許多您可以在 Windows 應用程式中與 `async` 和 `await` 搭配使用的方法。 如需詳細資訊，請參閱適用於 UWP 開發的[執行緒和非同步程式設計](/windows/uwp/threading-async/)，如果您使用舊版的 Windows 執行階段，則請參閱[非同步程式設計 (Microsoft Store 應用程式)](/previous-versions/windows/apps/hh464924(v=win.10)) 和[快速入門：在 C# 或 Visual Basic 中呼叫非同步 API](/previous-versions/windows/apps/hh452713(v=win.10))。
 
 ## <a name="threads"></a><a name="BKMK_Threads"></a> 執行緒
 
@@ -212,9 +212,9 @@ Windows 執行階段程式設計中的非同步 API 具有下列其中一種傳�
 
 ## <a name="related-topics-and-samples-visual-studio"></a><a name="BKMK_RelatedTopics"></a> 相關主題和範例 (Visual Studio)
 
-| 標題 | 描述 | 範例 |
+| Title | 描述 | 範例 |
 |--|--|--|
-| [如何使用 async 和 await，同時發出多個 web 要求 (c # ) ](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) | 示範如何同時啟動數個工作。 | [非同步範例：平行進行多個 Web 要求 (英文)](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) |
+| [如何使用 async 和 await，同時發出多個 web 要求 (c # ) ](./index.md) | 示範如何同時啟動數個工作。 | [非同步範例：平行進行多個 Web 要求 (英文)](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) |
 | [非同步傳回類型 (c # ) ](async-return-types.md) | 說明非同步方法可以傳回的類型，並說明每個類型的適用時機。 |  |
 | 使用解除標記做為信號機制來取消工作。 | 顯示如何將下列功能加入至您的非同步方案：<br><br> - [取消 (c # ) 的工作清單 ](cancel-an-async-task-or-a-list-of-tasks.md)<br>- [在一段時間後取消工作 (c # ) ](cancel-async-tasks-after-a-period-of-time.md)<br>- [在非同步工作完成時加以處理 (c # ) ](start-multiple-async-tasks-and-process-them-as-they-complete.md) |  |
 | [使用 async 進行檔案存取 (c # ) ](using-async-for-file-access.md) | 列出並示範使用 async 和 await 存取檔案的優點。 |  |

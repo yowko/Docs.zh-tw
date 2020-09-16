@@ -3,12 +3,12 @@ title: 概念和術語 (功能性轉換) -LINQ to XML
 description: 瞭解純功能性轉換的概念與術語。
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: a1c9c582235ac63fe50dd585ef5f046e9be8170e
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 0ecdbdf88ee9f868143f466222fa06f0ccf641d8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552283"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558108"
 ---
 # <a name="concepts-and-terminology-functional-transformation-linq-to-xml"></a>概念和術語 (功能性轉換)  (LINQ to XML) 
 
@@ -54,7 +54,7 @@ ms.locfileid: "89552283"
 Lambda 運算式 \
 基本上，這是可用於任何需要委派型別之處的內嵌匿名函式。 這是 lambda 運算式的簡化定義，但適用于本教學課程的目的。
 
-如需詳細資訊，請參閱 [lambda 運算式 (c # 程式設計手冊) ](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 和 [lambda 運算式 (Visual Basic) # B4 ](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。
+如需詳細資訊，請參閱 [lambda 運算式 (c # 程式設計手冊) ](../../csharp/language-reference/operators/lambda-expressions.md) 和 [lambda 運算式 (Visual Basic) # B4 ](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。
 
 集合 \
 一組結構化的資料，通常屬於統一的型別。 為與 LINQ 相容，集合必須實作 <xref:System.Collections.IEnumerable> 介面或 <xref:System.Linq.IQueryable> 介面 (或以下其中一個泛型對應項目：<xref:System.Collections.Generic.IEnumerator%601> 或 <xref:System.Linq.IQueryable%601>)。
@@ -72,13 +72,13 @@ Lambda 運算式 \
 延後執行與延遲評估 \
 延後運算式的評估，直到實際需要其解決的值為止。 在集合中，支援延後執行。
 
-如需更多 c # 資訊，請參閱 [LINQ 查詢的簡介 (c # ) ](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 和 [LINQ to XML (c # ) 中的順延強制和延遲評估 ](../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。
+如需更多 c # 資訊，請參閱 [LINQ 查詢的簡介 (c # ) ](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 和 [LINQ to XML (c # ) 中的順延強制和延遲評估 ](./deferred-execution-lazy-evaluation.md)。
 
-如需詳細 Visual Basic 資訊，請參閱 LINQ to XML (Visual Basic) 中的 [基本查詢作業 (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) 和 [延後執行和延遲評估 ](../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。
+如需詳細 Visual Basic 資訊，請參閱 LINQ to XML (Visual Basic) 中的 [基本查詢作業 (Visual Basic) ](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) 和 [延後執行和延遲評估 ](./deferred-execution-lazy-evaluation.md)。
 
 這些語言功能將用於本節的所有程式碼範例中。
 
 ## <a name="see-also"></a>另請參閱
 
-- [純功能性轉換簡介](introduction-pure-functional-transformations.md)
-- [功能性程式設計與命令式程式設計](functional-vs-imperative-programming.md)
+- [純功能轉換簡介](introduction-pure-functional-transformations.md)
+- [功能程式設計與命令式程式設計的比較](functional-vs-imperative-programming.md)

@@ -30,7 +30,7 @@ ms.locfileid: "88811253"
 
 #### <a name="recommended-action"></a>建議的動作
 
-完成以下步驟：
+完成下列步驟：
 
 1. 停止 `DatabaseErrorPageMiddleware` 在您的專案中使用。 例如， `UseDatabaseErrorPage` 從移除方法呼叫 `Startup.Configure` ：
 
