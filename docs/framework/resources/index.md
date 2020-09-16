@@ -1,6 +1,6 @@
 ---
 title: .NET 應用程式中的資源
-description: 瞭解 .NET 應用程式中的資源。 資源是在邏輯上與應用程式一起部署的任何不必要資料。
+description: 瞭解 .NET 應用程式中的資源。 資源是任何使用應用程式以邏輯方式部署的非必要資料。
 ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3941c912348a652ddcbaea517cf7626c2a8f88e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865160"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535566"
 ---
 # <a name="resources-in-net-apps"></a>.NET 應用程式中的資源
 
-幾乎每個實際執行品質應用程式都必須使用資源。 資源是任何使用應用程式以邏輯方式部署的非執行檔資料。 資源可能在應用程式中顯示作錯誤訊息，或做為使用者介面的一部分。 資源可以含有一些表單中的資料，包括字串、影像和永續性物件。 （若要將保存的物件寫入至資源檔，物件必須是可序列化的）。將您的資料儲存在資源檔中可讓您變更資料，而不需要重新編譯整個應用程式。 也可讓您將資料儲存在單一位置，不需要依賴儲存在多個位置的硬式編碼資料。
+幾乎每個實際執行品質應用程式都必須使用資源。 資源是任何使用應用程式以邏輯方式部署的非執行檔資料。 資源可能在應用程式中顯示作錯誤訊息，或做為使用者介面的一部分。 資源可以含有一些表單中的資料，包括字串、影像和永續性物件。  (若要將保存的物件寫入資源檔，物件必須是可序列化的。 ) 將資料儲存在資源檔中，可讓您變更資料，而不需要重新編譯整個應用程式。 也可讓您將資料儲存在單一位置，不需要依賴儲存在多個位置的硬式編碼資料。
 
 .NET Framework 與 .NET Core 提供桌建立和當地語系化資源的完整支援。 此外，.NET 也支援簡單的模型以封裝及部署當地語系化資源。
 
-如需 ASP.NET 中資源的詳細資訊，請參閱 [ASP.NET 網頁資源概觀](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))。
+如需 ASP.NET 中資源的詳細資訊，請參閱 [ASP.NET 網頁資源概觀](/previous-versions/aspnet/ms227427(v=vs.100))。
 
 ## <a name="create-and-localize-resources"></a>建立和當地語系化資源
 
@@ -49,11 +49,11 @@ ms.locfileid: "86865160"
 
 - 如果未明確指派文化特性，則會從 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 屬性擷取預設執行緒 UI 文化特性。
 
-- 如果未明確指派預設執行緒 UI 文化特性 (透過在本機電腦上擷取目前使用者的文化特性)。 在 Windows 上執行的 .NET 執行時間是藉由呼叫 Windows 函式來進行 [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 。
+- 如果未明確指派預設執行緒 UI 文化特性 (透過在本機電腦上擷取目前使用者的文化特性)。 在 Windows 上執行的 .NET 執行時間會藉由呼叫 Windows 函式來執行這項 [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) 工作。
 
 如需如何設定目前 UI 文化特性的詳細資訊，請參閱 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 參考頁面。
 
-然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取資源，<xref:System.Resources?displayProperty=nameWithType> 命名空間包含您可以用來擷取資源的額外類型。 其中包含：
+然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取資源，<xref:System.Resources?displayProperty=nameWithType> 命名空間包含您可以用來擷取資源的額外類型。 它們包括：
 
 - <xref:System.Resources.ResourceReader> 類別，可讓您列舉內嵌在組件中，或儲存在獨立二進位 .resources 檔中的資源。 當您不知道資源在執行階段可用的確切名稱時，這個項目很有用。
 

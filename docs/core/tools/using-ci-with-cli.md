@@ -1,13 +1,13 @@
 ---
-title: 使用 .NET Core SDK 和工具的持續整合（CI）
-description: 瞭解如何透過持續整合，在組建伺服器上使用 .NET Core SDK 和其工具。
+title: '使用 .NET Core SDK 和工具的持續整合 (CI) '
+description: 瞭解如何在組建伺服器上使用 .NET Core SDK 及其工具，並持續整合。
 ms.date: 05/18/2017
-ms.openlocfilehash: ddccb477bc112157a155e2217e04c329e7ab51c5
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 724cc639a2588b085b31ff4590acce34d2380655
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415987"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537713"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 
@@ -32,11 +32,11 @@ macOS 使用者應使用 PKG 安裝程式。 在 Linux 上，您可以選擇使�
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> 使用安裝程式指令碼時，不會自動安裝原生相依性。 如果作業系統沒有原生相依性，您必須加以安裝。 如需詳細資訊，請參閱[.Net Core 相依性和需求](../install/windows.md#dependencies)。
+> 使用安裝程式指令碼時，不會自動安裝原生相依性。 如果作業系統沒有原生相依性，您必須加以安裝。 如需詳細資訊，請參閱 [.Net Core 相依性和需求](../install/windows.md#dependencies)。
 
 ## <a name="ci-setup-examples"></a>CI 設定範例
 
-本節描述如何使用 PowerShell 或 Bash 指令碼進行手動設定，以及描述幾個軟體即服務 (SaaS) CI 解決方案。 涵蓋的 SaaS CI 解決方案包括 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 及 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index)。
+本節描述如何使用 PowerShell 或 Bash 指令碼進行手動設定，以及描述幾個軟體即服務 (SaaS) CI 解決方案。 涵蓋的 SaaS CI 解決方案包括 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 及 [Azure Pipelines](/azure/devops/pipelines/index)。
 
 ### <a name="manual-setup"></a>手動設定
 
@@ -147,7 +147,7 @@ install:
 1. 使用您的命令從[手動設定步驟](#manual-setup)執行指令碼。
 1. 建立由數個設定為使用 .NET Core 工具的 Azure DevOps Services 內建建置工作所組成的組建。
 
-這兩種解決方案都是可行的。 您可以使用手動設定指令碼來控制接收到的工具版本，因為那些工具是以組建之一部分的形式下載的。 組建會從您必須建立的指令碼執行。 本文僅涵蓋手動選項。 如需有關使用 Azure DevOps Services 建置工作來組成組建的詳細資訊，請參閱 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index)\(英文\) 文件。
+這兩種解決方案都是可行的。 您可以使用手動設定指令碼來控制接收到的工具版本，因為那些工具是以組建之一部分的形式下載的。 組建會從您必須建立的指令碼執行。 本文僅涵蓋手動選項。 如需有關使用 Azure DevOps Services 建置工作來組成組建的詳細資訊，請參閱 [Azure Pipelines](/azure/devops/pipelines/index)\(英文\) 文件。
 
 若要在 Azure DevOps Services 中使用手動設定指令碼，請建立新的組建定義，並指定要針對建置步驟執行的指令碼。 這可使用 Azure DevOps Services 使用者介面來完成：
 
@@ -155,7 +155,7 @@ install:
 
    ![選取空的組建定義](./media/using-ci-with-cli/select-empty-build-definition.png)
 
-1. 設定要建置的存放庫之後，系統就會將您導向至組建定義。 選取 [**新增組建步驟**]：
+1. 設定要建置的存放庫之後，系統就會將您導向至組建定義。 選取 [ **新增組建步驟**]：
 
    ![加入建置步驟](./media/using-ci-with-cli/add-build-step.png)
 
@@ -169,10 +169,10 @@ install:
 
 ## <a name="orchestrating-the-build"></a>協調組建
 
-本文件大部分內容為描述如何取得 .NET Core 工具及設定各種 CI 服務，並沒有提供如何使用 .NET Core 來協調或「實際建置」** 程式碼的相關資訊。 建置程序的結構方式取決於許多因素，無法在這裡以一一涵蓋。 如需有關使用各項技術來協調組建的詳細資訊，請探索 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 及 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) 文件集內所提供的資源與範例。
+本文件大部分內容為描述如何取得 .NET Core 工具及設定各種 CI 服務，並沒有提供如何使用 .NET Core 來協調或「實際建置」** 程式碼的相關資訊。 建置程序的結構方式取決於許多因素，無法在這裡以一一涵蓋。 如需有關使用各項技術來協調組建的詳細資訊，請探索 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 及 [Azure Pipelines](/azure/devops/pipelines/index) 文件集內所提供的資源與範例。
 
 使用 .NET Core 工具建立 .NET Core 程式碼建置程序的結構時，可以採取兩種方法：直接使用 MSBuild，或使用 .NET Core 命令列命令。 您可以視自己對特定方法的熟悉程度並權衡其複雜度，來選擇要使用的方法。 MSBuild 可讓您以工作和目標的形式表示建置程序，但使用此方法必須額外學習 MSBuild 專案檔語法。 使用 .NET Core 命令列工具或許比較簡單，但您必須使用如 `bash` 或 PowerShell 之類的指令碼語言撰寫協調流程邏輯。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 下載 - Linux](https://dotnet.microsoft.com/download?initial-os=linux) \(英文\)

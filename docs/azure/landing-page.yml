@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: 適用於 .NET 開發人員的 Azure
-summary: 利用這些適用于 .NET 開發人員的教學課程和工具，開始為雲端開發應用程式。 .NET ❤ Azure
+summary: 使用適用于 .NET 開發人員的教學課程和工具，開始開發雲端應用程式。 .NET ❤ Azure
 metadata:
   title: 適用於 .NET 開發人員的 Azure
   description: 使用 .NET 和 Azure 進行開發的檔、範例和連結。
@@ -10,18 +10,18 @@ metadata:
   ms.technology: azure
   ms.service: multiple
   ms.prod: azure-dotnet
-  ms.openlocfilehash: a7b9b909e500979750d57cc6047153123cd192e5
-  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+  ms.openlocfilehash: 8d1fb12e3edeb75db7e11316db1063c0bcd63a8e
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 07/09/2020
-  ms.locfileid: "86174912"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90539095"
 landingContent:
 - title: 開始在 Azure 上使用 .NET
   linkLists:
   - linkListType: overview
     links:
-    - text: Azure 和 .NET 簡介
+    - text: Azure 與 .NET 簡介
       url: intro.md
   - linkListType: get-started
     links:
@@ -43,7 +43,7 @@ landingContent:
       url: /samples/browse/?products=azure&languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb
   - linkListType: reference
     links:
-    - text: 適用于 .NET API 參考的 Azure 程式庫
+    - text: 適用于 .NET API 的 Azure 程式庫參考
       url: /dotnet/api/overview/azure/?view=azure-dotnet
 - title: 建置 Web 應用程式
   linkLists:
@@ -69,17 +69,17 @@ landingContent:
       url: /learn/modules/publish-manage-apis-with-azure-api-management/
   - linkListType: tutorial
     links:
-    - text: 使用 App Service 和 Azure SQL Database ASP.NET Core web 應用程式
+    - text: ASP.NET Core web 應用程式搭配 App Service 和 Azure SQL Database
       url: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase
     - text: 用於 ASP.NET 和 Azure SQL Database 的受控識別
       url: /azure/app-service/app-service-web-tutorial-connect-msi
     - text: Azure App Service 中具有 CORS 支援的 Web API
       url: /azure/app-service/app-service-web-tutorial-rest-api
-- title: 建立雲端原生應用程式
+- title: 建置雲端原生應用程式
   linkLists:
   - linkListType: quickstart
     links:
-    - text: 在 Kubernetes 中執行和 debug 微服務
+    - text: 在 Kubernetes 中執行和調試微服務
       url: /azure/dev-spaces/quickstart-netcore-visualstudio
   - linkListType: learn
     links:
@@ -93,7 +93,7 @@ landingContent:
     links:
     - text: 使用 Visual Studio 容器工具 ASP.NET Core 應用程式
       url: /visualstudio/containers/container-tools
-    - text: 在 AKS 中部署和調試多個容器
+    - text: 在 AKS 中部署及調試多個容器
       url: /azure/dev-spaces/multi-service-netcore-visualstudio
     - text: 使用 Azure App Config 的動態設定和功能旗標
       url: /azure/azure-app-configuration/use-feature-flags-dotnet-core
@@ -109,15 +109,15 @@ landingContent:
       url: /learn/modules/secure-app-with-oidc-and-azure-ad/
     - text: 使用 Microsoft 身分識別保護自訂 Api
       url: /learn/modules/identity-secure-custom-api/
-    - text: 使用 ASP.NET Identity 架構保護 ASP.NET Core web 應用程式
+    - text: 使用 ASP.NET Identity framework 保護 ASP.NET Core web 應用程式
       url: /learn/modules/secure-aspnet-core-identity/
   - linkListType: tutorial
     links:
     - text: 將「登入到 Microsoft」新增至 ASP.NET Web 應用程式
       url: /azure/active-directory/develop/tutorial-v2-asp-webapp
-    - text: 搭配 ASP.NET Core 使用 Azure Key Vault
+    - text: 搭配使用 Azure Key Vault 與 ASP.NET Core
       url: /azure/key-vault/tutorial-net-create-vault-azure-web-app
-    - text: 將 Azure AD B2C 與 Web API 整合
+    - text: 整合 Azure AD B2C 與 web API
       url: /azure/active-directory-b2c/tutorial-single-page-app-webapi
   - linkListType: reference
     links:
@@ -127,11 +127,11 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: 選擇正確的資料存放區選項
+    - text: 選擇正確的資料儲存選項
       url: /azure/architecture/guide/technology-choices/data-store-overview
   - linkListType: quickstart
     links:
-    - text: 使用 .NET 查詢 Azure SQL Database 或 Azure SQL 受控執行個體
+    - text: 使用 .NET 來查詢 Azure SQL Database 或 Azure SQL 受控執行個體
       url: /azure/azure-sql/database/connect-query-dotnet-core
     - text: 使用 .NET 來查詢 Azure 于 postgresql
       url: /azure/postgresql/connect-csharp
@@ -143,11 +143,11 @@ landingContent:
       url: /learn/modules/build-cosmos-db-app-with-vscode/
     - text: 使用 Azure Blob 儲存體儲存應用程式資料
       url: /learn/modules/store-app-data-with-azure-blob-storage/
-    - text: 使用 Entity Framework Core 保存及擷取關聯式資料
+    - text: 使用 Entity Framework Core 保存並擷取關聯式資料
       url: /learn/modules/persist-data-ef-core/
   - linkListType: tutorial
     links:
-    - text: 連接到適用於 PostgreSQL 的 Azure 資料庫資料庫並加以查詢
+    - text: 連接及查詢適用於 PostgreSQL 的 Azure 資料庫資料庫
       url: /azure/postgresql/connect-csharp
 - title: Azure 上的訊息
   linkLists:
@@ -179,19 +179,19 @@ landingContent:
       url: /azure/azure-monitor/overview
   - linkListType: learn
     links:
-    - text: 在您的 Azure web 應用程式中捕捉及查看頁面載入時間
+    - text: 在 Azure web 應用程式中捕獲和查看頁面載入時間
       url: /learn/modules/capture-page-load-times-application-insights/
   - linkListType: how-to-guide
     links:
-    - text: 疑難排解 Azure App Service 和 IIS 上的 ASP.NET Core
+    - text: 針對 Azure App Service 和 IIS 上的 ASP.NET Core 進行疑難排解
       url: /aspnet/core/test/troubleshoot-azure-iis
-    - text: 使用 .NET Core ILogger 的 Application Insights
+    - text: 使用 .NET Core ILogger Application Insights
       url: /azure/azure-monitor/app/ilogger
-    - text: 背景工作角色服務應用程式的 Application Insights
+    - text: 背景工作服務應用程式的 Application Insights
       url: /azure/azure-monitor/app/worker-service
     - text: 使用 Visual Studio 針對 Azure App Service 中的應用程式進行疑難排解
       url: /azure/app-service/troubleshoot-dotnet-visual-studio
-- title: 移轉
+- title: 遷移
   linkLists:
   - linkListType: concept
     links:
@@ -214,10 +214,10 @@ landingContent:
   - linkListType: architecture
     links:
     - text: .NET 微服務：容器化 .NET 應用程式的架構
-      url: /dotnet/architecture/microservices/
+      url: ../architecture/microservices/index.md
     - text: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
-      url: /dotnet/architecture/modern-web-apps-azure/
+      url: ../architecture/modern-web-apps-azure/index.md
     - text: 採用 Microsoft 平台與工具容器化之 Docker 應用程式的生命週期
-      url: /dotnet/architecture/containerized-lifecycle/
+      url: ../architecture/containerized-lifecycle/index.md
     - text: 使用 Azure 雲端及 Windows 容器現代化現有的 .NET 應用程式
       url: /dotnet/architecture/modernize-with-azure-containers/

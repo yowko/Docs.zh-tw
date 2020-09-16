@@ -4,16 +4,16 @@ description: 示範在 CentOS 上安裝 .NET Core SDK 和 .NET Core 執行時間
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 6b1bad3a6c967483bb683866de84c9e5077a336f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7937502067e1717fd7f5c973c64ad33ae2a443a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619503"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538614"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-centos"></a>在 CentOS 上安裝 .NET Core SDK 或 .NET Core 執行時間
 
-CentOS 上支援 .NET Core。 本文說明如何在 CentOS 上安裝 .NET Core。
+CentOS 支援 .NET Core。 本文說明如何在 CentOS 上安裝 .NET Core。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,18 +21,18 @@ CentOS 上支援 .NET Core。 本文說明如何在 CentOS 上安裝 .NET Core�
 
 ## <a name="supported-distributions"></a>支援的發行版本
 
-下表是 CentOS 7 和 CentOS 8 上目前支援的 .NET Core 版本清單。 在[.Net Core 版本達到支援終止](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)或不再支援 CentOS 版本之前，這些版本都會持續受到支援。
+下表是 CentOS 7 和 CentOS 8 上目前支援的 .NET Core 版本清單。 在 [.Net Core 版本達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或不再支援 CentOS 版本之前，會持續支援這些版本。
 
-- ✔️表示仍然支援 CentOS 或 .NET Core 的版本。
-- A ❌ 表示該 CentOS 版本不支援 CentOS 或 .Net Core 的版本。
-- 當 CentOS 版本和 .NET Core 版本都✔️時，就會支援該作業系統和 .NET 組合。
+- ✔️表示仍支援 CentOS 或 .NET Core 的版本。
+- ❌指出該 CentOS 版本不支援 CentOS 或 .Net Core 的版本。
+- 當版本的 CentOS 和 .NET Core 版本都✔️時，支援該作業系統和 .NET 組合。
 
-| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview （僅限手動安裝） |
+| CentOS                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (僅限手動安裝)  |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#centos-8-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ✔️ [7](#centos-7-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
+| ✔️ [8](#centos-8-) | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
+| ✔️ [7](#centos-7-) | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
 
-已不再支援下列 .NET Core 版本。 這些下載仍會保持發佈：
+不再支援下列 .NET Core 版本。 這些內容的下載仍會保持發佈：
 
 - 3.0
 - 2.2
@@ -46,7 +46,7 @@ CentOS 上支援 .NET Core。 本文說明如何在 CentOS 上安裝 .NET Core�
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-.NET Core 3.1 適用于 CentOS 8 的預設封裝存放庫。
+CentOS 8 的預設封裝存放庫中有提供 .NET Core 3.1。
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
@@ -62,13 +62,17 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 ## <a name="troubleshoot-the-package-manager"></a>針對套件管理員進行疑難排解
 
-本節提供使用封裝管理員安裝 .NET Core 時，可能會收到的常見錯誤資訊。
+本節提供使用套件管理員安裝 .NET Core 時，您可能會遇到的常見錯誤的相關資訊。
+
+### <a name="unable-to-find-package"></a>找不到套件
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>無法提取
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a>抓取
+## <a name="snap"></a>單元
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 

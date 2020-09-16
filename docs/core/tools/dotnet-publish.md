@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: Dotnet publish 命令會將 .NET Core 專案或方案發佈至目錄。
 ms.date: 02/24/2020
-ms.openlocfilehash: f171baaa0dbc070b6389ec0fa9895b2c5dcfafff
-ms.sourcegitcommit: f279a4488c48236793c04bf825ae6f9128790849
+ms.openlocfilehash: 53dc6010352d92489017c3aa776bcb6a3601ec2d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2020
-ms.locfileid: "89501905"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537765"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -229,7 +229,7 @@ dotnet publish -p:PublishProfile=FolderProfile
   dotnet publish --no-dependencies
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 應用程式發行總覽](../deploying/index.md)
 - [使用 .NET Core CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)
@@ -240,4 +240,4 @@ dotnet publish -p:PublishProfile=FolderProfile
 - [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Visual Studio 發佈設定檔 (. .pubxml) 以進行 ASP.NET Core 應用程式部署](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
-- [ILLInk](https://aka.ms/dotnet-illink)
+- [ILLInk](../deploying/trim-self-contained.md)

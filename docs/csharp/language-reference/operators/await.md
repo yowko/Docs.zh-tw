@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 6531e696a6193bf1b1909c9f1be3f5beb4d7dd69
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 8dc85bfeaab12d17af4a3e045559e268b228f736
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134363"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536466"
 ---
 # <a name="await-operator-c-reference"></a>await 運算子 (C# 參考)
 
@@ -60,5 +60,5 @@ ms.locfileid: "89134363"
 - [非同步工作程式設計模型](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [非同步程式設計](../../async.md)
 - [深入了解非同步](../../../standard/async-in-depth.md)
-- [逐步解說：使用 async 和 await 存取 Web](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [逐步解說：使用 async 和 await 存取 Web](../../programming-guide/concepts/async/index.md)
 - [教學課程：使用 c # 8.0 和 .NET Core 3.0 產生及使用非同步資料流程](../../tutorials/generate-consume-asynchronous-stream.md)

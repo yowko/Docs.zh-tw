@@ -2,12 +2,12 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465152"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537401"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -106,23 +106,23 @@ LINQ 可讓您撰寫程式碼，來查詢支援 LINQ 查詢運算式模式的任
 - [在查詢中使用 lambda 運算式](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md)。
 - [在查詢運算式中使用 `var`](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
 - [從查詢傳回元素屬性的子集](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md)。
-- [撰寫具有複雜篩選的查詢](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)。
-- [排序資料來源的元素](../programming-guide/concepts/linq/how-to-sort-elements.md)。
-- [排序多個索引鍵的元素](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)。
-- [控制投影的類型](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md)。
+- [撰寫具有複雜篩選的查詢](../../standard/linq/write-queries-complex-filtering.md)。
+- [排序資料來源的元素](../../standard/linq/sort-elements.md)。
+- [排序多個索引鍵的元素](../../standard/linq/sort-elements-multiple-keys.md)。
+- [控制投影的類型](../../standard/linq/control-type-projection.md)。
 - [計算來源序列中值的出現次數](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md)。
-- [計算中繼值](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)。
+- [計算中繼值](../../standard/linq/calculate-intermediate-values.md)。
 - [合併多個來源的資料](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)。
 - [找出兩個序列之間的集合差異](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)。
-- [為空白的查詢結果偵錯](../programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)。
+- [為空白的查詢結果偵錯](../../standard/linq/debug-empty-query-results-sets.md)。
 - [將自訂方法新增到 LINQ 查詢](../programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)。
 
 ## <a name="multiple-threads-and-async-processing"></a>多個執行緒和非同步處理
 
 新式程式常使用非同步作業。 這些文章會協助您了解如何使用這些技術。
 
-- [使用 `System.Threading.Tasks.Task.WhenAll` 改善非同步效能](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
-- [使用 `async` 與 `await` 平行提出多個 Web 要求](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)。
+- [使用 `System.Threading.Tasks.Task.WhenAll` 改善非同步效能](../programming-guide/concepts/async/index.md)。
+- [使用 `async` 與 `await` 平行提出多個 Web 要求](../programming-guide/concepts/async/index.md)。
 - [使用執行緒集區](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool)。
 
 ## <a name="command-line-args-to-your-program"></a>程式的命令列引數

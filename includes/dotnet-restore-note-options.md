@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 6c04437c2a211b244e6c5eda0893b267c59668e9
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 19002cce40fdc929716a761a5e01303be4decb35
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102761"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537820"
 ---
-[`dotnet restore`](~/docs/core/tools/dotnet-restore.md)不必運行`dotnet new`,因為它由需要還原的所有命令(如`dotnet build``dotnet run``dotnet test``dotnet publish`、、、、、`dotnet pack`和 ) 隱式運行。 要禁用隱式還原,請使用`--no-restore`選項。
+您不必執行， [`dotnet restore`](~/docs/core/tools/dotnet-restore.md) 因為它是由所有需要進行還原的命令（例如 `dotnet new` 、 `dotnet build` 、 `dotnet run` 、、 `dotnet test` `dotnet publish` 和 `dotnet pack` ）隱含地執行。 若要停用隱含還原，請使用 `--no-restore` 選項。
 
-該`dotnet restore`命令在某些顯式還原有意義的方案中仍然有用,例如[Azure DevOps 服務中的連續整合生成](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core)或需要顯式控制還原時建構系統的生成。
+在 `dotnet restore` 明確還原的特定情況下，此命令仍很有用，例如 [Azure DevOps Services 中的持續整合組建](/azure/devops/build-release/apps/aspnet/build-aspnet-core) ，或在需要明確控制還原進行時的組建系統。
 
-有關如何管理 NuGet 源的資訊,請參考[`dotnet restore`文件](../docs/core/tools/dotnet-restore.md)。
+如需有關如何管理 NuGet 摘要的詳細資訊，請參閱[ `dotnet restore` 檔](../docs/core/tools/dotnet-restore.md)。
 
-此指令支援以`dotnet restore`長形式傳遞的選項(例如`--source`, 。 不支援簡短形式選項，例如 `-s`。
+`dotnet restore`當以完整形式傳遞時，此命令支援選項 (例如 `--source`) 。 不支援簡短形式選項，例如 `-s`。

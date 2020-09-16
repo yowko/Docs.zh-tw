@@ -4,12 +4,12 @@ description: 示範在 Ubuntu 上安裝 .NET Core SDK 和 .NET Core 執行時間
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 9694dac719024264edee849044f048970b63b7b7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5c07de20110a1aecf2ec5cb9de88f204625e548d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132935"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538446"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>在 Ubuntu 上安裝 .NET Core SDK 或 .NET Core 執行時間
 
@@ -173,6 +173,10 @@ sudo apt-get upgrade
 
 本節提供使用 APT 來安裝 .NET Core 時，您可能會遇到的常見錯誤的相關資訊。
 
+### <a name="unable-to-find-package"></a>找不到套件
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+
 ### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>找不到 \\ 某些套件無法安裝
 
 [!INCLUDE [package-manager-failed-to-find-deb](includes/package-manager-failed-to-find-deb.md)]
@@ -230,6 +234,6 @@ sudo apt-get update; \
 
 [!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
 - [教學課程：使用 Visual Studio Code 建立具有 .NET Core SDK 的主控台應用程式](../tutorials/with-visual-studio-code.md)

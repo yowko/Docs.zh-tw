@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608214"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537492"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -136,7 +136,7 @@ dotnet publish -r <rid> -c Release
 
 無論如何，請務必在修剪後測試您的應用程式。
 
-如需 IL 連結器工具的詳細資訊，請參閱[文件](https://aka.ms/dotnet-illink) \(英文\) 或造訪 [mono/linker]( https://github.com/mono/linker) \(英文\) 存放庫。
+如需 IL 連結器工具的詳細資訊，請參閱[文件](../deploying/trim-self-contained.md) \(英文\) 或造訪 [mono/linker]( https://github.com/mono/linker) \(英文\) 存放庫。
 
 ### <a name="tiered-compilation"></a>階層式編譯
 
@@ -329,9 +329,9 @@ Windows 提供豐富的原生 API，其採用的形式為一般 C API、COM 和 
 
 ### <a name="msix-deployment"></a>MSIX 部署
 
-[MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 應用程式套件格式。 它可以用來將 .NET Core 3.0 桌面應用程式部署至 Windows 10。
+[MSIX](/windows/msix/) 是新的 Windows 應用程式套件格式。 它可以用來將 .NET Core 3.0 桌面應用程式部署至 Windows 10。
 
-Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) \(機器翻譯\) 可讓您利用[獨立式](../deploying/index.md#publish-self-contained) .NET Core 應用程式建立 MSIX 套件。
+Visual Studio 2019 中提供的 [Windows 應用程式套件專案](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) \(機器翻譯\) 可讓您利用[獨立式](../deploying/index.md#publish-self-contained) .NET Core 應用程式建立 MSIX 套件。
 
 .NET Core 專案檔必須指定在 `<RuntimeIdentifiers>` 屬性中支援的執行階段：
 

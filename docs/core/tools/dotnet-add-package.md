@@ -2,16 +2,16 @@
 title: dotnet add package 命令
 description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
 ms.date: 02/14/2020
-ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1bdda241c1301b926ba2fd322f969407038b7b62
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840893"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538064"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
+本文**適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -71,7 +71,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  只有在以特定[架構](../../standard/frameworks.md)為目標時，才會新增套件參考。
+  只有在以特定 [架構](../../standard/frameworks.md)為目標時，才會新增封裝參考。
 
 - **`-h|--help`**
 
@@ -87,7 +87,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  還原套件的目錄。 Windows 上的預設套件還原位置為 `%userprofile%\.nuget\packages`，macOS 和 Linux 上則為 `~/.nuget/packages`。 如需詳細資訊，請參閱[在 NuGet 中管理全域套件、快取和暫存資料夾](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)。
+  還原套件的目錄。 Windows 上的預設套件還原位置為 `%userprofile%\.nuget\packages`，macOS 和 Linux 上則為 `~/.nuget/packages`。 如需詳細資訊，請參閱[在 NuGet 中管理全域套件、快取和暫存資料夾](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)。
 
 - **`-s|--source <SOURCE>`**
 
@@ -95,7 +95,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`-v|--version <VERSION>`**
 
-  套件的版本。 請參閱 [NuGet 套件版本控制](https://docs.microsoft.com/nuget/reference/package-versioning) \(部分機器翻譯\)。
+  套件的版本。 請參閱 [NuGet 套件版本控制](/nuget/reference/package-versioning) \(部分機器翻譯\)。
 
 ## <a name="examples"></a>範例
 
@@ -119,5 +119,5 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="see-also"></a>另請參閱
 
-- [在 NuGet 中管理全域套件、快取和暫存資料夾](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
-- [NuGet 套件版本控制](https://docs.microsoft.com/nuget/reference/package-versioning)
+- [在 NuGet 中管理全域套件、快取和暫存資料夾](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [NuGet 套件版本控制](/nuget/reference/package-versioning)

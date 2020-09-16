@@ -4,12 +4,12 @@ description: 示範在 Debian 上安裝 .NET Core SDK 和 .NET Core 執行時間
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: d4a54a8a5354a1430141d2c06d4aa90dbafc3edf
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d0f7d4092ec420d031d0874a56b9e2148afdb865
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134935"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538536"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>在 Debian 上安裝 .NET Core SDK 或 .NET Core 執行時間
 
@@ -31,7 +31,7 @@ ms.locfileid: "89134935"
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [10](#debian-10-)     | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
 | ✔️ [9](#debian-9-)       | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
-| ❌[8](#debian-8-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 預覽 |
+| ❌ [8](#debian-8-)       | ✔️2。1        | ❌ 3.1        | ❌ 5.0 預覽 |
 
 不再支援下列 .NET Core 版本。 這些內容的下載仍會保持發佈：
 
@@ -99,6 +99,10 @@ sudo apt-get upgrade
 
 本節提供使用 APT 來安裝 .NET Core 時，您可能會遇到的常見錯誤的相關資訊。
 
+### <a name="unable-to-find-package"></a>找不到套件
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+
 ### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>找不到 \\ 某些套件無法安裝
 
 [!INCLUDE [package-manager-failed-to-find-deb](includes/package-manager-failed-to-find-deb.md)]
@@ -156,6 +160,6 @@ sudo apt-get update; \
 
 [!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
 - [教學課程：使用 Visual Studio Code 建立具有 .NET Core SDK 的主控台應用程式](../tutorials/with-visual-studio-code.md)

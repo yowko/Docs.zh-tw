@@ -3,18 +3,18 @@ title: 偵測鎖死-.NET Core
 description: 本教學課程會逐步引導您在 .NET Core 中偵測鎖定問題。
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557876"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538692"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>在 .NET Core 中偵測鎖死
 
 本文**適用于：✔️** .net CORE 3.1 SDK 和更新版本
 
-在本教學課程中，您將瞭解如何將鎖死案例進行調試。 使用提供的範例 [ASP.NET Core web 應用程式](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) 原始程式碼存放庫，您可以刻意造成鎖死。 端點將會遇到停止回應和執行緒累積。 您將瞭解如何使用各種工具來分析問題，例如核心傾印、核心傾印分析和流程追蹤。
+在本教學課程中，您將瞭解如何將鎖死案例進行調試。 使用提供的範例 [ASP.NET Core web 應用程式](/samples/dotnet/samples/diagnostic-scenarios) 原始程式碼存放庫，您可以刻意造成鎖死。 端點將會遇到停止回應和執行緒累積。 您將瞭解如何使用各種工具來分析問題，例如核心傾印、核心傾印分析和流程追蹤。
 
 在本教學課程中，您將：
 
@@ -31,13 +31,13 @@ ms.locfileid: "88557876"
 教學課程會使用：
 
 - [.Net Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更新版本
-- [範例偵錯工具目標-](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) 用來觸發案例的 web 應用程式
+- [範例偵錯工具目標-](/samples/dotnet/samples/diagnostic-scenarios) 用來觸發案例的 web 應用程式
 - [dotnet-列出進程的追蹤](dotnet-trace.md)
 - [dotnet-](dotnet-dump.md) 傾印以收集及分析傾印檔案
 
 ## <a name="core-dump-generation"></a>核心傾印產生
 
-若要調查應用程式無回應，核心傾印或記憶體傾印可讓您檢查其執行緒的狀態以及可能有競爭問題的任何可能的鎖定。 從範例根目錄中，使用下列命令來執行 [範例調試](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) 程式：
+若要調查應用程式無回應，核心傾印或記憶體傾印可讓您檢查其執行緒的狀態以及可能有競爭問題的任何可能的鎖定。 從範例根目錄中，使用下列命令來執行 [範例調試](/samples/dotnet/samples/diagnostic-scenarios) 程式：
 
 ```dotnetcli
 dotnet run

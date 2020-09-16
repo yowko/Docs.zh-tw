@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: 3054c3c6faa8dfe621c706d8df031c23d497da0c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f1748372af520955c139dffb2e6e80ae066c9397
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576508"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536059"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX 整合與 JSON 支援
-Windows Communication Foundation （WCF）支援 ASP.NET 非同步 JavaScript 和 XML （AJAX）和 JavaScript 物件標記法（JSON）資料格式，可讓 WCF 服務向 AJAX 用戶端公開作業。 AJAX 用戶端是執行 JavaScript 程式碼的網頁，並使用 HTTP 要求來存取這些 WCF 服務。 本節中的主題會提供有關此支援以及如何實作的詳細資訊。  
+Windows Communication Foundation (WCF) ASP.NET 非同步 JavaScript 和 XML (AJAX) 和 JavaScript 物件標記法 (JSON) 資料格式的支援，可讓 WCF 服務對 AJAX 用戶端公開作業。 AJAX 用戶端是執行 JavaScript 程式碼的網頁，並使用 HTTP 要求來存取這些 WCF 服務。 本節中的主題會提供有關此支援以及如何實作的詳細資訊。  
   
- 如需有關 ASP.NET AJAX 及其與 ASP.NET 2.0 整合的詳細資訊，請參閱[ASP.NET AJAX 總覽](https://docs.microsoft.com/previous-versions/aspnet/bb398874(v=vs.100))。  
+ 如需有關 ASP.NET AJAX 以及與 ASP.NET 2.0 整合的詳細資訊，請參閱 [ASP.NET Ajax 總覽](/previous-versions/aspnet/bb398874(v=vs.100))。  
   
 ## <a name="in-this-section"></a>本節內容  
  [建立 ASP.NET AJAX 的 WCF 服務](creating-wcf-services-for-aspnet-ajax.md)  
- 描述如何透過設定來新增適當的 AJAX 端點，或使用自訂的服務主機 factory 來自動設定 AJAX 端點，藉此將 WCF 服務公開給 AJAX 用戶端。  
+ 描述如何將 WCF 服務公開給 AJAX 用戶端，方法是透過設定新增適當的 AJAX 端點，或使用自訂的服務主機 factory 來產生自動設定 AJAX 端點的服務主機。  
   
  [建立不含 ASP.NET 的 WCF AJAX 服務](creating-wcf-ajax-services-without-aspnet.md)  
- 說明如何在不使用 ASP.NET 的情況下建立 WCF 服務。  
+ 描述如何在不使用 ASP.NET 的情況下建立 WCF 服務。  
   
  [JSON 和其他資料傳輸格式的支援](support-for-json-and-other-data-transfer-formats.md)  
  針對使用 ASP.NET AJAX 服務的訊息，說明慣用的 JSON 格式 (而不是 XML) 支援。  
   
- [HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
- 描述如何將啟用 AJAX 的 ASP.NET Web 服務遷移至 WCF Web 服務。  
+ [作法：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
+ 說明如何將具備 AJAX 功能的 ASP.NET Web 服務遷移至 WCF Web 服務。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>
 - [WCF Web HTTP 程式設計模型](wcf-web-http-programming-model.md)

@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 56eebc0fc5bad6f57d93358cbbef389d6355d66b
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 6106f66dfbbe382ee9f61eb8b7bda70ab9b72d0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656686"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538544"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -54,7 +54,7 @@ Hello World!
 | ![影片的電影攝影機圖示](./media/video-icon.png "觀看影片") | 觀看 Channel 9 上的 [如何安裝和使用 Visual Studio Code 和 .Net Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) 影片。 |
 | ![影片的電影攝影機圖示](./media/video-icon.png "觀看影片") | 觀看 YouTube 上的 [.Net Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) 影片。 |
 
-如需支援的 Windows 版本清單，請參閱 [.Net Core 相依性和需求](install/dependencies.md?pivots=os-windows) 文章。
+如需支援的 Windows 版本清單，請參閱 [.Net Core 相依性和需求](./install/windows.md) 文章。
 
 # <a name="linux"></a>[Linux](#tab/linux)
 
@@ -66,7 +66,7 @@ Hello World!
 |---|---|
 | ![影片的電影攝影機圖示](./media/video-icon.png "觀看影片") | 觀看影片以了解[使用 C# 和 .NET Core 在 Ubuntu 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)。 |
 
-如需支援的 Linux 散發版本和版本清單，請參閱 [.Net Core 相依性和需求](install/dependencies.md?pivots=os-linux) 文章。
+如需支援的 Linux 散發版本和版本清單，請參閱 [.Net Core 相依性和需求](./install/linux.md) 文章。
 
 # <a name="macos"></a>[macOS](#tab/macos)
 
@@ -80,6 +80,6 @@ Hello World!
 |---|---|
 | ![影片的電影攝影機圖示](media/video-icon.png "觀看影片") | 觀看在 macOS 上 [使用 c # 和 .Net Core 開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)的影片。 |
 
-請參閱 [.Net Core 相依性和需求](install/dependencies.md?pivots=os-macos) 一文，以取得支援的 OS X/macOS 版本清單。
+請參閱 [.Net Core 相依性和需求](./install/macos.md) 一文，以取得支援的 OS X/macOS 版本清單。
 
 ---

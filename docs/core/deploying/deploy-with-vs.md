@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 73eee58a3d11f2f898a6d57cb282ccf4e802cdca
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 1c9aba10e27609bdf8e95d844ead60fd0ec0bd2c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656595"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538719"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -24,7 +24,7 @@ ms.locfileid: "88656595"
 - 自封式部署
 - 有協力廠商相依性的自封式部署
 
-如需使用 Visual Studio 開發 .NET Core 應用程式的相關資訊，請參閱 [.Net core 相依性和需求](../install/dependencies.md?pivots=os-windows)。
+如需使用 Visual Studio 開發 .NET Core 應用程式的相關資訊，請參閱 [.Net core 相依性和需求](../install/windows.md)。
 
 ## <a name="framework-dependent-deployment"></a>與 Framework 相依的部署
 
@@ -309,7 +309,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 您只能將具有協力廠商程式庫的獨立部署部署到該程式庫所支援的平臺。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性不會存在於目標平台上，除非先前已在該處安裝這些相依性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 應用程式部署](index.md)
 - [.NET Core 執行時間識別碼 (RID) 目錄](../rid-catalog.md)

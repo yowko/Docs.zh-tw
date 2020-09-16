@@ -4,14 +4,14 @@ description: 了解如何瀏覽運算式樹狀架構中的每個節點，同時�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb64e79d915a5c5567d5a3d25f1d747df9687c87
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76115790"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537459"
 ---
-# <a name="translate-expression-trees"></a>翻譯運算式樹
+# <a name="translate-expression-trees"></a>轉譯運算式樹狀架構
 
 [上一個主題 -- 建立運算式](expression-trees-building.md)
 
@@ -61,7 +61,7 @@ Console.WriteLine(answer);
 建立新的樹狀結合了瀏覽現有樹狀中的所有節點，以及建立新的節點並將其插入樹狀。
 
 此範例示範運算式樹狀架構不可變的重要性。 請注意，以上建立的新樹狀包含新建立的節點及來自現有樹狀的節點之組合。 因為無法修改現有樹狀中的節點，所以很安全。 這會大幅提升記憶體的效率。
-您可以在整個樹狀中，或在多個運算式樹狀架構中使用相同的節點。 由於無法修改節點，因此可以隨時重用同一節點。
+您可以在整個樹狀中，或在多個運算式樹狀架構中使用相同的節點。 由於節點無法修改，因此您可以在需要時重複使用相同的節點。
 
 ## <a name="traversing-and-executing-an-addition"></a>周遊和執行加法
 
@@ -91,7 +91,7 @@ Console.WriteLine(theSum);
 ```
 
 這裡的程式碼很多，但概念很容易了解。
-此程式碼會瀏覽第一次深度搜尋的子系。 當它遇到常數節點時，造訪者會傳回常數值。 訪問者訪問兩個子樹後，這些子項將計算該子樹的計算總和。 加法節點現在可以計算其總和。
+此程式碼會瀏覽第一次深度搜尋的子系。 當它遇到常數節點時，造訪者會傳回常數值。 在訪客造訪這兩個子系之後，這些子系會計算出針對該子樹計算的總和。 加法節點現在可以計算其總和。
 瀏覽運算式樹狀架構中的所有節點之後，就會計算總和。 您可以執行偵錯工具中的樣本並追蹤執行情況，來追蹤執行情況。
 
 藉由周遊此樹狀，可讓我們更輕鬆地追蹤節點的分析方式，以及總和的計算方式。 以下是彙總方法的更新版本，其中包含相當多的追蹤資訊：
@@ -192,7 +192,7 @@ Computed sum: 10
 
 ## <a name="learning-more"></a>深入了解
 
-此範例顯示您所建立的一小部分程式碼，該程式碼會用來周遊及解譯由運算式樹狀架構表示的演算法。 如需建立一般用途程式庫，以將運算式樹狀架構轉譯為其他語言之所有必要工作的完整討論，請閱讀 Matt Warren 所撰寫的[這一系列](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series)。 該系列進一步詳細說明如何將您可能在運算式樹狀架構中找到的任何程式碼進行轉譯。
+此範例顯示您所建立的一小部分程式碼，該程式碼會用來周遊及解譯由運算式樹狀架構表示的演算法。 如需建立一般用途程式庫，以將運算式樹狀架構轉譯為其他語言之所有必要工作的完整討論，請閱讀 Matt Warren 所撰寫的[這一系列](/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series)。 該系列進一步詳細說明如何將您可能在運算式樹狀架構中找到的任何程式碼進行轉譯。
 
 希望您現在已了解運算式樹狀架構的真正強大之處。
 您可以查看一組程式碼、對該程式碼進行任何想要的變更，然後執行變更後的版本。 因為運算式樹狀架構為不可變，所以您可以使用現有樹狀的元件來建立新的樹狀。 如此即可降低建立修改後的運算式樹狀架構所需的記憶體數量。

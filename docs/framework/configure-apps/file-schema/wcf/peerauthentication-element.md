@@ -2,17 +2,17 @@
 title: <peerAuthentication> 項目
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 4c29c84a2cc56a890c8273e410ba31b5f3900732
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 093b0c4b6a7fbf54455ec523b52c1f3a9884cfa8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400087"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536011"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication> 項目
 指定對等用戶端的驗證選項。  
   
- 如需對等程式設計的詳細資訊，請參閱[對等網路](../../../wcf/feature-details/peer-to-peer-networking.md)。  
+ 如需點對點程式設計的詳細資訊，請參閱 [對等網路](../../../wcf/feature-details/peer-to-peer-networking.md)。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -40,9 +40,9 @@ ms.locfileid: "70400087"
 |屬性|描述|  
 |---------------|-----------------|  
 |`customCertificateValidatorType`|選擇性字串。 用來驗證自訂型別的型別和組件。 當 `certificateValidationMode` 設定為 `Custom` 時，必須設定這個屬性。|  
-|`certificateValidationMode`|選擇性列舉。 指定用來驗證認證之三個模式的其中一個。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。 預設值為 `ChainTrust`。|  
-|`revocationMode`|選擇性列舉。 用於檢查撤銷憑證清單 (CRL) 的模式之一。 預設值為 `Online`。|  
-|`trustedStoreLocation`|選擇性列舉。 兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 會針對指定存放區位置中的「**受信任的人**」存放區執行驗證。 預設值為 `CurrentUser`。|  
+|`certificateValidationMode`|選擇性列舉。 指定用來驗證認證之三個模式的其中一個。 如果設定為 `Custom`，也必須提供 `customCertificateValidator`。 預設為 `ChainTrust`。|  
+|`revocationMode`|選擇性列舉。 用於檢查撤銷憑證清單 (CRL) 的模式之一。 預設為 `Online`。|  
+|`trustedStoreLocation`|選擇性列舉。 兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對指定存放區位置中 **受信任的人** 存放區執行驗證。 預設為 `CurrentUser`。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 屬性  
   
@@ -54,26 +54,26 @@ ms.locfileid: "70400087"
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉型別|下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。 預設值為 `ChainTrust`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
+|列舉型別|下列其中一個值：`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom`。 預設為 `ChainTrust`。<br /><br /> 如需詳細資訊，請參閱 [使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉型別|下列其中一個值：`NoCheck`、`Online`、`Offline`。 預設值為 `Online`。<br /><br /> 如需詳細資訊，請參閱[使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
+|列舉型別|下列其中一個值：`NoCheck`、`Online`、`Offline`。 預設為 `Online`。<br /><br /> 如需詳細資訊，請參閱 [使用憑證](../../../wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|列舉型別|下列其中一個值：`LocalMachine` 或 `CurrentUser`。 預設值為 `CurrentUser`。 如果用戶端應用程式是在系統帳戶下執行，則憑證通常位於 `LocalMachine` 之下。 如果用戶端應用程式是在使用者帳戶下執行，則憑證通常位於 `CurrentUser`。|  
+|列舉型別|下列其中一個值：`LocalMachine` 或 `CurrentUser`。 預設為 `CurrentUser`。 如果用戶端應用程式是在系統帳戶下執行，則憑證通常位於 `LocalMachine` 之下。 如果用戶端應用程式是在使用者帳戶下執行，則憑證通常位於 `CurrentUser`。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<peer>](peer-of-clientcredentials-element.md)|指定向對等服務驗證用戶端時所使用的認證。|  
   
@@ -108,8 +108,8 @@ ms.locfileid: "70400087"
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
-- [Working with Certificates](../../../wcf/feature-details/working-with-certificates.md)
+- [使用憑證](../../../wcf/feature-details/working-with-certificates.md)
 - [對等網路](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [對等通道訊息驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [對等通道自訂驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [對等通道訊息驗證](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [對等通道自訂驗證](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [確保對等通道應用程式安全](../../../wcf/feature-details/securing-peer-channel-applications.md)

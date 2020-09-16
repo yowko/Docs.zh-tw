@@ -4,12 +4,12 @@ description: 當您安裝以 .NET Core 建立的 .NET Core 執行時間、SDK �
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 616f163856cca48ccc6d1a14e0c6e68d56379c0c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656523"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538298"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina 公證和 .NET Core 下載和專案的影響
 
@@ -17,7 +17,7 @@ ms.locfileid: "88656523"
 
 ## <a name="installing-net-core"></a>安裝 .NET Core
 
-.NET Core 的安裝程式 (執行時間和 SDK) 3.1、3.0 和2.1 版，自2020年2月18日起已公證。 先前發行的版本不會公證。 您可以手動安裝 .NET Core 的非公證版本，方法是先下載安裝程式，然後使用 `sudo installer` 命令。 如需詳細資訊，請參閱 [下載並手動安裝以進行 macOS](sdk.md?pivots=os-macos#download-and-manually-install)。
+.NET Core 的安裝程式 (執行時間和 SDK) 3.1、3.0 和2.1 版，自2020年2月18日起已公證。 先前發行的版本不會公證。 您可以手動安裝 .NET Core 的非公證版本，方法是先下載安裝程式，然後使用 `sudo installer` 命令。 如需詳細資訊，請參閱 [下載並手動安裝以進行 macOS](./macos.md#download-and-manually-install)。
 
 從下列版本開始，.NET Core 安裝程式會公證：
 

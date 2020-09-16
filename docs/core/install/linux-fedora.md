@@ -4,16 +4,16 @@ description: 示範在 Fedora 上安裝 .NET Core SDK 和 .NET Core 執行時間
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: c90c08eefa074fa139642a268f879af79d7280da
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 89a55ad2e9fd66d277d0c3eb6a07bd402574bd0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619477"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538510"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-fedora"></a>在 Fedora 上安裝 .NET Core SDK 或 .NET Core 執行時間
 
-Fedora 上支援 .NET Core。 本文說明如何在 Fedora 上安裝 .NET Core。 當 Fedora 版本不支援時，該版本就不再支援 .NET Core。 不過，這些指示可以協助您取得在這些版本上執行的 .NET Core，即使它不受支援也一樣。
+Fedora 支援 .NET Core。 本文說明如何在 Fedora 上安裝 .NET Core。 當 Fedora 版本不受支援時，就不再支援該版本的 .NET Core。 不過，這些指示可協助您讓 .NET Core 在這些版本上執行，即使它不受支援也是一樣。
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,22 +21,22 @@ Fedora 上支援 .NET Core。 本文說明如何在 Fedora 上安裝 .NET Core�
 
 ## <a name="supported-distributions"></a>支援的發行版本
 
-下表列出目前支援的 .NET Core 版本，以及支援的 Fedora 版本。 在[.Net Core 版本達到支援終止](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)，或[Fedora 版本達到生命週期結束](https://fedoraproject.org/wiki/End_of_life)之前，這些版本仍受到支援。
+下表列出目前支援的 .NET Core 版本，以及其支援的 Fedora 版本。 在 [.Net Core 的版本達到終止支援](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 或 Fedora 的版本 [達到生命週期結束](https://fedoraproject.org/wiki/End_of_life)之前，會持續支援這些版本。
 
-- ✔️表示仍然支援 Fedora 或 .NET Core 的版本。
-- A ❌ 表示該 Fedora 版本不支援 Fedora 或 .Net Core 的版本。
-- 當 Fedora 版本和 .NET Core 版本都✔️時，就會支援該作業系統和 .NET 組合。
+- ✔️表示仍支援 Fedora 或 .NET Core 的版本。
+- ❌指出該 Fedora 版本不支援 Fedora 或 .Net Core 的版本。
+- 當版本的 Fedora 和 .NET Core 版本都✔️時，支援該作業系統和 .NET 組合。
 
-| Fedora                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview （僅限手動安裝） |
+| Fedora                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (僅限手動安裝)  |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [32](linux-fedora.md#fedora-32-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ✔️ [31](linux-fedora.md#fedora-31-) | ✔️2。1        | ✔️3。1        | ✔️ 5.0 Preview |
-| ❌ [30](linux-fedora.md#fedora-30-) | ✔️2。1        | ✔️3。1        | ❌5.0 預覽 |
-| ❌[29](linux-fedora.md#fedora-29-) | ✔️2。1        | ✔️3。1        | ❌5.0 預覽 |
-| ❌[28](linux-fedora.md#fedora-28-) | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
-| ❌[27](linux-fedora.md#fedora-27-) | ✔️2。1        | ❌3.1        | ❌5.0 預覽 |
+| ✔️ [32](linux-fedora.md#fedora-32-) | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
+| ✔️ [31](linux-fedora.md#fedora-31-) | ✔️2。1        | ✔️3。1        | ✔️5.0 預覽 |
+| ❌[30](linux-fedora.md#fedora-30-) | ✔️2。1        | ✔️3。1        | ❌ 5.0 預覽 |
+| ❌[29](linux-fedora.md#fedora-29-) | ✔️2。1        | ✔️3。1        | ❌ 5.0 預覽 |
+| ❌[28](linux-fedora.md#fedora-28-) | ✔️2。1        | ❌ 3.1        | ❌ 5.0 預覽 |
+| ❌[27](linux-fedora.md#fedora-27-) | ✔️2。1        | ❌ 3.1        | ❌ 5.0 預覽 |
 
-已不再支援下列 .NET Core 版本。 這些下載仍會保持發佈：
+不再支援下列 .NET Core 版本。 這些內容的下載仍會保持發佈：
 
 - 3.0
 - 2.2
@@ -48,7 +48,7 @@ Fedora 上支援 .NET Core。 本文說明如何在 Fedora 上安裝 .NET Core�
 
 ## <a name="fedora-32-"></a>Fedora 32 ✔️
 
-.NET Core 3.1 適用于 Fedora 32 的預設封裝存放庫。
+Fedora 32 的預設套件存放庫中有提供 .NET Core 3.1。
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
@@ -63,7 +63,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
-## <a name="fedora-30-"></a>Fedora 30❌
+## <a name="fedora-30-"></a>Fedora 30 ❌
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
@@ -76,7 +76,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
-## <a name="fedora-29-"></a>Fedora 29❌
+## <a name="fedora-29-"></a>Fedora 29 ❌
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
@@ -89,7 +89,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-30](includes/linux-install-30-dnf.md)]
 
-## <a name="fedora-28-"></a>Fedora 28❌
+## <a name="fedora-28-"></a>Fedora 28 ❌
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
@@ -102,7 +102,7 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 [!INCLUDE [linux-dnf-install-20](includes/linux-install-20-dnf.md)]
 
-## <a name="fedora-27-"></a>Fedora 27❌
+## <a name="fedora-27-"></a>Fedora 27 ❌
 
 [!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
 
@@ -117,13 +117,17 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 
 ## <a name="troubleshoot-the-package-manager"></a>針對套件管理員進行疑難排解
 
-本節提供使用封裝管理員安裝 .NET Core 時，可能會收到的常見錯誤資訊。
+本節提供使用套件管理員安裝 .NET Core 時，您可能會遇到的常見錯誤的相關資訊。
+
+### <a name="unable-to-find-package"></a>找不到套件
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>無法提取
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a>抓取
+## <a name="snap"></a>單元
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 

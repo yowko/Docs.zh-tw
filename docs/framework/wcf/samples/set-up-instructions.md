@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: 4a5a0558a26e938fb06a19f498e541f4d3611bf3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97308d97677ed9f791f54541e8c594873213c13e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584151"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535491"
 ---
 # <a name="set-up-instructions"></a>設定指示
-這組主題說明如何設定執行 Windows Communication Foundation （WCF）服務所需的服務。  
+這組主題說明如何設定執行 Windows Communication Foundation (WCF) 服務所需的服務。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Windows Communication Foundation 範例的單次安裝程序](one-time-setup-procedure-for-the-wcf-samples.md)  
@@ -35,10 +35,10 @@ ms.locfileid: "84584151"
  概述建立 WCF 範例的步驟。  
   
  [執行 Windows Communication Foundation 範例](running-the-samples.md)  
- 概述在同一部電腦上，以及跨電腦執行 WCF 範例的步驟。  
+ 概述在同一部電腦上和跨電腦執行 WCF 範例的步驟。  
   
  [安裝訊息佇列 (MSMQ)](installing-message-queuing-msmq.md)  
  概述安裝訊息佇列的步驟。  
   
 ## <a name="related-sections"></a>相關章節  
- [WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))
+ [WCF 範例的疑難排解秘訣](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

@@ -2,12 +2,12 @@
 title: 使用 Visual Studio for Mac 建立 .NET Core 主控台應用程式
 description: 瞭解如何使用 Visual Studio for Mac 來建立 .NET Core 主控台應用程式。
 ms.date: 06/02/2020
-ms.openlocfilehash: 8ffcb05ad85f53180ca1aaefbd2dfc7496946142
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867655"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537596"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 建立 .NET Core 主控台應用程式
 
@@ -19,12 +19,12 @@ ms.locfileid: "88867655"
 > * 在 Visual Studio for Mac 中， **Help**  >  **Report a Problem**從功能表中選取 [說明]，或從歡迎畫面回報**問題**，這會開啟用來提出錯誤報表的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/8/index.html)入口網站追蹤您的意見反應。
 > * 若要提出建議，請**Help**  >  從功能表中選取 [說明]**提供建議**，或從歡迎畫面**提供**建議，這會帶您前往[Visual Studio for Mac 開發人員社群網頁](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 * [Visual Studio for Mac 8.6 版或更新版本](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 選取安裝 .NET Core 的選項。 安裝 Xamarin 是 .NET Core 開發的選擇性選項。 如需詳細資訊，請參閱下列資源：
 
   * [教學課程：安裝 Visual Studio for Mac](/visualstudio/mac/installation)。
-  * [支援的 macOS 版本](../install/dependencies.md?pivots=os-macos)。
+  * [支援的 macOS 版本](../install/windows.md)。
   * [Visual Studio for Mac 支援的 .Net Core 版本](/visualstudio/mac/net-core-support)。
 
 ## <a name="create-the-app"></a>建立應用程式

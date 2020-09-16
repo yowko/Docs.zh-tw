@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 6868c79791d960dd1ae55ab09d4ac3b40ce52655
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420483"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535855"
 ---
 # <a name="runtime-callable-wrapper"></a>執行階段可呼叫包裝函式
 Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) 的 Proxy 來公開 COM 物件。 雖然 RCW 對 .NET 用戶端似乎是個普通物件，但其主要功能是在 .NET 用戶端與 COM 物件之間封送處理呼叫。  
@@ -53,7 +53,7 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
   
 |介面|描述|  
 |---------------|-----------------|  
-|**IConnectionPoint**和**IConnectionPointContainer**|RCW 會將公開連接點事件樣式的物件，轉換成委派架構的事件。|  
+|**IConnectionPoint** 和 **IConnectionPointContainer**|RCW 會將公開連接點事件樣式的物件，轉換成委派架構的事件。|  
 |**IDispatchEx** (僅限 .NET Framework) |如果類別實作 **IDispatchEx**，RCW 就會實作 **IExpando**。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|  
 |**IEnumVARIANT**|可讓支援列舉的 COM 類型被視為集合來處理。|  
   
@@ -61,5 +61,5 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
 
 - [COM 包裝函式](com-wrappers.md)
 - [COM 可呼叫包裝函式](com-callable-wrapper.md)
-- [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [型別程式庫至組件轉換的摘要](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [匯入類型程式庫做為組件](../../framework/interop/importing-a-type-library-as-an-assembly.md)

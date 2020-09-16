@@ -4,12 +4,12 @@ description: 在本教學課程中，您將瞭解如何使用 Docker 來將 .NET
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 99bbc67096d98622ca5c0dc83d8b1be44a9995e5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: b6775c760ef3f5bf1c9519430b038f149c9cf30f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810543"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538497"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教學課程：將 .NET Core 應用程式
 
@@ -29,7 +29,7 @@ ms.locfileid: "88810543"
 > [!NOTE]
 > 本教學課程 **不適** 用於 ASP.NET Core 應用程式。 如果您是使用 ASP.NET Core，請參閱 [瞭解如何將 ASP.NET Core 應用程式](/aspnet/core/host-and-deploy/docker/building-net-docker-images) 教學課程。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 安裝下列先決條件：
 
@@ -213,13 +213,13 @@ docker-working
 
 從終端機執行下列命令：
 
-```Docker
+```console
 docker build -t counter-image -f Dockerfile .
 ```
 
 Docker 將會處理 *Dockerfile* 中的每一行。 `.`命令中的會 `docker build` 指示 Docker 使用目前的資料夾來尋找*Dockerfile*。 此命令會建立映射，並建立名為 **counter** 的本機存放庫，指向該映射。 當此命令完成之後，執行 `docker images` 以查看已安裝的映像清單：
 
-```Docker
+```console
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              e6780479db63        4 days ago          190MB
@@ -242,7 +242,7 @@ ENTRYPOINT ["dotnet", "NetCore.Docker.dll"]
 
 從終端機中執行 `docker build -t counter-image -f Dockerfile .`，並在該命令完成時，執行 `docker images`。
 
-```Docker
+```console
 docker build -t counter-image -f Dockerfile .
 Sending build context to Docker daemon  1.117MB
 Step 1/4 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
@@ -272,14 +272,14 @@ mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        
 
 您現在已有包含應用程式的映像，您可以建立一個容器。 您可以兩種方式建立容器。 首先，建立已停止的新容器。
 
-```Docker
+```console
 docker create --name core-counter counter-image
 0f281cb3af994fba5d962cc7d482828484ea14ead6bfe386a35e5088c0058851
 ```
 
 `docker create`上述命令會根據**計數器**影像映射建立容器。 該命令的輸出會顯示已建立容器的**容器識別碼** (您的映像識別碼將會不同)。 若要查看「所有」** 容器的清單，請使用 `docker ps -a` 命令：
 
-```Docker
+```console
 docker ps -a
 CONTAINER ID    IMAGE            COMMAND                   CREATED           STATUS     PORTS    NAMES
 0f281cb3af99    counter-image    "dotnet NetCore.Dock…"    40 seconds ago    Created             core-counter
@@ -289,7 +289,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED           STA
 
 容器是使用特定名稱所建立 `core-counter` ，此名稱是用來管理容器。 下列範例會使用 `docker start` 命令來啟動容器，然後使用 `docker ps` 命令只顯示正在執行的容器：
 
-```Docker
+```console
 docker start core-counter
 core-counter
 
@@ -300,7 +300,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED          STAT
 
 同樣地，`docker stop` 命令將會停止容器。 下列範例 `docker stop` 會使用命令停止容器，然後使用 `docker ps` 命令顯示沒有任何容器正在執行：
 
-```Docker
+```console
 docker stop core-counter
 core-counter
 
@@ -314,7 +314,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 當您從容器中斷連結之後，請重新連結以確認它仍在執行且正在進行計算。
 
-```Docker
+```console
 docker start core-counter
 core-counter
 
@@ -335,13 +335,13 @@ Counter: 19
 
 基於此文章的目的，您不想讓容器什麼都不做而只處於懸置狀態。 刪除您先前建立的容器。 如果容器正在執行，請停止它。
 
-```Docker
+```console
 docker stop core-counter
 ```
 
 下列範例會列出所有容器。 它接著會使用 `docker rm` 命令來刪除容器，然後第二次檢查任何執行中的容器。
 
-```Docker
+```console
 docker ps -a
 CONTAINER ID    IMAGE            COMMAND                   CREATED          STATUS                        PORTS    NAMES
 2f6424a7ddce    counter-image    "dotnet NetCore.Dock…"    7 minutes ago    Exited (143) 20 seconds ago            core-counter
@@ -357,7 +357,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 Docker 提供 `docker run` 命令來建立容器，並以單一命令執行。 使用此命令，就不需依序執行 `docker create` 及 `docker start`。 您也可以設定此命令，在容器停止時自動刪除容器。 例如，使用 `docker run -it --rm` 來執行兩個動作，首先，自動使用目前的終端機連線到容器，然後在容器完成時將其移除：
 
-```Docker
+```console
 docker run -it --rm counter-image
 Counter: 1
 Counter: 2
@@ -369,7 +369,7 @@ Counter: 5
 
 容器也會將參數傳遞至 .NET Core 應用程式的執行。 指示 .NET Core 應用程式只計算3次的3個。
 
-```Docker
+```console
 docker run -it --rm counter-image 3
 Counter: 1
 Counter: 2
@@ -378,7 +378,7 @@ Counter: 3
 
 使用時 `docker run -it` ， <kbd>Ctrl + C</kbd> 命令會停止在容器中執行的進程，進而停止容器。 由於已提供 `--rm` 參數，因此會在程序停止時自動刪除容器。 確認它不存在：
 
-```Docker
+```console
 docker ps -a
 CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 ```
@@ -391,7 +391,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 在此範例中，`ENTRYPOINT` 會變更為 `cmd.exe`。 按下<kbd>Ctrl + C</kbd>以結束進程並停止容器。
 
-```Docker
+```console
 docker run -it --rm --entrypoint "cmd.exe" counter-image
 
 Microsoft Windows [Version 10.0.17763.379]
@@ -450,25 +450,25 @@ Docker 有許多不同的命令，可建立、管理及與容器和映射互動�
 
 01. 列出所有容器
 
-    ```Docker
+    ```console
     docker ps -a
     ```
 
 02. 停止依名稱執行的容器。
 
-    ```Docker
+    ```console
     docker stop counter-image
     ```
 
 03. 刪除容器
 
-    ```Docker
+    ```console
     docker rm counter-image
     ```
 
 接下來，在電腦上刪除您不再需要的任何映像。 刪除 *Dockerfile* 所建立的映像，然後刪除 *Dockerfile* 以其為基礎的 .NET Core 映像。 您可以使用**映像識別碼**或**存放庫:標記**格式的字串。
 
-```Docker
+```console
 docker rmi counter-image:latest
 docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```

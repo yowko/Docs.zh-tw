@@ -4,12 +4,12 @@ description: 瞭解您可以在其上安裝 .NET Core 的 macOS 版本。
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 19d5ca77b0308533c8f228be70c61daf1b7f82d9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f946759a57bf2eedd296ecbd55fd3a5a7560638d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132751"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538362"
 ---
 # <a name="install-net-core-on-macos"></a>在 macOS 上安裝 .NET Core
 
@@ -147,7 +147,7 @@ export PATH=$PATH:$HOME/dotnet
 >
 > 您可以編輯 shell 設定檔，以永久新增命令。 Linux 有一些不同的 shell 可用，而且每個都有不同的設定檔。 例如：
 >
-> - **Bash Shell**： *~/.bash_profile*， *~/.bashrc*
+> - **Bash Shell**： *~/. bash_profile*， *~/.bashrc*
 > - **Korn Shell**： *~/.kshrc* 或 *. profile*
 > - **Z Shell**： *~/.zshrc* 或 *. zprofile*
 >
@@ -177,7 +177,7 @@ Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，�
 
 [Dotnet 安裝腳本](../tools/dotnet-install-script.md)是用於執行時間的自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載腳本。
 
-腳本預設會安裝最新 [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net Core 3.1。 您可以藉由指定參數來選擇特定版本 `current` 。 包含 `runtime` 參數以安裝執行時間。 否則，腳本會安裝 [SDK](sdk.md)。
+腳本預設會安裝最新 [長期支援 (LTS) ](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) 版本，也就是 .net Core 3.1。 您可以藉由指定參數來選擇特定版本 `current` 。 包含 `runtime` 參數以安裝執行時間。 否則，腳本會安裝 [SDK](./windows.md)。
 
 ```bash
 ./dotnet-install.sh --channel 3.1 --runtime aspnetcore

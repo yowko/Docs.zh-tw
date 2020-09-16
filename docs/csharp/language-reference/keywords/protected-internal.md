@@ -5,12 +5,12 @@ ms.date: 11/15/2017
 f1_keywords:
 - protectedinternal_CSharpKeyword
 author: sputier
-ms.openlocfilehash: a7537fba93c0d7145f04c6236d15c11b70f8bf98
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f22de104154df74f02c048b1209eeac754a03e64
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139433"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536794"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# 參考)
 
@@ -77,6 +77,6 @@ class DerivedClass : BaseClass
 - [協助工具層級](accessibility-levels.md)
 - [修飾詞](index.md)
 - [public](public.md)
-- [私人](private.md)
+- [private](private.md)
 - [internal](internal.md)
-- [internal virtual 關鍵字的安全性考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [internal virtual 關鍵字的安全性考量](/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

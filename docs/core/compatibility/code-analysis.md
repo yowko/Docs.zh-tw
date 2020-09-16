@@ -2,12 +2,12 @@
 title: 程式碼分析的重大變更
 description: 列出 .NET 來源程式碼分析器中的重大變更。
 ms.date: 09/02/2020
-ms.openlocfilehash: 20badd69b316e1d87700b3c5061a71d648b71c64
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 3cbe2ecf5d08084db542db0c2da016f1f391452e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065138"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538915"
 ---
 # <a name="code-analysis-breaking-changes"></a>程式碼分析的重大變更
 
@@ -21,6 +21,7 @@ ms.locfileid: "90065138"
 | [CA2013：請勿使用具有值類型的 ReferenceEquals](#ca2013-do-not-use-referenceequals-with-value-types) | 5.0 |
 | [CA2014：請勿在迴圈中使用 stackalloc](#ca2014-do-not-use-stackalloc-in-loops) | 5.0 |
 | [CA2015：請勿定義衍生自 MemoryManager 之類型的完成項\<T>](#ca2015-do-not-define-finalizers-for-types-derived-from-memorymanagert) | 5.0 |
+| [CA2200:必須重新擲回以保存堆疊詳細資料](#ca2200-rethrow-to-preserve-stack-details) | 5.0 |
 | [CA2247： >taskcompletionsource 的引數應為 TaskCreationOptions 值](#ca2247-argument-to-taskcompletionsource-constructor-should-be-taskcreationoptions-value) | 5.0 |
 
 ## <a name="net-50"></a>.NET 5。0
@@ -46,6 +47,10 @@ ms.locfileid: "90065138"
 ***
 
 [!INCLUDE [finalizers-for-memorymanager-types](../../../includes/core-changes/codeanalysis/5.0/ca2015-finalizers-for-memorymanager-types.md)]
+
+***
+
+[!INCLUDE [ca2200-rethrow-to-preserve-stack-details](../../../includes/core-changes/codeanalysis/5.0/ca2200-rethrow-to-preserve-stack-details.md)]
 
 ***
 

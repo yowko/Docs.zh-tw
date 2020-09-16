@@ -2,18 +2,18 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656751"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537729"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 本文**適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet test` - 用來執行單元測試的 .NET 測試驅動程式。
 
@@ -38,7 +38,7 @@ dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
 dotnet test -h|--help
 ```
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 此 `dotnet test` 命令可用來在指定的解決方案中執行單元測試。 此 `dotnet test` 命令會建立方案，並針對方案中的每個測試專案執行測試主機應用程式。 測試主機會使用測試架構在指定的專案中執行測試，例如： MSTest、NUnit 或 xUnit，並報告每項測試的成功或失敗。 如果所有測試都成功，則測試執行器會傳回 0 作為結束代碼；如果有任何測試失敗，則會傳回 1。
 
@@ -77,7 +77,7 @@ dotnet test -h|--help
 
 - **`--blame-crash`** 自 .NET 5.0 preview SDK 起可用 () 
 
-  在有問題的模式下執行測試，並在測試主機非預期地結束時收集損毀傾印。 只有在 Windows 上才支援此選項。 包含 *procdump.exe* 和 *procdump64.exe* 的目錄必須在 PATH 或 PROCDUMP_PATH 環境變數中。 [下載工具](https://docs.microsoft.com/sysinternals/downloads/procdump)。 意指 `--blame` 。
+  在有問題的模式下執行測試，並在測試主機非預期地結束時收集損毀傾印。 只有在 Windows 上才支援此選項。 包含 *procdump.exe* 和 *procdump64.exe* 的目錄必須在 PATH 或 PROCDUMP_PATH 環境變數中。 [下載工具](/sysinternals/downloads/procdump)。 意指 `--blame` 。
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** 自 .NET 5.0 preview SDK 起可用 () 
 
@@ -179,13 +179,13 @@ dotnet test -h|--help
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱<xref:Microsoft.Build.Framework.LoggerVerbosity>。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `minimal`。 如需詳細資訊，請參閱<xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
 - **`RunSettings`** 參數
 
  在 `RunSettings` "--" 之後，命令列上的最後一個引數會以內嵌的形式傳遞， (記下的空格--) 。 內嵌 `RunSettings` 是指定 `[name]=[value]` 成對的。 空格適用來分隔多個 `[name]=[value]` 組。
 
-  範例：`dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
+  範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
   如需詳細資訊，請參閱 [透過命令列傳遞 .runsettings 引數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
@@ -243,9 +243,9 @@ dotnet test -h|--help
 
 | 測試架構 | 支援的屬性                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>ClassName</li><li>優先順序</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>名稱</li><li>ClassName</li><li>優先順序</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>特性</li></ul>                                   |
-| NUnit          | <ul><li>FullyQualifiedName</li><li>Name</li><li>TestCategory</li><li>優先順序</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>名稱</li><li>TestCategory</li><li>優先順序</li></ul>                                   |
 
 `<operator>` 描述屬性和值之間的關聯性：
 
@@ -264,14 +264,14 @@ dotnet test -h|--help
 
 | 運算子            | 函式 |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | 或者       |
 | `&`                 | AND      |
 
 使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。
 
 如需如何使用選擇性單元測試篩選的詳細資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [架構與目標](../../standard/frameworks.md)
 - [.NET Core 執行時間識別碼 (RID) 目錄](../rid-catalog.md)

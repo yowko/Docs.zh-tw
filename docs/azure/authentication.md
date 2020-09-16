@@ -3,12 +3,12 @@ title: 瞭解適用于 .NET 的 Azure 程式庫中的驗證
 description: 說明使用 Azure SDK for .NET 進行驗證的不同方式。
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: bc2fce919d88a528f21df9f561cbe33e1119762a
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dbae72eb9e80801d7338b210f9664f1c4e318ae0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811375"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539173"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>使用 Azure SDK for .NET 進行驗證
 
@@ -25,7 +25,7 @@ Azure SDK for .NET 中的最新套件使用一般驗證套件來進行驗證 `Az
 
 ## <a name="access-azure-resources"></a>存取 Azure 資源
 
-若要與 Azure 資源互動，例如從 Key Vault 取出秘密或將 blob 儲存在儲存體中，許多 Azure 服務程式庫都需要連接字串或金鑰來進行驗證。 例如，SQL Database 會使用 [標準的 SQL 連接字串](https://docs.microsoft.com/azure/azure-sql/database/connect-query-dotnet-core)。 服務連接字串會在其他 Azure 服務中使用，例如 [CosmosDB](/azure/cosmos-db/)、 [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)和 [服務匯流排](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)。 您可以使用 Azure 入口網站、CLI 或 PowerShell 來取得這些字串。 您也可以使用適用於 .NET 的 Azure 管理程式庫來查詢資源，從而在程式碼中建置連接字串。
+若要與 Azure 資源互動，例如從 Key Vault 取出秘密或將 blob 儲存在儲存體中，許多 Azure 服務程式庫都需要連接字串或金鑰來進行驗證。 例如，SQL Database 會使用 [標準的 SQL 連接字串](/azure/azure-sql/database/connect-query-dotnet-core)。 服務連接字串會在其他 Azure 服務中使用，例如 [CosmosDB](/azure/cosmos-db/)、 [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)和 [服務匯流排](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)。 您可以使用 Azure 入口網站、CLI 或 PowerShell 來取得這些字串。 您也可以使用適用於 .NET 的 Azure 管理程式庫來查詢資源，從而在程式碼中建置連接字串。
 
 使用連接字串的方法會因產品而異。 [請參閱您 Azure 產品的檔](/azure/?product=featured)。
 
