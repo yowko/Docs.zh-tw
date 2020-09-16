@@ -6,4 +6,4 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "77627385"
 ---
-<span data-ttu-id="5bcdb-101">如果您想要查看翻譯成英文以外語言的程式碼批註，請在[此 GitHub 討論問題](https://github.com/MicrosoftDocs/feedback/issues/2515)中讓我們知道。</span><span class="sxs-lookup"><span data-stu-id="5bcdb-101">If you would like to see code comments translated to languages other than English, let us know in [this GitHub discussion issue](https://github.com/MicrosoftDocs/feedback/issues/2515).</span></span>
+<span data-ttu-id="54687-101">如果您想要查看翻譯成英文以外語言的程式碼批註，請在 [此 GitHub 討論問題](https://github.com/MicrosoftDocs/feedback/issues/2515)中讓我們知道。</span><span class="sxs-lookup"><span data-stu-id="54687-101">If you would like to see code comments translated to languages other than English, let us know in [this GitHub discussion issue](https://github.com/MicrosoftDocs/feedback/issues/2515).</span></span>

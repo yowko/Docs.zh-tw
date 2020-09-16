@@ -6,207 +6,207 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 36cd3a927d2fdf197e6b496d9308fc43a555d59b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346159"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551037"
 ---
-# <a name="visual-basic-coding-conventions"></a><span data-ttu-id="d7501-102">Visual Basic 編碼慣例</span><span class="sxs-lookup"><span data-stu-id="d7501-102">Visual Basic Coding Conventions</span></span>
-<span data-ttu-id="d7501-103">Microsoft 會依照本主題中的指導方針來開發範例和檔。</span><span class="sxs-lookup"><span data-stu-id="d7501-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="d7501-104">如果您遵循相同的編碼慣例，您可能會獲得下列優點：</span><span class="sxs-lookup"><span data-stu-id="d7501-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  
+# <a name="visual-basic-coding-conventions"></a><span data-ttu-id="e53bb-102">Visual Basic 編碼慣例</span><span class="sxs-lookup"><span data-stu-id="e53bb-102">Visual Basic Coding Conventions</span></span>
+<span data-ttu-id="e53bb-103">Microsoft 會依照本主題中的指導方針來開發範例與檔。</span><span class="sxs-lookup"><span data-stu-id="e53bb-103">Microsoft develops samples and documentation that follow the guidelines in this topic.</span></span> <span data-ttu-id="e53bb-104">如果您遵循相同的程式碼撰寫慣例，您可能會獲得下列優點：</span><span class="sxs-lookup"><span data-stu-id="e53bb-104">If you follow the same coding conventions, you may gain the following benefits:</span></span>  
   
-- <span data-ttu-id="d7501-105">您的程式碼會有一致的外觀，讓讀者可以更專注于內容，而不是版面配置。</span><span class="sxs-lookup"><span data-stu-id="d7501-105">Your code will have a consistent look, so that readers can better focus on content, not layout.</span></span>  
+- <span data-ttu-id="e53bb-105">您的程式碼會有一致的外觀，讓讀者可以更專注于內容，而不是版面配置。</span><span class="sxs-lookup"><span data-stu-id="e53bb-105">Your code will have a consistent look, so that readers can better focus on content, not layout.</span></span>  
   
-- <span data-ttu-id="d7501-106">讀者會更快速地瞭解您的程式碼，因為它們可以根據先前的經驗做出假設。</span><span class="sxs-lookup"><span data-stu-id="d7501-106">Readers understand your code more quickly because they can make assumptions based on previous experience.</span></span>  
+- <span data-ttu-id="e53bb-106">讀者可以更快速地瞭解您的程式碼，因為它們可以根據先前的經驗進行假設。</span><span class="sxs-lookup"><span data-stu-id="e53bb-106">Readers understand your code more quickly because they can make assumptions based on previous experience.</span></span>  
   
-- <span data-ttu-id="d7501-107">您可以更輕鬆地複製、變更及維護程式碼。</span><span class="sxs-lookup"><span data-stu-id="d7501-107">You can copy, change, and maintain the code more easily.</span></span>  
+- <span data-ttu-id="e53bb-107">您可以更輕鬆地複製、變更和維護程式碼。</span><span class="sxs-lookup"><span data-stu-id="e53bb-107">You can copy, change, and maintain the code more easily.</span></span>  
   
-- <span data-ttu-id="d7501-108">您可以協助確保您的程式碼會針對 Visual Basic 示範「最佳做法」。</span><span class="sxs-lookup"><span data-stu-id="d7501-108">You help ensure that your code demonstrates "best practices" for Visual Basic.</span></span>  
+- <span data-ttu-id="e53bb-108">您可以協助確保您的程式碼會示範 Visual Basic 的「最佳作法」。</span><span class="sxs-lookup"><span data-stu-id="e53bb-108">You help ensure that your code demonstrates "best practices" for Visual Basic.</span></span>  
   
-## <a name="naming-conventions"></a><span data-ttu-id="d7501-109">命名慣例</span><span class="sxs-lookup"><span data-stu-id="d7501-109">Naming Conventions</span></span>  
+## <a name="naming-conventions"></a><span data-ttu-id="e53bb-109">命名規範</span><span class="sxs-lookup"><span data-stu-id="e53bb-109">Naming Conventions</span></span>  
   
-- <span data-ttu-id="d7501-110">如需命名指導方針的詳細資訊，請參閱[命名指導方針](../../../standard/design-guidelines/naming-guidelines.md)主題。</span><span class="sxs-lookup"><span data-stu-id="d7501-110">For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.</span></span>  
+- <span data-ttu-id="e53bb-110">如需命名方針的詳細資訊，請參閱 [命名指導方針](../../../standard/design-guidelines/naming-guidelines.md) 主題。</span><span class="sxs-lookup"><span data-stu-id="e53bb-110">For information about naming guidelines, see [Naming Guidelines](../../../standard/design-guidelines/naming-guidelines.md) topic.</span></span>  
   
-- <span data-ttu-id="d7501-111">請勿使用 "My" 或 "my" 作為變數名稱的一部分。</span><span class="sxs-lookup"><span data-stu-id="d7501-111">Do not use "My" or "my" as part of a variable name.</span></span> <span data-ttu-id="d7501-112">這種作法會與 `My` 物件產生混淆。</span><span class="sxs-lookup"><span data-stu-id="d7501-112">This practice creates confusion with the `My` objects.</span></span>  
+- <span data-ttu-id="e53bb-111">請勿使用 "My" 或 "my" 作為變數名稱的一部分。</span><span class="sxs-lookup"><span data-stu-id="e53bb-111">Do not use "My" or "my" as part of a variable name.</span></span> <span data-ttu-id="e53bb-112">這種作法會與物件產生混淆 `My` 。</span><span class="sxs-lookup"><span data-stu-id="e53bb-112">This practice creates confusion with the `My` objects.</span></span>  
   
-- <span data-ttu-id="d7501-113">您不需要在自動產生的程式碼中變更物件的名稱，使其符合方針。</span><span class="sxs-lookup"><span data-stu-id="d7501-113">You do not have to change the names of objects in auto-generated code to make them fit the guidelines.</span></span>  
+- <span data-ttu-id="e53bb-113">您不需要在自動產生的程式碼中變更物件的名稱，使其符合指導方針。</span><span class="sxs-lookup"><span data-stu-id="e53bb-113">You do not have to change the names of objects in auto-generated code to make them fit the guidelines.</span></span>  
   
-## <a name="layout-conventions"></a><span data-ttu-id="d7501-114">版面配置慣例</span><span class="sxs-lookup"><span data-stu-id="d7501-114">Layout Conventions</span></span>  
+## <a name="layout-conventions"></a><span data-ttu-id="e53bb-114">版面配置慣例</span><span class="sxs-lookup"><span data-stu-id="e53bb-114">Layout Conventions</span></span>  
   
-- <span data-ttu-id="d7501-115">將索引標籤插入空格，並使用具有四個空格縮排的智慧型縮排。</span><span class="sxs-lookup"><span data-stu-id="d7501-115">Insert tabs as spaces, and use smart indenting with four-space indents.</span></span>  
+- <span data-ttu-id="e53bb-115">以空格插入索引標籤，並使用具有四個空格縮排的智慧縮排。</span><span class="sxs-lookup"><span data-stu-id="e53bb-115">Insert tabs as spaces, and use smart indenting with four-space indents.</span></span>  
   
-- <span data-ttu-id="d7501-116">使用程式**代碼的整齊清單（重新格式化）** ，在程式碼編輯器中重新格式化您的程式碼。</span><span class="sxs-lookup"><span data-stu-id="d7501-116">Use **Pretty listing (reformatting) of code** to reformat your code in the code editor.</span></span> <span data-ttu-id="d7501-117">如需詳細資訊，請參閱[選項、文字編輯器、基本（Visual Basic）](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="d7501-117">For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span></span>  
+- <span data-ttu-id="e53bb-116">使用 \*\*整齊的清單 (重新格式化程式碼) \*\* ，以在程式碼編輯器中重新格式化您的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e53bb-116">Use **Pretty listing (reformatting) of code** to reformat your code in the code editor.</span></span> <span data-ttu-id="e53bb-117">如需詳細資訊，請參閱 [ [選項]、[文字編輯器]、[基本 (Visual Basic) ](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)。</span><span class="sxs-lookup"><span data-stu-id="e53bb-117">For more information, see [Options, Text Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).</span></span>  
   
-- <span data-ttu-id="d7501-118">每行只能使用一個語句。</span><span class="sxs-lookup"><span data-stu-id="d7501-118">Use only one statement per line.</span></span> <span data-ttu-id="d7501-119">請勿使用 Visual Basic 行分隔字元（:)。</span><span class="sxs-lookup"><span data-stu-id="d7501-119">Don't use the Visual Basic line separator character (:).</span></span>  
+- <span data-ttu-id="e53bb-118">每行只能使用一個語句。</span><span class="sxs-lookup"><span data-stu-id="e53bb-118">Use only one statement per line.</span></span> <span data-ttu-id="e53bb-119">請勿使用 Visual Basic 行分隔字元 (： ) 。</span><span class="sxs-lookup"><span data-stu-id="e53bb-119">Don't use the Visual Basic line separator character (:).</span></span>  
   
-- <span data-ttu-id="d7501-120">請避免使用明確行接續字元 "_"，以在語言允許的地方隱含行接續。</span><span class="sxs-lookup"><span data-stu-id="d7501-120">Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.</span></span>  
+- <span data-ttu-id="e53bb-120">在語言允許的任何地方，請避免使用明確的行接續字元 "_" 來取代隱含行接續。</span><span class="sxs-lookup"><span data-stu-id="e53bb-120">Avoid using the explicit line continuation character "_" in favor of implicit line continuation wherever the language allows it.</span></span>  
   
-- <span data-ttu-id="d7501-121">每行只能使用一個宣告。</span><span class="sxs-lookup"><span data-stu-id="d7501-121">Use only one declaration per line.</span></span>  
+- <span data-ttu-id="e53bb-121">每行只能使用一個宣告。</span><span class="sxs-lookup"><span data-stu-id="e53bb-121">Use only one declaration per line.</span></span>  
   
-- <span data-ttu-id="d7501-122">如果程式**代碼的整齊清單（重新格式化）** 不會自動格式化接續行，請手動將接續行縮排一次定位停駐點。</span><span class="sxs-lookup"><span data-stu-id="d7501-122">If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop.</span></span> <span data-ttu-id="d7501-123">不過，一律會靠左對齊清單中的專案。</span><span class="sxs-lookup"><span data-stu-id="d7501-123">However, always left-align items in a list.</span></span>  
+- <span data-ttu-id="e53bb-122">如果有很多 **的 (重新格式化) 的程式碼** 並不會自動將接續行格式化，請以手動方式將接續行縮排一次</span><span class="sxs-lookup"><span data-stu-id="e53bb-122">If **Pretty listing (reformatting) of code** doesn't format continuation lines automatically, manually indent continuation lines one tab stop.</span></span> <span data-ttu-id="e53bb-123">不過，一律會將清單中的專案靠左對齊。</span><span class="sxs-lookup"><span data-stu-id="e53bb-123">However, always left-align items in a list.</span></span>  
   
     ```vb  
     a As Integer,  
     b As Integer  
     ```  
   
-- <span data-ttu-id="d7501-124">在方法和屬性定義之間新增至少一個空白行。</span><span class="sxs-lookup"><span data-stu-id="d7501-124">Add at least one blank line between method and property definitions.</span></span>  
+- <span data-ttu-id="e53bb-124">在方法與屬性定義之間加入至少一個空白行。</span><span class="sxs-lookup"><span data-stu-id="e53bb-124">Add at least one blank line between method and property definitions.</span></span>  
   
-## <a name="commenting-conventions"></a><span data-ttu-id="d7501-125">註解慣例</span><span class="sxs-lookup"><span data-stu-id="d7501-125">Commenting Conventions</span></span>  
+## <a name="commenting-conventions"></a><span data-ttu-id="e53bb-125">註解慣例</span><span class="sxs-lookup"><span data-stu-id="e53bb-125">Commenting Conventions</span></span>  
   
-- <span data-ttu-id="d7501-126">將批註放在另一行，而不是一行程式碼的結尾。</span><span class="sxs-lookup"><span data-stu-id="d7501-126">Put comments on a separate line instead of at the end of a line of code.</span></span>  
+- <span data-ttu-id="e53bb-126">將批註放在不同的行，而不是程式程式碼的結尾。</span><span class="sxs-lookup"><span data-stu-id="e53bb-126">Put comments on a separate line instead of at the end of a line of code.</span></span>  
   
-- <span data-ttu-id="d7501-127">以大寫字母開始註解文字，並以句點結束註解文字。</span><span class="sxs-lookup"><span data-stu-id="d7501-127">Start comment text with an uppercase letter, and end comment text with a period.</span></span>  
+- <span data-ttu-id="e53bb-127">使用大寫字母來開始註解文字，並以句點結束註解文字。</span><span class="sxs-lookup"><span data-stu-id="e53bb-127">Start comment text with an uppercase letter, and end comment text with a period.</span></span>  
   
-- <span data-ttu-id="d7501-128">在批註分隔符號（'）和註解文字之間插入一個空格。</span><span class="sxs-lookup"><span data-stu-id="d7501-128">Insert one space between the comment delimiter (') and the comment text.</span></span>  
+- <span data-ttu-id="e53bb-128">在批註分隔符號 ( ' ) 和註解文字之間插入一個空格。</span><span class="sxs-lookup"><span data-stu-id="e53bb-128">Insert one space between the comment delimiter (') and the comment text.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
-- <span data-ttu-id="d7501-129">不要以星號的格式化區塊來括住批註。</span><span class="sxs-lookup"><span data-stu-id="d7501-129">Do not surround comments with formatted blocks of asterisks.</span></span>  
+- <span data-ttu-id="e53bb-129">請勿以星號的格式化區塊括住批註。</span><span class="sxs-lookup"><span data-stu-id="e53bb-129">Do not surround comments with formatted blocks of asterisks.</span></span>  
   
-## <a name="program-structure"></a><span data-ttu-id="d7501-130">程式結構</span><span class="sxs-lookup"><span data-stu-id="d7501-130">Program Structure</span></span>  
+## <a name="program-structure"></a><span data-ttu-id="e53bb-130">程式結構</span><span class="sxs-lookup"><span data-stu-id="e53bb-130">Program Structure</span></span>  
   
-- <span data-ttu-id="d7501-131">當您使用 `Main` 方法時，請使用新的主控台應用程式的預設結構，並使用 `My` 做為命令列引數。</span><span class="sxs-lookup"><span data-stu-id="d7501-131">When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.</span></span>  
+- <span data-ttu-id="e53bb-131">當您使用 `Main` 方法時，請使用新的主控台應用程式的預設結構，並使用做 `My` 為命令列引數。</span><span class="sxs-lookup"><span data-stu-id="e53bb-131">When you use the `Main` method, use the default construct for new console applications, and use `My` for command-line arguments.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
-## <a name="language-guidelines"></a><span data-ttu-id="d7501-132">語言指導方針</span><span class="sxs-lookup"><span data-stu-id="d7501-132">Language Guidelines</span></span>  
+## <a name="language-guidelines"></a><span data-ttu-id="e53bb-132">語言指導方針</span><span class="sxs-lookup"><span data-stu-id="e53bb-132">Language Guidelines</span></span>  
   
-### <a name="string-data-type"></a><span data-ttu-id="d7501-133">String 資料類型</span><span class="sxs-lookup"><span data-stu-id="d7501-133">String Data Type</span></span>  
+### <a name="string-data-type"></a><span data-ttu-id="e53bb-133">String 資料類型</span><span class="sxs-lookup"><span data-stu-id="e53bb-133">String Data Type</span></span>  
   
-- <span data-ttu-id="d7501-134">使用[字串內插補點](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings)串連短字串，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="d7501-134">Use [string interpolation](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings) to concatenate short strings, as shown in the following code.</span></span>
+- <span data-ttu-id="e53bb-134">使用[字串內插補點](../language-features/strings/interpolated-strings.md)串連短字串，如下列程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="e53bb-134">Use [string interpolation](../language-features/strings/interpolated-strings.md) to concatenate short strings, as shown in the following code.</span></span>
   
      ```vb
      MsgBox($"hello{vbCrLf}goodbye")
      ```
   
-- <span data-ttu-id="d7501-135">若要在迴圈中附加字串，請使用 <xref:System.Text.StringBuilder> 物件。</span><span class="sxs-lookup"><span data-stu-id="d7501-135">To append strings in loops, use the <xref:System.Text.StringBuilder> object.</span></span>  
+- <span data-ttu-id="e53bb-135">若要在迴圈中附加字串，請使用 <xref:System.Text.StringBuilder> 物件。</span><span class="sxs-lookup"><span data-stu-id="e53bb-135">To append strings in loops, use the <xref:System.Text.StringBuilder> object.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
-### <a name="relaxed-delegates-in-event-handlers"></a><span data-ttu-id="d7501-136">事件處理常式中的寬鬆委派</span><span class="sxs-lookup"><span data-stu-id="d7501-136">Relaxed Delegates in Event Handlers</span></span>  
- <span data-ttu-id="d7501-137">請勿將引數（物件和 EventArgs）明確限定為事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="d7501-137">Do not explicitly qualify the arguments (Object and EventArgs) to event handlers.</span></span> <span data-ttu-id="d7501-138">如果您不是使用傳遞至事件的事件引數（例如，傳送者作為物件，e as EventArgs），請使用寬鬆的委派，並在您的程式碼中省略事件引數：</span><span class="sxs-lookup"><span data-stu-id="d7501-138">If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:</span></span>  
+### <a name="relaxed-delegates-in-event-handlers"></a><span data-ttu-id="e53bb-136">事件處理常式中寬鬆的委派</span><span class="sxs-lookup"><span data-stu-id="e53bb-136">Relaxed Delegates in Event Handlers</span></span>  
+ <span data-ttu-id="e53bb-137">請勿明確限定引數 (物件和 EventArgs) 至事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="e53bb-137">Do not explicitly qualify the arguments (Object and EventArgs) to event handlers.</span></span> <span data-ttu-id="e53bb-138">如果您不是使用傳遞至事件的事件引數 (例如，傳送者為物件、e 表示 EventArgs) ，請使用寬鬆的委派，並在程式碼中省略事件引數：</span><span class="sxs-lookup"><span data-stu-id="e53bb-138">If you are not using the event arguments that are passed to an event (for example, sender as Object, e as EventArgs), use relaxed delegates, and leave out the event arguments in your code:</span></span>  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
   
-### <a name="unsigned-data-type"></a><span data-ttu-id="d7501-139">不帶正負號的資料類型</span><span class="sxs-lookup"><span data-stu-id="d7501-139">Unsigned Data Type</span></span>  
+### <a name="unsigned-data-type"></a><span data-ttu-id="e53bb-139">不帶正負號的資料類型</span><span class="sxs-lookup"><span data-stu-id="e53bb-139">Unsigned Data Type</span></span>  
   
-- <span data-ttu-id="d7501-140">請使用 `Integer` 而不是不帶正負號的類型，除非其為必要的位置。</span><span class="sxs-lookup"><span data-stu-id="d7501-140">Use `Integer` rather than unsigned types, except where they are necessary.</span></span>  
+- <span data-ttu-id="e53bb-140">使用 `Integer` 而非不帶正負號的類型，但不含符號類型。</span><span class="sxs-lookup"><span data-stu-id="e53bb-140">Use `Integer` rather than unsigned types, except where they are necessary.</span></span>  
   
-### <a name="arrays"></a><span data-ttu-id="d7501-141">陣列</span><span class="sxs-lookup"><span data-stu-id="d7501-141">Arrays</span></span>  
+### <a name="arrays"></a><span data-ttu-id="e53bb-141">陣列</span><span class="sxs-lookup"><span data-stu-id="e53bb-141">Arrays</span></span>  
   
-- <span data-ttu-id="d7501-142">當您在宣告行上初始化陣列時，請使用簡短的語法。</span><span class="sxs-lookup"><span data-stu-id="d7501-142">Use the short syntax when you initialize arrays on the declaration line.</span></span> <span data-ttu-id="d7501-143">例如，使用下列語法。</span><span class="sxs-lookup"><span data-stu-id="d7501-143">For example, use the following syntax.</span></span>  
+- <span data-ttu-id="e53bb-142">當您在宣告行上初始化陣列時，請使用簡短的語法。</span><span class="sxs-lookup"><span data-stu-id="e53bb-142">Use the short syntax when you initialize arrays on the declaration line.</span></span> <span data-ttu-id="e53bb-143">例如，請使用下列語法。</span><span class="sxs-lookup"><span data-stu-id="e53bb-143">For example, use the following syntax.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
-     <span data-ttu-id="d7501-144">請勿使用下列語法。</span><span class="sxs-lookup"><span data-stu-id="d7501-144">Do not use the following syntax.</span></span>  
+     <span data-ttu-id="e53bb-144">請勿使用下列語法。</span><span class="sxs-lookup"><span data-stu-id="e53bb-144">Do not use the following syntax.</span></span>  
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
-- <span data-ttu-id="d7501-145">將陣列指示項放在型別上，而不是在變數上。</span><span class="sxs-lookup"><span data-stu-id="d7501-145">Put the array designator on the type, not on the variable.</span></span> <span data-ttu-id="d7501-146">例如，使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="d7501-146">For example, use the following syntax:</span></span>  
+- <span data-ttu-id="e53bb-145">將陣列指示項放在型別上，而不是變數上。</span><span class="sxs-lookup"><span data-stu-id="e53bb-145">Put the array designator on the type, not on the variable.</span></span> <span data-ttu-id="e53bb-146">例如，請使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="e53bb-146">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
-     <span data-ttu-id="d7501-147">請勿使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="d7501-147">Do not use the following syntax:</span></span>  
+     <span data-ttu-id="e53bb-147">請勿使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="e53bb-147">Do not use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
-- <span data-ttu-id="d7501-148">當您宣告並初始化基本資料類型的陣列時，請使用 {} 語法。</span><span class="sxs-lookup"><span data-stu-id="d7501-148">Use the { } syntax when you declare and initialize arrays of basic data types.</span></span> <span data-ttu-id="d7501-149">例如，使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="d7501-149">For example, use the following syntax:</span></span>  
+- <span data-ttu-id="e53bb-148">當您宣告並初始化基本資料類型的陣列時，請使用 {} 語法。</span><span class="sxs-lookup"><span data-stu-id="e53bb-148">Use the { } syntax when you declare and initialize arrays of basic data types.</span></span> <span data-ttu-id="e53bb-149">例如，請使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="e53bb-149">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
-     <span data-ttu-id="d7501-150">請勿使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="d7501-150">Do not use the following syntax:</span></span>  
+     <span data-ttu-id="e53bb-150">請勿使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="e53bb-150">Do not use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
-### <a name="use-the-with-keyword"></a><span data-ttu-id="d7501-151">使用 With 關鍵字</span><span class="sxs-lookup"><span data-stu-id="d7501-151">Use the With Keyword</span></span>  
- <span data-ttu-id="d7501-152">當您對一個物件進行一系列的呼叫時，請考慮使用 `With` 關鍵字：</span><span class="sxs-lookup"><span data-stu-id="d7501-152">When you make a series of calls to one object, consider using the `With` keyword:</span></span>  
+### <a name="use-the-with-keyword"></a><span data-ttu-id="e53bb-151">使用 With 關鍵字</span><span class="sxs-lookup"><span data-stu-id="e53bb-151">Use the With Keyword</span></span>  
+ <span data-ttu-id="e53bb-152">當您對一個物件進行一連串的呼叫時，請考慮使用 `With` 關鍵字：</span><span class="sxs-lookup"><span data-stu-id="e53bb-152">When you make a series of calls to one object, consider using the `With` keyword:</span></span>  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
-### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a><span data-ttu-id="d7501-153">使用 [嘗試 ...]使用例外狀況處理時的 Catch 和 Using 語句</span><span class="sxs-lookup"><span data-stu-id="d7501-153">Use the Try...Catch and Using Statements when you use Exception Handling</span></span>  
- <span data-ttu-id="d7501-154">請勿使用 `On Error Goto`。</span><span class="sxs-lookup"><span data-stu-id="d7501-154">Do not use `On Error Goto`.</span></span>  
+### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a><span data-ttu-id="e53bb-153">使用 Try .。。當您使用例外狀況處理時的 Catch 和 Using 語句</span><span class="sxs-lookup"><span data-stu-id="e53bb-153">Use the Try...Catch and Using Statements when you use Exception Handling</span></span>  
+ <span data-ttu-id="e53bb-154">請勿使用 `On Error Goto`。</span><span class="sxs-lookup"><span data-stu-id="e53bb-154">Do not use `On Error Goto`.</span></span>  
   
-### <a name="use-the-isnot-keyword"></a><span data-ttu-id="d7501-155">使用 IsNot 關鍵字</span><span class="sxs-lookup"><span data-stu-id="d7501-155">Use the IsNot Keyword</span></span>  
- <span data-ttu-id="d7501-156">請使用 `IsNot` 關鍵字，而不是 `Not...Is Nothing`。</span><span class="sxs-lookup"><span data-stu-id="d7501-156">Use the `IsNot` keyword instead of `Not...Is Nothing`.</span></span>  
+### <a name="use-the-isnot-keyword"></a><span data-ttu-id="e53bb-155">使用 IsNot 關鍵字</span><span class="sxs-lookup"><span data-stu-id="e53bb-155">Use the IsNot Keyword</span></span>  
+ <span data-ttu-id="e53bb-156">使用 `IsNot` 關鍵字而不是 `Not...Is Nothing` 。</span><span class="sxs-lookup"><span data-stu-id="e53bb-156">Use the `IsNot` keyword instead of `Not...Is Nothing`.</span></span>  
   
-### <a name="new-keyword"></a><span data-ttu-id="d7501-157">New 關鍵字</span><span class="sxs-lookup"><span data-stu-id="d7501-157">New Keyword</span></span>  
+### <a name="new-keyword"></a><span data-ttu-id="e53bb-157">New 關鍵字</span><span class="sxs-lookup"><span data-stu-id="e53bb-157">New Keyword</span></span>  
   
-- <span data-ttu-id="d7501-158">使用簡短的具現化。</span><span class="sxs-lookup"><span data-stu-id="d7501-158">Use short instantiation.</span></span> <span data-ttu-id="d7501-159">例如，使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="d7501-159">For example, use the following syntax:</span></span>  
+- <span data-ttu-id="e53bb-158">使用簡短具現化。</span><span class="sxs-lookup"><span data-stu-id="e53bb-158">Use short instantiation.</span></span> <span data-ttu-id="e53bb-159">例如，請使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="e53bb-159">For example, use the following syntax:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
-     <span data-ttu-id="d7501-160">上一行相當於：</span><span class="sxs-lookup"><span data-stu-id="d7501-160">The preceding line is equivalent to this:</span></span>  
+     <span data-ttu-id="e53bb-160">上述程式程式碼相當於：</span><span class="sxs-lookup"><span data-stu-id="e53bb-160">The preceding line is equivalent to this:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
-- <span data-ttu-id="d7501-161">針對新物件使用物件初始化運算式，而不是無參數的函式：</span><span class="sxs-lookup"><span data-stu-id="d7501-161">Use object initializers for new objects instead of the parameterless constructor:</span></span>  
+- <span data-ttu-id="e53bb-161">針對新物件使用物件初始化運算式，而不是無參數的函式：</span><span class="sxs-lookup"><span data-stu-id="e53bb-161">Use object initializers for new objects instead of the parameterless constructor:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
-### <a name="event-handling"></a><span data-ttu-id="d7501-162">事件處理</span><span class="sxs-lookup"><span data-stu-id="d7501-162">Event Handling</span></span>  
+### <a name="event-handling"></a><span data-ttu-id="e53bb-162">事件處理</span><span class="sxs-lookup"><span data-stu-id="e53bb-162">Event Handling</span></span>  
   
-- <span data-ttu-id="d7501-163">使用 `Handles`，而不是 `AddHandler`：</span><span class="sxs-lookup"><span data-stu-id="d7501-163">Use `Handles` rather than `AddHandler`:</span></span>  
+- <span data-ttu-id="e53bb-163">使用 `Handles` 而不是 `AddHandler` ：</span><span class="sxs-lookup"><span data-stu-id="e53bb-163">Use `Handles` rather than `AddHandler`:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- <span data-ttu-id="d7501-164">使用 `AddressOf`，而且不明確地具現化委派：</span><span class="sxs-lookup"><span data-stu-id="d7501-164">Use `AddressOf`, and do not instantiate the delegate explicitly:</span></span>  
+- <span data-ttu-id="e53bb-164">使用 `AddressOf` ，而且不要明確地具現化委派：</span><span class="sxs-lookup"><span data-stu-id="e53bb-164">Use `AddressOf`, and do not instantiate the delegate explicitly:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
-- <span data-ttu-id="d7501-165">當您定義事件時，請使用簡短語法，並讓編譯器定義委派：</span><span class="sxs-lookup"><span data-stu-id="d7501-165">When you define an event, use the short syntax, and let the compiler define the delegate:</span></span>  
+- <span data-ttu-id="e53bb-165">當您定義事件時，請使用簡短語法，然後讓編譯器定義委派：</span><span class="sxs-lookup"><span data-stu-id="e53bb-165">When you define an event, use the short syntax, and let the compiler define the delegate:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- <span data-ttu-id="d7501-166">在您呼叫 `RaiseEvent` 方法之前，請不要驗證事件是否 `Nothing` （null）。</span><span class="sxs-lookup"><span data-stu-id="d7501-166">Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method.</span></span> <span data-ttu-id="d7501-167">`RaiseEvent` 在引發事件之前檢查 `Nothing`。</span><span class="sxs-lookup"><span data-stu-id="d7501-167">`RaiseEvent` checks for `Nothing` before it raises the event.</span></span>  
+- <span data-ttu-id="e53bb-166">`Nothing`在呼叫方法之前，請不要確認事件是否 (null) `RaiseEvent` 。</span><span class="sxs-lookup"><span data-stu-id="e53bb-166">Do not verify whether an event is `Nothing` (null) before you call the `RaiseEvent` method.</span></span> <span data-ttu-id="e53bb-167">`RaiseEvent``Nothing`在引發事件之前檢查。</span><span class="sxs-lookup"><span data-stu-id="e53bb-167">`RaiseEvent` checks for `Nothing` before it raises the event.</span></span>  
   
-### <a name="using-shared-members"></a><span data-ttu-id="d7501-168">使用共用成員</span><span class="sxs-lookup"><span data-stu-id="d7501-168">Using Shared Members</span></span>  
- <span data-ttu-id="d7501-169">使用類別名稱（而不是從執行個體變數）來呼叫 `Shared` 成員。</span><span class="sxs-lookup"><span data-stu-id="d7501-169">Call `Shared` members by using the class name, not from an instance variable.</span></span>  
+### <a name="using-shared-members"></a><span data-ttu-id="e53bb-168">使用共用成員</span><span class="sxs-lookup"><span data-stu-id="e53bb-168">Using Shared Members</span></span>  
+ <span data-ttu-id="e53bb-169">`Shared`使用類別名稱呼叫成員，而不是從執行個體變數。</span><span class="sxs-lookup"><span data-stu-id="e53bb-169">Call `Shared` members by using the class name, not from an instance variable.</span></span>  
   
-### <a name="use-xml-literals"></a><span data-ttu-id="d7501-170">使用 XML 常值</span><span class="sxs-lookup"><span data-stu-id="d7501-170">Use XML Literals</span></span>  
- <span data-ttu-id="d7501-171">XML 常值可簡化您在使用 XML 時所遇到的最常見工作（例如，載入、查詢和轉換）。</span><span class="sxs-lookup"><span data-stu-id="d7501-171">XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform).</span></span> <span data-ttu-id="d7501-172">當您使用 XML 進行開發時，請遵循下列指導方針：</span><span class="sxs-lookup"><span data-stu-id="d7501-172">When you develop with XML, follow these guidelines:</span></span>  
+### <a name="use-xml-literals"></a><span data-ttu-id="e53bb-170">使用 XML 常值</span><span class="sxs-lookup"><span data-stu-id="e53bb-170">Use XML Literals</span></span>  
+ <span data-ttu-id="e53bb-171">XML 常值會簡化您使用 XML (時所遇到的最常見工作，例如載入、查詢和轉換) 。</span><span class="sxs-lookup"><span data-stu-id="e53bb-171">XML literals simplify the most common tasks that you encounter when you work with XML (for example, load, query, and transform).</span></span> <span data-ttu-id="e53bb-172">當您使用 XML 進行開發時，請遵循下列指導方針：</span><span class="sxs-lookup"><span data-stu-id="e53bb-172">When you develop with XML, follow these guidelines:</span></span>  
   
-- <span data-ttu-id="d7501-173">使用 XML 常值來建立 XML 檔和片段，而不是直接呼叫 XML Api。</span><span class="sxs-lookup"><span data-stu-id="d7501-173">Use XML literals to create XML documents and fragments instead of calling XML APIs directly.</span></span>  
+- <span data-ttu-id="e53bb-173">使用 XML 常值來建立 XML 檔和片段，而不是直接呼叫 XML Api。</span><span class="sxs-lookup"><span data-stu-id="e53bb-173">Use XML literals to create XML documents and fragments instead of calling XML APIs directly.</span></span>  
   
-- <span data-ttu-id="d7501-174">匯入檔案或專案層級的 XML 命名空間，以利用 XML 常值的效能優化。</span><span class="sxs-lookup"><span data-stu-id="d7501-174">Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.</span></span>  
+- <span data-ttu-id="e53bb-174">匯入檔案或專案層級的 XML 命名空間，以利用 XML 常值的效能優化。</span><span class="sxs-lookup"><span data-stu-id="e53bb-174">Import XML namespaces at the file or project level to take advantage of the performance optimizations for XML literals.</span></span>  
   
-- <span data-ttu-id="d7501-175">使用 XML 軸屬性來存取 XML 檔中的元素和屬性。</span><span class="sxs-lookup"><span data-stu-id="d7501-175">Use the XML axis properties to access elements and attributes in an XML document.</span></span>  
+- <span data-ttu-id="e53bb-175">使用 XML 軸屬性來存取 XML 檔中的元素和屬性。</span><span class="sxs-lookup"><span data-stu-id="e53bb-175">Use the XML axis properties to access elements and attributes in an XML document.</span></span>  
   
-- <span data-ttu-id="d7501-176">使用內嵌運算式來包含值，並從現有的值建立 XML，而不是使用 API 呼叫，例如 `Add` 方法：</span><span class="sxs-lookup"><span data-stu-id="d7501-176">Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:</span></span>  
+- <span data-ttu-id="e53bb-176">使用內嵌運算式來包含值，並從現有的值建立 XML，而不使用 API 呼叫（例如 `Add` 方法）：</span><span class="sxs-lookup"><span data-stu-id="e53bb-176">Use embedded expressions to include values and to create XML from existing values instead of using API calls such as the `Add` method:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
-### <a name="linq-queries"></a><span data-ttu-id="d7501-177">LINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="d7501-177">LINQ Queries</span></span>  
+### <a name="linq-queries"></a><span data-ttu-id="e53bb-177">LINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="e53bb-177">LINQ Queries</span></span>  
   
-- <span data-ttu-id="d7501-178">針對查詢變數使用有意義的名稱：</span><span class="sxs-lookup"><span data-stu-id="d7501-178">Use meaningful names for query variables:</span></span>  
+- <span data-ttu-id="e53bb-178">針對查詢變數使用有意義的名稱：</span><span class="sxs-lookup"><span data-stu-id="e53bb-178">Use meaningful names for query variables:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
-- <span data-ttu-id="d7501-179">在查詢中提供元素的名稱，以確定匿名型別的屬性名稱使用 Pascal 大小寫正確地大寫：</span><span class="sxs-lookup"><span data-stu-id="d7501-179">Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:</span></span>  
+- <span data-ttu-id="e53bb-179">提供查詢中專案的名稱，以確保匿名型別的屬性名稱使用 Pascal 大小寫正確地大寫：</span><span class="sxs-lookup"><span data-stu-id="e53bb-179">Provide names for elements in a query to make sure that property names of anonymous types are correctly capitalized using Pascal casing:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- <span data-ttu-id="d7501-180">當結果中的屬性名稱可能會造成混淆時，請重新命名屬性。</span><span class="sxs-lookup"><span data-stu-id="d7501-180">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="d7501-181">例如，如果您的查詢傳回客戶名稱和訂單識別碼，請將它們重新命名，而不要將它們保留為 `Name`，並在結果中 `ID`：</span><span class="sxs-lookup"><span data-stu-id="d7501-181">For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:</span></span>  
+- <span data-ttu-id="e53bb-180">當結果中的屬性名稱可能會造成混淆時，請重新命名屬性。</span><span class="sxs-lookup"><span data-stu-id="e53bb-180">Rename properties when the property names in the result would be ambiguous.</span></span> <span data-ttu-id="e53bb-181">例如，如果您的查詢傳回客戶名稱和訂單識別碼，請將其重新命名，而不是 `Name` `ID` 在結果中保留它們：</span><span class="sxs-lookup"><span data-stu-id="e53bb-181">For example, if your query returns a customer name and an order ID, rename them instead of leaving them as `Name` and `ID` in the result:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
-- <span data-ttu-id="d7501-182">在查詢變數和範圍變數的宣告中使用類型推斷：</span><span class="sxs-lookup"><span data-stu-id="d7501-182">Use type inference in the declaration of query variables and range variables:</span></span>  
+- <span data-ttu-id="e53bb-182">在查詢變數和範圍變數的宣告中使用類型推斷：</span><span class="sxs-lookup"><span data-stu-id="e53bb-182">Use type inference in the declaration of query variables and range variables:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- <span data-ttu-id="d7501-183">在 `From` 語句底下對齊查詢子句：</span><span class="sxs-lookup"><span data-stu-id="d7501-183">Align query clauses under the `From` statement:</span></span>  
+- <span data-ttu-id="e53bb-183">在語句下對齊查詢子句 `From` ：</span><span class="sxs-lookup"><span data-stu-id="e53bb-183">Align query clauses under the `From` statement:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- <span data-ttu-id="d7501-184">在其他查詢子句之前使用 `Where` 子句，讓稍後的查詢子句在篩選的資料集上運作：</span><span class="sxs-lookup"><span data-stu-id="d7501-184">Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:</span></span>  
+- <span data-ttu-id="e53bb-184">在 `Where` 其他查詢子句之前使用子句，以便稍後的查詢子句在篩選過的資料集上運作：</span><span class="sxs-lookup"><span data-stu-id="e53bb-184">Use `Where` clauses before other query clauses so that later query clauses operate on the filtered set of data:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- <span data-ttu-id="d7501-185">使用 `Join` 子句來明確定義聯結作業，而不是使用 `Where` 子句來隱含定義聯結作業：</span><span class="sxs-lookup"><span data-stu-id="d7501-185">Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:</span></span>  
+- <span data-ttu-id="e53bb-185">使用 `Join` 子句來明確定義聯結作業，而不是使用 `Where` 子句來隱含地定義聯結操作：</span><span class="sxs-lookup"><span data-stu-id="e53bb-185">Use the `Join` clause to explicitly define a join operation instead of using the `Where` clause to implicitly define a join operation:</span></span>  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a><span data-ttu-id="d7501-186">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7501-186">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e53bb-186">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e53bb-186">See also</span></span>
 
-- [<span data-ttu-id="d7501-187">安全程式碼撰寫方針</span><span class="sxs-lookup"><span data-stu-id="d7501-187">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)
+- [<span data-ttu-id="e53bb-187">安全程式碼撰寫方針</span><span class="sxs-lookup"><span data-stu-id="e53bb-187">Secure Coding Guidelines</span></span>](../../../standard/security/secure-coding-guidelines.md)

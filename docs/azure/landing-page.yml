@@ -191,7 +191,7 @@ landingContent:
       url: /azure/azure-monitor/app/worker-service
     - text: 使用 Visual Studio 針對 Azure App Service 中的應用程式進行疑難排解
       url: /azure/app-service/troubleshoot-dotnet-visual-studio
-- title: 遷移
+- title: 移轉
   linkLists:
   - linkListType: concept
     links:

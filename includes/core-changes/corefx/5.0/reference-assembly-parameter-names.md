@@ -6,19 +6,19 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/21/2020
 ms.locfileid: "88720179"
 ---
-### <a name="parameter-names-changed-in-reference-assemblies"></a><span data-ttu-id="fe001-101">參考元件中的參數名稱變更</span><span class="sxs-lookup"><span data-stu-id="fe001-101">Parameter names changed in reference assemblies</span></span>
+### <a name="parameter-names-changed-in-reference-assemblies"></a><span data-ttu-id="34db9-101">參考元件中的參數名稱變更</span><span class="sxs-lookup"><span data-stu-id="34db9-101">Parameter names changed in reference assemblies</span></span>
 
-<span data-ttu-id="fe001-102">某些參考元件參數名稱已變更，以符合實元件中的參數名稱。</span><span class="sxs-lookup"><span data-stu-id="fe001-102">Some reference assembly parameter names have changed to match parameter names in the implementation assemblies.</span></span>
+<span data-ttu-id="34db9-102">某些參考元件參數名稱已變更，以符合實元件中的參數名稱。</span><span class="sxs-lookup"><span data-stu-id="34db9-102">Some reference assembly parameter names have changed to match parameter names in the implementation assemblies.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="fe001-103">變更描述</span><span class="sxs-lookup"><span data-stu-id="fe001-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="34db9-103">變更描述</span><span class="sxs-lookup"><span data-stu-id="34db9-103">Change description</span></span>
 
-<span data-ttu-id="fe001-104">在舊版的 .NET 版本中，某些 [參考元件](../../../../docs/standard/assembly/reference-assemblies.md) 參數名稱與其在實元件中的對應參數不同。</span><span class="sxs-lookup"><span data-stu-id="fe001-104">In previous .NET versions, some [reference assembly](../../../../docs/standard/assembly/reference-assemblies.md) parameter names are different to their corresponding parameters in the implementation assembly.</span></span> <span data-ttu-id="fe001-105">這可能會在使用具名引數和反映時造成問題。</span><span class="sxs-lookup"><span data-stu-id="fe001-105">This can cause problems while using named arguments and reflection.</span></span>
+<span data-ttu-id="34db9-104">在舊版的 .NET 版本中，某些 [參考元件](../../../../docs/standard/assembly/reference-assemblies.md) 參數名稱與其在實元件中的對應參數不同。</span><span class="sxs-lookup"><span data-stu-id="34db9-104">In previous .NET versions, some [reference assembly](../../../../docs/standard/assembly/reference-assemblies.md) parameter names are different to their corresponding parameters in the implementation assembly.</span></span> <span data-ttu-id="34db9-105">這可能會在使用具名引數和反映時造成問題。</span><span class="sxs-lookup"><span data-stu-id="34db9-105">This can cause problems while using named arguments and reflection.</span></span>
 
-<span data-ttu-id="fe001-106">在 .NET 5.0 中，參考元件中的這些不相符參數名稱已更新，使其完全符合實元件中的對應參數名稱。</span><span class="sxs-lookup"><span data-stu-id="fe001-106">In .NET 5.0, these mismatched parameter names were updated in the reference assemblies to exactly match the corresponding parameter names in the implementation assemblies.</span></span>
+<span data-ttu-id="34db9-106">在 .NET 5.0 中，參考元件中的這些不相符參數名稱已更新，使其完全符合實元件中的對應參數名稱。</span><span class="sxs-lookup"><span data-stu-id="34db9-106">In .NET 5.0, these mismatched parameter names were updated in the reference assemblies to exactly match the corresponding parameter names in the implementation assemblies.</span></span>
 
-<span data-ttu-id="fe001-107">下表顯示變更的 Api 和參數名稱。</span><span class="sxs-lookup"><span data-stu-id="fe001-107">The following table shows the APIs and parameter names that changed.</span></span>
+<span data-ttu-id="34db9-107">下表顯示變更的 Api 和參數名稱。</span><span class="sxs-lookup"><span data-stu-id="34db9-107">The following table shows the APIs and parameter names that changed.</span></span>
 
-| <span data-ttu-id="fe001-108">API</span><span class="sxs-lookup"><span data-stu-id="fe001-108">API</span></span> | <span data-ttu-id="fe001-109">舊的參數名稱</span><span class="sxs-lookup"><span data-stu-id="fe001-109">Old parameter name</span></span> | <span data-ttu-id="fe001-110">新參數名稱</span><span class="sxs-lookup"><span data-stu-id="fe001-110">New parameter name</span></span> |
+| <span data-ttu-id="34db9-108">API</span><span class="sxs-lookup"><span data-stu-id="34db9-108">API</span></span> | <span data-ttu-id="34db9-109">舊的參數名稱</span><span class="sxs-lookup"><span data-stu-id="34db9-109">Old parameter name</span></span> | <span data-ttu-id="34db9-110">新參數名稱</span><span class="sxs-lookup"><span data-stu-id="34db9-110">New parameter name</span></span> |
 | - | - | - |
 | <xref:System.CodeDom.Compiler.CodeGenerator.GenerateStatements(System.CodeDom.CodeStatementCollection)?displayProperty=nameWithType> | `stms` | `stmts` |
 | <xref:System.Drawing.Icon.System%23Runtime%23Serialization%23ISerializable%23GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | `info` | `si` |
@@ -37,23 +37,23 @@ ms.locfileid: "88720179"
 | <xref:System.StringNormalizationExtensions.Normalize(System.String,System.Text.NormalizationForm)?displayProperty=nameWithType> | `value` | `strInput` |
 | <xref:System.StringNormalizationExtensions.Normalize(System.String)?displayProperty=nameWithType> | `value` | `strInput` |
 
-#### <a name="reason-for-change"></a><span data-ttu-id="fe001-111">變更的原因</span><span class="sxs-lookup"><span data-stu-id="fe001-111">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="34db9-111">變更的原因</span><span class="sxs-lookup"><span data-stu-id="34db9-111">Reason for change</span></span>
 
-<span data-ttu-id="fe001-112">變更參數名稱的一致性，並避免在使用具名引數和反映時失敗。</span><span class="sxs-lookup"><span data-stu-id="fe001-112">The parameter names were changed for consistency and to avoid failures when using named arguments and reflection.</span></span>
+<span data-ttu-id="34db9-112">變更參數名稱的一致性，並避免在使用具名引數和反映時失敗。</span><span class="sxs-lookup"><span data-stu-id="34db9-112">The parameter names were changed for consistency and to avoid failures when using named arguments and reflection.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="fe001-113">引進的版本</span><span class="sxs-lookup"><span data-stu-id="fe001-113">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="34db9-113">引進的版本</span><span class="sxs-lookup"><span data-stu-id="34db9-113">Version introduced</span></span>
 
-<span data-ttu-id="fe001-114">5.0</span><span class="sxs-lookup"><span data-stu-id="fe001-114">5.0</span></span>
+<span data-ttu-id="34db9-114">5.0</span><span class="sxs-lookup"><span data-stu-id="34db9-114">5.0</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="fe001-115">建議的動作</span><span class="sxs-lookup"><span data-stu-id="fe001-115">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="34db9-115">建議的動作</span><span class="sxs-lookup"><span data-stu-id="34db9-115">Recommended action</span></span>
 
-<span data-ttu-id="fe001-116">如果您因為參數名稱變更而發生編譯器錯誤，請據以更新參數名稱。</span><span class="sxs-lookup"><span data-stu-id="fe001-116">If you encounter a compiler error due to a parameter name change, update the parameter name accordingly.</span></span>
+<span data-ttu-id="34db9-116">如果您因為參數名稱變更而發生編譯器錯誤，請據以更新參數名稱。</span><span class="sxs-lookup"><span data-stu-id="34db9-116">If you encounter a compiler error due to a parameter name change, update the parameter name accordingly.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="fe001-117">類別</span><span class="sxs-lookup"><span data-stu-id="fe001-117">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="34db9-117">類別</span><span class="sxs-lookup"><span data-stu-id="34db9-117">Category</span></span>
 
-<span data-ttu-id="fe001-118">Core .NET 程式庫</span><span class="sxs-lookup"><span data-stu-id="fe001-118">Core .NET libraries</span></span>
+<span data-ttu-id="34db9-118">Core .NET 程式庫</span><span class="sxs-lookup"><span data-stu-id="34db9-118">Core .NET libraries</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="fe001-119">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="fe001-119">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="34db9-119">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="34db9-119">Affected APIs</span></span>
 
 - <xref:System.CodeDom.Compiler.CodeGenerator.GenerateStatements(System.CodeDom.CodeStatementCollection)?displayProperty=fullName>
 - <xref:System.ComponentModel.ParenthesizePropertyNameAttribute.Equals(System.Object)?displayProperty=fullName>

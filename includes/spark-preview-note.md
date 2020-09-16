@@ -7,4 +7,4 @@ ms.lasthandoff: 07/01/2020
 ms.locfileid: "85617573"
 ---
 > [!NOTE]
-> <span data-ttu-id="45644-101">本主題參考適用于 Apache Spark 的 .NET，此功能目前為預覽狀態。</span><span class="sxs-lookup"><span data-stu-id="45644-101">This topic refers to .NET for Apache Spark, which is currently in preview.</span></span>
+> <span data-ttu-id="a66e1-101">本主題是指 Apache Spark 的 .NET，目前為預覽狀態。</span><span class="sxs-lookup"><span data-stu-id="a66e1-101">This topic refers to .NET for Apache Spark, which is currently in preview.</span></span>

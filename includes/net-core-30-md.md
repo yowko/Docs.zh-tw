@@ -6,4 +6,4 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69661201"
 ---
-<span data-ttu-id="c45bc-101">自 .NET Core 3.0 起提供</span><span class="sxs-lookup"><span data-stu-id="c45bc-101">Available since .NET Core 3.0</span></span>
+<span data-ttu-id="d6120-101">自 .NET Core 3.0 起提供</span><span class="sxs-lookup"><span data-stu-id="d6120-101">Available since .NET Core 3.0</span></span>
