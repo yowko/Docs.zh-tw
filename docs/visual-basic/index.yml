@@ -7,12 +7,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 08/13/2020
   ms.custom: contperfq1
-  ms.openlocfilehash: dff262ba8646427baa0021dbe4b3f859d22459cd
-  ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+  ms.openlocfilehash: 1819d6c6cedcd9c2544c8ab6e5ff47d807d8c232
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 08/18/2020
-  ms.locfileid: "88559202"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90554745"
 landingContent:
 - title: 開始使用
   linkLists:
@@ -30,7 +30,7 @@ landingContent:
       url: walkthroughs.md
     - text: 其他資源
       url: getting-started/additional-resources.md
-- title: 基礎
+- title: 基本概念
   linkLists:
   - linkListType: overview
     links:
@@ -39,7 +39,7 @@ landingContent:
   - linkListType: whats-new
     links:
     - text: Visual Basic 的新功能
-      url: getting-started/whats-new.md
+      url: ./whats-new/index.md
   - linkListType: concept
     links:
     - text: Visual Basic 應用程式的結構
@@ -50,7 +50,7 @@ landingContent:
       url: developing-apps/index.md
     - text: Windows Forms 應用程式
       url: developing-apps/windows-forms/index.md
-- title: 程式設計語言參考
+- title: 語言參考
   linkLists:
   - linkListType: reference
     links:
