@@ -6,22 +6,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: df4f6bcd52331a7b6c81cf816260df4355ebf987
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 2c51a790a2a8adef565f186992a6a3faa5f102ad
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552124"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550457"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-linq-to-xml"></a><span data-ttu-id="cbcf2-103">如何撰寫可根據內容 (LINQ to XML 尋找元素的查詢) </span><span class="sxs-lookup"><span data-stu-id="cbcf2-103">How to write a query that finds elements based on context (LINQ to XML)</span></span>
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-linq-to-xml"></a><span data-ttu-id="e1d95-103">如何撰寫可根據內容 (LINQ to XML 尋找元素的查詢) </span><span class="sxs-lookup"><span data-stu-id="e1d95-103">How to write a query that finds elements based on context (LINQ to XML)</span></span>
 
-<span data-ttu-id="cbcf2-104">有時候您可能必須撰寫會依其內容選取項目的查詢。</span><span class="sxs-lookup"><span data-stu-id="cbcf2-104">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="cbcf2-105">例如，您可能想要根據先前或之後的同級元素，或在子系或上階元素進行篩選。</span><span class="sxs-lookup"><span data-stu-id="cbcf2-105">For example, you might want to filter based on preceding or following sibling elements, or on child or ancestor elements.</span></span>
+<span data-ttu-id="e1d95-104">有時候您可能必須撰寫會依其內容選取項目的查詢。</span><span class="sxs-lookup"><span data-stu-id="e1d95-104">Sometimes you might have to write a query that selects elements based on their context.</span></span> <span data-ttu-id="e1d95-105">例如，您可能想要根據先前或之後的同級元素，或在子系或上階元素進行篩選。</span><span class="sxs-lookup"><span data-stu-id="e1d95-105">For example, you might want to filter based on preceding or following sibling elements, or on child or ancestor elements.</span></span>
 
-<span data-ttu-id="cbcf2-106">您僅能撰寫查詢並使用 `where` 子句中的查詢結果來達到這個目的。</span><span class="sxs-lookup"><span data-stu-id="cbcf2-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="cbcf2-107">如果您必須先針對 null 進行測試，然後再測試值，在子句中執行查詢比較方便，然後在 `let` 子句中使用結果 `where` 。</span><span class="sxs-lookup"><span data-stu-id="cbcf2-107">If you have to first test against null, and then test the value, it's more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>
+<span data-ttu-id="e1d95-106">您僅能撰寫查詢並使用 `where` 子句中的查詢結果來達到這個目的。</span><span class="sxs-lookup"><span data-stu-id="e1d95-106">You can do this by writing a query and using the results of the query in the `where` clause.</span></span> <span data-ttu-id="e1d95-107">如果您必須先針對 null 進行測試，然後再測試值，在子句中執行查詢比較方便，然後在 `let` 子句中使用結果 `where` 。</span><span class="sxs-lookup"><span data-stu-id="e1d95-107">If you have to first test against null, and then test the value, it's more convenient to do the query in a `let` clause, and then use the results in the `where` clause.</span></span>
 
-## <a name="example-select-p-elements-that-are-immediately-followed-by-a-ul-element"></a><span data-ttu-id="cbcf2-108">範例：選取 `p` 緊接在元素後面的元素 `ul`</span><span class="sxs-lookup"><span data-stu-id="cbcf2-108">Example: Select `p` elements that are immediately followed by a `ul` element</span></span>
+## <a name="example-select-p-elements-that-are-immediately-followed-by-a-ul-element"></a><span data-ttu-id="e1d95-108">範例：選取 `p` 緊接在元素後面的元素 `ul`</span><span class="sxs-lookup"><span data-stu-id="e1d95-108">Example: Select `p` elements that are immediately followed by a `ul` element</span></span>
 
-<span data-ttu-id="cbcf2-109">下列範例會選取緊跟著 `p` 項目後面的所有 `ul` 項目。</span><span class="sxs-lookup"><span data-stu-id="cbcf2-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>
+<span data-ttu-id="e1d95-109">下列範例會選取緊跟著 `p` 項目後面的所有 `ul` 項目。</span><span class="sxs-lookup"><span data-stu-id="e1d95-109">The following example selects all `p` elements that are immediately followed by a `ul` element.</span></span>
 
 ```csharp
 XElement doc = XElement.Parse(@"<Root>
@@ -85,7 +85,7 @@ For Each e As XElement In items
 Next
 ```
 
-<span data-ttu-id="cbcf2-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="cbcf2-110">This example produces the following output:</span></span>
+<span data-ttu-id="e1d95-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="e1d95-110">This example produces the following output:</span></span>
 
 ```output
 id = 1
@@ -93,9 +93,9 @@ id = 3
 id = 6
 ```
 
-## <a name="example-in-a-namespace-select-p-elements-that-are-immediately-followed-by-a-ul-element"></a><span data-ttu-id="cbcf2-111">範例：在命名空間中 `p` ，選取緊接在元素後面的 `ul` 元素</span><span class="sxs-lookup"><span data-stu-id="cbcf2-111">Example: In a namespace select `p` elements that are immediately followed by a `ul` element</span></span>
+## <a name="example-in-a-namespace-select-p-elements-that-are-immediately-followed-by-a-ul-element"></a><span data-ttu-id="e1d95-111">範例：在命名空間中 `p` ，選取緊接在元素後面的 `ul` 元素</span><span class="sxs-lookup"><span data-stu-id="e1d95-111">Example: In a namespace select `p` elements that are immediately followed by a `ul` element</span></span>
 
-<span data-ttu-id="cbcf2-112">下列範例顯示與上述相同的查詢，但針對命名空間中的 XML。</span><span class="sxs-lookup"><span data-stu-id="cbcf2-112">The following example shows the same query as above, but for XML that's in a namespace.</span></span> <span data-ttu-id="cbcf2-113">如需詳細資訊，請參閱 [命名空間總覽](namespaces-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="cbcf2-113">For more information, see [Namespaces overview](namespaces-overview.md).</span></span>
+<span data-ttu-id="e1d95-112">下列範例顯示與上述相同的查詢，但針對命名空間中的 XML。</span><span class="sxs-lookup"><span data-stu-id="e1d95-112">The following example shows the same query as above, but for XML that's in a namespace.</span></span> <span data-ttu-id="e1d95-113">如需詳細資訊，請參閱 [命名空間總覽](namespaces-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="e1d95-113">For more information, see [Namespaces overview](namespaces-overview.md).</span></span>
 
 ```csharp
 XElement doc = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>
@@ -167,7 +167,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="cbcf2-114">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="cbcf2-114">This example produces the following output:</span></span>
+<span data-ttu-id="e1d95-114">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="e1d95-114">This example produces the following output:</span></span>
 
 ```output
 id = 1
@@ -175,10 +175,10 @@ id = 3
 id = 6
 ```
 
-## <a name="see-also"></a><span data-ttu-id="cbcf2-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cbcf2-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1d95-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e1d95-115">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [<span data-ttu-id="cbcf2-116">基本查詢 (LINQ to XML)  (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="cbcf2-116">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="e1d95-116">基本查詢 (LINQ to XML)  (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="e1d95-116">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](./find-element-specific-attribute.md)
