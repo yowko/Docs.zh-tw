@@ -6,19 +6,19 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558825"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558741"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
 
 您可以從下載頁面下載 .NET Framework 的可轉散發套件和語言套件：
 
-- [.NET Framework 4。8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
 - [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -43,9 +43,9 @@ ms.locfileid: "88558825"
 
 - 從 .NET Framework 4.5 開始，您的使用者可以在安裝過程中檢視執行中的 .NET Framework 應用程式清單，並輕鬆地將它們關閉。 這有助於避免系統因安裝 .NET Framework 而重新啟動。 請參閱 [減少系統重新啟動](reducing-system-restarts.md)。
 
-- 卸載 .NET Framework 4.5 或更新版本也會移除既有的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱 [安裝 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。
+- 卸載 .NET Framework 4.5 或更新版本也會移除既有的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱 [安裝 .NET Framework 4](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。
 
-- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為2012年8月16日的 .NET Framework 4.5 可轉散發套件，我們建議您從 [.NET Framework 下載頁面](https://dotnet.microsoft.com/download/dotnet-framework/net45)使用最新的可轉散發套件來更新您的複本。 如需這個問題的詳細資訊，請參閱 [Microsoft 安全性摘要報告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
+- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為2012年8月16日的 .NET Framework 4.5 可轉散發套件，我們建議您從 [.NET Framework 下載頁面](https://dotnet.microsoft.com/download/dotnet-framework/net45)使用最新的可轉散發套件來更新您的複本。 如需這個問題的詳細資訊，請參閱 [Microsoft 安全性摘要報告 2749655](/security-updates/SecurityAdvisories/2012/2749655)。
 
 如需系統管理員如何在網路上部署 .NET Framework 及其系統相依性的詳細資訊，請參閱[系統管理員部署手冊](guide-for-administrators.md)。
 
@@ -261,7 +261,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 | | |
 |-|-|
 | Key | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Name | 版本 |
+| 名稱 | 版本 |
 | 類型 | DWORD |
 
 若要判斷是否已針對 .NET Framework 從 4.5 到 4.7.2 的特定版本安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
@@ -272,7 +272,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 .NET Framework 提供了一組獨立的語言套件可執行檔，其中包含特定文化特性的當地語系化資源。 您可以從下載 .NET Framework 頁面取得語言套件：
 
-- [.NET Framework 4。8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
 - [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -345,11 +345,11 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |選項|描述|
 |------------|-----------------|
 |**/CEIPConsent**|覆寫預設的行為並傳送匿名意見給 Microsoft 以協助改善未來的部署經驗。 只有當安裝程式提示同意，同時使用者授與權限傳送匿名意見給 Microsoft 時，才能使用此選項。|
-|**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"**。 如需連結套件的範例，請參閱 [從安裝套件取得進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))。|
+|**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"**。 如需連結套件的範例，請參閱 [從安裝套件取得進度資訊](/previous-versions/cc825975(v=vs.100))。|
 |**/LCID**  `LCID`<br /><br /> 其中， `LCID` 可指定地區設定識別碼 (請參閱 [支援的語言](#supported-languages))。|安裝 `LCID` 指定的語言套件並強制以該語言顯示 UI (除非已設定無訊息模式)。<br /><br /> 對於 Web 安裝程式，此選項會從 Web 鏈結安裝語言套件。 **注意：** 此選項只適用於 Web 安裝程式。|
 |**/log** `file` &#124; `folder`|指定記錄檔的位置。 預設為程序的暫存資料夾，而預設檔案名稱將會根據套件。 如果副檔名是 .txt，則會產生文字記錄檔。 如果您指定其他副檔名或未指定副檔名，則會建立 HTML 記錄檔。|
 |**/msioptions**|指定針對 .msi 和 .msp 項目傳遞的選項，例如： `/msioptions "PROPERTY1='Value'"`。|
-|**/norestart**|避免安裝程式自動重新開機。 如果您使用此選項，則連結應用程式必須捕獲傳回碼並處理重新開機 (請參閱 [從安裝套件取得進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))) 。|
+|**/norestart**|避免安裝程式自動重新開機。 如果您使用此選項，則連結應用程式必須捕獲傳回碼並處理重新開機 (請參閱 [從安裝套件取得進度資訊](/previous-versions/cc825975(v=vs.100))) 。|
 |**/passive**|設定被動模式。 顯示進度列，表示安裝正在進行，但不會對使用者顯示任何提示或錯誤訊息。 在此模式中，當安裝程式進行鏈結時，鏈結套件必須處理 [傳回碼](#return-codes)。|
 |**/pipe**|建立通訊通道，讓鏈結套件能夠取得進度。|
 |**/promptrestart**|(僅限被動模式) 如果安裝程式需要重新啟動，則會提示使用者。 如果需要重新啟動，此選項會需要使用者互動。|

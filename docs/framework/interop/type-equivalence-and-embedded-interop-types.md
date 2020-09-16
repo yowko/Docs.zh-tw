@@ -1,6 +1,6 @@
 ---
 title: 類型等價和內嵌 Interop 類型
-description: 瞭解 .NET 類型和具有 managed 元件之成員的類型等價，以及內嵌在該元件中的 COM 類型。 適用于 .NET 4 和更新版本。
+description: 瞭解 .NET 類型與具有 managed 元件的成員，以及內嵌至該元件的 COM 類型之間的類型等價。 適用于 .NET 4 和更新版本。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - type equivalence
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-ms.openlocfilehash: 2d572133c42f01af7d50f6f771588f5173853f9a
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: a096c6bd0703c19c6049ad5ab2532b4b05f6ede0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282004"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558819"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>類型等價和內嵌 Interop 類型
 
@@ -32,7 +32,7 @@ ms.locfileid: "86282004"
 
 - 類型具有相同的身分識別，如下一節中所述。
 
-- 這兩種類型都符合類型等價的資格，如[標記類型等價的 COM 類型](#marking-com-types-for-type-equivalence)一節中所述。
+- 這兩種類型都符合類型等價的資格，如 [標記類型等價的 COM 類型](#marking-com-types-for-type-equivalence) 一節中所述。
 
 ### <a name="type-identity"></a>類型身分識別
 
@@ -52,8 +52,8 @@ ms.locfileid: "86282004"
 
 - 讓類型成為 COM 匯入類型。 如果介面具有 <xref:System.Runtime.InteropServices.ComImportAttribute> 屬性，便是 COM 匯入類型。 如果定義介面、結構、列舉或委派所在的組件具有 <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> 屬性，便是 COM 匯入類型。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Type.IsEquivalentTo%2A>
-- [在受控程式碼中使用 COM 型別](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [在受控程式碼中使用 COM 型別](/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)
