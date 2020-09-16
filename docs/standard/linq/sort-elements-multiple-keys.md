@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 81bfc1d19723377b9b2134c13b58f4e4d682c06f
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 161f354192b3bc5cecec7e7e1b457b23c415c073
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552256"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550125"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-linq-to-xml"></a><span data-ttu-id="2b529-103">如何排序多個索引鍵上的元素 (LINQ to XML) </span><span class="sxs-lookup"><span data-stu-id="2b529-103">How to sort elements on multiple keys (LINQ to XML)</span></span>
+# <a name="how-to-sort-elements-on-multiple-keys-linq-to-xml"></a><span data-ttu-id="75f1f-103">如何排序多個索引鍵上的元素 (LINQ to XML) </span><span class="sxs-lookup"><span data-stu-id="75f1f-103">How to sort elements on multiple keys (LINQ to XML)</span></span>
 
-<span data-ttu-id="2b529-104">本文說明如何在 c # 和 Visual Basic 中排序多個索引鍵。</span><span class="sxs-lookup"><span data-stu-id="2b529-104">This article shows how to sort on multiple keys in C# and Visual Basic.</span></span>
+<span data-ttu-id="75f1f-104">本文說明如何在 c # 和 Visual Basic 中排序多個索引鍵。</span><span class="sxs-lookup"><span data-stu-id="75f1f-104">This article shows how to sort on multiple keys in C# and Visual Basic.</span></span>
 
-## <a name="example-sort-xml-elements-on-multiple-keys"></a><span data-ttu-id="2b529-105">範例：排序多個索引鍵上的 XML 元素</span><span class="sxs-lookup"><span data-stu-id="2b529-105">Example: Sort XML elements on multiple keys</span></span>
+## <a name="example-sort-xml-elements-on-multiple-keys"></a><span data-ttu-id="75f1f-105">範例：排序多個索引鍵上的 XML 元素</span><span class="sxs-lookup"><span data-stu-id="75f1f-105">Example: Sort XML elements on multiple keys</span></span>
 
-<span data-ttu-id="2b529-106">此範例會根據兩個索引鍵來排序：寄送郵遞區號 (主要) 和訂購日期。</span><span class="sxs-lookup"><span data-stu-id="2b529-106">This example sorts on two keys: shipping postal code (primary) and order date.</span></span> <span data-ttu-id="2b529-107">它會使用 XML [檔範例 xml 檔：客戶和訂單](sample-xml-file-customers-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="2b529-107">It uses XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md).</span></span>
+<span data-ttu-id="75f1f-106">此範例會根據兩個索引鍵來排序：寄送郵遞區號 (主要) 和訂購日期。</span><span class="sxs-lookup"><span data-stu-id="75f1f-106">This example sorts on two keys: shipping postal code (primary) and order date.</span></span> <span data-ttu-id="75f1f-107">它會使用 XML [檔範例 xml 檔：客戶和訂單](sample-xml-file-customers-orders.md)。</span><span class="sxs-lookup"><span data-stu-id="75f1f-107">It uses XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -55,7 +55,7 @@ For Each r In result
 Next
 ```
 
-<span data-ttu-id="2b529-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="2b529-108">This example produces the following output:</span></span>
+<span data-ttu-id="75f1f-108">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="75f1f-108">This example produces the following output:</span></span>
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
@@ -82,11 +82,11 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```
 
-## <a name="example-sort-xml-thats-in-a-namespace"></a><span data-ttu-id="2b529-109">範例：排序命名空間中的 XML</span><span class="sxs-lookup"><span data-stu-id="2b529-109">Example: Sort XML that's in a namespace</span></span>
+## <a name="example-sort-xml-thats-in-a-namespace"></a><span data-ttu-id="75f1f-109">範例：排序命名空間中的 XML</span><span class="sxs-lookup"><span data-stu-id="75f1f-109">Example: Sort XML that's in a namespace</span></span>
 
-<span data-ttu-id="2b529-110">這個範例會執行與第一個相同的排序，但是針對命名空間中的 XML 執行。</span><span class="sxs-lookup"><span data-stu-id="2b529-110">This example does the same sort as the first, but for XML that's in a namespace.</span></span> <span data-ttu-id="2b529-111">它會使用 XML [檔範例 xml 檔：命名空間中的客戶和訂單](sample-xml-file-customers-orders-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="2b529-111">It uses XML document [Sample XML file: Customers and orders in a namespace](sample-xml-file-customers-orders-namespace.md).</span></span>
+<span data-ttu-id="75f1f-110">這個範例會執行與第一個相同的排序，但是針對命名空間中的 XML 執行。</span><span class="sxs-lookup"><span data-stu-id="75f1f-110">This example does the same sort as the first, but for XML that's in a namespace.</span></span> <span data-ttu-id="75f1f-111">它會使用 XML [檔範例 xml 檔：命名空間中的客戶和訂單](sample-xml-file-customers-orders-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="75f1f-111">It uses XML document [Sample XML file: Customers and orders in a namespace](sample-xml-file-customers-orders-namespace.md).</span></span>
 
-<span data-ttu-id="2b529-112">如需詳細資訊，請參閱 [命名空間總覽](namespaces-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="2b529-112">For more information, see [Namespaces overview](namespaces-overview.md).</span></span>
+<span data-ttu-id="75f1f-112">如需詳細資訊，請參閱 [命名空間總覽](namespaces-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="75f1f-112">For more information, see [Namespaces overview](namespaces-overview.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");
@@ -130,7 +130,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="2b529-113">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="2b529-113">This example produces the following output:</span></span>
+<span data-ttu-id="75f1f-113">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="75f1f-113">This example produces the following output:</span></span>
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
@@ -157,6 +157,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2b529-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2b529-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75f1f-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="75f1f-114">See also</span></span>
 
-- [<span data-ttu-id="2b529-115">基本查詢 (LINQ to XML)  (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="2b529-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="75f1f-115">基本查詢 (LINQ to XML)  (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="75f1f-115">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](./find-element-specific-attribute.md)

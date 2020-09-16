@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 07/10/2020
-  ms.openlocfilehash: d324cfe43f5558f255746421ebd4d143e7343e81
-  ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+  ms.openlocfilehash: 98de6da2ffd990c5ec99f1a4043b089af712dd6b
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/05/2020
-  ms.locfileid: "89495547"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90556046"
 highlightedContent:
   items:
   - title: 下載 .NET
@@ -168,11 +168,11 @@ additionalContent:
         text: Blazor：採用.NET 的互動式用戶端 Web UI
     - title: 雲端原生與微服務
       links:
-      - url: /dotnet/azure/
+      - url: ./azure/index.yml
         text: 適用於 .NET 的 Azure 文件
       - url: /azure/storage
         text: 存放裝置
-      - url: /dotnet/fsharp/using-fsharp-on-azure/
+      - url: ./fsharp/using-fsharp-on-azure/index.md
         text: 在 Azure 上使用 F#
       - url: architecture/serverless/index.md
         text: 無伺服器應用程式：架構、模式和 Azure 實作
@@ -224,7 +224,7 @@ additionalContent:
       links:
       - url: https://channel9.msdn.com/Shows/On-NET/IoT-support-for-NET-Core
         text: 在 .NET 上：了解 .NET Core 如何支援 IoT
-      - url: https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
+      - url: /archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
         text: 使用 .NET Core 3.0 在不同平台上設計 IoT 程式
       - url: https://github.com/dotnet/iot
         text: .NET Core IoT 程式庫
@@ -235,19 +235,19 @@ additionalContent:
     items:
     - title: .NET Core API 參考
       summary: .NET Core 的 API 參考文件
-      url: https://docs.microsoft.com/dotnet/api/?view=netcore-3.1
+      url: ../api/index.md?view=netcore-3.1
     - title: .NET Framework API 參考
       summary: .NET Framework 的 API 參考文件
-      url: https://docs.microsoft.com/dotnet/api/?view=netframework-4.8
+      url: ../api/index.md?view=netframework-4.8
     - title: ASP.NET Core API 參考
       summary: ASP.NET Core 的 API 參考文件
-      url: https://docs.microsoft.com/dotnet/api/?view=aspnetcore-3.1
+      url: ../api/index.md?view=aspnetcore-3.1
     - title: ML.NET API 參考
       summary: ML.NET 的 API 參考文件
-      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+      url: ../api/index.md?view=ml-dotnet
     - title: .NET for Apache Spark API 參考
       summary: .NET for Apache Spark 的 API 參考文件
-      url: https://docs.microsoft.com/dotnet/api/?view=spark-dotnet
+      url: ../api/index.md?view=spark-dotnet
     - title: C# 語言參考
       summary: C# 語言參考與規格
       url: csharp/language-reference/index.md
@@ -257,4 +257,4 @@ additionalContent:
     - title: Visual Basic 語言參考
       summary: Visual Basic 語言參考與規格
       url: visual-basic/language-reference/index.md
-  footer: 參與 .NET 文件。請參閱 [參與者指南](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)(英文)。
+  footer: 參與 .NET 文件。請參閱 [參與者指南](/contribute/dotnet/dotnet-contribute)(英文)。
