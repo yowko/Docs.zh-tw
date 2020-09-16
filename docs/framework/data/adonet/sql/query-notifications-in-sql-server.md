@@ -1,14 +1,14 @@
 ---
 title: SQL Server 中的查詢通知
-description: 瞭解如何使用查詢通知，在 SQL Server 資料庫中的資料已變更時通知應用程式，例如重新整理應用程式顯示。
+description: 瞭解如何使用查詢通知，在 SQL Server 資料庫中的資料變更時通知應用程式，例如重新整理應用程式顯示。
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 1351c83b6cc5837115321d53e8779c0f364c3099
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43b496db74f7e6fc9bc9f17d946bf34398b32312
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286219"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543981"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查詢通知
 查詢通知是根據 Service Broker 基礎結構而建置，可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。  
@@ -25,19 +25,19 @@ ms.locfileid: "84286219"
   
  您可以為 SELECT 和 EXECUTE 陳述式設定通知。 使用 EXECUTE 陳述式時，SQL Server 會為執行的命令註冊通知，而非為 EXECUTE 陳述式本身。 此命令必須符合 SELECT 陳述式的需求和限制。 當註冊通知的命令包含多個陳述式時，資料庫引擎會為批次中的每個陳述式建立一個通知。  
   
- 如果您要開發的應用程式在資料變更時需要可靠的次要秒數通知，請參閱**規劃有效率的查詢通知策略**和[規劃通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105))一文中**查詢通知的替代**章節。 如需有關查詢通知和 SQL Server Service Broker 的詳細資訊，請參閱 SQL Server 檔中的下列文章連結。  
+ 如果您要開發的應用程式在資料變更時需要可靠的次秒通知，請參閱**規劃有效率的查詢通知策略**，以及[規劃通知](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105))文章中**查詢通知的替代**專案。 如需查詢通知和 SQL Server Service Broker 的詳細資訊，請參閱 SQL Server 檔中的下列文章連結。  
   
- **SQL Server 檔**  
+ **SQL Server 文件**  
   
-- [使用查詢通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [使用查詢通知](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [為通知建立查詢](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [為通知建立查詢](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [開發 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [開發 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Service Broker 開發人員資訊中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Service Broker 開發人員資訊中心](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [開發人員手冊 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [開發人員手冊 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>本節內容  
  [啟用查詢通知](enabling-query-notifications.md)  
@@ -49,7 +49,7 @@ ms.locfileid: "84286219"
  [使用 SqlDependency 偵測變更](detecting-changes-with-sqldependency.md)  
  示範如何偵測查詢結果何時將會與原始接收的結果不同。  
   
- [具有 SqlNotificationRequest 的 SqlCommand 執行](sqlcommand-execution-with-a-sqlnotificationrequest.md)  
+ [使用 SqlNotificationRequest 的 SqlCommand 執行](sqlcommand-execution-with-a-sqlnotificationrequest.md)  
  示範如何設定 <xref:System.Data.SqlClient.SqlCommand> 物件來處理查詢通知。  
   
 ## <a name="reference"></a>參考  

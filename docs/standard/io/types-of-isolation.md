@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 7802e4bc27195d1c8ecaccbd64121fb24328a4d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 244bd9c25040b39c9349d28f57981f29d7a32d0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288533"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542030"
 ---
 # <a name="types-of-isolation"></a>隔離的類型
 對隔離儲存區的存取永遠限制於建立該隔離儲存區的使用者。 為實作這種類型的隔離，通用語言執行階段會使用作業系統可辨識的相同使用者身分識別概念，這是與開啟儲存區時，與程式碼執行所在處理序相關聯的身分識別。 此身分識別是一個經過驗證的使用者身分識別，但是模擬可能會造成目前使用者的身分識別動態變更。  
@@ -48,10 +48,10 @@ ms.locfileid: "84288533"
   
  ![顯示依使用者和組件隔離的圖表。](./media/types-of-isolation/isolated-storage-types.gif)  
   
- 除了漫遊存放區之外，電腦一律會隱含隔離儲存區，因為它會使用指定電腦的本機存放裝置。  
+ 除了漫遊存放區以外，電腦一律會隱含地隔離隔離儲存區，因為它會使用指定電腦本機的儲存設備。  
   
 > [!IMPORTANT]
-> Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。  
+> 隔離儲存區不適用於 Windows 8. x 儲存區應用程式。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](/previous-versions/windows/apps/hh464917(v=win.10))。  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>依使用者和組件隔離  

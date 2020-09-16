@@ -1,20 +1,20 @@
 ---
 title: 範例 COM 類別 - C# 程式設計指南
-description: '瞭解如何在 c # 中以 COM 物件的形式公開類別。 這個範例會將 .cs 檔案中的程式碼加入至專案，並設定 [註冊 COM Interop] 屬性。'
+description: '瞭解如何在 c # 中將類別公開為 COM 物件。 此範例會將 .cs 檔案中的程式碼加入至專案，並設定 COM Interop 屬性的暫存器。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: 4ea66ba26595c5bae2e579d1cc85c4b0d58616df
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: d49d391f5ea7717e0c36782be65cfb2ae154b843
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303032"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542792"
 ---
 # <a name="example-com-class-c-programming-guide"></a>範例 COM 類別 (C# 程式設計手冊)
-以下是公開為 COM 物件類別的範例。 在此程式碼放入 .cs 檔案並新增至專案之後，將**註冊 COM Interop** 屬性設定為 **True**。 如需詳細資訊，請參閱[如何：註冊 COM Interop 元件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))。
+以下是公開為 COM 物件類別的範例。 在此程式碼放入 .cs 檔案並新增至專案之後，將**註冊 COM Interop** 屬性設定為 **True**。 如需詳細資訊，請參閱[如何：註冊 COM Interop 元件](/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))。
   
  將 Visual C# 物件公開給 COM 需要宣告類別介面和類別本身，以及事件介面 (若需要)。 類別成員必須遵守下列規則才能為 COM 所見︰  
   
@@ -26,7 +26,7 @@ ms.locfileid: "87303032"
   
 - 必須在事件介面中宣告事件。  
   
- 類別中未在這些介面中宣告的其他公用成員將不會顯示在 COM 中，但其他 .NET 物件將會看到它們。  
+ 未在這些介面中宣告之類別中的其他公用成員將不會顯示于 COM 中，但其他 .NET 物件將會顯示這些成員。  
   
  若要向 COM 公開屬性和方法，您必須在類別介面上宣告它們，並以 `DispId` 屬性標記它們，然後在類別中實作它們。 成員在介面中的宣告順序是 COM vtable 使用的順序。  
   

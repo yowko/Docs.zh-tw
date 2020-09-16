@@ -1,6 +1,6 @@
 ---
 title: Tlbexp.exe (類型程式庫匯出工具)
-description: Tlbexp.exe，請參閱類型程式庫匯出工具。 此工具會產生類型程式庫，以描述 common language runtime （CLR）元件中定義的類型。
+description: 複習 Tlbexp.exe，也就是型別程式庫匯出工具。 此工具會產生類型程式庫，以描述 common language runtime (CLR) 元件中定義的類型。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exporting type library [.NET Framework]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: 3cfaa83590fefe31c437d2ff607fb579aec1da61
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: e675b0addc9051a0b3c877e9b029e113c17ba5f0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517031"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543383"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
@@ -31,13 +31,13 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>參數  
   
-|引數|說明|  
+|引數|描述|  
 |--------------|-----------------|  
-|*assemblyName*|要匯出類型程式庫的組件。|  
+|*集*|要匯出類型程式庫的組件。|  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
-|**/asmpath：** *directory*|指定要搜尋組件的位置。 如果使用這個選項，則必須明確指定要搜尋參考組件的位置，包括目前的目錄在內。<br /><br /> 當您使用 **asmpath** 選項時，型別程式庫匯出工具不會在全域組件快取 (GAC) 中尋找組件。|  
+|**/asmpath：** *目錄*|指定要搜尋組件的位置。 如果使用這個選項，則必須明確指定要搜尋參考組件的位置，包括目前的目錄在內。<br /><br /> 當您使用 **asmpath** 選項時，型別程式庫匯出工具不會在全域組件快取 (GAC) 中尋找組件。|  
 |**/help**|顯示工具的命令語法和選項。|  
 |**/names:** *filename*|指定類型程式庫中名稱的大小寫。 *filename* 引數是一個文字檔。 檔案中的每一行指定了類型程式庫中一個名稱的大小寫。|  
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
@@ -89,7 +89,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  請注意，Tlbexp.exe 會忽略 <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> 欄位。  
   
- 由於類型程式庫無法容納這些組件中的所有資訊，因此，Tlbexp.exe 在匯出處理序時可能會捨棄一些資料。 如需轉換處理序的說明並且識別型別程式庫所發出每件資訊的來源，請參閱[組件至型別程式庫轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))。  
+ 由於類型程式庫無法容納這些組件中的所有資訊，因此，Tlbexp.exe 在匯出處理序時可能會捨棄一些資料。 如需轉換處理序的說明並且識別型別程式庫所發出每件資訊的來源，請參閱[組件至型別程式庫轉換的摘要](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))。  
   
  請注意，類型程式庫匯出工具會將 <xref:System.TypedReference> 參數匯出為 `VARIANT` 的方法，即使 <xref:System.TypedReference> 物件在 Unmanaged 程式碼中不具任何意義。 當您匯出具有 <xref:System.TypedReference> 參數的方法時，類型程式庫匯出工具不會產生警告或錯誤，而使用結果類型程式庫的 Unmanaged 程式碼也將無法正常執行。  
   
@@ -132,7 +132,7 @@ tlbexp Sample.dll
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [工具](index.md)
-- [Regasm.exe （元件註冊工具）](regasm-exe-assembly-registration-tool.md)
-- [組件至型別程式庫轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe （類型程式庫匯入工具）](tlbimp-exe-type-library-importer.md)
+- [Regasm.exe (元件註冊工具) ](regasm-exe-assembly-registration-tool.md)
+- [組件至型別程式庫轉換的摘要](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
+- [Tlbimp.exe (型別程式庫匯入工具) ](tlbimp-exe-type-library-importer.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

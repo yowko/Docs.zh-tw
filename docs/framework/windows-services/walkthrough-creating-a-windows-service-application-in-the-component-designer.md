@@ -1,6 +1,6 @@
 ---
 title: 教學課程：建立 Windows 服務應用程式
-description: 在本教學課程中，會在 Visual Studio 中建立 Windows 服務應用程式，以將訊息寫入事件記錄檔。 新增功能、設定狀態、新增安裝程式等。
+description: 在本教學課程中，請在 Visual Studio 中建立 Windows 服務應用程式，以將訊息寫入至事件記錄檔。 新增功能、設定狀態、新增安裝程式等。
 ms.date: 03/27/2019
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 04f27729b5713c325a73cbdeb1c6c673fe749c00
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925627"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544202"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>教學課程：建立 Windows 服務應用程式
 
@@ -32,7 +32,7 @@ ms.locfileid: "86925627"
    ![Visual Studio 新增專案對話方塊中的 Windows 服務範本](./media/new-project-dialog.png)
 
    > [!NOTE]
-   > 如果您沒有看到 [ **Windows 服務**] 範本，您可能需要安裝 **.net 桌面開發**工作負載：
+   > 如果您沒有看到 **Windows 服務** 範本，您可能需要安裝 **.net 桌面開發** 工作負載：
    >
    > 在 [新增專案]**** 對話方塊中，選取左下角的 [開啟 Visual Studio 安裝程式]****。 選取 **.NET 桌面開發**工作負載，然後選取 [修改]****。
 
@@ -163,7 +163,7 @@ ms.locfileid: "86925627"
    Private eventId As Integer = 1
    ```
 
-您可能會使用背景工作執行緒來執行工作，而不是在主執行緒上執行所有工作。 如需詳細資訊，請參閱 <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName> 。
+您可能會使用背景工作執行緒來執行工作，而不是在主執行緒上執行所有工作。 如需詳細資訊，請參閱<xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>。
 
 ### <a name="define-what-occurs-when-the-service-is-stopped"></a>定義服務停止時所執行的動作
 
@@ -250,7 +250,7 @@ ms.locfileid: "86925627"
     ```
 
     > [!NOTE]
-    > 服務控制管理員會使用 `dwWaitHint` `dwCheckpoint` [SERVICE_STATUS 結構](/windows/win32/api/winsvc/ns-winsvc-service_status)的和成員來判斷等候 Windows 服務啟動或關閉的時間。 如果您的 `OnStart` 和 `OnStop` 方法需長時間執行，則服務可以使用遞增的 `dwCheckPoint` 值再次呼叫 `SetServiceStatus` 以要求更多時間。
+    > 服務控制管理員會使用 `dwWaitHint` `dwCheckpoint` [SERVICE_STATUS 結構](/windows/win32/api/winsvc/ns-winsvc-service_status) 的和成員，來判斷要等待 Windows 服務啟動或關閉的時間長短。 如果您的 `OnStart` 和 `OnStop` 方法需長時間執行，則服務可以使用遞增的 `dwCheckPoint` 值再次呼叫 `SetServiceStatus` 以要求更多時間。
 
 3. 在 `MyNewService` 類別中，使用[平台叫用](../interop/consuming-unmanaged-dll-functions.md)宣告 [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 函式：
 
@@ -360,7 +360,7 @@ ms.locfileid: "86925627"
     > [!IMPORTANT]
     > <xref:System.ServiceProcess.ServiceAccount.LocalSystem> 帳戶具有概括性的使用權限，包括寫入事件記錄檔的能力。 因此，請謹慎使用這個帳戶，因為它會增加您遭受惡意軟體攻擊的風險。 至於其他工作，建議使用 <xref:System.ServiceProcess.ServiceAccount.LocalService> 帳戶，可在本機電腦上做為沒有權限的使用者，並提供匿名認證給任何遠端伺服器。 如果您嘗試使用 <xref:System.ServiceProcess.ServiceAccount.LocalService> 帳戶，因為需要寫入事件記錄檔的權限，所以這個範例會失敗。
 
-如需安裝程式的詳細資訊，請參閱[如何：將安裝程式新增至您的服務應用程式](how-to-add-installers-to-your-service-application.md)。
+如需安裝程式的詳細資訊，請參閱 [如何：將安裝程式新增至您的服務應用程式](how-to-add-installers-to-your-service-application.md)。
 
 ## <a name="optional-set-startup-parameters"></a>(選擇性) 設定啟動參數
 
@@ -471,7 +471,7 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 建置 Windows 服務之後，您就可以安裝它了。 若要安裝 Windows 服務，您必須有安裝所在電腦的系統管理員認證。
 
-1. 以系統管理認證開啟 [Visual Studio 的開發人員命令提示字元][](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs)。 從 Windows 的 [開始]**** 功能表選取 [Visual Studio] 資料夾的 [VS 2017 開發人員命令提示字元]****，然後從捷徑功能表選取 [更多]**** > [以系統管理員身分執行]****。
+1. 以系統管理認證開啟 [Visual Studio 的開發人員命令提示字元][](../tools/developer-command-prompt-for-vs.md)。 從 Windows 的 [開始]**** 功能表選取 [Visual Studio] 資料夾的 [VS 2017 開發人員命令提示字元]****，然後從捷徑功能表選取 [更多]**** > [以系統管理員身分執行]****。
 
 2. 在 [Visual Studio 開發人員命令提示字元]**** 視窗中，巡覽至包含專案輸出的資料夾 (預設為專案的 *\bin\Debug* 子目錄)。
 
@@ -483,14 +483,14 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
     如果服務安裝成功，則命令會報告成功。
 
-    如果系統找不到 *installutil.exe*，請確定它存在於您的電腦中。 此工具會隨 .NET Framework 安裝到資料夾 *%windir%\Microsoft.NET\Framework [64] \\ &lt; Framework 版本 &gt; *。 例如，64 位元版本的預設路徑是 *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*。
+    如果系統找不到 *installutil.exe*，請確定它存在於您的電腦中。 此工具隨 .NET Framework 安裝到資料夾 *%windir%\Microsoft.NET\Framework [64] \\ &lt; Framework 版本 &gt; *。 例如，64 位元版本的預設路徑是 *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*。
 
     如果 **installutil.exe** 程序失敗，請檢查安裝記錄以找出原因。 根據預設，記錄檔與服務可執行檔位於同一資料夾。 安裝可能失敗的原因：
     - <xref:System.ComponentModel.RunInstallerAttribute> 類別不存在於 `ProjectInstaller` 類別中。
     - 屬性未設為 `true`。
     - `ProjectInstaller` 類別未定義為 `public`。
 
-如需詳細資訊，請參閱[如何：安裝和卸載服務](how-to-install-and-uninstall-services.md)。
+如需詳細資訊，請參閱 [如何：安裝和卸載服務](how-to-install-and-uninstall-services.md)。
 
 ## <a name="start-and-run-the-service"></a>啟動並執行服務
 
@@ -533,7 +533,7 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
     installutil.exe /u MyNewService.exe
     ```
 
-   如已成功解除安裝服務，命令會回報已成功移除您的服務。 如需詳細資訊，請參閱[如何：安裝和卸載服務](how-to-install-and-uninstall-services.md)。
+   如已成功解除安裝服務，命令會回報已成功移除您的服務。 如需詳細資訊，請參閱 [如何：安裝和卸載服務](how-to-install-and-uninstall-services.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -543,11 +543,11 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 - 探索 <xref:System.ServiceProcess.ServiceController> 元件，它可讓您將命令傳送至已安裝的服務。
 
-- 在安裝應用程式時使用安裝程式建立事件記錄檔，而不是在應用程式執行時建立事件記錄檔。 當您解除安裝應用程式時，安裝程式會刪除事件記錄檔。 如需詳細資訊，請參閱 <xref:System.Diagnostics.EventLogInstaller> 。
+- 在安裝應用程式時使用安裝程式建立事件記錄檔，而不是在應用程式執行時建立事件記錄檔。 當您解除安裝應用程式時，安裝程式會刪除事件記錄檔。 如需詳細資訊，請參閱<xref:System.Diagnostics.EventLogInstaller>。
 
 ## <a name="see-also"></a>另請參閱
 
 - [Windows 服務應用程式](index.md)
 - [Windows 服務應用程式簡介](introduction-to-windows-service-applications.md)
-- [如何： Debug Windows 服務應用程式](how-to-debug-windows-service-applications.md)
+- [如何：偵錯工具 Windows 服務應用程式](how-to-debug-windows-service-applications.md)
 - [服務 (Windows)](/windows/desktop/Services/services)

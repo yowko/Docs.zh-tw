@@ -1,6 +1,6 @@
 ---
 title: Winres.exe (Windows 資源當地語系化編輯器)
-description: 使用 Windows 資源當地語系化編輯器 Winres.exe。 此視覺化版面組態工具可協助當地語系化專家將表單所使用的 Windows Forms UI 資源當地語系化。
+description: 使用 Windows 資源當地語系化編輯器 Winres.exe。 這項視覺化組態工具可協助當地語系化專家將表單所使用 Windows Forms UI 資源當地語系化。
 ms.date: 08/15/2018
 helpviewer_keywords:
 - Winres.exe
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516901"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543221"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows 資源當地語系化編輯器)
 
@@ -34,7 +34,7 @@ winres /?
 
 ## <a name="arguments"></a>引數
 
-|引數|說明|
+|引數|描述|
 |--------------|-----------------|
 |`resourceFile`|要當地語系化的資源檔。 這個檔案必須是 Visual Studio 設計工具所產生的 Windows Form 表單 .resx 或 .resources 檔案。 Winres.exe 無法開啟泛型 .resx 或 .resources 檔案。|
 
@@ -52,7 +52,7 @@ Windows Form 專案中表單的 UI 項目狀態通常儲存在資源檔內，它
 
 - 文化特性資源檔可以儲存為另一個文化特性資源檔。 例如，英文 (美國) 資源檔可以儲存為波蘭文資源檔。 通常對新檔案會進行後續編輯，以便與新的文化特性相容。
 
-另請參閱[階層式組織當地語系化的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))或[階層式組織當地語系化的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))。
+另請參閱[階層式組織當地語系化的資源](/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110))或[階層式組織當地語系化的資源](/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))。
 
 Winres.exe 無法將 .resx 檔案轉換成對應的 .resources 檔案，請改用 Resgen.exe 工具。 如需 Resgen.exe 的詳細資訊，請參閱 [Resgen.exe (資源檔產生器)](resgen-exe-resource-file-generator.md)。
 

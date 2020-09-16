@@ -1,6 +1,6 @@
 ---
 title: 使用 CodeDOM
-description: 使用程式碼檔物件模型（CodeDOM），其提供代表許多常用原始程式碼專案類型的類型，以組合物件圖形。
+description: 使用程式碼檔物件模型 (CodeDOM) ，它會提供代表許多常見原始程式碼元素類型的類型，以組合物件圖形。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-ms.openlocfilehash: 476d8c18f386f889855c664147b1ee20995dc6f9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7a730a828488fd3ca04419588b3f32703dfda1c9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865212"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541730"
 ---
 # <a name="using-the-codedom"></a>使用 CodeDOM
 CodeDOM 提供的類型代表許多常見的原始程式碼項目類型。 您可以設計程式，建置使用 CodeDOM 項目的原始程式碼模型，組合物件圖形。 此物件圖形可以轉譯成使用 CodeDOM 程式碼產生器的原始程式碼，處理受支援的程式設計語言。 您也可以使用 CodeDOM 將原始程式碼編譯成二進位組件。  
@@ -126,4 +126,4 @@ CodeDOM 提供的類型代表許多常見的原始程式碼項目類型。 您�
   
  如需 CodeDOM 各類型的文件，請參閱 <xref:System.CodeDom> 命名空間的參考文件。  
   
- 如需快速圖表，找出表示特定程式碼項目類型的 CodeDOM 項目，請參閱 [CodeDOM 快速參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))。
+ 如需快速圖表，找出表示特定程式碼項目類型的 CodeDOM 項目，請參閱 [CodeDOM 快速參考](/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))。

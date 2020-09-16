@@ -1,21 +1,21 @@
 ---
-title: 作法：在查詢中呼叫模型定義函式
+title: 如何：在查詢中呼叫模型定義函式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: 33f26896dd0d4ff08beb4a011fa6bd468cba7207
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 38c43fa509b5259aa94ca416aadb51b405fc5dc7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250761"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542394"
 ---
-# <a name="how-to-call-model-defined-functions-in-queries"></a>HOW TO：在查詢中呼叫模型定義函式
+# <a name="how-to-call-model-defined-functions-in-queries"></a>如何：在查詢中呼叫模型定義函式
 本主題描述如何從 LINQ to Entities 查詢內呼叫概念模型中定義的函數。  
   
- 下列程式提供從 LINQ to Entities 查詢中呼叫模型定義函數的高階大綱。 程序後的範例提供程序中之步驟相關詳細資訊。 程序假設您已在概念模型中定義函式。 如需詳細資訊，請參閱[如何：在概念模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))中定義自訂函式。  
+ 下列程式提供從 LINQ to Entities 查詢中呼叫模型定義函數的高階大綱。 程序後的範例提供程序中之步驟相關詳細資訊。 程序假設您已在概念模型中定義函式。 如需詳細資訊，請參閱 [如何：在概念模型中定義自訂函數](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))。  
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>呼叫概念模型中定義的函式  
   
@@ -24,9 +24,9 @@ ms.locfileid: "70250761"
 2. 呼叫 LINQ to Entities 查詢中的函式。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何從 LINQ to Entities 查詢內呼叫概念模型中定義的函數。 範例使用 School 模型。 如需 School 模型的相關資訊，請參閱[建立 School 範例資料庫](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))和[產生 school .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))檔案。  
+ 下列範例示範如何從 LINQ to Entities 查詢中呼叫概念模型中定義的函數。 範例使用 School 模型。 如需 School 模型的相關資訊，請參閱 [建立 School 範例資料庫](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) 和 [產生 school .edmx](/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))檔案。  
   
- 下列概念模型函式會傳回講師受雇之後經過的年份。 如需將函式新增至概念模型的詳細資訊[，請參閱如何：在概念模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))中定義自訂函式）。  
+ 下列概念模型函式會傳回講師受雇之後經過的年份。 如需將函數新增至概念模型的相關資訊，請參閱 [如何：在概念模型中定義自訂](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))函式 ) 。  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
@@ -44,7 +44,7 @@ ms.locfileid: "70250761"
   
 ## <a name="see-also"></a>另請參閱
 
-- [.edmx 檔案總覽](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [.edmx 檔概觀](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities 中的查詢](queries-in-linq-to-entities.md)
 - [在 LINQ to Entities 查詢中呼叫函式](calling-functions-in-linq-to-entities-queries.md)
-- [如何：以物件方法的形式呼叫模型定義函式](how-to-call-model-defined-functions-as-object-methods.md)
+- [如何：將模型定義函式當做物件方法來呼叫](how-to-call-model-defined-functions-as-object-methods.md)

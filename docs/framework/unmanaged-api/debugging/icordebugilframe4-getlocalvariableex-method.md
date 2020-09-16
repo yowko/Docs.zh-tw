@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 0c8676f8-ca0d-4998-b64d-fefac7e38912
 topic_type:
 - apiref
-ms.openlocfilehash: 8d6ef550309ea7f8bae616a5f7e5c41b4f07374a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7c43c32e10d8e10b0f843795bbc3f0f3bc20529c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213721"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544241"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::GetLocalVariableEx 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -36,16 +36,16 @@ HRESULT GetLocalVariableEx(
   
 ## <a name="parameters"></a>參數  
  `flags`  
- 在[ILCodeKind](ilcodekind-enumeration.md)列舉成員，指定在 profiler ReJIT 檢測中加入的變數是否包含在框架中。  
+ 在 [ILCodeKind](ilcodekind-enumeration.md) 列舉成員，指定框架中是否包含在 profiler ReJIT 檢測中新增的變數。  
   
  `dwIndex`  
  [in] IL 堆疊框架中之區域變數的索引。  
   
  `ppValue`  
- 脫銷代表所抓取值之 "ICorDebugValue" 物件位址的指標。  
+ 擴展代表抓取值的 "ICorDebugValue" 物件位址的指標。  
   
 ## <a name="remarks"></a>備註  
- 這個方法類似于[GetLocalVariable](icordebugilframe-getlocalvariable-method.md)方法，不同之處在于它會選擇性地存取在 profiler ReJIT 檢測中加入的變數。 使用的值呼叫此方法 `flags` `ILCODE_ORIGINAL_IL` 相當於呼叫[GetLocalVariable](icordebugilframe-getlocalvariable-method.md); 如果方法是以其他區域變數檢測，則無法存取這些變數。 `ILCODE_REJIT_IL` 允許偵錯程式存取加入分析工具 ReJIT 測試設備中的區域變數。 若測試設備不是 IL，此方法會傳回 `E_INVALIDARG`。  
+ 這個方法類似于 [GetLocalVariable](icordebugilframe-getlocalvariable-method.md) 方法，不同之處在于它會選擇性地存取在 profiler ReJIT 檢測中新增的變數。 使用的值呼叫此方法 `flags` `ILCODE_ORIGINAL_IL` 相當於呼叫 [GetLocalVariable](icordebugilframe-getlocalvariable-method.md); 如果方法是以其他區域變數進行檢測，則無法存取這些變數。 `ILCODE_REJIT_IL` 允許偵錯程式存取加入分析工具 ReJIT 測試設備中的區域變數。 若測試設備不是 IL，此方法會傳回 `E_INVALIDARG`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
@@ -56,8 +56,8 @@ HRESULT GetLocalVariableEx(
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugILFrame4 介面](icordebugilframe4-interface.md)
 - [偵錯介面](debugging-interfaces.md)
-- [ReJIT：使用說明指南](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT：操作指南](/archive/blogs/davbr/rejit-a-how-to-guide)

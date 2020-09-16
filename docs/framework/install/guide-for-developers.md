@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: d2bb964c3d034ea6913c91922fcff1e62130e0dc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558461"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543707"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -35,7 +35,7 @@ ms.locfileid: "88558461"
 
 | .NET Framework 版本 | 安裝程式 (開發人員套件和執行時間)  | 平台支援 |
 | ---------------------- | -------------------------------------- | ---------------- |
-|**4.8**   | [.NET Framework 4。8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **包含在：**<br/><br/>Windows 10 2019 年 5 月更新<br/>[Visual Studio 2019 (16.3 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 4 月更新<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server 2019<br/>Windows Server，版本 1809<br/>Windows Server，版本 1803<br /><br/>  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
+|**4.8**   | [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **包含在：**<br/><br/>Windows 10 2019 年 5 月更新<br/>[Visual Studio 2019 (16.3 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 4 月更新<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server 2019<br/>Windows Server，版本 1809<br/>Windows Server，版本 1803<br /><br/>  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
 |**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **包含在：** <br/><br/>Windows 10 2018 年 10 月更新<br/>Windows 10 2018 4 月更新<br/>Windows Server 2019<br/>Windows Server，版本 1809<br/>Windows Server，版本 1803<br/>[Visual Studio 2017 (15.8 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server，1709 版 (含) 以前版本<br /><br/>  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
 |**4.7.1** | [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471) | **包含在：** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server 1709 版<br/>[Visual Studio 2017 (15.5 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br/><br/> Windows 10 Creators Update <br /> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server 2016 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
 |**4.7**   | [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **包含在：** <br/><br/>Windows 10 Creators Update<br/>[Visual Studio 2017 (15.3 更新) ](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **您可以安裝於：**<br /><br/> Windows 10 年度更新<br /> Windows 8.1 和更舊版本<br /> Windows Server 2016 (含) 以前版本<br />  (需完整清單，請參閱 [系統需求](../get-started/system-requirements.md)) ||
@@ -68,7 +68,7 @@ ms.locfileid: "88558461"
 
 .NET Framework 4.5.1 或 4.5.2 的開發人員套件、.NET Framework 4.6 的目標套件以及 .NET Framework 4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8 的開發人員套件，提供特定 .NET Framework 版本的參考組件、語言套件以及 IntelliSense 檔案，供用於 Visual Studio 這類的整合式開發環境。  若是使用 Visual Studio，開發人員套件或目標套件也會將已安裝的 .NET Framework 版本加入您在建立新專案時所選擇的目標。  選擇下列其中之一：
 
-- [.NET Framework 4。8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
 - [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -102,7 +102,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 1. 開啟您要安裝之 .NET Framework 版本的下載頁面：
 
-   - [.NET Framework 4。8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+   - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
    - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
    - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
    - [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -138,7 +138,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - 您必須具有系統管理認證，才能安裝 .NET Framework 4.5 或更新版本。
 
-- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為2012年8月16日的 .NET Framework 4.5 可轉散發套件，我們建議您從 [.NET Framework 下載頁面](https://dotnet.microsoft.com/download/dotnet-framework/net45)使用最新的可轉散發套件來更新您的複本。 如需這個問題的詳細資訊，請參閱 [Microsoft 資訊安全諮詢 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) 和[知識庫文章 2770445](https://support.microsoft.com/kb/2770445)。
+- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為2012年8月16日的 .NET Framework 4.5 可轉散發套件，我們建議您從 [.NET Framework 下載頁面](https://dotnet.microsoft.com/download/dotnet-framework/net45)使用最新的可轉散發套件來更新您的複本。 如需這個問題的詳細資訊，請參閱 [Microsoft 資訊安全諮詢 2749655](/security-updates/SecurityAdvisories/2012/2749655) 和[知識庫文章 2770445](https://support.microsoft.com/kb/2770445)。
 
 ## <a name="to-install-language-packs"></a>若要安裝語言套件
 
@@ -149,7 +149,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 1. 開啟您已安裝之 .NET Framework 版本的語言套件下載頁面：
 
-   - [.NET Framework 4。8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+   - [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
    - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
    - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
    - [.NET Framework 4。7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -166,7 +166,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 下表列出支援的語言。
 
-| 語言              | 文化特性 |
+| Language              | 文化特性 |
 | --------------------- | :-----: |
 | 阿拉伯文                | ar      |
 | 捷克文                 | cs      |
