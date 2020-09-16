@@ -2,12 +2,12 @@
 title: F# 編碼慣例
 description: '瞭解撰寫 F # 程式碼時的一般指導方針和慣用語。'
 ms.date: 01/15/2020
-ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053007"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554022"
 ---
 # <a name="f-coding-conventions"></a>F# 編碼慣例
 
@@ -209,7 +209,7 @@ let handleWithdrawal amount =
 
 F # 中可用來引發例外狀況的主要結構，應該依照下列喜好設定順序來考慮：
 
-| 函式 | Syntax | 用途 |
+| 函式 | 語法 | 目的 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | `System.ArgumentNullException`使用指定的引數名稱引發。 |
 | `invalidArg` | `invalidArg "argumentName" "message"` | `System.ArgumentException`使用指定的引數名稱和訊息來引發。 |
@@ -703,7 +703,7 @@ F # 對於物件和麵向物件的 (OO) 概念具有完整的支援。 雖然許
 
 ## <a name="consider-type-abbreviations-to-shorten-signatures"></a>請考慮輸入縮寫以縮短簽章
 
-[類型縮寫](../language-reference/type-abbreviations.md) 是將標籤指派給另一種類型的便利方法，例如函式簽章或更複雜的型別。 例如，下列別名會將標籤指派給使用 [CNTK](https://docs.microsoft.com/cognitive-toolkit/)（深度學習程式庫）定義計算所需的內容：
+[類型縮寫](../language-reference/type-abbreviations.md) 是將標籤指派給另一種類型的便利方法，例如函式簽章或更複雜的型別。 例如，下列別名會將標籤指派給使用 [CNTK](/cognitive-toolkit/)（深度學習程式庫）定義計算所需的內容：
 
 ```fsharp
 open CNTK

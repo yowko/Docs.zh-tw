@@ -2,16 +2,16 @@
 title: 整合 Enterprise Services 異動元件
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 1c4fabfadb113c79b216fa10ff80b551ba0f9716
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3fd8876de53be30f18e4fa9d7f4a1cc07ab5e220
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596847"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554100"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>整合 Enterprise Services 異動元件
 
-Windows Communication Foundation （WCF）提供與企業服務整合的自動機制（請參閱[整合 COM + 應用程式](integrating-with-com-plus-applications.md)）。 不過，您可能希望能夠彈性地開發出可透過內部方式使用裝載於 Enterprise Services 之異動元件的服務。 因為 WCF 交易功能是建置於 <xref:System.Transactions> 基礎結構上，所以整合企業服務與 WCF 的程式等同于指定和企業服務之間的互通性， <xref:System.Transactions> 如[與企業服務和 com + 交易的互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))中所述。  
+Windows Communication Foundation (WCF) 會提供自動機制，以便與企業服務整合 (查看 [與 COM + 應用程式整合](integrating-with-com-plus-applications.md)) 。 不過，您可能希望能夠彈性地開發出可透過內部方式使用裝載於 Enterprise Services 之異動元件的服務。 因為 WCF 交易功能是以 <xref:System.Transactions> 基礎結構為基礎，所以將企業服務與 WCF 整合的程式與指定和企業服務之間的互通性完全相同 <xref:System.Transactions> ，如 [企業服務和 com + 交易的互通性](/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))所述。  
   
  為了在傳入的流動異動和 COM+ 內容異動之間提供所需等級的互通性，此服務的實作必須建立 <xref:System.Transactions.TransactionScope> 執行個體並使用適當的 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉值。  
   
@@ -93,7 +93,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [與 COM + 應用程式整合](integrating-with-com-plus-applications.md)
 - [整合 COM 應用程式](integrating-with-com-applications.md)

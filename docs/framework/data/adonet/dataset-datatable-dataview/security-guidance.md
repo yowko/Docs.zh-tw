@@ -3,12 +3,12 @@ title: DataSet 和 DataTable 安全性指引
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 34fb95e35e169ca0b72735a16539ecfdec037f87
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137613"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554537"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>DataSet 和 DataTable 安全性指引
 
@@ -18,9 +18,9 @@ ms.locfileid: "89137613"
 * .NET Core 和更新版本
 * .NET 5.0 和更新版本
 
-[DataSet](/dotnet/api/system.data.dataset)和[DataTable](/dotnet/api/system.data.datatable)類型是舊版 .net 元件，可將資料集表示為 managed 物件。 這些元件是在 .NET 1.0 中引進，作為原始 [ADO.NET 基礎結構](/dotnet/framework/data/adonet/dataset-datatable-dataview/)的一部分。 其目標是要提供關聯式資料集的 managed 視圖，並將資料的基礎來源抽象化為 XML、SQL 或其他技術。
+[DataSet](/dotnet/api/system.data.dataset)和[DataTable](/dotnet/api/system.data.datatable)類型是舊版 .net 元件，可將資料集表示為 managed 物件。 這些元件是在 .NET 1.0 中引進，作為原始 [ADO.NET 基礎結構](./index.md)的一部分。 其目標是要提供關聯式資料集的 managed 視圖，並將資料的基礎來源抽象化為 XML、SQL 或其他技術。
 
-如需 ADO.NET 的詳細資訊，包括更多新式資料檢視範例，請參閱 [ADO.NET 檔](/dotnet/framework/data/adonet/)。
+如需 ADO.NET 的詳細資訊，包括更多新式資料檢視範例，請參閱 [ADO.NET 檔](../index.md)。
 
 ## <a name="default-restrictions-when-deserializing-a-dataset-or-datatable-from-xml"></a>從 XML 還原序列化資料集或 DataTable 時的預設限制
 
@@ -40,7 +40,7 @@ ms.locfileid: "89137613"
 堆疊追蹤：  
 在 TypeLimiter. EnsureTypeIsAllowed (類型 type、TypeLimiter capturedLimiter)   
 UpdateColumnType (Type type，StorageType typeCode)   
-在 System.Data.DataColumn.set_DataType (類型值)   
+在 set_DataType (類型值)   
 
 * 還原序列化作業失敗。
 
@@ -49,7 +49,7 @@ UpdateColumnType (Type type，StorageType typeCode)
 > [!NOTE]
 > 當您將資料行加入至之後 `DataTable` ， `ReadXml` 將不會從 XML 讀取架構，如果架構不符合，就不會讀取記錄，因此您必須自行加入所有資料行，才能使用這個方法。
 
-```cs
+```csharp
 XmlReader xmlReader = GetXmlReader();
 
 // Assume the XML blob contains data for type MyCustomClass.
@@ -105,7 +105,7 @@ _App.config_ 可以用來擴充允許的類型清單。 若要擴充允許的類
 
 若要取出型別的元件限定名稱，請使用 [AssemblyQualifiedName](/dotnet/api/system.type.assemblyqualifiedname) 屬性，如下列程式碼所示。
 
-```cs
+```csharp
 string assemblyQualifiedName = typeof(Fabrikam.CustomType).AssemblyQualifiedName;
 ```
 
@@ -136,7 +136,7 @@ string assemblyQualifiedName = typeof(Fabrikam.CustomType).AssemblyQualifiedName
 
 您也可以使用 [AppDomain](/dotnet/api/system.appdomain.setdata) 搭配已知的金鑰 _DataSetDefaultAllowedTypes_，以程式設計方式擴充允許的類型清單，如下列程式碼所示。
 
-```cs
+```csharp
 Type[] extraAllowedTypes = new Type[]
 {
     typeof(Fabrikam.CustomType),
@@ -260,11 +260,11 @@ AppDomain.CurrentDomain.SetData("System.Data.DataSetDefaultAllowedTypes", extraA
 }
 ```
 
-如需詳細資訊，請參閱「 [.Net Core 執行時間設定](/dotnet/core/run-time-config/)」。
+如需詳細資訊，請參閱「 [.Net Core 執行時間設定](../../../../core/run-time-config/index.md)」。
 
 `AllowArbitraryDataSetTypeInstantiation` 也可以透過 [AppCoNtext SetSwitch](/dotnet/api/system.appcontext.setswitch) 以程式設計方式設定，而不是使用設定檔，如下列程式碼所示：
 
-```cs
+```csharp
 // Warning: setting the following switch can introduce a security problem.
 AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation", true);
 ```
@@ -308,13 +308,13 @@ AppContext.SetSwitch("Switch.System.Data.AllowArbitraryDataSetTypeInstantiation"
 
 您 `DataSet` 可以 `DataAdapter` 使用 [ `DataAdapter.Fill` 方法](/dotnet/api/system.data.common.dataadapter.fill)，從來填入實例，如下列範例所示。
 
-```cs
-// Assumes that connection is a valid SqlConnection object.  
+```csharp
+// Assumes that connection is a valid SqlConnection object.
 string queryString =
-  "SELECT CustomerID, CompanyName FROM dbo.Customers";  
-SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);  
-  
-DataSet customers = new DataSet();  
+  "SELECT CustomerID, CompanyName FROM dbo.Customers";
+SqlDataAdapter adapter = new SqlDataAdapter(queryString, connection);
+
+DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");
 ```
 
@@ -355,7 +355,7 @@ adapter.Fill(customers, "Customers");
 
 您可以接受 `DataSet` `DataTable` ASP.NET (SOAP) web 服務中的或實例，如下列程式碼所示：
 
-```cs
+```csharp
 using System.Data;
 using System.Web.Services;
 
@@ -372,7 +372,7 @@ public class MyService : WebService
 
 的變化不是接受 `DataSet` 或 `DataTable` 直接作為參數，而是在整體 SOAP 序列化物件圖形中接受它，如下列程式碼所示：
 
-```cs
+```csharp
 using System.Data;
 using System.Web.Services;
 
@@ -396,7 +396,7 @@ public class MyClass
 
 或者，使用 WCF 而不是 ASP.NET web 服務：
 
-```cs
+```csharp
 using System.Data;
 using System.ServiceModel;
 
@@ -423,7 +423,7 @@ public class MyClass
 
 開發人員可以使用還原序列化 `XmlSerializer` `DataSet` 和 `DataTable` 實例，如下列程式碼所示：
 
-```cs
+```csharp
 using System.Data;
 using System.IO;
 using System.Xml.Serialization;
@@ -452,7 +452,7 @@ public class MyClass
 
 熱門的協力廠商 Newtonsoft 程式庫 [JSON.NET](https://www.newtonsoft.com/json) 可以用來還原序列化 `DataSet` 和 `DataTable` 實例，如下列程式碼所示：
 
-```cs
+```csharp
 using System.Data;
 using Newtonsoft.Json;
 
@@ -497,27 +497,27 @@ public class MyClass
 * 引進不同的資料庫提供者 [生態系統](/ef/core/providers/) ，讓您輕鬆地透過 Entity Framework 物件模型來投影資料庫查詢。
 * 從不受信任的來源還原序列化資料時，提供內建的保護。
 
-針對使用 SOAP 端點的應用程式 `.aspx` ，請考慮將這些端點變更為使用 [WCF](/dotnet/framework/wcf/)。 WCF 是 web 服務的功能更完整的取代 `.asmx` 。 您 [可以透過 SOAP 公開](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) WCF 端點，以與現有的呼叫端相容。
+針對使用 SOAP 端點的應用程式 `.aspx` ，請考慮將這些端點變更為使用 [WCF](../../../wcf/index.md)。 WCF 是 web 服務的功能更完整的取代 `.asmx` 。 您 [可以透過 SOAP 公開](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) WCF 端點，以與現有的呼叫端相容。
 
 ## <a name="code-analyzers"></a>程式碼分析器
 
 編譯原始程式碼時所執行的程式碼分析器安全性規則，可協助您在 c # 和 Visual Basic 程式碼中找到與此安全性問題相關的弱點。 CodeAnalysis 將 microsoft.codeanalysis.fxcopanalyzers 是在 [nuget.org](https://www.nuget.org/)上散發之程式碼分析器的 NuGet 套件。
 
-如需程式碼分析器的總覽，請參閱 [原始程式碼分析器的總覽](https://docs.microsoft.com/visualstudio/code-quality/roslyn-analyzers-overview)。
+如需程式碼分析器的總覽，請參閱 [原始程式碼分析器的總覽](/visualstudio/code-quality/roslyn-analyzers-overview)。
 
 啟用下列 CodeAnalysis 規則：
 
-- [CA2350](https://docs.microsoft.com/visualstudio/code-quality/ca2350)：不使用 DataTable. ReadXml ( # A1 與不受信任的資料
-- [CA2351](https://docs.microsoft.com/visualstudio/code-quality/ca2351)：不使用資料集. ReadXml ( # A1 與不受信任的資料
-- [CA2352](https://docs.microsoft.com/visualstudio/code-quality/ca2352)：可序列化類型的 Unsafe DataSet 或 DataTable 可能很容易受到遠端程式碼執行攻擊
-- [CA2353](https://docs.microsoft.com/visualstudio/code-quality/ca2353)： serializable 類型中不安全的 DataSet 或 DataTable
-- [CA2354](https://docs.microsoft.com/visualstudio/code-quality/ca2354)：還原序列化的物件圖形中不安全的資料集或 DataTable 可能很容易受到遠端程式碼執行攻擊
-- [CA2355](https://docs.microsoft.com/visualstudio/code-quality/ca2355)：在還原序列化物件圖形中找到 Unsafe 資料集或 DataTable 類型
-- [CA2356](https://docs.microsoft.com/visualstudio/code-quality/ca2356)： web 還原序列化物件圖形中不安全的資料集或 DataTable 類型
-- [CA2361](https://docs.microsoft.com/visualstudio/code-quality/ca2361)：確定包含資料集的自動產生類別 ReadXml ( # A1 未與不受信任的資料搭配使用
-- [CA2362](https://docs.microsoft.com/visualstudio/code-quality/ca2362)：自動產生的可序列化類型中不安全的資料集或 DataTable 可能很容易受到遠端程式碼執行攻擊
+- [CA2350](/visualstudio/code-quality/ca2350)：不使用 DataTable. ReadXml ( # A1 與不受信任的資料
+- [CA2351](/visualstudio/code-quality/ca2351)：不使用資料集. ReadXml ( # A1 與不受信任的資料
+- [CA2352](/visualstudio/code-quality/ca2352)：可序列化類型的 Unsafe DataSet 或 DataTable 可能很容易受到遠端程式碼執行攻擊
+- [CA2353](/visualstudio/code-quality/ca2353)： serializable 類型中不安全的 DataSet 或 DataTable
+- [CA2354](/visualstudio/code-quality/ca2354)：還原序列化的物件圖形中不安全的資料集或 DataTable 可能很容易受到遠端程式碼執行攻擊
+- [CA2355](/visualstudio/code-quality/ca2355)：在還原序列化物件圖形中找到 Unsafe 資料集或 DataTable 類型
+- [CA2356](/visualstudio/code-quality/ca2356)： web 還原序列化物件圖形中不安全的資料集或 DataTable 類型
+- [CA2361](/visualstudio/code-quality/ca2361)：確定包含資料集的自動產生類別 ReadXml ( # A1 未與不受信任的資料搭配使用
+- [CA2362](/visualstudio/code-quality/ca2362)：自動產生的可序列化類型中不安全的資料集或 DataTable 可能很容易受到遠端程式碼執行攻擊
 
-如需設定規則的詳細資訊，請參閱 [使用程式碼分析器](https://docs.microsoft.com/visualstudio/code-quality/use-roslyn-analyzers)。
+如需設定規則的詳細資訊，請參閱 [使用程式碼分析器](/visualstudio/code-quality/use-roslyn-analyzers)。
 
 下列 NuGet 套件中提供新的安全性規則：
 

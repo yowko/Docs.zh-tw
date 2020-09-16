@@ -1,6 +1,6 @@
 ---
 title: 封裝 COM 的 .NET Framework 組件
-description: 封裝 COM 的 .NET 元件。 收集 COM 應用程式可以取用的類型清單、版本控制和部署指示，以及類型程式庫。
+description: 封裝 COM 的 .NET 元件。 收集 COM 應用程式可以取用的類型清單、版本設定和部署指示，以及類型程式庫。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5fde7f7f00aadf4d941d4ffe522453970b67e9e2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620829"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554126"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>封裝 COM 的 .NET Framework 組件
 
@@ -38,7 +38,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 
   可實作類別介面 (COM Interop 產生的介面) 的 Managed 類別受到版本設定限制。
 
-  如需使用類別介面的指導方針，請參閱[類別介面簡介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。
+  如需使用類別介面的指導方針，請參閱 [類別介面簡介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。
 
 - 部署指示
 
@@ -60,7 +60,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 
   不論您選擇的機制為何，只有所提供組件中定義的公用類型才會包含在所產生的型別程式庫中。
 
-如需指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。
+如需指示，請參閱[如何：將型別程式庫當作 Win32 資源內嵌在 .NET 架構應用程式中](/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))。
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
@@ -96,6 +96,6 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 - [限定交互操作的 .NET 類型](../../standard/native-interop/qualify-net-types-for-interoperation.md)
 - [類別介面簡介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [元件安全性考慮](../../standard/assembly/security-considerations.md)
-- [Tlbexp.exe （類型程式庫匯出工具）](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbexp.exe (型別程式庫匯出工具) ](../tools/tlbexp-exe-type-library-exporter.md)
 - [向 COM 註冊組件](registering-assemblies-with-com.md)
-- [如何：將型別程式庫當作 Win32 資源內嵌在應用程式中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [如何：將型別程式庫當作 Win32 資源內嵌在應用程式中](/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

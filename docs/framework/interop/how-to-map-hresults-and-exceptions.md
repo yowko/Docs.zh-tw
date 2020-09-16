@@ -1,6 +1,6 @@
 ---
 title: 作法：對應 HRESULT 和例外狀況
-description: 請參閱如何將 COM 方法傳回的 HRESULT 值對應至 .NET 方法所擲回的例外狀況。 執行時間會處理 COM 和 .NET 之間的轉換。
+description: 請參閱如何將 COM 方法傳回的 HRESULT 值對應到 .NET 方法擲回的例外狀況。 執行時間會處理 COM 與 .NET 之間的轉換。
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: 827e79bdefcde7ae94567e5341ade76097dc8eaa
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a1a43d7ce3fbc678cc9aa047c5110ac8615ea27e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619100"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554139"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>作法：對應 HRESULT 和例外狀況
 COM 方法是藉由傳回 HRESULT 來報告錯誤；.NET 方法則是藉由擲回例外狀況來報告錯誤。 執行階段則負責處理兩者之間的轉換。 .NET Framework 的每一個例外狀況類別都會對應到一個 HRESULT。  
@@ -133,8 +133,8 @@ CMyClass::MethodThatThrows
 |---------------------|------------------------------------|  
 |**ErrorCode**|從呼叫傳回的 HRESULT。|  
 |**HelpLink**|如果 **IErrorInfo->HelpContext** 是非零值，則字串是由串連 **IErrorInfo->GetHelpFile**、"#" 和 **IErrorInfo->GetHelpContext** 所構成。 否則，字串是從 **IErrorInfo->GetHelpFile** 所傳回。|  
-|**InnerException**|一律為 null 參考（在 Visual Basic 中為**任何內容**）。|  
-|**Message**|從 **IErrorInfo->GetDescription** 傳回的字串。|  
+|**InnerException**|在 Visual Basic) 中，一律為 null 參考 (**Nothing** 。|  
+|**訊息**|從 **IErrorInfo->GetDescription** 傳回的字串。|  
 |**Source**|從 **IErrorInfo->GetSource** 傳回的字串。|  
 |**StackTrace**|堆疊追蹤。|  
 |**TargetSite**|傳回失敗 HRESULT 之方法的名稱。|  
@@ -143,5 +143,5 @@ CMyClass::MethodThatThrows
   
 ## <a name="see-also"></a>另請參閱
 
-- [進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [進階 COM 互通性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [例外狀況](../../standard/exceptions/index.md)

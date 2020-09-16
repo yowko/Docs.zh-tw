@@ -8,14 +8,14 @@ ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 2e8abef547d8cc06d80b8cbf865ec984eb91d330
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552122"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554992"
 ---
-# <a name="linq-overview"></a>LINQ 總覽
+# <a name="linq-overview"></a>LINQ 概觀
 
  (LINQ) 的語言整合式查詢提供語言層級的查詢功能，以及可讓您撰寫明確宣告式程式碼的 [高序位函式](https://en.wikipedia.org/wiki/Higher-order_function) API （c # 和 Visual Basic）。
 
@@ -111,7 +111,7 @@ End Function
 
 撰寫程式碼以手動方式流覽 XML 檔以進行這項工作，是更具挑戰性的。
 
-與 XML 互動不是您唯一可以使用 LINQ 提供者進行的作業。 [Linq to SQL](../../framework/data/adonet/sql/linq/index.md) 是相當基本的 MSSQL 伺服器資料庫物件關聯式對應程式 (ORM)。 [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 程式庫提供透過 LINQ 的具效率 JSON 文件周遊。 此外，如果沒有可執行所需功能的程式庫，您也可以 [撰寫自己的 LINQ 提供者](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))！
+與 XML 互動不是您唯一可以使用 LINQ 提供者進行的作業。 [Linq to SQL](../../framework/data/adonet/sql/linq/index.md) 是相當基本的 MSSQL 伺服器資料庫物件關聯式對應程式 (ORM)。 [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) 程式庫提供透過 LINQ 的具效率 JSON 文件周遊。 此外，如果沒有可執行所需功能的程式庫，您也可以 [撰寫自己的 LINQ 提供者](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))！
 
 ## <a name="reasons-to-use-the-query-syntax"></a>使用查詢語法的原因
 
@@ -141,7 +141,7 @@ Dim filteredItems = From item In myItems
 
 API 語法不是比較精確的查詢語法方式嗎？
 
-不會。 查詢語法可讓您使用 **let** 子句，允許您在運算式的範圍內導入及繫結變數，並在運算式的後續片段中使用它。 使用 API 語法來重現相同的程式碼可以完成，但很可能會導致難以閱讀的程式碼。
+否。 查詢語法可讓您使用 **let** 子句，允許您在運算式的範圍內導入及繫結變數，並在運算式的後續片段中使用它。 使用 API 語法來重現相同的程式碼可以完成，但很可能會導致難以閱讀的程式碼。
 
 而這就帶出了一個問題，**您應該只使用查詢語法嗎？**
 
@@ -159,7 +159,7 @@ API 語法不是比較精確的查詢語法方式嗎？
 
 ## <a name="essential-linq"></a>基本 LINQ
 
-如需 LINQ 範例的真正完整清單，請瀏覽 [101 LINQ Samples](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/) (LINQ 範例入門)。
+如需 LINQ 範例的真正完整清單，請瀏覽 [101 LINQ Samples](/samples/dotnet/try-samples/101-linq-samples/) (LINQ 範例入門)。
 
 下列範例是 LINQ 的一些基本部分的快速示範。 這並沒有完整的功能，因為 LINQ 提供的功能比這裡展示的還多。
 
@@ -394,6 +394,6 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 
 ## <a name="more-resources"></a>其他資源
 
-* [101 LINQ 範例](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
+* [101 LINQ 範例](/samples/dotnet/try-samples/101-linq-samples/)
 * [Linqpad](https://www.linqpad.net/)，適用于 c #/F #/Visual Basic 的遊樂場環境和資料庫查詢引擎
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，為學習 LINQ-to-object 如何實作的電子書

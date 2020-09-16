@@ -1,6 +1,6 @@
 ---
 title: 字串的預設封送處理
-description: 在 .NET 中，針對介面、平台叫用、結構、& 固定長度的字串緩衝區中的字串，檢查預設的封送處理行為。
+description: 在 .NET 中，針對介面、平台叫用、結構 & 固定長度字串緩衝區中的字串，檢查預設的封送處理行為。
 ms.date: 03/20/2019
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-ms.openlocfilehash: 440a49730f351b820cd68a741e79f94434f585c8
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 81df2dcc132c8ce057fa3e0e7d0ad04832f7a48b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904113"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555051"
 ---
 # <a name="default-marshaling-for-strings"></a>字串的預設封送處理
 
@@ -233,7 +233,7 @@ End Structure
 
 解決方式為傳遞 <xref:System.Text.StringBuilder> 緩衝區作為引數，而非 <xref:System.String>。 `StringBuilder` 可以為已取值，而且由被呼叫端修改，前提是它不會超過 `StringBuilder` 的容量。 它也可以初始化為固定長度。 例如，如果您初始化 `StringBuilder` 緩衝區為 `N` 的容量，封送處理器會提供 (`N`+1) 個字元大小的緩衝區。 +1 代表 Unmanged 字串具有 null 結束字元，但 `StringBuilder` 沒有。
 
-例如，Windows API 函式 [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) （定義于*winuser*中）要求呼叫端傳遞固定長度的字元緩衝區，函式會將視窗的文字寫入其中。 `LpString` 指向大小為 `nMaxCount` 的呼叫端配置緩衝區。 呼叫端必須配置緩衝區，並設定 `nMaxCount` 引數為配置緩衝區的大小。 下列範例顯示在 *winuser.h* 中所定義的 `GetWindowText` 函式宣告。
+例如，在 [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) *winuser* 中定義的 Windows API 函式 () 要求呼叫端必須傳遞固定長度的字元緩衝區，函式會將視窗的文字寫入其中。 `LpString` 指向大小為 `nMaxCount` 的呼叫端配置緩衝區。 呼叫端必須配置緩衝區，並設定 `nMaxCount` 引數為配置緩衝區的大小。 下列範例顯示在 *winuser.h* 中所定義的 `GetWindowText` 函式宣告。
 
 ```cpp
 int GetWindowText(
@@ -291,5 +291,5 @@ End Class
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [封送處理字串](marshaling-strings.md)
 - [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
-- [方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [方向屬性](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [複製和 Pin](copying-and-pinning.md)

@@ -1,6 +1,6 @@
 ---
 title: 作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
-description: 配置.以網路為基礎的 COM 元件，適用于免註冊啟用。 安裝程式需要 Win32 樣式的應用程式資訊清單和 .NET 元件資訊清單。
+description: 配置。以網路為基礎的 COM 元件，適用于免註冊啟用。 安裝程式需要 Win32 樣式的應用程式資訊清單和 .NET 元件資訊清單。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ad25a79add84e43ba0a8e71a0f48c5ddf65108bd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622194"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554836"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>作法：設定 .NET Framework 架構 COM 元件進行免註冊啟用
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
@@ -78,7 +78,7 @@ ms.locfileid: "85622194"
   
 5. 儲存並命名資訊清單檔。 應用程式資訊清單的名稱就是後接 .manifest 副檔名的組件可執行檔名稱。 例如，myComApp.exe 的應用程式資訊清單檔案名稱是 myComApp.exe.manifest。  
   
-您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，請參閱[關於並存元件](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。  
+您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，請參閱 [關於並存元件](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。  
   
 ## <a name="create-a-component-manifest"></a>建立元件資訊清單  
   
@@ -171,11 +171,11 @@ ms.locfileid: "85622194"
   
     `/win32res:myresource.res`  
   
-     同樣地， `myresource.res` 是包含內嵌資源的資源檔名稱。  
+     同樣地， `myresource.res` 這是包含內嵌資源的資源檔名稱。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [免註冊的 COM Interop](registration-free-com-interop.md)
-- [免註冊 COM Interop 的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [設定適用於免註冊啟用的 COM 元件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [免註冊啟用 .NET 元件：逐步解說](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [免註冊 COM Interop 的需求](/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [設定適用於免註冊啟用的 COM 元件](/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [免註冊啟用 .NET 元件：逐步解說](/previous-versions/dotnet/articles/ms973915(v=msdn.10))

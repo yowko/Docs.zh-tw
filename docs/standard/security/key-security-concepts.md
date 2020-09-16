@@ -11,25 +11,25 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 259723b903377f7e79731e1ff79b3d512581102f
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5dedf6df8e6cf2cf886e68cc132a44abfb201c49
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555263"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554393"
 ---
 # <a name="key-security-concepts"></a>重要的安全性概念
 
 > [!NOTE]
 > 本文適用于 Windows。
 >
-> 如需 ASP.NET Core 的詳細資訊，請參閱[ASP.NET Core 安全性的總覽](https://docs.microsoft.com/aspnet/core/security/)。
+> 如需 ASP.NET Core 的詳細資訊，請參閱 [ASP.NET Core 安全性的總覽](/aspnet/core/security/)。
 
-.NET 提供以角色為基礎的安全性，以協助解決行動程式碼的安全性疑慮，並提供支援，讓元件能夠判斷哪些使用者有權執行。  
+.NET 提供以角色為基礎的安全性，以協助解決行動程式碼的安全性疑慮，並提供支援，讓元件能夠判斷哪些使用者已獲授權。  
   
 ## <a name="type-safety-and-security"></a>類型安全和安全性  
 
-類型安全程式碼只會存取經授權存取的記憶體位置。  (在此討論中，型別安全特別指的是記憶體型別安全性，而且不應該與更廣泛的型別安全混淆。 ) 例如，型別安全的程式碼無法從另一個物件的私用欄位讀取值。 它只會以妥善定義、可允許的方式來存取類型。  
+類型安全程式碼只會存取經授權存取的記憶體位置。  (在此討論中，型別安全特別指的是記憶體型別安全，而且不應該與較廣泛的型別安全性混淆。 ) 例如，型別安全程式碼無法從其他物件的私用欄位中讀取值。 它只會以妥善定義、可允許的方式來存取類型。  
   
 在 Just-In-Time (JIT) 編譯期間，選擇性的驗證程序會檢查中繼資料，以及要以 JIT 編譯成原生機器程式碼之方法的 Microsoft Intermediate Language (MSIL)，以驗證其類型安全。 如果程式碼具有略過驗證的權限，則會略過此程序。 如需有關驗證的詳細資訊，請參閱 [Managed 執行程序](../managed-execution-process.md)。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "87555263"
 如需詳細資訊，請參閱[主體和身分識別物件](principal-and-identity-objects.md)。  
   
 ## <a name="authentication"></a>驗證  
-驗證是探索並確認主體身分識別的程序，它會檢查使用者的認證，並針對某授權單位來驗證那些認證。 在驗證期間取得的資訊可直接供是由您的程式碼使用。 您也可以使用 .NET 以角色為基礎的安全性來驗證目前的使用者，以及判斷是否允許該主體存取您的程式碼。 請參閱 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 方法的多載，以取得如何針對特定角色來驗證主體的範例。 例如，您可以使用 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 多載來判斷目前使用者是否為系統管理員群組的成員。  
+驗證是探索並確認主體身分識別的程序，它會檢查使用者的認證，並針對某授權單位來驗證那些認證。 在驗證期間取得的資訊可直接供是由您的程式碼使用。 您也可以使用 .NET 以角色為基礎的安全性來驗證目前使用者，並判斷是否允許該主體存取您的程式碼。 請參閱 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 方法的多載，以取得如何針對特定角色來驗證主體的範例。 例如，您可以使用 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 多載來判斷目前使用者是否為系統管理員群組的成員。  
   
-現今會使用各種不同的驗證機制，其中有許多都可以搭配 .NET 角色型安全性使用。 部分最常用的機制有基本、摘要式、Passport、作業系統 (例如 NTLM 或 Kerberos) 或應用程式定義的機制。  
+現今使用各種不同的驗證機制，其中有許多可搭配 .NET 以角色為基礎的安全性使用。 部分最常用的機制有基本、摘要式、Passport、作業系統 (例如 NTLM 或 Kerberos) 或應用程式定義的機制。  
   
 ### <a name="example"></a>範例  
 

@@ -2,19 +2,19 @@
 title: 路由服務的 Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 86a2981e8b861da9d5ccf0a34fe037f3ef419aab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 63cfb32a5f5d0cae7635d39d5df594a5bb07e411
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183639"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554784"
 ---
 # <a name="hello-world-with-the-routing-service"></a>路由服務的 Hello World
-此示例演示 Windows 通信基礎 （WCF） 路由服務。 路由服務是一個 WCF 元件，便於在應用程式中包含基於內容的路由器。 此示例調整標準 WCF 計算機示例以使用路由服務進行通信。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。
+此範例示範 WCF) 路由服務 Windows Communication Foundation (。 路由服務是一個 WCF 元件，可讓您輕鬆地在應用程式中包含以內容為基礎的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。
 
 ### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 使用 Visual Studio 2012，打開 HelloRoutingServiceService.sln。
+1. 使用 Visual Studio 2012 開啟 HelloRoutingService .sln。
 
 2. 按下 F5 或 CTRL+SHIFT+B。
 
@@ -53,10 +53,10 @@ ms.locfileid: "79183639"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至 [Windows Communication Foundation (wcf) 並 Windows Workflow Foundation (適用于) 4 的 WF .NET Framework 範例](https://www.microsoft.com/download/details.aspx?id=21459) 下載所有 WINDOWS COMMUNICATION FOUNDATION 的 wcf (和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>另請參閱
 
-- [AppFabric 主控與持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric 主控與持續性範例](/previous-versions/appfabric/ff383418(v=azure.10))

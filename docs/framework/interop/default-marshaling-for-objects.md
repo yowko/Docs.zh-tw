@@ -1,6 +1,6 @@
 ---
 title: 物件的預設封送處理
-description: 瞭解物件的預設封送處理。 檢查封送處理選項。 將物件封送處理至介面或變數、物件的變體，以及 ByRef 變體。
+description: 瞭解物件的預設封送處理。 請參閱封送處理選項。 封送處理物件至介面或變數、物件的變異和 ByRef 變異。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-ms.openlocfilehash: 7b8f94f4dfd8e8b9e8e04df8de5f8266a8581a92
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3e07ceef62d97db4206f530aa0859b101fe41a11
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618443"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555090"
 ---
 # <a name="default-marshaling-for-objects"></a>物件的預設封送處理
 
@@ -117,7 +117,7 @@ struct ObjectHolder {
 
 ## <a name="marshaling-object-to-interface"></a>將物件封送處理成介面
 
-向 COM 將物件公開為介面時，該介面是 Managed 類型 <xref:System.Object> 的類別介面 (**_Object** 介面)。 此介面在產生的類型程式庫中會輸入為**IDispatch** （ <xref:System.Runtime.InteropServices.UnmanagedType> ）或**iunknown** （**unmanagedtype.lpwstr iunknown**）。 COM 用戶端可以動態方式叫用 Managed 類別的成員，或其衍生類別透過 **_Object** 介面所實作的任何成員。 用戶端也可以呼叫 **QueryInterface** 取得 Managed 類型明確實作的任何其他介面。
+向 COM 將物件公開為介面時，該介面是 Managed 類型 <xref:System.Object> 的類別介面 (**_Object** 介面)。 在產生的類型程式庫中，此介面的類型為 **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) 或 **iunknown** (**unmanagedtype.lpwstr**) 。 COM 用戶端可以動態方式叫用 Managed 類別的成員，或其衍生類別透過 **_Object** 介面所實作的任何成員。 用戶端也可以呼叫 **QueryInterface** 取得 Managed 類型明確實作的任何其他介面。
 
 ## <a name="marshaling-object-to-variant"></a>將物件封送處理成 Variant
 
@@ -311,18 +311,18 @@ COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；�
 
 下表摘要說明 Variant 和物件的傳播規則。
 
-|從|至|變更傳播回|
+|寄件者|收件者|變更傳播回|
 |----------|--------|-----------------------------|
 |**Variant**  *v*|**物件**  *o*|永不|
 |**物件**  *o*|**Variant**  *v*|永不|
-|**Variant** ***\*****pv*     |**Ref 物件**  *o*|永遠|
-|**Ref 物件**  *o*|**Variant** ***\*****pv*     |永遠|
+|**變異** ***\*****pv*     |**Ref 物件**  *o*|一律|
+|**Ref 物件**  *o*|**變異** ***\*****pv*     |一律|
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**物件**  *o*|永不|
-|**Variant**  *v* **（VT_BYREF** *&#124;* **VT_）**|**Ref 物件**  *o*|只有當類型不變更時。|
+|**Variant**  *v* ** (VT_BYREF** *&#124;* **VT_) **|**Ref 物件**  *o*|只有當類型不變更時。|
 
 ## <a name="see-also"></a>另請參閱
 
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
-- [方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [方向屬性](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [複製和 Pin](copying-and-pinning.md)

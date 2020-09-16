@@ -1,16 +1,16 @@
 ---
 title: 控制 .NET Framework 記錄
-description: 使用 Windows 事件追蹤（ETW）來控制 .NET 記錄和記錄 common language runtime （CLR）事件。 使用 Logman、Tracerpt 和 Xperf 等工具。
+description: 使用 Windows 事件追蹤 (ETW) 來控制 .NET 記錄，並將 common language runtime 記錄 (CLR) 事件。 使用 Logman、Tracerpt 和 Xperf 等工具。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bce5ea41149dc3b19106031fae202872dd8a8fb5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309582"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553801"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 記錄
 
@@ -18,7 +18,7 @@ ms.locfileid: "86309582"
 
 - [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令列工具，隨附於 Windows 作業系統。
 
-- [Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://docs.microsoft.com/archive/blogs/pigscanfly/)。
+- [Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](/archive/blogs/pigscanfly/)。
 
 若要擷取 CLR 事件資訊，您必須在電腦上安裝 CLR 提供者。 若要確認是否已安裝此提供者，請在命令提示字元中輸入 `logman query providers`。 提供者的清單隨即顯示。 此清單應該會包含 CLR 提供者的項目，如下所示。
 
@@ -28,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。 以系統管理員身分開啟 [命令提示字元] 視窗。 將提示目錄變更為 .NET Framework 4 資料夾（%WINDIR%\Microsoft.NET\Framework [64] \v4. \<.NET version>\ ). 這個資料夾包含 CLR-ETW.man 檔案。 在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：
+如果未列出 CLR 提供者，您可以使用 Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) 命令列工具，在 Windows Vista 和更新版本的作業系統上安裝此提供者。 以系統管理員身分開啟 [命令提示字元] 視窗。 將提示目錄變更為 .NET Framework 4 資料夾 (%WINDIR%\Microsoft.NET\Framework [64] \v4. \<.NET version>\ ) 。 這個資料夾包含 CLR-ETW.man 檔案。 在命令提示字元中，輸入下列命令，即可安裝 CLR 提供者：
 
 `wevtutil im CLR-ETW.man`
 

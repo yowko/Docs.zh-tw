@@ -2,32 +2,32 @@
 title: 範例
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: f76984051fe86f209ee23799df2c533c3f55d6ea
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: 3580163912953407868ffbb1b990e92380bb24c4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78848791"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553879"
 ---
 # <a name="samples"></a>範例
-本主題提供指向包含[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]示例代碼的 Visual Basic 和 C# 解決方案的連結。  
+本主題提供含有範例程式碼之 Visual Basic 和 c # 方案的連結 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 。  
   
 ## <a name="in-this-section"></a>本節內容  
- 依例查詢解決方案的視覺化基本版本  
- [依例查詢（可視基本）](../../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ Visual Basic 版本的 SampleQueries 解決方案  
+ [ (Visual Basic) 的範例查詢 ](../../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
  SampleQueries 方案的 C# 版本  
- [依例查詢](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))  
+ [範例查詢](/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))  
   
  請遵循這些步驟來尋找 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 程式碼和應用程式的其他範例：  
   
-- 搜索 Microsoft 文檔上的具體問題。  
+- 搜尋 Microsoft Docs 上的特定問題。  
   
-- 參加[LINQ論壇](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql)，在那裡你可以與專家詳細討論更複雜的話題。  
+- 參與 [LINQ 論壇](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql)，您可以在此與專家詳細討論更多複雜的主題。  
   
-- 研究詳細技術[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]白皮書，並附有 Visual Basic 和 C# 代碼示例。 有關詳細資訊，請參閱[LINQ 到 SQL： .NET 語言集成查詢關係資料](https://docs.microsoft.com/previous-versions/dotnet/articles/bb425822(v=msdn.10))。  
+- 研究詳述技術的白皮書 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ，其中包含 Visual Basic 和 c # 程式碼範例的完整資訊。 如需詳細資訊，請參閱 [LINQ to SQL：適用于關聯式資料的 .Net 語言整合查詢](/previous-versions/dotnet/articles/bb425822(v=msdn.10))。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ to SQL](index.md)
-- [LINQ to SQL 逐步解說](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))
+- [LINQ to SQL 逐步解說](/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))

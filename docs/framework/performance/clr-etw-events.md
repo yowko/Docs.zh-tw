@@ -1,18 +1,18 @@
 ---
 title: CLR ETW 事件
-description: 請參閱有關 Windows （ETW）事件追蹤的 common language runtime （CLR）事件的文章。 有兩個事件提供者：執行時間提供者和取消提供者。
+description: 請參閱適用于 Windows (ETW) 事件之 common language runtime (CLR) 事件追蹤的相關文章。 有兩個事件提供者：執行時間提供者和取消提供者。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 22a2f027462d67d5a933972a7420c5f0e38353e5
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309829"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553814"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
 本節中的主題描述 Windows (ETW) 事件的事件追蹤。 每個事件都有相關聯的關鍵字和層級，如 [CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)主題中所述。 CLR 具有事件的兩個提供者：  
@@ -62,7 +62,7 @@ ms.locfileid: "86309829"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用 ETW 改善偵錯和效能調整](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [使用 ETW 改善偵錯和效能調整](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [控制 .NET Framework 記錄](controlling-logging.md)
 - [CLR ETW 提供者](clr-etw-providers.md)
 - [CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)
