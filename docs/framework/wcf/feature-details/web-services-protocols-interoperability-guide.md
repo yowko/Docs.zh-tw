@@ -2,16 +2,16 @@
 title: Web 服務通訊協定互通性指南
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 4169a796311c402a97358de5d52c52562b6ed357
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f35ca629da65af749897d28d28808d06eced7aa8
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553170"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720110"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服務通訊協定互通性指南
 
-Windows Communication Foundation (WCF) 會執行許多 Web 服務通訊協定。 許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。 本主題提供 WCF 所實行的 Web 服務通訊協定清單。 本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。
+Windows Communication Foundation (WCF) 會執行許多 Web 服務通訊協定。 許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。 本文提供 WCF 所實行的 Web 服務通訊協定清單。 本節中的其他文章會提供每個支援的通訊協定的執行詳細資料。
 
 ## <a name="web-services-protocols-implemented-by-wcf"></a>WCF 所實行的 Web 服務通訊協定
 
@@ -64,9 +64,9 @@ WCF 透過「合約」功能，透過通道和 Web 服務應用程式協定，�
 |WSS：X509 權杖設定檔 1.1|[Web 服務安全性 X.509 憑證權杖設定檔 1.1](https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf)|
 |WSS：Kerberos 權杖設定檔 1.1|[Web 服務安全性 Kerberos 權杖設定檔 1.1](https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf)|
 |WSS：SAML 1.1 權杖設定檔 1.1|[Web 服務安全性 SAML 權杖設定檔 1.1](https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf)|
-|WS-SecureConversation|[Web 服務安全轉換語言](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
+|WS-SecureConversation|[Web 服務安全轉換語言](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
 |WS-Trust 1.4|[Web 服務信任語言](https://docs.oasis-open.org/ws-sx/ws-trust/200802)|
-|WS-SecurityPolicy 2005/07|[Web 服務安全轉換語言](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> 已由提交至 OASIS WS-SX 技術委員會的勘誤表修訂。<br /><br /> [ws-sx 訊息](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
+|WS-SecurityPolicy 2005/07|[Web 服務安全轉換語言](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> 已由提交至 OASIS WS-SX 技術委員會的勘誤表修訂。<br /><br /> [ws-sx 訊息](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
 |WS-ReliableMessaging 1.1|[Reliable Messaging Protocol 1.1 版](reliable-messaging-protocol-version-1-1.md)|
 
 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 支援下表中的規格。
@@ -74,7 +74,7 @@ WCF 透過「合約」功能，透過通道和 Web 服務應用程式協定，�
 |規格/文件|連結|
 |-----------------------------|----------|
 |WS-Coordination|[Web 服務協調](/previous-versions/ms951231(v=msdn.10))|
-|WS-AtomicTransaction|[Web 服務原子交易](https://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
+|WS-AtomicTransaction|[Web 服務原子交易](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
 
 <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter> 和 <xref:System.ServiceModel.Description.MetadataResolver> 類別支援下列中繼資料規格：
 
@@ -90,7 +90,7 @@ WCF 透過「合約」功能，透過通道和 Web 服務應用程式協定，�
 
 - [WS-PolicyAttachment 1.2](https://www.w3.org/Submission/2006/SUBM-WS-PolicyAttachment-20060425/)
 
-- [WS-MetadataExchange 1.1](https://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
+- [WS-MetadataExchange 1.1](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
 
 - [用於中繼資料擷取的 WS-Transfer Get](https://www.w3.org/Submission/2006/SUBM-WS-Transfer-20060315/)
 

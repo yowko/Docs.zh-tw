@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: e3c9f23ca73ed9b85d09680ec15251ebe02c7f8e
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065140"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90721272"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416：平臺相容性
 
-預設會啟用 .NET 程式碼分析器規則 CA1416，從 .NET 5.0 開始。 它會從未驗證作業系統的呼叫網站，產生對平臺特定 Api 呼叫的組建警告。
+預設會啟用 .NET 程式碼分析器規則 [CA1416](/visualstudio/code-quality/ca1416) ，從 .net 5.0 開始。 它會從未驗證作業系統的呼叫網站，產生對平臺特定 Api 呼叫的組建警告。
 
 #### <a name="change-description"></a>變更描述
 
-從 .NET 5.0 開始，.NET SDK 包含 [.net source 程式碼分析器](../../../../docs/fundamentals/productivity/code-analysis.md)。 預設會啟用這些規則中的數個，包括 CA1416。 如果您的專案包含違反此規則的程式碼，而且設定為將警告視為錯誤，這項變更可能會中斷您的組建。 當您從平臺內容未通過驗證的位置使用平臺特定 Api 時，規則 CA1416 會通知您。
+從 .NET 5.0 開始，.NET SDK 包含 [.net source 程式碼分析器](../../../../docs/fundamentals/productivity/code-analysis.md)。 預設會啟用這些規則中的數個，包括 [CA1416](/visualstudio/code-quality/ca1416)。 如果您的專案包含違反此規則的程式碼，而且設定為將警告視為錯誤，這項變更可能會中斷您的組建。 當您從平臺內容未通過驗證的位置使用平臺特定 Api 時，規則 CA1416 會通知您。
 
-「平臺相容性分析器」規則 CA1416 與 .NET 5.0 的一些新功能搭配使用。 .NET 5.0 引進 `SupportedOSPlatformAttribute` 和 `UnsupportedOSPlatformAttribute` 屬性 (<xref:System.Runtime.Versioning.MinimumOSPlatformAttribute> <xref:System.Runtime.Versioning.RemovedInOSPlatformAttribute> 在先前的預覽版本中) ，可讓您指定不支援 API 的平臺。 *is* *isn't* 如果沒有這些屬性，則會假設所有平臺都支援 API。 這些屬性已套用至核心 .NET 程式庫中的平臺特定 Api。
+「平臺相容性分析器」規則 [CA1416](/visualstudio/code-quality/ca1416)與 .net 5.0 的一些新功能搭配使用。 .NET 5.0 引進了 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> 和 <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> ，可讓您指定不支援 API 的平臺*is* 。 *isn't* 如果沒有這些屬性，則會假設所有平臺都支援 API。 這些屬性已套用至核心 .NET 程式庫中的平臺特定 Api。
 
-在以無法使用其所使用之 Api 的平臺為目標的專案中，規則 CA1416 會旗標平臺特定的 API 呼叫，其中不會驗證平臺內容。 大部分現在以和屬性裝飾的 Api，在 `SupportedOSPlatformAttribute` `UnsupportedOSPlatformAttribute` 不受支援的作業系統上叫用時，會擲回 <xref:System.PlatformNotSupportedException> 例外狀況。 既然這些 Api 已標示為平臺特定，規則 CA1416 可協助您藉 <xref:System.PlatformNotSupportedException> 由將作業系統檢查新增至呼叫位置，以防止執行時間例外狀況。
+在以無法使用其所使用之 Api 的平臺為目標的專案中，規則 [CA1416](/visualstudio/code-quality/ca1416) 會旗標平臺特定的 api 呼叫，其中不會驗證平臺內容。 大部分現在以和屬性裝飾的 Api，在 <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> 不受支援的作業系統上叫用時，會擲回 <xref:System.PlatformNotSupportedException> 例外狀況。 既然這些 Api 已標示為平臺特定，規則 [CA1416](/visualstudio/code-quality/ca1416) 可協助您藉 <xref:System.PlatformNotSupportedException> 由將作業系統檢查新增至呼叫位置，以防止執行時間例外狀況。
 
 #### <a name="examples"></a>範例
 
@@ -44,7 +44,7 @@ ms.locfileid: "90065140"
 
 #### <a name="recommended-action"></a>建議的動作
 
-確定只有在程式碼在適當的平臺上執行時，才會呼叫平臺特定的 Api。 您可以使用類別中的其中一個方法來檢查目前的作業系統 `Is<Platform>` <xref:System.OperatingSystem?displayProperty=nameWithType> ，例如，在 `System.OperatingSystem.IsWindows()` 呼叫平臺特定 API 之前。
+確定只有在程式碼在適當的平臺上執行時，才會呼叫平臺特定的 Api。 您可以使用類別中的其中一個方法來檢查目前的作業系統 `Is<Platform>` <xref:System.OperatingSystem?displayProperty=nameWithType> ，例如，在 <xref:System.OperatingSystem.IsWindows?displayProperty=nameWithType> 呼叫平臺特定 API 之前。
 
 您可以 `Is<Platform>` 在語句的條件中使用其中一個方法 `if` ：
 
@@ -122,4 +122,5 @@ public void PlayCMajor()
 
 #### <a name="see-also"></a>另請參閱
 
+- [CA1416：驗證平台相容性](/visualstudio/code-quality/ca1416)
 - [.NET API 分析器](../../../../docs/standard/analyzers/api-analyzer.md)

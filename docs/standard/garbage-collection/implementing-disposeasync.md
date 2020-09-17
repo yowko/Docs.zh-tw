@@ -3,19 +3,19 @@ title: 實作 DisposeAsync 方法
 description: 瞭解如何執行 DisposeAsync 和 DisposeAsyncCore 方法，以執行非同步資源清除。
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/10/2020
+ms.date: 09/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022905"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720279"
 ---
 # <a name="implement-a-disposeasync-method"></a>實作 DisposeAsync 方法
 
@@ -54,7 +54,7 @@ public async ValueTask DisposeAsync()
 ```
 
 > [!NOTE]
-> 相較于處置模式，非同步處置模式中的一個主要差異是，從多載 <xref:System.IAsyncDisposable.DisposeAsync> 方法的呼叫 `Dispose(bool)` 會被指定 `false` 為引數。 <xref:System.IDisposable.Dispose?displayProperty=nameWithType>不過，在執行方法時， `true` 會改為傳遞。 這有助於確保與同步處置模式的功能性相等，並進一步確保仍會叫用完成項程式碼路徑。 換句話說，此 `DisposeAsyncCore()` 方法會以非同步方式處置受控資源，因此您也不想要以同步方式處置它們。 因此，請呼叫， `Dispose(false)` 而不是 `Dispose(true)` 。
+> 相較于處置模式，非同步處置模式中的一個主要差異是，從多載 <xref:System.IAsyncDisposable.DisposeAsync> 方法的呼叫 `Dispose(bool)` 會被指定 `false` 為引數。 不過，在執行 <xref:System.IDisposable.Dispose?displayProperty=nameWithType> 方法時， `true` 會改為傳遞。 這有助於確保與同步處置模式的功能性相等，並進一步確保仍會叫用完成項程式碼路徑。 換句話說，此 `DisposeAsyncCore()` 方法會以非同步方式處置受控資源，因此您也不想要以同步方式處置它們。 因此，請呼叫， `Dispose(false)` 而不是 `Dispose(true)` 。
 
 ### <a name="the-disposeasynccore-method"></a>DisposeAsyncCore ( # A1 方法
 
@@ -77,15 +77,15 @@ public async ValueTask DisposeAsync()
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
 
-<xref:System.IDisposable.Dispose?displayProperty=nameWithType>和實 <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> 作為簡單的未定案程式碼。 `Dispose(bool)`和 `DisposeAsyncCore()` 方法一開始會先檢查是否 `_disposed` 為 `true` ，而且只會在它的時候執行 `false` 。
+<xref:System.IDisposable.Dispose?displayProperty=nameWithType>和實 <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> 作為簡單的未定案程式碼。
 
-在多載 `Dispose(bool)` 方法中， <xref:System.IDisposable> 如果實例不是，則會有條件地處置實例 `null` 。 <xref:System.IAsyncDisposable>實例會轉換為 <xref:System.IDisposable> ，而且如果也不會 `null` 處置它。 這兩個實例都會指派給 `null` 。
+在多載 `Dispose(bool)` 方法中， <xref:System.IDisposable> 如果實例不是，則會有條件地處置實例 `null` 。 <xref:System.IAsyncDisposable>實例會轉換成 <xref:System.IDisposable> ，如果也不是，則也 `null` 會處置它。 這兩個實例都會指派給 `null` 。
 
 使用 `DisposeAsyncCore()` 方法時，會遵循相同的邏輯方法。 如果 <xref:System.IAsyncDisposable> 實例不是 `null` ，則會等待其對進行的呼叫 `DisposeAsync().ConfigureAwait(false)` 。 如果 <xref:System.IDisposable> 實例也是的實作為 <xref:System.IAsyncDisposable> ，它也會以非同步方式處置。 這兩個實例都會指派給 `null` 。
 
 ## <a name="using-async-disposable"></a>使用非同步可處置
 
-若要適當地使用可執行介面的物件 <xref:System.IAsyncDisposable> ，您可以使用 [await](../../csharp/language-reference/operators/await.md)，同時 [使用](../../csharp/language-reference/keywords/using-statement.md) 關鍵字。 請考慮下列範例，其中 `ExampleAsyncDisposable` 類別會具現化，然後包裝在 `await using` 語句中。
+若要適當地使用可執行介面的物件 <xref:System.IAsyncDisposable> ，您可以使用 [await](../../csharp/language-reference/operators/await.md) 並一起 [使用](../../csharp/language-reference/keywords/using-statement.md) 關鍵字。 請考慮下列範例，其中 `ExampleAsyncDisposable` 類別會具現化，然後包裝在 `await using` 語句中。
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/proper-await-using.cs":::
 

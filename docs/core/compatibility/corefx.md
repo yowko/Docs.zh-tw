@@ -2,12 +2,12 @@
 title: 基礎類別庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: c73909514bc738387a21f5ea68defe49c6a2c839
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 6a5cda5f5d21cf5349e4a3daaa0ed8b31196a78c
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598187"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720294"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,7 @@ ms.locfileid: "89598187"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [OSPlatform 屬性已重新命名或移除](#osplatform-attributes-renamed-or-removed) | 5.0 |
 | [執行緒。中止已淘汰](#threadabort-is-obsolete) | 5.0 |
 | [ConsoleLoggerOptions 上的過時屬性](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
 | [巢狀型別的硬體內部 IsSupported 檢查可能不同](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
@@ -53,6 +54,10 @@ ms.locfileid: "89598187"
 | [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [os-platform-attributes-renamed](../../../includes/core-changes/corefx/5.0/os-platform-attributes-renamed.md)]
+
+***
 
 [!INCLUDE [thread-abort-obsolete](../../../includes/core-changes/corefx/5.0/thread-abort-obsolete.md)]
 
