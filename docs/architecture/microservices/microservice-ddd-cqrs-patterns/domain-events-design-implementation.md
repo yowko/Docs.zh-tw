@@ -2,12 +2,12 @@
 title: 領域事件： 設計和實作
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 深入了解領域事件，這是用來在彙總之間建立通訊的重要概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: 0cc2072408e110d94b47bd47a9c337a604d4c1a3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271772"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738771"
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -132,7 +132,7 @@ public class OrderStartedDomainEvent : INotification
 
 Udi Dahan 原本建議使用靜態類別來管理及引發事件 (如數篇相關的文章所示，例如 [Domain Events - Take 2](https://udidahan.com/2008/08/25/domain-events-take-2/) (領域事件 - 續篇))。 這可能包含名為 DomainEvents 的靜態類別，該類別會在呼叫時，使用 `DomainEvents.Raise(Event myEvent)` 等語法立即引發領域事件。 Jimmy Bogard 所撰寫的部落格文章 ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) (增強您的領域：領域事件)) 建議類似的方法。
 
-不過，當領域事件類別為靜態時，它也會立即分派至處理常式。 這會使得測試和偵錯更加困難，因為在引發事件之後會立即執行具有副作用邏輯的事件處理常式。 當您進行測試和偵錯時，您只想要專注於目前彙總類別中正在發生的事件，而不想要因為與其他彙總或應用程式邏輯相關的副作用，而突然被重新導向至其他事件處理常式。 這就是其他方法進化的原因，如下一節中所述。
+不過，當領域事件類別為靜態時，它也會立即分派至處理常式。 這會使得測試和偵錯更加困難，因為在引發事件之後會立即執行具有副作用邏輯的事件處理常式。 當您進行測試和偵錯工具時，您只想要專注于目前的匯總類別中發生的情況;您不希望突然被重新導向至其他事件處理常式，以瞭解與其他匯總或應用程式邏輯相關的副作用。 這就是其他方法進化的原因，如下一節中所述。
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>引發和分派事件的延後方法
 

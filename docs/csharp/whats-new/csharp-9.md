@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065028"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738719"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -224,7 +224,7 @@ if (e is not null)
 
 您可以使用運算式傳回預設的函式所建立的實例 `return new();` 。
 
-類似的功能可改善條件運算式的目標型別解析。 進行這項變更時，這兩個運算式不需要從一個運算式隱含轉換成另一個運算式，但兩者都可能隱含轉換成一般類型。 您可能不會注意到這種變更。 您將會注意到，某些條件運算式先前需要轉換或根本無法編譯。
+類似的功能可改善條件運算式的目標型別解析。 進行這項變更時，這兩個運算式不需要從一個運算式隱含轉換成另一個運算式，但兩者都可能會隱含地轉換成目標型別。 您可能不會注意到這種變更。 您將會注意到，某些條件運算式先前需要轉換或根本無法編譯。
 
 從 c # 9.0 開始，您可以將 `static` 修飾詞加入至 lambda 運算式或匿名方法。 靜態 lambda 運算式類似于 `static` 區域函數：靜態 lambda 或匿名函式無法捕捉區域變數或實例狀態。 `static`修飾詞可避免意外地捕捉其他變數。
 
