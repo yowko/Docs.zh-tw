@@ -2,20 +2,20 @@
 title: 集合型別
 description: '瞭解 F # 集合類型，以及它們與 .NET 集合類型之間的差異。'
 ms.date: 08/14/2020
-ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 0b5be8f656d6728fe382b1944bda0a410a94d226
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656901"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720331"
 ---
-# <a name="f-collection-types"></a>F# 集合類型
+# <a name="f-collection-types"></a>F # 集合類型
 
 藉由查看本主題，您可以判斷哪一個 F # 集合類型最適合特定的需求。 這些集合類型與 .NET 中的集合類型（例如命名空間中的型別不同）不同之處在于， `System.Collections.Generic` F # 集合類型是以功能性程式設計的觀點來設計，而不是以物件導向的觀點來設計。 更具體來說，只有陣列集合具有可變動的元素。 因此，當您修改集合時，會建立已修改之集合的實例，而不是改變原創組合。
 
 集合類型也會隨著儲存物件的資料結構類型而有所不同。 雜湊資料表、連結清單和陣列等資料結構具有不同的效能特性，以及一組不同的可用作業。
 
-## <a name="f-collection-types"></a>F# 集合類型
+## <a name="table-of-collection-types"></a>集合類型的資料表
 
 下表顯示 F # 集合類型。
 
@@ -29,7 +29,7 @@ ms.locfileid: "88656901"
 
 ### <a name="table-of-functions"></a>函數的資料表
 
-本節將比較 F # 集合類型上可用的函式。 會提供函數的計算複雜度，其中 N 是第一個集合的大小，而 M 是第二個集合的大小（如果有的話）。 虛線 (-) 表示此函式無法在集合上使用。 因為序列會延遲評估，所以 Seq. distinct 之類的函式可能是 O (1) 因為它會立即傳回，但它仍會在列舉時影響序列的效能。
+本節將比較 F # 集合類型上可用的函式。 會提供函數的計算複雜度，其中 N 是第一個集合的大小，而 M 是第二個集合的大小（如果有的話）。 虛線 (-) 表示此函式無法在集合上使用。 因為序列會延遲評估，所以函式（例如） `Seq.distinct` 可能會是 O (1) 因為它會立即傳回，但它仍會在列舉時影響順序的效能。
 
 |函式|Array|清單|順序|對應|設定|描述|
 |--------|-----|----|--------|---|---|-----------|
@@ -44,7 +44,7 @@ ms.locfileid: "88656901"
 |收集|O (N) |O (N) |O (N) |-|-|將指定的函式套用至集合中的每個元素、串連所有結果，並傳回合並的清單。|
 |Seq.comparewith|-|-|O (N) |-|-|使用指定的比較函式、element by 專案來比較兩個序列。|
 |concat|O (N) |O (N) |O (N) |-|-|將指定列舉列舉型別合併為單一串連列舉。|
-|包含|-|-|-|-|O (記錄 (N) # A3|如果集合包含指定的元素，則傳回 true。|
+|contains|-|-|-|-|O (記錄 (N) # A3|如果集合包含指定的元素，則傳回 true。|
 |containsKey|-|-|-|O (記錄 (N) # A3|-|測試專案是否在對應的定義域中。|
 |count|-|-|-|-|O (N) |傳回集合中項目的數目。|
 |Seq.countby|-|-|O (N) |-|-|將索引鍵產生函式套用至序列的每個專案，並傳回會產生唯一索引鍵的序列，以及其在原始序列中的發生次數。|
@@ -90,11 +90,11 @@ ms.locfileid: "88656901"
 |list.map3|-|O (N) |-|-|-|建立集合，其專案是將指定函式同時套用至三個集合之對應元素的結果。|
 |Mapi|O (N) |O (N) |O (N) |-|-|建立陣列，其專案為將指定函式套用至陣列的每個元素的結果。 傳遞至函式的整數索引，表示要轉換之元素的索引。|
 |list.mapi2|O (N) |O (N) |-|-|-|建立集合，其專案為將指定函式套用至兩個集合的對應元素的結果，也會傳遞元素的索引。 這兩個輸入陣列的長度必須相同。|
-|最大值|O (N) |O (N) |O (N) |-|-|傳回集合中最大的專案，並使用 [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 運算子進行比較。|
-|maxBy|O (N) |O (N) |O (N) |-|-|傳回集合中最大的專案，相較于在函數結果上使用 [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 。|
+|max|O (N) |O (N) |O (N) |-|-|傳回集合中最大的專案，並使用 [max](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max) 運算子進行比較。|
+|maxBy|O (N) |O (N) |O (N) |-|-|傳回集合中最大的專案，相較于在函數結果上使用 [max](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max) 。|
 |Set.maxelement|-|-|-|-|O (記錄 (N) # A3|根據用於集合的順序，傳回集合中最大的元素。|
-|最小值|O (N) |O (N) |O (N) |-|-|傳回集合中最小的專案，使用 [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 運算子進行比較。|
-|minBy|O (N) |O (N) |O (N) |-|-|傳回集合中最小的專案，並使用函數結果上的 [min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) 運算子來比較。|
+|分鐘|O (N) |O (N) |O (N) |-|-|傳回集合中最小的專案，使用 [min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min) 運算子進行比較。|
+|minBy|O (N) |O (N) |O (N) |-|-|傳回集合中最小的專案，並使用函數結果上的 [min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min) 運算子來比較。|
 |Set.minelement|-|-|-|-|O (記錄 (N) # A3|根據用於集合的順序，傳回集合中的最小元素。|
 |List.ofarray|-|O (N) |O (1) |O (N) |O (N) |建立集合，其中包含與指定陣列相同的元素。|
 |ofList|O (N) |-|O (1) |O (N) |O (N) |建立集合，其包含與指定清單相同的元素。|
@@ -115,10 +115,10 @@ ms.locfileid: "88656901"
 |set|O (1) |-|-|-|-|將陣列的元素設定為指定的值。|
 |skip|-|-|O (N) |-|-|傳回序列，這個序列會略過基礎序列的 N 個元素，然後產生序列的其餘專案。|
 |skipWhile|-|-|O (N) |-|-|傳回序列，此序列會在指定的述詞傳回時略過基礎序列的元素， `true` 然後產生序列的其餘專案。|
-|sort|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|O (N \* 記錄 (n) # A3|O (N \* 記錄 (n) # A3|-|-|依元素值排序集合。 使用 [compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)來比較元素。|
-|sortBy|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|O (N \* 記錄 (n) # A3|O (N \* 記錄 (n) # A3|-|-|使用指定投射提供的索引鍵來排序指定的清單。 使用 [compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)來比較索引鍵。|
-|Array.sortinplace|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|-|-|-|-|藉由就地變更並使用指定的比較函式，來排序陣列的元素。 使用 [compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)來比較元素。|
-|Array.sortinplaceby|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|-|-|-|-|藉由就地變更並使用指定的索引鍵投射，來排序陣列的元素。 使用 [compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)來比較元素。|
+|sort|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|O (N \* 記錄 (n) # A3|O (N \* 記錄 (n) # A3|-|-|依元素值排序集合。 使用 [compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)來比較元素。|
+|sortBy|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|O (N \* 記錄 (n) # A3|O (N \* 記錄 (n) # A3|-|-|使用指定投射提供的索引鍵來排序指定的清單。 使用 [compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)來比較索引鍵。|
+|Array.sortinplace|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|-|-|-|-|藉由就地變更並使用指定的比較函式，來排序陣列的元素。 使用 [compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)來比較元素。|
+|Array.sortinplaceby|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|-|-|-|-|藉由就地變更並使用指定的索引鍵投射，來排序陣列的元素。 使用 [compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)來比較元素。|
 |Array.sortinplacewith|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|-|-|-|-|使用指定的比較函式來排序陣列的元素，並使用指定的比較函數作為順序。|
 |List.sortwith|O (N \* 記錄 (n) # A3 平均<br /><br />O (N ^ 2) 最糟的情況|O (N \* 記錄 (n) # A3|-|-|-|使用指定的比較函式作為順序，並傳回新的集合，以排序集合的元素。|
 |sub|O (N) |-|-|-|-|建立陣列，其中包含由起始索引和長度指定的指定子範圍。|
@@ -144,7 +144,7 @@ ms.locfileid: "88656901"
 |zip|O (N) |O (N) |O (N) |-|-|將兩個集合合併成成對的清單。 這兩個清單必須有相等的長度。|
 |array.zip3|O (N) |O (N) |O (N) |-|-|將三個集合合併成三個清單。 清單必須有相等的長度。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [F# 類型](fsharp-types.md)
 - [F # 語言參考](index.md)

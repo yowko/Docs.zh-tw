@@ -4,12 +4,12 @@ description: 瞭解如何修剪獨立的應用程式，以縮減其大小。 .NE
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 9c2994c98a2ebe6f45b056256c2bda28db017fbf
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465477"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770451"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>修剪獨立式部署及可執行檔
 
@@ -24,7 +24,7 @@ Trim 獨立部署模型是獨立部署模型的特製化版本，已優化以減
 應用程式的修剪模式是使用設定進行設定 `TrimMode` 。 預設值為 `copyused` ，並將參考的元件與應用程式配套。 此 `link` 值會與 Blazor WebAssembly 應用程式搭配使用，並在元件中修剪未使用的程式碼。 Trim 分析警告會提供無法進行完整相依性分析的程式碼模式相關資訊。 預設會隱藏這些警告，並可將旗標設為來開啟這些警告 `SuppressTrimAnalysisWarnings` `false` 。 如需可用之修剪選項的詳細資訊，請參閱 [修剪選項](trimming-options.md)。
 
 > [!NOTE]
-> 修剪是 .NET Core 3.1、5.0 中的實驗性功能， _僅_ 適用于獨立發行的應用程式。
+> 修剪是 .NET Core 3.1 和 .NET 5.0 中的實驗性功能。 只有已發行的應用程式 _才_ 可使用修剪。
 
 ## <a name="prevent-assemblies-from-being-trimmed"></a>防止元件遭到修剪
 

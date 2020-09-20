@@ -2,12 +2,12 @@
 title: 查詢運算式
 description: '瞭解 F # 程式設計語言中 LINQ 的查詢運算式支援。'
 ms.date: 08/15/2020
-ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: b2380bbc448aca06a40896582f3d4e7f701c6184
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559059"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720474"
 ---
 # <a name="query-expressions"></a>查詢運算式
 
@@ -45,7 +45,7 @@ query1
 
 在上述程式碼範例中，查詢運算式是以大括弧括住。 運算式中程式碼的意義是，會傳回查詢結果中資料庫之 Customers 資料表中的每個客戶。 查詢運算式會傳回實和的型別 <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> ，因此可以使用 [Seq 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) 進行反覆運算，如範例所示。
 
-每個計算運算式類型都是從產生器類別建立的。 查詢計算運算式的 builder 類別為 `QueryBuilder` 。 如需詳細資訊，請參閱 [計算運算式](computation-expressions.md) 和 [QueryBuilder 類別](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)。
+每個計算運算式類型都是從產生器類別建立的。 查詢計算運算式的 builder 類別為 `QueryBuilder` 。 如需詳細資訊，請參閱 [計算運算式](computation-expressions.md) 和 [QueryBuilder 類別](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)。
 
 ## <a name="query-operators"></a>查詢運算子
 
@@ -564,7 +564,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>分組<br/>
+<td>群組<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) FROM Student
 GROUP BY Student.Age

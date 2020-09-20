@@ -4,12 +4,12 @@ description: '瞭解如何使用 F# 互動 (dotnet fsi) ，以互動方式在主
 ms.date: 08/20/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 760b096c8a3ee0d495b893ab66fa6f9007cdbbf9
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: ae8d68140ddec8e18ee23e9a43b548907e1ab5c4
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867616"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720318"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F 的互動式程式設計\#
 
@@ -117,7 +117,6 @@ test
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|Title|描述|
 |-----|-----------|
 |[F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)|描述 F# 互動、fsi.exe 的命令列語法和選項。|
-|[F# Interactive 程式庫參考](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|說明在 F# Interactive 中執行程式碼時，所提供的程式庫功能。|

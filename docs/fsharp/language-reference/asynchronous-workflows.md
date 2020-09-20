@@ -2,12 +2,12 @@
 title: 非同步工作流程
 description: '瞭解 F # 程式設計語言中的支援以非同步方式執行計算，而不會封鎖執行其他工作。'
 ms.date: 08/15/2020
-ms.openlocfilehash: ac727fc630f13db01da964131ab39dc242a12cd1
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 14146cc8a643f31831475075212cc06da5f8d6ff
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557707"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720266"
 ---
 # <a name="asynchronous-workflows"></a>非同步工作流程
 
@@ -44,7 +44,7 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 執行單一非同步工作並傳回結果的方法，稱為 *非同步基本*類型，而這些是專門設計來搭配使用 `let!` 。 F # 核心程式庫中定義了數個非同步基本類型。 這兩種 Web 應用程式的方法都是在模組中定義 [`FSharp.Control.WebExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html) ： [`WebRequest.AsyncGetResponse`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncGetResponse) 和 [`WebClient.AsyncDownloadString`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncDownloadString) 。 這兩個基本專案都會從網頁下載資料（假設有一個 URL）。 `AsyncGetResponse` 產生 `System.Net.WebResponse` 物件，並 `AsyncDownloadString` 產生表示網頁 HTML 的字串。
 
-課程模組中包含數個非同步 i/o 作業的基本專案 [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) 。 類別的這些擴充方法 `System.IO.Stream` 為 [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) 和 [`Stream.AsyncWrite`](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) 。
+課程模組中包含數個非同步 i/o 作業的基本專案 [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) 。 類別的這些擴充方法 `System.IO.Stream` 為 [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) 和 [`Stream.AsyncWrite`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) 。
 
 您也可以藉由定義一個函式，其完整主體會以非同步區塊括住，以撰寫您自己的非同步基本專案。
 
@@ -66,4 +66,4 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 - [F # 語言參考](index.md)
 - [計算運算式](computation-expressions.md)
-- [Control. Async 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [Control. Async 類別](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html)
