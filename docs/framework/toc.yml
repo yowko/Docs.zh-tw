@@ -282,7 +282,7 @@ items:
                     href: migration-guide/retargeting/4.7.2-4.8.md
           - name: 行為風險降低
             items:
-              - name: 總覽
+              - name: 概觀
                 href: migration-guide/mitigations.md
               - name: 自訂 IMessageFilter.PreFilterMessage 實作
                 href: migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md
@@ -383,8 +383,6 @@ items:
         href: interop/
       - name: 非受控 API 參考
         href: unmanaged-api/
-      - name: XAML 服務
-        href: ../desktop-wpf/xaml-services/
   - name: 工具
     items:
       - name: 概觀

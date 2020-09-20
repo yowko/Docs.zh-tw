@@ -2,26 +2,26 @@
 title: 查詢運算式
 description: '瞭解 F # 程式設計語言中 LINQ 的查詢運算式支援。'
 ms.date: 08/15/2020
-ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: b2380bbc448aca06a40896582f3d4e7f701c6184
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559059"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720474"
 ---
-# <a name="query-expressions"></a><span data-ttu-id="2dda8-103">查詢運算式</span><span class="sxs-lookup"><span data-stu-id="2dda8-103">Query expressions</span></span>
+# <a name="query-expressions"></a><span data-ttu-id="182d8-103">查詢運算式</span><span class="sxs-lookup"><span data-stu-id="182d8-103">Query expressions</span></span>
 
-<span data-ttu-id="2dda8-104">查詢運算式可讓您查詢資料來源，並將資料放入所需的表單。</span><span class="sxs-lookup"><span data-stu-id="2dda8-104">Query expressions enable you to query a data source and put the data in a desired form.</span></span> <span data-ttu-id="2dda8-105">查詢運算式提供 F # 中 LINQ 的支援。</span><span class="sxs-lookup"><span data-stu-id="2dda8-105">Query expressions provide support for LINQ in F#.</span></span>
+<span data-ttu-id="182d8-104">查詢運算式可讓您查詢資料來源，並將資料放入所需的表單。</span><span class="sxs-lookup"><span data-stu-id="182d8-104">Query expressions enable you to query a data source and put the data in a desired form.</span></span> <span data-ttu-id="182d8-105">查詢運算式提供 F # 中 LINQ 的支援。</span><span class="sxs-lookup"><span data-stu-id="182d8-105">Query expressions provide support for LINQ in F#.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="2dda8-106">語法</span><span class="sxs-lookup"><span data-stu-id="2dda8-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="182d8-106">語法</span><span class="sxs-lookup"><span data-stu-id="182d8-106">Syntax</span></span>
 
 ```fsharp
 query { expression }
 ```
 
-## <a name="remarks"></a><span data-ttu-id="2dda8-107">備註</span><span class="sxs-lookup"><span data-stu-id="2dda8-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="182d8-107">備註</span><span class="sxs-lookup"><span data-stu-id="182d8-107">Remarks</span></span>
 
-<span data-ttu-id="2dda8-108">查詢運算式是一種類似于順序運算式的計算運算式。</span><span class="sxs-lookup"><span data-stu-id="2dda8-108">Query expressions are a type of computation expression similar to sequence expressions.</span></span> <span data-ttu-id="2dda8-109">就像您在序列運算式中提供程式碼來指定序列一樣，您也可以在查詢運算式中提供程式碼來指定一組資料。</span><span class="sxs-lookup"><span data-stu-id="2dda8-109">Just as you specify a sequence by providing code in a sequence expression, you specify a set of data by providing code in a query expression.</span></span> <span data-ttu-id="2dda8-110">在序列運算式中， `yield` 關鍵字會識別要傳回做為結果序列一部分的資料。</span><span class="sxs-lookup"><span data-stu-id="2dda8-110">In a sequence expression, the `yield` keyword identifies data to be returned as part of the resulting sequence.</span></span> <span data-ttu-id="2dda8-111">在查詢運算式中， `select` 關鍵字會執行相同的函式。</span><span class="sxs-lookup"><span data-stu-id="2dda8-111">In query expressions, the `select` keyword performs the same function.</span></span> <span data-ttu-id="2dda8-112">除了 `select` 關鍵字之外，F # 也支援許多查詢運算子，這些運算子與 SQL SELECT 語句的部分很類似。</span><span class="sxs-lookup"><span data-stu-id="2dda8-112">In addition to the `select` keyword, F# also supports a number of query operators that are much like the parts of a SQL SELECT statement.</span></span> <span data-ttu-id="2dda8-113">以下是簡單查詢運算式的範例，以及連接到 Northwind OData 來源的程式碼。</span><span class="sxs-lookup"><span data-stu-id="2dda8-113">Here is an example of a simple query expression, along with code that connects to the Northwind OData source.</span></span>
+<span data-ttu-id="182d8-108">查詢運算式是一種類似于順序運算式的計算運算式。</span><span class="sxs-lookup"><span data-stu-id="182d8-108">Query expressions are a type of computation expression similar to sequence expressions.</span></span> <span data-ttu-id="182d8-109">就像您在序列運算式中提供程式碼來指定序列一樣，您也可以在查詢運算式中提供程式碼來指定一組資料。</span><span class="sxs-lookup"><span data-stu-id="182d8-109">Just as you specify a sequence by providing code in a sequence expression, you specify a set of data by providing code in a query expression.</span></span> <span data-ttu-id="182d8-110">在序列運算式中， `yield` 關鍵字會識別要傳回做為結果序列一部分的資料。</span><span class="sxs-lookup"><span data-stu-id="182d8-110">In a sequence expression, the `yield` keyword identifies data to be returned as part of the resulting sequence.</span></span> <span data-ttu-id="182d8-111">在查詢運算式中， `select` 關鍵字會執行相同的函式。</span><span class="sxs-lookup"><span data-stu-id="182d8-111">In query expressions, the `select` keyword performs the same function.</span></span> <span data-ttu-id="182d8-112">除了 `select` 關鍵字之外，F # 也支援許多查詢運算子，這些運算子與 SQL SELECT 語句的部分很類似。</span><span class="sxs-lookup"><span data-stu-id="182d8-112">In addition to the `select` keyword, F# also supports a number of query operators that are much like the parts of a SQL SELECT statement.</span></span> <span data-ttu-id="182d8-113">以下是簡單查詢運算式的範例，以及連接到 Northwind OData 來源的程式碼。</span><span class="sxs-lookup"><span data-stu-id="182d8-113">Here is an example of a simple query expression, along with code that connects to the Northwind OData source.</span></span>
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -43,23 +43,23 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-<span data-ttu-id="2dda8-114">在上述程式碼範例中，查詢運算式是以大括弧括住。</span><span class="sxs-lookup"><span data-stu-id="2dda8-114">In the previous code example, the query expression is in curly braces.</span></span> <span data-ttu-id="2dda8-115">運算式中程式碼的意義是，會傳回查詢結果中資料庫之 Customers 資料表中的每個客戶。</span><span class="sxs-lookup"><span data-stu-id="2dda8-115">The meaning of the code in the expression is, return every customer in the Customers table in the database in the query results.</span></span> <span data-ttu-id="2dda8-116">查詢運算式會傳回實和的型別 <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> ，因此可以使用 [Seq 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) 進行反覆運算，如範例所示。</span><span class="sxs-lookup"><span data-stu-id="2dda8-116">Query expressions return a type that implements <xref:System.Linq.IQueryable%601> and <xref:System.Collections.Generic.IEnumerable%601>, and so they can be iterated using the [Seq module](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) as the example shows.</span></span>
+<span data-ttu-id="182d8-114">在上述程式碼範例中，查詢運算式是以大括弧括住。</span><span class="sxs-lookup"><span data-stu-id="182d8-114">In the previous code example, the query expression is in curly braces.</span></span> <span data-ttu-id="182d8-115">運算式中程式碼的意義是，會傳回查詢結果中資料庫之 Customers 資料表中的每個客戶。</span><span class="sxs-lookup"><span data-stu-id="182d8-115">The meaning of the code in the expression is, return every customer in the Customers table in the database in the query results.</span></span> <span data-ttu-id="182d8-116">查詢運算式會傳回實和的型別 <xref:System.Linq.IQueryable%601> <xref:System.Collections.Generic.IEnumerable%601> ，因此可以使用 [Seq 模組](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) 進行反覆運算，如範例所示。</span><span class="sxs-lookup"><span data-stu-id="182d8-116">Query expressions return a type that implements <xref:System.Linq.IQueryable%601> and <xref:System.Collections.Generic.IEnumerable%601>, and so they can be iterated using the [Seq module](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) as the example shows.</span></span>
 
-<span data-ttu-id="2dda8-117">每個計算運算式類型都是從產生器類別建立的。</span><span class="sxs-lookup"><span data-stu-id="2dda8-117">Every computation expression type is built from a builder class.</span></span> <span data-ttu-id="2dda8-118">查詢計算運算式的 builder 類別為 `QueryBuilder` 。</span><span class="sxs-lookup"><span data-stu-id="2dda8-118">The builder class for the query computation expression is `QueryBuilder`.</span></span> <span data-ttu-id="2dda8-119">如需詳細資訊，請參閱 [計算運算式](computation-expressions.md) 和 [QueryBuilder 類別](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)。</span><span class="sxs-lookup"><span data-stu-id="2dda8-119">For more information, see [Computation Expressions](computation-expressions.md) and [QueryBuilder Class](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html).</span></span>
+<span data-ttu-id="182d8-117">每個計算運算式類型都是從產生器類別建立的。</span><span class="sxs-lookup"><span data-stu-id="182d8-117">Every computation expression type is built from a builder class.</span></span> <span data-ttu-id="182d8-118">查詢計算運算式的 builder 類別為 `QueryBuilder` 。</span><span class="sxs-lookup"><span data-stu-id="182d8-118">The builder class for the query computation expression is `QueryBuilder`.</span></span> <span data-ttu-id="182d8-119">如需詳細資訊，請參閱 [計算運算式](computation-expressions.md) 和 [QueryBuilder 類別](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)。</span><span class="sxs-lookup"><span data-stu-id="182d8-119">For more information, see [Computation Expressions](computation-expressions.md) and [QueryBuilder Class](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html).</span></span>
 
-## <a name="query-operators"></a><span data-ttu-id="2dda8-120">查詢運算子</span><span class="sxs-lookup"><span data-stu-id="2dda8-120">Query Operators</span></span>
+## <a name="query-operators"></a><span data-ttu-id="182d8-120">查詢運算子</span><span class="sxs-lookup"><span data-stu-id="182d8-120">Query Operators</span></span>
 
-<span data-ttu-id="2dda8-121">查詢運算子可讓您指定查詢的詳細資料，例如，將條件放在要傳回的記錄，或指定結果的排序次序。</span><span class="sxs-lookup"><span data-stu-id="2dda8-121">Query operators enable you to specify the details of the query, such as to put criteria on records to be returned, or specify the sorting order of results.</span></span> <span data-ttu-id="2dda8-122">查詢來源必須支援查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="2dda8-122">The query source must support the query operator.</span></span> <span data-ttu-id="2dda8-123">如果您嘗試使用不支援的查詢運算子，將會擲回 `System.NotSupportedException` 。</span><span class="sxs-lookup"><span data-stu-id="2dda8-123">If you attempt to use an unsupported query operator, `System.NotSupportedException` will be thrown.</span></span>
+<span data-ttu-id="182d8-121">查詢運算子可讓您指定查詢的詳細資料，例如，將條件放在要傳回的記錄，或指定結果的排序次序。</span><span class="sxs-lookup"><span data-stu-id="182d8-121">Query operators enable you to specify the details of the query, such as to put criteria on records to be returned, or specify the sorting order of results.</span></span> <span data-ttu-id="182d8-122">查詢來源必須支援查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="182d8-122">The query source must support the query operator.</span></span> <span data-ttu-id="182d8-123">如果您嘗試使用不支援的查詢運算子，將會擲回 `System.NotSupportedException` 。</span><span class="sxs-lookup"><span data-stu-id="182d8-123">If you attempt to use an unsupported query operator, `System.NotSupportedException` will be thrown.</span></span>
 
-<span data-ttu-id="2dda8-124">查詢運算式中只允許可轉譯為 SQL 的運算式。</span><span class="sxs-lookup"><span data-stu-id="2dda8-124">Only expressions that can be translated to SQL are allowed in query expressions.</span></span> <span data-ttu-id="2dda8-125">例如，當您使用查詢運算子時，運算式中不允許函式呼叫 `where` 。</span><span class="sxs-lookup"><span data-stu-id="2dda8-125">For example, no function calls are allowed in the expressions when you use the `where` query operator.</span></span>
+<span data-ttu-id="182d8-124">查詢運算式中只允許可轉譯為 SQL 的運算式。</span><span class="sxs-lookup"><span data-stu-id="182d8-124">Only expressions that can be translated to SQL are allowed in query expressions.</span></span> <span data-ttu-id="182d8-125">例如，當您使用查詢運算子時，運算式中不允許函式呼叫 `where` 。</span><span class="sxs-lookup"><span data-stu-id="182d8-125">For example, no function calls are allowed in the expressions when you use the `where` query operator.</span></span>
 
-<span data-ttu-id="2dda8-126">表1顯示可用的查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="2dda8-126">Table 1 shows available query operators.</span></span> <span data-ttu-id="2dda8-127">此外，請參閱本主題稍後的 Table2，它會比較 SQL 查詢和對等的 F # 查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="2dda8-127">In addition, see Table2, which compares SQL queries and the equivalent F# query expressions later in this topic.</span></span> <span data-ttu-id="2dda8-128">某些型別提供者不支援某些查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="2dda8-128">Some query operators aren't supported by some type providers.</span></span> <span data-ttu-id="2dda8-129">尤其是，OData 型別提供者在支援的查詢運算子中會受到限制，因為 OData 的限制。</span><span class="sxs-lookup"><span data-stu-id="2dda8-129">In particular, the OData type provider is limited in the query operators that it supports due to limitations in OData.</span></span>
+<span data-ttu-id="182d8-126">表1顯示可用的查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="182d8-126">Table 1 shows available query operators.</span></span> <span data-ttu-id="182d8-127">此外，請參閱本主題稍後的 Table2，它會比較 SQL 查詢和對等的 F # 查詢運算式。</span><span class="sxs-lookup"><span data-stu-id="182d8-127">In addition, see Table2, which compares SQL queries and the equivalent F# query expressions later in this topic.</span></span> <span data-ttu-id="182d8-128">某些型別提供者不支援某些查詢運算子。</span><span class="sxs-lookup"><span data-stu-id="182d8-128">Some query operators aren't supported by some type providers.</span></span> <span data-ttu-id="182d8-129">尤其是，OData 型別提供者在支援的查詢運算子中會受到限制，因為 OData 的限制。</span><span class="sxs-lookup"><span data-stu-id="182d8-129">In particular, the OData type provider is limited in the query operators that it supports due to limitations in OData.</span></span>
 
-<span data-ttu-id="2dda8-130">此資料表採用下列格式的資料庫：</span><span class="sxs-lookup"><span data-stu-id="2dda8-130">This table assumes a database in the following form:</span></span>
+<span data-ttu-id="182d8-130">此資料表採用下列格式的資料庫：</span><span class="sxs-lookup"><span data-stu-id="182d8-130">This table assumes a database in the following form:</span></span>
 
 ![顯示範例資料庫的圖表。](./media/query-expressions/student-course-database.png)
 
-<span data-ttu-id="2dda8-132">接下來的表格中的程式碼也會假設下列資料庫連接程式碼。</span><span class="sxs-lookup"><span data-stu-id="2dda8-132">The code in the tables that follow also assumes the following database connection code.</span></span> <span data-ttu-id="2dda8-133">專案應加入 Fsharp.core 的參考，以及 Fsharp.data.typeproviders 元件的參考資料。</span><span class="sxs-lookup"><span data-stu-id="2dda8-133">Projects should add references to System.Data,  System.Data.Linq, and FSharp.Data.TypeProviders assemblies.</span></span> <span data-ttu-id="2dda8-134">本主題結尾會包含建立此資料庫的程式碼。</span><span class="sxs-lookup"><span data-stu-id="2dda8-134">The code that creates this database is included at the end of this topic.</span></span>
+<span data-ttu-id="182d8-132">接下來的表格中的程式碼也會假設下列資料庫連接程式碼。</span><span class="sxs-lookup"><span data-stu-id="182d8-132">The code in the tables that follow also assumes the following database connection code.</span></span> <span data-ttu-id="182d8-133">專案應加入 Fsharp.core 的參考，以及 Fsharp.data.typeproviders 元件的參考資料。</span><span class="sxs-lookup"><span data-stu-id="182d8-133">Projects should add references to System.Data,  System.Data.Linq, and FSharp.Data.TypeProviders assemblies.</span></span> <span data-ttu-id="182d8-134">本主題結尾會包含建立此資料庫的程式碼。</span><span class="sxs-lookup"><span data-stu-id="182d8-134">The code that creates this database is included at the end of this topic.</span></span>
 
 ```fsharp
 open System
@@ -76,16 +76,16 @@ let db = schema.GetDataContext()
 let data = [ 1; 5; 7; 11; 18; 21]
 ```
 
-### <a name="table-1-query-operators"></a><span data-ttu-id="2dda8-135">表 1.</span><span class="sxs-lookup"><span data-stu-id="2dda8-135">Table 1.</span></span> <span data-ttu-id="2dda8-136">查詢運算子</span><span class="sxs-lookup"><span data-stu-id="2dda8-136">Query Operators</span></span>
+### <a name="table-1-query-operators"></a><span data-ttu-id="182d8-135">表 1.</span><span class="sxs-lookup"><span data-stu-id="182d8-135">Table 1.</span></span> <span data-ttu-id="182d8-136">查詢運算子</span><span class="sxs-lookup"><span data-stu-id="182d8-136">Query Operators</span></span>
 
 <table style="width:100%">
   <tr>
-    <th><span data-ttu-id="2dda8-137">運算子</span><span class="sxs-lookup"><span data-stu-id="2dda8-137">Operator</span></span></th>
-    <th><span data-ttu-id="2dda8-138">描述</span><span class="sxs-lookup"><span data-stu-id="2dda8-138">Description</span></span></th>
+    <th><span data-ttu-id="182d8-137">運算子</span><span class="sxs-lookup"><span data-stu-id="182d8-137">Operator</span></span></th>
+    <th><span data-ttu-id="182d8-138">描述</span><span class="sxs-lookup"><span data-stu-id="182d8-138">Description</span></span></th>
   </tr>
   <tr>
   <td><code>contains</code></td>
-<td><span data-ttu-id="2dda8-139">判斷選取的專案是否包含指定的元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-139">Determines whether the selected elements include a specified element.</span></span><br/><br/>
+<td><span data-ttu-id="182d8-139">判斷選取的專案是否包含指定的元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-139">Determines whether the selected elements include a specified element.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -98,7 +98,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </tr>
 
 <tr>
-  <td><code>count</code></td><td><span data-ttu-id="2dda8-140">傳回選取的元素數目。</span><span class="sxs-lookup"><span data-stu-id="2dda8-140">Returns the number of selected elements.</span></span><br/><br/>
+  <td><code>count</code></td><td><span data-ttu-id="182d8-140">傳回選取的元素數目。</span><span class="sxs-lookup"><span data-stu-id="182d8-140">Returns the number of selected elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -109,7 +109,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>last</code></td><td><span data-ttu-id="2dda8-141">選取到目前為止所選取的最後一個元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-141">Selects the last element of those selected so far.</span></span><br/><br/>
+<td><code>last</code></td><td><span data-ttu-id="182d8-141">選取到目前為止所選取的最後一個元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-141">Selects the last element of those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -119,7 +119,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 </td></tr>
 <tr>
-<td><code>lastOrDefault</code></td><td><span data-ttu-id="2dda8-142">選取到目前為止選取的最後一個專案，如果找不到任何專案，則為預設值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-142">Selects the last element of those selected so far, or a default value if no element is found.</span></span><br/><br/>
+<td><code>lastOrDefault</code></td><td><span data-ttu-id="182d8-142">選取到目前為止選取的最後一個專案，如果找不到任何專案，則為預設值。</span><span class="sxs-lookup"><span data-stu-id="182d8-142">Selects the last element of those selected so far, or a default value if no element is found.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -129,7 +129,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOne</code></td><td><span data-ttu-id="2dda8-143">選取到目前為止選取的單一特定元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-143">Selects the single, specific element selected so far.</span></span> <span data-ttu-id="2dda8-144">如果有多個元素，則會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="2dda8-144">If multiple elements are present, an exception is thrown.</span></span><br/><br/>
+<td><code>exactlyOne</code></td><td><span data-ttu-id="182d8-143">選取到目前為止選取的單一特定元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-143">Selects the single, specific element selected so far.</span></span> <span data-ttu-id="182d8-144">如果有多個元素，則會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="182d8-144">If multiple elements are present, an exception is thrown.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -140,7 +140,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exactlyOneOrDefault</code></td><td><span data-ttu-id="2dda8-145">選取到目前為止選取的單一特定專案，如果找不到該元素，則為預設值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-145">Selects the single, specific element of those selected so far, or a default value if that element is not found.</span></span><br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td><span data-ttu-id="182d8-145">選取到目前為止選取的單一特定專案，如果找不到該元素，則為預設值。</span><span class="sxs-lookup"><span data-stu-id="182d8-145">Selects the single, specific element of those selected so far, or a default value if that element is not found.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -151,7 +151,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>headOrDefault</code></td><td><span data-ttu-id="2dda8-146">選取到目前為止選取的第一個專案，如果序列中沒有包含任何元素，則為預設值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-146">Selects the first element of those selected so far, or a default value if the sequence contains no elements.</span></span><br/><br/>
+<td><code>headOrDefault</code></td><td><span data-ttu-id="182d8-146">選取到目前為止選取的第一個專案，如果序列中沒有包含任何元素，則為預設值。</span><span class="sxs-lookup"><span data-stu-id="182d8-146">Selects the first element of those selected so far, or a default value if the sequence contains no elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -161,7 +161,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>select</code></td><td><span data-ttu-id="2dda8-147">投射到目前為止所選取的每個元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-147">Projects each of the elements selected so far.</span></span><br/><br/>
+<td><code>select</code></td><td><span data-ttu-id="182d8-147">投射到目前為止所選取的每個元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-147">Projects each of the elements selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -170,7 +170,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>where</code></td><td><span data-ttu-id="2dda8-148">根據指定的述詞選取元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-148">Selects elements based on a specified predicate.</span></span><br/><br/>
+<td><code>where</code></td><td><span data-ttu-id="182d8-148">根據指定的述詞選取元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-148">Selects elements based on a specified predicate.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -180,7 +180,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minBy</code></td><td><span data-ttu-id="2dda8-149">為目前為止選取的每個專案選取一個值，並傳回最小產生的值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-149">Selects a value for each element selected so far and returns the minimum resulting value.</span></span><br/><br/>
+<td><code>minBy</code></td><td><span data-ttu-id="182d8-149">為目前為止選取的每個專案選取一個值，並傳回最小產生的值。</span><span class="sxs-lookup"><span data-stu-id="182d8-149">Selects a value for each element selected so far and returns the minimum resulting value.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -189,7 +189,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxBy</code></td><td><span data-ttu-id="2dda8-150">為目前為止選取的每個專案選取一個值，並傳回產生的最大值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-150">Selects a value for each element selected so far and returns the maximum resulting value.</span></span><br/><br/>
+<td><code>maxBy</code></td><td><span data-ttu-id="182d8-150">為目前為止選取的每個專案選取一個值，並傳回產生的最大值。</span><span class="sxs-lookup"><span data-stu-id="182d8-150">Selects a value for each element selected so far and returns the maximum resulting value.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -198,7 +198,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupBy</code></td><td><span data-ttu-id="2dda8-151">根據指定的索引鍵選取器，將所選的元素分組。</span><span class="sxs-lookup"><span data-stu-id="2dda8-151">Groups the elements selected so far according to a specified key selector.</span></span><br/><br/>
+<td><code>groupBy</code></td><td><span data-ttu-id="182d8-151">根據指定的索引鍵選取器，將所選的元素分組。</span><span class="sxs-lookup"><span data-stu-id="182d8-151">Groups the elements selected so far according to a specified key selector.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -208,7 +208,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortBy</code></td><td><span data-ttu-id="2dda8-152">依據指定的排序索引鍵，以遞增順序排序所選取的元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-152">Sorts the elements selected so far in ascending order by the given sorting key.</span></span><br/><br/>
+<td><code>sortBy</code></td><td><span data-ttu-id="182d8-152">依據指定的排序索引鍵，以遞增順序排序所選取的元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-152">Sorts the elements selected so far in ascending order by the given sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -218,7 +218,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByDescending</code></td><td><span data-ttu-id="2dda8-153">依據指定的排序索引鍵，以遞減順序排序所選取的元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-153">Sorts the elements selected so far in descending order by the given sorting key.</span></span><br/><br/>
+<td><code>sortByDescending</code></td><td><span data-ttu-id="182d8-153">依據指定的排序索引鍵，以遞減順序排序所選取的元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-153">Sorts the elements selected so far in descending order by the given sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -228,7 +228,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenBy</code></td><td><span data-ttu-id="2dda8-154">依指定的排序索引鍵，以遞增循序執行所選取專案的後續排序。</span><span class="sxs-lookup"><span data-stu-id="2dda8-154">Performs a subsequent ordering of the elements selected so far in ascending order by the given sorting key.</span></span> <span data-ttu-id="2dda8-155">只有在 <code>sortBy</code> 、、或之後，才能使用這個運算子 <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> 。</span><span class="sxs-lookup"><span data-stu-id="2dda8-155">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
+<td><code>thenBy</code></td><td><span data-ttu-id="182d8-154">依指定的排序索引鍵，以遞增循序執行所選取專案的後續排序。</span><span class="sxs-lookup"><span data-stu-id="182d8-154">Performs a subsequent ordering of the elements selected so far in ascending order by the given sorting key.</span></span> <span data-ttu-id="182d8-155">只有在 <code>sortBy</code> 、、或之後，才能使用這個運算子 <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> 。</span><span class="sxs-lookup"><span data-stu-id="182d8-155">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -240,7 +240,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByDescending</code></td><td><span data-ttu-id="2dda8-156">依指定的排序索引鍵，以遞減循序執行所選取專案的後續排序。</span><span class="sxs-lookup"><span data-stu-id="2dda8-156">Performs a subsequent ordering of the elements selected so far in descending order by the given sorting key.</span></span> <span data-ttu-id="2dda8-157">只有在 <code>sortBy</code> 、、或之後，才能使用這個運算子 <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> 。</span><span class="sxs-lookup"><span data-stu-id="2dda8-157">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
+<td><code>thenByDescending</code></td><td><span data-ttu-id="182d8-156">依指定的排序索引鍵，以遞減循序執行所選取專案的後續排序。</span><span class="sxs-lookup"><span data-stu-id="182d8-156">Performs a subsequent ordering of the elements selected so far in descending order by the given sorting key.</span></span> <span data-ttu-id="182d8-157">只有在 <code>sortBy</code> 、、或之後，才能使用這個運算子 <code>sortByDescending</code> <code>thenBy</code> <code>thenByDescending</code> 。</span><span class="sxs-lookup"><span data-stu-id="182d8-157">This operator may only be used after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -252,7 +252,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupValBy</code></td><td><span data-ttu-id="2dda8-158">為目前為止選取的每個專案選取一個值，並依指定的索引鍵將元素分組。</span><span class="sxs-lookup"><span data-stu-id="2dda8-158">Selects a value for each element selected so far and groups the elements by the given key.</span></span><br/><br/>
+<td><code>groupValBy</code></td><td><span data-ttu-id="182d8-158">為目前為止選取的每個專案選取一個值，並依指定的索引鍵將元素分組。</span><span class="sxs-lookup"><span data-stu-id="182d8-158">Selects a value for each element selected so far and groups the elements by the given key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -262,7 +262,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>join</code></td><td><span data-ttu-id="2dda8-159">根據相符的索引鍵，相互關聯兩組選取的值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-159">Correlates two sets of selected values based on matching keys.</span></span> <span data-ttu-id="2dda8-160">請注意，聯接運算式的 = sign 周圍的索引鍵順序很重要。</span><span class="sxs-lookup"><span data-stu-id="2dda8-160">Note that the order of the keys around the = sign in a join expression is significant.</span></span> <span data-ttu-id="2dda8-161">在 [所有聯結] 中，如果行在符號之後分割 <code>-&gt;</code> ，縮排必須至少縮排至關鍵字 <code>for</code> 。</span><span class="sxs-lookup"><span data-stu-id="2dda8-161">In all joins, if the line is split after the <code>-&gt;</code> symbol, the indentation must be indented at least as far as the keyword <code>for</code>.</span></span><br/><br/>
+<td><code>join</code></td><td><span data-ttu-id="182d8-159">根據相符的索引鍵，相互關聯兩組選取的值。</span><span class="sxs-lookup"><span data-stu-id="182d8-159">Correlates two sets of selected values based on matching keys.</span></span> <span data-ttu-id="182d8-160">請注意，聯接運算式的 = sign 周圍的索引鍵順序很重要。</span><span class="sxs-lookup"><span data-stu-id="182d8-160">Note that the order of the keys around the = sign in a join expression is significant.</span></span> <span data-ttu-id="182d8-161">在 [所有聯結] 中，如果行在符號之後分割 <code>-&gt;</code> ，縮排必須至少縮排至關鍵字 <code>for</code> 。</span><span class="sxs-lookup"><span data-stu-id="182d8-161">In all joins, if the line is split after the <code>-&gt;</code> symbol, the indentation must be indented at least as far as the keyword <code>for</code>.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -273,7 +273,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>groupJoin</code></td><td><span data-ttu-id="2dda8-162">根據相符的索引鍵將兩組選取的值相互關聯，並將結果分組。</span><span class="sxs-lookup"><span data-stu-id="2dda8-162">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="2dda8-163">請注意，聯接運算式的 = sign 周圍的索引鍵順序很重要。</span><span class="sxs-lookup"><span data-stu-id="2dda8-163">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
+<td><code>groupJoin</code></td><td><span data-ttu-id="182d8-162">根據相符的索引鍵將兩組選取的值相互關聯，並將結果分組。</span><span class="sxs-lookup"><span data-stu-id="182d8-162">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="182d8-163">請注意，聯接運算式的 = sign 周圍的索引鍵順序很重要。</span><span class="sxs-lookup"><span data-stu-id="182d8-163">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -287,7 +287,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>leftOuterJoin</code></td><td><span data-ttu-id="2dda8-164">根據相符的索引鍵將兩組選取的值相互關聯，並將結果分組。</span><span class="sxs-lookup"><span data-stu-id="2dda8-164">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="2dda8-165">如果任何群組都是空的，則會改用具有單一預設值的群組。</span><span class="sxs-lookup"><span data-stu-id="2dda8-165">If any group is empty, a group with a single default value is used instead.</span></span> <span data-ttu-id="2dda8-166">請注意，聯接運算式的 = sign 周圍的索引鍵順序很重要。</span><span class="sxs-lookup"><span data-stu-id="2dda8-166">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
+<td><code>leftOuterJoin</code></td><td><span data-ttu-id="182d8-164">根據相符的索引鍵將兩組選取的值相互關聯，並將結果分組。</span><span class="sxs-lookup"><span data-stu-id="182d8-164">Correlates two sets of selected values based on matching keys and groups the results.</span></span> <span data-ttu-id="182d8-165">如果任何群組都是空的，則會改用具有單一預設值的群組。</span><span class="sxs-lookup"><span data-stu-id="182d8-165">If any group is empty, a group with a single default value is used instead.</span></span> <span data-ttu-id="182d8-166">請注意，聯接運算式的 = sign 周圍的索引鍵順序很重要。</span><span class="sxs-lookup"><span data-stu-id="182d8-166">Note that the order of the keys around the = sign in a join expression is significant.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -299,7 +299,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumByNullable</code></td><td><span data-ttu-id="2dda8-167">為目前為止選取的每個專案選取可為 null 的值，並傳回這些值的總和。</span><span class="sxs-lookup"><span data-stu-id="2dda8-167">Selects a nullable value for each element selected so far and returns the sum of these values.</span></span> <span data-ttu-id="2dda8-168">如果任何可為 null 的沒有值，則會予以忽略。</span><span class="sxs-lookup"><span data-stu-id="2dda8-168">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>sumByNullable</code></td><td><span data-ttu-id="182d8-167">為目前為止選取的每個專案選取可為 null 的值，並傳回這些值的總和。</span><span class="sxs-lookup"><span data-stu-id="182d8-167">Selects a nullable value for each element selected so far and returns the sum of these values.</span></span> <span data-ttu-id="182d8-168">如果任何可為 null 的沒有值，則會予以忽略。</span><span class="sxs-lookup"><span data-stu-id="182d8-168">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -308,7 +308,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>minByNullable</code></td><td><span data-ttu-id="2dda8-169">為目前為止選取的每個專案選取可為 null 的值，並傳回這些值的最小值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-169">Selects a nullable value for each element selected so far and returns the minimum of these values.</span></span> <span data-ttu-id="2dda8-170">如果任何可為 null 的沒有值，則會予以忽略。</span><span class="sxs-lookup"><span data-stu-id="2dda8-170">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>minByNullable</code></td><td><span data-ttu-id="182d8-169">為目前為止選取的每個專案選取可為 null 的值，並傳回這些值的最小值。</span><span class="sxs-lookup"><span data-stu-id="182d8-169">Selects a nullable value for each element selected so far and returns the minimum of these values.</span></span> <span data-ttu-id="182d8-170">如果任何可為 null 的沒有值，則會予以忽略。</span><span class="sxs-lookup"><span data-stu-id="182d8-170">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -317,7 +317,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>maxByNullable</code></td><td><span data-ttu-id="2dda8-171">為目前為止選取的每個專案選取可為 null 的值，並傳回這些值的最大值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-171">Selects a nullable value for each element selected so far and returns the maximum of these values.</span></span> <span data-ttu-id="2dda8-172">如果任何可為 null 的沒有值，則會予以忽略。</span><span class="sxs-lookup"><span data-stu-id="2dda8-172">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>maxByNullable</code></td><td><span data-ttu-id="182d8-171">為目前為止選取的每個專案選取可為 null 的值，並傳回這些值的最大值。</span><span class="sxs-lookup"><span data-stu-id="182d8-171">Selects a nullable value for each element selected so far and returns the maximum of these values.</span></span> <span data-ttu-id="182d8-172">如果任何可為 null 的沒有值，則會予以忽略。</span><span class="sxs-lookup"><span data-stu-id="182d8-172">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -326,7 +326,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageByNullable</code></td><td><span data-ttu-id="2dda8-173">為目前為止選取的每個專案選取可為 null 的值，並傳回這些值的平均值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-173">Selects a nullable value for each element selected so far and returns the average of these values.</span></span> <span data-ttu-id="2dda8-174">如果任何可為 null 的沒有值，則會予以忽略。</span><span class="sxs-lookup"><span data-stu-id="2dda8-174">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
+<td><code>averageByNullable</code></td><td><span data-ttu-id="182d8-173">為目前為止選取的每個專案選取可為 null 的值，並傳回這些值的平均值。</span><span class="sxs-lookup"><span data-stu-id="182d8-173">Selects a nullable value for each element selected so far and returns the average of these values.</span></span> <span data-ttu-id="182d8-174">如果任何可為 null 的沒有值，則會予以忽略。</span><span class="sxs-lookup"><span data-stu-id="182d8-174">If any nullable does not have a value, it is ignored.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -335,7 +335,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>averageBy</code></td><td><span data-ttu-id="2dda8-175">為目前為止選取的每個專案選取一個值，並傳回這些值的平均值。</span><span class="sxs-lookup"><span data-stu-id="2dda8-175">Selects a value for each element selected so far and returns the average of these values.</span></span><br/><br/>
+<td><code>averageBy</code></td><td><span data-ttu-id="182d8-175">為目前為止選取的每個專案選取一個值，並傳回這些值的平均值。</span><span class="sxs-lookup"><span data-stu-id="182d8-175">Selects a value for each element selected so far and returns the average of these values.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -344,7 +344,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>distinct</code></td><td><span data-ttu-id="2dda8-176">從目前為止選取的元素中選取相異元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-176">Selects distinct elements from the elements selected so far.</span></span><br/><br/>
+<td><code>distinct</code></td><td><span data-ttu-id="182d8-176">從目前為止選取的元素中選取相異元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-176">Selects distinct elements from the elements selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -355,7 +355,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>exists</code></td><td><span data-ttu-id="2dda8-177">判斷任何選取到目前為止的元素是否符合條件。</span><span class="sxs-lookup"><span data-stu-id="2dda8-177">Determines whether any element selected so far satisfies a condition.</span></span><br/><br/>
+<td><code>exists</code></td><td><span data-ttu-id="182d8-177">判斷任何選取到目前為止的元素是否符合條件。</span><span class="sxs-lookup"><span data-stu-id="182d8-177">Determines whether any element selected so far satisfies a condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -368,7 +368,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>find</code></td><td><span data-ttu-id="2dda8-178">選取到目前為止所選取的第一個元素，以滿足指定的條件。</span><span class="sxs-lookup"><span data-stu-id="2dda8-178">Selects the first element selected so far that satisfies a specified condition.</span></span><br/><br/>
+<td><code>find</code></td><td><span data-ttu-id="182d8-178">選取到目前為止所選取的第一個元素，以滿足指定的條件。</span><span class="sxs-lookup"><span data-stu-id="182d8-178">Selects the first element selected so far that satisfies a specified condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -377,7 +377,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>all</code></td><td><span data-ttu-id="2dda8-179">判斷目前選取的所有元素是否都符合條件。</span><span class="sxs-lookup"><span data-stu-id="2dda8-179">Determines whether all elements selected so far satisfy a condition.</span></span><br/><br/>
+<td><code>all</code></td><td><span data-ttu-id="182d8-179">判斷目前選取的所有元素是否都符合條件。</span><span class="sxs-lookup"><span data-stu-id="182d8-179">Determines whether all elements selected so far satisfy a condition.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -386,7 +386,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>head</code></td><td><span data-ttu-id="2dda8-180">選取到目前為止所選取的第一個元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-180">Selects the first element from those selected so far.</span></span><br/><br/>
+<td><code>head</code></td><td><span data-ttu-id="182d8-180">選取到目前為止所選取的第一個元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-180">Selects the first element from those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -395,7 +395,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>nth</code></td><td><span data-ttu-id="2dda8-181">在指定的索引中選取到目前為止所選取索引處的元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-181">Selects the element at a specified index amongst those selected so far.</span></span><br/><br/>
+<td><code>nth</code></td><td><span data-ttu-id="182d8-181">在指定的索引中選取到目前為止所選取索引處的元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-181">Selects the element at a specified index amongst those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -404,7 +404,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skip</code></td><td><span data-ttu-id="2dda8-182">略過目前為止選取的專案數目，然後選取其餘的元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-182">Bypasses a specified number of the elements selected so far and then selects the remaining elements.</span></span><br/><br/>
+<td><code>skip</code></td><td><span data-ttu-id="182d8-182">略過目前為止選取的專案數目，然後選取其餘的元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-182">Bypasses a specified number of the elements selected so far and then selects the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -413,7 +413,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>skipWhile</code></td><td><span data-ttu-id="2dda8-183">只要指定的條件為 true，就會略過序列中的專案，然後選取其餘的元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-183">Bypasses elements in a sequence as long as a specified condition is true and then selects the remaining elements.</span></span><br/><br/>
+<td><code>skipWhile</code></td><td><span data-ttu-id="182d8-183">只要指定的條件為 true，就會略過序列中的專案，然後選取其餘的元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-183">Bypasses elements in a sequence as long as a specified condition is true and then selects the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -423,7 +423,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sumBy</code></td><td><span data-ttu-id="2dda8-184">為目前為止選取的每個專案選取一個值，並傳回這些值的總和。</span><span class="sxs-lookup"><span data-stu-id="2dda8-184">Selects a value for each element selected so far and returns the sum of these values.</span></span><br/><br/>
+<td><code>sumBy</code></td><td><span data-ttu-id="182d8-184">為目前為止選取的每個專案選取一個值，並傳回這些值的總和。</span><span class="sxs-lookup"><span data-stu-id="182d8-184">Selects a value for each element selected so far and returns the sum of these values.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -432,7 +432,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>take</code></td><td><span data-ttu-id="2dda8-185">選取到目前為止所選取的連續元素數目。</span><span class="sxs-lookup"><span data-stu-id="2dda8-185">Selects a specified number of contiguous elements from those selected so far.</span></span><br/><br/>
+<td><code>take</code></td><td><span data-ttu-id="182d8-185">選取到目前為止所選取的連續元素數目。</span><span class="sxs-lookup"><span data-stu-id="182d8-185">Selects a specified number of contiguous elements from those selected so far.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -442,7 +442,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>takeWhile</code></td><td><span data-ttu-id="2dda8-186">只要指定的條件為 true，就會從序列中選取專案，然後略過其餘的元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-186">Selects elements from a sequence as long as a specified condition is true, and then skips the remaining elements.</span></span><br/><br/>
+<td><code>takeWhile</code></td><td><span data-ttu-id="182d8-186">只要指定的條件為 true，就會從序列中選取專案，然後略過其餘的元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-186">Selects elements from a sequence as long as a specified condition is true, and then skips the remaining elements.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -451,7 +451,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullable</code></td><td><span data-ttu-id="2dda8-187">依給定可為 null 的排序關鍵字，以遞增順序排序所選取的元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-187">Sorts the elements selected so far in ascending order by the given nullable sorting key.</span></span><br/><br/>
+<td><code>sortByNullable</code></td><td><span data-ttu-id="182d8-187">依給定可為 null 的排序關鍵字，以遞增順序排序所選取的元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-187">Sorts the elements selected so far in ascending order by the given nullable sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -461,7 +461,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>sortByNullableDescending</code></td><td><span data-ttu-id="2dda8-188">依給定可為 null 的排序關鍵字，以遞減順序排序所選取的元素。</span><span class="sxs-lookup"><span data-stu-id="2dda8-188">Sorts the elements selected so far in descending order by the given nullable sorting key.</span></span><br/><br/>
+<td><code>sortByNullableDescending</code></td><td><span data-ttu-id="182d8-188">依給定可為 null 的排序關鍵字，以遞減順序排序所選取的元素。</span><span class="sxs-lookup"><span data-stu-id="182d8-188">Sorts the elements selected so far in descending order by the given nullable sorting key.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -471,7 +471,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullable</code></td><td><span data-ttu-id="2dda8-189">依給定可為 null 的排序關鍵字，以遞增循序執行所選取專案的後續排序。</span><span class="sxs-lookup"><span data-stu-id="2dda8-189">Performs a subsequent ordering of the elements selected so far in ascending order by the given nullable sorting key.</span></span> <span data-ttu-id="2dda8-190">這個運算子只能在 <code>sortBy</code> 、 <code>sortByDescending</code> 、 <code>thenBy</code> 、或 <code>thenByDescending</code> 其可為 null 的 variant 之後立即使用。</span><span class="sxs-lookup"><span data-stu-id="2dda8-190">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
+<td><code>thenByNullable</code></td><td><span data-ttu-id="182d8-189">依給定可為 null 的排序關鍵字，以遞增循序執行所選取專案的後續排序。</span><span class="sxs-lookup"><span data-stu-id="182d8-189">Performs a subsequent ordering of the elements selected so far in ascending order by the given nullable sorting key.</span></span> <span data-ttu-id="182d8-190">這個運算子只能在 <code>sortBy</code> 、 <code>sortByDescending</code> 、 <code>thenBy</code> 、或 <code>thenByDescending</code> 其可為 null 的 variant 之後立即使用。</span><span class="sxs-lookup"><span data-stu-id="182d8-190">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -482,7 +482,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td><code>thenByNullableDescending</code></td><td><span data-ttu-id="2dda8-191">依給定可為 null 的排序關鍵字，以遞減循序執行所選取專案的後續排序。</span><span class="sxs-lookup"><span data-stu-id="2dda8-191">Performs a subsequent ordering of the elements selected so far in descending order by the given nullable sorting key.</span></span> <span data-ttu-id="2dda8-192">這個運算子只能在 <code>sortBy</code> 、 <code>sortByDescending</code> 、 <code>thenBy</code> 、或 <code>thenByDescending</code> 其可為 null 的 variant 之後立即使用。</span><span class="sxs-lookup"><span data-stu-id="2dda8-192">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
+<td><code>thenByNullableDescending</code></td><td><span data-ttu-id="182d8-191">依給定可為 null 的排序關鍵字，以遞減循序執行所選取專案的後續排序。</span><span class="sxs-lookup"><span data-stu-id="182d8-191">Performs a subsequent ordering of the elements selected so far in descending order by the given nullable sorting key.</span></span> <span data-ttu-id="182d8-192">這個運算子只能在 <code>sortBy</code> 、 <code>sortByDescending</code> 、 <code>thenBy</code> 、或 <code>thenByDescending</code> 其可為 null 的 variant 之後立即使用。</span><span class="sxs-lookup"><span data-stu-id="182d8-192">This operator may only be used immediately after a <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, or <code>thenByDescending</code>, or their nullable variants.</span></span><br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -495,19 +495,19 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </td></tr>
 </table>
 
-## <a name="comparison-of-transact-sql-and-f-query-expressions"></a><span data-ttu-id="2dda8-193">Transact-SQL 和 F# 查詢運算式的比較</span><span class="sxs-lookup"><span data-stu-id="2dda8-193">Comparison of Transact-SQL and F# Query Expressions</span></span>
+## <a name="comparison-of-transact-sql-and-f-query-expressions"></a><span data-ttu-id="182d8-193">Transact-SQL 和 F# 查詢運算式的比較</span><span class="sxs-lookup"><span data-stu-id="182d8-193">Comparison of Transact-SQL and F# Query Expressions</span></span>
 
-<span data-ttu-id="2dda8-194">下表顯示一些常見的 Transact-SQL 查詢及其在 F # 中的對應專案。</span><span class="sxs-lookup"><span data-stu-id="2dda8-194">The following table shows some common Transact-SQL queries and their equivalents in F#.</span></span> <span data-ttu-id="2dda8-195">此資料表中的程式碼也會假設與上一個資料表相同的資料庫，以及用來設定類型提供者的相同初始程式碼。</span><span class="sxs-lookup"><span data-stu-id="2dda8-195">The code in this table also assumes the same database as the previous table and the same initial code to set up the type provider.</span></span>
+<span data-ttu-id="182d8-194">下表顯示一些常見的 Transact-SQL 查詢及其在 F # 中的對應專案。</span><span class="sxs-lookup"><span data-stu-id="182d8-194">The following table shows some common Transact-SQL queries and their equivalents in F#.</span></span> <span data-ttu-id="182d8-195">此資料表中的程式碼也會假設與上一個資料表相同的資料庫，以及用來設定類型提供者的相同初始程式碼。</span><span class="sxs-lookup"><span data-stu-id="182d8-195">The code in this table also assumes the same database as the previous table and the same initial code to set up the type provider.</span></span>
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a><span data-ttu-id="2dda8-196">表 2.</span><span class="sxs-lookup"><span data-stu-id="2dda8-196">Table 2.</span></span> <span data-ttu-id="2dda8-197">Transact-SQL 和 F# 查詢運算式</span><span class="sxs-lookup"><span data-stu-id="2dda8-197">Transact-SQL and F# Query Expressions</span></span>
+### <a name="table-2-transact-sql-and-f-query-expressions"></a><span data-ttu-id="182d8-196">表 2.</span><span class="sxs-lookup"><span data-stu-id="182d8-196">Table 2.</span></span> <span data-ttu-id="182d8-197">Transact-SQL 和 F# 查詢運算式</span><span class="sxs-lookup"><span data-stu-id="182d8-197">Transact-SQL and F# Query Expressions</span></span>
 
 <table style="width:100%">
   <tr>
-    <th><span data-ttu-id="2dda8-198">Transact-sql (不區分大小寫) </span><span class="sxs-lookup"><span data-stu-id="2dda8-198">Transact-SQL (not case sensitive)</span></span></th>
-    <th><span data-ttu-id="2dda8-199">F # 查詢運算式 (區分大小寫) </span><span class="sxs-lookup"><span data-stu-id="2dda8-199">F# Query Expression (case sensitive)</span></span></th>
+    <th><span data-ttu-id="182d8-198">Transact-sql (不區分大小寫) </span><span class="sxs-lookup"><span data-stu-id="182d8-198">Transact-SQL (not case sensitive)</span></span></th>
+    <th><span data-ttu-id="182d8-199">F # 查詢運算式 (區分大小寫) </span><span class="sxs-lookup"><span data-stu-id="182d8-199">F# Query Expression (case sensitive)</span></span></th>
   </tr>
 <tr><td>
-<span data-ttu-id="2dda8-200">從資料表中選取所有欄位。</span><span class="sxs-lookup"><span data-stu-id="2dda8-200">Select all fields from table.</span></span><br>
+<span data-ttu-id="182d8-200">從資料表中選取所有欄位。</span><span class="sxs-lookup"><span data-stu-id="182d8-200">Select all fields from table.</span></span><br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
@@ -522,7 +522,7 @@ query {
 
 </td></tr>
 <tr><td>
-<span data-ttu-id="2dda8-201">計算資料表中的記錄。</span><span class="sxs-lookup"><span data-stu-id="2dda8-201">Count records in a table.</span></span><br/>
+<span data-ttu-id="182d8-201">計算資料表中的記錄。</span><span class="sxs-lookup"><span data-stu-id="182d8-201">Count records in a table.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 </code></pre>
@@ -564,7 +564,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td><span data-ttu-id="2dda8-202">分組</span><span class="sxs-lookup"><span data-stu-id="2dda8-202">Grouping</span></span><br/>
+<td><span data-ttu-id="182d8-202">群組</span><span class="sxs-lookup"><span data-stu-id="182d8-202">Grouping</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) FROM Student
 GROUP BY Student.Age
@@ -586,7 +586,7 @@ query {
 }
 </code></pre>
 </td></tr><tr><td>
-<span data-ttu-id="2dda8-203">使用條件分組。</span><span class="sxs-lookup"><span data-stu-id="2dda8-203">Grouping with condition.</span></span><br/>
+<span data-ttu-id="182d8-203">使用條件分組。</span><span class="sxs-lookup"><span data-stu-id="182d8-203">Grouping with condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * )
 FROM Student
@@ -606,7 +606,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="2dda8-204">使用計數條件分組。</span><span class="sxs-lookup"><span data-stu-id="2dda8-204">Grouping with count condition.</span></span><br/>
+<span data-ttu-id="182d8-204">使用計數條件分組。</span><span class="sxs-lookup"><span data-stu-id="182d8-204">Grouping with count condition.</span></span><br/>
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable no-space-in-emphasis -->
@@ -630,7 +630,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="2dda8-205">群組、計數和總和。</span><span class="sxs-lookup"><span data-stu-id="2dda8-205">Grouping, counting, and summing.</span></span><br/>
+<span data-ttu-id="182d8-205">群組、計數和總和。</span><span class="sxs-lookup"><span data-stu-id="182d8-205">Grouping, counting, and summing.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ), SUM(Student.Age) as total
 FROM Student
@@ -653,7 +653,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="2dda8-206">依計數分組、計算和排序。</span><span class="sxs-lookup"><span data-stu-id="2dda8-206">Grouping, counting, and ordering by count.</span></span><br/>
+<span data-ttu-id="182d8-206">依計數分組、計算和排序。</span><span class="sxs-lookup"><span data-stu-id="182d8-206">Grouping, counting, and ordering by count.</span></span><br/>
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable no-space-in-emphasis -->
@@ -679,8 +679,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-207">
-<code>IN</code> 一組指定的值</span><span class="sxs-lookup"><span data-stu-id="2dda8-207">
+</td></tr><tr><td><span data-ttu-id="182d8-207">
+<code>IN</code> 一組指定的值</span><span class="sxs-lookup"><span data-stu-id="182d8-207">
 <code>IN</code> a set of specified values</span></span><br/>
 
 <pre><code class="lang-sql">SELECT *
@@ -703,8 +703,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-208">
-<code>LIKE</code> 和 <code>TOP</code>。</span><span class="sxs-lookup"><span data-stu-id="2dda8-208">
+</td></tr><tr><td><span data-ttu-id="182d8-208">
+<code>LIKE</code> 和 <code>TOP</code>。</span><span class="sxs-lookup"><span data-stu-id="182d8-208">
 <code>LIKE</code> and <code>TOP</code>.</span></span><br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
@@ -722,8 +722,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-209">
-<code>LIKE</code> 已設定模式相符。</span><span class="sxs-lookup"><span data-stu-id="2dda8-209">
+</td></tr><tr><td><span data-ttu-id="182d8-209">
+<code>LIKE</code> 已設定模式相符。</span><span class="sxs-lookup"><span data-stu-id="182d8-209">
 <code>LIKE</code> with pattern match set.</span></span><br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
@@ -740,8 +740,8 @@ WHERE Student.Name LIKE '[abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-210">
-<code>LIKE</code> 使用設定排除模式。</span><span class="sxs-lookup"><span data-stu-id="2dda8-210">
+</td></tr><tr><td><span data-ttu-id="182d8-210">
+<code>LIKE</code> 使用設定排除模式。</span><span class="sxs-lookup"><span data-stu-id="182d8-210">
 <code>LIKE</code> with set exclusion pattern.</span></span><br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
@@ -760,8 +760,8 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-211">
-<code>LIKE</code> 在一個欄位上，選取不同的欄位。</span><span class="sxs-lookup"><span data-stu-id="2dda8-211">
+</td></tr><tr><td><span data-ttu-id="182d8-211">
+<code>LIKE</code> 在一個欄位上，選取不同的欄位。</span><span class="sxs-lookup"><span data-stu-id="182d8-211">
 <code>LIKE</code> on one field, but select a different field.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
@@ -777,7 +777,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-212"><code>LIKE</code>，包含子字串搜尋。</span><span class="sxs-lookup"><span data-stu-id="2dda8-212"><code>LIKE</code>, with substring search.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-212"><code>LIKE</code>，包含子字串搜尋。</span><span class="sxs-lookup"><span data-stu-id="182d8-212"><code>LIKE</code>, with substring search.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -794,7 +794,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<span data-ttu-id="2dda8-213"><code>JOIN</code>有兩個數據表很簡單。</span><span class="sxs-lookup"><span data-stu-id="2dda8-213">Simple <code>JOIN</code> with two tables.</span></span><br/>
+<span data-ttu-id="182d8-213"><code>JOIN</code>有兩個數據表很簡單。</span><span class="sxs-lookup"><span data-stu-id="182d8-213">Simple <code>JOIN</code> with two tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -812,7 +812,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-214"><code>LEFT JOIN</code> 有兩個數據表。</span><span class="sxs-lookup"><span data-stu-id="2dda8-214"><code>LEFT JOIN</code> with two tables.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-214"><code>LEFT JOIN</code> 有兩個數據表。</span><span class="sxs-lookup"><span data-stu-id="182d8-214"><code>LEFT JOIN</code> with two tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -831,7 +831,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-215"><code>COUNT</code> 的 <code>JOIN</code></span><span class="sxs-lookup"><span data-stu-id="2dda8-215"><code>JOIN</code> with <code>COUNT</code></span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-215"><code>COUNT</code> 的 <code>JOIN</code></span><span class="sxs-lookup"><span data-stu-id="182d8-215"><code>JOIN</code> with <code>COUNT</code></span></span><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -865,7 +865,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-216">相異計數。</span><span class="sxs-lookup"><span data-stu-id="2dda8-216">Distinct count.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-216">相異計數。</span><span class="sxs-lookup"><span data-stu-id="182d8-216">Distinct count.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT COUNT(StudentID) FROM CourseSelection
 </code></pre>
@@ -914,7 +914,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-217"><code>OR</code> 使用順序</span><span class="sxs-lookup"><span data-stu-id="2dda8-217"><code>OR</code> with ordering</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-217"><code>OR</code> 使用順序</span><span class="sxs-lookup"><span data-stu-id="182d8-217"><code>OR</code> with ordering</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -932,7 +932,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-218"><code>TOP</code>、 <code>OR</code> 和順序。</span><span class="sxs-lookup"><span data-stu-id="2dda8-218"><code>TOP</code>, <code>OR</code>, and ordering.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-218"><code>TOP</code>、 <code>OR</code> 和順序。</span><span class="sxs-lookup"><span data-stu-id="182d8-218"><code>TOP</code>, <code>OR</code>, and ordering.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -954,7 +954,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-219"><code>UNION</code> 兩個查詢。</span><span class="sxs-lookup"><span data-stu-id="2dda8-219"><code>UNION</code> of two queries.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-219"><code>UNION</code> 兩個查詢。</span><span class="sxs-lookup"><span data-stu-id="182d8-219"><code>UNION</code> of two queries.</span></span><br/>
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable no-space-in-emphasis -->
@@ -982,7 +982,7 @@ let query2 =
 query2.Union (query1)
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-220">兩個查詢的交集。</span><span class="sxs-lookup"><span data-stu-id="2dda8-220">Intersection of two queries.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-220">兩個查詢的交集。</span><span class="sxs-lookup"><span data-stu-id="182d8-220">Intersection of two queries.</span></span><br/>
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable no-space-in-emphasis -->
@@ -1009,7 +1009,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-221"><code>CASE</code> 條件。</span><span class="sxs-lookup"><span data-stu-id="2dda8-221"><code>CASE</code> condition.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-221"><code>CASE</code> 條件。</span><span class="sxs-lookup"><span data-stu-id="182d8-221"><code>CASE</code> condition.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -1031,7 +1031,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-222">多個案例。</span><span class="sxs-lookup"><span data-stu-id="2dda8-222">Multiple cases.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-222">多個案例。</span><span class="sxs-lookup"><span data-stu-id="182d8-222">Multiple cases.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.StudentID,
 CASE Student.Age
@@ -1057,7 +1057,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-223">多個資料表。</span><span class="sxs-lookup"><span data-stu-id="2dda8-223">Multiple tables.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-223">多個資料表。</span><span class="sxs-lookup"><span data-stu-id="182d8-223">Multiple tables.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student, Course
 </code></pre>
@@ -1072,7 +1072,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-224">多個聯結。</span><span class="sxs-lookup"><span data-stu-id="2dda8-224">Multiple joins.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-224">多個聯結。</span><span class="sxs-lookup"><span data-stu-id="182d8-224">Multiple joins.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1095,7 +1095,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><span data-ttu-id="2dda8-225">多個左方外部聯結。</span><span class="sxs-lookup"><span data-stu-id="2dda8-225">Multiple left outer joins.</span></span><br/>
+</td></tr><tr><td><span data-ttu-id="182d8-225">多個左方外部聯結。</span><span class="sxs-lookup"><span data-stu-id="182d8-225">Multiple left outer joins.</span></span><br/>
 
 <pre><code class="lang-sql">SELECT Student.Name, Course.CourseName
 FROM Student
@@ -1122,7 +1122,7 @@ query {
 
 </td></tr></table>
 
-<span data-ttu-id="2dda8-226">下列程式碼可以用來建立這些範例的範例資料庫。</span><span class="sxs-lookup"><span data-stu-id="2dda8-226">The following code can be used to create the sample database for these examples.</span></span>
+<span data-ttu-id="182d8-226">下列程式碼可以用來建立這些範例的範例資料庫。</span><span class="sxs-lookup"><span data-stu-id="182d8-226">The following code can be used to create the sample database for these examples.</span></span>
 
 <pre><code class="lang-sql">SET ANSI_NULLS ON
 GO
@@ -1244,7 +1244,7 @@ INSERT INTO CourseSelection (ID, StudentID, CourseID)
 VALUES(15, 7, 3);
 </code></pre>
 
-<span data-ttu-id="2dda8-227">下列程式碼包含本主題中所顯示的範例程式碼。</span><span class="sxs-lookup"><span data-stu-id="2dda8-227">The following code contains  the sample code that appears in this topic.</span></span>
+<span data-ttu-id="182d8-227">下列程式碼包含本主題中所顯示的範例程式碼。</span><span class="sxs-lookup"><span data-stu-id="182d8-227">The following code contains  the sample code that appears in this topic.</span></span>
 
 ```fsharp
 #if INTERACTIVE
@@ -1878,7 +1878,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-<span data-ttu-id="2dda8-228">以下是在 F# 互動中執行此程式碼時的完整輸出。</span><span class="sxs-lookup"><span data-stu-id="2dda8-228">And here is the full output when this code is run in F# Interactive.</span></span>
+<span data-ttu-id="182d8-228">以下是在 F# 互動中執行此程式碼時的完整輸出。</span><span class="sxs-lookup"><span data-stu-id="182d8-228">And here is the full output when this code is run in F# Interactive.</span></span>
 
 ```console
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
@@ -2439,8 +2439,8 @@ module Queries2 = begin
 end
 ```
 
-## <a name="see-also"></a><span data-ttu-id="2dda8-229">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2dda8-229">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="182d8-229">另請參閱</span><span class="sxs-lookup"><span data-stu-id="182d8-229">See also</span></span>
 
-- [<span data-ttu-id="2dda8-230">F # 語言參考</span><span class="sxs-lookup"><span data-stu-id="2dda8-230">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="2dda8-231">QueryBuilder 類別</span><span class="sxs-lookup"><span data-stu-id="2dda8-231">QueryBuilder Class</span></span>](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)
-- [<span data-ttu-id="2dda8-232">計算運算式</span><span class="sxs-lookup"><span data-stu-id="2dda8-232">Computation Expressions</span></span>](Computation-Expressions.md)
+- [<span data-ttu-id="182d8-230">F # 語言參考</span><span class="sxs-lookup"><span data-stu-id="182d8-230">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="182d8-231">QueryBuilder 類別</span><span class="sxs-lookup"><span data-stu-id="182d8-231">QueryBuilder Class</span></span>](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)
+- [<span data-ttu-id="182d8-232">計算運算式</span><span class="sxs-lookup"><span data-stu-id="182d8-232">Computation Expressions</span></span>](Computation-Expressions.md)
