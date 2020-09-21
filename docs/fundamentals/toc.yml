@@ -696,11 +696,24 @@ items:
   - name: Microsoft 擴充功能
     items:
       - name: 設定
-        href: /aspnet/core/fundamentals/configuration/
+        items:
+          - name: 總覽
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: 設定提供者
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: 實作自訂組態提供者
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
       - name: 相依性插入
-        href: /aspnet/core/fundamentals/dependency-injection/
+        href: /aspnet/core/fundamentals/dependency-injection
+      - name: 泛型主機
+        href: /aspnet/core/fundamentals/host/generic-host
       - name: 記錄
-        href: /aspnet/core/fundamentals/logging/
+        href: /aspnet/core/fundamentals/logging
+      - name: 選項模式
+        href: /aspnet/core/fundamentals/configuration/options
   - name: 資料存取
     items:
       - name: LINQ
