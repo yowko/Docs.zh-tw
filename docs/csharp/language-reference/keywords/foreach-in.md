@@ -1,7 +1,7 @@
 ---
 description: foreach、in (C# 參考)
 title: C# foreach 陳述式
-ms.date: 07/22/2020
+ms.date: 09/18/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 2ed89fa52b2d3d369d668bf79ab32eaf7be18a8a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ea8a6f86595348a32b707caf9782f84147fefc87
+ms.sourcegitcommit: 43ed174f085840ca18a791dc89fe833174da766d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142072"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828886"
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# 參考)
 
@@ -25,8 +25,8 @@ ms.locfileid: "89142072"
 
 `foreach`語句不限於這些類型。 您可以將它用於符合下列條件之任何類型的實例：
 
-- 型別具有公用無參數 `GetEnumerator` 方法，其傳回型別為類別、結構或介面型別。
-- `GetEnumerator` 方法的傳回型別具有公用的 `Current` 屬性，且公用無參數的 `MoveNext` 方法的傳回型別為 <xref:System.Boolean>。
+- 型別具有公用無參數 `GetEnumerator` 方法，其傳回型別為類別、結構或介面型別。 從 c # 9.0 開始， `GetEnumerator` 方法可以是類型的 [擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)。
+- 方法的傳回型別 `GetEnumerator` 具有公用 `Current` 屬性，以及其傳回型別為的公用無參數 `MoveNext` 方法 <xref:System.Boolean> 。
 
 下列範例 `foreach` 會使用語句 <xref:System.Span%601?displayProperty=nameWithType> 搭配類型的實例，而不會執行任何介面：
 
@@ -66,6 +66,11 @@ foreach (V item in collection) { }
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [foreach 陳述式](~/_csharplang/spec/statements.md#the-foreach-statement)一節。
+
+如需有關 c # 8.0 和更新版本中新增之功能的詳細資訊，請參閱下列功能提案附注：
+
+- [非同步資料流程 (c # 8.0) ](~/_csharplang/proposals/csharp-8.0/async-streams.md)
+- [`GetEnumerator`支援迴圈的擴充功能 `foreach` (c # 9.0) ](~/_csharplang/proposals/csharp-9.0/extension-getenumerator.md)
 
 ## <a name="see-also"></a>另請參閱
 

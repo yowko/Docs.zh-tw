@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: f72e9f097880d9de725a85a0973001baaefd9a9c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ad2eb6f12d8c295dc5203994d6c570cd2377e3ee
+ms.sourcegitcommit: 43ed174f085840ca18a791dc89fe833174da766d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141734"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828912"
 ---
 # <a name="value-c-reference"></a>value (C# 參考)
 
@@ -20,7 +20,7 @@ ms.locfileid: "89141734"
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-如需詳細資訊，請參閱 [屬性](../../programming-guide/classes-and-structs/properties.md) 和 [Indexeres](../../programming-guide/indexers/index.md) 文章。
+如需詳細資訊，請參閱 [屬性](../../programming-guide/classes-and-structs/properties.md) 和 [索引子](../../programming-guide/indexers/index.md) 文章。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
