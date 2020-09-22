@@ -8,37 +8,41 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 25dd06905525a96bc1504f033eb4f19af6d454a2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2377d8d1635912885a310b2b0429a6a00083b47
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359628"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869676"
 ---
 # <a name="take-clause-visual-basic"></a>Take 子句 (Visual Basic)
+
 從集合開頭傳回指定數目的連續項目。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Take count  
 ```  
   
 ## <a name="parts"></a>組件  
+
  `count`  
- 必要。 值或運算式，評估為要傳回之序列的專案數。  
+ 必要。 值或運算式，這個值會評估為要傳回之序列的元素數。  
   
 ## <a name="remarks"></a>備註  
- `Take`子句會使查詢在結果清單的開頭包含指定數目的連續元素。 要包含的元素數目是由 `count` 參數指定。  
+
+ `Take`子句會讓查詢從結果清單的開頭包含指定數目的連續元素。 要包含的元素數目是由參數所指定 `count` 。  
   
- 您可以使用 `Take` 子句搭配子句， `Skip` 從查詢的任何區段傳回資料範圍。 若要這麼做，請將範圍的第一個元素的索引傳遞至 `Skip` 子句，並將範圍的大小傳遞給 `Take` 子句。 在此情況下， `Take` 子句必須在子句之後指定 `Skip` 。  
+ 您可以使用 `Take` 子句搭配 `Skip` 子句，從查詢的任何區段傳回資料範圍。 若要這樣做，請將範圍第一個元素的索引傳遞給子句，並將範圍的大小傳遞給 `Skip` `Take` 子句。 在此情況下， `Take` 子句必須在子句之後指定 `Skip` 。  
   
- 當您 `Take` 在查詢中使用子句時，您可能也需要確保以可讓 `Take` 子句包含預期結果的順序傳回結果。 如需排序查詢結果的詳細資訊，請參閱[Order By 子句](order-by-clause.md)。  
+ 當您 `Take` 在查詢中使用子句時，您可能也需要確保結果會以可讓 `Take` 子句包含所需結果的順序傳回。 如需排序查詢結果的詳細資訊，請參閱 [Order By 子句](order-by-clause.md)。  
   
- 您可以使用 `TakeWhile` 子句來指定只傳回特定元素，視提供的條件而定。  
+ 您可以使用 `TakeWhile` 子句來指定只傳回特定的元素，視提供的條件而定。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例會 `Take` 搭配子句使用子句 `Skip` ，以從頁面中的查詢傳回資料。 GetCustomers 函式會使用 `Skip` 子句來略過清單中的客戶，直到提供的起始索引值，並使用 `Take` 子句來傳回從該索引值開始的客戶頁面。  
+
+ 下列程式碼範例會將 `Take` 子句和子句一起使用， `Skip` 以從頁面中的查詢傳回資料。 GetCustomers 函式會使用 `Skip` 子句來略過清單中的客戶，直到提供的起始索引值為止，並使用 `Take` 子句傳回從該索引值開始之客戶的頁面。  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

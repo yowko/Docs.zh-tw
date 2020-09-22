@@ -8,17 +8,18 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 4bf832651d9753c41ee5a02defec4adc55af1ff1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a6ff3fc80a2b6752c61a8b8f7d4ce62b5a46baad
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359757"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869883"
 ---
 # <a name="let-clause-visual-basic"></a>Let 子句 (Visual Basic)
-計算值，並將它指派給查詢中的新變數。  
+
+計算值，並將它指派給查詢內的新變數。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 Let variable = expression [, ...]  
@@ -32,11 +33,13 @@ Let variable = expression [, ...]
 |`expression`|必要。 將評估並指派給指定之變數的運算式。|  
   
 ## <a name="remarks"></a>備註  
- `Let`子句可讓您計算每個查詢結果的值，並使用別名來參考它們。 別名可用於其他子句，例如 `Where` 子句。 `Let`子句可讓您建立更容易閱讀的查詢語句，因為您可以為查詢中包含的運算式子句指定別名，並在每次使用 expression 子句時替換別名。  
+
+ `Let`子句可讓您計算每個查詢結果的值，並使用別名來參考這些值。 別名可以在其他子句中使用，例如 `Where` 子句。 `Let`子句可讓您建立更容易讀取的查詢語句，因為您可以指定包含在查詢中之運算式子句的別名，並在每次使用 expression 子句時取代別名。  
   
- 您可以在子句中包含任意數目的 `variable` 和 `expression` 指派 `Let` 。 以逗號（，）分隔每個指派。  
+ 您可以在子句中包含任何數目的 `variable` 和 `expression` 指派 `Let` 。 以逗號 ( 分隔每個指派，) 。  
   
 ## <a name="example"></a>範例  
+
  下列程式碼範例使用 `Let` 子句來計算產品的10% 折扣。  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  

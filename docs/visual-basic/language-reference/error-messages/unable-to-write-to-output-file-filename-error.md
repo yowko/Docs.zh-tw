@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 73fce70c0740992e2e9159946d428d214576e163
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198198"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870279"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>無法寫入輸出檔 '\<filename > '： \<錯誤 >
+# <a name="unable-to-write-to-output-file-filename-error"></a>無法寫入輸出檔案 '\<filename>': \<error>
+
 建立檔案時發生問題。  
   
  無法開啟輸出檔案以供寫入。 檔案 (或包含檔案的資料夾) 可能已由另一個處理序以獨佔方式開啟使用，或是其可能設定了唯讀屬性。  
@@ -33,7 +34,7 @@ ms.locfileid: "73198198"
   
 1. 再次編譯程式，看看錯誤是否重複發生。  
   
-2. 如果錯誤繼續發生，請儲存您的工作並重新啟動 Visual Studio。  
+2. 如果錯誤持續發生，請儲存您的工作並重新啟動 Visual Studio。  
   
 3. 如果錯誤繼續發生，請重新啟動電腦。  
   
@@ -45,18 +46,18 @@ ms.locfileid: "73198198"
   
 1. 開啟您感興趣的資料夾。  
   
-2. 按一下 [ **Views** ] 圖示，然後選擇 [**詳細資料**]。  
+2. 按一下 [ **Views** ] 圖示，然後選擇 [ **詳細資料**]。  
   
-3. 以滑鼠右鍵按一下資料行標頭，然後從下拉式清單中選擇 [**屬性**]。  
+3. 以滑鼠右鍵按一下資料行標頭，然後從下拉式清單中選擇 [ **屬性** ]。  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>變更檔案或資料夾的屬性  
   
-1. 在 [檔案**管理器**] 中，以滑鼠右鍵按一下檔案或資料夾，然後選擇 [**屬性**]。  
+1. 在 **檔案總管**中，以滑鼠右鍵按一下檔案或資料夾，然後選擇 [ **屬性**]。  
   
-2. 在 [**一般**] 索引標籤的 [**屬性**] 區段中，清除 [**唯讀**] 核取方塊。  
+2. 在 [**一般**] 索引標籤的 [**屬性**] 區段中，清除 [**唯讀**] 方塊。  
   
-3. 按 [確定]。  
+3. 按下 **[確定]**。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [告訴我們](/visualstudio/ide/feedback-options)
+- [與我們交談](/visualstudio/ide/feedback-options)
