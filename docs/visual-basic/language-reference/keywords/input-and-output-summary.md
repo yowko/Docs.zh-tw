@@ -6,21 +6,22 @@ helpviewer_keywords:
 - output, Visual Basic functions
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
-ms.openlocfilehash: 44321d75ce88beead2c631318392e5d630bae74b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f88d68910c3c094b54896e4aa88c8c2be44cba98
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373469"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875606"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>輸入和輸出摘要 (Visual Basic)
-Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
+
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用方式組織。  
   
 |動作|語言項目|  
 |------------|----------------------|  
 |存取或建立檔案。|<xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>|  
-|關閉 [檔案]。|<xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>, <xref:Microsoft.VisualBasic.FileSystem.Reset%2A>|  
-|控制輸出外觀。|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.SPC%2A>, <xref:Microsoft.VisualBasic.FileSystem.TAB%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A>|  
+|關閉檔案。|<xref:Microsoft.VisualBasic.FileSystem.FileClose%2A>, <xref:Microsoft.VisualBasic.FileSystem.Reset%2A>|  
+|控制項輸出外觀。|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.SPC%2A>, <xref:Microsoft.VisualBasic.FileSystem.TAB%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileWidth%2A>|  
 |複製檔案。|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
 |取得檔案的相關資訊。|<xref:Microsoft.VisualBasic.FileSystem.EOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>, <xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.Loc%2A>, <xref:Microsoft.VisualBasic.FileSystem.LOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
 |透過控制項對話方塊，取得或提供使用者的資訊。|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  

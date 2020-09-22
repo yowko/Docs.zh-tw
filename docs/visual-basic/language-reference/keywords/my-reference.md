@@ -5,15 +5,16 @@ helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: f54ecf4f60a620818ea57093d8c2325cf2ed0d04
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60dadc2918d4926c2b8bf1004a09d9b3a1ec56ab
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373339"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875582"
 ---
 # <a name="my-reference-visual-basic"></a>My 參考 (Visual Basic)
-這 `My` 項功能可讓您以直覺的方式存取常用的方法、屬性和事件，讓程式設計更快速且更容易。 下表列出包含在中的物件 `My` ，以及每個所能執行的動作。  
+
+這 `My` 項功能可讓您以直覺方式存取常用的方法、屬性和事件，以更快速且更輕鬆地進行程式設計。 下表列出中包含的物件 `My` ，以及每個物件可以執行的動作。  
   
 |**動作**|**Object**|  
 |----------------|----------------|  

@@ -8,17 +8,19 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic]
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
-ms.openlocfilehash: 0ad07aa206ec982e3120d5cededbb575a936e777
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e872c675d06290023ac697f1b129604c3c39d42c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373085"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875496"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
-指定傳遞引數的方式，就是呼叫的程式可以變更呼叫程式碼中引數基礎的變數值。  
+
+指定傳遞引數的方式，就是呼叫的程式可以變更呼叫程式碼中引數基礎之變數的值。  
   
 ## <a name="remarks"></a>備註  
+
  `ByRef` 修飾詞可用於以下內容：  
   
  [Declare Statement](../statements/declare-statement.md)  

@@ -10,39 +10,43 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 4ac8e5942cf6097642ec111992ebfcdb91e8d7c1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d37a93343822d069295477958780c2b9c72043fa
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392167"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875455"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
-指定一或多個宣告的程式設計項目，只能從包含其宣告的元件中存取。  
+
+指定一或多個宣告的程式設計專案只能從包含其宣告的元件內進行存取。  
   
 ## <a name="remarks"></a>備註  
- 在許多情況下，您會想要讓整個元件使用程式設計專案（例如類別和結構），而不只是宣告它們的元件。 不過，您可能不想讓程式碼能夠透過元件外部的程式碼存取（例如，如果應用程式是專屬的）。 如果您想要以這種方式限制對專案的存取，您可以使用修飾詞來宣告該元素 `Friend` 。  
+
+ 在許多情況下，您會想要讓整個元件使用程式設計專案（例如類別和結構），而不只是由宣告它們的元件使用。 不過，您可能不想讓元件之外的程式碼能夠存取它們 (例如，如果應用程式是專屬的) 。 如果您想要以這種方式限制對專案的存取，可以使用修飾詞來宣告 `Friend` 。  
   
- 其他類別、結構和模組中編譯成相同元件的程式碼，都可以存取 `Friend` 該元件中的所有元素。  
+ 其他類別、結構以及編譯成相同元件的模組中的程式碼，都可以存取 `Friend` 該元件中的所有元素。  
   
- `Friend`存取通常是應用程式設計項目的慣用層級，而且 `Friend` 是介面、模組、類別或結構的預設存取層級。  
+ `Friend` 存取通常是應用程式程式設計項目的慣用層級，而且 `Friend` 是介面、模組、類別或結構的預設存取層級。  
   
- 您 `Friend` 只能在模組、介面或命名空間層級上使用。 因此，專案的宣告內容 `Friend` 必須是原始程式檔、命名空間、介面、模組、類別或結構，而不能是程式。  
+ 您 `Friend` 只能在模組、介面或命名空間層級使用。 因此，元素的宣告內容 `Friend` 必須是原始程式檔、命名空間、介面、模組、類別或結構，但不能是程式。  
 
 > [!NOTE]
-> 您也可以使用[受保護的 Friend](protected-friend.md)存取修飾詞，讓類別成員可從類別內、衍生類別，以及定義類別的相同元件中存取。 若要從相同元件中的類別和衍生類別限制成員的存取權，您可以使用私用[保護](private-protected.md)的存取修飾詞。
+> 您也可以使用 [受保護的 Friend](protected-friend.md) 存取修飾詞，讓類別成員可以從該類別、衍生類別，以及定義類別的相同元件中存取。 若要在其類別中以及從相同元件中的衍生類別，限制成員的存取權，您可以使用 [私用受保護](private-protected.md) 的存取修飾詞。
 
- 如需和其他存取修飾詞的比較 `Friend` ，請參閱[Visual Basic 中的存取層級](../../programming-guide/language-features/declared-elements/access-levels.md)。  
+ 如需和其他存取修飾詞的比較 `Friend` ，請參閱 [Visual Basic 中的存取層級](../../programming-guide/language-features/declared-elements/access-levels.md)。  
   
 > [!NOTE]
-> 您可以指定另一個元件是 friend 元件，讓它能夠存取所有標記為的類型和成員 `Friend` 。 如需詳細資訊，請參閱[Friend 元件](../../../standard/assembly/friend.md)。
+> 您可以指定另一個元件是 friend 元件，讓它能夠存取標記為的所有類型和成員 `Friend` 。 如需詳細資訊，請參閱 [Friend 元件](../../../standard/assembly/friend.md)。
 
 ## <a name="example"></a>範例  
- 下列類別會使用 `Friend` 修飾詞，允許相同元件中的其他程式設計項目存取特定成員。  
+
+ 下列類別會使用 `Friend` 修飾詞，以允許相同元件中的其他程式設計專案存取某些成員。  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>使用方式  
+
  您可以 `Friend` 在這些內容中使用修飾詞：  
   
  [Class 陳述式](../statements/class-statement.md)  
@@ -75,8 +79,8 @@ ms.locfileid: "84392167"
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [公開](public.md)
-- [免受](protected.md)
-- [私用](private.md)
+- [保護](protected.md)
+- [私人](private.md)
 - [私用保護](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic 中的存取層級](../../programming-guide/language-features/declared-elements/access-levels.md)

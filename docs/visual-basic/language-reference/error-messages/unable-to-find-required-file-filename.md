@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: 1abb420c997afbc69a652502801d91043eb48757
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e05d298570b45415b567a6db41764fc0163eee77
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197263"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875706"
 ---
-# <a name="unable-to-find-required-file-filename"></a>找不到必要的檔案 '\<filename > '
+# <a name="unable-to-find-required-file-filename"></a>找不到必要的檔案 '\<filename>'
+
 Visual Studio 所需要的某個檔案已經遺失或損毀。  
   
  **錯誤識別碼：** BC30655  
@@ -23,6 +24,6 @@ Visual Studio 所需要的某個檔案已經遺失或損毀。
   
 - 請重新安裝 Visual Studio。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [告訴我們](/visualstudio/ide/feedback-options)
+- [與我們交談](/visualstudio/ide/feedback-options)

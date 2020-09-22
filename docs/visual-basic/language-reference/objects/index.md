@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: e927f69b7606866a0a9e8eadd59270f51ffc5e2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86852b8335c05f496ea7325ae3defd35c7532b38
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414216"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875411"
 ---
 # <a name="objects-visual-basic"></a>物件 (Visual Basic)
+
 本主題提供其他主題的連結，而這些主題記錄 Visual Basic 執行階段物件，並包含其成員程序、屬性和事件的表格。  
   
 ## <a name="visual-basic-run-time-objects"></a>Visual Basic 執行階段物件  

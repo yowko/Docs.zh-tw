@@ -2,17 +2,19 @@
 title: 修飾詞
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 80adc4521dcb1bb0c65981dae6f842168194eae7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372891"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875444"
 ---
 # <a name="modifiers-visual-basic"></a>修飾詞 (Visual Basic)
+
 本節中的主題將說明 Visual Basic 執行階段修飾詞。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [Ansi](ansi.md)  
   
  [組件](assembly.md)  
@@ -27,15 +29,15 @@ ms.locfileid: "84372891"
   
  [預設值](default.md)  
   
- [給](friend.md)  
+ [Friend](friend.md)  
   
- [位於](in-generic-modifier.md)  
+ [位置](in-generic-modifier.md)  
   
  [Iterator](iterator.md)  
   
- [關鍵](key.md)  
+ [索引鍵](key.md)  
   
- [Module\<keyword>](module-keyword.md)  
+ [模組 \<keyword>](module-keyword.md)  
   
  [MustInherit](mustinherit.md)  
   
@@ -49,7 +51,7 @@ ms.locfileid: "84372891"
   
  [選擇性](optional.md)  
   
- [脫銷](out-generic-modifier.md)  
+ [擴展](out-generic-modifier.md)  
   
  [多載](overloads.md)  
   
@@ -61,17 +63,17 @@ ms.locfileid: "84372891"
   
  [Partial](partial.md)  
   
- [私用](private.md)  
+ [私人](private.md)  
   
  [私用保護](private-protected.md)  
   
- [免受](protected.md)  
+ [保護](protected.md)  
 
  [Protected Friend](protected-friend.md)  
   
  [公開](public.md)  
   
- [唯讀](readonly.md)  
+ [ReadOnly](readonly.md)  
   
  [Shadows](shadows.md)  
   
@@ -79,7 +81,7 @@ ms.locfileid: "84372891"
   
  [靜態](static.md)  
   
- [消除](unicode.md)  
+ [Unicode](unicode.md)  
   
  [Widening](widening.md)  
   
@@ -88,4 +90,5 @@ ms.locfileid: "84372891"
  [WriteOnly](writeonly.md)  
   
 ## <a name="related-sections"></a>相關章節  
+
  [Visual Basic 語言參考](../index.md)  

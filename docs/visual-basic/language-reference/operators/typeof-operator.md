@@ -12,17 +12,18 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 0cce36073b53442bce63f966f3bd94bd5d70d2a8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0a01b49cf1e0bf9ad7b2ce541cee39cba83025ca
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406321"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875305"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 運算子 (Visual Basic)
-檢查運算式結果的執行時間類型是否與指定的類型相容。
+
+檢查運算式結果的執行時間型別是否與指定的類型相容。
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 result = TypeOf objectexpression Is typename  
@@ -33,6 +34,7 @@ result = TypeOf objectexpression IsNot typename
 ```  
   
 ## <a name="parts"></a>組件  
+
  `result`  
  更有效率。 `Boolean` 值。  
   
@@ -43,6 +45,7 @@ result = TypeOf objectexpression IsNot typename
  必要。 任何資料類型名稱。  
   
 ## <a name="remarks"></a>備註  
+
  `TypeOf` 運算子會判定 `objectexpression` 的執行階段類型是否相容 `typename`。 相容性取決 `typename` 的類型分類。 下表顯示如何判斷相容性。  
   
 |`typename` 的類型分類|相容性準則|  
@@ -56,6 +59,7 @@ result = TypeOf objectexpression IsNot typename
  `TypeOf` 一律會使用 `Is` 關鍵字來建構 `TypeOf`...`Is` 運算式，或使用 `IsNot` 關鍵字來建構 `TypeOf`...`IsNot` 運算式。  
   
 ## <a name="example"></a>範例  
+
  下列範例會使用 `TypeOf`...`Is` 運算式，測試兩個包含各種資料類型的物件參考變數的類型相容性。  
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
