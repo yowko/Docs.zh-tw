@@ -7,24 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: 537689405ea30bdd7c075320eba58a8723a93cdb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af436b8fd57ff0d2747c766a64af175760931009
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397398"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873898"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a><span data-ttu-id="6ed48-102">'\<keyword>' 只能出現在執行個體方法中</span><span class="sxs-lookup"><span data-stu-id="6ed48-102">'\<keyword>' is valid only within an instance method</span></span>
-<span data-ttu-id="6ed48-103">`Me`、 `MyClass` 和關鍵字會 `MyBase` 參考特定的類別實例。</span><span class="sxs-lookup"><span data-stu-id="6ed48-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="6ed48-104">您無法在共用或程式內使用它們 `Function` `Sub` 。</span><span class="sxs-lookup"><span data-stu-id="6ed48-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  
-  
- <span data-ttu-id="6ed48-105">**錯誤識別碼：** BC30043</span><span class="sxs-lookup"><span data-stu-id="6ed48-105">**Error ID:** BC30043</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="6ed48-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="6ed48-106">To correct this error</span></span>  
-  
-- <span data-ttu-id="6ed48-107">請從程式中移除關鍵字，或從程式宣告 `Shared` 中移除關鍵字。</span><span class="sxs-lookup"><span data-stu-id="6ed48-107">Remove the keyword from the procedure, or remove the `Shared` keyword from the procedure declaration.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="6ed48-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6ed48-108">See also</span></span>
+# <a name="keyword-is-valid-only-within-an-instance-method"></a><span data-ttu-id="bd08c-102">'\<keyword>' 只能出現在執行個體方法中</span><span class="sxs-lookup"><span data-stu-id="bd08c-102">'\<keyword>' is valid only within an instance method</span></span>
 
-- [<span data-ttu-id="6ed48-109">物件變數指派</span><span class="sxs-lookup"><span data-stu-id="6ed48-109">Object Variable Assignment</span></span>](../../programming-guide/language-features/variables/object-variable-assignment.md)
-- [<span data-ttu-id="6ed48-110">Me、My、MyBase 及 MyClass</span><span class="sxs-lookup"><span data-stu-id="6ed48-110">Me, My, MyBase, and MyClass</span></span>](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [<span data-ttu-id="6ed48-111">繼承基本概念</span><span class="sxs-lookup"><span data-stu-id="6ed48-111">Inheritance Basics</span></span>](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+<span data-ttu-id="bd08c-103">`Me`、 `MyClass` 和關鍵字會 `MyBase` 參考特定的類別實例。</span><span class="sxs-lookup"><span data-stu-id="bd08c-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="bd08c-104">您無法在共用或程式中使用它們 `Function` `Sub` 。</span><span class="sxs-lookup"><span data-stu-id="bd08c-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  
+  
+ <span data-ttu-id="bd08c-105">**錯誤識別碼：** BC30043</span><span class="sxs-lookup"><span data-stu-id="bd08c-105">**Error ID:** BC30043</span></span>  
+  
+## <a name="to-correct-this-error"></a><span data-ttu-id="bd08c-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="bd08c-106">To correct this error</span></span>  
+  
+- <span data-ttu-id="bd08c-107">請從程式中移除關鍵字，或從程式 `Shared` 聲明中移除關鍵字。</span><span class="sxs-lookup"><span data-stu-id="bd08c-107">Remove the keyword from the procedure, or remove the `Shared` keyword from the procedure declaration.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="bd08c-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bd08c-108">See also</span></span>
+
+- [<span data-ttu-id="bd08c-109">物件變數指派</span><span class="sxs-lookup"><span data-stu-id="bd08c-109">Object Variable Assignment</span></span>](../../programming-guide/language-features/variables/object-variable-assignment.md)
+- [<span data-ttu-id="bd08c-110">Me、My、MyBase 及 MyClass</span><span class="sxs-lookup"><span data-stu-id="bd08c-110">Me, My, MyBase, and MyClass</span></span>](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [<span data-ttu-id="bd08c-111">繼承基本概念</span><span class="sxs-lookup"><span data-stu-id="bd08c-111">Inheritance Basics</span></span>](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)

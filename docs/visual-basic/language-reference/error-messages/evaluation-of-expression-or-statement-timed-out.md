@@ -7,24 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
-ms.openlocfilehash: d0600c7acdb138e363dcbece392bf4b8122cb250
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8de57715c770cdd66f34977d0be12552e635670d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191933"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874343"
 ---
-# <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="9eb54-102">運算式或陳述式評估已經逾時</span><span class="sxs-lookup"><span data-stu-id="9eb54-102">Evaluation of expression or statement timed out</span></span>
-<span data-ttu-id="9eb54-103">運算式的評估未及時完成。</span><span class="sxs-lookup"><span data-stu-id="9eb54-103">The evaluation of an expression did not complete in a timely manner.</span></span>  
-  
- <span data-ttu-id="9eb54-104">**錯誤識別碼：** BC30722</span><span class="sxs-lookup"><span data-stu-id="9eb54-104">**Error ID:** BC30722</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="9eb54-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="9eb54-105">To correct this error</span></span>  
-  
-1. <span data-ttu-id="9eb54-106">請確認輸入的程式碼正確。</span><span class="sxs-lookup"><span data-stu-id="9eb54-106">Verify that the entered code is correct.</span></span>  
-  
-2. <span data-ttu-id="9eb54-107">簡化您的運算式，以縮短執行時間。</span><span class="sxs-lookup"><span data-stu-id="9eb54-107">Simplify your expression so that it takes less time to execute.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9eb54-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="9eb54-108">See also</span></span>
+# <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="89756-102">運算式或陳述式評估已經逾時</span><span class="sxs-lookup"><span data-stu-id="89756-102">Evaluation of expression or statement timed out</span></span>
 
-- [<span data-ttu-id="9eb54-109">Visual Studio 偵錯</span><span class="sxs-lookup"><span data-stu-id="9eb54-109">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugger-feature-tour)
+<span data-ttu-id="89756-103">運算式的評估未及時完成。</span><span class="sxs-lookup"><span data-stu-id="89756-103">The evaluation of an expression did not complete in a timely manner.</span></span>  
+  
+ <span data-ttu-id="89756-104">**錯誤識別碼：** BC30722</span><span class="sxs-lookup"><span data-stu-id="89756-104">**Error ID:** BC30722</span></span>  
+  
+## <a name="to-correct-this-error"></a><span data-ttu-id="89756-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="89756-105">To correct this error</span></span>  
+  
+1. <span data-ttu-id="89756-106">確認輸入的程式碼正確無誤。</span><span class="sxs-lookup"><span data-stu-id="89756-106">Verify that the entered code is correct.</span></span>  
+  
+2. <span data-ttu-id="89756-107">簡化您的運算式，以縮短執行的時間。</span><span class="sxs-lookup"><span data-stu-id="89756-107">Simplify your expression so that it takes less time to execute.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="89756-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="89756-108">See also</span></span>
+
+- [<span data-ttu-id="89756-109">Visual Studio 偵錯</span><span class="sxs-lookup"><span data-stu-id="89756-109">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugger-feature-tour)

@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 65e63ddf15534ac83480bca3a9a01c97b629ee08
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 0312281b11def32cc795cfb9d2b9306ae5f751ae
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198162"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873502"
 ---
-# <a name="unable-to-write-output-to-memory"></a><span data-ttu-id="f9c17-102">無法將輸出寫入至記憶體</span><span class="sxs-lookup"><span data-stu-id="f9c17-102">Unable to write output to memory</span></span>
-<span data-ttu-id="f9c17-103">將輸出寫至記憶體時發生問題。</span><span class="sxs-lookup"><span data-stu-id="f9c17-103">There was a problem writing output to memory.</span></span>  
-  
- <span data-ttu-id="f9c17-104">**錯誤識別碼：** BC31020</span><span class="sxs-lookup"><span data-stu-id="f9c17-104">**Error ID:** BC31020</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="f9c17-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="f9c17-105">To correct this error</span></span>  
-  
-1. <span data-ttu-id="f9c17-106">再次編譯程式，看看錯誤是否重複發生。</span><span class="sxs-lookup"><span data-stu-id="f9c17-106">Compile the program again to see if the error reoccurs.</span></span>  
-  
-2. <span data-ttu-id="f9c17-107">如果錯誤繼續發生，請儲存您的工作並重新啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f9c17-107">If the error continues, save your work and restart Visual Studio.</span></span>  
-  
-3. <span data-ttu-id="f9c17-108">如果錯誤重複發生，請重新安裝 Visual Basic。</span><span class="sxs-lookup"><span data-stu-id="f9c17-108">If the error recurs, reinstall Visual Basic.</span></span>  
-  
-4. <span data-ttu-id="f9c17-109">如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。</span><span class="sxs-lookup"><span data-stu-id="f9c17-109">If the error persists after reinstallation, notify Microsoft Product Support Services.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f9c17-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="f9c17-110">See also</span></span>
+# <a name="unable-to-write-output-to-memory"></a><span data-ttu-id="f624c-102">無法將輸出寫入至記憶體</span><span class="sxs-lookup"><span data-stu-id="f624c-102">Unable to write output to memory</span></span>
 
-- [<span data-ttu-id="f9c17-111">告訴我們</span><span class="sxs-lookup"><span data-stu-id="f9c17-111">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
+<span data-ttu-id="f624c-103">將輸出寫至記憶體時發生問題。</span><span class="sxs-lookup"><span data-stu-id="f624c-103">There was a problem writing output to memory.</span></span>  
+  
+ <span data-ttu-id="f624c-104">**錯誤識別碼：** BC31020</span><span class="sxs-lookup"><span data-stu-id="f624c-104">**Error ID:** BC31020</span></span>  
+  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f624c-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="f624c-105">To correct this error</span></span>  
+  
+1. <span data-ttu-id="f624c-106">再次編譯程式，看看錯誤是否重複發生。</span><span class="sxs-lookup"><span data-stu-id="f624c-106">Compile the program again to see if the error reoccurs.</span></span>  
+  
+2. <span data-ttu-id="f624c-107">如果錯誤持續發生，請儲存您的工作並重新啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f624c-107">If the error continues, save your work and restart Visual Studio.</span></span>  
+  
+3. <span data-ttu-id="f624c-108">如果錯誤重複發生，請重新安裝 Visual Basic。</span><span class="sxs-lookup"><span data-stu-id="f624c-108">If the error recurs, reinstall Visual Basic.</span></span>  
+  
+4. <span data-ttu-id="f624c-109">如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。</span><span class="sxs-lookup"><span data-stu-id="f624c-109">If the error persists after reinstallation, notify Microsoft Product Support Services.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="f624c-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f624c-110">See also</span></span>
+
+- [<span data-ttu-id="f624c-111">與我們交談</span><span class="sxs-lookup"><span data-stu-id="f624c-111">Talk to Us</span></span>](/visualstudio/ide/feedback-options)
