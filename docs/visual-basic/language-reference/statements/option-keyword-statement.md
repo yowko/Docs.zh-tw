@@ -6,18 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: f843955cc637ccdae091e207ed5d0aad24867e61
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cdd693270747125cf55d7484981e05df5afaf29f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404326"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874922"
 ---
 # <a name="option-keyword-statement"></a>Option \<keyword> 陳述式
+
 引進的語句會指定套用至整個原始程式檔的編譯器選項。  
   
 ## <a name="remarks"></a>備註  
- 編譯器選項可以控制是否必須明確宣告所有變數、縮小類型轉換是否必須是明確的，或字串是否應做為文字或二進位數量進行比較。  
+
+ 編譯器選項可以控制是否必須明確宣告所有變數、是否必須明確地縮小型別轉換，或是否應該將字串視為文字或二進位數量來比較。  
   
  `Option` 關鍵字可用於以下內容：  
   

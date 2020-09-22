@@ -7,17 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e7975dc767ae652359c904271d6610be34e4cb80
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373910"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870247"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>在 Lambda 運算式中使用反覆運算變數可能會產生非預期的結果
-在 lambda 運算式中使用反覆運算變數可能會產生非預期的結果。 相反地，請在迴圈內建立區域變數，並將反覆運算變數的值指派給該變數。  
+
+在 lambda 運算式中使用反覆運算變數可能會產生非預期的結果。 相反地，請在迴圈中建立區域變數，並為其指派反覆運算變數的值。  
   
- 當您在迴圈內宣告的 lambda 運算式中使用迴圈反覆運算變數時，就會出現這個警告。 例如，下列範例會使警告出現。  
+ 當您在迴圈內部宣告的 lambda 運算式中使用迴圈反覆運算變數時，就會出現這個警告。 例如，下列範例會顯示警告。  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -45,7 +46,7 @@ Module Module1
 End Module  
 ```  
   
- `For`迴圈會建立 lambda 運算式的陣列，其中每一個都會傳回迴圈反覆運算變數的值 `i` 。 在迴圈中評估 lambda 運算式時 `For Each` ，您可能會預期會在迴圈中顯示0、1、2、3和4的連續值 `i` `For` 。 相反地，您會看到顯示的最後一個值 `i` 五次：  
+ `For`迴圈會建立 lambda 運算式的陣列，每個運算式都會傳回迴圈反覆運算變數的值 `i` 。 在迴圈中評估 lambda 運算式時 `For Each` ，您可能預期會看到0、1、2、3和4顯示 `i` 在迴圈中的連續值 `For` 。 相反地，您會看到 `i` 顯示五次的最終值：  
   
  `5`  
   
@@ -63,7 +64,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 將反覆運算變數的值指派給本機變數，並在 lambda 運算式中使用區域變數。  
+- 將反覆運算變數的值指派給區域變數，並使用 lambda 運算式中的本機變數。  
   
 ```vb  
 Module Module1  

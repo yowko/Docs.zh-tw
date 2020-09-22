@@ -3,12 +3,12 @@ title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538091"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874714"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -31,7 +31,7 @@ ms.locfileid: "90538091"
 dotnet new --list
 ```
 
-## <a name="configuration"></a>組態
+## <a name="configuration"></a>設定
 
 範本是由下列部分組成：
 
@@ -55,7 +55,7 @@ dotnet new --list
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| member            | 類型          | 描述 |
+| member            | 類型          | Description |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |
@@ -63,6 +63,8 @@ dotnet new --list
 | `identity`        | 字串        | 此範本的唯一名稱。 |
 | `name`            | 字串        | 使用者應該會看到的範本名稱。 |
 | `shortName`       | 字串        | 適用於選取要套用至環境之範本的預設速記名稱；此環境中的範本名稱是由使用者指定，而不是透過 GUI 選取。 例如，從命令提示字元以 CLI 命令使用範本時，簡短名稱很有用。 |
+| `sourceName`       | 字串        | 來源樹狀目錄中要以使用者指定的名稱取代的名稱。 範本引擎會尋找 `sourceName` 設定檔中提及的任何專案，並將其取代為檔案名和檔案內容。 您可以在 `-n` 執行範本時，使用或選項來指定要取代的值 `--name` 。 如果未指定名稱，則會使用目前的目錄。|
+| `preferNameDirectory`       | boolean        | 指出是否要建立範本的目錄（如果指定了名稱），但不會 (設定輸出目錄，而不是直接在目前的目錄中建立內容) 。 預設值為 false。|
 
 *template.json* 檔案的完整結構描述位於 [JSON 結構描述存放區](http://json.schemastore.org/template)。 如需 *template.json* 檔案的詳細資訊，請參閱 [dotnet 範本化 Wiki](https://github.com/dotnet/templating/wiki) \(英文\)。
 

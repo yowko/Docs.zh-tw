@@ -7,21 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: 2f282e6268e4e4b1e86657408c356d1c19c48c1a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fdc8705ffa4411470a04c41ed09a315895a84d4a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401585"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874599"
 ---
 # <a name="constant-expression-not-representable-in-type-typename"></a>在類型 '\<typename>' 中無法顯示常數運算式
-您嘗試評估不符合目標型別的常數，通常是因為它溢出範圍。  
+
+您正在嘗試評估將無法放入目標型別的常數，通常是因為它溢出範圍。  
   
  **錯誤識別碼：** BC30439  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 將目標型別變更為可以處理常數的類型。  
+1. 將目標型別變更為可以處理常數的型別。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: de0d825c7eec603f3ad1e43b1e4aaa0cc78fd1db
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8fc173182d062c80ffde15b1e7210644d37f8f66
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408503"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875112"
 ---
 # <a name="type-typename-has-no-constructors"></a>類型 '\<typename>' 沒有建構函式
+
 類型不支援呼叫 `Sub New()`。 一個可能原因是編譯器或二進位檔案損毀。  
   
  **錯誤識別碼：** BC30251  
@@ -32,4 +33,4 @@ ms.locfileid: "84408503"
 ## <a name="see-also"></a>另請參閱
 
 - [物件和類別](../../programming-guide/language-features/objects-and-classes/index.md)
-- [告訴我們](/visualstudio/ide/feedback-options)
+- [與我們交談](/visualstudio/ide/feedback-options)

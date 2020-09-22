@@ -7,17 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: 34718243172d3b1a238a813268e672d62c4eeb6c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a60afe0907e974dfb345d20d18762cb5f84127d9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406530"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875032"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>變數 '\<variablename>' 已在指派值之前使用
-在 \<variablename> 指派值之前，會使用變數 ' '。 可能會在執行階段產生 null 參考例外狀況。  
+
+變數 ' \<variablename> ' 是在指派值之前使用。 可能會在執行階段產生 null 參考例外狀況。  
   
- 應用程式在指派任何值給它之前，至少有一個可能的路徑，它會先讀取變數。  
+ 應用程式在其程式碼中至少有一個可能的路徑，可在指派任何值之前讀取變數。  
   
  如果變數從未獲派值，則會持有其資料類型的預設值。 若是參考資料類型，該預設值為 [Nothing](../nothing.md)。 在某些情況下，讀取具有 `Nothing` 值的參考變數可能會導致 <xref:System.NullReferenceException> 。  
   
@@ -27,9 +28,9 @@ ms.locfileid: "84406530"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 檢查您的控制流程邏輯，並確定變數具有有效的值，再將控制權傳遞給任何讀取它的語句。  
+- 檢查您的控制流程邏輯，並確定變數具有有效的值，控制項才會傳遞至任何讀取它的語句。  
   
-- 保證變數一律具有有效值的其中一個方法，就是將它初始化為其宣告的一部分。 請參閱[Dim 語句](../statements/dim-statement.md)中的「初始化」。  
+- 保證變數一律具有有效值的其中一種方式，就是將它初始化為其宣告的一部分。 請參閱 [Dim 語句](../statements/dim-statement.md)中的「初始化」。  
   
 ## <a name="see-also"></a>另請參閱
 

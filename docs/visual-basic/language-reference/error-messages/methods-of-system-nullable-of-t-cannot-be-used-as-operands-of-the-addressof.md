@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 61c6fe7c33b3292066e653304ded43a863413723
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 421766918c03c2378bbf906f85c5855f44ffbdea
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397216"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873744"
 ---
 # <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>'System.Nullable(Of T)' 的方法不可以當做 'AddressOf' 運算子的運算元使用。
+
 語句使用運算子搭配 `AddressOf` 代表結構程式的運算元 <xref:System.Nullable%601> 。  
   
  **錯誤識別碼：** BC32126  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 將子句中的程式名稱取代 `AddressOf` 為不是成員的運算元 <xref:System.Nullable%601> 。  
+- `AddressOf`以不是成員的運算元取代子句中的程式名稱 <xref:System.Nullable%601> 。  
   
-- 撰寫類別，以包裝 <xref:System.Nullable%601> 您要使用的方法。 在下列範例中， `NullableWrapper` 類別會定義名為的新方法 `GetValueOrDefault` 。 因為這個新方法不是的成員 <xref:System.Nullable%601> ，所以可以套用至可 `nullInstance` 為 null 之型別的實例，以形成的引數 `AddressOf` 。  
+- 撰寫類別，包裝 <xref:System.Nullable%601> 您要使用的方法。 在下列範例中， `NullableWrapper` 類別會定義名為的新方法 `GetValueOrDefault` 。 因為這個新的方法不是的成員 <xref:System.Nullable%601> ，所以可以套用至可 `nullInstance` 為 null 型別的實例，以形成的引數 `AddressOf` 。  
   
 ```vb  
 Module Module1  

@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 169f01b02df377ba6cc21ffad53c36f5d4537140
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9141400afc651629df381e0a655e2d7b9da2e45d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409643"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874414"
 ---
 # <a name="end-of-statement-expected"></a>必須有陳述式結尾
-語句的語法已完成，但其他的程式設計項目會遵循完成語句的元素。 在每個語句的結尾都需要行結束字元。
+
+語句的語法已完成，但其他程式設計專案會在完成語句的元素之後。 在每個語句的結尾都需要行結束字元。
   
- 行結束字元會將 Visual Basic 原始程式檔的字元分成幾行。 行結束字元的範例包括 Unicode 回車符（&HD）、Unicode 換行字元（&HA），以及 unicode 換行字元後面接著 unicode 回車符。 如需有關行結束字元的詳細資訊，請參閱[Visual Basic 語言規格](~/_vblang/spec/lexical-grammar.md#line-terminators)。
+ 行結束字元會將 Visual Basic 原始程式檔的字元分成幾行。 行結束字元的範例有 Unicode 換行字元 ( # B0 HD) 、Unicode 換行字元 ( # B1 HA) ，以及 unicode 換行字元（後面接著 Unicode 換行字元）。 如需行結束字元的詳細資訊，請參閱 [Visual Basic 語言規格](~/_vblang/spec/lexical-grammar.md#line-terminators)。
   
  **錯誤識別碼：** BC30205
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤
   
-1. 請檢查是否有兩個不同的語句不小心放在同一行。
+1. 檢查是否有兩個不同的語句不小心放在同一行上。
   
 2. 在完成語句的元素之後插入行結束字元。
   

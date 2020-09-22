@@ -4,12 +4,12 @@ description: 方法、方法參數和方法傳回值的概觀
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495534"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874703"
 ---
 # <a name="methods-in-c"></a> (c # 中的方法 ) 
 
@@ -24,7 +24,7 @@ ms.locfileid: "89495534"
 
 指定下列項目以 `class` 或 `struct` 宣告方法：
 
-- 選擇性的存取層級，例如 `public` 或 `private`。 預設為 `private`。
+- 選擇性的存取層級，例如 `public` 或 `private`。 預設值為 `private`。
 - 選擇性修飾詞，例如 `abstract` 或 `sealed`。
 - 傳回值，或如果方法為無，則為 `void`。
 - 方法名稱。
@@ -121,13 +121,14 @@ C# 中的類型為「實值型別」**「參考型別」**。 如需內建實數
 
 有時候，指定方法之引數確切數目的需求會有限制。 使用 `params` 關鍵字指出某參數是參數陣列，可使用數目可變的引數來呼叫方法。 以 `params` 關鍵字標記的參數必須是陣列型別，而且必須是方法參數清單中的最後一個參數。
 
-然後呼叫端以下列三種方式之一來叫用方法︰
+接著，呼叫者可以使用下列四種方式來叫用方法：
 
 - 傳遞包含所需項目數目的適當型別陣列。
 - 將適當型別各個引數的逗點分隔清單傳遞給方法。
+- 傳遞 `null` 。
 - 不提供引數給參數陣列。
 
-下列範例會定義能從參數陣列中傳回所有母音，名為 `GetVowels` 的方法。 `Main` 方法會示範這三種叫用方法的方式。 呼叫者不需要針對包含 `params` 修飾詞的參數提供任何引數。 在此情況下，參數會是 `null`。
+下列範例會定義能從參數陣列中傳回所有母音，名為 `GetVowels` 的方法。 此 `Main` 方法說明叫用方法的四種方法。 呼叫者不需要針對包含 `params` 修飾詞的參數提供任何引數。 在此情況下，此參數為空陣列。
 
 [!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
@@ -282,14 +283,14 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 如需詳細資訊，請參閱 [反覆運算](programming-guide/concepts/iterators.md)器。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [存取修飾詞](language-reference/keywords/access-modifiers.md)
 - [靜態類別和靜態類別成員](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [繼承](programming-guide/classes-and-structs/inheritance.md)
 - [抽象和密封類別以及類別成員](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [params](language-reference/keywords/params.md)
-- [擴展](language-reference/keywords/out-parameter-modifier.md)
+- [out](language-reference/keywords/out-parameter-modifier.md)
 - [ref](language-reference/keywords/ref.md)
 - [in](language-reference/keywords/in-parameter-modifier.md)
 - [傳遞參數](programming-guide/classes-and-structs/passing-parameters.md)

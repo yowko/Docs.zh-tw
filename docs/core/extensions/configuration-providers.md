@@ -4,12 +4,12 @@ description: 瞭解如何使用設定提供者 API 來設定 .NET 應用程式�
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/16/2020
-ms.openlocfilehash: fe90ba9aee08ec9c1316335a5b3fd8dd6e90a811
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: d5333e8e52feb7d28e2149a988dc7ce53a926a50
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720782"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874752"
 ---
 # <a name="configuration-providers-in-net"></a>.NET 中的設定提供者
 
@@ -203,8 +203,9 @@ set CustomPrefix_TransientFaultHandlingOptions__AutoRetryDelay=00:00:21
 dotnet run
 ```
 
-預設設定會載入前面加上的環境變數和命令列引數 `DOTNET_` 。 `DOTNET_`.Net 會使用前置詞來進行主機和應用程式設定，但不會用於使用者設定。
-<!-- For more information on host and app configuration, see .NET Generic Host. -->
+預設設定會載入前面加上的環境變數和命令列引數 `DOTNET_` 。 `DOTNET_`.Net 會使用前置詞來進行[主機](generic-host.md#host-configuration)和[應用程式](generic-host.md#app-configuration)設定，但不會用於使用者設定。
+
+如需有關主機和應用程式設定的詳細資訊，請參閱 [.Net 泛型主機](generic-host.md)。
 
 在[Azure App Service](https://azure.microsoft.com/services/app-service)上，選取 [**設定 > 設定**] 頁面上的 [**新增應用程式設定**]。 Azure App Service 的應用程式設定如下：
 
@@ -313,4 +314,5 @@ dotnet run --SecretKey "Secret key set from double hyphen"
 ## <a name="see-also"></a>另請參閱
 
 - [.NET 中的設定](configuration.md)
-- [執行自訂設定提供者](custom-configuration-provider.md)
+- [.NET 泛型主機](generic-host.md)
+- [實作自訂組態提供者](custom-configuration-provider.md)

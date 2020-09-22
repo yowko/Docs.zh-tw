@@ -1,16 +1,16 @@
 ---
 description: delegate 運算子 - C# 參考
 title: delegate 運算子 - C# 參考
-ms.date: 07/18/2019
+ms.date: 09/22/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 1dfaaf40c0f5a19534adef3be7e3c917bc95c4a8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6c087d9bdb2f526cf7d94c3a0f2c1a929b0343ef
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122247"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874916"
 ---
 # <a name="delegate-operator-c-reference"></a>delegate 運算子 (C# 參考)
 
@@ -30,6 +30,12 @@ ms.locfileid: "89122247"
 [!code-csharp-interactive[no parameter list](snippets/shared/DelegateOperator.cs#WithoutParameterList)]
 
 那是 Lambda 運算式不支援的唯一匿名方法功能。 在所有其他情況下，建議您以 Lambda 運算式的方式來撰寫內嵌程式碼。
+
+從 c # 9.0 開始，您可以使用 [ [捨棄](../../discards.md) ] 來指定方法未使用之匿名方法的兩個或多個輸入參數：
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
+
+為了回溯相容性，如果只命名單一參數 `_` ， `_` 會被視為匿名方法內該參數的名稱。
 
 您也可以使用 `delegate` 關鍵字來宣告[委派型別](../builtin-types/reference-types.md#the-delegate-type)。
 

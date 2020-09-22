@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30560
 ms.assetid: 7f032293-054b-4eae-8d97-3db8e7ddde3b
-ms.openlocfilehash: 0fd07e4b777bdf48fa07eac7ef49dfb92aae522f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af8bab62f1fe81f0397e5d91cd11e12931b10c36
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397190"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873721"
 ---
 # <a name="name-is-ambiguous-in-the-namespace-namespacename"></a>'\<name>' 在命名空間 '\<namespacename>' 中模稜兩可
+
 您提供的名稱模稜兩可，因此與另一個名稱發生衝突。 Visual Basic 編譯器沒有任何衝突解決規則;您必須自行區分名稱。  
   
  **錯誤識別碼：** BC30560  

@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: 27be97ba2930791bcb9012c824bc418a0089b037
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6ad06262806088347c94b3040b743618a3b3695
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409708"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874494"
 ---
 # <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>委派類別 '\<classname>' 沒有 Invoke 方法，因此這個類型的運算式不可成為方法呼叫的目標
-`Invoke`透過委派的呼叫失敗，因為 `Invoke` 不是在委派類別上執行。  
+
+`Invoke`透過委派的呼叫失敗，因為未 `Invoke` 在委派類別上執行。  
   
  **錯誤識別碼：** BC30220  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 請確定已使用語句建立委派類別的實例 `Dim` ，而且已使用運算子將程式指派給委派實例 `AddressOf` 。  
+1. 確定已使用語句建立委派類別的實例 `Dim` ，而且已使用運算子將程式指派給委派實例 `AddressOf` 。  
   
-2. 找出用來執行委派類別的程式碼，並確定它會實作為程式 `Invoke` 。  
+2. 找出可執行委派類別的程式碼，並確定它會執行程式 `Invoke` 。  
   
 ## <a name="see-also"></a>另請參閱
 

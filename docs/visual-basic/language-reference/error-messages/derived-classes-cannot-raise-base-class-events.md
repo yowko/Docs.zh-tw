@@ -7,15 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-ms.openlocfilehash: c59212a28ba27123a7db9163ff7437c159a3d310
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0233a1584c5e871506b5c4762e98874c343f19b8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409695"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874485"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>衍生的類別無法引發基底類別事件
-事件只能從其宣告所在的宣告空間引發。 因此，類別無法從任何其他類別引發事件，甚至是衍生自它的來源。  
+
+事件只能從宣告的宣告空間引發。 因此，類別無法從任何其他類別（甚至是衍生的類別）引發事件。  
   
  **錯誤識別碼：** BC30029  
   

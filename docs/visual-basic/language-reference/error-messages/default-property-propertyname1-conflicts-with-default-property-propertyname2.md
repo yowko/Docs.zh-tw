@@ -7,15 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-ms.openlocfilehash: 37f98ce8120d5861552819690f9d5f22c9959a0e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b857a9ae7875a156179602cbe77558333d07b7b9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409721"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874510"
 ---
 # <a name="default-property-propertyname1-conflicts-with-default-property-propertyname2-in-classname-and-so-should-be-declared-shadows"></a>預設屬性 '\<propertyname1>' 與基底 '\<propertyname2>' 中的預設屬性 '\<classname>' 產生衝突，所以必須宣告為 'Shadows'
-使用與基類中所定義之屬性相同的名稱來宣告屬性。 在此情況下，此類別中的屬性應該遮蔽基類屬性。  
+
+宣告屬性時所使用的名稱，與基類中所定義的屬性相同。 在此情況下，這個類別中的屬性應該會遮蔽基類屬性。  
   
  這個訊息是一個警告。 預設會假設為`Shadows` 。 如需隱藏警告或將警告視為錯誤的詳細資訊，請參閱 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
@@ -23,7 +24,7 @@ ms.locfileid: "84409721"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 將 `Shadows` 關鍵字加入至宣告，或變更所宣告之屬性的名稱。  
+- 將 `Shadows` 關鍵字加入至宣告，或變更所宣告的屬性名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,15 +6,16 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 330178e0-a375-4742-b662-b3080c89fa54
-ms.openlocfilehash: c5d7ec0c01e956acfcb3b41689c7a7338c6e25b4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3a300ab5d72a0fdbdbdfaf47a72dcb89a0d21743
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371878"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874831"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>算術運算子 (Visual Basic)
-以下是在 Visual Basic 中定義的算術運算子。  
+
+以下是 Visual Basic 中定義的算術運算子。  
   
  [^ 運算子](exponentiation-operator.md)  
   
@@ -26,9 +27,9 @@ ms.locfileid: "84371878"
   
  [Mod 運算子](mod-operator.md)  
   
- [+ 運算子](addition-operator.md)（一元和二元）  
+ [+ 運算子](addition-operator.md) (一元和二元)   
   
- [-運算子](subtraction-operator.md)（一元和二元）  
+ [-運算子](subtraction-operator.md) (一元和二元)   
   
 ## <a name="see-also"></a>另請參閱
 

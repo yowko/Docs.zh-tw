@@ -4,21 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID451
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
-ms.openlocfilehash: 7da1de98132f47740e805ed34ff3890f0ba0f889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbeaa224ea9e095f86c37e571492d83bc98b4397
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920741"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871093"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>未定義屬性 let 的程序，而屬性 get 的程序並未傳回物件
-特定屬性、 方法和作業只能套用至`Collection`物件。 您指定的作業或是專為集合的屬性，但該物件不是集合。  
+
+某些屬性、方法和作業只能套用至 `Collection` 物件。 您指定了集合專屬的作業或屬性，但物件不是集合。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1. 物件或屬性名稱的拼字檢查或確認物件是否`Collection`物件。  
+1. 檢查物件或屬性名稱的拼寫，或確認物件是 `Collection` 物件。  
   
-2. 看看`Add`方法用來將物件加入至集合，以便能確定語法是否正確，以及任何識別項的拼字是否正確。  
+2. 查看 `Add` 用來將物件加入至集合的方法，以確定語法正確，且任何識別碼拼寫正確。  
   
 ## <a name="see-also"></a>另請參閱
 
