@@ -55,8 +55,10 @@ items:
         href: ../standard/components.md
       - name: .NET 類別庫
         href: ../standard/class-libraries.md
-      - name: .NET Core 概觀
+      - name: .NET Core 簡介
         href: ../core/introduction.md
+      - name: .NET Core 概觀
+        href: ../core/about.md
       - name: .NET Standard 概觀
         href: ../standard/net-standard.md
       - name: .NET 詞彙
@@ -432,8 +434,12 @@ items:
         href: ../core/deploying/runtime-patch-selection.md
       - name: 單一檔案部署與可執行檔
         href: ../core/deploying/single-file.md
-      - name: 修剪獨立式部署及可執行檔
-        href: ../core/deploying/trim-self-contained.md
+      - name: 修剪獨立部署
+        items:
+          - name: 概觀和操作說明
+            href: ../core/deploying/trim-self-contained.md
+          - name: 選項
+            href: ../core/deploying/trimming-options.md
       - name: 執行階段套件存放區
         href: ../core/deploying/runtime-store.md
       - name: 執行階段識別碼 (RID) 目錄
