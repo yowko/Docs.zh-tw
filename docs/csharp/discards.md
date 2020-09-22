@@ -2,13 +2,13 @@
 title: Discard - C# 指南
 description: 說明 C# 的 discard 支援，這是未指派且可捨棄的變數，並說明 discard 的使用方式。
 ms.technology: csharp-fundamentals
-ms.date: 07/21/2017
-ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 09/22/2020
+ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73100631"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869321"
 ---
 # <a name="discards---c-guide"></a>Discard - C# 指南
 
@@ -20,12 +20,14 @@ ms.locfileid: "73100631"
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-在 C# 7.0 中，下列內容中的指派支援 discard：
+在 c # 7.0 和更新版本中，下列內容中的指派支援捨棄：
 
-- 元和物件[解構](deconstruct.md)。
+- 元組和物件 [解構](deconstruct.md)。
 - 以 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 進行的模式比對。
 - 以 `out` 參數進行的方法呼叫。
 - 範圍內沒有 `_` 時的獨立 `_`。
+
+從 c # 9.0 開始，您可以使用捨棄來指定 lambda 運算式未使用的輸入參數。 如需詳細資訊，請參閱[lambda](language-reference/operators/lambda-expressions.md)運算式一文的[lambda 運算式章節的輸入參數](language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression)。
 
 當 `_` 是有效的捨棄時，嘗試擷取其值或用於指派作業會產生編譯器錯誤 CS0301：「目前內容中不存在名稱 '\_'」。 這是因為 `_` 未指派值，可能甚至未指派儲存位置。 如果它原本是實際變數，可能無法像上述範例一樣捨棄多個值。
 
@@ -81,6 +83,6 @@ ms.locfileid: "73100631"
 
 ## <a name="see-also"></a>另請參閱
 
-- [解構 Tuple 和其他型別](deconstruct.md)
-- [`is`關鍵 字](language-reference/keywords/is.md)
-- [`switch`關鍵 字](language-reference/keywords/switch.md)
+- [解構元組和其他類型](deconstruct.md)
+- [`is` 關鍵 字](language-reference/keywords/is.md)
+- [`switch` 關鍵 字](language-reference/keywords/switch.md)

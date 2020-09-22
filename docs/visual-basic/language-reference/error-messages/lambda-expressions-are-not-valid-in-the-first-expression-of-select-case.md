@@ -7,15 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: 08f7cd9dd95a10cad0df6539ba43122495347bae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f200ea44e7505c407c7df56e596435024394875
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397359"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873877"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Lambda 運算式在 'Select Case' 陳述式的第一個運算式中無效
-您不能針對語句中的測試運算式使用 lambda 運算式 `Select Case` 。 Lambda 運算式定義會傳回函數，而語句的測試運算式 `Select Case` 必須是基本資料類型。  
+
+您無法在語句的測試運算式中使用 lambda 運算式 `Select Case` 。 Lambda 運算式定義會傳回函數，而且語句的測試運算式 `Select Case` 必須是基本資料類型。  
   
  下列程式碼會造成這個錯誤：  
   

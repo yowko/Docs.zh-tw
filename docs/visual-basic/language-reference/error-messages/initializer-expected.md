@@ -7,21 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 13fa8917f228661fc44f5e0920d91c596e250c38
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2c5a65443dc16a600e25fcf6dfd11c4597b3a086
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402833"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873950"
 ---
 # <a name="initializer-expected"></a>必須是初始設定式
-您嘗試使用物件初始化運算式來宣告類別的實例，其中的初始設定清單是空的，如下列範例所示。  
+
+您已嘗試使用物件初始化運算式宣告類別的實例，其中的初始化清單是空的，如下列範例所示。  
   
  `' Not valid.`  
   
  `' Dim aStudent As New Student With {}`  
   
- 至少必須在初始化運算式清單中初始化一個欄位或屬性，如下列範例所示。  
+ 必須在初始化運算式清單中初始化至少一個欄位或屬性，如下列範例所示。  
   
  `Dim aStudent As New Student With {.year = "Senior"}`  
   

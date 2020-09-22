@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-ms.openlocfilehash: f9a4dc9904f7875f0405227014e2238fe91f4c69
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b990fe1b5374bfad71abe1ae4ebdd8c3465b542d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402781"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870366"
 ---
 # <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>'\<typename>' 為類型，無法當成運算式使用
+
 需要運算式的地方就會出現類型名稱。 運算式必須包含變數、常數、常值、屬性和 `Function` 程序呼叫的一些組合。  
   
  **錯誤識別碼：** BC30108  

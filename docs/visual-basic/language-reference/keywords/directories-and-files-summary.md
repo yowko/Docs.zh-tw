@@ -6,17 +6,18 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: c4429d58d2f089b86f5c32c1f3ce8353b02880c4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 84e5ac5276eeddf399003f72ef72e7117feb011b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373875"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90868938"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>目錄和檔案摘要 (Visual Basic)
-Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用來組織。  
+
+Visual Basic 語言關鍵字和執行時間程式庫成員是依用途和使用方式組織。  
   
- 使用此 `My` 功能可提高檔案 i/o 作業的產能和效能，而不是使用這些成員。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 。  
+ 使用此 `My` 功能可提供比使用這些成員更高的檔案 i/o 作業生產力和效能。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.FileIO.FileSystem>。  
   
 |**動作**|**Language 元素**|  
 |----------------|--------------------------|  

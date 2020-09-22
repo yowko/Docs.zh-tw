@@ -7,17 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: 729a9f385d94412469d318cb804d216827eeb0fd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 31d44c93d62163df4d81cb8503b633f0eb317372
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397281"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873803"
 ---
 # <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<membername>' 無法透過 \<typename> '\<containertype>' 在專案外部公開類型 '\<containertypename>'
-變數、程式參數或函式傳回會在其容器外公開，但它會宣告為不能在容器外公開的類型。  
+
+變數、程式參數或函式傳回會在其容器之外公開，但會宣告為不能在容器外部公開的類型。  
   
- 下列基本架構程式碼會顯示產生此錯誤的情況。  
+ 下列基本架構程式碼顯示會產生此錯誤的情況。  
   
 ```vb  
 Private Class privateClass  
@@ -27,13 +28,13 @@ Public Class mainClass
 End Class  
 ```  
   
- 宣告為、、或的類型， `Protected` `Friend` `Protected Friend` `Private` 目的是要在其宣告內容之外擁有有限的存取權。 以較不受限制的存取來使用它做為變數的資料類型，將會破壞此目的。 在上述的基本架構程式碼中， `exposedVar` 是， `Public` 而且會公開 `privateClass` 給不應存取它的程式碼。  
+ 宣告為、、或的型別， `Protected` `Friend` `Protected Friend` `Private` 目的是要在其宣告內容之外擁有有限的存取權。 將它當作限制存取權的變數資料類型，就會破壞這個目的。 在上述的基本架構程式碼中， `exposedVar` `Public` 和會公開 `privateClass` 至不應該有其存取權的程式碼。  
   
  **錯誤識別碼：** BC30909  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 將變數、程式參數或函數傳回的存取層級變更為至少與其資料類型的存取層級相同。  
+- 變更變數、程式參數或函式的存取層級，至少要與其資料類型的存取層級限制相同。  
   
 ## <a name="see-also"></a>另請參閱
 

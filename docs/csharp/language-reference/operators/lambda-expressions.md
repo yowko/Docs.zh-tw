@@ -1,7 +1,7 @@
 ---
 title: 'Lambda 運算式-c # 參考'
 description: 瞭解 lambda 運算式。 有運算式 lambda 有運算式做為其主體，或具有語句區塊做為主體的語句 lambda。
-ms.date: 07/29/2019
+ms.date: 09/22/2020
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 7f80c1a5d9136609935b25b5cce3792e80b9ac94
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: afabca0b4ba4d5f7c6f4a7ba8aa97301456b0941
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536440"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871709"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda 運算式 (c # 參考) 
 
@@ -50,33 +50,17 @@ ms.locfileid: "90536440"
   
 ## <a name="expression-lambdas"></a>運算式 Lambda
 
-在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」**。 運算式 lambda 可廣泛用於 [運算式樹狀](../../programming-guide/concepts/expression-trees/index.md)架構的結構中。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
+在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」**。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
 
 ```csharp
 (input-parameters) => expression
 ```
 
-只有在 Lambda 包含一個輸入參數時，括號才是選擇項，否則括號是必要項。
-
-以空括號指定零個輸入參數：  
-
-[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
-
-兩個或多個輸入參數會包含在括號中，並且以逗號分隔：
-
-[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
-
-有時候編譯器無法推斷輸入類型。 您可以明確指定類型，如下列範例所示：
-
-[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
-
-輸入參數類型必須全部為明確或全部為隱含；否則，會發生 [CS0748](../../misc/cs0748.md) 編譯器錯誤。
-
-運算式 Lambda 的主體可以包含方法呼叫。 不過，如果您要建立在 .NET 通用語言執行平台外部 (例如在 SQL Server 中) 評估的運算式樹狀架構，則不應在 Lambda 運算式中使用方法呼叫。 這些方法在 .NET 通用語言執行平台內容之外將不具任何意義。
+運算式 Lambda 的主體可以包含方法呼叫。 但是，如果您要建立的 [運算式樹狀](../../programming-guide/concepts/expression-trees/index.md) 架構是在 .net common language runtime 的內容之外進行評估，例如 SQL Server 中，則不應在 lambda 運算式中使用方法呼叫。 這些方法在 .NET 通用語言執行平台內容之外將不具任何意義。
 
 ## <a name="statement-lambdas"></a>陳述式 Lambda
 
-陳述式 Lambda 看起來就像是運算式 Lambda，不同之處在於，陳述式會包含於大括號內：
+語句 lambda 類似于運算式 lambda，不同之處在于其語句是以大括弧括住：
 
 ```csharp  
 (input-parameters) => { <sequence-of-statements> }
@@ -84,10 +68,39 @@ ms.locfileid: "90536440"
 
 陳述式 Lambda 的主體可以包含任意數目的陳述式，但是實際上通常不會超過兩個或三個陳述式。
 
-[!code-csharp-interactive[statement lambda](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
+:::code interactive="try-dotnet" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetStatementLambda":::
 
-陳述式 Lambda 無法用來建立運算式樹狀架構。
-  
+您無法使用語句 lambda 來建立運算式樹狀架構。
+
+## <a name="input-parameters-of-a-lambda-expression"></a>Lambda 運算式的輸入參數
+
+您可以用括弧括住 lambda 運算式的輸入參數。 以空括號指定零個輸入參數：  
+
+[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
+
+如果 lambda 運算式只有一個輸入參數，則括弧是選擇性的：
+
+[!code-csharp[one parameter](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#OneParameter)]
+
+兩個或多個輸入參數會以逗號分隔：
+
+[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
+
+有時編譯器無法推斷輸入參數的類型。 您可以明確指定類型，如下列範例所示：
+
+[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
+
+輸入參數類型必須全部為明確或全部為隱含；否則，會發生 [CS0748](../../misc/cs0748.md) 編譯器錯誤。
+
+從 c # 9.0 開始，您可以使用 [ [捨棄](../../discards.md) ] 來指定運算式中未使用之 lambda 運算式的兩個或多個輸入參數：
+
+:::code language="csharp" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetDiscards":::
+
+當您使用 lambda 運算式來 [提供事件處理常式](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)時，lambda 捨棄參數可能很有用。
+
+> [!NOTE]
+> 為了回溯相容性，如果只命名單一輸入參數 `_` ，則會將 lambda 運算式內的 `_` 視為該參數的名稱。
+
 ## <a name="async-lambdas"></a>非同步 Lambda
 
 您可以使用 [async](../keywords/async.md) 和 [await](await.md) 關鍵字，輕鬆建立結合非同步處理的 Lambda 運算式和陳述式。 例如，下列 Windows Form 範例包含呼叫並等候非同步方法 `ExampleMethodAsync`的事件處理常式。
@@ -222,10 +235,8 @@ Lambda 可以參考「外部變數」**。 這些是在定義 Lambda 運算式�
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[匿名函式運算式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)一節。
 
-## <a name="featured-book-chapter"></a>精選書籍章節
+如需 lambda 捨棄參數的詳細資訊，請參閱 [功能提案注意事項](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
 
-[C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10)) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10))  
-  
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考資料](../index.md)

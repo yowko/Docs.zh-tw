@@ -9,15 +9,16 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: d7826c48629ee919344ec1982d3a698e6df9ef7f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3477196230ec5e87b49e94f45c842b90b19102fb
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400237"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869421"
 ---
 # <a name="xml-literals-visual-basic"></a>XML 常值 (Visual Basic)
-本節中的主題記載 Visual Basic 中 XML 常值的語法。 XML 常值語法可讓您直接在您的程式碼中加入 XML。  
+
+本節中的主題說明 Visual Basic 中 XML 常值的語法。 XML 常值語法可讓您直接在您的程式碼中加入 XML。  
   
 ## <a name="in-this-section"></a>本節內容  
   

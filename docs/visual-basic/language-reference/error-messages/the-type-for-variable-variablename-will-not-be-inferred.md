@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 98aeb5699fdd5e5e538a205acd37436019c3fc03
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1ad7b9d0a610842dd6c50ee198f5bb5fa3eb68cf
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363042"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870478"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>不會推斷變數 '\<variablename>' 的類型，因為它繫結至封閉範圍中的欄位
 
-\<variablename>將不會推斷變數 ' ' 的類型，因為它已系結至封閉範圍中的欄位。 請變更 ' ' 的名稱 \<variablename> ，或使用完整名稱（例如 ' variablename ' 或 ' MyBase. variablename '）。
+\<variablename>將不會推斷變數 ' ' 的類型，因為它已系結至封閉範圍內的欄位。 請變更 ' ' 的名稱 \<variablename> ，或使用完整名稱 (例如 ' variablename ' 或 ' MyBase. variablename ' ) 。
 
-程式碼中的迴圈控制變數與類別或其他封閉範圍的欄位名稱相同。 因為在沒有子句的情況下使用控制變數 `As` ，所以它會系結至封閉範圍中的欄位，而編譯器不會為它建立新的變數或推斷其型別。
+您程式碼中的迴圈控制變數與類別或其他封閉範圍的欄位有相同的名稱。 因為在沒有子句的情況下使用控制項變數 `As` ，所以它會系結至封閉範圍內的欄位，而編譯器不會為它建立新的變數或推斷其型別。
 
-在下列範例中， `Index` 語句中的控制項變數會系結 `For` 至 `Index` 類別中的欄位 `Customer` 。 編譯器不會為控制項變數建立新的變數 `Index` 或推斷其型別。
+在下列範例中， `Index` 語句中的控制項變數系結 `For` 至 `Index` 類別中的欄位 `Customer` 。 編譯器不會為控制項變數建立新的變數 `Index` 或推斷其型別。
 
 ```vb
 Class Customer
@@ -45,26 +45,27 @@ End Class
 
 ### <a name="to-address-this-warning"></a>解決這個警告
 
-- 將迴圈控制變數的名稱變更為不是該類別的欄位名稱的識別碼，以將它設為區域變數。
+- 將迴圈控制變數的名稱變更為不是類別之功能變數名稱的識別碼，以使其變成本機。
 
   ```vb
   For I = 1 To 10
   ```
 
-- 澄清迴圈控制變數會藉由在變數名稱前面加上來系結至類別欄位 `Me.` 。
+- 請注意，迴圈控制變數會藉由在變數名稱前面加上系結至類別欄位 `Me.` 。
 
   ```vb
   For Me.Index = 1 To 10
   ```
 
-- 使用 `As` 子句來指定迴圈控制變數的類型，而不是依賴區欄位型別推斷。
+- 您 `As` 可以使用子句來指定迴圈控制變數的類型，而不需要依賴區欄位型別推斷。
 
   ```vb
   For Index As Integer = 1 To 10
   ```
 
 ## <a name="example"></a>範例
- 下列程式碼顯示先前的範例，其中包含了第一個更正的位置。
+
+ 下列程式碼顯示先前的範例，其中的第一個更正已備妥。
 
 ```vb
 Class Customer

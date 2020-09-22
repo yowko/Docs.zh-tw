@@ -4,19 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID16
 ms.assetid: 736847d1-5e03-44c8-95e4-3ed2cef2746b
-ms.openlocfilehash: d1717eb9f23778086507cf6d7ca49c16fffa6eb2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 01d6d54ed892122f39592072aa80ed8f866ef82c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409487"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874238"
 ---
 # <a name="expression-too-complex"></a>運算式太複雜
-浮點運算式包含太多的嵌套子運算式。  
+
+浮點數運算式包含太多的嵌套子運算式。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 視需要將運算式分成多個不同的運算式，以避免發生錯誤。  
+- 視需要將運算式分成許多不同的運算式，以防止發生錯誤。  
   
 ## <a name="see-also"></a>另請參閱
 

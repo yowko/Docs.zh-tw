@@ -2,12 +2,12 @@
 title: 測試 ASP.NET Core 服務和 Web 應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索在容器中用於測試 ASP.NET Core 服務和 Web 應用程式的架構。
 ms.date: 08/07/2020
-ms.openlocfilehash: a27b3b8d392c5e1a7d1961307e6de95659cd823e
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: f76f502adf8321c9015cc6cfd0e12214a7576b5c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024598"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872451"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -19,7 +19,7 @@ ms.locfileid: "88024598"
 
 - 整合測試。 這些可確保針對外部成品 (如資料庫) 的元件互動會如預期般運作。 判斷提示可以測試元件 API、UI 或資料庫 I/O、記錄之類的動作副作用。
 
-- 每個微服務的功能測試。 這些可確保應用程式能如預期般從使用者的觀點來運作。
+- 每個微服務的功能測試。 這些可確保應用程式從使用者的觀點來看如預期般運作。
 
 - 服務測試。 這些可確保會測試端對端的服務使用案例，包括在相同的時間測試多個服務。 針對這種測試，您需要先準備環境。 在此情況下，這表示啟動服務 (例如，使用 docker-compose up)。
 
@@ -68,7 +68,7 @@ public async Task Get_order_detail_success()
 
 因為整合測試會執行比單元測試大的程式碼區段，且整合測試會依賴基礎結構項目，所以它們的速度通常和單元測試相比，會呈數量級地變慢。 因此，最好限制您撰寫和執行多少整合測試。
 
-ASP.NET Core 包含內建的測試 web 主機，可以用來處理 HTTP 要求，而不會有網路額外負荷，這表示您可以比使用實際的 web 主機更快執行這些測試。 測試 Web 主機 (TestServer) 可透過 Microsoft.AspNetCore.TestHost NuGet 元件取得。 它可以新增至整合測試專案，並用於裝載 ASP.NET Core 應用程式。
+ASP.NET Core 包含內建的測試 web 主機，可用來處理 HTTP 要求，而不會有網路額外負荷，這表示您可以比使用真正的 web 主機更快執行這些測試。 測試 Web 主機 (TestServer) 可透過 Microsoft.AspNetCore.TestHost NuGet 元件取得。 它可以新增至整合測試專案，並用於裝載 ASP.NET Core 應用程式。
 
 您可以在下列程式碼中看到，當您建立 ASP.NET Core 控制器的整合測試時，您會透過測試主機將控制器具現化。 這相當於 HTTP 要求，但執行速度較快。
 
@@ -107,7 +107,7 @@ public class PrimeWebDefaultRequestShould
 - **Steve Smith。整合測試** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **使用 dotnet 測試在 .NET Core 中進行單元測試** \
+- **使用 dotnet test 的 .NET Core 單元測試** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. 官方網站。 \
@@ -138,11 +138,11 @@ compose 應用程式啟動且執行之後，如果您正在執行 Visual Studio�
 
 2. **微服務功能/整合測試**，其中測試案例涉及每個微服務的基礎結構，但會與其他項目隔離，且包含在 **{MicroserviceName}.FunctionalTests** 專案中。
 
-3. **應用程式功能/整合測試**，著重于微服務整合，並具有會進行數個微服務的測試案例。 這些測試位於 **Application.FunctionalTests** 專案中。
+3. **應用程式功能/整合測試**，著重于微服務整合，以及進行數個微服務的測試案例。 這些測試位於 **Application.FunctionalTests** 專案中。
 
-每個微服務的單元測試和整合測試都包含在每個微服務和應用程式中測試資料夾中。負載測試則包含在解決方案資料夾中的測試資料夾中，如圖 6-25 所示。
+雖然單元和整合測試是組織在微服務專案內的測試檔案夾中，但應用程式和負載測試會在根資料夾下分開管理，如圖6-25 所示。
 
-![VS 的螢幕擷取畫面，指出方案中的部分測試專案。](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
+![VS 指出方案中某些測試專案的 VS 螢幕擷取畫面。](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **圖 6-25**。 eShopOnContainers 中的測試資料夾結構
 

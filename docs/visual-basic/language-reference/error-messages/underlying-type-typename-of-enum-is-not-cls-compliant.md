@@ -7,17 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 79faf0038b2b313bdc21e12c8ae76854bcd6957f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8d27039c28cd3f680e441db9182dd415bd8e91ba
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406569"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870265"
 ---
 # <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>列舉的基礎類型 \<typename> 不符合 CLS 標準
-為這個列舉所指定的資料類型不是[語言獨立性和與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（CLS）的一部分。 這不是元件內的錯誤，因為 .NET Framework 和 Visual Basic 支援此資料類型。 不過，以嚴格符合 CLS 標準的程式碼撰寫的另一個元件可能不支援此資料類型。 這類元件可能無法成功與您的元件互動。  
+
+針對此列舉指定的資料類型不是 [語言獨立性和語言獨立元件](../../../standard/language-independence-and-language-independent-components.md) 的一部分， (CLS) 。 這不是您的元件內的錯誤，因為 .NET Framework 和 Visual Basic 支援此資料類型。 不過，以嚴格符合 CLS 標準的程式碼撰寫的另一個元件可能不支援此資料類型。 這類元件可能無法成功與您的元件互動。  
   
- 下列 Visual Basic 資料類型不符合 CLS 標準：  
+ 下列 Visual Basic 資料類型不符合 CLS 規範：  
   
 - [SByte 資料類型](../data-types/sbyte-data-type.md)  
   
@@ -33,13 +34,13 @@ ms.locfileid: "84406569"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 如果您的元件僅與其他 .NET Framework 元件互動，或未與任何其他元件互動，則不需要變更任何專案。  
+- 如果您的元件僅與其他 .NET Framework 元件互動，或未與任何其他元件互動，您就不需要變更任何動作。  
   
-- 如果您要與未針對 .NET Framework 撰寫的元件互動，您可以透過反映或檔中的來判斷是否支援此資料類型。 如果有，您就不需要變更任何專案。  
+- 如果您要與未針對 .NET Framework 撰寫的元件進行互動，您可以透過反映或從檔中判斷是否支援此資料類型。 如果有，您就不需要變更任何變更。  
   
 - 如果您要與不支援此資料類型的元件互動，您必須將它取代為最符合 CLS 標準的類型。 例如，如果您不需要 2,147,483,647 以上的值範圍，而且不使用 `UInteger` ，則可能可以使用 `Integer` 。 如果您需要擴充範圍，則可以將 `UInteger` 取代為 `Long`。  
   
-- 如果您要與 Automation 或 COM 物件互動，請記住有些類型的資料寬度與 .NET Framework 中的不同。 例如，`uint` 在其他環境中通常是 16 位元。 如果您要將16位引數傳遞至這類元件，請 `UShort` `UInteger` 在您的 managed Visual Basic 程式碼中將它宣告為而不是。  
+- 如果您要與 Automation 或 COM 物件互動，請記住，有些類型的資料寬度會與 .NET Framework 中的資料寬度不同。 例如，`uint` 在其他環境中通常是 16 位元。 如果您要將16位引數傳遞至這類元件，請 `UShort` `UInteger` 在您的 managed Visual Basic 程式碼中將它宣告為，而不是。  
   
 ## <a name="see-also"></a>另請參閱
 
