@@ -10,24 +10,26 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: f7724053e3732c909523e4e2d3b65bb1918c29d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 77515357ac9dc972992df09c471695aad13985c4
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362355"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867936"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-表示轉換運算子（ `CType` ）會將類別或結構轉換成可能無法保存原始類別或結構之某些可能值的類型。  
+
+指出轉換運算子 (`CType`) 將類別或結構轉換成可能無法保存某些原始類別或結構之可能值的類型。  
   
 ## <a name="converting-with-the-narrowing-keyword"></a>使用縮小關鍵字進行轉換  
- 轉換程式 `Public Shared` 除了之外，還必須指定 `Narrowing` 。  
+
+ 除了以外，轉換程式 `Public Shared` 還必須指定 `Narrowing` 。  
   
- 縮小轉換在執行時間不一定會成功，而且可能會失敗或產生資料遺失。 範例包括 `Long` 對 `Integer` `String` 衍生類型的、至以及 `Date` 基底類型。 最後一個轉換會縮小，因為基底類型可能不包含衍生類型的所有成員，因此不是衍生類型的實例。  
+ 縮小轉換在執行時間不一定會成功，而且可能會失敗或導致資料遺失。 例如 `Long` ，to `Integer` 、 `String` to `Date` 和 base type to a 衍生型別。 因為基底類型可能不包含衍生類型的所有成員，因此不是衍生型別的實例，所以最後一個轉換會縮小。  
   
- 如果 `Option Strict` 為 `On` ，則取用程式碼必須用於 `CType` 所有縮小轉換。  
+ 如果 `Option Strict` 是 `On` ，使用中的程式碼必須用於 `CType` 所有縮小轉換。  
   
- `Narrowing`關鍵字可以在此內容中使用：  
+ `Narrowing`關鍵字可用於此內容中：  
   
  [Operator Statement](../statements/operator-statement.md)  
   

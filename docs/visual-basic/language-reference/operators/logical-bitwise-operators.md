@@ -5,15 +5,16 @@ helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: 281004809c7f5000f1c68ecb0db759aa30c78e39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ec39b191f1a8374fd3b6c6d9a72841ec5510afe8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401548"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866765"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>邏輯/位元運算子 (Visual Basic)
-以下是在 Visual Basic 中定義的邏輯/位運算子。  
+
+以下是 Visual Basic 中定義的邏輯/位運算子。  
   
  [And 運算子](and-operator.md)  
   

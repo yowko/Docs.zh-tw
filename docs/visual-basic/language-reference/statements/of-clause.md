@@ -17,18 +17,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 8497f46453d586fb94e1f7c82c81c6b923dd6f60
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0595356fb75fc0ac73a49622d71fe1d28fa7b648
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404417"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90865906"
 ---
 # <a name="of-clause-visual-basic"></a>Of 子句 (Visual Basic)
-引進 `Of` 子句，它會識別*泛型*類別、結構、介面、委派或程式上的*型別參數*。 如需泛型型別的詳細資訊，請參閱[Visual Basic 中的泛型型別](../../programming-guide/language-features/data-types/generic-types.md)。  
+
+引進 `Of` 子句，這個子句會識別*泛型*類別、結構、介面、委派或程式的*型別參數*。 如需泛型型別的詳細資訊，請參閱 [Visual Basic 中的泛型型別](../../programming-guide/language-features/data-types/generic-types.md)。  
   
 ## <a name="using-the-of-keyword"></a>使用 of 關鍵字  
- 下列程式碼範例會使用 `Of` 關鍵字來定義接受兩個型別參數之類別的外框。 它*constrains*會 `keyType` 根據介面來限制參數 <xref:System.IComparable> ，這表示取用的程式碼必須提供實作為型別引數 <xref:System.IComparable> 。 這是必要的，如此程式 `add` 才能呼叫 <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> 方法。 如需條件約束的詳細資訊，請參閱 [Type List](type-list.md)。  
+
+ 下列程式碼範例會使用 `Of` 關鍵字來定義採用兩個型別參數之類別的大綱。 它*constrains*會限制 `keyType` 介面的參數 <xref:System.IComparable> ，這表示使用程式碼必須提供實作為的型別引數 <xref:System.IComparable> 。 這是必要的，如此程式 `add` 才能呼叫 <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> 方法。 如需條件約束的詳細資訊，請參閱 [Type List](type-list.md)。  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,9 +44,9 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- 如果您完成上述類別定義，您可以 `dictionary` 從它建立各種類別。 您提供給的類型 `entryType` ，並 `keyType` 決定類別所保留的專案類型，以及與每個專案相關聯的索引鍵類型。 由於條件約束的原因，您必須提供給實 `keyType` 作為型別 <xref:System.IComparable> 。  
+ 如果您完成上述類別定義，就可以 `dictionary` 從其建立各種類別。 您提供給的 `entryType` 型別， `keyType` 會決定類別保存的專案類型，以及它與每個專案相關聯的索引鍵類型。 由於條件約束的限制，您必須提供給實的 `keyType` 型別 <xref:System.IComparable> 。  
   
- 下列程式碼範例會建立一個物件，它會保存 `String` 專案並將索引 `Integer` 鍵與每一個金鑰產生關聯。 `Integer`會執行 <xref:System.IComparable> 並因此滿足的條件約束 `keyType` 。  
+ 下列程式碼範例會建立保存專案的物件 `String` ，並將索引 `Integer` 鍵與每一個索引鍵產生關聯。 `Integer`<xref:System.IComparable>在上執行，因此符合條件約束 `keyType` 。  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  
@@ -69,5 +71,5 @@ Dim d As New dictionary(Of String, Integer)
 - <xref:System.IComparable>
 - [Type List](type-list.md)
 - [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
-- [位於](../modifiers/in-generic-modifier.md)
-- [脫銷](../modifiers/out-generic-modifier.md)
+- [位置](../modifiers/in-generic-modifier.md)
+- [擴展](../modifiers/out-generic-modifier.md)

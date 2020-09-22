@@ -15,20 +15,22 @@ helpviewer_keywords:
 - sealed classes [Visual Basic]
 - classes [Visual Basic], not inheritable
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
-ms.openlocfilehash: a5b571591a2ec62915c2a112f9a088a12837c9cf
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a204303a9695a157f598f83e182709a458a62be7
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362342"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867895"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable (Visual Basic)
+
 指定類別不能當做基類使用。  
   
 ## <a name="remarks"></a>備註  
- **替代詞彙**。 無法繼承的類別有時稱為*密封*的類別。  
+
+ **替代條款**。 無法繼承的類別有時稱為 *密封* 類別。  
   
- `NotInheritable`修飾詞可以在此內容中使用：  
+ `NotInheritable`修飾詞可用於此內容中：  
   
  [Class 陳述式](../statements/class-statement.md)  
   

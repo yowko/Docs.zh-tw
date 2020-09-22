@@ -13,51 +13,56 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: eb6f48d04b7d14591003e340464451da7df45cd6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 000f6754575bcce6b2d79d85541e755219aca956
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404611"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866623"
 ---
 # <a name="goto-statement"></a>GoTo 陳述式
-無條件地分支到程式中的指定行。  
+
+無條件地分支至程式中的指定行。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 GoTo line  
 ```  
   
-## <a name="part"></a>部分  
+## <a name="part"></a>組件  
+
  `line`  
  必要。 任何行標籤。  
   
 ## <a name="remarks"></a>備註  
- `GoTo`語句只能分支至其出現所在程式中的行。 這一行必須有可以參考的行標籤 `GoTo` 。 如需詳細資訊，請參閱 how [to： Label 語句](../../programming-guide/program-structure/how-to-label-statements.md)。  
+
+ `GoTo`語句只能分支至其出現程式中的行。 這一行必須有可以參考的行標籤 `GoTo` 。 如需詳細資訊，請參閱 [如何：標記語句](../../programming-guide/program-structure/how-to-label-statements.md)。  
   
 > [!NOTE]
-> `GoTo`語句可能會使程式碼更容易讀取和維護。 請盡可能改用控制結構。 如需詳細資訊，請參閱 [控制流程](../../programming-guide/language-features/control-flow/index.md)。  
+> `GoTo` 語句可能使程式碼難以讀取和維護。 可能的話，請改用控制項結構。 如需詳細資訊，請參閱 [控制流程](../../programming-guide/language-features/control-flow/index.md)。  
   
- 您不能使用 `GoTo` 語句從 [ `For` ... `Next` `For Each` `Next` `SyncLock` `End SyncLock` `Try` `Catch` ]、[...]、[...] 和 [...]... `Finally` 、 `With` ... `End With` 或 `Using` ... `End Using` 結構，到內的標籤。  
+ 您無法使用 `GoTo` 語句從外部 `For` `Next` `For Each` `Next` `SyncLock` `End SyncLock` `Try` 進行分支 ...、...、...、...。 `Catch`...、... `Finally` `With` `End With` 或 `Using` ... `End Using` 結構的內部標籤。  
   
 ## <a name="branching-and-try-constructions"></a>分支和 Try 結構  
- 在 `Try` ... `Catch`...`Finally`結構中，下列規則適用于使用語句的分支 `GoTo` 。  
+
+ 在 `Try` ... `Catch`...`Finally` 結構，下列規則適用于與語句的分支 `GoTo` 。  
   
 |封鎖或區域|從外部分支|從內部分支|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`總匯|僅來自 `Catch` 相同結構<sup>1</sup>的區塊|僅限於整個結構外|  
-|`Catch`總匯|不允許|僅限於整個結構外，或 `Try` 相同結構<sup>1</sup>的區塊|  
-|`Finally`總匯|不允許|不允許|  
+|`Try` 區塊|僅從 `Catch` 相同結構<sup>1</sup>的區塊|僅在整個結構之外|  
+|`Catch` 區塊|永不允許|只有在整個結構之外，或 `Try` 相同結構<sup>1</sup>的區塊|  
+|`Finally` 區塊|永不允許|永不允許|  
   
- <sup>1</sup> （如果 `Try` 有的話 `Catch` ）...`Finally`結構會在另一個內嵌套， `Catch` 區塊可以 `Try` 在自己的嵌套層級分支到區塊中，但不能放入任何其他 `Try` 區塊中。 Nested `Try` ... `Catch`...`Finally`結構必須完全包含在 `Try` 其所用的結構的或 `Catch` 區塊中。  
+ <sup>1</sup> （如果 `Try` 有的話 `Catch` ） .。。...`Finally` 結構會內嵌在另一個區塊中， `Catch` 區塊可以 `Try` 在它自己的嵌套層級分支至區塊，但不能分成任何其他 `Try` 區塊。 嵌套的 `Try` ... `Catch`...`Finally` 結構必須完整地包含在 `Try` `Catch` 它所用之結構的或區塊中。  
   
- 下圖顯示 `Try` 在另一個中嵌套的一個結構。 兩個結構的區塊之間的各種分支會指出為有效或無效。  
+ 下圖顯示 `Try` 在另一個結構中嵌套的結構。 兩個結構的區塊之間的各種分支都會表示為有效或無效。  
   
  ![Try 語法結構中的分支示意圖](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 `GoTo` 語句，在程式中分支至行標籤。  
+
+ 下列範例會使用 `GoTo` 語句來分支至程式中的行標籤。  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   

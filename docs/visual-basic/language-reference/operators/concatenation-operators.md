@@ -5,15 +5,16 @@ helpviewer_keywords:
 - operators [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: d787368b-3713-47ff-bce8-f112720a673a
-ms.openlocfilehash: cd288450b0e23bf49c4db2c04008431fd1b8f1be
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 282747043197ad2fded6f5cccc85ec7eaadbe2bf
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371540"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867115"
 ---
 # <a name="concatenation-operators-visual-basic"></a>串連運算子 (Visual Basic)
-以下是在 Visual Basic 中定義的串連運算子。  
+
+以下是 Visual Basic 中定義的串連運算子。  
   
  [& 運算子](concatenation-operator.md)  
   

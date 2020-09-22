@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 13da712e9421bbfe593e5945b80bb3636ebe05f3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738719"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866442"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -224,15 +224,15 @@ if (e is not null)
 
 您可以使用運算式傳回預設的函式所建立的實例 `return new();` 。
 
-類似的功能可改善條件運算式的目標型別解析。 進行這項變更時，這兩個運算式不需要從一個運算式隱含轉換成另一個運算式，但兩者都可能會隱含地轉換成目標型別。 您可能不會注意到這種變更。 您將會注意到，某些條件運算式先前需要轉換或根本無法編譯。
+類似的功能可改善 [條件運算式](../language-reference/operators/conditional-operator.md)的目標型別解析。 進行這項變更時，這兩個運算式不需要從一個運算式隱含轉換成另一個運算式，但兩者都可能會隱含地轉換成目標型別。 您可能不會注意到這種變更。 您將會注意到，某些條件運算式先前需要轉換或根本無法編譯。
 
 從 c # 9.0 開始，您可以將 `static` 修飾詞加入至 lambda 運算式或匿名方法。 靜態 lambda 運算式類似于 `static` 區域函數：靜態 lambda 或匿名函式無法捕捉區域變數或實例狀態。 `static`修飾詞可避免意外地捕捉其他變數。
 
 協變數傳回型別提供覆寫函式之傳回類型的彈性。 覆寫的虛擬函式可以傳回衍生自基類方法中宣告之傳回型別的型別。 這有助於記錄，以及支援虛擬複製品或 factory 方法的其他類型。
 
-此外， `foreach` 迴圈也會辨識並使用擴充方法 `GetEnumerator` ，以其他方式滿足 `foreach` 模式。 這項變更表示 `foreach` 與其他以模式為基礎的結構（例如非同步模式和以模式為基礎的解構）一致。 在實務上，這項變更表示您可以將 `foreach` 支援新增至任何類型。 列舉物件在設計方面有意義時，您應該限制其使用方式。
+此外， [ `foreach` 迴圈](../language-reference/keywords/foreach-in.md)也會辨識並使用擴充方法 `GetEnumerator` ，以其他方式滿足 `foreach` 模式。 這項變更表示 `foreach` 與其他以模式為基礎的結構（例如非同步模式和以模式為基礎的解構）一致。 在實務上，這項變更表示您可以將 `foreach` 支援新增至任何類型。 列舉物件在設計方面有意義時，您應該限制其使用方式。
 
-接下來，您可以使用捨棄作為 lambda 運算式的參數。 這種便利性可讓您避免將引數命名，而編譯器可能會避免使用它。 您可以使用 `_` 做為任何引數。
+接下來，您可以使用捨棄作為 lambda 運算式的參數。 這種便利性可讓您避免將引數命名，而編譯器可能會避免使用它。 您可以使用 `_` 做為任何引數。 如需詳細資訊，請參閱[lambda](../language-reference/operators/lambda-expressions.md)運算式一文的[lambda 運算式章節的輸入參數](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression)。
 
 最後，您現在可以將屬性套用至區域函數。 例如，您可以將可為 null 的屬性批註套用至區域函數。
 
