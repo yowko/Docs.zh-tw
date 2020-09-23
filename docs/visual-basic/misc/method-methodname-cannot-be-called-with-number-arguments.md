@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: 1f8dedf6797f16e61eb44875f28f4ed9ea787540
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c66bcc0c525f816fdf5814d70351eb7e8eeda22f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402105"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076132"
 ---
 # <a name="method-methodname-cannot-be-called-with-number-arguments"></a>無法以 \<number> 個引數呼叫方法 '\<methodname>'
+
 方法呼叫包含錯誤的引數數目。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

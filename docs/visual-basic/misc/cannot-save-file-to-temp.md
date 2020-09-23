@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
-ms.openlocfilehash: 3d643d0a333e60954e3baeceda996138f6870621
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c17e4ba30a06866b4ae034094c8f53619c1123bb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84365146"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076302"
 ---
 # <a name="cannot-save-file-to-temp"></a>無法將檔案儲存至 TEMP
+
 元件找不到名為 TEMP 的目錄，或包含 TEMP 目錄的磁碟機或磁碟分割的空間不足，無法儲存資訊。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

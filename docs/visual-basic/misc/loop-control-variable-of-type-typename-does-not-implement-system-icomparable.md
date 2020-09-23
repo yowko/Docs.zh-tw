@@ -1,17 +1,18 @@
 ---
-title: 類型的迴圈控制變數 '<typename>' 未實作 'System.IComparable' 介面
+title: 類型 '<typename>' 的迴圈控制變數無法實作 'System.IComparable' 介面
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IComparable2
 ms.assetid: 8dba1270-380a-4f05-8bad-1031e6a9cc90
-ms.openlocfilehash: a227e367c71d37abd86430979881d1412ff76efc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 463dffbb008e60fb30cbe456146196be7a633b19
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62023646"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076145"
 ---
-# <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>類型的迴圈控制變數 '\<類型名稱 >' 未實作 'System.IComparable' 介面
+# <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>類型 '\<typename>' 的迴圈控制變數無法實作 'System.IComparable' 介面
+
 變數所屬的類型未實作 `System.IComparable` 介面。 `System.IComparable` 必須由實值類型或類別實作。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

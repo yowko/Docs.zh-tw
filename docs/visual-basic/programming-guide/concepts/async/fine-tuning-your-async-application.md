@@ -2,29 +2,30 @@
 title: 微調非同步應用程式
 ms.date: 07/20/2015
 ms.assetid: 4c3e7997-a95f-4fbe-a6ac-60ba042d30b9
-ms.openlocfilehash: e33f86177a3680d41ec04842dbc120713a48f61c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ad4f9a526e0497029ff8ddc3e93637a4f9acb00
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396645"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075430"
 ---
 # <a name="fine-tuning-your-async-application-visual-basic"></a>微調非同步應用程式 (Visual Basic)
+
 您可以使用 <xref:System.Threading.Tasks.Task> 類型所提供的方法和屬性，來增加非同步應用程式的精確度和彈性。 本節的主題會示範使用 <xref:System.Threading.CancellationToken> 以及 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 等重要 `Task` 方法的範例。  
   
  您可以使用 `WhenAny` 和 `WhenAll`，更輕鬆地啟動多個工作，並藉由監視單一工作等候其完成。  
   
 - `WhenAny` 會在集合中的任何工作完成時，傳回一個完成的工作。  
   
-     如需使用的範例 `WhenAny` ，請參閱[在一個完成後取消剩餘的非同步工作（Visual Basic）](cancel-remaining-async-tasks-after-one-is-complete.md)並[啟動多個非同步工作並在它們完成時進行處理（Visual Basic）](start-multiple-async-tasks-and-process-them-as-they-complete.md)。  
+     如需使用的範例 `WhenAny` ，請參閱  [在完成前取消剩餘的非同步工作 (Visual Basic) ](cancel-remaining-async-tasks-after-one-is-complete.md)並 [啟動多個非同步工作，並在完成 (Visual Basic) 時進行處理 ](start-multiple-async-tasks-and-process-them-as-they-complete.md)。  
   
 - `WhenAll` 會在集合中的所有工作完成時，傳回一個完成的工作。  
   
-     如需詳細資訊和使用的範例 `WhenAll` ，請參閱[如何：使用 System.threading.tasks.task.whenall 擴充非同步逐步解說（Visual Basic）](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
+     如需詳細資訊和使用的範例 `WhenAll` ，請參閱 [如何：使用 System.threading.tasks.task.whenall 擴充非同步逐步解說 (Visual Basic) ](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
   
  本節包含下列範例。  
   
-- [取消一項非同步工作或工作清單（Visual Basic）](cancel-an-async-task-or-a-list-of-tasks.md)。  
+- [取消非同步工作或工作清單 (Visual Basic) ](cancel-an-async-task-or-a-list-of-tasks.md)。  
   
 - [在一段時間後取消非同步工作 (Visual Basic)](cancel-async-tasks-after-a-period-of-time.md)  
   

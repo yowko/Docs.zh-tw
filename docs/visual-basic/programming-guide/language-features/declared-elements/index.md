@@ -2,14 +2,15 @@
 title: 宣告項目
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: f7fedc58ec061ddb133eb94ee3b3b7a7b49083cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9359c8df60d7fdc06e7c8dfa1df82f1b277d7339
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357241"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075157"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Visual Basic 的宣告項目
+
 「宣告項目」** 是宣告陳述式中定義的程式設計項目。 宣告項目包含變數、常數、列舉、類別、結構、模組、介面、程序、程序參數、函式傳回、外部程序參考、運算子、屬性、事件和委派。  
   
  宣告陳述式包含下列各項：  
@@ -43,6 +44,7 @@ ms.locfileid: "84357241"
 - [Delegate 陳述式](../../../language-reference/statements/delegate-statement.md)  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [Declared Element Names](declared-element-names.md)  
  描述如何為項目命名與使用字母大小寫。  
   
@@ -53,6 +55,7 @@ ms.locfileid: "84357241"
  描述編譯器如何將參考對應至宣告，以及如何限定名稱。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [程式結構和程式碼慣例](../../program-structure/program-structure-and-code-conventions.md)  
  提供讓您的程式碼更容易閱讀、了解和維護的方針。  
   
