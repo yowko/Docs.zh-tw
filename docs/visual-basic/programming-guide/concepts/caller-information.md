@@ -2,14 +2,15 @@
 title: 呼叫端資訊
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 93fb1e327d65ac19f293a2f77b7d5712fc5e8d2f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 33c7367626d66d1db2705fc2882ca0780d1b867f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400664"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090348"
 ---
 # <a name="caller-information-visual-basic"></a>呼叫端資訊 (Visual Basic)
+
 使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。  
   
  若要取得這項資訊，可使用套用至選擇性參數的屬性，每個屬性都有預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：  
@@ -21,6 +22,7 @@ ms.locfileid: "84400664"
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼叫端的方法或屬性名稱。 請參閱本主題稍後的[成員名稱](#MEMBERNAMES)。|`String`|  
   
 ## <a name="example"></a>範例  
+
  下列範例將示範如何使用 Caller Info 屬性。 每次呼叫 `TraceMessage` 方法時，呼叫端資訊會替代做為選擇性參數的引數。  
   
 ```vb  
@@ -47,6 +49,7 @@ End Sub
 ```  
   
 ## <a name="remarks"></a>備註  
+
  您必須為每個選擇性參數指定明確的預設值。 您無法將 Caller Info 屬性套用至未指定為選擇性的參數。  
   
  Caller Info 屬性不會讓參數成為選擇性， 而是會影響省略引數時傳入的預設值。  
@@ -55,7 +58,8 @@ End Sub
   
  您可以明確提供選擇性引數來控制呼叫端資訊，或是隱藏呼叫端資訊。  
   
-### <a name="member-names"></a><a name="MEMBERNAMES"></a>成員名稱  
+### <a name="member-names"></a><a name="MEMBERNAMES"></a> 成員名稱  
+
  您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構]**** 未變更 `String` 值這個問題。 這項優點對於下列工作特別有用：  
   
 - 使用追蹤和診斷常式。  

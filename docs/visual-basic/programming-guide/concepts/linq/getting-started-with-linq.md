@@ -8,17 +8,19 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: cea6a5973104d34c058a51c404c13d26dd1aab14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2097eb9caccd65a7983244cd06cbc18759677be1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554380"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090309"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>使用 Visual Basic 撰寫 LINQ 入門
+
 本章節包含的總覽、範例和背景資訊，可協助您瞭解及使用 Visual Basic 和與語言整合的查詢 (LINQ) 。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [撰寫第一個 LINQ 查詢](writing-your-first-linq-query.md)  
  描述撰寫基本 LINQ 查詢的三個階段：取得資料來源、撰寫查詢，以及執行查詢。  
   
@@ -35,6 +37,7 @@ ms.locfileid: "90554380"
  建立 Visual Basic LINQ 專案、新增簡單資料來源，以及執行一些基本查詢作業的逐步指示。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [Visual Basic 中的 LINQ 簡介](../../language-features/linq/introduction-to-linq.md)  
  包含 LINQ 的查詢概觀，並提供其他資源連結。  
   

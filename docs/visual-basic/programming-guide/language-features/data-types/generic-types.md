@@ -36,19 +36,20 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394048"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090257"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型類型 (Visual Basic)
+
 *「泛型類型」* (generic type) 是單一程式設計項目，適用於為各種資料類型執行相同的功能。 當您定義泛型類別或程序時，不需要為想要執行該功能的每種資料類型定義不同的版本。  
   
  類似的項目是頭部可拆卸的螺絲起子組。 您可以檢查需要轉動的螺絲，並選取該螺絲的正確螺絲起子頭 (一字、十字、星形)。 將正確的螺絲起子頭插入螺絲起子握把之後，即可執行與螺絲起子完全相同的功能，即轉動螺絲。  
   
- ![具有不同標題的螺絲起子組的圖表。](./media/generic-types/generic-screwdriver-set.gif)  
+ ![具有不同標頭之螺絲起子組的圖表。](./media/generic-types/generic-screwdriver-set.gif)  
   
  當您定義泛型類型時，即使用一個或多個資料類型對其進行參數化。 這可讓您使用程式碼來調整資料類型，使其符合需求。 您的程式碼可以宣告泛型項目的數個不同程式設計項目，而且各代表一組不同的資料類型。 但是，宣告的項目不論使用何種資料類型，都會執行相同的邏輯。  
   
@@ -61,6 +62,7 @@ ms.locfileid: "84394048"
  如需使用泛型類型的詳細資訊，請參閱 [How to: Use a Generic Class](how-to-use-a-generic-class.md)。  
   
 ## <a name="example-of-a-generic-class"></a>泛型類別範例  
+
  下列範例顯示泛型類別的基本架構定義。  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
@@ -73,19 +75,21 @@ ms.locfileid: "84394048"
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- 如需更完整的範例，請參閱[如何：定義可在不同資料類型上提供完全相同功能的類別](how-to-define-a-class-that-can-provide-identical-functionality.md)。  
+ 如需更完整的範例，請參閱 [如何：定義可以在不同資料類型上提供完全相同功能的類別](how-to-define-a-class-that-can-provide-identical-functionality.md)。  
   
 ## <a name="eligible-programming-elements"></a>合格的程式設計項目  
- 您可以定義和使用泛型類別、結構、介面、程序和委派。 請注意，.NET Framework 會定義數個泛型類別、結構和介面，以代表常用的泛型元素。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間提供字典、清單、佇列和堆疊。 定義您自己的泛型項目之前，請查看它是否已在 <xref:System.Collections.Generic?displayProperty=nameWithType>中。  
+
+ 您可以定義和使用泛型類別、結構、介面、程序和委派。 請注意，.NET Framework 會定義數個泛型類別、結構和介面來代表常用的泛型專案。 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間提供字典、清單、佇列和堆疊。 定義您自己的泛型項目之前，請查看它是否已在 <xref:System.Collections.Generic?displayProperty=nameWithType>中。  
   
  程序不是類型，但您可以定義和使用泛型程序。 請參閱 [Generic Procedures in Visual Basic](generic-procedures.md)。  
   
 ## <a name="advantages-of-generic-types"></a>泛型類型的優點  
+
  泛型類型是宣告數個不同程式設計項目的基礎，而這些項目各作用於特定資料類型。 泛型類型的替代項目是：  
   
 1. 作用於 `Object` 資料類型的單一類型。  
   
-2. 類型的一組*特定類型*版本，每個版本都會個別編碼並操作一種特定的資料類型，例如 `String` 、 `Integer` 或使用者定義的類型，例如 `customer` 。  
+2. 型別的一組 *特定類型* 版本，每個版本都會個別編碼和操作一種特定資料類型，例如 `String` 、 `Integer` 或使用者定義型別（例如） `customer` 。  
   
  泛型類型優於這些替代項目的優點如下：  
   
@@ -104,9 +108,11 @@ ms.locfileid: "84394048"
 - **泛型演算法。** 與類型無關的抽象演算法適用於泛型類型。 例如，使用 <xref:System.IComparable> 介面排序項目的泛型程序，可以與任何實作 <xref:System.IComparable>的資料類型搭配使用。  
   
 ## <a name="constraints"></a>條件約束  
+
  雖然泛型類型定義中的程式碼應該盡可能與類型無關，但是您可能需要要求提供給泛型類型之任何資料類型的特定功能。 例如，如果您基於排序或定序而想要比較兩個項目，則其資料類型必須實作 <xref:System.IComparable> 介面。 您可以將 *「條件約束」* (constraint) 加入類型參數中，來強制執行這項需求。  
   
 ### <a name="example-of-a-constraint"></a>條件約束範例  
+
  下列範例顯示條件約束需要有類型引數才能實作 <xref:System.IComparable>之類別的基本架構定義。  
   
  [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
@@ -114,6 +120,7 @@ ms.locfileid: "84394048"
  如果後續程式碼嘗試從提供未實作 `itemManager` 之類型的 <xref:System.IComparable>來建構類別，則編譯器會發出發生錯誤訊號。  
   
 ### <a name="types-of-constraints"></a>條件約束類型  
+
  您的條件約束可以利用任意組合指定下列需求：  
   
 - 類型引數必須實作一或多個介面  
@@ -122,21 +129,23 @@ ms.locfileid: "84394048"
   
 - 類型引數必須公開從中建立物件之程式碼可存取的無參數建構函式  
   
-- 型別引數必須是*引用型*別，或者它必須是實*值型*別  
+- 型別引數必須是*參考型*別，或必須是實*值型*別  
   
- 如果您需要多個需求，請在大括弧 ( *) 內使用逗號分隔的* 「條件約束清單」`{ }`(constraint list)。 若要要求可存取的函式，您必須在清單中包含[新的 Operator](../../../language-reference/operators/new-operator.md)關鍵字。 若需要參考類型，請包括 `Class` 關鍵字；若需要實值類型，請包括 `Structure` 關鍵字。  
+ 如果您需要多個需求，請在大括弧 ( *) 內使用逗號分隔的* 「條件約束清單」`{ }`(constraint list)。 若要要求可存取的函式，您可以在清單中包含 [新的 Operator](../../../language-reference/operators/new-operator.md) 關鍵字。 若需要參考類型，請包括 `Class` 關鍵字；若需要實值類型，請包括 `Structure` 關鍵字。  
   
  如需條件約束的詳細資訊，請參閱 [Type List](../../../language-reference/statements/type-list.md)。  
   
 ### <a name="example-of-multiple-constraints"></a>多個條件約束範例  
+
  下列範例顯示類型參數上具有條件約束清單之泛型類別的基本架構定義。 在建立這個類別之執行個體的程式碼中，類型引數必須同時實作 <xref:System.IComparable> 和 <xref:System.IDisposable> 介面、為參考類型，並且公開可存取的無參數建構函式。  
   
  [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>重要詞彙  
+
  泛型類型引進並使用下列詞彙：  
   
-- *「泛型類型」*(Generic Type)。 在您宣告時至少提供一種資料類型之類別、結構、介面、程序或委派的定義。  
+- *泛型型*別。 在您宣告時至少提供一種資料類型之類別、結構、介面、程序或委派的定義。  
   
 - *「類型參數」*(Type Parameter)。 在泛型類型定義中，這是您在宣告類型時所提供之資料類型的預留位置。  
   
@@ -148,14 +157,14 @@ ms.locfileid: "84394048"
   
 ## <a name="see-also"></a>另請參閱
 
-- [資料類型](index.md)
+- [Data types (資料類型)](index.md)
 - [類型字元](type-characters.md)
 - [Value Types and Reference Types](value-types-and-reference-types.md)
 - [Visual Basic 中的類型轉換](type-conversions.md)
 - [疑難排解資料類型的問題](troubleshooting-data-types.md)
-- [資料類型](../../../language-reference/data-types/index.md)
-- [的](../../../language-reference/statements/of-clause.md)
-- [一旦](../../../language-reference/statements/as-clause.md)
+- [Data types (資料類型)](../../../language-reference/data-types/index.md)
+- [次數](../../../language-reference/statements/of-clause.md)
+- [按照](../../../language-reference/statements/as-clause.md)
 - [Object Data Type](../../../language-reference/data-types/object-data-type.md)
 - [共變數和反變數](../../concepts/covariance-contravariance/index.md)
 - [迭代器](../../concepts/iterators.md)
