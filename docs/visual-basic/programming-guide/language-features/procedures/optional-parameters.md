@@ -12,15 +12,16 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: 4e07b75c94b4aea681e6e862e161bda80b2833fc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 73a51ab65a8ea4c38b6fd6737279fb19fb1cfe73
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364327"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071855"
 ---
 # <a name="optional-parameters-visual-basic"></a>選擇性參數 (Visual Basic)
-您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*會 `Optional` 以程序定義中的關鍵字表示。 適用的規則如下：  
+
+您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數* 會 `Optional` 以程式定義中的關鍵字表示。 適用的規則如下：  
   
 - 程序定義中的每一個選擇性參數都必須指定一個預設值。  
   
@@ -35,6 +36,7 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 ```  
   
 ## <a name="calling-procedures-with-optional-parameters"></a>以選擇性參數呼叫程序  
+
  當您以選擇性參數呼叫程序時，可以選擇是否提供引數。 如果不提供，則該程序會使用該參數所宣告的預設值。  
   
  當您省略引數清單中的一個或多個選擇性引數時，必須用連續逗號來標示它們的位置。 下列呼叫範例提供第一個和第四個引數，而不提供第二個或第三個引數：  
@@ -50,6 +52,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>判斷是否有選擇性引數  
+
  程序在執行階段時無法偵測指定的引數是否已省略，或者呼叫程式碼已明確提供預設值。 如果您需要有所區別，可以將一個不常用的值設定為預設值。 下列程式會定義選擇性參數 `office` ，並測試其預設值， `QJZ` 以查看它是否已在呼叫中省略：  
   
  [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
@@ -57,6 +60,7 @@ Sub name(argument 1, , , argument 4)
  如果選擇性參數是 `String` 之類的參考類型，您就可以用 `Nothing` 做為預設值，只要不是引數需要的值即可。  
   
 ## <a name="optional-parameters-and-overloading"></a>選擇性參數和多載化  
+
  另一個用選擇性參數定義程序的方式是使用多載化 (Overloading)。 如果您有一個選擇性參數，您可以定義程序的兩個多載版本，其中一個接受該參數，而另一個則不接受。 隨著選擇性參數數目的增加，這個方法會變得比較複雜。 但是，它的優點是可以完全確定呼叫程式是否提供每一個選擇性引數。  
   
 ## <a name="see-also"></a>另請參閱

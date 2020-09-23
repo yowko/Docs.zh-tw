@@ -2,16 +2,16 @@
 title: 開始使用 Azure 與 .NET
 description: 了解您需要知道的 Azure 和 .NET 基本概念。
 ms.date: 06/20/2020
-ms.openlocfilehash: c64de800f47035b22cc62b6d08cb7b71246984a7
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 9f1766176740ede5aa40dd894497f2aa719efe23
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174318"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071101"
 ---
-# <a name="introduction-to-azure-and-net"></a>Azure 和 .NET 簡介
+# <a name="introduction-to-azure-and-net"></a>Azure 與 .NET 簡介
 
-本檔概述 .NET 開發人員應該熟悉的重要概念和服務，以開始使用 Azure 服務來開發應用程式。
+本檔概述 .NET 開發人員應該熟悉的重要概念和服務，以開始使用 Azure 服務開發應用程式。
 
 ## <a name="key-concepts"></a>重要概念
 
@@ -28,7 +28,7 @@ ms.locfileid: "86174318"
 
 **受控服務**：Azure 會提供一些服務，讓您可以將資料或資訊提供給 Azure，然後 Azure 的實作會採取適當動作。 其中一個範例就是 Azure Blob 儲存體，當您提供檔案後，Azure 就會處理這些檔案的讀取、撰寫和保存作業。
 
-**AZURE SDK for .net**：有時稱為**適用于 .net 的 azure 程式庫**，這統稱為您在專案中安裝的[NuGet 套件](https://www.nuget.org/profiles/azure-sdk)，可提供與 Azure 服務的各種互動和功能。 這些套件也包含用來布建和管理資源的管理程式庫。
+**AZURE SDK for .net** 統稱為您在專案中安裝的 [NuGet 套件](packages.md) ，可提供 Azure 服務的各種互動和功能。 這些套件也包含用來布建和管理資源的管理程式庫。
 
 ## <a name="choosing-a-hosting-option"></a>選擇託管選項
 
@@ -49,7 +49,7 @@ Azure 中的託管可分為三類。
 * [Azure 虛擬機器](/azure/virtual-machines/)：如果因為特定相依性，使得 App Service 無法符合您託管現有應用程式的需求，那麼最簡單的方式是從虛擬機器開始使用。 若要開始使用虛擬機器和 ASP.NET 或 WCF，請參閱[將 ASP.NET 應用程式部署到 Azure 虛擬機器](https://tutorials.visualstudio.com/aspnet-vm/intro)。
 
 > [!TIP]
-> 如需有關選擇服務的詳細資訊，請參閱[為您的應用程式選擇 Azure 計算服務](/azure/architecture/guide/technology-choices/compute-decision-tree)。
+> 如需有關選擇服務的詳細資訊，請參閱 [為您的應用程式選擇 Azure 計算服務](/azure/architecture/guide/technology-choices/compute-decision-tree)。
 
 ## <a name="choose-a-data-storage-service"></a>選擇資料儲存體服務
 
@@ -72,9 +72,9 @@ Azure 中的託管可分為三類。
 
 如果您是使用 Azure SDK for .NET 來存取或管理您的 Azure 資源，請注意下列事項：
 
-* **驗證**： SDK 中的許多程式庫會使用通用驗證基礎結構，而某些程式庫會使用其所耗用之服務特有的驗證機制。 如需詳細資訊，請參閱[使用 AZURE SDK for .net 進行驗證](authentication.md)。
-* **記錄**：如果支援，用戶端程式庫會包含記錄用戶端程式庫作業的功能。 如需詳細資訊，請參閱[使用 AZURE SDK for .net 進行記錄](logging.md)。
-* **REST API**： azure SDK for .net 是建置於[Azure REST API](/rest/api/azure/)的抽象概念。 如有需要，Azure REST API 可以用來代替或與 Azure SDK for .NET 搭配使用。
+* **驗證**： SDK 中有許多程式庫都使用常見的驗證基礎結構，而某些程式庫則使用其所取用服務專屬的驗證機制。 如需詳細資訊，請參閱 [使用 AZURE SDK for .net 進行驗證](authentication.md)。
+* **記錄**：如果支援，用戶端程式庫就會包含記錄用戶端程式庫作業的能力。 如需詳細資訊，請參閱 [使用 AZURE SDK for .net 進行記錄](logging.md)。
+* **REST API**： azure SDK for .net 是建置於 [azure REST API](/rest/api/azure/)上的抽象概念。 若有需要，Azure REST API 可以用來代替 Azure SDK for .NET 或搭配使用。
 
 ## <a name="diagnosing-problems-in-the-cloud"></a>診斷雲端中的問題
 將您的應用程式部署至 Azure 後，可能會遇到應用程式可以在開發環境中運作，但無法在 Azure 中運作的狀況。 以下是診斷問題時適用的兩個入門方法：
@@ -83,7 +83,7 @@ Azure 中的託管可分為三類。
 
 * **Application Insights**：[Application Insights](/azure/application-insights/) 是完整的應用程式效能監控 (APM) 解決方案，可自動擷取應用程式中的診斷資料、遙測和效能資料。 若要開始收集您應用程式的診斷資料，請參閱[開始監視 ASP.NET Web 應用程式](/azure/application-insights/quick-monitor-portal)。
 
-## <a name="next-steps"></a>接下來的步驟
+## <a name="next-steps"></a>後續步驟
 
 * [將第一個 ASP.NET Core Web 應用程式部署至 Azure](/azure/app-service/app-service-web-get-started-dotnet)
 * [瞭解 Azure SDK for .NET 中的驗證](authentication.md)

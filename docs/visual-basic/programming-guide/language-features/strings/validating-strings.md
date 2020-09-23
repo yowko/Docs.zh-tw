@@ -7,17 +7,19 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-ms.openlocfilehash: 585f7acc8ab46ad7f5711fca7805b63b316f1970
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 026f5bd833d857ee1db1b0f10abaabee9360b37e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555727"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072414"
 ---
 # <a name="validating-strings-in-visual-basic"></a>在 Visual Basic 中驗證字串
+
 本節討論如何驗證 Visual Basic 中的字串。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [如何：在 Visual Basic 中驗證檔案名稱和路徑](how-to-validate-file-names-and-paths.md)  
  如何判斷字串是否代表檔案名或路徑。  
   

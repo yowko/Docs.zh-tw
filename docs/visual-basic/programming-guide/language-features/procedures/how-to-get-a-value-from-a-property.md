@@ -8,35 +8,36 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 2c92cd4a869acbb7c8c52fbf4117112967386498
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 983e2fd22badf4296004404d885df0a07ab2dc74
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387890"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071556"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>如何：取得屬性值 (Visual Basic)
-您可以藉由在運算式中包含屬性名稱，來抓取屬性的值。  
+
+您可以藉由將屬性名稱包含在運算式中，來取得屬性的值。  
   
- 屬性的程式會抓取 `Get` 值，但您不會依名稱明確地呼叫它。 您可以使用屬性，就像使用變數一樣。 Visual Basic 會呼叫屬性的程式。  
+ 屬性的程式 `Get` 會抓取值，但您不會依名稱明確地呼叫它。 您可以使用屬性，就像使用變數一樣。 Visual Basic 會對屬性的程式進行呼叫。  
   
-### <a name="to-retrieve-a-value-from-a-property"></a>從屬性取得值  
+### <a name="to-retrieve-a-value-from-a-property"></a>從屬性取出值  
   
-1. 在運算式中使用屬性名稱，方法與使用變數名稱的方式相同。 您可以在任何可使用變數或常數的地方使用屬性。  
+1. 使用運算式中的屬性名稱，方式與使用變數名稱的方式相同。 您可以在任何可使用變數或常數的地方使用屬性。  
   
      -或-  
   
-     在指派語句中的等號（）後面，使用屬性名稱 `=` 。  
+     在指派語句中) 登入之後，使用屬性名稱，並在等號 (`=` 。  
   
      下列範例會讀取 Visual Basic 屬性的值 `Now` ，並隱含地呼叫其程式 `Get` 。  
   
      [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
-2. 如果屬性接受引數，請在屬性名稱後面加上括弧，以括住引數清單。 如果沒有引數，您可以選擇性地省略括弧。  
+2. 如果屬性採用引數，請在屬性名稱後面加上括弧，以括住引數清單。 如果沒有引數，您可以選擇性地省略括弧。  
   
-3. 將引數放在括弧內的引數清單中，並以逗號分隔。 請務必以屬性定義對應參數的相同順序來提供引數。  
+3. 將引數清單中的引數放在括弧內，並以逗號分隔。 請務必以屬性定義對應參數的相同順序提供引數。  
   
- 屬性的值會當做變數或常數來參與運算式，或是儲存在指派語句左側的變數或屬性中。  
+ 屬性的值就像變數或常數一樣參與運算式，或是儲存在指派語句左邊的變數或屬性中。  
   
 ## <a name="see-also"></a>另請參閱
 

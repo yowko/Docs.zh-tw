@@ -5,17 +5,19 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 493da7b8583b5cc73a9832afa81b7b1d84742f2d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555740"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072427"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>在 Visual Basic 中將規則運算式與 MaskedTextBox 控制項一起搭配使用
+
 這個範例示範如何轉換簡單的正則運算式，以使用 <xref:System.Windows.Forms.MaskedTextBox> 控制項。  
   
 ## <a name="description-of-the-masking-language"></a>遮罩語言的描述  
+
  標準 <xref:System.Windows.Forms.MaskedTextBox> 遮罩語言是以 Visual Basic 6.0 中的控制項所使用的語言為基礎 `Masked Edit` ，對於從該平臺遷移的使用者來說，應該很熟悉。  
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>控制項的屬性會 <xref:System.Windows.Forms.MaskedTextBox> 指定要使用的輸入遮罩。 遮罩必須是由下表中的一或多個遮罩元素組成的字串。  
@@ -30,20 +32,21 @@ ms.locfileid: "90555740"
 |&|字元。 需要專案。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
 |C|字元。 專案選擇性。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |A|字母。 專案選擇性。|\W|  
-|.|符合文化特性的小數預留位置。|無法使用。|  
-|,|符合文化特性的千位預留位置。|無法使用。|  
-|:|符合文化特性的時間分隔符號。|無法使用。|  
-|/|符合文化特性的日期分隔符號。|無法使用。|  
-|$|符合文化特性的貨幣符號。|無法使用。|  
-|\<|將後面的所有字元轉換成小寫。|無法使用。|  
-|>|將後面的所有字元轉換成大寫。|無法使用。|  
-|&#124;|復原上一個向上或向下移動。|無法使用。|  
+|.|符合文化特性的小數預留位置。|不適用。|  
+|,|符合文化特性的千位預留位置。|不適用。|  
+|:|符合文化特性的時間分隔符號。|不適用。|  
+|/|符合文化特性的日期分隔符號。|不適用。|  
+|$|符合文化特性的貨幣符號。|不適用。|  
+|\<|將後面的所有字元轉換成小寫。|不適用。|  
+|>|將後面的所有字元轉換成大寫。|不適用。|  
+|&#124;|復原上一個向上或向下移動。|不適用。|  
 |&#92;|將遮罩字元轉換成常值。 " \\ \\ " 是反斜線的 escape 序列。|&#92;|  
 |所有其他字元。|常值。 所有的非遮罩元素都會出現在中 <xref:System.Windows.Forms.MaskedTextBox> 。|所有其他字元。|  
   
  Decimal ( ) 、萬分之一 (、) 、time (： ) 、date (/) 和 currency ($) 符號預設為顯示這些符號，如應用程式文化特性所定義。 您可以使用屬性來強制它們顯示其他文化特性的符號 <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> 。  
   
 ## <a name="regular-expressions-and-masks"></a>正則運算式和遮罩  
+
  雖然您可以使用正則運算式和遮罩來驗證使用者輸入，但它們並不完全相同。 正則運算式可以表達比遮罩更複雜的模式，但遮罩可以更簡潔且以文化特性相關的格式表達相同的資訊。  
   
  下表比較四個正則運算式以及每一個正則運算式和對等的遮罩。  

@@ -8,15 +8,16 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 870a18dbf3a7e28b7d7b612e853beeec6908cf6f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2661603ba33dd0bc28ac1a192794a4534225b641
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387929"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071634"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>如何：定義程序的多個版本 (Visual Basic)
-您可以使用相同的名稱，以及不同的參數清單，在多個版本中*定義程式。* 多載的目的是要定義程式的數個緊密相關版本，而不需要依名稱區分。  
+
+您可以使用相同的名稱，但針對每個版本使用不同的參數清單，在多個版本中*定義程式。* 多載的目的是要定義多個密切相關的程式版本，而不需要依名稱來區分。  
   
  如需詳細資訊，請參閱 [Procedure Overloading](./procedure-overloading.md)。  
   
@@ -24,23 +25,25 @@ ms.locfileid: "84387929"
   
 1. `Sub` `Function` 針對您要定義的每個程式版本，撰寫或宣告語句。 在每個宣告中使用相同的程式名稱。  
   
-2. `Sub`在每個宣告中的或關鍵字前面加上 `Function` [Overloads](../../../language-reference/modifiers/overloads.md)關鍵字。 您可以選擇性地 `Overloads` 在宣告中省略，但如果您將它包含在任何宣告中，就必須將它包含在每個宣告中。  
+2. `Sub`在每個宣告中的或關鍵字之前加上 `Function` [Overloads](../../../language-reference/modifiers/overloads.md)關鍵字。 您可以選擇性地在宣告中省略 `Overloads` ，但如果您將它包含在任何宣告中，則必須將它包含在每個宣告中。  
   
-3. 在每個宣告語句後面，撰寫程式碼來處理呼叫程式碼提供符合該版本參數清單之引數的特定案例。 您不需要測試呼叫程式碼所提供的參數。 Visual Basic 會將控制權傳遞至程式的相符版本。  
+3. 在每個宣告語句之後，撰寫程式程式碼來處理特定案例，其中呼叫程式碼會提供符合該版本參數清單的引數。 您不需要測試呼叫程式碼提供的參數。 Visual Basic 將控制權傳遞給程式的相符版本。  
   
-4. `End Sub`視需要使用或語句來終止程式的每個版本 `End Function` 。  
+4. `End Sub`請視需要使用或語句來終止程式的每個版本 `End Function` 。  
   
 ## <a name="example"></a>範例  
- 下列範例會定義一個程式 `Sub` ，以根據客戶的餘額來張貼交易。 它會使用 `Overloads` 關鍵字來定義程式的兩個版本，一個是依名稱接受客戶，另一個則依帳戶編號。  
+
+ 下列範例會定義將 `Sub` 交易張貼至客戶餘額的程式。 它會使用 `Overloads` 關鍵字來定義程式的兩個版本，一個是依名稱接受客戶，另一個則依據帳戶編號。  
   
  [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
- 呼叫程式碼可以取得客戶識別做為 `String` 或 `Integer` ，然後在任一情況下使用相同的呼叫語句。  
+ 呼叫程式碼可以將客戶識別取得為 `String` 或 `Integer` ，然後在任何一種情況下使用相同的呼叫語句。  
   
- 如需如何呼叫這些程式版本的詳細資訊 `post` ，請參閱[如何：呼叫](./how-to-call-an-overloaded-procedure.md)多載程式。  
+ 如需如何呼叫這些程式版本的詳細資訊 `post` ，請參閱 [如何：呼叫](./how-to-call-an-overloaded-procedure.md)多載程式。  
   
 ## <a name="compile-the-code"></a>編譯程式碼  
- 請確定每個多載的版本都有相同的程式名稱，但參數清單不同。  
+
+ 請確定每個多載版本都有相同的程式名稱，但有不同的參數清單。  
   
 ## <a name="see-also"></a>另請參閱
 

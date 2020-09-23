@@ -21,20 +21,22 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: b4470e5c178c0f66dc33956ea0131d4eabc51d46
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cc96f39d9dc37b7f1a5d8205e145869fb1b5ecef
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397463"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072232"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic 中的 Me、My、MyBase 和 MyClass
-`Me``My`Visual Basic 中的、、 `MyBase` 和 `MyClass` 都有類似的名稱，但有不同的用途。 本主題將說明每個實體，以便加以區別。  
+
+`Me``My` `MyBase` 在 Visual Basic 中，、、和 `MyClass` 都有類似的名稱，但不同用途。 本主題將說明每個實體，以便區分它們。  
   
 ## <a name="me"></a>我  
- `Me`關鍵字可讓您參考目前正在執行程式碼之類別或結構的特定實例。 `Me`的行為就像是參考目前實例的物件變數或結構變數。 使用 `Me` 特別適用于將目前執行的類別或結構之實例的相關資訊傳遞至另一個類別、結構或模組中的程式。  
+
+ `Me`關鍵字提供一種方法，來參考程式碼目前執行所在之類別或結構的特定實例。 `Me` 的行為就像是物件變數或參考目前實例的結構變數。 在將 `Me` 目前執行中的類別或結構實例資訊傳遞給另一個類別、結構或模組中的程式時，使用特別有用。  
   
- 例如，假設您在模組中有下列程式。  
+ 例如，假設您在課程模組中有下列程式。  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,20 +45,23 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- 您可以呼叫此程式，並使用下列語句，將類別的目前實例當做 <xref:System.Windows.Forms.Form> 引數傳遞。  
+ 您可以呼叫此程式，並使用下列語句，將類別的目前實例 <xref:System.Windows.Forms.Form> 作為引數傳遞。  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>My  
- `My`這項功能可讓您輕鬆且直覺地存取數個 .NET Framework 類別，讓 Visual Basic 使用者與電腦、應用程式、設定、資源等互動。  
+
+ `My`這項功能可讓您輕鬆且直覺地存取許多 .NET Framework 類別，讓 Visual Basic 的使用者與電腦、應用程式、設定、資源等進行互動。  
   
 ## <a name="mybase"></a>MyBase  
- `MyBase`關鍵字的行為就像是參考類別目前實例之基類的物件變數。 `MyBase`通常用來存取衍生類別中覆寫或遮蔽的基類成員。 `MyBase.New`是用來從衍生類別的「函式」明確呼叫基類的「函數」（base class）。  
+
+ `MyBase`關鍵字的行為就像是參考類別目前實例之基類的物件變數。 `MyBase` 通常用來存取在衍生類別中覆寫或遮蔽的基類成員。 `MyBase.New` 用來從衍生類別的函式明確呼叫基類的函式。  
   
 ## <a name="myclass"></a>MyClass  
- `MyClass`關鍵字的行為就像是物件變數，其參考原本實作為之類別的目前實例。 `MyClass`類似于 `Me` ，但會將其上的所有方法呼叫視為方法 `NotOverridable` 。  
+
+ `MyClass`關鍵字的行為就像是一種物件變數，它會參考原本所執行之類別的目前實例。 `MyClass` 類似于 `Me` ，但其上的所有方法呼叫都會視為方法 `NotOverridable` 。  
   
 ## <a name="see-also"></a>另請參閱
 

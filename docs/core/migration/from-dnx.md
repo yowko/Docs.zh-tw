@@ -2,16 +2,17 @@
 title: 從 DNX 移轉到 .NET Core CLI
 description: 從使用 DNX 工具移轉為 .NET Core CLI 工具。
 ms.date: 06/20/2016
-ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e5ebbab2551cf750a5b1136e7b1d4b67816c3b03
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503828"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071114"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>從 DNX 移轉到 .NET Core CLI (project.json)
 
 ## <a name="overview"></a>概觀
+
 .NET Core 的 RC1 版本與 ASP.NET Core 1.0 引進了 DNX 工具。 .NET Core 的 RC2 版本與 ASP.NET Core 1.0 則從 DNX 進展到了 .NET Core CLI。
 
 現在，讓我們稍微複習一下什麼是 DNX。 DNX 是一種執行階段和工具組，可用來建置 .NET Core 和 ASP.NET Core 1.0 應用程式。 它由 3 個主要部分所組成：
@@ -25,14 +26,16 @@ ms.locfileid: "77503828"
 本移轉指南說明如何將專案從 DNX 移轉至 .NET Core CLI 的基本資訊。 如果您一開始就是從 .NET Core 開始專案，可放心略過這份文件。
 
 ## <a name="main-changes-in-the-tooling"></a>工具的主要變更
+
 首先，我們必須先概述這項工具的幾個一般變更。
 
 ### <a name="no-more-dnvm"></a>不再有 DNVM
+
 DNVM 是「DotNet 版本管理員」** 的簡稱，其為一種可用來在電腦上安裝 DNX 的 Bash/PowerShell 指令碼。 它可幫助使用者從其指定的摘要 (或預設摘要) 取得所需的 DNX，並將特定 DNX 標示為「作用中」，以將它放在指定工作階段的 $PATH 中。 這樣一來，您就可以使用各種工具。
 
-DNVM 已停產，因為其功能集由於 .NET 核心 CLI 中的更改而變得多餘。
+DNVM 已中止，因為 .NET Core CLI 中的變更使其功能集變得重複。
 
-CLI 以兩種主要方式打包：
+CLI 以兩種主要方式封裝：
 
 1. 適用於指定平台的原生安裝程式
 2. 適用於其他情況的安裝指令碼 (例如 CI 伺服器)
@@ -42,6 +45,7 @@ CLI 以兩種主要方式打包：
 您可在相依性中新增特定版本的套件，以參考 `project.json` 中的執行階段。 這項變更可讓您的應用程式使用新的執行階段位元。 若要讓您的電腦具有這些位元，其方式與 CLI 相同︰您可透過執行階段支援的其中一個原生安裝程式，或是執行階段的安裝指令碼，來安裝執行階段。
 
 ### <a name="different-commands"></a>不同的命令
+
 如果您以前使用 DNX，您應該從其中的三個組件之一 (DNX、DNU 或 DNVM) 使用過一些命令。 使用 CLI 時，其中某些命令已變更，某些可能無法使用，某些雖然相同但有稍微不同的語意。
 
 下表顯示 DNX/DNU 命令和 CLI 對應項目之間的對應。
@@ -53,7 +57,7 @@ CLI 以兩種主要方式打包：
 | dnu pack                       | `dotnet pack`    | 封裝您程式碼的 NuGet 套件。                                                                        |
 | dnx \[command] (例如 "dnx web") | N/A\*          | 在 DNX 環境中，依據 project.json 的定義來執行命令。                                                     |
 | dnu install                    | N/A\*          | 在 DNX 環境中，將套件安裝為相依性。                                                            |
-| dnu restore                    | `dotnet restore` | 還原您在 project.json 中指定的相依性。 ([請參閱備註](#dotnet-restore-note))                                                            |
+| dnu restore                    | `dotnet restore` | 還原您在 project.json 中指定的相依性。  ([請參閱附注](#dotnet-restore-note))                                                             |
 | dnu publish                    | `dotnet publish` | 在可攜式、原生可攜式與獨立式這三種形式中，以其中一種方式來發佈要部署的應用程式。 |
 | dnu wrap                       | N/A\*          | 在 DNX 環境中，將 project.json 包裝在 csproj 中。                                                                    |
 | dnu 命令                   | N/A\*          | 在 DNX 環境中，管理已全域安裝的命令。                                                           |
@@ -61,22 +65,27 @@ CLI 以兩種主要方式打包：
 (\*) - CLI 的設計並不支援這些功能。
 
 ## <a name="dnx-features-that-are-not-supported"></a>不支援的 DNX 功能
+
 如上表所示，我們決定 CLI 目前不再支援 DNX 環境的部分功能。 本節會探討其中最重要的功能，並簡述不支援的理由，以及在您需要使用這些功能時的因應措施。
 
 ### <a name="global-commands"></a>全域命令
+
 DNU 具有「全域命令」的概念。 基本上，這當中包括封裝為 NuGet 套件的主控台應用程式，以及可叫用您指定要執行應用程式之 DNX 的殼層指令碼。
 
 CLI 不支援此概念。 不過，它支援新增個別專案命令的概念；您可使用熟悉的 `dotnet <command>` 語法叫用這些命令。
 
 ### <a name="installing-dependencies"></a>安裝相依性
-截至 v1，.NET Core CLI 沒有用於安裝`install`依賴項的命令。 若要從 NuGet 安裝套件，您必須將它以相依性形式新增至 `project.json` 檔案，然後執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note))。
+
+從 v1 起，.NET Core CLI 沒有可安裝相依性的 `install` 命令。 若要從 NuGet 安裝套件，您必須將它以相依性形式新增至 `project.json` 檔案，然後執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note))。
 
 ### <a name="running-your-code"></a>執行您的程式碼
+
 有以下兩種執行程式碼的主要方式。 一個是使用 `dotnet run`，從來源執行。 不同於 `dnx run`，這麼做並不會執行任何記憶體中編譯。 實際上，它會叫用 `dotnet build` 以建置您的程式碼，然後執行建置的二進位檔。
 
 另一個方法是使用 `dotnet` 本身來執行您的程式碼。 此作業是藉由提供組件的路徑來完成：`dotnet path/to/an/assembly.dll`。
 
 ## <a name="migrating-your-dnx-project-to-net-core-cli"></a>將 DNX 專案移轉至 .NET Core CLI
+
 處理程式碼時，除了要使用新的命令之外，還有下列三個主要項目要從 DNX 移轉過來：
 
 1. 如果您已經可以使用 CLI，請移轉 `global.json` 檔案。
@@ -84,7 +93,8 @@ CLI 不支援此概念。 不過，它支援新增個別專案命令的概念；
 3. 將任何 DNX API 移轉至其 BCL 對應項目。
 
 ### <a name="changing-the-globaljson-file"></a>變更 global.json 檔案
-`global.json` 檔案的作用如同 RC1 和 RC2 (或更新版本) 專案的方案檔。 為了使 .NET 核心 CLI（以及 Visual Studio）區分 RC1 和更高版本，他們使用`"sdk": { "version" }`屬性來區分哪個專案是 RC1 或更高版本。 如果 `global.json` 完全沒有這個節點，就會假設其為最新版本。
+
+`global.json` 檔案的作用如同 RC1 和 RC2 (或更新版本) 專案的方案檔。 為了讓 .NET Core CLI (和 Visual Studio) 區分 RC1 和更新版本，它們使用 `"sdk": { "version" }` 屬性來區分 RC1 或更新版本的專案。 如果 `global.json` 完全沒有這個節點，就會假設其為最新版本。
 
 若要更新 `global.json` 檔案，可移除該屬性或將它設為您想要使用之工具的正確版本，在此案例中為 **1.0.0-preview2-003121**：
 

@@ -11,20 +11,22 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 61a1398ba7de8dab005fa1e9efa13dc2ba18cc3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0e7c1315df50e83c919270f76405e80862bdd03b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364119"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071257"
 ---
 # <a name="partial-methods-visual-basic"></a>部分方法 (Visual Basic)
-部分方法可讓開發人員在程式碼中插入自訂邏輯。 一般來說，程式碼是設計工具產生之類別的一部分。 部分方法定義于程式碼產生器所建立的部分類別中，而且通常用來提供已變更專案的通知。 它們可讓開發人員指定自訂行為，以回應變更。  
+
+部分方法可讓開發人員在程式碼中插入自訂邏輯。 一般來說，程式碼是設計工具產生之類別的一部分。 部分方法會在程式碼產生器所建立的部分類別中定義，而且通常會用來提供已變更某個內容的通知。 它們可讓開發人員指定自訂行為以回應變更。  
   
- 程式碼產生器的設計工具只會定義方法簽章，以及一或多個對方法的呼叫。 如果開發人員想要自訂所產生程式碼的行為，則可以提供方法的實作為方式。 當未提供任何執行時，編譯器會移除對方法的呼叫，而不會產生額外的效能負擔。  
+ 程式碼產生器的設計工具只會定義方法簽章，以及一或多個對方法的呼叫。 如果開發人員想要自訂所產生程式碼的行為，則可以提供方法的執行。 如果未提供任何執行，則編譯器會移除方法的呼叫，而不會產生額外的效能額外負荷。  
   
 ## <a name="declaration"></a>宣告  
- 產生的程式碼會將關鍵字放在簽章行開頭，以標記部分方法的定義 `Partial` 。  
+
+ 產生的程式碼會將關鍵字放在簽章行的開頭，藉以標記部分方法的定義 `Partial` 。  
   
 ```vb  
 Partial Private Sub QuantityChanged()  
@@ -40,7 +42,8 @@ End Sub
 - 存取修飾詞必須是 `Private` 。  
   
 ## <a name="implementation"></a>實作  
- 此實作為主要的部分方法。 此實作為定義的一部分，通常是在不同的部分類別中，而且是由想要擴充所產生程式碼的開發人員所撰寫。  
+
+ 此實作為主要包含在部分方法的主體中。 其實作通常是在定義的個別部分類別中，而且是由想要擴充產生之程式碼的開發人員所撰寫。  
   
 ```vb  
 Private Sub QuantityChanged()  
@@ -48,17 +51,19 @@ Private Sub QuantityChanged()
 End Sub  
 ```  
   
- 上一個範例會完全複製宣告中的簽章，但可能會有變化。 特別是，可以加入其他修飾詞，例如 `Overloads` 或 `Overrides` 。 只 `Overrides` 允許一個修飾詞。 如需方法修飾詞的詳細資訊，請參閱[Sub 語句](../../../language-reference/statements/sub-statement.md)。  
+ 先前的範例會完全複製宣告中的簽章，但可能會有變化。 尤其是可以加入其他修飾詞，例如 `Overloads` 或 `Overrides` 。 只 `Overrides` 允許一個修飾詞。 如需方法修飾詞的詳細資訊，請參閱 [Sub 語句](../../../language-reference/statements/sub-statement.md)。  
   
 ## <a name="use"></a>使用  
- 您可以呼叫部分方法，就像呼叫任何其他程式一樣 `Sub` 。 如果已執行方法，則會評估引數，並執行方法的主體。 不過，請記住，執行部分方法是選擇性的。 如果未執行方法，則呼叫它不會有任何作用，而且不會評估當做引數傳遞至方法的運算式。  
+
+ 您可以呼叫部分方法，就像呼叫任何其他程式一樣 `Sub` 。 如果已執行方法，則會評估引數，並執行方法的主體。 不過，請記住，執行部分方法是選擇性的。 如果未執行此方法，則對其進行的呼叫不會有任何作用，且不會評估做為引數傳遞至方法的運算式。  
   
 ## <a name="example"></a>範例  
- 在名為 .vb 的檔案中，定義 `Product` 具有屬性的類別 `Quantity` 。  
+
+ 在名為 Product. .vb 的檔案中，定義 `Product` 具有屬性的類別 `Quantity` 。  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
   
- 在名為 .vb 的檔案中，提供的執行 `QuantityChanged` 。  
+ 在名為 Product 的檔案中，提供的實作為 `QuantityChanged` 。  
   
  [!code-vb[VbVbalrPartialMeths#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#5)]  
   
@@ -77,4 +82,4 @@ End Sub
 - [選擇性參數](./optional-parameters.md)
 - [Partial](../../../language-reference/modifiers/partial.md)
 - [LINQ to SQL 中的程式碼產生](../../../../framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [使用部分方法新增商務邏輯](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)
+- [使用部分方法加入商務邏輯](../../../../framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

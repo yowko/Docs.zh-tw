@@ -5,19 +5,21 @@ helpviewer_keywords:
 - Visual Basic code, strings
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
-ms.openlocfilehash: 302805f8b9a83fceeeaa050332140c157a7a786f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60755b7aa8911f9c13eba80080b388a812f29475
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410551"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072583"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic 中的字串
+
 本節說明在 Visual Basic 中使用字串背後的基本概念。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [Visual Basic 中的字串簡介](introduction-to-strings.md)  
- 列出描述在 Visual Basic 中使用字串背後基本概念的主題。  
+ 列出主題，說明在 Visual Basic 中使用字串的基本概念。  
   
  [如何：在 Visual Basic 中使用 StringBuilder 建立字串](how-to-create-strings-using-a-stringbuilder.md)  
  示範如何有效率地建立由許多較小字串組成的長字串。  

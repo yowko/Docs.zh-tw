@@ -6,17 +6,19 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 935926b8b83afa47c20ea68aecd6bc8c40bd0234
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44736f4db9977d9f69a0571cc80fa327dcf96581
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363690"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072505"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic 中的字串基礎
-`String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 本主題介紹 Visual Basic 中字串的基本概念。  
+
+`String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 本主題將介紹 Visual Basic 中字串的基本概念。  
   
 ## <a name="string-variables"></a>字串變數  
+
  可將代表字元數列的常值指派給字串的執行個體。 例如：  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
@@ -29,7 +31,7 @@ ms.locfileid: "84363690"
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- 此程式碼會造成錯誤，因為編譯器會終止第二個引號後的字串，並將字串的其餘部分解譯為程式碼。 為了解決這個問題，Visual Basic 將字串常值中的兩個引號視為字串中的一個引號。 下列範例示範在字串中包含引號的正確方式：  
+ 此程式碼會造成錯誤，因為編譯器會終止第二個引號後的字串，並將字串的其餘部分解譯為程式碼。 若要解決這個問題，Visual Basic 會將字串常值中的兩個引號轉譯為字串中的一個引號。 下列範例示範在字串中包含引號的正確方式：  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
@@ -50,7 +52,8 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>字串中的字元  
- 字串可以視為 `Char` 值序列，且 `String` 類型具有內建函式，可讓您在字串上執行許多操作 (類似於陣列所允許的操作)。 就像 .NET Framework 中的所有陣列一樣，這些都是以零為基底的陣列。 您可以透過 `Chars` 屬性參考字串中的特殊字元 ，讓您能夠依字元在字串中的出現位置存取該字元。 例如：  
+
+ 字串可以視為 `Char` 值序列，且 `String` 類型具有內建函式，可讓您在字串上執行許多操作 (類似於陣列所允許的操作)。 如同 .NET Framework 中的所有陣列，這些都是以零為基礎的陣列。 您可以透過 `Chars` 屬性參考字串中的特殊字元 ，讓您能夠依字元在字串中的出現位置存取該字元。 例如：  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
@@ -61,7 +64,8 @@ World]]></xml>.Value
  變數 `myArray` 現在包含 `Char` 值的陣列，每個都代表 `myString` 的一個字元。  
   
 ## <a name="the-immutability-of-strings"></a>字串的不變性  
- 字串是*不可變*的，這表示一旦建立之後，就無法變更其值。 不過，這不會讓您將多個值指派給一個字串變數。 請考慮下列範例：  
+
+ 字串是 *不可變*的，這表示在建立之後，就無法變更其值。 不過，這不會讓您將多個值指派給一個字串變數。 請考慮下列範例：  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   

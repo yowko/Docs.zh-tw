@@ -4,15 +4,16 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 533d3da2f76854d311262ce97b43f240acab5f7d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 77a130b684d26cf7e4b9df9382348a371a60bc5d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408747"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072037"
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>依分類列出的 Visual Basic 編譯器選項
-提供 Visual Basic 的命令列編譯器，做為從 Visual Studio 整合式開發環境（IDE）中編譯器的替代方案。 以下是依功能類別排序的 Visual Basic 命令列編譯器選項清單。  
+# <a name="visual-basic-compiler-options-listed-by-category"></a>依類別列出的 Visual Basic 編譯器選項
+
+Visual Basic 的命令列編譯器可作為從 Visual Studio 整合式開發環境（ (IDE) ）編譯器的替代方案。 以下是依功能類別目錄排序 Visual Basic 命令列編譯器選項的清單。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -31,19 +32,19 @@ ms.locfileid: "84408747"
 |選項|目的|  
 |---|---|  
 |[-filealign](filealign.md)|指定要對齊輸出檔案區段的位置。|  
-|[-optimize](optimize.md)|啟用/停用最佳化。|  
+|[-優化](optimize.md)|啟用/停用最佳化。|  
   
 ## <a name="output-files"></a>輸出檔案  
   
 |選項|目的|  
 |---|---|  
 |[-doc](doc.md)|將文件註解處理成 XML 檔案。|  
-|[-deterministic](deterministic.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
-|[-netcf](netcf.md)|設定編譯器以 .NET Compact Framework 為目標。|  
+|[-具決定性](deterministic.md)|可讓編譯器輸出在輸入相同時編譯之間二進位內容相同的組件。|
+|[-netcf](netcf.md)|將編譯器設定為以 .NET Compact Framework 為目標。|  
 |[-out](out.md)|指定輸出檔。|  
 |[-refonly](refonly-compiler-option.md)|只輸出參考元件。|
 |[-refout](refout-compiler-option.md)|指定參考元件的輸出路徑。|
-|[-target](target.md)|指定輸出的格式。|  
+|[-目標](target.md)|指定輸出的格式。|  
   
 ## <a name="net-assemblies"></a>.NET 組件  
   
@@ -54,8 +55,8 @@ ms.locfileid: "84408747"
 |[-imports](imports.md)|從指定的組件匯入命名空間。|  
 |[-keycontainer](keycontainer.md)|指定金鑰組的金鑰容器名稱，為組件提供強式名稱。|  
 |[-keyfile](keyfile.md)|指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。|  
-|[-libpath](libpath.md)|指定[-reference](reference.md)選項所參考之元件的位置。|  
-|[-參考](reference.md)|從組匯入中繼資料。|  
+|[-libpath](libpath.md)|指定 [參考](reference.md) 選項所參考之元件的位置。|  
+|[-reference](reference.md)|從組匯入中繼資料。|  
 |[-moduleassemblyname](moduleassemblyname.md)|指定將包含模組的組件名稱。|  
 |`-analyzer`|從這個組件執行分析器 (簡短形式：-a)|  
 |`-additionalfile`|命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。|  
@@ -79,7 +80,7 @@ ms.locfileid: "84408747"
 |[-?](help.md)|顯示編譯器選項。 此命令的效用等同於指定 `-help` 選項。 未執行編譯。|  
 |[-help](help.md)|顯示編譯器選項。 此命令的效用等同於指定 `-?` 選項。 未執行編譯。|  
   
-## <a name="language"></a>語言  
+## <a name="language"></a>Language  
   
 |選項|目的|  
 |---|---|  
@@ -110,15 +111,15 @@ ms.locfileid: "84408747"
 |---|---|  
 |[@ (指定回應檔)](specify-response-file.md)|指定回應檔。|  
 |[-baseaddress](baseaddress.md)|指定 DLL 的基底位址。|  
-|[-codepage](codepage.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|  
+|[-字碼頁](codepage.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|  
 |[-errorreport](errorreport.md)|指定 Visual Basic 編譯器應該如何報告內部編譯器錯誤。|  
 |[-highentropyva](highentropyva.md)|指示 Windows 核心某一特定可執行檔是否支援高熵位址空間配置隨機載入 (ASLR)。|  
-|[-main](main.md)|指定類別，其中包含 `Sub Main` 要在啟動時使用的程式。|  
+|[-main](main.md)|指定包含啟動時所要使用之程式的類別 `Sub Main` 。|  
 |[-noconfig](noconfig.md)|不使用 Vbc.rsp 進行編譯|  
 |[-nostdlib](nostdlib.md)|使編譯器不要參考標準程式庫。|  
 |[-nowin32manifest](nowin32manifest.md)|指示編譯器不要將任何應用程式資訊清單內嵌在可執行檔中。|  
-|[-平臺](platform.md)|指定編譯器為輸出檔設為目標的處理器平台。|  
-|[-recurse](recurse.md)|搜尋要編譯之原始程式檔的子目錄。|  
+|[-platform](platform.md)|指定編譯器為輸出檔設為目標的處理器平台。|  
+|[-遞迴](recurse.md)|搜尋要編譯之原始程式檔的子目錄。|  
 |[-rootnamespace](rootnamespace.md)|指定所有類型宣告的命名空間。|  
 |[-sdkpath](sdkpath.md)|指定 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。|  
 |[-vbruntime](vbruntime.md)|指定編譯器在編譯時不應使用 Visual Basic 執行階段程式庫的參考，或應使用特定執行階段程式庫的參考。|  

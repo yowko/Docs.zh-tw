@@ -6,40 +6,43 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 67c3af8b7bdac3ad1c7e4908f1ac2684df7a87aa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1bbc8083fcfb6f5ff0f4328c32b83a2e7218ecd6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410473"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072271"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>如何：判斷兩個物件是否相同 (Visual Basic)
-在 Visual Basic 中，如果兩個變數的指標相同，則會將其視為相同，也就是說，如果這兩個變數都指向記憶體中的相同類別實例。 例如，在 Windows Forms 應用程式中，您可能會想要進行比較，以判斷目前的實例（ `Me` ）是否與特定實例相同，例如 `Form2` 。  
+
+在 Visual Basic 中，如果兩個變數參考都相同，則會將兩個變數參考視為相同，也就是兩個變數都指向記憶體中的相同類別實例。 例如，在 Windows Forms 應用程式中，您可能會想要進行比較，以判斷目前的實例 (`Me`) 是否與特定的實例相同，例如 `Form2` 。  
   
- Visual Basic 提供兩個運算子來比較指標。 如果物件相同，則[Is 運算子](../../../language-reference/operators/is-operator.md)會傳回 `True` ，而[IsNot 運算子](../../../language-reference/operators/isnot-operator.md)則會傳回（如果不是的話） `True` 。  
+ Visual Basic 提供兩個運算子來比較指標。 如果物件相同，則 [運算子會](../../../language-reference/operators/is-operator.md) 傳回 `True` ，而且如果不是，則會傳回 [IsNot 運算子](../../../language-reference/operators/isnot-operator.md) `True` 。  
   
 ## <a name="determining-if-two-objects-are-identical"></a>判斷兩個物件是否相同  
   
 #### <a name="to-determine-if-two-objects-are-identical"></a>判斷兩個物件是否相同  
   
-1. 設定 `Boolean` 運算式來測試兩個物件。  
+1. 設定 `Boolean` 運算式以測試這兩個物件。  
   
-2. 在測試運算式中，使用 `Is` 運算子搭配兩個物件做為運算元。  
+2. 在您的測試運算式中，使用 `Is` 具有兩個物件的運算子做為運算元。  
   
      `Is``True`如果物件指向相同的類別實例，則傳回。  
   
 ## <a name="determining-if-two-objects-are-not-identical"></a>判斷兩個物件是否不相同  
- 有時候您會想要在兩個物件不相同時執行動作，例如，結合和可能會很 `Not` 難 `Is` `If Not obj1 Is obj2` 。 在這種情況下，您可以使用 `IsNot` 運算子。  
+
+ 有時候您會想要在兩個物件不相同的情況下執行動作，而結合和也可能很難 `Not` `Is` `If Not obj1 Is obj2` 。 在這種情況下，您可以使用 `IsNot` 運算子。  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a>判斷兩個物件是否不相同  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>判斷兩個物件是否相同  
   
-1. 設定 `Boolean` 運算式來測試兩個物件。  
+1. 設定 `Boolean` 運算式以測試這兩個物件。  
   
-2. 在測試運算式中，使用 `IsNot` 運算子搭配兩個物件做為運算元。  
+2. 在您的測試運算式中，使用 `IsNot` 具有兩個物件的運算子做為運算元。  
   
-     `IsNot``True`如果物件未指向相同的類別實例，則傳回。  
+     `IsNot``True`如果物件沒有指向相同的類別實例，則傳回。  
   
 ## <a name="example"></a>範例  
+
  下列範例會測試變數的配對 `Object` ，以查看它們是否指向相同的類別實例。  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
