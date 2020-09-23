@@ -5,20 +5,23 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML namespace prefixes
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
-ms.openlocfilehash: 9c198fba674f41964d8c91663da10e4140361999
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 950e6ee2dc661cfd28b385f7e5b74da46aa3b07d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392362"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91099147"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>如何：宣告和使用 XML 命名空間前置字元 (Visual Basic)
-這個範例示範如何匯入 XML 命名空間前置詞 `ns` ，並將它用於 xml 常值和 xml 軸屬性。  
+
+此範例示範如何匯入 XML 命名空間前置詞 `ns` ，並將它用於 xml 常值和 xml 軸屬性。  
   
 ## <a name="example"></a>範例  
+
  [!code-vb[VbXMLSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
 ## <a name="compile-the-code"></a>編譯程式碼  
+
  這個範例需要：  
   
 - <xref:System.Xml.Linq> 命名空間的參考。  

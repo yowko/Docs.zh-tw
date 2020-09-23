@@ -14,14 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 9f9174896181e427c73936a1bb91fa13235e70be
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b0077bdae3bad1d67c3d26e503d05f318982eb80
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550985"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91099017"
 ---
 # <a name="comments-in-code-visual-basic"></a>程式碼中的註解 (Visual Basic)
+
 當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 此符號會告知 Visual Basic 編譯器忽略其後面的文字或 *批註*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  
   
  以簡短註解做為所有程序開頭是良好的程式設計作法，此註解會描述程序的基本特性 (作用為何)。 這對於您自己以及對於其他檢查程式碼的人都有好處。 您應該將描述功能特性的註解，與實作 (Implementation) 細節 (程序是如何運作) 分開。 當您將實作細節包含在描述中，請記得在更新函式時，將實作細節一同更新。  
@@ -35,6 +36,7 @@ ms.locfileid: "90550985"
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>註解方針  
+
  下表提供哪些註解類型可以出現在一段程式碼之前的一般方針。 這些都是建議事項;Visual Basic 不會強制新增批註的規則。 撰寫對您自己與其他閱讀程式碼的人而言最有效的註解。  
   
 |||  

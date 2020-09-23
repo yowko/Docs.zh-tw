@@ -2,14 +2,15 @@
 title: LINQ 簡介
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: 58613281d79769bfb5515f1291feb9b502a1e846
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e99da74eb69511b92ddccfb42f8002adc7be83d1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549963"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098277"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>LINQ 簡介 (Visual Basic)
+
 Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技術，用來填補許多物件與資料之間的缺口。  
   
  傳統上，資料查詢是以簡單的字串表示，既不會在編譯時進行類型檢查，也不支援 IntelliSense。 此外，您還必須針對每種資料來源類型學習不同的查詢語言：SQL 資料庫、XML 文件、各種 Web 服務等等。 LINQ 會讓 *查詢* 成為 Visual Basic 中的第一級語言結構。 您可以使用語言關鍵字和熟悉的運算子，針對強型別的物件集合撰寫查詢。  
@@ -23,6 +24,7 @@ Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技
  ![顯示具有 Intellisense 的 LINQ 查詢的圖表。](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>後續步驟  
+
  若要深入瞭解 LINQ 的詳細資訊，請先熟悉消費者入門一節中的一些基本概念， [消費者入門在 Visual Basic 中使用 linq](getting-started-with-linq.md)，然後閱讀您感興趣的 linq 技術檔：  
   
 - SQL Server 資料庫：[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
