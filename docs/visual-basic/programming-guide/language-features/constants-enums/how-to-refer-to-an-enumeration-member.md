@@ -7,17 +7,18 @@ helpviewer_keywords:
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-ms.openlocfilehash: 66c527bd4ba4721065de8fca8534fe652d0139be
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d1b239e7d6be3ebf1e64d6589a4cc14dce8946f5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414410"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095664"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>如何：參考列舉成員 (Visual Basic)
-列舉提供了一種便利的方式，可使用一組相關的常數，並將常數值與名稱產生關聯。 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  
+
+列舉提供便利的方式來處理相關的常數集合，以及將常數值與名稱產生關聯。 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  
   
- 您可以避免使用完整名稱搭配 `Imports` 語句。 如需詳細資訊，請參閱列舉[和名稱限定](enumerations-and-name-qualification.md)性。  
+ 您可以避免搭配語句使用完整名稱 `Imports` 。 如需詳細資訊，請參閱列舉 [和名稱限定](enumerations-and-name-qualification.md)性。  
   
 ### <a name="to-refer-to-an-enumeration-member"></a>參考列舉成員  
   

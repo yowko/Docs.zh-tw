@@ -4,36 +4,40 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: ba69249e16b8c0ee06d57d06d192874a283b295e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7b1b269a5d28d89cd491bac88fbefd4547fdc3c3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403533"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095625"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何時使用列舉 (Visual Basic)
-列舉提供了一種簡單的方式來處理相關的常數集合。 列舉（或 `Enum` ）是一組值的符號名稱。 列舉會視為資料類型，您可以使用它們來建立常數集，以便搭配變數和屬性使用。  
+
+列舉提供簡單的方式來處理相關的常數集合。 列舉型別（enumeration） `Enum` 是一組值的符號名稱。 列舉會視為資料類型，您可以使用它們來建立常數集合，以搭配變數和屬性使用。  
   
 ## <a name="when-to-use-an-enumeration"></a>何時使用列舉類型  
- 每當程式接受一組有限的變數時，請考慮使用列舉。 列舉會產生更清楚且更容易閱讀的程式碼，特別是在使用有意義的名稱時。  
+
+ 每當程式接受一組有限的變數時，請考慮使用列舉。 列舉可讓您更清楚且更容易閱讀的程式碼，特別是在使用有意義的名稱時。  
   
  使用列舉的優點包括：  
   
-- 減少因轉置或錯誤的數位而造成的錯誤。  
+- 減少轉置或不正確的數位所造成的錯誤。  
   
 - 可讓您在未來輕鬆變更值。  
   
-- 讓程式碼更容易閱讀，這表示錯誤不太可能會蔓延到其中。  
+- 使程式碼更容易閱讀，這表示錯誤不太可能會蔓延到其中。  
   
-- 確保向前相容性。 使用列舉時，如果未來有人變更對應至成員名稱的值，您的程式碼較不可能失敗。  
+- 確保向前相容性。 使用列舉時，如果未來有人變更對應到成員名稱的值，您的程式碼比較不可能失敗。  
   
 ## <a name="naming-enumerations"></a>命名列舉  
- 使用列舉成員的命名慣例。 當 Visual Basic 遇到列舉成員名稱時，如果其他參考的類型程式庫包含相同的名稱，則可能會擲回例外狀況（exception）。 使用唯一的前置詞，以識別來自您應用程式或元件的值。  
+
+ 使用列舉成員的命名慣例。 當 Visual Basic 遇到列舉成員名稱時，如果其他參考的類型程式庫包含相同的名稱，則可能會擲回例外狀況。 使用可識別應用程式或元件值的唯一前置詞。  
   
- 當參考列舉的成員時，您必須以列舉名稱限定成員名稱，否則請使用 `Imports` 語句。 如需詳細資訊，請參閱列舉[和名稱限定](enumerations-and-name-qualification.md)性。  
+ 參考列舉的成員時，您必須以列舉名稱來限定成員名稱，否則請使用 `Imports` 語句。 如需詳細資訊，請參閱列舉 [和名稱限定](enumerations-and-name-qualification.md)性。  
   
 ## <a name="predefined-enumerations"></a>預先定義的列舉  
- Visual Basic 提供許多預先定義的列舉（例如 `FirstDayOfWeek` 和 `MsgBoxResult` ），以協助您的程式碼。 如需這些[常數和](../../../language-reference/constants-and-enumerations.md)列舉的清單，請參閱。  
+
+ Visual Basic 提供許多預先定義的列舉，例如 `FirstDayOfWeek` 和 `MsgBoxResult` ，以加速您的程式碼。 如需這些的詳細清單 [，請參閱常數和](../../../language-reference/constants-and-enumerations.md)列舉。  
   
 ## <a name="see-also"></a>另請參閱
 

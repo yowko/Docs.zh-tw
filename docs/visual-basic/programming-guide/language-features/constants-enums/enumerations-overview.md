@@ -5,18 +5,20 @@ helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 8262cc2742435abef0a05fefd7a40d5be2ec3e88
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d0f28ff8b7f773b8b4ecc68320fbfa34c263136
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414488"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095651"
 ---
 # <a name="enumerations-overview-visual-basic"></a>列舉類型的概觀 (Visual Basic)
-列舉提供了一種便利的方式，可使用一組相關的常數，並將常數值與名稱產生關聯。 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  
+
+列舉提供便利的方式來處理相關的常數集合，以及將常數值與名稱產生關聯。 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  
   
 ## <a name="tasks-involving-enumerations"></a>涉及列舉的工作  
- 下表列出有關列舉的一般工作。  
+
+ 下表列出與列舉相關的一般工作。  
   
 |作法|請參閱|  
 |----------------|---------|  
