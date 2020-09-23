@@ -6,27 +6,30 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: fca6c05b4baae4689e9d5e5698cee75f0c5470ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 52c8822c34a85af81dde505d36e6e159745a0d12
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374742"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085685"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>在 Visual Basic 中管理 XML
-您可以使用*xml 常*值，從外部來源（例如字串、檔案或資料流程）載入 xml。 接著，您可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 來操作 xml，並使用語言整合式查詢（LINQ）來查詢 xml。  
+
+您可以使用 *xml 常* 值，從外部來源（例如字串、檔案或資料流程）載入 xml。 然後，您可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 來操作 xml，並使用 (LINQ) 的語言整合式查詢來查詢 xml。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [如何：從檔案、字串或資料流載入 XML](how-to-load-xml-from-a-file-string-or-stream.md)  
- 示範如何 <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XElement> 從文字檔、字串或資料流程，將 XML 載入或物件中。  
+ 示範如何將 XML <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XElement> 從文字檔、字串或資料流程載入至或物件。  
   
  [如何：使用 LINQ 轉換 XML](how-to-transform-xml-by-using-linq.md)  
- 示範如何將物件的內容轉換 <xref:System.Xml.Linq.XDocument> 成新的 XML 檔。  
+ 示範如何將物件的內容轉換 <xref:System.Xml.Linq.XDocument> 為新的 XML 檔。  
   
  [如何：修改 XML 常值](how-to-modify-xml-literals.md)  
  示範如何修改 XML 常值中的元素、屬性和值。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [XML 軸屬性](../../../language-reference/xml-axis/index.md)  
  提供描述各種 XML 存取屬性之區段的連結。  
   
@@ -37,7 +40,7 @@ ms.locfileid: "84374742"
  提供在 Visual Basic 中使用 XML 常值的簡介。  
   
  [在 Visual Basic 中存取 XML](accessing-xml.md)  
- 示範如何在 Visual Basic 中存取 XML 元素或檔的某些部分。  
+ 示範如何在 Visual Basic 中存取 XML 元素或檔的部分。  
   
  [XML](index.md)  
  提供描述如何在 Visual Basic 中使用之章節的連結 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 。  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 94f3db14046ad5d63975d0ca44425abed5d52062
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: f125a6a8d9287cb515478a10c2679c07817ae9a6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281533"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087358"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -53,7 +53,7 @@ ms.locfileid: "86281533"
 
    請注意到位於 `--verbose` 選項之前的 `--` 選項。 它能將直接傳遞給 `dotnet watch` 命令的選項，與傳遞給子 `dotnet` 處理序的引數分隔開來。 如果沒有它的話，`--verbose` 選項將會套用至 `dotnet watch` 命令，而非 `dotnet build` 命令。
   
-   如需詳細資訊，請參閱[使用 dotnet Watch 開發 ASP.NET Core 應用程式](/aspnet/core/tutorials/dotnet-watch)。
+   如需詳細資訊，請參閱 [使用 dotnet Watch 開發 ASP.NET Core 應用程式](/aspnet/core/tutorials/dotnet-watch)。
 
 - `dotnet dev-certs` 能產生和管理在開發 ASP.NET Core 應用程式期間使用的憑證。
 
@@ -77,21 +77,21 @@ dotnet tool install -g dotnetsay
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>使用 `dotnet tool` 命令來管理工具
 
-在 .NET Core 2.1 SDK 中，所有工具作業都使用 `dotnet tool` 命令。 可用選項如下：
+在 .NET Core 2.1 SDK 中，所有工具作業都使用 `dotnet tool` 命令。 有下列選項可供使用：
 
-- [`dotnet tool install`](../tools/dotnet-tool-install.md)以安裝工具。
+- [`dotnet tool install`](../tools/dotnet-tool-install.md) 以安裝工具。
 
-- [`dotnet tool update`](../tools/dotnet-tool-update.md)卸載並重新安裝工具，以有效地更新它。
+- [`dotnet tool update`](../tools/dotnet-tool-update.md) 卸載並重新安裝工具，以有效地加以更新。
 
-- [`dotnet tool list`](../tools/dotnet-tool-list.md)以列出目前安裝的工具。
+- [`dotnet tool list`](../tools/dotnet-tool-list.md) 列出目前已安裝的工具。
 
-- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md)卸載目前已安裝的工具。
+- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) 卸載目前已安裝的工具。
 
 ## <a name="roll-forward"></a>向前復原
 
 從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原為系統上安裝的最新次要版本**。
 
-從 .NET Core 2.0 開始，如果用來建立應用程式的 .NET Core 版本不存在於執行時間，應用程式會自動針對最新安裝的 .NET Core*次要版本*執行。 換句話說，如果應用程式是使用 .NET Core 2.0 建置，而主機系統上不存在 .NET Core 2.0，但是有 .NET Core 2.1，則該應用程式會搭配 NET Core 2.1 執行。
+從 .NET Core 2.0 開始，如果用來建立應用程式的 .NET Core 版本不存在於執行時間，應用程式會自動針對最新安裝的 .NET Core *次要版本* 執行。 換句話說，如果應用程式是使用 .NET Core 2.0 建置，而主機系統上不存在 .NET Core 2.0，但是有 .NET Core 2.1，則該應用程式會搭配 NET Core 2.1 執行。
 
 > [!IMPORTANT]
 > 此向前復原行為不適用於預覽版本。 根據預設，也不會套用至主要版本，但可透過以下設定進行變更。
@@ -112,7 +112,7 @@ dotnet tool install -g dotnetsay
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- 使用[.NET Core CLI](../tools/index.md)時，請將下列選項新增至 .net Core 命令所需的值，例如 `run` ：
+- 使用 [.NET Core CLI](../tools/index.md)時，請將下列選項新增至 .net Core 命令的所需值，例如 `run` ：
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
@@ -124,13 +124,14 @@ dotnet tool install -g dotnetsay
 
 ### <a name="self-contained-application-servicing"></a>獨立的應用程式服務
 
-`dotnet publish` 現在會搭配服務執行階段版本發佈獨立應用程式。 當您搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈獨立應用程式時，應用程式就會包含該 SDK 已知的最新服務執行階段版本。 當您升級至最新的 SDK 時，您會以最新的 .NET Core 執行階段版本發行。 這適用於 .NET Core 1.0 執行階段和更新版本。
+`dotnet publish` 現在會搭配服務執行階段版本發佈獨立應用程式。 當您搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈獨立應用程式時，應用程式就會包含該 SDK 已知的最新服務執行階段版本。 當您升級至最新的 SDK 時，您將會使用最新的 .NET Core 執行階段版本進行發佈。 這適用於 .NET Core 1.0 執行階段和更新版本。
 
-獨立發行版本依賴 NuGet.org 上的執行階段版本。您的電腦上不需要有服務執行時間。
+獨立發行版本依賴 NuGet.org 上的執行階段版本。您的電腦上不需要有服務的執行時間。
 
-使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 有了這個新的行為，您就不需要再設定此屬性，為獨立式應用程式選取較高的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
+使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 使用這個新的行為時，您將不再需要設定這個屬性來為獨立應用程式選取較高的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
 
 如需詳細資訊，請參閱[獨立式部署執行階段向前復原](../deploying/runtime-patch-selection.md)。
+
 ## <a name="windows-compatibility-pack"></a>Windows 相容性套件
 
 當您從 .NET Framework 將現有的程式碼移植到 .NET Core 時，可以使用 [Windows 相容性套件](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) \(英文\)。 與 .NET Core 所提供 API 相比，它還額外提供超過 20,000 個 API。 這些 API 包括 <xref:System.Drawing?displayProperty=nameWithType> 命名空間中的類型、<xref:System.Diagnostics.EventLog> 類別、WMI、效能計數器、Windows 服務，以及Windows 登錄類型和成員。
@@ -247,9 +248,9 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 ### <a name="breaking-changes"></a>重大變更
 
-如需重大變更的詳細資訊，請參閱[從2.0 版遷移至2.1 的重大變更](../compatibility/2.0-2.1.md)。
+如需有關中斷變更的詳細資訊，請參閱 [從版本2.0 遷移至2.1 的重大變更](../compatibility/2.0-2.1.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 3.1 的新功能](dotnet-core-3-1.md)
 - [EF Core 2.1 的新功能](/ef/core/what-is-new/ef-core-2.1)

@@ -2,14 +2,15 @@
 title: 找不到登錄機碼 '<keyname>'
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
-ms.openlocfilehash: 7ae6662bcb75c07eaef7e78f98f4f6a6e0dd40dc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 701a1aacdf15f35b36cc4b68c016002697f5d0ca
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84358020"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086682"
 ---
 # <a name="registry-key-keyname-could-not-be-found"></a>找不到登錄機碼 '\<keyname>'
+
 找不到登錄機碼。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

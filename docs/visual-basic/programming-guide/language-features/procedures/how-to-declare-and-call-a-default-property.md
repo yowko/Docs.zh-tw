@@ -10,76 +10,80 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 4de5d94a94e764d1fc543ffae41b00a9bb729c94
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 21aa6e6a9bba23d767b9d1fac610eaac3265550d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388150"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087449"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>如何：在 Visual Basic 中宣告及呼叫預設屬性
-*預設屬性*是您的程式碼可以存取而不需要指定的類別或結構屬性。 呼叫程式碼時，會將類別或結構命名為，而不是屬性，而內容則允許存取屬性，Visual Basic 解析對該類別或結構的預設屬性的存取（如果有的話）。  
+
+*預設屬性*為類別或結構屬性，您的程式碼可以存取，而不需要指定它。 當呼叫程式碼命名類別或結構，但不允許存取屬性時，Visual Basic 會解析該類別或結構的預設屬性（如果有的話）的存取權。  
   
  類別或結構最多隻能有一個預設屬性。 不過，您可以多載預設屬性，並擁有一個以上的版本。  
   
- 如需詳細資訊，請參閱[Default](../../../language-reference/modifiers/default.md)。  
+ 如需詳細資訊，請參閱 [Default](../../../language-reference/modifiers/default.md)。  
   
-### <a name="to-declare-a-default-property"></a>若要宣告預設屬性  
+### <a name="to-declare-a-default-property"></a>宣告預設屬性  
   
-1. 以一般方式宣告屬性。 請勿指定 `Shared` 或 `Private` 關鍵字。  
+1. 以正常方式宣告屬性。 請勿指定 `Shared` 或 `Private` 關鍵字。  
   
 2. `Default`在屬性宣告中包含關鍵字。  
   
-3. 請為屬性指定至少一個參數。 您不能定義不接受至少一個引數的預設屬性。  
+3. 至少為屬性指定一個參數。 您無法定義未採用至少一個引數的預設屬性。  
   
      [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
-### <a name="to-call-a-default-property"></a>呼叫預設屬性  
+### <a name="to-call-a-default-property"></a>若要呼叫預設屬性  
   
 1. 宣告包含類別或結構類型的變數。  
   
      [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
-2. 在通常會包含屬性名稱的運算式中單獨使用變數名稱。  
+2. 在您通常會包含屬性名稱的運算式中單獨使用變數名稱。  
   
      [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
-3. 請在括弧中的變數名稱後面加上引數清單。 預設屬性至少必須接受一個引數。  
+3. 在變數名稱後面加上括弧中的引數清單。 預設屬性必須採用至少一個引數。  
   
      [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
-4. 若要抓取預設屬性值，請在運算式中使用變數名稱，並以引數清單或在指派語句中後面接著等 `=` 號（）。  
+4. 若要取出預設屬性值，請在運算式中使用變數名稱，並使用引數清單，或遵循相等的 (`=`) 登入指派語句。  
   
      [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
-5. 若要設定預設屬性值，請在指派語句的左邊使用變數名稱，以及引數清單。  
+5. 若要設定預設屬性值，請在指派語句的左側使用變數名稱和引數清單。  
   
      [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
-6. 您一律可以將預設屬性名稱與變數名稱一起指定，就像存取任何其他屬性一樣。  
+6. 您一律可以使用變數名稱來指定預設的屬性名稱，就像存取任何其他屬性一樣。  
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>範例  
+
  下列範例會宣告類別的預設屬性。  
   
  [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何呼叫類別上的預設屬性 `myProperty` `class1` 。 這三個指派語句會將值儲存在中 `myProperty` ，而呼叫則會 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 讀取這些值。  
+
+ 下列範例示範如何呼叫類別上的預設屬性 `myProperty` `class1` 。 這三個指派語句會在中儲存值 `myProperty` ，而 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 呼叫會讀取這些值。  
   
  [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
   
- 預設屬性的最常見用法是 <xref:Microsoft.VisualBasic.Collection.Item%2A> 各種集合類別上的屬性。  
+ 預設屬性最常見的用法是 <xref:Microsoft.VisualBasic.Collection.Item%2A> 各種集合類別上的屬性。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
- 預設屬性可能會減少原始碼字元數，但它們可能會使您的程式碼更容易閱讀。 如果呼叫程式碼不熟悉您的類別或結構，當它對類別或結構名稱進行參考時，就無法確定該參考是要存取類別或結構本身，還是預設屬性。 這可能會導致編譯器錯誤或細微的執行時間邏輯錯誤。  
+
+ 預設屬性可能會減少原始程式碼字元，但可以讓您的程式碼更難以讀取。 如果呼叫程式碼不熟悉您的類別或結構，則在參考類別或結構名稱時，如果該參考存取類別或結構本身或預設屬性，則無法確定。 這可能會導致編譯器錯誤或微妙的執行時間邏輯錯誤。  
   
- 您可以藉由一律使用[Option Strict 語句](../../../language-reference/statements/option-strict-statement.md)將編譯器類型檢查設定為，來減少預設屬性錯誤的機率 `On` 。  
+ 您可以使用 [Option Strict 語句](../../../language-reference/statements/option-strict-statement.md) 將編譯器類型檢查設定為，以稍微減少預設屬性錯誤的機率 `On` 。  
   
- 如果您打算在程式碼中使用預先定義的類別或結構，就必須判斷它是否有預設屬性，如果是，它的名稱為何。  
+ 如果您打算在程式碼中使用預先定義的類別或結構，就必須判斷它是否有預設屬性，如果是，它的名稱就是。  
   
- 由於這些缺點，您應該考慮不要定義預設屬性。 為了讓程式碼更容易閱讀，您也應該考慮明確參考所有屬性，甚至是預設屬性。  
+ 因為這些缺點，您應該考慮不要定義預設屬性。 為了讓程式碼更容易閱讀，您也應該考慮一律明確參考所有屬性，甚至是預設屬性。  
   
 ## <a name="see-also"></a>另請參閱
 

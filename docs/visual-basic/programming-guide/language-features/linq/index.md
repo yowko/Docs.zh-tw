@@ -4,17 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 3e76434b66f15ad29f18b981acf4e48e6f17f431
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 25e118f7c2e08420326783b788df480373ba4270
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404923"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085759"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
-本節包含可協助您瞭解及使用 Visual Basic 和語言整合式查詢（LINQ）的總覽、範例和背景資訊。  
+
+本章節包含的總覽、範例和背景資訊，可協助您瞭解及使用 Visual Basic 和與語言整合的查詢 (LINQ) 。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [Visual Basic 中的 LINQ 簡介](introduction-to-linq.md)  
  提供 LINQ 提供者、運算子、查詢結構和語言功能的簡介。  
   

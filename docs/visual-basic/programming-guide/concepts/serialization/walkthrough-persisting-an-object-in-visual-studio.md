@@ -2,14 +2,15 @@
 title: 在 Visual Studio 中保存物件
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 3febd3f74510d11a7103edbd52bcae8043a5edc0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b2fff171164a29e6066839371fc95ad41b452f1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558598"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086461"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：在 Visual Studio 中保存物件 (Visual Basic)
+
 雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。  
   
 > [!NOTE]
@@ -27,6 +28,7 @@ ms.locfileid: "90558598"
 > 您看到的對話方塊與功能表命令，可能會因您所使用的設定或版本，而與說明中所述不同。 若要變更設定，請在 [工具] **** 功能表上按一下 [匯入和匯出設定] **** 。 如需詳細資訊，請參閱 [個人化 VISUAL STUDIO IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ## <a name="creating-the-loan-object"></a>建立 Loan 物件  
+
  第一個步驟是建立 `Loan` 類別，以及使用該類別的測試應用程式。  
   
 ### <a name="to-create-the-loan-class"></a>若要建立 Loan 類別  
@@ -123,6 +125,7 @@ ms.locfileid: "90558598"
  在現實生活中，利率會定期變更，但不一定每次都需要執行應用程式。 與其讓使用者每次都隨著應用程式執行時間來更新利率，較好的做法是保存應用程式執行個體之間的最新利率。 在下一個步驟中，您會將序列化新增至 Loan 類別以進行上述作業。  
   
 ## <a name="using-serialization-to-persist-the-object"></a>使用序列化來保存物件  
+
  為了保存 Loan 類別的值，您必須先使用 `Serializable` 屬性來標示類別。  
   
 ### <a name="to-mark-a-class-as-serializable"></a>若要將類別標示為可序列化  

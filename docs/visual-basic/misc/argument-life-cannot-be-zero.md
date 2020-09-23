@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_LifeNEZero
 ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
-ms.openlocfilehash: a737afb8901382d75c3858f84be1b2359338b057
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 280571b9f9c799305efd53359e079d25d16ffd03
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84368162"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087202"
 ---
 # <a name="argument-life-cannot-be-zero"></a>引數 'Life' 不可以為零
+
 `Life`的引數無效，該引數必須是指定資產使用年限長度的 `Double` 。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

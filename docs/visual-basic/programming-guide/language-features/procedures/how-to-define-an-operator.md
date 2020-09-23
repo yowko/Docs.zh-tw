@@ -13,22 +13,24 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 49b9c8d1a6db56a56b50c16b4a6bb5b928df6c7d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5acbd0439ddbb956b80d56e23d11cd5e152f37ff
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388033"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087397"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>如何：定義運算子 (Visual Basic)
-如果您已定義類別或結構， `*` `<>` `And` 當其中一個或兩個運算元屬於您的類別或結構類型時，可以定義標準運算子的行為（例如、或）。  
+
+如果您已定義類別或結構，則可以定義標準運算子的行為 (例如 `*` 、 `<>` 或 `And`) 當其中一個或兩個運算元屬於類別或結構的型別時。  
   
- 將標準運算子定義為類別或結構內的運算子程式。 所有的運算子程式都必須是 `Public` `Shared` 。  
+ 將標準運算子定義為類別或結構內的運算子程式。 所有運算子程式都必須是 `Public` `Shared` 。  
   
- 在類別或結構上定義運算子*也稱為多*載運算子。  
+ 在類別或結構上定義運算子 *也稱為多* 載運算子。  
   
 ## <a name="example"></a>範例  
- 下列範例會定義 `+` 名為之結構的運算子 `height` 。 結構會使用以英尺和英寸測量的高度。 1*英寸*是2.54 釐米，而一*英尺*是12英寸。 為確保正規化的值（英寸 < 12.0），此函式會執行*模數*12 算數運算。 `+`運算子會使用此函數來產生正規化的值。  
+
+ 下列範例會定義 `+` 名為之結構的運算子 `height` 。 結構會使用以英尺和英寸測量的高度。 1 *英寸* 是2.54，而一 *英尺* 是12英寸。 為了確保正規化值 (英寸 < 12.0) ，此函式會執行 *模數* 12 算術。 `+`運算子會使用此函式來產生標準化值。  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
