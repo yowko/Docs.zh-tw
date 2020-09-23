@@ -5,17 +5,18 @@ helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: 3b8ca626df76d881e26dae49d48217fa8e81951b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 88c9d341064f5c8d85d4c27b7d9bc79114642610
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357929"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91060698"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 執行階段訊息
-此章節包含在執行時間發生的 Visual Basic 錯誤訊息。  
+
+此區段包含在執行時間發生的 Visual Basic 錯誤訊息。  
   
- [\<address>不是有效的遠端檔案位址](address-is-not-a-valid-remote-file-address.md)  
+ [\<address> 不是有效的遠端檔案位址](address-is-not-a-valid-remote-file-address.md)  
   
  [分隔符號不可以是 Nothing 或空字串](a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
@@ -29,7 +30,7 @@ ms.locfileid: "84357929"
   
  ['\<name>' 的存取遭拒](access-denied-to-name.md)  
   
- [新增失敗。提供了重複的索引鍵值](add-failed-duplicate-key-value-supplied.md)  
+ [加入失敗。提供了重複的索引鍵值](add-failed-duplicate-key-value-supplied.md)  
   
  [除了最後項目以外的所有欄位寬度都必須大於零](all-field-widths-except-the-last-element-must-be-greater-than-zero.md)  
   
@@ -81,11 +82,11 @@ ms.locfileid: "84357929"
   
  [引數 '\<argumentname1>' 必須小於或等於引數 '\<argumentname2>' 的長度](argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
- [引數 ' Access ' 無效。附加模式的有效值為 ' OpenAccess ' 和 ' OpenAccess '。](argument-access-is-not-valid-append-mode.md)  
+ [引數 ' Access ' 無效。附加模式的有效值為 ' OpenAccess. Write ' 和 ' OpenAccess '。](argument-access-is-not-valid-append-mode.md)  
   
- [引數 ' Access ' 無效。輸入模式的有效值為 ' OpenAccess ' 和 ' OpenAccess '。](argument-access-is-not-valid-input-mode.md)  
+ [引數 ' Access ' 無效。輸入模式的有效值為 ' OpenAccess. Read ' 和 ' OpenAccess '。](argument-access-is-not-valid-input-mode.md)  
   
- [引數 ' Access ' 無效。輸出模式的有效值為 ' OpenAccess ' 和 ' OpenAccess '。](argument-access-is-not-valid.md)  
+ [引數 ' Access ' 無效。Output 模式的有效值為 ' OpenAccess. Write ' 和 ' OpenAccess '。](argument-access-is-not-valid.md)  
   
  [引數 BasePath 必須是資料夾路徑](argument-basepath-must-be-a-path-to-a-folder.md)  
   
@@ -231,9 +232,9 @@ ms.locfileid: "84357929"
   
  [檔案格式無效](file-format-not-valid.md)  
   
- [類型為 ' ' 之欄位 ' ' 的結構檔案 i/o 無效 \<fieldname> \<typename>](file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
+ [具有類型 ' ' 之欄位 ' ' 的結構的檔 i/o 無效 \<fieldname> \<typename>](file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
   
- [類型為 ' ' 的檔案 i/o 無效 \<typename>](file-i-o-with-type-typename-is-not-valid.md)  
+ [類型 ' ' 的檔 i/o 無效 \<typename>](file-i-o-with-type-typename-is-not-valid.md)  
   
  [如果檔案不存在，就無法查詢檔案資訊](file-information-cannot-be-queried-if-the-file-does-not-exist.md)  
   
@@ -269,7 +270,7 @@ ms.locfileid: "84357929"
   
  [內部錯誤 (Visual Basic)](internal-error.md)  
   
- [發生內部錯誤\<location>](../language-reference/error-messages/internal-error-happened-at-location.md)  
+ [內部錯誤發生于 \<location>](../language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Microsoft Visual Basic 執行階段發生內部錯誤](internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -311,7 +312,7 @@ ms.locfileid: "84357929"
   
  [使用不具縮小轉換的這些引數，無法呼叫可存取的多載 '\<methodname>'](no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [無法使用這些引數呼叫可存取的多載 ' \<methodname> '，而不需要縮小轉換：\<list>](no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [沒有 \<methodname> 縮小轉換的情況下，無法使用這些引數呼叫可存取的多載 ' '： \<list>](no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
  [使用不具擴展轉換的這些引數，無法呼叫可存取的多載 '\<methodname>'：\<list>](no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
@@ -463,7 +464,7 @@ ms.locfileid: "84357929"
   
  [ConnectionTimeout 必須大於 0](the-connectiontimeout-must-be-greater-than-0.md)  
   
- [檔案已經開啟](the-file-is-already-open.md)  
+ [檔案已開啟](the-file-is-already-open.md)  
   
  [目前已關閉檔案](the-file-is-currently-closed.md)  
   

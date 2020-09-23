@@ -2,14 +2,15 @@
 title: 只有在 File 關閉時，才能執行這項作業
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
-ms.openlocfilehash: dd31283a0f969e591c681c60b6a8cd0e8fa32439
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45afaa585591f16e10d42a6792719c201a5d1709
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559170"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91060429"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>只有在 File 關閉時，才能執行這項作業
+
 開啟檔案時，嘗試執行的作業只能在關閉檔案時執行。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
