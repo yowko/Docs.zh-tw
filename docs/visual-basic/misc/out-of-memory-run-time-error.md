@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
-ms.openlocfilehash: b0546609aa0573b7d43a2a630328e76c48791886
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 58e673ffe0983c91fcca3fff8f867042f51eafc0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375883"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084186"
 ---
 # <a name="out-of-memory-visual-basic-run-time-error"></a>記憶體不足 (Visual Basic 執行階段錯誤)
+
 需要提供更多的記憶體。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

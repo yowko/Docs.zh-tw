@@ -2,14 +2,15 @@
 title: 已在這部電腦上建立具有這個名稱的記錄檔。
 ms.date: 07/20/2015
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
-ms.openlocfilehash: dec5333950f7c56a5eec5307eee3c2346bc3f1f2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 89d65f282fd4f6ded7cb71577eea625ee17589d4
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84412971"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083159"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>已在這部電腦上建立具有這個名稱的記錄檔。
+
 嘗試使用已在使用的名稱來建立記錄檔。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

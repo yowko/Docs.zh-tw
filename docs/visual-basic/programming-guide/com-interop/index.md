@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 2b70a7fa72b09401e0e78f693e4efc9bf0871771
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 66762d4551e458b36b70fb0831bf17ade70aa8cb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396788"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083224"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
-元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些與透過 Visual Basic 建立和使用 COM 物件相關聯的問題。  
+
+元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些與使用 Visual Basic 建立和使用 COM 物件相關的問題。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [COM Interop 簡介](introduction-to-com-interop.md)  
  提供 COM 互通性的概觀。  
   
@@ -47,6 +49,7 @@ ms.locfileid: "84396788"
  描述如何使用現有 COM 物件作為新物件的基礎。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)  
  描述 Common Language Runtime 提供的互通性服務。  
   

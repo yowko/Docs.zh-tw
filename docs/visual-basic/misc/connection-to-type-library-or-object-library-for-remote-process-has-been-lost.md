@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID442
 ms.assetid: 9e3544e2-cfc9-463a-8c0c-ed82e5e6462f
-ms.openlocfilehash: d442d582f392ea4e2a074136740f9705d50b8d55
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5d94c20688e6fc2efda6b0febc3d89d0039214c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84376764"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084485"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>對類型程式庫或物件程式庫的遠端處理連線已經中斷
+
 您已中斷與遠端處理之物件程式庫或類型程式庫的連線。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

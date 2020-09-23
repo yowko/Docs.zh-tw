@@ -2,15 +2,16 @@
 title: <address>  不是有效的遠端檔案位址
 ms.date: 07/20/2015
 ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
-ms.openlocfilehash: 06edf181502bf0a8fc7b2c64be4dd0cbff49dace
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c651169d783533d933b92d509015eb3b6f219c79
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84412945"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083939"
 ---
 # <a name="address-is-not-a-valid-remote-file-address"></a>\<address> 不是有效的遠端檔案位址
-\<address>不是有效的遠端檔案位址。 有效位址應該包含通訊協定、路徑和檔案名稱。  
+
+\<address> 不是有效的遠端檔案位址。 有效位址應該包含通訊協定、路徑和檔案名稱。  
   
  針對上傳或下載作業指定了無效的位址。 位址必須包括通訊協定 (例如 `ftp` 或 `http`)、有效的路徑和檔案名稱。 這個錯誤可能是不正確剖析檔案路徑的結果。  
   
