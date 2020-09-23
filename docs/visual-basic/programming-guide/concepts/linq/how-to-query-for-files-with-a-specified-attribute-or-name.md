@@ -2,17 +2,18 @@
 title: 作法：查詢具有指定屬性或名稱的檔案
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 4a6a5630f4ac0eb0cb08aed0dc8a390225194675
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eeacd94fb303a439e8034b84d285ab11b2333581
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396411"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059310"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="edd85-102">如何：查詢具有指定之屬性或名稱的檔案（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="edd85-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
-<span data-ttu-id="edd85-103">這個範例示範如何在指定的樹狀目錄中尋找所有具有指定副檔名 (例如 ".txt") 的檔案。</span><span class="sxs-lookup"><span data-stu-id="edd85-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="edd85-104">它也會示範如何根據建立時間來傳回樹狀結構中的最新或最舊檔案。</span><span class="sxs-lookup"><span data-stu-id="edd85-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="a7607-102">如何：查詢具有指定屬性或名稱的檔案 (Visual Basic) </span><span class="sxs-lookup"><span data-stu-id="a7607-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
+
+<span data-ttu-id="a7607-103">這個範例示範如何在指定的樹狀目錄中尋找所有具有指定副檔名 (例如 ".txt") 的檔案。</span><span class="sxs-lookup"><span data-stu-id="a7607-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="a7607-104">它也會示範如何根據建立時間來傳回樹狀結構中的最新或最舊檔案。</span><span class="sxs-lookup"><span data-stu-id="a7607-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="edd85-105">範例</span><span class="sxs-lookup"><span data-stu-id="edd85-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a7607-105">範例</span><span class="sxs-lookup"><span data-stu-id="a7607-105">Example</span></span>  
   
 ```vb  
 Module FindFileByExtension  
@@ -60,10 +61,11 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compile-the-code"></a><span data-ttu-id="edd85-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="edd85-106">Compile the code</span></span>  
-<span data-ttu-id="edd85-107">建立 Visual Basic 的主控台應用程式專案，其中包含 `Imports` System. Linq 命名空間的語句。</span><span class="sxs-lookup"><span data-stu-id="edd85-107">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="edd85-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="edd85-108">See also</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="a7607-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a7607-106">Compile the code</span></span>  
 
-- [<span data-ttu-id="edd85-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="edd85-109">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
-- [<span data-ttu-id="edd85-110">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="edd85-110">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
+<span data-ttu-id="a7607-107">使用 `Imports` 適用于 system.string 命名空間的語句來建立 Visual Basic 主控台應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="a7607-107">Create a Visual Basic console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
+  
+## <a name="see-also"></a><span data-ttu-id="a7607-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a7607-108">See also</span></span>
+
+- [<span data-ttu-id="a7607-109">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a7607-109">LINQ to Objects (Visual Basic)</span></span>](linq-to-objects.md)
+- [<span data-ttu-id="a7607-110">LINQ 與檔案目錄 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a7607-110">LINQ and File Directories (Visual Basic)</span></span>](linq-and-file-directories.md)
