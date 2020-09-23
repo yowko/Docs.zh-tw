@@ -13,37 +13,40 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 3088072646278dac13e4d483cb4f99297eaad9ca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ba6be8e1dd03c0589f712b0e9b39258953cd223
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403468"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077081"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>有效的運算子組合 (Visual Basic)
-複雜運算式可以包含許多不同的運算子。 下列範例將說明這點。  
+
+複雜運算式可包含許多不同的運算子。 下列範例將說明這點。  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- 在上述範例中建立複雜運算式，需要徹底瞭解運算子優先順序的規則。 如需詳細資訊，請參閱[Visual Basic 中的運算子優先順序](../../../language-reference/operators/operator-precedence.md)。  
+ 若要建立複雜的運算式（例如上述範例中的運算式），必須徹底瞭解運算子優先順序的規則。 如需詳細資訊，請參閱 [Visual Basic 中的運算子優先順序](../../../language-reference/operators/operator-precedence.md)。  
   
 ## <a name="parenthetical-expressions"></a>括號運算式  
- 您通常會想要以不同于運算子優先順序的順序來繼續作業。 請思考一下下列範例。  
+
+ 通常您會想要以運算子優先順序所決定的不同順序來繼續執行作業。 請思考一下下列範例。  
   
  `x = z * y + 4`  
   
- 上述範例會 `z` 將乘以 `y` ，然後將結果新增至 `4` 。 但是，如果您想要 `y` 在 `4` 乘以結果之前加入和 `z` ，您可以使用括弧來覆寫一般運算子優先順序。 藉由將運算式括在括弧中，您會強制先評估該運算式，而不論運算子優先順序為何。 若要強制前面的範例先執行加法，您可以重寫它，如下列範例所示。  
+ 上述範例會乘以 `z` `y` ，然後將結果加入至 `4` 。 但是，如果您想要在將 `y` `4` 結果相乘之前加入 `z` ，則可以使用括弧覆寫一般運算子優先順序。 藉由將運算式括在括弧中，您就可以強制先評估運算式，而不考慮運算子優先順序。 若要強制上述範例先執行加法，您可以如下列範例所示重寫它。  
   
  `x = z * (y + 4)`  
   
- 上述範例會加入 `y` 和 `4` ，然後將總和乘以 `z` 。  
+ 上述範例會新增 `y` 和 `4` ，然後將該總和乘以 `z` 。  
   
-### <a name="nested-parenthetical-expressions"></a>嵌套的括號運算式  
- 您可以在多個括弧層級中嵌套運算式，以便更進一步覆寫優先順序。 最深嵌套在括弧中的運算式會先進行評估，然後再進行下一個最深的嵌套，依此類推，最後再加上最小的嵌套，最後再加上括弧以外的運算式。 下列範例將說明這點。  
+### <a name="nested-parenthetical-expressions"></a>嵌套括號運算式  
+
+ 您可以在多個括弧層級中嵌套運算式，更進一步覆寫優先順序。 最深層嵌套在括弧中的運算式會先進行評估，然後再以最深的嵌套方式進行評估，最後再進行最深的嵌套，最後是括弧外的運算式。 下列範例將說明這點。  
   
  `x = (z * 4) ^ (y * (z + 2))`  
   
- 在上述範例中， `z + 2` 會先評估，然後再評估其他的括號運算式。 乘冪（通常具有高於加法或乘法的優先順序）會在此範例中最後評估，因為其他運算式會括在括弧中。  
+ 在上述範例中， `z + 2` 會先評估另一個括號運算式。 通常優先順序高於加法或乘法的乘冪會在此範例中最後評估，因為其他運算式會以括弧括住。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArray_RankMismatch
 ms.assetid: 52505298-9985-4682-8f6e-ff7d56077f34
-ms.openlocfilehash: b2404927c2faf30d1d058d2163fd5d67e1a52e1e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8d80af7682f27b403e0f463fdbebbcac71f18b01
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84358163"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077367"
 ---
 # <a name="redim-cannot-change-the-number-of-dimensions"></a>'ReDim' 無法變更維度的數目
+
 作業嘗試使用 `ReDim` 陳述式變更陣列的陣序 (維度數目)。 `ReDim` 可以變更已正式宣告之陣列的一或多個維度大小，但無法變更陣列的陣序。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

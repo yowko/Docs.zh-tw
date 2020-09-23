@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID447
 ms.assetid: 580a26bc-479a-4569-9246-10dcf0251bcb
-ms.openlocfilehash: 5cedfba12f404ff6f389d2bd4d3e47f3f1ec0da3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 11ad0246b157c05695eadd6fb1e2704a27b55f73
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84376052"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077484"
 ---
 # <a name="object-doesnt-support-current-locale-setting-visual-basic"></a>物件不支援目前的地區設定 (Visual Basic)
+
 您嘗試存取不支援目前專案地區設定的物件。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f1129500c9b779256b2650fe6fa855152cb3ae80
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 10521759d31c3183232cdb1793d78d139f13ce41
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811253"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077562"
 ---
 ### <a name="middleware-database-error-page-marked-as-obsolete"></a>中介軟體：資料庫錯誤頁面標示為已淘汰
 
@@ -30,7 +30,7 @@ ms.locfileid: "88811253"
 
 #### <a name="recommended-action"></a>建議的動作
 
-完成下列步驟：
+完成以下步驟：
 
 1. 停止 `DatabaseErrorPageMiddleware` 在您的專案中使用。 例如， `UseDatabaseErrorPage` 從移除方法呼叫 `Startup.Configure` ：
 
@@ -55,6 +55,8 @@ ms.locfileid: "88811253"
         }
     }
     ```
+
+1. 將 [AspNetCore Microsoft.entityframeworkcore](https://www.nuget.org/packages/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore) NuGet 套件新增至專案檔。
 
 1. 將資料庫開發人員頁面例外狀況篩選加入至服務集合。 例如， `AddDatabaseDeveloperPageExceptionFilter` 在中呼叫方法 `Startup.ConfigureServices` ：
 

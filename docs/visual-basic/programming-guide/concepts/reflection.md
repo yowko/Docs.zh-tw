@@ -2,14 +2,15 @@
 title: 反射
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 43c05a0b3bbfc3dfc304b1aed3f689625a40229a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 79603e0951732c7d0d0031d4fc44ddd7dbd392c9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413176"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077250"
 ---
 # <a name="reflection-visual-basic"></a>反映 (Visual Basic)
+
 反映提供的物件 (類型為 <xref:System.Type>) 可描述組件、模組和類型。 您可以使用反映來動態建立類型的執行個體、將類型繫結至現有的物件，或從現有的物件取得類型，並叫用其方法或存取其欄位及屬性。 如果您在程式碼中使用屬性，則反映可讓您存取它們。 如需詳細資訊，請參閱[屬性](../../../standard/attributes/index.md)。  
   
  以下簡單反映範例使用 `Object` 基底類別的所有類型所繼承的靜態方法 `GetType` 來取得變數的類型︰  
@@ -38,6 +39,7 @@ System.Console.WriteLine(info)
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
 ## <a name="reflection-overview"></a>反映概觀  
+
  反映在下列情況下十分有用：  
   
 - 當您需要存取程式中繼資料中的屬性時。 如需詳細資訊，請參閱[擷取儲存於屬性中的資訊](../../../standard/attributes/retrieving-information-stored-in-attributes.md)。  
@@ -49,7 +51,8 @@ System.Console.WriteLine(info)
 - 對於執行晚期繫結，存取在執行階段建立的類型上的方法。 請參閱[動態載入和使用類型](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)主題。  
   
 ## <a name="related-sections"></a>相關章節  
- 如需詳細資訊：  
+
+ 其他資訊：  
   
 - [反射](../../../framework/reflection-and-codedom/reflection.md)  
   
