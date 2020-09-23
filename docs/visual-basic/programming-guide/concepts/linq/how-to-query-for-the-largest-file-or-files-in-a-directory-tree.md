@@ -2,14 +2,15 @@
 title: 作法：查詢樹狀目錄中的最大檔案 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 107f3457fe7361fab16c2c8ce837c90484fc7633
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ae4a1442a0ecbb11d37b56302bec6a387c662aa
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397943"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078264"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>如何：查詢目錄樹狀中的最大檔案 (LINQ) (Visual Basic)
+
 此範例顯示五個與檔案位元組大小相關的查詢：  
   
 - 如何擷取最大檔案的位元組大小。  
@@ -23,6 +24,7 @@ ms.locfileid: "84397943"
 - 如何根據檔案位元組大小將檔案分組排序，並略過小於指定大小的檔案。  
   
 ## <a name="example"></a>範例  
+
  下列範例包含五個不同的查詢，以示範如何根據檔案位元組大小來查詢和分組檔案。 您可以輕鬆修改這些範例，使查詢根據 <xref:System.IO.FileInfo> 物件的其他某個屬性。  
   
 ```vb  
@@ -118,7 +120,8 @@ End Module
  查詢會呼叫外面另一個取得檔案位元組大小的方法，以解決可能會因下列狀況引發的例外狀況：自呼叫 `GetFiles` 而建立 <xref:System.IO.FileInfo> 物件以來的這段期間，有另一個執行緒刪除了檔案。 即使已建立 <xref:System.IO.FileInfo> 物件，還是可能會發生這個例外狀況，原因是 <xref:System.IO.FileInfo> 物件會在它的 <xref:System.IO.FileInfo.Length%2A> 屬性第一次受到存取時，嘗試使用目前最新的位元組大小來重新整理這個屬性。 讓這個作業進入查詢外部的 try-catch 區塊，就會遵循規則，以避免查詢中會造成副作業的作業。 一般而言，處理例外狀況時需要十分小心，以確定應用程式不是處於未知狀態。  
   
 ## <a name="compile-the-code"></a>編譯程式碼  
-建立 Visual Basic 的主控台應用程式專案，其中包含 `Imports` System. Linq 命名空間的語句。
+
+使用 `Imports` 適用于 system.string 命名空間的語句來建立 Visual Basic 主控台應用程式專案。
   
 ## <a name="see-also"></a>另請參閱
 

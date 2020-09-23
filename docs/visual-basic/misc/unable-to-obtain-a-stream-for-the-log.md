@@ -4,17 +4,18 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 540ff3fbba72d33b2efaa58ad7a8019628f5e83f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 887356fac3abe5c9d28751f7c4d3b1908ed35acb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922534"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078381"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>無法取得記錄檔的資料流
-無法取得記錄檔的資料流。 可能的檔案名稱，根據\<名稱 > 已被使用。  
+
+無法取得記錄檔的資料流。 基於的可能檔案名 \<name> 已在使用中。  
   
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>類別無法建立新的記錄檔，因為所有的記錄檔名稱將會根據\<名稱 > 已被使用。  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>類別無法建立新的記錄檔，因為根據的所有可能記錄檔名稱 \<name> 都已在使用中。  
   
  記錄檔太多可能表示應用程式發生架構問題。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 類別的文件。  
   
@@ -28,5 +29,5 @@ ms.locfileid: "61922534"
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>
-- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [我的應用程式 .Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [DirectoryPath。](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

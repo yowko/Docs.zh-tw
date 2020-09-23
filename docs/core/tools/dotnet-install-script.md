@@ -1,13 +1,13 @@
 ---
 title: dotnet-install 指令碼
 description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet 安裝腳本。
-ms.date: 04/30/2020
-ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 09/22/2020
+ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538038"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078199"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -185,7 +185,6 @@ Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 
   代表特定的組建版本。 可能的值包括：
 
   - `latest` - 通道上的最新組建 (與 `-Channel` 選項搭配使用)。
-  - `coherent` - 通道上的最新一致性組建；使用最新的穩定套件組合 (與分支名稱 `-Channel` 選項搭配使用)。
   - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如： `2.0.0-preview2-006120` 。
 
   如果未指定，`-Version` 會預設為 `latest`。

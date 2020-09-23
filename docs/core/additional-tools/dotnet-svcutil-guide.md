@@ -3,31 +3,31 @@ title: WCF svcutil 工具概觀
 description: Microsoft WCF dotnet-svcutil 工具的概觀，此工具可新增 .NET Core 和 ASP.NET Core 專案功能，與 .NET Framework 專案的 WCF svcutil 工具類似。
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 403bcf78ccebd983d378cfdd7965c4ca5097ccc9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396211"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078251"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>適用於 .NET Core 的 WCF dotnet-svcutil 工具
 
-Windows Communication Foundation （WCF） **dotnet-svcutil**工具是一種 .net 工具，可從網路位置上的 web 服務或從 WSDL 檔案抓取中繼資料，並產生包含用戶端 proxy 方法的 WCF 類別來存取 web 服務作業。
+Windows Communication Foundation (WCF) **dotnet-svcutil** tool 是一種 .net 工具，可從網路位置或 WSDL 檔案中的 web 服務取得中繼資料，並產生包含可存取 web 服務作業之用戶端 proxy 方法的 WCF 類別。
 
 類似適用於 .NET Framework 專案的 [**Service Model Metadata - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具，**dotnet-svcutil** 是一種命令列工具，可用來產生與 .NET Core 和 .NET Standard 專案相容的 Web 服務參考。
 
-**Dotnet-svcutil**工具是[**WCF Web 服務參考**](wcf-web-service-reference-guide.md)Visual Studio 連線服務提供者的替代選項，第一次隨附于 Visual Studio 2017 15.5 版。 **Dotnet-svcutil** tool as a .net tool 提供跨平臺的 Linux、MacOS 和 Windows。
+**Dotnet-svcutil**工具是[**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio 連線服務提供者的替代選項，第一次隨附于 Visual Studio 2017 15.5 版。 **Dotnet svcutil** tool 即為 .net 工具，可跨平臺在 Linux、MacOS 和 Windows 上使用。
 
 > [!IMPORTANT]
 > 您只應該參考來自信任來源的服務。 新增不信任來源的參考可能會危及安全性。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-- [.Net Core 2.1 SDK](https://dotnet.microsoft.com/download)或更新版本
+- [.Net Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本
 - 您慣用的程式碼編輯器
 
 # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
@@ -67,7 +67,7 @@ public interface ISayHello
     dotnet new web
     ```
 
-3. 將[ `dotnet-svcutil` NuGet 套件](https://nuget.org/packages/dotnet-svcutil)安裝為 CLI 工具： <!-- markdownlint-disable MD023 -->
+3. 以 CLI 工具的形式安裝[ `dotnet-svcutil` NuGet 套件](https://nuget.org/packages/dotnet-svcutil)： <!-- markdownlint-disable MD023 -->
     # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
@@ -75,7 +75,8 @@ public interface ISayHello
     ```
 
     # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
-    `HelloSvcutil.csproj`在您的編輯器中開啟專案檔，編輯 `Project` 元素，然後使用下列程式碼，將[ `dotnet-svcutil` NUGET 套件](https://nuget.org/packages/dotnet-svcutil)新增為 CLI 工具參考：
+
+    `HelloSvcutil.csproj`在編輯器中開啟專案檔、編輯 `Project` 元素，然後使用下列程式碼，將[ `dotnet-svcutil` NUGET 套件](https://nuget.org/packages/dotnet-svcutil)新增為 CLI 工具參考：
 
     ```xml
     <ItemGroup>
@@ -107,11 +108,11 @@ public interface ISayHello
 
     ---
 
-產生的檔案會儲存為 _HelloSvcutil/ServiceReference/Reference.cs_。 _Dotnet-svcutil_工具也會將 proxy 程式碼所需的適當 WCF 封裝當做封裝參考新增至專案。
+產生的檔案會儲存為 _HelloSvcutil/ServiceReference/Reference.cs_。 _Dotnet svcutil_工具也會將 proxy 程式碼所需的適當 WCF 封裝作為封裝參考新增至專案。
 
 ## <a name="using-the-service-reference"></a>使用服務參考
 
-1. 使用命令還原 WCF 封裝 [`dotnet restore`](../tools/dotnet-restore.md) ，如下所示：
+1. 使用命令來還原 WCF 封裝 [`dotnet restore`](../tools/dotnet-restore.md) ，如下所示：
 
     ```dotnetcli
     dotnet restore
@@ -119,7 +120,7 @@ public interface ISayHello
 
 2. 尋找您要使用的用戶端類別與作業名稱。 `Reference.cs` 會包含繼承自 `System.ServiceModel.ClientBase`的類別，並有可用來在服務上呼叫作業的方法。 在此例中，您想要呼叫 _SayHello_ 服務的 _Hello_ 作業。 `ServiceReference.SayHelloClient` 是用戶端類別的名稱，並有稱為 `HelloAsync` 的方法，可用來呼叫作業。
 
-3. `Startup.cs`在您的編輯器中開啟檔案，並在 `using` 頂端加入服務參考命名空間的指示詞：
+3. `Startup.cs`在編輯器中開啟檔案，並在 `using` 頂端為服務參考命名空間加入指示詞：
 
     ```csharp
     using ServiceReference;
@@ -156,6 +157,7 @@ public interface ISayHello
 您應該會看見下列輸出："Hello dotnet-svcutil!"
 
 如需 `dotnet-svcutil` 工具參數的詳細說明，請依下列所示叫用工具並傳遞 help 參數：
+
 # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli

@@ -3,12 +3,12 @@ title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3ef6a89a8cd4f811bcdd41b9c9bedbc45da78098
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810881"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078212"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -271,7 +271,7 @@ RID 允許發行獨立部署。
 
 指定所產生之套件的名稱。 如果未指定，`pack` 作業會預設為使用 `AssemblyName` 或目錄名稱作為套件的名稱。
 
-### <a name="title"></a>標題
+### <a name="title"></a>Title
 
 套件的易記標題，通常會用於 UI 顯示，以及 nuget.org 和 Visual Studio 套件管理員中。 如果未指定，則會改用套件識別碼。
 
@@ -293,7 +293,7 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 
-布林值，指定在安裝套件時，用戶端是否必須提示取用者接受套件授權。 預設為 `false`。
+布林值，指定在安裝套件時，用戶端是否必須提示取用者接受套件授權。 預設值為 `false`。
 
 ### <a name="developmentdependency"></a>DevelopmentDependency
 
@@ -361,12 +361,14 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="packageoutputpath"></a>PackageOutputPath
 
-決定要置放所封裝之套件的輸出路徑。 預設值為 `$(OutputPath)`。
+決定要置放所封裝之套件的輸出路徑。 預設為 `$(OutputPath)`。
 
 ### <a name="includesymbols"></a>IncludeSymbols
+
 此布林值會指出在封裝專案時，套件是否應該建立額外的符號套件。 符號套件的格式由 `SymbolPackageFormat` 屬性控制。
 
 ### <a name="symbolpackageformat"></a>SymbolPackageFormat
+
 指定符號套件的格式。 如果是 "symbols.nupkg"，將使用包含 PDB、DLL 和其他輸出檔案的 *.symbols.nupkg* 副檔名建立舊版符號套件。 如果是 "snupkg"，將建立一個包含可攜式 PDB 的 snupkg 符號套件。 預設值為 "symbols.nupkg"。
 
 ### <a name="includesource"></a>IncludeSource
@@ -386,9 +388,11 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 指定存放庫的類型。 預設值為 "git"。
 
 ### <a name="repositorybranch"></a>RepositoryBranch
+
 指定存放庫中來源分支的名稱。 當專案封裝于 NuGet 套件時，它會新增至套件中繼資料。
 
 ### <a name="repositorycommit"></a>RepositoryCommit
+
 選用的儲存機制認可或變更集，以指出建立封裝的來源。 `RepositoryUrl` 也必須指定此屬性才能包含。 當專案封裝在 NuGet 套件中時，會將此認可或變更集新增至套件中繼資料。
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
@@ -405,7 +409,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
-此布林值會指定是否有任何類型為 `Content` 的項目會自動包含於所產生的套件中。 預設為 `true`。
+此布林值會指定是否有任何類型為 `Content` 的項目會自動包含於所產生的套件中。 預設值為 `true`。
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 

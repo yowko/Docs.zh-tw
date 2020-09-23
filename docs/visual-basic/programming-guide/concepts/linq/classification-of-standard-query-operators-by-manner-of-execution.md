@@ -2,33 +2,39 @@
 title: 根據執行方式分類標準查詢運算子
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: e1ba5d8bdc2b7a521a11ca5c055323fde4bcb9d9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0628565fc0406c88aac814a05275cccdc61c44fe
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410899"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078355"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>依執行方式分類標準查詢運算子（Visual Basic）
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>以執行 (Visual Basic 的方式分類標準查詢運算子) 
+
 會使用兩種主要方式之一執行標準查詢運算子方法的 LINQ to Objects 實作：立即或延後。 使用延後執行的查詢運算子可以另外細分成兩個分類︰資料流和非資料流。 如果您知道如何執行不同的查詢運算子，則可以協助您了解透過給定查詢所取得的結果。 如果資料來源變更，或您所建置的查詢是根據另一個查詢，則這特別有用。 本主題會根據執行方式來分類標準查詢運算子。  
   
 ## <a name="manners-of-execution"></a>執行方式  
   
 ### <a name="immediate"></a>立即  
+
  立即執行表示讀取資料來源，並且在程式碼中宣告查詢的位置執行作業。 會立即執行傳回單一非可列舉結果的所有標準查詢運算子。  
   
 ### <a name="deferred"></a>已延期  
+
  延後執行表示未在程式碼中宣告查詢的位置執行作業。 只有在列舉查詢變數時，才會執行這項作業，例如，透過使用 `For Each` 陳述式。 這表示執行查詢的結果取決於執行查詢時的資料來源內容，而不是定義查詢時的資料來源內容。 如果多次列舉查詢變數，則每次都可能會有不同的結果。 幾乎傳回型別為 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Linq.IOrderedEnumerable%601> 的所有標準查詢運算子都會以延遲方式執行。  
   
  使用延後執行的查詢運算子可以另外分類為資料流和非資料流。  
   
-#### <a name="streaming"></a>串流  
+#### <a name="streaming"></a>資料流  
+
  資料流運算子在產生項目之前不需要讀取所有來源資料。 執行時，資料流運算子會在讀取並產生項目時 (適用時) 於每個來源項目上執行其運算。 除非產生結果項目，否則資料流運算子會繼續讀取來源項目。 這表示可能會讀取多個來源項目，以產生一個結果項目。  
   
 #### <a name="non-streaming"></a>非資料流  
+
  非資料流運算子在產生結果項目之前必須讀取所有來源資料。 排序或分組這類作業會歸到此分類。 執行時，非資料流查詢運算子會讀取所有來源資料、將其放入資料結構中、執行作業，並產生結果項目。  
   
 ## <a name="classification-table"></a>分類表  
+
  下表會根據執行方法來分類每個標準查詢運算子方法。  
   
 > [!NOTE]
@@ -91,5 +97,5 @@ ms.locfileid: "84410899"
 
 - <xref:System.Linq.Enumerable>
 - [標準查詢運算子概觀 (Visual Basic)](standard-query-operators-overview.md)
-- [標準查詢運算子的查詢運算式語法（Visual Basic）](query-expression-syntax-for-standard-query-operators.md)
+- [標準查詢運算子的查詢運算式語法 (Visual Basic) ](query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (Visual Basic)](linq-to-objects.md)
