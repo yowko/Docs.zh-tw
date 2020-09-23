@@ -6,14 +6,15 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551037"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059154"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 編碼慣例
+
 Microsoft 會依照本主題中的指導方針來開發範例與檔。 如果您遵循相同的程式碼撰寫慣例，您可能會獲得下列優點：  
   
 - 您的程式碼會有一致的外觀，讓讀者可以更專注于內容，而不是版面配置。  
@@ -86,6 +87,7 @@ Microsoft 會依照本主題中的指導方針來開發範例與檔。 如果您
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
 ### <a name="relaxed-delegates-in-event-handlers"></a>事件處理常式中寬鬆的委派  
+
  請勿明確限定引數 (物件和 EventArgs) 至事件處理常式。 如果您不是使用傳遞至事件的事件引數 (例如，傳送者為物件、e 表示 EventArgs) ，請使用寬鬆的委派，並在程式碼中省略事件引數：  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
@@ -121,14 +123,17 @@ Microsoft 會依照本主題中的指導方針來開發範例與檔。 如果您
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>使用 With 關鍵字  
+
  當您對一個物件進行一連串的呼叫時，請考慮使用 `With` 關鍵字：  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>使用 Try .。。當您使用例外狀況處理時的 Catch 和 Using 語句  
+
  請勿使用 `On Error Goto`。  
   
 ### <a name="use-the-isnot-keyword"></a>使用 IsNot 關鍵字  
+
  使用 `IsNot` 關鍵字而不是 `Not...Is Nothing` 。  
   
 ### <a name="new-keyword"></a>New 關鍵字  
@@ -162,9 +167,11 @@ Microsoft 會依照本主題中的指導方針來開發範例與檔。 如果您
 - `Nothing`在呼叫方法之前，請不要確認事件是否 (null) `RaiseEvent` 。 `RaiseEvent``Nothing`在引發事件之前檢查。  
   
 ### <a name="using-shared-members"></a>使用共用成員  
+
  `Shared`使用類別名稱呼叫成員，而不是從執行個體變數。  
   
 ### <a name="use-xml-literals"></a>使用 XML 常值  
+
  XML 常值會簡化您使用 XML (時所遇到的最常見工作，例如載入、查詢和轉換) 。 當您使用 XML 進行開發時，請遵循下列指導方針：  
   
 - 使用 XML 常值來建立 XML 檔和片段，而不是直接呼叫 XML Api。  

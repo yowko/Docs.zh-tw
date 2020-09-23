@@ -11,14 +11,15 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: 7d15c46c0f6bb00c23dd98e464f61a5f94b0773a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aad4f8b24a43ecc51c372916b438daee72adc405
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414398"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058686"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic 的常數和列舉類型
+
 常數是指使用有意義的名稱來取代維持不變的值。 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 您可以使用常數來提供有意義的名稱，而不是數字，讓程式碼更容易讀取。  
   
  列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。 例如，您可以宣告列舉來當作一組與當週的日次建立關聯的整數常數，接著在程式碼中使用日次的名稱而不是它們的整數值。  

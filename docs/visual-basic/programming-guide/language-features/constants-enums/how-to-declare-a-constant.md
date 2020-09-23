@@ -23,41 +23,42 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ffaa98f6af3d4b276f5c0b1153841acdea0809d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 138dd58dac9d1983e35e61f8b98a77810fc6e38b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414475"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058842"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>如何：宣告常數 (Visual Basic)
-您可以使用 `Const` 語句來宣告常數並設定其值。 藉由宣告常數，您可以將有意義的名稱指派給值。 一旦宣告了常數，就無法修改或指派新的值。  
+
+您可以使用 `Const` 語句來宣告常數，並設定其值。 藉由宣告常數，您可以將有意義的名稱指派給值。 一旦宣告常數之後，就無法修改或指派新的值給它。  
   
- 您在程式內或在模組、類別或結構的宣告區段中宣告常數。 類別或結構層級的常數 `Private` 預設為，但也可以宣告為 `Public` 、 `Friend` 、或， `Protected` `Protected Friend` 以取得適當的程式碼存取層級。  
+ 您可以在程式或模組、類別或結構的宣告區段中宣告常數。 類別或結構層級常數 `Private` 預設為，但也可以宣告為、、 `Public` 或 `Friend` 適用 `Protected` `Protected Friend` 于適當的程式碼存取層級。  
   
- 常數必須具有有效的符號名稱（規則與建立變數名稱的規則相同），以及由數值或字串常數和運算子（但不含函式呼叫）組成的運算式。  
+ 常數必須有有效的符號名稱 (規則與建立變數名稱的規則相同，) 和包含數值或字串常數和運算子的運算式 (但不) 函式呼叫。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-declare-a-constant"></a>若要宣告常數  
+### <a name="to-declare-a-constant"></a>宣告常數  
   
 - 撰寫包含存取規範、 `Const` 關鍵字和運算式的宣告，如下列範例所示：  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     當[option 推斷](../../../language-reference/statements/option-infer-statement.md)為 `Off` ，且[option Strict](../../../language-reference/statements/option-strict-statement.md)為時 `On` ，您必須指定資料類型（ `Boolean` 、 `Byte` 、 `Char` 、、、、、、、 `DateTime` `Decimal` `Double` `Integer` `Long` `Short` `Single` 或 `String` ）來明確宣告常數。  
+     當 [option 推斷](../../../language-reference/statements/option-infer-statement.md) 為 `Off` 且 [option Strict](../../../language-reference/statements/option-strict-statement.md) 為時 `On` ，您必須指定資料類型 (、、、、、、、、、 `Boolean` `Byte` `Char` `DateTime` `Decimal` `Double` `Integer` `Long` `Short` `Single` 或 `String`) ，明確地宣告常數。  
   
-     當 `Option Infer` 是 `On` 或 `Option Strict` 時 `Off` ，您可以使用子句來宣告常數，而不指定資料類型 `As` 。 編譯器會從運算式的類型判斷常數的類型。 如需詳細資訊，請參閱[常數和常值資料類型](constant-and-literal-data-types.md)。  
+     當 `Option Infer` 是 `On` 或 `Option Strict` 時 `Off` ，您可以宣告常數，而不需要使用子句來指定資料類型 `As` 。 編譯器會從運算式的型別判斷常數的型別。 如需詳細資訊，請參閱 [常數和常值資料類型](constant-and-literal-data-types.md)。  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>若要宣告具有明確陳述之資料類型的常數  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>宣告具有明確陳述資料類型的常數  
   
 - 撰寫包含 `As` 關鍵字和明確資料類型的宣告，如下列範例所示：  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     您可以在同一行宣告多個常數，不過，如果您的程式碼在每行只宣告一個常數，則會更容易閱讀。 如果您在單一行上宣告多個常數，它們必須全部具有相同的存取層級（ `Public` 、 `Private` 、 `Friend` 、 `Protected` 或 `Protected Friend` ）。  
+     您可以在同一行宣告多個常數，不過如果您的程式碼每行只會宣告一個常數，則您的程式碼會更容易讀取。 如果您在同一行宣告多個常數，它們必須具有相同的存取層級 (`Public` 、 `Private` 、 `Friend` 、 `Protected` 或 `Protected Friend`) 。  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>若要在同一行宣告多個常數  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>在同一行宣告多個常數  
   
 - 以逗號和空格分隔宣告，如下列範例所示：  
   

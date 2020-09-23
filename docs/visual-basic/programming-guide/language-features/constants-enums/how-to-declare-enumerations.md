@@ -6,39 +6,40 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 752b425ba32efe41a1ab1aa75de20039d36f5e50
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414449"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058894"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>如何：宣告列舉 (Visual Basic)
-您可以使用 `Enum` 類別或模組之宣告區段中的語句來建立列舉。 您無法在方法中宣告列舉。 若要指定適當的存取層級，請使用 `Private` 、、 `Protected` `Friend` 或 `Public` 。  
+
+您可以使用 `Enum` 類別或模組之宣告區段中的語句來建立列舉。 您無法在方法內宣告列舉。 若要指定適當的存取層級，請使用 `Private` 、、 `Protected` `Friend` 或 `Public` 。  
   
- `Enum`型別具有名稱、基礎型別和一組欄位，每個都代表一個常數。 此名稱必須是有效的 Visual Basic .NET 辨識符號。 基礎類型必須是其中一個整數類型（ `Byte` 、或） `Short` `Long` `Integer` 。 `Integer` 是預設值。 列舉一律是強型別，而且無法與整數數位類型互換。  
+ `Enum`型別具有名稱、基礎類型和一組欄位，每個都代表一個常數。 名稱必須是有效的 Visual Basic .NET 限定詞。 基礎類型必須是其中一個整數類型： `Byte` 、 `Short` `Long` 或 `Integer` 。 `Integer` 是預設值。 列舉一律為強型別，而且無法與整數類型交換。  
   
- 列舉不能有浮點值。 如果使用將浮點值指派給列舉型別，則會 `Option Strict On` 產生編譯器錯誤。 如果 `Option Strict` 為 `Off` ，則值會自動轉換成 `Enum` 類型。  
+ 列舉不能有浮點值。 如果列舉型別指派了浮點值，就會 `Option Strict On` 產生編譯器錯誤。 如果 `Option Strict` 為 `Off` ，則值會自動轉換成 `Enum` 類型。  
   
- 如需名稱的相關資訊，以及如何使用 `Imports` 語句來進行不必要的名稱限定，請參閱列舉[和名稱限定](enumerations-and-name-qualification.md)性。  
+ 如需名稱的相關資訊，以及如何使用 `Imports` 語句來限定名稱限定性，請參閱列舉 [和名稱限定](enumerations-and-name-qualification.md)性。  
   
-### <a name="to-declare-an-enumeration"></a>若要宣告列舉  
+### <a name="to-declare-an-enumeration"></a>宣告列舉  
   
-1. 撰寫包含程式碼存取層級、 `Enum` 關鍵字和有效名稱的宣告，如下列範例所示，每個都宣告不同的 `Enum` 。  
+1. 撰寫包含程式碼存取層級、 `Enum` 關鍵字和有效名稱的宣告，如下列範例所示，每個宣告都是不同的 `Enum` 。  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2. 定義列舉中的常數。 根據預設，列舉中的第一個常數會初始化為 `0` ，而後續的常數會初始化為比上一個常數更多的值。 例如，下列列舉 `Days` 包含名為且值為的常數 `Sunday` `0` 、名為且具有值的常數 `Monday` `1` 、名為且值為的常數， `Tuesday` `2` 依此類推。  
+2. 定義列舉中的常數。 根據預設，列舉中的第一個常數會初始化為 `0` ，而且後續的常數會初始化為比上一個常數還多的值。 例如，下列列舉會包含名為的常數、以值命名的常數 `Days` `Sunday` `0` `Monday` `1` 、以的值命名的常數， `Tuesday` `2` 依此類推。  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3. 您可以使用指派語句，明確地將值指派給列舉中的常數。 您可以指派任何整數值，包括負數。 例如，您可能想要值小於零的常數來表示錯誤狀況。 在下列列舉中， `Invalid` 會明確地將值指派給常數 `–1` ，並將 `Sunday` 值指派給常數 `0` 。 因為它是列舉中的第一個常數，所以 `Saturday` 也會初始化為值 `0` 。 的值 `Monday` 是 `1` （一個大於的值 `Sunday` ）; 的值 `Tuesday` 是 `2` ，依此類推。  
+3. 您可以使用指派語句，將值明確指派給列舉中的常數。 您可以指派包含負數的任何整數值。 例如，您可能想要值小於零的常數來表示錯誤狀況。 在下列列舉中， `Invalid` 會明確地將值指派給常數 `–1` ，並將 `Sunday` 值指派給常數 `0` 。 因為它是列舉中的第一個常數，所以 `Saturday` 也會初始化為值 `0` 。 的值 `Monday` `1` (一個以上的值 `Sunday`) ; 的值 `Tuesday` 為 `2` ，依此類推。  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>將列舉宣告為明確類型  
   
-- 使用子句指定列舉的類型 `As` ，如下列範例所示。  
+- 使用子句來指定列舉的型別 `As` ，如下列範例所示。  
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   

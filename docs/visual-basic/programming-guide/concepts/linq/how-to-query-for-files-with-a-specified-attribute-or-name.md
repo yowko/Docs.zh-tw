@@ -2,14 +2,15 @@
 title: 作法：查詢具有指定屬性或名稱的檔案
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 4a6a5630f4ac0eb0cb08aed0dc8a390225194675
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eeacd94fb303a439e8034b84d285ab11b2333581
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396411"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059310"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>如何：查詢具有指定之屬性或名稱的檔案（Visual Basic）
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>如何：查詢具有指定屬性或名稱的檔案 (Visual Basic) 
+
 這個範例示範如何在指定的樹狀目錄中尋找所有具有指定副檔名 (例如 ".txt") 的檔案。 它也會示範如何根據建立時間來傳回樹狀結構中的最新或最舊檔案。  
   
 ## <a name="example"></a>範例  
@@ -61,7 +62,8 @@ End Module
 ```  
   
 ## <a name="compile-the-code"></a>編譯程式碼  
-建立 Visual Basic 的主控台應用程式專案，其中包含 `Imports` System. Linq 命名空間的語句。
+
+使用 `Imports` 適用于 system.string 命名空間的語句來建立 Visual Basic 主控台應用程式專案。
   
 ## <a name="see-also"></a>另請參閱
 

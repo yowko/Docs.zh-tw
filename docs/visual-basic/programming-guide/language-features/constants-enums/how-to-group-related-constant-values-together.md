@@ -5,19 +5,20 @@ helpviewer_keywords:
 - enumerations [Visual Basic], constants
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
-ms.openlocfilehash: d2393af8b0c2b0c2e528f9908a78fbc7f182c8cf
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0f694aee722e8ce31f663ec9fe52a09a2eb2a958
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414436"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058725"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>如何：將關聯的常數值群組在一起 (Visual Basic)
-列舉是將相關常數群組在一起的最佳方式。 您可以使用 `Enum` 類別或模組之宣告區段中的語句來建立列舉。 如需詳細資訊，請參閱 how [to： Declare a Enumeration](how-to-declare-enumerations.md)。  
+
+列舉是將相關常數群組在一起的最佳方式。 您可以使用 `Enum` 類別或模組之宣告區段中的語句來建立列舉。 如需詳細資訊，請參閱 [如何：宣告列舉](how-to-declare-enumerations.md)。  
   
-### <a name="to-group-related-constant-values"></a>若要將相關的常數值分組  
+### <a name="to-group-related-constant-values"></a>若要將相關常數值分組  
   
-1. 撰寫包含程式碼存取層級、 `Enum` 關鍵字和有效名稱的宣告。 這個範例會建立 `Private` 列舉 `temperatureValues` 。  
+1. 撰寫包含程式碼存取層級、 `Enum` 關鍵字和有效名稱的宣告。 這個範例會建立 `Private` 列舉型別 `temperatureValues` 。  
   
      [!code-vb[VbEnumsTask#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#21)]  
   

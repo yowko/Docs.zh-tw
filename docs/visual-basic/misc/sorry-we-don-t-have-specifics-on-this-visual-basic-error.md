@@ -3044,32 +3044,33 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 12af447d053e84347ddc3a2c1ecad1cde4ff3428
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d96f2512e2fae038853baedfb78fcf2feb84542b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357800"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059635"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>很抱歉，我們沒有此 Visual Basic 錯誤的相關細節
+
 很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者，您可以要求其他開發人員使用這些論壇的其中一個：  
   
  [Visual Basic 語言](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
  提供有關 Visual Basic 語言語法和編譯器的問題和一般討論的論壇。  
   
  [Visual Basic Interop and Upgrade](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop) (Visual Basic Interop 與升級)  
- 提供有關升級至 Visual Basic 並使用互通性功能之問題的論壇。  
+ 提供有關升級至 Visual Basic 以及使用互通性功能之問題的論壇。  
   
  [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
  提供有關如何在 Visual Studio 環境中工作之問題的論壇。  
   
  [Visual Basic General](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral) (Visual Basic 一般)  
- 針對未在其他論壇中討論的 Visual Basic，提供有關問題和問題的論壇。  
+ 針對其他論壇中未討論的 Visual Basic，提供問題的論壇。  
   
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
- 提供 Visual Basic 相關問題的論壇。  
+ 提供有關 Visual Basic 問題的論壇。  
   
- 另請參閱：  
+ 也請參閱：  
  [Visual Basic 程式設計人員的其他資源](../getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>另請參閱

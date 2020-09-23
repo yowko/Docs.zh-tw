@@ -4,17 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 61b138c0851c747ed30eedc10cb882cc3b03c4d4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7ad8d684dde31550b6e1b74c098d152b227f6c1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392606"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058218"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>如何：建立 XML 常值 (Visual Basic)
-您可以使用 XML 常值，直接在程式碼中建立 XML 檔、片段或元素。 本主題中的範例將示範如何建立具有三個子項目的 XML 專案，以及如何建立 XML 檔。  
+
+您可以使用 XML 常值，直接在程式碼中建立 XML 檔、片段或元素。 本主題中的範例將示範如何建立包含三個子項目的 XML 專案，以及如何建立 XML 檔。  
   
- 您也可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] api 來建立 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件。 如需詳細資訊，請參閱 <xref:System.Xml.Linq.XElement> 。  
+ 您也可以使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] api 來建立 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 物件。 如需詳細資訊，請參閱<xref:System.Xml.Linq.XElement>。  
   
 ### <a name="to-create-an-xml-element"></a>若要建立 XML 元素  
   
@@ -34,9 +35,9 @@ ms.locfileid: "84392606"
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a>若要建立 XML 檔  
+### <a name="to-create-an-xml-document"></a>建立 XML 檔  
   
-- 建立內嵌的 XML 檔。 下列程式碼會建立 XML 檔，其中具有常值語法、XML 宣告、處理指示、批註，以及包含另一個元素的專案。  
+- 建立內嵌的 XML 檔。 下列程式碼會建立一個 XML 檔，其中包含常值語法、XML 宣告、處理指示、批註，以及包含其他元素的元素。  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
