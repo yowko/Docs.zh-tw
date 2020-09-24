@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 2ea7a65c23b6a1edee572f6f6ff6c52d14358408
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e941fc673c508f10863ee49b6544d6886bd594a3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127148"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168812"
 ---
 # <a name="access-modifiers-c-reference"></a>存取修飾詞 (C# 參考)
+
 存取修飾詞是用來指定成員或類型的宣告存取範圍的關鍵字。 本節將介紹四種存取修飾詞：  
   
 - `public`

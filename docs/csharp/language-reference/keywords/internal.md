@@ -8,14 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 14722d66a65eb5f96118acf017dc877e657b2dd9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: c66f4ff578e9864ebaf2b89ec03ce95f3cb2ba91
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134571"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168734"
 ---
 # <a name="internal-c-reference"></a>internal (C# 參考)
+
 `internal` 關鍵字是類型和類型成員的[存取修飾詞](./access-modifiers.md)。
   
  > 此頁面涵蓋 `internal` 存取。 `internal`關鍵字也是存取修飾詞的一部分 [`protected internal`](./protected-internal.md) 。
@@ -39,6 +40,7 @@ public class BaseClass
  在定義類型或成員的組件外部，以內部存取方式來參考此類型或成員是錯誤的做法。  
   
 ## <a name="example"></a>範例  
+
  此範例包含兩個檔案：`Assembly1.cs` 和 `Assembly1_a.cs`。 第一個檔案包含內部基底類別 `BaseClass`。 在第二個檔案中，嘗試具現化 `BaseClass` 會產生錯誤。  
   
 ```csharp  
@@ -63,6 +65,7 @@ class TestAccess
 ```  
   
 ## <a name="example"></a>範例  
+
  在此範例中，請使用您在範例 1 中所用的相同檔案，並將 `BaseClass` 的存取範圍層級變更為 `public`。 同時將成員 `intM` 的存取範圍層級變更為 `internal`。 在此情況下，您可以具現化類別，但無法存取內部成員。  
   
 ```csharp  
@@ -100,5 +103,5 @@ public class TestAccess
 - [協助工具層級](./accessibility-levels.md)
 - [修飾詞](index.md)
 - [public](./public.md)
-- [私人](./private.md)
+- [private](./private.md)
 - [protected](./protected.md)

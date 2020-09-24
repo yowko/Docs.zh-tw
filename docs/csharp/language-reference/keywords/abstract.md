@@ -8,17 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 095c4dea838aff4f14833d78fb10a2f831cf5173
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 276e3f6ab50a069e3852c529c13eaad3c64e42ad
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127200"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168877"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# 參考)
+
 `abstract` 修飾詞表示要修改的項目具有遺失或不完整的實作。 抽象修飾詞可以與類別、方法、屬性、索引子和事件搭配使用。 在類別宣告中使用 `abstract` 修飾詞，來表示某一類別只是要作為其他類別的基底類別，不是自行具現化。 標記為抽象的成員，必須由衍生自抽象類別的非抽象類別實作。
   
 ## <a name="example"></a>範例  
+
  在此範例中，`Square` 類別必須提供 `GetArea` 的實作，因為它繼承自 `Shape`：  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
@@ -66,6 +68,7 @@ ms.locfileid: "89127200"
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
 ## <a name="example"></a>範例  
+
  在此範例中，`DerivedClass` 類別衍生自抽象類別 `BaseClass`。 抽象類別包含抽象方法 `AbstractMethod` 和兩個抽象屬性：`X` 和 `Y`。  
   
 [!code-csharp[csrefKeywordsModifiers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#3)]
@@ -79,6 +82,7 @@ BaseClass bc = new BaseClass();   // Error
 您會收到錯誤，指出編譯器無法建立抽象類別 'BaseClass' 的執行個體。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

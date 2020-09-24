@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 26b8f78595b1406deb371113cf491b80ad7c1474
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6e1a5bddc0d40b0b62c7b07dbc6b4134a3447a95
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127018"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168786"
 ---
 # <a name="accessibility-levels-c-reference"></a>存取範圍層級 (C# 參考)
 
@@ -46,6 +46,7 @@ ms.locfileid: "89127018"
  巢狀型別的存取範圍取決於其 [存取範圍網域](./accessibility-domain.md)，這取決於成員的宣告存取範圍和立即包含類型的存取範圍定義域。 但是，巢狀型別的存取範圍領域不能超過包含型別 (Containing Type) 的存取範圍領域。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
@@ -58,6 +59,6 @@ ms.locfileid: "89127018"
 - [使用協助工具層級的限制](./restrictions-on-using-accessibility-levels.md)
 - [存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [public](./public.md)
-- [私人](./private.md)
+- [private](./private.md)
 - [protected](./protected.md)
 - [internal](./internal.md)
