@@ -3,15 +3,16 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: 67d7e0aa5b6b05bfe8b17a1b1efebb1fbddbb0eb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 946ae8601e1e4563becd0b346b6c792724405a45
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152667"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165035"
 ---
 # \<issuerTokenResolver>
-<span data-ttu-id="36642-101">註冊權杖處理常式集合中處理常式所使用的簽發者 token 解析程式。</span><span class="sxs-lookup"><span data-stu-id="36642-101">Registers the issuer token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="36642-102">簽發者權杖解析程式是用來解析傳入權杖和訊息上的簽署權杖。</span><span class="sxs-lookup"><span data-stu-id="36642-102">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span>  
+
+<span data-ttu-id="07846-101">註冊權杖處理常式集合中處理常式所使用的簽發者權杖解析程式。</span><span class="sxs-lookup"><span data-stu-id="07846-101">Registers the issuer token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="07846-102">簽發者權杖解析程式是用來解析傳入權杖和訊息上的簽署權杖。</span><span class="sxs-lookup"><span data-stu-id="07846-102">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "79152667"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerTokenResolver>**  
   
-## <a name="syntax"></a><span data-ttu-id="36642-103">語法</span><span class="sxs-lookup"><span data-stu-id="36642-103">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07846-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="07846-103">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -35,34 +36,38 @@ ms.locfileid: "79152667"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="36642-104">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="36642-104">Attributes and Elements</span></span>  
- <span data-ttu-id="36642-105">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="36642-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="07846-104">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="07846-104">Attributes and Elements</span></span>  
+
+ <span data-ttu-id="07846-105">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="07846-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="36642-106">屬性</span><span class="sxs-lookup"><span data-stu-id="36642-106">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="07846-106">屬性</span><span class="sxs-lookup"><span data-stu-id="07846-106">Attributes</span></span>  
   
-|<span data-ttu-id="36642-107">屬性</span><span class="sxs-lookup"><span data-stu-id="36642-107">Attribute</span></span>|<span data-ttu-id="36642-108">描述</span><span class="sxs-lookup"><span data-stu-id="36642-108">Description</span></span>|  
+|<span data-ttu-id="07846-107">屬性</span><span class="sxs-lookup"><span data-stu-id="07846-107">Attribute</span></span>|<span data-ttu-id="07846-108">描述</span><span class="sxs-lookup"><span data-stu-id="07846-108">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="36642-109">type</span><span class="sxs-lookup"><span data-stu-id="36642-109">type</span></span>|<span data-ttu-id="36642-110">指定簽發者 token 解析程式的類型。</span><span class="sxs-lookup"><span data-stu-id="36642-110">Specifies the type of the issuer token resolver.</span></span> <span data-ttu-id="36642-111">必須是 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 類別或衍生自類別的類型 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 。</span><span class="sxs-lookup"><span data-stu-id="36642-111">Must be either the <xref:System.IdentityModel.Tokens.IssuerTokenResolver> class or a type that derives from the <xref:System.IdentityModel.Tokens.IssuerTokenResolver> class.</span></span> <span data-ttu-id="36642-112">必要。</span><span class="sxs-lookup"><span data-stu-id="36642-112">Required.</span></span>|  
+|<span data-ttu-id="07846-109">type</span><span class="sxs-lookup"><span data-stu-id="07846-109">type</span></span>|<span data-ttu-id="07846-110">指定簽發者權杖解析程式的類型。</span><span class="sxs-lookup"><span data-stu-id="07846-110">Specifies the type of the issuer token resolver.</span></span> <span data-ttu-id="07846-111">必須是 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 類別或衍生自類別的型別 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 。</span><span class="sxs-lookup"><span data-stu-id="07846-111">Must be either the <xref:System.IdentityModel.Tokens.IssuerTokenResolver> class or a type that derives from the <xref:System.IdentityModel.Tokens.IssuerTokenResolver> class.</span></span> <span data-ttu-id="07846-112">必要。</span><span class="sxs-lookup"><span data-stu-id="07846-112">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="36642-113">子元素</span><span class="sxs-lookup"><span data-stu-id="36642-113">Child Elements</span></span>  
- <span data-ttu-id="36642-114">無</span><span class="sxs-lookup"><span data-stu-id="36642-114">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="07846-113">子元素</span><span class="sxs-lookup"><span data-stu-id="07846-113">Child Elements</span></span>  
+
+ <span data-ttu-id="07846-114">無</span><span class="sxs-lookup"><span data-stu-id="07846-114">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="36642-115">父項目</span><span class="sxs-lookup"><span data-stu-id="36642-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="07846-115">父項目</span><span class="sxs-lookup"><span data-stu-id="07846-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="36642-116">元素</span><span class="sxs-lookup"><span data-stu-id="36642-116">Element</span></span>|<span data-ttu-id="36642-117">描述</span><span class="sxs-lookup"><span data-stu-id="36642-117">Description</span></span>|  
+|<span data-ttu-id="07846-116">項目</span><span class="sxs-lookup"><span data-stu-id="07846-116">Element</span></span>|<span data-ttu-id="07846-117">描述</span><span class="sxs-lookup"><span data-stu-id="07846-117">Description</span></span>|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|<span data-ttu-id="36642-118">提供安全性權杖處理常式集合的設定。</span><span class="sxs-lookup"><span data-stu-id="36642-118">Provides configuration for a collection of security token handlers.</span></span>|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|<span data-ttu-id="07846-118">提供安全性權杖處理常式集合的設定。</span><span class="sxs-lookup"><span data-stu-id="07846-118">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="36642-119">備註</span><span class="sxs-lookup"><span data-stu-id="36642-119">Remarks</span></span>  
- <span data-ttu-id="36642-120">簽發者權杖解析程式是用來解析傳入權杖和訊息上的簽署權杖。</span><span class="sxs-lookup"><span data-stu-id="36642-120">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span> <span data-ttu-id="36642-121">它是用來抓取用於檢查簽章的密碼編譯內容。</span><span class="sxs-lookup"><span data-stu-id="36642-121">It is used to retrieve the cryptographic material that is used for checking the signature.</span></span> <span data-ttu-id="36642-122">您必須指定 `type` 屬性。</span><span class="sxs-lookup"><span data-stu-id="36642-122">You must specify the `type` attribute.</span></span> <span data-ttu-id="36642-123">指定的型別可以是 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 或衍生自類別的自訂型別 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 。</span><span class="sxs-lookup"><span data-stu-id="36642-123">The type specified can be either <xref:System.IdentityModel.Tokens.IssuerTokenResolver> or a custom type that derives from the <xref:System.IdentityModel.Tokens.IssuerTokenResolver> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="07846-119">備註</span><span class="sxs-lookup"><span data-stu-id="07846-119">Remarks</span></span>  
+
+ <span data-ttu-id="07846-120">簽發者權杖解析程式是用來解析傳入權杖和訊息上的簽署權杖。</span><span class="sxs-lookup"><span data-stu-id="07846-120">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span> <span data-ttu-id="07846-121">它是用來取出用來檢查簽章的密碼編譯內容。</span><span class="sxs-lookup"><span data-stu-id="07846-121">It is used to retrieve the cryptographic material that is used for checking the signature.</span></span> <span data-ttu-id="07846-122">您必須指定 `type` 屬性。</span><span class="sxs-lookup"><span data-stu-id="07846-122">You must specify the `type` attribute.</span></span> <span data-ttu-id="07846-123">指定的型別可以是 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 或衍生自類別的自訂型別 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 。</span><span class="sxs-lookup"><span data-stu-id="07846-123">The type specified can be either <xref:System.IdentityModel.Tokens.IssuerTokenResolver> or a custom type that derives from the <xref:System.IdentityModel.Tokens.IssuerTokenResolver> class.</span></span>  
   
- <span data-ttu-id="36642-124">某些權杖處理常式可讓您在設定中指定簽發者權杖解析程式設定。</span><span class="sxs-lookup"><span data-stu-id="36642-124">Some token handlers allow you to specify issuer token resolver settings in configuration.</span></span> <span data-ttu-id="36642-125">個別權杖處理常式上的設定會覆寫安全性權杖處理常式集合上指定的設定。</span><span class="sxs-lookup"><span data-stu-id="36642-125">Settings on individual token handlers override those specified on the security token handler collection.</span></span>  
+ <span data-ttu-id="07846-124">某些權杖處理常式可讓您在設定中指定簽發者權杖解析程式設定。</span><span class="sxs-lookup"><span data-stu-id="07846-124">Some token handlers allow you to specify issuer token resolver settings in configuration.</span></span> <span data-ttu-id="07846-125">個別標記處理常式上的設定會覆寫安全性權杖處理常式集合上指定的設定。</span><span class="sxs-lookup"><span data-stu-id="07846-125">Settings on individual token handlers override those specified on the security token handler collection.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="36642-126">將專案指定為專案的 `<issuerTokenResolver>` 子項目 [\<identityConfiguration>](identityconfiguration.md) 已被取代，但仍支援回溯相容性。</span><span class="sxs-lookup"><span data-stu-id="36642-126">Specifying the `<issuerTokenResolver>` element as a child element of the [\<identityConfiguration>](identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="36642-127">元素上的設定會覆寫專案上的專案 `<securityTokenHandlerConfiguration>` `<identityConfiguration>` 。</span><span class="sxs-lookup"><span data-stu-id="36642-127">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
+> <span data-ttu-id="07846-126">將 `<issuerTokenResolver>` 元素指定為專案的子項目 [\<identityConfiguration>](identityconfiguration.md) 已被取代，但仍支援回溯相容性。</span><span class="sxs-lookup"><span data-stu-id="07846-126">Specifying the `<issuerTokenResolver>` element as a child element of the [\<identityConfiguration>](identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="07846-127">元素上的設定會覆 `<securityTokenHandlerConfiguration>` 寫元素上的設定 `<identityConfiguration>` 。</span><span class="sxs-lookup"><span data-stu-id="07846-127">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="36642-128">範例</span><span class="sxs-lookup"><span data-stu-id="36642-128">Example</span></span>  
- <span data-ttu-id="36642-129">下列 XML 會根據衍生自的自訂類別，顯示簽發者 token 解析程式的設定 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 。</span><span class="sxs-lookup"><span data-stu-id="36642-129">The following XML shows configuration for an issuer token resolver that is based on a custom class that derives from <xref:System.IdentityModel.Tokens.IssuerTokenResolver>.</span></span> <span data-ttu-id="36642-130">權杖解析程式會維護一組物件-金鑰組的字典，這些是從為類別定義的自訂設定元素（）初始化的 `<AddAudienceKeyPair>` 。</span><span class="sxs-lookup"><span data-stu-id="36642-130">The token resolver maintains a dictionary of audience-key pairs that is initialized from a custom configuration element (`<AddAudienceKeyPair>`) defined for the class.</span></span> <span data-ttu-id="36642-131">類別會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> 方法來處理這個元素。</span><span class="sxs-lookup"><span data-stu-id="36642-131">The class overrides the <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> method to process this element.</span></span> <span data-ttu-id="36642-132">此覆寫如下列範例所示：不過，為了簡潔起見，不會顯示其所呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="36642-132">The override is shown in the following example; however, the methods it calls are not shown for brevity.</span></span> <span data-ttu-id="36642-133">如需完整範例，請參閱 `CustomToken` 範例。</span><span class="sxs-lookup"><span data-stu-id="36642-133">For the complete example, see the `CustomToken` sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="07846-128">範例</span><span class="sxs-lookup"><span data-stu-id="07846-128">Example</span></span>  
+
+ <span data-ttu-id="07846-129">下列 XML 會根據衍生自的自訂類別，顯示簽發者權杖解析程式的設定 <xref:System.IdentityModel.Tokens.IssuerTokenResolver> 。</span><span class="sxs-lookup"><span data-stu-id="07846-129">The following XML shows configuration for an issuer token resolver that is based on a custom class that derives from <xref:System.IdentityModel.Tokens.IssuerTokenResolver>.</span></span> <span data-ttu-id="07846-130">權杖解析程式會維護從自訂設定專案初始化的物件-金鑰組字典， (`<AddAudienceKeyPair>`) 為類別定義。</span><span class="sxs-lookup"><span data-stu-id="07846-130">The token resolver maintains a dictionary of audience-key pairs that is initialized from a custom configuration element (`<AddAudienceKeyPair>`) defined for the class.</span></span> <span data-ttu-id="07846-131">類別會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> 方法以處理此元素。</span><span class="sxs-lookup"><span data-stu-id="07846-131">The class overrides the <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> method to process this element.</span></span> <span data-ttu-id="07846-132">覆寫會顯示在下列範例中：但為了簡潔起見，並不會顯示其所呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="07846-132">The override is shown in the following example; however, the methods it calls are not shown for brevity.</span></span> <span data-ttu-id="07846-133">如需完整範例，請參閱 `CustomToken` 範例。</span><span class="sxs-lookup"><span data-stu-id="07846-133">For the complete example, see the `CustomToken` sample.</span></span>  
   
 ```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  
@@ -70,7 +75,7 @@ ms.locfileid: "79152667"
 </issuerTokenResolver>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="36642-134">範例</span><span class="sxs-lookup"><span data-stu-id="36642-134">Example</span></span>
+## <a name="example"></a><span data-ttu-id="07846-134">範例</span><span class="sxs-lookup"><span data-stu-id="07846-134">Example</span></span>
   
 ```csharp
 public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)  
@@ -88,6 +93,6 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 }  
 ```
   
-## <a name="see-also"></a><span data-ttu-id="36642-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36642-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07846-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="07846-135">See also</span></span>
 
 - <xref:System.IdentityModel.Tokens.IssuerTokenResolver>
