@@ -1,16 +1,17 @@
 ---
-title: '如何合併和比較字串集合（LINQ）（c #）'
-description: '這個範例會合並包含文字行的檔案。 瞭解如何在 c # 的 LINQ 中執行簡單的串連、等位和交集。'
+title: '如何結合和比較字串集合 (LINQ)  (c # ) '
+description: '此範例會合並包含文字行的檔案。 瞭解如何在 c # 中進行簡單的串連、等位，以及 LINQ 中各組線的交集。'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: bfbdb9a0a3d531b56578b242c91596d9e41b6cd6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 7bc2b2fbc6a6ce09305f870275f2f0ea5379d4fc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105362"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167596"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>如何合併和比較字串集合（LINQ）（c #）
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>如何結合和比較字串集合 (LINQ)  (c # ) 
+
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>設定專案和文字檔案  
@@ -170,9 +171,10 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

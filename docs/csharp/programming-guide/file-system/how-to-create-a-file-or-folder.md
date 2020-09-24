@@ -1,6 +1,6 @@
 ---
-title: '如何建立檔案或資料夾-c # 程式設計手冊'
-description: 瞭解如何以程式設計方式建立檔案或資料夾。 您可以建立資料夾、子資料夾、子資料夾中的檔案，以及將資料寫入該檔案。
+title: '如何建立檔案或資料夾-c # 程式設計指南'
+description: 瞭解如何以程式設計方式建立檔案或資料夾。 您可以在子資料夾中建立資料夾、子資料夾和檔案，然後將資料寫入該檔案。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: f5641dc765b1a2d62adb76babe3f111730d4550b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4d60b8c6c0f9d4ea66125374327f5e1ad2098694
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302681"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167440"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何建立檔案或資料夾（c # 程式設計手冊）
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何建立檔案或資料夾 (c # 程式設計手冊) 
+
 您可以程式設計的方式在電腦上建立資料夾、建立子資料夾、在子資料夾中建立檔案，以及將資料寫入檔案。  
   
 ## <a name="example"></a>範例  
+
  [!code-csharp[csFilesandFolders#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#10)]  
   
  若資料夾已經存在，<xref:System.IO.Directory.CreateDirectory%2A> 不會採取任何動作，也不會擲回任何例外狀況。 但 <xref:System.IO.File.Create%2A?displayProperty=nameWithType> 會以新的檔案取代現有的檔案。 此例使用 `if`-`else` 陳述式防止現有的檔案被取代。  
@@ -64,6 +66,7 @@ ms.locfileid: "87302681"
 - 資料夾名稱只是一個冒號 ":" (<xref:System.IO.PathTooLongException> 類別)。  
   
 ## <a name="net-security"></a>.NET 安全性  
+
  在部分信任的狀況下，可能會擲回 <xref:System.Security.SecurityException> 類別的執行個體。  
   
  如果您沒有建立資料夾的許可權，此範例會擲回類別的實例 <xref:System.UnauthorizedAccessException> 。  

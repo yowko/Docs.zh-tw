@@ -7,14 +7,15 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 3b24ff99eee9027d507ef89ca855162f221f826a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6f9e41584ca36fcead06b73a485cb879c45705fa
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555116"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166881"
 ---
 # <a name="specifying-an-assemblys-location"></a>指定組件的位置
+
 有兩種方式可以指定元件的位置：  
   
 - 使用 [\<codeBase>](./file-schema/runtime/codebase-element.md) 元素。  
@@ -24,6 +25,7 @@ ms.locfileid: "90555116"
  您也可以使用 [.NET Framework 設定工具 (mscorcfg.msc) ](/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) 指定元件位置，或指定 common language runtime 探查元件的位置。  
   
 ## <a name="using-the-codebase-element"></a>使用 \<codeBase> 元素  
+
  您 **\<codeBase>** 只能在電腦設定或發行者原則檔中使用專案，也會重新導向元件版本。 當執行時間判斷要使用的元件版本時，會從決定版本的檔案套用程式碼基底設定。 如果未指示任何程式碼基底，則執行時間會以一般方式探查元件。 如需詳細資訊，請參閱 [執行時間如何找出元件](../deployment/how-the-runtime-locates-assemblies.md)。  
   
  下列範例顯示如何指定元件的位置。  
@@ -50,6 +52,7 @@ ms.locfileid: "90555116"
 > 如果您要為不是強式名稱的元件提供程式碼基底提示，則提示必須指向應用程式基底或應用程式基底目錄的子目錄。  
   
 ## <a name="using-the-probing-element"></a>使用 \<probing> 元素  
+
  執行時間會找出不具程式碼基底的元件（藉由探查）。 如需探查的詳細資訊，請參閱 [執行時間如何找出元件](../deployment/how-the-runtime-locates-assemblies.md)。  
   
  您可以使用 [\<probing>](./file-schema/runtime/probing-element.md) 應用程式佈建檔中的專案，指定在尋找元件時，執行時間應搜尋的子目錄。 下列範例顯示如何指定執行時間應搜尋的目錄。  

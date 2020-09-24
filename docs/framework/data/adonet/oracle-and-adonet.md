@@ -1,28 +1,29 @@
 ---
 title: Oracle 和 ADO.NET
-description: 瞭解 Oracle .NET Framework Data Provider 的功能和行為，其可讓您使用 Oracle 呼叫介面來存取 Oracle 資料庫。
+description: 瞭解 Oracle 的 .NET Framework Data Provider 的功能和行為，此功能可讓您使用 Oracle 呼叫介面存取 Oracle 資料庫。
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 736b8dc5179a15ec219c1dae06b9ee6b5d6c3ef3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286685"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166621"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
+
 > [!NOTE]
 > <xref:System.Data.OracleClient> 中的型別已被取代。 目前版本的 .NET Framework 仍然支援這些型別，不過未來的版本就會將其移除。 Microsoft 建議您使用協力廠商的 Oracle 提供者。  
   
  本節說明 Oracle 的 .NET Framework Data Provider 特有的功能和行為。  
   
- Oracle 的 .NET Framework Data Provider 可讓您使用 oracle 用戶端軟體所提供的 Oracle 呼叫介面（OCI）來存取 Oracle 資料庫。 資料提供者的功能設計類似于 SQL Server、OLE DB 和 ODBC 的 .NET Framework 資料提供者。  
+ Oracle 的 .NET Framework Data Provider 可讓您使用 oracle 用戶端軟體所提供的 Oracle 呼叫介面 (OCI) ，來存取 Oracle 資料庫。 資料提供者的功能設計類似于 SQL Server、OLE DB 和 ODBC .NET Framework 資料提供者。  
   
- 若要使用 Oracle 的 .NET Framework Data Provider，應用程式必須參考 <xref:System.Data.OracleClient> 命名空間，如下所示：  
+ 若要使用 Oracle 的 .NET Framework Data Provider，應用程式必須參考命名空間，如下所示 <xref:System.Data.OracleClient> ：  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -39,8 +40,9 @@ csc /r:System.Data.OracleClient.dll
 ```  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [系統需求](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- 描述使用 Oracle 的 .NET Framework Data Provider 的需求，並說明使用時要注意的一些問題。  
+ 描述針對 Oracle 使用 .NET Framework Data Provider 的需求，並說明使用它時要注意的一些問題。  
   
  [Oracle BFILE](oracle-bfiles.md)  
  說明用來與 Oracle BFILE 資料型別搭配使用的 <xref:System.Data.OracleClient.OracleBFile> 類別。  
@@ -64,13 +66,14 @@ csc /r:System.Data.OracleClient.dll
  說明如果 <xref:System.Data.OracleClient.OracleConnection> 物件判定異動處於作用中，它會如何自動登記在現有的分散式異動中。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [設定 ADO.NET 應用程式的安全性](securing-ado-net-applications.md)  
  說明使用 ADO.NET 的安全程式碼撰寫實施方針。  
   
  [DataSet、DataTable 和 DataView](./dataset-datatable-dataview/index.md)  
  說明如何建立及使用 `DataSets`、具型別 `DataSets`、`DataTables` 和 `DataViews`。  
   
- [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)  
+ [在 ADO.NET 中傳送和修改資料](retrieving-and-modifying-data.md)  
  說明如何使用 ADO.NET 中的資料。  
   
  [SQL Server and ADO.NET](./sql/index.md) (SQL Server 和 ADO.NET)  

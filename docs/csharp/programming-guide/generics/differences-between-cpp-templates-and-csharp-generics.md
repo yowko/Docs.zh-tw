@@ -1,18 +1,19 @@
 ---
 title: C++ 樣板和 C# 泛型之間的差異 - C# 程式設計指南
-description: '瞭解 c + + 範本和 c # 泛型之間的差異。 兩者都是支援參數化型別的語言功能。'
+description: '深入瞭解 c + + 範本和 c # 泛型之間的差異。 兩者都是支援參數化型別的語言功能。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-ms.openlocfilehash: f405e2d4bef730317703b3b8470edef5b89f0bed
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 58b424e4dacd8b691c353f4eda1950f9710ef081
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301927"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167362"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ 樣板和 C# 泛型之間的差異 (C# 程式設計手冊)
+
 C# 泛型和 C++ 範本都是支援參數化型別的語言功能。 不過，這兩個之間有許多差異。 在語法層級，C# 泛型是沒有 C++ 範本複雜性之參數化型別的較簡單方式。 此外，C# 不會嘗試提供 C++ 範本所提供的所有功能。 在實作層級，主要差異是在執行階段執行 C# 泛型型別替代，因而保留具現化物件的泛型型別資訊。 如需詳細資訊，請參閱[執行階段中的泛型](./generics-in-the-run-time.md)。  
   
  下列是 C# 泛型與 C++ 範本之間的主要差異：  

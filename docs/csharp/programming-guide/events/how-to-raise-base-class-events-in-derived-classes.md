@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: 5456639052310cc64854e32caa1df9b391c042cb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b9708876e7d46072439ae498fd551a7b3b23a29e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558018"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167518"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>如何在衍生類別中引發基類事件 (c # 程式設計手冊) 
+
 下列簡單的範例示範在基底類別中宣告事件的標準方式，讓事件也可以從衍生類別引發。 此模式廣泛用於 .NET 類別庫中的 Windows Forms 類別。  
   
  當您建立可作為其他類別之基底類別的類別時，您應該考慮到事件其實是一種特殊的委派類型，只能在宣告事件的類別內予以叫用。 衍生類別無法直接叫用在基底類別內宣告的事件。 雖然有時您可能需要只能由基底類別引發的事件，但大多時候，您應該啟用衍生類別來叫用基底類別事件。 若要這樣做，您可以在包裝事件的基底類別中建立受保護的叫用方法。 藉由呼叫或覆寫這個叫用方法，衍生類別便能夠間接叫用該事件。  
@@ -21,6 +22,7 @@ ms.locfileid: "90558018"
 > 請勿在基底類別中宣告虛擬事件並在衍生類別中加以覆寫。 C# 編譯器無法正確處理這些事件，而且無法預測衍生事件的訂閱者是否會實際訂閱基底類別事件。  
   
 ## <a name="example"></a>範例  
+
  [!code-csharp[csProgGuideEvents#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#1)]  
   
 ## <a name="see-also"></a>另請參閱

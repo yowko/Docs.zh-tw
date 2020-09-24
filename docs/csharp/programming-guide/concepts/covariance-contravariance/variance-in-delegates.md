@@ -3,14 +3,15 @@ title: 委派中的差異 (C#)
 description: 瞭解 .NET 中的變異數支援如何讓您將方法簽章與所有委派中的委派類型進行比對。
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 02b59dd97cedc6ab35c3122912ee528f7ca29238
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 359f7051aa2eeb5d2dc9fef3d9ccb1e4aaebfb5c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466127"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167739"
 ---
 # <a name="variance-in-delegates-c"></a>委派中的差異 (C#)
+
 .NET framework 3.5 推出差異支援，在 C# 中比對方法簽章和所有委派的委派型別。 這表示您可以指派給委派的不只是具有相符簽章的方法，也可以是會傳回更多衍生型別 (共變數) 的方法，或接受衍生型別 (反變數) 比委派型別指定少的參數的方法。 這包括泛型和非泛型委派。  
   
  例如，請考慮下列程式碼，有兩個類別和兩個委派︰泛型和非泛型。  
@@ -66,6 +67,7 @@ SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;
  如需更多範例，請參閱[在委派中使用差異 (C#)](./using-variance-in-delegates.md) 和[針對 Func 與 Action 泛型委派使用差異 (C#)](./using-variance-for-func-and-action-generic-delegates.md)。  
   
 ## <a name="variance-in-generic-type-parameters"></a>泛型型別參數中的差異  
+
  在 .NET Framework 4 或更新版本中可以啟用委派之間的隱含轉換，因此具有泛型型別參數所指定的不同型別的泛型委派可互相指派，如果型別繼承自彼此，如差異所要求。  
   
  若要啟用隱含轉換，您必須使用 `in` 或 `out` 關鍵字，明確宣告委派中的泛型參數為 Covariant 或 Contravariant。  
@@ -127,6 +129,7 @@ public static void Test()
  如需詳細資訊及更多範例，請參閱[針對 Func 與 Action 泛型委派使用差異 (C#)](./using-variance-for-func-and-action-generic-delegates.md)。  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>宣告泛型委派中的 Variant 型別參數  
+
  如果泛型委派具有 Covariant 或 Contravariant 泛型型別參數，它可以稱之為「Variant 泛型委派」**。  
   
  您可以使用 `out` 關鍵字將泛型委派中的泛型型別參數宣告為 Covariant。 Covariant 型別僅可用為方法傳回型別，不能用為方法引數的型別。 以下程式碼範例會示範如何宣告 Covariant 泛型委派。  
@@ -151,6 +154,7 @@ public delegate R DVariant<in A, out R>(A a);
 ```  
   
 ### <a name="instantiating-and-invoking-variant-generic-delegates"></a>具現化及叫用 Variant 泛型委派  
+
  您可以具現化及叫用 Variant 委派，一如您具現化及叫用非變異委派。 在下例中，委派是由 lambda 運算式具現化。  
   
 ```csharp  
@@ -172,6 +176,7 @@ Action<string> actStr = x => Console.WriteLine("string: {0}", x);
 ```  
   
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>實值型別和參考型別的泛型型別參數中的差異  
+
  僅參考型別支援泛型型別參數的差異。 例如，因為整數是實值型別，所以 `DVariant<int>` 無法以隱含方式轉換成`DVariant<Object>` 或 `DVariant<long>`。  
   
  下例示範實值型別不支援的泛型型別參數的差異。  

@@ -1,20 +1,21 @@
 ---
-title: '如何訂閱和取消訂閱事件-c # 程式設計手冊'
-description: 瞭解如何訂閱及取消訂閱事件。 使用 Visual Studio IDE、以程式設計方式或使用匿名方法來訂閱事件。
+title: '如何訂閱和取消訂閱事件-c # 程式設計指南'
+description: 瞭解如何訂閱和取消訂閱事件。 使用 Visual Studio IDE，以程式設計方式或使用匿名方法來訂閱事件。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 4aecbbd58268e7b50a34f503160edd1eca4fe659
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 1e090301982a785fed2a8a6a95ee48bd1c7457ab
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063621"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167479"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何訂閱和取消訂閱事件 (c # 程式設計手冊) 
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何訂閱和取消訂閱事件 (c # 程式設計指南) 
+
 如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。 例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>使用 Visual Studio IDE 訂閱事件  
@@ -58,7 +59,7 @@ ms.locfileid: "88063621"
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     您也可以使用[lambda 運算式](../../language-reference/operators/lambda-expressions.md)來指定事件處理常式：
+     您也可以使用 [lambda 運算式](../../language-reference/operators/lambda-expressions.md) 來指定事件處理常式：
   
     ```csharp
     public Form1()  
@@ -86,6 +87,7 @@ ms.locfileid: "88063621"
      請務必注意，如果使用了匿名函式訂閱事件，則無法輕易取消訂閱事件。 若要在這種情況下取消訂閱，您必須回到訂閱事件所在的程式碼，將此匿名方法儲存在委派變數中，然後將委派新增至事件。 一般而言，如果您稍後必須在程式碼中取消訂閱事件，建議您不要使用匿名函式訂閱事件。 如需匿名函式的詳細資訊，請參閱[匿名函式](../statements-expressions-operators/anonymous-functions.md)。  
   
 ## <a name="unsubscribing"></a>取消訂閱  
+
  若要防止在引發事件時叫用事件處理常式，請取消訂閱事件。 為了避免資源流失，請先取消訂閱事件，再處置訂閱者物件。 在取消訂閱事件之前，發行物件的事件之下的多點傳送委派都會參考封裝訂閱者事件處理常式的委派。 只要發行物件還有該參考，記憶體回收就不會刪除訂閱者物件。  
   
 #### <a name="to-unsubscribe-from-an-event"></a>取消訂閱事件  
@@ -102,6 +104,6 @@ ms.locfileid: "88063621"
 
 - [事件](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [如何發行符合 .NET 指導方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [如何發佈符合 .NET 指導方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [- 及 = 運算子](../../language-reference/operators/subtraction-operator.md)
-- [+ 和 + = 運算子](../../language-reference/operators/addition-operator.md)
+- [+ 及 + = 運算子](../../language-reference/operators/addition-operator.md)
