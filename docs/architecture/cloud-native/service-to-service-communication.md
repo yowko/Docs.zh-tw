@@ -3,12 +3,12 @@ title: 服務對服務通訊
 description: 瞭解後端雲端原生微服務與其他後端微服務的通訊方式。
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9761b99cd9ad076eb82a23a00ec3099e8913168b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539799"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166075"
 ---
 # <a name="service-to-service-communication"></a>服務對服務通訊
 
@@ -54,7 +54,7 @@ ms.locfileid: "90539799"
 
 ### <a name="materialized-view-pattern"></a>具體化檢視模式
 
-移除微服務結合的常用選項是 [具體化視圖模式](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)。 使用這個模式時，微服務會儲存自己的本機反正規化資料複本，而這些資料是由其他服務所擁有。 除了購物籃微服務查詢產品類別目錄和定價微服務以外，它還會維護自己的本機資料複本。 此模式可消除不必要的結合，並改善可靠性和回應時間。 整個作業會在單一進程中執行。 我們會在第5章中探索此模式和其他資料考慮。
+移除微服務結合的常用選項是 [具體化視圖模式](/azure/architecture/patterns/materialized-view)。 使用這個模式時，微服務會儲存自己的本機反正規化資料複本，而這些資料是由其他服務所擁有。 除了購物籃微服務查詢產品類別目錄和定價微服務以外，它還會維護自己的本機資料複本。 此模式可消除不必要的結合，並改善可靠性和回應時間。 整個作業會在單一進程中執行。 我們會在第5章中探索此模式和其他資料考慮。
 
 ### <a name="service-aggregator-pattern"></a>服務匯總工具模式
 
@@ -94,7 +94,7 @@ ms.locfileid: "90539799"
 
 Azure 儲存體佇列提供簡單、經濟實惠且受 Azure 儲存體帳戶支援的簡單佇列基礎結構。
 
-[Azure 儲存體佇列](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction) 是以 REST 為基礎的佇列機制，提供可靠且持續性的訊息。 它們提供基本的功能集，但價格低廉且儲存數百萬則訊息。 其容量範圍最高可達 500 TB。 單一訊息的大小最高可達 64 KB。
+[Azure 儲存體佇列](/azure/storage/queues/storage-queues-introduction) 是以 REST 為基礎的佇列機制，提供可靠且持續性的訊息。 它們提供基本的功能集，但價格低廉且儲存數百萬則訊息。 其容量範圍最高可達 500 TB。 單一訊息的大小最高可達 64 KB。
 
 您可以使用 HTTP 或 HTTPS，透過經過驗證的呼叫來存取來自世界各地的訊息。 儲存體佇列可以擴充至大量的並行用戶端，以處理流量尖峰。
 
@@ -122,13 +122,13 @@ Azure 儲存體佇列是在您的雲端原生應用程式中執行命令訊息�
 
 如需更複雜的訊息需求，請考慮 Azure 服務匯流排佇列。
 
-在穩固的訊息基礎結構上， [Azure 服務匯流排](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) 支援代理 *訊息模型*。 訊息會可靠地儲存在訊息代理程式中， (佇列) 到取用者收到為止。 佇列可保證先進先出或先出 (FIFO) 訊息傳遞，遵守訊息新增至佇列的順序。
+在穩固的訊息基礎結構上， [Azure 服務匯流排](/azure/service-bus-messaging/service-bus-messaging-overview) 支援代理 *訊息模型*。 訊息會可靠地儲存在訊息代理程式中， (佇列) 到取用者收到為止。 佇列可保證先進先出或先出 (FIFO) 訊息傳遞，遵守訊息新增至佇列的順序。
 
-訊息的大小可能會大很多，最高可達 256 KB。 訊息會保留在佇列中一段無限制的時間。 服務匯流排不僅支援以 HTTP 為基礎的呼叫，還可提供 [AMQP 通訊協定](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-amqp-overview)的完整支援。 AMQP 是跨廠商提供的開放式標準，可支援二進位通訊協定和更高程度的可靠性。
+訊息的大小可能會大很多，最高可達 256 KB。 訊息會保留在佇列中一段無限制的時間。 服務匯流排不僅支援以 HTTP 為基礎的呼叫，還可提供 [AMQP 通訊協定](/azure/service-bus-messaging/service-bus-amqp-overview)的完整支援。 AMQP 是跨廠商提供的開放式標準，可支援二進位通訊協定和更高程度的可靠性。
 
-服務匯流排提供一組豐富的功能，包括 [交易支援](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions) 和 [重複的偵測功能](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection)。 佇列可保證每則訊息「最多傳遞一次」。 它會自動捨棄已傳送的訊息。 如果生產者不確定，它可以重新傳送相同的訊息，而服務匯流排保證只會處理一個複本。 重複偵測可讓您不必建立額外的基礎結構配管。
+服務匯流排提供一組豐富的功能，包括 [交易支援](/azure/service-bus-messaging/service-bus-transactions) 和 [重複的偵測功能](/azure/service-bus-messaging/duplicate-detection)。 佇列可保證每則訊息「最多傳遞一次」。 它會自動捨棄已傳送的訊息。 如果生產者不確定，它可以重新傳送相同的訊息，而服務匯流排保證只會處理一個複本。 重複偵測可讓您不必建立額外的基礎結構配管。
 
-另外還有兩個企業功能：資料分割和會話。 傳統的服務匯流排佇列是由單一訊息代理程式處理，並儲存在單一訊息存放區中。 但是， [服務匯流排資料分割](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) 會將佇列分散到多個訊息代理程式和訊息存放區。 整體輸送量不會再受到單一訊息代理程式或訊息存放區的效能所限制。 訊息存放區暫時中斷時，不會轉譯資料分割佇列無法使用。
+另外還有兩個企業功能：資料分割和會話。 傳統的服務匯流排佇列是由單一訊息代理程式處理，並儲存在單一訊息存放區中。 但是， [服務匯流排資料分割](/azure/service-bus-messaging/service-bus-partitioning) 會將佇列分散到多個訊息代理程式和訊息存放區。 整體輸送量不會再受到單一訊息代理程式或訊息存放區的效能所限制。 訊息存放區暫時中斷時，不會轉譯資料分割佇列無法使用。
 
 [服務匯流排會話](https://codingcanvas.com/azure-service-bus-sessions/) 可提供群組相關訊息的方式。 想像一種工作流程案例，其中的訊息必須一起處理，並在結束時完成操作。 若要充分利用，必須明確啟用佇列的會話，而且每個相關的 messaged 都必須包含相同的會話識別碼。
 
@@ -148,7 +148,7 @@ Azure 儲存體佇列是在您的雲端原生應用程式中執行命令訊息�
 
 為了解決這種情況，我們將移至第三種類型的訊息互動，也就是 *活動*。 其中一個微服務宣佈已發生動作。 其他微服務，如果有興趣，請回應動作或事件。
 
-事件是兩個步驟的程式。 針對指定的狀態變更，微服務會將事件發佈至訊息代理程式，使其可供任何其他感興趣的微服務使用。 有興趣的微服務會透過訂閱訊息代理程式中的事件來通知。 您可以使用 [發佈/訂閱](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber) 模式來執行以 [事件為基礎的通訊](https://docs.microsoft.com/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications)。
+事件是兩個步驟的程式。 針對指定的狀態變更，微服務會將事件發佈至訊息代理程式，使其可供任何其他感興趣的微服務使用。 有興趣的微服務會透過訂閱訊息代理程式中的事件來通知。 您可以使用 [發佈/訂閱](/azure/architecture/patterns/publisher-subscriber) 模式來執行以 [事件為基礎的通訊](/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications)。
 
 圖4-15 顯示購物籃微服務發佈事件與另外兩個微服務訂閱。
 
@@ -158,7 +158,7 @@ Azure 儲存體佇列是在您的雲端原生應用程式中執行命令訊息�
 
 請注意位於通道中間的 *事件匯流排* 元件。 它是一個自訂類別，它會封裝訊息代理程式，並將它與基礎應用程式分離。 訂購和清查微服務會獨立操作事件，而不知道彼此，也不會有購物籃微服務。 當註冊的事件發佈至事件匯流排時，它們會在其上採取動作。
 
-使用事件時，我們會從佇列技術移至 *主題*。 [主題](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)與佇列類似，但支援一對多訊息模式。 其中一個微服務會發佈訊息。 多個訂閱微服務可以選擇接收和處理該訊息。 圖4-16 顯示主題架構。
+使用事件時，我們會從佇列技術移至 *主題*。 [主題](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)與佇列類似，但支援一對多訊息模式。 其中一個微服務會發佈訊息。 多個訂閱微服務可以選擇接收和處理該訊息。 圖4-16 顯示主題架構。
 
 ![主題架構](./media/topic-architecture.png)
 
@@ -170,17 +170,17 @@ Azure 雲端支援兩種不同的主題服務： Azure 服務匯流排主題和 
 
 ### <a name="azure-service-bus-topics"></a>Azure 服務匯流排主題
 
-在 Azure 服務匯流排佇列的相同健全的代理訊息模型上， [Azure 服務匯流排主題](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)。 主題可以接收來自多個獨立發行者的訊息，並將訊息傳送至最多2000的訂閱者。 您可以在執行時間動態新增或移除訂閱，而不需要停止系統或重新建立主題。
+在 Azure 服務匯流排佇列的相同健全的代理訊息模型上， [Azure 服務匯流排主題](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)。 主題可以接收來自多個獨立發行者的訊息，並將訊息傳送至最多2000的訂閱者。 您可以在執行時間動態新增或移除訂閱，而不需要停止系統或重新建立主題。
 
-Azure 服務匯流排佇列的許多先進功能也可用於主題，包括 [重複的偵測](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection) 和 [交易支援](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions)。 根據預設，服務匯流排主題是由單一訊息代理程式處理，並儲存在單一訊息存放區中。 但是， [服務匯流排資料分割](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) 會將某個主題分散到許多訊息代理程式和訊息存放區，以進行調整。
+Azure 服務匯流排佇列的許多先進功能也可用於主題，包括 [重複的偵測](/azure/service-bus-messaging/duplicate-detection) 和 [交易支援](/azure/service-bus-messaging/service-bus-transactions)。 根據預設，服務匯流排主題是由單一訊息代理程式處理，並儲存在單一訊息存放區中。 但是， [服務匯流排資料分割](/azure/service-bus-messaging/service-bus-partitioning) 會將某個主題分散到許多訊息代理程式和訊息存放區，以進行調整。
 
-[排定的訊息傳遞](https://docs.microsoft.com/azure/service-bus-messaging/message-sequencing) 會標記具有特定時間來處理的訊息。 訊息在這段時間之前不會出現在主題中。 [訊息延遲](https://docs.microsoft.com/azure/service-bus-messaging/message-deferral) 可讓您延後將訊息抓取到較晚的時間。 兩者通常用於以特定連續處理作業的工作流程處理案例中。 您可以延後處理已接收的訊息，直到之前的工作完成為止。
+[排定的訊息傳遞](/azure/service-bus-messaging/message-sequencing) 會標記具有特定時間來處理的訊息。 訊息在這段時間之前不會出現在主題中。 [訊息延遲](/azure/service-bus-messaging/message-deferral) 可讓您延後將訊息抓取到較晚的時間。 兩者通常用於以特定連續處理作業的工作流程處理案例中。 您可以延後處理已接收的訊息，直到之前的工作完成為止。
 
 服務匯流排主題是一種功能強大且經過證實的技術，可在您的雲端原生系統中啟用發佈/訂閱通訊。
 
-### <a name="azure-event-grid"></a>Azure Event Grid
+### <a name="azure-event-grid"></a>Azure 事件方格
 
-雖然 Azure 服務匯流排是經過大量測試的訊息代理程式，其中包含一組完整的企業功能，但 [Azure 事件方格](https://docs.microsoft.com/azure/event-grid/overview) 是此區塊的新小孩。
+雖然 Azure 服務匯流排是經過大量測試的訊息代理程式，其中包含一組完整的企業功能，但 [Azure 事件方格](/azure/event-grid/overview) 是此區塊的新小孩。
 
 乍看之下，事件方格看起來可能就像是另一個以主題為基礎的訊息系統。 不過，它在許多方面都是不同的。 它著重于事件驅動的工作負載，可讓您在無伺服器基礎結構上進行即時事件處理、深層 Azure 整合和開放式平臺。 它是專為現代的雲端原生和無伺服器應用程式所設計
 
@@ -206,9 +206,9 @@ EventGrid 和服務匯流排之間的主要差異在於基礎 *訊息交換模�
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>在 Azure 雲端中串流處理訊息
 
-Azure 服務匯流排和 Event Grid 為公開單一、離散事件的應用程式提供絕佳的支援，例如已將新檔插入 Cosmos DB。 但是，如果您的雲端原生系統需要處理 *相關事件的資料流程*，該怎麼辦？ [事件資料流程](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) 更為複雜。 它們通常是經過時間排序、相互關聯，而且必須以群組的方式處理。
+Azure 服務匯流排和 Event Grid 為公開單一、離散事件的應用程式提供絕佳的支援，例如已將新檔插入 Cosmos DB。 但是，如果您的雲端原生系統需要處理 *相關事件的資料流程*，該怎麼辦？ [事件資料流程](/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) 更為複雜。 它們通常是經過時間排序、相互關聯，而且必須以群組的方式處理。
 
-[Azure 事件中樞](https://azure.microsoft.com/services/event-hubs/) 是一種資料串流平臺和事件內嵌服務，可收集、轉換和儲存事件。 它可以微調來捕捉串流資料，例如從遙測內容發出的連續事件通知。 這項服務可高度擴充，而且每秒可以儲存和 [處理數百萬個事件](https://docs.microsoft.com/azure/event-hubs/event-hubs-about)。 如圖4-18 所示，這通常是事件管線的大門，可將內嵌串流與事件耗用量分離。
+[Azure 事件中樞](https://azure.microsoft.com/services/event-hubs/) 是一種資料串流平臺和事件內嵌服務，可收集、轉換和儲存事件。 它可以微調來捕捉串流資料，例如從遙測內容發出的連續事件通知。 這項服務可高度擴充，而且每秒可以儲存和 [處理數百萬個事件](/azure/event-hubs/event-hubs-about)。 如圖4-18 所示，這通常是事件管線的大門，可將內嵌串流與事件耗用量分離。
 
 ![Azure 事件中樞](./media/azure-event-hub.png)
 
@@ -216,9 +216,9 @@ Azure 服務匯流排和 Event Grid 為公開單一、離散事件的應用程�
 
 事件中樞支援低延遲和可設定的保留時間。 不同于佇列和主題，事件中樞會在取用者讀取事件資料後保留事件資料。 這項功能可讓其他資料分析服務（內部和外部）重新執行資料，以供進一步分析。 只有在保留期限到期時，才會刪除儲存在事件中樞的事件（預設為一天，但可進行設定）。
 
-事件中樞支援常見的事件發佈通訊協定，包括 HTTPS 和 AMQP。 它也支援 Kafka 1.0。 [現有的 Kafka 應用程式可以使用 Kafka 通訊協定與事件中樞通訊，](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) 提供管理大型 Kafka 叢集的替代方案。 許多開放原始碼的雲端原生系統都採用 Kafka。
+事件中樞支援常見的事件發佈通訊協定，包括 HTTPS 和 AMQP。 它也支援 Kafka 1.0。 [現有的 Kafka 應用程式可以使用 Kafka 通訊協定與事件中樞通訊，](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) 提供管理大型 Kafka 叢集的替代方案。 許多開放原始碼的雲端原生系統都採用 Kafka。
 
-事件中樞會透過資料分割取用 [者模型](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) 來執行訊息串流，而每個取用者只會讀取訊息資料流程的特定子集或資料分割。 此模式支援大幅的水平擴充來處理事件，並提供佇列和主題所沒有的其他串流功能。 資料分割是經過排序且保存在事件中樞內的事件序列。 當較新的事件送達時，系統會將其新增至序列的結尾。圖4-19 顯示事件中樞內的資料分割。
+事件中樞會透過資料分割取用 [者模型](/azure/event-hubs/event-hubs-features) 來執行訊息串流，而每個取用者只會讀取訊息資料流程的特定子集或資料分割。 此模式支援大幅的水平擴充來處理事件，並提供佇列和主題所沒有的其他串流功能。 資料分割是經過排序且保存在事件中樞內的事件序列。 當較新的事件送達時，系統會將其新增至序列的結尾。圖4-19 顯示事件中樞內的資料分割。
 
 ![事件中樞資料分割](./media/event-hub-partitioning.png)
 

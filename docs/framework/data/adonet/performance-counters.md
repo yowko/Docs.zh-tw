@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4f645a51996078f8dd80b6c455c420633db36155
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557901"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164595"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的效能計數器
+
 ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支援。 舊版 ADO.NET 中提供的 <xref:System.Data.SqlClient> 效能計數器已被本主題中討論的新效能計數器取代。 您可以使用 ADO.NET 效能計數器來監控應用程式的狀態及其使用的連接資源。 效能計數器可藉由「Windows 效能監視器」來進行監視，或可藉由 <xref:System.Diagnostics.PerformanceCounter> 命名空間 (Namespace) 中的 <xref:System.Diagnostics> 類別以程式設計的方式存取。  
   
 ## <a name="available-performance-counters"></a>可用的效能計數器  
+
  目前有 14 種不同的效能計數器可供 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 使用 (如下表所述)。 請注意，個別計數器的名稱並未在 Microsoft .NET Framework 的區域版本中當地語系化。  
   
 |效能計數器|描述|  
@@ -37,10 +39,13 @@ ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:S
 |`SoftDisconnectsPerSecond`|正傳回至連接集區的現用連接的數目。 **注意：**  預設不會啟用此效能計數器。 若要啟用此效能計數器，請參閱啟用 [預設為預設的計數器](#ActivatingOffByDefault)。|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>連接集區群組和連接集區  
+
  在使用「Windows 驗證」(整合式安全性) 時，必須同時監控 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 效能計數器。 原因是連接集區群組會對應至唯一的連接字串。 使用整合式安全性時，連接集區會對應至連接字串，並針對個別的 Windows 識別 (Identity) 額外建立獨立的集區。 例如，如果 Fred 和 Julie 位於相同的 AppDomain 內，且兩者都使用連接字串 `"Data Source=MySqlServer;Integrated Security=true"`，則會針對連接字串建立連接集區群組，並針對 Fred 和 Julie 建立兩個額外的集區。 如果 John 和 Martha 使用的連接字串具有相同的 SQL Server 登入， `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` 則只會針對 **lowPrivUser** 身分識別建立單一集區。  
   
 <a name="ActivatingOffByDefault"></a>
+
 ### <a name="activating-off-by-default-counters"></a>啟動依預設關閉的計數器  
+
  效能計數器 `NumberOfFreeConnections`、`NumberOfActiveConnections`、`SoftDisconnectsPerSecond` 和 `SoftConnectsPerSecond` 預設會關閉。 請將下列資訊加入至應用程式的組態檔加以啟用：  
   
 ```xml  
@@ -53,6 +58,7 @@ ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:S
 ```  
   
 ## <a name="retrieving-performance-counter-values"></a>擷取效能計數器值  
+
  下列主控台應用程式顯示如何在應用程式中擷取效能計數器值。 連接必須為開啟及使用中，才能傳回所有 ADO.NET 效能計數器的資訊。  
   
 > [!NOTE]
@@ -400,6 +406,6 @@ class Program
 - [連接到資料來源](connecting-to-a-data-source.md)
 - [OLE DB、ODBC 和 Oracle 連接共用](ole-db-odbc-and-oracle-connection-pooling.md)
 - [ASP.NET 的效能計數器](/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [執行時間分析](../../debug-trace-profile/runtime-profiling.md)
+- [執行階段分析](../../debug-trace-profile/runtime-profiling.md)
 - [監視效能閾值簡介](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 31bf2e543bf20199fbeeaa8d00f808650092ff00
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 368f2546652d21be44c0ffb4cc5f279c56beda51
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546955"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165988"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>如何：手動產生用戶端資料服務類別 (WCF 資料服務)
+
 WCF Data Services 與 Visual Studio 整合，可讓您在使用 [ **加入服務參考** ] 對話方塊，將參考加入至 Visual Studio 專案中的資料服務時，自動產生用戶端資料服務類別。 如需詳細資訊，請參閱 [如何：加入資料服務參考](how-to-add-a-data-service-reference-wcf-data-services.md)。 您也可以使用程式碼產生工具 `DataSvcUtil.exe`，手動產生同樣的用戶端資料服務類別。 這項工具（隨附于 WCF Data Services）會從資料服務定義產生 .NET Framework 類別。 同時，這項工具也可根據概念模型 (.csdl) 檔案，以及在 Visual Studio 專案中代表 Entity Framework 模型的 .edmx 檔案產生資料服務類別。
 
  本主題的範例會根據 Northwind 範例資料服務建立用戶端資料服務類別。 這項服務會在您完成 [WCF Data Services 快速入門](quickstart-wcf-data-services.md)時建立。 本主題中的某些範例需要 Northwind 模型的概念模型檔案。 如需詳細資訊，請參閱 [如何：使用 EdmGen.exe 產生模型和對應](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)檔。 本主題中的某些範例需要 Northwind 模型的 .edmx 檔。 如需詳細資訊，請參閱 [.edmx 檔案總覽](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。

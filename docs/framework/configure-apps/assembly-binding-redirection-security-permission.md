@@ -6,14 +6,15 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: ea2b735b2c98b588903c4393f21c6b743910854a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2de2c50f5adb9e9fa36ea015ef498e9953c83005
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552371"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165217"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>組件繫結重新導向安全性使用權限
+
 在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 藉由在上設定旗標來授與許可權 <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission> 。 Managed 元件預設沒有任何許可權。  
   
  安全性許可權會授與在信任區域 (本機電腦) 和內部網路區域中執行的應用程式。 在網際網路區域中執行的應用程式，完全禁止執行元件系結重新導向。  

@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3edafa6c6a1bc3da2abc0598f329caf0e2f21e8b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c00e5e42508160a210d16f058c46afbf62ae0ee0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786259"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164723"
 ---
 # <a name="handling-datatable-events"></a>處理 DataTable 的事件
+
 <xref:System.Data.DataTable> 物件提供一系列可由應用程式處理的事件。 下表說明 `DataTable` 事件。  
   
-|Event - 事件|描述|  
+|事件|描述|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|發生在呼叫 <xref:System.Data.DataTable.EndInit%2A> 的 `DataTable` 方法之後。 這個事件主要是為了支援設計階段案例而提供。|  
 |<xref:System.Data.DataTable.ColumnChanged>|發生在成功變更 <xref:System.Data.DataColumn> 中的值之後。|  
@@ -36,6 +37,7 @@ ms.locfileid: "70786259"
 > 如果從中引發 `DataSet` 事件的 `RowChanged` 已修改了資料，就可能會發生資料損毀。 如果發生這類資料損毀，就不會引發任何例外狀況 (Exception)。  
   
 ## <a name="additional-related-events"></a>其他相關事件  
+
  <xref:System.Data.DataTable.Constraints%2A> 屬性會保存 <xref:System.Data.ConstraintCollection> 執行個體 (Instance)。 <xref:System.Data.ConstraintCollection> 類別會公開 <xref:System.Data.ConstraintCollection.CollectionChanged> 事件。 從 `ConstraintCollection` 加入、修改或移除條件約束 (Constraint) 時，就會引發這個事件。  
   
  <xref:System.Data.DataTable.Columns%2A> 屬性會保存 <xref:System.Data.DataColumnCollection> 執行個體 (Instance)。 `DataColumnCollection` 類別會公開 <xref:System.Data.DataColumnCollection.CollectionChanged> 事件。 從 `DataColumn` 加入、修改或移除 `DataColumnCollection` 時，就會引發這個事件。 對名稱、型別、運算式或資料行序數位置所做的變更，都屬於會導致引發此事件的修改作業。  
@@ -45,6 +47,7 @@ ms.locfileid: "70786259"
  對 `DataRows` 所做的變更也可能觸發相關 <xref:System.Data.DataView> 的事件。 `DataView` 類別會公開 <xref:System.Data.DataView.ListChanged> 事件，此事件會在 `DataColumn` 值變更或檢視的組合或排序次序變更時引發。 <xref:System.Data.DataRowView> 類別會公開 <xref:System.Data.DataRowView.PropertyChanged> 事件，此事件會在相關的 `DataColumn` 值變更時引發。  
   
 ## <a name="sequence-of-operations"></a>作業序列  
+
  這是發生在加入、修改或刪除 `DataRow` 後的作業序列：  
   
 1. 建立建議的記錄並套用任何變更。  
@@ -74,6 +77,7 @@ ms.locfileid: "70786259"
 > 請勿在 <xref:System.NullReferenceException> 事件處理常式內部擲回 `RowChanged`。 如果在 <xref:System.NullReferenceException> 的 `RowChanged` 事件內部擲回 `DataTable`，將會損毀 `DataTable`。  
   
 ### <a name="example"></a>範例  
+
  下列範例示範如何建立 `RowChanged`、`RowChanging`、`RowDeleted`、`RowDeleting`、`ColumnChanged`、`ColumnChanging`、`TableNewRow`、`TableCleared` 和 `TableClearing` 事件的事件處理常式。 每個事件處理常式在引發時，都會將輸出顯示在主控台視窗中。  
   
  [!code-csharp[DataWorks DataTable.Events#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.Events/CS/source.cs#1)]
@@ -82,6 +86,6 @@ ms.locfileid: "70786259"
 ## <a name="see-also"></a>另請參閱
 
 - [在 DataTable 中操作資料](manipulating-data-in-a-datatable.md)
-- [處理 DataAdapter 事件](../handling-dataadapter-events.md)
+- [處理 DataAdapter 的事件](../handling-dataadapter-events.md)
 - [處理 DataSet 的事件](handling-dataset-events.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)
