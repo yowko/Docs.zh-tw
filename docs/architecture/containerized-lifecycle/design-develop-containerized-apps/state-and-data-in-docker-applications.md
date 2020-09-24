@@ -2,12 +2,12 @@
 title: Docker 應用程式中的狀態和資料
 description: 了解將狀態儲存在容器化應用程式的可用選項。
 ms.date: 08/06/2020
-ms.openlocfilehash: dc9a1a3eccb77e9fd67e69fd3295f3db1edf5e66
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: d55519e9340ec06588c2dae3e7363d03f263ce39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915330"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163462"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
 
@@ -27,7 +27,7 @@ ms.locfileid: "87915330"
 
 - [Azure 儲存體](https://azure.microsoft.com/documentation/services/storage/)備有異地分散式儲存體，為容器提供理想的長期持續性解決方案。
 
-- 遠端關聯式資料庫 (例如 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/))、NoSQL 資料庫 (例如 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)) 或快取服務 (例如 [Redis](https://redis.io/))。
+- 遠端關聯式資料庫 (例如 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/))、NoSQL 資料庫 (例如 [Azure Cosmos DB](/azure/cosmos-db/introduction)) 或快取服務 (例如 [Redis](https://redis.io/))。
 
 從 Docker 容器：
 
@@ -43,11 +43,11 @@ ms.locfileid: "87915330"
 
 **繫結裝載**已持續提供很長時間，允許將任何資料夾對應到容器中的掛接點。 繫結裝載的限制比磁碟區更多，且具有某些重要的安全性問題，因此磁碟區是建議的選項。
 
-** `tmpfs` 裝載**是虛擬資料夾，只會存留在主機的記憶體中，而且永遠不會寫入檔案系統。 它們既快速又安全，但會使用記憶體，且僅適用於非持續性資料。
+** `tmpfs` 裝載**是只存留于主機記憶體且永遠不會寫入檔案系統中的虛擬資料夾。 它們既快速又安全，但會使用記憶體，且僅適用於非持續性資料。
 
 如圖 4-5 所示，一般 Docker 磁碟區可儲存在容器本身之外，但必須在主機伺服器或 VM 的實體界限內。 不過，Docker 容器無法從一部主機伺服器或 VM 存取另一部主機伺服器或 VM 的磁碟區。 換句話說，使用這些磁碟區，將無法管理在不同 Docker 主機上執行容器間所共用的資料，雖然仍可透過支援遠端主機的磁碟區驅動程式來達到此目的。
 
-![顯示儲存在容器外部之 Docker 磁片區的圖表。](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
+![此圖顯示儲存在容器外部的 Docker 磁片區。](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
 **圖 4-5**。 容器式應用程式的磁碟區和外部資料來源
 
@@ -63,7 +63,7 @@ ms.locfileid: "87915330"
 
 - 資料表儲存體可儲存結構化的資料集。 表格儲存體是 NoSQL 索引鍵屬性資料存放區，可快速開發及存取大量資料。
 
-**關聯式資料庫和 NoSQL 資料庫。** 外部資料庫有許多選擇，包括 SQL Server、于 postgresql、Oracle 之類的關係資料庫，或如 Azure Cosmos DB、MongoDB 等的 NoSQL 資料庫。這些資料庫不會在本指南中說明，因為它們是完全不同的主題。
+**關聯式資料庫和 NoSQL 資料庫。** 外部資料庫有許多選擇，從關係資料庫，例如 SQL Server、于 postgresql、Oracle 或 NoSQL 資料庫（例如 Azure Cosmos DB、MongoDB 等）。這些資料庫不會在本指南中說明，因為它們是完全不同的主題。
 
 >[!div class="step-by-step"]
 >[上一個](monolithic-applications.md) 

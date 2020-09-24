@@ -2,14 +2,15 @@
 title: <peer> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: 50db8eb381249c3b880c4b1dd96ec3813d51ce67
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7f6669d3f53a6ee0d189786fa9ca3625fdedd127
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556111"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162474"
 ---
 # <a name="peer-of-servicecredentials"></a>\<peer> 的 \<serviceCredentials>
+
 指定對等節點的目前認證。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "90556111"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCredentials>**](servicecredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<peer>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <peer>
@@ -31,9 +32,11 @@ ms.locfileid: "90556111"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列各節說明屬性、子元素和父元素  
   
 ### <a name="attributes"></a>屬性  
+
  無。  
   
 ### <a name="child-elements"></a>子元素  

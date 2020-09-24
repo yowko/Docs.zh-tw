@@ -2,12 +2,12 @@
 title: 整合型應用程式
 description: 了解如何將整合型應用程式容器化的核心概念。
 ms.date: 08/06/2020
-ms.openlocfilehash: f188a2ff576436d9378030e0a858ffb8110dad17
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915447"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163540"
 ---
 # <a name="monolithic-applications"></a>整合型應用程式
 
@@ -17,7 +17,7 @@ ms.locfileid: "87915447"
 
 當您遵循「容器僅執行一項動作並在一個處理序中執行該動作」的原則時，整合型模式可能會產生衝突。 您可以在每個容器中包含多個元件/程式庫或內部層級，如圖 4-1 所示。
 
-![此圖顯示透過複製應用程式相應放大的整合型應用程式。](./media/monolithic-applications/monolithic-application-architecture-example.png)
+![此圖顯示可透過複製應用程式相應放大的整合型應用程式。](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **圖4-1。** 整合型應用程式的架構範例
 
@@ -31,13 +31,13 @@ ms.locfileid: "87915447"
 
 從基礎結構的觀點來看，每部伺服器都可以在相同主機內執行許多應用程式，並具備可接受的資源使用效率比，如圖 4-2 所示。
 
-![圖表，顯示在不同的容器中有多個應用程式的主控制項。](./media/monolithic-applications/host-with-multiple-apps-containers.png)
+![此圖表顯示在個別容器中有多個應用程式的一部主機。](./media/monolithic-applications/host-with-multiple-apps-containers.png)
 
 **圖4-2。** 執行多個應用程式/容器的主機
 
 最後，從可用性的觀點來看，整合型應用程式必須以整體方式部署；這表示萬一您必須「停止和啟動」** 時，會影響部署期間的所有功能和所有使用者。 在某些情況下，使用 Azure 和容器可以盡量避免這些情況，並降低應用程式停機的可能性，如圖 4-3 所示。
 
-您可以針對每個執行個體使用專用 VM，在 Azure 中部署整合型應用程式。 您可以使用 [Azure VM 擴展集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)來調整 VM。
+您可以針對每個執行個體使用專用 VM，在 Azure 中部署整合型應用程式。 您可以使用 [Azure VM 擴展集](/azure/virtual-machine-scale-sets/)來調整 VM。
 
 您也可以使用 [Azure App Service](https://azure.microsoft.com/services/app-service/) 來執行整合型應用程式並輕鬆調整執行個體，而不必管理 VM。 Azure App Service 也可以執行 Docker 容器的單一執行個體，以簡化部署。
 
@@ -61,7 +61,7 @@ ms.locfileid: "87915447"
 
 雖然整合型應用程式可以從 Docker 獲益，但這只是一小部分優點。 管理容器的主要優點來自於使用容器協調器進行部署，透過此方式來管理各種執行個體和每個容器執行個體的生命週期。 將整合型應用程式分成可個別擴充、開發及部署的多個子系統，是您開始使用微服務的不錯起點。
 
-若要瞭解如何「隨即轉移」整合型應用程式與容器，以及如何將應用程式現代化，您可以閱讀此額外的 Microsoft 指南[使用 Azure 雲端和 Windows 容器現代化現有的 .net 應用程式](../../modernize-with-azure-containers/index.md)，您也可以從下載 PDF <https://aka.ms/LiftAndShiftWithContainersEbook> 。
+若要瞭解如何使用容器來「隨即轉移」整合型應用程式，以及如何將應用程式現代化，您可以閱讀這份額外的 Microsoft 指南、將 [現有的 .net 應用程式現代化到 Azure 雲端和 Windows 容器](../../modernize-with-azure-containers/index.md)，您也可以從下載 PDF <https://aka.ms/LiftAndShiftWithContainersEbook> 。
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>將單一 Docker 容器應用程式發佈至 Azure App Service
 
