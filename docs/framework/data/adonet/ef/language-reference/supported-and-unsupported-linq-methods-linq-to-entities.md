@@ -1,20 +1,22 @@
 ---
 title: 支援與不支援的 LINQ 方法 (LINQ to Entities)
-description: 本文摘要說明 LINQ to Entities 查詢中支援和不支援的標準查詢運算子。
+description: 本文將摘要說明 LINQ to Entities 查詢中支援和不支援的標準查詢運算子。
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 0d01cc6ccecef0f10aed48fa7475ad1a16ad4ea1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7d8b4e733ab0a996dea9fab60432f5fe0fece8e3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286775"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161707"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支援與不支援的 LINQ 方法 (LINQ to Entities)
-本節提供 LINQ to Entities 查詢中支援或不支援之語言整合式查詢（LINQ）標準查詢運算子的相關資訊。 許多 LINQ 標準查詢運算子都有一個可接受整數引數的多載版本。 整數引數會對應至在、或的序列中以零為基底的索引 <xref:System.Collections.Generic.IEqualityComparer%601> <xref:System.Collections.Generic.IComparer%601> 。 除非另外指定，否則不支援 LINQ 標準查詢運算子的這些多載版本，而且嘗試使用它們將會擲回例外狀況。  
+
+本節提供 LINQ to Entities 查詢中支援或不支援的語言整合式查詢 (LINQ) 標準查詢運算子的相關資訊。 許多 LINQ 標準查詢運算子都有一個可接受整數引數的多載版本。 整數引數會對應到序列中以零為基底的索引，此序列中的運算是 <xref:System.Collections.Generic.IEqualityComparer%601> 、或 <xref:System.Collections.Generic.IComparer%601> 。 除非另外指定，否則不支援 LINQ 標準查詢運算子的這些多載版本，而且嘗試使用它們將會擲回例外狀況。  
   
 ## <a name="projection-and-restriction-methods"></a>投影和限制方法  
- 大部分的 LINQ 投影和限制方法在 LINQ to Entities 查詢中都受到支援，但接受位置引數的例外狀況除外。 如需詳細資訊，請參閱[LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的投影和限制方法。  
+
+ LINQ to Entities 查詢中支援大部分的 LINQ 投影和限制方法，但接受位置引數的例外狀況除外。 如需詳細資訊，請參閱 [LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的投影和限制方法。  
   
 |方法|支援|Visual Basic 函式簽章|C# 方法簽章|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -28,7 +30,8 @@ ms.locfileid: "84286775"
 |<xref:System.Linq.Queryable.Where%2A>|不支援|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>聯結方法  
- LINQ to Entities 支援 LINQ 聯結方法，但接受的是， `IEqualityComparer` 因為比較子無法轉譯成資料來源。 如需詳細資訊，請參閱[LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的聯結方法。  
+
+ LINQ to Entities 中支援 LINQ 聯結方法，但 `IEqualityComparer` 因為比較子無法轉譯成資料來源，所以會接受這些方法。 如需詳細資訊，請參閱 [LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的聯結方法。  
   
 |方法|支援|Visual Basic 函式簽章|C# 方法簽章|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -38,7 +41,8 @@ ms.locfileid: "84286775"
 |<xref:System.Linq.Queryable.Join%2A>|不支援|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>設定方法  
- LINQ to Entities 查詢中支援大部分的 LINQ set 方法，但使用的是例外狀況 <xref:System.Collections.Generic.EqualityComparer%601> 。 如需詳細資訊，請參閱[LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的設定方法。  
+
+ LINQ to Entities 查詢中支援大部分的 LINQ set 方法，但使用的方法除外 <xref:System.Collections.Generic.EqualityComparer%601> 。 如需詳細資訊，請參閱 [LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的設定方法。  
   
 |方法|支援|Visual Basic 函式簽章|C# 方法簽章|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -60,7 +64,8 @@ ms.locfileid: "84286775"
 |<xref:System.Linq.Queryable.Union%2A>|不支援|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>排序方法  
- 大部分的 LINQ 排序方法在 LINQ to Entities 中都受到支援，但接受的是例外 <xref:System.Collections.Generic.IComparer%601> ，因為比較子無法轉譯成資料來源。 如需詳細資訊，請參閱[LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的排序方法。  
+
+ 在 LINQ to Entities 中，大部分的 LINQ 排序方法都受到支援，但會接受 <xref:System.Collections.Generic.IComparer%601> ，因為比較子無法轉譯成資料來源。 如需詳細資訊，請參閱 [LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的排序方法。  
   
 |方法|支援|Visual Basic 函式簽章|C# 方法簽章|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -72,10 +77,11 @@ ms.locfileid: "84286775"
 |<xref:System.Linq.Queryable.ThenBy%2A>|不支援|`Function ThenBy(Of TSource, TKey) ( _ source As IOrderedQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ comparer As IComparer(Of TKey) _ ) As IOrderedQueryable(Of TSource)`|`IOrderedQueryable<TSource> ThenBy\<TSource, TKey>( this IOrderedQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, IComparer<TKey> comparer )`|  
 |<xref:System.Linq.Queryable.ThenByDescending%2A>|支援|`Function ThenByDescending(Of TSource, TKey) ( _ source As IOrderedQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)) _ ) As IOrderedQueryable(Of TSource)`|`IOrderedQueryable<TSource> ThenByDescending<TSource, TKey>( this IOrderedQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector )`|  
 |<xref:System.Linq.Queryable.ThenByDescending%2A>|不支援|`Function ThenByDescending(Of TSource, TKey) ( _ source As IOrderedQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ comparer As IComparer(Of TKey) _ ) As IOrderedQueryable(Of TSource)`|`IOrderedQueryable<TSource> ThenByDescending\<TSource, TKey>( this IOrderedQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, IComparer<TKey> comparer )`|  
-|<xref:System.Linq.Queryable.Reverse%2A>|不受支援|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
+|<xref:System.Linq.Queryable.Reverse%2A>|不支援|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>群組方法  
- 大部分的 LINQ 群組方法在 LINQ to Entities 中都受到支援，但接受的則除外 <xref:System.Collections.Generic.IEqualityComparer%601> ，因為比較子無法轉譯成資料來源。 如需詳細資訊，請參閱[LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的群組方法。  
+
+ 在 LINQ to Entities 中，大部分的 LINQ 群組方法都受到支援，但會接受 <xref:System.Collections.Generic.IEqualityComparer%601> ，因為比較子無法轉譯成資料來源。 如需詳細資訊，請參閱 [LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的群組方法。  
   
 |方法|支援|Visual Basic 函式簽章|C# 方法簽章|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -86,15 +92,16 @@ ms.locfileid: "84286775"
 |<xref:System.Linq.Queryable.GroupBy%2A>|不支援|`Function GroupBy(Of TSource, TKey, TElement) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of IGrouping(Of TKey, TElement))`|`IQueryable<IGrouping\<TKey, TElement>> GroupBy\<TSource, TKey, TElement>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, Expression<Func\<TSource, TElement>> elementSelector, IEqualityComparer<TKey> comparer`|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|支援|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector )`|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|不支援|`Function GroupBy(Of TSource, TKey, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TSource), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy\<TSource, TKey, TResult>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, Expression<Func<TKey, IEnumerable<TSource>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
-|<xref:System.Linq.Queryable.GroupBy%2A>|不受支援|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
+|<xref:System.Linq.Queryable.GroupBy%2A>|不支援|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="aggregate-methods"></a>彙總方法  
- LINQ to Entities 中支援最常接受基本資料類型的匯總方法。 如需詳細資訊，請參閱[LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的彙總方法。  
+
+ LINQ to Entities 中支援大部分接受基本資料類型的匯總方法。 如需詳細資訊，請參閱 [LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援及不支援的彙總方法。  
   
 |方法|支援|Visual Basic 函式簽章|C# 方法簽章|  
 |------------|-------------|-------------------------------------|--------------------------|  
-|<xref:System.Linq.Queryable.Aggregate%2A>|不受支援|`Function Aggregate(Of TSource) ( _ source As IQueryable(Of TSource), _ func As Expression(Of Func(Of TSource, TSource, TSource)) _ ) As TSource`|`TSource Aggregate<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, TSource, TSource>> func )`|  
-|<xref:System.Linq.Queryable.Aggregate%2A>|不受支援|`Function Aggregate(Of TSource, TAccumulate) ( _ source As IQueryable(Of TSource), _ seed As TAccumulate, _ func As Expression(Of Func(Of TAccumulate, TSource, TAccumulate)) _ ) As TAccumulate`|`TAccumulate Aggregate<TSource, TAccumulate>( this IQueryable<TSource> source, TAccumulate seed, Expression<Func<TAccumulate, TSource, TAccumulate>> func )`|  
+|<xref:System.Linq.Queryable.Aggregate%2A>|不支援|`Function Aggregate(Of TSource) ( _ source As IQueryable(Of TSource), _ func As Expression(Of Func(Of TSource, TSource, TSource)) _ ) As TSource`|`TSource Aggregate<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, TSource, TSource>> func )`|  
+|<xref:System.Linq.Queryable.Aggregate%2A>|不支援|`Function Aggregate(Of TSource, TAccumulate) ( _ source As IQueryable(Of TSource), _ seed As TAccumulate, _ func As Expression(Of Func(Of TAccumulate, TSource, TAccumulate)) _ ) As TAccumulate`|`TAccumulate Aggregate<TSource, TAccumulate>( this IQueryable<TSource> source, TAccumulate seed, Expression<Func<TAccumulate, TSource, TAccumulate>> func )`|  
 |<xref:System.Linq.Queryable.Aggregate%2A>|不支援|`Function Aggregate(Of TSource, TAccumulate, TResult) ( _ source As IQueryable(Of TSource), _ seed As TAccumulate, _ func As Expression(Of Func(Of TAccumulate, TSource, TAccumulate)), _ selector As Expression(Of Func(Of TAccumulate, TResult)) _ ) As TResult`|`TResult Aggregate<TSource, TAccumulate, TResult>( this IQueryable<TSource> source, TAccumulate seed, Expression<Func<TAccumulate, TSource, TAccumulate>> func, Expression<Func<TAccumulate, TResult>> selector )`|  
 |<xref:System.Linq.Queryable.Average%2A>|支援|`Function Average ( _ source As IQueryable(Of Decimal) _ ) As Decimal`|`decimal Average( this IQueryable<decimal> source )`|  
 |<xref:System.Linq.Queryable.Average%2A>|支援|`Function Average ( _ source As IQueryable(Of Double) _ ) As Double`|`double Average( this IQueryable<double> source )`|  
@@ -107,14 +114,14 @@ ms.locfileid: "84286775"
 |<xref:System.Linq.Queryable.Average%2A>|支援|`Function Average ( _ source As IQueryable(Of Nullable(Of Single)) _ ) As Nullable(Of Single)`|`Nullable<float> Average( this IQueryable<Nullable<float>> source )`|  
 |<xref:System.Linq.Queryable.Average%2A>|支援|`Function Average ( _ source As IQueryable(Of Single) _ ) As Single`|`float Average( this IQueryable<float> source )`|  
 |<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Integer)) _ ) As Double`|`double Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int>> selector )`|  
-|<xref:System.Linq.Queryable.Average%2A>|不受支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Integer))) _ ) As Nullable(Of Double)`|`Nullable<double> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<int>>> selector )`|  
-|<xref:System.Linq.Queryable.Average%2A>|不受支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Long)) _ ) As Double`|`double Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, long>> selector )`|  
-|<xref:System.Linq.Queryable.Average%2A>|不受支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Long))) _ ) As Nullable(Of Double)`|`Nullable<double> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<long>>> selector )`|  
-|<xref:System.Linq.Queryable.Average%2A>|不受支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Single)) _ ) As Single`|`float Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, float>> selector )`|  
-|<xref:System.Linq.Queryable.Average%2A>|不受支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Single))) _ ) As Nullable(Of Single)`|`Nullable<float> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<float>>> selector )`|  
-|<xref:System.Linq.Queryable.Average%2A>|不受支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Double)) _ ) As Double`|`double Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, double>> selector )`|  
-|<xref:System.Linq.Queryable.Average%2A>|不受支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Double))) _ ) As Nullable(Of Double)`|`Nullable<double> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<double>>> selector )`|  
-|<xref:System.Linq.Queryable.Average%2A>|不受支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Decimal)) _ ) As Decimal`|`decimal Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, decimal>> selector )`|  
+|<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Integer))) _ ) As Nullable(Of Double)`|`Nullable<double> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<int>>> selector )`|  
+|<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Long)) _ ) As Double`|`double Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, long>> selector )`|  
+|<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Long))) _ ) As Nullable(Of Double)`|`Nullable<double> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<long>>> selector )`|  
+|<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Single)) _ ) As Single`|`float Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, float>> selector )`|  
+|<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Single))) _ ) As Nullable(Of Single)`|`Nullable<float> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<float>>> selector )`|  
+|<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Double)) _ ) As Double`|`double Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, double>> selector )`|  
+|<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Double))) _ ) As Nullable(Of Double)`|`Nullable<double> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<double>>> selector )`|  
+|<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Decimal)) _ ) As Decimal`|`decimal Average<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, decimal>> selector )`|  
 |<xref:System.Linq.Queryable.Average%2A>|不支援|`Function Average(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Average<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
 |<xref:System.Linq.Queryable.Count%2A>|支援|`Function Count(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As Integer`|`int Count<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.Count%2A>|不支援|`Function Count(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As Integer`|`int Count<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
@@ -135,18 +142,19 @@ ms.locfileid: "84286775"
 |<xref:System.Linq.Queryable.Sum%2A>|支援|`Function Sum ( _ source As IQueryable(Of Nullable(Of Single)) _ ) As Nullable(Of Single)`|`Nullable<float> Sum( this IQueryable<Nullable<float>> source )`|  
 |<xref:System.Linq.Queryable.Sum%2A>|支援|`Function Sum ( _ source As IQueryable(Of Single) _ ) As Single`|`float Sum( this IQueryable<float> source )`|  
 |<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Integer)) _ ) As Integer`|`int Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int>> selector )`|  
-<xref:System.Linq.Queryable.Sum%2A>|不受支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Integer))) _ ) As Nullable(Of Integer)`|`Nullable<int> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<int>>> selector )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|不受支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Long)) _ ) As Long`|`long Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, long>> selector )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|不受支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Long))) _ ) As Nullable(Of Long)`|`Nullable<long> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<long>>> selector )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|不受支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Single))) _ ) As Nullable(Of Single)`|`Nullable<float> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<float>>> selector )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|不受支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Single)) _ ) As Single`|`float Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, float>> selector )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|不受支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Double)) _ ) As Double`|`double Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, double>> selector )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|不受支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Double))) _ ) As Nullable(Of Double)`|`Nullable<double> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<double>>> selector )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|不受支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Decimal)) _ ) As Decimal`|`decimal Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, decimal>> selector )`|  
-|<xref:System.Linq.Queryable.Sum%2A>|不受支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
+<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Integer))) _ ) As Nullable(Of Integer)`|`Nullable<int> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<int>>> selector )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Long)) _ ) As Long`|`long Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, long>> selector )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Long))) _ ) As Nullable(Of Long)`|`Nullable<long> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<long>>> selector )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Single))) _ ) As Nullable(Of Single)`|`Nullable<float> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<float>>> selector )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Single)) _ ) As Single`|`float Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, float>> selector )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Double)) _ ) As Double`|`double Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, double>> selector )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Double))) _ ) As Nullable(Of Double)`|`Nullable<double> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<double>>> selector )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Decimal)) _ ) As Decimal`|`decimal Sum<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, decimal>> selector )`|  
+|<xref:System.Linq.Queryable.Sum%2A>|不支援|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>型別方法  
- Entity Framework 中支援處理 CLR 型別轉換和測試的 LINQ 標準查詢運算子。 LINQ to Entities 中僅支援對應到概念模型型別的 CLR 型別。 如需概念模型類型的清單，請參閱[概念模型類型（CSDL）](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。 下表所列為支援及不支援的型別方法。  
+
+ Entity Framework 中支援處理 CLR 型別轉換和測試的 LINQ 標準查詢運算子。 LINQ to Entities 中僅支援對應到概念模型型別的 CLR 型別。 如需概念模型類型的清單，請參閱 [ (CSDL) 的概念模型類型 ](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。 下表所列為支援及不支援的型別方法。  
   
 |方法|支援|Visual Basic 函式簽章|C# 方法簽章|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -154,19 +162,20 @@ ms.locfileid: "84286775"
 |<xref:System.Linq.Queryable.OfType%2A>|支援 <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>分頁方法  
- LINQ to Entities 查詢中不支援一些 LINQ 分頁方法。 如需詳細資訊，請參閱[LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援和不支援的分頁方法。  
+
+ LINQ to Entities 的查詢中不支援許多 LINQ 分頁方法。 如需詳細資訊，請參閱 [LINQ to Entities 查詢中的標準查詢運算子](standard-query-operators-in-linq-to-entities-queries.md)。 下表所列為支援和不支援的分頁方法。  
   
 |方法|支援|Visual Basic 函式簽章|C# 方法簽章|  
 |------------|-------------|-------------------------------------|--------------------------|  
-|<xref:System.Linq.Queryable.ElementAt%2A>|不受支援|`Function ElementAt(Of TSource) ( _ source As IQueryable(Of TSource), _ index As Integer _ ) As TSource`|`TSource ElementAt<TSource>( this IQueryable<TSource> source, int index )`|  
+|<xref:System.Linq.Queryable.ElementAt%2A>|不支援|`Function ElementAt(Of TSource) ( _ source As IQueryable(Of TSource), _ index As Integer _ ) As TSource`|`TSource ElementAt<TSource>( this IQueryable<TSource> source, int index )`|  
 |<xref:System.Linq.Queryable.ElementAtOrDefault%2A>|不支援|`Function ElementAtOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ index As Integer _ ) As TSource`|`TSource ElementAtOrDefault<TSource>( this IQueryable<TSource> source, int index )`|  
 |<xref:System.Linq.Queryable.First%2A>|支援|`Function First(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource First<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.First%2A>|支援|`Function First(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource First<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.FirstOrDefault%2A>|支援|`Function FirstOrDefault(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource FirstOrDefault<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.FirstOrDefault%2A>|支援|`Function FirstOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource FirstOrDefault<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.Last%2A>|不支援|`Function Last(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource Last<TSource>( this IQueryable<TSource> source )`|  
-|<xref:System.Linq.Queryable.Last%2A>|不受支援|`Function Last(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource Last<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
-|<xref:System.Linq.Queryable.LastOrDefault%2A>|不受支援|`Function LastOrDefault(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource LastOrDefault<TSource>( this IQueryable<TSource> source )`|  
+|<xref:System.Linq.Queryable.Last%2A>|不支援|`Function Last(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource Last<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
+|<xref:System.Linq.Queryable.LastOrDefault%2A>|不支援|`Function LastOrDefault(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource LastOrDefault<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.LastOrDefault%2A>|不支援|`Function LastOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource LastOrDefault<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.Single%2A>|支援|`Function Single(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As TSource`|`TSource Single<TSource>( this IQueryable<TSource> source )`|  
 |<xref:System.Linq.Queryable.Single%2A>|支援|`Function Single(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As TSource`|`TSource Single<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
@@ -177,7 +186,7 @@ ms.locfileid: "84286775"
 |<xref:System.Linq.Queryable.SkipWhile%2A>|不支援|`Function SkipWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> SkipWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.Take%2A>|支援|`Function Take(Of TSource) ( _ source As IQueryable(Of TSource), _ count As Integer _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Take<TSource>( this IQueryable<TSource> source, int count )`|  
 |<xref:System.Linq.Queryable.TakeWhile%2A>|不支援|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
-|<xref:System.Linq.Queryable.TakeWhile%2A>|不受支援|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
+|<xref:System.Linq.Queryable.TakeWhile%2A>|不支援|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="see-also"></a>另請參閱
 

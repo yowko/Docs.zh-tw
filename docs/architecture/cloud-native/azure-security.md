@@ -2,12 +2,12 @@
 title: 適用于雲端原生應用程式的 Azure 安全性
 description: 設計適用于 Azure 的雲端原生 .NET 應用程式 |適用于雲端原生應用程式的 Azure 安全性
 ms.date: 05/13/2020
-ms.openlocfilehash: 7780b005d84124f202049deeb5be876364e6c5fa
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: e6f91cc4c240dd3349faed2f87db1ba99b2780a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358969"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160992"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>適用于雲端原生應用程式的 Azure 安全性
 
@@ -24,7 +24,7 @@ ms.locfileid: "89358969"
 - 誰應該有此資料的存取權？
 - 開發和發行程式是否有進行中的稽核原則？
 
-上述所有問題都屬於稱為 [威脅分析模型](https://docs.microsoft.com/azure/security/azure-security-threat-modeling-tool)的程式。 此程式會嘗試回答系統發生什麼威脅、威脅的可能性，以及可能的損害。
+上述所有問題都屬於稱為 [威脅分析模型](/azure/security/azure-security-threat-modeling-tool)的程式。 此程式會嘗試回答系統發生什麼威脅、威脅的可能性，以及可能的損害。
 
 一旦建立了威脅清單之後，您必須決定是否值得緩和。 有時候威脅是不太可能和昂貴的，因為它不太需要花能源來規劃。 例如，某些狀態層級動作專案可能會將變更插入數百萬個裝置所使用的進程設計。 現在，您不需要在 [ring 3](https://en.wikipedia.org/wiki/Protection_ring)中執行某段程式碼，而是在 ring 0 中執行該程式碼。 這可讓攻擊者略過虛擬程式，並在裸機機器上執行攻擊程式碼，以允許在該硬體上執行的所有虛擬機器上進行攻擊。
 
@@ -94,11 +94,11 @@ Azure 的設計目的是為了平衡大多數使用者的可用性和安全性�
 
 Azure Kubernetes 叢集中的節點可以參與虛擬網路，就像其他資源更是 Azure 的原生資源。 這項功能稱為「 [Azure 容器網路介面](https://github.com/Azure/azure-container-networking/blob/master/docs/cni.md)」。 實際上，它會在虛擬網路內配置用來配置虛擬機器和容器映射的子網。
 
-繼續說明最低許可權原則的路徑，而不是虛擬網路內的每個資源都必須與其他每個資源溝通。 例如，在透過儲存體帳戶和 SQL database 提供 web API 的應用程式中，資料庫和儲存體帳戶不太可能需要彼此交談。 它們之間的任何資料共用都會經過 web 應用程式。 因此， [ (NSG) 的網路安全性群組 ](https://docs.microsoft.com/azure/virtual-network/security-overview) 可以用來拒絕兩個服務之間的流量。
+繼續說明最低許可權原則的路徑，而不是虛擬網路內的每個資源都必須與其他每個資源溝通。 例如，在透過儲存體帳戶和 SQL database 提供 web API 的應用程式中，資料庫和儲存體帳戶不太可能需要彼此交談。 它們之間的任何資料共用都會經過 web 應用程式。 因此， [ (NSG) 的網路安全性群組 ](/azure/virtual-network/security-overview) 可以用來拒絕兩個服務之間的流量。
 
 拒絕資源之間通訊的原則可能會令人討厭，特別是在沒有流量限制的情況下使用 Azure 的背景。 在其他雲端上，網路安全性群組的概念更為普遍。 比方說，AWS 上的預設原則是，除非 NSG 中的規則啟用資源，否則資源無法彼此間的通訊。 雖然開發的速度較慢，但更嚴格的環境會提供更安全的預設值。 使用適當的 DevOps 做法（特別是使用 [Azure Resource Manager 或 Terraform](infrastructure-as-code.md) 來管理許可權），可讓您更輕鬆地控制規則。
 
-在設定內部部署與雲端資源之間的通訊時，虛擬網路也會很有用。 虛擬私人網路可以用來將兩個網路順暢地連接在一起。 這可讓您在所有使用者都在現場的情況下，針對不具任何閘道的虛擬網路執行。 有一些技術可以用來建立此網路。 最簡單的方式是使用可在許多路由器和 Azure 之間建立的 [站對站 VPN](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%2fazure%2fvirtual-network%2ftoc.json#s2smulti) 。 流量會透過網際網路進行加密和通道傳送，且每個位元組的成本都與任何其他流量相同。 對於需要更多頻寬或更高安全性的案例，Azure 會提供一個稱為 [Express Route](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%2fazure%2fvirtual-network%2ftoc.json#ExpressRoute) 的服務，其使用內部部署網路與 Azure 之間的私人線路。 建立成本更高，但也更安全。
+在設定內部部署與雲端資源之間的通訊時，虛擬網路也會很有用。 虛擬私人網路可以用來將兩個網路順暢地連接在一起。 這可讓您在所有使用者都在現場的情況下，針對不具任何閘道的虛擬網路執行。 有一些技術可以用來建立此網路。 最簡單的方式是使用可在許多路由器和 Azure 之間建立的 [站對站 VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) 。 流量會透過網際網路進行加密和通道傳送，且每個位元組的成本都與任何其他流量相同。 對於需要更多頻寬或更高安全性的案例，Azure 會提供一個稱為 [Express Route](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) 的服務，其使用內部部署網路與 Azure 之間的私人線路。 建立成本更高，但也更安全。
 
 ## <a name="role-based-access-control-for-restricting-access-to-azure-resources"></a>用來限制存取 Azure 資源的角色型存取控制
 
@@ -129,7 +129,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 內建在 Azure 中也是許多高階角色，例如擁有者、參與者、讀者和使用者帳戶管理員。 使用「擁有者」角色時，安全性主體可以存取所有資源，並將許可權指派給其他人。 參與者具有與所有資源相同的存取層級，但無法指派許可權。 讀者只能查看現有的 Azure 資源，而使用者帳戶系統管理員可以管理對 Azure 資源的存取權。
 
-更細微的內建角色（例如 [DNS 區域參與者](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#dns-zone-contributor) ）具有僅限單一服務的許可權。 安全性主體可採用任何數量的角色。
+更細微的內建角色（例如 [DNS 區域參與者](/azure/role-based-access-control/built-in-roles#dns-zone-contributor) ）具有僅限單一服務的許可權。 安全性主體可採用任何數量的角色。
 
 ## <a name="scopes"></a>範圍
 
@@ -139,7 +139,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 當測試安全性主體是否有特定許可權時，角色和範圍的組合將會列入考慮。 此組合提供強大的授權機制。
 
-## <a name="deny"></a>Deny
+## <a name="deny"></a>拒絕
 
 之前，RBAC 只允許「允許」規則。 這種行為使某些範圍變得複雜。 例如，允許安全性主體存取所有的儲存體帳戶，但其中一個需要授與明確許可權給可能無止盡的儲存體帳戶清單。 每次建立新的儲存體帳戶時，都必須將其新增至此帳戶清單。 這種新增的管理額外負荷當然不太理想。
 
@@ -147,7 +147,7 @@ RBAC 中的第一個元件是安全性主體。 安全性主體可以是使用�
 
 ## <a name="checking-access"></a>檢查存取權
 
-您可以想像，擁有大量的角色和範圍，可讓您找出服務主體的有效許可權相當困難。 堆積拒絕規則的基礎，只是為了提高複雜性。 幸運的是，有一個 [許可權計算機](https://docs.microsoft.com/azure/role-based-access-control/check-access) 可顯示任何服務主體的有效許可權。 它通常會在入口網站的 [IAM] 索引標籤下找到，如圖10-3 所示。
+您可以想像，擁有大量的角色和範圍，可讓您找出服務主體的有效許可權相當困難。 堆積拒絕規則的基礎，只是為了提高複雜性。 幸運的是，有一個 [許可權計算機](/azure/role-based-access-control/check-access) 可顯示任何服務主體的有效許可權。 它通常會在入口網站的 [IAM] 索引標籤下找到，如圖10-3 所示。
 
 ![圖 9-4 app service 的許可權計算機](./media/check-rbac.png)
 
@@ -231,9 +231,9 @@ TLS 是一種複雜的通訊協定，只是知道連線使用 TLS 並不是為�
 
 大部分的 Azure 都是 Azure 儲存體的引擎。 虛擬機器磁片會掛接在 Azure 儲存體上。 Azure Kubernetes Services 會在虛擬機器上執行，而這些虛擬機器本身裝載于 Azure 儲存體。 即使是無伺服器的技術（例如 Azure Functions Apps 和 Azure 容器實例），也是 Azure 儲存體中的磁碟空間來執行。
 
-如果 Azure 儲存體妥善加密，則它會為大部分的其他專案提供基礎，也會進行加密。 Azure 儲存體 [會](https://docs.microsoft.com/azure/storage/common/storage-service-encryption) 使用符合 [FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140) 規範的 [256 位 AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)進行加密。 這是一項知名的加密技術，在過去20年或多年來廣泛的學術審查主題。 目前沒有任何已知的實際攻擊，可讓某人不知道讀取 AES 加密的資料。
+如果 Azure 儲存體妥善加密，則它會為大部分的其他專案提供基礎，也會進行加密。 Azure 儲存體 [會](/azure/storage/common/storage-service-encryption) 使用符合 [FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140) 規範的 [256 位 AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)進行加密。 這是一項知名的加密技術，在過去20年或多年來廣泛的學術審查主題。 目前沒有任何已知的實際攻擊，可讓某人不知道讀取 AES 加密的資料。
 
-根據預設，用於加密 Azure 儲存體的金鑰是由 Microsoft 管理。 有廣泛的保護措施可確保防止惡意存取這些金鑰。 不過，具有特定加密需求的使用者也可以提供自己在 Azure Key Vault 中管理的 [儲存體金鑰](https://docs.microsoft.com/azure/storage/common/storage-encryption-keys-powershell) 。 您可以隨時撤銷這些金鑰，如此一來，就能有效轉譯儲存體帳戶的內容，使其無法存取。
+根據預設，用於加密 Azure 儲存體的金鑰是由 Microsoft 管理。 有廣泛的保護措施可確保防止惡意存取這些金鑰。 不過，具有特定加密需求的使用者也可以提供自己在 Azure Key Vault 中管理的 [儲存體金鑰](/azure/storage/common/storage-encryption-keys-powershell) 。 您可以隨時撤銷這些金鑰，如此一來，就能有效轉譯儲存體帳戶的內容，使其無法存取。
 
 虛擬機器使用加密的存放裝置，但您可以使用 Windows 上的 BitLocker 或 Linux 上的 DM Crypt 等技術，提供另一層加密。 這些技術的意思是，即使磁片映射的儲存空間已流失，仍可能接近無法讀取。
 
@@ -243,7 +243,7 @@ TLS 是一種複雜的通訊協定，只是知道連線使用 TLS 並不是為�
 
 加密參數會儲存在資料庫中， `master` 而在啟動時，會將其餘作業讀入記憶體中。 這表示 `master` 資料庫必須保持未加密狀態。 實際的金鑰是由 Microsoft 管理。 不過，具有嚴格安全性需求的使用者可能會在 Key Vault 中提供自己的金鑰，就像對 Azure 儲存體所做的一樣。 Key Vault 針對這類服務提供金鑰輪替和撤銷。
 
-TDS 的「透明」部分來自于不需要使用加密資料庫進行用戶端變更的事實。 雖然此方法可提供良好的安全性，但洩漏資料庫密碼足以讓使用者能夠解密資料。 另外還有另一種方法可加密資料庫中的個別資料行或資料表。 [Always Encrypted](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault) 可確保加密資料不會以純文字顯示在資料庫內。
+TDS 的「透明」部分來自于不需要使用加密資料庫進行用戶端變更的事實。 雖然此方法可提供良好的安全性，但洩漏資料庫密碼足以讓使用者能夠解密資料。 另外還有另一種方法可加密資料庫中的個別資料行或資料表。 [Always Encrypted](/azure/sql-database/sql-database-always-encrypted-azure-key-vault) 可確保加密資料不會以純文字顯示在資料庫內。
 
 設定這一層的加密需要透過 SQL Server Management Studio 中的嚮導執行，以選取加密的排序，以及 Key Vault 中儲存相關聯金鑰的位置。
 

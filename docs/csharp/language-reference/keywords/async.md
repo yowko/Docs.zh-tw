@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 5a70389c9c423300fad03123cfc4738dfe10e481
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 78079d9940ea5363215411acea6b9ca269ff3ae1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118516"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160537"
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
 
@@ -40,6 +40,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
  `async` 關鍵字與內容相關，它只有在修改方法、Lambda 運算式或匿名方法時，才是關鍵字。 在所有其他內容中，它會解譯為識別項。
 
 ## <a name="example"></a>範例
+
 下列範例將示範非同步事件處理常式 `StartButton_Click` 與非同步方法 `ExampleMethodAsync` 之間的控制結構與流程。 非同步方法的結果是網頁的字元數。 此程式碼適用於您在 Visual Studio 中建立的 Windows Presentation Foundation (WPF) 應用程式或 Windows 市集應用程式。請參閱有關設定應用程式的程式碼註解。
 
 您可以在 Visual Studio 中將此程式碼執行為 Windows Presentation Foundation (WPF) 應用程式或 Windows 市集應用程式。 您需要名為 `StartButton` 的按鈕控制項和名為 `ResultsTextBox` 的文字方塊控制項。 請記住要設定名稱和處理常式，如此才會有像下面這樣的內容：
@@ -68,6 +69,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 > 如需有關在等候工作時執行之工作和程式碼的詳細資訊，請參閱 [使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)。 如需使用類似專案的完整主控台範例，請參閱 [在完成時處理非同步工作 (c # ) ](../../programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)。
 
 ## <a name="return-types"></a>傳回型別
+
 非同步方法可有下列傳回型別：
 
 - <xref:System.Threading.Tasks.Task>

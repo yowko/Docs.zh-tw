@@ -1,13 +1,13 @@
 ---
 title: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
-description: 取得使用 Docker 和 Microsoft 平臺和工具開發和部署容器化應用程式的開發和部署流程概要。
+description: 取得使用 Docker 和 Microsoft 平臺和工具開發和部署容器化應用程式的開發和部署程式的概要說明。
 ms.date: 07/30/2020
-ms.openlocfilehash: d8055315b25f73d7b0b355026ab6b2c4767f9d89
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915167"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160693"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 
@@ -15,9 +15,9 @@ ms.locfileid: "87915167"
 
 **版本 3.1** -更新為 ASP.NET Core 3。1
 
-本指南是使用 Microsoft 平臺和工具，透過 Docker 開發和部署容器化 ASP.NET Core 應用程式的一般總覽。 本指南包含 Azure DevOps 的高階簡介，用於執行 CI/CD 管線，以及 Azure Container Registry (ACR) 和 Azure Kubernetes Services AKS 進行部署。
+本指南是使用 Microsoft 平臺和工具，透過 Docker 開發和部署容器化 ASP.NET Core 應用程式的一般總覽。 本指南包含 Azure DevOps 的高階簡介，可用於執行 CI/CD 管線，以及 Azure Container Registry (ACR) 和 Azure Kubernetes Services 部署的 AKS。
 
-如需低層級、開發相關的詳細資料，您可以參閱[.Net 微服務：容器化 .Net 應用程式的架構](https://docs.microsoft.com/dotnet/architecture/microservices/)指南和 it 相關參考應用程式[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)。
+針對低層級、開發相關的詳細資料，您可以看到 [.Net 微服務：容器化 .Net 應用程式的架構](../microservices/index.md) 指南和 it 相關的參考應用程式 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)。
 
 ## <a name="send-us-your-feedback"></a>將您的意見反應傳送給我們！
 
@@ -29,13 +29,13 @@ ms.locfileid: "87915167"
 
 > **Cesar de la Torre**，Sr. Microsoft Corp. .NET 產品小組 PM
 
-收購的編輯器：
+收購編輯器：
 
-> **Janine 的派翠克**
+> **Janine 派翠克**
 
 開發編輯器：
 
-> Microsoft 的解決方案專業人員**Bob Russell**
+> Microsoft 的 Microsoft 解決方案專業人員**Bob Russell**
 >
 > [**八進位發行，Inc。**](http://www.octalpub.com/)
 
@@ -47,15 +47,15 @@ ms.locfileid: "87915167"
 
 Copyeditor:
 
-> Microsoft 的解決方案專業人員**Bob Russell**
+> Microsoft 的 Microsoft 解決方案專業人員**Bob Russell**
 
 參與者和檢閱者：
 
 > **Nish Anil**，Microsoft NET 小組資深方案經理
 >
-> 以一般概念**Miguel veloso turing challenge**軟體發展工程師
+> 以簡單的概念**Miguel Veloso**軟體發展工程師
 >
-> **Sumit Ghosh**，neudesic 提供的首席顧問
+> Neudesic 提供的首席顧問**Sumit Ghosh**
 
 ## <a name="copyright"></a>著作權
 
@@ -81,7 +81,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
-Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
+Docker whale 標誌是 Docker，Inc. 所用的注冊商標。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 

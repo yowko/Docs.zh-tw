@@ -6,12 +6,12 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 1cc82b14a940465c26377f9181a2e20b46b0783f
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 690e559617e4961c3cf3262a6d2d48a6bfac67cd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267822"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161291"
 ---
 # <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>安全性： ASP.NET Web Forms 和中的驗證和授權 Blazor
 
@@ -21,7 +21,7 @@ Blazor假設應用程式已設定驗證，則從 ASP.NET Web Forms 應用程式�
 
 自 ASP.NET 2.0 起，ASP.NET Web Forms 平臺支援各種功能的提供者模型，包括成員資格。 通用成員資格提供者以及選用的角色提供者，通常會與 ASP.NET Web Forms 的應用程式一起部署。 它提供一種健全且安全的方式來管理驗證和授權，以持續正常運作。 這些通用提供者的最新供應專案是以 NuGet[套件的形式提供。](https://www.nuget.org/packages/Microsoft.AspNet.Providers)
 
-Universal Providers 使用包含 `aspnet_Applications` 、、和等資料表的 SQL database 架構 `aspnet_Membership` `aspnet_Roles` `aspnet_Users` 。 藉由執行 [aspnet_regsql.exe 命令](https://docs.microsoft.com/previous-versions/ms229862(v=vs.140))來設定時，提供者會安裝資料表和預存程式，以提供使用基礎資料所需的所有必要查詢和命令。 資料庫架構與這些預存程式與較新的 ASP.NET Identity 和 ASP.NET Core 的身分識別系統不相容，因此必須將現有的資料移轉到新系統中。 [圖 1] 顯示針對通用提供者設定的範例資料表架構。
+Universal Providers 使用包含 `aspnet_Applications` 、、和等資料表的 SQL database 架構 `aspnet_Membership` `aspnet_Roles` `aspnet_Users` 。 藉由執行 [aspnet_regsql.exe 命令](/previous-versions/ms229862(v=vs.140))來設定時，提供者會安裝資料表和預存程式，以提供使用基礎資料所需的所有必要查詢和命令。 資料庫架構與這些預存程式與較新的 ASP.NET Identity 和 ASP.NET Core 的身分識別系統不相容，因此必須將現有的資料移轉到新系統中。 [圖 1] 顯示針對通用提供者設定的範例資料表架構。
 
 ![通用提供者架構](./media/security/membership-tables.png)
 
@@ -111,7 +111,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 ## <a name="aspnet-core-identity"></a>ASP.NET Core 身分識別
 
-雖然仍然負責驗證和授權，但在與通用提供者相較之下，ASP.NET Core 身分識別會使用一組不同的抽象概念和假設。 例如，新的身分識別模型支援協力廠商驗證，可讓使用者使用社交媒體帳戶或其他受信任的驗證提供者進行驗證。 ASP.NET Core 身分識別支援使用者介面，可用於通常需要的頁面，例如登入、登出及註冊。 它會利用 EF Core 來存取資料，並使用 EF Core 的遷移來產生支援其資料模型所需的架構。 本 [ASP.NET Core 的身分識別簡介](https://docs.microsoft.com/aspnet/core/security/authentication/identity) 提供了 ASP.NET Core 身分識別所包含的內容，以及如何開始使用它的良好總覽。 如果您尚未在您的應用程式及其資料庫中設定 ASP.NET Core 身分識別，它會協助您開始使用。
+雖然仍然負責驗證和授權，但在與通用提供者相較之下，ASP.NET Core 身分識別會使用一組不同的抽象概念和假設。 例如，新的身分識別模型支援協力廠商驗證，可讓使用者使用社交媒體帳戶或其他受信任的驗證提供者進行驗證。 ASP.NET Core 身分識別支援使用者介面，可用於通常需要的頁面，例如登入、登出及註冊。 它會利用 EF Core 來存取資料，並使用 EF Core 的遷移來產生支援其資料模型所需的架構。 本 [ASP.NET Core 的身分識別簡介](/aspnet/core/security/authentication/identity) 提供了 ASP.NET Core 身分識別所包含的內容，以及如何開始使用它的良好總覽。 如果您尚未在您的應用程式及其資料庫中設定 ASP.NET Core 身分識別，它會協助您開始使用。
 
 ### <a name="roles-claims-and-policies"></a>角色、宣告和原則
 
@@ -130,7 +130,7 @@ services.AddAuthorization(options =>
 });
 ```
 
-您可以 [在檔中深入瞭解如何建立自訂原則](https://docs.microsoft.com/aspnet/core/security/authorization/policies)。
+您可以 [在檔中深入瞭解如何建立自訂原則](/aspnet/core/security/authorization/policies)。
 
 無論您使用的是原則或角色，都可以指定應用程式中的特定頁面， Blazor 要求該角色或具有 `[Authorize]` 屬性（attribute）的原則套用於指示詞 `@attribute` 。
 
@@ -146,7 +146,7 @@ services.AddAuthorization(options =>
 @attribute [Authorize(Policy ="CanadiansOnly")]
 ```
 
-如果您需要存取使用者的驗證狀態、角色或程式碼中的宣告，有兩種主要方式可以達成此目的。 第一個是以串聯參數形式接收驗證狀態。 第二個是使用插入的來存取狀態 `AuthenticationStateProvider` 。 這些方法的詳細資料將在[ Blazor 安全性檔案](https://docs.microsoft.com/aspnet/core/blazor/security/)中說明。
+如果您需要存取使用者的驗證狀態、角色或程式碼中的宣告，有兩種主要方式可以達成此目的。 第一個是以串聯參數形式接收驗證狀態。 第二個是使用插入的來存取狀態 `AuthenticationStateProvider` 。 這些方法的詳細資料將在[ Blazor 安全性檔案](/aspnet/core/blazor/security/)中說明。
 
 下列程式碼示範如何以串聯 `AuthenticationState` 參數的形式接收：
 
@@ -252,7 +252,7 @@ dotnet ef database update
 dotnet ef migrations script -o auth.sql
 ```
 
-這將會在輸出檔案中產生 SQL 腳本， `auth.sql` 然後針對您想要的任何資料庫來執行。 如果您在執行命令時遇到任何問題 `dotnet ef` ， [請確定您已在系統上安裝 EF Core 工具](https://docs.microsoft.com/ef/core/miscellaneous/cli/dotnet)。
+這將會在輸出檔案中產生 SQL 腳本， `auth.sql` 然後針對您想要的任何資料庫來執行。 如果您在執行命令時遇到任何問題 `dotnet ef` ， [請確定您已在系統上安裝 EF Core 工具](/ef/core/miscellaneous/cli/dotnet)。
 
 如果您的來源資料表有額外的資料行，您必須在新的架構中找出這些資料行的最佳位置。 一般而言，資料表上的資料行 `aspnet_Membership` 應該對應至 `AspNetUsers` 資料表。 上的資料行 `aspnet_Roles` 應該對應至 `AspNetRoles` 。 資料表上的任何其他資料行 `aspnet_UsersInRoles` 都會加入至 `AspNetUserRoles` 資料表。
 
@@ -260,9 +260,9 @@ dotnet ef migrations script -o auth.sql
 
 ### <a name="migrating-data-from-universal-providers-to-aspnet-core-identity"></a>將資料從通用提供者遷移至 ASP.NET Core 身分識別
 
-當您備妥目的地資料表架構後，下一個步驟是將您的使用者和角色記錄遷移至新的架構。 您可以在 [這裡](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)找到架構差異的完整清單，包括哪些資料行對應到哪些新資料行。
+當您備妥目的地資料表架構後，下一個步驟是將您的使用者和角色記錄遷移至新的架構。 您可以在 [這裡](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)找到架構差異的完整清單，包括哪些資料行對應到哪些新資料行。
 
-若要將使用者的成員資格遷移至新的身分識別資料表，您應 [遵循檔中所述的步驟](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)。 遵循這些步驟和提供的腳本之後，您的使用者將需要在下次登入時變更其密碼。
+若要將使用者的成員資格遷移至新的身分識別資料表，您應 [遵循檔中所述的步驟](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)。 遵循這些步驟和提供的腳本之後，您的使用者將需要在下次登入時變更其密碼。
 
 您可以遷移使用者密碼，但程式更牽涉到更多。 要求使用者在遷移過程中更新其密碼，並鼓勵他們使用新的唯一密碼，可能會增強應用程式的整體安全性。
 
@@ -341,7 +341,7 @@ ASP.NET Identity 不會將匿名或以角色為基礎的存取設定至的位置
 
 請注意，此 `[Authorize]` 屬性只適用于透過 `@page` 路由器達成的元件 Blazor 。 屬性無法與子元件搭配使用，而應該改用 `AuthorizeView` 。
 
-如果您在頁面標記內有邏輯來判斷是否要對特定使用者顯示某些程式碼，您可以將此取代為 `AuthorizeView` 元件。 [AuthorizeView 元件](https://docs.microsoft.com/aspnet/core/blazor/security#authorizeview-component)會選擇性地顯示 UI，取決於使用者是否已獲授權查看。 它也會公開 `context` 可以用來存取使用者資訊的變數。
+如果您在頁面標記內有邏輯來判斷是否要對特定使用者顯示某些程式碼，您可以將此取代為 `AuthorizeView` 元件。 [AuthorizeView 元件](/aspnet/core/blazor/security#authorizeview-component)會選擇性地顯示 UI，取決於使用者是否已獲授權查看。 它也會公開 `context` 可以用來存取使用者資訊的變數。
 
 ```razor
 <AuthorizeView>
@@ -414,12 +414,12 @@ ASP.NET Identity 不會將匿名或以角色為基礎的存取設定至的位置
 
 Blazor 使用與 ASP.NET Core 相同的安全性模型，這是 ASP.NET Core 身分識別。 從通用提供者遷移到 ASP.NET Core 身分識別相當簡單，但前提是不太太多自訂套用至原始資料架構。 一旦資料移轉之後，在應用程式中使用驗證和授權的 Blazor 記錄就會有完整的記錄，並可進行設定，以及針對大部分的安全性需求進行程式設計支援。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
-- [ASP.NET Core 上的身分識別簡介](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
-- [從 ASP.NET 成員資格驗證遷移至 ASP.NET Core 2.0 身分識別](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
-- [將驗證和身分識別遷移至 ASP.NET Core](https://docs.microsoft.com/aspnet/core/migration/identity)
-- [ASP.NET Core Blazor 驗證與授權](https://docs.microsoft.com/aspnet/core/blazor/security/)
+- [ASP.NET Core 上的身分識別簡介](/aspnet/core/security/authentication/identity)
+- [從 ASP.NET 成員資格驗證遷移至 ASP.NET Core 2.0 身分識別](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
+- [將驗證和身分識別遷移至 ASP.NET Core](/aspnet/core/migration/identity)
+- [ASP.NET Core Blazor 驗證與授權](/aspnet/core/blazor/security/)
 
 >[!div class="step-by-step"]
 >[上一個](config.md) 

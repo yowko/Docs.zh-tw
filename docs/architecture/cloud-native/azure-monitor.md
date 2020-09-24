@@ -2,12 +2,12 @@
 title: Azure 監視器
 description: 使用 Azure 監視器來查看您的系統是否正在執行。
 ms.date: 07/05/2020
-ms.openlocfilehash: 342d54292736622f6546768e039ca244a69b020e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 65e17740dba49c3ac3f6e13462897b5342da6710
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540180"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160966"
 ---
 # <a name="azure-monitor"></a>Azure 監視器
 
@@ -20,9 +20,9 @@ ms.locfileid: "90540180"
 
 任何監視解決方案中的第一個步驟，就是盡可能收集最多的資料。 收集的資料越多，深入解析就越深入。 傳統上的檢測系統很難。 簡易網路管理通訊協定 (SNMP) 是用來收集電腦層級資訊的黃金標準通訊協定，但需要大量的知識和設定。 幸運的是，這大部分的困難工作都已經消除，因為最常見的計量會由 Azure 監視器自動收集。
 
-應用層級度量和事件無法自動檢測，因為它們是專屬於正在部署的應用程式。 為了收集這些計量，有可用來直接報告這類資訊的 [sdk 和 api](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics) ，例如當客戶註冊或完成訂單時。 例外狀況也可以透過 Application Insights 來捕捉並回報給 Azure 監視器。 Sdk 支援在雲端原生應用程式（包括 Go、Python、JavaScript 和 .NET 語言）中找到的大部分語言。
+應用層級度量和事件無法自動檢測，因為它們是專屬於正在部署的應用程式。 為了收集這些計量，有可用來直接報告這類資訊的 [sdk 和 api](/azure/azure-monitor/app/api-custom-events-metrics) ，例如當客戶註冊或完成訂單時。 例外狀況也可以透過 Application Insights 來捕捉並回報給 Azure 監視器。 Sdk 支援在雲端原生應用程式（包括 Go、Python、JavaScript 和 .NET 語言）中找到的大部分語言。
 
-收集應用程式狀態相關資訊的最終目標是確保您的終端使用者有良好的體驗。 要告訴使用者是否遇到與 [在外部 web 測試之外](https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability)的問題，有何更好的方法？ 這些測試可以像是從全球各地的地點 ping 您的網站，或是讓代理程式登入網站並模擬使用者動作一樣簡單。
+收集應用程式狀態相關資訊的最終目標是確保您的終端使用者有良好的體驗。 要告訴使用者是否遇到與 [在外部 web 測試之外](/azure/azure-monitor/app/monitor-web-app-availability)的問題，有何更好的方法？ 這些測試可以像是從全球各地的地點 ping 您的網站，或是讓代理程式登入網站並模擬使用者動作一樣簡單。
 
 ## <a name="reporting-data"></a>報告資料
 
@@ -45,11 +45,11 @@ StormEvents
 ![Application Insights 查詢結果 ](./media/application_insights_example.png)
  **圖 7-13**。 Application Insights 查詢結果。
 
-您可以 [使用遊樂場來試驗 Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples) 查詢。 讀取 [範例查詢](https://docs.microsoft.com/azure/kusto/query/samples) 也可以有意義。
+您可以 [使用遊樂場來試驗 Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples) 查詢。 讀取 [範例查詢](/azure/kusto/query/samples) 也可以有意義。
 
 ## <a name="dashboards"></a>儀表板
 
-有幾種不同的儀表板技術可用來呈現 Azure 監視器的資訊。 或許最簡單的方式是直接在 Application Insights 中執行查詢，並將 [資料繪製到圖表](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)中。
+有幾種不同的儀表板技術可用來呈現 Azure 監視器的資訊。 或許最簡單的方式是直接在 Application Insights 中執行查詢，並將 [資料繪製到圖表](/azure/azure-monitor/learn/tutorial-app-dashboards)中。
 
 ![內嵌于主要 Azure 儀表板 ](./media/azure_dashboard.png)
  **圖 7-14**中 Application Insights 圖表的範例。 在主要 Azure 儀表板中內嵌 Application Insights 圖表的範例。
@@ -62,7 +62,7 @@ StormEvents
 
 ## <a name="alerts"></a>警示
 
-有時候，擁有資料儀表板的許可權不足。 如果沒有人處於喚醒狀態以監看儀表板，則在問題解決或甚至偵測到問題之前，可能仍會有很多的時間。 至此，Azure 監視器也提供最高槽口的 [警示解決方案](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)。 警示可以透過各式各樣的條件觸發，包括：
+有時候，擁有資料儀表板的許可權不足。 如果沒有人處於喚醒狀態以監看儀表板，則在問題解決或甚至偵測到問題之前，可能仍會有很多的時間。 至此，Azure 監視器也提供最高槽口的 [警示解決方案](/azure/azure-monitor/platform/alerts-overview)。 警示可以透過各式各樣的條件觸發，包括：
 
 - 計量值
 - 記錄搜尋查詢
@@ -74,11 +74,11 @@ StormEvents
 
 由於系統會識別出警示的常見原因，因此可以使用警示的常見原因詳細資料，以及解決這些警示所需採取的步驟來增強警示。 高度成熟的雲端原生應用程式部署可能會選擇開始自我修復工作，這類工作會執行一些動作，例如從擴展集移除失敗的節點或觸發自動調整活動。 最後，可能不再需要喚醒 >12AM-2AM 的待命人員來解決即時網站問題，因為系統將能夠自行調整以彌補或至少 limp，直到有人在下早上抵達工作為止。
 
-Azure 監視器會自動利用機器學習服務來瞭解已部署應用程式的正常指令引數。 這可讓它偵測在其正常參數之外運作的服務。 例如，網站上的一般工作日流量可能是每分鐘10000個要求。 然後，在指定的一周，每分鐘的要求數突然達到高度不尋常的20000要求。 [智慧型偵測](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) 會注意到此差異與標準，並觸發警示。 同時，趨勢分析的智慧足以避免在預期流量負載時引發誤報。
+Azure 監視器會自動利用機器學習服務來瞭解已部署應用程式的正常指令引數。 這可讓它偵測在其正常參數之外運作的服務。 例如，網站上的一般工作日流量可能是每分鐘10000個要求。 然後，在指定的一周，每分鐘的要求數突然達到高度不尋常的20000要求。 [智慧型偵測](/azure/azure-monitor/app/proactive-diagnostics) 會注意到此差異與標準，並觸發警示。 同時，趨勢分析的智慧足以避免在預期流量負載時引發誤報。
 
-## <a name="references"></a>參考
+## <a name="references"></a>參考資料
 
-- [Azure 監視器](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [Azure 監視器](/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[上一個](monitoring-azure-kubernetes.md) 

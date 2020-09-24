@@ -2,14 +2,15 @@
 title: LIMIT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 98e44110e604c6d893734869871d72f1d021775d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 81d135785e567d46a105adcafbf083f48cb4868e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556280"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161759"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (Entity SQL)
+
 在 ORDER BY 子句中使用 LIMIT 次子句可以執行實際分頁。 LIMIT 不可單獨使用於 ORDER BY 子句之外。  
   
 ## <a name="syntax"></a>語法  
@@ -19,6 +20,7 @@ ms.locfileid: "90556280"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `n`  
  要選取的項目的數目。  
   
@@ -28,6 +30,7 @@ ms.locfileid: "90556280"
 > 如果 TOP 修飾詞和 SKIP 次子句出現在同一個查詢運算式中，Entity SQL 查詢會被視為無效。 請將 TOP 運算式變更為 LIMIT 運算式來重新撰寫此查詢。  
   
 ## <a name="example"></a>範例  
+
  以下 Entity SQL 查詢使用 ORDER BY 運算子配合 LIMIT 來指定 SELECT 陳述式所傳回物件使用的排序順序。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
 1. 遵循 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
@@ -40,5 +43,5 @@ ms.locfileid: "90556280"
 
 - [ORDER BY](order-by-entity-sql.md)
 - [如何：逐頁檢視查詢結果](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
-- [分頁](paging-entity-sql.md)
-- [返回頁首](top-entity-sql.md)
+- [Paging](paging-entity-sql.md)
+- [頂端](top-entity-sql.md)

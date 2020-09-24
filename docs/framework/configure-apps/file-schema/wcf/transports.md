@@ -2,15 +2,16 @@
 title: 傳輸
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
-ms.openlocfilehash: c89e0b8ea124919956d07d51b52bf6e878eef166
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 54d320213dbf330ad19077b523a77ea86d29e1ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69941144"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162006"
 ---
 # <a name="transports"></a>傳輸
-傳輸層 (Transport Layer) 屬於通道堆疊中的最底層。 Windows Communication Foundation （WCF）中使用的主要傳輸為 HTTP、HTTPS、TCP 和具名管道。 這個區段列出所有可讓您設定不同類型傳輸的組態項目。  
+
+傳輸層 (Transport Layer) 屬於通道堆疊中的最底層。 Windows Communication Foundation (WCF) 中使用的主要傳輸為 HTTP、HTTPS、TCP 和具名管道。 這個區段列出所有可讓您設定不同類型傳輸的組態項目。  
   
 ## <a name="see-also"></a>另請參閱
 

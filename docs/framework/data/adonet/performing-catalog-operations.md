@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 802762592a63a2046abcde8ed83ac67be47faf96
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149241"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161642"
 ---
 # <a name="performing-catalog-operations"></a>執行資料庫目錄作業
-要執行修改資料庫或目錄的命令（如創建表或創建過程語句），請使用相應的 SQL 語句和**連接**物件創建**命令**物件。 使用命令物件的**ExecuteNonQuery**方法執行**命令**。  
+
+若要執行命令以修改資料庫或目錄，例如 CREATE TABLE 或 CREATE PROCEDURE 語句，請使用適當的 SQL 語句和**Connection**物件來建立**命令**物件。 使用**命令**物件的**ExecuteNonQuery**方法來執行命令。  
   
  下列程式碼範例會在 Microsoft SQL Server 資料庫中建立預存程序。  
   

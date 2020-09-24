@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557538"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161200"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>從 ASP.NET Web Forms 遷移至 Blazor
 
@@ -636,7 +636,7 @@ EShop 需要下列 EF 相關變更：
 - 程式碼存取安全性 (CAS)
 - 安全性透明度
 
-如需有關可在 .NET Core 上執行的支援所需變更之技術的詳細資訊，請參閱將 [您的程式碼從 .NET Framework 移植到 .Net core](/dotnet/core/porting)。
+如需有關可在 .NET Core 上執行的支援所需變更之技術的詳細資訊，請參閱將 [您的程式碼從 .NET Framework 移植到 .Net core](../../core/porting/index.md)。
 
 ASP.NET Core 是 ASP.NET 的重新發想版本，而且有一些可能不會很明顯的變更。 主要變更如下：
 
