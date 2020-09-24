@@ -3,12 +3,12 @@ title: 功能旗標
 description: 利用 Azure App Config 在雲端原生應用程式中執行功能旗標
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee45c9f187b056887ea6dd3a08da508afca51987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540461"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158093"
 ---
 # <a name="feature-flags"></a>功能旗標
 
@@ -43,9 +43,9 @@ if (featureFlag) {
 
 在第1章中，我們討論過 `Twelve-Factor App` 。 建議在應用程式可執行程式碼外部保留設定設定的指導方針。 如有需要，可以從外部來源讀取設定。 功能旗標設定值也應該獨立于其程式碼基底。 藉由在不同的儲存機制中具體化旗標設定，您可以變更旗標狀態，而不需要修改和重新部署應用程式。
 
-[Azure 應用程式組態](https://docs.microsoft.com/azure/azure-app-configuration/overview) 提供功能旗標的集中式存放庫。 使用它，您可以定義不同種類的功能旗標，並快速且安心地操作其狀態。 您可以將應用程式設定用戶端程式庫新增至您的應用程式，以啟用功能旗標功能。 支援各種程式設計語言架構。
+[Azure 應用程式組態](/azure/azure-app-configuration/overview) 提供功能旗標的集中式存放庫。 使用它，您可以定義不同種類的功能旗標，並快速且安心地操作其狀態。 您可以將應用程式設定用戶端程式庫新增至您的應用程式，以啟用功能旗標功能。 支援各種程式設計語言架構。
 
-功能旗標可以在 [ASP.NET Core 服務](https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core)中輕鬆地執行。 安裝 .NET 功能管理程式庫和應用程式設定提供者，可讓您以宣告方式將功能旗標新增至您的程式碼。 它們可啟用 `FeatureGate` 屬性，讓您不必在程式碼基底中手動寫入 if 語句。
+功能旗標可以在 [ASP.NET Core 服務](/azure/azure-app-configuration/use-feature-flags-dotnet-core)中輕鬆地執行。 安裝 .NET 功能管理程式庫和應用程式設定提供者，可讓您以宣告方式將功能旗標新增至您的程式碼。 它們可啟用 `FeatureGate` 屬性，讓您不必在程式碼基底中手動寫入 if 語句。
 
 在啟動類別中設定之後，您可以在控制器、動作或中介軟體層級新增功能旗標功能。 圖10-12 顯示控制器和動作執行：
 

@@ -1,19 +1,20 @@
 ---
 title: 私用建構函式 - C# 程式設計手冊
-description: '私用函數是 c # 中的特殊實例函式，用來限制物件的建立方式。 它們可以與 factory 方法或其他結構慣用語搭配使用。'
+description: '私用的函式是 c # 中的特殊實例函式，用來限制物件的建立方式。 它們可搭配 factory 方法或其他結構慣用語使用。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: a6b86ccb870da0262bcbc516e176e00d17724f9f
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: c6048424128b462bfc56d9c7c3cf8f75cca9298d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864055"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159341"
 ---
 # <a name="private-constructors-c-programming-guide"></a>私用建構函式 (C# 程式設計手冊)
+
 私用建構函式是一種特殊的執行個體建構函式。 它通常會用於只包含靜態成員的類別。 如果類別具有一或多個私用建構函式，而且沒有任何公用建構函式，則其他類別 (巢狀類別除外) 無法建立此類別的執行個體。 例如：  
   
  [!code-csharp[csProgGuideObjects#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#11)]  
@@ -23,6 +24,7 @@ ms.locfileid: "86864055"
  當類別沒有執行個體欄位或方法 (例如 <xref:System.Math> 類別)，或是您要呼叫方法以取得類別的執行個體時，可以使用私用建構函式來防止建立類別的執行個體。 如果類別中的所有方法都是靜態的，請考慮將整個類別變為靜態。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)。  
   
 ## <a name="example"></a>範例  
+
  以下是使用私用建構函式的類別範例。  
   
  [!code-csharp[csProgGuideObjects#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#12)]  
@@ -41,5 +43,5 @@ ms.locfileid: "86864055"
 - [類別和結構](./index.md)
 - [建構函式](./constructors.md)
 - [完成項](./destructors.md)
-- [私人](../../language-reference/keywords/private.md)
+- [private](../../language-reference/keywords/private.md)
 - [public](../../language-reference/keywords/public.md)

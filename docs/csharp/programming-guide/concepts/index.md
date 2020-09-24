@@ -1,16 +1,17 @@
 ---
 title: 程式設計概念 (C#)
-description: '使用本節中的資源來瞭解 c # 語言的程式設計概念，包括物件導向程式設計。'
+description: '使用本節中的資源，以瞭解 c # 語言的程式設計概念，包括物件導向程式設計。'
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 8b0b69abd3c23a968e34905cea93f99e044668ce
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 0e11fb3a184cb828be58cd43dde281366ed533d4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924912"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159328"
 ---
 # <a name="programming-concepts-c"></a>程式設計概念 (C#)
+
 本節說明 C# 語言的程式設計概念。  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -20,7 +21,7 @@ ms.locfileid: "86924912"
 |[.NET 中的組件](../../../standard/assembly/index.md)|說明如何建立及使用組件。|  
 |[使用 Async 和 Await 進行非同步程式設計 (C#)](./async/index.md)|說明如何使用 C# 中的 [async](../../language-reference/keywords/async.md) 和 [await](../../language-reference/operators/await.md) 關鍵字撰寫非同步解決方案。 其中包含逐步解說。|  
 |[屬性 (C#)](./attributes/index.md)|討論如何使用屬性提供關於程式設計元素的其他資訊，例如型別、欄位、方法及屬性。|  
-|[集合 (C#)](./collections.md)|描述 .NET 所提供的部分集合類型。 示範如何使用簡單集合及金鑰/值組集合。|  
+|[集合 (C#)](./collections.md)|描述 .NET 所提供的一些集合類型。 示範如何使用簡單集合及金鑰/值組集合。|  
 |[共變數和反變數 (C#)](./covariance-contravariance/index.md)|示範如何在介面及委派中啟用泛型型別參數的隱含轉換。|  
 |[運算式樹狀架構 (C#)](./expression-trees/index.md)|說明如何使用運算式樹狀結構來啟用可執行程式碼的動態修改。|  
 |[迭代器 (C#)](./iterators.md)|說明可用來逐步執行集合，並逐一傳回元素的迭代器。|  
@@ -33,4 +34,4 @@ ms.locfileid: "86924912"
   
 |||  
 |---|---|  
-|[效能祕訣](../../../framework/performance/performance-tips.md) | 討論數個可能協助您提升應用程式效能的基本規則。|
+|[效能秘訣](../../../framework/performance/performance-tips.md) | 討論數個可能協助您提升應用程式效能的基本規則。|

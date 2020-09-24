@@ -3,14 +3,15 @@ title: '如何在字串中計算單字的出現次數 (LINQ)  (c # ) '
 description: '此範例使用 c # 中的 LINQ 查詢來計算字串中指定單字的出現次數。 它會使用 Split 方法來建立單字陣列。'
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: e0ac7b338706c3f363fb21284e895bd1c7c48b6c
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: b354947c59747e49b5f3d099ebc3ea891fb4af90
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466114"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159068"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>如何在字串中計算單字的出現次數 (LINQ)  (c # ) 
+
 本例示範如何使用 LINQ 查詢計算字串中指定單字的出現次數。 請注意，執行計數要先呼叫 <xref:System.String.Split%2A> 方法來建立文字陣列。 <xref:System.String.Split%2A> 方法有效能成本。 如果字串上唯一的作業是計算字數，您應該考慮改用 <xref:System.Text.RegularExpressions.Regex.Matches%2A> 或 <xref:System.String.IndexOf%2A> 方法。 不過，如果效能不是重要的問題，或您已分割句子對它執行其他類型的查詢，則使用 LINQ 計算單字或詞組才有意義。  
   
 ## <a name="example"></a>範例  
@@ -56,6 +57,7 @@ class CountWords
 ```  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
 ## <a name="see-also"></a>另請參閱

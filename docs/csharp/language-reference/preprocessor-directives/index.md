@@ -8,14 +8,15 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: a7ffca8b39f1bd9f05193bccbb6d90e67fa262c9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 210a024a8062f5070b2a500384f51b37c9d802c0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132361"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157950"
 ---
 # <a name="c-preprocessor-directives"></a>C# 前置處理器指示詞
+
 本節包含下列 C# 前置處理器指示詞的相關資訊：
 
 - [#if](./preprocessor-if.md)

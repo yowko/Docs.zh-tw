@@ -2,14 +2,15 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 987dcad5e239b35f5ff367ab668d40526593f970
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6d4302e1840f58e2daad855942493cc96b7d5e34
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556456"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158665"
 ---
 # \<tcpTransport>
+
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "90556456"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<tcpTransport>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tcpTransport channelInitializationTimeout="TimeSpan"
@@ -44,6 +45,7 @@ ms.locfileid: "90556456"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -61,13 +63,14 @@ ms.locfileid: "90556456"
 |maxPendingAccepts|取得或設定可用於處理服務傳入連線的擱置中非同步接受作業的數目上限。|  
 |maxPendingConnections|取得或設定服務上等待分派之連線的數目上限。|  
 |maxReceivedMessageSize|取得及設定可接收之可允許的訊息大小上限。|  
-|portSharingEnabled|布林值，指定是否啟用這個連線的 TCP 連接埠共用功能。 如果這是 `false`，則每個繫結將使用它自己的獨佔連接埠。 預設為 `false`。<br /><br /> 這個設定只與服務有關。 用戶端不受影響。<br /><br /> 使用這個設定必須將 [啟動類型] 改為 [手動] 或 [自動]，以啟用 Windows Communication Foundation (WCF) TCP Port Sharing Service。|  
-|teredoEnabled|布林值，指定是否啟用 Teredo (對防火牆後的用戶端進行定址的技術)。 預設為 `false`。<br /><br /> 這個屬性會針對基礎 TCP 通訊端啟用 Teredo。 如需詳細資訊，請參閱 [Teredo 總覽](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10))。<br /><br /> 這個屬性只適用于 Windows XP SP2 和 Windows Server 2003。 Windows Vista 具有適用于 Teredo 的全機器設定選項，因此當執行 Vista 時，會忽略這個屬性。 Teredo 需要用戶端和服務電腦都已安裝 Microsoft IPv6 堆疊並正確設定，才能使用 Teredo。|  
+|portSharingEnabled|布林值，指定是否啟用這個連線的 TCP 連接埠共用功能。 如果這是 `false`，則每個繫結將使用它自己的獨佔連接埠。 預設值為 `false`。<br /><br /> 這個設定只與服務有關。 用戶端不受影響。<br /><br /> 使用這個設定必須將 [啟動類型] 改為 [手動] 或 [自動]，以啟用 Windows Communication Foundation (WCF) TCP Port Sharing Service。|  
+|teredoEnabled|布林值，指定是否啟用 Teredo (對防火牆後的用戶端進行定址的技術)。 預設值為 `false`。<br /><br /> 這個屬性會針對基礎 TCP 通訊端啟用 Teredo。 如需詳細資訊，請參閱 [Teredo 總覽](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10))。<br /><br /> 這個屬性只適用于 Windows XP SP2 和 Windows Server 2003。 Windows Vista 具有適用于 Teredo 的全機器設定選項，因此當執行 Vista 時，會忽略這個屬性。 Teredo 需要用戶端和服務電腦都已安裝 Microsoft IPv6 堆疊並正確設定，才能使用 Teredo。|  
 |transferMode|取得或設定值，這個值表示訊息是否使用連線導向傳輸進行緩衝或資料流處理。|  
 |connectionPoolSettings|為具名管道繫結指定其他連線集區設定。|  
   
 ### <a name="child-elements"></a>子元素  
- None  
+
+ 無  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -76,6 +79,7 @@ ms.locfileid: "90556456"
 |[\<binding>](bindings.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
+
  這個傳輸會使用以下格式的 URI "net.tcp://hostname:port/path"。 其他 URI 元件是選擇性的。  
   
  `tcpTransport` 項目是在建立自訂繫結時的起點，該繫結會實作 TCP 傳輸通訊協定。 這個傳輸已針對 WCF 至 WCF 的通訊最佳化。  

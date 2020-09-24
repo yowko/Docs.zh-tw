@@ -1,19 +1,21 @@
 ---
-title: '如何依副檔名將檔案分組（LINQ）（c #）'
-description: '瞭解如何在 c # 中使用 LINQ 執行檔案或資料夾清單的先進分組和排序作業。 此範例示範如何在主控台中分頁輸出。'
+title: '如何依擴充功能將檔案分組 (LINQ)  (c # ) '
+description: '瞭解如何在 c # 中使用 LINQ 對檔案或資料夾清單進行先進的分組和排序作業。 此範例顯示如何在主控台中頁面輸出。'
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 6113392170063cac1fd89017efaf0c7dad3ba34b
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: c17328980c20dd6ec32e8d0ce176081122443344
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105038"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159042"
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>如何依副檔名將檔案分組（LINQ）（c #）
+# <a name="how-to-group-files-by-extension-linq-c"></a>如何依擴充功能將檔案分組 (LINQ)  (c # ) 
+
 此範例示範如何使用 LINQ，對檔案或資料庫清單執行進階群組和排序作業。 它也示範如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在主控台視窗中分頁輸出。  
   
 ## <a name="example"></a>範例  
+
  下列查詢示範如何依副檔名分組指定樹狀目錄的內容。  
   
 ```csharp  
@@ -106,9 +108,10 @@ class GroupByExtension
  根據本機檔案系統的詳細資料及 `startFolder` 的設定，此程式的輸出可能很長。 為了能夠檢視所有結果，此範例示範如何將結果分頁。 您可以將相同的技術應用到 Windows 和 Web 應用程式。 請注意，因為程式碼會將群組中的項目分頁，所以需要使用巢狀 `foreach` 迴圈。 此外還需要一些額外的邏輯來計算清單中目前的位置，以及讓使用者停止分頁並結束程式。 在這種特殊情況下，會對原始查詢的快取結果執行分頁查詢。 在其他內容中 (例如 LINQ to SQL)，則不需要這類快取。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

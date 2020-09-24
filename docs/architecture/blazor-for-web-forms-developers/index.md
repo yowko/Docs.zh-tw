@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 1c869cce6ab8a0ab7c4b83817fe1afc3d6a4a7fd
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3ac9a02a2f5c93cbfd9377a9f6fff4b6c5f45e93
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267462"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158171"
 ---
 # <a name="no-locblazor-for-aspnet-web-forms-developers"></a>Blazor 適用于 ASP.NET Web Forms 開發人員
 
@@ -74,7 +74,7 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 ## <a name="what-this-book-doesnt-cover"></a>本書未涵蓋的內容
 
-這本書是的簡介 Blazor ，而不是完整的遷移指南。 雖然它包含有關如何將專案從 ASP.NET Web Forms 遷移至的指引 Blazor ，但並不會嘗試涵蓋每個微妙和詳細資料。 如需從 ASP.NET 遷移至 ASP.NET Core 的一般指引，請參閱 ASP.NET Core 檔中的 [遷移指導](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/) 方針。
+這本書是的簡介 Blazor ，而不是完整的遷移指南。 雖然它包含有關如何將專案從 ASP.NET Web Forms 遷移至的指引 Blazor ，但並不會嘗試涵蓋每個微妙和詳細資料。 如需從 ASP.NET 遷移至 ASP.NET Core 的一般指引，請參閱 ASP.NET Core 檔中的 [遷移指導](/aspnet/core/migration/proper-to-2x/) 方針。
 
 ### <a name="additional-resources"></a>其他資源
 

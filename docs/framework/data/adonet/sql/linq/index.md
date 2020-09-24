@@ -3,14 +3,15 @@ title: LINQ to SQL
 description: LINQ to SQL 是 .NET Framework 的元件，可提供用來將關聯式資料當作物件來管理的執行時間基礎結構。
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: d6fadecf17cae21527cec2180b6d6c5b5e85d0cc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 961e0713de714d0e75417f93e84e0ab748fd9a42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551310"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158314"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 是 .NET Framework 版本3.5 的元件，可提供用來將關聯式資料當作物件來管理的執行時間基礎結構。  
   
 > [!NOTE]
@@ -23,6 +24,7 @@ ms.locfileid: "90551310"
  這一版 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 隨附的文件會描述建置 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式所需的基本建置組塊、處理序和技巧。 您也可以搜尋特定問題的 Microsoft Docs，也可以參與 [LINQ 論壇](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)，您可以在其中詳細討論更多複雜的主題與專家。 最後， [LINQ to SQL：適用于關聯式資料的 .Net 語言整合查詢-](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) 白皮書詳細資料 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術，完整說明 Visual Basic 和 c # 程式碼範例。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [快速入門](getting-started.md)  
  提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的扼要概觀，以及如何著手使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的相關資訊。  
   
@@ -36,6 +38,7 @@ ms.locfileid: "90551310"
  提供 Visual Basic 和 c # 範例的連結。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [ (LINQ) C 的語言整合式查詢#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  提供 c # 中的 LINQ 技術概述。
 

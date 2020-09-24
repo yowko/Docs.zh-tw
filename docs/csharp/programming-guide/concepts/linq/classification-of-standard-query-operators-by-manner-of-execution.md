@@ -1,35 +1,41 @@
 ---
 title: 依據執行方式將標準查詢運算子分類 (C#)
-description: '瞭解 LINQ to Objects c # 中標準查詢運算子的執行形式：立即、延遲資料流程和延遲的非串流。'
+description: '深入瞭解如何在 c # 中執行標準查詢運算子的形式，以進行 LINQ to Objects：立即、延遲的串流和延後的非資料流程處理。'
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: dd496e232de2c7ed10a8aaa7cec84f8136495cce
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 23f4eafac39b46072629ee4b6e8ec4ae92f6ab80
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105496"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159250"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>依據執行方式將標準查詢運算子分類 (C#)
+
 會使用兩種主要方式之一執行標準查詢運算子方法的 LINQ to Objects 實作：立即或延後。 使用延後執行的查詢運算子可以另外細分成兩個分類︰資料流和非資料流。 如果您知道如何執行不同的查詢運算子，則可以協助您了解透過給定查詢所取得的結果。 如果資料來源變更，或您所建置的查詢是根據另一個查詢，則這特別有用。 本主題會根據執行方式來分類標準查詢運算子。  
   
 ## <a name="manners-of-execution"></a>執行方式  
   
 ### <a name="immediate"></a>立即  
+
  立即執行表示讀取資料來源，並且在程式碼中宣告查詢的位置執行作業。 會立即執行傳回單一非可列舉結果的所有標準查詢運算子。  
   
 ### <a name="deferred"></a>已延期  
+
  延後執行表示未在程式碼中宣告查詢的位置執行作業。 只有在列舉查詢變數時，才會執行這項作業，例如，透過使用 `foreach` 陳述式。 這表示執行查詢的結果取決於執行查詢時的資料來源內容，而不是定義查詢時的資料來源內容。 如果多次列舉查詢變數，則每次都可能會有不同的結果。 幾乎傳回型別為 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Linq.IOrderedEnumerable%601> 的所有標準查詢運算子都會以延遲方式執行。  
   
  使用延後執行的查詢運算子可以另外分類為資料流和非資料流。  
   
 #### <a name="streaming"></a>串流  
+
  資料流運算子在產生項目之前不需要讀取所有來源資料。 執行時，資料流運算子會在讀取並產生項目時 (適用時) 於每個來源項目上執行其運算。 除非產生結果項目，否則資料流運算子會繼續讀取來源項目。 這表示可能會讀取多個來源項目，以產生一個結果項目。  
   
 #### <a name="non-streaming"></a>非資料流  
+
  非資料流運算子在產生結果項目之前必須讀取所有來源資料。 排序或分組這類作業會歸到此分類。 執行時，非資料流查詢運算子會讀取所有來源資料、將其放入資料結構中、執行作業，並產生結果項目。  
   
 ## <a name="classification-table"></a>分類表  
+
  下表會根據執行方法來分類每個標準查詢運算子方法。  
   
 > [!NOTE]
@@ -88,7 +94,7 @@ ms.locfileid: "87105496"
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.Enumerable>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)

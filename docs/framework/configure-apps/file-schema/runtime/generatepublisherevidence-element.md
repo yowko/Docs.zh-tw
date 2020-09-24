@@ -5,21 +5,22 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 11592b055641c0fa2d2b968547dcc5aa40c94600
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 506e7873fab8e41fce121587c22d85600a8b1760
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541780"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158769"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> 項目
+
 指定執行時間是否 <xref:System.Security.Policy.Publisher> 為代碼啟用安全性建立證據， (CAS) 。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<generatePublisherEvidence>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <generatePublisherEvidence
@@ -27,6 +28,7 @@ ms.locfileid: "90541780"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -43,6 +45,7 @@ ms.locfileid: "90541780"
 |`true`|建立辨識項 <xref:System.Security.Policy.Publisher> 。 此為預設值。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -63,9 +66,11 @@ ms.locfileid: "90541780"
 > 我們建議服務使用 `<generatePublisherEvidence>` 元素來改善啟動效能。  使用這個元素也有助於避免延遲，而這可能會導致服務啟動的時間和取消。  
   
 ## <a name="configuration-file"></a>組態檔  
+
  此元素只能用在應用程式佈建檔中。  
   
 ## <a name="example"></a>範例  
+
  下列範例顯示如何使用專案 `<generatePublisherEvidence>` 來停用應用程式的 CAS 發行者原則檢查。  
   
 ```xml  
@@ -78,5 +83,5 @@ ms.locfileid: "90541780"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行時間設定架構](index.md)
+- [執行階段設定結構描述](index.md)
 - [設定檔架構](../index.md)
