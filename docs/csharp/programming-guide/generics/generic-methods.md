@@ -1,18 +1,19 @@
 ---
 title: 泛型方法 - C# 程式設計指南
-description: 瞭解使用型別參數宣告的方法，稱為泛型方法。 請參閱程式碼範例，並查看其他可用的資源。
+description: 瞭解以型別參數宣告的方法，稱為泛型方法。 請參閱程式碼範例，並檢視其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 77b81de26961a8b59644643bf043ed723dbf374f
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 195e3f11c73a17931fa6331750e2ae4ee8fd6f10
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301875"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151463"
 ---
 # <a name="generic-methods-c-programming-guide"></a>泛型方法 (C# 程式設計手冊)
+
 泛型方法是使用型別參數宣告的方法，如下所示：  
   
  [!code-csharp[csProgGuideGenerics#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#22)]  
@@ -44,7 +45,8 @@ ms.locfileid: "87301875"
  [!code-csharp[csProgGuideGenerics#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#28)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
- 如需詳細資訊，請參閱[c # 語言規格](~/_csharplang/spec/classes.md#methods)。  
+
+ 如需詳細資訊，請參閱 [c # 語言規格](~/_csharplang/spec/classes.md#methods)。  
   
 ## <a name="see-also"></a>另請參閱
 
