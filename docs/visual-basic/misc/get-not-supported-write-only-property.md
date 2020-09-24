@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID394
 ms.assetid: bbe0b526-d6b6-430a-92e2-9e8051847595
-ms.openlocfilehash: 954d2da5b4856cda8ad3eef233eecee208aadfca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 943ce2e20dea17becddb09c8884ad3aa5cb70425
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024816"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100395"
 ---
 # <a name="get-not-supported-write-only-property"></a>不支援 Get (唯寫屬性)
+
 由於這是唯寫屬性，因此無法加以讀取。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

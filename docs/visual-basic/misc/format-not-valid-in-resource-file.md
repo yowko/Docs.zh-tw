@@ -4,15 +4,16 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID325
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
-ms.openlocfilehash: 42cccaf6c8539a2d5e8e081bfe0c0c5cec0e02e9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91c7528eca03faf91b7d072032c80903590581b0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84358316"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100421"
 ---
 # <a name="format-not-valid-in-resource-file"></a>資源檔中的格式無效
-專案中的資源檔不符合 Windows 資源檔的標準格式，或是資源檔和 Visual Basic 專案不相符。  
+
+您專案中的資源檔未遵循 Windows 資源檔的標準格式，或資源檔與 Visual Basic 專案之間的不相符。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
