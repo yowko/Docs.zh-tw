@@ -8,14 +8,15 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 7e006adb86886d22ec08dc61fa092bf677b4da96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9374fbaf7ceb61e5b72335417d32a08525477e0d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544735"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149630"
 ---
 # <a name="provideroption-element"></a>\<providerOption> 項目
+
 指定語言提供者的編譯器版本屬性。  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -24,7 +25,7 @@ ms.locfileid: "90544735"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<compiler>**](compiler-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<providerOption>**
 
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <providerOption  
@@ -34,6 +35,7 @@ ms.locfileid: "90544735"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -44,6 +46,7 @@ ms.locfileid: "90544735"
 |`value`|必要屬性。<br /><br /> 指定選項的值。例如「v 3.5」。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -56,6 +59,7 @@ ms.locfileid: "90544735"
 |[\<compiler> 元素](compiler-element.md)|指定語言提供者的編譯器組態屬性。|  
   
 ## <a name="remarks"></a>備註  
+
  在 .NET Framework 3.5 版中，程式碼檔物件模型 (CodeDOM) 程式碼提供者可以使用專案來支援提供者特定的選項 `<providerOption>` 。  
   
  .NET Framework 3.5 包含更新的 .NET Framework 2.0 元件，並提供新的3.5 版元件，其中包含新的類型。 Microsoft c # 和 Visual Basic 程式碼提供者包含在 .NET Framework 2.0 元件中，但已更新為支援3.5 版編譯器。 根據預設，更新的程式碼提供者會產生2.0 版編譯器的程式碼。 您可以使用 `<providerOption>` 元素將目標編譯器版本變更為3.5。 若要這樣做，請指定 "CompilerVersion" 作為 `name` 屬性，並指定 "v 3.5" 作為 `value` 屬性。 您必須在版本號碼之前加上小寫的 "v"。  
@@ -65,6 +69,7 @@ ms.locfileid: "90544735"
  CodeDOM 程式碼提供者可提供接受型別參數的函式，來處理自訂選項 `providerOptions` <xref:System.Collections.Generic.IDictionary%602> 。  
   
 ## <a name="example"></a>範例  
+
  下列範例將示範如何指定應該使用版本3.5 的 c # 程式碼提供者。  
   
 ```xml  

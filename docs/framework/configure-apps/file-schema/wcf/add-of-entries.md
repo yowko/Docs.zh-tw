@@ -2,14 +2,15 @@
 title: <add> 的 <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 23b0a825ea593f85ade870d5b93367571eaa3ec0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 156d8b8d9d0eb05efbf306434ab4555a98bc317e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850503"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149045"
 ---
 # <a name="add-of-entries"></a>\<add> 的 \<entries>
+
 代表將篩選條件對應至先前定義之用戶端端點的路由項目。 將符合此篩選條件的訊息傳送至這個目的地。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "70850503"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<entries>**](entries.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <routing>
@@ -38,6 +39,7 @@ ms.locfileid: "70850503"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -50,11 +52,12 @@ ms.locfileid: "70850503"
 |priority|整數，指定這個項目的優先權。<br /><br /> 路由表中的項目會根據優先權進行評估，其中 0 表示優先順序最低。 具有特定優先順序的所有項目會同時評估，如果找不到符合目前優先順序的項目，則會評估下一個優先順序層級。<br /><br /> 這是選擇性的值。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<routing>](routing.md)|包含路由組態項目的組態區段。|  
   

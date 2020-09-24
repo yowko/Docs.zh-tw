@@ -5,23 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 71f42cb2707c27be6c1a761d09d3a2dae1791680
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 401b62f56918e8ac406a5ee2dda2252d328592bc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552670"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147576"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
+
 Microsoft SQL Server Express Edition (SQL Server Express) 支援使用者執行個體功能，只有在使用 .NET Framework Data Provider for SQL Server (`SqlClient`) 時才提供此功能。 使用者執行個體是 SQL Server Express 資料庫引擎的個別執行個體，這是由 SQL Server Express 的父執行個體所產生的。 使用者執行個體可讓不是本機電腦上系統管理員的使用者附加及連線到 SQL Server Express 資料庫。 每個執行個體都會在個別使用者的資訊安全內容下，以每個使用者一個執行個體為基礎的方式執行。  
   
 ## <a name="user-instance-capabilities"></a>使用者執行個體功能  
+
  使用者實例適用于在最低許可權使用者帳戶下執行 Windows 的使用者 (LUA) 。 每位使用者都 SQL Server 系統管理員 (在 `sysadmin` 其電腦上執行的實例) 許可權，而且不需要以 Windows 系統管理員身分執行。 在具備有限權限的使用者執行個體上執行的軟體，無法進行全系統變更，因為 SQL Server Express 的執行個體是在使用者的非系統管理員 Windows 帳戶下執行，而非以服務方式執行。 每個使用者執行個體都會與父執行個體，以及相同電腦上執行的所有其他使用者執行個體隔離。 在使用者執行個體上執行的資料庫只會以單一使用者模式開啟，而且無法讓多個使用者連線到在使用者執行個體上執行的資料庫。 複寫與分散式查詢也會針對使用者執行個體停用。
   
 > [!NOTE]
 > 使用者如果已經是其自有電腦上的系統管理員，或屬於涉及多個資料庫使用者的情況，則不需要使用者執行個體。  
   
 ## <a name="enabling-user-instances"></a>啟用使用者執行個體  
+
  若要產生使用者執行個體，SQL Server Express 的父執行個體必須在執行中。 根據預設，在安裝 SQL Server Express 時會啟用使用者執行個體，也可以由系統管理員在父執行個體上執行 **sp_configure** 系統預存程序，而加以明確地啟用或停用。  
   
 ```sql  
@@ -35,6 +38,7 @@ sp_configure 'user instances enabled','0'
  使用者執行個體的網路通訊協定必須是本機具名管道。 使用者執行個體無法在 SQL Server 的遠端執行個體上啟動，也不允許 SQL Server 登入。  
   
 ## <a name="connecting-to-a-user-instance"></a>連接至使用者執行個體  
+
  `User Instance` 和 `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 關鍵字可以讓 <xref:System.Data.SqlClient.SqlConnection> 連線至使用者執行個體。 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 與 `AttachDBFilename` 屬性也支援使用者執行個體。  
   
  請注意下列與範例連接字串有關的資訊，如下所示：  
@@ -59,6 +63,7 @@ Initial Catalog=InstanceDB;
 > 您也可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> 與 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> 屬性，在執行階段建立連接字串。  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>使用 &#124;DataDirectory&#124; 替代字串  
+
  `AttachDbFileName` 在 ADO.NET 2.0 中已藉由引進 `|DataDirectory|` (放在垂直線符號內) 替代字串而擴充。 `DataDirectory` 可與 `AttachDbFileName` 搭配使用以表示資料檔案的相對路徑，開發人員因此能根據資料來源的相對路徑建立連接字串，而不需指定完整路徑。  
   
  `DataDirectory` 所指向的實體位置取決於應用程式的類型。 在此範例中，要附加的 Northwind.mdf 檔案位於應用程式的 \app_data 資料夾中。  
@@ -117,12 +122,14 @@ private static void OpenSqlConnection()
 > 在 SQL Server 內部執行的通用語言執行平台 (CLR) 程式碼不支援使用者執行個體。 如果在連接字串中有 <xref:System.InvalidOperationException> 的 `Open` 上呼叫 <xref:System.Data.SqlClient.SqlConnection>，會擲回 `User Instance=true`。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>使用者執行個體連接的存留期  
+
  不同於以服務方式執行的 SQL Server 版本，SQL Server Express 執行個體不需要手動啟動及停止。 每次使用者登入並連線到使用者執行個體時，如果使用者執行個體尚未執行，就會啟動該執行個體。 使用者執行個體資料庫已設定 `AutoClose` 選項，因此資料庫會在一段時間沒有活動之後自動關閉。 在執行個體的最後一個連線關閉之後，已啟動的 sqlservr.exe 程序會繼續執行一段有限的逾時期間，因此，如果在逾時到期之前開啟另一個連線，就不需要重新啟動該處理序。 如果在該逾時期間到期之前未開啟任何新的連線，使用者執行個體會自動關閉。 父執行個體的系統管理員可以使用 **sp_configure** 來變更 **user instance timeout** 選項，藉此設定使用者執行個體的逾時期限持續期間。 預設值是 60 分鐘。  
   
 > [!NOTE]
 > 如果在連接字串中使用 `Min Pool Size`，且其值大於零，連接共用器一律會維護幾個已開啟的連線，而且使用者執行個體不會自動關閉。  
   
 ## <a name="how-user-instances-work"></a>使用者執行個體的運作方式  
+
  初次針對每個使用者產生使用者執行個體時，會將 **master** 和 **msdb** 系統資料庫從 Template Data 資料夾複製到使用者的本機應用程式資料存放庫目錄下方專供使用者執行個體使用的路徑。 此路徑通常是 `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`。 當使用者執行個體啟動時，**tempdb**、記錄檔，以及追蹤檔案也會寫入至這個目錄。 為執行個體產生的名稱保證對每個使用者來說都是唯一的。  
   
  根據預設，Windows Builtin\Users 群組的所有成員都會被授與在本機執行個體上連線的權限，以及在 SQL Server 二進位檔案上讀取及執行權限。 只要呼叫裝載使用者執行個體之使用者的認證通過驗證，該使用者就會成為該執行個體上的 `sysadmin`。 只有共用記憶體會針對使用者執行個體啟用，這表示只有本機電腦上的作業可以執行。  
@@ -135,6 +142,7 @@ private static void OpenSqlConnection()
  為避免資料損毀，使用者執行個體中的資料庫會以獨佔存取權方式開啟。 如果兩個不同的使用者執行個體共用相同電腦上的相同資料庫，第一個執行個體上的使用者必須先關閉資料庫，然後才能在第二個執行個體中開啟。  
   
 ## <a name="user-instance-scenarios"></a>使用者執行個體案例  
+
  使用者執行個體會向資料庫應用程式開發人員提供 SQL Server 資料存放區，且該存放區不會要求開發人員必須有其開發電腦上的系統管理帳戶。 使用者執行個體是以 Access/Jet 模型為基礎，其中資料庫應用程式只會連線到檔案，而使用者會自動擁有所有資料庫物件的完整權限，而不需要系統管理員介入以授與權限。 在使用者以最低權限使用者帳戶 (LUA) 執行、沒有伺服器或本機電腦的系統管理權限，而且還需要建立資料庫物件與應用程式的情況下，才適用這個情況。 使用者執行個體可讓使用者在執行階段建立執行個體，並在使用者自己的資訊安全內容下執行，而不是在具備更特殊權限之系統服務的資訊安全內容中執行。  
   
 > [!IMPORTANT]

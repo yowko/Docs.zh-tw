@@ -9,17 +9,19 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 41ee25397d519f189b462291d823586113c78b67
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f05c53eec326517052eb9a46e57e8b9c18ea698f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541535"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149682"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
+
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
   
 ## <a name="platform-invoke"></a>平台叫用  
+
  *平台叫用*服務，可讓 Managed 程式碼呼叫 Unmanaged 函式在動態連結程式庫 (DLL) 中實作，例如 Microsoft Windows API 中。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
   
 如需詳細資訊，請參閱使用 [非受控 DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md) 函式，以及 [如何使用平台叫用播放 WAV](./how-to-use-platform-invoke-to-play-a-wave-file.md)檔。
@@ -28,9 +30,11 @@ ms.locfileid: "90541535"
 > [Common Language Runtime](../../../standard/clr.md) (CLR) 管理對系統資源的存取。 在 CLR 外部呼叫 Unmanaged 程式碼會略過此安全性機制，因而造成安全性風險。 例如，Unmanaged 程式碼可能會直接呼叫 Unmanaged 程式碼中的資源，並略過 CLR 安全性機制。 如需詳細資訊，請參閱 [.NET 的安全性](../../../standard/security/index.md)。  
   
 ## <a name="c-interop"></a>C++ Interop  
+
  您可以使用 c + + interop （也稱為 (IJW) ）包裝原生 c + + 類別，讓以 c # 或其他 .NET 語言撰寫的程式碼可以使用它。 若要這樣做，您可以撰寫 C++ 程式碼來包裝原生 DLL 或 COM 元件。 與其他 .NET 語言不同的是，Visual C++ 具有互通性支援，可讓 managed 和非受控程式碼位於相同的應用程式中，甚至在相同的檔案中。 您接著可使用 **/clr** 編譯器參數建立 C++ 程式碼，以產生 Managed 組件。 最後，您可以在 C# 專案中新增組件的參考，並使用包裝的物件，就像是使用其他 Managed 類別一樣。  
   
 ## <a name="exposing-com-components-to-c"></a>將 COM 元件公開給 C\#
+
  您可以從 C# 專案取用 COM 元件。 一般步驟如下所示：  
   
 1. 找出並註冊所要使用的 COM 元件。 使用 regsvr32.exe 註冊或取消註冊 COM DLL。  
@@ -46,6 +50,7 @@ ms.locfileid: "90541535"
  如需詳細資訊，請參閱[將 COM 元件公開給 .NET Framework](../../../framework/interop/exposing-com-components.md)。  
   
 ## <a name="exposing-c-to-com"></a>將 C# 公開給 COM  
+
  COM 用戶端可取用已正確公開的 C# 類型。 公開 C# 類型的基本步驟如下所示：  
   
 1. 在 C# 專案中新增 Interop 屬性。  

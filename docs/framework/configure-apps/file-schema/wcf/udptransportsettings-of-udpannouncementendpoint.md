@@ -2,15 +2,16 @@
 title: <udpTransportSettings> 的 <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: b67bdf825948dffe18aabe91b0de236eb929bccc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9b2efe706777550f300f5b88710874342c51c5cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854856"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148851"
 ---
 # <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> 的 \<udpAnnouncementEndpoint>
-此 configuration 專案會公開的 UDP 傳輸設定 [\<udpAnnouncementEndpoint>](udpannouncementendpoint.md) 。  
+
+這個設定元素會公開的 UDP 傳輸設定 [\<udpAnnouncementEndpoint>](udpannouncementendpoint.md) 。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -18,7 +19,7 @@ ms.locfileid: "70854856"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<udpAnnouncementEndpoint>**](udpannouncementendpoint.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<updTransportSettings>**  
 
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -41,6 +42,7 @@ ms.locfileid: "70854856"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -58,11 +60,12 @@ ms.locfileid: "70854856"
 |timeToLive|整數，指定多點傳送封包可以周遊的網路區段躍點數目。  這個屬性會公開與 `IP_MULTICAST_TTL` 和 `IP_TTL` 通訊端選項相關聯的功能。<br /><br /> 預設值為 1。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|具有固定公告合約及 UDP 傳輸繫結的標準端點。|  
   

@@ -1,18 +1,19 @@
 ---
-title: <state>在 WCF 中，<workflowInstanceQuery>
+title: <state> 的 WCF <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 80f7532f3c51680a2e34713b526dc43822db61b9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c323f7dba265e7fbcb09482115694088e761af0e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854959"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148889"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<state>在 WCF 中，\<workflowInstanceQuery>
+# <a name="state-of-wcf-workflowinstancequery"></a>\<state> 的 WCF \<workflowInstanceQuery>
+
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   
- 如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
+ 如需追蹤設定檔查詢的詳細資訊，請參閱 [追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -25,7 +26,7 @@ ms.locfileid: "70854959"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<states>**](states-of-wcf-workflowinstancequery.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<state>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tracking>
@@ -61,7 +62,7 @@ ms.locfileid: "70854959"
 
 ### <a name="parent-elements"></a>父元素
 
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<states>](states-of-wcf-workflowinstancequery.md)|建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。|  
   
@@ -71,7 +72,7 @@ ms.locfileid: "70854959"
   
 下表說明可能的狀態值：
   
-|州|描述|  
+|State|描述|  
 |-----------|-----------------|  
 |已中止|工作流程執行個體已中止。|  
 |已完成|工作流程執行個體已完成。|  
@@ -106,5 +107,5 @@ ms.locfileid: "70854959"
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流程追蹤與追查](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追蹤設定檔](../../../windows-workflow-foundation/tracking-profiles.md)

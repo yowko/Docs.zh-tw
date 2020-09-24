@@ -6,21 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 2148aa984f8289b82b8efcee2404f08cab25c797
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2bea3d962998b2778d22e232e7f7062cfda3143
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556547"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148398"
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
 
 在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 編譯到應用程式原始程式碼中的未加密連接字串，可使用 [Ildasm.exe (IL 反組譯工具)](../../tools/ildasm-exe-il-disassembler.md) 工具進行檢視。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
   
 ## <a name="working-with-application-configuration-files"></a>使用應用程式組態檔  
+
  應用程式組態檔包含特定應用程式專屬的設定。 例如，ASP.NET 應用程式可能擁有一或多個 **web.config** 檔案，Windows 應用程式則可能具有選擇性的 **app.config** 檔案。 組態檔會共用通用的項目，但組態檔的名稱及位置則會根據應用程式的主機而不同。  
   
 ### <a name="the-connectionstrings-section"></a>connectionStrings 區段  
+
  連接字串可以用索引鍵/值對的方式，儲存在應用程式組態檔 **configuration** 項目的 **connectionStrings** 區段中。 子項目包含 **add**、**clear** 和 **remove**。  
   
  下列組態檔片段示範儲存連接字串的結構描述和語法。 **name** 屬性是用於唯一識別連接字串的名稱，可藉此在執行階段擷取該連接字串。 **providerName** 是 .NET Framework 資料提供者的非變異名稱，登錄於 machine.config 檔案。  
@@ -41,6 +43,7 @@ ms.locfileid: "90556547"
 > 您可將部分連接字串儲存在組態檔中，然後在執行階段使用 <xref:System.Data.Common.DbConnectionStringBuilder> 類別 (Class) 加以完成。 在您無法預先知道連接字串的項目，或者不想將機密資訊儲存在組態檔中時，這種方法很有用。 如需詳細資訊，請參閱[連接字串建置器](connection-string-builders.md)。  
   
 ### <a name="using-external-configuration-files"></a>使用外部組態檔  
+
  外部組態檔是包含組態檔片段 (由單一區段組成) 的個別檔案。 外部組態檔接著會由主組態檔來參考。 將 **connectionStrings** 區段儲存在實際分開的檔案中，對於在部署應用程式之後可能會編輯連接字串的情況很有用。 例如，標準的 ASP.NET 行為是在組態檔修改時重新啟動應用程式網域，而這可能導致狀態資訊遺失。 然而，修改外部組態檔並不會造成應用程式重新啟動。 外部組態檔並不僅限於 ASP.NET 才有，Windows 應用程式也可加以利用； 此外，也可以透過檔案存取安全性和權限，限制對外部組態檔的存取權。 執行階段的外部組態檔使用是透明的，而且不需要任何特殊的程式碼。  
   
  若要將連接字串儲存於外部組態檔，請建立僅包含 **connectionStrings** 區段的個別檔案。 請勿包含任何額外的項目、區段或屬性。 此範例說明外部組態檔的語法。  
@@ -63,12 +66,14 @@ ms.locfileid: "90556547"
 ```  
   
 ## <a name="retrieving-connection-strings-at-run-time"></a>在執行階段擷取連接字串  
+
  .NET Framework 2.0 在 <xref:System.Configuration> 命名空間 (Namespace) 中導入了新的類別，可簡化在執行階段從組態檔中擷取連接字串的作業。 您可以透過程式設計的方式，依名稱或提供者名稱擷取連接字串。  
   
 > [!NOTE]
 > **machine.config** 檔案也包含 **connectionStrings** 區段，後者則包含 Visual Studio 所使用的連接字串。 從 Windows 應用程式中的**app.config**檔案依提供者名稱抓取連接字串時， **machine.config**中的連接字串會先載入，然後再載入**app.config**的專案。在**connectionStrings**元素之後立即新增**clear** ，會從記憶體中的資料結構移除所有繼承的參考，因此只會考慮本機**app.config**檔中定義的連接字串。  
   
 ### <a name="working-with-the-configuration-classes"></a>使用組態類別  
+
  從 .NET Framework 2.0 開始，在本機電腦上使用組態檔時，就會使用 <xref:System.Configuration.ConfigurationManager> 來取代已被取代的 <xref:System.Configuration.ConfigurationSettings>。 <xref:System.Web.Configuration.WebConfigurationManager> 則會用於搭配 ASP.NET 組態檔。 這是為了在 Web 伺服器上使用組態檔而設計，可透過程式設計的方式存取 **system.web** 之類的組態檔區段。  
   
 > [!NOTE]
@@ -83,6 +88,7 @@ ms.locfileid: "90556547"
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|連接字串。 對應至 **connectionString** 屬性。|  
   
 ### <a name="example-listing-all-connection-strings"></a>範例：列出所有連接字串  
+
  這個範例會逐一查看， <xref:System.Configuration.ConnectionStringSettingsCollection> 並 <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> 在主控台視窗中顯示、和屬性。  
   
 > [!NOTE]
@@ -92,18 +98,21 @@ ms.locfileid: "90556547"
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-name"></a>範例：依名稱擷取連接字串  
+
  此範例示範如何藉由指定連接字串的名稱，從組態檔擷取連接字串。 程式碼會建立 <xref:System.Configuration.ConnectionStringSettings> 物件，並將提供的輸入參數與 <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> 名稱進行比對。 如果沒有找到符合的名稱，函式就會傳回 `null` (在 Visual Basic 中則為 `Nothing`)。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-provider-name"></a>範例：依提供者名稱擷取連接字串  
+
  此範例示範如何藉由指定 *System.Data.ProviderName* 格式的提供者非變異名稱來擷取連接字串。 程式碼會逐一查看 <xref:System.Configuration.ConnectionStringSettingsCollection>，並針對第一個找到的 <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> 傳回連接字串。 如果找不到提供者名稱，函式就會傳回 `null` (在 Visual Basic 中則為 `Nothing`)。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>使用受保護的組態來加密組態檔區段  
+
  ASP.NET 2.0 導入一項稱為「受保護的組態」** 的新功能，可用於加密組態檔中的機密資訊。 雖然主要是針對 ASP.NET 所設計，但這項功能仍可用來加密 Windows 應用程式中的組態檔區段。 如需受保護之組態功能的詳細描述，請參閱[使用受保護的組態加密組態資訊](/previous-versions/aspnet/53tyfkaw(v=vs.100))。  
   
  下列組態檔片段顯示加密之後的 **connectionStrings** 區段。 **configProtectionProvider** 會指定用於加密及解密連接字串的受保護組態提供者。 **EncryptedData** 區段包含加密文字。  
@@ -121,6 +130,7 @@ ms.locfileid: "90556547"
  在執行階段擷取加密的連接字串時，.NET Framework 會使用指定的提供者對 **CipherValue** 進行解密，並將其提供給應用程式使用。 您不需要撰寫任何額外的程式碼來管理解密程序。  
   
 ### <a name="protected-configuration-providers"></a>受保護的組態提供者  
+
  受保護的組態提供者會在本機電腦上登錄於 **machine.config** 檔案的 **configProtectedData** 區段，如下列片段所示，此片段顯示 .NET Framework 所提供的兩個受保護的組態提供者。 為了便於讀取，這裡顯示的值已經過刪減。  
   
 ```xml  
@@ -144,12 +154,14 @@ ms.locfileid: "90556547"
  這兩種提供者都提供高度加密的資料。 不過，如果您打算在多個伺服器 (例如 Web 伺服陣列) 上使用相同的加密組態檔，則只有使用 <xref:System.Configuration.RsaProtectedConfigurationProvider> 才能匯出用於加密資料的加密金鑰並將其匯入另一個伺服器。 如需詳細資訊，請參閱[匯入和匯出受保護的組態 RSA 金鑰容器](/previous-versions/aspnet/yxw286t2(v=vs.100))。  
   
 ### <a name="using-the-configuration-classes"></a>使用組態類別  
+
  <xref:System.Configuration> 命名空間 (Namespace) 提供類別 (Class)，以透過程式設計的方式使用組態設定。 <xref:System.Configuration.ConfigurationManager> 類別可用於存取電腦、應用程式及使用者組態檔。 如果您要建立 ASP.NET 應用程式，您可以使用 <xref:System.Web.Configuration.WebConfigurationManager> 類別，此類別提供相同的功能，同時也可讓您存取 ASP.NET 應用程式特有的設定，例如中找到的應用程式 **\<system.web>** 。  
   
 > [!NOTE]
 > <xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。 如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。 這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 (Implementation)。 如需詳細資訊，請參閱[密碼編譯服務](/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))。  
   
 ### <a name="appconfig-example"></a>App.config 範例  
+
  此範例示範如何在 Windows 應用程式的 **app.config** 檔案中切換 **connectionStrings** 區段的加密。 在此範例中，程序會採用應用程式的名稱做為引數，例如 "MyApplication.exe"。 接下來會加密 **app.config** 檔案，並將其複製到 "MyApplication.exe.config" 名稱下包含可執行檔的資料夾。  
   
 > [!NOTE]
@@ -164,6 +176,7 @@ ms.locfileid: "90556547"
  [!code-vb[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/VB/source.vb#1)]  
   
 ### <a name="webconfig-example"></a>Web.config 範例  
+
  此範例使用 <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> 的 `WebConfigurationManager` 方法。 請注意，在此例中可以藉由波狀符號提供 **Web.config** 檔案的相對路徑。 程式碼需要 `System.Web.Configuration` 類別的參考。  
   
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
