@@ -1,29 +1,31 @@
 ---
-title: '如何使用 LINQ 查詢 ArrayList （c #）'
-description: '這個範例會使用 LINQ 來查詢 c # 中的 ArrayList。 您必須宣告範圍變數的類型，以反映集合中的物件類型。'
+title: '如何使用 LINQ (c # ) 查詢 ArrayList'
+description: '此範例會在 c # 中使用 LINQ 來查詢 ArrayList。 您必須宣告範圍變數的類型，以反映集合中的物件類型。'
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 5c251e17de062a4578f06fc1a40ea3ede9f3ab67
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 278c05cfc864ee4f53e1215a2acb739efd87f8b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104602"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153998"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a><span data-ttu-id="1b199-104">如何使用 LINQ 查詢 ArrayList （c #）</span><span class="sxs-lookup"><span data-stu-id="1b199-104">How to query an ArrayList with LINQ (C#)</span></span>
-<span data-ttu-id="1b199-105">使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。</span><span class="sxs-lookup"><span data-stu-id="1b199-105">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="1b199-106">例如，如果您有 `Student` 物件的 <xref:System.Collections.ArrayList>，您的 [from 子句](../../../language-reference/keywords/from-clause.md)看起來應該如下：</span><span class="sxs-lookup"><span data-stu-id="1b199-106">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [from clause](../../../language-reference/keywords/from-clause.md) should look like this:</span></span>  
+# <a name="how-to-query-an-arraylist-with-linq-c"></a><span data-ttu-id="00d97-104">如何使用 LINQ (c # ) 查詢 ArrayList</span><span class="sxs-lookup"><span data-stu-id="00d97-104">How to query an ArrayList with LINQ (C#)</span></span>
+
+<span data-ttu-id="00d97-105">使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。</span><span class="sxs-lookup"><span data-stu-id="00d97-105">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="00d97-106">例如，如果您有 `Student` 物件的 <xref:System.Collections.ArrayList>，您的 [from 子句](../../../language-reference/keywords/from-clause.md)看起來應該如下：</span><span class="sxs-lookup"><span data-stu-id="00d97-106">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [from clause](../../../language-reference/keywords/from-clause.md) should look like this:</span></span>  
   
 ```csharp
 var query = from Student s in arrList  
 //...
 ```  
   
- <span data-ttu-id="1b199-107">藉由指定範圍變數的類型，您就可以將 <xref:System.Collections.ArrayList> 中的每個項目轉換為 `Student`。</span><span class="sxs-lookup"><span data-stu-id="1b199-107">By specifying the type of the range variable, you are casting each item in the <xref:System.Collections.ArrayList> to a `Student`.</span></span>  
+ <span data-ttu-id="00d97-107">藉由指定範圍變數的類型，您就可以將 <xref:System.Collections.ArrayList> 中的每個項目轉換為 `Student`。</span><span class="sxs-lookup"><span data-stu-id="00d97-107">By specifying the type of the range variable, you are casting each item in the <xref:System.Collections.ArrayList> to a `Student`.</span></span>  
   
- <span data-ttu-id="1b199-108">在查詢運算式中使用具有明確類型的範圍變數，相當於呼叫 <xref:System.Linq.Enumerable.Cast%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="1b199-108">The use of an explicitly typed range variable in a query expression is equivalent to calling the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="1b199-109">如果無法執行指定的轉換，則 <xref:System.Linq.Enumerable.Cast%2A> 會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="1b199-109"><xref:System.Linq.Enumerable.Cast%2A> throws an exception if the specified cast cannot be performed.</span></span> <span data-ttu-id="1b199-110"><xref:System.Linq.Enumerable.Cast%2A> 和 <xref:System.Linq.Enumerable.OfType%2A> 是對非泛型 <xref:System.Collections.IEnumerable> 類型執行的兩個標準查詢運算子方法。</span><span class="sxs-lookup"><span data-stu-id="1b199-110"><xref:System.Linq.Enumerable.Cast%2A> and <xref:System.Linq.Enumerable.OfType%2A> are the two Standard Query Operator methods that operate on non-generic <xref:System.Collections.IEnumerable> types.</span></span> <span data-ttu-id="1b199-111">如需詳細資訊，請參閱 [LINQ 查詢作業中的類型關聯性](./type-relationships-in-linq-query-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="1b199-111">For more information, see [Type Relationships in LINQ Query Operations](./type-relationships-in-linq-query-operations.md).</span></span>  
+ <span data-ttu-id="00d97-108">在查詢運算式中使用具有明確類型的範圍變數，相當於呼叫 <xref:System.Linq.Enumerable.Cast%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="00d97-108">The use of an explicitly typed range variable in a query expression is equivalent to calling the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="00d97-109">如果無法執行指定的轉換，則 <xref:System.Linq.Enumerable.Cast%2A> 會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="00d97-109"><xref:System.Linq.Enumerable.Cast%2A> throws an exception if the specified cast cannot be performed.</span></span> <span data-ttu-id="00d97-110"><xref:System.Linq.Enumerable.Cast%2A> 和 <xref:System.Linq.Enumerable.OfType%2A> 是對非泛型 <xref:System.Collections.IEnumerable> 類型執行的兩個標準查詢運算子方法。</span><span class="sxs-lookup"><span data-stu-id="00d97-110"><xref:System.Linq.Enumerable.Cast%2A> and <xref:System.Linq.Enumerable.OfType%2A> are the two Standard Query Operator methods that operate on non-generic <xref:System.Collections.IEnumerable> types.</span></span> <span data-ttu-id="00d97-111">如需詳細資訊，請參閱 [LINQ 查詢作業中的類型關聯性](./type-relationships-in-linq-query-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="00d97-111">For more information, see [Type Relationships in LINQ Query Operations](./type-relationships-in-linq-query-operations.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1b199-112">範例</span><span class="sxs-lookup"><span data-stu-id="1b199-112">Example</span></span>  
- <span data-ttu-id="1b199-113">下列範例將顯示 <xref:System.Collections.ArrayList> 的簡單查詢。</span><span class="sxs-lookup"><span data-stu-id="1b199-113">The following example shows a simple query over an <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="1b199-114">請注意，此範例會在程式碼呼叫 <xref:System.Collections.ArrayList.Add%2A> 方法時使用物件初始設定式，但這不是必要的。</span><span class="sxs-lookup"><span data-stu-id="1b199-114">Note that this example uses object initializers when the code calls the <xref:System.Collections.ArrayList.Add%2A> method, but this is not a requirement.</span></span>  
+## <a name="example"></a><span data-ttu-id="00d97-112">範例</span><span class="sxs-lookup"><span data-stu-id="00d97-112">Example</span></span>  
+
+ <span data-ttu-id="00d97-113">下列範例將顯示 <xref:System.Collections.ArrayList> 的簡單查詢。</span><span class="sxs-lookup"><span data-stu-id="00d97-113">The following example shows a simple query over an <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="00d97-114">請注意，此範例會在程式碼呼叫 <xref:System.Collections.ArrayList.Add%2A> 方法時使用物件初始設定式，但這不是必要的。</span><span class="sxs-lookup"><span data-stu-id="00d97-114">Note that this example uses object initializers when the code calls the <xref:System.Collections.ArrayList.Add%2A> method, but this is not a requirement.</span></span>  
   
 ```csharp  
 using System;  
@@ -84,6 +86,6 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1b199-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="1b199-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00d97-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="00d97-115">See also</span></span>
 
-- [<span data-ttu-id="1b199-116">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="1b199-116">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
+- [<span data-ttu-id="00d97-116">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="00d97-116">LINQ to Objects (C#)</span></span>](./linq-to-objects.md)
