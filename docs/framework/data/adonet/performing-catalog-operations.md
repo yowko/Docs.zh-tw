@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 802762592a63a2046abcde8ed83ac67be47faf96
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149241"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161642"
 ---
-# <a name="performing-catalog-operations"></a><span data-ttu-id="2ecfb-102">執行資料庫目錄作業</span><span class="sxs-lookup"><span data-stu-id="2ecfb-102">Performing Catalog Operations</span></span>
-<span data-ttu-id="2ecfb-103">要執行修改資料庫或目錄的命令（如創建表或創建過程語句），請使用相應的 SQL 語句和**連接**物件創建**命令**物件。</span><span class="sxs-lookup"><span data-stu-id="2ecfb-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="2ecfb-104">使用命令物件的**ExecuteNonQuery**方法執行**命令**。</span><span class="sxs-lookup"><span data-stu-id="2ecfb-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="performing-catalog-operations"></a><span data-ttu-id="eea12-102">執行資料庫目錄作業</span><span class="sxs-lookup"><span data-stu-id="eea12-102">Performing Catalog Operations</span></span>
+
+<span data-ttu-id="eea12-103">若要執行命令以修改資料庫或目錄，例如 CREATE TABLE 或 CREATE PROCEDURE 語句，請使用適當的 SQL 語句和**Connection**物件來建立**命令**物件。</span><span class="sxs-lookup"><span data-stu-id="eea12-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="eea12-104">使用**命令**物件的**ExecuteNonQuery**方法來執行命令。</span><span class="sxs-lookup"><span data-stu-id="eea12-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="2ecfb-105">下列程式碼範例會在 Microsoft SQL Server 資料庫中建立預存程序。</span><span class="sxs-lookup"><span data-stu-id="2ecfb-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
+ <span data-ttu-id="eea12-105">下列程式碼範例會在 Microsoft SQL Server 資料庫中建立預存程序。</span><span class="sxs-lookup"><span data-stu-id="eea12-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -45,8 +46,8 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2ecfb-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2ecfb-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eea12-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eea12-106">See also</span></span>
 
-- [<span data-ttu-id="2ecfb-107">使用命令修改資料</span><span class="sxs-lookup"><span data-stu-id="2ecfb-107">Using Commands to Modify Data</span></span>](using-commands-to-modify-data.md)
-- [<span data-ttu-id="2ecfb-108">命令和參數</span><span class="sxs-lookup"><span data-stu-id="2ecfb-108">Commands and Parameters</span></span>](commands-and-parameters.md)
-- <span data-ttu-id="2ecfb-109">[ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)</span><span class="sxs-lookup"><span data-stu-id="2ecfb-109">[ADO.NET Overview](ado-net-overview.md)</span></span>
+- [<span data-ttu-id="eea12-107">使用命令修改資料</span><span class="sxs-lookup"><span data-stu-id="eea12-107">Using Commands to Modify Data</span></span>](using-commands-to-modify-data.md)
+- [<span data-ttu-id="eea12-108">命令和參數</span><span class="sxs-lookup"><span data-stu-id="eea12-108">Commands and Parameters</span></span>](commands-and-parameters.md)
+- <span data-ttu-id="eea12-109">[ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)</span><span class="sxs-lookup"><span data-stu-id="eea12-109">[ADO.NET Overview](ado-net-overview.md)</span></span>
