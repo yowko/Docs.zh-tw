@@ -2,14 +2,15 @@
 title: Entity Framework 資源
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: b6c85ed5108d95c19e97d07f98b353ab4b115281
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 300eea414e8e1dc76c73b9444895dc19ef7b0fa6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557329"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156716"
 ---
 # <a name="entity-framework-resources"></a>Entity Framework 資源
+
 下列外部資源提供建立 Entity Framework 應用程式的資訊和支援。  
   
  [ADO.NET 小組部落格](/archive/blogs/adonet/)  

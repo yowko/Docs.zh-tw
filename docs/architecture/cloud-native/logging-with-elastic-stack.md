@@ -2,12 +2,12 @@
 title: 使用彈性堆疊記錄
 description: 使用彈性堆疊、Logstash 和 Kibana 的記錄
 ms.date: 05/13/2020
-ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3f10b0d06c87b7bed6d3e302742b1dc52e2c9d3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811167"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155337"
 ---
 # <a name="logging-with-elastic-stack"></a>使用彈性堆疊記錄
 
@@ -105,7 +105,7 @@ output {
 
 ## <a name="installing-elastic-stack-on-azure"></a>在 Azure 上安裝彈性堆疊
 
-您可以透過數種方式在 Azure 上安裝彈性堆疊。 同樣地，您可以布建 [虛擬機器，並直接在其上安裝彈性堆疊](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)。 某些有經驗的使用者偏好此選項，因為它提供最高的自訂能力。 在基礎結構即服務上部署，會帶來大量的管理負擔，進而強制採用該路徑的人取得與基礎結構即服務相關聯之所有工作的擁有權，例如保護機器的安全，以及保持最新的修補程式。
+您可以透過數種方式在 Azure 上安裝彈性堆疊。 同樣地，您可以布建 [虛擬機器，並直接在其上安裝彈性堆疊](/azure/virtual-machines/linux/tutorial-elasticsearch)。 某些有經驗的使用者偏好此選項，因為它提供最高的自訂能力。 在基礎結構即服務上部署，會帶來大量的管理負擔，進而強制採用該路徑的人取得與基礎結構即服務相關聯之所有工作的擁有權，例如保護機器的安全，以及保持最新的修補程式。
 
 較少額外負荷的選項，是使用已設定彈性堆疊的許多 Docker 容器之一。 這些容器可以放入現有的 Kubernetes 叢集中，並與應用程式程式碼一起執行。 [Sebp/elk](https://elk-docker.readthedocs.io/)容器是記錄完善且經過測試的彈性堆疊容器。
 
@@ -113,7 +113,7 @@ output {
 
 ## <a name="references"></a>參考資料
 
-- [在 Azure 上安裝彈性堆疊](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
+- [在 Azure 上安裝彈性堆疊](/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
 >[上一個](observability-patterns.md) 

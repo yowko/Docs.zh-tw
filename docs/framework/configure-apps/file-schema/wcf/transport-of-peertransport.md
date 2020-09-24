@@ -2,14 +2,15 @@
 title: <transport> 的 <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 3b2c7716727f58abb81bf4d58b13189ac170cf7c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7328d67c4649010dce3e1c866238d1e0067e4990
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399294"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157066"
 ---
 # <a name="transport-of-peertransport"></a>\<transport> 的 \<peerTransport>
+
 指定使用這個繫結設定之對等所傳送安全訊息的傳輸類型。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ ms.locfileid: "70399294"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-peertransport.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<transport>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <security>
@@ -30,6 +31,7 @@ ms.locfileid: "70399294"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列各節說明屬性、子元素和父元素  
   
 ### <a name="attributes"></a>屬性  
@@ -46,16 +48,18 @@ ms.locfileid: "70399294"
 |密碼|對等通道傳輸的驗證作業需要正確的密碼。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<security>](security-of-peertransport.md)|定義對等傳輸的安全性設定。|  
   
 ## <a name="remarks"></a>備註  
- 只有當的模式屬性設定為或時，才會設定此元素 [\<security>](security-of-peertransport.md) `Transport` `TransportWithMessageCredential` 。  
+
+ 只有當的模式屬性設定為或時，才會設定這個元素 [\<security>](security-of-peertransport.md) `Transport` `TransportWithMessageCredential` 。  
   
 ## <a name="see-also"></a>另請參閱
 

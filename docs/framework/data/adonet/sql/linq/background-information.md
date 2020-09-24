@@ -2,14 +2,15 @@
 title: 背景資訊
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: fc7c68fe2dba266e056feb459038a060a055e175
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542107"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156091"
 ---
 # <a name="background-information"></a>背景資訊
+
 本節中的主題是有關於使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 之基本概念以外的概念和程序。  
   
  請遵循這些步驟來尋找 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 程式碼和應用程式的其他範例：  
@@ -21,6 +22,7 @@ ms.locfileid: "90542107"
 - 研究詳述技術的白皮書 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ，其中包含 Visual Basic 和 c # 程式碼範例的完整資訊。 如需詳細資訊，請參閱 [LINQ to SQL：適用于關聯式資料的 .Net 語言整合查詢](/previous-versions/dotnet/articles/bb425822(v=msdn.10))。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [ADO.NET 和 LINQ to SQL](ado-net-and-linq-to-sql.md)  
  描述 ADO.NET 和的關聯性 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 。  
   
@@ -66,7 +68,7 @@ ms.locfileid: "90542107"
  [序列化](serialization.md)  
  描述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式中的序列化 (Serialization) 處理序。  
   
- [預存程式](stored-procedures.md)  
+ [預存程序](stored-procedures.md)  
  描述如何在設計階段對應預存程序 (Stored Procedure)，以及如何從應用程式呼叫這些預存程序。  
   
  [交易支援](transaction-support.md)  
@@ -82,5 +84,6 @@ ms.locfileid: "90542107"
  描述如何在設計階段對應使用者定義的函式，以及如何從應用程式呼叫這些函式。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [程式設計指南](programming-guide.md)  
  包含說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 各個層面的章節連結。
