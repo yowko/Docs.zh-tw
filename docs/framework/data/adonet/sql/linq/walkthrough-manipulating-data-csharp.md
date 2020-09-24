@@ -2,14 +2,15 @@
 title: 逐步解說：操作資料 (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 8941ac30a67406346e5448ca5af4af8512d168a8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fefbee533634ee42785c65e0265ce1e0567561b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781011"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164060"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>逐步解說：操作資料 (C#)
+
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -17,26 +18,28 @@ ms.locfileid: "70781011"
  本逐步解說的內容是依據 Visual C# 開發設定所撰寫的。  
   
 ## <a name="prerequisites"></a>必要條件  
+
  本逐步解說需要下列項目：  
   
 - 本逐步解說會使用專用資料夾 ("c:\linqtest6") 來保存檔案。 請先建立這個資料夾，再開始逐步解說。  
   
 - Northwind 範例資料庫。  
   
-     如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需指示，請參閱[下載範例資料庫](downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest6 資料夾。  
+     如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 [下載範例資料庫](downloading-sample-databases.md)。 下載資料庫之後，請將 northwnd.mdf 檔案複製至 c:\linqtest6 資料夾。  
   
 - 會從 Northwind 資料庫產生 C# 程式碼檔案。  
   
-     您可以使用物件關聯式設計工具或 SQLMetal 工具來產生這個檔案。 本逐步解說是使用 SQLMetal 工具，以下列命令列所撰寫：  
+     您可以使用物件關聯式設計工具或 SQLMetal 工具來產生此檔案。 本逐步解說是使用 SQLMetal 工具，以下列命令列所撰寫：  
   
      **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
   
      如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../tools/sqlmetal-exe-code-generation-tool.md)。  
   
-## <a name="overview"></a>總覽  
+## <a name="overview"></a>概觀  
+
  此逐步解說包含六個主要工作：  
   
-- 在 Visual Studio 中建立解決方案。[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]在 Visual Studio 中建立方案。  
   
 - 將資料庫程式碼檔案加入至專案。  
   
@@ -49,30 +52,32 @@ ms.locfileid: "70781011"
 - 將這些變更送出至 Northwind 資料庫。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
- 在第一項工作中，您會建立 Visual Studio 方案，其中包含組建和執行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案所需的參考。  
+
+ 在第一個工作中，您會建立 Visual Studio 方案，其中包含建立和執行專案所需的參考 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1. 在 **[Visual Studio 檔案**] 功能表上，指向 [**新增**]，然後按一下 [**專案**]。  
+1. 在 **Visual Studio 的** [檔案] 功能表上，指向 [ **新增**]，然後按一下 [ **專案**]。  
   
-2. 在 [**新增專案**] 對話方塊的 [**專案類型**] 窗格中，按一下 [  **C#視覺效果**]。  
+2. 在 [**新增專案**] 對話方塊的 [**專案類型**] 窗格中，按一下 [ **Visual c #**]。  
   
-3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
+3. 按一下 [範本]**** 窗格中的 [主控台應用程式]****。  
   
-4. 在 [**名稱**] 方塊中，輸入**LinqDataManipulationApp**。  
+4. 在 [ **名稱** ] 方塊中，輸入 **LinqDataManipulationApp**。  
   
-5. 在 [**位置**] 方塊中，確認您要儲存專案檔案的位置。  
+5. 在 [ **位置** ] 方塊中，確認您要儲存專案檔的位置。  
   
-6. 按一下 [確定 **Deploying Office Solutions**]。  
+6. 按一下 [確定]  。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
+
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 System.Data.Linq 未列為專案中的參考，請按照下列步驟所述將它加入：  
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
-1. 在**方案總管**中，以滑鼠右鍵按一下 [**參考**]，然後按一下 [**加入參考**]。  
+1. 在 **方案總管**中，以滑鼠右鍵按一下 [ **參考**]，然後按一下 [ **加入參考**]。  
   
-2. 在 [**加入參考**] 對話方塊中，按一下 [ **.net**]，再按一下 [system.string] 元件，然後按一下 **[確定]** 。  
+2. 在 [ **加入參考** ] 對話方塊中，按一下 [ **.net**]，按一下 [system.string] 元件，然後按一下 **[確定]**。  
   
      組件隨即加入至專案。  
   
@@ -81,17 +86,19 @@ ms.locfileid: "70781011"
      [!code-csharp[DLinqWalk3CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#1)]  
   
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>將 Northwind 程式碼檔案加入至專案  
+
  這些步驟假設您已使用 SQLMetal 工具，從 Northwind 範例資料庫產生程式碼檔案。 如需詳細資訊，請參閱本逐步解說稍早的「必要條件」一節。  
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>若要將 Northwind 程式碼檔案加入至專案  
   
-1. 在 [**專案**] 功能表上，按一下 [**加入現有專案**]。  
+1. 在 [專案]**** 功能表上，按一下 [新增現有項目]****。  
   
-2. 在 [**加入現有專案**] 對話方塊中，流覽至 [c:\linqtest6\northwind.cs]，然後按一下 [**新增**]。  
+2. 在 [ **加入現有專案** ] 對話方塊中，流覽至 [c:\linqtest6\northwind.cs]，然後按一下 [ **加入**]。  
   
      northwind.cs 檔案會加入至專案。  
   
 ## <a name="setting-up-the-database-connection"></a>設定資料庫連接  
+
  請先測試與資料庫的連接。 請特別注意，資料庫 Northwnd 沒有字母 i。 如果在後續步驟發生錯誤，則請檢閱 northwind.cs 檔案，以判斷 Northwind 部分類別的拼法。  
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>若要設定和測試資料庫連接  
@@ -104,9 +111,10 @@ ms.locfileid: "70781011"
   
      **主控台**視窗隨即開啟。  
   
-     您可以在**主控台**視窗中按 enter 鍵，或按一下 [Visual Studio] [**調試**程式] 功能表上的 [**停止調試**程式]，以關閉應用程式。  
+     您可以在**主控台**視窗中按 enter 鍵，或按一下 [Visual Studio **Debug** ] 功能表上的 [**停止調試**程式]，以關閉應用程式。  
   
 ## <a name="creating-a-new-entity"></a>建立新的實體  
+
  建立新的實體十分簡單。 您可以使用 `Customer` 關鍵字，建立物件 (如 `new`)。  
   
  在本節和下列各節中，您變更的只是本機快取。 在本逐步解說最後呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 之前，都不會將變更傳送至資料庫。  
@@ -119,9 +127,10 @@ ms.locfileid: "70781011"
   
 2. 按 F5 對方案進行偵錯。  
   
-3. 在**主控台**視窗中按 enter 鍵，以停止偵測並繼續進行逐步解說。  
+3. 在 **主控台** 視窗中按 enter 鍵，以停止調試，然後繼續進行逐步解說。  
   
 ## <a name="updating-an-entity"></a>更新實體  
+
  在下列步驟中，您會擷取 `Customer` 物件，並修改它的其中一個屬性。  
   
 #### <a name="to-change-the-name-of-a-customer"></a>若要變更 Customer 的名稱  
@@ -131,6 +140,7 @@ ms.locfileid: "70781011"
      [!code-csharp[DLinqWalk3CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#4)]  
   
 ## <a name="deleting-an-entity"></a>刪除實體  
+
  您可以使用同一個客戶物件，刪除第一份訂單。  
   
  在下列程式碼中，會示範如何中斷資料列之間的關聯性 (Relationship)，以及如何刪除資料庫中的資料列。 將下列程式碼加入至 `Console.ReadLine` 的前面，以查看如何刪除物件：  
@@ -142,6 +152,7 @@ ms.locfileid: "70781011"
      [!code-csharp[DLinqWalk3CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#5)]  
   
 ## <a name="submitting-changes-to-the-database"></a>將變更送出至資料庫  
+
  建立、更新和刪除物件的最終必要步驟是實際將變更送出至資料庫。 沒有這個步驟，所進行的變更只是針對本機，並不會出現在查詢結果中。  
   
 #### <a name="to-submit-changes-to-the-database"></a>若要將變更送出至資料庫  
@@ -156,7 +167,7 @@ ms.locfileid: "70781011"
   
 3. 按 F5 對方案進行偵錯。  
   
-4. 在**主控台**視窗中按 enter 鍵，以關閉應用程式。  
+4. 在 **主控台** 視窗中按 enter 鍵，以關閉應用程式。  
   
 > [!NOTE]
 > 送出變更以加入新的客戶之後，無法再照原狀執行這個方案。 若要重新執行方案，請變更要加入的客戶名稱和客戶識別碼。  

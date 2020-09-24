@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2314f2a2-b1c3-40c4-95bb-cdf9b21a7b53
-ms.openlocfilehash: e9b9c806dd77ea90399aaefdaa751cbd0ab938e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4b3a63cb23851c6545f330ebd2371e1a34ff13e8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546740"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198310"
 ---
 # <a name="how-to-execute-a-query-that-returns-structuraltype-results"></a>作法：執行可傳回 StructuralType 結果的查詢
+
 本主題顯示如何使用 <xref:System.Data.EntityClient.EntityCommand> 物件，針對概念模型執行命令，以及如何使用 <xref:System.Data.Metadata.Edm.StructuralType> 擷取 <xref:System.Data.EntityClient.EntityDataReader> 結果。 <xref:System.Data.Metadata.Edm.EntityType>、<xref:System.Data.Metadata.Edm.RowType> 和 <xref:System.Data.Metadata.Edm.ComplexType> 類別都衍生自 <xref:System.Data.Metadata.Edm.StructuralType> 類別。  
   
 ### <a name="to-run-the-code-in-this-example"></a>執行此範例中的程式碼  
@@ -25,6 +26,7 @@ ms.locfileid: "90546740"
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>範例  
+
  此範例會執行傳回 <xref:System.Data.Metadata.Edm.EntityType> 結果的查詢。 如果您將下列查詢當做引數傳遞至 `ExecuteStructuralTypeQuery` 函式，則函式會顯示 `Products` 的相關詳細資料：  
   
  [!code-csharp[DP EntityServices Concepts 2#SelectProduct](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#selectproduct)]  

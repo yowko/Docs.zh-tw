@@ -8,38 +8,40 @@ helpviewer_keywords:
 - <inheritdoc> C# XML tag
 - inheritdoc C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: 6f42462f21d045428577cd2123e2180d866f1e1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c416275254892efdb9f15cd2ae0af5634c82357
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156944"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184088"
 ---
-# <a name="inheritdoc-c-programming-guide"></a>\<繼承>（C# 程式設計指南）
+# <a name="inheritdoc-c-programming-guide"></a>\<inheritdoc> (c # 程式設計手冊) 
 
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <inheritdoc/>
 ```  
 
-## <a name="inheritdoc"></a>繼承文檔
+## <a name="inheritdoc"></a>InheritDoc
 
-從基類、介面和類似方法繼承 XML 注釋。 這樣可以消除重複的 XML 注釋的不需要複製和粘貼，並自動保持 XML 注釋同步。
+從基底類別、介面和類似的方法繼承 XML 批註。 這可避免不必要的複製和貼上重複的 XML 批註，並自動保持 XML 批註的同步。
   
 ## <a name="remarks"></a>備註  
-在基本類或介面中添加 XML 注釋，並讓 InheritDoc 將注釋複製到實現類。
 
-將 XML 注釋添加到同步方法，並讓 InheritDoc 將注釋複製到相同方法的非同步版本中。  
+在基底類別或介面中新增您的 XML 批註，讓 InheritDoc 將批註複製到執行類別。
 
-如果要從特定成員複製注釋，可以使用 該`cref`屬性指定該成員。
+將您的 XML 批註新增至同步方法，並讓 InheritDoc 將批註複製到相同方法的非同步版本。  
+
+如果您想要複製特定成員的批註，您可以使用 `cref` 屬性來指定成員。
   
 ## <a name="examples"></a>範例
+
 [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#16)]  
 
 [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#17)]  
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [文檔注釋的推薦標記](./recommended-tags-for-documentation-comments.md)
+- [C # 程式設計指南](../index.md)
+- [建議使用的檔註解標記](./recommended-tags-for-documentation-comments.md)

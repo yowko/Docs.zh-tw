@@ -3,12 +3,12 @@ title: 雲端原生應用程式中的 Elasticsearch
 description: 瞭解如何將彈性搜尋功能新增至雲端原生應用程式。
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: fa46f3387eecb3fccd63fdea10c11e92923ae862
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271798"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155376"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>雲端原生應用程式中的 Elasticsearch
 
@@ -32,29 +32,29 @@ Elasticsearch 建置於 [Apache Lucene](https://lucene.apache.org/core/) 全文�
 
 從 Microsoft Azure Marketplace，開發人員可以使用預先設定的範本，在 Azure 上快速部署 Elasticsearch 叢集。 您可以使用 Azure 管理的供應專案，部署最多50個數據節點、20個協調節點，以及三個專用的主要節點。
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
 本章提供雲端原生系統中資料的詳細資料。 我們一開始會將整合型應用程式中的資料儲存體與雲端原生系統中的資料儲存模式進行對比。 我們探討了在雲端原生系統中實作為的資料模式，包括跨服務查詢、分散式交易，以及處理高容量系統的模式。 我們對比 SQL 與 NoSQL 資料。 我們探討了 Azure 中的資料儲存體選項，其中包括以 Microsoft 為中心的開放原始碼選項。 最後，我們討論了在雲端原生應用程式中的快取和 Elasticsearch。
 
 ### <a name="references"></a>參考資料
 
-- [命令與查詢責任隔離 (CQRS) 模式](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- [命令與查詢責任隔離 (CQRS) 模式](/azure/architecture/patterns/cqrs)
 
-- [事件來源模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [事件來源模式](/azure/architecture/patterns/event-sourcing)
 
 - [為什麼在 CAP 定理中不能容忍 RDBMS 分割區的能力，以及它為何可供使用？](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
-- [具體化檢視模式](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+- [具體化檢視模式](/azure/architecture/patterns/materialized-view)
 
 - [您真正需要知道的是開放原始碼資料庫](https://www.ibm.com/blogs/systems/all-you-really-need-to-know-about-open-source-databases/)
 
-- [補償交易模式](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [補償交易模式](/azure/architecture/patterns/compensating-transaction)
 
 - [Saga 模式](https://microservices.io/patterns/data/saga.html)
 
 - [Saga 模式 |如何使用微服務來執行商務交易](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
 
-- [補償交易模式](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [補償交易模式](/azure/architecture/patterns/compensating-transaction)
 
 - [進入9球： Cosmos DB 的一致性層級進行說明](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)
 

@@ -2,14 +2,15 @@
 title: <security> 的 <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: 2268bf48a2b86c3b3b25db006e6f8f55ea33af73
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: be2f48f7d9c3be4ea0a5fe95436930b3f23c7551
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738689"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170060"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<security> 的 \<msmqIntegrationBinding>
+
 定義訊息佇列 (MSMQ) 整合通道的傳輸安全性設定。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "73738689"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <msmqIntegrationBinding>
@@ -38,23 +39,24 @@ ms.locfileid: "73738689"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|mode|指定控制訊息佇列整合通道之完整性、機密性和驗證的安全性類型。 有效值如下：<br /><br /> -None：這會停用安全性。<br />-Transport：保護和驗證是由傳輸所提供。 這會套用在兩個佇列管理員之間的訊息安全性。 應用程式和佇列管理員之間沒有提供安全性。 現有 Msmq 應用程式在功能上相當於這個安全性模式類型。<br /><br /> 預設值是 `Transport`。 此屬性的型別為 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>。|  
+|mode|指定控制訊息佇列整合通道之完整性、機密性和驗證的安全性類型。 有效值如下：<br /><br /> -None：這會停用安全性。<br />-Transport：傳輸提供保護和驗證。 這會套用在兩個佇列管理員之間的訊息安全性。 應用程式和佇列管理員之間沒有提供安全性。 現有 Msmq 應用程式在功能上相當於這個安全性模式類型。<br /><br /> 預設值是 `Transport`。 此屬性的型別為 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<transport>](transport-of-msmqintegrationbinding.md)|定義訊息佇列整合傳輸的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|的繫結項目 [\<msmqIntegrationBinding>](msmqintegrationbinding.md) 。|  
   
@@ -65,9 +67,9 @@ ms.locfileid: "73738689"
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
 - [WCF 中的佇列](../../../wcf/feature-details/queues-in-wcf.md)
-- [Securing Services and Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)
 - [\<msmqIntegrationBinding>](msmqintegrationbinding.md)

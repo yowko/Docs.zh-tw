@@ -5,23 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: e18c23e9bbec97a64110aba6eb7241761ecece06
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cea9deb7fe019fea189a87fc08468d010929db9a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149553"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177445"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema 和結構描述集合
-每個 .NET 框架託管提供程式中的**Connect**類實現**GetSchema**方法，該方法用於檢索有關當前連接的資料庫的架構資訊，並且從**GetSchema**方法返回的架構資訊以 形式<xref:System.Data.DataTable>出現。 **GetSchema**方法是一種重載方法，它提供了用於指定要返回的架構集合和限制返回的資訊量的可選參數。  
+
+每個 .NET Framework managed 提供者中的 **連接** 類別都會採用 **GetSchema** 方法，此方法可用來取得目前連接之資料庫的架構資訊，而從 **GetSchema** 方法傳回的架構資訊則會以的形式呈現 <xref:System.Data.DataTable> 。 **GetSchema**方法是一種多載方法，可提供選擇性參數來指定要傳回的架構集合，以及限制傳回的資訊量。  
   
 ## <a name="specifying-the-schema-collections"></a>指定結構描述集合  
- **GetSchema**方法的第一個可選參數是指定為字串的集合名稱。 結構描述集合有兩種型別：通用於所有提供者的通用結構描述集合與每個提供者特有的特定結構描述集合。  
+
+ **GetSchema**方法的第一個選擇性參數是指定為字串的集合名稱。 結構描述集合有兩種型別：通用於所有提供者的通用結構描述集合與每個提供者特有的特定結構描述集合。  
   
- 您可以查詢 .NET Framework 託管提供程式，通過調用沒有參數的**GetSchema**方法或使用架構集合名稱"MetaDataCollection"來確定支援的架構集合的清單。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
+ 您可以藉由呼叫 **GetSchema** 方法（不含引數）或架構集合名稱 ">metadatacollections" 來查詢 .NET Framework 的 managed 提供者，以判斷支援的架構集合清單。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
   
 ### <a name="retrieving-schema-collections-example"></a>擷取結構描述集合範例  
- 以下示例演示如何使用 SQL Server<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A><xref:System.Data.SqlClient.SqlConnection>類的 .NET 框架資料提供程式的方法檢索有關**AdventureWorks**示例資料庫中包含的所有表的架構資訊：  
+
+ 下列範例示範如何使用 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server 類別 .NET Framework Data Provider 的方法 <xref:System.Data.SqlClient.SqlConnection> ，來取得 **AdventureWorks** 範例資料庫中包含之所有資料表的架構資訊：  
   
 ```vb  
 Imports System.Data.SqlClient  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: d1f45979dba5c3ab0dccc8d0a61a7abaa9913e11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cf3a81914d78e8f08c06602600ce5dcef4f4d35b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556859"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191641"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>非同步作業 (WCF 資料服務)
+
 相較於在內部網路中執行的應用程式，Web 應用程式必須可容納用戶端與伺服器之間更高的延遲。 若要將應用程式的效能和使用者體驗優化，建議您在透過 <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> Web 存取 WCF Data Services 伺服器時，使用和類別的非同步方法。  
   
  雖然 WCF Data Services 伺服器會以非同步方式處理 HTTP 要求，但 WCF Data Services 用戶端程式庫的某些方法是同步的，並且等到整個要求-回應交換完成後，再繼續執行。 WCF Data Services 用戶端程式庫的非同步方法不會等候這項交換完成，而且可以讓您的應用程式同時維持回應式使用者介面。  
@@ -34,6 +35,7 @@ ms.locfileid: "90556859"
 |將物件的變更儲存於 <xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>非同步作業的執行緒考量  
+
  在多執行緒應用程式中，不一定會在用來呼叫 *Begin* 方法的相同執行緒上叫用註冊為非同步作業回呼的委派，這會建立初始要求。 在必須于特定執行緒上叫用回呼的應用程式中，您必須明確地將處理回應的 *End* 方法執行封送處理至所需的執行緒。 例如，在以 Windows Presentation Foundation (WPF) 為基礎的應用程式與以 Silverlight 為基礎的應用程式中，必須在 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 物件上使用 <xref:System.Windows.Threading.Dispatcher> 方法將回應封送處理回 UI 執行緒。 如需詳細資訊，請參閱 [ (WCF Data Services/Silverlight) 查詢資料服務 ](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95))。  
   
 ## <a name="see-also"></a>另請參閱

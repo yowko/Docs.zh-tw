@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: b7225e295268a3e46e4e9bd446372ae87bbbbb10
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: ec86395a41baea75694572b59b2c76cbde24fedf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466140"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170385"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>泛型介面 (C# 程式設計手冊)
+
 定義表示集合中項目的泛型集合類別或泛型類別的介面，通常會很有用。 泛型類別的喜好設定會使用泛型介面，例如 <xref:System.IComparable%601> 而不是 <xref:System.IComparable>，以避免實值型別的 boxing 和 unboxing 作業。 .NET 類別庫會定義數個泛型介面，以搭配命名空間中的集合類別使用 <xref:System.Collections.Generic> 。  
   
  將介面指定為型別參數的條件約束時，只能使用使用實作介面的類型。 下列程式碼範例示範衍生自 `GenericList<T>` 類別的 `SortedList<T>` 類別。 如需詳細資訊，請參閱[泛型簡介](./index.md)。 `SortedList<T>` 會新增條件約束 `where T : IComparable<T>`。 這可讓 `SortedList<T>` 的 `BubbleSort` 方法使用 List 元素上的泛型 <xref:System.IComparable%601.CompareTo%2A> 方法。 在此範例中，List 元素是簡單的類別 `Person`，它會實作 `IComparable<Person>`。  

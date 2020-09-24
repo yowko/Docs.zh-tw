@@ -2,24 +2,27 @@
 title: 逐步解說：跨關聯性查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9dfe34136f2d0a14a12f72e22a96d1882ddbce49
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780996"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164008"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>逐步解說：跨關聯性查詢 (C#)
-本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]關聯來表示資料庫中的外鍵*關聯*性。  
+
+本逐步解說示範如何使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *關聯* 來表示資料庫中的外鍵關聯性。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  本逐步解說的內容是依據 Visual C# 開發設定所撰寫的。  
   
 ## <a name="prerequisites"></a>必要條件  
- 您必須已完成[逐步解說：簡單的物件模型和查詢C#（](walkthrough-simple-object-model-and-query-csharp.md)）。 此逐步解說建立於該逐步解說之上，其中包含出現在 c:\linqtest5 中的 northwnd.mdf 檔。  
+
+ 您必須已完成 [逐步解說：簡單的物件模型和查詢 (c # ) ](walkthrough-simple-object-model-and-query-csharp.md)。 此逐步解說建立於該逐步解說之上，其中包含出現在 c:\linqtest5 中的 northwnd.mdf 檔。  
   
-## <a name="overview"></a>總覽  
+## <a name="overview"></a>概觀  
+
  此逐步解說包含三項主要工作：  
   
 - 加入實體類別，以表示 Northwind 範例資料庫中的 Orders 資料表。  
@@ -29,6 +32,7 @@ ms.locfileid: "70780996"
 - 建立和執行查詢，以測試使用 `Order` 類別取得 `Customer` 資訊。  
   
 ## <a name="mapping-relationships-across-tables"></a>跨資料表對應關聯性  
+
  在 `Customer` 類別定義之後，建立包含下列程式碼的 `Order` 實體類別定義，這表示 `Order.Customer` 為 `Customer.CustomerID` 的外部索引鍵。  
   
 ### <a name="to-add-the-order-entity-class"></a>若要加入 Order 實體類別  
@@ -38,6 +42,7 @@ ms.locfileid: "70780996"
      [!code-csharp[DLinqWalk2CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#1)]  
   
 ## <a name="annotating-the-customer-class"></a>加入 Customer 類別的附註  
+
  在這個步驟中，您會加入 `Customer` 類別的附註，指出其與 `Order` 類別的關聯性 (此加入動作並非絕對必要，因為定義任一方向的關聯性就足以建立連結。 但加入此附註確實可讓您輕易地以任一方向巡覽物件)。  
   
 ### <a name="to-annotate-the-customer-class"></a>若要標註 Customer 類別  
@@ -47,7 +52,8 @@ ms.locfileid: "70780996"
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>建立和執行客戶-訂單關聯性的查詢  
- 您現在可以直接從 `Order` 物件存取 `Customer` 物件，反之亦然。 您不需要在客戶和訂單之間進行明確*聯結*。  
+
+ 您現在可以直接從 `Order` 物件存取 `Customer` 物件，反之亦然。 客戶與訂單之間不需要明確的 *聯結* 。  
   
 ### <a name="to-access-order-objects-by-using-customer-objects"></a>若要使用 Customer 物件存取 Order 物件  
   
@@ -63,6 +69,7 @@ ms.locfileid: "70780996"
 3. 在主控台視窗中按 Enter 鍵，以停止偵錯。  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>建立資料庫的強型別檢視  
+
  從資料庫的強型別檢視著手會容易許多。 透過建立強型別 <xref:System.Data.Linq.DataContext> 物件，您就不需要呼叫 <xref:System.Data.Linq.DataContext.GetTable%2A>。 當您使用強型別 <xref:System.Data.Linq.DataContext> 物件時，可以在所有查詢中使用強型別資料表。  
   
  在下列步驟中，您會將 `Customers` 建立為強型別資料表，以對應資料庫中的 Customers 資料表。  
@@ -86,7 +93,8 @@ ms.locfileid: "70780996"
 4. 在主控台視窗中按 Enter 鍵，以停止偵錯。  
   
 ## <a name="next-steps"></a>後續步驟  
- 下一個逐步解說[（逐步解說：運算元據（C#）](walkthrough-manipulating-data-csharp.md)）示範如何運算元據。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
+
+ 下一個逐步解說 ([逐步解說：運算元據 (c # ) ](walkthrough-manipulating-data-csharp.md)) 示範如何運算元據。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
   
 ## <a name="see-also"></a>另請參閱
 
