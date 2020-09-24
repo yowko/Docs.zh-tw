@@ -2,14 +2,15 @@
 title: <issuer> 的 <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: bdd5ad45984fae7b39defe82c4af75845dfda1b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bfe8163d2d6baba1d6e8053f7f6579673d8b4b21
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397936"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157274"
 ---
 # <a name="issuer-of-issuedtokenparameters"></a>\<issuer> 的 \<issuedTokenParameters>
+
 指定發行安全性權杖的安全性權杖服務 (STS)。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,13 +22,14 @@ ms.locfileid: "70397936"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<issuedTokenParameters>**](issuedtokenparameters.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuer>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <issuer address="Uri" />
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列各節說明屬性、子元素和父元素  
   
 ### <a name="attributes"></a>屬性  
@@ -38,14 +40,14 @@ ms.locfileid: "70397936"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<headers>](headers-element.md)|建置器可建立之端點的位址標頭集合。|  
 |[\<identity>](identity.md)|使用發行的權杖時，指定可讓用戶端驗證伺服器的設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|指定目前發行的權杖。|  
   
@@ -62,5 +64,5 @@ ms.locfileid: "70397936"
 - [擴充繫結](../../../wcf/extending/extending-bindings.md)
 - [自訂繫結](../../../wcf/extending/custom-bindings.md)
 - [\<customBinding>](custombinding.md)
-- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [作法：使用 SecurityBindingElement 建立自訂繫結](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [自訂繫結安全性](../../../wcf/samples/custom-binding-security.md)

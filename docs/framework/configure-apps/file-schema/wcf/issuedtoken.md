@@ -2,14 +2,15 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 56439748926ada642018f48a5787634a50d0f180
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f3feb11fbe45cbb4b952c70feaa99f9c481dd2b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "72846865"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157365"
 ---
 # \<issuedToken>
+
 指定用來向服務驗證用戶端的自訂權杖。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "72846865"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuedToken>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <issuedToken cacheIssuedTokens="Boolean"
@@ -33,6 +34,7 @@ ms.locfileid: "72846865"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -48,21 +50,22 @@ ms.locfileid: "72846865"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<localIssuer>](localissuer.md)|指定權杖的本機簽發者位址，與用來與端點通訊的繫結。|  
 |[\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)|指定連絡本機簽發者時要使用的端點行為。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
   
 ## <a name="remarks"></a>備註  
- 發行的權杖會在某些情況下當做自訂認證型別使用，例如在聯合案例中與安全權杖服務 (STS) 進行驗證時。 根據預設，這個權杖是 SAML 權杖。 如需詳細資訊，請參閱[同盟和發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)，以及[同盟和發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)。  
+
+ 發行的權杖會在某些情況下當做自訂認證型別使用，例如在聯合案例中與安全權杖服務 (STS) 進行驗證時。 根據預設，這個權杖是 SAML 權杖。 如需詳細資訊，請參閱 [同盟和已發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)，以及 [同盟和已發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)。  
   
- 這個區段包含用以設定權杖之本機簽發者的項目，或搭配安全性權杖服務使用的行為。 如需將用戶端設定為使用本機簽發者的指示，請參閱[如何：設定本機簽發者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)。  
+ 這個區段包含用以設定權杖之本機簽發者的項目，或搭配安全性權杖服務使用的行為。 如需將用戶端設定為使用本機簽發者的指示，請參閱 [如何：設定本機簽發者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -73,9 +76,9 @@ ms.locfileid: "72846865"
 - <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
 - [安全性行為](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [Securing Services and Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
 - [聯合與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)
-- [保護用戶端安全](../../../wcf/securing-clients.md)
-- [如何：建立同盟用戶端](../../../wcf/feature-details/how-to-create-a-federated-client.md)
-- [HOW TO：設定本機簽發者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [確保用戶端的安全](../../../wcf/securing-clients.md)
+- [作法：建立同盟用戶端](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [作法：設定本機簽發者](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [聯合與發行的權杖](../../../wcf/feature-details/federation-and-issued-tokens.md)

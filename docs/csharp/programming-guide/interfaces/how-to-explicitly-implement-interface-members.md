@@ -1,21 +1,23 @@
 ---
-title: '如何明確執行介面成員-c # 程式設計手冊'
+title: '如何明確地執行介面成員-c # 程式設計指南'
 description: '瞭解如何在此 c # 範例中明確地執行介面成員。 成員是透過介面實例來存取。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 35b512ff6cbee1dd942f5b3476db660481808297
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: a9c019cdcf6e229199d980a2d1913df7c72a2169
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303071"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157391"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>如何明確執行介面成員（c # 程式設計手冊）
-這個範例會宣告[介面](../../language-reference/keywords/interface.md) `IDimensions` 和類別， `Box` 其會明確地執行介面成員 `GetLength` 和 `GetWidth` 。 成員是透過介面執行個體 `dimensions` 存取。  
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>如何 (c # 程式設計手冊) 明確地執行介面成員
+
+這個範例會宣告 [介面](../../language-reference/keywords/interface.md)、 `IDimensions` 和類別，其會 `Box` 明確地執行介面成員 `GetLength` 和 `GetWidth` 。 成員是透過介面執行個體 `dimensions` 存取。  
   
 ## <a name="example"></a>範例  
+
  [!code-csharp[csProgGuideInheritance#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#8)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  

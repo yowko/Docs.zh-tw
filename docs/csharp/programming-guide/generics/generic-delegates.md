@@ -1,19 +1,20 @@
 ---
 title: 泛型委派 - C# 程式設計指南
-description: '瞭解如何在 c # 中使用泛型委派。 請參閱程式碼範例，並查看其他可用的資源。'
+description: '瞭解如何在 c # 中使用泛型委派。 請參閱程式碼範例，並檢視其他可用的資源。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: d99271ca9f12e95743d633caac16aaa4151e9c41
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: df417701feb77dc47cff1cdd68eb4c7405d15beb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301901"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157404"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>泛型委派 (C# 程式設計手冊)
+
 [委派](../../language-reference/builtin-types/reference-types.md)可以定義自己的型別參數。 參考泛型委派的程式碼，可以指定型別引數建立封閉式建構類型，就像在具現化泛型類別或呼叫泛型方法時一樣，如下列範例所示：  
   
  [!code-csharp[csProgGuideGenerics#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#36)]  
