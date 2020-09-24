@@ -3,12 +3,13 @@ title: 使用 F# 開始使用 Azure 資料表儲存體
 description: 使用 Azure 資料表儲存體或 Azure Cosmos DB 將結構化資料儲存在雲端。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: eb25fda0bb3c658eed2f675d6ba79c689a9080a9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: f4a22ec14de6c92414fbcf3cca435e2b5c0805f1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548347"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100096"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和使用 F 的 Azure Cosmos DB 資料表 API\#
 

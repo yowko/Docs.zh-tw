@@ -3,12 +3,13 @@ title: 使用 F# 開始使用 Azure Blob 儲存體
 description: 使用 Azure Blob 儲存體在雲端中儲存非結構化資料。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 0dda2e04f0052823e9ea35051855d677cd19ea92
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548471"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100148"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>使用 F 開始使用 Azure Blob 儲存體\#
 
@@ -18,7 +19,7 @@ Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/bl
 
 如需 blob 儲存體的概念總覽，請參閱 [適用于 blob 儲存體的 .net 指南](/azure/storage/blobs/storage-quickstart-blobs-dotnet)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要使用本指南，您必須先 [建立 Azure 儲存體帳戶](/azure/storage/common/storage-account-create)。 您也需要此帳戶的儲存體存取金鑰。
 

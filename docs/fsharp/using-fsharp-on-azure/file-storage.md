@@ -3,12 +3,13 @@ title: 使用 F# 開始使用 Azure 檔案儲存體
 description: 使用 Azure 檔案儲存體在雲端中儲存檔案資料，並從 Azure 虛擬機器 (VM) 或執行 Windows 的內部部署應用程式掛接雲端檔案共用。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 04bee82fd9d3c652cd99b9c951880f6ba89610ee
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548458"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100122"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>以 F 開始使用 Azure 檔案儲存體\#
 
@@ -16,7 +17,7 @@ Azure 檔案儲存體是一項服務，可使用標準 [伺服器訊息區 (SMB)
 
 如需檔案儲存體的概念總覽，請參閱檔案 [儲存體的 .net 指南](/azure/storage/storage-dotnet-how-to-use-files)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要使用本指南，您必須先 [建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)。
 您也需要此帳戶的儲存體存取金鑰。
