@@ -3,14 +3,15 @@ title: Visual Studio 中的偵錯運算式樹狀架構 (C#)
 description: 瞭解 Visual Studio 中的 DebugView 屬性。 瞭解如何使用這個屬性來分析運算式樹狀架構的結構和內容。
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: fab378149fb14ccf6a66434c933aa24a8c9c6119
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5dcf56f96ecdbfdc3f4cb171fdb30b96456b59c9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555610"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91154128"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio 中的偵錯運算式樹狀架構 (C#)
+
 當您針對應用程式進行偵錯時，可以分析運算式樹狀架構的結構與內容。 若要取得運算式樹狀架構的快速概觀，您可以使用 `DebugView` 屬性，其代表[使用特殊語法](debugview-syntax.md)的運算式樹狀架構。 (請注意，`DebugView` 僅適用於偵錯模式。)  
 
 ![VS 偵錯工具中運算式樹狀架構 DebugView 的螢幕擷取畫面。](media/debugging-expression-trees-in-visual-studio/debugview-expression-tree.png)

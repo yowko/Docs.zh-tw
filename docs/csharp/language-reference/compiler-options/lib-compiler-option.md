@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125445"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152438"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# 編譯器選項)
+
 **-Lib**選項會指定由[-Reference (c # 編譯器選項) ](./reference-compiler-option.md)選項參考之元件的位置。  
   
 ## <a name="syntax"></a>語法  
@@ -26,6 +27,7 @@ ms.locfileid: "89125445"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `dir1`  
  如果編譯器在目前的工作目錄 (您叫用編譯器的起點目錄) 或通用語言執行平台的系統目錄中找不到參考的組件，會改為查詢的目錄。  
   
@@ -33,6 +35,7 @@ ms.locfileid: "89125445"
  用來尋找組件參考的一或多個其他目錄。 使用逗號分隔額外的目錄名稱；之間不含任何空白字元。  
   
 ## <a name="remarks"></a>備註  
+
  編譯器會以下列順序搜尋不完整的組件參考：  
   
 1. 目前的工作目錄。 這是叫用編譯器的起點目錄。  
@@ -62,6 +65,7 @@ ms.locfileid: "89125445"
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>。  
   
 ## <a name="example"></a>範例  
+
  編譯 t2.cs 以建立 .exe 檔。 編譯器會在工作目錄和 C 磁碟機的根目錄中尋找組件參考。  
   
 ```console  
@@ -70,5 +74,5 @@ csc -lib:c:\ -reference:t2.dll t2.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

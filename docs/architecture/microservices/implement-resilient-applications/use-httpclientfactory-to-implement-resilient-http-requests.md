@@ -2,12 +2,12 @@
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
 description: 瞭解如何使用 .NET Core 2.1 之後提供的 IHttpClientFactory 來建立 `HttpClient` 實例，讓您輕鬆地在應用程式中使用。
 ms.date: 08/31/2020
-ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: ae093ef960b2540bf4916bf72ad3bec51fa33ebe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678812"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152568"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -23,7 +23,7 @@ ms.locfileid: "90678812"
 
 開發人員遇到的另一個問題，就是在長時間執行的進程中使用的共用實例 `HttpClient` 。 在 HttpClient 具現化為單一或靜態物件的情況下，它無法處理 DNS 變更，如此 dotnet/runtime GitHub 存放庫的 [問題](https://github.com/dotnet/runtime/issues/18348) 所述。
 
-不過，這個問題並不是 `HttpClient` 每個 se 都有問題，而是使用 [預設的 HttpClient](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)函式，因為它會建立一個新的具體實例 <xref:System.Net.Http.HttpMessageHandler> ，也就是有 *通訊端耗盡* 和 DNS 變更上述問題的實例。
+不過，這個問題並不是 `HttpClient` 每個 se 都有問題，而是使用 [預設的 HttpClient](/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)函式，因為它會建立一個新的具體實例 <xref:System.Net.Http.HttpMessageHandler> ，也就是有 *通訊端耗盡* 和 DNS 變更上述問題的實例。
 
 為了解決上述問題，並讓實例可供 `HttpClient` 管理，.Net Core 2.1 引進了 <xref:System.Net.Http.IHttpClientFactory> 介面，可透過相依性 `HttpClient` 插入 (DI) ，在應用程式中設定和建立實例。 它也提供 Polly 型中介軟體的延伸模組，以利用 HttpClient 中委派的處理常式。
 

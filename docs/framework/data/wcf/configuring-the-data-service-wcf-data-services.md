@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 57830421eee3c94f9785a2c603eb31b96f99f4d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a30a8c2c731e8c5cb2b22c8d7f34ec32d149803c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552839"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152789"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>設定資料服務 (WCF 資料服務)
+
 使用 WCF Data Services，您可以建立資料服務，以公開開放式資料通訊協定 (OData) 摘要。 這些摘要中的資料可以來自各種不同的資料來源。 WCF Data Services 使用資料提供者，將此資料公開為 OData 摘要。 這些提供者包含 Entity Framework 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱 [資料服務提供者](data-services-providers-wcf-data-services.md)。  
   
  在 WCF Data Services 中，資料服務是繼承自類別的類別 <xref:System.Data.Services.DataService%601> ，其中資料服務的型別是資料模型的實體容器。 此實體容器具有一個或多個可傳回 <xref:System.Linq.IQueryable%601> (用於存取資料模型中的資料集) 的屬性。  
@@ -25,9 +26,10 @@ ms.locfileid: "90552839"
 [!code-vb[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigcomplete)]  
   
 ## <a name="data-service-configuration-settings"></a>資料服務組態設定  
+
  <xref:System.Data.Services.DataServiceConfiguration> 類別可讓您指定下列資料服務行為：  
   
-|成員|行為|  
+|member|行為|  
 |------------|--------------|  
 |<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|可讓您使用 `$count` 路徑區段和 `$inlinecount` 查詢選項，停用送出至資料服務的計數要求。 如需詳細資訊，請參閱 [OData： URI 慣例](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)。|  
 |<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|可讓您使用 `$select` 查詢選項，在提交至資料服務的要求中停用資料保護的支援。 如需詳細資訊，請參閱 [OData： URI 慣例](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)。|  
@@ -48,7 +50,9 @@ ms.locfileid: "90552839"
 |<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|此組態屬性可讓您在錯誤回應訊息中傳回詳細資訊，更加輕鬆地疑難排解資料服務問題。 此選項不適用於實際執行環境。 如需詳細資訊，請參閱 [開發和部署 WCF Data Services](developing-and-deploying-wcf-data-services.md)。|  
   
 <a name="accessRequirements"></a>
+
 ## <a name="minimum-resource-access-requirements"></a>最少資源存取需求  
+
  下表詳述為了執行特定作業所必須授與的最少實體集權限。 路徑範例是以您完成 [快速入門](quickstart-wcf-data-services.md)時所建立的 Northwind 資料服務為基礎。 因為 <xref:System.Data.Services.EntitySetRights> 列舉和 <xref:System.Data.Services.ServiceOperationRights> 列舉的定義方式是使用 <xref:System.FlagsAttribute> 所定義，所以您可以使用邏輯 OR 運算子為單一實體集或作業指定多個權限。 如需詳細資訊，請參閱 [如何：啟用資料服務的存取](how-to-enable-access-to-the-data-service-wcf-data-services.md)。  
   
 |路徑/動作|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
@@ -63,9 +67,9 @@ ms.locfileid: "90552839"
 |`/Orders(10643)/$links/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge> 或 <xref:System.Data.Services.EntitySetRights.WriteReplace>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>|不支援|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle>;<br /><br /> -和-<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers/$count`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|不支援|不支援|  
 |`/Customers('ALFKI')/ContactName`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|不支援|<xref:System.Data.Services.EntitySetRights.WriteMerge>|不支援|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/Address/StreetAddress/$value` <sup>1</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.WriteDelete>|不支援|不支援|不支援|  
+|`/Customers('ALFKI')/Address/StreetAddress/$value`<sup>1</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.WriteDelete>|不支援|不支援|不支援|  
 |`/Customers('ALFKI')/ContactName/$value`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.WriteMerge>|不支援|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/$value` <sup>2</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|不支援|不支援|不支援|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
+|`/Customers('ALFKI')/$value`<sup>2</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|不支援|不支援|不支援|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|不支援|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|不支援|不支援|  
   
@@ -74,7 +78,9 @@ ms.locfileid: "90552839"
  <sup>2</sup> 當傳回二進位大型物件 (BLOB) 的屬性定義為屬於媒體連結專案之實體（在此案例中為）的媒體資源時，支援此 URI `Customers` 。 如需詳細資訊，請參閱 [資料流程提供者](streaming-provider-wcf-data-services.md)。  
   
 <a name="versioning"></a>
+
 ## <a name="versioning-requirements"></a>版本控制需求  
+
  下列資料服務設定行為需要第2版的 OData 通訊協定或更新版本：  
   
 - 計數要求的支援。  

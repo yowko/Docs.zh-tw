@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: a97fc00201be1cf8043fc353b20ef447468a06bf
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5af40da18895d47933cb809d710e31a40f14513b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125484"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152425"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C# 編譯器選項)
+
 指定包含密碼編譯金鑰的檔名。  
   
 ## <a name="syntax"></a>語法  
@@ -32,6 +33,7 @@ ms.locfileid: "89125484"
 |`file`|包含強式名稱金鑰的檔名。|  
   
 ## <a name="remarks"></a>備註  
+
  使用此選項時，編譯器會從指定的檔案將公開金鑰插入資訊清單中，然後使用私密金鑰簽署最終組件。 若要產生金鑰檔，請在命令列鍵入 sn -k `file`。  
   
  如果您使用 **-target:module** 進行編譯，則在使用 [-addmodule](./addmodule-compiler-option.md) 編譯組件時，金鑰檔的名稱會保留在模組中並併入組件。  
@@ -56,5 +58,5 @@ ms.locfileid: "89125484"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

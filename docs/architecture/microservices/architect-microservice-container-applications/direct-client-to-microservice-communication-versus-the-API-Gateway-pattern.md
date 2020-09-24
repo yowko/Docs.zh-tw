@@ -2,12 +2,12 @@
 title: API 閘道模式與直接用戶端對微服務通訊
 description: 了解 API 閘道模式和直接用戶端對微服務通訊的差異與使用方式。
 ms.date: 01/07/2019
-ms.openlocfilehash: 089b6302132437e4bb733653b3edb401ff81a164
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306951"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152698"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 閘道模式與直接用戶端對微服務通訊
 
@@ -25,7 +25,7 @@ ms.locfileid: "84306951"
 
 `http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
-在根據叢集的生產環境中，該 URL 會對應至叢集中所使用的負載平衡器，而負載平衡器接著會將要求分散到微服務。 在生產環境中，您在微服務與網際網路之間可能會有 [Azure 應用程式閘道](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction)這類應用程式傳遞控制站 (ADC)。 這會作為透明層，不僅可執行負載平衡，也會透過提供 SSL 終止來保護您的服務。 這會改善主機的負載，方法是將 CPU 密集 SSL 終止和其他路由責任卸載給 Azure 應用程式閘道。 從邏輯應用程式架構觀點，在任何情況下，負載平衡器和 ADC 都是透明的。
+在根據叢集的生產環境中，該 URL 會對應至叢集中所使用的負載平衡器，而負載平衡器接著會將要求分散到微服務。 在生產環境中，您在微服務與網際網路之間可能會有 [Azure 應用程式閘道](/azure/application-gateway/application-gateway-introduction)這類應用程式傳遞控制站 (ADC)。 這會作為透明層，不僅可執行負載平衡，也會透過提供 SSL 終止來保護您的服務。 這會改善主機的負載，方法是將 CPU 密集 SSL 終止和其他路由責任卸載給 Azure 應用程式閘道。 從邏輯應用程式架構觀點，在任何情況下，負載平衡器和 ADC 都是透明的。
 
 直接用戶端對微服務通訊架構可能適用於小型微服務應用程式，特別是用戶端應用程式為 ASP.NET MVC 應用程式這類伺服器端 Web 應用程式時。 不過，如果您建置大型且複雜的微服務應用程式 (例如，處理數十個微服務型別時)，特別是用戶端應用程式為遠端行動應用程式或 SPA Web 應用程式時，該方法會面臨的一些問題。
 
@@ -39,7 +39,7 @@ ms.locfileid: "84306951"
 
 實作安全性和跨領域考量 (例如每個微服務上的安全性和授權) 可能需要大量開發工作。 可能的方法是 Docker 主機或內部叢集內有這些服務，以限制從外部直接存取它們，並在集中位置 (例如 API 閘道) 實作這些跨領域考量。
 
-- *用戶端應用程式如何與使用非網際網路好用通訊協定的服務通訊？*
+- *用戶端應用程式如何與使用非網際網路易記通訊協定的服務通訊？*
 
 用戶端應用程式通常不支援伺服器端上使用的通訊協定 (例如 AMQP 或二進位通訊協定)。 因此，必須透過 HTTP/HTTPS 這類通訊協定執行要求，而且之後會轉譯成其他通訊協定。 在此情況下，「攔截式」** 方法可能有幫助。
 
@@ -53,7 +53,7 @@ ms.locfileid: "84306951"
 
 因此，具有中繼層級或間接階層 (閘道)，對於微服務型應用程式會非常方便。 如果您沒有 API 閘道，用戶端應用程式就必須直接傳送要求至微服務，而這樣會產生如以下的問題：
 
-- **結合**：如果沒有 API 閘道模式，用戶端應用程式就會與內部微服務結合。 用戶端應用程式需要知道應用程式的多個部分在微服務中分解的方式。 在進化和重構內部微服務時，這些動作會影響維護，因為它們會因為用戶端應用程式直接參考內部微服務，而導致用戶端應用程式的突破性變更。 用戶端應用程式需要經常更新，使解決方案難以演進。
+- **結合**：如果沒有 API 閘道模式，用戶端應用程式就會與內部微服務結合。 用戶端應用程式需要知道應用程式的多個部分在微服務中分解的方式。 在演進和重構內部微服務時，這些動作會影響維護，因為它們會因為直接參考用戶端應用程式的內部微服務而導致用戶端應用程式的重大變更。 用戶端應用程式需要經常更新，使解決方案難以演進。
 
 - **太多來回行程**：用戶端應用程式中的單一頁面/畫面可能需要對多個服務進行數個呼叫。 此動作會讓用戶端與伺服器之間有多次網路往返，而大幅增加延遲時間。 在中繼層級中處理的彙總可改善用戶端應用程式的效能和使用者體驗。
 
@@ -73,7 +73,7 @@ ms.locfileid: "84306951"
 
 **圖 4-13**. 使用實作為自訂服務的 API 閘道
 
-應用程式會連線至單一端點（即 API 閘道），其設定為將要求轉送至個別微服務。 在此範例中，API 閘道會實作為以容器形式執行的自訂 ASP.NET Core WebHost 服務。
+應用程式會連線到單一端點（即 API 閘道），其設定為將要求轉寄給個別的微服務。 在此範例中，API 閘道會實作為以容器形式執行的自訂 ASP.NET Core WebHost 服務。
 
 請務必在該圖表中將它反白顯示，您會使用面向多個和不同用戶端應用程式的單一自訂 API 閘道服務。 這項事實的風險可能十分重大，因為 API 閘道服務將會根據用戶端應用程式的許多不同需求而成長和演變。 最後，它會因為不同的需求而膨脹，而且實際上可能類似整合型應用程式或整合型服務。 這就是為什麼我們極為建議將 API 閘道分割為多個服務或多個較小的 API 閘道 (例如，每個用戶端應用程式外形規格類型都有一個)。
 
@@ -87,25 +87,25 @@ ms.locfileid: "84306951"
 
 **圖 4-13.1**. 使用多個自訂 API 閘道
 
-圖 4-13.1 顯示依用戶端類型隔離的 API 閘道;一個用於行動用戶端，另一個用於 web 用戶端。 使用 Web API 閘道連線至 MVC 微服務的傳統 Web 應用程式。 此範例使用多個更精細的 API 閘道來描述簡化的架構。 在此案例中，針對每個 API 閘道識別的界限只以「前端的後端」([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式為基礎，因此也只以每個用戶端應用程式所需的 API 為基礎。 但在更大型的應用程式中，您應該也進一步建立以商務界限為基礎的 API 閘道，作為第二設計樞紐。
+圖 4-13.1 顯示依用戶端類型隔離的 API 閘道;一個適用于行動用戶端，另一個適用于 web 用戶端。 使用 Web API 閘道連線至 MVC 微服務的傳統 Web 應用程式。 此範例描述具有多個更精細 API 閘道的簡化架構。 在此案例中，針對每個 API 閘道識別的界限只以「前端的後端」([BFF](https://samnewman.io/patterns/architectural/bff/)) 模式為基礎，因此也只以每個用戶端應用程式所需的 API 為基礎。 但在更大型的應用程式中，您應該也進一步建立以商務界限為基礎的 API 閘道，作為第二設計樞紐。
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API 閘道模式中的主要功能
 
 API 閘道可以提供多個功能。 視產品而定，它可以提供更豐富或更簡單的功能，不過，對於任何 API 閘道最重要且最基本的功能是以下設計模式：
 
-**反向 Proxy 或閘道路由。** API 閘道提供反向 Proxy，以重新導向或路由要求 (第 7 層路由，通常是 HTTP 要求) 至內部微服務的端點。 閘道針對用戶端應用程式提供單一端點或 URL，然後在內部將要求對應至內部微服務群組。 此路由功能有助於將用戶端應用程式與微服務分離，但當您透過整合型 API 與用戶端應用程式之間的 API 閘道來現代化整合型 API 時也很方便，您可以將新的 Api 新增為新的微服務，同時仍然使用舊版整合型 API，直到未來將它分割成許多微服務為止。 因為 API 閘道的關係，用戶端應用程式不會注意到使用的 API 是實作成內部微服務或整合型 API，而且更重要的是，當整合型 API 演進並重構成微服務時，因為有 API 閘道路由，用戶端應用程式不會受任何 URI 變更影響。
+**反向 Proxy 或閘道路由。** API 閘道提供反向 Proxy，以重新導向或路由要求 (第 7 層路由，通常是 HTTP 要求) 至內部微服務的端點。 閘道針對用戶端應用程式提供單一端點或 URL，然後在內部將要求對應至內部微服務群組。 這項路由功能有助於將用戶端應用程式與微服務分離，但在整合整合型 api 時，您也可以輕鬆地將 API 閘道放在整合型 API 與用戶端應用程式之間，然後您就可以將新的 Api 新增為新的微服務，同時仍會使用舊版的整合型 API，直到未來將其分割成許多微服務為止。 因為 API 閘道的關係，用戶端應用程式不會注意到使用的 API 是實作成內部微服務或整合型 API，而且更重要的是，當整合型 API 演進並重構成微服務時，因為有 API 閘道路由，用戶端應用程式不會受任何 URI 變更影響。
 
-如需詳細資訊，請參閱[閘道路由模式](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing)。
+如需詳細資訊，請參閱[閘道路由模式](/azure/architecture/patterns/gateway-routing)。
 
-**要求彙總。** 在選擇閘道模式時，您可以將多個目標為多個內部微服務的用戶端要求 (通常是 HTTP 要求) 彙總成單一用戶端要求。 當用戶端頁面/畫面需要來自數個微服務的資訊時，此模式特別方便。 使用此方法時，用戶端應用程式會傳送單一要求至 API 閘道，此閘道會將數個要求分派到內部微服務，然後彙總結果並將所有資訊傳送回用戶端應用程式。 此設計模式的主要優點和目標是減少用戶端應用程式與後端 API 之間的對話，這對於從微服務上線的資料中心（例如行動應用程式或來自用戶端遠端瀏覽器中 JavaScript 的 SPA 應用程式）而言，這一點特別重要。 針對在伺服器環境中執行要求的一般 Web 應用程式 (如 ASP.NET Core MVC Web 應用程式) 來說，此模式就不是那麼重要，因為其延遲遠小於遠端用戶端應用程式。
+**要求彙總。** 在選擇閘道模式時，您可以將多個目標為多個內部微服務的用戶端要求 (通常是 HTTP 要求) 彙總成單一用戶端要求。 當用戶端頁面/畫面需要來自數個微服務的資訊時，此模式特別方便。 使用此方法時，用戶端應用程式會傳送單一要求至 API 閘道，此閘道會將數個要求分派到內部微服務，然後彙總結果並將所有資訊傳送回用戶端應用程式。 此設計模式的主要優點和目標是減少用戶端應用程式與後端 API 之間的對話，這對於微服務上線的資料中心（例如行動應用程式或來自用戶端遠端瀏覽器中的 JavaScript 的 SPA 應用程式）而言，這對遠端應用程式來說特別重要。 針對在伺服器環境中執行要求的一般 Web 應用程式 (如 ASP.NET Core MVC Web 應用程式) 來說，此模式就不是那麼重要，因為其延遲遠小於遠端用戶端應用程式。
 
 視您使用的 API 閘道產品而定，它可能可以執行此彙總。 不過在許多情況下，於 API 閘道的範圍內建立彙總微服務會更有彈性，因此建議您在程式碼 (亦即 C# 程式碼) 中定義彙總：
 
-如需詳細資訊，請參閱[閘道彙總模式](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation)。
+如需詳細資訊，請參閱[閘道彙總模式](/azure/architecture/patterns/gateway-aggregation)。
 
 **跨領域考量或閘道卸載。** 視每個 API 閘道產品提供的功能而定，您可以將功能從個別微服務卸載，以藉由將跨領域考量合併至一個階層來簡化每個微服務的實作。 這對於要在每個內部微服務中正確實作會很複雜的特殊功能來說格外方便，例如以下功能：
 
-- 驗證與授權
+- 驗證和授權
 - 服務探索整合
 - 回應快取
 - 重試原則、斷路器和 QoS
@@ -115,7 +115,7 @@ API 閘道可以提供多個功能。 視產品而定，它可以提供更豐富
 - 標頭、查詢字串和宣告轉換
 - IP 允許清單
 
-如需詳細資訊，請參閱[閘道卸載模式](https://docs.microsoft.com/azure/architecture/patterns/gateway-offloading)。
+如需詳細資訊，請參閱[閘道卸載模式](/azure/architecture/patterns/gateway-offloading)。
 
 ## <a name="using-products-with-api-gateway-features"></a>使用具備 API 閘道功能的產品
 
@@ -128,11 +128,11 @@ API 閘道可以提供多個功能。 視產品而定，它可以提供更豐富
 
 [Azure API 管理](https://azure.microsoft.com/services/api-management/) (如圖 4-14 所示) 不但可以解決您的 API 閘道需求，還能提供如從 API 收集見解等功能。 如果您使用 API 管理解決方案，則 API 閘道只是該完整 API 管理解決方案內的元件。
 
-![此圖顯示如何使用 Azure API 管理作為 API 閘道。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
+![此圖顯示如何使用 Azure API 管理作為您的 API 閘道。](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/api-gateway-azure-api-management.png)
 
 **圖 4-14**. 將 Azure API 管理用於 API 閘道
 
-Azure API 管理可解決您的 API 閘道和管理需求，例如記錄、安全性、計量等等。在此情況下，使用 Azure API 管理之類的產品時，您可能會有單一 API 閘道不會有風險，因為這類 API 閘道是「精簡」的，這表示您不會執行可能演變為整合型元件的自訂 c # 程式碼。
+Azure API 管理可解決您的 API 閘道和管理需求，例如記錄、安全性、計量等等。在此情況下，使用 Azure API 管理之類的產品時，您可能會有單一 API 閘道，因為這類的 API 閘道「更精簡」，這表示您不會執行可能會發展成整合型元件的自訂 c # 程式碼。
 
 API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以篩選內部微服務的 API，以及在此單一階層中將授權套用至已發行的 API。
 
@@ -144,9 +144,9 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 
 ### <a name="ocelot"></a>Ocelot
 
-[Ocelot](https://github.com/ThreeMammals/Ocelot) 是輕量型 API 閘道，如需較簡單的方法建議加以採用。 Ocelot 是開放原始碼的 .NET Core 型 API 閘道，特別針對需要在其系統中整合進入點的微服務架構而建立。 它既輕量又快速，而且可在許多其他功能之間提供路由和驗證。
+[Ocelot](https://github.com/ThreeMammals/Ocelot) 是輕量型 API 閘道，如需較簡單的方法建議加以採用。 Ocelot 是以開放原始碼 .NET Core 為基礎的 API 閘道，特別針對需要整合點進入系統的微服務架構所建立。 它是輕量、快速且可調整的，可在許多其他功能之間提供路由和驗證。
 
-為[eShopOnContainers 參考應用程式](https://github.com/dotnet-architecture/eShopOnContainers)選擇 Ocelot 的主要原因是，Ocelot 是一個 .net Core 輕量 API 閘道，您可以將其部署到部署微服務/容器的相同應用程式部署環境，例如 Docker 主機、Kubernetes 等。而且因為它是以 .NET Core 為基礎，所以它是跨平臺，可讓您在 Linux 或 Windows 上進行部署。
+針對 [eShopOnContainers 參考應用程式](https://github.com/dotnet-architecture/eShopOnContainers) 選擇 Ocelot 的主要原因是因為 Ocelot 是 .net Core 輕量 API 閘道，您可以將其部署到您要部署微服務/容器（例如 Docker 主機、Kubernetes 等）的相同應用程式部署環境。由於它是以 .NET Core 為基礎，因此可跨平臺，讓您在 Linux 或 Windows 上進行部署。
 
 上面的圖表顯示在容器中執行的自訂 API 閘道，正如同您也可以在容器和微服務型應用程式中執行 Ocelot。
 
@@ -185,10 +185,10 @@ API 閘道產品的作用通常像是連入通訊的反向 Proxy，您也可以�
 - **Udi Dahan。服務導向組合** \
   <https://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters。訊息和微服務，位於 GOTO 2016 （影片）** \
+- **Clemens Vasters。在 GOTO 2016 (影片) 的訊息和微服務 ** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
-- **Api 閘道**簡介（ASP.NET Core Api 閘道教學課程系列） \
+- **Api 閘道的** (ASP.NET Core Api 閘道教學課程系列) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]

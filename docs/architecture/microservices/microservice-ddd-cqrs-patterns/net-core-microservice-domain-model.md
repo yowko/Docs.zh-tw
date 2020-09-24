@@ -2,12 +2,12 @@
 title: 使用 .NET Core 實作微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 進入 DDD 導向領域模型的實作詳細資料。
 ms.date: 10/08/2018
-ms.openlocfilehash: 4017d9d658ff73fd935507dad79e9ffab7973de1
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738745"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152542"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型
 
@@ -152,7 +152,7 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 此外，新的 OrderItem(params) 作業也會由 Order 彙總根的 AddOrderItem 方法控制及執行。 因此，與該作業相關的大多數邏輯或驗證 (尤其是任何會影響到與其他子實體間一致性的內容) 都會位於彙總根中的單一空間內。 這便是彙總根模式的最終目的。
 
-當您使用 Entity Framework Core 1.1 或更新版本時，DDD 實體可以更好的方式進行表達，因為除了屬性之外，它還允許了[對應至欄位 (支援欄位)](https://docs.microsoft.com/ef/core/modeling/backing-field)。 這在保護子實體或值物件集合時將會很有用。 透過這項增強功能，您可以使用簡單的私用欄位 (而非屬性)，並且也能在公用方法中實作任何對欄位集合進行的更新，並透過 AsReadOnly 方法提供唯讀存取。
+當您使用 Entity Framework Core 1.1 或更新版本時，DDD 實體可以更好的方式進行表達，因為除了屬性之外，它還允許了[對應至欄位 (支援欄位)](/ef/core/modeling/backing-field)。 這在保護子實體或值物件集合時將會很有用。 透過這項增強功能，您可以使用簡單的私用欄位 (而非屬性)，並且也能在公用方法中實作任何對欄位集合進行的更新，並透過 AsReadOnly 方法提供唯讀存取。
 
 在 DDD 中，您只想要透過 entity (中的方法或) 的函式來更新實體，以便控制資料的任何不變和一致性，因此只會使用 get 存取子來定義屬性。 屬性會受私用欄位支援。 私用成員只能在類別中進行存取。 不過，有一個例外狀況： EF Core 也必須設定這些欄位 (因此它可以傳回具有適當值) 的物件。
 

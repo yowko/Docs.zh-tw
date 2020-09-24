@@ -1,16 +1,17 @@
 ---
-title: '如何使用 LINQ 查詢 ArrayList （c #）'
-description: '這個範例會使用 LINQ 來查詢 c # 中的 ArrayList。 您必須宣告範圍變數的類型，以反映集合中的物件類型。'
+title: '如何使用 LINQ (c # ) 查詢 ArrayList'
+description: '此範例會在 c # 中使用 LINQ 來查詢 ArrayList。 您必須宣告範圍變數的類型，以反映集合中的物件類型。'
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 5c251e17de062a4578f06fc1a40ea3ede9f3ab67
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 278c05cfc864ee4f53e1215a2acb739efd87f8b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104602"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153998"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>如何使用 LINQ 查詢 ArrayList （c #）
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>如何使用 LINQ (c # ) 查詢 ArrayList
+
 使用 LINQ 查詢非泛型 <xref:System.Collections.IEnumerable> 集合時 (例如 <xref:System.Collections.ArrayList>)，您必須明確宣告範圍變數的類型，以反映集合中特定類型的物件。 例如，如果您有 `Student` 物件的 <xref:System.Collections.ArrayList>，您的 [from 子句](../../../language-reference/keywords/from-clause.md)看起來應該如下：  
   
 ```csharp
@@ -23,6 +24,7 @@ var query = from Student s in arrList
  在查詢運算式中使用具有明確類型的範圍變數，相當於呼叫 <xref:System.Linq.Enumerable.Cast%2A> 方法。 如果無法執行指定的轉換，則 <xref:System.Linq.Enumerable.Cast%2A> 會擲回例外狀況。 <xref:System.Linq.Enumerable.Cast%2A> 和 <xref:System.Linq.Enumerable.OfType%2A> 是對非泛型 <xref:System.Collections.IEnumerable> 類型執行的兩個標準查詢運算子方法。 如需詳細資訊，請參閱 [LINQ 查詢作業中的類型關聯性](./type-relationships-in-linq-query-operations.md)。  
   
 ## <a name="example"></a>範例  
+
  下列範例將顯示 <xref:System.Collections.ArrayList> 的簡單查詢。 請注意，此範例會在程式碼呼叫 <xref:System.Collections.ArrayList.Add%2A> 方法時使用物件初始設定式，但這不是必要的。  
   
 ```csharp  
@@ -84,6 +86,6 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)

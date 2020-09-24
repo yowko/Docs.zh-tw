@@ -2,14 +2,15 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: ad87a5876381a7224341babdb076c85edcd1dd87
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0c6d844ac287037b7a546d3a48e7cd924e8a63d1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399568"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153608"
 ---
 # \<serviceThrottling>
+
 指定 Windows Communication Foundation (WCF) 服務的節流機制。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "70399568"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceThrottling>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceThrottling maxConcurrentCalls="Integer"
@@ -28,6 +29,7 @@ ms.locfileid: "70399568"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -39,21 +41,24 @@ ms.locfileid: "70399568"
 |maxConcurrentSessions|正整數，限制 <xref:System.ServiceModel.ServiceHost> 物件可以接受的工作階段數目。<br /><br /> 服務將接受超過限制的連線，但只有低於限制個數的通道為作用中 (可從該通道讀取訊息)。 將這個值設定為 0 相當於設定為 Int32.MaxValue。 預設值是 100 * 處理器計數。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
+
  節流控制會限制同時呼叫、並行執行個體或工作階段的數目，以防止過度消耗資源。  
   
  每次達到這些屬性值時，就會寫入追蹤。 第一個追蹤會寫入成為警告。  
   
 ## <a name="example"></a>範例  
- 下列組態範例指定服務將同時呼叫上限限制為 2，且將並行執行個體上限限制為 10。 如需執行此範例的詳細範例，請參閱[節流](../../../wcf/samples/throttling.md)。  
+
+ 下列組態範例指定服務將同時呼叫上限限制為 2，且將並行執行個體上限限制為 10。 如需執行這個範例的詳細範例，請參閱 [節流](../../../wcf/samples/throttling.md)。  
   
 ```xml  
 <behaviors>

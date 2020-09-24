@@ -2,14 +2,15 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: c5c7ec2b18143ff4d71540a60e24b8225ca4db16
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aa6bc7f5a94afc8a190d3d9d2d71ea8b38d8c25b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738600"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153569"
 ---
 # \<sslStreamSecurity>
+
 表示以 SSL 資料流支援通道安全性的自訂繫結項目。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "73738600"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sslStreamSecurity>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <sslStreamSecurity requireClientCertificate="Boolean"
@@ -27,6 +28,7 @@ ms.locfileid: "73738600"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -37,11 +39,12 @@ ms.locfileid: "73738600"
 |sslProtocols|SslProtocols 列舉旗標值，可指定所支援的 SslProtocols。 預設值為 Ssl3&#124;Tls&#124;Tls11&#124;Tls12。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|定義自訂繫結的所有繫結功能。|  
   

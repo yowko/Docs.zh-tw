@@ -1,47 +1,47 @@
 ---
-title: 為 WCF 開發人員提供 Docker - gRPC
-description: 為ASP.NET核心 gRPC 應用程式創建 Docker 映射
+title: 適用于 WCF 開發人員的 Docker gRPC
+description: 建立 ASP.NET Core gRPC 應用程式的 Docker 映射
 ms.date: 09/02/2019
-ms.openlocfilehash: e67c43f9486fbfe9a5d3e84e3b74770eb621f604
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 379750edfa1a9fc282e43ffa83e5695425f31a26
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148110"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152711"
 ---
-# <a name="create-docker-images"></a>創建 Docker 映射
+# <a name="create-docker-images"></a>建立 Docker 映射
 
-本節介紹為ASP.NET Core gRPC 應用程式創建 Docker 映射，這些應用程式可在 Docker、Kubernetes 或其他容器環境中運行。 使用的應用程式範例，帶有ASP.NET酷睿 MVC Web 應用和 gRPC 服務，可在 GitHub 上的[dotnet 架構/grpc-for wcf 開發人員](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample)存儲庫中使用。
+本節說明如何建立 ASP.NET Core gRPC 應用程式的 Docker 映射，並準備好在 Docker、Kubernetes 或其他容器環境中執行。 使用 ASP.NET Core MVC web 應用程式和 gRPC 服務的範例應用程式，可在 GitHub 上的 [dotnet 架構/gRPC-適用于 wcf 的開發人員](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) 存放庫中取得。
 
-## <a name="microsoft-base-images-for-aspnet-core-applications"></a>用於ASP.NET核心應用程式的微軟基本映射
+## <a name="microsoft-base-images-for-aspnet-core-applications"></a>適用于 ASP.NET Core 應用程式的 Microsoft 基礎映射
 
-Microsoft 為構建和運行 .NET Core 應用程式提供了一系列基本映射。 要創建 ASP.NET酷睿 3.0 圖像，請使用兩個基本映射：
+Microsoft 提供一系列基礎映射來建立和執行 .NET Core 應用程式。 若要建立 ASP.NET Core 3.0 映射，您可以使用兩個基底映射：
 
-- 用於生成和發佈應用程式的 SDK 映射。
-- 用於部署的運行時映射。
+- 用來建立和發佈應用程式的 SDK 映射。
+- 用於部署的執行時間映射。
 
 | 映像 | 描述 |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | 用於使用`docker build`生成應用程式。 不用於生產。 |
-| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | 包含運行時和 ASP.NET核心依賴項。 用於生產。 |
+| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | 用來建立應用程式 `docker build` 。 不要用在生產環境中。 |
+| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | 包含執行時間和 ASP.NET Core 相依性。 適用于生產環境。 |
 
-對於每個映射，有四種基於不同 Linux 發行版本的變體，按標記區分。
+每個映射都有四個以不同 Linux 散發套件為基礎的變化，並依標記區分。
 
-| 圖像標記 | Linux | 注意 |
+| 影像標記 (s)  | Linux | 備註 |
 | --------- | ----- | ----- |
-| 3.0-破壞者，3.0 | Debian 10 | 如果未指定作業系統變體，則預設映射。 |
-| 3.0-高山 | 阿爾卑斯 3.9 | 阿爾卑斯基圖圖像比Debian或Ubuntu圖像小得多。 |
-| 3.0-迪斯可 | Ubuntu 19.04 | |
-| 3.0-仿生 | Ubuntu 18.04 | |
+| 3.0-buster、3。0 | Debian 10 | 如果未指定作業系統變數，則為預設映射。 |
+| 3.0-alpine | Alpine 3。9 | Alpine 基底映射遠小於 Debian 或 Ubuntu。 |
+| 3.0-disco | Ubuntu 19.04 | |
+| 3.0-bionic | Ubuntu 18.04 | |
 
-阿爾卑斯基圖約為 100 MB，而 Debian 和 Ubuntu 圖像的映射為 200 MB。 某些套裝軟體或庫在 Alpine 的套裝軟體管理中可能不可用。 如果您不確定要使用的圖像，則可能需要選擇預設的 Debian。
+Alpine 基底映射大約是 100 MB，相較于 Debian 和 Ubuntu 映射的 200 MB。 某些軟體套件或程式庫可能無法在 Alpine 的套件管理中使用。 如果您不確定要使用哪個映射，您應該選擇預設 Debian。
 
 > [!IMPORTANT]
-> 請確保在生成和運行時使用相同的 Linux 變體。 在一個變體上構建和發佈的應用程式可能不適用於另一個變體。
+> 請確定您針對組建和執行時間使用相同的 Linux 變體。 在某個變異上建立併發布的應用程式可能無法在另一個變數上運作。
 
 ## <a name="create-a-docker-image"></a>建立 Docker 映像
 
-Docker 映射由 Docker*檔*定義。 這是一個文字檔，其中包含生成應用程式和安裝生成或運行應用程式所需的任何依賴項所需的所有命令。 下面的示例顯示了 ASP.NET Core 3.0 應用程式的最簡單的 Dockerfile：
+Docker 映射是由 *Dockerfile*所定義。 這是一個文字檔，其中包含建立應用程式所需的所有命令，並安裝建立或執行應用程式所需的任何相依性。 下列範例顯示 ASP.NET Core 3.0 應用程式的最簡單 Dockerfile：
 
 ```dockerfile
 # Application build steps
@@ -68,30 +68,30 @@ COPY --from=builder /published .
 ENTRYPOINT [ "dotnet", "StockData.dll" ]
 ```
 
-Dockerfile 有兩個部分：第一部分使用`sdk`基本映射來構建和發佈應用程式;第二部分使用基本映射來構建和發佈應用程式。第二個從基中`aspnet`創建運行時映射。 這是因為`sdk`映射約為 900 MB，而運行時映射的映射約為 200 MB，並且大多數內容在運行時是不必要的。
+Dockerfile 有兩個部分：第一個是使用 `sdk` 基底映射來建立和發佈應用程式，第二個部分則會從基底建立執行時間映射 `aspnet` 。 這是因為 `sdk` 影像大約是 900 MB，相較于執行時間影像大約 200 mb，而且在執行時間中，大部分的內容都是不必要的。
 
-### <a name="the-build-steps"></a>生成步驟
-
-| 步驟 | 描述 |
-| ---- | ----------- |
-| `FROM ...` | 聲明基本映射並分配`builder`別名。 |
-| `WORKDIR /src` | 創建`/src`目錄並將其設置為當前工作目錄。 |
-| `COPY . .` | 將主機上當前目錄下的所有內容複寫到映射上的目前的目錄中。 |
-| `RUN dotnet restore` | 還原任何外部包（ASP.NET與 SDK 一起預先安裝核心 3.0 框架）。 |
-| `RUN dotnet publish ...` | 生成和發佈發佈版本。 請注意，`--runtime`該標誌不是必需的。 |
-
-### <a name="the-runtime-image-steps"></a>運行時映射步驟
+### <a name="the-build-steps"></a>組建步驟
 
 | 步驟 | 描述 |
 | ---- | ----------- |
-| `FROM ...` | 聲明新的基本映射。 |
-| `WORKDIR /app` | 創建`/app`目錄並將其設置為當前工作目錄。 |
-| `COPY --from=builder ...` | 使用第一`builder``FROM`行中的別名從上一個圖像複製已發佈的應用程式。 |
-| `ENTRYPOINT [ ... ]` | 將命令設置在容器啟動時運行。 運行時`dotnet`映射中的命令只能運行 DLL 檔。 |
+| `FROM ...` | 宣告基底映射並指派 `builder` 別名。 |
+| `WORKDIR /src` | 建立 `/src` 目錄，並將它設定為目前的工作目錄。 |
+| `COPY . .` | 將主機上目前目錄下的所有內容複寫到映射的目前目錄中。 |
+| `RUN dotnet restore` | 還原任何 (ASP.NET Core 3.0 framework 的外部套件都會隨 SDK) 預先安裝。 |
+| `RUN dotnet publish ...` | 建立併發行發行組建。 請注意， `--runtime` 不需要旗標。 |
+
+### <a name="the-runtime-image-steps"></a>執行時間映射步驟
+
+| 步驟 | 描述 |
+| ---- | ----------- |
+| `FROM ...` | 宣告新的基底映射。 |
+| `WORKDIR /app` | 建立 `/app` 目錄，並將它設定為目前的工作目錄。 |
+| `COPY --from=builder ...` | 使用第一行的別名，從上一個影像複製已發行的應用程式 `builder` `FROM` 。 |
+| `ENTRYPOINT [ ... ]` | 設定要在容器啟動時執行的命令。 `dotnet`執行時間映射中的命令只能執行 DLL 檔案。 |
 
 ### <a name="https-in-docker"></a>Docker 中的 HTTPS
 
-Docker 的 Microsoft 基本`ASPNETCORE_URLS`映射將環境`http://+:80`變數設置為 ，這意味著 Kestrel 在該埠上運行沒有 HTTPS。 如果將 HTTPS 與自訂證書一起使用（如[自託管 gRPC 應用程式中](self-hosted.md)所述），則應重寫此證書。 在 Dockerfile 的運行時映射創建部分設置環境變數。
+適用于 Docker 的 Microsoft 基礎映射 `ASPNETCORE_URLS` 會將環境變數設為 `http://+:80` ，這表示 Kestrel 會在該埠上執行而不需要 HTTPS。 如果您使用 HTTPS 與自訂憑證 (如 [自我裝載 gRPC 應用程式](self-hosted.md)) 中所述，您應該覆寫此項。 在 Dockerfile 的執行時間映射建立部分中設定環境變數。
 
 ```dockerfile
 # Runtime image creation
@@ -100,9 +100,9 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
 ENV ASPNETCORE_URLS=https://+:443
 ```
 
-### <a name="the-dockerignore-file"></a>.dockerignore 檔
+### <a name="the-dockerignore-file"></a>>.dockerignore 檔案
 
-與從`.gitignore`原始程式碼管理中排除某些檔和目錄的檔類似，`.dockerignore`該檔可用於在生成期間將檔和目錄複寫到映射。 這不僅節省了複製時間，還可以避免將 PC 中的`obj`目錄複寫到映射中出現的一些錯誤。 至少，應為`bin`檔添加條目，並`obj`添加到檔中`.dockerignore`。
+就像 `.gitignore` 從原始檔控制中排除特定檔案和目錄的檔案一樣，檔案 `.dockerignore` 可以用來排除檔案和目錄，不要在組建期間複製到映射中。 這不僅能節省時間的複製，也可以避免將電腦上的 `obj` 目錄複寫到映射時所發生的一些錯誤。 您至少應該在檔案中加入和的 `bin` 專案 `obj` `.dockerignore` 。
 
 ```console
 bin/
@@ -111,50 +111,50 @@ obj/
 
 ## <a name="build-the-image"></a>建立映像
 
-對於具有單個應用程式的解決方案，以及單個 Dockerfile，將 Dockerfile 放在基本目錄中是最簡單的。 換句話說，將其放在與`.sln`檔相同的目錄中。 在這種情況下，要生成映射，請使用包含 Dockerfile`docker build`的目錄中的以下命令。
+針對具有單一應用程式的方案，因此為單一 Dockerfile，最簡單的方式是將 Dockerfile 放在基底目錄中。 換句話說，將它放在與檔案相同的目錄中 `.sln` 。 在此情況下，若要建立映射，請 `docker build` 從包含 Dockerfile 的目錄中使用下列命令。
 
 ```console
 docker build --tag stockdata .
 ```
 
-令人困惑的名稱`--tag`標誌（可以縮短為`-t`）指定圖像的整個名稱，包括指定的實際標記。 `.`末尾指定將在其中運行生成的上下文;Docker 檔中命令的`COPY`當前工作目錄。
+Confusingly 命名的 `--tag` 旗標 (可以縮短為 `-t`) 指定影像的整個名稱，包括實際標記（如果有指定的話）。 `.`結束時，會指定將在其中執行組建的內容; `COPY` Dockerfile 中命令的目前工作目錄。
 
-如果單個解決方案中有多個應用程式，則可以將每個應用程式的 Dockerfile 保留在檔旁邊的`.csproj`自己的資料夾中。 您仍應從基`docker build`目錄中運行該命令，以確保將解決方案和所有專案複製到映射中。 可以使用`--file`（ 或`-f`） 標誌在目前的目錄下方指定 Docker 檔。
+如果您在單一解決方案中有多個應用程式，您可以將每個應用程式的 Dockerfile 保留在檔案旁的資料夾中 `.csproj` 。 您仍然應該 `docker build` 從基底目錄執行此命令，以確保方案和所有專案都會複製到映射中。 您可以使用 `--file` (或) 旗標，在目前的目錄下指定 Dockerfile `-f` 。
 
 ```console
 docker build --tag stockdata --file src/StockData/Dockerfile .
 ```
 
-## <a name="run-the-image-in-a-container-on-your-machine"></a>在電腦上的容器中運行映射
+## <a name="run-the-image-in-a-container-on-your-machine"></a>在您電腦上的容器中執行映射
 
-要在本地 Docker 實例中運行映射，請使用`docker run`命令。
+若要在您的本機 Docker 實例中執行映射，請使用 `docker run` 命令。
 
 ```console
 docker run -ti -p 5000:80 stockdata
 ```
 
-標誌`-ti`將當前終端連接到容器的終端，並在互動式模式下運行。 容器`-p 5000:80`上的發佈（連結）埠 80 到本地主機網路介面上的埠 5000。
+旗標會將 `-ti` 您目前的終端機連接到容器的終端機，並在互動模式中執行。 會將 `-p 5000:80` 容器上的埠 80) 的 (連結發佈到 localhost 網路介面上的埠5000。
 
 ## <a name="push-the-image-to-a-registry"></a>將映像推送至登錄
 
-驗證映射是否正常工作後，將其推送到 Docker 註冊表，使其在其他系統上可用。 內部網路將需要預配 Docker 註冊表。 這可以像運行[Docker 自己的`registry`映射](https://docs.docker.com/registry/deploying/)（Docker 註冊表在 Docker 容器中運行）一樣簡單，但有多種更全面的解決方案可用。 對於外部共用和雲使用，可以使用各種託管註冊表，例如[Azure 容器註冊表](https://docs.microsoft.com/azure/container-registry/)或[Docker Hub。](https://docs.docker.com/docker-hub/repos/)
+確認映射可正常運作之後，請將它推送到 Docker 登錄，使其可在其他系統上使用。 內部網路將需要布建 Docker 登錄。 這可以像是執行 [docker 本身的 `registry` 映射](https://docs.docker.com/registry/deploying/) 一樣簡單 (docker 登錄是在 docker 容器中執行) ，但是有各種更全面的解決方案可用。 針對外部共用和雲端用途，有各種可用的受控登錄，例如 [Azure Container Registry](/azure/container-registry/) 或 [Docker Hub](https://docs.docker.com/docker-hub/repos/)。
 
-要推送到 Docker 中心，請用使用者或組織名稱對圖像名稱進行首碼。
+若要推送至 Docker Hub，請在映射名稱前加上您的使用者或組織名稱。
 
 ```console
 docker tag stockdata myorg/stockdata
 docker push myorg/stockdata
 ```
 
-要推送到專用註冊表，使用註冊表主機名稱和組織名稱對映射名稱進行首碼。
+若要推送至私人登錄，請在映射名稱前加上登錄主機名稱和組織名稱。
 
 ```console
 docker tag stockdata internal-registry:5000/myorg/stockdata
 docker push internal-registry:5000/myorg/stockdata
 ```
 
-映射在註冊表中後，您可以將其部署到單獨的 Docker 主機，或部署到容器編排引擎（如 Kubernetes）。
+映射在登錄中之後，您可以將它部署到個別的 Docker 主機或容器協調流程引擎（例如 Kubernetes）。
 
 >[!div class="step-by-step"]
->[上一個](self-hosted.md)
->[下一個](kubernetes.md)
+>[上一個](self-hosted.md) 
+>[下一步](kubernetes.md)

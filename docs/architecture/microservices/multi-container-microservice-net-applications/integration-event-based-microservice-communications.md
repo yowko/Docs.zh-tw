@@ -2,12 +2,12 @@
 title: 實作微服務之間的事件通訊 (整合事件)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解整合事件以實作微服務之間的事件通訊。
 ms.date: 10/02/2018
-ms.openlocfilehash: cbc9d28f9fbcaea528eabc4930476545cb919bb4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a778acba3e17b084840b77d903533f9180ca01d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539342"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152529"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>實作微服務之間的事件通訊 (整合事件)
 
@@ -76,7 +76,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>發佈/訂閱 (Pub/Sub) 模式
 
-[發佈/訂閱模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一項重要的差異。 在觀察者模式中，廣播會直接從可觀察到觀察者執行，因此它們彼此「知道」。 但在使用 Pub/Sub 模式時，有一個稱為代理程式或訊息代理程式或事件匯流排的第三個元件，發行者和訂閱者都知道它。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
+[發佈/訂閱模式](/previous-versions/msp-n-p/ff649664(v=pandp.10))的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一項重要的差異。 在觀察者模式中，廣播會直接從可觀察到觀察者執行，因此它們彼此「知道」。 但在使用 Pub/Sub 模式時，有一個稱為代理程式或訊息代理程式或事件匯流排的第三個元件，發行者和訂閱者都知道它。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
 
 ### <a name="the-middleman-or-event-bus"></a>中間人或事件匯流排
 

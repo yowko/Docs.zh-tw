@@ -5,25 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 9e8c4204b51121b147fc7614066d9b849a687574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fdb19e7fa014bf4a7c924b1fbae53fa44de6e3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151256"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153257"
 ---
 # <a name="datatable-edits"></a>DataTable 編輯
-變更 <xref:System.Data.DataRow> 中的資料行值時，這些變更會立即放入資料列的目前狀態中。 然後<xref:System.Data.DataRowState>設置為 **"已修改 "，** 並使用<xref:System.Data.DataRow.AcceptChanges%2A>**DataRow**的 或<xref:System.Data.DataRow.RejectChanges%2A>方法接受或拒絕更改。 **DataRow**還提供三種方法，可用於在編輯行時掛起行的狀態。 這些方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
+
+變更 <xref:System.Data.DataRow> 中的資料行值時，這些變更會立即放入資料列的目前狀態中。 <xref:System.Data.DataRowState>接著會設定為 [**已修改**]，並使用 DataRow 的或方法來接受或拒絕變更 <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A> 。 **DataRow** **DataRow**也提供三種方法，可讓您在編輯資料列時，用來暫止該資料列的狀態。 這些方法是 <xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> 和 <xref:System.Data.DataRow.CancelEdit%2A>。  
   
- 直接修改**DataRow**中的列值時 **，DataRow**將使用 **"當前**"、"**預設**"和 **"原始**行"版本管理列值。 除了這些行版本外，"**開始編輯**"、"**結束編輯****"和"取消編輯"** 方法使用第四行版本：**建議**。 有關行版本的詳細資訊，請參閱[行狀態和行版本](row-states-and-row-versions.md)。  
+ 當您直接修改 **datarow** 中的資料行值時， **Datarow** 會使用 **目前**、 **預設**和 **原始** 資料列版本來管理資料行的值。 除了這些資料列版本以外， **BeginEdit**、 **EndEdit**和 **CancelEdit** 方法還使用第四個數據列版本： **提議**。 如需資料列版本的詳細資訊，請參閱資料 [列狀態和資料列版本](row-states-and-row-versions.md)。  
   
- **建議的**行版本存在於編輯操作中，該操作以調用**BeginEdit**開始，最後使用 **"結束編輯"** 或 **"取消編輯"，** 或調用 **"接受更改**"或 **"拒絕更改**"。  
+ **建議**的資料列版本存在於從呼叫**BeginEdit**開始的編輯作業期間，或是藉由使用**EndEdit**或**CancelEdit，** 或藉由呼叫**AcceptChanges**或**RejectChanges**來結束。  
   
- 在編輯操作期間，您可以通過在**DataTable**的**列更改**事件中評估 **"建議值**"來將驗證邏輯應用於各個列。 **"列更改"** 事件保存**DataColumnChangeEventArgs，該事件**保留對正在更改的列和**建議值**的引用。 在您評估建議的值之後，就可以修改該值或取消編輯。 編輯結束時，行將移出 **"建議"** 狀態。  
+ 在編輯作業期間，您可以藉由評估**DataTable** **ColumnChanged**事件中的**ProposedValue** ，將驗證邏輯套用至個別資料行。 **ColumnChanged**事件會保存**DataColumnChangeEventArgs** ，以保留變更和**ProposedValue**的資料行參考。 在您評估建議的值之後，就可以修改該值或取消編輯。 當編輯結束時，資料列就會移出 **建議** 的狀態。  
   
- 您可以通過調用**EndEdit**來確認編輯，也可以通過調用**CancelEdit**來取消編輯。 請注意，雖然**EndEdit**確實確認您的編輯，但**DataSet**在調用 **"接受更改**"之前實際上不會接受更改。 另請注意，如果在結束編輯或**取消編輯**之前調用 **"接受更改**"，則編輯將結束，**並且"當前**"行版本和**原始**行版本均接受 **"建議**行"值。 **EndEdit** 以同樣的方式，調用**拒絕更改**結束編輯並丟棄**當前**和**建議的**行版本。 調用"**接受更改**"或 **"拒絕更改**"後調用 **"結束編輯**"或 **"取消編輯"** 不起作用，因為編輯已結束。  
+ 您可以藉由呼叫 **EndEdit**來確認編輯，或是藉由呼叫 **CancelEdit**來取消編輯。 請注意，雖然**EndEdit**確實會確認您的編輯，但在呼叫**AcceptChanges**之前，**資料集**不會實際接受變更。 另外也請注意，如果您在結束 [使用**EndEdit**或**CancelEdit**編輯] 之前呼叫**AcceptChanges** ，就會結束編輯，並且針對**目前**和**原始**資料列版本接受**建議**的資料列值。 以同樣的方式，呼叫 **RejectChanges** 會結束編輯並捨棄 **目前** 和 **建議** 的資料列版本。 呼叫**AcceptChanges**或**RejectChanges**之後呼叫**EndEdit**或**CancelEdit**沒有任何作用，因為編輯已經結束。  
   
- 下面的示例演示如何使用 **"開始編輯**"與**結束編輯**和**取消編輯**。 該示例還檢查 **"列更改"** 事件中**的"建議值**"，並決定是否取消編輯。  
+ 下列範例示範如何搭配使用 **BeginEdit** 與 **EndEdit** 和 **CancelEdit**。 此範例也會檢查**ColumnChanged**事件中的**ProposedValue** ，並決定是否要取消編輯。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -92,5 +93,5 @@ protected static void OnColumnChanged(
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataRowVersion>
 - [在 DataTable 中操作資料](manipulating-data-in-a-datatable.md)
-- [處理 DataTable 事件](handling-datatable-events.md)
+- [處理 DataTable 的事件](handling-datatable-events.md)
 - [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

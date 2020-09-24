@@ -2,24 +2,25 @@
 title: 將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 8bcf705ce4415929e685be79f813846bbb40bb36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b2dad44176e52adcf32e2e3ccff3d82ba23f6ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150840"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153231"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束
-在 XML 架構定義語言 （XSD） 架構中，**唯一**元素指定元素或屬性的唯一性約束。 在將 XML 結構描述轉譯到關聯式結構描述的處理序中，會將 XML 結構描述內項目或屬性上指定的唯一的條件約束 (Constraint)，對應到所產生的對應 <xref:System.Data.DataTable> 內 <xref:System.Data.DataSet> 的唯一的條件約束。  
+
+在 XML 架構定義語言 (XSD) 架構中， **unique** 元素會指定元素或屬性的唯一性條件約束。 在將 XML 結構描述轉譯到關聯式結構描述的處理序中，會將 XML 結構描述內項目或屬性上指定的唯一的條件約束 (Constraint)，對應到所產生的對應 <xref:System.Data.DataTable> 內 <xref:System.Data.DataSet> 的唯一的條件約束。  
   
- 下表概述了可以在**唯一**元素中指定的**msdata**屬性。  
+ 下表列出您可以在**unique**元素中指定的**msdata**屬性。  
   
 |屬性名稱|描述|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。 否則，**名稱**屬性提供約束名稱的值。|  
-|**msdata:PrimaryKey**|如果`PrimaryKey="true"`存在**唯**一元素中，則使用**IsPrimaryKey**屬性設置為**true**時將創建唯一約束。|  
+|**msdata:ConstraintName**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。 否則， **name** 屬性會提供條件約束名稱的值。|  
+|**msdata:PrimaryKey**|如果 `PrimaryKey="true"` **unique** 專案中有，則會建立唯一的條件約束，並將 **IsPrimaryKey** 屬性設定為 **true**。|  
   
- 下面的示例顯示了使用**唯**一元素指定唯一性約束的 XML 架構。  
+ 下列範例顯示使用 **unique** 專案指定唯一性條件約束的 XML 架構。  
   
 ```xml  
 <xs:schema id="SampleDataSet"
@@ -48,13 +49,13 @@ ms.locfileid: "79150840"
 </xs:schema>  
 ```  
   
- 架構中**的唯一**元素指定，對於文檔實例中的所有**客戶**元素 **，CustomerID**子項目的值必須是唯一的。 在構建**DataSet**時，映射過程讀取此架構並生成下表：  
+ 架構中的 **unique** 元素會指定檔實例中所有 **Customers** 專案的， **CustomerID** 子專案的值必須是唯一的。 在建立 **資料集**時，對應進程會讀取此架構並產生下表：  
   
 ```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- 映射過程還會在**CustomerID**列上創建唯一的約束，如下**DataSet**所示。 (為了便於了解，此處僅顯示相關屬性)。  
+ 對應進程也會在 **CustomerID** 資料行上建立 unique 條件約束，如下列 **資料集**所示。 (為了便於了解，此處僅顯示相關屬性)。  
   
 ```text  
       DataSetName: MyDataSet  
@@ -68,11 +69,11 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- 在生成的**DataSet**中 **，IsPrimaryKey**屬性設置為唯一約束的**False。** 列上**的唯**一屬性指示**CustomerID**列值必須是唯一的（但它們可以是空引用，由列的**AllowDBNull**屬性指定）。  
+ 在產生的 **資料集中** ，unique 條件約束的 **IsPrimaryKey** 屬性會設為 **False** 。 資料行上的 **unique** 屬性工作表示 **CustomerID** 資料行值必須是唯一的 (但可以是 null 參考，如資料行) 的 **AllowDBNull** 屬性所指定。  
   
- 如果修改架構並將可選**msdata：主鍵**屬性值設置為**True，** 則在表上創建唯一約束。 **AllowDBNull**列屬性設置為**False**，約束的**IsPrimaryKey**屬性設置為**True，** 從而使**CustomerID**列成為主鍵列。  
+ 如果您修改架構，並將選擇性的 **msdata： PrimaryKey** 屬性值設定為 **True**，就會在資料表上建立 unique 條件約束。 **AllowDBNull**資料行屬性設定為**False**，而且條件約束的**IsPrimaryKey**屬性設定為**True**，因此**CustomerID**資料行是主鍵資料行。  
   
- 您可以在 XML 結構描述中，將唯一的條件約束指定給合併的項目或屬性。 下面的示例演示如何通過在架構中添加另一個**xs：field**元素來指定**客戶 ID** **和公司名稱**值的組合在任何情況下對所有**客戶**都是唯一的。  
+ 您可以在 XML 結構描述中，將唯一的條件約束指定給合併的項目或屬性。 下列範例示範如何藉由在架構中加入另一個**xs： field**專案，指定在任何實例中，所有**客戶**的**CustomerID**與**公司**值的組合必須是唯一的。  
   
 ```xml  
       <xs:unique
@@ -84,7 +85,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- 這是在生成的**DataSet**中創建的約束。  
+ 這是在產生的 **資料集中**建立的條件約束。  
   
 ```text  
 ConstraintName: SomeName  

@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e7e1ccb051410c351e49afee9f2d6809264833
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce90c1d310178e66da7c758c6df2cd357199c8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151295"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153283"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 和 DataRowView
-<xref:System.Data.DataView> 公開可列舉之 <xref:System.Data.DataRowView> 物件的集合。 **DataRowView**物件將值公開為物件陣列，這些陣列由基礎資料表中列的名稱或表位引用編制索引。 您可以使用 DataRowView<xref:System.Data.DataRow><xref:System.Data.DataRowView.Row%2A>的屬性訪問**DataRowView**公開的 **。**  
+
+<xref:System.Data.DataView> 公開可列舉之 <xref:System.Data.DataRowView> 物件的集合。 **DataRowView**物件會將值公開為物件陣列，這些物件是以基礎資料表中之資料行的名稱或序數參考來編制索引。 您可以 <xref:System.Data.DataRow> 使用 DataRowView 的屬性，存取**DataRowView**所公開的 <xref:System.Data.DataRowView.Row%2A> 。 **DataRowView**  
   
- 使用**DataRowView**查看值時<xref:System.Data.DataView.RowStateFilter%2A>**，DataView**的屬性將確定基礎**DataRow**的哪個行版本公開。 有關使用**DataRow**訪問不同行版本的資訊，請參閱[行狀態和行版本](row-states-and-row-versions.md)。  
+ 當您使用 **DataRowView**來查看值時， <xref:System.Data.DataView.RowStateFilter%2A> **DataView** 的屬性會決定要公開基礎 **DataRow** 的資料列版本。 如需使用 **DataRow**存取不同資料列版本的詳細資訊，請參閱資料 [列狀態和資料列版本](row-states-and-row-versions.md)。  
   
  下列程式碼範例顯示資料表內所有的目前值和原始值。  
   
