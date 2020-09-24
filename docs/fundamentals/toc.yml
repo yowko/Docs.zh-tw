@@ -670,7 +670,7 @@ items:
                     href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
                   - name: 變更日期格式
                     href: ../standard/base-types/regular-expression-example-changing-date-formats.md
-                  - name: 從 URL 擷取通訊協定和連接埠號碼
+                  - name: 從 URL 擷取通訊協定與連接埠號碼
                     href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
                   - name: 從字串中刪除無效的字元
                     href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
@@ -715,7 +715,7 @@ items:
       - name: 相依性插入
         href: /aspnet/core/fundamentals/dependency-injection
       - name: 泛型主機
-        href: /aspnet/core/fundamentals/host/generic-host
+        href: ../core/extensions/generic-host.md
       - name: 記錄
         href: /aspnet/core/fundamentals/logging
       - name: 選項模式
