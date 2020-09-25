@@ -2,30 +2,32 @@
 title: 自訂插入、更新和刪除作業
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: ed3de95a8224f0b4d8f3d5d913274417a6879942
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4b846d1e1f737cec85ecda75df5e3f66982def62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247617"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177341"
 ---
-# <a name="customizing-insert-update-and-delete-operations"></a><span data-ttu-id="c7e4a-102">自訂插入、更新和刪除作業</span><span class="sxs-lookup"><span data-stu-id="c7e4a-102">Customizing Insert, Update, and Delete Operations</span></span>
-<span data-ttu-id="c7e4a-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 預設會產生動態 SQL 來實作插入、讀取、更新和刪除作業。</span><span class="sxs-lookup"><span data-stu-id="c7e4a-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL to implement insert, read, update, and delete operations.</span></span> <span data-ttu-id="c7e4a-104">不過在實務上，您通常會自訂應用程式以符合您的業務需求。</span><span class="sxs-lookup"><span data-stu-id="c7e4a-104">In practice, however, you typically customize your application to suit your business needs.</span></span>  
+# <a name="customizing-insert-update-and-delete-operations"></a><span data-ttu-id="bd2c0-102">自訂插入、更新和刪除作業</span><span class="sxs-lookup"><span data-stu-id="bd2c0-102">Customizing Insert, Update, and Delete Operations</span></span>
+
+<span data-ttu-id="bd2c0-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 預設會產生動態 SQL 來實作插入、讀取、更新和刪除作業。</span><span class="sxs-lookup"><span data-stu-id="bd2c0-103">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates dynamic SQL to implement insert, read, update, and delete operations.</span></span> <span data-ttu-id="bd2c0-104">不過在實務上，您通常會自訂應用程式以符合您的業務需求。</span><span class="sxs-lookup"><span data-stu-id="bd2c0-104">In practice, however, you typically customize your application to suit your business needs.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="c7e4a-105">如果您使用 Visual Studio，您可以使用物件關聯式設計工具來自訂插入、更新和刪除動作。</span><span class="sxs-lookup"><span data-stu-id="c7e4a-105">If you are using Visual Studio, you can use the Object Relational Designer to customize insert, update, and delete actions.</span></span>  
+> <span data-ttu-id="bd2c0-105">如果您使用 Visual Studio，可以使用物件關聯式設計工具來自訂插入、更新和刪除動作。</span><span class="sxs-lookup"><span data-stu-id="bd2c0-105">If you are using Visual Studio, you can use the Object Relational Designer to customize insert, update, and delete actions.</span></span>  
   
- <span data-ttu-id="c7e4a-106">本節的主題會說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 針對自訂應用程式中之插入、讀取、更新和刪除作業所提供的技巧。</span><span class="sxs-lookup"><span data-stu-id="c7e4a-106">This section of topics describes the techniques that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations in your application.</span></span>  
+ <span data-ttu-id="bd2c0-106">本節的主題會說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 針對自訂應用程式中之插入、讀取、更新和刪除作業所提供的技巧。</span><span class="sxs-lookup"><span data-stu-id="bd2c0-106">This section of topics describes the techniques that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations in your application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c7e4a-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="c7e4a-107">In This Section</span></span>  
- [<span data-ttu-id="c7e4a-108">自訂作業：概觀</span><span class="sxs-lookup"><span data-stu-id="c7e4a-108">Customizing Operations: Overview</span></span>](customizing-operations-overview.md)  
- <span data-ttu-id="c7e4a-109">說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 針對自訂插入、讀取、更新和刪除作業所提供的各項技巧。</span><span class="sxs-lookup"><span data-stu-id="c7e4a-109">Describes the various techniques [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="bd2c0-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="bd2c0-107">In This Section</span></span>  
+
+ [<span data-ttu-id="bd2c0-108">自訂作業：總覽</span><span class="sxs-lookup"><span data-stu-id="bd2c0-108">Customizing Operations: Overview</span></span>](customizing-operations-overview.md)  
+ <span data-ttu-id="bd2c0-109">說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 針對自訂插入、讀取、更新和刪除作業所提供的各項技巧。</span><span class="sxs-lookup"><span data-stu-id="bd2c0-109">Describes the various techniques [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides for customizing insert, read, update, and delete operations.</span></span>  
   
- [<span data-ttu-id="c7e4a-110">插入、更新和刪除作業</span><span class="sxs-lookup"><span data-stu-id="c7e4a-110">Insert, Update, and Delete Operations</span></span>](insert-update-and-delete-operations.md)  
- <span data-ttu-id="c7e4a-111">說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 管理資料庫資料的預設程序。</span><span class="sxs-lookup"><span data-stu-id="c7e4a-111">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default processes for manipulating database data.</span></span>  
+ [<span data-ttu-id="bd2c0-110">插入、更新和刪除作業</span><span class="sxs-lookup"><span data-stu-id="bd2c0-110">Insert, Update, and Delete Operations</span></span>](insert-update-and-delete-operations.md)  
+ <span data-ttu-id="bd2c0-111">說明 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 管理資料庫資料的預設程序。</span><span class="sxs-lookup"><span data-stu-id="bd2c0-111">Describes the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default processes for manipulating database data.</span></span>  
   
- [<span data-ttu-id="c7e4a-112">開發人員覆寫預設行為的責任</span><span class="sxs-lookup"><span data-stu-id="c7e4a-112">Responsibilities of the Developer In Overriding Default Behavior</span></span>](responsibilities-of-the-developer-in-overriding-default-behavior.md)  
- <span data-ttu-id="c7e4a-113">說明開發人員在實作 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未強制限制之需求時所扮演的角色。</span><span class="sxs-lookup"><span data-stu-id="c7e4a-113">Describes the role of the developer in implementing requirements not enforced by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
+ [<span data-ttu-id="bd2c0-112">開發人員覆寫預設行為的責任</span><span class="sxs-lookup"><span data-stu-id="bd2c0-112">Responsibilities of the Developer In Overriding Default Behavior</span></span>](responsibilities-of-the-developer-in-overriding-default-behavior.md)  
+ <span data-ttu-id="bd2c0-113">說明開發人員在實作 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未強制限制之需求時所扮演的角色。</span><span class="sxs-lookup"><span data-stu-id="bd2c0-113">Describes the role of the developer in implementing requirements not enforced by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
- [<span data-ttu-id="c7e4a-114">使用部分方法新增商務邏輯</span><span class="sxs-lookup"><span data-stu-id="c7e4a-114">Adding Business Logic By Using Partial Methods</span></span>](adding-business-logic-by-using-partial-methods.md)  
- <span data-ttu-id="c7e4a-115">說明如何使用部分方法覆寫自動產生的方法。</span><span class="sxs-lookup"><span data-stu-id="c7e4a-115">Describes how to use partial methods to override autogenerated methods.</span></span>
+ [<span data-ttu-id="bd2c0-114">使用部分方法加入商務邏輯</span><span class="sxs-lookup"><span data-stu-id="bd2c0-114">Adding Business Logic By Using Partial Methods</span></span>](adding-business-logic-by-using-partial-methods.md)  
+ <span data-ttu-id="bd2c0-115">說明如何使用部分方法覆寫自動產生的方法。</span><span class="sxs-lookup"><span data-stu-id="bd2c0-115">Describes how to use partial methods to override autogenerated methods.</span></span>

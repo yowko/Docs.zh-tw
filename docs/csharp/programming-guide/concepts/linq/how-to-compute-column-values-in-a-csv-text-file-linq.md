@@ -1,21 +1,22 @@
 ---
-title: '如何計算 CSV 文字檔中的資料行值（LINQ）（c #）'
-description: '這個範例示範如何使用 c # 中的 LINQ （例如 Sum、Average、Min 和 Max），在 .csv 檔案的資料行上執行匯總計算。'
+title: '如何計算 CSV 文字檔中的資料行值 (LINQ)  (c # ) '
+description: '此範例示範如何使用 c # 中的 LINQ （例如 Sum、Average、Min 和 Max），在 .csv 檔案的資料行上執行匯總計算。'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 9137779f9767c8a9531489f7894ba3e69eb1faee
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a475de9c769a66fdded490a3f7eccdb74a434186
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105321"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195593"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="d477c-103">如何計算 CSV 文字檔中的資料行值（LINQ）（c #）</span><span class="sxs-lookup"><span data-stu-id="d477c-103">How to compute column values in a CSV text file (LINQ) (C#)</span></span>
-<span data-ttu-id="d477c-104">本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="d477c-104">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="d477c-105">此處顯示的範例準則可以套用至其他類型的結構化文字。</span><span class="sxs-lookup"><span data-stu-id="d477c-105">The example principles that are shown here can be applied to other types of structured text.</span></span>  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="cdc52-103">如何計算 CSV 文字檔中的資料行值 (LINQ)  (c # ) </span><span class="sxs-lookup"><span data-stu-id="cdc52-103">How to compute column values in a CSV text file (LINQ) (C#)</span></span>
+
+<span data-ttu-id="cdc52-104">本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="cdc52-104">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="cdc52-105">此處顯示的範例準則可以套用至其他類型的結構化文字。</span><span class="sxs-lookup"><span data-stu-id="cdc52-105">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-## <a name="to-create-the-source-file"></a><span data-ttu-id="d477c-106">建立來源檔案</span><span class="sxs-lookup"><span data-stu-id="d477c-106">To create the source file</span></span>  
+## <a name="to-create-the-source-file"></a><span data-ttu-id="cdc52-106">建立來源檔案</span><span class="sxs-lookup"><span data-stu-id="cdc52-106">To create the source file</span></span>  
   
-1. <span data-ttu-id="d477c-107">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="d477c-107">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="d477c-108">假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。</span><span class="sxs-lookup"><span data-stu-id="d477c-108">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
+1. <span data-ttu-id="cdc52-107">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="cdc52-107">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="cdc52-108">假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。</span><span class="sxs-lookup"><span data-stu-id="cdc52-108">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```csv
     111, 97, 92, 81, 60  
@@ -32,7 +33,7 @@ ms.locfileid: "87105321"
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a><span data-ttu-id="d477c-109">範例</span><span class="sxs-lookup"><span data-stu-id="d477c-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="cdc52-109">範例</span><span class="sxs-lookup"><span data-stu-id="cdc52-109">Example</span></span>  
   
 ```csharp  
 class SumColumns  
@@ -157,12 +158,13 @@ class SumColumns
  */  
 ```  
   
- <span data-ttu-id="d477c-110">查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。</span><span class="sxs-lookup"><span data-stu-id="d477c-110">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="d477c-111">每個陣列項目表示一個資料行。</span><span class="sxs-lookup"><span data-stu-id="d477c-111">Each array element represents a column.</span></span> <span data-ttu-id="d477c-112">最後，每個資料行中的文字都會轉換成其數值表示法。</span><span class="sxs-lookup"><span data-stu-id="d477c-112">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="d477c-113">如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。</span><span class="sxs-lookup"><span data-stu-id="d477c-113">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
+ <span data-ttu-id="cdc52-110">查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。</span><span class="sxs-lookup"><span data-stu-id="cdc52-110">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="cdc52-111">每個陣列項目表示一個資料行。</span><span class="sxs-lookup"><span data-stu-id="cdc52-111">Each array element represents a column.</span></span> <span data-ttu-id="cdc52-112">最後，每個資料行中的文字都會轉換成其數值表示法。</span><span class="sxs-lookup"><span data-stu-id="cdc52-112">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="cdc52-113">如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。</span><span class="sxs-lookup"><span data-stu-id="cdc52-113">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="d477c-114">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="d477c-114">Compiling the Code</span></span>  
- <span data-ttu-id="d477c-115">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="d477c-115">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="d477c-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="d477c-116">See also</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="cdc52-114">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="cdc52-114">Compiling the Code</span></span>  
 
-- [<span data-ttu-id="d477c-117">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="d477c-117">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="d477c-118">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="d477c-118">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+ <span data-ttu-id="cdc52-115">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="cdc52-115">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="cdc52-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cdc52-116">See also</span></span>
+
+- [<span data-ttu-id="cdc52-117">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="cdc52-117">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="cdc52-118">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="cdc52-118">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
