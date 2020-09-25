@@ -1,21 +1,22 @@
 ---
-title: '如何依任何字或欄位排序或篩選文字資料（LINQ）（c #）'
-description: 瞭解如何依任何字或欄位排序或篩選文字資料。 請參閱依行中的任何欄位排序結構化文字的範例。
+title: '如何依任何字或欄位排序或篩選文字資料 (LINQ)  (c # ) '
+description: 瞭解如何依任何字或欄位排序或篩選文字資料。 請參閱行中任何欄位的排序結構化文字行的範例。
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: f27ce44f4b0b05bc9094b7e108af8f65170bb58a
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 05858cc787d3916b204910df10d3291796cebc02
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301316"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203939"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>如何依任何字或欄位排序或篩選文字資料（LINQ）（c #）
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>如何依任何字或欄位排序或篩選文字資料 (LINQ)  (c # ) 
+
 下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。 此欄位可能會在執行階段以動態方式指定。 假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。  
   
 ### <a name="to-create-a-file-that-contains-data"></a>建立內含資料的檔案  
   
-1. 複製[如何從不同的檔案聯結內容（LINQ）（c #）](./how-to-join-content-from-dissimilar-files-linq.md)主題中的 scores.csv 資料，並將它儲存至您的方案資料夾。  
+1. 從主題中複製 scores.csv 資料： [如何從不同的檔案聯結內容 (LINQ)  (c # ) ](./how-to-join-content-from-dissimilar-files-linq.md) ，然後將它儲存至您的方案資料夾。  
   
 ## <a name="example"></a>範例  
   

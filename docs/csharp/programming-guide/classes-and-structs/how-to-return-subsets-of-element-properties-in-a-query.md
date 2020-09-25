@@ -1,18 +1,19 @@
 ---
-title: '如何在查詢中傳回專案屬性的子集-c # 程式設計手冊'
-description: '瞭解如何在 c # 的查詢運算式中使用匿名型別，以傳回每個來源專案的部分屬性。'
+title: '如何在查詢中傳回元素屬性的子集-c # 程式設計指南'
+description: '瞭解如何在 c # 中的查詢運算式中使用匿名型別，以傳回每個來源專案的部分屬性。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 882d94bc82527c14bd6c038f4bf574c2211b9089
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 0ef68921b9d45e58024b37d559ee8291d8744af8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864367"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204017"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何在查詢中傳回專案屬性的子集（c # 程式設計手冊）
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何在查詢中傳回元素屬性的子集 (c # 程式設計手冊) 
+
 如果下列兩個條件都成立，請在查詢運算式中使用匿名型別：  
   
 - 您只要傳回每個來源項目的部分屬性。  
@@ -26,6 +27,7 @@ select student.ID;
 ```  
   
 ## <a name="example"></a>範例  
+
  下列範例示範如何使用匿名型別，只傳回每個來源項目中符合指定條件的屬性子集。  
   
  [!code-csharp[csProgGuideLINQ#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#31)]  

@@ -1,21 +1,23 @@
 ---
 title: 命令和參數
-description: 瞭解如何使用每個 .NET Framework Data Provider 的命令物件來執行命令，並從資料來源傳回結果。
+description: 瞭解如何針對每個 .NET Framework 資料提供者使用命令物件，以執行命令並從資料來源傳回結果。
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.openlocfilehash: c0baec4d6c3984cb50178c3aa7f9ed3878055bb6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fb7b86dc3c826805e0e1dcec4764be2e484ec40b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287138"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203822"
 ---
 # <a name="commands-and-parameters"></a>命令和參數
+
 建立連至資料來源的連接後，您可以執行命令，並使用 <xref:System.Data.Common.DbCommand> 物件從資料來源傳回結果。 您可以使用目前使用中 .NET Framework 資料提供者的其中一個命令建構函式 (Constructor) 來建立命令。 建構函式可以接受選擇性引數，例如要在資料來源執行的 SQL 陳述式、<xref:System.Data.Common.DbConnection> 物件或 <xref:System.Data.Common.DbTransaction> 物件。 此外，您也可以將這些物件設定為命令的屬性。 您還可以使用 <xref:System.Data.Common.DbConnection.CreateCommand%2A> 物件的 `DbConnection` 方法，針對特定連接建立命令。 您可以使用 <xref:System.Data.Common.DbCommand.CommandText%2A> 屬性來設定正由命令執行的 SQL 陳述式。  
   
  內含在 .NET Framework 中的每個 .NET Framework 資料提供者都有一個 `Command` 物件。 .NET Framework Data Provider for OLE DB 包含 <xref:System.Data.OleDb.OleDbCommand> 物件、.NET Framework Data Provider for SQL Server 包含 <xref:System.Data.SqlClient.SqlCommand> 物件、.NET Framework Data Provider for ODBC 包含 <xref:System.Data.Odbc.OdbcCommand> 物件，而 .NET Framework Data Provider for Oracle 包含 <xref:System.Data.OracleClient.OracleCommand> 物件。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [執行命令](executing-a-command.md)  
  說明 ADO.NET `Command` 物件，以及如何用它來針對資料來源執行查詢和命令。  
   

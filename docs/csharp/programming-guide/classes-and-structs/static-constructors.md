@@ -6,19 +6,21 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 1bb494ded34065bb76b72db40375555ca1eb6953
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 07b3e54c9ffeb1abacaf5ddd04d2058697e653e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541847"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203965"
 ---
 # <a name="static-constructors-c-programming-guide"></a>靜態建構函式 (C# 程式設計手冊)
+
 靜態建構函式用來初始化任何 [static](../../language-reference/keywords/static.md) 資料，或執行只需要執行一次的特定動作。 在建立第一個執行個體或參考任何靜態成員之前，會自動進行呼叫。  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
 
 ## <a name="remarks"></a>備註
+
 靜態建構函式具有下列屬性：  
   
 - 靜態建構函式不會接受存取修飾詞，也不會包含參數。  
@@ -52,11 +54,13 @@ ms.locfileid: "90541847"
 - 靜態的函式也是在類型參數上強制執行執行時間檢查的方便位置，該參數無法在編譯時期透過條件約束 (類型參數條件約束) 來檢查。
 
 ## <a name="example"></a>範例
+
  在此範例中，`Bus` 類別具有靜態建構函式。 建立 `Bus` 的第一個執行個體 (`bus1`) 時，即會叫用靜態建構函式來初始化類別。 範例輸出可確認即使建立了兩個 `Bus` 執行個體，靜態建構函式也只執行一次，而且它是在執行個體建構函式執行之前執行。  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
 
 ## <a name="c-language-specification"></a>C# 語言規格
+
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[靜態建構函式](~/_csharplang/spec/classes.md#static-constructors)一節。
   
 ## <a name="see-also"></a>另請參閱

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 5d6656ab77f7ad0f7366a230d98b95cff5b2677b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 93f590e1c177adf541baca85a48fee5f9eb8d1d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854441"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203627"
 ---
 # <a name="initialization-expressions"></a>初始化運算式
+
 初始化運算式會初始化新的物件。 大多數的初始化運算式都有支援，包括最新的 C# 3.0 和 Visual Basic 9.0 初始化運算式。 以下是可由 LINQ to Entities 查詢初始化及傳回的型別：  
   
 - 零或多個具型別實體物件的集合或是於概念模型中定義之複雜型別的投影。  

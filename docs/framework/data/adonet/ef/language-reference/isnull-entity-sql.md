@@ -2,14 +2,15 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: b3fc2484e80b637ed5841375985f7bae476bbbf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3360ad4ca7306a8cc1b7d6948204f825ff9a93c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150196"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203614"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
+
 判斷查詢運算式是否為 null。  
   
 ## <a name="syntax"></a>語法  
@@ -19,6 +20,7 @@ expression IS [ NOT ] NULL
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `expression`  
  任何有效的查詢運算式。 不可為集合、不可有集合成員，也不可為集合型別屬性的記錄型別。  
   
@@ -26,9 +28,11 @@ expression IS [ NOT ] NULL
  否定 IS NULL 的 EDM.Boolean 結果。  
   
 ## <a name="return-value"></a>傳回值  
+
  如果 `true` 傳回 null 則為 `expression`；否則為 `false`。  
   
 ## <a name="remarks"></a>備註  
+
  使用 `IS NULL` 判斷外部連結的項目是否為 null：  
   
 ```sql  
@@ -57,7 +61,8 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|擲回錯誤。|  
   
 ## <a name="example"></a>範例  
- 以下[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢使用 IS NOT Null 運算子來確定查詢運算式是否為空。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
+
+ 下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢會使用 NOT null 運算子來判斷查詢運算式是否不是 null。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
 1. 遵循 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
   

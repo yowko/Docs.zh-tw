@@ -8,19 +8,21 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 391a8ccbb1fbe6626d1cd5a4b6fcfd9ace3506e6
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: ccbc6734d4e9bafe059dd45bfdf82af7c84438a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474484"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204030"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>抽象和密封類別以及類別成員 (C# 程式設計手冊)
+
 [abstract](../../language-reference/keywords/abstract.md) 關鍵字可讓您建立類別和[類別](../../language-reference/keywords/class.md)成員，這些類別和成員並不完整，因此必須在衍生類別中實作。  
   
  [sealed](../../language-reference/keywords/sealed.md) 關鍵字可讓您避免繼承類別，或是先前標記為 [virtual](../../language-reference/keywords/virtual.md) 的特定類別成員。  
   
 ## <a name="abstract-classes-and-class-members"></a>抽象類別和類別成員  
+
  在類別定義前面加入 `abstract` 關鍵字，就可以將類別宣告為抽象。 例如：  
   
  [!code-csharp[csProgGuideInheritance#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#13)]  
@@ -38,6 +40,7 @@ ms.locfileid: "86474484"
  如果 `virtual` 方法宣告為 `abstract`，則該方法對於繼承自抽象類別的任何類別來說仍為虛擬。 繼承抽象方法的類別無法存取方法的原始實作：在前一個範例中，F 類別的 `DoWork` 無法呼叫 D 類別的 `DoWork`。如此一來，抽象類別可以強制衍生的類別為虛擬方法提供新的方法實作。  
   
 ## <a name="sealed-classes-and-class-members"></a>密封類別和類別成員  
+
  在類別定義前面加入 `sealed` 關鍵字，就可以將類別宣告為 [sealed](../../language-reference/keywords/sealed.md)。 例如：  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  

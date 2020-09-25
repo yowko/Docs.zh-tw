@@ -1,17 +1,18 @@
 ---
 title: 高可用性、嚴重損壞修復的 SqlClient 支援
-description: 瞭解如何使用 AlwaysOn 可用性群組在 SQL Server 中 SqlClient 應用程式支援，以取得高可用性、嚴重損壞修復。
+description: 瞭解如何使用 AlwaysOn 可用性群組 SqlClient 應用程式在 SQL Server 中的高可用性、嚴重損壞修復的支援。
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: eba243d37db8262970d161cfa786d3aee4462950
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7693210b7d9387e9b58fcc95febd3df0c70b4743
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286206"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203432"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性、嚴重損壞修復的 SqlClient 支援
-本主題討論適用于高可用性、嚴重損壞修復的 SqlClient 支援（新增于 .NET Framework 4.5）--AlwaysOn 可用性群組。  SQL Server 2012 新增了 AlwaysOn 可用性群組功能。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱《SQL Server 線上叢書》。  
+
+本主題討論 SqlClient 支援 (新增至 .NET Framework 4.5) 以提供高可用性、嚴重損壞修復--AlwaysOn 可用性群組。  SQL Server 2012 新增了 AlwaysOn 可用性群組功能。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱《SQL Server 線上叢書》。  
   
  現在，您可以在連線屬性中指定 (高可用性、災害復原) 可用性群組 (AG) 的可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體。 如果 SqlClient 應用程式連線到容錯移轉的 AlwaysOn 資料庫，原始連線會中斷，應用程式必須開啟新的連線，才能在容錯移轉後繼續工作。  
   
@@ -20,7 +21,7 @@ ms.locfileid: "84286206"
 > [!NOTE]
 > 增加連接逾時並實作連接重試邏輯可提高應用程式連接到可用性群組的機率。 此外，因為連線可能會由於容錯移轉而失敗，所以您應該實作連線重試邏輯，並重試失敗的連線，直到重新連線為止。  
   
- 下列連接屬性已新增至 .NET Framework 4.5 中的 SqlClient：  
+ 在 .NET Framework 4.5 中，已將下列連接屬性新增至 SqlClient：  
   
 - `ApplicationIntent`  
   
@@ -33,9 +34,10 @@ ms.locfileid: "84286206"
 2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
-> `MultiSubnetFailover` `true` .NET Framework 4.6.1 或更新版本不需要將設定為。
+> `MultiSubnetFailover` `true` .NET Framework 4.6.1 或更新版本不需要設定為。
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
+
  在連接到 SQL Server 2012 可用性群組接聽程式或 SQL Server 2012 容錯移轉叢集執行個體時，永遠指定 `MultiSubnetFailover=True`。 `MultiSubnetFailover` 對於 SQL Server 2012 中的所有可用性群組和容錯移轉叢集執行個體可促進更快的容錯移轉，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，會積極重試 TCP 連線。  
   
  `MultiSubnetFailover` 連線屬性表示會將應用程式部署至可用性群組或 SQL Server 2012 容錯移轉叢集執行個體，且 SqlClient 將透過嘗試連線至所有 IP 位址，嘗試連線至主要 SQL Server 執行個體上的資料庫。 為連線指定 `MultiSubnetFailover=True` 時，用戶端會重試 TCP 連線，其速度比作業系統的預設 TCP 重新傳輸間隔更快。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
@@ -69,6 +71,7 @@ ms.locfileid: "84286206"
  如果設定主要複本拒絕唯讀工作負載，而且連接字串包含 `ApplicationIntent=ReadOnly`，則連接會失敗。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>從資料庫鏡像升級到使用多子重網路叢集  
+
  如果連接字串中有 `MultiSubnetFailover` 和 `Failover Partner` 連線關鍵字，或者如果使用了 `MultiSubnetFailover=True` 和 TCP 以外的通訊協定，則將會發生連線錯誤 (<xref:System.ArgumentException>)。 如果使用 `MultiSubnetFailover` 而且 SQL Server 傳回容錯移轉夥伴回應，指出其是資料庫鏡像配對的一部分，也會發生錯誤 (<xref:System.Data.SqlClient.SqlException>)。  
   
  如果您將目前使用資料庫鏡像的 SqlClient 應用程式升級為多重子網路案例，應該移除 `Failover Partner` 連線屬性，並以設為 `True` 的 `MultiSubnetFailover` 加以取代，然後以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用 `Failover Partner` 和 `MultiSubnetFailover=True`，驅動程式會發生錯誤。 不過，如果連接字串使用 `Failover Partner` 和 `MultiSubnetFailover=False` (或 `ApplicationIntent=ReadWrite`)，應用程式就會使用資料庫鏡像。  
@@ -76,6 +79,7 @@ ms.locfileid: "84286206"
  如果在 AG 的主要資料庫上使用資料庫鏡像，而且在連線至主要資料庫 (而非可用性群組接聽程式) 的連接字串中使用 `MultiSubnetFailover=True`，則驅動程式會傳回錯誤。  
   
 ## <a name="specifying-application-intent"></a>指定應用程式意圖  
+
  當 `ApplicationIntent=ReadOnly` 時，用戶端在連接到啟用 AlwaysOn 的資料庫時會要求讀取工作負載。 伺服器會在連接時和在 USE 資料庫陳述式期間，只針對啟用 AlwaysOn 的資料庫強制執行此意圖。  
   
  `ApplicationIntent` 關鍵字不適用於舊版唯讀資料庫。  
@@ -85,6 +89,7 @@ ms.locfileid: "84286206"
  `ApplicationIntent` 關鍵字用於啟用唯讀路由。  
   
 ## <a name="read-only-routing"></a>唯讀路由  
+
  唯讀路由是可確保資料庫的唯讀複本之可用性的功能。 若要啟用唯讀路由：  
   
 1. 您必須連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  

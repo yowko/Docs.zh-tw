@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: aad8de53c455fbbdfa96ae948c670b199492a179
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c4c18e8026dc230db896103d29d40426dbd11f16
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553749"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203835"
 ---
 # <a name="code-access-security-and-adonet"></a>程式碼存取安全性和 ADO.NET
+
 .NET Framework 會提供以角色為基礎的安全性和程式碼存取安全性 (CAS)，而這兩種安全性都是使用 Common Language Runtime (CLR) 所提供的通用基礎結構所實作的。 在 Unmanaged 程式碼的作用範圍內，大多數應用程式都是以使用者或主體的權限執行。 因此，當擁有更高權限的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。  
   
  相較之下，在 .NET Framework 中執行的 Managed 程式碼具有單獨套用至程式碼的程式碼存取安全性。 系統是否允許執行程式碼會取決於程式碼的來源或程式碼識別的其他層面，而非單獨取決於主體的識別。 這能降低 Managed 程式碼被誤用的可能性。  
   
 ## <a name="code-access-permissions"></a>程式碼存取權限  
+
  執行程式碼時，它會顯示 CLR 安全性系統所評估的辨識項。 一般來說，這個辨識項會洩露程式碼的來源，包含 URL、大小和區域，以及用來確保組件識別的數位簽章。  
   
  CLR 僅允許程式碼執行該程式碼有權執行的這些作業。 程式碼可以要求權限，而且系統會根據系統管理員所設定的安全性原則來接受這些要求。  
@@ -36,11 +38,13 @@ ms.locfileid: "90553749"
  為了判斷程式碼是否經授權可存取資源或執行某項作業，執行階段的安全性系統會周遊呼叫堆疊，並比較每個呼叫端被授與的權限與要求的權限。 如果呼叫堆疊中的任何呼叫端沒有要求的權限，系統就會擲回 <xref:System.Security.SecurityException> 並拒絕存取。  
   
 ### <a name="requesting-permissions"></a>要求權限  
+
  要求權限的目的是向執行階段通知您的應用程式需要哪些權限才能執行，以及確保它只會收到實際需要的權限。 例如，如果您的應用程式必須將資料寫入本機磁碟，它就需要 <xref:System.Security.Permissions.FileIOPermission>。 如果系統沒有授與該權限，當此應用程式嘗試寫入磁碟時，它就會失敗。 不過，如果應用程式要求 `FileIOPermission`，但系統沒有授與該權限，則此應用程式一開始將產生例外狀況而且不會載入。  
   
  在應用程式僅需要從磁碟中讀取資料的情況下，您可以要求絕不授與任何寫入權限給應用程式。 在錯誤或惡意攻擊的事件中，您的程式碼無法破壞它所運作的資料。 如需詳細資訊，請參閱 [要求許可權](/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))。  
   
 ## <a name="role-based-security-and-cas"></a>以角色為基礎的安全性和 CAS  
+
  同時實作以角色為基礎的安全性和程式碼存取安全性 (CAS) 可強化應用程式的整體安全性。 以角色為基礎的安全性可以根據 Windows 帳戶或自訂識別，將安全性主體的相關資訊提供給目前的執行緒。 此外，應用程式通常會根據使用者所提供的認證，提供對資料或資源的存取。 基本上，這類應用程式會檢查使用者的角色並根據這些角色提供資源存取。  
   
  以角色為基礎的安全性可讓某個元件在執行階段識別目前的使用者及其相關聯的角色。 然後，系統會使用 CAS 原則來對應這項資訊，以便判斷在執行階段授與的權限集合。 若為指定的應用程式定義域，主應用程式 (Host) 就可以變更預設的以角色為基礎安全性原則，並且設定預設的安全性主體，以便代表某位使用者以及與該使用相關聯的角色。  
@@ -50,19 +54,23 @@ ms.locfileid: "90553749"
  根據您所建立的應用程式類型，您也應該考慮在資料庫中實作以角色為基礎的權限。 如需 SQL Server 中以角色為基礎之安全性的詳細資訊，請參閱 [SQL Server 安全性](./sql/sql-server-security.md)。  
   
 ## <a name="assemblies"></a>組件  
+
  組件會構成 .NET Framework 應用程式之部署、版本控制、重複使用、啟動範圍和安全性權限的基本單位。 組件會提供針對一起運作而建立而且構成邏輯功能單位之類型和資源的組合。 對 CLR 而言，類型不會存在組件內容外部。 如需建立和部署元件的詳細資訊，請參閱 [使用元件進行程式設計](../../../standard/assembly/index.md)。  
   
 ### <a name="strong-naming-assemblies"></a>強式命名組件  
+
  強式名稱 (Strong Name) 或數位簽章包含組件的識別，其中包括簡單文字名稱、版本號碼和文化特性資訊 (如果有提供的話)，以及公開金鑰 (Public Key) 和數位簽章。 數位簽章是從使用對應之私密金鑰的組件檔中產生的。 組件檔包含組件資訊清單 (Assembly Manifest)，其中包含組成組件之所有檔案的名稱和雜湊。  
   
  強式命名組件可提供應用程式或元件唯一的識別，讓其他軟體用來明確參考該應用程式或元件。 強式命名可保護組件，讓內含惡意程式碼的組件無法假冒該組件。 此外，強式命名還能確保不同元件版本之間的版本一致性。 您必須強式命名將部署到全域組件快取 (GAC) 的組件。 如需詳細資訊，請參閱[建立和使用強式名稱的組件](../../../standard/assembly/create-use-strong-named.md)。  
   
 ## <a name="partial-trust-in-adonet-20"></a>ADO.NET 2.0 中的部分信任  
+
  在 ADO.NET 2.0 中，.NET Framework Data Provider for SQL Server、.NET Framework Data Provider for OLE DB、.NET Framework Data Provider for ODBC 和 .NET Framework Data Provider for Oracle 現在都可以在部分信任的環境中執行。 在舊版的 .NET Framework 中，只有 <xref:System.Data.SqlClient> 才能在低於完全信任的應用程式中使用。  
   
  使用 SQL Server 提供者的部分信任應用程式至少必須具有執行和 <xref:System.Data.SqlClient.SqlClientPermission> 使用權限。  
   
 ### <a name="permission-attribute-properties-for-partial-trust"></a>部分信任的使用權限屬性  
+
  在部分信任案例中，可使用 <xref:System.Data.SqlClient.SqlClientPermissionAttribute> 成員進一步限制 SQL Server 的 .NET Framework 資料提供者之可用功能。  
   
  下列表格列出可用的 <xref:System.Data.SqlClient.SqlClientPermissionAttribute> 屬性及其說明：  
@@ -78,6 +86,7 @@ ms.locfileid: "90553749"
 |`Unrestricted`|指示是否針對資源，宣告不受限的使用權限。 繼承自 <xref:System.Security.Permissions.SecurityAttribute>。|  
   
 #### <a name="connectionstring-syntax"></a>ConnectionString 語法  
+
  下列範例將示範如何使用組態檔的 `connectionStrings` 項目，只允許使用特定的連接字串。 如需有關從設定檔儲存和取得連接字串的詳細資訊，請參閱 [連接字串](connection-strings.md) 。  
   
 ```xml  
@@ -89,6 +98,7 @@ ms.locfileid: "90553749"
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>KeyRestrictions 語法  
+
  下列範例會啟用相同的連接字串，以啟用 `Encrypt` 和 `Packet Size` 連接字串選項，但限制使用任何其他連接字串選項。  
   
 ```xml  
@@ -102,6 +112,7 @@ ms.locfileid: "90553749"
 ```  
   
 #### <a name="keyrestrictionbehavior-with-preventusage-syntax"></a>含 PreventUsage 的 KeyRestrictionBehavior 語法  
+
  下列範例將啟用相同的連接字串，並允許 `User Id`、`Password` 和 `Persist Security Info` 以外的其他所有連接參數。  
   
 ```xml  
@@ -115,6 +126,7 @@ ms.locfileid: "90553749"
 ```  
   
 #### <a name="keyrestrictionbehavior-with-allowonly-syntax"></a>含 AllowOnly 的 KeyRestrictionBehavior 語法  
+
  下列範例啟用兩個連接字串，這兩個連接字串同時包含 `Initial Catalog`、`Connection Timeout`、`Encrypt` 和 `Packet Size` 參數。 所有其他的連接字串參數則都限制使用。  
   
 ```xml  
@@ -136,9 +148,11 @@ ms.locfileid: "90553749"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>以自訂的使用權限集啟用部份信任  
+
  若要啟用特定區域的 <xref:System.Data.SqlClient> 使用權限，系統管理員必須建立自訂的使用權限集合，並將其設定為特定區域的使用權限集合。 不可修改預設的使用權限集合 (例如 `LocalIntranet`)。 例如，若要包含 <xref:System.Data.SqlClient> 具有之的程式碼許可權 <xref:System.Security.Policy.Zone> `LocalIntranet` ，系統管理員可以複製的許可權集合 `LocalIntranet` 、將它重新命名為 "CustomLocalIntranet"、新增 <xref:System.Data.SqlClient> 許可權、使用 [Caspol.exe (代碼啟用安全性原則工具) ](../../tools/caspol-exe-code-access-security-policy-tool.md)匯入 CustomLocalIntranet 許可權集合，以及將的許可權集合設定 `LocalIntranet_Zone` 為 CustomLocalIntranet。  
   
 ### <a name="sample-permission-set"></a>使用權限集合範例  
+
  下列是部分受信任案例中的「SQL Server 的 .NET Framework 資料提供者」使用權限集合範例。 如需建立自訂許可權集合的詳細資訊，請參閱 [使用 Caspol.exe設定許可權集合 ](/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))。  
   
 ```xml  
@@ -160,9 +174,11 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>使用安全性使用權限驗證 ADO.NET 程式碼存取  
+
  若為部分信任案例，則可指定 <xref:System.Data.SqlClient.SqlClientPermissionAttribute>，藉以取得程式碼中之特定方法的 CAS 權限。 如果生效的限制安全性原則不允許該權限，則在執行程式碼前會擲回例外狀況。 如需安全性原則的詳細資訊，請參閱 [安全性原則管理](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) 和 [安全性原則的最佳作法](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))。  
   
 ### <a name="example"></a>範例  
+
  下列範例示範如何撰寫需要特定連接字串的程式碼。 它模擬如何拒絕 <xref:System.Data.SqlClient> 的不受限權限，而系統管理員在實務上會使用 CAS 原則來實作這些權限。  
   
 > [!IMPORTANT]
@@ -190,6 +206,7 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>與 Unmanaged 程式碼的互通性  
+
  在 CLR 外部執行的程式碼稱為 Unmanaged 程式碼。 因此，CAS 等安全性機制無法套用至 Unmanaged 程式碼。 COM 元件、ActiveX 介面及 Windows API 函式都是 Unmanaged 程式碼的範例。 執行 Unmanaged 程式碼時，您應該套用特殊安全性考量，以免危及整體應用程式安全性。 如需詳細資訊，請參閱[與 Unmanaged 程式碼互通](../../interop/index.md)。  
   
  .NET Framework 也透過 COM Interop 提供存取，藉以支援現有 COM 元件的回溯相容性 (Backward Compatibility)。 您可以使用 COM Interop 工具來匯入相關的 COM 型別，以便將 COM 元件併入 .NET Framework 應用程式中。 一旦匯入之後，COM 型別便可供使用。 COM Interop 也會將組件中繼資料匯出至型別程式庫並將 Managed 元件註冊為 COM 元件，藉以讓 COM 用戶端存取 Managed 程式碼。 如需詳細資訊，請參閱 [ADVANCED COM 互通性](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))。  

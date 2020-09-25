@@ -2,17 +2,19 @@
 title: System.DateTime 方法
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e3bffb1f47c19ccf7ea59151cd3545a15d59f1f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792414"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203484"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime 方法
+
 下列 LINQ to SQL 支援的方法、運算子和屬性都可用於 LINQ to SQL 查詢中。 不支援某種方法、運算子或屬性時，就表示 LINQ to SQL 無法轉譯該成員，以便在 SQL Server 上執行。 雖然您可以在程式碼中使用這些成員，但是必須在查詢轉譯成 Transact-SQL 之前或從資料庫中擷取結果之後，評估這些成員。  
   
 ## <a name="supported-systemdatetime-members"></a>支援的 System.DateTime 成員  
+
  一旦在物件模型 (Object Model) 或外部對應檔案中對應之後，LINQ to SQL 就可讓您在 LINQ to SQL 查詢內部呼叫下列 <xref:System.DateTime?displayProperty=nameWithType> 成員。  
   
 |支援的 <xref:System.DateTime> 方法|支援的 <xref:System.DateTime> 運算子|支援的 <xref:System.DateTime> 屬性|  
@@ -32,6 +34,7 @@ ms.locfileid: "70792414"
 |||<xref:System.DateTime.Year%2A>|  
   
 ## <a name="members-not-supported-by-linq-to-sql"></a>LINQ to SQL 不支援的成員  
+
  不支援在 LINQ to SQL 查詢內部使用下列成員。  
   
 |||  
@@ -47,6 +50,7 @@ ms.locfileid: "70792414"
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
 ## <a name="method-translation-example"></a>方法轉譯範例  
+
  所有 LINQ to SQL 支援的方法都會先轉譯成 Transact-SQL，然後再傳送至 SQL Server。 例如，以下列模式為例。  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
@@ -56,6 +60,7 @@ ms.locfileid: "70792414"
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
 ## <a name="sqlmethods-date-and-time-methods"></a>SQLMethods 日期和時間方法  
+
  除了 <xref:System.DateTime> 結構所提供的方法以外，LINQ to SQL 還從 <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> 類別 (Class) 中提供了下表所列的方法，以便使用日期和時間。  
   
 ||||  
@@ -69,4 +74,4 @@ ms.locfileid: "70792414"
 - [查詢概念](query-concepts.md)
 - [建立物件模型](creating-the-object-model.md)
 - [SQL-CLR 類型對應](sql-clr-type-mapping.md)
-- [資料類型和函式](data-types-and-functions.md)
+- [資料類型與函式](data-types-and-functions.md)

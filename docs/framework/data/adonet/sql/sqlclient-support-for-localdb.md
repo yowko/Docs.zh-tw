@@ -2,39 +2,42 @@
 title: LocalDB 的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: d02524cd5901adeca7bc36d6fd13c7abdc46c69b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 841c455605b0b32668d26cab16a6207dc1c0f716
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894409"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203419"
 ---
 # <a name="sqlclient-support-for-localdb"></a>LocalDB 的 SqlClient 支援
-從 SQL Server 的程式碼名稱 Denali 開始，將會提供輕量版本的 SQL Server （稱為 LocalDB）。 本主題討論如何連接到 LocalDB 資料庫。  
+
+從 SQL Server 代號名稱 Denali 開始，將會提供稱為 LocalDB 的輕量版 SQL Server。 此主題將討論如何連線到 LocalDB 資料庫。  
   
 ## <a name="remarks"></a>備註  
- 如需 LocalDB 的詳細資訊，包括如何安裝 LocalDB 和設定 LocalDB 實例，請參閱 SQL Server 線上叢書。  
+
+ 如需 LocalDB 的詳細資訊，包括如何安裝 LocalDB 和設定 LocalDB 執行個體，請參閱《SQL Server 線上叢書》。  
   
- LocalDB 功能摘要：  
+ 摘要說明您可以使用 LocalDB 執行的作業：  
   
-- 以 sqllocaldb.exe 或您的 app.config 檔建立及啟動 LocalDB 執行個體。  
+- 使用 sqllocaldb.exe 或您的 app.config 檔案來建立及啟動 LocalDB 執行個體。  
   
-- 使用 sqlcmd.exe 新增及修改 LocalDB 執行個體中的資料庫。 例如， `sqlcmd -S (localdb)\myinst`。  
+- 使用 sqlcmd.exe 可在 LocalDB 執行個體中新增和修改資料庫。 例如 `sqlcmd -S (localdb)\myinst`。  
   
-- 使用 `AttachDBFilename` 連接字串關鍵字將資料庫新增到 LocalDB 執行個體。 使用 `AttachDBFilename`時，如果您不以 `Database` 連接字串關鍵字指定資料庫名稱，當應用程式關閉時，會將資料庫從 LocalDB 執行個體中移除。  
+- 使用 `AttachDBFilename` 連接字串關鍵字，將資料庫新增至您的 LocalDB 執行個體。 使用 `AttachDBFilename` 時，如果您沒有使用 `Database` 連接字串關鍵字來指定資料庫的名稱，系統就會在應用程式關閉時從 LocalDB 執行個體中移除資料庫。  
   
-- 在連接字串中指定 LocalDB 執行個體。 例如，您的執行個體名稱是 `myInstance`，連接字串將包括：  
+- 請在連接字串中指定 LocalDB 執行個體。 例如，您的執行個體名稱是 `myInstance`，連接字串就會包含：  
   
     `server=(localdb)\\myInstance`  
   
- 連接至 LocalDB 資料庫時不允許`User Instance=True` 。  
+ 連線到 LocalDB 資料庫時，不允許使用 `User Instance=True`。  
   
- 您可以從 [Microsoft SQL Server 2012 功能套件](https://www.microsoft.com/download/en/details.aspx?id=29065)下載 LocalDB。 如果您將使用 sqlcmd 來修改 LocalDB 實例中的資料，您將需要來自 SQL Server 2012 的 sqlcmd，您也可以從 SQL Server 2012 Feature Pack 取得。  
+ 您可以從 [Microsoft SQL Server 2012 功能套件](https://www.microsoft.com/download/en/details.aspx?id=29065)下載 LocalDB。 如果您將使用 sqlcmd.exe 來修改 LocalDB 執行個體中的資料，您將需要 SQL Server 2012 中的 sqlcmd，您也可以從 SQL Server 2012 功能套件取得 sqlcmd。  
   
 ## <a name="programmatically-create-a-named-instance"></a>以程式設計方式建立具名執行個體  
- 應用程式可以建立具名執行個體並指定資料庫，如下所示：  
+
+ 應用程式可以建立具名執行個體，並指定資料庫，如下所示：  
   
-- 在 app.config 檔中指定要建立的 LocalDB 執行個體，如下所示。  執行個體的版本號碼應與 LocalDB 安裝的版本號碼相同。  
+- 指定要在 app.config 檔案中建立的 LocalDB 執行個體，如下所示。  執行個體的版本號碼應該與您 LocalDB 安裝的版本號碼相同。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -52,11 +55,11 @@ ms.locfileid: "70894409"
     </configuration>  
     ```  
   
-- 使用 `server` 連接字串關鍵字指定執行個體的名稱。  在 `server` 連接字串關鍵字中指定的執行個體名稱，必須與 app.config 檔中指定的名稱相符。  
+- 使用 `server` 連接字串關鍵字來指定執行個體的名稱。  在 `server` 連接字串關鍵字中指定的執行個體名稱，必須與 app.config 檔案指定的名稱相符。  
   
 - 使用 `AttachDBFilename` 連接字串關鍵字來指定 .MDF 檔案。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [SQL Server 功能和 ADO.NET](sql-server-features-and-adonet.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)
