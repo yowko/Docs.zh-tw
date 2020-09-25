@@ -1,21 +1,22 @@
 ---
-title: '如何使用群組將檔案分割成許多檔案（LINQ）（c #）'
-description: 瞭解如何使用群組將檔案分割成多個檔案。 查看程式碼範例，並查看其他可用的資源。
+title: '如何使用群組 (LINQ)  (c # 將檔案分割成許多檔案 ) '
+description: 瞭解如何使用群組將檔案分割成許多檔案。 請參閱程式碼範例，並查看其他可用的資源。
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b7be01be0f1539eb6ed4f4857af2625672319493
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301056"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203926"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="c1de7-104">如何使用群組將檔案分割成許多檔案（LINQ）（c #）</span><span class="sxs-lookup"><span data-stu-id="c1de7-104">How to split a file into many files by using groups (LINQ) (C#)</span></span>
-<span data-ttu-id="c1de7-105">此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。</span><span class="sxs-lookup"><span data-stu-id="c1de7-105">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="5a2e6-104">如何使用群組 (LINQ)  (c # 將檔案分割成許多檔案 ) </span><span class="sxs-lookup"><span data-stu-id="5a2e6-104">How to split a file into many files by using groups (LINQ) (C#)</span></span>
+
+<span data-ttu-id="5a2e6-105">此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。</span><span class="sxs-lookup"><span data-stu-id="5a2e6-105">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="c1de7-106">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="c1de7-106">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="5a2e6-106">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="5a2e6-106">To create the data files</span></span>  
   
-1. <span data-ttu-id="c1de7-107">將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：</span><span class="sxs-lookup"><span data-stu-id="c1de7-107">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
+1. <span data-ttu-id="5a2e6-107">將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：</span><span class="sxs-lookup"><span data-stu-id="5a2e6-107">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```text  
     Bankov, Peter  
@@ -30,7 +31,7 @@ ms.locfileid: "87301056"
     Garcia, Debra  
     ```  
   
-2. <span data-ttu-id="c1de7-108">將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾：請注意，這兩個檔案中有些名稱是相同的。</span><span class="sxs-lookup"><span data-stu-id="c1de7-108">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
+2. <span data-ttu-id="5a2e6-108">將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾：請注意，這兩個檔案中有些名稱是相同的。</span><span class="sxs-lookup"><span data-stu-id="5a2e6-108">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```text  
     Liu, Jinghao  
@@ -45,7 +46,7 @@ ms.locfileid: "87301056"
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a><span data-ttu-id="c1de7-109">範例</span><span class="sxs-lookup"><span data-stu-id="c1de7-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5a2e6-109">範例</span><span class="sxs-lookup"><span data-stu-id="5a2e6-109">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -123,13 +124,13 @@ class SplitWithGroups
  */  
 ```  
   
- <span data-ttu-id="c1de7-110">此程式會在與資料檔相同的資料夾中，寫入每個群組的個別檔案。</span><span class="sxs-lookup"><span data-stu-id="c1de7-110">The program writes a separate file for each group in the same folder as the data files.</span></span>  
+ <span data-ttu-id="5a2e6-110">此程式會在與資料檔相同的資料夾中，寫入每個群組的個別檔案。</span><span class="sxs-lookup"><span data-stu-id="5a2e6-110">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c1de7-111">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="c1de7-111">Compiling the Code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="5a2e6-111">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="5a2e6-111">Compiling the Code</span></span>
 
-<span data-ttu-id="c1de7-112">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="c1de7-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
+<span data-ttu-id="5a2e6-112">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="5a2e6-112">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="c1de7-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c1de7-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a2e6-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5a2e6-113">See also</span></span>
 
-- [<span data-ttu-id="c1de7-114">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="c1de7-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="c1de7-115">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="c1de7-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="5a2e6-114">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="5a2e6-114">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="5a2e6-115">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="5a2e6-115">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
