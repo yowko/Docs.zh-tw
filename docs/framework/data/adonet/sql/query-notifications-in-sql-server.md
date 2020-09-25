@@ -3,14 +3,15 @@ title: SQL Server 中的查詢通知
 description: 瞭解如何使用查詢通知，在 SQL Server 資料庫中的資料變更時通知應用程式，例如重新整理應用程式顯示。
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 43b496db74f7e6fc9bc9f17d946bf34398b32312
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8001f75d7e278a965b6e8e00e4b9af7b770a8bb5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543981"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183087"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查詢通知
+
 查詢通知是根據 Service Broker 基礎結構而建置，可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。  
   
  有三種方式可以使用 ADO.NET 來實作查詢通知：  
@@ -40,6 +41,7 @@ ms.locfileid: "90543981"
 - [開發人員手冊 (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [啟用查詢通知](enabling-query-notifications.md)  
  討論如何使用查詢通知，包括其啟用及使用需求。  
   
@@ -53,6 +55,7 @@ ms.locfileid: "90543981"
  示範如何設定 <xref:System.Data.SqlClient.SqlCommand> 物件來處理查詢通知。  
   
 ## <a name="reference"></a>參考  
+
  <xref:System.Data.Sql.SqlNotificationRequest>  
  描述 <xref:System.Data.Sql.SqlNotificationRequest> 類別與其所有成員。  
   

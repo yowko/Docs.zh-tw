@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: acb94efd8b6b6b66d0cc84309c2d68ad692b08d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20a573da0221704451f10138cb854523d5a17f17
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174494"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183048"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>將 XML 值指定為參數
+
 如果查詢需要值為 XML 字串的參數，則開發人員可以使用 **SqlXml** 資料類型的執行個體提供該值。 這其實沒什麼訣竅；SQL Server 中的 XML 資料行接受參數值的方式與其他資料類型完全相同。  
   
 ## <a name="example"></a>範例  
+
  下列主控台應用程式會在 **AdventureWorks** 資料庫中建立新的資料表。 新資料表包括名為 **SalesID** 的資料行及名為 **SalesInfo** 的 XML 資料行。  
   
 > [!NOTE]
@@ -162,5 +164,5 @@ class Class1
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [SQL 伺服器中的 XML 資料](xml-data-in-sql-server.md)
+- [SQL Server 中的 XML 資料](xml-data-in-sql-server.md)
 - [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

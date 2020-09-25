@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: c2630741e1055a14dd5b9e4445d660cfd68891b0
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 13321cdc83637105a2b981902ce984e6a90a25d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863860"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181813"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)
+
 C# 語言的設計，就是讓不同文件庫的[基底](../../language-reference/keywords/base.md)和衍生類別的版本控制能夠發展兼具回溯相容性。 例如，這表示 C# 完全支援在基底[類別](../../language-reference/keywords/class.md)中引入與衍生類別成員同名的新成員，不會導致非預期的行為。 這也表示，類別必須明確指出方法是打算覆寫繼承的方法，還是方法是一種新方法，會隱藏名稱相似的繼承方法。  
   
  在 C# 中，衍生類別可以包含與基底類別方法同名的方法。  
@@ -24,7 +25,7 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../language-referenc
   
 - 如果衍生類別中的方法前面加上 `override` 關鍵字，衍生類別的物件會呼叫該方法，不會呼叫基底類別方法。  
 
-- 為了將 `override` 關鍵字套用至衍生類別中的方法，基類方法必須定義為[virtual](../../language-reference/keywords/virtual.md)。
+- 為了將 `override` 關鍵字套用至衍生類別中的方法，必須將基類方法定義為 [虛擬](../../language-reference/keywords/virtual.md)。
   
 - 您可以使用 `base` 關鍵字從衍生類別中呼叫基底類別方法。  
   
@@ -65,6 +66,7 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../language-referenc
  使用 `new` 關鍵字會通知編譯器，您的定義要隱藏基底類別中包含的定義。 此為預設行為。  
   
 ## <a name="override-and-method-selection"></a>覆寫和方法選擇  
+
  在類別上命名方法時，如果有多個方法與呼叫相容，C# 編譯器會選取最好的方法呼叫，例如當有兩種方法同名時，並傳遞與參數相容的參數。 下列方法相容︰  
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  

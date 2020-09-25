@@ -1,6 +1,6 @@
 ---
 title: 具名和選擇性引數 - C# 程式設計手冊
-description: 'C # 中的具名引數會依名稱指定引數，而不是位置。 可以省略選擇性的引數。'
+description: 'C # 中的具名引數會依名稱指定引數，而不是使用位置。 可以省略選擇性引數。'
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 46b9dc23644e68aea2767f2b990fe7f243a4f357
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3961489f7fc801a0170f9d48293109206a83faaf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864978"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181956"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
+
 C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」** 可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
   
  當您使用具名和選擇性引數時，會依照引數清單中的引數顯示順序來評估引數，不是依照參數清單的順序。  
@@ -29,6 +30,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參�
  具名和選擇性參數一起使用時，可讓您只為選擇性參數清單中的幾個參數提供引數。 這項功能大幅有助呼叫 COM 介面，例如 Microsoft Office Automation API。  
   
 ## <a name="named-arguments"></a>具名引數  
+
  具名引數讓您不需要記住或查詢呼叫方法參數清單中的參數順序。 參數名稱可以指定每個引數的參數。 例如，依函式定義的順序來傳送位置的引數，可透過標準方式呼叫可列印訂單詳細資料的函式 (例如，賣方名稱、訂單號碼和產品名稱)。
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
@@ -51,7 +53,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參�
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- 遵循任何順序不正確的引數的位置引數無效。
+ 遵循任何非順序具名引數的位置引數無效。
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -59,11 +61,13 @@ C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參�
  ```
   
 ## <a name="example"></a>範例  
+
  下列程式碼會實作本節的範例，以及一些其他範例。  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/program.cs#1)]  
   
 ## <a name="optional-arguments"></a>選擇性引數  
+
  方法、建構函式、索引子或委派的定義可以指定其參數為必要項目或選擇項目。 任何呼叫都必須提供所有必要參數的引數，但可以省略選擇性參數的引數。  
   
  每個選擇性參數都有預設值，為其定義的一部分。 如不傳送該參數的任何引數，則使用預設值。 預設值必須是下列其中一個運算式類型︰  
@@ -94,11 +98,13 @@ C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參�
 > 您也可以使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 類別來宣告選擇性參數。 `OptionalAttribute` 參數不需要預設值。  
   
 ## <a name="example"></a>範例  
+
  在下例中，`ExampleClass` 的建構函式有一個參數，而它是選擇性的。 `ExampleMethod` 執行個體方法有一個必要參數 `required` 和兩個選擇性參數 `optionalstr` 及 `optionalint`。 `Main` 中的程式碼會示範叫用建構函式和方法的不同方式。  
   
  [!code-csharp[csProgGuideNamedAndOptional#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/optional.cs#2)]  
   
 ## <a name="com-interfaces"></a>COM 介面  
+
  具名和選擇性引數以及對動態物件和其他增強功能的支援，大幅改善與 COM API 的互通性，例如 Office Automation API。  
   
  例如，Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> 介面的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 方法有七個參數，都是選擇性參數。 下圖會顯示這些參數：  
@@ -113,9 +119,10 @@ C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參�
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 如需詳細資訊和範例，請參閱[如何在 Office 程式設計中使用命名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何使用 c # 功能存取 Office interop 物件](../interop/how-to-access-office-onterop-objects.md)。  
+ 如需詳細資訊和範例，請參閱 [如何在 office 程式設計中使用指名的和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md) ，以及 [如何使用 c # 功能存取 office interop 物件](../interop/how-to-access-office-onterop-objects.md)。  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
+
  使用具名和選擇性引數會以下列方式影響多載解析︰  
   
 - 如果每個參數都是選擇性或為依名稱或位置對應要呼叫之陳述式的單一引數，且該引數可以轉換成參數的型別，則方法、索引子或建構函式就是執行的候選項目。  
@@ -125,6 +132,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參�
 - 如果兩個候選項目的評斷結果一樣好，則偏向沒有選擇性參數的候選項目，其會在呼叫中省略引數。 這是多載解析一般偏好參數較少之候選項目的結果。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

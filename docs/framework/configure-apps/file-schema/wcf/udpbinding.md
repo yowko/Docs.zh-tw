@@ -2,14 +2,15 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: b2ff39e1292cfaad1165e14e693acda2518477a6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 730a051e6823a89c05f8eb894b261e93c0511dcc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559040"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183633"
 ---
 # \<udpBinding>
+
 用來設定 <xref:System.ServiceModel.UdpBinding> 繫結的組態元素。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ ms.locfileid: "90559040"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<udpBinding>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <udpBinding>
@@ -45,6 +46,7 @@ ms.locfileid: "90559040"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -79,9 +81,11 @@ ms.locfileid: "90559040"
 |[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
+
  UdpBinding 允許 WCF 服務透過 UDP 傳輸進行通訊。 它可讓用戶端將訊息傳送至服務，並預期不會有回應的情況下，「引發並遺忘」訊息交換。  
   
 ## <a name="example"></a>範例  
+
  下列範例顯示如何 <xref:System.ServiceModel.UdpBinding> 使用 <> 專案來設定 `udpBinding` 。  
   
 ```xml  

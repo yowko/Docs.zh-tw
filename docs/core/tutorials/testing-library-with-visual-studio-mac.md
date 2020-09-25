@@ -2,18 +2,18 @@
 title: 使用 Visual Studio for Mac 測試具有 .NET Core 的 .NET Standard 類別庫
 description: 建立 .NET Core 類別庫的單元測試專案。 確認 .NET Core 類別庫可在單元測試中正確運作。
 ms.date: 06/08/2020
-ms.openlocfilehash: d3c8a5e01d16047949e977f3af6a429970d996d0
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 3adcddc96abf77012f89a28c1cf60ea57ae506a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359216"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180526"
 ---
 # <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>使用 Visual Studio 測試具有 .NET Core 的 .NET Standard 類別庫
 
 本教學課程示範如何將測試專案加入至方案，以自動化單元測試。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 本教學課程適用于 [使用 Visual Studio for Mac 建立 .NET Standard 程式庫](library-with-visual-studio-mac.md)中所建立的解決方案。
 
@@ -67,7 +67,7 @@ ms.locfileid: "89359216"
 
 1. 在**Solution** pad 中，依序按一下 [ **StringLibraryTest**] 底下的 [相依性 **]** 。 <kbd>ctrl</kbd> 從內容功能表選取 [ **加入參考** ]。
 
-1. 在 [ **參考** ] 對話方塊中，選取 [ **StringLibrary** ] 專案。 選取 [確定]  。
+1. 在 [ **參考** ] 對話方塊中，選取 [ **StringLibrary** ] 專案。 選取 [確定]。
 
       :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="Visual Studio Mac [編輯參考] 對話方塊":::
 
@@ -165,7 +165,9 @@ ms.locfileid: "89359216"
 
 ## <a name="debug-tests"></a>偵錯測試
 
-您可以使用 [教學課程：使用 [Visual Studio for Mac 來將 .Net Core 主控台應用程式](debugging-with-visual-studio-mac.md) 與您的單元測試專案進行程式碼偵錯工具] 中所示的相同程式。 請不要啟動展示應用程式專案，而是在**StringLibraryTests**專案上按<kbd>ctrl 鍵</kbd>，然後從操作功能表中選取 [**開始調試**程式]。 Visual Studio 啟動已附加偵錯工具的測試專案。 執行將會在您已新增至測試專案或基礎程式庫程式碼的任何中斷點停止執行。
+如果您使用 Visual Studio for Mac 作為 IDE，您可以使用教學課程：使用您的單元測試專案來進行程式碼 [的偵錯工具](debugging-with-visual-studio-mac.md) 中所示的相同程式：使用 Visual Studio for Mac 來偵錯工具代碼。 請不要啟動*展示*應用程式專案，而是在**StringLibraryTests**專案上按<kbd>ctrl 鍵</kbd>，然後從操作功能表中選取 [**開始調試**程式]。
+
+Visual Studio 啟動已附加偵錯工具的測試專案。 執行將會在您已新增至測試專案或基礎程式庫程式碼的任何中斷點停止執行。
 
 ## <a name="additional-resources"></a>其他資源
 

@@ -3,17 +3,19 @@ title: System.Transactions 所提供的功能
 description: 請參閱 .NET 中的 System.object 命名空間所提供的功能，以撰寫您自己的交易應用程式和資源管理員。
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-ms.openlocfilehash: 0278e9248305572c6156c6500f1fe51a8b3f3338
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 27c6224530b4faa1ada93db8147f9334f38b93ab
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141858"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182918"
 ---
 # <a name="features-provided-by-systemtransactions"></a>System.Transactions 所提供的功能
+
 本節說明如何使用 <xref:System.Transactions> 命名空間所提供的各項功能，來撰寫自己的交易式應用程式與資源管理員。 具體來說，本節涵蓋了如何與一或多位參與者一同建立並參與交易 (本機或分散式)。  
   
 ## <a name="overview-of-systemtransactions"></a>System.Transactions 概觀  
+
  由 <xref:System.Transactions> 命名空間的各項類別所提供的基礎結構，藉由支援 SQL Server、ADO.NET、訊息佇列 (MSMQ)，以及 Microsoft 分散式交易協調器 (MSDTC) 所啟始的交易，讓交易程式設計變得簡單又有效率。 <xref:System.Transactions> 命名空間會提供根據 <xref:System.Transactions.Transaction> 類別的明確程式撰寫模型 (Programming Model)，以及使用 <xref:System.Transactions.TransactionScope> 類別的隱含程式撰寫模型，而其中異動會由基礎結構自動管理。 如需有關如何使用這兩個模型來建立交易式應用程式的詳細資訊，請參閱 [撰寫交易式應用程式](writing-a-transactional-application.md)。  
   
  <xref:System.Transactions> 命名空間也提供讓您實作資源管理員的型別。 資源管理員會管理交易中所使用的永久性資料或變動性資料，並和交易管理員一起合作以提供應用程式單元性 (Atomicity) 和隔離性 (Isolation) 的保證。 <xref:System.Transactions> 基礎結構所提供的交易管理員可支援多個變動性資源或單一永久性資源的相關交易。 如需有關如何執行資源管理員的詳細資訊，請參閱 [執行 Resource Manager](implementing-a-resource-manager.md)。  
@@ -29,6 +31,7 @@ ms.locfileid: "85141858"
 ## <a name="in-this-section"></a>本節內容  
   
 ### <a name="writing-a-transactional-application"></a>撰寫交易式應用程式  
+
  <xref:System.Transactions> 命名空間會提供兩種用來建立交易式應用程式的模型。 [使用交易範圍來執行隱含交易](implementing-an-implicit-transaction-using-transaction-scope.md) 描述 <xref:System.Transactions> 命名空間如何支援使用類別建立隱含交易 <xref:System.Transactions.TransactionScope> 。  
   
  [使用 CommittableTransaction 來執行明確交易](implementing-an-explicit-transaction-using-committabletransaction.md) ，描述 <xref:System.Transactions> 命名空間如何支援使用類別建立明確的交易 <xref:System.Transactions.CommittableTransaction> 。  
@@ -36,4 +39,5 @@ ms.locfileid: "85141858"
  如需涵蓋撰寫交易式應用程式的其他主題，請參閱 [撰寫交易式應用程式](writing-a-transactional-application.md)。  
   
 ### <a name="implementing-a-resource-manager"></a>實作資源管理員  
+
  若要執行可參與交易的資源管理員，請參閱 [實施 Resource Manager](implementing-a-resource-manager.md)。 本節涵蓋了資源登記、交易認可、故障復原，以及最佳化的最佳做法。

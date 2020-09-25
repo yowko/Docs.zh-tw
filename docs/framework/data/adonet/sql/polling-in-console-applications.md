@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35275206e0486c35f262116fa1deb06b9f285723
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174520"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183126"
 ---
 # <a name="polling-in-console-applications"></a>在主控台應用程式中輪詢
+
 ADO.NET 中的非同步作業可讓您在一個執行緒上起始耗時的資料庫作業，同時在另一個執行緒上執行其他工作。 不過，在大部分情況下，您最後將會到達應用程式不應該繼續執行的時機點，直到資料庫作業完成為止。 在這種情況下，輪詢非同步作業以判斷作業是否已經完成會很有用。  
   
  您可以使用 <xref:System.IAsyncResult.IsCompleted%2A> 屬性來知道作業是否已經完成。  
   
 ## <a name="example"></a>範例  
+
  下列主控台應用程式會更新 **AdventureWorks** 範例資料庫中的資料，且會非同步地執行其工作。 為了模擬長時間執行的程序，此範例會在命令文字中插入 WAITFOR 陳述式。 一般來說，您不會嘗試讓命令執行速度變慢，但在此案例中，這樣做可讓您更輕鬆地示範非同步行為。  
   
 ```vb  

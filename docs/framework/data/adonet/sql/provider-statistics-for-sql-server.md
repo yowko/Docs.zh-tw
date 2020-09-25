@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bf7662094d5bc8948a1ce6378c454713cacc62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174507"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183113"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server 的提供者統計資料
+
 從 .NET Framework 2.0 版開始，.NET Framework Data Provider for SQL Server 便支援執行階段統計資料。 您必須在建立有效的連線物件之後，將 <xref:System.Data.SqlClient.SqlConnection> 物件的 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 屬性設定為 `True`，以啟用統計資料。 啟用統計資料之後，您可以透過 <xref:System.Data.SqlClient.SqlConnection> 物件的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法來擷取 <xref:System.Collections.IDictionary> 參考，以「及時快照集」方式加以檢閱。 您可以將清單列舉為一組名稱/值對字典項目。 這些名稱/值對並未排序。 您隨時都可以呼叫 <xref:System.Data.SqlClient.SqlConnection> 物件的 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 方法來重設計數器。 如果尚未啟用統計資料收集功能，就不會產生例外狀況。 此外，如果在未先呼叫 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 的情況下呼叫 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>，擷取的值會是每個項目的初始值。 如果您啟用統計資料、執行應用程式一段時間，然後停用統計資料，擷取的值將會反映出直到停用統計資料那一刻為止，所收集到的值。 所有收集到的統計值都是以個別連線為基礎。  
   
 ## <a name="statistical-values-available"></a>可用的統計值  
+
  Microsoft SQL Server 提供者目前提供了 18 個不同的項目。 可以透過 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 傳回之 <xref:System.Collections.IDictionary> 介面參考的 **Count** 屬性，存取可用的項目數目。 提供者統計資料的所有計數器均使用 Common Language Runtime <xref:System.Int64> 類型 (C# 及 Visual Basic 中的 **long**)，寬度為 64 位元。 如 **int64.MaxValue** 欄位所定義，**int64** 資料類型的最大值是 ((2^63)-1))。 當計數器的值達到此最大值時，應該就不會再被視為準確的值。 這表示 **int64.MaxValue**-1((2^63)-2) 實際上是任何統計資料的最大有效值。  
   
 > [!NOTE]
@@ -45,6 +47,7 @@ ms.locfileid: "79174507"
 |`UnpreparedExecs`|傳回應用程式已開始使用提供者並啟用統計資料之後，透過連線所執行的未備妥陳述式數目。|  
   
 ### <a name="retrieving-a-value"></a>擷取值  
+
  下列主控台應用程式會顯示如何在連線上啟用統計資料、擷取四個獨立統計資料值，並將其寫到主控台視窗。  
   
 > [!NOTE]
@@ -201,6 +204,7 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### <a name="retrieving-all-values"></a>擷取所有值  
+
  下列主控台應用程式會顯示如何在連線上啟用統計資料、使用列舉程式擷取所有可用的統計資料值，並將其寫到主控台視窗。  
   
 > [!NOTE]
@@ -340,5 +344,5 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>另請參閱
 
-- [SQL Server 和 ADO.NET](index.md)
+- [SQL Server and ADO.NET](index.md) (SQL Server 和 ADO.NET)
 - [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

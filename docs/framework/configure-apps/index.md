@@ -25,14 +25,15 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e40744c9c73e02fe96864d6b1320eb3dde4d1144
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559287"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183451"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
+
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  
   
 > [!NOTE]
@@ -41,6 +42,7 @@ ms.locfileid: "90559287"
  本主題描述組態檔的語法，並提供有關組態檔的三種類型資訊：電腦、應用程式和安全性。  
   
 ## <a name="configuration-file-format"></a>組態檔格式  
+
  組態檔包含一些項目，為設定組態資訊的邏輯資料結構。 在組態檔內，您要使用標記 (Tag) 來標記項目的開頭和結尾。 例如，元素是 `<runtime>` 由 `<runtime>` *子項目*所組成 `</runtime>` 。 空白項目會寫成 `<runtime/>` 或 `<runtime></runtime>`。  
   
  就如同所有的 XML 檔，組態檔中的語法要區分大小寫。  
@@ -53,6 +55,7 @@ ms.locfileid: "90559287"
 ```  
   
 ## <a name="machine-configuration-files"></a>電腦組態檔  
+
  電腦組態檔 Machine.config 包含套用於整個電腦的設定值。 這個檔案位於 %*runtime install path*%\Config 目錄中。 Machine.config 包含全電腦的組件繫結、內建[遠端通道](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))和 ASP.NET 的組態設定。  
   
  設定系統會先查看電腦設定檔中的[ **\<appSettings>** 元素](./file-schema/appsettings/index.md)，以及開發人員可能定義的其他設定區段。 接著會查看應用程式組態檔。 若要讓電腦組態檔易於管理，最好將這些設定值放在應用程式組態檔中。 然而，將設定值置於電腦組態檔可讓您的系統更容易維護。 例如，如果您有用戶端和伺服器應用程式都使用到的協力廠商元件，將那元件的設定值放在一個地方會比較容易。 在這個情況中，電腦組態檔是設定值的適當位置，所以您在兩個不同檔案中沒有相同的設定值。  
@@ -63,6 +66,7 @@ ms.locfileid: "90559287"
  如需 Common Language Runtime 如何使用電腦組態檔執行組件繫結的詳細資訊，請參閱[執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)。  
   
 ## <a name="application-configuration-files"></a>應用程式組態檔  
+
  應用程式組態檔包含應用程式特有的設定值。 這個檔案包含通用語言執行平台讀取的組態設定 (例如組件繫結原則、遠端處理物件等) 以及應用程式可以讀取的設定值。  
   
  應用程式組態檔的名稱和位置取決於應用程式的主應用程式 (Host)，可以是下列其中一個：  
@@ -88,6 +92,7 @@ ms.locfileid: "90559287"
      這個標記中，`location` 為組態檔的 URL。 這會設定應用程式基底。 組態檔必須位在與應用程式相同的網站上。  
   
 ## <a name="security-configuration-files"></a>安全組態檔  
+
  安全組態檔包含程式碼群組階層架構和與原則層級相關聯的使用權限集合的資訊。 強烈建議您使用[程式碼存取安全性原則工具 (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) 修改安全性原則，確保原則變更不會造成安全性組態檔損毀。  
   
 > [!NOTE]
@@ -102,6 +107,7 @@ ms.locfileid: "90559287"
 - 使用者原則組態檔：%USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [作法：使用 DEVPATH 找出組件](how-to-locate-assemblies-by-using-devpath.md)  
  說明如何在搜尋組件時指示執行階段使用 DEVPATH 環境變數。  
   
