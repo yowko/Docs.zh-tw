@@ -2,14 +2,15 @@
 title: Entity Framework 詞彙
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: ea889cfbc04e06e3308e31c6e282d8f2359ddeb9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dbe03de44b8ae2a857b923cd9dc74c42ea18f4e8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556534"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200936"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 詞彙
+
 本主題定義 Entity Framework 檔中經常參考的詞彙。 而為相關主題提供的連結表示有其他可用的資訊。  
   
 |詞彙|定義|  

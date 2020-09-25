@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: ab906912bc4bfab40e459c92a823b915240b8d55
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 31a7ee5eacb2e7cd6b24c4a2276ce6e07fcc67e1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125081"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194020"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# 編譯器選項)
+
 **-nowarn** 選項可讓您隱藏編譯器不顯示一或多個警告。 請以逗點分隔多個警告編號。  
   
 ## <a name="syntax"></a>語法  
@@ -26,10 +27,12 @@ ms.locfileid: "89125081"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `number1`, `number2`  
  您想要編譯器隱藏的警告編號。  
   
 ## <a name="remarks"></a>備註  
+
  您應該只要指定警告識別項的數值部分。 例如，如果您想要隱藏 CS0028，您可以指定 `-nowarn:28`。  
   
  編譯器會以無訊息方式略過傳遞給 `-nowarn` 的警告編號，它在舊版中有效但已自編譯器移除。 例如，CS0679 在 Visual Studio .NET 2002 的編譯器中有效，但後來已移除。  
@@ -54,6 +57,6 @@ ms.locfileid: "89125081"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
 - [C # 編譯器錯誤](../compiler-messages/index.md)

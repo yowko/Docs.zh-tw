@@ -1,6 +1,6 @@
 ---
 title: 互通性 - C# 程式設計手冊
-description: 互通性支援在 common language runtime 底下執行的程式碼旁邊的非受控碼。 使用這些資源來瞭解 interop 選項。
+description: 互通性支援在 common language runtime 下執行的程式碼旁邊的非受控碼。 使用這些資源來瞭解 interop 選項。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,20 +8,21 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: d85eb51107d50e023270fcbe1ef6e08a7788ae78
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 84cdc16ccda7a5c629a90b0752071a98de81a9b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302967"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178472"
 ---
 # <a name="interoperability-c-programming-guide"></a>互通性 (C# 程式設計手冊)
 
 互通性可讓您保留並充分利用目前在 Unmanaged 程式碼上的投資。 在 Common Language Runtime (CLR) 控制下執行的程式碼稱為「Managed 程式碼」**，而在 CLR 外部執行的程式碼稱為「Unmanaged 程式碼」**。 COM、COM+、C++ 元件、ActiveX 元件及 Microsoft Windows API 都是 Unmanaged 程式碼的範例。  
   
-.NET 透過平台叫用服務、 <xref:System.Runtime.InteropServices> 命名空間、c + + 互通性及 COM 互通性（COM Interop），啟用與非受控程式碼的互通性。  
+.NET 透過平台叫用服務、 <xref:System.Runtime.InteropServices> 命名空間、c + + 互通性及 com 互通性 (com interop) ，來與非受控程式碼交互操作。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [互通性概觀](./interoperability-overview.md)  
  說明要在 C# Managed 程式碼和 Unmanaged 程式碼之間相互操作的方法。  
   

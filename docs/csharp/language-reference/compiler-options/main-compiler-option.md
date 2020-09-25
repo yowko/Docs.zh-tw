@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 61e63de8082a335b448ffee1ae35170d3a1cf6b4
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: c27898de2a7cc2f3c01c51f8de1122e81b2233b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125263"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194111"
 ---
 # <a name="-main-c-compiler-options"></a>-main (C# 編譯器選項)
 
@@ -27,6 +27,7 @@ ms.locfileid: "89125263"
 ```
 
 ## <a name="arguments"></a>引數
+
  `class`  
  含有 **Main** 方法的類型。  
  提供的類別名稱必須完整。名稱必須包括內含類別的完整命名空間，後面接著類別名稱。 例如，當 `Main` 方法位於 `MyApplication.Core` 命名空間中的 `Program` 類別時，編譯器選項必須是 `-main:MyApplication.Core.Program`。
@@ -68,5 +69,5 @@ csc t2.cs t3.cs -main:Test2
 
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

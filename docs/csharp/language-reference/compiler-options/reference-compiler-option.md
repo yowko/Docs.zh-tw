@@ -14,14 +14,15 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7b84953f85545c0400c7136c258849f259e8b48a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: cd7346ae4094a84a398306394f771e040dd7b72f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124795"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193786"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# 編譯器選項)
+
 **-reference** 選項可讓編譯器將指定檔案的 [public](../keywords/public.md) 類型資訊匯入至目前的專案，以讓您透過指定的組件檔案來參考中繼資料。  
   
 ## <a name="syntax"></a>語法  
@@ -32,6 +33,7 @@ ms.locfileid: "89124795"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `filename`  
  含有組件資訊清單 (Assembly Manifest) 的檔案名稱。 若要匯入多個檔案，請為每個檔案納入個別的 **-reference** 選項。  
   
@@ -39,6 +41,7 @@ ms.locfileid: "89124795"
  有效的 C# 識別項，代表包含組件中所有命名空間的根命名空間。  
   
 ## <a name="remarks"></a>備註  
+
  若要從多個檔案進行匯入，請為每個檔案納入 **-reference** 選項。  
   
  您匯入的檔案必須包含資訊清單，且輸出檔案必須已使用其中一個 [-target](./target-compiler-option.md) 選項進行編譯 ([-target: module](./target-module-compiler-option.md) 除外)。  
@@ -65,6 +68,7 @@ ms.locfileid: "89124795"
 > 在 Visual Studio 中，使用 [新增參考]**** 對話方塊。 如需詳細資訊，請參閱 [如何：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 新增參考時，為了確保使用 `-reference` 以及使用 [新增參考]**** 對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型]**** 屬性設為 **False**。 這個屬性的預設值為 **True**。  
   
 ## <a name="example"></a>範例  
+
  這個範例會示範如何使用[外部別名](../keywords/extern-alias.md)功能。  
   
  您可以編譯原始檔，並從先前編譯過的 `grid.dll` 和 `grid20.dll` 匯入中繼資料。 這兩個 DLL 包含相同元件的不同版本，因此您需要搭配使用兩個 **-reference** 與別名選項，來編譯原始程式檔。 選項應該看起來像這樣︰  
@@ -95,5 +99,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

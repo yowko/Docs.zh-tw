@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 3cea52fe872fcb407206ee2063b93dc81447a3b2
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ae1706f1ecdd396e24711070d19420faa6d34761
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128500"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193755"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C# 編譯器選項)
+
 **-target:exe** 選項可讓編譯器建立可執行檔 (EXE)：主控台應用程式。  
   
 ## <a name="syntax"></a>語法  
@@ -26,6 +27,7 @@ ms.locfileid: "89128500"
 ```  
   
 ## <a name="remarks"></a>備註  
+
  **-target:exe** 選項預設為啟用。 將會建立副檔名為 .exe 的可執行檔。  
   
  使用 [-target:winexe](./target-winexe-compiler-option.md) 建立 Windows 程式可執行檔。  
@@ -47,6 +49,7 @@ ms.locfileid: "89128500"
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>範例  
+
  下列每個命令列都會建立 `in.exe` 來編譯 `in.cs`：  
   
 ```console  
@@ -57,4 +60,4 @@ csc in.cs
 ## <a name="see-also"></a>另請參閱
 
 - [-目標 (c # 編譯器選項) ](./target-compiler-option.md)
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)

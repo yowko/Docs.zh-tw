@@ -2,22 +2,25 @@
 title: Null 常值和類型推斷 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: bb2d9184e17ee2a9916a731eb20eefa105a73753
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5797c9f55b1a1c89cc27787af6f9ad7bfffc5767
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249815"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185063"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null 常值和類型推斷 (Entity SQL)
-Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系統中的任何型別都相容。 不過，若要正確推斷 null 常值的類型，請[!INCLUDE[esql](../../../../../../includes/esql-md.md)]在可以使用 null 常值的位置上強加特定條件約束。  
+
+Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系統中的任何型別都相容。 不過，若要正確推斷 null 常值的型別，請 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 在可使用 null 常值的位置上強加特定條件約束。  
   
 ## <a name="typed-nulls"></a>具型別的 Null  
+
  具型別的 Null 可以在任何地方使用。 具型別的 Null 不需要型別推斷，因為該型別是已知的。 例如，您可以使用下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 建構來建構 Int16 型別的 Null：  
   
  `(cast(null as Int16))`  
   
 ## <a name="free-floating-null-literals"></a>自由浮動 Null 常值  
+
  自由浮動 Null 常值可以在以下內容中使用：  
   
 - 當做 CAST 或 TREAT 運算式的引數。 建議使用這個方式來產生具型別的 Null 運算式。  

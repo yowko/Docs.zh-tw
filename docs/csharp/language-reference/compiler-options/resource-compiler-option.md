@@ -12,14 +12,15 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 1e2de095b460b684fb06faf46731283a1304906e
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 6f90ce6c1590784cefbd5f15ca8a36941aad77ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465685"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193773"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# 編譯器選項)
+
 將指定的資源內嵌到輸出檔。  
   
 ## <a name="syntax"></a>語法  
@@ -29,6 +30,7 @@ ms.locfileid: "89465685"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `filename`  
  您要內嵌在輸出檔中的 .NET 資源檔。  
   
@@ -39,6 +41,7 @@ ms.locfileid: "89465685"
  資源的存取範圍：公用或私用。 預設值是 public。  
   
 ## <a name="remarks"></a>備註  
+
  使用 [-linkresource](./linkresource-compiler-option.md) 將資源連結至組件，而不將資源檔新增至輸出檔案。  
   
  根據預設，使用 C# 編譯器建立資源時，這些資源在組件中為公用狀態。 若要將資源設為私用，可將 `private` 指定為存取範圍修飾詞。 不允許 `public` 或 `private` 以外的其他存取範圍。  
@@ -62,6 +65,7 @@ ms.locfileid: "89465685"
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.FileProperties2.BuildAction%2A>。  
   
 ## <a name="example"></a>範例  
+
  編譯 `in.cs`，並附加 `rf.resource` 資源檔：  
   
 ```console  
@@ -70,5 +74,5 @@ csc -resource:rf.resource in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

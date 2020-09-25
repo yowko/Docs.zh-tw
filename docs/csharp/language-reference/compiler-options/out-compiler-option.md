@@ -9,14 +9,15 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: d1b79879639e1cbdc3dc040977d9fcd0c3a73602
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 409760ee0b147065a2128c62c304fb5d70cfcf42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125016"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193877"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# 編譯器選項)
+
 **-out** 選項指定輸出檔案的名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -26,10 +27,12 @@ ms.locfileid: "89125016"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `filename`  
  編譯器所建立的輸出檔案名稱。  
   
 ## <a name="remarks"></a>備註  
+
  在命令列中，可以為您的編譯指定多個輸出檔案。 編譯器預期在 **-out** 選項之後找到一或多個原始程式碼檔。 之後，所有原始程式碼檔都會編譯至 **-out** 選項所指定的輸出檔案。  
   
  請指定您要建立的檔案的完整名稱和副檔名。  
@@ -59,6 +62,7 @@ ms.locfileid: "89125016"
      若要以程式設計方式設定這個編譯器選項：<xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> 是唯讀屬性，它是由專案類型 (exe、程式庫等等) 和組件名稱的組合所決定。 若要設定輸出檔案名稱，則必須修改一個或這兩個屬性。  
   
 ## <a name="example"></a>範例  
+
  編譯 `t.cs` 並建立 `t.exe` 輸出檔案，以及建置 `t2.cs` 並建立 `mymodule.netmodule` 模組輸出檔案：  
   
 ```console  
@@ -67,6 +71,6 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
-- [Friend 元件](../../../standard/assembly/friend.md)
+- [C# 編譯器選項](./index.md)
+- [Friend 組件](../../../standard/assembly/friend.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -12,14 +12,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: cd1150f3fa0dd0eca4e9352ce3809e73a15126c7
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 4efa0cbf286b40ad971bad66a7acce15e553eb39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466101"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194098"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# 編譯器選項)
+
 在輸出檔中建立 .NET 資源的連結。 資源檔不會新增至輸出檔。 這點與 [-resource](./resource-compiler-option.md) 選項不同；後者會將資源檔內嵌在輸出檔案中。  
   
 ## <a name="syntax"></a>語法  
@@ -29,6 +30,7 @@ ms.locfileid: "89466101"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `filename`  
  您要從元件連結的 .NET 資源檔。  
   
@@ -39,6 +41,7 @@ ms.locfileid: "89466101"
  資源的存取範圍：公用或私用。 預設值是 public。  
   
 ## <a name="remarks"></a>備註  
+
  根據預設，使用 C# 編譯器建立連結資源時，這些資源在組件中為公用狀態。 若要將資源設為私用，可將 `private` 指定為存取範圍修飾詞。 您只能使用 `public` 或 `private` 修飾詞。  
   
  **-linkresource** 必須使用其中一個 [-target](./target-compiler-option.md) 選項 (**-target:module** 除外)。  
@@ -52,6 +55,7 @@ ms.locfileid: "89466101"
  Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   
 ## <a name="example"></a>範例  
+
  編譯 `in.cs` 並連結至 `rf.resource` 資源檔：  
   
 ```console  
@@ -59,6 +63,7 @@ csc -linkresource:rf.resource in.cs
 ```  
   
 ## <a name="example"></a>範例  
+
  將 `A.cs` 編譯為 DLL，再連結至原生 DLL N.dll，並將輸出放入全域組件快取 (GAC) 中。 此範例的 A.dll 和 N.dll 都會位於 GAC 中。  
   
 ```console  
@@ -67,6 +72,7 @@ gacutil -i A.dll
 ```  
   
 ## <a name="example"></a>範例  
+
  此範例會執行與上一個範例相同的動作，但改為使用組件連結器選項。  
   
 ```console  
@@ -77,7 +83,7 @@ gacutil -i A.dll
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [Al.exe (元件連結器) ](../../../framework/tools/al-exe-assembly-linker.md)
 - [使用組件和全域組件快取](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

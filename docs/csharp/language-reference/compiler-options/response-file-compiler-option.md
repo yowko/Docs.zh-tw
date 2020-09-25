@@ -8,14 +8,15 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 89a057cba6e0d23c15fc9b652e5bfbc89b6ecbaa
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 8f7e222e194fc4ba96159ecd792765f64b4d1c57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128643"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193748"
 ---
 # <a name="-c-compiler-options"></a>@ (C# 編譯器選項)
+
 @ 選項可讓您指定檔案，內含要編譯的編譯器選項和原始程式碼檔。  
   
 ## <a name="syntax"></a>語法  
@@ -25,10 +26,12 @@ ms.locfileid: "89128643"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `response_file`  
  列出要編譯之編譯器選項或原始程式碼檔的檔案。  
   
 ## <a name="remarks"></a>備註  
+
  編譯器將會處理編譯器選項和原始程式碼檔，就像已在命令列上指定它們一樣。  
   
  若要在編譯中指定多個回應檔，請指定多個回應檔選項。 例如：  
@@ -48,6 +51,7 @@ ms.locfileid: "89128643"
  無法在 Visual Studio 開發環境中設定此編譯器選項，也無法以程式設計方式進行變更。  
   
 ## <a name="example"></a>範例  
+
  以下是範例回應檔中的數行：  
   
 ```console  
@@ -57,4 +61,4 @@ ms.locfileid: "89128643"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)

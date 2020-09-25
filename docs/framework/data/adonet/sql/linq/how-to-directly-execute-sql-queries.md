@@ -1,26 +1,28 @@
 ---
-title: 如何：直接執行 SQL 查詢
-description: 瞭解如何使用 ExecuteQuery 來執行查詢，然後在 LINQ to SQL 查詢不足的情況下，將結果直接轉換成物件。
+title: 作法：直接執行 SQL 查詢
+description: 瞭解如何使用 ExecuteQuery 執行查詢，然後在 LINQ to SQL 查詢不足的情況下，直接將結果轉換成物件。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 59bd404e41f6be1181d6a625c31ee23358db0df3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7ebd02581d789266396b58296bbd6ad312dd468e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286361"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200572"
 ---
-# <a name="how-to-directly-execute-sql-queries"></a>如何：直接執行 SQL 查詢
+# <a name="how-to-directly-execute-sql-queries"></a>作法：直接執行 SQL 查詢
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將您撰寫的查詢轉譯為參數型 SQL 查詢 (文字格式)，並將它們傳送給 SQL Server 進行處理。  
   
- SQL 無法執行您應用程式可以在本機使用的各種方法。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試將這些本機方法轉換為可以在 SQL 環境內進行的對等作業和函式。 .NET Framework 內建型別的大部分方法和運算子都可以直接轉譯為 SQL 命令。 而有些方法和運算則可以透過可用的函式產生。 無法產生的部分則會產生執行階段例外狀況。 如需詳細資訊，請參閱[SQL-CLR 型別對應](sql-clr-type-mapping.md)。  
+ SQL 無法執行您應用程式可以在本機使用的各種方法。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試將這些本機方法轉換為可以在 SQL 環境內進行的對等作業和函式。 .NET Framework 內建類型上的大部分方法和運算子都可以直接轉譯為 SQL 命令。 而有些方法和運算則可以透過可用的函式產生。 無法產生的部分則會產生執行階段例外狀況。 如需詳細資訊，請參閱 [SQL CLR 型別對應](sql-clr-type-mapping.md)。  
   
  如果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢不足以進行特殊化工作，則可以使用 <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> 方法執行 SQL 查詢，然後將查詢結果直接轉換為物件。  
   
 ## <a name="example"></a>範例  
+
  在下列範例中，假設 `Customer` 類別的資料分佈於兩張資料表 (customer1 和 customer2)。 這個查詢會傳回 `Customer` 物件的序列。  
   
  [!code-csharp[DLinqQuerying#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#4)]
@@ -29,12 +31,13 @@ ms.locfileid: "84286361"
  只要表格式結果中的資料行名稱符合實體類別的資料行屬性，就會 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 從任何 SQL 查詢建立物件。  
   
 ## <a name="example"></a>範例  
+
  <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> 方法也允許使用參數。 使用下列程式碼，就可以執行參數型查詢。  
   
  [!code-csharp[DLinqQuerying#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#5)]
  [!code-vb[DLinqQuerying#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#5)]  
   
- 查詢文字中的參數使用與 `Console.WriteLine()` 和 `String.Format()` 所用的相同大括號標記法來表示。 事實上， `String.Format()` 實際上是在您所提供的查詢字串上呼叫，並以產生的參數名稱（例如 @p0 ， @p1 ...、 @p （n））取代大括弧參數。  
+ 查詢文字中的參數使用與 `Console.WriteLine()` 和 `String.Format()` 所用的相同大括號標記法來表示。 事實上， `String.Format()` 實際上是在您提供的查詢字串上呼叫，將大括弧參數取代為產生的參數名稱， @p0 例如 @p1 @p (n) 。  
   
 ## <a name="see-also"></a>另請參閱
 

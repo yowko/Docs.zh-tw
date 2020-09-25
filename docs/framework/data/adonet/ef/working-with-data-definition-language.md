@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 040ecc1473a4674ab0bb26ad0081563f55a726ea
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c30cbbc1eae6d4cbcadb9bfe8d267fb428764971
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553866"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200884"
 ---
 # <a name="working-with-data-definition-language"></a>使用資料定義語言
+
 從 .NET Framework 第4版開始，Entity Framework 支援 (DDL) 資料定義語言。 這可讓您根據連接字串和儲存體 (SSDL) 模型的中繼資料，建立或刪除資料庫執行個體。  
   
  <xref:System.Data.Objects.ObjectContext> 的下列方法會使用連接字串和 SSDL 內容來達成下列目的：建立或刪除資料庫、檢查資料庫是否存在，以及檢視產生的 DDL 指令碼：  

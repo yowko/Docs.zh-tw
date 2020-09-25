@@ -13,14 +13,15 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 6fd268414c4e54e7b4865733480f8917389015d0
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1862794e4d823e38ce19780300a0b04f4e57dc44
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125029"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193981"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (C# 編譯器選項)
+
 **-optimize** 選項啟用或停用由編譯器執行的最佳化，讓您的輸出檔案變得更小、更快且更有效率。  
   
 ## <a name="syntax"></a>語法  
@@ -30,6 +31,7 @@ ms.locfileid: "89125029"
 ```  
   
 ## <a name="remarks"></a>備註  
+
  **-optimize** 也會告知通用語言執行平台在執行階段進行程式碼最佳化。  
   
  根據預設，會停用最佳化。 指定 **-optimize+** 以啟用最佳化。  
@@ -51,6 +53,7 @@ ms.locfileid: "89125029"
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>。  
   
 ## <a name="example"></a>範例  
+
  編譯 `t2.cs` 並啟用編譯器最佳化：  
   
 ```console  
@@ -59,5 +62,5 @@ csc t2.cs -optimize
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
