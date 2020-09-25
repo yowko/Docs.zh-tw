@@ -2,14 +2,15 @@
 title: 作法：使用 EdmGen.exe 產生物件層程式碼
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-ms.openlocfilehash: 9a73a803d310ebd847e49f4bd71609f8ef9f2944
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a243a588dcb6f7e7001de331cb9011a23ee2fdbe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546636"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198219"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>作法：使用 EdmGen.exe 產生物件層程式碼
+
 本主題說明如何使用 EDM 產生器 [ ( # A0) ](edm-generator-edmgen-exe.md) 工具，根據 csdl 檔案產生物件層程式碼。  
   
 ### <a name="to-generate-object-layer-code-for-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>使用 EdmGen.exe 針對 Visual Basic 專案產生 School 模型的物件層程式碼  

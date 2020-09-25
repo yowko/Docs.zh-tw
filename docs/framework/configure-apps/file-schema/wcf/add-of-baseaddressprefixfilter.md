@@ -2,14 +2,15 @@
 title: <add> 的 <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 2572a6ee6763ae26fe5c56669e10f8c9aef8a280
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: fefe85381aec113da123e6f2246aee340b0cf97a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811791"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181592"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> 的 \<baseAddressPrefixFilter>
+
 表示指定傳遞篩選準則的設定專案，此篩選器會在 IIS 中裝載 Windows Communication Foundation (WCF) 應用程式時，提供一種機制來挑選適當的 Internet Information Services (IIS) 系結。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,6 +30,7 @@ ms.locfileid: "88811791"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -38,6 +40,7 @@ ms.locfileid: "88811791"
 |prefix|URI，這個 URI 可用來比對基底位址的一部分。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -47,6 +50,7 @@ ms.locfileid: "88811791"
 |[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|設定專案的集合，這些專案會指定傳遞篩選準則，以提供在 IIS 中裝載 Windows Communication Foundation (WCF) 應用程式時挑選適當 IIS 系結的機制。|  
   
 ## <a name="remarks"></a>備註  
+
  前置詞篩選條件為共用裝載提供者提供一種方式，使其可指定服務所要使用的 URI。 它可讓共用主機在同一個網站上裝載多個應用程式，而且同一個配置中可以有不同的基底位址。  
   
  IIS 網站是包含虛擬目錄的虛擬應用程式的容器 (Container)。 網站中的應用程式則可以透過一個或多個 IIS 繫結來存取。 IIS 繫結提供繫結通訊協定和繫結這兩項資訊。 繫結通訊協定 (例如 HTTP) 會定義產生通訊的配置，而繫結資訊 (例如 IPAddress、Port、Hostheader) 包含用來存取該網站的資料。  

@@ -2,14 +2,15 @@
 title: OracleType
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 95a1173dfbcc4cf49ded8c7b8a42d9764fee9aff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 37089649c66c964f8a912c5a227a5281f6c0dfb7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149397"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189145"
 ---
 # <a name="oracletypes"></a>OracleType
+
 Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資料型別的結構。 這些結構包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。  
   
 > [!NOTE]
@@ -22,6 +23,7 @@ Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資�
 - 使用 <xref:System.Data.OracleClient.OracleDataReader> 存取資料，並使用數個 <xref:System.Data.OracleClient.OracleType> 結構顯示資料。  
   
 ## <a name="creating-an-oracle-table"></a>建立 Oracle 資料表  
+
  此範例建立 Oracle 資料表並為其載入資料。 您必須先執行此範例，才能執行下一個範例。  
   
 ```csharp  
@@ -52,7 +54,8 @@ public void Setup(string connectionString)
 ```  
   
 ## <a name="retrieving-data-from-the-oracle-table"></a>從 Oracle 資料表擷取資料  
- 本示例使用**OracleDataReader**訪問資料，並使用多個**OracleType**結構來顯示資料。  
+
+ 此範例會使用 **OracleDataReader** 來存取資料，並使用數個 **OracleType** 結構來顯示資料。  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  

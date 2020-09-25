@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: 38c43fa509b5259aa94ca416aadb51b405fc5dc7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b142ef820e964eaf5f1afed53a6b12a9344c7dda
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542394"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189327"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>如何：在查詢中呼叫模型定義函式
+
 本主題描述如何從 LINQ to Entities 查詢內呼叫概念模型中定義的函數。  
   
  下列程式提供從 LINQ to Entities 查詢中呼叫模型定義函數的高階大綱。 程序後的範例提供程序中之步驟相關詳細資訊。 程序假設您已在概念模型中定義函式。 如需詳細資訊，請參閱 [如何：在概念模型中定義自訂函數](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))。  
@@ -24,6 +25,7 @@ ms.locfileid: "90542394"
 2. 呼叫 LINQ to Entities 查詢中的函式。  
   
 ## <a name="example"></a>範例  
+
  下列範例示範如何從 LINQ to Entities 查詢中呼叫概念模型中定義的函數。 範例使用 School 模型。 如需 School 模型的相關資訊，請參閱 [建立 School 範例資料庫](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) 和 [產生 school .edmx](/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))檔案。  
   
  下列概念模型函式會傳回講師受雇之後經過的年份。 如需將函數新增至概念模型的相關資訊，請參閱 [如何：在概念模型中定義自訂](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))函式 ) 。  
@@ -31,12 +33,14 @@ ms.locfileid: "90542394"
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
 ## <a name="example"></a>範例  
+
  接下來，將下列方法加入至您的應用程式並使用 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 將它對應至概念模型函式：  
   
  [!code-csharp[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#2)]
  [!code-vb[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#2)]  
   
 ## <a name="example"></a>範例  
+
  現在您可以從 LINQ to Entities 查詢內呼叫概念模型函數。 下列程式碼會呼叫該方法，顯示受雇超過十年的所有講師：  
   
  [!code-csharp[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#3)]

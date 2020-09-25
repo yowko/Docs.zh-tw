@@ -2,35 +2,36 @@
 title: SQL Server 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 0f65bbf2534eb7167baacb1405a8ce6e9769c23f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ebb0cea20aede3d04e37536c7c615678e109337a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794328"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197660"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 結構描述集合
-除了通用結構描述集合之外，Microsoft .NET Framework Data Provider for SQL Server 還支援其他結構描述集合。 這些結構描述集合會因您目前使用的 SQL Server 版本而稍微不同。 若要判斷支援的架構集合清單，請呼叫不含引數的**GetSchema**方法，或使用架構集合名稱 "MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
+
+除了通用結構描述集合之外，Microsoft .NET Framework Data Provider for SQL Server 還支援其他結構描述集合。 這些結構描述集合會因您目前使用的 SQL Server 版本而稍微不同。 若要判斷支援的架構集合清單，請呼叫沒有引數的 **GetSchema** 方法，或使用架構集合名稱 ">metadatacollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
   
 ## <a name="databases"></a>資料庫  
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
 |database_name|String|資料庫的名稱。|  
-|dbid|Int16|資料庫 ID。|  
-|create_date|DateTime|資料庫的建立日期。|  
+|dbid|Int16|資料庫識別碼。|  
+|create_date|Datetime|資料庫的建立日期。|  
   
 ## <a name="foreign-keys"></a>外部索引鍵  
   
-|ColumnName|DataType|說明|  
+|ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
 |CONSTRAINT_CATALOG|String|條件約束所屬的目錄。|  
 |CONSTRAINT_SCHEMA|String|包含條件約束的結構描述。|  
-|CONSTRAINT_NAME|String|名稱。|  
+|CONSTRAINT_NAME|String|Name：|  
 |TABLE_CATALOG|String|包含條件約束的資料表名稱。|  
 |TABLE_SCHEMA|String|包含資料表的結構描述。|  
 |TABLE_NAME|String|資料表名稱|  
-|CONSTRAINT_TYPE|String|條件約束的型別。 僅允許 FOREIGN KEY。|  
+|CONSTRAINT_TYPE|String|條件約束的類型。 僅允許 FOREIGN KEY。|  
 |IS_DEFERRABLE|String|指定條件約束是否可以延遲。 傳回 NO。|  
 |INITIALLY_DEFERRED|String|指定條件約束一開始是否可以延遲。 傳回 NO。|  
   
@@ -40,18 +41,19 @@ ms.locfileid: "70794328"
 |----------------|--------------|-----------------|  
 |constraint_catalog|String|索引所屬的目錄。|  
 |constraint_schema|String|包含索引的結構描述。|  
-|constraint_name|String|索引名稱。|  
+|constraint_name|String|索引的名稱。|  
 |table_catalog|String|與索引相關的資料表名稱。|  
 |table_schema|String|包含與索引相關之資料表的結構描述。|  
 |table_name|String|資料表名稱。|  
 |index_name|String|索引名稱。|  
   
 ### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
+
  從 .NET Framework 3.5 版 SP1 和 SQL Server 2008 開始，下列資料行就已經加入至 Indexes 結構描述集合，以便支援新的空間類型、Filestream 和疏鬆資料行。 舊版 .NET Framework 和 SQL Server 不支援這些資料行。  
   
-|ColumnName|DataType|說明|  
+|ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
-|type_desc|String|索引的類型將屬於下列其中一種類型：<br /><br /> -堆積<br />-叢集<br />-非叢集<br />-   XML<br />-空間|  
+|type_desc|String|索引的類型將屬於下列其中一種類型：<br /><br /> -堆積<br />-叢集<br />-非叢集<br />-XML<br />-空間|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -59,7 +61,7 @@ ms.locfileid: "70794328"
 |----------------|--------------|-----------------|  
 |constraint_catalog|String|索引所屬的目錄。|  
 |constraint_schema|String|包含索引的結構描述。|  
-|constraint_name|String|索引名稱。|  
+|constraint_name|String|索引的名稱。|  
 |table_catalog|String|與索引相關的資料表名稱。|  
 |table_schema|String|包含與索引相關之資料表的結構描述。|  
 |table_name|String|資料表名稱。|  
@@ -79,45 +81,45 @@ ms.locfileid: "70794328"
 |ROUTINE_SCHEMA|String|包含預存程序的結構描述。|  
 |ROUTINE_NAME|String|預存程序的名稱。|  
 |ROUTINE_TYPE|String|針對預存程序傳回 PROCEDURE，並針對函式傳回 FUNCTION。|  
-|CREATED|DateTime|建立程序的時間。|  
-|LAST_ALTERED|DateTime|上次修改程序的時間。|  
+|CREATED|Datetime|建立程序的時間。|  
+|LAST_ALTERED|Datetime|上次修改程序的時間。|  
   
-## <a name="procedure-parameters"></a>Procedure Parameters  
+## <a name="procedure-parameters"></a>程序參數  
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
 |SPECIFIC_CATALOG|String|此為其參數之程序的目錄名稱。|  
 |SPECIFIC_SCHEMA|String|包含此參數所屬程序的結構描述。|  
 |SPECIFIC_NAME|String|此參數所屬程序的名稱。|  
-|ORDINAL_POSITION|Int32|以 1 開始的參數序數位置。 若為程序的傳回值，則此項為 0。|  
-|PARAMETER_MODE|String|若為輸入參數，傳回 IN；若為輸出參數，傳回 OUT；若為輸入/輸出參數，傳回 INOUT。|  
-|IS_RESULT|String|若表示做為函式之程序的結果，傳回 YES。 否則，傳回 NO。|  
-|AS_LOCATOR|String|若宣告為定位器，傳回 YES。 否則，傳回 NO。|  
-|PARAMETER_NAME|String|參數名稱。 若對應至函式的傳回值，則為 NULL。|  
-|DATA_TYPE|String|系統提供的資料型別。|  
-|CHARACTER_MAXIMUM_LENGTH|Int32|二進位或字元資料型別的長度上限 (字元數)。 否則，傳回 NULL。|  
-|CHARACTER_OCTET_LENGTH|Int32|二進位或字元資料型別的最大長度 (以位元組為單位)。 否則，傳回 NULL。|  
-|COLLATION_CATALOG|String|參數集合的目錄名稱。 若不是其中一個字元型別，則傳回 NULL。|  
-|COLLATION_SCHEMA|String|永遠傳回 NULL。|  
-|COLLATION_NAME|String|參數集合的名稱。 若不是其中一個字元型別，則傳回 NULL。|  
-|CHARACTER_SET_CATALOG|String|參數字元集的目錄名稱。 若不是其中一個字元型別，則傳回 NULL。|  
-|CHARACTER_SET_SCHEMA|String|永遠傳回 NULL。|  
-|CHARACTER_SET_NAME|String|參數字元集的名稱。 若不是其中一個字元型別，則傳回 NULL。|  
-|NUMERIC_PRECISION|Byte|概略數值資料、精確數值資料、整數資料或貨幣資料的精確度。 否則，傳回 NULL。|  
-|NUMERIC_PRECISION_RADIX|Int16|概略數值資料、精確數值資料、整數資料或貨幣資料的精確度基數。 否則，傳回 NULL。|  
-|NUMERIC_SCALE|Int32|概略數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，傳回 NULL。|  
-|DATETIME_PRECISION|Int16|若參數型別為 datetime 或 smalldatetime，則為以分數秒為單位的精確度。 否則，傳回 NULL。|  
+|ORDINAL_POSITION|Int32|參數的序數位置從 1 開始。 若為程序的傳回值，則此項為 0。|  
+|PARAMETER_MODE|String|如果是輸入參數，便傳回 IN；如果是輸出參數，便傳回 OUT，如果是輸入/輸出參數，便傳回 INOUT。|  
+|IS_RESULT|String|若表示做為函式之程序的結果，傳回 YES。 否則，便傳回 NO。|  
+|AS_LOCATOR|String|如果宣告成定位器，便傳回 YES。 否則，便傳回 NO。|  
+|PARAMETER_NAME|String|參數的名稱。 如果這對應於函數的傳回值，便是 NULL。|  
+|DATA_TYPE|String|系統提供的資料類型。|  
+|CHARACTER_MAXIMUM_LENGTH|Int32|二進位或字元資料類型的最大長度 (以字元為單位)。 否則，便傳回 NULL。|  
+|CHARACTER_OCTET_LENGTH|Int32|二進位或字元資料類型的最大長度 (以位元組為單位)。 否則，便傳回 NULL。|  
+|COLLATION_CATALOG|String|參數集合的目錄名稱。 如果不是字元類型之一，便傳回 NULL。|  
+|COLLATION_SCHEMA|String|一律傳回 NULL。|  
+|COLLATION_NAME|String|參數的定序名稱。 如果不是字元類型之一，便傳回 NULL。|  
+|CHARACTER_SET_CATALOG|String|參數字元集的目錄名稱。 如果不是字元類型之一，便傳回 NULL。|  
+|CHARACTER_SET_SCHEMA|String|一律傳回 NULL。|  
+|CHARACTER_SET_NAME|String|參數字元集的名稱。 如果不是字元類型之一，便傳回 NULL。|  
+|NUMERIC_PRECISION|Byte|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數。 否則，便傳回 NULL。|  
+|NUMERIC_PRECISION_RADIX|Int16|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數基數。 否則，便傳回 NULL。|  
+|NUMERIC_SCALE|Int32|近似數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，便傳回 NULL。|  
+|DATETIME_PRECISION|Int16|若參數型別為 datetime 或 smalldatetime，則為以分數秒為單位的精確度。 否則，便傳回 NULL。|  
 |INTERVAL_TYPE|String|NULL。 保留供 SQL Server 日後使用。|  
 |INTERVAL_PRECISION|Int16|NULL。 保留供 SQL Server 日後使用。|  
   
 ## <a name="tables"></a>資料表  
   
-|ColumnName|DataType|說明|  
+|ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|資料表的目錄。|  
 |TABLE_SCHEMA|String|包含資料表的結構描述。|  
 |TABLE_NAME|String|資料表名稱。|  
-|TABLE_TYPE|String|資料表型別。 可為 VIEW 或 BASE TABLE。|  
+|TABLE_TYPE|String|資料表的類型。 可以是 VIEW 或 BASE TABLE。|  
   
 ## <a name="columns"></a>資料行  
   
@@ -130,19 +132,20 @@ ms.locfileid: "70794328"
 |ORDINAL_POSITION|Int32|資料行識別碼。|  
 |COLUMN_DEFAULT|String|資料行的預設值。|  
 |IS_NULLABLE|String|資料行的 Null 屬性。 若此資料行允許 NULL，其會傳回 YES。 否則，傳回 NO。|  
-|DATA_TYPE|String|系統提供的資料型別。|  
-|CHARACTER_MAXIMUM_LENGTH|Int32 – Sql8, Int16 – Sql7|二進位資料、字元資料或文字及影像資料的長度上限 (以字元數為單位)。 否則，傳回 NULL。|  
-|CHARACTER_OCTET_LENGTH|Int32 – SQL8, Int16 – Sql7|二進位資料、字元資料或文件及影像資料的長度上限 (以位元組為單位)。 否則，傳回 NULL。|  
-|NUMERIC_PRECISION|Unsigned Byte|概略數值資料、精確數值資料、整數資料或貨幣資料的精確度。 否則，傳回 NULL。|  
-|NUMERIC_PRECISION_RADIX|Int16|概略數值資料、精確數值資料、整數資料或貨幣資料的精確度基數。 否則，傳回 NULL。|  
-|NUMERIC_SCALE|Int32|概略數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，傳回 NULL。|  
-|DATETIME_PRECISION|Int16|datetime 及 SQL-92 間隔資料型別的子型別程式碼。 若為其他資料型別，則傳回 NULL。|  
-|CHARACTER_SET_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示字元集所在的資料庫。 否則，傳回 NULL。|  
-|CHARACTER_SET_SCHEMA|String|永遠傳回 NULL。|  
-|CHARACTER_SET_NAME|String|若此資料行為字元資料或文字資料型別，則傳回字元集的唯一名稱。 否則，傳回 NULL。|  
-|COLLATION_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示定義定序的資料庫。 否則，此資料行為 UNLL。|  
+|DATA_TYPE|String|系統提供的資料類型。|  
+|CHARACTER_MAXIMUM_LENGTH|Int32 – Sql8, Int16 – Sql7|二進位資料、字元資料，或文字和影像資料的最大長度 (以字元為單位)。 否則，就傳回 NULL。|  
+|CHARACTER_OCTET_LENGTH|Int32 – SQL8, Int16 – Sql7|二進位資料、字元資料，或文字和影像資料的最大長度 (以位元組為單位)。 否則，就傳回 NULL。|  
+|NUMERIC_PRECISION|Unsigned Byte|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數。 否則，就傳回 NULL。|  
+|NUMERIC_PRECISION_RADIX|Int16|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數基數。 否則，就傳回 NULL。|  
+|NUMERIC_SCALE|Int32|近似數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，就傳回 NULL。|  
+|DATETIME_PRECISION|Int16|datetime 和 SQL-92 interval 資料類型的子類型代碼。 如果是其他資料類型，就傳回 NULL。|  
+|CHARACTER_SET_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示字元集所在的資料庫。 否則，就傳回 NULL。|  
+|CHARACTER_SET_SCHEMA|String|一律傳回 NULL。|  
+|CHARACTER_SET_NAME|String|若此資料行為字元資料或文字資料型別，則傳回字元集的唯一名稱。 否則，就傳回 NULL。|  
+|COLLATION_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示定義定序的資料庫。 否則，這個資料行就是 NULL。|  
   
 ### <a name="columns-sql-server-2008"></a>Columns (SQL Server 2008)  
+
  從 .NET Framework 3.5 版 SP1 和 SQL Server 2008 開始，下列資料行就已經加入至 Columns 結構描述集合，以便支援新的空間類型、Filestream 和疏鬆資料行。 舊版 .NET Framework 和 SQL Server 不支援這些資料行。  
   
 |ColumnName|DataType|描述|  
@@ -152,6 +155,7 @@ ms.locfileid: "70794328"
 |IS_COLUMN_SET|String|YES (如果資料行是資料行集資料行)。<br /><br /> NO (如果資料行不是資料行集資料行)。|  
   
 ### <a name="allcolumns-sql-server-2008"></a>AllColumns (SQL Server 2008)  
+
  從 .NET Framework 3.5 版 SP1 和 SQL Server 2008 開始，就已經加入 AllColumns 結構描述集合，以便支援疏鬆資料行。 舊版 .NET Framework 和 SQL Server 不支援 AllColumns。  
   
  AllColumns 與 Columns 結構描述集合具有相同的限制和產生的 DataTable 結構描述。 唯一的差異是 AllColumns 包含了 Columns 結構描述集合並未包含的資料行集資料行。 下表將描述這些資料行。  
@@ -164,23 +168,24 @@ ms.locfileid: "70794328"
 |COLUMN_NAME|String|資料行名稱。|  
 |ORDINAL_POSITION|Int32|資料行識別碼。|  
 |COLUMN_DEFAULT|String|資料行的預設值。|  
-|IS_NULLABLE|String|資料行的 Null 屬性。 若此資料行允許 NULL，其會傳回 YES。 否則，會傳回 NO。|  
-|DATA_TYPE|String|系統提供的資料型別。|  
-|CHARACTER_MAXIMUM_LENGTH|Int32|二進位資料、字元資料或文字及影像資料的長度上限 (以字元數為單位)。 否則，傳回 NULL。|  
-|CHARACTER_OCTET_LENGTH|Int32|二進位資料、字元資料或文件及影像資料的長度上限 (以位元組為單位)。 否則，傳回 NULL。|  
-|NUMERIC_PRECISION|Unsigned Byte|概略數值資料、精確數值資料、整數資料或貨幣資料的精確度。 否則，傳回 NULL。|  
-|NUMERIC_PRECISION_RADIX|Int16|概略數值資料、精確數值資料、整數資料或貨幣資料的精確度基數。 否則，傳回 NULL。|  
-|NUMERIC_SCALE|Int32|概略數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，傳回 NULL。|  
-|DATETIME_PRECISION|Int16|datetime 及 SQL-92 間隔資料型別的子型別程式碼。 若為其他資料型別，則傳回 NULL。|  
-|CHARACTER_SET_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示字元集所在的資料庫。 否則，傳回 NULL。|  
-|CHARACTER_SET_SCHEMA|String|永遠傳回 NULL。|  
-|CHARACTER_SET_NAME|String|若此資料行為字元資料或文字資料型別，則傳回字元集的唯一名稱。 否則，傳回 NULL。|  
-|COLLATION_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示定義定序的資料庫。 否則，此資料行為 UNLL。|  
+|IS_NULLABLE|String|資料行的 Null 屬性。 若此資料行允許 NULL，其會傳回 YES。 否則，它就會傳回 NO。|  
+|DATA_TYPE|String|系統提供的資料類型。|  
+|CHARACTER_MAXIMUM_LENGTH|Int32|二進位資料、字元資料，或文字和影像資料的最大長度 (以字元為單位)。 否則，就傳回 NULL。|  
+|CHARACTER_OCTET_LENGTH|Int32|二進位資料、字元資料，或文字和影像資料的最大長度 (以位元組為單位)。 否則，就傳回 NULL。|  
+|NUMERIC_PRECISION|Unsigned Byte|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數。 否則，就傳回 NULL。|  
+|NUMERIC_PRECISION_RADIX|Int16|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數基數。 否則，就傳回 NULL。|  
+|NUMERIC_SCALE|Int32|近似數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，就傳回 NULL。|  
+|DATETIME_PRECISION|Int16|datetime 和 SQL-92 interval 資料類型的子類型代碼。 如果是其他資料類型，就傳回 NULL。|  
+|CHARACTER_SET_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示字元集所在的資料庫。 否則，就傳回 NULL。|  
+|CHARACTER_SET_SCHEMA|String|一律傳回 NULL。|  
+|CHARACTER_SET_NAME|String|若此資料行為字元資料或文字資料型別，則傳回字元集的唯一名稱。 否則，就傳回 NULL。|  
+|COLLATION_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示定義定序的資料庫。 否則，這個資料行就是 NULL。|  
 |IS_FILESTREAM|String|YES (如果資料行具有 FILESTREAM 屬性)。<br /><br /> NO (如果資料行沒有 FILESTREAM 屬性)。|  
 |IS_SPARSE|String|YES (如果資料行是疏鬆資料行)。<br /><br /> NO (如果資料行不是疏鬆資料行)。|  
 |IS_COLUMN_SET|String|YES (如果資料行是資料行集資料行)。<br /><br /> NO (如果資料行不是資料行集資料行)。|  
   
 ### <a name="columnsetcolumns-sql-server-2008"></a>ColumnSetColumns (SQL Server 2008)  
+
  從 .NET Framework 3.5 版 SP1 和 SQL Server 2008 開始，就已經加入 ColumnSetColumns 結構描述集合，以便支援疏鬆資料行。 舊版 .NET Framework 和 SQL Server 不支援 ColumnSetColumns。 ColumnSetColumns 結構描述集合會針對資料行集中的所有資料行傳回結構描述。 下表將描述這些資料行。  
   
 |ColumnName|DataType|描述|  
@@ -191,18 +196,18 @@ ms.locfileid: "70794328"
 |COLUMN_NAME|String|資料行名稱。|  
 |ORDINAL_POSITION|Int32|資料行識別碼。|  
 |COLUMN_DEFAULT|String|資料行的預設值。|  
-|IS_NULLABLE|String|資料行的 Null 屬性。 若此資料行允許 NULL，其會傳回 YES。 否則，會傳回 NO。|  
-|DATA_TYPE|String|系統提供的資料型別。|  
-|CHARACTER_MAXIMUM_LENGTH|Int32|二進位資料、字元資料或文字及影像資料的長度上限 (以字元數為單位)。 否則，傳回 NULL。|  
-|CHARACTER_OCTET_LENGTH|Int32|二進位資料、字元資料或文件及影像資料的長度上限 (以位元組為單位)。 否則，傳回 NULL。|  
-|NUMERIC_PRECISION|Unsigned Byte|概略數值資料、精確數值資料、整數資料或貨幣資料的精確度。 否則，傳回 NULL。|  
-|NUMERIC_PRECISION_RADIX|Int16|概略數值資料、精確數值資料、整數資料或貨幣資料的精確度基數。 否則，傳回 NULL。|  
-|NUMERIC_SCALE|Int32|概略數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，傳回 NULL。|  
-|DATETIME_PRECISION|Int16|datetime 及 SQL-92 間隔資料型別的子型別程式碼。 若為其他資料型別，則傳回 NULL。|  
-|CHARACTER_SET_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示字元集所在的資料庫。 否則，傳回 NULL。|  
-|CHARACTER_SET_SCHEMA|String|永遠傳回 NULL。|  
-|CHARACTER_SET_NAME|String|若此資料行為字元資料或文字資料型別，則傳回字元集的唯一名稱。 否則，傳回 NULL。|  
-|COLLATION_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示定義定序的資料庫。 否則，此資料行為 UNLL。|  
+|IS_NULLABLE|String|資料行的 Null 屬性。 若此資料行允許 NULL，其會傳回 YES。 否則，它就會傳回 NO。|  
+|DATA_TYPE|String|系統提供的資料類型。|  
+|CHARACTER_MAXIMUM_LENGTH|Int32|二進位資料、字元資料，或文字和影像資料的最大長度 (以字元為單位)。 否則，就傳回 NULL。|  
+|CHARACTER_OCTET_LENGTH|Int32|二進位資料、字元資料，或文字和影像資料的最大長度 (以位元組為單位)。 否則，就傳回 NULL。|  
+|NUMERIC_PRECISION|Unsigned Byte|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數。 否則，就傳回 NULL。|  
+|NUMERIC_PRECISION_RADIX|Int16|近似數值資料、精確數值資料、整數資料或貨幣資料的有效位數基數。 否則，就傳回 NULL。|  
+|NUMERIC_SCALE|Int32|近似數值資料、精確數值資料、整數資料或貨幣資料的小數位數。 否則，就傳回 NULL。|  
+|DATETIME_PRECISION|Int16|datetime 和 SQL-92 interval 資料類型的子類型代碼。 如果是其他資料類型，就傳回 NULL。|  
+|CHARACTER_SET_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示字元集所在的資料庫。 否則，就傳回 NULL。|  
+|CHARACTER_SET_SCHEMA|String|一律傳回 NULL。|  
+|CHARACTER_SET_NAME|String|若此資料行為字元資料或文字資料型別，則傳回字元集的唯一名稱。 否則，就傳回 NULL。|  
+|COLLATION_CATALOG|String|若資料行為字元資料或文字資料型別，則傳回 master，表示定義定序的資料庫。 否則，這個資料行就是 NULL。|  
 |IS_FILESTREAM|String|YES (如果資料行具有 FILESTREAM 屬性)。<br /><br /> NO (如果資料行沒有 FILESTREAM 屬性)。|  
 |IS_SPARSE|String|YES (如果資料行是疏鬆資料行)。<br /><br /> NO (如果資料行不是疏鬆資料行)。|  
 |IS_COLUMN_SET|String|YES (如果資料行是資料行集資料行)。<br /><br /> NO (如果資料行不是資料行集資料行)。|  
@@ -211,10 +216,10 @@ ms.locfileid: "70794328"
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
-|uid|Int16|使用者 ID，在此資料庫中是唯一的。 1 是資料庫擁有人。|  
-|user_name|String|使用者名稱或群組名稱，在此資料庫中是唯一的。|  
-|createdate|DateTime|加入帳戶的日期。|  
-|updatedate|DateTime|上次變更帳戶的日期。|  
+|uid|Int16|使用者識別碼，在這個資料庫中是唯一的。 1 是資料庫擁有人。|  
+|使用者名稱|String|使用者名稱或群組名稱，在此資料庫中是唯一的。|  
+|createdate|Datetime|加入帳戶的日期。|  
+|updatedate|Datetime|上次變更帳戶的日期。|  
   
 ## <a name="views"></a>檢視  
   
@@ -222,9 +227,9 @@ ms.locfileid: "70794328"
 |----------------|--------------|-----------------|  
 |TABLE_CATALOG|String|檢視表的目錄。|  
 |TABLE_SCHEMA|String|包含檢視表的結構描述。|  
-|TABLE_NAME|String|檢視表名稱。|  
-|CHECK_OPTION|String|WITH CHECK OPTION 的型別。 若原始檢視表是使用 WITH CHECK OPTION 所建立的，則為 CASCADE。 否則，傳回 NONE。|  
-|IS_UPDATABLE|String|指定檢視表是否可以更新。 永遠傳回 NO。|  
+|TABLE_NAME|String|檢視名稱。|  
+|CHECK_OPTION|String|WITH CHECK OPTION 的類型。 若原始檢視表是使用 WITH CHECK OPTION 所建立的，則為 CASCADE。 否則，就傳回 NONE。|  
+|IS_UPDATABLE|String|指定檢視是否可以更新。 一律傳回 NO。|  
   
 ## <a name="viewcolumns"></a>ViewColumns  
   
@@ -232,7 +237,7 @@ ms.locfileid: "70794328"
 |----------------|--------------|-----------------|  
 |VIEW_CATALOG|String|檢視表的目錄。|  
 |VIEW_SCHEMA|String|包含檢視表的結構描述。|  
-|VIEW_NAME|String|檢視表名稱。|  
+|VIEW_NAME|String|檢視名稱。|  
 |TABLE_CATALOG|String|與此檢視表相關之資料表的目錄。|  
 |TABLE_SCHEMA|String|包含與此檢視表相關之資料表的結構描述。|  
 |TABLE_NAME|String|與檢視表相關之資料表的名稱。 基底資料表。|  
@@ -240,7 +245,7 @@ ms.locfileid: "70794328"
   
 ## <a name="userdefinedtypes"></a>UserDefinedTypes  
   
-|ColumnName|DataType|說明|  
+|ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
 |assembly_name|String|組件檔案的名稱。|  
 |udt_name|String|組件的類別名稱。|  
@@ -252,10 +257,10 @@ ms.locfileid: "70794328"
 |public_key|Object|此組件使用的公開金鑰。|  
 |is_fixed_length|Boolean|指定型別的長度是否永遠與 max_length 相同。|  
 |max_length|Int16|型別的最大長度 (以位元組為單位)。|  
-|Create_Date|DateTime|建立/登錄組件的日期。|  
+|Create_Date|Datetime|建立/登錄組件的日期。|  
 |Permission_set_desc|String|組件使用權限集合/安全性層級的易記名稱。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - [擷取資料庫結構描述資訊](retrieving-database-schema-information.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

@@ -1,16 +1,17 @@
 ---
 title: 在 SQL Server 中進行驗證
-description: 瞭解使用 SQL Server ADO.NET 的驗證，包括 Windows 驗證模式和混合模式。
+description: 瞭解 ADO.NET 的 SQL Server 驗證，包括 Windows 驗證模式和混合模式。
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: e9915598acfbdefb59069d6a9c6ef4b7c824e4c6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c4f62391a0d9b5ada27f56eef4c3467d99b4c6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286542"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197523"
 ---
 # <a name="authentication-in-sql-server"></a>在 SQL Server 中進行驗證
+
 SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。  
   
 - Windows 驗證是預設設定，也經常稱為整合式安全性，原因為這個 SQL Server 安全性模型會與 Windows 緊密整合。 特定的 Windows 使用者和群組帳戶要受到信任，才能登入 SQL Server。 已通過驗證的 Windows 使用者不需出示額外的認證。  
@@ -30,6 +31,7 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 > 登入與資料庫使用者不同。 您必須在個別作業中，將登入或 Windows 群組對應到資料庫使用者或角色。 接著，您可以將權限授與使用者或角色來存取資料庫物件。  
   
 ## <a name="authentication-scenarios"></a>驗證案例  
+
  在下列情況中，Windows 驗證通常是最佳選擇：  
   
 - 有一個網域控制站。  
@@ -50,6 +52,7 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 > 指定 Windows 驗證並不會停用 SQL Server 登入。 請使用 ALTER LOGIN DISABLE Transact-SQL 陳述式來停用具有高權限的 SQL Server 登入。  
   
 ## <a name="login-types"></a>登入類型  
+
  SQL Server 支援三種登入類型：  
   
 - 本機 Windows 使用者帳戶或受信任的網域帳戶。 SQL Server 會仰賴 Windows 來驗證 Windows 使用者帳戶。  
@@ -62,22 +65,24 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 > SQL Server 提供從憑證建立的登入或非對稱金鑰，這些項目只能用於程式碼簽署。 它們不能用來連線至 SQL Server。  
   
 ## <a name="mixed-mode-authentication"></a>混合模式驗證  
+
  如果您必須使用混合模式驗證，則必須建立儲存在 SQL Server 中的 SQL Server 登入。 然後在執行階段時還需要提供 SQL Server 使用者名稱和密碼。  
   
 > [!IMPORTANT]
 > SQL Server 會使用名為 `sa` (「系統管理員」的縮寫) 的 SQL Server 登入進行安裝。 將強式密碼指派給 `sa` 登入，而不要在您的應用程式中使用 `sa` 登入。 `sa` 登入會對應到 `sysadmin` 固定伺服器角色，其在整部伺服器上具有無法撤銷的系統管理認證。 如果攻擊者取得系統管理員的存取權，對於潛在損害就沒有任何限制。 Windows `BUILTIN\Administrators` 群組 (本機系統管理員群組) 的所有成員，都會預設為 `sysadmin` 角色的成員，但可以從該角色移除。  
   
- SQL Server 提供 SQL Server 登入的 Windows 密碼原則機制。 密碼複雜性原則是為了阻止暴力攻擊而設計，方法是盡可能地增加密碼數目。 SQL Server 可以將相同的複雜性和到期原則套用至 SQL Server 內使用的密碼。  
+ SQL Server 為 SQL Server 登入提供 Windows 密碼原則機制。 密碼複雜性原則是為了阻止暴力攻擊而設計，方法是盡可能地增加密碼數目。 SQL Server 可以將相同的複雜性和到期原則套用至 SQL Server 內所使用的密碼。  
   
 > [!IMPORTANT]
 > 串連來自使用者輸入的連接字串，可能會讓您容易受到連接字串插入式攻擊。 在執行階段，使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 來建立語法正確的連接字串。 如需詳細資訊，請參閱[連接字串建置器](../connection-string-builders.md)。  
   
 ## <a name="external-resources"></a>外部資源  
+
  如需詳細資訊，請參閱下列資源。  
   
 |資源|描述|  
 |--------------|-----------------|  
-|[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|說明 SQL Server 中的登入及其他安全性主體。|  
+|[主體](/sql/relational-databases/security/authentication-access/principals-database-engine)|說明 SQL Server 中的登入及其他安全性主體。|  
   
 ## <a name="see-also"></a>另請參閱
 

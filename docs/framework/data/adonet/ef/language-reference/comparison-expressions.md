@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: d0926bb1a0e35caa058f268f0a0c414e805a8674
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d92020f353393eee683e578f4306cd4a2f214152
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251176"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197842"
 ---
 # <a name="comparison-expressions"></a>比較運算式
-比較運算式會檢查常數值、屬性值或方法結果是否等於、不等於、大於或小於另一個值。 如果特定的比較對 LINQ to Entities 無效，則會擲回例外狀況。 所有的比較 (隱含和明確) 都會要求所有元件在資料來源內都是可以比較的。 `Where` 子句中經常會使用比較運算式來限制查詢結果。  
+
+比較運算式會檢查常數值、屬性值或方法結果是否等於、不等於、大於或小於另一個值。 如果特定的比較對 LINQ to Entities 無效，將會擲回例外狀況。 所有的比較 (隱含和明確) 都會要求所有元件在資料來源內都是可以比較的。 `Where` 子句中經常會使用比較運算式來限制查詢結果。  
   
  下列查詢運算式語法範例顯示一個查詢，此查詢會傳回銷售訂單號碼等於 "SO43663" 的結果：  
   
