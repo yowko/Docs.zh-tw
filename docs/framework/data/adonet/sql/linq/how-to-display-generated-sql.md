@@ -1,25 +1,27 @@
 ---
-title: 如何：顯示產生的 SQL
-description: 瞭解如何使用 Log 屬性來查看針對查詢所產生的 SQL 程式碼，以協助您瞭解 LINQ to SQL 功能及進行偵錯工具。
+title: 作法：顯示產生的 SQL
+description: 瞭解如何使用 Log 屬性來查看針對查詢所產生的 SQL 程式碼，以協助瞭解 LINQ to SQL 功能和進行偵錯工具。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 5e75a8aadf4631f0a6e50641db72ba7b83af41fe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 81f6b9603cc7f8b7863f787272ce6a1af920fa75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286374"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169475"
 ---
-# <a name="how-to-display-generated-sql"></a><span data-ttu-id="373ea-103">如何：顯示產生的 SQL</span><span class="sxs-lookup"><span data-stu-id="373ea-103">How to: Display Generated SQL</span></span>
-<span data-ttu-id="373ea-104">您可以檢視針對查詢所產生的 SQL 程式碼，並且使用 <xref:System.Data.Linq.DataContext.Log%2A> 屬性變更處理。</span><span class="sxs-lookup"><span data-stu-id="373ea-104">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="373ea-105">若要了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 功能以及對特定問題進行偵錯，這個方法很實用。</span><span class="sxs-lookup"><span data-stu-id="373ea-105">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
+# <a name="how-to-display-generated-sql"></a><span data-ttu-id="2c0be-103">作法：顯示產生的 SQL</span><span class="sxs-lookup"><span data-stu-id="2c0be-103">How to: Display Generated SQL</span></span>
+
+<span data-ttu-id="2c0be-104">您可以檢視針對查詢所產生的 SQL 程式碼，並且使用 <xref:System.Data.Linq.DataContext.Log%2A> 屬性變更處理。</span><span class="sxs-lookup"><span data-stu-id="2c0be-104">You can view the SQL code generated for queries and change processing by using the <xref:System.Data.Linq.DataContext.Log%2A> property.</span></span> <span data-ttu-id="2c0be-105">若要了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 功能以及對特定問題進行偵錯，這個方法很實用。</span><span class="sxs-lookup"><span data-stu-id="2c0be-105">This approach can be useful for understanding [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] functionality and for debugging specific problems.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="373ea-106">範例</span><span class="sxs-lookup"><span data-stu-id="373ea-106">Example</span></span>  
- <span data-ttu-id="373ea-107">下列範例會使用 <xref:System.Data.Linq.DataContext.Log%2A> 屬性，在執行 SQL 程式碼之前，於主控台視窗中顯示該程式碼。</span><span class="sxs-lookup"><span data-stu-id="373ea-107">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="373ea-108">您可以使用這個屬性搭配查詢、插入、更新和刪除命令。</span><span class="sxs-lookup"><span data-stu-id="373ea-108">You can use this property with query, insert, update, and delete commands.</span></span>  
+## <a name="example"></a><span data-ttu-id="2c0be-106">範例</span><span class="sxs-lookup"><span data-stu-id="2c0be-106">Example</span></span>  
+
+ <span data-ttu-id="2c0be-107">下列範例會使用 <xref:System.Data.Linq.DataContext.Log%2A> 屬性，在執行 SQL 程式碼之前，於主控台視窗中顯示該程式碼。</span><span class="sxs-lookup"><span data-stu-id="2c0be-107">The following example uses the <xref:System.Data.Linq.DataContext.Log%2A> property to display SQL code in the console window before the code is executed.</span></span>  <span data-ttu-id="2c0be-108">您可以使用這個屬性搭配查詢、插入、更新和刪除命令。</span><span class="sxs-lookup"><span data-stu-id="2c0be-108">You can use this property with query, insert, update, and delete commands.</span></span>  
   
- <span data-ttu-id="373ea-109">主控台視窗中的程式列就是您執行之後的 Visual Basic 或 c # 程式碼時所看到的內容。</span><span class="sxs-lookup"><span data-stu-id="373ea-109">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
+ <span data-ttu-id="2c0be-109">主控台視窗中的程式列就是您在執行下列 Visual Basic 或 c # 程式碼時所看到的內容。</span><span class="sxs-lookup"><span data-stu-id="2c0be-109">The lines from the console window are what you see when you execute the Visual Basic or C# code that follows.</span></span>  
   
 ```console  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -43,6 +45,6 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="373ea-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="373ea-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c0be-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2c0be-110">See also</span></span>
 
-- [<span data-ttu-id="373ea-111">調試支援</span><span class="sxs-lookup"><span data-stu-id="373ea-111">Debugging Support</span></span>](debugging-support.md)
+- [<span data-ttu-id="2c0be-111">偵錯支援</span><span class="sxs-lookup"><span data-stu-id="2c0be-111">Debugging Support</span></span>](debugging-support.md)
