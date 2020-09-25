@@ -2,14 +2,15 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: 9291c38af28c18d20e23e34e8316b4a9fe523123
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fd4d678b1e861a47762d8a64f85dcc052a30fe2b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855129"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204797"
 ---
 # \<messageLogging>
+
 這個項目會定義 Windows Communication Foundation (WCF) 的訊息記錄功能設定。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ ms.locfileid: "70855129"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<diagnostics>**](diagnostics.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<messageLogging>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -37,6 +38,7 @@ ms.locfileid: "70855129"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -52,17 +54,18 @@ ms.locfileid: "70855129"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |filters|`filters` 項目含有 XPath 篩選條件的集合。 當啟用傳輸訊息記錄時 (`logMessagesAtTransportLevel` 是 `true`)，將只記錄符合篩選條件的訊息。<br /><br /> 篩選條件只會在傳輸層套用。 服務等級和格式錯誤訊息記錄不受篩選條件的影響。<br /><br /> `filter` 這個項目的唯一屬性為 XpathFilter。<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |診斷|為系統管理員定義執行階段檢查和控制的 WCF 設定。|  
   
 ## <a name="remarks"></a>備註  
+
  訊息會記錄在堆疊中的三個不同層級：服務、傳輸和格式錯誤。 每個層級可個別啟動。  
   
  可以加入 XPath 篩選條件，以記錄傳輸和服務層級的特定訊息。 如果沒有定義篩選條件，便會記錄所有的訊息。 篩選條件只會套用於訊息的標頭。 本文會被忽略。 WCF 會忽略訊息本文，以增進效能。 如果您希望根據本文的內容進行篩選，可以使用執行這項工作的篩選條件來建立自訂接聽程式。  

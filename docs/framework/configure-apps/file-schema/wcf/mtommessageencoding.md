@@ -2,14 +2,15 @@
 title: <mtomMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: cffde19c8fd06836eaaedb5c4fc8687b97ae0afe
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 76b83381849b8519c1b758ef52c6d5c3f682f9b7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556176"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204628"
 ---
 # \<mtomMessageEncoding>
+
 指定編碼和訊息版本處理，用於 SOAP 訊息傳輸最佳化機制 (Message Transmission Optimization Mechanism，MTOM) 的訊息。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "90556176"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<mtomMessageEncoding>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <mtomMessageEncoding maxBufferSize="Integer"
@@ -30,6 +31,7 @@ ms.locfileid: "90556176"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -55,6 +57,7 @@ ms.locfileid: "90556176"
 |[\<binding>](bindings.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
+
  編碼是將訊息轉換成位元組序列的處理序， 解碼則是相反的處理序。 Windows Communication Foundation (WCF) 包含 SOAP 訊息的三種編碼類型：文字、二進位和訊息傳輸最佳化機制 (MTOM)。  
   
  `MtomMessageEncoding` 項目會為使用訊息傳輸最佳化機制 (MTOM) 編碼的訊息，指定使用的字元編碼、訊息版本控制以及其他設定。 MTOM 是在 WCF 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間建立平衡。 MTOM 編碼會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成其 base64 編碼格式)，好讓這些資料最佳化。  

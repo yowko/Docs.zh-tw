@@ -2,14 +2,15 @@
 title: 訊息編碼
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-ms.openlocfilehash: 8e5a71095ba62e0e2e6592c8b7b83b67602ef7e7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 018cbc778627fc429e443fc590fa4c0f52d2a68a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69931588"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204875"
 ---
 # <a name="message-encoding"></a>訊息編碼
+
 編碼是將一組 Unicode 字元轉換成位元組序列的處理程序。 解碼則是相反的處理序。 Windows Communication Foundation (WCF) 包含 SOAP 訊息的三種編碼類型：文字、二進位和訊息傳輸最佳化機制 (MTOM)。  
   
  `binaryMessageEncoding` 組態區段會指定用於二進位 XML 訊息的字元編碼和訊息版本處理。 二進位訊息編碼器會以二進位編碼網路上的 Windows Communication Foundation (WCF) 訊息。 雖然這個編碼會讓訊息傳輸速度非常快，但是會失去以 WS-* 標準為基礎的互通性 (Interoperability)。  

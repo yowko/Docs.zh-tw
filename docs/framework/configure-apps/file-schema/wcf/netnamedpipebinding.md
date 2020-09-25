@@ -2,14 +2,15 @@
 title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 2364eb9d82fd17bd0b80b01070a0f1d789be3d90
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f1ec6091d72c1d1c6d75c44dd1f98d6d4e10ea12
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556150"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204563"
 ---
 # \<netNamedPipeBinding>
+
 為電腦上跨處理序通訊定義安全、可靠且經過最佳化的繫結。 根據預設，這個繫結會產生一個執行階段通訊堆疊，並且具備 WS-ReliableMessaging (提供可靠性)、傳輸安全性、具名管道 (用於訊息傳遞) 和二進位訊息編碼。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ ms.locfileid: "90556150"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netNamedPipeBinding>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netNamedPipeBinding>
@@ -47,6 +48,7 @@ ms.locfileid: "90556150"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列各節說明屬性、子元素和父元素  
   
 ### <a name="attributes"></a>屬性  
@@ -59,11 +61,11 @@ ms.locfileid: "90556150"
 |maxBufferSize|正整數，指定記憶體中用來儲存訊息的緩衝區大小上限 (以位元組為單位)。 如果緩衝區已滿，超過的資料會保留在基礎通訊端中，直到緩衝區再度有空間為止。 這個值不能小於 `maxReceivedMessageSize` 屬性。 預設值為 65536。 如需詳細資訊，請參閱<xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>。|  
 |maxConnections|整數，指定服務建立/接受的傳出和傳入連線數目上限。 傳入和傳出連線是依據此屬性指定的個別限制來計算的。<br /><br /> 超過限制的傳入連線都會排入佇列，直到低於此限制的空間可用為止。<br /><br /> 超過限制的傳出連線都會排入佇列，直到低於此限制的空間可用為止。<br /><br /> 預設值為 10。|  
 |maxReceivedMessageSize|正整數，指定在使用此繫結設定之通道上可以接收的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。|  
-|名稱|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 .NET Framework 4 開始，系結和行為不需要有名稱。 如需預設設定和無值系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)[的 WCF 服務設定和簡化的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  
+|NAME|包含繫結之組態名稱的字串。 這個值應該是唯一的，因為它會當做繫結的識別使用。 從 .NET Framework 4 開始，系結和行為不需要有名稱。 如需預設設定和無值系結和行為的詳細資訊，請參閱[簡化](../../../wcf/simplified-configuration.md)[的 WCF 服務設定和簡化的](../../../wcf/samples/simplified-configuration-for-wcf-services.md)設定。|  
 |openTimeout|<xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |receiveTimeout|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:10:00。|  
 |sendTimeout|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
-|transactionFlow|指定繫結程序是否支援流動 WS-Transactions 的布林值。 預設為 `false`。|  
+|transactionFlow|指定繫結程序是否支援流動 WS-Transactions 的布林值。 預設值為 `false`。|  
 |transactionProtocol|指定要搭配此繫結程序使用的異動通訊協定。 有效值為<br /><br /> -OleTransactions<br />-WS-AtomicTransactionOctober2004<br /><br /> 預設值為 OleTransactions。 此屬性的型別為 <xref:System.ServiceModel.TransactionProtocol>。|  
 |transferMode|<xref:System.ServiceModel.TransferMode> 值，指定訊息要經過緩衝處理或資料流處理，或為要求或回應。|  
   
@@ -81,11 +83,13 @@ ms.locfileid: "90556150"
 |[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
+
  根據預設，`NetNamedPipeBinding` 會產生執行階段通訊堆疊，此堆疊使用傳輸安全性、具名管道 (用於訊息傳遞) 和二進位訊息編碼。 此繫結為適當的 Windows Communication Foundation (WCF) 系統提供的現成選擇，可用於電腦通訊。 它也支援交易。  
   
  `NetNamedPipeBinding` 的預設組態類似於 `NetTcpBinding` 所提供的組態，但較為簡單，因為 WCF 實作只針對電腦應用，所以公開的功能不多。 最顯著的差異在於，`securityMode` 設定只提供 `None` 和 `Transport` 選項。 SOAP 安全性支援並非包含的選項。 安全性行為可以使用選擇性的 `securityMode` 屬性進行設定。  
   
 ## <a name="example"></a>範例  
+
  下列範例示範 netNamedPipeBinding 繫結，這會在相同電腦上提供跨處理序通訊。 具名通道不會跨電腦作業。  
   
  用戶端和服務的組態檔中會指定繫結。 繫結型別是在 `binding` 項目的 `<endpoint>` 屬性中指定。 如果您要設定 netNamedPipeBinding 繫結，並變更其部分設定，則您必須定義繫結組態。 端點必須使用 `bindingConfiguration` 屬性，按照名稱參考繫結組態。 在這個範例中，繫結組態的名稱為 Binding1。  

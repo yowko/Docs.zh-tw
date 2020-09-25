@@ -2,14 +2,15 @@
 title: <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: 035f3c95fc876f0d451e6b2146e754cfe0959a85
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e7888d01838312aa51397ca39133edb9318fac80
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546981"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204771"
 ---
 # \<messageSenderAuthentication>
+
 為訊息寄件者使用的對等憑證指定驗證設定。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ ms.locfileid: "90546981"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<peer>**](peer-of-servicecredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<messageSenderAuthentication>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <messageSenderAuthentication customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
@@ -31,6 +32,7 @@ ms.locfileid: "90546981"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -43,6 +45,7 @@ ms.locfileid: "90546981"
 |`trustedStoreLocation`|選擇性列舉。 指定由 WCF 安全性系統驗證對等憑證的受信任存放區位置。 此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -52,6 +55,7 @@ ms.locfileid: "90546981"
 |[\<peer>](peer-of-servicecredentials.md)|指定對等節點的目前認證。|  
   
 ## <a name="remarks"></a>備註  
+
  如果已選取訊息驗證，則必須設定這個項目。 針對輸出通道，每個訊息都會使用所提供的憑證進行簽署 [\<certificate>](certificate-element.md) 。 所有訊息在傳遞至應用程式之前，都會使用這個項目的 `customCertificateValidatorType` 之屬性所指定的驗證程式來檢查訊息認證。 驗證器可接受或拒絕認證。  
   
 ## <a name="see-also"></a>另請參閱

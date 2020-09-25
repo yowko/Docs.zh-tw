@@ -2,15 +2,16 @@
 title: <message> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 62b1793d18ddc8edc1f55b02137c4e0a9f7327d2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b37d6b1bd8f5372c230acbc2ada299415b2e40b3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738955"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204849"
 ---
 # <a name="message-of-nethttpbinding"></a>\<message> 的 \<netHttpBinding>
-定義的訊息層級安全性設定 [\<netHttpBinding>](nethttpbinding.md) 。  
+
+定義訊息層級安全性的設定 [\<netHttpBinding>](nethttpbinding.md) 。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "73738955"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-nethttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
@@ -28,6 +29,7 @@ ms.locfileid: "73738955"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列各節說明屬性、子元素和父元素  
   
 ### <a name="attributes"></a>屬性  
@@ -41,19 +43,21 @@ ms.locfileid: "73738955"
   
 |值|描述|  
 |-----------|-----------------|  
-|UserName|-要求用戶端必須使用 UserName 認證向伺服器進行驗證。 此認證必須使用 <> 元素來指定 `clientCredentials` 。<br />-WCF 不支援傳送密碼摘要或使用密碼衍生金鑰，以及使用這類金鑰來取得訊息安全性。 因此，在使用使用者名稱認證時，WCF 會強制保護傳輸。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
-|憑證|需要使用憑證對伺服器驗證用戶端。 此案例中的用戶端認證必須使用 <`clientCredentials`> 和 <> 來指定 `clientCertificate` 。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 此案例中的服務認證必須使用 <xref:System.ServiceModel.Description.ClientCredentials> 類別或 `ClientCredentials` 行為元素來指定，並使用 serviceCredentials 的元素來指定服務憑證 \<serviceCertificate> 。|  
+|UserName|-要求用戶端使用使用者名稱認證向伺服器進行驗證。 您必須使用 <> 元素來指定此認證 `clientCredentials` 。<br />-WCF 不支援傳送密碼摘要或使用密碼衍生金鑰，並使用這類金鑰來進行訊息安全性。 因此，WCF 會在使用 UserName 認證時強制保護傳輸。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
+|憑證|需要使用憑證對伺服器驗證用戶端。 在此情況下，必須使用 <`clientCredentials`> 和 <> 來指定用戶端認證 `clientCertificate` 。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 此案例中的服務認證必須使用 <xref:System.ServiceModel.Description.ClientCredentials> 類別或行為專案加以指定 `ClientCredentials` ，並使用 serviceCredentials 的元素指定服務憑證 \<serviceCertificate> 。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
-|<`security`<的> 元素`netHttpBinding`>|定義 <> 元素的安全性功能 `netHttpBinding` 。|  
+|<`security` <的> 元素 `netHttpBinding`>|定義 <> 專案的安全性功能 `netHttpBinding` 。|  
   
 ## <a name="example"></a>範例  
+
  這個範例會示範如何實作一個使用 basicHttpBinding 和訊息安全性的應用程式。 在下列服務組態範例中，端點定義會指定 basicHttpBinding，並參考名為 `Binding1` 的繫結組態。 服務對用戶端驗證它自己時所使用的憑證是在組態檔案 `behaviors` 區段中的 `serviceCredentials` 項目下設定。 用戶端用來對服務驗證本身之憑證所套用的驗證模式，也是在 `behaviors` 項目下的 `clientCertificate` 區段中設定。  
   
  相同的繫結和安全性詳細資訊是在用戶端組態檔中設定。  
@@ -122,8 +126,8 @@ ms.locfileid: "73738955"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Securing Services and Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

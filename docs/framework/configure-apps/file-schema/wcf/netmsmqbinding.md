@@ -2,14 +2,15 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4070b9659b6d3936dec38fc6a30cf7cd673691f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7dca85e4095e581c262611f0120ffb85e2174fee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556163"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204576"
 ---
 # \<netMsmqBinding>
+
 定義適合跨電腦通訊的佇列繫結。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ ms.locfileid: "90556163"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netMsmqBinding>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netMsmqBinding>
@@ -61,6 +62,7 @@ ms.locfileid: "90556163"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -70,7 +72,7 @@ ms.locfileid: "90556163"
 |`closeTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓關閉作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`customDeadLetterQueue`|URI，其中包含每個應用程式寄不出的信件佇列的位置，所有已過期、無法傳輸或傳遞的訊息都會放到該佇列中。<br /><br /> 寄不出的信件佇列是傳送應用程式佇列管理員上的佇列，用於無法傳遞的過期訊息。<br /><br /> 由 <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 指定的 URI 必須使用 net.msmq 配置。|  
 |`deadLetterQueue`|指定要使用何種寄不出信件佇列類型的 <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 值 (如果有的話)。<br /><br /> 無法傳遞至應用程式的訊息將會被傳輸至寄不出的信件佇列。<br /><br /> 對於需要 `exactlyOnce` 保證的訊息 (也就是 `exactlyOnce` 屬性設定為 `true`)，這個屬性預設為 MSMQ 中的整個系統異動式寄不出信件佇列。<br /><br /> 對於不需要保證的訊息，這個屬性預設為 `null`。|  
-|`durable`|布林值，指出佇列中的訊息為永久性 (Durable) 或變動性 (Volatile)。 永久性的訊息不受佇列管理員毀損的影響，但變動性訊息會受到影響。 如果應用程式需要較短的延遲時間，並可以容許訊息偶爾遺失，變動性訊息就很有用。 如果 `exactlyOnce` 屬性設定為 `true`，則訊息必須為永久性。 預設為 `true`。|  
+|`durable`|布林值，指出佇列中的訊息為永久性 (Durable) 或變動性 (Volatile)。 永久性的訊息不受佇列管理員毀損的影響，但變動性訊息會受到影響。 如果應用程式需要較短的延遲時間，並可以容許訊息偶爾遺失，變動性訊息就很有用。 如果 `exactlyOnce` 屬性設定為 `true`，則訊息必須為永久性。 預設值為 `true`。|  
 |`exactlyOnce`|布林值，指出此繫結所處理的每個訊息是否只傳遞一次。 接著會通知傳送者傳遞失敗。 `durable` 為 `false` 時，會忽略這個屬性，並傳輸訊息，但不具傳遞保證。 預設為 `true`。 如需詳細資訊，請參閱<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>。|  
 |`maxBufferPoolSize`|指定此繫結之緩衝區集區大小上限的整數。 預設值為 8。|  
 |`maxReceivedMessageSize`|正整數，定義此繫結可以處理的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。 這項關於訊息大小的限制是為了避免受到阻絕服務 (DoS) 攻擊。|  
@@ -85,8 +87,8 @@ ms.locfileid: "90556163"
 |`sendTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`timeToLive`|TimeSpan 值，指定訊息在到期並置入寄不出的信件佇列之前，訊息仍保持有效的時間。 預設為 1.00:00:00。<br /><br /> 設定這個屬性可確保有時效的訊息在由接收應用程式處理之前不會變成過時。 佇列中未由接收應用程式於指定的時間間隔內使用的訊息，即稱為過期訊息。 過期訊息會傳送至特別的佇列，稱為寄不出的信件佇列。 寄不出的信件佇列的位置是使用 `DeadLetterQueue` 屬性設定，或根據保證設定為適當的預設值。|  
 |`usingActiveDirectory`|布林值，指定是否應該使用 Active Directory 來轉換佇列位址。<br /><br /> MSMQ 佇列位址可以由路徑名稱或直接格式名稱組成。 如為直接格式名稱，MSMQ 會使用 DNS、NetBIOS 或 IP 解析電腦名稱。 如為路徑名稱，MSMQ 會使用 Active Directory 解析電腦名稱。<br /><br /> 根據預設，Windows Communication Foundation (WCF) 佇列的傳輸會將訊息佇列的 URI 轉換成直接格式名稱。 藉由將 `UseActiveDirectory` 屬性設定為 true，應用程式可以指定佇列傳輸應使用 Active Directory 來解析電腦名稱，而非使用 DNS、NetBIOS 或 IP 來解析。|  
-|`useMsmqTracing`|布林值，指定是否應追蹤由此繫結處理的訊息。 預設為 `false`。 如果啟用追蹤，每當訊息離開或到達訊息佇列電腦時，都會建立報告訊息並傳送至報告佇列。|  
-|`useSourceJournal`|布林值，指定是否要將此繫結處理之訊息的複本儲存在來源日誌。 預設為 `false`。<br /><br /> 有些佇列應用程式要記錄已離開電腦輸出佇列的訊息，這些程式可以將訊息複製到日誌佇列。 只要訊息一離開輸出佇列，而且收到目的端電腦已收到訊息的認可，訊息的複本就會保留在傳送端電腦的系統日誌佇列中。|  
+|`useMsmqTracing`|布林值，指定是否應追蹤由此繫結處理的訊息。 預設值為 `false`。 如果啟用追蹤，每當訊息離開或到達訊息佇列電腦時，都會建立報告訊息並傳送至報告佇列。|  
+|`useSourceJournal`|布林值，指定是否要將此繫結處理之訊息的複本儲存在來源日誌。 預設值為 `false`。<br /><br /> 有些佇列應用程式要記錄已離開電腦輸出佇列的訊息，這些程式可以將訊息複製到日誌佇列。 只要訊息一離開輸出佇列，而且收到目的端電腦已收到訊息的認可，訊息的複本就會保留在傳送端電腦的系統日誌佇列中。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -102,6 +104,7 @@ ms.locfileid: "90556163"
 |[\<bindings>](bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
+
  `netMsmqBinding` 繫結利用 Microsoft Message Queuing (MSMQ) 做為傳輸來提供對於佇列的支援，並可支援結合鬆散的應用程式、失敗隔離、負載撫平和中斷連接作業。 如需這些功能的討論，請參閱 [WCF 中的佇列](../../../wcf/feature-details/queues-in-wcf.md)。  
   
 ## <a name="example"></a>範例  

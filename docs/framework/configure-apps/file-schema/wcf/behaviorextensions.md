@@ -2,14 +2,15 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: 39dc92d65a41d223ebd39aec3dc59871ad1fd101
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 27bf9e380df1586b42cbe96a628a794364fae743
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77448681"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204966"
 ---
 # \<behaviorExtensions>
+
 行為延伸可讓使用者建立使用者定義的行為項目。 這些項目可以和標準的 Windows Communication Foundation (WCF) 行為項目並列使用。 `behaviorExtensions` 區段會定義項目，讓項目可用於組態中。 以下是典型行為擴充的範例。  
   
 ```xml  
@@ -43,13 +44,14 @@ ms.locfileid: "77448681"
 ```  
   
 ## <a name="security"></a>安全性  
+
  強烈建議您在 `machine.config` 和 `app.config` 檔案中註冊型別時，使用完整組件名稱。 如果型別不是唯一定義的型別，則 CLR 型別載入器會以指定的順序在以下位置中搜尋該型別：  
   
  如果型別的組件為已知，則載入器會搜尋組態檔案的重新導向位置、GAC、使用組態資訊的目前組件，和應用程式基底目錄。 如果組件為未知，則載入器會搜尋目前組件、mscorlib 和 `TypeResolve` 事件處理常式傳回的位置。 這個 CLR 搜尋順序可以用型別轉送機制和 AppDomain.TypeResolve 事件等攔截程序 (Hook) 來修改。  
   
  攻擊者可能會利用 CLR 搜尋順序並執行未經授權的程式碼。 使用完整 (強式) 名稱來唯一識別類型，可進一步提高您系統的安全性。  
   
- 如需詳細資訊，請參閱[執行時間如何找出元件](../../../deployment/how-the-runtime-locates-assemblies.md)和 <xref:System.AppDomain.TypeResolve> 。  
+ 如需詳細資訊，請參閱 [執行時間如何找出元件](../../../deployment/how-the-runtime-locates-assemblies.md) 和 <xref:System.AppDomain.TypeResolve> 。  
   
 ## <a name="see-also"></a>另請參閱
 

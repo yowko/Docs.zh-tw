@@ -3,20 +3,20 @@ title: .NET Core SDK 遙測
 description: 探索收集使用方式資訊以進行分析的 .NET Core SDK 遙測功能，它會收集哪些資料以及如何停用。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: bad6de138b9c35bcd8c5556df82103f959508b52
+ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359229"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91206350"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
 [.NET Core SDK](index.md) 包含遙測功能，可在 .NET Core CLI 損毀時收集使用方式資料和例外狀況資訊。 .NET Core CLI 隨附 .NET Core SDK，是可讓您建置、測試及發佈 .NET Core 應用程式的動詞集。 .NET 小組必須了解使用者如何使用這些工具，以便進行改善。 失敗資訊可協助小組解決問題並修正 Bug。
 
-根據 [Creative Commons Attribution 授權](https://creativecommons.org/licenses/by/4.0/)，所收集的資料為匿名，且將會以彙總形式發佈。
+收集的資料會在「 [創意 Commons](https://creativecommons.org/licenses/by/4.0/)屬性」授權下的匯總中發行。
 
-## <a name="scope"></a>範圍
+## <a name="scope"></a>影響範圍
 
 `dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用 `dotnet` 啟動應用程式時 (格式如下)，「不會收集」** 遙測：
 
@@ -41,7 +41,7 @@ ms.locfileid: "89359229"
 ```console
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
@@ -68,7 +68,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | >=2.0        | 命令引數和選項：會收集數個引數和選項 (不是任意字串)。 請參閱[收集的選項](#collected-options)。 2.1.300 之後已雜湊。 |
 | >=2.0         | SDK 是否正在容器中執行。 |
 | >=2.0         | 目標 Framework (來自 `TargetFramework` 事件)，從 2.1 開始已雜湊。 |
-| >=2.0         | 雜湊的媒體存取控制 (MAC) 位址：電腦的密碼編譯 (SHA256) 匿名唯一識別碼。 |
+| >=2.0         | 雜湊媒體存取控制 (MAC) 位址 (SHA256) 。 |
 | >=2.0         | 雜湊的目前工作目錄。 |
 | >=2.0         | 使用雜湊的安裝程式 exe 檔名來安裝成功報告。 |
 | >=2.1.300     | 核心版本。 |
@@ -80,7 +80,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 某些命令會傳送額外的資料。 命令的子集會傳送第一個引數：
 
-| 命令               | 傳送的第一個引數資料                |
+| Command               | 傳送的第一個引數資料                |
 |-----------------------|-----------------------------------------|
 | `dotnet help <arg>`   | 要查詢的命令說明。  |
 | `dotnet new <arg>`    | 範本名稱 (已雜湊)。             |

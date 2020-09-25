@@ -2,14 +2,15 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 711fbdc2d51177037cf349150c3431de14b11974
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 281d5d2df389f0952f0552747fa12b67b14d470c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833785"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204485"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
+
 指定要放置查詢 ([SELECT](select-entity-sql.md)) 運算式所傳回物件的群組。  
   
 ## <a name="syntax"></a>語法  
@@ -19,11 +20,13 @@ ms.locfileid: "71833785"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `aliasedExpression`  
  在其中執行群組作業的任何有效查詢運算式。 `expression` 可以是屬性，或參考 FROM 子句所傳回之屬性的非彙總運算式。 GROUP BY 子句中的每一個運算式都必評估為可以比較是否相等的型別 這些型別通常是純量基本型別，例如數值、字串和日期。 您不可依集合來群組。  
   
 ## <a name="remarks"></a>備註  
- 如果 SELECT 子句中包含彙總函式 \<選取 [清單 >]，[群組依據] 就會計算每個群組的摘要值。 當指定 GROUP BY 時，GROUP BY 清單應該包括選取清單中之任何非彙總運算式中的每一個屬性名稱，否則，GROUP BY 運算式必須完全符合選取清單運算式。  
+
+ 如果 SELECT 子句中包含彙總函式 \<select list> ，GROUP BY 會計算每個群組的摘要值。 當指定 GROUP BY 時，GROUP BY 清單應該包括選取清單中之任何非彙總運算式中的每一個屬性名稱，否則，GROUP BY 運算式必須完全符合選取清單運算式。  
   
 > [!NOTE]
 > 如果未指定 ORDER BY 子句，由 GROUP BY 子句傳回的群組將不會依照任何特定順序。 若要指定特定資料排序，建議您一律使用 ORDER BY 子句。  
@@ -60,9 +63,10 @@ GROUP BY 1   -- BAD, a constant is not allowed
  如需使用 GROUP BY 的範例，請參閱 [HAVING](having-entity-sql.md)。  
   
 ## <a name="example"></a>範例  
+
  以下 Entity SQL 查詢使用 GROUP BY 運算子指定查詢傳回的物件所在的群組。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 依照[如何：執行傳回 PrimitiveType 結果的查詢](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的程式進行。  
+1. 依照 how [to：執行傳回 PrimitiveType 結果的查詢](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的程式操作。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   

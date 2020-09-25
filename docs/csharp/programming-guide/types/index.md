@@ -1,6 +1,6 @@
 ---
 title: 類型 - C# 程式設計手冊
-description: '瞭解 c # 程式設計中的類型，例如內建類型、自訂類型、實數值型別和參考型別。'
+description: '深入瞭解 c # 程式設計中的類型，例如內建類型、自訂類型、實數值型別和參考型別。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - value types [C#]
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5a9eb3747a6b4da316bca3f1d450c1ea0f774ada
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: ad14c3367809c16268abedc99596089514986e3f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382044"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205109"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
 ## <a name="types-variables-and-values"></a>類型、變數和值
 
-C # 是強型別語言。 每個變數和常數都有型別，如同每個會評估為值的運算式一般。 每個方法宣告都會針對每個輸入參數和傳回值指定名稱、參數數目和類型和種類（值、參考或輸出）。 .NET 類別庫會定義一組內建數字型別以及較複雜型別，以代表各種邏輯建構，例如檔案系統、網路連線、物件集合與陣列，以及日期。 一般 C# 程式會使用類別庫的型別和使用者定義的型別，模型化程式的問題領域特有概念。
+C # 是強型別語言。 每個變數和常數都有型別，如同每個會評估為值的運算式一般。 每個方法宣告都會針對每個輸入參數和傳回值指定名稱、參數數目、類型和種類 (值、參考或輸出) 。 .NET 類別庫會定義一組內建數字型別以及較複雜型別，以代表各種邏輯建構，例如檔案系統、網路連線、物件集合與陣列，以及日期。 一般 C# 程式會使用類別庫的型別和使用者定義的型別，模型化程式的問題領域特有概念。
 
 可儲存在型別中的資訊包括下列各項：
 
@@ -58,13 +58,13 @@ C # 是強型別語言。 每個變數和常數都有型別，如同每個會評
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您無法宣告[int](../../language-reference/builtin-types/integral-numeric-types.md) ，然後為它指派的布林值 `true` 。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」** 作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。
+宣告變數之後，不能以新型別重新宣告它，也無法將與所宣告型別不相容的值指派給它。 例如，您不能宣告 [int](../../language-reference/builtin-types/integral-numeric-types.md) ，然後為它指派布林值 `true` 。 不過，可以將值轉換為其他型別，例如，指派給新的變數，或做為方法引數傳遞時。 編譯器會自動執行不會造成資料遺失的「型別轉換」** 作業。 而可能導致資料遺失的轉換在原始程式碼中需要有 *cast*。
 
 如需詳細資訊，請參閱[轉換和型別轉換](./casting-and-type-conversions.md)。
 
 ## <a name="built-in-types"></a>內建類型
 
-C# 提供一組標準的內建數字型別，代表整數、浮點數值、布林運算式、文字字元、十進位值及其他資料型別。 另外還有內建的 `string` 和 `object` 型別。 這些都可供您在任何 C# 程式中使用。 如需內建類型的完整清單，請參閱[內建類型](../../language-reference/builtin-types/built-in-types.md)。
+C # 提供一組標準的內建類型，以表示整數、浮點數、布林運算式、文字字元、十進位值和其他類型的資料。 另外還有內建的 `string` 和 `object` 型別。 這些都可供您在任何 C# 程式中使用。 如需內建類型的完整清單，請參閱 [內建類型](../../language-reference/builtin-types/built-in-types.md)。
 
 ## <a name="custom-types"></a>自訂類型
 
@@ -93,7 +93,7 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
 
 實值型別有兩種類別︰[struct](../../language-reference/builtin-types/struct.md) 和 [enum](../../language-reference/builtin-types/enum.md)。
 
-內建的數位類型為結構，而且它們具有可供您存取的欄位和方法：
+內建的數位類型是結構，而且具有您可以存取的欄位和方法：
 
 ```csharp
 // constant field on type byte.
@@ -114,15 +114,15 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-如需結構的詳細資訊，請參閱[結構類型](../../language-reference/builtin-types/struct.md)。 如需實數值型別的詳細資訊，請參閱實[數值型別](../../language-reference/builtin-types/value-types.md)。
+如需結構的詳細資訊，請參閱 [結構類型](../../language-reference/builtin-types/struct.md)。 如需實值型別的詳細資訊，請參閱實 [數值型別](../../language-reference/builtin-types/value-types.md)。
 
 實值型別的另一種類別是 [enum](../../language-reference/builtin-types/enum.md)。 列舉會定義一組具名的整數常數。 例如，.NET 類別庫中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 列舉包含一組指定該如何開啟檔案的具名常數整數。 其定義方式如下列範例所示：
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-`System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱 <xref:System.IO.FileMode?displayProperty=nameWithType>。
+`System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱<xref:System.IO.FileMode?displayProperty=nameWithType>。
 
-所有的委派都繼承自 <xref:System.Enum?displayProperty=nameWithType>，該列舉又繼承自 <xref:System.ValueType?displayProperty=nameWithType>。 所有適用於結構的規則，也適用於列舉。 如需有關列舉的詳細資訊，請參閱[列舉類型](../../language-reference/builtin-types/enum.md)。
+所有的委派都繼承自 <xref:System.Enum?displayProperty=nameWithType>，該列舉又繼承自 <xref:System.ValueType?displayProperty=nameWithType>。 所有適用於結構的規則，也適用於列舉。 如需列舉的詳細資訊，請參閱 [列舉類型](../../language-reference/builtin-types/enum.md)。
 
 ### <a name="reference-types"></a>參考型別
 
@@ -149,7 +149,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="types-of-literal-values"></a>常值的類型
 
-在 C# 中，常值會接收來自編譯器的型別。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母時，編譯器會推斷其型別為常值。 如需可使用字母后綴指定哪些類型的詳細資訊，請參閱[整數數數值型別](../../language-reference/builtin-types/integral-numeric-types.md)和[浮點數數值型別](../../language-reference/builtin-types/floating-point-numeric-types.md)。
+在 C# 中，常值會接收來自編譯器的型別。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母時，編譯器會推斷其型別為常值。 如需可以使用字母后置字元指定哪些類型的詳細資訊，請參閱 [整數類資料類型](../../language-reference/builtin-types/integral-numeric-types.md) 和 [浮點數](../../language-reference/builtin-types/floating-point-numeric-types.md)類型。
 
 因為輸入的是常值且所有類型最終都衍生自 <xref:System.Object?displayProperty=nameWithType>，所以您可以如下所示來撰寫和編譯程式碼：
 
@@ -157,7 +157,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="generic-types"></a>泛型類型
 
-可使用一或多個「型別參數」** 宣告的型別，做為預留位置 (具象型別**)，以供用戶端程式碼在其建立該型別的執行個體時提供實際型別。 這類的型別稱為「泛型型別」**。 例如，.NET 型別 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 有一個型*別*參數，依慣例指定名稱 T。當您建立類型的實例時，可以指定清單將包含的物件類型，例如 string：
+可使用一或多個「型別參數」** 宣告的型別，做為預留位置 (具象型別**)，以供用戶端程式碼在其建立該型別的執行個體時提供實際型別。 這類的型別稱為「泛型型別」**。 例如，.NET 型別 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 有一個依慣例指定名稱 *T*的型別參數。當您建立型別的實例時，您會指定清單將包含的物件類型，例如字串：
 
 ```csharp
 List<string> stringList = new List<string>();
@@ -166,15 +166,15 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-使用型別參數讓您能夠重複使用相同的類別來保存任何元素型別，而不需要將每個元素都轉換成 [object](../../language-reference/builtin-types/reference-types.md)。 泛型集合類別稱為強型別*集合*，因為編譯器會知道集合元素的特定型別，如果您嘗試在 `stringList` 上一個範例中將整數加入至物件，則可能會在編譯時期引發錯誤。 如需詳細資訊，請參閱[泛型](../generics/index.md)。
+使用型別參數讓您能夠重複使用相同的類別來保存任何元素型別，而不需要將每個元素都轉換成 [object](../../language-reference/builtin-types/reference-types.md)。 泛型集合類別稱為強型別 *集合* ，因為編譯器知道集合專案的特定類型，如果您嘗試將整數加入至 `stringList` 上述範例中的物件，就可以在編譯時期引發錯誤。 如需詳細資訊，請參閱[泛型](../generics/index.md)。
 
-## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>隱含類型、匿名型別和可為 null 的實數值型別
+## <a name="implicit-types-anonymous-types-and-nullable-value-types"></a>隱含類型、匿名型別和可為 null 的實值型別
 
 如先前所述，您可以使用 [var](../../language-reference/keywords/var.md) 關鍵字，隱含地輸入本機變數 (但不是類別成員)。 變數還是會在編譯時期收到型別，但其是由編譯器所提供的型別。 如需詳細資訊，請參閱[隱含型別區域變數](../classes-and-structs/implicitly-typed-local-variables.md)。
 
-在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。 為此，您可以建立「匿名型別」**。 如需詳細資訊，請參閱[匿名](../classes-and-structs/anonymous-types.md)型別。
+在某些情況下，不方便為一組您不想要儲存或在方法界限外傳遞的簡單相關值，建立簡單的具名型別。 為此，您可以建立「匿名型別」**。 如需詳細資訊，請參閱 [匿名型別](../classes-and-structs/anonymous-types.md)。
 
-一般的實值型別值不能為 [null](../../language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](../../language-reference/keywords/null.md) 值的 `int` 型別。 可為 null 的實數值型別是泛型結構類型的實例 <xref:System.Nullable%601?displayProperty=nameWithType> 。 可為 null 的實值型別在您將資料傳入和從資料庫（其中的數值可能為 null）時特別有用。 如需詳細資訊，請參閱[可為 null 的實數值型別](../../language-reference/builtin-types/nullable-value-types.md)。
+一般的實值型別值不能為 [null](../../language-reference/keywords/null.md)。 不過，您可以在該型別後面添加 `?`，建立可為 null 的實值型別。 例如，`int?` 就是也能有 [null](../../language-reference/keywords/null.md) 值的 `int` 型別。 可為 null 的實數值型別是泛型結構類型的實例 <xref:System.Nullable%601?displayProperty=nameWithType> 。 可為 null 的實值型別特別適用于當您將資料傳入和傳送來源資料庫時，數值可能會是 null。 如需詳細資訊，請參閱 [可為 null 的實數值型別](../../language-reference/builtin-types/nullable-value-types.md)。
 
 ## <a name="related-sections"></a>相關章節
 
@@ -182,7 +182,7 @@ stringList.Add(4);
 
 - [轉換和類型轉換](./casting-and-type-conversions.md)
 
-- [裝箱和取消裝箱](./boxing-and-unboxing.md)
+- [Boxing 和 Unboxing](./boxing-and-unboxing.md)
 
 - [使用動態類型](./using-type-dynamic.md)
 

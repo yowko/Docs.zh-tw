@@ -2,14 +2,15 @@
 title: <message> 的 <wsFederationHttpBinding> 項目
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 8e0903dd1313e68e2de65730e129079199ebe2f2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ea320b1d97e742d4f90ec55502f3bd429803283d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738990"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204888"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<message> 的 \<wsFederationHttpBinding> 項目
+
 定義的訊息層級安全性設定 [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) 。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "73738990"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-wsfederationhttpbinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<message>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <wsFederationBinding>
@@ -81,6 +82,7 @@ ms.locfileid: "73738990"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -115,7 +117,7 @@ ms.locfileid: "73738990"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](claimtyperequirements-element.md)|指定這個繫結之宣告型別的集合。 每個項目的型別為 <xref:System.ServiceModel.Configuration.ClaimTypeElement>。|  
 |簽發者|指定發行安全性權杖的端點。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>。|  
@@ -124,7 +126,7 @@ ms.locfileid: "73738990"
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<security>](security-of-wsfederationhttpbinding.md)|定義繫結的安全性設定。|  
   
@@ -134,8 +136,8 @@ ms.locfileid: "73738990"
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
-- [Securing Services and Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

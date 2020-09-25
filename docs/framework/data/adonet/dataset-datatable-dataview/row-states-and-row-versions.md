@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1b80ae78fad22989f99fb1e992d4978a192e0c66
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784337"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204524"
 ---
 # <a name="row-states-and-row-versions"></a>資料列狀態和資料列版本
+
 ADO.NET 使用資料列狀態和版本來管理資料表中的資料列。 資料列狀態表示資料列的狀態；修改資料列時，資料列版本會維護存放在資料列中的值，包括目前值、原始值和預設值。 例如，修改資料列中的資料行後，資料列的狀態為 `Modified`，並有兩個資料列版本：`Current` (包含目前的資料列值) 和 `Original` (包含修改資料行之前的資料列值)。  
   
  每個 <xref:System.Data.DataRow> 物件都有 <xref:System.Data.DataRow.RowState%2A> 屬性，您可以檢查該屬性來判斷資料列的目前狀態。 下列表格簡短說明每個 `RowState` 列舉值。  
@@ -41,7 +42,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  下列表格簡短說明每個 `DataRowVersion` 列舉值。  
   
-|DataRowVersion 值|說明|  
+|DataRowVersion 值|描述|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|資料列的目前值。 對於 `RowState` 為 `Deleted` 的資料列，此資料列版本不存在。|  
 |<xref:System.Data.DataRowVersion.Default>|指定資料列的預設資料列版本。 `Added`、`Modified` 或 `Deleted` 資料列的預設資料列版本為 `Current`。 `Detached` 資料列的預設資料列版本為 `Proposed`。|  
@@ -99,4 +100,4 @@ foreach (DataRow delRow in delRows)
 - [在 DataTable 中操作資料](manipulating-data-in-a-datatable.md)
 - [DataSet、DataTable 和 DataView](index.md)
 - [DataAdapter 和 DataReader](../dataadapters-and-datareaders.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)
