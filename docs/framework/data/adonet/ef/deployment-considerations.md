@@ -2,14 +2,15 @@
 title: 部署考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: bdc7a6211681c78d81ba750844611b35e779abd2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 034fb48050fb0e6a9aabf6c183f8721f0a7115e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542688"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181124"
 ---
 # <a name="deployment-considerations-entity-framework"></a>部署考量 (Entity Framework)
+
 本主題提供的資訊是有關部署使用 ADO.NET Entity Framework 進行資料存取的應用程式。 如需 Entity Framework 的詳細資訊，請參閱 [消費者入門](getting-started.md)。  
   
  Entity Framework 提供一組整合的工具，可讓您更輕鬆在 Visual Studio 中進行開發。 如需詳細資訊，請參閱 [ADO.NET 實體資料模型工具](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))。 本主題未描述如何使用特定技術來部署 Entity Framework 架構應用程式。  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2c2dc71cc9e5c445fd05534dad5ad47fd66f436
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149540"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194722"
 ---
 # <a name="handling-dataadapter-events"></a>處理 DataAdapter 的事件
+
 ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可讓您用來回應資料來源中的資料變更。 下表說明 `DataAdapter` 事件。  
   
 |事件|描述|  
@@ -22,6 +23,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可
 |`FillError`|`Fill` 作業過程中發生錯誤。|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating 和 RowUpdated  
+
  在資料來源中處理 `RowUpdating` 之資料列的任何更新之前，會引發 <xref:System.Data.DataSet>。 在資料來源中處理 `RowUpdated` 之資料列的任何更新之後，會引發 `DataSet`。 所以，您可以使用 `RowUpdating` 在更新發生前修改更新行為，讓您更能控制更新發生的時間、保留對已更新資料列的參考、取消目前更新、將更新排程於稍後進行批次處理等其他功能。 `RowUpdated` 對於回應在更新期間發生的錯誤和例外狀況而言很有用。 您可以將錯誤資訊加入 `DataSet` 以及重試邏輯等等。  
   
  傳遞至 <xref:System.Data.Common.RowUpdatingEventArgs> 和 <xref:System.Data.Common.RowUpdatedEventArgs> 事件的 `RowUpdating` 和 `RowUpdated` 引數包括下列項目：`Command` 屬性 (參考正用來執行更新的 `Command` 物件)、`Row` 屬性 (參考包含已更新資訊的 `DataRow` 物件)、`StatementType` 屬性 (正在執行該類型的更新)、`TableMapping` (如果適用)；以及作業的 `Status`。  
@@ -39,7 +41,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可
   
  您也可以使用 `ContinueUpdateOnError` 屬性來處理更新資料列的錯誤。 如果 `DataAdapter.ContinueUpdateOnError` 為 `true`，則當資料列的更新造成擲回例外狀況時，會將例外狀況的文字放入特定資料列的 `RowError` 資訊中，並繼續作業，而不擲回例外狀況。 這樣一來，您就可以在完成 `Update` 後才回應錯誤，而 `RowUpdated` 事件則是讓您在發生錯誤時立即回應該錯誤。  
   
- 下列程式碼範例顯示如何加入和移除事件處理常式。 `RowUpdating` 事件處理常式將所有的刪除記錄和時間戳記寫入記錄檔。 事件`RowUpdated`處理常式將錯誤資訊添加到 中的`RowError``DataSet`行的屬性，禁止異常並繼續處理（鏡像 的行為`ContinueUpdateOnError` = `true`）。  
+ 下列程式碼範例顯示如何加入和移除事件處理常式。 `RowUpdating` 事件處理常式將所有的刪除記錄和時間戳記寫入記錄檔。 `RowUpdated`事件處理常式會將錯誤資訊加入 `RowError` 中資料列的屬性 `DataSet` ，隱藏例外狀況，然後繼續處理 (鏡像) 的行為 `ContinueUpdateOnError`  =  `true` 。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -125,6 +127,7 @@ protected static void OnRowUpdated(
 ```  
   
 ## <a name="fillerror"></a>FillError  
+
  `DataAdapter` 作業期間發生錯誤時，`FillError` 會發出 `Fill` 事件。 當加入資料列中的資料必須放棄一些精確度，不然無法轉換為 .NET Framework 型別時，通常就會發生這類型的錯誤。  
   
  `Fill` 作業期間如果發生錯誤，則不會將目前的資料列加入 `DataTable`。 `FillError` 事件可讓您解析錯誤並加入資料列，或忽略排除的資料列，繼續進行 `Fill` 作業。  
@@ -190,6 +193,6 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 
 - [DataAdapter 和 DataReader](dataadapters-and-datareaders.md)
 - [處理 DataSet 的事件](./dataset-datatable-dataview/handling-dataset-events.md)
-- [處理 DataTable 事件](./dataset-datatable-dataview/handling-datatable-events.md)
+- [處理 DataTable 的事件](./dataset-datatable-dataview/handling-datatable-events.md)
 - [事件](../../../standard/events/index.md)
 - [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

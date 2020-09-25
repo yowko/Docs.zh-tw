@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552280"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176145"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> 項目
 
@@ -22,13 +22,14 @@ ms.locfileid: "90552280"
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<AppContextSwitchOverrides>**
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```xml
 <AppContextSwitchOverrides value="name1=value1[[;name2=value2];...]" />
 ```
 
 ## <a name="attributes-and-elements"></a>屬性和項目
+
  下列章節說明屬性、子元素和父元素。
 
 ### <a name="attributes"></a>屬性
@@ -44,6 +45,7 @@ ms.locfileid: "90552280"
 |"name = value"|預先定義的參數名稱及其值 (`true` 或 `false`) 。 多個參數名稱/值組會以分號分隔 ( ";") 。 如需 .NET Framework 所支援的預先定義參數名稱清單，請參閱「備註」一節。|
 
 ### <a name="child-elements"></a>子元素
+
  無。
 
 ### <a name="parent-elements"></a>父項目
@@ -54,6 +56,7 @@ ms.locfileid: "90552280"
 |`runtime`|包含有關執行階段初始化選項的資訊。|
 
 ## <a name="remarks"></a>備註
+
  從 .NET Framework 4.6 開始， `<AppContextSwitchOverrides>` 設定檔中的專案可讓 API 的呼叫端判斷其應用程式是否可以利用新的功能，或保留與舊版程式庫的相容性。 例如，如果在兩個程式庫版本之間變更 API 的行為，則專案 `<AppContextSwitchOverrides>` 會允許該 api 的呼叫端選擇不在支援新功能的程式庫版本上的新行為。 針對在 .NET Framework 中呼叫 Api 的應用程式， `<AppContextSwitchOverrides>` 如果應用程式是在包含該功能的 .NET Framework 版本上執行，則專案也可以允許呼叫端，其應用程式的目標為舊版 .NET Framework 以加入宣告新功能。
 
  專案的 `value` 屬性 `<AppContextSwitchOverrides>` 包含單一字串，其中包含一個或多個以分號分隔的名稱/值組。  每個名稱都會識別相容性參數，而其對應的值是布林值 (`true` 或 `false`) ，指出是否已設定參數。 根據預設，參數是 `false` ，而程式庫會提供新的功能。 只有在參數設定 (也會) 其值時，才會提供先前的功能 `true` 。 這可讓程式庫為現有的 API 提供新的行為，同時允許相依于先前行為的呼叫端退出宣告新的功能。

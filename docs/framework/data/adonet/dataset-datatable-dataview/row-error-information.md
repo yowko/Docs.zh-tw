@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: 5ede6e2cd52ad55f8c35a42d137044dd1ceea400
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8673b7fbc2e4238f7047698376c53af991de9f1b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785963"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181163"
 ---
 # <a name="row-error-information"></a>資料列錯誤資訊
-編輯 <xref:System.Data.DataTable> 中的值時，若要避免必須在每次發生資料列錯誤時都回應，則可以將錯誤資訊加入至資料列中，供日後使用。 針對這項用途，<xref:System.Data.DataRow> 物件會為每個資料列提供 <xref:System.Data.DataRow.RowError%2A> 屬性。 將資料加入至**datarow**的**RowError**屬性時，會<xref:System.Data.DataRow.HasErrors%2A>將**datarow**的屬性設為**true**。 如果**datarow**是**DataTable**的一部分，而**datarow. HasErrors**為**true**，則**HasErrors**屬性也是**true**。 這也適用于**DataTable**所屬的**資料集**。 測試錯誤時，您可以檢查**HasErrors**屬性來判斷是否已將錯誤資訊加入任何資料列中。 如果**HasErrors**為**true**，則您<xref:System.Data.DataTable.GetErrors%2A>可以使用**DataTable**的方法來傳回和檢查只有錯誤的資料列，如下列範例所示。  
+
+編輯 <xref:System.Data.DataTable> 中的值時，若要避免必須在每次發生資料列錯誤時都回應，則可以將錯誤資訊加入至資料列中，供日後使用。 針對這項用途，<xref:System.Data.DataRow> 物件會為每個資料列提供 <xref:System.Data.DataRow.RowError%2A> 屬性。 將資料加入至**datarow**的**RowError**屬性時，會將 <xref:System.Data.DataRow.HasErrors%2A> **DataRow**的屬性設定為**true**。 如果 **datarow** 是 **DataTable**的一部分，且 **HasErrors** 為 **true**，則 **DataTable. HasErrors** 屬性也是 **true**。 這也適用于**DataTable**所屬的**資料集**。 測試錯誤時，您可以檢查 **HasErrors** 屬性，以判斷是否已將錯誤資訊加入至任何資料列。 如果 **HasErrors** 為 **true**，您可以使用 <xref:System.Data.DataTable.GetErrors%2A> **DataTable** 的方法來傳回和檢查具有錯誤的資料列，如下列範例所示。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable("Customers")  
@@ -83,4 +84,4 @@ protected static void OnRowChanged(
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - [在 DataTable 中操作資料](manipulating-data-in-a-datatable.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

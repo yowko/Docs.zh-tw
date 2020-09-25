@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: b741b3bc9c03faaa5fa2c01bd8f70d4be9b099c2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 83dbd2dc497fafaf1922f8ad53208d0ab14f14a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063662"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185895"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>如何宣告、具現化和使用委派 (c # 程式設計手冊) 
+
 在 C# 1.0 和更新版本中，宣告委派的方式如下列範例所示。  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -31,13 +32,14 @@ ms.locfileid: "88063662"
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- 如需詳細資訊，請參閱[Lambda 運算式](../../language-reference/operators/lambda-expressions.md)。  
+ 如需詳細資訊，請參閱 [Lambda 運算式](../../language-reference/operators/lambda-expressions.md)。  
   
  下列範例說明如何宣告、具現化和使用委派。 `BookDB` 類別會封裝用來保留書籍資料的書店資料庫。 它會公開 `ProcessPaperbackBooks` 方法，此方法會尋找資料庫中的所有平裝書，並針對每本書呼叫委派。 所使用的 `delegate` 類型稱為 `ProcessBookDelegate`。 `Test` 類別會使用這個類別來列印平裝書的書名和平均價格。  
   
  使用委派，可在書店資料庫和用戶端程式碼之間建立良好的功能區隔。 用戶端程式碼不需要瞭解保存書籍的方式，或是書店程式碼尋找平裝書的方式。 書店程式碼不需要知道當它找到平裝書之後該如何處理它們。  
   
 ## <a name="example"></a>範例  
+
  [!code-csharp[csProgGuideDelegates#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#12)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
