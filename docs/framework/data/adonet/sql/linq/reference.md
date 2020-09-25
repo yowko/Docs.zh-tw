@@ -2,19 +2,21 @@
 title: 參考資料
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 55754ef7bb06a1ceac7d4c12098847f4db16e928
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 05ff05d165ad902eba0e984089ab1dde7f24fca7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553554"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184855"
 ---
 # <a name="reference"></a>參考
+
 本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
   
  您也可以在 Microsoft Docs 中搜尋特定問題，尤其是參與 [LINQ 論壇](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql)，您可以在此討論更多複雜的主題與專家的詳細資料。 此外，您還可以研讀詳述 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 技術的白皮書，其中包含 Visual Basic 和 C# 程式碼範例。 如需詳細資訊，請參閱 [LINQ to SQL：適用于關聯式資料的 .Net 語言整合查詢](/previous-versions/dotnet/articles/bb425822(v=msdn.10))。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [資料類型與函式](data-types-and-functions.md)  
  描述 common language runtime (CLR) 結構在 SQL 中，只有在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 轉譯引擎中明確提供轉換的情況下，才會有對應的運算式。  
   
@@ -37,6 +39,7 @@ ms.locfileid: "90553554"
  描述如何 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 將標準查詢運算子轉譯為 SQL 命令。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [LINQ to SQL](index.md)  
  提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主題的入口網站。  
   

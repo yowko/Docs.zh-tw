@@ -2,14 +2,15 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cfddfb9ebfc7c3447af977e14738baabebc8fe9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732563"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177845"
 ---
 # \<webSocketSettings>
+
 用來指定 Web 通訊端設定的組態元素。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "73732563"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webSocketSettings>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netHttpBinding>
@@ -37,6 +38,7 @@ ms.locfileid: "73732563"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -61,15 +63,17 @@ ms.locfileid: "73732563"
 |永不|永遠不使用 Web 通訊端通訊協定。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |\<netHttpBinding>|指定 NetHttpBinding|  
   
 ## <a name="example"></a>範例  
+
  下列範例示範如何使用 \<webSocketSettings> 元素。  
   
 ```xml  
@@ -95,5 +99,5 @@ ms.locfileid: "73732563"
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

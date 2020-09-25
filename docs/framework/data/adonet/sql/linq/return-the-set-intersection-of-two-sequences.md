@@ -5,18 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d09c344e-3548-4944-a3ed-051880e3f5b8
-ms.openlocfilehash: 944d0b2efe1e74f901a493d1c3202d0f180d599d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 421ec544345e41f910bf80c855a3a6b4de1c46a6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792699"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200221"
 ---
 # <a name="return-the-set-intersection-of-two-sequences"></a>傳回兩個序列的集合交集
+
 使用 <xref:System.Linq.Queryable.Intersect%2A> 運算子可傳回兩個序列的集合交集。  
   
 ## <a name="example"></a>範例  
- 這個範例會<xref:System.Linq.Queryable.Intersect%2A>使用傳回所有國家/地區的序列，其中同時`Customers`包含和`Employees` live。  
+
+ 這則範例會使用 <xref:System.Linq.Queryable.Intersect%2A> 來傳回所有國家/地區的序列，而這些國家/地區都是 `Customers` 和 `Employees` 現場。  
   
  [!code-csharp[DLinqQueryExamples#42](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#42)]
  [!code-vb[DLinqQueryExamples#42](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#42)]  
