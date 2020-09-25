@@ -5,25 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 25419f8a810b52103e6b862cfe2fe6ab5a1fd981
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1c65389c8c5664f86f3f0c04829a2422908d72d1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040082"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202288"
 ---
 # <a name="generating-strongly-typed-datasets"></a>產生強類型資料集
-假設 XML 架構符合 XML 架構定義語言（XSD）標準，您可以使用 Windows 軟體發展工具組（SDK）所提供的 XSD.EXE 工具來產生強型別 <xref:System.Data.DataSet>。  
+
+如果 XML 架構符合 XML 架構定義語言 (XSD) standard，您就可以 <xref:System.Data.DataSet> 使用 Windows 軟體開發套件 (SDK) 提供的 XSD.exe 工具來產生強型別。  
   
- （若要從資料庫資料表建立 xsd，請參閱 <xref:System.Data.DataSet.WriteXmlSchema%2A> 或使用[Visual Studio 中的資料集](/visualstudio/data-tools/dataset-tools-in-visual-studio)）。  
+  (若要從資料庫資料表建立 xsd，請參閱 <xref:System.Data.DataSet.WriteXmlSchema%2A> 或 [使用 Visual Studio) 中的資料集](/visualstudio/data-tools/dataset-tools-in-visual-studio) 。  
   
- 下列程式碼顯示使用此工具產生**資料集**的語法。  
+ 下列程式碼顯示使用這個工具來產生 **資料集** 的語法。  
   
 ```console  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- 在此語法中，`/d` 指示詞會告訴工具產生**資料集**，而 `/l:` 會告訴工具要使用的語言（例如， C#或 Visual Basic .net）。 選擇性的 `/eld` 指示詞指定您可以使用 LINQ to DataSet 來查詢所產生的**資料集。** 這個選項會在也有指定 `/d` 選項時使用。 如需詳細資訊，請參閱[查詢具類型的資料集](../querying-typed-datasets.md)。 選擇性的 `/n:` 指示詞會告訴工具，也會產生稱為**XSDSchema**之**資料集**的命名空間。 命令的輸出為 XSDSchemaFileName.cs，可以在 ADO.NET 應用程式中編譯和使用。 產生的程式碼可以編譯為程式庫或模組。  
+ 在這個語法中， `/d` 指示詞會告知工具產生 **資料集**，並 `/l:` 告知工具要使用哪種語言 (例如，c # 或 Visual Basic .net) 。 選擇性 `/eld` 指示詞指定您可以使用 LINQ to DataSet 來查詢所產生的 **資料集。** 這個選項會在也有指定 `/d` 選項時使用。 如需詳細資訊，請參閱 [查詢具類型的資料集](../querying-typed-datasets.md)。 選擇性指示詞會 `/n:` 指示工具也會產生名為**XSDSchema**之**資料集**的命名空間。 命令的輸出為 XSDSchemaFileName.cs，可以在 ADO.NET 應用程式中編譯和使用。 產生的程式碼可以編譯為程式庫或模組。  
   
  下列程式碼顯示使用 C# 編譯器 (csc.exe)，將產生的程式碼編譯成程式庫的語法。  
   
@@ -43,7 +44,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- 下列程式碼範例會使用名為**CustomerDataSet**的具類型**資料集**，從**Northwind**資料庫載入客戶清單。 一旦使用**Fill**方法載入資料，此範例就會使用具類型的**CustomersRow** （**DataRow**）物件，在**Customers**資料表中的每個客戶上執行迴圈。 這可讓您直接存取**CustomerID**資料行，而不是透過**DataColumnCollection**。  
+ 下列程式碼範例會使用名為**CustomerDataSet**的具類型**資料集**，從**Northwind**資料庫載入客戶清單。 使用**Fill**方法載入資料之後，此範例會使用具型別**CustomersRow** (**DataRow**) 物件，在**Customers**資料表中執行每個客戶的迴圈。 這可讓您直接存取 **CustomerID** 資料行，而不是透過 **DataColumnCollection**。  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -73,7 +74,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- 以下是範例中使用的 XML 架構：
+ 以下是範例所使用的 XML 架構：
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -94,10 +95,10 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [具類型的 DataSet](typed-datasets.md)
+- [具類型資料集](typed-datasets.md)
 - [DataSet、DataTable 和 DataView](index.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

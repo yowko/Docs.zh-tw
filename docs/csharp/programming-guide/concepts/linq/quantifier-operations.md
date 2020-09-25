@@ -1,16 +1,17 @@
 ---
 title: 數量詞作業 (C#)
-description: 瞭解數量詞作業。 這些作業會傳回布林值，指出序列中的部分或全部元素是否符合條件。
+description: 瞭解數量詞作業。 這些作業會傳回布林值，指出序列中的部分或所有元素是否符合條件。
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: ce06f887d3ad7b10cbdedf9e33072df2c0819ef1
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: ffefe1715fd8a074692967e825e0f55673bb2b27
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299145"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202535"
 ---
 # <a name="quantifier-operations-c"></a>數量詞作業 (C#)
+
 數量詞作業會傳回 <xref:System.Boolean> 值，指出序列中的部分或所有項目是否符合條件。  
   
  下圖說明兩個不同來源序列上的兩個不同數量詞作業。 第一個作業會詢問一個或多個項目是否為字元 'A'，而結果為 `true`。 第二個作業會詢問所有項目是否都為字元 'A'，而結果為 `true`。  
@@ -30,16 +31,19 @@ ms.locfileid: "87299145"
 ## <a name="query-expression-syntax-examples"></a>查詢運算式語法範例  
   
 ### <a name="all"></a>全部  
-下列範例 `All` 會使用來檢查所有字串是否為特定長度。
+
+下列範例 `All` 會使用來檢查所有字串的長度是否為特定長度。
   
 [!code-csharp[All](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#All)]  
   
 ### <a name="any"></a>任意  
-下列範例 `Any` 會使用來檢查任何字串的開頭是否為 ' o '。  
+
+下列範例 `Any` 會使用來檢查任何字串是否以 ' o ' 開頭。  
   
 [!code-csharp[Any](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Any)]  
   
 ### <a name="contains"></a>包含  
+
 下列範例 `Contains` 會使用來檢查陣列是否有特定的元素。  
   
 [!code-csharp[Contains](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Contains)]  
@@ -49,4 +53,4 @@ ms.locfileid: "87299145"
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
 - [在執行階段動態指定述詞篩選](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
-- [如何查詢包含指定字組的句子（LINQ）（c #）](./how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
+- [如何查詢包含指定字組的句子 (LINQ)  (c # ) ](./how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)

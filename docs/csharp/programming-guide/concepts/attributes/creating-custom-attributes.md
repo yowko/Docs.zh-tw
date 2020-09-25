@@ -1,16 +1,17 @@
 ---
 title: 建立自訂屬性 (C#)
-description: '瞭解如何透過定義衍生自屬性類別的屬性類別，在 c # 中建立自訂屬性。'
+description: '瞭解如何藉由定義衍生自 Attribute 類別的屬性類別，在 c # 中建立自訂屬性。'
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 7d6f98620388af8715652dcbcfe78366952b853d
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6946b707134b2bdbc245b8786f144517a5870440
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925081"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202600"
 ---
 # <a name="creating-custom-attributes-c"></a>建立自訂屬性 (C#)
+
 您可以建立自己的自訂屬性，方法是定義屬性類別，這是直接或間接衍生自 <xref:System.Attribute> 的類別，它能快速且簡單地在中繼資料中識別屬性定義。 假設您想要用撰寫類型的程式設計人員姓名來標記類型。 您可能會定義自訂的 `Author` 屬性類別：  
   
 ```csharp  
@@ -64,7 +65,7 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection>
 - [C # 程式設計指南](../../index.md)
