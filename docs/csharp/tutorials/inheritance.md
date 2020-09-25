@@ -4,20 +4,20 @@ description: 了解如何使用 C# 程式庫和應用程式中的繼承。
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: b0d6a4a3db4d6606375cc3364ee7abc3029f1d9b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063506"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190458"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
 本教學課程將介紹 C# 中的繼承。 繼承是一種物件導向程式設計語言的功能，可讓您定義基底類別，提供特定功能 (資料和行為)，以及定義繼承或覆寫該功能的衍生類別。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-本教學課程假設您已安裝 .NET Core SDK。 請造訪[.Net Core 下載](https://dotnet.microsoft.com/download)頁面下載。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
+本教學課程假設您已安裝 .NET Core SDK。 請造訪 [.Net Core 下載](https://dotnet.microsoft.com/download) 頁面下載。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
 
 ## <a name="running-the-examples"></a>執行範例
 
@@ -165,7 +165,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>設計基底類別和衍生類別
 
-讓我們來看設計基底類別和其衍生類別的流程。 在本節中，您將定義基類， `Publication` 其代表任何類型的發行物，例如書籍、雜誌、報紙、期刊、文章等等。您也會定義 `Book` 衍生自的類別 `Publication` 。 您可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。
+讓我們來看設計基底類別和其衍生類別的流程。 在本節中，您將定義一個基類， `Publication` 它代表任何類型的發行物，例如書籍、雜誌、報紙、期刊、文章等等。您也會定義衍生自的 `Book` 類別 `Publication` 。 您可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。
 
 ### <a name="the-base-publication-class"></a>基底 Publication 類別
 
@@ -277,6 +277,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>設計抽象基底類別及其衍生類別
+
 <a name="abstract"></a>
 
 在上述範例中，您定義的基底類別會為一些方法提供實作，以允許衍生類別共用程式碼。 不過，在許多情況下，基底類別不需要提供實作。 相反地，基底類別是宣告「抽象方法」** 的「抽象類別」**；它會作為範本，定義每個衍生類別都必須實作的成員。 通常在抽象基底類別中，每個衍生類型都會有該類型的唯一實作。 您已使用 abstract 關鍵字來標示類別，因為具現化 `Publication` 物件沒有任何意義，但該類別確實會提供發行物通用功能的實作。

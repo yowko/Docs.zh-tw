@@ -3,14 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 7c2b6bdc62da63905d7ff33a9984808e7b7d114f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2f37019fa0787f5c5553dbd3debc173ec0a047ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544536"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189951"
 ---
 # \<add>
+
 將指定的安全性權杖處理常式新增至權杖處理常式集合。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "90544536"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -35,6 +36,7 @@ ms.locfileid: "90544536"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -59,6 +61,7 @@ ms.locfileid: "90544536"
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|指定向端點註冊的安全性權杖處理常式集合。|  
   
 ## <a name="remarks"></a>備註  
+
  專案 `<add>` 可以採用單一子項目，以指定權杖處理常式的設定。 這取決於透過元素的屬性所參考的處理常式類別是否 `type` `<add>` 提供這項功能的支援。 提供此功能的 Token 處理常式類別必須公開接受物件的函式 <xref:System.Xml.XmlElement> 。  
 
 ```csharp  
@@ -78,6 +81,7 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
  在處理常式上指定的設定會覆寫在專案底下的權杖處理常式集合上指定的對等設定 [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) ，以及在專案下的服務層級所指定的設定 [\<identityConfiguration>](identityconfiguration.md) 。  
   
 ## <a name="example"></a>範例  
+
  下列 XML 會示範如何使用和專案 `<add>` ， `<remove>` 以自訂會話權杖處理常式來取代預設的會話 token 處理常式。 XML 取自 `ClaimsAwareWebFarm` 範例。  
   
 ```xml  

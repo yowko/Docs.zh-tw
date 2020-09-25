@@ -3,15 +3,16 @@ title: 工作流程<behavior> 的 <serviceBehaviors>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 071cff8e9f6ec3fa0546a07d19160869d8b43f60
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 14c528746963a3078e0ab377d095414d2fca0dbe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152316"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189613"
 ---
 # <a name="behavior-of-servicebehaviors-of-workflow"></a>工作流程\<behavior> 的 \<serviceBehaviors>
-**行為**元素包含服務行為的設定集合。 每個行為都會依其**名稱**編制索引。 服務可以使用元素的**behaviorConfiguration**屬性，透過這個名稱連結至每個行為 [\<endpoint>](../wcf/endpoint-element.md) 。 如此可允許端點共用通用行為組態，而不用重新定義設定。  
+
+**行為**元素包含服務行為的設定集合。 每個行為都會依其 **名稱**來編制索引。 服務可以使用專案的 **behaviorConfiguration** 屬性，透過這個名稱連結到每個行為 [\<endpoint>](../wcf/endpoint-element.md) 。 如此可允許端點共用通用行為組態，而不用重新定義設定。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "79152316"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors-of-workflow.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<behavior>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.ServiceModel>  
@@ -52,6 +53,7 @@ ms.locfileid: "79152316"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -62,7 +64,7 @@ ms.locfileid: "79152316"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<bufferReceive>](bufferreceive.md)|讓服務可以使用緩衝接收處理的服務行為，該處理可讓工作流程服務處理失序的訊息。|  
 |[\<routing>](../wcf/routing-of-servicebehavior.md)|服務行為，可讓服務透過使用 <xref:System.Activities.Tracking.EtwTrackingParticipant> 來利用 ETW 追蹤。|  
@@ -74,6 +76,6 @@ ms.locfileid: "79152316"
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<serviceBehaviors>](servicebehaviors-of-workflow.md)|服務行為項目的集合。|

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 0d62c8d3c4669673d26f2d5535d7940fce702f66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ea063b333ea0680071b880f26753bfd74b71d80f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547443"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91188872"
 ---
 # <a name="table-valued-parameters"></a>資料表值參數
+
 資料表值參數提供從用戶端應用程式，將多個資料列的資料封送至 SQL Sever 的簡便方式，而不需多次來回存取或特殊的伺服器端邏輯才能處理資料。 您可以使用資料表值參數，以一個參數化命令在用戶端應用程式中封裝資料列的資料，並傳送至伺服器。 傳入的資料列會儲存於資料表變數中，之後可使用 Transact-SQL 進行運算。  
   
  資料表值參數中的資料行值可透過標準的 Transact-SQL SELECT 陳述式加以存取。 資料表值參數為強型別參數，其結構會自動驗證。 資料表值參數的大小只受限於伺服器記憶體。  
@@ -29,6 +30,7 @@ ms.locfileid: "90547443"
 |[使用者定義資料表類型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|說明用來宣告資料表值參數的使用者定義資料表類型。|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>在舊版 SQL Server 中傳遞多個資料列  
+
  在 SQL Server 2008 中引進資料表值參數之前，將多個資料列傳遞至預存程序或參數化 SQL 命令的選項有所限制。 開發人員可以從下列選項中選擇將多個資料列傳遞至伺服器的方式：  
   
 - 使用一系列的個別參數來代表多個資料行與資料列中的值。 使用這個方法時，可以傳遞的資料量會受到允許的參數數目限制。 SQL Server 程序最多可以有 2100 個參數。 需要伺服器端邏輯，才能將這些個別的值組合成資料表變數或暫存資料表來進行處理。  
@@ -40,6 +42,7 @@ ms.locfileid: "90547443"
 - 使用 `bcp` 公用程式或 <xref:System.Data.SqlClient.SqlBulkCopy> 物件，將許多資料列載入至資料表。 雖然此技術非常有效率，但除非將資料載入暫存資料表或資料表變數中，否則不支援伺服器端處理。  
   
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數型別  
+
  資料表值參數是以使用 Transact-sql CREATE TYPE 語句所定義的強型別資料表結構為基礎。 您必須先在 SQL Server 中建立資料表類型並定義此結構，然後才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱 [使用者定義資料表類型](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))。  
   
  下列陳述式會建立名為 CategoryTableType 的資料表類型，其中包含 CategoryID 與 CategoryName 資料行：  
@@ -57,6 +60,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ```  
   
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>使用資料表值參數 &#40;transact-SQL&#41; 修改資料  
+
  資料表值參數可透過執行單一陳述式，在以集合為基礎且會影響多個資料列的資料修改中使用。 例如，您可以選取資料表值參數中的所有資料列，並將其插入資料庫資料表中，或者您可以透過將資料表值參數聯結至您要更新的資料表，以建立更新陳述式。  
   
  下列 Transact-SQL UPDATE 陳述式會示範如何將資料表值參數聯結至 Categories 資料表，藉以運用此參數。 當您在 FROM 子句中搭配 JOIN 使用資料表值參數時，也必須為其設定別名，例如下方所示，其中資料表值參數設定別名 "ec"：  
@@ -76,6 +80,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ```  
   
 ## <a name="limitations-of-table-valued-parameters"></a>資料表值參數的限制  
+
  資料表值參數有幾個限制：  
   
 - 您無法將資料表值參數傳遞至 [CLR 使用者定義函式](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions)。  
@@ -87,6 +92,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 - 您無法使用 ALTER TABLE 陳述式來修改資料表值參數的設計。  
   
 ## <a name="configuring-a-sqlparameter-example"></a>設定 SqlParameter 範例  
+
  <xref:System.Data.SqlClient> 支援從 <xref:System.Data.DataTable>、<xref:System.Data.Common.DbDataReader> 或 <xref:System.Collections.Generic.IEnumerable%601> \ <xref:Microsoft.SqlServer.Server.SqlDataRecord>物件填入資料表值參數。 您必須使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 屬性來指定資料表值參數的類型名稱。 `TypeName` 必須與先前在伺服器上所建立的相容型別名稱相符。 下列程式碼片段示範如何設定 <xref:System.Data.SqlClient.SqlParameter> 以插入資料。  
 
 在下列範例中，`addedCategories` 變數包含 <xref:System.Data.DataTable>。 若要查看變數的填入方式，請參閱下一節中的範例，[將資料表值參數傳遞至預存程序](#passing)。
@@ -130,6 +136,7 @@ tvpParam.SqlDbType = SqlDbType.Structured
 ```  
   
 ## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> 將資料表值參數傳遞至預存程式  
+
  此範例示範如何將資料表值參數資料傳遞至預存程序。 程式碼會透過使用 <xref:System.Data.DataTable> 方法，將加入的資料列解壓縮至新的 <xref:System.Data.DataTable.GetChanges%2A> 之中。 然後，程式碼會定義 <xref:System.Data.SqlClient.SqlCommand>，將 <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> 屬性設定為 <xref:System.Data.CommandType.StoredProcedure>。 <xref:System.Data.SqlClient.SqlParameter> 是使用 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 方法填入的，而且 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 會設定為 `Structured`。 然後使用 <xref:System.Data.SqlClient.SqlCommand> 方法來執行 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>。  
   
 ```csharp  
@@ -172,6 +179,7 @@ End Using
 ```  
   
 ### <a name="passing-a-table-valued-parameter-to-a-parameterized-sql-statement"></a>將資料表值參數傳遞至參數化 SQL 陳述式  
+
  下列範例示範如何使用 INSERT 陳述式搭配以資料表值參數作為資料來源的 SELECT 子查詢，將資料插入至 dbo.Category 資料表。 將資料表值參數傳遞至參數化 SQL 陳述式時，您必須使用 <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> 的新 <xref:System.Data.SqlClient.SqlParameter> 屬性來指定資料表值參數的類型名稱。 這個 `TypeName` 必須與先前在伺服器上所建立的相容型別名稱相符。 此範例中的程式碼會使用 `TypeName` 屬性來參考 dbo.CategoryTableType 中定義的型別結構。  
   
 > [!NOTE]
@@ -228,6 +236,7 @@ End Using
 ```  
   
 ## <a name="streaming-rows-with-a-datareader"></a>使用 DataReader 來資料流處理資料列  
+
  您也可以使用衍生自 <xref:System.Data.Common.DbDataReader> 的任何物件，將資料列的資料流導引至資料表值參數。 下列程式碼片段示範如何使用 <xref:System.Data.OracleClient.OracleCommand> 與 <xref:System.Data.OracleClient.OracleDataReader>，從 Oracle 資料庫擷取資料。 然後，程式碼會設定 <xref:System.Data.SqlClient.SqlCommand>，以使用單一輸入參數來叫用預存程序。 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 的 <xref:System.Data.SqlClient.SqlParameter> 屬性會設定為 `Structured`。 <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> 會將 `OracleDataReader` 結果集以資料表值參數的方式傳遞至預存程序。  
   
 ```csharp  

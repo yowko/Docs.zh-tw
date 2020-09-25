@@ -5,23 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 2ec9415f63151443d5008fbce471fabeb89cdb91
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 7c982550533cb6d8547ab2ce78ad2e814d07857f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656167"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184790"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 應用程式中的 SqlDependency
+
 此節的範例示範如何利用 ASP.NET <xref:System.Web.Caching.SqlCacheDependency> 物件，間接使用 <xref:System.Data.SqlClient.SqlDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 物件會使用 <xref:System.Data.SqlClient.SqlDependency> 來接聽通知，並正確更新快取。  
   
 > [!NOTE]
 > 範例程式碼假設您已啟用查詢通知，方法是在 [啟用查詢通知](enabling-query-notifications.md)的情況下執行腳本。  
   
 ## <a name="about-the-sample-application"></a>關於範例應用程式  
+
  此範例應用程式會使用單一 ASP.NET 網頁，在 <xref:System.Web.UI.WebControls.GridView> 控制項中顯示 **AdventureWorks** SQL Server 資料庫的產品資訊。 當頁面載入時，程式碼會將目前的時間寫入至 <xref:System.Web.UI.WebControls.Label> 控制項。 然後會定義 <xref:System.Web.Caching.SqlCacheDependency> 物件，並在 <xref:System.Web.Caching.Cache> 物件上設定屬性，以儲存快取資料長達三分鐘。 然後，程式碼會連線到資料庫並擷取資料。 當頁面載入且應用程式正在執行時，ASP.NET 將從快取中擷取資料，您可以透過注意頁面上的時間不會變更來驗證這一點。 如果監視的資料變更，ASP.NET 就會讓快取失效，並以全新的資料重新填入 `GridView` 控制項，進而更新 `Label` 控制項中顯示的時間。  
   
 ## <a name="creating-the-sample-application"></a>建立範例應用程式  
+
  遵循下列步驟，以建立並執行範例應用程式：  
   
 1. 建立新的 ASP.NET 網站。  
@@ -53,6 +56,7 @@ ms.locfileid: "89656167"
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  
   
 ### <a name="testing-the-application"></a>測試應用程式  
+
  應用程式會快取 Web 表單上顯示的資料，如果沒有任何活動，則每隔三分鐘就會重新整理一次。 如果資料庫發生變更，就會立即重新整理快取。 從 Visual Studio 執行應用程式，以將頁面載入瀏覽器。 顯示的快取重新整理時間表示上次重新整理快取的時間。 等候三分鐘，然後重新整理頁面，即會導致回傳事件發生。 請注意，頁面上顯示的時間已經變更。 如果您在三分鐘內重新整理頁面，則頁面上顯示的時間將維持不變。  
   
  現在，使用 Transact-SQL UPDATE 命令來更新資料庫中的資料，並重新整理頁面。 顯示的時間現在表示已使用資料庫的新資料來重新整理快取。 請注意，雖然快取已更新，但在發生回傳事件之前，頁面上顯示的時間不會變更。  

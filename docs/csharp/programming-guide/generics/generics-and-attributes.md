@@ -1,19 +1,20 @@
 ---
 title: 泛型和屬性 - C# 程式設計指南
-description: 瞭解如何將屬性套用至泛型型別。 請參閱程式碼範例，並查看其他可用的資源。
+description: 瞭解如何將屬性套用至泛型型別。 請參閱程式碼範例，並檢視其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 17556af2e1bc2963de953cea242d7000509acbcd
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 94378e44782169141314890bf90f050fdb6b5b79
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299873"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184205"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>泛型和屬性 (C# 程式設計手冊)
+
 屬性可以使用與非泛型型別相同的方式，套用至泛型型別。 如需套用屬性的詳細資訊，請參閱[屬性](../concepts/attributes/index.md)。  
   
  自訂屬性只能參考開放式泛型型別 (未獲得任何型別引數的泛型型別) 和封閉式建構泛型型別 (為所有型別參數提供引數)。  

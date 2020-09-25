@@ -1,18 +1,19 @@
 ---
 title: 執行階段中的泛型 - C# 程式設計指南
-description: 瞭解執行時間中的泛型型別。 請參閱程式碼範例，並查看其他可用的資源。
+description: 瞭解執行時間中的泛型型別。 請參閱程式碼範例，並檢視其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: 8e072e7aa53177929dda0be931beb85863b6a12e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1d2afd34d1a80841ba711897492cd4cd6412fa53
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299223"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184114"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>執行階段中的泛型 (C# 程式設計手冊)
+
 當泛型型別或方法編譯到 Microsoft intermediate language (MSIL) 時，會包含可將其識別為具有型別參數的中繼資料。 泛型型別 MSIL 的使用方法，因提供的型別參數為實值型別或參考型別而異。  
   
  第一次以實值型別將泛型型別建構為參數時，執行階段會使用提供的參數或在 MSIL 適當位置中取代的參數，建立特定的泛型型別。 用為參數的每個唯一實值型別只建立一次特定的泛型型別。  
