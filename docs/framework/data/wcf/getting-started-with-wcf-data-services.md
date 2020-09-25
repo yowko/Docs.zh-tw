@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: b5cd3f447ff6121ca276878c163a382e598ce4a9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 011d49688a1aa611ab2a3cfb314e03bb0b38b56d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545816"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172602"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF 資料服務使用者入門
+
 本節中的主題可協助您快速瞭解開放式資料通訊協定 (OData) 以及如何使用 WCF Data Services，藉由說明基礎技術來公開和取用 OData 摘要。 本節包含概念性內容和 [快速入門](quickstart-wcf-data-services.md) 教學課程。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  下列主題描述如何使用 WCF Data Services 來建立資料服務。  
   
  [將資料公開為服務](exposing-your-data-as-a-service-wcf-data-services.md)  
@@ -36,6 +38,7 @@ ms.locfileid: "90545816"
  提供 WCF Data Services 和 OData 資源的連結。  
   
 ## <a name="related-sections"></a>相關章節  
+
  [WCF Data Services (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
  [快速入門](../adonet/ef/getting-started.md)

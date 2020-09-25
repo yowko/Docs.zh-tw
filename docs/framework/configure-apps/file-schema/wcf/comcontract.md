@@ -2,14 +2,15 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 35596f32bf0e0de9081bc0d4c33fb370c7ab708b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850023"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173779"
 ---
 # \<comContract>
+
 指定 COM+ 整合服務合約。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ ms.locfileid: "70850023"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<comContracts>**](comcontracts.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<comContract>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <comContracts>
@@ -45,6 +46,7 @@ ms.locfileid: "70850023"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -58,7 +60,7 @@ ms.locfileid: "70850023"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |persistableTypes|所有永久性型別。|  
 |userDefinedTypes|要包含在服務合約中之使用者定義型別 (UDT) 的集合。|  
@@ -66,12 +68,13 @@ ms.locfileid: "70850023"
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |comContracts|包含 `comContract` 項目的集合。|  
   
 ## <a name="remarks"></a>備註  
- COM + 整合服務合約目前僅限於 `http://tempuri.org` 命名空間，而合約名稱是衍生自支援的 COM 介面。 然而，您可以使用 `comContracts` 區段，以及組態檔中的 `comContract` 項目，來指定替代項目。 例如，您可以使用下列組態來指定要包含的命名空間、合約名稱、使用者定義型別，以及服務合約的其他設定。  
+
+ COM + 整合服務合約目前限制于 `http://tempuri.org` 命名空間，而合約名稱是衍生自支援的 COM 介面。 然而，您可以使用 `comContracts` 區段，以及組態檔中的 `comContract` 項目，來指定替代項目。 例如，您可以使用下列組態來指定要包含的命名空間、合約名稱、使用者定義型別，以及服務合約的其他設定。  
   
 ```xml  
 <comContracts>
@@ -96,4 +99,4 @@ ms.locfileid: "70850023"
 - <xref:System.ServiceModel.Configuration.ComContractElement>
 - [\<comContracts>](comcontracts.md)
 - [與 COM + 應用程式整合](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [HOW TO：設定 COM+ 服務設定](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [作法：設定 COM+ 服務設定](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

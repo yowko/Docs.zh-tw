@@ -2,12 +2,12 @@
 title: 領域事件： 設計和實作
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 深入了解領域事件，這是用來在彙總之間建立通訊的重要概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 651d9cb98444c0729b97f523cc3d688f0f8d51d5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738771"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173363"
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -342,7 +342,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 如前所述，使用領域事件可明確實作您領域中變更的副作用。 以 DDD 術語來說，使用領域事件可在一或多個彙總之間明確實作副作用。 此外，為了提高延展性並降低資料庫鎖定的影響，請在相同領域中的多個彙總之間使用最終一致性。
 
-參考應用程式會使用 [MediatR](https://github.com/jbogard/MediatR) ，在單一交易內以同步方式跨匯總傳播領域事件。 不過，您也可以使用一些 AMQP 的執行，例如 [RabbitMQ](https://www.rabbitmq.com/) 或 [Azure 服務匯流排](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) ，以非同步方式使用最終一致性傳播領域事件，但如上所述，您必須考慮在發生失敗時需要補償的動作。
+參考應用程式會使用 [MediatR](https://github.com/jbogard/MediatR) ，在單一交易內以同步方式跨匯總傳播領域事件。 不過，您也可以使用一些 AMQP 的執行，例如 [RabbitMQ](https://www.rabbitmq.com/) 或 [Azure 服務匯流排](/azure/service-bus-messaging/service-bus-messaging-overview) ，以非同步方式使用最終一致性傳播領域事件，但如上所述，您必須考慮在發生失敗時需要補償的動作。
 
 ## <a name="additional-resources"></a>其他資源
 

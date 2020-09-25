@@ -1,170 +1,170 @@
 ---
-title: 架構部署方法 - 無伺服器應用
-description: 企業體系結構部署到雲的不同方式的指南，比較 IaaS、PaaS、容器和無伺服器。
+title: 架構部署方法-無伺服器應用程式
+description: 以不同方式將企業架構部署至雲端的指南，其中包含 IaaS、PaaS、容器和無伺服器之間的比較。
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e91412600e8e4e5a0dca2a454f1cb0680c881b2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522723"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173337"
 ---
 # <a name="architecture-deployment-approaches"></a>架構部署方法
 
-無論用於設計商務應用程式的體系結構方法如何，這些應用程式的實現或部署可能會有所不同。 企業託管應用程式，從物理硬體到無伺服器功能。
+無論用來設計商務應用程式的架構方法為何，這些應用程式的執行或部署都可能不同。 企業會從實體硬體到無伺服器函式的所有專案上裝載應用程式。
 
-## <a name="n-tier-applications"></a>N 層應用程式
+## <a name="n-tier-applications"></a>多層式應用程式
 
-[N-Tier 體系結構模式](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)是一個成熟的體系結構，它僅指將各種邏輯層分隔成獨立實體層的應用程式。 N 層體系結構是 N 層體系結構的物理實現。 此體系結構的最常見實現包括：
+多 [層式架構模式](/azure/architecture/guide/architecture-styles/n-tier) 是成熟的架構，而且只是指將各種不同的邏輯層分成不同的實體層的應用程式。 多層式架構是多層式架構的實體實行。 此架構最常見的實作為包括：
 
-- 展示層，例如 Web 應用。
-- API 或資料訪問層，如 REST API。
-- 資料層，如 SQL 資料庫。
+- 展示層，例如 web 應用程式。
+- API 或資料存取層，例如 REST API。
+- 資料層，例如 SQL 資料庫。
 
-![N 層體系結構](./media/n-tier-architecture.png)
+![多層式架構](./media/n-tier-architecture.png)
 
-N 層解決方案具有以下特徵：
+多層式解決方案具有下列特性：
 
-- 專案通常與層對齊。
-- 按層處理測試的方式可能不同。
-- 層提供抽象層，例如，展示層通常不知道資料層的實現細節。
-- 通常，圖層僅與相鄰圖層交互。
-- 版本通常在專案管理，因此在層級別進行管理。 簡單的 API 更改可能需要整個中介層的新版本。
+- 專案通常會與層級對齊。
+- 依階層的不同，可能會以不同的方式來進行測試。
+- 層提供抽象層，例如展示層通常不是資料層的執行詳細資料。
+- 一般而言，圖層只會與連續的圖層互動。
+- 版本通常會在專案中管理，因此也會在層級層級進行管理。 簡單的 API 變更可能需要整個仲介層的新版本。
 
-此方法提供了幾個好處，包括：
+這種方法可提供數個優點，包括：
 
-- 資料庫的隔離（通常前端不能直接存取資料庫後端）。
-- 重用 API（例如，移動、桌面和 Web 應用用戶端都可以重用相同的 API）。
-- 能夠相互獨立地橫向擴展層。
-- 重構隔離：一個層可以重構，而不會影響其他層。
+- 隔離資料庫 (通常前端無法直接存取資料庫後端) 。
+- 重複使用 API (例如，行動裝置、桌面和 web 應用程式用戶端都可以使用相同的 Api) 。
+- 能夠彼此獨立地相應放大層級。
+- 重構隔離：一層可以重構，而不會影響其他層。
 
-## <a name="on-premises-and-infrastructure-as-a-service-iaas"></a>本地和基礎架構即服務 （IaaS）
+## <a name="on-premises-and-infrastructure-as-a-service-iaas"></a> (IaaS) 的內部部署和基礎結構即服務
 
-傳統的託管應用程式方法需要購買硬體和管理所有軟體安裝，包括作業系統。 最初，這涉及到昂貴的資料中心和物理硬體。 操作物理硬體面臨的挑戰很多，包括：
+裝載應用程式的傳統方法需要購買硬體和管理所有軟體安裝，包括作業系統。 這一開始涉及昂貴的資料中心和實體硬體。 營運實體硬體所帶來的挑戰很多，包括：
 
-- 需要購買超額"以防萬一"或需求高峰的情況。
-- 保護對硬體的物理訪問。
-- 對硬體故障（如磁片故障）負責。
+- 需要購買超過「單純案例」或尖峰需求案例的額外功能。
+- 保護硬體的實體存取。
+- 硬體故障的責任 (例如磁片失敗) 。
 - 冷卻。
-- 配置路由器和負載等化器。
+- 設定路由器和負載平衡器。
 - 電源冗余。
-- 保護軟體訪問。
+- 保護軟體存取的安全。
 
 ![IaaS 方法](./media/iaas-approach.png)
 
-通過"虛擬機器"實現硬體虛擬化，支援基礎架構即服務 （IaaS）。 主機得到有效分區，為具有分配自身記憶體、CPU 和存儲的實例提供資源。 團隊提供必要的 VM 並配置關聯的網路和對存儲的訪問。
+透過「虛擬機器」的硬體虛擬化可讓基礎結構即服務 (IaaS) 。 主機電腦會有效地進行分割，以提供資源給具有自己記憶體、CPU 和儲存體配置的實例。 小組會布建必要的 Vm，並設定相關聯的網路和儲存體的存取權。
 
-有關詳細資訊，請參閱虛擬機器[N 層引用體系結構](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)。
+如需詳細資訊，請參閱 [虛擬機器多層式參考架構](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)。
 
-儘管虛擬化和基礎架構即服務 （IaaS） 解決了許多問題，但它仍然將大部分責任推給基礎架構團隊。 團隊維護作業系統版本，應用安全修補程式，並在目的電腦上安裝協力廠商依賴項。 與測試環境相比，應用在生產電腦上的行為通常不同。 由於依賴項版本和/或 OS SKU 級別不同，會出現問題。 儘管許多組織將 N-Tier 應用程式部署到這些目標，但許多公司從部署到更雲本機模型（如[平臺即服務](#platform-as-a-service-paas)）中獲益。 具有微服務的體系結構更具挑戰性，因為需要橫向擴展以擴展彈性和彈性。
+雖然虛擬化和基礎結構即服務 (IaaS) 解決許多問題，但在基礎結構小組的手中仍有很多責任。 小組會維護作業系統版本、套用安全性修補程式，並在目的電腦上安裝協力廠商相依性。 相較于測試環境，應用程式在生產電腦上的行為通常會有所不同。 由於不同的相依性版本和（或）作業系統 SKU 層級而產生的問題。 雖然許多組織會將多層式應用程式部署到這些目標，但是許多公司都受益于部署到更多雲端原生模型，例如 [平臺即服務](#platform-as-a-service-paas)。 具有微服務的架構更具挑戰性，因為需要相應放大以進行彈性和復原。
 
-有關詳細資訊，請參閱[虛擬機器](https://docs.microsoft.com/azure/virtual-machines/)。
+如需詳細資訊，請參閱 [虛擬機器](/azure/virtual-machines/)。
 
 ## <a name="platform-as-a-service-paas"></a>平台即服務 (PaaS)
 
-平臺即服務 （PaaS） 提供配置的解決方案，開發人員可以直接插入這些解決方案。 PaaS 是託管託管的另一個術語。 它消除了管理基本作業系統、安全修補程式以及在許多情況下任何協力廠商依賴關係的需要。 平臺的示例包括 Web 應用程式、資料庫和移動後端。
+「平臺即服務」 (PaaS) 提供了開發人員可以直接插入的已設定解決方案。 PaaS 是受控裝載的另一項詞彙。 它免除了管理基礎作業系統、安全性修補程式，以及在許多情況下都有協力廠商相依性的需求。 平臺範例包括 web 應用程式、資料庫和行動後端。
 
-PaaS 解決了 IaaS 面臨的共同挑戰。 PaaS 允許開發人員專注于代碼或資料庫架構，而不是部署方式。 PaaS 的優勢包括：
+PaaS 可解決 IaaS 常見的挑戰。 PaaS 可讓開發人員專注于程式碼或資料庫架構，而不是部署的方式。 PaaS 的優點包括：
 
-- 支付使用模型，消除投資閒置機器的開銷。
-- 直接部署和改進的 DevOps、持續集成 （CI） 和持續交付 （CD） 管道。
-- 自動升級、更新和安全修補程式。
-- 按鈕橫向擴展和放大（彈性刻度）。
+- 支付使用模型的費用，以消除投資閒置電腦的額外負荷。
+- 直接部署及改進 DevOps、持續整合 (CI) 和持續傳遞 (CD) 管線。
+- 自動升級、更新和安全性修補程式。
+- 向外延展和擴大 (彈性調整) 。
 
-傳統上，PaaS 的主要缺點是供應商鎖定。 例如，某些 PaaS 提供程式僅支援ASP.NET、Node.js 或其他特定語言和平臺。 Azure 應用服務等產品已演變為針對多個平臺，並支援託管 Web 應用的各種語言和框架。
+通常，PaaS 的主要缺點是廠商鎖定。 例如，某些 PaaS 提供者只支援 ASP.NET、Node.js 或其他特定語言和平臺。 產品（例如 Azure App Service）已發展成可處理多個平臺，並支援各種不同的語言和架構來裝載 web 應用程式。
 
 ![平臺即服務架構](./media/paas-architecture.png)
 
 ## <a name="software-as-a-service-saas"></a>軟體即服務 (SaaS)
 
-軟體即服務或 SaaS 是集中託管的，無需本地安裝或預配即可使用。 SaaS 通常託管在 PaaS 之上，作為部署軟體的平臺。 SaaS 提供用於運行和連接現有軟體的服務。 SaaS 通常是行業和垂直特定的。 SaaS 通常獲得許可，通常提供用戶端/伺服器模型。 大多數現代 SaaS 產品都使用基於 Web 的應用程式來為用戶端服務。 公司通常將 SaaS 視為許可產品的業務解決方案。 它通常不作為應用程式的可伸縮性和可維護性的體系結構考慮實現。 實際上，大多數 SaaS 解決方案都基於 IaaS、PaaS 和/或無伺服器後端構建。
+軟體即服務或 SaaS 是集中裝載的，且不需要本機安裝或布建即可使用。 SaaS 通常裝載于 PaaS 之上，作為部署軟體的平臺。 SaaS 提供執行和連接現有軟體的服務。 SaaS 通常是產業和垂直特定的。 SaaS 通常是經過授權的，通常會提供用戶端/伺服器模型。 大部分新式 SaaS 供應專案會針對用戶端使用 web 應用程式。 公司通常會將 SaaS 視為授權供應專案的企業解決方案。 它通常不會作為應用程式的擴充性和可維護性的架構考慮。 事實上，大部分的 SaaS 解決方案都是建立在 IaaS、PaaS 及/或無伺服器的後端。
 
-通過[應用程式範例](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)瞭解有關 SaaS 的更多。
+透過 [範例應用程式](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)深入瞭解 SaaS。
 
-## <a name="containers-and-functions-as-a-service-faas"></a>容器和功能作為服務 （FaaS）
+## <a name="containers-and-functions-as-a-service-faas"></a>容器和函式即服務 (FaaS) 
 
-容器是一個有趣的解決方案，可實現類似 PaaS 的好處，而無需 IaaS 開銷。 容器本質上是一個運行時，其中包含運行唯一應用程式所需的基本要素。 主機作業系統的內核或核心部分以及存儲等服務在主機之間共用。 共用內核使容器具有羽量級（有些容器的大小僅為百萬位元組，而典型虛擬機器的大小僅為千百萬位元組）。 主機已經運行，容器可以快速啟動，從而促進高可用性。 快速啟動容器的能力也提供了額外的彈性層。 Docker 是容器中較流行的實現之一。
+容器是一種有趣的解決方案，可在沒有 IaaS 額外負荷的情況下啟用類似 PaaS 的權益。 容器本質上是包含執行唯一應用程式所需之裸機基本的執行時間。 主機作業系統和服務（例如儲存體）的核心或核心部分會在主機間共用。 相較于一般虛擬機器) 的 gb 大小，共用的核心讓容器可以輕量 (部分的大小只是 mb。 使用已在執行中的主機，可以快速啟動容器，以加速高可用性。 快速啟動容器的能力也可提供額外的彈性層級。 Docker 是更受歡迎的容器的其中一個。
 
 容器的優點包括：
 
-- 輕便便攜
-- 自包含，因此無需安裝依賴項
-- 無論主機如何，都能提供一致的環境（在可擕式電腦上運行與雲伺服器上完全相同）
-- 可快速調配，用於橫向擴展
-- 可以快速重新開機以從故障中恢復
+- 輕量與可攜
+- 獨立，不需要安裝相依性
+- 提供一致的環境，不論主機 (在與雲端伺服器上相同的膝上型電腦上執行完全相同) 
+- 可以快速布建以進行相應放大
+- 可以快速重新開機以從失敗中復原
 
-容器在容器主機上運行（該容器可能在裸機或虛擬機器上運行）。 同一容器的多個容器或實例可能在單個主機上運行。 為了實現真正的容錯移轉和恢復能力，容器必須跨主機縮放。
+容器會在容器主機上執行， (接著可在裸機電腦或虛擬機器) 上執行。 相同容器的多個容器或實例可能會在單一主機上執行。 若要取得真正的容錯移轉和復原功能，您必須在主機之間調整容器。
 
-有關 Docker 容器的詳細資訊，請參閱[什麼是 Docker](../microservices/container-docker-introduction/docker-defined.md)。
+如需 Docker 容器的詳細資訊，請參閱 [什麼是 docker](../microservices/container-docker-introduction/docker-defined.md)。
 
-跨主機管理容器通常需要業務流程工具（如 Kubernetes）。 配置和管理業務流程解決方案可能會增加專案的額外開銷和複雜性。 幸運的是，許多雲供應商通過 PaaS 解決方案提供編排服務，以簡化容器的管理。
+跨主機管理容器通常需要協調流程工具，例如 Kubernetes。 設定和管理協調流程解決方案可能會增加專案的額外負荷和複雜度。 幸運的是，許多雲端提供者都透過 PaaS 解決方案提供協調流程服務，以簡化容器的管理工作。
 
-下圖演示了庫伯內斯安裝的示例。 安裝位址中的節點橫向擴展和容錯移轉。 它們運行由主伺服器管理的 Docker 容器實例。 *庫貝萊特*是中繼命令從庫伯內斯到 Docker 的用戶端。
+下圖說明 Kubernetes 安裝的範例。 安裝位址中的節點會相應放大及容錯移轉。 它們會執行主伺服器所管理的 Docker 容器實例。 *Kubelet*是將命令從 Kubernetes 轉送至 Docker 的用戶端。
 
 ![Kubernetes](./media/kubernetes-example.png)
 
-有關業務流程的詳細資訊，請參閱 Azure[上的庫伯內斯](https://docs.microsoft.com/azure/aks/intro-kubernetes)。
+如需有關協調流程的詳細資訊，請參閱 [Azure 上的 Kubernetes](/azure/aks/intro-kubernetes)。
 
-服務功能 （FaaS） 是類似于無伺服器的專用容器服務。 FaaS 的一個特定實現，稱為[OpenFaaS，](https://github.com/openfaas/faas)位於容器頂部，提供無伺服器功能。 OpenFaaS 提供範本，用於打包運行程式碼片段所需的所有容器依賴項。 使用範本簡化了將代碼作為功能單元部署的過程。 OpenFaaS 面向已包含容器和協調器的體系結構，因為它可以使用現有的基礎結構。 儘管它提供無伺服器功能，但它特別要求您使用 Docker 和協調器。
+函式即服務 (FaaS) 是類似于無伺服器的特製化容器服務。 FaaS 的特定執行（稱為 [OpenFaaS](https://github.com/openfaas/faas)）位於容器之上，以提供無伺服器功能。 OpenFaaS 會提供範本，以封裝執行某段程式碼所需的所有容器相依性。 使用範本可簡化將程式碼部署為功能性單位的流程。 OpenFaaS 會以已包含容器和協調器的架構為目標，因為它可以使用現有的基礎結構。 雖然它提供無伺服器功能，但特別需要您使用 Docker 和協調器。
 
 ## <a name="serverless"></a>無伺服器
 
-無伺服器體系結構在代碼及其託管環境之間提供了明確的分離。 在*由觸發器*調用的*函數*中實現代碼。 退出該函數後，可以釋放其所有所需的資源。 觸發器可以是手動的、定時的過程、HTTP 要求或檔上載。 觸發器的結果是代碼的執行。 儘管無伺服器平臺各不相同，但大多數平臺都提供對預定義的 API 和綁定的訪問，以簡化任務，如寫入資料庫或排隊結果。
+無伺服器架構可讓程式碼與其裝載環境之間有清楚的分隔。 您可以在由*觸發*程式叫*用的函*式中執行程式碼。 該函式結束之後，可能會釋出其所有所需的資源。 觸發程式可能是手動、計時進程、HTTP 要求或檔案上傳。 觸發程式的結果就是程式碼的執行。 雖然無伺服器平臺不同，但大部分會提供預先定義之 Api 和系結的存取權，以簡化工作（例如寫入資料庫或將結果排入佇列）的作業。
 
-無伺服器是一種嚴重依賴抽象主機環境以專注于代碼的體系結構。 它可以被認為是*更少的伺服器*。
+無伺服器是一種架構，主要依賴于退出主機環境以專注于程式碼。 您可以將它視為 *較少的伺服器*。
 
-容器解決方案為開發人員提供現有生成腳本，將代碼發佈到無伺服器就緒映射。 其他實現使用現有的 PaaS 解決方案來提供可擴展的體系結構。
+容器解決方案為開發人員提供現有的組建腳本，以將程式碼發佈到無伺服器就緒的映射。 其他的執行會使用現有的 PaaS 解決方案來提供可調整的架構。
 
-抽象意味著 DevOps 團隊不必預配或管理伺服器，也不必管理特定的容器。 無伺服器平臺託管代碼，作為使用相關 SDK 構建的腳本或打包可執行檔，並為代碼分配必要的資源進行擴展。
+此抽象概念表示 DevOps 小組不需要布建或管理伺服器，也不需要管理特定的容器。 無伺服器平臺會將程式碼裝載為使用相關 SDK 建立的腳本或封裝可執行檔，並配置程式碼所需的資源以進行調整。
 
-下圖顯示了四個無伺服器元件。 HTTP 要求會導致簽出 API 代碼運行。 簽出 API 將代碼插入到資料庫中，插入將觸發其他幾個函數來運行以執行計算任務和完成順序等任務。
+下圖為四個無伺服器元件。 HTTP 要求會導致簽出 API 程式碼執行。 結帳 API 會將程式碼插入資料庫中，而插入會觸發其他數個函式來執行工作，例如運算工作和達成順序。
 
-![無伺服器實現](./media/serverless-implementation.png)
+![無伺服器的執行](./media/serverless-implementation.png)
 
 無伺服器的優點包括：
 
-- **高密度。** 與容器或虛擬機器相比，同一無伺服器代碼的許多實例可以在同一主機上運行。 實例跨多個主機擴展並進行恢復。
-- **微計費。** 大多數無伺服器供應商都根據無伺服器執行計費，從而在某些情況下大幅節約成本。
-- **即時縮放。** 無伺服器可以自動快速擴展以匹配工作負載。
-- **更快的上市時間。** 開發人員專注于代碼並直接部署到無伺服器平臺。 元件可以相互獨立釋放。
+- **高密度。** 相較于容器或虛擬機器，相同的無伺服器程式碼的許多實例都可以在相同的主機上執行。 這些實例會跨多個主機擴充和復原。
+- **微計費。** 大部分的無伺服器提供者會根據無伺服器執行計費，在某些情況下可節省大量成本。
+- **立即調整規模。** 無伺服器可進行調整以自動且快速地符合工作負載。
+- **加快上市時間。** 開發人員將焦點放在程式碼，並直接部署到無伺服器平臺。 元件可以獨立釋放。
 
-無伺服器最常在計算上下文中討論，但也可應用於資料。 例如[，Azure SQL](https://docs.microsoft.com/azure/sql-database)和[Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)都提供雲資料庫，這些資料庫不需要配置主機或群集。 本書側重于無伺服器計算。
+無伺服器最常在計算的內容中討論，但也適用于資料。 例如， [AZURE SQL](/azure/sql-database) 和 [Cosmos DB](/azure/cosmos-db) 都提供不需要您設定主機電腦或叢集的雲端資料庫。 本書著重于無伺服器計算。
 
 ## <a name="summary"></a>摘要
 
-架構有多種可用選擇，包括混合方法。 無伺服器簡化了應用程式功能的方法、管理和成本，但代價是控制和可攜性。 但是，許多無伺服器平臺公開配置以説明微調解決方案。 良好的程式設計實踐還會導致更多的可移植代碼和更少的無伺服器平臺鎖定。 下表說明了並行體系結構方法。 根據您的規模需求選擇無伺服器，無論您是否想要管理運行時，以及將工作負載分解為小型元件的能力。 在下一章中，您將瞭解無伺服器和其他決策點的潛在挑戰。
+架構有廣泛的可用選項，包括混合式方法。 無伺服器可簡化應用程式功能的方法、管理和成本，但代價是控制和可攜性。 不過，許多無伺服器平臺會公開設定，以協助微調解決方案。 良好的程式設計實務也可能會導致更具可攜性的程式碼，以及更少的無伺服器平臺鎖定。 下表說明並列的架構方法。 無論您是否想要管理執行時間，都可以根據您的調整需求選擇無伺服器，以及將工作負載分成小型元件的程度。 您將在下一章中瞭解無伺服器和其他決策點的潛在挑戰。
 
 |         |IaaS     |PaaS     |容器|無伺服器|
 |---------|---------|---------|---------|----------|
-|**規模**|VM       |執行個體 |App      |函式  |
-|**文摘**|硬體|平台|作業系統主機|執行階段   |
-|**單位** |VM       |隨附此逐步解說的專案  |映像    |程式碼      |
-|**一生**|Months|天數到月數|分鐘到天數|毫秒到分鐘數|
-|**責任**|應用程式、依賴項、運行時和作業系統|應用程式和依賴項|應用程式、依賴項和運行時|函式
+|**調整**|VM       |執行個體 |應用程式      |函式  |
+|**文摘**|硬體|平台|OS 主機|執行階段   |
+|**單位** |VM       |Project  |映像    |程式碼      |
+|**存留期**|月|天到數個月|分鐘到數天|毫秒到分鐘|
+|**責任**|應用程式、相依性、執行時間和作業系統|應用程式和相依性|應用程式、相依性和執行時間|函式
 
-- **縮放**是指用於擴展應用程式的單位
-- **摘要**是指由實現抽象的層
-- **單元**是指部署的範圍
-- **存留期**是指特定實例的典型運行時
-- **責任**是指構建、部署和維護應用程式的開銷
+- **Scale** 指的是用來調整應用程式的單位
+- **抽象化** 指的是由執行所抽象化的圖層
+- **單位** 是指部署的範圍
+- **存留期** 指的是特定實例的一般執行時間
+- **責任** 是指建立、部署及維護應用程式的額外負荷
 
-下一章將重點討論無伺服器體系結構、用例和設計模式。
+下一章將著重于無伺服器架構、使用案例和設計模式。
 
 ## <a name="recommended-resources"></a>建議的資源
 
-- [Azure 應用程式體系結構指南](https://docs.microsoft.com/azure/architecture/guide/)
-- [Azure 宇宙資料庫](https://docs.microsoft.com/azure/cosmos-db)
-- [Azure SQL](https://docs.microsoft.com/azure/sql-database)
-- [N 層體系結構模式](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-- [Azure 上的 Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-- [微服務](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-- [虛擬機器 N 層參考體系結構](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-- [虛擬機器](https://docs.microsoft.com/azure/virtual-machines/)
+- [Azure 應用程式架構指南](/azure/architecture/guide/)
+- [Azure Cosmos DB](/azure/cosmos-db)
+- [Azure SQL](/azure/sql-database)
+- [多層式架構模式](/azure/architecture/guide/architecture-styles/n-tier)
+- [Azure 上的 Kubernetes](/azure/aks/intro-kubernetes)
+- [微服務](/azure/architecture/guide/architecture-styles/microservices)
+- [虛擬機器多層式參考架構](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [虛擬機器](/azure/virtual-machines/)
 - [什麼是 Docker？](../microservices/container-docker-introduction/docker-defined.md)
-- [翼尖門票SaaS應用程式](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Wingtip 票證 SaaS 應用程式](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
->[上一個](architecture-approaches.md)
->[下一個](serverless-architecture.md)
+>[上一個](architecture-approaches.md) 
+>[下一步](serverless-architecture.md)

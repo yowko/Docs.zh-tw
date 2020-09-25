@@ -2,28 +2,29 @@
 title: 將 key XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: 5ebf333b065157fa9497cc1471a45698663638e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b55b232faa01bf36788276caaf8bc2e97dddf697
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150931"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172784"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 key XML 結構描述 (XSD) 條件約束對應至資料集條件約束
-在架構中，可以使用**鍵**元素對元素或屬性指定鍵約束。 具有指定索引鍵條件約束的項目或屬性，在任何結構描述執行個體中都必須具有唯一的值，且不可具有 Null 值。  
+
+在架構中，您可以使用 **key** 元素，在專案或屬性上指定索引鍵條件約束。 具有指定索引鍵條件約束的項目或屬性，在任何結構描述執行個體中都必須具有唯一的值，且不可具有 Null 值。  
   
  索引鍵條件約束類似唯一的條件約束，唯一的不同處定義索引鍵條件約束的資料行不能有 Null 值。  
   
- 下表概述了可在**鍵**元素中指定的**msdata**屬性。  
+ 下表列出您可以在**key**專案中指定的**msdata**屬性。  
   
 |屬性名稱|描述|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。 否則，**名稱**屬性提供約束名稱的值。|  
-|**msdata:PrimaryKey**|如果存在`PrimaryKey="true"`**，IsPrimaryKey**約束屬性設置為**true，** 從而使其成為主鍵。 **AllowDBNull**列屬性設置為**false，** 因為主鍵不能具有 null 值。|  
+|**msdata:ConstraintName**|如果指定這個屬性，則它的值會被當成條件約束名稱使用。 否則， **name** 屬性會提供條件約束名稱的值。|  
+|**msdata:PrimaryKey**|如果 `PrimaryKey="true"` 存在，則 **IsPrimaryKey** 條件約束屬性會設定為 **true**，因此會成為主要索引鍵。 **AllowDBNull**資料行屬性設定為**false**，因為主鍵不能有 null 值。|  
   
- 在轉換指定鍵約束的架構時，映射過程在表上創建一個唯一約束，其中**AllowDBNull**列屬性設置為約束中每列**false。** 除非在**鍵**元素上指定`msdata:PrimaryKey="true"`，否則唯一約束的**IsPrimaryKey**屬性也設置為**false。** 它與結構描述 (其中 `PrimaryKey="true"`) 中唯一的條件約束相同。  
+ 在指定索引鍵條件約束的轉換架構中，對應進程會在資料表上建立唯一條件約束，並在條件約束中的每個資料行將 **AllowDBNull** 資料行屬性設定為 **false** 。 除非**IsPrimaryKey**您已在索引鍵元素上指定，否則 unique 條件約束的 IsPrimaryKey 屬性也會設定為**false** `msdata:PrimaryKey="true"` 。 **key** 它與結構描述 (其中 `PrimaryKey="true"`) 中唯一的條件約束相同。  
   
- 在下面的架構示例中，**鍵**元素指定**CustomerID**元素的鍵約束。  
+ 在下列架構範例中， **key** 元素會指定 **CustomerID** 元素的索引鍵條件約束。  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +55,13 @@ ms.locfileid: "79150931"
 </xs:schema>
 ```  
   
- **鍵**元素指定**客戶**元素**的 CustomerID**子項目的值必須具有唯一值，並且不能具有 null 值。 轉譯 XML 結構描述定義語言 (XSD) 結構描述的過程中，對應處理序會建立下表：  
+ **Key**元素會指定**Customers**專案的**CustomerID**子項目值必須有唯一值，而且不能有 null 值。 轉譯 XML 結構描述定義語言 (XSD) 結構描述的過程中，對應處理序會建立下表：  
   
 ```text  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- XML 架構映射還會在**CustomerID**列上創建**唯一約束**，如下所示。 <xref:System.Data.DataSet> (為了便於了解，此處僅顯示相關屬性)。  
+ XML 架構對應也會在**CustomerID**資料行上建立**UniqueConstraint** ，如下所示 <xref:System.Data.DataSet> 。 (為了便於了解，此處僅顯示相關屬性)。  
   
 ```text  
       DataSetName: MyDataSet  
@@ -74,9 +75,9 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- 在生成的**DataSet**中，**唯一約束**的**IsPrimaryKey**屬性設置為**true，** 因為架構在`msdata:PrimaryKey="true"`**鍵**元素中指定。  
+ 在產生的**資料集中**， **UniqueConstraint**的**IsPrimaryKey**屬性會設定為**true** ，因為架構會 `msdata:PrimaryKey="true"` 在**key**專案中指定。  
   
- **DataSet**中**唯一約束**屬性**的約束名稱**屬性的值是架構中**鍵**元素中指定的**msdata：約束名稱**屬性的值。  
+ **DataSet**中**UniqueConstraint**的**ConstraintName**屬性值，是架構中的**Key**元素所指定之**msdata： ConstraintName**屬性的值。  
   
 ## <a name="see-also"></a>另請參閱
 

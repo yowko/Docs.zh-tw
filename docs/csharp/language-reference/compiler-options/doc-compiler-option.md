@@ -13,14 +13,15 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 366bad1029904b3571be0a76d827ff0213d776bb
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b1d7fbbe98aaad16454fdd71c161f2a17a2f4f2e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125744"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173252"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# 編譯器選項)
+
 **-doc** 選項可讓您在 XML 檔案中放入文件註解。  
   
 ## <a name="syntax"></a>語法  
@@ -30,10 +31,12 @@ ms.locfileid: "89125744"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `file`  
  XML 的輸出檔，填入編譯原始程式碼檔案中的註解。  
   
 ## <a name="remarks"></a>備註  
+
  在原始程式碼檔案中，位在下列內容前面的文件註解，可以處理並新增至 XML 檔案︰  
   
 - 這類使用者定義型別，如[類別](../keywords/class.md)、[委派](../builtin-types/reference-types.md#the-delegate-type)或[介面](../keywords/interface.md)。  
@@ -63,5 +66,5 @@ ms.locfileid: "89125744"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

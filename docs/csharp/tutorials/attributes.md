@@ -1,16 +1,16 @@
 ---
-title: 教程：使用屬性 - C#
+title: 教學課程：使用屬性-C#
 description: 了解 C# 中屬性的運作方式。
 author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 24cb7d35a89fda78511dc4ba725b69c5d601a008
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e2c0126d0920df18271f8889d8e117cd374d979
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937476"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174182"
 ---
 # <a name="use-attributes-in-c"></a>使用 C 中的屬性\#
 
@@ -21,7 +21,8 @@ ms.locfileid: "75937476"
 在本教學課程中，將介紹如何將屬性加入您的程式碼、如何建立及使用您自己的屬性，以及如何使用一些內建到 .NET Core 的屬性。
 
 ## <a name="prerequisites"></a>必要條件
-您將必須設定電腦以執行 .NET Core。 您可以在[.NET 核心下載](https://dotnet.microsoft.com/download)頁面上找到安裝說明。
+
+您將必須設定電腦以執行 .NET Core。 您可以在 [.Net Core 下載](https://dotnet.microsoft.com/download) 頁面中找到安裝指示。
 您可以在 Windows、Ubuntu Linux、macOS 或是 Docker 容器中執行此應用程式。
 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
@@ -31,7 +32,7 @@ ms.locfileid: "75937476"
 
 `dotnet new console`
 
-此命令將創建裸骨 .NET 核心專案檔案。 您將必須執行 `dotnet restore` 以還原編譯此專案所需的相依性。
+此命令會建立簡單的 .NET core 專案檔案。 您將必須執行 `dotnet restore` 以還原編譯此專案所需的相依性。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -85,8 +86,8 @@ ms.locfileid: "75937476"
 * 組件
 * 類別
 * 建構函式
-* 委派
-* 例舉
+* 代理人
+* 列舉
 * 事件
 * 欄位
 * GenericParameter

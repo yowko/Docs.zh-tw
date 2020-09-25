@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 164530a5ec99e7d5b9f34dbcdfb18d80f3102308
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 77aa9bf0fc0911f441d00403d773ee5ae03ae99b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125913"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173291"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# 編譯器選項)
+
 **-debug** 選項可讓編譯器產生偵錯資訊，並將它放在一或多個輸出檔案中。  
   
 ## <a name="syntax"></a>語法  
@@ -27,6 +28,7 @@ ms.locfileid: "89125913"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `+` &#124; `-`  
  指定 `+` 或 **-debug** 會讓編譯器產生偵錯資訊，並將其放在程式資料庫 (.pdb 檔案) 中。 指定 `-` (當您未指定 **-debug** 時，它就會生效) 將不會建立任何偵錯資訊。  
   
@@ -34,6 +36,7 @@ ms.locfileid: "89125913"
  指定編譯器所產生的偵錯資訊類型。 完整引數 (當您未指定 **-debug:pdbonly** 時，它就會生效) 允許將偵錯工具附加至執行中的程式。 指定 pdbonly 讓原始程式碼在偵錯工具中啟動程式時進行偵錯，但只有在將執行中的程式附加到偵錯工具時，才會顯示組譯工具。  
   
 ## <a name="remarks"></a>備註  
+
  若要建立偵錯組建，請使用此選項。 如果未指定 **-debug**、**-debug+** 或 **-debug:full**，您將無法偵錯程式的輸出檔案。  
   
  如果您使用 **-debug:full**，請注意會對 JIT 最佳化程式碼速度和大小造成某種程度的影響，以及對使用 **-debug:full** 的程式碼品質造成某種程度的影響。 建議使用 **-debug:pdbonly** 或沒有 PDB 可以產生發行程式碼。  
@@ -58,6 +61,7 @@ ms.locfileid: "89125913"
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
   
 ## <a name="example"></a>範例  
+
  將偵錯資訊放入輸出檔案 `app.pdb` 中：  
   
 ```console  
@@ -66,5 +70,5 @@ csc -debug -pdb:app.pdb test.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

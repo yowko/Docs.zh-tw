@@ -12,14 +12,15 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 3b7a1c6e92d2c60ce289f29044774c3aa42ca84f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 74c9a23cd1b3a691063c2976a593c9b3a63ca618
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125874"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173265"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C# 編譯器選項)
+
 **-define** 選項會將 `name` 定義為程式中所有原始程式碼檔的符號。  
   
 ## <a name="syntax"></a>語法  
@@ -29,10 +30,12 @@ ms.locfileid: "89125874"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `name`, `name2`  
  您要定義的一或多個符號之名稱。  
   
 ## <a name="remarks"></a>備註  
+
  **-define** 選項的作用與使用 [#define](../preprocessor-directives/preprocessor-define.md) 前置處理器指示詞相同，不同之處在於編譯器選項對專案中的所有檔案都有效。 直到原始程式檔中的 [#undef](../preprocessor-directives/preprocessor-undef.md) 指示詞移除符號的定義之前，符號在原始程式檔中都會維持已定義狀態。 使用 -define 選項時，某個檔案中的 `#undef` 指示詞不會對專案中的其他原始程式碼檔造成影響。  
   
  您可以使用此選項建立的符號，搭配 [#if](../preprocessor-directives/preprocessor-if.md)、[#else](../preprocessor-directives/preprocessor-else.md)、[#elif](../preprocessor-directives/preprocessor-elif.md) 和 [#endif](../preprocessor-directives/preprocessor-endif.md)，有條件地編譯原始程式檔。  
@@ -81,5 +84,5 @@ public class Test
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

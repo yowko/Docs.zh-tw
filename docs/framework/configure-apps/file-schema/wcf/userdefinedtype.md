@@ -2,14 +2,15 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4bbd677aba27d93389f8d2f99aadd801c86b65f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854841"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172836"
 ---
 # \<userDefinedType>
+
 表示要包含在服務合約中的使用者定義型別 (User Defined Type，UDT)。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "70854841"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<userDefinedTypes>**](userdefinedtypes.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<userDefinedType>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <comContracts>
@@ -36,6 +37,7 @@ ms.locfileid: "70854841"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -48,15 +50,17 @@ ms.locfileid: "70854841"
 |`TypeLibVersion`|字串，識別定義此型別的型別程式庫版本。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |`userDefinedTypes`|`userDefinedType` 項目的集合。|  
   
 ## <a name="remarks"></a>備註  
+
  COM+ 整合執行階段會藉由檢查型別程式庫來建立服務。 當 COM+ 元件包含傳遞 VARIANT 的方法時，系統便無法在執行階段之前判斷要傳遞的實際型別。 因此，嘗試在 VARIANT 內傳遞使用者定義型別 (UDT) 會因為該型別不是序列化的已知型別而失敗。  
   
  如果要避免這個問題，您可以將這些 UDT 新增至組態檔中，以便包含它們做為適當服務合約中的已知型別。 如果要這樣做，您必須唯一識別這些 UDT 和合約，也就是使用其原始的 COM 介面。  
@@ -99,4 +103,4 @@ ms.locfileid: "70854841"
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](comcontracts.md)
 - [與 COM + 應用程式整合](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
-- [HOW TO：設定 COM+ 服務設定](../../../wcf/feature-details/how-to-configure-com-service-settings.md)
+- [作法：設定 COM+ 服務設定](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

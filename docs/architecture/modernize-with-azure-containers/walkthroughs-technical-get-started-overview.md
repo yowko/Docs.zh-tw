@@ -2,12 +2,12 @@
 title: 逐步解說和技術入門概觀
 description: 使用 Azure 雲端和 Windows 容器將現有的 .NET 應用程式現代化 |逐步解說和技術入門簡介
 ms.date: 04/28/2018
-ms.openlocfilehash: 4db6d449d27dcd4316d61305c8c2a8c2aa0bc65b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516121"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172140"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術入門概觀
 
@@ -190,7 +190,7 @@ EShopModernizing GitHub 存放庫 wiki 提供完整的技術逐步解說：
 
 ### <a name="overview"></a>概觀
 
-[Azure 容器實例 (ACI) ](https://docs.microsoft.com/azure/container-instances/) 是擁有容器開發/測試/預備環境的最快速方式，您可以在其中部署容器的單一實例。
+[Azure 容器實例 (ACI) ](/azure/container-instances/) 是擁有容器開發/測試/預備環境的最快速方式，您可以在其中部署容器的單一實例。
 
 ### <a name="goals"></a>目標
 
@@ -294,7 +294,7 @@ EShopModernizing GitHub 存放庫 wiki 提供完整的技術逐步解說：
 
 本逐步解說的目標是要瞭解如何部署 Windows 容器型應用程式，以從登錄 (Docker Hub 或 Azure Container Registry) 的容器 Azure App Service。
 
-### <a name="scenario"></a>案例
+### <a name="scenario"></a>狀況
 
 ![將 Windows 容器型應用程式部署至適用于容器的 Azure App Service](./media/image5-11.png)
 

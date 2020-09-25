@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: a6a388f837d00d63a39212843c3fa88b28482b26
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 050a791736e90b5daf46fd272197ca21a220afb0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545803"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172615"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>產生資料服務用戶端程式庫 (WCF 資料服務)
+
 開放式資料通訊協定 (OData) 的資料服務可以傳回服務元資料檔案，其中描述 OData 摘要所公開的資料模型。 如需詳細資訊，請參閱 [OData：總覽](https://www.odata.org/documentation/odata-version-2-0/overview/) 文章中的「服務元資料檔案」一節。 您可以使用 Visual Studio 中的 [ **加入服務參考** ] 對話方塊，將參考加入至以 OData 為基礎的服務。 當您使用此工具，將參考新增至用戶端專案中 OData 摘要所傳回的中繼資料時，它會執行下列動作：  
   
 - 要求資料服務中的服務中繼資料文件，然後解譯傳回的中繼資料。  
@@ -32,6 +33,7 @@ ms.locfileid: "90545803"
  您也可以在命令提示字元使用 [DataSvcUtil.exe](wcf-data-service-client-utility-datasvcutil-exe.md) 工具來產生用戶端資料服務類別。 如需詳細資訊，請參閱 [如何：手動產生用戶端資料服務類別](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。  
   
 ## <a name="client-data-type-mapping"></a>用戶端資料型別對應  
+
  當您使用 Visual Studio 或工具中的 [ **加入服務參考** ] 對話方塊 `DataSvcUtil.exe` 來產生以 OData 摘要為基礎的用戶端資料類別時，.NET Framework 資料類型會對應至資料模型中的基本型別，如下所示：  
   
 |資料模型型別|.NET Framework 資料類型|  

@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 2ee5b0937f24fac745f72cf6ef6e4bef9ec97ba8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95f1d21805dde86cd4eb59147f2fd012279b6dc1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150777"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173740"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>使用 XmlDataDocument 同步處理資料集
-本節將使用已與 <xref:System.Data.DataSet> 同步處理的強型別 <xref:System.Xml.XmlDataDocument>，來示範處理採購單的其中一個步驟。 以下示例創建具有最小化架構的**DataSet，** 該架構僅與源 XML 文檔的一部分匹配。 這些示例使用**XmlDataDocument**來保留源 XML 文檔的逼真度，使**DataSet**能夠用於公開 XML 文檔的子集。  
+
+本節將使用已與 <xref:System.Data.DataSet> 同步處理的強型別 <xref:System.Xml.XmlDataDocument>，來示範處理採購單的其中一個步驟。 接下來的範例會建立一個 **資料集** ，其中具有最小化的架構，只符合來源 XML 檔的一部分。 這些範例會使用 **XmlDataDocument** 來保留來源 xml 檔的精確度，讓 **資料集** 可以用來公開 xml 檔的子集。  
   
  下列 XML 文件包含所有採購單的相關資訊：客戶資訊、訂購項目、運送資訊等。  
   
@@ -109,9 +110,9 @@ ms.locfileid: "79150777"
 </PurchaseOrder>  
 ```  
   
- 前述 XML 文件中處理採購單資訊的其中一個步驟，是從公司目前的存貨中提領採購單的貨品。 負責從公司的倉儲提供採購訂單貨品的員工不需要檢視整份採購訂單內容，而是只需要看到訂單的產品資訊即可。 要僅公開 XML 文檔中的產品資訊，請創建一個強型別**DataSet，** 該架構編寫為 XML 架構定義語言 （XSD） 架構，映射到訂購的產品和數量。 有關強型別**資料集**物件的詳細資訊，請參閱[鍵入的資料集](typed-datasets.md)。  
+ 前述 XML 文件中處理採購單資訊的其中一個步驟，是從公司目前的存貨中提領採購單的貨品。 負責從公司的倉儲提供採購訂單貨品的員工不需要檢視整份採購訂單內容，而是只需要看到訂單的產品資訊即可。 若只要公開 XML 檔中的產品資訊，請使用撰寫成 XML 架構定義語言的架構來建立強型別 **資料集** ， (XSD) 架構，以對應至已訂購的產品和數量。 如需強型別 **資料集** 物件的詳細資訊，請參閱具 [類型的資料集](typed-datasets.md)。  
   
- 以下代碼顯示為此示例生成強型別**DataSet**的架構。  
+ 下列程式碼顯示為此範例產生強型別 **資料集** 的架構。  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -157,11 +158,11 @@ ms.locfileid: "79150777"
 </xs:schema>  
 ```  
   
- 請注意 **，DataSet**的架構中僅包含原始 XML 文檔的 **"訂單詳細資訊**"**和"產品**"元素中的資訊。 使用**XmlDataDocument**同步**資料集**可確保**DataSet**中未包括的元素將保留與 XML 文檔一起。  
+ 請注意，只有來自原始 XML 檔之 **OrderDetails** 和 **Products** 元素的資訊才會包含在 **資料集**的架構中。 使用**XmlDataDocument**同步處理**資料集**，可確保不包含在**資料集中**的元素會與 XML 檔保存在一起。  
   
- 使用從 XML 架構生成的強型別**資料集**（具有**Northwind.fillOrder**的命名空間），原始 XML 文檔的一部分可以通過將**DataSet**與從源 XML 文檔載入的**XmlDataDocument**同步來公開。 請注意，從架構生成的**DataSet**包含結構，但沒有資料。 將 XML 載入到**XmlDataDocument**中時，將填充資料。 如果嘗試載入已與已包含資料的**DataSet**同步的**XmlDataDocument，** 將引發異常。  
+ 利用**FillOrder**) 命名空間的 XML (架構所產生的強型別**資料集**，就可以藉由同步處理**資料集**與從來源 xml 檔載入的**XmlDataDocument** ，來公開原始 XML 檔的一部分。 請注意，從架構產生的 **資料集會** 包含結構，但不包含任何資料。 當您將 XML 載入 **XmlDataDocument**時，會填入資料。 如果您嘗試載入的 **XmlDataDocument** 已經與已經包含資料的資料 **集** 同步處理，則會擲回例外狀況。  
   
- 在**DataSet（** 和**XmlDataDocument**）更新後 **，XmlDataDocument**可以編寫修改後的 XML 文檔 **，DataSet**忽略的元素保持不變，如下所示。 在採購單案例中，當提領出訂單項目後，已修改的 XML 文件便會接著傳遞給訂單處理過程中的下一個步驟，例如傳送至公司的運送部門。  
+ 在 (**資料集** 和 **XmlDataDocument**) 更新之後， **XmlDataDocument** 就可以寫出修改過的 XML 檔，而 **資料集** 所忽略的元素仍會保持不變，如下所示。 在採購單案例中，當提領出訂單項目後，已修改的 XML 文件便會接著傳遞給訂單處理過程中的下一個步驟，例如傳送至公司的運送部門。  
   
 ```vb  
 Imports System  

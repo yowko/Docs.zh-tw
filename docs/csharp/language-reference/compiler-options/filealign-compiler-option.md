@@ -17,14 +17,15 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: d4abe6c3825de211d737f402a745c8953adca4b8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 4b61217a3d6812ea3ab036f82d49bba05c20629e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125705"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173239"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# 編譯器選項)
+
 **-filealign** 選項可讓您指定輸出檔案中的區段大小。  
   
 ## <a name="syntax"></a>語法  
@@ -34,10 +35,12 @@ ms.locfileid: "89125705"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `number`  
  指定輸出檔案中區段大小的值。 有效值為 512、1024、2048、4096 和 8192。 這些值是以位元組為單位。  
   
 ## <a name="remarks"></a>備註  
+
  每個區段都會對齊界限，而這個界限是 **-filealign** 值的倍數。 沒有固定預設值。 如果未指定 **-filealign**，通用語言執行平台會在編譯時期選取預設值。  
   
  您可以藉由指定區段大小，來影響輸出檔案的大小。 修改區段大小對執行於較小裝置上的程式而言可能很有用。  
@@ -58,5 +61,5 @@ ms.locfileid: "89125705"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 392b69633e596f0682fdfb4a5875f46755203ff7
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 61a00e766b0f975691b9f2a7c7561bb4f1d33c02
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474887"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174299"
 ---
 # <a name="finalizers-c-programming-guide"></a>完成項 (C# 程式設計手冊)
+
 完成項 (也稱為**解構函式**) 可在記憶體回收行程收集類別執行個體時，用來執行任何必要的最後清除。  
   
 ## <a name="remarks"></a>備註  
@@ -53,32 +54,35 @@ protected override void Finalize()
 }  
 ```  
   
- 這項設計表示 `Finalize` 會針對繼承鏈中的所有實例，以遞迴方式呼叫方法，從最常衍生到最低衍生的。  
+ 此設計表示 `Finalize` 會針對繼承鏈中的所有實例，以遞迴方式呼叫方法，從最高衍生到最低衍生。  
   
 > [!NOTE]
 > 不應該使用空的完成項。 類別包含完成項時，會在 `Finalize` 佇列中建立一個項目。 呼叫完成項時，會叫用記憶體回收行程來處理佇列。 空的完成項只會導致不必要的效能損失。  
   
- 程式設計人員無法控制何時呼叫完成項;垃圾收集行程會決定何時呼叫它。 記憶體回收行程會檢查應用程式不再使用的物件。 如果它認為物件適合進行完成，則會呼叫完成項 (如果有的話)，並回收用來儲存物件的記憶體。
+ 程式設計師無法控制呼叫完成項的時間;垃圾收集行程會決定呼叫它的時機。 記憶體回收行程會檢查應用程式不再使用的物件。 如果它認為物件適合進行完成，則會呼叫完成項 (如果有的話)，並回收用來儲存物件的記憶體。
 
  在 .NET Framework 應用程式 (而非 .NET Core 應用程式) 中，程式結束時也會呼叫完成項。
   
- 您可以藉由呼叫來強制進行垃圾收集 <xref:System.GC.Collect%2A> ，但大部分的情況下，應該避免此呼叫，因為它可能會造成效能問題。  
+ 您可以藉由呼叫來強制進行垃圾收集 <xref:System.GC.Collect%2A> ，但在大部分的情況下，應該避免此呼叫，因為它可能會造成效能問題。  
   
 ## <a name="using-finalizers-to-release-resources"></a>使用完成項來釋放資源  
- 一般而言，c # 不需要在開發人員的部分記憶體管理，做為不是以垃圾收集的執行時間為目標的語言。 這是因為 .NET 垃圾收集行程會隱含地管理物件的記憶體配置和釋放。 不過，當您的應用程式封裝非受控資源（例如 windows、檔案和網路連接）時，您應該使用完成項來釋放這些資源。 適合完成物件時，記憶體回收行程會執行物件的 `Finalize` 方法。
+
+ 一般情況下，c # 不需要開發人員的記憶體管理，因為不是以垃圾收集的執行時間為目標的語言。 這是因為 .NET 垃圾收集行程會隱含地管理物件的記憶體配置和釋放。 不過，當您的應用程式封裝非受控資源（例如 windows、檔案和網路連接）時，您應該使用完成項來釋放這些資源。 適合完成物件時，記憶體回收行程會執行物件的 `Finalize` 方法。
   
 ## <a name="explicit-release-of-resources"></a>明確釋放資源  
- 如果您的應用程式使用過多的外部資源，則也建議您提供一種方式，以在記憶體回收行程釋放物件之前明確釋放資源。 若要釋出資源，請 `Dispose` 從介面中 <xref:System.IDisposable> 執行方法，以對物件執行必要的清除。 這可以大幅改善應用程式效能。 即使對資源進行這項明確的控制，如果方法呼叫失敗，完成項還是會成為清除資源的保護措施 `Dispose` 。  
+
+ 如果您的應用程式使用過多的外部資源，則也建議您提供一種方式，以在記憶體回收行程釋放物件之前明確釋放資源。 若要釋放資源，請 `Dispose` 從介面執行方法，以 <xref:System.IDisposable> 針對物件執行必要的清除。 這可以大幅改善應用程式效能。 即使對資源使用這個明確的控制，如果呼叫方法失敗，完成項也會成為清除資源的保護措施 `Dispose` 。  
   
  如需有關清除資源的詳細資訊，請參閱下列文章：  
   
-- [清除非受控資源](../../../standard/garbage-collection/unmanaged.md)  
+- [清除 Unmanaged 資源](../../../standard/garbage-collection/unmanaged.md)  
   
 - [執行 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
   
 - [using 陳述式](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>範例  
+
  下列範例會建立三個產生繼承鏈結的類別。 `First` 類別是基底類別、`Second` 衍生自 `First`，而 `Third` 衍生自 `Second`。 所有這三個都有完成項。 在 `Main` 中，會建立最高衍生性類別的執行個體。 程式執行時，請注意，會依最高衍生性到最低衍生性的順序，自動呼叫這三個類別的完成項。  
   
  [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  

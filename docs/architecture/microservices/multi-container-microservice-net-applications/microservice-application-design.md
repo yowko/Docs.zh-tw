@@ -2,14 +2,14 @@
 title: 設計微服務導向應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解微服務導向應用程式的優點和缺點，讓您能夠採取明智的決策。
 ms.date: 10/02/2018
-ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 11aa6327a8d870a1ff6356b88695b693c27f99a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76965759"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172335"
 ---
-# <a name="design-a-microservice-oriented-application"></a>設計面向微服務的應用程式
+# <a name="design-a-microservice-oriented-application"></a>設計微服務導向的應用程式
 
 本節旨在開發假設的伺服器端企業應用程式。
 
@@ -65,13 +65,13 @@ ms.locfileid: "76965759"
 
 此應用程式包含多個子系統，包括數個存放區 UI 前端 (Web 應用程式和原生行動應用程式)，以及用來執行所有必要伺服器端作業的後端微服務和容器 (使用數個 API 閘道作為內部微服務的合併進入點)。 圖 6-1 顯示參考應用程式的架構。
 
-![在單個 Docker 主機中使用 eShopOn 容器的用戶端應用圖。](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
+![在單一 Docker 主機中使用 eShopOnContainers 的用戶端應用程式圖表。](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
 
-**圖6-1**。 開發環境的 eShopOnContainers 參考應用程式架構
+**圖 6-1**。 開發環境的 eShopOnContainers 參考應用程式架構
 
-上圖顯示移動和 SPA 用戶端與單個 API 閘道終結點通信，然後與微服務通信。 傳統的 Web 用戶端與 MVC 微服務通信，通過 API 閘道與微服務通信。
+上圖顯示 Mobile 和 SPA 用戶端會與單一 API 閘道端點通訊，然後與微服務通訊。 傳統的 web 用戶端會與 MVC 微服務通訊，並透過 API 閘道與微服務通訊。
 
-**託管環境**。 在圖 6-1 中，您會看到部署在單一 Docker 主機內的數個容器。 使用 docker-compose up 命令部署至單一 Docker 主機時，就是這種情況。 不過，如果您使用協調器或容器叢集，每個容器可能會在不同的主機 (節點) 中執行，而且任何節點可能會執行任何數目的容器，如稍早的＜架構＞一節中所述。
+**裝載環境**。 在圖 6-1 中，您會看到部署在單一 Docker 主機內的數個容器。 使用 docker-compose up 命令部署至單一 Docker 主機時，就是這種情況。 不過，如果您使用協調器或容器叢集，每個容器可能會在不同的主機 (節點) 中執行，而且任何節點可能會執行任何數目的容器，如稍早的＜架構＞一節中所述。
 
 **通訊架構**。 eShopOnContainers 應用程式使用兩種通訊類型，視功能動作的類型而定 (查詢相對於更新和交易)：
 
@@ -83,7 +83,7 @@ ms.locfileid: "76965759"
 
 ### <a name="data-sovereignty-per-microservice"></a>每個微服務的資料自主性
 
-在範例應用程式中，雖然所有 SQL Server 資料庫會部署為單一容器，但每個微服務都擁有自己的資料庫或資料來源。 此設計決策的制定只是為了方便開發人員從 GitHub 取得程式碼、將它複製，並在 Visual Studio 或 Visual Studio Code 中將它開啟。 或者，它可以輕鬆地使用 .NET Core CLI 和 Docker CLI 編譯自訂 Docker 映射，然後在 Docker 開發環境中部署和運行它們。 不論使用哪種方法，針對資料來源使用容器可讓開發人員在幾分鐘內建置及部署，而不需要佈建外部資料庫或在基礎結構 (雲端或內部部署) 上有硬式相依性的任何其他資料來源。
+在範例應用程式中，雖然所有 SQL Server 資料庫會部署為單一容器，但每個微服務都擁有自己的資料庫或資料來源。 此設計決策的制定只是為了方便開發人員從 GitHub 取得程式碼、將它複製，並在 Visual Studio 或 Visual Studio Code 中將它開啟。 或者，它也可讓您輕鬆地使用 .NET Core CLI 和 Docker CLI 編譯自訂 Docker 映射，然後在 Docker 開發環境中部署和執行它們。 不論使用哪種方法，針對資料來源使用容器可讓開發人員在幾分鐘內建置及部署，而不需要佈建外部資料庫或在基礎結構 (雲端或內部部署) 上有硬式相依性的任何其他資料來源。
 
 在實際生產環境中，若要取得高可用性和延展性，資料庫應該以雲端或內部部署 (而不是容器) 中的資料庫伺服器為基礎。
 
@@ -91,14 +91,14 @@ ms.locfileid: "76965759"
 
 ### <a name="additional-resources"></a>其他資源
 
-- **eShopOn容器GitHub回購。參考應用程式的原始程式碼** \
+- **eShopOnContainers GitHub 存放庫。參考應用程式的原始程式碼** \
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>微服務架構解決方案的優點
 
-像這樣的基於微服務的解決方案具有許多優點：
+這類以微服務為基礎的解決方案有許多優點：
 
-**每個微服務相對較小，因此管理和開發都很容易**。 具體來說：
+**每個微服務相對較小，因此管理和開發都很容易**。 尤其是：
 
 - 開發人員輕鬆就能了解及快速開始使用，因此可提高生產力。
 
@@ -118,13 +118,13 @@ ms.locfileid: "76965759"
 
 ## <a name="downsides-of-a-microservice-based-solution"></a>微服務架構解決方案的缺點
 
-像這樣的基於微服務的解決方案也有一些缺點：
+這類以微服務為基礎的解決方案也有一些缺點：
 
-**分散式應用程式**。 散發應用程式會增加開發人員設計和建置服務時的複雜度。 例如，開發人員必須使用 HTTP 或 AMPQ 等協定實現服務間通信，這增加了測試和異常處理的複雜性。 也會增加系統的延遲。
+**分散式應用程式**。 散發應用程式會增加開發人員設計和建置服務時的複雜度。 例如，開發人員必須使用 HTTP 或 AMPQ 等通訊協定來執行服務間的通訊，這樣會增加測試和例外狀況處理的複雜度。 也會增加系統的延遲。
 
 **部署複雜度**。 應用程式若有數十種微服務類型並需要高延展性 (必須能夠針對每個服務建立許多執行個體，並在許多主機之間平衡這些服務)，則表示 IT 作業和管理的部署複雜度很高。 如果您未使用微服務導向基礎結構 (例如協調器和排程器)，額外的複雜性可能需要遠比商務應用程式本身更多的開發工作。
 
-**原子事務**。 多個微服務之間的不可部分完成交易通常不可行。 商務需求必須在多個微服務之間採用最終一致性。
+不可部分完成的**交易**。 多個微服務之間的不可部分完成交易通常不可行。 商務需求必須在多個微服務之間採用最終一致性。
 
 **增加的全域資源需求** (所有伺服器或主機的總記憶體、磁碟機和網路資源)。 在許多情況下，當您以微服務方法取代整合型應用程式時，新微服務架構應用程式所需之初始全域資源量會大於原始整合型應用程式的基礎結構需求。 這是因為資料粒度和分散式服務的程度越高，就需要越多的全域資源。 不過，由於相較於開發整合型應用程式時的長期執行成本，資源成本一般很低，而且具有能夠只擴充應用程式特定區域的優點，因此增加資源使用量通常會比長期執行的大型應用程式效果更佳。
 
@@ -142,9 +142,9 @@ ms.locfileid: "76965759"
 
 外部架構是由多個服務所組成的微服務架構，並遵循本指南的＜架構＞一節中所述的原則。 不過，根據每個微服務的本質 (與您選擇的高階微服務架構無關)，通常且有時候最好擁有不同的內部架構，且每個架構是以不同的模式為基礎並針對不同的微服務。 這些微服務甚至可以使用不同的技術和程式設計語言。 圖 6-2 說明此多樣性。
 
-![比較外部和內部體系結構模式的圖表。](./media/microservice-application-design/external-versus-internal-architecture.png)
+![比較外部和內部架構模式的圖表。](./media/microservice-application-design/external-versus-internal-architecture.png)
 
-**圖6-2**. 外部與內部架構和設計
+**圖 6-2**。 外部與內部架構和設計
 
 例如，在我們的 *eShopOnContainers* 範例中，目錄、購物籃和使用者設定檔微服務很簡單 (基本上是 CRUD 子系統)。 因此，其內部架構和設計會很直接。 不過，您可能有其他微服務，例如訂購微服務，這些微服務更複雜，而且代表領域複雜度很高之不斷改變的商務規則。 在這些情況下，您可能會想要在特定微服務中實作更進階的模式 (例如以領域導向設計 (DDD) 方法定義的模式)，就像是我們在 *eShopOnContainers* 訂購微服務中一樣 (我們將在說明 *eShopOnContainers* 訂購微服務實作的稍後章節中檢閱這些 DDD 模式)。
 
@@ -158,13 +158,13 @@ ms.locfileid: "76965759"
 
 - 單一階層單層式的簡易 CRUD。
 
-- [傳統 N 分層](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10))。
+- [傳統 N 分層](/previous-versions/msp-n-p/ee658109(v=pandp.10))。
 
 - [領域導向設計 N 分層](https://devblogs.microsoft.com/cesardelatorre/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
 - [乾淨架構](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (可搭配 [eShopOnWeb](https://aka.ms/WebAppArchitecture) 使用)
 
-- [命令和查詢責任分離](https://martinfowler.com/bliki/CQRS.html)（CQRS）。
+- [命令與查詢責任隔離](https://martinfowler.com/bliki/CQRS.html) (CQRS) 。
 
 - [事件驅動架構](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA)。
 
@@ -172,18 +172,18 @@ ms.locfileid: "76965759"
 
 請注意，沒有特定架構模式或樣式，也沒有任何特定技術適合所有情況。 圖 6-3 顯示可用於不同微服務的一些方法和技術 (但不會依任何特定順序)。
 
-![顯示了多面體世界體系結構中的 12 個複雜微服務。](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
+![此圖顯示多語言世界架構中的12個複雜微服務。](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
 
-**圖6-3**. 多個架構模式和多種語言的微服務世界
+**圖 6-3**。 多個架構模式和多種語言的微服務世界
 
 多個架構模式和多種語言的微服務，表示您可以根據每個微服務的需求混合搭配語言和技術，並仍然可以讓它們彼此通訊。 如圖 6-3 所示，在由許多微服務 (以領域導向設計術語來說是限定內容，或只是作為自發微服務的「子系統」) 所組成的應用程式中，您可能會以不同方式來實作每個微服務。 根據應用程式的本質、商務需求和優先順序，每個微服務可能會有不同的架構模式，並使用不同的語言和資料庫。 在某些情況下，微服務可能很類似。 但並不一定總是如此，因為每個子系統的內容界限和需求通常不同。
 
 例如，在簡易 CRUD 維護應用程式中，設計和實作 DDD 模式可能沒有任何意義。 但針對您的核心領域或核心商務，您可能需要套用更進階的模式，來處理不斷改變之商務規則的商務複雜度。
 
-特別是當您處理由多個子系統組成的大型應用程式時，不應基於單個體系結構模式應用單個頂級體系結構。 例如，您不應該將 CQRS 套用為整個應用程式的頂層架構，但對特定一組服務而言可能有很用。
+尤其是當您處理多個子系統所組成的大型應用程式時，您不應該根據單一架構模式套用單一的最上層架構。 例如，您不應該將 CQRS 套用為整個應用程式的頂層架構，但對特定一組服務而言可能有很用。
 
 沒有適用於所有給定案例的靈丹或正確的架構模式。 您不可能會有「一個適用於所有案例的架構模式」。 根據每個微服務的優先順序，您必須針對每個微服務選擇不同的方法，如下列各節中所述。
 
 >[!div class="step-by-step"]
->[上一個](index.md)
->[下一個](data-driven-crud-microservice.md)
+>[上一個](index.md) 
+>[下一步](data-driven-crud-microservice.md)
