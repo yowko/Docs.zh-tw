@@ -1,6 +1,6 @@
 ---
-title: '如何宣告及使用讀寫屬性-c # 程式設計手冊'
-description: '瞭解如何在 c # 中使用讀取/寫入屬性。 這個範例包含兩個屬性，其中每一個都有 get 和 set 存取子，因此屬性是可讀寫的。'
+title: '如何宣告和使用讀寫屬性-c # 程式設計指南'
+description: '瞭解如何在 c # 中使用讀取/寫入屬性。 此範例包含兩個屬性，其中每個屬性都有 get 和 set 存取子，因此屬性是讀取/寫入。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -9,22 +9,25 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 08bdaa9446491d473cfb16e3b82bac41d7af5b79
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: a2bfc3f43db84ebf69f9a5f41c118c5981e33c19
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864445"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199142"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>如何宣告及使用讀寫屬性（c # 程式設計手冊）
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>如何宣告和使用讀寫屬性 (c # 程式設計手冊) 
+
 屬性會提供公用資料成員的便利性，卻沒有不受保護、控制和驗證存取物件資料所附帶的風險。 這是透過「存取子」** 完成的：從基礎資料成員指派和擷取值的特殊方法。 [set](../../language-reference/keywords/set.md) 存取子可讓資料成員被指派，而 [get](../../language-reference/keywords/get.md) 存取子可擷取資料成員值。  
   
  這個範例會示範有兩個屬性的 `Person` 類別：`Name` (字串) 和 `Age` (整數)。 這兩個屬性都提供 `get` 和 `set` 存取子，所以它們被視為讀取/寫入屬性。  
   
 ## <a name="example"></a>範例  
+
  [!code-csharp[csProgGuideObjects#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#33)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
+
  在上例中，`Name` 和 `Age` 屬性是[公用的](../../language-reference/keywords/public.md)，且同時包含 `get` 和 `set` 存取子。 這可讓任何物件讀取和寫入這些屬性。 但有時候會很想排除其中一個存取子。 例如，省略 `set` 存取子會讓屬性變成唯讀的：  
   
  [!code-csharp[csProgGuideObjects#87](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#87)]  

@@ -2,14 +2,15 @@
 title: 作法：使用 EdmGen.exe 驗證模型和對應檔
 ms.date: 03/30/2017
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
-ms.openlocfilehash: a5e3124eb907b8077df7db4d71240f6e6b7bae63
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62a3bde9d2431b9e9e86e2a8d8896520f3456590
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544501"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198115"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>作法：使用 EdmGen.exe 驗證模型和對應檔
+
 本主題說明如何使用 EDM 產生器 [ ( # A0) ](edm-generator-edmgen-exe.md) 工具來驗證模型和對應檔。 如需詳細資訊，請參閱 [實體資料模型](../entity-data-model.md)。  
   
 ### <a name="to-validate-the-school-model-using-edmgenexe"></a>使用 EdmGen.exe 驗證 School 模型  

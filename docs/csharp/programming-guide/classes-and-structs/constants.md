@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: e4d7c96cdcfd7751e80703fe4c5a56e66f4c18c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9eff44f3260f0f50fef956ba60b01e2497d7d2dd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555350"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199207"
 ---
 # <a name="constants-c-programming-guide"></a>常數 (C# 程式設計手冊)
+
 常數是在編譯時期已知且不會在程式存留期變更的不可變值。 常數是使用 [const](../../language-reference/keywords/const.md) 修飾詞所宣告。 只有 c # [內建類型](../../language-reference/builtin-types/built-in-types.md) (排除 <xref:System.Object?displayProperty=nameWithType>) 可能會宣告為 `const` 。 使用者定義型別 (包括類別、結構和陣列) 不能是 `const`。 使用 [readonly](../../language-reference/keywords/readonly.md) 修飾詞來建立在執行階段一次初始化的類別、結構或陣列 (例如在建構函式中)，因而無法進行變更。  
   
  C# 不支援 `const` 方法、屬性或事件。  
@@ -44,6 +45,7 @@ ms.locfileid: "90555350"
  [!code-csharp[csProgGuideObjects#67](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#67)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

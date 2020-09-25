@@ -9,20 +9,21 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 80d54df40c6798e146013b4f2d867386ae35169c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504481"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201716"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net> 項目 (網路設定)
+
 包含會指定 .NET Framework 如何連接至網路的設定。  
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;**\<system.net>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.net>
@@ -30,33 +31,37 @@ ms.locfileid: "84504481"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
+
  無。  
   
 ### <a name="child-elements"></a>子元素  
   
-|**元素**|**描述**|  
+|**Element**|**說明**|  
 |-----------------|---------------------|  
 |[authenticationModules](authenticationmodules-element-network-settings.md)|指定用來驗證網際網路要求的模組。|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|指定網際網路主機的最大連接數目。|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
-|[mailSettings](mailsettings-element-network-settings.md)|設定簡單郵件傳輸通訊協定（SMTP）郵件傳送選項。|  
+|[mailSettings](mailsettings-element-network-settings.md)|設定 Simple Mail Transport Protocol (SMTP) Mail 傳送選項。|  
 |[requestCaching](requestcaching-element-network-settings.md)|控制網路要求的快取機制。|  
-|[設定](settings-element-network-settings.md)|為 <xref:System.Net> 和相關的子命名空間中的類別設定基本的網路選項。|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|指定要用來從網際網路主機要求資訊的模組。|  
+|[設定](settings-element-network-settings.md)|為 <xref:System.Net> 和相關子命名空間中的類別設定基本網路選項。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|指定要用來向網際網路主機要求資訊的模組。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**元素**|**描述**|  
+|**Element**|**說明**|  
 |-----------------|---------------------|  
 |[設定](../configuration-element.md)|包含所有命名空間的設定。|  
   
 ## <a name="remarks"></a>備註  
- [\<system.net>](system-net-element-network-settings.md)元素包含 <xref:System.Net> 和相關子命名空間中的類別設定。 設定可設定驗證模組、連線管理、郵件設定、proxy 伺服器，以及從網際網路主機接收資訊的網際網路要求模組。  
+
+ [\<system.net>](system-net-element-network-settings.md)元素包含 <xref:System.Net> 和相關子命名空間中類別的設定。 這些設定會設定驗證模組、連線管理、郵件設定、proxy 伺服器，以及從網際網路主機接收資訊的網際網路要求模組。  
   
 ## <a name="example"></a>範例  
+
  下列範例顯示類別所使用的一般設定 <xref:System.Net> 。  
   
 ```xml  

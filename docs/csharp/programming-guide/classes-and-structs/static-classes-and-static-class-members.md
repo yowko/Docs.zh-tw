@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 019b36a328d4e9fb01b112ec79d8d8e0548142f7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cbfe4b63dc27cf0a0b6aad87c4f011151bacd4e5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541873"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199012"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>靜態類別和靜態類別成員 (C# 程式設計手冊)
 
@@ -58,11 +58,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  靜態類別已密封，因此無法進行繼承。 它們無法繼承自 <xref:System.Object> 以外的任何類別。 靜態類別不能包含實例的函式。 不過，它們可以包含靜態的函式。 如果類別包含需要重要初始化的靜態成員，則非靜態類別也應該定義靜態建構函式。 如需詳細資訊，請參閱[靜態建構函式](./static-constructors.md)。  
   
 ## <a name="example"></a>範例  
+
  以下是包含兩種方法可將溫度從攝氏轉換為華氏以及從華氏轉換為攝氏的靜態類別範例︰  
   
  [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>靜態成員  
+
  非靜態類別可以包含靜態方法、欄位、屬性或事件。 即使尚未建立類別的執行個體，還是可以在類別上呼叫靜態成員。 靜態成員一律是透過類別名稱進行存取，而不是執行個體名稱。 不論建立多少個類別執行個體，都只會有一個靜態成員複本。 靜態方法和屬性無法存取其包含類型中的非靜態欄位和事件，而且它們無法存取任何物件的執行個體變數，除非它在方法參數中明確傳遞。  
   
  使用一些靜態成員宣告非靜態類別，會比將整個類別宣告為靜態更為常見。 靜態欄位的兩個常用用法是持續計算已具現化的物件數目，或是儲存必須在所有執行個體之間共用的值。  

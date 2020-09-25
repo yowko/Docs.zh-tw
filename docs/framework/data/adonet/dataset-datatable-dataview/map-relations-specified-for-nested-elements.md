@@ -2,17 +2,18 @@
 title: 針對巢狀項目指定的關聯進行對應
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: cd652f51f01dcfa16a8b707f35c658043c20670d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f758e1ef2c3786a102dc6bb5f6dd217b20dc5b55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150892"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198544"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>針對巢狀項目指定的關聯進行對應
-架構可以包括**msdata：關係**注釋，以顯式指定架構中任意兩個元素之間的映射。 msdata 中指定的兩個元素 **：關係**可以在架構中嵌套，但不必嵌套。 映射過程使用**msdata：** 架構中的關係來生成兩列之間的主鍵/外鍵關係。  
+
+架構可以包含 **msdata： Relationship** 注釋，以明確指定架構中任何兩個元素之間的對應。 **Msdata： Relationship**中指定的兩個元素可以嵌套在架構中，但不一定要如此。 對應進程會在架構中使用 **msdata： Relationship** ，以產生兩個數據行之間的主鍵/外鍵關聯性。  
   
- 下面的示例顯示了一個 XML 架構，其中**OrderDetail**元素是**order**的子項目。 **msdata：關係**標識此父子關係，並指定結果**訂單**表的**OrderNumber**列與生成的**訂單詳細資訊**表的 **"訂單無**"列相關。  
+ 下列範例顯示 XML 架構，其中 **OrderDetail** 元素是 **Order**的子項目。 **Msdata： Relationship**會識別這個父子式關聯性，並指定產生的**順序**資料表的**OrderNumber**資料行與所產生之**OrderDetail**資料表的**OrderNo**資料行相關。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -54,14 +55,14 @@ ms.locfileid: "79150892"
   
  XML 結構描述對應處理序會在 <xref:System.Data.DataSet> 內建立下列各項：  
   
-- **訂單**和**訂單詳細資訊**表。  
+- **Order**和**OrderDetail**資料表。  
   
     ```text  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- **訂單**和**訂單詳細資訊**表之間的關係。 此關係的**嵌套**屬性設置為**True，** 因為 **"訂單"** 和"**訂單詳細資訊"** 元素嵌套在架構中。  
+- **Order**和**OrderDetail**資料表之間的關聯性。 此關聯性的 **Nested** 屬性設定為 **True** ，因為 **Order** 和 **OrderDetail** 專案會在架構中嵌套。  
   
     ```text  
     ParentTable: Order  

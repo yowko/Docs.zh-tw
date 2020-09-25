@@ -2,14 +2,15 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: f295fe48e194611c80b78c0c23ab3e66ea1c0b64
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6094006df24ee824c419a783ab29d7604757577c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400503"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201456"
 ---
 # \<clientCredentials>
+
 指定用來對服務驗證用戶端的認證。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "70400503"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<clientCredentials>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <clientCredentials type="String"
@@ -40,6 +41,7 @@ ms.locfileid: "70400503"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -51,7 +53,7 @@ ms.locfileid: "70400503"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<clientCertificate>](clientcertificate-of-clientcredentials-element.md)|指定用來對服務驗證用戶端的憑證。 此項目的型別為 <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement>。|  
 |[\<httpDigest>](httpdigest-element.md)|指定用來對服務驗證用戶端的摘要。 此項目的型別為 <xref:System.ServiceModel.Configuration.HttpDigestClientElement>。|  
@@ -62,11 +64,12 @@ ms.locfileid: "70400503"
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|指定端點行為。|  
   
 ## <a name="remarks"></a>備註  
+
  在需要雙向驗證的情況下，用戶端認證可用於驗證服務的用戶端。 在用戶端必須以服務的憑證保護傳遞給服務的訊息時，這個組態區段也可以用來指定服務憑證。  
   
 ## <a name="see-also"></a>另請參閱
@@ -74,4 +77,4 @@ ms.locfileid: "70400503"
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - [安全性行為](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [保護用戶端安全](../../../wcf/securing-clients.md)
+- [確保用戶端的安全](../../../wcf/securing-clients.md)

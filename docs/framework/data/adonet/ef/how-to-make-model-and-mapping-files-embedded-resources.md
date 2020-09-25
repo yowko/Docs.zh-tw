@@ -2,14 +2,15 @@
 title: 作法：讓模型和對應檔成為內嵌資源
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: aaab2ccc96497cb718b868f7ac63995ad4ba35c8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8496dcad5422d1a45af52e58325efd360768da34
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546675"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198284"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>作法：讓模型和對應檔成為內嵌資源
+
 Entity Framework 可讓您將模型和對應檔部署為應用程式的內嵌資源。 具有內嵌模型和對應檔的組件必須載入與實體連接相同的應用程式定義域中。 如需詳細資訊，請參閱[連接字串](connection-strings.md)。 根據預設，實體資料模型工具會內嵌模型和對應檔。 當您手動定義模型和對應檔時，請使用這個程式，確保檔案與 Entity Framework 的應用程式一起部署為內嵌資源。  
   
 > [!NOTE]
@@ -34,6 +35,7 @@ Entity Framework 可讓您將模型和對應檔部署為應用程式的內嵌資
      如需詳細資訊，請參閱[連接字串](connection-strings.md)。  
   
 ## <a name="example"></a>範例  
+
  下列連接字串會參考 [AdventureWorks Sales model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)的內嵌模型和對應檔。 此連接字串儲存在專案的 App.config 檔案中。  
 
 ## <a name="see-also"></a>另請參閱

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 4db71721495857c634e8090b986704d8a592b4e2
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 01af1446097bbed25874b45d57a5dde85ae63891
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864393"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199155"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>如何定義抽象屬性（c # 程式設計手冊）
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>如何定義抽象屬性 (c # 程式設計手冊) 
+
 下例示範如何定義[抽象](../../language-reference/keywords/abstract.md)屬性。 抽象屬性宣告不提供屬性存取子實作 -- 它會宣告類別支援屬性，但保留衍生類別的存取子實作。 下例示範如何實作繼承自基底類別的抽象屬性。  
   
  這個範例包含三個檔案，每個檔案都是各自編譯，產生的組件是下次編譯參考的對象：  
@@ -31,6 +32,7 @@ ms.locfileid: "86864393"
  這會建立可執行檔 shapetest.exe。  
   
 ## <a name="example"></a>範例  
+
  這個檔案會宣告包含 `double` 類型 `Area` 屬性的 `Shape` 類別。  
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
@@ -44,11 +46,13 @@ ms.locfileid: "86864393"
 - 宣告抽象屬性時 (例如本例的 `Area`)，您只要指出有哪些屬性存取子可用即可，不用實作它們。 本例中只有 [get](../../language-reference/keywords/get.md) 存取子可用，所以此屬性是唯讀的。  
   
 ## <a name="example"></a>範例  
+
  下列程式碼會示範 `Shape` 的三個子類別，以及它們如何覆寫 `Area` 屬性以提供它們自己的實作。  
   
  [!code-csharp[csProgGuideInheritance#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#2)]  
   
 ## <a name="example"></a>範例  
+
  下列程式碼會示範測試程式，建立多個 `Shape` 衍生物件並列印其區域。  
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
