@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 0479b966abd0cfa3c570355e62e4b42264a3114f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 26b265996a059d8e52901557603bcf5e7636e596
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554550"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195216"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly> 項目
+
 指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -24,7 +25,7 @@ ms.locfileid: "90554550"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<qualifyAssembly>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
       <qualifyAssembly partialName=  
@@ -33,6 +34,7 @@ ms.locfileid: "90554550"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -43,6 +45,7 @@ ms.locfileid: "90554550"
 |`fullName`|必要屬性。<br /><br /> 指定元件在全域組件快取中所顯示的完整名稱。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -54,11 +57,13 @@ ms.locfileid: "90554550"
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
+
  <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>使用部分元件名稱呼叫方法會導致 common language runtime 只在應用程式基底目錄中尋找元件。 **\<qualifyAssembly>** 您可以使用應用程式佈建檔中的專案，提供完整的元件資訊 (名稱、版本、公開金鑰 token 和文化特性) ，並導致 common language runtime 搜尋全域組件快取中的元件。  
   
  **FullName**屬性必須包含元件身分識別的四個欄位：名稱、版本、公開金鑰 token 和文化特性。 **PartialName**屬性必須部分參考元件。 您必須至少指定元件的文字名稱 (最常見的案例) ，但您也可以包含版本、公開金鑰 token 或文化特性 (或四個的任意組合，而不是全部四個) 。 **PartialName**必須符合您在呼叫中指定的名稱。 例如，您不能在 `"math"` 設定檔中指定作為 **partialName** 屬性，然後 `Assembly.Load("math, Version=3.3.3.3")` 在程式碼中呼叫。  
   
 ## <a name="example"></a>範例  
+
  下列範例會以邏輯方式開啟的呼叫 `Assembly.Load("math")` `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")` 。  
   
 ```xml  
@@ -75,6 +80,6 @@ ms.locfileid: "90554550"
   
 ## <a name="see-also"></a>另請參閱
 
-- [執行時間設定架構](index.md)
+- [執行階段設定結構描述](index.md)
 - [執行階段如何找出組件](../../../deployment/how-the-runtime-locates-assemblies.md)
 - [部分組件參考](/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

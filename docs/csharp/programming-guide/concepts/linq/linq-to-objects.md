@@ -3,12 +3,12 @@ title: LINQ to Objects (C#)
 description: '深入瞭解 c # 中的 LINQ to Objects，其 <T> 會在沒有中繼 LINQ 提供者或 API 的情況下，使用具有任何 IEnumerable 或 ienumerable 集合的 LINQ 查詢。'
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: f8e65f129dc002d9615b01e3a3a123514754b886
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 575708f14487670a4371d470dcdcf650b03c3175
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557002"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202522"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 
@@ -29,6 +29,7 @@ ms.locfileid: "90557002"
  本節的目的是要透過一些精選的範例，示範 LINQ 方法， 這並非詳盡的設計。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [LINQ 和字串 (C#)](./linq-and-strings.md)  
  說明如何使用 LINQ 查詢及轉換字串與字串集合。 也包含示範這些原則的文章連結。  
   

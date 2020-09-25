@@ -1,22 +1,23 @@
 ---
-title: <的 System.servicemodel> 工作流程
+title: <System.servicemodel> 的工作流程
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c18cc4886d3e7a19b750a005b27d00a841b9fc5d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151945"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194852"
 ---
 # <a name="systemservicemodel-of-workflow"></a>工作流程的 \<system.serviceModel>
+
 這個組態區段包含所有工作流程組態項目。  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.ServiceModel>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.ServiceModel>  
@@ -95,20 +96,22 @@ ms.locfileid: "79151945"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
+
  無  
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<behaviors>](behaviors-of-workflow.md)|這個區段會定義**serviceBehaviors**集合。  集合中的每個項目都會定義服務使用的行為項目。 每個行為元素都是由其唯一的**名稱**屬性來識別。|  
-|[\<tracking>](tracking.md)|代表定義工作流程服務之追蹤設定的組態區段。<br /><br /> 如需工作流程追蹤及其設定的詳細資訊，請參閱工作流程[追蹤和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)追蹤和設定[工作流程的追蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
+|[\<behaviors>](behaviors-of-workflow.md)|此區段會定義 **>servicebehaviors>** 集合。  集合中的每個項目都會定義服務使用的行為項目。 每個行為元素都是由其唯一 **名稱** 屬性來識別。|  
+|[\<tracking>](tracking.md)|代表定義工作流程服務之追蹤設定的組態區段。<br /><br /> 如需工作流程追蹤及其設定的詳細資訊，請參閱工作流程 [追蹤和追蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) 和設定 [工作流程的追蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<configuration>](../configuration-element.md)|.NET 組態檔中所有組態項目的根項目。|

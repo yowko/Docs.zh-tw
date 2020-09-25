@@ -8,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 4517aab98235ec2172da355ad0e05d95ebee46c5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554035"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201703"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> 項目
 
@@ -23,7 +23,7 @@ ms.locfileid: "90554035"
 &nbsp;&nbsp;[\<startup>](startup-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
 
-## <a name="syntax"></a>語法
+## <a name="syntax"></a>Syntax
 
 ```xml
 <supportedRuntime version="runtime version" sku="sku id"/>
@@ -31,7 +31,7 @@ ms.locfileid: "90554035"
 
 ## <a name="attributes"></a>屬性
 
-|屬性|說明|
+|屬性|描述|
 |---------------|-----------------|
 |**version**|選擇性屬性。<br /><br /> 字串值，用於指定這個應用程式支援的通用語言執行平台 (CLR) 版本。 如需屬性的有效值 `version` ，請參閱「 [執行階段版本」值](#version) 一節。 **注意：**  透過 .NET Framework 3.5，「*執行階段版本*」值的格式會是「 *主要*」。*次要*。*build*。 從 .NET Framework 4 開始，只需要主要和次要版本號碼 (也就是 "v4.0" 而非 "v 4.0.30319" ) 。 建議使用較短的字串。|
 |**sku**|選擇性屬性。<br /><br /> 字串值，指定庫存單位 (SKU)，進而指定哪些應用程式支援的.NET Framework 版本。<br /><br /> 從 .NET Framework 4.0 開始，建議使用 `sku` 屬性。  該屬性存在時，會指出應用程式作為目標的 .NET Framework 版本。<br /><br /> 如需 sku 屬性的有效值，請參閱「 [sku 識別碼」值](#sku) 一節。|
@@ -55,7 +55,9 @@ ms.locfileid: "90554035"
 建議您使用應用程式能夠執行的所有 .NET Framework 版本進行應用程式測試。
 
 <a name="version"></a>
+
 ## <a name="runtime-version-values"></a>「執行階段版本」值
+
 `runtime`屬性指定特定應用程式所需的 Common Language Runtime (CLR) 版本。 請注意，所有 .NET Framework v4. x 版本都會指定 `v4.0` CLR。 下表列出屬性之 *執行階段版本* 值的有效值 `version` 。
 
 |.NET Framework 版本|`version` 屬性|

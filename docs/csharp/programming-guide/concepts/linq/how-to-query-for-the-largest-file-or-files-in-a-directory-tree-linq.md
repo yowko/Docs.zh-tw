@@ -1,16 +1,17 @@
 ---
-title: '如何查詢樹狀目錄中的最大檔案（LINQ）（c #）'
-description: '這個 c # 範例顯示與檔案大小（以位元組為單位）相關的五個 LINQ 查詢。 您可以修改這些來查詢 FileInfo 物件的某些其他屬性。'
+title: '如何查詢目錄樹狀結構中的最大檔案 (LINQ)  (c # ) '
+description: '這個 c # 範例顯示與檔案大小（以位元組為單位）相關的五個 LINQ 查詢。 您可以修改這些屬性，以查詢 FileInfo 物件的某些其他屬性。'
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 049db9bf104af1593ba9807c307008e8e760da32
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104370"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176249"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>如何查詢樹狀目錄中的最大檔案（LINQ）（c #）
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>如何查詢目錄樹狀結構中的最大檔案 (LINQ)  (c # ) 
+
 此範例顯示五個與檔案位元組大小相關的查詢：  
   
 - 如何擷取最大檔案的位元組大小。  
@@ -24,6 +25,7 @@ ms.locfileid: "87104370"
 - 如何根據檔案位元組大小將檔案分組排序，並略過小於指定大小的檔案。  
   
 ## <a name="example"></a>範例  
+
  下列範例包含五個不同的查詢，以示範如何根據檔案位元組大小來查詢和分組檔案。 您可以輕鬆修改這些範例，使查詢根據 <xref:System.IO.FileInfo> 物件的其他某個屬性。  
   
 ```csharp  
@@ -144,9 +146,10 @@ class QueryBySize
  查詢會呼叫外面另一個取得檔案位元組大小的方法，以解決可能會因下列狀況引發的例外狀況：自呼叫 `GetFiles` 而建立 <xref:System.IO.FileInfo> 物件以來的這段期間，有另一個執行緒刪除了檔案。 即使已建立 <xref:System.IO.FileInfo> 物件，還是可能會發生這個例外狀況，原因是 <xref:System.IO.FileInfo> 物件會在它的 <xref:System.IO.FileInfo.Length%2A> 屬性第一次受到存取時，嘗試使用目前最新的位元組大小來重新整理這個屬性。 讓這個作業進入查詢外部的 try-catch 區塊，就會遵循規則，以避免查詢中會造成副作業的作業。 一般而言，處理例外狀況時需要十分小心，以確定應用程式不是處於未知狀態。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 049f0636b1c2c2df33461714aea5a11810ef00ad
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359190"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177289"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>教學課程：使用 Visual Studio 以 .NET Core 測試 .NET Standard 類別庫
 
 本教學課程示範如何將測試專案加入至方案，以自動化單元測試。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 本教學課程適用于 [使用 Visual Studio 建立 .NET Standard 程式庫](library-with-visual-studio.md)中所建立的解決方案。
 
@@ -87,7 +87,7 @@ ms.locfileid: "89359190"
 
 1. 在 [ **參考管理員** ] 對話方塊中，展開 [ **專案** ] 節點，然後選取 [ **StringLibrary**] 旁的方塊。 加入元件的參考，可讓編譯器在 `StringLibrary` 編譯**StringLibraryTest**專案時尋找**StringLibrary**方法。
 
-1. 選取 [確定]  。
+1. 選取 [確定]。
 
 ## <a name="add-and-run-unit-test-methods"></a>加入並執行單元測試方法
 
@@ -186,6 +186,12 @@ ms.locfileid: "89359190"
    > ![StringLibrary 操作功能表和建置命令](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. 從功能表列中選擇 [**測試**回合  >  **所有測試**]，以執行單元測試。 所有測試皆通過。
+
+## <a name="debug-tests"></a>偵錯測試
+
+如果您使用 Visual Studio 作為 IDE，您可以使用教學課程：使用您的單元測試專案來進行程式碼 [的偵錯工具](debugging-with-visual-studio.md) 中所示的相同程式：使用 Visual Studio 來偵錯工具代碼。 請以滑鼠右鍵按一下**StringLibraryTests**專案，然後從內容功能表中選取 [ **Debug 測試**]，而不是啟動*展示*應用程式專案。
+
+Visual Studio 啟動已附加偵錯工具的測試專案。 執行將會在您已新增至測試專案或基礎程式庫程式碼的任何中斷點停止執行。
 
 ## <a name="additional-resources"></a>其他資源
 

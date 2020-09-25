@@ -2,14 +2,15 @@
 title: <xmlElement>
 ms.date: 03/30/2017
 ms.assetid: 395205c2-d8c0-4a5e-90f3-7ce3c085fccd
-ms.openlocfilehash: 841331f233bb8c42c25c88ad8e9b4fb1a86faa76
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0ab7fbd64cc92e940617f5334eeb16fcb3a50c4a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398992"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181228"
 ---
 # \<xmlElement>
+
 指定在要求權杖時隨訊息本文傳送的 XML 項目。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -22,7 +23,7 @@ ms.locfileid: "70398992"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<tokenRequestParameters>**](tokenrequestparameters.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<xmlElement>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tokenRequestParameters>
@@ -31,6 +32,7 @@ ms.locfileid: "70398992"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -40,11 +42,12 @@ ms.locfileid: "70398992"
 |xmlElement|指定 XML 項目的字串，該項目會在要求權杖時隨訊息本文傳送。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<tokenRequestParameters>](tokenrequestparameters.md)|權杖要求參數的集合。 每個參數都是 XML 項目。|  
   

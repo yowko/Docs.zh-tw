@@ -5,14 +5,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 887dda9b31d86c4952436316e160f4de7a15b66b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 76cc8da052ee51157857418cd81088a523f95ea2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556950"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186586"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>如何：自訂搭配 Entity Framework 提供者使用的摘要 (WCF 資料服務)
+
 WCF Data Services 可讓您自訂資料服務回應中的 Atom 序列化，讓實體的屬性可以對應至 AtomPub 通訊協定中定義的未使用元素。 本主題說明如何使用 Entity Framework 提供者，針對資料模型中於 .edmx 檔中定義的實體類型定義對應屬性。 如需詳細資訊，請參閱摘要 [自訂](feed-customization-wcf-data-services.md)。  
   
  在本主題中，您將手動修改工具產生的 .edmx 檔 (其中包含資料模型)。 您必須手動修改此檔案，因為 Entity Designer 不支援資料模型的副檔名。 如需實體資料模型工具產生之 .edmx 檔案的詳細資訊，請參閱 [.edmx 檔案總覽 (Entity Framework) ](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))。 本主題中的範例使用 Northwind 範例資料服務和自動產生的用戶端資料服務類別。 此服務和用戶端資料類別會在您完成 [WCF Data Services 快速入門](quickstart-wcf-data-services.md)時建立。  
@@ -36,6 +37,7 @@ WCF Data Services 可讓您自訂資料服務回應中的 Atom 序列化，讓�
 6. 重新編譯專案。  
   
 ## <a name="example"></a>範例  
+
  上一個範例會傳回以下 URI `http://myservice/Northwind.svc/Customers('ALFKI')` 的結果。  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresult)]  

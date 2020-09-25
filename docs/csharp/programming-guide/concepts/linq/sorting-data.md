@@ -1,16 +1,17 @@
 ---
 title: 排序資料 (C#)
-description: '瞭解在 c # 中以 LINQ 執行排序作業的排序作業和標準查詢運算子方法。'
+description: '深入瞭解排序作業，以及在 c # 中以 LINQ 執行排序作業的標準查詢運算子方法。'
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 5feeb0e2229fc370fdcb9608817f41832bffd7cc
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 0665e5dec95fd2929d24d82568de66597df1c0bd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302330"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195502"
 ---
 # <a name="sorting-data-c"></a>排序資料 (C#)
+
 排序作業會根據一個或多個屬性來排序序列的項目。 第一個排序準則會執行元素的主要排序； 您可以藉由指定第二個排序準則來排序每一個主要排序群組內的元素。  
   
  下圖顯示對一系列字元執行字母順序排序作業的結果：
@@ -34,6 +35,7 @@ ms.locfileid: "87302330"
 ### <a name="primary-sort-examples"></a>主要排序範例  
   
 #### <a name="primary-ascending-sort"></a>主要遞增排序  
+
  下列範例示範如何在 LINQ 查詢中使用 `orderby` 子句，依字串長度以遞增順序來排序陣列中的字串。  
   
 ```csharp  
@@ -57,6 +59,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="primary-descending-sort"></a>主要遞減排序  
+
  下一個範例示範如何在 LINQ 查詢中使用 `orderby descending` 子句，依其第一個字母以遞減順序來排序字串。  
   
 ```csharp  
@@ -82,6 +85,7 @@ foreach (string str in query)
 ### <a name="secondary-sort-examples"></a>次要排序範例  
   
 #### <a name="secondary-ascending-sort"></a>次要遞增排序  
+
  下列範例示範如何在 LINQ 查詢中使用 `orderby` 子句，對陣列中的字串執行主要和次要排序。 字串主要是依長度進行排序，其次依字串的第一個字母進行排序，而兩者都是遞增排序。  
   
 ```csharp  
@@ -105,6 +109,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="secondary-descending-sort"></a>次要遞減排序  
+
  下一個範例示範如何在 LINQ 查詢中使用 `orderby descending` 子句，執行依遞增順序的主要排序以及依遞減順序的次要排序。 字串主要是依長度進行排序，其次依字串的第一個字母進行排序。  
   
 ```csharp  
@@ -133,4 +138,4 @@ foreach (string str in query)
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
 - [orderby 子句](../../../language-reference/keywords/orderby-clause.md)
 - [排序 join 子句的結果](../../../linq/order-the-results-of-a-join-clause.md)
-- [如何依任何字或欄位排序或篩選文字資料（LINQ）（c #）](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [如何依任何字或欄位排序或篩選文字資料 (LINQ)  (c # ) ](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
