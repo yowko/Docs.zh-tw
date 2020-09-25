@@ -5,14 +5,15 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: ca474cdcaeaac7b1c32efa5c58f4b5bb5b7f7895
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 963b25e57ae8c2cc59dcc3e50ae2a52cc04f54a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557238"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185635"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool> 項目 (Web 設定)
+
 指定當 ASP.NET 應用程式在 IIS 7.0 或更新版本上以整合模式執行時，ASP.NET 用來管理整個進程行為的設定。  
   
 > [!IMPORTANT]
@@ -22,7 +23,7 @@ ms.locfileid: "90557238"
 &nbsp;&nbsp;[**\<system.web>**](system-web-element-web-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<applicationPool>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <applicationPool
@@ -44,6 +45,7 @@ ms.locfileid: "90557238"
 |`requestQueueLimit`|指定可在單一進程中將 ASP.NET 排入佇列的要求數目上限。 當兩個或多個 ASP.NET 應用程式在單一應用程式集區中執行時，對應用程式集區中的任何應用程式進行的累計要求集會受限於這項設定。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  

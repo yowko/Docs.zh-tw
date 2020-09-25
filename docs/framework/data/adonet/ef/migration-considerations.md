@@ -2,19 +2,21 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: b0274504fb2b83f7961d4444a8f8e601ba375a8d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d5151f0215cde1c5e35cc87c3cd667e16a23a1df
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554966"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175469"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
+
 ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 如需使用 Entity Framework 之優點的詳細資訊，請參閱 [Entity Framework 總覽](overview.md) 和 [實體資料模型](../entity-data-model.md)。  
   
  若要充分利用 Entity Framework 的優點，您可以將現有的應用程式遷移至 Entity Framework。 有些工作通用於所有移轉的應用程式。 這些常見的工作包括將應用程式升級為使用 .NET Framework 從3.5 版 Service Pack 1 (SP1) 、定義模型和對應，以及設定 Entity Framework。 當您將應用程式遷移至 Entity Framework 時，會有其他適用的考慮。 這些考量取決於要移轉的應用程式類型以及應用程式的特定功能。 本主題所提供的資訊有助於您選擇在升級現有應用程式時要使用的最佳方式。  
   
 ## <a name="general-migration-considerations"></a>一般移轉考量  
+
  當您將任何應用程式遷移至 Entity Framework 時，請考慮下列事項：  
   
 - 只要應用程式所使用之資料來源的資料提供者支援 Entity Framework，任何使用從 3.5 SP1 開始之 .NET Framework 的應用程式都可以遷移至 Entity Framework。  
@@ -26,6 +28,7 @@ ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一
 - Entity Framework 所使用的資料提供者連接可以與應用程式的其他部分共用，因為 Entity Framework 會使用 ADO.NET 資料提供者來存取資料來源。 例如，Entity Framework 是使用 SqlClient 提供者進行存取 SQL Server 資料庫。 如需詳細資訊，請參閱 [適用於 Entity Framework 的 EntityClient 提供者](entityclient-provider-for-the-entity-framework.md)。  
   
 ## <a name="common-migration-tasks"></a>通用移轉工作  
+
  將現有應用程式遷移至 Entity Framework 的路徑，取決於應用程式的類型和現有的資料存取策略。 但是，當您將現有的應用程式遷移至 Entity Framework 時，一律必須執行下列工作。  
   
 > [!NOTE]
@@ -53,9 +56,11 @@ ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一
      您必須將 Entity Framework 元件和模型和對應檔的參考加入 Visual Studio 專案。 您可以將這些對應檔加入至專案，以確保它們與應用程式一起部署在連接字串中所指示的位置。 如需詳細資訊，請參閱 [如何：手動設定 Entity Framework 專案](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>適用於具有現有物件的應用程式之考量  
+
  從 .NET Framework 4 開始，Entity Framework 支援「單純舊」的 CLR 物件 (POCO) ，也稱為非持續性物件。 在大部分的情況下，您現有的物件可以透過進行次要變更，來處理 Entity Framework。 如需詳細資訊，請參閱 [使用 POCO 實體](/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))。 您也可以將應用程式遷移至 Entity Framework，並使用 Entity Framework 工具所產生的資料類別。 如需詳細資訊，請參閱 [如何：使用實體資料模型 Wizard](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>適用於使用 ADO.NET 提供者的應用程式之考量  
+
  ADO.NET 提供者（例如 SqlClient）可讓您查詢資料來源，以傳回表格式資料。 您也可以將資料載入 ADO.NET 資料集。 下列清單描述升級使用現有 ADO.NET 提供者之應用程式的考慮：  
   
 - 使用資料讀取器 (Reader) 顯示表格式資料。  
@@ -69,6 +74,7 @@ ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一
   如果 Entity Framework 未提供您的應用程式所需的資料集功能，您仍然可以使用 LINQ to DataSet 來利用 LINQ 查詢的優點。 如需詳細資訊，請參閱 [LINQ to DataSet](../linq-to-dataset.md)。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>適用於將資料繫結至控制項的應用程式之考量  
+
  .NET Framework 可讓您將資料封裝在資料來源中，例如資料集或 ASP.NET 資料來源控制項，然後將使用者介面元素系結至這些資料控制項。 下列清單說明適用於將控制項繫結至 Entity Framework 資料的考量。  
   
 - 將資料繫結至控制項。  
@@ -84,6 +90,7 @@ ADO.NET Entity Framework 為現有的應用程式提供數個優點。 其中一
   Entity Framework 包含一個資料來源控制項，其設計目的是要簡化 ASP.NET Web 應用程式中的資料系結。 如需詳細資訊，請參閱 [EntityDataSource Web 服務器控制項總覽](/previous-versions/aspnet/cc488502(v=vs.100))。  
   
 ## <a name="other-considerations"></a>其他考量  
+
  下列考量可適用於將特定應用程式類型移轉至 Entity Framework 的情況。  
   
 - 公開資料服務的應用程式。  

@@ -6,16 +6,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: d726ab3a882d2e6913fa69c7b82f1d6db78dd47d
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 93fc0296eeb410ba7ca0e781bededbe79820506d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102043"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178862"
 ---
 # <a name="classes-c-programming-guide"></a>類別 (C# 程式設計手冊)
 
 ## <a name="reference-types"></a>參考型別  
+
 定義為 [class](../../language-reference/keywords/class.md) 的類型即為「參考型別」**。 在執行階段，當您宣告參考型別的變數時，該變數會包含 [null](../../language-reference/keywords/null.md) 值，直到您使用 [new](../../language-reference/operators/new-operator.md) 運算子明確地建立類別的執行個體，或為其指派在他處建立的相容類型物件為止，如下列範例所示：
 
 ```csharp
@@ -85,7 +86,7 @@ MyClass mc2 = mc;
   
 與 C++ 不同，C# 中的類別只能直接繼承自一個基底類別。 不過，因為基底類別本身可以繼承自另一個類別，所以類別可能會間接繼承多個基底類別。 基至，類別可以直接實作多個介面。 如需詳細資訊，請參閱[介面](../interfaces/index.md)。  
   
-類別可以宣告為 [abstract](../../language-reference/keywords/abstract.md)。 抽象類別包含具有簽章定義但沒有實作的抽象方法。 無法具現化抽象類別。 它們僅用於實作抽象方法的衍生類別。 相較之下，[sealed](../../language-reference/keywords/sealed.md) 類別不允許從它衍生其他類別。 如需詳細資訊，請參閱[抽象和密封類別和類別成員](abstract-and-sealed-classes-and-class-members.md)。  
+類別可以宣告為 [abstract](../../language-reference/keywords/abstract.md)。 抽象類別包含具有簽章定義但沒有實作的抽象方法。 無法具現化抽象類別。 它們僅用於實作抽象方法的衍生類別。 相較之下，[sealed](../../language-reference/keywords/sealed.md) 類別不允許從它衍生其他類別。 如需詳細資訊，請參閱 [抽象和密封類別和類別成員](abstract-and-sealed-classes-and-class-members.md)。  
   
 類別定義可以在不同的原始程式檔之間進行分割。 如需詳細資訊，請參閱[部分類別和方法](partial-classes-and-methods.md)。  
   
@@ -103,7 +104,7 @@ MyClass mc2 = mc;
 
 - [C # 程式設計指南](../index.md)
 - [物件導向程式設計](../concepts/object-oriented-programming.md)
-- [Polymorphism](polymorphism.md)
+- [多型](polymorphism.md)
 - [識別碼名稱](../inside-a-program/identifier-names.md)
 - [成員](members.md)
 - [方法](methods.md)

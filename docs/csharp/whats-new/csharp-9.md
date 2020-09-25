@@ -2,21 +2,21 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: 13da712e9421bbfe593e5945b80bb3636ebe05f3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f309f5fb2e705d220b8b0b743ec2f68901ee8f53
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866442"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178394"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
 C # 9.0 將下列功能和增強功能新增至 c # 語言：
 
-- 記錄
-- 僅供初始化的 Setter
-- 最上層陳述式
-- 模式比對增強功能
+- [記錄](#record-types)
+- [僅供初始化的 Setter](#init-only-setters)
+- [最上層陳述式](#top-level-statements)
+- [模式比對增強功能](#pattern-matching-enhancements)
 - 原生大小的整數
 - 函式指標
 - 隱藏發出 localsinit 旗標

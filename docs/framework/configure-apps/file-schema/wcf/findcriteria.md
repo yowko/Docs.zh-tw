@@ -2,14 +2,15 @@
 title: <findCriteria>
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: 44e068ee205bc5e04382164e7ab00716b2c07dcf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ce2b1fdd85e0454f901bac393e2f44ae0c6da43f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855162"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178143"
 ---
 # \<findCriteria>
+
 組態項目，該項目提供一組用戶端應用程式搜尋探索服務時所用的準則。 您可以將標準群組為搜尋準則 (指定您要尋找的服務)，並且尋找終止準則 (搜尋應持續的時間長短)。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "70855162"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<discoveryClientSettings>**](discoveryclientsettings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<findCriteria>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -48,6 +49,7 @@ ms.locfileid: "70855162"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -60,15 +62,15 @@ ms.locfileid: "70855162"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
-|[\<contractTypeNames>](contracttypenames.md)|Configuration 元素的集合，其中包含工作流程服務合約類型的名稱。|  
+|[\<contractTypeNames>](contracttypenames.md)|設定元素的集合，其中包含工作流程服務合約類型的名稱。|  
 |\<extensions> 的 \<findCriteria>|XML 項目物件的集合，這些物件會提供擴充。|  
 |[\<scopes>](scopes.md)|物件的集合，這些物件包含尋找作業找尋特定服務時所用的絕對 URI。<br /><br /> 如果找到特定的服務，就會順利比對服務 URI 和範圍 URI (有時候會藉助處理複雜比對的範圍規則)。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<standardEndpoints>](standardendpoints.md)|包含應用程式參與服務探索處理序做為用戶端所需的設定。|  
   

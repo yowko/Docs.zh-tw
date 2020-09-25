@@ -1,25 +1,27 @@
 ---
 title: DataAdapter 和 DataReader
-description: 瞭解 ADO.NET DataReader，這會從資料庫抓取資料，而 DataAdapter 則會從資料來源抓取資料並填入資料集。
+description: 瞭解 ADO.NET DataReader （可從資料庫取出資料）和 DataAdapter （可從資料來源抓取資料並填入資料集）。
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 17463d65266baa53521bed9603c8abd96923277b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2584f8b382dd90f2f8b4554663dc545b9ccceb62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286969"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177601"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 和 DataReader
-您可以使用 ADO.NET **DataReader** ，從資料庫中取出唯讀、順向資料流程的資料。 執行查詢時會傳回結果，並將其儲存在用戶端上的網路緩衝區中，直到您使用**DataReader**的**Read**方法要求它們為止。 使用**DataReader**可提高應用程式效能，方法是在資料可用時立即抓取它，而且（預設）在記憶體中一次只儲存一個資料列，以降低系統負荷。  
+
+您可以使用 ADO.NET **DataReader** ，從資料庫取出唯讀、順向的資料流程。 結果會在執行查詢時傳回，而且會儲存在用戶端的網路緩衝區中，直到您使用**DataReader**的**Read**方法要求它們為止。 使用 **DataReader** 可在資料可供使用時立即取得資料，以提高應用程式效能，並預設 () 在記憶體中一次只儲存一個資料列，以降低系統的額外負荷。  
   
  <xref:System.Data.Common.DataAdapter> 可用於從資料來源擷取資料，並填入 <xref:System.Data.DataSet> 內的資料表。 `DataAdapter` 亦可將對 `DataSet` 所做的變更解析回資料來源。 `DataAdapter` 會使用 .NET Framework 資料提供者的 `Connection` 物件連接到資料來源，並使用 `Command` 物件從資料來源擷取資料，以及將變更解析回資料來源。  
   
  內含在 .NET Framework 中的每個 .NET Framework 資料提供者都有 <xref:System.Data.Common.DbDataReader> 和 <xref:System.Data.Common.DbDataAdapter> 物件：.NET Framework Data Provider for OLE DB 包含 <xref:System.Data.OleDb.OleDbDataReader> 和 <xref:System.Data.OleDb.OleDbDataAdapter> 物件、.NET Framework Data Provider for SQL Server 包含 <xref:System.Data.SqlClient.SqlDataReader> 和 <xref:System.Data.SqlClient.SqlDataAdapter> 物件、.NET Framework Data Provider for ODBC 包含 <xref:System.Data.Odbc.OdbcDataReader> 和 <xref:System.Data.Odbc.OdbcDataAdapter> 物件，而且 .NET Framework Data Provider for Oracle 包含 <xref:System.Data.OracleClient.OracleDataReader> 和 <xref:System.Data.OracleClient.OracleDataAdapter> 物件。  
   
 ## <a name="in-this-section"></a>本節內容  
+
  [使用 DataReader 擷取資料](retrieving-data-using-a-datareader.md)  
- 描述 ADO.NET **DataReader**物件，以及如何使用它從資料來源傳回結果的資料流程。  
+ 描述 ADO.NET **DataReader** 物件，以及如何使用它來從資料來源傳回結果資料流程。  
   
  [從 DataAdapter 填入資料集](populating-a-dataset-from-a-dataadapter.md)  
  說明如何使用 `DataSet` 來以資料表、資料行及資料列填入 `DataAdapter`。  

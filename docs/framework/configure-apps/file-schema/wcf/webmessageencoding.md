@@ -2,14 +2,15 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 1cdce48f51b25732c256d3c867f1bba801ec4d8c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b250b64e1f073e00e4047ab6931a00d0b93b55b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545450"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177874"
 ---
 # \<webMessageEncoding>
+
 啟用在用於 Windows Communication Foundation (WCF) 繫結時，要讀取與寫入的純文字 XML、JavaScript Object Notation (JSON) 訊息編碼和「未經處理」二進位內容。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "90545450"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webMessageEncoding>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <webMessageEncoding maxReadPoolSize="Integer"
@@ -28,6 +29,7 @@ ms.locfileid: "90545450"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -51,6 +53,7 @@ ms.locfileid: "90545450"
 |[\<binding>](bindings.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
+
  編碼是將訊息轉換成位元組序列的處理序， 解碼則是相反的處理序。 這些處理序需要字元編碼的規格。  
   
  `webMessageEncoding` 項目的運作方式是委派給一系列的內部編碼器，以處理純文字 XML 和 JSON 編碼以及「原始」二進位資料。 這項委派是由複合訊息編碼器所完成。  

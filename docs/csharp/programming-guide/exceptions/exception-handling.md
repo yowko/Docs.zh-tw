@@ -1,19 +1,20 @@
 ---
 title: 例外狀況處理 - C# 程式設計手冊
-description: 瞭解例外狀況處理。 請參閱 try-catch、try-catch 和 try-catch 語句的範例。
+description: 瞭解例外狀況處理。 請參閱 try-catch、try-finally 和 try-catch 語句的範例。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8f7dc027396e327f08a591ced6bd6df176a17606
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302031"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178680"
 ---
 # <a name="exception-handling-c-programming-guide"></a>例外狀況處理 (C# 程式設計手冊)
+
 C# 程式設計人員使用 [try](../../language-reference/keywords/try-catch.md) 區塊分割可能受到例外狀況影響的程式碼。 相關聯的 [catch](../../language-reference/keywords/try-catch.md) 區塊用來處理任何產生的例外狀況。 無論 `try` 區塊是否擲回例外狀況，[finally](../../language-reference/keywords/try-finally.md) 區塊都包含執行的程式碼，例如釋放配置在 `try` 區塊中的資源。 `try` 區塊需要一或多個相關聯的 `catch` 區塊，或 `finally` 區塊，或兩種都要。  
   
  下例示範 `try-catch` 陳述式、`try-finally` 陳述式和 `try-catch-finally` 陳述式。  
@@ -27,6 +28,7 @@ C# 程式設計人員使用 [try](../../language-reference/keywords/try-catch.md
  `try` 區塊沒有 `catch` 或 `finally` 區塊會造成編譯器錯誤。  
   
 ## <a name="catch-blocks"></a>catch 區塊  
+
  `catch` 區塊可以指定要攔截的例外狀況類型。 類型規格稱之為「例外狀況篩選條件」**。 例外狀況類型應衍生自 <xref:System.Exception>。 一般情況下，不指定 <xref:System.Exception> 為例外狀況篩選條件，除非您知道如何處理 `try` 區塊中可能擲回的所有例外狀況，或您在 `catch` 區塊的結尾已包含 [throw](../../language-reference/keywords/throw.md) 陳述式。  
   
  多個 `catch` 區塊有不同的例外狀況篩選條件可以鏈結在一起。 `catch` 區塊在您的程式碼中是由上往下評估，但每個被擲回的例外狀況只會執行一個 `catch` 區塊。 執行指定確切類型或擲回例外狀況基底類別的第一個 `catch` 區塊。 如果沒有任何 `catch` 區塊指定符合的例外狀況篩選條件，即選取沒有篩選的 `catch` 區塊，如果陳述式中有的話。 請務必先定位 `catch` 區塊和最特定的 (亦即衍生程度最高的) 例外狀況。  
@@ -44,6 +46,7 @@ C# 程式設計人員使用 [try](../../language-reference/keywords/try-catch.md
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Finally 區塊  
+
  `finally` 區塊可讓您清除 `try` 區塊中執行過的動作。 如果有的話，`finally` 區塊會最後執行，在 `try` 區塊和任何符合的 `catch` 區塊之後。 不論是擲回例外狀況還是找到與例外狀況型別相符的 `catch` 區塊，`finally` 區塊會一律執行。  
   
  `finally` 區塊可以用來釋放資源，例如檔案資料流、資料庫連接及圖形控點，不必等待執行階段的記憶體回收行程完成物件。 如需詳細資訊，請參閱 [using 陳述式](../../language-reference/keywords/using-statement.md)。  
