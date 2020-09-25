@@ -1,16 +1,17 @@
 ---
 title: 投影作業 (C#)
-description: 瞭解投射作業。 這些作業會將物件轉換成新的表單，通常只包含稍後將使用的屬性。
+description: 瞭解投影作業。 這些作業會將物件轉換成新的表單，此表單通常只會包含稍後將使用的屬性。
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 289100ac9afcfc0d5b93b5f963adc0a123e0a5af
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 6128b1bb2e7ba3dbb1b428d475acc307ba931013
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299158"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185999"
 ---
 # <a name="projection-operations-c"></a>投影作業 (C#)
+
 投影是指將物件轉換成新形式的作業，而這個形式通常僅包含後續即將使用的屬性。 透過使用投影，您可以建構根據每個物件所建立的新型別。 您可以投影屬性並對其執行數學函式。 您也可以投影原始物件，而不進行任何變更。  
   
  執行投影的標準查詢運算子方法詳列於下一節。  
@@ -25,6 +26,7 @@ ms.locfileid: "87299158"
 ## <a name="query-expression-syntax-examples"></a>查詢運算式語法範例  
   
 ### <a name="select"></a>選取  
+
  下列範例使用 `select` 子句，來投影字串清單中每個字串的第一個字母。  
   
 ```csharp  
@@ -46,6 +48,7 @@ foreach (string s in query)
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
+
  下列範例使用多個 `from` 子句，來投影字串清單中每個字串的每個字。  
   
 ```csharp  
@@ -72,6 +75,7 @@ foreach (string s in query)
 ```  
   
 ## <a name="select-versus-selectmany"></a>Select 與 SelectMany 的比較  
+
  `Select()` 和 `SelectMany()` 的工作是從來源值產生一或多個結果值。 `Select()` 會針對每個來源值產生一個結果值。 因此，整體結果是集合與來源集合中的項目數相同。 相反地，`SelectMany()` 會產生單一整體結果，其中包含串連自每個來源值的子集合。 當做引數傳遞至 `SelectMany()` 的轉換函式必須傳回每個來源值的可列舉值序列。 `SelectMany()` 會接著串連這些可列舉的序列，以建立一個大型的序列。  
   
  下列兩個圖顯示這兩個方法的動作之間的概念差異。 在每個案例中，假設選取器 (轉換) 函式會從每個來源值選取花朵陣列。  
@@ -85,6 +89,7 @@ foreach (string s in query)
  ![顯示 SelectMany&#40;&#41; 之動作的圖形。](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>程式碼範例  
+
  下列範例會比較 `Select()` 和 `SelectMany()` 的行為。 程式碼會從來源集合的每個花名清單中擷取前兩個項目，以建立「花束」(Bouquet)。 在此範例中，轉換函式 <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> 所使用的「單一值」本身就是值集合。 這需要額外的 `foreach` 迴圈，以列舉每個子序列中的每個字串。  
   
 ```csharp  
@@ -165,5 +170,5 @@ static void SelectVsSelectMany()
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
 - [select 子句](../../../language-reference/keywords/select-clause.md)
-- [如何從多個來源填入物件集合（LINQ）（c #）](./how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [如何使用群組將檔案分割成許多檔案（LINQ）（c #）](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [如何從多個來源填入物件集合 (LINQ)  (c # ) ](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [如何使用群組 (LINQ)  (c # 將檔案分割成許多檔案 ) ](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
