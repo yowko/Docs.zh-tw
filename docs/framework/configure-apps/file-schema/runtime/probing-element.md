@@ -9,14 +9,15 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1435ee8ea887b5d7d3e785eef0f25ffed14b1b97
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115855"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195268"
 ---
 # <a name="probing-element"></a>\<probing> 項目
+
 指定載入元件時，common language runtime 要搜尋的應用程式基底子目錄。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -24,20 +25,21 @@ ms.locfileid: "73115855"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<probing>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <probing privatePath="paths"/>  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`privatePath`|必要屬性。<br /><br /> 指定可能包含元件之應用程式基底目錄的子目錄。 以分號分隔每個子目錄。|  
+|`privatePath`|必要屬性。<br /><br /> 指定可能包含元件之應用程式基底目錄的子目錄。 使用分號分隔每個子目錄。|  
   
 ### <a name="child-elements"></a>子元素  
 
@@ -45,13 +47,14 @@ ms.locfileid: "73115855"
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="example"></a>範例  
+
  下列範例顯示如何指定執行時間應該搜尋元件的應用程式基底子目錄。  
   
 ```xml  

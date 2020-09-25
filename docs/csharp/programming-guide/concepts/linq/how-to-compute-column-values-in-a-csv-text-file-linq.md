@@ -1,16 +1,17 @@
 ---
-title: '如何計算 CSV 文字檔中的資料行值（LINQ）（c #）'
-description: '這個範例示範如何使用 c # 中的 LINQ （例如 Sum、Average、Min 和 Max），在 .csv 檔案的資料行上執行匯總計算。'
+title: '如何計算 CSV 文字檔中的資料行值 (LINQ)  (c # ) '
+description: '此範例示範如何使用 c # 中的 LINQ （例如 Sum、Average、Min 和 Max），在 .csv 檔案的資料行上執行匯總計算。'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 9137779f9767c8a9531489f7894ba3e69eb1faee
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a475de9c769a66fdded490a3f7eccdb74a434186
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105321"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195593"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>如何計算 CSV 文字檔中的資料行值（LINQ）（c #）
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>如何計算 CSV 文字檔中的資料行值 (LINQ)  (c # ) 
+
 本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。 此處顯示的範例準則可以套用至其他類型的結構化文字。  
   
 ## <a name="to-create-the-source-file"></a>建立來源檔案  
@@ -160,9 +161,10 @@ class SumColumns
  查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。 每個陣列項目表示一個資料行。 最後，每個資料行中的文字都會轉換成其數值表示法。 如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

@@ -2,22 +2,22 @@
 title: <idn> 項目 (URI 設定)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f45922ecd5f7476362aab5348d91415d8e31c53f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698165"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195398"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn> 項目 (URI 設定)
 
-指定是否要將國際化功能變數名稱（IDN）剖析套用至功能變數名稱。
+指定是否將國際化功能變數名稱 (IDN) 剖析套用至功能變數名稱。
   
 [**\<configuration>**](../configuration-element.md)  
 &nbsp;&nbsp;[**\<uri>**](uri-element-uri-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<idn>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml
 <idn
@@ -26,13 +26,14 @@ ms.locfileid: "71698165"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
 
-|**元素**|**說明**|  
+|**Element**|**說明**|  
 |-----------------|---------------------|  
-|`enabled`|指定是否將國際化功能變數名稱（IDN）剖析套用至功能變數名稱，預設值為 none。|  
+|`enabled`|指定是否將「國際化功能變數名稱 (IDN) 剖析套用至功能變數名稱，預設值為「無」。|  
 
 ### <a name="child-elements"></a>子元素
 
@@ -40,23 +41,23 @@ ms.locfileid: "71698165"
   
 ### <a name="parent-elements"></a>父元素
 
-|**元素**|**說明**|  
+|**Element**|**說明**|  
 |-----------------|---------------------|  
-|[uri](uri-element-uri-settings.md)|包含指定 .NET Framework 如何處理使用統一資源識別項（Uri）所表示之 web 位址的設定。|  
+|[uri](uri-element-uri-settings.md)|包含的設定會指定 .NET Framework 如何處理使用統一資源識別項 (Uri) 所表示的 web 位址。|  
 
 ## <a name="remarks"></a>備註
 
-現有的 <xref:System.Uri> 類別已在 .NET Framework 3.5 中擴充。 3.0 SP1 和 2.0 SP1，支援國際資源識別碼（IRI）和國際化功能變數名稱（IDN）。 目前的使用者除非特別啟用 IRI 和 IDN 支援，否則不會看到 .NET Framework 2.0 行為的任何變更。 這可確保應用程式與舊版 .NET framework 相容。
+現有的 <xref:System.Uri> 類別已在 .NET Framework 3.5 中擴充。 3.0 SP1 和 2.0 SP1，支援國際資源識別碼 (IRI) 和國際化功能變數名稱 (IDN) 。 除非使用者特別啟用 IRI 和 IDN 支援，否則目前的使用者不會看到 .NET Framework 2.0 行為的任何變更。 這可確保應用程式與舊版 .NET framework 相容。
 
-若要啟用對 IRI 的支援，必須進行下列兩項變更：
+若要啟用對 IRI 的支援，需要進行下列兩項變更：
 
-1. 將下面這一行新增至 machine.config 檔案的 .NET Framework 2.0 目錄底下：
+1. 將下列程式程式碼新增至 .NET Framework 2.0 目錄下的 machine.config 檔案：
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2. 指定是否要套用至功能變數名稱的國際化功能變數名稱（IDN）剖析，以及是否應該套用 IRI 剖析規則。 此作業可在 machine.config 或 app.config 檔案中完成。
+2. 指定是否要將國際化功能變數名稱 (IDN) 剖析套用至功能變數名稱，以及是否應套用 IRI 剖析規則。 此作業可在 machine.config 或 app.config 檔案中完成。
 
  根據所使用的 DNS 伺服器，IDN 有三個可能的值：
 
@@ -66,7 +67,7 @@ ms.locfileid: "71698165"
 
 - 已啟用 idn = AllExceptIntranet
 
-     這個值會將不在近端內部網路上的所有 Unicode 功能變數名稱轉換成使用 Punycode 對等專案（IDN 名稱）。 在此情況下，若要處理近端內部網路上的國際名稱，用於內部網路的 DNS 伺服器應該支援 Unicode 名稱解析。
+     此值會將不在近端內部網路上的所有 Unicode 功能變數名稱轉換成使用 (IDN 名稱) 的 Punycode 對應專案。 在此情況下，若要處理近端內部網路上的國際名稱，用於內部網路的 DNS 伺服器應該支援 Unicode 名稱解析。
 
 - 已啟用 idn = 無
 
