@@ -13,51 +13,54 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 6fd268414c4e54e7b4865733480f8917389015d0
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1862794e4d823e38ce19780300a0b04f4e57dc44
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125029"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193981"
 ---
-# <a name="-optimize-c-compiler-options"></a><span data-ttu-id="17f85-103">-optimize (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="17f85-103">-optimize (C# Compiler Options)</span></span>
-<span data-ttu-id="17f85-104">**-optimize** 選項啟用或停用由編譯器執行的最佳化，讓您的輸出檔案變得更小、更快且更有效率。</span><span class="sxs-lookup"><span data-stu-id="17f85-104">The **-optimize** option enables or disables optimizations performed by the compiler to make your output file smaller, faster, and more efficient.</span></span>  
+# <a name="-optimize-c-compiler-options"></a><span data-ttu-id="8d456-103">-optimize (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="8d456-103">-optimize (C# Compiler Options)</span></span>
+
+<span data-ttu-id="8d456-104">**-optimize** 選項啟用或停用由編譯器執行的最佳化，讓您的輸出檔案變得更小、更快且更有效率。</span><span class="sxs-lookup"><span data-stu-id="8d456-104">The **-optimize** option enables or disables optimizations performed by the compiler to make your output file smaller, faster, and more efficient.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17f85-105">語法</span><span class="sxs-lookup"><span data-stu-id="17f85-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8d456-105">語法</span><span class="sxs-lookup"><span data-stu-id="8d456-105">Syntax</span></span>  
   
 ```console  
 -optimize[+ | -]  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="17f85-106">備註</span><span class="sxs-lookup"><span data-stu-id="17f85-106">Remarks</span></span>  
- <span data-ttu-id="17f85-107">**-optimize** 也會告知通用語言執行平台在執行階段進行程式碼最佳化。</span><span class="sxs-lookup"><span data-stu-id="17f85-107">**-optimize** also tells the common language runtime to optimize code at runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d456-106">備註</span><span class="sxs-lookup"><span data-stu-id="8d456-106">Remarks</span></span>  
+
+ <span data-ttu-id="8d456-107">**-optimize** 也會告知通用語言執行平台在執行階段進行程式碼最佳化。</span><span class="sxs-lookup"><span data-stu-id="8d456-107">**-optimize** also tells the common language runtime to optimize code at runtime.</span></span>  
   
- <span data-ttu-id="17f85-108">根據預設，會停用最佳化。</span><span class="sxs-lookup"><span data-stu-id="17f85-108">By default, optimizations are disabled.</span></span> <span data-ttu-id="17f85-109">指定 **-optimize+** 以啟用最佳化。</span><span class="sxs-lookup"><span data-stu-id="17f85-109">Specify **-optimize+** to enable optimizations.</span></span>  
+ <span data-ttu-id="8d456-108">根據預設，會停用最佳化。</span><span class="sxs-lookup"><span data-stu-id="8d456-108">By default, optimizations are disabled.</span></span> <span data-ttu-id="8d456-109">指定 **-optimize+** 以啟用最佳化。</span><span class="sxs-lookup"><span data-stu-id="8d456-109">Specify **-optimize+** to enable optimizations.</span></span>  
   
- <span data-ttu-id="17f85-110">建置組件要使用的模組時，使用與那些組件相同的 **-optimize** 設定。</span><span class="sxs-lookup"><span data-stu-id="17f85-110">When building a module to be used by an assembly, use the same **-optimize** settings as those of the assembly.</span></span>  
+ <span data-ttu-id="8d456-110">建置組件要使用的模組時，使用與那些組件相同的 **-optimize** 設定。</span><span class="sxs-lookup"><span data-stu-id="8d456-110">When building a module to be used by an assembly, use the same **-optimize** settings as those of the assembly.</span></span>  
   
- <span data-ttu-id="17f85-111">**-o** 是 **-optimize** 的簡短形式。</span><span class="sxs-lookup"><span data-stu-id="17f85-111">**-o** is the short form of **-optimize**.</span></span>  
+ <span data-ttu-id="8d456-111">**-o** 是 **-optimize** 的簡短形式。</span><span class="sxs-lookup"><span data-stu-id="8d456-111">**-o** is the short form of **-optimize**.</span></span>  
   
- <span data-ttu-id="17f85-112">它可以合併 **-optimize** 和 [-debug](./debug-compiler-option.md) 選項。</span><span class="sxs-lookup"><span data-stu-id="17f85-112">It is possible to combine the **-optimize** and [-debug](./debug-compiler-option.md) options.</span></span>  
+ <span data-ttu-id="8d456-112">它可以合併 **-optimize** 和 [-debug](./debug-compiler-option.md) 選項。</span><span class="sxs-lookup"><span data-stu-id="8d456-112">It is possible to combine the **-optimize** and [-debug](./debug-compiler-option.md) options.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="17f85-113">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="17f85-113">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="8d456-113">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="8d456-113">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1. <span data-ttu-id="17f85-114">開啟專案的 [屬性]\*\*\*\* 頁面。</span><span class="sxs-lookup"><span data-stu-id="17f85-114">Open the project's **Properties** page.</span></span>  
+1. <span data-ttu-id="8d456-114">開啟專案的 [屬性]\*\*\*\* 頁面。</span><span class="sxs-lookup"><span data-stu-id="8d456-114">Open the project's **Properties** page.</span></span>  
   
-2. <span data-ttu-id="17f85-115">按一下 [建置]\*\*\*\* 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="17f85-115">Click the **Build** property page.</span></span>  
+2. <span data-ttu-id="8d456-115">按一下 [建置]\*\*\*\* 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="8d456-115">Click the **Build** property page.</span></span>  
   
-3. <span data-ttu-id="17f85-116">修改**最佳化程式碼**屬性。</span><span class="sxs-lookup"><span data-stu-id="17f85-116">Modify the **Optimize Code** property.</span></span>  
+3. <span data-ttu-id="8d456-116">修改**最佳化程式碼**屬性。</span><span class="sxs-lookup"><span data-stu-id="8d456-116">Modify the **Optimize Code** property.</span></span>  
   
- <span data-ttu-id="17f85-117">如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>。</span><span class="sxs-lookup"><span data-stu-id="17f85-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span></span>  
+ <span data-ttu-id="8d456-117">如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>。</span><span class="sxs-lookup"><span data-stu-id="8d456-117">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="17f85-118">範例</span><span class="sxs-lookup"><span data-stu-id="17f85-118">Example</span></span>  
- <span data-ttu-id="17f85-119">編譯 `t2.cs` 並啟用編譯器最佳化：</span><span class="sxs-lookup"><span data-stu-id="17f85-119">Compile `t2.cs` and enable compiler optimizations:</span></span>  
+## <a name="example"></a><span data-ttu-id="8d456-118">範例</span><span class="sxs-lookup"><span data-stu-id="8d456-118">Example</span></span>  
+
+ <span data-ttu-id="8d456-119">編譯 `t2.cs` 並啟用編譯器最佳化：</span><span class="sxs-lookup"><span data-stu-id="8d456-119">Compile `t2.cs` and enable compiler optimizations:</span></span>  
   
 ```console  
 csc t2.cs -optimize  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="17f85-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="17f85-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8d456-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8d456-120">See also</span></span>
 
-- [<span data-ttu-id="17f85-121">C # 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="17f85-121">C# Compiler Options</span></span>](./index.md)
-- [<span data-ttu-id="17f85-122">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="17f85-122">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="8d456-121">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="8d456-121">C# Compiler Options</span></span>](./index.md)
+- [<span data-ttu-id="8d456-122">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="8d456-122">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
