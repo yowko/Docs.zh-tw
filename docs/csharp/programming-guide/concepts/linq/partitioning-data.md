@@ -1,16 +1,17 @@
 ---
 title: 分割資料 (C#)
-description: 瞭解如何在 LINQ 中分割資料。 觀看顯示資料分割作業結果的圖解。
+description: 瞭解如何在 LINQ 中分割資料。 觀看顯示分割作業結果的圖例。
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: 3c85eaec2dc01b683234a27714750354982be440
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 31beacd672addb3eb38ade8f2bf9cfae25f4d27a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302603"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176262"
 ---
 # <a name="partitioning-data-c"></a>分割資料 (C#)
+
 LINQ 中的分割是指將輸入序列分成兩個區段的作業，不用重新排列項目，然後傳回其中一個區段。  
   
  下圖顯示字元序列三種不同分割作業的結果。 第一項作業會傳回序列中的前三個項目。 第二項作業會略過前三個項目，傳回其餘項目。 第三個作業會略過序列中的前兩個項目，傳回接下來的三個元項目。  
@@ -19,7 +20,7 @@ LINQ 中的分割是指將輸入序列分成兩個區段的作業，不用重新
   
  分割序列的標準查詢運算子方法詳列於下一節。  
   
-## <a name="operators"></a>操作員  
+## <a name="operators"></a>運算子  
   
 |運算子名稱|描述|C# 查詢運算式語法|相關資訊|  
 |-------------------|-----------------|---------------------------------|----------------------|  

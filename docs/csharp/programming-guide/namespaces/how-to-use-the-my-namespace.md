@@ -1,20 +1,20 @@
 ---
-title: '如何使用 My 命名空間-c # 程式設計手冊'
-description: 瞭解如何「我的」命名空間。 「我的」命名空間可讓您以簡單且直覺的方式存取許多 .NET 類別。
+title: '如何使用 My 命名空間-c # 程式設計指南'
+description: 瞭解如何「My」命名空間。 「My」命名空間可讓您輕鬆且直覺地存取許多 .NET 類別。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 7abd5049a979d5a15d123052cba0cfdb35bf3fb7
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 5310b911cc0abf0e82c4dc8efd45eb45ffb94c9d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381706"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176223"
 ---
-# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何使用 My 命名空間（c # 程式設計手冊）
+# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何使用 My 命名空間 (c # 程式設計手冊) 
 
-<xref:Microsoft.VisualBasic.MyServices>命名空間（ `My` 在 Visual Basic 中）可讓您輕鬆且直覺地存取許多 .net 類別，讓您撰寫程式碼來與電腦、應用程式、設定、資源等等互動。 雖然原本設計為搭配使用 Visual Basic，但 `MyServices` 命名空間可以在 C# 應用程式中使用。  
+<xref:Microsoft.VisualBasic.MyServices>Visual Basic) 中的命名空間 (`My` 可讓您輕鬆且直覺地存取許多 .net 類別，讓您撰寫程式碼來與電腦、應用程式、設定、資源等互動。 雖然原本設計為搭配使用 Visual Basic，但 `MyServices` 命名空間可以在 C# 應用程式中使用。  
   
  如需從 Visual Basic 中使用 `MyServices` 命名空間的詳細資訊，請參閱[使用 My 開發](../../../visual-basic/developing-apps/development-with-my/index.md)。  
   
@@ -22,9 +22,9 @@ ms.locfileid: "87381706"
 
  您必須新增 Visual Basic 程式庫的參考，才能在您的方案中使用 `MyServices` 類別。  
   
-### <a name="add-a-reference-to-the-visual-basic-library"></a>將參考新增至 Visual Basic 程式庫  
+### <a name="add-a-reference-to-the-visual-basic-library"></a>新增 Visual Basic 程式庫的參考  
   
-1. 在**方案總管**中，以滑鼠右鍵按一下 [**參考**] 節點，然後選取 [**新增參考**]。  
+1. 在 **方案總管**中，以滑鼠右鍵按一下 [ **參考** ] 節點，然後選取 [ **加入參考**]。  
   
 2. 當 [參考]**** 對話方塊出現時，向下捲動清單，然後選取 Microsoft.VisualBasic.dll。  
   
@@ -33,6 +33,7 @@ ms.locfileid: "87381706"
      [!code-csharp[csProgGuideNamespaces#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#18)]  
   
 ## <a name="example"></a>範例  
+
  這個範例會呼叫 `MyServices` 命名空間中所包含的各種靜態方法。 為了要編譯這個程式碼，必須將 Microsoft.VisualBasic.DLL 的參考新增至專案。  
   
  [!code-csharp[csProgGuideNamespaces#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#19)]  

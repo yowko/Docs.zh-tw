@@ -2,18 +2,18 @@
 title: 使用 Visual Studio Code 測試具有 .NET Core 的 .NET Standard 類別庫
 description: 建立 .NET Core 類別庫的單元測試專案。 確認 .NET Core 類別庫可在單元測試中正確運作。
 ms.date: 06/08/2020
-ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359164"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180448"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 以 .NET Core 測試 .NET Standard 類別庫
 
 本教學課程示範如何將測試專案加入至方案，以自動化單元測試。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 本教學課程適用于 [使用 Visual Studio Code 建立 .NET Standard 程式庫](library-with-visual-studio-code.md)中所建立的解決方案。
 
@@ -67,7 +67,7 @@ ms.locfileid: "89359164"
 
 若要讓測試專案使用 `StringLibrary` 類別，請在專案中加入專案的參考 `StringLibraryTest` `StringLibrary` 。
 
-1. 執行下列命令：
+1. 執行以下命令：
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -102,7 +102,7 @@ ms.locfileid: "89359164"
 
    方法中的大寫字元測試 `TestStartsWithUpper` 包含希臘文大寫字母 Alpha (u + 0391) 和斯拉夫文大寫字母 EM (U + 041C) 。 方法中的小寫字元測試 `TestDoesNotStartWithUpper` 包含希臘文小寫字母 Alpha (u + 03B1) 和斯拉夫文小寫字母 Ghe (U + 0433) 。
 
-1. 儲存您的變更。
+1. 儲存變更。
 
 1. 執行測試：
 
@@ -120,7 +120,7 @@ ms.locfileid: "89359164"
    Test Run Successful.
    Total tests: 3
         Passed: 3
-   Total time: 5.1116 Seconds
+    Total time: 5.1116 Seconds
    ```
 
 ## <a name="handle-test-failures"></a>處理測試失敗
@@ -150,14 +150,14 @@ ms.locfileid: "89359164"
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-     at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper()
-       in C:\Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
+   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
    Test Run Failed.
    Total tests: 3
         Passed: 2
         Failed: 1
-   Total time: 1.7825 Seconds
+    Total time: 1.7825 Seconds
    ```
 
 1. 移除您在步驟1中新增的字串 "Error"。 重新執行測試和測試階段。
@@ -173,6 +173,12 @@ ms.locfileid: "89359164"
    ```
 
    所有測試皆通過。
+
+## <a name="debug-tests"></a>偵錯測試
+
+如果您使用 Visual Studio Code 作為 IDE，您可以使用在使用您的單元測試專案來對程式碼進行偵錯工具時，使用 Visual Studio Code 來將 [.Net Core 主控台應用程式的偵錯工具](debugging-with-visual-studio-code.md) 中所顯示的相同程式。 開啟*StringLibraryTest/UnitTest1*，然後選取 [執行行7和8之間的**所有測試**]，而不是啟動*展示*應用程式專案。 如果找不到，請按<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>開啟命令選擇區，然後輸入**重載視窗**。
+
+Visual Studio Code 啟動已附加偵錯工具的測試專案。 執行將會在您已新增至測試專案或基礎程式庫程式碼的任何中斷點停止執行。
 
 ## <a name="additional-resources"></a>其他資源
 

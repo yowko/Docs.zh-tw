@@ -2,14 +2,15 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: 26537980a6be5c0fe12661d93a6ba5fe862ceb4e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8638d56ccb4aaa1c5ac735aa268823af2b1fbc6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398163"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176067"
 ---
 # \<channelPoolSettings>
+
 指定自訂繫結的通道集區設定。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "70398163"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<oneWay>**](oneway.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<channelPoolSettings>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <channelPoolSettings idleTimeout="TimeSpan"
@@ -29,6 +30,7 @@ ms.locfileid: "70398163"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
@@ -40,15 +42,17 @@ ms.locfileid: "70398163"
 |`maxOutboundChannelsPerEndpoint`|正整數，指定每個遠端端點可儲存在集區中的最大通道數目。 預設值為 10。|  
   
 ### <a name="child-elements"></a>子元素  
+
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<oneWay>](oneway.md)|啟用自訂繫結的封包路由。|  
   
 ## <a name="remarks"></a>備註  
+
  配額是一種用來避免資源過度耗費的原則機制。 這類配額會防止惡意或是無意間發生的阻斷服務 (DOS) 攻擊。 當設定自訂通道配額的時候，請使用這個項目。  
   
  `ChannelPoolSettings` 指定三種配額：  

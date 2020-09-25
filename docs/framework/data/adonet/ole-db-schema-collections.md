@@ -2,18 +2,20 @@
 title: OLE DB 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 2d5718c12100ebea49a6b6fab29a3790918c6ad3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 90899a123b3dafcd47a50ef8f6eb003938b22a03
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783444"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186935"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 結構描述集合
+
 本節將討論 Microsoft SQL Server、Oracle 和 Microsoft Jet 之 OLE DB 提供者的結構描述集合支援。  
   
 ## <a name="microsoft-sql-server-ole-db-provider"></a>Microsoft SQL Server OLE DB 提供者  
- 除了通用架構集合之外，Microsoft SQL Server OLE DB 驅動程式還支援下列特定的架構集合：  
+
+ 除了通用結構描述集合之外，Microsoft SQL Server OLE DB 驅動程式還支援下列特定的結構描述集合：  
   
 - 資料表  
   
@@ -23,7 +25,7 @@ ms.locfileid: "70783444"
   
 - ProcedureParameters  
   
-- Catalog  
+- 目錄  
   
 - 索引  
   
@@ -38,8 +40,8 @@ ms.locfileid: "70783444"
 |TABLE_GUID|Guid|  
 |DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
-|DATE_CREATED|DateTime|  
-|DATE_MODIFIED|DateTime|  
+|DATE_CREATED|Datetime|  
+|DATE_MODIFIED|Datetime|  
   
 ### <a name="columns"></a>資料行  
   
@@ -89,8 +91,8 @@ ms.locfileid: "70783444"
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|String|  
 |DESCRIPTION|String|  
-|DATE_CREATED|DateTime|  
-|DATE_MODIFIED|DateTime|  
+|DATE_CREATED|Datetime|  
+|DATE_MODIFIED|Datetime|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
@@ -114,7 +116,7 @@ ms.locfileid: "70783444"
 |TYPE_NAME|String|  
 |LOCAL_TYPE_NAME|String|  
   
-### <a name="catalog"></a>Catalog  
+### <a name="catalog"></a>目錄  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -134,7 +136,7 @@ ms.locfileid: "70783444"
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
-|類型|Int32|  
+|TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
@@ -152,6 +154,7 @@ ms.locfileid: "70783444"
 |INTEGRATED|Boolean|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle OLE DB 提供者  
+
  除了通用結構描述集合之外，Microsoft Oracle OLE DB 驅動程式還支援下列特定的結構描述集合：  
   
 - 資料表  
@@ -179,8 +182,8 @@ ms.locfileid: "70783444"
 |TABLE_GUID|Guid|  
 |DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
-|DATE_CREATED|DateTime|  
-|DATE_MODIFIED|DateTime|  
+|DATE_CREATED|Datetime|  
+|DATE_MODIFIED|Datetime|  
   
 ### <a name="columns"></a>資料行  
   
@@ -225,8 +228,8 @@ ms.locfileid: "70783444"
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|String|  
 |DESCRIPTION|String|  
-|DATE_CREATED|DateTime|  
-|DATE_MODIFIED|DateTime|  
+|DATE_CREATED|Datetime|  
+|DATE_MODIFIED|Datetime|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
   
@@ -261,8 +264,8 @@ ms.locfileid: "70783444"
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
 |DESCRIPTION|String|  
-|DATE_CREATED|DateTime|  
-|DATE_MODIFIED|DateTime|  
+|DATE_CREATED|Datetime|  
+|DATE_MODIFIED|Datetime|  
   
 ### <a name="indexes"></a>索引  
   
@@ -277,7 +280,7 @@ ms.locfileid: "70783444"
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
-|類型|Int32|  
+|TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
@@ -295,6 +298,7 @@ ms.locfileid: "70783444"
 |INTEGRATED|Boolean|  
   
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB 提供者  
+
  除了通用結構描述集合之外，Microsoft Jet OLE DB 驅動程式還支援下列特定的結構描述集合：  
   
 - 資料表  
@@ -318,8 +322,8 @@ ms.locfileid: "70783444"
 |TABLE_GUID|Guid|  
 |DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
-|DATE_CREATED|DateTime|  
-|DATE_MODIFIED|DateTime|  
+|DATE_CREATED|Datetime|  
+|DATE_MODIFIED|Datetime|  
   
 ### <a name="columns"></a>資料行  
   
@@ -364,8 +368,8 @@ ms.locfileid: "70783444"
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|String|  
 |DESCRIPTION|String|  
-|DATE_CREATED|DateTime|  
-|DATE_MODIFIED|DateTime|  
+|DATE_CREATED|Datetime|  
+|DATE_MODIFIED|Datetime|  
   
 ### <a name="views"></a>檢視  
   
@@ -378,8 +382,8 @@ ms.locfileid: "70783444"
 |CHECK_OPTION|Boolean|  
 |IS_UPDATABLE|Boolean|  
 |DESCRIPTION|String|  
-|DATE_CREATED|DateTime|  
-|DATE_MODIFIED|DateTime|  
+|DATE_CREATED|Datetime|  
+|DATE_MODIFIED|Datetime|  
   
 ### <a name="indexes"></a>索引  
   
@@ -394,7 +398,7 @@ ms.locfileid: "70783444"
 |PRIMARY_KEY|Boolean|  
 |UNIQUE|Boolean|  
 |CLUSTERED|Boolean|  
-|類型|Int32|  
+|TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
@@ -413,4 +417,4 @@ ms.locfileid: "70783444"
   
 ## <a name="see-also"></a>另請參閱
 
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b73d60a-6049-446a-85a7-3e5a68b183e2
-ms.openlocfilehash: cbae5453be485896e27a5039ece20bb3bcec9913
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cf2a47c5d29c0af680ee4ccae503e92d3a9124d8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556976"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194709"
 ---
 # <a name="how-to-bind-a-dataview-object-to-a-windows-forms-datagridview-control"></a>作法：將 DataView 物件繫結至 Windows Forms DataGridView 控制項
+
 <xref:System.Windows.Forms.DataGridView> 控制項以表格式顯示資料，是一項功能強大、有彈性的方式。 <xref:System.Windows.Forms.DataGridView> 控制項支援標準的 Windows Form 資料繫結模型，因此它將繫結至 <xref:System.Data.DataView> 和各種其他資料來源。 不過，在大部分情況下，您會繫結至 <xref:System.Windows.Forms.BindingSource> 元件，以便管理與資料來源互動的詳細資料。  
   
  如需控制項的詳細資訊 <xref:System.Windows.Forms.DataGridView> ，請參閱 [DataGridView 控制項總覽](/dotnet/desktop/winforms/controls/datagridview-control-overview-windows-forms)。  

@@ -1,17 +1,17 @@
 ---
 title: 匿名類型 - C# 程式設計手冊
-description: 'C # 中的匿名型別會封裝物件中的一組唯讀屬性，而不需要明確定義類型。 編譯器會產生名稱。'
+description: 'C # 中的匿名型別會在物件中封裝一組唯讀屬性，而不需要明確地定義型別。 編譯器會產生名稱。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: ccdee1a86ab0c292721e69346cb7cedb03d4c28b
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: f60c1ea4f3f029ec3b81a4197a711523ec372df9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474497"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186155"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名類型 (C# 程式設計手冊)
 
@@ -29,7 +29,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- 您通常可以在查詢運算式的 [select](../../language-reference/keywords/select-clause.md) 子句中使用匿名型別，以從來源序列中的每個物件傳回屬性子集。 如需查詢的詳細資訊，請參閱[c # 中的 LINQ](../../linq/index.md)。  
+ 您通常可以在查詢運算式的 [select](../../language-reference/keywords/select-clause.md) 子句中使用匿名型別，以從來源序列中的每個物件傳回屬性子集。 如需查詢的詳細資訊，請參閱 [c # 中的 LINQ](../../linq/index.md)。  
   
  匿名類型包含一個或多個公用唯讀屬性。 其他類型的類別成員 (例如方法或事件) 則無效。 用於初始化屬性的運算式不可以是 `null`、匿名函式或指標類型。  
   
@@ -39,7 +39,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
- 一般而言，當您使用匿名型別初始化變數時，您可以使用 [var](../../language-reference/keywords/var.md) 將變數宣告為隱含型別區域變數。 由於只有編譯器可以存取匿名類型的基本名稱，因此無法在變數宣告中指定類型名稱。 如需的詳細資訊 `var` ，請參閱[隱含類型區域變數](./implicitly-typed-local-variables.md)。  
+ 一般而言，當您使用匿名型別初始化變數時，您可以使用 [var](../../language-reference/keywords/var.md) 將變數宣告為隱含型別區域變數。 由於只有編譯器可以存取匿名類型的基本名稱，因此無法在變數宣告中指定類型名稱。 如需的詳細資訊 `var` ，請參閱 [隱含類型區域變數](./implicitly-typed-local-variables.md)。  
   
  您可以如下列範例所示，合併隱含類型區域變數和隱含類型陣列，以建立匿名類型項目的陣列。  
   
@@ -48,6 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>備註  
+
  匿名型別是直接衍生自 [object](../../language-reference/builtin-types/reference-types.md)，並且無法轉換成 [object](../../language-reference/builtin-types/reference-types.md) 以外之任何類型的 [class](../../language-reference/keywords/class.md) 類型。 編譯器提供每種匿名類型的名稱，不過您的應用程式無法存取此名稱。 對 Common Language Runtime 來說，匿名類型與其他任何參考類型並無不同。  
   
  如果組件中有兩個或多個匿名物件初始設定式，指定了順序相同並具有相同名稱和類型的屬性序列，編譯器會將這些物件視為相同類型的執行個體。 這些物件會共用編譯器產生的相同類型資訊。  

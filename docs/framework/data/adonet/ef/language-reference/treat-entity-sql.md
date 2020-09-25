@@ -2,14 +2,15 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 566ac875aec17e4d0aa22ec1962053aeb6ae2a2e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb41c0fed944ce4db11878b9213a62c6f851418e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558845"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201040"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
+
 將特定基底類型的物件視為所指定之衍生型別的物件。  
   
 ## <a name="syntax"></a>語法  
@@ -19,6 +20,7 @@ TREAT ( expression as type)
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `expression`  
  任何傳回實體的有效查詢運算式。  
   
@@ -32,9 +34,11 @@ TREAT ( expression as type)
 > 所指定的運算式必須是所指定資料型別的子型別，或者此資料型別必須是此運算式的子型別。  
   
 ## <a name="return-value"></a>傳回值  
+
  屬於所指定資料型別的值。  
   
 ## <a name="remarks"></a>備註  
+
  TREAT 是用來在兩個相關類別之間執行向上轉型。 舉例來講，假設 `Employee` 是衍生自 `Person` 而 p 是 `Person`型別，則 `TREAT(p AS NamespaceName.Employee)` 會將泛型 `Person` 執行個體向上轉型成為 `Employee`；換言之，它可以讓您將 p 視為 `Employee`。  
   
  TREAT 是使用於繼承的情況下，在這種情況下您可以執行類似下列的查詢：  
@@ -62,6 +66,7 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|擲回例外狀況。|  
   
 ## <a name="example"></a>範例  
+
  下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢使用 TREAT 運算子將 Course 型別的物件轉換成 OnsiteCourse 型別的物件集合。 此查詢是以 [School Model](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))為基礎。  
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  

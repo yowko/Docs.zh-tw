@@ -1,6 +1,6 @@
 ---
 title: 傳遞參數 - C# 程式設計手冊
-description: '您可以透過值或參考，將引數傳遞至 c # 中的參數。 參考所傳遞之引數的變更會保存。 使用 ref 或 out 以傳址方式傳遞。'
+description: '您可以使用 c # 中的值或參考，將引數傳遞給參數。 參考所傳遞的引數的變更會持續。 使用 ref 或 out 以傳址方式傳遞。'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - parameters [C#], passing
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - methods [C#], passing parameters
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
-ms.openlocfilehash: 875a42aacf3d7aa4124684aefafdcb07ff4c87d6
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 61ec6d31145df5a2aebe805fccdf7614a0ae74f6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864731"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186090"
 ---
 # <a name="passing-parameters-c-programming-guide"></a>傳遞參數 (C# 程式設計手冊)
+
 在 C# 中，引數可以由傳值或傳址方式傳遞至參數。 以傳址方式傳遞，可讓函式成員、方法、屬性、索引子、運算子及建構函式變更參數的值，並在呼叫環境中保存該變更。 若要以傳址方式傳遞參數，且目的是變更該值，請使用 `ref` 或 `out` 關鍵字。 若以傳址方式傳遞之目的是不要發生複製的情況，但不變更該值，請使用 `in` 修飾詞。 為簡化起見，本主題的範例中只使用 `ref` 關鍵字。 如需 `in`、`ref` 與 `out` 之間差異的詳細資訊，請參閱 [in](../../language-reference/keywords/in-parameter-modifier.md)、[ref](../../language-reference/keywords/ref.md) 和 [out](../../language-reference/keywords/out-parameter-modifier.md)。  
   
  下例會說明值和參考參數之間的差異。  

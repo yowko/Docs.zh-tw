@@ -3,14 +3,15 @@ title: '如何查詢包含指定字組的句子 (LINQ)  (c # ) '
 description: '瞭解如何使用 c # 中的 LINQ，在文字檔中尋找包含每一組字組之相符專案的句子（可在執行時間填入）。'
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: daf86d6641b82fb77ca237e8a190b4f60b9dea4d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 7c5979fc42b6446948ae974e599807b5cb8db04a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465646"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176275"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>如何查詢包含指定字組的句子 (LINQ)  (c # ) 
+
 此範例示範如何在文字檔中尋找含有每個指定字組之相符項目的句子。 雖然此範例硬式編碼了搜尋字詞的陣列，但也可以在執行階段將它動態填入。 在此範例中，查詢會傳回包含 "Historically"、"data" 和 "integrated" 等字的句子。  
   
 ## <a name="example"></a>範例  
@@ -68,6 +69,7 @@ Historically, the world of data and the world of objects have not been well inte
  在 <xref:System.String.Split%2A> 呼叫中，標點符號會當成分隔符號，以便從字串中移除。 如果您不這麼做，則您的字串 "Historically," 與 `wordsToMatch` 陣列中的 "Historically" 不符。 根據來源文字中找到的標點符號類型，您可能必須使用其他分隔符號。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
+
 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
 
 ## <a name="see-also"></a>另請參閱

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: cfd2917d330a9229338790c35911502be5cd9391
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bdf91f6f52a68309cfcd276b222083c8cb67a0cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559144"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176236"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
+
 本逐步解說示範用以撰寫 LINQ 查詢運算式的 C# 語言功能。  
   
 ## <a name="create-a-c-project"></a>建立 C# 專案  
@@ -40,6 +41,7 @@ ms.locfileid: "90559144"
 5. 您會發現專案具有 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=nameWithType> 命名空間的 `using` 指示詞。  
   
 ## <a name="create-an-in-memory-data-source"></a>建立記憶體內部資料來源  
+
  查詢的資料來源是 `Student` 物件的簡單清單。 每個 `Student` 記錄都有名字、姓氏和整數的陣列，表示其在班級上的測驗分數。 將此程式碼複製到您的專案中。 並注意下列特性：  
   
 - `Student` 類別是由自動實作的屬性所組成。  
@@ -173,6 +175,7 @@ ms.locfileid: "90559144"
      [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>後續步驟  
+
  熟悉使用 C# 進行查詢的基本概念之後，您即可開始閱讀自己感興趣之特定類型 LINQ 提供者的相關文件和範例：  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  

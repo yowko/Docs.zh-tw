@@ -2,14 +2,15 @@
 title: <peer> 項目的 <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: a8144ca7bad5654bf8f77259ea1717442665fc81
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75d8543d7db5eee1345d54f934fc89c9593b85ac
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555454"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186987"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<peer> 項目的 \<clientCredentials>
+
 指定驗證對等用戶端時所使用的認證。  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "90555454"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<clientCredentials>**](clientcredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<peer>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <peer>
@@ -31,9 +32,11 @@ ms.locfileid: "90555454"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
+
  無。  
   
 ### <a name="child-elements"></a>子元素  
@@ -51,6 +54,7 @@ ms.locfileid: "90555454"
 |[\<clientCredentials>](clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
   
 ## <a name="remarks"></a>備註  
+
  這個組態項目會指定對等節點用於向網狀結構中其他節點驗證其本身的認證，以及對等節點用來驗證其他對等節點的驗證設定。 如需詳細資訊，請參閱 [對等通道訊息驗證](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) 和 [保護對等通道應用程式](../../../wcf/feature-details/securing-peer-channel-applications.md)。  
   
 ## <a name="see-also"></a>另請參閱
