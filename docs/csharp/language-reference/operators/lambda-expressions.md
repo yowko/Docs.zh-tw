@@ -1,7 +1,7 @@
 ---
 title: 'Lambda 運算式-c # 參考'
 description: 瞭解 lambda 運算式。 有運算式 lambda 有運算式做為其主體，或具有語句區塊做為主體的語句 lambda。
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: afabca0b4ba4d5f7c6f4a7ba8aa97301456b0941
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871709"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247705"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda 運算式 (c # 參考) 
 
@@ -68,7 +68,7 @@ ms.locfileid: "90871709"
 
 陳述式 Lambda 的主體可以包含任意數目的陳述式，但是實際上通常不會超過兩個或三個陳述式。
 
-:::code interactive="try-dotnet" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetStatementLambda":::
+:::code language="csharp" interactive="try-dotnet-method" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatementLambda":::
 
 您無法使用語句 lambda 來建立運算式樹狀架構。
 
@@ -76,25 +76,25 @@ ms.locfileid: "90871709"
 
 您可以用括弧括住 lambda 運算式的輸入參數。 以空括號指定零個輸入參數：  
 
-[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetZeroParameters":::
 
 如果 lambda 運算式只有一個輸入參數，則括弧是選擇性的：
 
-[!code-csharp[one parameter](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#OneParameter)]
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetOneParameter":::
 
 兩個或多個輸入參數會以逗號分隔：
 
-[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetTwoParameters":::
 
 有時編譯器無法推斷輸入參數的類型。 您可以明確指定類型，如下列範例所示：
 
-[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetExplicitlyTypedParameters":::
 
 輸入參數類型必須全部為明確或全部為隱含；否則，會發生 [CS0748](../../misc/cs0748.md) 編譯器錯誤。
 
 從 c # 9.0 開始，您可以使用 [ [捨棄](../../discards.md) ] 來指定運算式中未使用之 lambda 運算式的兩個或多個輸入參數：
 
-:::code language="csharp" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetDiscards":::
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetDiscards":::
 
 當您使用 lambda 運算式來 [提供事件處理常式](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)時，lambda 捨棄參數可能很有用。
 
@@ -231,11 +231,20 @@ Lambda 可以參考「外部變數」**。 這些是在定義 Lambda 運算式�
 
 - 如果該跳躍陳述式的目標位於 Lambda 運算式區塊之外，則 Lambda 運算式不能包含 [goto](../keywords/goto.md)、[break](../keywords/break.md) 或 [continue](../keywords/continue.md) 陳述式。 即使目標位於區塊內，跳躍陳述式出現在 Lambda 運算式區塊外部也一樣是錯誤。
 
+從 c # 9.0 開始，您可以將 `static` 修飾詞套用至 lambda 運算式，以避免不慎捕捉 lambda 的區域變數或實例狀態：
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatic":::
+
+靜態 lambda 無法從封入範圍中捕捉本機變數或實例狀態，但可能會參考靜態成員和常數定義。
+
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[匿名函式運算式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)一節。
 
-如需 lambda 捨棄參數的詳細資訊，請參閱 [功能提案注意事項](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
+如需 c # 9.0 中新增之功能的詳細資訊，請參閱下列功能提案附注：
+
+- [Lambda 捨棄參數](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
+- [靜態匿名函式](~/_csharplang/proposals/csharp-9.0/static-anonymous-functions.md)
 
 ## <a name="see-also"></a>另請參閱
 

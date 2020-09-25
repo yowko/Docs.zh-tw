@@ -1,16 +1,16 @@
 ---
 description: delegate 運算子 - C# 參考
 title: delegate 運算子 - C# 參考
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 6c087d9bdb2f526cf7d94c3a0f2c1a929b0343ef
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: db2bf673db12e4a10741a26112820726a4b8aaee
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874916"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247653"
 ---
 # <a name="delegate-operator-c-reference"></a>delegate 運算子 (C# 參考)
 
@@ -36,6 +36,12 @@ ms.locfileid: "90874916"
 :::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
 
 為了回溯相容性，如果只命名單一參數 `_` ， `_` 會被視為匿名方法內該參數的名稱。
+
+此外，從 c # 9.0 開始，您可以 `static` 在匿名方法的宣告中使用修飾詞：
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetStatic" :::
+
+靜態匿名方法無法從封入範圍中捕獲本機變數或實例狀態。
 
 您也可以使用 `delegate` 關鍵字來宣告[委派型別](../builtin-types/reference-types.md#the-delegate-type)。
 

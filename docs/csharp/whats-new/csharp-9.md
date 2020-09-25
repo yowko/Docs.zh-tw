@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: f309f5fb2e705d220b8b0b743ec2f68901ee8f53
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178394"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247614"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -48,7 +48,6 @@ C # 9.0 引進了 ***記錄類型***，這是一種參考型別，可提供合�
 - 覆寫 <xref:System.Object.GetHashCode>
 - 複製和複製成員
 - `PrintMembers` 和 <xref:System.Object.ToString>
-- `Deconstruct` 方法
 
 記錄支援繼承。 您可以宣告衍生自的新記錄 `Person` ，如下所示：
 
@@ -64,7 +63,6 @@ C # 9.0 引進了 ***記錄類型***，這是一種參考型別，可提供合�
 - 記錄會為您產生一致的字串表示。
 - 記錄支援複製結構。 正確的複製結構必須包含繼承階層，以及開發人員新增的屬性。
 - 您可以修改記錄以進行複製。 這些複製和修改作業支援非破壞性的變化。
-- 所有記錄都支援解構。
 
 除了熟悉的多載 `Equals` 、 `operator ==` 和以外 `operator !=` ，編譯器也會會合成新的 `EqualityContract` 屬性。 屬性 `Type` 會傳回符合記錄類型的物件。 如果基底類型為 `object` ，則屬性為 `virtual` 。 如果基底類型是另一種記錄類型，則此屬性為 `override` 。 如果記錄類型為 `sealed` ，則屬性為 `sealed` 。 合成會 `GetHashCode` 使用 `GetHashCode` 基底類型中宣告的所有屬性和欄位，以及記錄類型。 這些合成方法會在整個繼承階層架構中強制執行以值為基礎的相等。 這表示 `Student` 永遠不會將永遠視為 `Person` 相同名稱的。 這兩筆記錄的類型必須相符，以及在記錄類型中共用的所有屬性都相等。
 
@@ -226,7 +224,7 @@ if (e is not null)
 
 類似的功能可改善 [條件運算式](../language-reference/operators/conditional-operator.md)的目標型別解析。 進行這項變更時，這兩個運算式不需要從一個運算式隱含轉換成另一個運算式，但兩者都可能會隱含地轉換成目標型別。 您可能不會注意到這種變更。 您將會注意到，某些條件運算式先前需要轉換或根本無法編譯。
 
-從 c # 9.0 開始，您可以將 `static` 修飾詞加入至 lambda 運算式或匿名方法。 靜態 lambda 運算式類似于 `static` 區域函數：靜態 lambda 或匿名函式無法捕捉區域變數或實例狀態。 `static`修飾詞可避免意外地捕捉其他變數。
+從 c # 9.0 開始，您可以將 `static` 修飾詞加入至 [lambda 運算式](../language-reference/operators/lambda-expressions.md) 或 [匿名方法](../language-reference/operators/delegate-operator.md)。 靜態 lambda 運算式類似于 `static` 區域函數：靜態 lambda 或匿名方法無法捕捉區域變數或實例狀態。 `static`修飾詞可避免意外地捕捉其他變數。
 
 協變數傳回型別提供覆寫函式之傳回類型的彈性。 覆寫的虛擬函式可以傳回衍生自基類方法中宣告之傳回型別的型別。 這有助於記錄，以及支援虛擬複製品或 factory 方法的其他類型。
 

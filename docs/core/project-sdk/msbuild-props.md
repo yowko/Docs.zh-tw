@@ -1,22 +1,22 @@
 ---
 title: 適用于 Microsoft .NET 的 MSBuild 屬性
-description: .NET Core SDK 所瞭解的 MSBuild 屬性和專案的參考。
+description: .NET SDK 瞭解的 MSBuild 屬性和專案參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: faa0dc0e94800a49b56af8810562ee0540f118d2
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656258"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247564"
 ---
-# <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK 專案的 MSBuild 參考
+# <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 專案的 MSBuild 參考
 
-此頁面是您可以用來設定 .NET Core 專案的 MSBuild 屬性和專案的參考。
+此頁面是 MSBuild 屬性和專案的參考，您可以使用這些屬性來設定 .NET 專案。
 
 > [!NOTE]
-> 此頁面為進行中的工作，不會列出 .NET Core SDK 的所有有用 MSBuild 屬性。 如需常見 MSBuild 屬性的清單，請參閱 [一般的 msbuild 屬性](/visualstudio/msbuild/common-msbuild-project-properties)。
+> 此頁面為進行中的工作，不會列出 .NET SDK 的所有實用 MSBuild 屬性。 如需常見 MSBuild 屬性的清單，請參閱 [一般的 msbuild 屬性](/visualstudio/msbuild/common-msbuild-project-properties)。
 
 ## <a name="framework-properties"></a>架構屬性
 
@@ -123,7 +123,7 @@ ms.locfileid: "89656258"
 
 ### <a name="useapphost"></a>UseAppHost
 
-此 `UseAppHost` 屬性是在 .NET Core SDK 的2.1.400 版本中引進。 它會控制是否為部署建立原生可執行檔。 獨立部署需要原生可執行檔。
+此 `UseAppHost` 屬性是在2.1.400 版本的 .NET SDK 中引進。 它會控制是否為部署建立原生可執行檔。 獨立部署需要原生可執行檔。
 
 在 .NET Core 3.0 和更新版本中，依預設會建立與 framework 相依的可執行檔。 將 `UseAppHost` 屬性設為， `false` 以停用產生可執行檔。
 
@@ -133,7 +133,7 @@ ms.locfileid: "89656258"
 </PropertyGroup>
 ```
 
-如需部署的詳細資訊，請參閱 [.Net Core 應用程式部署](../deploying/index.md)。
+如需部署的詳細資訊，請參閱 [.net 應用程式部署](../deploying/index.md)。
 
 ## <a name="compile-properties"></a>編譯屬性
 
@@ -147,7 +147,7 @@ ms.locfileid: "89656258"
 > [!NOTE]
 > 如果 `LogicalName` 為 `ManifestResourceName` `DependentUpon` 專案指定、或中繼資料 `EmbeddedResource` ，則會改為以該中繼資料為基礎，產生該資源檔的資訊清單檔案名。
 
-根據預設，在新的 .NET Core 專案中，這個屬性會設定為 `true` 。 如果設定為 `false` ，且 `LogicalName` 專案檔中的專案未指定任何、 `ManifestResourceName` 或 `DependentUpon` 中繼資料 `EmbeddedResource` ，則資源資訊清單檔案名會以專案的根命名空間和 .resx 檔案的相對檔案路徑為基礎 *。* 如需詳細資訊，請參閱 [資源資訊清單檔案的命名方式](../resources/manifest-file-names.md)。
+根據預設，在新的 .NET 專案中，這個屬性會設定為 `true` 。 如果設定為 `false` ，且 `LogicalName` 專案檔中的專案未指定任何、 `ManifestResourceName` 或 `DependentUpon` 中繼資料 `EmbeddedResource` ，則資源資訊清單檔案名會以專案的根命名空間和 .resx 檔案的相對檔案路徑為基礎 *。* 如需詳細資訊，請參閱 [資源資訊清單檔案的命名方式](../resources/manifest-file-names.md)。
 
 ```xml
 <PropertyGroup>
@@ -190,7 +190,7 @@ ms.locfileid: "89656258"
 
 ### <a name="analysismode"></a>AnalysisMode
 
-從 .NET 5.0 RC2 開始，.NET SDK 隨附所有「CA」程式 [代碼品質規則](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)。 依預設，只 [會啟用部分規則](../../fundamentals/productivity/code-analysis.md#enabled-rules) 做為組建警告。 `AnalysisMode`屬性可讓您自訂預設啟用的規則集。 您可以切換至更積極的 (退出) 分析模式或更保守的 (加入) 分析模式。 例如，如果您想要預設啟用所有規則作為組建警告，請將值設定為 `AllEnabledByDefault` 。
+從 .NET 5.0 RC2 開始，.NET SDK 隨附所有「CA」程式 [代碼品質規則](../../fundamentals/code-analysis/rules/quality-rules-reference.md)。 依預設，只 [會啟用部分規則](../../fundamentals/code-analysis/overview.md#enabled-rules) 做為組建警告。 `AnalysisMode`屬性可讓您自訂預設啟用的規則集。 您可以切換至更積極的 (退出) 分析模式或更保守的 (加入) 分析模式。 例如，如果您想要預設啟用所有規則作為組建警告，請將值設定為 `AllEnabledByDefault` 。
 
 ```xml
 <PropertyGroup>
@@ -203,12 +203,12 @@ ms.locfileid: "89656258"
 | 值 | 意義 |
 |-|-|
 | `Default` | 預設模式，其中某些規則會啟用為組建警告，某些規則會啟用為 Visual Studio IDE 建議，並停用其餘部分。 |
-| `AllEnabledByDefault` | 積極或退出模式，預設會啟用所有規則作為組建警告。 您可以選擇性地 [退出宣告](../../fundamentals/productivity/configure-code-analysis-rules.md) 個別規則來停用它們。 |
-| `AllDisabledByDefault` | 保守或加入宣告模式，預設會停用所有規則。 您可以選擇性地 [選擇](../../fundamentals/productivity/configure-code-analysis-rules.md) 加入個別規則來啟用它們。 |
+| `AllEnabledByDefault` | 積極或退出模式，預設會啟用所有規則作為組建警告。 您可以選擇性地 [退出宣告](../../fundamentals/code-analysis/configuration-options.md) 個別規則來停用它們。 |
+| `AllDisabledByDefault` | 保守或加入宣告模式，預設會停用所有規則。 您可以選擇性地 [選擇](../../fundamentals/code-analysis/configuration-options.md) 加入個別規則來啟用它們。 |
 
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-`CodeAnalysisTreatWarningsAsErrors`屬性可讓您設定是否要將程式碼品質分析警告 (CAxxxx) 應該視為警告並中斷組建。 如果您在 `-warnaserror` 建立專案時使用旗標，則也會將 [.net 程式碼品質分析](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) 警告視為錯誤。 如果您不想將程式碼品質分析警告視為錯誤，您可以 `CodeAnalysisTreatWarningsAsErrors` 在專案檔中將 MSBuild 屬性設定為 `false` 。
+`CodeAnalysisTreatWarningsAsErrors`屬性可讓您設定是否要將程式碼品質分析警告 (CAxxxx) 應該視為警告並中斷組建。 如果您在 `-warnaserror` 建立專案時使用旗標，則也會將 [.net 程式碼品質分析](../../fundamentals/code-analysis/overview.md#code-quality-analysis) 警告視為錯誤。 如果您不想將程式碼品質分析警告視為錯誤，您可以 `CodeAnalysisTreatWarningsAsErrors` 在專案檔中將 MSBuild 屬性設定為 `false` 。
 
 ```xml
 <PropertyGroup>
@@ -218,7 +218,7 @@ ms.locfileid: "89656258"
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-針對以 .NET 5.0 或更新版本為目標的專案，預設會啟用[.net 程式碼品質分析](../../fundamentals/productivity/code-analysis.md#code-quality-analysis)。 您可以藉由將屬性設定為，為以舊版 .NET 為目標的專案啟用 .NET 程式碼分析 `EnableNETAnalyzers` `true` 。 若要在任何專案中停用程式碼分析，請將這個屬性設定為 `false` 。
+針對以 .NET 5.0 或更新版本為目標的專案，預設會啟用[.net 程式碼品質分析](../../fundamentals/code-analysis/overview.md#code-quality-analysis)。 您可以藉由將屬性設定為，為以舊版 .NET 為目標的專案啟用 .NET 程式碼分析 `EnableNETAnalyzers` `true` 。 若要在任何專案中停用程式碼分析，請將這個屬性設定為 `false` 。
 
 ```xml
 <PropertyGroup>
@@ -231,7 +231,7 @@ ms.locfileid: "89656258"
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 
-根據預設， [.net 程式碼樣式分析](../../fundamentals/productivity/code-analysis.md#code-style-analysis)會在所有 .net 專案的組建上停用。 您可以藉由將屬性設定為，啟用 .NET 專案的程式碼樣式分析 `EnforceCodeStyleInBuild` `true` 。
+根據預設， [.net 程式碼樣式分析](../../fundamentals/code-analysis/overview.md#code-style-analysis)會在所有 .net 專案的組建上停用。 您可以藉由將屬性設定為，啟用 .NET 專案的程式碼樣式分析 `EnforceCodeStyleInBuild` `true` 。
 
 ```xml
 <PropertyGroup>
@@ -239,11 +239,11 @@ ms.locfileid: "89656258"
 </PropertyGroup>
 ```
 
-所有 [設定](../../fundamentals/productivity/code-analysis.md#code-style-analysis) 為警告或錯誤的程式碼樣式規則，都會在組建和報告違規時執行。
+所有 [設定](../../fundamentals/code-analysis/overview.md#code-style-analysis) 為警告或錯誤的程式碼樣式規則，都會在組建和報告違規時執行。
 
 ## <a name="run-time-configuration-properties"></a>執行時間設定屬性
 
-您可以在應用程式的專案檔中指定 MSBuild 屬性，以設定一些執行時間行為。 如需設定執行時間行為之其他方式的詳細資訊，請參閱 [.Net Core 執行時間設定](../run-time-config/index.md)。
+您可以在應用程式的專案檔中指定 MSBuild 屬性，以設定一些執行時間行為。 如需設定執行時間行為之其他方式的詳細資訊，請參閱 [執行時間設定](../run-time-config/index.md)。
 
 - [ConcurrentGarbageCollection](#concurrentgarbagecollection)
 - [InvariantGlobalization](#invariantglobalization)
