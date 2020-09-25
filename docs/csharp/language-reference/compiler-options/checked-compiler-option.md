@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 5c90696edd3031271e16cd2c1a332da5b605f81f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: c92ad61b2f482631230e0e6aeb0af5716a4fcb61
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125939"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196828"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (C# 編譯器選項)
+
 **-checked** 選項會指定產生超出該資料類型範圍之值且不在 [checked](../keywords/checked.md) 或 [unchecked](../keywords/unchecked.md) 關鍵字範圍內的整數算術陳述式是否導致執行階段例外狀況。  
   
 ## <a name="syntax"></a>語法  
@@ -26,6 +27,7 @@ ms.locfileid: "89125939"
 ```  
   
 ## <a name="remarks"></a>備註  
+
  在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式不一定會有 **-checked** 選項的效果。  
   
  如果不在 `checked` 或 `unchecked` 關鍵字範圍內的整數算術陳述式產生超出該資料類型範圍的值，並在編譯時使用 **-checked+** (或 **-checked**)，則該陳述式會在執行階段導致例外狀況。 如果在編譯時使用 **-checked-**，則該陳述式不會在執行階段導致例外狀況。  
@@ -47,6 +49,7 @@ ms.locfileid: "89125939"
  若要以程式設計方式存取這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。  
   
 ## <a name="example"></a>範例  
+
  下列命令會編譯 `t2.cs`。 在命令中使用 `-checked` 會指定檔案中不在 `checked` 或 `unchecked` 關鍵字範圍內且產生超出該資料型別範圍之值的任何整數算術陳述式，都會在執行階段導致例外狀況。  
   
 ```console  
@@ -55,5 +58,5 @@ csc t2.cs -checked
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
