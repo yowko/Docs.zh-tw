@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e746362657a25487e98ddac09fa4337b00dfe805
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515968"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169124"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -241,7 +241,7 @@ ASP.NET Core UI 專案會負責任何 UI 層級考量，但不應該包含商務
 
 ### <a name="feature-organization"></a>功能組織
 
-根據預設，ASP.NET Core 應用程式組織其資料夾結構時會包含 Controllers 和 Views，通常也會包含 ViewModels。 支援這些伺服器端結構的用戶端程式碼通常會與 wwwroot 資料夾分開儲存。 不過，大型應用程式在使用此組織方式時可能會遇到問題，因為處理任何指定的功能通常需要在這些資料夾之間跳來跳去。 隨著每個資料夾中的檔案和子資料夾數目增加，這會變得越來越困難，而導致需要大幅捲動方案總管。 解決此問題的方法之一，是依「功能」__ 而不是檔案類型來組織應用程式程式碼。 此組織樣式通常稱為功能資料夾或 [功能](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) 配量 (另請參閱： [垂直](https://deviq.com/vertical-slices/) 配量) 。
+根據預設，ASP.NET Core 應用程式組織其資料夾結構時會包含 Controllers 和 Views，通常也會包含 ViewModels。 支援這些伺服器端結構的用戶端程式碼通常會與 wwwroot 資料夾分開儲存。 不過，大型應用程式在使用此組織方式時可能會遇到問題，因為處理任何指定的功能通常需要在這些資料夾之間跳來跳去。 隨著每個資料夾中的檔案和子資料夾數目增加，這會變得越來越困難，而導致需要大幅捲動方案總管。 解決此問題的方法之一，是依「功能」__ 而不是檔案類型來組織應用程式程式碼。 此組織樣式通常稱為功能資料夾或 [功能](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) 配量 (另請參閱： [垂直](https://deviq.com/vertical-slices/) 配量) 。
 
 基於此目的，ASP.NET Core MVC 會支援 Areas。 使用 Areas，您可以在每個 Areas 資料夾中建立不同的 Controllers 和 Views 資料夾集 (以及任何相關聯的模型)。 圖 7-1 顯示使用 Areas 的範例資料夾結構。
 
@@ -301,7 +301,7 @@ public class FeatureConvention : IControllerModelConvention
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC 也會使用慣例來尋找檢視。 您可以使用自訂慣例將它覆寫，讓檢視位於功能資料夾中 (使用上述 FeatureConvention 提供的功能名稱)。 您可以從 MSDN 雜誌文章、 [ASP.NET CORE MVC 的功能](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)配量，深入瞭解此方法及下載工作範例。
+ASP.NET Core MVC 也會使用慣例來尋找檢視。 您可以使用自訂慣例將它覆寫，讓檢視位於功能資料夾中 (使用上述 FeatureConvention 提供的功能名稱)。 您可以從 MSDN 雜誌文章、 [ASP.NET CORE MVC 的功能](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)配量，深入瞭解此方法及下載工作範例。
 
 ### <a name="apis-and-no-locblazor-applications"></a>Api 和 Blazor 應用程式
 
@@ -313,7 +313,7 @@ ASP.NET Core MVC 也會使用慣例來尋找檢視。 您可以使用自訂慣�
 
 其中一個可能會詢問，為什麼 `BlazorShared` 在已經有 `ApplicationCore` 可用於共用和之任何類型的通用專案時，新增個別的專案 `PublicApi` `BlazorAdmin` ？ 答案是，此專案包含所有應用程式的商務邏輯，因此會比所需還要大，而且可能需要在伺服器上保持安全。 請記住，在載入應用程式時，會將所參考的任何程式庫 `BlazorAdmin` 下載到使用者的瀏覽器 Blazor 。
 
-根據其中一個是否使用 [後端前端 (BFF) 模式](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends)，應用程式所使用的 api Blazor WebAssembly 可能不會與的100% 共用其類型 Blazor 。 尤其是，許多不同用戶端所使用的公用 API 可能會定義自己的要求和結果類型，而不是在用戶端專屬的共用專案中共用它們。 在 eShopOnWeb 範例中，假設 `PublicApi` 專案實際上是裝載公用 API，所以並非所有的要求和回應類型都來自于 `BlazorShared` 專案。
+根據其中一個是否使用 [後端前端 (BFF) 模式](/azure/architecture/patterns/backends-for-frontends)，應用程式所使用的 api Blazor WebAssembly 可能不會與的100% 共用其類型 Blazor 。 尤其是，許多不同用戶端所使用的公用 API 可能會定義自己的要求和結果類型，而不是在用戶端專屬的共用專案中共用它們。 在 eShopOnWeb 範例中，假設 `PublicApi` 專案實際上是裝載公用 API，所以並非所有的要求和回應類型都來自于 `BlazorShared` 專案。
 
 ### <a name="cross-cutting-concerns"></a>跨領域考量
 
@@ -387,7 +387,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-您可以從 MSDN 雜誌文章的 [真實世界 ASP.NET CORE MVC 篩選器](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)，深入瞭解如何執行篩選器及下載可運作的範例。
+您可以從 MSDN 雜誌文章的 [真實世界 ASP.NET CORE MVC 篩選器](/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)，深入瞭解如何執行篩選器及下載可運作的範例。
 
 > ### <a name="references--structuring-applications"></a>參考資料 - 建構應用程式
 >

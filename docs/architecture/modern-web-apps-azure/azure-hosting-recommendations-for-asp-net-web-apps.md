@@ -4,17 +4,17 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | AS
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 19626aea07fb26222af575a709b54577ca12589b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164430"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169215"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>ASP.NET Web Core 應用程式的 Azure 裝載建議
 
 > 「企業營運領導者都繞過 IT 部門，從雲端中取得應用程式 (亦稱為 SaaS) 並為其付費，就像訂閱雜誌一樣。 當不再需要服務的時候，他們可以取消訂閱，且不會有任何設備在角落裡閒置。」  
-> _\-Daryl Plummer，Gartner 分析師_
+> _\- Gartner 分析師 Daryl Plummer_
 
 無論您的應用程式需求和架構是什麼，Microsoft Azure 都可以支援。 您的裝載需求可以像靜態網站一樣簡單，也可以像由數十種服務組成的應用程式一樣複雜。 針對 ASP.NET Core 整合型 Web 應用程式和支援的服務，建議幾種眾所周知的組態。 本文中的建議根據裝載資源的類型分組，不論是完整應用程式、個別處理程序或是資料。
 
@@ -54,7 +54,7 @@ Azure App Service 是大多數 Web 應用程式的最佳選擇。 部署和管�
 
 ![基本 Azure 架構](./media/image1-5.png)
 
-單一資源群組中的少數資源通常就足以管理這類應用程式。 通常部署為單一單元的應用程式 (而不是組成許多不同處理程序的應用程式) 非常適合這種[基本架構方法](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)。 雖然在架構上很簡單，但此方法仍然可讓裝載的應用程式向上擴充 (每個節點多個資源) 以及橫向擴充 (更多裝載的節點) 以符合任何增加需求。 透過自動調整，應用程式可以設定為根據需求和節點間的平均負載，自動調整裝載應用程式的節點數目。
+單一資源群組中的少數資源通常就足以管理這類應用程式。 通常部署為單一單元的應用程式 (而不是組成許多不同處理程序的應用程式) 非常適合這種[基本架構方法](/azure/architecture/reference-architectures/app-service-web-app/basic-web-app)。 雖然在架構上很簡單，但此方法仍然可讓裝載的應用程式向上擴充 (每個節點多個資源) 以及橫向擴充 (更多裝載的節點) 以符合任何增加需求。 透過自動調整，應用程式可以設定為根據需求和節點間的平均負載，自動調整裝載應用程式的節點數目。
 
 ### <a name="app-service-web-apps-for-containers"></a>用於容器的 App Service Web Apps
 
@@ -74,7 +74,7 @@ Azure App Service 是大多數 Web 應用程式的最佳選擇。 部署和管�
 
 ![註明幾種常見設計模式的微服務範例架構。](./media/image1-10.png)
 
-[深入了解要在建置微服務型系統時考慮的設計模式。](https://docs.microsoft.com/azure/architecture/microservices/design/patterns)
+[深入了解要在建置微服務型系統時考慮的設計模式。](/azure/architecture/microservices/design/patterns)
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
@@ -100,7 +100,7 @@ Azure Dev Spaces：
 - 減少小組所需的整合環境數量
 - 開發/測試時，在分散式系統中移除模擬特定服務的需求
 
-[深入了解 Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
+[深入了解 Azure Dev Spaces](/azure/dev-spaces/about)
 
 ### <a name="azure-virtual-machines"></a>Azure 虛擬機器
 
@@ -116,9 +116,9 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
 
 針對交易式的關聯式資料，Azure SQL Database 是最佳選項。 對於高性能的唯讀資料，由 Azure SQL Database 支援之 Redis 快取是很好的解決方案。
 
-非結構化 JSON 資料可以多種方式儲存，從 SQL Database 資料行到 Azure 儲存體中的 Blob 或資料表，到 Azure Cosmos DB。 在這些情況下，Azure Cosmos DB 提供最佳查詢功能，而且對於必須支援查詢的大量 JSON 檔而言，這是建議的選項。
+非結構化的 JSON 資料可以各種不同的方式儲存，從 SQL Database 資料行到 Blob 或 Azure 儲存體的資料表，到 Azure Cosmos DB。 在這些情況下，Azure Cosmos DB 提供最佳的查詢功能，而且是需要支援查詢的大量 JSON 檔的建議選項。
 
-用於協調應用程式行為的暫時性命令或事件型資料，可以使用 Azure 服務匯流排或 Azure 儲存體佇列。 Azure 服務匯流排提供更大的彈性，並且是應用程式內部和之間非一般訊息的建議服務。
+用於協調應用程式行為的暫時性命令或事件型資料，可以使用 Azure 服務匯流排或 Azure 儲存體佇列。 Azure 服務匯流排提供更大的彈性，而且是在應用程式內和應用程式之間非一般訊息的建議服務。
 
 ## <a name="architecture-recommendations"></a>架構建議
 
@@ -130,7 +130,7 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
 
 **圖11-1。** Sitecore 行銷網站參考架構。
 
-**參考– Azure 裝載建議**
+**參考-Azure 裝載建議**
 
 - Azure 解決方案架構\
   <https://azure.microsoft.com/solutions/architecture/>
@@ -154,4 +154,4 @@ Azure 提供各種資料儲存選項，以便您的應用程式可以針對有�
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
->[上一步](development-process-for-azure.md)
+>[[上一步]](development-process-for-azure.md)

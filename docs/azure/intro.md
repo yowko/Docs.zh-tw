@@ -2,12 +2,12 @@
 title: 開始使用 Azure 與 .NET
 description: 了解您需要知道的 Azure 和 .NET 基本概念。
 ms.date: 06/20/2020
-ms.openlocfilehash: 9f1766176740ede5aa40dd894497f2aa719efe23
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: e4a071e302247332cdc98c1aabf595cb4f8e2eff
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91071101"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171568"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure 與 .NET 簡介
 
@@ -77,6 +77,7 @@ Azure 中的託管可分為三類。
 * **REST API**： azure SDK for .net 是建置於 [azure REST API](/rest/api/azure/)上的抽象概念。 若有需要，Azure REST API 可以用來代替 Azure SDK for .NET 或搭配使用。
 
 ## <a name="diagnosing-problems-in-the-cloud"></a>診斷雲端中的問題
+
 將您的應用程式部署至 Azure 後，可能會遇到應用程式可以在開發環境中運作，但無法在 Azure 中運作的狀況。 以下是診斷問題時適用的兩個入門方法：
 
 * **從 Visual Studio 進行遠端偵錯**：大部分的 Azure 計算服務 (包括本文件中討論的服務) 皆支援透過 Visual Studio 進行遠端偵錯及取得記錄。 若要用您的應用程式來探索 Visual Studio 的功能，請在 Visual Studio 的快速啟動工具列 (位在右上角) 中，輸入 'Cloud Explorer' 來開啟 Cloud Explorer 工具視窗，然後在樹狀目錄中尋找您的應用程式。 如需詳細資訊，請參閱[使用 Visual Studio 對 Azure App Service 中的 Web 應用程式進行疑難排解](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug)。

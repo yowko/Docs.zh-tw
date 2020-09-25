@@ -2,15 +2,16 @@
 title: <security> 的 <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: e88f55f3651d1ccd55631dce13a0349ac2772624
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 48b49bf69f791f90ed5b2eea8e6d412438cd9519
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736397"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169839"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<security> 的 \<ws2007HttpBinding>
-表示與專案搭配使用的安全性設定 [\<ws2007HttpBinding>](ws2007httpbinding.md) 。  
+
+表示與元素搭配使用的安全性設定 [\<ws2007HttpBinding>](ws2007httpbinding.md) 。  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -19,7 +20,7 @@ ms.locfileid: "73736397"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<security>**  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -39,13 +40,14 @@ ms.locfileid: "73736397"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
+
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`mode`|選擇性. 指定套用的安全性類型。 預設值為 `Message`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.SecurityMode>。|  
+|`mode`|參數. 指定套用的安全性類型。 預設值為 `Message`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.SecurityMode>。|  
   
 ## <a name="mode-attribute"></a>Mode 屬性  
   
@@ -58,18 +60,19 @@ ms.locfileid: "73736397"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<transport>](transport-of-ws2007httpbinding.md)|定義傳輸安全性設定。 這個項目對應至 <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> 型別。 當模式設定為 Transport，才會套用這些設定。|  
 |[\<message>](message-of-ws2007httpbinding.md)|定義訊息的安全性設定。 這個項目對應至 <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> 型別。 當模式設定為 Transport，就不會套用這些設定。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<ws2007HttpBinding>](ws2007httpbinding.md)|HTTP 傳輸應用程式的安全繫結。|  
   
 ## <a name="remarks"></a>備註  
+
  這個項目主要是用來與實作 WS-* 規格的服務進行交互操作。 此繫結的傳輸安全性為使用 HTTP 或 HTTPS 的安全通訊端層 (SSL)。  
   
 ## <a name="see-also"></a>另請參閱
@@ -79,8 +82,8 @@ ms.locfileid: "73736397"
 - <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
 - <xref:System.ServiceModel.BasicHttpSecurity>
-- [Securing Services and Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../wcf/feature-details/securing-services-and-clients.md)
 - [繫結](../../../wcf/bindings.md)
 - [設定系統提供的繫結](../../../wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](bindings.md)

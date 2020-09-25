@@ -1,21 +1,23 @@
 ---
-title: HOW TO：顯示 LINQ to SQL 命令
+title: 作法：顯示 LINQ to SQL 命令
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: ec5010a42980e2d7a1a03c31d396cac6b6934a58
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: e703ea9be3ead50afae9b8f42aaa4f54a292c23c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002932"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169436"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a>HOW TO：顯示 LINQ to SQL 命令
+# <a name="how-to-display-linq-to-sql-commands"></a>作法：顯示 LINQ to SQL 命令
+
 使用 <xref:System.Data.Linq.DataContext.GetCommand%2A>，可以顯示 SQL 命令和其他資訊。  
   
 ## <a name="example"></a>範例  
+
  在下列範例中，主控台視窗會顯示查詢的輸出，後面依序接著產生的 SQL 命令、命令的型別，以及連接的型別。  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]

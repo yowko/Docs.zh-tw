@@ -9,14 +9,15 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-ms.openlocfilehash: 4ce4033323eb938caff1d769198ca69782b470ab
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1d2eefdab433f67e1cba5f709a2db8ec6b9a5dc7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140824"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171308"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# 編譯器選項)
+
 使用 **-win32manifest** 選項，指定要內嵌到專案之可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。  
   
 ## <a name="syntax"></a>語法  
@@ -26,10 +27,12 @@ ms.locfileid: "89140824"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `filename`  
  自訂資訊清單檔案的名稱和位置。  
   
 ## <a name="remarks"></a>備註  
+
  根據預設，Visual C# 編譯器會內嵌應用程式資訊清單，以指定所要求之執行層級的 "asInvoker"。 編譯器會在建置可執行檔所在的資料夾中建立資訊清單，當您使用 Visual Studio 時，通常會是 bin\Debug 或是 bin\Release 資料夾。 如果您要提供自訂資訊清單，例如指定 "highestAvailable" 或 "requireAdministrator" 做為要求的執行層級，請使用此選項指定檔案名稱。  
   
 > [!NOTE]
@@ -48,6 +51,7 @@ ms.locfileid: "89140824"
  您可以使用 [-nowin32manifest (C# 編譯器選項)](./nowin32manifest-compiler-option.md) 選項，提供應用程式資訊清單作為自訂建置後步驟或 Win32 資源檔的一部分。 如果您想要應用程式受制於 Windows Vista 上的檔案或登錄虛擬化，請使用這個相同的選項。 這會防止編譯器在可攜式執行檔 (PE) 中建立和內嵌預設資訊清單。  
   
 ## <a name="example"></a>範例  
+
  下列範例顯示 Visual C# 編譯器插入至 PE 的預設資訊清單。  
   
 > [!NOTE]
@@ -69,6 +73,6 @@ ms.locfileid: "89140824"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [-nowin32manifest (C# 編譯器選項)](./nowin32manifest-compiler-option.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

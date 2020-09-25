@@ -3,14 +3,15 @@ description: -target:winmdobj (C# 編譯器選項)
 title: -target:winmdobj (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 66a4bddb34832705ad4779829e561afd9442be8f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: a13e2da02698209a514e716d65c1df3508cf1508
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139082"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171399"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# 編譯器選項)
+
 如果您使用 **-target:winmdobj** 編譯器選項，編譯器會建立一個可轉換成 Windows 執行階段二進位檔案 (.winmd) 的中繼 .winmdobj 檔案。 除了 Managed 語言程式之外，JavaScript 和 C++ 程式也可以使用 .winmd 檔案。  
   
 ## <a name="syntax"></a>語法  
@@ -20,6 +21,7 @@ ms.locfileid: "89139082"
 ```  
   
 ## <a name="remarks"></a>備註  
+
  **winmdobj** 設定對編譯器發出訊號，表示需要中繼模組。 Visual Studio 將 C# 類別庫編譯為 .winmdobj 檔案，做為回應。 然後 .winmdobj 檔案可以透過 <xref:Microsoft.Build.Tasks.WinMDExp> 匯出工具產生 Windows 中繼資料 (.winmd) 檔案。 .winmd 檔案包含原始類別庫的程式碼，以及 JavaScript 或 C++ 和 Windows 執行階段所使用的 WinMD 中繼資料。  
   
  使用 **-target:winmdobj** 編譯器選項所編譯之檔案的輸出，其設計目的只作為 WimMDExp 匯出工具的輸入，並不能直接參考 .winmdobj 檔案本身。  
@@ -41,6 +43,7 @@ ms.locfileid: "89139082"
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>範例  
+
  下列命令會將 `filename.cs` 編譯到中繼 .winmdobj 檔案。  
   
 ```console  
@@ -50,4 +53,4 @@ csc -target:winmdobj filename.cs
 ## <a name="see-also"></a>另請參閱
 
 - [-目標 (c # 編譯器選項) ](./target-compiler-option.md)
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)

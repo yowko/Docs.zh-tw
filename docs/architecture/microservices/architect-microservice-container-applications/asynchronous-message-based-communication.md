@@ -2,12 +2,12 @@
 title: 非同步訊息通訊
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊息型通訊是微服務架構的基本概念，因為它是最終保持微服務彼此之間相互獨立，同時又能同步的最佳方式。
 ms.date: 09/20/2018
-ms.openlocfilehash: 2bd79935cad3d62e488a57da6b40a0c87349960b
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 17b3fb3fe3f94d5387359061e3297ebfa6e5be7a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679171"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169241"
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
 
@@ -59,7 +59,7 @@ ms.locfileid: "90679171"
 
 在非同步事件導向的通訊中，有一個微服務會將事件發佈至事件匯流排，而許多微服務可以訂閱事件，以取得通知並採取行動。 您的實作會決定要用於事件驅動、訊息式通訊的通訊協定。 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 可以協助達成可靠的佇列通訊。
 
-當您使用事件匯流排時，可能會想要使用抽象層級 (例如事件匯流排介面)，其根據類別中的相關實作，且程式碼使用來自像是 [RabbitMQ](https://www.rabbitmq.com/) 之訊息代理程式的 API，或使用像是 [Azure 服務匯流排與主題](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)的服務匯流排。 或者，您也可以使用較高層級的服務匯流排，像是 NServiceBus、MassTransit 或 Brighter 來相互連貫事件匯流排和發佈/訂閱系統。
+當您使用事件匯流排時，可能會想要使用抽象層級 (例如事件匯流排介面)，其根據類別中的相關實作，且程式碼使用來自像是 [RabbitMQ](https://www.rabbitmq.com/) 之訊息代理程式的 API，或使用像是 [Azure 服務匯流排與主題](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)的服務匯流排。 或者，您也可以使用較高層級的服務匯流排，像是 NServiceBus、MassTransit 或 Brighter 來相互連貫事件匯流排和發佈/訂閱系統。
 
 ## <a name="a-note-about-messaging-technologies-for-production-systems"></a>關於生產系統傳訊技術的附註
 
@@ -75,7 +75,7 @@ ms.locfileid: "90679171"
 
 - 使用[交易記錄採礦](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
-- 使用完整的[事件溯源模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)。
+- 使用完整的[事件溯源模式](/azure/architecture/patterns/event-sourcing)。
 
 - 使用[寄件匣模式](https://www.kamilgrzybek.com/design/the-outbox-pattern/)：交易式資料庫資料表作為訊息佇列，而訊息佇列將是事件建立者元件的基礎，會建立事件加以發行。
 

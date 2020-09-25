@@ -2,12 +2,12 @@
 title: 微服務架構中的通訊
 description: 探索微服務之間的不同通訊方式，並了解同步和非同步方式的影響。
 ms.date: 01/30/2020
-ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401652"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169254"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服務架構中的通訊
 
@@ -35,7 +35,7 @@ ms.locfileid: "79401652"
 
 - 單一接收者： 每個要求都必須由一個接收者或服務來處理。 這種通訊的其中一個範例是 [Command pattern](https://en.wikipedia.org/wiki/Command_pattern) (命令模式)。
 
-- 多個接收者： 每個要求可以由零到多個接收者來處理。 這種類型的通訊必須是非同步的。 其中的範例是用於[事件驅動架構](https://microservices.io/patterns/data/event-driven-architecture.html)這類模式的[發佈/訂閱](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)機制。 這是以透過事件在多個微服務之間散佈資料更新時的事件匯流排介面或訊息代理程式為基礎；通常您可以使用[主題和訂閱](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)，並透過服務匯流排或類似 [Azure 服務匯流排](https://azure.microsoft.com/services/service-bus/)的構件來實作。
+- 多個接收者： 每個要求可以由零到多個接收者來處理。 這種類型的通訊必須是非同步的。 其中的範例是用於[事件驅動架構](https://microservices.io/patterns/data/event-driven-architecture.html)這類模式的[發佈/訂閱](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)機制。 這是以透過事件在多個微服務之間散佈資料更新時的事件匯流排介面或訊息代理程式為基礎；通常您可以使用[主題和訂閱](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)，並透過服務匯流排或類似 [Azure 服務匯流排](https://azure.microsoft.com/services/service-bus/)的構件來實作。
 
 微服務應用程式通常會使用這些通訊樣式的組合。 叫用一般 Web API HTTP 服務時，最常見的類型是使用 HTTP/HTTPS 等同步通訊協定的單一接收者通訊。 微服務通常也會使用傳訊通訊協定，來進行微服務之間的非同步通訊。
 
@@ -51,17 +51,17 @@ ms.locfileid: "79401652"
 
 如果微服務 (例如查詢要求) 之間的同步相依性越高，用戶端應用程式的整體回應時間就會越糟。
 
-![顯示了跨微服務三種類型的通信的圖表。](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
+![顯示跨微服務的三種通訊類型的圖表。](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
 
 **圖 4-15**： 微服務之間的通訊模式和反向模式
 
-如上圖所示，在同步通信中，在提供用戶端請求時，在微服務之間創建請求的"鏈"。 這是反模式。 在非同步通訊中，微服務會使用非同步訊息或 http 輪詢與其他微服務進行通訊，但用戶端要求會立即處理。
+如上圖所示，在同步通訊中，在服務用戶端要求時，微服務之間會建立「鏈」要求。 這是反模式。 在非同步通訊中，微服務會使用非同步訊息或 http 輪詢與其他微服務進行通訊，但用戶端要求會立即處理。
 
 如果您的微服務需要引發另一個微服務的其他動作，請盡量不要同步執行該動作，也不要與原始微服務要求及回覆作業一併執行。 請改為以非同步方式執行 (使用非同步傳訊或整合事件、佇列等)。 但是，請盡量不要與原始的同步要求及回覆作業同步叫用動作。
 
 最後 (這是建置微服務時大部分問題發生的時候)，如果您初始的微服務需要使用原本由其他微服務擁有的資料時，請避免對該資料提出同步要求。 反之，請使用最終一致性 (通常使用整合事件來進行，如接下來的章節中所述)，將該資料 (僅所需的屬性) 複製或散佈到初始服務的資料庫中。
 
-如前面在["識別每個微服務"部分的域模型邊界](identify-microservice-domain-model-boundaries.md)中所述，跨多個微服務複製某些資料並不是不正確的設計 —相反，當這樣做時，您可以將資料轉換為該附加域或邊界上下文的特定語言或術語。 例如，在[eShopOnContainers 應用程式中](https://github.com/dotnet-architecture/eShopOnContainers)，您有一個名為`identity-api`的微服務，它負責大多數使用者的資料，實體名為`User`。 但是，當您需要在`Ordering`微服務中存儲有關使用者的資料時，可以將其存儲為名為 的不同`Buyer`實體。 實體`Buyer`與原始`User`實體共用相同的標識，但它可能只有`Ordering`域所需的少數屬性，而不是整個使用者設定檔。
+如稍早在 [識別每個微服務區段的領域模型界限](identify-microservice-domain-model-boundaries.md) 中所述，在數個微服務之間複製某些資料不是不正確的設計，相反地，當您這麼做時，您可以將資料轉譯為特定語言或該其他網域或系結內容的詞彙。 例如，在 [eShopOnContainers 應用程式](https://github.com/dotnet-architecture/eShopOnContainers) 中，您有一個名為 `identity-api` 的微服務，它會使用名為的實體來處理大部分的使用者資料 `User` 。 但是，當您需要將使用者的相關資料儲存在微服務中時 `Ordering` ，您會將它儲存為另一個名為的實體 `Buyer` 。 `Buyer`實體與原始實體共用相同的身分識別 `User` ，但它可能只會有網域所需的幾個屬性 `Ordering` ，而非整個使用者設定檔。
 
 您可以使用任何通訊協定來進行通訊，並以非同步方式跨微服務散佈資料，來保持最終一致性。 如前所述，您可以使用事件匯流排或訊息代理程式來運用整合事件；甚至還可以改輪詢其他服務來使用 HTTP。 它並不重要。 重要的規則是不要讓微服務之間建立同步相依性。
 
@@ -77,11 +77,11 @@ ms.locfileid: "79401652"
 
 當用戶端使用要求/回應通訊時，它會將要求傳送給服務，然後由服務處理要求，並傳回回應。 要求/回應通訊非常適合用來查詢用戶端應用程式的即時 UI (即時的使用者介面) 資料。 因此，在微服務架構中，您可能會針對大部分查詢使用這種通訊機制，如圖 4-16 所示。
 
-![顯示即時查詢和更新的請求/回應通信圖。](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
+![顯示即時查詢和更新之要求/回應批註的圖表。](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
 
 **圖 4-16**： 使用 HTTP 要求/回應通訊 (同步或非同步)
 
-當用戶端使用要求/回應通訊時，它會假設回應很快抵達，通常少於一秒或最多幾秒鐘的時間。 針對回應延遲，您需要依據[訊息模式](https://docs.microsoft.com/azure/architecture/patterns/category/messaging)和[技術](https://en.wikipedia.org/wiki/Message-oriented_middleware)來實作非同步通訊；我們將在下節說明此種不同的方法。
+當用戶端使用要求/回應通訊時，它會假設回應很快抵達，通常少於一秒或最多幾秒鐘的時間。 針對回應延遲，您需要依據[訊息模式](/azure/architecture/patterns/category/messaging)和[技術](https://en.wikipedia.org/wiki/Message-oriented_middleware)來實作非同步通訊；我們將在下節說明此種不同的方法。
 
 要求/回應通訊的熱門架構樣式是 [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)。 這種方法是以 [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 通訊協定為基礎並與其緊密結合，同時採用 HTTP 動詞命令，例如 GET、POST 和 PUT。 建立服務時，REST 是最常用的架構通訊方法。 開發 ASP.NET Core Web API 服務時，您可以實作 REST 服務。
 
@@ -89,7 +89,7 @@ ms.locfileid: "79401652"
 
 ### <a name="additional-resources"></a>其他資源
 
-- **馬丁·福勒理查森成熟度模型**REST 模型的描述。 \
+- **聖馬丁 Fowler。Richardson 成熟度模型** ： REST 模型的描述。 \
   <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** 官方網站。 \
@@ -101,12 +101,12 @@ ms.locfileid: "79401652"
 
 如圖 4-17 所示，即時 HTTP 通訊表示您可以讓伺服器程式碼在資料可用時將內容推送至連線的用戶端，而不需要讓伺服器等候用戶端要求新的資料。
 
-![顯示基於 SignalR 的推送和即時通信的圖表。](./media/communication-in-microservice-architecture/one-to-many-communication.png)
+![此圖顯示以 SignalR 為基礎的推播和即時批註。](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
 **圖 4-17**： 一對一的即時非同步訊息通訊
 
 SignalR 很適合用來完成將內容從後端伺服器推送到用戶端的即時通訊。 由於是即時通訊，因此用戶端應用程式幾乎會立即顯示變更。 一般來說，其會由 WebSockets 這類通訊協定使用許多 Websocket 連線 (每個用戶端一個) 來進行處理。 典型的範例是：某個服務同時向許多用戶端 Web 應用程式傳達運動遊戲之分數變更的情況。
 
 >[!div class="step-by-step"]
->[上一個](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
->[下一個](asynchronous-message-based-communication.md)
+>[上一個](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md) 
+>[下一步](asynchronous-message-based-communication.md)

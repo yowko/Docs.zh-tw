@@ -1,18 +1,19 @@
 ---
-title: '如何取得檔案、資料夾和磁片磁碟機的相關資訊-c # 程式設計手冊'
+title: '如何取得檔案、資料夾和磁片磁碟機的相關資訊-c # 程式設計指南'
 description: 瞭解如何取得檔案、資料夾和磁片磁碟機的相關資訊。 請參閱程式碼範例和其他可用的資源。
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: f696cd90f197bede1a64949d211a563ce9a18376
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 7cbaea4dc5381a2ebeb97ce2797ffe850488e126
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299925"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170450"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何取得有關檔案、資料夾和磁片磁碟機的資訊（c # 程式設計手冊）
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何取得檔案、資料夾和磁片磁碟機的相關資訊 (c # 程式設計指南) 
+
 在 .NET 中，您可以使用下列類別來存取檔案系統資訊：  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
@@ -36,11 +37,13 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
  <xref:System.IO.Directory?displayProperty=nameWithType> 和 <xref:System.IO.File?displayProperty=nameWithType> 類別提供靜態方法，擷取目錄和檔案的相關資訊。  
   
 ## <a name="example"></a>範例  
+
  下列範例示範用來存取檔案和資料夾相關資訊的各種方法。  
   
  [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
+
  當您處理使用者指定的路徑字串時，您也應該處理下列情況所發生的例外狀況：  
   
 - 檔案名稱的格式不正確。 例如，包含無效的字元，或只包含空白字元。  

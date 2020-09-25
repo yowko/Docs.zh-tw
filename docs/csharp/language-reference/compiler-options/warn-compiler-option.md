@@ -14,14 +14,15 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.custom: updateeachrelease
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 55e80d0bd05e2119154210503bb277d743050e18
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d59274423e6f9844d3ab22f3ac513ba1a05d7f07
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139069"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171347"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# 編譯器選項)
+
 **-warn** 選項指定要針對編譯器顯示的警告層級。  
   
 ## <a name="syntax"></a>語法  
@@ -31,6 +32,7 @@ ms.locfileid: "89139069"
 ```  
   
 ## <a name="arguments"></a>引數  
+
  `option`  
  您想要針對編譯顯示的警告層級：較低的數字只會顯示高嚴重性警告；較高的數字則顯示更多的警告。 此值必須為零或正整數：
 
@@ -45,6 +47,7 @@ ms.locfileid: "89139069"
 |大於5|任何大於5的值都會被視為5。 您通常會將任意大數值 (例如， `9999`) ，以確保當編譯器以新的警告層級更新時，一律會出現所有警告。|
   
 ## <a name="remarks"></a>備註  
+
  若要取得錯誤或警告資訊，您可以查閱 [說明索引] 中的錯誤碼。 如需取得錯誤或警告資訊的其他方式，請參閱 [C# 編譯器錯誤](../compiler-messages/index.md)。  
   
  使用 [-warnaserror](./warnaserror-compiler-option.md) 將所有警告都視為錯誤。 使用 [-nowarn](./nowarn-compiler-option.md) 停用特定警告。  
@@ -62,6 +65,7 @@ ms.locfileid: "89139069"
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。  
   
 ## <a name="example"></a>範例  
+
  編譯 `in.cs`，並讓編譯器只顯示層級 1 警告：  
   
 ```console  
@@ -70,5 +74,5 @@ csc -warn:1 in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [C # 編譯器選項](./index.md)
+- [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

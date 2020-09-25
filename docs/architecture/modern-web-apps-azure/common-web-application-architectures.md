@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: dc907e57adba0dd81e5cf27c2798759cee12bed2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dd9cdf3cdda0605d9454fe096be01655e67a0d0a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539355"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169293"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -175,7 +175,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 ##### <a name="ui-layer-types"></a>UI 層類型
 
 - 控制器
-- 篩選條件
+- 篩選器
 - 檢視
 - ViewModels
 - 啟動
@@ -205,7 +205,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 ![圖5-14](./media/image5-14.png)
 
-您可以針對每個執行個體使用專用 VM，在 Microsoft Azure 中部署整合型應用程式。 您可以使用 [Azure 虛擬機器擴展集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/)輕鬆地調整 VM。 [Azure App Service](https://azure.microsoft.com/services/app-service/) 可以執行整合型應用程式並輕鬆地調整執行個體，而不必管理 VM。 Azure App Service 也可以執行 Docker 容器的單一執行個體，以簡化部署。 使用 Docker 時，您可以部署單一 VM 作為 Docker 主機，並執行多個執行個體。 使用 Azure 平衡器，如圖 5-14 中所示，您可以管理調整。
+您可以針對每個執行個體使用專用 VM，在 Microsoft Azure 中部署整合型應用程式。 您可以使用 [Azure 虛擬機器擴展集](/azure/virtual-machine-scale-sets/)輕鬆地調整 VM。 [Azure App Service](https://azure.microsoft.com/services/app-service/) 可以執行整合型應用程式並輕鬆地調整執行個體，而不必管理 VM。 Azure App Service 也可以執行 Docker 容器的單一執行個體，以簡化部署。 使用 Docker 時，您可以部署單一 VM 作為 Docker 主機，並執行多個執行個體。 使用 Azure 平衡器，如圖 5-14 中所示，您可以管理調整。
 
 您可以透過傳統部署技術來管理不同主機的部署， 並可以手動執行 **docker run** 等命令，或是透過持續傳遞 (CD) 管線等自動化方法來管理 Docker 主機。
 
