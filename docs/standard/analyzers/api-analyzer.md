@@ -4,12 +4,12 @@ description: 了解「.NET API 分析器」如何協助偵測已被取代的 API
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598090"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406241"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -20,7 +20,7 @@ ms.locfileid: "89598090"
 > [!NOTE]
 > .NET API 分析器目前仍然是發行前版本。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2017 及更新版本，或 Visual Studio for Mac (所有版本)。
 
@@ -85,6 +85,9 @@ ms.locfileid: "89598090"
 
 ## <a name="discover-cross-platform-issues"></a>探索跨平臺問題
 
+> [!NOTE]
+> .NET 5.0 引進了 [平臺相容性分析器](platform-compat-analyzer.md) 來取代這項功能。 平臺相容性分析器隨附于 .NET SDK (不需要個別安裝) 且預設為開啟。
+
 與已被取代的 API 類似，分析器會識別所有不是跨平台的 API。 例如，<xref:System.Console.WindowWidth?displayProperty=nameWithType>可在 Windows 上運作，但無法在 Linux 和 macOS 上運作。 診斷識別碼會顯示在 [錯誤清單]**** 視窗中。 您可以按一下滑鼠右鍵並選取 [快速動作與重構]**** 來隱藏該警示。 與有兩個選項 (繼續使用已被取代的成員並隱藏警告，或完全不使用它) 的取代案例不同，在這裡，如果您僅針對特定平台來開發程式碼，就可以隱藏您不打算用來執行程式碼之所有其他平台的所有警告。 若要這樣做，您只需編輯專案檔，然後新增 `PlatformCompatIgnore` 屬性來列出所有要忽略的平台即可。 接受的值包括：`Linux`、`macOS` 及 `Windows`。
 
 ```xml
@@ -119,7 +122,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 所有這些診斷不僅在 IDE 中有提供，在組建專案過程中的命令列上也有提供，其中包括 CI 伺服器。
 
-## <a name="configuration"></a>設定
+## <a name="configuration"></a>組態
 
 使用者可決定診斷的處理方式：視為警告、錯誤、建議，或將其關閉。 例如，如果您是架構設計人員，就可以決定應將相容性問題視為錯誤，讓對一些已被取代之 API 的呼叫產生警告，而其他則只產生建議。 您可以依診斷識別碼及依專案分別進行此設定。 若要這樣做，請在 [方案總管]**** 中，瀏覽至您專案底下的 [相依性]**** 節點。 展開 [節點**Dependencies**相依  >  性**分析器**]  >  **DotNet**。 在診斷識別碼上按一下滑鼠右鍵，選取 [設定規則集合嚴重性]****，然後挑選想要的選項。
 
@@ -129,3 +132,4 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 - [API 分析器簡介](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) \(英文\) 部落格文章。
 - YouTube 上的 [API 分析器](https://youtu.be/eeBEahYXGd0)示範影片。
+- [平臺相容性分析器](platform-compat-analyzer.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 4a7616d2ffaabab5279342ebc1082c93a174a52d
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90721272"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406165"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416：平臺相容性
 
@@ -20,7 +20,7 @@ ms.locfileid: "90721272"
 
 #### <a name="examples"></a>範例
 
-- <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType>只有在 Windows 上才支援此方法， (它是以 `[SupportedOSPlatform("windows")]`) 裝飾。 如果專案的 [目標](../../../../docs/standard/frameworks.md)為 `net5.0` (但未) ，則下列程式碼會在組建階段產生 CA1416 警告 `net5.0-windows` 。 您可以採取的動作來避免警告，請參閱 [建議的動作](#recommended-action)。
+- <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType>只有在 Windows 上才支援方法，並以裝飾 `[SupportedOSPlatform("windows")]` 。 如果專案的 [目標](../../../../docs/standard/frameworks.md)為 `net5.0` (但未) ，則下列程式碼會在組建階段產生 CA1416 警告 `net5.0-windows` 。 您可以採取的動作來避免警告，請參閱 [建議的動作](#recommended-action)。
 
   ```csharp
   public void PlayCMajor()
@@ -29,7 +29,7 @@ ms.locfileid: "90721272"
   }
   ```
 
-- 在 <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> 瀏覽器中不支援此方法 (它是以 `[UnsupportedOSPlatform("browser")]`) 裝飾。 如果專案使用 Blazor WebAssembly SDK (`<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">`) 或包含 `browser` 在專案檔中) 支援的平臺 (，則下列程式碼會在組建階段產生 CA1416 警告 `<SupportedPlatform Include="browser" />` 。
+- 在 <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> 瀏覽器中不支援方法，並以裝飾 `[UnsupportedOSPlatform("browser")]` 。 如果專案支援瀏覽器平臺，下列程式碼會在組建階段產生 CA1416 警告。
 
   ```csharp
   public void CreateImage()
@@ -37,6 +37,17 @@ ms.locfileid: "90721272"
       Image newImage = Image.FromFile("SampImag.jpg");
   }
   ```
+
+  > [!TIP]
+  >
+  > - Blazor WebAssembly projects 和 Razor 類別庫專案會自動包含瀏覽器支援。
+  > - 若要以手動方式將瀏覽器新增為專案的支援平臺，請將下列專案新增至您的專案檔：
+  >
+  >  ```xml
+  >  <ItemGroup>
+  >    <SupportedPlatform Include="browser" />
+  >  </ItemGroup>
+  >  ```
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -68,7 +79,7 @@ public void PlayCMajor()
 }
 ```
 
-您也可以將 API 標示為平臺特定，在這種情況下，檢查需求的負擔會落在您的呼叫端。 您可以標記特定的方法或類型或整個元件。
+如果您要撰寫程式庫，您可以將 API 標示為平臺特定。 在此情況下，檢查需求的負擔會落在您的呼叫端。 您可以標記特定的方法或類型或整個元件。
 
 ```csharp
 [SupportedOSPlatform("windows")]

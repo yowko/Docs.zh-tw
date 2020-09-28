@@ -2,12 +2,12 @@
 title: 密碼編譯的重大變更
 description: 列出 .NET Core 中的密碼編譯相關的重大變更。
 ms.date: 04/22/2020
-ms.openlocfilehash: 621a3dad28b67ee33056dce3df0379efaeb90776
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 667d983fc6f2592c2169f97d328cd7947c8bcc81
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065096"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406139"
 ---
 # <a name="cryptography-breaking-changes"></a>密碼編譯的重大變更
 
@@ -15,6 +15,7 @@ ms.locfileid: "90065096"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [Blazor WebAssembly 不支援的密碼編譯 Api](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly) | 5.0 |
 | [在功能上，加密功能僅限初始化](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
 | [Linux 上不再支援開始受信任的憑證語法](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
 | [EnvelopedCms 預設為 AES-256 加密](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
@@ -24,6 +25,10 @@ ms.locfileid: "90065096"
 | [已遵守 SignedCms 的布林值參數。 ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
+
+***
 
 [!INCLUDE [cryptography-oid-init-only](../../../includes/core-changes/cryptography/5.0/cryptography-oid-init-only.md)]
 
