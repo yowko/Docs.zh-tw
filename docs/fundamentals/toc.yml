@@ -929,6 +929,8 @@ items:
                         href: code-analysis/quality-rules/ca2249.md
               - name: 程式碼樣式規則
                 href: /visualstudio/ide/editorconfig-language-conventions
+          - name: 平台相容性分析器
+            href: ../standard/analyzers/platform-compat-analyzer.md
           - name: API 分析器
             href: ../standard/analyzers/api-analyzer.md
           - name: 可攜性分析器
