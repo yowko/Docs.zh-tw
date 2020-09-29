@@ -2,12 +2,12 @@
 title: C# 中的非同步程式設計
 description: 使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀
 ms.date: 06/04/2020
-ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 02290e374aa97cb5d5ec6410c917751066949b23
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414977"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438097"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>使用 async 和 await 進行非同步程式設計
 
@@ -56,7 +56,7 @@ ms.locfileid: "89414977"
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
 
 > [!IMPORTANT]
-> 總經過時間大約與初始 synchonous 版本相同。 程式碼尚未充分利用非同步程式設計的一些主要功能。
+> 總經過時間大致上與初始同步版本相同。 程式碼尚未充分利用非同步程式設計的一些主要功能。
 
 > [!TIP]
 > 、和的方法主體都已 `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` 更新為 `Task<Egg>` 分別傳回、 `Task<Bacon>` 和 `Task<Toast>` 。 方法會從其原始版本重新命名為包含 "Async" 尾碼。 在本文稍後的 [最終版本](#final-version) 中，將會顯示其實作為的部分。
@@ -123,7 +123,7 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-:::image type="content" source="media/asynchronous-breakfast.png" alt-text="非同步早餐":::
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="同步早餐":::
 
 以非同步方式備妥的早餐大約需要20分鐘的時間，這是因為某些工作可以同時執行。
 
@@ -184,7 +184,7 @@ while (breakfastTasks.Count > 0)
 所有這些變更之後，程式碼的最終版本看起來像這樣： <a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
-:::image type="content" source="media/whenany-async-breakfast.png" alt-text="當任何非同步早餐時":::
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="同步早餐":::
 
 非同步準備的早餐的最終版本大約需要15分鐘的時間，這是因為某些工作能夠同時執行，而且程式碼可以同時監視多個工作，並且只在需要時採取動作。
 

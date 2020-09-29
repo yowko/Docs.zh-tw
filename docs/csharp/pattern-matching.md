@@ -4,12 +4,12 @@ description: 了解 C# 中的模式比對運算式
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 2dd1401e3ef22a02f327e44ff884182ee3e22278
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: aabd8afe9a94022557275adb313ca3bf95da7548
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414990"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438023"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -139,4 +139,4 @@ ms.locfileid: "89414990"
 
 ## <a name="see-also"></a>另請參閱
 
-- [教學課程：使用模式比對功能來擴充資料類型](tutorials/pattern-matching.md)
+- [教學課程：使用模式比對來建立型別驅動和資料驅動的演算法](tutorials/pattern-matching.md)

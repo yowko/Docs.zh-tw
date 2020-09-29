@@ -1,7 +1,8 @@
 ---
 title: 具名和選擇性引數 - C# 程式設計手冊
 description: 'C # 中的具名引數會依名稱指定引數，而不是使用位置。 可以省略選擇性引數。'
-ms.date: 07/20/2015
+ms.date: 09/25/2020
+ms.custom: contperfq1
 f1_keywords:
 - namedParameter_CSharpKeyword
 - cs_namedParameter
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 4c9c932e3df4035024c90e92e4d80309fffe3ce3
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: a0606d6acccb47347c663a9fe3ffb8ab65b0ecec
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406228"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438013"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 

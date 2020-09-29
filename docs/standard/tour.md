@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a44c3692dc9ed9b3de37955191edfb279403f152
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 0cfd9d6da2c53b46c04773f429ab2e52f2b65c7f
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516017"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438087"
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -33,7 +33,7 @@ Microsoft 主動開發並支援三種 .NET 語言： c #、F # 及 Visual Basic�
 
 * F# 是跨平台、功能優先的程式語言，也支援傳統物件導向和命令式程式設計。 若要深入了解 F#，請參閱 [F# 指南](../fsharp/index.yml)。
 
-* Visual Basic 是容易學習的語言，您可以使用該語言建置 .NET 上所執行的各種應用程式。 在 .NET 語言中，Visual Basic 的語法是最接近一般人類語言的語法，通常可讓使用者更輕鬆地進行軟體發展。
+* Visual Basic 是容易學習的語言，您可以使用該語言建置 .NET 上所執行的各種應用程式。 在 .NET 語言中，Visual Basic 的語法是最接近一般人類語言的語法，通常可讓使用者更輕鬆地進行軟體發展。 若要深入瞭解 Visual Basic，請參閱 [Visual Basic 指南](../visual-basic/index.yml) 。
 
 ## <a name="automatic-memory-management"></a>自動記憶體管理
 

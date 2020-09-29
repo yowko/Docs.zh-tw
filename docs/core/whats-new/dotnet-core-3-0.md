@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fae6ffc56c90ef8f5340d3d7fd34cda82e3b4ca4
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537492"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437974"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -27,7 +27,13 @@ Microsoft 已將 .NET Core RC1 視為生產環境就緒，並受到完整支援�
 
 ## <a name="language-improvements-c-80"></a>語言改進 c # 8。0
 
-C # 8.0 也是這個版本的一部分，其中包含 [可為 null 的參考型別](../../csharp/tutorials/nullable-reference-types.md) 功能、 [非同步資料流程](../../csharp/tutorials/generate-consume-asynchronous-stream.md)和 [更多模式](../../csharp/tutorials/pattern-matching.md)。 如需 C# 8.0 功能的詳細資訊，請參閱 [C# 8.0 的新功能](../../csharp/whats-new/csharp-8.md)。
+C # 8.0 也是這個版本的一部分，其中包含 [可為 null 的參考型別](../../csharp/language-reference/builtin-types/nullable-reference-types.md) 功能、非同步資料流程和更多模式。 如需 C# 8.0 功能的詳細資訊，請參閱 [C# 8.0 的新功能](../../csharp/whats-new/csharp-8.md)。
+
+C # 8.0 語言功能的相關教學課程：
+
+- [教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖](../../csharp/tutorials/nullable-reference-types.md)
+- [教學課程：使用 c # 8.0 和 .NET Core 3.0 產生及使用非同步資料流程](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [教學課程：使用模式比對來建立型別驅動和資料驅動的演算法](../../csharp/tutorials/pattern-matching.md)
 
 已新增語言增強功能，以支援下列詳述的 API 功能：
 

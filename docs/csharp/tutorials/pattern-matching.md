@@ -1,17 +1,17 @@
 ---
-title: 使用模式比對功能來擴充資料類型
+title: 教學課程：使用模式比對建立演算法
 description: 此進階教學課程示範如何使用模式比對技術，以個別建立的資料和演算法來建立功能。
 ms.date: 03/13/2019
-ms-technology: csharp-whats-new
-ms.custom: mvc
-ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.technology: csharp-whats-new
+ms.custom: contperfq1
+ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156528"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437978"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教程：使用模式匹配功能擴展資料類型
+# <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>教學課程：使用模式比對來建立型別驅動和資料驅動的演算法。
 
 C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，有了新的運算式和模式。 您可以撰寫行為如同您擴充其他程式庫中之型別的功能。 模式的另一個用途是建立應用程式需要的功能，但該功能不是要擴充之型別的基本功能。
 
@@ -25,7 +25,7 @@ C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，�
 
 ## <a name="prerequisites"></a>必要條件
 
-您需要設置電腦以運行 .NET Core，包括 C# 8.0 編譯器。 C# 8 編譯器可從[Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始。
+您必須設定電腦以執行 .NET Core，包括 c # 8.0 編譯器。 從 [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用 c # 8 編譯器。
 
 本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -138,7 +138,7 @@ namespace toll_calculator
 }
 ```
 
-該代碼包含在初學者專案中，但已注釋掉。刪除注釋，您可以測試已編寫的內容。
+該程式碼包含在入門專案中，但已批註化。移除批註，您可以測試您所撰寫的內容。
 
 您已經開始了解模式能如何協助您在程式碼和資料分離的情況下建立演算法。 `switch` 運算式會測試型別，並根據結果產生不同的值。 這只是個開頭。
 
@@ -298,7 +298,7 @@ public decimal CalculateToll(object vehicle) =>
 
 下表顯示輸入值和尖峰時段計費乘數的組合：
 
-| Day        | Time         | 方向 | Premium |
+| 天        | 時間         | 方向 | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Weekday    | 早上尖峰時段 | 進入   | x 2.00  |
 | Weekday    | 早上尖峰時段 | 離開  | x 1.00  |

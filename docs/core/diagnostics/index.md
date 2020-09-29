@@ -3,12 +3,12 @@ title: 診斷工具概觀 - .NET Core
 description: 可用來診斷 .NET Core 應用程式之工具與技術的概觀。
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: e97acccbe3bdd577ee600cefb9f1f0528d3c1ac0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538523"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437992"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 中有哪些診斷工具可供使用？
 
@@ -27,6 +27,10 @@ ms.locfileid: "90538523"
 ## <a name="unit-testing"></a>單元測試
 
 [單元測試](../testing/index.md) 是持續整合和部署高品質軟體的重要元件。 單元測試的設計是要在您中斷某個項目時提前警告您。
+
+## <a name="collect-diagnostics-in-containers"></a>收集容器中的診斷
+
+在非容器化 Linux 環境中使用的診斷工具，也可以用來 [收集容器中的診斷](diagnostics-in-containers.md)資訊。 為了確保工具在 Docker 容器中運作，只需要幾個使用方式變更。
 
 ## <a name="debug-linux-dumps"></a>對 Linux 傾印進行偵錯
 
