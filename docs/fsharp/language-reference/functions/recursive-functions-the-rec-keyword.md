@@ -2,12 +2,12 @@
 title: 遞迴函式：rec 關鍵字
 description: "瞭解如何搭配 ' let ' 關鍵字使用 F # ' rec ' 關鍵字來定義遞迴函數。"
 ms.date: 08/12/2020
-ms.openlocfilehash: 389357bd13cef39b1d07972c1a3167320b61612b
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 1ab00ff9400129e531fd7320861b3d9625cad08c
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558708"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438070"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>遞迴函式：rec 關鍵字
 
@@ -36,7 +36,7 @@ and function2-nameparameter-list =
 下列範例顯示的遞迴函式，會使用數學定義來計算<sup>第</sup> *n*個斐的量值。
 
 ```fsharp
-let fib n =
+let rec fib n =
     match n with
     | 0 | 1 -> 1
     | n -> fib (n-1) + fib (n-2)
