@@ -1,19 +1,19 @@
 ---
-title: 原型純量資料型別 - gRPC，適用于 WCF 開發人員
-description: 瞭解 Protobuf 和 gRPC 在 .NET Core 中支援的基本和眾所周知的資料類型。
+title: Protobuf 純量資料類型-適用于 WCF 開發人員的 gRPC
+description: 瞭解 .NET Core 中 Protobuf 和 gRPC 支援的基本和知名資料類型。
 ms.date: 09/09/2019
-ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5447067b953d257258950d020636e0b38245e20d
+ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249431"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91573640"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf 純量資料類型
 
-協定緩衝區（Protobuf）支援一系列本機標量數值型別。 下表列出了它們與等效的 C# 類型：
+通訊協定緩衝區 (Protobuf) 支援一系列原生純量實數值型別。 下表列出它們都具有對等的 c # 型別：
 
-| 原型 | C# 類型      | 注意 |
+| Protobuf 類型 | C# 類型      | 注意 |
 | ------------- | ------------ | ----- |
 | `double`      | `double`     |       |
 | `float`       | `float`      |       |
@@ -33,20 +33,20 @@ ms.locfileid: "80249431"
 
 注意：
 
-1. 使用已簽名值`int32`時`int64`，和 的標準編碼效率很低。 如果欄位可能包含負數，請使用`sint32`或`sint64`改為。 這些類型分別映射到 C# `int` `long`和類型。
-2. 無論`fixed`值是什麼，欄位始終使用相同的位元組數。 此行為使較大值的序列化和反序列化更快。
-3. Protobuf 字串是 UTF-8（或 7 位 ASCII）編碼的。 編碼的長度不能大於2<sup>32</sup>。
-4. Protobuf 運行時提供了一種`ByteString`易於映射到 C# 陣列和從`byte[]`C# 陣列的類型。
+1. `int32` `int64` 當您使用帶正負號的值時，的標準編碼和效率不佳。 如果您的欄位可能包含負數，請改用 `sint32` 或 `sint64` 。 這些類型會分別對應至 c # `int` 和 `long` 類型。
+2. `fixed`無論值為何，欄位一律會使用相同數目的位元組。 此行為可讓較大的值更快進行序列化和還原序列化。
+3. Protobuf 字串為 UTF-8 (或7位 ASCII) 編碼。 編碼的長度不能大於 2<sup>32</sup>。
+4. Protobuf 執行時間提供可 `ByteString` 輕鬆地與 c # 陣列進行對應的型別 `byte[]` 。
 
-## <a name="other-net-primitive-types"></a>其他 .NET 基元類型
+## <a name="other-net-primitive-types"></a>其他 .NET 基本類型
 
 ### <a name="dates-and-times"></a>日期和時間
 
-本機標量類型不提供日期和時間值，等效于 C# <xref:System.DateTimeOffset> <xref:System.DateTime>和 。 <xref:System.TimeSpan> 您可以使用 Google 的一些"已知類型"擴展來指定這些類型。 這些擴展為受支援的平臺的複雜欄位類型提供代碼生成和運行時支援。
+原生純量類型不提供日期和時間值，相當於 c # 的 <xref:System.DateTimeOffset> 、 <xref:System.DateTime> 和 <xref:System.TimeSpan> 。 您可以使用某些 Google 的「已知類型」延伸模組來指定這些類型。 這些擴充功能可在支援的平臺上，為複雜的欄位類型提供程式碼產生與執行時間支援。
 
-下表顯示了日期和時間類型：
+下表顯示日期和時間類型：
 
-| C# 類型 | 原型公司知名類型 |
+| C# 類型 | Protobuf 知名型別 |
 | ------- | ------------------------ |
 | `DateTimeOffset` | `google.protobuf.Timestamp` |
 | `DateTime` | `google.protobuf.Timestamp` |
@@ -67,7 +67,7 @@ message Meeting {
 }  
 ```
 
-C# 類中生成的屬性不是 .NET 日期和時間類型。 屬性在`Google.Protobuf.WellKnownTypes`命名空間`Timestamp`中使用`Duration`和 類。 這些類提供轉換 到 和`DateTimeOffset``DateTime`和 的方法。 `TimeSpan`
+C # 類別中產生的屬性不是 .NET 日期和時間類型。 屬性使用 `Timestamp` `Duration` 命名空間中的和類別 `Google.Protobuf.WellKnownTypes` 。 這些類別提供在、和之間轉換的 `DateTimeOffset` 方法 `DateTime` `TimeSpan` 。
 
 ```csharp
 // Create Timestamp and Duration from .NET DateTimeOffset and TimeSpan
@@ -83,21 +83,21 @@ TimeSpan? duration = meeting.Duration?.ToTimeSpan();
 ```
 
 > [!NOTE]
-> 該`Timestamp`類型適用于 UTC 時間。 `DateTimeOffset`值的偏移量始終為零，`DateTime.Kind`屬性始終`DateTimeKind.Utc`為 。
+> 此 `Timestamp` 類型適用于 UTC 時間。 `DateTimeOffset` 值的位移一律為零，而且 `DateTime.Kind` 屬性一律為 `DateTimeKind.Utc` 。
 
 ### <a name="systemguid"></a>System.Guid
 
-Protobuf 並不直接支援<xref:System.Guid>該類型，這`UUID`稱為其他平臺。 沒有眾所周知的類型。
+Protobuf 不直接支援 <xref:System.Guid> 型別，也就是 `UUID` 在其他平臺上的型別。 沒有知名的型別。
 
-最好的`Guid`方法是使用標準的`string``8-4-4-4-12`十六進位格式（例如， `45a9fda3-bd01-47a9-8460-c1cd7484b0b3`） 將值作為欄位處理。 所有語言和平臺都可以解析該格式。
+最好的方法是 `Guid` `string` 使用標準的十六進位 (格式來處理值做為欄位， `8-4-4-4-12` 例如 `45a9fda3-bd01-47a9-8460-c1cd7484b0b3`) 。 所有語言和平臺都可以剖析該格式。
 
-不要對`bytes``Guid`值使用欄位。 當Protobuf與其他平臺（如JAVA）交互時，*內皮性*問題（[維琪百科定義](https://en.wikipedia.org/wiki/Endianness)）可能會導致行為不穩定。
+請勿使用 `bytes` 值的欄位 `Guid` 。 當 Protobuf 與其他平臺（例如 JAVA）進行互動時，會導致不穩定的行為，而 *位元組* ([維琪百科定義](https://en.wikipedia.org/wiki/Endianness)) 的問題。
 
 ### <a name="nullable-types"></a>可為 Null 的型別
 
-C# 的 Protobuf 代碼生成使用本機類型，例如`int` `int32`。 因此，這些值始終包含，不能為空。
+C # 的 Protobuf 程式碼產生會使用原生類型，例如 `int` for `int32` 。 因此，一律會包含這些值，而且不能是 null。
 
-對於需要顯式 null 的值（如`int?`在 C# 代碼中使用），Protobuf 的"已知類型"包括編譯為空 C# 類型的包裝。 要使用它們，請導入`wrappers.proto`到檔中`.proto`，如下所示：
+對於需要明確 null 的值，例如 `int?` 在 c # 程式碼中使用，Protobuf 的「已知型別」會包含編譯成可為 null 的 c # 型別的包裝函式。 若要使用這些檔案，請將其匯入您的檔案 `wrappers.proto` `.proto` 中，如下所示：
 
 ```protobuf  
 syntax = "proto3"
@@ -112,11 +112,11 @@ message Person {
 }
 ```
 
-Protobuf 將使用生成的消息`T?`屬性的簡單 （`int?`例如 ， ） 。
+Protobuf 會使用簡單 `T?` (例如， `int?`) 產生的訊息屬性。
 
-下表顯示了具有等效 C# 類型的包裝類型的完整清單：
+下表顯示包裝函式類型的完整清單及其對等的 c # 類型：
 
-| C# 類型   | 眾所周知的類型包裝器       |
+| C# 類型   | 知名的型別包裝函式       |
 | --------- | ----------------------------- |
 | `double?` | `google.protobuf.DoubleValue` |
 | `float?`  | `google.protobuf.FloatValue`  |
@@ -125,23 +125,23 @@ Protobuf 將使用生成的消息`T?`屬性的簡單 （`int?`例如 ， ） 。
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-已知類型`Timestamp`，並在`Duration`.NET 中表示為類。 在 C# 8 及以後，可以使用可無參考型別。 但是，在轉換為`DateTimeOffset`或`TimeSpan`時，請務必檢查這些類型的屬性的 null。
+已知型別 `Timestamp` 和 `Duration` 在 .net 中是以類別表示。 在 c # 8 和之後，您可以使用可為 null 的參考型別。 但是，當您轉換成或時，請務必檢查這些類型的屬性是否有 `DateTimeOffset` null `TimeSpan` 。
 
 ## <a name="decimals"></a>小數位數
 
-Protobuf 不本機支援 .NET`decimal`類型，只是`double`和`float`。 Protobuf 專案中正在進行討論，討論向已知類型添加標準`Decimal`類型的可能性，以及支援它的語言和框架的平臺支援。 尚未實施任何措施。
+Protobuf 本身並不支援 .NET `decimal` 型別， `double` 而是和 `float` 。 Protobuf 專案中有一項持續的討論，當中有可能會將標準 `Decimal` 類型新增至已知型別，並提供支援的語言和架構平臺支援。 尚未執行任何動作。
 
-可以創建消息定義來表示適用于 .NET 用戶端`decimal`和伺服器之間安全序列化的類型。 但是，其他平臺上的開發人員必須瞭解所使用的格式，並實現自己的處理。
+您可以建立訊息定義，以代表 `decimal` .net 用戶端和伺服器之間安全序列化的型別。 但是，其他平臺上的開發人員必須瞭解所使用的格式，並對其執行自己的處理。
 
-### <a name="creating-a-custom-decimal-type-for-protobuf"></a>為 Protobuf 創建自訂十進位類型
+### <a name="creating-a-custom-decimal-type-for-protobuf"></a>建立 Protobuf 的自訂十進位類型
 
-簡單實現可能與某些 Google API 在沒有`Money``currency`欄位的情況下使用的非標準類型類似。
+簡單的執行可能類似于 `Money` 某些 Google api 所使用的非標準型別，而沒有 `currency` 欄位。
 
 ```protobuf
 package CustomTypes;
 
 // Example: 12345.6789 -> { units = 12345, nanos = 678900000 }
-message Decimal {
+message DecimalValue {
 
     // Whole units part of the amount
     int64 units = 1;
@@ -152,20 +152,20 @@ message Decimal {
 }
 ```
 
-此欄位`nanos`表示從`0.999_999_999`到`-0.999_999_999`的值。 例如，`decimal`該值`1.5m`將表示為`{ units = 1, nanos = 500_000_000 }`。 這就是為什麼此示例中的`nanos`欄位使用`sfixed32`類型，該類型編碼的效率高於`int32`對較大值的編碼。 如果`units`欄位為負，則`nanos`該欄位也應為負數。
+`nanos`欄位表示從到的 `0.999_999_999` 值 `-0.999_999_999` 。 例如，此 `decimal` 值會 `1.5m` 表示為 `{ units = 1, nanos = 500_000_000 }` 。 這就是為什麼 `nanos` 此範例中的欄位使用 `sfixed32` 型別，其編碼方式比 `int32` 較大的值更有效率。 如果 `units` 欄位是負數，則 `nanos` 欄位也應為負數。
 
 > [!NOTE]
-> 將值編碼`decimal`為位元組字串還有其他多個演算法，但此消息比其中任何演算法更易於理解。 值不受不同平臺上的內端性的影響。
+> 有多個其他演算法可將 `decimal` 值編碼為位元組字串，但這則訊息比任何這些演算法更容易瞭解。 在不同平臺上，值不會受到位元組順序影響。
 
-此類型和 BCL`decimal`類型之間的轉換可能在 C# 中實現，如下所示：
+此類型與 BCL 類型之間的轉換 `decimal` 可能會在 c # 中執行，如下所示：
 
 ```csharp
 namespace CustomTypes
 {
-    public partial class GrpcDecimal
+    public partial class DecimalValue
     {
         private const decimal NanoFactor = 1_000_000_000;
-        public GrpcDecimal(long units, int nanos)
+        public DecimalValue(long units, int nanos)
         {
             Units = units;
             Nanos = nanos;
@@ -174,24 +174,24 @@ namespace CustomTypes
         public long Units { get; }
         public int Nanos { get; }
 
-        public static implicit operator decimal(CustomTypes.Decimal grpcDecimal)
+        public static implicit operator decimal(CustomTypes.DecimalValue grpcDecimal)
         {
             return grpcDecimal.Units + grpcDecimal.Nanos / NanoFactor;
         }
 
-        public static implicit operator CustomTypes.Decimal(decimal value)
+        public static implicit operator CustomTypes.DecimalValue(decimal value)
         {
             var units = decimal.ToInt64(value);
             var nanos = decimal.ToInt32((value - units) * NanoFactor);
-            return new CustomTypes.Decimal(units, nanos);
+            return new CustomTypes.DecimalValue(units, nanos);
         }
     }
 }
 ```
 
 > [!IMPORTANT]
-> 每當使用此類自訂訊息類型時，*都必須*在 中`.proto`使用 注釋來記錄它們。 然後，其他開發人員可以使用他們自己的語言或框架實現從等效類型轉換。
+> 每當您使用像這樣的自訂訊息類型時，就 *必須* 在中記錄批註 `.proto` 。 然後，其他開發人員就可以在自己的語言或架構中，以對等的型別來執行轉換。
 
 >[!div class="step-by-step"]
->[上一個](protobuf-messages.md)
->[下一個](protobuf-nested-types.md)
+>[上一個](protobuf-messages.md) 
+>[下一步](protobuf-nested-types.md)
