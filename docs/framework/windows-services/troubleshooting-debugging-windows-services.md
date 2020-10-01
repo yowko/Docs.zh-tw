@@ -12,20 +12,19 @@ helpviewer_keywords:
 - services, debugging
 - Windows Service applications, troubleshooting
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
-author: ghogen
-ms.openlocfilehash: 935f5dcbd369ba5d723cc0e947ba708afdd590ea
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 5846692fa0d90a62dd569253abbd81aa63b5798d
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925536"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608890"
 ---
-# <a name="troubleshooting-debugging-windows-services"></a><span data-ttu-id="fa62d-104">疑難排解：對 Windows 服務進行偵錯</span><span class="sxs-lookup"><span data-stu-id="fa62d-104">Troubleshooting: Debugging Windows Services</span></span>
-<span data-ttu-id="fa62d-105">當您對 Windows 服務應用程式進行偵錯時，您的服務會與 **Windows Service Manager** 互動。</span><span class="sxs-lookup"><span data-stu-id="fa62d-105">When you debug a Windows service application, your service and the **Windows Service Manager** interact.</span></span> <span data-ttu-id="fa62d-106">**Service Manager** 會藉由呼叫 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法來啟動您的服務，然後等候 30 秒以待 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法傳回。</span><span class="sxs-lookup"><span data-stu-id="fa62d-106">The **Service Manager** starts your service by calling the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and then waits 30 seconds for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method to return.</span></span> <span data-ttu-id="fa62d-107">如果該方法此時並未傳回，管理員就會顯示錯誤，指出無法啟動服務。</span><span class="sxs-lookup"><span data-stu-id="fa62d-107">If the method does not return in this time, the manager shows an error that the service cannot be started.</span></span>  
+# <a name="troubleshooting-debugging-windows-services"></a><span data-ttu-id="c2ddd-104">疑難排解：對 Windows 服務進行偵錯</span><span class="sxs-lookup"><span data-stu-id="c2ddd-104">Troubleshooting: Debugging Windows Services</span></span>
+<span data-ttu-id="c2ddd-105">當您對 Windows 服務應用程式進行偵錯時，您的服務會與 **Windows Service Manager** 互動。</span><span class="sxs-lookup"><span data-stu-id="c2ddd-105">When you debug a Windows service application, your service and the **Windows Service Manager** interact.</span></span> <span data-ttu-id="c2ddd-106">**Service Manager** 會藉由呼叫 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法來啟動您的服務，然後等候 30 秒以待 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法傳回。</span><span class="sxs-lookup"><span data-stu-id="c2ddd-106">The **Service Manager** starts your service by calling the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and then waits 30 seconds for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method to return.</span></span> <span data-ttu-id="c2ddd-107">如果該方法此時並未傳回，管理員就會顯示錯誤，指出無法啟動服務。</span><span class="sxs-lookup"><span data-stu-id="c2ddd-107">If the method does not return in this time, the manager shows an error that the service cannot be started.</span></span>  
   
- <span data-ttu-id="fa62d-108">當您以[如何：偵錯 Windows 服務應用程式](how-to-debug-windows-service-applications.md)中所述方式來對 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法進行偵錯時，一定會注意到這段 30 秒的期間。</span><span class="sxs-lookup"><span data-stu-id="fa62d-108">When you debug the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method as described in [How to: Debug Windows Service Applications](how-to-debug-windows-service-applications.md), you must be aware of this 30-second period.</span></span> <span data-ttu-id="fa62d-109">如果您在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中放置中斷點，並且未在 30 秒內逐步執行它，則管理員將不會啟動服務。</span><span class="sxs-lookup"><span data-stu-id="fa62d-109">If you place a breakpoint in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method and do not step through it in 30 seconds, the manager will not start the service.</span></span>  
+ <span data-ttu-id="c2ddd-108">當您以[如何：偵錯 Windows 服務應用程式](how-to-debug-windows-service-applications.md)中所述方式來對 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法進行偵錯時，一定會注意到這段 30 秒的期間。</span><span class="sxs-lookup"><span data-stu-id="c2ddd-108">When you debug the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method as described in [How to: Debug Windows Service Applications](how-to-debug-windows-service-applications.md), you must be aware of this 30-second period.</span></span> <span data-ttu-id="c2ddd-109">如果您在 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法中放置中斷點，並且未在 30 秒內逐步執行它，則管理員將不會啟動服務。</span><span class="sxs-lookup"><span data-stu-id="c2ddd-109">If you place a breakpoint in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method and do not step through it in 30 seconds, the manager will not start the service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa62d-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fa62d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2ddd-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c2ddd-110">See also</span></span>
 
-- [<span data-ttu-id="fa62d-111">作法：偵錯 Windows 服務應用程式</span><span class="sxs-lookup"><span data-stu-id="fa62d-111">How to: Debug Windows Service Applications</span></span>](how-to-debug-windows-service-applications.md)
-- [<span data-ttu-id="fa62d-112">Windows 服務應用程式簡介</span><span class="sxs-lookup"><span data-stu-id="fa62d-112">Introduction to Windows Service Applications</span></span>](introduction-to-windows-service-applications.md)
+- [<span data-ttu-id="c2ddd-111">作法：偵錯 Windows 服務應用程式</span><span class="sxs-lookup"><span data-stu-id="c2ddd-111">How to: Debug Windows Service Applications</span></span>](how-to-debug-windows-service-applications.md)
+- [<span data-ttu-id="c2ddd-112">Windows 服務應用程式簡介</span><span class="sxs-lookup"><span data-stu-id="c2ddd-112">Introduction to Windows Service Applications</span></span>](introduction-to-windows-service-applications.md)
