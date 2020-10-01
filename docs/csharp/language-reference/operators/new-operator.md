@@ -1,18 +1,18 @@
 ---
 description: new 運算子 - C# 參考
 title: new 運算子 - C# 參考
-ms.date: 06/25/2019
+ms.date: 10/02/2020
 f1_keywords:
 - new_CSharpKeyword
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 88ec929317d4e6c6651233c1a1aa0ce8a8cce611
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3125f3d2c694dcfc5682ee482f3f76072ac3726d
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118269"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609378"
 ---
 # <a name="new-operator-c-reference"></a>new 運算子 (C# 參考)
 
@@ -29,6 +29,14 @@ ms.locfileid: "89118269"
 您可以搭配 `new` 運算子使用[物件或集合初始設定式](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)，來在單一陳述式中具現化和初始化物件，如下列範例所示：
 
 [!code-csharp-interactive[constructor with initializer](snippets/shared/NewOperator.cs#ConstructorWithInitializer)]
+
+從 c # 9.0 開始，函式調用運算式是目標型別。 也就是說，如果已知運算式的目標型別，您可以省略型別名稱，如下列範例所示：
+
+:::code language="csharp" source="snippets/shared/NewOperator.cs" id="SnippetTargetTyped":::
+
+如先前的範例所示，您一律使用目標型別運算式中的括弧 `new` 。
+
+如果運算式的目標型別 `new` 未知 (例如，當您使用 [`var`](../keywords/var.md) 關鍵字) 時，必須指定型別名稱。
 
 ## <a name="array-creation"></a>建立陣列
 
@@ -61,6 +69,8 @@ ms.locfileid: "89118269"
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [new 運算子](~/_csharplang/spec/expressions.md#the-new-operator)一節。
+
+如需目標型別運算式的詳細資訊 `new` ，請參閱 [功能提案注意事項](~/_csharplang/proposals/csharp-9.0/target-typed-new.md)。
 
 ## <a name="see-also"></a>另請參閱
 

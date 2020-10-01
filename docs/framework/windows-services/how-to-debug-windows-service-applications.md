@@ -1,6 +1,6 @@
 ---
 title: 作法：偵錯 Windows 服務應用程式
-description: 瞭解如何 debug Windows 服務應用程式，而不像其他 Visual Studio 應用程式類型一樣直接進行調試。
+description: 瞭解如何對 Windows 服務應用程式進行 debug 錯，這並不像其他 Visual Studio 應用程式類型一樣簡單。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,13 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, debugging
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
-author: ghogen
-ms.openlocfilehash: fb58f2ff4f480347f0f233ecd9a619cf287cfdfd
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 2657d83f39b60be84846fb784a06e71f6dd46179
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925757"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609729"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>作法：偵錯 Windows 服務應用程式
 服務必須從服務控制管理員內容之中執行，而不是從 Visual Studio 之中執行。 因此，對服務進行偵錯不像是對其他 Visual Studio 應用程式類型進行偵錯那樣簡單直接。 若要對服務進行偵錯，您必須啟動服務，然後將偵錯工具附加至執行中的處理序。 之後就可以使用 Visual Studio 所有的標準偵錯功能，對應用程式進行偵錯。  
@@ -27,7 +26,7 @@ ms.locfileid: "86925757"
   
  附加至處理序之後，您可以設定中斷點，並使用這些中斷點對程式碼進行偵錯。 一旦您結束用來附加至處理序的對話方塊，就會立即處於偵錯模式中。 您可以使用服務控制管理員來啟動、停止、暫停及繼續服務，以此方式來叫用您所設定的中斷點。 偵錯成功之後，您就可以移除這項虛擬服務。  
   
- 本文涵蓋對本機電腦上執行的服務進行偵錯，但您也可以對遠端電腦上執行的 Windows 服務進行偵錯。 請參閱[遠端偵錯](/visualstudio/debugger/debug-installed-app-package)。  
+ 本文涵蓋對本機電腦上執行的服務進行偵錯，但您也可以對遠端電腦上執行的 Windows 服務進行偵錯。 請參閱 [遠端偵錯](/visualstudio/debugger/debug-installed-app-package)。  
   
 > [!NOTE]
 > 對 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法進行偵錯可能是項困難的工作，因為服務控制管理員對於啟動服務的所有嘗試都強加上 30 秒的限制。 如需詳細資訊，請參閱[疑難排解：對 Windows 服務進行偵錯](troubleshooting-debugging-windows-services.md)。  

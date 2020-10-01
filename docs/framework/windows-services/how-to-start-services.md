@@ -1,18 +1,17 @@
 ---
 title: 作法：啟動服務
-description: 瞭解幾種啟動服務的方式。 安裝服務之後，必須加以啟動。 開始在服務類別上呼叫 OnStart 方法。
+description: 瞭解幾種啟動服務的方式。 安裝服務之後，必須加以啟動。 開始呼叫服務類別上的 OnStart 方法。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-author: ghogen
-ms.openlocfilehash: 4a2f9b291e60b12b1465fbb6bbbd1604572359a7
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 1ca597379ab2a8fdae19fcfc5351c29d716753dc
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925718"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608409"
 ---
 # <a name="how-to-start-services"></a>作法：啟動服務
 

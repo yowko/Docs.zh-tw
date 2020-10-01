@@ -1,18 +1,17 @@
 ---
 title: 作法：建立 Windows 服務
-description: 使用 [Windows 服務] 專案範本來建立服務。 設定 ServiceName 屬性、建立安裝程式，以及覆寫 OnStart 和 OnStop 方法。
+description: 使用 Windows 服務專案範本來建立服務。 設定 ServiceName 屬性、建立安裝程式，以及覆寫 OnStart 和 OnStop 方法。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-author: ghogen
-ms.openlocfilehash: 6918225e39c15a52710fd0d56342aae869b42325
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 35d78acd4fae7bf98a2b3f4ce6ac8a32393c35d4
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925770"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608591"
 ---
 # <a name="how-to-create-windows-services"></a>作法：建立 Windows 服務
 當您建立服務時，可以使用稱為 **Windows 服務**的 Visual Studio 專案範本。 這個範本會透過參考適當的類別和命名空間、設定繼承自服務的基底類別，以及覆寫您可能想要覆寫的其中幾個方法，來自動為您執行大部分的工作。  

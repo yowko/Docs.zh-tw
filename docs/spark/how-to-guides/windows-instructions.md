@@ -4,12 +4,12 @@ description: 瞭解如何在 Windows 上建立適用于 Apache Spark 應用程�
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: d4755ff94ffc1f678bc078e382e353c203caba87
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: d355380e92235e799d366dca02eaf8450f563f33
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812246"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609274"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>瞭解如何在 Windows 上建立適用于 Apache Spark 應用程式的 .NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "88812246"
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 如果您已經擁有下列所有必要條件，請跳至 [組建](#build) 步驟。
 
@@ -91,7 +91,7 @@ ms.locfileid: "88812246"
 > [!NOTE]
 > 如果已更新任何環境變數，則可能需要新的命令列實例。
 
-## <a name="build"></a>Build
+## <a name="build"></a>組建
 
 針對本指南的其餘部分，您必須將 Apache Spark 存放庫的 .NET 複製到您的電腦。 您可以為複製的存放庫選擇任何位置。 例如，* C:\github\dotnet-spark \* 。
 
@@ -220,7 +220,7 @@ mvn clean package
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
       ```
   
-  2. 開啟 Powershell 並移至您的應用程式二進位檔產生所在的目錄 (例如，適用于 .NET Framework 的 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* 、.net Core) 的 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish* ：
+  2. 開啟 PowerShell 並移至您的應用程式二進位檔產生所在的目錄 (例如，適用于 .NET Framework 的 *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* 、.net Core) 的 *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish* ：
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish

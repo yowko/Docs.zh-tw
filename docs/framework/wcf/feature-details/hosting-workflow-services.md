@@ -2,12 +2,12 @@
 title: 裝載工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 95d8d8b8ea15ef543471afb19462ccb424e8e39b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b89eb05513d6b3973de50cd6360711c4f967f68
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555805"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609456"
 ---
 # <a name="hosting-workflow-services"></a>裝載工作流程服務
 
@@ -46,7 +46,7 @@ ms.locfileid: "90555805"
  定義工作流程服務的 service1.xamlx 檔案必須包含 <`Service`> 根項目或根項目，其中包含任何衍生自的型別 <xref:System.Workflow.ComponentModel.Activity> 。 使用 Visual Studio 活動範本時，會建立 service1.xamlx 檔案。 使用 WCF Workflow Service 範本時，會建立 service1.xamlx 檔案。
 
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>在 Windows Server App Fabric 底下裝載工作流程服務
- 在 Windows Server App Fabric 底下裝載工作流程服務的方式與在 IIS/WAS 底下裝載的方式相同。 唯一的差異在於已安裝 Windows Server App Fabric 的事實。 Windows Server App Fabric 提供了一些加入至 Internet Information Services 管理員的工具，以及 Powershell 指令程式。 這些工具會簡化部署、管理和追蹤工作流程與 WCF 服務的作業。
+ 在 Windows Server App Fabric 底下裝載工作流程服務的方式與在 IIS/WAS 底下裝載的方式相同。 唯一的差異在於已安裝 Windows Server App Fabric 的事實。 Windows Server App Fabric 提供新增至 Internet Information Services 管理員以及 PowerShell commandlet 的工具。 這些工具會簡化部署、管理和追蹤工作流程與 WCF 服務的作業。
 
 ## <a name="referencing-custom-activities"></a>參考自訂活動
  自訂活動的參考必須加入至 `Assemblies` <> 下的 <> 區段， `System.Web.Compilation` 以便將它們載入至應用程式域，而 XAML 還原序列化程式可以找到類型。 這些設定可以在應用程式層級進行，如果設定值應該套用到電腦上的所有應用程式，則可以在根 Web.config 進行這些設定。

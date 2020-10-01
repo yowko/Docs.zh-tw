@@ -6,16 +6,16 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 0907f7f8a3767db9d83e5deaae1d86141fbee7b0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a249f0de00c45b1588762ffa0f826e890f961334
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557407"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91607768"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>作法：建立開發時要使用的暫時憑證
 
-使用 Windows Communication Foundation (WCF) 開發安全服務或用戶端時，通常需要提供要作為認證使用的 x.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題逐步解說使用 Powershell [new-selfsignedcertificate) ](/powershell/module/pkiclient/new-selfsignedcertificate) Cmdlet 來建立這兩個憑證的步驟。
+使用 Windows Communication Foundation (WCF) 開發安全服務或用戶端時，通常需要提供要作為認證使用的 x.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題逐步解說使用 PowerShell [new-selfsignedcertificate) ](/powershell/module/pkiclient/new-selfsignedcertificate) Cmdlet 來建立這兩個憑證的步驟。
 
 > [!IMPORTANT]
 > 新 New-selfsignedcertificate 指令程式所產生的憑證僅供測試用途。 當部署服務或用戶端時，請確定使用由憑證授權單位所提供的適當憑證。 這可能是來自您組織中的 Windows Server 憑證伺服器或協力廠商。

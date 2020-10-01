@@ -1,6 +1,6 @@
 ---
 title: 作法：記錄關於服務的資訊
-description: 瞭解如何記錄服務的相關資訊。 如果您想要讓 Windows 服務專案與應用程式事件記錄檔互動，請設定 AutoLog 屬性。
+description: 瞭解如何記錄服務的相關資訊。 如果您想要 Windows 服務專案與應用程式事件記錄檔互動，請設定 AutoLog 屬性。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,12 @@ helpviewer_keywords:
 - application event logs, service applications
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
-author: ghogen
-ms.openlocfilehash: 6ebce5464dc25ba4101b3898ee791714f8efc5d6
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 0d6c245e3defb7d518093cca904572d3db00fcf8
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925744"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608552"
 ---
 # <a name="how-to-log-information-about-services"></a>作法：記錄關於服務的資訊
 根據預設，所有的 Windows 服務專案都能與應用程式事件記錄檔互動，並在其中寫入資訊和例外狀況。 您使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性來表示在您的應用程式中是否要這項功能。 根據預設，會為您以 Windows 服務專案範本建立任何服務開啟記錄。 您可以使用靜態形式的 <xref:System.Diagnostics.EventLog> 類別將服務資訊寫入記錄檔，而不需要建立 <xref:System.Diagnostics.EventLog> 元件的執行個體或手動註冊來源。  

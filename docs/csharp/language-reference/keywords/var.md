@@ -1,33 +1,44 @@
 ---
-description: var - C# 參考
-title: var - C# 參考
-ms.date: 07/20/2015
+description: 'var-c # 參考'
+title: 'var-c # 參考'
+ms.date: 10/02/2020
 f1_keywords:
 - var
 - var_CSharpKeyword
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: 303a880a54a79e50515060e0ea28e8d021fa1b76
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d04bea9bcf5be726d3e81a1a53abed31f59330a0
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141708"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608708"
 ---
-# <a name="var-c-reference"></a>var (C# 參考)
+# <a name="var-c-reference"></a>var (c # 參考) 
 
-從 Visual C# 3.0 開始，在方法範圍內宣告的變數可以使用隱含的「類型」`var`。 隱含型別區域變數如同您自己宣告的類型一樣是強型別，但是編譯器會判斷類型。 下列兩個 `i` 宣告的功能相同：
+從 c # 3 開始，在方法範圍內宣告的變數可以有隱含的 "type" `var` 。 隱含型別區域變數如同您自己宣告的類型一樣是強型別，但是編譯器會判斷類型。 下列兩個 `i` 宣告的功能相同：
 
 ```csharp
 var i = 10; // Implicitly typed.
 int i = 10; // Explicitly typed.
 ```
 
-如需詳細資訊，請參閱[LINQ 查詢作業中](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)的[隱含類型區域變數](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)和類型關聯性。
-
 > [!IMPORTANT]
-> 當 `var` 與可為 null 的參考型別搭配使用時，即使運算式型別不可為 null，它一律隱含表示可為 null 的參考型別。
+> 當 `var` 與 [可為 null 的參考](../builtin-types/nullable-reference-types.md) 型別搭配使用時，即使運算式型別不可為 null，它一律隱含表示可為 null 的參考型別。
+
+關鍵字的常見用法是使用「函式 `var` 調用運算式」。 使用可 `var` 讓您不在變數宣告和物件具現化中重複類型名稱，如下列範例所示：
+
+```csharp
+var xs = new List<int>();
+```
+
+從 c # 9.0 開始，您可以使用目標型別[ `new` 運算式](../operators/new-operator.md)做為替代方案：
+
+```csharp
+List<int> xs = new();
+List<int>? ys = new();
+```
 
 ## <a name="example"></a>範例
 
@@ -37,6 +48,6 @@ int i = 10; // Explicitly typed.
 
 ## <a name="see-also"></a>另請參閱
 
-- [C # 參考](../index.md)
-- [C # 程式設計指南](../../programming-guide/index.md)
+- [C# 參考資料](../index.md)
 - [隱含類型區域變數](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)
+- [LINQ 查詢作業中的類型關聯性](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)

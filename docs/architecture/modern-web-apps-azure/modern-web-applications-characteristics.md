@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: a4d7558039d64b21a2744f74d037369ea8c6c923
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6241a9a3a51bd4d5228841caeaf3a7b652fc6eaa
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539264"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608357"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>現代化 Web 應用程式的特性
 
@@ -76,7 +76,7 @@ Blazor 隨附于 ASP.NET Core 3.0 和更新版本中。 它提供新的機制，
 
 伺服器端 Blazor 已在2019中發行，ASP.NET Core 3.0。 顧名思義，它會在伺服器上執行，並透過網路將用戶端檔的變更呈現回瀏覽器。 伺服器端 Blazor 提供豐富的用戶端體驗，而不需要用戶端 JavaScript，且不需要個別的頁面載入以進行每個用戶端頁面互動。 載入的頁面中的變更會由伺服器要求並處理，然後使用 SignalR 傳送回用戶端。
 
-Blazor2020 年5月發行的用戶端不需要在伺服器上呈現變更。 相反地，它會利用在 WebAssembly 用戶端中執行 .net 程式碼。 如果需要要求資料時，用戶端仍可以對伺服器進行 API 呼叫，但是所有主要瀏覽器都已支援用戶端的所有行為， WebAssembly 而且所有主要瀏覽器都已支援它，而且只是 JAVAscript 程式庫。
+Blazor2020 年5月發行的用戶端不需要在伺服器上呈現變更。 相反地，它會利用在 WebAssembly 用戶端中執行 .net 程式碼。 如果需要要求資料時，用戶端仍可以對伺服器進行 API 呼叫，但是所有主要瀏覽器都已支援用戶端的所有行為， WebAssembly 而且所有主要瀏覽器都已支援它，而且只是 JavaScript 程式庫。
 
 > ### <a name="references--modern-web-applications"></a>參考資料 – 現代化 Web 應用程式
 >

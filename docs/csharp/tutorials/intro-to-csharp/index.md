@@ -3,12 +3,12 @@ title: C# 簡介 - 互動式教學課程
 description: 在您的瀏覽器中學習 C#，並開始使用您自己的開發環境
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 9a93e34f7b54d12b3f69589d7bb2181fc240403c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554563"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609176"
 ---
 # <a name="introduction-to-c"></a>C\# 簡介
 
@@ -52,7 +52,13 @@ ms.locfileid: "90554563"
 
 ## <a name="introduction-to-classes"></a>[類別簡介](introduction-to-classes.md)
 
-這個最後的教學課程只能在您的電腦上執行，並使用您自己的本機開發環境與 .NET Core。
+本教學課程僅適用于在您的電腦上執行，並使用您自己的本機開發環境和 .NET Core。
 您會建置一個主控台應用程式，並了解 C# 語言的基本物件導向功能。
 
 此教學課程假設您已經完成線上簡介教學課程，並已安裝 [.NET Core SDK](https://dotnet.microsoft.com/download) 與 [Visual Studio Code](https://code.visualstudio.com/)。
+
+## <a name="object-oriented-programming"></a>[物件導向程式設計](object-oriented-programming.md)
+
+本教學課程說明物件導向程式設計中所使用的概念。 您將瞭解使用 c # 範例的 *抽象*、 *封裝*、 *繼承*和 *多* 型概念。
+
+本教學課程假設您已完成線上入門教學課程，並已安裝 [.NET Core SDK](https://dotnet.microsoft.com/download) ，並在開發電腦上 [Visual Studio Code](https://code.visualstudio.com/) 或 [Visual Studio](https://visualstudio.com) 。

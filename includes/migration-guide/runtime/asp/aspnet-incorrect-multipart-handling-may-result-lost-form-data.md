@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: ed669364efe9dd8f57d831a3764dd3fc68cd5e05
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: d61a3b3dd855d783d7bff7cb74e5b84969e60860
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497916"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608040"
 ---
 ### <a name="aspnet-incorrect-multipart-handling-may-result-in-lost-form-data"></a>ASP.NET 無法正確進行多部分處理，可能會導致遺失表單資料。
 
 #### <a name="details"></a>詳細資料
 
-在目標為 .NET Framework 4.7.2 和更早版本的應用程式中，ASP.Net 可能無法正確剖析多部分界限值，而導致要求執行期間無法使用表單資料。 以 .NET Framework 4.8 或更新版本為目標的應用程式則可正確剖析多部分資料，因此在要求執行期間可使用表單值。
+在以 .NET Framework 4.7.2 和更早版本為目標的應用程式中，ASP.NET 可能會不正確地剖析多部分界限值，導致在要求執行期間無法使用表單資料。 以 .NET Framework 4.8 或更新版本為目標的應用程式則可正確剖析多部分資料，因此在要求執行期間可使用表單值。
 
 #### <a name="suggestion"></a>建議
 
@@ -18,7 +18,7 @@ ms.locfileid: "89497916"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 範圍   |未知|
+| 範圍   |Unknown|
 |版本|4.8|
 |類型|執行階段|
 

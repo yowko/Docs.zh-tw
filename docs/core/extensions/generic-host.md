@@ -4,12 +4,12 @@ author: IEvangelist
 description: 瞭解 .NET 泛型主機，其負責應用程式啟動和存留期管理。
 ms.author: dapine
 ms.date: 09/18/2020
-ms.openlocfilehash: c1b22b4490dc54d462482976d1c2e512f812c9a9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a1f82f6c6b5d250d6e81351aa02e50e23636280b
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875851"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608270"
 ---
 # <a name="net-generic-host"></a>.NET 泛型主機
 
@@ -19,7 +19,7 @@ ms.locfileid: "90875851"
 
 - 相依性插入 (DI)
 - 記錄
-- 設定
+- 組態
 - `IHostedService` 實作
 
 當主機啟動時，它會呼叫 <xref:Microsoft.Extensions.Hosting.IHostedService.StartAsync%2A?displayProperty=nameWithType> <xref:Microsoft.Extensions.Hosting.IHostedService> 服務容器的託管服務集合中註冊的每個執行。 在背景工作服務應用程式中， `IHostedService` 包含實例的所有 <xref:Microsoft.Extensions.Hosting.BackgroundService> 實例都會 <xref:Microsoft.Extensions.Hosting.BackgroundService.ExecuteAsync%2A?displayProperty=nameWithType> 呼叫其方法。
@@ -142,3 +142,4 @@ public class Program
 
 - [.NET 中的設定](configuration.md)
 - [ASP.NET Core Web 主機](/aspnet/core/fundamentals/host/web-host)
+- 應該在 [github.com/dotnet/extensions](https://github.com/dotnet/extensions/issues) 存放庫中建立一般主機錯誤

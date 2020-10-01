@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: e109deaa26b33a7780df11031c1f3e0477cd5431
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247614"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609189"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -204,11 +204,11 @@ if (e is not null)
 
 ## <a name="fit-and-finish-features"></a>符合和完成功能
 
-許多其他功能可協助您更有效率地撰寫程式碼。 在 c # 9.0 中，當已建立的物件類型為已知時，您可以在新的運算式中省略該型別。 最常見的用法是在欄位宣告中：
+許多其他功能可協助您更有效率地撰寫程式碼。 在 c # 9.0 中，您可以在已建立物件的型別已知時，省略[ `new` 運算式](../language-reference/operators/new-operator.md)中的型別。 最常見的用法是在欄位宣告中：
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="WeatherStationField":::
 
-當您需要建立新的物件以做為參數傳遞至方法時，也可以使用目標型別 new。 請考慮 `ForecastFor()` 具有下列簽章的方法：
+`new`當您需要建立新的物件以傳遞至方法的引數時，也可以使用目標型別。 請考慮 `ForecastFor()` 具有下列簽章的方法：
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="ForecastSignature":::
 
@@ -220,7 +220,7 @@ if (e is not null)
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
-您可以使用運算式傳回預設的函式所建立的實例 `return new();` 。
+您可以使用語句傳回預設的函式所建立的實例 `return new();` 。
 
 類似的功能可改善 [條件運算式](../language-reference/operators/conditional-operator.md)的目標型別解析。 進行這項變更時，這兩個運算式不需要從一個運算式隱含轉換成另一個運算式，但兩者都可能會隱含地轉換成目標型別。 您可能不會注意到這種變更。 您將會注意到，某些條件運算式先前需要轉換或根本無法編譯。
 

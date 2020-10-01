@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 76425ca03c98cd6a23b8366257f9e0d53b486edb
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: e450c53008e7562e37518fdfd6872ff9b63b6ac3
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496702"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609126"
 ---
-### <a name="sharing-session-state-with-aspnet-stateserver-requires-all-servers-in-the-web-farm-to-use-the-same-net-framework-version"></a>與 Asp.Net StateServer 共用工作階段狀態需要 Web 伺服陣列中的所有伺服器使用相同的 .NET Framework 版本
+### <a name="sharing-session-state-with-aspnet-stateserver-requires-all-servers-in-the-web-farm-to-use-the-same-net-framework-version"></a>使用 ASP.NET StateServer 共用會話狀態需要 web 伺服陣列中的所有伺服器都使用相同的 .NET Framework 版本
 
 #### <a name="details"></a>詳細資料
 

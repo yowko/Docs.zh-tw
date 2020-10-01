@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 150b98255b3075a8fe8cad60ce234206b788a5f5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 53860bb867522503c5cb9bd35e25fadd00a116a2
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617137"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609153"
 ---
-### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>使用 AntiXSSEncoder 時，多行 ASP.Net TextBox 間距已變更
+### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>使用 AntiXSSEncoder 時，多行 ASP.NET 文字方塊間距已變更
 
 #### <a name="details"></a>詳細資料
 
@@ -18,6 +18,6 @@ ms.locfileid: "85617137"
 
 | 名稱    | 值       |
 |:--------|:------------|
-| 影響範圍   | Minor       |
+| 範圍   | Minor       |
 | 版本 | 4.5         |
 | 類型    | 正在重定目標 |

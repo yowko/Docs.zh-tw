@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/23/2020
 ms.topic: overview
-ms.openlocfilehash: b986f414dcc0e81578e6cf57304f6e5c31578e88
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 2aaa24e54dad7b765781bf7c790890a57a77af14
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247889"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608349"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 中的相依性插入
 
@@ -290,7 +290,8 @@ services.Add(descriptor);
 ## <a name="see-also"></a>另請參閱
 
 - [使用 .NET 中的相依性插入](dependency-injection-usage.md)
-- [相依性插入方針](dependency-injection-guidelines.md)
+- [相依性插入指導方針](dependency-injection-guidelines.md)
 - [適用于 DI 應用程式開發的 NDC 會議模式](https://www.youtube.com/watch?v=x-C-CNBVTaY)
 - [明確相依性準則](../../architecture/modern-web-apps-azure/architectural-principles.md#explicit-dependencies)
 - [控制的容器和相依性插入模式的反轉 (聖馬丁 Fowler) ](https://www.martinfowler.com/articles/injection.html)
+- 應該在 [github.com/dotnet/extensions](https://github.com/dotnet/extensions/issues) 存放庫中建立 DI bug

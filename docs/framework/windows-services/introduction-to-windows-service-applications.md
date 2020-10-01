@@ -1,6 +1,6 @@
 ---
 title: Windows 服務應用程式簡介
-description: 閱讀 Windows 服務應用程式簡介。 服務可讓您建立在自己的 Windows 會話中執行且長時間執行的可執行應用程式。
+description: 閱讀 Windows 服務應用程式的簡介。 服務可讓您建立可在自己的 Windows 會話中執行的長時間執行的可執行檔應用程式。
 ms.date: 03/30/2017
 f1_keywords:
 - ServiceController
@@ -22,13 +22,12 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-author: ghogen
-ms.openlocfilehash: 13bd1f42776ac76a43a83667465ac0ca277e3452
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: b177673d8904a3c40e41cd0f92b1ea7408641186
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925666"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609313"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服務應用程式簡介
 Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執行的應用程式，並使其在自己的 Windows 工作階段中執行。 這些服務可以在電腦開機時自動啟動、可以暫停和重新啟動，而且不會顯示任何使用者介面。 這些功能讓服務非常適合在伺服器上使用，或者，當您需要不會干擾其他在同一部電腦上工作的使用者且又長時間執行的功能時使用。 您也可以在特定使用者帳戶的安全性內容中執行服務，此使用者帳戶不同於登入的使用者帳戶或預設電腦帳戶。 如需服務和 Windows 工作階段的詳細資訊，請參閱 Windows SDK 文件。  
@@ -39,7 +38,7 @@ Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執
   
  當您建立和建置應用程式之後，可執行命令列公用程式 InstallUtil.exe，並傳入服務可執行檔的路徑來進行安裝。 您接著可以使用**服務控制管理員**來啟動、停止、暫停、繼續及設定服務。 您也可以在 [伺服器總管]**** 的 [服務]**** 節點中完成這其中許多相同的工作，或是使用 <xref:System.ServiceProcess.ServiceController> 類別來完成。  
   
-## <a name="service-applications-vs-other-visual-studio-applications"></a>服務應用程式與其他 Visual Studio 應用程式  
+## <a name="service-applications-vs-other-visual-studio-applications"></a>服務應用程式與其他 Visual Studio 應用程式的比較  
  服務應用程式的運作在某些方面有別於許多其他專案類型：  
   
 - 服務應用程式專案所建立的已編譯可執行檔必須先安裝在伺服器上，然後專案才能正常地運作。 您無法按 F5 鍵或 F11 鍵來偵錯或執行服務應用程式；您無法立即執行服務或逐步執行其程式碼。 反之，您必須安裝並啟動服務，然後將偵錯工具附加到服務的處理序。 如需詳細資訊，請參閱[如何：偵錯 Windows 服務應用程式](how-to-debug-windows-service-applications.md)。  
@@ -73,7 +72,7 @@ Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執
 ## <a name="services-and-the-servicecontroller-component"></a>服務和 ServiceController 元件  
  <xref:System.ServiceProcess.ServiceController> 元件可用來連線到已安裝的服務並操控其狀態；使用 <xref:System.ServiceProcess.ServiceController> 元件可啟動和停止服務、暫停和繼續其運作，以及將自訂命令傳送到服務。 不過，當您建立服務應用程式時，不需要使用 <xref:System.ServiceProcess.ServiceController> 元件。 事實上，在大部分情況下，<xref:System.ServiceProcess.ServiceController> 元件所存在的應用程式，應該有別於定義服務的 Windows 服務應用程式。  
   
- 如需詳細資訊，請參閱 <xref:System.ServiceProcess.ServiceController> 。  
+ 如需詳細資訊，請參閱<xref:System.ServiceProcess.ServiceController>。  
   
 ## <a name="requirements"></a>需求  
   
