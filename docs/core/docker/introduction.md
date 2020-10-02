@@ -3,22 +3,22 @@ title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157787"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654818"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
 .NET Core 能夠很容易地在 Docker 容器中執行。 容器提供精簡的方式將您的應用程式與主機系統的其餘部分隔離、只共用核心，以及使用提供給應用程式的資源。 如果不熟悉 Docker，強烈建議閱讀 Docker 的[概觀文件](https://docs.docker.com/engine/docker-overview/) \(英文\)。
 
-有關如何安裝 Docker 的詳細資訊，請參閱[Docker 桌面下載頁面：社區版](https://www.docker.com/products/docker-desktop)。
+如需有關如何安裝 Docker 的詳細資訊，請參閱 Docker Desktop 的下載頁面 [：社區版](https://www.docker.com/products/docker-desktop)。
 
 ## <a name="docker-basics"></a>Docker 基本知識
 
-有幾個概念您應該很熟悉。 Docker 用戶端具有可用於管理映射和容器的 CLI。 如先前所述，您應該仔細閱讀 [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\) 文件。
+有幾個概念您應該很熟悉。 Docker 用戶端具有可用來管理映射和容器的 CLI。 如先前所述，您應該仔細閱讀 [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\) 文件。
 
 ### <a name="images"></a>影像
 
@@ -36,11 +36,11 @@ ms.locfileid: "78157787"
 
 Docker 擁有公用登錄，已裝載於 [Docker Hub](https://hub.docker.com/) \(英文\) 供您使用。 Docker Hub 會列出 [.NET core 相關映像](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。
 
-Microsoft 容器登錄 (MCR) 是 Microsoft 提供容器映像的官方來源。 MCR 建置在 Azure CDN 上，用來提供全域複寫的映像。 不過，MCR 並沒有公開網站，因此了解 Microsoft 所提供容器映像的主要方式是透過 [Microsoft Docker Hub 頁面](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。
+[Microsoft Container Registry (MCR) ](/azure/container-registry)是 microsoft 所提供容器映射的官方來源。 MCR 建置在 Azure CDN 上，用來提供全域複寫的映像。 不過，MCR 並沒有公開網站，因此了解 Microsoft 所提供容器映像的主要方式是透過 [Microsoft Docker Hub 頁面](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。
 
 ### <a name="dockerfile"></a>Dockerfile
 
-**Dockerfile** 是一個檔案，定義了一組建立映像的指示。 **Dockerfile** 中的每個指示都會在映像中建立一個圖層。 在大多數情況下，在重建映射時，僅重建已更改的圖層。 **Dockerfile**可以分發給其他人，並允許他們以創建新映射的方式重新創建新映射。 雖然這可讓您散發映像建立方式的*指示*，但散發映像的主要方式是將它發行至登錄。
+**Dockerfile** 是一個檔案，定義了一組建立映像的指示。 **Dockerfile** 中的每個指示都會在映像中建立一個圖層。 大部分的情況下，當您重建映射時，只會重建已變更的圖層。 **Dockerfile**可散發給其他人，並可讓他們以您建立的相同方式重新建立新的映射。 雖然這可讓您散發映像建立方式的*指示*，但散發映像的主要方式是將它發行至登錄。
 
 ## <a name="net-core-images"></a>.NET Core 映像
 
@@ -52,22 +52,22 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 
 各種 Azure 服務支援容器。 您可以為應用程式建立 Docker 映像，並將它部署到下列其中一個服務：
 
-- [Azure 庫伯奈斯服務 （AKS）](https://azure.microsoft.com/services/kubernetes-service/)\
+- [Azure Kubernetes Service (AKS) ](https://azure.microsoft.com/services/kubernetes-service/)\
 調整規模及協調使用 Kubernetes 的 Linux 容器。
 
-- [Azure 應用服務](https://azure.microsoft.com/services/app-service/containers/)\
+- [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 在 PaaS 環境中使用 Linux 容器部署 Web 應用程式或 API。
 
 - [Azure 容器實例](https://azure.microsoft.com/services/container-instances/)\
 在沒有任何較高層級管理服務的情況下，將容器裝載於雲端。
 
-- [Azure 批次處理](https://azure.microsoft.com/services/batch/)\
+- [Azure Batch](https://azure.microsoft.com/services/batch/)\
 使用容器執行重複的計算工作。
 
-- [Azure 服務結構](https://azure.microsoft.com/services/service-fabric/)\
-使用 Windows Server 容器將 .NET 應用程式提升、移動和現代化到微服務。
+- [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
+使用 Windows Server 容器將 .NET 應用程式隨即轉移和現代化，以微服務。
 
-- [Azure 容器註冊表](https://azure.microsoft.com/services/container-registry/)\
+- [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
 儲存及管理所有 Azure 部署類型的容器映像。
 
 ## <a name="next-steps"></a>後續步驟

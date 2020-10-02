@@ -3,12 +3,12 @@ title: 雲端原生的定義
 description: 瞭解為雲端原生系統提供探源的基本要素
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dce8da57b90519880e322a26de403d8e7cb718c2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1f0d842a2369ae04ffc1c634f9de60398a88e86f
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160901"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654688"
 ---
 # <a name="defining-cloud-native"></a>定義雲端原生
 
@@ -26,7 +26,7 @@ ms.locfileid: "91160901"
 
 應用程式越來越複雜，使用者需要更多更多。 使用者預期快速回應性、創新功能和零停機時間。 無法再接受效能問題、週期性錯誤和無法快速移動。 他們將可輕鬆地移至您的競爭對手。
 
-雲端原生的 *速度* 和 *靈活性*很高。 商務系統不斷演進，從啟用商務功能到策略性轉型的武器，加速商務速度和成長。 請務必立即將構想推向市場。
+雲端原生的 *速度* 和 *靈活性*。 商務系統不斷演進，使商務功能成為策略性轉型的武器，以加速業務速度和成長。 請務必立即將構想推向市場。
 
 以下是一些已實行這些技術的公司。 思考它們所達成的速度、靈活性和擴充性。
 

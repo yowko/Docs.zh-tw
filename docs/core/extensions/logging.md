@@ -4,12 +4,12 @@ author: IEvangelist
 description: 了解如何使用由 Microsoft.Extensions.Logging NuGet 套件提供的記錄架構。
 ms.author: dapine
 ms.date: 09/30/2020
-ms.openlocfilehash: a742e192f8e080e2c76ebeb005168647e440d8ef
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 2e6d8710015d8e998a9710f2cdeb86d925236196
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614694"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654830"
 ---
 # <a name="logging-in-net"></a>.NET 中的記錄
 
@@ -177,7 +177,7 @@ namespace Example
 
 下表列出這些 <xref:Microsoft.Extensions.Logging.LogLevel> 值、便利的 `Log{LogLevel}` 擴充方法，以及建議的使用方式：
 
-| LogLevel | 值 | 方法 | 說明 |
+| LogLevel | 值 | 方法 | 描述 |
 |--|--|--|--|
 | [追蹤](xref:Microsoft.Extensions.Logging.LogLevel) | 0 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogTrace%2A> | 包含最詳細的訊息。 這些訊息可能包含敏感性應用程式資料。 這些訊息預設為停用， ***不*** 應在生產環境中啟用。 |
 | [偵錯](xref:Microsoft.Extensions.Logging.LogLevel) | 1 | <xref:Microsoft.Extensions.Logging.LoggerExtensions.LogDebug%2A> | 用於偵錯工具和開發。 在生產環境中，請謹慎使用，因為這是大量的磁片區。 |
@@ -433,7 +433,7 @@ class Program
 
 ## <a name="non-host-console-app"></a>非主機主控台應用程式
 
-沒有 [泛型主機](generic-host.md) 的應用程式記錄程式碼，與 [加入提供者](#add-providers) 和 [建立記錄器](#create-logs)的方式不同。 在非主機主控台應用程式中，於建立 `LoggerFactory` 時呼叫提供者的 `Add{provider name}` 擴充方法：
+沒有 [泛型主機](generic-host.md) 的應用程式記錄程式碼，與 [加入提供者](logging-providers.md#built-in-logging-providers) 和 [建立記錄器](#create-logs)的方式不同。 在非主機主控台應用程式中，於建立 `LoggerFactory` 時呼叫提供者的 `Add{provider name}` 擴充方法：
 
 ```csharp
 class Program

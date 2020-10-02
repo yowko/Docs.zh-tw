@@ -8,18 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: ccd575748c2286fa7348e2880acbfadd036d9ccd
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 239163fc2f91ccbfe8b1c111a358db87d36a8308
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247718"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654635"
 ---
 # <a name="static-c-reference"></a>static (C# 參考)
 
 此頁面涵蓋 `static` 修飾詞關鍵字。 `static`關鍵字也是指示詞的一部分 [`using static`](using-static.md) 。
 
 使用 `static` 修飾詞來宣告靜態成員，而靜態成員屬於類型本身，而不是特定物件。 `static`修飾詞可以用來宣告 `static` 類別。 在類別、介面和結構中，您可以將修飾詞加入 `static` 至欄位、方法、屬性、運算子、事件和函式。 `static`修飾元無法與索引子或完成項一起使用。 如需詳細資訊，請參閱 [靜態類別和靜態類別成員](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。
+
+從 c # 8.0 開始，您可以將 `static` 修飾詞加入至 [區域函數](../../programming-guide/classes-and-structs/local-functions.md)。 靜態區域函式無法捕捉本機變數或實例狀態。
 
 從 c # 9.0 開始，您可以將 `static` 修飾詞加入至 [lambda 運算式](../operators/lambda-expressions.md) 或 [匿名方法](../operators/delegate-operator.md)。 靜態 lambda 或匿名方法無法捕捉本機變數或實例狀態。
 

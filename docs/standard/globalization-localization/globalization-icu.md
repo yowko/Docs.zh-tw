@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: b52afd80c10afb6723679b2a74f11c7a4f59091f
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 60533fbb215ffe8baba7e2d200faa1c4937294b9
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608370"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654877"
 ---
 # <a name="net-globalization-and-icu"></a>.NET 全球化和 ICU
 
@@ -166,7 +166,7 @@ LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-curre
 
 以下是支援的 Api，其限制如下：
 
-- <xref:System.String.Normalize(System.Text.NormalizationForm)?displayProperty=nameWithType> 而且 <xref:System.String.IsNormalized(System.Text.NormalizationForm)?displayProperty=nameWithType> 不支援很少使用 <xref:System.Text.NormalizationForm.FormKC?displayProperty=nameWithType> 和 <xref:System.Text.NormalizationForm.FormKD?displayProperty=nameWithType> 表單。
+- <xref:System.String.Normalize(System.Text.NormalizationForm)?displayProperty=nameWithType> 而且 <xref:System.String.IsNormalized(System.Text.NormalizationForm)?displayProperty=nameWithType> 不支援很少使用 <xref:System.Text.NormalizationForm.FormKC> 和 <xref:System.Text.NormalizationForm.FormKD> 表單。
 - <xref:System.Globalization.RegionInfo.CurrencyNativeName?displayProperty=nameWithType> 會傳回與 <xref:System.Globalization.RegionInfo.CurrencyEnglishName?displayProperty=nameWithType> 相同的值。
 
-此外，您可以在[dotnet/icu](https://github.com/dotnet/icu/blob/0f49268ddfd3331ca090f1c51d2baa2f75f6c6c0/icu-filters/optimal.json#L6-L54)存放庫中找到支援的地區設定清單
+此外，您可以在 [dotnet/icu](https://github.com/dotnet/icu/blob/0f49268ddfd3331ca090f1c51d2baa2f75f6c6c0/icu-filters/optimal.json#L6-L54)存放庫中找到支援的地區設定清單。

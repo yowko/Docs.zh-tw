@@ -4,12 +4,12 @@ description: 瞭解如何在 .NET 應用程式中使用記錄提供者 API。
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: 936413be1514e6cea20e28a7d4431c572560d193
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 3bd10564f23744d4798d0a6a4b49a7a29be2bc19
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614693"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654680"
 ---
 # <a name="logging-providers-in-net"></a>.NET 中的記錄提供者
 
@@ -79,7 +79,7 @@ Microsoft 擴充功能包含下列記錄提供者，作為執行時間程式庫�
 
 ### <a name="console"></a>主控台
 
-`Console`提供者會將輸出記錄到主控台。 如需有關在開發期間查看記錄的詳細資訊 `Console` ，請參閱 [從 dotnet 執行和 Visual Studio 記錄輸出](logging.md#logging-output-from-dotnet-run-and-visual-studio)。
+`Console`提供者會將輸出記錄到主控台。
 
 ### <a name="debug"></a>偵錯
 

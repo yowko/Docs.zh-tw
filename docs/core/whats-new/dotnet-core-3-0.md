@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: fae6ffc56c90ef8f5340d3d7fd34cda82e3b4ca4
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 60b511adecf37855de91f45245fc55911ba281dc
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437974"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654767"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -211,6 +211,8 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 - Windows x64 可以用來編譯 Windows ARM32、ARM64 及 x86 映像。
 - Windows x86 可以用來編譯 Windows ARM32 映像。
 - Linux x64 可以用來編譯 Linux ARM32 和 ARM64 映像。
+
+如需詳細資訊，請參閱 [準備執行](../deploying/ready-to-run.md)。
 
 ## <a name="runtimesdk"></a>執行時間/SDK
 

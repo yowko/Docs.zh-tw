@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: e109deaa26b33a7780df11031c1f3e0477cd5431
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609189"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654903"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -194,7 +194,7 @@ if (e is not null)
 
 有三項新功能可改善需要高效能的原生 interop 和低層級程式庫的支援：原生大小的整數、函式指標，以及省略 `localsinit` 旗標。
 
-原生大小的整數 `nint` 和 `nuint` 是整數類型。 它們是以基礎類型和來 <xref:System.IntPtr?displayProperty=nameWithType> 表示 <xref:System.UIntPtr?displayProperty=nameWithType> 。 編譯器會以原生 int 的形式呈現這些類型的其他轉換和作業。 原生大小的整數沒有或的常數 `MaxValue` `MinValue` ，但 `nuint.MinValue` 具有 `MinValue` 的是 `0` 。 其他值無法表示為常數，因為它相依于目的電腦上的整數原生大小。 您可以 `nint` 在 [.] 範圍中使用的常數值 `int.MinValue` 。 `int.MaxValue`]. 您可以 `nuint` 在 [.] 範圍中使用的常數值 `uint.MinValue` 。 `uint.MaxValue`]. 編譯器會使用和類型來執行所有一元和二元運算子的常數折迭 <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> 。 如果結果不符合32位，則作業會在執行時間執行，且不會被視為常數。 原生大小的整數可提高使用整數數學的案例中的效能，而且需要盡可能最快的效能。
+原生大小的整數 `nint` 和 `nuint` 是整數類型。 它們是以基礎類型和來 <xref:System.IntPtr?displayProperty=nameWithType> 表示 <xref:System.UIntPtr?displayProperty=nameWithType> 。 編譯器會以原生 int 的形式呈現這些類型的其他轉換和作業。 原生大小的整數會定義或的屬性 `MaxValue` `MinValue` 。 這些值無法表示為編譯時間常數，因為它們依存于目的電腦上的整數原生大小。 這些值在執行時間是唯讀的。 您可以 `nint` 在 [.] 範圍中使用的常數值 `int.MinValue` 。 `int.MaxValue`]. 您可以 `nuint` 在 [.] 範圍中使用的常數值 `uint.MinValue` 。 `uint.MaxValue`]. 編譯器會使用和類型來執行所有一元和二元運算子的常數折迭 <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> 。 如果結果不符合32位，則作業會在執行時間執行，且不會被視為常數。 原生大小的整數可提高使用整數數學的案例中的效能，而且需要盡可能最快的效能。
 
 函式指標提供簡單的語法來存取 IL 操作碼 `ldftn` 和 `calli` 。 您可以使用新的語法來宣告函式指標 `delegate*` 。 `delegate*`類型是指標類型。 `delegate*` `calli` 相對於在方法上使用的委派，叫用型別會使用 `callvirt` `Invoke()` 。 在語法上，叫用相同。 函數指標調用會使用 `managed` 呼叫慣例。 您可以在 `unmanaged` 語法之後加入關鍵字， `delegate*` 以宣告您想要 `unmanaged` 呼叫慣例。 您可以使用宣告上的屬性來指定其他呼叫慣例 `delegate*` 。
 

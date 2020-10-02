@@ -2,12 +2,12 @@
 title: 應用程式發佈
 description: 瞭解發佈 .NET Core 應用程式的方式。 .NET Core 可以發佈平臺特定或跨平臺應用程式。 您可以將應用程式發佈為獨立或與 framework 相依的應用程式。 每個模式都會影響使用者執行您應用程式的方式。
 ms.date: 04/01/2020
-ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720107"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654668"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 應用程式發行總覽
 
@@ -151,7 +151,35 @@ dotnet publish -r osx-x64
 dotnet publish -r win-x64
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="publish-with-readytorun-images"></a>使用 ReadyToRun 映射發佈
+
+使用 ReadyToRun 映射發佈將可改善應用程式的啟動時間，代價是增加應用程式的大小。 若要使用 ReadyToRun 發佈，請參閱 [ReadyToRun](ready-to-run.md) 以取得詳細資料。
+
+### <a name="advantages"></a>優點
+
+- **改善的啟動時間**\
+應用程式將花費較少的時間執行 JIT。
+
+### <a name="disadvantages"></a>缺點
+
+- **較大的大小**\
+應用程式將會在磁片上放大。
+
+### <a name="examples"></a>範例
+
+發行獨立和 ReadyToRun 的應用程式。 建立 macOS 64 位可執行檔。
+
+```dotnet
+dotnet publish -c Release -r osx-x64 -p:PublishReadyToRun=true
+```
+
+發行獨立和 ReadyToRun 的應用程式。 建立 Windows 64 位可執行檔。
+
+```dotnet
+dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true
+```
+
+## <a name="see-also"></a>另請參閱
 
 - [使用 .NET Core CLI 部署 .NET Core 應用程式。](deploy-with-cli.md)
 - [使用 Visual Studio 部署 .NET Core 應用程式。](deploy-with-vs.md)

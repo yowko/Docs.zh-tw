@@ -4,12 +4,12 @@ description: 瞭解如何使用解除標記將取消要求告知工作清單。
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053089"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654701"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>取消 (c # ) 的工作清單
 
@@ -23,7 +23,7 @@ ms.locfileid: "89053089"
 > - 撰寫支援取消的非同步應用程式
 > - 示範信號取消
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 本教學課程需要下列各項：
 
@@ -159,14 +159,14 @@ foreach (string url in s_urlList)
 static async Task<int> ProcessUrlAsync(string url, HttpClient client, CancellationToken token)
 {
     HttpResponseMessage response = await client.GetAsync(url, token);
-    byte[] content = await response.Content.ReadAsByteArrayAsync(token);
+    byte[] content = await response.Content.ReadAsByteArrayAsync();
     Console.WriteLine($"{url,-60} {content.Length,10:#,#}");
 
     return content.Length;
 }
 ```
 
-針對任何指定的 URL，方法會使用提供的實例，將 `client` 回應取得為 `byte[]` 。 <xref:System.Threading.CancellationToken>實例會傳遞至 <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync(System.Threading.CancellationToken)?displayProperty=nameWithType> 方法。 `token`用來註冊要求的取消。 將 URL 和長度寫入主控台之後，會傳回長度。
+針對任何指定的 URL，方法會使用提供的實例，將 `client` 回應取得為 `byte[]` 。 <xref:System.Threading.CancellationToken>實例會傳遞至 <xref:System.Net.Http.HttpClient.GetAsync(System.String,System.Threading.CancellationToken)?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpContent.ReadAsByteArrayAsync?displayProperty=nameWithType> 方法。 `token`用來註冊要求的取消。 將 URL 和長度寫入主控台之後，會傳回長度。
 
 ### <a name="example-application-output"></a>範例應用程式輸出
 

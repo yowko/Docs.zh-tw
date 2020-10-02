@@ -1,15 +1,15 @@
 ---
 title: 區域函式 - C# 程式設計手冊
 description: 'C # 中的區域函式是在另一個成員中嵌套的私用方法，可從其包含成員中呼叫。'
-ms.date: 06/14/2017
+ms.date: 10/02/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: c1c6c6becb3894b05cb9ed89f7f33dcf249b20eb
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: a91995757048c8c54253d7f4b923d5194f69bc7b
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656181"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654916"
 ---
 # <a name="local-functions-c-programming-guide"></a>區域函式 (C# 程式設計手冊)
 
@@ -36,17 +36,19 @@ ms.locfileid: "89656181"
 區域函式定義為包含成員內的巢狀方法。 其定義具有下列語法：
 
 ```csharp
-<modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
+<modifiers> <return-type> <method-name> <parameter-list>
 ```
 
-區域函式可以使用 [async](../../language-reference/keywords/async.md) 和 [unsafe](../../language-reference/keywords/unsafe.md) 修飾詞。
+您可以使用下列修飾詞搭配區域函數：
 
-請注意，在區域函式中可以存取包含成員中所定義的所有區域變數 (包含其方法參數)。
+- [`async`](../../language-reference/keywords/async.md)
+- [`unsafe`](../../language-reference/keywords/unsafe.md)
+- [`static`](../../language-reference/keywords/static.md) C # 8.0 和更新版本中的 () 。 靜態區域函式無法捕捉本機變數或實例狀態。
+- [`extern`](../../language-reference/keywords/extern.md) C # 9.0 和更新版本中的 () 。 外部區域函數必須是 `static` 。
+
+在包含成員中定義的所有區域變數（包含其方法參數）都可在非靜態區域函數中存取。
 
 不同于方法定義，區域函式定義不能包含成員存取修飾詞。 因為所有區域函式都是私用，所以包含 `private` 這類關鍵字的存取修飾詞會產生編譯器錯誤 CS0106「修飾詞 'private' 對此項目無效」。
-
-> [!NOTE]
-> 在 c # 8.0 之前，區域函數不能包含 `static` 修飾詞。 包含 `static` 關鍵字會產生編譯器錯誤 CS0106 「修飾詞 ' static ' 對此專案無效」或編譯器錯誤，指出您應該使用 c # 8.0 或更高版本。
 
 此外，屬性無法套用至區域函式或其參數和型別參數。
 

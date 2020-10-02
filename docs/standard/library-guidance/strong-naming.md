@@ -2,18 +2,18 @@
 title: 強式命名與 .NET 程式庫
 description: .NET 程式庫強式命名的最佳做法建議。
 ms.date: 10/16/2018
-ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b72d4a8c320ac857fbcd6abe44f467805f72b5b3
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76744530"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654556"
 ---
 # <a name="strong-naming"></a>強式命名
 
 強式命名是指使用金鑰對組件進行簽名，進而產生[強式名稱組件](../assembly/strong-named.md)。 當組件具有強式名稱時，它會根據名稱與組件版本號碼建立唯一身分識別，而且它可以協助防止組件衝突。
 
-強式命名的缺點是，一旦組件具有強式名稱，Windows 上的 .NET Framework 就會啟用嚴格的組件載入。 強式名稱組件參考必須與組件參考的版本完全符合，以強制開發人員在使用組件時[設定繫結重新導向](../../framework/configure-apps/redirect-assembly-versions.md)：
+強式命名的缺點是，一旦組件具有強式名稱，Windows 上的 .NET Framework 就會啟用嚴格的組件載入。 強式名稱的元件參考必須完全符合所載入元件的版本，並在使用元件時強制開發人員設定系結重新 [導向](../../framework/configure-apps/redirect-assembly-versions.md) ：
 
 ```xml
 <configuration>
@@ -43,7 +43,7 @@ ms.locfileid: "76744530"
 您應該為您的開放原始碼 .NET 程式庫進行強式命名。 強式命名組件可確保大部分的人可以使用它，而嚴格的組件載入只會影響 .NET Framework。
 
 > [!NOTE]
-> 本指南特定于公開分發的 .NET 庫，例如NuGet.org上發佈的 .NET 庫。大多數 .NET 應用程式不需要強命名，預設情況下不應進行強命名。
+> 本指南專為公開散發的 .NET 程式庫所特有，例如在 NuGet.org 上發行的 .NET 程式庫。大部分的 .NET 應用程式都不需要強式命名，而且預設不應該這麼做。
 
 ✔️ 考慮為您的程式庫組件進行強式命名。
 
@@ -64,10 +64,10 @@ ms.locfileid: "76744530"
 
 > 修改組件的強式命名金鑰會變更組件的身分識別，並且中斷使用它的編譯程式碼。 如需詳細資訊，請參閱[二進位中斷性變更](./breaking-changes.md#binary-breaking-change)。
 
-❌不要發佈庫的強命名和非強命名版本。 例如 `Contoso.Api` 和 `Contoso.Api.StrongNamed`。
+❌ 請勿發行程式庫的強式名稱和非強式名稱版本。 例如 `Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 > 發佈兩個套件會派生您的開發人員生態系統。 此外，如果應用程式最後根據這兩個套件，開發人員可能會遇到類型名稱衝突。 就 .NET 而言，它們在不同的組件中是不同的類型。
 
 >[!div class="step-by-step"]
->[上一個](cross-platform-targeting.md)
->[下一個](nuget.md)
+>[上一個](cross-platform-targeting.md) 
+>[下一步](nuget.md)
