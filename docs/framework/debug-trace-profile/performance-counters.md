@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554445"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712631"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
 
@@ -130,8 +130,8 @@ ms.locfileid: "90554445"
 |**Connections Established**|自處理序啟動後，曾在 <xref:System.AppDomain> 中連接的 <xref:System.Net.Sockets.Socket> 累計資料流通訊端物件總數。|  
 |**Datagrams Received**|自處理序啟動後，由 <xref:System.AppDomain> 中的所有 <xref:System.Net.Sockets.Socket> 物件接收的累計資料包封包總數。|  
 |**Datagrams Sent**|自處理序啟動後，由 <xref:System.AppDomain> 中的所有 <xref:System.Net.Sockets.Socket> 物件傳送的累計資料包封包總數。|  
-|**HttpWebRequest Average Lifetime**|自處理序開始後，完成在 <xref:System.AppDomain> 中最後一個間隔結束的所有 <xref:System.Net.HttpWebRequest> 物件的平均時間。|  
-|**HttpWebRequest Average Queue Time**|自處理序開始後，在 <xref:System.AppDomain> 中最後一個間隔離開佇列的所有 <xref:System.Net.HttpWebRequest> 物件的平均佇列中時間。|  
+|**HttpWebRequests 平均存留期**|自處理序開始後，完成在 <xref:System.AppDomain> 中最後一個間隔結束的所有 <xref:System.Net.HttpWebRequest> 物件的平均時間。|  
+|**HttpWebRequests 平均佇列時間**|自處理序開始後，在 <xref:System.AppDomain> 中最後一個間隔離開佇列的所有 <xref:System.Net.HttpWebRequest> 物件的平均佇列中時間。|  
 |**HttpWebRequests Created/sec**|每秒在 <xref:System.AppDomain> 中，建立的 <xref:System.Net.HttpWebRequest> 物件數目。|  
 |**HttpWebRequests Queued/sec**|每秒在 <xref:System.AppDomain> 中，加入至佇列的 <xref:System.Net.HttpWebRequest> 物件數目。|  
 |**HttpWebRequests Aborted/sec**|每秒應用程式在 <xref:System.AppDomain> 中，呼叫 <xref:System.Net.HttpWebRequest.Abort%2A> 方法的 <xref:System.Net.HttpWebRequest> 物件數目。|  
@@ -169,11 +169,11 @@ ms.locfileid: "90554445"
   
  有二種持續期間計數器來測量 <xref:System.Net.HttpWebRequest> 物件通過其整個生命週期或僅通過其中一部分要費時多久：  
   
-- **HttpWebRequest Average Lifetime**  
+- **HttpWebRequests 平均存留期**  
   
-- **HttpWebRequest Average Queue Time**  
+- **HttpWebRequests 平均佇列時間**  
   
- 針對 **HttpWebRequest Average Lifetime** 計數器，大部分 <xref:System.Net.HttpWebRequest> 物件的存留期永遠都是從建立物件之際開始計算，直到應用程式關閉回應資料流為止。 有二種不常見的情況：  
+ 針對 **HttpWebRequests 平均存留期** 計數器，大部分物件的存留期 <xref:System.Net.HttpWebRequest> 一律會從建立物件的時間開始，直到應用程式關閉回應資料流程為止。 有二種不常見的情況：  
   
 - 若應用程式永不呼叫 <xref:System.Net.HttpWebRequest.GetResponse%2A> 或 <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> 方法，則會忽略 <xref:System.Net.HttpWebRequest> 物件的存留期。  
   
@@ -231,4 +231,4 @@ for (int i = 0; i < Array.Length; i++)
 ## <a name="see-also"></a>另請參閱
 
 - [效能計數器](performance-counters.md)
-- [執行時間分析](runtime-profiling.md)
+- [執行階段分析](runtime-profiling.md)

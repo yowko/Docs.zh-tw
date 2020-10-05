@@ -6,20 +6,20 @@ helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-ms.openlocfilehash: 0781b168b0ae8b8383affe19d2721da67f662045
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 97f537a8361c612580cc9bb41cef327e310287c2
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865030"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712666"
 ---
-# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>如何使用物件初始化運算式初始化物件（c # 程式設計手冊）
+# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>如何使用物件初始化運算式初始化物件 (c # 程式設計手冊) 
 
 您可以使用物件初始設定式以宣告方式初始化類型物件，而不需要明確叫用該類型的建構函式。  
   
-下列範例示範如何搭配具名物件使用物件初始設定式。 編譯器會先存取預設執行個體建構函式，再處理成員初始化，來處理物件初始設定式。 因此，如果無參數建構函式在類別中宣告為 `private`，需要公用存取的物件初始設定式將會失敗。
+下列範例示範如何搭配具名物件使用物件初始設定式。 編譯器會先存取無參數實例的函式，然後處理成員初始化，藉以處理物件初始化運算式。 因此，如果無參數建構函式在類別中宣告為 `private`，需要公用存取的物件初始設定式將會失敗。
   
-如果您要定義匿名型別，則必須使用物件初始設定式。 如需詳細資訊，請參閱[如何在查詢中傳回專案屬性的子集](how-to-return-subsets-of-element-properties-in-a-query.md)。  
+如果您要定義匿名型別，則必須使用物件初始設定式。 如需詳細資訊，請參閱 [如何在查詢中傳回元素屬性的子集](how-to-return-subsets-of-element-properties-in-a-query.md)。  
   
 ## <a name="example"></a>範例  
 
