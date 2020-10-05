@@ -331,6 +331,8 @@ items:
             href: ../core/diagnostics/event-counters.md
           - name: 記錄和追蹤
             href: ../core/diagnostics/logging-tracing.md
+          - name: 在容器中收集診斷
+            href: ../core/diagnostics/diagnostics-in-containers.md
           - name: .NET Core CLI 全域工具
             items:
               - name: dotnet-counters

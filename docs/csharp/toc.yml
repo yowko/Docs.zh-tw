@@ -56,7 +56,7 @@
       href: tutorials/upgrade-to-nullable-references.md
     - name: 產生及使用非同步串流
       href: tutorials/generate-consume-asynchronous-stream.md
-    - name: 使用模式比對擴充資料功能
+    - name: 使用模式比對建立資料驅動演算法
       href: tutorials/pattern-matching.md
     - name: 主控台應用程式
       href: tutorials/console-teleprompter.md
