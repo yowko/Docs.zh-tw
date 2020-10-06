@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d60a676e08c3c96291daf0d2fe2a83a831eaf9f4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a75ecdde872b0cad00cb86676205fdaa3c15ce40
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617573"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91745507"
 ---
 > [!NOTE]
-> 本主題是指 Apache Spark 的 .NET，目前為預覽狀態。
+> 本主題是指 [Apache Spark 的 .net](https://github.com/dotnet/spark)，目前為預覽狀態。
