@@ -4,12 +4,12 @@ description: 了解「.NET API 分析器」如何協助偵測已被取代的 API
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406241"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756191"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -20,7 +20,7 @@ ms.locfileid: "91406241"
 > [!NOTE]
 > .NET API 分析器目前仍然是發行前版本。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - Visual Studio 2017 及更新版本，或 Visual Studio for Mac (所有版本)。
 
@@ -124,7 +124,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="configuration"></a>組態
 
-使用者可決定診斷的處理方式：視為警告、錯誤、建議，或將其關閉。 例如，如果您是架構設計人員，就可以決定應將相容性問題視為錯誤，讓對一些已被取代之 API 的呼叫產生警告，而其他則只產生建議。 您可以依診斷識別碼及依專案分別進行此設定。 若要這樣做，請在 [方案總管]**** 中，瀏覽至您專案底下的 [相依性]**** 節點。 展開 [節點**Dependencies**相依  >  性**分析器**]  >  **DotNet**。 在診斷識別碼上按一下滑鼠右鍵，選取 [設定規則集合嚴重性]****，然後挑選想要的選項。
+使用者可決定診斷的處理方式：視為警告、錯誤、建議，或將其關閉。 例如，如果您是架構設計人員，就可以決定應將相容性問題視為錯誤，讓對一些已被取代之 API 的呼叫產生警告，而其他則只產生建議。 您可以依診斷識別碼及依專案分別進行此設定。 若要這樣做，請在 [方案總管]**** 中，瀏覽至您專案底下的 [相依性]**** 節點。 展開 [節點**Dependencies**相依  >  性**分析器**]  >  **DotNet**。 在診斷識別碼上按一下滑鼠右鍵，選取 [ **設定規則集嚴重性**]，然後選取所需的選項。
 
 ![方案總管的螢幕擷取畫面，顯示具有規則集嚴重性的診斷和快顯對話方塊。](media/api-analyzer/disable-notifications.jpg)
 

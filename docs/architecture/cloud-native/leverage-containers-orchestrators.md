@@ -2,12 +2,12 @@
 title: 利用容器和協調器
 description: 利用 Azure 中的 Docker 容器和 Kubernetes 協調器
 ms.date: 05/31/2020
-ms.openlocfilehash: 4d1dfa17fe9b4a683ab71ef2c9f97373579197af
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155545"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755905"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>利用容器和協調器
 
@@ -216,7 +216,7 @@ ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 
 除了本機開發之外， [Azure Dev Spaces](/azure/dev-spaces/) 也提供便利的方法，讓多個開發人員在 Azure 中使用自己的 Kubernetes 設定。 如圖3-7 中所示，您也可以在 Azure Dev Spaces 中執行應用程式。
 
-此外，您隨時都可以將 Docker 支援新增至現有的 ASP.NET Core 應用程式。 在 [Visual Studio] 方案總管中，以滑鼠右鍵按一下專案並**新增**  >  **Docker 支援**，如圖3-8 所示。
+此外，您隨時都可以將 Docker 支援新增至現有的 ASP.NET Core 應用程式。 在 [Visual Studio] 方案總管中，以滑鼠右鍵按一下專案，然後選取 [**新增**  >  **Docker 支援**]，如圖3-8 所示。
 
 ![Visual Studio 新增 Docker 支援](./media/visual-studio-add-docker-support.png)
 

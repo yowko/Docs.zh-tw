@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e9657c60ef2ff0ef30ae1607a0e7f2cedd01187
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551708"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756074"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework 的新功能
 
@@ -22,12 +22,12 @@ ms.locfileid: "90551708"
 - [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
-- [.NET Framework 4。7](#v47)
+- [.NET Framework 4.7](#v47)
 - [.NET Framework 4.6.2](#v462)
 - [.NET Framework 4.6.1](#v461)
 - [.NET 2015 與 .NET Framework 4.6](#v46)
 - [.NET Framework 4.5.2](#v452)
-- [.NET Framework 4.5.1](#v451)
+- [.NET Framework 4.5。1](#v451)
 - [.NET Framework 4.5](#v45)
 
 此文章並不會提供每一個新功能的完整資料，且內容可能會隨時變更。 如需 .NET Framework 的一般資訊，請參閱[使用者入門](../get-started/index.md)。 若要了解支援的平台，請參閱[系統需求](../get-started/system-requirements.md)。 如需下載連結和安裝指示，請參閱[安裝指南](../install/guide-for-developers.md)。
@@ -350,7 +350,7 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **其他集合 API**
 
-.NET Framework 4.7.2 將一些新的 API 新增至 <xref:System.Collections.Generic.SortedSet%601> 和 <xref:System.Collections.Generic.HashSet%601> 類型。 它們包括：
+.NET Framework 4.7.2 將一些新的 API 新增至 <xref:System.Collections.Generic.SortedSet%601> 和 <xref:System.Collections.Generic.HashSet%601> 類型。 其中包括：
 
 - `TryGetValue` 方法，可將其他集合類型使用的 try 模式擴充為下列兩種類型。 這些方法為：
 
@@ -434,7 +434,7 @@ c.SameSite = SameSiteMode.Lax
 
 <a name="net472"></a>
 
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a>網路
 
 **實作 HttpClientHandler 屬性**
 
@@ -630,7 +630,7 @@ End Class
 
 <a name="net471"/>
 
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a>網路
 
 **Message.HashAlgorithm 的 SHA-2 支援**
 
@@ -699,7 +699,7 @@ ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET
 
 <a name="net47"></a>
 
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a>網路
 
 .NET Framework 4.7 新增與網路有關的下列功能︰
 
@@ -731,7 +731,7 @@ Windows Communication Foundation (WCF) 加入下列功能和變更：
 
 **能夠將預設的訊息安全性設定設定為 TLS 1.1 或 TLS 1.2**
 
-從 .NET Framework 4.7 開始， 除了 SSL 3.0 和 TSL 1.0 之外，WCF 還可讓您設定 TSL 1.1 或 TLS 1.2 作為預設的訊息安全性通訊協定。 這是選擇性的設定。若要啟用，您必須在應用程式組態檔中加入下列項目︰
+從 .NET Framework 4.7 開始，除了 SSL 3.0 和 TLS 1.0 之外，WCF 還可讓您設定 TLS 1.1 或 TLS 1.2 作為預設的訊息安全性通訊協定。 這是選擇性的設定。若要啟用，您必須在應用程式組態檔中加入下列項目︰
 
 ```xml
 <runtime>
@@ -741,7 +741,7 @@ Windows Communication Foundation (WCF) 加入下列功能和變更：
 
 **改進 WCF 應用程式和 WCF 序列化的可靠性**
 
-WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能和序列化選項的可靠性。 它們包括：
+WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能和序列化選項的可靠性。 其中包括：
 
 - 在呼叫 **SocketConnection.BeginRead** 和 **SocketConnection.Read** 時更有效地支援混合非同步和同步程式碼。
 - 改善中止與 **SharedConnectionListener** 和 **DuplexChannelBinder** 連線時的可靠性。
@@ -841,7 +841,7 @@ End Class
 
 然後，您可以建立 DataAnnotation.Localization.fr.resx 資源檔，其索引鍵為錯誤訊息字串，而其值為當地語系化的錯誤訊息。 檔案必須位於 `App.LocalResources` 資料夾中。 例如，下列是索引鍵和其法文 (fr) 當地語系化錯誤訊息的值︰
 
-| 名稱                                 | 值                                     |
+| Name                                 | 值                                     |
 | ------------------------------------ | ----------------------------------------- |
 | The rating must be between 1 and 10. | La note doit être comprise entre 1 et 10. |
 
@@ -1431,7 +1431,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
     HTTP/2 也支援使用 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API 的 Windows 10 通用平台 (UWP) 應用程式，並預設為啟用。
 
-    為了提供一個在 ASP.NET 應用程式中使用 [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) 功能的方式，已將含有 <xref:System.Web.HttpResponse.PushPromise%28System.String%29> 和 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> 這兩個多載的新方法新增到 <xref:System.Web.HttpResponse> 類別。
+    為了提供一個在 ASP.NET 應用程式中使用 [PUSH_PROMISE](https://httpwg.github.io/http2-spec/#PUSH_PROMISE) 功能的方式，已將含有 <xref:System.Web.HttpResponse.PushPromise%28System.String%29> 和 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> 這兩個多載的新方法新增到 <xref:System.Web.HttpResponse> 類別。
 
     > [!NOTE]
     > ASP.NET Core 支援 HTTP/2，但尚未新增 PUSH PROMISE 功能的支援。

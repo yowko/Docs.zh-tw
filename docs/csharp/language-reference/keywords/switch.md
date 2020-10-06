@@ -13,12 +13,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 20c1d9786eaa184088500cf1b37d33afc421b5e7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d8fae870bb3a6fdda735a028dc1da20213a68a31
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142020"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756035"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
@@ -87,7 +87,7 @@ switch (caseSwitch)
 
 每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至包含「第一個」**** 相符 case 標籤的參數區段。 若無任何狀況標籤模式符合比對運算式，會將控制權轉移到具有 `default` 狀況標籤的區段 (如有此區段)。 如果沒有 `default` 狀況，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
 
-如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern-matching with-the-switch-statement)一節。
+如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern-matching-with-the-switch-statement)一節。
 
 因為 C# 6 只支援常數模式，且不允許重複常數值，所以狀況標籤會定義互斥值，而且只有一個模式可以符合比對運算式。 因此，`case` 陳述式的出現順序並不重要。
 

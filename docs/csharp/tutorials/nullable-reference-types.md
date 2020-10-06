@@ -4,16 +4,16 @@ description: 本進階教學課程提供可為 Null 的參考類型簡介。 您
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 70e6a7a906bc9a35918cf3e26c3e23bd0cfdafde
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249125"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755846"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
-C# 8.0 引入了[可空參考型別](../nullable-references.md)，它以同樣方式補充參考型別，空數值型別補充數值型別。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」**，而其他變數「可能會遺漏值」**。
+C # 8.0 導入了 [可為](../nullable-references.md)null 的參考型別，以可為 null 的實值型別補充實數值型別。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」**，而其他變數「可能會遺漏值」**。
 
 在本教學課程中，您將了解如何：
 
@@ -24,21 +24,21 @@ C# 8.0 引入了[可空參考型別](../nullable-references.md)，它以同樣�
 > - 撰寫程式碼，以使編譯器強制執行這些設計決策。
 > - 在您自己的設計中使用可為 Null 的參考功能
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-您需要設置電腦以運行 .NET Core，包括 C# 8.0 編譯器。 C# 8.0 編譯器可用於[Visual Studio 2019，](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+您必須設定電腦以執行 .NET Core，包括 c # 8.0 編譯器。 C # 8.0 編譯器適用于 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或 [.net Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)。
 
 本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
 ## <a name="incorporate-nullable-reference-types-into-your-designs"></a>在設計中併入可為 Null 的參考類型
 
-在本教學課程中，您會建置程式庫來將問卷執行模型化。 程式碼會使用可為 Null 的參考類型和不可為 Null 的參考類型來代表真實世界的概念。 問卷問題絕對不能是 Null。 受訪者可能不想回答問題。 在這種情況下，回應可能`null`為"
+在本教學課程中，您會建置程式庫來將問卷執行模型化。 程式碼會使用可為 Null 的參考類型和不可為 Null 的參考類型來代表真實世界的概念。 問卷問題絕對不能是 Null。 受訪者可能不想回答問題。 `null`在此情況下，回應可能為。
 
 您將為此範例撰寫的程式碼會表達該意圖，而編譯器會強制執行該意圖。
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>建立應用程式並啟用可為 Null 的參考類型
 
-在 Visual Studio 中或從命令列中使用 `dotnet new console` 來建立新的主控台應用程式。 為應用程式 `NullableIntroduction` 命名。 創建應用程式後，需要指定整個專案編譯在啟用的**空注釋上下文中**。 打開 *.csproj*檔並將`Nullable`元素添加到`PropertyGroup`元素。 將值設為 `enable`。 您必須選擇進入**可不正確參考型別**功能，即使在 C# 8.0 專案中也是如此。 這是因為一旦開啟此功能之後，現有的參考變數宣告就會變成**不可為 Null 的參考類型**。 雖然該決定將有助於查找現有代碼可能沒有適當空檢查的問題，但它可能無法準確反映您的原始設計意圖：
+在 Visual Studio 中或從命令列中使用 `dotnet new console` 來建立新的主控台應用程式。 為應用程式 `NullableIntroduction` 命名。 建立應用程式之後，您必須指定整個專案在啟用的 **可為 null 注釋內容**中進行編譯。 開啟 *.csproj* 檔案，並將元素加入 `Nullable` 至 `PropertyGroup` 元素。 將值設為 `enable`。 您必須加入宣告 **可為 null 的參考型別** 功能，即使是在 c # 8.0 專案中也一樣。 這是因為一旦開啟此功能之後，現有的參考變數宣告就會變成**不可為 Null 的參考類型**。 雖然該決策將有助於找出現有程式碼可能沒有正確的 null 檢查的問題，但它可能無法正確反映您的原始設計意圖：
 
 ```xml
 <Nullable>enable</Nullable>
@@ -58,23 +58,23 @@ C# 8.0 引入了[可空參考型別](../nullable-references.md)，它以同樣�
 - 受訪者絕對不能是 Null。 您會想要追蹤連絡過的人員，甚至是拒絕參與的受訪者。
 - 對於問題的任何回應可能會是 Null。 受訪者可以拒絕回答部分或所有問題。
 
-如果您已使用 C# 程式設計，您可能已經習慣了允許`null`值的參考型別，您可能錯過了聲明非空實例的其他機會：
+如果您已經使用 c # 進行程式設計，您可能會習慣參考型別，而這些型別可讓 `null` 您遺漏其他機會宣告不可為 null 的實例：
 
 - 問題的集合不應為 Null。
 - 受訪者的集合不應為 Null。
 
-編寫代碼時，您將看到作為引用的預設值的非空參考型別可以避免可能導致<xref:System.NullReferenceException>的的常見錯誤。 本教程的一個教訓是，您決定哪些變數可以或不能`null`是 。 此語言不提供語法來表達那些決策。 但現在已提供。
+當您撰寫程式碼時，您會看到一個不可為 null 的參考型別做為參考的預設值，可避免可能導致的常見錯誤 <xref:System.NullReferenceException> 。 本教學課程中的一堂課程是，您已決定哪些變數可能或無法執行 `null` 。 此語言不提供語法來表達那些決策。 但現在已提供。
 
-您將構建的應用執行以下步驟：
+您將建立的應用程式會執行下列步驟：
 
-1. 創建調查並添加問題。
-1. 為調查創建一組偽隨機調查物件。
-1. 在已完成的調查規模達到目標編號之前與受訪者聯繫。
-1. 寫出關於調查回應的重要統計資料。
+1. 建立問卷並在其中加入問題。
+1. 針對問卷建立一組虛擬隨機的受訪者。
+1. 連絡人的意見回應，直到完成的問卷大小達到目標數目為止。
+1. 寫出問卷回應的重要統計資料。
 
-## <a name="build-the-survey-with-nullable-and-non-nullable-reference-types"></a>使用可空和不可取消的參考型別生成調查
+## <a name="build-the-survey-with-nullable-and-non-nullable-reference-types"></a>使用可為 null 且不可為 null 的參考型別來建立問卷
 
-您將撰寫的第一個程式碼會建立問卷。 您會撰寫類別來將問卷問題和問卷執行模型化。 您的問卷具有三種類型的問題，其會依答案的格式來區別：是/否的答案、數字答案，以及文字答案。 創建類`public SurveyQuestion`：
+您將撰寫的第一個程式碼會建立問卷。 您會撰寫類別來將問卷問題和問卷執行模型化。 您的問卷具有三種類型的問題，其會依答案的格式來區別：是/否的答案、數字答案，以及文字答案。 建立 `public SurveyQuestion` 類別：
 
 ```csharp
 namespace NullableIntroduction
@@ -85,7 +85,7 @@ namespace NullableIntroduction
 }
 ```
 
-編譯器將每個參考型別變數聲明解釋為啟用的可啟用的空注釋上下文中代碼**的不可空**參考型別。 您可以藉由新增問題文字的屬性和問題的類型來查看第一個警告，如下列程式碼所示：
+編譯器會針對啟用的可為 null 注釋內容中的程式碼，將每個參考型別變數宣告解釋為 **不可為 null** 的參考型別。 您可以藉由新增問題文字的屬性和問題的類型來查看第一個警告，如下列程式碼所示：
 
 ```csharp
 namespace NullableIntroduction
@@ -131,11 +131,11 @@ namespace NullableIntroduction
 
 和以前一樣，您必須將清單物件初始化為非 Null 的值，否則編譯器會發出警告。 不會在 `AddQuestion` 的第二個多載中進行任何 Null 檢查，因為不需要：您已將該變數宣告成不可為 Null。 其值不可以是 `null`。
 
-切換到編輯器中的*Program.cs，* 並將 的內容`Main`替換為以下程式碼：
+切換至編輯器中的 *Program.cs* ，並以 `Main` 下列幾行程式碼取代的內容：
 
 [!code-csharp[AddQuestions](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-由於整個專案位於啟用的可空注釋上下文中，因此當您傳遞到`null`任何需要非空參考型別的方法時，您都會收到警告。 將下列這一行新增到 `Main` 來試用它：
+由於整個專案都是在啟用的可為 null 注釋內容中，因此當您傳遞 `null` 給任何需要不可為 null 參考型別的方法時，將會收到警告。 將下列這一行新增到 `Main` 來試用它：
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
@@ -176,7 +176,7 @@ namespace NullableIntroduction
 
 [!code-csharp[AnswerSurvey](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
-問卷答案的儲存體是 `Dictionary<int, string>?`，指出它可能是 Null。 您正在使用新的語言功能，來向編譯器和稍後要讀取您程式碼的任何人宣告您的設計意圖。 如果在未首先檢查`surveyResponses``null`該值的情況下取消引用，則會收到編譯器警告。 您不會在 `AnswerSurvey` 方法中收到警告，因為編譯器可判斷並未將 `surveyResponses` 變數設定為上述的非 Null 值。
+問卷答案的儲存體是 `Dictionary<int, string>?`，指出它可能是 Null。 您正在使用新的語言功能，來向編譯器和稍後要讀取您程式碼的任何人宣告您的設計意圖。 如果您在 `surveyResponses` 未先檢查值的情況下進行 `null` 取值，您將會收到編譯器警告。 您不會在 `AnswerSurvey` 方法中收到警告，因為編譯器可判斷並未將 `surveyResponses` 變數設定為上述的非 Null 值。
 
 針對遺漏的問題使用 `null`，醒目提示使用可為 Null 參考型別時的一項關鍵點：您的目標不是從程式中移除所有 `null` 值。 您的目標是確保您所撰寫程式碼能夠表達出設計意圖。 遺漏值是在您程式碼中進行表達的必要概念。 `null` 值是表達那些遺漏值的清楚方式。 嘗試移除所有 `null` 值只會導向定義其他方式，在不使用 `null` 的情況下表達那些遺漏值。
 
@@ -196,7 +196,7 @@ namespace NullableIntroduction
 
 [!code-csharp[ReportResponses](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-由於`surveyResponses`是一個空參考型別，因此在取消引用之前需要進行空檢查。 該方法`Answer`返回一個不可否定的字串，因此我們必須使用空聚接運算子來覆蓋缺少答案的情況。
+因為 `surveyResponses` 是可為 null 的參考型別，所以必須先有 null 檢查，再將它取消參考。 `Answer`方法會傳回不可為 null 的字串，因此我們必須使用 null 聯合運算子來涵蓋遺漏答案的案例。
 
 接著，將這三個運算式主體成員新增到 `SurveyRun` 類別：
 
@@ -221,3 +221,6 @@ namespace NullableIntroduction
 請透過將現有的應用程式遷移至使用可為 Null 參考型別，來深入了解：
 > [!div class="nextstepaction"]
 > [升級應用程式以使用可為 Null 參考型別](upgrade-to-nullable-references.md)
+
+瞭解如何在使用 Entity Framework 時使用可為 null 的參考型別：
+> [Entity Framework Core 基本概念：使用可為 Null 的參考型別](https://docs.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types)

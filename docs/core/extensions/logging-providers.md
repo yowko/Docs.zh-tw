@@ -4,12 +4,12 @@ description: 瞭解如何在 .NET 應用程式中使用記錄提供者 API。
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: 3bd10564f23744d4798d0a6a4b49a7a29be2bc19
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 96a5ece10068e39c991e67a36f22e725d6380af5
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654680"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755884"
 ---
 # <a name="logging-providers-in-net"></a>.NET 中的記錄提供者
 
@@ -212,7 +212,7 @@ Azure 記錄串流支援即時查看記錄活動：
 
 - [elmah.io](https://elmah.io) ([GitHub 存放庫](https://github.com/elmahio/Elmah.Io.Extensions.Logging))
 - [Gelf](https://docs.graylog.org/en/2.3/pages/gelf.html) ([GitHub 存放庫](https://github.com/mattwcole/gelf-extensions-logging))
-- [JSNLog](https://jsnlog.com) ([GitHub 存放庫](https://github.com/mperdeck/jsnlog))
+- [JSNLog](http://jsnlog.com) ([GitHub 存放庫](https://github.com/mperdeck/jsnlog))
 - [KissLog.net](https://kisslog.net) ([GitHub 存放庫](https://github.com/catalingavan/KissLog-net))
 - [Log4Net](https://logging.apache.org/log4net) ([GitHub](https://github.com/apache/logging-log4net) 存放庫) 
 - [Loggr](https://loggr.net) ([GitHub 存放庫](https://github.com/imobile3/Loggr.Extensions.Logging))

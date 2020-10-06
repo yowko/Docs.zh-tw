@@ -1,16 +1,16 @@
 ---
-title: 平臺相容性分析器
+title: 平台相容性分析器
 description: Roslyn 分析器，可協助偵測跨平臺應用程式和程式庫中的平臺相容性問題。
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 4e842e5bbe90dd5006d9b27d0365f908b6441997
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: fcd5ec755789ff7f2472d8077dd52f321bf9f167
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406598"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756178"
 ---
-# <a name="platform-compatibility-analyzer"></a>平臺相容性分析器
+# <a name="platform-compatibility-analyzer"></a>平台相容性分析器
 
 您可能聽過「單一 .NET」的格言：單一、統一的平臺，可用於建立任何類型的應用程式。 .NET 5.0 SDK 包含 ASP.NET Core、Entity Framework Core、WinForms、WPF、Xamarin 和 ML.NET，並且會隨著時間增加更多平臺的支援。 .NET 5.0 致力於提供一種體驗，讓您不必擔心不同的 .NET 種類，但也不會嘗試完全抽象化基礎作業系統)  (作業系統。 您將繼續能夠呼叫平臺專屬的 Api，例如 P/Invoke、WinRT 或適用于 iOS 和 Android 的 Xamarin 系結。
 
@@ -23,7 +23,7 @@ ms.locfileid: "91406598"
 > [!TIP]
 > 平臺相容性分析器會升級並取代[.NET API 分析器](../../standard/analyzers/api-analyzer.md)的[探索跨平臺問題](../../standard/analyzers/api-analyzer.md#discover-cross-platform-issues)功能。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 平臺相容性分析器是 Roslyn 的程式碼品質分析器之一。 從 .NET 5.0 開始，這些分析器會 [隨附于 .NET SDK](../../fundamentals/productivity/code-analysis.md)。 根據預設，平臺相容性分析器僅針對以或更新版本為目標的專案啟用 `net5.0` 。 不過，您可以針對以其他架構為目標的專案 [啟用](/visualstudio/code-quality/ca1416.md#configurability) 它。
 
@@ -70,7 +70,7 @@ ms.locfileid: "91406598"
     ```
 
   - **唯一不支援的清單**。 如果每個作業系統平臺的最低版本是 `[UnsupportedOSPlatform]` 屬性，則會將 API 視為只有列出的平臺不支援，而且所有其他平臺都支援此 API。 此清單可能具有 `[SupportedOSPlatform]` 相同平臺但版本較高的屬性，代表從該版本開始支援 API。
-  
+
     ```csharp
     // The API was unsupported on Windows until version 10.0.19041.0.
     // The API is considered supported everywhere else without constraints.
@@ -81,14 +81,14 @@ ms.locfileid: "91406598"
 
   - **不一致的清單**。 如果某些平臺的最低版本是 `[SupportedOSPlatform]` 在 `[UnsupportedOSPlatform]` 其他平臺上，則會被視為不一致，分析器不支援此版本。
   - 如果和屬性的最小版本 `[SupportedOSPlatform]` `[UnsupportedOSPlatform]` 相等，分析器會將平臺視為 **支援的唯一清單**的一部分。
-- 平臺屬性可以套用至類型、成員 (方法、欄位、屬性和事件) 以及具有不同平臺名稱和/或版本的元件。
+- 平臺屬性可以套用至類型、成員 (方法、欄位、屬性和事件) 以及具有不同平臺名稱或版本的元件。
   - 在最上層套用的屬性 `target` 會影響其所有成員和類型。
-  - 只有當子系層級屬性符合規則「子批註可以縮小平臺支援，但無法將其加寬」時，才適用。
-    - 當父系 **僅支援** 清單時，子成員屬性無法加入新的平臺支援，因為它會擴充父系支援，而新的平臺支援只能新增至父系本身。 但是，它可以有 `Supported` 與較新版本相同平臺的屬性，因為這樣會縮小支援範圍。 此外，它也可以具有 `Unsupported` 與相同平臺相同的屬性，這樣也會減少父系支援。
-    - 當父系有 **不支援** 的清單時，子成員屬性可能會加入新的平臺支援，因為這樣會縮小父項支援，但它不能具有與 `Supported` 父系中相同平臺的屬性，因此會擴充父系支援。 相同平臺的支援只能加入至套用原始屬性的父層級 `Unsupported` 。
-  - 如果 `[SupportedOSPlatform("platformVersion")]` 針對具有相同名稱的 API 套用了一次以上， `platform` 分析器會考慮最低版本的 API。
-  - 如果 `[UnsupportedOSPlatform("platformVersion")]` 為相同名稱的 API 套用了兩次以上 `platform` ，分析器就只會考慮使用最舊版本的兩個。
-  
+  - 只有當子系層級的屬性符合規則「子批註可以縮小平臺支援，但無法將其加寬」時，才適用。
+    - 當父系 **僅支援** 清單時，子成員屬性無法加入新的平臺支援，因為這樣會擴充父系支援。 只能將新平臺的支援新增至父系本身。 但是子系可以具有 `Supported` 與較新版本相同平臺的屬性，因為這樣會縮小支援。 此外，子系的屬性也可以是相同的平臺，也就是可 `Unsupported` 縮小父支援。
+    - 當父系有 **不支援** 的清單時，子成員屬性可以新增新平臺的支援，因為這樣會縮小父系支援。 但是，它不能有與 `Supported` 父系相同平臺的屬性，因為它會擴充父系支援。 相同平臺的支援只能加入至套用原始屬性的父系 `Unsupported` 。
+  - 如果為 `[SupportedOSPlatform("platformVersion")]` 相同名稱的 API 套用了一次以上 `platform` ，分析器只會考慮具有最小版本的應用程式。
+  - 如果 `[UnsupportedOSPlatform("platformVersion")]` 為相同名稱的 API 套用了兩次以上 `platform` ，分析器就只會將這兩個版本視為最舊的版本。
+
   > [!NOTE]
   > 在較新版本中，一開始就支援但不支援 (移除) 的 API，不應該在較新版本中取得 resupported。
 
@@ -123,7 +123,7 @@ ms.locfileid: "91406598"
       // warns: 'SupportedOnWindowsAndLinuxOnly' is supported on 'Linux'
       SupportedOnWindowsAndLinuxOnly();
 
-      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later  
+      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later
       // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is unsupported on 'windows' 10.0.19041.0 and later
       ApiSupportedFromWindows8UnsupportFromWindows10();
 
@@ -133,7 +133,7 @@ ms.locfileid: "91406598"
   }
 
   // an API not supported on android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.
@@ -154,11 +154,11 @@ ms.locfileid: "91406598"
   {
       DoesNotWorkOnAndroid(); // warns 'DoesNotWorkOnAndroid' is unsupported on 'android'
 
-      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFromVersion8' is supported on 'windows' 8.0 and later
       StartedWindowsSupportFromVersion8();
 
-      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is supported on 'windows' 8.0 and later
       // even there were 3 diagnostics found analyzer warn only for the first 2.
       StartedWindowsSupportFrom8UnsupportedFrom10();
@@ -177,7 +177,7 @@ ms.locfileid: "91406598"
 
 - **刪除程式碼**。 通常不是您想要的，因為這表示當 Windows 使用者使用您的程式碼時，會喪失精確度。 如果存在跨平臺的替代方案，您可能會比使用平臺專用的 Api 更好。
 
-- **隱藏警告**。 您也可以直接透過 editor.config 或隱藏警告 `#pragma warning disable ca1416` 。 不過，此選項應該是使用平臺特定 Api 時的最後手段。
+- **隱藏警告**。 您也可以直接透過 EditorConfig 專案或來隱藏警告 `#pragma warning disable ca1416` 。 不過，此選項應該是使用平臺特定 Api 時的最後手段。
 
 ### <a name="guard-platform-specific-apis-with-guard-methods"></a>使用 guard 方法保護平臺特定的 Api
 
@@ -231,7 +231,7 @@ Guard 方法的平臺名稱應該與呼叫平臺相依的 API 平臺名稱相符
   }
   ```
 
-- 如果您需要保護以 netstandard 或 netcoreapp 為目標的程式碼， <xref:System.OperatingSystem> 但無法使用新的 api <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> ，則可以使用 api 並將由分析器遵循。 但是，它並不像新增的 Api 一樣優化 <xref:System.OperatingSystem> 。 如果結構中不支援該平臺 <xref:System.Runtime.InteropServices.OSPlatform> ，您可以流量分析器也會遵循的 <xref:System.Runtime.InteropServices.OSPlatform.Create%2A?displayProperty=nameWithType> ( 「平臺」 ) 。
+- 如果您需要保護以 `netstandard` 或 `netcoreapp` 不提供新 api 為目標的程式碼 <xref:System.OperatingSystem> ，則 <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> 可以使用 API，並將會由分析器來遵守。 但是，它並不像新增的 Api 一樣優化 <xref:System.OperatingSystem> 。 如果結構中不支援該平臺 <xref:System.Runtime.InteropServices.OSPlatform> ，您可以呼叫 <xref:System.Runtime.InteropServices.OSPlatform.Create(System.String)?displayProperty=nameWithType> 並傳入平臺名稱（分析器也會遵循）。
 
   ```csharp
   public void CallingSupportedOnlyApis()
@@ -316,7 +316,7 @@ Guard 方法的平臺名稱應該與呼叫平臺相依的 API 平臺名稱相符
   }
 
   // an API not supported on Android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.

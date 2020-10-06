@@ -3,12 +3,12 @@ title: 類別和物件 - C# 教學課程簡介
 description: 建立您的第一個 C# 程式並探索物件導向概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 57394ecb02745d69e22f4d9f1dbd4213f290cd5a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 90abe3836292029ce7ebf26ae9be3253c4eface1
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609046"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756048"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>探索使用類別與物件的物件導向程式設計
 
@@ -210,7 +210,7 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>後續步驟
 
-如果您遇到困難，您可以 [在 GitHub 存放庫中](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/classes-quickstart/)看到此教學課程的來源。
+如果您遇到困難，您可以 [在 GitHub 存放庫中](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/introduction-to-classes)看到此教學課程的來源。
 
 您可以繼續進行 [物件導向程式設計](object-oriented-programming.md) 教學課程。
 

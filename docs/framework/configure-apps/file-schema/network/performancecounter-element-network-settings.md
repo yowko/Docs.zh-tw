@@ -1,21 +1,20 @@
 ---
-title: <performanceCounter> 項目 (網路設定)
+title: <performanceCounters> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#performanceCounters
 helpviewer_keywords:
-- performanceCounter element
-- <performanceCounter> element
+- performanceCounters element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 4859f3a9e6de4f1bf8a56212bfe01f94d66f5650
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 584bdafbbd60303401cbc6ad96b8654fe11c7077
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91190237"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756256"
 ---
-# <a name="performancecounter-element-network-settings"></a>\<performanceCounter> 項目 (網路設定)
+# <a name="performancecounters-element-network-settings"></a>\<performanceCounters> 項目 (網路設定)
 
 啟用或停用網路效能計數器。  
 
@@ -24,7 +23,7 @@ ms.locfileid: "91190237"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<performanceCounters>**
 
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>語法  
   
 ```xml  
 <performanceCounters  
@@ -48,7 +47,7 @@ ms.locfileid: "91190237"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[設定](settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
