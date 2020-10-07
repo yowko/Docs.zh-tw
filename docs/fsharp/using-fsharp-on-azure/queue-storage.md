@@ -4,12 +4,12 @@ description: Azure 佇列可在應用程式元件之間提供可靠的非同步�
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 5d6074751f226f0587c4c73bfa9ff56d9aca2bc1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: daa5372b7903f10c0d966c5c92e35c8bf9d362d8
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100083"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756217"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>以 F 開始使用 Azure 佇列儲存體\#
 
@@ -21,7 +21,7 @@ Azure 佇列儲存體可提供應用程式元件之間的雲端傳訊。 設計�
 
 如需佇列儲存體的概念總覽，請參閱 [佇列儲存體的 .net 指南](/azure/storage/storage-dotnet-how-to-use-queues)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 若要使用本指南，您必須先 [建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)。
 您也需要此帳戶的儲存體存取金鑰。
@@ -117,7 +117,7 @@ Azure 佇列儲存體可提供應用程式元件之間的雲端傳訊。 設計�
 ## <a name="additional-options-for-de-queuing-messages"></a>其他將訊息移出佇列的選項
 
 自訂從佇列中擷取訊息的方法有兩種。
-首先，您可以取得一批訊息 (最多 32 個)。 其次，您可以設定較長或較短的可見度逾時，讓您的程式碼有較長或較短的時間可以完全處理每個訊息。 下列程式碼範例會使用 `GetMessages` 在一個呼叫中取得20個訊息，然後處理每個訊息。 它也會將可見度逾時設定為每個訊息五分鐘。 請注意，系統會同時為所有訊息啟動5分鐘，因此在呼叫後經過5分鐘後 `GetMessages` ，任何尚未刪除的訊息都會重新顯示。
+首先，您可以取得一批訊息 (最多 32 個)。 其次，您可以設定較長或較短的可見度逾時，讓您的程式碼有較長或較短的時間可以完全處理每個訊息。 下列程式碼範例會使用 `GetMessages` 在一個呼叫中取得20個訊息，然後處理每個訊息。 它也會將可見度逾時設定為每個訊息五分鐘。 系統會為所有訊息同時開始5分鐘，因此在呼叫後經過5分鐘後 `GetMessages` ，任何尚未刪除的訊息都會重新顯示。
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 

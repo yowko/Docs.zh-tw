@@ -4,12 +4,12 @@ description: 使用 Azure 資料表儲存體或 Azure Cosmos DB 將結構化資�
 author: sylvanc
 ms.date: 03/26/2018
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: f4a22ec14de6c92414fbcf3cca435e2b5c0805f1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bf4f2e63c847e18d253fe5b6cf5dd7773c320fb7
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100096"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756204"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和使用 F 的 Azure Cosmos DB 資料表 API\#
 
@@ -33,7 +33,7 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，且需要高階
 
 本教學課程說明如何使用 Azure 資料表儲存體或 Azure Cosmos DB 資料表 API 撰寫 F # 程式碼來進行一些常見工作，包括建立和刪除資料表，以及插入、更新、刪除和查詢資料表資料。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 若要使用本指南，您必須先 [建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account) 或 [Azure Cosmos DB 帳戶](https://azure.microsoft.com/try/cosmosdb/)。
 
@@ -55,7 +55,7 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，且需要高階
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>取得 Azure Cosmos DB 連接字串
 
-如果您要連接到 Azure Cosmos DB，您將需要此教學課程的連接字串。 您可以從 Azure 入口網站複製您的連接字串。 在 Azure 入口網站的 Cosmos DB 帳戶中，移至 [**設定**  >  **連接字串**]，然後按一下 [**複製**] 按鈕以複製您的主要連接字串。
+如果您要連接到 Azure Cosmos DB，您將需要此教學課程的連接字串。 您可以從 Azure 入口網站複製您的連接字串。 在 Azure 入口網站的 Cosmos DB 帳戶中，移至 [**設定**  >  **連接字串**]，然後選取 [**複製**] 按鈕以複製您的主要連接字串。
 
 針對本教學課程，請在腳本中輸入您的連接字串，如下列範例所示：
 
@@ -162,7 +162,7 @@ Azure Cosmos DB 提供針對 Azure 資料表儲存體所撰寫，且需要高階
 
 ### <a name="query-a-subset-of-entity-properties"></a>查詢實體屬性的子集
 
-資料表查詢可以只從實體中取出幾個屬性，而不是所有屬性。 這項稱為「投射」的技術可以改善查詢效能，尤其是針對大型實體。 在這裡，您只會使用和傳回電子郵件地址 `DynamicTableEntity` `EntityResolver` 。 請注意在本機儲存體模擬器上並不支援投影，因此此程式碼只有在資料表服務上使用帳戶時才會執行。
+資料表查詢可以只從實體中取出幾個屬性，而不是所有屬性。 這項稱為「投射」的技術可以改善查詢效能，尤其是針對大型實體。 在這裡，您只會使用和傳回電子郵件地址 `DynamicTableEntity` `EntityResolver` 。 本機儲存體模擬器不支援投影，因此此程式碼只有在您使用表格服務上的帳戶時才會執行。
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 

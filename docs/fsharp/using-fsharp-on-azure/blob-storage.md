@@ -4,12 +4,12 @@ description: 使用 Azure Blob 儲存體在雲端中儲存非結構化資料。
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100148"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756243"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>使用 F 開始使用 Azure Blob 儲存體\#
 
@@ -19,7 +19,7 @@ Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/bl
 
 如需 blob 儲存體的概念總覽，請參閱 [適用于 blob 儲存體的 .net 指南](/azure/storage/blobs/storage-quickstart-blobs-dotnet)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 若要使用本指南，您必須先 [建立 Azure 儲存體帳戶](/azure/storage/common/storage-account-create)。 您也需要此帳戶的儲存體存取金鑰。
 
@@ -99,7 +99,7 @@ Azure Blob 儲存體支援區塊 Blob 和頁面 Blob。 在大多數情況下，
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-您也可以使用名稱的路徑資訊來命名 blob。 這會建立虛擬目錄結構，讓您能夠組織及周遊，就像使用傳統檔案系統一樣。 請注意，目錄結構僅限虛擬目錄結構 - Blog 儲存體中唯一可用的資源為容器和 blob。 不過，儲存體用戶端程式庫會提供 `CloudBlobDirectory` 物件來參考虛擬目錄，並簡化使用以這種方式組織之 blob 的處理常式。
+您也可以使用名稱的路徑資訊來命名 blob。 這會建立虛擬目錄結構，讓您能夠組織及周遊，就像使用傳統檔案系統一樣。 目錄結構僅限虛擬，Blob 儲存體中唯一可用的資源是容器和 blob。 不過，儲存體用戶端程式庫會提供 `CloudBlobDirectory` 物件來參考虛擬目錄，並簡化使用以這種方式組織之 blob 的處理常式。
 
 例如，假設名為 `photos`的容器中有下面這一組區塊 blob：
 
@@ -173,7 +173,7 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 ## <a name="writing-to-an-append-blob"></a>寫入附加 Blob
 
-附加 Blob 已針對附加作業 (例如紀錄) 最佳化。 如同區塊 Blob，附加 Blob 亦由區塊組成，但當您將新區塊加入附加 Blob 時，它一律會附加到 Blob 結尾。 您無法更新或刪除附加 Blob 中的現有區塊。 附加 Blob 的區塊識別碼不會公開顯示，因為該識別碼適用於區塊 Blob。
+附加 Blob 已針對附加作業 (例如紀錄) 最佳化。 如同區塊 blob，附加 blob 是由區塊所組成，但當您將新區塊新增至附加 blob 時，它一律會附加至 blob 的結尾。 您無法更新或刪除附加 Blob 中的現有區塊。 附加 Blob 的區塊識別碼不會公開顯示，因為該識別碼適用於區塊 Blob。
 
 附加 Blob 中的每個區塊大小都不同，最大為 4 MB，而附加 Blob 可包含高達 50,000 個區塊。 因此，附加 Blob 的大小上限稍高於 195 GB (4 MB X 50,000 個區塊)。
 
@@ -189,7 +189,7 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 - **Etag** - 提供方法來偵測 Blob 或容器已被另一個程序修改過
 
-- **租用** - 提供方法來取得在一段時間內對 Blob 的獨佔、可更新、寫入或刪除存取權
+- **租用** -提供一段時間來取得對 blob 的獨佔、可再生、寫入或刪除存取權的方法。
 
 如需詳細資訊，請參閱 [管理 Microsoft Azure 儲存體中的並行](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)存取。
 
@@ -207,7 +207,7 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 1. 容器名稱的所有字母必須都是小寫。
 1. 容器名稱必須介於 3 至 63 個字元長。
 
-請注意容器的名稱一律必須小寫。 如果在容器名稱中含有大寫字母，或其他違反容器命名規則，您可能會收到「400 錯誤 (不正確的要求)」錯誤訊息。
+容器的名稱必須一律為小寫。 如果在容器名稱中含有大寫字母，或其他違反容器命名規則，您可能會收到「400 錯誤 (不正確的要求)」錯誤訊息。
 
 ## <a name="managing-security-for-blobs"></a>管理 Blob 安全性
 
@@ -228,7 +228,7 @@ Azure 儲存體支援在用戶端和伺服器上加密 blob 資料。
 ### <a name="tools"></a>工具
 
 - [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
-F # 型別提供者，可用來探索 Blob、資料表和佇列 Azure 儲存體的資產，並輕鬆地對其套用 CRUD 作業。
+F # 型別提供者，可用來流覽 Blob、資料表和佇列 Azure 儲存體資產，並輕鬆地對其套用 CRUD 作業。
 
 - [Fsharp.core](https://github.com/fsprojects/FSharp.Azure.Storage)\
 使用 Microsoft Azure 資料表儲存體服務的 F # API

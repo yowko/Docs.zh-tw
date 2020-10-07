@@ -1,15 +1,15 @@
 ---
 title: '使用套件管理搭配適用于 Azure 的 F #'
-description: '使用 Paket 或 Nuget 來管理 F # Azure 相依性'
+description: '使用 Paket 或 NuGet 來管理 F # Azure 相依性'
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 011a363b264079599e8b7d402fe9896045b1fe04
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7816c82e87db113a35fef967886c8c3e27959332
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100109"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756230"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# Azure 相依性的套件管理
 
@@ -53,7 +53,7 @@ ms.locfileid: "91100109"
 > mono paket.exe update
 ```
 
-## <a name="using-nuget"></a>使用 Nuget
+## <a name="using-nuget"></a>使用 NuGet
 
 如果您使用 [NuGet](https://www.nuget.org/) 做為您的相依性管理員，您可以使用此 `nuget.exe` 工具來新增 Azure 相依性。 例如：
 
