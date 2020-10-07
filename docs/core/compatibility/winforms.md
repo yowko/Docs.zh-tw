@@ -2,12 +2,12 @@
 title: Windows Forms 重大變更
 description: 列出適用于 .NET Core 和 .NET 5 的 Windows Forms 中的重大變更。
 ms.date: 09/08/2020
-ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 2311faab026bf1dfde348e231937eff73ec46172
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678992"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804853"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 中的重大變更
 
@@ -17,6 +17,7 @@ ms.locfileid: "90678992"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [DataGridView 不會再重設自訂儲存格樣式的字型](#datagridview-no-longer-resets-fonts-for-customized-cell-styles) | 5.0 |
 | [適用于 WPF 和 WinForms 應用程式的 OutputType 設定為 WinExe](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [DataGridView 相關的 Api 現在會擲回 InvalidOperationException](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [WinForms 和 WPF 應用程式使用 Microsoft .NET Sdk](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
@@ -39,6 +40,10 @@ ms.locfileid: "90678992"
 | [不支援 UseLegacyImages 相容性參數](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [datagridview-doesnt-reset-custom-font-settings](../../../includes/core-changes/windowsforms/5.0/datagridview-doesnt-reset-custom-font-settings.md)]
+
+***
 
 [!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
 
@@ -124,6 +129,6 @@ ms.locfileid: "90678992"
 
 ***
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [將 Windows Forms 應用程式移植到 .NET Core](../porting/winforms.md)

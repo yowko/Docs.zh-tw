@@ -4,12 +4,12 @@ description: 本進階教學課程提供可為 Null 的參考類型簡介。 您
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 70e6a7a906bc9a35918cf3e26c3e23bd0cfdafde
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: bd575b226a2ff61e938719b064ff5ede0cf66013
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755846"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805176"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
@@ -223,4 +223,4 @@ namespace NullableIntroduction
 > [升級應用程式以使用可為 Null 參考型別](upgrade-to-nullable-references.md)
 
 瞭解如何在使用 Entity Framework 時使用可為 null 的參考型別：
-> [Entity Framework Core 基本概念：使用可為 Null 的參考型別](https://docs.microsoft.com/en-us/ef/core/miscellaneous/nullable-reference-types)
+> [Entity Framework Core 基本概念：使用可為 Null 的參考型別](/ef/core/miscellaneous/nullable-reference-types)

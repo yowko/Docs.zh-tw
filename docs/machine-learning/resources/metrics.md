@@ -2,12 +2,12 @@
 title: ML.NET 計量
 description: 了解用於評估 ML.NET 模型效能的計量
 ms.date: 12/17/2019
-ms.openlocfilehash: 4aca8dbdd9f137509ab9167ecc77f9ca6994e415
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 046e0a3feea2da702dfef5ca9ce4f498fce5fb26
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679504"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804818"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>使用計量來評估您的 ML.NET 模型
 
@@ -23,7 +23,7 @@ ms.locfileid: "90679504"
 |-----------|-----------------------|-----------|
 | **精確度** |  [準確度](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification)是使用測試資料集進行正確預測的比例。 它是正確預測數佔總輸入樣本數的比例。 如果每個類別都有類似的樣本數，它就會很有作用。| **越接近 1.00 越好**。 但剛好 1.00 表示有問題 (通常是標籤/目標外洩、過度擬合或使用定型資料進行測試)。 當測試資料不對稱 (其中大部分的實例都屬於其中一個類別) 、資料集很小，或分數方法0.00 或1.00，則精確度並不會真正獲得分類器的效用，而您必須檢查其他度量。 |
 | **AUC** |    *曲線下*的[aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)或區域會測量實際的正值率與誤報的正負率，以測量所建立之曲線下的區域。  |   **越接近 1.00 越好**。 它應該大於0.50，才能接受模型。 AUC 為0.50 或更少的模型為毫無價值。 |
-| **AUCPR** | *精確度回收曲線曲線下*的[aucPR](https://www.coursera.org/lecture/ml-classification/precision-recall-curve-rENu8)或區域：當類別不平衡 (高度扭曲的資料集) 時，可發揮預測成功的實用量值。 |  **越接近 1.00 越好**。 接近 1.00 的高分顯示分類器傳回精確的結果 (高精確度)，並傳回大部分為全面肯定的結果 (高重新叫用率)。 |
+| **AUCPR** | *精確度回收曲線曲線下*的 AucPR 或區域：當類別不平衡 (高度扭曲的資料集) 時，可發揮預測成功的實用量值。 |  **越接近 1.00 越好**。 接近 1.00 的高分顯示分類器傳回精確的結果 (高精確度)，並傳回大部分為全面肯定的結果 (高重新叫用率)。 |
 | **F1 分數** | [F1 分數](https://en.wikipedia.org/wiki/F1_score)也稱為「平衡 F 分數或 F 量值」**。 它是精確度和重新叫用率的調和平均數。 當您想要在精確度與重新叫用率之間取得平衡時，F1 分數會很有幫助。| **越接近 1.00 越好**。  F1 分數在 1.00 達到其最佳值，而最差分數為 0.00。 它會告訴您分類器有多精確。 |
 
 如需二元分類計量的進一步詳細資訊，請閱讀下列文章：

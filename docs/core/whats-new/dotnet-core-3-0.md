@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60b511adecf37855de91f45245fc55911ba281dc
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 8ba64a6e3bee4a5d27a07ab4ad4ef3a3f0749778
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654767"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804628"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -307,7 +307,7 @@ dotnet new winforms
 
 Visual Studio 2019 會新增 [新增專案]**** 範本，供 .NET Core 3.0 Windows Forms 和 WPF 使用。
 
-如需如何移植現有 .NET Framework 應用程式的詳細資訊，請參閱[移植 WPF 專案](../../desktop-wpf/migration/convert-project-from-net-framework.md)和[移植 Windows Forms 專案](../porting/winforms.md)。
+如需如何移植現有 .NET Framework 應用程式的詳細資訊，請參閱[移植 WPF 專案](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)和[移植 Windows Forms 專案](../porting/winforms.md)。
 
 #### <a name="winforms-high-dpi"></a>WinForms 高 DPI
 

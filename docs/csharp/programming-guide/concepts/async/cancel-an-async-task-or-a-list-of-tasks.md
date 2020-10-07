@@ -4,12 +4,12 @@ description: 瞭解如何使用解除標記將取消要求告知工作清單。
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 79c9db53674182489c89d657786bf39e8bb44b21
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654701"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805248"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>取消 (c # ) 的工作清單
 
@@ -23,7 +23,7 @@ ms.locfileid: "91654701"
 > - 撰寫支援取消的非同步應用程式
 > - 示範信號取消
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 本教學課程需要下列各項：
 
@@ -115,7 +115,7 @@ static async Task Main()
 }
 ```
 
-更新後的 `Main` 方法現在會被視為 [非同步 main](../../../whats-new/csharp-7-1.md#async-main)，以允許進入可執行檔的非同步進入點。 它會將幾個教學訊息寫入主控台，然後宣告 <xref:System.Threading.Tasks.Task> 名為的實例 `cancelTask` ，以讀取主控台按鍵筆劃。 如果按下 <kbd>Enter</kbd> 鍵， <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> 則會進行呼叫。 這會通知取消。 接下來， `sumPageSizesTask` 會從方法指派變數 `SumPageSizesAsync` 。 這兩項工作都會傳遞至 <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> ，這兩項工作都已完成時，將會繼續進行。
+更新後的 `Main` 方法現在會被視為 [非同步 main](../../../whats-new/csharp-7.md#async-main)，以允許進入可執行檔的非同步進入點。 它會將幾個教學訊息寫入主控台，然後宣告 <xref:System.Threading.Tasks.Task> 名為的實例 `cancelTask` ，以讀取主控台按鍵筆劃。 如果按下 <kbd>Enter</kbd> 鍵， <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> 則會進行呼叫。 這會通知取消。 接下來， `sumPageSizesTask` 會從方法指派變數 `SumPageSizesAsync` 。 這兩項工作都會傳遞至 <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> ，這兩項工作都已完成時，將會繼續進行。
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>建立異步總和頁面大小方法
 
@@ -193,7 +193,7 @@ Application ending.
 
 :::code language="csharp" source="snippets/cancel-tasks/cancel-tasks/Program.cs":::
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.CancellationToken>
 - <xref:System.Threading.CancellationTokenSource>

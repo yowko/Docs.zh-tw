@@ -3,12 +3,12 @@ title: 在非同步工作完成時進行處理
 description: '這個範例會示範如何使用 c # 中的 System.threading.tasks.task.whenany 來啟動多個工作，並在其完成時處理其結果，而不是在開始順序中處理它們。'
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 860e94a9c3973ce56e7321741a1136f752aa3d18
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557303"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805235"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>在非同步工作完成時加以處理 (c # ) 
 
@@ -77,7 +77,7 @@ static readonly IEnumerable<string> s_urlList = new string[]
 static Task Main() => SumPageSizesAsync();
 ```
 
-更新後的 `Main` 方法現在會被視為 [非同步 main](../../../whats-new/csharp-7-1.md#async-main)，以允許進入可執行檔的非同步進入點。 它是以的呼叫表示 `SumPageSizesAsync` 。
+更新後的 `Main` 方法現在會被視為 [非同步 main](../../../whats-new/csharp-7.md#async-main)，以允許進入可執行檔的非同步進入點。 它是以的呼叫表示 `SumPageSizesAsync` 。
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>建立異步總和頁面大小方法
 
@@ -170,7 +170,7 @@ static async Task<int> ProcessUrlAsync(string url, HttpClient client)
 
 :::code language="csharp" source="snippets/multiple-tasks/Program.cs":::
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [使用 async 和 await 進行非同步程式設計 (c # ) ](index.md)

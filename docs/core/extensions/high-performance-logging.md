@@ -4,12 +4,12 @@ author: IEvangelist
 description: 了解如何使用 LoggerMessage 來建立可快取的委派，其對於高效能記錄案例需要較少的物件配置。
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: d722a3a5cb38f33b6833a5c280687ce6c1e46bf9
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 9111b9553c913cff2937b574250b65e633250f4f
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614692"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804758"
 ---
 # <a name="high-performance-logging-in-net"></a>.NET 中的高效能記錄
 
@@ -93,7 +93,7 @@ info: WorkerServiceOptions.Example.Worker[1]
 
 [DefineScope (string) ](xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A)方法會建立用 <xref:System.Func%601> 來定義[記錄範圍](logging.md#log-scopes)的委派。 <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> 多載允許最多將三個型別參數傳遞至具名格式字串 (範本)。
 
-就像 <xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A> 方法的情況一樣，提供給 <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> 方法的字串是範本，而不是內插字串。 預留位置會依照指定類型的順序填入。 範本中的預留位置名稱應該是描述性名稱，而且在範本之間應該保持一致。 它們將作為結構化記錄資料內的屬性名稱。 建議您針對預留位置名稱使用 [Pascal 大小寫](/dotnet/standard/design-guidelines/capitalization-conventions)。 例如，`{Item}`、`{DateTime}`。
+就像 <xref:Microsoft.Extensions.Logging.LoggerMessage.Define%2A> 方法的情況一樣，提供給 <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> 方法的字串是範本，而不是內插字串。 預留位置會依照指定類型的順序填入。 範本中的預留位置名稱應該是描述性名稱，而且在範本之間應該保持一致。 它們將作為結構化記錄資料內的屬性名稱。 建議您針對預留位置名稱使用 [Pascal 大小寫](../../standard/design-guidelines/capitalization-conventions.md)。 例如，`{Item}`、`{DateTime}`。
 
 使用 <xref:Microsoft.Extensions.Logging.LoggerMessage.DefineScope%2A> 方法，定義要套用至一系列記錄訊息的[記錄範圍](logging.md#log-scopes)。
 
@@ -151,6 +151,6 @@ info: WorkerServiceOptions.Example.Worker[1]
       Processing priority item: Priority-Deferred (37bf736c-7a26-4a2a-9e56-e89bcf3b8f35): 'Set process state'
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 中的記錄](logging.md)

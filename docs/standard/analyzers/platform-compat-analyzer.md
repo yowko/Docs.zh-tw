@@ -3,12 +3,12 @@ title: 平台相容性分析器
 description: Roslyn 分析器，可協助偵測跨平臺應用程式和程式庫中的平臺相容性問題。
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: fcd5ec755789ff7f2472d8077dd52f321bf9f167
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756178"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805294"
 ---
 # <a name="platform-compatibility-analyzer"></a>平台相容性分析器
 
@@ -25,7 +25,7 @@ ms.locfileid: "91756178"
 
 ## <a name="prerequisites"></a>必要條件
 
-平臺相容性分析器是 Roslyn 的程式碼品質分析器之一。 從 .NET 5.0 開始，這些分析器會 [隨附于 .NET SDK](../../fundamentals/productivity/code-analysis.md)。 根據預設，平臺相容性分析器僅針對以或更新版本為目標的專案啟用 `net5.0` 。 不過，您可以針對以其他架構為目標的專案 [啟用](/visualstudio/code-quality/ca1416.md#configurability) 它。
+平臺相容性分析器是 Roslyn 的程式碼品質分析器之一。 從 .NET 5.0 開始，這些分析器會 [隨附于 .NET SDK](../../fundamentals/code-analysis/overview.md)。 根據預設，平臺相容性分析器僅針對以或更新版本為目標的專案啟用 `net5.0` 。 不過，您可以針對以其他架構為目標的專案 [啟用](/visualstudio/code-quality/ca1416.md#configurability) 它。
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>分析器如何判斷平臺相關性
 
@@ -376,10 +376,10 @@ Guard 方法的平臺名稱應該與呼叫平臺相依的 API 平臺名稱相符
   }
   ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 5 中的目標 Framework 名稱](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [標注平臺特定 Api 並偵測其使用](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-checks/platform-checks.md)
 - [針對特定平臺上不支援的 Api 進行批註](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-exclusion/platform-exclusion.md)
-- [CA1416 平臺相容性分析器](/visualstudio/code-quality/ca1416)
+- [CA1416 平臺相容性分析器](../../fundamentals/code-analysis/quality-rules/ca1416.md)
 - [.NET API 分析器](../../standard/analyzers/api-analyzer.md)

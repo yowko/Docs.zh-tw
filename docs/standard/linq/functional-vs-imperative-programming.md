@@ -3,12 +3,12 @@ title: 功能性程式設計與命令式程式設計-LINQ to XML
 description: 瞭解功能性程式設計，以及它與傳統命令式 (程式性) 程式設計有何不同。
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: c7d16d61f9865cda7c625f91c2c822be1a327fd6
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: e99cffa9500c07c507962f41b17ab3f3b05c7781
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679365"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805286"
 ---
 # <a name="functional-programming-vs-imperative-programming-linq-to-xml"></a>功能性程式設計與命令式程式設計 (LINQ to XML) 
 
@@ -54,8 +54,8 @@ ms.locfileid: "90679365"
 
 幸運的是，c # 和 Visual Basic 不需要完整的功能性程式設計，因為它們同時支援命令式和功能性程式設計方法。 開發人員可以選擇哪個方法最適合特定的案例。 事實上，程式通常會結合這兩種方法。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [純功能轉換簡介](introduction-pure-functional-transformations.md)
-- [XSLT 轉換](/../../standard/data/xml/xslt-transformations.md)
+- [XSLT 轉換](../data/xml/xslt-transformations.md)
 - [重構為純功能](refactor-pure-functions.md)

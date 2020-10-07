@@ -4,12 +4,12 @@ description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dbe64fe0a01ddab9e7a3ad0a9118b3fe59fba8aa
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 4c32b08c3e7eeaedce687ea5bc572e6a7bee0d3e
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656979"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804890"
 ---
 # <a name="console-app"></a>主控台應用程式
 
@@ -25,7 +25,7 @@ ms.locfileid: "88656979"
 
 本教學課程中有許多功能。 讓我們逐一建立它們。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 設定您的電腦以執行 .NET Core。 您可以在 [.Net Core 下載](https://dotnet.microsoft.com/download) 頁面中找到安裝指示。 您可以在 Windows、Linux、macOS 或 Docker 容器中執行此應用程式。
 
@@ -187,7 +187,7 @@ ShowTeleprompter().Wait();
 在這裡，`Main` 中的程式碼會執行同步等候。 您應該儘可能使用 `await` 運算子而不是同步等候。 但是，在主控台應用程式的 `Main` 方法中，您無法使用 `await` 運算子。 那會導致應用程式在所有工作完成之前即結束。
 
 > [!NOTE]
-> 如果您使用 C# 7.1 或更新版本，則可以使用 [`async` `Main` 方法](../whats-new/csharp-7-1.md#async-main)建立主控台應用程式。
+> 如果您使用 C# 7.1 或更新版本，則可以使用 [`async` `Main` 方法](../whats-new/csharp-7.md#async-main)建立主控台應用程式。
 
 接下來，您必須撰寫第二個非同步方法，以從主控台讀取並監看 ' < ' (小於) ' > ' (大於) 和 ' x ' 或 ' x ' 鍵。 以下是您為該工作新增的方法：
 

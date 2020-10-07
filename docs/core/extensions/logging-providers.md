@@ -4,12 +4,12 @@ description: 瞭解如何在 .NET 應用程式中使用記錄提供者 API。
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/25/2020
-ms.openlocfilehash: 96a5ece10068e39c991e67a36f22e725d6380af5
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 4d4658b7ca892d101af32f5cf8ac48a4beabfb92
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755884"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804751"
 ---
 # <a name="logging-providers-in-net"></a>.NET 中的記錄提供者
 
@@ -98,7 +98,7 @@ Microsoft 擴充功能包含下列記錄提供者，作為執行時間程式庫�
 
 [Dotnet 追蹤](../diagnostics/dotnet-trace.md)工具是一種跨平臺 CLI 全域工具，可讓您收集正在執行之進程的 .net Core 追蹤。 此工具會 <xref:Microsoft.Extensions.Logging.EventSource> 使用來收集提供者資料 <xref:Microsoft.Extensions.Logging.EventSource.LoggingEventSource> 。
 
-如需安裝指示，請參閱 [dotnet](../diagnostics/dotnet-trace.md) 。 如需使用的診斷教學課程 `dotnet-trace` ，請參閱 [.net Core 中的高 CPU 使用率的調試](/../diagnostics/debug-highcpu.md)程式。
+如需安裝指示，請參閱 [dotnet](../diagnostics/dotnet-trace.md) 。 如需使用的診斷教學課程 `dotnet-trace` ，請參閱 [.net Core 中的高 CPU 使用率的調試](../diagnostics/debug-highcpu.md)程式。
 
 ### <a name="windows-eventlog"></a>Windows EventLog
 
@@ -230,7 +230,7 @@ Azure 記錄串流支援即時查看記錄活動：
 
 如需詳細資訊，請參閱每個提供者的文件。 Microsoft 不支援第三方記錄提供者。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 .net 中記錄](logging.md)。
 - [在 .net 中執行自訂記錄提供者](custom-logging-provider.md)。

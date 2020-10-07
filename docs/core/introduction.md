@@ -4,12 +4,12 @@ description: 深入瞭解 .NET 這項免費的開放原始碼開發平臺，可�
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c161daed58c94940734d057bb1b42f3b87caf97c
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 2b339db769c283ff21e6ad48d5b672794e43a76b
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756060"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804792"
 ---
 # <a name="introduction-to-net"></a>.NET 簡介
 
@@ -17,7 +17,7 @@ ms.locfileid: "91756060"
 
 * [Web 應用程式、web Api 和微服務](/aspnet/core/introduction-to-aspnet-core#recommended-learning-path)
 * [雲端中的無伺服器函式](/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-csharp)
-* [雲端原生應用程式](/dotnet/architecture/cloud-native/)
+* [雲端原生應用程式](../architecture/cloud-native/index.md)
 * [行動應用程式](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro)
 * 傳統型應用程式
   * [Windows WPF](/dotnet/desktop/wpf/)

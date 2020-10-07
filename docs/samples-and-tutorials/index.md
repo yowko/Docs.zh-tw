@@ -4,12 +4,12 @@ description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 00718491df00e5747ba6e0043b70dc1019dd906b
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557186"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805007"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
 
@@ -99,7 +99,7 @@ ms.locfileid: "90557186"
 
 **[在 Windows Docker 容器中執行 ASP.NET MVC 應用程式](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
-此教學課程示範如何在 Windows Docker 容器中部署現有的 ASP.NET MVC 應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
+此教學課程示範如何在 Windows Docker 容器中部署現有的 ASP.NET MVC 應用程式。
 
 ## <a name="view-and-download-samples"></a>查看及下載範例
 

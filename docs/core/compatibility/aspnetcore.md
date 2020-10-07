@@ -2,15 +2,15 @@
 title: ASP.NET Core 重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 09/29/2020
+ms.date: 10/06/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 0c7ed795868ad4a03dd52e2e23014a3d0f220c86
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 37a366e30f7dc25a5da430de777755b8c9f6dd38
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609326"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804942"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 重大變更
 
@@ -41,6 +41,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [Blazor： ProtectedBrowserStorage 功能已移至共用架構](#blazor-protectedbrowserstorage-feature-moved-to-shared-framework)
 - [Blazor： RenderTreeFrame readonly public fields 已成為屬性](#blazor-rendertreeframe-readonly-public-fields-have-become-properties)
 - [Blazor： NuGet 套件的目標 framework 已變更](#blazor-target-framework-of-nuget-packages-changed)
+- [Blazor：已更新瀏覽器支援](#blazor-updated-browser-support)
 - [快取：已移除 CompactOnMemoryPressure 屬性](#caching-compactonmemorypressure-property-removed)
 - [Caching： SqlClient 使用新的套件](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [快取： ResponseCaching "pubternal" 類型已變更為內部](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -122,7 +123,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 
 ***
 
-[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
+[!INCLUDE[Serialization: BinaryFormatter serialization obsolete](~/includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
 
 ***
 
@@ -143,6 +144,10 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 ***
 
 [!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
+
+***
+
+[!INCLUDE[Blazor: Updated browser support](~/includes/core-changes/aspnetcore/5.0/blazor-browser-support-updated.md)]
 
 ***
 

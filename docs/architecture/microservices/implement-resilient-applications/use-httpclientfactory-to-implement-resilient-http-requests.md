@@ -2,12 +2,12 @@
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
 description: 瞭解如何使用 .NET Core 2.1 之後提供的 IHttpClientFactory 來建立 `HttpClient` 實例，讓您輕鬆地在應用程式中使用。
 ms.date: 08/31/2020
-ms.openlocfilehash: ae093ef960b2540bf4916bf72ad3bec51fa33ebe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4ebb82395dd685d30846b3549b654abf7c41d43f
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152568"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804805"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -194,7 +194,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
 - **HttpClientFactory GitHub 存放庫中的原始程式碼 `dotnet/extensions`**  
-  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
+  <https://github.com/dotnet/extensions/tree/v3.1.8/src/HttpClientFactory>
 
 - **Polly (.NET 復原和暫時性錯誤處理程式庫)**  
   <http://www.thepollyproject.org/>

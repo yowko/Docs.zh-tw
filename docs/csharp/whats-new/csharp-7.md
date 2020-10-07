@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 774bf9860d929d725f3a2bda4a52bc75ae3921fe
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 28f2d8f0b61d8f05e558834fc1a96fc020201a08
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755820"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805261"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C # 7.0 到 c # 7.3 的新功能
 
@@ -41,9 +41,9 @@ C # 7.0-7.3 將這些功能和主題新增至 c # 語言：
   - 具名引數之後可以接著位置引數。
 - [`private protected` 存取修飾詞](#private-protected-access-modifier)
   - 您可利用 `private protected` 存取修飾詞，存取相同組件中的衍生類別。
-- [改進的多載解析](#improved-overload-resolution)
+- [改進的多載解析](#improved-overload-candidates)
   - 解決多載解析不明確的新規則。
-- [撰寫安全、有效率之程式碼的技巧](#safe-efficient-code-enhancements)
+- [撰寫安全、有效率之程式碼的技巧](#enabling-more-efficient-safe-code)
   - 此為語法改進功能組合，其可讓使用參考語意進行實質型別作業變得可能。
 
 最後，編譯器有新的選項：
