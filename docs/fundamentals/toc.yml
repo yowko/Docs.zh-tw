@@ -49,16 +49,12 @@ items:
             href: ../core/install/localized-intellisense.md
   - name: 概觀 (第 1 週)
     items:
-      - name: .NET 教學課程
-        href: ../standard/tour.md
+      - name: .NET 簡介
+        href: ../core/introduction.md
       - name: .NET 架構元件
         href: ../standard/components.md
       - name: .NET 類別庫
         href: ../standard/class-libraries.md
-      - name: .NET Core 簡介
-        href: ../core/introduction.md
-      - name: .NET Core 概觀
-        href: ../core/about.md
       - name: .NET Standard 概觀
         href: ../standard/net-standard.md
       - name: .NET 詞彙
@@ -155,7 +151,7 @@ items:
         href: ../core/sdk.md
       - name: .NET Core CLI
         items:
-          - name: 概觀
+          - name: 總覽
             href: ../core/tools/index.md
           - name: 參考資料
             items:
@@ -386,7 +382,7 @@ items:
                     href: code-analysis/quality-rules/index.md
                   - name: 設計規則
                     items:
-                      - name: 總覽
+                      - name: 概觀
                         displayName: design rules
                         href: code-analysis/quality-rules/design-warnings.md
                       - name: CA1000
@@ -1013,7 +1009,7 @@ items:
                         href: code-analysis/style-rules/formatting-rules.md
                   - name: 命名規則
                     items:
-                      - name: 總覽
+                      - name: 概觀
                         displayName: naming rules
                         href: code-analysis/style-rules/naming-rules.md
           - name: 平台相容性分析器
