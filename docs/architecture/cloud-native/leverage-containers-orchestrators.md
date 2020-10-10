@@ -2,12 +2,12 @@
 title: 利用容器和協調器
 description: 利用 Azure 中的 Docker 容器和 Kubernetes 協調器
 ms.date: 05/31/2020
-ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755905"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877570"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>利用容器和協調器
 
@@ -25,7 +25,7 @@ ms.locfileid: "91755905"
 
 ### <a name="deployment"></a>部署
 
-整合型應用程式需要整個應用程式的完整部署，即使只進行了少許變更。 完整部署可能很昂貴，而且容易出錯。 此外，它們需要重新開機應用程式，這會暫時影響無法使用的情況。
+此外，它們需要重新開機應用程式，如果在部署期間未套用零停機技術，可能會暫時影響可用性。
 
 ### <a name="scaling"></a>調整大小
 
@@ -139,7 +139,7 @@ status:
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>您應該避免使用容器和協調器？
 
-如果您無法依照12要素應用程式原則來建立應用程式，您應該考慮避免容器和協調器。 在這些情況下，請考慮以 VM 為基礎的裝載平臺，或可能的混合式系統。 有了這項功能，您就可以隨時將某些功能關閉到個別的容器或甚至無伺服器功能。
+如果您無法依照 Twelve-Factor 應用程式主體來建立應用程式，您應該考慮避免容器和協調器。 在這些情況下，請考慮以 VM 為基礎的裝載平臺，或可能的混合式系統。 有了這項功能，您就可以隨時將某些功能關閉到個別的容器或甚至無伺服器功能。
 
 ## <a name="development-resources"></a>開發資源
 

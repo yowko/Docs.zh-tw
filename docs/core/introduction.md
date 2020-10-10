@@ -4,12 +4,12 @@ description: 深入瞭解 .NET 這項免費的開放原始碼開發平臺，可�
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 2b339db769c283ff21e6ad48d5b672794e43a76b
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 0539519c2e1dd429983226065e8508ac148e25a8
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804792"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877557"
 ---
 # <a name="introduction-to-net"></a>.NET 簡介
 
@@ -72,13 +72,13 @@ Microsoft 的 .NET 二進位散發套件是在 Azure 中 Microsoft 維護的伺�
 
 [Tizen 支援](https://developer.tizen.org/development/training/.net-application) Tizen 平臺上的 .net。
 
-如需詳細資訊，請參閱 [支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
+如需詳細資訊，請參閱 [.Net Core 和 .net 5 的版本和支援](releases-and-support.md)。
 
 ## <a name="tools-and-productivity"></a>工具和生產力
 
 .NET 提供您選擇的語言、整合式開發環境 (Ide) 和其他工具。
 
-### <a name="programming-languages"></a>程式語言
+### <a name="programming-languages"></a>程式設計語言
 
 .NET 支援三種程式設計語言：
 
@@ -116,7 +116,7 @@ Microsoft 的 .NET 二進位散發套件是在 Azure 中 Microsoft 維護的伺�
 
   只能在 Windows 上執行。 具有廣泛的內建功能，其設計目的是使用 .NET。 所有學生、開放原始碼參與者及個人均可免費取得此社區版。
 
-* [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/) \(英文\)
 
   在 Windows、macOS 和 Linux 上執行。 免費且開放的原始碼。 擴充功能可搭配 .NET 語言使用。
 
@@ -201,7 +201,7 @@ MSBuild 和 .NET CLI 可以搭配各種持續整合工具和環境使用，例�
 
 如需詳細資訊，請參閱下列資源：
 
-* [.NET 瀏覽器中教學課程](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)
+* [.NET In-Browser 教學課程](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)
 * [在您的電腦上搭配 Jupyter 使用 .NET 筆記本](https://github.com/dotnet/interactive/blob/main/docs/NotebooksLocalExperience.md)
 * [.NET 互動式檔](https://github.com/dotnet/interactive/blob/main/docs/README.md)
 

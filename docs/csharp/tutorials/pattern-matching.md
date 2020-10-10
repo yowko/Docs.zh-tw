@@ -1,19 +1,19 @@
 ---
 title: 教學課程：使用模式比對建立演算法
 description: 此進階教學課程示範如何使用模式比對技術，以個別建立的資料和演算法來建立功能。
-ms.date: 03/13/2019
+ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperfq1
-ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 015bab574ca4255ffe355bd02bfb54b58e4ea7e0
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437978"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877661"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>教學課程：使用模式比對來建立型別驅動和資料驅動的演算法。
 
-C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，有了新的運算式和模式。 您可以撰寫行為如同您擴充其他程式庫中之型別的功能。 模式的另一個用途是建立應用程式需要的功能，但該功能不是要擴充之型別的基本功能。
+C# 7 引進基本的模式比對功能。 這些功能是在 c # 8 和 c # 9 中使用新的運算式和模式來擴充。 您可以撰寫行為如同您擴充其他程式庫中之型別的功能。 模式的另一個用途是建立應用程式需要的功能，但該功能不是要擴充之型別的基本功能。
 
 在本教學課程中，您將了解如何：
 
@@ -25,7 +25,7 @@ C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，�
 
 ## <a name="prerequisites"></a>必要條件
 
-您必須設定電腦以執行 .NET Core，包括 c # 8.0 編譯器。 從 [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或 [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用 c # 8 編譯器。
+您將需要設定您的電腦以執行 .NET 5，其中包括 c # 9 編譯器。 從 [Visual Studio 2019 16.9 版 preview 1](https://visualstudio.microsoft.com/vs/preview/) 或 [.net 5.0 SDK](https://dot.net/get-dotnet5)開始，可以使用 c # 8 編譯器。
 
 本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -47,7 +47,7 @@ C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，�
 
 ## <a name="pattern-matching-designs"></a>模式比對設計
 
-本教學課程所使用案例會醒目提示適合以模式比對來解決的問題類型：
+本教學課程中使用的案例強調模式比對適用的問題類型：
 
 - 您要處理的物件不在符合您目標的物件階層中。 您可能會使用屬於不相關之系統的類別。
 - 您要新增的功能不屬於這些類別的核心抽象概念。 車輛付的通行費隨不同類型的車輛而「變更」**，但通行費不是車輛的核心函式。
@@ -127,7 +127,7 @@ namespace toll_calculator
             }
             try
             {
-                tollCalc.CalculateToll(null);
+                tollCalc.CalculateToll(null!);
             }
             catch (ArgumentNullException e)
             {
@@ -157,10 +157,10 @@ namespace toll_calculator
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1 }       => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
     // ...
 };
@@ -175,10 +175,10 @@ vehicle switch
 {
     // ...
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     // ...
 };
@@ -219,20 +219,20 @@ vehicle switch
 };
 ```
 
-前一個程式碼顯示 switch 臂的 `when` 子句。 您使用 `when` 子句是測試條件，而不是屬性是否相等。 當您完成之後，就會有看起來像下面的方法：
+前一個程式碼顯示 switch 臂的 `when` 子句。 您使用 `when` 子句是測試條件，而不是屬性是否相等。 當您完成時，您將會有類似下列程式碼的方法：
 
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1}        => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
     Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
@@ -288,9 +288,11 @@ public decimal CalculateToll(object vehicle) =>
 
 ## <a name="add-peak-pricing"></a>新增尖峰時段計費
 
-針對最後一個功能，通行費主管機關想要新增有時間性的尖峰時段計費。 在早上和晚上尖峰時段，通行費會加倍。 該規則只影響單向的交通：早上尖峰時段進入城市，以及晚上尖峰時段離開城市。 在工作日的其他時間，通行費增加 50%。 在半夜和清晨，通行費減少 25%。 在週末，無論時間皆為一般費率。
+針對最後一個功能，通行費主管機關想要新增有時間性的尖峰時段計費。 在早上和晚上尖峰時段，通行費會加倍。 該規則只影響單向的交通：早上尖峰時段進入城市，以及晚上尖峰時段離開城市。 在工作日的其他時間，通行費增加 50%。 在半夜和清晨，通行費減少 25%。 在週末，無論時間皆為一般費率。 您可以使用序列 if `if` 和 `else` 語句，以使用下列程式碼來表示：
 
-您會為此功能使用模式比對，但您會將它與其他技術整合。 您可以建置單一模式比對運算式，納入所有方向、星期幾和時間的組合。 結果會是一個複雜的運算式， 而它會難以閱讀及理解。 這樣會讓確認其正確性變得困難。 反之，結合那些方法來建立值的元組，一致地描述所有那些狀態。 然後使用模式比對來計算通行費的乘數。 元組包含三個不連續的條件：
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#SnippetPremiumWithoutPattern)]
+
+上述程式碼可正常運作，但無法讀取。 您必須將所有的輸入案例和嵌套 `if` 語句連結到程式碼的原因。 相反地，您將使用這項功能的模式比對，但您會將它與其他技術整合。 您可以建置單一模式比對運算式，納入所有方向、星期幾和時間的組合。 結果會是一個複雜的運算式， 而它會難以閱讀及理解。 這樣會讓確認其正確性變得困難。 反之，結合那些方法來建立值的元組，一致地描述所有那些狀態。 然後使用模式比對來計算通行費的乘數。 元組包含三個不連續的條件：
 
 - 星期是工作日或週末。
 - 收取通行費時的時段。
@@ -298,7 +300,7 @@ public decimal CalculateToll(object vehicle) =>
 
 下表顯示輸入值和尖峰時段計費乘數的組合：
 
-| 天        | 時間         | 方向 | Premium |
+| 天        | 時間         | Direction | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Weekday    | 早上尖峰時段 | 進入   | x 2.00  |
 | Weekday    | 早上尖峰時段 | 離開  | x 1.00  |
@@ -335,7 +337,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
     };
 ```
 
-該方法可以運作，但它具重複性。 您可以簡化它，如下列程式碼所示：
+這種方法是正確的，但它是重複性的。 您可以簡化它，如下列程式碼所示：
 
 [!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
@@ -343,7 +345,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-先前的方法沒有使用模式比對。 使用類似的 `if` 陳述式串聯很清楚。 您要使用私用的 `enum` 將每個時間範圍轉換成離散值。
+您可以新增私用 `enum` ，將每個時間範圍轉換成離散值。 然後， `GetTimeBand` 方法會使用 *關聯式模式*和 *組成或模式*，這兩個都是在 c # 9.0 中新增。 關聯式模式可讓您使用 `<` 、、或來測試 `>` 數值 `<=` `>=` 。 此 `or` 模式會測試運算式是否符合一或多個模式。 您也可以使用 `and` 模式來確定運算式符合兩個不同的模式，以及一個 `not` 模式來測試運算式是否不符合模式。
 
 建立這些方法之後，您可以搭配使用另一個 `switch` 運算式和**元組模式**來計算計費溢價。 您可以建置有 16 個臂的 `switch` 運算式：
 

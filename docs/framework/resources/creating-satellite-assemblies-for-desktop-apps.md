@@ -24,12 +24,12 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-ms.openlocfilehash: 3e515028919518cb93cdbec3417eef061a512832
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 95f6303976eff35c5eb17b9e3af205f4b38957bc
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558409"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877544"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
 
@@ -95,13 +95,8 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 
 2. 若要指出英文 (en) 是應用程式的預設文化特性，請將下列 <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 屬性新增至應用程式的 AssemblyInfo 檔案或將編譯為應用程式主要組件的主要原始程式碼檔案。
 
-    ```csharp
-    [assembly: NeutralResourcesLanguageAttribute("en")]
-    ```
-
-    ```vb
-    <Assembly: NeutralResourcesLanguageAttribute("en")>
-    ```
+    [!code-csharp[Conceptual.Resources.Locating#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
+    [!code-vb[Conceptual.Resources.Locating#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. 將其他文化特性 (en-US、fr-FR 和 ru-RU) 的支援新增至應用程式，如下所示：  
   
@@ -125,7 +120,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 5. 將下列原始程式碼與預設文化特性的資源編譯為應用程式的主要組件：
 
     > [!IMPORTANT]
-    > 如果您使用命令列建立範例而非 Visual Studio，則應該將 <xref:System.Resources.ResourceManager> 類別建構函式的呼叫修改為下列：`ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`
+    > 如果您使用命令列建立範例而非 Visual Studio，則應該將 <xref:System.Resources.ResourceManager> 類別建構函式的呼叫修改為下列：`ResourceManager rm = new ResourceManager("Greeting", typeof(Example).Assembly);`
 
     [!code-csharp[Conceptual.Resources.Locating#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
     [!code-vb[Conceptual.Resources.Locating#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]
