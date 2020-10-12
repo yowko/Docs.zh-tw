@@ -1,15 +1,15 @@
 ---
 title: 將適用於 Apache Spark 的 .NET 應用程式部署到 Azure HDInsight
 description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署到 HDInsight。
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9a4ca80463de41a50d103c696b2108d0cef023fc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8ef1429d265c87347bb8771dc01b319fcb9e84d0
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548373"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955366"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>教學課程：將 Apache Spark 應用程式的 .NET 部署至 Azure HDInsight
 
@@ -25,9 +25,7 @@ ms.locfileid: "90548373"
 > * 建立並執行 HDInsight 腳本動作。
 > * 在 HDInsight 叢集上執行 Apache Spark 應用程式的 .NET。
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 開始之前，請執行下列工作：
 
@@ -80,7 +78,7 @@ ms.locfileid: "90548373"
     |主要儲存體帳戶|選擇您的訂用帳戶，以及該訂用帳戶內的其中一個作用中儲存體帳戶。|
     |容器|此容器是您儲存體帳戶中的特定 blob 容器，您的叢集會在該容器中尋找檔案，以便在雲端中執行您的應用程式。 您可以為其提供任何可用的名稱。|
 
-5. 在 [檢閱 + 建立] 下，選取 [建立]。 大約需要 20 分鐘的時間來建立叢集。 您必須先建立叢集，才能繼續下一個步驟。
+5. 在 [檢閱 + 建立]  底下，選取 [建立]  。 大約需要 20 分鐘的時間來建立叢集。 您必須先建立叢集，才能繼續下一個步驟。
 
 ## <a name="publish-your-app"></a>發佈您的應用程式
 
@@ -153,7 +151,7 @@ ms.locfileid: "90548373"
    |屬性  |描述  |
    |---------|---------|
    | 指令碼類型 |自訂|
-   | 名稱 | 安裝背景工作|
+   | Name | 安裝背景工作|
    | Bash 指令碼 URI |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> 若要確認此 URI，請在 Azure 儲存體總管中的 install-worker.sh 上按一下滑鼠右鍵，然後選取 [屬性]。 |
    | 節點類型| 背景工作|
    | 參數 | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin

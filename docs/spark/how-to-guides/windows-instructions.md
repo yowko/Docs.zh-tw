@@ -1,23 +1,21 @@
 ---
 title: 針對 Windows 上的 Apache Spark 應用程式建立 .NET
 description: 瞭解如何在 Windows 上建立適用于 Apache Spark 應用程式的 .NET。
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: d355380e92235e799d366dca02eaf8450f563f33
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: db073e6b82e63b3f0b98c9fe66a5b4d9be1356ba
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609274"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955521"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>瞭解如何在 Windows 上建立適用于 Apache Spark 應用程式的 .NET
 
 本文會教您如何在 Windows 上建立適用于 Apache Spark 應用程式的 .NET。
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 如果您已經擁有下列所有必要條件，請跳至 [組建](#build) 步驟。
 
@@ -91,7 +89,7 @@ ms.locfileid: "91609274"
 > [!NOTE]
 > 如果已更新任何環境變數，則可能需要新的命令列實例。
 
-## <a name="build"></a>組建
+## <a name="build"></a>Build
 
 針對本指南的其餘部分，您必須將 Apache Spark 存放庫的 .NET 複製到您的電腦。 您可以為複製的存放庫選擇任何位置。 例如，* C:\github\dotnet-spark \* 。
 

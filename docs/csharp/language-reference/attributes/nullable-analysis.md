@@ -2,18 +2,18 @@
 title: 'C # 保留屬性：可為 Null 的靜態分析'
 ms.date: 04/14/2020
 description: 編譯器會解讀這些屬性，以提供可為 null 且不可為 null 的參考型別的更佳靜態分析。
-ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656300"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955599"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>保留的屬性有助於編譯器的 null 狀態靜態分析
 
 在可為 null 的內容中，編譯器會執行程式碼的靜態分析，以判斷所有參考型別變數的 null 狀態：
 
-- *not null*：靜態分析判斷變數已指派給非 null 值。
+- *not null*：靜態分析會判斷變數是否已指派非 null 值。
 - *可能是 null*：靜態分析無法判斷變數是否已指派非 null 值。
 
 您可以套用多個屬性，以提供有關 Api 之語義的資訊給編譯器。 這項資訊可協助編譯器執行靜態分析，並判斷變數是否為 null。 本文提供每個屬性的簡短描述，以及如何使用這些屬性。 所有範例都採用 c # 8.0 或更新版本，且程式碼位於可為 null 的內容中。
@@ -281,7 +281,7 @@ public void SetState(object containedField)
 }
 ```
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>總結
 
 [!INCLUDE [C# version alert](../../includes/csharp-version-alert.md)]
 

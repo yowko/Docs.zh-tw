@@ -1,17 +1,15 @@
 ---
 title: .NET for Apache Spark 資源
 description: 探索這些 .NET for Apache Spark 資源，協助量身打造資料科學解決方案，以及與您的 .NET 應用程式整合。
-ms.date: 06/25/2020
-ms.openlocfilehash: 399a90b89fd619bf7faf740b9f61b625a8f28469
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.date: 10/09/2020
+ms.openlocfilehash: bc7f36b13eaf28b9e6808a8490f92f38531a883b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618268"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955495"
 ---
 # <a name="net-for-apache-spark-resources"></a>.NET for Apache Spark 資源
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 下列 [.NET for Apache Spark](../index.yml) 資源可協助您存取 .NET 應用程式中的 Apache Spark：
 

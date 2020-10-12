@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 28f2d8f0b61d8f05e558834fc1a96fc020201a08
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 84f5961d573b99438320a75d7f89bc7fd94f6266
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805261"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955209"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>C # 7.0 到 c # 7.3 的新功能
 
@@ -211,7 +211,7 @@ static async Task Main()
 
 ## <a name="local-functions"></a>區域函式
 
-類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 *區域* 函式可讓您在另一個方法的內容中使用方法。 區域函式可讓類別讀者輕鬆查看區域方法只會從其宣告的內容中呼叫。
+類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 「區域函式」** 可讓您在另一個方法的內容中宣告方法。 區域函式可讓類別讀者輕鬆查看區域方法只會從其宣告的內容中呼叫。
 
 有兩個常見的區域函式使用案例︰公用迭代器方法和公用非同步方法。 這兩種方法都會產生程式碼，比程式設計人員想像更晚才報告錯誤。 在迭代器方法中，任何例外狀況只會在呼叫列舉傳回序列的程式碼時觀察到。 在非同步方法中，任何例外狀況只會在傳回的 `Task` 等候時觀察到。 下列範例示範使用區域函式分隔參數驗證和迭代器實作：
 

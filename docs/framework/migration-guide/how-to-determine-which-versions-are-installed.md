@@ -9,20 +9,20 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: accc85f04514822233bc5df3a76eb99775fee529
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: faeb2c14b9c1d93b558c67a42c223702178407c0
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553736"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955586"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
 
-使用者可以在他們的電腦上 [安裝](../install/index.md) 及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。 登錄包含電腦上所安裝之 .NET Framework 版本的清單。
+使用者可以在其電腦上 [安裝](../install/index.md) 及執行多個版本的 .NET Framework。 當您開發或部署應用程式時，您可能需要知道使用者電腦上安裝的 .NET Framework 版本。 登錄包含電腦上所安裝 .NET Framework 版本的清單。
 
-.NET Framework 包含兩個主要元件，各有各的版本控制：
+.NET Framework 是由兩個主要元件所組成，這些元件分別設定版本：
 
-- 組件集合，這是為應用程式提供功能的類型與資源集合。 .NET Framework 和組件會共用相同的版本號碼。 例如，.NET Framework 版本包含 4.5、4.6.1 和 4.7.2。
+- 組件集合，這是為應用程式提供功能的類型與資源集合。 .NET Framework，且元件共用相同的版本號碼。 例如，.NET Framework 版本包含 4.5、4.6.1 和 4.7.2。
 
 - 通用語言執行平台 (CLR)，負責管理和執行應用程式的程式碼。 單一的 CLR 版本通常會支援多個 .NET Framework 版本。 例如，CLR 版本4.0.30319。*xxxxx 小於*42000 的*xxxxx*支援 .NET Framework 版本4到4.5.2。 大於或等於4.0.30319.42000 版的 CLR 版本支援從 .NET Framework 4.6 開始的 .NET Framework 版本。
 
@@ -36,7 +36,7 @@ ms.locfileid: "90553736"
 
   PowerShell 2.0 模組。
 
-如需有關針對每個 .NET Framework 版本偵測已安裝之更新的詳細資訊，請參閱 [如何：判斷安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。
+如需有關針對每個 .NET Framework 版本偵測已安裝之更新的詳細資訊，請參閱 [如何：判斷已安裝哪些 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。
 
 ## <a name="detect-net-framework-45-and-later-versions"></a>偵測 .NET Framework 4.5 和更新版本
 
@@ -64,7 +64,7 @@ ms.locfileid: "90553736"
 
 ### <a name="minimum-version"></a>最小版本
 
-若要判斷 .NET Framework 的 *最小* 版本是否存在，請使用上表中該版本的最小 **版本 REG_DWORD 值** 。
+若要判斷是否有 .NET Framework 的 *最小* 版本，請使用上表中該版本的最小 **版本 REG_DWORD 值** 。
 
 例如，如果您的應用程式在 .NET Framework 4.8 或更新版本下執行，請測試*大於或等於*528040 的**發行**REG_DWORD 值。
 
@@ -85,19 +85,19 @@ ms.locfileid: "90553736"
 
 01. 從 [開始]**** 功能表上，選擇 [執行]****，輸入 *regedit*，然後選取 [確定]****。
 
-    您必須具有系統管理認證才能執行 regedit。
+    (您必須擁有系統管理認證才能執行 regedit。 ) 
 
-01. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE \\ SOFTWARE \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Full**。 如果 **Full** 子機碼不存在，即表示未安裝 .NET Framework 4.5 或更新版本。
+01. 在 [登錄編輯程式] 中，開啟下列子機碼： **HKEY_LOCAL_MACHINE \\ SOFTWARE \\ Microsoft \\ NET Framework Setup \\ NDP \\ v4 \\ Full**。 如果 **完整** 的子機碼不存在，您就不會安裝 .NET Framework 4.5 或更新版本。
 
 01. 檢查名為 **Release**的 REG_DWORD 專案。 如果存在，表示您已安裝 .NET Framework 4.5 或更新版本。 其值會對應至特定版本的 .NET Framework。 例如，在下圖中， **發行** 專案的值是528040，也就是 .NET Framework 4.8 的發行金鑰。
 
-    ![.NET Framework 4.5 的登錄專案](./media/clr-installdir.png ".NET Framework 4.5 的登錄專案")
+   ![.NET Framework 4.5 的登錄專案](./media/clr-installdir.png )
 
 ### <a name="use-powershell-to-check-for-a-minimum-version"></a>使用 PowerShell 檢查最低版本
 
 使用 PowerShell 命令來檢查**HKEY_LOCAL_MACHINE \\ SOFTWARE \\ Microsoft \\ NET Framework Setup \\ NDP \\ V4 \\ Full**子機碼的**發行**專案值。
 
-下列範例會檢查 **Release** 項目值，以判斷是否安裝了 .NET Framework 4.6.2 或更新版本。 如已安裝，則此程式碼會傳回 `True`；否則傳回 `False`。
+下列範例會檢查 **發行** 專案的值，以判斷是否已安裝 .NET Framework 4.6.2 或更新版本。 如已安裝，則此程式碼會傳回 `True`；否則傳回 `False`。
 
 ```powershell
 (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
@@ -112,10 +112,17 @@ ms.locfileid: "90553736"
 
 01. 檢查 **發行** REG_DWORD 值，以判斷已安裝的版本。 若要正向相容，請檢查是否有大於或等於 [.NET Framework 版本表](#version_table)中所列值的值。
 
-下列範例會檢查登錄中的 **Release** 項目值，尋找已安裝的 .NET Framework 4.5 和更新版本：
+下列範例會檢查登錄中 **發行** 專案的值，以尋找已安裝 .NET Framework 4.5-4.8 的版本：
 
-[!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
-[!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
+:::code language="csharp" source="snippets/csharp/versions-installed.cs" id="2":::
+
+:::code language="vb" source="snippets/visual-basic/versions-installed.vb" id="2":::
+
+此範例會顯示如下所示的輸出：
+
+```output
+.NET Framework Version: 4.6.1
+```
 
 此範例遵循版本檢查的建議做法：
 
@@ -163,10 +170,21 @@ ms.locfileid: "90553736"
 > [!IMPORTANT]
 > 如果您正在執行的應用程式是32位並在64位 Windows 中執行，則登錄路徑會與先前所列的不同。 您可以在**HKEY_LOCAL_MACHINE \\ SOFTWARE \\ Wow6432Node \\ **子機碼中找到64位登錄。 例如，.NET Framework 3.5 的登錄子機碼是 **HKEY_LOCAL_MACHINE \\ SOFTWARE \\ Wow6432Node \\ Microsoft \\ NET Framework Setup \\ NDP \\ v 3.5**。
 
-下列範例會尋找已安裝的 .NET Framework 1 至4個版本：
+下列範例會尋找已安裝的 .NET Framework 1-4 版本：
 
-[!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
-[!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
+:::code language="csharp" source="snippets/csharp/versions-installed.cs" id="1":::
+
+:::code language="vb" source="snippets/visual-basic/versions-installed.vb" id="1":::
+
+此範例會顯示如下所示的輸出：
+
+```output
+v2.0.50727  2.0.50727.4927  SP2
+v3.0  3.0.30729.4926  SP2
+v3.5  3.5.30729.4926  SP1
+v4.0
+  Client  4.0.0.0
+```
 
 ## <a name="find-clr-versions"></a>尋找 CLR 版本
 
@@ -188,28 +206,39 @@ ms.locfileid: "90553736"
 
   > [!IMPORTANT]
   > 針對 .NET Framework 4.5 和更新版本，請不要使用 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 屬性來偵測 CLR 版本。 請改為查詢登錄，如偵測 [.NET Framework 4.5 和更新版本](#detect-net-framework-45-and-later-versions)中所述。
-  
-  01. 查詢 <xref:System.Environment.Version?displayProperty=nameWithType> 屬性以擷取 <xref:System.Version> 物件。
-  
-      傳回的 `System.Version` 物件可識別目前執行程式碼的執行階段版本。 它不會傳回組件版本或已安裝在電腦上的其他執行階段版本。
-  
-      針對 .NET Framework 4、4.5、4.5.1 和4.5.2 版，所傳回物件的字串表示 <xref:System.Version> 格式為4.0.30319。*xxxxx*，其中 *xxxxx* 小於42000。 針對 .NET Framework 4.6 和更新版本，其格式為4.0.30319.42000 版。
-  
-  01. 取得 **版本** 物件之後，請依照下列方式進行查詢：
-  
-      - 針對主要版本識別項 (例如 4.0 版的 *4*)，請使用 <xref:System.Version.Major%2A?displayProperty=nameWithType> 屬性。
-  
-      - 針對次要版本識別項 (例如 4.0 版的 *0*)，請使用 <xref:System.Version.Minor%2A?displayProperty=nameWithType> 屬性。
-  
-      - 針對整個版本字串 (例如 *4.0.30319.18010*)，請使用 <xref:System.Version.ToString%2A?displayProperty=nameWithType> 方法。 這個方法會傳回單一值，其反映執行程式碼的執行階段版本。 它不會傳回組件版本或可能已安裝在電腦上的其他執行階段版本。
+
+  1. 查詢 <xref:System.Environment.Version?displayProperty=nameWithType> 屬性以擷取 <xref:System.Version> 物件。
+
+     傳回的 `System.Version` 物件可識別目前執行程式碼的執行階段版本。 它不會傳回組件版本或已安裝在電腦上的其他執行階段版本。
+
+     針對 .NET Framework 4、4.5、4.5.1 和4.5.2 版，所傳回物件的字串表示 <xref:System.Version> 格式為4.0.30319。*xxxxx*，其中 *xxxxx* 小於42000。 針對 .NET Framework 4.6 和更新版本，其格式為4.0.30319.42000 版。
+
+  1. 取得 **版本** 物件之後，請依照下列方式進行查詢：
+
+     - 針對主要版本識別項 (例如 4.0 版的 *4*)，請使用 <xref:System.Version.Major%2A?displayProperty=nameWithType> 屬性。
+
+     - 針對次要版本識別項 (例如 4.0 版的 *0*)，請使用 <xref:System.Version.Minor%2A?displayProperty=nameWithType> 屬性。
+
+     - 針對整個版本字串 (例如 *4.0.30319.18010*)，請使用 <xref:System.Version.ToString%2A?displayProperty=nameWithType> 方法。 這個方法會傳回單一值，其反映執行程式碼的執行階段版本。 它不會傳回組件版本或可能已安裝在電腦上的其他執行階段版本。
 
   下列範例使用 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 屬性來擷取 CLR 版本資訊：
-  
-  [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
-  [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
+
+  ```csharp
+  Console.WriteLine($"Version: {Environment.Version}");
+  ```
+
+  ```vb
+  Console.WriteLine($"Version: {Environment.Version}")
+  ```
+
+  此範例會顯示如下所示的輸出：
+
+  ```output
+  Version: 4.0.30319.18010
+  ```
 
 ## <a name="see-also"></a>另請參閱
 
 - [如何：判斷安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)
-- [安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)
+- [安裝適用于開發人員的 .NET Framework](../install/guide-for-developers.md)
 - [.NET Framework 版本和相依性](versions-and-dependencies.md)

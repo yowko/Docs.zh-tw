@@ -1,17 +1,17 @@
 ---
 title: 開始使用適用於 Apache Spark 的 .NET
 description: 探索如何在 Windows、macOS 和 Ubuntu 上使用 .NET Core 執行適用于 Apache Spark 應用程式的 .NET。
-ms.date: 09/17/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 7afb35c9d02db1d1ee2bf04d565f79588b00695e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866047"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955404"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教學課程：開始使用 .NET 進行 Apache Spark
 
@@ -24,8 +24,6 @@ ms.locfileid: "90866047"
 > * 準備適用于 .NET 的環境以進行 Apache Spark
 > * 為 Apache Spark 應用程式撰寫您的第一個 .NET
 > * 為 Apache Spark 應用程式建立並執行您的 .NET
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prepare-your-environment"></a>準備您的環境
 
@@ -70,7 +68,7 @@ Apache Spark 會下載為壓縮的 tgz 檔案。 使用類似 [7-Zip](https://ww
 * 以滑鼠右鍵按一下 [ **spark-2.4.1-bin-hadoop 2.7** ]，然後選取 [ **7-Zip-> 解壓縮檔案 ...** ]
 * 在 [**解壓縮至**] 欄位中輸入**C:\bin** 。
 * 取消核 **取 [解壓縮至** ] 欄位下方的核取方塊。
-* 選取 [確定]。
+* 選取 [確定]  。
 * Apache Spark 檔案會解壓縮至 C:\bin\spark-2.4.1-bin-hadoop2.7\
 
 ![安裝 Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
@@ -115,7 +113,7 @@ spark-submit --version
 * 以滑鼠右鍵按一下並選取 [ **7-Zip-> 解壓縮檔**案 ...]。
 * 在 [**解壓縮至**] 欄位中輸入**C:\bin** 。
 * 取消核 **取 [解壓縮至** ] 欄位下方的核取方塊。
-* 選取 [確定]。
+* 選取 [確定]  。
 
 ![安裝 .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 

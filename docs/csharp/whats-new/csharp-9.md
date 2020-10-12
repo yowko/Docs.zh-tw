@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654903"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955163"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -232,7 +232,7 @@ if (e is not null)
 
 接下來，您可以使用捨棄作為 lambda 運算式的參數。 這種便利性可讓您避免將引數命名，而編譯器可能會避免使用它。 您可以使用 `_` 做為任何引數。 如需詳細資訊，請參閱[lambda](../language-reference/operators/lambda-expressions.md)運算式一文的[lambda 運算式章節的輸入參數](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression)。
 
-最後，您現在可以將屬性套用至區域函數。 例如，您可以將可為 null 的屬性批註套用至區域函數。
+最後，您現在可以將屬性套用至 [區域函數](../programming-guide/classes-and-structs/local-functions.md)。 例如，您可以將 [可為 null 的屬性批註](../language-reference/attributes/nullable-analysis.md) 套用至區域函數。
 
 ## <a name="support-for-code-generators"></a>程式碼產生器的支援
 

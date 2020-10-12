@@ -2,12 +2,12 @@
 title: 基礎類別庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: b86ceab784fd295acf500986f7e64731eb8ed0a3
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: d4deef295479b1f32bd72a69369a11c7375835f4
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756103"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955550"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,7 @@ ms.locfileid: "91756103"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [單一檔案發佈格式的元件相關 API 行為變更](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
 | [活動中標記的順序。標記會反轉](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
 | [RC1 中的參數名稱已變更](#parameter-names-changed-in-rc1) | 5.0 |
 | [OSPlatform 屬性已重新命名或移除](#osplatform-attributes-renamed-or-removed) | 5.0 |
@@ -56,6 +57,10 @@ ms.locfileid: "91756103"
 | [StartInfo 會針對您未啟動的進程擲回 InvalidOperationException](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
+
+***
 
 [!INCLUDE [reverse-order-of-tags-in-activity-property](../../../includes/core-changes/corefx/5.0/reverse-order-of-tags-in-activity-property.md)]
 

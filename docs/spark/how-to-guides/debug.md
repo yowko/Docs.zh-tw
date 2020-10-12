@@ -1,21 +1,19 @@
 ---
 title: 對 Windows 上的 .NET for Apache Spark 應用程式進行偵錯
 description: 了解如何對 Windows 上的 .NET for Apache Spark 應用程式進行偵錯。
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 249b4bccbf1378d8ef8c824f39151c33fb9f875a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 43531e6b2f9a79658f89b804dfa2bb97d6e9645b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557147"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954980"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>對 .NET for Apache Spark 應用程式進行偵錯
 
 此操作說明提供在 Windows 上針對 Apache Spark 應用程式的 .NET 進行偵錯工具的步驟。
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="debug-your-application"></a>偵錯應用程式
 

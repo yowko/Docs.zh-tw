@@ -1,15 +1,15 @@
 ---
 title: 將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks
 description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks。
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 904aeea4fa8b134c8c36ebb83779dc044154e6f3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1f705878a577a7fa375346cae18010d8c8cc77e1
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552163"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955443"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教學課程：將 Apache Spark 應用程式的 .NET 部署至 Databricks
 
@@ -24,9 +24,7 @@ ms.locfileid: "90552163"
 > - 建立 Spark 作業和 Spark 叢集。
 > - 在 Spark 叢集上執行您的應用程式。
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 開始之前，請執行下列工作：
 

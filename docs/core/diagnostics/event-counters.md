@@ -1,56 +1,56 @@
 ---
 title: .NET Core 中的 EventCounters
-description: 在本文中，您將瞭解 EventCounters 是什麼、如何執行，以及如何使用它們。
+description: 在本文中，您將瞭解什麼是 EventCounters、如何實行它們，以及如何使用它們。
 ms.date: 08/07/2020
-ms.openlocfilehash: fc2f945e3de732a81b9ce3fd82eff10e455cae87
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: be273776b888f13893fc694a111093cca1fa8a5e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062960"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955313"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 中的 EventCounters
 
-**本文適用于：✔️** .net CORE 3.0 SDK 和更新版本
+本文**適用于：✔️** .net CORE 3.0 SDK 和更新版本
 
-EventCounters 是用於輕量、跨平臺且近乎即時效能標準集合的 .NET Core Api。 EventCounters 已新增為 Windows 上 .NET Framework 「效能計數器」的跨平臺替代方案。 在本文中，您將瞭解 EventCounters 是什麼、如何執行，以及如何使用它們。
+EventCounters 是 .NET Core Api，用於輕量、跨平臺和近乎即時的效能計量集合。 EventCounters 已新增為 Windows 上 .NET Framework 之「效能計數器」的跨平臺替代方案。 在本文中，您將瞭解什麼是 EventCounters、如何實行它們，以及如何使用它們。
 
-.NET Core 執行時間和一些 .NET 程式庫會使用 EventCounters （從 .NET Core 3.0 開始）發行基本的診斷資訊。 除了 .NET 執行時間所提供的 EventCounters 之外，您也可以選擇執行自己的 EventCounters。 EventCounters 可以用來追蹤各種計量。
+.NET Core 執行時間和一些 .NET 程式庫會使用 EventCounters （從 .NET Core 3.0 開始）發佈基本的診斷資訊。 除了 .NET 執行時間所提供的 EventCounters 之外，您還可以選擇執行自己的 EventCounters。 EventCounters 可以用來追蹤各種計量。
 
-即時 EventCounters 為的一部分 <xref:System.Diagnostics.Tracing.EventSource> ，並且會定期自動推送至接聽程式工具。 就像上的所有其他事件一樣 <xref:System.Diagnostics.Tracing.EventSource> ，您可以透過和 EventPipe 同時使用進程內和跨進程 <xref:System.Diagnostics.Tracing.EventListener> 。 本文著重于 EventCounters 的跨平臺功能，並刻意排除 PerfView 和 ETW (Windows) 的事件追蹤，不過這兩者都可以搭配 EventCounters 使用。
+EventCounters 即時作為的一部分 <xref:System.Diagnostics.Tracing.EventSource> ，並且會定期自動推送至接聽程式工具。 就像上的所有其他事件一樣 <xref:System.Diagnostics.Tracing.EventSource> ，它們都可以透過內部進程和跨進程的方式，透過 <xref:System.Diagnostics.Tracing.EventListener> 和 EventPipe 使用。 本文著重于 EventCounters 的跨平臺功能，並刻意排除 PerfView 和 ETW (Windows) 的事件追蹤，雖然兩者都可以搭配 EventCounters 使用。
 
-![EventCounters 同進程和跨進程圖表影像](media/event-counters.svg)
+![EventCounters 同進程和跨進程的圖表影像](media/event-counters.svg)
 
 [!INCLUDE [available-counters](includes/available-counters.md)]
 
 ## <a name="eventcounter-api-overview"></a>EventCounter API 總覽
 
-計數器有兩個主要類別。 某些計數器適用于「速率」值，例如例外狀況總數、Gc 總數和要求總數。 其他計數器則是「快照集」值，例如堆積使用量、CPU 使用量和工作集大小。 在上述每個類別的計數器中，有兩種類型的計數器會因取得其值的方式而有所不同。 輪詢計數器會透過回呼來抓取其值，而非輪詢計數器會在計數器實例上直接設定其值。
+有兩個主要的計數器類別。 某些計數器適用于「速率」值，例如例外狀況總數、Gc 總數和要求總數。 其他計數器是「快照集」值，例如堆積使用量、CPU 使用量和工作集大小。 在這些類別的計數器中，有兩種類型的計數器會因其取得值的方式而有所不同。 輪詢計數器會透過回呼抓取其值，而非輪詢計數器會在計數器實例上直接設定其值。
 
-這些計數器是由下列的實作為表示：
+計數器是由下列實作為表示：
 
 * <xref:System.Diagnostics.Tracing.EventCounter>
 * <xref:System.Diagnostics.Tracing.IncrementingEventCounter>
 * <xref:System.Diagnostics.Tracing.IncrementingPollingCounter>
 * <xref:System.Diagnostics.Tracing.PollingCounter>
 
-事件接聽程式會指定測量間隔的時間長度。 在每個間隔結束時，會將值傳送到每個計數器的接聽程式。 計數器的執行會決定要使用哪些 Api 和計算來產生每個間隔的值。
+事件接聽程式會指定度量間隔的時間長度。 在每個間隔結束時，會將值傳送至每個計數器的接聽程式。 計數器的實，會決定使用哪一個 Api 和計算來產生每個間隔的值。
 
-1. 會 <xref:System.Diagnostics.Tracing.EventCounter> 記錄一組值。 <xref:System.Diagnostics.Tracing.EventCounter.WriteMetric%2A?displayProperty=nameWithType>方法會將新的值加入至集合。 在每個間隔中，會計算集合的統計摘要，例如 min、max 和 mean。 [Dotnet 計數器](dotnet-counters.md)工具一律會顯示平均值。 適用 <xref:System.Diagnostics.Tracing.EventCounter> 于描述一組不連續的作業。 常見的用法可能包括監視最近 IO 作業的平均大小（以位元組為單位），或一組財務交易的平均貨幣值。
+1. 會 <xref:System.Diagnostics.Tracing.EventCounter> 記錄一組值。 <xref:System.Diagnostics.Tracing.EventCounter.WriteMetric%2A?displayProperty=nameWithType>方法會將新的值加入至集合。 在每個間隔中，會計算集合的統計摘要，例如最小值、最大值和平均值。 [Dotnet 計數器](dotnet-counters.md)工具一律會顯示 mean 值。 適用 <xref:System.Diagnostics.Tracing.EventCounter> 于描述一組不連續的作業。 常見的使用方式可能包括監視最近 IO 作業的平均大小（以位元組為單位），或一組財務交易的平均貨幣值。
 
-1. 會 <xref:System.Diagnostics.Tracing.IncrementingEventCounter> 記錄每個時間間隔的執行總計。 <xref:System.Diagnostics.Tracing.IncrementingEventCounter.Increment%2A?displayProperty=nameWithType>方法會將新增至總計。 例如，如果在 `Increment()` 一段時間內呼叫了三次，且值為 `1` 、 `2` 和 `5` ，則的總計 `8` 會回報為此間隔的計數器值。 [Dotnet 計數器](dotnet-counters.md)工具會將速率顯示為記錄的總/時間。 適用 <xref:System.Diagnostics.Tracing.IncrementingEventCounter> 于測量動作發生的頻率，例如每秒處理的要求數目。
+1. 會 <xref:System.Diagnostics.Tracing.IncrementingEventCounter> 記錄每個時間間隔的總執行總數。 <xref:System.Diagnostics.Tracing.IncrementingEventCounter.Increment%2A?displayProperty=nameWithType>方法會加總。 例如，如果 `Increment()` 在一個間隔期間使用值、和來呼叫三次，則 `1` 會將 `2` `5` `8` 執行總數報告為此間隔的計數器值。 [Dotnet 計數器](dotnet-counters.md)工具會將速率顯示為記錄的總/時間。 <xref:System.Diagnostics.Tracing.IncrementingEventCounter>有助於測量動作的發生頻率，例如每秒處理的要求數。
 
-1. <xref:System.Diagnostics.Tracing.PollingCounter>會使用回呼來判斷所報告的值。 在每個時間間隔中，會叫用使用者提供的回呼函式，並使用傳回值做為計數器值。 <xref:System.Diagnostics.Tracing.PollingCounter>可以用來查詢來自外部來源的計量，例如取得磁片上目前可用的位元組。 它也可以用來報告應用程式可以視需要計算的自訂統計資料。 範例包括報告最近要求延遲的第95個百分位數，或快取的目前叫用或遺漏比例。
+1. <xref:System.Diagnostics.Tracing.PollingCounter>使用回呼來判斷所報告的值。 在每個時間間隔中，會叫用使用者提供的回呼函數，並使用傳回值做為計數器值。 <xref:System.Diagnostics.Tracing.PollingCounter>可以用來查詢外部來源的度量，例如取得磁片上的目前可用位元組。 它也可以用來報告應用程式可依需求計算的自訂統計資料。 範例包括報告最近要求延遲的第95個百分位數，或快取的目前命中或遺漏率。
 
-1. 會 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> 使用回呼來判斷回報的遞增值。 在每個時間間隔內，會叫用回呼，然後在目前的調用與最後一個調用之間的差異是報告的值。 [Dotnet 計數器](dotnet-counters.md)工具一律會以速率（回報的值/時間）顯示差異。 如果在每次發生時都不能呼叫 API，此計數器很有用，但可以查詢發生的總次數。 例如，您可以報告每秒寫入檔案的位元組數目，即使每次寫入一個位元組，都不會有通知。
+1. <xref:System.Diagnostics.Tracing.IncrementingPollingCounter>使用回呼來判斷回報的遞增值。 在每個時間間隔中，會叫用回呼，然後目前的調用和最後一個調用之間的差異是回報的值。 [Dotnet 計數器](dotnet-counters.md)工具一律會以比率（回報的值/時間）顯示差異。 當每次發生時都不能呼叫 API 時，此計數器很有用，但可以查詢發生的總次數。 例如，您可以報告每秒寫入檔案的位元組數，即使每次寫入位元組都沒有通知也是一樣。
 
 ## <a name="implement-an-eventsource"></a>執行 EventSource
 
-下列程式碼會實 <xref:System.Diagnostics.Tracing.EventSource> 作為命名提供者公開的範例 `"Sample.EventCounter.Minimal"` 。 此來源包含 <xref:System.Diagnostics.Tracing.EventCounter> 代表要求處理時間的。 這類計數器的名稱 (，也就是它在來源) 中的唯一識別碼和顯示名稱，這兩者都是由接聽程式工具（例如[dotnet-counter](dotnet-counters.md)）所使用。
+下列程式碼會實 <xref:System.Diagnostics.Tracing.EventSource> 作為命名提供者公開的範例 `"Sample.EventCounter.Minimal"` 。 此來源包含 <xref:System.Diagnostics.Tracing.EventCounter> 表示要求處理時間的。 這類計數器的名稱 (，也就是它在來源) 的唯一識別碼和顯示名稱，這兩者都是由接聽程式工具（例如 [dotnet-counter](dotnet-counters.md)）所使用。
 
 :::code language="csharp" source="snippets/EventCounters/MinimalEventCounterSource.cs":::
 
-您可以使用 `dotnet-counters ps` 來顯示可以監視的 .net 進程清單：
+您可以使用 `dotnet-counters ps` 來顯示可監視的 .net 進程清單：
 
 ```console
 dotnet-counters ps
@@ -61,7 +61,7 @@ dotnet-counters ps
    1400180 sample-counters C:\sample-counters\bin\Debug\netcoreapp3.1\sample-counters.exe
 ```
 
-將 <xref:System.Diagnostics.Tracing.EventSource> 名稱傳遞給 `counter_list` 參數以開始監視計數器：
+將 <xref:System.Diagnostics.Tracing.EventSource> 名稱傳遞至 `counter_list` 參數，以開始監視您的計數器：
 
 ```console
 dotnet-counters monitor --process-id 1400180 Sample.EventCounter.Minimal
@@ -77,20 +77,20 @@ Press p to pause, r to resume, q to quit.
     Request Processing Time (ms)                            0.445
 ```
 
-按<kbd>q</kbd>停止監視命令。
+按 <kbd>q</kbd> 停止監視命令。
 
 #### <a name="conditional-counters"></a>條件式計數器
 
-在執行時 <xref:System.Diagnostics.Tracing.EventSource> ，包含的計數器可以在 <xref:System.Diagnostics.Tracing.EventSource.OnEventCommand%2A?displayProperty=nameWithType> 使用值呼叫方法時，有條件地具現化 <xref:System.Diagnostics.Tracing.EventCommandEventArgs.Command> `EventCommand.Enable` 。 若要安全地具現化計數器實例（如果它是 `null` ），請使用[null 聯合指派運算子](../../csharp/language-reference/operators/null-coalescing-operator.md)。 此外，自訂方法可以評估 <xref:System.Diagnostics.DiagnosticSource.IsEnabled%2A> 方法，以判斷是否已啟用目前的事件來源。
+在執行時 <xref:System.Diagnostics.Tracing.EventSource> ，如果使用的值來呼叫方法，則可以有條件地具現化包含的計數器 <xref:System.Diagnostics.Tracing.EventSource.OnEventCommand%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Tracing.EventCommandEventArgs.Command> `EventCommand.Enable` 。 若只要安全地具現化計數器實例 `null` ，請使用 [null 聯合指派運算子](../../csharp/language-reference/operators/null-coalescing-operator.md)。 此外，自訂方法可以評估 <xref:System.Diagnostics.DiagnosticSource.IsEnabled%2A> 方法，以判斷是否已啟用目前的事件來源。
 
 :::code language="csharp" source="snippets/EventCounters/ConditionalEventCounterSource.cs":::
 
 > [!TIP]
-> 條件式計數器是有條件地具現化的計數器（微優化）。 在通常不會使用計數器的情況下，執行時間會採用此模式，以節省毫秒的分數。
+> 條件式計數器是有條件地具現化的計數器，亦即微優化。 執行時間會在通常未使用計數器的情況下採用此模式，以節省毫秒的部分。
 
 ### <a name="net-core-runtime-example-counters"></a>.NET Core 執行時間範例計數器
 
-.NET Core 執行時間中有許多絕佳的範例實現。 以下是用來追蹤應用程式工作集大小之計數器的執行時間執行。
+.NET Core 執行時間中有許多絕佳的範例執行。 以下是可追蹤應用程式工作集大小的計數器執行時間執行。
 
 ```csharp
 var workingSetCounter = new PollingCounter(
@@ -103,14 +103,14 @@ var workingSetCounter = new PollingCounter(
 };
 ```
 
-<xref:System.Diagnostics.Tracing.PollingCounter>會報告應用程式的目前對應至進程 (工作集) 的實體記憶體量，因為它會在一段時間內捕捉計量。 輪詢值的回呼是提供的 lambda 運算式，這只是對 API 的呼叫 <xref:System.Environment.WorkingSet?displayProperty=fullName> 。 <xref:System.Diagnostics.Tracing.DiagnosticCounter.DisplayName>和 <xref:System.Diagnostics.Tracing.DiagnosticCounter.DisplayUnits> 是選擇性屬性，可設定來協助計數器的取用者端更清楚地顯示值。 例如， [dotnet 計數器](dotnet-counters.md)會使用這些屬性來顯示更容易顯示的計數器名稱版本。
+<xref:System.Diagnostics.Tracing.PollingCounter>會報告應用程式的目前對應至進程的實體記憶體數量 (工作集) ，因為它會在某個時間點捕獲計量。 輪詢值的回呼是提供的 lambda 運算式，只是對 API 的呼叫 <xref:System.Environment.WorkingSet?displayProperty=fullName> 。 <xref:System.Diagnostics.Tracing.DiagnosticCounter.DisplayName> 和 <xref:System.Diagnostics.Tracing.DiagnosticCounter.DisplayUnits> 都是選擇性屬性，可設定以協助計數器的取用者端更清楚地顯示值。 例如， [dotnet 計數器](dotnet-counters.md) 會使用這些屬性來顯示更容易顯示的計數器名稱版本。
 
 > [!IMPORTANT]
-> `DisplayName`屬性未當地語系化。
+> `DisplayName`未當地語系化屬性。
 
-對於 <xref:System.Diagnostics.Tracing.PollingCounter> 、和，則 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> 不需要執行任何其他動作。 它們都會以取用者要求的間隔來輪詢值本身。
+在 <xref:System.Diagnostics.Tracing.PollingCounter> 和 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> 中，不需要完成任何其他動作。 它們會在取用者要求的間隔輪詢這些值。
 
-以下是使用所實作為執行時間計數器的範例 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> 。
+以下是使用執行之執行時間計數器的範例 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> 。
 
 ```csharp
 var monitorContentionCounter = new IncrementingPollingCounter(
@@ -124,42 +124,52 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 };
 ```
 
-會 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> 使用 <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> API 來報告總鎖定爭用計數的增量。 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>屬性是選擇性的，但在使用時，它可以針對最適合顯示計數器的時間間隔提供提示。 例如，鎖定爭用計數最好顯示為_每秒計數_，因此其 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> 設定為一秒。 顯示速率可以針對不同類型的速率計數器進行調整。
+<xref:System.Diagnostics.Tracing.IncrementingPollingCounter>使用 <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> API 來報告總鎖定爭用計數的增量。 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>屬性是選擇性的，但使用時，可以提供提示，指出計數器最適合顯示的時間間隔。 例如，鎖定爭用計數最適合顯示為 _每秒的計數_，因此其 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> 設定為一秒。 您可以針對不同類型的速率計數器調整顯示速率。
 
 > [!NOTE]
-> 不 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> 是_not_由[dotnet 計數器](dotnet-counters.md)使用，而且事件接聽程式不需要使用它。
+> <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>Dotnet_不_會使用，且事件接聽[程式](dotnet-counters.md)不需要使用它。
 
-在[.net 運行](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs)時間存放庫中，您可以使用更多的計數器來做為參考。
+在 [.net 運行](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/Diagnostics/Tracing/RuntimeEventSource.cs) 時間存放庫中，有更多的計數器會用來做為參考。
 
 ## <a name="concurrency"></a>並行
 
 > [!TIP]
-> EventCounters API 不保證執行緒的安全。 當 <xref:System.Diagnostics.Tracing.PollingCounter> 多個執行緒呼叫傳遞給或實例的委派時 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> ，您必須負責確保委派的執行緒安全。
+> EventCounters API 不保證執行緒安全。 當 <xref:System.Diagnostics.Tracing.PollingCounter> 多個執行緒呼叫傳遞給或實例的委派時 <xref:System.Diagnostics.Tracing.IncrementingPollingCounter> ，您必須負責確保委派的執行緒安全。
 
-例如，請考慮下列事項 <xref:System.Diagnostics.Tracing.EventSource> 以追蹤要求。
+例如，請考慮下列事項 <xref:System.Diagnostics.Tracing.EventSource> 來追蹤要求。
 
 :::code language="csharp" source="snippets/EventCounters/RequestEventSource.cs":::
 
-`AddRequest()`方法可以從要求處理常式呼叫，而且會 `RequestRateCounter` 以計數器取用者所指定的間隔來輪詢值。 不過， `AddRequest()` 方法可以同時由多個執行緒呼叫，並將競爭條件放在 `_requestCount` 。 以執行緒安全的替代方式，遞增 `_requestCount` 會使用 <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType> 。
+您 `AddRequest()` 可以從要求處理常式呼叫方法，然後在 `RequestRateCounter` 計數器的取用者所指定的間隔輪詢該值。 但是， `AddRequest()` 方法可以一次呼叫多個執行緒，並將競爭條件放在上 `_requestCount` 。 用來遞增的安全線程替代方法 `_requestCount` <xref:System.Threading.Interlocked.Increment%2A?displayProperty=nameWithType> 。
 
 ```csharp
 public void AddRequest() => Interlocked.Increment(ref _requestCount);
 ```
 
+若要防止讀取 (在32位架構上的) 的 `long` 欄位 `_requestCount` 使用 <xref:System.Threading.Interlocked.Read%2A?displayProperty=nameWithType> 。
+
+```csharp
+_requestRateCounter = new IncrementingPollingCounter("request-rate", this, () => Interlocked.Read(ref _requestCount))
+{
+    DisplayName = "Request Rate",
+    DisplayRateTimeScale = TimeSpan.FromSeconds(1)
+};
+```
+
 ## <a name="consume-eventcounters"></a>使用 EventCounters
 
-有兩種主要的方式可使用 EventCounters （不論是在進程中或跨進程）。 EventCounters 的耗用量可以區別成各種取用技術的三層。
+有兩種主要方式可取用 EventCounters，不論是在進程中，或是跨進程使用。 EventCounters 的耗用量可分為三層不同的取用技術。
 
-- 透過 ETW 或 EventPipe 傳輸原始資料流程中的事件：
-  - ETW Api 隨附于 Windows 作業系統，而 EventPipe 可透過[.NET API](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console)或診斷[IPC 通訊協定](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/ipc-protocol.md)來存取。
+- 透過 ETW 或 EventPipe 在原始資料流程中傳輸事件：
+  - ETW Api 隨附于 Windows 作業系統，而 EventPipe 可作為 [.NET API](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/diagnostics-client-library.md#1-attaching-to-a-process-and-dumping-out-all-the-runtime-gc-events-in-real-time-to-the-console)或診斷 [IPC 通訊協定](https://github.com/dotnet/diagnostics/blob/master/documentation/design-docs/ipc-protocol.md)來存取。
 - 將二進位事件資料流程解碼成事件：
-  - [TraceEvent 程式庫](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent)會同時處理 ETW 和 EventPipe 資料流程格式。
+  - [TraceEvent 程式庫](https://www.nuget.org/packages/Microsoft.Diagnostics.Tracing.TraceEvent)會處理 ETW 和 EventPipe 資料流程格式。
 - 命令列和 GUI 工具：
-  - 像是 PerfView (ETW 或 EventPipe) 的工具、dotnet 計數器 (僅 EventPipe) ，以及 dotnet 監視器 (僅) EventPipe。
+  - PerfView (ETW 或 EventPipe) 、dotnet 計數器 (僅 EventPipe) 和 dotnet 監視器 (EventPipe 的工具。
 
-### <a name="consume-out-of-proc"></a>耗用進程外
+### <a name="consume-out-of-proc"></a>使用跨進程
 
-使用 EventCounters 跨進程是非常常見的方法。 您可以使用[dotnet](dotnet-counters.md) ，透過 EventPipe 以跨平臺方式取用這些計數器。 此 `dotnet-counters` 工具是一個跨平臺 DOTNET CLI 全域工具，可用來監視計數器值。 若要瞭解如何使用 `dotnet-counters` 監視計數器，請參閱[dotnet-計數器](dotnet-counters.md)，或[使用 EventCounters 的測量效能](event-counter-perf.md)教學課程。
+使用 EventCounters 跨進程是一個非常常見的方法。 您可以使用 [dotnet 計數器](dotnet-counters.md) 透過 EventPipe 以跨平臺的方式取用它們。 此 `dotnet-counters` 工具是一個跨平臺 DOTNET CLI 全域工具，可用來監視計數器值。 若要瞭解如何使用 `dotnet-counters` 來監視您的計數器，請參閱 [dotnet 計數器](dotnet-counters.md)，或使用 EventCounters 教學課程進行 [測量效能](event-counter-perf.md) 。
 
 #### <a name="dotnet-trace"></a>dotnet-trace
 
@@ -169,33 +179,33 @@ public void AddRequest() => Interlocked.Increment(ref _requestCount);
 dotnet-trace collect --process-id <pid> Sample.EventCounter.Minimal:0:0:EventCounterIntervalSec=1
 ```
 
-如需有關如何在一段時間內收集計數器值的詳細資訊，請參閱[dotnet 追蹤](dotnet-trace.md#use-dotnet-trace-to-collect-counter-values-over-time)檔。
+如需有關如何在一段時間內收集計數器值的詳細資訊，請參閱 [dotnet 追蹤](dotnet-trace.md#use-dotnet-trace-to-collect-counter-values-over-time) 檔。
 
 #### <a name="azure-application-insights"></a>Azure Application Insights
 
-Azure 監視器可以使用 EventCounters，特別是 Azure 應用程式深入解析。 可以新增和移除計數器，您可以隨意指定自訂計數器或已知的計數器。 如需詳細資訊，請參閱[自訂要收集的計數器](/azure/azure-monitor/app/eventcounters#customizing-counters-to-be-collected)。
+Azure 監視器可以取用 EventCounters，特別是 Azure 應用程式的見解。 您可以新增和移除計數器，而且可以自由指定自訂計數器或已知的計數器。 如需詳細資訊，請參閱 [自訂要收集的計數器](/azure/azure-monitor/app/eventcounters#customizing-counters-to-be-collected)。
 
 #### <a name="dotnet-monitor"></a>dotnet-監視
 
-此 `dotnet-monitor` 工具是一個實驗性工具，可讓您更輕鬆地存取 .net 進程中的診斷資訊。 此工具可做為所有診斷工具的超集合。 除了追蹤，它還可以監視計量、收集記憶體傾印，以及收集 GC 傾印。 它會同時散發為 CLI 工具和 docker 映射。 它會公開 REST API，而診斷成品的集合會透過 REST 呼叫進行。
+此 `dotnet-monitor` 工具是實驗性工具，可讓您更輕鬆地存取 .net 進程中的診斷資訊。 此工具可做為所有診斷工具的超集合。 除了追蹤，它還可以監視計量、收集記憶體傾印，以及收集 GC 傾印。 它是以 CLI 工具和 docker 映射的形式散發。 它會公開 REST API，並透過 REST 呼叫來收集診斷成品。
 
-如需詳細資訊，請參閱[dotnet-監視器簡介（實驗性工具）](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor)。
+如需詳細資訊，請參閱 [dotnet-監視器簡介（實驗性工具）](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor)。
 
-### <a name="consume-in-proc"></a>耗用內部進程
+### <a name="consume-in-proc"></a>使用同進程
 
-您可以透過 API 取用計數器值 <xref:System.Diagnostics.Tracing.EventListener> 。 <xref:System.Diagnostics.Tracing.EventListener>是使用應用程式中所有實例所寫入之任何事件的同進程方式 <xref:System.Diagnostics.Tracing.EventSource> 。 如需有關如何使用 API 的詳細資訊 `EventListener` ，請參閱 <xref:System.Diagnostics.Tracing.EventListener> 。
+您可以透過 API 使用計數器值 <xref:System.Diagnostics.Tracing.EventListener> 。 <xref:System.Diagnostics.Tracing.EventListener>是在您的應用程式中取用所有實例所寫入之任何事件的同進程方式 <xref:System.Diagnostics.Tracing.EventSource> 。 如需如何使用 API 的詳細資訊 `EventListener` ，請參閱 <xref:System.Diagnostics.Tracing.EventListener> 。
 
-首先，必須 <xref:System.Diagnostics.Tracing.EventSource> 啟用產生計數器值的。 覆寫 <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A?displayProperty=nameWithType> 方法以在建立時取得通知 <xref:System.Diagnostics.Tracing.EventSource> ，如果這是 <xref:System.Diagnostics.Tracing.EventSource> 您 EventCounters 的正確，您可以 <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A?displayProperty=nameWithType> 在其上呼叫。 以下是範例覆寫：
+首先，必須 <xref:System.Diagnostics.Tracing.EventSource> 啟用產生計數器值的。 覆寫 <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A?displayProperty=nameWithType> 方法以在建立時取得通知 <xref:System.Diagnostics.Tracing.EventSource> ，如果是正確 <xref:System.Diagnostics.Tracing.EventSource> 的 EventCounters，您可以 <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A?displayProperty=nameWithType> 對其進行呼叫。 以下是範例覆寫：
 
 :::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs" range="16-27":::
 
 #### <a name="sample-code"></a>範例程式碼
 
-以下範例類別會 <xref:System.Diagnostics.Tracing.EventListener> 從 .net 執行時間中列印出所有的計數器名稱和值 <xref:System.Diagnostics.Tracing.EventSource> ，以 `System.Runtime` 在某個間隔) 發佈其內部計數器 (。
+以下範例類別會 <xref:System.Diagnostics.Tracing.EventListener> 印出 .net 執行時間的所有計數器名稱和值 <xref:System.Diagnostics.Tracing.EventSource> ，以便 `System.Runtime` 在某個時間間隔內 () 發佈其內部計數器。
 
 :::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs":::
 
-如上所示，當呼叫時，您_必須_確定引數 `"EventCounterIntervalSec"` 中已設定引數 `filterPayload` <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A> 。 否則，計數器將無法排清值，因為它不知道應該要清除的間隔。
+如上所示，呼叫時，您 _必須_ 確定引數 `"EventCounterIntervalSec"` 已設定引數 `filterPayload` <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A> 。 否則，計數器將無法排清值，因為它不知道應該將它排清的間隔。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -4,12 +4,12 @@ description: 此進階教學課程示範如何使用模式比對技術，以個�
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperfq1
-ms.openlocfilehash: 015bab574ca4255ffe355bd02bfb54b58e4ea7e0
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877661"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955625"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>教學課程：使用模式比對來建立型別驅動和資料驅動的演算法。
 
@@ -25,7 +25,7 @@ C# 7 引進基本的模式比對功能。 這些功能是在 c # 8 和 c # 9 中
 
 ## <a name="prerequisites"></a>必要條件
 
-您將需要設定您的電腦以執行 .NET 5，其中包括 c # 9 編譯器。 從 [Visual Studio 2019 16.9 版 preview 1](https://visualstudio.microsoft.com/vs/preview/) 或 [.net 5.0 SDK](https://dot.net/get-dotnet5)開始，可以使用 c # 8 編譯器。
+您將需要設定您的電腦以執行 .NET 5，其中包括 c # 9 編譯器。 從 [Visual Studio 2019 16.9 版 preview 1](https://visualstudio.microsoft.com/vs/preview/) 或 [.net 5.0 SDK](https://dot.net/get-dotnet5)開始，可以使用 c # 9 編譯器。
 
 本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 

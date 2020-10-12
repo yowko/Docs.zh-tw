@@ -1,29 +1,27 @@
 ---
-title: 在 .NET 中使用廣播變數以進行 Apache Spark
-description: 瞭解如何在 .NET 中針對 Apache Spark 應用程式使用廣播變數。
-ms.date: 06/25/2020
+title: 使用 .NET 中的廣播變數進行 Apache Spark
+description: 瞭解如何在 .NET 中使用廣播變數來 Apache Spark 應用程式。
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d86b160855cc4d3f3a6502f5606d4766b7c06aa0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3cf2215f59ce28878f44138386c01597ec852905
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617852"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955019"
 ---
-# <a name="use-broadcast-variables-in-net-for-apache-spark"></a>在 .NET 中使用廣播變數以進行 Apache Spark
+# <a name="use-broadcast-variables-in-net-for-apache-spark"></a>使用 .NET 中的廣播變數進行 Apache Spark
 
-在本文中，您將瞭解如何在 .NET 中使用廣播變數以進行 Apache Spark。 [Apache Spark 中的廣播變數](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables)是跨多個執行程式共用變數的機制，這些都是唯讀的。 廣播變數可讓您保留在每部電腦上快取的唯讀變數，而不是使用工作傳送它的複本。 您可以使用廣播變數，以有效率的方式為每個節點提供大型輸入資料集的複本。
+在本文中，您將瞭解如何在 .NET 中使用廣播變數進行 Apache Spark。 [Apache Spark 中的廣播變數](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) 是在應為唯讀的執行程式之間共用變數的機制。 廣播變數可讓您將唯讀變數保持在每部電腦上快取，而不是使用工作來傳送它的複本。 您可以使用廣播變數，以有效率的方式為每個節點提供大型輸入資料集的複本。
 
-由於資料只會傳送一次，因此，相較于每個工作隨附于執行程式的本機變數，廣播變數的效能優勢。 請參閱[官方廣播變數檔](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables)，以更深入瞭解廣播變數及其使用原因。
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+因為資料只會傳送一次，所以相較于每項工作的執行程式所附的區域變數，廣播變數有效能優勢。 請參閱 [官方廣播變數檔](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) ，以更深入瞭解廣播變數和使用的原因。
 
 ## <a name="create-broadcast-variables"></a>建立廣播變數
 
-若要建立廣播變數，請 `SparkContext.Broadcast(v)` 針對任何變數呼叫 `v` 。 廣播變數是變數周圍的包裝函式 `v` ，而其值可以藉由呼叫方法來存取 `Value()` 。
+若要建立廣播變數，請呼叫 `SparkContext.Broadcast(v)` 任何變數 `v` 。 廣播變數是變數周圍的包裝函式 `v` ，其值可透過呼叫方法來存取 `Value()` 。
 
-在下列程式碼片段中，會建立一個字串變數 `v` ，並 `bv` 在呼叫時建立廣播變數 `SparkContext.Broadcast(v)` 。 請注意，string 的類型參數會 `Broadcast` 符合所要廣播的變數類型。 使用者定義函數（UDF）會傳回的值 `bv` 。
+在下列程式碼片段中， `v` 會建立字串變數，並 `bv` 在呼叫時建立廣播變數 `SparkContext.Broadcast(v)` 。 請注意，字串的型別參數會比對 `Broadcast` 要廣播之變數的型別。  (UDF) 的使用者定義函數會傳回的值 `bv` 。
 
 ```csharp
 string v = "Variable to be broadcasted";
@@ -41,13 +39,13 @@ Func<Column, Column> udf = Udf<string, string>(
 bv.Destroy();
 ```
 
-`Destroy()`刪除與廣播變數相關的所有資料和中繼資料，並謹慎使用。 一旦廣播變數損毀，就無法再次使用。
+`Destroy()` 刪除與廣播變數相關的所有資料和中繼資料，而且應該謹慎使用。 一旦廣播變數損毀，就無法再使用。
 
 ## <a name="limit-broadcast-variable-scope-in-udfs"></a>限制 Udf 中的廣播變數範圍
 
-當您在 Udf 中使用廣播變數時，您必須將變數的範圍限制為只有參考該變數的 UDF。 [使用 udf 的指南](udf-guide.md)會詳細說明這種現象。 當您 `Destroy()` 在廣播變數上呼叫時，範圍特別重要。
+當您在 Udf 中使用廣播變數時，您需要將變數的範圍限制為只有參考該變數的 UDF。 [使用 udf 的指南](udf-guide.md)會詳細說明這種現象。 當您 `Destroy()` 在廣播變數上呼叫時，範圍特別重要。
 
-如果已終結的廣播變數可在其他 Udf 看到或可供存取，則所有 Udf 都會挑選它進行序列化，即使它們未被參考。 適用于 Apache Spark 的 .NET 無法序列化已終結的廣播變數，這會導致錯誤。 下列程式碼片段示範此錯誤：
+如果可從其他 Udf 看到或存取已終結的廣播變數，則所有 Udf 都會挑選它進行序列化，即使它們並未被參考也一樣。 .NET for Apache Spark 無法序列化終結的廣播變數，這會導致錯誤。 下列程式碼片段示範此錯誤：
 
 ```csharp
 string v = "Variable to be broadcasted";
@@ -73,7 +71,7 @@ Func<Column, Column> udf2 = Udf<string, string>(
 df.Select(udf2(df["_1"])).Show();
 ```
 
-下列程式碼片段示範如何確保終結 `bv` `udf2` 因非預期的序列化行為而不會影響：
+下列程式碼片段示範如何確保終結 `bv` `udf2` 因為未預期的序列化行為而不會受到影響：
 
 ```csharp
 string v = "Variable to be broadcasted";
@@ -101,4 +99,4 @@ df.Select(udf2(df["_1"])).Show();
 
 * [開始使用 .NET for Apache Spark](../tutorials/get-started.md)
 * [對 Windows 上的 .NET for Apache Spark 應用程式進行偵錯](debug.md)
-* [針對 Apache Spark 的背景工作角色和使用者定義的函數二進位檔部署 .NET](deploy-worker-udf-binaries.md)
+* [針對 Apache Spark 背景工作角色和使用者定義函數二進位檔部署 .NET](deploy-worker-udf-binaries.md)

@@ -1,15 +1,15 @@
 ---
 title: 區域函式 - C# 程式設計手冊
 description: 'C # 中的區域函式是在另一個成員中嵌套的私用方法，可從其包含成員中呼叫。'
-ms.date: 10/02/2020
+ms.date: 10/09/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: e7c49554da56d8682d37a236024922b3fa3ec600
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: a2d389c8b1c687dc4885004fcdc33e0ed7ada977
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877531"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955677"
 ---
 # <a name="local-functions-c-programming-guide"></a>區域函式 (C# 程式設計手冊)
 
@@ -50,11 +50,15 @@ ms.locfileid: "91877531"
 
 不同于方法定義，區域函式定義不能包含成員存取修飾詞。 因為所有區域函式都是私用，所以包含 `private` 這類關鍵字的存取修飾詞會產生編譯器錯誤 CS0106「修飾詞 'private' 對此項目無效」。
 
-此外，屬性無法套用至區域函式或其參數和型別參數。
-
 下列範例定義名為 `AppendPathSeparator` 的區域函式，而此區域函式是名為 `GetText` 之方法的私用項目：
 
 :::code language="csharp" source="snippets/local-functions/Program.cs" id="Basic" :::
+
+從 c # 9.0 開始，您可以將屬性套用至區域函數、其參數和型別參數，如下列範例所示：
+
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="WithAttributes" :::
+
+上述範例使用 [特殊屬性](../../language-reference/attributes/nullable-analysis.md) 來協助編譯器在可為 null 的內容中進行靜態分析。
 
 ## <a name="local-functions-and-exceptions"></a>區域函式和例外狀況
 

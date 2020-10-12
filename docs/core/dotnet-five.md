@@ -1,20 +1,20 @@
 ---
-title: .NET Core 到 .NET 5 的演進
+title: .NET 5 的新功能
 description: 深入瞭解 .NET 5，這是一個跨平臺和開放原始碼的開發平臺，也就是 .NET Core 的下一次演進。
 ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 9318b1afbe22c97f056bd38732306c6a6b60ad00
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 9d4fc514c9de7a668f909286f10d6fe28ada7f90
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598122"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955201"
 ---
-# <a name="the-evolution-of-net-core-to-net-5"></a>.NET Core 到 .NET 5 的演進
+# <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
-本文將詳細說明 .NET 5 中包含的內容，這是下一個 .NET Core 3.1 版。 版本號碼是5.0，以避免與 .NET Framework 4.x 混淆。 和 "Core" 會從名稱中卸載，因為它是持續進行的 .NET 主要執行。 ASP.NET Core 保留 "Core" 的名稱，以避免與 ASP.NET MVC 5 混淆。 此外，Entity Framework Core 會保留 "Core" 的名稱，以避免與 Entity Framework 5 和6混淆。 .NET 5 支援的應用程式類型和平臺比 .NET Core 或 .NET Framework 更多。
+.NET 5 是 .NET Core 的演進。 本文詳細說明 .NET 5 中包含的內容，這是 3.1 版之後的下一版 .NET Core。 版本號碼是5.0，以避免與 .NET Framework 4.x 混淆。 和 "Core" 會從名稱中卸載，因為它是持續進行的 .NET 主要執行。 ASP.NET Core 保留 "Core" 的名稱，以避免與 ASP.NET MVC 5 混淆。 此外，Entity Framework Core 會保留 "Core" 的名稱，以避免與 Entity Framework 5 和6混淆。 .NET 5 支援的應用程式類型和平臺比 .NET Core 或 .NET Framework 更多。
 
 .NET Core 的問世以吸引人的方式發展 .NET 生態系統。 它已在 GitHub 上以開放原始碼專案的形式成熟，並可在一段時間後，慶祝誠懇改進。
 
@@ -46,13 +46,13 @@ ms.locfileid: "89598122"
 
 ### <a name="what-net-5-is-not"></a>什麼是 .NET 5
 
-.NET 5 不是 .NET Framework 的替代方案。 沒有將下列技術從 .NET Framework 移植到 .NET 5 的計畫，但 .NET 5 中包含支援的替代方案：
+.NET 5 不是 .NET Framework 的完整取代。 沒有將下列技術從 .NET Framework 移植到 .NET 5 的計畫，但有支援的替代方案：
 
-| 技術                             | 建議                                              |
-|----------------------------------------|-------------------------------------------------------------|
-| Web Form                              | [ASP.NET Core Blazor](/aspnet/core/blazor)                  |
-| Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                   |
-| Windows Workflow (WF)                   | [開放原始碼 CoreWF](https://github.com/UiPath-Open/corewf) |
+| 技術                             | 建議的替代方案                                                                         |
+|----------------------------------------|-------------------------------------------------------------------------------------------------|
+| Web Form                              | ASP.NET Core [Blazor](/aspnet/core/blazor) 或 [Razor Pages](/aspnet/core/tutorials/razor-pages) |
+| Windows Communication Foundation (WCF) | [gRPC](/aspnet/core/grpc)                                                                       |
+| Windows Workflow (WF)                   | [開放原始碼 CoreWF](https://github.com/UiPath-Open/corewf)                                     |
 
 ## <a name="net-standard"></a>.NET Standard
 
