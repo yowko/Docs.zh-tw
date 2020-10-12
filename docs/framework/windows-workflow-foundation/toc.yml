@@ -7,8 +7,11 @@
       href: whats-new.md
     - name: .NET 4.5 中 Windows Workflow Foundation 的新功能
       href: whats-new-in-wf-in-dotnet.md
-    - name: Windows Workflow Foundation 中被取代的類型
+    - name: 過時的型別與工具
       href: deprecated-types.md
+      items:
+        - name: wfc.exe 工作流程編譯器工具
+          href: wfc-exe-workflow-compiler-tool.md
     - name: Windows Workflow Foundation 功能內容
       href: feature-specifics.md
     - name: Windows Workflow Conceptual 概觀
