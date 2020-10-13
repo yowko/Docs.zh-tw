@@ -2,14 +2,14 @@
 title: 物件導向程式設計 (C#)
 description: 'C # 提供物件導向程式設計的完整支援，包括抽象、封裝、繼承和多型。'
 ms.date: 09/30/2020
-ms.openlocfilehash: 8a8dc8dc6d40c539b988ea203654d994e88c357a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614791"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997654"
 ---
-# <a name="object-oriented-programming-c"></a>物件導向程式設計 (c # ) 
+# <a name="object-oriented-programming-c"></a>Object-Oriented c # 程式設計 (c # ) 
 
 C # 是物件導向的語言。 物件導向程式設計中所使用的四個關鍵技術包括：
 
@@ -162,7 +162,7 @@ public void MakeWithdrawal(decimal amount, DateTime date, string note)
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="RefactoredMakeWithdrawal":::
 
-加入的方法是，這表示它只能從衍生類別呼叫。 該宣告可防止其他用戶端呼叫該方法。 此外 `virtual` ，衍生類別也可以變更行為。 傳回型別為 `Transaction?` 。 `?`批註表示方法可能會傳回 `null` 。 在中新增下列實行 `LineOfCreditAccount` ，以在超過提款限制時收取費用：
+加入的方法是 `protected` ，這表示它只能從衍生類別呼叫。 該宣告可防止其他用戶端呼叫該方法。 此外 `virtual` ，衍生類別也可以變更行為。 傳回型別為 `Transaction?` 。 `?`批註表示方法可能會傳回 `null` 。 在中新增下列實行 `LineOfCreditAccount` ，以在超過提款限制時收取費用：
 
 :::code language="csharp" source="./snippets/object-oriented-programming/LineOfCreditAccount.cs" ID="AddOverdraftFee":::
 
@@ -172,9 +172,9 @@ Overdrawn 帳戶時，覆寫會傳回費用交易。 如果提款未超過限制
 
 執行程式，並檢查結果。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>總結
 
-本教學課程示範物件導向程式設計中使用的許多技術：
+本教學課程示範 Object-Oriented 程式設計中使用的許多技術：
 
 - 當您在每個類別中保留許多詳細資料時，就會使用 *抽象概念* `private` 。
 - 當您針對每個不同的帳戶類型定義了類別時，就會使用 *封裝* 。 這些類別描述了該帳戶類型的行為。

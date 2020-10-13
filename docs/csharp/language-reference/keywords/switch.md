@@ -7,18 +7,19 @@ f1_keywords:
 - switch
 - case
 - case_CSharpKeyword
+- defaultcase_CSharpKeyword
 helpviewer_keywords:
 - switch statement [C#]
 - switch keyword [C#]
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: d8fae870bb3a6fdda735a028dc1da20213a68a31
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 2d12091f3c3f10048a98f5f0ecf6a381087faf41
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756035"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997687"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
@@ -205,5 +206,5 @@ case null:
 - [C # 參考](../index.md)
 - [C # 程式設計指南](../../programming-guide/index.md)
 - [C # 關鍵字](index.md)
-- [if-else](if-else.md)
+- [如果-else](if-else.md)
 - [模式比對](../../pattern-matching.md)

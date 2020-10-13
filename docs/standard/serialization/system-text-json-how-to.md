@@ -1,7 +1,7 @@
 ---
 title: '如何使用 c # 序列化和還原序列化 JSON-.NET'
-description: 本文說明如何使用 System.Text.Json 命名空間，在 .net 中序列化為 JSON 並從 JSON 還原序列化。 其中包含範例程式碼。
-ms.date: 05/13/2020
+description: 瞭解如何 System.Text.Json 在 .net 中使用命名空間進行序列化，並從 JSON 還原序列化。 其中包含範例程式碼。
+ms.date: 10/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 72ba79784d3eb1beb43eab8db0a448a7e3b18eb6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0fda248b7d2e5a7cfa748447d0265565cb160b7e
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557836"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997778"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
-本文說明如何使用 <xref:System.Text.Json> 命名空間來序列化和還原序列化 JavaScript 物件標記法 (JSON) 。 如果您要從移植現有的程式碼 `Newtonsoft.Json` ，請參閱[如何 `System.Text.Json` 遷移至](system-text-json-migrate-from-newtonsoft-how-to.md)。
+本文說明如何使用 <xref:System.Text.Json?displayProperty=fullName> 命名空間，從 JavaScript 物件標記法 (JSON) 序列化和還原序列化。 如果您要從移植現有的程式碼 `Newtonsoft.Json` ，請參閱[如何 `System.Text.Json` 遷移至](system-text-json-migrate-from-newtonsoft-how-to.md)。
 
 指示和範例程式碼會直接使用程式庫，而不是透過 [ASP.NET Core](/aspnet/core/)的架構。
 
@@ -62,9 +62,12 @@ using System.Text.Json.Serialization;
 
 ### <a name="serialization-example"></a>序列化範例
 
-以下是包含集合和嵌套類別的範例類別：
+以下是包含集合類型屬性和使用者定義型別的範例類別：
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
+
+> [!TIP]
+> "POCO" 代表 [純舊的 CLR 物件](https://en.wikipedia.org/wiki/Plain_old_CLR_object)。 POCO 是一種 .NET 型別，其不相依于任何架構特定的類型，例如透過繼承或屬性。
 
 序列化上述型別的實例的 JSON 輸出如下列範例所示。 JSON 輸出預設為縮減：
 
@@ -72,7 +75,7 @@ using System.Text.Json.Serialization;
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
 ```
 
-下列範例顯示相同的 JSON、格式化 (也就是具有空白字元和縮排) 的整齊列印：
+下列範例會顯示相同的 JSON，但格式化的 (也就是具有空白字元和縮排) 的整齊列印：
 
 ```json
 {
@@ -123,7 +126,7 @@ using System.Text.Json.Serialization;
 支援的類型包括：
 
 * 對應至 JavaScript 基本專案的 .NET 基本專案，例如數數值型別、字串和布林值。
-* [ (poco) ](https://stackoverflow.com/questions/250001/poco-definition)的使用者定義簡單的 CLR 物件。
+* [ (poco) ](https://en.wikipedia.org/wiki/Plain_old_CLR_object)的使用者定義簡單的 CLR 物件。
 * 一維和不規則陣列 (`ArrayName[][]`) 。
 * `Dictionary<string,TValue>` 其中 `TValue` 是 `object` 、 `JsonElement` 或 POCO。
 * 下列命名空間中的集合。
@@ -137,7 +140,7 @@ using System.Text.Json.Serialization;
 
 若要從字串或檔案還原序列化，請呼叫 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。
 
-下列範例會從字串讀取 JSON，並 `WeatherForecast` 為 [序列化範例](#serialization-example)建立稍早所示類別的實例：
+下列範例會從字串讀取 JSON，並 `WeatherForecastWithPOCOs` 為 [序列化範例](#serialization-example)建立稍早所示類別的實例：
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToString.cs?name=SnippetDeserialize)]
 
@@ -159,9 +162,13 @@ using System.Text.Json.Serialization;
 
 ## <a name="deserialization-behavior"></a>還原序列化行為
 
+將 JSON 還原序列化時，會套用下列行為：
+
 * 依預設，屬性名稱比對會區分大小寫。 您可以 [指定不區分大小寫](#case-insensitive-property-matching)。
 * 如果 JSON 包含唯讀屬性的值，則會忽略此值，而且不會擲回例外狀況。
-* 不支援還原序列化為不含無參數之函式的參考型別。
+* 還原序列化的程式化：
+  - 在 .NET Core 3.0 和3.1 上，可將無參數的函式（可以是公用、內部或私用）用於還原序列化。
+  - 在 .NET 5.0 和更新版本中，序列化程式會忽略非公用的函式。 但是，如果無參數的函式無法使用，則可以使用參數化的函式。
 * 不支援還原序列化為不可變的物件或唯讀屬性。
 * 依預設，會將列舉支援為數字。 您可以將 [列舉名稱序列化為字串](#enums-as-strings)。
 * 不支援欄位。
@@ -385,9 +392,9 @@ JSON 屬性命名原則：
 
 |屬性 |值  |
 |---------|---------|
-| Date    | 8/1/2019 12:00:00 AM-07:00|
+| 日期    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| [摘要]| null|
+| 總結| null|
 
 ```json
 {
@@ -641,9 +648,9 @@ JSON 屬性命名原則：
 
 |屬性 |值  |注意  |
 |---------|---------|---------|
-| Date    | 8/1/2019 12:00:00 AM-07:00||
+| 日期    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | JSON)  (區分大小寫不符 `temperatureCelsius` ，因此未設定屬性。 |
-| [摘要] | 經常性存取層 ||
+| 總結 | 經常性存取層 ||
 | ExtensionData | temperatureCelsius：25 |因為大小寫不相符，所以這個 JSON 屬性是一個額外的，並且會成為字典中的索引鍵/值組。|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的額外屬性會變成成對的索引鍵/值，並以陣列作為值物件。|
 | |SummaryWords:<br>非經常性<br>風<br>潮濕 |JSON 中的額外屬性會變成成對的索引鍵/值，並以陣列作為值物件。|
