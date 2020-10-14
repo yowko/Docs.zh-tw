@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 8ba64a6e3bee4a5d27a07ab4ad4ef3a3f0749778
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804628"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050276"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -395,7 +395,7 @@ GPIO 套件包含 *GPIO*、*SPI*、*I2C* 和 *PWM* 裝置的 API。 IoT 繫結�
 .NET Core 3.0 在 Linux 系統上使用 **OpenSSL 1.1.1**、**OpenSSL 1.1.0** 或 **OpenSSL 1.0.2** (若可供使用)。 當 **OpenSSL 1.1.1** 可供使用時，<xref:System.Net.Security.SslStream?displayProperty=nameWithType> 和 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 類型就會使用 **TLS 1.3** (假設用戶端和伺服器都支援 **TLS 1.3**)。
 
 > [!IMPORTANT]
-> Windows 和 macOS 尚未支援 **TLS 1.3**。 .NET Core 3.0 將在有支援可用時，在這些作業系統上支援 **TLS 1.3**。
+> Windows 和 macOS 尚未支援 **TLS 1.3**。
 
 下列 C# 8.0 範例示範連線至 <https://www.cloudflare.com> 之 Ubuntu 18.10 上的 .NET Core 3.0：
 
@@ -516,11 +516,11 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 .NET 程式庫 (如果適用) 已開始使用這些指令來提升效能。
 
-如需詳細資訊，請參閱 [.Net 平臺相依的內建函式](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)。
+如需詳細資訊，請參閱 [.net Platform-Dependent 內建函式](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)。
 
 ### <a name="improved-net-core-version-apis"></a>改善的 .NET Core 版本 API
 
-從 .NET Core 3.0 開始，.NET Core 所提供版本 API 現在會傳回您預期的資訊。 例如：
+從 .NET Core 3.0 開始，.NET Core 所提供版本 API 現在會傳回您預期的資訊。 例如︰
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

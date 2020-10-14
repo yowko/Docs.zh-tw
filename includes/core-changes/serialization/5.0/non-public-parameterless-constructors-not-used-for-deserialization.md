@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 572ebc47d26e30738fc4e5b8a8fab1f2643e3d83
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: 3692848a0cbd4bbbe3c7bb4d2c22a2b19de732e4
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997706"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050457"
 ---
 ### <a name="non-public-parameterless-constructors-not-used-for-deserialization"></a>非公用、無參數的函式不會用於還原序列化
 
@@ -12,9 +12,9 @@ ms.locfileid: "91997706"
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 3.0 和3.1 上，內部和私用的函式可用於還原序列化。 在 .NET Standard 2.0 和2.1 上，不允許內部和私用的函式，而且 <xref:System.MissingMethodException> 如果沒有定義任何公用的無參數的函式，就會擲回。
+在支援 .NET Standard 2.0 和更新版本的 [ NuGet 套件上](https://www.nuget.org/packages/System.Text.Json/) 的獨立System.Text.Js（也就是 4.6.0 4.7.2 版本），其行為與 .net Core 3.0 和3.1 上的內建行為不一致。 在 .NET Core 3.x 上，內部和私用的函式可用於還原序列化。 在獨立封裝中，不允許非公用的函式，而且 <xref:System.MissingMethodException> 如果沒有定義任何公用的無參數的函式，就會擲回。
 
-從 .NET 5.0 開始，序列化程式預設會忽略非公用的函式（包括無參數的函式）。 序列化程式會使用下列其中一個用於還原序列化的函式：
+從 .NET 5.0 開始，nuget 套件5.0.0 上的 System.Text.Js，NuGet 套件和內建 Api 之間的行為是一致的。 依預設，序列化程式會忽略非公用的函式，包括無參數的函式。 序列化程式會使用下列其中一個用於還原序列化的函式：
 
 - 使用批註的公用函式 <xref:System.Text.Json.Serialization.JsonConstructorAttribute> 。
 - 公用無參數的函式。
@@ -28,7 +28,7 @@ ms.locfileid: "91997706"
 
 #### <a name="reason-for-change"></a>變更的原因
 
-- 若要在所有目標 framework 標記之間強制執行一致的行為 (可為 <xref:System.Text.Json?displayProperty=fullName> ( .Net Core 3.0 和更新版本所建立的 tfm) ，以及 .NET Standard 2.0 和 2.1) 
+- 若要在所有目標 framework 標記之間強制執行一致的行為 (可為 <xref:System.Text.Json?displayProperty=fullName> ( .Net Core 3.0 和更新版本的 tfm) ，以及 .NET Standard 2.0) 
 - 因為 <xref:System.Text.Json.JsonSerializer> 不應該呼叫類型的非公用介面區，無論是函式、屬性或欄位。
 
 #### <a name="recommended-action"></a>建議的動作

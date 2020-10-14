@@ -1,14 +1,14 @@
 ---
 title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
-ms.date: 01/22/2019
+ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89415004"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050340"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -21,6 +21,18 @@ ms.locfileid: "89415004"
 此編譯器類似於 [JIT](#jit)，也會將 [IL](#il) 轉譯成機器碼。 相較於 JIT 編譯，AOT 編譯會在執行應用程式之前發生，而且通常會在不同的電腦上執行。 因為 AOT 工具鏈不會在執行時間編譯，所以不需要將編譯花費的時間降到最低。 這表示它們可以花更多的時間在最佳化。 由於 AOT 的內容是整個應用程式，因此 AOT 編譯器也會執行跨模組連結和整個程式分析，這表示會追蹤所有參考並產生單一可執行檔。
 
 請參閱 [CoreRT](#corert) 及 [.NET Native](#net-native)。
+
+## <a name="app-model"></a>應用程式模型
+
+[工作負載](#workload)特定的 API。 以下是一些範例：
+
+* ASP.NET
+* ASP.NET Web API
+* Entity Framework (EF) 
+* Windows Presentation Foundation (WPF)
+* Windows Communication Foundation (WCF)
+* Windows Workflow Foundation (WF)
+* Windows Forms (WinForms)
 
 ## <a name="aspnet"></a>ASP.NET
 
@@ -292,9 +304,15 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
 用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 它是設計來統一您可能想要鎖定的不同裝置類型，包括電腦、平板電腦、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 您可以用 c + +、c #、Visual Basic 和 JavaScript 來撰寫應用程式。 使用 c # 和 Visual Basic 時，.net Api 是由 .NET 5 (和 .NET Core) 和更新版本所提供。
 
+## <a name="workload"></a>workload
+
+某人正在建立的應用程式類型。 更通用於 [應用程式模型](#app-model)。 例如，在每個 .NET 檔頁面的頂端（包括此頁面）是 **工作負載**的下拉式清單，可讓您切換至 **Web** **、行動**、 **雲端**、 **桌面**和 **Machine Learning \& 資料**的檔。
+
+在某些內容中， *工作負載* 是指您可以選擇安裝以支援特定應用程式類型的 Visual Studio 功能集合。 如需範例，請參閱 [選取工作負載](../core/install/windows.md#select-a-workload)。
+
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 基礎](../fundamentals/index.yml)
+- [.NET 基本概念](../fundamentals/index.yml)
 - [.NET Framework 指南](../framework/index.yml)
 - [ASP.NET 總覽](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core 總覽](/aspnet/index#pivot=core)

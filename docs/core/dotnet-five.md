@@ -1,16 +1,16 @@
 ---
 title: .NET 5 的新功能
 description: 深入瞭解 .NET 5，這是一個跨平臺和開放原始碼的開發平臺，也就是 .NET Core 的下一次演進。
-ms.date: 09/02/2020
+ms.date: 10/13/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 9d4fc514c9de7a668f909286f10d6fe28ada7f90
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: cc86784e3fcac7e8a3b6f54c32f66763ae416d99
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955201"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050365"
 ---
 # <a name="whats-new-in-net-5"></a>.NET 5 的新功能
 
@@ -38,7 +38,7 @@ ms.locfileid: "91955201"
   - [System.Text.RegularExpressions](https://devblogs.microsoft.com/dotnet/regex-performance-improvements-in-net-5)
   - [非同步 ValueTask 共用](https://devblogs.microsoft.com/dotnet/async-valuetask-pooling-in-net-5)
   - [更多區域](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5)
-- 容器大小優化
+- [容器大小優化](https://github.com/dotnet/dotnet-docker/issues/1814#issuecomment-625294750)
 - [應用程式修剪](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
 - [C # 編譯器增強功能](https://devblogs.microsoft.com/dotnet/automatically-find-latent-bugs-in-your-code-with-net-5)
 - 傾印偵錯工具的工具支援
