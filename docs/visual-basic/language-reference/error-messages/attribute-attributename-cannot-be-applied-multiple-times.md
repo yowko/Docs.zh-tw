@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: 14145f165adf5ccd20298a70ca5596488b488b0c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 27cbe6d0043179c4a5d52baae06bad805f9d1d3a
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409955"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162657"
 ---
-# <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>屬性 '\<attributename>' 不可以多次套用
+# <a name="bc30663-attribute-attributename-cannot-be-applied-multiple-times"></a>BC30663：無法多次套用屬性 ' \<attributename> '
 
-屬性只能套用一次。 `AttributeUsage`屬性會判斷屬性是否可以套用一次以上。  
-  
- **錯誤識別碼：** BC30663  
-  
-## <a name="to-correct-this-error"></a>更正這個錯誤  
-  
-1. 請確定屬性只套用一次。  
-  
-2. 如果您使用的是您所開發的自訂屬性，請考慮將其 `AttributeUsage` 屬性變更為允許多個屬性使用，如下列範例所示。  
-  
-```vb  
-<AttributeUsage(AllowMultiple := True)>  
-```  
-  
+屬性只能套用一次。 `AttributeUsage`屬性可判斷屬性是否可以套用一次以上。
+
+ **錯誤識別碼：** BC30663
+
+## <a name="to-correct-this-error"></a>更正這個錯誤
+
+1. 請確定屬性只套用一次。
+
+2. 如果您要使用您所開發的自訂屬性，請考慮將其 `AttributeUsage` 屬性變更為允許多個屬性使用方式，如下列範例所示。
+
+```vb
+<AttributeUsage(AllowMultiple := True)>
+```
+
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.AttributeUsageAttribute>

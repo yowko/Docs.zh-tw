@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 0264a4235a056c93edb703ec2ef70e7124e0df4e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5eff7622ce2a35cf2846c5141cede98ea033d708
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873628"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159881"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>未設定物件變數或 With 區塊變數
 
-參考了不正確物件變數。   發生這個錯誤的原因有下列幾種︰
+參考了不正確物件變數。 發生這個錯誤的原因有下列幾種︰
 
 - 宣告的變數未指定類型。 如果宣告的變數未指定類型，則會預設為類型 `Object` 。
 
@@ -31,7 +31,7 @@ ms.locfileid: "90873628"
 - 您正在嘗試先存取區塊內的程式碼 `With...End With` ，再初始化區塊。   `With...End With`區塊必須藉由執行 `With` 語句進入點來初始化。
 
 > [!NOTE]
-> 在舊版的 Visual Basic 或 VBA 中，也會藉由指派值給變數來觸發這個錯誤，而不使用 `Set` 關鍵字 (， `x = "name"` 而不是 `Set x = "name"`) 。 `Set`Visual Basic .net 中的關鍵字已不再有效。
+> 在舊版的 Visual Basic 或 VBA 中，此錯誤也會藉由指派值給變數來觸發，而不使用 `Set` 關鍵字 (， `x = "name"` 而不是 `Set x = "name"`) 。 `Set`Visual Basic .net 中的關鍵字已不再有效。
 
 ## <a name="to-correct-this-error"></a>更正這個錯誤
 

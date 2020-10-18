@@ -1,11 +1,11 @@
 ---
 title: 如何：建立公開/私密金鑰組
-description: 瞭解如何建立公開/私用密碼編譯金鑰組，以在編譯期間用來建立強式名稱的元件。
+description: 瞭解如何建立在編譯期間用來建立強式名稱元件的公開/私用密碼編譯金鑰組。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - key pairs for strong-named assemblies
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - cryptographic key pairs
 - snk files (key pair files)
 - public-private key pairs
@@ -16,29 +16,29 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 675871170e7fd4171f0fe09b04d1dbb8906beda4
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c42e98a7e27ded9a21445fae35ade843e834076a
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378556"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163489"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>如何：建立公開/私密金鑰組
 
 若要使用強式名稱簽署組件，您必須擁有公開/私密金鑰組。 這個公用和私密的密碼編譯金鑰組將在編譯期間用來建立強式名稱的組件。 您可以使用[強式名稱工具 (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) 來建立金鑰組。 金鑰組檔案的副檔名通常為 *.snk* 。
 
 > [!NOTE]
-> 在 Visual Studio 中，c # 和 Visual Basic 專案屬性頁包含 [**簽署**] 索引標籤，可讓您選取現有的金鑰檔或產生新的金鑰檔，而不需要使用*sn.exe*。 在 Visual C++ 中，您可以在 [屬性頁]**** 視窗的 [組態屬性]**** 區段之 [連結器]**** 區段的 [進階]**** 屬性頁中，指定現有金鑰檔的位置。 <xref:System.Reflection.AssemblyKeyFileAttribute>從 Visual Studio 2005 開始，使用屬性來識別金鑰檔案組已過時。
+> 在 Visual Studio 中，c # 和 Visual Basic 專案屬性頁包含 [ **簽署** ] 索引標籤，可讓您選取現有的金鑰檔，或在不使用 *Sn.exe*的情況下產生新的金鑰檔。 在 Visual C++ 中，您可以在 [屬性頁]**** 視窗的 [組態屬性]**** 區段之 [連結器]**** 區段的 [進階]**** 屬性頁中，指定現有金鑰檔的位置。 <xref:System.Reflection.AssemblyKeyFileAttribute>從 Visual Studio 2005 開始，使用屬性來識別金鑰檔組已淘汰。
 
 ## <a name="create-a-key-pair"></a>建立金鑰組
 
 若要建立金鑰組，請在命令提示字元中輸入下列命令：
 
-**sn –k** \<*file name*>
+**sn – k**\<*file name*>
 
 在這個命令中，*file name* 是含有金鑰組之輸出檔案的名稱。
 
-下列範例會建立名為*sgKey*的金鑰組。
+下列範例會建立名為 *sgKey*的金鑰組。
 
 ```cmd
 sn -k sgKey.snk
@@ -74,6 +74,6 @@ sn -p keypair.snk public.snk
 <Assembly:AssemblyKeyFileAttribute("keyfile.snk")>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立和使用強式名稱的組件](create-use-strong-named.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: fb61b04021bd844fade94413b4f3b28b82f6411b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 084978c1e047eebd60149af63c0ec9a1135225be
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402794"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163333"
 ---
-# <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>類型 'typename' 的 'IsNot' 運算元只能與 'Nothing' 比較，因為 'typename' 是可為 Null 的類型
+# <a name="bc32128-isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>BC32128：類型 ' typename ' 的 ' IsNot ' 運算元只能與 ' Nothing ' 進行比較，因為 ' typename ' 是可為 null 的類型
 
-宣告為可為 null 的實數值型別的變數已與使用運算子以外的運算式進行比較 `Nothing` `IsNot` 。
+宣告為可為 null 實值型別的變數已經與使用運算子以外的運算式進行比較 `Nothing` `IsNot` 。
 
 **錯誤識別碼：** BC32128
 

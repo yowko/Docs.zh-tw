@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 8c6bd3ea76721d6bd45cb3a93de0dfb113b85082
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5df0cd5588a1cabcc980bf5794fafc0fb899bd87
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874399"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163385"
 ---
-# <a name="error-creating-win32-resources-error-message"></a>建立 Win32 資源時發生錯誤: \<error message>
+# <a name="bc30136-error-creating-win32-resources-error-message"></a>BC30136：建立 Win32 資源時發生錯誤： \<error message>
 
-Visual Basic 編譯器會呼叫元件連結器 ( # A0，也稱為 Alink) 來產生具有資訊清單的元件。 連結器在建立記憶體內資源時回報了錯誤。 這可能是環境問題，或是您的電腦可能記憶體不足。  
-  
- **錯誤識別碼：** BC30136  
-  
-## <a name="to-correct-this-error"></a>更正這個錯誤  
-  
-1. 檢查引號的錯誤訊息，並參閱 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)的主題。 以取得進一步說明和建議。  
-  
-2. 如果錯誤持續發生，請收集情況的相關資訊，並通知 Microsoft 產品支援服務。  
-  
+Visual Basic 編譯器會呼叫元件連結器 ( # A0，也稱為 Alink) 來產生具有資訊清單的元件。 連結器在建立記憶體內資源時回報了錯誤。 這可能是環境問題，或是您的電腦可能記憶體不足。
+
+ **錯誤識別碼：** BC30136
+
+## <a name="to-correct-this-error"></a>更正這個錯誤
+
+1. 檢查引號的錯誤訊息，並參閱 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)的主題。 以取得進一步說明和建議。
+
+2. 如果錯誤持續發生，請收集情況的相關資訊，並通知 Microsoft 產品支援服務。
+
 ## <a name="see-also"></a>另請參閱
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)

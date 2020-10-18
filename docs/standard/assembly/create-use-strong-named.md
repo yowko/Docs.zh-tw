@@ -1,24 +1,24 @@
 ---
 title: 建立和使用強式名稱的組件
-description: 本文說明如何在 .NET 中使用強式名稱簽署元件，並于稍後依該名稱參考它。
+description: 本文說明如何在 .NET 中使用強式名稱簽署元件，並在稍後依該名稱參考該元件。
 ms.date: 08/19/2019
 helpviewer_keywords:
 - strong-name bypass feature
 - strong-named assemblies, about strong-named assemblies
 - strong-named assemblies
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - strong-named assemblies, scenarios
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], strong-named
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 79c8cf2c21210fd80392a8aacf92840c11a36e43
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1d87edde97e77011b678662f61500c7acd8293b0
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378525"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162709"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>建立和使用強式名稱的組件
 
@@ -30,7 +30,7 @@ ms.locfileid: "83378525"
 強式名稱的組件只可使用來自其他強式名稱組件的類型。 否則，強式名稱組件的完整性會受到危害。
 
 > [!NOTE]
-> 雖然 .NET Core 支援強式名稱的元件，而且 .NET Core 程式庫中的所有元件都已簽署，但大部分的協力廠商元件都不需要強名稱。 如需詳細資訊，請參閱 GitHub 上的[強式名稱簽署](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md)。
+> 雖然 .NET Core 支援強式名稱的元件，以及 .NET Core 程式庫中的所有元件都已簽署，但大部分的協力廠商元件都不需要強名稱。 如需詳細資訊，請參閱 GitHub 上的 [強式名稱簽署](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) 。
 
 ## <a name="strong-name-scenario"></a>強式名稱案例
 
@@ -46,7 +46,7 @@ ms.locfileid: "83378525"
 
 3. 組件 B 是組件 A 的消費者。組件 B 的資訊清單參考區段包含代表組件 A 公開金鑰的語彙基元。 語彙基元是完整公開金鑰的一部分，會取代金鑰本身來節省空間。
 
-4. 當組件放在全域組件快取時，Common Language Runtime 會驗證強式名稱簽草章。 Common Language Runtime 在執行階段以強式名稱繫結時，會比較儲存在組件 B 資訊清單的金鑰，以及用來產生組件 A 強式名稱的金鑰。若 .NET Framework 通過安全性檢查且繫結成功，組件 B 就能保證組件 A 的位元未被修改，而且確實來自組件 A 的開發人員。
+4. 當組件放在全域組件快取時，Common Language Runtime 會驗證強式名稱簽草章。 當在執行時間以強式名稱系結時，common language runtime 會比較儲存在元件 B 資訊清單中的索引鍵，以及用來產生元件 A 強式名稱的索引鍵。如果 .NET 安全性檢查通過且系結成功，元件 B 就能保證元件 A 的位未被篡改，而且這些位實際上來自元件 A 的開發人員。
 
 > [!NOTE]
 > 此案例無法解決信任問題。 除了強式名稱之外，組件能夠包含完整的 Microsoft Authenticode 簽章。 Authenticode 簽章包含建立信任的憑證。 請務必注意，強式名稱不會要求程式碼以這種方式簽署。 強式名稱僅提供唯一身分識別。
@@ -65,11 +65,11 @@ ms.locfileid: "83378525"
 
 - 不延遲簽署。
 
-個別應用程式或電腦可停用此功能。 請參閱[如何：停用強式名稱略過功能](disable-strong-name-bypass-feature.md)。
+個別應用程式或電腦可停用此功能。 請參閱 [如何：停用強式名稱略過功能](disable-strong-name-bypass-feature.md)。
 
 ## <a name="related-topics"></a>相關主題
 
-|Title|描述|
+|標題|描述|
 |-----------|-----------------|
 |[如何：建立公開/私密金鑰組](create-public-private-key-pair.md)|描述如何建立簽署組件的密碼編譯金鑰組。|
 |[如何：使用強式名稱簽署元件](sign-strong-name.md)|描述如何建立強式名稱組件。|
@@ -78,5 +78,5 @@ ms.locfileid: "83378525"
 |[如何：停用強式名稱略過功能](disable-strong-name-bypass-feature.md)|描述如何停用會略過強式名稱簽章驗證的功能。 所有應用程式皆可停用此功能，也可以只停用特定應用程式中的此功能。|
 |[建立組件](create.md)|提供單一檔案和多檔案組件的概觀。|
 |[如何在 Visual Studio 中延遲簽署元件](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|說明如何在建立組件之後，使用強式名稱簽署組件。|
-|[Sn.exe （強式名稱工具）](../../framework/tools/sn-exe-strong-name-tool.md)|描述 .NET Framework 中可協助使用強式名稱來建立組件的工具。 這個工具提供了金鑰管理、簽章產生和簽章驗證的選項。|
+|[Sn.exe (強式名稱工具) ](../../framework/tools/sn-exe-strong-name-tool.md)|描述 .NET Framework 中可協助使用強式名稱來建立組件的工具。 這個工具提供了金鑰管理、簽章產生和簽章驗證的選項。|
 |[Al.exe (組件連接器)](../../framework/tools/al-exe-assembly-linker.md)|描述 .NET Framework 中可產生檔案的工具，而該檔案具有來自模組或資源檔案組件的資訊清單。|

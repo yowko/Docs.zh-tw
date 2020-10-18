@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: af436b8fd57ff0d2747c766a64af175760931009
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: ad39ade294b362b20f2dfb93455445bf41d056cd
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873898"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163320"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' 只能出現在執行個體方法中
+# <a name="bc30043-keyword-is-valid-only-within-an-instance-method"></a>BC30043： ' \<keyword> ' 只在實例方法內有效
 
-`Me`、 `MyClass` 和關鍵字會 `MyBase` 參考特定的類別實例。 您無法在共用或程式中使用它們 `Function` `Sub` 。  
-  
- **錯誤識別碼：** BC30043  
-  
-## <a name="to-correct-this-error"></a>更正這個錯誤  
-  
-- 請從程式中移除關鍵字，或從程式 `Shared` 聲明中移除關鍵字。  
-  
+`Me`、 `MyClass` 和關鍵字會 `MyBase` 參考特定的類別實例。 您無法在共用或程式中使用它們 `Function` `Sub` 。
+
+*錯誤 ID：** BC30043
+
+## <a name="to-correct-this-error"></a>更正這個錯誤
+
+- 請從程式中移除關鍵字，或從程式 `Shared` 聲明中移除關鍵字。
+
 ## <a name="see-also"></a>另請參閱
 
 - [物件變數指派](../../programming-guide/language-features/variables/object-variable-assignment.md)

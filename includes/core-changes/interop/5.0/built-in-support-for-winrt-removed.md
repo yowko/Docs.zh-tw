@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d21b2e092d460fdfc367d0f490228ed44ad5c6cc
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: 47c676122df4f0990949a7bfbcd7af8c6144d870
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365637"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160529"
 ---
 ### <a name="built-in-support-for-winrt-is-removed-from-net"></a>WinRT 的內建支援已從 .NET 移除
 
@@ -29,9 +29,13 @@ ms.locfileid: "85365637"
 
 #### <a name="recommended-action"></a>建議的動作
 
-- 移除對[Microsoft.Windows.SDK.NET 封裝](https://www.nuget.org/packages/microsoft.windows.sdk.net)的參考，並將其取代為參考至該[套件](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts)。
+- 移除對 node.js [封裝](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts)的參考。  相反地，請透過專案的屬性，指定您想要存取的 Windows Api 版本 `TargetFramework` 。  例如：
 
-- 使用 [c #/WinRT](/windows/uwp/csharp-winrt/) 工具鏈來產生或自訂 .net 5.0 和更新版本中的 WinRT api 和類型。
+  ```xml
+  <TargetFramework>net5.0-windows10.0.19041</TargetFramework>
+  ```
+
+- 使用 [c #/WinRT](/windows/uwp/csharp-winrt/) 工具鏈來產生或自訂 .net 5.0 和更新版本的 WinRT api 和類型。
 
 #### <a name="category"></a>類別
 

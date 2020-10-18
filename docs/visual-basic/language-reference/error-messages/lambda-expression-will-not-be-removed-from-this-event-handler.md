@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 07ace3f1b9c5e512227dc1f718ef768b631c8303
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5a30e63044b51f8176dfeebdcc9eb8fd517739ae
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397372"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163112"
 ---
-# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Lambda 運算式將不會從這個事件處理常式中移除
+# <a name="bc42326-lambda-expression-will-not-be-removed-from-this-event-handler"></a>BC42326： Lambda 運算式將不會從這個事件處理常式中移除
 
 Lambda 運算式將不會從這個事件處理常式中移除。 將 lambda 運算式指派給變數，並使用變數來加入和移除事件。
 
-當 lambda 運算式與事件處理常式搭配使用時，您可能不會看到預期的行為。 編譯器會針對每個 lambda 運算式定義產生新的方法，即使兩者相同也是一樣。 因此，下列程式碼會顯示 `False` 。
+當 lambda 運算式與事件處理常式搭配使用時，您可能看不到您預期的行為。 編譯器會為每個 lambda 運算式定義產生新的方法，即使它們相同也是一樣。 因此，會顯示下列程式碼 `False` 。
 
 ```vb
 Module Module1
@@ -34,7 +34,7 @@ Module Module1
 End Module
 ```
 
-當 lambda 運算式與事件處理常式搭配使用時，這可能會導致非預期的結果。 在下列範例中， `AddHandler` 語句不會移除加入的 lambda 運算式 `RemoveHandler` 。
+當 lambda 運算式與事件處理常式搭配使用時，這可能會導致非預期的結果。 在下列範例中， `AddHandler` 語句不會移除新增的 lambda 運算式 `RemoveHandler` 。
 
 ```vb
 Module Module1

@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 4793c7282043edb46b3d2f77a0f0a955c43ab34c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1aec6ac0a354bfe7e0378a2e46a70a7161bf6d36
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870189"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163242"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML 命名空間 URI; 只能系結 `http://www.w3.org/XML/1998/namespace` 至 ' xmlns '
+# <a name="bc31183-xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>BC31183： XML 命名空間 URI; 只能系結 `http://www.w3.org/XML/1998/namespace` 至 ' xmlns '
 
-URI `http://www.w3.org/XML/1998/namespace` 用於 XML 命名空間宣告中。 此 URI 是保留的命名空間，不能包含在 XML 命名空間宣告中。  
-  
- **錯誤識別碼：** BC31183  
-  
-## <a name="to-correct-this-error"></a>更正這個錯誤  
-  
-請移除 XML 命名空間宣告，或將 URI 取代為 `http://www.w3.org/XML/1998/namespace` 有效的命名空間 URI。  
-  
+URI `http://www.w3.org/XML/1998/namespace` 用於 XML 命名空間宣告中。 此 URI 是保留的命名空間，不能包含在 XML 命名空間宣告中。
+
+ **錯誤識別碼：** BC31183
+
+## <a name="to-correct-this-error"></a>更正這個錯誤
+
+請移除 XML 命名空間宣告，或將 URI 取代為 `http://www.w3.org/XML/1998/namespace` 有效的命名空間 URI。
+
 ## <a name="see-also"></a>另請參閱
 
 - [Imports 陳述式 (XML 命名空間)](../statements/imports-statement-xml-namespace.md)

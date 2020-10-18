@@ -2,12 +2,12 @@
 title: 密碼編譯的重大變更
 description: 列出 .NET Core 中的密碼編譯相關的重大變更。
 ms.date: 04/22/2020
-ms.openlocfilehash: c9405625cc4075c05468dc9b8502bf8c76587bad
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: 6f37e5caacadc276562e63a728162c6b26f2e435
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997748"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159545"
 ---
 # <a name="cryptography-breaking-changes"></a>密碼編譯的重大變更
 
@@ -15,6 +15,7 @@ ms.locfileid: "91997748"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [不支援具現化密碼編譯抽象概念的預設實值](#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported) | 5.0 |
 | [Linux 上適用于 .NET 的預設 TLS 加密套件](#default-tls-cipher-suites-for-net-on-linux) | 5.0 |
 | [Blazor WebAssembly 不支援的密碼編譯 Api](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly) | 5.0 |
 | [在功能上，加密功能僅限初始化](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
@@ -26,6 +27,10 @@ ms.locfileid: "91997748"
 | [已遵守 SignedCms 的布林值參數。 ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5。0
+
+[!INCLUDE [instantiating-default-implementations-of-cryptographic-abstractions-not-supported](../../../includes/core-changes/cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)]
+
+***
 
 [!INCLUDE [default-cipher-suites-for-tls-on-linux](../../../includes/core-changes/cryptography/5.0/default-cipher-suites-for-tls-on-linux.md)]
 

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 94c4229d4036382e344cffb09295e218642c55d4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e16a157d0621d5baecb06ce118e3ab390bf68cf8
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402897"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162878"
 ---
-# <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Handles 子句需要 WithEvents 變數，該變數定義於包含類型或它的一種基底類型中
+# <a name="bc30506-handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>BC30506： Handles 子句需要在包含類型或其中一個基底類型中定義的 WithEvents 變數
 
-您未 `WithEvents` 在子句中提供變數 `Handles` 。 `Handles`程式宣告結尾的關鍵字會使其處理使用關鍵字宣告之物件變數所引發的事件 `WithEvents` 。
+您未 `WithEvents` 在子句中提供變數 `Handles` 。 `Handles`程式聲明結尾的關鍵字會讓它處理使用關鍵字宣告的物件變數所引發的事件 `WithEvents` 。
 
 **錯誤識別碼：** BC30506
 
@@ -26,7 +26,7 @@ ms.locfileid: "84402897"
 
 ## <a name="example"></a>範例
 
-在下列範例中，Visual Basic 會產生編譯器錯誤， `BC30506` 因為在實例的定義中不會使用[WithEvents](../modifiers/withevents.md)關鍵字 <xref:System.Timers.Timer?displayProperty=nameWithType> 。
+在下列範例中，Visual Basic 會產生編譯器錯誤， `BC30506` 因為在實例的定義中不會使用 [WithEvents](../modifiers/withevents.md) 關鍵字 <xref:System.Timers.Timer?displayProperty=nameWithType> 。
 
 ```vb
 Imports System.Timers
@@ -47,7 +47,7 @@ Module Module1
 End Module
 ```
 
-下列範例會成功編譯，因為 `_timer1` 變數是以關鍵字定義的 `WithEvents` ：
+下列範例會編譯成功，因為 `_timer1` 變數是使用關鍵字定義 `WithEvents` ：
 
 ```vb
 Imports System.Timers
@@ -71,4 +71,4 @@ End Module
 
 ## <a name="see-also"></a>另請參閱
 
-- [控制代碼](../statements/handles-clause.md)
+- [處理](../statements/handles-clause.md)

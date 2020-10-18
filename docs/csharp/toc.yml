@@ -2,11 +2,19 @@
   href: index.yml
 - name: 開始使用
   items:
-    - name: 概觀
+    - name: C# 語言與 .NET 簡介
       displayName: get started
       href: getting-started/index.md
-    - name: C# 語言與 .NET 簡介
-      href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
+    - name: C# 導覽
+      items:
+        - name: 簡介
+          href: tour-of-csharp/index.md
+        - name: 類型
+          href: tour-of-csharp/types.md
+        - name: 程式建置區塊
+          href: tour-of-csharp/program-building-blocks.md
+        - name: 主要語言區域
+          href: tour-of-csharp/features.md
 - name: 教學課程
   items:
     - name: 總覽
@@ -70,16 +78,6 @@
       href: tutorials/working-with-linq.md
     - name: 使用屬性
       href: tutorials/attributes.md
-- name: C# 導覽
-  items:
-    - name: 簡介
-      href: tour-of-csharp/index.md
-    - name: 類型
-      href: tour-of-csharp/types.md
-    - name: 程式建置區塊
-      href: tour-of-csharp/program-building-blocks.md
-    - name: 主要語言區域
-      href: tour-of-csharp/features.md
 - name: C# 的新功能
   items:
     - name: C# 9.0
