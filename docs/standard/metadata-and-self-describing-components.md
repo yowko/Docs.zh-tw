@@ -13,18 +13,18 @@ helpviewer_keywords:
 - metadata, about metadata
 - common language runtime, metadata
 - PE files, metadata
-- components [.NET Framework], metadata
+- components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2ed09882ba722ace0b7f7be2a35fffc362af2742
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290054"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159348"
 ---
 # <a name="metadata-and-self-describing-components"></a>中繼資料和自我描述元件
 
-在過去，以一種語言撰寫的軟體元件 (.exe 或 .dll) 不容易使用以另一種語言所撰寫的軟體元件。 COM 對這個問題提供了進一步的解決方式。 .NET Framework 允許編譯器 (Compiler) 發出額外的宣告資訊至所有模組和組件中，使元件的互通性更為容易。 這個資訊，稱為中繼資料 (Metadata)，能幫助元件順暢地互動。
+在過去，以一種語言撰寫的軟體元件 (.exe 或 .dll) 不容易使用以另一種語言所撰寫的軟體元件。 COM 對這個問題提供了進一步的解決方式。 .NET 可讓編譯器將額外的宣告式資訊發出至所有模組和元件，讓元件互通更為簡單。 這個資訊，稱為中繼資料 (Metadata)，能幫助元件順暢地互動。
 
  中繼資料為二進位資訊，描述儲存在 Common Language Runtime 可移植執行檔 (PE) 或記憶體中的程式。 當您編譯程式碼為 PE 檔時，中繼資料被插入至檔案的一個部分，而您的程式碼則轉換至 Microsoft Intermediate Language (MSIL) 並插入至檔案的另一部分。 模組或組件中所定義和參考的一切型別和成員都描述於中繼資料內。 當執行程式碼時，Runtime 載入中繼資料至記憶體中，並參考它以探索您程式碼的類別、成員、繼承 (Inheritance) 等等的資訊。
 
@@ -52,7 +52,7 @@ ms.locfileid: "84290054"
 
 ## <a name="benefits-of-metadata"></a>中繼資料的優點
 
-中繼資料是較簡單的程式撰寫模型 (Programming Model) 的關鍵，排除對介面定義語言 (IDL) 檔案、標頭檔 (Header File) 或元件參考的任何外部方法的需要。 中繼資料可以讓 .NET Framework 語言自動以語言中性方式描述它們自己，而不讓開發人員及使用者看見。 此外，中繼資料透過屬性的使用會成為可擴充的。 中繼資料提供下列主要好處：
+中繼資料是較簡單的程式撰寫模型 (Programming Model) 的關鍵，排除對介面定義語言 (IDL) 檔案、標頭檔 (Header File) 或元件參考的任何外部方法的需要。 中繼資料可讓 .NET 語言以非語言相關的方式自動描述自己，並讓開發人員和使用者看不見。 此外，中繼資料透過屬性的使用會成為可擴充的。 中繼資料提供下列主要好處：
 
 - 自我描述檔案
 
@@ -64,11 +64,11 @@ ms.locfileid: "84290054"
 
 - 屬性
 
-  .NET Framework 允許您在已編譯的檔案中宣告稱為屬性的特定種類中繼資料。 屬性普遍存在於 .NET Framework，並且被用來更仔細控制您程式在 Run Time 的行為。 此外，您可以透過使用者定義的自訂屬性，發出您自己的自訂中繼資料至 .NET Framework 檔案中。 如需詳細資訊，請參閱[屬性](attributes/index.md)。
+  .NET 可讓您在編譯的檔案中宣告特定種類的中繼資料（稱為屬性）。 您可以在整個 .NET 中找到屬性，並使用這些屬性來更詳細地控制程式在執行時間的行為。 此外，您也可以透過使用者定義的自訂屬性，將您自己的自訂中繼資料發出至 .NET 檔案。 如需詳細資訊，請參閱[屬性](attributes/index.md)。
 
 ## <a name="metadata-and-the-pe-file-structure"></a>中繼資料和 PE 檔結構
 
-中繼資料是儲存在 .NET Framework 可移植執行檔 (PE) 的一個區段中，而 Microsoft Intermediate Language (MSIL) 則是儲存在 PE 檔的另一個區段。 檔案的中繼資料部分包含一系列表格和堆積 (Heap) 資料結構。 MSIL 部分包含參考 PE 檔中繼資料部分的 MSIL 和中繼資料語彙基元 (Token)。 當您使用 [MSIL 反組譯工具 (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) 等工具來檢視程式碼的 MSIL 時，可能遇到中繼資料語彙基元。
+中繼資料會儲存在 .NET 可攜式可執行檔的一個區段中， (PE) 檔中，而 Microsoft 中繼語言 (MSIL) 會儲存在 PE 檔案的其他區段中。 檔案的中繼資料部分包含一系列表格和堆積 (Heap) 資料結構。 MSIL 部分包含參考 PE 檔中繼資料部分的 MSIL 和中繼資料語彙基元 (Token)。 當您使用 [MSIL 反組譯工具 (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) 等工具來檢視程式碼的 MSIL 時，可能遇到中繼資料語彙基元。
 
 ### <a name="metadata-tables-and-heaps"></a>中繼資料表和堆積
 
@@ -134,7 +134,7 @@ public class MyApp
 
 當執行程式碼時，Runtime 將模組載入記憶體，並查閱中繼資料以取得這個類別。 一旦載入後，Runtime 會對該方法的 Microsoft Intermediate Language (MSIL) 資料流做一個廣泛的分析，以將它轉換為快速的原生機器指令。 Runtime 使用 Just-in-Time (JIT) 編譯器，按所需一次一個的方法轉換 MSIL 指令至原生機器碼 (Machine Code)。
 
-下列範例展示從前面程式碼的 `Main` 函式產生的部分 MSIL。 您可以使用 [MSIL 反組譯工具 (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) 來檢視任何 .NET Framework 應用程式中的 MSIL 和中繼資料。
+下列範例展示從前面程式碼的 `Main` 函式產生的部分 MSIL。 您可以使用 Msil 解譯器 [ ( # A0) ](../framework/tools/ildasm-exe-il-disassembler.md)，從任何 .net 應用程式查看 msil 和中繼資料。
 
 ```console
 .entrypoint
@@ -160,8 +160,8 @@ JIT 編譯器會讀取整個方法的 MSIL、全面分析它，並產生那個�
 |資料列|相關的虛擬位址 (RVA)|ImplFlags|Flags|Name<br /><br /> (指向字串堆積)|簽章 (指向 BLOB 堆積)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
 |1|0x00002050|IL<br /><br /> 受管理|公用<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (建構函式)||
-|2|0x00002058|IL<br /><br /> 受管理|公用<br /><br /> 靜態<br /><br /> ReuseSlot|主要區段|String|
-|3|0x0000208c|IL<br /><br /> 受管理|公用<br /><br /> 靜態<br /><br /> ReuseSlot|新增|int, int, int|
+|2|0x00002058|IL<br /><br /> 受管理|公用<br /><br /> Static<br /><br /> ReuseSlot|主要區段|String|
+|3|0x0000208c|IL<br /><br /> 受管理|公用<br /><br /> Static<br /><br /> ReuseSlot|加|int, int, int|
 
 表格的每一欄包含您程式碼的重要資訊。 **RVA** 欄允許執行階段計算定義這個方法之 MSIL 的起始記憶體位址。 **ImplFlags** 和 **Flags** 欄包含描述方法的位元遮罩 (例如，方法為 Public 或 Private)。 **Name** 欄對字串堆積中的方法名稱進行索引。 **Signature** 欄對 Blob 堆積中方法簽章的定義進行索引。
 
@@ -171,6 +171,6 @@ JIT 編譯器會讀取整個方法的 MSIL、全面分析它，並產生那個�
 
 ## <a name="related-topics"></a>[相關主題]
 
-|Title|描述|
+|標題|描述|
 |-----------|-----------------|
 |[屬性](attributes/index.md)|描述如何套用屬性、撰寫自訂屬性和擷取儲存於屬性的資訊。|

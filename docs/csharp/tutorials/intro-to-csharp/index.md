@@ -3,12 +3,12 @@ title: C# 簡介 - 互動式教學課程
 description: 在您的瀏覽器中學習 C#，並開始使用您自己的開發環境
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6037862c52fd59ba540e1f65297d787f0a964762
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609176"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162150"
 ---
 # <a name="introduction-to-c"></a>C\# 簡介
 
@@ -62,3 +62,7 @@ ms.locfileid: "91609176"
 本教學課程說明物件導向程式設計中所使用的概念。 您將瞭解使用 c # 範例的 *抽象*、 *封裝*、 *繼承*和 *多* 型概念。
 
 本教學課程假設您已完成線上入門教學課程，並已安裝 [.NET Core SDK](https://dotnet.microsoft.com/download) ，並在開發電腦上 [Visual Studio Code](https://code.visualstudio.com/) 或 [Visual Studio](https://visualstudio.com) 。
+
+## <a name="101-linq-samples"></a>[101 Linq 範例](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+
+此範例需要 [dotnet-try](https://github.com/dotnet/try/blob/main/README.md#setup) global tool。 當您安裝此工具，並複製 [試用](https://github.com/dotnet/try-samples) 版存放庫之後，您可以透過一組可互動方式執行的101範例，來學習 (LINQ) 的語言整合式查詢。 您可以探索查詢、探索和轉換資料順序的不同方式。

@@ -3,12 +3,12 @@ title: 什麼是模型建立器且其如何運作？
 description: 如何使用 ML.NET 模型建立器來自動定型機器學習服務模型
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679673"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161136"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什麼是模型建立器且其如何運作？
 
@@ -23,7 +23,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 > [!NOTE]
 > 模型產生器目前為預覽版。
 
-## <a name="scenario"></a>狀況
+## <a name="scenario"></a>案例
 
 您可以在模型建立器中放入許多不同的案例，以產生應用程式的機器學習模型。
 
@@ -54,9 +54,15 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 #### <a name="image-classification"></a>影像分類
 
-影像分類可以用來識別不同類別的影像。 例如，不同類型的地形或動物或製造瑕疵。
+影像分類可用來識別不同類別的影像。 例如，不同類型的地形或動物或製造瑕疵。
 
 如果您有一組影像，而且想要將影像分類成不同的類別，您可以使用影像分類案例。
+
+#### <a name="object-detection"></a>物件偵測
+
+物件偵測用來尋找和分類影像內的實體。  例如，在影像中尋找及識別車輛和人員。
+
+當影像包含不同類型的多個物件時，您可以使用物件偵測。
 
 #### <a name="recommendation"></a>建議
 
@@ -66,13 +72,15 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 ## <a name="environment"></a>環境
 
-您可以在本機電腦上或在 Azure 上的雲端中定型您的機器學習模型。
+視案例而定，您可以在本機電腦上或在 Azure 上的雲端中定型您的機器學習模型。
 
 當您在本機定型時，您會在電腦資源的條件約束 (CPU、記憶體和磁片) 。 當您在雲端中進行定型時，您可以擴大資源以符合您的案例需求，特別是針對大型資料集。
 
-所有案例都支援本機定型。
+除了物件偵測之外，所有案例都支援本機 CPU 定型。
 
-影像分類支援 Azure 定型。
+影像分類支援本機 GPU 定型。
+
+Azure 訓練支援影像分類和物件偵測。
 
 ## <a name="data"></a>資料
 
@@ -107,7 +115,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 如果您還沒有自己的資料，請嘗試下列資料集之一：
 
-|狀況|範例|資料|標籤|特性|
+|案例|範例|資料|標籤|特性|
 |-|-|-|-|-|
 |分類|預測銷售異常|[產品銷售資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|產品銷售|Month|
 ||預測網站批註情感|[網站留言資料](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|標籤 (負面人氣時為 0，正面人氣時為 1)|留言、年度|

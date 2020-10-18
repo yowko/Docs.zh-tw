@@ -1,14 +1,14 @@
 ---
-title: 為伺服器應用程式選擇 .NET 5 和 .NET Framework
+title: 針對伺服器應用程式在 .NET 5 和 .NET Framework 之間進行選擇
 description: 此指南可協助您決定在建立伺服器應用程式時，要使用哪一個 .NET 執行。
 author: cartermp
 ms.date: 10/06/2020
-ms.openlocfilehash: 989a0f83968473523c3d77bed155d6841b240edc
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: d9dce0343f9d37e976472b818e896a5b0a661e76
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050490"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160447"
 ---
 # <a name="net-5-vs-net-framework-for-server-apps"></a>.NET 5 與伺服器應用程式的 .NET Framework
 
@@ -92,6 +92,8 @@ ms.locfileid: "92050490"
 - 工作流程相關的服務： Windows Workflow Foundation (WF) 、工作流程服務 (單一服務) 中的 WCF + WF，而 WCF Data Services (之前稱為「ADO.NET 資料服務」 ) 僅適用于 .NET Framework。
 
 - 語言支援：目前在 .NET 5 中支援 Visual Basic 和 F #，但並非所有專案類型都支援。 如需支援的專案範本清單，請參閱 [dotnet new 的範本選項](../core/tools/dotnet-new.md#arguments)。
+
+如需詳細資訊，請參閱 [.net 5 中無法使用的 .NET Framework 技術](../core/porting/net-framework-tech-unavailable.md)。
 
 ### <a name="platform-doesnt-support-net-5"></a>平臺不支援 .NET 5
 

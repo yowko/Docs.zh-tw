@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 03cf188fc74e8a70798c0bcc4a6940730abfc07c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 380bfb3aa5e5715fe95e0d7772700bac9ab4a5be
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180459"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160980"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -27,7 +27,7 @@ ms.locfileid: "91180459"
 
 ## <a name="hosting-apis"></a>裝載 API
 
-有三個不同的 API 可用來裝載 .NET Core。 本文 (與其相關的 [範例](https://github.com/dotnet/samples/tree/master/core/hosting)) 涵蓋所有選項。
+有兩個不同的 API 可用來裝載 .NET Core。 本文 (與其相關的 [範例](https://github.com/dotnet/samples/tree/master/core/hosting)) 涵蓋這兩個選項。
 
 * 在 .NET Core 3.0 及更新版本中裝載 .NET Core 執行階段的建議方式，是使用 `nethost` 和 `hostfxr` 程式庫的 API。 這些進入點能處理尋找及設定初始化執行階段的複雜程度，並允許啟動受控應用程式及呼叫靜態受控方法。
 * 在 .NET Core 3.0 之前裝載 .NET Core 執行時間的慣用方法是使用 [`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h) API。 此 API 會公開函式，以便輕鬆地啟動和停止執行階段，以及叫用受控碼 (無論是透過啟動受控 exe 或藉由呼叫靜態受控方法)。
@@ -40,11 +40,11 @@ dotnet/samples GitHub 存放庫中提供下列示範教學課程所述步驟的[
 
 ## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>使用和建立主機 `nethost.h``hostfxr.h`
 
-下列步驟詳細說明如何使用 `nethost` 和 `hostfxr` 程式庫來在原生應用程式中啟動 .NET Core 執行階段，並呼叫受控靜態方法。 [範例](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr) \(英文\) 會使用搭配 .NET SDK 安裝的 `nethost` 標頭及程式庫，以及來自 [dotnet/core-setup](https://github.com/dotnet/core-setup) \(英文\) 存放庫的 [`coreclr_delegates.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/coreclr_delegates.h) \(英文\) 及 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) \(英文\) 檔案的複本。
+下列步驟詳細說明如何使用 `nethost` 和 `hostfxr` 程式庫來在原生應用程式中啟動 .NET Core 執行階段，並呼叫受控靜態方法。 此 [範例](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr) 會使用 `nethost` 隨 .net SDK 安裝的標頭和程式庫，以及 [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/coreclr_delegates.h) [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/hostfxr.h) [dotnet/運行](https://github.com/dotnet/runtime) 時間存放庫中和檔案的複本。
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>步驟 1-載入 `hostfxr` 和取得匯出的裝載函數
 
-`nethost` 程式庫會提供用來找出 `hostfxr` 程式庫的 `get_hostfxr_path` 函式。 `hostfxr` 程式庫會公開用來裝載 .NET Core 執行階段的函式。 您可以在 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) 和 [原生裝載設計檔](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md)中找到完整的函式清單。 範例和本教課程會使用下列項目：
+`nethost` 程式庫會提供用來找出 `hostfxr` 程式庫的 `get_hostfxr_path` 函式。 `hostfxr` 程式庫會公開用來裝載 .NET Core 執行階段的函式。 您可以在 [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/hostfxr.h) 和 [原生裝載設計檔](https://github.com/dotnet/runtime/blob/master/docs/design/features/native-hosting.md)中找到完整的函式清單。 範例和本教課程會使用下列項目：
 
 * `hostfxr_initialize_for_runtime_config`：初始化主機內容，並準備使用指定的執行時間設定初始化 .NET Core 執行時間。
 * `hostfxr_get_runtime_delegate`：取得執行時間功能的委派。

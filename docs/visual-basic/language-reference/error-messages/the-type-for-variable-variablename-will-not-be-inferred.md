@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 1ad7b9d0a610842dd6c50ee198f5bb5fa3eb68cf
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3e76ffea283de2843fc5586179074c01a053ece8
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870478"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161279"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>不會推斷變數 '\<variablename>' 的類型，因為它繫結至封閉範圍中的欄位
+# <a name="bc42110-the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>BC42110：將不會推斷變數 ' ' 的類型， \<variablename> 因為它已系結至封閉範圍內的欄位
 
 \<variablename>將不會推斷變數 ' ' 的類型，因為它已系結至封閉範圍內的欄位。 請變更 ' ' 的名稱 \<variablename> ，或使用完整名稱 (例如 ' variablename ' 或 ' MyBase. variablename ' ) 。
 
@@ -43,7 +43,7 @@ End Class
 
 **錯誤識別碼：** BC42110
 
-### <a name="to-address-this-warning"></a>解決這個警告
+## <a name="to-address-this-warning"></a>解決這個警告
 
 - 將迴圈控制變數的名稱變更為不是類別之功能變數名稱的識別碼，以使其變成本機。
 

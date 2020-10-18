@@ -1,57 +1,53 @@
 ---
-title: 開始使用 - C# 指南
-description: 搜尋片長短、內容簡單扼要的教學課程，介紹 C# 概念及如何撰寫.NET Core 應用程式，協助您快速進入狀況。
-helpviewer_keywords:
-- Visual C#, getting started
-- getting started, Visual C#
-ms.date: 04/05/2019
-ms.openlocfilehash: 769098134799800d45a31c22f4390734545ff6ff
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+title: '開始-c # 語言和 .NET 簡介」'
+description: 了解 C# 與 .NET 的基本概念。 取得 C# 語言與 .NET 生態系統的概觀。
+ms.date: 10/13/2020
+ms.openlocfilehash: 94d49be28fbdba8f58ca16e959a10643d6467c63
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465243"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160954"
 ---
-# <a name="get-started-with-c"></a>開始使用 C\#
+# <a name="introduction-to-the-c-language-and-net"></a>C# 語言與 .NET 簡介
 
-本節提供簡短且簡單的教學課程，可讓您使用 C# 和 .NET Core 快速建置應用程式。 Visual Studio 和 Visual Studio Code 有開始使用的主題。 這些文章假設您有一些程式設計經驗。 如果您是程式設計的新手，請嘗試我們的 [C# 簡介](../tutorials/intro-to-csharp/index.md)互動式教學課程。
+C # 是一種簡潔且型別安全的物件導向語言。 C # 可讓開發人員建立許多類型的安全、健全的應用程式，以在 .NET 生態系統中執行。
 
-我們將提供下列主題：
+## <a name="c-language"></a>C# 語言
 
-- [C # 語言和 .NET 簡介](introduction-to-the-csharp-language-and-the-net-framework.md)
+C # 語法非常有意義，但也很簡單且容易學習。 任何熟悉 C、c + +、JAVA 或 JavaScript 的人，都能立即辨識出 c # 的大括弧語法。 知道其中任何一種語言的開發人員，通常可以在短時間內以 c # 有效率地工作。 C # 提供功能強大的功能，例如可為 null 的類型、委派、lambda 運算式、模式比對，以及安全的直接記憶體存取。 C # 支援泛型方法和類型，可提供更高的型別安全和效能。 C # 提供反覆運算器，可讓集合類別的實作者定義用戶端程式代碼的自訂行為。 Language-Integrated Query (LINQ) 運算式讓強型別查詢成為第一級的語言結構。
 
-     提供 C# 語言和 .NET 的概觀。
+C# 為物件導向語言，支援封裝、繼承和多型的概念。 類別可直接繼承自一個父類別，但可以實作數目不拘的介面。 覆寫父類別中虛擬方法的方法需要利用 `override` 關鍵字，避免意外重複定義。 在 c # 中，結構就像輕量類別;它是堆疊配置的型別，可以執行介面，但不支援繼承。 C # 也提供記錄，也就是其用途主要儲存資料值的類別類型。
 
-- [在 Visual Studio 中建立使用 .NET Core 的 c # Hello World 應用程式](../../core/tutorials/with-visual-studio.md)
+C # 可讓您輕鬆地透過數個創新語言結構開發軟體元件，包括：
 
-   Visual Studio 可讓您從適用于 Windows 或 Mac 的整合式開發環境，撰寫程式碼、編譯、執行、剖析、分析和發佈應用程式。
+- 稱為「委派」** 的封裝方法簽章，可啟用型別安全事件通知。
+- 屬性，可做為私用成員變數的存取子。
+- 屬性，可在執行階段提供有關型別的宣告式中繼資料。
+- 內嵌 XML 文件註解。
+- Language-Integrated Query (LINQ) ，可跨不同類型的資料來源提供內建的查詢功能。
+- 模式比對，藉由檢查資料類型和值來啟用控制流程。
 
-   本主題可讓您建立和執行簡單的 Hello World 應用程式，然後加以修改，以執行稍微更互動式的 Hello World 應用程式。 當您完成建置並執行應用程式之後，您也可以學習如何[為應用程式偵錯](../../core/tutorials/debugging-with-visual-studio.md)，以及如何[發行應用程式](../../core/tutorials/publishing-with-visual-studio.md)，讓它可在任何 .NET Core 支援的平台上執行。
+您可以透過稱為 "Interop" 的進程與原生元件互動。 Interop 幾乎可讓 C# 程式執行大部分原生 C++ 應用程式的功能。 C # 甚至還支援指標和「unsafe」程式碼的概念，在這些情況下，直接記憶體存取是很重要的。
 
-- [使用 c # 和 .NET Standard 在 Visual Studio 中建立類別庫](../../core/tutorials/library-with-visual-studio.md)
+相較於 C 和 C++，C# 建置流程相當簡單，也比 Java 更有彈性。 沒有個別標頭檔，也不需要以特定順序宣告方法和型別。 C# 原始程式檔可以定義數目不拘的類別、結構、介面及事件。
 
-   類別庫讓您能夠定義可從另一個應用程式呼叫的型別和型別成員。 此主題可讓您建立具有單一方法的類別庫，來決定字串是否要以大寫字元為開頭。 當您完成建置類別庫之後，可以開發[單元測試](../../core/tutorials/testing-library-with-visual-studio.md)以確保該類別庫可如預期般運作，然後您可以讓[想要取用它的應用程式](/nuget/quickstart/install-and-use-a-package-in-visual-studio)能夠使用該類別庫。
+下列是一些其他 C# 資源：
 
-- [開始使用 c # 和 Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
+- 如需語言的一般簡介，請參閱 [c # 教學課程](../tour-of-csharp/index.md)。
+- 如需有關 C# 語言特定層面的詳細資訊，請參閱 [C# 參考](../language-reference/index.md)。
+- 如需 LINQ 的詳細資訊，請參閱 [linq (語言整合查詢) ](../programming-guide/concepts/linq/index.md)。
 
-   Visual Studio Code 這個免費的程式碼編輯器已經過最佳化，可用於建置新式 Web 和雲端應用程式並為其偵錯。 支援 IntelliSense 並適用於 Linux、macOS 和 Windows。
+## <a name="net-platform-architecture"></a>.NET 平臺架構
 
-   此主題說明如何使用 Visual Studio Code 和 .NET Core，來建立並執行簡單的 Hello World 應用程式。
+C # 程式在 .NET 上執行，這是一個稱為 common language runtime (CLR) 的虛擬執行系統，以及一組整合的類別庫。 CLR 是 Microsoft 通用語言基礎結構的商業實行 (CLI) 是國際標準。 CLI 是建立執行和開發環境的基礎，而這些環境的語言和程式庫可順暢地一起運作。
 
-## <a name="related-sections"></a>相關章節
+以 c # 撰寫的原始程式碼會編譯成符合 CLI 規格 [ (IL) 的中繼語言 ](../../standard/managed-code.md) 。 IL 程式碼和資源（例如點陣圖和字串）都會儲存在元件中，通常會有 .dll 的副檔名。 元件包含的資訊清單會提供元件類型、版本和文化特性的相關資訊。
 
-- [C # 程式設計指南](../programming-guide/index.md)
+執行 c # 程式時，會將元件載入至 CLR。 CLR 會執行即時 (JIT) 編譯，以將 IL 程式碼轉換成原生電腦指令。 CLR 會提供與自動垃圾收集、例外狀況處理和資源管理相關的其他服務。 CLR 所執行的程式碼有時稱為「managed 程式碼」，相較于「非受控碼」，它會編譯成以特定系統為目標的原生電腦語言。
 
-    提供 C# 程式設計概念的資訊，並說明如何在 C# 中執行各種工作。
+語言互通性是 .NET 的一項重要功能。 C # 編譯器所產生的 IL 程式碼符合一般類型規格 (CTS) 。 從 c # 產生的 IL 程式碼可以與從 .NET 版本的 F #、Visual Basic、c + + 或超過20個其他符合 CTS 規範的語言產生的程式碼互動。 單一元件可能包含多個以不同 .NET 語言撰寫的模組，而類型可以彼此參考，如同以相同語言撰寫的一樣。
 
-- [C # 參考](../language-reference/index.md)
+除了執行時間服務，.NET 也包含廣泛的程式庫。 這些程式庫支援許多不同的工作負載。 這些命名空間會組織成命名空間，以提供各種有用的功能，從檔案輸入和輸出到字串操作到 XML 剖析，到 web 應用程式架構到 Windows Forms 控制項都有。 一般 c # 應用程式會廣泛使用 .NET 類別庫來處理常見的「配管」工作。
 
-    提供 C# 關鍵字、運算子、前置處理器指示詞、編譯器選項以及編譯器錯誤和警告的詳細參考資訊。
-
-- [逐步解說](../walkthroughs.md)
-
-    提供使用 C# 之程式設計逐步解說及個別逐步解說之簡短描述的連結。
-
-## <a name="see-also"></a>另請參閱
-
-- [使用 Visual Studio 開發 C#](/visualstudio/get-started/csharp/)
+如需 .NET 的詳細資訊，請參閱 [.net 的總覽](../../core/introduction.md)。

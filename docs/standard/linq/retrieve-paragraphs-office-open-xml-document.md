@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 35e48defb2fa010a4403d50373f6e491fad6c293
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 846816a38d32b16ec1252b67dd4eed2d8512f815
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552728"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160439"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-linq-to-xml"></a>如何從 Office Open XML 檔取出段落 (LINQ to XML) 
 
 本文提供的範例會開啟 Office Open XML 檔，並抓取檔中所有段落的集合。
 
-如需 Office Open XML 的詳細資訊，請參閱 [OPEN XML SDK](https://github.com/OfficeDev/Open-XML-SDK) 和 [Eric 白色的 Blog](http://www.ericwhite.com/)。
+如需 Office Open XML 的詳細資訊，請參閱 [OPEN XML SDK](https://github.com/OfficeDev/Open-XML-SDK) 和 [Eric 白色的 Blog](https://www.ericwhite.com/)。
 
 ## <a name="example-retrieve-the-paragraphs-from-an-office-open-xml-document"></a>範例：從 Office Open XML 檔取出段落
 

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: b440bce7ad73cfd526b1589e7f19b4cc06be238c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 1097d156aad06b7a17141e4d6786e5411cbaa571
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679608"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160837"
 ---
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 
-.NET Framework 與語言無關。 這表示，以開發人員而言，您可以使用以 .NET Framework 為目標的許多語言之一進行開發，例如 c #、c + +/CLI、Eiffel、F #、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 和 Windows PowerShell。 您可以存取為 .NET Framework 開發的類別庫的類型和成員，而不需要知道最初的寫入語言，也不需遵循任何原始語言的語言慣例。 如果您是元件開發人員，則不論其語言為何，元件都可以由任何 .NET Framework 應用程式存取。
+.NET 與語言無關。 這表示，以開發人員而言，您可以使用以 .NET 為目標的許多語言之一進行開發，例如 c #、c + +/CLI、Eiffel、F #、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 和 Windows PowerShell。 您可以存取為 .NET 開發之類別庫的類型和成員，而不需要知道原始撰寫的語言，也不需要遵循任何原始語言的慣例。 如果您是元件開發人員，則不論其語言為何，您的元件都可以由任何 .NET 應用程式存取。
 
 > [!NOTE]
 > 本文第一個部分將討論建立和語言無關的元件，也就是以任何語言撰寫的應用程式都可以使用這些元件。 您也可以從以多種語言撰寫的原始程式碼建立單一元件或應用程式。請參閱本文第二部分的[跨語言互通性](#CrossLang)。
@@ -105,8 +105,8 @@ ms.locfileid: "90679608"
 
 |類別|請參閱|規則|規則編號|
 |--------------|---------|----------|-----------------|
-|Accessibility|[成員存取範圍](#MemberAccess)|在覆寫繼承的方法時，不得變更其存取範圍；但覆寫繼承自具有 `family-or-assembly` 存取範圍之不同組件的方法除外。 在這種情況下，覆寫應具有 `family` 存取範圍。|10|
-|Accessibility|[成員存取範圍](#MemberAccess)|類型和成員應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中的類型也應該是可見和可存取的。 例如，在組件外部是可見的公用方法不得有引數，其類型只有在組件內可見。 構成類型應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中所用的具現化泛型類型也應該是可見和可存取的。 例如，存在於組件外部可見成員的簽章中的具現化泛型類型，不得有類型只能在組件內可見的泛型引數。|12|
+|協助工具選項|[成員存取範圍](#MemberAccess)|在覆寫繼承的方法時，不得變更其存取範圍；但覆寫繼承自具有 `family-or-assembly` 存取範圍之不同組件的方法除外。 在這種情況下，覆寫應具有 `family` 存取範圍。|10|
+|協助工具選項|[成員存取範圍](#MemberAccess)|類型和成員應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中的類型也應該是可見和可存取的。 例如，在組件外部是可見的公用方法不得有引數，其類型只有在組件內可見。 構成類型應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中所用的具現化泛型類型也應該是可見和可存取的。 例如，存在於組件外部可見成員的簽章中的具現化泛型類型，不得有類型只能在組件內可見的泛型引數。|12|
 |陣列|[陣列](#arrays)|陣列必須有符合 CLS 規範之類型的項目，而且陣列所有維度的下限必須為零。 只有項目是陣列以及陣列的項目類型是需要在多載之間區別的事實。 當多載根據兩個或多個陣列類型時，項目類型應該是具名類型。|16|
 |屬性|[屬性](#attributes)|屬性的類型必須為 <xref:System.Attribute?displayProperty=nameWithType> 或繼承自它的類型。|41|
 |屬性|[屬性](#attributes)|CLS 只允許自訂屬性編碼的子集。 只有以下這些類型允許出現在這些編碼方式中 (請參閱第四篇)：<xref:System.Type?displayProperty=nameWithType>、<xref:System.String?displayProperty=nameWithType>、<xref:System.Char?displayProperty=nameWithType>、<xref:System.Boolean?displayProperty=nameWithType>、<xref:System.Byte?displayProperty=nameWithType>、<xref:System.Int16?displayProperty=nameWithType>、<xref:System.Int32?displayProperty=nameWithType>、<xref:System.Int64?displayProperty=nameWithType>、<xref:System.Single?displayProperty=nameWithType>、<xref:System.Double?displayProperty=nameWithType>，以及以 CLS 標準基底整數類型為基礎的所有列舉類型。|34|
@@ -157,7 +157,7 @@ ms.locfileid: "90679608"
 
 ### <a name="types-and-type-member-signatures"></a>類型和類型成員簽章
 
-<xref:System.Object?displayProperty=nameWithType> 類型符合 CLS 標準，並且是 .NET Framework 類型系統中所有物件類型的基底類型。 .NET Framework 中的繼承若不是隱含的 (例如，<xref:System.String> 類別隱含繼承 <xref:System.Object> 類別) 就是明確的 (例如，<xref:System.Globalization.CultureNotFoundException> 類別明確繼承 <xref:System.ArgumentException> 類別，後者又明確繼承 <xref:System.SystemException> 類別，再依次明確繼承 <xref:System.Exception> 類別)。 若要讓衍生類型符合 CLS 標準，其基底類型必須符合 CLS 標準。
+此 <xref:System.Object?displayProperty=nameWithType> 類型符合 CLS 規範，而且是 .net 型別系統中所有物件類型的基底類型。 .NET 中的繼承是隱含的 (例如， <xref:System.String> 類別隱含繼承自 <xref:System.Object> 類別) 或明確 (例如，類別明確繼承自類別，該類別明確繼承自類別，該類別明確繼承自類別 <xref:System.Globalization.CultureNotFoundException> <xref:System.ArgumentException> <xref:System.SystemException> <xref:System.Exception>) 。 若要讓衍生類型符合 CLS 標準，其基底類型必須符合 CLS 標準。
 
 下面範例會示範其基底類型不符合 CLS 標準的衍生類型。 它會定義基底 `Counter` 類別，這個類別使用不帶正負號的 32 位元整數做為計數器。 因為該類別會藉由包裝不帶正負號的整數提供計數器功能，所以該類別會標記為不符合 CLS 標準。 結果，衍生的類別 `NonZeroCounter` 也不符合 CLS 標準。
 
@@ -170,7 +170,7 @@ ms.locfileid: "90679608"
 
 - 所有用來做為泛型參數之限制式的類型，都必須符合 CLS 標準。
 
-.NET Framework 的[一般類型系統](base-types/common-type-system.md)包含了幾個內建類型，這些內建類型直接受到 Common Language Runtime 的支援，並且在組譯碼的中繼資料中以特殊方式進行編碼。 在這些內建類型中，下表所列的類型符合 CLS 標準。
+.NET 的[一般型別系統](base-types/common-type-system.md)包含了幾個內建類型，這些內建類型直接受到 Common Language Runtime 的支援，並且在組譯碼的中繼資料中以特殊方式進行編碼。 在這些內建類型中，下表所列的類型符合 CLS 標準。
 
 |符合 CLS 規範的類型|描述|
 |-------------------------|-----------------|
@@ -197,13 +197,13 @@ ms.locfileid: "90679608"
 |<xref:System.UInt64>|64 位元不帶正負號的整數|<xref:System.Int64> (可能溢位)、<xref:System.Numerics.BigInteger> 或 <xref:System.Double>。|
 |<xref:System.UIntPtr>|不帶正負號的指標或控制代碼|<xref:System.IntPtr>|
 
-.NET Framework 類別庫或其他類別庫可能包含不符合 CLS 規範的其他類型，例如：
+.NET 類別庫或任何其他類別庫可能包含不符合 CLS 規範的其他類型;例如：
 
 - Boxed 實值類型。 下面 C# 範例會建立類別，具有類型為 `int*` 的公用屬性，名為 `Value`。 由於 `int*` 為 Boxed 實值類型，因此編譯器將其標示為不符合 CLS 標準。
 
   [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]
 
-- 具類型參考，是一種含有物件參考和類型參考的特殊建構。 具類型參考在 .NET Framework 中是由 <xref:System.TypedReference> 類別表示。
+- 具類型參考，是一種含有物件參考和類型參考的特殊建構。 型別參考在 .NET 中是由 <xref:System.TypedReference> 類別表示。
 
 如果類型不符合 CLS 標準，您應將 <xref:System.CLSCompliantAttribute> 值為 `isCompliant` 的 `false` 屬性套用至該類型。 如需詳細資訊，請參閱 [CLSCompliantAttribute 屬性](#CLSAttribute)一節。
 
@@ -487,7 +487,7 @@ Common Language Specification 會對多載成員施加下列需求：
 
 ### <a name="attributes"></a>屬性
 
-在 .NET Framework 組件中，自訂屬性會提供可擴充機制，用於儲存自訂屬性和擷取程式設計物件 (例如組件、類型、成員和方法參數) 的相關中繼資料。 自訂屬性必須衍生自 <xref:System.Attribute?displayProperty=nameWithType>，或從衍生自 <xref:System.Attribute?displayProperty=nameWithType> 的類型衍生而來。
+在 .NET 元件中，自訂屬性提供可延伸機制來儲存自訂屬性，以及抓取程式設計物件的中繼資料，例如元件、類型、成員和方法參數。 自訂屬性必須衍生自 <xref:System.Attribute?displayProperty=nameWithType>，或從衍生自 <xref:System.Attribute?displayProperty=nameWithType> 的類型衍生而來。
 
 下面範例違反這項規則。 它會定義不是衍生自 `NumericAttribute` 的 <xref:System.Attribute?displayProperty=nameWithType> 類別 請注意，只有在套用不符合 CLS 標準的屬性時，而不是在定義類別時，才會產生編譯器錯誤。
 
@@ -533,7 +533,7 @@ Common Language Specification 會對多載成員施加下列需求：
 
 元件開發人員可以透過兩種方式使用 <xref:System.CLSCompliantAttribute> 屬性：
 
-- 定義元件所公開符合 CLS 規範的公用介面的組件和不符合 CLS 規範的組件。 當該屬性是用來將特定程式項目標記為符合 CLS 規範時，使用它可以確保目標為 .NET Framework 的所有語言和工具都可以存取這些項目。
+- 定義元件所公開符合 CLS 規範的公用介面的組件和不符合 CLS 規範的組件。 當屬性用來將特定程式專案標記為符合 CLS 規範時，其使用方式可確保這些元素可從所有以 .NET 為目標的語言和工具存取。
 
 - 確定元件庫的公用介面只公開符合 CLS 標準的程式項目。 如果項目不符合 CLS 標準，編譯器通常會發出警告。
 
@@ -571,7 +571,7 @@ Common Language Specification 會對多載成員施加下列需求：
 
 ## <a name="cross-language-interoperability"></a>跨語言互通性
 
-語言獨立性的意義可能有許多種。 其中一種意義是指能夠順利使用以某種語言撰寫的應用程式中，以另一種語言撰寫的類型，這種意義將在[語言獨立性和語言獨立元件](language-independence-and-language-independent-components.md)中討論。 第二種意義則是本文重點所在，是指將多種語言撰寫的程式碼合併至單一 .NET Framework 組件中。
+語言獨立性的意義可能有許多種。 其中一種意義是指能夠順利使用以某種語言撰寫的應用程式中，以另一種語言撰寫的類型，這種意義將在[語言獨立性和語言獨立元件](language-independence-and-language-independent-components.md)中討論。 第二個意義是本文的重點，包括將以多種語言撰寫的程式碼合併成單一 .NET 元件。
 
 下列範例會建立名為 Utilities.dll 的類別程式庫，其中包含兩個類別 `NumericLib` 和 `StringLib`，藉以說明跨語言互通性。 `NumericLib` 類別是以 C# 撰寫，`StringLib` 類別是以 Visual Basic 撰寫。 以下是 StringUtil.vb 的原始程式碼，當中包含它的 `ToTitleCase` 類別中的單一成員 `StringLib`。
 
