@@ -6,30 +6,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 35e48defb2fa010a4403d50373f6e491fad6c293
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 846816a38d32b16ec1252b67dd4eed2d8512f815
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552728"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160439"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-linq-to-xml"></a><span data-ttu-id="f7fdc-103">如何從 Office Open XML 檔取出段落 (LINQ to XML) </span><span class="sxs-lookup"><span data-stu-id="f7fdc-103">How to retrieve paragraphs from an Office Open XML document (LINQ to XML)</span></span>
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-linq-to-xml"></a><span data-ttu-id="f2e48-103">如何從 Office Open XML 檔取出段落 (LINQ to XML) </span><span class="sxs-lookup"><span data-stu-id="f2e48-103">How to retrieve paragraphs from an Office Open XML document (LINQ to XML)</span></span>
 
-<span data-ttu-id="f7fdc-104">本文提供的範例會開啟 Office Open XML 檔，並抓取檔中所有段落的集合。</span><span class="sxs-lookup"><span data-stu-id="f7fdc-104">This article provides an example that opens an Office Open XML document and retrieves a collection of all of the paragraphs in the document.</span></span>
+<span data-ttu-id="f2e48-104">本文提供的範例會開啟 Office Open XML 檔，並抓取檔中所有段落的集合。</span><span class="sxs-lookup"><span data-stu-id="f2e48-104">This article provides an example that opens an Office Open XML document and retrieves a collection of all of the paragraphs in the document.</span></span>
 
-<span data-ttu-id="f7fdc-105">如需 Office Open XML 的詳細資訊，請參閱 [OPEN XML SDK](https://github.com/OfficeDev/Open-XML-SDK) 和 [Eric 白色的 Blog](http://www.ericwhite.com/)。</span><span class="sxs-lookup"><span data-stu-id="f7fdc-105">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [Eric White's Blog](http://www.ericwhite.com/).</span></span>
+<span data-ttu-id="f2e48-105">如需 Office Open XML 的詳細資訊，請參閱 [OPEN XML SDK](https://github.com/OfficeDev/Open-XML-SDK) 和 [Eric 白色的 Blog](https://www.ericwhite.com/)。</span><span class="sxs-lookup"><span data-stu-id="f2e48-105">For more information on Office Open XML, see [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) and [Eric White's Blog](https://www.ericwhite.com/).</span></span>
 
-## <a name="example-retrieve-the-paragraphs-from-an-office-open-xml-document"></a><span data-ttu-id="f7fdc-106">範例：從 Office Open XML 檔取出段落</span><span class="sxs-lookup"><span data-stu-id="f7fdc-106">Example: Retrieve the paragraphs from an Office Open XML document</span></span>
+## <a name="example-retrieve-the-paragraphs-from-an-office-open-xml-document"></a><span data-ttu-id="f2e48-106">範例：從 Office Open XML 檔取出段落</span><span class="sxs-lookup"><span data-stu-id="f2e48-106">Example: Retrieve the paragraphs from an Office Open XML document</span></span>
 
-<span data-ttu-id="f7fdc-107">此範例會開啟 Office Open XML 封裝，並使用封裝內的關聯性來尋找檔和樣式部分。</span><span class="sxs-lookup"><span data-stu-id="f7fdc-107">The example opens an Office Open XML package, and uses the relationships within the package to find the document and the style parts.</span></span> <span data-ttu-id="f7fdc-108">然後，它會查詢檔並投射具有段落資訊的集合。</span><span class="sxs-lookup"><span data-stu-id="f7fdc-108">It then queries the document and projects a collection that has the paragraph information.</span></span> <span data-ttu-id="f7fdc-109">集合的每個物件都代表一個段落，並且包含段落 <xref:System.Xml.Linq.XElement> 節點、樣式名稱和文字。</span><span class="sxs-lookup"><span data-stu-id="f7fdc-109">Each object of the collection represents a paragraph, and contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name, and the text.</span></span>
+<span data-ttu-id="f2e48-107">此範例會開啟 Office Open XML 封裝，並使用封裝內的關聯性來尋找檔和樣式部分。</span><span class="sxs-lookup"><span data-stu-id="f2e48-107">The example opens an Office Open XML package, and uses the relationships within the package to find the document and the style parts.</span></span> <span data-ttu-id="f2e48-108">然後，它會查詢檔並投射具有段落資訊的集合。</span><span class="sxs-lookup"><span data-stu-id="f2e48-108">It then queries the document and projects a collection that has the paragraph information.</span></span> <span data-ttu-id="f2e48-109">集合的每個物件都代表一個段落，並且包含段落 <xref:System.Xml.Linq.XElement> 節點、樣式名稱和文字。</span><span class="sxs-lookup"><span data-stu-id="f2e48-109">Each object of the collection represents a paragraph, and contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name, and the text.</span></span>
 
-<span data-ttu-id="f7fdc-110">此範例會在「 [建立來源 Office OPEN xml 檔](create-source-office-open-xml-document.md)」中所述的 OFFICE Open xml 檔上運作。</span><span class="sxs-lookup"><span data-stu-id="f7fdc-110">The example operates on the Office Open XML document described in [Create the source Office Open XML document](create-source-office-open-xml-document.md).</span></span>
+<span data-ttu-id="f2e48-110">此範例會在「 [建立來源 Office OPEN xml 檔](create-source-office-open-xml-document.md)」中所述的 OFFICE Open xml 檔上運作。</span><span class="sxs-lookup"><span data-stu-id="f2e48-110">The example operates on the Office Open XML document described in [Create the source Office Open XML document](create-source-office-open-xml-document.md).</span></span>
 
-<span data-ttu-id="f7fdc-111">它會使用下列各項：</span><span class="sxs-lookup"><span data-stu-id="f7fdc-111">It makes use of the following:</span></span>
+<span data-ttu-id="f2e48-111">它會使用下列各項：</span><span class="sxs-lookup"><span data-stu-id="f2e48-111">It makes use of the following:</span></span>
 
-- <span data-ttu-id="f7fdc-112">`StringConcatenate`擴充方法，定義為範例的一部分。</span><span class="sxs-lookup"><span data-stu-id="f7fdc-112">The `StringConcatenate` extension method, defined as part of the example.</span></span>
-- <span data-ttu-id="f7fdc-113">在 WindowsBase 元件中找到的類別。</span><span class="sxs-lookup"><span data-stu-id="f7fdc-113">Classes found in the WindowsBase assembly.</span></span>
-- <span data-ttu-id="f7fdc-114">命名空間中的類型 <xref:System.IO.Packaging?displayProperty=nameWithType> 。</span><span class="sxs-lookup"><span data-stu-id="f7fdc-114">Types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
+- <span data-ttu-id="f2e48-112">`StringConcatenate`擴充方法，定義為範例的一部分。</span><span class="sxs-lookup"><span data-stu-id="f2e48-112">The `StringConcatenate` extension method, defined as part of the example.</span></span>
+- <span data-ttu-id="f2e48-113">在 WindowsBase 元件中找到的類別。</span><span class="sxs-lookup"><span data-stu-id="f2e48-113">Classes found in the WindowsBase assembly.</span></span>
+- <span data-ttu-id="f2e48-114">命名空間中的類型 <xref:System.IO.Packaging?displayProperty=nameWithType> 。</span><span class="sxs-lookup"><span data-stu-id="f2e48-114">Types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>
 
 ```csharp
 public static class LocalExtensions
@@ -300,7 +300,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="f7fdc-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="f7fdc-115">This example produces the following output:</span></span>
+<span data-ttu-id="f2e48-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="f2e48-115">This example produces the following output:</span></span>
 
 ```output
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<
