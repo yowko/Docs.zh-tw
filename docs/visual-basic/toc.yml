@@ -153,9 +153,9 @@
         - name: 泛型型別
           href: programming-guide/language-features/data-types/generic-types.md
           items:
-            - name: 作法：定義可以為不同資料類型提供相同功能的類別
+            - name: 定義可在不同類型上提供相同功能的類別
               href: programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-            - name: 作法：使用泛型類別
+            - name: 使用泛型類別
               href: programming-guide/language-features/data-types/how-to-use-a-generic-class.md
         - name: 泛型程序
           href: programming-guide/language-features/data-types/generic-procedures.md
@@ -875,14 +875,18 @@
         - name: XML 處理指示常值
           href: language-reference/xml-literals/xml-processing-instruction-literal.md
     - name: 錯誤訊息
-      href: language-reference/error-messages/index.md
       items:
+        - name: 概觀
+          displayName: 'error messages, compiler errors'
+          href: language-reference/error-messages/index.md
+        - name: BC30663
+          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+        - name: BC32500
+          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: '''#ElseIf'' 之前必須搭配相對應的 ''#If'' 或 ''#ElseIf'''
           href: language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
         - name: '''#Region'' 與 '' #End Region'' 陳述式在具有多行的方法主體中無效'
           href: language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
-        - name: 無法套用 '<attribute>'，因為 GUID '<number>' 的格式不正確
-          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: '''<classname>'' 不符合 CLS 標準，因為它所實作的介面 ''<interfacename>'' 不符合 CLS 標準'
           href: language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
         - name: '''<elementname>'' 已經過時 (Visual Basic 警告)'
@@ -949,8 +953,6 @@
           href: language-reference/error-messages/bc31043.md
         - name: '''Declare'' 陳述式中不支援 ''As Any'''
           href: language-reference/error-messages/bc30828.md
-        - name: 屬性 '<attributename>' 不可以多次套用
-          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
         - name: Automation 錯誤
           href: language-reference/error-messages/automation-error.md
         - name: 錯誤的總和檢查碼值，非十六進位數字或奇數的十六進位數字
@@ -1409,7 +1411,7 @@
               href: reference/command-line-compiler/win32manifest.md
             - name: '-win32resource'
               href: reference/command-line-compiler/win32resource.md
-        - name: 依分類排列的編譯器選項
+        - name: 依類別分類的編譯器選項
           href: reference/command-line-compiler/compiler-options-listed-by-category.md
     - name: .NET Framework 參考資訊
       href: reference/net-framework-reference-information.md
