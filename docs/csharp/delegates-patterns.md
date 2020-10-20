@@ -4,15 +4,15 @@ description: 了解在程式碼中使用委派，以避免元件之間強式結�
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
 ms.openlocfilehash: 22ab88e5b139381e3a8921baa20df035f1405146
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399662"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223693"
 ---
 # <a name="common-patterns-for-delegates"></a>委派的一般模式
 
-[上一步](delegates-strongly-typed.md)
+[[上一步]](delegates-strongly-typed.md)
 
 委派會提供一種機制，啟用與元件之間最小結合程度有關的軟體設計。
 

@@ -1,15 +1,17 @@
 ---
 title: 在 .NET 中建立使用者定義函式 (UDF) 以進行 Apache Spark
 description: 瞭解如何在適用于 Apache Spark 應用程式的 .NET 中，將使用者定義函數 (UDF) 。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 769bcf0a912d27e191dad82138648d1aefb3c3b6
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 50e631b0c561ebdf081d4c1b7d16bf25abb322e5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955032"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224178"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>在 .NET 中建立使用者定義函式 (UDF) 以進行 Apache Spark
 
@@ -184,6 +186,12 @@ public class C
 
 * Udf 中的 Null 值可能會擲回例外狀況。 開發人員必須負責處理這些問題。
 * Udf 不會利用 Spark 內建函數所提供的優化功能，因此建議您盡可能使用內建函數。
+
+## <a name="faqs"></a>常見問題集
+
+**為什麼我會收到錯誤 `System.NotImplementedException: The method or operation is not implemented.` ，或 `System.InvalidCastException: Unable to cast object of type 'System.Collections.Hashtable' to type 'System.Collections.Generic.IDictionary` 嘗試使用 `ArrayType` 、 `MapType` 、 `ArrayList` 或 `HashTable` 做為引數或傳回型別來呼叫 UDF 時，會發生錯誤？**  
+在 v1.0 `ArrayType` 之前，並不提供對和的支援， `MapType` 因此如果您使用 .net 來 Apache Spark 版本之前的版本，並嘗試將這些類型傳遞為 UDF 的引數或傳回型別，您就會收到這個錯誤。 [v1.0](https://github.com/dotnet/spark/releases/tag/v1.0.0)
+`ArrayList` 和型別 `HashTable` 不支援做為 UDF 的傳回型別，因為它們是非泛型集合，因此無法將其元素類型定義提供給 Spark。
 
 ## <a name="next-steps"></a>後續步驟
 

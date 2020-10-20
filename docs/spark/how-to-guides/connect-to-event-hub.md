@@ -1,21 +1,23 @@
 ---
 title: 將適用于 Apache Spark 的 .NET 連接至 Azure 事件中樞
 description: 瞭解如何從本機 .NET 針對 Apache Spark 實例連接至 Azure 事件中樞。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4de4836ba2b63429e29ae819afac09c7a3998480
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c8fd10992e63674032af4148e0673a5330d9086c
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954967"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223964"
 ---
 # <a name="connect-net-for-apache-spark-to-azure-event-hubs"></a>將適用于 Apache Spark 的 .NET 連接至 Azure 事件中樞
 
 在本文中，您將瞭解如何使用 Azure 事件中樞將 [.net for Apache Spark](https://github.com/dotnet/spark) 應用程式連線，以讀取和寫入 Apache Kafka 串流。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 使用事件中樞備妥事件中樞命名空間。 如需逐步指南，請參閱 [快速入門：使用 Azure 入口網站建立事件中樞](/azure/event-hubs/event-hubs-create)。 建立事件中樞命名空間時，請務必選取標準定價層。
 

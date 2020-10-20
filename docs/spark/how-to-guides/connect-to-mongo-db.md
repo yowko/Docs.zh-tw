@@ -1,21 +1,23 @@
 ---
 title: 將適用于 Apache Spark 的 .NET 連線到 MongoDB
 description: 瞭解如何從 .NET 針對 Apache Spark 應用程式連線到您的 MongoDB 實例。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4cb78998ddb54621a84e9d224a814047e3c40246
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 928cc8e3559e13af66268f3d1b3766cf2df9041f
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877843"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223974"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>將適用于 Apache Spark 的 .NET 連線到 MongoDB
 
 在本文中，您將瞭解如何從 .NET 針對 Apache Spark 應用程式連接到 MongoDB 實例。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 1. 將 MongoDB 伺服器啟動並執行，並在其中加入一個 [資料庫，](https://docs.mongodb.com/manual/core/databases-and-collections/) (為本機伺服器下載 [此台伺服器](https://www.mongodb.com/try/download/community) ，或者您可以嘗試使用 [MongoDB](https://www.mongodb.com/cloud/atlas) 的 mongodb 服務。 ) 
 

@@ -1,15 +1,17 @@
 ---
 title: 使用 .NET 中的廣播變數進行 Apache Spark
 description: 瞭解如何在 .NET 中使用廣播變數來 Apache Spark 應用程式。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 3cf2215f59ce28878f44138386c01597ec852905
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 55a52754439020bd2a925aa3e987fb4ad99c9c3d
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955019"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224003"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>使用 .NET 中的廣播變數進行 Apache Spark
 

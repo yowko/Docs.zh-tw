@@ -4,11 +4,11 @@ description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的�
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398934"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223740"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
@@ -135,7 +135,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
  正規化不利於太過複雜的線性模型。 正規化有兩種：
 
 - $L_1$ 正規化零加權不顯著的特性。 在這種正規化後，已儲存的模型大小可能會變得較小。
-- $L_2$ 的正規化可最大限度減少無足輕重功能的重量範圍。 這是一個更常規的過程，對異常值不太敏感。
+- $L _2 $ 正規化可將沒有意義特徵的加權範圍降至最低。 這是更一般的程式，對極端值而言較不敏感。
 
 ## <a name="regression"></a>迴歸
 

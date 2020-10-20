@@ -1,15 +1,17 @@
 ---
 title: 從您的本機電腦連接到遠端存放裝置
 description: 使用 .NET 連接到 Azure 儲存體帳戶，以便從本機電腦進行 Apache Spark。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 09e92b0cae848f9c98b691a11842f131f613396b
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: dc0c3b44279756596f3d456616821e690710ae04
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877841"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224013"
 ---
 # <a name="connect-to-azure-data-lake-storage-gen-2-or-wasb-account"></a>連接到 Azure Data Lake Storage Gen 2 或 WASB 帳戶
 

@@ -2,12 +2,12 @@
 title: .NET Core 2.0 的新功能
 description: 了解 .NET Core 所提供的新功能。
 ms.date: 08/13/2017
-ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdca38d1584107727fe8e20b80ab2337f4cb05f1
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398829"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223720"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新功能
 
@@ -17,7 +17,7 @@ ms.locfileid: "79398829"
 - [語言支援](#language-support)
 - [平台改善](#platform-improvements)
 - [API 變更](#api-changes-and-library-support)
-- [視覺化工作室集成](#visual-studio-integration)
+- [Visual Studio 整合](#visual-studio-integration)
 - [文件改進](#documentation-improvements)
 
 ## <a name="tooling"></a>Tooling
@@ -104,13 +104,13 @@ ms.locfileid: "79398829"
 
 ### <a name="support-for-net-standard-20"></a>針對 .NET Standard 2.0 的支援
 
-.NET Standard 會定義一組必須在符合該標準版本之 .NET 實作上提供的已建立版本 API。 .NET Standard 是以程式庫開發人員為目標。 它的目的在於針對每個 .NET 實作上以 .NET Standard 的某個版本為目標的程式庫，保證程式庫中所能使用的功能。 .NET Core 1.x 支援 .NET Standard 1.6 版，.NET Core 2.0 則支援最新 .NET Standard 2.0 版。 如需詳細資訊，請參閱 [.NET Standard](../../standard/net-standard.md)。
+.NET Standard 會定義一組已建立版本的 Api，這些 Api 必須可在符合該標準版本的 .NET 執行上使用。 .NET Standard 是以程式庫開發人員為目標。 它的目標是要確保以每個 .NET 執行上的 .NET Standard 版本為目標的程式庫可以使用的功能。 .NET Core 1.x 支援 .NET Standard 版本 1.6; .NET Core 2.0 支援最新版本，.NET Standard 2.0。 如需詳細資訊，請參閱 [.NET Standard](../../standard/net-standard.md)。
 
-除了 .NET Standard 1.6 原先所提供的 API 之外，.NET Standard 2.0 更包含了超過 20,000 個額外的 API。 我們主要是透過將 .NET Framework 和 Xamarin 的常見 API 合併至 .NET Standard，來對介面區進行擴展。
+.NET Standard 2.0 包含超過20000個以上的 Api，而不是 .NET Standard 1.6 中提供的 Api。 我們主要是透過將 .NET Framework 和 Xamarin 的常見 API 合併至 .NET Standard，來對介面區進行擴展。
 
-.NET Standard 2.0 類別庫也可以參考 .NET Framework 類別庫，前提是這些類別庫必須呼叫存在於 .NET Standard 2.0 中的 API。 不需要對 .NET Framework 程式庫進行任何重新編譯。
+.NET Standard 2.0 類別庫也可以參考 .NET Framework 類別庫，但前提是它們會呼叫 .NET Standard 2.0 中所存在的 Api。 不需要對 .NET Framework 程式庫進行任何重新編譯。
 
-有關自上次版本以來已添加到 .NET 標準中的 API 的清單，.NET 標準 1.6，請參閱[.NET 標準 2.0 與 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)。
+如需自上一版以來新增至 .NET Standard 的 Api 清單，.NET Standard 1.6，請參閱 [.NET Standard 2.0 與 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)。
 
 ### <a name="expanded-surface-area"></a>擴展的介面區
 
@@ -122,7 +122,7 @@ ms.locfileid: "79398829"
 
 .NET Core 程式碼可以參考現有的 .NET Framework 程式庫，包括現有的 NuGet 套件。 請注意，程式庫必須使用 .NET Standard 所提供的 API。
 
-## <a name="visual-studio-integration"></a>整合 Visual Studio
+## <a name="visual-studio-integration"></a>Visual Studio 整合
 
 Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能為 .NET Core 開發人員提供數個顯著的增強功能。
 
@@ -136,7 +136,7 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 每當您修改程式碼時，Live Unit Testing 會在背景自動執行任何受影響的單元測試，並會在 Visual Studio 環境中呈現即時的結果和程式碼涵蓋範圍。 .NET Core 2.0 現已支援 Live Unit Testing。 先前 Live Unit Testing 僅針對 .NET Framework 應用程式提供。
 
-有關詳細資訊，請參閱[使用視覺化工作室的即時單元測試](/visualstudio/test/live-unit-testing)和[即時單元測試常見問題解答](/visualstudio/test/live-unit-testing-faq)。
+如需詳細資訊，請參閱 [Visual Studio 的 Live Unit Testing](/visualstudio/test/live-unit-testing) 和 [Live Unit Testing 常見問題](/visualstudio/test/live-unit-testing-faq)。
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>更佳的多目標 Framework 支援
 
@@ -155,7 +155,7 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 [.NET 應用程式架構](https://dotnet.microsoft.com/learn/dotnet/architecture-guides)可讓您存取一系列針對使用 .NET 進行建置提供指引、最佳做法和範例應用程式的電子書：
 
 - [微服務和 Docker 容器](../../architecture/microservices/index.md)
-- [具有ASP.NET的 Web 應用程式](../../architecture/modern-web-apps-azure/index.md)
+- [使用 ASP.NET 的 Web 應用程式](../../architecture/modern-web-apps-azure/index.md)
 - [使用 Xamarin 的行動應用程式](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [使用 Azure 部署至雲端的應用程式](/azure/architecture/reference-architectures/index)
 

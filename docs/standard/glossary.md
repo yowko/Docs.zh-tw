@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050340"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224399"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -98,7 +98,7 @@ CLR 會處理記憶體配置和管理。 CLR 也是虛擬機器，不僅可執�
 
 「.NET 生態系統」一詞與「.NET 堆疊」等類似詞彙的不同之處在於，前者包含協力廠商應用程式和程式庫。 以下是用於句子中的範例：
 
-- 「[.NET Standard](#net-standard) 背後的動機是在 .NET 生態系統中建立更高的一致性。」
+- 「 [.NET Standard](#net-standard) 背後的動機是在 .net 生態系統中建立更高的一致性。」
 
 ## <a name="framework"></a>架構
 
@@ -138,7 +138,7 @@ Just-in-Time 編譯器。
 .NET 的執行包括：
 
 - 一或多個執行階段。 範例： [CLR](#clr)、 [CoreRT](#corert)。
-- 實作 .NET Standard 版本並可能包含其他 API 的類別庫。 範例： [.NET Framework](#net-framework)和 .net 5 的[BCLs](#bcl) [ (和 .net Core) 和更新版本](#net-5-and-later-versions)。
+- .NET Standard 的類別庫，可執行版本的且可能包含其他 Api。 範例： [.NET Framework](#net-framework)和 .net 5 的[BCLs](#bcl) [ (和 .net Core) 和更新版本](#net-5-and-later-versions)。
 - (選擇性) 一或多個應用程式架構。 範例： [ASP.NET](#aspnet)、WINDOWS FORMS 和 WPF 包含在 .NET FRAMEWORK 和 .net 5 中。
 - (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
@@ -244,7 +244,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 以下是用於句子中的範例：
 
 - 「.NET Core 是 .NET 的跨平台實作。」
-- 「PCL 設定檔代表 Microsoft 平台，而 .NET Standard 則無從驗證平台。」
+- 「PCL 設定檔代表 Microsoft 平臺，而 .NET Standard 與平臺無關」。
 
 舊版 .NET 檔有時會使用 ".NET platform" 來表示 .NET 或 .NET [stack](#stack)的執行，包括所有[的實](#implementation-of-net)作為。 這兩種使用方式通常會與主要 (作業系統/硬體) 含意混淆，因此我們會嘗試避免這些使用方式。
 
@@ -278,7 +278,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
 可搭配使用以建置及執行應用程式的一組程式設計技術。
 
-「.NET 堆疊」是指 .NET Standard 和所有 .NET 實作。 「一個 .NET 堆疊」一詞可能是指 .NET 的一項實作。
+「.NET stack」指的是 .NET Standard 和所有的 .NET 執行。 「一個 .NET 堆疊」一詞可能是指 .NET 的一項實作。
 
 ## <a name="target-framework"></a>Target Framework - 目標 Framework
 

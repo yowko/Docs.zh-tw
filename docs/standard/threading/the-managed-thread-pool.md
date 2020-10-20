@@ -10,11 +10,11 @@ helpviewer_keywords:
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400628"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223794"
 ---
 # <a name="the-managed-thread-pool"></a>受控執行緒集區
 
@@ -36,7 +36,7 @@ ms.locfileid: "79400628"
 - 因為正在卸載應用程式定義域，所以在執行緒集區的執行緒中擲回 <xref:System.AppDomainUnloadedException?displayProperty=nameWithType>。  
 - Common Language Runtime 或主應用程式處理序會結束這個執行緒。  
   
-有關詳細資訊，請參閱[託管執行緒中的異常](exceptions-in-managed-threads.md)。  
+如需詳細資訊，請參閱 [Managed 執行緒中的例外](exceptions-in-managed-threads.md)狀況。  
   
 ### <a name="maximum-number-of-thread-pool-threads"></a>執行緒集區執行緒數的上限
 
@@ -45,7 +45,7 @@ ms.locfileid: "79400628"
 您可以使用 <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> 和 <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType> 方法來控制執行緒最大數目。  
 
 > [!NOTE]
-> 承載通用語言運行時的代碼可以使用 方法[`ICorThreadpool::CorSetMaxThreads`](../../framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md)設置大小。  
+> 裝載 common language runtime 的程式碼可以使用方法來設定大小 [`ICorThreadpool::CorSetMaxThreads`](../../framework/unmanaged-api/hosting/icorthreadpool-corsetmaxthreads-method.md) 。  
   
 ### <a name="thread-pool-minimums"></a>執行緒集區下限
 
@@ -63,7 +63,7 @@ ms.locfileid: "79400628"
 
 自 .NET Framework 4 起，使用執行緒集區最簡單的方式，就是使用[工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md)。 根據預設，諸如 <xref:System.Threading.Tasks.Task> 與 <xref:System.Threading.Tasks.Task%601> 等 TPL 類型，都會使用執行緒集區的執行緒執行工作。
 
-還可以通過從託管代碼（或<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType>[`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md)非託管代碼）調用執行緒池以及傳遞表示執行任務的方法的<xref:System.Threading.WaitCallback?displayProperty=nameWithType>委託來使用執行緒池。
+您也可以使用執行緒集區，方法是 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 從 managed 程式碼 (或 [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) 從非受控程式) 代碼進行呼叫，並傳遞 <xref:System.Threading.WaitCallback?displayProperty=nameWithType> 代表執行工作之方法的委派。
 
 使用執行緒集區的另一種方式，是使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法並傳遞 <xref:System.Threading.WaitHandle?displayProperty=nameWithType> (它在收到信號或逾時的時候會呼叫由 <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType> 委派表示的方法)，藉以將與等候作業有關的工作項目排入佇列。 執行緒集區執行緒可用來叫用回呼方法。  
 
@@ -89,8 +89,8 @@ ms.locfileid: "79400628"
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
 - [工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md)
-- [如何：傳回工作的值](../parallel-programming/how-to-return-a-value-from-a-task.md)
+- [作法：從工作傳回值](../parallel-programming/how-to-return-a-value-from-a-task.md)
 - [執行緒物件和功能](threading-objects-and-features.md)
 - [執行緒和執行緒處理](threads-and-threading.md)
-- [非同步檔案 I/O](../io/asynchronous-file-i-o.md)
+- [非同步檔案 i/o](../io/asynchronous-file-i-o.md)
 - [計時器](timers.md)

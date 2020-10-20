@@ -4,12 +4,12 @@ description: 方法、方法參數和方法傳回值的概觀
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874703"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223668"
 ---
 # <a name="methods-in-c"></a> (c # 中的方法 ) 
 
@@ -24,7 +24,7 @@ ms.locfileid: "90874703"
 
 指定下列項目以 `class` 或 `struct` 宣告方法：
 
-- 選擇性的存取層級，例如 `public` 或 `private`。 預設值為 `private`。
+- 選擇性的存取層級，例如 `public` 或 `private`。 預設為 `private`。
 - 選擇性修飾詞，例如 `abstract` 或 `sealed`。
 - 傳回值，或如果方法為無，則為 `void`。
 - 方法名稱。
@@ -198,7 +198,7 @@ public (string, string, string, int) GetPersonalInfo(string id)
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine($"{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 在 Tuple 型別定義中也可以將名稱指派給 Tuple 項目。 下例示範使用具名項目的 `GetPersonalInfo` 方法替代版本：
@@ -215,7 +215,7 @@ public (string FName, string MName, string LName, int Age) GetPersonalInfo(strin
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine($"{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 如果方法將陣列當作引數傳遞並修改個別項目的值，方法就不需要傳回陣列，雖然您可選擇這樣做以取得良好的值樣式或功能性流程。  這是因為 C# 會以傳值方式傳遞所有的參考型別，而陣列參考的值是陣列的指標。 在下例中，以 `DoubleValues` 方法完成的 `values` 陣列內容變更，都可透過任何具有陣列參考的程式碼觀察到。

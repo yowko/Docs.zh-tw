@@ -4,12 +4,12 @@ description: 瞭解 .NET 應用程式和程式庫的目標 framework。
 ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 85bc05f07cfcc5f59a8a27790ee3d78a497cecdc
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065249"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223457"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 樣式專案中的目標 framework
 
@@ -25,7 +25,7 @@ ms.locfileid: "90065249"
 
 ## <a name="latest-versions"></a>最新版本
 
-下表定義最常用的目標 Framework、其參考方式，以及它們所實作的 [.NET Standard](net-standard.md) 版本。 這些目標 Framework 版本是最新穩定版本。 不顯示發行前版本。 目標 framework 標記 (TFM) 是標準化的標記格式，用於指定 .NET 應用程式或程式庫的目標 framework。
+下表定義最常見的目標 framework、其參考方式，以及它們所執行的 [.NET Standard](net-standard.md) 版本。 這些目標 Framework 版本是最新穩定版本。 不顯示發行前版本。 目標 framework 標記 (TFM) 是標準化的標記格式，用於指定 .NET 應用程式或程式庫的目標 framework。
 
 | 目標架構      | Latest <br/> 穩定版本 | 目標 framework 標記 (TFM)  | 已實作 <br/> .NET Standard 版本 |
 | :-: | :-: | :-: | :-: |
@@ -116,7 +116,7 @@ public class MyClass
     {
 #if NET40
         Console.WriteLine("Target framework: .NET Framework 4.0");
-#elif NET45  
+#elif NET45
         Console.WriteLine("Target framework: .NET Framework 4.5");
 #else
         Console.WriteLine("Target framework: .NET Standard 1.4");

@@ -2,12 +2,12 @@
 title: .NET 程式庫的跨平台目標設定
 description: 建立跨平台 .NET 程式庫的最佳做法建議。
 ms.date: 08/12/2019
-ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731454"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223340"
 ---
 # <a name="cross-platform-targeting"></a>跨平台目標設定
 
@@ -15,7 +15,7 @@ ms.locfileid: "76731454"
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard 是為 .NET 程式庫新增跨平台支援的最佳方式。 [.NET Standard](../net-standard.md) 是在所有 .NET 實作都可以使用的 .NET API 規格。 將目標設為 .NET Standard，您可以產生限制為使用給定 .NET Standard 版本中之 API 的程式庫，這表示它可以被實作該 .NET 版本的所有平台使用。
+.NET Standard 是為 .NET 程式庫新增跨平台支援的最佳方式。 [.NET Standard](../net-standard.md) 是在所有 .NET 實作都可以使用的 .NET API 規格。 以 .NET Standard 為目標可讓您產生受限於使用特定 .NET Standard 版本中 Api 的程式庫，這表示它可供所有執行該版本 .NET Standard 的平臺使用。
 
 ![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 
@@ -49,7 +49,7 @@ ms.locfileid: "76731454"
 
 為了保護您的取用者不必為個別架構建置，您應該努力獲得 .NET Standard 輸出，加上一或多個架構特定輸出。 使用多目標時，所有組件都會封裝在單一 NuGet 套件中。 接著，取用者可以參考相同的套件，NuGet 將挑選適當的實作。 您的 .NET Standard 程式庫會作為在任何地方使用的後援程式庫，但您的 NuGet 套件提供架構特定實作的案例除外。 多目標可讓您在程式碼中使用條件式編譯，並呼叫架構特定 API。
 
-![具有多個程式集的 NuGet 包](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "具有多個程式集的 NuGet 包")
+![具有多個元件的 NuGet 套件](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "具有多個元件的 NuGet 套件")
 
 ✔️ 考慮將 .NET 實作設為目標 (除了 .NET Standard 之外)。
 
@@ -88,7 +88,7 @@ public static class GpsLocation
 }
 ```
 
-❌如果所有目標的原始程式碼相同，則避免多目標定位以及目標 .NET 標準。
+❌ 如果您的原始程式碼對所有目標都相同，請避免多目標和目標 .NET Standard。
 
 > NuGet 將自動使用 .NET Standard 組件。 將單一 .NET 實作設為目標會增加 `*.nupkg` 大小，沒有任何好處。
 
@@ -124,5 +124,5 @@ public static class GpsLocation
 ❌請勿包含不再支援之 .NET 平台的目標。 例如，`SL4`、`WP`。
 
 >[!div class="step-by-step"]
->[上一個](get-started.md)
->[下一個](strong-naming.md)
+>[上一個](get-started.md) 
+>[下一步](strong-naming.md)

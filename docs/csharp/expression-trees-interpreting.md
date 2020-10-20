@@ -4,12 +4,12 @@ description: 了解如何撰寫程式碼來查看運算式樹狀架構的結構�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 39baf32c9c53d57227d52b9370f8165ff92d708d
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173304"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223682"
 ---
 # <a name="interpreting-expressions"></a>解譯運算式
 
@@ -516,7 +516,7 @@ The expression body is:
 
 即使最後一個範例也會識別可能的節點類型子集。
 您仍可將許多會造成失敗的運算式提供給它。
-完整的實作包含在 .NET Standard 的名稱 <xref:System.Linq.Expressions.ExpressionVisitor> 之下，並可處理所有可能的節點類型。
+完整的執行包含在 .NET Standard 的名稱底下 <xref:System.Linq.Expressions.ExpressionVisitor> ，而且可以處理所有可能的節點類型。
 
 最後，我在本文中使用的程式庫是為了示範和學習所建立。 它不會經過最佳化。 我寫了它來讓結構清楚明瞭，並強調用來流覽節點及分析該節點的技巧。 生產環境的實作會比我更注重效能。
 

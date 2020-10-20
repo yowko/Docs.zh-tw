@@ -1,21 +1,23 @@
 ---
 title: 針對 Apache Spark 的互動式環境，在 .NET 中撰寫和呼叫 Udf。
 description: 瞭解如何在 .NET 中撰寫和呼叫 Udf 來 Apache Spark 互動式 shell。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7f050b39b1d2f0e2f506c522259485d87c7a185a
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955006"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224132"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>針對 Apache Spark 互動式環境在 .NET 中撰寫和呼叫 Udf
 
 在本文中，您將瞭解如何在 .NET 中使用 (Udf) 的使用者定義函數，以 Apache Spark 互動式環境。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 1. 安裝 [.Net Interactive](https://github.com/dotnet/interactive)
 2. 安裝 [Jupyter lab](https://jupyter.org/)

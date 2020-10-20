@@ -5,12 +5,12 @@ ms.date: 10/05/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: a4a59fea3ab1a6bc93a12e3f0aa13dea726d8121
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: a4736e46eb7c25b64278bed8f2c2457002936b81
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050389"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224157"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -78,7 +78,7 @@ ms.locfileid: "92050389"
 
 .NET Standard 參考組件的主要散發工具是 NuGet 套件。 傳遞實作的方法有許多種，各自適合每種 .NET 實作。
 
-NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standard 套件是以 ".NET Standard" 架構為目標。 您可以使用 `netstandard` [compact TFM](frameworks.md) (以 .NET Standard framework 為目標，例如 `netstandard1.4`) 。 要在多個 .NET 上執行的程式庫應以此架構為目標。 對大多數的 API 來說，會以 `netstandard2.0` 為目標，因為提供的 API 數目，超過 .NET Standard 1.6 與 2.0 之間的一倍。
+NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standard 套件以 ".NET Standard" 架構為目標。 您可以使用 `netstandard` [compact TFM](frameworks.md) (以 .NET Standard framework 為目標，例如 `netstandard1.4`) 。 要在多個 .NET 上執行的程式庫應以此架構為目標。 對大多數的 API 來說，會以 `netstandard2.0` 為目標，因為提供的 API 數目，超過 .NET Standard 1.6 與 2.0 之間的一倍。
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/)中繼套件會參考定義 .NET Standard 的一組完整 NuGet 套件。  若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 它描述大約 40 種定義 .NET Standard 的 .NET 程式庫和相關 API，並提供其存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。
 

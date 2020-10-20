@@ -21,11 +21,11 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399641"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223516"
 ---
 # <a name="built-in-reference-types-c-reference"></a>內建參考型別 (C# 參考)
 
@@ -33,7 +33,7 @@ C# 有數種內建參考型別。 它們具有關鍵字或運算子，是 .NET �
 
 ## <a name="the-object-type"></a>物件型別
 
-`object` 類型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的別名。 在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object?displayProperty=nameWithType>。 您可以將任何型別的值指派給 `object` 型別的變數。 任何 `object` 變數都可以使用常值 `null` 指派給其預設值。 當實值型別的變數轉換成物件時，即稱之為 *Boxed*。 當類型的`object`變數轉換為數值型別時，它被稱為*解箱*。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../programming-guide/types/boxing-and-unboxing.md)。
+`object` 類型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的別名。 在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object?displayProperty=nameWithType>。 您可以將任何型別的值指派給 `object` 型別的變數。 任何 `object` 變數都可以使用常值 `null` 指派給其預設值。 當實值型別的變數轉換成物件時，即稱之為 *Boxed*。 當型別的變數轉換成實 `object` 值型別時，就表示它是取消 *裝箱*。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../programming-guide/types/boxing-and-unboxing.md)。
 
 ## <a name="the-string-type"></a>字串型別
 
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-`[]`[運算子](../operators/member-access-operators.md#indexer-operator-)可用於對字串的單個字元的唯讀訪問。 有效的索引值從`0`開始，並且必須小於字串的長度：
+`[]`[運算子](../operators/member-access-operators.md#indexer-operator-)可用於唯讀存取字串的個別字元。 有效的索引值從開始 `0` ，而且必須小於字串的長度：
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-同樣，`[]`運算子還可用於反覆運算字串中的每個字元：
+以類似的方式， `[]` 運算子也可以用來逐一查看字串中的每個字元：
 
 ```csharp-interactive
 string str = "test";
@@ -148,7 +148,7 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
-<xref:System.Console.WriteLine%2A> 陳述式會顯示執行階段類型 `dyn` 和 `obj`。 此時，兩者都有相同的類型：整數。 會產生下列輸出：
+<xref:System.Console.WriteLine%2A> 陳述式會顯示執行階段類型 `dyn` 和 `obj`。 此時，兩者都有相同的類型：整數。 此時會產生下列輸出：
 
 ```console
 System.Int32
@@ -170,15 +170,15 @@ obj = obj + 3;
 
 ### <a name="see-also"></a>另請參閱
 
-- [C# 參考](../index.md)
-- [C# 關鍵字](../keywords/index.md)
+- [C # 參考](../index.md)
+- [C # 關鍵字](../keywords/index.md)
 - [事件](../../programming-guide/events/index.md)
-- [使用動態型別](../../programming-guide/types/using-type-dynamic.md)
-- [使用字串的最佳做法](../../../standard/base-types/best-practices-strings.md)
-- [基本字串作業](../../../standard/base-types/basic-string-operations.md)
+- [使用動態類型](../../programming-guide/types/using-type-dynamic.md)
+- [使用字串的最佳作法](../../../standard/base-types/best-practices-strings.md)
+- [基底字元串作業](../../../standard/base-types/basic-string-operations.md)
 - [建立新字串](../../../standard/base-types/creating-new.md)
 - [型別測試和轉換運算子](../operators/type-testing-and-cast.md)
-- [如何使用模式匹配和作為 和 運算子安全地強制轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [如何使用模式比對、as 和 as 運算子，安全地進行轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [逐步解說：建立和使用動態物件](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.String?displayProperty=nameWithType>

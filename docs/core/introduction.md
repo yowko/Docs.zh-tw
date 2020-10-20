@@ -4,12 +4,12 @@ description: 深入瞭解 .NET 這項免費的開放原始碼開發平臺，可�
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0539519c2e1dd429983226065e8508ac148e25a8
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877557"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223587"
 ---
 # <a name="introduction-to-net"></a>.NET 簡介
 
@@ -78,7 +78,7 @@ Microsoft 的 .NET 二進位散發套件是在 Azure 中 Microsoft 維護的伺�
 
 .NET 提供您選擇的語言、整合式開發環境 (Ide) 和其他工具。
 
-### <a name="programming-languages"></a>程式設計語言
+### <a name="programming-languages"></a>程式語言
 
 .NET 支援三種程式設計語言：
 
@@ -98,7 +98,7 @@ Microsoft 的 .NET 二進位散發套件是在 Azure 中 Microsoft 維護的伺�
 
 * [型別安全](../standard/base-types/common-type-system.md)
 * 型別推斷- [c #](../csharp/programming-guide/types/index.md#specifying-types-in-variable-declarations)、 [F #](../fsharp/language-reference/type-inference.md)、 [Visual Basic](../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-* [泛型類型](../standard/generics.md)
+* [泛型型別](../standard/generics.md)
 * [委派](../standard/delegates-lambdas.md)
 * [Lambda](../standard/delegates-lambdas.md)
 * [事件](../standard/events/index.md)
@@ -116,7 +116,7 @@ Microsoft 的 .NET 二進位散發套件是在 Azure 中 Microsoft 維護的伺�
 
   只能在 Windows 上執行。 具有廣泛的內建功能，其設計目的是使用 .NET。 所有學生、開放原始碼參與者及個人均可免費取得此社區版。
 
-* [Visual Studio Code](https://code.visualstudio.com/) \(英文\)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
   在 Windows、macOS 和 Linux 上執行。 免費且開放的原始碼。 擴充功能可搭配 .NET 語言使用。
 
@@ -320,7 +320,7 @@ Entity Framework (EF) Core 是一個 [開放原始](https://github.com/aspnet/En
 
 這篇文章是關於 .NET 5，但 .NET 5 的大部分檔仍有 ".NET Core" 或 ".NET Framework" 的參考。 此外，"Core" 會保留在名稱 [ASP.NET Core](/aspnet/core/) 和 [Entity Framework Core](/ef/core/)。
 
-檔也會參考 .NET Standard。 [.NET Standard](../standard/net-standard.md)是一種 API 規格，可讓您開發適用于多個 .net 的類別庫。
+檔也會參考 .NET Standard。 [.NET Standard](../standard/net-standard.md) 是一種 API 規格，可讓您開發適用于多個 .net 的類別庫。
 
 如需詳細資訊，請參閱 [.net 架構元件](../standard/components.md)。
 
@@ -328,7 +328,7 @@ Entity Framework (EF) Core 是一個 [開放原始](https://github.com/aspnet/En
 
 適用于 .NET 的部分術語可能會造成混淆，因為相同的單字在不同的內容中使用不同的方式。 以下是一些比較顯著的實例：
 
-* **執行階段**
+* **運行**
 
   |Context  |「執行時間」表示 |
   |---------|---------|
@@ -344,7 +344,7 @@ Entity Framework (EF) Core 是一個 [開放原始](https://github.com/aspnet/En
   | Target Framework - 目標 Framework | .NET 應用程式或程式庫依賴的 API 集合。 範例： .NET Core 3.1、.NET Standard 2。0 |
   | Target Framework Moniker (TFM)  | TFM 是標準化的權杖格式，用於指定 .NET 應用程式或程式庫的目標 framework。 範例： `net462` 適用于 .NET Framework 4.6.2。 |
   | 與 framework 相依的應用程式 | 只能在您從 [.net 下載頁面](https://dotnet.microsoft.com/download/dotnet-core)安裝執行時間的電腦上執行的應用程式。 此使用方式中的「架構」與您從 .NET 下載頁面下載的「執行時間」相同。 |
-  
+
 * **SDK**
 
   |Context  | "SDK" 意義 |

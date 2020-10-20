@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: e2fd0237556f877af64708674f00e9efddf95869
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209639"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224264"
 ---
 # <a name="net-class-libraries"></a>.NET 類別庫
 
@@ -34,7 +34,7 @@ ms.locfileid: "83209639"
 
 多個 .NET 實作支援可攜式程式庫。 它們仍然可以依賴已知的執行環境，不過，環境是一組實體 .NET 實作為交集所產生的綜合專案。 公開的 Api 和平臺假設是平臺特定程式庫可使用之功能的子集。
 
-當您建立可攜式程式庫時，可以選擇平台組態。 平臺設定是您需要支援的一組平臺（例如，.NET Framework 4.5 +，Windows Phone 8.0 +）。 您選擇的平台越多，可以進行的 API 和平台假設就越少 (即最小公分母)。 這項特性一開始可能會令人混淆，因為人們通常認為「更多越好」，但發現更多支援的平臺會導致較少的可用 Api。
+當您建立可攜式程式庫時，可以選擇平台組態。 平臺設定是一組您需要支援的平臺 (例如 .NET Framework 4.5 +、Windows Phone 8.0 +) 。 您選擇的平台越多，可以進行的 API 和平台假設就越少 (即最小公分母)。 這項特性一開始可能會令人困惑，因為人們通常認為「更好的」，但發現更支援的平臺會產生較少的可用 Api。
 
 許多程式庫開發人員已從透過一個來源產生多個平台特定程式庫 (使用條件式編譯指示詞) 切換到可攜式程式庫。 有[數種方式](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)，可以使用目前最廣泛接受的 bait-and-switch 技術來存取可攜式程式庫內的平台特定功能。
 
@@ -42,9 +42,9 @@ ms.locfileid: "83209639"
 
 .NET Standard 程式庫可以取代平台特定和可攜式程式庫概念。 就它們可以公開基礎平台 (沒有綜合平台或平台交集) 的所有功能這點而言，它們是平台特定的。 就它們可以在所有支援的平台上運作這點而言，它們是可攜式。
 
-.NET Standard 公開一組程式庫「協定」__。 .NET 實作必須完整支援或根本不支援每個協定。 因此，每個實作都支援一組 .NET Standard 協定。 必然結果是支援協定相依性的平台上支援每個 .NET Standard 類別庫。
+.NET Standard 會公開一組程式庫 _合約_。 .NET 實作必須完整支援或根本不支援每個協定。 因此，每個實作都支援一組 .NET Standard 協定。 必然結果是支援協定相依性的平台上支援每個 .NET Standard 類別庫。
 
-.NET Standard 不會公開 .NET Framework 的整個功能 (也不會公開目標)，不過公開的 API 數目會多於可攜式類別庫。 一段時間之後，就會新增更多 API。
+.NET Standard 不會公開 .NET Framework 的整個功能 (也不會) 目標，不過它們會公開比便攜類別庫更多的 Api。 一段時間之後，就會新增更多 API。
 
 下列平台支援 .NET Standard 類別庫：
 
@@ -61,4 +61,4 @@ ms.locfileid: "83209639"
 
 ## <a name="mono-class-libraries"></a>Mono 類別庫
 
-Mono 支援類別庫，包括上述三種類型的程式庫。 Mono 經常被視為 .NET Framework 的跨平臺執行。 在某種程度上，原因是平台特定 .NET Framework 程式庫可以在 Mono 執行階段上執行，而不需要進行修改或重新編譯。 在建立可攜式類別庫之前就具有這項特性，因此是啟用 .NET Framework 與 Mono 之間的二進位可攜性的明確選擇 (雖然只作用於一個方向)。
+Mono 支援類別庫，包括上述三種類型的程式庫。 通常會看到 Mono (正確) 為 .NET Framework 的跨平臺執行。 在某種程度上，原因是平台特定 .NET Framework 程式庫可以在 Mono 執行階段上執行，而不需要進行修改或重新編譯。 在建立可攜式類別庫之前就具有這項特性，因此是啟用 .NET Framework 與 Mono 之間的二進位可攜性的明確選擇 (雖然只作用於一個方向)。

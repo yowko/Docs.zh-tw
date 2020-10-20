@@ -16,17 +16,20 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: b5c32afb26c7b4bf7f8585c43ac11e57ebb5d015
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554862"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224353"
 ---
 # <a name="code-access-security"></a>程式碼存取安全性
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
-  
+
+> [!NOTE]
+> 因為代碼啟用安全性已淘汰，所以 .NET 生態系統內的大部分新式程式碼都不是設計成在部分信任環境中運作。 依賴 CAS 的應用程式不應該預期新式程式庫在這些環境內都能正確運作，除非程式庫開發人員已採取明確的步驟來確保 CAS 沙箱中的相容性。  
+
  現今高度連接的電腦系統，經常會暴露於源自各種可能未知來源的程式碼。 程式碼可以附加至電子郵件，包含在檔中，或透過網際網路下載。 不幸的是，許多電腦使用者都直接經歷過惡意行動程式碼的效應，包括病毒和蠕蟲，它們可能會損壞或摧毀資料，並造成時間和金錢上的損失。  
   
  最常見的安全性機制會根據使用者的認證來授與使用者權限 (通常是密碼) ，而且會 (通常是允許使用者存取的目錄和檔案) 的資源。 不過，這個方法無法解決幾個問題：使用者從許多來源取得程式碼，其中有些可能不可靠；程式碼可能包含 Bug 或安全性弱點，而被惡意程式碼利用；而程式碼有時會做使用者不知道它會做的事情。 如此一來，當謹慎且值得信賴的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。 大部分的作業系統安全性機制都要求每段程式碼都必須受信任才能執行，但網頁上可能會有腳本。 因此，還是需要可廣泛套用的安全性機制，讓源自於一部電腦系統的程式碼，在另一個系統上執行時可以受到保護，即使系統之間沒有信任關係也一樣。  
@@ -63,7 +66,7 @@ ms.locfileid: "90554862"
 <a name="related_topics"></a>
 ## <a name="related-articles"></a>相關文章
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[程式碼存取安全性的基本概念](code-access-security-basics.md)|說明程式碼存取安全性及其最常見的用法。|  
 |[安全性透明的程式碼，層級 2](security-transparent-code-level-2.md)|描述 .NET Framework 4 中的安全性透明度模型。|  

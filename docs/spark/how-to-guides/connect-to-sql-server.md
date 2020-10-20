@@ -1,15 +1,17 @@
 ---
 title: 將適用于 Apache Spark 的 .NET 連接至 SQL Server
 description: 瞭解如何從 .NET for Apache Spark 應用程式連接至 SQL Server 實例。
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 773e743a67c066438cb86d983ebfa34f73692c2d
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877839"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224023"
 ---
 # <a name="connect-net-for-apache-spark-to-sql-server"></a>將適用于 Apache Spark 的 .NET 連接至 SQL Server
 

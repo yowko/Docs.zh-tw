@@ -3,11 +3,11 @@ title: 中斷性變更與 .NET 程式庫
 description: 建立 .NET 程式庫時巡覽中斷性變更的最佳做法建議。
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400418"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223327"
 ---
 # <a name="breaking-changes"></a>重大變更
 
@@ -64,7 +64,7 @@ public class Task
 
 二進位中斷性變更也可能會中斷**整個組件**。 使用 `AssemblyName` 重新命名組件，或是新增、移除或變更組件的強式命名金鑰，則會變更組件的身分識別。 變更組件的身分識別會中斷所有使用它的編譯程式碼。
 
-❌不要更改程式集名稱。
+❌ 請勿變更元件名稱。
 
 ❌請勿新增、移除或變更強式命名金鑰。
 
@@ -100,7 +100,7 @@ public class Document
 
 - [適用於 C# 開發人員的版本和更新考量](../../csharp/whats-new/version-update-considerations.md)
 - [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (.NET 中 API 中斷性變更的完整指南)
-- [.NET 突破更改規則](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
+- [.NET 重大變更規則](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
->[上一步](versioning.md)
+>[[上一步]](versioning.md)
