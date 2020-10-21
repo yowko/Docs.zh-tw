@@ -1,15 +1,15 @@
 ---
 title: 區域函式 - C# 程式設計手冊
 description: 'C # 中的區域函式是在另一個成員中嵌套的私用方法，可從其包含成員中呼叫。'
-ms.date: 10/09/2020
+ms.date: 10/16/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: a2d389c8b1c687dc4885004fcdc33e0ed7ada977
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 75accda2e40443073274ece4d8964c13a0945dad
+ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955677"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92332896"
 ---
 # <a name="local-functions-c-programming-guide"></a>區域函式 (C# 程式設計手冊)
 
@@ -86,21 +86,39 @@ ms.locfileid: "91955677"
 
 第一眼，區域函式和 [Lambda 運算式](../../language-reference/operators/lambda-expressions.md)十分類似。 在許多情況下，選擇使用 Lambda 運算式或區域函式與樣式和個人喜好設定相關。 不過，您應該注意可使用任一選項的實際差異。
 
-讓我們檢查階乘演算法的區域函式與 Lambda 運算式實作差異。 首先是使用區域函式的版本：
+讓我們檢查階乘演算法的區域函式與 Lambda 運算式實作差異。 以下是使用區域函式的版本：
 
 :::code language="csharp" source="snippets/local-functions/Program.cs" id="FactorialWithLocal" :::
 
-針對使用 Lambda 運算式的實作版本進行對比：
+此版本會使用 lambda 運算式：
 
 :::code language="csharp" source="snippets/local-functions/Program.cs" id="FactorialWithLambda" :::
 
-區域函式具有名稱。 Lambda 運算式是指派給 `Func` 或 `Action` 類型變數的匿名方法。 當您宣告區域函式時，引數類型和傳回型別是函式宣告的一部分。 引數類型和傳回型別是 Lambda 運算式之變數型別宣告的一部分，而不是 Lambda 運算式主體的一部分。 這兩個差異可能會導致更清楚的程式碼。
+### <a name="naming"></a>命名
 
-區域函式的明確指派規則與 Lambda 運算式不同。 您可以從所在範圍的任何程式碼位置參考區域函式宣告。 必須先將 lambda 運算式指派給委派變數，才能存取 (或透過參考 lambda 運算式) 的委派呼叫。 請注意，使用 lambda 運算式的版本必須在定義 lambda 運算式之前，先將其宣告和初始化 `nthFactorial` 。 如果沒有這麼做的話，系統會在指派 `nthFactorial` 之前就加以參考，而導致編譯時期錯誤。 這些差異表示使用區域函式時，您可以更輕鬆地建立遞迴演算法。 您可以宣告並定義呼叫其本身的區域函式。 Lambda 運算式必須加以宣告並指派預設值，才可以重新指派給參考相同 Lambda 運算式的主體。
+區域函式的明確命名方式就像方法一樣。 Lambda 運算式是匿名方法，而且需要指派給類型的變數 `delegate` ，通常是 `Action` 或 `Func` 類型。 當您宣告區域函式時，此程式就像是撰寫一般方法;您可以宣告傳回型別和函式簽章。
 
-明確指派規則也會影響區域函式或 Lambda 運算式所擷取的任何變數。 區域函式和 Lambda 運算式規則都要求在將區域函式或 Lambda 運算式轉換成委派時，明確指派任何擷取的變數。 差別在於 Lambda 運算式會在宣告時會轉換成委派。 區域函式只會在用作委派時，才會轉換成委派。 如果您宣告區域函式，並只透過類似方法的呼叫方式來參考它，則不會轉換成委派。 該規則可讓您在區域函式之封入範圍內的任何便利位置宣告區域函式。 通常會在父方法結尾的任何傳回陳述式之後宣告區域函式。
+### <a name="function-signatures-and-lambda-expression-types"></a>函數簽章和 lambda 運算式類型
 
-第三，編譯器可以執行靜態分析，讓區域函式明確指派封入範圍內所擷取的變數。 請考慮此範例：
+Lambda 運算式依賴 `Action` / `Func` 它們所指派的變數類型來決定引數和傳回型別。 在區域函式中，因為語法很像是撰寫一般方法，所以引數型別和傳回型別都已經是函式宣告的一部分。
+
+### <a name="definite-assignment"></a>明確指派
+
+Lambda 運算式是在執行時間宣告和指派的物件。 若要使用 lambda 運算式，必須明確指派它：將指派給它的 `Action` / `Func` 變數必須宣告，並且指派 lambda 運算式。 請注意，在 `LambdaFactorial` 定義 lambda 運算式之前，必須先將其宣告和初始化 `nthFactorial` 。 如果沒有這麼做的話，系統會在指派 `nthFactorial` 之前就加以參考，而導致編譯時期錯誤。
+
+區域函數是在編譯時期定義。 因為它們不會指派給變數，所以可以從 **其範圍**內的任何程式碼位置參考這些變數。在第一個範例中 `LocalFunctionFactorial` ，我們可以在語句的上方或下方宣告我們的區域函式 `return` ，而不會觸發任何編譯器錯誤。
+
+這些差異表示使用區域函式時，您可以更輕鬆地建立遞迴演算法。 您可以宣告並定義呼叫其本身的區域函式。 Lambda 運算式必須加以宣告並指派預設值，才可以重新指派給參考相同 Lambda 運算式的主體。
+
+### <a name="implementation-as-a-delegate"></a>以委派的形式執行
+
+Lambda 運算式在宣告時，會轉換為委派。 區域函式更有彈性，因為它們可以像傳統方法 *或* 委派一樣撰寫。 區域函式只 ***會在當做委派時轉換*** 為委派。
+
+如果您宣告區域函式，並只透過類似方法的呼叫方式來參考它，則不會轉換成委派。
+
+### <a name="variable-capture"></a>變數捕捉
+
+[明確指派](../../../../_csharplang/spec/variables.md#definite-assignment)的規則也會影響區域函數或 lambda 運算式所捕捉的任何變數。 編譯器可以執行靜態分析，讓區域函式在封閉範圍中絕對指派已捕捉的變數。 請考慮此範例：
 
 ```csharp
 int M()
@@ -115,7 +133,11 @@ int M()
 
 編譯器可判斷 `LocalFunction` 是否在呼叫時明確指派 `y`。 由於 `LocalFunction` 是在 `return` 陳述式之前呼叫，因此會在 `return` 陳述式明確指派 `y`。
 
-啟用範例分析的分析允許第四點差異。 根據其使用方式，區域函式可避免 Lambda 運算式一律需要的堆積配置。 如果區域函式永遠不會轉換成委派，而且區域函式所擷取的變數無法由其他 Lambda 或轉換成委派的區域函式擷取，則編譯器可以避免堆積配置。
+請注意，當區域函式捕捉到封閉範圍中的變數時，區域函式會實作為委派型別。
+
+### <a name="heap-allocations"></a>堆積配置
+
+根據其使用方式，區域函式可避免 Lambda 運算式一律需要的堆積配置。 如果區域函式永遠不會轉換成委派，而且區域函數所捕捉的任何變數都不是由轉換成委派的其他 lambda 或區域函數所捕捉，則編譯器可以避免堆積配置。
 
 請考慮使用以下非同步範例：
 
@@ -125,15 +147,23 @@ int M()
 
 Lambda 運算式所需的具現化代表額外的記憶體配置，這可能會在具時效性的程式碼路徑中成為影響效能的因素。 區域函式不會造成這項額外負荷。 在上述範例中，區域函式版本的配置比 lambda 運算式版本少兩倍。
 
+如果您知道您的本機函式將不會轉換成委派，而且任何由轉換成委派的 lambda 或區域函式不會捕捉它所捕捉的任何變數，您可以保證您的區域函式會將它宣告為區域函式，以避免在堆積上進行配置 `static` 。 請注意，這項功能會在 c # 8.0 和更新版本中提供。
+
 > [!NOTE]
 > 這個方法的對等區域函式也會使用關閉的類別。 不論區域函式的關閉實作為 `class` 還是 `struct` 都是實作詳細資料。 區域函式可以使用 `struct`，而 Lambda 一律會使用 `class`。
 
 :::code language="csharp" source="snippets/local-functions/Program.cs" id="AsyncWithLocal" :::
 
-此範例中未示範的最後一個優點，在於可以使用 `yield return` 語法來產生一連串的值，以將區域函式實作為迭代器。 Lambda 運算式中不可以有 `yield return` 陳述式。
+### <a name="usage-of-the-yield-keyword"></a>關鍵字的用法 `yield`
+
+此範例中未示範的最後一個優點，在於可以使用 `yield return` 語法來產生一連串的值，以將區域函式實作為迭代器。
+
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="YieldReturn" :::
+
+`yield return`Lambda 運算式中不允許使用語句，請參閱[編譯器錯誤 CS1621](../../misc/cs1621.md)。
 
 雖然區域函式與 Lambda 運算式看似相同，但它們實際上有不同的用途與用法。 如果您要撰寫的函式只會從其他方法的內容進行呼叫時，使用區域函式會更有效率。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [方法](methods.md)

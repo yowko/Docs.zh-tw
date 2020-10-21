@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 85488de561a2298f2ff4009ec78b9a6e294053f3
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: ee67b32b093ebd42f8ac685b34b12f2f6833be86
+ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598170"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92332913"
 ---
 ### <a name="threadabort-is-obsolete"></a>執行緒。中止已淘汰
 
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>Api 已淘汰。 如果呼叫這些方法，以 .NET 5.0 或更新版本為目標的專案將會遇到編譯時間警告。 如果您隱藏了警告， <xref:System.PlatformNotSupportedException> 將會在執行時間擲回。
+<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>Api 已淘汰。 如果呼叫這些方法，以 .NET 5.0 或更新版本為目標的專案將會遇到編譯時間警告 `SYSLIB0006` 。
 
 #### <a name="change-description"></a>變更描述
 
