@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2c8a5c1ec87918a91600a3557c679a42cae74896
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: d9526055041f036958699aa935aa6cfef494b520
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556321"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434923"
 ---
 ### <a name="principalpermissionattribute-is-obsolete-as-error"></a>PrincipalPermissionAttribute 已淘汰為錯誤
 
@@ -34,7 +34,7 @@ public void MyMethod()
 
 5.0 Preview 7
 
-#### <a name="recommended-action"></a>建議的動作
+#### <a name=""></a><a id="permission-action">建議的動作</a>
 
 如果您遇到 obsoletion 錯誤，您必須採取動作。
 

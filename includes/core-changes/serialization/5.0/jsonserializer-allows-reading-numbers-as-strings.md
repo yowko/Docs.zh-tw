@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0dfe04ba1313480f15a8e7a7e26da613799180b2
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a93856aac97af5c392a2e4698d2da42413cfc3c8
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92332873"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434992"
 ---
 ### <a name="aspnet-core-apps-allow-deserializing-quoted-numbers"></a>ASP.NET Core apps 允許將引號數位還原序列化
 
@@ -20,7 +20,7 @@ ms.locfileid: "92332873"
 >
 > - 預設的獨立或沒有任何行為變更 <xref:System.Text.Json.JsonSerializer> <xref:System.Text.Json.JsonSerializerOptions> 。
 > - 這在技術上並不是一項重大變更，因為它會讓案例更寬鬆，而不是更嚴格的 (也就是說，它會成功從 JSON 字串強制執行一個數位，而不是擲回例外狀況) 。 不過，由於這是影響許多 ASP.NET Core 應用程式的重大行為變更，因此會記載于此處。
-> - <xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A>和 <xref:System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsync%2A> 擴充方法也會使用 <xref:System.Text.Json.JsonSerializerDefaults.Web> 一組序列化選項。
+> - <xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A?displayProperty=nameWithType>和 <xref:System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsync%2A?displayProperty=nameWithType> 擴充方法也會使用 <xref:System.Text.Json.JsonSerializerDefaults.Web> 一組序列化選項。
 
 #### <a name="version-introduced"></a>引進的版本
 

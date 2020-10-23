@@ -2,12 +2,12 @@
 title: 基礎類別庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 07/27/2020
-ms.openlocfilehash: 35192ae078c6025b9b399d6638ea8b4f426aceda
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 900fd4e0e071f19aa286dec84632006870822f26
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92332915"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434955"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -17,6 +17,9 @@ ms.locfileid: "92332915"
 
 | 重大變更 | 引進的版本 |
 | - | :-: |
+| [全域組件快取 Api 已淘汰](#global-assembly-cache-apis-are-obsolete) | 5.0 |
+| [遠端 Api 已淘汰](#remoting-apis-are-obsolete) | 5.0 |
+| [大部分的代碼啟用安全性 Api 已淘汰](#most-code-access-security-apis-are-obsolete) | 5.0 |
 | [使用非預設診斷識別碼的 API obsoletions](#api-obsoletions-with-non-default-diagnostic-ids) | 5.0 |
 | [FrameworkDescription 的值是 .NET 而不是 .NET Core](#frameworkdescriptions-value-is-net-instead-of-net-core) | 5.0 |
 | [單一檔案發佈格式的元件相關 API 行為變更](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
@@ -60,13 +63,25 @@ ms.locfileid: "92332915"
 
 ## <a name="net-50"></a>.NET 5。0
 
-[!INCLUDE [obsolete-apis-with-custom-diagnostics](../../../includes/core-changes/corefx/5.0/obsolete-apis-with-custom-diagnostics.md)]
+[!INCLUDE [remoting-apis-obsolete](../../../includes/core-changes/corefx/5.0/remoting-apis-obsolete.md)]
 
 ***
 
-[!INCLUDE [frameworkdescription-returns-net-not-net-core](../../../includes/core-changes/corefx/5.0/frameworkdescription-returns-net-not-net-core.md)]
+[!INCLUDE [globalassemblycache-property-obsolete](../../../includes/core-changes/corefx/5.0/global-assembly-cache-apis-obsolete.md)]
 
 **_
+
+[!INCLUDE [code-access-security-apis-obsolete](../../../includes/core-changes/corefx/5.0/code-access-security-apis-obsolete.md)]
+
+_*_
+
+[!INCLUDE [obsolete-apis-with-custom-diagnostics](../../../includes/core-changes/corefx/5.0/obsolete-apis-with-custom-diagnostics.md)]
+
+_*_
+
+[!INCLUDE [frameworkdescription-returns-net-not-net-core](../../../includes/core-changes/corefx/5.0/frameworkdescription-returns-net-not-net-core.md)]
+
+_*_
 
 [!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
 
