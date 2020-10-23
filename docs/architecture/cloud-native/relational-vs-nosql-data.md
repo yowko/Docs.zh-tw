@@ -3,12 +3,12 @@ title: 關聯式與NoSQL 資料
 description: 瞭解雲端原生應用程式中的關聯式和 NoSQL 資料
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: 6e7725c2d67452218d1c6bda89c2fec6aa4a2b96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 11db5cdca06b9c2c8ce12598456c4b147ac379ba
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163631"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434865"
 ---
 # <a name="relational-vs-nosql-data"></a>關聯式與NoSQL 資料
 
@@ -30,7 +30,7 @@ NoSQL 資料庫包含數種不同的模型來存取和管理資料，每個都�
 | :-------- | :-------- |
 | 文件存放區 | 資料和中繼資料會以階層方式儲存在資料庫內以 JSON 為基礎的檔中。 |
 | 機碼值存放區 | NoSQL 資料庫最簡單的資料會以索引鍵/值組的集合表示。 |
-| 寬資料行存放區 | 相關資料會以一組嵌套索引鍵/值組的形式儲存在單一資料行中。 |
+| Wide-Column 存放區 | 相關資料會以一組嵌套索引鍵/值組的形式儲存在單一資料行中。 |
 | 圖形存放區 | 資料會以節點、邊緣和資料屬性的形式儲存在圖形結構中。 |
 
 ## <a name="the-cap-theorem"></a>端點定理
@@ -65,7 +65,7 @@ NoSQL 資料庫通常會支援高可用性和資料分割容錯。 它們會水�
 
 高可用性和大規模的擴充性對於企業來說，通常比強式一致性更為重要。 開發人員可以實行 Sagas 故事、CQRS 和非同步訊息等技術與模式，以採用最終一致性。
 
-> 現今，conidering CAP 定理條件約束時必須小心。 有一種新的資料庫類型，稱為 NewSQL，它會擴充關係資料庫引擎，以同時支援 NoSQL 系統的水準擴充性和可調整的效能。
+> 現今，在考慮 CAP 定理條件約束時必須小心。 有一種新的資料庫類型，稱為 NewSQL，它會擴充關係資料庫引擎，以同時支援 NoSQL 系統的水準擴充性和可調整的效能。
 
 ## <a name="considerations-for-relational-vs-nosql-systems"></a>關聯式與 NoSQL 系統的考慮
 
@@ -131,7 +131,7 @@ NoSQL 資料庫通常會支援高可用性和資料分割容錯。 它們會水�
 
 ### <a name="azure-database-for-mysql"></a>適用於 MySQL 的 Azure 資料庫
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL)  是開放原始碼關係資料庫，也是以[燈泡軟體堆疊](https://en.wikipedia.org/wiki/LAMP_(software_bundle))為基礎的應用程式要件。 廣泛為大量 *讀取* 的工作負載選擇，包括 Facebook、Twitter 和 YouTube 在內的許多大型組織都會使用它。 您可以免費使用該社區版，而 enterprise edition 則需要購買授權。 此產品最初是在1995中建立的，在2008中是由 Sun Microsystems 購買。 Oracle 在2010中取得 Sun 和 MySQL。
+[MySQL](https://en.wikipedia.org/wiki/MySQL) 是開放原始碼關係資料庫，也是以 [燈泡軟體堆疊](https://en.wikipedia.org/wiki/LAMP_(software_bundle))為基礎的應用程式要件。 廣泛為大量 *讀取* 的工作負載選擇，包括 Facebook、Twitter 和 YouTube 在內的許多大型組織都會使用它。 您可以免費使用該社區版，而 enterprise edition 則需要購買授權。 此產品最初是在1995中建立的，在2008中是由 Sun Microsystems 購買。 Oracle 在2010中取得 Sun 和 MySQL。
 
 [適用於 MySQL 的 Azure 資料庫](https://azure.microsoft.com/services/mysql/) 是以開放原始碼 MySQL 伺服器引擎為基礎的受控關係資料庫服務。 它會使用 MySQL 的社區版。 Azure MySQL 伺服器是服務的管理點。 它與用於內部部署的 MySQL 伺服器引擎相同。 引擎可以針對每個伺服器建立單一資料庫，或為每個共用資源的伺服器建立多個資料庫。 您可以繼續使用相同的開放原始碼工具來管理資料，而不需要學習新技能或管理虛擬機器。
 
@@ -207,7 +207,7 @@ Cosmos DB 支援全域層級的 [主動/主動](https://kemptechnologies.com/whi
 |  | Azure 表格儲存體  | Azure Cosmos DB  |
 | :-------- | :-------- |:-------- |
 | Latency | 快速 | 在世界各地讀取和寫入的一位數毫秒延遲 |
-| Throughput | 每個資料表的20000作業限制 | 每個資料表10000000個作業 |
+| 輸送量 | 每個資料表的20000作業限制 | 每個資料表10000000個作業 |
 | 全域散發 | 具有選擇性單一次要讀取區域的單一區域 | 具有自動容錯移轉的所有區域的通行分佈 |
 | 編製索引 | 僅適用于分割區和資料列索引鍵屬性 | 自動編制所有屬性的索引 |
 | 定價 | 以儲存體為基礎 | 根據輸送量 |
@@ -258,7 +258,7 @@ Cosmos DB 會在內部自動管理實體分割區上的 [邏輯](/azure/cosmos-d
 
 ## <a name="newsql-databases"></a>NewSQL 資料庫
 
-*NewSQL*  是一種新興的資料庫技術，將 NoSQL 的分散式擴充性與關係資料庫的 ACID 保證結合在一起。 NewSQL 資料庫對於必須跨分散式環境處理大量資料的商務系統而言很重要，並具備完整的交易式支援和 ACID 合規性。 雖然 NoSQL 資料庫可提供大規模的擴充性，但不保證資料的一致性。 不一致資料的間歇性問題可能會對開發小組造成負擔。 開發人員必須在其微服務程式代碼中設計防護措施，以管理不一致資料所造成的問題。
+*NewSQL* 是一種新興的資料庫技術，將 NoSQL 的分散式擴充性與關係資料庫的 ACID 保證結合在一起。 NewSQL 資料庫對於必須跨分散式環境處理大量資料的商務系統而言很重要，並具備完整的交易式支援和 ACID 合規性。 雖然 NoSQL 資料庫可提供大規模的擴充性，但不保證資料的一致性。 不一致資料的間歇性問題可能會對開發小組造成負擔。 開發人員必須在其微服務程式代碼中設計防護措施，以管理不一致資料所造成的問題。
 
 雲端原生運算基礎 (CNCF) 提供數個 NewSQL 資料庫專案的功能。
 
@@ -279,7 +279,7 @@ Kubernetes 會使用 *服務結構* ，以允許用戶端從單一 DNS 專案定
 
 在此案例中，所有資料庫實例都相等。 沒有主要或次要關聯性。 在 CockroachDB 中找到的 *共識* 複寫之類的技術，可讓任何資料庫節點處理任何要求。 如果接收負載平衡要求的節點具有在本機所需的資料，則會立即回應。 如果沒有，節點就會變成閘道，並將要求轉送至適當的節點，以取得正確的答案。 從用戶端的觀點來看，每個資料庫節點都是相同的：它們會顯示為具有單一電腦系統一致性保證的單一 *邏輯* 資料庫，儘管有數十個或甚至數百個節點在幕後運作。
 
-若要深入瞭解 NewSQL 資料庫背後的機制，請參閱 [虛線： Kubernetes 原生資料庫的四個屬性](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) 一文。
+若要深入瞭解 NewSQL 資料庫背後的機制，請參閱 [虛線： Kubernetes-Native 資料庫的四個屬性](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) 文章。
 
 ## <a name="data-migration-to-the-cloud"></a>資料移轉至雲端
 

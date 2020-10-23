@@ -2,12 +2,12 @@
 title: 'C # 9.0 的新功能-c # 指南'
 description: '深入瞭解 c # 9.0 中可用的新功能。'
 ms.date: 09/04/2020
-ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 57fd5f8775f95b2588e4a7120e35d6d531be4f01
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955163"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434832"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 中的新增功能
 
@@ -34,7 +34,7 @@ C # 9.0 將下列功能和增強功能新增至 c # 語言：
 
 ## <a name="record-types"></a>記錄類型
 
-C # 9.0 引進了 ***記錄類型***，這是一種參考型別，可提供合成方法來提供相等的值語義。 依預設，記錄是不可變的。
+C # 9.0 引進了 **_記錄類型_*_，這是一種參考型別，可提供合成方法來提供相等的值語義。 依預設，記錄是不可變的。
 
 記錄類型可讓您輕鬆地在 .NET 中建立不可變的參考型別。 在過去，.NET 型別大多分類為參考型別 (包括類別和匿名型別) 和實值型別 (包括結構和元組) 。 雖然建議使用可變的實數值型別，但可變動的實值型別通常不會造成錯誤。 實值型別變數會保存值，以便在將實數值型別傳遞給方法時，對原始資料的複本進行變更。
 
@@ -86,7 +86,7 @@ C # 9.0 引進了 ***記錄類型***，這是一種參考型別，可提供合�
 "Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
 ```
 
-到目前為止所顯示的範例會使用傳統語法來宣告屬性。 有更精確的形式稱為「 ***位置記錄***」。  以下是稍早定義為位置記錄的三種記錄類型：
+到目前為止所顯示的範例會使用傳統語法來宣告屬性。 有更精確的形式稱為「 _*_位置記錄_*_」。  以下是稍早定義為位置記錄的三種記錄類型：
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
 
@@ -98,7 +98,7 @@ C # 9.0 引進了 ***記錄類型***，這是一種參考型別，可提供合�
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-最後，記錄支援 ***與-運算式***。 ***With-expression***會指示編譯器建立記錄的複本 *，但已修改指定的屬性*：
+最後，記錄支援 _*_與-運算式_*_。 _*_With-expression_*_ 會指示編譯器建立記錄的複本，但 _with * 指定的屬性已修改：
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
@@ -106,7 +106,7 @@ C # 9.0 引進了 ***記錄類型***，這是一種參考型別，可提供合�
 
 ## <a name="init-only-setters"></a>僅供初始化的 Setter
 
-***Init only setter*** 提供一致的語法來初始化物件的成員。 屬性初始化運算式可讓它清楚哪個值會設定哪個屬性。 缺點是這些屬性必須是可設定的。 從 c # 9.0 開始，您可以建立存取子， `init` 而不是 `set` 屬性和索引子的存取子。 呼叫端可以使用屬性初始化運算式語法來設定建立運算式中的這些值，但在結構完成之後，這些屬性是唯讀的。 僅限 Init 的 setter 提供視窗來變更狀態。 當建築階段結束時，該視窗就會關閉。 在所有初始化後（包括屬性初始化運算式和 with-expression），都能有效地結束結構階段。
+***Init only setter**_ 提供一致的語法來初始化物件的成員。 屬性初始化運算式可讓它清楚哪個值會設定哪個屬性。 缺點是這些屬性必須是可設定的。 從 c # 9.0 開始，您可以建立存取子， `init` 而不是 `set` 屬性和索引子的存取子。 呼叫端可以使用屬性初始化運算式語法來設定建立運算式中的這些值，但在結構完成之後，這些屬性是唯讀的。 僅限 Init 的 setter 提供視窗來變更狀態。 當建築階段結束時，該視窗就會關閉。 在所有初始化後（包括屬性初始化運算式和 with-expression），都能有效地結束結構階段。
 
 上述的位置記錄範例示範如何使用初始化 setter，以使用 with 運算式來設定屬性。 您可以在任何您撰寫的型別中宣告 init only setter。 例如，下列結構會定義氣象觀察結構：
 
@@ -127,7 +127,7 @@ now.TemperatureInCelsius = 18;
 
 ## <a name="top-level-statements"></a>最上層陳述式
 
-***最上層的語句*** 會從許多應用程式中移除不必要的繁瑣。 請考慮標準 "Hello World！" 程式：
+_*_最上層的語句_*_ 會從許多應用程式中移除不必要的繁瑣。 請考慮標準 "Hello World！" 程式：
 
 ```csharp
 using System;
@@ -164,12 +164,12 @@ System.Console.WriteLine("Hello World!");
 
 C # 9 包含新的模式比對改良功能：
 
-- ***類型模式*** 符合變數是類型
-- ***括弧模式*** 會強制執行或強調模式組合的優先順序
-- ***組成 `and` 模式*** 需要這兩個模式相符
-- ***Disjunctive `or` 模式*** 需要有兩種模式相符
-- ***否定 `not` 模式*** 要求模式不相符
-- ***關聯式模式*** 要求輸入小於、大於、小於或等於或大於或等於指定的常數。
+- _*_類型模式_*_ 符合變數是類型
+- _*_括弧模式_*_ 會強制執行或強調模式組合的優先順序
+- _*_組成 `and` 模式_*_ 需要這兩個模式相符
+- _*_Disjunctive `or` 模式_*_ 需要有兩種模式相符
+- _*_否定 `not` 模式_*_ 要求模式不相符
+- _*_關聯式模式_*_ 要求輸入小於、大於、小於或等於或大於或等於指定的常數。
 
 這些模式會擴充模式的語法。 請考慮下列範例：
 
@@ -196,7 +196,7 @@ if (e is not null)
 
 原生大小的整數 `nint` 和 `nuint` 是整數類型。 它們是以基礎類型和來 <xref:System.IntPtr?displayProperty=nameWithType> 表示 <xref:System.UIntPtr?displayProperty=nameWithType> 。 編譯器會以原生 int 的形式呈現這些類型的其他轉換和作業。 原生大小的整數會定義或的屬性 `MaxValue` `MinValue` 。 這些值無法表示為編譯時間常數，因為它們依存于目的電腦上的整數原生大小。 這些值在執行時間是唯讀的。 您可以 `nint` 在 [.] 範圍中使用的常數值 `int.MinValue` 。 `int.MaxValue`]. 您可以 `nuint` 在 [.] 範圍中使用的常數值 `uint.MinValue` 。 `uint.MaxValue`]. 編譯器會使用和類型來執行所有一元和二元運算子的常數折迭 <xref:System.Int32?displayProperty=nameWithType> <xref:System.UInt32?displayProperty=nameWithType> 。 如果結果不符合32位，則作業會在執行時間執行，且不會被視為常數。 原生大小的整數可提高使用整數數學的案例中的效能，而且需要盡可能最快的效能。
 
-函式指標提供簡單的語法來存取 IL 操作碼 `ldftn` 和 `calli` 。 您可以使用新的語法來宣告函式指標 `delegate*` 。 `delegate*`類型是指標類型。 `delegate*` `calli` 相對於在方法上使用的委派，叫用型別會使用 `callvirt` `Invoke()` 。 在語法上，叫用相同。 函數指標調用會使用 `managed` 呼叫慣例。 您可以在 `unmanaged` 語法之後加入關鍵字， `delegate*` 以宣告您想要 `unmanaged` 呼叫慣例。 您可以使用宣告上的屬性來指定其他呼叫慣例 `delegate*` 。
+函式指標提供簡單的語法來存取 IL 操作碼 `ldftn` 和 `calli` 。 您可以使用新的語法來宣告函式指標 `delegate_` 。 `delegate*`類型是指標類型。 `delegate*` `calli` 相對於在方法上使用的委派，叫用型別會使用 `callvirt` `Invoke()` 。 在語法上，叫用相同。 函數指標調用會使用 `managed` 呼叫慣例。 您可以在 `unmanaged` 語法之後加入關鍵字， `delegate*` 以宣告您想要 `unmanaged` 呼叫慣例。 您可以使用宣告上的屬性來指定其他呼叫慣例 `delegate*` 。
 
 最後，您可以加入， <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute?displayProperty=nameWithType> 以指示編譯器不要發出 `localsinit` 旗標。 此旗標會指示 CLR 將所有區域變數初始化為零。 `localsinit`自1.0 起，旗標已是 c # 的預設行為。 不過，在某些情況下，額外的零初始化可能會有顯著的效能影響。 尤其是在使用時 `stackalloc` 。 在這些情況下，您可以新增 <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute> 。 您可以將它加入至單一方法或屬性，或加入至 `class` 、 `struct` 、 `interface` 或甚至是模組。 這個屬性不會影響 `abstract` 方法，它會影響針對實作為產生的程式碼。
 
@@ -226,7 +226,7 @@ if (e is not null)
 
 從 c # 9.0 開始，您可以將 `static` 修飾詞加入至 [lambda 運算式](../language-reference/operators/lambda-expressions.md) 或 [匿名方法](../language-reference/operators/delegate-operator.md)。 靜態 lambda 運算式類似于 `static` 區域函數：靜態 lambda 或匿名方法無法捕捉區域變數或實例狀態。 `static`修飾詞可避免意外地捕捉其他變數。
 
-協變數傳回型別提供覆寫函式之傳回類型的彈性。 覆寫的虛擬函式可以傳回衍生自基類方法中宣告之傳回型別的型別。 這有助於記錄，以及支援虛擬複製品或 factory 方法的其他類型。
+協變數傳回型別提供覆 [寫](../language-reference/keywords/override.md) 方法傳回類型的彈性。 覆寫方法可以傳回衍生自覆寫基底方法之傳回型別的型別。 這對於記錄和支援虛擬複製品或 factory 方法的其他類型而言很有用。
 
 此外， [ `foreach` 迴圈](../language-reference/keywords/foreach-in.md)也會辨識並使用擴充方法 `GetEnumerator` ，以其他方式滿足 `foreach` 模式。 這項變更表示 `foreach` 與其他以模式為基礎的結構（例如非同步模式和以模式為基礎的解構）一致。 在實務上，這項變更表示您可以將 `foreach` 支援新增至任何類型。 列舉物件在設計方面有意義時，您應該限制其使用方式。
 
@@ -240,9 +240,9 @@ if (e is not null)
 
 程式碼產生器會使用 Roslyn 分析 Api 來讀取屬性或其他程式碼元素。 在該資訊中，它會將新的程式碼加入至編譯中。 來源產生器只能新增程式碼;不允許它們修改編譯中的任何現有程式碼。
 
-針對程式碼產生器新增的兩項功能是 ***部分方法語法***的延伸模組，以及 ***模組初始化運算式***。 首先是部分方法的變更。 在 c # 9.0 之前，部分方法是 `private` 但無法指定存取修飾詞、傳回 `void` ，而且不能有 `out` 參數。 這些限制表示如果未提供任何方法執行，則編譯器會移除對部分方法的所有呼叫。 C # 9.0 會移除這些限制，但需要部分方法宣告才能執行。 程式碼產生器可以提供該執行。 為了避免引進重大變更，編譯器會考慮任何部分方法，而不使用存取修飾詞來遵循舊規則。 如果部分方法包含 `private` 存取修飾詞，則新的規則會管理該部分方法。
+針對程式碼產生器新增的兩項功能是 ***部分方法語法**_ 和 _*_模組初始化運算式_*_ 的擴充。 首先是部分方法的變更。 在 c # 9.0 之前，部分方法是 `private` 但無法指定存取修飾詞、傳回 `void` ，而且不能有 `out` 參數。 這些限制表示如果未提供任何方法執行，則編譯器會移除對部分方法的所有呼叫。 C # 9.0 會移除這些限制，但需要部分方法宣告才能執行。 程式碼產生器可以提供該執行。 為了避免引進重大變更，編譯器會考慮任何部分方法，而不使用存取修飾詞來遵循舊規則。 如果部分方法包含 `private` 存取修飾詞，則新的規則會管理該部分方法。
 
-程式碼產生器的第二項新功能是 ***模組初始化運算式***。 模組初始化運算式是已 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 附加屬性的方法。 載入元件時，執行時間會呼叫這些方法。 模組初始化運算式方法：
+程式碼產生器的第二項新功能是 _ *_模組初始化運算式_* *。 模組初始化運算式是已 <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> 附加屬性的方法。 載入元件時，執行時間會呼叫這些方法。 模組初始化運算式方法：
 
 - 必須是靜態
 - 必須是無參數
