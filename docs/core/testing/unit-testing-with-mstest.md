@@ -3,13 +3,13 @@ title: 使用 MSTest 與 .NET Core 為 C# 進行單元測試
 description: 透過逐步使用 dotnet test 和 MSTest 建置範例方案的互動式體驗，了解 C# 與 .NET Core 中的單元測試概念。
 author: ncarandini
 ms.author: wiwagn
-ms.date: 09/08/2017
-ms.openlocfilehash: 765b57dce323c10dc5fcbf395cb7d52be76046c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.date: 10/21/2020
+ms.openlocfilehash: c6132251ecc4f453189937f93cf8024dcb8b91f5
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656354"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471605"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 與 .NET Core 為 C# 進行單元測試
 
@@ -105,17 +105,11 @@ namespace Prime.UnitTests.Services
     [TestClass]
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
-        public PrimeService_IsPrimeShould()
-        {
-            _primeService = new PrimeService();
-        }
-
         [TestMethod]
         public void IsPrime_InputIs1_ReturnFalse()
         {
-            var result = _primeService.IsPrime(1);
+            var primeService = new PrimeService();
+            bool result = primeService.IsPrime(1);
 
             Assert.IsFalse(result, "1 should not be prime");
         }
@@ -160,7 +154,7 @@ if (candidate < 2)
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
 - [在單元測試中使用 MSTest 架構](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)

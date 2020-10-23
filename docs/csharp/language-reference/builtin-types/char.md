@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 636e032ac22b48ebc471780ffa85148bf952cdd2
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1cb40759b81a1fcedcf5962b57d79cf3a64df561
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465087"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471872"
 ---
 # <a name="char-c-reference"></a>char (c # 參考) 
 
 `char`Type 關鍵字是 <xref:System.Char?displayProperty=nameWithType> 代表 Unicode utf-16 字元之 .net 結構類型的別名。
 
-|類型|範圍|Size|.NET 類型|
+|類型|範圍|大小|.NET 類型|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 到 U+FFFF|16位|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -37,7 +37,7 @@ ms.locfileid: "89465087"
 - Unicode escape 序列， `\u` 後面接著字元碼的四符號十六進位標記法。
 - 十六進位的 escape 序列， `\x` 後面接著字元碼的十六進位標記法。
 
-[!code-csharp-interactive[char literals](snippets/CharType.cs#Literals)]
+[!code-csharp-interactive[char literals](snippets/shared/CharType.cs#Literals)]
 
 如先前的範例所示，您也可以將字元碼的值轉換成對應的 `char` 值。
 

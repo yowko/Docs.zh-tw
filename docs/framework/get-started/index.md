@@ -1,24 +1,23 @@
 ---
-title: .NET Framework 使用者入門
-description: 開始使用 .NET，這是管理應用程式的執行時間執行環境。 它包含通用語言執行時間 (CLR) 和廣泛的類別庫。
-ms.date: 04/02/2019
+title: 開始使用 .NET Framework
+description: 開始使用 .NET Framework，這是管理應用程式的執行時間執行環境。 它包含通用語言執行時間 (CLR) 和廣泛的類別庫。
+ms.date: 10/21/2020
 helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 85ba856fd695f264f75a6dab2dca3aded4e5cdc1
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 02480641af5ad2c973f7dbbbc233d3d89ff4617e
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414964"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471663"
 ---
 # <a name="get-started-with-net-framework"></a>開始使用 .NET Framework
 
 .NET Framework 是一種執行時間執行環境，負責管理以 .NET Framework 為目標的應用程式。 其由通用語言執行平台及廣大的類別庫組成，前者提供記憶體管理和其他系統服務，後者則能讓程式設計人員將強固、可靠的程式碼善用於應用程式開發的所有主要領域。
 
-> [!NOTE]
-> .NET Framework 只能在 Windows 系統上使用。 您可以使用 [.Net Core](../../core/introduction.md) 在 Windows、MacOS 和 Linux 上開發和執行應用程式。
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 ## <a name="what-is-net-framework"></a>什麼是 .NET Framework？
 
@@ -41,7 +40,7 @@ ms.locfileid: "89414964"
 - 多目標。 將目標設為 [.NET Standard](../../standard/net-standard.md)，開發人員就能建立可在該標準版本所支援的多個 .NET Framework 平台上運作的類別庫。 例如，以 .NET Standard 2.0 為目標的程式庫可供以 .NET Framework 4.6.1、.NET Core 2.0 和 UWP 10.0.16299 為目標的應用程式使用。
 
 <a name="ForUsers"></a>
-## <a name="the-net-framework-for-users"></a>適用於使用者的 .NET Framework
+## <a name="net-framework-for-users"></a>使用者的 .NET Framework
 
 如果您未開發 .NET Framework 的應用程式，但您使用這些應用程式，就不需要具備 .NET Framework 或其作業的特定知識。 大部分的情況下，架構對使用者來說都是完全透明的。
 
@@ -73,10 +72,10 @@ ms.locfileid: "89414964"
 
 ## <a name="related-articles"></a>相關文章
 
-| Title | 描述 |
+| 標題 | 說明 |
 | ----- |------------ |
 | [概觀](overview.md) | 針對建立以 .NET Framework 為目標之應用程式的開發人員，提供詳細的資訊。 |
-| [安裝指南](../install/index.md) | 提供有關安裝 .NET Framework 的資訊。 |  
+| [安裝指南](../install/index.md) | 提供有關安裝 .NET Framework 的資訊。 |
 | [.NET Framework 和頻外版本](the-net-framework-and-out-of-band-releases.md) | 描述 .NET Framework 不定期發行以及如何在您的應用程式中使用它們。 |
 | [系統需求](system-requirements.md) | 列出執行 .NET Framework 的硬體和軟體需求。 |
 | [.NET 的核心和開放原始碼](net-core-and-open-source.md) | 描述 .NET Core 的相關 .NET Framework 以及如何存取開放原始碼 .NET Core 專案。 |

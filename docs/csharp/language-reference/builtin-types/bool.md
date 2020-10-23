@@ -13,12 +13,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 23e5bc34f1751b0a706c20dae340920239fcda9d
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e74fd76fcb19faa5860e48140da0fbd3db4afa47
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126459"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471885"
 ---
 # <a name="bool-c-reference"></a>bool (c # 參考) 
 
@@ -32,7 +32,7 @@ ms.locfileid: "89126459"
 
 您可以使用 `true` 和 `false` 常值來初始化 `bool` 變數或傳遞 `bool` 值：
 
-[!code-csharp-interactive[bool literals](snippets/BoolType.cs#Literals)]
+[!code-csharp-interactive[bool literals](snippets/shared/BoolType.cs#Literals)]
 
 ## <a name="three-valued-boolean-logic"></a>三值布林值邏輯
 

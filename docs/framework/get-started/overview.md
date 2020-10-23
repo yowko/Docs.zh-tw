@@ -1,38 +1,39 @@
 ---
-title: .NET Framework 的概觀
-description: 閱讀有關 .NET 的總覽，這是支援建立和執行 Windows 應用程式和 web 服務的技術。
-ms.date: 03/30/2017
+title: .NET Framework 概觀
+description: 閱讀有關 .NET Framework 的總覽，這是支援建立和執行 Windows 應用程式和 web 服務的技術。
+ms.date: 10/21/2020
 helpviewer_keywords:
 - application development [.NET Framework]
 - common language runtime
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 3577a3ad13d9ef6935a1bed8a29e3d594857928e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75b2e94b93eabdbf8a6a40f38c1b12a8caddd98a
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557758"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471740"
 ---
 # <a name="overview-of-net-framework"></a>.NET Framework 概觀
 
 .NET Framework 是一種技術，可支援建立和執行 Windows 應用程式和 web 服務。 .NET Framework 的設計目的是要滿足下列目標：
 
-- 提供一致的物件導向程式設計環境，不論物件程式碼是在本機儲存和執行、在本機執行、在本機執行，或是在遠端執行。
+- 提供一致的物件導向程式設計環境，不論物件程式碼是在本機儲存和執行、在本機執行、在本機執行，還是在遠端執行。
 
-- 提供可減少軟體部署和版本控制衝突的程式碼執行環境。
+- 提供可執行下列動作的程式碼執行環境：
 
-- 提供加強程式碼安全執行的程式碼執行環境，包括未知或非完全信任之協力廠商所建立的程式碼。
+  - 將軟體部署和版本控制衝突降至最低。
 
-- 提供可消除編寫指令碼或解譯環境效能問題的程式碼執行環境。
+  - 提升程式碼的安全執行，包括由未知或半信任的協力廠商所建立的程式碼。
 
-- 使開發人員在開發各類應用程式 (例如 Windows 架構應用程式和 Web 架構應用程式) 時享有一致的體驗。
+  - 消除腳本或解讀環境的效能問題。
 
-- 若要建立業界標準的所有通訊，以確保以 .NET Framework 為基礎的程式碼與任何其他程式碼整合。
+- 讓開發人員體驗在各式各樣不同類型的應用程式（例如 Windows 應用程式和 Web 應用程式）之間保持一致。
 
-> [!NOTE]
-> 如需使用者和開發人員 .NET Framework 的一般簡介，請參閱 [開始](index.md)使用。
+- 建立業界標準的所有通訊，以確保以 .NET Framework 為基礎的程式碼與任何其他程式碼整合。
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 .NET Framework 是由 common language runtime (CLR) 和 .NET Framework 類別庫所組成。 Common language runtime 是 .NET Framework 的基礎。 請將執行階段視為在執行階段管理程式碼的代理程式，可提供記憶體管理、執行緒管理和遠端作業等核心服務，並同時強制執行嚴格的型別安全及其他形式的程式碼精確度，以提升安全性和穩定性。 事實上，程式碼管理的概念是此執行階段的基本原則。 針對執行階段所開發的程式碼稱為 Managed 程式碼，而不針對執行階段所開發的程式碼稱為 Unmanaged 程式碼。 類別庫是一組完整的物件導向集合，可用來開發應用程式，範圍從傳統的命令列或圖形化使用者介面， (GUI) 應用程式到以 ASP.NET 提供的最新創新（例如 Web Form 和 XML Web 服務）為基礎的應用程式。
 

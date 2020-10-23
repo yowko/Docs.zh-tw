@@ -4,12 +4,12 @@ title: Unmanaged 型別 - C# 參考
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: b5a689ca3ade36ef77da958549894f76e074986e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 4374872af13c94e1a1af6b9f2c431f076c6f7dff
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89143528"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471795"
 ---
 # <a name="unmanaged-types-c-reference"></a>Unmanaged 型別 (C# 參考)
 
@@ -24,11 +24,11 @@ ms.locfileid: "89143528"
 
 從 c # 8.0 開始，包含非受控型別之欄位 *的結構化結構類型* 也不受管理，如下列範例所示：
 
-[!code-csharp[unmanaged constructed types](snippets/UnmanagedTypes.cs#ProgramExample)]
+[!code-csharp[unmanaged constructed types](snippets/shared/UnmanagedTypes.cs#ProgramExample)]
 
 泛型結構可能是非受控和非受控結構類型的來源。 上述範例會定義泛型結構 `Coords<T>` ，並提供非受控結構類型的範例。 非受控類型的範例為 `Coords<object>` 。 它不是未受管理的，因為它具有 `object` 不受管理的類型欄位。 如果您想要讓 *所有* 的結構化型別都是非受控型別，請 `unmanaged` 在泛型結構的定義中使用條件約束：
 
-[!code-csharp[unmanaged constraint in type definition](snippets/UnmanagedTypes.cs#AlwaysUnmanaged)]
+[!code-csharp[unmanaged constraint in type definition](snippets/shared/UnmanagedTypes.cs#AlwaysUnmanaged)]
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

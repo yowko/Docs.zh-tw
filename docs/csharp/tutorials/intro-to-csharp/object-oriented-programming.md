@@ -2,12 +2,12 @@
 title: 物件導向程式設計 (C#)
 description: 'C # 提供物件導向程式設計的完整支援，包括抽象、封裝、繼承和多型。'
 ms.date: 09/30/2020
-ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997654"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471591"
 ---
 # <a name="object-oriented-programming-c"></a>Object-Oriented c # 程式設計 (c # ) 
 
@@ -140,7 +140,7 @@ if (Balance - amount < minimumBalance)
 
 最後一個要新增的功能，可讓您 `LineOfCreditAccount` 收取超過信用額度的費用，而不會拒絕交易。
 
-其中一個技術是定義虛擬函式，您可以在其中執行所需的行為。 類別會將 `Bank Account` `MakeWithdrawal` 方法重構為兩個方法。 當提款將餘額降到低於最小值時，新的方法會執行指定的動作。 現有的 `MakeWithdrawal` 方法具有下列程式碼：
+其中一個技術是定義虛擬函式，您可以在其中執行所需的行為。 類別會將 `BankAccount` `MakeWithdrawal` 方法重構為兩個方法。 當提款將餘額降到低於最小值時，新的方法會執行指定的動作。 現有的 `MakeWithdrawal` 方法具有下列程式碼：
 
 ```csharp
 public void MakeWithdrawal(decimal amount, DateTime date, string note)
@@ -172,7 +172,7 @@ Overdrawn 帳戶時，覆寫會傳回費用交易。 如果提款未超過限制
 
 執行程式，並檢查結果。
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
 本教學課程示範 Object-Oriented 程式設計中使用的許多技術：
 

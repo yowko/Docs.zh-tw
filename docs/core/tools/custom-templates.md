@@ -3,12 +3,12 @@ title: dotnet new 的自訂範本
 description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 62d98adab0122936957301ee737c366541b0cfe6
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874714"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471546"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
@@ -25,13 +25,13 @@ ms.locfileid: "90874714"
 
 ### <a name="net-default-templates"></a>.NET 預設範本
 
-當您安裝 [.NET Core SDK](https://dotnet.microsoft.com/download) 時，您會收到十多個用於建立專案和檔案的內建範本，包括主控台應用程式、類別庫、單元測試專案，ASP.NET Core 應用程式 (包括 [Angular](https://angular.io/) 和 [React](https://facebook.github.io/react/) 專案) 和組態檔。 若要列出內建範本，請執行搭配 `-l|--list` 選項執行 `dotnet new` 命令：
+當您安裝 [.NET Core SDK](https://dotnet.microsoft.com/download) 時，您會收到十多個用於建立專案和檔案的內建範本，包括主控台應用程式、類別庫、單元測試專案，ASP.NET Core 應用程式 (包括 [Angular](https://angular.io/) 和 [React](https://reactjs.org/) 專案) 和組態檔。 若要列出內建範本，請執行搭配 `-l|--list` 選項執行 `dotnet new` 命令：
 
 ```dotnetcli
 dotnet new --list
 ```
 
-## <a name="configuration"></a>設定
+## <a name="configuration"></a>組態
 
 範本是由下列部分組成：
 
@@ -55,7 +55,7 @@ dotnet new --list
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| member            | 類型          | Description |
+| member            | 類型          | 說明 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |

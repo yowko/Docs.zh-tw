@@ -9,18 +9,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5f446dae6a84706e1398a65ffb5a52270cfd92cf
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132725"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471809"
 ---
 # <a name="structure-types-c-reference"></a>結構類型 (c # 參考) 
 
 *結構類型* (或*結構類型*) 是可封裝資料和相關功能的實[值型](value-types.md)別。 您可以使用 `struct` 關鍵字來定義結構類型：
 
-[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
 結構類型具有 *值語義*。 也就是說，結構型別的變數包含型別的實例。 根據預設，變數值會在指派時複製、將引數傳遞至方法，並傳回方法結果。 在結構類型變數的情況下，會複製類型的實例。 如需詳細資訊，請參閱實 [數值型別](value-types.md)。
 
@@ -32,7 +32,7 @@ ms.locfileid: "89132725"
 
 從 c # 7.2 開始，您可以使用 `readonly` 修飾詞來宣告結構類型是不可變的：
 
-[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 結構的所有資料成員都 `readonly` 必須是唯讀的，如下所示：
 
@@ -54,15 +54,15 @@ ms.locfileid: "89132725"
 
 - 方法：
 
-  [!code-csharp[readonly method](snippets/StructType.cs#ReadonlyMethod)]
+  [!code-csharp[readonly method](snippets/shared/StructType.cs#ReadonlyMethod)]
 
   您也可以將修飾詞套用 `readonly` 至覆寫在中宣告之方法的方法 <xref:System.Object?displayProperty=nameWithType> ：
 
-  [!code-csharp[readonly override](snippets/StructType.cs#ReadonlyOverride)]
+  [!code-csharp[readonly override](snippets/shared/StructType.cs#ReadonlyOverride)]
 
 - 屬性和索引子：
 
-  [!code-csharp[readonly property get](snippets/StructType.cs#ReadonlyProperty)]
+  [!code-csharp[readonly property get](snippets/shared/StructType.cs#ReadonlyProperty)]
 
   如果您需要將修飾詞套用 `readonly` 至屬性或索引子的兩個存取子，請將它套用至屬性或索引子的宣告中。
 
@@ -95,7 +95,7 @@ ms.locfileid: "89132725"
 
 如果結構類型的所有實例欄位都可以存取，您也可以在不使用運算子的情況下將它具現化 `new` 。 在這種情況下，您必須在第一次使用實例之前，初始化所有的實例欄位。 下列範例顯示如何執行該項工作：
 
-[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/shared/StructType.cs#WithoutNew)]
 
 在內 [建實值](value-types.md#built-in-value-types)型別的情況下，請使用對應的常值來指定類型的值。
 
@@ -118,11 +118,11 @@ ms.locfileid: "89132725"
 
 一般來說， `ref` 當您需要也包含結構類型之資料成員的型別時，您會定義結構類型 `ref` ：
 
-[!code-csharp[ref struct](snippets/StructType.cs#RefStruct)]
+[!code-csharp[ref struct](snippets/shared/StructType.cs#RefStruct)]
 
 若要將 `ref` 結構宣告為 [`readonly`](#readonly-struct) ，請 `readonly` 在類型宣告中結合和修飾詞， `ref` (修飾詞必須在修飾詞 `readonly` `ref`) 之前：
 
-[!code-csharp[readonly ref struct](snippets/StructType.cs#ReadonlyRef)]
+[!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 在 .NET 中，結構的範例 `ref` 包括 <xref:System.Span%601?displayProperty=nameWithType> 和 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> 。
 

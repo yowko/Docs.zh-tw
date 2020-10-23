@@ -5,12 +5,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 74a1e244fa47cf7c6ea36454013b46b6e44f62c9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f807a9d9a7ccebf2ae71d47e01fbfba7338b1799
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557667"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471993"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 
@@ -18,12 +18,14 @@ ms.locfileid: "90557667"
 
 .NET Framework 的每個新版本都會新增新功能，但會保留舊版的功能。
 
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
+
 CLR 是透過自己的版本號碼加以識別。 .NET Framework 版本號碼會在每次發行時遞增，但 CLR 版本不一定會遞增。 例如，.NET Framework 4、4.5 和更新版本包含 CLR 4，但是 .NET Framework 2.0、3.0 和3.5 包含 CLR 2.0。 (沒有 CLR 版本 3)。
 
 > [!TIP]
 >
 > - 如需支援的作業系統完整清單，請參閱 [系統需求](../get-started/system-requirements.md)。
-> - 如需下載，請參閱[安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)。
+> - 如需下載，請參閱 [安裝適用于開發人員的 .NET Framework](../install/guide-for-developers.md)。
 > - 如需判斷電腦上所安裝之 .NET Framework 版本的相關資訊，請參閱 [如何判斷已安裝的 .NET Framework 版本](how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="version-information"></a>版本資訊
@@ -32,13 +34,13 @@ CLR 是透過自己的版本號碼加以識別。 .NET Framework 版本號碼會
 
 - 核取記號圖示✔️代表預設安裝 .NET Framework 的 OS 版本。
 - 加號圖示➕代表未安裝 .NET Framework 但可以安裝的 OS 版本。
-- 星號 **\*** 代表 .NET Framework (預先安裝或不) 必須 [在主控台中](../install/dotnet-35-windows-10.md) 啟用的 OS 版本，或是 Windows Server 的伺服器管理員。
+- 星號 * *\** _ 代表 .NET Framework (預先安裝或不) 必須 [在主控台中](../install/dotnet-35-windows-10.md) 啟用的 OS 版本，或是 Windows Server 的伺服器管理員。
 
 | | |
 | - | - |
-| [.NET Framework 4.8](#net-framework-48) | [.NET Framework 4.7.2](#net-framework-472) | [.NET Framework 4.7.1](#net-framework-471) | [.NET Framework 4。7](#net-framework-47) |
-| [.NET Framework 4.6.2](#net-framework-462) | [.NET Framework 4.6.1](#net-framework-461) | [.NET Framework 4.6](#net-framework-46) | [.NET Framework 4.5.2](#net-framework-452) |
-| [.NET Framework 4.5.1](#net-framework-451) | [.NET Framework 4.5](#net-framework-45) | [.NET Framework 4](#net-framework-4) | [.NET Framework 3.5](#net-framework-35) |
+| [.NET Framework 4.8](#net-framework-48) | [.NET Framework 4.7.2](#net-framework-472) | [.NET Framework 4.7.1](#net-framework-471) | [.NET Framework 4.7](#net-framework-47) |
+| [.NET Framework 4.6.2](#net-framework-462) | [.NET Framework 4.6。1](#net-framework-461) | [.NET Framework 4.6](#net-framework-46) | [.NET Framework 4.5.2](#net-framework-452) |
+| [.NET Framework 4.5。1](#net-framework-451) | [.NET Framework 4.5](#net-framework-45) | [.NET Framework 4](#net-framework-4) | [.NET Framework 3.5](#net-framework-35) |
 | [.NET Framework 3.0](#net-framework-30) | [.NET Framework 2.0](#net-framework-20) | [.NET Framework 1.1](#net-framework-11) | [.NET Framework 1.0](#net-framework-10) |
 
 ### <a name="net-framework-48"></a>.NET Framework 4.8
@@ -49,7 +51,7 @@ CLR 是透過自己的版本號碼加以識別。 .NET Framework 版本號碼會
 
 |||
 |-|-|
-|**CLR 版本**|4|
+|_*CLR 版本**|4|
 |**Windows 版本**|✔️10月2019更新<br/>➕ 10 2018 年10月更新 (1809 版) <br/>➕2018年4月10日更新 (1803 版) <br/>➕10個秋季建立者更新 (1709 版) <br/>➕10建立者更新 (1703 版) <br/>➕10周年更新 (1607 版) <br/>➕8。1<br/>➕7|
 |**Windows Server 版本**|➕ Windows Server 2019<br/>➕ Windows Server，版本1809<br/>➕ Windows Server，版本1803<br/>➕2016<br/>➕ 2012 R2<br/>➕2012<br/>➕ 2008 R2 SP1|
 |**判斷已安裝的 .NET 版本**|使用 `Release` DWORD：<br/>- 528040 (Windows 10 2019 年 5 月更新)<br/>- 528049 (所有其他作業系統版本)<br/> (請參閱 [指示](how-to-determine-which-versions-are-installed.md)) |
