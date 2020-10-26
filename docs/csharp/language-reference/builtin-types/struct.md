@@ -1,7 +1,7 @@
 ---
-description: 瞭解 C 中的結構類型#
 title: '結構類型-c # 參考'
-ms.date: 04/21/2020
+description: 瞭解 C 中的結構類型#
+ms.date: 10/23/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 5f446dae6a84706e1398a65ffb5a52270cfd92cf
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471809"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526604"
 ---
 # <a name="structure-types-c-reference"></a>結構類型 (c # 參考) 
 
@@ -37,7 +37,7 @@ ms.locfileid: "92471809"
 結構的所有資料成員都 `readonly` 必須是唯讀的，如下所示：
 
 - 任何欄位宣告都必須有[ `readonly` 修飾](../keywords/readonly.md)詞
-- 任何包含自動執行的屬性都必須是唯讀的
+- 任何屬性（包括自動執行的屬性）都必須是唯讀的。 在 c # 9.0 和更新版本中，屬性可能具有[ `init` 存取](../../whats-new/csharp-9.md#init-only-setters)子。
 
 這可保證結構的成員不會 `readonly` 修改結構的狀態。 在 c # 8.0 和更新版本中，這表示其他實例成員（除了函式之外）是隱含的 [`readonly`](#readonly-instance-members) 。
 
@@ -68,6 +68,10 @@ ms.locfileid: "92471809"
 
   > [!NOTE]
   > 編譯器會將 `get` [自動執行之屬性](../../programming-guide/classes-and-structs/auto-implemented-properties.md) 的存取子宣告為 `readonly` ，而不論屬性宣告中的修飾詞是否存在 `readonly` 。
+
+  在 c # 9.0 和更新版本中，您可以 `readonly` 使用存取子將修飾詞套用至屬性或索引子 `init` ：
+
+  :::code language="csharp" source="snippets/shared/StructType.cs" id="ReadonlyWithInit":::
 
 您無法將修飾詞套用 `readonly` 至結構類型的靜態成員。
 
@@ -140,7 +144,7 @@ ms.locfileid: "92471809"
 - [唯讀執行個體成員](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 - [參考樣式類型的編譯時間安全性](~/_csharplang/proposals/csharp-7.2/span-safety.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考資料](../index.md)
 - [設計指導方針-在類別和結構之間選擇](../../../standard/design-guidelines/choosing-between-class-and-struct.md)

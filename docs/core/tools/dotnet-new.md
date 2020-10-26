@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/01/2020
-ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495469"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526616"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -58,7 +58,7 @@ dotnet new -h|--help
 
   下表說明隨 .NET Core SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。 按一下 [簡短名稱] 連結，以查看特定的範本選項。
 
-| 範本                                    | 簡短名稱                      | Language     | Tags                                  | 介紹 |
+| 範本                                    | 簡短名稱                      | 語言     | 標籤                                  | 推出的版本 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | 主控台應用程式                          | [安慰](#console)             | [C#], F#, VB | 通用/主控台                        | 1.0        |
 | 類別庫                                | [classlib](#classlib)           | [C#], F#, VB | 通用/程式庫                        | 1.0        |
@@ -93,7 +93,7 @@ dotnet new -h|--help
 | NuGet 組態                                 | `nugetconfig`                   |              | Config                                | 1.0        |
 | Dotnet 本機工具資訊清單檔              | `tool-manifest`                 |              | Config                                | 3.0        |
 | Web 組態                                   | `webconfig`                     |              | Config                                | 1.0        |
-| 方案檔                                | `sln`                           |              | 解決方法                              | 1.0        |
+| 方案檔                                | `sln`                           |              | 解決方案                              | 1.0        |
 | 通訊協定緩衝區檔案                         | [原](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>選項
@@ -143,7 +143,7 @@ dotnet new -h|--help
 
 - **`--type <TYPE>`**
 
-  根據可用的類型篩選範本。 預先定義的值為 `project` 、 `item` 和 `other` 。
+  根據可用的類型篩選範本。 預先定義的值為 `project` 和 `item` 。
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -190,11 +190,11 @@ dotnet new -h|--help
 
   如果有指定，就不會在專案建立期間執行隱含還原。 自 .NET Core 2.2 SDK 起提供。
 
-***
+**_
 
 ### <a name="classlib"></a>classlib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。 值：`netcoreapp<version>` 建立 .NET Core 類別庫或 `netstandard<version>` 建立 .NET Standard 類別庫。 預設值是 `netstandard2.0`。
 
@@ -208,11 +208,11 @@ dotnet new -h|--help
 
   建立專案時，不會執行隱含還原。
 
-***
+**_
 
 ### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf、wpflib、wpfcustomcontrollib、wpfusercontrollib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。 預設值是 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
 
@@ -226,11 +226,11 @@ dotnet new -h|--help
 
   建立專案時，不會執行隱含還原。
 
-***
+**_
 
 ### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms、winformslib
 
-- **`--langVersion <VERSION_NUMBER>`**
+- _*`--langVersion <VERSION_NUMBER>`**
 
   `LangVersion`在建立的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
 
@@ -240,11 +240,11 @@ dotnet new -h|--help
 
   建立專案時，不會執行隱含還原。
 
-***
+**_
 
 ### <a name="worker-grpc"></a><a name="web-others"></a> worker、grpc
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。 預設值是 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
 
@@ -256,11 +256,11 @@ dotnet new -h|--help
 
   建立專案時，不會執行隱含還原。
 
-***
+**_
 
 ### <a name="mstest-xunit"></a><a name="test"></a> mstest、xunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。 自 .NET Core 3.0 SDK 起提供的選項。
 
@@ -279,11 +279,11 @@ dotnet new -h|--help
 
   建立專案時，不會執行隱含還原。
 
-***
+**_
 
 ### <a name="nunit"></a>Nunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _*`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。
 
@@ -304,11 +304,11 @@ dotnet new -h|--help
 
   建立專案時，不會執行隱含還原。
 
-***
+**_
 
 ### <a name="page"></a>頁面
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _*`-na|--namespace <NAMESPACE_NAME>`**
 
   產生之程式碼的命名空間。 預設值是 `MyApp.Namespace`。
 
@@ -316,19 +316,19 @@ dotnet new -h|--help
 
   建立不含 PageModel 的頁面。
 
-***
+**_
 
 ### <a name="viewimports-proto"></a><a name="namespace"></a> >viewimports.cshtml，proto
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _*`-na|--namespace <NAMESPACE_NAME>`**
 
   產生之程式碼的命名空間。 預設值是 `MyApp.Namespace`。
 
-***
+**_
 
 ### <a name="blazorserver"></a>blazorserver
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _*`-au|--auth <AUTHENTICATION_TYPE>`**
 
   要使用的驗證類型。 可能的值包括：
 
@@ -395,11 +395,11 @@ dotnet new -h|--help
 
   建立專案時，不會執行隱含還原。
 
-***
+**_
 
 ### <a name="web"></a>Web
 
-- **`--exclude-launch-settings`**
+- _*`--exclude-launch-settings`**
 
   從產生的範本中排除 *launchSettings.json* 。
 
@@ -423,11 +423,11 @@ dotnet new -h|--help
 
   關閉 HTTPS。
 
-***
+**_
 
 ### <a name="mvc-webapp"></a><a name="web-options"></a> mvc、webapp
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _*`-au|--auth <AUTHENTICATION_TYPE>`**
 
   要使用的驗證類型。 可能的值包括：
 
@@ -513,11 +513,11 @@ dotnet new -h|--help
 
   判斷專案是否設定為在 Debug 組建中使用 [Razor 執行時間編譯](/aspnet/core/mvc/views/view-compilation#runtime-compilation) 。 自 .NET Core 3.1.201 SDK 起提供的選項。
 
-***
+**_
 
 ### <a name="angular-react"></a><a name="spa"></a> 角度、反應
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _*`-au|--auth <AUTHENTICATION_TYPE>`**
 
   要使用的驗證類型。 自 .NET Core 3.0 SDK 起提供。
   
@@ -554,11 +554,11 @@ dotnet new -h|--help
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-***
+**_
 
 ### <a name="reactredux"></a>reactredux
 
-- **`--exclude-launch-settings`**
+- _*`--exclude-launch-settings`**
 
   從產生的範本中排除 *launchSettings.json* 。
 
@@ -582,11 +582,11 @@ dotnet new -h|--help
 
   關閉 HTTPS。
 
-***
+**_
 
 ### <a name="razorclasslib"></a>razorclasslib
 
-- **`--no-restore`**
+- _*`--no-restore`**
 
   建立專案時，不會執行隱含還原。
 
@@ -594,11 +594,11 @@ dotnet new -h|--help
 
   除了對此程式庫的元件之外，還支援新增傳統的 Razor 頁面和 Views。 自 .NET Core 3.0 SDK 起提供。
 
-***
+**_
   
 ### <a name="webapi"></a>webapi
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _*`-au|--auth <AUTHENTICATION_TYPE>`**
 
   要使用的驗證類型。 可能的值包括：
 
@@ -663,11 +663,11 @@ dotnet new -h|--help
 
   建立專案時，不會執行隱含還原。
 
-***
+**_
 
 ### <a name="globaljson"></a>globaljson
 
-- **`--sdk-version <VERSION_NUMBER>`**
+- _*`--sdk-version <VERSION_NUMBER>`**
 
   指定要在檔案 *global.js* 中使用的 .NET Core SDK 版本。
 
