@@ -1,6 +1,6 @@
 ---
 title: 作法：從字串中刪除無效的字元
-description: 閱讀範例，其中示範如何使用靜態 Regex. Replace 方法，從字串中去除可能有害的字元。
+description: 閱讀示範如何使用靜態 Regex. Replace 方法，從字串中去除可能有害字元的範例。
 ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - regular expressions, examples
 - cleaning input
 - user input, examples
-- .NET Framework regular expressions, examples
-- regular expressions [.NET Framework], examples
+- .NET regular expressions, examples
+- regular expressions [.NET], examples
 - Regex.Replace method
 - stripping invalid characters
 - Replace method
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
-ms.openlocfilehash: 5e0cd423df7fce03cdefb3da7bc192f3045e8f9c
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 1573724d4fa28380d7267f425547a23566bf4b4a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803985"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889292"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>作法：從字串中刪除無效的字元
 下列範例會使用靜態 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，從字串中去除無效的字元。  
@@ -37,6 +37,6 @@ ms.locfileid: "85803985"
   
  規則運算式模式 `[^\w\.@-]` 會比對任何非文字字元的字元、句號、@ 符號或連字號。 文字字元是指任何字母、十進位數字或底線這類標點符號連接子。 任何符合這個模式的字元都會使用 <xref:System.String.Empty?displayProperty=nameWithType> (這是由取代模式所定義的字串) 來取代。 若要允許使用者輸入其他字元，可將這些字元新增至規則運算式模式中的字元類別。 例如，規則運算式模式 `[^\w\.@-\\%]` 也允許在輸入字串中使用百分比符號與反斜線。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 規則運算式](regular-expressions.md)

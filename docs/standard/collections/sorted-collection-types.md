@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SortedList class, grouping data in collections
 - grouping data in collections, SortedList collection type
 - SortedList collection type
-- collections [.NET Framework], SortedList collection type
+- collections [.NET], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: 2d9d3744859eea1a09923980b3b4c57eca6bba97
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 339d247f3b7e775de740c6c1ce786b078441c699
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287935"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889318"
 ---
 # <a name="sorted-collection-types"></a>排序集合類型
 
@@ -40,14 +40,14 @@ ms.locfileid: "84287935"
 | 插入和移除一般是 O(`n`)；不過，對於已處於排序次序的資料，插入是 O(log `n`)，因此每個項目都會新增至清單的結尾。 (這假設不需要調整大小)。 | 插入和移除是 O(log `n`)。 |
 | 使用的記憶體少於 <xref:System.Collections.Generic.SortedDictionary%602>。 | 使用的記憶體多於 <xref:System.Collections.SortedList> 非泛型類別和 <xref:System.Collections.Generic.SortedList%602> 泛型類別。 |
 
-針對必須可以從多個執行緒同時存取的已排序清單或字典，您可以將排序邏輯新增至衍生自 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的類別。 考慮不可變性時，下列對應的不可變類型會遵循類似的排序語義： <xref:System.Collections.Immutable.ImmutableSortedSet%601> 和 <xref:System.Collections.Immutable.ImmutableSortedDictionary%602> 。
+針對必須可以從多個執行緒同時存取的已排序清單或字典，您可以將排序邏輯新增至衍生自 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 的類別。 當考慮不永久性時，下列對應的不可變型別會遵循類似的排序語義： <xref:System.Collections.Immutable.ImmutableSortedSet%601> 和 <xref:System.Collections.Immutable.ImmutableSortedDictionary%602> 。
 
 > [!NOTE]
 > 針對包含專屬索引鍵的值 (例如，包含員工識別碼的員工記錄)，您可以建立索引鍵集合，而索引鍵集合透過衍生自 <xref:System.Collections.ObjectModel.KeyedCollection%602> 泛型類別而具有部分清單特性和部分字典特性。
 
-自 .NET Framework 4 開始，<xref:System.Collections.Generic.SortedSet%601> 類別會提供自我平衡樹狀目錄，以便在插入、刪除和搜尋之後依排序次序維護資料。 這個類別和 <xref:System.Collections.Generic.HashSet%601> 類別會實作 <xref:System.Collections.Generic.ISet%601> 介面。
+從 .NET Framework 4 開始， <xref:System.Collections.Generic.SortedSet%601> 類別會提供自我平衡樹狀目錄，以在插入、刪除和搜尋之後依排序次序維護資料。 這個類別和 <xref:System.Collections.Generic.HashSet%601> 類別會實作 <xref:System.Collections.Generic.ISet%601> 介面。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>

@@ -9,15 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - parsing strings, numeric strings
 - numeric strings
-- enumerations [.NET Framework], parsing strings
+- enumerations [.NET], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: b184bad10b816c1eae798302337b5c901732ad7f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2ddefde4c9dceffb6adf7e17a965a2b15ff60ed2
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589535"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889019"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>在 .NET 中剖析數值字串
 所有數值類型皆有兩個靜態剖析方法：`Parse` 和 `TryParse`，可將數字的字串表示轉換成數值類型。 這些方法可讓您剖析使用[標準數值格式字串](standard-numeric-format-strings.md)和[自訂數值格式字串](custom-numeric-format-strings.md)中記錄的格式字串所產生的字串。 根據預設，`Parse` 和 `TryParse` 方法只能將包含十進位數字的字串成功轉換為整數值。 它們可以將包含整數和小數的十進位數字、群組分隔符號，以及小數分隔符號的字串，成功轉換為浮點值。 如果作業失敗，即 `TryParse` 方法傳回 `false`，則 `Parse` 方法會擲回例外狀況。  

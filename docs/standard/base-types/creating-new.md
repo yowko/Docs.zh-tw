@@ -1,6 +1,6 @@
 ---
 title: 在 .NET 中建立新字串
-description: 瞭解如何在 .NET 中結合數個字串、字串陣列或物件，使用指派、類別的程式或 System.string 方法來建立字串。
+description: 瞭解如何使用指派、類別的函式或 System.string 方法，在 .NET 中結合數個字串、字串陣列或物件來建立字串。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,18 +11,19 @@ helpviewer_keywords:
 - Join method
 - Format method
 - Concat method
-- strings [.NET Framework], creating
+- strings [.NET], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7dedaf61f56f19343299c841bb4cee70fb9c767a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596444"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889435"
 ---
 # <a name="creating-new-strings-in-net"></a>在 .NET 中建立新字串
-.NET Framework 允許使用簡單指派來建立字串，且還可以多載類別建構函式，支援使用多個不同參數來建立字串。 .NET Framework 也在 <xref:System.String?displayProperty=nameWithType> 類別中提供數個方法，藉由合併數個字串、字串陣列或物件來建立新的字串物件。  
+
+.NET 可讓您使用簡單指派來建立字串，也可以多載類別的函式，以支援使用多個不同參數來建立字串。 .NET 也會在類別中提供數個方法 <xref:System.String?displayProperty=nameWithType> ，藉由合併數個字串、字串陣列或物件來建立新的字串物件。  
   
 ## <a name="creating-strings-using-assignment"></a>使用指派建立字串  
  建立新 <xref:System.String> 物件的最簡單方式，就是將字串常值指派給 <xref:System.String> 物件。  
@@ -33,7 +34,7 @@ ms.locfileid: "84596444"
 ## <a name="methods-that-return-strings"></a>傳回字串的方法  
  下表列出數個可傳回新字串物件的有用方法。  
   
-|方法名稱|使用|  
+|方法名稱|用途|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|從一組輸入物件建立格式化的字串。|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|從兩個或多個字串建立字串。|  

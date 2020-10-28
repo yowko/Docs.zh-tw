@@ -7,25 +7,25 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- strings [.NET Framework], case
+- strings [.NET], case
 - case sensitivity
 - ToUpper method
 - ToLower method
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: e838d6df778802d7eaab3f12205698cc6ca5f72b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 424219c8f660b7592996436160f2667f70be654f
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290587"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889526"
 ---
 # <a name="change-case-in-net"></a>.NET 中的變更案例
 
-如果您撰寫可接受使用者輸入的應用程式，您絕對不能確定他們會使用哪種大小寫來輸入資料。 通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。 下表描述三種變更大小寫的方法。 前兩種方法提供接受文化特性的多載。  
+如果您撰寫的應用程式會接受來自使用者的輸入，您絕對不能確定 (的大小寫) 會用來輸入資料。 通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。 下表描述三種變更大小寫的方法。 前兩種方法提供接受文化特性的多載。  
   
-|方法名稱|使用|  
+|方法名稱|用途|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|將字串中的所有字元轉換成大寫。|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|將字串中的所有字元轉換成小寫。|  
@@ -71,7 +71,7 @@ ms.locfileid: "84290587"
   
  請注意，雖然它區分文化特性，但 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 方法不會提供語言正確的大小寫規則。 例如，在上述範例中，這個方法會將 "a tale of two cities"  轉換成 "A Tale Of Two Cities"。 不過，對於 en-US 文化特性而言語言正確的字首大寫為 "A Tale of Two Cities"。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [基底字元串作業](basic-string-operations.md)
 - [執行不區分文化特性的字串作業](../globalization-localization/performing-culture-insensitive-string-operations.md)

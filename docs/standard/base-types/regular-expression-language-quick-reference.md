@@ -1,6 +1,6 @@
 ---
 title: 規則運算式語言 - 快速參考
-description: 在此快速參考中，學習如何使用正則運算式模式來比對輸入文字。 模式具有一或多個字元常值、運算子或結構。
+description: 在此快速參考中，您將瞭解如何使用正則運算式模式來比對輸入文字。 模式有一或多個字元常值、運算子或結構。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 f1_keywords:
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - searching with regular expressions, language elements
 - pattern-matching with regular expressions, language elements
 - regular expressions, language elements
-- regular expressions [.NET Framework]
+- regular expressions [.NET]
 - cheat sheet
-- .NET Framework regular expressions, language elements
+- .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 4788c84be76a5cc9a9a6327fcd054e08db4d1872
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 986e7417d85655acc66a5c308aa79477c96fd629
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556796"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889305"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 
@@ -28,7 +28,7 @@ ms.locfileid: "87556796"
 
 此快速參考中的每一節都列出您可以用於定義規則運算式的特定某類字元、運算子和建構。
 
-我們也以兩種格式提供這項資訊，讓您可以下載並列印以方便參考：
+我們也以兩種格式提供此資訊，您可以下載及列印以方便參考：
 
 - [下載 Word (.docx) 格式](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [以 PDF (.pdf) 格式下載](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
@@ -47,20 +47,20 @@ ms.locfileid: "87556796"
 |`\f`|比對換頁字元 \u000C。|`[\f]{2,}`|`"\f\f\f"` 中的 `"\f\f\f"`|
 |`\n`|比對新行字元 \u000A。|`\r\n(\w+)`|`"\r\nThese are\ntwo lines."` 中的 `"\r\nThese"`|
 |`\e`|比對逸出字元 \u001B。|`\e`|`"\x001B"` 中的 `"\x001B"`|
-|`\` *nnn*|使用八進位表示法指定字元 (*nnn* 由兩位數或三位數組成)。|`\w\040\w`|`"a bc d"` 中的 `"a b"`、`"c d"`|
-|`\x` *nn*|使用十六進位表示指定字元 (*nn* 由剛好兩位數組成)。|`\w\x20\w`|`"a bc d"` 中的 `"a b"`、`"c d"`|
+|`\`*nnn*|使用八進位表示法指定字元 ( *nnn* 由兩位數或三位數組成)。|`\w\040\w`|`"a bc d"` 中的 `"a b"`、`"c d"`|
+|`\x` *nn*|使用十六進位表示指定字元 ( *nn* 由剛好兩位數組成)。|`\w\x20\w`|`"a bc d"` 中的 `"a b"`、`"c d"`|
 |`\c` *X*<br /><br /> `\c` *x*|比對 *X* 或 *x* 所指定的 ASCII 控制字元，其中 *X* 或 *x* 是控制字元的字母。|`\cC`|`"\x0003"` 中的 `"\x0003"` (Ctrl-C)|
 |`\u` *nnnn*|使用十六進位表示比對 Unicode 字元 (剛好四位數，如 *nnnn* 所表示)。|`\w\u0020\w`|`"a bc d"` 中的 `"a b"`、`"c d"`|
 |`\`|當後面加上的字元不是這張表和本主題其他表格中指出的逸出字元時，則比對該字元。 例如，`\*` 與 `\x2A` 相同，而 `\.` 與 `\x2E` 相同。 這可讓規則運算式引擎釐清語言元素 (例如 \* 或 ?) 和字元常值 (以 `\*` 或 `\?` 表示)。|`\d+[\+-x\*]\d+`|`"(2+2) * 3*9"` 中的 `"2+2"` 和 `"3*9"`|
 
 ## <a name="character-classes"></a>字元類別
 
-字元類別會比對一組字元中的任何一個字元。 字元類別包含下表列出的語言項目。 如需詳細資訊，請參閱[字元類別](character-classes-in-regular-expressions.md)。
+字元類別會比對一組字元中的任何一個字元。 字元類別包含下表列出的語言項目。 如需詳細資訊，請參閱 [字元類別](character-classes-in-regular-expressions.md)。
 
 |字元類別|描述|模式|相符項|
 |---------------------|-----------------|-------------|-------------|
-|`[`*character_group*`]`|符合*character_group*中的任何單一字元。 根據預設，比對會區分大小寫。|`[ae]`|`"gray"` 中的 `"a"`<br /><br /> `"lane"` 中的 `"a"`、`"e"`|
-|`[^`*character_group*`]`|否定：比對不在 *character_group* 中的任何單一字元。 根據預設，*character_group* 中的字元會區分大小寫。|`[^aei]`|`"reign"` 中的 `"r"`、`"g"`、`"n"`|
+|`[`*character_group*`]`|符合 *character_group* 中的任何單一字元。 根據預設，比對會區分大小寫。|`[ae]`|`"gray"` 中的 `"a"`<br /><br /> `"lane"` 中的 `"a"`、`"e"`|
+|`[^`*character_group*`]`|否定：比對不在 *character_group* 中的任何單一字元。 根據預設， *character_group* 中的字元會區分大小寫。|`[^aei]`|`"reign"` 中的 `"r"`、`"g"`、`"n"`|
 |`[` *first* `-` *last* `]`|字元範圍：比對從 *first* 至 *last* 範圍內的任何單一字元。|`[A-Z]`|`"AB123"` 中的 `"A"`、`"B"`|
 |`.`|萬用字元：比對除 \n 以外的任何單一字元。<br /><br /> 若要比對常值句號字元 (. 或 `\u002E`)，您必須在前面加上逸出字元 (`\.`)。|`a.e`|`"nave"` 中的 `"ave"`<br /><br /> `"water"` 中的 `"ate"`|
 |`\p{`*名稱*`}`|比對 Unicode 一般分類中或 *name* 指定之具名區塊中的任何單一字元。|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"City Lights"` 中的 `"C"`、`"L"`<br /><br /> `"ДЖem"` 中的 `"Д"`、`"Ж"`|
@@ -93,16 +93,16 @@ ms.locfileid: "87556796"
 
 |分組建構|描述|模式|相符項|
 |------------------------|-----------------|-------------|-------------|
-| subexpression`(` ** `)`|擷取符合的子運算式，並指派以一為起始的序號給它。|`(\w)\1`|`"deep"` 中的 `"ee"`|
+| subexpression`(`  `)`|擷取符合的子運算式，並指派以一為起始的序號給它。|`(\w)\1`|`"deep"` 中的 `"ee"`|
 |`(?<` *名稱* `>` *子運算式* `)`<br /> 或 <br />`(?'` *名稱* `'` *子運算式* `)`|將符合的子運算式擷取到具名群組中。|`(?<double>\w)\k<double>`|`"deep"` 中的 `"ee"`|
 |`(?<` *name1* `-` *name2* `>` *subexpression* `)` <br /> 或 <br /> `(?'` *name1* `-` *name2* `'` *subexpression* `)`|定義對稱群組定義。 如需詳細資訊，請參閱[群組建構](grouping-constructs-in-regular-expressions.md)中的＜平衡群組定義＞一節。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"3+2^((1-3)*(3-1))"` 中的 `"((1-3)*(3-1))"`|
-| subexpression`(?:` ** `)`|定義非擷取型群組。|`Write(?:Line)?`|`"Console.WriteLine()"` 中的 `"WriteLine"`<br /><br /> `"Console.Write(value)"` 中的 `"Write"`|
-| subexpression`(?imnsx-imnsx:` ** `)`|套用或停用 *subexpression* 內指定的選項。 如需詳細資訊，請參閱[正則運算式選項](regular-expression-options.md)。|`A\d{2}(?i:\w+)\b`|`"A12xl A12XL a12xl"` 中的 `"A12xl"`、`"A12XL"`|
-| subexpression`(?=` ** `)`|零寬度右合樣 (Positive Lookahead) 判斷提示。|`\w+(?=\.)`|`"He is. The dog ran. The sun is out."` 中的 `"is"`、`"ran"` 和 `"out"`|
-| subexpression`(?!` ** `)`|零寬度右不合樣 (Negative Lookahead) 判斷提示。|`\b(?!un)\w+\b`|`"unsure sure unity used"` 中的 `"sure"`、`"used"`|
-| subexpression`(?<=` ** `)`|零寬度左合樣 (Positive Lookbehind) 判斷提示。|`(?<=19)\d{2}\b`|`"1851 1999 1950 1905 2003"` 中的 `"99"`、`"50"`、`"05"`|
-| subexpression`(?<!` ** `)`|零寬度左不合樣 (Negative Lookbehind) 判斷提示。|`(?<!19)\d{2}\b`|`"1851 1999 1950 1905 2003"` 中的 `"51"`、`"03"`|
-| subexpression`(?>` ** `)`|不可部分完成的群組。|`[13579](?>A+B+)`|`"1ABB 3ABBC 5AB 5AC"` 中的 `"1ABB"`、`"3ABB"` 和 `"5AB"`|
+| subexpression`(?:`  `)`|定義非擷取型群組。|`Write(?:Line)?`|`"Console.WriteLine()"` 中的 `"WriteLine"`<br /><br /> `"Console.Write(value)"` 中的 `"Write"`|
+| subexpression`(?imnsx-imnsx:`  `)`|套用或停用 *subexpression* 內指定的選項。 如需詳細資訊，請參閱 [正則運算式選項](regular-expression-options.md)。|`A\d{2}(?i:\w+)\b`|`"A12xl A12XL a12xl"` 中的 `"A12xl"`、`"A12XL"`|
+| subexpression`(?=`  `)`|零寬度右合樣 (Positive Lookahead) 判斷提示。|`\w+(?=\.)`|`"He is. The dog ran. The sun is out."` 中的 `"is"`、`"ran"` 和 `"out"`|
+| subexpression`(?!`  `)`|零寬度右不合樣 (Negative Lookahead) 判斷提示。|`\b(?!un)\w+\b`|`"unsure sure unity used"` 中的 `"sure"`、`"used"`|
+| subexpression`(?<=`  `)`|零寬度左合樣 (Positive Lookbehind) 判斷提示。|`(?<=19)\d{2}\b`|`"1851 1999 1950 1905 2003"` 中的 `"99"`、`"50"`、`"05"`|
+| subexpression`(?<!`  `)`|零寬度左不合樣 (Negative Lookbehind) 判斷提示。|`(?<!19)\d{2}\b`|`"1851 1999 1950 1905 2003"` 中的 `"51"`、`"03"`|
+| subexpression`(?>`  `)`|不可部分完成的群組。|`[13579](?>A+B+)`|`"1ABB 3ABBC 5AB 5AC"` 中的 `"1ABB"`、`"3ABB"` 和 `"5AB"`|
 
 ## <a name="quantifiers"></a>數量詞
 
@@ -121,7 +121,7 @@ ms.locfileid: "87556796"
 |`??`|比對上一個項目零次或一次，但越少次越好。|`"rai??n"`|`"ran"`, `"rain"`|
 |`{`*n*`}?`|比對前一個項目剛好 *n* 次。|`",\d{3}?"`|`"1,043.6"` 中的 `",043"`、`"9,876,543,210"` 中的 `",876"`、`",543"` 和 `",210"`|
 |`{`*n*`,}?`|比對前一個項目至少 *n* 次，但愈少次愈好。|`"\d{2,}?"`|`"166"`, `"29"`, `"1930"`|
-|`{`*n* `,` *m*`}?`|比對前一個項目*n* 到 *m* 次，但次數愈少愈好。|`"\d{3,5}?"`|`"166"`, `"17668"`<br /><br /> `"193024"` 中的 `"193"`、`"024"`|
+|`{`*n* `,` *m*`}?`|比對前一個項目 *n* 到 *m* 次，但次數愈少愈好。|`"\d{3,5}?"`|`"166"`, `"17668"`<br /><br /> `"193024"` 中的 `"193"`、`"024"`|
 
 ## <a name="backreference-constructs"></a>反向參考建構
 
@@ -129,7 +129,7 @@ ms.locfileid: "87556796"
 
 |反向參考建構|描述|模式|相符項|
 |-----------------------------|-----------------|-------------|-------------|
-|`\` *數字*|反向參考。 比對編號子運算式的值。|`(\w)\1`|`"seek"` 中的 `"ee"`|
+|`\` *number*|反向參考。 比對編號子運算式的值。|`(\w)\1`|`"seek"` 中的 `"ee"`|
 |`\k<`*名稱*`>`|命名的反向參考。 比對具名運算式的值。|`(?<char>\w)\k<char>`|`"seek"` 中的 `"ee"`|
 
 ## <a name="alternation-constructs"></a>替代建構
@@ -139,8 +139,8 @@ ms.locfileid: "87556796"
 |替代建構|描述|模式|相符項|
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|比對由分隔號 (<code>&#124;</code>) 字元所隔開的任何一個項目。|<code>th(e&#124;is&#124;at)</code>|`"this is the day."` 中的 `"the"`、`"this"`|
-|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|如果 *expression* 所指定的規則運算式模式相符，則比對 *yes*，否則比對選擇性的 *no* 部分。 *expression* 會解譯為零寬度判斷提示。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10 C103 910"` 中的 `"A10"`、`"910"`|
-|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|如果 *name* (具名或編號擷取群組) 有相符項目，則比對 *yes*，否則比對選擇性的 *no*。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg \"Yiska playing.jpg\""` 中的 `"Dogs.jpg "`、`"\"Yiska playing.jpg\""`|
+|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|如果 *expression* 所指定的規則運算式模式相符，則比對 *yes* ，否則比對選擇性的 *no* 部分。 *expression* 會解譯為零寬度判斷提示。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10 C103 910"` 中的 `"A10"`、`"910"`|
+|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|如果 *name* (具名或編號擷取群組) 有相符項目，則比對 *yes* ，否則比對選擇性的 *no* 。|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg \"Yiska playing.jpg\""` 中的 `"Dogs.jpg "`、`"\"Yiska playing.jpg\""`|
 
 ## <a name="substitutions"></a>替代
 
@@ -148,7 +148,7 @@ ms.locfileid: "87556796"
 
 |字元|描述|模式|取代模式|輸入字串|結果字串|
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|
-|`$` *數字*|替代群組 *number* 所比對的子字串。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
+|`$` *number*|替代群組 *number* 所比對的子字串。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
 |`${`*名稱*`}`|替代具名群組 *name* 所比對的子字串。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
 |`$$`|替代常值 "$"。|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|
 |`$&`|替代整個符合項目的複本。|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|
@@ -164,16 +164,16 @@ ms.locfileid: "87556796"
 您可以透過兩種方式指定內嵌選項：
 
 - 使用[其他建構](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`，其中選項或選項集合前面的減號 (-) 會關閉這些選項。 例如，`(?i-mn)` 會開啟不區分大小寫的比對 (`i`)、關閉多行模式 (`m`)，以及關閉未命名的群組擷取 (`n`)。 選項會從定義該選項的位置開始套用至規則運算式模式並且保持生效，直到模式結尾或出現另一個建構反轉選項為止。
-- 藉由使用[群組結構](grouping-constructs-in-regular-expressions.md) `(?imnsx-imnsx:` *子運算式* `)` ，只針對指定的群組定義選項。
+- 使用 [群組結構](grouping-constructs-in-regular-expressions.md) `(?imnsx-imnsx:` *子運算式* `)` ，只定義指定群組的選項。
 
 .NET 正則運算式引擎支援下列內嵌選項：
 
-|選項|說明|模式|相符項|
+|選項|描述|模式|相符項|
 |------------|-----------------|-------------|-------------|
 |`i`|使用不區分大小寫的比對方式。|`\b(?i)a(?-i)a\w+\b`|`"aardvark AAAuto aaaAuto Adam breakfast"` 中的 `"aardvark"`、`"aaaAuto"`|
-|`m`|使用多行模式。 `^` 和 `$` 會比對行的開頭與結尾，而不是字串的開始和結尾。|如需範例，請參閱[正則運算式選項](regular-expression-options.md)中的「多行模式」一節。||
-|`n`|不擷取未命名的群組。|如需範例，請參閱[正則運算式選項](regular-expression-options.md)中的「僅明確捕捉」一節。||
-|`s`|使用單行模式。|如需範例，請參閱[正則運算式選項](regular-expression-options.md)中的「單行模式」一節。||
+|`m`|使用多行模式。 `^` 和 `$` 會比對行的開頭與結尾，而不是字串的開始和結尾。|如需範例，請參閱 [正則運算式選項](regular-expression-options.md)中的「多行模式」一節。||
+|`n`|不擷取未命名的群組。|如需範例，請參閱 [正則運算式選項](regular-expression-options.md)中的「僅明確捕捉」一節。||
+|`s`|使用單行模式。|如需範例，請參閱 [正則運算式選項](regular-expression-options.md)中的「單行模式」一節。||
 |`x`|忽略規則運算式模式中未逸出的空白字元。|`\b(?x) \d+ \s \w+`|`"1 aardvark 2 cats IV centurions"` 中的 `"1 aardvark"`、`"2 cats"`|
 
 ## <a name="miscellaneous-constructs"></a>其他建構
@@ -186,11 +186,11 @@ ms.locfileid: "87556796"
 |`(?#`*批註*`)`|內嵌註解。 註解會在第一個右括號結束。|`\bA(?#Matches words starting with A)\w+\b`|
 |`#` [至行尾]|X 模式註解。 註解從未逸出的 `#` 開始，並延續到行尾。|`(?x)\bA\w+\b#Matches words starting with A`|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
-- [正則運算式](regular-expressions.md)
+- [[規則運算式]](regular-expressions.md)
 - [規則運算式類別](the-regular-expression-object-model.md)
 - [規則運算式 - 快速參考 (以 Word 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [規則運算式 - 快速參考 (以 PDF 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

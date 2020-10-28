@@ -13,14 +13,14 @@ helpviewer_keywords:
 - alternation constructs
 - optional matching patterns
 - constructs, alternation
-- .NET Framework regular expressions, alternation constructs
+- .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 506c1cdeb577452628d67ab00df20dd30881f406
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 30af871502e0db48853705206db5e2b3da28bb76
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495430"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889175"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 
@@ -49,7 +49,7 @@ ms.locfileid: "89495430"
 |<code>(a&#124;e)</code>|比對 "a" 或 "e"。|  
 |`y\b`|比對字邊界上的 "y"。|  
 
-`|` 字元也可以用來與多個字元或子運算式執行兩選一的比對，這些字元或運算式可以包含字元常值和規則運算式語言項目的任何組合。  (字元類別未提供這項功能。 ) 下列範例會使用 `|` 字元，將美國社會安全號碼解壓縮 (SSN) ，也就是具有*ddd*dd dddd 格式的9位數數位 - *dd* - * *，或是美國雇主識別碼 (EIN) ，也就是具有*dd*ddddddd 格式的9位數數位 - * *。
+`|` 字元也可以用來與多個字元或子運算式執行兩選一的比對，這些字元或運算式可以包含字元常值和規則運算式語言項目的任何組合。  (字元類別未提供這項功能。 ) 下列範例會使用 `|` 字元，將美國社會安全號碼解壓縮 (SSN) ，也就是具有  ，或是美國雇主識別碼 (EIN) ，也就是具有  。
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  

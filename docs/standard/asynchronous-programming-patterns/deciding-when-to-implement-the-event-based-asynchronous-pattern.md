@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: c235a838504889a105ef98df47f7373a145503da
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b9c3edeb468445e6f7a58ead194559bed5636579
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289443"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888850"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>決定何時實作事件架構非同步模式
 
-事件架構非同步模式提供的模式可公開類別的非同步行為。 引進此模式之後，.NET Framework 定義兩種模式來公開非同步行為：以 <xref:System.IAsyncResult?displayProperty=nameWithType> 介面為基礎的非同步模式與事件式模式。 本主題說明適合實作這兩種模式的時機。
+事件架構非同步模式提供的模式可公開類別的非同步行為。 隨著這個模式的推出，.NET 會定義兩種模式來公開非同步行為：以介面為基礎的非同步模式 <xref:System.IAsyncResult?displayProperty=nameWithType> ，以及以事件為基礎的模式。 本文說明何時適合您執行這兩種模式。
 
 如需使用 <xref:System.IAsyncResult> 介面進行非同步程式設計的詳細資訊，請參閱[非同步程式設計模型 (APM)](asynchronous-programming-model-apm.md)。
 
@@ -84,9 +84,9 @@ ms.locfileid: "84289443"
 
 - 只有在您有高效能需求，且已驗證事件架構模式無法符合該需求，但 <xref:System.IAsyncResult> 模式能符合時，才公開 <xref:System.IAsyncResult> 模式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：實作支援事件架構非同步模式的元件](component-that-supports-the-event-based-asynchronous-pattern.md)
+- [作法：實作支援事件架構非同步模式的元件](component-that-supports-the-event-based-asynchronous-pattern.md)
 - [事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)
 - [實作事件架構非同步模式](implementing-the-event-based-asynchronous-pattern.md)
 - [實作事件架構非同步模式的最佳作法](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)

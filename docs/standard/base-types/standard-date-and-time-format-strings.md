@@ -7,20 +7,20 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- formatting [.NET Framework], dates
+- formatting [.NET], dates
 - custom DateTime format string
 - format specifiers, custom date and time
 - format strings
 - custom date and time format strings
-- formatting [.NET Framework], time
+- formatting [.NET], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 95f655ace1b2fb38100e3cc1089c4a3f61c5b264
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 36aaef2676383263b2009fd283f1671ef970f20e
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557355"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888629"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準日期和時間格式字串
 
@@ -31,7 +31,7 @@ ms.locfileid: "90557355"
 - 定義日期和時間值的文字表示，可藉由剖析作業轉換成 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值。
 
 > [!TIP]
-> 您可以下載**格式化公用程式**，這個 .NET Core Windows Forms 應用程式可讓您將格式字串套用至數值或日期和時間值，並顯示結果字串。 提供 [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 和 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) 的原始程式碼。
+> 您可以下載 **格式化公用程式** ，這個 .NET Core Windows Forms 應用程式可讓您將格式字串套用至數值或日期和時間值，並顯示結果字串。 提供 [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) 和 [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) 的原始程式碼。
 
 標準日期和時間格式字串可以與 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用。
 
@@ -86,7 +86,7 @@ ms.locfileid: "90557355"
 
 |標準格式字串|由 DateTimeFormatInfo.InvariantInfo 屬性定義|自訂格式字串|
 |----------------------------|----------------------------------------------------------|--------------------------|
-|"O" 或 "o"|None|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
+|"O" 或 "o"|無|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
 |"R" 或 "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd、dd MMM yyyy HH':'mm':'ss 'GMT'|
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|
@@ -441,13 +441,13 @@ ms.locfileid: "90557355"
 
 [控制台] 中 [ **地區及語言選項]** 項目的設定會影響格式化作業所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.DateTimeFormatInfo> 物件，該物件會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。
 
-此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項]**** 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。
+此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項]  項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。
 
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 屬性
 
 格式會受到目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的影響，而此物件是由目前執行緒文化特性隱含提供或由叫用格式之方法的 <xref:System.IFormatProvider> 參數明確提供。 針對 <xref:System.IFormatProvider> 參數，您的應用程式應指定代表文化特性的 <xref:System.Globalization.CultureInfo> 物件，或是指定代表特定文化特性之日期和時間格式化慣例的 <xref:System.Globalization.DateTimeFormatInfo> 物件。 許多標準日期和時間格式規範都是格式化模式的別名，這些模式是由目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性所定義。 您的應用程式可以變更對應 <xref:System.Globalization.DateTimeFormatInfo> 屬性的對應日期和時間格式模式，藉此改變某些標準日期和時間格式規範所產生的結果。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>

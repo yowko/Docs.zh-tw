@@ -11,15 +11,16 @@ helpviewer_keywords:
 - IAsyncResult interface, calling asynchronous methods
 - stopping asynchronous operations
 ms.assetid: 07fba116-045b-473c-a0b7-acdbeb49861f
-ms.openlocfilehash: 88ca1b5bfbb8bfbdfef01dea8af07c5d56784c5c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8e11f734410e266aa4c175551e8a3fbf5d9236c9
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289911"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888902"
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>使用 IAsyncResult 呼叫非同步方法
-.NET Framework 和協力廠商類別程式庫中的型別提供的方法，可讓應用程式在主應用程式執行緒以外的執行緒中執行非同步作業時繼續執行。 下列各節說明並提供示範不同方式的程式碼範例，您可以呼叫使用 <xref:System.IAsyncResult> 設計模式的非同步方法。  
+
+.NET 程式庫和協力廠商類別庫中的類型可以提供方法，讓應用程式在主應用程式執行緒以外的執行緒中執行非同步作業時，繼續執行。 下列各節說明並提供示範不同方式的程式碼範例，您可以呼叫使用 <xref:System.IAsyncResult> 設計模式的非同步方法。  
   
 - 藉[由結束非同步作業來封鎖應用程式執行](blocking-application-execution-by-ending-an-async-operation.md)。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "84289911"
   
 - [使用 AsyncCallback 委派結束非同步作業](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [事件架構非同步模式 (EAP)](event-based-asynchronous-pattern-eap.md)
 - [事件架構非同步模式概觀](event-based-asynchronous-pattern-overview.md)

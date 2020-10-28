@@ -7,15 +7,15 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- assemblies [.NET Framework], attributes
-- attributes [.NET Framework], applying
+- assemblies [.NET], attributes
+- attributes [.NET], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 76591de6a4305b21b89d348f9ffe53f4e67e7334
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 24fe58ddf48e40b422652baa4c5bba86eea6b84f
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162826"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889227"
 ---
 # <a name="apply-attributes"></a>套用屬性
 
@@ -33,11 +33,11 @@ ms.locfileid: "92162826"
 
  當您編譯程式碼時，屬性會發出至中繼資料，並透過執行階段反映服務，提供給通用語言執行平台及任何自訂工具或應用程式使用。
 
- 依照慣例，所有的屬性名稱都會以 "Attribute" 結尾。 不過，有幾種以 Visual Basic 和 C# 等執行階段為目標的語言，並不需要您指定屬性的全名。 例如，如果您想要初始化 <xref:System.ObsoleteAttribute?displayProperty=nameWithType>，則只需要將其參考為**已淘汰**。
+ 依照慣例，所有的屬性名稱都會以 "Attribute" 結尾。 不過，有幾種以 Visual Basic 和 C# 等執行階段為目標的語言，並不需要您指定屬性的全名。 例如，如果您想要初始化 <xref:System.ObsoleteAttribute?displayProperty=nameWithType>，則只需要將其參考為 **已淘汰** 。
 
 ## <a name="apply-an-attribute-to-a-method"></a>將屬性套用至方法
 
- 下列程式碼範例示範如何使用 **ObsoleteAttribute**，將程式碼標示為已淘汰。 `"Will be removed in next version"` 字串會傳遞至屬性。 當呼叫這個屬性所描述的程式碼時，屬性會產生編譯器警告來顯示傳遞的字串。
+ 下列程式碼範例示範如何使用 **ObsoleteAttribute** ，將程式碼標示為已淘汰。 `"Will be removed in next version"` 字串會傳遞至屬性。 當呼叫這個屬性所描述的程式碼時，屬性會產生編譯器警告來顯示傳遞的字串。
 
  [!code-cpp[Conceptual.Attributes.Usage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#3)]
  [!code-csharp[Conceptual.Attributes.Usage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#3)]
@@ -45,7 +45,7 @@ ms.locfileid: "92162826"
 
 ## <a name="apply-attributes-at-the-assembly-level"></a>在元件層級套用屬性
 
- 如果您想要在元件層級套用屬性，請使用 `assembly` `Assembly` Visual Basic) 關鍵字中的 (。 下列程式碼顯示在組件層級套用的 **AssemblyTitleAttribute**。
+ 如果您想要在元件層級套用屬性，請使用 `assembly` `Assembly` Visual Basic) 關鍵字中的 (。 下列程式碼顯示在組件層級套用的 **AssemblyTitleAttribute** 。
 
  [!code-cpp[Conceptual.Attributes.Usage#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#2)]
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
@@ -53,7 +53,7 @@ ms.locfileid: "92162826"
 
  套用此屬性時，字串 `"My Assembly"` 會放在檔案的中繼資料部分中的組件資訊清單。 您可以使用 [MSIL 反組譯工具 (Ildasm.exe)](../../framework/tools/ildasm-exe-il-disassembler.md) 或建立自訂程式擷取屬性，以檢視屬性。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [屬性](index.md)
 - [擷取儲存於屬性中的資訊](retrieving-information-stored-in-attributes.md)

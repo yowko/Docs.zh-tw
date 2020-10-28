@@ -7,23 +7,23 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- strings [.NET Framework],searching
+- strings [.NET],searching
 - best practices,string comparison and sorting
-- strings [.NET Framework],best practices
-- strings [.NET Framework],basic string operations
+- strings [.NET],best practices
+- strings [.NET],basic string operations
 - sorting strings
-- strings [.NET Framework],sorting
-- string comparison [.NET Framework],best practices
+- strings [.NET],sorting
+- string comparison [.NET],best practices
 - string sorting
 - comparing strings
-- strings [.NET Framework],comparing
+- strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ed85d04ffbee0493745c4a5ef63313571b44628b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289361"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889097"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>在 .NET 中使用字串的最佳做法
 
@@ -43,7 +43,7 @@ ms.locfileid: "84289361"
 - 正規化字串以進行比較，使用 <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> 方法，而非 <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> 方法。
 - 使用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法的多載，來測試兩個字串是否相等。
 - 使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 和 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法來排序字串，而不檢查是否相等。
-- 使用區分文化特性的格式來顯示使用者介面中的非字串資料，例如數字和日期。 使用不因[文化](xref:System.Globalization.CultureInfo.InvariantCulture)特性而異的格式，以字串形式保存非字串資料。
+- 使用區分文化特性的格式來顯示使用者介面中的非字串資料，例如數字和日期。 使用不因 [文化](xref:System.Globalization.CultureInfo.InvariantCulture) 特性而異的格式，以字串形式保存非字串資料。
 
 當您使用字串時，請避免下列作法：
 
@@ -91,13 +91,13 @@ ms.locfileid: "84289361"
 > [!NOTE]
 > 您可以下載[排序權數資料表](https://www.microsoft.com/download/details.aspx?id=10921)，該文字檔集合包含在 Windows 作業系統排序及比較作業中使用的字元權數資訊，以及下載[預設 Unicode 定序元素資料表](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (適用於 Linux 和 macOS 的最新版本排序權數資料表)。 Linux 和 macOS 上的特定版本排序權數資料表，取決於在系統上安裝的 [International Components for Unicode](http://site.icu-project.org/) 程式庫。 如需其實作的 ICU 版本及 Unicode 版本詳細資訊，請參閱[下載 ICU](http://site.icu-project.org/download)。
 
-不過，評估兩個字串是否相等或決定排序順序不會產生單一的正確結果，而要取決於用來比較字串的準則而定。 特別是，序數或以目前文化特性的大小寫和排序慣例或不因[文化](xref:System.Globalization.CultureInfo.InvariantCulture)特性而異（以英文語言為基礎的地區設定文化特性）的字串比較，可能會產生不同的結果。
+不過，評估兩個字串是否相等或決定排序順序不會產生單一的正確結果，而要取決於用來比較字串的準則而定。 尤其是，如果字串比較是序數或根據目前文化特性的大小寫與排序慣例或不因 [文化](xref:System.Globalization.CultureInfo.InvariantCulture) 特性而異，則 (以英文語言為基礎的地區設定文化特性，) 可能會產生不同的結果。
 
 此外，使用不同版本 .NET 或使用不同作業系統或作業系統版本上 .NET 所做的字串比較，可能會傳回不同的結果。 如需詳細資訊，請參閱[字串及 Unicode 標準](xref:System.String#Unicode)。
 
 ### <a name="string-comparisons-that-use-the-current-culture"></a>使用目前之文化特性的字串比較
 
-比較字串時，其中一個準則需使用目前文化特性的慣例。 如果比較是以目前文化特性為依據，就會使用執行緒的目前文化特性或地區設定。 如果使用者未設定文化特性，則會預設為控制台 [地區選項] **** 視窗中的設定。 當資料是語言相關資料，以及資料會反映區分文化特性的使用者互動時，請一律使用以目前文化特性為根據的比較。
+比較字串時，其中一個準則需使用目前文化特性的慣例。 如果比較是以目前文化特性為依據，就會使用執行緒的目前文化特性或地區設定。 如果使用者未設定文化特性，則會預設為控制台 [地區選項]  視窗中的設定。 當資料是語言相關資料，以及資料會反映區分文化特性的使用者互動時，請一律使用以目前文化特性為根據的比較。
 
 不過，當文化特性變更時，.NET 中的比較和大小寫行為也會有所變更。 當執行應用程式的電腦其文化特性不同於開發應用程式的電腦時，或執行中的執行緒變更其文化特性時，會發生這種情況。 此種行為有其用意，但對許多開發人員來說並不容易注意到。 下列範例說明美國英文 ("en-US") 和瑞典文 ("sv-SE") 文化特性之間排序次序的差異。 請注意單字 "ångström"、"Windows" 和 "Visual Studio" 出現在已排序的字串陣列中的不同位置。
 
@@ -131,7 +131,7 @@ ms.locfileid: "84289361"
 [!code-csharp[Conceptual.Strings.BestPractices#12](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#12)]
 [!code-vb[Conceptual.Strings.BestPractices#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#12)]
 
-在此情況下，由於 "file：" 是要被視為非語言、不區分文化特性的識別碼，因此應該改為撰寫程式碼，如下列範例所示：
+在此情況下，因為 "file：" 旨在解釋為非語言、不區分文化特性的識別碼，所以應改為撰寫程式碼，如下列範例所示：
 
 [!code-csharp[Conceptual.Strings.BestPractices#13](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#13)]
 [!code-vb[Conceptual.Strings.BestPractices#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#13)]
@@ -147,12 +147,12 @@ ms.locfileid: "84289361"
 > [!IMPORTANT]
 > 雖然字串比較方法可以忽略內嵌的 Null 字元，但 <xref:System.String.Contains%2A?displayProperty=nameWithType>、 <xref:System.String.EndsWith%2A?displayProperty=nameWithType>、 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>、 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>和 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 之類的字串搜尋方法就不能這麼做了。
 
-下列範例會對字串 "Aa" 執行區分文化特性的比較，並使用類似的字串，其中包含 "A" 和 "a" 之間的數個內嵌 null 字元，並顯示兩個字串如何視為相等：
+下列範例會對字串 "Aa" 執行區分文化特性的比較，該字串包含數個在 "A" 和 "a" 之間的內嵌 null 字元，並顯示兩個字串如何視為相等：
 
 [!code-csharp[Conceptual.Strings.BestPractices#19](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls1.cs#19)]
  [!code-vb[Conceptual.Strings.BestPractices#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]
 
-不過，當您使用序數比較時，字串不會視為相等，如下列範例所示：
+但是，當您使用序數比較時，不會將字串視為相等，如下列範例所示：
   
 [!code-csharp[Conceptual.Strings.BestPractices#20](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
 [!code-vb[Conceptual.Strings.BestPractices#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]
@@ -176,7 +176,7 @@ ms.locfileid: "84289361"
 
 不包含 <xref:System.String.Equals%2A?displayProperty=nameWithType> 引數 (包括等號比較運算子) 的 <xref:System.StringComparison> 多載是以序數語意為預設。 在任何情況下，我們建議您呼叫具有 <xref:System.StringComparison> 參數的多載。
 
-### <a name="string-operations-that-use-the-invariant-culture"></a>使用不因文化特性而異的字串作業
+### <a name="string-operations-that-use-the-invariant-culture"></a>使用不變文化特性的字串作業
 
 採用不因文化特性而異的比較會使用靜態 <xref:System.Globalization.CultureInfo.CompareInfo%2A> 屬性傳回的 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性。 這種行為在所有系統上都相同，它會將其範圍之外的任何字元轉譯成它認為是相等非變異字元的字元。 這項原則很適合跨文化特性來維護一套字串行為，但通常會產生非預期的結果。
 
@@ -295,7 +295,7 @@ InvariantCulture: a + ̊ = å
 [!code-csharp[Conceptual.Strings.BestPractices#9](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
 [!code-vb[Conceptual.Strings.BestPractices#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]
 
-### <a name="collections-example-hashtable-constructor"></a>集合範例： Hashtable 函數表
+### <a name="collections-example-hashtable-constructor"></a>集合範例： Hashtable 函數
 
 第二個受到字串比較方式而影響作業的範例是雜湊字串。
 
@@ -317,12 +317,12 @@ InvariantCulture: a + ̊ = å
 
 - 使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 和 `ToString` 方法時，呼叫具有 `provider` 參數的多載 (例如 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 或 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>)，並為該多載傳遞給 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性 (表示所需文化特性的 <xref:System.Globalization.CultureInfo> 執行個體) 或 <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> 屬性。
 
-- 針對字串串連，不允許編譯器執行任何隱含的轉換。 反之，藉由呼叫具有 `provider` 參數的 `ToString` 多載來執行明確轉換。 例如，編譯器會在 <xref:System.Double> 將值轉換為下列程式碼中的字串時，隱含地使用目前的文化特性：
+- 針對字串串連，不允許編譯器執行任何隱含的轉換。 反之，藉由呼叫具有 `provider` 參數的 `ToString` 多載來執行明確轉換。 例如，在 <xref:System.Double> 下列程式碼中將值轉換成字串時，編譯器會隱含地使用目前的文化特性：
 
   [!code-csharp[Implicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#1)]
   [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#1)]
 
-  相反地，您可以藉由呼叫方法來明確指定在轉換中使用其格式化慣例的文化特性 <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> ，如下列程式碼所示：
+  相反地，您可以藉由呼叫方法，明確地指定要在轉換中使用其格式化慣例的文化特性 <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> ，如下列程式碼所示：
 
   [!code-csharp[Explicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#2)]
   [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#2)]
@@ -343,7 +343,7 @@ InvariantCulture: a + ̊ = å
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
 [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
-不過，如果您 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 在和的呼叫中將屬性取代 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 為 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> ，則保存的日期和時間資料將會成功還原，如下列輸出所示：
+但是，如果您將的 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性取代 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 為對和的 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 呼叫 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> ，則會成功還原持續性的日期和時間資料，如下列輸出所示：
 
 ```console
 06.05.1758 21:26

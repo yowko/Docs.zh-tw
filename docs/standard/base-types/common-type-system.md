@@ -9,19 +9,19 @@ dev_langs:
 helpviewer_keywords:
 - type system
 - common type system
-- assemblies [.NET Framework], types
+- assemblies [.NET], types
 - reference types
 - value types
 - cross-language interoperability
-- namespaces [.NET Framework], types
+- namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: 4e3fc4cb03a0b8fd63b41bd912374c29eef3a29a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ad42a77f9c6280211902fc4ffbf25871c537baa5
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555155"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889500"
 ---
 # <a name="common-type-system"></a>一般型別系統
 
@@ -178,9 +178,9 @@ ms.locfileid: "90555155"
 ### <a name="type-accessibility"></a>類型存取範圍  
  所有型別都具有修飾詞 (Modifier)，負責控制其他型別的存取範圍。 下表說明執行階段所支援的型別存取範圍。  
   
-|Accessibility|描述|  
+|協助工具選項|描述|  
 |-------------------|-----------------|  
-|公開|型別可供所有組件存取|  
+|public|型別可供所有組件存取|  
 |組件 (assembly)|型別只能在本身的組件中存取|  
   
  巢狀型別的存取範圍是依據其存取範圍定義域，由成員的宣告存取範圍和立即包含型別的存取範圍定義域來決定。 但是，巢狀型別的存取範圍領域不能超過包含型別 (Containing Type) 的存取範圍領域。  
@@ -282,7 +282,7 @@ ms.locfileid: "90555155"
 |特性|適用於|描述|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、屬性和事件|型別不提供方法的實作。 繼承或實作抽象方法的型別必須提供方法的實作。 唯一的例外狀況 (Exception) 是當衍生型別本身也是抽象型別時。 所有抽象方法都是虛擬的。|  
-|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件 (assembly)<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> 公開<br /> 可從任何型別中存取。|  
+|private、family、assembly、family 和 assembly、family 或 assembly 或是 public|全部|定義成員的存取範圍：<br /><br /> private<br /> 只能在與成員相同的型別或巢狀型別中存取。<br /><br /> family<br /> 可在與成員相同的型別和從它繼承而來的衍生型別中存取。<br /><br /> 組件 (assembly)<br /> 只能在已定義型別的組件中存取。<br /><br /> family 和 assembly<br /> 只能從同時限定家族和組件存取的型別中存取。<br /><br /> family 或 assembly<br /> 只能從限定家族或組件之一存取的型別中存取。<br /><br /> public<br /> 可從任何型別中存取。|  
 |final|方法、屬性和事件|在衍生型別中無法覆寫虛擬方法。|  
 |initialize-only|欄位|只能初始化數值，在初始化之後即無法寫入。|  
 |instance|欄位、方法、屬性和事件|如果成員未標記為 `static` (C# 和 C++)、`Shared` (Visual Basic)、`virtual` (C# 和 C++) 或 `Overridable` (Visual Basic)，則為執行個體成員 (沒有 instance 關鍵字)。 在記憶體中，這類成員的複本數與使用它的物件數一樣。|  
@@ -304,7 +304,7 @@ ms.locfileid: "90555155"
   
 - 衍生型別可覆寫繼承的虛擬方法。 覆寫方法會提供新的方法定義，叫用方法時將根據執行時期的實值型別，而非根據編譯時間得知的變數型別。 只有當虛擬方法未標記為 `final`，而且新的方法至少可像虛擬方法一樣存取時，方法才可覆寫虛擬方法。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET API 瀏覽器](../../../api/index.md)
 - [Common Language Runtime](../clr.md)

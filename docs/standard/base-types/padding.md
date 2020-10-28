@@ -1,6 +1,6 @@
 ---
 title: 在 .NET 中填補字串
-description: 瞭解如何在 .NET 中填補字串。 使用 PadLeft 和 PadRight 方法來加入開頭或尾端字元，以達到指定的總長度。
+description: 瞭解如何在 .NET 中填補字串。 使用 PadLeft 和 PadRight 方法來新增開頭或尾端字元，以達到指定的總長度。
 ms.date: 03/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,24 +8,24 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- strings [.NET Framework], padding
+- strings [.NET], padding
 - white space
 - PadRight method
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: 5bf7023a3429e932a44ad0a0bd3409012f77cbf9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f90a95f0ceb5ad7cc32d451897544fffe56afb6d
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594526"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889045"
 ---
 # <a name="padding-strings-in-net"></a>在 .NET 中填補字串
 
-使用下列其中一個 <xref:System.String> 方法來建立由原始字串組成的新字串，而原始字串會使用前置或後置字元填補至指定的總長度。 填補字元可為空白或指定的字元。 產生的字串會靠右或靠左顯示。 若原始字串的長度已經大於或等於需要的總長度，則填補方法會傳回原封不動的原始字串。如需詳細資訊，請參閱 <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 與 <xref:System.String.PadRight%2A?displayProperty=nameWithType> 這兩個多載方法的**傳回**一節。
+使用下列其中一個 <xref:System.String> 方法來建立由原始字串組成的新字串，而原始字串會使用前置或後置字元填補至指定的總長度。 填補字元可為空白或指定的字元。 產生的字串會靠右或靠左顯示。 若原始字串的長度已經大於或等於需要的總長度，則填補方法會傳回原封不動的原始字串。如需詳細資訊，請參閱 <xref:System.String.PadLeft%2A?displayProperty=nameWithType> 與 <xref:System.String.PadRight%2A?displayProperty=nameWithType> 這兩個多載方法的 **傳回** 一節。
   
-|方法名稱|使用|  
+|方法名稱|用途|  
 |-----------------|---------|  
 |<xref:System.String.PadLeft%2A?displayProperty=nameWithType>|以指定總長度的前置字元填補字串。|  
 |<xref:System.String.PadRight%2A?displayProperty=nameWithType>|以指定總長度的後置字元填補字串。|  

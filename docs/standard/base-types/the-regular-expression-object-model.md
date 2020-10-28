@@ -11,44 +11,44 @@ helpviewer_keywords:
 - Regex class
 - Match class
 - pattern-matching with regular expressions, backreferences
-- .NET Framework regular expressions, classes
+- .NET regular expressions, classes
 - CaptureCollection class
 - Group class
-- characters [.NET Framework], backreferences
+- characters [.NET], backreferences
 - substrings
-- .NET Framework regular expressions, backreferences
+- .NET regular expressions, backreferences
 - searching with regular expressions, classes
 - backreferences
 - Capture class
 - repeating groups of characters
 - MatchCollection class
 - parsing text with regular expressions, backreferences
-- regular expressions [.NET Framework]
-- characters [.NET Framework], regular expressions
-- classes [.NET Framework], regular expression
-- regular expressions [.NET Framework], classes
-- characters [.NET Framework], metacharacters
+- regular expressions [.NET]
+- characters [.NET], regular expressions
+- classes [.NET], regular expression
+- regular expressions [.NET], classes
+- characters [.NET], metacharacters
 - metacharacters, regular expression classes
 - metacharacters, backreferences
 - parsing text with regular expressions, classes
-- regular expressions [.NET Framework], backreferences
-- strings [.NET Framework], regular expressions
+- regular expressions [.NET], backreferences
+- strings [.NET], regular expressions
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: 43672b85ecb64a15179881ec23c7fadd13d64868
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: d6f85d74b40902037620d065f63f1d0ad6cfc205
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768049"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888642"
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
 <a name="introduction"></a> 本主題說明用來處理 .NET 規則運算式的物件模型。 它包含下列區段：  
   
 - [正則運算式引擎](#Engine)  
   
-- [MatchCollection 和 Match 物件](#Match_and_MCollection)  
+- [>matchcollection 和 Match 物件](#Match_and_MCollection)  
   
 - [群組集合](#GroupCollection)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "84768049"
   
 - [Capture 集合](#CaptureCollection)  
   
-- [個別的 Capture](#the_individual_capture)  
+- [個別的捕獲](#the_individual_capture)  
   
 <a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>規則運算式引擎  
@@ -295,7 +295,7 @@ ms.locfileid: "84768049"
     |`Value`|<xref:System.String.Empty?displayProperty=nameWithType>|  
     |`Length`|0|  
   
-     下列範例提供說明。 在規則運算式模式 `aaa(bbb)*ccc` 中，第一個擷取群組 (子字串 "bbb") 可比對零或多次。 因為輸入字串 "aaaccc" 符合模式，所以擷取群組沒有相符項目。  
+     下列範例提供一個實例。 在規則運算式模式 `aaa(bbb)*ccc` 中，第一個擷取群組 (子字串 "bbb") 可比對零或多次。 因為輸入字串 "aaaccc" 符合模式，所以擷取群組沒有相符項目。  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
@@ -350,7 +350,7 @@ ms.locfileid: "84768049"
 |`;`|比對分號。|  
 |`((\w+(\s\w+)*),(\d+);)+`|一或多次比對文字的模式，該文字後面接任何其他文字，後面再接逗號、一或多個數字和分號。 這是第一個擷取群組。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Text.RegularExpressions>
 - [.NET 規則運算式](regular-expressions.md)

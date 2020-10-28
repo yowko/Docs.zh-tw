@@ -13,15 +13,15 @@ helpviewer_keywords:
 - anchors, in regular expressions
 - metacharacters, atomic zero-width assertions
 - metacharacters, anchors
-- .NET Framework regular expressions, anchors
-- .NET Framework regular expressions, atomic zero-width assertions
+- .NET regular expressions, anchors
+- .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: e86bae8a687e89acba9a0b713630b43809f081d1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a6330eebbc69b9a3877a99a4373810d5a124c570
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290625"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889162"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
@@ -54,7 +54,7 @@ ms.locfileid: "84290625"
 |模式|描述|  
 |-------------|-----------------|  
 |`^`|開始在輸入字串的開頭比對 (如果是使用 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項來呼叫此方法，則從行首開始比對)。|  
-|`((\w+(\s?)){2,}`|比對一或多個文字字元，後面接零或接一個空格至少兩次。 這是第一個擷取群組。 此運算式也會定義第二個和第三個捕獲群組：第二個是由已捕獲的單字組成，而第三個則是由捕捉的空白字元組成。|  
+|`((\w+(\s?)){2,}`|比對一或多個文字字元，後面接零或接一個空格至少兩次。 這是第一個擷取群組。 這個運算式也會定義第二個和第三個的捕獲群組：第二個是由捕捉的單字所組成，而第三個則是由已捕捉的空白字元組成。|  
 |`,\s`|比對後面接著空白字元的逗號。|  
 |`(\w+\s\w+)`|比對一或多個文字字元，後面接空格，再接一或多個文字字元。 這是第四個擷取群組。|  
 |`,`|比對逗號。|  
@@ -119,7 +119,7 @@ ms.locfileid: "84290625"
 |`,?`|比對出現零次或一次的常值逗號字元。|
 
 ## <a name="word-boundary-b"></a>字邊界：\b  
- `\b` 錨點指定比對必須發生在文字字元 ( `\w` 語言項目) 和非文字字元 ( `\W` 語言項目) 之間的邊界上。 文字字元由英數字元及底線所組成；非文字字元是非英數字元或底線的任何字元。 （如需詳細資訊，請參閱[字元類別](character-classes-in-regular-expressions.md)。）比對也可能發生在字串開頭或結尾的字邊界上。  
+ `\b` 錨點指定比對必須發生在文字字元 ( `\w` 語言項目) 和非文字字元 ( `\W` 語言項目) 之間的邊界上。 文字字元由英數字元及底線所組成；非文字字元是非英數字元或底線的任何字元。  (如需詳細資訊，請參閱 [字元類別](character-classes-in-regular-expressions.md)。 ) 相符項也可能會發生在字串開頭或結尾的字邊界上。  
   
  `\b` 錨點經常用來確保子運算式會比對整個字組，而非只比對字組的開頭或結尾。 在下列範例中的規則運算式 `\bare\w*\b` 說明這個的使用方式。 它會比對任何以子字串 "are" 為開頭的字組。 範例的輸出也說明了 `\b` 會比對輸入字串的開頭和結尾。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "84290625"
 |`qu`|比對子字串 "qu"。|  
 |`\w+`|比對一個或多個文字字元。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)
 - [正則運算式選項](regular-expression-options.md)

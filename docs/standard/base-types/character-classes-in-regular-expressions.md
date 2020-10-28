@@ -10,45 +10,45 @@ helpviewer_keywords:
 - character classes
 - regular expressions, character classes
 - characters, matching syntax
-- .NET Framework regular expressions, character classes
+- .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292094"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888720"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 
 字元類別會定義一組字元，其中任何字元都可在輸入字串中出現，以便讓比對成功。 .NET 中的規則運算式語言支援下列字元類別：  
   
-- 正字元群組。 輸入字串中的字元必須符合指定字元集的其中一個字元。 如需詳細資訊，請參閱[正字元群組](#PositiveGroup)。  
+- 正字元群組。 輸入字串中的字元必須符合指定字元集的其中一個字元。 如需詳細資訊，請參閱 [正字元群組](#PositiveGroup)。  
   
-- 負字元群組。 輸入字串中的字元不得符合指定字元集的其中一個字元。 如需詳細資訊，請參閱[負字元群組](#NegativeGroup)。  
+- 負字元群組。 輸入字串中的字元不得符合指定字元集的其中一個字元。 如需詳細資訊，請參閱 [負字元群組](#NegativeGroup)。  
   
-- 任何字元。 在規則運算式中的 `.` (點或句號) 字元是萬用字元，可符合 `\n` 以外的任何字元。 如需詳細資訊，請參閱[任一字元](#AnyCharacter)。  
+- 任何字元。 在規則運算式中的 `.` (點或句號) 字元是萬用字元，可符合 `\n` 以外的任何字元。 如需詳細資訊，請參閱 [任一字元](#AnyCharacter)。  
   
-- 一般 Unicode 分類或具名區塊。 輸入字串中的字元必須是特定 Unicode 分類的成員，或者必須落在 Unicode 字元的連續範圍內，比對才會成功。 如需詳細資訊，請參閱[Unicode 分類或 Unicode 區塊](#CategoryOrBlock)。  
+- 一般 Unicode 分類或具名區塊。 輸入字串中的字元必須是特定 Unicode 分類的成員，或者必須落在 Unicode 字元的連續範圍內，比對才會成功。 如需詳細資訊，請參閱 [Unicode 類別或 Unicode 區塊](#CategoryOrBlock)。  
   
-- 負的一般 Unicode 分類或是具名區塊。 輸入字串中的字元不得是特定 Unicode 分類的成員，或者不得落在 Unicode 字元的連續範圍內，比對才會成功。 如需詳細資訊，請參閱[負 Unicode 分類或 Unicode 區塊](#NegativeCategoryOrBlock)。  
+- 負的一般 Unicode 分類或是具名區塊。 輸入字串中的字元不得是特定 Unicode 分類的成員，或者不得落在 Unicode 字元的連續範圍內，比對才會成功。 如需詳細資訊，請參閱 [負 Unicode 分類或 Unicode 區塊](#NegativeCategoryOrBlock)。  
   
-- 文字字元。 輸入字串中的字元可以隸屬於任何適用於文字字元的 Unicode 分類。 如需詳細資訊，請參閱[文字字元](#WordCharacter)。  
+- 文字字元。 輸入字串中的字元可以隸屬於任何適用於文字字元的 Unicode 分類。 如需詳細資訊，請參閱 [文字字元](#WordCharacter)。  
   
-- 非文字字元。 輸入字串中的字元可以隸屬於任何非文字字元的 Unicode 分類。 如需詳細資訊，請參閱[非文字字元](#NonWordCharacter)。  
+- 非文字字元。 輸入字串中的字元可以隸屬於任何非文字字元的 Unicode 分類。 如需詳細資訊，請參閱 [非文字字元](#NonWordCharacter)。  
   
-- 空白字元。 輸入字串中的字元可以是任何 Unicode 分隔符號字元，以及任何一種控制字元。 如需詳細資訊，[請參閱空白字元](#WhitespaceCharacter)。  
+- 空白字元。 輸入字串中的字元可以是任何 Unicode 分隔符號字元，以及任何一種控制字元。 如需詳細資訊， [請參閱空白字元](#WhitespaceCharacter)。  
   
-- 非空白字元。 輸入字串中的字元可以是空白字元以外的任何字元。 如需詳細資訊，請參閱[非](#NonWhitespaceCharacter)空白字元。  
+- 非空白字元。 輸入字串中的字元可以是空白字元以外的任何字元。 如需詳細資訊，請參閱 [非](#NonWhitespaceCharacter)空白字元。  
   
-- 十進位數字。 輸入字串中的字元可以是歸類為 Unicode 十進位數字的任何一個數字字元。 如需詳細資訊，請參閱[十進位數位符](#DigitCharacter)。  
+- 十進位數字。 輸入字串中的字元可以是歸類為 Unicode 十進位數字的任何一個數字字元。 如需詳細資訊，請參閱 [十進位數位符](#DigitCharacter)。  
   
-- 非十進位數字。 輸入字串中的字元可以是 Unicode 十進位數字以外的任何字元。 如需詳細資訊，請參閱[十進位數位符](#NonDigitCharacter)。  
+- 非十進位數字。 輸入字串中的字元可以是 Unicode 十進位數字以外的任何字元。 如需詳細資訊，請參閱 [十進位數位符](#NonDigitCharacter)。  
   
- .NET 支援字元類別減法運算式，可讓您將一組字元定義為從某個字元類別中排除另一個字元類別的結果。 如需詳細資訊，請參閱[字元類別減法](#CharacterClassSubtraction)。  
+ .NET 支援字元類別減法運算式，可讓您將一組字元定義為從某個字元類別中排除另一個字元類別的結果。 如需詳細資訊，請參閱 [字元類別減法](#CharacterClassSubtraction)。  
   
 > [!NOTE]
-> 依類別目錄比對字元的字元類別（例如[\w](#WordCharacter)來比對文字字元或[\P {} ](#CategoryOrBlock)以符合 Unicode 類別），會依賴 <xref:System.Globalization.CharUnicodeInfo> 類別來提供字元分類的相關資訊。  從 .NET Framework 4.6.2 開始，字元類別根據 [Unicode 標準 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)。 在 .NET Framework 4 至 .NET Framework 4.6.1 中，則是根據 [Unicode 標準 6.3.0 版](https://www.unicode.org/versions/Unicode6.3.0/)。  
+> 依類別目錄比對字元的字元類別（例如[\w](#WordCharacter)來比對單字字元或[\P {} ](#CategoryOrBlock)以符合 Unicode 分類），會依賴 <xref:System.Globalization.CharUnicodeInfo> 類別提供字元分類的相關資訊。 在 .NET Framework 4.6.2 和更新版本中，字元類別目錄是以 [Unicode 標準8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/)為基礎。
   
 <a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>正字元群組：[ ]  
@@ -58,13 +58,13 @@ ms.locfileid: "84292094"
 
 `[*character_group*]`
 
- 其中 *character_group* 是為了讓比對成功而可以出現在輸入字串中的個別字元清單。 *character_group*可以包含一個或多個常值字元、 [escape 字元](character-escapes-in-regular-expressions.md)或字元類別的任意組合。  
+ 其中 *character_group* 是為了讓比對成功而可以出現在輸入字串中的個別字元清單。 *character_group* 可以包含一或多個常值字元、 [escape 字元](character-escapes-in-regular-expressions.md)或字元類別的任何組合。  
   
  指定字元範圍的語法如下所示：  
   
 `[firstCharacter-lastCharacter]`  
   
- 其中*firstCharacter*是開始範圍的字元，而*而 lastcharacter*是結束範圍的字元。 字元範圍是指一系列連續的字元，定義的方式是指定系列中的第一個字元、連字號 (-)，然後是系列中的最後一個字元。 如果兩個字元具有相鄰的 Unicode 字碼指標，這兩個字元就是連續字元。 *firstCharacter* 必須是較低字碼指標的字元，*lastCharacter* 必須是較高字碼指標的字元。
+ 其中 *firstCharacter* 是開始範圍的字元，而 *lastCharacter* 則是結束範圍的字元。 字元範圍是指一系列連續的字元，定義的方式是指定系列中的第一個字元、連字號 (-)，然後是系列中的最後一個字元。 如果兩個字元具有相鄰的 Unicode 字碼指標，這兩個字元就是連續字元。 *firstCharacter* 必須是較低字碼指標的字元， *lastCharacter* 必須是較高字碼指標的字元。
 
 > [!NOTE]
 > 由於正字元群組可以包含一組字元和一個範圍的字元，因此連字號字元 (`-`) 會一律解譯成範圍分隔符號，除非該字元是群組的第一個或最後一個字元。
@@ -114,20 +114,20 @@ ms.locfileid: "84292094"
 
 `[*^character_group*]`
 
- 其中 *character_group* 是為了讓比對成功而不可出現在輸入字串中的個別字元清單。 *character_group*可以包含一個或多個常值字元、 [escape 字元](character-escapes-in-regular-expressions.md)或字元類別的任意組合。  
+ 其中 *character_group* 是為了讓比對成功而不可出現在輸入字串中的個別字元清單。 *character_group* 可以包含一或多個常值字元、 [escape 字元](character-escapes-in-regular-expressions.md)或字元類別的任何組合。  
   
  指定字元範圍的語法如下所示：  
 
 `[^*firstCharacter*-*lastCharacter*]`
 
-其中*firstCharacter*是開始範圍的字元，而*而 lastcharacter*是結束範圍的字元。 字元範圍是指一系列連續的字元，定義的方式是指定系列中的第一個字元、連字號 (-)，然後是系列中的最後一個字元。 如果兩個字元具有相鄰的 Unicode 字碼指標，這兩個字元就是連續字元。 *firstCharacter* 必須是較低字碼指標的字元，*lastCharacter* 必須是較高字碼指標的字元。
+其中 *firstCharacter* 是開始範圍的字元，而 *lastCharacter* 則是結束範圍的字元。 字元範圍是指一系列連續的字元，定義的方式是指定系列中的第一個字元、連字號 (-)，然後是系列中的最後一個字元。 如果兩個字元具有相鄰的 Unicode 字碼指標，這兩個字元就是連續字元。 *firstCharacter* 必須是較低字碼指標的字元， *lastCharacter* 必須是較高字碼指標的字元。
 
 > [!NOTE]
 > 由於負字元群組可以包含一組字元和一個範圍的字元，因此連字號字元 (`-`) 會一律解譯成範圍分隔符號，除非該字元是群組的第一個或最後一個字元。
   
  可以串連兩個或多個字元範圍。 例如，若要指定從 "0" 到 "9" 的十進位數字範圍、從 "a" 到 "f" 的小寫字母範圍，以及從 "A" 到 "F" 的大寫字母範圍，可以使用 `[0-9a-fA-F]`。  
   
- 負字元群組中的前置插入號字元（ `^` ）是強制性的，表示字元群組是負字元群組，而不是正字元群組。  
+ 負字元群組中 () 的前置插入號字元 `^` 是必要的，而且表示字元群組是負字元群組，而不是正字元群組。  
   
 > [!IMPORTANT]
 > 較大規則運算式模式中的負字元群組不是零寬度的判斷提示。 也就是說，在評估負字元群組之後，規則運算式引擎會在輸入字串中前進一個字元。  
@@ -158,7 +158,7 @@ ms.locfileid: "84292094"
 ## <a name="any-character-"></a>任何字元：.  
  句號字元 (.) 會比對 `\n` (新行字元 \u000A) 以外任何具有下列兩項資格的字元：  
   
-- 如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱[正則運算式選項](regular-expression-options.md)。  
+- 如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱 [正則運算式選項](regular-expression-options.md)。  
   
      下列範例將示範 `.` 字元類別的預設行為與使用 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項的行為有何不同。 規則運算式 `^.+` 會從字串開頭開始，比對每一個字元。 根據預設，比對會在第一行結尾結束。規則運算式模式會比對歸位字元 `\r` 或 \u000D，但不會比對 `\n`。 由於 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項會將整個輸入字串解譯為單行，因此它會比對輸入字串中的每個字元，包括 `\n`。  
   
@@ -184,9 +184,9 @@ ms.locfileid: "84292094"
   
  `\p{`*名稱*`}`  
   
- 符合任何屬於 Unicode 一般分類或命名區塊的字元，其中*name*是分類縮寫或命名區塊名稱。 如需分類縮寫的清單，請參閱本主題稍後的[支援的 Unicode 一般分類](#SupportedUnicodeGeneralCategories)一節。 如需命名區塊的清單，請參閱本主題稍後的[支援的命名區塊](#SupportedNamedBlocks)一節。  
+ 比對屬於 Unicode 一般分類或命名區塊的任何字元，其中 *name* 是類別縮寫或命名區塊名稱。 如需分類縮寫的清單，請參閱本主題稍後的 [支援的 Unicode 一般分類](#SupportedUnicodeGeneralCategories) 一節。 如需命名區塊的清單，請參閱本主題稍後的「 [支援的命名區塊](#SupportedNamedBlocks) 」一節。  
   
- 下列範例會使用 `\p{` *名稱* `}` 結構來比對 Unicode 一般分類（在此案例中為 `Pd` 、或標點符號、破折號分類）和命名區塊（ `IsGreek` 和 `IsBasicLatin` 命名區塊）。  
+ 下列範例會使用 `\p{` *名稱* `}` 結構來比對 Unicode 一般分類 (在此案例中為、 `Pd` 或標點符號、虛線類別目錄) 和命名區塊 (`IsGreek` 和 `IsBasicLatin` 命名區塊) 。  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  
@@ -213,9 +213,9 @@ ms.locfileid: "84292094"
   
  `\P{`*名稱*`}`  
   
- 比對任何不屬於 Unicode 一般分類或具名區塊的字元，其中 *name* 是分類縮寫或是具名區塊名稱。 如需分類縮寫的清單，請參閱本主題稍後的[支援的 Unicode 一般分類](#SupportedUnicodeGeneralCategories)一節。 如需命名區塊的清單，請參閱本主題稍後的[支援的命名區塊](#SupportedNamedBlocks)一節。  
+ 比對任何不屬於 Unicode 一般分類或具名區塊的字元，其中 *name* 是分類縮寫或是具名區塊名稱。 如需分類縮寫的清單，請參閱本主題稍後的 [支援的 Unicode 一般分類](#SupportedUnicodeGeneralCategories) 一節。 如需命名區塊的清單，請參閱本主題稍後的「 [支援的命名區塊](#SupportedNamedBlocks) 」一節。  
   
- 下列範例會使用 `\P{` *名稱* `}` 結構，從數值字串中移除任何貨幣符號（在此案例中為、 `Sc` 或符號、貨幣分類）。  
+ 下列範例會使用 `\P{` *名稱* `}` 結構來移除任何貨幣符號 (在此案例中為， `Sc` 或符號，貨幣類別目錄) 自數值字串。  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/notcategory1.cs#7)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
@@ -237,7 +237,7 @@ ms.locfileid: "84292094"
 |Nd|數字、十進位數字|  
 |Pc|標點符號、連接器。 這個分類包含十個字元，其中最常用的是 LOWLINE 字元 (_)，u+005F。|  
   
- 如果指定了符合 ECMAScript 的行為，`\w` 就等於 `[a-zA-Z_0-9]`。 如需 ECMAScript 正則運算式的資訊，請參閱[正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
+ 如果指定了符合 ECMAScript 的行為，`\w` 就等於 `[a-zA-Z_0-9]`。 如需 ECMAScript 正則運算式的詳細資訊，請參閱 [正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
   
 > [!NOTE]
 > 由於它會比對任何文字字元，因此，如果規則運算式模式嘗試多次比對任何文字字元且後面接著特定文字字元，`\w` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[數量詞](quantifiers-in-regular-expressions.md)。  
@@ -271,7 +271,7 @@ ms.locfileid: "84292094"
 |Nd|數字、十進位數字|  
 |Pc|標點符號、連接器。 這個分類包含十個字元，其中最常用的是 LOWLINE 字元 (_)，u+005F。|  
   
- 如果指定了符合 ECMAScript 的行為，`\W` 就等於 `[^a-zA-Z_0-9]`。 如需 ECMAScript 正則運算式的資訊，請參閱[正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
+ 如果指定了符合 ECMAScript 的行為，`\W` 就等於 `[^a-zA-Z_0-9]`。 如需 ECMAScript 正則運算式的詳細資訊，請參閱 [正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
   
 > [!NOTE]
 > 由於它會比對任何非文字字元，因此，如果規則運算式模式嘗試多次比對任何非文字字元，且後面接著特定非文字字元，`\W` 語言項目就會經常與 lazy 數量詞搭配使用。 如需詳細資訊，請參閱[數量詞](quantifiers-in-regular-expressions.md)。  
@@ -303,7 +303,7 @@ ms.locfileid: "84292094"
 |`\x85`|省略符號或 NEXT LINE (NEL) 字元 (…) \u0085。|  
 |`\p{Z}`|比對任何分隔符號字元。|  
   
- 如果指定了符合 ECMAScript 的行為，`\s` 就等於 `[ \f\n\r\t\v]`。 如需 ECMAScript 正則運算式的資訊，請參閱[正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
+ 如果指定了符合 ECMAScript 的行為，`\s` 就等於 `[ \f\n\r\t\v]`。 如需 ECMAScript 正則運算式的詳細資訊，請參閱 [正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
   
  以下範例將說明 `\s` 字元類別。 它會定義規則運算式模式 `\b\w+(e)?s(\s|$)`，該模式會比對結尾為 "s" 或 "es" 且後面加上空白字元或是輸入字串結尾的文字。 規則運算式的解譯方式如下表所示。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "84292094"
 ## <a name="non-whitespace-character-s"></a>非空白字元：\S  
  `\S` 會比對任何非空白字元。 它相當於 `[^\f\n\r\t\v\x85\p{Z}]` 規則運算式模式，或是規則運算式模式的相反模式，相當於會比對空白字元的 `\s`。 如需詳細資訊，請參閱[空白字元：\s](#WhitespaceCharacter)。  
   
- 如果指定了符合 ECMAScript 的行為，`\S` 就等於 `[^ \f\n\r\t\v]`。 如需 ECMAScript 正則運算式的資訊，請參閱[正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
+ 如果指定了符合 ECMAScript 的行為，`\S` 就等於 `[^ \f\n\r\t\v]`。 如需 ECMAScript 正則運算式的詳細資訊，請參閱 [正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
   
  下列範例將說明 `\S` 語言項目。 規則運算式模式 `\b(\S+)\s?` 會比對以空白字元分隔的字串。 在比對之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個項目包含相符的字串。 規則運算式的解譯方式如下表所示。  
   
@@ -339,7 +339,7 @@ ms.locfileid: "84292094"
 ## <a name="decimal-digit-character-d"></a>十進位數字字元：\d  
  `\d` 會比對任何十進位數字。 它相當於 `\p{Nd}` 規則運算式模式，其中包括標準的十進位數字 0-9，以及若干其他字元集的十進位數字。  
   
- 如果指定了符合 ECMAScript 的行為，`\d` 就等於 `[0-9]`。 如需 ECMAScript 正則運算式的資訊，請參閱[正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
+ 如果指定了符合 ECMAScript 的行為，`\d` 就等於 `[0-9]`。 如需 ECMAScript 正則運算式的詳細資訊，請參閱 [正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
   
  下列範例將說明 `\d` 語言項目。 它會測試輸入字串是否表示美國和加拿大的有效電話號碼。 規則運算式模式 `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` 的定義如下表所示。  
   
@@ -361,7 +361,7 @@ ms.locfileid: "84292094"
 ## <a name="non-digit-character-d"></a>非數字字元：\D  
  `\D` 會比對任何非數字字元。 它相當於 `\P{Nd}` 規則運算式模式。  
   
- 如果指定了符合 ECMAScript 的行為，`\D` 就等於 `[^0-9]`。 如需 ECMAScript 正則運算式的資訊，請參閱[正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
+ 如果指定了符合 ECMAScript 的行為，`\D` 就等於 `[^0-9]`。 如需 ECMAScript 正則運算式的詳細資訊，請參閱 [正則運算式選項](regular-expression-options.md)中的「ECMAScript 相符行為」一節。  
   
  下列範例將說明 \D 語言項目。 它會測試像是組件編號這類字串，是否由十進位和非十進位字元的適當組合所構成。 規則運算式模式 `^\D\d{1,5}\D*$` 的定義如下表所示。  
   
@@ -546,7 +546,7 @@ ms.locfileid: "84292094"
   
  `[` *base_group* `-[` *excluded_group* `]]`  
   
- 方括號 (`[]`) 和連字號 (`-`) 為必要。 *base_group* 是[正字元群組](#PositiveGroup)或[負字元群組](#NegativeGroup)。 *excluded_group* 元件是另一個正字元群組或負字元群組，或者是另一個字元類別減法運算式 (也就是說，您可以將字元類別減法運算式設為巢狀)。  
+ 方括號 (`[]`) 和連字號 (`-`) 為必要。 *base_group* 是 [正字元群組](#PositiveGroup)或 [負字元群組](#NegativeGroup)。 *excluded_group* 元件是另一個正字元群組或負字元群組，或者是另一個字元類別減法運算式 (也就是說，您可以將字元類別減法運算式設為巢狀)。  
   
  例如，假設您有一個由 "a" 到 "z" 字元範圍組成的基底群組。 若要定義一組由基底群組所組成的字元，但不包括字元 "m"，則使用 `[a-z-[m]]`。 若要定義一組由基底群組所組成的字元，但不包括 "d"、"j" 和 "p" 這組字元，則使用 `[a-z-[djp]]`。 若要定義一組由基底群組所組成的字元，但不包括 "m" 到 "p" 的字元範圍，則使用 `[a-z-[m-p]]`。  
   
@@ -567,7 +567,7 @@ ms.locfileid: "84292094"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Char.GetUnicodeCategory%2A>
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

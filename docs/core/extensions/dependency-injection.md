@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 09/23/2020
 ms.topic: overview
-ms.openlocfilehash: 2aaa24e54dad7b765781bf7c790890a57a77af14
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: d2dbe06597c99158eaa39812d4d5a95288450adc
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608349"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888562"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 中的相依性插入
 
@@ -56,7 +56,7 @@ public class Worker : BackgroundService
 
 - 使用介面或基底類別來將相依性資訊抽象化。
 - 在服務容器中註冊相依性。 .NET 提供內建的服務容器 <xref:System.IServiceProvider> 。 服務通常會在應用程式啟動時註冊，並附加至 <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> 。 新增所有服務之後，您就可以使用 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider%2A> 來建立服務容器。
-- 將服務「插入」** 到服務使用位置之類別的建構函式。 架構會負責建立相依性的執行個體，並在不再需要時將它捨棄。
+- 將服務「插入」  到服務使用位置之類別的建構函式。 架構會負責建立相依性的執行個體，並在不再需要時將它捨棄。
 
 例如， `IMessageWriter` 介面會定義 `Write` 方法：
 
@@ -95,7 +95,7 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
 
 `LoggingMessageWriter` 相依于 <xref:Microsoft.Extensions.Logging.ILogger%601> 它在函式中要求的。 `ILogger<TCategoryName>` 是 [架構提供的服務](#framework-provided-services)。
 
-以鏈結方式使用相依性插入並非不尋常。 每個要求的相依性接著會要求其自己的相依性。 容器會解決圖形中的相依性，並傳回完全解析的服務。 必須先解析的相依性集合組通常稱為「相依性樹狀結構」**、「相依性圖形」** 或「物件圖形」**。
+以鏈結方式使用相依性插入並非不尋常。 每個要求的相依性接著會要求其自己的相依性。 容器會解決圖形中的相依性，並傳回完全解析的服務。 必須先解析的相依性集合組通常稱為「相依性樹狀結構」  、「相依性圖形」  或「物件圖形」  。
 
 容器會 `ILogger<TCategoryName>` 利用 [ (泛型) 開放式](/dotnet/csharp/language-reference/language-specification/types#open-and-closed-types)型別來解析，因此不需要註冊每個 [ (泛型) 結構類型](/dotnet/csharp/language-reference/language-specification/types#constructed-types)。
 
@@ -173,7 +173,7 @@ Microsoft 延伸模組使用註冊一組相關服務的慣例。 慣例是使用
 使用 Entity Framework Core 時， <xref:Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext%2A> 擴充方法預設會註冊 `DbContext` 具有範圍存留期的類型。
 
 > [!NOTE]
-> 請勿 ***從 singleton 解析已*** 設定範圍的服務。 處理後續要求時，它可能會導致服務有不正確的狀態。 您可以：
+> 請 * **not** _ 從 singleton 解析已設定範圍的服務，並小心不要間接執行，例如透過暫時性的服務。 處理後續要求時，它可能會導致服務有不正確的狀態。 您可以：
 >
 > - 從範圍或暫時性服務解析單一服務。
 > - 從另一個範圍或暫時性服務解析已設定範圍的服務。
@@ -194,7 +194,7 @@ Microsoft 延伸模組使用註冊一組相關服務的慣例。 慣例是使用
 在處理要求的應用程式中，會在應用程式關閉時處置單一服務 <xref:Microsoft.Extensions.DependencyInjection.ServiceProvider> 。 因為在關閉應用程式之前不會釋出記憶體，請考慮使用單一服務的記憶體。
 
 > [!WARNING]
-> 請勿 ***從 singleton 解析已*** 設定範圍的服務。 處理後續要求時，它可能會導致服務有不正確的狀態。 從範圍或暫時性服務解析單一服務是很好的。
+> 請勿 _*_從 singleton 解析已_*_ 設定範圍的服務。 處理後續要求時，它可能會導致服務有不正確的狀態。 從範圍或暫時性服務解析單一服務是很好的。
 
 ## <a name="service-registration-methods"></a>服務註冊方法
 
@@ -221,14 +221,14 @@ services.TryAddSingleton<IMessageWriter, DifferentMessageWriter>();
 
 沒有 `TryAddSingleton` 任何作用，因為它已經加入，而且 "try" 將會失敗。
 
-如需詳細資訊，請參閱
+如需詳細資訊，請參閱：
 
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAdd%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton%2A>
 
-只有在尚未有*相同類型*的執行時， [TryAddEnumerable (ServiceDescriptor) ](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A)方法才會註冊服務。 多個服務會透過 `IEnumerable<{SERVICE}>` 解析。 註冊服務時，如果尚未加入相同類型的實例，請新增實例。 程式庫作者會使用 `TryAddEnumerable` 來避免在容器中註冊多個執行複本。
+只有在尚未有 _of 相同類型 * 的 TryAddEnumerable 時， [ (ServiceDescriptor) ](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) 方法才會註冊服務。 多個服務會透過 `IEnumerable<{SERVICE}>` 解析。 註冊服務時，如果尚未加入相同類型的實例，請新增實例。 程式庫作者會使用 `TryAddEnumerable` 來避免在容器中註冊多個執行複本。
 
 在下列範例中，第一次呼叫 `TryAddEnumerable` 註冊為的 `MessageWriter` 實作為 `IMessageWriter1` 。 第二個呼叫會註冊 `MessageWriter` `IMessageWriter2` 。 第三個呼叫沒有任何作用，因為 `IMessageWriter1` 已註冊的實作為 `MessageWriter` ：
 
@@ -272,7 +272,7 @@ services.Add(descriptor);
 
 建構函式可以接受不是由相依性插入提供的引數，但引數必須指派預設值。
 
-當服務由 `IServiceProvider` 或 `ActivatorUtilities` 解析時，建構函式插入會要求 *public*建構函式。
+當服務由 `IServiceProvider` 或 `ActivatorUtilities` 解析時，建構函式插入會要求 *public* 建構函式。
 
 當服務由 `ActivatorUtilities` 解析時，建構函式插入只要求只能有一個適用的建構函式存在。 支援建構函式多載，但只能有一個多載存在，其引數可以藉由相依性插入而完成。
 
@@ -287,10 +287,11 @@ services.Add(descriptor);
 
 範圍服務會由建立這些服務的容器處置。 如果在根容器中建立範圍服務，服務的存留期會有效地升階為 singleton，因為它只會在應用程式關閉時由根容器處置。 當呼叫 `BuildServiceProvider` 時，驗證服務範圍會攔截到這些情況。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 .NET 中的相依性插入](dependency-injection-usage.md)
 - [相依性插入指導方針](dependency-injection-guidelines.md)
+- [ASP.NET Core 中的相依性插入](/aspnet/core/fundamentals/dependency-injection)
 - [適用于 DI 應用程式開發的 NDC 會議模式](https://www.youtube.com/watch?v=x-C-CNBVTaY)
 - [明確相依性準則](../../architecture/modern-web-apps-azure/architectural-principles.md#explicit-dependencies)
 - [控制的容器和相依性插入模式的反轉 (聖馬丁 Fowler) ](https://www.martinfowler.com/articles/injection.html)

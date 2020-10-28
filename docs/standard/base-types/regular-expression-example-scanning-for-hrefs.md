@@ -10,16 +10,16 @@ helpviewer_keywords:
 - searching with regular expressions, examples
 - parsing text with regular expressions, examples
 - regular expressions, examples
-- .NET Framework regular expressions, examples
-- regular expressions [.NET Framework], examples
+- .NET regular expressions, examples
+- regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 7bcc2a4242bfaed3e3340347a30e97e7e4060794
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: f2f7cca1e357971d2b0be2a0d7ddfb8ae208a44a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85802844"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889396"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>規則運算式範例：掃描 HREF
 下列範例將搜尋輸入字串，並顯示所有 href="..." 值和它們在字串中的位置。  
@@ -57,6 +57,6 @@ ms.locfileid: "85802844"
   
  為了解決這些問題，<xref:System.Text.RegularExpressions.Regex> 類別支援 `(?<name>…)` 的語法，可將相符項目擷取至指定的位置 (該位置可以使用字串或整數命名；重新叫用整數的速度更快)。 因此，相同字串的所有替代比對皆可導向相同的位置。 萬一發生衝突時，最後一個進入位置的比對就是成功的比對 (不過，您可以使用單一位置之多個比對的完整清單。 如需詳細資訊，請參閱 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合。)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 規則運算式](regular-expressions.md)

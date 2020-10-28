@@ -1,5 +1,5 @@
 ---
-title: 將字串轉換成 DateTime
+title: 將字串轉換為 DateTime
 description: 了解剖析表示日期與時間的字串，以從日期與時間字串建立 DateTime 的技術。
 ms.date: 02/15/2018
 ms.technology: dotnet-standard
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - parsing strings, date and time strings
 - date and time strings
 - ParseExact method
-- enumerations [.NET Framework], parsing strings
+- enumerations [.NET], parsing strings
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9fba80e4dbe1e4950ed24e7489ac48ea1b6ff20b
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: f6ac4672a81db7047069f726f7eb1b920a82b3db
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662897"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889032"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -53,10 +53,10 @@ ms.locfileid: "84662897"
 下面的範例會示範如何使用 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 方法將 `string` 轉換成 <xref:System.DateTime>。 本範例會使用與目前執行緒相關聯的文化特性。 如果與目前文化特性相關聯的 <xref:System.Globalization.CultureInfo> 無法剖析輸入字串，則會擲回 <xref:System.FormatException>。
 
 > [!TIP]
-> 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行]**** 按鈕以查看輸出。 您也可以編輯它們以進行實驗。
+> 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行]  按鈕以查看輸出。 您也可以編輯它們以進行實驗。
 
 > [!NOTE]
-> 這些範例可在適用于[c #](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions)和[Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions)的 GitHub 檔存放庫中取得。
+> 這些範例適用于 [c #](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) 和 [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions)的 GitHub 檔存放庫。
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -84,10 +84,10 @@ ms.locfileid: "84662897"
 
 <xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每個多載也都有 <xref:System.IFormatProvider> 參數，可提供有關設定字串格式的特定文化特性資訊。 此 <xref:System.IFormatProvider> 物件是代表標準文化特性的 <xref:System.Globalization.CultureInfo> 物件，或 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  <xref:System.DateTime.ParseExact%2A> 也會使用可定義一或多個自訂日期和時間格式的額外字串或字串陣列引數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [剖析字串](parsing-strings.md)
 - [格式化類型](formatting-types.md)
 - [.NET 中的類型轉換](type-conversion.md)
 - [標準日期和時間格式](standard-date-and-time-format-strings.md)
-- [自訂日期與時間格式字串](custom-date-and-time-format-strings.md)
+- [自訂日期和時間格式字串](custom-date-and-time-format-strings.md)

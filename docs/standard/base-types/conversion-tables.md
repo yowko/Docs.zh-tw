@@ -9,15 +9,15 @@ helpviewer_keywords:
 - converting types, narrowing conversions
 - converting types, widening conversions
 - base types, converting
-- tables [.NET Framework], type conversions
-- data types [.NET Framework], converting
+- tables [.NET], type conversions
+- data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: bb696c65078a5dae0b81a48bffc786d2257496c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27578d46a80b0372c6ddc2266a751cd0e6e9aa91
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290561"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889448"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET 中的類型轉換表
 將一種類型的值轉換成另一種大小相等或較大類型的值時，就會發生擴展轉換。 將一種類型的值轉換成另一種大小較小類型的值時，就會發生縮小轉換。 本主題中的表格將說明這兩種轉換類型的行為。  
@@ -69,7 +69,7 @@ ms.locfileid: "84290561"
 |<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - [.NET 中的類型轉換](type-conversion.md)

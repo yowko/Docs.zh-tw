@@ -9,19 +9,19 @@ helpviewer_keywords:
 - searching with regular expressions, examples
 - parsing text with regular expressions, examples
 - regular expressions, examples
-- .NET Framework regular expressions, examples
-- regular expressions [.NET Framework], examples
+- .NET regular expressions, examples
+- regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 3b657ac6c88a1ee846f7f1d2156a18fd34621808
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b5eca8c294349fada9cfb1cb3ed8e2012edd8bda
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803946"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889409"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>規則運算式範例：變更日期格式
-下列程式碼範例會使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，將格式為*mm*dd yy 的日期取代為 / *dd* / *yy* *dd* - *mm* - *yy*格式的日期。  
+下列程式碼範例會使用 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 方法，將 *mm* dd yy 格式的日期取代為 / *dd* / *yy* *dd* - *mm* - *yy* 格式的日期。  
 
 [!INCLUDE [regex](../../../includes/regex.md)]
 
@@ -57,6 +57,6 @@ ms.locfileid: "85803946"
 |`-`|加入連字號。|  
 |`$(year)`|加入 `year` 擷取群組所擷取的字串。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 規則運算式](regular-expressions.md)

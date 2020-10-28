@@ -10,19 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - multiple attribute instances
 - AttributeTargets enumeration
-- attributes [.NET Framework], custom
+- attributes [.NET], custom
 - AllowMultiple property
 - custom attributes
 - AttributeUsageAttribute class, custom attributes
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550921"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889188"
 ---
 # <a name="writing-custom-attributes"></a>撰寫自訂屬性
 若要設計您自己的自訂屬性，並不需要精通很多新概念。 假如您擅長物件導向的程式設計，且瞭解如何設計類別，那麼您就已經擁有大部分所需的知識。 自訂屬性基本上是一種直接或間接衍生自 <xref:System.Attribute?displayProperty=nameWithType>的傳統類別。 自訂屬性就像傳統類別一樣，含有儲存和擷取資料的方法。  
@@ -104,7 +104,7 @@ ms.locfileid: "90550921"
   
 - 屬性類別必須宣告為公用類別。  
   
-- 依慣例，屬性類別的名稱會以這個字 **Attribute**結尾。 雖然並非必要，不過建議您遵照這個慣例以提高可讀性。 當屬性已套用時，要不要包含 Attribute 這個字都可以。  
+- 依慣例，屬性類別的名稱會以這個字 **Attribute** 結尾。 雖然並非必要，不過建議您遵照這個慣例以提高可讀性。 當屬性已套用時，要不要包含 Attribute 這個字都可以。  
   
 - 所有的屬性類別必須直接或間接繼承自 <xref:System.Attribute?displayProperty=nameWithType>。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "90550921"
   
  第一個範例示範只套用了必要具名參數的屬性，而第二個範例則示範同時套用了必要和選擇性參數的屬性。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>

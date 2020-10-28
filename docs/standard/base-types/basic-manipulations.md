@@ -7,14 +7,14 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- strings [.NET Framework], examples
+- strings [.NET], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-ms.openlocfilehash: 54de6451029fb268beb7ebe4ded0d7b437c3df3c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cc04f0c874b732668b4813f8325bd7060927f22a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289859"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889123"
 ---
 # <a name="how-to-perform-basic-string-manipulations-in-net"></a>如何：在 .NET 中執行基本字串操作
 
@@ -29,6 +29,6 @@ ms.locfileid: "84289859"
   
 執行上述程式碼時，系統會要求使用者輸入其名稱和位址。 應用程式會將這項資訊放入適當的屬性中，並建立出顯示城市、省/市和郵遞區號資訊的單一字串，將資訊重新顯示給使用者看。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [基底字元串作業](basic-string-operations.md)

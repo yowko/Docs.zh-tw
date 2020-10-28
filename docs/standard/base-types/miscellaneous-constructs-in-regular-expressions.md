@@ -7,15 +7,15 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - constructs, miscellaneous
-- .NET Framework regular expressions, miscellaneous constructs
+- .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: 8ca888074aa757a1bfba786a7bec5928b75b1da2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7800dee67513f885339fad67c7a999cc06cca36
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290405"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889266"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>規則運算式中的其他建構
 .NET 中的規則運算式包含三個其他語言建構。 其中一個可讓您在規則運算式模式的中間，啟用或停用特定比對選項。 其餘兩個可讓您在規則運算式中包含註解。  
@@ -27,7 +27,7 @@ ms.locfileid: "84290405"
   
  您在問號之後列出要啟用的選項，並在減號之後列出要停用的選項。 下表會說明每個選項。 如需每個選項的詳細資訊，請參閱[規則運算式選項](regular-expression-options.md)。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`i`|不區分大小寫的比對。|  
 |`m`|多行模式。|  
@@ -38,7 +38,7 @@ ms.locfileid: "84290405"
  `(?imnsx-imnsx)` 建構所定義之規則運算式選項中的任何變更，其效果會一直維持到封入群組的結尾。  
   
 > [!NOTE]
-> `(?imnsx-imnsx:`*子運算式* `)` 群組結構會為子運算式提供相同的功能。 如需詳細資訊，請參閱[群組建構](grouping-constructs-in-regular-expressions.md)。  
+> `(?imnsx-imnsx:`*子運算式* `)` 群組結構為子運算式提供相同的功能。 如需詳細資訊，請參閱[群組建構](grouping-constructs-in-regular-expressions.md)。  
   
  下列範例會使用 `i`、`n` 及 `x` 選項來啟用不區分大小寫和明確擷取，並忽略規則運算式中間規則運算式模式中的空白字元。  
   
@@ -97,6 +97,6 @@ ms.locfileid: "84290405"
   
  請注意，除了在規則運算式中提供 `(?x)` 建構，也可以藉由呼叫 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法，並將 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 列舉值傳遞給此方法，來辨識註解。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

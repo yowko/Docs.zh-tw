@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: 5678e904afae4d348fbb56b189c95cd59b8e7a4d
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 9a83c0e8ee3476f43ccc2e88c21ccbbc0661bd19
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162839"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889214"
 ---
 # <a name="extend-metadata-using-attributes"></a>使用屬性擴充中繼資料
 
@@ -33,7 +33,7 @@ Common Language Runtime 可讓您加入稱為屬性 (Attribute) 之類似關鍵�
 |[套用屬性](applying-attributes.md)|描述如何將屬性套用至您程式碼的項目。|
 |[撰寫自訂屬性](writing-custom-attributes.md)|描述如何設計自訂屬性類別。|
 |[擷取儲存於屬性中的資訊](retrieving-information-stored-in-attributes.md)|描述如何針對載入執行內容中的程式碼擷取自訂屬性。|
-|[中繼資料和 Self-Describing 元件](../metadata-and-self-describing-components.md)|提供中繼資料的概觀，並描述如何在 .NET Framework 可攜式執行檔 (PE) 中實作。|
+|[中繼資料和 Self-Describing 元件](../metadata-and-self-describing-components.md)|提供中繼資料的總覽，並說明如何在 .NET 可攜式可執行檔 (PE) 檔中實作為中繼資料。|
 |[如何：將組件載入僅限反映的內容](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|說明如何擷取僅限反映的內容中的自訂屬性資訊。|
 
 ## <a name="reference"></a>參考

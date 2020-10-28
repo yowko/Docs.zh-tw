@@ -1,6 +1,6 @@
 ---
 title: 在集合內比較和排序
-description: 使用 .NET 中的 System.object 類別進行比較 & 排序，這有助於尋找元素以移除或傳回索引鍵/值組的值。
+description: 比較 & 使用 .NET 中的 System.object 類別進行排序，這有助於尋找元素來移除或傳回索引鍵/值組的值。
 ms.date: 04/30/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - IComparable.CompareTo method
 - Collections classes
 - Equals method
-- collections [.NET Framework], comparisons
+- collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: aa001e8469947a532d77059bd52024c6b47b508e
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 40a59809723298ddda21e642098ec8ae74a1828b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769193"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889370"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>集合內的比較和排序
 
@@ -38,7 +38,7 @@ ms.locfileid: "84769193"
 此外，有些字典集合的建構函式多載可接受用來比較索引鍵是否相等的 <xref:System.Collections.Generic.IEqualityComparer%601> 實作。 如需範例，請參閱 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> 。
 
 <a name="BKMK_Determiningsortorder"></a>
-## <a name="determine-sort-order"></a>判斷排序次序
+## <a name="determine-sort-order"></a>決定排序次序
 
 例如，方法 `BinarySearch` 和 `Sort` 會為集合元素使用排序比較子。 比較可以在集合的元素之間進行，或在元素和指定的值之間進行。 若為比較物件，會有 `default comparer` 和 `explicit comparer`的概念。
 
@@ -48,7 +48,7 @@ ms.locfileid: "84769193"
 
 - 如果類型 T 實作非泛型 <xref:System.IComparable?displayProperty=nameWithType> 介面，則預設比較子會是該介面的 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> 方法。
 
-- 如果類型 T 未實作為任一介面，則沒有預設的比較子，而且必須明確地提供比較子或比較委派。
+- 如果類型 T 未執行任何一個介面，則沒有預設的比較子，而且必須明確提供比較子或比較委派。
 
 若要提供明確比較，某些方法接受以 **IComparer** 實作做為參數。 例如， <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 方法接受 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 實作。
 

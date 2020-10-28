@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
-- components [.NET Framework], asynchronous
+- threading [.NET], asynchronous features
+- components [.NET], asynchronous
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 466a0dd8a827cd869894106a0901bdab89601e25
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ca4b1b3ff1fb7180250de7436db9a4d642e8118c
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559092"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888785"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式
 
@@ -65,19 +65,19 @@ ms.locfileid: "90559092"
 
 ## <a name="naming-asynchronous-methods"></a>為非同步方法命名
 
-對於您要為其提供非同步對應的每一個 MethodName** 同步方法：
+對於您要為其提供非同步對應的每一個 MethodName  同步方法：
 
-定義_方法方法_的**非同步**方法：
+定義 _方法方法_ 的 **非同步** 方法：
 
 - 傳回 `void`。
 
-- 使用與 MethodName** 方法相同的參數。
+- 使用與 MethodName  方法相同的參數。
 
 - 接受多個引動過程。
 
-（選擇性）定義 _方法名稱_**非同步** 多載，與 _方法名稱_**相同，但**有一個稱為的額外物件值參數 `userState` 。 需要這麼做的前提是，您已準備好管理您擁有之方法的多個並行引動過程，在此情況下，`userState` 值會傳回給所有的事件處理常式，以供區別該方法的各個引動過程。 您也可以純粹為了能有位置可儲存使用者狀態以供日後擷取，而選擇這樣做。
+（選擇性）定義 _方法名稱_**非同步** 多載，與 _方法名稱_**相同，但** 有一個稱為的額外物件值參數 `userState` 。 需要這麼做的前提是，您已準備好管理您擁有之方法的多個並行引動過程，在此情況下，`userState` 值會傳回給所有的事件處理常式，以供區別該方法的各個引動過程。 您也可以純粹為了能有位置可儲存使用者狀態以供日後擷取，而選擇這樣做。
 
-針對每個個別的_方法名稱_，**非同步**方法簽章：
+針對每個個別的 _方法名稱_ ， **非同步** 方法簽章：
 
 1. 在相同的類別中定義下列事件來作為方法︰
 
@@ -125,7 +125,7 @@ ms.locfileid: "90559092"
 
 - 您的類別 (包括其未來預期的新增項目) 是否只有一個支援取消方法的非同步作業？
 
-- 可支援取消方法的非同步作業能否支援多個暫止作業？ 也就是說，方法方法的_MethodName_**非同步**方法是否接受 `userState` 參數，並在等候任何作業完成之前允許多個調用？
+- 可支援取消方法的非同步作業能否支援多個暫止作業？ 也就是說，方法方法的 _MethodName_**非同步** 方法是否接受 `userState` 參數，並在等候任何作業完成之前允許多個調用？
 
 使用下表中對於這兩個問題的回答，來判斷您的取消方法應該使用的簽章。
 
@@ -169,7 +169,7 @@ ms.locfileid: "90559092"
 
   - `ProgressChanged`，如果類別具有多個非同步作業 (或預期會有成長，而會在未來的版本中包含多個非同步作業)。
 
-  - 如果類別具有單一非同步作業，則為_方法名稱_**>progresschanged** 。
+  - 如果類別具有單一非同步作業，則為 _方法名稱_**>progresschanged** 。
 
   這個命名選擇和取消方法的選擇類似，後者在＜選擇性地支援取消方法＞一節中有所說明。
 
@@ -177,7 +177,7 @@ ms.locfileid: "90559092"
 
 請注意 `ProgressChanged` ，此類別只有一個或 _方法_**>progresschanged** 事件，不論它支援的非同步方法數目為何。 用戶端預期會使用 `userState` 傳遞給 _方法名稱_**非同步** 方法的物件，來區別多個並行作業上的進度更新。
 
-有時候可能會有多個作業都支援進度報告，而各自傳回不同的進度指示器。 在此情況下，使用單一的 `ProgressChanged` 事件就不是合適的作法，因此您可能會考慮支援多個 `ProgressChanged` 事件。 在此情況下，請針對每個_方法名稱_的**非同步**方法使用_方法名稱_**>progresschanged**的命名模式。
+有時候可能會有多個作業都支援進度報告，而各自傳回不同的進度指示器。 在此情況下，使用單一的 `ProgressChanged` 事件就不是合適的作法，因此您可能會考慮支援多個 `ProgressChanged` 事件。 在此情況下，請針對每個 _方法名稱_ 的 **非同步** 方法使用 _方法名稱_**>progresschanged** 的命名模式。
 
 請遵守[實作事件架構非同步模式的最佳作法](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)中所述的進度報告語意。
 
@@ -213,13 +213,13 @@ ms.locfileid: "90559092"
 
 ## <a name="handling-out-and-ref-parameters-in-methods"></a>在方法中處理 Out 和 Ref 參數
 
-一般而言，雖然我們不建議您在 .NET Framework 中使用 `out` 和 `ref`，但如果它們存在，請遵循以下規則︰
+雖然使用和是一般情況下，在 .NET 中不建議使用， `out` `ref` 以下是出現時要遵循的規則：
 
-假設同步方法為 MethodName**：
+假設同步方法為 MethodName  ：
 
-- `out`*方法名稱*的參數不應該是_方法名稱_為**Async**的一部分。 相反地，它們應該 _是方法名稱_**>completedeventargs** 的一部分，其名稱與 (*方法* 名稱中的對等參數相同，除非) 有更適當的名稱。
+- `out`*方法名稱* 的參數不應該是 _方法名稱_ 為 **Async** 的一部分。 相反地，它們應該 _是方法名稱_**>completedeventargs** 的一部分，其名稱與 ( *方法* 名稱中的對等參數相同，除非) 有更適當的名稱。
 
-- `ref`*方法*名稱的參數應該會以_方法名稱_**Async**的一部分形式出現，並_作為方法名稱_ (**>completedeventargs**的一部分，除非有*MethodName*更適當的名稱) 。
+- `ref`*方法* 名稱的參數應該會以 _方法名稱_**Async** 的一部分形式出現，並 _作為方法名稱_ ( **>completedeventargs** 的一部分，除非有 *MethodName* 更適當的名稱) 。
 
 例如，假設：
 
@@ -258,7 +258,7 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>

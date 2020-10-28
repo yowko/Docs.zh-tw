@@ -1,6 +1,6 @@
 ---
 title: 事件架構非同步模式 (EAP)
-description: 請參閱 .NET 中以事件為基礎之非同步模式（EAP）的相關文章連結，例如執行、最佳作法、實施 EAP 用戶端等等。
+description: 請參閱 .NET 中事件架構非同步模式 (EAP) 的相關文章連結，例如執行、最佳作法、實行 EAP 用戶端等。
 ms.date: 07/23/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: 03b4d914d72b96b882c774565654c022b145b5f2
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 16aabeb55a56c63449a865d00044c463657de740
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768868"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888837"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>事件架構非同步模式 (EAP)
 
 將非同步功能公開到用戶端程式碼的方式有許多種； 事件架構非同步模式會針對要呈現非同步行為之類別指示一個方法。  
   
 > [!NOTE]
-> 從 .NET Framework 4 開始，工作平行程式庫會為非同步處理和平行程式設計提供新的模型。 如需詳細資訊，請參閱工作[平行程式庫（TPL）](../parallel-programming/task-parallel-library-tpl.md)和以工作[為基礎的非同步模式（](task-based-asynchronous-pattern-tap.md)點一下）。
+> 從 .NET Framework 4 開始，工作平行程式庫會為非同步和平行程式設計提供新的模型。 如需詳細資訊，請參閱工作 [平行程式庫 (TPL) ](../parallel-programming/task-parallel-library-tpl.md) 和以工作 [為基礎的非同步模式 (請參閱) ](task-based-asynchronous-pattern-tap.md)。
   
 ## <a name="in-this-section"></a>本節內容
 
@@ -36,13 +36,13 @@ ms.locfileid: "84768868"
  [決定何時實作事件架構非同步模式](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  描述如何判斷何時應選擇實作事件架構非同步模式，而非由[非同步程式設計模型 (APM)](asynchronous-programming-model-apm.md) 所代表的 <xref:System.IAsyncResult> 模式
   
- [如何：實作支援事件架構非同步模式的元件](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [作法：實作支援事件架構非同步模式的元件](component-that-supports-the-event-based-asynchronous-pattern.md)  
  描述如何建立實作事件架構非同步模式的元件。 其實作方式是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中的 Helper 類別，以確保此元件可在任何應用程式模型下正常運作。  
 
- [操作說明：實作事件架構非同步模式的用戶端](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
+ [作法：實作事件架構非同步模式的用戶端](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  描述如何建立使用實作事件架構非同步模式之元件的用戶端。
   
- [如何：使用支援事件架構非同步模式的元件](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [作法：使用支援事件架構非同步模式的元件](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  描述如何使用可支援事件架構非同步模式的元件。  
   
 ## <a name="reference"></a>參考
@@ -64,8 +64,8 @@ ms.locfileid: "84768868"
  [執行緒](../threading/index.md)  
  說明 .NET 中的多執行緒處理功能。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [受控執行緒最佳做法](../threading/managed-threading-best-practices.md)
+- [Managed 執行緒處理的最佳實施方針](../threading/managed-threading-best-practices.md)
 - [事件](../events/index.md)
 - [非同步程式設計模式](index.md)
