@@ -725,24 +725,20 @@ items:
         href: misc/using-libraries-from-partially-trusted-code.md
       - name: 使用 Assert 方法
         href: misc/using-the-assert-method.md
-  - name: 建立主控台應用程式
-    href: ../standard/building-console-apps.md
-  - name: 使用 Web Form 應用程式中的事件
-    href: ../standard/events/how-to-consume-events-in-a-web-forms-application.md
-  - name: .NET Framework 程式碼診斷分析器
-    href: ../standard/analyzers/framework-analyzer.md
+  - name: 程式碼分析
+    href: code-analyzers.md
   - name: 針對多重平台進行開發
     items:
       - name: 總覽
-        href: ../standard/cross-platform/index.md
+        href: cross-platform/index.md
         displayName: cross platform
       - name: 可攜式類別庫
-        href: ../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md
+        href: cross-platform/portable-class-library.md
       - name: 搭配 MVVM 使用可攜式類別庫
-        href: ../standard/cross-platform/using-portable-class-library-with-model-view-view-model.md
+        href: cross-platform/using-portable-class-library-with-model-view-view-model.md
       - name: 以多平台為目標之程式庫的應用程式資源
-        href: ../standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
+        href: cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
       - name: 適用於 Microsoft Store 應用程式和 Windows 執行階段的 .NET Framework 支援
-        href: ../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md
+        href: cross-platform/support-for-windows-store-apps-and-windows-runtime.md
       - name: 將 URI 傳遞給 Windows 執行階段
-        href: ../standard/cross-platform/passing-a-uri-to-the-windows-runtime.md
+        href: cross-platform/passing-a-uri-to-the-windows-runtime.md
