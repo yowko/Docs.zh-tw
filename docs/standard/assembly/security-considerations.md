@@ -1,36 +1,37 @@
 ---
 title: 組件安全性考量
-description: 當您建立 .NET 元件時，您可以指定元件執行所需的許可權。 本文討論強式名稱的元件和簽署工具。
+description: 當您建立 .NET 元件時，可以指定元件執行所需的許可權。 本文討論強式名稱的元件和簽署工具。
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], security
+- assemblies [.NET], security
 - signcodes
-- names [.NET Framework], assemblies
+- names [.NET], assemblies
 - strong-named assemblies, security considerations
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - granting permissions, assemblies
-- assemblies [.NET Framework], strong-named
-- names [.NET Framework], strong names
-- permissions [.NET Framework], assemblies
-- security [.NET Framework], assemblies
+- assemblies [.NET], strong-named
+- names [.NET], strong names
+- permissions [.NET], assemblies
+- security [.NET], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 91ea206abf80da275651854b9f13aa0116b7a1c5
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290015"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687263"
 ---
 # <a name="assembly-security-considerations"></a>組件安全性考量
+
 當您建置組件時，您可以指定一組該組件需要用來執行的使用權限。 是否將某些使用權限授予組件則以辨識項 (Evidence) 為基礎。  
   
  使用辨識項有兩種不同的方法：  
   
-- 輸入辨識項會和載入器所集合的辨識項合併，以建立用於原則解析的最終辨識項組。 使用這個語意的方法包括 **Assembly.Load**、**Assembly.LoadFrom** 和 **Activator.CreateInstance**。  
+- 輸入辨識項會和載入器所集合的辨識項合併，以建立用於原則解析的最終辨識項組。 使用這個語意的方法包括 **Assembly.Load** 、 **Assembly.LoadFrom** 和 **Activator.CreateInstance** 。  
   
-- 輸入辨識項使用時不會更改，就和用於原則解析的最終辨識項組一樣。 使用這個語意的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()**。  
+- 輸入辨識項使用時不會更改，就和用於原則解析的最終辨識項組一樣。 使用這個語意的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()** 。  
   
   選擇性的使用權限可以藉由該組件要在其上執行之電腦上所設定的[安全性原則](../../framework/misc/code-access-security-basics.md)來授與。 如果您希望程式碼處理所有可能的安全性例外狀況，您可以執行下列某一項動作：  
   
@@ -61,8 +62,8 @@ ms.locfileid: "84290015"
   
  由於強式命名和使用 [SignTool.exe (簽署工具)](../../framework/tools/signtool-exe.md) 的簽署可保證完整性，所以您可以讓程式碼存取安全性原則以這兩種形式的組件辨識項作為基礎。 強式命名和使用 [SignTool.exe (簽署工具)](../../framework/tools/signtool-exe.md) 的簽署，可以透過數位簽章和憑證來保證完整性。 所有前述技術 (雜湊驗證、強式命名和使用 [SignTool.exe (簽署工具)](../../framework/tools/signtool-exe.md) 的簽署)，合在一起即可確保組件沒有以任何方式改變。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [強式名稱組件](strong-named.md)
 - [.NET 中的組件](index.md)
-- [SignTool .exe （簽署工具）](../../framework/tools/signtool-exe.md)
+- [SignTool.exe (簽署工具) ](../../framework/tools/signtool-exe.md)

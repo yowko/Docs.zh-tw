@@ -15,22 +15,20 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 83799b0f4c6d6503825ce271fed4bffa7a9775b9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 47021873956f971709b49c1b224e43e4c7f482d0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545699"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687293"
 ---
-# <a name="handling-and-raising-events"></a>處理和引發事件
+# <a name="handle-and-raising-events"></a>處理和引發事件
 
-.NET 中的事件是以委派模型為基礎。 委派模型遵循觀察者 [設計模式](observer-design-pattern.md)，可讓訂閱者向提供者註冊和接收通知。 事件發送者會推播事件已發生的通知，而事件接收器會收到該通告並定義對它的回應。 本文將描述委派模型的主要元件、如何在應用程式中使用事件，以及如何在程式碼中實作事件。  
-  
- 如需處理 Windows 8.x Microsoft Store 應用程式中事件的詳細資訊，請參閱[事件和路由事件概觀](/previous-versions/windows/apps/hh758286(v=win.10))。  
+.NET 中的事件是以委派模型為基礎。 委派模型遵循觀察者 [設計模式](observer-design-pattern.md)，可讓訂閱者向提供者註冊和接收通知。 事件發送者會推播事件已發生的通知，而事件接收器會收到該通告並定義對它的回應。 本文將描述委派模型的主要元件、如何在應用程式中使用事件，以及如何在程式碼中實作事件。
   
 ## <a name="events"></a>事件
 
-事件是由物件傳送的訊息，用以表示發生動作。 這個動作可能是因使用者互動所造成，例如按一下按鈕，也可能起因於其他程式邏輯，如變更屬性值。 引發事件的物件稱為「事件發送者」**。 事件發送者並不清楚哪個物件或方法會接收 (處理) 它所引發的事件。 事件通常是事件發送者的成員，例如，<xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 類別的成員，而 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面之類別的成員。  
+事件是由物件傳送的訊息，用以表示發生動作。 動作可能是使用者互動所造成，例如按一下按鈕，也可能是由其他程式邏輯所產生，例如變更屬性的值。 引發事件的物件稱為「事件發送者」  。 事件發送者並不清楚哪個物件或方法會接收 (處理) 它所引發的事件。 事件通常是事件發送者的成員，例如，<xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 類別的成員，而 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面之類別的成員。  
   
 若要定義事件，您可以 [`event`](../../csharp/language-reference/keywords/event.md) 在事件類別的簽章中使用 c # 或 Visual Basic [`Event`](../../visual-basic/language-reference/statements/event-statement.md) 關鍵字，並指定事件的委派類型。 委派將在下一節中描述。  
   
@@ -82,21 +80,21 @@ ms.locfileid: "90545699"
 
 .NET 可讓訂閱者以靜態或動態方式註冊事件通知。 靜態事件處理常式在其處理事件之類別的整個生命週期內都有效。 動態事件處理常式會在程式執行期間明確地啟動及停用，通常是為了回應某些條件式邏輯。 比方說，如果只有在某些情況下才需要事件通知，或如果應用程式提供多個事件處理常式且執行階段條件會定義一個要使用的適當處理常式，即可使用動態事件處理常式。 上一節中的範例示範了如何以動態方式加入事件處理常式。 如需詳細資訊，請參閱[事件](../../visual-basic/programming-guide/language-features/events/index.md) (in Visual Basic) 及[事件](../../csharp/programming-guide/events/index.md) (in C#)。  
   
-## <a name="raising-multiple-events"></a>引發多個事件  
+## <a name="raising-multiple-events"></a>引發多個事件
+
  如果您的類別會引發多個事件，編譯器將會為每個事件委派執行個體產生一個欄位。 如果事件數目很大，則可能無法接受每個委派一個欄位的儲存成本。 對於這些情況，.NET 提供了事件屬性，可以搭配您選擇的另一種資料結構來儲存事件委派。  
   
  事件屬性是由事件存取子伴隨的事件宣告所組成。 事件存取子是您定義用來將事件委派執行個體加入儲存區資料結構或從其中移除的方法。 請注意，事件屬性會比事件欄位來得慢些，因為每個事件委派都必須先擷取，然後才能夠叫用。 記憶體和速度之間會有所折衷。 如果您的類別定義許多不常引發的事件，您會想要實作事件屬性。 如需詳細資訊，請參閱[如何：使用事件屬性處理多個事件](how-to-handle-multiple-events-using-event-properties.md)。  
   
-## <a name="related-topics"></a>相關主題  
+## <a name="related-articles"></a>相關文章
   
 |標題|描述|  
 |-----------|-----------------|  
 |[如何：引發和使用事件](how-to-raise-and-consume-events.md)|包含引發和使用事件的範例。|  
 |[如何：使用事件屬性處理多個事件](how-to-handle-multiple-events-using-event-properties.md)|示範如何使用事件屬性處理多個事件。|  
-|[觀察者設計模式](observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|  
-|[如何：使用 Web Form 應用程式中的事件](how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Form 控制項所引發的事件。|  
+|[觀察者設計模式](observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>
@@ -105,3 +103,4 @@ ms.locfileid: "90545699"
 - [事件 (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [事件 (C# 程式設計手冊)](../../csharp/programming-guide/events/index.md)
 - [事件和路由事件概觀 (UWP 應用程式)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Windows Store 8.x 應用程式中的事件](/previous-versions/windows/apps/hh758286(v=win.10))

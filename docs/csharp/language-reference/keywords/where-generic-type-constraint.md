@@ -7,14 +7,15 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 - classconstraint_CSharpKeyword
 - structconstraint_CSharpKeyword
+- enumconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 75885e21173d31ff0a4ba34fbbd3558f934ae5b7
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: ff2d50b2148ea62e5bef5eceda547a976e4abf02
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050314"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687319"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (泛型類型條件約束) (C# 參考)
 
@@ -50,7 +51,7 @@ ms.locfileid: "92050314"
 
 [!code-csharp[using the unmanaged constraint](snippets/GenericWhereConstraints.cs#4)]
 
-`where` 子句也可能包含建構函式條件約束 `new()`。 該條件約束可讓您使用 `new` 運算子建立型別參數執行個體。 [新的 ( # A1 條件約束](new-constraint.md)可讓編譯器知道任何提供的型別引數都必須具有可存取的無參數函式。 例如︰
+`where` 子句也可能包含建構函式條件約束 `new()`。 該條件約束可讓您使用 `new` 運算子建立型別參數執行個體。 [新的 ( # A1 條件約束](new-constraint.md)可讓編譯器知道任何提供的型別引數都必須具有可存取的無參數函式。 例如：
 
 [!code-csharp[using the new constraint](snippets/GenericWhereConstraints.cs#5)]
 
@@ -76,7 +77,7 @@ ms.locfileid: "92050314"
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C # 參考](../index.md)
 - [C # 程式設計指南](../../programming-guide/index.md)

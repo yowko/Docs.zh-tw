@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3b95a322377e82249a0375af589df74c658fcbf4
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 0fdf1b3ec1141dd637f817115bd1d2351c8af7a0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507412"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687733"
 ---
 # <a name="numerics-in-net"></a>.NET 中的數值
 
@@ -60,11 +60,11 @@ ms.locfileid: "82507412"
   
 <xref:System.Single> 和 <xref:System.Double> 類型皆支援代表非數字和無限大的特殊值。 例如，<xref:System.Double> 類型能提供下列值：<xref:System.Double.NaN?displayProperty=nameWithType>、<xref:System.Double.NegativeInfinity?displayProperty=nameWithType> 及 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>。 您會使用 <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>、<xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>、<xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> 及 <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> 方法來測試這些特殊值。
 
-每個浮點類型皆支援一組標準算術運算子。 <xref:System.Math?displayProperty=nameWithType> 類別能提供適用於更廣泛數學函式的方法。 .NET Core 2.0 和更新版本包含<xref:System.MathF?displayProperty=nameWithType>類別，它會提供接受<xref:System.Single>型別之引數的方法。
+每個浮點類型皆支援一組標準算術運算子。 <xref:System.Math?displayProperty=nameWithType> 類別能提供適用於更廣泛數學函式的方法。 .NET Core 2.0 和更新版本包含 <xref:System.MathF?displayProperty=nameWithType> 類別，可提供接受型別引數的方法 <xref:System.Single> 。
 
 藉由使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別，您也可使用 <xref:System.Double> 和 <xref:System.Single> 中的個別位元。 <xref:System.Decimal?displayProperty=nameWithType> 結構有它自己的方法，為 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>，用於使用十進位值的個別位元，而且還有一組自己的方法，用於執行一些額外的數學運算。
   
-<xref:System.Double>和<xref:System.Single>類型適用于本質上不精確的值（例如，兩顆星之間的距離），以及適用于不需要高精確度和小型進位誤差的應用程式。 當需要<xref:System.Decimal?displayProperty=nameWithType>更高的精確度，而且應該將進位誤差最小化時，請使用類型。
+<xref:System.Double>和 <xref:System.Single> 類型的用途是要用於本質上不精確的值 (例如，兩顆星之間的距離) ，以及不需要高度精確度和小型舍入錯誤的應用程式之間的距離。 <xref:System.Decimal?displayProperty=nameWithType>在需要較高精確度的情況下使用型別，而且應該將舍入錯誤最小化。
 
 > [!NOTE]
 > <xref:System.Decimal> 類型並不會消除進位的需求。 它會將因進位而產生的錯誤降到最低。
@@ -88,13 +88,14 @@ ms.locfileid: "82507412"
 - <xref:System.Numerics.Quaternion> 類型，其代表用來編碼 3D 實體旋轉的向量。
 
 - <xref:System.Numerics.Vector%601> 類型，其代表指定數值類型的向量，並能提供一組受益於 SIMD 支援的廣泛運算子。 <xref:System.Numerics.Vector%601> 執行個體的計數是固定的，但其值 <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> 會相依於執行程式碼之電腦的 CPU。
-  > [!NOTE]
-  > <xref:System.Numerics.Vector%601> 類型沒有包含至 .NET Framework 中。 您必須安裝 [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) \(英文\) NuGet 套件以存取這個類型。
-  
-啟用 SIMD 的類型的實作方式，使它們可以搭配未啟用 SIMD 的硬體或 JIT 編譯器使用。 若要運用 SIMD 指令，您的 64 位元應用程式必須由使用 RyuJIT 編譯器的執行階段執行，此編譯器已包含在 .NET Core 和 .NET Framework 4.6 及更新版本中。 它會在以 64 位元處理器為目標時加入 SIMD 支援。
 
-如需詳細資訊，請參閱[使用 SIMD 加速數數值型別](simd.md)。
+  > [!NOTE]
+  > 此 <xref:System.Numerics.Vector%601> 類型隨附于 .Net Core 和 .net 5 +，但不是 .NET Framework。 如果您是使用 .NET Framework，請安裝 [System.string NuGet 套件](https://www.nuget.org/packages/System.Numerics.Vectors) 以取得此類型的存取權。
+  
+啟用 SIMD 的類型的實作方式，使它們可以搭配未啟用 SIMD 的硬體或 JIT 編譯器使用。 若要利用 SIMD 指示，您的64位應用程式必須由使用 RyuJIT 編譯程式的執行時間執行，此編譯器包含在 .NET Core 和 .NET Framework 4.6 和更新版本中。 它會在以 64 位元處理器為目標時加入 SIMD 支援。
+
+如需詳細資訊，請參閱 [使用 SIMD 加速的數數值型別](simd.md)。
 
 ## <a name="see-also"></a>請參閱
 
-- [標準數值格式字串](base-types/standard-numeric-format-strings.md)
+- [標準數值格式字串](base-types/standard-numeric-format-strings.md) \(部分機器翻譯\)

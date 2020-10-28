@@ -1,19 +1,20 @@
 ---
 title: 組件位置
-description: .NET 元件的位置會決定 CLR 如何找出它，以及是否可以與其他元件共用。
+description: .NET 元件的位置會決定 CLR 如何尋找它，以及是否可以與其他元件共用。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - locating assemblies
-- assemblies [.NET Framework], location
+- assemblies [.NET], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-ms.openlocfilehash: 7ab3804b14b586e1430d654f4da32a310bcb6cc9
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1fa1c486c0cddce4ddcfae7f2df27e2e85c88e66
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379902"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687603"
 ---
 # <a name="assembly-location"></a>組件位置
+
 組件的位置可判斷 Common Language Runtime 是否可以在參考時找到它，也可以判斷是否可以與其他組件共用組件。 您可以在下列位置中部署組件：
 
 - 應用程式的目錄或子目錄。
