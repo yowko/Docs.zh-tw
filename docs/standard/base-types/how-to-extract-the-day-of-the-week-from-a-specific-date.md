@@ -1,39 +1,40 @@
 ---
 title: 作法：從特定日期擷取一星期的哪一日
-description: 瞭解如何在 .NET 中判斷特定日期的第一周序數。 瞭解如何針對特定日期顯示當地語系化的工作日名稱。
+description: 瞭解如何在 .NET 中判斷特定日期的每週序數日。 瞭解如何顯示特定日期的當地語系化工作日名稱。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- formatting [.NET Framework], dates
+- formatting [.NET], dates
 - DateTime.DayOfWeek property
 - DateTime.ToString method
-- dates [.NET Framework], retrieving week information
+- dates [.NET], retrieving week information
 - DateTimeOffset.DayOfWeek property
-- dates [.NET Framework], day of week
+- dates [.NET], day of week
 - Weekday function
-- day of week [.NET Framework]
+- day of week [.NET]
 - extracting day of week
 - weekday names
 - WeekdayName function
-- numbers [.NET Framework], day of week
-- formatting [.NET Framework], time
+- numbers [.NET], day of week
+- formatting [.NET], time
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: fa0eb6c36b88594543d08680af104b5408c295f9
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: f7a18a3ab414a07fa4908c67c5ec9334ce63953f
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662611"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888517"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>作法：從特定日期擷取一星期的哪一日
-.NET Framework 可方便判斷特定日期是一週的第幾天，並可顯示特定日期當地語系化的工作日名稱。 您可以從 <xref:System.DateTime.DayOfWeek%2A> 或 <xref:System.DateTimeOffset.DayOfWeek%2A> 屬性取得指出對應於特定日期是星期幾的列舉值。 相對地，擷取工作日名稱是一種格式化作業，可藉由呼叫格式化方法來執行，例如日期和時間值的 `ToString` 方法或 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法。 本主題示範如何執行下列格式化作業：  
+
+.NET 可方便判斷特定日期是一週的第幾天，並可顯示特定日期當地語系化的工作日名稱。 您可以從 <xref:System.DateTime.DayOfWeek%2A> 或 <xref:System.DateTimeOffset.DayOfWeek%2A> 屬性取得指出對應於特定日期是星期幾的列舉值。 相對地，擷取工作日名稱是一種格式化作業，可藉由呼叫格式化方法來執行，例如日期和時間值的 `ToString` 方法或 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法。 本主題示範如何執行下列格式化作業：  
   
-### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>從特定日期擷取指出星期幾的數字  
+## <a name="extract-a-number-indicating-the-day-of-the-week"></a>將表示星期幾的數位解壓縮
   
 1. 如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "84662611"
  [!code-csharp[Formatting.Howto.WeekdayName#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/weekdaynumber7.cs#7)]
  [!code-vb[Formatting.Howto.WeekdayName#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/weekdaynumber7.vb#7)]  
   
-### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>從特定日期擷取縮寫的工作日名稱。  
+## <a name="extract-the-abbreviated-weekday-name"></a>將縮寫的工作日名稱解壓縮
   
 1. 如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
   
@@ -57,23 +58,23 @@ ms.locfileid: "84662611"
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2. 若要解壓縮特定文化特性的工作日名稱縮寫，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 實例方法。 傳遞字串 "ddd" 做為 `format` 參數。 傳遞 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.DateTimeFormatInfo> 物件，其代表您想要將其工作日名稱當作 `provider` 參數來擷取的文化特性。 下列程式碼說明如何使用代表 fr-FR 文化特性的 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> 物件，來呼叫 <xref:System.Globalization.CultureInfo> 方法。  
+    2. 若要為特定文化特性解壓縮縮寫的工作日名稱，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 實例方法。 傳遞字串 "ddd" 做為 `format` 參數。 傳遞 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.DateTimeFormatInfo> 物件，其代表您想要將其工作日名稱當作 `provider` 參數來擷取的文化特性。 下列程式碼說明如何使用代表 fr-FR 文化特性的 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> 物件，來呼叫 <xref:System.Globalization.CultureInfo> 方法。  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
   
-### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>從特定日期擷取完整的工作日名稱。  
+## <a name="extract-the-full-weekday-name"></a>將完整的工作日名稱解壓縮
   
 1. 如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 值。  
   
 2. 您可以擷取目前文化特性或特定文化特性的完整工作日名稱。  
   
-    1. 若要解壓縮目前文化特性的工作日名稱，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 實例方法，並傳遞字串 "dddd" 做為 `format` 參數。 下列範例說明如何呼叫 <xref:System.DateTime.ToString%28System.String%29> 方法。  
+    1. 若要解壓縮目前文化特性的工作日名稱，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 實例方法，並傳遞字串 "dddd" 作為 `format` 參數。 下列範例說明如何呼叫 <xref:System.DateTime.ToString%28System.String%29> 方法。  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2. 若要將特定文化特性的工作日名稱解壓縮，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 實例方法。 傳遞字串 "ddd" 做為 `format` 參數。 傳遞 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.DateTimeFormatInfo> 物件，其代表您想要將其工作日名稱當作 `provider` 參數來擷取的文化特性。 下列程式碼說明如何使用代表 es-ES 文化特性的 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> 物件，來呼叫 <xref:System.Globalization.CultureInfo> 方法。  
+    2. 若要解壓縮特定文化特性的工作日名稱，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 實例方法。 傳遞字串 "ddd" 做為 `format` 參數。 傳遞 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.DateTimeFormatInfo> 物件，其代表您想要將其工作日名稱當作 `provider` 參數來擷取的文化特性。 下列程式碼說明如何使用代表 es-ES 文化特性的 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> 物件，來呼叫 <xref:System.Globalization.CultureInfo> 方法。  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
@@ -84,7 +85,7 @@ ms.locfileid: "84662611"
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]
  [!code-vb[Formatting.Howto.WeekdayName#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example6.vb#6)]  
   
- 個別語言可能會提供與 .NET Framework 所提供功能重複或補充的功能。 例如，Visual Basic 就有包含兩個這類函式：  
+ 個別語言可能會提供功能來複製或補充 .NET 提供的功能。 例如，Visual Basic 就有包含兩個這類函式：  
   
 - `Weekday` 會傳回指出特定日期是星期幾的數字。 它會將一週第一天的序數值視為一，而 <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> 屬性會將其視為零。  
   
@@ -99,7 +100,7 @@ ms.locfileid: "84662611"
  [!code-csharp[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/Howto1.cs#8)]
  [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [標準日期和時間格式字串](standard-date-and-time-format-strings.md)
 - [自訂日期和時間格式字串](custom-date-and-time-format-strings.md)

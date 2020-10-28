@@ -6,24 +6,25 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
-- number formatting [.NET Framework]
+- numeric format strings [.NET]
+- formatting [.NET], numbers
+- number formatting [.NET]
 - custom numeric format strings
-- numbers [.NET Framework], custom numeric format strings
+- numbers [.NET], custom numeric format strings
 - displaying date and time data
-- format providers [.NET Framework]
+- format providers [.NET]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 38c1890684bd89b2bc4719637209569f01bd17a2
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290509"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888478"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>作法：定義和使用自訂數值格式提供者
-.NET Framework 可讓您有效掌控數值的字串表示。 它支援以下自訂數值格式的功能：  
+
+.NET 可讓您有效掌控數值的字串表示。 它支援以下自訂數值格式的功能：  
   
 - 標準數值格式字串，這些字串提供預先定義的格式集，可將數字轉換成其字串表示。 您可以使用它們搭配任何擁有 `format` 參數的數值格式化方法，例如 <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>。 如需詳細資訊，請參閱[標準數值格式字串](standard-numeric-format-strings.md)。  
   
@@ -31,9 +32,9 @@ ms.locfileid: "84290509"
   
 - 自訂的 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 物件，這類物件會定義用來顯示數值字串表示的符號和格式模式。 您可以使用它們搭配任何擁有 `provider` 參數的數值格式化方法，例如 <xref:System.Int32.ToString%2A>。 一般而言，會使用 `provider` 參數來指定文化特性特定的格式。  
   
- 在某些情況下，這三項技術並不適用 (例如，應用程式必須顯示格式化帳號、身分證號碼或是郵遞區號時)。 .NET Framework 還可讓您定義既不是 <xref:System.Globalization.CultureInfo> 也不是 <xref:System.Globalization.NumberFormatInfo> 物件的格式物件，以判斷如何將數值格式化。 本主題提供實作這類物件的逐步指示，並提供格式化電話號碼的範例。  
+ 在某些情況下，這三項技術並不適用 (例如，應用程式必須顯示格式化帳號、身分證號碼或是郵遞區號時)。 .NET 也可讓您定義不是也不是物件的格式物件， <xref:System.Globalization.CultureInfo> <xref:System.Globalization.NumberFormatInfo> 以決定如何格式化數位值。 本主題提供實作這類物件的逐步指示，並提供格式化電話號碼的範例。  
   
-### <a name="to-define-a-custom-format-provider"></a>定義自訂格式提供者  
+## <a name="define-a-custom-format-provider"></a>定義自訂格式提供者  
   
 1. 定義實作 <xref:System.IFormatProvider> 和 <xref:System.ICustomFormatter> 介面的類別。  
   
@@ -49,19 +50,20 @@ ms.locfileid: "84290509"
   
     1. (選擇性) 藉由檢查 `provider` 參數，來確認這個方法的合法目的為提供格式化服務。 針對實作 <xref:System.IFormatProvider> 與 <xref:System.ICustomFormatter> 的格式物件，這項檢查包含測試 `provider` 參數是否與目前的格式物件相等。  
   
-    2. 決定格式物件是否應支援自訂格式規範 （例如，"N" 格式規範可能表示美國電話號碼應以 NANP 格式輸出，而 "I" 可能表示以 ITU-T 建議 E. 123 格式的輸出）。如果使用格式規範，此方法應該會處理特定的格式規範。 格式規範會隨 `format` 參數傳遞至方法。 如果沒有規範，則 `format` 參數值為 <xref:System.String.Empty?displayProperty=nameWithType>。  
+    2. 決定格式物件是否應支援自訂格式規範  (例如，"N" 格式規範可能會指出美國電話號碼應以 NANP 格式輸出，而 "I" 可能會以 ITU-T 建議的 E. 123 格式表示輸出。 ) 如果使用格式規範，則方法應該處理特定的格式規範。 格式規範會隨 `format` 參數傳遞至方法。 如果沒有規範，則 `format` 參數值為 <xref:System.String.Empty?displayProperty=nameWithType>。  
   
     3. 擷取作為 `arg` 參數傳遞至方法的數值。 執行任何必要的操作，將它轉換成其字串表示。  
   
     4. 傳回 `arg` 參數的字串表示。  
   
-### <a name="to-use-a-custom-numeric-formatting-object"></a>使用自訂數值格式物件  
+## <a name="use-a-custom-numeric-formatting-object"></a>使用自訂數值格式物件  
   
 1. 建立自訂格式類別的新執行個體。  
   
 2. 呼叫 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 格式化方法，將自訂格式物件、格式規範 (如果未使用，則為 <xref:System.String.Empty?displayProperty=nameWithType>) 及要格式化的數值傳遞給該方法。  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>範例
+
  下列範例會定義名為 `TelephoneFormatter` 的自訂數值格式提供者，它會將代表美國電話號碼的數字轉換成 NANP 或 E.123 格式。 這個方法會處理兩種格式規範："N" (輸出 NANP 格式) 和 "I" (輸出國際 E.123 格式)。  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]

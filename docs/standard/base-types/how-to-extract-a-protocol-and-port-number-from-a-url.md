@@ -9,16 +9,16 @@ helpviewer_keywords:
 - searching with regular expressions, examples
 - parsing text with regular expressions, examples
 - regular expressions, examples
-- .NET Framework regular expressions, examples
-- regular expressions [.NET Framework], examples
+- .NET regular expressions, examples
+- regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-ms.openlocfilehash: c1d45dbcb2916af86d645d7813594f2b278bb7c2
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 9c0ab3cc0d3bcbee1a28d53215a17840be216172
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803868"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888543"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>作法：從 URL 擷取通訊協定和連接埠號碼
 下列範例會從 URL 擷取通訊協定和連接埠號碼。  
@@ -49,6 +49,6 @@ ms.locfileid: "85803868"
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 規則運算式](regular-expressions.md)

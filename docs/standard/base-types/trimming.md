@@ -1,6 +1,6 @@
 ---
 title: 在 .NET 中修剪和移除字串中的字元
-description: 瞭解如何從字串的開頭或結尾修剪空白空格，或從 .NET 的字串中的指定位置移除任何數目的空格或字元。
+description: 瞭解如何從字串的開頭或結尾修剪空格，或從 .NET 中的字串中指定的位置移除任何數目的空格或字元。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,7 +8,7 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- strings [.NET Framework], removing characters
+- strings [.NET], removing characters
 - Remove method
 - TrimEnd method
 - Trim method
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 630fe6b51d151d1f1384f2e3cde62750c303d883
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d0057d503474f3f6ff886acda3ce1d72fb3ebe21
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446889"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888590"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>在 .NET 中修剪和移除字串中的字元
 如果您將句子剖析成個別文字，最後可能會得到許多文字，但文字任一端有空格 (也稱為空白字元)。 在這種情況下，您可以使用 **System.String** 類別中的其中一個 Trim 方法，從字串中的指定位置移除任意數目的空格或其他字元。 下表描述可用的 Trim 方法。  
   
-|方法名稱|使用|  
+|方法名稱|用途|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|將字元陣列中字串開頭和結尾指定的空格或空白字元移除。|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|從字串尾端移除字元陣列中指定的字元。|  
@@ -88,7 +88,7 @@ ms.locfileid: "84446889"
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
-## <a name="replace"></a>Replace
+## <a name="replace"></a>取代
 
  您也可以從字串中移除指定的字元或子字串，方法是呼叫 <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法並指定空字串 (<xref:System.String.Empty?displayProperty=nameWithType>) 做為取代。 下列範例將會從字串中移除所有逗號。  
   

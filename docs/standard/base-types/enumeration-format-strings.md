@@ -1,6 +1,6 @@
 ---
 title: 列舉格式字串
-description: 使用 .NET 中的 Enum 方法建立列舉格式字串。 格式化列舉成員的數值、十六進位或字串值。
+description: 使用 .NET 中的列舉. ToString 方法來建立列舉格式字串。 格式化列舉成員的數值、十六進位或字串值。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - format specifiers, enumeration format strings
 - enumeration format strings
-- formatting [.NET Framework], enumeration
+- formatting [.NET], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: 825357cf4a56132dae0870972d316eff89b0c94f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e4d8ca27d99c211653269b2477be8f5632b78229
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583423"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888655"
 ---
 # <a name="enumeration-format-strings"></a>列舉格式字串
 
