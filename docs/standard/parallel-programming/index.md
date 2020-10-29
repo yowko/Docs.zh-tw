@@ -6,24 +6,24 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-ms.openlocfilehash: 02087cf58720388c64d8aba5424db0b54828219a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: edb3d38b0815c6703720292a45e302c62c81650b
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661961"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925333"
 ---
 # <a name="parallel-programming-in-net"></a>.NET 的平行程式設計
 
 許多個人電腦和工作站都具有多個 CPU 核心，以便能夠同時執行多個執行緒。 若要利用硬體優勢，您可以將您的程式碼平行化，以便將工作分散到多個處理器。
 
-在過去，平行化作業需要在低階操作執行緒和鎖定。 Visual Studio 與 .NET Framework 提供了執行階段、類別庫類型和診斷工具，以加強支援平行程式設計。 從 .NET Framework 4 引進的這些功能簡化了平行開發。 您能夠利用簡單常見的語法，撰寫效率高、精細且具彈性的平行程式碼，而不需要直接使用執行緒或執行緒集區。
+在過去，平行化作業需要在低階操作執行緒和鎖定。 Visual Studio 和 .NET 可提供執行時間、類別庫類型和診斷工具，以加強平行程式設計的支援。 這些功能是在 .NET Framework 4 中引進，可簡化平行開發。 您能夠利用簡單常見的語法，撰寫效率高、精細且具彈性的平行程式碼，而不需要直接使用執行緒或執行緒集區。
 
-下圖提供 .NET Framework 中平行程式設計架構的高階概觀：
+下圖提供 .NET 中平行程式設計架構的高階總覽。
 
 ![.NET 平行程式設計架構](./media/tpl-architecture.png)
 
-## <a name="related-topics"></a>[相關主題]
+## <a name="related-topics"></a>相關主題
 
 |技術|描述|
 |----------------|-----------------|
@@ -39,4 +39,4 @@ ms.locfileid: "84661961"
 ## <a name="see-also"></a>另請參閱
 
 - [非同步總覽](../async.md)
-- [Managed 執行緒](../threading/index.md)
+- [Managed 執行緒處理](../threading/index.md)

@@ -4,12 +4,12 @@ description: 瞭解如何修剪獨立的應用程式，以縮減其大小。 .NE
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: bf38ffe4d47986ae78c6cf2b2e5ecb292411ba6c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770451"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925281"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>修剪獨立式部署及可執行檔
 
@@ -36,6 +36,39 @@ Trim 獨立部署模型是獨立部署模型的特製化版本，已優化以減
 <ItemGroup>
     <TrimmerRootAssembly Include="System.Security" />
 </ItemGroup>
+```
+
+### <a name="support-for-ssl-certificates"></a>SSL 憑證的支援
+
+如果您的應用程式載入 SSL 憑證（例如在 ASP.NET Core 應用程式中），您會想要確保在進行調整時，您會想要避免修剪將有助於載入 SSL 憑證的元件。
+
+我們可以更新專案檔，以包括下列 ASP.NET Core 3.1：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>...</PropertyGroup>
+  <!--Include the following for .aspnetcore 3.1-->
+  <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net" />
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
+```
+
+如果我們使用的是 .Net 5.0，我們可以更新專案檔以包含下列專案：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+ <PropertyGroup>...</PropertyGroup>
+ <!--Include the following for .net 5.0-->
+ <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
 ```
 
 ## <a name="trim-your-app---cli"></a>修剪您的應用程式-CLI
@@ -71,25 +104,25 @@ Trim 獨立部署模型是獨立部署模型的特製化版本，已優化以減
 
 Visual Studio 會建立可重複使用的發行設定檔，以控制您的應用程式發佈方式。
 
-01. 在 [ **方案總管** ] 窗格中，以滑鼠右鍵按一下您要發行的專案。 選取 [ **發佈 ...**]。
+01. 在 [ **方案總管** ] 窗格中，以滑鼠右鍵按一下您要發行的專案。 選取 [ **發佈 ...** ]。
 
     :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="使用醒目提示 [發佈] 選項的右鍵功能表方案總管。":::
 
     如果您還沒有發行設定檔，請遵循指示來建立一個設定檔，並選擇 [ **資料夾** 目標] 類型。
 
-01. 選擇 [編輯]****。
+01. 選擇 [編輯]  。
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Visual studio 以編輯按鈕發行設定檔。":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="使用醒目提示 [發佈] 選項的右鍵功能表方案總管。":::
 
 01. 在 [ **設定檔設定** ] 對話方塊中，設定下列選項：
 
-    - 設定**獨立**的**部署模式**。
+    - 設定 **獨立** 的 **部署模式** 。
     - 將 **目標運行** 時間設定為您想要發佈的目標平臺。
-    - **在 [預覽]) 中選取 [修剪未使用的元件 (**]。
+    - **在 [預覽]) 中選取 [修剪未使用的元件 (** ]。
 
     選擇 [ **儲存** ] 以儲存設定，並返回 [ **發佈** ] 對話方塊。
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="醒目提示具有部署模式、目標執行時間和修剪未使用元件選項的 [設定檔設定] 對話方塊。":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="使用醒目提示 [發佈] 選項的右鍵功能表方案總管。":::
 
 01. 選擇 [ **發行** ] 以發行已修剪的應用程式。
 

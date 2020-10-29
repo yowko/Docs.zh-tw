@@ -5,20 +5,21 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: f9c130b73044440f24b7b8bbebe9527490a165c1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288520"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925320"
 ---
 # <a name="data-structures-for-parallel-programming"></a>適用於平行程式設計的資料結構
-.NET Framework 4 版導入了數個適用於平行程式設計的新類型，包括一系列並行集合類別、輕量型同步處理原始物件，以及適用於延遲初始設定的類型。 您可以搭配任何多執行緒應用程式程式碼使用這些類型，其中包括工作平行程式庫和 PLINQ。  
+
+.NET 提供數種適用于平行程式設計的類型，包括一組並行集合類別、輕量同步處理原始物件，以及延遲初始設定的類型。 您可以搭配任何多執行緒應用程式程式碼使用這些類型，其中包括工作平行程式庫和 PLINQ。  
   
 ## <a name="concurrent-collection-classes"></a>並行集合類別  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的集合類別能提供安全執行緒新增和移除作業，以盡量避免鎖定情況，並在需要鎖定時使用細部鎖定。 並行集合類別與在 .NET Framework 1.0 和 2.0 版中導入的集合不同，它並不會要求使用者程式碼在存取項目時採用任何鎖定。 並行集合類別可在多執行緒針對集合新增和移除項目的案例中，大幅提升 <xref:System.Collections.ArrayList?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (搭配使用者實作的鎖定) 等類型的效能。  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的集合類別能提供安全執行緒新增和移除作業，以盡量避免鎖定情況，並在需要鎖定時使用細部鎖定。 並行集合類別不會要求使用者程式碼在存取專案時取得任何鎖定。 並行集合類別可在多執行緒針對集合新增和移除項目的案例中，大幅提升 <xref:System.Collections.ArrayList?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (搭配使用者實作的鎖定) 等類型的效能。  
   
- 下表列出新的並行集合類別：  
+ 下表列出並行集合類別：  
   
 |類型|描述|  
 |----------|-----------------|  
@@ -31,9 +32,9 @@ ms.locfileid: "84288520"
  如需詳細資訊，請參閱[安全執行緒集合](../collections/thread-safe/index.md)。  
   
 ## <a name="synchronization-primitives"></a>同步處理原始物件  
- <xref:System.Threading?displayProperty=nameWithType> 中的新同步處理原始物件能透過避免舊版多執行緒程式碼中耗費資源的鎖定機制，提供細微的並行及更快的效能。 某些新的類型 (例如 <xref:System.Threading.Barrier?displayProperty=nameWithType> 和 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>) 在較舊版本的 .NET Framework 中並沒有相對應的項目。  
+ 命名空間中的同步處理原始物件可 <xref:System.Threading?displayProperty=nameWithType> 避免在舊版多執行緒程式碼中找到昂貴的鎖定機制，以提供更精細的平行存取和更快速的效能
   
- 下表列出新的同步處理類型：  
+ 下表列出同步處理類型：  
   
 |類型|描述|  
 |----------|-----------------|  
@@ -41,12 +42,12 @@ ms.locfileid: "84288520"
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|透過提供簡單的會合機制來簡化分岔和連結案例。 如需詳細資訊，請參閱 [CountdownEvent](../threading/countdownevent.md)。|  
 |<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|與 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 類似的同步處理原始物件。 <xref:System.Threading.ManualResetEventSlim> 雖為輕量型，但只能用於內部處理序通訊。|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|能限制可並行存取資源或資源集區之執行緒數目的同步處理原始物件。 如需詳細資訊，請參閱 [Semaphore 和 SemaphoreSlim](../threading/semaphore-and-semaphoreslim.md)。|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|能使嘗試取得鎖定的執行緒在產生其配量之前，於迴圈中等候 (或*旋轉*) 一段時間的互斥鎖定原始物件。 在預期等候鎖定時間較短的案例中，<xref:System.Threading.SpinLock> 能提供比其他鎖定形式更佳的效能。 如需詳細資訊，請參閱 [SpinLock](../threading/spinlock.md)。|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|能使嘗試取得鎖定的執行緒在產生其配量之前，於迴圈中等候 (或 *旋轉* ) 一段時間的互斥鎖定原始物件。 在預期等候鎖定時間較短的案例中，<xref:System.Threading.SpinLock> 能提供比其他鎖定形式更佳的效能。 如需詳細資訊，請參閱 [SpinLock](../threading/spinlock.md)。|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|會旋轉一段特定的時間，並於最終超過旋轉計數時將執行緒置於等候狀態的小型輕量型類型。  如需詳細資訊，請參閱 [SpinWait](../threading/spinwait.md)。|  
   
  如需詳細資訊，請參閱  
   
-- [如何：使用 SpinLock 進行低層級的同步處理](../threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [如何：使用 SpinLock 進行低階同步處理](../threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
 - [如何：使用屏障同步處理並行作業](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
   

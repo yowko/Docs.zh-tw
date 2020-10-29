@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: b14191d798baf458bd860c00913683f53d0a1fd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fa67e3b94bc7b2f9afac749e50204138e9a041f0
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555649"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925255"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>作法：使用平行類別逐一查看檔案目錄
 在許多情況下，檔案反覆運算是一項可以輕鬆平行處理的作業。 [如何：使用 PLINQ 逐一查看檔案目錄](how-to-iterate-file-directories-with-plinq.md)這個主題示範針對許多案例執行此工作的最簡單方式。 不過，當您的程式碼需要處理在存取檔案系統時可能會出現的許多類型例外狀況時，便會提升此工作的複雜性。 下列範例會示範處理該問題的其中一種方式。 它會使用以堆疊為基礎的反覆運算來周遊位於特定目錄底下的所有檔案和資料夾，並能使程式碼能夠攔截並處理各種不同的例外狀況。 當然，要如何處理例外狀況仍然取決於您。  
@@ -24,7 +24,7 @@ ms.locfileid: "90555649"
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]
  [!code-vb[TPL_Parallel#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/fileiteration08.vb#08)]  
   
- 在此範例中，檔案 I/O 是以同步方式執行。 處理大型檔案或低速的網路連線時，您應該考慮以非同步方式存取檔案。 您可以結合非同步 I/O 技術與平行反覆運算。 如需詳細資訊，請參閱 [TPL 和傳統 .NET Framework 非同步程式設計](tpl-and-traditional-async-programming.md)。  
+ 在此範例中，檔案 I/O 是以同步方式執行。 處理大型檔案或低速的網路連線時，您應該考慮以非同步方式存取檔案。 您可以結合非同步 I/O 技術與平行反覆運算。 如需詳細資訊，請參閱 [TPL 和傳統 .Net 非同步程式設計](tpl-and-traditional-async-programming.md)。  
   
  這個範例會使用本機 `fileCount` 變數維護已處理檔案的總數。 由於可能會有多個工作同時存取這個變數，因此會透過呼叫 <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> 方法同步處理其存取。  
   
