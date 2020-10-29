@@ -1524,6 +1524,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
       - name: 在匿名和元組型別之間選擇
         href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+      - name: 主控台應用程式概念
+        href: ../standard/building-console-apps.md
   - name: 相依性插入
     items:
       - name: 概觀
