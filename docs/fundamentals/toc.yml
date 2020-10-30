@@ -529,7 +529,7 @@ items:
                         href: code-analysis/quality-rules/ca1200.md
                   - name: 全球化規則
                     items:
-                      - name: 總覽
+                      - name: 概觀
                         displayName: globalization rules
                         href: code-analysis/quality-rules/globalization-warnings.md
                       - name: CA1303
@@ -1560,6 +1560,8 @@ items:
         href: ../core/extensions/custom-logging-provider.md
       - name: 高效能記錄
         href: ../core/extensions/high-performance-logging.md
+      - name: 主控台記錄格式
+        href: ../core/extensions/console-log-formatter.md
   - name: HostBuilder (一般主機)
     href: ../core/extensions/generic-host.md
   - name: 資料存取
@@ -1643,7 +1645,7 @@ items:
         href: ../standard/io/memory-mapped-files.md
   - name: 平行處理、並行與非同步
     items:
-      - name: 總覽
+      - name: 概觀
         href: ../standard/parallel-processing-and-concurrency.md
         displayName: 'Parallel processing, concurrency, async'
       - name: 非同步程式設計
