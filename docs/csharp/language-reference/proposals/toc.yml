@@ -116,3 +116,5 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
         - name: 隱藏發出 localsinit 旗標
           href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md
+        - name: 不受限制的型別參數注釋
+          href: ../../../../_csharplang/proposals/csharp-9.0/unconstrained-type-parameter-annotations.md
