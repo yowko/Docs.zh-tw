@@ -3,12 +3,12 @@ title: 從 .NET Framework 移植到 .NET Core
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c206e56e095d1ca068fa2aa6f60e891895f7f999
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 00d6bb513a6bd8ee511b69c07272f605c39e5619
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888570"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063237"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>從 .NET Framework 移植到 .NET Core 的總覽
 
@@ -65,7 +65,7 @@ ms.locfileid: "92888570"
 
 1. 使用 [.net 可攜性分析器](../../standard/analyzers/portability-analyzer.md) 來分析您的元件，並查看它們是否可移植到 .net Core。
 
-   .NET 可攜性分析器工具會分析已編譯的元件，並產生報表。 這份報表會顯示高階可攜性摘要，以及您所使用的每個 API 的明細（無法在 NET Core 上取得）。 使用此工具時，請只提交您要轉換的個別專案，以專注于可能需要的 API 變更。 許多 Api 在 .NET Core 中都有對等的可用性，而您會想要切換至這些 Api。
+   .NET 可攜性分析器工具會分析已編譯的元件，並產生報表。 這份報表會顯示高階可攜性摘要，以及您所使用的每個 API 的細目（無法在 .NET Core 上取得）。 使用此工具時，請只提交您要轉換的個別專案，以專注于可能需要的 API 變更。 許多 Api 在 .NET Core 中都有對等的可用性，而您會想要切換至這些 Api。
 
    讀取分析器所產生的報表時，重要的資訊是正在使用的實際 Api，而不一定是對目標平臺的支援百分比。 許多 Api 在 .NET Standard/核心中都有對等的選項，因此瞭解您的程式庫或應用程式需要 API 的案例將有助於判斷可攜性的含意。
 
@@ -109,13 +109,13 @@ ms.locfileid: "92888570"
 
    如果您使用 Windows 特定 Api (例如登錄存取) ，請安裝 [Windows 相容性套件](./windows-compat-pack.md)。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>下一步
 
 > [!div class="nextstepaction"]
 > [分析相依性](third-party-deps.md) 
 > [封裝 NuGet 套件](../deploying/creating-nuget-packages.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ASP.NET 至 ASP.NET Core 遷移](/aspnet/core/migration/proper-to-2x)
 - [將 WPF 應用程式遷移至 .NET Core](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)

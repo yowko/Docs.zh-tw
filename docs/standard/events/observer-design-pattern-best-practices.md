@@ -3,18 +3,19 @@ title: 觀察器設計模式最佳作法
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- observer design pattern [.NET Framework], best practices
-- best practices [.NET Framework], observer design pattern
+- observer design pattern [.NET], best practices
+- best practices [.NET], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: b4f8e568dcb6790dac1dc8fc5c969d6fa1367c4e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8e75343e1ca1c7f69306ee45148f2dc0eec3585f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288455"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064076"
 ---
 # <a name="observer-design-pattern-best-practices"></a>觀察器設計模式最佳作法
-在 .NET Framework 中，觀察者設計模式會實作為一組介面。 <xref:System.IObservable%601?displayProperty=nameWithType> 介面代表資料提供者，它也負責提供 <xref:System.IDisposable> 實作，讓觀察者可以取消訂閱通知。 <xref:System.IObserver%601?displayProperty=nameWithType> 介面代表觀察者。 本主題說明使用這些介面實作觀察者設計模式時，開發人員應該遵循的最佳作法。  
+
+在 .NET 中，觀察者設計模式會實作為一組介面。 <xref:System.IObservable%601?displayProperty=nameWithType> 介面代表資料提供者，它也負責提供 <xref:System.IDisposable> 實作，讓觀察者可以取消訂閱通知。 <xref:System.IObserver%601?displayProperty=nameWithType> 介面代表觀察者。 本主題說明使用這些介面實作觀察者設計模式時，開發人員應該遵循的最佳作法。  
   
 ## <a name="threading"></a>執行緒  
  一般來說，提供者會藉由將特定觀察者加入由某些集合物件所代表的訂閱者清單，而實作 <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> 方法，且其會藉由從訂閱者清單中移除特定觀察者而實作 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法。 觀察者可隨時呼叫這些方法。 此外，因為提供者/觀察者合約未指定負責在 <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 回呼方法之後取消訂閱的人員，所以提供者和觀察者可能會同時嘗試從清單中移除相同的成員。 因為這種可能性，<xref:System.IObservable%601.Subscribe%2A> 和 <xref:System.IDisposable.Dispose%2A> 方法都應該是安全執行緒。 通常，這需要使用[平行集合](../parallel-programming/data-structures-for-parallel-programming.md)或鎖定。 不是安全執行緒的實作，應該要明確地記載它們不是安全執行緒。  
@@ -53,6 +54,6 @@ ms.locfileid: "84288455"
   
 ## <a name="see-also"></a>另請參閱
 
-- [觀察器設計模式](observer-design-pattern.md)
+- [觀察者設計模式](observer-design-pattern.md)
 - [如何：執行觀察者](how-to-implement-an-observer.md)
 - [如何：執行提供者](how-to-implement-a-provider.md)

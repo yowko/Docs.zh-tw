@@ -1,6 +1,6 @@
 ---
 title: 如何：引發和使用事件
-description: 引發 & 使用 .NET 中的事件。 請參閱使用 EventHandler 委派、EventHandler <TEventArgs> 委派 & 自訂委派的範例。
+description: 引發 & 在 .NET 中使用事件。 請參閱使用 EventHandler 委派、EventHandler <TEventArgs> 委派 & 自訂委派的範例。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,16 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- events [.NET Framework], raising
+- events [.NET], raising
 - raising events
-- events [.NET Framework], samples
+- events [.NET], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 4054e1a26c3392870af994a6eceafae92176a332
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: c9121c6b2635788ad8ad7abc6d2b5a58448049a6
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769271"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064193"
 ---
 # <a name="how-to-raise-and-consume-events"></a>如何：引發和使用事件
 本主題中的範例將示範如何使用事件。 包括 <xref:System.EventHandler> 委派、<xref:System.EventHandler%601> 委派和自訂委派的範例，用以說明包含和不包含資料的事件。  

@@ -1,12 +1,12 @@
 ---
 title: .NET 垃圾收集
-description: 瞭解 .NET 中的垃圾收集。 .NET 垃圾收集行程會管理應用程式的記憶體配置和釋放。
+description: 瞭解 .NET 中的垃圾收集。 .NET 垃圾收集行程會管理您應用程式的記憶體配置和釋放。
 ms.date: 04/21/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - memory, garbage collection
 - garbage collection, automatic memory management
-- GC [.NET Framework]
+- GC [.NET]
 - memory, allocating
 - common language runtime, garbage collection
 - garbage collector
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: dde0012ff7233eb7ee13efab1931f129b0eae276
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 39b5bf62935054bd4b9be2d228cc42202aa89144
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662481"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063185"
 ---
 # <a name="garbage-collection"></a>記憶體回收
 
@@ -32,12 +32,12 @@ ms.locfileid: "84662481"
   
 ## <a name="in-this-section"></a>本節內容
   
-|Title|描述|  
+|標題|描述|  
 |-----------|-----------------|  
 |[垃圾收集的基本概念](fundamentals.md)|描述記憶體回收運作方式、如何在 Managed 堆積上配置物件，以及其他核心概念。|  
-|[工作站和伺服器記憶體回收](workstation-server-gc.md)|說明用戶端應用程式的工作站垃圾收集與伺服器應用程式的伺服器垃圾收集之間的差異。|
-|[背景垃圾收集](background-gc.md)|描述背景垃圾收集，這是層代0和1物件的集合，而層代2回收正在進行中。|
-|[大型物件堆積](large-object-heap.md)|描述大型物件堆積（LOH），以及如何將大型物件進行垃圾收集。|
+|[工作站和伺服器記憶體回收](workstation-server-gc.md)|描述用戶端應用程式的工作站垃圾收集與伺服器應用程式的伺服器垃圾收集之間的差異。|
+|[背景垃圾收集](background-gc.md)|描述背景垃圾收集，這是層代0和1物件的集合，而第2代收集正在進行中。|
+|[大型物件堆積](large-object-heap.md)|描述大型物件堆積 (LOH) 以及如何進行垃圾收集大型物件。|
 |[記憶體回收和效能](performance.md)|描述可用來診斷記憶體回收和效能問題的效能檢查。|  
 |[引發的回收](induced.md)|描述如何進行記憶體回收。|  
 |[延遲模式](latency.md)|描述判斷記憶體回收干擾程度的模式。|  

@@ -3,18 +3,18 @@ title: 日期、時間和時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- time zone objects [.NET Framework]
-- date and time data [.NET Framework]
-- time zones [.NET Framework]
-- times [.NET Framework], time zones
-- time [.NET Framework], time zones
+- time zone objects [.NET]
+- date and time data [.NET]
+- time zones [.NET]
+- times [.NET], time zones
+- time [.NET], time zones
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
-ms.openlocfilehash: 86602cd6e662b1b1057832247babc558ef67b79f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1200f7edc3ac40a67ecfa2f554c5c721877e755a
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276929"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063673"
 ---
 # <a name="dates-times-and-time-zones"></a>日期、時間和時區
 
@@ -22,7 +22,7 @@ ms.locfileid: "84276929"
 
 * <xref:System.TimeZone>
 
-  使用這個類別，以處理系統的當地時區和國際標準時間 (UTC) 區域。 類別的功能 <xref:System.TimeZone> 大部分是由類別所取代 <xref:System.TimeZoneInfo> 。
+  使用這個類別，以處理系統的當地時區和國際標準時間 (UTC) 區域。 類別的功能 <xref:System.TimeZone> 大多是由類別所取代 <xref:System.TimeZoneInfo> 。
 
 * <xref:System.TimeZoneInfo>
 
@@ -38,7 +38,7 @@ ms.locfileid: "84276929"
 
 [時區概觀](time-zone-overview.md) 討論有關建立時區感知應用程式的術語、概念和問題。
 
-[在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間進行選擇](choosing-between-datetime.md)討論當 <xref:System.DateTime> <xref:System.DateTimeOffset> <xref:System.TimeZoneInfo> 處理日期和時間資料時，使用、和類型的時機。
+[在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間進行選擇](choosing-between-datetime.md) 討論當使用 <xref:System.DateTime> <xref:System.DateTimeOffset> <xref:System.TimeZoneInfo> 日期和時間資料時，如何使用、和類型。
 
 [尋找定義於本機系統的時區](finding-the-time-zones-on-local-system.md) 描述如何列舉在本機系統上找到的時區。
 

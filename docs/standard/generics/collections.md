@@ -11,12 +11,12 @@ helpviewer_keywords:
 - generic collections [.NET]
 - generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-ms.openlocfilehash: 5767bac0bb1e3ae9e586e9a10d8452d421519447
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 956db9ace4ae00062accdd6e80c7911aaac7523f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287567"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064245"
 ---
 # <a name="generic-collections-in-net"></a>.NET 中的泛型集合
 
@@ -41,11 +41,11 @@ ms.locfileid: "84287567"
  <xref:System.Nullable%601> 泛型結構可讓您使用可指派 `null` 的實值類型。 這在使用資料庫查詢時會很有用，因為包含實值類型的欄位可能遺漏。 泛型類型參數可以是任何實值類型。  
   
 > [!NOTE]
-> 在 C# 和 Visual Basic 中，不需要明確使用 <xref:System.Nullable%601>，因為語言已具有可為 Null 型別的語法。 請參閱[可為 null 的實數值型別（c # 參考）](../../csharp/language-reference/builtin-types/nullable-value-types.md)和[可為 null 的實數值型別（Visual Basic）](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+> 在 C# 和 Visual Basic 中，不需要明確使用 <xref:System.Nullable%601>，因為語言已具有可為 Null 型別的語法。 請參閱[可為 null 的實值型別 (c # 參考) ](../../csharp/language-reference/builtin-types/nullable-value-types.md)和[可為 null 的實數值型別 () Visual Basic](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
   
  <xref:System.ArraySegment%601> 泛型結構提供一個方法，將項目範圍限定在任何類型之以零為起始的一維陣列中。 泛型型別參數是陣列的項目類型。  
   
- 如果您的事件遵循 .NET Framework 所使用事件處理模式，則 <xref:System.EventHandler%601> 泛型委派不需要宣告委派型別來處理事件。 例如，假設您已建立衍生自 <xref:System.EventArgs> 的 `MyEventArgs` 類別來保存事件的資料。 您可以接著依照下列方式來宣告事件：  
+ <xref:System.EventHandler%601>如果您的事件遵循 .net 所使用的事件處理模式，泛型委派就不需要宣告委派類型來處理事件。 例如，假設您已建立衍生自 <xref:System.EventArgs> 的 `MyEventArgs` 類別來保存事件的資料。 您可以接著依照下列方式來宣告事件：  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]

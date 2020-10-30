@@ -11,18 +11,18 @@ helpviewer_keywords:
 - IObservable<T> interface
 - IObserver<T> interface
 - IObservable(Of T) interface
-- observer design pattern [.NET Framework]
+- observer design pattern [.NET]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e1f8dad2c19d3e11281cda5ef749730c5c6334d7
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559157"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064063"
 ---
 # <a name="observer-design-pattern"></a>觀察器設計模式
 
-觀察者設計模式可讓訂閱者向提供者註冊，並且接收通知。 它適合任何需要推入型通知的情節。 這個模式會定義「提供者」**(也稱為「主題」** 或「可預見值」**)，以及零個、一個或多個「觀察者」**。 觀察者會向提供者註冊，而且只要預先定義的條件、事件或狀態有所變更，提供者就會自動呼叫觀察者的其中一種方法，來通知所有觀察者。 在這個方法呼叫中，提供者也可以提供目前的狀態資訊給觀察者。 在 .NET Framework 中，觀察者設計模式是透過實作泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 介面來套用。 泛型型別參數代表提供通知資訊的類型。
+觀察者設計模式可讓訂閱者向提供者註冊，並且接收通知。 它適合任何需要推入型通知的情節。 這個模式會定義「提供者」  (也稱為「主題」  或「可預見值」  )，以及零個、一個或多個「觀察者」  。 觀察者會向提供者註冊，而且只要預先定義的條件、事件或狀態有所變更，提供者就會自動呼叫觀察者的其中一種方法，來通知所有觀察者。 在這個方法呼叫中，提供者也可以提供目前的狀態資訊給觀察者。 在 .NET 中，觀察者設計模式是藉由實作為泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和介面來套用 <xref:System.IObserver%601?displayProperty=nameWithType> 。 泛型型別參數代表提供通知資訊的類型。
 
 ## <a name="applying-the-pattern"></a>套用模式
 
@@ -90,10 +90,10 @@ ms.locfileid: "90559157"
 [!code-csharp[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/program.cs#5)]
 [!code-vb[Conceptual.ObserverDesignPattern#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/module1.vb#5)]
 
-## <a name="related-topics"></a>[相關主題]
+## <a name="related-topics"></a>相關主題
 
 |標題|描述|
 |-----------|-----------------|
-|[觀察者設計模式最佳做法](observer-design-pattern-best-practices.md)|描述開發實作觀察者設計模式的應用程式時，所採用的最佳做法。|
+|[觀察器設計模式最佳作法](observer-design-pattern-best-practices.md)|描述開發實作觀察者設計模式的應用程式時，所採用的最佳做法。|
 |[如何：執行提供者](how-to-implement-a-provider.md)|提供溫度監控應用程式的提供者逐步實作。|
 |[如何：執行觀察者](how-to-implement-an-observer.md)|提供溫度監控應用程式的觀察者逐步實作。|

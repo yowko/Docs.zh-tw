@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], about globalization
+- globalization [.NET], about globalization
 - global applications, globalization
-- international applications [.NET Framework], globalization
+- international applications [.NET], globalization
 - world-ready applications, globalization
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66ed197f102583553112083e3a21f89e33cd3e3f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291912"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064167"
 ---
 # <a name="globalization"></a>全球化
 
@@ -38,7 +38,7 @@ ms.locfileid: "84291912"
 
 包括 Windows 作業系統在內的許多應用程式和作業系統，也可以使用字碼頁代表字元集。 字碼頁通常包含 0x00 到 0x7F 的標準 ASCII 值，並將其他字元對應到其餘從 0x80 到 0xFF 的值。 0x80 到 0xFF 值的解譯取決於特定字碼頁。 因此，您應該盡可能避免在全球化應用程式中使用字碼頁。
 
-下列範例說明在系統上的預設字碼頁與儲存資料的字碼頁不同的情況下，解譯字碼頁資料所可能造成的危險性。 （若要模擬此案例，此範例會明確指定不同的字碼頁）。首先，此範例會定義一個陣列，其中包含希臘文字母的大寫字元。 它使用字碼頁 737 (也稱為 MS-DOS 希臘文) 將它們編碼成位元組陣列，並將其儲存至檔案。 如果擷取檔案，並使用字碼頁 737 將位元組陣列解碼，則會還原原始的字元。 然而，如果擷取檔案但使用字碼頁 1252 (也稱作 Windows-1252，代表拉丁字母的字元) 將位元組陣列解碼，則會遺失原始的字元。
+下列範例說明在系統上的預設字碼頁與儲存資料的字碼頁不同的情況下，解譯字碼頁資料所可能造成的危險性。  (模擬此案例，此範例會明確指定不同的字碼頁。首先 ) ，此範例會定義包含希臘文字母大寫字元的陣列。 它使用字碼頁 737 (也稱為 MS-DOS 希臘文) 將它們編碼成位元組陣列，並將其儲存至檔案。 如果擷取檔案，並使用字碼頁 737 將位元組陣列解碼，則會還原原始的字元。 然而，如果擷取檔案但使用字碼頁 1252 (也稱作 Windows-1252，代表拉丁字母的字元) 將位元組陣列解碼，則會遺失原始的字元。
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]
@@ -66,7 +66,7 @@ ms.locfileid: "84291912"
 > [!TIP]
 > 您可以搭配 <xref:System.Globalization.StringInfo> 類別使用文字項目，而無須使用字串中的個別字元。
 
-在字串搜尋和比較中，常見的錯誤是將字串視為字元的集合，且各個都由一個 <xref:System.Char> 物件表示。 事實上，單一字元可能由一個、兩個或多個 <xref:System.Char> 物件所形成。 若字母是由 Unicode 基本拉丁字元範圍 (U+0021 到 U+007E) 以外的字元所組成，則在此文化特性的字串中最常出現上述這類字元。 下列範例嘗試在字串中尋找拉丁大寫字母 A 帶抑音符號字元 (U+00C0) 的索引。 不過，這個字元可以用兩種不同的方式來表示：單一程式碼單位（U + 00C0）或複合字元（兩個程式碼單位： U + 0041 和 U + 0300）。 在此情況下，字元會在字串實例中以兩個 <xref:System.Char> 物件（u + 0041 和 u + 0300）來表示。 範例程式碼會呼叫 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 多載，以在字串執行個體中尋找此字元的位置，但這些多載會傳回不同的結果。 第一個方法呼叫具有 <xref:System.Char> 引數；它會執行序數比較，因此找不到相符項目。 第二個呼叫具有 <xref:System.String> 引數；它會執行區分文化特性的比較，因此會找到相符項目。
+在字串搜尋和比較中，常見的錯誤是將字串視為字元的集合，且各個都由一個 <xref:System.Char> 物件表示。 事實上，單一字元可能由一個、兩個或多個 <xref:System.Char> 物件所形成。 若字母是由 Unicode 基本拉丁字元範圍 (U+0021 到 U+007E) 以外的字元所組成，則在此文化特性的字串中最常出現上述這類字元。 下列範例嘗試在字串中尋找拉丁大寫字母 A 帶抑音符號字元 (U+00C0) 的索引。 不過，這個字元可以用兩種不同的方式來表示：單一程式碼單位 (U + 00C0) 或作為複合字元 (兩個程式碼單位： U + 0041 和 U + 0300) 。 在此情況下，字元會在字串實例中以兩個 <xref:System.Char> 物件（u + 0041 和 u + 0300）表示。 範例程式碼會呼叫 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 多載，以在字串執行個體中尋找此字元的位置，但這些多載會傳回不同的結果。 第一個方法呼叫具有 <xref:System.Char> 引數；它會執行序數比較，因此找不到相符項目。 第二個呼叫具有 <xref:System.String> 引數；它會執行區分文化特性的比較，因此會找到相符項目。
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -102,7 +102,7 @@ ms.locfileid: "84291912"
 
 區分文化特性的字串比較由 <xref:System.Globalization.CompareInfo> 物件定義，其由各個文化特性的 <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 屬性傳回。 使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法多載的區分文化特性字串比較同時也使用 <xref:System.Globalization.CompareInfo> 物件。
 
-.NET 會使用資料表對字串資料執行區分文化特性 (Culture) 的排序。 這些資料表的內容包含排序權數以及字串正規化的資料，且由特定 .NET 版本實作的 Unicode Standard 版本決定。 下表列出由 .NET Framework 及 .NET Core 指定版本實作的 Unicode 版本。 請注意，這份支援的 Unicode 版本清單僅適用於字元比較和排序，並不適用於依類別來分類 Unicode 字元。 如需詳細資訊，請參閱 <xref:System.String> 文章中的＜字串及 Unicode 標準＞一節。
+.NET 會使用資料表對字串資料執行區分文化特性 (Culture) 的排序。 這些資料表的內容包含排序權數以及字串正規化的資料，且由特定 .NET 版本實作的 Unicode Standard 版本決定。 下表列出指定的 .NET 版本所執行的 Unicode 版本。 這份支援的 Unicode 版本清單僅適用于字元比較和排序;它並不適用于依類別分類的 Unicode 字元。 如需詳細資訊，請參閱 <xref:System.String> 文章中的＜字串及 Unicode 標準＞一節。
 
 |.NET Framework 版本|作業系統|Unicode 版本|
 |----------------------------|----------------------|---------------------|
@@ -112,9 +112,9 @@ ms.locfileid: "84291912"
 |.NET Framework 4|所有作業系統|Unicode 5.0|
 |Windows 7 上的 .NET Framework 4.5 及更新版本|Unicode 5.0|
 |Windows 8 及更新作業系統上的 .NET Framework 4.5 及更新版本|Unicode 6.3.0|
-|.NET Core (所有版本)|取決於基礎作業系統所支援的 Unicode Standard 版本。|
+|.NET Core 和 .NET 5 +|取決於基礎作業系統所支援的 Unicode Standard 版本。|
 
-在所有版本的 .NET Core 以及 4.5 版以上的 .NET Framework 中，字串比較和排序都會視作業系統而定。 在 Windows 7 上執行的 .NET Framework 4.5 及更新版本，會從其本身實作 Unicode 5.0 的資料表擷取資料。 在 Windows 8 上執行的 .NET Framework 4.5 及更新版本，會從實作 Unicode 6.3 的作業系統資料表擷取資料。 在 .NET Core 上，支援的 Unicode 版本取決於基礎作業系統。 如果您將區分文化特性 (Culture) 的已排序資料序列化，便可使用 <xref:System.Globalization.SortVersion> 類別判斷何時需要排序序列化的資料，使其與 .NET 及作業系統的排序次序一致。 如需範例，請參閱 <xref:System.Globalization.SortVersion> 類別主題。
+從 .NET Framework 4.5 開始，以及所有版本的 .NET Core 和 .NET 5 +，字串比較和排序取決於作業系統。 在 Windows 7 上執行的 .NET Framework 4.5 和更新版本，會從其本身的資料表中取出可執行 Unicode 5.0 的資料。 在 Windows 8 和更新版本上執行的 .NET Framework 4.5 和更新版本，會從執行 Unicode 6.3 的作業系統資料表中取出資料。 在 .NET Core 和 .NET 5 + 上，支援的 Unicode 版本取決於基礎作業系統。 如果您將區分文化特性 (Culture) 的已排序資料序列化，便可使用 <xref:System.Globalization.SortVersion> 類別判斷何時需要排序序列化的資料，使其與 .NET 及作業系統的排序次序一致。 如需範例，請參閱 <xref:System.Globalization.SortVersion> 類別主題。
 
 如果您的應用程式執行字串資料的廣泛特定文化特性排序，則可使用 <xref:System.Globalization.SortKey> 類別來比較字串。 排序鍵會反映特定文化特性排序權數，包括字母、大小寫及特定字串的變音符號權數。 由於比較所使用的排序鍵為二進位，因此與隱含或明確使用 <xref:System.Globalization.CompareInfo> 物件的比較相比更為快速。 您透過將字串傳遞至 <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> 方法，進而為特定字串建立特定文化特性的排序鍵。
 
@@ -336,7 +336,7 @@ ms.locfileid: "84291912"
 
 - .NET 支援取代文化特性 (Culture)。 這可讓您定義新的自訂文化特性，進而補充現有標準文化特性，或完全加以取代。
 
-- 在 Windows 系統上，使用者可透過使用 [控制台] 中的 [地區和語言]**** 應用程式，自訂文化特性 (Culture) 專屬的設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來判斷其是否反映這些使用者自訂。 一般來說，對於使用者應用程式，您應該尊重使用者喜好設定，讓使用者以預期的格式呈現資料。
+- 在 Windows 系統上，使用者可透過使用 [控制台] 中的 [地區和語言]  應用程式，自訂文化特性 (Culture) 專屬的設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來判斷其是否反映這些使用者自訂。 一般來說，對於終端使用者應用程式，您應該考慮使用者喜好設定，讓使用者以預期的格式呈現資料。
 
 ## <a name="see-also"></a>另請參閱
 

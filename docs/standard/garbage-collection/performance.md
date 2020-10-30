@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: dee5a4b54806bdadc18d759c5df7016da060fd75
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662845"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93062967"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 
@@ -24,7 +24,7 @@ ms.locfileid: "84662845"
 
 ### <a name="memory-performance-counters"></a>記憶體效能計數器
 
-您可以使用效能計數器來收集效能資料。 如需相關指示，請參閱[執行階段分析](../../framework/debug-trace-profile/runtime-profiling.md)。 效能計數器的 .NET CLR 記憶體類別，如 [.NET Framework 中的效能計數器](../../framework/debug-trace-profile/performance-counters.md)中所述，會提供記憶體回收行程的相關資訊。
+您可以使用效能計數器來收集效能資料。 如需相關指示，請參閱[執行階段分析](../../framework/debug-trace-profile/runtime-profiling.md)。 效能計數器的 .NET CLR 記憶體類別，如 [.net 中的效能計數器](../../framework/debug-trace-profile/performance-counters.md)所述，會提供垃圾收集行程的相關資訊。
 
 ### <a name="debugging-with-sos"></a>以 SOS 偵錯
 
@@ -34,7 +34,7 @@ ms.locfileid: "84662845"
 
 ### <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件
 
-Windows 事件追蹤 (ETW) 是補充 .NET Framework 所提供之程式碼剖析和偵錯支援的追蹤系統。 從 .NET Framework 4 開始，[記憶體回收 ETW 事件](../../framework/performance/garbage-collection-etw-events.md)會擷取有用的資訊，以便從統計的觀點來分析受控堆積。 例如，引發 `GCStart_V1` 事件時，會發生記憶體回收，這會提供下列資訊：
+Windows 事件追蹤 (ETW) 是一種追蹤系統，可補充 .NET 所提供的程式碼剖析和偵錯工具支援。 從 .NET Framework 4 開始， [垃圾收集 ETW 事件](../../framework/performance/garbage-collection-etw-events.md) 會捕捉實用的資訊，以便從統計的觀點來分析 managed 堆積。 例如，引發 `GCStart_V1` 事件時，會發生記憶體回收，這會提供下列資訊：
 
 - 所收集物件的層代。
 
@@ -52,7 +52,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 ### <a name="application-domain-resource-monitoring"></a>應用程式定義域資源監視
 
-從 .NET Framework 4 開始，應用程式定義域資源監視 (ARM) 可讓主機監視應用程式定義域的 CPU 和記憶體使用量。 如需詳細資訊，請參閱[應用程式定義域資源監視](app-domain-resource-monitoring.md)。
+從 .NET Framework 4 開始， (ARM) 的應用程式域資源監視可讓主機監視應用程式域的 CPU 和記憶體使用量。 如需詳細資訊，請參閱[應用程式定義域資源監視](app-domain-resource-monitoring.md)。
 
 ## <a name="troubleshooting-performance-issues"></a>效能問題疑難排解
 
@@ -100,7 +100,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 ### <a name="issue-the-process-uses-too-much-memory"></a>問題：處理序使用太多記憶體
 
-常見的假設是 Windows 工作管理員 [效能]**** 索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。 不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。
+常見的假設是 Windows 工作管理員 [效能]  索引標籤上的記憶體使用量顯示可以指出使用太多記憶體的時刻。 不過，該顯示與工作集有關；它不提供虛擬記憶體使用量的相關資訊。
 
 如果您判斷問題是 Managed 堆積所導致，您必須在一段時間內測量 Managed 堆積，以判斷任何模式。
 
@@ -134,7 +134,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 分散可能會在層代 1 和層代 2 成為問題。 如果這些層代在記憶體回收之後有大量的可用空間，應用程式的物件使用方式可能需要修改，而且您應該考慮重新評估長期物件的存留期。
 
-固定過多物件可能會增加分散。 如果分散程度很高，可能已釘選了太多物件。
+固定過多物件可能會增加分散。 如果片段很高，則可能已釘選過多物件。
 
 如果虛擬記憶體的分散導致記憶體回收行程無法加入區段，原因可能是下列其中一項：
 
@@ -182,7 +182,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 在記憶體回收期間的 CPU 使用量會很高。 如果大量的處理序時間花在記憶體回收，則表示回收次數過於頻繁或是回收的持續時間太長。 Managed 堆積上物件配置率增加，會導致更頻繁地進行記憶體回收。 減少配置率可降低記憶體回收的頻率。
 
-您可以使用 `Allocated Bytes/second` 效能計數器，以監視配置率。 如需詳細資訊，請參閱 [.NET Framework 中的效能計數器](../../framework/debug-trace-profile/performance-counters.md)。
+您可以使用 `Allocated Bytes/second` 效能計數器，以監視配置率。 如需詳細資訊，請參閱 [.net 中的效能計數器](../../framework/debug-trace-profile/performance-counters.md)。
 
 回收的持續時間主要是配置後存留之物件數目的因素。 如果要收集許多物件，記憶體回收行程必須通過大量的記憶體。 壓縮存留者的工作相當耗時。 若要判斷在回收期間處理的物件數目，請在指定層代的記憶體回收結尾處，在偵錯工具設定中斷點。
 
@@ -228,9 +228,9 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   其中 **GcCondemnedGeneration** 設為所需的層代。 此命令需要私用符號。
 
-  如果回收層代 2 物件，以進行記憶體回收之後，執行了 **RestartEE**，則此命令會強制中斷。
+  如果回收層代 2 物件，以進行記憶體回收之後，執行了 **RestartEE** ，則此命令會強制中斷。
 
-  在伺服器記憶體回收中，只有一個執行緒呼叫 **RestartEE**，因此中斷點只會在層代 2 記憶體回收期間發生一次。
+  在伺服器記憶體回收中，只有一個執行緒呼叫 **RestartEE** ，因此中斷點只會在層代 2 記憶體回收期間發生一次。
 
 ## <a name="performance-check-procedures"></a>效能檢查程序
 
@@ -272,9 +272,9 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 - 檢查下列兩個記憶體效能計數器：
 
-  - **% Time IN GC**。 顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。 使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。 如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。 與並行或背景記憶體回收相關時，這個計數器可能不正確。
+  - **% Time IN GC** 。 顯示自上次記憶體回收循環後所花費在執行記憶體回收的已耗用時間百分比。 使用此計數器來判斷是否記憶體回收行程花費太多時間才讓 Managed 堆積的空間可供使用。 如果花費在記憶體回收的時間很短，可能表示 Managed 堆積以外的資源問題。 與並行或背景記憶體回收相關時，這個計數器可能不正確。
 
-  - **認可的總位元組**數。 顯示記憶體回收行程目前已認可的虛擬記憶體數目。 使用此計數器來判斷記憶體回收行程所耗用的記憶體是否佔應用程式所使用記憶體的過多數量。
+  - **認可的總位元組數** 。 顯示記憶體回收行程目前已認可的虛擬記憶體數目。 使用此計數器來判斷記憶體回收行程所耗用的記憶體是否佔應用程式所使用記憶體的過多數量。
 
   大部分的記憶體效能計數器會在每次記憶體回收結束時更新。 因此，它們可能無法反映您要取得相關資訊的目前狀況。
 
@@ -282,7 +282,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>判斷記憶體不足例外狀況是否為 Managed
 
-1. 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入列印例外狀況 (**pe**) 命令：
+1. 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入列印例外狀況 ( **pe** ) 命令：
 
     **！ pe**
 
@@ -298,7 +298,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 2. 如果輸出未指定例外狀況，您必須判斷記憶體不足例外狀況是來自哪一個執行緒。 在偵錯工具中輸入下列命令，顯示所有執行緒與其呼叫堆疊：
 
-    **~\*文庫**
+    **~\*K b**
 
     堆疊具有例外狀況呼叫的執行緒會以 `RaiseTheException` 引數表示。 這是 Managed 例外狀況物件。
 
@@ -352,9 +352,9 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 1. 啟動 Windows 工作管理員。
 
-2. 在 [效能]**** 索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組]**** 中的 [認可 (KB)]****。)
+2. 在 [效能]  索引標籤上，查看已認可的值。 (在 Windows 7 中，查看 [系統群組]  中的 [認可 (KB)]  。)
 
-    如果 [總計]**** 很接近 [限制]****，則您的實體記憶體不足。
+    如果 [總計]  很接近 [限制]  ，則您的實體記憶體不足。
 
 <a name="ManagedHeapCommit"></a>
 
@@ -422,7 +422,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   **!dumpheap –stat**
 
-  如果 Managed 堆積很大，**dumpheap** 可能需要一些時間才能完成。
+  如果 Managed 堆積很大， **dumpheap** 可能需要一些時間才能完成。
 
   您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如：
 
@@ -714,7 +714,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 - 在已載入 SOS 偵錯工具擴充功能的 WinDbg 或 Visual Studio 偵錯工具中，輸入下列命令以顯示所有執行緒及其呼叫堆疊：
 
-  **~\*文庫**
+  **~\*K b**
 
   這個命令會顯示與下列類似的輸出。
 

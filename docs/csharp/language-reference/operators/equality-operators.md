@@ -1,7 +1,7 @@
 ---
 title: 等號比較運算子 - C# 參考
 description: 深入了解 C# 等號比較運算子與 C# 型別等號。
-ms.date: 06/26/2019
+ms.date: 10/30/2020
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 33215e2440b14fb888a6f0df5c220c891ebed0e2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 39461157c33fea0effb5c8808ded1c9981900e17
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063090"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063211"
 ---
 # <a name="equality-operators-c-reference"></a>等號比較運算子 (C# 參考)
 
-[ `==` (相等的) ](#equality-operator-)和[ `!=` (不相等) ](#inequality-operator-)運算子會檢查其運算元是否相等。
+[ `==` (相等) ](#equality-operator-)和[ `!=` (不相等) ](#inequality-operator-)運算子會檢查其運算元是否相等。
 
 ## <a name="equality-operator-"></a>等號比較運算子 ==
 
@@ -37,21 +37,29 @@ ms.locfileid: "88063090"
 [!code-csharp-interactive[value types equality](snippets/shared/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> 對於、、、 `==` [ `<` `>` `<=` 和 `>=` ](comparison-operators.md)運算子而言，如果任何運算元不是 (<xref:System.Double.NaN?displayProperty=nameWithType> 或) 的數位，作業 <xref:System.Single.NaN?displayProperty=nameWithType> 的結果會是 `false` 。 這代表 `NaN` 的值皆不會大於、小於或等於任何其他 `double` (或 `float`) 的值，包括 `NaN`。 如需詳細資訊和範例，請參閱 <xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType> 參考文章。
+> 針對 `==` 、、 [ `<` `>` 、 `<=` 和 `>=` ](comparison-operators.md)運算子，如果任何運算元不是數位 (<xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType>) ，則運算的結果為 `false` 。 這代表 `NaN` 的值皆不會大於、小於或等於任何其他 `double` (或 `float`) 的值，包括 `NaN`。 如需詳細資訊和範例，請參閱 <xref:System.Double.NaN?displayProperty=nameWithType> 或 <xref:System.Single.NaN?displayProperty=nameWithType> 參考文章。
 
 若基礎整數型別的對應值相等時，相同[列舉](../builtin-types/enum.md)類型的兩個運算元就會相等。
 
 使用者定義[結構](../builtin-types/struct.md)型別預設不支援 `==` 運算子。 若要支援 `==` 運算子，使用者定義結構必須[多載](operator-overloading.md)它。
 
-從 C# 7.3 說起，`==` 及 `!=` 運算子是由 C# [tuples](../builtin-types/value-tuples.md) 所支援。 如需詳細資訊，請參閱「[元組類型](../builtin-types/value-tuples.md)」一文的「[元組相等](../builtin-types/value-tuples.md#tuple-equality)」一節。
+從 C# 7.3 說起，`==` 及 `!=` 運算子是由 C# [tuples](../builtin-types/value-tuples.md) 所支援。 如需詳細資訊，請參閱[元組類型](../builtin-types/value-tuples.md)一文的[元組相等](../builtin-types/value-tuples.md#tuple-equality)區段。
 
 ### <a name="reference-types-equality"></a>參考型別相等
 
-根據預設，當兩個參考型別的運算元參考相同物件時，兩者就相等：
+根據預設，如果兩個非記錄的參考型別運算元參考相同的物件，就會相等：
 
 [!code-csharp[reference type equality](snippets/shared/EqualityOperators.cs#ReferenceTypesEquality)]
 
 如範例所示，使用者定義參考型別預設支援 `==` 運算子。 不過，參考型別可以多載 `==` 運算子。 若參考型別多載 `==` 運算子，請使用 <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> 方法檢查兩個該類型的參考是否參考相同的物件。
+
+### <a name="record-types-equality"></a>記錄類型相等
+
+在 c # 9.0 和更新版本中提供， [記錄類型](../../whats-new/csharp-9.md#record-types) 支援 `==` 和 `!=` 運算子，這些運算子預設會提供值相等的語法。 也就是說，當兩個記錄運算元都是 `null` 或所有欄位的對應值，且自動執行的屬性相等時，兩個記錄運算元相等。
+
+:::code language="csharp" source="snippets/shared/EqualityOperators.cs" id="RecordTypesEquality":::
+
+如先前的範例所示，如果是非記錄的參考型別成員，則會比較其參考值，而不是參考的實例。
 
 ### <a name="string-equality"></a>字串相等
 
@@ -83,11 +91,19 @@ ms.locfileid: "88063090"
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義類型可以[多載](operator-overloading.md)`==` 和 `!=` 運算子。 如果型別多載兩個運算子的其中一個，它也必須多載另一個。
+使用者定義類型可以[多載](operator-overloading.md)`==` 和 `!=` 運算子。 如果類型多載這兩個運算子之一，它也必須多載另一個運算子。
+
+記錄類型無法明確地多載 `==` and `!=` 運算子。 如果您需要變更 `==` 記錄類型之和運算子的行為 `!=` `T` ，請使用下列簽章來執行 <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> 方法：
+
+```csharp
+public virtual bool Equals(T? other);
+```
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[關係及類型測試運算子](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)一節。
+
+如需記錄類型是否相等的詳細資訊，請參閱[記錄功能提案附注](~/_csharplang/proposals/csharp-9.0/records.md)的[相等成員](~/_csharplang/proposals/csharp-9.0/records.md#equality-members)一節。
 
 ## <a name="see-also"></a>另請參閱
 

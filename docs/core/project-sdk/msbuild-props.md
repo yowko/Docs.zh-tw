@@ -4,12 +4,12 @@ description: .NET SDK 瞭解的 MSBuild 屬性和專案參考。
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: ac5d082acae582352680782deadb71a86f977f3b
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91354449"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063224"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>.NET SDK 專案的 MSBuild 參考
 
@@ -111,7 +111,7 @@ ms.locfileid: "91354449"
 
 ### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
 
-`TrimmerRootAssembly`專案可讓您從[*修剪*](../deploying/trim-self-contained.md)中排除元件。 修剪是從封裝的應用程式中移除執行時間未使用部分的進程。 在某些情況下，修剪可能會不正確地移除必要的參考。
+`TrimmerRootAssembly`專案可讓您從 [*修剪*](../deploying/trim-self-contained.md)中排除元件。 修剪是從封裝的應用程式中移除執行時間未使用部分的進程。 在某些情況下，修剪可能會不正確地移除必要的參考。
 
 下列 XML 會將 `System.Security` 元件從修剪中排除。
 
@@ -142,7 +142,7 @@ ms.locfileid: "91354449"
 
 ### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
 
-`EmbeddedResourceUseDependentUponConvention`屬性定義是否從原始程式檔中的型別資訊產生資源資訊清單檔案名，而這些來源檔案與資源檔共存。 例如，如果 *Form1* 與 *Form1.cs*位於相同的資料夾中，而且 `EmbeddedResourceUseDependentUponConvention` 設定為 `true` ，則產生的 *.resources* 檔會從 *Form1.cs*中定義的第一個類型取得其名稱。 例如，如果 `MyNamespace.Form1` 是*Form1.cs*中所定義的第一個型別，則產生的檔案名會是*MyNamespace。*
+`EmbeddedResourceUseDependentUponConvention`屬性定義是否從原始程式檔中的型別資訊產生資源資訊清單檔案名，而這些來源檔案與資源檔共存。 例如，如果 *Form1* 與 *Form1.cs* 位於相同的資料夾中，而且 `EmbeddedResourceUseDependentUponConvention` 設定為 `true` ，則產生的 *.resources* 檔會從 *Form1.cs* 中定義的第一個類型取得其名稱。 例如，如果 `MyNamespace.Form1` 是 *Form1.cs* 中所定義的第一個型別，則產生的檔案名會是 *MyNamespace。*
 
 > [!NOTE]
 > 如果 `LogicalName` 為 `ManifestResourceName` `DependentUpon` 專案指定、或中繼資料 `EmbeddedResource` ，則會改為以該中繼資料為基礎，產生該資源檔的資訊清單檔案名。
@@ -231,6 +231,9 @@ ms.locfileid: "91354449"
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 
+> [!NOTE]
+> 這項功能目前為實驗性，而且在 .NET 5 和 .NET 6 版本之間可能會變更。
+
 根據預設， [.net 程式碼樣式分析](../../fundamentals/code-analysis/overview.md#code-style-analysis)會在所有 .net 專案的組建上停用。 您可以藉由將屬性設定為，啟用 .NET 專案的程式碼樣式分析 `EnforceCodeStyleInBuild` `true` 。
 
 ```xml
@@ -267,7 +270,7 @@ ms.locfileid: "91354449"
 
 ### <a name="invariantglobalization"></a>InvariantGlobalization
 
-`InvariantGlobalization`屬性會設定應用程式是否以*全球化不變的*模式執行，這表示它無法存取特定文化特性的資料。 將值設定為 `true` ，以在全球化非變異模式中執行。 如需詳細資訊，請參閱不 [變模式](../run-time-config/globalization.md#invariant-mode)。
+`InvariantGlobalization`屬性會設定應用程式是否以 *全球化不變的* 模式執行，這表示它無法存取特定文化特性的資料。 將值設定為 `true` ，以在全球化非變異模式中執行。 如需詳細資訊，請參閱不 [變模式](../run-time-config/globalization.md#invariant-mode)。
 
 ```xml
 <PropertyGroup>

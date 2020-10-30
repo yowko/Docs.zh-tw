@@ -1,18 +1,18 @@
 ---
-title: 相依性插入方針
+title: 相依性插入指導方針
 description: 瞭解各種相依性插入指導方針和 .NET 應用程式開發的最佳做法。
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/23/2020
+ms.date: 10/29/2020
 ms.topic: guide
-ms.openlocfilehash: a8d52642b9217c7340db69494624d8ab85ea6c92
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 092fdc70bd5d6bae82c4c1da96db4d5ac08df452
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247888"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063164"
 ---
-# <a name="dependency-injection-guidelines"></a>相依性插入方針
+# <a name="dependency-injection-guidelines"></a>相依性插入指導方針
 
 本文提供在 .NET 應用程式中執行相依性插入的一般指導方針和最佳作法。
 
@@ -34,11 +34,17 @@ ms.locfileid: "91247888"
 
 :::code language="csharp" source="snippets/configuration/console-di-disposable/TransientDisposable.cs":::
 
+先前的可處置是為了具有暫時性存留期。
+
 :::code language="csharp" source="snippets/configuration/console-di-disposable/ScopedDisposable.cs":::
+
+上述可處置的目的是要有限定範圍的存留期。
 
 :::code language="csharp" source="snippets/configuration/console-di-disposable/SingletonDisposable.cs":::
 
-:::code language="csharp" source="snippets/configuration/console-di-disposable/Program.cs" range="1-21,41-60":::
+先前的可處置是為了具有單一存留期。
+
+:::code language="csharp" source="snippets/configuration/console-di-disposable/Program.cs" range="1-21,41-60" highlight="":::
 
 在執行之後，debug 主控台會顯示下列範例輸出：
 
@@ -77,7 +83,7 @@ public void ConfigureServices(IServiceCollection services)
 
 在上述程式碼中：
 
-- 此 `ExampleService` 實例不**not**是由服務容器所建立。
+- 此 `ExampleService` 實例不 **not** 是由服務容器所建立。
 - 架構 **不會自動處置服務** 。
 - 開發人員負責處置服務。
 
@@ -116,7 +122,7 @@ public void ConfigureServices(IServiceCollection services)
 - 透過 DI 接收相依性 <xref:System.IDisposable> 不需要接收者 <xref:System.IDisposable> 自行執行。 相依性的接收者不 <xref:System.IDisposable> 應呼叫 <xref:System.IDisposable.Dispose%2A> 該相依性。
 - 使用範圍來控制服務的存留期。 範圍不是階層式，而且範圍之間沒有特殊連接。
 
-如需資源清除的詳細資訊，請參閱實 [作為處置方法](../../standard/garbage-collection/implementing-dispose.md)
+如需資源清除的詳細資訊，請參閱 [執行 `Dispose` 方法](../../standard/garbage-collection/implementing-dispose.md)或 [執行 `DisposeAsync` 方法](../../standard/garbage-collection/implementing-disposeasync.md)。 此外，請考慮容器案例所捕捉的可 [處置暫時性服務](#disposable-transient-services-captured-by-container) ，因為它與資源清理相關。
 
 ## <a name="default-service-container-replacement"></a>預設服務容器取代
 
@@ -150,17 +156,71 @@ public void ConfigureServices(IServiceCollection services)
 - `async/await` 並 `Task` 不支援以服務為基礎的服務解析。 因為 c # 不支援非同步函式，所以請在以同步方式解析服務後使用非同步方法。
 - 避免直接在服務容器中儲存資料與設定。 例如，使用者的購物車通常不應該新增至服務容器。 組態應該使用選項模式。 同樣地，請避免只存在於允許存取另一個物件的「資料持有者」物件。 最好是透過 DI 要求實際項目。
 - 避免靜態存取服務。 例如，請避免將 [IApplicationBuilder >iapplicationbuilder.applicationservices](xref:Microsoft.AspNetCore.Builder.IApplicationBuilder.ApplicationServices) 為靜態欄位或屬性，以便在其他地方使用。
-- 讓 DI factory 保持快速且同步。
-- 避免使用「服務定位器模式」**。 例如，當您可以改用 DI 時，請勿叫用 <xref:System.IServiceProvider.GetService%2A> 來取得服務執行個體。
+- 讓 [DI](#async-di-factories-can-cause-deadlocks) factory 保持快速且同步。
+- 請避免使用 [*服務定位器模式*](#scoped-service-as-singleton)。 例如，當您可以改用 DI 時，請勿叫用 <xref:System.IServiceProvider.GetService%2A> 來取得服務執行個體。
 - 另一個要避免的服務定位器變化是插入在執行階段解析相依性的處理站。 這兩種做法都會混用[控制反轉](/dotnet/standard/modern-web-apps-azure-architecture/architectural-principles#dependency-inversion)策略。
 - 避免 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider%2A> 在中呼叫 `ConfigureServices` 。 呼叫 `BuildServiceProvider` 通常會在開發人員想要解析中的服務時發生 `ConfigureServices` 。
-- 容器會捕獲可處置的暫時性服務以供處置。 如果從最上層容器解析，這可能會導致記憶體流失。
+- 容器[會捕獲可處置的暫時性服務](#disposable-transient-services-captured-by-container)以供處置。 如果從最上層容器解析，這可能會導致記憶體流失。
 - 啟用範圍驗證，以確定應用程式沒有可捕獲範圍服務的 singleton。 如需詳細資訊，請參閱[範圍驗證](dependency-injection.md#scope-validation)。
 
 就像所有的建議集，您可能會遇到需要忽略建議的情況。 例外狀況很罕見，大多是架構本身內的特殊案例。
 
-DI 是靜態/全域物件存取模式的「替代」** 選項。 如果您將 DI 與靜態物件存取混合，則可能無法實現 DI 的優點。
+DI 是靜態/全域物件存取模式的「替代」  選項。 如果您將 DI 與靜態物件存取混合，則可能無法實現 DI 的優點。
+
+## <a name="example-anti-patterns"></a>範例反模式
+
+除了本文中的指導方針之外，還有數個 ***應該** 避免* 的反模式。 其中有些反模式是從開發執行時間本身學習而來的。
+
+> [!WARNING]
+> 這些是範例的反模式， *不會複製程式* 代碼、 *不使用這些* 模式，並以所有成本來避免這些模式。
+
+### <a name="disposable-transient-services-captured-by-container"></a>容器所捕獲的可處置暫時性服務
+
+當您註冊執行的 *暫時性* 服務時 <xref:System.IDisposable> ，DI 容器預設會保留這些參考，而不會保存到 <xref:System.IDisposable.Dispose> 應用程式停止之前。 如果從層級容器解析，這可能會導致記憶體流失。
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="18-30":::
+
+在上述的反模式中，1000 `ExampleDisposable` 物件具現化和根目錄。 在實例處置之前，它們將不會被處置 `serviceProvider` 。
+
+如需有關偵錯工具記憶體流失的詳細資訊，請參閱 [在 .net 中偵測記憶體](../diagnostics/debug-memory-leak.md)流失。
+
+### <a name="async-di-factories-can-cause-deadlocks"></a>非同步 DI 處理站可能會造成鎖死
+
+「DI factory」一詞是指呼叫時存在的多載方法 `Add{LIFETIME}` 。 有多載接受 `Func<IServiceProvider, T>` where `T` 是註冊的服務，並具名引數 `implementationFactory` 。 `implementationFactory`可以做為 lambda 運算式、區域函數或方法來提供。 如果 factory 是非同步，而且您使用 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> ，這會造成鎖死。
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="32-45" highlight="4-8":::
+
+在上述程式碼中， `implementationFactory` 會指定 lambda 運算式，其中主體會在傳回的 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 方法上呼叫 `Task<Bar>` 。 這 ***會造成鎖死*** 。 `GetBarAsync`方法只會使用來模擬非同步作業作業 <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> ，然後再呼叫 <xref:Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService%60%601(System.IServiceProvider)> 。
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="47-53":::
+
+如需非同步指引的詳細資訊，請參閱 [非同步程式設計：重要資訊和建議](../../csharp/async.md#important-info-and-advice)。 如需偵錯工具鎖死的詳細資訊，請參閱 [在 .net 中偵測鎖死](../diagnostics/debug-deadlock.md)。
+
+當您執行此反模式且發生鎖死時，您可以從 Visual Studio 的 [平行堆疊] 視窗查看兩個等候的執行緒。 如需詳細資訊，請參閱 [[平行堆疊] 視窗中的 [視圖執行緒和工作]](/visualstudio/debugger/using-the-parallel-stacks-window)。
+
+### <a name="captive-dependency"></a>相關性
+
+「驗證相依性」一詞是由[Mark Seeman](https://blog.ploeh.dk/about)所創造，並指的是服務存留期的設定不正確，[其中長期的](https://blog.ploeh.dk/2014/06/02/captive-dependency)服務會保留較短的服務。
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="55-65":::
+
+在上述程式碼中， `Foo` 是以 singleton 的形式註冊，而且 `Bar` 範圍限定在表面上看起來是有效的。 但是，請考慮執行的 `Foo` 。
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Foo.cs" highlight="5":::
+
+`Foo`物件需要 `Bar` 物件，因為 `Foo` 是 singleton，且 `Bar` 已設定範圍-這是設定錯誤的。 同樣地， `Foo` 它只會具現化一次，而且它會保留在 `Bar` 其存留期內（長度超過預期的範圍存留期） `Bar` 。 您應該考慮透過傳遞 `validateScopes: true` 給來驗證範圍 <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Boolean)> 。 當您驗證範圍時，您會收到一個 <xref:System.InvalidOperationException> 訊息，類似于「無法從單一 ' Foo ' 取用範圍服務 ' Bar '」。
+
+如需詳細資訊，請參閱[範圍驗證](dependency-injection.md#scope-validation)。
+
+### <a name="scoped-service-as-singleton"></a>範圍服務為 singleton
+
+使用已設定範圍的服務時，如果您不是在現有的範圍內建立範圍，服務會變成 singleton。
+
+:::code language="csharp" source="snippets/configuration/di-anti-patterns/Program.cs" range="68-82" highlight="13-14":::
+
+在上述程式碼中， `Bar` 是在中的 <xref:Microsoft.Extensions.DependencyInjection.IServiceScope> ，它是正確的。 反模式是在範圍外的抓取 `Bar` ，並命名變數 `avoid` 以顯示不正確的範例抓取。
 
 ## <a name="see-also"></a>另請參閱
 
 - [.NET 中的相依性插入](dependency-injection.md)
+- [教學課程：在 .NET 中使用相依性插入](dependency-injection-usage.md)

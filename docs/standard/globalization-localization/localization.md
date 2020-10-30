@@ -1,27 +1,27 @@
 ---
-title: 當地語系化
+title: Localization
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - culture, localization
-- application development [.NET Framework], localization
-- globalization [.NET Framework], localization
+- application development [.NET], localization
+- globalization [.NET], localization
 - code blocks
-- international applications [.NET Framework], localization
+- international applications [.NET], localization
 - global applications, localization
 - world-ready applications, localization
 - user interface blocks
-- localization [.NET Framework], about localization
+- localization [.NET], about localization
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
-ms.openlocfilehash: 68e877088c5c3d17b368561b563b4cb17d004e75
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e92184f48b2d2255138da5b2a6e7e2977a95e2e3
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278021"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93062954"
 ---
-# <a name="localization"></a>當地語系化
+# <a name="localization"></a>Localization
 
 當地語系化是一種程序，可將應用程式資源翻譯為應用程式所支援之每個文化特性的當地語系化版本。 只有在完成[可當地語系化檢閱](localizability-review.md)步驟，以確認全球化的應用程式已準備好進行當地語系化之後，才能繼續進行當地語系化步驟。
 
@@ -34,6 +34,6 @@ Windows Software Development Kit (SDK) 提供 Windows Forms 資源編輯器 (Win
 ## <a name="see-also"></a>另請參閱
 
 - [全球化和當地語系化](index.md)
-- [當地語系化性檢查](localizability-review.md)
+- [當地語系化能力審查](localizability-review.md)
 - [全球化](globalization.md)
 - [桌面應用程式中的資源](../../framework/resources/index.md)

@@ -1,21 +1,21 @@
 ---
 title: 如何：實作觀察器
-description: 在 .NET 中執行觀察者。 觀察者設計模式需要一個觀察者之間的除法，這會註冊通知和提供者。
+description: 在 .NET 中執行觀察者。 觀察者設計模式需要觀察者之間的部門，以註冊通知和提供者。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- observers [.NET Framework], observer design pattern
-- observer design pattern [.NET Framework], implementing observers
+- observers [.NET], observer design pattern
+- observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 43236ead15be0777f4284ba553a2f2f5e09d0a73
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 71df673b580f711ad692454d12beea991810f508
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768991"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064206"
 ---
 # <a name="how-to-implement-an-observer"></a>如何：實作觀察器
 觀察者設計模式需要觀察者和提供者之間的分區，其中觀察者會註冊通知，而提供者會監視資料並將通知傳送到一個或多個觀察者。 本主題討論如何建立觀察者。 相關主題為[操作說明：實作提供者](how-to-implement-a-provider.md)，討論如何建立提供者。  
@@ -51,6 +51,6 @@ ms.locfileid: "84768991"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IObserver%601>
-- [觀察器設計模式](observer-design-pattern.md)
+- [觀察者設計模式](observer-design-pattern.md)
 - [如何：執行提供者](how-to-implement-a-provider.md)
-- [觀察者設計模式最佳做法](observer-design-pattern-best-practices.md)
+- [觀察器設計模式最佳作法](observer-design-pattern-best-practices.md)

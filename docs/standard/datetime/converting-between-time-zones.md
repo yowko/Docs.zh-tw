@@ -7,18 +7,18 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- times [.NET Framework], converting
-- time zones [.NET Framework], conversions
+- times [.NET], converting
+- time zones [.NET], conversions
 - UTC times, converting
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: 156c3d8b360d62ba72f9a4447646fafe170ea658
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3539b3c2b71be331bdea3161b7e8ba6da407cbab
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547326"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063829"
 ---
 # <a name="converting-times-between-time-zones"></a>在各時區間轉換時間
 
@@ -26,7 +26,7 @@ ms.locfileid: "90547326"
 
 ## <a name="converting-to-coordinated-universal-time"></a>轉換為國際標準時間
 
-國際標準時間 (UTC) 是高精確度且不可部分完成的時間標準。 全世界的時區都會表示為與 UTC 的正或負位移。 因此，UTC 提供一種無時區或時區中性時間。 跨電腦的日期和時間可攜性十分重要時，建議使用 UTC 時間。  (如需使用日期和時間的詳細資訊和其他最佳做法，請參閱 [.NET Framework 中使用 DateTime 的編碼最佳作法](/previous-versions/dotnet/articles/ms973825(v=msdn.10))。 ) 將個別時區轉換成 UTC，可讓時間比較輕鬆。
+國際標準時間 (UTC) 是高精確度且不可部分完成的時間標準。 世界的時區會以從 UTC 的正面或負位移來表示。 因此，UTC 提供一種無時區或時區中性時間。 跨電腦的日期和時間可攜性十分重要時，建議使用 UTC 時間。  (如需使用日期和時間的詳細資訊和其他最佳做法，請參閱 [.NET Framework 中使用 DateTime 的編碼最佳作法](/previous-versions/dotnet/articles/ms973825(v=msdn.10))。 ) 將個別時區轉換成 UTC，可讓時間比較輕鬆。
 
 > [!NOTE]
 > 您也可以將 <xref:System.DateTimeOffset> 結構序列化，以明確地表示單一時間點。 因為 <xref:System.DateTimeOffset> 物件會儲存日期和時間值以及其與 utc 的位移，所以一律會以 utc 的關聯性表示特定時間點。

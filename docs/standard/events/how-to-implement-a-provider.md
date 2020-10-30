@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- observer design pattern [.NET Framework], implementing providers
-- providers [.NET Framework], in observer design pattern
-- observables [.NET Framework], in observer design pattern
+- observer design pattern [.NET], implementing providers
+- providers [.NET], in observer design pattern
+- observables [.NET], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: 4f8a213c0df3ef3c633106b7249a4947fe77c0d2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b57b595a40494ba0cf6c38b6a13688dece602584
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280019"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064219"
 ---
 # <a name="how-to-implement-a-provider"></a>如何：實作提供者
 觀察者設計模式需要提供者和一個或多個觀察者之間的分區，其中提供者會監視資料並傳送通知，而觀察者會接收來自提供者的通知 (回呼)。 本主題討論如何建立提供者。 相關主題為[操作說明：實作觀察器](how-to-implement-an-observer.md)，討論如何建立觀察者。  
@@ -61,6 +61,6 @@ ms.locfileid: "84280019"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IObservable%601>
-- [觀察器設計模式](observer-design-pattern.md)
+- [觀察者設計模式](observer-design-pattern.md)
 - [如何：執行觀察者](how-to-implement-an-observer.md)
-- [觀察者設計模式最佳做法](observer-design-pattern-best-practices.md)
+- [觀察器設計模式最佳作法](observer-design-pattern-best-practices.md)

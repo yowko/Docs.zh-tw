@@ -3,14 +3,14 @@ title: .NET 中的相依性插入
 description: 瞭解 .NET 如何實行相依性插入，以及如何使用它。
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/23/2020
+ms.date: 10/28/2020
 ms.topic: overview
-ms.openlocfilehash: d2dbe06597c99158eaa39812d4d5a95288450adc
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 2199f51ab13bedd50af747ce33ceee7b6eaefd8f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888562"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063144"
 ---
 # <a name="dependency-injection-in-net"></a>.NET 中的相依性插入
 
@@ -210,25 +210,50 @@ Microsoft 延伸模組使用註冊一組相關服務的慣例。 慣例是使用
 
 如需類型處置的詳細資訊，請參閱[＜服務處置＞](dependency-injection-guidelines.md#disposal-of-services)一節。
 
+註冊只有實作為型別的服務，相當於向相同的實和服務型別註冊該服務。 這就是為什麼無法使用未採用明確服務類型的方法來註冊多個服務的服務。 這些方法可以註冊多個 _instances * 的服務，但它們都有相同的 *實* 作為型別。
+
+您可以使用上述任何一種服務註冊方法來註冊相同服務類型的多個服務實例。 在下列範例中， `AddSingleton` 使用 `IMessageWriter` 做為服務類型呼叫兩次。 第二個呼叫會 `AddSingleton` 在解析為時覆寫上一個 `IMessageWriter` ，並在透過來解析多個服務時加入至上一個 `IEnumerable<IMessageWriter>` 。 服務會依照其在解析時所註冊的順序顯示 `IEnumerable<{SERVICE}>` 。
+
+:::code language="csharp" source="snippets/configuration/console-di-ienumerable/Program.cs" highlight="19-24":::
+
+上述範例程式碼會註冊兩個的實作為 `IMessageWriter` 。
+
+:::code language="csharp" source="snippets/configuration/console-di-ienumerable/ExampleService.cs" highlight="9-18":::
+
+會 `ExampleService` 定義兩個函式參數：單一 `IMessageWriter` 和 `IEnumerable<IMessageWriter>` 。 Single `IMessageWriter` 是最後一個已註冊的實作，而 `IEnumerable<IMessageWriter>` 代表所有已註冊的實作為。
+
 此架構也會提供 `TryAdd{LIFETIME}` 擴充方法，只有在尚未註冊任何執行時，才會註冊服務。
 
-在下列範例中，呼叫以註冊為的 `AddSingleton` `MessageWriter` 實作為的 `IMessageWriter` 。 的呼叫 `TryAddSingleton` 沒有任何作用，因為 `IMessageWriter` 已經有已註冊的實作為：
+在下列範例中，呼叫以註冊為的 `AddSingleton` `ConsoleMessageWriter` 實作為的 `IMessageWriter` 。 的呼叫 `TryAddSingleton` 沒有任何作用，因為 `IMessageWriter` 已經有已註冊的實作為：
 
 ```csharp
-services.AddSingleton<IMessageWriter, MessageWriter>();
-services.TryAddSingleton<IMessageWriter, DifferentMessageWriter>();
+services.AddSingleton<IMessageWriter, ConsoleMessageWriter>();
+services.TryAddSingleton<IMessageWriter, LoggingMessageWriter>();
 ```
 
-沒有 `TryAddSingleton` 任何作用，因為它已經加入，而且 "try" 將會失敗。
+沒有 `TryAddSingleton` 任何作用，因為它已經加入，而且 "try" 將會失敗。 會判斷提示 `ExampleService` 如下：
 
-如需詳細資訊，請參閱：
+```csharp
+public class ExampleService
+{
+    public ExampleService(
+        IMessageWriter messageWriter,
+        IEnumerable<IMessageWriter> messageWriters)
+    {
+        Trace.Assert(messageWriter is ConsoleMessageWriter);
+        Trace.Assert(messageWriters.Single() is ConsoleMessageWriter);
+    }
+}
+```
+
+如需詳細資訊，請參閱
 
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAdd%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped%2A>
 - <xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton%2A>
 
-只有在尚未有 _of 相同類型 * 的 TryAddEnumerable 時， [ (ServiceDescriptor) ](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A) 方法才會註冊服務。 多個服務會透過 `IEnumerable<{SERVICE}>` 解析。 註冊服務時，如果尚未加入相同類型的實例，請新增實例。 程式庫作者會使用 `TryAddEnumerable` 來避免在容器中註冊多個執行複本。
+只有在尚未有 *相同類型* 的執行時， [TryAddEnumerable (ServiceDescriptor)](xref:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable%2A)方法才會註冊服務。 多個服務會透過 `IEnumerable<{SERVICE}>` 解析。 註冊服務時，如果尚未加入相同類型的實例，請新增實例。 程式庫作者會使用 `TryAddEnumerable` 來避免在容器中註冊多個執行複本。
 
 在下列範例中，第一次呼叫 `TryAddEnumerable` 註冊為的 `MessageWriter` 實作為 `IMessageWriter1` 。 第二個呼叫會註冊 `MessageWriter` `IMessageWriter2` 。 第三個呼叫沒有任何作用，因為 `IMessageWriter1` 已註冊的實作為 `MessageWriter` ：
 
@@ -287,7 +312,7 @@ services.Add(descriptor);
 
 範圍服務會由建立這些服務的容器處置。 如果在根容器中建立範圍服務，服務的存留期會有效地升階為 singleton，因為它只會在應用程式關閉時由根容器處置。 當呼叫 `BuildServiceProvider` 時，驗證服務範圍會攔截到這些情況。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 .NET 中的相依性插入](dependency-injection-usage.md)
 - [相依性插入指導方針](dependency-injection-guidelines.md)

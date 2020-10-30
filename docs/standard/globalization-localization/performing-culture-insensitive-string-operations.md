@@ -11,17 +11,18 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 79ff899e2964ae2c1e90b7178616c612dddf6d86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0f7e8dde395feb548e6808547a223a3fa8855561
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287502"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063907"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>執行不區分文化特性的字串作業
-執行區分文化特性字串作業的大部分 .NET Framework 方法預設會提供方法多載，讓您藉由傳遞 <xref:System.Globalization.CultureInfo> 參數，明確地指定要使用的文化特性。 這些多載可讓您消除大小寫對應和排序規則中的文化特性變化，保證您可以得到不區分文化特性的結果。  
+
+預設會執行區分文化特性的字串作業的大部分 .NET 方法都會提供方法多載，讓您可以藉由傳遞參數來明確指定要使用的文化特性 <xref:System.Globalization.CultureInfo> 。 這些多載可讓您消除大小寫對應和排序規則中的文化特性變化，保證您可以得到不區分文化特性的結果。  
   
- 本節提供下列主題，以示範如何使用預設會區分文化特性的 .NET Framework 方法來執行不區分文化特性的字串作業。  
+ 本節提供下列文章，以示範如何使用預設為區分文化特性的 .NET 方法，執行不區分文化特性的字串作業。  
   
 ## <a name="in-this-section"></a>本節內容  
  [執行不區分文化特性的字串比較](performing-culture-insensitive-string-comparisons.md)  

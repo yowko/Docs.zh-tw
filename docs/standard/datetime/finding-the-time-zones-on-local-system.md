@@ -3,33 +3,33 @@ title: 尋找定義於本機系統的時區
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- time zones [.NET Framework], local
-- time zones [.NET Framework], finding local system time zones
-- time zone identifiers [.NET Framework]
+- time zones [.NET], local
+- time zones [.NET], finding local system time zones
+- time zone identifiers [.NET]
 - local time zone access
-- time zones [.NET Framework], retrieving
+- time zones [.NET], retrieving
 - UTC times, finding local system time zones
-- time zones [.NET Framework], UTC
+- time zones [.NET], UTC
 ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
-ms.openlocfilehash: d313bbed3cc525a74b90537dd4f1742c09c62cd4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c968c7891a4fc9b77ed6224a9fc5f8f6d8f5d80b
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277020"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063686"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>尋找定義於本機系統的時區
 
 <xref:System.TimeZoneInfo> 類別不會公開公用建構函式。 如此一來，`new` 關鍵字不能用來建立新的 <xref:System.TimeZoneInfo> 物件。 相反地，<xref:System.TimeZoneInfo> 物件可從登錄擷取預先定義時區的詳細資訊，或建立自訂的時區來具現化。 本主題討論從儲存在登錄中的資料具現化時區。 此外，<xref:System.TimeZoneInfo> 類別的 `static` (在 Visual Basic 中為 `shared`) 屬性提供國際標準時間 (UTC) 及當地時區的存取。
 
 > [!NOTE]
-> 對於在登錄中未定義的時區，您可以呼叫 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 方法的多載來建立自訂時區。 建立自訂時區的討論在[如何：建立沒有調整規則](create-time-zones-without-adjustment-rules.md)的時區和[如何：使用調整規則建立時間區域](create-time-zones-with-adjustment-rules.md)主題中。 此外，您可以在序列化字串中使用 <xref:System.TimeZoneInfo.FromSerializedString%2A> 方法還原 <xref:System.TimeZoneInfo> 物件，對其具現化。 <xref:System.TimeZoneInfo>[如何：將時區儲存到內嵌資源](save-time-zones-to-an-embedded-resource.md)和[如何：從內嵌資源還原時區](restore-time-zones-from-an-embedded-resource.md)主題中會討論序列化和還原序列化物件。
+> 對於在登錄中未定義的時區，您可以呼叫 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 方法的多載來建立自訂時區。 [如何：建立沒有調整規則的時區](create-time-zones-without-adjustment-rules.md)和[如何：建立具有調整規則的](create-time-zones-with-adjustment-rules.md)時區主題中會討論建立自訂時區。 此外，您可以在序列化字串中使用 <xref:System.TimeZoneInfo.FromSerializedString%2A> 方法還原 <xref:System.TimeZoneInfo> 物件，對其具現化。 <xref:System.TimeZoneInfo>[如何：將時區儲存到內嵌資源](save-time-zones-to-an-embedded-resource.md)和[如何：從內嵌資源還原時區](restore-time-zones-from-an-embedded-resource.md)主題中會討論序列化和還原序列化物件。
 
 ## <a name="accessing-individual-time-zones"></a>存取個別時區
 
-<xref:System.TimeZoneInfo> 類別提供兩個預先定義的時區物件，該物件代表 UTC 時間和當地時區。 它們分別由 <xref:System.TimeZoneInfo.Utc%2A> 和 <xref:System.TimeZoneInfo.Local%2A> 屬性所提供。 如需存取 UTC 或本地時區的指示，請參閱[如何：存取預先定義的 utc 和當地時區物件](access-utc-and-local.md)。
+<xref:System.TimeZoneInfo> 類別提供兩個預先定義的時區物件，該物件代表 UTC 時間和當地時區。 它們分別由 <xref:System.TimeZoneInfo.Utc%2A> 和 <xref:System.TimeZoneInfo.Local%2A> 屬性所提供。 如需存取 UTC 或當地時區的指示，請參閱 [如何：存取預先定義的 utc 和當地時區物件](access-utc-and-local.md)。
 
-您也可以具現化 <xref:System.TimeZoneInfo> 物件，該物件代表在登錄中所定義的任何時區。 如需將特定時區物件具現化的指示，請參閱[如何：具現化 TimeZoneInfo 物件](instantiate-time-zone-info.md)。
+您也可以具現化 <xref:System.TimeZoneInfo> 物件，該物件代表在登錄中所定義的任何時區。 如需將特定時區物件具現化的指示，請參閱 [如何：具現化 TimeZoneInfo 物件](instantiate-time-zone-info.md)。
 
 ## <a name="time-zone-identifiers"></a>時區識別碼
 
@@ -40,4 +40,4 @@ ms.locfileid: "84277020"
 - [日期、時間和時區](index.md)
 - [如何：存取預先定義的 UTC 和當地時區物件](access-utc-and-local.md)
 - [如何：具現化 TimeZoneInfo 物件](instantiate-time-zone-info.md)
-- [在各時區間轉換時間](converting-between-time-zones.md)
+- [在各時區之間轉換時間](converting-between-time-zones.md)

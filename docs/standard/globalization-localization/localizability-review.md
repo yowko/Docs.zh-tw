@@ -7,21 +7,21 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - world-ready applications, localizability
-- application development [.NET Framework], localization
-- localizability [.NET Framework]
-- international applications [.NET Framework], localizability
-- globalization [.NET Framework], localizability
+- application development [.NET], localization
+- localizability [.NET]
+- international applications [.NET], localizability
+- globalization [.NET], localizability
 - culture, localizability
-- localization [.NET Framework], localizability
+- localization [.NET], localizability
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: ef23cff2416792f13fda04dbe9beb34cbacfd7ea
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6aa0588ea4baa00be476a05c335cf2abaa22aab4
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288273"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064154"
 ---
 # <a name="localizability-review"></a>當地語系化可行性檢閱
 
@@ -38,14 +38,14 @@ ms.locfileid: "84288273"
 <a name="global"></a>
 ## <a name="implement-globalization-recommendations"></a>實作全球化建議
 
-如果您設計和開發應用程式時已將當地語系化納入考量，而且已遵循[全球化](globalization.md)一文中所討論的建議，可當地語系化檢閱主要會是一項品質保證的作業。 否則，在這個階段，您應該檢查並實作為[全球化](globalization.md)的建議，並修正原始程式碼中防止當地語系化的錯誤。
+如果您設計和開發應用程式時已將當地語系化納入考量，而且已遵循[全球化](globalization.md)一文中所討論的建議，可當地語系化檢閱主要會是一項品質保證的作業。 否則，在這個階段中，您應該檢查並執行 [全球化](globalization.md) 的建議，並修正原始程式碼中防止當地語系化的錯誤。
 
 <a name="culture"></a>
 ## <a name="handle-culture-sensitive-features"></a>處理區分文化特性 (Culture) 的功能
 
 .NET 在一些文化特性 (Culture) 差異較大的區域並未提供程式設計方面的支援。 在大部分情況下，您必須撰寫自訂程式碼來處理下列領域：
 
-- 地址
+- 位址
 
 - 電話號碼
 

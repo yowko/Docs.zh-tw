@@ -8,17 +8,17 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- event properties [.NET Framework]
-- multiple events [.NET Framework]
-- event handling [.NET Framework], with multiple events
-- events [.NET Framework], multiple
+- event properties [.NET]
+- multiple events [.NET]
+- event handling [.NET], with multiple events
+- events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: 5b528aa2145ba703ce605ce22ae7d643f1e5b8d0
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: fa0bdc26eba872a62cd5f7a773df0d7a53c83975
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769011"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064232"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>如何：使用事件屬性處理多個事件
 為了要使用事件屬性，您會在引發事件的類別中定義事件屬性，然後在處理事件的類別中設定事件屬性的委派。 若要在類別中實作多個事件屬性，該類別內部必須儲存及維護為每個事件所定義的委派。 型的方法是實作以事件索引鍵編製索引的委派集合。  

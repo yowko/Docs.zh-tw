@@ -9,18 +9,18 @@ dev_langs:
 helpviewer_keywords:
 - delegate model for events
 - application development [.NET], events
-- application development [.NET Framework], events
+- application development [.NET], events
 - application development [.NET Core], events
 - events [.NET]
 - events [.NET Core]
-- events [.NET Framework]
+- events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 47021873956f971709b49c1b224e43e4c7f482d0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687293"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064089"
 ---
 # <a name="handle-and-raising-events"></a>處理和引發事件
 
@@ -94,7 +94,7 @@ ms.locfileid: "92687293"
 |[如何：使用事件屬性處理多個事件](how-to-handle-multiple-events-using-event-properties.md)|示範如何使用事件屬性處理多個事件。|  
 |[觀察者設計模式](observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>
