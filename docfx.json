@@ -514,6 +514,7 @@
         "_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md": "Expression variables in initializers",
         "_csharplang/proposals/csharp-7.3/tuple-equality.md": "Tuple equality (==) and inequality (!=)",
         "_csharplang/proposals/csharp-7.3/improved-overload-candidates.md": "Improved overload candidates",
+        "_csharplang/proposals/csharp-9.0/unconstrained-type-parameter-annotations.md" : "Unconstrained type parameter annotations",
 
         "_csharplang/proposals/csharp-8.0/nullable-reference-types.md": "Null reference types - proposal",
         "_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md": "Nullable reference types - specification",
