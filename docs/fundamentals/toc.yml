@@ -1735,9 +1735,8 @@ items:
                   - name: 逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
                     href: ../standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
               - name: 使用具有其他非同步模式的 TPL
-                href: ../standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md
                 items:
-                  - name: TPL 和傳統 .NET Framework 非同步程式設計
+                  - name: TPL 和傳統 .NET 非同步程式設計
                     href: ../standard/parallel-programming/tpl-and-traditional-async-programming.md
                   - name: 作法：將 EAP 模式包裝在工作中
                     href: ../standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md
