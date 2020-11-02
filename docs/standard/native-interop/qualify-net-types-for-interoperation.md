@@ -1,28 +1,28 @@
 ---
 title: 限定 COM 互通的 .NET 型別
-description: 本文提供的指導方針可協助您將 .NET 元件中的類型公開至 COM 應用程式，以進行 COM Interop。
+description: 本文提供的指導方針可協助您將 .NET 元件中的類型公開給 com interop 的 COM 應用程式。
 ms.date: 03/30/2017
 helpviewer_keywords:
-- exposing .NET Framework components to COM
+- exposing .NET components to COM
 - COM interop, qualifying .NET types
 - qualifying .NET types for interoperation
 - interoperation with unmanaged code, qualifying .NET types
-- interoperation with unmanaged code, exposing .NET Framework components
+- interoperation with unmanaged code, exposing .NET components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 5e8d604c8152d37475bf93e3b5687f24cfebfa02
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3fa9f0d5d8dd4d532fc510a1d946eddf32016748
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285959"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187758"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>限定 COM 互通的 .NET 型別
 如果您想要向 COM 應用程式公開組件中的類型，請考慮設計階段的 COM Interop 需求。 當您遵守下列方針時，Managed 類型 (類別、介面、結構和列舉) 會與 COM 類型緊密整合：  
   
 - 類別應該明確地實作介面。  
   
-     雖然 COM Interop 提供機制來自動產生包含類別之所有成員和其基底類別成員的介面，最好是目前提供明確的介面。但是最好是提供明確介面。 自動產生的介面稱為類別介面。 如需指導方針，請參閱[類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。  
+     雖然 COM Interop 提供機制來自動產生包含類別之所有成員和其基底類別成員的介面，最好是目前提供明確的介面。但是最好是提供明確介面。 自動產生的介面稱為類別介面。 如需指導方針，請參閱 [類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。  
   
      您可以使用 Visual Basic、C# 和 C++ 在程式碼中併入介面定義，而不需使用介面定義語言 (IDL) 或其對等項目。 如需語法詳細資訊，請參閱您的語言文件。  
   

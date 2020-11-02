@@ -10,21 +10,22 @@ dev_langs:
 helpviewer_keywords:
 - streams, reading and writing data
 - BinaryReader class, examples
-- I/O [.NET Framework], reading data
-- I/O [.NET Framework], writing data
+- I/O [.NET], reading data
+- I/O [.NET], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 9a6b2985b7f532476c0f4c0f998d710f95e55d3a
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 236d50260efa66f21db6d0abba6cc5c258a74d8d
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769154"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188727"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：讀取和寫入新建立的資料檔案
+
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType> 和 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 類別用於寫入和讀取資料，而不是字元字串。 下列範例顯示如何建立空的檔案資料流、將資料寫入其中，以及從中讀取資料。
 
-此範例會在目前的目錄中建立一個稱為 *Test.data* 的資料檔案、建立相關聯的 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader> 物件，而且會使用 <xref:System.IO.BinaryWriter> 物件，將 0 到 10 的整數寫入 *Test.data*，讓檔案指標留在檔案的結尾。 <xref:System.IO.BinaryReader> 物件接著會將檔案指標設定為原點， 並讀出指定的內容。  
+此範例會在目前的目錄中建立一個稱為 *Test.data* 的資料檔案、建立相關聯的 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader> 物件，而且會使用 <xref:System.IO.BinaryWriter> 物件，將 0 到 10 的整數寫入 *Test.data* ，讓檔案指標留在檔案的結尾。 <xref:System.IO.BinaryReader> 物件接著會將檔案指標設定為原點， 並讀出指定的內容。  
   
 > [!NOTE]
 > 如果 *Test.data* 已存在於目前的目錄中，則會擲回 <xref:System.IO.IOException> 例外狀況。 使用檔案模式選項 <xref:System.IO.FileMode.Create?displayProperty=nameWithType>，而不是 <xref:System.IO.FileMode.CreateNew?displayProperty=nameWithType>，來一律建立新檔案，而不會擲回例外狀況。  

@@ -3,19 +3,20 @@ title: EventWaitHandle
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], EventWaitHandle class
+- threading [.NET], EventWaitHandle class
 - EventWaitHandle class
-- event wait handles [.NET Framework]
-- threading [.NET Framework], cross-process synchronization
+- event wait handles [.NET]
+- threading [.NET], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-ms.openlocfilehash: 80c90254978495a58d228c4302eda84d6165c800
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c4745af9c5336d013dc0ca7ef1030b208c8b68
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138081"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188337"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
+
 <xref:System.Threading.EventWaitHandle> 類別可讓執行緒藉由發出訊號及等候訊號來互相進行通訊。 事件等候控制代碼 (也簡單稱為事件) 是可接收訊號來釋出一或多個等候執行緒的等候控制代碼。 收到訊號之後，可以手動或自動重設事件等候控制代碼。 <xref:System.Threading.EventWaitHandle> 類別可以代表本機事件等候控制代碼 (本機事件) 或具名的系統事件等候控制代碼 (所有處理序都可看見的具名事件或系統事件)。  
   
 > [!NOTE]

@@ -1,6 +1,6 @@
 ---
 title: 建立執行緒，並在啟動期間傳遞資料
-description: 瞭解如何在 .NET 中的作業系統進程開始時，建立執行緒並傳遞資料。
+description: 瞭解如何在 .NET 中的作業系統進程開始時建立執行緒和傳遞資料。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,16 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- threading [.NET Framework], creating
-- threading [.NET Framework], passing data to threads
-- threading [.NET Framework], retrieving data from threads
+- threading [.NET], creating
+- threading [.NET], passing data to threads
+- threading [.NET], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-ms.openlocfilehash: 811028d3c853441ff3a61d3628a44e5c65ba7059
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: a1e8f8f6e017d29f352d79ea08c09b2d97041bba
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661910"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188376"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>建立執行緒，並在啟動期間傳遞資料
 
@@ -40,9 +40,9 @@ ms.locfileid: "84661910"
   
 ## <a name="passing-data-to-threads"></a>將資料傳遞到執行緒
 
- 在 .NET Framework 2.0 版中，<xref:System.Threading.ParameterizedThreadStart> 委派提供了一個簡易的方式，在您呼叫 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法多載時，將包含資料的物件傳遞至執行緒。 請參閱 <xref:System.Threading.ParameterizedThreadStart>，以取得程式碼範例。  
+<xref:System.Threading.ParameterizedThreadStart>當您呼叫時，委派提供簡單的方法，將包含資料的物件傳遞給執行緒 <xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType> 。 請參閱 <xref:System.Threading.ParameterizedThreadStart>，以取得程式碼範例。
   
- 使用 <xref:System.Threading.ParameterizedThreadStart> 委派並非傳遞資料的類型安全方式，因為 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法多載接受任何物件。 替代方法是在協助程式類別中封裝執行緒程序和資料，並使用 <xref:System.Threading.ThreadStart> 委派來執行執行緒程序。 下列範例展示此技術：
+ 使用 <xref:System.Threading.ParameterizedThreadStart> 委派不是傳遞資料的型別安全方法，因為此 <xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType> 方法會接受任何物件。 替代方法是在協助程式類別中封裝執行緒程序和資料，並使用 <xref:System.Threading.ThreadStart> 委派來執行執行緒程序。 下列範例展示此技術：
 
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]
@@ -65,4 +65,4 @@ ms.locfileid: "84661910"
 - <xref:System.Threading.ParameterizedThreadStart>
 - <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>
 - [執行緒](index.md)
-- [使用執行緒和執行緒處理](using-threads-and-threading.md)
+- [使用執行緒和執行緒](using-threads-and-threading.md)

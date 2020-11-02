@@ -1,22 +1,22 @@
 ---
 title: 操作說明：壓縮與解壓縮檔案
-description: 使用 System.object 壓縮 & 解壓縮檔案。 請參閱使用 ZipFile、ZipArchive、Ziparchiveentry 中、DeflateStream、& GZipStream 的範例。
+description: 壓縮 & 使用系統壓縮檔案壓縮。 請參閱使用 ZipFile、ZipArchive、ZipArchiveEntry、DeflateStream、& GZipStream 的範例。
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- I/O [.NET Framework], compression
+- I/O [.NET], compression
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: c13f464432aa6f67136d3a844bdeda256e7ab9b6
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ea078099aba3161818844d14af221eb582e7f11b
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769232"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188285"
 ---
 # <a name="how-to-compress-and-extract-files"></a>操作說明：壓縮與解壓縮檔案
 
@@ -33,7 +33,7 @@ ms.locfileid: "84769232"
 - [System.IO.Compression](https://www.nuget.org/packages/System.IO.Compression)
 - [System.IO.Compression.ZipFile](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
 
-如果您使用 .NET Framework，請將這兩個程式庫的參考新增至您的專案：
+如果您是使用 .NET Framework，請將這兩個程式庫的參考新增至您的專案：
 
 - `System.IO.Compression`
 - `System.IO.Compression.FileSystem`
@@ -42,7 +42,7 @@ ms.locfileid: "84769232"
 
 下列範例示範如何使用 <xref:System.IO.Compression.ZipFile> 類別，建立和解壓縮 *.zip* 檔案。 此範例會將資料夾的內容壓縮至新的 *.zip* 檔案，然後將該 zip 解壓縮至新的資料夾。
 
-若要執行樣本，請在程式資料夾中建立*啟動*資料夾，並在其中填入要壓縮的檔案。
+若要執行樣本，請在程式資料夾中建立 *啟動* 資料夾，並在其中填入要壓縮的檔案。
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]

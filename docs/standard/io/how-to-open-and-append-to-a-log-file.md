@@ -10,16 +10,17 @@ helpviewer_keywords:
 - log files, opening
 - streams, opening and appending to log file
 - log files, appending to
-- I/O [.NET Framework], log files
+- I/O [.NET], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: a66dadd24cc327824e91df733f11a23112cd384a
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ed8345901dc5f44e947bd076944d7e61eac561da
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769167"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188168"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>如何：開啟並附加至記錄檔
+
 <xref:System.IO.StreamWriter> 和 <xref:System.IO.StreamReader> 會在資料流中寫入字元和讀取字元。 下列程式碼範例會開啟用於輸入的 *log.txt* 檔案，或者，如果該檔案不存在，則會建立它，並將記錄資訊附加至檔案的結尾。 此範例接著會將檔案的內容寫入標準輸出以供顯示。
 
 此範例的替代方法是，您可以將資訊儲存成單一字串或字串陣列，並使用 <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> 或 <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> 方法來達成相同的功能。  

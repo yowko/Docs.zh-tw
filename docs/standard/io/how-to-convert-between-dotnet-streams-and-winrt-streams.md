@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 037ae0dff80c96d08d8778146b5683454b1f80b1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7833dd16cec8d6ef1cbdb51702ea72f50231c52d
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543682"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187953"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>如何：僅在 Windows (中 .NET Framework 和 Windows 執行階段資料流程之間轉換) 
 
-.NET Framework for UWP 應用程式是完整 .NET Framework 的子集。 由於 UWP 應用程式的安全性和其他要求，您無法使用整套 .NET Framework API 開啟和讀取檔案。 如需詳細資訊，請參閱 [.NET for UWP 應用程式概觀](/previous-versions/windows/apps/br230302(v=vs.140))。 不過，您可能會想要使用 .NET Framework API 進行其他資料流管理作業。 若要管理這些資料流，您可以在 .NET Framework 資料流類型 (例如 <xref:System.IO.MemoryStream> 或 <xref:System.IO.FileStream>) 和 Windows 執行階段資料流 (例如 <xref:Windows.Storage.Streams.IInputStream>、<xref:Windows.Storage.Streams.IOutputStream> 或 <xref:Windows.Storage.Streams.IRandomAccessStream>) 之間轉換。
+UWP 應用程式的 .NET Framework 是完整 .NET Framework 的子集。 由於 UWP 應用程式的安全性和其他要求，您無法使用整套 .NET Framework API 開啟和讀取檔案。 如需詳細資訊，請參閱 [.NET for UWP 應用程式概觀](/previous-versions/windows/apps/br230302(v=vs.140))。 不過，您可能會想要使用 .NET Framework API 進行其他資料流管理作業。 若要操作這些資料流程，您可以在 .NET Framework 資料流程類型（例如 <xref:System.IO.MemoryStream> 或 <xref:System.IO.FileStream> ）和 Windows 執行階段資料流程（例如、或）之間進行轉換 <xref:Windows.Storage.Streams.IInputStream> <xref:Windows.Storage.Streams.IOutputStream> <xref:Windows.Storage.Streams.IRandomAccessStream> 。
 
 <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> 類別包含可簡化這些轉換的方法。 不過，.NET Framework 與 Windows 執行階段資料流之間的基本差異將會影響使用這些方法的結果，下列各節會加以說明：
 
@@ -30,7 +30,7 @@ ms.locfileid: "90543682"
 
 Windows 執行階段提供支援唯讀、唯寫或讀寫的資料流類型。 當您將 Windows 執行階段資料流轉換為.NET Framework 資料流時，這些功能將會保留。 此外，如果您將 Windows 執行階段資料流轉換成 .NET Framework 資料流之後再反向轉換，則會得到原始的 Windows 執行階段執行個體。
 
-最佳作法是使用符合所要要轉換 Windows 執行階段資料流功能的轉換方法。 不過，因為 <xref:Windows.Storage.Streams.IRandomAccessStream> 可讀取和寫入 (它會同時實作 <xref:Windows.Storage.Streams.IOutputStream> 和 <xref:Windows.Storage.Streams.IInputStream>)，所以轉換方法會保留原始資料流的功能。 例如，使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> 轉換 <xref:Windows.Storage.Streams.IRandomAccessStream> 不會將轉換後的 .NET Framework 資料流限制為唯讀。 它也可寫入。
+最佳作法是使用符合您要轉換之 Windows 執行階段資料流程功能的轉換方法。 不過，因為 <xref:Windows.Storage.Streams.IRandomAccessStream> 可讀取和寫入 (它會同時實作 <xref:Windows.Storage.Streams.IOutputStream> 和 <xref:Windows.Storage.Streams.IInputStream>)，所以轉換方法會保留原始資料流的功能。 例如，使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> 轉換 <xref:Windows.Storage.Streams.IRandomAccessStream> 不會將轉換後的 .NET Framework 資料流限制為唯讀。 它也可寫入。
 
 ## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>範例：將 Windows 執行階段隨機存取轉換成 .NET Framework 資料流程
 若要從 Windows 執行階段隨機存取資料流轉換成 .NET Framework 資料流，請使用 <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> 方法。

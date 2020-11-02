@@ -3,20 +3,21 @@ title: 執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], local storage
-- threading [.NET Framework], thread-relative static fields
+- threading [.NET], local storage
+- threading [.NET], thread-relative static fields
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: adeeb6c95769d8e1ac120d4fb26d8aaedf7a1d4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f80cc09d87116d3daff8047c1d1398c5e6104178
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291080"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188155"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
-您可以使用受控執行緒區域儲存區 (TLS) 來儲存對執行緒和應用程式定義域而言是唯一的資料。 .NET Framework 提供兩種方式來使用受控 TLS：執行緒相關的靜態欄位和資料插槽。  
+
+您可以使用受控執行緒區域儲存 (TLS) 來儲存對執行緒和應用程式域而言是唯一的資料。 .NET 提供兩種方式來使用 managed TLS：執行緒相關的靜態欄位和資料插槽。  
   
 - 如果您可以預期編譯時期的確切需求，請使用執行緒相關的靜態欄位 (在 Visual Basic 中為執行緒相關 `Shared` 欄位)。 執行緒相關靜態欄位提供最佳效能。 它們也提供編譯時期類型檢查的優點。  
   
@@ -24,7 +25,7 @@ ms.locfileid: "84291080"
   
  在非受控 C++ 中，您可以使用 `TlsAlloc` 動態配置插槽，並使用 `__declspec(thread)` 來宣告變數應配置於執行緒相關儲存區中。 執行緒相關靜態欄位和資料插槽提供此行為的受控版本。  
   
- 在 .NET Framework 4 中，您可以使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 類別來建立第一次取用物件時進行延遲初始化的執行緒區域物件。 如需詳細資訊，請參閱[延遲初始化](../../framework/performance/lazy-initialization.md)。  
+您可以使用 <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> 類別，建立在第一次取用物件時延遲初始化的執行緒區域物件。 如需詳細資訊，請參閱[延遲初始化](../../framework/performance/lazy-initialization.md)。  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>受控 TLS 中資料的唯一性  
  無論您使用的是執行緒相關靜態欄位或資料插槽，受控 TLS 中的資料對執行緒和應用程式定義域的組合都是唯一的。  
@@ -45,7 +46,8 @@ ms.locfileid: "84291080"
  請注意，任何類別建構函式程式碼都將在存取欄位之第一個內容的第一個執行緒上執行。 在相同應用程式定義域的所有其他執行緒或內容中，如果它們為參考型別，就會將欄位初始化為 `null` (在 Visual Basic 中為 `Nothing`)，或者如果它們是實值型別，則會設為預設值。 因此，您不應該依賴類別建構函式來將執行緒相關靜態欄位初始化。 而是應避免將執行緒相關靜態欄位初始化，並假設已將它們初始化為 `null` (`Nothing`) 或其預設值。  
   
 ## <a name="data-slots"></a>資料插槽  
- .NET Framework 提供動態資料插槽，這些插槽對執行緒和應用程式定義域的組合而言都是唯一的。 有兩種類型的資料插槽：具名插槽和未命名的插槽。 這兩者都使用 <xref:System.LocalDataStoreSlot> 結構來實作。  
+
+.NET 針對執行緒和應用程式域的組合提供了獨特的動態資料槽。 有兩種類型的資料插槽：具名插槽和未命名的插槽。 這兩者都使用 <xref:System.LocalDataStoreSlot> 結構來實作。  
   
 - 若要建立具名資料插槽，使用 <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> 或 <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> 方法。 若要取得現有具名插槽的參考，將其名稱傳遞至 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法。  
   

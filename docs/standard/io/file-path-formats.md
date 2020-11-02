@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679595"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188051"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -90,7 +90,7 @@ DOS 裝置路徑由以下元件組成：
 - 裝置路徑規範 (`\\.\` 或 `\\?\`)，這會將路徑識別為 DOS 裝置路徑。
 
    > [!NOTE]
-   > `\\?\` 在所有版本的 .NET Core 和 4.6.2 版開始的 .NET Framework 中受到支援。
+   > `\\?\`所有版本的 .Net Core 和 .net 5 + 以及 .NET Framework 從版本4.6.2 開始都支援。
 
 - 「真實」裝置物件的符號連結 (如果是磁碟機名稱即為 C:，若是磁碟區 GUID 則為 Volume{b75e2c83-0000-0000-0000-602f00000000})。
 
@@ -182,7 +182,7 @@ DOS 裝置路徑由以下元件組成：
    此規則表示您可以建立具有尾端空格的目錄名稱，方法是在空格之後新增尾端分隔符號。
 
    > [!IMPORTANT]
-   > 您應該**絕不**建立具有尾端空格的目錄或檔案名稱。 尾端空格可能會導致難以存取目錄或是不可能存取目錄，而應用程式在嘗試處理名稱包含尾端空格的目錄或檔案時，通常會失敗。
+   > 您應該 **絕不** 建立具有尾端空格的目錄或檔案名稱。 尾端空格可能會導致難以存取目錄或是不可能存取目錄，而應用程式在嘗試處理名稱包含尾端空格的目錄或檔案時，通常會失敗。
 
 ## <a name="skip-normalization"></a>略過正規化
 
@@ -194,10 +194,10 @@ DOS 裝置路徑由以下元件組成：
 
 1. 如果已經正規化，藉由略過正規化以改善效能。
 
-1. (僅限 .NET Framework) 略過路徑長度的 `MAX_PATH` 檢查，以允許超過 259 個字元的路徑。 大部分的 API 都允許這點，但有些例外狀況。
+1. 僅限 .NET Framework，以略過 `MAX_PATH` 路徑長度的檢查，以允許超過259個字元的路徑。 大部分的 API 都允許這點，但有些例外狀況。
 
 > [!NOTE]
-> .NET Core 會隱含地處理長路徑，而不會執行 `MAX_PATH` 檢查。 `MAX_PATH` 檢查只適用於 .NET Framework。
+> .NET Core 和 .NET 5 + 會隱含地處理長路徑，而且不會執行 `MAX_PATH` 檢查。 此 `MAX_PATH` 檢查只適用于 .NET Framework。
 
 略過正規化和最大路徑檢查是兩個裝置路徑語法之間唯一的差異，它們在其他方面都一樣。 略過正規化時請小心，因為您可能會很容易就建立令「正常」應用程式難以處理的路徑。
 

@@ -1,6 +1,6 @@
 ---
 title: 在 .NET 中處理 I/O 錯誤
-description: 瞭解如何處理 .NET 中的 i/o 錯誤。 將錯誤碼對應至例外狀況，處理 i/o 作業中的例外狀況，並處理 IOException。
+description: 瞭解如何在 .NET 中處理 i/o 錯誤。 將錯誤碼對應至例外狀況、處理 i/o 作業中的例外狀況，以及處理 IOException。
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599798"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188038"
 ---
 # <a name="handling-io-errors-in-net"></a>在 .NET 中處理 I/O 錯誤
 
@@ -46,7 +46,7 @@ ms.locfileid: "84599798"
 
 因為必須依賴作業系統，所以相同的例外狀況 (例如我們範例中的找不到目錄錯誤) 會導致 I/O 方法擲回 I/O 例外狀況的任何一個完整類別。 這表示在呼叫 I/O API 時，您的程式碼應該已準備好處理大部分或所有例外狀況，如下表所示：
 
-| 例外狀況型別 | .NET Core | .NET Framework |
+| 例外狀況類型 | .NET Core/. NET 5 + | .NET Framework |
 |---|---|---|
 | <xref:System.IO.IOException> | 是 | 是 |
 | <xref:System.IO.FileNotFoundException> | 是 | 是 |
@@ -72,7 +72,7 @@ ms.locfileid: "84599798"
 
 若是 <xref:System.IO.IOException>，您可以從 [IOException.HResult](xref:System.Exception.HResult) 屬性取得額外的錯誤資訊。 若要將 HResult 值轉換為 Win32 錯誤碼，您要去除 32 位元值的前 16 位元。 下表列出可能包裝在 <xref:System.IO.IOException> 中的錯誤碼。
 
-| HResult | 持續性 | 描述 |
+| HResult | 常數 | 描述 |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | 遺漏檔案名稱，或者檔案或目錄正在使用中。 |
 | ERROR_FILE_EXISTS | 80 | 檔案已存在。 |
@@ -84,9 +84,9 @@ ms.locfileid: "84599798"
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 .NET 中處理和擲回例外狀況](../exceptions/index.md)
-- [例外狀況處理 (工作平行程式庫)](../parallel-programming/exception-handling-task-parallel-library.md)
-- [例外狀況的最佳做法](../exceptions/best-practices-for-exceptions.md)
+- [例外狀況處理 (工作平行程式庫) ](../parallel-programming/exception-handling-task-parallel-library.md)
+- [例外狀況的最佳作法](../exceptions/best-practices-for-exceptions.md)
 - [如何使用 Catch 區塊中的特定例外狀況](../exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)

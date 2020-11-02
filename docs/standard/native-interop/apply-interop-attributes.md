@@ -1,25 +1,25 @@
 ---
 title: 套用 Interop 屬性
-description: 本文摘要說明 System.runtime.interopservices.outattribute 命名空間的 COM Interop 屬性，包括設計階段和轉換工具屬性。
+description: 本文摘要說明 System.runtime.interopservices.outattribute 命名空間的 COM interop 屬性，包括設計階段和轉換工具屬性。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - design-time attributes
-- .NET Framework, exposing components to COM
-- attributes [.NET Framework], design-time functionality
+- .NET, exposing components to COM
+- attributes [.NET], design-time functionality
 - conversion-tool attributes
-- attributes [.NET Framework], interop-specific
-- attributes [.NET Framework], conversion-tool
+- attributes [.NET], interop-specific
+- attributes [.NET], conversion-tool
 - interoperation with unmanaged code, applying attributes
-- interoperation with unmanaged code, exposing .NET Framework components
+- interoperation with unmanaged code, exposing .NET components
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291327"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188675"
 ---
 # <a name="applying-interop-attributes"></a>套用 Interop 屬性
 <xref:System.Runtime.InteropServices> 命名空間提供了三種類別的 Interop 專屬屬性：一種是您在設計階段套用的屬性、一種是 COM Interop 工具和 API 在轉換過程中套用的屬性，還有一種是您或 COM Interop 套用的屬性。  
@@ -51,7 +51,7 @@ ms.locfileid: "84291327"
 |<xref:System.Runtime.InteropServices.OptionalAttribute>|表示參數為選擇性。<br /><br /> COM Interop 工具可以套用這個屬性。|  
 |<xref:System.Runtime.InteropServices.OutAttribute>|表示欄位或參數中的資料必須從呼叫的物件封送處理回其呼叫端。|  
 |<xref:System.Runtime.InteropServices.PreserveSigAttribute>|抑制通常發生於互通呼叫期間的 HRESULT 或 Retval 簽章轉換。 這個屬性會影響封送處理以及型別程式庫匯出。<br /><br /> COM Interop 工具可以套用這個屬性。|  
-|<xref:System.Runtime.InteropServices.ProgIdAttribute>|指定 .NET Framework 類別的 ProgID。 可用於屬性類別。|  
+|<xref:System.Runtime.InteropServices.ProgIdAttribute>|指定 .NET 類別的 ProgID。 可用於屬性類別。|  
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|控制類別欄位的實體配置。<br /><br /> COM Interop 工具可以套用這個屬性。|  
   
 ## <a name="conversion-tool-attributes"></a>轉換工具屬性  
@@ -63,9 +63,9 @@ ms.locfileid: "84291327"
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|表示類別或介面的相關資訊在從型別程式庫匯入組件時遺失。|  
 |<xref:System.Runtime.InteropServices.ComEventInterfaceAttribute>|識別實作事件介面方法的來源介面和類別。|  
 |<xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>|表示這個組件原來是從 COM 類型程式庫匯入的。 這個屬性含有原來型別程式庫的型別程式庫定義。|  
-|<xref:System.Runtime.InteropServices.TypeLibFuncAttribute>|含有原來針對這個函式從 COM 類型程式庫匯入的 **FUNCFLAGS**。|  
-|<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|含有原來針對這個類型從 COM 型別程式庫匯入的 **TYPEFLAGS**。|  
-|<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|含有原來針對這個變數從 COM 類型程式庫匯入的 **VARFLAGS**。|  
+|<xref:System.Runtime.InteropServices.TypeLibFuncAttribute>|含有原來針對這個函式從 COM 類型程式庫匯入的 **FUNCFLAGS** 。|  
+|<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|含有原來針對這個類型從 COM 型別程式庫匯入的 **TYPEFLAGS** 。|  
+|<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|含有原來針對這個變數從 COM 類型程式庫匯入的 **VARFLAGS** 。|  
   
 ## <a name="see-also"></a>另請參閱
 

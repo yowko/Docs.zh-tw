@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-ms.openlocfilehash: c42ea0b5ba4cb01304ceae4ba2d2fc91b629a9b3
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: cc27ba47c88d424a80eb47aaa310bdfd6d18433a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420522"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187914"
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 
@@ -42,7 +42,7 @@ ms.locfileid: "83420522"
 
 CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端公開所有公用且 COM 可見的介面、資料類型和傳回值。 對於 COM 用戶端而言，在 .NET 物件上叫用方法與在 COM 物件上叫用方法相同。
 
-為了建立這種無縫式的方法，CCW 會製造傳統 COM 介面，例如 **IUnknown** 和 **IDispatch**。 如下圖所示，CCW 會維護對其所包裝之 .NET 物件的單一參考。 COM 用戶端和 .NET 物件會透過 Proxy 和 CCW 虛設常式建構彼此互動。
+為了建立這種無縫式的方法，CCW 會製造傳統 COM 介面，例如 **IUnknown** 和 **IDispatch** 。 如下圖所示，CCW 會維護對其所包裝之 .NET 物件的單一參考。 COM 用戶端和 .NET 物件會透過 Proxy 和 CCW 虛設常式建構彼此互動。
 
 ![此圖顯示 CCW 如何製造 COM 介面。](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
@@ -51,20 +51,20 @@ CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端
 |介面|描述|
 |---------------|-----------------|
 |**IDispatch**|提供晚期類型繫結的機制。|
-|**IErrorInfo**|提供錯誤的文字描述、其來源、說明檔、說明內容，以及定義錯誤之介面的 GUID (.NET 類別一律為 **GUID_NULL**)。|
+|**IErrorInfo**|提供錯誤的文字描述、其來源、說明檔、說明內容，以及定義錯誤之介面的 GUID (.NET 類別一律為 **GUID_NULL** )。|
 |**IProvideClassInfo**|可讓 COM 用戶端存取 Managed 類別所實作的 **ITypeInfo** 介面。 針對未從 COM 匯入的型別傳回 `COR_E_NOTSUPPORTED` .NET Core。 |
 |**ISupportErrorInfo**|可讓 COM 用戶端判斷 Managed 物件是否支援 **IErrorInfo** 介面。 如果是的話，可讓用戶端取得最新例外狀況物件的指標。 所有 Managed 類型都支援 **IErrorInfo** 介面。|
-|**ITypeInfo** (僅限 .NET Framework)|提供與 Tlbexp.exe 所產生之類型資訊完全相同之類別的類型資訊。|
+|**ITypeInfo** ( 只 .NET Framework) |提供與 Tlbexp.exe 所產生之類型資訊完全相同之類別的類型資訊。|
 |**IUnknown**|提供 **IUnknown** 介面的標準實作，COM 用戶端用它來管理 CCW 的存留期，並提供類型強制型轉。|
 
  Managed 類別也可以提供下表所述的 COM 介面。
 
 |介面|描述|
 |---------------|-----------------|
-|（ \_ *Classname*）類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|
-|**IConnectionPoint**和**IConnectionPointContainer**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|
-|**IDispatchEx** (僅限 .NET Framework)|如果類別實作 **IExpando**，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|
-|**IEnumVARIANT**|集合類型類別的介面，如果類別實作 **IEnumerable**，它會列舉集合中的物件。|
+| (的 \_ *Classname* ) 類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|
+|**IConnectionPoint** 和 **IConnectionPointContainer**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|
+|**IDispatchEx** ( 只 .NET Framework) |如果類別實作 **IExpando** ，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch** ，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|
+|**IEnumVARIANT**|集合類型類別的介面，如果類別實作 **IEnumerable** ，它會列舉集合中的物件。|
 
 ## <a name="introducing-the-class-interface"></a>類別介面簡介
 
@@ -157,7 +157,7 @@ public class LoanApp : IExplicit
 
 對於類別介面，DispId 的產生是根據成員在介面中的位置。 如果您變更成員的順序，並將類別匯出至類型程式庫，您會修改在類別介面中產生的 DispId。
 
-若要避免在使用類別介面時中斷晚期繫結 COM 用戶端，請套用具有 **ClassInterfaceType.AutoDispatch** 值的 **ClassInterfaceAttribute**。 這個值會實作僅分派類別介面，但會略過來自類型程式庫的介面描述。 沒有介面描述，用戶端將無法在編譯時間快取 DispId。 雖然這是類別介面的預設介面類型，您仍可以明確地套用屬性值。
+若要避免在使用類別介面時中斷晚期繫結 COM 用戶端，請套用具有 **ClassInterfaceType.AutoDispatch** 值的 **ClassInterfaceAttribute** 。 這個值會實作僅分派類別介面，但會略過來自類型程式庫的介面描述。 沒有介面描述，用戶端將無法在編譯時間快取 DispId。 雖然這是類別介面的預設介面類型，您仍可以明確地套用屬性值。
 
 ```vb
 <ClassInterface(ClassInterfaceType.AutoDispatch)> Public Class LoanApp
@@ -175,19 +175,19 @@ public class LoanApp
 }
 ```
 
-若要在執行階段取得介面成員的 DispId，COM 用戶端可以呼叫 **IDispatch.GetIdsOfNames**。 若要在介面上叫用方法，請將傳回的 DispId 作為引數傳遞給 **IDispatch.Invoke**。
+若要在執行階段取得介面成員的 DispId，COM 用戶端可以呼叫 **IDispatch.GetIdsOfNames** 。 若要在介面上叫用方法，請將傳回的 DispId 作為引數傳遞給 **IDispatch.Invoke** 。
 
 ### <a name="restrict-using-the-dual-interface-option-for-the-class-interface"></a>限制針對類別介面使用雙重介面選項。
 
 雙重介面可讓 COM 用戶端進行介面成員的早期和晚期繫結。 在設計階段和測試期間，您可能會發現將類別介面設為雙重很有用。 對於絕對不會修改的 Managed 類別 (和其基底類別)，此選項也是可以接受的。 在其他情況下，請避免將類別介面設定為雙重。
 
-自動產生的雙重介面可能適合於少數情況，不過，通常它會造成與版本相關的複雜性。 例如，使用衍生類別之類別介面的 COM 用戶端，可能會因為對基底類別的變更而輕易地中斷。 當協力廠商提供基底類別時，類別介面的配置會超出您的控制。 此外，不同於僅分派介面，雙重介面 (**ClassInterfaceType.AutoDual**) 會在匯出的型別程式庫中提供類別介面的描述。 此類描述鼓勵晚期繫結的用戶端在編譯時間快取 DispId。
+自動產生的雙重介面可能適合於少數情況，不過，通常它會造成與版本相關的複雜性。 例如，使用衍生類別之類別介面的 COM 用戶端，可能會因為對基底類別的變更而輕易地中斷。 當協力廠商提供基底類別時，類別介面的配置會超出您的控制。 此外，不同於僅分派介面，雙重介面 ( **ClassInterfaceType.AutoDual** ) 會在匯出的型別程式庫中提供類別介面的描述。 此類描述鼓勵晚期繫結的用戶端在編譯時間快取 DispId。
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>請確定所有 COM 事件通知都是晚期繫結的。
 
 根據預設，COM 型別資訊會直接內嵌到受控組件，而不需主要的 interop 組件 (PIA)。 不過，內嵌類型資訊的其中一個限制是它不支援透過早期繫結 vtable 呼叫的 COM 事件通知傳遞，而僅支援晚期繫結的 `IDispatch::Invoke` 呼叫。
 
-如果您的應用程式需要對 COM 事件介面方法進行早期繫結呼叫，您可以在 Visual Studio 中將**內嵌 Interop 型別**屬性設定為 `true`，或在您的專案檔中包含下列元素：
+如果您的應用程式需要對 COM 事件介面方法進行早期繫結呼叫，您可以在 Visual Studio 中將 **內嵌 Interop 型別** 屬性設定為 `true`，或在您的專案檔中包含下列元素：
 
 ```xml
 <EmbedInteropTypes>True</EmbedInteropTypes>

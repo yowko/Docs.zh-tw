@@ -2,18 +2,18 @@
 title: 類型封送處理 - .NET
 description: 了解 .NET 如何將您的類型封送處理至原生表示法。
 ms.date: 01/18/2019
-ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706262"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188389"
 ---
 # <a name="type-marshaling"></a>類型封送處理
 
-當類型需要跨越受控程式碼和機器碼之間的界限時，**封送處理**便是轉換類型的程序。
+當類型需要跨越受控程式碼和機器碼之間的界限時， **封送處理** 便是轉換類型的程序。
 
-之所以需要進行封送處理，是因受控程式碼和非受控程式碼中的類型並不相同。 例如，在 managed 程式碼中，您有`String`，而在非受控世界字串中可以是 unicode （「寬」）、非 Unicode、以 null 終止的、ASCII 等等。根據預設，P/Invoke 子系統會依照本文所述的預設行為，嘗試執行正確的動作。 不過，在您需要進行額外控制的情況下，您可以運用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 屬性來指定非受控端的預期類型。 比方說，如果您想要用以 null 終止的 ANSI 字串形式來傳送字串，您可以下列方式執行它︰
+之所以需要進行封送處理，是因受控程式碼和非受控程式碼中的類型並不相同。 比方說，在 managed 程式碼中，您有一個 `String` ，而非受控世界的字串可以是 Unicode ( 「寬」 ) 、非 Unicode、以 null 終止的、ASCII 等等。根據預設，P/Invoke 子系統會根據本文所述的預設行為，嘗試進行正確的動作。 不過，在您需要進行額外控制的情況下，您可以運用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 屬性來指定非受控端的預期類型。 比方說，如果您想要用以 null 終止的 ANSI 字串形式來傳送字串，您可以下列方式執行它︰
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -87,7 +87,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| 委派型別 | .NET Framework 中的 `_Delegate*`。 .NET Core 不適用。 |
+| 委派型別 | .NET Framework 中的 `_Delegate*`。 在 .NET Core 和 .NET 5 + 中不允許。 |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | .NET 陣列 | `SAFEARRAY`                   |
 | `string[]` | `BSTR` 的 `SAFEARRAY`        |

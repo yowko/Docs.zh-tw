@@ -1,6 +1,6 @@
 ---
 title: 終結執行緒
-description: 當您需要終結 .NET 中的執行緒時（例如合作取消或執行緒中止方法），請知道您的選項。 瞭解如何處理 ThreadAbortException。
+description: 當您需要在 .NET 中損毀執行緒時，請瞭解您的選項，例如合作式取消或執行緒。 Abort 方法。 瞭解如何處理 ThreadAbortException。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,18 +8,18 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - destroying threads
-- threading [.NET Framework], destroying threads
+- threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: baf9289413de0e99533f121eb2a404ff0d873511
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: caf7e29742bd7c0481badeeace91b7851520ad12
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768504"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188363"
 ---
 # <a name="destroying-threads"></a>終結執行緒
 
-若要終止執行緒的執行，您通常會使用[合作式取消模型](cancellation-in-managed-threads.md)。 有時候，無法以合作方式停止執行緒，因為它會執行協力廠商程式碼，而不是針對合作取消所設計。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.NET Framework 中的方法可以用來強制終止 managed 執行緒。 當您呼叫時 <xref:System.Threading.Thread.Abort%2A> ，Common Language Runtime 會在目標執行緒中擲回，目標執行緒 <xref:System.Threading.ThreadAbortException> 可以攔截。 如需詳細資訊，請參閱 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.Net Core 不支援方法。 如果您需要終止在 .NET Core 中強制執行協力廠商程式碼，請在個別進程中執行它，然後使用 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> 。
+若要終止執行緒的執行，您通常會使用 [合作式取消模型](cancellation-in-managed-threads.md)。 有時無法合作地停止執行緒，因為它會執行協力廠商程式碼，而不是針對合作式取消所設計。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.NET Framework 中的方法可以用來強制終止 managed 執行緒。 當您呼叫時 <xref:System.Threading.Thread.Abort%2A> ，Common Language Runtime 會在目標執行緒中擲回 <xref:System.Threading.ThreadAbortException> ，而目標執行緒可以攔截。 如需詳細資訊，請參閱<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.Net 5 (（包括 .Net Core) 和更新版本）不支援此方法。 如果您需要在 .NET 5 + 中強制終止協力廠商程式碼的執行，請在個別的進程中執行，並使用 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> 。
 
 > [!NOTE]
 > 如果執行緒在其 <xref:System.Threading.Thread.Abort%2A> 方法被呼叫時正在執行非受控碼，執行階段就會將它標示為 <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>。 當執行緒返回受控碼時，會擲回例外狀況。  
@@ -70,4 +70,4 @@ catch (ThreadAbortException ex)
 
 - <xref:System.Threading.ThreadAbortException>
 - <xref:System.Threading.Thread>
-- [使用執行緒和執行緒處理](using-threads-and-threading.md)
+- [使用執行緒和執行緒](using-threads-and-threading.md)

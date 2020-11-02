@@ -1,22 +1,23 @@
 ---
 title: 前景和背景執行緒
-description: 使用 .NET 中的 IsBackground 屬性，判斷或變更執行緒是背景執行緒或前景執行緒。
+description: 使用 .NET 中的 IsBackground 屬性，判斷或變更執行緒是否為背景執行緒或前景執行緒。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], foreground
-- threading [.NET Framework], background
+- threading [.NET], foreground
+- threading [.NET], background
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-ms.openlocfilehash: 6cb7a92851728e16f4a317d6c24d072acee72a94
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 3b468d2de382719496d5dfaf4c704d43f3e748c3
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769037"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188064"
 ---
 # <a name="foreground-and-background-threads"></a>前景和背景執行緒
+
 受控執行緒可以是背景執行緒或前景執行緒。 背景執行緒與前景執行緒完全相同，但有一個例外：背景執行緒不會讓受控的執行環境保持執行狀態。 一旦受控處理序 (其中的 .exe 檔案為受控組件) 的所有前景執行緒都已停止之後，系統就會停止所有背景執行緒並關閉。  
   
 > [!NOTE]
@@ -25,7 +26,7 @@ ms.locfileid: "84769037"
  使用 <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> 屬性，來判斷執行緒是否為背景或前景執行緒，或變更其狀態。 您隨時都能藉由將執行緒的 <xref:System.Threading.Thread.IsBackground%2A> 屬性設為 `true`，來將其變更為背景執行緒。  
   
 > [!IMPORTANT]
-> 執行緒的前景或背景狀態不會影響執行緒中未處理的例外狀況結果。 在 .NET Framework 2.0 版中，前景或背景執行緒中未處理的例外狀況會導致應用程式終止。 請參閱[受控執行緒中的例外狀況](exceptions-in-managed-threads.md)。  
+> 執行緒的前景或背景狀態不會影響執行緒中未處理的例外狀況結果。 前景或背景執行緒中未處理的例外狀況會導致應用程式終止。 請參閱[受控執行緒中的例外狀況](exceptions-in-managed-threads.md)。  
   
  屬於受控執行緒集區的執行緒 (也就是其 <xref:System.Threading.Thread.IsThreadPoolThread%2A> 屬性為 `true` 的執行緒) 是背景執行緒。 從非受控碼進入受控執行環境的所有執行緒都會標示為背景執行緒。 藉由建立並啟動新 <xref:System.Threading.Thread> 物件而產生的所有執行緒預設均為前景執行緒。  
   

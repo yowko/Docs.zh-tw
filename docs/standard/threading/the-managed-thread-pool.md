@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 099670f8451e9e2cf78b372d3a4d393882a30407
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223794"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188688"
 ---
 # <a name="the-managed-thread-pool"></a>受控執行緒集區
 
@@ -40,7 +40,7 @@ ms.locfileid: "92223794"
   
 ### <a name="maximum-number-of-thread-pool-threads"></a>執行緒集區執行緒數的上限
 
-可以排入執行緒集區佇列的作業數，受限於可用記憶體的數量， 但執行緒集區會限制能在處理序中同時作用的執行緒數。 當所有執行緒集區執行緒都在忙碌時，其他工作項目會排入佇列中，直到有執行緒可以執行這些工作為止。 自 .NET Framework 4 起，處理序的執行緒集區預設大小取決於數個因素，例如虛擬位址空間的大小。 處理序可以呼叫 <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> 方法來決定執行緒數目。  
+可以排入執行緒集區佇列的作業數，受限於可用記憶體的數量， 但執行緒集區會限制能在處理序中同時作用的執行緒數。 當所有執行緒集區執行緒都在忙碌時，其他工作項目會排入佇列中，直到有執行緒可以執行這些工作為止。 進程的執行緒集區預設大小取決於數個因素，例如虛擬位址空間的大小。 處理序可以呼叫 <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> 方法來決定執行緒數目。  
   
 您可以使用 <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> 和 <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType> 方法來控制執行緒最大數目。  
 
@@ -54,14 +54,14 @@ ms.locfileid: "92223794"
 > [!NOTE]
 > 當需求很低時，執行緒集區執行緒的實際數目可能低於最小值。  
   
-當達到最小值時，執行緒集區可以建立額外的執行緒，或是等候部分工作完成。 自 .NET Framework 4 起，執行緒集區會建立及終結背景工作執行緒，以最佳化輸送量。輸送量是指每個時間單位所能完成的工作數。 執行緒太少可能無法最有效地利用可用資源，而執行緒太多則可能增加資源爭用的情況。  
+當達到最小值時，執行緒集區可以建立額外的執行緒，或是等候部分工作完成。 執行緒集區會建立和終結背景工作執行緒，以將輸送量優化，這定義為每個時間單位完成的工作數。 執行緒太少可能無法最有效地利用可用資源，而執行緒太多則可能增加資源爭用的情況。  
   
 > [!CAUTION]
 > 您可以使用 <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType> 方法來提高閒置執行緒的數目下限。 不過，不必要地增加這些值，可能會造成效能問題。 如果太多工作同時啟動，則所有工作可能都會變慢。 在大部分情況下，執行緒集區使用自己的演算法來配置執行緒的效能較佳。  
 
 ## <a name="using-the-thread-pool"></a>使用執行緒集區
 
-自 .NET Framework 4 起，使用執行緒集區最簡單的方式，就是使用[工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md)。 根據預設，諸如 <xref:System.Threading.Tasks.Task> 與 <xref:System.Threading.Tasks.Task%601> 等 TPL 類型，都會使用執行緒集區的執行緒執行工作。
+使用執行緒集區最簡單的方式，就是使用工作 [平行程式庫 (TPL) ](../parallel-programming/task-parallel-library-tpl.md)。 根據預設，諸如 <xref:System.Threading.Tasks.Task> 與 <xref:System.Threading.Tasks.Task%601> 等 TPL 類型，都會使用執行緒集區的執行緒執行工作。
 
 您也可以使用執行緒集區，方法是 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 從 managed 程式碼 (或 [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) 從非受控程式) 代碼進行呼叫，並傳遞 <xref:System.Threading.WaitCallback?displayProperty=nameWithType> 代表執行工作之方法的委派。
 

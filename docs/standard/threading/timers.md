@@ -8,16 +8,16 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- threading [.NET Framework], timers
+- threading [.NET], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.openlocfilehash: d463eb2a8d598dc5ba9b2fb51a6fc08c563e6fe4
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: c9d0b085285705af79f0fafa212867b5571863ba
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739484"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188714"
 ---
 # <a name="timers"></a>計時器
 
@@ -35,7 +35,7 @@ ms.locfileid: "81739484"
 
 ## <a name="the-systemthreadingtimer-class"></a>System.Threading.Timer 類別
 
-<xref:System.Threading.Timer?displayProperty=nameWithType> 類別可讓您依指定的時間間隔連續呼叫委派。 您還可以使用此類在指定的時間間隔內計劃對委託的單個調用。 委派是在 <xref:System.Threading.ThreadPool> 執行緒上執行。
+<xref:System.Threading.Timer?displayProperty=nameWithType> 類別可讓您依指定的時間間隔連續呼叫委派。 您也可以使用這個類別，在指定的時間間隔內排程對委派的單一呼叫。 委派是在 <xref:System.Threading.ThreadPool> 執行緒上執行。
 
 當您建立 <xref:System.Threading.Timer?displayProperty=nameWithType> 物件時，您會指定定義回呼方法的 <xref:System.Threading.TimerCallback> 委派、傳遞至回呼的選擇性狀態物件、第一個回呼引動過程之前延遲的時間量，以及回呼引動過程之間的時間間隔。 若要取消擱置中的計時器，請呼叫 <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType> 方法。
 
@@ -59,4 +59,4 @@ ms.locfileid: "81739484"
 
 - <xref:System.Threading.Timer?displayProperty=nameWithType>
 - <xref:System.Timers.Timer?displayProperty=nameWithType>
-- [執行緒物件與功能](threading-objects-and-features.md)
+- [執行緒物件和功能](threading-objects-and-features.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555916"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188558"
 ---
 # <a name="isolated-storage"></a>隔離儲存區 (Isolated Storage)
 
@@ -59,7 +59,7 @@ ms.locfileid: "90555916"
 
 系統管理員可以根據適當的信任等級，限制應用程式或使用者可使用多少隔離儲存區。 此外，系統管理員可以完全移除使用者的保存資料。 若要建立或存取隔離儲存區，程式碼必須具備適當的 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 權限。
 
-若要存取隔離儲存區，程式碼必須擁有所有必要的原生 (Native) 平台作業系統權限。 例如，必須遵循控制哪些使用者有權使用檔案系統的存取控制清單 (ACL)。 .NET Framework 應用程式已經擁有作業系統權限以存取隔離儲存區，除非它們執行 (平台特定) 模擬。 在這個狀況中，應用程式有責任確保模擬的使用者識別具有適當的作業系統權限，以存取隔離儲存區。 這個存取對於從 Web 執行或下載的程式碼提供便利的方式，以讀取和寫入與特定使用者有關的存放區域。
+若要存取隔離儲存區，程式碼必須擁有所有必要的原生 (Native) 平台作業系統權限。 例如，必須遵循控制哪些使用者有權使用檔案系統的存取控制清單 (ACL)。 .NET 應用程式已具有存取隔離儲存區的作業系統許可權，除非它們執行 (平臺特定的) 模擬。 在這個狀況中，應用程式有責任確保模擬的使用者識別具有適當的作業系統權限，以存取隔離儲存區。 這個存取對於從 Web 執行或下載的程式碼提供便利的方式，以讀取和寫入與特定使用者有關的存放區域。
 
 通用語言執行平台會使用 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 物件控制對隔離儲存區的存取。 每個物件都有指定下列值的屬性：
 
@@ -134,7 +134,7 @@ storeadm.exe /machine [any-other-switches]
 
 上述路徑可能會根據使用中的 Windows 版本而有所不同。
 
-現在請考慮具有兩個已註冊的使用者 _Mallory_ 和 _Bob_的多使用者系統。 Mallory 具有存取其使用者設定檔目錄的能力 `C:\Users\Mallory\` ，而她可以存取共用的整個電腦儲存位置 `C:\ProgramData\IsolatedStorage\` 。 她無法存取 Bob 的使用者設定檔目錄 `C:\Users\Bob\` 。
+現在請考慮具有兩個已註冊的使用者 _Mallory_ 和 _Bob_ 的多使用者系統。 Mallory 具有存取其使用者設定檔目錄的能力 `C:\Users\Mallory\` ，而她可以存取共用的整個電腦儲存位置 `C:\ProgramData\IsolatedStorage\` 。 她無法存取 Bob 的使用者設定檔目錄 `C:\Users\Bob\` 。
 
 如果 Mallory 想要攻擊 Bob，她可能會將資料寫入整個電腦的儲存位置，然後嘗試影響 Bob 從全電腦的存放區讀取。 當 Bob 執行從這個存放區讀取的應用程式時，該應用程式將會在 Mallory 的資料上運作，但從 Bob 的使用者帳戶內容中執行。 本檔的其餘部分會策劃各種攻擊媒介，以及應用程式可以執行哪些步驟來將這些攻擊的風險降至最低。
 
@@ -146,11 +146,11 @@ __注意：__ 為了讓這類攻擊發生，Mallory 需要：
 
 這些不是威脅向量，適用于標準的單一使用者桌面環境，例如家用電腦或單一員工的企業工作站。
 
-#### <a name="elevation-of-privilege"></a>提高權限
+#### <a name="elevation-of-privilege"></a>權限提高
 
 當 Bob 的應用程式讀取 Mallory 的檔案時，會發生特權 __提升__ 攻擊，並會根據該承載的內容自動嘗試採取一些動作。 假設有一個應用程式會從整部電腦的存放區讀取啟動腳本的內容，並將這些內容傳遞至 `Process.Start` 。 如果 Mallory 可以將惡意腳本放在全電腦存放區中，當 Bob 啟動其應用程式時：
 
-* 他的應用程式會 _在 Bob 的使用者設定檔內容下_剖析並啟動 Mallory 的惡意腳本。
+* 他的應用程式會 _在 Bob 的使用者設定檔內容下_ 剖析並啟動 Mallory 的惡意腳本。
 * Mallory gaines 在本機電腦上存取 Bob 的帳戶。
 
 #### <a name="denial-of-service"></a>拒絕服務
@@ -195,7 +195,7 @@ __重要事項：__ 如果您的環境具有多個互相不受信任的使用者
 
 ## <a name="creating-enumerating-and-deleting-isolated-storage"></a>建立、列舉和刪除隔離儲存區
 
-.NET Framework 提供 <xref:System.IO.IsolatedStorage> 命名空間中的三個類別，可協助您執行包含隔離儲存區的工作：
+.NET 在命名空間中提供三個類別 <xref:System.IO.IsolatedStorage> ，可協助您執行牽涉到隔離儲存區的工作：
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>衍生自 <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> ，並提供儲存的組件和應用程式檔案的基本管理。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的執行個體代表位於檔案系統中的單一存放區。
 
@@ -235,7 +235,7 @@ __重要事項：__ 如果您的環境具有多個互相不受信任的使用者
 
 ## <a name="related-articles"></a>相關文章
 
-|Title|說明|
+|標題|描述|
 |-----------|-----------------|
 |[隔離的類型](types-of-isolation.md)|描述各種類型的隔離。|
 |[作法：取得隔離儲存區的存放區](how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|
@@ -246,7 +246,7 @@ __重要事項：__ 如果您的環境具有多個互相不受信任的使用者
 |[作法：尋找隔離儲存區中的現有檔案和目錄](how-to-find-existing-files-and-directories-in-isolated-storage.md)|示範如何在隔離儲存區中讀取目錄結構和檔案。|
 |[作法：讀取和寫入隔離儲存區中的檔案](how-to-read-and-write-to-files-in-isolated-storage.md)|提供將字串寫入至隔離儲存區檔案並將它讀回的範例。|
 |[作法：刪除隔離儲存區中的檔案和目錄](how-to-delete-files-and-directories-in-isolated-storage.md)|示範如何刪除隔離儲存區的檔案和目錄。|
-|[檔案和資料流 I/O](index.md)|說明如何執行同步和非同步檔案及資料流存取。|
+|[檔案和資料流程 i/o](index.md)|說明如何執行同步和非同步檔案及資料流存取。|
 
 <a name="reference"></a>
 

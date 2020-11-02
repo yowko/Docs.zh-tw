@@ -1,20 +1,20 @@
 ---
 title: 如何：列舉目錄和檔案
-description: 瞭解如何使用可列舉集合來列舉目錄和檔案，以提供比 .NET 中的陣列更好的效能。
+description: 瞭解如何使用可列舉的集合來列舉目錄和檔案，其可提供比 .NET 中的陣列更好的效能。
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- I/O [.NET Framework], enumerating directories and files
+- I/O [.NET], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: 276668f4a3eee89610a81b1256820770d1f72dc3
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7a757fc97fd934f02592264c3a495c3efc435fd5
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662572"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187888"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>如何：列舉目錄和檔案
 當您使用目錄和檔案的大型集合時，相較於陣列，可列舉的集合會提供更佳的效能。 若要列舉目錄和檔案，請使用能夠傳回可列舉目錄或檔案名稱、或是其 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 物件集合的方法。  
@@ -38,7 +38,7 @@ ms.locfileid: "84662572"
 > [!NOTE]
 > 雖然您可以使用選擇性 <xref:System.IO.SearchOption> 列舉的 <xref:System.IO.SearchOption.AllDirectories> 選項立即列舉父目錄中子目錄的所有檔案，但 <xref:System.UnauthorizedAccessException> 錯誤可能會使列舉不完整。 您可以先列舉目錄再列舉檔案來攔截這些例外狀況。  
   
-## <a name="examples-use-the-directory-class"></a>範例：使用 Directory 類別  
+## <a name="examples-use-the-directory-class"></a>範例：使用目錄類別  
   
 下列範例使用 <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> 方法，在所指定路徑中取得最上層目錄名稱的清單。  
 

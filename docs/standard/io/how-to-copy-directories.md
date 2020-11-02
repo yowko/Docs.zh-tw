@@ -1,6 +1,6 @@
 ---
 title: 如何：複製目錄
-description: 請參閱如何使用 i/o 類別來複製目錄，以同步方式將目錄的內容複寫到另一個位置。
+description: 瞭解如何使用 i/o 類別來複製目錄，以同步方式將目錄的內容複寫到另一個位置。
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,20 +8,21 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - directory copying
-- I/O [.NET Framework], copying directories
+- I/O [.NET], copying directories
 - subdirectory copying
 - copying directories
-- directories [.NET Framework], copying
+- directories [.NET], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: 65fe28c90a6cd6f0b3c8c32da19c1d9603900670
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 476473d5c25ce29d070abbeef7fa29a7cb9621e1
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662585"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187979"
 ---
 # <a name="how-to-copy-directories"></a>如何：複製目錄
-本主題示範如何使用 I/O 類別將某一個目錄的內容同步複製到另一個位置。
+
+本文示範如何使用 i/o 類別，以同步方式將目錄的內容複寫到另一個位置。
 
 如需非同步檔案複製的範例，請參閱[非同步檔案 I/O](asynchronous-file-i-o.md)。
 
