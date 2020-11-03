@@ -1,6 +1,6 @@
 ---
 title: 如何：將文字寫入檔案
-description: 瞭解針對 .NET 應用程式將文字寫入或附加至檔案的方式。 使用 StreamWriter 或 File 類別中的方法，以同步或非同步方式寫入文字。
+description: 瞭解將文字寫入或附加至 .NET 應用程式檔案的方式。 使用 StreamWriter 或檔案類別中的方法，以同步或非同步方式撰寫文字。
 ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,18 +8,19 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - writing text to files
-- I/O [.NET Framework], writing text to files
+- I/O [.NET], writing text to files
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: 52d3d07f4ffdbdc6510425a65fc173d36e674d06
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: df057856385c8e9c63140e45512a97e492130396
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447208"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189234"
 ---
 # <a name="how-to-write-text-to-a-file"></a>如何：將文字寫入檔案
+
 本主題說明針對 .NET 應用程式將文字寫入檔案的不同方式。
 
 通常會使用下列類別和方法，將文字寫入至檔案：  
@@ -56,14 +57,14 @@ ms.locfileid: "84447208"
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/async.cs)]
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/async.vb)]  
 
-## <a name="example-write-and-append-text-with-the-file-class"></a>範例：使用 File 類別寫入和附加文字
+## <a name="example-write-and-append-text-with-the-file-class"></a>範例：使用 File 類別撰寫和附加文字
 
 下列範例示範如何使用 <xref:System.IO.File> 類別，將文字寫入至新檔案，並將新的文字行附加至相同的檔案。 <xref:System.IO.File.WriteAllText%2A> 和 <xref:System.IO.File.AppendAllLines%2A> 方法會自動開啟和關閉檔案。 如果提供給 <xref:System.IO.File.WriteAllText%2A> 方法的路徑已經存在，則會覆寫該檔案。  
 
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/file.cs)]
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/file.vb)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.StreamWriter>
 - <xref:System.IO.Path>

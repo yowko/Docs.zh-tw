@@ -7,20 +7,20 @@ helpviewer_keywords:
 - IO namespace
 - files, I/O
 - System.IO namespace
-- I/O [.NET Framework]
+- I/O [.NET]
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 2f7da6bd967abce8c2fefdc54a0043b5505e22e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aced59995c8d0f478d0565c8fb8faa4f40c32968
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558936"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189195"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 
-檔案和資料流 I/O (輸入/輸出) 是指對儲存媒體來回傳輸資料。 在 .NET Framework 中，`System.IO` 命名空間包含能夠以同步和非同步方式在資料流和檔案上進行讀取和寫入的類型。 這些命名空間還包含對檔案進行壓縮和解壓縮的類型，以及透過管道和序列埠進行通訊的類型。
+檔案和資料流 I/O (輸入/輸出) 是指對儲存媒體來回傳輸資料。 在 .NET 中， `System.IO` 命名空間包含的類型，可讓您以同步和非同步方式在資料流程和檔案上進行讀取和寫入。 這些命名空間還包含對檔案進行壓縮和解壓縮的類型，以及透過管道和序列埠進行通訊的類型。
 
 檔案是具有永續性存放裝置的已排序具名位元組集合。 當您使用檔案時，也會處理目錄路徑、磁碟存放裝置，以及檔案和目錄名稱。 相反地，資料流是可以用來讀取和寫入備份存放區的位元組序列，這類備份存放區可以是數種儲存媒體的其中一種 (例如磁碟或記憶體)。 就像除了磁碟以外，還有多種備份存放區一樣，資料流的種類除了檔案資料流之外，還有其他數種，例如網路、記憶體和管道資料流。
 
@@ -28,7 +28,7 @@ ms.locfileid: "90558936"
 
 您可以使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類型與檔案和目錄互動。 例如，您可以取得及設定檔案和目錄的屬性，並且根據搜尋條件擷取檔案和目錄集合。
 
-如需 Windows 系統的路徑命名慣例及檔案路徑表達方式，包括 .NET Core 1.1 及更新版本和 .NET Framework 4.6.2 及更新版本中支援的 DOS 裝置語法，請參閱 [Windows 系統上的檔案路徑格式](file-path-formats.md)。
+如需路徑命名慣例，以及為 Windows 系統表示檔案路徑的方式，包括 .NET Core 1.1 和更新版本中支援的 DOS 裝置語法，以及 .NET Framework 4.6.2 和更新版本，請參閱 [Windows 系統上的檔案路徑格式](file-path-formats.md)。
 
 以下是常用的檔案和目錄類別：
 
@@ -142,7 +142,7 @@ ms.locfileid: "90558936"
 
 ## <a name="io-operations-in-windows-store-apps"></a>在 Windows 市集應用程式中的 I/O 作業
 
-適用于 Windows 8. x Store 應用程式的 .NET 包含許多用來讀取和寫入資料流程的類型;不過，此設定不包含所有的 .NET Framework i/o 類型。
+.NET for Windows 8. x Store 應用程式包含許多用來讀取和寫入資料流程的類型;不過，此集合不包含所有的 .NET i/o 類型。
 
 在 Windows 8. x Store 應用程式中使用 i/o 作業時，必須注意的一些重要差異：
 
@@ -162,7 +162,7 @@ ms.locfileid: "90558936"
 
 當您使用 <xref:System.IO?displayProperty=nameWithType> 命名空間中的類別時，必須遵循作業系統安全性需求，例如存取控制清單 (ACL)，以控制對檔案和目錄的存取。 任何 <xref:System.Security.Permissions.FileIOPermission> 需求上都會附加這個需求。 您可以用程式設計的方式管理 ACL。 如需詳細資訊，請參閱[如何：新增或移除存取控制清單項目](how-to-add-or-remove-access-control-list-entries.md)。
 
-預設安全性原則可避免網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，撰寫將透過網際網路或內部網路下載的程式碼時，請不要使用需要實體檔案路徑的 I/O 類別。 相反地，請針對傳統的 .NET Framework 應用程式使用 [隔離儲存區](isolated-storage.md) ，或將 [應用程式資料](/previous-versions/windows/apps/hh464917(v=win.10)) 用於 Windows 8. x 儲存區應用程式。
+預設安全性原則會防止網際網路或內部網路應用程式存取使用者電腦上的檔案。 因此，在撰寫會透過網際網路或內部網路下載的程式碼時，請勿使用需要實體檔案路徑的 i/o 類別。 相反地，請使用 .NET 應用程式的 [隔離儲存區](isolated-storage.md) 。
 
 只會對已建構的資料流進行安全性檢查。 因此，請不要開啟資料流，然後將它傳遞至較不受信任的程式碼或應用程式定義域。
 
@@ -178,7 +178,7 @@ ms.locfileid: "90558936"
 描述資料儲存機制，此機制藉著定義標準化方式將程式碼與儲存的資料產生關聯，以提供隔離和安全。
 
 - [管道](pipe-operations.md)\
-描述 .NET Framework 中的非同步與具名管道作業。
+描述 .NET 中的匿名和具名管道作業。
 
 - [記憶體對應檔案](memory-mapped-files.md)\
 描述記憶體對應檔案，這些檔案包含磁碟檔案在虛擬記憶體中的內容。 您可以使用記憶體對應檔案來編輯超大的檔案，以及建立供處理序間通訊使用的共用記憶體。

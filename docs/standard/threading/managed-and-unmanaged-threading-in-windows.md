@@ -3,18 +3,18 @@ title: Windows 中的 Managed 和 Unmanaged 執行緒處理
 ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], unmanaged
-- threading [.NET Framework], managed
+- threading [.NET], unmanaged
+- threading [.NET], managed
 - threading [.NET], managed
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7b2eca1275aba5139bd19662674cd76d95e92fd0
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924379"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189156"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的受控與非受控執行緒處理
 
@@ -26,7 +26,7 @@ ms.locfileid: "86924379"
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>從 Win32 執行緒處理對應至受控執行緒處理
 
- 下表將 Win32 執行緒項目對應至其近似的執行階段對等項目。 請注意，此對應並不代表功能完全一樣。 例如，**TerminateThread** 不會執行 **finally** 子句或釋放資源，並且無法防止。 但是， <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會執行所有復原程式碼、回收所有資源，並且可使用 <xref:System.Threading.Thread.ResetAbort%2A>加以拒絕。 在揣測功能之前，請務必仔細閱讀相關文件。  
+ 下表將 Win32 執行緒項目對應至其近似的執行階段對等項目。 請注意，此對應並不代表功能完全一樣。 例如， **TerminateThread** 不會執行 **finally** 子句或釋放資源，並且無法防止。 但是， <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會執行所有復原程式碼、回收所有資源，並且可使用 <xref:System.Threading.Thread.ResetAbort%2A>加以拒絕。 在揣測功能之前，請務必仔細閱讀相關文件。  
   
 |在 Win32 中|在 Common Language Runtime 中|  
 |--------------|------------------------------------|  
@@ -45,14 +45,14 @@ ms.locfileid: "86924379"
   
 ## <a name="managed-threads-and-com-apartments"></a>受控執行緒與 COM Apartment
 
-可標記 Managed 執行緒，以表示它將裝載[單一執行緒](/windows/desktop/com/single-threaded-apartments)或[多執行緒](/windows/desktop/com/multithreaded-apartments) Apartment。 （如需 COM 執行緒架構的詳細資訊，請參閱[進程、執行緒和單元](/windows/desktop/com/processes--threads--and-apartments)）。<xref:System.Threading.Thread.GetApartmentState%2A>類別的、 <xref:System.Threading.Thread.SetApartmentState%2A> 和方法會傳回 <xref:System.Threading.Thread.TrySetApartmentState%2A> <xref:System.Threading.Thread> 並指派執行緒的單元狀態。 如果尚未設定此狀態，則 <xref:System.Threading.Thread.GetApartmentState%2A> 會傳回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
+可標記 Managed 執行緒，以表示它將裝載[單一執行緒](/windows/desktop/com/single-threaded-apartments)或[多執行緒](/windows/desktop/com/multithreaded-apartments) Apartment。  (如需 COM 執行緒架構的詳細資訊，請參閱 [進程、執行緒和單元](/windows/desktop/com/processes--threads--and-apartments)。 ) 的 <xref:System.Threading.Thread.GetApartmentState%2A> 、 <xref:System.Threading.Thread.SetApartmentState%2A> 和方法會傳回 <xref:System.Threading.Thread.TrySetApartmentState%2A> <xref:System.Threading.Thread> 並指派執行緒的單元狀態。 如果尚未設定此狀態，則 <xref:System.Threading.Thread.GetApartmentState%2A> 會傳回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
   
  只有在執行緒處於 <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> 狀態時，才能設定此屬性；每個執行緒只能設定此屬性一次。  
   
  如果啟動執行緒之前未設定 Apartment 狀態，則會將執行緒初始化為多執行緒 Apartment (MTA)。 受到 <xref:System.Threading.ThreadPool> 控制的完成項執行緒及所有執行緒都是 MTA。  
   
 > [!IMPORTANT]
-> 對於應用程式啟動程式碼而言，控制 Apartment 狀態的唯一方式是將 <xref:System.MTAThreadAttribute> 或 <xref:System.STAThreadAttribute> 套用至進入點程序。 在 .NET Framework 1.0 和 1.1 中， <xref:System.Threading.Thread.ApartmentState%2A> 屬性可設定為程式碼的第一行。 在 .NET Framework 2.0 中則不允許這麼做。  
+> 對於應用程式啟動程式碼而言，控制 Apartment 狀態的唯一方式是將 <xref:System.MTAThreadAttribute> 或 <xref:System.STAThreadAttribute> 套用至進入點程序。
   
  公開至 COM 之 Managed 物件的行為會像是已彙總無限制執行緒封送處理器。 換句話說，您可以使用無限制執行緒方式從任何 COM Apartment 呼叫 Managed 物件。 只有衍生自 <xref:System.EnterpriseServices.ServicedComponent> 或 <xref:System.Runtime.InteropServices.StandardOleMarshalObject> 的 Managed 物件才不會表現出無限制執行緒行為。  
   

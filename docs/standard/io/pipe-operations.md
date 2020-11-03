@@ -1,20 +1,20 @@
 ---
 title: .NET 中的管道作業
-description: 瞭解 .NET 中的管道作業。 管道會提供一種處理序間通訊的方法。 管線有兩種：匿名管道和具名管道。
+description: 瞭解如何在 .NET 中進行管線作業。 管道會提供一種處理序間通訊的方法。 管道有兩種：匿名管道和具名管道。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- pipes [.NET Framework]
-- pipe operations [.NET Framework]
-- interprocess communication [.NET Framework], pipes
-- I/O [.NET Framework], pipes
+- pipes [.NET]
+- pipe operations [.NET]
+- interprocess communication [.NET], pipes
+- I/O [.NET], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: 35a3910bbab1b34f085a55524be0b18b3fa81958
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 8d954d55e07a7cbb2b09843afe7f45b1ff5abcc7
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768881"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188857"
 ---
 # <a name="pipe-operations-in-net"></a>.NET 中的管道作業
 管道會提供一種處理序間通訊的方法。 管道有兩種類型：  

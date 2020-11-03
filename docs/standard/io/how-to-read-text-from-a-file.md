@@ -11,20 +11,21 @@ helpviewer_keywords:
 - reading text files
 - reading data, text files
 - data streams, reading text from files
-- I/O [.NET Framework], reading text from files
+- I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: fafd1cda13b46e56183489aa15d3c4df9051ae06
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e90887c2cc4a54355c51facf91c9cc3da7e4320
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553931"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189325"
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：從檔案讀取文字
+
 下列範例將示範如何以同步和非同步方式，從使用適用於桌面應用程式的 .NET 之文字檔讀取文字。 在這兩個範例中，當您建立 <xref:System.IO.StreamReader> 類別的執行個體時，會提供檔案的相對路徑或絕對路徑。
   
 > [!NOTE]
-> 由於 Windows 執行階段提供不同的資料流類型來讀取和寫入檔案，因此這些程式碼不適用於 Universal Windows (UWP) 應用程式的開發工作。 如需顯示如何在 UWP 應用程式中從檔案讀取文字的範例，請參閱 [快速入門：讀取和寫入](/previous-versions/windows/apps/hh758325(v=win.10))檔案。 如需示範如何在 .NET Framework 資料流程和 Windows 執行階段資料流程之間轉換的範例，請參閱 [如何：在 .NET Framework 資料流程和 Windows 執行階段資料流程之間進行轉換](how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
+> 這些程式碼範例不適用於通用 Windows (UWP) 應用程式，因為 Windows 執行階段提供不同的串流類型來讀取和寫入檔案。 如需顯示如何在 UWP 應用程式中從檔案讀取文字的範例，請參閱 [快速入門：讀取和寫入](/previous-versions/windows/apps/hh758325(v=win.10))檔案。 如需示範如何在 .NET Framework 資料流程和 Windows 執行階段資料流程之間轉換的範例，請參閱 [如何：在 .NET Framework 資料流程和 Windows 執行階段資料流程之間進行轉換](how-to-convert-between-dotnet-streams-and-winrt-streams.md)。  
   
 ## <a name="example-synchronous-read-in-a-console-app"></a>範例：在主控台應用程式中同步讀取  
 下列範例將示範在主控台應用程式內的同步讀取作業。 此範例會使用資料流讀取器開啟文字檔、將內容複製到字串，並將字串輸出至主控台。  

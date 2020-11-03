@@ -3,15 +3,15 @@ title: 排程執行緒
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], scheduling
+- threading [.NET], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-ms.openlocfilehash: fea809168bf2f4f888466f87259497660afd13be
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 806d6620fd236c69a4f461f1e30f68a3fefc9b17
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291145"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188948"
 ---
 # <a name="scheduling-threads"></a>排程執行緒
 
@@ -21,5 +21,5 @@ ms.locfileid: "84291145"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用執行緒和執行緒處理](using-threads-and-threading.md)
+- [使用執行緒和執行緒](using-threads-and-threading.md)
 - [Windows 中的 Managed 和 Unmanaged 執行緒處理](managed-and-unmanaged-threading-in-windows.md)

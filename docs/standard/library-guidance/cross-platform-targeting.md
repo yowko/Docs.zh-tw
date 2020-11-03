@@ -2,12 +2,12 @@
 title: .NET 程式庫的跨平台目標設定
 description: 建立跨平台 .NET 程式庫的最佳做法建議。
 ms.date: 08/12/2019
-ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 038a03904c4cfe49758562b5748fef06ae1afa4b
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223340"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189247"
 ---
 # <a name="cross-platform-targeting"></a>跨平台目標設定
 
@@ -33,7 +33,7 @@ ms.locfileid: "92223340"
 
 ❌避免包含 `netstandard1.x` 目標。
 
-> .NET standard 1.x 是以一組精細的 NuGet 套件形式發佈，它建立了一個大型的套件相依性圖形，並導致開發人員在建置時下載了大量的套件。 新式 .NET 平台，包括 .NET Framework 4.6.1、UWP 與 Xamarin，全都支援 .NET Standard 2.0。 如果您特別需要以較舊的平台為目標，則應僅將目標設為 .NET Standard 1.x。
+> .NET standard 1.x 是以一組精細的 NuGet 套件形式發佈，它建立了一個大型的套件相依性圖形，並導致開發人員在建置時下載了大量的套件。 新式 .NET 部署支援 .NET Standard 2.0。 如果您特別需要以較舊的平台為目標，則應僅將目標設為 .NET Standard 1.x。
 
 ✔️ 請務必包含 `netstandard2.0` 目標 (如果您需要 `netstandard1.x` 目標)。
 
@@ -115,7 +115,7 @@ public static class GpsLocation
 
 ## <a name="older-targets"></a>較舊的目標
 
-.NET 支援長期不支援的 .NET Framework 的目標版本，以及不再常用的平台。 雖然使您的程式庫在儘可能多的目標上運作是有價值的，但是必須針對 API 遺漏問題找出因應措施會增加重大額外負荷。 考慮到其範圍與限制，我們認為特定架構已不再值得設為目標。
+.NET 支援的目標版本 .NET Framework 不太支援的目標版本，以及不再常用的平臺。 雖然使您的程式庫在儘可能多的目標上運作是有價值的，但是必須針對 API 遺漏問題找出因應措施會增加重大額外負荷。 考慮到其範圍與限制，我們認為特定架構已不再值得設為目標。
 
 ❌請勿包含可攜式類別庫 (PCL) 目標。 例如： `portable-net45+win8+wpa81+wp8` 。
 

@@ -7,22 +7,23 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- threading [.NET Framework], design guidelines
-- threading [.NET Framework], best practices
+- threading [.NET], design guidelines
+- threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 8d5c37bf2ed80e9b6ea071fcd2080c43be8f6247
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 88e1f34388cd58fef59bc4005bcaf630c59a661e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546363"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189000"
 ---
 # <a name="managed-threading-best-practices"></a>受控執行緒處理最佳做法
+
 在為多執行緒功能設計程式時需要非常小心。 您可以藉由將要求排入佇列以供執行緒集區的執行緒執行，來降低大部分工作的複雜性。 本主題要解決的是更困難的情況，例如協調多個執行緒的工作，或處理封鎖起來的執行緒。  
   
 > [!NOTE]
-> 從 .NET Framework 4 開始，工作平行程式庫和 PLINQ 會提供 API，來為多執行緒的程式設計工作降低一定的複雜度和風險。 如需詳細資訊，請參閱 [.NET 的平行程式設計](../parallel-programming/index.md)。  
+> 從 .NET Framework 4 開始，工作平行程式庫和 PLINQ 會提供 Api 來減少多執行緒程式設計的複雜性和風險。 如需詳細資訊，請參閱 [.NET 的平行程式設計](../parallel-programming/index.md)。  
   
 ## <a name="deadlocks-and-race-conditions"></a>死結和競爭條件  
  多執行緒可透過輸送量和回應性來解決問題，但這麼做又會引發新的問題︰死結和競爭情形。  
@@ -61,7 +62,7 @@ else {
 ### <a name="race-conditions"></a>競爭條件  
  當程式的結果取決於兩個以上的執行緒何者先到達特定程式碼區塊時，系統便會發生競爭情形這個錯誤。 執行程式多次會產生不同的結果，因而讓系統無法預測當回執行的結果。  
   
- 遞增欄位值的作業就是簡單的競爭情形範例。 假設某個類別具有 **static** 私用欄位 (在 Visual Basic 中是 **Shared**)，每當該類別建立了執行個體，該欄位就會使用 `objCt++;` (C#) 或 `objCt += 1` (Visual Basic) 之類的程式碼來遞增值。 這項作業需要將 `objCt` 的值載入到暫存器、將值遞增，然後儲存在 `objCt` 中。  
+ 遞增欄位值的作業就是簡單的競爭情形範例。 假設某個類別具有 **static** 私用欄位 (在 Visual Basic 中是 **Shared** )，每當該類別建立了執行個體，該欄位就會使用 `objCt++;` (C#) 或 `objCt += 1` (Visual Basic) 之類的程式碼來遞增值。 這項作業需要將 `objCt` 的值載入到暫存器、將值遞增，然後儲存在 `objCt` 中。  
   
  在多執行緒應用程式中，已經載入並遞增值的執行緒可能會讓另一個將三個步驟全都執行完畢的執行緒來先佔；當第一個執行緒繼續執行並儲存其值時，它會不顧值已在過渡期間變更的事實而覆寫 `objCt`。  
   
@@ -95,7 +96,7 @@ else {
   
 - 鎖定執行個體時請小心，例如 C# 中的 `lock(this)` 或 Visual Basic 中的 `SyncLock(Me)`。 如果您應用程式中屬於該型別之外的其他程式碼鎖定物件，系統可能會發生死結。  
   
-- 請務必要確定已進入監視器的執行緒一律會離開該監視器，即使執行緒還在監視器內卻發生例外狀況時亦然。 C# [lock](../../csharp/language-reference/keywords/lock-statement.md) 陳述式和 Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 陳述式會自動提供這種行為，利用 **finally** 區塊來確保系統會呼叫 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>。 如果您無法確保系統會呼叫 **Exit**，請考慮將您的設計改為使用 **Mutex**。 目前擁有 Mutex 的執行緒在終止時會自動將其釋放。  
+- 請務必要確定已進入監視器的執行緒一律會離開該監視器，即使執行緒還在監視器內卻發生例外狀況時亦然。 C# [lock](../../csharp/language-reference/keywords/lock-statement.md) 陳述式和 Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) 陳述式會自動提供這種行為，利用 **finally** 區塊來確保系統會呼叫 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>。 如果您無法確保系統會呼叫 **Exit** ，請考慮將您的設計改為使用 **Mutex** 。 目前擁有 Mutex 的執行緒在終止時會自動將其釋放。  
   
 - 對於需要不同資源的工作，請使用多個執行緒，並避免將多個執行緒指派給單一資源。 例如，任何涉及 I/O 的工作都可受惠於擁有自己的執行緒，因為該執行緒會在 I/O 作業期間封鎖起來，進而讓其他執行緒得以執行。 使用者輸入是受惠於專用執行緒的另一項資源。 在單一處理器電腦上，涉及大量計算的工作會與使用者輸入共存，並與涉及 I/O 的工作共存，但多個需要大量計算的工作會彼此爭用。  
   
@@ -125,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    > 在 .NET Framework 2.0 和更新版本中，為大於 1 的不可部分完成增量使用 <xref:System.Threading.Interlocked.Add%2A> 方法。  
+    > 請使用 <xref:System.Threading.Interlocked.Add%2A> 方法來取得大於1的不可部分完成增量。  
   
      在第二個範例中，只有當參考型別變數是 Null 參考 (在 Visual Basic 中是 `Nothing`) 時，該變數才會更新。  
   
@@ -160,7 +161,7 @@ else {
     ```  
   
     > [!NOTE]
-    > 從 .NET Framework 2.0 開始，<xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> 方法多載會為參考型別提供型別安全的替代方法。
+    > 方法多載會 <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> 為參考型別提供型別安全的替代方案。
   
 ## <a name="recommendations-for-class-libraries"></a>類別庫的建議  
  在設計類別庫的多執行緒功能時，請考慮下列指導方針︰  
@@ -169,7 +170,7 @@ else {
   
 - 讓 static 資料 (在 Visual Basic 中是 `Shared`) 的執行緒預設保有安全性。  
   
-- 不要讓執行個體資料的執行緒預設保有安全性。 新增鎖定以建立安全執行緒程式碼的作法，會降低效能、增加鎖定爭用並可能導致死結發生。 在一般的應用程式模型中，一次只會有一個執行緒執行使用者程式碼，這種方式可將執行緒安全性的需求降到最低。 為此，.NET Framework 類別庫依預設不會保有執行緒安全性。  
+- 不要讓執行個體資料的執行緒預設保有安全性。 新增鎖定以建立安全執行緒程式碼的作法，會降低效能、增加鎖定爭用並可能導致死結發生。 在一般的應用程式模型中，一次只會有一個執行緒執行使用者程式碼，這種方式可將執行緒安全性的需求降到最低。 基於這個理由，.NET 類別庫預設並非安全線程。  
   
 - 避免提供會變更靜態狀態的靜態方法。 在一般的伺服器案例中，所有要求會共用靜態狀態，這表示多個執行緒可以同時執行該程式碼。 這可能會讓執行緒發生錯誤。 請考慮使用某種設計模式，以將資料封裝到不會讓所有要求共用的執行個體。 此外，如果靜態資料會同步處理，會在靜態方法之間改變狀態的呼叫將會導致死結或多餘的同步處理，而對效能造成負面影響。  
   

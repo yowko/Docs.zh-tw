@@ -10,17 +10,18 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 74d821aff8308618f7c0efeb1b453db8214b877e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e6f9a760d7673eecf161b1d84d890cc14d09235e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555942"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189013"
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
-記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 .NET Framework 4 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用受控程式碼來存取記憶體對應檔案，如[管理記憶體對應檔案](/previous-versions/ms810613(v=msdn.10)) \(英文\) 所述。  
+
+記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 您可以使用 managed 程式碼，以原生 Windows 函數存取記憶體對應檔案的相同方式來存取記憶體對應檔案，如 [管理 Memory-Mapped](/previous-versions/ms810613(v=msdn.10))檔中所述。  
   
- 記憶體對應檔案的類型有兩種：  
+記憶體對應檔案的類型有兩種：  
   
 - 持續性記憶體對應檔案  
   
@@ -35,11 +36,11 @@ ms.locfileid: "90555942"
   
  若要處理記憶體對應檔案，您必須建立整個或部分記憶體對應檔案的檢視。 您也可以對記憶體對應檔案的相同部分建立多個檢視，藉此建立並行記憶體。 若要讓兩個檢視維持並行，必須從相同的記憶體對應檔案建立這兩個檢視。  
   
- 如果檔案大於可用於記憶體對應 (在 32 位元電腦上為 2 GB) 的應用程式邏輯記憶體空間大小，也可能需要多個檢視。  
+ 如果檔案大於 (2 GB 的記憶體對應的應用程式邏輯記憶體空間大小，則在32位電腦) 上，可能也需要多個 views。  
   
  檢視有兩種：資料流存取檢視和隨機存取檢視。 將資料流存取檢視用於循序存取檔案；建議將此種方式用於非持續性檔案和 IPC。 若要處理持續性檔案，建議使用隨機存取檢視。  
   
- 記憶體對應檔案是透過作業系統的記憶體管理員存取的，因此檔案會被自動分割成多頁並視需要進行存取。 您不必自行處理記憶體管理。  
+ 記憶體對應檔案是透過作業系統的記憶體管理員來存取，因此會自動將檔案分割成多個頁面，並視需要進行存取。 您不必自行處理記憶體管理。  
   
  下圖顯示多個處理序如何同時對相同的記憶體對應檔案擁有多個重疊的檢視。
 
@@ -50,7 +51,7 @@ ms.locfileid: "90555942"
 ## <a name="programming-with-memory-mapped-files"></a>使用記憶體對應檔案進行程式設計  
  下表提供使用記憶體對應檔案物件及其成員的指南。  
   
-|Task|要使用的方法或屬性|  
+|工作|要使用的方法或屬性|  
 |----------|----------------------------------|  
 |從磁碟上的檔案取得表示持續性記憶體對應檔案的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType> 方法。|  
 |取得表示非持續性記憶體對應檔案 (與磁碟上的檔案沒有關聯) 的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType> 方法。<br /><br /> - 或 -<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType> 方法。|  
@@ -148,4 +149,4 @@ Process C says: True
   
 ## <a name="see-also"></a>另請參閱
 
-- [檔案和資料流 I/O](index.md)
+- [檔案和資料流程 i/o](index.md)

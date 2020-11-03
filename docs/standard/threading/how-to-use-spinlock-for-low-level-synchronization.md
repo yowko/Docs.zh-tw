@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: ad254cb6208bff868e5fc689c502b7ddcc175ad5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3fb19c2b36d97710685cac4ecd10f47a119814ce
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73137960"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189182"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>操作說明：使用 SpinLock 進行低階同步處理
 
@@ -24,9 +24,9 @@ ms.locfileid: "73137960"
   
  當共用資源的鎖定不會保留很久時，<xref:System.Threading.SpinLock> 可能很實用。 在這類情況下，多核心電腦上的已封鎖執行緒可以有效率地微調幾個週期，直到鎖定釋放為止。 藉由微調，執行緒不會變成鎖定狀態 (這是需要大量 CPU 的程序)。 在某些情況下，<xref:System.Threading.SpinLock> 將停止微調，以避免耗盡邏輯處理器或在具備超執行緒的系統上反轉優先順序。  
   
- 這個範例會使用 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 類別，此類別需要使用者同步處理以進行多執行緒存取。 在以 .NET Framework 第 4 版為目標的應用程式中，另一個選項是使用 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>，不需任何使用者鎖定。  
+ 這個範例會使用 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> 類別，此類別需要使用者同步處理以進行多執行緒存取。 另一個選項是使用 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> ，這不需要任何使用者鎖定。  
   
- 請注意 `false` (在 Visual Basic 中為 `False`) 在<xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 呼叫中的用法。 這可提供最佳效能。 在 IA64 架構上指定 `true` (在 Visual Basic 中為 `True`) 以使用記憶體範圍，如此可排清寫入緩衝區，以確保鎖定現已可供其他執行緒結束。  
+ 請注意 `false` 在的呼叫中使用 <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 。 這可提供最佳效能。 `true`在 IA64 架構上指定以使用記憶體隔離，這會清除寫入緩衝區，以確保鎖定現已可供其他執行緒結束。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d5ae0fe5813952742950582a4282cd1c6ab6a870
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739367"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188974"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
 
@@ -32,13 +32,13 @@ ms.locfileid: "81739367"
 - <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>，它衍生自 <xref:System.Threading.EventWaitHandle>，且在收到訊號時，會在發佈單一等候執行緒之後自動重設至未收到訊號的狀態。
 - <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>，它衍生自 <xref:System.Threading.EventWaitHandle>，且在收到訊號時會持續處於已收到訊號的狀態，直到 <xref:System.Threading.EventWaitHandle.Reset%2A> 方法被呼叫為止。
 
-在 .NET Framework 中，由於 <xref:System.Threading.WaitHandle> 是衍生自 <xref:System.MarshalByRefObject?displayProperty=nameWithType>，因此這些類型可用來跨應用程式定義域界限同步處理執行緒的活動。
+在 .NET Framework 中，因為 <xref:System.Threading.WaitHandle> 衍生自 <xref:System.MarshalByRefObject?displayProperty=nameWithType> ，所以這些類型可以用來跨應用程式域界限同步處理執行緒的活動。
 
-在 .NET Framework 與 .NET Core 中，這些類型有一部分可以代表具名系統同步處理控制代碼；其於整個作業系統中皆可見，並可以用來進行處理序間的同步處理：
+在 .NET Framework、.NET Core 和 .NET 5 + 中，其中一些類型可以代表名為系統同步處理控制碼，在整個作業系統中都是可見的，並且可以用於進程間同步處理：
 
-- <xref:System.Threading.Mutex> (.NET Framework 與 .NET Core)，
-- <xref:System.Threading.Semaphore> (Windows 上的 .NET Framework 與 .NET Core)，
-- <xref:System.Threading.EventWaitHandle> (Windows 上的 .NET Framework 與 .NET Core)。
+- <xref:System.Threading.Mutex>
+- <xref:System.Threading.Semaphore> Windows) 上的 (
+- <xref:System.Threading.EventWaitHandle> Windows) 上的 (
 
 如需詳細資訊，請參閱 <xref:System.Threading.WaitHandle> API 參考。
 
@@ -65,7 +65,7 @@ ms.locfileid: "81739367"
 
 <xref:System.Threading.Mutex?displayProperty=nameWithType> 類別，它和 <xref:System.Threading.Monitor> 相同，能授與對共用資源的獨佔存取權。 使用其中一個 [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) 方法多載來要求 Mutex 的擁有權。 與 <xref:System.Threading.Monitor> 類似，<xref:System.Threading.Mutex> 具有執行緒同質性，且取得 Mutex 的執行緒必須呼叫 <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType> 方法來釋放它。
 
-與 <xref:System.Threading.Monitor> 不同，<xref:System.Threading.Mutex> 類別可以用於處理序間的同步處理。 若要這麼做，請使用具名 Mutex，這能使其於整個作業系統中皆可見。 若要建立具名 Mutex 執行個體，請使用能指定名稱的 [Mutex 建構函式](<xref:System.Threading.Mutex.%23ctor%2A>)。 還可以調用<xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType>方法以打開現有的命名系統互斥。
+與 <xref:System.Threading.Monitor> 不同，<xref:System.Threading.Mutex> 類別可以用於處理序間的同步處理。 若要這麼做，請使用具名 Mutex，這能使其於整個作業系統中皆可見。 若要建立具名 Mutex 執行個體，請使用能指定名稱的 [Mutex 建構函式](<xref:System.Threading.Mutex.%23ctor%2A>)。 您也可以呼叫 <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType> 方法來開啟現有的已命名系統 mutex。
   
 如需詳細資訊，請參閱 [Mutex](mutexes.md) 文章與 <xref:System.Threading.Mutex> API 參考文件。
 
