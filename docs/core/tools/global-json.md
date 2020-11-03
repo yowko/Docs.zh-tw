@@ -4,16 +4,16 @@ description: 了解如何使用 global.json 檔案來設定執行.NET Core CLI �
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7e372c75812e79f85bb8965895d5fef694d9af1a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 714e32ec841cee214f801de65bccf0041af66b0b
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872391"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281541"
 ---
 # <a name="globaljson-overview"></a>global.json 概觀
 
-本文**適用于：** ✔️ .net CORE 2.0 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.0 SDK 和更新版本
 
 *global.json* 檔案可讓您定義執行.NET Core CLI 命令時所使用的 .NET Core SDK 版本。 選取 .NET Core SDK 與指定專案所針對的執行階段沒有關係。 .NET Core SDK 版本會指出所使用的 .NET Core CLI 版本。
 
@@ -31,7 +31,7 @@ ms.locfileid: "90872391"
 
 指定要選取 .NET Core SDK 的相關資訊。
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>version
 
 - 輸入： `string`
 
@@ -55,7 +55,7 @@ ms.locfileid: "90872391"
 如果您未明確設定此值，預設值將取決於您是否從 Visual Studio 執行：
 
 - 如果您 **不** 是 Visual Studio，預設值為 `true` 。
-- 如果您在 Visual Studio 中，它會使用所要求的發行前版本狀態。 亦即，如果您使用預覽版本的 Visual Studio，或在 [**工具**選項環境預覽) 功能] 下設定 .NET Core SDK (選項的 [**使用預覽**]  >  **Options**  >  **Environment**  >  **Preview Features** ，則預設值為 `true` ; 否則為 `false` 。
+- 如果您在 Visual Studio 中，它會使用所要求的發行前版本狀態。 亦即，如果您使用預覽版本的 Visual Studio，或在 [ **工具** 選項環境預覽) 功能] 下設定 .NET Core SDK (選項的 [ **使用預覽** ]  >  **Options**  >  **Environment**  >  **Preview Features** ，則預設值為 `true` ; 否則為 `false` 。
 
 #### <a name="rollforward"></a>向前復原
 
@@ -64,6 +64,7 @@ ms.locfileid: "90872391"
 - 提供自： .NET Core 3.0 SDK。
 
 選取 SDK 版本時所要使用的向前復原原則，可在特定 SDK 版本遺失或作為指示詞使用較高版本時作為復原。 必須以值指定 [版本](#version) `rollForward` ，除非您將它設定為 `latestMajor` 。
+預設向前復原行為取決於 [相符的規則](#matching-rules)。
 
 若要瞭解可用的原則及其行為，請考慮下列格式的 SDK 版本定義 `x.y.znn` ：
 
@@ -163,17 +164,17 @@ dotnet new globaljson --sdk-version 3.0.100
 ## <a name="matching-rules"></a>比對規則
 
 > [!NOTE]
-> 比對規則是由 `dotnet.exe` 進入點所控制，這在所有已安裝的 .Net Core 安裝的執行時間中都很常見。 當您並存安裝多個執行時間時，會使用最新安裝的 .NET Core 執行時間版本的比對規則。
+> 比對規則是由 `dotnet.exe` 進入點所控制，這在所有已安裝的 .Net Core 安裝的執行時間中都很常見。 當您並存安裝多個執行時間，或者或您使用的是檔案 *上的global.js* 時，會使用最新安裝的 .Net Core 執行時間版本的比對規則。
 
 ## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
 從 .NET Core 3.0 開始，判斷要使用的 SDK 版本時，適用下列規則：
 
-- 如果找不到檔案 * 上的global.js* ，或 *global.js* 未指定 SDK 版本或 `allowPrerelease` 值，則會使用最高安裝的 sdk 版本 (等同于設定 `rollForward` 為 `latestMajor`) 。 是否考慮預先發行版本 SDK 版本取決於叫用的方式 `dotnet` 。
+- 如果找不到檔案 *上的global.js* ，或 *global.js* 未指定 SDK 版本或 `allowPrerelease` 值，則會使用最高安裝的 sdk 版本 (等同于設定 `rollForward` 為 `latestMajor`) 。 是否考慮預先發行版本 SDK 版本取決於叫用的方式 `dotnet` 。
   - 如果您 **不** 是 Visual Studio，則會考慮發行前版本。
-  - 如果您在 Visual Studio 中，它會使用所要求的發行前版本狀態。 亦即，如果您使用預覽版本的 Visual Studio，或在 [**工具**選項環境預覽) 功能] 下設定 .NET Core SDK (選項的 [**使用預覽**]  >  **Options**  >  **Environment**  >  **Preview Features** ，則會考慮發行前版本，否則只會考慮發行版本。
+  - 如果您在 Visual Studio 中，它會使用所要求的發行前版本狀態。 亦即，如果您使用預覽版本的 Visual Studio，或在 [ **工具** 選項環境預覽) 功能] 下設定 .NET Core SDK (選項的 [ **使用預覽** ]  >  **Options**  >  **Environment**  >  **Preview Features** ，則會考慮發行前版本，否則只會考慮發行版本。
 - 如果找到的 *global.js* 檔案未指定 SDK 版本，但卻指定了 `allowPrerelease` 值，則會使用最高安裝的 SDK 版本， (等同于設定 `rollForward` 為 `latestMajor`) 。 最新的 SDK 版本是否可以是發行版本或發行前版本，視的值而定 `allowPrerelease` 。 `true` 表示已考慮發行前版本; `false` 指出只考慮發行版本。
-- 如果找到檔案 * 上的global.js* ，並指定 SDK 版本：
+- 如果找到檔案 *上的global.js* ，並指定 SDK 版本：
 
   - 如果未 `rollForward` 設定任何值，則會使用 `latestPatch` 做為預設 `rollForward` 原則。 否則，請檢查 [向前復原](#rollforward) 區段中的每個值和其行為。
   - AllowPrerelease 一節會說明是否考慮發行前版本，以及 `allowPrerelease` 未設定的預設行為。 [allowPrerelease](#allowprerelease)
@@ -185,16 +186,16 @@ dotnet new globaljson --sdk-version 3.0.100
 - 如果找不到 *global.json* 檔案或 *global.json* 沒有指定 SDK 版本，則會使用最新安裝的 SDK 版本。 最新的 SDK 版本可以是發行版本或發行前版本-最高的版本號碼獲勝。
 - 如果 *global.json* 未指定 SDK 版本：
   - 如果在電腦上找到了指定的 SDK 版本，則會使用這個版本。
-  - 如果在電腦上找不到指定的 SDK 版本，則會使用該版本的最新已安裝 SDK **修補程式版本**。 最新安裝的 SDK **修補程式版本** 可以是發行版本或發行前版本-最高的版本號碼獲勝。 對於 .NET Core 2.1 和更新版本，在 SDK 選取項目中，低於指定的**修補程式版本**的**修補程式版本**會被忽略。
-  - 如果找不到指定的 SDK 版本和適當的 SDK **修補程式版本**，則會擲回錯誤。
+  - 如果在電腦上找不到指定的 SDK 版本，則會使用該版本的最新已安裝 SDK **修補程式版本** 。 最新安裝的 SDK **修補程式版本** 可以是發行版本或發行前版本-最高的版本號碼獲勝。 對於 .NET Core 2.1 和更新版本，在 SDK 選取項目中，低於指定的 **修補程式版本** 的 **修補程式版本** 會被忽略。
+  - 如果找不到指定的 SDK 版本和適當的 SDK **修補程式版本** ，則會擲回錯誤。
 
 SDK 版本是由下列元件所組成：
 
 `[.NET Core major version].[.NET Core minor version].[xyz][-optional preview name]`
 
-.NET Core SDK **功能版本**是由 SDK 2.1.100 和更新版本號碼最後部分 (`xyz`) 的第一個數字 (`x`) 表示。 一般而言，.NET Core SDK 的發行週期比 .NET Core 快。
+.NET Core SDK **功能版本** 是由 SDK 2.1.100 和更新版本號碼最後部分 (`xyz`) 的第一個數字 (`x`) 表示。 一般而言，.NET Core SDK 的發行週期比 .NET Core 快。
 
-**修補程式版本**由 SDK 2.1.100 和更新版本號碼最後部分 (`xyz`) 的最後兩個數字 (`yz`) 定義。 例如，如果指定 `2.1.300` 做為 SDK 版本，SDK 選取項目最高會找到 `2.1.399`，但是 `2.1.400` 不視為 `2.1.300` 的修補版本。
+**修補程式版本** 由 SDK 2.1.100 和更新版本號碼最後部分 (`xyz`) 的最後兩個數字 (`yz`) 定義。 例如，如果指定 `2.1.300` 做為 SDK 版本，SDK 選取項目最高會找到 `2.1.399`，但是 `2.1.400` 不視為 `2.1.300` 的修補版本。
 
 .NET Core SDK 版本 `2.1.100` 到 `2.1.201` 是在版本號碼轉換期間發行，它們並沒有正確地處理 `xyz` 標記法。 強烈建議如果您在 *global.json* 檔案中指定這些版本，則必須確保目標電腦上有這些指定的版本。
 
@@ -206,7 +207,7 @@ SDK 版本是由下列元件所組成：
 
   > 您正在使用.NET Core SDK 的預覽版本。 您可以在目前的專案中透過 global.json 檔案定義 SDK 版本。 詳細資訊請參閱 <https://go.microsoft.com/fwlink/?linkid=869452> 。
 
-  .NET Core SDK 版本一向承諾提供高品質的產品。 但是，如果您不想要使用發行前版本，請在 [allowPrerelease](#allowprerelease) 區段中，檢查您可以與 .net CORE 3.0 SDK 或更新版本搭配使用的不同策略。 針對尚未安裝 .NET Core 3.0 或更高版本執行時間或 SDK 的電腦，您必須 * 在檔案上建立global.js* ，並指定您想要使用的確切版本。
+  .NET Core SDK 版本一向承諾提供高品質的產品。 但是，如果您不想要使用發行前版本，請在 [allowPrerelease](#allowprerelease) 區段中，檢查您可以與 .net CORE 3.0 SDK 或更新版本搭配使用的不同策略。 針對尚未安裝 .NET Core 3.0 或更高版本執行時間或 SDK 的電腦，您必須 *在檔案上建立global.js* ，並指定您想要使用的確切版本。
 
 * 下列警告指出您的專案目標 EF Core 1.0 或1.1，與 .NET Core 2.1 SDK 和更新版本不相容：
 

@@ -8,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
-ms.openlocfilehash: a425d44ac3b58a568bd51e638f28a2b76ced9dec
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 9f7ab8a824b9687f68382a5edc342536289c5d09
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223986"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282326"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>如何判斷 .NET Standard 物件是否可序列化
 
-.NET Standard 是一種規格，可定義必須存在於符合該標準版本之特定 .NET 執行的類型和成員。 但是，.NET Standard 不會定義類型是否可序列化。 .NET Standard 程式庫中定義的類型不會以屬性標記 <xref:System.SerializableAttribute> 。 相反地，特定的 .NET 執行（例如 .NET Framework 和 .NET Core）可以用來判斷特定類型是否可序列化。
+.NET Standard 是一種規格，可定義必須存在於符合該標準版本之特定 .NET 執行的類型和成員。 但是，.NET Standard 不會定義類型是否可序列化。 .NET Standard 程式庫中定義的類型不會以屬性標記 <xref:System.SerializableAttribute> 。 相反地，您可以使用特定的 .NET 實作為（例如 .NET Framework 和 .NET Core）來判斷特定類型是否可序列化。
 
 如果您已開發以 .NET Standard 為目標的程式庫，則任何支援 .NET Standard 的 .NET 執行都可使用您的程式庫。 這表示您無法事先知道特定類型是否可序列化;您只能判斷它是否可在執行時間進行序列化。
 

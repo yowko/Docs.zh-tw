@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: 10431b1ad40ed320541a22fb46cc8db6dbb775b0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 58c3a92067cd0be5db02231c5fc1a13b429a60a0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84360068"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282236"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>使用 Microsoft.Win32 命名空間讀取和寫入登錄 (Visual Basic)
 
-雖然 `My.Computer.Registry` 應該會涵蓋對登錄進行程式設計時的基本需求，但是您也可以使用 .NET Framework <xref:Microsoft.Win32> 命名空間中的 <xref:Microsoft.Win32.Registry> 和 <xref:Microsoft.Win32.RegistryKey> 類別。  
+雖然在 `My.Computer.Registry` 針對登錄進行程式設計時應該涵蓋您的基本需求，但是您也可以 <xref:Microsoft.Win32.Registry> <xref:Microsoft.Win32.RegistryKey> 在 .net 的命名空間中使用和類別 <xref:Microsoft.Win32> 。
   
 ## <a name="keys-in-the-registry-class"></a>登錄類別中的機碼  
 
  <xref:Microsoft.Win32.Registry> 類別提供可用來存取子機碼和其值的基底登錄機碼。 基底機碼本身是唯讀的。 下表列出並描述 <xref:Microsoft.Win32.Registry> 類別所公開的七個機碼。  
   
-|**關鍵**|**說明**|  
+|**索引鍵**|**說明**|  
 |-------------|---------------------|  
 |<xref:Microsoft.Win32.Registry.ClassesRoot>|定義文件類型以及與這些類型相關聯的屬性。|  
 |<xref:Microsoft.Win32.Registry.CurrentConfig>|包含非使用者特定的硬體組態資訊。|  

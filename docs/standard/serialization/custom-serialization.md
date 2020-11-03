@@ -1,6 +1,6 @@
 ---
 title: 自訂序列化
-description: 自訂序列化是控制類型的序列化和還原序列化。 控制序列化可以確保序列化相容性。
+description: 自訂序列化是控制型別的序列化和還原序列化。 控制序列化可以確保序列化相容性。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,23 +18,25 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 1532c4eeb09e7110d0f369ec47f342256889e576
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8e8d8d38ab8170a9bf9fae098e267be1a38f27d0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289651"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281790"
 ---
 # <a name="custom-serialization"></a>自訂序列化
+
 自訂序列化是控制型別序列化與還原序列化的程序。 控制序列化就可確保序列化相容性，也就是在類型版本之間進行序列化與還原序列化的作業，而不違反類型的核心功能性。 例如，在第一版的型別中，可能只有兩個欄位。 在型別的下一版中，加入了更多的欄位。 然而第二版的應用程式必須對這兩種型別進行序列化及還原序列化。 下列章節會說明控制序列化的方法。
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
-> 在 .NET Framework 4.0 之前的版本中，部分信任組件中自訂使用者資料的序列化是使用 GetObjectData 所完成。 從 4.0 版開始，該方法會標記 <xref:System.Security.SecurityCriticalAttribute> 屬性，因此便無法在部分信任組件中執行。 若要解決此狀況，請實作 <xref:System.Runtime.Serialization.ISafeSerializationData> 介面。  
+> 在 .NET Framework 4.0 之前的版本中，會使用來完成部分信任元件中的自訂使用者資料序列化 `GetObjectData` 。 從版本4.0 開始，該方法會以屬性標記 <xref:System.Security.SecurityCriticalAttribute> ，以防止在部分信任的元件中執行。 若要解決此狀況，請實作 <xref:System.Runtime.Serialization.ISafeSerializationData> 介面。  
   
-## <a name="running-custom-methods-during-and-after-serialization"></a>序列化期間及序列化之後執行自訂方法  
- 最佳做法與最簡單方式 (引入至 .NET Framework 2.0 版) 是套用下列屬性至用來在序列化期間及之後修正資料的方法：  
+## <a name="running-custom-methods-during-and-after-serialization"></a>序列化期間及序列化之後執行自訂方法
+
+在序列化期間和之後執行自訂方法的建議方式是將下列屬性套用至用來在序列化期間和之後更正資料的方法：  
   
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
@@ -116,7 +118,7 @@ End Class
   
  如果私用欄位儲存機密資訊，您應該要求 **GetObjectData** 的適當權限以保護資料。 請記住，擁有已指定 **SerializationFormatter** 旗標之 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) 授權的程式碼，可以檢視與變更儲存在私用欄位的資料。 已授與此 [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) 的惡意呼叫者，可檢視資料 (例如隱藏的目錄位置或授與的權限) 並以資料利用電腦上的安全性弱點。 如需可指定的安全性權限旗標完整清單，請參閱 [SecurityPermissionFlag 列舉](xref:System.Security.Permissions.SecurityPermissionFlag)。  
   
- 特別要強調的是，將 <xref:System.Runtime.Serialization.ISerializable> 新增至類別時，您必須同時實作 **GetObjectData** 以及特殊的建構函式。 如果遺漏 **GetObjectData**，編譯器會警告您。 然而，因為不可能強制實作建構函式，因此若缺少建構函式時並不會發出警告，若試圖對無建構函式的類別還原序列化時會擲出例外狀況。  
+ 特別要強調的是，將 <xref:System.Runtime.Serialization.ISerializable> 新增至類別時，您必須同時實作 **GetObjectData** 以及特殊的建構函式。 如果遺漏 **GetObjectData** ，編譯器會警告您。 然而，因為不可能強制實作建構函式，因此若缺少建構函式時並不會發出警告，若試圖對無建構函式的類別還原序列化時會擲出例外狀況。  
   
  目前設計在避開潛在安全性與版本設定問題上，較 <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A> 方法更受歡迎。 例如，若 `SetObjectData` 方法定義為介面的一部分，就必須為公用，因此使用者必須撰寫程式碼避免多次呼叫 **SetObjectData** 方法。 否則，對執行作業程序中物件呼叫 **SetObjectData** 方法的惡意應用程式，就可能造成潛在的問題。  
   

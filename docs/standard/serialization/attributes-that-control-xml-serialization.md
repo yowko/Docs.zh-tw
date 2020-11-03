@@ -1,21 +1,21 @@
 ---
 title: 控制 XML 序列化的屬性
-description: 本文包含的屬性可套用至類別和類別成員，以控制 XmlSerializer 序列化或還原序列化類別實例的方式。
+description: 本文包含的屬性可套用至類別和類別成員，以控制 XmlSerializer 如何序列化或還原序列化類別的實例。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - classes, serializing
 - XmlSerializer class, serializing
 - XML serialization, attributes
-- attributes [.NET Framework], XML serialization
+- attributes [.NET], XML serialization
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: fbc42ff696107f4a1b06d3611fc97a09cc4a3542
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 032843728c74799d7ee78257b21243b31cb4f99c
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84276695"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281986"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>控制 XML 序列化的屬性
 您可以將下表中的屬性套用到類別和類別成員，以便控制 <xref:System.Xml.Serialization.XmlSerializer> 序列化或還原序列化類別之執行個體的方式。 若要了解這些屬性如何控制 XML 序列化，請參閱[使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "84276695"
 |<xref:System.Xml.Serialization.XmlTextAttribute>|公用屬性與欄位。|屬性或欄位應序列化成 XML 文字。|  
 |<xref:System.Xml.Serialization.XmlTypeAttribute>|公用類別宣告|XML 型別的名稱與命名空間。|  
   
- 除了這些在 <xref:System.Xml.Serialization> 命名空間都找得到的屬性之外，您也可以對欄位套用 <xref:System.ComponentModel.DefaultValueAttribute> 屬性。 如果未指定任何值，**DefaultValueAttribute** 會設定將自動指派給成員的值。  
+ 除了這些在 <xref:System.Xml.Serialization> 命名空間都找得到的屬性之外，您也可以對欄位套用 <xref:System.ComponentModel.DefaultValueAttribute> 屬性。 如果未指定任何值， **DefaultValueAttribute** 會設定將自動指派給成員的值。  
   
  若要控制編碼的 SOAP XML 序列化，請參閱[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "84276695"
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)
-- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [HOW TO：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [HOW TO：序列化物件](how-to-serialize-an-object.md)
-- [如何：還原序列化物件](how-to-deserialize-an-object.md)
+- [HOW TO：還原序列化物件](how-to-deserialize-an-object.md)

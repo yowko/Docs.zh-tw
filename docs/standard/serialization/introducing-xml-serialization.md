@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 334cb3fe40c310189018d924aef552ecd87e9a65
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2971f5bbd587dabb62d095da3fef0b428ea9f039
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535406"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282289"
 ---
 # <a name="xml-serialization"></a>XML 序列化
 
@@ -29,11 +29,11 @@ ms.locfileid: "90535406"
 > [!NOTE]
 > XML 序列化不會轉換方法、索引子、私用欄位或唯讀屬性 (唯讀集合除外)。 若要序列化物件的所有欄位與屬性，無論是公用或私用，請使用 <xref:System.Runtime.Serialization.DataContractSerializer>，而非 XML 序列化。
 
- XML 序列化的核心類別為 <xref:System.Xml.Serialization.XmlSerializer> 類別，此類別中最重要的方法為**序列化**和**還原序列化**方法。 <xref:System.Xml.Serialization.XmlSerializer> 建立 C# 檔案並將它們編譯成為 .dll 檔案以執行此序列化。 在 .NET Framework 2.0 中，[XML 序列化程式產生器工具 (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) 的設計是用來預先產生要與您應用程式一起部署的這些序列化組件，並改善啟動效能。 **XmlSerializer**所產生的 xml 資料流程符合全球資訊網協會 (W3C) [XML 架構定義語言 (XSD) 1.0 建議](https://www.w3.org/TR/xslt)。 除此之外，產生的資料型別符合＜XML Schema Part 2: Datatypes＞文件的規範。
+ XML 序列化的核心類別為 <xref:System.Xml.Serialization.XmlSerializer> 類別，此類別中最重要的方法為 **序列化** 和 **還原序列化** 方法。 <xref:System.Xml.Serialization.XmlSerializer> 建立 C# 檔案並將它們編譯成為 .dll 檔案以執行此序列化。 [XML 序列化程式產生器工具 ( # A0) ](xml-serializer-generator-tool-sgen-exe.md)是設計來先產生這些序列化元件，以便與您的應用程式一起部署並改善啟動效能。 **XmlSerializer** 所產生的 xml 資料流程符合全球資訊網協會 (W3C) [XML 架構定義語言 (XSD) 1.0 建議](https://www.w3.org/TR/xslt)。 除此之外，產生的資料型別符合＜XML Schema Part 2: Datatypes＞文件的規範。
 
  您物件中的資料是用程式語言來描述的，該程式語言會建構如類別、欄位、屬性、基本類型、陣列，甚至是以 **XmlElement** 或 **XmlAttribute** 物件為格式的內嵌 XML。 您可以選擇以屬性註解建立自己的類別，或使用 XML 結構描述定義工具來依據現有 XML 結構描述產生類別。
 
- 如果有 XML 結構描述，您可以執行 XML 結構描述定義工具來產生類別集，這些類別集是結構描述的強型別 (Strongly Typed)，而且以屬性註解。 當如此類別的執行個體序列化時，產生的 XML 符合 XML 結構描述。 隨著這種類別的提供，您可以根據操作簡易的物件模型進行程式設計，同時能確保產生的 XML 符合 XML 結構描述。 這是在 .NET Framework 使用其他類別的替代方法，就像是 **XmlReader** 和 **XmlWriter** 類別，用來剖析與撰寫 XML 資料流。 如需詳細資訊，請參閱 [XML 文件和資料](../data/xml/index.md)。 這些類別讓您能剖析所有 XML 資料流。 相反地，當預期 XML 資料流符合已知 XML 結構描述時，請使用 **XmlSerializer**。
+ 如果有 XML 結構描述，您可以執行 XML 結構描述定義工具來產生類別集，這些類別集是結構描述的強型別 (Strongly Typed)，而且以屬性註解。 當如此類別的執行個體序列化時，產生的 XML 符合 XML 結構描述。 隨著這種類別的提供，您可以根據操作簡易的物件模型進行程式設計，同時能確保產生的 XML 符合 XML 結構描述。 這是在 .NET 中使用其他類別的替代方法，例如 **XmlReader** 和 **XmlWriter** 類別，用來剖析和寫入 XML 資料流程。 如需詳細資訊，請參閱 [XML 文件和資料](../data/xml/index.md)。 這些類別讓您能剖析所有 XML 資料流。 相反地，當預期 XML 資料流符合已知 XML 結構描述時，請使用 **XmlSerializer** 。
 
  屬性會控制 **XmlSerializer** 類別產生的 XML 資料流，允許您設定 XML 資料流的 XML 命名空間、項目名稱、屬性名稱等等。 如需這些屬性的詳細資訊以及它們控制 XML 序列化的方式，請參閱[使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)。 如需控制產生的 XML 所用的那些屬性資料表，請參閱[控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)。
 
@@ -43,7 +43,7 @@ ms.locfileid: "90535406"
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer 應用程式的安全性考量
 
-當您建立使用 **XmlSerializer**的應用程式時，請注意下列專案及其含意：
+當您建立使用 **XmlSerializer** 的應用程式時，請注意下列專案及其含意：
 
 - **XmlSerializer** 建立 C# (.cs) 檔案並在以 TEMP 環境變數命名的目錄中，將它們編譯成為 .dll 檔案；那些 DLL 會發生序列化。
 
@@ -62,7 +62,7 @@ ms.locfileid: "90535406"
 
 - 序列化敏感資料可能會易受攻擊。
 
-  **XmlSerializer**有序列化資料之後，可以儲存為 XML 檔案或其他資料存放區。 若您的資料存放區可由其他處理序存取，或是在內部網路或網際網路上看得到，那資料就可能遭竊取和惡意使用。 例如，若您建立了可序列化包含信用卡號碼之訂單的應用程式，這種資料就是高度敏感。 若想要防止它的發生，時時保護資料存放區並採取步驟保持它的私密性。
+  **XmlSerializer** 有序列化資料之後，可以儲存為 XML 檔案或其他資料存放區。 若您的資料存放區可由其他處理序存取，或是在內部網路或網際網路上看得到，那資料就可能遭竊取和惡意使用。 例如，若您建立了可序列化包含信用卡號碼之訂單的應用程式，這種資料就是高度敏感。 若想要防止它的發生，時時保護資料存放區並採取步驟保持它的私密性。
 
 ## <a name="serialization-of-a-simple-class"></a>簡單類別序列化
 
@@ -134,7 +134,7 @@ XML 序列化的另一項優點是對於您開發的應用程式沒有限制，�
 
 - 只可以序列化公用 (Public) 屬性和欄位。 屬性必須有公用存取子 (get 與 set 方法)。 若您必須對非公用資料序列化，請使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別，而非 XML 序列化。
 
-- 類別必須有由 **XmlSerializer**序列化的無參數的函式。
+- 類別必須有由 **XmlSerializer** 序列化的無參數的函式。
 
 - 無法將方法序列化。
 
@@ -142,13 +142,13 @@ XML 序列化的另一項優點是對於您開發的應用程式沒有限制，�
 
   實作 **IEnumerable** 的類別必須實作只採用單一參數的公用 **Add** 方法。 **Add** 方法的參數必須與 **IEnumerator.Current** 屬性傳回之類型一致 (多型)，此屬性是由 **GetEnumerator** 方法傳回。
 
-  除了 **IEnumerable** 之外，實作 **ICollection** 的類別 (例如 **CollectionBase**) 也必須有採用整數的公用 **Item** 索引屬性 (C# 的索引子)，而且必須具有 **integer** 類型的公用 **Count** 屬性。 傳遞給 **Add** 方法的參數必須和 **Item** 屬性或其中一個類型基底所傳回的類型相同。
+  除了 **IEnumerable** 之外，實作 **ICollection** 的類別 (例如 **CollectionBase** ) 也必須有採用整數的公用 **Item** 索引屬性 (C# 的索引子)，而且必須具有 **integer** 類型的公用 **Count** 屬性。 傳遞給 **Add** 方法的參數必須和 **Item** 屬性或其中一個類型基底所傳回的類型相同。
 
-  針對實作 **ICollection** 的類別，要序列化的值擷取自索引的 **Item** 屬性，而不是呼叫 **GetEnumerator** 進行擷取。 同時，不序列化公用欄位與屬性，但傳回其他集合類別 (實作 **ICollection**) 的公用欄位除外。 如需範例，請參閱 [XML 序列化範例](examples-of-xml-serialization.md)。
+  針對實作 **ICollection** 的類別，要序列化的值擷取自索引的 **Item** 屬性，而不是呼叫 **GetEnumerator** 進行擷取。 同時，不序列化公用欄位與屬性，但傳回其他集合類別 (實作 **ICollection** ) 的公用欄位除外。 如需範例，請參閱 [XML 序列化範例](examples-of-xml-serialization.md)。
 
 ## <a name="xsd-data-type-mapping"></a>XSD 資料型別對應
 
-標題為 [Xml 架構第2部分的 W3C 檔：資料類型](https://www.w3.org/TR/xmlschema-2/) 會指定 XML 架構定義語言 (XSD) 架構中所允許的單一資料型別。 許多這些資料類型 (例如，**int** 和 **decimal**)，在 .NET Framework 都有對應的資料類型。 然而，某些 XML 資料類型在 .NET Framework 中並無對應的資料類型 (例如 **NMTOKEN** 資料類型)。 在這種情況下，若您使用 XML 結構描述定義工具 ([XML 結構描述定義工具 (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) 從結構描述產生類別，將套用適當的屬性至類型字串的成員，且它的 **DataType** 屬性會設為 XML 資料類型名稱。 例如，若結構描述包括具有 XML 資料類型 **NMTOKEN** 之名為 "MyToken" 的項目，產生的類別可能包含下列範例所示的成員。
+標題為 [Xml 架構第2部分的 W3C 檔：資料類型](https://www.w3.org/TR/xmlschema-2/) 會指定 XML 架構定義語言 (XSD) 架構中所允許的單一資料型別。 其中許多 (例如 **int** 和 **decimal** ) ，在 .net 中都有對應的資料類型。 不過，某些 XML 資料類型沒有對應的 .NET 資料類型，例如 **NMTOKEN** 資料類型。 在這種情況下，若您使用 XML 結構描述定義工具 ( [XML 結構描述定義工具 (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) 從結構描述產生類別，將套用適當的屬性至類型字串的成員，且它的 **DataType** 屬性會設為 XML 資料類型名稱。 例如，若結構描述包括具有 XML 資料類型 **NMTOKEN** 之名為 "MyToken" 的項目，產生的類別可能包含下列範例所示的成員。
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _
@@ -185,6 +185,6 @@ public string MyToken;
 - [二進位序列化](binary-serialization.md)
 - [序列化](index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [XML 序列化範例](examples-of-xml-serialization.md)
+- [XML 序列化的範例](examples-of-xml-serialization.md)
 - [HOW TO：序列化物件](how-to-serialize-an-object.md)
-- [如何：還原序列化物件](how-to-deserialize-an-object.md)
+- [HOW TO：還原序列化物件](how-to-deserialize-an-object.md)

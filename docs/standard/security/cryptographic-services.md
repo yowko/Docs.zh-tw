@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549976"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281721"
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 
@@ -56,7 +56,7 @@ ms.locfileid: "90549976"
 
 若要達成這些目標，您可以將演算法與稱為密碼編譯基本類型的做法搭配組合，以創造密碼編譯的配置。 下表列出密碼編譯基本類型以及它們的用法。
 
-|密碼編譯基本類型|用途|
+|密碼編譯基本類型|使用|
 |-----------------------------|---------|
 |私密金鑰加密 (對稱密碼編譯)|執行資料轉換，以防止第三方讀取。 這類加密使用單一共用的私密金鑰來加密和解密資料。|
 |公開金鑰加密 (非對稱密碼編譯)|執行資料轉換，以防止第三方讀取。 這類加密使用公開/私密金鑰組來加密和解密資料。|
@@ -71,7 +71,7 @@ ms.locfileid: "90549976"
 
 一種稱為區塊編碼器的私密金鑰演算法，可用來一次加密一個資料區塊。 像是資料加密標準 (DES)、TripleDES、進階加密標準 (AES) 這類區塊編碼器，會以密碼編譯方式將 *n* 個位元組的輸入區塊轉換成加密位元組輸出區塊。 如果您想要加密或解密位元組序列，就必以區塊為單位進行。 因為 *n* 很小 (DES 和 TripleDES 為 8 個位元組；AES 為 16 個位元組 [預設值]、24 個位元組或 32 個位元組)，所以大於 *n* 的資料值必須一次以一個區塊為單位加密。 資料值小於 *n* 必須展開成 *n* 以便進行處理。
 
-有一種簡易的區塊編碼器型式，稱為電子碼書 (ECB) 模式。 ECB 模式並不算安全，因為它不會使用初始化向量來初始化第一個純文字區塊。 對於某個指定的私密金鑰 *k*，不使用初始化向量的簡單區塊編碼器會將同一個純文字輸入區塊加密成同一個加密文字輸出區塊。 因此，如果您的輸入純文字資料流中有重複的區塊，在輸出加密文字資料流中也會有重複區塊。 這些重複的輸出區塊會警示未經授權的使用者，可能已採用弱式加密之演算法，以及可能的攻擊模式。 因此 ECB Cipher 模式比較容易對分析，以及最終的金鑰探索受到攻擊。
+有一種簡易的區塊編碼器型式，稱為電子碼書 (ECB) 模式。 ECB 模式並不算安全，因為它不會使用初始化向量來初始化第一個純文字區塊。 對於某個指定的私密金鑰 *k* ，不使用初始化向量的簡單區塊編碼器會將同一個純文字輸入區塊加密成同一個加密文字輸出區塊。 因此，如果您的輸入純文字資料流中有重複的區塊，在輸出加密文字資料流中也會有重複區塊。 這些重複的輸出區塊會警示未經授權的使用者，可能已採用弱式加密之演算法，以及可能的攻擊模式。 因此 ECB Cipher 模式比較容易對分析，以及最終的金鑰探索受到攻擊。
 
 在基底類別程式庫中提供的的區塊編碼器類別會使用稱為 Cipher 區塊鏈結 (CBC) 的預設鏈結模式，但是若您想變更，也可以變更此預設值。
 
@@ -123,7 +123,7 @@ CBC 加密使用初始化向量 (IV) 來加密純文字的第一個區塊，克�
 
 - <xref:System.Security.Cryptography.DSA>
 
-RSA 允許加密和簽署，但 DSA 只能用來簽署。 DSA 與 RSA 並不安全，我們建議採用 RSA。 Diffie-hellman 只能用來產生金鑰。 一般來說，公開金鑰演算法在用途上比私密金鑰演算法更受到限制。
+RSA 允許加密和簽署，但 DSA 只能用來簽署。 DSA 與 RSA 並不安全，我們建議採用 RSA。 Diffie-Hellman 只能用於金鑰產生。 一般來說，公開金鑰演算法在用途上比私密金鑰演算法更受到限制。
 
 ## <a name="digital-signatures"></a>數位簽章
 
@@ -178,13 +178,13 @@ RSA 允許加密和簽署，但 DSA 只能用來簽署。 DSA 與 RSA 並不安�
 
 ## <a name="random-number-generation"></a>產生變數
 
-對許多密碼編譯作業而言，亂數產生是不可或缺的項目。 例如，密碼編譯金鑰需要盡可能為隨機產生，以致於其他人無法重現金鑰。 密碼編譯亂數產生器需產生在運算資源上，無法預測的機率必須大於一半之輸出。 因此，任何預測下一個輸出位元的方法，必須不能優於隨機猜測的方式。 .NET Framework 中的類別會使用亂數產生器來產生密碼編譯金鑰。
+對許多密碼編譯作業而言，亂數產生是不可或缺的項目。 例如，密碼編譯金鑰需要盡可能為隨機產生，以致於其他人無法重現金鑰。 密碼編譯亂數產生器需產生在運算資源上，無法預測的機率必須大於一半之輸出。 因此，任何預測下一個輸出位元的方法，必須不能優於隨機猜測的方式。 .NET 中的類別會使用亂數產生器來產生密碼編譯金鑰。
 
 <xref:System.Security.Cryptography.RandomNumberGenerator> 類別是亂數產生器演算法的一種實作。
 
 ## <a name="clickonce-manifests"></a>ClickOnce 資訊清單
 
-在 .NET Framework 3.5 中，下列的密碼編譯類別可讓您針對使用 [ClickOnce 技術](/visualstudio/deployment/clickonce-security-and-deployment)部署的應用程式，取得並驗證資訊清單簽章的相關資訊：
+下列密碼編譯類別可讓您取得及驗證使用 [ClickOnce 技術](/visualstudio/deployment/clickonce-security-and-deployment)部署之應用程式的資訊清單簽章相關資訊：
 
 - 當您使用它的 <xref:System.Security.Cryptography.ManifestSignatureInformation> 方法多載時， <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> 類別可取得資訊清單簽章的相關資訊。
 
@@ -192,7 +192,7 @@ RSA 允許加密和簽署，但 DSA 只能用來簽署。 DSA 與 RSA 並不安�
 
 - <xref:System.Security.Cryptography.ManifestSignatureInformationCollection> 類別提供已驗證簽章的唯讀集合 <xref:System.Security.Cryptography.ManifestSignatureInformation> 物件。
 
- 此外，下列類別會提供特定的簽章資訊：
+此外，下列類別會提供特定的簽章資訊：
 
 - <xref:System.Security.Cryptography.StrongNameSignatureInformation> 替資訊清單保存強式名稱的簽章資訊。
 
@@ -204,11 +204,11 @@ RSA 允許加密和簽署，但 DSA 只能用來簽署。 DSA 與 RSA 並不安�
 
 ## <a name="cryptography-next-generation-cng-classes"></a>新一代密碼編譯 (CNG) 類別
 
-在 .NET Framework 3.5 和更新版本中，新一代密碼編譯 (CNG) 類別會提供原生 CNG 函式周圍的 managed 包裝函式。  (CNG 是 CryptoAPI 的取代。 ) 這些類別在其名稱中使用 "Cng"。 CNG 包裝函式類別的中心是 <xref:System.Security.Cryptography.CngKey> 金鑰容器類別，其會擷取儲存體和使用 CNG 金鑰。 這個類別可讓您安全地儲存金鑰組或公開金鑰，並使用簡單的字串名稱參考它。 橢圓曲線基礎 <xref:System.Security.Cryptography.ECDsaCng> 簽章類別和 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 加密類別可以使用 <xref:System.Security.Cryptography.CngKey> 物件。
+新一代密碼編譯 (CNG) 類別提供可在原生 CNG 函式周圍的 Managed 包裝函式。  (CNG 是 CryptoAPI 的取代。 ) 這些類別在其名稱中使用 "Cng"。 CNG 包裝函式類別的中心是 <xref:System.Security.Cryptography.CngKey> 金鑰容器類別，其會擷取儲存體和使用 CNG 金鑰。 這個類別可讓您安全地儲存金鑰組或公開金鑰，並使用簡單的字串名稱參考它。 橢圓曲線基礎 <xref:System.Security.Cryptography.ECDsaCng> 簽章類別和 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 加密類別可以使用 <xref:System.Security.Cryptography.CngKey> 物件。
 
 <xref:System.Security.Cryptography.CngKey> 類別用於各種其他作業，包括開啟、建立、刪除及匯出金鑰。 它也提供存取基礎金鑰控制代碼，以便在直接呼叫原生函式時使用。
 
-.NET Framework 3.5 也包含各種支援的 CNG 類別，如下所示：
+.NET 也包含各種支援的 CNG 類別，如下所示：
 
 - <xref:System.Security.Cryptography.CngProvider> 維護金鑰儲存提供者。
 

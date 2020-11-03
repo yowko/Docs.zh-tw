@@ -2,16 +2,16 @@
 title: dotnet 命令
 description: 瞭解 dotnet 命令 (.NET Core CLI) 的一般驅動程式和其使用方式。
 ms.date: 02/13/2020
-ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537661"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281619"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
-本文**適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -48,7 +48,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 `--roll-forward` 自 .NET Core 3.x 起提供。 用於 `--roll-forward-on-no-candidate-fx` .Net Core 2.x。
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 此 `dotnet` 命令有兩個功能：
 
@@ -122,11 +122,11 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  檔案 *deps.js* 的路徑。 檔案 * 上的deps.js* 是一個設定檔，其中包含執行應用程式所需相依性的相關資訊。 這個檔案是由 .NET Core SDK 所產生。
+  檔案 *deps.js* 的路徑。 檔案 *上的deps.js* 是一個設定檔，其中包含執行應用程式所需相依性的相關資訊。 這個檔案是由 .NET Core SDK 所產生。
 
 - **`--runtimeconfig`**
 
-  *runtimeconfig.json* 檔案的路徑。 檔案 * 上的runtimeconfig.js* 是包含執行時間設定的設定檔。 如需詳細資訊，請參閱 [.Net Core 執行時間配置設定](../run-time-config/index.md#runtimeconfigjson)。
+  *runtimeconfig.json* 檔案的路徑。 檔案 *上的runtimeconfig.js* 是包含執行時間設定的設定檔。 如需詳細資訊，請參閱 [.Net Core 執行時間配置設定](../run-time-config/index.md#runtimeconfigjson)。
 
 - **`--roll-forward <SETTING>`****從 .NET Core SDK 3.0 開始提供。**
 
@@ -165,7 +165,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="general"></a>一般
 
-| Command                                       | 函式                                                            |
+| 命令                                       | 函式                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | 建置 .NET Core 應用程式。                                     |
 | [dotnet build-server](dotnet-build-server.md) | 與組建所啟動的伺服器互動。                          |
@@ -184,7 +184,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="project-references"></a>專案參考
 
-Command | 函式
+命令 | 函式
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | 新增專案參考。
 [dotnet list reference](dotnet-list-reference.md) | 列出專案參考。
@@ -192,14 +192,14 @@ Command | 函式
 
 ### <a name="nuget-packages"></a>NuGet 套件
 
-Command | 函式
+命令 | 函式
 --- | ---
 [dotnet add package](dotnet-add-package.md) | 新增 NuGet 套件。
 [dotnet remove package](dotnet-remove-package.md) | 移除 NuGet 套件。
 
 ### <a name="nuget-commands"></a>NuGet 命令
 
-Command | 函式
+命令 | 函式
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 從伺服器刪除或取消列出套件。
 [dotnet nuget push](dotnet-nuget-push.md) | 將套件推送至伺服器並發行。
@@ -215,7 +215,7 @@ Command | 函式
 
 工具是從 NuGet 套件安裝的主控台應用程式，會從命令提示字元叫用。 您可以自行撰寫工具或安裝協力廠商所撰寫的工具。 工具也稱為「通用工具」、「工具路徑工具」和「本機工具」。 如需詳細資訊，請參閱 [.Net Core 工具總覽](global-tools.md)。 從 .NET Core SDK 2.1 開始，可以使用全域和工具路徑工具。 從 .NET Core SDK 3.0 開始，可以使用本機工具。
 
-Command | 函式
+命令 | 函式
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | 在您的電腦上安裝工具。
 [dotnet tool list](dotnet-tool-list.md) | 列出電腦上目前已安裝的所有全域、工具路徑或本機工具。
@@ -262,7 +262,7 @@ dotnet myapp.dll
 
   指定 .NET Core 執行時間的位置（如果未安裝在預設位置）。 Windows 上的預設位置為 `C:\Program Files\dotnet` 。 Linux 和 macOS 上的預設位置為 `/usr/share/dotnet` 。 此環境變數只會在透過產生的可執行檔（ (apphosts) ）執行應用程式時使用。 `DOTNET_ROOT(x86)` 當在64位作業系統上執行32位可執行檔時，會改用
 
-- `DOTNET_PACKAGES`
+- `NUGET_PACKAGES`
 
   全域套件資料夾。 如果未設定，預設為 `~/.nuget/packages` (Unix) 或 `%userprofile%\.nuget\packages` (Windows)。
 

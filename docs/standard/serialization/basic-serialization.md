@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2b75ba6875b2a4430b6776c27dead72476884fff
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83378420"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282077"
 ---
 # <a name="basic-serialization"></a>基本序列化
 
@@ -59,9 +59,9 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-上述使用的 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 非常有效率，可產生精簡的位元組資料流。 利用此格式子序列化的所有物件也可以用它來還原序列化，所以此格式子是理想的工具，可以在 .NET Framework 上對將要還原序列化的物件進行序列化。 務必注意，物件還原序列化時，不會呼叫建構函式。 還原序列化有此限制是基於效能的考量。 然而，這樣違反了執行階段與物件寫入器之間建立的某些一般合約，開發人員應確定他們了解將物件標示為可序列化時，可能出現的後果。  
+上述使用的 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 非常有效率，可產生精簡的位元組資料流。 使用這個格式器序列化的所有物件也可以使用它進行還原序列化，這使它成為將在 .NET 上還原序列化之物件序列化的理想工具。 務必注意，物件還原序列化時，不會呼叫建構函式。 還原序列化有此限制是基於效能的考量。 然而，這樣違反了執行階段與物件寫入器之間建立的某些一般合約，開發人員應確定他們了解將物件標示為可序列化時，可能出現的後果。  
   
-如果要求可攜性，請改為使用 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>。 只要將上述程式碼中的 **BinaryFormatter** 取代為 **SoapFormatter**，並如之前一樣呼叫 **Serialize** 和 **Deserialize** 即可。 在上述範例中使用的此格式子會產生下列輸出。  
+如果要求可攜性，請改為使用 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>。 只要將上述程式碼中的 **BinaryFormatter** 取代為 **SoapFormatter** ，並如之前一樣呼叫 **Serialize** 和 **Deserialize** 即可。 在上述範例中使用的此格式子會產生下列輸出。  
   
 ```xml  
 <SOAP-ENV:Envelope  

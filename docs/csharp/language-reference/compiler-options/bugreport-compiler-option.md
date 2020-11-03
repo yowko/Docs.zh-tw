@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 2afab44eec0c7bcc9809b458be0348093cb6dd07
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1fb2efc9b12680e95767746c7e4e1ddacbdd2594
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91196815"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281502"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C# 編譯器選項)
 
@@ -41,7 +41,7 @@ ms.locfileid: "91196815"
   
 - 您的編譯器、執行階段和作業系統的版本資訊。  
   
-- 除了隨附於 .NET Framework 和 SDK 的組件之外，還包括參考組件和模組 (儲存為十六進位數字)。  
+- 參考的元件和模組（儲存為十六進位數位），但隨附于 .NET 和 .NET SDK 的元件除外。  
   
 - 編譯器輸出 (如果有的話)。  
   

@@ -12,23 +12,23 @@ helpviewer_keywords:
 - arrays, serializing
 - XML serialization, attributes
 - preventing serialization
-- attributes [.NET Framework], XML serialization
+- attributes [.NET], XML serialization
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 79c5541b4c384e91fbec8c8f1b2130887e79a252
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 36456d373b7482c4a4267b69e031c1e45baa9abb
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289677"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281778"
 ---
-# <a name="controlling-xml-serialization-using-attributes"></a>使用屬性控制 XML 序列化
+# <a name="control-xml-serialization-using-attributes"></a>使用屬性控制 XML 序列化
 
 屬性可用來控制物件的 XML 序列化或從相同的類別集建立其他的 XML 資料流。 如需建立替代 XML 資料流的詳細資料，請參閱[如何：指定 XML 資料流的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
 
 > [!NOTE]
-> 如果產生的 XML 必須符合標題為「[簡單物件存取通訊協定（SOAP） 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)」之全球資訊網協會（W3C）檔的第5節，請使用屬性中所列的屬性[來控制編碼的 SOAP 序列化](attributes-that-control-encoded-soap-serialization.md)。
+> 如果產生的 XML 必須符合全球資訊網協會 (W3C) 檔（標題為 [簡單物件存取通訊協定 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)）中的第5節，請使用 [控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)（attribute）中所列的屬性（attribute）。
 
 根據預設，XML 項目名稱是由類別或成員名稱決定。 在名為的簡單類別中 `Book` ，名為的欄位 `ISBN` 將會產生 XML 元素標記 \<ISBN> ，如下列範例所示。
 
@@ -242,7 +242,7 @@ public class Group {
 </Group>
 ```
 
-另一種區別這兩種 XML 資料流的方法是使用 XML 結構描述定義工具，從編譯的程式碼中產生 XML 結構描述 (XSD) 文件檔案  （如需使用此工具的詳細資訊，請參閱[Xml 架構定義工具和 Xml 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)）。當欄位未套用任何屬性時，架構會以下列方式描述元素。
+另一種區別這兩種 XML 資料流的方法是使用 XML 結構描述定義工具，從編譯的程式碼中產生 XML 結構描述 (XSD) 文件檔案   (如需使用此工具的詳細資訊，請參閱 [Xml 架構定義工具和 Xml 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)。 ) 未將任何屬性套用至欄位時，架構會以下列方式描述元素。
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -321,7 +321,7 @@ public class Group {
 - [控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
 - [控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)
 - [XML 序列化簡介](introducing-xml-serialization.md)
-- [XML 序列化範例](examples-of-xml-serialization.md)
-- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [XML 序列化的範例](examples-of-xml-serialization.md)
+- [HOW TO：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [HOW TO：序列化物件](how-to-serialize-an-object.md)
-- [如何：還原序列化物件](how-to-deserialize-an-object.md)
+- [HOW TO：還原序列化物件](how-to-deserialize-an-object.md)

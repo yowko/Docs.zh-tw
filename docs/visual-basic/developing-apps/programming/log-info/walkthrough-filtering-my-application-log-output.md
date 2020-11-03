@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e77a56b2be33555bc02157c8e643ac655b083bc3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398249"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282210"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 
@@ -33,7 +33,7 @@ ms.locfileid: "84398249"
 
 4. 在偵錯工具中執行應用程式。
 
-5. 按下 **Button1**。
+5. 按下 **Button1** 。
 
      應用程式會將下列資訊寫入應用程式的偵錯輸出與記錄檔中。
 
@@ -60,7 +60,7 @@ ms.locfileid: "84398249"
 |---|---|
 |`Critical`|`Critical`|
 |`Error`|`Critical` 或 `Error`|
-|`Warning`|`Critical`、`Error` 或 `Warning`|
+|`Warning`|`Critical`、 `Error`或 `Warning`|
 |`Information`|`Critical`、`Error`、`Warning` 或 `Information`|
 |`Verbose`|`Critical`、`Error`、`Warning`、`Information` 或 `Verbose`|
 |`ActivityTracing`|`Start`、`Stop`、`Suspend`、`Resume` 或 `Transfer`|
@@ -74,17 +74,17 @@ ms.locfileid: "84398249"
 
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件
 
-1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選取 [開啟]。********
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選取 [開啟]。
 
      -或-
 
      如果沒有 app.config 檔案︰
 
-    1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。
+    1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目** ]。
 
-    2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
+    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。
 
-    3. 按一下 [新增] 。
+    3. 按一下 [新增]  。
 
 2. 找出位於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<switches>` 區段。
 
@@ -125,7 +125,7 @@ ms.locfileid: "84398249"
 
 6. 在偵錯工具中執行應用程式。
 
-7. 按下 **Button1**。
+7. 按下 **Button1** 。
 
      應用程式會將下列資訊寫入應用程式的偵錯輸出與記錄檔中：
 
@@ -138,7 +138,7 @@ ms.locfileid: "84398249"
 9. 將 `value` 屬性值變更回 "Information"。
 
     > [!NOTE]
-    > `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 類別的行為。
+    > `DefaultSwitch` 參數設定只會控制 `My.Application.Log`。 它不會變更 .NET <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 和類別的 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 行為。
 
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>個別篩選 My.Application.Log 接聽程式
 
@@ -150,19 +150,19 @@ ms.locfileid: "84398249"
 
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件
 
-1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。********
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。
 
      \-或-
 
      如果沒有 app.config 檔案︰
 
-    1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。
+    1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目** ]。
 
-    2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
+    2. 在 [加入新項目]  對話方塊中，選擇 [應用程式組態檔] 。
 
-    3. 按一下 [新增] 。
+    3. 按一下 [新增]  。
 
-2. 在方案總管中，以滑鼠右鍵按一下 app.config。**** 選擇 [開啟]****。
+2. 在方案總管中，以滑鼠右鍵按一下 app.config。 選擇 [開啟]。
 
 3. 找出 `<listeners>` 區段，其位於具有 `name` 屬性 "DefaultSource" 之 `<source>` 區段中的 `<sources>` 區段下方。 `<sources>` 區段位於最上層 `<configuration>` 區段中的 `<system.diagnostics>` 區段下方。
 
@@ -235,7 +235,7 @@ ms.locfileid: "84398249"
 
 8. 在偵錯工具中執行應用程式。
 
-9. 按下 **Button1**。
+9. 按下 **Button1** 。
 
      應用程式會將下列資訊寫入應用程式的記錄檔中：
 

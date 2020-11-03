@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef02662a5492f117b252e464e92ec46e7484ef66
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557015"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282175"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Form 應用程式基本概念 (Visual Basic)
 
@@ -28,9 +28,9 @@ Visual Basic 的其中一個重要部分，就是能夠建立在使用者電腦�
 
 ## <a name="building-rich-interactive-user-interfaces"></a>建置豐富、互動式的使用者介面
 
-Windows Forms 是 .NET Framework 的智慧型用戶端元件，這是一組 managed 程式庫，可啟用常見的應用程式工作，例如讀取和寫入檔案系統。 使用 Visual Studio 等開發環境時，您可以建立 Windows Forms 的應用程式，以顯示資訊、要求使用者輸入，以及透過網路與遠端電腦通訊。
+Windows Forms 是自 .NET Core 3.0) 起，.NET Framework 和 .NET Core (的智慧型用戶端元件。 它是一組 managed 程式庫，可啟用常見的應用程式工作，例如讀取和寫入檔案系統。 使用 Visual Studio 等開發環境時，您可以建立 Windows Forms 的應用程式，以顯示資訊、要求使用者輸入，以及透過網路與遠端電腦通訊。
 
-在 Windows Form 中，「表單」(form) 是一種視覺化介面，您可以在上面顯示要提供給使用者的資訊。 您通常會將控制項放在表單上，並開發使用者動作的回應（例如滑鼠點按或按鍵按下），藉此建立 Windows Forms 應用程式。 「控制項」** 是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。
+在 Windows Form 中，「表單」(form) 是一種視覺化介面，您可以在上面顯示要提供給使用者的資訊。 您通常會將控制項放在表單上，並開發使用者動作的回應（例如滑鼠點按或按鍵按下），藉此建立 Windows Forms 應用程式。 「控制項」是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。
 
 ### <a name="events"></a>事件
 
@@ -63,7 +63,7 @@ Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 
 
 利用 Windows Form 智慧型用戶端，透過網路連接到資料來源是一項簡單的工作。 <xref:System.Windows.Forms.BindingSource>Visual Studio 2005 和 .NET Framework 2.0 中 Windows Forms 的新元件代表與資料來源的連接，並公開將資料系結至控制項、流覽至上一筆和下一筆記錄、編輯記錄，以及將變更儲存回原始來源的方法。 <xref:System.Windows.Forms.BindingNavigator> 控制項透過 <xref:System.Windows.Forms.BindingSource> 元件提供一個簡單的介面，可讓使用者在記錄之間巡覽。
 
-### <a name="data-bound-controls"></a>資料繫結控制項
+### <a name="data-bound-controls"></a>Data-Bound 控制項
 
 您可以使用 [資料來源] 視窗輕鬆地建立資料繫結控制項，以顯示專案中的資料來源，例如資料庫、Web 服務和物件。 將項目從這個視窗拖曳到專案中的表單上，即可建立資料繫結控制項。 您也可以將物件從 [資料來源] 視窗拖曳至現有的控制項，以將現有的控制項繫結至資料。
 
@@ -97,7 +97,7 @@ ClickOnce 應用程式可以設定為只有在使用者連線到網路時才執�
 
 ## <a name="other-controls-and-features"></a>其他控制項和功能
 
-Windows Form 中還有許多其他功能，可讓您快速、輕鬆地實作一般工作，例如支援建立對話方塊、列印、加入說明和文件，以及將您的應用程式當地語系化為多種語言。 此外，Windows Forms 依賴 .NET Framework 的健全安全性系統，讓您可以將更安全的應用程式發行給客戶。
+Windows Forms 中還有許多其他功能，可讓您快速且輕鬆地執行一般工作，例如支援建立對話方塊、列印、新增檔，以及將您的應用程式當地語系化為多種語言。 此外，Windows Forms 依賴 .NET 的健全安全性系統，讓您可以將更安全的應用程式發行給客戶。
 
 如需使用這些功能的逐步解說資訊，請參閱下列說明主題：
 

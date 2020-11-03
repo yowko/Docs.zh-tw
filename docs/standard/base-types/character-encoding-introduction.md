@@ -10,18 +10,18 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: d1f9878c7e7c07944a943c0b05e557ceaa5d1b2f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 572fcd289eea720873d94e7fc71f3b4a030d1d70
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812116"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282306"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 
 本文提供 char .net 所使用之 acter 編碼系統的簡介。 本文說明 <xref:System.String> 、 <xref:System.Char> 、 <xref:System.Text.Rune> 和 <xref:System.Globalization.StringInfo> 類型如何使用 Unicode、utf-16 和 utf-8。
 
-「詞彙」（ * char acter* ）一詞的用途是在*讀者視為單一顯示元素*的一般意義上使用。 常見範例為字母 "a"、符號 "@" 和表情 " 🐂 "。 有時看起來像 char 是一個 acter 實際上是由多個獨立的顯示元素組成，如 [語素簇](#grapheme-clusters) 叢集上的章節所述。
+「詞彙」（ *char acter* ）一詞的用途是在 *讀者視為單一顯示元素* 的一般意義上使用。 常見範例為字母 "a"、符號 "@" 和表情 " 🐂 "。 有時看起來像 char 是一個 acter 實際上是由多個獨立的顯示元素組成，如 [語素簇](#grapheme-clusters) 叢集上的章節所述。
 
 ## <a name="the-no-locstring-and-no-locchar-types"></a>string和 char 類型
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-每個 char acter 都是以單一 `char` 值表示。 這種模式適用于大部分世界的語言。 例如，以下是兩個中文 acters 的輸出 char ，這聽起來像是 *nǐ hǎo* ，意思是 *Hello*：
+每個 char acter 都是以單一 `char` 值表示。 這種模式適用于大部分世界的語言。 例如，以下是兩個中文 acters 的輸出 char ，這聽起來像是 *nǐ hǎo* ，意思是 *Hello* ：
 
 ```csharp
 PrintChars("你好");
@@ -97,7 +97,7 @@ s[1] = '�' ('\udc02')
 
 這些範例顯示的值 `string.Length` （指出 `char` 實例數目）不一定表示顯示的 char acters 數目。 單一 `char` 實例本身不一定代表 char acter。
 
-`char`對應至單一 acter 的配對 char 稱為*代理配對*。 若要瞭解其運作方式，您必須瞭解 Unicode 和 UTF-16 編碼。
+`char`對應至單一 acter 的配對 char 稱為 *代理配對* 。 若要瞭解其運作方式，您必須瞭解 Unicode 和 UTF-16 編碼。
 
 ## <a name="unicode-code-points"></a>Unicode 字碼指標
 
@@ -107,10 +107,10 @@ Unicode 標準定義1100000以上的程式 [代碼點](https://www.unicode.org/g
 
 以下是程式碼點指派的一些範例，其中包含出現在其中的 Unicode char ts 連結：
 
-|小數位數|Hex       |範例|描述|
+|Decimal|Hex       |範例|描述|
 |------:|----------|-------|-----------|
 |10     | `U+000A` |N/A| [換行字元](https://www.unicode.org/charts/PDF/U0000.pdf) |
-|65     | `U+0061` | a | [拉丁小寫字母 A](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|97     | `U+0061` | a | [拉丁小寫字母 A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [拉丁文大寫字母 Y 加上音符號](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68675 | `U+10C43`| 𐱃 | [舊的土耳其文字母鄂爾](https://www.unicode.org/charts/PDF/U10C00.pdf) |
 |127801| `U+1F339`| 🌹 | [玫瑰的表情](https://www.unicode.org/charts/PDF/U1F300.pdf) |
@@ -119,26 +119,26 @@ Unicode 標準定義1100000以上的程式 [代碼點](https://www.unicode.org/g
 
 在完整範圍的程式碼點中，有兩個子範圍：
 
-* 範圍中的 **基本多語系平面 (BMP) ** `U+0000..U+FFFF` 。 這個16位範圍提供65536的程式碼點，足以涵蓋世界上大部分的書寫系統。
-* 範圍內的**補充程式碼點** `U+10000..U+10FFFF` 。 這個21位範圍提供超過一百萬個額外的程式碼點，可用於較不知名的語言和其他用途，例如 emoji。
+* 範圍中的 **基本多語系平面 (BMP)** `U+0000..U+FFFF` 。 這個16位範圍提供65536的程式碼點，足以涵蓋世界上大部分的書寫系統。
+* 範圍內的 **補充程式碼點** `U+10000..U+10FFFF` 。 這個21位範圍提供超過一百萬個額外的程式碼點，可用於較不知名的語言和其他用途，例如 emoji。
 
 下圖說明 BMP 與補充程式碼點之間的關聯性。
 
-:::image type="content" source="media/:::非 loc (char) ::: acter-encoding-introduction/bmp-and-supplementary.svg" alt-text =" BMP 和補充程式碼點 ":::
+:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-supplementary。 svg "alt-text =" BMP 和補充程式碼點 "：：：
 
 ## <a name="utf-16-code-units"></a>UTF-16 程式碼單位
 
-16位 Unicode 轉換格式 ([utf-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) 是 char acter 編碼系統，使用16位程式 *代碼單位* 來代表 Unicode 程式碼點。 .NET 使用 UTF-16 將中的文字編碼 `string` 。 `char`實例代表16位程式碼單位。
+16位 Unicode 轉換格式 ( [utf-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) 是 char acter 編碼系統，使用16位程式 *代碼單位* 來代表 Unicode 程式碼點。 .NET 使用 UTF-16 將中的文字編碼 `string` 。 `char`實例代表16位程式碼單位。
 
 單一16位程式碼單位可以代表基本多語系平面之16位範圍內的任何程式碼點。 但是針對補充範圍中的程式碼點，需要兩個 `char` 實例。
 
 ## <a name="surrogate-pairs"></a>代理配對
 
-將 2 16 位值轉譯成單一21位值是由稱為 *代理程式碼點*的特殊範圍所組成，從 `U+D800` 到 `U+DFFF` (decimal 55296 到 57343) （含）。
+將 2 16 位值轉譯成單一21位值是由稱為 *代理程式碼點* 的特殊範圍所組成，從 `U+D800` 到 `U+DFFF` (decimal 55296 到 57343) （含）。
 
 下圖說明 BMP 與代理程式碼點之間的關聯性。
 
-:::image type="content" source="media/:::非 loc (char) ::: acter-encoding-introduction/bmp-and-surrogate.svg" alt-text =" BMP 和代理程式碼點 ":::
+:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-surrogate。 svg "alt-text =" BMP 和代理程式碼點 "：：：
 
 當 *高代理* 程式碼點 (`U+D800..U+DBFF`) 後面緊接著 *低代理* 程式碼點 () 時 `U+DC00..U+DFFF` ，會使用下列公式將配對解釋為補充程式碼點：
 
@@ -156,7 +156,7 @@ code point = 65,536 +
   (low surrogate code point - 56,320)
 ```
 
-*高*代理程式碼點沒有比*低*代理程式碼點更高的數值。 高代理程式碼點稱為「高」，因為它是用來計算完整21位程式碼點範圍的高序位11位。 低代理程式碼點可用來計算較低順序的10位。
+*高* 代理程式碼點沒有比 *低* 代理程式碼點更高的數值。 高代理程式碼點稱為「高」，因為它是用來計算完整21位程式碼點範圍的高序位11位。 低代理程式碼點可用來計算較低順序的10位。
 
 例如，對應至代理配對的實際程式碼點，其 `0xD83C` `0xDF39`  計算方式如下：
 
@@ -184,7 +184,7 @@ Unicode 純量 [值](https://www.unicode.org/glossary/#unicode_scalar_value) 一
 
 下圖說明純量值的程式碼點。
 
-:::image type="content" source="media/:::無 loc (char) ::: acter-encoding-introduction/scalar-values.svg" alt-text =" 純量值 ":::
+:::image type="content" source="media/:::無 loc (char) ：：： acter-encoding-introduction/scalar-values svg "alt-text =" 純量值 "：：：
 
 ### <a name="the-no-locrune-type-as-a-scalar-value"></a>以純量 Rune 值的類型
 
@@ -266,7 +266,7 @@ charActer 可能會因為多個程式碼點組合而產生的結果，因此更�
 
 ### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>範例： count char 、 Rune 和 text 元素實例
 
-在 .NET Api 中，語素簇叢集稱為「 *文字」元素*。 下列方法示範 `char` 、 `Rune` 和中的 text 元素實例之間的差異 `string` ：
+在 .NET Api 中，語素簇叢集稱為「 *文字」元素* 。 下列方法示範 `char` 、 `Rune` 和中的 text 元素實例之間的差異 `string` ：
 
 ：：： code language = "csharp" source = "程式碼片段/ char acter-編碼-簡介/csharp/CountTextElements .cs" id = "SnippetCountMethod"：：：
 

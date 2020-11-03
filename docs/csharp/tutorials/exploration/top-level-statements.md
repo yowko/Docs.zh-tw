@@ -2,12 +2,12 @@
 title: '最上層語句-c # 教學課程'
 description: 本教學課程示範如何使用最上層的語句來實驗和證明概念，同時探索您的想法
 ms.date: 10/28/2020
-ms.openlocfilehash: 210fbd83bf4677061cab303089d0b27f1a4a7d01
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 5e5dc6cec382baa69ac8cb4625684315bb2cd5e0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189388"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282254"
 ---
 # <a name="tutorial-explore-ideas-using-top-level-statements-to-build-code-as-you-learn"></a>教學課程：使用最上層的語句探索想法，以在您學習時建立程式碼
 
@@ -210,11 +210,11 @@ static async Task ShowConsoleAnimation()
 
 最後，您可以清除動畫程式碼以移除一些重複項：
 
-:::code language="csharp" source="snippets/top-level-statements/Utiliities.cs" ID="Animation":::
+:::code language="csharp" source="snippets/top-level-statements/Utilities.cs" ID="Animation":::
 
 現在您有一個完整的應用程式，而且您已經重構可重複使用的元件，以供稍後使用。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>總結
 
 最上層的語句可讓您更輕鬆地建立簡單的程式，以用來探索新的演算法。 您可以嘗試使用不同的程式碼片段來實驗演算法。 一旦您瞭解運作方式之後，就可以重構程式碼，以更容易維護。
 

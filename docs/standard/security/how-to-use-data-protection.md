@@ -17,25 +17,25 @@ helpviewer_keywords:
 - decryption
 - data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: 263a07ddf357734e819fffdd41cdff60657adf15
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: d3fe7ef3ddbc6e75a248101829b11a8abcb3c15a
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557056"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282050"
 ---
 # <a name="how-to-use-data-protection"></a>作法：使用資料保護
 
 > [!NOTE]
 > 本文適用于 Windows。
 >
-> 如需 ASP.NET Core 的詳細資訊，請參閱[ASP.NET Core 資料保護](/aspnet/core/security/data-protection/introduction)。
+> 如需 ASP.NET Core 的詳細資訊，請參閱 [ASP.NET Core 資料保護](/aspnet/core/security/data-protection/introduction)。
 
-.NET 提供資料保護 API (DPAPI) 的存取，可讓您使用來自目前使用者帳戶或電腦的資訊來加密資料。  當您使用 DPAPI 時，會減少明確產生並儲存密碼編譯金鑰的困難問題。  
+.NET 提供資料保護 API (DPAPI) 的存取權，讓您可以使用目前使用者帳戶或電腦的資訊來加密資料。  當您使用 DPAPI 時，會減少明確產生並儲存密碼編譯金鑰的困難問題。  
   
-使用 <xref:System.Security.Cryptography.ProtectedData> 類別來加密位元組陣列的複本。 這項功能可在 .NET Framework、.NET Core 和 .NET 5 中取得。  您可以指定由目前使用者帳戶加密的資料只能由相同的使用者帳戶解密，或是您可以指定目前使用者帳戶加密的資料可以由電腦上的任何帳戶解密。  請參閱 <xref:System.Security.Cryptography.DataProtectionScope> 列舉，以取得 <xref:System.Security.Cryptography.ProtectedData> 選項的詳細說明。  
+使用 <xref:System.Security.Cryptography.ProtectedData> 類別來加密位元組陣列的複本。 這項功能在 .NET Framework、.NET Core 和 .NET 5 中都有提供。  您可以指定由目前使用者帳戶加密的資料只能由相同的使用者帳戶解密，或是您可以指定目前使用者帳戶加密的資料可以由電腦上的任何帳戶解密。  請參閱 <xref:System.Security.Cryptography.DataProtectionScope> 列舉，以取得 <xref:System.Security.Cryptography.ProtectedData> 選項的詳細說明。  
   
-### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>使用資料保護將資料加密到檔案或資料流  
+## <a name="encrypt-data-to-a-file-or-stream-using-data-protection"></a>使用資料保護將資料加密至檔案或資料流程  
   
 1. 建立隨機的 entropy。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "87557056"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
 
-這個範例只會在以 .NET Framework 為目標並在 Windows 上執行時，才會進行編譯和執行
+此範例只會在目標為 .NET Framework 並在 Windows 上執行時，才會進行編譯和執行。
 
 - 包含 `System.Security.dll` 的參考。  
   

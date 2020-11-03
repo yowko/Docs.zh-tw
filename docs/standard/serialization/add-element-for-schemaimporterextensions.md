@@ -1,22 +1,23 @@
 ---
 title: <schemaImporterExtensions> 的 <add> 項目
-description: <add>元素會加入 XmlSchemaImporter 類別用來將 XSD 類型對應至 .NET Framework 類型的類型。
+description: 專案會 <add> 加入 XmlSchemaImporter 類別用來將 XSD 類型對應至 .net 類型的類型。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 6fd8113ad39a22c927035fca574151ae8f002685
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 38d8ebd6e973632b23865ad60e007d9aa21e7da6
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288325"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281994"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>\<schemaImporterExtensions> 的 \<add> 項目
-加入 <xref:System.Xml.Serialization.XmlSchemaImporter> 使用的型別，將 XSD 型別對應至 .NET Framework 型別。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../framework/configure-apps/file-schema/index.md)。  
+
+加入用來將 <xref:System.Xml.Serialization.XmlSchemaImporter> XSD 類型對應至 .net 類型的類型。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../framework/configure-apps/file-schema/index.md)。  
   
- \<configuration>  
+\<configuration>  
 \<system.xml.serialization>  
 \<schemaImporterExtensions>  
 \<add>  
@@ -42,7 +43,7 @@ ms.locfileid: "84288325"
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |\<schemaImporterExtensions>|包含 <xref:System.Xml.Serialization.XmlSchemaImporter> 使用的型別。|  
   
@@ -64,5 +65,5 @@ ms.locfileid: "84288325"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [\<system.xml.serialization>元素](system-xml-serialization-element.md)
-- [\<schemaImporterExtensions>元素](schemaimporterextensions-element.md)
+- [\<system.xml.serialization> 元素](system-xml-serialization-element.md)
+- [\<schemaImporterExtensions> 元素](schemaimporterextensions-element.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 11de13a6674411bbad52678b59879ed26366e0f1
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 2f287eb7a3a1ace8d8440f860b55429bb3c93691
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811050"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282432"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>如何從遷移 Newtonsoft.Json 至 System.Text.Json
 
 本文說明如何從遷移 [Newtonsoft.Json](https://www.newtonsoft.com/json) 至 <xref:System.Text.Json> 。
 
-`System.Text.Json`命名空間提供序列化和還原序列化 JavaScript 物件標記法 (JSON) 的功能。 連結 `System.Text.Json` 庫包含在 [.net Core 3.0](https://aka.ms/netcore3download) 共用架構中。 若為其他目標 framework，請安裝 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 套件。 封裝支援：
+`System.Text.Json`命名空間提供序列化和還原序列化 JavaScript 物件標記法 (JSON) 的功能。 連結 `System.Text.Json` 庫包含在適用于 .Net Core 3.0 和更新版本的共用架構中。 針對較舊的 framework 版本，請安裝 [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet 套件。 封裝支援：
 
 * .NET Standard 2.0 和更新版本
 * .NET Framework 4.7.2 和更新版本
@@ -81,7 +81,7 @@ ms.locfileid: "88811050"
 | 允許在字串值前後加上單引號              | ❌ [不支援](#json-strings-property-names-and-string-values) |
 | 允許字串屬性的非字串 JSON 值    | ❌ [不支援](#non-string-values-for-string-properties) |
 
-這不是完整的功能清單 `Newtonsoft.Json` 。 此清單包含 [GitHub 問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 或 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 文章中已要求的許多案例。 如果您針對此處所列的其中一個案例執行因應措施，而此案例目前沒有範例程式碼，而且您想要共用方案，請在此頁面底部的**意見**反應區段中選取**此頁面**。 這會在此檔的 GitHub 存放庫中建立問題，並將其列在此頁面的 **意見** 反應區段中。
+這不是完整的功能清單 `Newtonsoft.Json` 。 此清單包含 [GitHub 問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) 或 [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) 文章中已要求的許多案例。 如果您針對此處所列的其中一個案例執行因應措施，而此案例目前沒有範例程式碼，而且您想要共用方案，請在此頁面底部的 **意見** 反應區段中選取 **此頁面** 。 這會在此檔的 GitHub 存放庫中建立問題，並將其列在此頁面的 **意見** 反應區段中。
 
 ## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>預設 JsonSerializer 行為與之間的差異 Newtonsoft.Json
 
@@ -530,7 +530,7 @@ public JsonElement ReturnFileName(JsonElement source)
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader 是 ref 結構
 
-因為 `Utf8JsonReader` 類型是 *ref 結構*，所以具有 [某些限制](../../csharp/language-reference/builtin-types/struct.md#ref-struct)。 例如，它無法在 ref 結構以外的類別或結構上儲存為欄位。 為了達到高效能，此型別必須是， `ref struct` 因為它需要快取輸入[ReadOnlySpan \<byte> ](xref:System.ReadOnlySpan%601)，它本身就是 ref 結構。 此外，這種類型是可變動的，因為它會保存狀態。 因此， **以傳址方式傳遞** ，而不是以傳值方式傳遞。 以傳值方式傳遞會導致結構複製，而且呼叫端看不到狀態變更。 這與的不同之處在于， `Newtonsoft.Json` 因為 `Newtonsoft.Json` `JsonTextReader` 是類別。 如需如何使用 ref 結構的詳細資訊，請參閱 [撰寫安全且有效率的 c # 程式碼](../../csharp/write-safe-efficient-code.md)。
+因為 `Utf8JsonReader` 類型是 *ref 結構* ，所以具有 [某些限制](../../csharp/language-reference/builtin-types/struct.md#ref-struct)。 例如，它無法在 ref 結構以外的類別或結構上儲存為欄位。 為了達到高效能，此型別必須是， `ref struct` 因為它需要快取輸入[ReadOnlySpan \<byte> ](xref:System.ReadOnlySpan%601)，它本身就是 ref 結構。 此外，這種類型是可變動的，因為它會保存狀態。 因此， **以傳址方式傳遞** ，而不是以傳值方式傳遞。 以傳值方式傳遞會導致結構複製，而且呼叫端看不到狀態變更。 這與的不同之處在于， `Newtonsoft.Json` 因為 `Newtonsoft.Json` `JsonTextReader` 是類別。 如需如何使用 ref 結構的詳細資訊，請參閱 [撰寫安全且有效率的 c # 程式碼](../../csharp/write-safe-efficient-code.md)。
 
 ### <a name="read-utf-8-text"></a>讀取 UTF-8 文字
 

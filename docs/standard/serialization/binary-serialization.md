@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bfb504862232345db07bdc92993069fc87afdbeb
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554491"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282088"
 ---
 # <a name="binary-serialization"></a>二進位序列化
 
@@ -25,7 +25,7 @@ ms.locfileid: "90554491"
 在物件導向環境中實作序列化機制時，您必須在使用簡易性與彈性之間進行許多取捨。 若您對程序擁有足夠的控制，該程序可大幅自動化。 例如，可能有簡單二進位序列化並不足夠的情況，或有特定的理由需決定類別中哪個欄位需序列化。 下列各節檢查 .NET 所提供的穩固序列化機制，並強調數種能讓您自訂程序以滿足需求的重要功能。
 
 > [!NOTE]
-> 如果使用不同的 .NET Framework 版本序列化及還原序列化 UTF-8 或 UTF-7 編碼的物件，則不會保留該物件的狀態。
+> 如果物件是使用不同的 .NET 版本進行序列化和還原序列化，則不會保留 UTF-8 或 UTF-7 編碼物件的狀態。
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
@@ -351,7 +351,7 @@ ms.locfileid: "90554491"
 說明在撰寫執行序列化的程式碼時要遵循的安全程式碼撰寫方針。
 
 - [.NET 遠端處理](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
-描述從 .NET Framework 開始遠端通訊的各種方法。
+描述遠端通訊 .NET Framework 中的各種方法。
 
 - [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 描述及解釋如何使用 ASP.NET 建立 XML Web Service 的程式文章。

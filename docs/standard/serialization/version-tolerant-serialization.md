@@ -1,6 +1,6 @@
 ---
 title: 版本相容序列化
-description: .NET Framework 2.0 引進版本相容序列化，這是一組可讓您更輕鬆地修改可序列化類型的功能。
+description: 瞭解版本容錯序列化，這是一組可讓您更輕鬆地修改可序列化類型的功能。
 ms.date: 08/08/2017
 dev_langs:
 - csharp
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: afc822e1f8873bac069f6634fdf1d4665d392e69
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83762587"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282410"
 ---
 # <a name="version-tolerant-serialization"></a>版本相容序列化
 
-在 .NET Framework 1.0 和 1.1 版中，建立可以從應用程式的某個版本，延續到下一個版本使用的可序列化型別，有其問題存在。 如果型別因加入其他欄位而變更，將會發生下列問題：
+在最早的 .NET Framework 版本中，建立可從某個應用程式版本重複使用到下一個版本的可序列化型別有問題。 如果型別因加入其他欄位而變更，將會發生下列問題：
 
 - 當要求將新版的舊型別還原序列化時，舊版應用程式會擲回例外狀況。
 - 新版的應用程式在還原序列化資料遺失的舊版型別時，會擲回例外狀況。
 
-版本相容序列化 (VTS) 為 .NET Framework 2.0 引進的一組功能，讓變更序列化型別隨著時間更加簡單。 具體地說，VTS 功能是為套用 <xref:System.SerializableAttribute> 屬性的類別啟用，包括泛型型別。 VTS 可在不破壞與其他版本之型別相容性的情況下，將新欄位加入那些類別。 如需可用的範例應用程式，請參閱[版本相容序列化技術範例](basic-serialization-technology-sample.md)。
+版本相容序列化 (VTS) 是一組功能，可讓您更輕鬆地在一段時間內修改可序列化的類型。 具體地說，VTS 功能是為套用 <xref:System.SerializableAttribute> 屬性的類別啟用，包括泛型型別。 VTS 可在不破壞與其他版本之型別相容性的情況下，將新欄位加入那些類別。 如需可用的範例應用程式，請參閱[版本相容序列化技術範例](basic-serialization-technology-sample.md)。
 
 使用 時，會啟用 VTS 功能。 除此之外，使用 時，除了沒有直接關聯的資料容錯功能外，其他所有功能都會啟用。 如需使用這些類別進行序列化的詳細資訊，請參閱[二進位序列化](binary-serialization.md)。
 
@@ -44,7 +44,7 @@ ms.locfileid: "83762587"
 
 除此之外，還有在新增了新選項欄位時宣告的功能。 這是 <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> 屬性 (attribute) 的 <xref:System.Runtime.Serialization.OptionalFieldAttribute> 屬性 (property)。
 
-下列各節將更詳細地討論這些功能。
+這些功能將在下列各節中更詳細地討論。
 
 ### <a name="tolerance-of-extraneous-or-unexpected-data"></a>沒有直接關聯的容錯或未預期的資料
 
@@ -152,7 +152,7 @@ End Sub
 
 這些方法的用途是版本控制。 在還原序列化期間，若欄位的資料遺失，則選擇性欄位或許無法正確初始化。 建立指派正確值的方法，然後將 **OnDeserializingAttribute** 或 **OnDeserializedAttribute** 屬性套用至方法，即可修正此狀況。
 
-以下範例顯示型別內容中的方法。 若先前版的應用程式將 `Address` 類別的執行個體傳送至較新版的應用程式，則 `CountryField` 欄位資料將遺失。 但在還原序列化之後，此欄位將會設定為預設值 "日本"。
+以下範例顯示型別內容中的方法。 若先前版的應用程式將 `Address` 類別的執行個體傳送至較新版的應用程式，則 `CountryField` 欄位資料將遺失。 但在還原序列化之後，欄位將會設定為預設值 "日本"。
 
 ```csharp
 [Serializable]
@@ -188,9 +188,7 @@ End Class
 
 ## <a name="the-versionadded-property"></a>VersionAdded 屬性
 
-**OptionalFieldAttribute** 具有 **VersionAdded** 屬性。 這在 .NET Framework 2.0 版中不使用。 然而，正確設定此屬性以確保類型與未來序列化引擎相容很重要。
-
-屬性會指示指定的欄位已加入哪個版本的型別。 如下列範例所示，每次變更型別時，正好遞增 1 (從 2 開始)：
+**OptionalFieldAttribute** 具有 **VersionAdded** 屬性。 屬性會指示指定的欄位已加入哪個版本的型別。 如下列範例所示，每次變更型別時，正好遞增 1 (從 2 開始)：
 
 ```csharp
 // Version 1.0
@@ -263,7 +261,7 @@ End Class
 
 ## <a name="serializationbinder"></a>SerializationBinder
 
-某些使用者可能因為伺服器和用戶端上需要不同版本的類別，而需要控制要序列化和還原序列化的類別。 <xref:System.Runtime.Serialization.SerializationBinder> 是抽象類別，用來控制序列化和還原序列化期間使用的實際型別。 若要使用此類別，請從 <xref:System.Runtime.Serialization.SerializationBinder> 衍生一個類別，然後覆寫 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 和 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 方法。 如需詳細資訊，請參閱[使用 SerializationBinder 控制序列化和還原序列化](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)。
+某些使用者可能因為伺服器和用戶端上需要不同版本的類別，而需要控制要序列化和還原序列化的類別。 <xref:System.Runtime.Serialization.SerializationBinder> 是抽象類別，用來控制序列化和還原序列化期間使用的實際型別。 若要使用此類別，請從 <xref:System.Runtime.Serialization.SerializationBinder> 衍生一個類別，然後覆寫 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 和 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 方法。 如需詳細資訊，請參閱 [使用 SerializationBinder 控制序列化和還原序列化](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)。
 
 ## <a name="best-practices"></a>最佳作法
 

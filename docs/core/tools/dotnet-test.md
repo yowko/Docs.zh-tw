@@ -2,16 +2,16 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537729"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281606"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-本文**適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -69,7 +69,7 @@ dotnet test -h|--help
 
 - **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
-  要在其中搜尋其他測試介面卡之目錄的路徑。 只會檢查具有尾碼的 *.dll*檔案。 `.TestAdapter.dll` 如果未指定，則會搜尋 test *.dll* 的目錄。
+  要在其中搜尋其他測試介面卡之目錄的路徑。 只會檢查具有尾碼的 *.dll* 檔案。 `.TestAdapter.dll` 如果未指定，則會搜尋 test *.dll* 的目錄。
 
 - **`--blame`**
 
@@ -77,7 +77,13 @@ dotnet test -h|--help
 
 - **`--blame-crash`** 自 .NET 5.0 preview SDK 起可用 () 
 
-  在有問題的模式下執行測試，並在測試主機非預期地結束時收集損毀傾印。 只有在 Windows 上才支援此選項。 包含 *procdump.exe* 和 *procdump64.exe* 的目錄必須在 PATH 或 PROCDUMP_PATH 環境變數中。 [下載工具](/sysinternals/downloads/procdump)。 意指 `--blame` 。
+  在有問題的模式下執行測試，並在測試主機非預期地結束時收集損毀傾印。 此選項取決於所使用的 .NET 版本、錯誤類型和作業系統。
+  
+  針對 managed 程式碼中的例外狀況，將會自動收集 .NET 5.0 和更新版本的傾印。 它會產生 testhost 的傾印或任何子進程（也會在 .NET 5.0 中執行並損毀）。 機器碼中的當機不會產生傾印。 此選項適用于 Windows、macOS 和 Linux。
+  
+  原生程式碼中的損毀傾印，或使用 .NET Core 3.1 或更早版本時，只能使用 Procdump 在 Windows 上收集。 包含 *procdump.exe* 和 *procdump64.exe* 的目錄必須在 PATH 或 PROCDUMP_PATH 環境變數中。 [下載工具](/sysinternals/downloads/procdump)。 意指 `--blame` 。
+  
+  若要從 .NET 5.0 或更新版本上執行的原生應用程式收集損毀傾印，可將環境變數設為，以強制使用 Procdump `VSTEST_DUMP_FORCEPROCDUMP` `1` 。
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** 自 .NET 5.0 preview SDK 起可用 () 
 
@@ -97,14 +103,14 @@ dotnet test -h|--help
 
 - **`--blame-hang-timeout <TIMESPAN>`** 自 .NET 5.0 preview SDK 起可用 () 
 
-  每個測試的超時時間，在此時間之後，就會觸發停止回應傾印，並終止測試主機進程。 Timeout 值是以下列其中一種格式來指定：
+  每個測試的超時時間，在這之後會觸發停止回應傾印，並傾印及終止測試主機進程及其所有子進程。 Timeout 值是以下列其中一種格式來指定：
   
-  - 1.5 h
-  - 90m
-  - 5400s
-  - 5400000ms
+  - 1.5 h，1.5 小時，1.5 小時
+  - 90m, 90min, 90minute, 90minutes
+  - 5400s, 5400sec, 5400second, 5400seconds
+  - 5400000ms, 5400000mil, 5400000millisecond, 5400000milliseconds
 
-  如果未使用任何單位 (例如 5400000) ，則會假設值為毫秒。 搭配資料驅動的測試使用時，超時行為取決於所使用的測試介面卡。 若為 xUnit 和 NUnit，則會在每個測試案例之後更新 timeout。 針對 MSTest，所有測試案例都會使用此超時時間。 使用 netcoreapp 2.1 和更新版本的 Windows，以及 Linux 上的 netcoreapp 3.1 和更新版本都支援此選項。 不支援 macOS。
+  如果未使用任何單位 (例如 5400000) ，則會假設值為毫秒。 搭配資料驅動的測試使用時，超時行為取決於所使用的測試介面卡。 若為 xUnit 和 NUnit，則會在每個測試案例之後更新 timeout。 針對 MSTest，所有測試案例都會使用此超時時間。 使用 netcoreapp 2.1 和更新版本的 Windows、Linux 上的 netcoreapp 3.1 和更新版本，以及使用 net 5.0 或更新版本的 macOS 上，都支援此選項。 意指 `--blame` 和 `--blame-hang` 。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -124,7 +130,7 @@ dotnet test -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  強制將 `dotnet` 或 .NET Framework 測試主機用於測試二進位檔。 此選項只會決定要使用的主機類型。 實際要使用的 framework 版本取決於測試專案的 *runtimeconfig.js* 。 如果未指定，則會使用 [TargetFramework 元件屬性](/dotnet/api/system.runtime.versioning.targetframeworkattribute) 來判斷主機的類型。 從 *.dll*中移除該屬性時，會使用 .NET Framework 主機。
+  強制將 `dotnet` 或 .NET Framework 測試主機用於測試二進位檔。 此選項只會決定要使用的主機類型。 實際要使用的 framework 版本取決於測試專案的 *runtimeconfig.js* 。 如果未指定，則會使用 [TargetFramework 元件屬性](/dotnet/api/system.runtime.versioning.targetframeworkattribute) 來判斷主機的類型。 從 *.dll* 中移除該屬性時，會使用 .NET Framework 主機。
 
 - **`--filter <EXPRESSION>`**
 
@@ -264,7 +270,7 @@ dotnet test -h|--help
 
 | 運算子            | 函式 |
 | ------------------- | -------- |
-| <code>&#124;</code> | 或者       |
+| <code>&#124;</code> | OR       |
 | `&`                 | AND      |
 
 使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。

@@ -1,18 +1,18 @@
 ---
 title: <system.xml.serialization> 項目
-description: 本文描述 < system.string > 元素，這是用來控制 XML 序列化的最上層元素。
+description: 本文描述 <的 system.xml 序列化> 元素，這是用來控制 XML 序列化的最上層元素。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6291799aadc429e943996f2256d773ac36dd370f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289482"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282394"
 ---
 # <a name="systemxmlserialization-element"></a>\<system.xml.serialization> 項目
 
@@ -38,20 +38,20 @@ ms.locfileid: "84289482"
 
 ### <a name="child-elements"></a>子元素
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
-|[\<dateTimeSerialization>元素](datetimeserialization-element.md)|判斷 <xref:System.DateTime> 物件的序列化模式。|
-|[\<schemaImporterExtensions>元素](schemaimporterextensions-element.md)|包含 <xref:System.Xml.Serialization.XmlSchemaImporter> 用來對應 XSD 型別至 .NET Framework 型別的型別。|
+|[\<dateTimeSerialization> 元素](datetimeserialization-element.md)|判斷 <xref:System.DateTime> 物件的序列化模式。|
+|[\<schemaImporterExtensions> 元素](schemaimporterextensions-element.md)|包含用來將 <xref:System.Xml.Serialization.XmlSchemaImporter> XSD 類型對應至 .net 類型的類型。|
 
 ### <a name="parent-elements"></a>父項目
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
-|[\<configuration>元素](../../framework/configure-apps/file-schema/configuration-element.md)|Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。|
+|[\<configuration> 元素](../../framework/configure-apps/file-schema/configuration-element.md)|Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。|
 
 ## <a name="example"></a>範例
 
-下列程式碼範例描述如何指定 <xref:System.DateTime> 物件的序列化模式，以及在對應 XSD 型別至 .NET Framework 型別時 <xref:System.Xml.Serialization.XmlSchemaImporter> 使用的新增型別。
+下列程式碼範例說明如何指定物件的序列化模式 <xref:System.DateTime> ，以及在將 <xref:System.Xml.Serialization.XmlSchemaImporter> XSD 類型對應至 .net 類型時，所使用的型別加入。
 
 ```xml
 <system.xml.serialization>
@@ -72,6 +72,6 @@ ms.locfileid: "84289482"
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [設定檔架構](../../framework/configure-apps/file-schema/index.md)
-- [\<dateTimeSerialization>元素](datetimeserialization-element.md)
-- [\<schemaImporterExtensions>元素](schemaimporterextensions-element.md)
-- [\<add>的元素\<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
+- [\<dateTimeSerialization> 元素](datetimeserialization-element.md)
+- [\<schemaImporterExtensions> 元素](schemaimporterextensions-element.md)
+- [\<add> 的元素 \<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)
