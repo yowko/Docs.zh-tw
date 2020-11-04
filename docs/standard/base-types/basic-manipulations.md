@@ -9,26 +9,26 @@ dev_langs:
 helpviewer_keywords:
 - strings [.NET], examples
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
-ms.openlocfilehash: cc04f0c874b732668b4813f8325bd7060927f22a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 659f01cc1d7ae03e12e83329e4fd2446b7512475
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889123"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342614"
 ---
-# <a name="how-to-perform-basic-string-manipulations-in-net"></a><span data-ttu-id="94fe1-103">如何：在 .NET 中執行基本字串操作</span><span class="sxs-lookup"><span data-stu-id="94fe1-103">How to: Perform Basic String Manipulations in .NET</span></span>
+# <a name="how-to-perform-basic-string-manipulations-in-net"></a><span data-ttu-id="7529e-103">如何：在 .NET 中執行基本字串操作</span><span class="sxs-lookup"><span data-stu-id="7529e-103">How to: Perform Basic String Manipulations in .NET</span></span>
 
-<span data-ttu-id="94fe1-104">下列範例會使用[基本字串作業](basic-string-operations.md)主題中所討論的一些方法，以一種可能在實際應用程式中發現的方式，來建構可執行字串操作的類別。</span><span class="sxs-lookup"><span data-stu-id="94fe1-104">The following example uses some of the methods discussed in the [Basic String Operations](basic-string-operations.md) topics to construct a class that performs string manipulations in a manner that might be found in a real-world application.</span></span> <span data-ttu-id="94fe1-105">`MailToData` 類別會將個人的姓名和地址儲存在不同的屬性中，並允許您將 `City`、`State` 和 `Zip` 欄位組合成單一字串，以便顯示給使用者看。</span><span class="sxs-lookup"><span data-stu-id="94fe1-105">The `MailToData` class stores the name and address of an individual in separate properties and provides a way to combine the `City`, `State`, and `Zip` fields into a single string for display to the user.</span></span> <span data-ttu-id="94fe1-106">此外，類別也可讓使用者將城市、省/市和郵遞區號當成單一字串來輸入；應用程式會自動剖析這個單一字串，然後將正確的資訊輸入對應的屬性中。</span><span class="sxs-lookup"><span data-stu-id="94fe1-106">Furthermore, the class allows the user to enter the city, state, and ZIP Code information as a single string; the application automatically parses the single string and enters the proper information into the corresponding property.</span></span>  
-  
-<span data-ttu-id="94fe1-107">為了簡單起見，這個範例會使用具有命令列介面的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="94fe1-107">For simplicity, this example uses a console application with a command-line interface.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="94fe1-108">範例</span><span class="sxs-lookup"><span data-stu-id="94fe1-108">Example</span></span>  
+<span data-ttu-id="7529e-104">下列範例會使用[基本字串作業](basic-string-operations.md)主題中所討論的一些方法，以一種可能在實際應用程式中發現的方式，來建構可執行字串操作的類別。</span><span class="sxs-lookup"><span data-stu-id="7529e-104">The following example uses some of the methods discussed in the [Basic String Operations](basic-string-operations.md) topics to construct a class that performs string manipulations in a manner that might be found in a real-world application.</span></span> <span data-ttu-id="7529e-105">`MailToData` 類別會將個人的姓名和地址儲存在不同的屬性中，並允許您將 `City`、`State` 和 `Zip` 欄位組合成單一字串，以便顯示給使用者看。</span><span class="sxs-lookup"><span data-stu-id="7529e-105">The `MailToData` class stores the name and address of an individual in separate properties and provides a way to combine the `City`, `State`, and `Zip` fields into a single string for display to the user.</span></span> <span data-ttu-id="7529e-106">此外，此類別可讓使用者以單一字串形式輸入 city、state 和 zip 程式碼資訊。</span><span class="sxs-lookup"><span data-stu-id="7529e-106">Furthermore, the class allows the user to enter the city, state, and zip code information as a single string.</span></span> <span data-ttu-id="7529e-107">應用程式會自動剖析單一字串，並將適當的資訊輸入到對應的屬性中。</span><span class="sxs-lookup"><span data-stu-id="7529e-107">The application automatically parses the single string and enters the proper information into the corresponding property.</span></span>
+
+<span data-ttu-id="7529e-108">為了簡單起見，這個範例會使用具有命令列介面的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="7529e-108">For simplicity, this example uses a console application with a command-line interface.</span></span>
+
+## <a name="example"></a><span data-ttu-id="7529e-109">範例</span><span class="sxs-lookup"><span data-stu-id="7529e-109">Example</span></span>
 
 [!code-csharp[Conceptual.String.BasicOps#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/basicops.cs#1)]
-[!code-vb[Conceptual.String.BasicOps#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/basicops.vb#1)]  
-  
-<span data-ttu-id="94fe1-109">執行上述程式碼時，系統會要求使用者輸入其名稱和位址。</span><span class="sxs-lookup"><span data-stu-id="94fe1-109">When the preceding code is executed, the user is asked to enter their name and address.</span></span> <span data-ttu-id="94fe1-110">應用程式會將這項資訊放入適當的屬性中，並建立出顯示城市、省/市和郵遞區號資訊的單一字串，將資訊重新顯示給使用者看。</span><span class="sxs-lookup"><span data-stu-id="94fe1-110">The application places the information in the appropriate properties and displays the information back to the user, creating a single string that displays the city, state, and ZIP Code information.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="94fe1-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="94fe1-111">See also</span></span>
+[!code-vb[Conceptual.String.BasicOps#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/basicops.vb#1)]
 
-- [<span data-ttu-id="94fe1-112">基底字元串作業</span><span class="sxs-lookup"><span data-stu-id="94fe1-112">Basic String Operations</span></span>](basic-string-operations.md)
+<span data-ttu-id="7529e-110">執行上述程式碼時，系統會要求使用者輸入其名稱和位址。</span><span class="sxs-lookup"><span data-stu-id="7529e-110">When the preceding code is executed, the user is asked to enter their name and address.</span></span> <span data-ttu-id="7529e-111">應用程式會將資訊放在適當的屬性中，並向使用者顯示資訊，並建立單一字串來顯示城市、州和郵遞區號資訊。</span><span class="sxs-lookup"><span data-stu-id="7529e-111">The application places the information in the appropriate properties and displays the information back to the user, creating a single string that displays the city, state, and zip code information.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7529e-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7529e-112">See also</span></span>
+
+- [<span data-ttu-id="7529e-113">基底字元串作業</span><span class="sxs-lookup"><span data-stu-id="7529e-113">Basic String Operations</span></span>](basic-string-operations.md)
