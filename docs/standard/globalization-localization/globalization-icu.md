@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: 87d0103e90d46ae83b23c9cc05e9efcaa51c831f
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 7b367fe694c9dd153372fadfe29461ea8b6a0415
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063985"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342588"
 ---
 # <a name="net-globalization-and-icu"></a>.NET 全球化和 ICU
 
@@ -44,23 +44,23 @@ Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl
 
 - 在專案檔中：
 
-```xml
-<ItemGroup>
-  <RuntimeHostConfigurationOption Include="System.Globalization.UseNls" Value="true" />
-</ItemGroup>
-```
+  ```xml
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Globalization.UseNls" Value="true" />
+  </ItemGroup>
+  ```
 
 - 在 `runtimeconfig.json` 檔案中：
 
-```json
-{
-  "runtimeOptions": {
-     "configProperties": {
-       "System.Globalization.UseNls": true
-      }
+  ```json
+  {
+    "runtimeOptions": {
+       "configProperties": {
+         "System.Globalization.UseNls": true
+        }
+    }
   }
-}
-```
+  ```
 
 - 將環境變數設定 `DOTNET_SYSTEM_GLOBALIZATION_USENLS` 為值 `true` 或 `1` 。
 
@@ -77,29 +77,29 @@ Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl
 
 - 在專案檔中：
 
-```xml
-<ItemGroup>
-  <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="<suffix>:<version> or <version>" />
-</ItemGroup>
-```
+  ```xml
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="<suffix>:<version> or <version>" />
+  </ItemGroup>
+  ```
 
 - 在 `runtimeconfig.json` 檔案中：
 
-```json
-{
-  "runtimeOptions": {
-     "configProperties": {
-       "System.Globalization.AppLocalIcu": "<suffix>:<version> or <version>"
-      }
+  ```json
+  {
+    "runtimeOptions": {
+       "configProperties": {
+         "System.Globalization.AppLocalIcu": "<suffix>:<version> or <version>"
+       }
+    }
   }
-}
-```
+  ```
 
 - 將環境變數設定 `DOTNET_SYSTEM_GLOBALIZATION_APPLOCALICU` 為值 `<suffix>:<version>` 或 `<version>` 。
 
-`<suffix>`：長度小於36個字元的選擇性尾碼，遵循 public ICU 封裝慣例。 當您建立自訂的 ICU 時，您可以自訂它來產生 lib 名稱和匯出的符號名稱，以包含尾碼，例如， `libicuucmyapp` 其中 `myapp` 是尾碼。
+  `<suffix>`：長度小於36個字元的選擇性尾碼，遵循 public ICU 封裝慣例。 當您建立自訂的 ICU 時，您可以自訂它來產生 lib 名稱和匯出的符號名稱，以包含尾碼，例如， `libicuucmyapp` 其中 `myapp` 是尾碼。
 
-`<version>`：有效的 ICU 版本，例如67.1。 此版本是用來載入二進位檔，並取得匯出的符號。
+  `<version>`：有效的 ICU 版本，例如67.1。 此版本是用來載入二進位檔，並取得匯出的符號。
 
 若要在設定應用程式本機參數時載入 ICU，.NET 會使用 <xref:System.Runtime.InteropServices.NativeLibrary.TryLoad%2A?displayProperty=nameWithType> 探查多個路徑的方法。 方法會先嘗試在屬性中尋找程式庫 `NATIVE_DLL_SEARCH_DIRECTORIES` ，此屬性是由 dotnet 主機根據應用程式的檔案所建立 `deps.json` 。 如需詳細資訊，請參閱 [預設探查](../../core/dependency-loading/default-probing.md)。
 
@@ -139,19 +139,19 @@ Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl
 
   執行下列命令：
 
-```bash
-install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicuuc.67.1.dylib
-install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicui18n.67.1.dylib
-install_name_tool -change "libicuuc.67.dylib" "@loader_path/libicuuc.67.dylib" /path/to/libicui18n.67.1.dylib
-```
+  ```bash
+  install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicuuc.67.1.dylib
+  install_name_tool -change "libicudata.67.dylib" "@loader_path/libicudata.67.dylib" /path/to/libicui18n.67.1.dylib
+  install_name_tool -change "libicuuc.67.dylib" "@loader_path/libicuuc.67.dylib" /path/to/libicui18n.67.1.dylib
+  ```
 
 - 修補 ICU 以產生安裝名稱 `@loader_path`
 
   在執行 autoconf (`./runConfigureICU`) 之前，請將 [下列幾行](https://github.com/unicode-org/icu/blob/ef91cc3673d69a5e00407cda94f39fcda3131451/icu4c/source/config/mh-darwin#L32-L37) 變更為：
 
-```
-LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name @loader_path/$(notdir $(MIDDLE_SO_TARGET))
-```
+  ```
+  LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name @loader_path/$(notdir $(MIDDLE_SO_TARGET))
+  ```
 
 ## <a name="icu-on-webassembly"></a>WebAssembly 上的 ICU
 

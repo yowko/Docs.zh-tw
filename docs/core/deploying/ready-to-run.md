@@ -4,12 +4,12 @@ description: 瞭解什麼是 ReadyToRun 部署，以及為什麼您應該考慮�
 author: davidwr
 ms.author: davidwr
 ms.date: 09/21/2020
-ms.openlocfilehash: b4052a0c0f4ed9f6cfd273abe5ef45d018bd0ae0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: cd8eaebd05d79b11e90e255e702a52220fffda76
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654958"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342627"
 ---
 # <a name="readytorun-compilation"></a>ReadyToRun 編譯
 
@@ -45,7 +45,7 @@ R2R 二進位檔會透過減少 Just-In-Time (JIT) 編譯器在應用程式載�
 
 ## <a name="impact-of-using-the-readytorun-feature"></a>使用 ReadyToRun 功能的影響
 
-預先編譯會對應用程式效能造成複雜的效能影響，這可能很難預測。 一般情況下，元件的大小會增加到兩到三倍以上。 檔案的實體大小增加可能會降低從磁片載入元件的效能，並增加進程的工作集。 不過，在執行時間編譯的方法數目通常會大幅減少。 結果是，大部分的應用程式，大部分的應用程式都能獲得大幅的效能，而不是啟用 ReadyToRun。 因為 .NET 執行時間程式庫已經使用 ReadyToRun 先行編譯，所以具有少量程式碼的應用程式可能不會遇到大幅改善的啟用 ReadyToRun。
+預先編譯會對應用程式效能造成複雜的效能影響，這可能很難預測。 一般情況下，元件的大小會增加到兩到三倍以上。 檔案的實體大小增加可能會降低從磁片載入元件的效能，並增加進程的工作集。 不過，在執行時間編譯的方法數目通常會大幅減少。 結果是，大部分的應用程式都有大量的程式碼可獲得 ReadyToRun 的大型效能優勢。 因為 .NET 執行時間程式庫已經使用 ReadyToRun 先行編譯，所以具有少量程式碼的應用程式可能不會遇到大幅改善的啟用 ReadyToRun。
 
 此處所討論的啟始改進不僅適用于應用程式啟動，也適用于應用程式中的任何程式碼首次使用。 比方說，ReadyToRun 可以用來減少在 ASP.NET 應用程式中第一次使用 Web API 時的回應延遲。
 
