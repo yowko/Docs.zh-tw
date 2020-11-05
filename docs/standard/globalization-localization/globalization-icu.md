@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: 7b367fe694c9dd153372fadfe29461ea8b6a0415
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342588"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400875"
 ---
 # <a name="net-globalization-and-icu"></a>.NET 全球化和 ICU
 
@@ -33,12 +33,12 @@ ms.locfileid: "93342588"
 
 ## <a name="icu-on-windows"></a>Windows 上的 ICU
 
-Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl/international-components-for-unicode--icu-) 作為作業系統的一部分，而 .net 5.0 和更新版本預設會使用 ICU。 當您在 Windows 上執行時，.NET 5.0 和更新版本會嘗試載入， `icu.dll` 如果有的話，則會使用它來進行全球化。  如果找不到或無法載入該程式庫，例如在舊版 Windows 上執行時，.NET 5.0 和更新版本會切換回 NLS 型的執行。
+Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl/international-components-for-unicode--icu-) 作為作業系統的一部分，而 .net 5.0 和更新版本預設會使用 ICU。 在 Windows 上執行時，.NET 5.0 和更新版本會嘗試載入，如果有的話，請 `icu.dll` 將它用於全球化執行。 如果找不到或無法載入 ICU 程式庫（例如在舊版 Windows 上執行時），則 .NET 5.0 和更新版本會切換回以 NLS 為基礎的實作為。
 
 > [!NOTE]
 > 即使使用 ICU， `CurrentCulture` 、 `CurrentUICulture` 和 `CurrentRegion` 成員仍會使用 Windows 作業系統 api 來接受使用者設定。
 
-### <a name="using-nls-instead-of-icu"></a>使用 NLS 而非 ICU
+### <a name="use-nls-instead-of-icu"></a>使用 NLS 而非 ICU
 
 使用 ICU 而非 NLS，可能會導致與一些全球化相關作業的行為有所差異。 若要還原回使用 NLS，開發人員可以退出宣告 ICU 的執行。 應用程式可以使用下列任何一種方式來啟用 NLS 模式：
 
@@ -71,7 +71,7 @@ Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl
 
 ## <a name="app-local-icu"></a>應用程式本機 ICU
 
-每一版的 ICU 都可能帶來 it bug 修正，以及更新的一般地區設定資料存放庫 (CLDR 描述世界語言的) 資料。 在不同版本的 ICU 之間移動時，在與全球化相關的作業時，可能會對應用程式行為產生細微的影響  為了協助應用程式開發人員確保所有部署之間的一致性，.NET 5.0 和更新版本可讓 Windows 和 Unix 上的應用程式執行並使用自己的 ICU 複本。
+每一版的 ICU 都可能帶來 it bug 修正，以及更新的一般地區設定資料存放庫 (CLDR 描述世界語言的) 資料。 在不同版本的 ICU 之間移動時，在與全球化相關的作業時，可能會對應用程式行為產生細微的影響 為了協助應用程式開發人員確保所有部署之間的一致性，.NET 5.0 和更新版本可讓 Windows 和 Unix 上的應用程式執行並使用自己的 ICU 複本。
 
 應用程式可以使用下列任何一種方式，選擇進入應用程式本機的 ICU 真實模式：
 
@@ -97,7 +97,7 @@ Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl
 
 - 將環境變數設定 `DOTNET_SYSTEM_GLOBALIZATION_APPLOCALICU` 為值 `<suffix>:<version>` 或 `<version>` 。
 
-  `<suffix>`：長度小於36個字元的選擇性尾碼，遵循 public ICU 封裝慣例。 當您建立自訂的 ICU 時，您可以自訂它來產生 lib 名稱和匯出的符號名稱，以包含尾碼，例如， `libicuucmyapp` 其中 `myapp` 是尾碼。
+  `<suffix>`：選擇性尾碼的長度少於36個字元，請遵循 public ICU 封裝慣例。 當您建立自訂的 ICU 時，您可以自訂它來產生 lib 名稱和匯出的符號名稱，以包含尾碼，例如， `libicuucmyapp` 其中 `myapp` 是尾碼。
 
   `<version>`：有效的 ICU 版本，例如67.1。 此版本是用來載入二進位檔，並取得匯出的符號。
 
@@ -107,7 +107,7 @@ Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl
 
 如果您是透過 NuGet 套件來取用 ICU，這會在與 framework 相依的應用程式中運作。 NuGet 會解析原生資產，並將它們包含在檔案中，並將其包含在 `deps.json` 目錄的應用程式的輸出目錄中 `runtimes` 。 .NET 會從該處載入它。
 
-針對與 framework 相依的應用程式， (不是自主) 從本機組建取用 ICU 的情況下，您必須採取額外的步驟。 .NET SDK 尚未提供「鬆散」原生二進位檔的功能，可將其併入 `deps.json` (請參閱 [此 SDK 問題](https://github.com/dotnet/sdk/issues/11373)) 。 相反地，您可以藉由在應用程式的專案檔中新增其他資訊來啟用此專案。 例如：
+針對與 framework 相依的應用程式， (不是自主) 從本機組建取用 ICU 的情況下，您必須採取額外的步驟。 .NET SDK 尚未提供「鬆散」原生二進位檔的功能，可將其併入 `deps.json` (請參閱 [此 SDK 問題](https://github.com/dotnet/sdk/issues/11373)) 。 相反地，您可以藉由在應用程式的專案檔中新增其他資訊來啟用此專案。 例如︰
 
 ```xml
 <ItemGroup>
@@ -120,7 +120,7 @@ Windows 10 2019 年5月更新和更新版本包含 [icu.dll](/windows/win32/intl
 
 ### <a name="macos-behavior"></a>macOS 行為
 
-`macOS` 有不同的行為，可從檔案中指定的載入命令（ `match-o` 而不是 Linux 載入器）解析相依的動態連結程式庫。 在 Linux 載入器中，.NET 可以 `libicudata` `libicuuc` `libicui18n` 依該順序嘗試、和 () 來滿足 ICU 相依性圖形。 不過，在 macOS 上，這無法運作。 在 macOS 上建立 ICU 時，根據預設，會在中使用這些載入命令來取得動態連結程式庫 `libicuuc` 。 例如：
+`macOS` 有不同的行為，可從檔案中指定的載入命令（ `match-o` 而不是 Linux 載入器）解析相依的動態連結程式庫。 在 Linux 載入器中，.NET 可以 `libicudata` `libicuuc` `libicui18n` 依該順序嘗試、和 () 來滿足 ICU 相依性圖形。 不過，在 macOS 上，這無法運作。 在 macOS 上建立 ICU 時，根據預設，會在中使用這些載入命令來取得動態連結程式庫 `libicuuc` 。 下列程式碼片段顯示範例。
 
 ```sh
 ~/ % otool -L /Users/santifdezm/repos/icu-build/icu/install/lib/libicuuc.67.1.dylib

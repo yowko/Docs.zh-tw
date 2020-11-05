@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2be9c4e12d6a613e7f1062ec7492b0b99203f39d
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550380"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400692"
 ---
 # <a name="version-compatibility"></a>版本相容性
 
@@ -61,13 +61,13 @@ ms.locfileid: "90550380"
 
 - 如果您判斷 .NET Framework 4.5 中的變更已中斷應用程式，請檢查執行時間[設定架構](../configure-apps/file-schema/runtime/index.md)（尤其是[ \<AppContextSwitchOverrides> 元素](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)），以判斷您是否可以在應用程式的設定檔案中使用執行時間設定，以還原先前的行為。
 
-- 如果您遇到未記載的問題，請在 [.NET 開發人員社群網站](https://developercommunity.visualstudio.com/spaces/61/index.html)或 [Microsoft/dotnet GitHub 存放庫](https://github.com/microsoft/dotnet/issues)中開啟問題。
+- 如果您遇到未記載的問題，請在 [.NET 開發人員社群網站](https://aka.ms/feedback/report?space=61)或 [Microsoft/dotnet GitHub 存放庫](https://github.com/microsoft/dotnet/issues)中開啟問題。
 
 ## <a name="side-by-side-execution"></a>並存執行
 
 如果您找不到適合您問題的因應措施，請記住，.NET Framework 4.5 (或其中一個點發行版) 與1.1、2.0 和3.5 版本並存執行，而且是取代第4版的就地更新。 針對以1.1、2.0 和3.5 版為目標的應用程式，您可以在目的電腦上安裝適當版本的 .NET Framework，以在其最佳環境中執行應用程式。 如需並存執行的詳細資訊，請參閱[並存執行](../deployment/side-by-side-execution.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [新功能](../whats-new/index.md)
 - [類別庫中的過時功能](../whats-new/whats-obsolete.md)

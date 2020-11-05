@@ -2,12 +2,12 @@
 title: 'C # 主要語言區域教學課程'
 description: 第一次接觸 C#？ 了解該語言的基本概念。
 ms.date: 08/06/2020
-ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a73399643ada05a4bfb17fadd17bf3267514e99d
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558171"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400744"
 ---
 # <a name="major-language-areas"></a>主要語言區域
 
@@ -17,30 +17,30 @@ C # 和 .NET 提供許多不同的集合類型。 陣列具有由語言定義的
 
 ### <a name="arrays"></a>陣列
 
-[***陣列***](../programming-guide/arrays/index.md)是一種資料結構，其中包含透過計算索引所存取的一些變數。 陣列中包含的變數（也稱為陣列的 ***元素*** ）全都是相同的類型。 此類型稱為陣列的 ***元素類型*** 。
+[ * **陣列** _](../programming-guide/arrays/index.md)是一種資料結構，其中包含透過計算索引所存取的一些變數。 陣列中包含的變數（也稱為陣列的 _*_元素_*_ ）全都是相同的類型。 此類型稱為陣列的 _*_元素類型_*_ 。
 
-陣列型別是參考型別，而陣列變數的宣告只是預留空間給陣列執行個體的參考。 實際的陣列實例會在執行時間使用運算子動態建立 `new` 。 作業 `new` 會指定新陣列實例的 ***長度*** ，然後針對實例的存留期進行修正。 陣列元素的索引範圍在 `0` 到 `Length - 1` 之間。 `new` 運算子會自動將陣列的元素初始化為其預設值，例如，針對所有數值型別，此值為零，而針對所有參考型別，此值為 `null`。
+陣列型別是參考型別，而陣列變數的宣告只是預留空間給陣列執行個體的參考。 實際的陣列實例會在執行時間使用運算子動態建立 `new` 。 作業 `new` 會指定新陣列實例的 _*_長度_*_ ，然後針對實例的存留期進行修正。 陣列元素的索引範圍在 `0` 到 `Length - 1` 之間。 `new` 運算子會自動將陣列的元素初始化為其預設值，例如，針對所有數值型別，此值為零，而針對所有參考型別，此值為 `null`。
 
 下列範例會建立 `int` 元素的陣列、初始化陣列，並印出陣列的內容。
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArraysSample":::
 
-這個範例會建立並操作***一維陣列***。 C# 也支援***多維陣列***。 一個陣列型別的維度數目 (亦稱為陣列型別的***順位***)，是寫入陣列型別的方括弧之間的逗號數目加一。 下列範例會分別配置一個單維、一個二維和一個三維陣列。
+這個範例會在一 _*_維陣列_*_ 上建立和操作。 C # 也支援 _*_多維度陣列_*_ 。 陣列類型的維度數目（也稱為陣列類型的 _*_等級_*_ ）是一加在陣列類型的方括弧之間所寫入的逗號數目。 下列範例會分別配置一個單維、一個二維和一個三維陣列。
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="DeclareArrays":::
 
 `a1` 陣列包含 10 個元素、`a2`陣列包含 50 (10 × 5) 個元素，`a3` 陣列包含 100 (10 × 5 × 2) 個元素。
-陣列的元素型別可以是任一型別，包括陣列型別。 陣列類型元素的陣列有時稱為 ***不規則陣列*** ，因為元素陣列的長度不一定相同。 下列範例會配置一個 `int` 型別的陣列：
+陣列的元素型別可以是任一型別，包括陣列型別。 陣列類型元素的陣列有時稱為 _*_不規則陣列_*_ ，因為元素陣列的長度不一定相同。 下列範例會配置一個 `int` 型別的陣列：
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArrayOfArrays":::
 
 第一行建立包含三個元素的陣列，每個元素的型別均為 `int[]`，每個元素的初始值均為 `null`。 接下來的幾行則會初始化具有不同長度之個別陣列實例參考的三個元素。
 
-`new`運算子允許使用***陣列初始化***運算式來指定陣列元素的初始值，也就是在分隔符號和之間寫入的運算式清單 `{` `}` 。 下列範例使用三個元素配置並初始化 `int[]`。
+`new`運算子允許使用 _*_陣列初始化_*_ 運算式來指定陣列元素的初始值，也就是在分隔符號和之間寫入的運算式清單 `{` `}` 。 下列範例使用三個元素配置並初始化 `int[]`。
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="InitializeArray":::
 
-陣列的長度是從和之間的運算式數目推斷而來 `{` `}` 。 區域變數和欄位宣告可以進一步縮短，因此不需要先重新開機陣列型別。
+陣列的長度是從和之間的運算式數目推斷而來 `{` `}` 。 您可以進一步縮短陣列初始化，這樣就不需要先重新開機陣列型別。
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="InitializeShortened":::
 
@@ -56,19 +56,19 @@ C # 和 .NET 提供許多不同的集合類型。 陣列具有由語言定義的
 
 ## <a name="string-interpolation"></a>字串插補
 
-C # [***字串插補***](../language-reference/tokens/interpolated.md) 可讓您藉由定義將結果放置在格式字串中的運算式，來格式化字串。 例如，下列範例會從一組氣象資料列印指定日期的溫度：
+C # [_*_字串插補_*_](../language-reference/tokens/interpolated.md) 可讓您藉由定義將結果放置在格式字串中的運算式，來格式化字串。 例如，下列範例會從一組氣象資料列印指定日期的溫度：
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-插入字串是使用 token 來宣告 `$` 。 字串插補會評估和之間的運算式 `{` `}` ，然後將結果轉換成 `string` ，並將括弧之間的文字取代為運算式的字串結果。 `:`第一個運算式中的會 `{weatherData.Date:MM-DD-YYYY}` 指定*格式字串*。 在上述範例中，它會指定應以 "MM-yyyy-mm-dd" 格式列印日期。
+插入字串是使用 token 來宣告 `$` 。 字串插補會評估和之間的運算式 `{` `}` ，然後將結果轉換成 `string` ，並將括弧之間的文字取代為運算式的字串結果。 `:`第一個運算式中的會 `{weatherData.Date:MM-DD-YYYY}` 指定 _format 字串 *。 在上述範例中，它會指定應以 "MM-yyyy-mm-dd" 格式列印日期。
 
 ## <a name="pattern-matching"></a>模式比對
 
-C # 語言提供 [***模式***](../pattern-matching.md) 比對運算式來查詢物件的狀態，並根據該狀態執行程式碼。 您可以檢查屬性和欄位的類型和值，以判斷要採取的動作。 `switch`運算式是適用于模式比對的主要運算式。
+C # 語言提供 [ * **模式**](../pattern-matching.md)比對 _ 運算式來查詢物件的狀態，並根據該狀態執行程式碼。 您可以檢查屬性和欄位的類型和值，以判斷要採取的動作。 `switch`運算式是適用于模式比對的主要運算式。
 
 ## <a name="delegates-and-lambda-expressions"></a>委派和 lambda 運算式
 
-[***委派型***](../delegates-overview.md)別代表具有特定參數清單和傳回型別之方法的參考。 委派讓您可將方法視為實體，而實體能指派給變數或當作參數來傳遞。 委派類似于某些其他語言中的函式指標概念。 與函式指標不同的是，委派是物件導向且型別安全的。
+[_*_委派型_*_](../delegates-overview.md)別代表具有特定參數清單和傳回型別之方法的參考。 委派讓您可將方法視為實體，而實體能指派給變數或當作參數來傳遞。 委派類似于某些其他語言中的函式指標概念。 與函式指標不同的是，委派是物件導向且型別安全的。
 
 下列範例會宣告並使用名為 `Function` 的委派型別。
 
@@ -98,7 +98,7 @@ C # 支援具有兩個關鍵字的非同步程式： `async` 和 `await` 。 您
 
 ## <a name="attributes"></a>屬性
 
-C# 程式中的型別、成員和其他實體支援控制其某方面行為的修飾詞。 例如，方法的協助工具是使用 `public`、`protected`、`internal` 和 `private` 修飾詞控制。 C# 將此能力一般化，宣告式資訊的使用者定義型別才能附加至程式實體，並在執行階段擷取。 程式會藉由定義和使用 [***屬性***](../programming-guide/concepts/attributes/index.md)來指定此額外的宣告式資訊。
+C# 程式中的型別、成員和其他實體支援控制其某方面行為的修飾詞。 例如，方法的協助工具是使用 `public`、`protected`、`internal` 和 `private` 修飾詞控制。 C# 將此能力一般化，宣告式資訊的使用者定義型別才能附加至程式實體，並在執行階段擷取。 程式會藉由定義和使用 [_ *_屬性_* *](../programming-guide/concepts/attributes/index.md)來指定此額外的宣告式資訊。
 
 下列範例宣告的 `HelpAttribute` 屬性可置於程式實體，以提供其相關文件的連結。
 

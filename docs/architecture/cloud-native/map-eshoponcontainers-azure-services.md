@@ -2,12 +2,12 @@
 title: 將 eShopOnContainers 對應至 Azure 服務
 description: 將 eShopOnContainers 對應至 Azure 服務，例如 Azure Kubernetes Service、API 閘道和 Azure 服務匯流排。
 ms.date: 05/13/2020
-ms.openlocfilehash: e938bf9a8f93f9e375a22ffb94395b9e85b0fe63
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155259"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400444"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>將 eShopOnContainers 對應至 Azure 服務
 
@@ -16,7 +16,7 @@ ms.locfileid: "91155259"
 應用程式的架構顯示在圖2-5 中。 左邊是用戶端應用程式， (SPA) 類別，分成行動、傳統 Web 和 Web 單一頁面應用程式。 右側是組成系統的伺服器端元件，每個元件都可以裝載于 Docker 容器和 Kubernetes 叢集中。 傳統的 web 應用程式是由以黃色顯示 ASP.NET Core MVC 應用程式所支援。 此應用程式和行動和 web SPA 應用程式會透過一或多個 API 閘道與個別微服務通訊。 API 閘道會遵循「前端後端」 (BFF) 模式，這表示每個閘道都是設計來支援指定的前端用戶端。 個別的微服務會列在 API 閘道的右邊，並包含商務邏輯和某種類型的持續性存放區。 不同的服務會利用 SQL Server 資料庫、Redis 快取實例和 MongoDB/CosmosDB 存放區。 最右邊的是系統的事件匯流排，用於微服務之間的通訊。
 
 ![eShopOnContainers 架構 ](./media/eshoponcontainers-architecture.png)
- **圖 2-5**。 EShopOnContainers 架構。
+ **圖 2-5** 。 EShopOnContainers 架構。
 
 此架構的伺服器端元件全都可輕易地對應至 Azure 服務。
 
@@ -24,7 +24,7 @@ ms.locfileid: "91155259"
 
 應用程式的容器裝載服務（從 ASP.NET Core MVC 應用程式到個別類別目錄和訂購微服務）可以在 Azure Kubernetes Service (AKS) 中託管和管理。 應用程式可以在 Docker 和 Kubernetes 本機上執行，然後將相同的容器部署到裝載于 AKS 的預備環境和生產環境。 您可以依照下一節的說明，將此程式自動化。
 
-AKS 為容器的個別叢集提供管理服務。 應用程式會為上述架構圖中所示的每個微服務部署個別的 AKS 叢集。 這種方法可讓每個個別的服務根據其資源需求獨立進行調整。 每個微服務也可以獨立部署，而且在理想的情況下，這類部署應該會產生零的系統停機時間。
+AKS 為容器的個別叢集提供管理服務。 應用程式會針對 AKS 叢集中的每個微服務部署個別的容器，如上面的架構圖所示。 這種方法可讓每個個別的服務根據其資源需求獨立進行調整。 每個微服務也可以獨立部署，而且在理想的情況下，這類部署應該會產生零的系統停機時間。
 
 ## <a name="api-gateway"></a>API Gateway
 

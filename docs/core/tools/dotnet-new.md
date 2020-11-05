@@ -4,17 +4,17 @@ description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/01/2020
-ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.date: 09/04/2020
+ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526616"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400587"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
-本文**適用于：** ✔️ .net CORE 2.0 SDK 和更新版本
+本文 **適用于：** ✔️ .net CORE 2.0 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -58,7 +58,7 @@ dotnet new -h|--help
 
   下表說明隨 .NET Core SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。 按一下 [簡短名稱] 連結，以查看特定的範本選項。
 
-| 範本                                    | 簡短名稱                      | 語言     | 標籤                                  | 推出的版本 |
+| 範本                                    | 簡短名稱                      | 語言     | Tags                                  | 推出的版本 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | 主控台應用程式                          | [安慰](#console)             | [C#], F#, VB | 通用/主控台                        | 1.0        |
 | 類別庫                                | [classlib](#classlib)           | [C#], F#, VB | 通用/程式庫                        | 1.0        |
@@ -78,7 +78,7 @@ dotnet new -h|--help
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor 伺服器應用程式                            | [blazorserver](#blazorserver)   | [C#]         | WebBlazor                            | 3.0        |
-| BlazorWebAssembly應用程式                       | `blazorwasm`                    | [C#]         | WebBlazor/WebAssembly                | 3.1.300    |
+| BlazorWebAssembly應用程式                       | [blazorwasm](#blazorwasm)       | [C#]         | WebBlazor/WebAssembly                | 3.1.300    |
 | 空的 ASP.NET Core                           | [Web](#web)                     | [C#]、F#     | Web/空白                             | 1.0        |
 | ASP.NET Core Web 應用程式 (模型檢視控制器) | [Mvc](#web-options)             | [C#]、F#     | Web/MVC                               | 1.0        |
 | ASP.NET Core Web 應用程式                         | [webapp，razor](#web-options)   | [C#]         | Web/MVC/Razor 頁面                   | 2.2、2。0   |
@@ -194,7 +194,7 @@ dotnet new -h|--help
 
 ### <a name="classlib"></a>classlib
 
-- _*`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。 值：`netcoreapp<version>` 建立 .NET Core 類別庫或 `netstandard<version>` 建立 .NET Standard 類別庫。 預設值是 `netstandard2.0`。
 
@@ -212,7 +212,7 @@ dotnet new -h|--help
 
 ### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf、wpflib、wpfcustomcontrollib、wpfusercontrollib
 
-- _*`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。 預設值是 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
 
@@ -230,7 +230,7 @@ dotnet new -h|--help
 
 ### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms、winformslib
 
-- _*`--langVersion <VERSION_NUMBER>`**
+- _ *`--langVersion <VERSION_NUMBER>`**
 
   `LangVersion`在建立的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
 
@@ -244,7 +244,7 @@ dotnet new -h|--help
 
 ### <a name="worker-grpc"></a><a name="web-others"></a> worker、grpc
 
-- _*`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。 預設值是 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
 
@@ -260,7 +260,7 @@ dotnet new -h|--help
 
 ### <a name="mstest-xunit"></a><a name="test"></a> mstest、xunit
 
-- _*`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。 自 .NET Core 3.0 SDK 起提供的選項。
 
@@ -283,7 +283,7 @@ dotnet new -h|--help
 
 ### <a name="nunit"></a>Nunit
 
-- _*`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   指定要設為目標的 [架構](../../standard/frameworks.md) 。
 
@@ -308,7 +308,7 @@ dotnet new -h|--help
 
 ### <a name="page"></a>頁面
 
-- _*`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   產生之程式碼的命名空間。 預設值是 `MyApp.Namespace`。
 
@@ -320,7 +320,7 @@ dotnet new -h|--help
 
 ### <a name="viewimports-proto"></a><a name="namespace"></a> >viewimports.cshtml，proto
 
-- _*`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   產生之程式碼的命名空間。 預設值是 `MyApp.Namespace`。
 
@@ -328,7 +328,7 @@ dotnet new -h|--help
 
 ### <a name="blazorserver"></a>blazorserver
 
-- _*`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   要使用的驗證類型。 可能的值包括：
 
@@ -397,9 +397,113 @@ dotnet new -h|--help
 
 **_
 
+### <a name="blazorwasm"></a>blazorwasm
+
+- _ *`-f|--framework <FRAMEWORK>`**
+
+  指定要設為目標的 [架構](../../standard/frameworks.md) 。
+
+  下表根據您所使用的 SDK 版本號碼，列出預設值：
+
+  | SDK 版本 | 預設值   |
+  |-------------|-----------------|
+  | 5.0         | `net5.0`        |
+  | 3.1         | `netcoreapp3.1` |
+
+- **`--no-restore`**
+
+  建立專案時，不會執行隱含還原。
+
+- **`-ho|--hosted`**
+
+  包含應用程式的 ASP.NET Core 主機 Blazor WebAssembly 。
+
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
+
+  要使用的驗證類型。 可能的值包括：
+
+  - `None` - 無驗證 (預設值)。
+  - `Individual` - 個別驗證。
+  - `IndividualB2C` - 使用 Azure AD B2C 的個別驗證。
+  - `SingleOrg` - 單一租用戶的組織驗證。
+
+- **`--authority <AUTHORITY>`**
+
+  OIDC 提供者的授權單位。 搭配 `Individual` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+
+- **`--aad-b2c-instance <INSTANCE>`**
+
+  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://aadB2CInstance.b2clogin.com/`。
+
+- **`-ssp|--susi-policy-id <ID>`**
+
+  此專案的登入和註冊原則識別碼。 搭配 `IndividualB2C` 驗證使用。
+
+- **`--aad-instance <INSTANCE>`**
+
+  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+
+- **`--client-id <ID>`**
+
+  此專案的用戶端識別碼。 `IndividualB2C` `SingleOrg` `Individual` 在獨立案例中搭配、或驗證使用。 預設值是 `33333333-3333-3333-33333333333333333`。
+
+- **`--domain <DOMAIN>`**
+
+  目錄租使用者的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
+
+- **`--app-id-uri <URI>`**
+
+  您想要呼叫之伺服器 API 的應用程式識別碼 Uri。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `api.id.uri`。
+
+- **`--api-client-id <ID>`**
+
+  伺服器所裝載之 API 的用戶端識別碼。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
+
+- **`-s|--default-scope <SCOPE>`**
+
+  用戶端要求布建存取權杖所需的 API 範圍。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `user_impersonation`。
+
+- **`--tenant-id <ID>`**
+
+  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+
+- **`-r|--org-read-access`**
+
+  允許此應用程式讀取目錄的許可權。 只適用于 `SingleOrg` 驗證。
+
+- **`--exclude-launch-settings`**
+
+  從產生的範本中排除 *launchSettings.json* 。
+
+- **`-p|--pwa`**
+
+  產生漸進式 Web 應用程式 (PWA) 支援安裝和離線使用。
+
+- **`--no-https`**
+
+  關閉 HTTPS。 只有在 `Individual` 、或不是用於時，此選項才適用 `IndividualB2C` `SingleOrg` `--auth` 。
+
+- **`-uld|--use-local-db`**
+
+  指定應該使用 LocalDB，而不是 SQLite。 僅適用於 `Individual` 或 `IndividualB2C` 驗證。
+
+- **`--called-api-url <URL>`**
+
+  要從 web 應用程式呼叫的 API URL。 只有在 `SingleOrg` `IndividualB2C` 未指定 ASP.NET Core 主機的情況下，才適用或驗證。 預設值是 `https://graph.microsoft.com/v1.0/me`。
+
+- **`--calls-graph`**
+
+  指定 web 應用程式是否呼叫 Microsoft Graph。 只適用于 `SingleOrg` 驗證。
+
+- **`--called-api-scopes <SCOPES>`**
+
+  要求從 web 應用程式呼叫 API 的範圍。 只有在 `SingleOrg` `IndividualB2C` 未指定 ASP.NET Core 主機的情況下，才適用或驗證。 預設為 `user.read`。
+
+**_
+
 ### <a name="web"></a>Web
 
-- _*`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
   從產生的範本中排除 *launchSettings.json* 。
 
@@ -427,7 +531,7 @@ dotnet new -h|--help
 
 ### <a name="mvc-webapp"></a><a name="web-options"></a> mvc、webapp
 
-- _*`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   要使用的驗證類型。 可能的值包括：
 
@@ -517,7 +621,7 @@ dotnet new -h|--help
 
 ### <a name="angular-react"></a><a name="spa"></a> 角度、反應
 
-- _*`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   要使用的驗證類型。 自 .NET Core 3.0 SDK 起提供。
   
@@ -558,7 +662,7 @@ dotnet new -h|--help
 
 ### <a name="reactredux"></a>reactredux
 
-- _*`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
   從產生的範本中排除 *launchSettings.json* 。
 
@@ -586,7 +690,7 @@ dotnet new -h|--help
 
 ### <a name="razorclasslib"></a>razorclasslib
 
-- _*`--no-restore`**
+- _ *`--no-restore`**
 
   建立專案時，不會執行隱含還原。
 
@@ -598,7 +702,7 @@ dotnet new -h|--help
   
 ### <a name="webapi"></a>webapi
 
-- _*`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   要使用的驗證類型。 可能的值包括：
 
@@ -667,7 +771,7 @@ dotnet new -h|--help
 
 ### <a name="globaljson"></a>globaljson
 
-- _*`--sdk-version <VERSION_NUMBER>`**
+- _ *`--sdk-version <VERSION_NUMBER>`**
 
   指定要在檔案 *global.js* 中使用的 .NET Core SDK 版本。
 

@@ -2,12 +2,12 @@
 title: 使用 Visual Studio for Mac 建立 .NET Core 主控台應用程式
 description: 瞭解如何使用 Visual Studio for Mac 來建立 .NET Core 主控台應用程式。
 ms.date: 06/02/2020
-ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537596"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400522"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>教學課程：使用 Visual Studio for Mac 建立 .NET Core 主控台應用程式
 
@@ -16,8 +16,8 @@ ms.locfileid: "90537596"
 > [!NOTE]
 > 我們非常重視您的意見反應。 您有兩種方式可以提供意見反應給 Visual Studio for Mac 開發小組：
 >
-> * 在 Visual Studio for Mac 中， **Help**  >  **Report a Problem**從功能表中選取 [說明]，或從歡迎畫面回報**問題**，這會開啟用來提出錯誤報表的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/8/index.html)入口網站追蹤您的意見反應。
-> * 若要提出建議，請**Help**  >  從功能表中選取 [說明]**提供建議**，或從歡迎畫面**提供**建議，這會帶您前往[Visual Studio for Mac 開發人員社群網頁](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
+> * 在 Visual Studio for Mac 中， **Help**  >  **Report a Problem** 從功能表中選取 [說明]，或從歡迎畫面回報 **問題** ，這會開啟用來提出錯誤報表的視窗。 您可在[開發人員社群](https://aka.ms/feedback/report?space=41)入口網站追蹤您的意見反應。
+> * 若要提出建議，請 **Help**  >  從功能表中選取 [說明] **提供建議** ，或從歡迎畫面 **提供** 建議，這會帶您前往 [Visual Studio for Mac 開發人員社群網頁](https://aka.ms/feedback/suggest?space=41)。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -37,15 +37,15 @@ ms.locfileid: "90537596"
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Visual Studio for Mac [開始] 畫面上的 [新增] 按鈕":::
 
-1. 在 [**新增專案**] 對話方塊的 [Web]**和 [主控台**] 節點底下，選取 [**應用程式**]。 選取 [ **主控台應用程式** ] 範本，然後選取 **[下一步]**。
+1. 在 [ **新增專案** ] 對話方塊的 [Web] **和 [主控台** ] 節點底下，選取 [ **應用程式** ]。 選取 [ **主控台應用程式** ] 範本，然後選取 **[下一步]** 。
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="[新增專案] 範本清單":::
 
-1. 在 [**設定您的新主控台應用程式**] 對話方塊的 [**目標 Framework** ] 下拉式清單中，選取 [ **.net Core 3.1**]，然後選取 **[下一步]**。
+1. 在 [ **設定您的新主控台應用程式** ] 對話方塊的 [ **目標 Framework** ] 下拉式清單中，選取 [ **.net Core 3.1** ]，然後選取 **[下一步]** 。
 
    :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="選取目標 Framework":::
 
-1. 輸入 "HelloWorld" 作為 **專案名稱**，然後選取 [ **建立**]。
+1. 輸入 "HelloWorld" 作為 **專案名稱** ，然後選取 [ **建立** ]。
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-options.png" alt-text="設定新主控台應用程式對話方塊":::
 
@@ -82,7 +82,7 @@ namespace HelloWorld
 
 增強應用程式以提示使用者輸入其名稱，並將它與日期和時間一起顯示。
 
-1. 在 *Program.cs*中， `Main` 使用下列程式碼取代方法的內容，也就是呼叫的行 `Console.WriteLine` ：
+1. 在 *Program.cs* 中， `Main` 使用下列程式碼取代方法的內容，也就是呼叫的行 `Console.WriteLine` ：
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 

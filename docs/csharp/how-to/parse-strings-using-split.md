@@ -1,6 +1,6 @@
 ---
-title: '使用字串來剖析字串。分割 (c # 指南) '
-description: Split 方法會傳回從一組分隔符號分割的字串陣列。 它容易剖析字串。
+title: '使用字串分割字串 (c # 指南) '
+description: Split 方法會傳回從一組分隔符號分割的字串陣列。 它是從字串中解壓縮子字串的簡單方法。
 ms.date: 01/03/2018
 helpviewer_keywords:
 - splitting strings [C#]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: ee0921c4d3c931e2f677ec0bb8458992afc57d57
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 5361a3c60905edd19b180c5ddb14064a85f64337
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342640"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400496"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>如何使用字串剖析字串。以 C 分隔\#
+# <a name="how-to-separate-strings-using-stringsplit-in-c"></a>如何使用字串分隔字串。以 C 分隔\#
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> 方法會根據一或多個分隔符號來分割輸入字串，以建立子字串陣列。 這種方法通常是在單字邊界上分隔字串的最簡單方式。 它也可用來將字串分割成其他特定字元或字串。
 
@@ -48,9 +48,9 @@ ms.locfileid: "93342640"
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs" id="Snippet5":::
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [從字串中解壓縮元素](../../standard/base-types/parse-strings.md)
+- [從字串擷取元素](../../standard/base-types/divide-up-strings.md)
 - [C# 程式設計手冊](../programming-guide/index.md)
 - [字串](../programming-guide/strings/index.md)
 - [.NET 正則運算式](../../standard/base-types/regular-expressions.md)
