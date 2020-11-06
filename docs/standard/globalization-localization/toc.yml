@@ -12,16 +12,15 @@
     - name: 不區分文化特性 (Culture) 的字串作業
       href: culture-insensitive-string-operations.md
       items:
-        - name: 執行不區分文化特性 (Culture) 的字串作業
+        - name: 概觀
           href: performing-culture-insensitive-string-operations.md
-          items:
-            - name: 字串比較
-              href: performing-culture-insensitive-string-comparisons.md
-            - name: 大小寫變更
-              href: performing-culture-insensitive-case-changes.md
-            - name: 集合中的字串作業
-              href: performing-culture-insensitive-string-operations-in-collections.md
-            - name: 陣列中的字串作業
-              href: performing-culture-insensitive-string-operations-in-arrays.md
+        - name: 字串比較
+          href: performing-culture-insensitive-string-comparisons.md
+        - name: 大小寫變更
+          href: performing-culture-insensitive-case-changes.md
+        - name: 集合中的字串作業
+          href: performing-culture-insensitive-string-operations-in-collections.md
+        - name: 陣列中的字串作業
+          href: performing-culture-insensitive-string-operations-in-arrays.md
     - name: 開發世界性應用程式的最佳做法
       href: best-practices-for-developing-world-ready-apps.md

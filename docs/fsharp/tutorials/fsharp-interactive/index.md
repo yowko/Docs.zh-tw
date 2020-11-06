@@ -4,12 +4,12 @@ description: '瞭解如何使用 F# 互動 (dotnet fsi) ，以互動方式在主
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342679"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400862"
 ---
 # <a name="interactive-programming-with-f"></a>使用 F 的互動式程式設計\#
 
@@ -17,7 +17,7 @@ F# 互動 (dotnet fsi) 用來以互動方式在主控台執行 F # 程式碼，�
 
 若要從主控台執行 F# 互動，請執行 `dotnet fsi` 。 您將可以 `dotnet fsi` 在任何 .NET SDK 中找到。
 
-如需可用命令列選項的資訊，請參閱 [F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)。
+如需可用命令列選項的相關資訊，請參閱 [F# 互動選項](../../language-reference/fsharp-interactive-options.md)。
 
 ## <a name="executing-code-directly-in-f-interactive"></a>直接在 F# 互動中執行程式碼
 
@@ -62,7 +62,7 @@ val it : unit = ()
 >
 ```
 
-這會保留程式碼的格式，而且會有雙 semiclon (`;;`) 終止輸入。 F# 互動接著評估程式碼並印出結果！
+程式碼的格式會保留下來，且 (`;;`) 終止輸入的雙重分號。 F# 互動接著評估程式碼並印出結果！
 
 ## <a name="scripting-with-f"></a>使用 F 編寫腳本\#
 
@@ -204,15 +204,15 @@ from
 fsi
 ```
 
-請注意，您也可以使用 `System.Environment.GetCommandLineArgs()` 來存取相同的引數。
+您也可以使用 `System.Environment.GetCommandLineArgs()` 來存取相同的引數。
 
 ## <a name="f-interactive-directive-reference"></a>F# 互動指示詞參考
 
 `#r`先前看到的和指示詞 `#load` 只能在 F# 互動中使用。 只有 F# 互動有幾個指示詞可用：
 
-|指示詞|Description|
+|指示詞|說明|
 |---------|-----------|
-|`#r "nuget:..."`|從 Nuget 參考封裝|
+|`#r "nuget:..."`|從 NuGet 參考封裝|
 |`#r "assembly-name.dll"`|參考磁片上的元件|
 |`#load "file-name.fsx"`|讀取原始程式檔、進行編譯，並加以執行。|
 |`#help`|顯示可用指示詞的詳細資訊。|
@@ -245,10 +245,10 @@ F# Interactive 會嘗試編譯程式碼，如果成功的話，它會執行程�
 
 在 Visual Studio 中執行 F# Interactive 時，會與專案分開執行，因此，舉例來說，除非您將函式的程式碼複製到 [互動] 視窗，否則無法使用在 F# Interactive 中專案內所定義的建構。
 
-您可以調整設定來控制 F# Interactive 命令列引數 (選項)。 在 [工具] 功能表上，選取 [選項...]，然後展開 [F# 工具]。 您只能變更 F# Interactive 選項和 [64 位元 F# Interactive] 這兩項設定，而且只有在 64 位元電腦上執行 F# Interactive 時才相關。 這項設定會決定您是否要執行專用的64位版本的 **fsi.exe** 或 **fsianycpu.exe** ，其使用電腦架構來判斷是否以32位或64位進程的形式執行。
+您可以調整設定， (選項) 來控制 F# 互動命令列引數。 在 [工具] 功能表上，選取 [選項...]，然後展開 [F# 工具]。 您只能變更 F# Interactive 選項和 [64 位元 F# Interactive] 這兩項設定，而且只有在 64 位元電腦上執行 F# Interactive 時才相關。 這項設定會決定您是否要執行專用的64位版本的 **fsi.exe** 或 **fsianycpu.exe** ，其使用電腦架構來判斷是否以32位或64位進程的形式執行。
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|標題|說明|
 |-----|-----------|
 |[F# Interactive 選項](../../language-reference/fsharp-interactive-options.md)|描述 F# 互動、fsi.exe 的命令列語法和選項。|
