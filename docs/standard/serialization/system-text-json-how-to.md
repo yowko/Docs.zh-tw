@@ -1,21 +1,22 @@
 ---
 title: '如何使用 c # 序列化和還原序列化 JSON-.NET'
-description: 瞭解如何 System.Text.Json 在 .net 中使用命名空間進行序列化，並從 JSON 還原序列化。 其中包含範例程式碼。
-ms.date: 10/09/2020
+description: 瞭解如何 System.Text.Json 在 .net 中使用命名空間進行序列化，並從 JSON 還原序列化。 包含範例程式碼。
+ms.date: 11/05/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 0fda248b7d2e5a7cfa748447d0265565cb160b7e
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: 2c1358b2b63a92cb50b853043adbfaae23ccd897
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997778"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329868"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化 (封送處理和 unmarshal) JSON
 
@@ -38,7 +39,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 ```
 
-<xref:System.Runtime.Serialization>目前不支援命名空間中的屬性 `System.Text.Json` 。
+<xref:System.Runtime.Serialization>不支援命名空間中的屬性 `System.Text.Json` 。
 
 ## <a name="how-to-write-net-objects-to-json-serialize"></a>如何將 .NET 物件寫入 JSON (序列化) 
 
@@ -115,15 +116,44 @@ using System.Text.Json.Serialization;
 使用以字串為基礎的方法，序列化為 UTF-8 的速度大約是5-10%。 差異是因為 (為 UTF-8 的位元組) 不需要轉換成字串 (UTF-16) 。
 
 ## <a name="serialization-behavior"></a>序列化行為
+::: zone pivot="dotnet-5-0"
 
-* 依預設，所有公用屬性都會進行序列化。 您可以 [指定要排除的屬性](#exclude-properties-from-serialization)。
+* 依預設，所有公用屬性都會進行序列化。 您可以 [指定要忽略的屬性](#ignore-properties)。
+* [預設編碼器](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default)會將非 ascii 字元、ASCII 範圍內的 HTML 機密字元，以及必須根據[RFC 8259 JSON 規格](https://tools.ietf.org/html/rfc8259#section-7)進行換用的字元進行轉義。
+* 根據預設，JSON 是縮減。 您可以 [整齊列印 JSON](#serialize-to-formatted-json)。
+* 根據預設，JSON 名稱的大小寫會與 .NET 名稱相符。 您可以 [自訂 JSON 名稱大小寫](#customize-json-names-and-values)。
+* 依預設，會偵測到迴圈參考並擲回例外狀況。 您可以 [保留參考並處理迴圈參考](#preserve-references-and-handle-circular-references)。
+* 依預設，會忽略 [欄位](../../csharp/programming-guide/classes-and-structs/fields.md) 。 您可以 [包含欄位](#include-fields)。
+
+當您 System.Text.Json 在 ASP.NET Core 應用程式中間接使用時，會有一些預設行為不同。 如需詳細資訊，請參閱 [JsonSerializerOptions 的 Web 預設值](#web-defaults-for-jsonserializeroptions)。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* 依預設，所有公用屬性都會進行序列化。 您可以 [指定要忽略的屬性](#ignore-properties)。
 * [預設編碼器](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default)會將非 ascii 字元、ASCII 範圍內的 HTML 機密字元，以及必須根據[RFC 8259 JSON 規格](https://tools.ietf.org/html/rfc8259#section-7)進行換用的字元進行轉義。
 * 根據預設，JSON 是縮減。 您可以 [整齊列印 JSON](#serialize-to-formatted-json)。
 * 根據預設，JSON 名稱的大小寫會與 .NET 名稱相符。 您可以 [自訂 JSON 名稱大小寫](#customize-json-names-and-values)。
 * 偵測到迴圈參考並擲回例外狀況。
-* 目前會排除 [欄位](../../csharp/programming-guide/classes-and-structs/fields.md) 。
+* [欄位](../../csharp/programming-guide/classes-and-structs/fields.md) 會被忽略。
+::: zone-end
 
 支援的類型包括：
+::: zone pivot="dotnet-5-0"
+
+* 對應至 JavaScript 基本專案的 .NET 基本專案，例如數數值型別、字串和布林值。
+* [ (poco) ](https://en.wikipedia.org/wiki/Plain_old_CLR_object)的使用者定義簡單的 CLR 物件。
+* 一維和不規則陣列 (`T[][]`) 。
+* 下列命名空間中的集合和字典。
+  * <xref:System.Collections>
+  * <xref:System.Collections.Generic>
+  * <xref:System.Collections.Immutable>
+  * <xref:System.Collections.Concurrent>
+  * <xref:System.Collections.Specialized>
+  * <xref:System.Collections.ObjectModel>
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
 
 * 對應至 JavaScript 基本專案的 .NET 基本專案，例如數數值型別、字串和布林值。
 * [ (poco) ](https://en.wikipedia.org/wiki/Plain_old_CLR_object)的使用者定義簡單的 CLR 物件。
@@ -133,6 +163,10 @@ using System.Text.Json.Serialization;
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
+  * <xref:System.Collections.Concurrent>
+  * <xref:System.Collections.Specialized>
+  * <xref:System.Collections.ObjectModel>
+::: zone-end
 
 您可以 [執行自訂轉換器](system-text-json-converters-how-to.md) 來處理其他類型，或是提供內建轉換器不支援的功能。
 
@@ -164,16 +198,33 @@ using System.Text.Json.Serialization;
 
 將 JSON 還原序列化時，會套用下列行為：
 
+::: zone pivot="dotnet-5-0"
+
 * 依預設，屬性名稱比對會區分大小寫。 您可以 [指定不區分大小寫](#case-insensitive-property-matching)。
 * 如果 JSON 包含唯讀屬性的值，則會忽略此值，而且不會擲回例外狀況。
-* 還原序列化的程式化：
-  - 在 .NET Core 3.0 和3.1 上，可將無參數的函式（可以是公用、內部或私用）用於還原序列化。
-  - 在 .NET 5.0 和更新版本中，序列化程式會忽略非公用的函式。 但是，如果無參數的函式無法使用，則可以使用參數化的函式。
+* 序列化程式會忽略非公用的函式。
+* 支援還原序列化至不可變的物件或唯讀屬性。 請參閱 [不可變的類型和記錄](#immutable-types-and-records)。
+* 依預設，會將列舉支援為數字。 您可以將 [列舉名稱序列化為字串](#enums-as-strings)。
+* 依預設，會忽略欄位。 您可以 [包含欄位](#include-fields)。
+* 根據預設，JSON 中的批註或尾端逗號會擲回例外狀況。 您可以 [允許批註和結尾的逗號](#allow-comments-and-trailing-commas)。
+* [預設的最大深度](xref:System.Text.Json.JsonReaderOptions.MaxDepth)為64。
+
+當您 System.Text.Json 在 ASP.NET Core 應用程式中間接使用時，會有一些預設行為不同。 如需詳細資訊，請參閱 [JsonSerializerOptions 的 Web 預設值](#web-defaults-for-jsonserializeroptions)。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* 依預設，屬性名稱比對會區分大小寫。 您可以 [指定不區分大小寫](#case-insensitive-property-matching)。 ASP.NET Core apps [預設會指定不區分大小寫](#web-defaults-for-jsonserializeroptions)。
+* 如果 JSON 包含唯讀屬性的值，則會忽略此值，而且不會擲回例外狀況。
+* 無參數的函式（可以是公用、內部或私用）用於還原序列化。
 * 不支援還原序列化為不可變的物件或唯讀屬性。
 * 依預設，會將列舉支援為數字。 您可以將 [列舉名稱序列化為字串](#enums-as-strings)。
 * 不支援欄位。
 * 根據預設，JSON 中的批註或尾端逗號會擲回例外狀況。 您可以 [允許批註和結尾的逗號](#allow-comments-and-trailing-commas)。
 * [預設的最大深度](xref:System.Text.Json.JsonReaderOptions.MaxDepth)為64。
+
+當您 System.Text.Json 在 ASP.NET Core 應用程式中間接使用時，會有一些預設行為不同。 如需詳細資訊，請參閱 [JsonSerializerOptions 的 Web 預設值](#web-defaults-for-jsonserializeroptions)。
+::: zone-end
 
 您可以 [執行自訂轉換器](system-text-json-converters-how-to.md) ，以提供內建轉換器不支援的功能。
 
@@ -194,6 +245,20 @@ using System.Text.Json.Serialization;
   "Summary": "Hot"
 }
 ```
+
+## <a name="include-fields"></a>包含欄位
+
+::: zone pivot="dotnet-5-0"
+<xref:System.Text.Json.JsonSerializerOptions.IncludeFields?displayProperty=nameWithType>當序列化或還原序列化時，請使用全域設定或[[JsonInclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute)屬性來包含欄位，如下列範例所示：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/Fields.cs" highlight="15,17,19,31":::
+
+若要忽略唯讀欄位，請使用 <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> 全域設定。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+System.Text.Json在 .Net Core 3.1 中不支援欄位。 [自訂轉換器](system-text-json-converters-how-to.md) 可以提供這種功能。
+::: zone-end
 
 ## <a name="customize-json-names-and-values"></a>自訂 JSON 名稱和值
 
@@ -339,15 +404,26 @@ JSON 屬性命名原則：
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripEnumAsString.cs?name=SnippetDeserialize)]
 
-## <a name="exclude-properties-from-serialization"></a>從序列化排除屬性
+## <a name="ignore-properties"></a>略過屬性
 
-依預設，所有公用屬性都會進行序列化。 如果您不想讓某些部分出現在 JSON 輸出中，您有數個選項。 本節說明如何排除：
+依預設，所有公用屬性都會進行序列化。 如果您不想讓某些部分出現在 JSON 輸出中，您有數個選項。 本節說明如何忽略：
 
-* [個別屬性](#exclude-individual-properties)
-* [所有唯讀屬性](#exclude-all-read-only-properties)
-* [所有 null 值屬性](#exclude-all-null-value-properties)
+::: zone pivot="dotnet-5-0"
 
-### <a name="exclude-individual-properties"></a>排除個別屬性
+* [個別屬性](#ignore-individual-properties)
+* [所有唯讀屬性](#ignore-all-read-only-properties)
+* [所有 null 值屬性](#ignore-all-null-value-properties)
+* [所有預設值屬性](#ignore-all-default-value-properties)
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* [個別屬性](#ignore-individual-properties)
+* [所有唯讀屬性](#ignore-all-read-only-properties)
+* [所有 null 值屬性](#ignore-all-null-value-properties)
+::: zone-end
+
+### <a name="ignore-individual-properties"></a>略過個別屬性
 
 若要忽略個別的屬性，請使用 [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) 屬性。
 
@@ -362,9 +438,22 @@ JSON 屬性命名原則：
 }
 ```
 
-### <a name="exclude-all-read-only-properties"></a>排除所有唯讀屬性
+::: zone pivot="dotnet-5-0"
+您可以藉由設定 [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) 屬性的屬性來指定條件排除 `Condition` 。 <xref:System.Text.Json.Serialization.JsonIgnoreCondition>列舉提供下列選項：
 
-如果屬性包含公用 getter 而非公用 setter，則該屬性為唯讀。 若要排除所有唯讀屬性，請將設定 <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> 為 `true` ，如下列範例所示：
+* `Always` -一律會忽略屬性。 如果未 `Condition` 指定，則會假設為這個選項。
+* `Never` -無論 `DefaultIgnoreCondition` 、 `IgnoreReadOnlyProperties` 和全域設定為何，一律會將屬性序列化和還原序列化 `IgnoreReadOnlyFields` 。
+* `WhenWritingDefault` -如果是參考型別或實值型別，則會忽略序列化的屬性 `null` `default` 。
+* `WhenWritingNull` -如果是參考型別，則會忽略序列化的屬性 `null` 。
+
+下列範例說明如何使用 [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) 屬性的 `Condition` 屬性：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/JsonIgnoreAttributeExample.cs" highlight="10,13,16":::
+::: zone-end
+
+### <a name="ignore-all-read-only-properties"></a>忽略所有唯讀屬性
+
+如果屬性包含公用 getter 而非公用 setter，則該屬性為唯讀。 若要在序列化時忽略所有唯讀屬性，請將設定 <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> 為 `true` ，如下列範例所示：
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeExcludeReadOnlyProperties.cs?name=SnippetSerialize)]
 
@@ -382,9 +471,21 @@ JSON 屬性命名原則：
 
 此選項只適用于序列化。 在還原序列化期間，預設會忽略唯讀屬性。
 
-### <a name="exclude-all-null-value-properties"></a>排除所有 null 值屬性
+::: zone pivot="dotnet-5-0"
+此選項只適用于屬性。 若要在序列化 [欄位](#include-fields)時忽略唯讀欄位，請使用 <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyFields%2A?displayProperty=nameWithType> 全域設定。
+::: zone-end
 
-若要排除所有 null 值屬性，請將 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> 屬性設定為 `true` ，如下列範例所示：
+### <a name="ignore-all-null-value-properties"></a>忽略所有 null 值屬性
+
+::: zone pivot="dotnet-5-0"
+若要忽略所有 null 值屬性，請將 <xref:System.Text.Json.JsonSerializerOptions.DefaultIgnoreCondition> 屬性設定為 <xref:System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull> ，如下列範例所示：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/IgnoreNullOnSerialize.cs" highlight="28":::
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+若要在序列化時忽略所有 null 值屬性，請將 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues> 屬性設定為 `true` ，如下列範例所示：
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/SerializeExcludeNullValueProperties.cs?name=SnippetSerialize)]
 
@@ -392,9 +493,9 @@ JSON 屬性命名原則：
 
 |屬性 |值  |
 |---------|---------|
-| 日期    | 8/1/2019 12:00:00 AM-07:00|
+| Date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 總結| null|
+| 摘要| null|
 
 ```json
 {
@@ -403,7 +504,21 @@ JSON 屬性命名原則：
 }
 ```
 
-這種設定會套用至序列化和還原序列化。 如需其對還原序列化之影響的詳細資訊，請參閱還原 [序列化時忽略 null](#ignore-null-when-deserializing)。
+::: zone-end
+
+### <a name="ignore-all-default-value-properties"></a>略過所有預設值屬性
+
+::: zone pivot="dotnet-5-0"
+若要避免在數值型別屬性中序列化預設值，請將 <xref:System.Text.Json.JsonSerializerOptions.DefaultIgnoreCondition> 屬性設定為 <xref:System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingDefault> ，如下列範例所示：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/IgnoreValueDefaultOnSerialize.cs" highlight="28":::
+::: zone-end
+
+這 `WhenWritingDefault` 項設定也會防止 null 值參考型別屬性的序列化。
+
+::: zone pivot="dotnet-core-3-1"
+沒有內建的方法可防止序列化 .NET Core 3.1 中具有值型別預設值的屬性 System.Text.Json 。
+::: zone-end
 
 ## <a name="customize-character-encoding"></a>自訂字元編碼
 
@@ -467,7 +582,7 @@ JSON 屬性命名原則：
 > 相較于預設編碼器， `UnsafeRelaxedJsonEscaping` 編碼程式更寬鬆，可讓字元通過非重設密碼：
 >
 > * 它不會對 HTML 敏感的字元（例如、、和）進行換用 `<` `>` `&` `'` 。
-> * 它不會針對 XSS 或資訊洩漏攻擊提供任何額外的深度防禦保護，例如，可能是因為用戶端和伺服器 disagreeing 在 *字元集*上所產生的。
+> * 它不會針對 XSS 或資訊洩漏攻擊提供任何額外的深度防禦保護，例如，可能是因為用戶端和伺服器 disagreeing 在 *字元集* 上所產生的。
 >
 > 只有在已知用戶端會將產生的承載解讀為 UTF-8 編碼的 JSON 時，才使用 unsafe 編碼器。 例如，如果伺服器正在傳送回應標頭，您可以使用它 `Content-Type: application/json; charset=utf-8` 。 絕不允許將原始 `UnsafeRelaxedJsonEscaping` 輸出發出至 HTML 網頁或 `<script>` 元素。
 
@@ -578,7 +693,7 @@ JSON 屬性命名原則：
 }
 ```
 
-如需多型序列化的詳細資訊，以及有關還原**序列化**的詳細**資訊，請**參閱[如何從遷移 Newtonsoft.Json System.Text.Json 至](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
+如需多型序列化的詳細資訊，以及有關還原 **序列化** 的詳細 **資訊，請** 參閱 [如何從遷移 Newtonsoft.Json System.Text.Json 至](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
 
 ## <a name="allow-comments-and-trailing-commas"></a>允許批註和尾端逗號
 
@@ -640,17 +755,17 @@ JSON 屬性命名原則：
 }
 ```
 
-如果您將顯示的 JSON 還原序列化為顯示的類型， `DatesAvailable` 和 `SummaryWords` 屬性就不會有任何地方，而且會遺失。 若要捕獲額外的資料，例如這些屬性，請將 [JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) 屬性套用至類型 `Dictionary<string,object>` 或的屬性 `Dictionary<string,JsonElement>` ：
+如果您將顯示的 JSON 還原序列化為顯示的類型， `DatesAvailable` 和 `SummaryWords` 屬性就不會有任何地方，而且會遺失。 若要捕獲額外的資料（例如這些屬性），請將 [[JsonExtensionData]](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) 屬性套用至類型或的屬性 `Dictionary<string,object>` `Dictionary<string,JsonElement>` ：
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithExtensionData)]
 
 當您將稍早所示的 JSON 還原序列化為此範例類型時，額外的資料會變成屬性的索引鍵/值組 `ExtensionData` ：
 
-|屬性 |值  |注意  |
+|屬性 |值  |備忘錄  |
 |---------|---------|---------|
-| 日期    | 8/1/2019 12:00:00 AM-07:00||
+| Date    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | JSON)  (區分大小寫不符 `temperatureCelsius` ，因此未設定屬性。 |
-| 總結 | 經常性存取層 ||
+| 摘要 | 經常性存取層 ||
 | ExtensionData | temperatureCelsius：25 |因為大小寫不相符，所以這個 JSON 屬性是一個額外的，並且會成為字典中的索引鍵/值組。|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的額外屬性會變成成對的索引鍵/值，並以陣列作為值物件。|
 | |SummaryWords:<br>非經常性<br>風<br>潮濕 |JSON 中的額外屬性會變成成對的索引鍵/值，並以陣列作為值物件。|
@@ -677,33 +792,138 @@ JSON 屬性命名原則：
 
 請注意， `ExtensionData` 屬性名稱不會出現在 JSON 中。 此行為可讓 JSON 進行往返，而不會遺失任何額外的資料，否則不會還原序列化。
 
-## <a name="ignore-null-when-deserializing"></a>還原序列化時忽略 null
+## <a name="preserve-references-and-handle-circular-references"></a>保留參考並處理迴圈參考
 
-根據預設，如果 JSON 中的屬性為 null，則目標物件中的對應屬性會設定為 null。 在某些情況下，目標屬性可能會有預設值，而且您不想要 null 值來覆寫預設值。
+::: zone pivot="dotnet-5-0"
 
-例如，假設下列程式碼代表您的目標物件：
+若要保留參考並處理迴圈參考，請將設定 <xref:System.Text.Json.JsonSerializerOptions.ReferenceHandler%2A> 為 <xref:System.Text.Json.Serialization.ReferenceHandler.Preserve%2A> 。 這項設定會導致下列行為：
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
+* 序列化時：
 
-假設下列 JSON 已還原序列化：
+  撰寫複雜型別時，序列化程式也會將中繼資料屬性寫入 (`$id` 、 `$values` 和 `$ref`) 。
 
-```json
-{
-  "Date": "2019-08-01T00:00:00-07:00",
-  "TemperatureCelsius": 25,
-  "Summary": null
-}
-```
+* 還原序列化時：
 
-還原序列化之後， `Summary` 物件的屬性 `WeatherForecastWithDefault` 為 null。
+  雖然不是必要的) ，但還原序列化程式會嘗試瞭解中繼資料，但 (的預期。
 
-若要變更此行為，請將設定 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> 為 `true` ，如下列範例所示：
+下列程式碼說明如何使用此 `Preserve` 設定。
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeIgnoreNull.cs?name=SnippetDeserialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/PreserveReferences.cs" highlight="34":::
 
-使用這個選項時， `Summary` 物件的屬性 `WeatherForecastWithDefault` 是還原序列化之後的預設值「沒有摘要」。
+這項功能不能用來保留實數值型別或不可變的類型。 在還原序列化時，會在讀取整個裝載之後，建立不可變型別的實例。 因此，如果它的參考出現在 JSON 承載內，就不可能還原序列化相同的實例。
 
-只有在 JSON 中的 Null 值有效時，才會予以忽略。 不可為 null 數值型別的 Null 值會導致例外狀況。
+如果是實值型別、不可變的型別和陣列，則不會序列化任何參考中繼資料。 在還原序列化時，如果找到或，則會擲回例外狀況 `$ref` `$id` 。 不過，實值型別 `$id` 會忽略 (，而 `$values` 在集合的情況下) ，讓您可以還原序列化使用序列化的承載 Newtonsoft.Json 。  Newtonsoft.Json 會序列化這類類型的中繼資料。
+
+若要判斷物件是否相等， System.Text.Json <xref:System.Collections.Generic.ReferenceEqualityComparer.Instance%2A?displayProperty=nameWithType> 請使用，它會使用參考相等 (<xref:System.Object.ReferenceEquals(System.Object,System.Object)?displayProperty=nameWithType>) 而不是 <xref:System.Object.Equals(System.Object)?displayProperty=nameWithType> 在比較兩個物件實例時 (值相等。
+
+如需如何序列化和還原序列化參考的詳細資訊，請參閱 <xref:System.Text.Json.Serialization.ReferenceHandler.Preserve%2A?displayProperty=nameWithType> 。
+
+<xref:System.Text.Json.Serialization.ReferenceResolver>類別會定義在序列化和還原序列化時保留參考的行為。 建立衍生類別以指定自訂行為。 如需範例，請參閱 [GuidReferenceResolver](https://github.com/dotnet/docs/blob/9d5e88edbd7f12be463775ffebbf07ac8415fe18/docs/standard/serialization/snippets/system-text-json-how-to-5-0/csharp/GuidReferenceResolverExample.cs)。
+
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+System.Text.Json 在 .NET Core 3.1 中，只支援以傳值方式序列化，並擲回迴圈參考的例外狀況。
+::: zone-end
+
+## <a name="allow-or-write-numbers-in-quotes"></a>以引號允許或寫入數位
+
+::: zone pivot="dotnet-5-0"
+
+某些序列化程式會將數位編碼為 JSON 字串， (以引號括住) 。 例如： `{"DegreesCelsius":"23"}` 而不是 `{"DegreesCelsius":23}` 。 若要序列化引號中的數位，或在整個輸入物件圖形中接受以引號括住的數位，請設定 <xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A?displayProperty=nameWithType> 如下列範例所示：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/QuotedNumbers.cs" highlight="27-28":::
+
+當您 System.Text.Json 透過 ASP.NET Core 間接使用時，當還原序列化時，會允許括住的數位，因為 ASP.NET Core 指定 [web 預設選項](xref:System.Text.Json.JsonSerializerDefaults.Web)。
+
+若要允許或寫入特定屬性、欄位或類型的引號號碼，請使用 [[JsonNumberHandling]](xref:System.Text.Json.Serialization.JsonNumberHandlingAttribute) 屬性。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+System.Text.Json 在 .NET Core 3.1 中，不支援序列化或還原序列化以引號括住的數位。 如需詳細資訊，請參閱 [允許或寫入以引號括](system-text-json-migrate-from-newtonsoft-how-to.md#allow-or-write-numbers-in-quotes)住的數位。
+::: zone-end
+
+## <a name="immutable-types-and-records"></a>不可變的類型和記錄
+
+::: zone pivot="dotnet-5-0"
+System.Text.Json 可以使用參數化的函式，讓您可以還原序列化不可變的類別或結構。 針對類別，如果唯一的函式是參數化的，則會使用該函數。 若為結構或具有多個函式的類別，請套用 [[JsonConstructor]](xref:System.Text.Json.Serialization.JsonConstructorAttribute.%23ctor%2A) 屬性，以指定要使用的類別。 未使用屬性時，一律會使用公用無參數的函式（如果有的話）。 屬性只能搭配公用的函式使用。 下列範例會使用 `[JsonConstructor]` 屬性：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/ImmutableTypes.cs" highlight="13":::
+
+也支援 c # 9 中的記錄，如下列範例所示：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/Records.cs":::
+
+針對不可變的類型，因為其所有屬性 setter 都非公用，請參閱下一節有關 [非公用屬性存取](#non-public-property-accessors)子的資訊。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`JsonConstructorAttribute` 和 c # 9 記錄支援在 .NET Core 3.1 中無法使用。
+::: zone-end
+
+## <a name="non-public-property-accessors"></a>非公用屬性存取子
+
+::: zone pivot="dotnet-5-0"
+若要允許使用非公用屬性存取子，請使用 [[JsonInclude]](xref:System.Text.Json.Serialization.JsonIncludeAttribute) 屬性，如下列範例所示：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/NonPublicAccessors.cs" highlight="12,15":::
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+.NET Core 3.1 不支援非公用屬性存取子。 如需詳細資訊，請參閱「 [從 Newtonsoft.Json 文章遷移](system-text-json-migrate-from-newtonsoft-how-to.md#non-public-property-setters-and-getters)」。
+::: zone-end
+
+## <a name="copy-jsonserializeroptions"></a>複製 JsonSerializerOptions
+
+::: zone pivot="dotnet-5-0"
+有 [JsonSerializerOptions 的函式] (x： System.Text.Json 。JsonSerializerOptions。% 23ctor (System.Text.Json 。JsonSerializerOptions) # A3，可讓您使用與現有實例相同的選項來建立新的實例，如下列範例所示：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CopyOptions.cs" highlight="29":::
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+`JsonSerializerOptions`在 .Net Core 3.1 中無法使用採用現有實例的函式。
+::: zone-end
+
+## <a name="web-defaults-for-jsonserializeroptions"></a>JsonSerializerOptions 的 Web 預設值
+
+::: zone pivot="dotnet-5-0"
+以下是針對 web 應用程式具有不同預設值的選項：
+
+* <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive%2A> = `true`
+* <xref:System.Text.Json.JsonNamingPolicy> = <xref:System.Text.Json.JsonNamingPolicy.CamelCase>
+* <xref:System.Text.Json.JsonSerializerOptions.NumberHandling%2A> = <xref:System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString>
+
+有一個 [JsonSerializerOptions 的函式] (x： System.Text.Json 。JsonSerializerOptions。% 23ctor (System.Text.Json 。JsonSerializerDefaults) ？ view = net-5.0&preserve-view = true) 可讓您建立新的實例，其中包含 ASP.NET Core 用於 web 應用程式的預設選項，如下列範例所示：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/OptionsDefaults.cs" highlight="24":::
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+以下是針對 web 應用程式具有不同預設值的選項：
+
+* <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive%2A> = `true`
+* <xref:System.Text.Json.JsonNamingPolicy> = <xref:System.Text.Json.JsonNamingPolicy.CamelCase>
+
+`JsonSerializerOptions`指定一組預設值的函式在 .Net Core 3.1 中無法使用。
+::: zone-end
+
+## <a name="httpclient-and-httpcontent-extension-methods"></a>HttpClient 和 HttpContent 擴充方法
+
+::: zone pivot="dotnet-5-0"
+
+從網路序列化和還原序列化 JSON 承載是常見的作業。 [HttpClient](xref:System.Net.Http.Json.HttpClientJsonExtensions)和[HttpContent](xref:System.Net.Http.Json.HttpContentJsonExtensions)上的擴充方法可讓您在一行程式碼中進行這些作業。 這些擴充方法會使用 [web 預設值進行 JsonSerializerOptions](#web-defaults-for-jsonserializeroptions)。
+
+下列範例說明如何使用 <xref:System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync%2A?displayProperty=nameWithType> 和 <xref:System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync%2A?displayProperty=nameWithType> ：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/HttpClientExtensionMethods.cs" highlight="23,30":::
+
+此外，也有適用 System.Text.Json 于 [HttpContent](xref:System.Net.Http.Json.HttpContentJsonExtensions)的擴充方法。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+和上的擴充方法在 `HttpClient` `HttpContent` System.Text.Json .net Core 3.1 中無法使用。
+::: zone-end
 
 ## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader、Utf8JsonWriter 和 JsonDocument
 
@@ -796,17 +1016,17 @@ JSON 屬性命名原則：
 
 使用 `Utf8JsonReader` 從資料流程讀取時，適用下列規則：
 
-* 包含部分 JSON 承載的緩衝區必須至少與它內最大的 JSON 權杖很大，讓讀取器可以進行向前的進度。
-* 緩衝區必須至少與 JSON 內的最大泛空白字元順序一樣大。
+* 包含部分 JSON 承載的緩衝區必須至少與它內最大的 JSON 權杖一樣大，讓讀取器可以進行向前的進度。
+* 緩衝區至少必須和 JSON 內的最大泛空白字元順序一樣大。
 * 讀取器不會追蹤已讀取的資料，直到它完全讀取 JSON 承載中的下一個 <xref:System.Text.Json.Utf8JsonReader.TokenType%2A> 。 因此，當緩衝區中有剩餘的位元組時，您必須再次將它們傳遞給讀取器。 您可以使用 <xref:System.Text.Json.Utf8JsonReader.BytesConsumed%2A> 來判斷剩餘的位元組數目。
 
 下列程式碼說明如何從資料流程讀取。 此範例會顯示 <xref:System.IO.MemoryStream> 。 類似的程式碼可搭配使用 <xref:System.IO.FileStream> ，但在 `FileStream` 開始時包含 utf-8 BOM 時除外。 在這種情況下，您必須先從緩衝區中去除這三個位元組，再將剩餘的位元組傳遞給 `Utf8JsonReader` 。 否則，讀取器會擲回例外狀況，因為 BOM 不會被視為 JSON 的有效部分。
 
-範例程式碼的開頭為 4 KB 的緩衝區，每次發現大小不夠大而無法容納完整的 JSON 權杖時，便會將緩衝區大小加倍，讓讀取器在 JSON 承載上進行向前進展。 只有當您設定非常小的初始緩衝區大小（例如10個位元組）時，程式碼片段中提供的 JSON 範例才會觸發緩衝區大小的增加。 如果您將初始緩衝區大小設定為10，則 `Console.WriteLine` 語句會說明緩衝區大小增加的原因和影響。 在 4 KB 的初始緩衝區大小中，會顯示整個範例 JSON `Console.WriteLine` ，而且永遠不需要增加緩衝區大小。
+範例程式碼的開頭為 4 KB 的緩衝區，每次發現大小不夠大而無法容納完整的 JSON 權杖時，便會將緩衝區大小加倍，讓讀取器在 JSON 承載上進行向前處理。 只有當您設定非常小的初始緩衝區大小（例如10個位元組）時，程式碼片段中提供的 JSON 範例才會觸發緩衝區大小的增加。 如果您將初始緩衝區大小設定為10，則 `Console.WriteLine` 語句會說明緩衝區大小增加的原因和影響。 在 4 KB 的初始緩衝區大小中，會顯示整個範例 JSON `Console.WriteLine` ，而且永遠不需要增加緩衝區大小。
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8ReaderPartialRead.cs)]
 
-上述範例會將緩衝區的大小限制設定為無限制。 如果權杖大小太大，程式碼可能會失敗併發生 <xref:System.OutOfMemoryException> 例外狀況。 如果 JSON 包含的權杖大約是 1 GB 或更大的大小，就會發生這種情況，因為 1 GB 的大小加倍會導致大小太大而無法放入 `int32` 緩衝區中。
+先前的範例不會對緩衝區所能成長的大小設定限制。 如果權杖大小太大，程式碼可能會失敗併發生 <xref:System.OutOfMemoryException> 例外狀況。 如果 JSON 包含的權杖大約是 1 GB 或更大的大小，就會發生這種情況，因為 1 GB 的大小加倍會導致大小太大而無法放入 `int32` 緩衝區中。
 
 ## <a name="additional-resources"></a>其他資源
 

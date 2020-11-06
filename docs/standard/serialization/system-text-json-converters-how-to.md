@@ -1,37 +1,49 @@
 ---
 title: 如何撰寫 JSON 序列化的自訂轉換器-.NET
+description: 瞭解如何針對命名空間中提供的 JSON 序列化類別，建立自訂的轉換器 System.Text.Json 。
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: e0b769d7bb6b336d226cd48de1932524c4d7e74d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ba6b61232ccf7ed493fe5809e5c0b8ba21091d3d
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811063"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329803"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中撰寫 JSON 序列化的自訂轉換器 (封送處理) 
 
 本文說明如何為命名空間中提供的 JSON 序列化類別，建立自訂的轉換器 <xref:System.Text.Json> 。 如需的簡介 `System.Text.Json` ，請參閱 [如何在 .net 中序列化和還原序列化 JSON](system-text-json-how-to.md)。
 
-*轉換器*是一種類別，可將物件或值轉換為 JSON。 `System.Text.Json`命名空間具有適用于大部分對應至 JavaScript 基本類型之基本類型的內建轉換器。 您可以撰寫自訂轉換器：
+*轉換器* 是一種類別，可將物件或值轉換為 JSON。 `System.Text.Json`命名空間具有適用于大部分對應至 JavaScript 基本類型之基本類型的內建轉換器。 您可以撰寫自訂轉換器：
 
 * 覆寫內建轉換器的預設行為。 例如，您可能想要 `DateTime` 以 mm/dd/yyyy 格式表示值，而不是預設的 ISO 8601-1:2019 格式。
 * 支援自訂實值型別。 例如， `PhoneNumber` 結構。
 
 您也可以撰寫自訂轉換器，以自訂或擴充 `System.Text.Json` 未包含在目前版本中的功能。 本文稍後將討論下列案例：
 
+::: zone pivot="dotnet-5-0"
+
+* [將推斷的類型還原序列化為物件屬性](#deserialize-inferred-types-to-object-properties)。
+* [支援](#support-polymorphic-deserialization)多型還原序列化。
+* [支援 Stack \<T> 的來回行程](#support-round-trip-for-stackt)。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 * [將推斷的類型還原序列化為物件屬性](#deserialize-inferred-types-to-object-properties)。
 * [具有非字串索引鍵的支援字典](#support-dictionary-with-non-string-key)。
 * [支援](#support-polymorphic-deserialization)多型還原序列化。
 * [支援 Stack \<T> 的來回行程](#support-round-trip-for-stackt)。
+::: zone-end
 
 ## <a name="custom-converter-patterns"></a>自訂轉換器模式
 
@@ -177,10 +189,20 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下列各節提供的轉換器範例可解決一些內建功能未處理的常見案例。
 
-* [將推斷的類型還原序列化為物件屬性](#deserialize-inferred-types-to-object-properties)
-* [使用非字串索引鍵的支援字典](#support-dictionary-with-non-string-key)
-* [支援多型還原序列化](#support-polymorphic-deserialization)
+::: zone pivot="dotnet-5-0"
+
+* [將推斷的類型還原序列化為物件屬性](#deserialize-inferred-types-to-object-properties)。
+* [支援](#support-polymorphic-deserialization)多型還原序列化。
 * [支援 Stack \<T> 的來回行程](#support-round-trip-for-stackt)。
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* [將推斷的類型還原序列化為物件屬性](#deserialize-inferred-types-to-object-properties)。
+* [具有非字串索引鍵的支援字典](#support-dictionary-with-non-string-key)。
+* [支援](#support-polymorphic-deserialization)多型還原序列化。
+* [支援 Stack \<T> 的來回行程](#support-round-trip-for-stackt)。
+::: zone-end
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>將推斷的類型還原序列化為物件屬性
 
@@ -221,6 +243,8 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 命名空間中的 [單元測試資料夾](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) `System.Text.Json.Serialization` 有更多的自訂轉換器範例，可處理屬性的還原序列化 `object` 。
 
+::: zone pivot="dotnet-core-3-1"
+
 ### <a name="support-dictionary-with-non-string-key"></a>使用非字串索引鍵的支援字典
 
 字典集合的內建支援適用于 `Dictionary<string, TValue>` 。 也就是說，索引鍵必須是字串。 若要支援具有整數或其他類型作為索引鍵的字典，則需要自訂轉換子。
@@ -252,6 +276,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
 命名空間中的 [單元測試資料夾](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) ， `System.Text.Json.Serialization` 有更多的自訂轉換器的範例，可處理非字串金鑰字典。
+::: zone-end
 
 ### <a name="support-polymorphic-deserialization"></a>支援多型還原序列化
 
@@ -288,7 +313,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 上述範例中的轉換器程式碼會以手動方式讀取和寫入每個屬性。 替代方法是呼叫 `Deserialize` 或 `Serialize` 執行某些工作。 如需範例，請參閱 [這 StackOverflow 文章](https://stackoverflow.com/a/59744873/12509023)。
 
-### <a name="support-round-trip-for-stackt"></a>支援 Stack 的來回行程\<T>
+### <a name="support-round-trip-for-stackt"></a>支援堆疊的來回行程\<T>
 
 如果您將 JSON 字串還原序列化為物件，然後將 <xref:System.Collections.Generic.Stack%601> 該物件序列化，堆疊的內容會以相反的順序排列。 此行為適用于下列型別和介面，以及衍生自這些型別的使用者定義型別：
 
@@ -307,6 +332,29 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 下列程式碼會註冊轉換器：
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
+
+## <a name="handle-null-values"></a>處理 Null 值
+
+根據預設，序列化程式會處理 null 值，如下所示：
+
+* 針對參考型別和 `Nullable<T>` 類型：
+
+  * 它不會 `null` 在序列化時傳遞至自訂轉換器。
+  * 它不會在還原序列化 `JsonTokenType.Null` 時傳遞至自訂轉換器。
+  * 它會在還原序列化 `null` 時傳回實例。
+  * 它會 `null` 直接寫入序列化的寫入器。
+
+* 針對不可為 null 的實數值型別：
+
+  * 它會 `JsonTokenType.Null` 在還原序列化時傳遞至自訂轉換器。  (如果沒有可用的自訂轉換器，則 `JsonException` 類型的內部轉換器會擲回例外狀況。 ) 
+
+這項 null 處理行為主要是藉由略過額外的轉換器呼叫來優化效能。 此外，它可避免 `null` 在每個和方法覆寫的開頭，強制執行可為 null 類型的轉換器 `Read` `Write` 。
+
+::: zone pivot="dotnet-5-0"
+若要啟用自訂轉換器來處理 `null` 參考或實數值型別，請覆寫 <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> 以傳回 `true` ，如下列範例所示：
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>其他自訂轉換器範例
 

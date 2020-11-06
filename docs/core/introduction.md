@@ -4,12 +4,12 @@ description: 深入瞭解 .NET 這項免費的開放原始碼開發平臺，可�
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223587"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329790"
 ---
 # <a name="introduction-to-net"></a>.NET 簡介
 
@@ -23,8 +23,8 @@ ms.locfileid: "92223587"
   * [Windows WPF](/dotnet/desktop/wpf/)
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [通用 Windows 平台 (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
-* [遊戲](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
-* [物聯網 (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [遊戲](https://dotnet.microsoft.com/apps/games)
+* [物聯網 (IoT) ](https://dotnet.microsoft.com/apps/iot)
 * [機器學習](../machine-learning/index.yml)
 * [主控台應用程式](tutorials/with-visual-studio-code.md)
 * [Windows 服務](/aspnet/core/host-and-deploy/windows-service)
@@ -98,7 +98,7 @@ Microsoft 的 .NET 二進位散發套件是在 Azure 中 Microsoft 維護的伺�
 
 * [型別安全](../standard/base-types/common-type-system.md)
 * 型別推斷- [c #](../csharp/programming-guide/types/index.md#specifying-types-in-variable-declarations)、 [F #](../fsharp/language-reference/type-inference.md)、 [Visual Basic](../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-* [泛型型別](../standard/generics.md)
+* [泛型類型](../standard/generics.md)
 * [委派](../standard/delegates-lambdas.md)
 * [Lambda](../standard/delegates-lambdas.md)
 * [事件](../standard/events/index.md)
@@ -132,7 +132,7 @@ Microsoft 的 .NET 二進位散發套件是在 Azure 中 Microsoft 維護的伺�
 
 [.NET SDK](sdk.md)是用來開發及執行 .net 應用程式的一組程式庫和工具。
 
-當您 [下載 .net](https://dotnet.microsoft.com/download/dotnet-core/)時，您可以選擇 SDK 或 *運行*時間，例如 .net 執行時間或 ASP.NET Core 執行時間。 在您想要準備執行 .NET 應用程式的電腦上安裝執行時間。 在您要用於開發的電腦上安裝 SDK。 當您下載 SDK 時，您會自動取得其執行時間。
+當您 [下載 .net](https://dotnet.microsoft.com/download/dotnet-core/)時，您可以選擇 SDK 或 *運行* 時間，例如 .net 執行時間或 ASP.NET Core 執行時間。 在您想要準備執行 .NET 應用程式的電腦上安裝執行時間。 在您要用於開發的電腦上安裝 SDK。 當您下載 SDK 時，您會自動取得其執行時間。
 
 SDK 下載包含下列元件：
 
@@ -153,7 +153,7 @@ SDK 下載包含下列元件：
 
 ### <a name="project-system-and-msbuild"></a>專案系統和 MSBuild
 
-.NET 應用程式是使用 [MSBuild](/visualstudio/msbuild/msbuild)從原始程式碼建立的。 專案檔 (*.csproj*、 *>.fsproj*或 *. vbproj*) 指定負責編譯、封裝和發佈程式碼的[目標](/visualstudio/msbuild/msbuild-targets)[和相關聯](/visualstudio/msbuild/msbuild-tasks)工作。 有 SDK 識別碼可參考目標和工作的標準集合。 使用這些識別碼有助於讓專案檔變小且容易使用。 例如，以下是主控台應用程式的專案檔：
+.NET 應用程式是使用 [MSBuild](/visualstudio/msbuild/msbuild)從原始程式碼建立的。 專案檔 ( *.csproj* 、 *>.fsproj* 或 *. vbproj* ) 指定負責編譯、封裝和發佈程式碼的 [目標](/visualstudio/msbuild/msbuild-targets)[和相關聯](/visualstudio/msbuild/msbuild-tasks)工作。 有 SDK 識別碼可參考目標和工作的標準集合。 使用這些識別碼有助於讓專案檔變小且容易使用。 例如，以下是主控台應用程式的專案檔：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -221,7 +221,7 @@ MSBuild 和 .NET CLI 可以搭配各種持續整合工具和環境使用，例�
 
 由於 JIT 編譯是在應用程式執行期間發生，編譯時間是執行時間的一部分。 因此，JIT 編譯程式必須將花費在優化程式碼的時間與產生的程式碼所能產生的節省時間進行平衡。 但是 JIT 編譯程式知道實際的硬體，而且可以讓開發人員不需要為不同的平臺送出不同的執行方式。
 
-.NET JIT 編譯程式可以進行階層式 *編譯*，這表示它可以在執行時間重新編譯個別方法。 這項功能可讓它快速編譯，同時仍能針對常用的方法產生高度調整的程式碼版本。
+.NET JIT 編譯程式可以進行階層式 *編譯* ，這表示它可以在執行時間重新編譯個別方法。 這項功能可讓它快速編譯，同時仍能針對常用的方法產生高度調整的程式碼版本。
 
 如需詳細資訊，請參閱 [Managed 執行](../standard/managed-execution-process.md) 程式和階層式 [編譯](whats-new/dotnet-core-3-0.md#tiered-compilation)。
 
@@ -234,15 +234,15 @@ MSBuild 和 .NET CLI 可以搭配各種持續整合工具和環境使用，例�
 
 ### <a name="automatic-memory-management"></a>自動記憶體管理
 
-*垃圾收集*行程 (GC) 管理應用程式的記憶體配置和釋放。 每當您的程式碼建立新的物件時，CLR 就會從 [managed 堆積](../standard/garbage-collection/fundamentals.md#the-managed-heap)設定物件的記憶體。 只要 Managed 堆積中有可供使用的位址空間，平台就會繼續為新的物件配置空間。 如果沒有足夠的可用位址空間，GC 就會檢查 managed 堆積中，應用程式不再使用的物件。 然後回收該記憶體。
+*垃圾收集* 行程 (GC) 管理應用程式的記憶體配置和釋放。 每當您的程式碼建立新的物件時，CLR 就會從 [managed 堆積](../standard/garbage-collection/fundamentals.md#the-managed-heap)設定物件的記憶體。 只要 Managed 堆積中有可供使用的位址空間，平台就會繼續為新的物件配置空間。 如果沒有足夠的可用位址空間，GC 就會檢查 managed 堆積中，應用程式不再使用的物件。 然後回收該記憶體。
 
-GC 是可協助確保 *記憶體安全*的其中一個 CLR 服務。 如果程式只存取已配置的記憶體，就是記憶體安全。 例如，執行階段可確保應用程式不會存取陣列界限外已取消配置的記憶體。
+GC 是可協助確保 *記憶體安全* 的其中一個 CLR 服務。 如果程式只存取已配置的記憶體，就是記憶體安全。 例如，執行階段可確保應用程式不會存取陣列界限外已取消配置的記憶體。
 
 如需詳細資訊，請參閱 [自動記憶體管理](../standard/automatic-memory-management.md) 和 [垃圾收集的基本](../standard/garbage-collection/fundamentals.md)概念。
 
 ### <a name="working-with-unmanaged-resources"></a>使用 Unmanaged 資源
 
-有時候，程式碼需要參考 *未受管理的資源*。 Unmanaged 資源是指 .NET 執行階段不會自動維護的資源。 例如檔案控制程式碼就是 Unmanaged 資源。 <xref:System.IO.FileStream> 物件是Managed 物件，但會 Unmanaged 檔案控制代碼。 當您使用完成時 <xref:System.IO.FileStream> ，您必須明確釋放檔案控制代碼。
+有時候，程式碼需要參考 *未受管理的資源* 。 Unmanaged 資源是指 .NET 執行階段不會自動維護的資源。 例如檔案控制程式碼就是 Unmanaged 資源。 <xref:System.IO.FileStream> 物件是Managed 物件，但會 Unmanaged 檔案控制代碼。 當您使用完成時 <xref:System.IO.FileStream> ，您必須明確釋放檔案控制代碼。
 
 在.NET 中，參考 Unmanaged 資源的物件會實作 <xref:System.IDisposable> 介面。 當您完成使用此物件時，您可以呼叫物件的 <xref:System.IDisposable.Dispose> 方法來釋放任何 Unmanaged 資源。 .Net 語言提供了一個方便的 `using` 語句， ([c #](../csharp/language-reference/keywords/using.md)、 [F #](../fsharp/language-reference/resource-management-the-use-keyword.md)、 [VB](../visual-basic/language-reference/statements/using-statement.md)) ，可確保 `Dispose` 呼叫方法。
 
@@ -254,7 +254,7 @@ GC 是可協助確保 *記憶體安全*的其中一個 CLR 服務。 如果程�
 
 * 將應用程式發佈為 *獨立* 應用程式會產生可執行檔，其中包含 .net [運行](#sdk-and-runtimes) 時間和連結 [庫](#runtime-libraries)，以及應用程式及其相依性。 應用程式的使用者可以在未安裝 .NET 執行時間的電腦上執行它。 獨立應用程式是平臺專屬的應用程式，而且可以選擇性地使用 [AOT 編譯](#aot-compiler)形式來發佈。
 
-* 將應用程式發行為與 *framework 相依* 的應用程式，會產生可執行檔和二進位檔案 (*.dll* 檔案，) 只包含應用程式本身及其相依性。 應用程式的使用者必須分別安裝 .NET [運行](#sdk-and-runtimes)時間。 可執行檔是平臺專屬的，但架構相依應用程式的 *.dll* 檔案是跨平臺。
+* 將應用程式發行為與 *framework 相依* 的應用程式，會產生可執行檔和二進位檔案 ( *.dll* 檔案，) 只包含應用程式本身及其相依性。 應用程式的使用者必須分別安裝 .NET [運行](#sdk-and-runtimes)時間。 可執行檔是平臺專屬的，但架構相依應用程式的 *.dll* 檔案是跨平臺。
 
   您可以並存安裝多個版本的執行時間，以執行以不同執行階段版本為目標的架構相依應用程式。 如需詳細資訊，請參閱 [目標 framework](../standard/frameworks.md)。
 
@@ -286,7 +286,7 @@ GC 是可協助確保 *記憶體安全*的其中一個 CLR 服務。 如果程�
 |---------|---------|
 | [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) | [應用程式存留期管理 (一般主機) ](extensions/generic-host.md) |
 | [DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection) | [相依性插入 (DI)](extensions/dependency-injection.md)
-| [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration) | [設定](extensions/configuration.md) |
+| [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration) | [Configuration](extensions/configuration.md) |
 | [Microsoft.Extensions.Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) | [Logging](extensions/logging.md) |
 | [Microsoft. Extensions. 選項](https://www.nuget.org/packages/Microsoft.Extensions.Options) | [選項模式](extensions/options.md) |
 

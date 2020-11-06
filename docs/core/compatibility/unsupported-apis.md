@@ -3,12 +3,12 @@ title: .NET Core 和 .NET 5 + 上不支援的 Api
 titleSuffix: ''
 description: 瞭解哪些 .NET Api 一律會在 .NET Core 和 .NET 5.0 和更新版本上擲回例外狀況。
 ms.date: 10/13/2020
-ms.openlocfilehash: 0164ebff51de82d548a02f9fde754c1052a9c2b5
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 51d73557a48910d9cb1c4d3cdced34dfe4d849d8
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159335"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329777"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>在 .NET Core 和 .NET 5 + 上一律會擲回例外狀況的 Api
 
@@ -223,7 +223,7 @@ ms.locfileid: "92159335"
 
 | 成員 | 擲回的平臺 |
 | - | - |
-| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor> | 全部 |
+| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
 | <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo)> | 全部 |
 | <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
