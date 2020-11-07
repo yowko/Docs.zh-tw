@@ -63,7 +63,7 @@
         - name: 可為 Null 的參考型別 - 提案
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
         - name: 可為 Null 的參考型別 - 規格
-          href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: 遞迴模式比對
           href: ../../../../_csharplang/proposals/csharp-8.0/patterns.md
         - name: 預設介面方法
@@ -88,6 +88,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/records.md
         - name: 最上層陳述式
           href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: 可為 Null 的參考型別 - 規格
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: 模式比對增強功能
           href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
         - name: 僅供初始化的 Setter
