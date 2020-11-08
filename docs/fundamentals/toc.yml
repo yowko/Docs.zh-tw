@@ -1167,6 +1167,8 @@ items:
                         href: code-analysis/style-rules/ide0081.md
                       - name: IDE0100
                         href: code-analysis/style-rules/ide0100.md
+                      - name: IDE0110
+                        href: code-analysis/style-rules/ide0110.md
                   - name: 其他規則
                     items:
                       - name: IDE0076
@@ -1419,14 +1421,20 @@ items:
                 href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
               - name: 使用非西曆顯示日期
                 href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
-      - name: 操作字串
+      - name: 字串
         items:
           - name: .NET 中的字元編碼
             href: ../standard/base-types/character-encoding-introduction.md
           - name: 如何使用字元編碼類別
             href: ../standard/base-types/character-encoding.md
-          - name: 使用字串的最佳做法
-            href: ../standard/base-types/best-practices-strings.md
+          - name: 最佳作法
+            items:
+              - name: 比較字串
+                href: ../standard/base-types/best-practices-strings.md
+              - name: 顯示及保存格式化的資料
+                href: ../standard/base-types/best-practices-display-data.md
+          - name: .NET 5+ 中的行為變更 (Windows)
+            href: ../standard/base-types/string-comparison-net-5-plus.md
           - name: 基本字串作業
             items:
               - name: 總覽
@@ -1438,12 +1446,12 @@ items:
                 href: ../standard/base-types/trimming.md
               - name: 填補字串
                 href: ../standard/base-types/padding.md
-              - name: 比較字串
+              - name: 比較方法
                 href: ../standard/base-types/comparing.md
               - name: 變更大小寫
                 href: ../standard/base-types/changing-case.md
-              - name: 從字串擷取元素
-                href: ../standard/base-types/parse-strings.md
+              - name: 個別的字串部分
+                href: ../standard/base-types/divide-up-strings.md
               - name: 使用 StringBuilder 類別
                 href: ../standard/base-types/stringbuilder.md
               - name: 作法：執行基本字串操作
@@ -1503,16 +1511,16 @@ items:
                     href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
                   - name: 確認字串採用有效的電子郵件格式
                     href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-      - name: 剖析字串
-        items:
-          - name: 總覽
-            href: ../standard/base-types/parsing-strings.md
-          - name: 剖析數值字串
-            href: ../standard/base-types/parsing-numeric.md
-          - name: 剖析日期和時間字串
-            href: ../standard/base-types/parsing-datetime.md
-          - name: 剖析其他字串
-            href: ../standard/base-types/parsing-other.md
+          - name: 剖析 (轉換) 字串
+            items:
+              - name: 總覽
+                href: ../standard/base-types/parsing-strings.md
+              - name: 剖析數值字串
+                href: ../standard/base-types/parsing-numeric.md
+              - name: 剖析日期和時間字串
+                href: ../standard/base-types/parsing-datetime.md
+              - name: 剖析其他字串
+                href: ../standard/base-types/parsing-other.md
       - name: 屬性
         items:
           - name: 總覽
