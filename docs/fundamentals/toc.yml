@@ -302,7 +302,7 @@ items:
             items:
               - name: 總覽
                 href: ../core/project-sdk/overview.md
-              - name: 參考資料
+              - name: 參考
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -1297,6 +1297,8 @@ items:
             href: ../standard/base-types/type-conversion.md
           - name: 類型轉換表
             href: ../standard/base-types/conversion-tables.md
+          - name: 在匿名和元組型別之間選擇
+            href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
           - name: Framework 程式庫
             href: ../standard/framework-libraries.md
           - name: 類別庫概觀
@@ -1387,6 +1389,19 @@ items:
         href: ../standard/numerics.md
       - name: 日期、時間和時區
         href: ../standard/datetime/
+      - name: 屬性
+        items:
+          - name: 總覽
+            href: ../standard/attributes/index.md
+            displayName: attributes
+          - name: 套用屬性
+            href: ../standard/attributes/applying-attributes.md
+          - name: 寫入自訂屬性
+            href: ../standard/attributes/writing-custom-attributes.md
+          - name: 擷取儲存於屬性中的資訊
+            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
+  - name: 執行階段程式庫
+    items:
       - name: 將數字、日期、其他類型格式化
         items:
           - name: 總覽
@@ -1511,69 +1526,223 @@ items:
                     href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
                   - name: 確認字串採用有效的電子郵件格式
                     href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-          - name: 剖析 (轉換) 字串
-            items:
-              - name: 總覽
-                href: ../standard/base-types/parsing-strings.md
-              - name: 剖析數值字串
-                href: ../standard/base-types/parsing-numeric.md
-              - name: 剖析日期和時間字串
-                href: ../standard/base-types/parsing-datetime.md
-              - name: 剖析其他字串
-                href: ../standard/base-types/parsing-other.md
-      - name: 屬性
+      - name: 剖析 (轉換) 字串
         items:
           - name: 總覽
-            href: ../standard/attributes/index.md
-            displayName: attributes
-          - name: 套用屬性
-            href: ../standard/attributes/applying-attributes.md
-          - name: 寫入自訂屬性
-            href: ../standard/attributes/writing-custom-attributes.md
-          - name: 擷取儲存於屬性中的資訊
-            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
-      - name: 在匿名和元組型別之間選擇
-        href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
-      - name: 主控台應用程式概念
+            href: ../standard/base-types/parsing-strings.md
+          - name: 剖析數值字串
+            href: ../standard/base-types/parsing-numeric.md
+          - name: 剖析日期和時間字串
+            href: ../standard/base-types/parsing-datetime.md
+          - name: 剖析其他字串
+            href: ../standard/base-types/parsing-other.md
+      - name: 相依性插入
+        items:
+          - name: 概觀
+            href: ../core/extensions/dependency-injection.md
+            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+          - name: 使用相依性插入
+            href: ../core/extensions/dependency-injection-usage.md
+            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+          - name: 相依性插入指導方針
+            href: ../core/extensions/dependency-injection-guidelines.md
+            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+      - name: 設定
+        items:
+          - name: 總覽
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: 設定提供者
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: 實作自訂組態提供者
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
+          - name: 選項模式
+            href: ../core/extensions/options.md
+      - name: 記錄
+        items:
+          - name: 總覽
+            href: ../core/extensions/logging.md
+          - name: 記錄提供者
+            href: ../core/extensions/logging-providers.md
+          - name: 實作自訂記錄提供者
+            href: ../core/extensions/custom-logging-provider.md
+          - name: 高效能記錄
+            href: ../core/extensions/high-performance-logging.md
+          - name: 主控台記錄格式
+            href: ../core/extensions/console-log-formatter.md
+      - name: HostBuilder (一般主機)
+        href: ../core/extensions/generic-host.md
+      - name: 序列化
+        items:
+          - name: 總覽
+            href: ../standard/serialization/index.md
+          - name: JSON 序列化
+            items:
+              - name: 總覽
+                href: ../standard/serialization/system-text-json-overview.md
+                displayName: json serialization
+              - name: 如何將 JSON 序列化及還原序列化
+                href: ../standard/serialization/system-text-json-how-to.md
+              - name: 如何撰寫自訂轉換器
+                href: ../standard/serialization/system-text-json-converters-how-to.md
+              - name: 如何從 Newtonsoft.Json 移轉
+                href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+          - name: 二進位序列化
+            items:
+              - name: 總覽
+                href: ../standard/serialization/binary-serialization.md
+                displayName: binary serialization
+              - name: BinaryFormatter 安全性指南
+                href: ../standard/serialization/binaryformatter-security-guide.md
+              - name: 序列化概念
+                href: ../standard/serialization/serialization-concepts.md
+              - name: 基本序列化
+                href: ../standard/serialization/basic-serialization.md
+              - name: 選擇式序列化
+                href: ../standard/serialization/selective-serialization.md
+              - name: 自訂序列化
+                href: ../standard/serialization/custom-serialization.md
+              - name: 序列化程序中的步驟
+                href: ../standard/serialization/steps-in-the-serialization-process.md
+              - name: 版本相容序列化
+                href: ../standard/serialization/version-tolerant-serialization.md
+              - name: 序列化方針
+                href: ../standard/serialization/serialization-guidelines.md
+              - name: 作法：區塊序列化資料
+                href: ../standard/serialization/how-to-chunk-serialized-data.md
+              - name: 作法：判斷是否可序列化 .NET Standard 物件
+                href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
+              - name: 範例
+                href: ../standard/serialization/basic-serialization-technology-sample.md
+          - name: XML 和 SOAP 序列化
+            items:
+              - name: 總覽
+                href: ../standard/serialization/xml-and-soap-serialization.md
+              - name: 深度 XML 序列化
+                href: ../standard/serialization/introducing-xml-serialization.md
+              - name: 範例
+                href: ../standard/serialization/examples-of-xml-serialization.md
+              - name: XML 結構描述定義工具
+                href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+              - name: 使用屬性控制 XML 序列化
+                href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
+              - name: 控制 XML 序列化的屬性
+                href: ../standard/serialization/attributes-that-control-xml-serialization.md
+              - name: 以 XML Web 服務進行 XML 序列化
+                href: ../standard/serialization/xml-serialization-with-xml-web-services.md
+              - name: 控制編碼 SOAP 序列化的屬性
+                href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
+              - name: 做法
+                items:
+                  - name: 將物件序列化
+                    href: ../standard/serialization/how-to-serialize-an-object.md
+                  - name: 將物件還原序列化
+                    href: ../standard/serialization/how-to-deserialize-an-object.md
+                  - name: 使用 XML 結構描述定義工具產生類別和 XML 結構描述文件
+                    href: ../standard/serialization/xml-schema-def-tool-gen.md
+                  - name: 控制衍生類別的序列化
+                    href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
+                  - name: 指定 XML 資料流的替代元素名稱
+                    href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+                  - name: 限定 XML 元素和 XML 屬性名稱
+                    href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+                  - name: 將物件序列化為 SOAP 編碼的 XML 資料流
+                    href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+                  - name: 覆寫已編碼的 SOAP XML 序列化
+                    href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
+              - name: XML 序列化元素
+                items:
+                  - name: system.xml.serialization
+                    href: ../standard/serialization/system-xml-serialization-element.md
+                  - name: dateTimeSerialization
+                    href: ../standard/serialization/datetimeserialization-element.md
+                  - name: schemaImporterExtensions
+                    href: ../standard/serialization/schemaimporterextensions-element.md
+                  - name: schemaImporterExtensions 的 add 元素
+                    href: ../standard/serialization/add-element-for-schemaimporterextensions.md
+                  - name: xmlSerializer
+                    href: ../standard/serialization/xmlserializer-element.md
+              - name: 工具
+                items:
+                  - name: XML 序列化程式產生器工具 (Sgen.exe)
+                    href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
+                  - name: XML 結構描述定義工具 (Xsd.exe)
+                    href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
+      - name: 檔案和資料流 I/O
+        items:
+          - name: 總覽
+            href: ../standard/io/index.md
+          - name: Windows 系統上的檔案路徑格式
+            href: ../standard/io/file-path-formats.md
+          - name: 一般 I/O 工作
+            href: ../standard/io/common-i-o-tasks.md
+            items:
+              - name: 作法：複製目錄
+                href: ../standard/io/how-to-copy-directories.md
+              - name: 作法：列舉目錄和檔案
+                href: ../standard/io/how-to-enumerate-directories-and-files.md
+              - name: 作法：讀取和寫入新建立的資料檔案
+                href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+              - name: 作法：開啟並附加至記錄檔
+                href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+              - name: 作法：將文字寫入檔案
+                href: ../standard/io/how-to-write-text-to-a-file.md
+              - name: 作法：讀取檔案中的文字
+                href: ../standard/io/how-to-read-text-from-a-file.md
+              - name: 作法：讀取字串中的字元
+                href: ../standard/io/how-to-read-characters-from-a-string.md
+              - name: 作法：將字元寫入字串
+                href: ../standard/io/how-to-write-characters-to-a-string.md
+              - name: 作法：新增或移除存取控制清單項目
+                href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+              - name: 作法：壓縮與解壓縮檔案
+                href: ../standard/io/how-to-compress-and-extract-files.md
+              - name: 撰寫資料流
+                href: ../standard/io/composing-streams.md
+              - name: 作法：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
+                href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+          - name: 非同步檔案 I/O
+            href: ../standard/io/asynchronous-file-i-o.md
+          - name: 處理 I/O 錯誤
+            href: ../standard/io/handling-io-errors.md
+          - name: 隔離儲存區 (Isolated Storage)
+            href: ../standard/io/isolated-storage.md
+            items:
+              - name: 隔離的類型
+                href: ../standard/io/types-of-isolation.md
+              - name: 作法：取得隔離儲存區的存放區
+                href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+              - name: 作法：列舉隔離儲存區的存放區
+                href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+              - name: 作法：刪除隔離儲存區中的存放區
+                href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+              - name: 作法：預期隔離儲存區發生空間不足的情況
+                href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+              - name: 作法：在隔離儲存區中建立檔案和目錄
+                href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+              - name: 作法：尋找隔離儲存區中的現有檔案和目錄
+                href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+              - name: 作法：讀取和寫入隔離儲存區中的檔案
+                href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+              - name: 作法：刪除隔離儲存區中的檔案和目錄
+                href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+          - name: 管道
+            href: ../standard/io/pipe-operations.md
+            items:
+              - name: 作法：使用匿名管道進行本機處理序間通訊
+                href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+              - name: 作法：使用具名管道進行網路處理序間通訊
+                href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+          - name: 管線
+            href: ../standard/io/pipelines.md
+          - name: 使用緩衝區
+            href: ../standard/io/buffers.md
+          - name: 記憶體對應檔案
+            href: ../standard/io/memory-mapped-files.md
+      - name: 系統主控台類別
         href: ../standard/building-console-apps.md
-  - name: 相依性插入
-    items:
-      - name: 概觀
-        href: ../core/extensions/dependency-injection.md
-        displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-      - name: 使用相依性插入
-        href: ../core/extensions/dependency-injection-usage.md
-        displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-      - name: 相依性插入指導方針
-        href: ../core/extensions/dependency-injection-guidelines.md
-        displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-  - name: 設定
-    items:
-      - name: 總覽
-        href: ../core/extensions/configuration.md
-        displayName: 'configuration,config,configuration sources,config sources'
-      - name: 設定提供者
-        href: ../core/extensions/configuration-providers.md
-        displayName: 'configuration providers,config providers'
-      - name: 實作自訂組態提供者
-        href: ../core/extensions/custom-configuration-provider.md
-        displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-      - name: 選項模式
-        href: ../core/extensions/options.md
-  - name: 記錄
-    items:
-      - name: 總覽
-        href: ../core/extensions/logging.md
-      - name: 記錄提供者
-        href: ../core/extensions/logging-providers.md
-      - name: 實作自訂記錄提供者
-        href: ../core/extensions/custom-logging-provider.md
-      - name: 高效能記錄
-        href: ../core/extensions/high-performance-logging.md
-      - name: 主控台記錄格式
-        href: ../core/extensions/console-log-formatter.md
-  - name: HostBuilder (一般主機)
-    href: ../core/extensions/generic-host.md
   - name: 資料存取
     items:
       - name: LINQ
@@ -1582,77 +1751,8 @@ items:
         href: ../standard/data/xml/
       - name: Microsoft.Data.Sqlite
         href: ../standard/data/sqlite/
-  - name: 檔案和資料流 I/O
-    items:
-      - name: 總覽
-        href: ../standard/io/index.md
-      - name: Windows 系統上的檔案路徑格式
-        href: ../standard/io/file-path-formats.md
-      - name: 一般 I/O 工作
-        href: ../standard/io/common-i-o-tasks.md
-        items:
-          - name: 作法：複製目錄
-            href: ../standard/io/how-to-copy-directories.md
-          - name: 作法：列舉目錄和檔案
-            href: ../standard/io/how-to-enumerate-directories-and-files.md
-          - name: 作法：讀取和寫入新建立的資料檔案
-            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
-          - name: 作法：開啟並附加至記錄檔
-            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
-          - name: 作法：將文字寫入檔案
-            href: ../standard/io/how-to-write-text-to-a-file.md
-          - name: 作法：讀取檔案中的文字
-            href: ../standard/io/how-to-read-text-from-a-file.md
-          - name: 作法：讀取字串中的字元
-            href: ../standard/io/how-to-read-characters-from-a-string.md
-          - name: 作法：將字元寫入字串
-            href: ../standard/io/how-to-write-characters-to-a-string.md
-          - name: 作法：新增或移除存取控制清單項目
-            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
-          - name: 作法：壓縮與解壓縮檔案
-            href: ../standard/io/how-to-compress-and-extract-files.md
-          - name: 撰寫資料流
-            href: ../standard/io/composing-streams.md
-          - name: 作法：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換
-            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
-      - name: 非同步檔案 I/O
-        href: ../standard/io/asynchronous-file-i-o.md
-      - name: 處理 I/O 錯誤
-        href: ../standard/io/handling-io-errors.md
-      - name: 隔離儲存區 (Isolated Storage)
-        href: ../standard/io/isolated-storage.md
-        items:
-          - name: 隔離的類型
-            href: ../standard/io/types-of-isolation.md
-          - name: 作法：取得隔離儲存區的存放區
-            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
-          - name: 作法：列舉隔離儲存區的存放區
-            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
-          - name: 作法：刪除隔離儲存區中的存放區
-            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
-          - name: 作法：預期隔離儲存區發生空間不足的情況
-            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
-          - name: 作法：在隔離儲存區中建立檔案和目錄
-            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
-          - name: 作法：尋找隔離儲存區中的現有檔案和目錄
-            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
-          - name: 作法：讀取和寫入隔離儲存區中的檔案
-            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
-          - name: 作法：刪除隔離儲存區中的檔案和目錄
-            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
-      - name: 管道
-        href: ../standard/io/pipe-operations.md
-        items:
-          - name: 作法：使用匿名管道進行本機處理序間通訊
-            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
-          - name: 作法：使用具名管道進行網路處理序間通訊
-            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
-      - name: 管線
-        href: ../standard/io/pipelines.md
-      - name: 使用緩衝區
-        href: ../standard/io/buffers.md
-      - name: 記憶體對應檔案
-        href: ../standard/io/memory-mapped-files.md
+      - name: Entity Framework Core
+        href: /ef/core/
   - name: 平行處理、並行與非同步
     items:
       - name: 概觀
@@ -1805,102 +1905,6 @@ items:
             href: ../standard/parallel-programming/for-further-reading-parallel-programming.md
       - name: 執行緒
         href: ../standard/threading/
-  - name: 序列化
-    items:
-      - name: 總覽
-        href: ../standard/serialization/index.md
-      - name: JSON 序列化
-        items:
-          - name: 總覽
-            href: ../standard/serialization/system-text-json-overview.md
-            displayName: json serialization
-          - name: 如何將 JSON 序列化及還原序列化
-            href: ../standard/serialization/system-text-json-how-to.md
-          - name: 如何撰寫自訂轉換器
-            href: ../standard/serialization/system-text-json-converters-how-to.md
-          - name: 如何從 Newtonsoft.Json 移轉
-            href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
-      - name: 二進位序列化
-        items:
-          - name: 總覽
-            href: ../standard/serialization/binary-serialization.md
-            displayName: binary serialization
-          - name: BinaryFormatter 安全性指南
-            href: ../standard/serialization/binaryformatter-security-guide.md
-          - name: 序列化概念
-            href: ../standard/serialization/serialization-concepts.md
-          - name: 基本序列化
-            href: ../standard/serialization/basic-serialization.md
-          - name: 選擇式序列化
-            href: ../standard/serialization/selective-serialization.md
-          - name: 自訂序列化
-            href: ../standard/serialization/custom-serialization.md
-          - name: 序列化程序中的步驟
-            href: ../standard/serialization/steps-in-the-serialization-process.md
-          - name: 版本相容序列化
-            href: ../standard/serialization/version-tolerant-serialization.md
-          - name: 序列化方針
-            href: ../standard/serialization/serialization-guidelines.md
-          - name: 作法：區塊序列化資料
-            href: ../standard/serialization/how-to-chunk-serialized-data.md
-          - name: 作法：判斷是否可序列化 .NET Standard 物件
-            href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
-          - name: 範例
-            href: ../standard/serialization/basic-serialization-technology-sample.md
-      - name: XML 和 SOAP 序列化
-        items:
-          - name: 總覽
-            href: ../standard/serialization/xml-and-soap-serialization.md
-          - name: 深度 XML 序列化
-            href: ../standard/serialization/introducing-xml-serialization.md
-          - name: 範例
-            href: ../standard/serialization/examples-of-xml-serialization.md
-          - name: XML 結構描述定義工具
-            href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
-          - name: 使用屬性控制 XML 序列化
-            href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
-          - name: 控制 XML 序列化的屬性
-            href: ../standard/serialization/attributes-that-control-xml-serialization.md
-          - name: 以 XML Web 服務進行 XML 序列化
-            href: ../standard/serialization/xml-serialization-with-xml-web-services.md
-          - name: 控制編碼 SOAP 序列化的屬性
-            href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
-          - name: 做法
-            items:
-              - name: 將物件序列化
-                href: ../standard/serialization/how-to-serialize-an-object.md
-              - name: 將物件還原序列化
-                href: ../standard/serialization/how-to-deserialize-an-object.md
-              - name: 使用 XML 結構描述定義工具產生類別和 XML 結構描述文件
-                href: ../standard/serialization/xml-schema-def-tool-gen.md
-              - name: 控制衍生類別的序列化
-                href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
-              - name: 指定 XML 資料流的替代元素名稱
-                href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
-              - name: 限定 XML 元素和 XML 屬性名稱
-                href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
-              - name: 將物件序列化為 SOAP 編碼的 XML 資料流
-                href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
-              - name: 覆寫已編碼的 SOAP XML 序列化
-                href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
-          - name: XML 序列化元素
-            items:
-              - name: system.xml.serialization
-                href: ../standard/serialization/system-xml-serialization-element.md
-              - name: dateTimeSerialization
-                href: ../standard/serialization/datetimeserialization-element.md
-              - name: schemaImporterExtensions
-                href: ../standard/serialization/schemaimporterextensions-element.md
-              - name: schemaImporterExtensions 的 add 元素
-                href: ../standard/serialization/add-element-for-schemaimporterextensions.md
-              - name: xmlSerializer
-                href: ../standard/serialization/xmlserializer-element.md
-          - name: 工具
-            items:
-              - name: XML 序列化程式產生器工具 (Sgen.exe)
-                href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
-              - name: XML 結構描述定義工具 (Xsd.exe)
-                href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
   - name: 測試
     displayName: 'xUnit,NUnit,MSTest,unit test,test,integration test,load test,smoke test, web test'
     items:
