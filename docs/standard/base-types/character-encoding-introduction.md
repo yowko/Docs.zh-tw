@@ -124,7 +124,7 @@ s[1] = '�' ('\udc02')
 
 <span data-ttu-id="a0071-160">下圖說明 BMP 與補充程式碼點之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="a0071-160">The following diagram illustrates the relationship between the BMP and the supplementary code points.</span></span>
 
-:::image type="content" source="media/:::非 loc (char) ：：： acter-encoding-introduction/bmp-and-supplementary。 svg "alt-text =" BMP 和補充程式碼點 "：：：
+:::image type="content" source="media/非 loc (char)acter-encoding-introduction/bmp-and-supplementary。 svg "alt-text ="BMP 和補充程式碼點":::
 
 ## <a name="utf-16-code-units"></a><span data-ttu-id="a0071-162">UTF-16 程式碼單位</span><span class="sxs-lookup"><span data-stu-id="a0071-162">UTF-16 code units</span></span>
 
