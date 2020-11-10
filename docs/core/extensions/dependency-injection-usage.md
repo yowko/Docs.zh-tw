@@ -6,10 +6,10 @@ ms.author: dapine
 ms.date: 09/23/2020
 ms.topic: tutorial
 no-loc:
-- ':::no-loc(Transient):::'
-- ':::no-loc(Scoped):::'
-- ':::no-loc(Singleton):::'
-- ':::no-loc(Example):::'
+- 'Transient'
+- 'Scoped'
+- 'Singleton'
+- 'Example'
 ms.openlocfilehash: 589e15736c07b465fda308b04c91384a2502755c
 ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: MT
@@ -37,7 +37,7 @@ ms.locfileid: "92888582"
 
 ## <a name="create-a-new-console-application"></a><span data-ttu-id="7cae4-115">建立新的主控台應用程式</span><span class="sxs-lookup"><span data-stu-id="7cae4-115">Create a new console application</span></span>
 
-<span data-ttu-id="7cae4-116">使用 [dotnet new](../tools/dotnet-new.md)命令或 IDE [新增專案] 嚮導，建立名為 **:::no-loc(Example)::: ConsoleDI** 的新 .net 主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="7cae4-116">Using either the [dotnet new](../tools/dotnet-new.md) command or an IDE new project wizard, create a new .NET console application named **ConsoleDI.:::no-loc(Example):::** .</span></span> <span data-ttu-id="7cae4-117">將 [裝載](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) NuGet 套件的專案新增至專案。</span><span class="sxs-lookup"><span data-stu-id="7cae4-117">Add the [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) NuGet package to the project.</span></span>
+<span data-ttu-id="7cae4-116">使用 [dotnet new](../tools/dotnet-new.md)命令或 IDE [新增專案] 嚮導，建立名為 **Example ConsoleDI** 的新 .net 主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="7cae4-116">Using either the [dotnet new](../tools/dotnet-new.md) command or an IDE new project wizard, create a new .NET console application named **ConsoleDI.Example** .</span></span> <span data-ttu-id="7cae4-117">將 [裝載](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) NuGet 套件的專案新增至專案。</span><span class="sxs-lookup"><span data-stu-id="7cae4-117">Add the [Microsoft.Extensions.Hosting](https://www.nuget.org/packages/Microsoft.Extensions.Hosting) NuGet package to the project.</span></span>
 
 ## <a name="add-interfaces"></a><span data-ttu-id="7cae4-118">新增介面</span><span class="sxs-lookup"><span data-stu-id="7cae4-118">Add interfaces</span></span>
 
@@ -49,19 +49,19 @@ ms.locfileid: "92888582"
 
 <span data-ttu-id="7cae4-121">`IOperation`介面會定義單一 `OperationId` 屬性。</span><span class="sxs-lookup"><span data-stu-id="7cae4-121">The `IOperation` interface defines a single `OperationId` property.</span></span>
 
-<span data-ttu-id="7cae4-122">*我 :::no-loc(Transient)::: Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="7cae4-122">*I:::no-loc(Transient):::Operation.cs*</span></span>
+<span data-ttu-id="7cae4-122">*我 Transient Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="7cae4-122">*ITransientOperation.cs*</span></span>
 
-<span data-ttu-id="7cae4-123">：：： code language = "csharp" source = "程式碼片段/設定/主控台-di/I :::no-loc(Transient)::: Operation.cs"：：：</span><span class="sxs-lookup"><span data-stu-id="7cae4-123">:::code language="csharp" source="snippets/configuration/console-di/I:::no-loc(Transient):::Operation.cs":::</span></span>
+<span data-ttu-id="7cae4-123">：：： code language = "csharp" source = "程式碼片段/設定/主控台-di/I Transient Operation.cs"：：：</span><span class="sxs-lookup"><span data-stu-id="7cae4-123">:::code language="csharp" source="snippets/configuration/console-di/ITransientOperation.cs":::</span></span>
 
-<span data-ttu-id="7cae4-124">*我 :::no-loc(Scoped)::: Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="7cae4-124">*I:::no-loc(Scoped):::Operation.cs*</span></span>
+<span data-ttu-id="7cae4-124">*我 Scoped Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="7cae4-124">*IScopedOperation.cs*</span></span>
 
-<span data-ttu-id="7cae4-125">：：： code language = "csharp" source = "程式碼片段/設定/主控台-di/I :::no-loc(Scoped)::: Operation.cs"：：：</span><span class="sxs-lookup"><span data-stu-id="7cae4-125">:::code language="csharp" source="snippets/configuration/console-di/I:::no-loc(Scoped):::Operation.cs":::</span></span>
+<span data-ttu-id="7cae4-125">：：： code language = "csharp" source = "程式碼片段/設定/主控台-di/I Scoped Operation.cs"：：：</span><span class="sxs-lookup"><span data-stu-id="7cae4-125">:::code language="csharp" source="snippets/configuration/console-di/IScopedOperation.cs":::</span></span>
 
-<span data-ttu-id="7cae4-126">*我 :::no-loc(Singleton)::: Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="7cae4-126">*I:::no-loc(Singleton):::Operation.cs*</span></span>
+<span data-ttu-id="7cae4-126">*我 Singleton Operation.cs*</span><span class="sxs-lookup"><span data-stu-id="7cae4-126">*ISingletonOperation.cs*</span></span>
 
-<span data-ttu-id="7cae4-127">：：： code language = "csharp" source = "程式碼片段/設定/主控台-di/I :::no-loc(Singleton)::: Operation.cs"：：：</span><span class="sxs-lookup"><span data-stu-id="7cae4-127">:::code language="csharp" source="snippets/configuration/console-di/I:::no-loc(Singleton):::Operation.cs":::</span></span>
+<span data-ttu-id="7cae4-127">：：： code language = "csharp" source = "程式碼片段/設定/主控台-di/I Singleton Operation.cs"：：：</span><span class="sxs-lookup"><span data-stu-id="7cae4-127">:::code language="csharp" source="snippets/configuration/console-di/ISingletonOperation.cs":::</span></span>
 
-<span data-ttu-id="7cae4-128">`IOperation`其預期服務存留期的所有名稱子介面。</span><span class="sxs-lookup"><span data-stu-id="7cae4-128">All of the subinterfaces of `IOperation` name their intended service lifetime.</span></span> <span data-ttu-id="7cae4-129">例如，" :::no-loc(Transient)::: " 或 " :::no-loc(Singleton)::: "。</span><span class="sxs-lookup"><span data-stu-id="7cae4-129">For example, ":::no-loc(Transient):::" or ":::no-loc(Singleton):::".</span></span>
+<span data-ttu-id="7cae4-128">`IOperation`其預期服務存留期的所有名稱子介面。</span><span class="sxs-lookup"><span data-stu-id="7cae4-128">All of the subinterfaces of `IOperation` name their intended service lifetime.</span></span> <span data-ttu-id="7cae4-129">例如，" Transient " 或 " Singleton "。</span><span class="sxs-lookup"><span data-stu-id="7cae4-129">For example, "Transient" or "Singleton".</span></span>
 
 ## <a name="add-default-implementation"></a><span data-ttu-id="7cae4-130">新增預設實作為</span><span class="sxs-lookup"><span data-stu-id="7cae4-130">Add default implementation</span></span>
 
@@ -81,7 +81,7 @@ ms.locfileid: "92888582"
 
 :::code language="csharp" source="snippets/configuration/console-di/OperationLogger.cs":::
 
-<span data-ttu-id="7cae4-137">`OperationLogger`會定義需要上述每一個標記介面的函式，也就是 `I:::no-loc(Transient):::Operation` 、 `I:::no-loc(Scoped):::Operation` 和 `I:::no-loc(Singleton):::Operation` 。</span><span class="sxs-lookup"><span data-stu-id="7cae4-137">The `OperationLogger` defines a constructor that requires each of the aforementioned marker interfaces, that is; `I:::no-loc(Transient):::Operation`, `I:::no-loc(Scoped):::Operation`, and `I:::no-loc(Singleton):::Operation`.</span></span> <span data-ttu-id="7cae4-138">此物件會公開單一方法，讓取用者使用指定的參數來記錄作業 `scope` 。</span><span class="sxs-lookup"><span data-stu-id="7cae4-138">The object exposes a single method that allows the consumer to log the operations with a given `scope` parameter.</span></span> <span data-ttu-id="7cae4-139">叫用時， `LogOperations` 方法會使用範圍字串和訊息來記錄每個作業的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="7cae4-139">When invoked, the `LogOperations` method logs each operation's unique identifier with the scope string and message.</span></span>
+<span data-ttu-id="7cae4-137">`OperationLogger`會定義需要上述每一個標記介面的函式，也就是 `ITransientOperation` 、 `IScopedOperation` 和 `ISingletonOperation` 。</span><span class="sxs-lookup"><span data-stu-id="7cae4-137">The `OperationLogger` defines a constructor that requires each of the aforementioned marker interfaces, that is; `ITransientOperation`, `IScopedOperation`, and `ISingletonOperation`.</span></span> <span data-ttu-id="7cae4-138">此物件會公開單一方法，讓取用者使用指定的參數來記錄作業 `scope` 。</span><span class="sxs-lookup"><span data-stu-id="7cae4-138">The object exposes a single method that allows the consumer to log the operations with a given `scope` parameter.</span></span> <span data-ttu-id="7cae4-139">叫用時， `LogOperations` 方法會使用範圍字串和訊息來記錄每個作業的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="7cae4-139">When invoked, the `LogOperations` method logs each operation's unique identifier with the scope string and message.</span></span>
 
 ## <a name="register-services-for-di"></a><span data-ttu-id="7cae4-140">註冊適用于 DI 的服務</span><span class="sxs-lookup"><span data-stu-id="7cae4-140">Register services for DI</span></span>
 
@@ -101,28 +101,28 @@ ms.locfileid: "92888582"
 <span data-ttu-id="7cae4-148">應用程式會顯示類似下列範例的輸出：</span><span class="sxs-lookup"><span data-stu-id="7cae4-148">The app displays output similar to the following example:</span></span>
 
 ```console
-Scope 1-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Transient):::Operation [ 80f4...Always different        ]
-Scope 1-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Scoped):::Operation    [ c878...Changes only with scope ]
-Scope 1-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Singleton):::Operation [ 1586...Always the same         ]
+Scope 1-Call 1 .GetRequiredService<OperationLogger>(): ITransientOperation [ 80f4...Always different        ]
+Scope 1-Call 1 .GetRequiredService<OperationLogger>(): IScopedOperation    [ c878...Changes only with scope ]
+Scope 1-Call 1 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 1586...Always the same         ]
 ...
-Scope 1-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Transient):::Operation [ f3c0...Always different        ]
-Scope 1-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Scoped):::Operation    [ c878...Changes only with scope ]
-Scope 1-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Singleton):::Operation [ 1586...Always the same         ]
+Scope 1-Call 2 .GetRequiredService<OperationLogger>(): ITransientOperation [ f3c0...Always different        ]
+Scope 1-Call 2 .GetRequiredService<OperationLogger>(): IScopedOperation    [ c878...Changes only with scope ]
+Scope 1-Call 2 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 1586...Always the same         ]
 
-Scope 2-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Transient):::Operation [ f9af...Always different        ]
-Scope 2-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Scoped):::Operation    [ 2bd0...Changes only with scope ]
-Scope 2-Call 1 .GetRequiredService<OperationLogger>(): I:::no-loc(Singleton):::Operation [ 1586...Always the same         ]
+Scope 2-Call 1 .GetRequiredService<OperationLogger>(): ITransientOperation [ f9af...Always different        ]
+Scope 2-Call 1 .GetRequiredService<OperationLogger>(): IScopedOperation    [ 2bd0...Changes only with scope ]
+Scope 2-Call 1 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 1586...Always the same         ]
 ...
-Scope 2-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Transient):::Operation [ fa65...Always different        ]
-Scope 2-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Scoped):::Operation    [ 2bd0...Changes only with scope ]
-Scope 2-Call 2 .GetRequiredService<OperationLogger>(): I:::no-loc(Singleton):::Operation [ 1586...Always the same         ]
+Scope 2-Call 2 .GetRequiredService<OperationLogger>(): ITransientOperation [ fa65...Always different        ]
+Scope 2-Call 2 .GetRequiredService<OperationLogger>(): IScopedOperation    [ 2bd0...Changes only with scope ]
+Scope 2-Call 2 .GetRequiredService<OperationLogger>(): ISingletonOperation [ 1586...Always the same         ]
 ```
 
 <span data-ttu-id="7cae4-149">從應用程式輸出中，您可以看到：</span><span class="sxs-lookup"><span data-stu-id="7cae4-149">From the app output, you can see that:</span></span>
 
-- <span data-ttu-id="7cae4-150">:::no-loc(Transient)::: 作業永遠不同，會在每次抓取服務時建立新的實例。</span><span class="sxs-lookup"><span data-stu-id="7cae4-150">:::no-loc(Transient)::: operations are always different, a new instance is created with every retrieval of the service.</span></span>
-- <span data-ttu-id="7cae4-151">:::no-loc(Scoped)::: 作業只會與新的範圍變更，但在範圍內是相同的實例。</span><span class="sxs-lookup"><span data-stu-id="7cae4-151">:::no-loc(Scoped)::: operations change only with a new scope, but are the same instance within a scope.</span></span>
-- <span data-ttu-id="7cae4-152">:::no-loc(Singleton)::: 作業一律相同，只會建立一次新的實例。</span><span class="sxs-lookup"><span data-stu-id="7cae4-152">:::no-loc(Singleton)::: operations are always the same, a new instance is only created once.</span></span>
+- <span data-ttu-id="7cae4-150">Transient 作業永遠不同，會在每次抓取服務時建立新的實例。</span><span class="sxs-lookup"><span data-stu-id="7cae4-150">Transient operations are always different, a new instance is created with every retrieval of the service.</span></span>
+- <span data-ttu-id="7cae4-151">Scoped 作業只會與新的範圍變更，但在範圍內是相同的實例。</span><span class="sxs-lookup"><span data-stu-id="7cae4-151">Scoped operations change only with a new scope, but are the same instance within a scope.</span></span>
+- <span data-ttu-id="7cae4-152">Singleton 作業一律相同，只會建立一次新的實例。</span><span class="sxs-lookup"><span data-stu-id="7cae4-152">Singleton operations are always the same, a new instance is only created once.</span></span>
 
 ## <a name="see-also"></a><span data-ttu-id="7cae4-153">請參閱</span><span class="sxs-lookup"><span data-stu-id="7cae4-153">See also</span></span>
 
